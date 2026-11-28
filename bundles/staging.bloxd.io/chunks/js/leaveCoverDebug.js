@@ -1,167 +1,167 @@
 export const id = 46;
 export const ids = [46];
 export const modules = {
-  5446: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      LEAVE_POINTER_MARGIN_PX: () => Xd,
-      RECHECK_MS: () => Rd,
-      iframeHost: () => Qd,
-      isNear: () => Hd,
-      leaveCoverLine: () => od,
-      overlaps: () => qd,
-      resetLeaveCoverDebugForTest: () => Td,
-      startLeaveCoverDebug: () => Yd,
-      startLeaveCoverProbe: () => pd,
-      whereIs: () => td
+  5596: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      LEAVE_POINTER_MARGIN_PX: () => Vb,
+      RECHECK_MS: () => pb,
+      iframeHost: () => Ib,
+      isNear: () => Eb,
+      leaveCoverLine: () => Ub,
+      overlaps: () => Cb,
+      resetLeaveCoverDebugForTest: () => sb,
+      startLeaveCoverDebug: () => hb,
+      startLeaveCoverProbe: () => mb,
+      whereIs: () => Ob
     });
-    var Wd = md(5455),
-      Fd = md(3903);
-    const Rd = 2e3,
-      Xd = 32,
-      Kd = 80,
-      hd = ".EverythingMenuBannerDiv";
+    var eb = Mb(5601),
+      Hb = Mb(4060);
+    const pb = 2e3,
+      Vb = 32,
+      gb = 80,
+      lb = ".EverythingMenuBannerDiv";
 
-    function vd(dd) {
-      const Od = dd.trim().replace(/[\s=]+/g, ".").slice(0, Kd);
-      return "" === Od ? "-" : Od
+    function Lb(bb) {
+      const wb = bb.trim().replace(/[\s=]+/g, ".").slice(0, gb);
+      return "" === wb ? "-" : wb
     }
 
-    function Qd(dd, Od) {
-      const md = dd.getAttribute("src");
-      if (null === md || "" === md.trim()) return "none";
+    function Ib(bb, wb) {
+      const Mb = bb.getAttribute("src");
+      if (null === Mb || "" === Mb.trim()) return "none";
       try {
-        const dd = new URL(md, Od);
-        return "http:" === dd.protocol || "https:" === dd.protocol ? dd.hostname : dd.protocol.replace(":", "")
+        const bb = new URL(Mb, wb);
+        return "http:" === bb.protocol || "https:" === bb.protocol ? bb.hostname : bb.protocol.replace(":", "")
       } catch {
         return "invalid"
       }
     }
 
-    function td(dd, Od) {
-      return null !== dd.closest(hd) ? "banner" : null !== Od && Od.contains(dd) ? "app" : "body"
+    function Ob(bb, wb) {
+      return null !== bb.closest(lb) ? "banner" : null !== wb && wb.contains(bb) ? "app" : "body"
     }
 
-    function od(dd, Od, md, Wd) {
-      var Fd, Rd, Xd, Kd;
-      if (null === dd || dd === Od || Od.contains(dd)) return null;
-      const hd = null === (Fd = dd.ownerDocument.defaultView) || void 0 === Fd ? void 0 : Fd.getComputedStyle(dd),
-        od = dd.getBoundingClientRect();
-      return `leave covered ${[["trigger",Wd],["where",td(dd,md)],["tag",dd.tagName.toLowerCase()],["id",vd(dd.id)],["class",vd(null!==(Rd=dd.getAttribute("class"))&&void 0!==Rd?Rd:"")],["z",vd(null!==(Xd=null===hd||void 0===hd?void 0:hd.zIndex)&&void 0!==Xd?Xd:"")],["position",vd(null!==(Kd=null===hd||void 0===hd?void 0:hd.position)&&void 0!==Kd?Kd:"")],["size",`${Math.round(od.width)}x${Math.round(od.height)}`],["iframe","IFRAME"===dd.tagName?vd(Qd(dd,dd.ownerDocument.baseURI)):"-"]].map((dd=>{let[Od,md]=dd;return`${Od}=${md}`})).join(" ")}`
+    function Ub(bb, wb, Mb, eb) {
+      var Hb, pb, Vb, gb;
+      if (null === bb || bb === wb || wb.contains(bb)) return null;
+      const lb = null === (Hb = bb.ownerDocument.defaultView) || void 0 === Hb ? void 0 : Hb.getComputedStyle(bb),
+        Ub = bb.getBoundingClientRect();
+      return `leave covered ${[["trigger",eb],["where",Ob(bb,Mb)],["tag",bb.tagName.toLowerCase()],["id",Lb(bb.id)],["class",Lb(null!==(pb=bb.getAttribute("class"))&&void 0!==pb?pb:"")],["z",Lb(null!==(Vb=null===lb||void 0===lb?void 0:lb.zIndex)&&void 0!==Vb?Vb:"")],["position",Lb(null!==(gb=null===lb||void 0===lb?void 0:lb.position)&&void 0!==gb?gb:"")],["size",`${Math.round(Ub.width)}x${Math.round(Ub.height)}`],["iframe","IFRAME"===bb.tagName?Lb(Ib(bb,bb.ownerDocument.baseURI)):"-"]].map((bb=>{let[wb,Mb]=bb;return`${wb}=${Mb}`})).join(" ")}`
     }
 
-    function Nd(dd) {
-      const Od = dd.getBoundingClientRect();
-      return 0 === Od.width || 0 === Od.height ? null : {
-        x: Od.left + Od.width / 2,
-        y: Od.top + Od.height / 2
+    function tb(bb) {
+      const wb = bb.getBoundingClientRect();
+      return 0 === wb.width || 0 === wb.height ? null : {
+        x: wb.left + wb.width / 2,
+        y: wb.top + wb.height / 2
       }
     }
 
-    function qd(dd, Od) {
-      const md = dd.getBoundingClientRect(),
-        Wd = Od.getBoundingClientRect();
-      return Math.max(md.left, Wd.left) < Math.min(md.right, Wd.right) && Math.max(md.top, Wd.top) < Math.min(md.bottom, Wd.bottom)
+    function Cb(bb, wb) {
+      const Mb = bb.getBoundingClientRect(),
+        eb = wb.getBoundingClientRect();
+      return Math.max(Mb.left, eb.left) < Math.min(Mb.right, eb.right) && Math.max(Mb.top, eb.top) < Math.min(Mb.bottom, eb.bottom)
     }
 
-    function Hd(dd, Od, md, Wd) {
-      const Fd = dd.getBoundingClientRect();
-      return Od >= Fd.left - Wd && Od <= Fd.right + Wd && md >= Fd.top - Wd && md <= Fd.bottom + Wd
+    function Eb(bb, wb, Mb, eb) {
+      const Hb = bb.getBoundingClientRect();
+      return wb >= Hb.left - eb && wb <= Hb.right + eb && Mb >= Hb.top - eb && Mb <= Hb.bottom + eb
     }
 
-    function yd(dd) {
-      (0, Fd.k)("leavecover", dd)
+    function Fb(bb) {
+      (0, Hb.j)("leavecover", bb)
     }
-    const bd = new Set;
+    const Bb = new Set;
 
-    function Td() {
-      bd.clear()
+    function sb() {
+      Bb.clear()
     }
 
-    function pd(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yd;
-      const md = dd.ownerDocument,
-        Wd = md.defaultView;
-      if (null === Wd) return () => {};
-      const Fd = (dd, md) => {
-          null === dd || bd.has(md) || (bd.add(md), Od(dd))
+    function mb(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fb;
+      const Mb = bb.ownerDocument,
+        eb = Mb.defaultView;
+      if (null === eb) return () => {};
+      const Hb = (bb, Mb) => {
+          null === bb || Bb.has(Mb) || (Bb.add(Mb), wb(bb))
         },
-        Kd = Od => {
-          const Wd = dd.isConnected ? Nd(dd) : null;
-          if (null === Wd) return;
-          const Rd = md.elementFromPoint(Wd.x, Wd.y);
-          if (null !== Rd) {
-            const Wd = md.getElementById("root");
-            Fd(od(Rd, dd, Wd, Od), td(Rd, Wd))
+        gb = wb => {
+          const eb = bb.isConnected ? tb(bb) : null;
+          if (null === eb) return;
+          const pb = Mb.elementFromPoint(eb.x, eb.y);
+          if (null !== pb) {
+            const eb = Mb.getElementById("root");
+            Hb(Ub(pb, bb, eb, wb), Ob(pb, eb))
           }
         };
-      let hd = null;
-      const vd = dd => {
-        hd = {
-          x: dd.clientX,
-          y: dd.clientY
+      let lb = null;
+      const Lb = bb => {
+        lb = {
+          x: bb.clientX,
+          y: bb.clientY
         }
       };
-      let Qd = null;
-      const Td = () => {
-          Qd = setTimeout((() => {
-            Qd = null;
-            const Od = md.activeElement;
-            if ("IFRAME" !== (null === Od || void 0 === Od ? void 0 : Od.tagName) || !dd.isConnected) return;
-            const Wd = Nd(dd),
-              Rd = null !== Wd && Hd(Od, Wd.x, Wd.y, 0),
-              Kd = hd,
-              vd = null !== Kd && Hd(dd, Kd.x, Kd.y, Xd);
-            if (qd(Od, dd) && (Rd || vd)) {
-              const Wd = md.getElementById("root");
-              Fd(od(Od, dd, Wd, "blurIframe"), td(Od, Wd))
+      let Ib = null;
+      const sb = () => {
+          Ib = setTimeout((() => {
+            Ib = null;
+            const wb = Mb.activeElement;
+            if ("IFRAME" !== (null === wb || void 0 === wb ? void 0 : wb.tagName) || !bb.isConnected) return;
+            const eb = tb(bb),
+              pb = null !== eb && Eb(wb, eb.x, eb.y, 0),
+              gb = lb,
+              Lb = null !== gb && Eb(bb, gb.x, gb.y, Vb);
+            if (Cb(wb, bb) && (pb || Lb)) {
+              const eb = Mb.getElementById("root");
+              Hb(Ub(wb, bb, eb, "blurIframe"), Ob(wb, eb))
             }
           }), 0)
         },
-        pd = Wd.requestAnimationFrame((() => {
-          Kd("open")
+        mb = eb.requestAnimationFrame((() => {
+          gb("open")
         })),
-        Yd = setTimeout((() => {
-          Kd("recheck")
-        }), Rd);
-      return Wd.addEventListener("pointermove", vd, {
+        hb = setTimeout((() => {
+          gb("recheck")
+        }), pb);
+      return eb.addEventListener("pointermove", Lb, {
         capture: !0,
         passive: !0
-      }), Wd.addEventListener("pointerdown", vd, {
+      }), eb.addEventListener("pointerdown", Lb, {
         capture: !0,
         passive: !0
-      }), Wd.addEventListener("blur", Td), () => {
-        Wd.cancelAnimationFrame(pd), clearTimeout(Yd), null !== Qd && clearTimeout(Qd), Wd.removeEventListener("pointermove", vd, {
+      }), eb.addEventListener("blur", sb), () => {
+        eb.cancelAnimationFrame(mb), clearTimeout(hb), null !== Ib && clearTimeout(Ib), eb.removeEventListener("pointermove", Lb, {
           capture: !0
-        }), Wd.removeEventListener("pointerdown", vd, {
+        }), eb.removeEventListener("pointerdown", Lb, {
           capture: !0
-        }), Wd.removeEventListener("blur", Td)
+        }), eb.removeEventListener("blur", sb)
       }
     }
 
-    function Yd() {
-      (0, Wd.j)(pd)
+    function hb() {
+      (0, eb.k)(mb)
     }
   },
-  5455: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Xd,
-      f: () => Rd,
-      j: () => Fd
+  5601: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Vb,
+      g: () => pb,
+      k: () => Hb
     });
-    let Wd = null;
+    let eb = null;
 
-    function Fd(dd) {
-      Wd = dd
+    function Hb(bb) {
+      eb = bb
     }
 
-    function Rd() {
-      return Wd
+    function pb() {
+      return eb
     }
 
-    function Xd(dd) {
-      return "bloxd" === dd.site && !dd.isMobileApp && !dd.isTouchScreen
+    function Vb(bb) {
+      return "bloxd" === bb.site && !bb.isMobileApp && !bb.isTouchScreen
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

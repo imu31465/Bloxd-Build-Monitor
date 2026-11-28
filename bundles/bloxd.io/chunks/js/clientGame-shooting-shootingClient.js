@@ -1,349 +1,349 @@
 export const id = 29;
 export const ids = [29];
 export const modules = {
-  38243: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => yd,
-      h: () => bd,
-      i: () => od,
-      k: () => td
+  37898: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Fb,
+      d: () => Bb,
+      e: () => Ub,
+      g: () => Ob
     });
-    var Wd = md(35535),
-      Fd = md(3428),
-      Rd = md(3432),
-      Xd = md(9850),
-      Kd = md(1566),
-      hd = md(66),
-      vd = md(86),
-      Qd = md(1341);
+    var eb = Mb(35320),
+      Hb = Mb(3531),
+      pb = Mb(3538),
+      Vb = Mb(10064),
+      gb = Mb(1611),
+      lb = Mb(64),
+      Lb = Mb(81),
+      Ib = Mb(1364);
 
-    function td() {
-      var dd;
-      return (0, Kd.i)(Fd.d, (0, Fd.n)()), (0, Qd.jsx)(Qd.Fragment, {
-        children: null === (dd = (0, Fd.n)()) || void 0 === dd ? void 0 : dd.content
+    function Ob() {
+      var bb;
+      return (0, gb.h)(Hb.e, (0, Hb.x)()), (0, Ib.jsx)(Ib.Fragment, {
+        children: null === (bb = (0, Hb.x)()) || void 0 === bb ? void 0 : bb.content
       })
     }
 
-    function od(dd) {
-      var Od;
+    function Ub(bb) {
+      var wb;
       let {
-        show: md
-      } = dd;
-      (0, Kd.i)(Fd.d, (0, Fd.n)());
-      const vd = null === (Od = (0, Fd.n)()) || void 0 === Od ? void 0 : Od.menu;
-      return (0, hd.useEffect)((() => {
-        var dd;
-        md || (null === vd || void 0 === vd || null === (dd = vd.onClose) || void 0 === dd || dd.call(vd), (0, Rd.q)())
-      }), [md, vd]), (0, hd.useEffect)((() => md ? (0, Xd.d)(Rd.y, Rd.h) : void 0), [md]), (0, Qd.jsx)(Wd.b, {
-        showing: md,
+        show: Mb
+      } = bb;
+      (0, gb.h)(Hb.e, (0, Hb.x)());
+      const Lb = null === (wb = (0, Hb.x)()) || void 0 === wb ? void 0 : wb.menu;
+      return (0, lb.useEffect)((() => {
+        var bb;
+        Mb || (null === Lb || void 0 === Lb || null === (bb = Lb.onClose) || void 0 === bb || bb.call(Lb), (0, pb.l)())
+      }), [Mb, Lb]), (0, lb.useEffect)((() => Mb ? (0, Vb.g)(pb.u, pb.g) : void 0), [Mb]), (0, Ib.jsx)(eb.c, {
+        showing: Mb,
         globallyUniqueKey: "clientGameMenu",
-        children: null === vd || void 0 === vd ? void 0 : vd.content
+        children: null === Lb || void 0 === Lb ? void 0 : Lb.content
       })
     }
-    const Nd = new Map,
-      qd = new Set;
+    const tb = new Map,
+      Cb = new Set;
 
-    function Hd(dd, Od) {
-      Od ? Nd.set(dd, Od) : Nd.delete(dd);
-      for (const md of qd) md()
+    function Eb(bb, wb) {
+      wb ? tb.set(bb, wb) : tb.delete(bb);
+      for (const Mb of Cb) Mb()
     }
 
-    function yd(dd) {
+    function Fb(bb) {
       let {
-        placement: Od = "bottom"
-      } = dd;
-      const md = (0, hd.useRef)(null);
-      return (0, hd.useLayoutEffect)((() => {
-        const dd = md.current;
-        return Hd(Od, dd), () => {
-          Nd.get(Od) === dd && Hd(Od, null)
+        placement: wb = "bottom"
+      } = bb;
+      const Mb = (0, lb.useRef)(null);
+      return (0, lb.useLayoutEffect)((() => {
+        const bb = Mb.current;
+        return Eb(wb, bb), () => {
+          tb.get(wb) === bb && Eb(wb, null)
         }
-      }), [Od]), (0, Qd.jsx)("div", {
-        ref: md,
-        id: `clientGameHud-${Od}`,
+      }), [wb]), (0, Ib.jsx)("div", {
+        ref: Mb,
+        id: `clientGameHud-${wb}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function bd(dd) {
+    function Bb(bb) {
       let {
-        children: Od,
-        placement: md = "bottom"
-      } = dd;
-      const [Wd, Fd] = (0, hd.useState)((() => {
-        var dd;
-        return null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null
+        children: wb,
+        placement: Mb = "bottom"
+      } = bb;
+      const [eb, Hb] = (0, lb.useState)((() => {
+        var bb;
+        return null !== (bb = tb.get(Mb)) && void 0 !== bb ? bb : null
       }));
-      return (0, hd.useEffect)((() => {
-        const dd = () => {
-          var dd;
-          Fd(null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null)
+      return (0, lb.useEffect)((() => {
+        const bb = () => {
+          var bb;
+          Hb(null !== (bb = tb.get(Mb)) && void 0 !== bb ? bb : null)
         };
-        return qd.add(dd), dd(), () => {
-          qd.delete(dd)
+        return Cb.add(bb), bb(), () => {
+          Cb.delete(bb)
         }
-      }), [md]), Wd ? (0, vd.createPortal)(Od, Wd) : null
+      }), [Mb]), eb ? (0, Lb.createPortal)(wb, eb) : null
     }
   },
-  5691: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => od
+  5817: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Ub
     });
-    var Wd = md(1155),
-      Fd = md.n(Wd),
-      Rd = md(1443),
-      Xd = md(1436),
-      Kd = md(4734),
-      hd = md(151),
-      vd = md(4776),
-      Qd = md(4767),
-      td = md(1341);
+    var eb = Mb(1159),
+      Hb = Mb.n(eb),
+      pb = Mb(1475),
+      Vb = Mb(1468),
+      gb = Mb(4896),
+      lb = Mb(160),
+      Lb = Mb(4929),
+      Ib = Mb(4920),
+      Ob = Mb(1364);
 
-    function od(dd) {
+    function Ub(bb) {
       let {
-        game: Od
-      } = dd;
-      const md = (0, hd.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        Wd = (0, vd.i)(Od, md),
-        od = (0, Kd.g)(Wd),
-        Nd = void 0 !== od.blurhash;
-      return (0, td.jsxs)("div", {
+        game: wb
+      } = bb;
+      const Mb = (0, lb.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        eb = (0, Lb.f)(wb, Mb),
+        Ub = (0, gb.i)(eb),
+        tb = void 0 !== Ub.blurhash;
+      return (0, Ob.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [od.isLoading && !Nd && (0, td.jsx)(Xd.c, {
+        children: [Ub.isLoading && !tb && (0, Ob.jsx)(Vb.c, {
           loaderType: "Secondary"
-        }), !od.failed && (null !== od.src || Nd) && (0, td.jsx)("div", {
-          className: Fd()("SchematicImage", Qd.j, {
-            SchematicImageFadeIn: od.fadeIn && !Nd
+        }), !Ub.failed && (null !== Ub.src || tb) && (0, Ob.jsx)("div", {
+          className: Hb()("SchematicImage", Ib.h, {
+            SchematicImageFadeIn: Ub.fadeIn && !tb
           }),
-          style: (0, Qd.g)(od),
-          children: (0, td.jsx)(Qd.e, {
-            image: od
+          style: (0, Ib.d)(Ub),
+          children: (0, Ob.jsx)(Ib.b, {
+            image: Ub
           })
-        }), od.failed && (0, td.jsx)("div", {
+        }), Ub.failed && (0, Ob.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, td.jsx)(Rd.c, {
+          children: (0, Ob.jsx)(pb.b, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  35535: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd
+  35320: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb
     });
-    var Wd = md(5197),
-      Fd = md(5206);
+    var eb = Mb(5387),
+      Hb = Mb(5395);
 
-    function Rd(dd) {
+    function pb(bb) {
       let {
-        children: Od,
-        showing: md,
-        globallyUniqueKey: Rd,
-        alwaysMountChildren: Xd = !1,
-        doGameplayStartStopOnShow: Kd = !0,
-        keepsMovement: hd = !1
-      } = dd;
-      return (0, Fd.e)(!0, md, Rd, hd), (0, Wd.b)(Kd, md), md || Xd ? Od : null
+        children: wb,
+        showing: Mb,
+        globallyUniqueKey: pb,
+        alwaysMountChildren: Vb = !1,
+        doGameplayStartStopOnShow: gb = !0,
+        keepsMovement: lb = !1
+      } = bb;
+      return (0, Hb.d)(!0, Mb, pb, lb), (0, eb.b)(gb, Mb), Mb || Vb ? wb : null
     }
   },
-  5693: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Kd
+  5822: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => gb
     });
-    var Wd = md(66),
-      Fd = md(1155),
-      Rd = md.n(Fd),
-      Xd = md(1341);
+    var eb = Mb(64),
+      Hb = Mb(1159),
+      pb = Mb.n(Hb),
+      Vb = Mb(1364);
 
-    function Kd(dd) {
+    function gb(bb) {
       let {
-        columns: Od,
-        rows: md,
-        getRowKey: Fd,
-        renderRow: Kd,
-        className: hd
-      } = dd;
-      return (0, Xd.jsxs)("table", {
-        className: Rd()("Table", hd),
-        children: [(0, Xd.jsx)("thead", {
-          children: (0, Xd.jsx)("tr", {
-            children: Od.map((dd => (0, Xd.jsx)("th", {
-              children: dd.header
-            }, dd.key)))
+        columns: wb,
+        rows: Mb,
+        getRowKey: Hb,
+        renderRow: gb,
+        className: lb
+      } = bb;
+      return (0, Vb.jsxs)("table", {
+        className: pb()("Table", lb),
+        children: [(0, Vb.jsx)("thead", {
+          children: (0, Vb.jsx)("tr", {
+            children: wb.map((bb => (0, Vb.jsx)("th", {
+              children: bb.header
+            }, bb.key)))
           })
-        }), (0, Xd.jsx)("tbody", {
-          children: md.map(((dd, Od) => (0, Xd.jsx)(Wd.Fragment, {
-            children: Kd(dd, Od)
-          }, Fd(dd))))
+        }), (0, Vb.jsx)("tbody", {
+          children: Mb.map(((bb, wb) => (0, Vb.jsx)(eb.Fragment, {
+            children: gb(bb, wb)
+          }, Hb(bb))))
         })]
       })
     }
   },
-  38302: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Kd,
-      e: () => hd,
-      h: () => vd,
-      j: () => Qd,
-      l: () => qd
+  37956: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => gb,
+      i: () => lb,
+      k: () => Lb,
+      o: () => Ib,
+      s: () => Cb
     });
-    var Wd = md(66),
-      Fd = md(4308),
-      Rd = md(3510),
-      Xd = md(32);
-    const Kd = 8,
-      hd = "InGameHeaderContainer",
-      vd = "TopRightElements";
+    var eb = Mb(64),
+      Hb = Mb(4472),
+      pb = Mb(3642),
+      Vb = Mb(29);
+    const gb = 8,
+      lb = "InGameHeaderContainer",
+      Lb = "TopRightElements";
 
-    function Qd(dd) {
-      const [Od] = (0, Fd.b)(), [md, Rd] = (0, Wd.useState)(!1);
-      return (0, Wd.useLayoutEffect)((() => {
-        if (!dd) return;
-        const Od = document.querySelector(`.${hd}`),
-          md = document.querySelector(`.${vd}`),
-          Wd = () => {
-            const Wd = dd.getBoundingClientRect(),
-              Fd = Od ? Od.getBoundingClientRect().right : 0,
-              Xd = md ? md.getBoundingClientRect().left : window.innerWidth,
-              hd = Wd.left < Fd + Kd,
-              vd = Wd.right > Xd - Kd;
-            Rd(hd || vd)
+    function Ib(bb) {
+      const [wb] = (0, Hb.c)(), [Mb, pb] = (0, eb.useState)(!1);
+      return (0, eb.useLayoutEffect)((() => {
+        if (!bb) return;
+        const wb = document.querySelector(`.${lb}`),
+          Mb = document.querySelector(`.${Lb}`),
+          eb = () => {
+            const eb = bb.getBoundingClientRect(),
+              Hb = wb ? wb.getBoundingClientRect().right : 0,
+              Vb = Mb ? Mb.getBoundingClientRect().left : window.innerWidth,
+              lb = eb.left < Hb + gb,
+              Lb = eb.right > Vb - gb;
+            pb(lb || Lb)
           };
-        Wd();
-        const Fd = new ResizeObserver(Wd);
-        return Fd.observe(dd), Od && Fd.observe(Od), md && Fd.observe(md), () => {
-          Fd.disconnect()
+        eb();
+        const Hb = new ResizeObserver(eb);
+        return Hb.observe(bb), wb && Hb.observe(wb), Mb && Hb.observe(Mb), () => {
+          Hb.disconnect()
         }
-      }), [dd, Od]), md
+      }), [bb, wb]), Mb
     }
-    const td = `.InGameUi .${hd}`,
-      od = [td, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
-      Nd = 1e3;
+    const Ob = `.InGameUi .${lb}`,
+      Ub = [Ob, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
+      tb = 1e3;
 
-    function qd(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd,
-        md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const [Fd, hd] = (0, Wd.useState)(null);
-      return (0, Wd.useLayoutEffect)((() => {
-        if (!dd) return;
-        const Wd = new ResizeObserver((() => {
-          vd()
+    function Cb(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb,
+        Mb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const [Hb, lb] = (0, eb.useState)(null);
+      return (0, eb.useLayoutEffect)((() => {
+        if (!bb) return;
+        const eb = new ResizeObserver((() => {
+          Lb()
         }));
-        Wd.observe(dd), Od && Od !== dd && Wd.observe(Od);
-        let Fd = [];
+        eb.observe(bb), wb && wb !== bb && eb.observe(wb);
+        let Hb = [];
 
-        function vd() {
-          var Rd, Xd, vd;
-          const Qd = dd.getBoundingClientRect(),
-            Nd = function() {
-              const dd = od.map((dd => document.querySelector(dd))).filter((dd => null !== dd));
-              for (const Od of dd) Fd.includes(Od) || Wd.observe(Od);
-              for (const Od of Fd) dd.includes(Od) || Wd.unobserve(Od);
-              return Fd = dd, dd
+        function Lb() {
+          var pb, Vb, Lb;
+          const Ib = bb.getBoundingClientRect(),
+            tb = function() {
+              const bb = Ub.map((bb => document.querySelector(bb))).filter((bb => null !== bb));
+              for (const wb of bb) Hb.includes(wb) || eb.observe(wb);
+              for (const wb of Hb) bb.includes(wb) || eb.unobserve(wb);
+              return Hb = bb, bb
             }(),
-            qd = Nd.filter((dd => {
-              const Od = dd.getBoundingClientRect();
-              return Od.width > 0 && Od.height > 0 && Qd.left < Od.right + Kd && Qd.right > Od.left - Kd
+            Cb = tb.filter((bb => {
+              const wb = bb.getBoundingClientRect();
+              return wb.width > 0 && wb.height > 0 && Ib.left < wb.right + gb && Ib.right > wb.left - gb
             }));
-          if (0 === qd.length && !md) return void hd(null);
-          const Hd = Nd.find((dd => dd.matches(td))),
-            yd = Math.max(null !== (Rd = null === Hd || void 0 === Hd ? void 0 : Hd.getBoundingClientRect().bottom) && void 0 !== Rd ? Rd : 0, ...qd.map((dd => dd.getBoundingClientRect().bottom))),
-            bd = null !== (Xd = null === Od || void 0 === Od || null === (vd = Od.offsetParent) || void 0 === vd ? void 0 : vd.getBoundingClientRect().top) && void 0 !== Xd ? Xd : 0;
-          hd(Math.ceil(yd + Kd / 2) - Math.round(bd))
+          if (0 === Cb.length && !Mb) return void lb(null);
+          const Eb = tb.find((bb => bb.matches(Ob))),
+            Fb = Math.max(null !== (pb = null === Eb || void 0 === Eb ? void 0 : Eb.getBoundingClientRect().bottom) && void 0 !== pb ? pb : 0, ...Cb.map((bb => bb.getBoundingClientRect().bottom))),
+            Bb = null !== (Vb = null === wb || void 0 === wb || null === (Lb = wb.offsetParent) || void 0 === Lb ? void 0 : Lb.getBoundingClientRect().top) && void 0 !== Vb ? Vb : 0;
+          lb(Math.ceil(Fb + gb / 2) - Math.round(Bb))
         }
-        const Qd = setInterval(vd, Nd);
-        vd(), window.addEventListener("resize", vd);
-        const qd = (0, Xd.l)(Rd.c, vd);
+        const Ib = setInterval(Lb, tb);
+        Lb(), window.addEventListener("resize", Lb);
+        const Cb = (0, Vb.o)(pb.e, Lb);
         return () => {
-          Wd.disconnect(), clearInterval(Qd), window.removeEventListener("resize", vd), qd()
+          eb.disconnect(), clearInterval(Ib), window.removeEventListener("resize", Lb), Cb()
         }
-      }), [dd, Od, md]), Fd
+      }), [bb, wb, Mb]), Hb
     }
   },
-  38259: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Xd,
-      g: () => Fd,
-      h: () => Rd
+  37923: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Vb,
+      e: () => Hb,
+      i: () => pb
     });
-    var Wd = md(66);
+    var eb = Mb(64);
 
-    function Fd(dd) {
-      return Kd(dd, hd)
+    function Hb(bb) {
+      return gb(bb, lb)
     }
 
-    function Rd(dd) {
-      return Kd(dd, vd)
+    function pb(bb) {
+      return gb(bb, Lb)
     }
 
-    function Xd(dd) {
-      return `${Math.floor(dd/60)}:${String(dd%60).padStart(2,"0")}`
+    function Vb(bb) {
+      return `${Math.floor(bb/60)}:${String(bb%60).padStart(2,"0")}`
     }
 
-    function Kd(dd, Od) {
-      const [, md] = (0, Wd.useState)(null);
-      return (0, Wd.useEffect)((() => {
-        if (0 === dd) return;
-        const Wd = window.setInterval((() => {
-          const Wd = Od(dd);
-          md((Od => (null === Od || void 0 === Od ? void 0 : Od.endsAt) === dd && Od.value === Wd ? Od : {
-            endsAt: dd,
-            value: Wd
+    function gb(bb, wb) {
+      const [, Mb] = (0, eb.useState)(null);
+      return (0, eb.useEffect)((() => {
+        if (0 === bb) return;
+        const eb = window.setInterval((() => {
+          const eb = wb(bb);
+          Mb((wb => (null === wb || void 0 === wb ? void 0 : wb.endsAt) === bb && wb.value === eb ? wb : {
+            endsAt: bb,
+            value: eb
           }))
         }), 250);
         return () => {
-          window.clearInterval(Wd)
+          window.clearInterval(eb)
         }
-      }), [dd, Od]), Od(dd)
+      }), [bb, wb]), wb(bb)
     }
 
-    function hd(dd) {
-      return (dd - performance.now()) / 1e3
+    function lb(bb) {
+      return (bb - performance.now()) / 1e3
     }
 
-    function vd(dd) {
-      return Math.max(0, Math.ceil(hd(dd)))
+    function Lb(bb) {
+      return Math.max(0, Math.ceil(lb(bb)))
     }
   },
-  9850: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      d: () => Fd
+  10064: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => pb,
+      g: () => Hb
     });
-    let Wd = null;
-    const Fd = function(dd) {
-        const Od = {
-          cycle: dd,
+    let eb = null;
+    const Hb = function(bb) {
+        const wb = {
+          cycle: bb,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Wd = Od, () => {
-          Wd === Od && (Wd = null)
+        return eb = wb, () => {
+          eb === wb && (eb = null)
         }
       },
-      Rd = () => {
-        var dd;
-        return null !== (dd = Wd) && void 0 !== dd && dd.canCycle() ? Wd.cycle : null
+      pb = () => {
+        var bb;
+        return null !== (bb = eb) && void 0 !== bb && bb.canCycle() ? eb.cycle : null
       }
   },
-  40123: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Xd
+  39819: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Vb
     });
-    const Wd = 4,
-      Fd = 12e3,
-      Rd = 1e3;
-    class Xd {
+    const eb = 4,
+      Hb = 12e3,
+      pb = 1e3;
+    class Vb {
       constructor() {
         let {
-          limit: dd = Wd,
-          windowMs: Od = Fd,
-          spacingMs: md = Rd,
-          now: Xd = Date.now
+          limit: bb = eb,
+          windowMs: wb = Hb,
+          spacingMs: Mb = pb,
+          now: Vb = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = dd, this.windowMs = Od, this.spacingMs = md, this.now = Xd
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = bb, this.windowMs = wb, this.spacingMs = Mb, this.now = Vb
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -352,87 +352,87 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const dd of this.priority) dd.flush();
+        for (const bb of this.priority) bb.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const dd = this.now();
-        this.sent.push(dd), this.lastSentAt = dd, this.schedule(), this.notify()
+        const bb = this.now();
+        this.sent.push(bb), this.lastSentAt = bb, this.schedule(), this.notify()
       }
-      addPriority(dd) {
-        return this.priority.add(dd), () => {
-          this.priority.delete(dd)
+      addPriority(bb) {
+        return this.priority.add(bb), () => {
+          this.priority.delete(bb)
         }
       }
-      subscribe(dd) {
-        return this.listeners.add(dd), () => {
-          this.listeners.delete(dd)
+      subscribe(bb) {
+        return this.listeners.add(bb), () => {
+          this.listeners.delete(bb)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const dd of this.priority)
-          if (dd.waiting()) return !0;
+        for (const bb of this.priority)
+          if (bb.waiting()) return !0;
         return !1
       }
       prune() {
-        const dd = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= dd;) this.sent.shift()
+        const bb = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= bb;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const dd = this.now(),
-          Od = this.lastSentAt + this.spacingMs,
-          md = Math.min(Od > dd ? Od : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        md !== 1 / 0 && (this.timer = setTimeout((() => {
+        const bb = this.now(),
+          wb = this.lastSentAt + this.spacingMs,
+          Mb = Math.min(wb > bb ? wb : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        Mb !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, md - dd)))
+        }), Math.max(0, Mb - bb)))
       }
       notify() {
-        for (const dd of this.listeners) dd()
+        for (const bb of this.listeners) bb()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  38172: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => hd,
-      g: () => Qd,
-      i: () => Xd,
-      j: () => td,
-      l: () => Kd
+  37820: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => lb,
+      g: () => Ib,
+      h: () => Vb,
+      j: () => Ob,
+      k: () => gb
     });
-    var Wd = md(32),
-      Fd = md(1415);
-    let Rd = null;
+    var eb = Mb(29),
+      Hb = Mb(1447);
+    let pb = null;
 
-    function Xd() {
-      return (0, Fd.c)() ? null : Rd
+    function Vb() {
+      return (0, Hb.f)() ? null : pb
     }
 
-    function Kd(dd) {
-      return Rd = dd, () => {
-        Rd === dd && (Rd = null)
+    function gb(bb) {
+      return pb = bb, () => {
+        pb === bb && (pb = null)
       }
     }
-    const hd = "clientGameHeldItemLabelChanged";
-    let vd = null;
+    const lb = "clientGameHeldItemLabelChanged";
+    let Lb = null;
 
-    function Qd() {
-      return (0, Fd.c)() ? null : vd
+    function Ib() {
+      return (0, Hb.f)() ? null : Lb
     }
 
-    function td(dd) {
-      return vd = dd, Wd.j.lQ(hd), () => {
-        vd === dd && (vd = null, Wd.j.lQ(hd))
+    function Ob(bb) {
+      return Lb = bb, eb.k.iI(lb), () => {
+        Lb === bb && (Lb = null, eb.k.iI(lb))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

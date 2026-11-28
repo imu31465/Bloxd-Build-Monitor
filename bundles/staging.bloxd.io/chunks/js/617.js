@@ -1,26 +1,26 @@
 export const id = 617;
 export const ids = [617];
 export const modules = {
-  53845: (dd, Od, md) => {
-    function Wd() {
-      return Wd = Object.assign ? Object.assign.bind() : function(dd) {
-        for (var Od = 1; Od < arguments.length; Od++) {
-          var md = arguments[Od];
-          for (var Wd in md)({}).hasOwnProperty.call(md, Wd) && (dd[Wd] = md[Wd])
+  53589: (bb, wb, Mb) => {
+    function eb() {
+      return eb = Object.assign ? Object.assign.bind() : function(bb) {
+        for (var wb = 1; wb < arguments.length; wb++) {
+          var Mb = arguments[wb];
+          for (var eb in Mb)({}).hasOwnProperty.call(Mb, eb) && (bb[eb] = Mb[eb])
         }
-        return dd
-      }, Wd.apply(null, arguments)
+        return bb
+      }, eb.apply(null, arguments)
     }
-    md.d(Od, {
-      e: () => od,
-      h: () => Kd
+    Mb.d(wb, {
+      c: () => Ub,
+      e: () => gb
     });
-    var Fd = !1;
+    var Hb = !1;
     try {
-      Fd = "undefined" !== typeof localStorage
-    } catch (qd) {}
-    var Rd = "undefined" !== typeof process,
-      Xd = Fd && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || Rd && {
+      Hb = "undefined" !== typeof localStorage
+    } catch (Cb) {}
+    var pb = "undefined" !== typeof process,
+      Vb = Hb && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || pb && {
         NODE_ENV: "production",
         PUBLIC_URL: "",
         WDS_SOCKET_HOST: void 0,
@@ -28,141 +28,141 @@ export const modules = {
         WDS_SOCKET_PORT: void 0,
         FAST_REFRESH: !0,
         REACT_APP_DEV_URLS: "false"
-      }.DEBUG ? console.log : function(dd) {
+      }.DEBUG ? console.log : function(bb) {
         return ""
       };
 
-    function Kd(dd, Od, md, Fd, Rd) {
-      void 0 === Fd && (Fd = {});
-      var Xd = Wd({}, Qd(md), Fd),
-        Kd = function(dd, Od, md, Fd, Rd) {
-          var Xd = [].concat(Od),
-            Kd = Nd(dd, md, Fd),
-            hd = Kd.compilerHost,
-            vd = Kd.updateFile,
-            Qd = Kd.deleteFile,
-            td = new Map,
-            od = 0,
-            qd = Wd({}, hd, {
+    function gb(bb, wb, Mb, Hb, pb) {
+      void 0 === Hb && (Hb = {});
+      var Vb = eb({}, Ib(Mb), Hb),
+        gb = function(bb, wb, Mb, Hb, pb) {
+          var Vb = [].concat(wb),
+            gb = tb(bb, Mb, Hb),
+            lb = gb.compilerHost,
+            Lb = gb.updateFile,
+            Ib = gb.deleteFile,
+            Ob = new Map,
+            Ub = 0,
+            Cb = eb({}, lb, {
               getProjectVersion: function() {
-                return od.toString()
+                return Ub.toString()
               },
               getCompilationSettings: function() {
-                return md
+                return Mb
               },
               getCustomTransformers: function() {
-                return Rd
+                return pb
               },
               getScriptFileNames: function() {
-                return Xd.slice()
+                return Vb.slice()
               },
-              getScriptSnapshot: function(Od) {
-                var md = dd.readFile(Od);
-                if (md && "string" === typeof md) return Fd.ScriptSnapshot.fromString(md)
+              getScriptSnapshot: function(wb) {
+                var Mb = bb.readFile(wb);
+                if (Mb && "string" === typeof Mb) return Hb.ScriptSnapshot.fromString(Mb)
               },
-              getScriptVersion: function(dd) {
-                return td.get(dd) || "0"
+              getScriptVersion: function(bb) {
+                return Ob.get(bb) || "0"
               },
-              writeFile: dd.writeFile
+              writeFile: bb.writeFile
             }),
-            Hd = {
-              languageServiceHost: qd,
-              updateFile: function(dd) {
-                od++, td.set(dd.fileName, od.toString()), Xd.includes(dd.fileName) || Xd.push(dd.fileName), vd(dd)
+            Eb = {
+              languageServiceHost: Cb,
+              updateFile: function(bb) {
+                Ub++, Ob.set(bb.fileName, Ub.toString()), Vb.includes(bb.fileName) || Vb.push(bb.fileName), Lb(bb)
               },
-              deleteFile: function(dd) {
-                od++, td.set(dd.fileName, od.toString());
-                var Od = Xd.indexOf(dd.fileName); - 1 !== Od && Xd.splice(Od, 1), Qd(dd)
+              deleteFile: function(bb) {
+                Ub++, Ob.set(bb.fileName, Ub.toString());
+                var wb = Vb.indexOf(bb.fileName); - 1 !== wb && Vb.splice(wb, 1), Ib(bb)
               }
             };
-          return Hd
-        }(dd, Od, Xd, md, Rd),
-        hd = Kd.languageServiceHost,
-        vd = Kd.updateFile,
-        td = Kd.deleteFile,
-        od = md.createLanguageService(hd),
-        qd = od.getCompilerOptionsDiagnostics();
-      if (qd.length) {
-        var Hd = Nd(dd, Fd, md);
-        throw new Error(md.formatDiagnostics(qd, Hd.compilerHost))
+          return Eb
+        }(bb, wb, Vb, Mb, pb),
+        lb = gb.languageServiceHost,
+        Lb = gb.updateFile,
+        Ob = gb.deleteFile,
+        Ub = Mb.createLanguageService(lb),
+        Cb = Ub.getCompilerOptionsDiagnostics();
+      if (Cb.length) {
+        var Eb = tb(bb, Hb, Mb);
+        throw new Error(Mb.formatDiagnostics(Cb, Eb.compilerHost))
       }
       return {
         name: "vfs",
-        sys: dd,
-        languageService: od,
-        getSourceFile: function(dd) {
-          var Od;
-          return null == (Od = od.getProgram()) ? void 0 : Od.getSourceFile(dd)
+        sys: bb,
+        languageService: Ub,
+        getSourceFile: function(bb) {
+          var wb;
+          return null == (wb = Ub.getProgram()) ? void 0 : wb.getSourceFile(bb)
         },
-        createFile: function(dd, Od) {
-          vd(md.createSourceFile(dd, Od, Xd.target, !1))
+        createFile: function(bb, wb) {
+          Lb(Mb.createSourceFile(bb, wb, Vb.target, !1))
         },
-        updateFile: function(dd, Od, Wd) {
-          var Fd = od.getProgram().getSourceFile(dd);
-          if (!Fd) throw new Error("Did not find a source file for " + dd);
-          var Rd = Fd.text,
-            Xd = null != Wd ? Wd : md.createTextSpan(0, Rd.length),
-            Kd = Rd.slice(0, Xd.start) + Od + Rd.slice(Xd.start + Xd.length),
-            hd = md.updateSourceFile(Fd, Kd, {
-              span: Xd,
-              newLength: Od.length
+        updateFile: function(bb, wb, eb) {
+          var Hb = Ub.getProgram().getSourceFile(bb);
+          if (!Hb) throw new Error("Did not find a source file for " + bb);
+          var pb = Hb.text,
+            Vb = null != eb ? eb : Mb.createTextSpan(0, pb.length),
+            gb = pb.slice(0, Vb.start) + wb + pb.slice(Vb.start + Vb.length),
+            lb = Mb.updateSourceFile(Hb, gb, {
+              span: Vb,
+              newLength: wb.length
             });
-          vd(hd)
+          Lb(lb)
         },
-        deleteFile: function(dd) {
-          var Od = od.getProgram().getSourceFile(dd);
-          Od && td(Od)
+        deleteFile: function(bb) {
+          var wb = Ub.getProgram().getSourceFile(bb);
+          wb && Ob(wb)
         }
       }
     }
 
-    function hd(dd) {
-      throw new Error("Method '" + dd + "' is not implemented.")
+    function lb(bb) {
+      throw new Error("Method '" + bb + "' is not implemented.")
     }
 
-    function vd(dd, Od) {
+    function Lb(bb, wb) {
       return function() {
-        for (var md = arguments.length, Wd = new Array(md), Fd = 0; Fd < md; Fd++) Wd[Fd] = arguments[Fd];
-        var Rd = Od.apply(void 0, Wd),
-          Kd = "string" === typeof Rd ? Rd.slice(0, 80) + "..." : Rd;
-        return Xd.apply(void 0, ["> " + dd].concat(Wd)), Xd("< " + Kd), Rd
+        for (var Mb = arguments.length, eb = new Array(Mb), Hb = 0; Hb < Mb; Hb++) eb[Hb] = arguments[Hb];
+        var pb = wb.apply(void 0, eb),
+          gb = "string" === typeof pb ? pb.slice(0, 80) + "..." : pb;
+        return Vb.apply(void 0, ["> " + bb].concat(eb)), Vb("< " + gb), pb
       }
     }
-    var Qd = function(dd) {
-        return Wd({}, dd.getDefaultCompilerOptions(), {
-          jsx: dd.JsxEmit.React,
+    var Ib = function(bb) {
+        return eb({}, bb.getDefaultCompilerOptions(), {
+          jsx: bb.JsxEmit.React,
           strict: !0,
           esModuleInterop: !0,
-          module: dd.ModuleKind.ESNext,
+          module: bb.ModuleKind.ESNext,
           suppressOutputPathCheck: !0,
           skipLibCheck: !0,
           skipDefaultLibCheck: !0
-        }, dd.versionMajorMinor && Number(dd.versionMajorMinor.split(".")[0]) >= 6 ? {
+        }, bb.versionMajorMinor && Number(bb.versionMajorMinor.split(".")[0]) >= 6 ? {
           ignoreDeprecations: "6.0"
         } : {
-          moduleResolution: dd.ModuleResolutionKind.NodeJs
+          moduleResolution: bb.ModuleResolutionKind.NodeJs
         })
       },
-      td = function(dd) {
-        return dd.replace("/", "/lib.").toLowerCase()
+      Ob = function(bb) {
+        return bb.replace("/", "/lib.").toLowerCase()
       };
 
-    function od(dd) {
+    function Ub(bb) {
       return {
         args: [],
         createDirectory: function() {
-          return hd("createDirectory")
+          return lb("createDirectory")
         },
-        directoryExists: vd("directoryExists", (function(Od) {
-          return Array.from(dd.keys()).some((function(dd) {
-            return dd.startsWith(Od)
+        directoryExists: Lb("directoryExists", (function(wb) {
+          return Array.from(bb.keys()).some((function(bb) {
+            return bb.startsWith(wb)
           }))
         })),
         exit: function() {
-          return hd("exit")
+          return lb("exit")
         },
-        fileExists: vd("fileExists", (function(Od) {
-          return dd.has(Od) || dd.has(td(Od))
+        fileExists: Lb("fileExists", (function(wb) {
+          return bb.has(wb) || bb.has(Ob(wb))
         })),
         getCurrentDirectory: function() {
           return "/"
@@ -171,64 +171,64 @@ export const modules = {
           return []
         },
         getExecutingFilePath: function() {
-          return hd("getExecutingFilePath")
+          return lb("getExecutingFilePath")
         },
-        readDirectory: vd("readDirectory", (function(Od) {
-          return "/" === Od ? Array.from(dd.keys()) : []
+        readDirectory: Lb("readDirectory", (function(wb) {
+          return "/" === wb ? Array.from(bb.keys()) : []
         })),
-        readFile: vd("readFile", (function(Od) {
-          var md;
-          return null != (md = dd.get(Od)) ? md : dd.get(td(Od))
+        readFile: Lb("readFile", (function(wb) {
+          var Mb;
+          return null != (Mb = bb.get(wb)) ? Mb : bb.get(Ob(wb))
         })),
-        resolvePath: function(dd) {
-          return dd
+        resolvePath: function(bb) {
+          return bb
         },
         newLine: "\n",
         useCaseSensitiveFileNames: !0,
         write: function() {
-          return hd("write")
+          return lb("write")
         },
-        writeFile: function(Od, md) {
-          dd.set(Od, md)
+        writeFile: function(wb, Mb) {
+          bb.set(wb, Mb)
         },
-        deleteFile: function(Od) {
-          dd.delete(Od)
+        deleteFile: function(wb) {
+          bb.delete(wb)
         }
       }
     }
 
-    function Nd(dd, Od, md) {
-      var Fd = new Map;
+    function tb(bb, wb, Mb) {
+      var Hb = new Map;
       return {
-        compilerHost: Wd({}, dd, {
-          getCanonicalFileName: function(dd) {
-            return dd
+        compilerHost: eb({}, bb, {
+          getCanonicalFileName: function(bb) {
+            return bb
           },
           getDefaultLibFileName: function() {
-            return "/" + md.getDefaultLibFileName(Od)
+            return "/" + Mb.getDefaultLibFileName(wb)
           },
           getNewLine: function() {
-            return dd.newLine
+            return bb.newLine
           },
-          getSourceFile: function(Wd, Rd) {
-            var Xd, Kd;
-            return Fd.get(Wd) || (Kd = md.createSourceFile(Wd, dd.readFile(Wd), null != (Xd = null != Rd ? Rd : Od.target) ? Xd : Qd(md).target, !1), Fd.set(Kd.fileName, Kd), Kd)
+          getSourceFile: function(eb, pb) {
+            var Vb, gb;
+            return Hb.get(eb) || (gb = Mb.createSourceFile(eb, bb.readFile(eb), null != (Vb = null != pb ? pb : wb.target) ? Vb : Ib(Mb).target, !1), Hb.set(gb.fileName, gb), gb)
           },
           useCaseSensitiveFileNames: function() {
-            return dd.useCaseSensitiveFileNames
+            return bb.useCaseSensitiveFileNames
           }
         }),
-        updateFile: function(Od) {
-          var md = Fd.has(Od.fileName);
-          return dd.writeFile(Od.fileName, Od.text), Fd.set(Od.fileName, Od), md
+        updateFile: function(wb) {
+          var Mb = Hb.has(wb.fileName);
+          return bb.writeFile(wb.fileName, wb.text), Hb.set(wb.fileName, wb), Mb
         },
-        deleteFile: function(Od) {
-          var md = Fd.has(Od.fileName);
-          return Fd.delete(Od.fileName), dd.deleteFile(Od.fileName), md
+        deleteFile: function(wb) {
+          var Mb = Hb.has(wb.fileName);
+          return Hb.delete(wb.fileName), bb.deleteFile(wb.fileName), Mb
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,291 +1,291 @@
 export const id = 227;
 export const ids = [227];
 export const modules = {
-  37701: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      capturePreviewPicture: () => bd,
-      holdPreviewsLow: () => Xd.d,
-      openLiveFigure: () => yd,
-      rasterNametag: () => gd
+  37444: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      capturePreviewPicture: () => Bb,
+      holdPreviewsLow: () => Vb.g,
+      openLiveFigure: () => Fb,
+      rasterNametag: () => zb
     });
-    var Wd = md(1300),
-      Fd = md(3597),
-      Rd = md(35582),
-      Xd = md(37709),
-      Kd = md(37713),
-      hd = md(37722),
-      vd = md(37829),
-      Qd = md(4685);
-    const td = 480,
-      od = 16,
-      Nd = {
+    var eb = Mb(1313),
+      Hb = Mb(3724),
+      pb = Mb(35366),
+      Vb = Mb(37446),
+      gb = Mb(37449),
+      lb = Mb(37452),
+      Lb = Mb(37528),
+      Ib = Mb(4847);
+    const Ob = 480,
+      Ub = 16,
+      tb = {
         minGapMs: 250,
         now: () => performance.now(),
-        skip: Xd.s
+        skip: Vb.v
       },
-      qd = 30,
-      Hd = 1e4;
+      Cb = 30,
+      Eb = 1e4;
 
-    function yd(dd, Od, md, hd) {
-      const vd = Rd.i.openCharacter(dd, "player");
-      let Qd = !1,
-        td = !1,
-        qd = null;
-      const yd = async () => {
-        const dd = vd.dev.canvas(),
-          Od = await (Wd = () => dd.isConnected && function(dd) {
+    function Fb(bb, wb, Mb, lb) {
+      const Lb = pb.i.openCharacter(bb, "player");
+      let Ib = !1,
+        Ob = !1,
+        Cb = null;
+      const Fb = async () => {
+        const bb = Lb.dev.canvas(),
+          wb = await (eb = () => bb.isConnected && function(bb) {
             const {
-              x: Od,
-              width: md
-            } = Td(dd);
-            if (0 === md || 0 === dd.height) return !1;
-            if (pd ??= document.createElement("canvas").getContext("2d", {
+              x: wb,
+              width: Mb
+            } = sb(bb);
+            if (0 === Mb || 0 === bb.height) return !1;
+            if (mb ??= document.createElement("canvas").getContext("2d", {
                 willReadFrequently: !0
-              }), null === pd) return !1;
-            const Wd = pd.canvas;
-            Wd.height = Math.min(dd.height, od), Wd.width = Math.max(1, Math.round(md * Wd.height / dd.height));
-            const Fd = pd;
-            return Fd.imageSmoothingQuality = "high", Fd.drawImage(dd, Od, 0, md, dd.height, 0, 0, Wd.width, Wd.height), Yd(Fd.getImageData(0, 0, Wd.width, Wd.height).data)
-          }(dd), Fd = Xd.c, Rd = () => !Qd && vd.isReady(), Kd = Nd, new Promise((dd => {
-            let Od = Number.NEGATIVE_INFINITY;
-            const md = () => {
-              Fd((() => {
+              }), null === mb) return !1;
+            const eb = mb.canvas;
+            eb.height = Math.min(bb.height, Ub), eb.width = Math.max(1, Math.round(Mb * eb.height / bb.height));
+            const Hb = mb;
+            return Hb.imageSmoothingQuality = "high", Hb.drawImage(bb, wb, 0, Mb, bb.height, 0, 0, eb.width, eb.height), hb(Hb.getImageData(0, 0, eb.width, eb.height).data)
+          }(bb), Hb = Vb.e, pb = () => !Ib && Lb.isReady(), gb = tb, new Promise((bb => {
+            let wb = Number.NEGATIVE_INFINITY;
+            const Mb = () => {
+              Hb((() => {
                 try {
-                  if (!Rd()) return void dd(!1);
-                  if (Kd.skip()) return void dd(!0);
-                  const Fd = Kd.now();
-                  if (Fd - Od >= Kd.minGapMs && (Od = Fd, Wd())) return void dd(!0);
-                  md()
-                } catch (Fd) {
-                  console.warn("[loading-character] couldn't read a figure's frame", Fd), dd(!1)
+                  if (!pb()) return void bb(!1);
+                  if (gb.skip()) return void bb(!0);
+                  const Hb = gb.now();
+                  if (Hb - wb >= gb.minGapMs && (wb = Hb, eb())) return void bb(!0);
+                  Mb()
+                } catch (Hb) {
+                  console.warn("[loading-character] couldn't read a figure's frame", Hb), bb(!1)
                 }
               }))
             };
-            md()
+            Mb()
           })));
-        var Wd, Fd, Rd, Kd;
-        return !Od || Qd || td || (td = !0, md(!0)), Od
+        var eb, Hb, pb, gb;
+        return !wb || Ib || Ob || (Ob = !0, Mb(!0)), wb
       };
-      return vd.ready.then((() => {
-        if (Qd) return !1;
-        for (const Xd of Wd.s) {
-          var dd;
-          vd.setCosmetic(Xd, null !== (dd = Od.cosmetics[Xd]) && void 0 !== dd ? dd : (0, Fd.b)(Xd))
+      return Lb.ready.then((() => {
+        if (Ib) return !1;
+        for (const Vb of eb.u) {
+          var bb;
+          Lb.setCosmetic(Vb, null !== (bb = wb.cosmetics[Vb]) && void 0 !== bb ? bb : (0, Hb.b)(Vb))
         }
-        const md = Promise.all(Wd.s.map((dd => vd.untilDrawn(dd)))).then((() => !0)),
-          Rd = new Promise((dd => {
+        const Mb = Promise.all(eb.u.map((bb => Lb.untilDrawn(bb)))).then((() => !0)),
+          pb = new Promise((bb => {
             setTimeout((() => {
-              (0, Xd.c)((() => {
-                dd(!1)
+              (0, Vb.e)((() => {
+                bb(!1)
               }))
-            }), Hd)
+            }), Eb)
           }));
-        return Promise.race([md, Rd])
-      })).then((async dd => {
-        if (!Qd && vd.isReady() && await yd() && dd) return bd(vd.dev.canvas(), (() => !Qd && vd.isReady())).then((dd => {
-          null === dd || Qd || hd(dd)
+        return Promise.race([Mb, pb])
+      })).then((async bb => {
+        if (!Ib && Lb.isReady() && await Fb() && bb) return Bb(Lb.dev.canvas(), (() => !Ib && Lb.isReady())).then((bb => {
+          null === bb || Ib || lb(bb)
         }))
-      })).catch((dd => {
-        console.warn("[loading-character] a figure couldn't draw", dd)
+      })).catch((bb => {
+        console.warn("[loading-character] a figure couldn't draw", bb)
       })), {
-        resize: (dd, Od) => {
-          const Wd = (0, Kd.c)(dd, Od, window.devicePixelRatio),
-            Fd = null !== qd && (qd[0] !== Wd[0] || qd[1] !== Wd[1]);
-          qd = Wd, vd.resize(dd, Od), Fd && td && (td = !1, md(!1), yd())
+        resize: (bb, wb) => {
+          const eb = (0, gb.b)(bb, wb, window.devicePixelRatio),
+            Hb = null !== Cb && (Cb[0] !== eb[0] || Cb[1] !== eb[1]);
+          Cb = eb, Lb.resize(bb, wb), Hb && Ob && (Ob = !1, Mb(!1), Fb())
         },
         close: () => {
-          Qd = !0, vd.close()
+          Ib = !0, Lb.close()
         }
       }
     }
 
-    function bd(dd, Od) {
-      return new Promise((md => {
-        const Wd = Fd => {
-          (0, Xd.c)((() => {
-            if (!Od()) return void md(null);
-            const Rd = dd.isConnected ? function(dd) {
+    function Bb(bb, wb) {
+      return new Promise((Mb => {
+        const eb = Hb => {
+          (0, Vb.e)((() => {
+            if (!wb()) return void Mb(null);
+            const pb = bb.isConnected ? function(bb) {
               let {
-                canvas: Od,
-                x: md,
-                width: Wd
-              } = dd;
-              if (0 === Wd || 0 === Od.height) return null;
-              const Fd = Math.min(1, td / Od.height),
-                Rd = document.createElement("canvas");
-              Rd.width = Math.max(1, Math.round(Wd * Fd)), Rd.height = Math.max(1, Math.round(Od.height * Fd));
-              const Xd = Rd.getContext("2d", {
+                canvas: wb,
+                x: Mb,
+                width: eb
+              } = bb;
+              if (0 === eb || 0 === wb.height) return null;
+              const Hb = Math.min(1, Ob / wb.height),
+                pb = document.createElement("canvas");
+              pb.width = Math.max(1, Math.round(eb * Hb)), pb.height = Math.max(1, Math.round(wb.height * Hb));
+              const Vb = pb.getContext("2d", {
                 willReadFrequently: !0
               });
-              if (!Xd) return null;
-              if (Xd.drawImage(Od, md, 0, Wd, Od.height, 0, 0, Rd.width, Rd.height), !Yd(Xd.getImageData(0, 0, Rd.width, Rd.height).data)) return null;
-              return Rd.toDataURL("image/webp", .85)
-            }(Td(dd)) : null;
-            null !== Rd || Fd <= 1 || !dd.isConnected ? md(Rd) : Wd(Fd - 1)
+              if (!Vb) return null;
+              if (Vb.drawImage(wb, Mb, 0, eb, wb.height, 0, 0, pb.width, pb.height), !hb(Vb.getImageData(0, 0, pb.width, pb.height).data)) return null;
+              return pb.toDataURL("image/webp", .85)
+            }(sb(bb)) : null;
+            null !== pb || Hb <= 1 || !bb.isConnected ? Mb(pb) : eb(Hb - 1)
           }))
         };
-        Wd(qd)
+        eb(Cb)
       }))
     }
 
-    function Td(dd) {
-      const Od = Math.min(dd.width, Math.round(dd.height * Qd.d));
+    function sb(bb) {
+      const wb = Math.min(bb.width, Math.round(bb.height * Ib.d));
       return {
-        canvas: dd,
-        x: Math.round((dd.width - Od) / 2),
-        width: Od
+        canvas: bb,
+        x: Math.round((bb.width - wb) / 2),
+        width: wb
       }
     }
-    let pd = null;
+    let mb = null;
 
-    function Yd(dd) {
-      for (let Od = 3; Od < dd.length; Od += 4)
-        if (0 !== dd[Od]) return !0;
+    function hb(bb) {
+      for (let wb = 3; wb < bb.length; wb += 4)
+        if (0 !== bb[wb]) return !0;
       return !1
     }
-    async function gd(dd) {
-      var Od;
-      await vd.j.load();
-      const md = {
-          name: dd.name,
+    async function zb(bb) {
+      var wb;
+      await Lb.k.load();
+      const Mb = {
+          name: bb.name,
           info: null,
-          colour: null !== (Od = dd.nameColour) && void 0 !== Od ? Od : "default",
-          ranks: dd.ranks,
+          colour: null !== (wb = bb.nameColour) && void 0 !== wb ? wb : "default",
+          ranks: bb.ranks,
           effects: [],
           health: null,
-          UX: null,
+          DV: null,
           hideNameSeed: null,
-          player: !dd.isYou
+          player: !bb.isYou
         },
-        Wd = document.createElement("canvas"),
-        [Fd, Rd] = (0, hd.g)((0, hd.i)(hd.e.Nametag, md), Wd, !0);
-      return 0 === Fd || 0 === Rd ? null : {
-        src: Wd.toDataURL("image/png"),
-        width: Fd,
-        height: Rd
+        eb = document.createElement("canvas"),
+        [Hb, pb] = (0, lb.g)((0, lb.j)(lb.c.Nametag, Mb), eb, !0);
+      return 0 === Hb || 0 === pb ? null : {
+        src: eb.toDataURL("image/png"),
+        width: Hb,
+        height: pb
       }
     }
   },
-  35587: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Kd,
-      g: () => Fd,
-      j: () => td
+  35370: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => gb,
+      c: () => Hb,
+      f: () => Ob
     });
-    var Wd = md(1685);
+    var eb = Mb(1735);
 
-    function Fd(dd) {
-      var Od;
+    function Hb(bb) {
+      var wb;
       return {
-        ...Kd.store,
-        yaw: Kd.store.yaw + (null !== (Od = Wd.b[dd].previewYaw) && void 0 !== Od ? Od : 0)
+        ...gb.store,
+        yaw: gb.store.yaw + (null !== (wb = eb.d[bb].previewYaw) && void 0 !== wb ? wb : 0)
       }
     }
-    const Rd = {
+    const pb = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      Xd = {
-        ...Rd,
+      Vb = {
+        ...pb,
         radius: 33,
         target: [0, 3.9, 0]
       },
-      Kd = {
-        player: Rd,
-        store: Xd,
+      gb = {
+        player: pb,
+        store: Vb,
         showcase: {
-          ...Xd,
+          ...Vb,
           target: [0, 1.9, 0]
         }
       };
 
-    function hd(dd, Od) {
-      dd instanceof Promise ? dd.then(Od).catch((dd => {
-        console.error("Couldn't open the preview", dd)
-      })) : Od(dd)
+    function lb(bb, wb) {
+      bb instanceof Promise ? bb.then(wb).catch((bb => {
+        console.error("Couldn't open the preview", bb)
+      })) : wb(bb)
     }
-    class vd {
-      constructor(dd) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, hd(dd, (dd => {
-          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height), null !== this.view && dd.show(this.view))
+    class Lb {
+      constructor(bb) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, lb(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height), null !== this.view && bb.show(this.view))
         }))
       }
-      show(dd) {
-        var Od;
-        this.view = dd, null === (Od = this.opened) || void 0 === Od || Od.show(dd)
+      show(bb) {
+        var wb;
+        this.view = bb, null === (wb = this.opened) || void 0 === wb || wb.show(bb)
       }
-      resize(dd, Od) {
-        var md;
+      resize(bb, wb) {
+        var Mb;
         this.size = {
-          width: dd,
-          height: Od
-        }, null === (md = this.opened) || void 0 === md || md.resize(dd, Od)
+          width: bb,
+          height: wb
+        }, null === (Mb = this.opened) || void 0 === Mb || Mb.resize(bb, wb)
       }
       close() {
-        var dd;
-        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    class Qd {
-      constructor(dd) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(dd).then((dd => dd.ready)), hd(dd, (dd => {
-          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height))
+    class Ib {
+      constructor(bb) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(bb).then((bb => bb.ready)), lb(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var dd, Od;
-        return null !== (dd = null === (Od = this.opened) || void 0 === Od ? void 0 : Od.isReady()) && void 0 !== dd && dd
+        var bb, wb;
+        return null !== (bb = null === (wb = this.opened) || void 0 === wb ? void 0 : wb.isReady()) && void 0 !== bb && bb
       }
-      setCosmetic(dd, Od) {
-        var md;
-        null === (md = this.opened) || void 0 === md || md.setCosmetic(dd, Od)
+      setCosmetic(bb, wb) {
+        var Mb;
+        null === (Mb = this.opened) || void 0 === Mb || Mb.setCosmetic(bb, wb)
       }
-      setNametag(dd) {
-        var Od;
-        null === (Od = this.opened) || void 0 === Od || Od.setNametag(dd)
+      setNametag(bb) {
+        var wb;
+        null === (wb = this.opened) || void 0 === wb || wb.setNametag(bb)
       }
-      playEmote(dd) {
-        var Od;
-        null === (Od = this.opened) || void 0 === Od || Od.playEmote(dd)
+      playEmote(bb) {
+        var wb;
+        null === (wb = this.opened) || void 0 === wb || wb.playEmote(bb)
       }
-      setOrbit(dd) {
-        var Od;
-        null === (Od = this.opened) || void 0 === Od || Od.setOrbit(dd)
+      setOrbit(bb) {
+        var wb;
+        null === (wb = this.opened) || void 0 === wb || wb.setOrbit(bb)
       }
       resetCamera() {
-        var dd;
-        null === (dd = this.opened) || void 0 === dd || dd.resetCamera()
+        var bb;
+        null === (bb = this.opened) || void 0 === bb || bb.resetCamera()
       }
-      async untilDrawn(dd) {
-        var Od;
-        await this.ready, await (null === (Od = this.opened) || void 0 === Od ? void 0 : Od.untilDrawn(dd))
+      async untilDrawn(bb) {
+        var wb;
+        await this.ready, await (null === (wb = this.opened) || void 0 === wb ? void 0 : wb.untilDrawn(bb))
       }
-      resize(dd, Od) {
-        var md;
+      resize(bb, wb) {
+        var Mb;
         this.size = {
-          width: dd,
-          height: Od
-        }, null === (md = this.opened) || void 0 === md || md.resize(dd, Od)
+          width: bb,
+          height: wb
+        }, null === (Mb = this.opened) || void 0 === Mb || Mb.resize(bb, wb)
       }
       close() {
-        var dd;
-        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    const td = new class {
+    const Ob = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(dd) {
-        this.host = dd
+      setHost(bb) {
+        this.host = bb
       }
-      setDefaultHost(dd) {
-        this.makeDefault = dd
+      setDefaultHost(bb) {
+        this.makeDefault = bb
       }
       current() {
         if (null === this.host) {
@@ -294,175 +294,175 @@ export const modules = {
         }
         return this.host
       }
-      openMob(dd) {
-        return new vd(this.current().openMob(dd))
+      openMob(bb) {
+        return new Lb(this.current().openMob(bb))
       }
-      openPet(dd) {
-        return new vd(this.current().openPet(dd))
+      openPet(bb) {
+        return new Lb(this.current().openPet(bb))
       }
-      openMobLineup(dd) {
-        return new vd(this.current().openMobLineup(dd))
+      openMobLineup(bb) {
+        return new Lb(this.current().openMobLineup(bb))
       }
       sharesCharacter() {
         return !0 === this.current().sharesCharacter
       }
-      openCharacter(dd, Od) {
-        return new Qd(this.current().openCharacter(dd, Od))
+      openCharacter(bb, wb) {
+        return new Ib(this.current().openCharacter(bb, wb))
       }
     }
   },
-  35582: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd.c,
-      g: () => Wd.g,
-      i: () => Wd.j
+  35366: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => eb.b,
+      f: () => eb.c,
+      i: () => eb.f
     });
-    var Wd = md(35587);
-    class Fd {
-      constructor(dd) {
-        this.load = dd, this.loaded = null, this.loading = null
+    var eb = Mb(35370);
+    class Hb {
+      constructor(bb) {
+        this.load = bb, this.loaded = null, this.loading = null
       }
-      run(dd) {
-        return null !== this.loaded ? dd(this.loaded) : (this.loading ??= this.load().then((dd => (this.loaded = dd, dd)), (dd => {
-          throw this.loading = null, dd
-        })), this.loading.then(dd))
+      run(bb) {
+        return null !== this.loaded ? bb(this.loaded) : (this.loading ??= this.load().then((bb => (this.loaded = bb, bb)), (bb => {
+          throw this.loading = null, bb
+        })), this.loading.then(bb))
       }
     }
-    class Rd {
+    class pb {
       constructor() {
-        this.sharesCharacter = !0, this.mobScene = new Fd((() => Promise.all([md.e(85), md.e(265), md.e(264), md.e(290), md.e(113), md.e(291), md.e(89), md.e(86), md.e(288), md.e(87), md.e(88), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(312), md.e(261), md.e(279), md.e(293), md.e(296), md.e(91), md.e(253), md.e(267), md.e(112), md.e(124), md.e(258), md.e(142), md.e(90), md.e(122), md.e(311)]).then((() => md(43035))))), this.characterScene = new Fd((() => Promise.all([md.e(85), md.e(265), md.e(264), md.e(290), md.e(113), md.e(291), md.e(89), md.e(86), md.e(288), md.e(87), md.e(88), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(312), md.e(177), md.e(261), md.e(279), md.e(293), md.e(296), md.e(91), md.e(225), md.e(253), md.e(267), md.e(112), md.e(124), md.e(258), md.e(142), md.e(90), md.e(122), md.e(280), md.e(184)]).then((() => md(43148)))))
+        this.sharesCharacter = !0, this.mobScene = new Hb((() => Promise.all([Mb.e(85), Mb.e(265), Mb.e(264), Mb.e(290), Mb.e(113), Mb.e(291), Mb.e(89), Mb.e(86), Mb.e(288), Mb.e(87), Mb.e(88), Mb.e(298), Mb.e(292), Mb.e(297), Mb.e(295), Mb.e(287), Mb.e(312), Mb.e(261), Mb.e(279), Mb.e(293), Mb.e(296), Mb.e(91), Mb.e(253), Mb.e(267), Mb.e(112), Mb.e(124), Mb.e(258), Mb.e(142), Mb.e(90), Mb.e(122), Mb.e(311)]).then((() => Mb(42755))))), this.characterScene = new Hb((() => Promise.all([Mb.e(85), Mb.e(265), Mb.e(264), Mb.e(290), Mb.e(113), Mb.e(291), Mb.e(89), Mb.e(86), Mb.e(288), Mb.e(87), Mb.e(88), Mb.e(298), Mb.e(292), Mb.e(297), Mb.e(295), Mb.e(287), Mb.e(312), Mb.e(177), Mb.e(261), Mb.e(279), Mb.e(293), Mb.e(296), Mb.e(91), Mb.e(225), Mb.e(253), Mb.e(267), Mb.e(112), Mb.e(124), Mb.e(258), Mb.e(142), Mb.e(90), Mb.e(122), Mb.e(280), Mb.e(184)]).then((() => Mb(42854)))))
       }
-      openMob(dd) {
-        return this.mobScene.run((Od => Od.openMobPreview(dd)))
+      openMob(bb) {
+        return this.mobScene.run((wb => wb.openMobPreview(bb)))
       }
-      openPet(dd) {
-        return this.mobScene.run((Od => Od.openPetPreview(dd)))
+      openPet(bb) {
+        return this.mobScene.run((wb => wb.openPetPreview(bb)))
       }
-      openMobLineup(dd) {
-        return this.mobScene.run((Od => Od.openMobLineupPreview(dd)))
+      openMobLineup(bb) {
+        return this.mobScene.run((wb => wb.openMobLineupPreview(bb)))
       }
-      openCharacter(dd, Od) {
-        return this.characterScene.run((md => md.openCharacterPreview(dd, Od)))
+      openCharacter(bb, wb) {
+        return this.characterScene.run((Mb => Mb.openCharacterPreview(bb, wb)))
       }
     }
-    Wd.j.setDefaultHost((() => new Rd))
+    eb.f.setDefaultHost((() => new pb))
   },
-  37729: (dd, Od, md) => {
-    function Wd(dd, Od, md) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(dd, Od).getContext("2d", md);
-      const Wd = document.createElement("canvas");
-      return Wd.width = dd, Wd.height = Od, Wd.getContext("2d", md)
+  37455: (bb, wb, Mb) => {
+    function eb(bb, wb, Mb) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(bb, wb).getContext("2d", Mb);
+      const eb = document.createElement("canvas");
+      return eb.width = bb, eb.height = wb, eb.getContext("2d", Mb)
     }
 
-    function Fd(dd, Od) {
-      return dd.getContext("2d", Od)
+    function Hb(bb, wb) {
+      return bb.getContext("2d", wb)
     }
-    md.d(Od, {
-      e: () => Fd,
-      i: () => Wd
+    Mb.d(wb, {
+      d: () => Hb,
+      g: () => eb
     })
   },
-  37713: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd
+  37449: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => pb
     });
-    const Wd = 4e5,
-      Fd = 2;
+    const eb = 4e5,
+      Hb = 2;
 
-    function Rd(dd, Od, md) {
-      let [Rd, Xd] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [dd, Od], Kd = Math.min(Number.isFinite(md) && md > 0 ? md : 1, Fd);
-      const hd = Math.max(0, Rd, dd) * Math.max(0, Xd, Od) * Kd * Kd;
-      return hd > Wd && (Kd *= Math.sqrt(Wd / hd)), [Math.max(1, Math.floor(Math.max(0, dd) * Kd)), Math.max(1, Math.floor(Math.max(0, Od) * Kd))]
+    function pb(bb, wb, Mb) {
+      let [pb, Vb] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [bb, wb], gb = Math.min(Number.isFinite(Mb) && Mb > 0 ? Mb : 1, Hb);
+      const lb = Math.max(0, pb, bb) * Math.max(0, Vb, wb) * gb * gb;
+      return lb > eb && (gb *= Math.sqrt(eb / lb)), [Math.max(1, Math.floor(Math.max(0, bb) * gb)), Math.max(1, Math.floor(Math.max(0, wb) * gb))]
     }
   },
-  37709: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => yd,
-      d: () => Qd,
-      g: () => Nd,
-      h: () => td,
-      l: () => bd,
-      p: () => qd,
-      r: () => Hd,
-      s: () => od
+  37446: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Fb,
+      g: () => Ib,
+      h: () => tb,
+      j: () => Ob,
+      n: () => Bb,
+      o: () => Cb,
+      r: () => Eb,
+      v: () => Ub
     });
-    const Wd = 30,
-      Fd = 4;
-    let Rd = 0,
-      Xd = !1,
-      Kd = !1,
-      hd = Number.NEGATIVE_INFINITY,
-      vd = [];
+    const eb = 30,
+      Hb = 4;
+    let pb = 0,
+      Vb = !1,
+      gb = !1,
+      lb = Number.NEGATIVE_INFINITY,
+      Lb = [];
 
-    function Qd() {
-      0 === Rd && (Xd = !1, Kd = !1), Rd++;
-      let dd = !1;
+    function Ib() {
+      0 === pb && (Vb = !1, gb = !1), pb++;
+      let bb = !1;
       return () => {
-        dd || (dd = !0, Rd--)
+        bb || (bb = !0, pb--)
       }
     }
 
-    function td(dd) {
-      dd && (Kd = !0)
+    function Ob(bb) {
+      bb && (gb = !0)
     }
 
-    function od() {
-      return Kd
+    function Ub() {
+      return gb
     }
 
-    function Nd(dd) {
-      Xd = dd
+    function tb(bb) {
+      Vb = bb
     }
 
-    function qd() {
-      return Rd > 0
+    function Cb() {
+      return pb > 0
     }
 
-    function Hd(dd) {
-      return !(Rd > 0 && (Xd || dd - hd < 1e3 / Wd - Fd)) && (hd = dd, !0)
+    function Eb(bb) {
+      return !(pb > 0 && (Vb || bb - lb < 1e3 / eb - Hb)) && (lb = bb, !0)
     }
 
-    function yd(dd) {
-      return vd.push(dd), () => {
-        vd = vd.filter((Od => Od !== dd))
+    function Fb(bb) {
+      return Lb.push(bb), () => {
+        Lb = Lb.filter((wb => wb !== bb))
       }
     }
 
-    function bd() {
-      if (0 === vd.length) return;
-      const dd = vd;
-      vd = [];
-      for (const md of dd) try {
-        md()
-      } catch (Od) {
-        console.warn("[bloxd-previews] an after-draw callback threw", Od)
+    function Bb() {
+      if (0 === Lb.length) return;
+      const bb = Lb;
+      Lb = [];
+      for (const Mb of bb) try {
+        Mb()
+      } catch (wb) {
+        console.warn("[bloxd-previews] an after-draw callback threw", wb)
       }
     }
   },
-  37851: (dd, Od, md) => {
-    function Wd() {
-      return md(37857)
+  37544: (bb, wb, Mb) => {
+    function eb() {
+      return Mb(37546)
     }
 
-    function Fd() {
-      return md(37866)
+    function Hb() {
+      return Mb(37550)
     }
 
-    function Rd(dd) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(dd)
+    function pb(bb) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(bb)
     }
-    md.d(Od, {
-      b: () => Rd,
-      d: () => Wd,
-      f: () => Fd
+    Mb.d(wb, {
+      b: () => pb,
+      e: () => eb,
+      f: () => Hb
     })
   },
-  37857: (dd, Od, md) => {
-    dd.exports = md.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  37546: (bb, wb, Mb) => {
+    bb.exports = Mb.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  37866: (dd, Od, md) => {
-    dd.exports = md.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  37550: (bb, wb, Mb) => {
+    bb.exports = Mb.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

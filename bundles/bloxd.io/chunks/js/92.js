@@ -1,485 +1,485 @@
 export const id = 92;
 export const ids = [92, 220, 221];
 export const modules = {
-  35413: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      EverythingMenu: () => YQ
+  35204: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      EverythingMenu: () => mI
     });
-    var Wd = md(66),
-      Fd = md(1155),
-      Rd = md.n(Fd),
-      Xd = md(1238),
-      Kd = md(1443),
-      hd = md(2225),
-      vd = md(1572),
-      Qd = md(1170),
-      td = md(1341);
+    var eb = Mb(64),
+      Hb = Mb(1159),
+      pb = Mb.n(Hb),
+      Vb = Mb(1259),
+      gb = Mb(1475),
+      lb = Mb(2276),
+      Lb = Mb(1616),
+      Ib = Mb(1168),
+      Ob = Mb(1364);
 
-    function od(dd) {
+    function Ub(bb) {
       let {
-        items: Od,
-        link: md,
-        onClick: Wd,
-        selectedItemId: Fd,
-        className: od,
-        padStartsOnTab: Nd = !0
-      } = dd;
+        items: wb,
+        link: Mb,
+        onClick: eb,
+        selectedItemId: Hb,
+        className: Ub,
+        padStartsOnTab: tb = !0
+      } = bb;
       const {
-        t: qd
-      } = (0, Xd.G)(), Hd = (0, Qd.h)(), yd = [];
-      for (const Rd of Od) {
-        var bd;
-        const dd = yd[yd.length - 1];
-        var Td;
-        if (dd && dd.title === (null !== (bd = Rd.section) && void 0 !== bd ? bd : null)) dd.items.push(Rd);
-        else yd.push({
-          title: null !== (Td = Rd.section) && void 0 !== Td ? Td : null,
-          items: [Rd]
+        t: Cb
+      } = (0, Vb.C)(), Eb = (0, Ib.h)(), Fb = [];
+      for (const pb of wb) {
+        var Bb;
+        const bb = Fb[Fb.length - 1];
+        var sb;
+        if (bb && bb.title === (null !== (Bb = pb.section) && void 0 !== Bb ? Bb : null)) bb.items.push(pb);
+        else Fb.push({
+          title: null !== (sb = pb.section) && void 0 !== sb ? sb : null,
+          items: [pb]
         })
       }
-      return (0, td.jsxs)("div", {
-        className: Rd()("MenuSideBarBody", od),
+      return (0, Ob.jsxs)("div", {
+        className: pb()("MenuSideBarBody", Ub),
         "data-pad-tabs": "2",
-        children: [yd.map(((dd, Od) => {
-          var md;
-          return (0, td.jsxs)("div", {
+        children: [Fb.map(((bb, wb) => {
+          var Mb;
+          return (0, Ob.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [dd.title && (0, td.jsx)("div", {
+            children: [bb.title && (0, Ob.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: qd(dd.title)
-            }), dd.items.map((dd => {
-              var Od;
-              const md = !!dd.iconElement || !!dd.faIcon;
-              return (0, td.jsxs)("div", {
+              children: Cb(bb.title)
+            }), bb.items.map((bb => {
+              var wb;
+              const Mb = !!bb.iconElement || !!bb.faIcon;
+              return (0, Ob.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": Fd === dd.id ? "true" : void 0,
-                "data-pad-default-focus": Nd && Fd === dd.id || void 0,
-                className: Rd()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: Fd === dd.id
+                "data-pad-selected": Hb === bb.id ? "true" : void 0,
+                "data-pad-default-focus": tb && Hb === bb.id || void 0,
+                className: pb()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: Hb === bb.id
                 }),
                 onClick: () => {
-                  Wd(dd.id)
+                  eb(bb.id)
                 },
-                children: [md && (0, td.jsx)("div", {
+                children: [Mb && (0, Ob.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (Od = dd.iconElement) && void 0 !== Od ? Od : (0, td.jsx)(Kd.c, {
-                    name: dd.faIcon
+                  children: null !== (wb = bb.iconElement) && void 0 !== wb ? wb : (0, Ob.jsx)(gb.b, {
+                    name: bb.faIcon
                   })
-                }), (!Hd || !md) && (0, td.jsx)("div", {
-                  children: qd(dd.title)
-                }), dd.redDot && (0, td.jsx)(hd.e, {
+                }), (!Eb || !Mb) && (0, Ob.jsx)("div", {
+                  children: Cb(bb.title)
+                }), bb.redDot && (0, Ob.jsx)(lb.e, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, dd.id)
+              }, bb.id)
             }))]
-          }, null !== (md = dd.title) && void 0 !== md ? md : Od)
-        })), md && (0, td.jsxs)("div", {
-          ...(0, vd.X)(),
+          }, null !== (Mb = bb.title) && void 0 !== Mb ? Mb : wb)
+        })), Mb && (0, Ob.jsxs)("div", {
+          ...(0, Lb.bb)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: md.onClick,
-          children: [(0, td.jsx)("div", {
+          onClick: Mb.onClick,
+          children: [(0, Ob.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, td.jsx)(Kd.c, {
-              name: md.faIcon
+            children: (0, Ob.jsx)(gb.b, {
+              name: Mb.faIcon
             })
-          }), (0, td.jsx)("div", {
-            children: qd(md.title)
-          }), (0, td.jsx)(Kd.c, {
+          }), (0, Ob.jsx)("div", {
+            children: Cb(Mb.title)
+          }), (0, Ob.jsx)(gb.b, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var Nd = md(3016),
-      qd = md(1186),
-      Hd = md(3403),
-      yd = md(4308),
-      bd = md(107),
-      Td = md(2092),
-      pd = md(3174),
-      Yd = md(3177),
-      gd = md(1808),
-      wd = md(1436),
-      Ed = md(5901),
-      Jd = md(29),
-      Ud = md(35422);
+    var tb = Mb(3082),
+      Cb = Mb(1179),
+      Eb = Mb(3503),
+      Fb = Mb(4472),
+      Bb = Mb(110),
+      sb = Mb(2142),
+      mb = Mb(3242),
+      hb = Mb(3251),
+      zb = Mb(1876),
+      Xb = Mb(1468),
+      xb = Mb(6050),
+      jb = Mb(26),
+      Kb = Mb(35213);
 
-    function xd(dd) {
+    function rb(bb) {
       let {
-        setApplySettingsCallback: Od
-      } = dd;
+        setApplySettingsCallback: wb
+      } = bb;
       const {
-        clientEscMenuOptions: md
-      } = (0, Jd.p)(["clientEscMenuOptions"]), [Fd, Rd] = (0, Wd.useState)(!1), [Xd, Kd] = (0, Wd.useState)(!1), [hd, Qd] = (0, Wd.useState)(6400), [od, Nd] = (0, Wd.useState)(3600), [qd, Hd] = (0, Wd.useState)(!1), [yd, bd] = (0, Wd.useState)(!1);
+        clientEscMenuOptions: Mb
+      } = (0, jb.o)(["clientEscMenuOptions"]), [Hb, pb] = (0, eb.useState)(!1), [Vb, gb] = (0, eb.useState)(!1), [lb, Ib] = (0, eb.useState)(6400), [Ub, tb] = (0, eb.useState)(3600), [Cb, Eb] = (0, eb.useState)(!1), [Fb, Bb] = (0, eb.useState)(!1);
 
-      function Td(dd) {
-        const Od = "screenshot" === dd ? Kd : Rd;
-        Od(!0);
-        const md = qd ? "normals" : yd ? "depth" : null;
-        Ud.devTools.downloadScene(dd, {
-          width: hd,
-          height: od,
-          colouring: md
-        }).catch((dd => {
-          console.error("Couldn't download the scene", dd)
+      function sb(bb) {
+        const wb = "screenshot" === bb ? gb : pb;
+        wb(!0);
+        const Mb = Cb ? "normals" : Fb ? "depth" : null;
+        Kb.devTools.downloadScene(bb, {
+          width: lb,
+          height: Ub,
+          colouring: Mb
+        }).catch((bb => {
+          console.error("Couldn't download the scene", bb)
         })).finally((() => {
-          Od(!1)
+          wb(!1)
         }))
       }
-      return (0, td.jsxs)("div", {
+      return (0, Ob.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, td.jsx)(Ed.e, {
+        children: [(0, Ob.jsx)(xb.d, {
           label: "Disable Ambient Occlusion",
-          checked: md.disableAmbientOcclusion,
-          onClick: dd => {
-            Jd.e.setClientEscMenuOptions({
-              disableAmbientOcclusion: dd
-            }), Od((() => Ed.l))
+          checked: Mb.disableAmbientOcclusion,
+          onClick: bb => {
+            jb.c.setClientEscMenuOptions({
+              disableAmbientOcclusion: bb
+            }), wb((() => xb.l))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), Ud.devTools.supports("ambientLight") && (0, td.jsx)(Ed.i, {
+        }), Kb.devTools.supports("ambientLight") && (0, Ob.jsx)(xb.j, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: md.ambientLightIntensity,
-          onChange: dd => {
-            Ud.devTools.setAmbientLightIntensity(dd).then((() => {
-              Jd.e.setClientEscMenuOptions({
-                ambientLightIntensity: dd
+          initValue: Mb.ambientLightIntensity,
+          onChange: bb => {
+            Kb.devTools.setAmbientLightIntensity(bb).then((() => {
+              jb.c.setClientEscMenuOptions({
+                ambientLightIntensity: bb
               })
-            })).catch((dd => {
-              console.error("Couldn't set the ambient light", dd)
+            })).catch((bb => {
+              console.error("Couldn't set the ambient light", bb)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), Ud.devTools.supports("weaponRaycasts") && (0, td.jsx)(Ed.e, {
+        }), Kb.devTools.supports("weaponRaycasts") && (0, Ob.jsx)(xb.d, {
           label: "Show Weapon Raycasts",
-          checked: md.showWeaponRaycasts,
-          onClick: dd => {
-            Jd.e.setClientEscMenuOptions({
-              showWeaponRaycasts: dd
+          checked: Mb.showWeaponRaycasts,
+          onClick: bb => {
+            jb.c.setClientEscMenuOptions({
+              showWeaponRaycasts: bb
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), Ud.devTools.supports("sceneDownload") && (0, td.jsxs)("div", {
+        }), Kb.devTools.supports("sceneDownload") && (0, Ob.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, td.jsx)(Ed.e, {
+            children: [(0, Ob.jsx)(xb.d, {
               label: "Apply normal-based coloring",
-              checked: qd,
-              onClick: dd => {
-                Hd(dd), dd && bd(!1)
+              checked: Cb,
+              onClick: bb => {
+                Eb(bb), bb && Bb(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, td.jsx)(Ed.e, {
+            }), (0, Ob.jsx)(xb.d, {
               label: "Apply depth-based coloring",
-              checked: yd,
-              onClick: dd => {
-                bd(dd), dd && Hd(!1)
+              checked: Fb,
+              onClick: bb => {
+                Bb(bb), bb && Eb(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, td.jsxs)("div", {
+            }), (0, Ob.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, td.jsx)("div", {
+              children: [(0, Ob.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, td.jsx)(gd.c, {
+              }), (0, Ob.jsx)(zb.d, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (dd, Od) => {
-                  const md = parseInt(dd) || 6400;
-                  Qd(md)
+                onValueChange: (bb, wb) => {
+                  const Mb = parseInt(bb) || 6400;
+                  Ib(Mb)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: hd.toString()
-              }), (0, td.jsx)("span", {
+                defaultValue: lb.toString()
+              }), (0, Ob.jsx)("span", {
                 children: "X"
-              }), (0, td.jsx)(gd.c, {
+              }), (0, Ob.jsx)(zb.d, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (dd, Od) => {
-                  const md = parseInt(dd) || 3600;
-                  Nd(md)
+                onValueChange: (bb, wb) => {
+                  const Mb = parseInt(bb) || 3600;
+                  tb(Mb)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: od.toString()
+                defaultValue: Ub.toString()
               })]
-            }), (0, td.jsxs)("div", {
+            }), (0, Ob.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, td.jsxs)(vd.g, {
+              children: [(0, Ob.jsxs)(Lb.f, {
                 onClick: () => {
-                  Td("screenshot")
+                  sb("screenshot")
                 },
-                disabled: Xd,
-                children: [Xd && (0, td.jsx)(wd.c, {}), "Download Screenshot"]
-              }), (0, td.jsxs)(vd.g, {
+                disabled: Vb,
+                children: [Vb && (0, Ob.jsx)(Xb.c, {}), "Download Screenshot"]
+              }), (0, Ob.jsxs)(Lb.f, {
                 onClick: () => {
-                  Td("glb")
+                  sb("glb")
                 },
-                disabled: Fd,
-                children: [Fd && (0, td.jsx)(wd.c, {}), "Download GLB"]
+                disabled: Hb,
+                children: [Hb && (0, Ob.jsx)(Xb.c, {}), "Download GLB"]
               })]
             })]
-          }), (0, td.jsx)("div", {
+          }), (0, Ob.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var Bd = md(151),
-      Sd = md(1189),
-      sd = md(35428),
-      ud = md(4102),
-      Vd = md(1641),
-      Ad = md(1322),
-      rd = md(1295),
-      Gd = md(2181),
-      nd = md(1627),
-      Ld = md(405),
-      Pd = md(678),
-      zd = md(3277),
-      cd = md(3282);
-    const jd = "store:retiredRankEnds";
+    var Rb = Mb(160),
+      Db = Mb(1186),
+      cb = Mb(35223),
+      Yb = Mb(4279),
+      Zb = Mb(1686),
+      fb = Mb(1333),
+      Ab = Mb(1309),
+      Wb = Mb(2237),
+      Jb = Mb(1677),
+      Sb = Mb(382),
+      Nb = Mb(639),
+      vb = Mb(3357),
+      Qb = Mb(3366);
+    const Gb = "store:retiredRankEnds";
 
-    function Dd(dd) {
+    function qb(bb) {
       let {
-        until: Od,
-        className: md
-      } = dd;
+        until: wb,
+        className: Mb
+      } = bb;
       const {
-        t: Wd,
-        selectedLanguage: Fd
-      } = (0, Xd.G)(), Rd = new Date(Od).toLocaleDateString((0, Xd.p)(Fd.code, jd), {
+        t: eb,
+        selectedLanguage: Hb
+      } = (0, Vb.C)(), pb = new Date(wb).toLocaleDateString((0, Vb.l)(Hb.code, Gb), {
         year: "numeric",
         month: "short",
         day: "numeric"
       });
-      return (0, td.jsx)("span", {
-        className: md,
-        children: Wd(jd, {
-          date: Rd
+      return (0, Ob.jsx)("span", {
+        className: Mb,
+        children: eb(Gb, {
+          date: pb
         })
       })
     }
-    var ed = md(3184),
-      Id = md(4133),
-      ld = md(4128),
-      Cd = md(231),
-      Zd = md(1768),
-      kd = md(1306),
-      fd = md(4154);
+    var ab = Mb(3263),
+      ib = Mb(4323),
+      ub = Mb(4317),
+      db = Mb(236),
+      Pb = Mb(1827),
+      nb = Mb(1321),
+      yb = Mb(4335);
 
-    function Md(dd, Od, md) {
-      const Wd = Pd.n[(0, Pd.h)(Pd.n, Od)],
-        Fd = void 0 === Wd ? void 0 : (0, Cd.b)(dd.entitlements, Wd.entitlementId);
-      return void 0 === Fd || null === Fd.expiresAt || (0, ld.f)(Fd) <= md ? null : Fd.willRenew && null === Fd.billingIssueDetectedAt ? {
+    function ob(bb, wb, Mb) {
+      const eb = Nb.j[(0, Nb.g)(Nb.j, wb)],
+        Hb = void 0 === eb ? void 0 : (0, db.c)(bb.entitlements, eb.entitlementId);
+      return void 0 === Hb || null === Hb.expiresAt || (0, ub.f)(Hb) <= Mb ? null : Hb.willRenew && null === Hb.billingIssueDetectedAt ? {
         renews: !0,
-        at: Math.max(Fd.expiresAt, md)
+        at: Math.max(Hb.expiresAt, Mb)
       } : {
         renews: !1,
-        at: (0, ld.f)(Fd)
+        at: (0, ub.f)(Hb)
       }
     }
-    var dO = md(4113),
-      OO = md(4122);
-    const mO = {
+    var Tb = Mb(4300),
+      kb = Mb(4308);
+    const bw = {
       cancel: !1,
       resume: !1,
       manage: !1
     };
 
-    function WO(dd) {
-      return dd instanceof Id.c && "storeUnavailable" === dd.code ? (console.warn("Billing: the store didn't take a subscription change:", dd), "store:subscriptionStoreUnavailable") : dd instanceof Id.c && "subscriptionActionUnavailable" === dd.code ? (console.warn("Billing: a subscription action billing no longer offers:", dd), "store:subscriptionActionUnavailable") : (console.error("Billing: changing a subscription failed:", dd), "store:subscriptionChangeFailed")
+    function ww(bb) {
+      return bb instanceof ib.d && "storeUnavailable" === bb.code ? (console.warn("Billing: the store didn't take a subscription change:", bb), "store:subscriptionStoreUnavailable") : bb instanceof ib.d && "subscriptionActionUnavailable" === bb.code ? (console.warn("Billing: a subscription action billing no longer offers:", bb), "store:subscriptionActionUnavailable") : (console.error("Billing: changing a subscription failed:", bb), "store:subscriptionChangeFailed")
     }
-    async function FO() {
+    async function Mw() {
       try {
-        var dd;
+        var bb;
         const {
-          offering: Od
-        } = await (0, OO.getBillingClient)().getOfferings((0, zd.p)(Pd.d.id).placementId);
-        return null !== (dd = null === Od || void 0 === Od ? void 0 : Od.packages.find(dO.isPricedPackage)) && void 0 !== dd ? dd : null
-      } catch (Od) {
-        return console.warn("Billing: loading the rank plan's price failed:", Od), null
+          offering: wb
+        } = await (0, kb.getBillingClient)().getOfferings((0, vb.q)(Nb.d.id).placementId);
+        return null !== (bb = null === wb || void 0 === wb ? void 0 : wb.packages.find(Tb.isPricedPackage)) && void 0 !== bb ? bb : null
+      } catch (wb) {
+        return console.warn("Billing: loading the rank plan's price failed:", wb), null
       }
     }
 
-    function RO(dd) {
+    function ew(bb) {
       const {
-        userContext: Od
-      } = (0, qd.d)(), {
-        superRankInfo: md
-      } = Od, Fd = (0, ed.usePurchasesAllowed)(), Rd = (0, Ld.qc)(md), Xd = dd && Fd && (Rd || Od.ranksMayChange), [Kd, hd] = (0, Wd.useState)(null), [vd, Qd] = (0, Wd.useState)(!1), [td, od] = (0, Wd.useState)(!1), [Nd, Hd] = (0, Wd.useState)(null);
-      (0, Wd.useEffect)((() => {
-        if (!Xd) return;
-        let dd = !1;
-        const md = () => {
-          Promise.all([(0, OO.getBillingClient)().getSubscriptions(), FO()]).then((md => {
-            let [Wd, Fd] = md;
-            dd || (hd({
-              for: Od,
-              answer: Wd,
-              pkg: Fd
-            }), Qd(!1))
-          }), (Od => {
-            console.error("Billing: loading the player's subscriptions failed:", Od), dd || Qd(!0)
+        userContext: wb
+      } = (0, Cb.e)(), {
+        superRankInfo: Mb
+      } = wb, Hb = (0, ab.usePurchasesAllowed)(), pb = (0, Sb.Mc)(Mb), Vb = bb && Hb && (pb || wb.ranksMayChange), [gb, lb] = (0, eb.useState)(null), [Lb, Ib] = (0, eb.useState)(!1), [Ob, Ub] = (0, eb.useState)(!1), [tb, Eb] = (0, eb.useState)(null);
+      (0, eb.useEffect)((() => {
+        if (!Vb) return;
+        let bb = !1;
+        const Mb = () => {
+          Promise.all([(0, kb.getBillingClient)().getSubscriptions(), Mw()]).then((Mb => {
+            let [eb, Hb] = Mb;
+            bb || (lb({
+              for: wb,
+              answer: eb,
+              pkg: Hb
+            }), Ib(!1))
+          }), (wb => {
+            console.error("Billing: loading the player's subscriptions failed:", wb), bb || Ib(!0)
           }))
         };
-        md();
-        const Wd = Zd.d.addRefetchListener("billing", md);
+        Mb();
+        const eb = Pb.e.addRefetchListener("billing", Mb);
         return () => {
-          dd = !0, Wd()
+          bb = !0, eb()
         }
-      }), [Xd, Od]);
-      const yd = Xd && Rd && null !== Kd && Kd.for === Od ? function(dd, Od, md, Wd) {
-        var Fd;
+      }), [Vb, wb]);
+      const Fb = Vb && pb && null !== gb && gb.for === wb ? function(bb, wb, Mb, eb) {
+        var Hb;
         const {
-          customerInfo: Rd,
-          actions: Xd
-        } = dd, Kd = Pd.n[(0, Pd.h)(Pd.n, Od)], hd = void 0 === Kd ? void 0 : (0, Cd.b)(Rd.entitlements, Kd.entitlementId), vd = Md(Rd, Od, Wd);
-        if (void 0 === hd || null === vd) return null;
-        const Qd = Object.entries(Rd.subscriptions).find((dd => {
-          let [, Od] = dd;
-          return Od.productId === hd.productId && Od.store === hd.store && !(0, ld.m)(Od.status)
+          customerInfo: pb,
+          actions: Vb
+        } = bb, gb = Nb.j[(0, Nb.g)(Nb.j, wb)], lb = void 0 === gb ? void 0 : (0, db.c)(pb.entitlements, gb.entitlementId), Lb = ob(pb, wb, eb);
+        if (void 0 === lb || null === Lb) return null;
+        const Ib = Object.entries(pb.subscriptions).find((bb => {
+          let [, wb] = bb;
+          return wb.productId === lb.productId && wb.store === lb.store && !(0, ub.m)(wb.status)
         }));
-        if (void 0 === Qd) return null;
-        const [td, od] = Qd, Nd = (null === md || void 0 === md ? void 0 : md.productId) === od.productId && od.store === (0, ed.getBillingStore)();
+        if (void 0 === Ib) return null;
+        const [Ob, Ub] = Ib, tb = (null === Mb || void 0 === Mb ? void 0 : Mb.productId) === Ub.productId && Ub.store === (0, ab.getBillingStore)();
         return {
-          key: td,
-          tierId: Od,
-          info: od,
-          actions: null !== (Fd = (0, Cd.b)(Xd, td)) && void 0 !== Fd ? Fd : mO,
-          date: vd,
-          pkg: Nd ? md : null
+          key: Ob,
+          tierId: wb,
+          info: Ub,
+          actions: null !== (Hb = (0, db.c)(Vb, Ob)) && void 0 !== Hb ? Hb : bw,
+          date: Lb,
+          pkg: tb ? Mb : null
         }
-      }(Kd.answer, md.tier, Kd.pkg, Date.now()) : null;
+      }(gb.answer, Mb.tier, gb.pkg, Date.now()) : null;
       return {
-        subscription: yd,
-        loadFailed: Xd && Rd && vd,
-        busy: td,
-        errorKey: Nd,
-        change: async function(dd) {
-          if (null === yd || td) return;
-          od(!0), Hd(null);
-          const md = (0, OO.getBillingClient)();
+        subscription: Fb,
+        loadFailed: Vb && pb && Lb,
+        busy: Ob,
+        errorKey: tb,
+        change: async function(bb) {
+          if (null === Fb || Ob) return;
+          Ub(!0), Eb(null);
+          const Mb = (0, kb.getBillingClient)();
           try {
-            const Wd = await ("cancel" === dd ? md.cancelSubscription(yd.key) : md.resumeSubscription(yd.key));
-            hd({
-              for: Od,
-              answer: Wd,
-              pkg: yd.pkg
-            }), (0, fd.h)()
-          } catch (Wd) {
-            Hd(WO(Wd))
+            const eb = await ("cancel" === bb ? Mb.cancelSubscription(Fb.key) : Mb.resumeSubscription(Fb.key));
+            lb({
+              for: wb,
+              answer: eb,
+              pkg: Fb.pkg
+            }), (0, yb.e)()
+          } catch (eb) {
+            Eb(ww(eb))
           } finally {
-            od(!1)
+            Ub(!1)
           }
         },
         openManagePage: async function() {
-          if (null === yd || td) return;
-          const dd = window.open("", "_blank");
-          od(!0), Hd(null);
+          if (null === Fb || Ob) return;
+          const bb = window.open("", "_blank");
+          Ub(!0), Eb(null);
           try {
-            const Od = await (0, OO.getBillingClient)().subscriptionManagementUrl(yd.key, kd.f.get().getCurrentLanguageCode());
-            null === dd ? window.open(Od, "_blank", "noopener") : (dd.opener = null, dd.location.href = Od)
-          } catch (Od) {
-            null === dd || void 0 === dd || dd.close(), Hd(WO(Od))
+            const wb = await (0, kb.getBillingClient)().subscriptionManagementUrl(Fb.key, nb.g.get().getCurrentLanguageCode());
+            null === bb ? window.open(wb, "_blank", "noopener") : (bb.opener = null, bb.location.href = wb)
+          } catch (wb) {
+            null === bb || void 0 === bb || bb.close(), Eb(ww(wb))
           } finally {
-            od(!1)
+            Ub(!1)
           }
         }
       }
     }
-    var XO = md(1462),
-      KO = md(4177);
+    var Hw = Mb(1504),
+      pw = Mb(4354);
 
-    function hO(dd, Od) {
-      return new Date(dd).toLocaleDateString(Od, {
+    function Vw(bb, wb) {
+      return new Date(bb).toLocaleDateString(wb, {
         year: "numeric",
         month: "short",
         day: "numeric"
       })
     }
 
-    function vO(dd) {
+    function gw(bb) {
       let {
-        showing: Od,
-        className: md
-      } = dd;
+        showing: wb,
+        className: Mb
+      } = bb;
       const {
-        t: Wd,
-        selectedLanguage: Fd
-      } = (0, Xd.G)(), {
-        subscription: hd,
-        loadFailed: Qd,
-        busy: od,
-        errorKey: Nd,
-        change: qd,
-        openManagePage: Hd
-      } = RO(Od);
-      if (Qd) return (0, td.jsx)("div", {
-        className: Rd()("RankSubscriptionManage SmallTextBold RankSubscriptionManageError", md),
-        children: Wd("store:subscriptionLoadFailed")
+        t: eb,
+        selectedLanguage: Hb
+      } = (0, Vb.C)(), {
+        subscription: lb,
+        loadFailed: Ib,
+        busy: Ub,
+        errorKey: tb,
+        change: Cb,
+        openManagePage: Eb
+      } = ew(wb);
+      if (Ib) return (0, Ob.jsx)("div", {
+        className: pb()("RankSubscriptionManage SmallTextBold RankSubscriptionManageError", Mb),
+        children: eb("store:subscriptionLoadFailed")
       });
-      if (null === hd) return null;
+      if (null === lb) return null;
       const {
-        date: yd,
-        info: bd,
-        actions: Td,
-        pkg: pd
-      } = hd, Yd = yd.renews ? "store:renewsOn" : "store:endsOn", gd = hO(yd.at, (0, Xd.p)(Fd.code, Yd)), wd = Wd((0, zd.p)(hd.tierId).nameKey), Ed = null !== bd.billingIssueDetectedAt;
-      return (0, td.jsxs)("div", {
-        className: Rd()("RankSubscriptionManage", md),
-        children: [(0, td.jsxs)("div", {
+        date: Fb,
+        info: Bb,
+        actions: sb,
+        pkg: mb
+      } = lb, hb = Fb.renews ? "store:renewsOn" : "store:endsOn", zb = Vw(Fb.at, (0, Vb.l)(Hb.code, hb)), Xb = eb((0, vb.q)(lb.tierId).nameKey), xb = null !== Bb.billingIssueDetectedAt;
+      return (0, Ob.jsxs)("div", {
+        className: pb()("RankSubscriptionManage", Mb),
+        children: [(0, Ob.jsxs)("div", {
           className: "RankSubscriptionManageStatus SmallTextBold",
-          children: [Wd(Yd, {
-            date: gd
-          }), yd.renews && null !== pd && (0, ed.subscriptionsSold)() && (0, td.jsxs)(td.Fragment, {
-            children: [" \xb7 ", Wd("store:pricePerMonth", {
-              price: (0, KO.e)(pd)
+          children: [eb(hb, {
+            date: zb
+          }), Fb.renews && null !== mb && (0, ab.subscriptionsSold)() && (0, Ob.jsxs)(Ob.Fragment, {
+            children: [" \xb7 ", eb("store:pricePerMonth", {
+              price: (0, pw.f)(mb)
             })]
           })]
-        }), Ed && (0, td.jsxs)("div", {
+        }), xb && (0, Ob.jsxs)("div", {
           className: "RankSubscriptionManageWarning SmallTextBold",
-          children: [(0, td.jsx)(Kd.c, {
+          children: [(0, Ob.jsx)(gb.b, {
             name: "triangle-exclamation"
-          }), " ", Wd("store:paymentFailing", {
-            rank: wd
+          }), " ", eb("store:paymentFailing", {
+            rank: Xb
           })]
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "RankSubscriptionManageActions",
-          children: [Td.manage && (0, td.jsx)(vd.i, {
-            disabled: od,
+          children: [sb.manage && (0, Ob.jsx)(Lb.j, {
+            disabled: Ub,
             onClick: () => {
-              Hd()
+              Eb()
             },
-            children: Wd(Ed ? "store:updatePayment" : "payments:manageSubscription")
-          }), Td.resume && (0, td.jsx)(vd.g, {
-            loading: od,
+            children: eb(xb ? "store:updatePayment" : "payments:manageSubscription")
+          }), sb.resume && (0, Ob.jsx)(Lb.f, {
+            loading: Ub,
             onClick: () => {
-              qd("resume")
+              Cb("resume")
             },
-            children: Wd("store:resumeSubscription")
-          }), Td.cancel && (0, td.jsx)(vd.G, {
-            loading: od,
+            children: eb("store:resumeSubscription")
+          }), sb.cancel && (0, Ob.jsx)(Lb.Q, {
+            loading: Ub,
             onClick: () => {
-              (async function(dd, Od, md) {
-                const Wd = Date.now() >= dd.info.currentPeriodEnd;
-                return !0 === await XO.NotificationProvider.showPromptPopup({
+              (async function(bb, wb, Mb) {
+                const eb = Date.now() >= bb.info.currentPeriodEnd;
+                return !0 === await Hw.NotificationProvider.showPromptPopup({
                   title: "store:cancelSubscriptionTitle",
-                  subtitle: Wd ? "store:cancelEndsNow" : "store:cancelKeepsUntil",
+                  subtitle: eb ? "store:cancelEndsNow" : "store:cancelKeepsUntil",
                   textOpts: {
                     title: {
-                      rank: Od
+                      rank: wb
                     },
                     subtitle: {
-                      rank: Od,
-                      date: md
+                      rank: wb,
+                      date: Mb
                     }
                   },
                   confirmText: "store:cancelSubscription",
@@ -489,143 +489,143 @@ export const modules = {
                   destructive: !0,
                   unlockPointerKey: "rankSubscriptionCancel"
                 }).getResult()
-              })(hd, wd, hO(bd.currentPeriodEnd, (0, Xd.p)(Fd.code, "store:cancelKeepsUntil"))).then((dd => {
-                dd && qd("cancel")
+              })(lb, Xb, Vw(Bb.currentPeriodEnd, (0, Vb.l)(Hb.code, "store:cancelKeepsUntil"))).then((bb => {
+                bb && Cb("cancel")
               }))
             },
-            children: Wd("store:cancelSubscription")
+            children: eb("store:cancelSubscription")
           })]
-        }), null !== Nd && (0, td.jsx)("div", {
+        }), null !== tb && (0, Ob.jsx)("div", {
           className: "RankSubscriptionManageError SmallTextBold",
-          children: Wd(Nd)
+          children: eb(tb)
         })]
       })
     }
-    var QO = md(3181),
-      tO = md(3762),
-      oO = md(1786);
-    async function NO() {
+    var lw = Mb(3257),
+      Lw = Mb(3898),
+      Iw = Mb(1848);
+    async function Ow() {
       try {
-        return function(dd) {
-          const Od = new Map;
+        return function(bb) {
+          const wb = new Map;
           for (const {
-              store: md,
-              status: Wd,
-              autoRenewStatus: Fd,
-              managementUrl: Rd
+              store: Mb,
+              status: eb,
+              autoRenewStatus: Hb,
+              managementUrl: pb
             }
-            of Object.values(dd.subscriptions)) !(0, ld.j)(md) || (0, ld.m)(Wd) || "willNotRenew" === Fd || Od.has(md) || Od.set(md, null !== Rd && void 0 !== Rd ? Rd : ld.o[md]);
-          return Array.from(Od, (dd => {
-            let [Od, md] = dd;
+            of Object.values(bb.subscriptions)) !(0, ub.j)(Mb) || (0, ub.m)(eb) || "willNotRenew" === Hb || wb.has(Mb) || wb.set(Mb, null !== pb && void 0 !== pb ? pb : ub.n[Mb]);
+          return Array.from(wb, (bb => {
+            let [wb, Mb] = bb;
             return {
-              store: Od,
-              managementUrl: md
+              store: wb,
+              managementUrl: Mb
             }
           }))
-        }(await (0, oO.k)((0, OO.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (dd) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", dd), null
+        }(await (0, Iw.n)((0, kb.getBillingClient)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (bb) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", bb), null
       }
     }
 
-    function qO(dd) {
+    function Uw(bb) {
       const {
-        t: Od,
-        selectedLanguage: md
-      } = (0, Xd.G)(), {
-        userContext: Fd
-      } = (0, qd.d)(), {
-        superRankInfo: Rd
-      } = Fd, Kd = (0, ed.usePurchasesAllowed)(), hd = dd && ((0, Ld.qc)(Rd) || Fd.ranksMayChange) && Kd, {
-        accountId: vd,
-        data: Qd
-      } = (0, tO.g)(fd.e, hd);
-      if ((0, Wd.useEffect)((() => {
-          if (hd) return fd.e.watchAccount(), Zd.d.addRefetchListener("billing", (dd => {
-            "reconnected" === dd ? fd.e.refreshAfterReconnect() : fd.e.refresh()
+        t: wb,
+        selectedLanguage: Mb
+      } = (0, Vb.C)(), {
+        userContext: Hb
+      } = (0, Cb.e)(), {
+        superRankInfo: pb
+      } = Hb, gb = (0, ab.usePurchasesAllowed)(), lb = bb && ((0, Sb.Mc)(pb) || Hb.ranksMayChange) && gb, {
+        accountId: Lb,
+        data: Ib
+      } = (0, Lw.j)(yb.d, lb);
+      if ((0, eb.useEffect)((() => {
+          if (lb) return yb.d.watchAccount(), Pb.e.addRefetchListener("billing", (bb => {
+            "reconnected" === bb ? yb.d.refreshAfterReconnect() : yb.d.refresh()
           }))
-        }), [hd]), !hd || !(0, Ld.qc)(Rd) || null === Qd || vd !== Fd.whamm) return null;
-      const td = Md(Qd, Rd.tier, Date.now());
-      if (null === td) return null;
-      const od = td.renews ? "store:renewsOn" : "store:endsOn",
-        Nd = (0, Xd.f)(md.code, od, td.at, {
+        }), [lb]), !lb || !(0, Sb.Mc)(pb) || null === Ib || Lb !== Hb.whamm) return null;
+      const Ob = ob(Ib, pb.tier, Date.now());
+      if (null === Ob) return null;
+      const Ub = Ob.renews ? "store:renewsOn" : "store:endsOn",
+        tb = (0, Vb.e)(Mb.code, Ub, Ob.at, {
           year: "numeric",
           month: "short",
           day: "numeric"
         }),
-        Hd = (0, ed.getBillingStore)(),
-        yd = null !== Hd && (0, ld.j)(Hd) ? function(dd, Od) {
-          var md;
-          const Wd = Object.values(dd.subscriptions).find((dd => dd.store === Od && !(0, ld.m)(dd.status)));
-          return void 0 === Wd ? null : null !== (md = Wd.managementUrl) && void 0 !== md ? md : ld.o[Od]
-        }(Qd, Hd) : null;
+        Eb = (0, ab.getBillingStore)(),
+        Fb = null !== Eb && (0, ub.j)(Eb) ? function(bb, wb) {
+          var Mb;
+          const eb = Object.values(bb.subscriptions).find((bb => bb.store === wb && !(0, ub.m)(bb.status)));
+          return void 0 === eb ? null : null !== (Mb = eb.managementUrl) && void 0 !== Mb ? Mb : ub.n[wb]
+        }(Ib, Eb) : null;
       return {
-        text: Od(od, {
-          date: Nd
+        text: wb(Ub, {
+          date: tb
         }),
-        manageUrl: yd
+        manageUrl: Fb
       }
     }
-    var HO = md(1471),
-      yO = md(1272),
-      bO = md(5670),
-      TO = md(1605),
-      pO = md(4899),
-      YO = md(3346);
+    var tw = Mb(1516),
+      Cw = Mb(1289),
+      Ew = Mb(5789),
+      Fw = Mb(1648),
+      Bw = Mb(5054),
+      sw = Mb(3449);
 
-    function gO(dd) {
+    function mw(bb) {
       let {
-        showing: Od
-      } = dd;
+        showing: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Xd.G)(), {
-        data: Wd,
-        failed: Fd
-      } = (0, tO.g)(pO.e, Od);
-      return 0 === (null === Wd || void 0 === Wd ? void 0 : Wd.length) || null === Wd && !Fd ? null : (0, td.jsxs)("div", {
+        t: Mb
+      } = (0, Vb.C)(), {
+        data: eb,
+        failed: Hb
+      } = (0, Lw.j)(Bw.h, wb);
+      return 0 === (null === eb || void 0 === eb ? void 0 : eb.length) || null === eb && !Hb ? null : (0, Ob.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: md("paymentHistory:title")
-        }), null === Wd && Fd && (0, td.jsx)("div", {
+          children: Mb("paymentHistory:title")
+        }), null === eb && Hb && (0, Ob.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: md("paymentHistory:loadFailed")
-        }), null !== Wd && (0, td.jsx)("ul", {
+          children: Mb("paymentHistory:loadFailed")
+        }), null !== eb && (0, Ob.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: Wd.map((dd => (0, td.jsxs)("li", {
+          children: eb.map((bb => (0, Ob.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, td.jsx)(YO.d, {
-              entry: dd
-            }), (0, td.jsxs)("div", {
+            children: [(0, Ob.jsx)(sw.d, {
+              entry: bb
+            }), (0, Ob.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, td.jsx)("div", {
-                children: (0, YO.i)(md, dd)
-              }), (0, td.jsxs)("div", {
+              children: [(0, Ob.jsx)("div", {
+                children: (0, sw.k)(Mb, bb)
+              }), (0, Ob.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(dd.at).toLocaleDateString(), "number" === typeof dd.orderId && ` \xb7 ${md("paymentHistory:order",{orderId:dd.orderId})}`]
+                children: [new Date(bb.at).toLocaleDateString(), "number" === typeof bb.orderId && ` \xb7 ${Mb("paymentHistory:order",{orderId:bb.orderId})}`]
               })]
             })]
-          }, (0, pO.d)(dd))))
+          }, (0, Bw.e)(bb))))
         })]
       })
     }
-    var wO = md(3191),
-      aO = md(2296);
+    var hw = Mb(3270),
+      zw = Mb(2341);
 
-    function EO() {
-      (0, aO.e)({
+    function Xw() {
+      (0, zw.b)({
         titleKey: "payments:logInToRestore"
       })
     }
 
-    function JO(dd) {
+    function xw(bb) {
       let {
-        status: Od
-      } = dd;
-      switch (Od) {
+        status: wb
+      } = bb;
+      switch (wb) {
         case "restored":
-          return (0, fd.h)(), {
+          return (0, yb.e)(), {
             key: "payments:purchasesRestored",
             failed: !1
           };
@@ -638,898 +638,898 @@ export const modules = {
       }
     }
 
-    function UO() {
-      const dd = (0, OO.usePageBillingClient)(),
+    function jw() {
+      const bb = (0, kb.usePageBillingClient)(),
         {
-          userContext: Od
-        } = (0, qd.d)(),
-        [md, Fd] = (0, Wd.useState)(!1),
-        [Rd, Xd] = (0, Wd.useState)(null);
+          userContext: wb
+        } = (0, Cb.e)(),
+        [Mb, Hb] = (0, eb.useState)(!1),
+        [pb, Vb] = (0, eb.useState)(null);
       return {
-        restoring: md,
-        notice: Rd,
+        restoring: Mb,
+        notice: pb,
         restore: () => {
-          Od.isLoggedIn() ? (Fd(!0), Xd(null), dd.restorePurchases().then(JO, (dd => dd instanceof Id.c && "loginRequired" === dd.code ? (EO(), null) : function(dd) {
-            return dd instanceof Id.c && "storeBusy" === dd.code ? {
+          wb.isLoggedIn() ? (Hb(!0), Vb(null), bb.restorePurchases().then(xw, (bb => bb instanceof ib.d && "loginRequired" === bb.code ? (Xw(), null) : function(bb) {
+            return bb instanceof ib.d && "storeBusy" === bb.code ? {
               key: "payments:storeBusy",
               failed: !0
-            } : (console.error("Billing: restoring purchases failed:", dd), (0, fd.h)(), {
+            } : (console.error("Billing: restoring purchases failed:", bb), (0, yb.e)(), {
               key: "payments:restoreFailed",
               failed: !0
             })
-          }(dd))).then(Xd).finally((() => {
-            Fd(!1)
-          }))) : EO()
+          }(bb))).then(Vb).finally((() => {
+            Hb(!1)
+          }))) : Xw()
         }
       }
     }
 
-    function xO(dd) {
+    function Kw(bb) {
       let {
-        restoring: Od,
-        notice: md,
-        restore: Fd
-      } = dd;
+        restoring: wb,
+        notice: Mb,
+        restore: Hb
+      } = bb;
       const {
-        t: Kd
-      } = (0, Xd.G)(), hd = (0, ed.usePurchasesAllowed)(), Qd = (0, ed.getBillingStore)(), od = (0, Wd.useRef)(null);
-      return (0, Wd.useEffect)((() => {
-        var dd;
-        null === (dd = od.current) || void 0 === dd || dd.scrollIntoView({
+        t: gb
+      } = (0, Vb.C)(), lb = (0, ab.usePurchasesAllowed)(), Ib = (0, ab.getBillingStore)(), Ub = (0, eb.useRef)(null);
+      return (0, eb.useEffect)((() => {
+        var bb;
+        null === (bb = Ub.current) || void 0 === bb || bb.scrollIntoView({
           block: "nearest"
         })
-      }), [md]), hd && (0, wO.b)(Qd) ? (0, td.jsxs)("div", {
+      }), [Mb]), lb && (0, hw.c)(Ib) ? (0, Ob.jsxs)("div", {
         className: "AccountSettingsRestorePurchases",
-        children: [(0, td.jsx)(vd.i, {
+        children: [(0, Ob.jsx)(Lb.j, {
           className: "AccountSettingsRestorePurchasesButton",
-          loading: Od,
-          onClick: Fd,
-          children: Kd("payments:restorePurchases")
-        }), null !== md && (0, td.jsx)("div", {
-          ref: od,
-          className: Rd()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
-            AccountSettingsRestorePurchasesFailed: md.failed
+          loading: wb,
+          onClick: Hb,
+          children: gb("payments:restorePurchases")
+        }), null !== Mb && (0, Ob.jsx)("div", {
+          ref: Ub,
+          className: pb()("AccountSettingsRestorePurchasesNotice SmallTextBold", {
+            AccountSettingsRestorePurchasesFailed: Mb.failed
           }),
-          children: Kd(md.key)
+          children: gb(Mb.key)
         })]
       }) : null
     }
-    var BO = md(2050),
-      SO = md(1304),
-      sO = md(1253),
-      uO = md(1406),
-      VO = md(387),
-      iO = md(3524);
-    const AO = {
+    var rw = Mb(2101),
+      Rw = Mb(1319),
+      Dw = Mb(1271),
+      Yw = Mb(1436),
+      Zw = Mb(366),
+      fw = Mb(3658);
+    const Aw = {
       appStore: {
         name: "App Store",
-        ...VO.Vb.appStore
+        ...Zw.Xb.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...VO.Vb.googlePlay
+        ...Zw.Xb.googlePlay
       },
       discord: {
         name: "Discord",
-        ...VO.Vb.discord
+        ...Zw.Xb.discord
       }
     };
 
-    function rO(dd) {
+    function Ww(bb) {
       let {
-        warning: Od,
-        subscriptions: md
-      } = dd;
+        warning: wb,
+        subscriptions: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)();
-      return null !== md && 0 === md.length ? (0, td.jsx)(td.Fragment, {
-        children: Wd(Od)
-      }) : (0, td.jsxs)("div", {
+        t: eb
+      } = (0, Vb.C)();
+      return null !== Mb && 0 === Mb.length ? (0, Ob.jsx)(Ob.Fragment, {
+        children: eb(wb)
+      }) : (0, Ob.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [Wd(Od), null === md && (0, td.jsx)("div", {
+        children: [eb(wb), null === Mb && (0, Ob.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: Wd("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== md && (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsx)("div", {
+          children: eb("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== Mb && (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: Wd("auth:deleteAccountStoreSubscriptions")
-          }), (0, td.jsx)(iO.e, {
+            children: eb("auth:deleteAccountStoreSubscriptions")
+          }), (0, Ob.jsx)(fw.d, {
             className: "DeleteAccountSubtitleLinks",
-            links: md.map((dd => {
+            links: Mb.map((bb => {
               let {
-                store: Od,
-                managementUrl: md
-              } = dd;
+                store: wb,
+                managementUrl: Mb
+              } = bb;
               return {
-                ...AO[Od],
-                url: md
+                ...Aw[wb],
+                url: Mb
               }
             }))
           })]
         })]
       })
     }
-    var GO = md(5343);
+    var Jw = Mb(5518);
 
-    function nO(dd) {
+    function Sw(bb) {
       let {
-        showing: Od
-      } = dd;
+        showing: wb
+      } = bb;
       const {
-        userContext: md,
-        isUserContextUpdating: Fd
-      } = (0, qd.d)(), {
-        t: Rd
-      } = (0, Xd.G)(), [Kd, hd] = (0, Wd.useState)(!1), [Qd, od] = (0, Wd.useState)(null), Nd = (0, Wd.useRef)(Od);
-      (0, Wd.useEffect)((() => (Nd.current = Od, () => {
-        Nd.current = !1
-      })), [Od]);
-      const Hd = Fd || Kd;
-      return (0, td.jsxs)("div", {
+        userContext: Mb,
+        isUserContextUpdating: Hb
+      } = (0, Cb.e)(), {
+        t: pb
+      } = (0, Vb.C)(), [gb, lb] = (0, eb.useState)(!1), [Ib, Ub] = (0, eb.useState)(null), tb = (0, eb.useRef)(wb);
+      (0, eb.useEffect)((() => (tb.current = wb, () => {
+        tb.current = !1
+      })), [wb]);
+      const Eb = Hb || gb;
+      return (0, Ob.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, td.jsxs)(vd.G, {
+        children: [(0, Ob.jsxs)(Lb.Q, {
           onClick: async function() {
-            if (!Kd) {
-              hd(!0);
+            if (!gb) {
+              lb(!0);
               try {
-                const dd = await async function() {
-                  const [dd, Od] = await Promise.all([(0, BO.d)(md.availableUserContextTypes) ? NO() : [], PO(md)]);
-                  if (!Nd.current) return SO.e.ok();
-                  const Wd = (0, Ad.b)(md.getPlayerName(), !bd.featureFlags.canSeeRealPlayerNames);
-                  if (!0 !== await XO.NotificationProvider.showPromptPopup({
+                const bb = await async function() {
+                  const [bb, wb] = await Promise.all([(0, rw.d)(Mb.availableUserContextTypes) ? Ow() : [], vw(Mb)]);
+                  if (!tb.current) return Rw.d.ok();
+                  const eb = (0, fb.b)(Mb.getPlayerName(), !Bb.featureFlags.canSeeRealPlayerNames);
+                  if (!0 !== await Hw.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: Wd
+                          playerName: eb
                         }
                       },
-                      subtitle: (0, td.jsx)(rO, {
-                        warning: LO(md.isLoggedIn(), Od),
-                        subscriptions: dd
+                      subtitle: (0, Ob.jsx)(Ww, {
+                        warning: Nw(Mb.isLoggedIn(), wb),
+                        subscriptions: bb
                       }),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
-                      typedConfirm: Od ? Rd("auth:deleteAccountTypedConfirm", {
-                        playerName: Wd
+                      typedConfirm: wb ? pb("auth:deleteAccountTypedConfirm", {
+                        playerName: eb
                       }) : void 0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return SO.e.ok();
-                  const Fd = await (0, Sd.postJsonWithMetricsCookiesAndJsonResponse)(`${sO.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: Jd.e.get("gameState")
+                    }).getResult()) return Rw.d.ok();
+                  const Hb = await (0, Db.postJsonWithMetricsCookiesAndJsonResponse)(`${Dw.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: jb.c.get("gameState")
                   }, {
                     retries: 3
-                  }, md.getMetricsCookies());
-                  if (Fd.error) return SO.e.error(Fd.error);
-                  (0, Bd.isDiscordClient)() && (await uO.q.discordActivity()).exit("User deleted their account");
-                  return GO.c.stopRecordingHere("the player deleted their account", {
+                  }, Mb.getMetricsCookies());
+                  if (Hb.error) return Rw.d.error(Hb.error);
+                  (0, Rb.isDiscordClient)() && (await Yw.i.discordActivity()).exit("User deleted their account");
+                  return Jw.e.stopRecordingHere("the player deleted their account", {
                     forget: !0
-                  }), (0, Sd.forgetStoredGuestAccount)(md.whamm), (0, Sd.forceGlobalSignOut)(!0), SO.e.ok()
-                }(), Od = dd.isError() ? dd.asError().message : null;
-                od(Od)
-              } catch (dd) {
-                console.error("Failed to delete account:", dd), od(Rd("auth:genericDeleteAccountError"))
+                  }), (0, Db.forgetStoredGuestAccount)(Mb.whamm), (0, Db.forceGlobalSignOut)(!0), Rw.d.ok()
+                }(), wb = bb.isError() ? bb.asError().message : null;
+                Ub(wb)
+              } catch (bb) {
+                console.error("Failed to delete account:", bb), Ub(pb("auth:genericDeleteAccountError"))
               }
-              hd(!1)
+              lb(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: Hd,
-          children: [Hd && (0, td.jsx)("div", {
+          disabled: Eb,
+          children: [Eb && (0, Ob.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, td.jsx)(wd.c, {})
-          }), Rd("auth:deleteAccount")]
-        }), Qd && (0, td.jsx)("div", {
+            children: (0, Ob.jsx)(Xb.c, {})
+          }), pb("auth:deleteAccount")]
+        }), Ib && (0, Ob.jsx)("div", {
           className: "DeleteAccountError",
-          children: Qd
+          children: Ib
         })]
       })
     }
 
-    function LO(dd, Od) {
-      return (0, Bd.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : dd ? "auth:deleteAccountLossWarning" : Od ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
+    function Nw(bb, wb) {
+      return (0, Rb.isDiscordClient)() ? "auth:discordActivityDeleteAccountLossWarning" : bb ? "auth:deleteAccountLossWarning" : wb ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
     }
-    async function PO(dd) {
+    async function vw(bb) {
       try {
         const {
-          accountCreatedAt: Od
-        } = await (0, oO.k)(nd.e.getPlayerProfile(dd, {
-          lowerCaseName: dd.getPlayerName().toLowerCase()
+          accountCreatedAt: wb
+        } = await (0, Iw.n)(Jb.e.getPlayerProfile(bb, {
+          lowerCaseName: bb.getPlayerName().toLowerCase()
         }), 5e3, "The player's profile got no answer in 5 s");
-        return null !== Od && Date.now() - Od >= 7 * Ld.f
-      } catch (Od) {
-        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", Od), !0
+        return null !== wb && Date.now() - wb >= 7 * Sb.l
+      } catch (wb) {
+        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", wb), !0
       }
     }
-    var zO = md(4827),
-      cO = md(4843),
-      jO = md(4840);
+    var Qw = Mb(4983),
+      Gw = Mb(4994),
+      qw = Mb(4988);
 
-    function DO(dd) {
+    function aw(bb) {
       let {
-        showing: Od
-      } = dd;
+        showing: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Xd.G)(), {
-        data: Wd,
-        failed: Fd
-      } = (0, tO.g)(zO.d, Od), Rd = null === Wd ? null : (0, zO.f)(Wd);
-      return (0, td.jsxs)("div", {
+        t: Mb
+      } = (0, Vb.C)(), {
+        data: eb,
+        failed: Hb
+      } = (0, Lw.j)(Qw.c, wb), pb = null === eb ? null : (0, Qw.e)(eb);
+      return (0, Ob.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: md("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === Rd && !Fd && (0, td.jsx)(wd.c, {}), null === Rd && Fd && (0, td.jsxs)("div", {
+          children: Mb("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === pb && !Hb && (0, Ob.jsx)(Xb.c, {}), null === pb && Hb && (0, Ob.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [md("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, td.jsx)(vd.g, {
+          children: [Mb("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, Ob.jsx)(Lb.f, {
             className: "SmallTextLight",
             onClick: () => {
-              zO.d.refresh()
+              Qw.c.refresh()
             },
-            children: md("general:tryAgain")
+            children: Mb("general:tryAgain")
           })]
-        }), 0 === (null === Rd || void 0 === Rd ? void 0 : Rd.length) && (0, td.jsx)("div", {
+        }), 0 === (null === pb || void 0 === pb ? void 0 : pb.length) && (0, Ob.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: md("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== Rd && Rd.length > 0 && (0, td.jsx)("ul", {
+          children: Mb("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== pb && pb.length > 0 && (0, Ob.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: Rd.map((dd => {
+          children: pb.map((bb => {
             let {
-              name: Od,
-              exclusion: Wd
-            } = dd;
-            const Fd = jO.d[Wd];
-            return (0, td.jsxs)("li", {
+              name: wb,
+              exclusion: eb
+            } = bb;
+            const Hb = qw.f[eb];
+            return (0, Ob.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, td.jsx)("div", {
+              children: [(0, Ob.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: Od
-              }), (0, td.jsx)(vd.i, {
+                children: wb
+              }), (0, Ob.jsx)(Lb.j, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, cO.e)(Fd, Od, {
+                  (0, Gw.g)(Hb, wb, {
                     chatMessage: null
                   })
                 },
-                children: md(jO.g[Fd].text)
+                children: Mb(qw.g[Hb].text)
               })]
-            }, Od)
+            }, wb)
           }))
         })]
       })
     }
-    const eO = (0, Wd.memo)((function(dd) {
-      var Od, md;
+    const iw = (0, eb.memo)((function(bb) {
+      var wb, Mb;
       let {
-        showing: Fd,
-        inGame: hd
-      } = dd;
+        showing: Hb,
+        inGame: lb
+      } = bb;
       const {
-        t: Qd,
-        selectedLanguage: od
-      } = (0, Xd.G)(), {
-        hideSocialLocationFrom: Hd
-      } = (0, Jd.p)(["hideSocialLocationFrom"]), yd = (0, ed.usePurchasesAllowed)(), Td = UO(), pd = (0, Nd.d)(), {
-        userContext: Yd,
-        isUserContextUpdating: Ud
-      } = (0, qd.d)(), [xd, jd] = (0, Wd.useState)(null !== (Od = Yd.getPlayerName()) && void 0 !== Od ? Od : ""), [Id, ld] = (0, Wd.useState)(null), {
-        purchasing: Cd,
-        outcome: Zd,
-        purchase: kd
-      } = (0, ud.b)("/super-rank-welcome"), fd = (0, Ld.bc)((0, Xd.p)(od.code, "general:timeLeft"), Yd.superRankInfo), Md = null === (md = qO(Fd)) || void 0 === md ? void 0 : md.text, dO = Date.now(), OO = (0, cd.i)(dO), mO = (0, zd.x)(dO), WO = (0, cd.g)(dO), FO = (0, zd.p)(OO.id), RO = WO && (0, td.jsxs)(vd.m, {
+        t: Ib,
+        selectedLanguage: Ub
+      } = (0, Vb.C)(), {
+        hideSocialLocationFrom: Eb
+      } = (0, jb.o)(["hideSocialLocationFrom"]), Fb = (0, ab.usePurchasesAllowed)(), sb = jw(), mb = (0, tb.e)(), {
+        userContext: hb,
+        isUserContextUpdating: Kb
+      } = (0, Cb.e)(), [rb, Gb] = (0, eb.useState)(null !== (wb = hb.getPlayerName()) && void 0 !== wb ? wb : ""), [ib, ub] = (0, eb.useState)(null), {
+        purchasing: db,
+        outcome: Pb,
+        purchase: nb
+      } = (0, Yb.e)("/super-rank-welcome"), yb = (0, Sb.rc)((0, Vb.l)(Ub.code, "general:timeLeft"), hb.superRankInfo), ob = null === (Mb = Uw(Hb)) || void 0 === Mb ? void 0 : Mb.text, Tb = Date.now(), kb = (0, Qb.g)(Tb), bw = (0, vb.v)(Tb), ww = (0, Qb.f)(Tb), Mw = (0, vb.q)(kb.id), ew = ww && (0, Ob.jsxs)(Lb.p, {
         className: "AccountSettingsSuperRankProlong",
         onClick: () => {
-          (0, QO.p)({
+          (0, lw.r)({
             mode: "gift",
             source: "accountSettings",
             openItem: "superRank"
           })
         },
-        children: [(0, td.jsx)(Kd.c, {
+        children: [(0, Ob.jsx)(gb.b, {
           name: "bolt"
-        }), Qd(FO.giftKey)]
-      }), XO = (0, zd.m)(Yd.getPlayerRanks(), dO), KO = (0, zd.t)(Yd.superRankInfo, dO), hO = OO.id !== Pd.q.id, tO = hO && !XO && (0, Ld.qc)(Yd.superRankInfo) ? Yd.superRankInfo : null, oO = fd ? Qd("general:timeLeft", {
-        time: fd
-      }) : !(hO && yd) && Md, [NO, pO] = (0, Wd.useState)(!1), [YO, wO] = (0, Wd.useState)(!1), aO = (0, Wd.useRef)(null), EO = (0, Wd.useRef)(null), JO = (0, Gd.h)({
+        }), Ib(Mw.giftKey)]
+      }), Hw = (0, vb.n)(hb.getPlayerRanks(), Tb), pw = (0, vb.r)(hb.superRankInfo, Tb), Vw = kb.id !== Nb.n.id, Lw = Vw && !Hw && (0, Sb.Mc)(hb.superRankInfo) ? hb.superRankInfo : null, Iw = yb ? Ib("general:timeLeft", {
+        time: yb
+      }) : !(Vw && Fb) && ob, [Ow, Bw] = (0, eb.useState)(!1), [sw, hw] = (0, eb.useState)(!1), zw = (0, eb.useRef)(null), Xw = (0, eb.useRef)(null), xw = (0, Wb.e)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), BO = null === JO, SO = null !== JO && void 0 !== JO ? JO : [], sO = Yd !== Sd.NULL_USER_CONTEXT && !Yd.isLoggedIn(), uO = sO && 0 !== (null === JO || void 0 === JO ? void 0 : JO.length), [VO, iO] = (0, Wd.useState)([]), [AO, rO] = (0, Wd.useState)(!1), GO = Yd.playerHasRank("youtuber"), LO = (0, Wd.useCallback)((() => nd.e.getPlayerProfile(Yd, {
-        lowerCaseName: Yd.getPlayerName().toLowerCase()
-      }).then((dd => {
-        iO(dd.socialLinks)
-      })).catch((dd => {
-        console.error("Failed to refresh social links", dd)
-      }))), [Yd]);
+      }), rw = null === xw, Rw = null !== xw && void 0 !== xw ? xw : [], Dw = hb !== Db.NULL_USER_CONTEXT && !hb.isLoggedIn(), Yw = Dw && 0 !== (null === xw || void 0 === xw ? void 0 : xw.length), [Zw, fw] = (0, eb.useState)([]), [Aw, Ww] = (0, eb.useState)(!1), Jw = hb.playerHasRank("youtuber"), Nw = (0, eb.useCallback)((() => Jb.e.getPlayerProfile(hb, {
+        lowerCaseName: hb.getPlayerName().toLowerCase()
+      }).then((bb => {
+        fw(bb.socialLinks)
+      })).catch((bb => {
+        console.error("Failed to refresh social links", bb)
+      }))), [hb]);
 
-      function PO(dd) {
-        dd !== xd && ((0, Ad.j)(dd) ? (dd = (0, Ad.m)(dd), ld(Qd("homePage:nameCharacters"))) : ld(null), aO.current && (aO.current.value = dd), jd(dd))
+      function vw(bb) {
+        bb !== rb && ((0, fb.l)(bb) ? (bb = (0, fb.m)(bb), ub(Ib("homePage:nameCharacters"))) : ub(null), zw.current && (zw.current.value = bb), Gb(bb))
       }
-      return (0, Wd.useEffect)((() => (!0 === Fd ? (clearInterval(EO.current), EO.current = setInterval(pd, 1e3)) : clearInterval(EO.current), () => {
-        clearInterval(EO.current)
-      })), [Fd, pd]), (0, Wd.useEffect)((() => {
-        var dd;
-        jd(null !== (dd = Yd.getPlayerName()) && void 0 !== dd ? dd : "")
-      }), [Yd]), (0, Wd.useEffect)((() => {
-        if (!Fd || !GO || Ud) return;
-        let dd = !1;
-        return rO(!0), iO([]), nd.e.getPlayerProfile(Yd, {
-          lowerCaseName: Yd.getPlayerName().toLowerCase()
-        }).then((Od => {
-          dd || iO(Od.socialLinks)
-        })).catch((dd => {
-          console.error("Failed to load social links", dd)
+      return (0, eb.useEffect)((() => (!0 === Hb ? (clearInterval(Xw.current), Xw.current = setInterval(mb, 1e3)) : clearInterval(Xw.current), () => {
+        clearInterval(Xw.current)
+      })), [Hb, mb]), (0, eb.useEffect)((() => {
+        var bb;
+        Gb(null !== (bb = hb.getPlayerName()) && void 0 !== bb ? bb : "")
+      }), [hb]), (0, eb.useEffect)((() => {
+        if (!Hb || !Jw || Kb) return;
+        let bb = !1;
+        return Ww(!0), fw([]), Jb.e.getPlayerProfile(hb, {
+          lowerCaseName: hb.getPlayerName().toLowerCase()
+        }).then((wb => {
+          bb || fw(wb.socialLinks)
+        })).catch((bb => {
+          console.error("Failed to load social links", bb)
         })).finally((() => {
-          dd || rO(!1)
+          bb || Ww(!1)
         })), () => {
-          dd = !0
+          bb = !0
         }
-      }), [Fd, GO, Ud, Yd]), (0, td.jsxs)("div", {
-        className: Rd()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: hd
+      }), [Hb, Jw, Kb, hb]), (0, Ob.jsxs)("div", {
+        className: pb()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: lb
         }),
-        children: [hd && (0, td.jsx)("div", {
+        children: [lb && (0, Ob.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: Qd("settingsMenu:accountSettingsInGameWarning")
-        }), (0, td.jsxs)("div", {
+          children: Ib("settingsMenu:accountSettingsInGameWarning")
+        }), (0, Ob.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [Qd("homePage:discordNamePopupTitle"), (0, td.jsxs)(Vd.LinkPreserveSearch, {
+            children: [Ib("homePage:discordNamePopupTitle"), (0, Ob.jsxs)(Zb.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, rd.h)({
-                name: Yd.getPlayerName()
+              to: (0, Ab.g)({
+                name: hb.getPlayerName()
               }),
               onClick: () => {
-                Jd.e.set({
+                jb.c.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, td.jsx)(Kd.c, {
+              children: [(0, Ob.jsx)(gb.b, {
                 name: "arrow-up-right-from-square"
-              }), " ", Qd("profileCard:viewProfile")]
+              }), " ", Ib("profileCard:viewProfile")]
             })]
-          }), (0, td.jsxs)("div", {
+          }), (0, Ob.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, td.jsxs)("div", {
+            children: [(0, Ob.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [bd.featureFlags.canChangeName && (0, td.jsx)(gd.c, {
+              children: [Bb.featureFlags.canChangeName && (0, Ob.jsx)(zb.d, {
                 className: "EnterName",
-                placeholderText: Qd("homePage:enterName"),
-                maxLength: Ad.g,
-                defaultValue: xd,
-                onValueChange: dd => {
-                  PO(dd)
+                placeholderText: Ib("homePage:enterName"),
+                maxLength: fb.g,
+                defaultValue: rb,
+                onValueChange: bb => {
+                  vw(bb)
                 },
-                forcedText: NO || !bd.featureFlags.canChangeName ? xd : null,
+                forcedText: Ow || !Bb.featureFlags.canChangeName ? rb : null,
                 blurOnEnter: !0,
-                domRef: aO
-              }), (0, td.jsx)(vd.g, {
+                domRef: zw
+              }), (0, Ob.jsx)(Lb.f, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  PO((0, Ad.e)())
+                  vw((0, fb.f)())
                 },
-                children: (0, td.jsx)(Kd.c, {
+                children: (0, Ob.jsx)(gb.b, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !bd.featureFlags.canChangeName && (0, td.jsx)("div", {
+              }), !Bb.featureFlags.canChangeName && (0, Ob.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, Ad.b)(xd, !bd.featureFlags.canSeeRealPlayerNames)
+                children: (0, fb.b)(rb, !Bb.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, td.jsx)(vd.g, {
+            }), (0, Ob.jsx)(Lb.f, {
               className: "ChooseNameButton",
-              disabled: NO || xd === Yd.getPlayerName(),
+              disabled: Ow || rb === hb.getPlayerName(),
               onClick: () => {
-                xd.length < Ad.i ? ld(Qd("homePage:changeNameMinLengthError", {
-                  length: Ad.i
-                })) : xd.length > Ad.g ? ld(Qd("homePage:changeNameMaxLengthError", {
-                  length: Ad.g
-                })) : (pO(!0), ld(null), (0, sd.l)(Yd, xd).then((dd => {
-                  pO(!1), "taken" === dd.outcome ? ld(Qd("homePage:nameTaken")) : "refused" === dd.outcome ? ld(dd.message) : "failed" === dd.outcome && ld(Qd((0, sd.i)(dd.failure)))
+                rb.length < fb.k ? ub(Ib("homePage:changeNameMinLengthError", {
+                  length: fb.k
+                })) : rb.length > fb.g ? ub(Ib("homePage:changeNameMaxLengthError", {
+                  length: fb.g
+                })) : (Bw(!0), ub(null), (0, cb.j)(hb, rb).then((bb => {
+                  Bw(!1), "taken" === bb.outcome ? ub(Ib("homePage:nameTaken")) : "refused" === bb.outcome ? ub(bb.message) : "failed" === bb.outcome && ub(Ib((0, cb.g)(bb.failure)))
                 })))
               },
-              children: Qd("general:choose")
+              children: Ib("general:choose")
             })]
-          }), Id && (0, td.jsx)("div", {
+          }), ib && (0, Ob.jsx)("div", {
             className: "ChooseAccNameError",
-            children: Id
+            children: ib
           })]
-        }), (0, td.jsx)(Ed.e, {
+        }), (0, Ob.jsx)(xb.d, {
           label: (() => {
-            if ((0, yO.p)(Hd)) {
-              const dd = (0, Xd.p)(od.code, "general:timeLeft"),
-                Od = (0, Ld.Q)(dd, Date.now(), Hd + yO.l);
-              return `${Qd("settingsMenu:hideSocialLocation")} (${Qd("general:timeLeft",{time:Od})})`
+            if ((0, Cw.p)(Eb)) {
+              const bb = (0, Vb.l)(Ub.code, "general:timeLeft"),
+                wb = (0, Sb.ib)(bb, Date.now(), Eb + Cw.l);
+              return `${Ib("settingsMenu:hideSocialLocation")} (${Ib("general:timeLeft",{time:wb})})`
             }
-            return Qd("settingsMenu:hideSocialLocation")
+            return Ib("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const dd = !(0, yO.p)(Hd);
-            (0, TO.reportAnalyticsClick)({
+            const bb = !(0, Cw.p)(Eb);
+            (0, Fw.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: dd ? "on" : "off"
-            }), wO(!0), nd.e.setHideSocialLocation(Yd, dd).then((() => {
-              Jd.e.set({
-                hideSocialLocationFrom: dd ? Date.now() : null
+              value: bb ? "on" : "off"
+            }), hw(!0), Jb.e.setHideSocialLocation(hb, bb).then((() => {
+              jb.c.set({
+                hideSocialLocationFrom: bb ? Date.now() : null
               })
             })).finally((() => {
-              wO(!1)
+              hw(!1)
             }))
           },
-          checked: (0, yO.p)(Hd),
-          disabled: YO
-        }), GO && (0, td.jsxs)("div", {
+          checked: (0, Cw.p)(Eb),
+          disabled: sw
+        }), Jw && (0, Ob.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, td.jsx)("div", {
+          children: [(0, Ob.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: Qd("settingsMenu:socialLinks")
-          }), AO && (0, td.jsx)(wd.c, {}), !AO && (0, td.jsx)(bO.c, {
-            socialLinks: VO,
+            children: Ib("settingsMenu:socialLinks")
+          }), Aw && (0, Ob.jsx)(Xb.c, {}), !Aw && (0, Ob.jsx)(Ew.c, {
+            socialLinks: Zw,
             editable: !0,
-            userContext: Yd,
-            onLinksUpdated: LO
+            userContext: hb,
+            onLinksUpdated: Nw
           })]
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, td.jsx)("div", {
+          children: [(0, Ob.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: Qd(uO ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), BO && (0, td.jsx)(wd.c, {}), !BO && 0 === SO.length && (0, td.jsx)("div", {
+            children: Ib(Yw ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), rw && (0, Ob.jsx)(Xb.c, {}), !rw && 0 === Rw.length && (0, Ob.jsx)("div", {
             className: "NoLoginOptions",
-            children: Qd("auth:noLoginOptions")
-          }), !BO && SO.length > 0 && "crazygames" !== Bd.siteUsed && (0, td.jsx)("div", {
+            children: Ib("auth:noLoginOptions")
+          }), !rw && Rw.length > 0 && "crazygames" !== Rb.siteUsed && (0, Ob.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: SO
-          }), !BO && SO.length > 0 && "crazygames" === Bd.siteUsed && (0, td.jsxs)("div", {
+            children: Rw
+          }), !rw && Rw.length > 0 && "crazygames" === Rb.siteUsed && (0, Ob.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [SO[0], SO.length > 1 && (0, td.jsxs)(td.Fragment, {
-              children: [(0, td.jsxs)("div", {
+            children: [Rw[0], Rw.length > 1 && (0, Ob.jsxs)(Ob.Fragment, {
+              children: [(0, Ob.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, td.jsx)("span", {
+                children: [(0, Ob.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: Qd("auth:legacyLoginOptions")
-                }), (0, td.jsx)(HO.d, {
+                  children: Ib("auth:legacyLoginOptions")
+                }), (0, Ob.jsx)(tw.b, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: Qd("auth:legacyLoginOptionsInfo")
+                  hoverInfo: Ib("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, td.jsx)("div", {
+              }), (0, Ob.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: SO.slice(1)
+                children: Rw.slice(1)
               })]
             })]
-          }), bd.featureFlags.useLogin && (null !== Yd.loggedInInfo || Yd.isLoggedIn()) && (0, td.jsxs)(td.Fragment, {
-            children: [(0, td.jsx)("div", {
+          }), Bb.featureFlags.useLogin && (null !== hb.loggedInInfo || hb.isLoggedIn()) && (0, Ob.jsxs)(Ob.Fragment, {
+            children: [(0, Ob.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, td.jsxs)(vd.G, {
+            }), (0, Ob.jsxs)(Lb.Q, {
               onClick: () => {
-                (0, Sd.forceGlobalSignOut)()
+                (0, Db.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, td.jsx)(Kd.c, {
+              children: [(0, Ob.jsx)(gb.b, {
                 name: "right-from-bracket"
-              }), Qd("auth:signOut")]
+              }), Ib("auth:signOut")]
             })]
           })]
-        }), null !== tO && (0, td.jsxs)("div", {
+        }), null !== Lw && (0, Ob.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, td.jsx)("div", {
+          children: [(0, Ob.jsx)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: (0, td.jsx)(zd.k, {
-              tierId: tO.tier
+            children: (0, Ob.jsx)(vb.j, {
+              tierId: Lw.tier
             })
-          }), (0, td.jsx)(vO, {
-            showing: Fd
+          }), (0, Ob.jsx)(gw, {
+            showing: Hb
           })]
-        }), !XO && yd && (0, td.jsxs)("div", {
+        }), !Hw && Fb && (0, Ob.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, td.jsx)("div", {
+          children: [(0, Ob.jsx)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: (0, td.jsx)(zd.k, {
-              tierId: OO.id
+            children: (0, Ob.jsx)(vb.j, {
+              tierId: kb.id
             })
-          }), null !== KO && (0, td.jsx)(Dd, {
+          }), null !== pw && (0, Ob.jsx)(qb, {
             className: "AccountSettingsSuperRankRetired SmallTextBold",
-            until: KO
-          }), (0, td.jsxs)("div", {
+            until: pw
+          }), (0, Ob.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, td.jsxs)(vd.m, {
+            children: [(0, Ob.jsxs)(Lb.p, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, QO.p)({
+                (0, lw.r)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, td.jsx)(Kd.c, {
+              children: [(0, Ob.jsx)(gb.b, {
                 name: "bolt"
-              }), Qd(null !== KO ? "store:upgradeToHyperRank" : FO.getKey)]
-            }), RO]
-          }), (0, td.jsx)(xO, {
-            ...Td
+              }), Ib(null !== pw ? "store:upgradeToHyperRank" : Mw.getKey)]
+            }), ew]
+          }), (0, Ob.jsx)(Kw, {
+            ...sb
           })]
-        }), XO && (0, td.jsxs)("div", {
+        }), Hw && (0, Ob.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, td.jsx)(zd.k, {
-              tierId: OO.id
-            }), oO && (0, td.jsxs)("div", {
+            children: [(0, Ob.jsx)(vb.j, {
+              tierId: kb.id
+            }), Iw && (0, Ob.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", oO, ")"]
+              children: ["(", Iw, ")"]
             })]
-          }), hO && (0, td.jsx)(vO, {
-            showing: Fd
-          }), yd && WO && (0, td.jsxs)("div", {
+          }), Vw && (0, Ob.jsx)(gw, {
+            showing: Hb
+          }), Fb && ww && (0, Ob.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, Ld.qc)(Yd.superRankInfo) && (0, td.jsxs)(vd.m, {
+            children: [!(0, Sb.Mc)(hb.superRankInfo) && (0, Ob.jsxs)(Lb.p, {
               className: "AccountSettingsSuperRankProlong",
-              loading: Cd,
+              loading: db,
               onClick: () => {
-                kd(mO.id, null)
+                nb(bw.id, null)
               },
-              children: [(0, td.jsx)(Kd.c, {
+              children: [(0, Ob.jsx)(gb.b, {
                 name: "bolt"
-              }), Qd("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: mO.product.days,
-                price: mO.price
+              }), Ib("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: bw.product.days,
+                price: bw.price
               })]
-            }), RO]
-          }), Zd && (0, td.jsx)("div", {
+            }), ew]
+          }), Pb && (0, Ob.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: Qd(Zd.translationKey)
-          }), (0, td.jsx)(xO, {
-            ...Td
+            children: Ib(Pb.translationKey)
+          }), (0, Ob.jsx)(Kw, {
+            ...sb
           })]
-        }), (0, td.jsx)(gO, {
-          showing: Fd
-        }), bd.featureFlags.useSocialFeatures && (0, td.jsx)(DO, {
-          showing: Fd
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsx)(mw, {
+          showing: Hb
+        }), Bb.featureFlags.useSocialFeatures && (0, Ob.jsx)(aw, {
+          showing: Hb
+        }), (0, Ob.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, td.jsx)("div", {
+            children: [(0, Ob.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: Qd(IO(sO, uO))
-            }), (0, Bd.isDiscordClient)() && (0, td.jsx)("div", {
+              children: Ib(uw(Dw, Yw))
+            }), (0, Rb.isDiscordClient)() && (0, Ob.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: Qd("auth:discordActivityKickWarning")
-            }), (0, td.jsx)(nO, {
-              showing: Fd
+              children: Ib("auth:discordActivityKickWarning")
+            }), (0, Ob.jsx)(Sw, {
+              showing: Hb
             })]
-          }), (0, td.jsx)("div", {
+          }), (0, Ob.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: Qd(sO ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
+            children: Ib(Dw ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
           })]
         })]
       })
     }));
 
-    function IO(dd, Od) {
-      return dd ? Od ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function uw(bb, wb) {
+      return bb ? wb ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var lO = md(35430),
-      CO = md(4327),
-      ZO = md(1549),
-      kO = md(2125),
-      fO = md(10030),
-      MO = md(35437);
+    var dw = Mb(35232),
+      Pw = Mb(4490),
+      nw = Mb(1599),
+      yw = Mb(2183),
+      ow = Mb(10218),
+      Tw = Mb(35237);
 
-    function dm() {
+    function kw() {
       const {
-        t: dd
-      } = (0, Xd.G)();
-      return (0, kO.h)("localPlayerAlive") ? (0, td.jsx)(fO.b, {
+        t: bb
+      } = (0, Vb.C)();
+      return (0, yw.h)("localPlayerAlive") ? (0, Ob.jsx)(ow.d, {
         icon: "camera-alt",
-        title: dd("screenshotMode:title"),
-        sub: dd("screenshotMode:entrySub"),
-        onClick: MO.g
+        title: bb("screenshotMode:title"),
+        sub: bb("screenshotMode:entrySub"),
+        onClick: Tw.f
       }) : null
     }
-    var Om = md(35458);
-    const mm = (0, Wd.memo)((function(dd) {
+    var bM = Mb(35258);
+    const wM = (0, eb.memo)((function(bb) {
         let {
-          inGame: Od
-        } = dd;
+          inGame: wb
+        } = bb;
         const {
-          t: md,
-          selectedLanguage: Wd
-        } = (0, Xd.G)(), {
-          clientEscMenuOptions: Fd,
-          showDebugOverlay: Rd,
-          isTouchScreen: Kd
-        } = (0, Jd.p)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), hd = (0, Hd.j)("hideCoordinates");
-        let vd = "settingsMenu:showCoordinates",
-          Qd = "settingsMenu:showChunkCoordinates";
+          t: Mb,
+          selectedLanguage: eb
+        } = (0, Vb.C)(), {
+          clientEscMenuOptions: Hb,
+          showDebugOverlay: pb,
+          isTouchScreen: gb
+        } = (0, jb.o)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), lb = (0, Eb.k)("hideCoordinates");
+        let Lb = "settingsMenu:showCoordinates",
+          Ib = "settingsMenu:showChunkCoordinates";
 
-        function od(dd) {
-          const Od = new Intl.DisplayNames([dd], {
+        function Ub(bb) {
+          const wb = new Intl.DisplayNames([bb], {
             type: "language"
-          }).of(dd);
-          return Od.charAt(0).toUpperCase() + Od.slice(1)
+          }).of(bb);
+          return wb.charAt(0).toUpperCase() + wb.slice(1)
         }
-        return hd && (vd = "settingsMenu:showCoordinatesHidden", Qd = "settingsMenu:showChunkCoordinatesHidden"), (0, td.jsxs)("div", {
+        return lb && (Lb = "settingsMenu:showCoordinatesHidden", Ib = "settingsMenu:showChunkCoordinatesHidden"), (0, Ob.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [Od && bd.featureFlags.canUseInviteLinks && (0, td.jsxs)("div", {
+          children: [wb && Bb.featureFlags.canUseInviteLinks && (0, Ob.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, td.jsx)("div", {
+            children: [(0, Ob.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: md("settingsMenu:inviteLink")
-            }), (0, td.jsx)(lO.d, {})]
-          }), (0, td.jsxs)("div", {
+              children: Mb("settingsMenu:inviteLink")
+            }), (0, Ob.jsx)(dw.g, {})]
+          }), (0, Ob.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, td.jsx)("div", {
+            children: [(0, Ob.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: md("settingsMenu:language")
-            }), (0, td.jsx)(CO.e, {
-              options: Object.entries(Xd.k).map((dd => {
-                let [Od, md] = dd;
+              children: Mb("settingsMenu:language")
+            }), (0, Ob.jsx)(Pw.c, {
+              options: Object.entries(Vb.i).map((bb => {
+                let [wb, Mb] = bb;
                 return {
-                  label: (0, td.jsxs)("div", {
+                  label: (0, Ob.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, td.jsx)("img", {
-                      src: md.flagImg,
+                    children: [(0, Ob.jsx)("img", {
+                      src: Mb.flagImg,
                       alt: "flag"
-                    }), (0, td.jsxs)("span", {
-                      children: [od(Od), " ", (0, td.jsxs)("span", {
+                    }), (0, Ob.jsxs)("span", {
+                      children: [Ub(wb), " ", (0, Ob.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", Od, ")"]
+                        children: ["(", wb, ")"]
                       })]
                     })]
                   }),
-                  value: Od
+                  value: wb
                 }
               })),
-              value: Wd.code,
-              onChange: dd => {
-                kd.f.get().setCurrentLanguage(dd.value)
+              value: eb.code,
+              onChange: bb => {
+                nb.g.get().setCurrentLanguage(bb.value)
               }
             })]
-          }), Od && Kd && (0, Om.c)() && (0, td.jsx)(dm, {}), !(0, bd.isMobileApp)() && (0, ZO.j)() && bd.featureFlags.useForceRotateForceFullscreenOverlay && (0, td.jsx)(Ed.e, {
-            label: md("settingsMenu:disableFullscreenMode"),
-            checked: Fd.disableFullscreen,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                disableFullscreen: dd
+          }), wb && gb && (0, bM.d)() && (0, Ob.jsx)(kw, {}), !(0, Bb.isMobileApp)() && (0, nw.h)() && Bb.featureFlags.useForceRotateForceFullscreenOverlay && (0, Ob.jsx)(xb.d, {
+            label: Mb("settingsMenu:disableFullscreenMode"),
+            checked: Hb.disableFullscreen,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                disableFullscreen: bb
               })
             }
-          }), (0, td.jsx)(Ed.e, {
-            label: md(vd),
-            checked: Fd.showCoordinates,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                showCoordinates: dd
+          }), (0, Ob.jsx)(xb.d, {
+            label: Mb(Lb),
+            checked: Hb.showCoordinates,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                showCoordinates: bb
               })
             },
-            disabled: hd
-          }), (0, td.jsx)(Ed.e, {
-            label: md(Qd),
-            checked: Fd.showChunkCoordinates,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                showChunkCoordinates: dd
+            disabled: lb
+          }), (0, Ob.jsx)(xb.d, {
+            label: Mb(Ib),
+            checked: Hb.showChunkCoordinates,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                showChunkCoordinates: bb
               })
             },
-            disabled: hd
-          }), (0, td.jsx)(Ed.e, {
-            label: md("settingsMenu:showFps"),
-            checked: Fd.showFPS,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                showFPS: dd
+            disabled: lb
+          }), (0, Ob.jsx)(xb.d, {
+            label: Mb("settingsMenu:showFps"),
+            checked: Hb.showFPS,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                showFPS: bb
               })
             }
-          }), (0, td.jsx)(Ed.e, {
-            label: md("settingsMenu:disableBunnyHopping"),
-            checked: Fd.disableBunnyHopping,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                disableBunnyHopping: dd
+          }), (0, Ob.jsx)(xb.d, {
+            label: Mb("settingsMenu:disableBunnyHopping"),
+            checked: Hb.disableBunnyHopping,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                disableBunnyHopping: bb
               })
             }
-          }), (0, uO.E)() && (0, td.jsx)(Ed.e, {
-            label: md("settingsMenu:showChat"),
-            checked: Fd.showChat,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                showChat: dd
+          }), (0, Yw.t)() && (0, Ob.jsx)(xb.d, {
+            label: Mb("settingsMenu:showChat"),
+            checked: Hb.showChat,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                showChat: bb
               })
             }
-          }), (0, td.jsx)(Ed.e, {
-            label: md("settingsMenu:showDebugOverlay"),
-            checked: Rd,
-            onClick: dd => {
-              Jd.e.set({
-                showDebugOverlay: dd
+          }), (0, Ob.jsx)(xb.d, {
+            label: Mb("settingsMenu:showDebugOverlay"),
+            checked: pb,
+            onClick: bb => {
+              jb.c.set({
+                showDebugOverlay: bb
               })
             }
-          }), bd.featureFlags.useSocialFeatures && (0, td.jsx)(Ed.e, {
-            label: md("settingsMenu:showFriendOnlineToasts"),
-            checked: Fd.showFriendOnlineToasts,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                showFriendOnlineToasts: dd
+          }), Bb.featureFlags.useSocialFeatures && (0, Ob.jsx)(xb.d, {
+            label: Mb("settingsMenu:showFriendOnlineToasts"),
+            checked: Hb.showFriendOnlineToasts,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                showFriendOnlineToasts: bb
               })
             }
-          }), (0, td.jsx)(Ed.e, {
-            label: md("settingsMenu:showNewItemIndicator"),
-            checked: Fd.showNewItemIndicator,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                showNewItemIndicator: dd
+          }), (0, Ob.jsx)(xb.d, {
+            label: Mb("settingsMenu:showNewItemIndicator"),
+            checked: Hb.showNewItemIndicator,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                showNewItemIndicator: bb
               })
             }
-          }), (0, td.jsx)(Ed.e, {
-            label: md("settingsMenu:showTeamSymbols"),
-            checked: Fd.showTeamSymbols,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                showTeamSymbols: dd
+          }), (0, Ob.jsx)(xb.d, {
+            label: Mb("settingsMenu:showTeamSymbols"),
+            checked: Hb.showTeamSymbols,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                showTeamSymbols: bb
               })
             },
-            circleInfoText: md("settingsMenu:showTeamSymbolsInfo")
+            circleInfoText: Mb("settingsMenu:showTeamSymbolsInfo")
           })]
         })
       })),
-      Wm = (0, Wd.memo)((function() {
+      MM = (0, eb.memo)((function() {
         const {
-          t: dd
-        } = (0, Xd.G)(), {
-          soundVolume: Od,
-          musicVolume: md,
-          clientEscMenuOptions: Wd
-        } = (0, Jd.p)(["soundVolume", "musicVolume", "clientEscMenuOptions"]);
-        return (0, td.jsxs)("div", {
+          t: bb
+        } = (0, Vb.C)(), {
+          soundVolume: wb,
+          musicVolume: Mb,
+          clientEscMenuOptions: eb
+        } = (0, jb.o)(["soundVolume", "musicVolume", "clientEscMenuOptions"]);
+        return (0, Ob.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, td.jsx)(Ed.i, {
-            name: dd("settingsMenu:musicVolume"),
+          children: [(0, Ob.jsx)(xb.j, {
+            name: bb("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: md,
-            onChange: dd => {
-              Jd.e.set({
-                musicVolume: Math.round(100 * dd) / 100
+            initValue: Mb,
+            onChange: bb => {
+              jb.c.set({
+                musicVolume: Math.round(100 * bb) / 100
               })
             },
-            format: dd => dd.toFixed(2)
-          }), (0, td.jsx)(Ed.i, {
-            name: dd("settingsMenu:soundEffectsVolume"),
+            format: bb => bb.toFixed(2)
+          }), (0, Ob.jsx)(xb.j, {
+            name: bb("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: Od,
-            onChange: dd => {
-              Jd.e.set({
-                soundVolume: Math.round(100 * dd) / 100
+            initValue: wb,
+            onChange: bb => {
+              jb.c.set({
+                soundVolume: Math.round(100 * bb) / 100
               })
             },
-            format: dd => dd.toFixed(2)
-          }), (0, td.jsx)(Ed.e, {
-            label: dd("settingsMenu:showSoundDirections"),
-            checked: Wd.showSoundDirections,
-            onClick: dd => {
-              Jd.e.setClientEscMenuOptions({
-                showSoundDirections: dd
+            format: bb => bb.toFixed(2)
+          }), (0, Ob.jsx)(xb.d, {
+            label: bb("settingsMenu:showSoundDirections"),
+            checked: eb.showSoundDirections,
+            onClick: bb => {
+              jb.c.setClientEscMenuOptions({
+                showSoundDirections: bb
               })
             },
-            circleInfoText: dd("settingsMenu:showSoundDirectionsInfo")
+            circleInfoText: bb("settingsMenu:showSoundDirectionsInfo")
           })]
         })
       }));
-    var Fm = md(800),
-      Rm = md(1566),
-      Xm = md(3342),
-      Km = md(3335),
-      hm = md(4717);
-    const Qm = {
+    var eM = Mb(770),
+      HM = Mb(1611),
+      pM = Mb(3443),
+      VM = Mb(3430),
+      gM = Mb(4883);
+    const lM = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function tm() {
+    function LM() {
       const {
-        t: dd
-      } = (0, Xd.G)(), Od = (0, hm.b)(), {
-        mobilePushNotificationsCanAsk: md
-      } = (0, Jd.p)(["mobilePushNotificationsCanAsk"]), [Fd, Rd] = (0, Wd.useState)(null), [Kd, hd] = (0, Wd.useState)(!1), [Qd, od] = (0, Wd.useState)(null), [Nd, qd] = (0, Wd.useState)(!1), Hd = (0, Wd.useCallback)((() => {
-        (0, Xm.c)().then((dd => {
-          Od.current && (Rd(dd), hd(!1))
-        })).catch((dd => {
-          console.error("Failed to load push notification targets:", dd), Od.current && hd(!0)
+        t: bb
+      } = (0, Vb.C)(), wb = (0, gM.d)(), {
+        mobilePushNotificationsCanAsk: Mb
+      } = (0, jb.o)(["mobilePushNotificationsCanAsk"]), [Hb, pb] = (0, eb.useState)(null), [gb, lb] = (0, eb.useState)(!1), [Ib, Ub] = (0, eb.useState)(null), [tb, Cb] = (0, eb.useState)(!1), Eb = (0, eb.useCallback)((() => {
+        (0, pM.c)().then((bb => {
+          wb.current && (pb(bb), lb(!1))
+        })).catch((bb => {
+          console.error("Failed to load push notification targets:", bb), wb.current && lb(!0)
         }))
-      }), [Od]), yd = (0, Wd.useCallback)((() => {
-        (0, Km.e)().then((dd => {
-          Od.current && od((() => dd))
+      }), [wb]), Fb = (0, eb.useCallback)((() => {
+        (0, VM.h)().then((bb => {
+          wb.current && Ub((() => bb))
         }))
-      }), [Od]);
-      (0, Wd.useEffect)((() => {
-        Hd()
-      }), [Hd]), (0, Wd.useEffect)((() => {
-        yd()
-      }), [yd, md]), (0, Rm.f)(Xm.h, Hd);
-      const bd = null === Fd ? [] : Object.keys(Qm).filter((dd => Fd[dd] > 0));
-      return (0, td.jsxs)("div", {
+      }), [wb]);
+      (0, eb.useEffect)((() => {
+        Eb()
+      }), [Eb]), (0, eb.useEffect)((() => {
+        Fb()
+      }), [Fb, Mb]), (0, HM.e)(pM.g, Eb);
+      const Bb = null === Hb ? [] : Object.keys(lM).filter((bb => Hb[bb] > 0));
+      return (0, Ob.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "SliderText",
-          children: dd("notificationSettings:pushNotifications")
-        }), null === Fd && Kd && (0, td.jsx)("div", {
+          children: bb("notificationSettings:pushNotifications")
+        }), null === Hb && gb && (0, Ob.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: dd("notificationSettings:pushTargetsLoadFailed")
-        }), null !== Fd && 0 === bd.length && (0, td.jsx)("div", {
+          children: bb("notificationSettings:pushTargetsLoadFailed")
+        }), null !== Hb && 0 === Bb.length && (0, Ob.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: dd("notificationSettings:pushTargetsNone")
-        }), bd.length > 0 && (0, td.jsx)("ul", {
+          children: bb("notificationSettings:pushTargetsNone")
+        }), Bb.length > 0 && (0, Ob.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: bd.map((Od => {
-            var md;
-            return (0, td.jsx)("li", {
-              children: dd(Qm[Od], {
-                count: null !== (md = null === Fd || void 0 === Fd ? void 0 : Fd[Od]) && void 0 !== md ? md : 0
+          children: Bb.map((wb => {
+            var Mb;
+            return (0, Ob.jsx)("li", {
+              children: bb(lM[wb], {
+                count: null !== (Mb = null === Hb || void 0 === Hb ? void 0 : Hb[wb]) && void 0 !== Mb ? Mb : 0
               })
-            }, Od)
+            }, wb)
           }))
-        }), null !== Qd && (0, td.jsx)(vd.g, {
+        }), null !== Ib && (0, Ob.jsx)(Lb.f, {
           className: "PushNotificationSettingsButton",
-          loading: Nd,
+          loading: tb,
           onClick: () => {
-            qd(!0), Qd().catch((dd => {
-              console.error("Failed to turn on push notifications:", dd)
+            Cb(!0), Ib().catch((bb => {
+              console.error("Failed to turn on push notifications:", bb)
             })).finally((() => {
-              Od.current && (qd(!1), yd())
+              wb.current && (Cb(!1), Fb())
             }))
           },
-          children: dd("notificationSettings:pushTurnOn")
+          children: bb("notificationSettings:pushTurnOn")
         })]
       })
     }
-    var om = md(3577),
-      Nm = md(3321),
-      qm = md(2010),
-      Hm = md(46);
-    async function ym() {
-      return "dailyDropReminderAsked_" + (await Sd.userContextManager.getCurrentUserContext()).whamm
+    var IM = Mb(3708),
+      OM = Mb(3426),
+      UM = Mb(2062),
+      tM = Mb(43);
+    async function CM() {
+      return "dailyDropReminderAsked_" + (await Db.userContextManager.getCurrentUserContext()).whamm
     }
 
-    function bm(dd) {
-      return async function(dd) {
-        if (dd.remindersOn || (0, Jd.f)(Jd.e.get("gameState"))) return null;
-        const Od = await ym();
-        if (null !== Hm.k.getItem(Od)) return null;
-        const [md, Wd] = await Promise.all([(0, Km.e)().catch((dd => (console.error("Couldn't tell whether this device can take push notifications:", dd), null))), Tm()]);
-        if (null === md && !Wd) return null;
-        if (null !== md && ((0, Nm.e)() || (0, Km.h)())) return null;
+    function EM(bb) {
+      return async function(bb) {
+        if (bb.remindersOn || (0, jb.e)(jb.c.get("gameState"))) return null;
+        const wb = await CM();
+        if (null !== tM.i.getItem(wb)) return null;
+        const [Mb, eb] = await Promise.all([(0, VM.h)().catch((bb => (console.error("Couldn't tell whether this device can take push notifications:", bb), null))), FM()]);
+        if (null === Mb && !eb) return null;
+        if (null !== Mb && ((0, OM.e)() || (0, VM.j)())) return null;
         return {
-          askedKey: Od,
-          requester: md
+          askedKey: wb,
+          requester: Mb
         }
-      }(dd).catch((dd => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", dd), null)))
+      }(bb).catch((bb => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", bb), null)))
     }
 
-    function Tm() {
-      return (0, Xm.c)().then((dd => dd.app + dd.browser + dd.msnPlay > 0), (dd => (console.error("Couldn't tell where push notifications reach this account:", dd), !0)))
+    function FM() {
+      return (0, pM.c)().then((bb => bb.app + bb.browser + bb.msnPlay > 0), (bb => (console.error("Couldn't tell where push notifications reach this account:", bb), !0)))
     }
-    async function pm(dd) {
-      const Od = (0, om.w)({
+    async function BM(bb) {
+      const wb = (0, IM.z)({
           remindersOn: !0
         }),
-        md = null === dd ? Promise.resolve() : dd(),
-        [Wd, Fd] = await Promise.allSettled([Od, md]);
-      "rejected" === Wd.status && console.error("Failed to turn on Lucky Skin Block reminders:", Wd.reason), "rejected" === Fd.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", Fd.reason), "rejected" !== Wd.status && "rejected" !== Fd.status || qm.g.showMessage({
+        Mb = null === bb ? Promise.resolve() : bb(),
+        [eb, Hb] = await Promise.allSettled([wb, Mb]);
+      "rejected" === eb.status && console.error("Failed to turn on Lucky Skin Block reminders:", eb.reason), "rejected" === Hb.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", Hb.reason), "rejected" !== eb.status && "rejected" !== Hb.status || UM.j.showMessage({
         translationKey: "dailyDrop:remindFailed"
       })
     }
-    const Ym = {
+    const sM = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1543,7 +1543,7 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      gm = {
+      mM = {
         remindersOn: {
           label: "dailyDrop:settingReminders",
           reportAs: "reminders"
@@ -1554,401 +1554,401 @@ export const modules = {
         }
       };
 
-    function wm(dd) {
+    function hM(bb) {
       let {
-        setting: Od,
-        value: md
-      } = dd;
+        setting: wb,
+        value: Mb
+      } = bb;
       const {
-        t: Fd
-      } = (0, Xd.G)(), Kd = (0, hm.b)(), [hd, vd] = (0, Wd.useState)(null), [Qd, od] = (0, Wd.useState)(!1), [Nd, qd] = (0, Wd.useState)(null);
-      return (0, Wd.useEffect)((() => {
-        "remindersOn" === Od && (0, Km.e)().then((dd => {
-          Kd.current && qd((() => dd))
-        }), (dd => {
-          console.error("Couldn't tell whether this device can take push notifications:", dd)
+        t: Hb
+      } = (0, Vb.C)(), gb = (0, gM.d)(), [lb, Lb] = (0, eb.useState)(null), [Ib, Ub] = (0, eb.useState)(!1), [tb, Cb] = (0, eb.useState)(null);
+      return (0, eb.useEffect)((() => {
+        "remindersOn" === wb && (0, VM.h)().then((bb => {
+          gb.current && Cb((() => bb))
+        }), (bb => {
+          console.error("Couldn't tell whether this device can take push notifications:", bb)
         }))
-      }), [Od, Kd]), (0, td.jsx)(Ed.e, {
-        className: Rd()({
-          DailyDropSettingFailed: Qd
+      }), [wb, gb]), (0, Ob.jsx)(xb.d, {
+        className: pb()({
+          DailyDropSettingFailed: Ib
         }),
-        label: Fd(gm[Od].label),
-        checked: null !== hd && void 0 !== hd ? hd : md,
-        note: Qd ? Fd("dailyDrop:settingFailed") : void 0,
-        onClick: dd => {
-          null === hd && (vd(dd), od(!1), dd && null !== Nd && Nd().catch((dd => {
-            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", dd)
-          })), (0, om.s)("daily_drop.setting", `${gm[Od].reportAs}_${dd?"on":"off"}`), "remindersOn" === Od && ym().then((dd => {
-            Hm.k.setItem(dd, !0)
-          }), (dd => {
-            console.error("Failed to keep the Lucky Skin Block reminders choice:", dd)
-          })), (0, om.w)("hidden" === Od ? {
-            hidden: dd
+        label: Hb(mM[wb].label),
+        checked: null !== lb && void 0 !== lb ? lb : Mb,
+        note: Ib ? Hb("dailyDrop:settingFailed") : void 0,
+        onClick: bb => {
+          null === lb && (Lb(bb), Ub(!1), bb && null !== tb && tb().catch((bb => {
+            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", bb)
+          })), (0, IM.v)("daily_drop.setting", `${mM[wb].reportAs}_${bb?"on":"off"}`), "remindersOn" === wb && CM().then((bb => {
+            tM.i.setItem(bb, !0)
+          }), (bb => {
+            console.error("Failed to keep the Lucky Skin Block reminders choice:", bb)
+          })), (0, IM.z)("hidden" === wb ? {
+            hidden: bb
           } : {
-            remindersOn: dd
-          }).catch((dd => {
-            console.error(`Failed to save the Lucky Skin Block's ${Od} setting:`, dd), Kd.current && od(!0)
+            remindersOn: bb
+          }).catch((bb => {
+            console.error(`Failed to save the Lucky Skin Block's ${wb} setting:`, bb), gb.current && Ub(!0)
           })).finally((() => {
-            Kd.current && vd(null)
+            gb.current && Lb(null)
           })))
         }
       })
     }
-    const am = (0, Wd.memo)((function() {
+    const zM = (0, eb.memo)((function() {
       const {
-        t: dd
-      } = (0, Xd.G)(), {
-        clientEscMenuOptions: Od
-      } = (0, Jd.p)(["clientEscMenuOptions"]), {
-        userContext: md
-      } = (0, qd.d)(), Wd = md.dailyDrop;
-      return (0, td.jsxs)("div", {
+        t: bb
+      } = (0, Vb.C)(), {
+        clientEscMenuOptions: wb
+      } = (0, jb.o)(["clientEscMenuOptions"]), {
+        userContext: Mb
+      } = (0, Cb.e)(), eb = Mb.dailyDrop;
+      return (0, Ob.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [bd.featureFlags.useSocialFeatures && (0, td.jsx)(Ed.h, {
-          label: dd("notificationSettings:friendRequests"),
-          options: Fm.c.map((Od => ({
-            value: Od,
-            label: dd(Ym[Od].label)
+        children: [Bb.featureFlags.useSocialFeatures && (0, Ob.jsx)(xb.f, {
+          label: bb("notificationSettings:friendRequests"),
+          options: eM.d.map((wb => ({
+            value: wb,
+            label: bb(sM[wb].label)
           }))),
-          value: Od.friendRequestNotifications,
-          onChange: dd => {
-            Jd.e.setClientEscMenuOptions({
-              friendRequestNotifications: dd
+          value: wb.friendRequestNotifications,
+          onChange: bb => {
+            jb.c.setClientEscMenuOptions({
+              friendRequestNotifications: bb
             })
           },
-          circleInfoText: (0, td.jsx)("div", {
+          circleInfoText: (0, Ob.jsx)("div", {
             className: "NotificationSettingLevelsInfo",
-            children: Fm.c.map((Od => (0, td.jsxs)("div", {
-              children: [(0, td.jsx)("b", {
-                children: dd(Ym[Od].label)
-              }), ": ", dd(Ym[Od].info)]
-            }, Od)))
+            children: eM.d.map((wb => (0, Ob.jsxs)("div", {
+              children: [(0, Ob.jsx)("b", {
+                children: bb(sM[wb].label)
+              }), ": ", bb(sM[wb].info)]
+            }, wb)))
           })
-        }), null !== Wd && (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsx)(wm, {
+        }), null !== eb && (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsx)(hM, {
             setting: "remindersOn",
-            value: Wd.remindersOn
-          }), (0, td.jsx)(wm, {
+            value: eb.remindersOn
+          }), (0, Ob.jsx)(hM, {
             setting: "hidden",
-            value: Wd.hidden
+            value: eb.hidden
           })]
-        }), (0, td.jsx)(tm, {})]
+        }), (0, Ob.jsx)(LM, {})]
       })
     }));
-    var Em = md(5167),
-      Jm = md(218),
-      Um = md(373),
-      xm = md(7602),
-      Bm = md(4674),
-      Sm = md(35465),
-      sm = md(701),
-      um = md(32);
-    var Vm = md(732),
-      im = md(5012);
-    const Am = new Map([
+    var XM = Mb(5347),
+      xM = Mb(225),
+      jM = Mb(361),
+      KM = Mb(7848),
+      rM = Mb(4843),
+      RM = Mb(35260),
+      DM = Mb(661),
+      cM = Mb(29);
+    var YM = Mb(698),
+      ZM = Mb(5198);
+    const fM = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function rm(dd) {
-      return Am.has(dd) ? Td.gameBridge.lookup("aY", null) : null
+    function AM(bb) {
+      return fM.has(bb) ? sb.gameBridge.lookup("FX", null) : null
     }
 
-    function Gm(dd) {
-      if (!(0, sm.O)(Jd.e.get("clientEscMenuOptions")[dd])) return Jd.e.get("clientEscMenuOptions")[dd];
-      const Od = rm(dd);
-      return null !== Od ? Od[Am.get(dd)] : Hm.k.getItem(dd)
+    function WM(bb) {
+      if (!(0, DM.K)(jb.c.get("clientEscMenuOptions")[bb])) return jb.c.get("clientEscMenuOptions")[bb];
+      const wb = AM(bb);
+      return null !== wb ? wb[fM.get(bb)] : tM.i.getItem(bb)
     }
 
-    function nm(dd, Od) {
-      if ("useTouchControls" === dd) return void(0, im.c)(Od);
-      dd in Jd.e.get("clientEscMenuOptions") && Jd.e.setClientEscMenuOptions({
-        [dd]: Od
+    function JM(bb, wb) {
+      if ("useTouchControls" === bb) return void(0, ZM.c)(wb);
+      bb in jb.c.get("clientEscMenuOptions") && jb.c.setClientEscMenuOptions({
+        [bb]: wb
       });
-      const md = rm(dd);
-      null !== md && Td.gameBridge.send("setChunkAddDistance", {
-        ...md,
-        [Am.get(dd)]: Od
-      }), Hm.k.setItem(dd, Od)
+      const Mb = AM(bb);
+      null !== Mb && sb.gameBridge.send("setChunkAddDistance", {
+        ...Mb,
+        [fM.get(bb)]: wb
+      }), tM.i.setItem(bb, wb)
     }
-    var Lm = md(5099),
-      Pm = md(35467),
-      zm = md(35471),
-      cm = md(5161),
-      jm = md(35490);
+    var SM = Mb(5273),
+      NM = Mb(35266),
+      vM = Mb(35270),
+      QM = Mb(5340),
+      GM = Mb(35285);
 
-    function Dm(dd) {
-      var Od, Fd, Kd, hd;
+    function qM(bb) {
+      var wb, Hb, gb, lb;
       let {
-        minChunkAddDist: vd,
-        getValue: Qd,
-        onChange: od,
-        setApplySettingsCallback: Nd
-      } = dd;
+        minChunkAddDist: Lb,
+        getValue: Ib,
+        onChange: Ub,
+        setApplySettingsCallback: tb
+      } = bb;
       const {
-        t: qd
-      } = (0, Xd.G)(), {
-        clientEscMenuOptions: yd
-      } = (0, Jd.p)(["clientEscMenuOptions", "showDistantNametags"]), Td = (0, Wd.useRef)(Qd("showFog")), pd = (0, Wd.useRef)(yd.antiAliasing), Yd = (0, Wd.useRef)(yd.useWebGpu), [gd, wd] = (0, Wd.useState)(null), [xd, Bd] = (0, Wd.useState)(!1), [Sd, sd] = (0, Wd.useState)((() => (0, Bm.e)(bd.featureFlags.settings.canUseShaderPacks))), [ud] = (0, Wd.useState)((() => Jd.e.isWebGpuDefaultOff())), [Vd] = (0, Wd.useState)(Um.f), [Ad, rd] = (0, Wd.useState)(!1);
-      (0, Wd.useEffect)((() => {
-        const dd = () => {
-          rd((0, zm.o)())
+        t: Cb
+      } = (0, Vb.C)(), {
+        clientEscMenuOptions: Fb
+      } = (0, jb.o)(["clientEscMenuOptions", "showDistantNametags"]), sb = (0, eb.useRef)(Ib("showFog")), mb = (0, eb.useRef)(Fb.antiAliasing), hb = (0, eb.useRef)(Fb.useWebGpu), [zb, Xb] = (0, eb.useState)(null), [rb, Rb] = (0, eb.useState)(!1), [Db, cb] = (0, eb.useState)((() => (0, rM.g)(Bb.featureFlags.settings.canUseShaderPacks))), [Yb] = (0, eb.useState)((() => jb.c.isWebGpuDefaultOff())), [Zb] = (0, eb.useState)(jM.j), [fb, Ab] = (0, eb.useState)(!1);
+      (0, eb.useEffect)((() => {
+        const bb = () => {
+          Ab((0, vM.r)())
         };
-        return dd(), (0, zm.A)(dd)
-      }), []), (0, Rm.f)("appManagerUpdated|clientEscMenuOptions", (() => {
-        rd((0, zm.o)())
+        return bb(), (0, vM.z)(bb)
+      }), []), (0, HM.e)("appManagerUpdated|clientEscMenuOptions", (() => {
+        Ab((0, vM.r)())
       }));
-      const [Gd] = (0, Wd.useState)((() => !0 === Hm.k.getItem(VO.kc))), [nd] = (0, Wd.useState)((() => Jd.e.isWebGpuOnStored()));
-      (0, Wd.useEffect)((() => {
-        let dd = !1;
-        return (0, bd.hasUsableWebGpuAdapter)().then((async Od => {
-          const md = Gd || nd,
-            Wd = !Od && Vm.G && await (0, jm.d)(md);
-          dd || (wd(Od || Wd), Bd(Wd))
-        })), (0, Bm.i)(bd.featureFlags.settings.canUseShaderPacks) && (0, xm.g)().then((async Od => {
-          const Wd = null !== Od && await async function(dd) {
+      const [Wb] = (0, eb.useState)((() => !0 === tM.i.getItem(Zw.mc))), [Jb] = (0, eb.useState)((() => jb.c.isWebGpuOnStored()));
+      (0, eb.useEffect)((() => {
+        let bb = !1;
+        return (0, Bb.hasUsableWebGpuAdapter)().then((async wb => {
+          const Mb = Wb || Jb,
+            eb = !wb && YM.I && await (0, GM.g)(Mb);
+          bb || (Xb(wb || eb), Rb(eb))
+        })), (0, rM.l)(Bb.featureFlags.settings.canUseShaderPacks) && (0, KM.g)().then((async wb => {
+          const eb = null !== wb && await async function(bb) {
             const [{
-              isShaderPackActive: Od
+              isShaderPackActive: wb
             }, {
-              loadPageShaderPackCompiler: Wd
-            }] = await Promise.all([md.e(160).then((() => md(7598))), Promise.all([md.e(91), md.e(157), md.e(159)]).then((() => md(7566)))]);
-            return Od(dd, await Wd())
-          }(Od);
-          dd || sd(Wd)
+              loadPageShaderPackCompiler: eb
+            }] = await Promise.all([Mb.e(160).then((() => Mb(7840))), Promise.all([Mb.e(91), Mb.e(157), Mb.e(159)]).then((() => Mb(7798)))]);
+            return wb(bb, await eb())
+          }(wb);
+          bb || cb(eb)
         })), () => {
-          dd = !0
+          bb = !0
         }
-      }), [Gd, nd]);
-      const Ld = (!(Sd && !Gd) || !xd) && gd,
-        Pd = function(dd, Od, md, Wd, Fd) {
-          return (0, Sm.e)(md, Wd) && !0 === Od ? {
+      }), [Wb, Jb]);
+      const Sb = (!(Db && !Wb) || !rb) && zb,
+        Nb = function(bb, wb, Mb, eb, Hb) {
+          return (0, RM.e)(Mb, eb) && !0 === wb ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== Od ? "settingsMenu:newWebGpu" : Fd ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: dd && !1 !== Od,
-            disabled: !0 !== Od
+            translationKey: !1 !== wb ? "settingsMenu:newWebGpu" : Hb ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: bb && !1 !== wb,
+            disabled: !0 !== wb
           }
-        }(yd.useWebGpu, Ld, Sd, ud, Vd),
-        zd = (yd.useWebGpu || (0, Sm.e)(Sd, ud)) && Sd && !0 === Ld,
-        cd = (0, Hd.j)("lightingOverride"),
-        jd = !(0, sm.O)(cd);
-      let Dd = "settingsMenu:enableLighting";
-      jd && (Dd = cd ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const ed = dd => {
-          var Od, md, Wd;
-          const Fd = null !== (Od = dd.showFog) && void 0 !== Od ? Od : Qd("showFog"),
-            Rd = null !== (md = dd.antiAliasing) && void 0 !== md ? md : yd.antiAliasing,
-            Xd = null !== (Wd = dd.useWebGpu) && void 0 !== Wd ? Wd : yd.useWebGpu,
-            Kd = !Vm.G && Fd !== Td.current || Rd !== pd.current || Xd !== Yd.current;
-          Nd(Kd ? () => Ed.l : null)
+        }(Fb.useWebGpu, Sb, Db, Yb, Zb),
+        vb = (Fb.useWebGpu || (0, RM.e)(Db, Yb)) && Db && !0 === Sb,
+        Qb = (0, Eb.k)("lightingOverride"),
+        Gb = !(0, DM.K)(Qb);
+      let qb = "settingsMenu:enableLighting";
+      Gb && (qb = Qb ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const ab = bb => {
+          var wb, Mb, eb;
+          const Hb = null !== (wb = bb.showFog) && void 0 !== wb ? wb : Ib("showFog"),
+            pb = null !== (Mb = bb.antiAliasing) && void 0 !== Mb ? Mb : Fb.antiAliasing,
+            Vb = null !== (eb = bb.useWebGpu) && void 0 !== eb ? eb : Fb.useWebGpu,
+            gb = !YM.I && Hb !== sb.current || pb !== mb.current || Vb !== hb.current;
+          tb(gb ? () => xb.l : null)
         },
-        Id = (0, Hd.j)("fogChunkDistanceOverride"),
-        ld = (0, Hd.j)("fogBlockDistanceOverride"),
-        Cd = !(0, sm.O)(Id) || !(0, sm.O)(ld),
-        Zd = Cd ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [kd, fd] = (0, Em.e)(vd),
-        [Md, dO] = (0, cm.h)(vd),
-        OO = qd("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        mO = Md < kd,
-        WO = Math.min(null !== (Od = Qd("chunkHorizAddDist")) && void 0 !== Od ? Od : vd[0], Md),
-        FO = !Cd && function(dd, Od) {
-          return !0 === dd.showFog && dd.fogChunkDistance > Od
-        }(yd, WO);
-      return (0, td.jsxs)("div", {
+        ib = (0, Eb.k)("fogChunkDistanceOverride"),
+        ub = (0, Eb.k)("fogBlockDistanceOverride"),
+        db = !(0, DM.K)(ib) || !(0, DM.K)(ub),
+        Pb = db ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [nb, yb] = (0, XM.d)(Lb),
+        [ob, Tb] = (0, QM.i)(Lb),
+        kb = Cb("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        bw = ob < nb,
+        ww = Math.min(null !== (wb = Ib("chunkHorizAddDist")) && void 0 !== wb ? wb : Lb[0], ob),
+        Mw = !db && function(bb, wb) {
+          return !0 === bb.showFog && bb.fogChunkDistance > wb
+        }(Fb, ww);
+      return (0, Ob.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, td.jsx)(Ed.i, {
-          name: qd("settingsMenu:horizontalChunkLoadDistance"),
-          min: vd[0],
-          max: kd,
-          selectableMax: Md,
-          cappedNote: OO,
+        children: [(0, Ob.jsx)(xb.j, {
+          name: Cb("settingsMenu:horizontalChunkLoadDistance"),
+          min: Lb[0],
+          max: nb,
+          selectableMax: ob,
+          cappedNote: kb,
           step: 1,
-          initValue: WO,
-          onChange: dd => {
-            !0 === Qd("showFog") && dd < Qd("fogChunkDistance") && od("fogChunkDistance", dd), od("chunkHorizAddDist", dd), um.j.lQ("updatedChunkLoadDist")
+          initValue: ww,
+          onChange: bb => {
+            !0 === Ib("showFog") && bb < Ib("fogChunkDistance") && Ub("fogChunkDistance", bb), Ub("chunkHorizAddDist", bb), cM.k.iI("updatedChunkLoadDist")
           },
-          circleInfoText: qd("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, td.jsx)(Ed.i, {
-          name: qd("settingsMenu:verticalChunkLoadDistance"),
-          min: vd[1],
-          max: fd,
-          selectableMax: dO,
-          cappedNote: mO ? void 0 : OO,
+          circleInfoText: Cb("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, Ob.jsx)(xb.j, {
+          name: Cb("settingsMenu:verticalChunkLoadDistance"),
+          min: Lb[1],
+          max: yb,
+          selectableMax: Tb,
+          cappedNote: bw ? void 0 : kb,
           step: 1,
-          initValue: Math.min(null !== (Fd = Qd("chunkVertAddDist")) && void 0 !== Fd ? Fd : vd[1], dO),
-          onChange: dd => {
-            od("chunkVertAddDist", dd), um.j.lQ("updatedChunkLoadDist")
+          initValue: Math.min(null !== (Hb = Ib("chunkVertAddDist")) && void 0 !== Hb ? Hb : Lb[1], Tb),
+          onChange: bb => {
+            Ub("chunkVertAddDist", bb), cM.k.iI("updatedChunkLoadDist")
           },
-          circleInfoText: qd("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: Cb("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, td.jsx)(Ed.e, {
-          label: qd("settingsMenu:chunkFadeIn"),
-          checked: yd.chunkFadeIn,
-          onClick: dd => {
-            Jd.e.setClientEscMenuOptions({
-              chunkFadeIn: dd
+        }), (0, Ob.jsx)(xb.d, {
+          label: Cb("settingsMenu:chunkFadeIn"),
+          checked: Fb.chunkFadeIn,
+          onClick: bb => {
+            jb.c.setClientEscMenuOptions({
+              chunkFadeIn: bb
             })
           },
-          circleInfoText: qd("settingsMenu:chunkFadeInInfo")
-        }), Ud.devTools.supports("chunkBorders") && (0, td.jsx)(Ed.e, {
-          label: qd("settingsMenu:showChunkBorders"),
-          checked: yd.showChunkBorders,
-          onClick: dd => {
-            Jd.e.setClientEscMenuOptions({
-              showChunkBorders: dd
+          circleInfoText: Cb("settingsMenu:chunkFadeInInfo")
+        }), Kb.devTools.supports("chunkBorders") && (0, Ob.jsx)(xb.d, {
+          label: Cb("settingsMenu:showChunkBorders"),
+          checked: Fb.showChunkBorders,
+          onClick: bb => {
+            jb.c.setClientEscMenuOptions({
+              showChunkBorders: bb
             })
           },
-          circleInfoText: qd("settingsMenu:showChunkBordersInfo")
-        }), (0, td.jsx)(Ed.e, {
-          label: qd(Dd),
-          checked: yd.enableLighting,
-          onClick: dd => {
-            Jd.e.setClientEscMenuOptions({
-              enableLighting: dd
+          circleInfoText: Cb("settingsMenu:showChunkBordersInfo")
+        }), (0, Ob.jsx)(xb.d, {
+          label: Cb(qb),
+          checked: Fb.enableLighting,
+          onClick: bb => {
+            jb.c.setClientEscMenuOptions({
+              enableLighting: bb
             })
           },
-          disabled: jd
-        }), (0, td.jsxs)("div", {
+          disabled: Gb
+        }), (0, Ob.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, td.jsx)(Ed.e, {
-            label: qd(Zd),
-            checked: yd.showFog,
-            onClick: dd => {
-              ed({
-                showFog: dd
-              }), Jd.e.setClientEscMenuOptions({
-                showFog: dd
+          children: [(0, Ob.jsx)(xb.d, {
+            label: Cb(Pb),
+            checked: Fb.showFog,
+            onClick: bb => {
+              ab({
+                showFog: bb
+              }), jb.c.setClientEscMenuOptions({
+                showFog: bb
               })
             },
-            disabled: Cd,
-            className: Rd()({
-              SettingBoxWarning: FO
+            disabled: db,
+            className: pb()({
+              SettingBoxWarning: Mw
             })
-          }), (0, td.jsx)(Ed.i, {
-            name: qd("settingsMenu:fogChunkDistance"),
-            min: vd[0],
-            max: Jm.i.maxChunkHorizAddDistance,
+          }), (0, Ob.jsx)(xb.j, {
+            name: Cb("settingsMenu:fogChunkDistance"),
+            min: Lb[0],
+            max: xM.e.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (Kd = yd.fogChunkDistance) && void 0 !== Kd ? Kd : vd[0],
-            onChange: dd => {
-              Jd.e.setClientEscMenuOptions({
-                fogChunkDistance: dd
-              }), um.j.lQ("fogChunkDistanceChanged", dd)
+            initValue: null !== (gb = Fb.fogChunkDistance) && void 0 !== gb ? gb : Lb[0],
+            onChange: bb => {
+              jb.c.setClientEscMenuOptions({
+                fogChunkDistance: bb
+              }), cM.k.iI("fogChunkDistanceChanged", bb)
             },
-            circleInfoText: qd("settingsMenu:fogChunkDistanceInfo"),
-            disabled: Cd || !1 === Qd("showFog"),
-            className: Rd()({
-              SettingBoxWarning: FO
+            circleInfoText: Cb("settingsMenu:fogChunkDistanceInfo"),
+            disabled: db || !1 === Ib("showFog"),
+            className: pb()({
+              SettingBoxWarning: Mw
             })
-          }), FO && (0, td.jsx)("div", {
+          }), Mw && (0, Ob.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: qd("settingsMenu:fogChunkDistanceInfo")
+            children: Cb("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !Vm.G && (0, td.jsx)(Ed.e, {
-          label: qd(zd ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !zd && yd.disableTexAtlas,
-          onClick: dd => {
-            Jd.e.setClientEscMenuOptions({
-              disableTexAtlas: dd
+        }), !YM.I && (0, Ob.jsx)(xb.d, {
+          label: Cb(vb ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !vb && Fb.disableTexAtlas,
+          onClick: bb => {
+            jb.c.setClientEscMenuOptions({
+              disableTexAtlas: bb
             })
           },
-          circleInfoText: qd("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: zd
-        }), (0, td.jsx)(Ed.i, {
-          name: qd("settingsMenu:fieldOfView"),
+          circleInfoText: Cb("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: vb
+        }), (0, Ob.jsx)(xb.j, {
+          name: Cb("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: yd.cameraFOV,
-          onChange: dd => {
-            Jd.e.setClientEscMenuOptions({
-              cameraFOV: dd
+          initValue: Fb.cameraFOV,
+          onChange: bb => {
+            jb.c.setClientEscMenuOptions({
+              cameraFOV: bb
             })
           }
-        }), (0, td.jsx)(Ed.e, {
-          label: qd("settingsMenu:disableViewBobbing"),
-          checked: yd.disableBobbing,
-          onClick: dd => {
-            Jd.e.setClientEscMenuOptions({
-              disableBobbing: dd
+        }), (0, Ob.jsx)(xb.d, {
+          label: Cb("settingsMenu:disableViewBobbing"),
+          checked: Fb.disableBobbing,
+          onClick: bb => {
+            jb.c.setClientEscMenuOptions({
+              disableBobbing: bb
             })
           },
-          circleInfoText: qd("settingsMenu:disableViewBobbingInfo")
-        }), (0, td.jsx)(Ed.e, {
-          label: qd("settingsMenu:antiAliasing"),
-          checked: yd.antiAliasing,
-          onClick: dd => {
-            ed({
-              antiAliasing: dd
-            }), (0, Lm.h)("antiAliasing"), Jd.e.setClientEscMenuOptions({
-              antiAliasing: dd
+          circleInfoText: Cb("settingsMenu:disableViewBobbingInfo")
+        }), (0, Ob.jsx)(xb.d, {
+          label: Cb("settingsMenu:antiAliasing"),
+          checked: Fb.antiAliasing,
+          onClick: bb => {
+            ab({
+              antiAliasing: bb
+            }), (0, SM.g)("antiAliasing"), jb.c.setClientEscMenuOptions({
+              antiAliasing: bb
             })
           },
-          circleInfoText: qd("settingsMenu:antiAliasingInfo")
-        }), (0, td.jsx)(Ed.i, {
-          name: qd("settingsMenu:pixelScale"),
+          circleInfoText: Cb("settingsMenu:antiAliasingInfo")
+        }), (0, Ob.jsx)(xb.j, {
+          name: Cb("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (hd = yd.pixelScale) && void 0 !== hd ? hd : 1,
-          onChange: dd => {
-            (dd !== Jd.e.get("clientEscMenuOptions").pixelScale || (0, zm.n)()) && (0, Lm.h)("pixelScale"), Jd.e.setClientEscMenuOptions({
-              pixelScale: dd
+          initValue: null !== (lb = Fb.pixelScale) && void 0 !== lb ? lb : 1,
+          onChange: bb => {
+            (bb !== jb.c.get("clientEscMenuOptions").pixelScale || (0, vM.o)()) && (0, SM.g)("pixelScale"), jb.c.setClientEscMenuOptions({
+              pixelScale: bb
             })
           },
-          circleInfoText: qd("settingsMenu:pixelScaleInfo"),
-          note: Ad ? qd("settingsMenu:pixelScaleLowered") : void 0,
-          format: dd => `${dd}x`
-        }), (0, td.jsx)(Ed.e, {
-          label: qd("settingsMenu:pixelSmoothing"),
-          checked: yd.pixelSmoothing,
-          onClick: dd => {
-            Jd.e.setClientEscMenuOptions({
-              pixelSmoothing: dd
+          circleInfoText: Cb("settingsMenu:pixelScaleInfo"),
+          note: fb ? Cb("settingsMenu:pixelScaleLowered") : void 0,
+          format: bb => `${bb}x`
+        }), (0, Ob.jsx)(xb.d, {
+          label: Cb("settingsMenu:pixelSmoothing"),
+          checked: Fb.pixelSmoothing,
+          onClick: bb => {
+            jb.c.setClientEscMenuOptions({
+              pixelSmoothing: bb
             })
           },
-          circleInfoText: qd("settingsMenu:pixelSmoothingInfo")
-        }), Vm.G && (0, td.jsx)(Ed.e, {
-          label: qd("settingsMenu:distantNametags"),
-          checked: (0, Pm.b)(),
-          onClick: dd => {
-            Jd.e.set({
-              showDistantNametags: dd
+          circleInfoText: Cb("settingsMenu:pixelSmoothingInfo")
+        }), YM.I && (0, Ob.jsx)(xb.d, {
+          label: Cb("settingsMenu:distantNametags"),
+          checked: (0, NM.c)(),
+          onClick: bb => {
+            jb.c.set({
+              showDistantNametags: bb
             })
           },
-          circleInfoText: qd("settingsMenu:distantNametagsInfo")
-        }), (0, td.jsx)(Ed.e, {
-          label: qd(Pd.translationKey),
-          checked: Pd.checked,
-          onClick: dd => {
-            ed({
-              useWebGpu: dd
-            }), Jd.e.setClientEscMenuOptions({
-              useWebGpu: dd
+          circleInfoText: Cb("settingsMenu:distantNametagsInfo")
+        }), (0, Ob.jsx)(xb.d, {
+          label: Cb(Nb.translationKey),
+          checked: Nb.checked,
+          onClick: bb => {
+            ab({
+              useWebGpu: bb
+            }), jb.c.setClientEscMenuOptions({
+              useWebGpu: bb
             })
           },
-          circleInfoText: qd("settingsMenu:newWebGpuInfo"),
-          disabled: Pd.disabled
+          circleInfoText: Cb("settingsMenu:newWebGpuInfo"),
+          disabled: Nb.disabled
         })]
       })
     }
-    var em = md(5093),
-      Im = md(9995),
-      lm = md(35499),
-      Cm = md(10010),
-      Zm = md(10073),
-      km = md(35508);
-    const fm = {
+    var aM = Mb(5270),
+      iM = Mb(10196),
+      uM = Mb(35289),
+      dM = Mb(10205),
+      PM = Mb(10258),
+      nM = Mb(35291);
+    const yM = {
         color: 16777215,
         name: "white"
       },
-      Mm = {
+      oM = {
         color: 0,
         name: "black"
       },
-      dW = [fm, {
+      TM = [yM, {
         color: 5046092,
         name: "green"
       }, {
@@ -1963,134 +1963,134 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, Mm],
-      OW = [Mm, fm];
+      }, oM],
+      kM = [oM, yM];
 
-    function mW(dd) {
-      return `${dd} px`
+    function be(bb) {
+      return `${bb} px`
     }
 
-    function WW(dd) {
-      return `${dd}%`
+    function we(bb) {
+      return `${bb}%`
     }
 
-    function FW(dd) {
+    function Me(bb) {
       let {
-        settings: Od,
-        onChange: md
-      } = dd;
+        settings: wb,
+        onChange: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)(), Fd = (dd, Wd) => {
-        md((0, km.u)(Od, dd, Wd))
-      }, Rd = function(dd, md) {
-        let Wd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mW;
+        t: eb
+      } = (0, Vb.C)(), Hb = (bb, eb) => {
+        Mb((0, nM.q)(wb, bb, eb))
+      }, pb = function(bb, Mb) {
+        let eb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : be;
         const {
-          min: Rd,
-          max: Xd,
-          step: Kd
-        } = km.b[dd];
-        return (0, td.jsx)(Ed.i, {
-          name: md,
-          min: Rd,
-          max: Xd,
-          step: Kd,
-          initValue: Od[dd],
-          format: Wd,
-          onChange: Od => {
-            Fd(dd, Od)
+          min: pb,
+          max: Vb,
+          step: gb
+        } = nM.c[bb];
+        return (0, Ob.jsx)(xb.j, {
+          name: Mb,
+          min: pb,
+          max: Vb,
+          step: gb,
+          initValue: wb[bb],
+          format: eb,
+          onChange: wb => {
+            Hb(bb, wb)
           }
-        }, dd)
-      }, Kd = (dd, md, Rd) => (0, td.jsx)(Zm.c, {
-        label: dd,
-        value: (0, km.j)(Od[md]),
-        swatches: Rd.map((dd => {
+        }, bb)
+      }, gb = (bb, Mb, pb) => (0, Ob.jsx)(PM.d, {
+        label: bb,
+        value: (0, nM.h)(wb[Mb]),
+        swatches: pb.map((bb => {
           let {
-            color: Od,
-            name: md
-          } = dd;
+            color: wb,
+            name: Mb
+          } = bb;
           return {
-            colour: (0, km.j)(Od),
-            label: Wd(`crosshairSettings:color_${md}`)
+            colour: (0, nM.h)(wb),
+            label: eb(`crosshairSettings:color_${Mb}`)
           }
         })),
-        customLabel: Wd("crosshairSettings:customColor"),
-        onChange: dd => {
-          const Od = (0, km.o)(dd);
-          null !== Od && Fd(md, Od)
+        customLabel: eb("crosshairSettings:customColor"),
+        onChange: bb => {
+          const wb = (0, nM.n)(bb);
+          null !== wb && Hb(Mb, wb)
         }
-      }), hd = ["lines", "dot", "circle"].filter((dd => Od[dd])), vd = (dd, md, Wd) => (0, td.jsx)(Ed.e, {
-        label: md,
-        checked: Od[dd],
-        disabled: 1 === hd.length && hd[0] === dd,
-        circleInfoText: Wd,
-        onClick: Od => {
-          Fd(dd, Od)
+      }), lb = ["lines", "dot", "circle"].filter((bb => wb[bb])), Lb = (bb, Mb, eb) => (0, Ob.jsx)(xb.d, {
+        label: Mb,
+        checked: wb[bb],
+        disabled: 1 === lb.length && lb[0] === bb,
+        circleInfoText: eb,
+        onClick: wb => {
+          Hb(bb, wb)
         }
-      }, dd), Qd = "shapes" === Od.style;
-      return (0, td.jsxs)(td.Fragment, {
-        children: [(0, td.jsx)(Ed.h, {
-          label: Wd("crosshairSettings:style"),
+      }, bb), Ib = "shapes" === wb.style;
+      return (0, Ob.jsxs)(Ob.Fragment, {
+        children: [(0, Ob.jsx)(xb.f, {
+          label: eb("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: Wd("crosshairSettings:styleClassic")
+            label: eb("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: Wd("crosshairSettings:styleShapes")
+            label: eb("crosshairSettings:styleShapes")
           }],
-          value: Od.style,
-          onChange: dd => {
-            Fd("style", dd)
+          value: wb.style,
+          onChange: bb => {
+            Hb("style", bb)
           }
-        }), Kd(Wd("crosshairSettings:color"), "color", dW), Rd("opacity", Wd("crosshairSettings:opacity"), WW), !Qd && Rd("size", Wd("crosshairSettings:size"), WW), Qd && (0, td.jsxs)("div", {
+        }), gb(eb("crosshairSettings:color"), "color", TM), pb("opacity", eb("crosshairSettings:opacity"), we), !Ib && pb("size", eb("crosshairSettings:size"), we), Ib && (0, Ob.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [vd("lines", Wd("crosshairSettings:lines")), Od.lines && Rd("lineLength", Wd("crosshairSettings:lineLength")), Od.lines && Rd("lineThickness", Wd("crosshairSettings:lineThickness")), Od.lines && Rd("gap", Wd("crosshairSettings:gap")), Od.lines && vd("tStyle", Wd("crosshairSettings:tStyle"))]
-        }), Qd && (0, td.jsxs)("div", {
+          children: [Lb("lines", eb("crosshairSettings:lines")), wb.lines && pb("lineLength", eb("crosshairSettings:lineLength")), wb.lines && pb("lineThickness", eb("crosshairSettings:lineThickness")), wb.lines && pb("gap", eb("crosshairSettings:gap")), wb.lines && Lb("tStyle", eb("crosshairSettings:tStyle"))]
+        }), Ib && (0, Ob.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [vd("dot", Wd("crosshairSettings:dot")), Od.dot && Rd("dotSize", Wd("crosshairSettings:dotSize"))]
-        }), Qd && (0, td.jsxs)("div", {
+          children: [Lb("dot", eb("crosshairSettings:dot")), wb.dot && pb("dotSize", eb("crosshairSettings:dotSize"))]
+        }), Ib && (0, Ob.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [vd("circle", Wd("crosshairSettings:circle")), Od.circle && Rd("circleRadius", Wd("crosshairSettings:circleRadius")), Od.circle && Rd("circleThickness", Wd("crosshairSettings:circleThickness"))]
-        }), (0, td.jsxs)("div", {
+          children: [Lb("circle", eb("crosshairSettings:circle")), wb.circle && pb("circleRadius", eb("crosshairSettings:circleRadius")), wb.circle && pb("circleThickness", eb("crosshairSettings:circleThickness"))]
+        }), (0, Ob.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [Rd("outline", Wd("crosshairSettings:outline"), (dd => dd > 0 ? mW(dd) : Wd("crosshairSettings:off"))), Od.outline > 0 && Kd(Wd("crosshairSettings:outlineColor"), "outlineColor", OW)]
-        }), vd("growOnClick", Wd("crosshairSettings:growOnClick")), Qd && vd("forGuns", Wd("crosshairSettings:forGuns"), Wd("crosshairSettings:forGunsInfo"))]
+          children: [pb("outline", eb("crosshairSettings:outline"), (bb => bb > 0 ? be(bb) : eb("crosshairSettings:off"))), wb.outline > 0 && gb(eb("crosshairSettings:outlineColor"), "outlineColor", kM)]
+        }), Lb("growOnClick", eb("crosshairSettings:growOnClick")), Ib && Lb("forGuns", eb("crosshairSettings:forGuns"), eb("crosshairSettings:forGunsInfo"))]
       })
     }
-    var RW = md(86),
-      XW = md(1333),
-      KW = md(13963),
-      hW = md(15110),
-      vW = md(16610),
-      QW = md(17126);
-    const tW = ["sky", "grass", "stone", "sand", "snow", "night"],
-      oW = "4rem";
+    var ee = Mb(81),
+      He = Mb(1350),
+      pe = Mb(14099),
+      Ve = Mb(15258),
+      ge = Mb(16665),
+      le = Mb(17203);
+    const Le = ["sky", "grass", "stone", "sand", "snow", "night"],
+      Ie = "4rem";
 
-    function NW(dd) {
+    function Oe(bb) {
       return {
-        backgroundImage: `url(${dd})`,
-        backgroundSize: `${oW} ${oW}`,
+        backgroundImage: `url(${bb})`,
+        backgroundSize: `${Ie} ${Ie}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function qW(dd) {
+    function Ue(bb) {
       return {
         ...(() => {
-          switch (dd) {
+          switch (bb) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return NW(KW);
+              return Oe(pe);
             case "stone":
-              return NW(hW);
+              return Oe(Ve);
             case "sand":
-              return NW(vW);
+              return Oe(ge);
             case "snow":
-              return NW(QW);
+              return Oe(le);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -2101,21 +2101,21 @@ export const modules = {
       }
     }
 
-    function HW(dd) {
+    function te(bb) {
       return Object.freeze({
-        ...km.d,
+        ...nM.e,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...dd
+        ...bb
       })
     }
-    const yW = [{
+    const Ce = [{
         id: "default",
-        settings: km.d
+        settings: nM.e
       }, {
         id: "cross",
-        settings: HW({
+        settings: te({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -2124,7 +2124,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: HW({
+        settings: te({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -2135,13 +2135,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: HW({
+        settings: te({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: HW({
+        settings: te({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -2150,7 +2150,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: HW({
+        settings: te({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -2160,7 +2160,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: HW({
+        settings: te({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -2169,7 +2169,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: HW({
+        settings: te({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -2177,570 +2177,570 @@ export const modules = {
           outline: 1.5
         })
       }],
-      bW = ["growOnClick", "forGuns"];
-    var TW = md(35511);
+      Ee = ["growOnClick", "forGuns"];
+    var Fe = Mb(35294);
 
-    function pW(dd) {
+    function Be(bb) {
       let {
-        label: Od,
-        selected: md,
-        onClick: Wd,
-        className: Fd,
-        style: Xd,
-        children: Kd
-      } = dd;
-      return (0, td.jsx)("button", {
+        label: wb,
+        selected: Mb,
+        onClick: eb,
+        className: Hb,
+        style: Vb,
+        children: gb
+      } = bb;
+      return (0, Ob.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": md,
-        title: Od,
-        "aria-label": Od,
+        "aria-checked": Mb,
+        title: wb,
+        "aria-label": wb,
         "data-pad-focusable": !0,
-        className: Rd()("CrosshairBackdropSwatch", Fd, {
-          Selected: md
+        className: pb()("CrosshairBackdropSwatch", Hb, {
+          Selected: Mb
         }),
-        style: Xd,
-        onClick: Wd,
-        children: Kd
+        style: Vb,
+        onClick: eb,
+        children: gb
       })
     }
 
-    function YW(dd) {
+    function se(bb) {
       let {
-        backdrop: Od,
-        onChange: md,
-        game: Wd
-      } = dd;
+        backdrop: wb,
+        onChange: Mb,
+        game: eb
+      } = bb;
       const {
-        t: Fd
-      } = (0, Xd.G)();
-      return (0, td.jsxs)("div", {
+        t: Hb
+      } = (0, Vb.C)();
+      return (0, Ob.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": Fd("crosshairSettings:background"),
-        children: [Wd && (0, td.jsx)(pW, {
-          label: Fd("crosshairSettings:bg_game"),
-          selected: Wd.selected,
-          onClick: Wd.onSelect,
+        "aria-label": Hb("crosshairSettings:background"),
+        children: [eb && (0, Ob.jsx)(Be, {
+          label: Hb("crosshairSettings:bg_game"),
+          selected: eb.selected,
+          onClick: eb.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, td.jsx)(Kd.c, {
+          children: (0, Ob.jsx)(gb.b, {
             name: "cube"
           })
-        }), tW.map((dd => (0, td.jsx)(pW, {
-          label: Fd(`crosshairSettings:bg_${dd}`),
-          selected: !(null !== Wd && void 0 !== Wd && Wd.selected) && dd === Od,
-          style: qW(dd),
+        }), Le.map((bb => (0, Ob.jsx)(Be, {
+          label: Hb(`crosshairSettings:bg_${bb}`),
+          selected: !(null !== eb && void 0 !== eb && eb.selected) && bb === wb,
+          style: Ue(bb),
           onClick: () => {
-            md(dd)
+            Mb(bb)
           }
-        }, dd)))]
+        }, bb)))]
       })
     }
 
-    function gW(dd) {
+    function me(bb) {
       let {
-        settings: Od,
-        touch: md,
-        backdrop: Wd,
-        onChange: Fd
-      } = dd;
+        settings: wb,
+        touch: Mb,
+        backdrop: eb,
+        onChange: Hb
+      } = bb;
       const {
-        t: Kd
-      } = (0, Xd.G)(), hd = function(dd) {
-        var Od;
-        return null !== (Od = yW.find((Od => (0, km.q)(Od.settings, dd, bW)))) && void 0 !== Od ? Od : null
-      }(Od);
-      return (0, td.jsx)("div", {
+        t: gb
+      } = (0, Vb.C)(), lb = function(bb) {
+        var wb;
+        return null !== (wb = Ce.find((wb => (0, nM.p)(wb.settings, bb, Ee)))) && void 0 !== wb ? wb : null
+      }(wb);
+      return (0, Ob.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": Kd("crosshairSettings:presets"),
-        children: yW.map((dd => {
-          const Xd = (null === hd || void 0 === hd ? void 0 : hd.id) === dd.id;
-          return (0, td.jsxs)("button", {
+        "aria-label": gb("crosshairSettings:presets"),
+        children: Ce.map((bb => {
+          const Vb = (null === lb || void 0 === lb ? void 0 : lb.id) === bb.id;
+          return (0, Ob.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": Xd,
+            "aria-checked": Vb,
             "data-pad-focusable": !0,
-            className: Rd()("CrosshairPreset", {
-              Selected: Xd
+            className: pb()("CrosshairPreset", {
+              Selected: Vb
             }),
             onClick: () => {
-              Fd(function(dd, Od) {
+              Hb(function(bb, wb) {
                 return {
-                  ...Od.settings,
-                  growOnClick: dd.growOnClick,
-                  forGuns: dd.forGuns
+                  ...wb.settings,
+                  growOnClick: bb.growOnClick,
+                  forGuns: bb.forGuns
                 }
-              }(Od, dd))
+              }(wb, bb))
             },
-            children: [(0, td.jsx)("div", {
+            children: [(0, Ob.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: qW(Wd),
-              children: (0, td.jsx)(TW.d, {
-                settings: dd.settings,
-                touch: md,
+              style: Ue(eb),
+              children: (0, Ob.jsx)(Fe.b, {
+                settings: bb.settings,
+                touch: Mb,
                 inPreview: !0
               })
-            }), (0, td.jsx)("div", {
+            }), (0, Ob.jsx)("div", {
               className: "CrosshairPresetName",
-              children: Kd(`crosshairSettings:preset_${dd.id}`)
+              children: gb(`crosshairSettings:preset_${bb.id}`)
             })]
-          }, dd.id)
+          }, bb.id)
         }))
       })
     }
-    var wW = md(1804);
+    var he = Mb(1873);
 
-    function aW(dd, Od) {
-      const [md, Fd] = (0, Wd.useState)(!1), Rd = () => {
-        Fd(!1)
-      }, [Xd, Kd] = (0, Wd.useState)(!1), hd = (0, Wd.useRef)({
-        growOnClick: dd.growOnClick,
-        forGuns: dd.forGuns
+    function ze(bb, wb) {
+      const [Mb, Hb] = (0, eb.useState)(!1), pb = () => {
+        Hb(!1)
+      }, [Vb, gb] = (0, eb.useState)(!1), lb = (0, eb.useRef)({
+        growOnClick: bb.growOnClick,
+        forGuns: bb.forGuns
       });
-      (0, Wd.useEffect)((() => {
-        const Od = hd.current;
-        hd.current = {
-          growOnClick: dd.growOnClick,
-          forGuns: dd.forGuns
-        }, (dd.growOnClick && !Od.growOnClick || dd.forGuns && !Od.forGuns) && Kd(!0)
-      }), [dd.growOnClick, dd.forGuns]), (0, Wd.useEffect)((() => {
-        if (!Xd) return;
-        const dd = setTimeout((() => {
-          Kd(!1)
+      (0, eb.useEffect)((() => {
+        const wb = lb.current;
+        lb.current = {
+          growOnClick: bb.growOnClick,
+          forGuns: bb.forGuns
+        }, (bb.growOnClick && !wb.growOnClick || bb.forGuns && !wb.forGuns) && gb(!0)
+      }), [bb.growOnClick, bb.forGuns]), (0, eb.useEffect)((() => {
+        if (!Vb) return;
+        const bb = setTimeout((() => {
+          gb(!1)
         }), 600);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(bb)
         }
-      }), [Xd]);
-      const vd = md || Xd;
+      }), [Vb]);
+      const Lb = Mb || Vb;
       return {
         view: {
-          pressed: vd,
-          spread: vd && dd.forGuns && !dd.growOnClick ? 6 : 0
+          pressed: Lb,
+          spread: Lb && bb.forGuns && !bb.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: dd => {
-            !dd.target.closest(Od) && (0, wW.d)(dd.currentTarget, dd.pointerId) && Fd(!0)
+          onPointerDown: bb => {
+            !bb.target.closest(wb) && (0, he.e)(bb.currentTarget, bb.pointerId) && Hb(!0)
           },
-          onPointerUp: Rd,
-          onPointerCancel: Rd,
-          onLostPointerCapture: Rd
+          onPointerUp: pb,
+          onPointerCancel: pb,
+          onLostPointerCapture: pb
         }
       }
     }
 
-    function EW(dd) {
+    function Xe(bb) {
       let {
-        settings: Od,
-        touch: md,
-        backdrop: Wd,
-        className: Fd,
-        children: Xd,
-        label: Kd
-      } = dd;
-      const hd = aW(Od, ".CrosshairStageControls");
-      return (0, td.jsxs)("div", {
-        className: Rd()("CrosshairStage", Fd),
-        style: qW(Wd),
-        ...hd.handlers,
-        children: [(0, td.jsx)("div", {
+        settings: wb,
+        touch: Mb,
+        backdrop: eb,
+        className: Hb,
+        children: Vb,
+        label: gb
+      } = bb;
+      const lb = ze(wb, ".CrosshairStageControls");
+      return (0, Ob.jsxs)("div", {
+        className: pb()("CrosshairStage", Hb),
+        style: Ue(eb),
+        ...lb.handlers,
+        children: [(0, Ob.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": Kd,
-          children: (0, td.jsx)(TW.d, {
-            settings: Od,
-            touch: md,
+          "aria-label": gb,
+          children: (0, Ob.jsx)(Fe.b, {
+            settings: wb,
+            touch: Mb,
             inPreview: !0,
-            ...hd.view
+            ...lb.view
           })
-        }), Xd]
+        }), Vb]
       })
     }
-    const JW = "crosshairFullScreen";
+    const xe = "crosshairFullScreen";
 
-    function UW(dd) {
+    function je(bb) {
       let {
-        settings: Od,
-        touch: md,
-        backdrop: Fd,
-        onBackdrop: hd,
-        inGame: Qd,
-        onChange: od,
-        onClose: Nd
-      } = dd;
+        settings: wb,
+        touch: Mb,
+        backdrop: Hb,
+        onBackdrop: lb,
+        inGame: Ib,
+        onChange: Ub,
+        onClose: tb
+      } = bb;
       const {
-        t: qd
-      } = (0, Xd.G)(), Hd = (0, Wd.useRef)(null);
-      (0, XW.m)("popup", Hd, Nd),
-      function(dd) {
-        const Od = (0, Wd.useRef)(dd);
-        Od.current = dd, (0, Wd.useEffect)((() => {
+        t: Cb
+      } = (0, Vb.C)(), Eb = (0, eb.useRef)(null);
+      (0, He.r)("popup", Eb, tb),
+      function(bb) {
+        const wb = (0, eb.useRef)(bb);
+        wb.current = bb, (0, eb.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [JW]: !0
+            [xe]: !0
           }, "");
-          let dd = !1;
-          const md = () => {
-            dd = !0, Od.current()
+          let bb = !1;
+          const Mb = () => {
+            bb = !0, wb.current()
           };
-          return window.addEventListener("popstate", md), () => {
-            var Od;
-            window.removeEventListener("popstate", md), !dd && null !== (Od = window.history.state) && void 0 !== Od && Od[JW] && window.history.back()
+          return window.addEventListener("popstate", Mb), () => {
+            var wb;
+            window.removeEventListener("popstate", Mb), !bb && null !== (wb = window.history.state) && void 0 !== wb && wb[xe] && window.history.back()
           }
         }), [])
-      }(Nd);
-      const yd = (0, Wd.useRef)(Nd);
-      yd.current = Nd, (0, Wd.useEffect)((() => {
-        function dd(dd) {
-          "Escape" === dd.key && (dd.stopPropagation(), yd.current())
+      }(tb);
+      const Fb = (0, eb.useRef)(tb);
+      Fb.current = tb, (0, eb.useEffect)((() => {
+        function bb(bb) {
+          "Escape" === bb.key && (bb.stopPropagation(), Fb.current())
         }
-        return window.addEventListener("keydown", dd, !0), () => {
-          window.removeEventListener("keydown", dd, !0)
+        return window.addEventListener("keydown", bb, !0), () => {
+          window.removeEventListener("keydown", bb, !0)
         }
       }), []);
-      const bd = aW(Od, ".CrosshairFullScreenPanel"),
-        [Td, pd] = (0, Wd.useState)(!0),
-        Yd = Td && Qd;
-      (0, Wd.useEffect)((() => {
-        if (Yd) return Jd.e.set({
+      const Bb = ze(wb, ".CrosshairFullScreenPanel"),
+        [sb, mb] = (0, eb.useState)(!0),
+        hb = sb && Ib;
+      (0, eb.useEffect)((() => {
+        if (hb) return jb.c.set({
           crosshairGameView: !0
         }), () => {
-          Jd.e.set({
+          jb.c.set({
             crosshairGameView: !1
           })
         }
-      }), [Yd]);
-      const [gd, wd] = (0, Wd.useState)(!0);
-      return (0, RW.createPortal)((0, td.jsxs)("div", {
-        ref: Hd,
+      }), [hb]);
+      const [zb, Xb] = (0, eb.useState)(!0);
+      return (0, ee.createPortal)((0, Ob.jsxs)("div", {
+        ref: Eb,
         className: "CrosshairFullScreen",
-        style: Yd ? void 0 : qW(Fd),
-        ...bd.handlers,
-        children: [(0, td.jsx)(TW.d, {
-          settings: Od,
-          touch: md,
+        style: hb ? void 0 : Ue(Hb),
+        ...Bb.handlers,
+        children: [(0, Ob.jsx)(Fe.b, {
+          settings: wb,
+          touch: Mb,
           inEditor: !0,
-          ...bd.view
-        }), (0, td.jsxs)("div", {
-          className: Rd()("CrosshairFullScreenPanel", {
-            Collapsed: !gd
+          ...Bb.view
+        }), (0, Ob.jsxs)("div", {
+          className: pb()("CrosshairFullScreenPanel", {
+            Collapsed: !zb
           }),
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, td.jsx)(YW, {
-              backdrop: Fd,
-              onChange: dd => {
-                pd(!1), hd(dd)
+            children: [(0, Ob.jsx)(se, {
+              backdrop: Hb,
+              onChange: bb => {
+                mb(!1), lb(bb)
               },
-              game: Qd ? {
-                selected: Yd,
+              game: Ib ? {
+                selected: hb,
                 onSelect: () => {
-                  pd(!0)
+                  mb(!0)
                 }
               } : void 0
-            }), (0, td.jsx)(vd.S, {
+            }), (0, Ob.jsx)(Lb.Y, {
               className: "CrosshairPanelToggle",
-              ariaLabel: qd(gd ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: Cb(zb ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                wd(!gd)
+                Xb(!zb)
               },
-              children: (0, td.jsx)(Kd.c, {
-                name: gd ? "caret-up" : "pen"
+              children: (0, Ob.jsx)(gb.b, {
+                name: zb ? "caret-up" : "pen"
               })
-            }), (0, td.jsx)(vd.g, {
+            }), (0, Ob.jsx)(Lb.f, {
               className: "CrosshairFullScreenDone",
-              onClick: Nd,
+              onClick: tb,
               padDefaultFocus: !0,
-              children: qd("crosshairSettings:done")
+              children: Cb("crosshairSettings:done")
             })]
-          }), gd && (0, td.jsxs)("div", {
+          }), zb && (0, Ob.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, td.jsx)(gW, {
-              settings: Od,
-              touch: md,
-              backdrop: Fd,
-              onChange: od
-            }), (0, td.jsx)(FW, {
-              settings: Od,
-              onChange: od
+            children: [(0, Ob.jsx)(me, {
+              settings: wb,
+              touch: Mb,
+              backdrop: Hb,
+              onChange: Ub
+            }), (0, Ob.jsx)(Me, {
+              settings: wb,
+              onChange: Ub
             })]
           })]
         })]
       }), document.body)
     }
-    var xW = md(3747),
-      BW = md(35521);
+    var Ke = Mb(3877),
+      re = Mb(35305);
 
-    function SW(dd) {
+    function Re(bb) {
       let {
-        settings: Od,
-        onChange: md
-      } = dd;
+        settings: wb,
+        onChange: Mb
+      } = bb;
       const {
-        t: Fd
-      } = (0, Xd.G)(), hd = (0, BW.h)(Od), [Qd, od] = (0, xW.i)(), [Nd, qd] = (0, Wd.useState)(!1), Hd = (0, Wd.useRef)(null), [yd, bd] = (0, xW.i)(), [Td, pd] = (0, Wd.useState)(!1);
-      return (0, td.jsxs)("div", {
+        t: Hb
+      } = (0, Vb.C)(), lb = (0, re.g)(wb), [Ib, Ub] = (0, Ke.k)(), [tb, Cb] = (0, eb.useState)(!1), Eb = (0, eb.useRef)(null), [Fb, Bb] = (0, Ke.k)(), [sb, mb] = (0, eb.useState)(!1);
+      return (0, Ob.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, td.jsxs)("div", {
+        children: [(0, Ob.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, td.jsxs)(vd.S, {
-            className: Rd()("CrosshairCopy", {
-              ActiveSecondaryButton: Qd
+          children: [(0, Ob.jsxs)(Lb.Y, {
+            className: pb()("CrosshairCopy", {
+              ActiveSecondaryButton: Ib
             }),
             onClick: () => {
-              (0, xW.h)(hd, {
+              (0, Ke.i)(lb, {
                 useShareSheet: !1,
-                onOutcome: dd => {
-                  qd("failed" === dd), "copied" === dd && od()
+                onOutcome: bb => {
+                  Cb("failed" === bb), "copied" === bb && Ub()
                 }
               })
             },
-            children: [(0, td.jsx)(Kd.c, {
-              name: Qd ? "check" : "copy"
-            }), " ", Fd(Qd ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, td.jsx)(gd.c, {
+            children: [(0, Ob.jsx)(gb.b, {
+              name: Ib ? "check" : "copy"
+            }), " ", Hb(Ib ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, Ob.jsx)(zb.d, {
             className: "CrosshairPaste",
-            domRef: Hd,
-            ariaLabel: Fd("crosshairSettings:paste"),
-            placeholderText: Fd("crosshairSettings:paste"),
-            onValueChange: dd => {
-              const Od = (0, BW.e)(dd);
-              pd(!Od && dd.trim().length >= BW.c), Od && (md(Od), Hd.current.value = "", bd())
+            domRef: Eb,
+            ariaLabel: Hb("crosshairSettings:paste"),
+            placeholderText: Hb("crosshairSettings:paste"),
+            onValueChange: bb => {
+              const wb = (0, re.e)(bb);
+              mb(!wb && bb.trim().length >= re.d), wb && (Mb(wb), Eb.current.value = "", Bb())
             }
           })]
-        }), Nd && (0, td.jsx)("input", {
+        }), tb && (0, Ob.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: hd,
-          "aria-label": Fd("crosshairSettings:copy"),
-          onFocus: dd => {
-            dd.currentTarget.select()
+          value: lb,
+          "aria-label": Hb("crosshairSettings:copy"),
+          onFocus: bb => {
+            bb.currentTarget.select()
           }
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           "aria-live": "polite",
-          children: [Td && (0, td.jsx)("div", {
+          children: [sb && (0, Ob.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: Fd("crosshairSettings:pasteInvalid")
-          }), yd && !Td && (0, td.jsx)("div", {
+            children: Hb("crosshairSettings:pasteInvalid")
+          }), Fb && !sb && (0, Ob.jsx)("div", {
             className: "CrosshairShareNote",
-            children: Fd("crosshairSettings:applied")
+            children: Hb("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var sW = md(35524);
-    let uW = "sky";
+    var De = Mb(35309);
+    let ce = "sky";
 
-    function VW(dd) {
+    function Ye(bb) {
       let {
-        showing: Od
-      } = dd;
+        showing: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Xd.G)(), {
-        isTouchScreen: Fd,
-        gameState: Rd,
-        clientEscMenuOptions: hd
-      } = (0, Jd.p)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Qd = (0, sW.g)(), [od, Nd] = (0, Wd.useState)(uW), qd = dd => {
-        uW = dd, Nd(dd)
-      }, [Hd, yd] = (0, Wd.useState)(!1);
-      return (0, Wd.useEffect)((() => {
-        Od || yd(!1)
-      }), [Od]), (0, td.jsxs)("div", {
+        t: Mb
+      } = (0, Vb.C)(), {
+        isTouchScreen: Hb,
+        gameState: pb,
+        clientEscMenuOptions: lb
+      } = (0, jb.o)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Ib = (0, De.f)(), [Ub, tb] = (0, eb.useState)(ce), Cb = bb => {
+        ce = bb, tb(bb)
+      }, [Eb, Fb] = (0, eb.useState)(!1);
+      return (0, eb.useEffect)((() => {
+        wb || Fb(!1)
+      }), [wb]), (0, Ob.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, td.jsx)(EW, {
+          children: (0, Ob.jsx)(Xe, {
             className: "CrosshairPreviewStage",
-            settings: Qd,
-            touch: Fd,
-            backdrop: od,
-            label: md("crosshairSettings:preview"),
-            children: (0, td.jsxs)("div", {
+            settings: Ib,
+            touch: Hb,
+            backdrop: Ub,
+            label: Mb("crosshairSettings:preview"),
+            children: (0, Ob.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, td.jsx)(YW, {
-                backdrop: od,
-                onChange: qd
-              }), (0, td.jsxs)(vd.S, {
+              children: [(0, Ob.jsx)(se, {
+                backdrop: Ub,
+                onChange: Cb
+              }), (0, Ob.jsxs)(Lb.Y, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  yd(!0)
+                  Fb(!0)
                 },
-                children: [(0, td.jsx)(Kd.c, {
+                children: [(0, Ob.jsx)(gb.b, {
                   name: "expand"
-                }), " ", md("crosshairSettings:fullScreen")]
+                }), " ", Mb("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "SettingBox",
-          children: (0, td.jsx)(gW, {
-            settings: Qd,
-            touch: Fd,
-            backdrop: od,
-            onChange: sW.c
+          children: (0, Ob.jsx)(me, {
+            settings: Ib,
+            touch: Hb,
+            backdrop: Ub,
+            onChange: De.d
           })
-        }), (0, td.jsx)(SW, {
-          settings: Qd,
-          onChange: sW.c
-        }), Fd && (0, td.jsx)(Cm.b, {
-          note: (0, lm.f)(Fd, hd.touchActionButtons) ? md("crosshairSettings:touchNote") : void 0
-        }), (0, td.jsx)(FW, {
-          settings: Qd,
-          onChange: sW.c
-        }), Hd && (0, td.jsx)(UW, {
-          settings: Qd,
-          touch: Fd,
-          backdrop: od,
-          onBackdrop: qd,
-          inGame: "inGame" === Rd,
-          onChange: sW.c,
+        }), (0, Ob.jsx)(Re, {
+          settings: Ib,
+          onChange: De.d
+        }), Hb && (0, Ob.jsx)(dM.c, {
+          note: (0, uM.i)(Hb, lb.touchActionButtons) ? Mb("crosshairSettings:touchNote") : void 0
+        }), (0, Ob.jsx)(Me, {
+          settings: Ib,
+          onChange: De.d
+        }), Eb && (0, Ob.jsx)(je, {
+          settings: Ib,
+          touch: Hb,
+          backdrop: Ub,
+          onBackdrop: Cb,
+          inGame: "inGame" === pb,
+          onChange: De.d,
           onClose: () => {
-            yd(!1)
+            Fb(!1)
           }
         })]
       })
     }
-    var iW = md(10003),
-      AW = md(1512),
-      rW = md(5895),
-      GW = md(35530),
-      nW = md(4908),
-      LW = md(2130),
-      PW = md(803);
-    const zW = (0, Wd.memo)((function() {
+    var Ze = Mb(10203),
+      fe = Mb(1565),
+      Ae = Mb(6045),
+      We = Mb(35315),
+      Je = Mb(5062),
+      Se = Mb(2190),
+      Ne = Mb(774);
+    const ve = (0, eb.memo)((function() {
       const {
-        clientEscMenuOptions: dd
-      } = (0, Jd.p)(["clientEscMenuOptions"]), {
-        recording: Od,
-        clipping: md,
-        hasClipBuffer: Fd
-      } = (0, kO.h)("replayRecorder"), Xd = (0, kO.f)("connectedGame", (dd => dd.replay)), Kd = (0, nW.j)(), hd = !1 === (0, Hd.j)("canRecordReplays");
-      (0, Wd.useEffect)((() => {
-        Td.gameBridge.send("setRecorderPrefs", {
-          clipping: dd.enableClipping,
-          clipSeconds: dd.clipDurationSeconds
+        clientEscMenuOptions: bb
+      } = (0, jb.o)(["clientEscMenuOptions"]), {
+        recording: wb,
+        clipping: Mb,
+        hasClipBuffer: Hb
+      } = (0, yw.h)("replayRecorder"), Vb = (0, yw.e)("connectedGame", (bb => bb.replay)), gb = (0, Je.j)(), lb = !1 === (0, Eb.k)("canRecordReplays");
+      (0, eb.useEffect)((() => {
+        sb.gameBridge.send("setRecorderPrefs", {
+          clipping: bb.enableClipping,
+          clipSeconds: bb.clipDurationSeconds
         })
-      }), [dd.enableClipping, dd.clipDurationSeconds]);
-      const Qd = Kd || Xd,
-        od = !Qd && !hd,
-        Nd = Od || od,
-        qd = od,
-        yd = qd && md && !Od;
+      }), [bb.enableClipping, bb.clipDurationSeconds]);
+      const Ib = gb || Vb,
+        Ub = !Ib && !lb,
+        tb = wb || Ub,
+        Cb = Ub,
+        Fb = Cb && Mb && !wb;
 
-      function bd() {
-        Nd && Td.gameBridge.send("toggleRecording", null)
+      function Bb() {
+        tb && sb.gameBridge.send("toggleRecording", null)
       }
-      return (0, td.jsxs)("div", {
+      return (0, Ob.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, td.jsxs)("div", {
+        children: [(0, Ob.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, td.jsx)("div", {
+          children: [(0, Ob.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: Od ? (0, td.jsxs)(td.Fragment, {
-              children: [(0, td.jsxs)(vd.G, {
+            children: wb ? (0, Ob.jsxs)(Ob.Fragment, {
+              children: [(0, Ob.jsxs)(Lb.Q, {
                 className: "ReplayViewerCategoryButton",
-                onClick: bd,
-                disabled: !Nd,
-                children: [(0, td.jsx)("span", {
+                onClick: Bb,
+                disabled: !tb,
+                children: [(0, Ob.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, td.jsx)(LW.b, {
+                }), (0, Ob.jsx)(Se.e, {
                   noaAction: "recordGame"
                 })]
-              }), (0, td.jsx)(GW.c, {
+              }), (0, Ob.jsx)(We.e, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, td.jsxs)(vd.g, {
+            }) : (0, Ob.jsxs)(Lb.f, {
               className: "ReplayViewerCategoryButton",
-              onClick: bd,
-              disabled: !Nd,
-              children: [(0, td.jsx)("span", {
+              onClick: Bb,
+              disabled: !tb,
+              children: [(0, Ob.jsx)("span", {
                 children: "Start Recording"
-              }), (0, td.jsx)(LW.b, {
+              }), (0, Ob.jsx)(Se.e, {
                 noaAction: "recordGame"
               })]
             })
-          }), hd && (0, td.jsx)("div", {
+          }), lb && (0, Ob.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), Qd && !Od && (0, td.jsx)("div", {
+          }), Ib && !wb && (0, Ob.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, td.jsx)(Ed.e, {
+          children: [(0, Ob.jsx)(xb.d, {
             label: "Enable clipping",
-            checked: dd.enableClipping,
-            disabled: !qd,
-            onClick: function(dd) {
-              qd && Jd.e.setClientEscMenuOptions({
-                enableClipping: dd
+            checked: bb.enableClipping,
+            disabled: !Cb,
+            onClick: function(bb) {
+              Cb && jb.c.setClientEscMenuOptions({
+                enableClipping: bb
               })
             },
-            className: Rd()({
-              SettingBoxDisabled: !qd
+            className: pb()({
+              SettingBoxDisabled: !Cb
             })
-          }), (0, td.jsx)(Ed.i, {
+          }), (0, Ob.jsx)(xb.j, {
             name: "Clip duration (seconds)",
-            min: PW.h,
-            max: PW.e,
-            step: PW.b,
-            initValue: dd.clipDurationSeconds,
-            onChange: function(dd) {
-              Jd.e.setClientEscMenuOptions({
-                clipDurationSeconds: dd
+            min: Ne.p,
+            max: Ne.l,
+            step: Ne.e,
+            initValue: bb.clipDurationSeconds,
+            onChange: function(bb) {
+              jb.c.setClientEscMenuOptions({
+                clipDurationSeconds: bb
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !qd || !dd.enableClipping
+            disabled: !Cb || !bb.enableClipping
           })]
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, td.jsxs)(vd.g, {
+          children: [(0, Ob.jsxs)(Lb.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              yd && Td.gameBridge.send("saveClip", null)
+              Fb && sb.gameBridge.send("saveClip", null)
             },
-            disabled: !yd,
-            children: [(0, td.jsx)("span", {
+            disabled: !Fb,
+            children: [(0, Ob.jsx)("span", {
               children: "Record clip"
-            }), (0, td.jsx)(LW.b, {
+            }), (0, Ob.jsx)(Se.e, {
               noaAction: "recordClip"
             })]
-          }), dd.enableClipping && !Fd && qd && !Od && (0, td.jsx)("div", {
+          }), bb.enableClipping && !Hb && Cb && !wb && (0, Ob.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), Od && (0, td.jsx)("div", {
+          }), wb && (0, Ob.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, td.jsxs)(vd.g, {
+          children: [(0, Ob.jsxs)(Lb.f, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, nW.i)(!0), Jd.e.set({
+              (0, Je.g)(!0), jb.c.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: Kd,
-            children: [(0, td.jsx)("span", {
+            disabled: gb,
+            children: [(0, Ob.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, td.jsx)(LW.b, {
+            }), (0, Ob.jsx)(Se.e, {
               noaAction: "replayViewerOpen"
             })]
-          }), Kd && (0, td.jsx)("div", {
+          }), gb && (0, Ob.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, td.jsx)("div", {
+          children: [(0, Ob.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, td.jsx)("iframe", {
+          }), (0, Ob.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2751,8 +2751,8 @@ export const modules = {
         })]
       })
     }));
-    var cW = md(2057);
-    const jW = {
+    var Qe = Mb(2107);
+    const Ge = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2774,11 +2774,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, td.jsx)("svg", {
+        icon: () => (0, Ob.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, td.jsx)("path", {
+          children: (0, Ob.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2797,7 +2797,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      Jq: {
+      LC: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2823,376 +2823,376 @@ export const modules = {
       }
     };
 
-    function DW() {
-      return Promise.all([md.e(91), md.e(157), md.e(156), md.e(153)]).then((() => md(43019))).then((dd => ({
-        default: dd.ShaderPackCategory
-      })), (dd => (console.error("Failed to load the shader pack settings", dd), {
-        default: eW
+    function qe() {
+      return Promise.all([Mb.e(91), Mb.e(157), Mb.e(156), Mb.e(153)]).then((() => Mb(42738))).then((bb => ({
+        default: bb.ShaderPackCategory
+      })), (bb => (console.error("Failed to load the shader pack settings", bb), {
+        default: ae
       })))
     }
 
-    function eW() {
+    function ae() {
       const {
-        t: dd
-      } = (0, Xd.G)();
-      return (0, td.jsx)("div", {
+        t: bb
+      } = (0, Vb.C)();
+      return (0, Ob.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: dd("shaderPack:tabLoadFailed")
+        children: bb("shaderPack:tabLoadFailed")
       })
     }
-    var IW = md(1498),
-      lW = md(210);
-    const CW = /party\s*voice/i;
-    let ZW = !1;
+    var ie = Mb(1549),
+      ue = Mb(214);
+    const de = /party\s*voice/i;
+    let Pe = !1;
 
-    function kW(dd) {
-      return Object.keys(dd).some((dd => dd.startsWith("__reactFiber$")))
+    function ne(bb) {
+      return Object.keys(bb).some((bb => bb.startsWith("__reactFiber$")))
     }
-    const fW = ".MenuSideBarBody, .MenuSideBarSection";
+    const ye = ".MenuSideBarBody, .MenuSideBarSection";
 
-    function MW(dd) {
-      var Od;
-      return (null !== (Od = dd.textContent) && void 0 !== Od ? Od : "").replace(/\s+/g, " ").trim()
+    function oe(bb) {
+      var wb;
+      return (null !== (wb = bb.textContent) && void 0 !== wb ? wb : "").replace(/\s+/g, " ").trim()
     }
 
-    function dF(dd) {
-      for (const Od of function(dd) {
-          const Od = new Set;
-          for (const md of dd.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) Od.add(md);
-          for (const md of [dd, ...dd.querySelectorAll(fW)])
-            for (const dd of md.children) Od.add(dd);
-          return [...Od]
-        }(dd))
-        if (!kW(Od) || !Od.matches(fW) && CW.test(MW(Od))) return Od;
+    function Te(bb) {
+      for (const wb of function(bb) {
+          const wb = new Set;
+          for (const Mb of bb.querySelectorAll(".MenuSideBarBodyTab, [data-pad-tab]")) wb.add(Mb);
+          for (const Mb of [bb, ...bb.querySelectorAll(ye)])
+            for (const bb of Mb.children) wb.add(bb);
+          return [...wb]
+        }(bb))
+        if (!ne(wb) || !wb.matches(ye) && de.test(oe(wb))) return wb;
       return null
     }
 
-    function OF(dd) {
-      return dd.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
+    function ke(bb) {
+      return bb.replace(/[^A-Za-z0-9_.-]+/g, "_").replace(/^_+|_+$/g, "")
     }
-    const mF = new Set(["STYLE", "SCRIPT", "TITLE"]);
+    const bH = new Set(["STYLE", "SCRIPT", "TITLE"]);
 
-    function WF(dd) {
-      const Od = document.createTreeWalker(dd, NodeFilter.SHOW_TEXT, {
-        acceptNode: dd => {
-          var Od, md;
-          return mF.has(null !== (Od = null === (md = dd.parentElement) || void 0 === md ? void 0 : md.tagName.toUpperCase()) && void 0 !== Od ? Od : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+    function wH(bb) {
+      const wb = document.createTreeWalker(bb, NodeFilter.SHOW_TEXT, {
+        acceptNode: bb => {
+          var wb, Mb;
+          return bH.has(null !== (wb = null === (Mb = bb.parentElement) || void 0 === Mb ? void 0 : Mb.tagName.toUpperCase()) && void 0 !== wb ? wb : "") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
         }
       });
-      for (let Rd = Od.nextNode(); null !== Rd; Rd = Od.nextNode()) {
-        var md;
-        const dd = (null !== (md = Rd.textContent) && void 0 !== md ? md : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
-        if ("" !== dd) {
-          var Wd, Fd;
-          return (null !== (Wd = null === (Fd = dd.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === Fd ? void 0 : Fd[0]) && void 0 !== Wd ? Wd : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
+      for (let pb = wb.nextNode(); null !== pb; pb = wb.nextNode()) {
+        var Mb;
+        const bb = (null !== (Mb = pb.textContent) && void 0 !== Mb ? Mb : "").normalize("NFC").replace(/^[^\p{L}]+/u, "");
+        if ("" !== bb) {
+          var eb, Hb;
+          return (null !== (eb = null === (Hb = bb.match(/^[\p{L}\p{M}\s]*/u)) || void 0 === Hb ? void 0 : Hb[0]) && void 0 !== eb ? eb : "").split(/\s+/).filter(Boolean).slice(0, 2).join(" ")
         }
       }
       return ""
     }
 
-    function FF(dd, Od) {
-      const md = OF(Od).slice(0, 40) || "blank";
-      return `${(OF(dd.toLowerCase())||"none").slice(0,Math.max(23,lW.db-1-md.length))}:${md}`.slice(0, lW.db)
+    function MH(bb, wb) {
+      const Mb = ke(wb).slice(0, 40) || "blank";
+      return `${(ke(bb.toLowerCase())||"none").slice(0,Math.max(23,ue.ab-1-Mb.length))}:${Mb}`.slice(0, ue.ab)
     }
-    const RF = (0, Wd.lazy)((() => md.e(309).then((() => md(43001))).then((dd => ({
-        default: dd.BloxdInformation
+    const eH = (0, eb.lazy)((() => Mb.e(309).then((() => Mb(42727))).then((bb => ({
+        default: bb.BloxdInformation
       }))))),
-      XF = (0, Wd.lazy)(DW);
+      HH = (0, eb.lazy)(qe);
 
-    function KF(dd) {
-      return dd ? "general" : "account"
+    function pH(bb) {
+      return bb ? "general" : "account"
     }
-    const hF = new Map,
-      vF = (0, Wd.memo)((function(dd) {
+    const VH = new Map,
+      gH = (0, eb.memo)((function(bb) {
         let {
-          show: Od,
-          setBeforeResumeCallback: md
-        } = dd;
-        (0, yd.b)();
+          show: wb,
+          setBeforeResumeCallback: Mb
+        } = bb;
+        (0, Fb.c)();
         const {
-          gameState: Fd,
-          openSettingsCategory: Rd
-        } = (0, Jd.p)(["gameState", "openSettingsCategory"]), {
-          userContext: hd
-        } = (0, qd.d)(), {
-          t: Qd
-        } = (0, Xd.G)(), gd = (0, Nd.d)(), wd = (0, Hd.j)("minChunkAddDist"), Ed = "inGame" === Fd, [Ud, Sd] = (0, Wd.useState)(KF(Ed)), [sd, ud] = (0, Wd.useState)(null), [Vd, Ad] = (0, Wd.useState)([]), rd = (0, Wd.useRef)(function() {
-          const dd = new Date,
-            Od = 6 * (dd.getMonth() + dd.getDate()) % VO.t.length;
-          return [...VO.t, ...VO.t].slice(Od, Od + 6)
-        }()), Gd = (0, Wd.useRef)(null), nd = (0, Wd.useRef)(null), Ld = (0, Rm.i)(AW.h, (0, AW.d)()), Pd = Object.keys(jW).filter((dd => {
-          switch (dd) {
+          gameState: Hb,
+          openSettingsCategory: pb
+        } = (0, jb.o)(["gameState", "openSettingsCategory"]), {
+          userContext: lb
+        } = (0, Cb.e)(), {
+          t: Ib
+        } = (0, Vb.C)(), zb = (0, tb.e)(), Xb = (0, Eb.k)("minChunkAddDist"), xb = "inGame" === Hb, [Kb, Db] = (0, eb.useState)(pH(xb)), [cb, Yb] = (0, eb.useState)(null), [Zb, fb] = (0, eb.useState)([]), Ab = (0, eb.useRef)(function() {
+          const bb = new Date,
+            wb = 6 * (bb.getMonth() + bb.getDate()) % Zw.s.length;
+          return [...Zw.s, ...Zw.s].slice(wb, wb + 6)
+        }()), Wb = (0, eb.useRef)(null), Jb = (0, eb.useRef)(null), Sb = (0, HM.h)(fe.i, (0, fe.d)()), Nb = Object.keys(Ge).filter((bb => {
+          switch (bb) {
             case "replayViewer":
-              return Ed;
+              return xb;
             case "developerTools":
-              return hd.playerHasRank("developer") || !1;
+              return lb.playerHasRank("developer") || !1;
             case "texturePack":
-              return bd.featureFlags.settings.canChangeTexturePack;
-            case "Jq":
-              return bd.featureFlags.settings.canUseShaderPacks;
+              return Bb.featureFlags.settings.canChangeTexturePack;
+            case "LC":
+              return Bb.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return bd.featureFlags.useSocialFeatures || null !== hd.dailyDrop;
+              return Bb.featureFlags.useSocialFeatures || null !== lb.dailyDrop;
             case "alternativeDomains":
-              return "crazygames" !== Bd.siteUsed;
+              return "crazygames" !== Rb.siteUsed;
             case "controller":
-              return bd.featureFlags.useControllerSupport && (Ld || "controller" === Ud);
+              return Bb.featureFlags.useControllerSupport && (Sb || "controller" === Kb);
             default:
               return !0
           }
         }));
-        (0, Rm.f)("toggleFullCoordinateOverlay", (() => {
-          const dd = Gm("showCoordinates") && Gm("showChunkCoordinates") && Gm("showFPS");
-          nm("showCoordinates", !dd), nm("showChunkCoordinates", !dd), nm("showFPS", !dd), gd()
-        })), (0, Rm.f)("updatedChunkLoadDist", (() => {
-          gd()
-        })), (0, Wd.useEffect)((() => {
-          if (ud(null), null === Jd.e.get("openSettingsCategory")) {
-            const dd = (0, IW.m)() ? hF.get(Ed) : void 0;
-            Sd(dd && Pd.includes(dd) ? dd : KF(Ed))
+        (0, HM.e)("toggleFullCoordinateOverlay", (() => {
+          const bb = WM("showCoordinates") && WM("showChunkCoordinates") && WM("showFPS");
+          JM("showCoordinates", !bb), JM("showChunkCoordinates", !bb), JM("showFPS", !bb), zb()
+        })), (0, HM.e)("updatedChunkLoadDist", (() => {
+          zb()
+        })), (0, eb.useEffect)((() => {
+          if (Yb(null), null === jb.c.get("openSettingsCategory")) {
+            const bb = (0, ie.j)() ? VH.get(xb) : void 0;
+            Db(bb && Nb.includes(bb) ? bb : pH(xb))
           }
-        }), [Od]), (0, Wd.useEffect)((() => {
-          if (Od && nd.current) return function(dd) {
-            if (ZW) return () => {};
-            let Od = null,
-              md = null;
-            const Wd = () => {
-                var dd;
-                null !== md && (clearTimeout(md), md = null), null === (dd = Od) || void 0 === dd || dd.disconnect(), Od = null
+        }), [wb]), (0, eb.useEffect)((() => {
+          if (wb && Jb.current) return function(bb) {
+            if (Pe) return () => {};
+            let wb = null,
+              Mb = null;
+            const eb = () => {
+                var bb;
+                null !== Mb && (clearTimeout(Mb), Mb = null), null === (bb = wb) || void 0 === bb || bb.disconnect(), wb = null
               },
-              Fd = () => {
-                const Od = dF(dd);
-                null !== Od && (ZW = !0, Wd(), (0, TO.reportAnalyticsClick)({
+              Hb = () => {
+                const wb = Te(bb);
+                null !== wb && (Pe = !0, eb(), (0, Fw.reportAnalyticsClick)({
                   id: "settings.unknown_tab_seen",
-                  value: FF(window.location.hostname, WF(Od))
+                  value: MH(window.location.hostname, wH(wb))
                 }))
               };
-            return md = setTimeout((() => {
-              md = null, Fd(), ZW || (Od = new MutationObserver(Fd), Od.observe(dd, {
+            return Mb = setTimeout((() => {
+              Mb = null, Hb(), Pe || (wb = new MutationObserver(Hb), wb.observe(bb, {
                 childList: !0,
                 subtree: !0
               }))
-            }), 2e3), Wd
-          }(nd.current)
-        }), [Od]), (0, Wd.useEffect)((() => {
-          null !== Rd && (Sd(Rd), hF.set(Ed, Rd), Jd.e.set({
+            }), 2e3), eb
+          }(Jb.current)
+        }), [wb]), (0, eb.useEffect)((() => {
+          null !== pb && (Db(pb), VH.set(xb, pb), jb.c.set({
             openSettingsCategory: null
           }))
-        }), [Rd, Ed]), (0, Wd.useLayoutEffect)((() => {
-          Gd.current && (Gd.current.scrollTop = 0)
-        }), [Ud, Od]), (0, Wd.useEffect)((() => {
-          "updateLog" === Ud && (0, Yd.c)().then(Ad)
-        }), [Ud]), (0, Wd.useEffect)((() => {
-          if ((0, sm.O)(wd)) return;
-          const [dd, Od] = (0, em.d)(), [md, Wd] = (0, Em.e)(wd), Fd = (0, cW.h)(wd[0], dd, md), Rd = (0, cW.h)(wd[1], Od, Wd);
-          Td.gameBridge.send("setChunkAddDistance", {
-            horizontal: Fd,
-            vertical: Rd
+        }), [pb, xb]), (0, eb.useLayoutEffect)((() => {
+          Wb.current && (Wb.current.scrollTop = 0)
+        }), [Kb, wb]), (0, eb.useEffect)((() => {
+          "updateLog" === Kb && (0, hb.e)().then(fb)
+        }), [Kb]), (0, eb.useEffect)((() => {
+          if ((0, DM.K)(Xb)) return;
+          const [bb, wb] = (0, aM.d)(), [Mb, eb] = (0, XM.d)(Xb), Hb = (0, Qe.i)(Xb[0], bb, Mb), pb = (0, Qe.i)(Xb[1], wb, eb);
+          sb.gameBridge.send("setChunkAddDistance", {
+            horizontal: Hb,
+            vertical: pb
           })
-        }), [wd]);
-        const zd = (0, Wd.useCallback)((async () => {
-          sd && (await sd(), ud(null))
-        }), [sd]);
+        }), [Xb]);
+        const vb = (0, eb.useCallback)((async () => {
+          cb && (await cb(), Yb(null))
+        }), [cb]);
 
-        function cd() {
-          Jd.e.set({
+        function Qb() {
+          jb.c.set({
             openEverythingMenuName: null
           })
         }
-        return (0, Wd.useEffect)((() => {
-          md((() => zd))
-        }), [zd, md]), (0, td.jsxs)("div", {
+        return (0, eb.useEffect)((() => {
+          Mb((() => vb))
+        }), [vb, Mb]), (0, Ob.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: Od ? {} : {
+          style: wb ? {} : {
             display: "none"
           },
-          children: [(0, td.jsx)("div", {
-            ref: nd,
+          children: [(0, Ob.jsx)("div", {
+            ref: Jb,
             className: "MenuSideBar",
-            children: (0, td.jsx)("div", {
+            children: (0, Ob.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, td.jsx)(od, {
-                items: Pd.map((dd => {
-                  const Od = jW[dd].icon;
+              children: (0, Ob.jsx)(Ub, {
+                items: Nb.map((bb => {
+                  const wb = Ge[bb].icon;
                   return {
-                    id: dd,
-                    faIcon: "string" === typeof Od ? Od : void 0,
-                    iconElement: "string" === typeof Od ? void 0 : (0, td.jsx)(Od, {}),
-                    title: Qd(jW[dd].displayName),
+                    id: bb,
+                    faIcon: "string" === typeof wb ? wb : void 0,
+                    iconElement: "string" === typeof wb ? void 0 : (0, Ob.jsx)(wb, {}),
+                    title: Ib(Ge[bb].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: Ud,
-                onClick: dd => {
-                  !async function(dd) {
-                    await zd(), Sd(dd), hF.set(Ed, dd)
-                  }(dd)
+                selectedItemId: Kb,
+                onClick: bb => {
+                  !async function(bb) {
+                    await vb(), Db(bb), VH.set(xb, bb)
+                  }(bb)
                 }
               })
             })
-          }), (0, td.jsxs)("div", {
-            ref: Gd,
+          }), (0, Ob.jsxs)("div", {
+            ref: Wb,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === Ud && (0, td.jsx)(eO, {
-              showing: Od,
-              inGame: Ed
-            }), "general" === Ud && (0, td.jsx)(mm, {
-              inGame: Ed
-            }), "audio" === Ud && (0, td.jsx)(Wm, {}), "notifications" === Ud && (0, td.jsx)(am, {}), "graphics" === Ud && (0, td.jsx)(Dm, {
-              minChunkAddDist: null !== wd && void 0 !== wd ? wd : [2, 2],
-              getValue: Gm,
-              onChange: nm,
-              setApplySettingsCallback: ud
-            }), "controls" === Ud && (0, td.jsx)(Im.e, {}), "crosshair" === Ud && (0, td.jsx)(VW, {
-              showing: Od
-            }), "controller" === Ud && bd.featureFlags.useControllerSupport && (0, td.jsx)(iW.c, {}), bd.featureFlags.settings.canChangeTexturePack && "texturePack" === Ud && (0, td.jsx)(rW.d, {
-              setApplySettingsCallback: ud
-            }), bd.featureFlags.settings.canUseShaderPacks && "Jq" === Ud && (0, td.jsx)(Wd.Suspense, {
+            children: ["account" === Kb && (0, Ob.jsx)(iw, {
+              showing: wb,
+              inGame: xb
+            }), "general" === Kb && (0, Ob.jsx)(wM, {
+              inGame: xb
+            }), "audio" === Kb && (0, Ob.jsx)(MM, {}), "notifications" === Kb && (0, Ob.jsx)(zM, {}), "graphics" === Kb && (0, Ob.jsx)(qM, {
+              minChunkAddDist: null !== Xb && void 0 !== Xb ? Xb : [2, 2],
+              getValue: WM,
+              onChange: JM,
+              setApplySettingsCallback: Yb
+            }), "controls" === Kb && (0, Ob.jsx)(iM.g, {}), "crosshair" === Kb && (0, Ob.jsx)(Ye, {
+              showing: wb
+            }), "controller" === Kb && Bb.featureFlags.useControllerSupport && (0, Ob.jsx)(Ze.c, {}), Bb.featureFlags.settings.canChangeTexturePack && "texturePack" === Kb && (0, Ob.jsx)(Ae.b, {
+              setApplySettingsCallback: Yb
+            }), Bb.featureFlags.settings.canUseShaderPacks && "LC" === Kb && (0, Ob.jsx)(eb.Suspense, {
               fallback: null,
-              children: (0, td.jsx)(XF, {
-                setApplySettingsCallback: ud
+              children: (0, Ob.jsx)(HH, {
+                setApplySettingsCallback: Yb
               })
-            }), "updateLog" === Ud && (0, td.jsx)("div", {
+            }), "updateLog" === Kb && (0, Ob.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, td.jsx)("div", {
+              children: (0, Ob.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: Vd.map(((dd, Od) => (0, td.jsx)(pd.c, {
-                  updateLog: dd,
-                  index: Od,
-                  close: cd
-                }, Od)))
+                children: Zb.map(((bb, wb) => (0, Ob.jsx)(mb.b, {
+                  updateLog: bb,
+                  index: wb,
+                  close: Qb
+                }, wb)))
               })
-            }), "information" === Ud && (0, td.jsx)("div", {
+            }), "information" === Kb && (0, Ob.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, td.jsx)(Wd.Suspense, {
+              children: (0, Ob.jsx)(eb.Suspense, {
                 fallback: null,
-                children: (0, td.jsx)(RF, {})
+                children: (0, Ob.jsx)(eH, {})
               })
-            }), "alternativeDomains" === Ud && (0, td.jsxs)("div", {
+            }), "alternativeDomains" === Kb && (0, Ob.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, td.jsx)("div", {
+              children: [(0, Ob.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: Qd("settingsMenu:unblockedDomainsDescription")
-              }), (0, td.jsx)("div", {
+                children: Ib("settingsMenu:unblockedDomainsDescription")
+              }), (0, Ob.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: rd.current.map((dd => (0, td.jsxs)(vd.g, {
+                children: Ab.current.map((bb => (0, Ob.jsxs)(Lb.f, {
                   onClick: () => {
-                    window.open(`https://${dd}`)
+                    window.open(`https://${bb}`)
                   },
-                  children: [(0, td.jsx)(Kd.c, {
+                  children: [(0, Ob.jsx)(gb.b, {
                     name: "arrow-up-right-from-square"
-                  }), " ", dd]
-                }, dd)))
+                  }), " ", bb]
+                }, bb)))
               })]
-            }), "replayViewer" === Ud && (0, td.jsx)(zW, {}), "developerTools" === Ud && (0, td.jsx)("div", {
+            }), "replayViewer" === Kb && (0, Ob.jsx)(ve, {}), "developerTools" === Kb && (0, Ob.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, td.jsx)(xd, {
-                setApplySettingsCallback: ud
+              children: (0, Ob.jsx)(rb, {
+                setApplySettingsCallback: Yb
               })
-            }), null !== sd && (0, td.jsx)("div", {
+            }), null !== cb && (0, Ob.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, td.jsx)(vd.g, {
+              children: (0, Ob.jsx)(Lb.f, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: zd,
-                children: Qd("general:apply")
+                onClick: vb,
+                children: Ib("general:apply")
               })
             })]
           })]
         })
       }));
-    var QF = md(3689),
-      tF = md(1695),
-      oF = md(3249),
-      NF = md(4994);
-    const qF = (0, Wd.lazy)((() => Promise.resolve().then((() => md(5329))).then((dd => (dd.needGameClientAfterPaint(), (0, QF.b)((dd => dd.loadCharacterCustomisationUI()), (dd => dd.CharacterCustomisationUI))))))),
-      HF = "openCustomisationTab";
+    var lH = Mb(3817),
+      LH = Mb(1749),
+      IH = Mb(3329),
+      OH = Mb(5182);
+    const UH = (0, eb.lazy)((() => Promise.resolve().then((() => Mb(5509))).then((bb => (bb.needGameClientAfterPaint(), (0, lH.b)((bb => bb.loadCharacterCustomisationUI()), (bb => bb.CharacterCustomisationUI))))))),
+      tH = "openCustomisationTab";
 
-    function yF(dd) {
-      var Od, md, Fd;
+    function CH(bb) {
+      var wb, Mb, Hb;
       let {
-        show: Rd
-      } = dd;
+        show: pb
+      } = bb;
       const {
-        userContext: Xd
-      } = (0, qd.d)(), Kd = (0, ed.usePurchasesAllowed)(), hd = (0, Wd.useRef)(null);
-      var vd, Qd;
-      Xd !== Sd.NULL_USER_CONTEXT && (null === (Od = hd.current) || void 0 === Od ? void 0 : Od.whamm) !== Xd.whamm && (hd.current = {
-        whamm: Xd.whamm,
-        mountKey: (null !== (vd = null === (Qd = hd.current) || void 0 === Qd ? void 0 : Qd.mountKey) && void 0 !== vd ? vd : -1) + 1
+        userContext: Vb
+      } = (0, Cb.e)(), gb = (0, ab.usePurchasesAllowed)(), lb = (0, eb.useRef)(null);
+      var Lb, Ib;
+      Vb !== Db.NULL_USER_CONTEXT && (null === (wb = lb.current) || void 0 === wb ? void 0 : wb.whamm) !== Vb.whamm && (lb.current = {
+        whamm: Vb.whamm,
+        mountKey: (null !== (Lb = null === (Ib = lb.current) || void 0 === Ib ? void 0 : Ib.mountKey) && void 0 !== Lb ? Lb : -1) + 1
       });
-      const [Nd, Hd] = (0, Wd.useState)("characters");
-      if ((0, Rm.f)(HF, Hd), !Rd) return null;
-      const yd = null !== (0, tF.j)(Date.now()),
-        bd = Xd.getOwnedCosmeticPacks(),
-        Td = VO.Pb.filter((dd => "pet" === dd || "aura" === dd ? yd || (0, oF.t)(dd).some((Od => Od !== `${dd}_none` && (0, oF.G)(dd, Od, bd))) : "cape" !== dd && "nameColour" !== dd || (0, Pd.b)(Xd.getPlayerRanks()) || Kd)).map((dd => ({
-          id: dd,
-          faIcon: VO.B[dd],
-          title: VO.C[dd],
+      const [tb, Eb] = (0, eb.useState)("characters");
+      if ((0, HM.e)(tH, Eb), !pb) return null;
+      const Fb = null !== (0, LH.k)(Date.now()),
+        Bb = Vb.getOwnedCosmeticPacks(),
+        sb = Zw.Nb.filter((bb => "pet" === bb || "aura" === bb ? Fb || (0, IH.q)(bb).some((wb => wb !== `${bb}_none` && (0, IH.J)(bb, wb, Bb))) : "cape" !== bb && "nameColour" !== bb || (0, Nb.c)(Vb.getPlayerRanks()) || gb)).map((bb => ({
+          id: bb,
+          faIcon: Zw.z[bb],
+          title: Zw.B[bb],
           redDot: !1
         })));
-      return (0, td.jsxs)("div", {
+      return (0, Ob.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, td.jsx)(od, {
-            items: Td,
-            selectedItemId: Nd,
-            onClick: dd => {
-              Hd(dd)
+          children: (0, Ob.jsx)(Ub, {
+            items: sb,
+            selectedItemId: tb,
+            onClick: bb => {
+              Eb(bb)
             }
           })
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "MenuBody",
-          children: (0, td.jsx)(Wd.Suspense, {
-            fallback: (0, td.jsx)("div", {
+          children: (0, Ob.jsx)(eb.Suspense, {
+            fallback: (0, Ob.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, td.jsx)(wd.c, {})
+              children: (0, Ob.jsx)(Xb.c, {})
             }),
-            children: (0, td.jsx)(qF, {
-              selectedTab: Nd,
-              noWebGlFallback: TF
-            }, null !== (md = null === (Fd = hd.current) || void 0 === Fd ? void 0 : Fd.mountKey) && void 0 !== md ? md : 0)
+            children: (0, Ob.jsx)(UH, {
+              selectedTab: tb,
+              noWebGlFallback: FH
+            }, null !== (Mb = null === (Hb = lb.current) || void 0 === Hb ? void 0 : Hb.mountKey) && void 0 !== Mb ? Mb : 0)
           })
         })]
       })
     }
 
-    function bF() {
+    function EH() {
       const {
-        t: dd
-      } = (0, Xd.G)();
-      return (0, td.jsx)("div", {
+        t: bb
+      } = (0, Vb.C)();
+      return (0, Ob.jsx)("div", {
         className: "CharacterCustomisationNoWebGl SmallTextBold",
-        children: dd((0, NF.g)((0, NF.e)()))
+        children: bb((0, OH.d)((0, OH.c)()))
       })
     }
-    const TF = (0, td.jsx)(bF, {});
-    var pF = md(1594),
-      YF = md(1596),
-      gF = md(35535),
-      wF = md(5194),
-      aF = md(4633),
-      EF = md(4708),
-      JF = md(9911),
-      UF = md(35538),
-      xF = md(35545),
-      BF = md(2079),
-      SF = md(2060),
-      sF = md(5691),
-      uF = md(1315),
-      VF = md(1286),
-      iF = md(1798),
-      AF = md(9984),
-      rF = md(3413),
-      GF = md(3418);
+    const FH = (0, Ob.jsx)(EH, {});
+    var BH = Mb(1642),
+      sH = Mb(1646),
+      mH = Mb(35320),
+      hH = Mb(5384),
+      zH = Mb(4805),
+      XH = Mb(4879),
+      xH = Mb(10112),
+      jH = Mb(35327),
+      KH = Mb(35331),
+      rH = Mb(2130),
+      RH = Mb(2116),
+      DH = Mb(5817),
+      cH = Mb(1329),
+      YH = Mb(1301),
+      ZH = Mb(1864),
+      fH = Mb(10177),
+      AH = Mb(3514),
+      WH = Mb(3520);
 
-    function nF(dd) {
-      return dd ? Object.keys(dd).sort(((Od, md) => {
-        var Wd, Fd, Rd, Xd;
-        const Kd = (null !== (Wd = null === (Fd = dd[md]) || void 0 === Fd ? void 0 : Fd.sortPriority) && void 0 !== Wd ? Wd : 0) - (null !== (Rd = null === (Xd = dd[Od]) || void 0 === Xd ? void 0 : Xd.sortPriority) && void 0 !== Rd ? Rd : 0);
-        return 0 !== Kd ? Kd : Od.localeCompare(md)
+    function JH(bb) {
+      return bb ? Object.keys(bb).sort(((wb, Mb) => {
+        var eb, Hb, pb, Vb;
+        const gb = (null !== (eb = null === (Hb = bb[Mb]) || void 0 === Hb ? void 0 : Hb.sortPriority) && void 0 !== eb ? eb : 0) - (null !== (pb = null === (Vb = bb[wb]) || void 0 === Vb ? void 0 : Vb.sortPriority) && void 0 !== pb ? pb : 0);
+        return 0 !== gb ? gb : wb.localeCompare(Mb)
       })) : []
     }
-    const LF = [{
+    const SH = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -3206,241 +3206,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function PF(dd) {
+    function NH(bb) {
       for (const {
-          threshold: Od,
-          suffix: md
+          threshold: wb,
+          suffix: Mb
         }
-        of LF)
-        if (dd >= Od) {
-          const Wd = dd / Od;
-          return Wd >= 100 ? `${Math.floor(Wd)}${md}` : Wd >= 10 ? `${Wd.toFixed(1).replace(/\.0$/,"")}${md}` : `${Wd.toFixed(2).replace(/\.?0+$/,"")}${md}`
-        } return String(dd)
+        of SH)
+        if (bb >= wb) {
+          const eb = bb / wb;
+          return eb >= 100 ? `${Math.floor(eb)}${Mb}` : eb >= 10 ? `${eb.toFixed(1).replace(/\.0$/,"")}${Mb}` : `${eb.toFixed(2).replace(/\.?0+$/,"")}${Mb}`
+        } return String(bb)
     }
-    var zF = md(4199);
-    const cF = {
+    var vH = Mb(4374);
+    const QH = {
         normal: "0.8em",
         big: "1em"
       },
-      jF = (0, Wd.memo)((function(dd) {
+      GH = (0, eb.memo)((function(bb) {
         let {
-          item: Od,
-          amount: md = 0,
-          size: Wd = "normal",
-          tier: Fd = null
-        } = dd;
-        return (0, td.jsx)("div", {
-          className: Rd()("SmpSlot", `SmpSlot-${Wd}`),
-          children: Od && (0, td.jsx)(BF.c, {
-            itemName: Od,
-            amount: md > 1 ? md : 0,
-            amountFontSize: cF[Wd],
-            enchantmentTier: Fd
+          item: wb,
+          amount: Mb = 0,
+          size: eb = "normal",
+          tier: Hb = null
+        } = bb;
+        return (0, Ob.jsx)("div", {
+          className: pb()("SmpSlot", `SmpSlot-${eb}`),
+          children: wb && (0, Ob.jsx)(rH.c, {
+            itemName: wb,
+            amount: Mb > 1 ? Mb : 0,
+            amountFontSize: QH[eb],
+            enchantmentTier: Hb
           })
         })
       }));
 
-    function DF(dd) {
+    function qH(bb) {
       let {
-        amount: Od,
-        exact: md = !1,
-        className: Wd
-      } = dd;
-      return (0, td.jsxs)("span", {
-        className: Rd()("SmpGold", Wd),
-        children: [(0, td.jsx)("span", {
+        amount: wb,
+        exact: Mb = !1,
+        className: eb
+      } = bb;
+      return (0, Ob.jsxs)("span", {
+        className: pb()("SmpGold", eb),
+        children: [(0, Ob.jsx)("span", {
           className: "SmpCoin",
-          children: (0, td.jsx)(BF.c, {
+          children: (0, Ob.jsx)(rH.c, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), md ? Od.toLocaleString("en-US") : PF(Od)]
+        }), Mb ? wb.toLocaleString("en-US") : NH(wb)]
       })
     }
 
-    function eF(dd) {
+    function aH(bb) {
       let {
-        count: Od = 5,
-        grid: md = !1
-      } = dd;
-      return (0, td.jsx)("div", {
-        className: md ? "SmpCardGrid" : "SmpList",
+        count: wb = 5,
+        grid: Mb = !1
+      } = bb;
+      return (0, Ob.jsx)("div", {
+        className: Mb ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: Od
-        }, ((dd, Od) => (0, td.jsxs)("div", {
-          className: Rd()(md ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, td.jsx)("div", {
-            className: Rd()("SmpSlot", md ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, td.jsxs)("div", {
+          length: wb
+        }, ((bb, wb) => (0, Ob.jsxs)("div", {
+          className: pb()(Mb ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, Ob.jsx)("div", {
+            className: pb()("SmpSlot", Mb ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, Ob.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, td.jsx)("b", {}), (0, td.jsx)("small", {})]
-          }), (0, td.jsx)("div", {
+            children: [(0, Ob.jsx)("b", {}), (0, Ob.jsx)("small", {})]
+          }), (0, Ob.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, Od)))
+        }, wb)))
       })
     }
 
-    function IF(dd) {
+    function iH(bb) {
       let {
-        title: Od,
-        children: md
-      } = dd;
-      return (0, td.jsxs)("div", {
+        title: wb,
+        children: Mb
+      } = bb;
+      return (0, Ob.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, td.jsx)("b", {
-          children: Od
-        }), md && (0, td.jsx)("small", {
-          children: md
+        children: [(0, Ob.jsx)("b", {
+          children: wb
+        }), Mb && (0, Ob.jsx)("small", {
+          children: Mb
         })]
       })
     }
 
-    function lF(dd) {
+    function uH(bb) {
       let {
-        entry: Od
-      } = dd;
-      return (0, td.jsx)(IF, {
-        title: (0, td.jsx)(SF.d, {
-          text: Od.item.customTitle
+        entry: wb
+      } = bb;
+      return (0, Ob.jsx)(iH, {
+        title: (0, Ob.jsx)(RH.d, {
+          text: wb.item.customTitle
         }),
-        children: (0, td.jsx)(SF.d, {
-          text: Od.item.description
+        children: (0, Ob.jsx)(RH.d, {
+          text: wb.item.description
         })
       })
     }
 
-    function CF(dd) {
-      return (0, td.jsx)(zF.e, {
-        ...dd,
-        className: Rd()("SmpChoice", dd.className),
+    function dH(bb) {
+      return (0, Ob.jsx)(vH.c, {
+        ...bb,
+        className: pb()("SmpChoice", bb.className),
         reselectable: !0
       })
     }
 
-    function ZF() {
-      return (0, td.jsx)("span", {
+    function PH() {
+      return (0, Ob.jsx)("span", {
         className: "SmpLoader",
-        children: (0, td.jsx)(wd.c, {})
+        children: (0, Ob.jsx)(Xb.c, {})
       })
     }
 
-    function kF(dd) {
+    function nH(bb) {
       let {
-        value: Od,
-        onChange: md,
-        min: Fd = 1,
-        max: Rd,
-        step: Xd = 1,
-        label: Kd
-      } = dd;
-      const hd = (0, Wd.useRef)(null),
-        vd = (0, Wd.useRef)(Od);
-      vd.current = Od;
-      const [Qd, od] = (0, Wd.useState)(null), Nd = dd => Math.max(Fd, Math.min(Rd, Math.floor(dd))), qd = dd => {
-        const Od = vd.current,
-          Wd = "function" === typeof Xd ? Xd(Od, dd) : Xd,
-          Fd = Nd(Od + Wd * dd);
-        vd.current = Fd, md(Fd)
+        value: wb,
+        onChange: Mb,
+        min: Hb = 1,
+        max: pb,
+        step: Vb = 1,
+        label: gb
+      } = bb;
+      const lb = (0, eb.useRef)(null),
+        Lb = (0, eb.useRef)(wb);
+      Lb.current = wb;
+      const [Ib, Ub] = (0, eb.useState)(null), tb = bb => Math.max(Hb, Math.min(pb, Math.floor(bb))), Cb = bb => {
+        const wb = Lb.current,
+          eb = "function" === typeof Vb ? Vb(wb, bb) : Vb,
+          Hb = tb(wb + eb * bb);
+        Lb.current = Hb, Mb(Hb)
       };
-      (0, Wd.useEffect)((() => {
-        if (null === Qd) return;
-        let dd;
-        const Od = () => {
-            od(null)
+      (0, eb.useEffect)((() => {
+        if (null === Ib) return;
+        let bb;
+        const wb = () => {
+            Ub(null)
           },
-          md = setTimeout((() => {
-            dd = setInterval((() => {
-              qd(Qd);
-              const dd = vd.current;
-              (Qd > 0 ? dd >= Rd : dd <= Fd) && Od()
+          Mb = setTimeout((() => {
+            bb = setInterval((() => {
+              Cb(Ib);
+              const bb = Lb.current;
+              (Ib > 0 ? bb >= pb : bb <= Hb) && wb()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", Od), window.addEventListener("pointercancel", Od), window.addEventListener("blur", Od), () => {
-          clearTimeout(md), clearInterval(dd), window.removeEventListener("pointerup", Od), window.removeEventListener("pointercancel", Od), window.removeEventListener("blur", Od)
+        return window.addEventListener("pointerup", wb), window.addEventListener("pointercancel", wb), window.addEventListener("blur", wb), () => {
+          clearTimeout(Mb), clearInterval(bb), window.removeEventListener("pointerup", wb), window.removeEventListener("pointercancel", wb), window.removeEventListener("blur", wb)
         }
-      }), [Qd]), (0, Wd.useEffect)((() => {
-        const dd = hd.current;
-        dd && document.activeElement !== dd && dd.value !== String(Od) && (dd.value = String(Od))
-      }), [Od]), (0, Wd.useEffect)((() => {
-        const dd = hd.current;
-        if (!dd) return;
-        const Od = () => {
-          dd.value = String(vd.current)
+      }), [Ib]), (0, eb.useEffect)((() => {
+        const bb = lb.current;
+        bb && document.activeElement !== bb && bb.value !== String(wb) && (bb.value = String(wb))
+      }), [wb]), (0, eb.useEffect)((() => {
+        const bb = lb.current;
+        if (!bb) return;
+        const wb = () => {
+          bb.value = String(Lb.current)
         };
-        return dd.addEventListener("blur", Od), () => {
-          dd.removeEventListener("blur", Od)
+        return bb.addEventListener("blur", wb), () => {
+          bb.removeEventListener("blur", wb)
         }
       }), []);
-      const Hd = dd => (0, td.jsx)("button", {
+      const Eb = bb => (0, Ob.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${dd>0?"More":"Less"} ${Kd}`,
-        disabled: dd > 0 ? Od >= Rd : Od <= Fd,
-        onPointerDown: Od => {
-          0 === Od.button && (qd(dd), od(dd))
+        "aria-label": `${bb>0?"More":"Less"} ${gb}`,
+        disabled: bb > 0 ? wb >= pb : wb <= Hb,
+        onPointerDown: wb => {
+          0 === wb.button && (Cb(bb), Ub(bb))
         },
-        onKeyDown: Od => {
-          "Enter" !== Od.key && " " !== Od.key || qd(dd)
+        onKeyDown: wb => {
+          "Enter" !== wb.key && " " !== wb.key || Cb(bb)
         },
-        onContextMenu: dd => {
-          dd.preventDefault()
+        onContextMenu: bb => {
+          bb.preventDefault()
         },
-        children: dd > 0 ? "+" : "\u2212"
+        children: bb > 0 ? "+" : "\u2212"
       });
-      return (0, td.jsxs)("div", {
+      return (0, Ob.jsxs)("div", {
         className: "SmpStepper",
-        children: [Hd(-1), (0, td.jsx)(gd.c, {
+        children: [Eb(-1), (0, Ob.jsx)(zb.d, {
           className: "SmpStepperInput",
-          domRef: hd,
-          defaultValue: String(Od),
-          ariaLabel: Kd,
+          domRef: lb,
+          defaultValue: String(wb),
+          ariaLabel: gb,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: dd => {
-            const Od = dd.replace(/[^\d]/g, "");
-            hd.current && Od !== dd && (hd.current.value = Od), "" !== Od && md(Nd(Number(Od)))
+          onValueChange: bb => {
+            const wb = bb.replace(/[^\d]/g, "");
+            lb.current && wb !== bb && (lb.current.value = wb), "" !== wb && Mb(tb(Number(wb)))
           }
-        }), Hd(1)]
+        }), Eb(1)]
       })
     }
 
-    function fF(dd) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, dd))) - 1))
+    function yH(bb) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, bb))) - 1))
     }
-    var MF = md(35549),
-      dR = md(1300);
-    const OR = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    dR.v, Ld.zc.length;
+    var oH = Mb(35334),
+      TH = Mb(1313);
+    const kH = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    TH.v, Sb.Uc.length;
     new Map;
-    var mR = md(4509);
+    var bp = Mb(4659);
 
-    function WR(dd, Od) {
-      var md;
-      return Od && (null === (md = dd[Od]) || void 0 === md ? void 0 : md.smp) || null
+    function wp(bb, wb) {
+      var Mb;
+      return wb && (null === (Mb = bb[wb]) || void 0 === Mb ? void 0 : Mb.smp) || null
     }
 
-    function FR(dd, Od) {
-      const md = [];
-      for (const Fd of nF(dd)) {
-        var Wd;
-        const Rd = dd[Fd];
-        (null === (Wd = Rd.smp) || void 0 === Wd ? void 0 : Wd.kind) === Od && md.push({
-          key: Fd,
-          item: Rd,
-          meta: Rd.smp
+    function Mp(bb, wb) {
+      const Mb = [];
+      for (const Hb of JH(bb)) {
+        var eb;
+        const pb = bb[Hb];
+        (null === (eb = pb.smp) || void 0 === eb ? void 0 : eb.kind) === wb && Mb.push({
+          key: Hb,
+          item: pb,
+          meta: pb.smp
         })
       }
-      return md
+      return Mb
     }
 
-    function RR(dd, Od) {
-      var md;
-      return null !== (md = FR(dd, Od)[0]) && void 0 !== md ? md : null
+    function ep(bb, wb) {
+      var Mb;
+      return null !== (Mb = Mp(bb, wb)[0]) && void 0 !== Mb ? Mb : null
     }
-    const XR = "50% 0% 50% 0%",
-      KR = [{
+    const Hp = "50% 0% 50% 0%",
+      pp = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -3454,746 +3454,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function hR(dd) {
-      const Od = dd - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function Vp(bb) {
+      const wb = bb - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: md,
-          suffix: Wd
+          divisor: Mb,
+          suffix: eb
         }
-        of KR)
-        if (Od >= md) return `${Math.floor(Od/md)}${Wd}`;
+        of pp)
+        if (wb >= Mb) return `${Math.floor(wb/Mb)}${eb}`;
       return "<1s"
     }
 
-    function vR(dd) {
-      const Od = dd.map(JF.c),
-        md = [];
-      return Od.forEach(((dd, Wd) => {
-        const Fd = function(dd) {
-            const Od = dd.match(/\d+/);
-            return Od ? Number(Od[0]) : 0
-          }(dd),
-          Rd = Wd === Od.length - 1;
-        (Rd || 1 === Fd || 10 === Fd || 100 === Fd) && md.push({
-          label: dd,
-          quantity: Fd,
-          isAll: Rd
+    function gp(bb) {
+      const wb = bb.map(xH.f),
+        Mb = [];
+      return wb.forEach(((bb, eb) => {
+        const Hb = function(bb) {
+            const wb = bb.match(/\d+/);
+            return wb ? Number(wb[0]) : 0
+          }(bb),
+          pb = eb === wb.length - 1;
+        (pb || 1 === Hb || 10 === Hb || 100 === Hb) && Mb.push({
+          label: bb,
+          quantity: Hb,
+          isAll: pb
         })
-      })), md
+      })), Mb
     }
-    let QR = null;
+    let lp = null;
 
-    function tR(dd, Od) {
-      const md = Od.trim().toLowerCase();
-      if (!md) return [];
-      const Wd = dd => {
-          if (dd === md) return 0;
-          if (dd.startsWith(md)) return 1;
-          const Od = dd.indexOf(md);
-          return -1 === Od ? -1 : 2 + Od
+    function Lp(bb, wb) {
+      const Mb = wb.trim().toLowerCase();
+      if (!Mb) return [];
+      const eb = bb => {
+          if (bb === Mb) return 0;
+          if (bb.startsWith(Mb)) return 1;
+          const wb = bb.indexOf(Mb);
+          return -1 === wb ? -1 : 2 + wb
         },
-        Fd = [];
-      for (const Kd of dd) {
-        const dd = [Wd(Kd.lowerLabel), Wd(Kd.lowerName)].filter((dd => -1 !== dd));
-        dd.length && Fd.push({
-          item: Kd,
-          rank: Math.min(...dd)
+        Hb = [];
+      for (const gb of bb) {
+        const bb = [eb(gb.lowerLabel), eb(gb.lowerName)].filter((bb => -1 !== bb));
+        bb.length && Hb.push({
+          item: gb,
+          rank: Math.min(...bb)
         })
       }
-      if (Fd.length > 0) return Fd.sort(((dd, Od) => dd.rank - Od.rank)).map((dd => dd.item));
-      const Rd = [...md],
-        Xd = dd => {
-          let Od = 0;
-          for (const md of Rd) {
-            if (Od = dd.indexOf(md, Od), -1 === Od) return !1;
-            Od++
+      if (Hb.length > 0) return Hb.sort(((bb, wb) => bb.rank - wb.rank)).map((bb => bb.item));
+      const pb = [...Mb],
+        Vb = bb => {
+          let wb = 0;
+          for (const Mb of pb) {
+            if (wb = bb.indexOf(Mb, wb), -1 === wb) return !1;
+            wb++
           }
           return !0
         };
-      return dd.filter((dd => Xd(dd.lowerLabel) || Xd(dd.lowerName)))
+      return bb.filter((bb => Vb(bb.lowerLabel) || Vb(bb.lowerName)))
     }
 
-    function oR(dd, Od) {
-      var md;
-      return null !== (md = null === dd || void 0 === dd ? void 0 : dd[Od]) && void 0 !== md ? md : Od
+    function Ip(bb, wb) {
+      var Mb;
+      return null !== (Mb = null === bb || void 0 === bb ? void 0 : bb[wb]) && void 0 !== Mb ? Mb : wb
     }
 
-    function NR(dd, Od) {
-      const md = dd.userInput;
-      return void 0 !== Od && "dropdown" === (null === md || void 0 === md ? void 0 : md.type) && md.dropdownOptions.map(JF.c).includes(Od) ? Od : function(dd) {
-        const Od = dd.userInput;
-        if ("dropdown" !== (null === Od || void 0 === Od ? void 0 : Od.type) || 0 === Od.dropdownOptions.length) return null;
-        const md = Od.dropdownOptions.map(JF.c);
-        return Od.initialValue && md.includes(Od.initialValue) ? Od.initialValue : md[md.length - 1]
-      }(dd)
+    function Op(bb, wb) {
+      const Mb = bb.userInput;
+      return void 0 !== wb && "dropdown" === (null === Mb || void 0 === Mb ? void 0 : Mb.type) && Mb.dropdownOptions.map(xH.f).includes(wb) ? wb : function(bb) {
+        const wb = bb.userInput;
+        if ("dropdown" !== (null === wb || void 0 === wb ? void 0 : wb.type) || 0 === wb.dropdownOptions.length) return null;
+        const Mb = wb.dropdownOptions.map(xH.f);
+        return wb.initialValue && Mb.includes(wb.initialValue) ? wb.initialValue : Mb[Mb.length - 1]
+      }(bb)
     }
 
-    function qR(dd) {
-      return void 0 === dd ? "" : JSON.stringify(dd)
+    function Up(bb) {
+      return void 0 === bb ? "" : JSON.stringify(bb)
     }
-    const HR = (0, Wd.createContext)(null);
+    const tp = (0, eb.createContext)(null);
 
-    function yR() {
-      return (0, Wd.useContext)(HR)
+    function Cp() {
+      return (0, eb.useContext)(tp)
     }
-    var bR = md(3769);
-    const TR = (0, Wd.memo)((function(dd) {
+    var Ep = Mb(3915);
+    const Fp = (0, eb.memo)((function(bb) {
         let {
-          name: Od,
-          label: md,
-          onPick: Wd
-        } = dd;
-        return (0, td.jsxs)("button", {
+          name: wb,
+          label: Mb,
+          onPick: eb
+        } = bb;
+        return (0, Ob.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: md,
+          title: Mb,
           onClick: () => {
-            Wd(Od)
+            eb(wb)
           },
-          children: [(0, td.jsx)(jF, {
-            item: Od,
+          children: [(0, Ob.jsx)(GH, {
+            item: wb,
             size: "big"
-          }), (0, td.jsx)("span", {
-            children: md
+          }), (0, Ob.jsx)("span", {
+            children: Mb
           })]
         })
       })),
-      pR = (0, Wd.memo)((function(dd) {
+      Bp = (0, eb.memo)((function(bb) {
         let {
-          items: Od,
-          query: md,
-          onPick: Fd
-        } = dd;
+          items: wb,
+          query: Mb,
+          onPick: Hb
+        } = bb;
         const {
-          t: Rd
-        } = (0, Xd.G)(), [Kd, hd] = (0, Wd.useState)(new Set), vd = (0, Wd.useMemo)((() => function(dd) {
-          const Od = new Map;
-          for (const md of dd) {
-            let dd = Od.get(md.category);
-            dd || (dd = [], Od.set(md.category, dd)), dd.push(md)
+          t: pb
+        } = (0, Vb.C)(), [gb, lb] = (0, eb.useState)(new Set), Lb = (0, eb.useMemo)((() => function(bb) {
+          const wb = new Map;
+          for (const Mb of bb) {
+            let bb = wb.get(Mb.category);
+            bb || (bb = [], wb.set(Mb.category, bb)), bb.push(Mb)
           }
-          return [...OR, "other"].filter((dd => Od.has(dd))).map((dd => ({
-            category: dd,
-            items: Od.get(dd)
+          return [...kH, "other"].filter((bb => wb.has(bb))).map((bb => ({
+            category: bb,
+            items: wb.get(bb)
           })))
-        }(Od)), [Od]), Qd = (0, Wd.useMemo)((() => tR(Od, md).slice(0, 60)), [Od, md]);
-        return md.trim() ? 0 === Qd.length ? (0, td.jsx)(IF, {
-          title: Rd("smpShop:noItemsFound", {
-            query: md.trim()
+        }(wb)), [wb]), Ib = (0, eb.useMemo)((() => Lp(wb, Mb).slice(0, 60)), [wb, Mb]);
+        return Mb.trim() ? 0 === Ib.length ? (0, Ob.jsx)(iH, {
+          title: pb("smpShop:noItemsFound", {
+            query: Mb.trim()
           }),
-          children: Rd("smpShop:tryShorterName")
-        }) : (0, td.jsx)(bR.c, {
+          children: pb("smpShop:tryShorterName")
+        }) : (0, Ob.jsx)(Ep.b, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: XR,
-          observerUpdateDeps: [md],
-          children: Qd.map((dd => (0, td.jsx)(TR, {
-            name: dd.name,
-            label: dd.label,
-            onPick: Fd
-          }, dd.name)))
-        }) : (0, td.jsx)(td.Fragment, {
-          children: vd.map((dd => {
+          rootMargin: Hp,
+          observerUpdateDeps: [Mb],
+          children: Ib.map((bb => (0, Ob.jsx)(Fp, {
+            name: bb.name,
+            label: bb.label,
+            onPick: Hb
+          }, bb.name)))
+        }) : (0, Ob.jsx)(Ob.Fragment, {
+          children: Lb.map((bb => {
             let {
-              category: Od,
-              items: md
-            } = dd;
-            const Wd = Kd.has(Od) || md.length <= 48,
-              Xd = Wd ? md : md.slice(0, 48);
-            return (0, td.jsxs)("section", {
+              category: wb,
+              items: Mb
+            } = bb;
+            const eb = gb.has(wb) || Mb.length <= 48,
+              Vb = eb ? Mb : Mb.slice(0, 48);
+            return (0, Ob.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, td.jsxs)("h4", {
-                children: [Rd("other" === Od ? "smpShop:otherItems" : `creativeInventory:${Od}`), !Wd && (0, td.jsx)("button", {
+              children: [(0, Ob.jsxs)("h4", {
+                children: [pb("other" === wb ? "smpShop:otherItems" : `creativeInventory:${wb}`), !eb && (0, Ob.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    hd(new Set([...Kd, Od]))
+                    lb(new Set([...gb, wb]))
                   },
-                  children: Rd("smpShop:showAll", {
-                    count: md.length
+                  children: pb("smpShop:showAll", {
+                    count: Mb.length
                   })
                 })]
-              }), (0, td.jsx)(bR.c, {
+              }), (0, Ob.jsx)(Ep.b, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: XR,
-                observerUpdateDeps: [Wd],
-                children: Xd.map((dd => (0, td.jsx)(TR, {
-                  name: dd.name,
-                  label: dd.label,
-                  onPick: Fd
-                }, dd.name)))
+                rootMargin: Hp,
+                observerUpdateDeps: [eb],
+                children: Vb.map((bb => (0, Ob.jsx)(Fp, {
+                  name: bb.name,
+                  label: bb.label,
+                  onPick: Hb
+                }, bb.name)))
               })]
-            }, Od)
+            }, wb)
           }))
         })
       }));
 
-    function YR(dd, Od) {
+    function sp(bb, wb) {
       const {
-        searched: md,
-        shown: Fd,
-        searchFor: Rd,
-        loading: Xd
-      } = function(dd, Od) {
-        var md;
-        const Fd = yR(),
-          [Rd, Xd] = (0, Wd.useState)(void 0),
-          Kd = (0, Wd.useRef)(void 0),
-          hd = (0, Wd.useRef)(0),
-          vd = (0, Wd.useRef)(void 0),
-          Qd = null !== (md = null === dd || void 0 === dd ? void 0 : dd.meta.item) && void 0 !== md ? md : null,
-          td = !!dd && Fd.isPending(dd.key);
-        (0, Wd.useEffect)((() => {
-          if (!dd || td || !Od || void 0 === Rd || Rd === Qd) return;
-          const md = Rd === Kd.current && Fd.gaveUpAt(dd.key) > hd.current && vd.current !== Rd;
-          (Rd !== Kd.current || md) && Fd.act(dd.key, null !== Rd && void 0 !== Rd ? Rd : "*", md) && (md && (vd.current = Rd), Kd.current = Rd, hd.current = Date.now())
-        }), [dd, td, Od, Rd, Qd, Fd]);
-        const od = (0, Wd.useCallback)((dd => {
-            Kd.current = void 0, vd.current = void 0, Xd(dd)
+        searched: Mb,
+        shown: Hb,
+        searchFor: pb,
+        loading: Vb
+      } = function(bb, wb) {
+        var Mb;
+        const Hb = Cp(),
+          [pb, Vb] = (0, eb.useState)(void 0),
+          gb = (0, eb.useRef)(void 0),
+          lb = (0, eb.useRef)(0),
+          Lb = (0, eb.useRef)(void 0),
+          Ib = null !== (Mb = null === bb || void 0 === bb ? void 0 : bb.meta.item) && void 0 !== Mb ? Mb : null,
+          Ob = !!bb && Hb.isPending(bb.key);
+        (0, eb.useEffect)((() => {
+          if (!bb || Ob || !wb || void 0 === pb || pb === Ib) return;
+          const Mb = pb === gb.current && Hb.gaveUpAt(bb.key) > lb.current && Lb.current !== pb;
+          (pb !== gb.current || Mb) && Hb.act(bb.key, null !== pb && void 0 !== pb ? pb : "*", Mb) && (Mb && (Lb.current = pb), gb.current = pb, lb.current = Date.now())
+        }), [bb, Ob, wb, pb, Ib, Hb]);
+        const Ub = (0, eb.useCallback)((bb => {
+            gb.current = void 0, Lb.current = void 0, Vb(bb)
           }), []),
-          Nd = void 0 !== Rd && Rd !== Qd && (td || Kd.current !== Rd);
+          tb = void 0 !== pb && pb !== Ib && (Ob || gb.current !== pb);
         return {
-          searched: Qd,
-          shown: Nd ? Rd : Qd,
-          searchFor: od,
-          loading: Nd || td || null !== Qd && !Od
+          searched: Ib,
+          shown: tb ? pb : Ib,
+          searchFor: Ub,
+          loading: tb || Ob || null !== Ib && !wb
         }
-      }(dd, Od), Kd = (0, Wd.useMemo)((() => function() {
-        var dd;
-        let Od = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          Wd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Fd = `${(0,mR.i)()}\x1f${Od.join("\x1e")}\x1f${md.join("\x1e")}\x1f${JSON.stringify(Wd)}`;
-        if ((null === (dd = QR) || void 0 === dd ? void 0 : dd.key) === Fd) return QR.items;
-        const Rd = new Set(md),
-          Xd = new Set,
-          Kd = [],
-          hd = (dd, Od) => {
-            var md;
-            if (!dd || Xd.has(dd) || Rd.has(dd)) return;
-            Xd.add(dd);
-            const Fd = null !== (md = Wd[dd]) && void 0 !== md ? md : dd;
-            Kd.push({
-              name: dd,
-              label: Fd,
-              lowerLabel: Fd.toLowerCase(),
-              lowerName: dd.toLowerCase(),
-              category: Od
+      }(bb, wb), gb = (0, eb.useMemo)((() => function() {
+        var bb;
+        let wb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          Mb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          eb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Hb = `${(0,bp.i)()}\x1f${wb.join("\x1e")}\x1f${Mb.join("\x1e")}\x1f${JSON.stringify(eb)}`;
+        if ((null === (bb = lp) || void 0 === bb ? void 0 : bb.key) === Hb) return lp.items;
+        const pb = new Set(Mb),
+          Vb = new Set,
+          gb = [],
+          lb = (bb, wb) => {
+            var Mb;
+            if (!bb || Vb.has(bb) || pb.has(bb)) return;
+            Vb.add(bb);
+            const Hb = null !== (Mb = eb[bb]) && void 0 !== Mb ? Mb : bb;
+            gb.push({
+              name: bb,
+              label: Hb,
+              lowerLabel: Hb.toLowerCase(),
+              lowerName: bb.toLowerCase(),
+              category: wb
             })
           };
-        for (const Qd of (0, MF.creativeItemIds)()) {
-          var vd;
-          (0, MF.itemIsDisabled)(Qd, !0, !0, !1) || (0, MF.showOnlyInCreativeSearch)(Qd) || hd((0, mR.h)(Qd), null !== (vd = (0, MF.creativeCategoryOf)(Qd)) && void 0 !== vd ? vd : "other")
+        for (const Ib of (0, oH.creativeItemIds)()) {
+          var Lb;
+          (0, oH.itemIsDisabled)(Ib, !0, !0, !1) || (0, oH.showOnlyInCreativeSearch)(Ib) || lb((0, bp.g)(Ib), null !== (Lb = (0, oH.creativeCategoryOf)(Ib)) && void 0 !== Lb ? Lb : "other")
         }
-        for (const Qd of Od) hd(Qd, "other");
-        return QR = {
-          key: Fd,
-          items: Kd
-        }, Kd
-      }(null === dd || void 0 === dd ? void 0 : dd.meta.extra, null === dd || void 0 === dd ? void 0 : dd.meta.excluded, null === dd || void 0 === dd ? void 0 : dd.meta.names)), [null === dd || void 0 === dd ? void 0 : dd.meta.extra, null === dd || void 0 === dd ? void 0 : dd.meta.excluded, null === dd || void 0 === dd ? void 0 : dd.meta.names]), [hd, vd] = (0, Wd.useState)(""), [Qd, td] = (0, Wd.useState)(0), [od, Nd] = (0, Wd.useState)("recent"), qd = (0, Wd.useCallback)((dd => {
-        vd(""), td((dd => dd + 1)), Rd(dd)
-      }), [Rd]), Hd = "browse" === od || "" !== hd.trim();
+        for (const Ib of wb) lb(Ib, "other");
+        return lp = {
+          key: Hb,
+          items: gb
+        }, gb
+      }(null === bb || void 0 === bb ? void 0 : bb.meta.extra, null === bb || void 0 === bb ? void 0 : bb.meta.excluded, null === bb || void 0 === bb ? void 0 : bb.meta.names)), [null === bb || void 0 === bb ? void 0 : bb.meta.extra, null === bb || void 0 === bb ? void 0 : bb.meta.excluded, null === bb || void 0 === bb ? void 0 : bb.meta.names]), [lb, Lb] = (0, eb.useState)(""), [Ib, Ob] = (0, eb.useState)(0), [Ub, tb] = (0, eb.useState)("recent"), Cb = (0, eb.useCallback)((bb => {
+        Lb(""), Ob((bb => bb + 1)), pb(bb)
+      }), [pb]), Eb = "browse" === Ub || "" !== lb.trim();
       return {
-        searched: md,
-        shown: Fd,
-        searchFor: Rd,
-        loading: Xd,
-        catalogue: Kd,
-        names: null === dd || void 0 === dd ? void 0 : dd.meta.names,
-        query: hd,
-        setQuery: vd,
-        searchBoxKey: Qd,
-        pickItem: qd,
-        setView: Nd,
-        browsing: Hd
+        searched: Mb,
+        shown: Hb,
+        searchFor: pb,
+        loading: Vb,
+        catalogue: gb,
+        names: null === bb || void 0 === bb ? void 0 : bb.meta.names,
+        query: lb,
+        setQuery: Lb,
+        searchBoxKey: Ib,
+        pickItem: Cb,
+        setView: tb,
+        browsing: Eb
       }
     }
 
-    function gR(dd) {
+    function mp(bb) {
       let {
-        browser: Od,
-        children: md
-      } = dd;
+        browser: wb,
+        children: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)(), Fd = yR();
-      return (0, td.jsxs)("div", {
+        t: eb
+      } = (0, Vb.C)(), Hb = Cp();
+      return (0, Ob.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "SmpSearch",
-          children: (0, td.jsx)(gd.c, {
+          children: (0, Ob.jsx)(zb.d, {
             className: "SmpSearchInput",
-            placeholderText: Wd("smpShop:searchPlaceholder"),
-            defaultValue: Od.query,
-            onValueChange: dd => {
-              Od.setQuery(dd), Od.searched && dd.trim() && Od.searchFor(null)
+            placeholderText: eb("smpShop:searchPlaceholder"),
+            defaultValue: wb.query,
+            onValueChange: bb => {
+              wb.setQuery(bb), wb.searched && bb.trim() && wb.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const dd = tR(Od.catalogue, Od.query)[0];
-              dd ? Od.pickItem(dd.name) : Od.query.trim() && Fd.notify(Wd("smpShop:noItemsFound", {
-                query: Od.query.trim()
+              const bb = Lp(wb.catalogue, wb.query)[0];
+              bb ? wb.pickItem(bb.name) : wb.query.trim() && Hb.notify(eb("smpShop:noItemsFound", {
+                query: wb.query.trim()
               }))
             }
-          }, Od.searchBoxKey)
-        }), md]
+          }, wb.searchBoxKey)
+        }), Mb]
       })
     }
 
-    function wR(dd) {
+    function hp(bb) {
       let {
-        browser: Od,
-        recentLabel: md,
-        children: Wd
-      } = dd;
+        browser: wb,
+        recentLabel: Mb,
+        children: eb
+      } = bb;
       const {
-        t: Fd
-      } = (0, Xd.G)();
-      return (0, td.jsxs)("div", {
+        t: Hb
+      } = (0, Vb.C)();
+      return (0, Ob.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, td.jsx)(CF, {
+        children: [(0, Ob.jsx)(dH, {
           options: [{
             value: "recent",
-            label: md
+            label: Mb
           }, {
             value: "browse",
-            label: Fd("smpShop:browseItems")
+            label: Hb("smpShop:browseItems")
           }],
-          value: Od.browsing ? "browse" : "recent",
-          onChange: Od.setView,
-          ariaLabel: Fd("smpShop:show")
-        }), !Od.browsing && Wd]
+          value: wb.browsing ? "browse" : "recent",
+          onChange: wb.setView,
+          ariaLabel: Hb("smpShop:show")
+        }), !wb.browsing && eb]
       })
     }
 
-    function aR(dd) {
+    function zp(bb) {
       let {
-        item: Od,
-        names: md,
-        summary: Wd,
-        onBack: Fd,
-        children: Rd
-      } = dd;
+        item: wb,
+        names: Mb,
+        summary: eb,
+        onBack: Hb,
+        children: pb
+      } = bb;
       const {
-        t: Kd
-      } = (0, Xd.G)();
-      return (0, td.jsxs)("div", {
+        t: gb
+      } = (0, Vb.C)();
+      return (0, Ob.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, td.jsx)(vd.d, {
+        children: [(0, Ob.jsx)(Lb.b, {
           className: "SmpBackButton",
-          onClick: Fd,
-          children: Kd("general:back")
-        }), (0, td.jsx)(jF, {
-          item: Od,
+          onClick: Hb,
+          children: gb("general:back")
+        }), (0, Ob.jsx)(GH, {
+          item: wb,
           size: "big"
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, td.jsx)("b", {
-            children: oR(md, Od)
-          }), Wd && (0, td.jsx)("small", {
-            children: Wd
+          children: [(0, Ob.jsx)("b", {
+            children: Ip(Mb, wb)
+          }), eb && (0, Ob.jsx)("small", {
+            children: eb
           })]
-        }), Rd]
+        }), pb]
       })
     }
 
-    function ER(dd) {
+    function Xp(bb) {
       let {
-        browser: Od,
-        className: md,
-        action: Wd,
-        above: Fd,
-        list: Xd,
-        summary: Kd,
-        recentLabel: hd,
-        listControls: vd,
-        onBack: Qd
-      } = dd;
-      return (0, td.jsxs)("div", {
-        className: Rd()("SmpScreen", md),
-        children: [(0, td.jsx)(gR, {
-          browser: Od,
-          children: Wd
-        }), Od.shown && (0, td.jsx)(aR, {
-          item: Od.shown,
-          names: Od.names,
-          summary: !Od.loading && Kd,
+        browser: wb,
+        className: Mb,
+        action: eb,
+        above: Hb,
+        list: Vb,
+        summary: gb,
+        recentLabel: lb,
+        listControls: Lb,
+        onBack: Ib
+      } = bb;
+      return (0, Ob.jsxs)("div", {
+        className: pb()("SmpScreen", Mb),
+        children: [(0, Ob.jsx)(mp, {
+          browser: wb,
+          children: eb
+        }), wb.shown && (0, Ob.jsx)(zp, {
+          item: wb.shown,
+          names: wb.names,
+          summary: !wb.loading && gb,
           onBack: () => {
-            null === Qd || void 0 === Qd || Qd(), Od.searchFor(null)
+            null === Ib || void 0 === Ib || Ib(), wb.searchFor(null)
           },
-          children: vd
-        }), Fd, Od.shown ? Xd : (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsx)(wR, {
-            browser: Od,
-            recentLabel: hd,
-            children: vd
-          }), Od.browsing ? (0, td.jsx)(pR, {
-            items: Od.catalogue,
-            query: Od.query,
-            onPick: Od.pickItem
-          }) : Xd]
+          children: Lb
+        }), Hb, wb.shown ? Vb : (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsx)(hp, {
+            browser: wb,
+            recentLabel: lb,
+            children: Lb
+          }), wb.browsing ? (0, Ob.jsx)(Bp, {
+            items: wb.catalogue,
+            query: wb.query,
+            onPick: wb.pickItem
+          }) : Vb]
         })]
       })
     }
 
-    function JR(dd, Od) {
-      const md = dd.map((dd => {
+    function xp(bb, wb) {
+      const Mb = bb.map((bb => {
         let {
-          meta: Od
-        } = dd;
-        return Od.pricePerItem
+          meta: wb
+        } = bb;
+        return wb.pricePerItem
       }));
-      return "min" === Od ? Math.min(...md) : Math.max(...md)
+      return "min" === wb ? Math.min(...Mb) : Math.max(...Mb)
     }
-    var UR = md(7530);
-    const xR = (0, Wd.memo)((function(dd) {
-      var Od;
+    var jp = Mb(7771);
+    const Kp = (0, eb.memo)((function(bb) {
+      var wb;
       const {
-        t: md
-      } = (0, Xd.G)(), Wd = null === dd.seller, Fd = dd.quantity * dd.pricePerItem;
-      return (0, td.jsxs)("div", {
-        className: dd.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, td.jsx)(jF, {
-          item: dd.item,
-          amount: dd.quantity,
-          size: dd.grid ? "big" : "normal",
-          tier: dd.tier
-        }), (0, td.jsxs)("div", {
+        t: Mb
+      } = (0, Vb.C)(), eb = null === bb.seller, Hb = bb.quantity * bb.pricePerItem;
+      return (0, Ob.jsxs)("div", {
+        className: bb.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, Ob.jsx)(GH, {
+          item: bb.item,
+          amount: bb.quantity,
+          size: bb.grid ? "big" : "normal",
+          tier: bb.tier
+        }), (0, Ob.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, td.jsx)("b", {
-            children: (0, td.jsx)(SF.d, {
-              text: null !== (Od = dd.title) && void 0 !== Od ? Od : `${dd.quantity}x ${dd.item}`
+          children: [(0, Ob.jsx)("b", {
+            children: (0, Ob.jsx)(RH.d, {
+              text: null !== (wb = bb.title) && void 0 !== wb ? wb : `${bb.quantity}x ${bb.item}`
             })
-          }), (0, td.jsxs)("small", {
+          }), (0, Ob.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, td.jsx)("span", {
-              children: Wd ? md("smpShop:you") : (0, td.jsx)(SF.d, {
+            children: [(0, Ob.jsx)("span", {
+              children: eb ? Mb("smpShop:you") : (0, Ob.jsx)(RH.d, {
                 text: [{
-                  entityName: dd.seller
+                  entityName: bb.seller
                 }]
               })
-            }), (0, td.jsx)("span", {
-              children: md("smpShop:timeLeft", {
-                time: hR(dd.expiresAt)
+            }), (0, Ob.jsx)("span", {
+              children: Mb("smpShop:timeLeft", {
+                time: Vp(bb.expiresAt)
               })
             })]
           })]
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, td.jsx)(DF, {
-            amount: dd.pricePerItem
-          }), (0, td.jsx)("small", {
-            children: md("smpShop:each")
+          children: [(0, Ob.jsx)(qH, {
+            amount: bb.pricePerItem
+          }), (0, Ob.jsx)("small", {
+            children: Mb("smpShop:each")
           })]
-        }), (0, td.jsx)(vd.g, {
+        }), (0, Ob.jsx)(Lb.f, {
           className: "SmpBuyButton",
-          disabled: Wd || !dd.canAfford && !dd.busy,
-          loading: dd.busy,
+          disabled: eb || !bb.canAfford && !bb.busy,
+          loading: bb.busy,
           onClick: () => {
-            dd.onBuy(dd.itemKey)
+            bb.onBuy(bb.itemKey)
           },
-          children: Wd ? md("smpShop:yours") : (0, td.jsx)(DF, {
-            amount: Fd
+          children: eb ? Mb("smpShop:yours") : (0, Ob.jsx)(qH, {
+            amount: Hb
           })
         })]
       })
     }));
 
-    function BR(dd) {
+    function rp(bb) {
       let {
-        view: Od,
-        onChange: md
-      } = dd;
+        view: wb,
+        onChange: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)();
-      return (0, td.jsx)(zF.e, {
+        t: eb
+      } = (0, Vb.C)();
+      return (0, Ob.jsx)(vH.c, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: Wd("smpShop:layout"),
+        ariaLabel: eb("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, td.jsx)(Kd.c, {
+          label: (0, Ob.jsx)(gb.b, {
             name: "list"
           }),
-          ariaLabel: Wd("smpShop:listView")
+          ariaLabel: eb("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, td.jsx)(Kd.c, {
+          label: (0, Ob.jsx)(gb.b, {
             name: "grid-2"
           }),
-          ariaLabel: Wd("smpShop:gridView")
+          ariaLabel: eb("smpShop:gridView")
         }],
-        value: Od,
-        onChange: md
+        value: wb,
+        onChange: Mb
       })
     }
 
-    function SR(dd) {
+    function Rp(bb) {
       let {
-        entries: Od,
-        view: md
-      } = dd;
+        entries: wb,
+        view: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)(), Fd = yR(), Rd = "grid" === md;
-      return (0, td.jsxs)(td.Fragment, {
-        children: [!Rd && (0, td.jsxs)("div", {
+        t: eb
+      } = (0, Vb.C)(), Hb = Cp(), pb = "grid" === Mb;
+      return (0, Ob.jsxs)(Ob.Fragment, {
+        children: [!pb && (0, Ob.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, td.jsx)("span", {}), (0, td.jsx)("span", {
-            children: Wd("smpShop:columnItem")
-          }), (0, td.jsx)("span", {
-            children: Wd("smpShop:columnPriceEach")
-          }), (0, td.jsx)("span", {
-            children: Wd("smpShop:columnTotal")
+          children: [(0, Ob.jsx)("span", {}), (0, Ob.jsx)("span", {
+            children: eb("smpShop:columnItem")
+          }), (0, Ob.jsx)("span", {
+            children: eb("smpShop:columnPriceEach")
+          }), (0, Ob.jsx)("span", {
+            children: eb("smpShop:columnTotal")
           })]
-        }), (0, td.jsx)(bR.c, {
-          lazyLoadedClassName: Rd ? "SmpCardGrid" : "SmpList",
+        }), (0, Ob.jsx)(Ep.b, {
+          lazyLoadedClassName: pb ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: XR,
-          observerUpdateDeps: [Od.length],
-          children: Od.map((dd => {
-            var Od, md;
+          rootMargin: Hp,
+          observerUpdateDeps: [wb.length],
+          children: wb.map((bb => {
+            var wb, Mb;
             let {
-              key: Wd,
-              item: Xd,
-              meta: Kd
-            } = dd;
-            const hd = Kd.quantity * Kd.pricePerItem;
-            return (0, td.jsx)(xR, {
-              itemKey: Wd,
-              item: Kd.item,
-              title: Xd.customTitle,
-              quantity: Kd.quantity,
-              pricePerItem: Kd.pricePerItem,
-              seller: Kd.seller,
-              expiresAt: Kd.expiresAt,
-              tier: null !== (Od = null === (md = Xd.enchant) || void 0 === md ? void 0 : md.tier) && void 0 !== Od ? Od : null,
-              busy: Fd.isPending(Wd) || null !== Kd.seller && !1 === Xd.canBuy,
-              canAfford: Fd.canAfford(Xd, hd),
-              grid: Rd,
-              onBuy: Fd.act
-            }, Wd)
+              key: eb,
+              item: Vb,
+              meta: gb
+            } = bb;
+            const lb = gb.quantity * gb.pricePerItem;
+            return (0, Ob.jsx)(Kp, {
+              itemKey: eb,
+              item: gb.item,
+              title: Vb.customTitle,
+              quantity: gb.quantity,
+              pricePerItem: gb.pricePerItem,
+              seller: gb.seller,
+              expiresAt: gb.expiresAt,
+              tier: null !== (wb = null === (Mb = Vb.enchant) || void 0 === Mb ? void 0 : Mb.tier) && void 0 !== wb ? wb : null,
+              busy: Hb.isPending(eb) || null !== gb.seller && !1 === Vb.canBuy,
+              canAfford: Hb.canAfford(Vb, lb),
+              grid: pb,
+              onBuy: Hb.act
+            }, eb)
           }))
-        }, md)]
+        }, Mb)]
       })
     }
-    const sR = [1, 10, 100],
-      uR = [1, 10, 100, 999];
+    const Dp = [1, 10, 100],
+      cp = [1, 10, 100, 999];
 
-    function VR(dd) {
-      var Od, md, Fd, hd, Qd, od, Nd, qd, Hd, yd;
+    function Yp(bb) {
+      var wb, Mb, Hb, lb, Ib, Ub, tb, Cb, Eb, Fb;
       const {
-        t: bd
-      } = (0, Xd.G)(), Td = yR(), {
-        creator: pd,
-        mode: Yd
-      } = dd, [wd, Ed] = (0, Wd.useState)(null !== (Od = null === pd || void 0 === pd ? void 0 : pd.meta.item) && void 0 !== Od ? Od : null), [Jd, Ud] = (0, Wd.useState)(1), [xd, Bd] = (0, Wd.useState)(0), [Sd, sd] = (0, Wd.useState)(""), [ud, Vd] = (0, Wd.useState)(0), Ad = (0, Wd.useRef)(wd), rd = (0, Wd.useRef)(!1), [Gd, nd] = (0, Wd.useState)(!1), Ld = null !== (md = null === pd || void 0 === pd ? void 0 : pd.meta.item) && void 0 !== md ? md : null, Pd = null !== (Fd = null === pd || void 0 === pd ? void 0 : pd.meta.owned) && void 0 !== Fd ? Fd : 0;
-      (0, Wd.useEffect)((() => {
-        dd.searching || null === Ld || Ld === Ad.current || (Ad.current = Ld, rd.current = !1, Ed(Ld), Bd(0), Ud("list" === Yd ? Math.max(1, Pd) : 1))
-      }), [Ld, dd.searching]);
-      const zd = !!pd && !!wd && pd.meta.item === wd,
-        cd = zd ? pd.meta.owned : null !== (hd = null === (Qd = dd.inventory) || void 0 === Qd || null === (od = Qd.find((dd => dd.item === wd))) || void 0 === od ? void 0 : od.quantity) && void 0 !== hd ? hd : 0,
-        jd = "list" === Yd ? Math.max(1, cd) : 45954,
-        Dd = null !== (Nd = dd.prices[0]) && void 0 !== Nd ? Nd : null,
-        ed = dd.prices.length ? Math.round(dd.prices.reduce(((dd, Od) => dd + Od), 0) / dd.prices.length) : null,
-        Id = null === (qd = dd.inventory) || void 0 === qd || null === (Hd = qd.find((dd => dd.item === wd))) || void 0 === Hd ? void 0 : Hd.sellPrice;
-      (0, Wd.useEffect)((() => {
-        var dd;
-        zd && (Ud((dd => "list" === Yd ? Math.min(Math.max(1, dd), Math.max(1, cd)) : dd)), rd.current || Bd(null !== (dd = null !== Dd && void 0 !== Dd ? Dd : ed) && void 0 !== dd ? dd : Math.max(1, null !== Id && void 0 !== Id ? Id : 1)))
-      }), [zd, cd, wd, Dd, ed]);
-      const ld = dd => {
-          rd.current = !0, Bd(dd)
+        t: Bb
+      } = (0, Vb.C)(), sb = Cp(), {
+        creator: mb,
+        mode: hb
+      } = bb, [Xb, xb] = (0, eb.useState)(null !== (wb = null === mb || void 0 === mb ? void 0 : mb.meta.item) && void 0 !== wb ? wb : null), [jb, Kb] = (0, eb.useState)(1), [rb, Rb] = (0, eb.useState)(0), [Db, cb] = (0, eb.useState)(""), [Yb, Zb] = (0, eb.useState)(0), fb = (0, eb.useRef)(Xb), Ab = (0, eb.useRef)(!1), [Wb, Jb] = (0, eb.useState)(!1), Sb = null !== (Mb = null === mb || void 0 === mb ? void 0 : mb.meta.item) && void 0 !== Mb ? Mb : null, Nb = null !== (Hb = null === mb || void 0 === mb ? void 0 : mb.meta.owned) && void 0 !== Hb ? Hb : 0;
+      (0, eb.useEffect)((() => {
+        bb.searching || null === Sb || Sb === fb.current || (fb.current = Sb, Ab.current = !1, xb(Sb), Rb(0), Kb("list" === hb ? Math.max(1, Nb) : 1))
+      }), [Sb, bb.searching]);
+      const vb = !!mb && !!Xb && mb.meta.item === Xb,
+        Qb = vb ? mb.meta.owned : null !== (lb = null === (Ib = bb.inventory) || void 0 === Ib || null === (Ub = Ib.find((bb => bb.item === Xb))) || void 0 === Ub ? void 0 : Ub.quantity) && void 0 !== lb ? lb : 0,
+        Gb = "list" === hb ? Math.max(1, Qb) : 45954,
+        qb = null !== (tb = bb.prices[0]) && void 0 !== tb ? tb : null,
+        ab = bb.prices.length ? Math.round(bb.prices.reduce(((bb, wb) => bb + wb), 0) / bb.prices.length) : null,
+        ib = null === (Cb = bb.inventory) || void 0 === Cb || null === (Eb = Cb.find((bb => bb.item === Xb))) || void 0 === Eb ? void 0 : Eb.sellPrice;
+      (0, eb.useEffect)((() => {
+        var bb;
+        vb && (Kb((bb => "list" === hb ? Math.min(Math.max(1, bb), Math.max(1, Qb)) : bb)), Ab.current || Rb(null !== (bb = null !== qb && void 0 !== qb ? qb : ab) && void 0 !== bb ? bb : Math.max(1, null !== ib && void 0 !== ib ? ib : 1)))
+      }), [vb, Qb, Xb, qb, ab]);
+      const ub = bb => {
+          Ab.current = !0, Rb(bb)
         },
-        Cd = Od => {
-          var md, Wd, Fd;
-          Ad.current = Od, rd.current = !1, nd(!1), sd(""), Vd((dd => dd + 1)), Ed(Od), Bd(0), Ud("list" === Yd && null !== (md = null === (Wd = dd.inventory) || void 0 === Wd || null === (Fd = Wd.find((dd => dd.item === Od))) || void 0 === Fd ? void 0 : Fd.quantity) && void 0 !== md ? md : 1), (null === pd || void 0 === pd ? void 0 : pd.meta.item) !== Od && dd.onPickItem(Od)
+        db = wb => {
+          var Mb, eb, Hb;
+          fb.current = wb, Ab.current = !1, Jb(!1), cb(""), Zb((bb => bb + 1)), xb(wb), Rb(0), Kb("list" === hb && null !== (Mb = null === (eb = bb.inventory) || void 0 === eb || null === (Hb = eb.find((bb => bb.item === wb))) || void 0 === Hb ? void 0 : Hb.quantity) && void 0 !== Mb ? Mb : 1), (null === mb || void 0 === mb ? void 0 : mb.meta.item) !== wb && bb.onPickItem(wb)
         },
-        Zd = Jd * xd,
-        kd = "list" === Yd && null !== pd && void 0 !== pd && pd.meta.fee ? function(dd, Od) {
-          const md = Math.max(0, Od - dd.taxFreeAllowance);
-          return Math.ceil(Math.round(md * dd.rate * 1e6) / 1e6)
-        }(pd.meta.fee, Zd) : 0,
-        fd = !!pd && Td.isPending(pd.key),
-        Md = zd && !dd.searching && Jd >= 1 && xd >= 1 && ("order" === Yd || cd >= Jd) && !fd,
-        dO = !!wd && !zd && !dd.searching && Jd >= 1 && xd >= 1,
-        OO = () => {
-          Md ? Td.act(pd.key, `${Jd}|${xd}`) : dO && (dd.onPickItem(wd), nd(!0))
+        Pb = jb * rb,
+        nb = "list" === hb && null !== mb && void 0 !== mb && mb.meta.fee ? function(bb, wb) {
+          const Mb = Math.max(0, wb - bb.taxFreeAllowance);
+          return Math.ceil(Math.round(Mb * bb.rate * 1e6) / 1e6)
+        }(mb.meta.fee, Pb) : 0,
+        yb = !!mb && sb.isPending(mb.key),
+        ob = vb && !bb.searching && jb >= 1 && rb >= 1 && ("order" === hb || Qb >= jb) && !yb,
+        Tb = !!Xb && !vb && !bb.searching && jb >= 1 && rb >= 1,
+        kb = () => {
+          ob ? sb.act(mb.key, `${jb}|${rb}`) : Tb && (bb.onPickItem(Xb), Jb(!0))
         };
-      (0, Wd.useEffect)((() => {
-        Gd && zd && !dd.searching && (nd(!1), OO())
-      }), [Gd, zd, dd.searching]);
-      const mO = !!wd && !zd && (dd.searching || Gd),
-        WO = wd ? oR(dd.names, wd) : "",
-        FO = (0, Wd.useMemo)((() => tR(dd.catalogue, Sd).slice(0, 8)), [dd.catalogue, Sd]),
-        RO = ("list" === Yd ? sR.filter((dd => dd < cd)) : uR).map((dd => ({
-          value: dd,
-          label: String(dd)
+      (0, eb.useEffect)((() => {
+        Wb && vb && !bb.searching && (Jb(!1), kb())
+      }), [Wb, vb, bb.searching]);
+      const bw = !!Xb && !vb && (bb.searching || Wb),
+        ww = Xb ? Ip(bb.names, Xb) : "",
+        Mw = (0, eb.useMemo)((() => Lp(bb.catalogue, Db).slice(0, 8)), [bb.catalogue, Db]),
+        ew = ("list" === hb ? Dp.filter((bb => bb < Qb)) : cp).map((bb => ({
+          value: bb,
+          label: String(bb)
         })));
-      "list" === Yd && cd > 0 && RO.push({
-        value: cd,
-        label: bd("smpShop:all", {
-          count: cd
+      "list" === hb && Qb > 0 && ew.push({
+        value: Qb,
+        label: Bb("smpShop:all", {
+          count: Qb
         })
       });
-      const XO = [];
-      return null !== Dd && (Dd > 1 && XO.push({
-        value: Dd - 1,
-        label: bd("smpShop:undercut", {
-          price: PF(Dd - 1)
+      const Hw = [];
+      return null !== qb && (qb > 1 && Hw.push({
+        value: qb - 1,
+        label: Bb("smpShop:undercut", {
+          price: NH(qb - 1)
         })
-      }), XO.push({
-        value: Dd,
-        label: bd("smpShop:lowest", {
-          price: PF(Dd)
+      }), Hw.push({
+        value: qb,
+        label: Bb("smpShop:lowest", {
+          price: NH(qb)
         })
-      })), null !== ed && ed !== Dd && XO.push({
-        value: ed,
-        label: bd("smpShop:average", {
-          price: PF(ed)
+      })), null !== ab && ab !== qb && Hw.push({
+        value: ab,
+        label: Bb("smpShop:average", {
+          price: NH(ab)
         })
-      }), (0, td.jsxs)("div", {
+      }), (0, Ob.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, td.jsxs)("div", {
+        children: [(0, Ob.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, td.jsx)("b", {
-            children: bd("list" === Yd ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, td.jsx)("button", {
+          children: [(0, Ob.jsx)("b", {
+            children: Bb("list" === hb ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, Ob.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": bd("smpShop:close"),
-            onClick: dd.onClose,
-            children: (0, td.jsx)(Kd.c, {
+            "aria-label": Bb("smpShop:close"),
+            onClick: bb.onClose,
+            children: (0, Ob.jsx)(gb.b, {
               name: "xmark"
             })
           })]
-        }), "list" === Yd && (0, td.jsx)("div", {
+        }), "list" === hb && (0, Ob.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (yd = dd.inventory) && void 0 !== yd && yd.length ? dd.inventory.map((dd => {
+          children: null !== (Fb = bb.inventory) && void 0 !== Fb && Fb.length ? bb.inventory.map((bb => {
             let {
-              item: Od,
-              quantity: md
-            } = dd;
-            return (0, td.jsx)("button", {
+              item: wb,
+              quantity: Mb
+            } = bb;
+            return (0, Ob.jsx)("button", {
               type: "button",
-              title: Od,
-              className: Rd()("SmpPickerSlot", {
-                SmpPickerSlotOn: Od === wd
+              title: wb,
+              className: pb()("SmpPickerSlot", {
+                SmpPickerSlotOn: wb === Xb
               }),
               onClick: () => {
-                Cd(Od)
+                db(wb)
               },
-              children: (0, td.jsx)(jF, {
-                item: Od,
-                amount: md
+              children: (0, Ob.jsx)(GH, {
+                item: wb,
+                amount: Mb
               })
-            }, Od)
-          })) : (0, td.jsx)("span", {
+            }, wb)
+          })) : (0, Ob.jsx)("span", {
             className: "SmpMuted",
-            children: bd("smpShop:nothingToList")
+            children: Bb("smpShop:nothingToList")
           })
-        }), ("list" === Yd || !wd) && (0, td.jsxs)("div", {
+        }), ("list" === hb || !Xb) && (0, Ob.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, td.jsx)(gd.c, {
+          children: [(0, Ob.jsx)(zb.d, {
             className: "SmpSearchInput",
-            placeholderText: bd("list" === Yd ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: Sd,
-            onValueChange: sd,
+            placeholderText: Bb("list" === hb ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: Db,
+            onValueChange: cb,
             blurOnEnter: !0,
             onEnter: () => {
-              FO[0] && Cd(FO[0].name)
+              Mw[0] && db(Mw[0].name)
             }
-          }, ud), FO.length > 0 && (0, td.jsx)("div", {
+          }, Yb), Mw.length > 0 && (0, Ob.jsx)("div", {
             className: "SmpPicker",
-            children: FO.map((dd => {
+            children: Mw.map((bb => {
               let {
-                name: Od
-              } = dd;
-              return (0, td.jsx)("button", {
+                name: wb
+              } = bb;
+              return (0, Ob.jsx)("button", {
                 type: "button",
-                title: Od,
-                className: Rd()("SmpPickerSlot", {
-                  SmpPickerSlotOn: Od === wd
+                title: wb,
+                className: pb()("SmpPickerSlot", {
+                  SmpPickerSlotOn: wb === Xb
                 }),
                 onClick: () => {
-                  Cd(Od)
+                  db(wb)
                 },
-                children: (0, td.jsx)(jF, {
-                  item: Od
+                children: (0, Ob.jsx)(GH, {
+                  item: wb
                 })
-              }, Od)
+              }, wb)
             }))
           })]
-        }), wd && (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsxs)("div", {
+        }), Xb && (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsxs)("div", {
             className: "SmpPickedName",
-            children: [WO, mO && (0, td.jsx)(ZF, {})]
-          }), (0, td.jsxs)("div", {
+            children: [ww, bw && (0, Ob.jsx)(PH, {})]
+          }), (0, Ob.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, td.jsxs)("div", {
+            children: [(0, Ob.jsxs)("div", {
               className: "SmpField",
-              children: [(0, td.jsxs)("span", {
-                children: [bd("smpShop:quantity"), "list" === Yd && zd && (0, td.jsx)("small", {
-                  children: bd("smpShop:youHave", {
-                    count: cd
+              children: [(0, Ob.jsxs)("span", {
+                children: [Bb("smpShop:quantity"), "list" === hb && vb && (0, Ob.jsx)("small", {
+                  children: Bb("smpShop:youHave", {
+                    count: Qb
                   })
                 })]
-              }), (0, td.jsx)(kF, {
-                value: Jd,
-                onChange: Ud,
-                max: jd,
-                label: bd("smpShop:quantity")
-              }), (0, td.jsx)(CF, {
-                options: RO,
-                value: Jd,
-                onChange: Ud,
-                ariaLabel: bd("smpShop:quantity")
+              }), (0, Ob.jsx)(nH, {
+                value: jb,
+                onChange: Kb,
+                max: Gb,
+                label: Bb("smpShop:quantity")
+              }), (0, Ob.jsx)(dH, {
+                options: ew,
+                value: jb,
+                onChange: Kb,
+                ariaLabel: Bb("smpShop:quantity")
               })]
-            }), (0, td.jsxs)("div", {
+            }), (0, Ob.jsxs)("div", {
               className: "SmpField",
-              children: [(0, td.jsx)("span", {
-                children: bd("smpShop:pricePerItem")
-              }), (0, td.jsx)(kF, {
-                value: Math.max(1, xd),
-                onChange: ld,
+              children: [(0, Ob.jsx)("span", {
+                children: Bb("smpShop:pricePerItem")
+              }), (0, Ob.jsx)(nH, {
+                value: Math.max(1, rb),
+                onChange: ub,
                 max: 9999999,
-                step: fF,
-                label: bd("smpShop:pricePerItem")
-              }), (0, td.jsx)(CF, {
-                options: XO,
-                value: xd,
-                onChange: ld,
-                ariaLabel: bd("smpShop:pricePerItem")
+                step: yH,
+                label: Bb("smpShop:pricePerItem")
+              }), (0, Ob.jsx)(dH, {
+                options: Hw,
+                value: rb,
+                onChange: ub,
+                ariaLabel: Bb("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === Yd && (0, td.jsxs)("div", {
+          }), "list" === hb && (0, Ob.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, td.jsxs)("span", {
-              children: [bd("smpShop:youGet"), " ", (0, td.jsx)(DF, {
-                amount: Math.max(0, Zd - kd),
+            children: [(0, Ob.jsxs)("span", {
+              children: [Bb("smpShop:youGet"), " ", (0, Ob.jsx)(qH, {
+                amount: Math.max(0, Pb - nb),
                 exact: !0
               })]
-            }), (0, td.jsx)("small", {
-              children: kd > 0 ? bd("smpShop:listingFee", {
-                fee: kd.toLocaleString("en-US")
-              }) : bd("smpShop:listingRules")
+            }), (0, Ob.jsx)("small", {
+              children: nb > 0 ? Bb("smpShop:listingFee", {
+                fee: nb.toLocaleString("en-US")
+              }) : Bb("smpShop:listingRules")
             })]
-          }), (0, td.jsx)(vd.r, {
+          }), (0, Ob.jsx)(Lb.u, {
             className: "SmpSubmit",
-            disabled: !Md && !dO && !fd,
-            loading: fd || mO || zd && dd.searching,
-            onClick: OO,
-            children: "list" === Yd ? bd("smpShop:listButton", {
-              count: Jd,
-              item: WO
-            }) : (0, td.jsxs)(td.Fragment, {
-              children: [bd("smpShop:orderButton", {
-                count: Jd,
-                item: WO
-              }), " ", xd >= 1 && (0, td.jsx)(DF, {
-                amount: Zd
+            disabled: !ob && !Tb && !yb,
+            loading: yb || bw || vb && bb.searching,
+            onClick: kb,
+            children: "list" === hb ? Bb("smpShop:listButton", {
+              count: jb,
+              item: ww
+            }) : (0, Ob.jsxs)(Ob.Fragment, {
+              children: [Bb("smpShop:orderButton", {
+                count: jb,
+                item: ww
+              }), " ", rb >= 1 && (0, Ob.jsx)(qH, {
+                amount: Pb
               })]
             })
           })]
@@ -4201,627 +4201,627 @@ export const modules = {
       })
     }
 
-    function iR() {
-      var dd;
+    function Zp() {
+      var bb;
       const {
-        t: Od
-      } = (0, Xd.G)(), md = yR(), Fd = null === (dd = md.shopInfo[md.categoryKey]) || void 0 === dd ? void 0 : dd.items, Rd = RR(Fd, "search"), Kd = RR(Fd, "creator"), hd = FR(Fd, "enchantedCreator"), Qd = FR(Fd, "listing"), od = RR(Fd, "empty"), Nd = YR(Rd, Qd.length > 0 || null !== od), {
-        searched: qd,
-        shown: Hd,
-        loading: yd
-      } = Nd, [bd, Td] = (0, Wd.useState)(!1), [pd, Yd] = function() {
-        const [dd, Od] = (0, UR.c)("smpMarketView", "list");
-        return ["grid" === dd ? "grid" : "list", Od]
-      }(), gd = "grid" === pd, wd = (0, Wd.useMemo)((() => Qd.filter((dd => {
+        t: wb
+      } = (0, Vb.C)(), Mb = Cp(), Hb = null === (bb = Mb.shopInfo[Mb.categoryKey]) || void 0 === bb ? void 0 : bb.items, pb = ep(Hb, "search"), gb = ep(Hb, "creator"), lb = Mp(Hb, "enchantedCreator"), Ib = Mp(Hb, "listing"), Ub = ep(Hb, "empty"), tb = sp(pb, Ib.length > 0 || null !== Ub), {
+        searched: Cb,
+        shown: Eb,
+        loading: Fb
+      } = tb, [Bb, sb] = (0, eb.useState)(!1), [mb, hb] = function() {
+        const [bb, wb] = (0, jp.c)("smpMarketView", "list");
+        return ["grid" === bb ? "grid" : "list", wb]
+      }(), zb = "grid" === mb, Xb = (0, eb.useMemo)((() => Ib.filter((bb => {
         let {
-          meta: Od
-        } = dd;
-        return null !== Od.seller && Od.item === qd
-      })).map((dd => {
+          meta: wb
+        } = bb;
+        return null !== wb.seller && wb.item === Cb
+      })).map((bb => {
         let {
-          meta: Od
-        } = dd;
-        return Od.pricePerItem
-      })).sort(((dd, Od) => dd - Od))), [Qd, qd]), Ed = (0, Wd.useMemo)((() => {
-        const dd = new Set(Nd.catalogue.map((dd => {
+          meta: wb
+        } = bb;
+        return wb.pricePerItem
+      })).sort(((bb, wb) => bb - wb))), [Ib, Cb]), xb = (0, eb.useMemo)((() => {
+        const bb = new Set(tb.catalogue.map((bb => {
           let {
-            name: Od
-          } = dd;
-          return Od
+            name: wb
+          } = bb;
+          return wb
         })));
-        return function(dd) {
-          for (const Od in dd)
-            if ("sell" === dd[Od].smp) return FR(dd[Od].items, "sell").filter((dd => {
+        return function(bb) {
+          for (const wb in bb)
+            if ("sell" === bb[wb].smp) return Mp(bb[wb].items, "sell").filter((bb => {
               let {
-                item: Od
-              } = dd;
-              return !Od.enchant
-            })).map((dd => {
+                item: wb
+              } = bb;
+              return !wb.enchant
+            })).map((bb => {
               let {
-                meta: Od
-              } = dd;
+                meta: wb
+              } = bb;
               return {
-                item: Od.item,
-                quantity: Od.quantity,
-                sellPrice: Od.pricePerItem
+                item: wb.item,
+                quantity: wb.quantity,
+                sellPrice: wb.pricePerItem
               }
             }));
           return []
-        }(md.shopInfo).filter((Od => {
+        }(Mb.shopInfo).filter((wb => {
           let {
-            item: md
-          } = Od;
-          return dd.has(md)
+            item: Mb
+          } = wb;
+          return bb.has(Mb)
         }))
-      }), [md.shopInfo, Nd.catalogue]);
-      return (0, td.jsx)(ER, {
-        browser: Nd,
+      }), [Mb.shopInfo, tb.catalogue]);
+      return (0, Ob.jsx)(Xp, {
+        browser: tb,
         className: "SmpMarketTab",
-        recentLabel: Od("smpShop:recentlyListed"),
-        action: (0, td.jsx)(vd.r, {
+        recentLabel: wb("smpShop:recentlyListed"),
+        action: (0, Ob.jsx)(Lb.u, {
           className: "SmpSellButton",
           onClick: () => {
-            Td((dd => !dd))
+            sb((bb => !bb))
           },
-          children: Od("smpShop:sell")
+          children: wb("smpShop:sell")
         }),
-        above: bd && (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsx)(VR, {
+        above: Bb && (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsx)(Yp, {
             mode: "list",
-            creator: Kd,
-            inventory: Ed,
-            catalogue: Nd.catalogue,
-            names: Nd.names,
-            searching: yd,
-            prices: wd,
-            onPickItem: Nd.searchFor,
+            creator: gb,
+            inventory: xb,
+            catalogue: tb.catalogue,
+            names: tb.names,
+            searching: Fb,
+            prices: Xb,
+            onPickItem: tb.searchFor,
             onClose: () => {
-              Td(!1)
+              sb(!1)
             }
-          }), hd.length > 0 && (0, td.jsx)(AR, {
-            entries: hd
+          }), lb.length > 0 && (0, Ob.jsx)(fp, {
+            entries: lb
           })]
         }),
-        listControls: (0, td.jsx)(BR, {
-          view: pd,
-          onChange: Yd
+        listControls: (0, Ob.jsx)(rp, {
+          view: mb,
+          onChange: hb
         }),
-        summary: Hd && (Qd.length > 0 ? Od(1 === Qd.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: Qd.length,
-          price: PF(JR(Qd, "min"))
-        }) : Od("smpShop:noOneSelling", {
-          item: oR(Nd.names, Hd)
+        summary: Eb && (Ib.length > 0 ? wb(1 === Ib.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: Ib.length,
+          price: NH(xp(Ib, "min"))
+        }) : wb("smpShop:noOneSelling", {
+          item: Ip(tb.names, Eb)
         })),
-        list: yd ? (0, td.jsx)(eF, {
-          grid: gd
-        }) : Qd.length > 0 ? (0, td.jsx)(SR, {
-          entries: Qd,
-          view: pd
-        }) : od ? (0, td.jsx)(lF, {
-          entry: od
-        }) : (0, td.jsx)(eF, {
+        list: Fb ? (0, Ob.jsx)(aH, {
+          grid: zb
+        }) : Ib.length > 0 ? (0, Ob.jsx)(Rp, {
+          entries: Ib,
+          view: mb
+        }) : Ub ? (0, Ob.jsx)(uH, {
+          entry: Ub
+        }) : (0, Ob.jsx)(aH, {
           count: 3,
-          grid: gd
+          grid: zb
         })
       })
     }
 
-    function AR(dd) {
+    function fp(bb) {
       let {
-        entries: Od
-      } = dd;
+        entries: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Xd.G)(), Fd = yR(), [Rd, Kd] = (0, Wd.useState)({});
-      return (0, td.jsx)("div", {
+        t: Mb
+      } = (0, Vb.C)(), Hb = Cp(), [pb, gb] = (0, eb.useState)({});
+      return (0, Ob.jsx)("div", {
         className: "SmpList",
-        children: Od.map((dd => {
-          var Od, Wd, Xd;
+        children: wb.map((bb => {
+          var wb, eb, Vb;
           let {
-            key: hd,
-            item: Qd,
-            meta: od
-          } = dd;
-          const Nd = null !== (Od = Rd[hd]) && void 0 !== Od ? Od : 1;
-          return (0, td.jsxs)("div", {
+            key: lb,
+            item: Ib,
+            meta: Ub
+          } = bb;
+          const tb = null !== (wb = pb[lb]) && void 0 !== wb ? wb : 1;
+          return (0, Ob.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, td.jsx)(jF, {
-              item: od.item,
-              amount: od.quantity,
-              tier: null !== (Wd = null === (Xd = Qd.enchant) || void 0 === Xd ? void 0 : Xd.tier) && void 0 !== Wd ? Wd : null
-            }), (0, td.jsxs)("div", {
+            children: [(0, Ob.jsx)(GH, {
+              item: Ub.item,
+              amount: Ub.quantity,
+              tier: null !== (eb = null === (Vb = Ib.enchant) || void 0 === Vb ? void 0 : Vb.tier) && void 0 !== eb ? eb : null
+            }), (0, Ob.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, td.jsx)("b", {
-                children: (0, td.jsx)(SF.d, {
-                  text: Qd.customTitle
+              children: [(0, Ob.jsx)("b", {
+                children: (0, Ob.jsx)(RH.d, {
+                  text: Ib.customTitle
                 })
-              }), (0, td.jsx)("small", {
-                children: md("smpShop:enchantedListing")
+              }), (0, Ob.jsx)("small", {
+                children: Mb("smpShop:enchantedListing")
               })]
-            }), (0, td.jsx)(kF, {
-              value: Nd,
-              onChange: dd => {
-                Kd({
-                  ...Rd,
-                  [hd]: dd
+            }), (0, Ob.jsx)(nH, {
+              value: tb,
+              onChange: bb => {
+                gb({
+                  ...pb,
+                  [lb]: bb
                 })
               },
               max: 9999999,
-              step: fF,
-              label: md("smpShop:pricePerItem")
-            }), (0, td.jsxs)(vd.r, {
-              loading: Fd.isPending(hd),
+              step: yH,
+              label: Mb("smpShop:pricePerItem")
+            }), (0, Ob.jsxs)(Lb.u, {
+              loading: Hb.isPending(lb),
               onClick: () => {
-                Fd.act(hd, String(Nd))
+                Hb.act(lb, String(tb))
               },
-              children: [md("smpShop:list"), " ", (0, td.jsx)(DF, {
-                amount: Nd
+              children: [Mb("smpShop:list"), " ", (0, Ob.jsx)(qH, {
+                amount: tb
               })]
             })]
-          }, hd)
+          }, lb)
         }))
       })
     }
-    const rR = (0, Wd.memo)((function(dd) {
+    const Ap = (0, eb.memo)((function(bb) {
       let {
-        itemKey: Od,
-        item: md,
-        quantity: Wd,
-        pricePerItem: Fd,
-        tier: Xd,
-        selected: Kd,
-        onSelect: hd
-      } = dd;
-      return (0, td.jsxs)("button", {
+        itemKey: wb,
+        item: Mb,
+        quantity: eb,
+        pricePerItem: Hb,
+        tier: Vb,
+        selected: gb,
+        onSelect: lb
+      } = bb;
+      return (0, Ob.jsxs)("button", {
         type: "button",
-        className: Rd()("SmpInventorySlot", {
-          SmpInventorySlotOn: Kd
+        className: pb()("SmpInventorySlot", {
+          SmpInventorySlotOn: gb
         }),
-        title: md,
+        title: Mb,
         onClick: () => {
-          hd(Od)
+          lb(wb)
         },
-        children: [(0, td.jsx)(jF, {
-          item: md,
-          amount: Wd,
-          tier: Xd
-        }), (0, td.jsx)(DF, {
-          amount: Fd
+        children: [(0, Ob.jsx)(GH, {
+          item: Mb,
+          amount: eb,
+          tier: Vb
+        }), (0, Ob.jsx)(qH, {
+          amount: Hb
         })]
       })
     }));
 
-    function GR() {
-      var dd;
+    function Wp() {
+      var bb;
       const {
-        t: Od
-      } = (0, Xd.G)(), md = yR(), Fd = null === (dd = md.shopInfo[md.categoryKey]) || void 0 === dd ? void 0 : dd.items, Kd = FR(Fd, "sell"), hd = RR(Fd, "empty"), [vd, Qd] = (0, Wd.useState)(null), [od, Nd] = (0, Wd.useState)({}), qd = Kd.find((dd => {
+        t: wb
+      } = (0, Vb.C)(), Mb = Cp(), Hb = null === (bb = Mb.shopInfo[Mb.categoryKey]) || void 0 === bb ? void 0 : bb.items, gb = Mp(Hb, "sell"), lb = ep(Hb, "empty"), [Lb, Ib] = (0, eb.useState)(null), [Ub, tb] = (0, eb.useState)({}), Cb = gb.find((bb => {
         let {
-          key: Od
-        } = dd;
-        return Od === vd
+          key: wb
+        } = bb;
+        return wb === Lb
       }));
-      return 0 === Kd.length ? (0, td.jsx)("div", {
+      return 0 === gb.length ? (0, Ob.jsx)("div", {
         className: "SmpScreen",
-        children: (0, td.jsx)(IF, {
-          title: hd ? (0, td.jsx)(SF.d, {
-            text: hd.item.customTitle
-          }) : Od("smpShop:nothingToSell"),
-          children: hd && (0, td.jsx)(SF.d, {
-            text: hd.item.description
+        children: (0, Ob.jsx)(iH, {
+          title: lb ? (0, Ob.jsx)(RH.d, {
+            text: lb.item.customTitle
+          }) : wb("smpShop:nothingToSell"),
+          children: lb && (0, Ob.jsx)(RH.d, {
+            text: lb.item.description
           })
         })
-      }) : (0, td.jsxs)("div", {
+      }) : (0, Ob.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: Kd.map((dd => {
-            var Od, md;
+          children: gb.map((bb => {
+            var wb, Mb;
             let {
-              key: Wd,
-              item: Fd,
-              meta: Rd
-            } = dd;
-            return (0, td.jsx)(rR, {
-              itemKey: Wd,
-              item: Rd.item,
-              quantity: Rd.quantity,
-              pricePerItem: Rd.pricePerItem,
-              tier: null !== (Od = null === (md = Fd.enchant) || void 0 === md ? void 0 : md.tier) && void 0 !== Od ? Od : null,
-              selected: Wd === vd,
-              onSelect: Qd
-            }, Wd)
+              key: eb,
+              item: Hb,
+              meta: pb
+            } = bb;
+            return (0, Ob.jsx)(Ap, {
+              itemKey: eb,
+              item: pb.item,
+              quantity: pb.quantity,
+              pricePerItem: pb.pricePerItem,
+              tier: null !== (wb = null === (Mb = Hb.enchant) || void 0 === Mb ? void 0 : Mb.tier) && void 0 !== wb ? wb : null,
+              selected: eb === Lb,
+              onSelect: Ib
+            }, eb)
           }))
-        }), (0, td.jsx)("div", {
-          className: Rd()("SmpSellBar", {
-            SmpSellBarIdle: !qd
+        }), (0, Ob.jsx)("div", {
+          className: pb()("SmpSellBar", {
+            SmpSellBarIdle: !Cb
           }),
-          children: qd ? (0, td.jsx)(nR, {
-            entry: qd,
-            choice: NR(qd.item, od[qd.key]),
-            onChoose: dd => {
-              Nd({
-                ...od,
-                [qd.key]: dd
+          children: Cb ? (0, Ob.jsx)(Jp, {
+            entry: Cb,
+            choice: Op(Cb.item, Ub[Cb.key]),
+            onChoose: bb => {
+              tb({
+                ...Ub,
+                [Cb.key]: bb
               })
             }
-          }) : (0, td.jsx)("span", {
+          }) : (0, Ob.jsx)("span", {
             className: "SmpMuted",
-            children: Od("smpShop:tapToSell")
+            children: wb("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function nR(dd) {
-      var Od, md, Wd, Fd;
+    function Jp(bb) {
+      var wb, Mb, eb, Hb;
       let {
-        entry: Rd,
-        choice: Kd,
-        onChoose: hd
-      } = dd;
+        entry: pb,
+        choice: gb,
+        onChoose: lb
+      } = bb;
       const {
-        t: Qd
-      } = (0, Xd.G)(), od = yR(), {
-        key: Nd,
-        item: qd,
-        meta: Hd
-      } = Rd, yd = vR("dropdown" === (null === (Od = qd.userInput) || void 0 === Od ? void 0 : Od.type) ? qd.userInput.dropdownOptions : []), bd = null === Kd ? 0 : -(0, JF.b)(qd, Kd);
-      return (0, td.jsxs)(td.Fragment, {
-        children: [(0, td.jsx)(jF, {
-          item: Hd.item,
-          amount: Hd.quantity,
-          tier: null !== (md = null === (Wd = qd.enchant) || void 0 === Wd ? void 0 : Wd.tier) && void 0 !== md ? md : null
-        }), (0, td.jsxs)("div", {
+        t: Ib
+      } = (0, Vb.C)(), Ub = Cp(), {
+        key: tb,
+        item: Cb,
+        meta: Eb
+      } = pb, Fb = gp("dropdown" === (null === (wb = Cb.userInput) || void 0 === wb ? void 0 : wb.type) ? Cb.userInput.dropdownOptions : []), Bb = null === gb ? 0 : -(0, xH.d)(Cb, gb);
+      return (0, Ob.jsxs)(Ob.Fragment, {
+        children: [(0, Ob.jsx)(GH, {
+          item: Eb.item,
+          amount: Eb.quantity,
+          tier: null !== (Mb = null === (eb = Cb.enchant) || void 0 === eb ? void 0 : eb.tier) && void 0 !== Mb ? Mb : null
+        }), (0, Ob.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, td.jsx)("b", {
-            children: (0, td.jsx)(SF.d, {
-              text: null !== (Fd = qd.customTitle) && void 0 !== Fd ? Fd : Hd.item
+          children: [(0, Ob.jsx)("b", {
+            children: (0, Ob.jsx)(RH.d, {
+              text: null !== (Hb = Cb.customTitle) && void 0 !== Hb ? Hb : Eb.item
             })
-          }), (0, td.jsx)("small", {
-            children: Qd("smpShop:sellEach", {
-              count: Hd.quantity
+          }), (0, Ob.jsx)("small", {
+            children: Ib("smpShop:sellEach", {
+              count: Eb.quantity
             })
           })]
-        }), (0, td.jsx)(CF, {
-          options: yd.map((dd => {
+        }), (0, Ob.jsx)(dH, {
+          options: Fb.map((bb => {
             let {
-              label: Od,
-              quantity: md,
-              isAll: Wd
-            } = dd;
+              label: wb,
+              quantity: Mb,
+              isAll: eb
+            } = bb;
             return {
-              value: Od,
-              label: Wd ? Qd("smpShop:all", {
-                count: md
-              }) : String(md)
+              value: wb,
+              label: eb ? Ib("smpShop:all", {
+                count: Mb
+              }) : String(Mb)
             }
           })),
-          value: Kd,
-          onChange: hd,
-          ariaLabel: Qd("smpShop:quantity")
-        }), (0, td.jsxs)(vd.r, {
-          loading: od.isPending(Nd),
-          disabled: null === Kd,
+          value: gb,
+          onChange: lb,
+          ariaLabel: Ib("smpShop:quantity")
+        }), (0, Ob.jsxs)(Lb.u, {
+          loading: Ub.isPending(tb),
+          disabled: null === gb,
           onClick: () => {
-            od.act(Nd, Kd)
+            Ub.act(tb, gb)
           },
-          children: [Qd("smpShop:sellButton"), " ", (0, td.jsx)(DF, {
-            amount: bd
+          children: [Ib("smpShop:sellButton"), " ", (0, Ob.jsx)(qH, {
+            amount: Bb
           })]
         })]
       })
     }
 
-    function LR() {
-      var dd;
+    function Sp() {
+      var bb;
       const {
-        t: Od
-      } = (0, Xd.G)(), md = yR(), Wd = null === (dd = md.shopInfo[md.categoryKey]) || void 0 === dd ? void 0 : dd.items, Fd = FR(Wd, "collect"), Rd = FR(Wd, "myListing"), Kd = (dd, Od) => md.isPending(dd) || !1 === Od.canBuy;
-      return (0, td.jsxs)("div", {
+        t: wb
+      } = (0, Vb.C)(), Mb = Cp(), eb = null === (bb = Mb.shopInfo[Mb.categoryKey]) || void 0 === bb ? void 0 : bb.items, Hb = Mp(eb, "collect"), pb = Mp(eb, "myListing"), gb = (bb, wb) => Mb.isPending(bb) || !1 === wb.canBuy;
+      return (0, Ob.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, td.jsx)("h3", {
+        children: [(0, Ob.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Od("smpShop:readyToCollect")
-        }), Fd.length > 0 ? (0, td.jsx)("div", {
+          children: wb("smpShop:readyToCollect")
+        }), Hb.length > 0 ? (0, Ob.jsx)("div", {
           className: "SmpList",
-          children: Fd.map((dd => {
-            var Wd, Fd;
+          children: Hb.map((bb => {
+            var eb, Hb;
             let {
-              key: Rd,
-              item: Xd,
-              meta: hd
-            } = dd;
-            return (0, td.jsxs)("div", {
+              key: pb,
+              item: Vb,
+              meta: lb
+            } = bb;
+            return (0, Ob.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, td.jsx)(jF, {
-                item: "sold" === hd.type ? "Gold Coin" : hd.item,
-                amount: "sold" === hd.type ? 0 : hd.quantity,
-                tier: null !== (Wd = null === (Fd = Xd.enchant) || void 0 === Fd ? void 0 : Fd.tier) && void 0 !== Wd ? Wd : null
-              }), (0, td.jsxs)("div", {
+              children: [(0, Ob.jsx)(GH, {
+                item: "sold" === lb.type ? "Gold Coin" : lb.item,
+                amount: "sold" === lb.type ? 0 : lb.quantity,
+                tier: null !== (eb = null === (Hb = Vb.enchant) || void 0 === Hb ? void 0 : Hb.tier) && void 0 !== eb ? eb : null
+              }), (0, Ob.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, td.jsx)("b", {
-                  children: (0, td.jsx)(SF.d, {
-                    text: Xd.customTitle
+                children: [(0, Ob.jsx)("b", {
+                  children: (0, Ob.jsx)(RH.d, {
+                    text: Vb.customTitle
                   })
-                }), (0, td.jsx)("small", {
-                  children: (0, td.jsx)(SF.d, {
-                    text: Xd.description
+                }), (0, Ob.jsx)("small", {
+                  children: (0, Ob.jsx)(RH.d, {
+                    text: Vb.description
                   })
                 })]
-              }), (0, td.jsx)(vd.m, {
-                loading: Kd(Rd, Xd),
+              }), (0, Ob.jsx)(Lb.p, {
+                loading: gb(pb, Vb),
                 onClick: () => {
-                  md.act(Rd)
+                  Mb.act(pb)
                 },
-                children: Od("smpShop:collect")
+                children: wb("smpShop:collect")
               })]
-            }, Rd)
+            }, pb)
           }))
-        }) : (0, td.jsx)(IF, {
-          title: Od("smpShop:nothingToCollect"),
-          children: Od("smpShop:nothingToCollectHint")
-        }), (0, td.jsx)("h3", {
+        }) : (0, Ob.jsx)(iH, {
+          title: wb("smpShop:nothingToCollect"),
+          children: wb("smpShop:nothingToCollectHint")
+        }), (0, Ob.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: Od("smpShop:activeListings", {
-            count: Rd.length
+          children: wb("smpShop:activeListings", {
+            count: pb.length
           })
-        }), Rd.length > 0 ? (0, td.jsx)("div", {
+        }), pb.length > 0 ? (0, Ob.jsx)("div", {
           className: "SmpList",
-          children: Rd.map((dd => {
-            var Wd, Fd;
+          children: pb.map((bb => {
+            var eb, Hb;
             let {
-              key: Rd,
-              item: Xd,
-              meta: hd
-            } = dd;
-            return (0, td.jsxs)("div", {
+              key: pb,
+              item: Vb,
+              meta: lb
+            } = bb;
+            return (0, Ob.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, td.jsx)(jF, {
-                item: hd.item,
-                amount: hd.quantity,
-                tier: null !== (Wd = null === (Fd = Xd.enchant) || void 0 === Fd ? void 0 : Fd.tier) && void 0 !== Wd ? Wd : null
-              }), (0, td.jsxs)("div", {
+              children: [(0, Ob.jsx)(GH, {
+                item: lb.item,
+                amount: lb.quantity,
+                tier: null !== (eb = null === (Hb = Vb.enchant) || void 0 === Hb ? void 0 : Hb.tier) && void 0 !== eb ? eb : null
+              }), (0, Ob.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, td.jsx)("b", {
-                  children: (0, td.jsx)(SF.d, {
-                    text: Xd.customTitle
+                children: [(0, Ob.jsx)("b", {
+                  children: (0, Ob.jsx)(RH.d, {
+                    text: Vb.customTitle
                   })
-                }), (0, td.jsx)("small", {
-                  children: Od("smpShop:timeLeft", {
-                    time: hR(hd.expiresAt)
+                }), (0, Ob.jsx)("small", {
+                  children: wb("smpShop:timeLeft", {
+                    time: Vp(lb.expiresAt)
                   })
                 })]
-              }), (0, td.jsxs)("div", {
+              }), (0, Ob.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, td.jsx)(DF, {
-                  amount: hd.pricePerItem
-                }), (0, td.jsx)("small", {
-                  children: Od("smpShop:each")
+                children: [(0, Ob.jsx)(qH, {
+                  amount: lb.pricePerItem
+                }), (0, Ob.jsx)("small", {
+                  children: wb("smpShop:each")
                 })]
-              }), (0, td.jsx)(vd.G, {
-                loading: Kd(Rd, Xd),
+              }), (0, Ob.jsx)(Lb.Q, {
+                loading: gb(pb, Vb),
                 onClick: () => {
-                  md.act(Rd)
+                  Mb.act(pb)
                 },
-                children: Od("smpShop:cancel")
+                children: wb("smpShop:cancel")
               })]
-            }, Rd)
+            }, pb)
           }))
-        }) : (0, td.jsx)(IF, {
-          title: Od("smpShop:noActiveListings"),
-          children: Od("smpShop:noActiveListingsHint")
+        }) : (0, Ob.jsx)(iH, {
+          title: wb("smpShop:noActiveListings"),
+          children: wb("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function PR(dd) {
+    function Np(bb) {
       let {
-        done: Od,
-        of: md
-      } = dd;
-      return (0, td.jsx)("span", {
+        done: wb,
+        of: Mb
+      } = bb;
+      return (0, Ob.jsx)("span", {
         className: "SmpProgress",
-        children: (0, td.jsx)("i", {
+        children: (0, Ob.jsx)("i", {
           style: {
-            width: `${Math.min(100,Od/Math.max(1,md)*100)}%`
+            width: `${Math.min(100,wb/Math.max(1,Mb)*100)}%`
           }
         })
       })
     }
 
-    function zR(dd) {
-      var Od, md, Wd;
+    function vp(bb) {
+      var wb, Mb, eb;
       let {
-        entry: Fd,
-        choice: Rd,
-        onChoose: Kd
-      } = dd;
+        entry: Hb,
+        choice: pb,
+        onChoose: gb
+      } = bb;
       const {
-        t: hd
-      } = (0, Xd.G)(), Qd = yR(), {
-        key: od,
-        item: Nd,
-        meta: qd
-      } = Fd, Hd = "dropdown" === (null === (Od = Nd.userInput) || void 0 === Od ? void 0 : Od.type) ? Nd.userInput.dropdownOptions : [], yd = !0 === qd.processing, bd = null !== qd.creator && (qd.owned > 0 || yd), Td = bd && qd.owned > 0 ? vR(Hd) : [], pd = null === Rd ? 0 : null !== (md = null === (Wd = Td.find((dd => dd.label === Rd))) || void 0 === Wd ? void 0 : Wd.quantity) && void 0 !== md ? md : 0;
-      return (0, td.jsxs)("div", {
+        t: lb
+      } = (0, Vb.C)(), Ib = Cp(), {
+        key: Ub,
+        item: tb,
+        meta: Cb
+      } = Hb, Eb = "dropdown" === (null === (wb = tb.userInput) || void 0 === wb ? void 0 : wb.type) ? tb.userInput.dropdownOptions : [], Fb = !0 === Cb.processing, Bb = null !== Cb.creator && (Cb.owned > 0 || Fb), sb = Bb && Cb.owned > 0 ? gp(Eb) : [], mb = null === pb ? 0 : null !== (Mb = null === (eb = sb.find((bb => bb.label === pb))) || void 0 === eb ? void 0 : eb.quantity) && void 0 !== Mb ? Mb : 0;
+      return (0, Ob.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, td.jsx)(jF, {
-          item: qd.item
-        }), (0, td.jsxs)("div", {
+        children: [(0, Ob.jsx)(GH, {
+          item: Cb.item
+        }), (0, Ob.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, td.jsx)("b", {
-            children: (0, td.jsx)(SF.d, {
-              text: Nd.customTitle
+          children: [(0, Ob.jsx)("b", {
+            children: (0, Ob.jsx)(RH.d, {
+              text: tb.customTitle
             })
-          }), (0, td.jsxs)("small", {
-            children: [(0, td.jsx)(DF, {
-              amount: qd.pricePerItem
-            }), " ", hd("smpShop:each"), " \xb7", " ", null === qd.creator ? hd("smpShop:you") : (0, td.jsx)(SF.d, {
+          }), (0, Ob.jsxs)("small", {
+            children: [(0, Ob.jsx)(qH, {
+              amount: Cb.pricePerItem
+            }), " ", lb("smpShop:each"), " \xb7", " ", null === Cb.creator ? lb("smpShop:you") : (0, Ob.jsx)(RH.d, {
               text: [{
-                entityName: qd.creator
+                entityName: Cb.creator
               }]
             })]
-          }), (0, td.jsx)(PR, {
-            done: qd.delivered,
-            of: qd.wanted
+          }), (0, Ob.jsx)(Np, {
+            done: Cb.delivered,
+            of: Cb.wanted
           })]
-        }), bd ? (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsx)(CF, {
-            options: Td.map((dd => {
+        }), Bb ? (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsx)(dH, {
+            options: sb.map((bb => {
               let {
-                label: Od,
-                quantity: md,
-                isAll: Wd
-              } = dd;
+                label: wb,
+                quantity: Mb,
+                isAll: eb
+              } = bb;
               return {
-                value: Od,
-                label: Wd ? hd("smpShop:max", {
-                  count: md
-                }) : String(md)
+                value: wb,
+                label: eb ? lb("smpShop:max", {
+                  count: Mb
+                }) : String(Mb)
               }
             })),
-            value: Rd,
-            onChange: Kd,
-            ariaLabel: hd("smpShop:quantity")
-          }), (0, td.jsxs)(vd.r, {
-            loading: Qd.isPending(od) || yd,
-            disabled: null === Rd,
+            value: pb,
+            onChange: gb,
+            ariaLabel: lb("smpShop:quantity")
+          }), (0, Ob.jsxs)(Lb.u, {
+            loading: Ib.isPending(Ub) || Fb,
+            disabled: null === pb,
             onClick: () => {
-              Qd.act(od, Rd)
+              Ib.act(Ub, pb)
             },
-            children: [hd("smpShop:deliver"), " ", (0, td.jsx)(DF, {
-              amount: pd * qd.pricePerItem
+            children: [lb("smpShop:deliver"), " ", (0, Ob.jsx)(qH, {
+              amount: mb * Cb.pricePerItem
             })]
           })]
-        }) : (0, td.jsx)("span", {
+        }) : (0, Ob.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === qd.creator ? hd("smpShop:yourOrder") : hd("smpShop:youHave", {
+          children: null === Cb.creator ? lb("smpShop:yourOrder") : lb("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function cR() {
-      var dd;
+    function Qp() {
+      var bb;
       const {
-        t: Od
-      } = (0, Xd.G)(), md = yR(), Fd = null === (dd = md.shopInfo[md.categoryKey]) || void 0 === dd ? void 0 : dd.items, Rd = RR(Fd, "search"), Kd = RR(Fd, "creator"), hd = FR(Fd, "order"), Qd = RR(Fd, "empty"), od = YR(Rd, hd.length > 0 || null !== Qd), [Nd, qd] = (0, Wd.useState)(!1), [Hd, yd] = (0, Wd.useState)({});
-      return (0, td.jsx)(ER, {
-        browser: od,
-        recentLabel: Od("smpShop:recentOrders"),
-        action: (0, td.jsx)(vd.r, {
+        t: wb
+      } = (0, Vb.C)(), Mb = Cp(), Hb = null === (bb = Mb.shopInfo[Mb.categoryKey]) || void 0 === bb ? void 0 : bb.items, pb = ep(Hb, "search"), gb = ep(Hb, "creator"), lb = Mp(Hb, "order"), Ib = ep(Hb, "empty"), Ub = sp(pb, lb.length > 0 || null !== Ib), [tb, Cb] = (0, eb.useState)(!1), [Eb, Fb] = (0, eb.useState)({});
+      return (0, Ob.jsx)(Xp, {
+        browser: Ub,
+        recentLabel: wb("smpShop:recentOrders"),
+        action: (0, Ob.jsx)(Lb.u, {
           onClick: () => {
-            qd((dd => !dd))
+            Cb((bb => !bb))
           },
-          children: Od("smpShop:createOrder")
+          children: wb("smpShop:createOrder")
         }),
-        above: Nd && (0, td.jsx)(VR, {
+        above: tb && (0, Ob.jsx)(Yp, {
           mode: "order",
-          creator: Kd,
-          catalogue: od.catalogue,
-          names: od.names,
-          searching: od.loading,
+          creator: gb,
+          catalogue: Ub.catalogue,
+          names: Ub.names,
+          searching: Ub.loading,
           prices: [],
-          onPickItem: od.searchFor,
+          onPickItem: Ub.searchFor,
           onClose: () => {
-            qd(!1)
+            Cb(!1)
           }
         }),
         onBack: () => {
-          qd(!1)
+          Cb(!1)
         },
-        summary: hd.length > 0 && Od(1 === hd.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: hd.length,
-          price: PF(JR(hd, "max"))
+        summary: lb.length > 0 && wb(1 === lb.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: lb.length,
+          price: NH(xp(lb, "max"))
         }),
-        list: od.loading ? (0, td.jsx)(eF, {}) : hd.length > 0 ? (0, td.jsx)(bR.c, {
+        list: Ub.loading ? (0, Ob.jsx)(aH, {}) : lb.length > 0 ? (0, Ob.jsx)(Ep.b, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: XR,
-          observerUpdateDeps: [hd.length],
-          children: hd.map((dd => (0, td.jsx)(zR, {
-            entry: dd,
-            choice: NR(dd.item, Hd[dd.key]),
-            onChoose: Od => {
-              yd({
-                ...Hd,
-                [dd.key]: Od
+          rootMargin: Hp,
+          observerUpdateDeps: [lb.length],
+          children: lb.map((bb => (0, Ob.jsx)(vp, {
+            entry: bb,
+            choice: Op(bb.item, Eb[bb.key]),
+            onChoose: wb => {
+              Fb({
+                ...Eb,
+                [bb.key]: wb
               })
             }
-          }, dd.key)))
-        }) : Qd ? (0, td.jsx)(lF, {
-          entry: Qd
-        }) : (0, td.jsx)(eF, {
+          }, bb.key)))
+        }) : Ib ? (0, Ob.jsx)(uH, {
+          entry: Ib
+        }) : (0, Ob.jsx)(aH, {
           count: 3
         })
       })
     }
 
-    function jR() {
-      var dd;
+    function Gp() {
+      var bb;
       const {
-        t: Od
-      } = (0, Xd.G)(), md = yR(), Wd = FR(null === (dd = md.shopInfo[md.categoryKey]) || void 0 === dd ? void 0 : dd.items, "myOrder");
-      return 0 === Wd.length ? (0, td.jsx)("div", {
+        t: wb
+      } = (0, Vb.C)(), Mb = Cp(), eb = Mp(null === (bb = Mb.shopInfo[Mb.categoryKey]) || void 0 === bb ? void 0 : bb.items, "myOrder");
+      return 0 === eb.length ? (0, Ob.jsx)("div", {
         className: "SmpScreen",
-        children: (0, td.jsx)(IF, {
-          title: Od("smpShop:noOrders"),
-          children: Od("smpShop:noOrdersHint")
+        children: (0, Ob.jsx)(iH, {
+          title: wb("smpShop:noOrders"),
+          children: wb("smpShop:noOrdersHint")
         })
-      }) : (0, td.jsx)("div", {
+      }) : (0, Ob.jsx)("div", {
         className: "SmpScreen",
-        children: (0, td.jsx)("div", {
+        children: (0, Ob.jsx)("div", {
           className: "SmpList",
-          children: Wd.map((dd => {
+          children: eb.map((bb => {
             let {
-              key: Wd,
-              item: Fd,
-              meta: Rd
-            } = dd;
-            const Xd = md.isPending(Wd) || !1 === Fd.canBuy;
-            return (0, td.jsxs)("div", {
+              key: eb,
+              item: Hb,
+              meta: pb
+            } = bb;
+            const Vb = Mb.isPending(eb) || !1 === Hb.canBuy;
+            return (0, Ob.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, td.jsx)(jF, {
-                item: Rd.item,
-                amount: Rd.collectable
-              }), (0, td.jsxs)("div", {
+              children: [(0, Ob.jsx)(GH, {
+                item: pb.item,
+                amount: pb.collectable
+              }), (0, Ob.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, td.jsx)("b", {
-                  children: (0, td.jsx)(SF.d, {
-                    text: Fd.customTitle
+                children: [(0, Ob.jsx)("b", {
+                  children: (0, Ob.jsx)(RH.d, {
+                    text: Hb.customTitle
                   })
-                }), (0, td.jsxs)("small", {
-                  children: [(0, td.jsx)(DF, {
-                    amount: Rd.pricePerItem
-                  }), " ", Od("smpShop:each"), Rd.collectable > 0 && ` \xb7 ${Od("smpShop:readyCount",{count:Rd.collectable})}`]
-                }), (0, td.jsx)(PR, {
-                  done: Rd.delivered,
-                  of: Rd.wanted
+                }), (0, Ob.jsxs)("small", {
+                  children: [(0, Ob.jsx)(qH, {
+                    amount: pb.pricePerItem
+                  }), " ", wb("smpShop:each"), pb.collectable > 0 && ` \xb7 ${wb("smpShop:readyCount",{count:pb.collectable})}`]
+                }), (0, Ob.jsx)(Np, {
+                  done: pb.delivered,
+                  of: pb.wanted
                 })]
-              }), Rd.collectable > 0 ? (0, td.jsx)(vd.m, {
-                loading: Xd,
+              }), pb.collectable > 0 ? (0, Ob.jsx)(Lb.p, {
+                loading: Vb,
                 onClick: () => {
-                  md.act(Wd)
+                  Mb.act(eb)
                 },
-                children: Od("smpShop:collectCount", {
-                  count: Rd.collectable
+                children: wb("smpShop:collectCount", {
+                  count: pb.collectable
                 })
-              }) : (0, td.jsx)(vd.G, {
-                loading: Xd,
+              }) : (0, Ob.jsx)(Lb.Q, {
+                loading: Vb,
                 onClick: () => {
-                  md.act(Wd)
+                  Mb.act(eb)
                 },
-                children: Od("smpShop:cancel")
+                children: wb("smpShop:cancel")
               })]
-            }, Wd)
+            }, eb)
           }))
         })
       })
     }
-    const DR = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      eR = {
+    const qp = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      ap = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4829,293 +4829,293 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function IR(dd, Od) {
-      let md = !1;
-      const Wd = {};
-      for (const Fd in dd) Od(Fd, dd[Fd]) ? Wd[Fd] = dd[Fd] : md = !0;
-      return md ? Wd : dd
+    function ip(bb, wb) {
+      let Mb = !1;
+      const eb = {};
+      for (const Hb in bb) wb(Hb, bb[Hb]) ? eb[Hb] = bb[Hb] : Mb = !0;
+      return Mb ? eb : bb
     }
 
-    function lR(dd) {
-      var Od, md, Fd, hd;
+    function dp(bb) {
+      var wb, Mb, Hb, lb;
       const {
-        show: vd,
-        shopInfo: Qd,
-        selectedCategoryKey: od
-      } = dd, {
-        t: Nd
-      } = (0, Xd.G)(), qd = null !== od && void 0 !== od ? od : "", Hd = WR(Qd, qd), yd = null === (Od = Qd[qd]) || void 0 === Od ? void 0 : Od.items, bd = null !== Hd, [Td, pd] = (0, Wd.useState)({}), [Yd, gd] = (0, Wd.useState)([]), [wd, Ed] = (0, Wd.useState)(!1), [Jd, Ud] = (0, Wd.useState)(null), [, xd] = (0, Wd.useState)(0), Bd = (0, Wd.useRef)(0), Sd = (0, Wd.useRef)({}), sd = (0, Wd.useRef)({
-        items: yd,
-        pending: Td,
-        shopInfo: Qd,
-        active: bd,
-        show: vd,
-        canAfford: dd.canAfford,
-        buy: dd.buy
+        show: Lb,
+        shopInfo: Ib,
+        selectedCategoryKey: Ub
+      } = bb, {
+        t: tb
+      } = (0, Vb.C)(), Cb = null !== Ub && void 0 !== Ub ? Ub : "", Eb = wp(Ib, Cb), Fb = null === (wb = Ib[Cb]) || void 0 === wb ? void 0 : wb.items, Bb = null !== Eb, [sb, mb] = (0, eb.useState)({}), [hb, zb] = (0, eb.useState)([]), [Xb, xb] = (0, eb.useState)(!1), [jb, Kb] = (0, eb.useState)(null), [, rb] = (0, eb.useState)(0), Rb = (0, eb.useRef)(0), Db = (0, eb.useRef)({}), cb = (0, eb.useRef)({
+        items: Fb,
+        pending: sb,
+        shopInfo: Ib,
+        active: Bb,
+        show: Lb,
+        canAfford: bb.canAfford,
+        buy: bb.buy
       });
-      sd.current = {
-        items: yd,
-        pending: Td,
-        shopInfo: Qd,
-        active: bd,
-        show: vd,
-        canAfford: dd.canAfford,
-        buy: dd.buy
+      cb.current = {
+        items: Fb,
+        pending: sb,
+        shopInfo: Ib,
+        active: Bb,
+        show: Lb,
+        canAfford: bb.canAfford,
+        buy: bb.buy
       };
-      const ud = (0, Wd.useCallback)((dd => {
-        Bd.current++;
-        const Od = Bd.current;
-        gd((md => [{
-          id: Od,
-          text: dd
-        }, ...md].slice(0, 8))), Ud(Od)
+      const Yb = (0, eb.useCallback)((bb => {
+        Rb.current++;
+        const wb = Rb.current;
+        zb((Mb => [{
+          id: wb,
+          text: bb
+        }, ...Mb].slice(0, 8))), Kb(wb)
       }), []);
-      (0, Wd.useEffect)((() => {
-        if (null === Jd) return;
-        const dd = setTimeout((() => {
-          Ud(null)
+      (0, eb.useEffect)((() => {
+        if (null === jb) return;
+        const bb = setTimeout((() => {
+          Kb(null)
         }), 3e3);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(bb)
         }
-      }), [Jd]), (0, Wd.useEffect)((() => {
-        const Od = dd.message;
-        if (!Od) return;
+      }), [jb]), (0, eb.useEffect)((() => {
+        const wb = bb.message;
+        if (!wb) return;
         const {
-          shopInfo: md,
-          active: Wd,
-          items: Fd
-        } = sd.current, Rd = null !== Od.categoryKey ? null !== WR(md, Od.categoryKey) : Wd;
-        (Rd || Wd) && ud(Od.text), Rd && pd((dd => IR(dd, (dd => {
-          var Od, md;
-          return !DR.has(null === Fd || void 0 === Fd || null === (Od = Fd[dd]) || void 0 === Od || null === (md = Od.smp) || void 0 === md ? void 0 : md.kind)
+          shopInfo: Mb,
+          active: eb,
+          items: Hb
+        } = cb.current, pb = null !== wb.categoryKey ? null !== wp(Mb, wb.categoryKey) : eb;
+        (pb || eb) && Yb(wb.text), pb && mb((bb => ip(bb, (bb => {
+          var wb, Mb;
+          return !qp.has(null === Hb || void 0 === Hb || null === (wb = Hb[bb]) || void 0 === wb || null === (Mb = wb.smp) || void 0 === Mb ? void 0 : Mb.kind)
         }))))
-      }), [dd.message, ud]), (0, Wd.useEffect)((() => {
-        pd((dd => IR(dd, ((dd, Od) => qR(null === yd || void 0 === yd ? void 0 : yd[dd]) === Od.snapshot))))
-      }), [Qd, yd]);
-      const Vd = Object.keys(Td).length > 0;
-      (0, Wd.useEffect)((() => {
-        if (!Vd) return;
-        const dd = setInterval((() => {
+      }), [bb.message, Yb]), (0, eb.useEffect)((() => {
+        mb((bb => ip(bb, ((bb, wb) => Up(null === Fb || void 0 === Fb ? void 0 : Fb[bb]) === wb.snapshot))))
+      }), [Ib, Fb]);
+      const Zb = Object.keys(sb).length > 0;
+      (0, eb.useEffect)((() => {
+        if (!Zb) return;
+        const bb = setInterval((() => {
           const {
-            pending: dd,
-            items: Od,
-            show: md
-          } = sd.current;
-          if (!md) return;
-          xd((dd => dd + 1));
-          const Wd = Date.now(),
-            Fd = Object.keys(dd).filter((md => Wd - dd[md].at >= 12e3 && qR(null === Od || void 0 === Od ? void 0 : Od[md]) === dd[md].snapshot));
-          if (0 === Fd.length) return;
-          const Rd = Fd.some((md => {
-            var Wd, Fd;
-            return "search" !== (null === Od || void 0 === Od || null === (Wd = Od[md]) || void 0 === Wd || null === (Fd = Wd.smp) || void 0 === Fd ? void 0 : Fd.kind) || dd[md].resend
+            pending: bb,
+            items: wb,
+            show: Mb
+          } = cb.current;
+          if (!Mb) return;
+          rb((bb => bb + 1));
+          const eb = Date.now(),
+            Hb = Object.keys(bb).filter((Mb => eb - bb[Mb].at >= 12e3 && Up(null === wb || void 0 === wb ? void 0 : wb[Mb]) === bb[Mb].snapshot));
+          if (0 === Hb.length) return;
+          const pb = Hb.some((Mb => {
+            var eb, Hb;
+            return "search" !== (null === wb || void 0 === wb || null === (eb = wb[Mb]) || void 0 === eb || null === (Hb = eb.smp) || void 0 === Hb ? void 0 : Hb.kind) || bb[Mb].resend
           }));
-          for (const Xd of Fd) Sd.current[Xd] = Wd;
-          pd((dd => IR(dd, (dd => !Fd.includes(dd))))), Rd && ud(Nd("smpShop:noAnswer"))
+          for (const Vb of Hb) Db.current[Vb] = eb;
+          mb((bb => ip(bb, (bb => !Hb.includes(bb))))), pb && Yb(tb("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(dd)
+          clearInterval(bb)
         }
-      }), [Vd]), (0, Wd.useEffect)((() => {
-        pd({})
-      }), [qd]), (0, Wd.useEffect)((() => {
-        vd || Ed(!1)
-      }), [vd]);
-      const Ad = (0, Wd.useCallback)((function(dd, Od) {
-          let md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [Zb]), (0, eb.useEffect)((() => {
+        mb({})
+      }), [Cb]), (0, eb.useEffect)((() => {
+        Lb || xb(!1)
+      }), [Lb]);
+      const fb = (0, eb.useCallback)((function(bb, wb) {
+          let Mb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: Wd,
-            pending: Fd,
-            canAfford: Rd,
-            buy: Xd
-          } = sd.current, Kd = null === Wd || void 0 === Wd ? void 0 : Wd[dd];
-          if (!Kd || dd in Fd || !1 === Kd.canBuy) return !1;
-          if (!Rd(Kd, (0, JF.b)(Kd, Od))) return !1;
-          Xd(dd, Kd, Od);
-          const hd = {
-            snapshot: qR(Kd),
+            items: eb,
+            pending: Hb,
+            canAfford: pb,
+            buy: Vb
+          } = cb.current, gb = null === eb || void 0 === eb ? void 0 : eb[bb];
+          if (!gb || bb in Hb || !1 === gb.canBuy) return !1;
+          if (!pb(gb, (0, xH.d)(gb, wb))) return !1;
+          Vb(bb, gb, wb);
+          const lb = {
+            snapshot: Up(gb),
             at: Date.now(),
-            resend: md
+            resend: Mb
           };
-          return sd.current.pending = {
-            ...sd.current.pending,
-            [dd]: hd
-          }, pd((Od => ({
-            ...Od,
-            [dd]: hd
+          return cb.current.pending = {
+            ...cb.current.pending,
+            [bb]: lb
+          }, mb((wb => ({
+            ...wb,
+            [bb]: lb
           }))), !0
         }), []),
-        rd = (0, Wd.useMemo)((() => ({
-          shopInfo: Qd,
-          categoryKey: qd,
-          canAfford: dd.canAfford,
-          isPending: dd => dd in Td,
-          gaveUpAt: dd => {
-            var Od;
-            return null !== (Od = Sd.current[dd]) && void 0 !== Od ? Od : 0
+        Ab = (0, eb.useMemo)((() => ({
+          shopInfo: Ib,
+          categoryKey: Cb,
+          canAfford: bb.canAfford,
+          isPending: bb => bb in sb,
+          gaveUpAt: bb => {
+            var wb;
+            return null !== (wb = Db.current[bb]) && void 0 !== wb ? wb : 0
           },
-          act: Ad,
-          notify: ud
-        })), [Qd, qd, dd.canAfford, Td, Ad, ud]),
-        Gd = Math.min(...Object.values(Td).map((dd => dd.at))),
-        nd = Vd && Date.now() - Gd > 1500,
-        Ld = Yd.length > 1,
-        Pd = null !== (md = null === (Fd = Qd[qd]) || void 0 === Fd ? void 0 : Fd.customTitle) && void 0 !== md ? md : qd,
-        zd = null === (hd = Qd[qd]) || void 0 === hd ? void 0 : hd.description;
-      let cd = null;
-      return "market" === Hd ? cd = (0, td.jsx)(iR, {}) : "sell" === Hd ? cd = (0, td.jsx)(GR, {}) : "collect" === Hd ? cd = (0, td.jsx)(LR, {}) : "orders" === Hd ? cd = (0, td.jsx)(cR, {}) : "myOrders" === Hd && (cd = (0, td.jsx)(jR, {})), (0, td.jsx)(HR.Provider, {
-        value: rd,
-        children: (0, td.jsx)("div", {
+          act: fb,
+          notify: Yb
+        })), [Ib, Cb, bb.canAfford, sb, fb, Yb]),
+        Wb = Math.min(...Object.values(sb).map((bb => bb.at))),
+        Jb = Zb && Date.now() - Wb > 1500,
+        Sb = hb.length > 1,
+        Nb = null !== (Mb = null === (Hb = Ib[Cb]) || void 0 === Hb ? void 0 : Hb.customTitle) && void 0 !== Mb ? Mb : Cb,
+        vb = null === (lb = Ib[Cb]) || void 0 === lb ? void 0 : lb.description;
+      let Qb = null;
+      return "market" === Eb ? Qb = (0, Ob.jsx)(Zp, {}) : "sell" === Eb ? Qb = (0, Ob.jsx)(Wp, {}) : "collect" === Eb ? Qb = (0, Ob.jsx)(Sp, {}) : "orders" === Eb ? Qb = (0, Ob.jsx)(Qp, {}) : "myOrders" === Eb && (Qb = (0, Ob.jsx)(Gp, {})), (0, Ob.jsx)(tp.Provider, {
+        value: Ab,
+        children: (0, Ob.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !bd,
-          children: (0, td.jsxs)("div", {
+          hidden: !Bb,
+          children: (0, Ob.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, td.jsx)("header", {
+            children: [(0, Ob.jsx)("header", {
               className: "SmpHeader",
-              children: (0, td.jsxs)("div", {
+              children: (0, Ob.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, td.jsxs)("h2", {
-                  children: [Hd && (0, td.jsx)(Kd.c, {
-                    name: eR[Hd]
-                  }), Nd(Pd)]
-                }), zd && (0, td.jsx)("p", {
-                  children: (0, td.jsx)(SF.d, {
-                    text: zd
+                children: [(0, Ob.jsxs)("h2", {
+                  children: [Eb && (0, Ob.jsx)(gb.b, {
+                    name: ap[Eb]
+                  }), tb(Nb)]
+                }), vb && (0, Ob.jsx)("p", {
+                  children: (0, Ob.jsx)(RH.d, {
+                    text: vb
                   })
                 })]
               })
-            }), (0, td.jsx)("main", {
+            }), (0, Ob.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: vd && cd
-            }), (0, td.jsxs)("button", {
+              children: Lb && Qb
+            }), (0, Ob.jsxs)("button", {
               type: "button",
-              className: Rd()("SmpStatus", {
-                SmpStatusWaiting: Vd,
-                SmpStatusFresh: !Vd && null !== Jd,
-                SmpStatusHasHistory: Ld
+              className: pb()("SmpStatus", {
+                SmpStatusWaiting: Zb,
+                SmpStatusFresh: !Zb && null !== jb,
+                SmpStatusHasHistory: Sb
               }),
               "aria-live": "polite",
-              "aria-expanded": Ld ? wd : void 0,
+              "aria-expanded": Sb ? Xb : void 0,
               onClick: () => {
-                Ld && Ed((dd => !dd))
+                Sb && xb((bb => !bb))
               },
-              children: [Vd ? (0, td.jsxs)("span", {
+              children: [Zb ? (0, Ob.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, td.jsx)(ZF, {}), Nd(nd ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : Yd[0] ? (0, td.jsx)("span", {
+                children: [(0, Ob.jsx)(PH, {}), tb(Jb ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : hb[0] ? (0, Ob.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, td.jsx)(SF.d, {
-                  text: Yd[0].text
+                children: (0, Ob.jsx)(RH.d, {
+                  text: hb[0].text
                 })
-              }, Yd[0].id) : (0, td.jsx)("span", {
+              }, hb[0].id) : (0, Ob.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: Nd("smpShop:ready")
-              }), Ld && (0, td.jsx)("small", {
-                children: Nd("smpShop:recentMessages", {
-                  count: Yd.length
+                children: tb("smpShop:ready")
+              }), Sb && (0, Ob.jsx)("small", {
+                children: tb("smpShop:recentMessages", {
+                  count: hb.length
                 })
               })]
-            }), wd && Ld && (0, td.jsx)("div", {
+            }), Xb && Sb && (0, Ob.jsx)("div", {
               className: "SmpStatusHistory",
-              children: Yd.map((dd => (0, td.jsx)("div", {
-                children: (0, td.jsx)(SF.d, {
-                  text: dd.text
+              children: hb.map((bb => (0, Ob.jsx)("div", {
+                children: (0, Ob.jsx)(RH.d, {
+                  text: bb.text
                 })
-              }, dd.id)))
+              }, bb.id)))
             })]
           })
         })
       })
     }
-    var CR = md(2116),
-      ZR = md(35555);
-    const kR = "\x1floadout";
+    var Pp = Mb(2167),
+      np = Mb(35339);
+    const yp = "\x1floadout";
 
-    function fR(dd) {
-      const Od = [];
-      for (const md in dd) {
-        const Wd = dd[md].loadout;
-        Wd && Od.push({
-          categoryKey: md,
-          config: Wd
+    function op(bb) {
+      const wb = [];
+      for (const Mb in bb) {
+        const eb = bb[Mb].loadout;
+        eb && wb.push({
+          categoryKey: Mb,
+          config: eb
         })
       }
-      return Od.sort(((dd, Od) => MR(dd.config) - MR(Od.config)))
+      return wb.sort(((bb, wb) => Tp(bb.config) - Tp(wb.config)))
     }
 
-    function MR(dd) {
-      return "gun" === dd.slot ? 0 : dd.tier
+    function Tp(bb) {
+      return "gun" === bb.slot ? 0 : bb.tier
     }
 
-    function dX(dd) {
-      const Od = [];
-      for (const md of nF(dd)) dd[md].loadout ? Od.includes(kR) || Od.push(kR) : Od.push(md);
-      return Od
+    function kp(bb) {
+      const wb = [];
+      for (const Mb of JH(bb)) bb[Mb].loadout ? wb.includes(yp) || wb.push(yp) : wb.push(Mb);
+      return wb
     }
 
-    function OX(dd, Od) {
-      const md = [];
-      for (const Wd in dd) {
-        const Fd = dd[Wd].loadout;
-        (null === Fd || void 0 === Fd ? void 0 : Fd.kind) === Od && md.push({
-          key: Wd,
-          item: dd[Wd],
-          meta: Fd
+    function bV(bb, wb) {
+      const Mb = [];
+      for (const eb in bb) {
+        const Hb = bb[eb].loadout;
+        (null === Hb || void 0 === Hb ? void 0 : Hb.kind) === wb && Mb.push({
+          key: eb,
+          item: bb[eb],
+          meta: Hb
         })
       }
-      return md.sort(((dd, Od) => {
-        const md = WX(dd.meta) - WX(Od.meta);
-        return 0 !== md ? md : dd.meta.free !== Od.meta.free ? dd.meta.free ? -1 : 1 : dd.key.localeCompare(Od.key)
+      return Mb.sort(((bb, wb) => {
+        const Mb = MV(bb.meta) - MV(wb.meta);
+        return 0 !== Mb ? Mb : bb.meta.free !== wb.meta.free ? bb.meta.free ? -1 : 1 : bb.key.localeCompare(wb.key)
       }))
     }
-    const mX = ["assaultRifle", "battleRifle", "smg", "shotgun", "marksman", "sniper", "machineGun", "pistol", "machinePistol"];
+    const wV = ["assaultRifle", "battleRifle", "smg", "shotgun", "marksman", "sniper", "machineGun", "pistol", "machinePistol"];
 
-    function WX(dd) {
-      return "gun" === dd.kind ? mX.indexOf(dd.gunClass) : 0
+    function MV(bb) {
+      return "gun" === bb.kind ? wV.indexOf(bb.gunClass) : 0
     }
-    const FX = ["damage", "fireRate", "accuracy"];
+    const eV = ["damage", "fireRate", "accuracy"];
 
-    function RX(dd, Od) {
-      var md, Wd, Fd;
-      const Rd = ZR.c[dd];
-      if (!Rd) return null;
-      const Xd = {
-        ...Rd,
-        ...Od
+    function HV(bb, wb) {
+      var Mb, eb, Hb;
+      const pb = np.b[bb];
+      if (!pb) return null;
+      const Vb = {
+        ...pb,
+        ...wb
       };
       return {
-        damage: Xd.damage * (null !== (md = Xd.shotPelletCount) && void 0 !== md ? md : 1),
-        fireRate: XX(Xd.fireRate, null !== (Wd = Xd.burstCount) && void 0 !== Wd ? Wd : 1, null !== (Fd = Xd.burstDelay) && void 0 !== Fd ? Fd : 0),
-        accuracy: -(Xd.altInaccuracyStanding + Xd.altInaccuracyFromShot),
-        clipSize: Xd.clipSize
+        damage: Vb.damage * (null !== (Mb = Vb.shotPelletCount) && void 0 !== Mb ? Mb : 1),
+        fireRate: pV(Vb.fireRate, null !== (eb = Vb.burstCount) && void 0 !== eb ? eb : 1, null !== (Hb = Vb.burstDelay) && void 0 !== Hb ? Hb : 0),
+        accuracy: -(Vb.altInaccuracyStanding + Vb.altInaccuracyFromShot),
+        clipSize: Vb.clipSize
       }
     }
 
-    function XX(dd, Od, md) {
-      return 6e4 * Od / (6e4 / dd + (Od - 1) * md)
+    function pV(bb, wb, Mb) {
+      return 6e4 * wb / (6e4 / bb + (wb - 1) * Mb)
     }
 
-    function KX(dd, Od, md, Wd) {
-      if ("accuracy" !== dd) return md <= 0 ? 1 : Od / md;
-      const Fd = Math.sqrt(-Wd) - Math.sqrt(-md);
-      return Fd <= 0 ? 1 : 1 - (Math.sqrt(-Od) - Math.sqrt(-md)) / Fd * .94
+    function VV(bb, wb, Mb, eb) {
+      if ("accuracy" !== bb) return Mb <= 0 ? 1 : wb / Mb;
+      const Hb = Math.sqrt(-eb) - Math.sqrt(-Mb);
+      return Hb <= 0 ? 1 : 1 - (Math.sqrt(-wb) - Math.sqrt(-Mb)) / Hb * .94
     }
 
-    function hX(dd) {
+    function gV(bb) {
       let {
-        iconName: Od
-      } = dd;
-      return Td.gameBridge.lookup("isItemName", Od) ? (0, td.jsx)(BF.c, {
-        itemName: Od,
+        iconName: wb
+      } = bb;
+      return sb.gameBridge.lookup("isItemName", wb) ? (0, Ob.jsx)(rH.c, {
+        itemName: wb,
         amount: 1
-      }) : (0, td.jsx)(Kd.c, {
-        name: Od,
+      }) : (0, Ob.jsx)(gb.b, {
+        name: wb,
         className: "2x"
       })
     }
-    const vX = {
+    const lV = {
       assaultRifle: "loadoutShop:classAssaultRifle",
       battleRifle: "loadoutShop:classBattleRifle",
       smg: "loadoutShop:classSmg",
@@ -5127,251 +5127,251 @@ export const modules = {
       machinePistol: "loadoutShop:classMachinePistol"
     };
 
-    function QX(dd) {
+    function LV(bb) {
       let {
-        entry: Od,
-        stats: md,
-        bars: Wd,
-        compared: Fd,
-        buy: hd,
-        canAfford: vd,
-        currency: Qd
-      } = dd;
+        entry: wb,
+        stats: Mb,
+        bars: eb,
+        compared: Hb,
+        buy: lb,
+        canAfford: Lb,
+        currency: Ib
+      } = bb;
       const {
-        t: od
-      } = (0, Xd.G)(), {
-        meta: Nd
-      } = Od;
-      return (0, td.jsxs)("div", {
-        className: Rd()("LoadoutCard", "LoadoutGunCard", {
-          LoadoutCardEquipped: Nd.equipped,
-          LoadoutCardLocked: !Nd.unlocked
+        t: Ub
+      } = (0, Vb.C)(), {
+        meta: tb
+      } = wb;
+      return (0, Ob.jsxs)("div", {
+        className: pb()("LoadoutCard", "LoadoutGunCard", {
+          LoadoutCardEquipped: tb.equipped,
+          LoadoutCardLocked: !tb.unlocked
         }),
-        children: [!Nd.unlocked && (0, td.jsx)(Kd.c, {
+        children: [!tb.unlocked && (0, Ob.jsx)(gb.b, {
           name: "lock",
           className: "LoadoutCardLock"
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "LoadoutGunArt",
-          children: (0, td.jsx)(BF.c, {
-            itemName: Nd.gun,
+          children: (0, Ob.jsx)(rH.c, {
+            itemName: tb.gun,
             amount: 0,
             gunTransform: "none"
           })
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "LoadoutCardTitle",
-          children: [(0, td.jsx)("b", {
-            children: Od.key
-          }), (0, td.jsxs)("small", {
-            children: [od(vX[Nd.gunClass]), md && (0, td.jsxs)(td.Fragment, {
-              children: [" \xb7 ", od("loadoutShop:rounds", {
-                count: md.clipSize
+          children: [(0, Ob.jsx)("b", {
+            children: wb.key
+          }), (0, Ob.jsxs)("small", {
+            children: [Ub(lV[tb.gunClass]), Mb && (0, Ob.jsxs)(Ob.Fragment, {
+              children: [" \xb7 ", Ub("loadoutShop:rounds", {
+                count: Mb.clipSize
               })]
             })]
           })]
-        }), md && Wd && (0, td.jsx)("div", {
+        }), Mb && eb && (0, Ob.jsx)("div", {
           className: "LoadoutStats",
-          children: FX.map((dd => {
-            const Od = Fd ? function(dd, Od) {
-              const md = Math.max(Math.abs(dd), Math.abs(Od), 1);
-              return Math.abs(dd - Od) / md < .05 ? null : dd > Od ? "better" : "worse"
-            }(md[dd], Fd[dd]) : null;
-            return (0, td.jsxs)("div", {
+          children: eV.map((bb => {
+            const wb = Hb ? function(bb, wb) {
+              const Mb = Math.max(Math.abs(bb), Math.abs(wb), 1);
+              return Math.abs(bb - wb) / Mb < .05 ? null : bb > wb ? "better" : "worse"
+            }(Mb[bb], Hb[bb]) : null;
+            return (0, Ob.jsxs)("div", {
               className: "LoadoutStat",
-              children: [(0, td.jsx)("span", {
-                children: od(`loadoutShop:${dd}`)
-              }), (0, td.jsx)("div", {
+              children: [(0, Ob.jsx)("span", {
+                children: Ub(`loadoutShop:${bb}`)
+              }), (0, Ob.jsx)("div", {
                 className: "LoadoutBar",
-                children: (0, td.jsx)("i", {
-                  className: Rd()({
-                    LoadoutBarBetter: "better" === Od,
-                    LoadoutBarWorse: "worse" === Od
+                children: (0, Ob.jsx)("i", {
+                  className: pb()({
+                    LoadoutBarBetter: "better" === wb,
+                    LoadoutBarWorse: "worse" === wb
                   }),
                   style: {
-                    width: 100 * Wd[dd] + "%"
+                    width: 100 * eb[bb] + "%"
                   }
                 })
               })]
-            }, dd)
+            }, bb)
           }))
-        }), (0, td.jsx)(oX, {
-          entry: Od,
-          buy: hd,
-          canAfford: vd,
-          currency: Qd
+        }), (0, Ob.jsx)(OV, {
+          entry: wb,
+          buy: lb,
+          canAfford: Lb,
+          currency: Ib
         })]
       })
     }
 
-    function tX(dd) {
+    function IV(bb) {
       let {
-        entry: Od,
-        buy: md,
-        canAfford: Wd,
-        currency: Fd
-      } = dd;
+        entry: wb,
+        buy: Mb,
+        canAfford: eb,
+        currency: Hb
+      } = bb;
       const {
-        meta: Xd
-      } = Od;
-      return (0, td.jsxs)("div", {
-        className: Rd()("LoadoutCard", "LoadoutPerkCard", {
-          LoadoutCardEquipped: Xd.equipped,
-          LoadoutCardLocked: !Xd.unlocked
+        meta: Vb
+      } = wb;
+      return (0, Ob.jsxs)("div", {
+        className: pb()("LoadoutCard", "LoadoutPerkCard", {
+          LoadoutCardEquipped: Vb.equipped,
+          LoadoutCardLocked: !Vb.unlocked
         }),
-        children: [!Xd.unlocked && (0, td.jsx)(Kd.c, {
+        children: [!Vb.unlocked && (0, Ob.jsx)(gb.b, {
           name: "lock",
           className: "LoadoutCardLock"
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "LoadoutPerkIcon",
-          children: (0, td.jsx)(Kd.c, {
-            name: Xd.icon
+          children: (0, Ob.jsx)(gb.b, {
+            name: Vb.icon
           })
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "LoadoutCardTitle",
-          children: [(0, td.jsx)("b", {
-            children: Od.key
-          }), (0, td.jsx)("small", {
-            children: Xd.description
+          children: [(0, Ob.jsx)("b", {
+            children: wb.key
+          }), (0, Ob.jsx)("small", {
+            children: Vb.description
           })]
-        }), (0, td.jsx)(oX, {
-          entry: Od,
-          buy: md,
-          canAfford: Wd,
-          currency: Fd
+        }), (0, Ob.jsx)(OV, {
+          entry: wb,
+          buy: Mb,
+          canAfford: eb,
+          currency: Hb
         })]
       })
     }
 
-    function oX(dd) {
+    function OV(bb) {
       let {
-        entry: Od,
-        buy: md,
-        canAfford: Wd,
-        currency: Fd
-      } = dd;
+        entry: wb,
+        buy: Mb,
+        canAfford: eb,
+        currency: Hb
+      } = bb;
       const {
-        t: hd
-      } = (0, Xd.G)(), {
-        meta: Qd,
-        item: od
-      } = Od, Nd = () => {
-        md(Od.key, od)
+        t: lb
+      } = (0, Vb.C)(), {
+        meta: Ib,
+        item: Ub
+      } = wb, tb = () => {
+        Mb(wb.key, Ub)
       };
-      return (0, td.jsxs)("div", {
+      return (0, Ob.jsxs)("div", {
         className: "LoadoutCardFoot",
-        children: [Qd.equipped && (0, td.jsxs)("span", {
+        children: [Ib.equipped && (0, Ob.jsxs)("span", {
           className: "LoadoutCardState LoadoutCardStateEquipped",
-          children: [(0, td.jsx)(Kd.c, {
+          children: [(0, Ob.jsx)(gb.b, {
             name: "check"
-          }), hd("loadoutShop:equipped")]
-        }), Qd.unlocked && !Qd.equipped && (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsx)("span", {
+          }), lb("loadoutShop:equipped")]
+        }), Ib.unlocked && !Ib.equipped && (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsx)("span", {
             className: "LoadoutCardState",
-            children: Qd.free ? hd("loadoutShop:free") : hd("loadoutShop:owned")
-          }), (0, td.jsx)(vd.g, {
+            children: Ib.free ? lb("loadoutShop:free") : lb("loadoutShop:owned")
+          }), (0, Ob.jsx)(Lb.f, {
             className: "LoadoutCardButton",
-            disabled: !Wd,
-            onClick: Nd,
-            children: hd("loadoutShop:equip")
+            disabled: !eb,
+            onClick: tb,
+            children: lb("loadoutShop:equip")
           })]
-        }), !Qd.unlocked && (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsxs)("span", {
-            className: Rd()("LoadoutPrice", {
-              LoadoutPriceShort: !Wd
+        }), !Ib.unlocked && (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsxs)("span", {
+            className: pb()("LoadoutPrice", {
+              LoadoutPriceShort: !eb
             }),
-            children: [Fd && (0, td.jsx)("span", {
+            children: [Hb && (0, Ob.jsx)("span", {
               className: "LoadoutPriceIcon",
               style: {
-                color: Fd.iconColour
+                color: Hb.iconColour
               },
-              children: (0, td.jsx)(hX, {
-                iconName: Fd.icon
+              children: (0, Ob.jsx)(gV, {
+                iconName: Hb.icon
               })
-            }), od.cost]
-          }), (0, td.jsx)(vd.m, {
+            }), Ub.cost]
+          }), (0, Ob.jsx)(Lb.p, {
             className: "LoadoutCardButton",
-            disabled: !Wd,
-            onClick: Nd,
-            children: hd("loadoutShop:unlock")
+            disabled: !eb,
+            onClick: tb,
+            children: lb("loadoutShop:unlock")
           })]
         })]
       })
     }
 
-    function NX(dd) {
+    function UV(bb) {
       let {
-        shopInfo: Od,
-        selectedCategoryKey: md,
-        selectCategory: Fd,
-        buy: Rd,
-        canAfford: Kd,
-        currencyAmounts: hd
-      } = dd;
+        shopInfo: wb,
+        selectedCategoryKey: Mb,
+        selectCategory: Hb,
+        buy: pb,
+        canAfford: gb,
+        currencyAmounts: lb
+      } = bb;
       const {
-        t: vd
-      } = (0, Xd.G)(), Qd = fR(Od), {
-        loadout: od,
-        items: Nd
-      } = Od[md], qd = dd => Kd(dd, (0, JF.b)(dd, null)), Hd = {
-        buy: (dd, Od) => {
-          qd(Od) && Rd(dd, Od)
+        t: Lb
+      } = (0, Vb.C)(), Ib = op(wb), {
+        loadout: Ub,
+        items: tb
+      } = wb[Mb], Cb = bb => gb(bb, (0, xH.d)(bb, null)), Eb = {
+        buy: (bb, wb) => {
+          Cb(wb) && pb(bb, wb)
         },
-        affordable: qd,
-        currencyAmounts: hd
+        affordable: Cb,
+        currencyAmounts: lb
       };
-      return (0, td.jsx)("div", {
+      return (0, Ob.jsx)("div", {
         className: "LoadoutShopHost",
-        children: (0, td.jsxs)("div", {
+        children: (0, Ob.jsxs)("div", {
           className: "LoadoutShop",
-          children: [(0, td.jsxs)("header", {
+          children: [(0, Ob.jsxs)("header", {
             className: "LoadoutHeader",
-            children: [(0, td.jsx)("h2", {
-              children: vd("loadoutShop:title")
-            }), (0, td.jsx)("p", {
-              children: vd("loadoutShop:subtitle")
+            children: [(0, Ob.jsx)("h2", {
+              children: Lb("loadoutShop:title")
+            }), (0, Ob.jsx)("p", {
+              children: Lb("loadoutShop:subtitle")
             })]
-          }), (0, td.jsx)("nav", {
+          }), (0, Ob.jsx)("nav", {
             className: "LoadoutSlots",
             "data-pad-tabs": "3",
-            children: Qd.map((dd => {
-              var Rd, Xd;
+            children: Ib.map((bb => {
+              var pb, Vb;
               const {
-                config: Kd
-              } = dd;
-              return (0, td.jsxs)(Wd.Fragment, {
-                children: ["perk" === Kd.slot && (0, td.jsx)(HX, {
-                  points: Kd.points,
-                  reached: (null !== (Rd = null === hd || void 0 === hd || null === (Xd = hd[Kd.pointsCurrency]) || void 0 === Xd ? void 0 : Xd.amount) && void 0 !== Rd ? Rd : 0) >= Kd.points
-                }), (0, td.jsx)(yX, {
-                  slot: dd,
-                  items: Od[dd.categoryKey].items,
-                  selected: dd.categoryKey === md,
+                config: gb
+              } = bb;
+              return (0, Ob.jsxs)(eb.Fragment, {
+                children: ["perk" === gb.slot && (0, Ob.jsx)(CV, {
+                  points: gb.points,
+                  reached: (null !== (pb = null === lb || void 0 === lb || null === (Vb = lb[gb.pointsCurrency]) || void 0 === Vb ? void 0 : Vb.amount) && void 0 !== pb ? pb : 0) >= gb.points
+                }), (0, Ob.jsx)(EV, {
+                  slot: bb,
+                  items: wb[bb.categoryKey].items,
+                  selected: bb.categoryKey === Mb,
                   onClick: () => {
-                    Fd(dd.categoryKey)
+                    Hb(bb.categoryKey)
                   }
                 })]
-              }, dd.categoryKey)
+              }, bb.categoryKey)
             }))
-          }), (0, td.jsxs)("main", {
+          }), (0, Ob.jsxs)("main", {
             className: "LoadoutPicker",
             "data-pad-initial-area": !0,
-            children: ["gun" === (null === od || void 0 === od ? void 0 : od.slot) && (0, td.jsx)(TX, {
-              items: Nd,
-              ...Hd
-            }), "perk" === (null === od || void 0 === od ? void 0 : od.slot) && (0, td.jsxs)(td.Fragment, {
-              children: [(0, td.jsx)("p", {
+            children: ["gun" === (null === Ub || void 0 === Ub ? void 0 : Ub.slot) && (0, Ob.jsx)(BV, {
+              items: tb,
+              ...Eb
+            }), "perk" === (null === Ub || void 0 === Ub ? void 0 : Ub.slot) && (0, Ob.jsxs)(Ob.Fragment, {
+              children: [(0, Ob.jsx)("p", {
                 className: "LoadoutPickerNote",
-                children: vd("loadoutShop:tierPicker", {
-                  tier: od.tier,
-                  points: od.points
+                children: Lb("loadoutShop:tierPicker", {
+                  tier: Ub.tier,
+                  points: Ub.points
                 })
-              }), (0, td.jsx)("div", {
+              }), (0, Ob.jsx)("div", {
                 className: "LoadoutPerkGrid",
-                children: OX(Nd, "perk").map((dd => (0, td.jsx)(tX, {
-                  entry: dd,
-                  buy: Hd.buy,
-                  canAfford: qd(dd.item),
-                  currency: qX(hd, dd.item)
-                }, dd.key)))
+                children: bV(tb, "perk").map((bb => (0, Ob.jsx)(IV, {
+                  entry: bb,
+                  buy: Eb.buy,
+                  canAfford: Cb(bb.item),
+                  currency: tV(lb, bb.item)
+                }, bb.key)))
               })]
             })]
           })]
@@ -5379,815 +5379,815 @@ export const modules = {
       })
     }
 
-    function qX(dd, Od) {
-      return Od.currency ? null === dd || void 0 === dd ? void 0 : dd[Od.currency] : void 0
+    function tV(bb, wb) {
+      return wb.currency ? null === bb || void 0 === bb ? void 0 : bb[wb.currency] : void 0
     }
 
-    function HX(dd) {
+    function CV(bb) {
       let {
-        points: Od,
-        reached: md
-      } = dd;
+        points: wb,
+        reached: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)();
-      return (0, td.jsxs)("div", {
-        className: Rd()("LoadoutStep", {
-          LoadoutStepReached: md
+        t: eb
+      } = (0, Vb.C)();
+      return (0, Ob.jsxs)("div", {
+        className: pb()("LoadoutStep", {
+          LoadoutStepReached: Mb
         }),
-        title: Wd("loadoutShop:pointsTooltip", {
-          points: Od
+        title: eb("loadoutShop:pointsTooltip", {
+          points: wb
         }),
-        children: [(0, td.jsx)(Kd.c, {
+        children: [(0, Ob.jsx)(gb.b, {
           name: "arrow-right",
           className: "LoadoutStepArrow"
-        }), (0, td.jsxs)("span", {
-          children: [md && (0, td.jsx)(Kd.c, {
+        }), (0, Ob.jsxs)("span", {
+          children: [Mb && (0, Ob.jsx)(gb.b, {
             name: "check"
-          }), Wd("loadoutShop:points", {
-            points: Od
+          }), eb("loadoutShop:points", {
+            points: wb
           })]
         })]
       })
     }
 
-    function yX(dd) {
+    function EV(bb) {
       let {
-        slot: Od,
-        items: md,
-        selected: Wd,
-        onClick: Fd
-      } = dd;
+        slot: wb,
+        items: Mb,
+        selected: eb,
+        onClick: Hb
+      } = bb;
       const {
-        t: hd
-      } = (0, Xd.G)(), {
-        config: vd
-      } = Od, Qd = "gun" === vd.slot ? bX(OX(md, "gun")) : bX(OX(md, "perk")), od = "gun" === vd.slot ? hd("loadoutShop:gun") : hd("loadoutShop:tier", {
-        tier: vd.tier
+        t: lb
+      } = (0, Vb.C)(), {
+        config: Lb
+      } = wb, Ib = "gun" === Lb.slot ? FV(bV(Mb, "gun")) : FV(bV(Mb, "perk")), Ub = "gun" === Lb.slot ? lb("loadoutShop:gun") : lb("loadoutShop:tier", {
+        tier: Lb.tier
       });
-      return (0, td.jsxs)("button", {
+      return (0, Ob.jsxs)("button", {
         type: "button",
-        className: Rd()("LoadoutSlot", {
-          LoadoutSlotSelected: Wd,
-          LoadoutSlotEmpty: !Qd
+        className: pb()("LoadoutSlot", {
+          LoadoutSlotSelected: eb,
+          LoadoutSlotEmpty: !Ib
         }),
         "data-pad-tab": !0,
-        "data-pad-selected": Wd ? "true" : void 0,
-        "aria-pressed": Wd,
-        onClick: Fd,
-        children: [(0, td.jsxs)("span", {
+        "data-pad-selected": eb ? "true" : void 0,
+        "aria-pressed": eb,
+        onClick: Hb,
+        children: [(0, Ob.jsxs)("span", {
           className: "LoadoutSlotArt",
-          children: ["gun" === (null === Qd || void 0 === Qd ? void 0 : Qd.meta.kind) && (0, td.jsx)(BF.c, {
-            itemName: Qd.meta.gun,
+          children: ["gun" === (null === Ib || void 0 === Ib ? void 0 : Ib.meta.kind) && (0, Ob.jsx)(rH.c, {
+            itemName: Ib.meta.gun,
             amount: 0,
             gunTransform: "none"
-          }), "perk" === (null === Qd || void 0 === Qd ? void 0 : Qd.meta.kind) && (0, td.jsx)(Kd.c, {
-            name: Qd.meta.icon
-          }), !Qd && (0, td.jsx)(Kd.c, {
+          }), "perk" === (null === Ib || void 0 === Ib ? void 0 : Ib.meta.kind) && (0, Ob.jsx)(gb.b, {
+            name: Ib.meta.icon
+          }), !Ib && (0, Ob.jsx)(gb.b, {
             name: "plus"
           })]
-        }), (0, td.jsxs)("span", {
+        }), (0, Ob.jsxs)("span", {
           className: "LoadoutSlotText",
-          children: [(0, td.jsx)("small", {
-            children: od
-          }), (0, td.jsx)("b", {
-            children: Qd ? Qd.key : hd("gun" === vd.slot ? "loadoutShop:noGun" : "loadoutShop:noPerk")
+          children: [(0, Ob.jsx)("small", {
+            children: Ub
+          }), (0, Ob.jsx)("b", {
+            children: Ib ? Ib.key : lb("gun" === Lb.slot ? "loadoutShop:noGun" : "loadoutShop:noPerk")
           })]
         })]
       })
     }
 
-    function bX(dd) {
-      var Od;
-      return null !== (Od = dd.find((dd => dd.meta.equipped))) && void 0 !== Od ? Od : null
+    function FV(bb) {
+      var wb;
+      return null !== (wb = bb.find((bb => bb.meta.equipped))) && void 0 !== wb ? wb : null
     }
 
-    function TX(dd) {
+    function BV(bb) {
       let {
-        items: Od,
-        buy: md,
-        affordable: Wd,
-        currencyAmounts: Fd
-      } = dd;
+        items: wb,
+        buy: Mb,
+        affordable: eb,
+        currencyAmounts: Hb
+      } = bb;
       const {
-        t: Rd
-      } = (0, Xd.G)(), Kd = OX(Od, "gun"), hd = bX(Kd), vd = {};
+        t: pb
+      } = (0, Vb.C)(), gb = bV(wb, "gun"), lb = FV(gb), Lb = {};
       for (const {
-          meta: Xd
+          meta: Vb
         }
-        of Kd) {
-        const dd = CR.e.get(`${Xd.gun}GunStats`),
-          Od = RX(Xd.gun, dd);
-        Od && (vd[Xd.gun] = Od)
+        of gb) {
+        const bb = Pp.c.get(`${Vb.gun}GunStats`),
+          wb = HV(Vb.gun, bb);
+        wb && (Lb[Vb.gun] = wb)
       }
-      const Qd = function(dd) {
-          const Od = {},
-            md = {};
-          for (const Fd of FX) {
-            Od[Fd] = -1 / 0, md[Fd] = 1 / 0;
-            for (const Wd in dd) Od[Fd] = Math.max(Od[Fd], dd[Wd][Fd]), md[Fd] = Math.min(md[Fd], dd[Wd][Fd])
+      const Ib = function(bb) {
+          const wb = {},
+            Mb = {};
+          for (const Hb of eV) {
+            wb[Hb] = -1 / 0, Mb[Hb] = 1 / 0;
+            for (const eb in bb) wb[Hb] = Math.max(wb[Hb], bb[eb][Hb]), Mb[Hb] = Math.min(Mb[Hb], bb[eb][Hb])
           }
-          const Wd = {};
-          for (const Fd in dd) {
-            Wd[Fd] = {};
-            for (const Rd of FX) Wd[Fd][Rd] = Math.max(.06, KX(Rd, dd[Fd][Rd], Od[Rd], md[Rd]))
+          const eb = {};
+          for (const Hb in bb) {
+            eb[Hb] = {};
+            for (const pb of eV) eb[Hb][pb] = Math.max(.06, VV(pb, bb[Hb][pb], wb[pb], Mb[pb]))
           }
-          return Wd
-        }(vd),
-        od = hd ? vd[hd.meta.gun] : void 0,
-        [Nd, qd] = Rd("loadoutShop:comparing", {
+          return eb
+        }(Lb),
+        Ub = lb ? Lb[lb.meta.gun] : void 0,
+        [tb, Cb] = pb("loadoutShop:comparing", {
           gun: "\x01"
         }).split("\x01");
-      return (0, td.jsxs)(td.Fragment, {
-        children: [hd && (0, td.jsxs)("p", {
+      return (0, Ob.jsxs)(Ob.Fragment, {
+        children: [lb && (0, Ob.jsxs)("p", {
           className: "LoadoutPickerNote",
-          children: [Nd, (0, td.jsx)("b", {
+          children: [tb, (0, Ob.jsx)("b", {
             className: "LoadoutGold",
-            children: hd.key
-          }), qd]
-        }), (0, td.jsx)("div", {
+            children: lb.key
+          }), Cb]
+        }), (0, Ob.jsx)("div", {
           className: "LoadoutGunGrid",
-          children: Kd.map((dd => (0, td.jsx)(QX, {
-            entry: dd,
-            stats: vd[dd.meta.gun],
-            bars: Qd[dd.meta.gun],
-            compared: dd.meta.equipped ? void 0 : od,
-            buy: md,
-            canAfford: Wd(dd.item),
-            currency: qX(Fd, dd.item)
-          }, dd.key)))
+          children: gb.map((bb => (0, Ob.jsx)(LV, {
+            entry: bb,
+            stats: Lb[bb.meta.gun],
+            bars: Ib[bb.meta.gun],
+            compared: bb.meta.equipped ? void 0 : Ub,
+            buy: Mb,
+            canAfford: eb(bb.item),
+            currency: tV(Hb, bb.item)
+          }, bb.key)))
         })]
       })
     }
-    var pX = md(35563),
-      YX = md(35559);
+    var sV = Mb(35351),
+      mV = Mb(35342);
 
-    function gX(dd) {
+    function hV(bb) {
       let {
-        currency: Od,
-        info: md,
-        smaller: Fd,
-        show: Xd
-      } = dd;
-      const Kd = (0, Wd.useRef)(null);
-      (0, YX.g)(Od, Kd, Xd);
-      const hd = (0, YX.j)(Od, md.amount);
-      return (0, td.jsxs)("div", {
-        className: Rd()("ShopCurrencyDiv", {
-          SmallText: Fd
+        currency: wb,
+        info: Mb,
+        smaller: Hb,
+        show: Vb
+      } = bb;
+      const gb = (0, eb.useRef)(null);
+      (0, mV.d)(wb, gb, Vb);
+      const lb = (0, mV.g)(wb, Mb.amount);
+      return (0, Ob.jsxs)("div", {
+        className: pb()("ShopCurrencyDiv", {
+          SmallText: Hb
         }),
-        children: [(0, td.jsxs)("div", {
+        children: [(0, Ob.jsxs)("div", {
           className: "ShopCurrencyDetails",
-          children: [(0, td.jsx)("div", {
-            ref: Kd,
+          children: [(0, Ob.jsx)("div", {
+            ref: gb,
             className: "ShopCurrencyAmtIcon",
             style: {
-              color: md.iconColour
+              color: Mb.iconColour
             },
-            children: (0, td.jsx)(hX, {
-              iconName: md.icon
+            children: (0, Ob.jsx)(gV, {
+              iconName: Mb.icon
             })
-          }), "\xa0", (0, pX.d)(hd, 6)]
-        }), void 0 !== md.subtext && md.subtext.length > 0 && (0, td.jsx)("div", {
+          }), "\xa0", (0, sV.b)(lb, 6)]
+        }), void 0 !== Mb.subtext && Mb.subtext.length > 0 && (0, Ob.jsx)("div", {
           className: "ShopCurrencySubtext",
-          children: (0, td.jsx)(SF.d, {
-            text: md.subtext
+          children: (0, Ob.jsx)(RH.d, {
+            text: Mb.subtext
           })
         })]
       })
     }
-    class wX {
-      constructor(dd) {
-        this.info = dd
+    class zV {
+      constructor(bb) {
+        this.info = bb
       }
-      static fromShopInfo(dd) {
-        const Od = {};
-        for (const md in dd) {
-          const Wd = !0 === dd[md].redDot && !0 !== dd[md].forceRemoveRedDot;
-          Od[md] = {
-            redDot: Wd,
+      static fromShopInfo(bb) {
+        const wb = {};
+        for (const Mb in bb) {
+          const eb = !0 === bb[Mb].redDot && !0 !== bb[Mb].forceRemoveRedDot;
+          wb[Mb] = {
+            redDot: eb,
             items: {}
           };
-          for (const Fd in dd[md].items) {
-            const Wd = dd[md].items[Fd],
-              Rd = !0 === Wd.redDot && !0 !== Wd.forceRemoveRedDot;
-            Od[md].items[Fd] = {
-              redDot: Rd
+          for (const Hb in bb[Mb].items) {
+            const eb = bb[Mb].items[Hb],
+              pb = !0 === eb.redDot && !0 !== eb.forceRemoveRedDot;
+            wb[Mb].items[Hb] = {
+              redDot: pb
             }
           }
         }
-        return new wX(Od)
+        return new zV(wb)
       }
       anyCategoryHasRedDots() {
-        for (const dd in this.info)
-          if (this.categoryHasRedDot(dd)) return !0;
+        for (const bb in this.info)
+          if (this.categoryHasRedDot(bb)) return !0;
         return !1
       }
-      doesCategoryExist(dd) {
-        return !(0, sm.O)(this.info[dd])
+      doesCategoryExist(bb) {
+        return !(0, DM.K)(this.info[bb])
       }
-      categoryHasRedDot(dd) {
-        return !0 === this.info[dd].redDot
+      categoryHasRedDot(bb) {
+        return !0 === this.info[bb].redDot
       }
-      updateCategoryRedDot(dd, Od) {
-        this.info[dd].redDot = Od
+      updateCategoryRedDot(bb, wb) {
+        this.info[bb].redDot = wb
       }
-      doesItemExist(dd, Od) {
-        return this.doesCategoryExist(dd) && !(0, sm.O)(this.info[dd].items[Od])
+      doesItemExist(bb, wb) {
+        return this.doesCategoryExist(bb) && !(0, DM.K)(this.info[bb].items[wb])
       }
-      itemHasRedDot(dd, Od) {
-        return !0 === this.info[dd].items[Od].redDot
+      itemHasRedDot(bb, wb) {
+        return !0 === this.info[bb].items[wb].redDot
       }
-      updateItemRedDot(dd, Od, md) {
-        this.info[dd].items[Od].redDot = md
+      updateItemRedDot(bb, wb, Mb) {
+        this.info[bb].items[wb].redDot = Mb
       }
       shallowCopy() {
-        return new wX(this.info)
+        return new zV(this.info)
       }
     }
 
-    function aX(dd, Od) {
-      return `${dd}\x1f${Od}`
+    function XV(bb, wb) {
+      return `${bb}\x1f${wb}`
     }
 
-    function EX(dd, Od, md) {
-      const Wd = wX.fromShopInfo(dd);
-      for (const Kd in dd) {
-        var Fd;
-        if (md.doesCategoryExist(Kd)) {
-          (null === (Fd = Od[Kd]) || void 0 === Fd ? void 0 : Fd.redDot) === dd[Kd].redDot && Wd.updateCategoryRedDot(Kd, md.categoryHasRedDot(Kd));
-          for (const Fd in dd[Kd].items) {
-            var Rd, Xd;
-            md.doesItemExist(Kd, Fd) && ((null === (Rd = Od[Kd]) || void 0 === Rd || null === (Xd = Rd.items[Fd]) || void 0 === Xd ? void 0 : Xd.redDot) === dd[Kd].items[Fd].redDot && Wd.updateItemRedDot(Kd, Fd, md.itemHasRedDot(Kd, Fd)))
+    function xV(bb, wb, Mb) {
+      const eb = zV.fromShopInfo(bb);
+      for (const gb in bb) {
+        var Hb;
+        if (Mb.doesCategoryExist(gb)) {
+          (null === (Hb = wb[gb]) || void 0 === Hb ? void 0 : Hb.redDot) === bb[gb].redDot && eb.updateCategoryRedDot(gb, Mb.categoryHasRedDot(gb));
+          for (const Hb in bb[gb].items) {
+            var pb, Vb;
+            Mb.doesItemExist(gb, Hb) && ((null === (pb = wb[gb]) || void 0 === pb || null === (Vb = pb.items[Hb]) || void 0 === Vb ? void 0 : Vb.redDot) === bb[gb].items[Hb].redDot && eb.updateItemRedDot(gb, Hb, Mb.itemHasRedDot(gb, Hb)))
           }
         }
       }
-      return Wd
+      return eb
     }
 
-    function JX(dd, Od, md, Wd) {
-      if (null !== Od && !Wd) return Od;
-      if (null === md || !dd[md]) {
-        const Od = nF(dd);
-        return Od.length > 0 ? Od[0] : null
+    function jV(bb, wb, Mb, eb) {
+      if (null !== wb && !eb) return wb;
+      if (null === Mb || !bb[Mb]) {
+        const wb = JH(bb);
+        return wb.length > 0 ? wb[0] : null
       }
-      return md
+      return Mb
     }
 
-    function UX(dd, Od, md) {
-      if ((0, sm.O)(dd) || 0 === Object.keys(dd).length) return {
+    function KV(bb, wb, Mb) {
+      if ((0, DM.K)(bb) || 0 === Object.keys(bb).length) return {
         shopInfo: {},
-        redDotInfo: wX.fromShopInfo({}),
+        redDotInfo: zV.fromShopInfo({}),
         selectedCategoryKey: null
       };
       const {
-        shopInfo: Wd,
-        autoSelectCategory: Fd
-      } = function(dd) {
-        const Od = Bd.siteUsedData[Bd.siteUsed].adConfig.showRewardedAds,
-          md = {};
-        let Wd = null;
-        for (const Fd in dd) {
-          const Rd = dd[Fd],
-            Xd = {};
-          let Kd = !1;
-          for (const dd in Rd.items) {
-            const md = Rd.items[dd];
-            (0, JF.f)(md, Od) && (Xd[dd] = md, Kd = !0)
+        shopInfo: eb,
+        autoSelectCategory: Hb
+      } = function(bb) {
+        const wb = Rb.siteUsedData[Rb.siteUsed].adConfig.showRewardedAds,
+          Mb = {};
+        let eb = null;
+        for (const Hb in bb) {
+          const pb = bb[Hb],
+            Vb = {};
+          let gb = !1;
+          for (const bb in pb.items) {
+            const Mb = pb.items[bb];
+            (0, xH.i)(Mb, wb) && (Vb[bb] = Mb, gb = !0)
           }
-          Kd && (md[Fd] = {
-            ...Rd,
-            items: Xd
-          }, !0 === Rd.autoSelectCategory && (Wd = Fd))
+          gb && (Mb[Hb] = {
+            ...pb,
+            items: Vb
+          }, !0 === pb.autoSelectCategory && (eb = Hb))
         }
         return {
-          shopInfo: md,
-          autoSelectCategory: Wd
+          shopInfo: Mb,
+          autoSelectCategory: eb
         }
-      }(dd);
+      }(bb);
       return {
-        shopInfo: Wd,
-        redDotInfo: EX(Wd, Od.shopInfo, Od.redDotInfo),
-        selectedCategoryKey: JX(Wd, Fd, Od.selectedCategoryKey, md)
+        shopInfo: eb,
+        redDotInfo: xV(eb, wb.shopInfo, wb.redDotInfo),
+        selectedCategoryKey: jV(eb, Hb, wb.selectedCategoryKey, Mb)
       }
     }
 
-    function xX(dd, Od, md, Wd, Fd) {
-      const Rd = {},
-        Xd = (dd, Od, Xd, Kd) => {
-          var hd, vd;
-          const Qd = aX(dd, Od),
-            td = null !== (hd = md[Qd]) && void 0 !== hd ? hd : md[Od];
-          if (null !== (vd = Kd.userInput) && void 0 !== vd && vd.type) switch (Kd.userInput.type) {
+    function rV(bb, wb, Mb, eb, Hb) {
+      const pb = {},
+        Vb = (bb, wb, Vb, gb) => {
+          var lb, Lb;
+          const Ib = XV(bb, wb),
+            Ob = null !== (lb = Mb[Ib]) && void 0 !== lb ? lb : Mb[wb];
+          if (null !== (Lb = gb.userInput) && void 0 !== Lb && Lb.type) switch (gb.userInput.type) {
             case "dropdown": {
-              var od;
-              const dd = !td || !Kd.userInput.dropdownOptions.some((dd => (0, JF.c)(dd) === td)),
-                Od = Kd.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Xd || void 0 === Xd || null === (od = Xd.userInput) || void 0 === od ? void 0 : od.type) || JSON.stringify(Xd.userInput.dropdownOptions) !== JSON.stringify(Kd.userInput.dropdownOptions)),
-                md = Kd.userInput,
-                Wd = !(0, sm.O)(md.initialValue) && md.dropdownOptions.some((dd => (0, JF.c)(dd) === md.initialValue));
-              var Nd;
-              if (dd || Od)
-                if (Wd) Rd[Qd] = null !== (Nd = Kd.userInput.initialValue) && void 0 !== Nd ? Nd : null;
-                else Kd.userInput.dropdownOptions.length > 0 ? Rd[Qd] = (0, JF.c)(Kd.userInput.dropdownOptions[0]) : Rd[Qd] = null;
-              else Rd[Qd] = td;
+              var Ub;
+              const bb = !Ob || !gb.userInput.dropdownOptions.some((bb => (0, xH.f)(bb) === Ob)),
+                wb = gb.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Vb || void 0 === Vb || null === (Ub = Vb.userInput) || void 0 === Ub ? void 0 : Ub.type) || JSON.stringify(Vb.userInput.dropdownOptions) !== JSON.stringify(gb.userInput.dropdownOptions)),
+                Mb = gb.userInput,
+                eb = !(0, DM.K)(Mb.initialValue) && Mb.dropdownOptions.some((bb => (0, xH.f)(bb) === Mb.initialValue));
+              var tb;
+              if (bb || wb)
+                if (eb) pb[Ib] = null !== (tb = gb.userInput.initialValue) && void 0 !== tb ? tb : null;
+                else gb.userInput.dropdownOptions.length > 0 ? pb[Ib] = (0, xH.f)(gb.userInput.dropdownOptions[0]) : pb[Ib] = null;
+              else pb[Ib] = Ob;
               return
             }
             case "text":
             case "number":
-              var qd, Hd, yd;
-              if ((null === Xd || void 0 === Xd ? void 0 : Xd.userInput) !== Kd.userInput) Rd[Qd] = null !== (qd = null !== (Hd = Kd.userInput.initialValue) && void 0 !== Hd ? Hd : td) && void 0 !== qd ? qd : "";
-              else Rd[Qd] = null !== (yd = null !== td && void 0 !== td ? td : Kd.userInput.initialValue) && void 0 !== yd ? yd : "";
+              var Cb, Eb, Fb;
+              if ((null === Vb || void 0 === Vb ? void 0 : Vb.userInput) !== gb.userInput) pb[Ib] = null !== (Cb = null !== (Eb = gb.userInput.initialValue) && void 0 !== Eb ? Eb : Ob) && void 0 !== Cb ? Cb : "";
+              else pb[Ib] = null !== (Fb = null !== Ob && void 0 !== Ob ? Ob : gb.userInput.initialValue) && void 0 !== Fb ? Fb : "";
               return;
             case "color":
-              var bd, Td, pd;
-              if ((null === Xd || void 0 === Xd ? void 0 : Xd.userInput) !== Kd.userInput) Rd[Qd] = null !== (bd = null !== (Td = Kd.userInput.initialValue) && void 0 !== Td ? Td : td) && void 0 !== bd ? bd : "#000000";
-              else Rd[Qd] = null !== (pd = null !== td && void 0 !== td ? td : Kd.userInput.initialValue) && void 0 !== pd ? pd : "#000000";
+              var Bb, sb, mb;
+              if ((null === Vb || void 0 === Vb ? void 0 : Vb.userInput) !== gb.userInput) pb[Ib] = null !== (Bb = null !== (sb = gb.userInput.initialValue) && void 0 !== sb ? sb : Ob) && void 0 !== Bb ? Bb : "#000000";
+              else pb[Ib] = null !== (mb = null !== Ob && void 0 !== Ob ? Ob : gb.userInput.initialValue) && void 0 !== mb ? mb : "#000000";
               return;
             case "player": {
-              const dd = (0, JF.d)(Wd, Fd, Kd.userInput);
-              return void(td && dd.includes(td) ? Rd[Qd] = td : Rd[Qd] = dd.length > 0 ? dd[0] : null)
+              const bb = (0, xH.g)(eb, Hb, gb.userInput);
+              return void(Ob && bb.includes(Ob) ? pb[Ib] = Ob : pb[Ib] = bb.length > 0 ? bb[0] : null)
             }
           }
         };
-      for (const hd in dd)
-        for (const md in dd[hd].items) {
-          var Kd;
-          const Wd = dd[hd].items[md];
-          Xd(hd, md, null === (Kd = Od[hd]) || void 0 === Kd ? void 0 : Kd.items[md], Wd)
+      for (const lb in bb)
+        for (const Mb in bb[lb].items) {
+          var gb;
+          const eb = bb[lb].items[Mb];
+          Vb(lb, Mb, null === (gb = wb[lb]) || void 0 === gb ? void 0 : gb.items[Mb], eb)
         }
-      return Rd
+      return pb
     }
 
-    function BX(dd, Od) {
-      return !(0, sm.O)(Od) && !(0, sm.O)(dd) && Od in dd
+    function RV(bb, wb) {
+      return !(0, DM.K)(wb) && !(0, DM.K)(bb) && wb in bb
     }
-    const SX = (0, Wd.memo)((function(dd) {
-      var Od, md;
+    const DV = (0, eb.memo)((function(bb) {
+      var wb, Mb;
       let {
-        show: Fd
-      } = dd;
-      const Xd = (0, kO.f)("players", rX),
-        Kd = (0, kO.f)("players", GX),
-        Qd = (0, rF.d)(),
-        [Nd, qd] = (0, Wd.useState)({
+        show: Hb
+      } = bb;
+      const Vb = (0, yw.e)("players", WV),
+        gb = (0, yw.e)("players", JV),
+        Ib = (0, AH.c)(),
+        [tb, Cb] = (0, eb.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: wX.fromShopInfo({}),
+          redDotInfo: zV.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        yd = (0, Wd.useRef)(""),
-        bd = (0, Wd.useRef)(null),
-        pd = (0, Wd.useRef)(null),
-        Yd = (0, Wd.useRef)(0),
-        gd = (0, Wd.useRef)(void 0),
-        wd = (0, Wd.useRef)(null),
-        Ed = (0, Wd.useRef)(Nd),
-        Ud = (0, Wd.useRef)(null),
-        xd = Nd.redDotInfo.anyCategoryHasRedDots(),
-        [Bd, Sd] = (0, Wd.useState)(null),
-        sd = (0, Wd.useRef)(!1);
-      let ud = !1,
-        Vd = 0,
-        Ad = 0;
-      if (Nd.currencyAmounts) {
-        for (const dd in Nd.currencyAmounts) {
-          var rd;
-          const Od = Nd.currencyAmounts[dd];
-          Od.hidden || (Vd++, (null === (rd = Od.subtext) || void 0 === rd ? void 0 : rd.length) > 0 && Ad++)
+        Fb = (0, eb.useRef)(""),
+        Bb = (0, eb.useRef)(null),
+        mb = (0, eb.useRef)(null),
+        hb = (0, eb.useRef)(0),
+        zb = (0, eb.useRef)(void 0),
+        Xb = (0, eb.useRef)(null),
+        xb = (0, eb.useRef)(tb),
+        Kb = (0, eb.useRef)(null),
+        rb = tb.redDotInfo.anyCategoryHasRedDots(),
+        [Rb, Db] = (0, eb.useState)(null),
+        cb = (0, eb.useRef)(!1);
+      let Yb = !1,
+        Zb = 0,
+        fb = 0;
+      if (tb.currencyAmounts) {
+        for (const bb in tb.currencyAmounts) {
+          var Ab;
+          const wb = tb.currencyAmounts[bb];
+          wb.hidden || (Zb++, (null === (Ab = wb.subtext) || void 0 === Ab ? void 0 : Ab.length) > 0 && fb++)
         }
-        ud = Vd + Ad > 4
-      }(0, Wd.useEffect)((() => {
-        um.j.lQ("showShopIconRedDot", xd, !0)
-      }), [xd]), (0, Wd.useEffect)((() => {
-        Td.gameBridge.send("setShopOpen", Fd), Fd || (clearTimeout(gd.current), qd((dd => dd.awaitingPurchase ? {
-          ...dd,
+        Yb = Zb + fb > 4
+      }(0, eb.useEffect)((() => {
+        cM.k.iI("showShopIconRedDot", rb, !0)
+      }), [rb]), (0, eb.useEffect)((() => {
+        sb.gameBridge.send("setShopOpen", Hb), Hb || (clearTimeout(zb.current), Cb((bb => bb.awaitingPurchase ? {
+          ...bb,
           awaitingPurchase: !1
-        } : dd)))
-      }), [Fd]), (0, Wd.useEffect)((() => () => {
-        Td.gameBridge.send("setShopOpen", !1), clearTimeout(gd.current)
-      }), []), (0, Wd.useEffect)((() => {
-        Ed.current = Nd
-      }), [Nd]), (0, Wd.useEffect)((() => {
-        if (null === Bd) return;
-        return (0, iF.d)("pointerdown", (dd => {
-          const Od = dd.target;
-          null !== Od && void 0 !== Od && Od.closest(".ShopItem") || Sd(null)
+        } : bb)))
+      }), [Hb]), (0, eb.useEffect)((() => () => {
+        sb.gameBridge.send("setShopOpen", !1), clearTimeout(zb.current)
+      }), []), (0, eb.useEffect)((() => {
+        xb.current = tb
+      }), [tb]), (0, eb.useEffect)((() => {
+        if (null === Rb) return;
+        return (0, ZH.c)("pointerdown", (bb => {
+          const wb = bb.target;
+          null !== wb && void 0 !== wb && wb.closest(".ShopItem") || Db(null)
         }))
-      }), [Bd]);
-      const Gd = dd => {
-          qd((Od => ({
-            ...Od,
-            ...dd
+      }), [Rb]);
+      const Wb = bb => {
+          Cb((wb => ({
+            ...wb,
+            ...bb
           })))
         },
-        nd = dd => {
-          var Od;
-          clearTimeout(null === (Od = Nd.onBoughtInfo) || void 0 === Od ? void 0 : Od.timeout);
-          const md = setTimeout((() => {
-            Gd({
+        Jb = bb => {
+          var wb;
+          clearTimeout(null === (wb = tb.onBoughtInfo) || void 0 === wb ? void 0 : wb.timeout);
+          const Mb = setTimeout((() => {
+            Wb({
               onBoughtInfo: null
             })
           }), 3e3);
-          yd.current = dd, Gd({
+          Fb.current = bb, Wb({
             onBoughtInfo: {
-              text: dd,
-              timeout: md,
-              categoryKey: bd.current
+              text: bb,
+              timeout: Mb,
+              categoryKey: Bb.current
             }
           })
         },
-        Pd = dd => {
-          const Od = UX(dd, Nd, !0);
-          return 0 === Object.keys(Od.shopInfo).length && Jd.e.set({
+        Nb = bb => {
+          const wb = KV(bb, tb, !0);
+          return 0 === Object.keys(wb.shopInfo).length && jb.c.set({
             openEverythingMenuName: null
           }), {
-            ...Od,
-            userInputsPerItem: xX(Od.shopInfo, Nd.shopInfo, Nd.userInputsPerItem, Xd, Kd)
+            ...wb,
+            userInputsPerItem: rV(wb.shopInfo, tb.shopInfo, tb.userInputsPerItem, Vb, gb)
           }
         },
-        zd = () => {
-          var dd;
-          return null !== (dd = Ud.current) && void 0 !== dd ? dd : Nd
+        vb = () => {
+          var bb;
+          return null !== (bb = Kb.current) && void 0 !== bb ? bb : tb
         },
-        cd = dd => {
-          const Od = zd(),
-            md = UX(dd, Od, !1);
-          Ud.current = md;
-          const Wd = md.redDotInfo.anyCategoryHasRedDots();
-          Wd !== Od.redDotInfo.anyCategoryHasRedDots() && um.j.lQ("showShopIconRedDot", Wd, !0)
+        Qb = bb => {
+          const wb = vb(),
+            Mb = KV(bb, wb, !1);
+          Kb.current = Mb;
+          const eb = Mb.redDotInfo.anyCategoryHasRedDots();
+          eb !== wb.redDotInfo.anyCategoryHasRedDots() && cM.k.iI("showShopIconRedDot", eb, !0)
         },
-        jd = () => {
-          const dd = Ud.current;
-          null !== dd && (Ud.current = null, qd((Od => {
-            const md = xX(dd.shopInfo, Od.shopInfo, Od.userInputsPerItem, Xd, Kd);
+        Gb = () => {
+          const bb = Kb.current;
+          null !== bb && (Kb.current = null, Cb((wb => {
+            const Mb = rV(bb.shopInfo, wb.shopInfo, wb.userInputsPerItem, Vb, gb);
             return {
-              ...Od,
-              ...dd,
-              userInputsPerItem: md
+              ...wb,
+              ...bb,
+              userInputsPerItem: Mb
             }
           })))
         },
-        Dd = (dd, Od, md) => {
-          const Wd = Nd.selectedCategoryKey,
-            Fd = aX(Wd, dd),
-            Rd = null !== md && void 0 !== md ? md : Nd.userInputsPerItem[Fd],
-            Xd = {
-              categoryKey: Wd,
-              itemKey: dd,
-              userInput: Rd
+        qb = (bb, wb, Mb) => {
+          const eb = tb.selectedCategoryKey,
+            Hb = XV(eb, bb),
+            pb = null !== Mb && void 0 !== Mb ? Mb : tb.userInputsPerItem[Hb],
+            Vb = {
+              categoryKey: eb,
+              itemKey: bb,
+              userInput: pb
             };
-          if (bd.current = Wd, Od.isRewardedAd) {
-            if (Date.now() - Yd.current < 5e3) return;
-            (0, uO.kb)((() => {
-              var md, Wd, Rd;
+          if (Bb.current = eb, wb.isRewardedAd) {
+            if (Date.now() - hb.current < 5e3) return;
+            (0, Yw.Q)((() => {
+              var Mb, eb, pb;
               console.log("bought rewarded ad");
-              const Kd = Ud.current,
-                hd = (null !== Kd && void 0 !== Kd ? Kd : Ed.current).shopInfo,
-                vd = Xd.categoryKey ? null === (md = hd[Xd.categoryKey]) || void 0 === md ? void 0 : md.items[dd] : null;
-              if (!vd || !vd.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              if (!((null === (Wd = Od.userInput) || void 0 === Wd ? void 0 : Wd.type) === (null === vd || void 0 === vd || null === (Rd = vd.userInput) || void 0 === Rd ? void 0 : Rd.type))) return void console.warn("Shop item input type changed, early out");
+              const gb = Kb.current,
+                lb = (null !== gb && void 0 !== gb ? gb : xb.current).shopInfo,
+                Lb = Vb.categoryKey ? null === (Mb = lb[Vb.categoryKey]) || void 0 === Mb ? void 0 : Mb.items[bb] : null;
+              if (!Lb || !Lb.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              if (!((null === (eb = wb.userInput) || void 0 === eb ? void 0 : eb.type) === (null === Lb || void 0 === Lb || null === (pb = Lb.userInput) || void 0 === pb ? void 0 : pb.type))) return void console.warn("Shop item input type changed, early out");
               const {
-                shopInfo: Qd,
-                userInputsPerItem: td
-              } = Ed.current, od = ld.current;
-              Xd.userInput = (null === Kd ? td : xX(Kd.shopInfo, Qd, td, od.playerIds, od.localPlayerId))[Fd], Td.gameBridge.send("buyShopItem", Xd), Od.onBoughtMessage && nd(Od.onBoughtMessage)
-            })), Yd.current = Date.now()
+                shopInfo: Ib,
+                userInputsPerItem: Ob
+              } = xb.current, Ub = ub.current;
+              Vb.userInput = (null === gb ? Ob : rV(gb.shopInfo, Ib, Ob, Ub.playerIds, Ub.localPlayerId))[Hb], sb.gameBridge.send("buyShopItem", Vb), wb.onBoughtMessage && Jb(wb.onBoughtMessage)
+            })), hb.current = Date.now()
           } else {
-            Td.gameBridge.send("buyShopItem", Xd), Gd({
+            sb.gameBridge.send("buyShopItem", Vb), Wb({
               awaitingPurchase: !0
-            }), clearTimeout(gd.current), gd.current = setTimeout((() => {
-              wd.current = null, Gd({
+            }), clearTimeout(zb.current), zb.current = setTimeout((() => {
+              Xb.current = null, Wb({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const dd = (0, JF.b)(Od, Rd);
-            if (wd.current = null, !isNaN(dd) && BX(Nd.currencyAmounts, Od.currency)) {
-              0 !== dd && (wd.current = {
-                currency: Od.currency,
-                amountBefore: Nd.currencyAmounts[Od.currency].amount
+            const bb = (0, xH.d)(wb, pb);
+            if (Xb.current = null, !isNaN(bb) && RV(tb.currencyAmounts, wb.currency)) {
+              0 !== bb && (Xb.current = {
+                currency: wb.currency,
+                amountBefore: tb.currencyAmounts[wb.currency].amount
               });
-              const md = {
-                ...Nd.currencyAmounts
+              const Mb = {
+                ...tb.currencyAmounts
               };
-              md[Od.currency].amount -= dd, Gd({
-                currencyAmounts: md
+              Mb[wb.currency].amount -= bb, Wb({
+                currencyAmounts: Mb
               })
             }
-            Od.onBoughtMessage && nd(Od.onBoughtMessage)
+            wb.onBoughtMessage && Jb(wb.onBoughtMessage)
           }
         },
-        ed = (dd, Od) => {
-          if (null === Od || !dd.shopInfo[Od]) return dd;
-          let md = dd.redDotInfo;
-          return md.categoryHasRedDot(Od) && (md.updateCategoryRedDot(Od, !1), md = md.shallowCopy()), {
-            ...dd,
-            selectedCategoryKey: Od,
-            redDotInfo: md
+        ab = (bb, wb) => {
+          if (null === wb || !bb.shopInfo[wb]) return bb;
+          let Mb = bb.redDotInfo;
+          return Mb.categoryHasRedDot(wb) && (Mb.updateCategoryRedDot(wb, !1), Mb = Mb.shallowCopy()), {
+            ...bb,
+            selectedCategoryKey: wb,
+            redDotInfo: Mb
           }
         },
-        Id = dd => {
-          jd(), qd((Od => ed(Od, dd)))
+        ib = bb => {
+          Gb(), Cb((wb => ab(wb, bb)))
         };
-      (0, Rm.f)(AF.g, (() => {
-        jd(), qd((dd => {
-          const Od = (0, AF.i)(nF(dd.shopInfo), dd.selectedCategoryKey, (Od => (0, AF.e)(dd.shopInfo[Od].items)));
-          return Od === dd.selectedCategoryKey ? dd : ed(dd, Od)
+      (0, HM.e)(fH.m, (() => {
+        Gb(), Cb((bb => {
+          const wb = (0, fH.n)(JH(bb.shopInfo), bb.selectedCategoryKey, (wb => (0, fH.i)(bb.shopInfo[wb].items)));
+          return wb === bb.selectedCategoryKey ? bb : ab(bb, wb)
         }))
-      })), (0, Rm.f)("showShopFromServer", (dd => {
+      })), (0, HM.e)("showShopFromServer", (bb => {
         let {
-          toggle: Od,
-          AO: md
-        } = dd;
-        const Wd = 0 !== Object.keys(zd().shopInfo).length;
-        md && Id(md), !Wd || Od && Fd ? Jd.e.set({
+          toggle: wb,
+          Zw: Mb
+        } = bb;
+        const eb = 0 !== Object.keys(vb().shopInfo).length;
+        Mb && ib(Mb), !eb || wb && Hb ? jb.c.set({
           openEverythingMenuName: null
-        }) : Jd.e.set({
-          openEverythingMenuName: VO.m.SHOP
+        }) : jb.c.set({
+          openEverythingMenuName: Zw.l.SHOP
         })
-      })), (0, Rm.f)("closeShopOnDamaged", (() => {
-        Fd && Jd.e.set({
+      })), (0, HM.e)("closeShopOnDamaged", (() => {
+        Hb && jb.c.set({
           openEverythingMenuName: null
         })
-      })), (0, Rm.f)("overShopInfo", (dd => {
-        nd(dd)
-      })), (0, Hd.g)("currencyAmounts", (dd => {
-        var Od;
-        const md = wd.current;
-        md && (null === dd || void 0 === dd || null === (Od = dd[md.currency]) || void 0 === Od ? void 0 : Od.amount) === md.amountBefore ? Gd({
-          currencyAmounts: dd
-        }) : (wd.current = null, Gd({
-          currencyAmounts: dd,
+      })), (0, HM.e)("overShopInfo", (bb => {
+        Jb(bb)
+      })), (0, Eb.h)("currencyAmounts", (bb => {
+        var wb;
+        const Mb = Xb.current;
+        Mb && (null === bb || void 0 === bb || null === (wb = bb[Mb.currency]) || void 0 === wb ? void 0 : wb.amount) === Mb.amountBefore ? Wb({
+          currencyAmounts: bb
+        }) : (Xb.current = null, Wb({
+          currencyAmounts: bb,
           awaitingPurchase: !1
         }))
-      })), (0, Hd.g)("shopInfo", (dd => {
-        Fd ? Gd({
-          ...Pd(dd),
+      })), (0, Eb.h)("shopInfo", (bb => {
+        Hb ? Wb({
+          ...Nb(bb),
           awaitingPurchase: !1
-        }) : cd(dd)
-      })), (0, Wd.useLayoutEffect)((() => {
-        Fd && jd()
-      }), [Fd]);
-      const ld = (0, Wd.useRef)({
-        playerIds: Xd,
-        localPlayerId: Kd
+        }) : Qb(bb)
+      })), (0, eb.useLayoutEffect)((() => {
+        Hb && Gb()
+      }), [Hb]);
+      const ub = (0, eb.useRef)({
+        playerIds: Vb,
+        localPlayerId: gb
       });
-      (0, Wd.useEffect)((() => {
-        ld.current.playerIds === Xd && ld.current.localPlayerId === Kd || (ld.current = {
-          playerIds: Xd,
-          localPlayerId: Kd
-        }, Fd ? qd((dd => {
-          const Od = Pd(dd.shopInfo);
+      (0, eb.useEffect)((() => {
+        ub.current.playerIds === Vb && ub.current.localPlayerId === gb || (ub.current = {
+          playerIds: Vb,
+          localPlayerId: gb
+        }, Hb ? Cb((bb => {
+          const wb = Nb(bb.shopInfo);
           return {
-            ...dd,
-            ...Od
+            ...bb,
+            ...wb
           }
-        })) : cd(zd().shopInfo))
-      }), [Xd, Kd]);
-      const Cd = Nd.selectedCategoryKey,
-        Zd = (dd, Od) => {
-          var md, Wd;
-          return (isNaN(Od) || (0, sm.O)(dd.currency) || BX(Nd.currencyAmounts, dd.currency) && Od <= Nd.currencyAmounts[dd.currency].amount) && (null === (md = dd.canBuy) || void 0 === md || md) && !(null !== (Wd = dd.hidden) && void 0 !== Wd && Wd)
+        })) : Qb(vb().shopInfo))
+      }), [Vb, gb]);
+      const db = tb.selectedCategoryKey,
+        Pb = (bb, wb) => {
+          var Mb, eb;
+          return (isNaN(wb) || (0, DM.K)(bb.currency) || RV(tb.currencyAmounts, bb.currency) && wb <= tb.currencyAmounts[bb.currency].amount) && (null === (Mb = bb.canBuy) || void 0 === Mb || Mb) && !(null !== (eb = bb.hidden) && void 0 !== eb && eb)
         },
-        kd = (dd, Od) => {
-          var md, Wd, Fd;
-          const Xd = aX(Cd, dd),
-            Kd = Nd.shopInfo[Cd].items[dd],
-            Qd = Nd.userInputsPerItem[Xd],
-            od = (0, JF.b)(Kd, Qd),
-            qd = Zd(Kd, od),
-            Hd = Kd.enchant,
-            yd = Hd ? (0, Ld.ib)(null !== (md = Kd.customTitle) && void 0 !== md ? md : dd, {
-              colour: Ld.ab[Hd.tier]
-            }) : null !== (Wd = Kd.customTitle) && void 0 !== Wd ? Wd : dd,
-            bd = Od => {
-              const md = null !== Od && void 0 !== Od ? Od : Qd,
-                Wd = void 0 !== Od ? (0, JF.b)(Kd, Od) : od;
-              Zd(Kd, Wd) && null !== md && Dd(dd, Kd, Od);
-              let Fd = Nd.redDotInfo;
-              Fd.itemHasRedDot(Cd, dd) && (Fd.updateItemRedDot(Cd, dd, !1), Fd = Fd.shallowCopy()), Gd({
-                redDotInfo: Fd
+        nb = (bb, wb) => {
+          var Mb, eb, Hb;
+          const Vb = XV(db, bb),
+            gb = tb.shopInfo[db].items[bb],
+            Ib = tb.userInputsPerItem[Vb],
+            Ub = (0, xH.d)(gb, Ib),
+            Cb = Pb(gb, Ub),
+            Eb = gb.enchant,
+            Fb = Eb ? (0, Sb.Cb)(null !== (Mb = gb.customTitle) && void 0 !== Mb ? Mb : bb, {
+              colour: Sb.xb[Eb.tier]
+            }) : null !== (eb = gb.customTitle) && void 0 !== eb ? eb : bb,
+            Bb = wb => {
+              const Mb = null !== wb && void 0 !== wb ? wb : Ib,
+                eb = void 0 !== wb ? (0, xH.d)(gb, wb) : Ub;
+              Pb(gb, eb) && null !== Mb && qb(bb, gb, wb);
+              let Hb = tb.redDotInfo;
+              Hb.itemHasRedDot(db, bb) && (Hb.updateItemRedDot(db, bb, !1), Hb = Hb.shallowCopy()), Wb({
+                redDotInfo: Hb
               })
             };
-          return (0, td.jsxs)("div", {
-            className: Rd()("ShopItem", {
-              ShopItemNoInput: !Kd.userInput,
-              ShopItemNoInputCanBuy: !Kd.userInput && qd,
-              ShopItemNoInputSelected: Kd.isSelected,
-              ShopItemEnchant: !!Hd
+          return (0, Ob.jsxs)("div", {
+            className: pb()("ShopItem", {
+              ShopItemNoInput: !gb.userInput,
+              ShopItemNoInputCanBuy: !gb.userInput && Cb,
+              ShopItemNoInputSelected: gb.isSelected,
+              ShopItemEnchant: !!Eb
             }),
-            "data-pad-focusable": !Kd.userInput || void 0,
-            "data-pad-unavailable": !Kd.userInput && !qd || void 0,
-            "data-pad-repeat": null !== (Fd = (0, AF.b)(Kd)) && void 0 !== Fd ? Fd : void 0,
-            "data-pad-repeat-wait": Nd.awaitingPurchase || void 0,
+            "data-pad-focusable": !gb.userInput || void 0,
+            "data-pad-unavailable": !gb.userInput && !Cb || void 0,
+            "data-pad-repeat": null !== (Hb = (0, fH.c)(gb)) && void 0 !== Hb ? Hb : void 0,
+            "data-pad-repeat-wait": tb.awaitingPurchase || void 0,
             onClick: () => {
-              if (Hd && sd.current) {
-                if (Bd !== Xd) return void Sd(Xd);
-                Sd(null)
+              if (Eb && cb.current) {
+                if (Rb !== Vb) return void Db(Vb);
+                Db(null)
               }
-              Kd.userInput || bd()
+              gb.userInput || Bb()
             },
-            onPointerDown: dd => {
-              Hd && (sd.current = (0, xF.s)(dd))
+            onPointerDown: bb => {
+              Eb && (cb.current = (0, KH.w)(bb))
             },
-            onPointerEnter: dd => {
-              Hd && !(0, xF.s)(dd) && Sd(Xd)
+            onPointerEnter: bb => {
+              Eb && !(0, KH.w)(bb) && Db(Vb)
             },
-            onPointerLeave: dd => {
-              Hd && !(0, xF.s)(dd) && Sd((dd => dd === Xd ? null : dd))
+            onPointerLeave: bb => {
+              Eb && !(0, KH.w)(bb) && Db((bb => bb === Vb ? null : bb))
             },
             style: {
-              zIndex: Object.keys(Nd.shopInfo[Cd].items).length - Od
+              zIndex: Object.keys(tb.shopInfo[db].items).length - wb
             },
-            children: [Nd.redDotInfo.itemHasRedDot(Cd, dd) && (0, td.jsx)(hd.e, {
+            children: [tb.redDotInfo.itemHasRedDot(db, bb) && (0, Ob.jsx)(lb.e, {
               top: "-6px",
               right: "-6px"
-            }), Kd.badge && (0, td.jsx)("div", {
+            }), gb.badge && (0, Ob.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, td.jsx)("div", {
-                className: Rd()("ShopBadgeMain", Kd.badge.type),
-                children: (0, td.jsx)(SF.d, {
-                  text: Kd.badge.text
+              children: (0, Ob.jsx)("div", {
+                className: pb()("ShopBadgeMain", gb.badge.type),
+                children: (0, Ob.jsx)(RH.d, {
+                  text: gb.badge.text
                 })
               })
-            }), (0, td.jsx)("div", {
+            }), (0, Ob.jsx)("div", {
               className: "ShopItemLeft",
-              children: Kd.image && (0, td.jsx)(sX, {
-                item: Kd,
+              children: gb.image && (0, Ob.jsx)(cV, {
+                item: gb,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, td.jsxs)("div", {
+            }), (0, Ob.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, td.jsxs)("div", {
+              children: [(0, Ob.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, td.jsx)("div", {
+                children: [(0, Ob.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, td.jsx)(SF.d, {
-                    text: yd
+                  children: (0, Ob.jsx)(RH.d, {
+                    text: Fb
                   })
-                }), (0, td.jsx)("div", {
+                }), (0, Ob.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, td.jsx)(SF.d, {
-                    text: Kd.description
+                  children: (0, Ob.jsx)(RH.d, {
+                    text: gb.description
                   })
                 })]
-              }), Kd.userInput && (0, td.jsxs)("div", {
+              }), gb.userInput && (0, Ob.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: dd => {
-                  dd.stopPropagation()
+                onClick: bb => {
+                  bb.stopPropagation()
                 },
-                children: [(0, td.jsx)(iX, {
-                  item: Kd,
-                  currInput: Qd,
-                  updateInput: Od => {
-                    ((dd, Od, md) => {
-                      const Wd = aX(dd, Od),
-                        Fd = {
-                          ...Nd.userInputsPerItem
+                children: [(0, Ob.jsx)(fV, {
+                  item: gb,
+                  currInput: Ib,
+                  updateInput: wb => {
+                    ((bb, wb, Mb) => {
+                      const eb = XV(bb, wb),
+                        Hb = {
+                          ...tb.userInputsPerItem
                         };
-                      Fd[Wd] = md, Gd({
-                        userInputsPerItem: Fd
+                      Hb[eb] = Mb, Wb({
+                        userInputsPerItem: Hb
                       })
-                    })(Cd, dd, Od)
+                    })(db, bb, wb)
                   },
-                  onSubmit: dd => {
-                    bd(dd)
+                  onSubmit: bb => {
+                    Bb(bb)
                   }
-                }), ("dropdown" !== Kd.userInput.type || !Kd.userInput.autoSubmit) && (0, td.jsx)(vd.g, {
+                }), ("dropdown" !== gb.userInput.type || !gb.userInput.autoSubmit) && (0, Ob.jsx)(Lb.f, {
                   className: "ItemCostButton",
-                  disabled: !qd && null !== Qd,
+                  disabled: !Cb && null !== Ib,
                   onClick: () => {
-                    bd()
+                    Bb()
                   },
-                  children: (0, td.jsx)(VX, {
-                    item: Kd,
-                    cost: od,
-                    currencyAmounts: Nd.currencyAmounts
+                  children: (0, Ob.jsx)(ZV, {
+                    item: gb,
+                    cost: Ub,
+                    currencyAmounts: tb.currencyAmounts
                   })
                 })]
               })]
-            }), !Kd.userInput && (0, td.jsx)("div", {
+            }), !gb.userInput && (0, Ob.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, td.jsx)(VX, {
-                item: Kd,
-                cost: od,
-                currencyAmounts: Nd.currencyAmounts
+              children: (0, Ob.jsx)(ZV, {
+                item: gb,
+                cost: Ub,
+                currencyAmounts: tb.currencyAmounts
               })
-            }), Hd && Bd === Xd && (0, td.jsxs)("div", {
+            }), Eb && Rb === Vb && (0, Ob.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, td.jsx)(SF.d, {
-                text: yd
-              }), (0, td.jsx)("div", {
+              children: [(0, Ob.jsx)(RH.d, {
+                text: Fb
+              }), (0, Ob.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, td.jsx)(SF.d, {
-                  text: (0, UF.c)("", Hd.enchantments, Hd.enchantmentData)
+                children: (0, Ob.jsx)(RH.d, {
+                  text: (0, jH.d)("", Eb.enchantments, Eb.enchantmentData)
                 })
               })]
             })]
-          }, Xd)
+          }, Vb)
         },
-        fd = function(dd) {
-          for (const Od in dd)
-            if (dd[Od].smp) return !0;
+        yb = function(bb) {
+          for (const wb in bb)
+            if (bb[wb].smp) return !0;
           return !1
-        }(Nd.shopInfo),
-        Md = WR(Nd.shopInfo, Cd),
-        dO = function(dd, Od) {
-          var md;
-          return !!Od && !(null === (md = dd[Od]) || void 0 === md || !md.loadout)
-        }(Nd.shopInfo, Cd),
-        OO = (0, td.jsx)("div", {
-          className: Rd()("ShopOnBoughtInfo", {
-            ShopOnBoughtInfoShow: null !== Nd.onBoughtInfo
+        }(tb.shopInfo),
+        ob = wp(tb.shopInfo, db),
+        Tb = function(bb, wb) {
+          var Mb;
+          return !!wb && !(null === (Mb = bb[wb]) || void 0 === Mb || !Mb.loadout)
+        }(tb.shopInfo, db),
+        kb = (0, Ob.jsx)("div", {
+          className: pb()("ShopOnBoughtInfo", {
+            ShopOnBoughtInfoShow: null !== tb.onBoughtInfo
           }),
-          children: (0, td.jsx)(SF.d, {
-            text: yd.current
+          children: (0, Ob.jsx)(RH.d, {
+            text: Fb.current
           })
         });
-      return (0, td.jsx)(aF.e, {
+      return (0, Ob.jsx)(zH.e, {
         className: "Menu ShopBody",
-        show: Fd,
-        children: 0 !== Object.keys(Nd.shopInfo).length && (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsxs)("div", {
+        show: Hb,
+        children: 0 !== Object.keys(tb.shopInfo).length && (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, td.jsx)(od, {
-              items: dX(Nd.shopInfo).map((dd => {
-                var Od;
-                return dd === kR ? {
-                  id: dd,
+            children: [(0, Ob.jsx)(Ub, {
+              items: kp(tb.shopInfo).map((bb => {
+                var wb;
+                return bb === yp ? {
+                  id: bb,
                   title: "loadoutShop:title",
                   redDot: !1
                 } : {
-                  id: dd,
-                  title: null !== (Od = Nd.shopInfo[dd].customTitle) && void 0 !== Od ? Od : dd,
-                  redDot: Nd.redDotInfo.categoryHasRedDot(dd)
+                  id: bb,
+                  title: null !== (wb = tb.shopInfo[bb].customTitle) && void 0 !== wb ? wb : bb,
+                  redDot: tb.redDotInfo.categoryHasRedDot(bb)
                 }
               })),
-              link: Qd ? {
+              link: Ib ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, GF.g)({
-                    page: (0, GF.d)(),
+                  (0, WH.h)({
+                    page: (0, WH.e)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: dO ? kR : Cd,
-              onClick: dd => {
-                dd !== kR ? Id(dd) : dO || Id(fR(Nd.shopInfo)[0].categoryKey)
+              selectedItemId: Tb ? yp : db,
+              onClick: bb => {
+                bb !== yp ? ib(bb) : Tb || ib(op(tb.shopInfo)[0].categoryKey)
               },
-              padStartsOnTab: (0, AF.c)(Cd)
-            }), (0, td.jsx)("div", {
+              padStartsOnTab: (0, fH.e)(db)
+            }), (0, Ob.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: Nd.currencyAmounts && Object.keys(Nd.currencyAmounts).map((dd => {
-                const Od = Nd.currencyAmounts[dd];
-                return Od.hidden ? null : (0, td.jsx)(gX, {
-                  currency: dd,
-                  info: Od,
-                  smaller: ud,
-                  show: Fd
-                }, dd)
+              children: tb.currencyAmounts && Object.keys(tb.currencyAmounts).map((bb => {
+                const wb = tb.currencyAmounts[bb];
+                return wb.hidden ? null : (0, Ob.jsx)(hV, {
+                  currency: bb,
+                  info: wb,
+                  smaller: Yb,
+                  show: Hb
+                }, bb)
               }))
             })]
-          }), (0, td.jsxs)("div", {
+          }), (0, Ob.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [fd && (0, td.jsx)(lR, {
-              show: Fd,
-              shopInfo: Nd.shopInfo,
-              selectedCategoryKey: Cd,
-              buy: (dd, Od, md) => {
-                Dd(dd, Od, md)
+            children: [yb && (0, Ob.jsx)(dp, {
+              show: Hb,
+              shopInfo: tb.shopInfo,
+              selectedCategoryKey: db,
+              buy: (bb, wb, Mb) => {
+                qb(bb, wb, Mb)
               },
-              canAfford: Zd,
-              message: Nd.onBoughtInfo
-            }), dO && Fd && (0, td.jsxs)(td.Fragment, {
-              children: [OO, (0, td.jsx)(NX, {
-                shopInfo: Nd.shopInfo,
-                selectedCategoryKey: Cd,
-                selectCategory: Id,
-                buy: Dd,
-                canAfford: Zd,
-                currencyAmounts: Nd.currencyAmounts
+              canAfford: Pb,
+              message: tb.onBoughtInfo
+            }), Tb && Hb && (0, Ob.jsxs)(Ob.Fragment, {
+              children: [kb, (0, Ob.jsx)(UV, {
+                shopInfo: tb.shopInfo,
+                selectedCategoryKey: db,
+                selectCategory: ib,
+                buy: qb,
+                canAfford: Pb,
+                currencyAmounts: tb.currencyAmounts
               })]
-            }), null === Md && !dO && (0, td.jsxs)(td.Fragment, {
-              children: [OO, (0, td.jsx)("div", {
+            }), null === ob && !Tb && (0, Ob.jsxs)(Ob.Fragment, {
+              children: [kb, (0, Ob.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, td.jsxs)("div", {
+                children: (0, Ob.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (Od = Nd.shopInfo[Cd]) || void 0 === Od ? void 0 : Od.description) && (0, td.jsx)("div", {
+                  children: [(null === (wb = tb.shopInfo[db]) || void 0 === wb ? void 0 : wb.description) && (0, Ob.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, td.jsx)(SF.d, {
-                      text: Nd.shopInfo[Cd].description
+                    children: (0, Ob.jsx)(RH.d, {
+                      text: tb.shopInfo[db].description
                     })
-                  }), Fd && (0, td.jsx)("div", {
+                  }), Hb && (0, Ob.jsx)("div", {
                     className: "ShopItems",
-                    ref: pd,
+                    ref: mb,
                     "data-pad-initial-area": !0,
-                    children: nF(null === (md = Nd.shopInfo[Cd]) || void 0 === md ? void 0 : md.items).map(((dd, Od) => kd(dd, Od)))
+                    children: JH(null === (Mb = tb.shopInfo[db]) || void 0 === Mb ? void 0 : Mb.items).map(((bb, wb) => nb(bb, wb)))
                   })]
                 })
               })]
@@ -6197,681 +6197,681 @@ export const modules = {
       })
     }));
 
-    function sX(dd) {
+    function cV(bb) {
       let {
-        item: Od,
-        minWidth: md,
-        minHeight: Wd
-      } = dd;
+        item: wb,
+        minWidth: Mb,
+        minHeight: eb
+      } = bb;
       const {
-        image: Fd,
-        schematicId: Rd,
-        imageColour: Xd
-      } = Od;
-      if (Rd) return (0, td.jsx)("div", {
+        image: Hb,
+        schematicId: pb,
+        imageColour: Vb
+      } = wb;
+      if (pb) return (0, Ob.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${md}rem`,
-          height: `${Wd}rem`
+          width: `${Mb}rem`,
+          height: `${eb}rem`
         },
-        children: (0, td.jsx)(sF.e, {
+        children: (0, Ob.jsx)(DH.e, {
           game: {
-            schematicId: Rd
+            schematicId: pb
           }
         })
       });
-      var hd, vd;
-      if ((0, BF.f)(Fd)) return (0, td.jsx)("div", {
+      var lb, Lb;
+      if ((0, rH.d)(Hb)) return (0, Ob.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${md}rem`,
+          minWidth: `${Mb}rem`,
           height: "0",
-          minHeight: `${Wd}rem`
+          minHeight: `${eb}rem`
         },
-        children: (0, td.jsx)(BF.c, {
-          itemName: Fd,
-          amount: null !== (hd = Od.amount) && void 0 !== hd ? hd : 0,
-          amountFontSize: Wd / 4 + "rem",
-          enchantmentTier: null === (vd = Od.enchant) || void 0 === vd ? void 0 : vd.tier
+        children: (0, Ob.jsx)(rH.c, {
+          itemName: Hb,
+          amount: null !== (lb = wb.amount) && void 0 !== lb ? lb : 0,
+          amountFontSize: eb / 4 + "rem",
+          enchantmentTier: null === (Lb = wb.enchant) || void 0 === Lb ? void 0 : Lb.tier
         })
       });
-      const Qd = Fd.slice(-4);
-      return ".jpg" === Qd || ".png" === Qd ? (0, td.jsx)(uX, {
-        image: Fd,
-        minWidth: md
-      }) : (0, td.jsx)(Kd.c, {
-        name: Fd,
+      const Ib = Hb.slice(-4);
+      return ".jpg" === Ib || ".png" === Ib ? (0, Ob.jsx)(YV, {
+        image: Hb,
+        minWidth: Mb
+      }) : (0, Ob.jsx)(gb.b, {
+        name: Hb,
         className: "SelectedItemImage",
         style: {
-          color: Xd
+          color: Vb
         }
       })
     }
 
-    function uX(dd) {
+    function YV(bb) {
       let {
-        image: Od,
-        minWidth: md
-      } = dd;
+        image: wb,
+        minWidth: Mb
+      } = bb;
       const {
-        gameNameWithVariation: Wd
-      } = (0, kO.h)("connectedGame"), Fd = Od.endsWith(".jpg");
-      return (0, td.jsx)("img", {
-        className: Rd()({
-          ShopPixelImage: !Fd
+        gameNameWithVariation: eb
+      } = (0, yw.h)("connectedGame"), Hb = wb.endsWith(".jpg");
+      return (0, Ob.jsx)("img", {
+        className: pb()({
+          ShopPixelImage: !Hb
         }),
         style: {
-          width: `${Fd?1.6*md:md}rem`,
+          width: `${Hb?1.6*Mb:Mb}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,Ld.Gb)(Wd)}/${Od}`,
-        alt: Od,
+        src: `/textures/games/${(0,Sb.Zb)(eb)}/${wb}`,
+        alt: wb,
         draggable: !1
       })
     }
 
-    function VX(dd) {
+    function ZV(bb) {
       let {
-        item: Od,
-        cost: md,
-        currencyAmounts: Wd
-      } = dd;
-      const Fd = !isNaN(md) && 0 !== md && BX(Wd, Od.currency);
-      let Rd = null;
-      return Od.buyButtonText ? Rd = Od.buyButtonText : Fd ? (Rd = md, Od.sell && (Rd = -1 * md), Rd = Rd.toString()) : 0 === md ? Rd = "Free" : Od.isRewardedAd && (Rd = "Watch ad"), (0, sm.O)(Rd) || " " === Rd ? null : (0, td.jsxs)("div", {
+        item: wb,
+        cost: Mb,
+        currencyAmounts: eb
+      } = bb;
+      const Hb = !isNaN(Mb) && 0 !== Mb && RV(eb, wb.currency);
+      let pb = null;
+      return wb.buyButtonText ? pb = wb.buyButtonText : Hb ? (pb = Mb, wb.sell && (pb = -1 * Mb), pb = pb.toString()) : 0 === Mb ? pb = "Free" : wb.isRewardedAd && (pb = "Watch ad"), (0, DM.K)(pb) || " " === pb ? null : (0, Ob.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [Fd && (0, td.jsx)("div", {
+        children: [Hb && (0, Ob.jsx)("div", {
           style: {
-            color: Wd[Od.currency].iconColour
+            color: eb[wb.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, td.jsx)(hX, {
-            iconName: Wd[Od.currency].icon
+          children: (0, Ob.jsx)(gV, {
+            iconName: eb[wb.currency].icon
           })
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, td.jsx)(SF.d, {
-            text: Rd
+          children: (0, Ob.jsx)(RH.d, {
+            text: pb
           })
         })]
       })
     }
 
-    function iX(dd) {
+    function fV(bb) {
       let {
-        item: Od,
-        currInput: md,
-        updateInput: Fd,
-        onSubmit: Rd
-      } = dd;
+        item: wb,
+        currInput: Mb,
+        updateInput: Hb,
+        onSubmit: pb
+      } = bb;
       const {
-        t: Kd
-      } = (0, Xd.G)(), hd = (0, Wd.useRef)(null);
-      if ((0, Wd.useEffect)((() => {
-          const dd = hd.current;
-          dd && dd.value !== md && document.activeElement !== dd && (dd.value = null !== md && void 0 !== md ? md : "")
-        }), [md]), !Od.userInput) return null;
-      let vd = Od.userInput;
-      if (bd.featureFlags.sanitizeShopInput && "text" === Od.userInput.type && (vd = {
+        t: gb
+      } = (0, Vb.C)(), lb = (0, eb.useRef)(null);
+      if ((0, eb.useEffect)((() => {
+          const bb = lb.current;
+          bb && bb.value !== Mb && document.activeElement !== bb && (bb.value = null !== Mb && void 0 !== Mb ? Mb : "")
+        }), [Mb]), !wb.userInput) return null;
+      let Lb = wb.userInput;
+      if (Bb.featureFlags.sanitizeShopInput && "text" === wb.userInput.type && (Lb = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === vd.type || "number" === vd.type) {
-        var Qd, od;
-        console.assert(void 0 !== md, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Od)}`);
-        const dd = "text" === vd.type && vd.wordCharsOnly;
-        return (0, td.jsx)("div", {
+        }), "text" === Lb.type || "number" === Lb.type) {
+        var Ib, Ub;
+        console.assert(void 0 !== Mb, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(wb)}`);
+        const bb = "text" === Lb.type && Lb.wordCharsOnly;
+        return (0, Ob.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, td.jsx)(gd.c, {
+          children: (0, Ob.jsx)(zb.d, {
             className: "ShopItemUserInputText",
-            placeholderText: Kd(vd.placeholderText),
-            defaultValue: md,
-            domRef: hd,
-            onValueChange: (Od, md) => {
-              !0 === dd && (Od = (0, VF.fb)(Od)), hd.current.value = Od, Fd(Od)
+            placeholderText: gb(Lb.placeholderText),
+            defaultValue: Mb,
+            domRef: lb,
+            onValueChange: (wb, Mb) => {
+              !0 === bb && (wb = (0, YH.bb)(wb)), lb.current.value = wb, Hb(wb)
             },
-            onEnter: Rd,
-            type: vd.type
-          }, (null !== (Qd = vd.initialValue) && void 0 !== Qd ? Qd : "") + (null !== (od = vd.placeholderText) && void 0 !== od ? od : ""))
+            onEnter: pb,
+            type: Lb.type
+          }, (null !== (Ib = Lb.initialValue) && void 0 !== Ib ? Ib : "") + (null !== (Ub = Lb.placeholderText) && void 0 !== Ub ? Ub : ""))
         })
       }
-      if ("dropdown" === vd.type) {
-        console.assert(void 0 !== md, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Od)}`);
-        const dd = vd.autoSubmit;
-        return (0, td.jsx)("div", {
+      if ("dropdown" === Lb.type) {
+        console.assert(void 0 !== Mb, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(wb)}`);
+        const bb = Lb.autoSubmit;
+        return (0, Ob.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, td.jsx)(CO.e, {
-            options: vd.dropdownOptions.map((dd => (0, JF.c)(dd))),
-            value: md,
-            onChange: Od => {
+          children: (0, Ob.jsx)(Pw.c, {
+            options: Lb.dropdownOptions.map((bb => (0, xH.f)(bb))),
+            value: Mb,
+            onChange: wb => {
               let {
-                value: md
-              } = Od;
-              Fd(md), dd && Rd(md)
+                value: Mb
+              } = wb;
+              Hb(Mb), bb && pb(Mb)
             }
           })
         })
       }
-      return "player" === vd.type ? (0, td.jsx)(AX, {
-        userInput: vd,
-        currInput: md,
-        updateInput: Fd
-      }) : "color" === vd.type ? (0, td.jsx)("div", {
+      return "player" === Lb.type ? (0, Ob.jsx)(AV, {
+        userInput: Lb,
+        currInput: Mb,
+        updateInput: Hb
+      }) : "color" === Lb.type ? (0, Ob.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, td.jsx)("input", {
+        children: (0, Ob.jsx)("input", {
           type: "color",
-          value: md,
-          onChange: dd => {
-            Fd(dd.target.value)
+          value: Mb,
+          onChange: bb => {
+            Hb(bb.target.value)
           }
         })
       }) : null
     }
 
-    function AX(dd) {
+    function AV(bb) {
       let {
-        userInput: Od,
-        currInput: md,
-        updateInput: Wd
-      } = dd;
-      const Fd = (0, kO.h)("players"),
-        Rd = (0, kO.h)("hiddenPlayerNames"),
-        Xd = (0, JF.d)(Fd.ids, Fd.localId, Od);
-      return (0, td.jsx)("div", {
+        userInput: wb,
+        currInput: Mb,
+        updateInput: eb
+      } = bb;
+      const Hb = (0, yw.h)("players"),
+        pb = (0, yw.h)("hiddenPlayerNames"),
+        Vb = (0, xH.g)(Hb.ids, Hb.localId, wb);
+      return (0, Ob.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, td.jsx)(CO.e, {
-          options: Xd.map((dd => {
+        children: (0, Ob.jsx)(Pw.c, {
+          options: Vb.map((bb => {
             const {
-              name: Od
-            } = Fd.byId[dd];
+              name: wb
+            } = Hb.byId[bb];
             return {
-              value: dd,
-              label: null === Od ? "" : (0, uF.e)(Od, Rd)
+              value: bb,
+              label: null === wb ? "" : (0, cH.c)(wb, pb)
             }
           })),
-          value: md,
-          onChange: dd => {
+          value: Mb,
+          onChange: bb => {
             let {
-              value: Od
-            } = dd;
-            Wd(Od)
+              value: wb
+            } = bb;
+            eb(wb)
           }
         })
       })
     }
 
-    function rX(dd) {
+    function WV(bb) {
       let {
-        ids: Od
-      } = dd;
-      return Od
+        ids: wb
+      } = bb;
+      return wb
     }
 
-    function GX(dd) {
+    function JV(bb) {
       let {
-        localId: Od
-      } = dd;
-      return Od
+        localId: wb
+      } = bb;
+      return wb
     }
-    var nX = md(1765);
-    const LX = (0, md(1518).l)((dd => dd.PadLobbyShortcuts)),
-      PX = (0, Wd.lazy)((() => Promise.resolve().then((() => md(5329))).then((dd => ({
-        default: dd.Lobbyleaderboard
+    var SV = Mb(1821);
+    const NV = (0, Mb(1567).h)((bb => bb.PadLobbyShortcuts)),
+      vV = (0, eb.lazy)((() => Promise.resolve().then((() => Mb(5509))).then((bb => ({
+        default: bb.Lobbyleaderboard
       }))))),
-      zX = (0, Wd.lazy)((() => md.e(254).then((() => md(43026))).then((dd => ({
-        default: dd.LobbyManageView
+      QV = (0, eb.lazy)((() => Mb.e(254).then((() => Mb(42746))).then((bb => ({
+        default: bb.LobbyManageView
       })))));
 
-    function cX(dd) {
+    function GV(bb) {
       let {
-        show: Od
-      } = dd;
-      return Od ? (0, td.jsx)(jX, {}) : null
+        show: wb
+      } = bb;
+      return wb ? (0, Ob.jsx)(qV, {}) : null
     }
 
-    function jX() {
-      const dd = (0, rF.d)();
-      return (0, td.jsxs)(td.Fragment, {
-        children: [(0, td.jsx)(LX, {}), (0, td.jsxs)(Wd.Suspense, {
-          fallback: (0, td.jsx)("div", {
+    function qV() {
+      const bb = (0, AH.c)();
+      return (0, Ob.jsxs)(Ob.Fragment, {
+        children: [(0, Ob.jsx)(NV, {}), (0, Ob.jsxs)(eb.Suspense, {
+          fallback: (0, Ob.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, td.jsx)(wd.c, {})
+            children: (0, Ob.jsx)(Xb.c, {})
           }),
-          children: [dd && (0, td.jsx)(zX, {
-            leaderboard: (0, td.jsx)(PX, {})
-          }), !dd && (0, td.jsx)(PX, {})]
+          children: [bb && (0, Ob.jsx)(QV, {
+            leaderboard: (0, Ob.jsx)(vV, {})
+          }), !bb && (0, Ob.jsx)(vV, {})]
         })]
       })
     }
-    var DX = md(1679),
-      eX = md(3284),
-      IX = md(1890),
-      lX = md(4164),
-      CX = md(3758),
-      ZX = md(1620),
-      kX = md(1580),
-      fX = md(4096),
-      MX = md(4107),
-      dK = md(4240),
-      OK = md(3265);
-    const mK = "storeRecentGiftRecipients",
-      WK = new Map;
+    var aV = Mb(1726),
+      iV = Mb(3372),
+      uV = Mb(1965),
+      dV = Mb(4342),
+      PV = Mb(3889),
+      nV = Mb(1672),
+      yV = Mb(1624),
+      oV = Mb(4270),
+      TV = Mb(4284),
+      kV = Mb(4411),
+      bg = Mb(3341);
+    const wg = "storeRecentGiftRecipients",
+      Mg = new Map;
 
-    function FK() {
+    function eg() {
       try {
-        const dd = Hm.k.getItem(mK);
-        return Array.isArray(dd) ? dd.filter((dd => "string" === typeof(null === dd || void 0 === dd ? void 0 : dd.name) && dd.name.length > 0)).map((dd => ({
-          name: dd.name,
-          cosmetics: dd.cosmetics && "object" === typeof dd.cosmetics ? dd.cosmetics : null
+        const bb = tM.i.getItem(wg);
+        return Array.isArray(bb) ? bb.filter((bb => "string" === typeof(null === bb || void 0 === bb ? void 0 : bb.name) && bb.name.length > 0)).map((bb => ({
+          name: bb.name,
+          cosmetics: bb.cosmetics && "object" === typeof bb.cosmetics ? bb.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function RK(dd, Od) {
-      var md;
-      const [Fd, Rd] = (0, Wd.useState)(""), [Xd, Kd] = (0, Wd.useState)("search"), [hd, vd] = (0, Wd.useState)(null), [Qd, td] = (0, Wd.useState)(null), od = (0, Wd.useRef)(null), Nd = (0, Wd.useRef)(null);
-      (0, Wd.useEffect)((() => () => {
-        od.current && clearTimeout(od.current)
-      }), []), (0, Wd.useEffect)((() => {
-        Od || yd()
-      }), [Od]);
-      const qd = null !== (md = null === hd || void 0 === hd ? void 0 : hd.name) && void 0 !== md ? md : null;
+    function Hg(bb, wb) {
+      var Mb;
+      const [Hb, pb] = (0, eb.useState)(""), [Vb, gb] = (0, eb.useState)("search"), [lb, Lb] = (0, eb.useState)(null), [Ib, Ob] = (0, eb.useState)(null), Ub = (0, eb.useRef)(null), tb = (0, eb.useRef)(null);
+      (0, eb.useEffect)((() => () => {
+        Ub.current && clearTimeout(Ub.current)
+      }), []), (0, eb.useEffect)((() => {
+        wb || Fb()
+      }), [wb]);
+      const Cb = null !== (Mb = null === lb || void 0 === lb ? void 0 : lb.name) && void 0 !== Mb ? Mb : null;
 
-      function Hd() {
-        od.current && (clearTimeout(od.current), od.current = null)
+      function Eb() {
+        Ub.current && (clearTimeout(Ub.current), Ub.current = null)
       }
 
-      function yd() {
-        Hd(), Rd(""), Kd("search"), vd(null)
-      }(0, Wd.useEffect)((() => {
-        if (null === qd || dd === Sd.NULL_USER_CONTEXT) return;
-        const Od = qd.toLowerCase();
-        if (Od === dd.getPlayerName().toLowerCase()) return void td({
-          name: qd,
+      function Fb() {
+        Eb(), pb(""), gb("search"), Lb(null)
+      }(0, eb.useEffect)((() => {
+        if (null === Cb || bb === Db.NULL_USER_CONTEXT) return;
+        const wb = Cb.toLowerCase();
+        if (wb === bb.getPlayerName().toLowerCase()) return void Ob({
+          name: Cb,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const md = WK.get(Od);
-        if (md) return void td({
-          name: qd,
-          result: md
+        const Mb = Mg.get(wb);
+        if (Mb) return void Ob({
+          name: Cb,
+          result: Mb
         });
-        let Wd = !1;
-        return async function(dd, Od) {
+        let eb = !1;
+        return async function(bb, wb) {
           try {
-            const md = await (0, Sd.postJsonWithMetricsCookiesAndJsonResponse)(`${sO.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: Od
+            const Mb = await (0, Db.postJsonWithMetricsCookiesAndJsonResponse)(`${Dw.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: wb
             }, {
               retries: 1
-            }, dd.getMetricsCookies());
-            if ("boolean" !== typeof(null === md || void 0 === md ? void 0 : md.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(md)}`);
-            return md
-          } catch (md) {
-            return console.error("Failed to look up gift recipient:", md), {
+            }, bb.getMetricsCookies());
+            if ("boolean" !== typeof(null === Mb || void 0 === Mb ? void 0 : Mb.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(Mb)}`);
+            return Mb
+          } catch (Mb) {
+            return console.error("Failed to look up gift recipient:", Mb), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(dd, qd).catch((dd => (console.error("Gift recipient lookup failed:", dd), {
+        }(bb, Cb).catch((bb => (console.error("Gift recipient lookup failed:", bb), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((dd => {
-          !0 !== dd.giftRecipientFound && "store:giftRecipientLookupFailed" === dd.giftRecipientError || WK.set(Od, dd), Wd || td({
-            name: qd,
-            result: dd
+        }))).then((bb => {
+          !0 !== bb.giftRecipientFound && "store:giftRecipientLookupFailed" === bb.giftRecipientError || Mg.set(wb, bb), eb || Ob({
+            name: Cb,
+            result: bb
           })
         })), () => {
-          Wd = !0
+          eb = !0
         }
-      }), [qd, dd]);
-      const bd = (0, Wd.useMemo)((() => {
-        const dd = Fd.trim();
-        if (!dd) return {
+      }), [Cb, bb]);
+      const Bb = (0, eb.useMemo)((() => {
+        const bb = Hb.trim();
+        if (!bb) return {
           status: "none"
         };
-        if (!hd || hd.name !== dd || (null === Qd || void 0 === Qd ? void 0 : Qd.name) !== hd.name) return {
+        if (!lb || lb.name !== bb || (null === Ib || void 0 === Ib ? void 0 : Ib.name) !== lb.name) return {
           status: "pending",
-          name: dd
+          name: bb
         };
-        const Od = Qd.result;
-        return !1 === Od.giftRecipientFound ? {
+        const wb = Ib.result;
+        return !1 === wb.giftRecipientFound ? {
           status: "error",
-          name: hd.name,
-          error: Od.giftRecipientError
+          name: lb.name,
+          error: wb.giftRecipientError
         } : {
           status: "found",
-          name: Od.giftRecipientName,
-          ownedPacks: Od.giftRecipientOwnedPacks,
-          hasSuperRank: Od.giftRecipientHasSuperRank,
-          isSubscriber: Od.giftRecipientIsSubscriber
+          name: wb.giftRecipientName,
+          ownedPacks: wb.giftRecipientOwnedPacks,
+          hasSuperRank: wb.giftRecipientHasSuperRank,
+          isSubscriber: wb.giftRecipientIsSubscriber
         }
-      }), [Fd, hd, Qd]);
-      (0, Wd.useEffect)((() => {
-        "found" === bd.status && "typed" === (null === hd || void 0 === hd ? void 0 : hd.source) && Nd.current !== bd.name && (Nd.current = bd.name, (0, TO.reportAnalyticsClick)({
+      }), [Hb, lb, Ib]);
+      (0, eb.useEffect)((() => {
+        "found" === Bb.status && "typed" === (null === lb || void 0 === lb ? void 0 : lb.source) && tb.current !== Bb.name && (tb.current = Bb.name, (0, Fw.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [bd, hd]);
-      const Td = (null === Qd || void 0 === Qd ? void 0 : Qd.name) === (null === hd || void 0 === hd ? void 0 : hd.name) ? null === Qd || void 0 === Qd ? void 0 : Qd.result : null,
-        pd = !0 === (null === Td || void 0 === Td ? void 0 : Td.giftRecipientFound) ? Td.giftRecipientCosmetics : null;
+      }), [Bb, lb]);
+      const sb = (null === Ib || void 0 === Ib ? void 0 : Ib.name) === (null === lb || void 0 === lb ? void 0 : lb.name) ? null === Ib || void 0 === Ib ? void 0 : Ib.result : null,
+        mb = !0 === (null === sb || void 0 === sb ? void 0 : sb.giftRecipientFound) ? sb.giftRecipientCosmetics : null;
       return {
-        query: Fd,
-        via: Xd,
-        recipient: bd,
-        recipientCosmetics: pd,
-        type: function(dd) {
-          Rd(dd), Kd("search"), Hd();
-          const Od = dd.trim();
-          Od ? od.current = setTimeout((() => {
-            vd({
-              name: Od,
+        query: Hb,
+        via: Vb,
+        recipient: Bb,
+        recipientCosmetics: mb,
+        type: function(bb) {
+          pb(bb), gb("search"), Eb();
+          const wb = bb.trim();
+          wb ? Ub.current = setTimeout((() => {
+            Lb({
+              name: wb,
               source: "typed"
             })
-          }), 400) : vd(null)
+          }), 400) : Lb(null)
         },
-        choose: function(dd, Od) {
-          Hd(), Rd(dd), Kd("typed" === Od ? "search" : "prefilled" === Od ? "prefilled" : "suggestion"), vd({
-            name: dd,
-            source: Od
-          }), "typed" !== Od && "prefilled" !== Od && (0, TO.reportAnalyticsClick)({
+        choose: function(bb, wb) {
+          Eb(), pb(bb), gb("typed" === wb ? "search" : "prefilled" === wb ? "prefilled" : "suggestion"), Lb({
+            name: bb,
+            source: wb
+          }), "typed" !== wb && "prefilled" !== wb && (0, Fw.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: Od
+            value: wb
           })
         },
-        clear: yd,
-        recordGift: function(dd, Od) {
-          ! function(dd) {
-            WK.delete(dd.toLowerCase())
-          }(dd), td((md => {
-            if (!md || md.name.toLowerCase() !== dd.toLowerCase() || !0 !== md.result.giftRecipientFound || "superRank" === Od) return md;
-            const Wd = md.result.giftRecipientOwnedPacks;
+        clear: Fb,
+        recordGift: function(bb, wb) {
+          ! function(bb) {
+            Mg.delete(bb.toLowerCase())
+          }(bb), Ob((Mb => {
+            if (!Mb || Mb.name.toLowerCase() !== bb.toLowerCase() || !0 !== Mb.result.giftRecipientFound || "superRank" === wb) return Mb;
+            const eb = Mb.result.giftRecipientOwnedPacks;
             return {
-              ...md,
+              ...Mb,
               result: {
-                ...md.result,
-                giftRecipientOwnedPacks: Wd.includes(Od) ? Wd : [...Wd, Od]
+                ...Mb.result,
+                giftRecipientOwnedPacks: eb.includes(wb) ? eb : [...eb, wb]
               }
             }
           }))
         }
       }
     }
-    var XK = md(3258),
-      KK = md(5341),
-      hK = md(285),
-      vK = md(3984);
-    const QK = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var tK = md(3198),
-      oK = md(689),
-      NK = md(3307),
-      qK = md(3662);
+    var pg = Mb(3334),
+      Vg = Mb(5514),
+      gg = Mb(294),
+      lg = Mb(4151);
+    const Lg = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var Ig = Mb(3285),
+      Og = Mb(644),
+      Ug = Mb(3402),
+      tg = Mb(3797);
 
-    function HK(dd) {
+    function Cg(bb) {
       let {
-        cosmetics: Od
-      } = dd;
-      return (0, td.jsx)("span", {
+        cosmetics: wb
+      } = bb;
+      return (0, Ob.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, td.jsx)(NK.e, {
-          cosmetics: Od
+        children: (0, Ob.jsx)(Ug.e, {
+          cosmetics: wb
         })
       })
     }
 
-    function yK(dd, Od) {
-      var md, Wd;
-      const Fd = null !== (md = dd.friend) && void 0 !== md ? md : {
+    function Eg(bb, wb) {
+      var Mb, eb;
+      const Hb = null !== (Mb = bb.friend) && void 0 !== Mb ? Mb : {
         isError: !1,
-        name: dd.name,
+        name: bb.name,
         ranks: [],
-        cosmetics: null !== (Wd = dd.cosmetics) && void 0 !== Wd ? Wd : {},
-        nameColour: oK.b,
+        cosmetics: null !== (eb = bb.cosmetics) && void 0 !== eb ? eb : {},
+        nameColour: Og.d,
         location: {
           status: "noGamePlayed"
         }
       };
-      return Od ? {
-        ...Fd,
-        cosmetics: Od
-      } : Fd
+      return wb ? {
+        ...Hb,
+        cosmetics: wb
+      } : Hb
     }
 
-    function bK(dd) {
+    function Fg(bb) {
       let {
-        pending: Od
-      } = dd;
-      return (0, td.jsx)("span", {
+        pending: wb
+      } = bb;
+      return (0, Ob.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: Od && (0, td.jsx)(wd.c, {})
+        children: wb && (0, Ob.jsx)(Xb.c, {})
       })
     }
 
-    function TK(dd) {
-      var Od;
+    function Bg(bb) {
+      var wb;
       let {
-        selfName: md,
-        giftRecipient: Fd,
-        suggestionsVersion: hd,
-        pulseSignal: Qd,
-        disabled: od
-      } = dd;
+        selfName: Mb,
+        giftRecipient: Hb,
+        suggestionsVersion: lb,
+        pulseSignal: Ib,
+        disabled: Ub
+      } = bb;
       const {
-        t: Nd
-      } = (0, Xd.G)(), qd = (0, Zd.h)(), Hd = (0, Wd.useRef)(null), yd = (0, Wd.useRef)(null), {
-        query: Td,
-        via: pd,
-        recipient: Yd,
-        recipientCosmetics: wd
-      } = Fd, Ed = (0, OK.j)(Td), Jd = (0, Wd.useMemo)((() => {
-        const dd = bd.featureFlags.useSocialFeatures ? qd.friends.filter((dd => !dd.isError)) : [];
-        return (0, OK.f)({
-          onlineFriends: (0, Zd.e)(dd),
-          recentRecipients: FK(),
-          friends: dd,
-          selfName: md,
+        t: tb
+      } = (0, Vb.C)(), Cb = (0, Pb.n)(), Eb = (0, eb.useRef)(null), Fb = (0, eb.useRef)(null), {
+        query: sb,
+        via: mb,
+        recipient: hb,
+        recipientCosmetics: Xb
+      } = Hb, xb = (0, bg.q)(sb), jb = (0, eb.useMemo)((() => {
+        const bb = Bb.featureFlags.useSocialFeatures ? Cb.friends.filter((bb => !bb.isError)) : [];
+        return (0, bg.k)({
+          onlineFriends: (0, Pb.i)(bb),
+          recentRecipients: eg(),
+          friends: bb,
+          selfName: Mb,
           max: 8
         })
-      }), [qd.friends, md, hd]), Ud = Td.trim().toLowerCase(), xd = "search" !== pd && Ud ? Jd.find((dd => dd.name.toLowerCase() === Ud)) : void 0, Bd = xd && "prefilled" === pd ? [xd, ...Jd.filter((dd => dd !== xd))] : Jd, Sd = "" !== Ud && !xd, sd = Sd ? Td : "", ud = Bd.length > 0;
-      (0, Wd.useEffect)((() => {
-        Hd.current && Hd.current.value !== sd && (Hd.current.value = sd)
-      }), [sd]), (0, Wd.useEffect)((() => {
-        Hd.current && (Hd.current.disabled = od)
-      }), [od, Qd]);
-      const Vd = (0, Wd.useRef)(0);
+      }), [Cb.friends, Mb, lb]), Kb = sb.trim().toLowerCase(), rb = "search" !== mb && Kb ? jb.find((bb => bb.name.toLowerCase() === Kb)) : void 0, Rb = rb && "prefilled" === mb ? [rb, ...jb.filter((bb => bb !== rb))] : jb, Db = "" !== Kb && !rb, cb = Db ? sb : "", Yb = Rb.length > 0;
+      (0, eb.useEffect)((() => {
+        Eb.current && Eb.current.value !== cb && (Eb.current.value = cb)
+      }), [cb]), (0, eb.useEffect)((() => {
+        Eb.current && (Eb.current.disabled = Ub)
+      }), [Ub, Ib]);
+      const Zb = (0, eb.useRef)(0);
 
-      function rd() {
-        "self" !== Ed && (0, TO.reportAnalyticsClick)({
+      function Ab() {
+        "self" !== xb && (0, Fw.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), Fd.clear()
+        }), Hb.clear()
       }
 
-      function Gd(dd) {
-        var Od, md;
-        if (od) return;
-        if (" " === dd.key || "Enter" === dd.key) return dd.preventDefault(), void dd.currentTarget.click();
-        const Wd = Array.from(null !== (Od = null === (md = yd.current) || void 0 === md ? void 0 : md.querySelectorAll("[role=radio]")) && void 0 !== Od ? Od : []),
-          Fd = Wd.indexOf(dd.currentTarget);
-        let Rd;
-        "ArrowRight" === dd.key || "ArrowDown" === dd.key ? Rd = Wd[(Fd + 1) % Wd.length] : "ArrowLeft" === dd.key || "ArrowUp" === dd.key ? Rd = Wd[(Fd - 1 + Wd.length) % Wd.length] : "Home" === dd.key ? Rd = Wd[0] : "End" === dd.key && (Rd = Wd[Wd.length - 1]), Rd && (dd.preventDefault(), Rd.focus(), Rd.click())
-      }(0, Wd.useEffect)((() => {
-        var dd;
-        Qd > Vd.current && !od && (Vd.current = Qd, null === (dd = Hd.current) || void 0 === dd || dd.focus())
-      }), [Qd, od]);
-      const nd = "self" === Ed,
-        Ld = null !== (Od = null === xd || void 0 === xd ? void 0 : xd.name) && void 0 !== Od ? Od : null,
-        Pd = "error" === Yd.status ? Yd.error : null,
-        zd = "store:giftRecipientLookupFailed" === Pd;
-      return (0, td.jsxs)("div", {
-        className: Rd()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: od,
-          StoreRecipientStripNoChips: !ud
+      function Wb(bb) {
+        var wb, Mb;
+        if (Ub) return;
+        if (" " === bb.key || "Enter" === bb.key) return bb.preventDefault(), void bb.currentTarget.click();
+        const eb = Array.from(null !== (wb = null === (Mb = Fb.current) || void 0 === Mb ? void 0 : Mb.querySelectorAll("[role=radio]")) && void 0 !== wb ? wb : []),
+          Hb = eb.indexOf(bb.currentTarget);
+        let pb;
+        "ArrowRight" === bb.key || "ArrowDown" === bb.key ? pb = eb[(Hb + 1) % eb.length] : "ArrowLeft" === bb.key || "ArrowUp" === bb.key ? pb = eb[(Hb - 1 + eb.length) % eb.length] : "Home" === bb.key ? pb = eb[0] : "End" === bb.key && (pb = eb[eb.length - 1]), pb && (bb.preventDefault(), pb.focus(), pb.click())
+      }(0, eb.useEffect)((() => {
+        var bb;
+        Ib > Zb.current && !Ub && (Zb.current = Ib, null === (bb = Eb.current) || void 0 === bb || bb.focus())
+      }), [Ib, Ub]);
+      const Jb = "self" === xb,
+        Sb = null !== (wb = null === rb || void 0 === rb ? void 0 : rb.name) && void 0 !== wb ? wb : null,
+        Nb = "error" === hb.status ? hb.error : null,
+        vb = "store:giftRecipientLookupFailed" === Nb;
+      return (0, Ob.jsxs)("div", {
+        className: pb()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: Ub,
+          StoreRecipientStripNoChips: !Yb
         }),
-        children: [(0, td.jsx)("span", {
+        children: [(0, Ob.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: Nd("store:buyingFor")
-        }), (0, td.jsxs)("div", {
-          ref: yd,
+          children: tb("store:buyingFor")
+        }), (0, Ob.jsxs)("div", {
+          ref: Fb,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": Nd("store:whoIsItFor"),
-          children: [(0, td.jsxs)("div", {
+          "aria-label": tb("store:whoIsItFor"),
+          children: [(0, Ob.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": nd,
-            tabIndex: od || !nd && null !== Ld ? -1 : 0,
-            className: Rd()("StoreRecipientMe", {
-              StoreRecipientChecked: nd
+            "aria-checked": Jb,
+            tabIndex: Ub || !Jb && null !== Sb ? -1 : 0,
+            className: pb()("StoreRecipientMe", {
+              StoreRecipientChecked: Jb
             }),
             onClick: () => {
-              od || rd()
+              Ub || Ab()
             },
-            onKeyDown: Gd,
-            children: [(0, td.jsx)(Kd.c, {
+            onKeyDown: Wb,
+            children: [(0, Ob.jsx)(gb.b, {
               name: "user"
-            }), " ", Nd("store:me")]
-          }), ud && (0, td.jsx)("div", {
+            }), " ", tb("store:me")]
+          }), Yb && (0, Ob.jsx)("div", {
             className: "StoreRecipientChips",
-            children: Bd.map((dd => {
-              const Od = dd === xd;
-              return (0, td.jsx)("div", {
+            children: Rb.map((bb => {
+              const wb = bb === rb;
+              return (0, Ob.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": Od,
-                tabIndex: !od && Od ? 0 : -1,
-                title: dd.name,
-                className: Rd()("StoreRecipientChip", {
-                  StoreRecipientChecked: Od
+                "aria-checked": wb,
+                tabIndex: !Ub && wb ? 0 : -1,
+                title: bb.name,
+                className: pb()("StoreRecipientChip", {
+                  StoreRecipientChecked: wb
                 }),
                 onClick: () => {
-                  od || function(dd) {
-                    "gift" !== Ed && (0, TO.reportAnalyticsClick)({
+                  Ub || function(bb) {
+                    "gift" !== xb && (0, Fw.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), Fd.choose(dd.name, dd.kind)
-                  }(dd)
+                    }), Hb.choose(bb.name, bb.kind)
+                  }(bb)
                 },
-                onKeyDown: Gd,
-                children: (0, td.jsx)(qK.c, {
-                  playerSocialPreview: yK(dd, Od ? wd : null),
+                onKeyDown: Wb,
+                children: (0, Ob.jsx)(tg.d, {
+                  playerSocialPreview: Eg(bb, wb ? Xb : null),
                   opensProfileCard: !1,
-                  isFriend: null !== dd.friend,
+                  isFriend: null !== bb.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== dd.friend,
-                  status: null === dd.friend ? null : void 0,
-                  trailing: Od ? (0, td.jsx)(bK, {
-                    pending: "pending" === Yd.status
+                  showLocation: null !== bb.friend,
+                  status: null === bb.friend ? null : void 0,
+                  trailing: wb ? (0, Ob.jsx)(Fg, {
+                    pending: "pending" === hb.status
                   }) : void 0
                 })
-              }, dd.name)
+              }, bb.name)
             }))
           })]
-        }), (0, td.jsxs)("div", {
-          className: Rd()("StoreRecipientSearch", {
-            StoreRecipientChecked: Sd,
-            StoreRecipientSearchPulse: Qd > 0 && !Sd,
-            StoreRecipientSearchError: null !== Pd && !zd
+        }), (0, Ob.jsxs)("div", {
+          className: pb()("StoreRecipientSearch", {
+            StoreRecipientChecked: Db,
+            StoreRecipientSearchPulse: Ib > 0 && !Db,
+            StoreRecipientSearchError: null !== Nb && !vb
           }),
           onClick: () => {
-            var dd;
-            null === (dd = Hd.current) || void 0 === dd || dd.focus()
+            var bb;
+            null === (bb = Eb.current) || void 0 === bb || bb.focus()
           },
-          children: [Sd && "found" === Yd.status && wd && (0, td.jsx)(HK, {
-            cosmetics: wd
-          }), !(Sd && "found" === Yd.status && wd) && (0, td.jsx)(Kd.c, {
+          children: [Db && "found" === hb.status && Xb && (0, Ob.jsx)(Cg, {
+            cosmetics: Xb
+          }), !(Db && "found" === hb.status && Xb) && (0, Ob.jsx)(gb.b, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, td.jsx)(gd.c, {
+          }), (0, Ob.jsx)(zb.d, {
             className: "StoreRecipientSearchInput",
-            domRef: Hd,
-            placeholderText: Nd("store:searchName"),
-            defaultValue: sd,
-            maxLength: Ad.g,
-            onValueChange: function(dd) {
-              "gift" !== Ed && dd.trim() && (0, TO.reportAnalyticsClick)({
+            domRef: Eb,
+            placeholderText: tb("store:searchName"),
+            defaultValue: cb,
+            maxLength: fb.g,
+            onValueChange: function(bb) {
+              "gift" !== xb && bb.trim() && (0, Fw.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), Fd.type(dd)
+              }), Hb.type(bb)
             },
             onEnter: () => {
-              var dd;
-              const Od = null === (dd = Hd.current) || void 0 === dd ? void 0 : dd.value.trim();
-              Od && Fd.choose(Od, "typed")
+              var bb;
+              const wb = null === (bb = Eb.current) || void 0 === bb ? void 0 : bb.value.trim();
+              wb && Hb.choose(wb, "typed")
             },
             blurOnEnter: !0
-          }), Sd && (0, td.jsx)(bK, {
-            pending: "pending" === Yd.status
-          }), Sd && (0, td.jsx)("div", {
-            ...(0, vd.X)({
-              disabled: od
+          }), Db && (0, Ob.jsx)(Fg, {
+            pending: "pending" === hb.status
+          }), Db && (0, Ob.jsx)("div", {
+            ...(0, Lb.bb)({
+              disabled: Ub
             }),
-            "aria-label": Nd("store:clearRecipient"),
-            title: Nd("store:clearRecipient"),
+            "aria-label": tb("store:clearRecipient"),
+            title: tb("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: dd => {
-              dd.stopPropagation(), od || rd()
+            onClick: bb => {
+              bb.stopPropagation(), Ub || Ab()
             },
-            children: (0, td.jsx)(Kd.c, {
+            children: (0, Ob.jsx)(gb.b, {
               name: "xmark"
             })
           })]
-        }, Qd), Pd && (0, td.jsx)("div", {
-          className: Rd()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: zd
+        }, Ib), Nb && (0, Ob.jsx)("div", {
+          className: pb()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: vb
           }),
           role: "status",
-          children: Nd(Pd)
+          children: tb(Nb)
         })]
       })
     }
-    var pK = md(3138),
-      YK = md(3353),
-      gK = md(3684),
-      wK = md(4771),
-      aK = md(3206),
-      EK = md(4283),
-      JK = md(4291),
-      UK = md(4249);
-    const xK = [oK.q.yellow, oK.q.green, oK.q.aqua, oK.q.blue, oK.q.purple, oK.q.red];
+    var sg = Mb(3208),
+      mg = Mb(3457),
+      hg = Mb(3813),
+      zg = Mb(4922),
+      Xg = Mb(3287),
+      xg = Mb(4448),
+      jg = Mb(4451),
+      Kg = Mb(4419);
+    const rg = [Og.v.yellow, Og.v.green, Og.v.aqua, Og.v.blue, Og.v.purple, Og.v.red];
 
-    function BK(dd) {
-      return "needsRecipient" === dd || "lookingUp" === dd || "gift" === dd || "recipientOwns" === dd || "recipientSharesOwned" === dd || "recipientSubscribed" === dd
+    function Rg(bb) {
+      return "needsRecipient" === bb || "lookingUp" === bb || "gift" === bb || "recipientOwns" === bb || "recipientSharesOwned" === bb || "recipientSubscribed" === bb
     }
 
-    function SK(dd) {
+    function Dg(bb) {
       const {
-        onKeyDown: Od,
-        ...md
-      } = (0, vd.X)();
+        onKeyDown: wb,
+        ...Mb
+      } = (0, Lb.bb)();
       return {
-        ...md,
-        "aria-label": dd,
-        onKeyDown: dd => {
-          dd.target === dd.currentTarget && (null === Od || void 0 === Od || Od(dd))
+        ...Mb,
+        "aria-label": bb,
+        onKeyDown: bb => {
+          bb.target === bb.currentTarget && (null === wb || void 0 === wb || wb(bb))
         }
       }
     }
 
-    function sK(dd) {
+    function cg(bb) {
       let {
-        text: Od
-      } = dd;
-      return (0, td.jsx)("span", {
+        text: wb
+      } = bb;
+      return (0, Ob.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(Od).map(((dd, Od) => (0, td.jsx)("span", {
+        children: Array.from(wb).map(((bb, wb) => (0, Ob.jsx)("span", {
           style: {
-            color: xK[Od % xK.length]
+            color: rg[wb % rg.length]
           },
-          children: dd
-        }, Od)))
+          children: bb
+        }, wb)))
       })
     }
-    const uK = {
+    const Yg = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -6879,81 +6879,81 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function VK(dd) {
+    function Zg(bb) {
       let {
-        state: Od,
-        item: md,
-        price: Wd,
-        busy: Fd,
-        highlight: hd = !1,
-        secondary: Qd = !1,
-        onAct: od,
-        onNeedRecipient: Nd,
-        onLogin: qd
-      } = dd;
+        state: wb,
+        item: Mb,
+        price: eb,
+        busy: Hb,
+        highlight: lb = !1,
+        secondary: Ib = !1,
+        onAct: Ub,
+        onNeedRecipient: tb,
+        onLogin: Cb
+      } = bb;
       const {
-        t: Hd
-      } = (0, Xd.G)(), yd = "superRank" === md ? (0, zd.x)(Date.now()).product.days : null, bd = "superRank" === md && "hyper" === (0, zd.v)(Date.now()).look ? vd.v : vd.m, Td = Qd ? vd.i : bd, pd = dd => null === yd ? Hd(dd ? "general:gift" : "general:buy") : Hd(dd ? "store:giftDays" : "store:buyDays", {
-        days: yd
-      }), Yd = (dd, Od) => {
-        const md = (0, td.jsxs)(td.Fragment, {
-          children: [null === dd && (0, td.jsx)("span", {
+        t: Eb
+      } = (0, Vb.C)(), Fb = "superRank" === Mb ? (0, vb.v)(Date.now()).product.days : null, Bb = "superRank" === Mb && "hyper" === (0, vb.s)(Date.now()).look ? Lb.y : Lb.p, sb = Ib ? Lb.j : Bb, mb = bb => null === Fb ? Eb(bb ? "general:gift" : "general:buy") : Eb(bb ? "store:giftDays" : "store:buyDays", {
+        days: Fb
+      }), hb = (bb, wb) => {
+        const Mb = (0, Ob.jsxs)(Ob.Fragment, {
+          children: [null === bb && (0, Ob.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== dd && (0, td.jsx)("span", {
+          }), null !== bb && (0, Ob.jsx)("span", {
             className: "StoreCtaLabel",
-            title: dd,
-            children: dd
+            title: bb,
+            children: bb
           })]
         });
-        return null !== yd ? (0, td.jsxs)(td.Fragment, {
-          children: [Od && (0, td.jsx)("span", {
+        return null !== Fb ? (0, Ob.jsxs)(Ob.Fragment, {
+          children: [wb && (0, Ob.jsx)("span", {
             className: "StoreCtaIcon",
-            children: Od
-          }), md, (0, td.jsxs)("span", {
+            children: wb
+          }), Mb, (0, Ob.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, td.jsx)(YK.c, {
-              amount: Wd
+            children: ["\xb7", (0, Ob.jsx)(mg.d, {
+              amount: eb
             })]
           })]
-        }) : (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsxs)("span", {
+        }) : (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [md, "\xb7"]
-          }), (0, td.jsxs)("span", {
+            children: [Mb, "\xb7"]
+          }), (0, Ob.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [Od, (0, td.jsx)(YK.c, {
-              amount: Wd
+            children: [wb, (0, Ob.jsx)(mg.d, {
+              amount: eb
             })]
           })]
         })
       };
-      let gd;
-      switch (Od) {
+      let zb;
+      switch (wb) {
         case "pending":
-          gd = (0, td.jsx)(bd, {
+          zb = (0, Ob.jsx)(Bb, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: Yd(null)
+            children: hb(null)
           });
           break;
         case "login":
-          gd = (0, td.jsx)(Td, {
+          zb = (0, Ob.jsx)(sb, {
             className: "StoreCtaButton",
-            onClick: qd,
-            children: Yd(pd(!1))
+            onClick: Cb,
+            children: hb(mb(!1))
           });
           break;
         case "owned":
-          gd = (0, td.jsx)(vd.i, {
+          zb = (0, Ob.jsx)(Lb.j, {
             className: "StoreCtaButton",
             onClick: () => {
-              (0, pK.c)("store")
+              (0, sg.c)("store")
             },
-            children: (0, td.jsxs)("span", {
+            children: (0, Ob.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, td.jsx)(Kd.c, {
+              children: [(0, Ob.jsx)(gb.b, {
                 name: "shirt"
-              }), " ", Hd("store:equip")]
+              }), " ", Eb("store:equip")]
             })
           });
           break;
@@ -6962,56 +6962,56 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          gd = (0, td.jsx)(bd, {
+          zb = (0, Ob.jsx)(Bb, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, td.jsx)("span", {
+            children: (0, Ob.jsx)("span", {
               className: "StoreCtaLabel",
-              children: Hd(uK[Od])
+              children: Eb(Yg[wb])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          gd = (0, td.jsx)(bd, {
+          zb = (0, Ob.jsx)(Bb, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === Od || null === Wd,
-            loading: "lookingUp" === Od || Fd,
-            onClick: od,
+            disabled: "needsRecipient" === wb || null === eb,
+            loading: "lookingUp" === wb || Hb,
+            onClick: Ub,
             analyticsClick: {
               id: "store.gift",
-              value: md
+              value: Mb
             },
-            children: Yd(pd(!0), OK.b)
+            children: hb(mb(!0), bg.e)
           });
           break;
         case "buy":
         case "recharge":
-          gd = (0, td.jsx)(Td, {
+          zb = (0, Ob.jsx)(sb, {
             className: "StoreCtaButton",
-            loading: Fd,
-            disabled: null === Wd,
-            onClick: od,
+            loading: Hb,
+            disabled: null === eb,
+            onClick: Ub,
             analyticsClick: {
               id: "store.buy",
-              value: md
+              value: Mb
             },
-            children: Yd(pd(!1))
+            children: hb(mb(!1))
           })
       }
-      return (0, td.jsx)("div", {
-        className: Rd()("StoreCta", {
-          StoreCtaHighlight: hd,
-          StoreCtaLabelFirst: null !== yd
+      return (0, Ob.jsx)("div", {
+        className: pb()("StoreCta", {
+          StoreCtaHighlight: lb,
+          StoreCtaLabelFirst: null !== Fb
         }),
-        onClick: dd => {
-          dd.stopPropagation(), "needsRecipient" === Od && Nd()
+        onClick: bb => {
+          bb.stopPropagation(), "needsRecipient" === wb && tb()
         },
-        children: gd
+        children: zb
       })
     }
-    const iK = {
+    const fg = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -7019,474 +7019,474 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function AK(dd) {
-      var Od;
+    function Ag(bb) {
+      var wb;
       let {
-        pack: md,
-        state: Fd,
-        busy: hd,
-        onOpen: vd,
-        onAct: Qd,
-        onNeedRecipient: od,
-        onLogin: Nd
-      } = dd;
+        pack: Mb,
+        state: Hb,
+        busy: lb,
+        onOpen: Lb,
+        onAct: Ib,
+        onNeedRecipient: Ub,
+        onLogin: tb
+      } = bb;
       const {
-        t: qd
-      } = (0, Xd.G)(), Hd = DX.c[md], yd = fX.n[md], bd = (0, tK.m)(md), Td = (0, Wd.useRef)(null);
-      (0, EK.k)(md, Td);
-      const pd = BK(Fd),
-        Yd = null !== (Od = Hd.displayName) && void 0 !== Od ? Od : md,
-        gd = (0, wK.c)((() => {
-          (0, gK.g)();
-          const dd = (0, EK.g)(md);
-          void 0 !== dd && (0, aK.h)((0, EK.c)(dd))
+        t: Cb
+      } = (0, Vb.C)(), Eb = aV.c[Mb], Fb = oV.m[Mb], Bb = (0, Ig.p)(Mb), sb = (0, eb.useRef)(null);
+      (0, xg.l)(Mb, sb);
+      const mb = Rg(Hb),
+        hb = null !== (wb = Eb.displayName) && void 0 !== wb ? wb : Mb,
+        zb = (0, zg.d)((() => {
+          (0, hg.i)();
+          const bb = (0, xg.f)(Mb);
+          void 0 !== bb && (0, Xg.g)((0, xg.e)(bb))
         })),
-        [wd] = (0, Wd.useState)(vK.i);
-      return (0, td.jsxs)("div", {
-        className: Rd()("StoreTile StorePackTile", iK[Hd.tier], {
-          StorePackTileOwned: "owned" === Fd,
-          StorePackTileRecipientOwns: "recipientOwns" === Fd,
-          StoreTileGift: pd
+        [Xb] = (0, eb.useState)(lg.k);
+      return (0, Ob.jsxs)("div", {
+        className: pb()("StoreTile StorePackTile", fg[Eb.tier], {
+          StorePackTileOwned: "owned" === Hb,
+          StorePackTileRecipientOwns: "recipientOwns" === Hb,
+          StoreTileGift: mb
         }),
-        ...SK(Yd),
-        ref: Td,
-        "data-store-item": md,
-        onClick: vd,
-        onPointerMove: dd => {
-          "mouse" !== dd.pointerType || 0 === dd.movementX && 0 === dd.movementY || wd || gd.start()
+        ...Dg(hb),
+        ref: sb,
+        "data-store-item": Mb,
+        onClick: Lb,
+        onPointerMove: bb => {
+          "mouse" !== bb.pointerType || 0 === bb.movementX && 0 === bb.movementY || Xb || zb.start()
         },
-        onPointerLeave: gd.cancel,
-        children: [yd && (0, td.jsx)(yd, {
+        onPointerLeave: zb.cancel,
+        children: [Fb && (0, Ob.jsx)(Fb, {
           simple: !0
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "StorePackCharacters",
-          children: bd.map((dd => (0, td.jsx)("div", {
+          children: Bb.map((bb => (0, Ob.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,tK.g)(dd)})`
+              backgroundImage: `url(${(0,Ig.j)(bb)})`
             }
-          }, dd)))
-        }), (0, td.jsx)("div", {
+          }, bb)))
+        }), (0, Ob.jsx)("div", {
           className: "StoreTileScrim"
-        }), pd && (0, td.jsx)("div", {
+        }), mb && (0, Ob.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, td.jsx)(UK.c, {
-          pack: md,
-          className: Rd()({
-            PackAnimatedBadgeBesideRibbon: pd
+        }), (0, Ob.jsx)(Kg.e, {
+          pack: Mb,
+          className: pb()({
+            PackAnimatedBadgeBesideRibbon: mb
           })
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, td.jsx)("div", {
+          children: [(0, Ob.jsx)("div", {
             className: "StoreTileTitle",
-            children: Yd
-          }), (0, td.jsxs)("div", {
+            children: hb
+          }), (0, Ob.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, td.jsx)(JK.e, {
-              tier: Hd.tier
-            }), " \xb7 ", qd("store:itemCount", {
-              count: (0, oF.n)(md)
-            }), "owned" === Fd && (0, td.jsxs)("span", {
+            children: [(0, Ob.jsx)(jg.b, {
+              tier: Eb.tier
+            }), " \xb7 ", Cb("store:itemCount", {
+              count: (0, IH.l)(Mb)
+            }), "owned" === Hb && (0, Ob.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, td.jsx)(Kd.c, {
+              children: [" \xb7 ", (0, Ob.jsx)(gb.b, {
                 name: "check"
-              }), " ", qd("general:owned")]
+              }), " ", Cb("general:owned")]
             })]
-          }), (0, td.jsx)(VK, {
-            state: Fd,
-            item: md,
-            price: (0, eX.f)(md),
-            busy: hd,
-            onAct: Qd,
-            onNeedRecipient: od,
-            onLogin: Nd
+          }), (0, Ob.jsx)(Zg, {
+            state: Hb,
+            item: Mb,
+            price: (0, iV.e)(Mb),
+            busy: lb,
+            onAct: Ib,
+            onNeedRecipient: Ub,
+            onLogin: tb
           })]
         })]
       })
     }
-    var rK = md(1688),
-      GK = md(4823),
-      nK = md(4310),
-      LK = md(4916),
-      PK = md(35566),
-      zK = md(4849);
-    const cK = {
-      cape: Pd.d.cape
+    var Wg = Mb(1741),
+      Jg = Mb(4976),
+      Sg = Mb(4478),
+      Ng = Mb(5076),
+      vg = Mb(35358),
+      Qg = Mb(5003);
+    const Gg = {
+      cape: Nb.d.cape
     };
 
-    function jK(dd) {
-      var Od, md;
+    function qg(bb) {
+      var wb, Mb;
       let {
-        wearer: Fd,
-        active: Kd,
-        tryOn: hd = cK,
-        framing: vd = "store",
-        glow: Qd = !0,
-        turnable: od = !1,
-        className: Nd
-      } = dd;
+        wearer: Hb,
+        active: gb,
+        tryOn: lb = Gg,
+        framing: Lb = "store",
+        glow: Ib = !0,
+        turnable: Ub = !1,
+        className: tb
+      } = bb;
       const {
-        t: qd
-      } = (0, Xd.G)(), Hd = (0, Wd.useRef)(null), [yd] = (0, Wd.useState)(vK.i), bd = function(dd) {
-        const [Od, md] = (0, Wd.useState)(!1);
-        return (0, Wd.useEffect)((() => {
-          const Od = new IntersectionObserver((dd => {
-            md(dd[dd.length - 1].isIntersecting)
+        t: Cb
+      } = (0, Vb.C)(), Eb = (0, eb.useRef)(null), [Fb] = (0, eb.useState)(lg.k), Bb = function(bb) {
+        const [wb, Mb] = (0, eb.useState)(!1);
+        return (0, eb.useEffect)((() => {
+          const wb = new IntersectionObserver((bb => {
+            Mb(bb[bb.length - 1].isIntersecting)
           }));
-          return Od.observe(dd.current), () => {
-            Od.disconnect()
+          return wb.observe(bb.current), () => {
+            wb.disconnect()
           }
-        }), [dd]), Od
-      }(Hd), Td = (0, zK.f)("storeRank"), pd = null !== (Od = Fd.name) && void 0 !== Od ? Od : qd(Fd.gift ? "store:hyperWearerFriend" : "store:hyperWearerYou"), Yd = null !== (md = Fd.cosmetics) && void 0 !== md ? md : {}, gd = `${pd}|${JSON.stringify(Yd)}`, wd = Kd && bd && !yd && !Td, [Ed, Jd] = (0, Wd.useState)(null);
-      wd || null === Ed || Jd(null);
-      const Ud = wd && Ed === gd;
-      return (0, td.jsxs)("div", {
-        ref: Hd,
-        className: Rd()("HyperRankStage", Nd, {
-          HyperRankStageDrawn: Ud
+        }), [bb]), wb
+      }(Eb), sb = (0, Qg.h)("storeRank"), mb = null !== (wb = Hb.name) && void 0 !== wb ? wb : Cb(Hb.gift ? "store:hyperWearerFriend" : "store:hyperWearerYou"), hb = null !== (Mb = Hb.cosmetics) && void 0 !== Mb ? Mb : {}, zb = `${mb}|${JSON.stringify(hb)}`, Xb = gb && Bb && !Fb && !sb, [xb, jb] = (0, eb.useState)(null);
+      Xb || null === xb || jb(null);
+      const Kb = Xb && xb === zb;
+      return (0, Ob.jsxs)("div", {
+        ref: Eb,
+        className: pb()("HyperRankStage", tb, {
+          HyperRankStageDrawn: Kb
         }),
-        children: [Qd && (0, td.jsx)("div", {
+        children: [Ib && (0, Ob.jsx)("div", {
           className: "HyperRankStageGlow"
-        }), (0, td.jsx)(zd.e, {
+        }), (0, Ob.jsx)(vb.c, {
           className: "HyperRankStageStandIn"
-        }), wd && (0, td.jsx)(DK, {
-          name: pd,
-          cosmetics: Yd,
-          tryOn: hd,
-          framing: vd,
-          turnable: od,
+        }), Xb && (0, Ob.jsx)(ag, {
+          name: mb,
+          cosmetics: hb,
+          tryOn: lb,
+          framing: Lb,
+          turnable: Ub,
           onDrawn: () => {
-            Jd(gd)
+            jb(zb)
           }
-        }, gd), (0, td.jsx)("div", {
+        }, zb), (0, Ob.jsx)("div", {
           className: "HyperRankStageFloor"
         })]
       })
     }
 
-    function DK(dd) {
+    function ag(bb) {
       let {
-        name: Od,
-        cosmetics: md,
-        tryOn: Fd,
-        framing: Xd,
-        turnable: Kd,
-        onDrawn: hd
-      } = dd;
-      const vd = (0, Wd.useRef)(null),
-        Qd = (0, Wd.useRef)(0),
-        od = (0, Wd.useRef)(null),
-        Nd = (0, Wd.useMemo)((() => {
-          var dd;
+        name: wb,
+        cosmetics: Mb,
+        tryOn: Hb,
+        framing: Vb,
+        turnable: gb,
+        onDrawn: lb
+      } = bb;
+      const Lb = (0, eb.useRef)(null),
+        Ib = (0, eb.useRef)(0),
+        Ub = (0, eb.useRef)(null),
+        tb = (0, eb.useMemo)((() => {
+          var bb;
           return {
-            name: Od,
-            ranks: [Pd.d.rank],
-            nameColour: null !== (dd = md.nameColour) && void 0 !== dd ? dd : oK.b
+            name: wb,
+            ranks: [Nb.d.rank],
+            nameColour: null !== (bb = Mb.nameColour) && void 0 !== bb ? bb : Og.d
           }
-        }), [Od, md.nameColour]),
-        qd = dd => {
-          var Od;
-          (null === (Od = od.current) || void 0 === Od ? void 0 : Od.pointerId) === dd.pointerId && (od.current = null)
+        }), [wb, Mb.nameColour]),
+        Cb = bb => {
+          var wb;
+          (null === (wb = Ub.current) || void 0 === wb ? void 0 : wb.pointerId) === bb.pointerId && (Ub.current = null)
         },
-        Hd = Kd ? {
-          onPointerDown: dd => {
-            0 === dd.button && (od.current = {
-              pointerId: dd.pointerId,
-              x: dd.clientX
-            }, dd.currentTarget.setPointerCapture(dd.pointerId))
+        Eb = gb ? {
+          onPointerDown: bb => {
+            0 === bb.button && (Ub.current = {
+              pointerId: bb.pointerId,
+              x: bb.clientX
+            }, bb.currentTarget.setPointerCapture(bb.pointerId))
           },
-          onPointerMove: dd => {
-            var Od;
-            const md = od.current;
-            (null === md || void 0 === md ? void 0 : md.pointerId) === dd.pointerId && (Qd.current -= (dd.clientX - md.x) * PK.d, md.x = dd.clientX, null === (Od = vd.current) || void 0 === Od || Od.turnCamera(Qd.current))
+          onPointerMove: bb => {
+            var wb;
+            const Mb = Ub.current;
+            (null === Mb || void 0 === Mb ? void 0 : Mb.pointerId) === bb.pointerId && (Ib.current -= (bb.clientX - Mb.x) * vg.b, Mb.x = bb.clientX, null === (wb = Lb.current) || void 0 === wb || wb.turnCamera(Ib.current))
           },
-          onPointerUp: qd,
-          onPointerCancel: qd
+          onPointerUp: Cb,
+          onPointerCancel: Cb
         } : {};
-      return (0, td.jsx)("div", {
-        className: Rd()("HyperRankStageLive", {
-          HyperRankStageTurnable: Kd
+      return (0, Ob.jsx)("div", {
+        className: pb()("HyperRankStageLive", {
+          HyperRankStageTurnable: gb
         }),
-        ...Hd,
-        children: (0, td.jsx)(Wd.Suspense, {
+        ...Eb,
+        children: (0, Ob.jsx)(eb.Suspense, {
           fallback: null,
-          children: (0, td.jsx)(gK.e, {
-            ref: vd,
+          children: (0, Ob.jsx)(hg.e, {
+            ref: Lb,
             owner: "storeRank",
-            framing: Xd,
-            forcedCosmetics: Fd,
-            nametag: Nd,
+            framing: Vb,
+            forcedCosmetics: Hb,
+            nametag: tb,
             onReady: () => {
-              var dd;
-              null === (dd = vd.current) || void 0 === dd || dd.setAllCosmetics(md)
+              var bb;
+              null === (bb = Lb.current) || void 0 === bb || bb.setAllCosmetics(Mb)
             },
-            onDrawn: hd
+            onDrawn: lb
           })
         })
       })
     }
-    var eK = md(4924);
+    var ig = Mb(5080);
 
-    function IK(dd) {
-      var Od;
-      return null !== (Od = (0, tF.j)(dd)) && void 0 !== Od ? Od : tF.m[tF.m.length - 1]
+    function ug(bb) {
+      var wb;
+      return null !== (wb = (0, LH.k)(bb)) && void 0 !== wb ? wb : LH.p[LH.p.length - 1]
     }
 
-    function lK(dd, Od) {
-      return dd.tiers.flatMap((dd => {
-        var md;
-        return null !== (md = dd[Od]) && void 0 !== md ? md : []
+    function dg(bb, wb) {
+      return bb.tiers.flatMap((bb => {
+        var Mb;
+        return null !== (Mb = bb[wb]) && void 0 !== Mb ? Mb : []
       }))
     }
 
-    function CK(dd) {
-      const Od = lK(dd, "hyper");
-      return Od.filter((dd => "cosmetic" === dd.kind && !(0, LK.r)(dd, Od)))
+    function Pg(bb) {
+      const wb = dg(bb, "hyper");
+      return wb.filter((bb => "cosmetic" === bb.kind && !(0, Ng.u)(bb, wb)))
     }
 
-    function ZK(dd, Od) {
-      const md = lK(dd, Od).find((dd => "xpBoost" === dd.kind));
-      return "xpBoost" === (null === md || void 0 === md ? void 0 : md.kind) ? md : null
+    function ng(bb, wb) {
+      const Mb = dg(bb, wb).find((bb => "xpBoost" === bb.kind));
+      return "xpBoost" === (null === Mb || void 0 === Mb ? void 0 : Mb.kind) ? Mb : null
     }
 
-    function kK(dd) {
+    function yg(bb) {
       return [{
         id: "colourfulNames",
         icon: "palette",
-        title: (0, td.jsx)(sK, {
-          text: dd("store:colourfulNames")
+        title: (0, Ob.jsx)(cg, {
+          text: bb("store:colourfulNames")
         }),
-        detail: dd("store:perkColourfulNamesDetail")
+        detail: bb("store:perkColourfulNamesDetail")
       }, {
         id: "capes",
         icon: "shirt",
-        title: dd("store:perkCapes"),
-        detail: dd("store:perkCapesDetail")
+        title: bb("store:perkCapes"),
+        detail: bb("store:perkCapesDetail")
       }, {
         id: "nametag",
         icon: "user",
-        title: dd("store:perkNametag", {
-          rank: dd((0, zd.p)(Pd.d.id).nameKey)
+        title: bb("store:perkNametag", {
+          rank: bb((0, vb.q)(Nb.d.id).nameKey)
         }),
-        detail: dd("store:perkNametagDetail")
+        detail: bb("store:perkNametagDetail")
       }, {
         id: "noAdverts",
         icon: "eye-slash",
-        title: dd("store:perkNoAdverts"),
-        detail: dd("store:perkNoAdvertsDetail")
+        title: bb("store:perkNoAdverts"),
+        detail: bb("store:perkNoAdvertsDetail")
       }, {
         id: "friends",
         icon: "user-group",
-        title: dd("store:perkFriends", {
-          count: (0, yO.d)([Pd.d.rank])
+        title: bb("store:perkFriends", {
+          count: (0, Cw.c)([Nb.d.rank])
         }),
-        detail: dd("store:perkFriendsDetail", {
-          count: (0, yO.d)([])
+        detail: bb("store:perkFriendsDetail", {
+          count: (0, Cw.c)([])
         })
       }]
     }
 
-    function fK() {
+    function og() {
       const {
-        t: dd
-      } = (0, Xd.G)(), Od = [{
+        t: bb
+      } = (0, Vb.C)(), wb = [{
         id: "battlePass",
         icon: "crown",
-        title: dd("store:perkBattlePassTrack")
-      }, ...kK(dd)];
-      return (0, td.jsx)("ul", {
+        title: bb("store:perkBattlePassTrack")
+      }, ...yg(bb)];
+      return (0, Ob.jsx)("ul", {
         className: "HyperRankTilePerks",
-        children: Od.map((dd => (0, td.jsxs)("li", {
-          children: [(0, td.jsx)("span", {
+        children: wb.map((bb => (0, Ob.jsxs)("li", {
+          children: [(0, Ob.jsx)("span", {
             className: "HyperRankPerkIcon",
-            children: (0, td.jsx)(Kd.c, {
-              name: dd.icon
+            children: (0, Ob.jsx)(gb.b, {
+              name: bb.icon
             })
-          }), dd.title]
-        }, dd.id)))
+          }), bb.title]
+        }, bb.id)))
       })
     }
 
-    function MK() {
+    function Tg() {
       const {
-        t: dd
-      } = (0, Xd.G)();
-      return (0, td.jsxs)("div", {
+        t: bb
+      } = (0, Vb.C)();
+      return (0, Ob.jsxs)("div", {
         className: "HyperRankPerkTiles",
-        children: [(0, td.jsx)(dh, {}), kK(dd).map((dd => (0, td.jsxs)("div", {
+        children: [(0, Ob.jsx)(kg, {}), yg(bb).map((bb => (0, Ob.jsxs)("div", {
           className: "HyperRankPerkTile",
-          children: [(0, td.jsx)("span", {
+          children: [(0, Ob.jsx)("span", {
             className: "HyperRankPerkIcon",
-            children: (0, td.jsx)(Kd.c, {
-              name: dd.icon
+            children: (0, Ob.jsx)(gb.b, {
+              name: bb.icon
             })
-          }), (0, td.jsxs)("div", {
+          }), (0, Ob.jsxs)("div", {
             className: "HyperRankPerkText",
-            children: [(0, td.jsx)("b", {
-              children: dd.title
-            }), (0, td.jsx)("small", {
-              children: dd.detail
+            children: [(0, Ob.jsx)("b", {
+              children: bb.title
+            }), (0, Ob.jsx)("small", {
+              children: bb.detail
             })]
           })]
-        }, dd.id)))]
+        }, bb.id)))]
       })
     }
 
-    function dh() {
+    function kg() {
       const {
-        t: dd,
-        selectedLanguage: Od
-      } = (0, Xd.G)(), md = IK(Date.now()), Wd = CK(md), Fd = function(dd) {
-        return CK(dd).filter((dd => null !== (0, LK.n)(dd) || null !== (0, LK.p)(dd))).reverse()
-      }(md).slice(0, 4), Rd = ZK(md, "hyper"), hd = ZK(md, "free"), vd = (0, Xd.f)(Od.code, "store:battlePassTiersEnds", md.endsAtMs, {
+        t: bb,
+        selectedLanguage: wb
+      } = (0, Vb.C)(), Mb = ug(Date.now()), eb = Pg(Mb), Hb = function(bb) {
+        return Pg(bb).filter((bb => null !== (0, Ng.p)(bb) || null !== (0, Ng.r)(bb))).reverse()
+      }(Mb).slice(0, 4), pb = ng(Mb, "hyper"), lb = ng(Mb, "free"), Lb = (0, Vb.e)(wb.code, "store:battlePassTiersEnds", Mb.endsAtMs, {
         month: "long",
         day: "numeric"
       });
-      return (0, td.jsxs)("div", {
+      return (0, Ob.jsxs)("div", {
         className: "HyperRankPerkTile HyperRankBattlePassPerk",
-        children: [(0, td.jsx)("span", {
+        children: [(0, Ob.jsx)("span", {
           className: "HyperRankPerkIcon",
-          children: (0, td.jsx)(Kd.c, {
+          children: (0, Ob.jsx)(gb.b, {
             name: "crown"
           })
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "HyperRankPerkText",
-          children: [(0, td.jsx)("b", {
-            children: dd("store:battlePassSeason", {
-              season: md.seasonNumber
+          children: [(0, Ob.jsx)("b", {
+            children: bb("store:battlePassSeason", {
+              season: Mb.seasonNumber
             })
-          }), (0, td.jsx)("small", {
-            children: dd("store:battlePassTiersEnds", {
-              tiers: md.tierCount,
-              date: vd
+          }), (0, Ob.jsx)("small", {
+            children: bb("store:battlePassTiersEnds", {
+              tiers: Mb.tierCount,
+              date: Lb
             })
           })]
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "HyperRankBattlePassRewards",
-          children: [(0, td.jsx)("span", {
+          children: [(0, Ob.jsx)("span", {
             className: "HyperRankBattlePassCount",
-            children: 1 === Wd.length ? dd("store:battlePassOneCosmetic") : dd("store:battlePassCosmetics", {
-              count: Wd.length
+            children: 1 === eb.length ? bb("store:battlePassOneCosmetic") : bb("store:battlePassCosmetics", {
+              count: eb.length
             })
-          }), (0, td.jsxs)("div", {
+          }), (0, Ob.jsxs)("div", {
             className: "HyperRankBattlePassFeatured",
-            children: [Fd.map((Od => (0, td.jsx)("span", {
+            children: [Hb.map((wb => (0, Ob.jsx)("span", {
               className: "HyperRankBattlePassReward",
-              title: (0, LK.h)(Od, dd),
-              children: (0, td.jsx)(eK.c, {
-                reward: Od
+              title: (0, Ng.g)(wb, bb),
+              children: (0, Ob.jsx)(ig.b, {
+                reward: wb
               })
-            }, Od.id))), Wd.length > Fd.length && (0, td.jsx)("span", {
+            }, wb.id))), eb.length > Hb.length && (0, Ob.jsx)("span", {
               className: "HyperRankBattlePassReward HyperRankBattlePassMore",
-              children: dd("store:battlePassMore", {
-                count: Wd.length - Fd.length
+              children: bb("store:battlePassMore", {
+                count: eb.length - Hb.length
               })
             })]
           })]
-        }), (0, td.jsxs)("ul", {
+        }), (0, Ob.jsxs)("ul", {
           className: "HyperRankBattlePassFacts",
-          children: [Rd && hd && (0, td.jsxs)("li", {
-            children: [(0, td.jsx)(Kd.c, {
+          children: [pb && lb && (0, Ob.jsxs)("li", {
+            children: [(0, Ob.jsx)(gb.b, {
               name: "angles-up"
-            }), dd("store:battlePassXp", {
-              multiplier: Rd.multiplier,
-              minutes: Rd.minutes,
-              freeMinutes: hd.minutes
+            }), bb("store:battlePassXp", {
+              multiplier: pb.multiplier,
+              minutes: pb.minutes,
+              freeMinutes: lb.minutes
             })]
-          }), (0, td.jsxs)("li", {
-            children: [(0, td.jsx)(Kd.c, {
+          }), (0, Ob.jsxs)("li", {
+            children: [(0, Ob.jsx)(gb.b, {
               name: "lock-open"
-            }), dd("store:battlePassUnlockAtOnce")]
+            }), bb("store:battlePassUnlockAtOnce")]
           })]
         })]
       })
     }
-    const Oh = ["snowmanSet", "skis", "reindeerPet"];
+    const bl = ["snowmanSet", "skis", "reindeerPet"];
 
-    function mh() {
-      const dd = IK(Date.now()),
-        Od = {};
-      let md = 0;
-      for (const Fd of dd.tiers) {
-        const dd = Fd.hyper;
-        var Wd;
-        if ("cosmetic" === (null === dd || void 0 === dd ? void 0 : dd.kind) && Oh.includes(dd.id)) Object.assign(Od, null === (Wd = (0, LK.l)(dd)) || void 0 === Wd ? void 0 : Wd.cosmetics), md++
+    function wl() {
+      const bb = ug(Date.now()),
+        wb = {};
+      let Mb = 0;
+      for (const Hb of bb.tiers) {
+        const bb = Hb.hyper;
+        var eb;
+        if ("cosmetic" === (null === bb || void 0 === bb ? void 0 : bb.kind) && bl.includes(bb.id)) Object.assign(wb, null === (eb = (0, Ng.n)(bb)) || void 0 === eb ? void 0 : eb.cosmetics), Mb++
       }
-      return md < Oh.length && console.warn(`Hyper Rank's page wears ${md} of its ${Oh.length} rewards: ${dd.seasonId} lacks the others`), {
-        ...Od,
-        cape: Pd.d.cape
+      return Mb < bl.length && console.warn(`Hyper Rank's page wears ${Mb} of its ${bl.length} rewards: ${bb.seasonId} lacks the others`), {
+        ...wb,
+        cape: Nb.d.cape
       }
     }
 
-    function Wh(dd) {
+    function Ml(bb) {
       let {
-        wearer: Od
-      } = dd;
-      const md = (0, Wd.useMemo)(mh, []);
-      return (0, td.jsx)(jK, {
+        wearer: wb
+      } = bb;
+      const Mb = (0, eb.useMemo)(wl, []);
+      return (0, Ob.jsx)(qg, {
         className: "HyperRankShowcase",
-        wearer: Od,
+        wearer: wb,
         active: !0,
-        tryOn: md,
+        tryOn: Mb,
         framing: "showcase",
         glow: !1,
         turnable: !0
       })
     }
-    const Fh = md.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    const el = Mb.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function Rh() {
-      (0, aK.h)(Fh, {
+    function Hl() {
+      (0, Xg.g)(el, {
         lowPriority: !1
       })
     }
 
-    function Xh() {
+    function pl() {
       const {
-        t: dd
-      } = (0, Xd.G)(), [Od, md] = (0, Wd.useState)("starting"), Fd = (0, Wd.useRef)(null), Rd = (0, hm.b)(), hd = (0, Wd.useRef)(null), Qd = (0, Wd.useCallback)((() => {
-        const dd = Fd.current;
-        null !== dd.error && dd.load();
-        const Od = dd.play();
-        hd.current = Od, Od.catch((dd => {
-          (0, GK.b)("Failed to play Super Rank video", dd), Rd.current && hd.current === Od && md("failed")
+        t: bb
+      } = (0, Vb.C)(), [wb, Mb] = (0, eb.useState)("starting"), Hb = (0, eb.useRef)(null), pb = (0, gM.d)(), lb = (0, eb.useRef)(null), Ib = (0, eb.useCallback)((() => {
+        const bb = Hb.current;
+        null !== bb.error && bb.load();
+        const wb = bb.play();
+        lb.current = wb, wb.catch((bb => {
+          (0, Jg.e)("Failed to play Super Rank video", bb), pb.current && lb.current === wb && Mb("failed")
         }))
-      }), [Rd]);
-      return (0, Wd.useEffect)((() => {
-        const dd = Fd.current;
-        let Od;
+      }), [pb]);
+      return (0, eb.useEffect)((() => {
+        const bb = Hb.current;
+        let wb;
 
-        function md() {
-          clearTimeout(Od), Od = setTimeout(Qd, 3e3)
+        function Mb() {
+          clearTimeout(wb), wb = setTimeout(Ib, 3e3)
         }
-        return Qd(), dd.addEventListener("ended", md), () => {
-          clearTimeout(Od), dd.removeEventListener("ended", md)
+        return Ib(), bb.addEventListener("ended", Mb), () => {
+          clearTimeout(wb), bb.removeEventListener("ended", Mb)
         }
-      }), [Qd]), (0, td.jsxs)("div", {
+      }), [Ib]), (0, Ob.jsxs)("div", {
         className: "StoreSuperRankVideo",
-        children: [(0, td.jsx)("video", {
-          ref: Fd,
-          src: `${sO.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-          poster: Fh,
+        children: [(0, Ob.jsx)("video", {
+          ref: Hb,
+          src: `${Dw.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+          poster: el,
           muted: !0,
           playsInline: !0,
-          controls: "playing" === Od,
+          controls: "playing" === wb,
           onPlaying: () => {
-            md("playing")
+            Mb("playing")
           },
           onError: () => {
-            md("failed")
+            Mb("failed")
           }
-        }), ("failed" === Od || "loading" === Od) && (0, td.jsx)("div", {
+        }), ("failed" === wb || "loading" === wb) && (0, Ob.jsx)("div", {
           className: "StoreSuperRankPlay",
-          children: (0, td.jsx)(vd.g, {
-            ariaLabel: dd("general:play"),
-            loading: "loading" === Od,
+          children: (0, Ob.jsx)(Lb.f, {
+            ariaLabel: bb("general:play"),
+            loading: "loading" === wb,
             onClick: () => {
-              md("loading"), Qd()
+              Mb("loading"), Ib()
             },
             touchPressOn: "pointerup",
-            children: (0, td.jsx)(Kd.c, {
+            children: (0, Ob.jsx)(gb.b, {
               name: "play"
             })
           })
@@ -7494,76 +7494,76 @@ export const modules = {
       })
     }
 
-    function Kh(dd) {
+    function Vl(bb) {
       let {
-        tierId: Od,
-        wearer: md,
-        onBack: Wd,
-        cta: Fd,
-        recipient: Kd,
-        afterCta: hd
-      } = dd;
+        tierId: wb,
+        wearer: Mb,
+        onBack: eb,
+        cta: Hb,
+        recipient: gb,
+        afterCta: lb
+      } = bb;
       const {
-        t: Qd
-      } = (0, Xd.G)(), od = "hyper" === (0, zd.p)(Od).look;
-      return (0, td.jsxs)("div", {
-        className: Rd()("StoreSuperRankDetail", {
-          StoreHyperRankDetail: od
+        t: Ib
+      } = (0, Vb.C)(), Ub = "hyper" === (0, vb.q)(wb).look;
+      return (0, Ob.jsxs)("div", {
+        className: pb()("StoreSuperRankDetail", {
+          StoreHyperRankDetail: Ub
         }),
-        children: [(0, td.jsxs)("div", {
+        children: [(0, Ob.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, td.jsx)(vd.d, {
+          children: [(0, Ob.jsx)(Lb.b, {
             className: "StoreDetailBackButton",
-            onClick: Wd,
+            onClick: eb,
             padBack: !0,
-            children: Qd("general:back")
-          }), (0, td.jsx)("div", {
+            children: Ib("general:back")
+          }), (0, Ob.jsx)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: (0, td.jsx)(zd.k, {
-              tierId: Od
+            children: (0, Ob.jsx)(vb.j, {
+              tierId: wb
             })
-          }), Kd]
-        }), (0, td.jsxs)("div", {
+          }), gb]
+        }), (0, Ob.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [od && (0, td.jsx)(Wh, {
-            wearer: md
-          }), !od && (0, td.jsx)(Xh, {}), (0, td.jsxs)("div", {
+          children: [Ub && (0, Ob.jsx)(Ml, {
+            wearer: Mb
+          }), !Ub && (0, Ob.jsx)(pl, {}), (0, Ob.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [od && (0, td.jsx)(MK, {}), !od && (0, td.jsx)("div", {
+            children: [Ub && (0, Ob.jsx)(Tg, {}), !Ub && (0, Ob.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, td.jsx)(nK.e, {
-                tierId: Od
+              children: (0, Ob.jsx)(Sg.d, {
+                tierId: wb
               })
-            }), (0, td.jsxs)("div", {
+            }), (0, Ob.jsxs)("div", {
               className: "StoreTileActions",
-              children: [Fd, hd]
+              children: [Hb, lb]
             })]
           })]
         })]
       })
     }
-    var hh = md(4184),
-      vh = md(3697);
+    var gl = Mb(4357),
+      ll = Mb(3822);
 
-    function Qh() {
+    function Ll() {
       const {
-        t: dd
-      } = (0, Xd.G)();
-      return (0, td.jsx)("div", {
+        t: bb
+      } = (0, Vb.C)();
+      return (0, Ob.jsx)("div", {
         className: "SmallTextBold",
-        children: dd("payments:legalDocumentLoadFailed")
+        children: bb("payments:legalDocumentLoadFailed")
       })
     }
-    const th = (0, Wd.lazy)((() => (0, vh.b)(Promise.all([md.e(146), md.e(712)]).then((() => md(7474))), (dd => dd.default), Qh))),
-      oh = (0, Wd.lazy)((() => (0, vh.b)(md.e(148).then((() => md(7494))), (dd => dd.default), Qh)));
+    const Il = (0, eb.lazy)((() => (0, ll.c)(Promise.all([Mb.e(146), Mb.e(712)]).then((() => Mb(7709))), (bb => bb.default), Ll))),
+      Ol = (0, eb.lazy)((() => (0, ll.c)(Mb.e(148).then((() => Mb(7727))), (bb => bb.default), Ll)));
 
-    function Nh(dd, Od) {
-      dd.preventDefault(), XO.NotificationProvider.showCustomPopup({
-        body: (0, td.jsx)("div", {
+    function Ul(bb, wb) {
+      bb.preventDefault(), Hw.NotificationProvider.showCustomPopup({
+        body: (0, Ob.jsx)("div", {
           className: "AppLegalDocument",
-          children: (0, td.jsx)(Wd.Suspense, {
-            fallback: (0, td.jsx)(wd.c, {}),
-            children: (0, td.jsx)(Od, {})
+          children: (0, Ob.jsx)(eb.Suspense, {
+            fallback: (0, Ob.jsx)(Xb.c, {}),
+            children: (0, Ob.jsx)(wb, {})
           })
         }),
         middleScreenPopupClassName: "AppLegalDocumentPopup",
@@ -7571,137 +7571,137 @@ export const modules = {
       })
     }
 
-    function qh(dd) {
+    function tl(bb) {
       let {
-        price: Od,
-        perks: md
-      } = dd;
+        price: wb,
+        perks: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)();
-      return (0, td.jsxs)("div", {
+        t: eb
+      } = (0, Vb.C)();
+      return (0, Ob.jsxs)("div", {
         className: "StoreSubscriptionTerms",
-        children: [md, (0, td.jsx)("div", {
+        children: [Mb, (0, Ob.jsx)("div", {
           className: "SmallTextLight",
-          children: Wd("payments:subscriptionRenewsMonthly", {
-            price: Od
+          children: eb("payments:subscriptionRenewsMonthly", {
+            price: wb
           })
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "StoreSubscriptionTermsLinks SmallTextLight",
-          children: ["mobileIos" === Bd.siteUsed && (0, td.jsx)("a", {
+          children: ["mobileIos" === Rb.siteUsed && (0, Ob.jsx)("a", {
             href: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/",
             target: "_blank",
             rel: "noreferrer",
-            children: Wd("payments:appleTermsOfUse")
-          }), "mobileIos" !== Bd.siteUsed && (0, td.jsx)("a", {
+            children: eb("payments:appleTermsOfUse")
+          }), "mobileIos" !== Rb.siteUsed && (0, Ob.jsx)("a", {
             href: "/terms-of-service",
-            onClick: dd => {
-              Nh(dd, oh)
+            onClick: bb => {
+              Ul(bb, Ol)
             },
-            children: Wd("homePage:termsOfService")
-          }), (0, td.jsx)("a", {
+            children: eb("homePage:termsOfService")
+          }), (0, Ob.jsx)("a", {
             href: "/privacy-policy",
-            onClick: dd => {
-              Nh(dd, th)
+            onClick: bb => {
+              Ul(bb, Il)
             },
-            children: Wd("homePage:privacyPolicy")
+            children: eb("homePage:privacyPolicy")
           })]
         })]
       })
     }
-    var Hh = md(4265),
-      yh = md(4268),
-      bh = md(4141);
+    var Cl = Mb(4432),
+      El = Mb(4434),
+      Fl = Mb(4325);
 
-    function Th(dd) {
+    function Bl(bb) {
       const {
-        userContext: Od
-      } = (0, qd.d)(), {
-        purchaseUnderWay: md,
-        notice: Fd,
-        subscribe: Rd
-      } = (0, bh.d)(), [Xd, Kd] = (0, Wd.useState)(null), [hd, vd] = (0, Wd.useState)(0), Qd = (0, hm.b)(), td = Od !== Sd.NULL_USER_CONTEXT, od = td && (Od.mayBuy() || (0, ed.guestsMayBuy)()), Nd = null !== Xd && Xd.loadedFor === Od ? Xd.offer : null, Hd = null === Fd || void 0 === Fd ? void 0 : Fd.pendingIntentId, yd = (0, Wd.useRef)(Hd);
+        userContext: wb
+      } = (0, Cb.e)(), {
+        purchaseUnderWay: Mb,
+        notice: Hb,
+        subscribe: pb
+      } = (0, Fl.b)(), [Vb, gb] = (0, eb.useState)(null), [lb, Lb] = (0, eb.useState)(0), Ib = (0, gM.d)(), Ob = wb !== Db.NULL_USER_CONTEXT, Ub = Ob && (wb.mayBuy() || (0, ab.guestsMayBuy)()), tb = null !== Vb && Vb.loadedFor === wb ? Vb.offer : null, Eb = null === Hb || void 0 === Hb ? void 0 : Hb.pendingIntentId, Fb = (0, eb.useRef)(Eb);
 
-      function bd() {
-        vd((dd => dd + 1))
+      function Bb() {
+        Lb((bb => bb + 1))
       }
-      return (0, Wd.useEffect)((() => {
-        void 0 !== yd.current && void 0 === Hd && bd(), yd.current = Hd
-      }), [Hd]), (0, Wd.useEffect)((() => {
-        if (!td) return;
-        let md = !1;
-        return async function(dd, Od) {
+      return (0, eb.useEffect)((() => {
+        void 0 !== Fb.current && void 0 === Eb && Bb(), Fb.current = Eb
+      }), [Eb]), (0, eb.useEffect)((() => {
+        if (!Ob) return;
+        let Mb = !1;
+        return async function(bb, wb) {
           const {
-            offering: md
-          } = await (0, OO.getBillingClient)().getOfferings(dd), Wd = null === md || void 0 === md ? void 0 : md.packages.find(dO.isPricedPackage);
-          return void 0 === Wd ? {
+            offering: Mb
+          } = await (0, kb.getBillingClient)().getOfferings(bb), eb = null === Mb || void 0 === Mb ? void 0 : Mb.packages.find(Tb.isPricedPackage);
+          return void 0 === eb ? {
             kind: "unavailable"
-          } : Od ? {
+          } : wb ? {
             kind: "loaded",
-            pkg: Wd,
-            preview: await (0, yh.f)(Wd.productId)
+            pkg: eb,
+            preview: await (0, El.h)(eb.productId)
           } : {
             kind: "loaded",
-            pkg: Wd,
+            pkg: eb,
             preview: {
               kind: "none"
             }
           }
-        }(dd, od).catch((Od => (console.error(`Billing: loading the ${dd} subscription or its preview failed:`, Od), {
+        }(bb, Ub).catch((wb => (console.error(`Billing: loading the ${bb} subscription or its preview failed:`, wb), {
           kind: "loadFailed"
-        }))).then((dd => {
-          md || Kd((md => "loadFailed" === dd.kind && (null === md || void 0 === md ? void 0 : md.loadedFor) === Od ? md : {
-            loadedFor: Od,
-            offer: dd
+        }))).then((bb => {
+          Mb || gb((Mb => "loadFailed" === bb.kind && (null === Mb || void 0 === Mb ? void 0 : Mb.loadedFor) === wb ? Mb : {
+            loadedFor: wb,
+            offer: bb
           }))
         })), () => {
-          md = !0
+          Mb = !0
         }
-      }), [dd, Od, td, od, hd]), {
-        offer: Nd,
-        purchaseUnderWay: md,
-        notice: Fd,
-        pendingIntentId: Hd,
-        mountedRef: Qd,
-        checkOut: async function(dd) {
-          const md = await Rd(dd);
-          Qd.current && ("unknownPackage" === md.kind && Kd({
-            loadedFor: Od,
+      }), [bb, wb, Ob, Ub, lb]), {
+        offer: tb,
+        purchaseUnderWay: Mb,
+        notice: Hb,
+        pendingIntentId: Eb,
+        mountedRef: Ib,
+        checkOut: async function(bb) {
+          const Mb = await pb(bb);
+          Ib.current && ("unknownPackage" === Mb.kind && gb({
+            loadedFor: wb,
             offer: {
               kind: "unavailable"
             }
-          }), bd())
+          }), Bb())
         }
       }
     }
 
-    function ph(dd) {
+    function sl(bb) {
       let {
-        onOfferedChange: Od
-      } = dd;
-      return (0, ed.usePurchasesAllowed)() && (0, ed.subscriptionsSold)() ? (0, td.jsx)(Yh, {
-        onOfferedChange: Od
+        onOfferedChange: wb
+      } = bb;
+      return (0, ab.usePurchasesAllowed)() && (0, ab.subscriptionsSold)() ? (0, Ob.jsx)(ml, {
+        onOfferedChange: wb
       }) : null
     }
 
-    function Yh(dd) {
+    function ml(bb) {
       let {
-        onOfferedChange: Od
-      } = dd;
+        onOfferedChange: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Xd.G)(), {
-        offer: Fd,
-        purchaseUnderWay: Rd,
-        notice: Kd,
-        pendingIntentId: hd,
-        mountedRef: Qd,
-        checkOut: od
-      } = Th((0, zd.p)(Pd.d.id).placementId), [Nd, qd] = (0, Wd.useState)(!1), Hd = null === Fd || "loaded" === Fd.kind && "refused" !== Fd.preview.kind;
-      if ((0, Wd.useEffect)((() => {
-          Od(Hd)
-        }), [Hd]), null === Fd || "unavailable" === Fd.kind) return null;
-      if ("loadFailed" === Fd.kind) return (0, td.jsx)(hh.j, {
+        t: Mb
+      } = (0, Vb.C)(), {
+        offer: Hb,
+        purchaseUnderWay: pb,
+        notice: gb,
+        pendingIntentId: lb,
+        mountedRef: Ib,
+        checkOut: Ub
+      } = Bl((0, vb.q)(Nb.d.id).placementId), [tb, Cb] = (0, eb.useState)(!1), Eb = null === Hb || "loaded" === Hb.kind && "refused" !== Hb.preview.kind;
+      if ((0, eb.useEffect)((() => {
+          wb(Eb)
+        }), [Eb]), null === Hb || "unavailable" === Hb.kind) return null;
+      if ("loadFailed" === Hb.kind) return (0, Ob.jsx)(gl.h, {
         notice: {
           kind: "error",
           key: "payments:subscriptionLoadFailed"
@@ -7709,595 +7709,595 @@ export const modules = {
         className: "StoreSubscribe SmallTextBold"
       });
       const {
-        pkg: yd,
-        preview: Td
-      } = Fd;
-      if ("refused" === Td.kind) return (0, td.jsx)(hh.j, {
+        pkg: Fb,
+        preview: sb
+      } = Hb;
+      if ("refused" === sb.kind) return (0, Ob.jsx)(gl.h, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(Td.until).toLocaleDateString()
+            date: new Date(sb.until).toLocaleDateString()
           }
         },
         className: "StoreSubscribe SmallTextBold"
       });
-      const pd = (0, KO.e)(yd);
-      return (0, td.jsxs)("div", {
+      const mb = (0, pw.f)(Fb);
+      return (0, Ob.jsxs)("div", {
         className: "StoreSubscribe",
-        onClick: dd => {
-          dd.stopPropagation()
+        onClick: bb => {
+          bb.stopPropagation()
         },
-        children: [(0, td.jsx)(hh.j, {
-          notice: Kd,
+        children: [(0, Ob.jsx)(gl.h, {
+          notice: gb,
           className: "SmallTextBold"
-        }), (0, td.jsx)(hh.c, {
+        }), (0, Ob.jsx)(gl.d, {
           className: "SmallTextBold"
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "StoreCta",
-          children: (0, td.jsx)(vd.v, {
+          children: (0, Ob.jsx)(Lb.y, {
             className: "StoreSubscribeButton",
             onClick: () => {
-              !async function(dd, Od) {
-                if ("refund" === Od.kind) {
-                  qd(!0);
-                  const dd = await (0, Hh.b)(Od, null);
-                  if (!Qd.current) return;
-                  if (qd(!1), !dd) return
+              !async function(bb, wb) {
+                if ("refund" === wb.kind) {
+                  Cb(!0);
+                  const bb = await (0, Cl.d)(wb, null);
+                  if (!Ib.current) return;
+                  if (Cb(!1), !bb) return
                 }
-                await od(dd)
-              }(yd, Td)
+                await Ub(bb)
+              }(Fb, sb)
             },
-            disabled: void 0 !== hd,
-            loading: Rd || Nd,
+            disabled: void 0 !== lb,
+            loading: pb || tb,
             analyticsClick: {
               id: "store.buy",
               value: "subscription"
             },
-            children: (0, td.jsx)("span", {
+            children: (0, Ob.jsx)("span", {
               className: "StoreCtaLabel",
-              children: md("payments:subscribeContinue", {
-                price: pd
+              children: Mb("payments:subscribeContinue", {
+                price: mb
               })
             })
           })
-        }), (0, bd.isMobileApp)() && (0, td.jsx)(qh, {
-          price: pd,
-          perks: (0, td.jsx)(fK, {})
+        }), (0, Bb.isMobileApp)() && (0, Ob.jsx)(tl, {
+          price: mb,
+          perks: (0, Ob.jsx)(og, {})
         })]
       })
     }
 
-    function gh() {
+    function hl() {
       const {
-        t: dd
-      } = (0, Xd.G)();
-      return (0, td.jsxs)("ul", {
+        t: bb
+      } = (0, Vb.C)();
+      return (0, Ob.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, td.jsxs)("li", {
-          children: [(0, td.jsx)(Kd.c, {
+        children: [(0, Ob.jsxs)("li", {
+          children: [(0, Ob.jsx)(gb.b, {
             name: "check"
-          }), (0, td.jsx)(sK, {
-            text: dd("store:colourfulNames")
+          }), (0, Ob.jsx)(cg, {
+            text: bb("store:colourfulNames")
           })]
-        }), (0, td.jsxs)("li", {
-          children: [(0, td.jsx)(Kd.c, {
+        }), (0, Ob.jsxs)("li", {
+          children: [(0, Ob.jsx)(gb.b, {
             name: "check"
-          }), dd("store:perkCapes")]
-        }), (0, td.jsxs)("li", {
-          children: [(0, td.jsx)(Kd.c, {
+          }), bb("store:perkCapes")]
+        }), (0, Ob.jsxs)("li", {
+          children: [(0, Ob.jsx)(gb.b, {
             name: "check"
-          }), dd("store:perkNoAdverts")]
-        }), (0, td.jsxs)("li", {
-          children: [(0, td.jsx)(Kd.c, {
+          }), bb("store:perkNoAdverts")]
+        }), (0, Ob.jsxs)("li", {
+          children: [(0, Ob.jsx)(gb.b, {
             name: "check"
-          }), dd("store:perkFriends", {
-            count: (0, yO.d)(["super"])
+          }), bb("store:perkFriends", {
+            count: (0, Cw.c)(["super"])
           })]
         })]
       })
     }
 
-    function wh(dd, Od) {
-      return 1 === Od ? dd("store:oneDayLeft") : dd("store:daysLeft", {
-        days: Od
+    function zl(bb, wb) {
+      return 1 === wb ? bb("store:oneDayLeft") : bb("store:daysLeft", {
+        days: wb
       })
     }
 
-    function ah(dd) {
+    function Xl(bb) {
       let {
-        daysLeft: Od,
-        totalDays: md,
-        urgent: Wd
-      } = dd;
+        daysLeft: wb,
+        totalDays: Mb,
+        urgent: eb
+      } = bb;
       const {
-        t: Fd
-      } = (0, Xd.G)(), Kd = md > 0 ? Math.min(1, Math.max(.03, Od / md)) : 1;
-      return (0, td.jsxs)("div", {
-        className: Rd()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: Wd
+        t: Hb
+      } = (0, Vb.C)(), gb = Mb > 0 ? Math.min(1, Math.max(.03, wb / Mb)) : 1;
+      return (0, Ob.jsxs)("div", {
+        className: pb()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: eb
         }),
-        children: [(0, td.jsx)("span", {
+        children: [(0, Ob.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: wh(Fd, Od)
-        }), (0, td.jsx)("div", {
+          children: zl(Hb, wb)
+        }), (0, Ob.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, td.jsx)("i", {
+          children: (0, Ob.jsx)("i", {
             style: {
-              width: 100 * Kd + "%"
+              width: 100 * gb + "%"
             }
           })
         })]
       })
     }
 
-    function Eh(dd) {
-      var Od;
+    function xl(bb) {
+      var wb;
       let {
-        state: md,
-        urgent: Fd,
-        daysLeft: Kd,
-        totalDays: hd,
-        recipientHasSuperRank: vd,
-        busy: Qd,
-        highlight: od,
-        onOpen: Nd,
-        onAct: Hd,
-        onNeedRecipient: yd,
-        onLogin: Td,
-        wearer: pd,
-        live: Yd,
-        onWake: gd
-      } = dd;
+        state: Mb,
+        urgent: Hb,
+        daysLeft: gb,
+        totalDays: lb,
+        recipientHasSuperRank: Lb,
+        busy: Ib,
+        highlight: Ub,
+        onOpen: tb,
+        onAct: Eb,
+        onNeedRecipient: Fb,
+        onLogin: sb,
+        wearer: mb,
+        live: hb,
+        onWake: zb
+      } = bb;
       const {
-        t: wd
-      } = (0, Xd.G)(), {
-        userContext: Ed
-      } = (0, qd.d)(), Jd = Date.now(), Ud = (0, zd.v)(Jd), xd = "hyper" === Ud.look, Bd = xd ? void 0 : Rh, Sd = BK(md), sd = (0, zd.x)(Jd), {
-        days: ud
-      } = sd.product, Vd = wd("store:recipientHasSuperRank", {
-        giftDays: ud
-      }), Ad = null === (Od = qO("subscribed" === md)) || void 0 === Od ? void 0 : Od.text, rd = Sd ? null : (0, zd.t)(Ed.superRankInfo, Jd), Gd = xd && !Sd && "subscribed" !== md && "pending" !== md && (0, ed.subscriptionsSold)() && !(0, bd.isMobileApp)(), [nd, Ld] = (0, Wd.useState)(!0);
-      return (0, td.jsxs)("div", {
-        className: Rd()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: Sd,
-          StoreSuperRankTileUrgent: "recharge" === md && Fd,
-          StoreSuperRankTileWithChip: vd,
-          StoreSuperRankTileGiftReady: "gift" === md,
-          StoreHyperRankTile: xd
+        t: Xb
+      } = (0, Vb.C)(), {
+        userContext: xb
+      } = (0, Cb.e)(), jb = Date.now(), Kb = (0, vb.s)(jb), rb = "hyper" === Kb.look, Rb = rb ? void 0 : Hl, Db = Rg(Mb), cb = (0, vb.v)(jb), {
+        days: Yb
+      } = cb.product, Zb = Xb("store:recipientHasSuperRank", {
+        giftDays: Yb
+      }), fb = null === (wb = Uw("subscribed" === Mb)) || void 0 === wb ? void 0 : wb.text, Ab = Db ? null : (0, vb.r)(xb.superRankInfo, jb), Wb = rb && !Db && "subscribed" !== Mb && "pending" !== Mb && (0, ab.subscriptionsSold)() && !(0, Bb.isMobileApp)(), [Jb, Sb] = (0, eb.useState)(!0);
+      return (0, Ob.jsxs)("div", {
+        className: pb()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: Db,
+          StoreSuperRankTileUrgent: "recharge" === Mb && Hb,
+          StoreSuperRankTileWithChip: Lb,
+          StoreSuperRankTileGiftReady: "gift" === Mb,
+          StoreHyperRankTile: rb
         }),
-        ...SK(wd(Ud.nameKey)),
+        ...Dg(Xb(Kb.nameKey)),
         "data-store-item": "superRank",
-        onPointerEnter: Bd,
-        onFocus: Bd,
-        onPointerMove: dd => {
-          !xd || Yd || "mouse" !== dd.pointerType || 0 === dd.movementX && 0 === dd.movementY || gd()
+        onPointerEnter: Rb,
+        onFocus: Rb,
+        onPointerMove: bb => {
+          !rb || hb || "mouse" !== bb.pointerType || 0 === bb.movementX && 0 === bb.movementY || zb()
         },
-        onClick: Nd,
-        children: [xd && (0, td.jsx)(jK, {
+        onClick: tb,
+        children: [rb && (0, Ob.jsx)(qg, {
           className: "StoreHyperRankTileStage",
-          wearer: pd,
-          active: Yd
-        }), !xd && (0, td.jsx)("div", {
+          wearer: mb,
+          active: hb
+        }), !rb && (0, Ob.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${Ud.artUrl})`
+            backgroundImage: `url(${Kb.artUrl})`
           }
-        }), Sd && (0, td.jsx)("div", {
+        }), Db && (0, Ob.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "StoreTileContent",
-          children: [vd && (0, td.jsx)("span", {
+          children: [Lb && (0, Ob.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: Vd,
-            children: Vd
-          }), (0, td.jsx)("div", {
+            title: Zb,
+            children: Zb
+          }), (0, Ob.jsx)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: (0, td.jsx)(zd.k, {
-              tierId: (0, cd.i)(Jd).id
+            children: (0, Ob.jsx)(vb.j, {
+              tierId: (0, Qb.g)(jb).id
             })
-          }), Sd && (0, td.jsx)("div", {
+          }), Db && (0, Ob.jsx)("div", {
             className: "StoreTilePitch",
-            children: wd("store:giftPitch", {
-              days: ud
+            children: Xb("store:giftPitch", {
+              days: Yb
             })
-          }), xd && ("buy" === md || "login" === md) && null === rd && (0, td.jsx)("div", {
+          }), rb && ("buy" === Mb || "login" === Mb) && null === Ab && (0, Ob.jsx)("div", {
             className: "StoreTilePitch",
-            children: wd("store:hyperHook")
-          }), "recharge" === md && (0, td.jsx)(ah, {
-            daysLeft: Kd,
-            totalDays: hd,
-            urgent: Fd
-          }), Ad && (0, td.jsx)("div", {
+            children: Xb("store:hyperHook")
+          }), "recharge" === Mb && (0, Ob.jsx)(Xl, {
+            daysLeft: gb,
+            totalDays: lb,
+            urgent: Hb
+          }), fb && (0, Ob.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, td.jsx)("span", {
+            children: (0, Ob.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: Ad
+              children: fb
             })
-          }), null !== rd && (0, td.jsx)("div", {
+          }), null !== Ab && (0, Ob.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, td.jsx)(Dd, {
+            children: (0, Ob.jsx)(qb, {
               className: "StoreSuperRankDaysLeft",
-              until: rd
+              until: Ab
             })
-          }), xd && (0, td.jsx)(fK, {}), !xd && (0, td.jsx)(gh, {}), (0, td.jsxs)("div", {
+          }), rb && (0, Ob.jsx)(og, {}), !rb && (0, Ob.jsx)(hl, {}), (0, Ob.jsxs)("div", {
             className: "StoreTileActions",
-            children: [Gd && (0, td.jsx)(ph, {
-              onOfferedChange: Ld
-            }), (0, rK.g)(sd.product.tierId, Jd) && (0, td.jsx)(VK, {
-              state: md,
+            children: [Wb && (0, Ob.jsx)(sl, {
+              onOfferedChange: Sb
+            }), (0, Wg.e)(cb.product.tierId, jb) && (0, Ob.jsx)(Zg, {
+              state: Mb,
               item: "superRank",
-              price: sd.price,
-              busy: Qd,
-              highlight: od,
-              secondary: Gd && nd,
-              onAct: Hd,
-              onNeedRecipient: yd,
-              onLogin: Td
-            }), "needsRecipient" === md && (0, td.jsx)("span", {
+              price: cb.price,
+              busy: Ib,
+              highlight: Ub,
+              secondary: Wb && Jb,
+              onAct: Eb,
+              onNeedRecipient: Fb,
+              onLogin: sb
+            }), "needsRecipient" === Mb && (0, Ob.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: wd("store:pickRecipientFirst")
-            }), "recharge" === md && Fd && (0, td.jsx)("span", {
+              children: Xb("store:pickRecipientFirst")
+            }), "recharge" === Mb && Hb && (0, Ob.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === Kd ? wd("store:endsInOneDay") : wd("store:endsInDays", {
-                days: Kd
+              children: 1 === gb ? Xb("store:endsInOneDay") : Xb("store:endsInDays", {
+                days: gb
               })
             })]
           })]
         })]
       })
     }
-    var Jh = md(1675),
-      Uh = md(1587),
-      xh = md(4802);
+    var jl = Mb(1723),
+      Kl = Mb(1633),
+      rl = Mb(4950);
 
-    function Bh() {
-      return (0, td.jsx)("span", {
+    function Rl() {
+      return (0, Ob.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var Sh = md(1459),
-      sh = md(1685),
-      uh = md(35582);
+    var Dl = Mb(1501),
+      cl = Mb(1735),
+      Yl = Mb(35366);
 
-    function Vh(dd) {
+    function Zl(bb) {
       let {
-        character: Od,
-        drawn: md,
-        onDrawn: Fd
-      } = dd;
-      const Xd = (0, Wd.useRef)(null),
-        Kd = (0, uh.g)(Od);
-      return (0, td.jsx)("div", {
-        className: Rd()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: md
+        character: wb,
+        drawn: Mb,
+        onDrawn: Hb
+      } = bb;
+      const Vb = (0, eb.useRef)(null),
+        gb = (0, Yl.f)(wb);
+      return (0, Ob.jsx)("div", {
+        className: pb()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: Mb
         }),
-        children: (0, td.jsx)(Wd.Suspense, {
+        children: (0, Ob.jsx)(eb.Suspense, {
           fallback: null,
-          children: (0, td.jsx)(gK.e, {
-            ref: Xd,
+          children: (0, Ob.jsx)(hg.e, {
+            ref: Vb,
             framing: "store",
-            turntableFromYaw: md ? Kd.yaw : null,
+            turntableFromYaw: Mb ? gb.yaw : null,
             onReady: () => {
-              var dd, md;
-              null === (dd = Xd.current) || void 0 === dd || dd.setOrbit(Kd), null === (md = Xd.current) || void 0 === md || md.setAllCosmetics(sh.b[Od].cosmetics)
+              var bb, Mb;
+              null === (bb = Vb.current) || void 0 === bb || bb.setOrbit(gb), null === (Mb = Vb.current) || void 0 === Mb || Mb.setAllCosmetics(cl.d[wb].cosmetics)
             },
-            onDrawn: Fd
+            onDrawn: Hb
           })
         })
       })
     }
-    var ih = md(4256);
-    const Ah = {
+    var fl = Mb(4427);
+    const Al = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      rh = new Set(["wildSpirits"]);
+      Wl = new Set(["wildSpirits"]);
 
-    function Gh(dd) {
-      var Od;
+    function Jl(bb) {
+      var wb;
       let {
-        tile: md,
-        design: Fd,
-        canGoLive: hd,
-        live: vd,
-        busy: Qd,
-        highlight: od,
-        onLiveStart: Nd,
-        onLiveEnd: qd,
-        onOpen: Hd,
-        onAct: yd,
-        onNeedRecipient: bd,
-        onLogin: Td
-      } = dd;
+        tile: Mb,
+        design: Hb,
+        canGoLive: lb,
+        live: Lb,
+        busy: Ib,
+        highlight: Ub,
+        onLiveStart: tb,
+        onLiveEnd: Cb,
+        onOpen: Eb,
+        onAct: Fb,
+        onNeedRecipient: Bb,
+        onLogin: sb
+      } = bb;
       const {
-        t: pd
-      } = (0, Xd.G)(), {
-        pack: Yd,
-        state: gd
-      } = md, wd = DX.c[Yd], Ed = (0, DX.d)(Yd), Jd = (0, tK.k)(Yd), Ud = fX.n[Jd], xd = rh.has(Jd), {
-        tier: Bd
-      } = wd, Sd = (0, ih.h)(Yd), sd = "legendary" === Bd || "mythic" === Bd, ud = (0, Wd.useRef)(null);
-      (0, Sh.b)(ud, "epic" === Bd || sd || xd);
-      const [Ad, rd] = (0, Wd.useState)(!1);
-      return !vd && Ad && rd(!1), (0, td.jsxs)("div", {
-        ref: ud,
-        className: Rd()("StoreCharacterCard", `StoreCharacterCard${Fd}`, Ah[Bd], {
-          StoreCharacterCardOwned: "owned" === gd || "recipientOwns" === gd,
-          StoreCharacterCardGift: BK(gd),
-          StoreCharacterCardItem: void 0 === Ed
+        t: mb
+      } = (0, Vb.C)(), {
+        pack: hb,
+        state: zb
+      } = Mb, Xb = aV.c[hb], xb = (0, aV.e)(hb), jb = (0, Ig.l)(hb), Kb = oV.m[jb], rb = Wl.has(jb), {
+        tier: Rb
+      } = Xb, Db = (0, fl.e)(hb), cb = "legendary" === Rb || "mythic" === Rb, Yb = (0, eb.useRef)(null);
+      (0, Dl.c)(Yb, "epic" === Rb || cb || rb);
+      const [fb, Ab] = (0, eb.useState)(!1);
+      return !Lb && fb && Ab(!1), (0, Ob.jsxs)("div", {
+        ref: Yb,
+        className: pb()("StoreCharacterCard", `StoreCharacterCard${Hb}`, Al[Rb], {
+          StoreCharacterCardOwned: "owned" === zb || "recipientOwns" === zb,
+          StoreCharacterCardGift: Rg(zb),
+          StoreCharacterCardItem: void 0 === xb
         }),
-        onPointerMove: dd => {
-          "mouse" !== dd.pointerType || 0 === dd.movementX && 0 === dd.movementY || !hd || vd || void 0 === Ed || Nd()
+        onPointerMove: bb => {
+          "mouse" !== bb.pointerType || 0 === bb.movementX && 0 === bb.movementY || !lb || Lb || void 0 === xb || tb()
         },
-        onPointerLeave: qd,
-        children: [(0, td.jsx)("div", {
+        onPointerLeave: Cb,
+        children: [(0, Ob.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: Ud && (0, td.jsx)(Ud, {
+          children: Kb && (0, Ob.jsx)(Kb, {
             simple: !0
           })
-        }), sd && (0, td.jsx)("div", {
+        }), cb && (0, Ob.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, td.jsxs)(Vd.LinkPreserveSearch, {
+        }), (0, Ob.jsxs)(Zb.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, Jh.g)({
+          to: (0, jl.g)({
             kind: "pack",
-            pack: Yd
+            pack: hb
           }, Date.now()),
-          "data-store-item": Yd,
-          onClick: dd => {
-            (0, Uh.b)(dd) && (dd.preventDefault(), Hd())
+          "data-store-item": hb,
+          onClick: bb => {
+            (0, Kl.b)(bb) && (bb.preventDefault(), Eb())
           },
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, td.jsx)("div", {
+            children: [(0, Ob.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, td.jsx)("div", {
-              className: Rd()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: Ad
+            }), (0, Ob.jsx)("div", {
+              className: pb()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: fb
               }),
               style: {
-                backgroundImage: `url(${(0,tK.q)(Yd)})`
+                backgroundImage: `url(${(0,Ig.v)(hb)})`
               }
-            }), vd && void 0 !== Ed && (0, td.jsx)(Vh, {
-              character: Ed,
-              drawn: Ad,
+            }), Lb && void 0 !== xb && (0, Ob.jsx)(Zl, {
+              character: xb,
+              drawn: fb,
               onDrawn: () => {
-                rd(!0)
+                Ab(!0)
               }
             })]
-          }), (0, td.jsx)("div", {
+          }), (0, Ob.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (Od = wd.displayName) && void 0 !== Od ? Od : Yd
-          }), (0, td.jsxs)("div", {
+            children: null !== (wb = Xb.displayName) && void 0 !== wb ? wb : hb
+          }), (0, Ob.jsxs)("div", {
             className: "StoreCharacterTierLine",
-            children: [(0, td.jsx)(JK.e, {
-              tier: Bd
-            }), Sd && (0, td.jsxs)("span", {
+            children: [(0, Ob.jsx)(jg.b, {
+              tier: Rb
+            }), Db && (0, Ob.jsxs)("span", {
               className: "StoreTierLabel StoreCharacterAnimated",
-              children: [(0, td.jsx)(Kd.c, {
+              children: [(0, Ob.jsx)(gb.b, {
                 name: "film"
-              }), pd("packPerks:badgeAnimated")]
+              }), mb("packPerks:badgeAnimated")]
             })]
           })]
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), xd && (0, td.jsx)("span", {
+        }), rb && (0, Ob.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, td.jsx)(Bh, {})
-        }), (0, td.jsx)(UK.c, {
-          pack: Yd,
+          children: (0, Ob.jsx)(Rl, {})
+        }), (0, Ob.jsx)(Kg.e, {
+          pack: hb,
           iconOnly: !0,
-          className: Rd()({
-            PackAnimatedBadgeBelowOwned: "owned" === gd
+          className: pb()({
+            PackAnimatedBadgeBelowOwned: "owned" === zb
           })
-        }), "owned" === gd && (0, td.jsx)("span", {
+        }), "owned" === zb && (0, Ob.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: pd("general:owned"),
-          "aria-label": pd("general:owned"),
-          children: (0, td.jsx)(Kd.c, {
+          title: mb("general:owned"),
+          "aria-label": mb("general:owned"),
+          children: (0, Ob.jsx)(gb.b, {
             name: "check"
           })
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, td.jsx)(VK, {
-            state: gd,
-            item: Yd,
-            price: (0, eX.f)(Yd),
-            busy: Qd,
-            highlight: od,
-            onAct: yd,
-            onNeedRecipient: bd,
-            onLogin: Td
+          children: (0, Ob.jsx)(Zg, {
+            state: zb,
+            item: hb,
+            price: (0, iV.e)(hb),
+            busy: Ib,
+            highlight: Ub,
+            onAct: Fb,
+            onNeedRecipient: Bb,
+            onLogin: sb
           })
         })]
       })
     }
 
-    function nh(dd) {
+    function Sl(bb) {
       let {
-        tiles: Od,
-        busy: md,
-        highlightItem: Fd,
-        onOpen: Rd,
-        onAct: Xd,
-        onNeedRecipient: Kd,
-        onLogin: hd,
-        livePack: vd,
-        setLivePack: Qd
-      } = dd;
-      const od = (0, xh.q)("storeCharacterCardFoil"),
-        Nd = (0, xh.q)("storeCharacterCardSpotlight"),
-        qd = od ? "Foil" : Nd ? "Spotlight" : "Showcase",
-        [Hd] = (0, Wd.useState)(vK.i);
-      return (0, td.jsx)("div", {
+        tiles: wb,
+        busy: Mb,
+        highlightItem: Hb,
+        onOpen: pb,
+        onAct: Vb,
+        onNeedRecipient: gb,
+        onLogin: lb,
+        livePack: Lb,
+        setLivePack: Ib
+      } = bb;
+      const Ub = (0, rl.o)("storeCharacterCardFoil"),
+        tb = (0, rl.o)("storeCharacterCardSpotlight"),
+        Cb = Ub ? "Foil" : tb ? "Spotlight" : "Showcase",
+        [Eb] = (0, eb.useState)(lg.k);
+      return (0, Ob.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: Od.map((dd => (0, td.jsx)(Gh, {
-          tile: dd,
-          design: qd,
-          canGoLive: !Hd,
-          live: vd === dd.pack,
-          busy: md,
-          highlight: Fd === dd.pack,
+        children: wb.map((bb => (0, Ob.jsx)(Jl, {
+          tile: bb,
+          design: Cb,
+          canGoLive: !Eb,
+          live: Lb === bb.pack,
+          busy: Mb,
+          highlight: Hb === bb.pack,
           onLiveStart: () => {
-            Qd(dd.pack)
+            Ib(bb.pack)
           },
           onLiveEnd: () => {
-            Qd((Od => Od === dd.pack ? null : Od))
+            Ib((wb => wb === bb.pack ? null : wb))
           },
           onOpen: () => {
-            Rd(dd.pack)
+            pb(bb.pack)
           },
           onAct: () => {
-            Xd(dd.pack)
+            Vb(bb.pack)
           },
-          onNeedRecipient: Kd,
+          onNeedRecipient: gb,
           onLogin: () => {
-            hd(dd.pack)
+            lb(bb.pack)
           }
-        }, dd.pack)))
+        }, bb.pack)))
       })
     }
-    var Lh = md(35596);
+    var Nl = Mb(35377);
 
-    function Ph(dd) {
+    function vl(bb) {
       let {
-        title: Od
-      } = dd;
-      return (0, td.jsx)("h2", {
+        title: wb
+      } = bb;
+      return (0, Ob.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, td.jsx)("span", {
+        children: (0, Ob.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: Od
+          children: wb
         })
       })
     }
 
-    function zh(dd) {
+    function Ql(bb) {
       let {
-        mountAtOnce: Od,
-        children: md
-      } = dd;
-      const Fd = (0, Wd.useRef)(null),
-        [Rd, Xd] = (0, Wd.useState)(Od),
-        Kd = (0, Lh.c)();
-      return (0, Wd.useLayoutEffect)((() => {
-        const dd = Fd.current;
-        dd && dd.getBoundingClientRect().top < dd.parentElement.getBoundingClientRect().bottom && Xd(!0)
-      }), []), Rd || Kd ? (0, td.jsx)(td.Fragment, {
-        children: md
-      }) : (0, td.jsx)("div", {
-        ref: Fd
+        mountAtOnce: wb,
+        children: Mb
+      } = bb;
+      const Hb = (0, eb.useRef)(null),
+        [pb, Vb] = (0, eb.useState)(wb),
+        gb = (0, Nl.b)();
+      return (0, eb.useLayoutEffect)((() => {
+        const bb = Hb.current;
+        bb && bb.getBoundingClientRect().top < bb.parentElement.getBoundingClientRect().bottom && Vb(!0)
+      }), []), pb || gb ? (0, Ob.jsx)(Ob.Fragment, {
+        children: Mb
+      }) : (0, Ob.jsx)("div", {
+        ref: Hb
       })
     }
 
-    function ch(dd) {
+    function Gl(bb) {
       let {
-        layout: Od,
-        mountAtOnce: md,
-        bundleGift: Fd,
-        superRankTotalDays: Rd,
-        busy: Kd,
-        highlightItem: hd,
-        onOpen: vd,
-        onAct: Qd,
-        onNeedRecipient: od,
-        onLogin: Nd,
-        dailyDropTile: qd,
-        dealBanner: Hd,
-        rankWearer: yd
-      } = dd;
+        layout: wb,
+        mountAtOnce: Mb,
+        bundleGift: Hb,
+        superRankTotalDays: pb,
+        busy: gb,
+        highlightItem: lb,
+        onOpen: Lb,
+        onAct: Ib,
+        onNeedRecipient: Ub,
+        onLogin: tb,
+        dailyDropTile: Cb,
+        dealBanner: Eb,
+        rankWearer: Fb
+      } = bb;
       const {
-        t: bd
-      } = (0, Xd.G)(), Td = Od.packs.filter((dd => void 0 === (0, DX.d)(dd.pack) && !(0, DX.j)(dd.pack))), pd = Od.packs.filter((dd => void 0 !== (0, DX.d)(dd.pack))), Yd = Od.packs.filter((dd => (0, DX.j)(dd.pack))), [gd, wd] = (0, Wd.useState)(null), [Ed, Ud] = (0, Wd.useState)(!1), {
-        gameState: xd
-      } = (0, Jd.p)(["gameState"]), Bd = null === gd && (Ed || "inGame" === xd);
-      return (0, td.jsxs)(td.Fragment, {
-        children: [(0, td.jsx)(KO.c, {
+        t: Bb
+      } = (0, Vb.C)(), sb = wb.packs.filter((bb => void 0 === (0, aV.e)(bb.pack) && !(0, aV.j)(bb.pack))), mb = wb.packs.filter((bb => void 0 !== (0, aV.e)(bb.pack))), hb = wb.packs.filter((bb => (0, aV.j)(bb.pack))), [zb, Xb] = (0, eb.useState)(null), [xb, Kb] = (0, eb.useState)(!1), {
+        gameState: rb
+      } = (0, jb.o)(["gameState"]), Rb = null === zb && (xb || "inGame" === rb);
+      return (0, Ob.jsxs)(Ob.Fragment, {
+        children: [(0, Ob.jsx)(pw.b, {
           className: "StoreSuperGems",
-          gift: Fd,
-          highlightSku: hd,
-          leadingTile: qd,
-          afterLeadingTile: Hd
-        }), null !== Od.superRank && (0, td.jsxs)(td.Fragment, {
-          children: [(0, td.jsx)(Ph, {
-            title: bd("store:rank")
-          }), (0, td.jsx)(Eh, {
-            state: Od.superRank.state,
-            urgent: Od.superRank.urgent,
-            daysLeft: Od.superRankDaysLeft,
-            totalDays: Rd,
-            recipientHasSuperRank: Od.recipientHasSuperRank,
-            wearer: yd,
-            live: Bd,
+          gift: Hb,
+          highlightSku: lb,
+          leadingTile: Cb,
+          afterLeadingTile: Eb
+        }), null !== wb.superRank && (0, Ob.jsxs)(Ob.Fragment, {
+          children: [(0, Ob.jsx)(vl, {
+            title: Bb("store:rank")
+          }), (0, Ob.jsx)(xl, {
+            state: wb.superRank.state,
+            urgent: wb.superRank.urgent,
+            daysLeft: wb.superRankDaysLeft,
+            totalDays: pb,
+            recipientHasSuperRank: wb.recipientHasSuperRank,
+            wearer: Fb,
+            live: Rb,
             onWake: () => {
-              Ud(!0)
+              Kb(!0)
             },
-            busy: Kd,
-            highlight: "superRank" === hd,
+            busy: gb,
+            highlight: "superRank" === lb,
             onOpen: () => {
-              vd("superRank")
+              Lb("superRank")
             },
             onAct: () => {
-              Qd("superRank")
+              Ib("superRank")
             },
-            onNeedRecipient: od,
+            onNeedRecipient: Ub,
             onLogin: () => {
-              Nd("superRank")
+              tb("superRank")
             }
           })]
-        }), (0, td.jsxs)(zh, {
-          mountAtOnce: md,
-          children: [(0, td.jsx)(Ph, {
-            title: bd("store:bundles")
-          }), (0, td.jsx)("div", {
+        }), (0, Ob.jsxs)(Ql, {
+          mountAtOnce: Mb,
+          children: [(0, Ob.jsx)(vl, {
+            title: Bb("store:bundles")
+          }), (0, Ob.jsx)("div", {
             className: "StorePackGrid",
-            children: Td.map((dd => (0, td.jsx)(AK, {
-              pack: dd.pack,
-              state: dd.state,
-              busy: Kd,
+            children: sb.map((bb => (0, Ob.jsx)(Ag, {
+              pack: bb.pack,
+              state: bb.state,
+              busy: gb,
               onOpen: () => {
-                vd(dd.pack)
+                Lb(bb.pack)
               },
               onAct: () => {
-                Qd(dd.pack)
+                Ib(bb.pack)
               },
-              onNeedRecipient: od,
+              onNeedRecipient: Ub,
               onLogin: () => {
-                Nd(dd.pack)
+                tb(bb.pack)
               }
-            }, dd.pack)))
-          }), (0, td.jsxs)(zh, {
-            mountAtOnce: md,
-            children: [(0, td.jsx)(Ph, {
-              title: bd("store:characters")
-            }), (0, td.jsx)(nh, {
-              tiles: pd,
-              busy: Kd,
-              highlightItem: hd,
-              onOpen: vd,
-              onAct: Qd,
-              onNeedRecipient: od,
-              onLogin: Nd,
-              livePack: gd,
-              setLivePack: wd
-            }), Yd.length > 0 && (0, td.jsxs)(td.Fragment, {
-              children: [(0, td.jsx)(Ph, {
-                title: bd("store:premiumItems")
-              }), (0, td.jsx)(nh, {
-                tiles: Yd,
-                busy: Kd,
-                highlightItem: hd,
-                onOpen: vd,
-                onAct: Qd,
-                onNeedRecipient: od,
-                onLogin: Nd,
-                livePack: gd,
-                setLivePack: wd
+            }, bb.pack)))
+          }), (0, Ob.jsxs)(Ql, {
+            mountAtOnce: Mb,
+            children: [(0, Ob.jsx)(vl, {
+              title: Bb("store:characters")
+            }), (0, Ob.jsx)(Sl, {
+              tiles: mb,
+              busy: gb,
+              highlightItem: lb,
+              onOpen: Lb,
+              onAct: Ib,
+              onNeedRecipient: Ub,
+              onLogin: tb,
+              livePack: zb,
+              setLivePack: Xb
+            }), hb.length > 0 && (0, Ob.jsxs)(Ob.Fragment, {
+              children: [(0, Ob.jsx)(vl, {
+                title: Bb("store:premiumItems")
+              }), (0, Ob.jsx)(Sl, {
+                tiles: hb,
+                busy: gb,
+                highlightItem: lb,
+                onOpen: Lb,
+                onAct: Ib,
+                onNeedRecipient: Ub,
+                onLogin: tb,
+                livePack: zb,
+                setLivePack: Xb
               })]
             })]
           })]
@@ -8305,471 +8305,471 @@ export const modules = {
       })
     }
 
-    function jh(dd) {
+    function ql(bb) {
       let {
-        giftName: Od,
-        onChooseRecipient: md
-      } = dd;
+        giftName: wb,
+        onChooseRecipient: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)();
-      return Od ? (0, td.jsxs)("span", {
+        t: eb
+      } = (0, Vb.C)();
+      return wb ? (0, Ob.jsxs)("span", {
         className: "StoreDetailRecipient",
-        title: Wd("store:giftFor", {
-          name: Od
+        title: eb("store:giftFor", {
+          name: wb
         }),
-        children: [OK.b, " ", Wd("store:giftFor", {
-          name: Od
+        children: [bg.e, " ", eb("store:giftFor", {
+          name: wb
         })]
-      }) : (0, td.jsxs)("div", {
-        ...(0, vd.X)(),
+      }) : (0, Ob.jsxs)("div", {
+        ...(0, Lb.bb)(),
         className: "StoreDetailRecipient StoreDetailRecipientChoose",
-        onClick: md,
-        children: [OK.b, " ", Wd("store:chooseRecipient")]
+        onClick: Mb,
+        children: [bg.e, " ", eb("store:chooseRecipient")]
       })
     }
 
-    function Dh(dd) {
-      return (0, cd.e)(Date.now()) ? (0, td.jsx)(Ih, {
-        ...dd
-      }) : (0, td.jsx)(eh, {
-        ...dd
+    function al(bb) {
+      return (0, Qb.b)(Date.now()) ? (0, Ob.jsx)(ul, {
+        ...bb
+      }) : (0, Ob.jsx)(il, {
+        ...bb
       })
     }
 
-    function eh(dd) {
+    function il(bb) {
       let {
-        state: Od,
-        wearer: md,
-        mode: Wd,
-        giftName: Fd,
-        busy: Rd,
-        highlight: Kd,
-        purchaseError: hd,
-        onBack: vd,
-        onChooseRecipient: Qd,
-        onAct: od,
-        onLogin: Nd
-      } = dd;
+        state: wb,
+        wearer: Mb,
+        mode: eb,
+        giftName: Hb,
+        busy: pb,
+        highlight: gb,
+        purchaseError: lb,
+        onBack: Lb,
+        onChooseRecipient: Ib,
+        onAct: Ub,
+        onLogin: tb
+      } = bb;
       const {
-        t: qd
-      } = (0, Xd.G)(), Hd = qO("gift" !== Wd);
-      return (0, td.jsx)(Kh, {
-        tierId: Pd.q.id,
-        wearer: md,
-        onBack: vd,
-        recipient: "gift" === Wd && (0, td.jsx)(jh, {
-          giftName: Fd,
-          onChooseRecipient: Qd
+        t: Cb
+      } = (0, Vb.C)(), Eb = Uw("gift" !== eb);
+      return (0, Ob.jsx)(Vl, {
+        tierId: Nb.n.id,
+        wearer: Mb,
+        onBack: Lb,
+        recipient: "gift" === eb && (0, Ob.jsx)(ql, {
+          giftName: Hb,
+          onChooseRecipient: Ib
         }),
-        cta: (0, td.jsx)(VK, {
-          state: Od,
+        cta: (0, Ob.jsx)(Zg, {
+          state: wb,
           item: "superRank",
-          price: (0, zd.x)(Date.now()).price,
-          busy: Rd,
-          highlight: Kd,
-          onAct: od,
-          onNeedRecipient: Qd,
-          onLogin: Nd
+          price: (0, vb.v)(Date.now()).price,
+          busy: pb,
+          highlight: gb,
+          onAct: Ub,
+          onNeedRecipient: Ib,
+          onLogin: tb
         }),
-        afterCta: (0, td.jsxs)(td.Fragment, {
-          children: [Hd && (0, td.jsx)("span", {
+        afterCta: (0, Ob.jsxs)(Ob.Fragment, {
+          children: [Eb && (0, Ob.jsx)("span", {
             className: "StoreTileNote",
-            children: Hd.text
-          }), (null === Hd || void 0 === Hd ? void 0 : Hd.manageUrl) && (0, td.jsx)("a", {
+            children: Eb.text
+          }), (null === Eb || void 0 === Eb ? void 0 : Eb.manageUrl) && (0, Ob.jsx)("a", {
             className: "StoreTileNote StoreManageSubscription",
-            href: Hd.manageUrl,
+            href: Eb.manageUrl,
             target: "_blank",
             rel: "noreferrer",
-            children: qd("payments:manageSubscription")
-          }), hd && (0, td.jsx)("span", {
+            children: Cb("payments:manageSubscription")
+          }), lb && (0, Ob.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: qd(hd)
+            children: Cb(lb)
           })]
         })
       })
     }
 
-    function Ih(dd) {
+    function ul(bb) {
       let {
-        state: Od,
-        daysLeft: md,
-        wearer: Fd,
-        mode: Rd,
-        giftName: Kd,
-        busy: hd,
-        highlight: vd,
-        purchaseError: Qd,
-        onBack: od,
-        onChooseRecipient: Nd,
-        onAct: Hd,
-        onLogin: yd
-      } = dd;
+        state: wb,
+        daysLeft: Mb,
+        wearer: Hb,
+        mode: pb,
+        giftName: gb,
+        busy: lb,
+        highlight: Lb,
+        purchaseError: Ib,
+        onBack: Ub,
+        onChooseRecipient: tb,
+        onAct: Eb,
+        onLogin: Fb
+      } = bb;
       const {
-        t: bd
-      } = (0, Xd.G)(), {
-        userContext: Td
-      } = (0, qd.d)(), pd = Date.now(), Yd = "gift" !== Rd, gd = Yd && "subscribed" === Od, wd = Yd ? (0, zd.t)(Td.superRankInfo, pd) : null, Ed = Yd && !gd && "pending" !== Od && (0, ed.subscriptionsSold)(), [Jd, Ud] = (0, Wd.useState)(!0);
-      return (0, td.jsx)(Kh, {
-        tierId: Pd.d.id,
-        wearer: Fd,
-        onBack: od,
-        recipient: !Yd && (0, td.jsx)(jh, {
-          giftName: Kd,
-          onChooseRecipient: Nd
+        t: Bb
+      } = (0, Vb.C)(), {
+        userContext: sb
+      } = (0, Cb.e)(), mb = Date.now(), hb = "gift" !== pb, zb = hb && "subscribed" === wb, Xb = hb ? (0, vb.r)(sb.superRankInfo, mb) : null, xb = hb && !zb && "pending" !== wb && (0, ab.subscriptionsSold)(), [jb, Kb] = (0, eb.useState)(!0);
+      return (0, Ob.jsx)(Vl, {
+        tierId: Nb.d.id,
+        wearer: Hb,
+        onBack: Ub,
+        recipient: !hb && (0, Ob.jsx)(ql, {
+          giftName: gb,
+          onChooseRecipient: tb
         }),
-        cta: (0, td.jsxs)(td.Fragment, {
-          children: [null !== wd && (0, td.jsx)(Dd, {
+        cta: (0, Ob.jsxs)(Ob.Fragment, {
+          children: [null !== Xb && (0, Ob.jsx)(qb, {
             className: "StoreTileNote StoreDetailNote",
-            until: wd
-          }), "recharge" === Od && md > 0 && (0, td.jsx)("span", {
+            until: Xb
+          }), "recharge" === wb && Mb > 0 && (0, Ob.jsx)("span", {
             className: "StoreTileNote StoreDetailNote",
-            children: wh(bd, md)
-          }), Ed && (0, td.jsx)(ph, {
-            onOfferedChange: Ud
-          }), Yd && (0, td.jsx)(vO, {
+            children: zl(Bb, Mb)
+          }), xb && (0, Ob.jsx)(sl, {
+            onOfferedChange: Kb
+          }), hb && (0, Ob.jsx)(gw, {
             showing: !0
-          }), !gd && (0, rK.g)(Pd.d.id, pd) && (0, td.jsx)(VK, {
-            state: Od,
+          }), !zb && (0, Wg.e)(Nb.d.id, mb) && (0, Ob.jsx)(Zg, {
+            state: wb,
             item: "superRank",
-            price: (0, zd.x)(pd).price,
-            busy: hd,
-            highlight: vd,
-            secondary: Ed && Jd,
-            onAct: Hd,
-            onNeedRecipient: Nd,
-            onLogin: yd
+            price: (0, vb.v)(mb).price,
+            busy: lb,
+            highlight: Lb,
+            secondary: xb && jb,
+            onAct: Eb,
+            onNeedRecipient: tb,
+            onLogin: Fb
           })]
         }),
-        afterCta: Qd && (0, td.jsx)("span", {
+        afterCta: Ib && (0, Ob.jsx)("span", {
           className: "StoreTileNote StoreDetailNote StoreTileNoteError",
-          children: bd(Qd)
+          children: Bb(Ib)
         })
       })
     }
 
-    function lh() {}
+    function dl() {}
 
-    function Ch() {
-      return "true" !== new URLSearchParams(window.location.search).get("tempSubscription") ? null : (0, td.jsx)("div", {
+    function Pl() {
+      return "true" !== new URLSearchParams(window.location.search).get("tempSubscription") ? null : (0, Ob.jsx)("div", {
         className: "StoreTempSubscribe",
-        children: (0, td.jsx)(ph, {
-          onOfferedChange: lh
+        children: (0, Ob.jsx)(sl, {
+          onOfferedChange: dl
         })
       })
     }
-    var Zh = md(3605);
+    var nl = Mb(3732);
 
-    function kh(dd) {
+    function yl(bb) {
       let {
-        state: Od,
-        view: md,
-        claiming: Fd,
-        onOpen: Kd
-      } = dd;
+        state: wb,
+        view: Mb,
+        claiming: Hb,
+        onOpen: gb
+      } = bb;
       const {
-        t: Qd
-      } = (0, Xd.G)(), od = (0, Wd.useRef)(null), Nd = "ready" === md.kind;
-      return (0, Sh.b)(od, Nd), (0, td.jsxs)("div", {
-        ref: od,
-        className: Rd()("DailyDropTile", {
-          DailyDropTileReady: Nd
+        t: Ib
+      } = (0, Vb.C)(), Ub = (0, eb.useRef)(null), tb = "ready" === Mb.kind;
+      return (0, Dl.c)(Ub, tb), (0, Ob.jsxs)("div", {
+        ref: Ub,
+        className: pb()("DailyDropTile", {
+          DailyDropTileReady: tb
         }),
-        children: [Nd && (0, td.jsx)(hd.e, {
+        children: [tb && (0, Ob.jsx)(lb.e, {
           top: "0.25rem",
           right: "0.25rem"
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "DailyDropTileTitle",
-          children: Qd("dailyDrop:name")
-        }), (0, td.jsxs)("div", {
+          children: Ib("dailyDrop:name")
+        }), (0, Ob.jsxs)("div", {
           className: "DailyDropTileArt",
-          children: [(0, td.jsx)(Zh.c, {
+          children: [(0, Ob.jsx)(nl.d, {
             className: "DailyDropTileBlock"
-          }), (0, td.jsxs)("div", {
+          }), (0, Ob.jsxs)("div", {
             className: "DailyDropTileInfo SmallTextLight",
-            children: [(0, td.jsx)("span", {
-              children: Qd("dailyDrop:basicItems")
-            }), " ", (0, td.jsx)("span", {
-              children: Qd("dailyDrop:collected", {
-                count: Od.collected.length,
-                total: Od.total
+            children: [(0, Ob.jsx)("span", {
+              children: Ib("dailyDrop:basicItems")
+            }), " ", (0, Ob.jsx)("span", {
+              children: Ib("dailyDrop:collected", {
+                count: wb.collected.length,
+                total: wb.total
               })
             })]
           })]
-        }), "ready" === md.kind && (0, td.jsx)(vd.m, {
+        }), "ready" === Mb.kind && (0, Ob.jsx)(Lb.p, {
           className: "DailyDropTileOpen",
-          onClick: Kd,
-          loading: Fd,
-          children: Qd("dailyDrop:open")
-        }), "waiting" === md.kind && (0, td.jsx)("div", {
+          onClick: gb,
+          loading: Hb,
+          children: Ib("dailyDrop:open")
+        }), "waiting" === Mb.kind && (0, Ob.jsx)("div", {
           className: "DailyDropTileWait SmallTextBold",
-          children: Qd("dailyDrop:nextIn", {
-            count: md.hours
+          children: Ib("dailyDrop:nextIn", {
+            count: Mb.hours
           })
         })]
       })
     }
-    var fh = md(3143);
-    const Mh = Math.PI / 180;
+    var ol = Mb(3217);
+    const Tl = Math.PI / 180;
 
-    function dv(dd) {
-      return dd / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
+    function kl(bb) {
+      return bb / (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 24) * 2 * Math.PI
     }
 
-    function Ov(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const Wd = (dd / (2 * Math.PI / md) % md + md) % md;
-      let Fd = null,
-        Rd = 1 / 0;
-      for (let Xd = 0; Xd < md; Xd++) {
-        if (!Od[Xd]) continue;
-        const dd = Math.abs(Xd - Wd),
-          Kd = Math.min(dd, md - dd);
-        Kd < Rd && (Fd = Xd, Rd = Kd)
+    function bL(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const eb = (bb / (2 * Math.PI / Mb) % Mb + Mb) % Mb;
+      let Hb = null,
+        pb = 1 / 0;
+      for (let Vb = 0; Vb < Mb; Vb++) {
+        if (!wb[Vb]) continue;
+        const bb = Math.abs(Vb - eb),
+          gb = Math.min(bb, Mb - bb);
+        gb < pb && (Hb = Vb, pb = gb)
       }
-      return Fd
+      return Hb
     }
 
-    function mv(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
-      const Wd = Ov(dd, Od, md);
-      if (null === Wd) return dd;
-      const Fd = dv(Wd, md) - dd;
-      return dd + Fd - 2 * Math.PI * Math.round(Fd / (2 * Math.PI))
+    function wL(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24;
+      const eb = bL(bb, wb, Mb);
+      if (null === eb) return bb;
+      const Hb = kl(eb, Mb) - bb;
+      return bb + Hb - 2 * Math.PI * Math.round(Hb / (2 * Math.PI))
     }
-    const Wv = 32;
+    const ML = 32;
 
-    function Fv(dd) {
-      if (0 === dd.width || 0 === dd.height) return !0;
-      const Od = document.createElement("canvas");
-      Od.width = Wv, Od.height = Wv;
-      const md = Od.getContext("2d", {
+    function eL(bb) {
+      if (0 === bb.width || 0 === bb.height) return !0;
+      const wb = document.createElement("canvas");
+      wb.width = ML, wb.height = ML;
+      const Mb = wb.getContext("2d", {
         willReadFrequently: !0
       });
-      if (!md) return !0;
-      md.drawImage(dd, 0, 0, Wv, Wv);
+      if (!Mb) return !0;
+      Mb.drawImage(bb, 0, 0, ML, ML);
       const {
-        data: Wd
-      } = md.getImageData(0, 0, Wv, Wv);
-      for (let Fd = 3; Fd < Wd.length; Fd += 4)
-        if (Wd[Fd] > 0) return !1;
+        data: eb
+      } = Mb.getImageData(0, 0, ML, ML);
+      for (let Hb = 3; Hb < eb.length; Hb += 4)
+        if (eb[Hb] > 0) return !1;
       return !0
     }
 
-    function Rv(dd) {
-      dd.width = 0, dd.height = 0
+    function HL(bb) {
+      bb.width = 0, bb.height = 0
     }
 
-    function Xv() {
+    function pL() {
       return "hidden" === document.visibilityState
     }
-    async function Kv(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 1e3;
+    async function VL(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 1e3;
       for (;;) {
-        await (Xv() ? new Promise((dd => {
-          const Od = () => {
-            Xv() || (document.removeEventListener("visibilitychange", Od), dd())
+        await (pL() ? new Promise((bb => {
+          const wb = () => {
+            pL() || (document.removeEventListener("visibilitychange", wb), bb())
           };
-          document.addEventListener("visibilitychange", Od)
+          document.addEventListener("visibilitychange", wb)
         })) : Promise.resolve());
-        const md = Math.min(Od(), 1e3);
-        if (md <= 0) return null;
-        const Wd = await dd.captureFrame(md);
-        if (null !== Wd || !Xv()) return null !== Wd && Fv(Wd) ? (Rv(Wd), null) : Wd
+        const Mb = Math.min(wb(), 1e3);
+        if (Mb <= 0) return null;
+        const eb = await bb.captureFrame(Mb);
+        if (null !== eb || !pL()) return null !== eb && eL(eb) ? (HL(eb), null) : eb
       }
     }
-    async function hv(dd, Od) {
-      const md = performance.now();
-      let Wd = 0,
-        Fd = Xv() ? md : null;
-      const Rd = () => {
-          Xv() ? Fd ??= performance.now() : null !== Fd && (Wd += performance.now() - Fd, Fd = null)
+    async function gL(bb, wb) {
+      const Mb = performance.now();
+      let eb = 0,
+        Hb = pL() ? Mb : null;
+      const pb = () => {
+          pL() ? Hb ??= performance.now() : null !== Hb && (eb += performance.now() - Hb, Hb = null)
         },
-        Xd = () => {
-          const dd = performance.now();
-          return 3e3 - (dd - md - Wd - (null === Fd ? 0 : dd - Fd))
+        Vb = () => {
+          const bb = performance.now();
+          return 3e3 - (bb - Mb - eb - (null === Hb ? 0 : bb - Hb))
         };
-      document.addEventListener("visibilitychange", Rd);
+      document.addEventListener("visibilitychange", pb);
       try {
-        let md = await Kv(dd);
-        for (; null === md && Od() && Xd() > 0;) md = await Kv(dd, Xd);
-        return md
+        let Mb = await VL(bb);
+        for (; null === Mb && wb() && Vb() > 0;) Mb = await VL(bb, Vb);
+        return Mb
       } finally {
-        document.removeEventListener("visibilitychange", Rd)
+        document.removeEventListener("visibilitychange", pb)
       }
     }
 
-    function vv(dd) {
+    function lL(bb) {
       let {
-        cosmetics: Od
-      } = dd;
-      return (0, td.jsx)("div", {
+        cosmetics: wb
+      } = bb;
+      return (0, Ob.jsx)("div", {
         className: "DailyDropRevealHead",
-        children: (0, td.jsx)(NK.e, {
-          cosmetics: Od
+        children: (0, Ob.jsx)(Ug.e, {
+          cosmetics: wb
         })
       })
     }
 
-    function Qv(dd) {
+    function LL(bb) {
       let {
-        worn: Od,
-        KF: md,
-        hF: Fd,
-        prompting: hd,
-        className: vd
-      } = dd;
+        worn: wb,
+        gH: Mb,
+        lH: Hb,
+        prompting: lb,
+        className: Lb
+      } = bb;
       const {
-        t: Qd
-      } = (0, Xd.G)(), od = (0, Wd.useRef)(null), [Nd, qd] = (0, Wd.useState)(null), [Hd, yd] = (0, Wd.useState)(!1), [bd, Td] = (0, Wd.useState)(!1), pd = (0, Wd.useRef)([]), Yd = (0, Wd.useRef)(null), gd = (0, Wd.useRef)(0), Ed = (0, Wd.useRef)(null), Jd = (0, Wd.useRef)(!0), Ud = (0, Wd.useCallback)((() => {
-        const dd = Yd.current,
-          Od = pd.current,
-          md = Ov(gd.current, Od),
-          Wd = null === md ? null : Od[md],
-          Fd = null === dd || void 0 === dd ? void 0 : dd.getContext("2d");
-        dd && Wd && Fd && (dd.width === Wd.width && dd.height === Wd.height || (dd.width = Wd.width, dd.height = Wd.height), Fd.clearRect(0, 0, dd.width, dd.height), Fd.drawImage(Wd, 0, 0))
+        t: Ib
+      } = (0, Vb.C)(), Ub = (0, eb.useRef)(null), [tb, Cb] = (0, eb.useState)(null), [Eb, Fb] = (0, eb.useState)(!1), [Bb, sb] = (0, eb.useState)(!1), mb = (0, eb.useRef)([]), hb = (0, eb.useRef)(null), zb = (0, eb.useRef)(0), xb = (0, eb.useRef)(null), jb = (0, eb.useRef)(!0), Kb = (0, eb.useCallback)((() => {
+        const bb = hb.current,
+          wb = mb.current,
+          Mb = bL(zb.current, wb),
+          eb = null === Mb ? null : wb[Mb],
+          Hb = null === bb || void 0 === bb ? void 0 : bb.getContext("2d");
+        bb && eb && Hb && (bb.width === eb.width && bb.height === eb.height || (bb.width = eb.width, bb.height = eb.height), Hb.clearRect(0, 0, bb.width, bb.height), Hb.drawImage(eb, 0, 0))
       }), []);
-      async function xd(dd, Od) {
-        const md = performance.now(),
-          Wd = () => od.current === dd;
-        let Fd = 0;
-        for (const Rd of function() {
-            let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
-            const Od = [],
-              md = new Set;
-            for (let Wd = dd / 2; Wd >= 1 && Number.isInteger(Wd); Wd /= 2)
-              for (let Fd = 0; Fd < dd; Fd += Wd) md.has(Fd) || (md.add(Fd), Od.push(Fd));
-            for (let Wd = 0; Wd < dd; Wd++) md.has(Wd) || Od.push(Wd);
-            return Od
+      async function rb(bb, wb) {
+        const Mb = performance.now(),
+          eb = () => Ub.current === bb;
+        let Hb = 0;
+        for (const pb of function() {
+            let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24;
+            const wb = [],
+              Mb = new Set;
+            for (let eb = bb / 2; eb >= 1 && Number.isInteger(eb); eb /= 2)
+              for (let Hb = 0; Hb < bb; Hb += eb) Mb.has(Hb) || (Mb.add(Hb), wb.push(Hb));
+            for (let eb = 0; eb < bb; eb++) Mb.has(eb) || wb.push(eb);
+            return wb
           }()) {
-          if (!Wd()) break;
-          dd.turnCamera(dv(Rd));
-          const md = 0 === Rd ? await hv(Od, Wd) : await Kv(Od);
-          if (!Wd()) {
-            null !== md && Rv(md);
+          if (!eb()) break;
+          bb.turnCamera(kl(pb));
+          const Mb = 0 === pb ? await gL(wb, eb) : await VL(wb);
+          if (!eb()) {
+            null !== Mb && HL(Mb);
             break
           }
-          if (null !== md) pd.current[Rd] = md, Fd++, 0 === Rd && qd("stills");
-          else if (0 === Rd) break
+          if (null !== Mb) mb.current[pb] = Mb, Hb++, 0 === pb && Cb("stills");
+          else if (0 === pb) break
         }
-        Fd > 0 && console.info(`Lucky Skin Block's Before: ${Fd} stills in ${Math.round(performance.now()-md)} ms`)
+        Hb > 0 && console.info(`Lucky Skin Block's Before: ${Hb} stills in ${Math.round(performance.now()-Mb)} ms`)
       }
 
-      function Bd(dd) {
-        var Od, md;
-        (null === (Od = Ed.current) || void 0 === Od ? void 0 : Od.pointerId) === dd.pointerId && (Ed.current = null, Jd.current || (gd.current = mv(gd.current, pd.current), Ud(), null === (md = od.current) || void 0 === md || md.turnCamera(gd.current)))
-      }(0, Wd.useEffect)((() => {
-        "stills" === Nd && Ud()
-      }), [Nd, Ud]), (0, Wd.useEffect)((() => () => {
-        for (const dd of pd.current) dd && Rv(dd);
-        pd.current = []
+      function Rb(bb) {
+        var wb, Mb;
+        (null === (wb = xb.current) || void 0 === wb ? void 0 : wb.pointerId) === bb.pointerId && (xb.current = null, jb.current || (zb.current = wL(zb.current, mb.current), Kb(), null === (Mb = Ub.current) || void 0 === Mb || Mb.turnCamera(zb.current)))
+      }(0, eb.useEffect)((() => {
+        "stills" === tb && Kb()
+      }), [tb, Kb]), (0, eb.useEffect)((() => () => {
+        for (const bb of mb.current) bb && HL(bb);
+        mb.current = []
       }), []);
-      const Sd = hd && !bd,
-        sd = Sd ? {
-          onPointerDown: dd => {
-            null === Ed.current && (dd.currentTarget.setPointerCapture(dd.pointerId), Ed.current = {
-              pointerId: dd.pointerId,
-              startX: dd.clientX,
-              startTurn: gd.current
+      const Db = lb && !Bb,
+        cb = Db ? {
+          onPointerDown: bb => {
+            null === xb.current && (bb.currentTarget.setPointerCapture(bb.pointerId), xb.current = {
+              pointerId: bb.pointerId,
+              startX: bb.clientX,
+              startTurn: zb.current
             })
           },
-          onPointerMove: dd => {
-            const Od = Ed.current;
-            var md;
-            null !== Od && Od.pointerId === dd.pointerId && (gd.current = Od.startTurn - (dd.clientX - Od.startX) * Mh, Ud(), Jd.current || null === (md = od.current) || void 0 === md || md.turnCamera(gd.current))
+          onPointerMove: bb => {
+            const wb = xb.current;
+            var Mb;
+            null !== wb && wb.pointerId === bb.pointerId && (zb.current = wb.startTurn - (bb.clientX - wb.startX) * Tl, Kb(), jb.current || null === (Mb = Ub.current) || void 0 === Mb || Mb.turnCamera(zb.current))
           },
-          onPointerUp: Bd,
-          onPointerCancel: Bd
+          onPointerUp: Rb,
+          onPointerCancel: Rb
         } : {};
-      return (0, td.jsxs)("div", {
-        className: Rd()("DailyDropRevealFigures", {
-          DailyDropRevealFiguresTurnable: Sd
-        }, vd),
-        children: [(0, td.jsxs)("div", {
+      return (0, Ob.jsxs)("div", {
+        className: pb()("DailyDropRevealFigures", {
+          DailyDropRevealFiguresTurnable: Db
+        }, Lb),
+        children: [(0, Ob.jsxs)("div", {
           className: "DailyDropRevealFigure",
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            ...sd,
-            children: ["stills" === Nd && (0, td.jsx)("canvas", {
-              ref: Yd,
+            ...cb,
+            children: ["stills" === tb && (0, Ob.jsx)("canvas", {
+              ref: hb,
               className: "DailyDropRevealBeforeStill"
-            }), "head" === Nd && (0, td.jsx)(vv, {
-              cosmetics: Od
-            }), null === Nd && (0, td.jsx)(wd.c, {})]
-          }), (0, td.jsx)("span", {
+            }), "head" === tb && (0, Ob.jsx)(lL, {
+              cosmetics: wb
+            }), null === tb && (0, Ob.jsx)(Xb.c, {})]
+          }), (0, Ob.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: Qd("dailyDrop:before")
+            children: Ib("dailyDrop:before")
           })]
-        }), (0, td.jsx)(Kd.c, {
+        }), (0, Ob.jsx)(gb.b, {
           name: "arrow-right",
           className: "DailyDropRevealArrow"
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "DailyDropRevealFigure DailyDropRevealAfter",
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: [(0, td.jsx)("div", {
-              className: Rd()("DailyDropRevealLive", {
-                DailyDropRevealLiveDrawn: Hd
+            children: [(0, Ob.jsx)("div", {
+              className: pb()("DailyDropRevealLive", {
+                DailyDropRevealLiveDrawn: Eb
               }),
-              children: (0, td.jsx)(Wd.Suspense, {
+              children: (0, Ob.jsx)(eb.Suspense, {
                 fallback: null,
-                children: (0, td.jsx)(gK.e, {
+                children: (0, Ob.jsx)(hg.e, {
                   onNoWebGl: () => {
-                    qd("head"), Td(!0)
+                    Cb("head"), sb(!0)
                   },
-                  ref: od,
+                  ref: Ub,
                   onReady: () => {
-                    var dd, md;
-                    null === (dd = od.current) || void 0 === dd || dd.resetCamera(), null === (md = od.current) || void 0 === md || md.setAllCosmetics(Od)
+                    var bb, Mb;
+                    null === (bb = Ub.current) || void 0 === bb || bb.resetCamera(), null === (Mb = Ub.current) || void 0 === Mb || Mb.setAllCosmetics(wb)
                   },
                   onDrawn: () => {
                     requestAnimationFrame((() => {
                       !async function() {
-                        const dd = od.current;
-                        if (!dd) return;
-                        const Od = dd.getDevTools();
+                        const bb = Ub.current;
+                        if (!bb) return;
+                        const wb = bb.getDevTools();
                         try {
-                          Od && await xd(dd, Od)
-                        } catch (Rd) {
-                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", Rd)
+                          wb && await rb(bb, wb)
+                        } catch (pb) {
+                          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", pb)
                         } finally {
-                          Jd.current = !1
+                          jb.current = !1
                         }
-                        if (od.current !== dd) return;
-                        pd.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), (0, om.s)("daily_drop.before_head", "no_front_still"), qd("head")), null === Ed.current && (gd.current = mv(gd.current, pd.current)), dd.turnCamera(gd.current), Ud(), dd.updateCosmetic(md, Fd);
-                        const Wd = new Promise((dd => {
-                          setTimeout(dd, 1e4)
+                        if (Ub.current !== bb) return;
+                        mb.current[0] || (console.warn("The character preview gave no front still: the Lucky Skin Block's Before shows the head"), (0, IM.v)("daily_drop.before_head", "no_front_still"), Cb("head")), null === xb.current && (zb.current = wL(zb.current, mb.current)), bb.turnCamera(zb.current), Kb(), bb.updateCosmetic(Mb, Hb);
+                        const eb = new Promise((bb => {
+                          setTimeout(bb, 1e4)
                         }));
-                        await Promise.race([dd.ensureReadyForCapture(md), Wd]).catch((dd => {
-                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", dd)
-                        })), od.current === dd && yd(!0)
+                        await Promise.race([bb.ensureReadyForCapture(Mb), eb]).catch((bb => {
+                          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", bb)
+                        })), Ub.current === bb && Fb(!0)
                       }()
                     }))
                   }
                 })
               })
-            }), bd && (dR.N.includes(md) ? (0, td.jsx)(vv, {
+            }), Bb && (TH.N.includes(Mb) ? (0, Ob.jsx)(lL, {
               cosmetics: {
-                ...Od,
-                [md]: Fd
+                ...wb,
+                [Mb]: Hb
               }
-            }) : (0, td.jsx)("img", {
+            }) : (0, Ob.jsx)("img", {
               className: "DailyDropRevealAfterPiece",
-              src: `/textures/charSkins/previews/${(0,fh.i)(md,Fd).previewTex}.png`,
+              src: `/textures/charSkins/previews/${(0,ol.l)(Mb,Hb).previewTex}.png`,
               alt: "",
               draggable: !1
-            })), !Hd && !bd && (0, td.jsx)(wd.c, {}), (0, td.jsx)("div", {
+            })), !Eb && !Bb && (0, Ob.jsx)(Xb.c, {}), (0, Ob.jsx)("div", {
               className: "DailyDropRevealTurn",
-              ...sd
+              ...cb
             })]
-          }), (0, td.jsx)("span", {
+          }), (0, Ob.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: Qd("dailyDrop:after")
+            children: Ib("dailyDrop:after")
           })]
         })]
       })
     }
-    const tv = {
+    const IL = {
         closed: "opening",
         opening: "revealed",
         revealed: "shrinking",
@@ -8777,211 +8777,211 @@ export const modules = {
         equip: "equip",
         remind: "remind"
       },
-      ov = {
+      OL = {
         opening: 900,
         shrinking: 700
       };
 
-    function Nv(dd) {
+    function UL(bb) {
       let {
-        drop: Od,
-        onClose: md
-      } = dd;
+        drop: wb,
+        onClose: Mb
+      } = bb;
       const {
-        t: Fd
-      } = (0, Xd.G)(), {
-        userContext: hd
-      } = (0, qd.d)(), {
-        state: Qd,
-        view: od
-      } = (0, om.A)(), [Nd, Hd] = (0, Wd.useState)("closed"), [yd] = (0, Wd.useState)((() => ({
-        ...hd.getPlayerCosmetics()
-      }))), [bd] = (0, Wd.useState)((() => (0, om.j)(Od, yd))), [Td, pd] = (0, Wd.useState)(!1), [Yd, gd] = (0, Wd.useState)(!1), [wd] = (0, Wd.useState)((() => null === Qd ? Promise.resolve(null) : bm(Qd))), [Ed, Ud] = (0, Wd.useState)(null), xd = (0, hm.b)(), {
-        gameState: Bd
-      } = (0, Jd.p)(["gameState"]);
-      async function Sd() {
-        const dd = await wd;
-        xd.current && (null === dd ? (md(), async function(dd) {
-          let Od = null;
+        t: Hb
+      } = (0, Vb.C)(), {
+        userContext: lb
+      } = (0, Cb.e)(), {
+        state: Ib,
+        view: Ub
+      } = (0, IM.D)(), [tb, Eb] = (0, eb.useState)("closed"), [Fb] = (0, eb.useState)((() => ({
+        ...lb.getPlayerCosmetics()
+      }))), [Bb] = (0, eb.useState)((() => (0, IM.j)(wb, Fb))), [sb, mb] = (0, eb.useState)(!1), [hb, zb] = (0, eb.useState)(!1), [Xb] = (0, eb.useState)((() => null === Ib ? Promise.resolve(null) : EM(Ib))), [xb, Kb] = (0, eb.useState)(null), rb = (0, gM.d)(), {
+        gameState: Rb
+      } = (0, jb.o)(["gameState"]);
+      async function Db() {
+        const bb = await Xb;
+        rb.current && (null === bb ? (Mb(), async function(bb) {
+          let wb = null;
           try {
-            const md = await ym();
-            null === dd || dd.remindersOn || null !== Hm.k.getItem(md) || (Od = md)
-          } catch (Wd) {
-            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", Wd)
+            const Mb = await CM();
+            null === bb || bb.remindersOn || null !== tM.i.getItem(Mb) || (wb = Mb)
+          } catch (eb) {
+            console.error("Failed to tell whether Lucky Skin Block reminders were ever chosen:", eb)
           }
-          if (null === Od) return void await (0, Nm.n)("dailyDrop");
-          const md = Od;
-          await (0, Nm.n)("dailyDrop", {
+          if (null === wb) return void await (0, OM.i)("dailyDrop");
+          const Mb = wb;
+          await (0, OM.i)("dailyDrop", {
             copy: {
               title: "mobilePushNotifications:optInTitle",
               subtitle: "mobilePushNotifications:offerSubtitleDailyDrop"
             },
             onAllow: () => {
-              Hm.k.setItem(md, !0), pm(null)
+              tM.i.setItem(Mb, !0), BM(null)
             }
           })
-        }(Qd)) : ((0, Nm.i)(), Ud(dd), Hd("remind")))
+        }(Ib)) : ((0, OM.g)(), Kb(bb), Eb("remind")))
       }
 
-      function sd(dd) {
-        null !== Ed && function(dd, Od) {
-          Hm.k.setItem(dd.askedKey, !0), (0, Km.i)(), (0, om.s)("daily_drop.remind", Od ? "yes" : "no"), Od && pm(dd.requester)
-        }(Ed, dd), md()
-      }(0, Wd.useEffect)((() => {
-        (0, om.s)("daily_drop.reveal_step", Nd)
-      }), [Nd]), (0, Wd.useEffect)((() => {
-        const dd = ov[Nd];
-        if (void 0 === dd) return;
-        const Od = setTimeout((() => {
-          Hd(tv[Nd])
-        }), dd);
+      function cb(bb) {
+        null !== xb && function(bb, wb) {
+          tM.i.setItem(bb.askedKey, !0), (0, VM.n)(), (0, IM.v)("daily_drop.remind", wb ? "yes" : "no"), wb && BM(bb.requester)
+        }(xb, bb), Mb()
+      }(0, eb.useEffect)((() => {
+        (0, IM.v)("daily_drop.reveal_step", tb)
+      }), [tb]), (0, eb.useEffect)((() => {
+        const bb = OL[tb];
+        if (void 0 === bb) return;
+        const wb = setTimeout((() => {
+          Eb(IL[tb])
+        }), bb);
         return () => {
-          clearTimeout(Od)
+          clearTimeout(wb)
         }
-      }), [Nd]);
-      const ud = Fd(`dailyDrop:kind_${bd.KF}`),
-        Vd = Qd && Fd("dailyDrop:collected", {
-          count: Qd.collected.length,
-          total: Qd.total
+      }), [tb]);
+      const Yb = Hb(`dailyDrop:kind_${Bb.gH}`),
+        Zb = Ib && Hb("dailyDrop:collected", {
+          count: Ib.collected.length,
+          total: Ib.total
         }),
-        Ad = "revealed" === Nd || "shrinking" === Nd,
-        rd = "equip" !== Nd && "remind" !== Nd;
-      return (0, td.jsx)(wF.c, {
+        fb = "revealed" === tb || "shrinking" === tb,
+        Ab = "equip" !== tb && "remind" !== tb;
+      return (0, Ob.jsx)(hH.e, {
         className: "DailyDropRevealScreen",
-        close: "remind" === Nd ? () => {
-          sd(!1)
-        } : md,
+        close: "remind" === tb ? () => {
+          cb(!1)
+        } : Mb,
         togglePointerLock: !1,
         closeOnPressBackground: !1,
-        children: (0, td.jsxs)("div", {
-          className: Rd()("DailyDropReveal", {
-            DailyDropRevealOpening: "opening" === Nd,
-            DailyDropRevealShrinking: "shrinking" === Nd,
-            DailyDropRevealFiguresShown: "shrinking" === Nd || "equip" === Nd || "remind" === Nd
+        children: (0, Ob.jsxs)("div", {
+          className: pb()("DailyDropReveal", {
+            DailyDropRevealOpening: "opening" === tb,
+            DailyDropRevealShrinking: "shrinking" === tb,
+            DailyDropRevealFiguresShown: "shrinking" === tb || "equip" === tb || "remind" === tb
           }),
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "DailyDropRevealStage",
-            children: [(0, td.jsx)(Qv, {
+            children: [(0, Ob.jsx)(LL, {
               className: "DailyDropRevealStageFigures",
-              worn: yd,
-              KF: bd.KF,
-              hF: bd.hF,
-              prompting: !rd
-            }), ("closed" === Nd || "opening" === Nd) && (0, td.jsx)(Zh.c, {
+              worn: Fb,
+              gH: Bb.gH,
+              lH: Bb.lH,
+              prompting: !Ab
+            }), ("closed" === tb || "opening" === tb) && (0, Ob.jsx)(nl.d, {
               className: "DailyDropRevealBlock",
-              open: "opening" === Nd
-            }), Ad && (0, td.jsx)("div", {
+              open: "opening" === tb
+            }), fb && (0, Ob.jsx)("div", {
               className: "DailyDropRevealPiece",
-              children: (0, td.jsx)("img", {
-                src: `/textures/charSkins/previews/${(0,fh.i)(bd.KF,bd.hF).previewTex}.png`,
-                alt: ud,
+              children: (0, Ob.jsx)("img", {
+                src: `/textures/charSkins/previews/${(0,ol.l)(Bb.gH,Bb.lH).previewTex}.png`,
+                alt: Yb,
                 draggable: !1
               })
             })]
-          }), rd && (0, td.jsxs)(td.Fragment, {
-            children: [(0, td.jsxs)("div", {
+          }), Ab && (0, Ob.jsxs)(Ob.Fragment, {
+            children: [(0, Ob.jsxs)("div", {
               className: "DailyDropRevealCaption",
-              children: [(0, td.jsx)("div", {
+              children: [(0, Ob.jsx)("div", {
                 className: "DailyDropRevealTitle SmallTextBold",
-                children: Ad ? ud : Fd("dailyDrop:name")
-              }), "closed" === Nd && (0, td.jsx)("div", {
+                children: fb ? Yb : Hb("dailyDrop:name")
+              }), "closed" === tb && (0, Ob.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: Fd("dailyDrop:tapToOpen")
-              }), "revealed" === Nd && (0, td.jsx)("div", {
+                children: Hb("dailyDrop:tapToOpen")
+              }), "revealed" === tb && (0, Ob.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: Fd("dailyDrop:tapToContinue")
+                children: Hb("dailyDrop:tapToContinue")
               })]
-            }), (0, td.jsx)("button", {
+            }), (0, Ob.jsx)("button", {
               type: "button",
               className: "DailyDropRevealTap",
               "data-pad-default-focus": !0,
-              "aria-label": Fd("closed" === Nd ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
+              "aria-label": Hb("closed" === tb ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
               onClick: () => {
-                Hd(tv[Nd])
+                Eb(IL[tb])
               }
             })]
-          }), "equip" === Nd && (0, td.jsxs)("div", {
+          }), "equip" === tb && (0, Ob.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, td.jsx)("div", {
+            children: [(0, Ob.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: ud
-            }), (0, td.jsx)("div", {
+              children: Yb
+            }), (0, Ob.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: Fd("dailyDrop:equipQuestion")
-            }), (0, td.jsxs)("div", {
+              children: Hb("dailyDrop:equipQuestion")
+            }), (0, Ob.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, td.jsx)(vd.g, {
+              children: [(0, Ob.jsx)(Lb.f, {
                 className: "DailyDropRevealButton",
-                disabled: Td,
+                disabled: sb,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  (0, om.s)("daily_drop.not_now", Od), Sd()
+                  (0, IM.v)("daily_drop.not_now", wb), Db()
                 },
-                children: Fd("dailyDrop:notNow")
-              }), (0, td.jsx)(vd.g, {
+                children: Hb("dailyDrop:notNow")
+              }), (0, Ob.jsx)(Lb.f, {
                 className: "DailyDropRevealButton",
-                loading: Td,
+                loading: sb,
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
                   !async function() {
-                    (0, om.s)("daily_drop.equip", Od), pd(!0), gd(!1);
+                    (0, IM.v)("daily_drop.equip", wb), mb(!0), zb(!1);
                     try {
-                      await (0, om.i)(hd, bd.KF, bd.hF)
-                    } catch (dd) {
-                      return console.error("Failed to equip the Lucky Skin Block's piece", dd), pd(!1), void gd(!0)
+                      await (0, IM.f)(lb, Bb.gH, Bb.lH)
+                    } catch (bb) {
+                      return console.error("Failed to equip the Lucky Skin Block's piece", bb), mb(!1), void zb(!0)
                     }
-                    await Sd()
+                    await Db()
                   }()
                 },
-                children: Fd("dailyDrop:equip")
+                children: Hb("dailyDrop:equip")
               })]
-            }), Yd && (0, td.jsx)("div", {
+            }), hb && (0, Ob.jsx)("div", {
               className: "DailyDropRevealError SmallTextBold",
-              children: Fd("dailyDrop:equipFailed")
-            }), !(0, Jd.f)(Bd) && (0, td.jsxs)("button", {
+              children: Hb("dailyDrop:equipFailed")
+            }), !(0, jb.e)(Rb) && (0, Ob.jsxs)("button", {
               type: "button",
               className: "DailyDropRevealCustomise",
-              disabled: Td,
+              disabled: sb,
               onClick: () => {
-                var dd;
-                (0, om.s)("daily_drop.customise", Od), dd = bd.KF, um.j.lQ(HF, dd), Jd.e.set({
-                  openEverythingMenuName: VO.m.CUSTOMISATION
-                }), md()
+                var bb;
+                (0, IM.v)("daily_drop.customise", wb), bb = Bb.gH, cM.k.iI(tH, bb), jb.c.set({
+                  openEverythingMenuName: Zw.l.CUSTOMISATION
+                }), Mb()
               },
-              children: [Fd("dailyDrop:customise"), " ", (0, td.jsx)(Kd.c, {
+              children: [Hb("dailyDrop:customise"), " ", (0, Ob.jsx)(gb.b, {
                 name: "arrow-right",
                 className: "DailyDropRevealCustomiseArrow"
               })]
-            }), Vd && (0, td.jsxs)("div", {
+            }), Zb && (0, Ob.jsxs)("div", {
               className: "DailyDropRevealProgress SmallTextLight",
-              children: [Vd, "waiting" === (null === od || void 0 === od ? void 0 : od.kind) && ` \xb7 ${Fd("dailyDrop:nextInInline",{count:od.hours})}`]
+              children: [Zb, "waiting" === (null === Ub || void 0 === Ub ? void 0 : Ub.kind) && ` \xb7 ${Hb("dailyDrop:nextInInline",{count:Ub.hours})}`]
             })]
-          }), "remind" === Nd && (0, td.jsxs)("div", {
+          }), "remind" === tb && (0, Ob.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, td.jsx)("div", {
+            children: [(0, Ob.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: Fd("dailyDrop:remindTitle")
-            }), (0, td.jsx)("div", {
+              children: Hb("dailyDrop:remindTitle")
+            }), (0, Ob.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: Fd("dailyDrop:remindSubtitle")
-            }), (0, td.jsxs)("div", {
+              children: Hb("dailyDrop:remindSubtitle")
+            }), (0, Ob.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, td.jsx)(vd.g, {
+              children: [(0, Ob.jsx)(Lb.f, {
                 className: "DailyDropRevealButton",
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  sd(!1)
+                  cb(!1)
                 },
-                children: Fd("dailyDrop:remindNo")
-              }), (0, td.jsx)(vd.m, {
+                children: Hb("dailyDrop:remindNo")
+              }), (0, Ob.jsx)(Lb.p, {
                 className: "DailyDropRevealButton",
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  sd(!0)
+                  cb(!0)
                 },
-                children: Fd("dailyDrop:remindYes")
+                children: Hb("dailyDrop:remindYes")
               })]
             })]
           })]
@@ -8989,803 +8989,803 @@ export const modules = {
       })
     }
 
-    function qv(dd, Od) {
+    function tL(bb, wb) {
       const {
-        t: md
-      } = (0, Xd.G)(), Fd = function(dd, Od) {
+        t: Mb
+      } = (0, Vb.C)(), Hb = function(bb, wb) {
         const {
-          state: md,
-          view: Fd
-        } = (0, om.A)(), [Rd, Xd] = (0, Wd.useState)(!1), [Kd, hd] = (0, Wd.useState)(!1), [vd, Qd] = (0, Wd.useState)(null), td = (0, Wd.useRef)(null), od = (0, Wd.useRef)(!1), Nd = Od && "ready" === (null === Fd || void 0 === Fd ? void 0 : Fd.kind);
-        (0, Wd.useEffect)((() => {
-          dd ? Nd && !od.current && (od.current = !0, (0, om.s)("daily_drop.shown", "tile")) : od.current = !1
-        }), [dd, Nd]), (0, Wd.useEffect)((() => {
-          dd || (bd(), hd(!1))
-        }), [dd]);
-        const qd = dd && null === vd && !(0, om.r)(Fd);
-        (0, Wd.useEffect)((() => {
-          qd && Jd.e.set({
-            openEverythingMenuName: VO.m.CUSTOMISATION
+          state: Mb,
+          view: Hb
+        } = (0, IM.D)(), [pb, Vb] = (0, eb.useState)(!1), [gb, lb] = (0, eb.useState)(!1), [Lb, Ib] = (0, eb.useState)(null), Ob = (0, eb.useRef)(null), Ub = (0, eb.useRef)(!1), tb = wb && "ready" === (null === Hb || void 0 === Hb ? void 0 : Hb.kind);
+        (0, eb.useEffect)((() => {
+          bb ? tb && !Ub.current && (Ub.current = !0, (0, IM.v)("daily_drop.shown", "tile")) : Ub.current = !1
+        }), [bb, tb]), (0, eb.useEffect)((() => {
+          bb || (Bb(), lb(!1))
+        }), [bb]);
+        const Cb = bb && null === Lb && !(0, IM.s)(Hb);
+        (0, eb.useEffect)((() => {
+          Cb && jb.c.set({
+            openEverythingMenuName: Zw.l.CUSTOMISATION
           })
-        }), [qd]);
-        const Hd = (0, Wd.useRef)(!1),
-          yd = (0, Wd.useRef)(dd);
+        }), [Cb]);
+        const Eb = (0, eb.useRef)(!1),
+          Fb = (0, eb.useRef)(bb);
 
-        function bd() {
-          null !== td.current && (td.current = null, Qd(null))
+        function Bb() {
+          null !== Ob.current && (Ob.current = null, Ib(null))
         }
-        return yd.current = dd, {
-          state: md,
-          view: Fd,
-          claiming: Rd,
-          claimFailed: Kd,
-          reveal: vd,
+        return Fb.current = bb, {
+          state: Mb,
+          view: Hb,
+          claiming: pb,
+          claimFailed: gb,
+          reveal: Lb,
           open: async function() {
-            if (!Hd.current) {
-              Hd.current = !0, Xd(!0), hd(!1);
+            if (!Eb.current) {
+              Eb.current = !0, Vb(!0), lb(!1);
               try {
                 const {
-                  state: dd,
-                  drop: Od
-                } = await (0, om.e)();
-                if (null === dd || null === Od) return;
-                if (!yd.current) return;
-                (0, om.s)("daily_drop.open", Od), td.current = {
-                  state: dd,
-                  drop: Od
-                }, Qd(td.current)
-              } catch (dd) {
-                console.error("Failed to claim the Lucky Skin Block", dd), yd.current && hd(!0)
+                  state: bb,
+                  drop: wb
+                } = await (0, IM.b)();
+                if (null === bb || null === wb) return;
+                if (!Fb.current) return;
+                (0, IM.v)("daily_drop.open", wb), Ob.current = {
+                  state: bb,
+                  drop: wb
+                }, Ib(Ob.current)
+              } catch (bb) {
+                console.error("Failed to claim the Lucky Skin Block", bb), Fb.current && lb(!0)
               } finally {
-                Hd.current = !1, Xd(!1)
+                Eb.current = !1, Vb(!1)
               }
             }
           },
-          closeReveal: bd
+          closeReveal: Bb
         }
-      }(dd, Od);
+      }(bb, wb);
       return {
-        shown: (0, om.r)(Fd.view) || null !== Fd.reveal,
-        tile: Fd.state && Fd.view && (0, td.jsx)(kh, {
-          state: Fd.state,
-          view: Fd.view,
-          claiming: Fd.claiming,
-          onOpen: Fd.open
+        shown: (0, IM.s)(Hb.view) || null !== Hb.reveal,
+        tile: Hb.state && Hb.view && (0, Ob.jsx)(yl, {
+          state: Hb.state,
+          view: Hb.view,
+          claiming: Hb.claiming,
+          onOpen: Hb.open
         }),
-        claimFailed: Fd.claimFailed && (0, td.jsx)("div", {
+        claimFailed: Hb.claimFailed && (0, Ob.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: md("dailyDrop:claimFailed")
+          children: Mb("dailyDrop:claimFailed")
         }),
-        reveal: Fd.reveal && (0, td.jsx)(Nv, {
-          drop: Fd.reveal.drop,
-          onClose: Fd.closeReveal
+        reveal: Hb.reveal && (0, Ob.jsx)(UL, {
+          drop: Hb.reveal.drop,
+          onClose: Hb.closeReveal
         })
       }
     }
 
-    function Hv(dd) {
+    function CL(bb) {
       let {
-        show: Od
-      } = dd;
-      const md = qv(Od, Od);
-      return (0, QO.C)(Od && md.shown, (0, QO.D)(), (dd => {
-        (0, om.s)("daily_drop.store_only_open", dd)
-      })), Od && md.shown ? (0, td.jsxs)("div", {
+        show: wb
+      } = bb;
+      const Mb = tL(wb, wb);
+      return (0, lw.D)(wb && Mb.shown, (0, lw.H)(), (bb => {
+        (0, IM.v)("daily_drop.store_only_open", bb)
+      })), wb && Mb.shown ? (0, Ob.jsxs)("div", {
         className: "Store StoreDailyDropOnly",
-        children: [md.claimFailed, md.tile && (0, td.jsx)("div", {
+        children: [Mb.claimFailed, Mb.tile && (0, Ob.jsx)("div", {
           className: "StoreDailyDropOnlyTile",
-          children: md.tile
-        }), md.reveal]
+          children: Mb.tile
+        }), Mb.reveal]
       }) : null
     }
-    var yv = md(3610),
-      bv = md(35602),
-      Tv = md(35611);
+    var EL = Mb(3744),
+      FL = Mb(35384),
+      BL = Mb(35389);
 
-    function pv(dd) {
+    function sL(bb) {
       let {
-        view: Od,
-        highlight: md,
-        scrollSignal: Fd,
-        onScrolledIntoView: Rd
-      } = dd;
+        view: wb,
+        highlight: Mb,
+        scrollSignal: Hb,
+        onScrolledIntoView: pb
+      } = bb;
       const {
-        t: Kd
-      } = (0, Xd.G)(), {
-        purchaseUnderWay: hd,
-        notice: vd,
-        needsLogin: Qd,
-        buyPack: od
-      } = (0, Tv.d)("banner");
-      (0, yv.Q)(Od.arm, "banner");
-      const Nd = (0, Wd.useRef)(null);
-      return (0, Wd.useEffect)((() => {
-        var dd;
-        Fd > 0 && (null === (dd = Nd.current) || void 0 === dd || dd.scrollIntoView({
+        t: gb
+      } = (0, Vb.C)(), {
+        purchaseUnderWay: lb,
+        notice: Lb,
+        needsLogin: Ib,
+        buyPack: Ub
+      } = (0, BL.f)("banner");
+      (0, EL.S)(wb.arm, "banner");
+      const tb = (0, eb.useRef)(null);
+      return (0, eb.useEffect)((() => {
+        var bb;
+        Hb > 0 && (null === (bb = tb.current) || void 0 === bb || bb.scrollIntoView({
           block: "nearest"
-        }), Rd())
-      }), [Fd]), (0, td.jsxs)("div", {
-        ref: Nd,
+        }), pb())
+      }), [Hb]), (0, Ob.jsxs)("div", {
+        ref: tb,
         className: "NewPlayerDealBanner",
-        children: [(0, td.jsxs)("div", {
+        children: [(0, Ob.jsxs)("div", {
           className: "NewPlayerDealBannerHead",
-          children: [(0, td.jsx)("div", {
+          children: [(0, Ob.jsx)("div", {
             className: "NewPlayerDealBannerTitle",
-            children: Kd("newPlayerDeal:title")
-          }), (0, td.jsx)(bv.c, {
-            endsAt: Od.endsAt
+            children: gb("newPlayerDeal:title")
+          }), (0, Ob.jsx)(FL.b, {
+            endsAt: wb.endsAt
           })]
-        }), (0, td.jsx)(bv.f, {
-          view: Od,
-          needsLogin: Qd,
-          busy: hd,
-          highlight: md,
-          onBuy: dd => {
-            od(Od, dd)
+        }), (0, Ob.jsx)(FL.c, {
+          view: wb,
+          needsLogin: Ib,
+          busy: lb,
+          highlight: Mb,
+          onBuy: bb => {
+            Ub(wb, bb)
           }
-        }), (0, td.jsx)(hh.j, {
-          notice: vd,
+        }), (0, Ob.jsx)(gl.h, {
+          notice: Lb,
           className: "SmallTextBold NewPlayerDealNotice"
         })]
       })
     }
-    md(35605);
-    var Yv = md(3618);
+    Mb(35387);
+    var mL = Mb(3750);
 
-    function gv(dd) {
+    function hL(bb) {
       let {
-        wallet: Od,
-        close: md
-      } = dd;
+        wallet: wb,
+        close: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)();
-      return (0, td.jsxs)("div", {
+        t: eb
+      } = (0, Vb.C)();
+      return (0, Ob.jsxs)("div", {
         className: "NewPlayerDealGiftNotice",
-        children: [(0, td.jsxs)("div", {
+        children: [(0, Ob.jsxs)("div", {
           className: "NewPlayerDealGiftNoticeRows",
-          children: [(0, td.jsx)("span", {
-            children: Wd("newPlayerDeal:giftable")
-          }), (0, td.jsx)(YK.c, {
-            amount: (0, CX.c)(Od)
-          }), (0, td.jsx)("span", {
-            children: Wd("newPlayerDeal:ungiftable")
-          }), (0, td.jsx)(YK.c, {
-            amount: Od.ungiftable
+          children: [(0, Ob.jsx)("span", {
+            children: eb("newPlayerDeal:giftable")
+          }), (0, Ob.jsx)(mg.d, {
+            amount: (0, PV.c)(wb)
+          }), (0, Ob.jsx)("span", {
+            children: eb("newPlayerDeal:ungiftable")
+          }), (0, Ob.jsx)(mg.d, {
+            amount: wb.ungiftable
           })]
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "NewPlayerDealGiftNoticeWhy",
-          children: Wd("newPlayerDeal:ungiftableWhy")
-        }), (0, td.jsx)(vd.m, {
+          children: eb("newPlayerDeal:ungiftableWhy")
+        }), (0, Ob.jsx)(Lb.p, {
           className: "NewPlayerDealGiftNoticeOk",
-          onClick: md,
-          children: Wd("general:ok")
+          onClick: Mb,
+          children: eb("general:ok")
         })]
       })
     }
 
-    function wv(dd) {
-      XO.NotificationProvider.showCustomPopup({
-        body: Od => (0, td.jsx)(gv, {
-          wallet: dd,
-          close: Od
+    function zL(bb) {
+      Hw.NotificationProvider.showCustomPopup({
+        body: wb => (0, Ob.jsx)(hL, {
+          wallet: bb,
+          close: wb
         }),
         middleScreenPopupClassName: "NewPlayerDealGiftNoticePopup",
         disableExitButton: !0
       })
     }
-    const av = {
+    const XL = {
       kind: "board"
     };
-    let Ev = !1;
+    let xL = !1;
 
-    function Jv(dd) {
-      return "found" === dd.status || "error" === dd.status && "store:giftRecipientLookupFailed" === dd.error ? dd.name : null
-    }(0, QO.w)(dO.prefetchBillingOfferings);
-    const Uv = (0, Wd.memo)((function(dd) {
-      var Od;
+    function jL(bb) {
+      return "found" === bb.status || "error" === bb.status && "store:giftRecipientLookupFailed" === bb.error ? bb.name : null
+    }(0, lw.w)(Tb.prefetchBillingOfferings);
+    const KL = (0, eb.memo)((function(bb) {
+      var wb;
       let {
-        show: Fd
-      } = dd;
+        show: Hb
+      } = bb;
       const {
-        t: Kd
-      } = (0, Xd.G)(), {
-        userContext: hd
-      } = (0, qd.d)(), vd = (0, ed.usePurchasesAllowed)(), Qd = hd !== Sd.NULL_USER_CONTEXT, od = RK(hd, Fd), [Nd, Hd] = (0, yd.b)(), {
-        page: bd,
-        urlMode: Td,
-        goTo: pd
-      } = (0, XK.e)(), Yd = function(dd) {
-        return "superRank" === dd.kind ? "superRank" : "pack" === dd.kind ? dd.pack : null
-      }(bd), {
-        openEverythingMenuName: gd,
-        gameState: wd
-      } = (0, Jd.p)(["openEverythingMenuName", "gameState"]), Ed = null !== gd, Ud = "landingPage" === wd;
-      ! function(dd, Od) {
-        const [Fd] = (0, Wd.useState)(vK.i), [Rd, Xd] = (0, Wd.useState)(!1);
-        Fd && Od && !Rd && Xd(!0);
-        const Kd = (0, IW.C)(),
-          hd = Fd && Rd && dd && !Kd;
-        (0, Wd.useEffect)((() => {
-          if (!hd) return;
-          let dd = null,
-            Od = null,
-            Wd = null;
-          const Fd = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, OO.getBillingClient)().purchaseUnderWay,
-            Rd = () => {
-              var md;
-              null === (md = Wd) || void 0 === md || md(), Wd = null, null !== dd && (clearTimeout(dd), dd = null), null !== Od && (clearTimeout(Od), Od = null)
+        t: gb
+      } = (0, Vb.C)(), {
+        userContext: lb
+      } = (0, Cb.e)(), Lb = (0, ab.usePurchasesAllowed)(), Ib = lb !== Db.NULL_USER_CONTEXT, Ub = Hg(lb, Hb), [tb, Eb] = (0, Fb.c)(), {
+        page: Bb,
+        urlMode: sb,
+        goTo: mb
+      } = (0, pg.f)(), hb = function(bb) {
+        return "superRank" === bb.kind ? "superRank" : "pack" === bb.kind ? bb.pack : null
+      }(Bb), {
+        openEverythingMenuName: zb,
+        gameState: Xb
+      } = (0, jb.o)(["openEverythingMenuName", "gameState"]), xb = null !== zb, Kb = "landingPage" === Xb;
+      ! function(bb, wb) {
+        const [Hb] = (0, eb.useState)(lg.k), [pb, Vb] = (0, eb.useState)(!1);
+        Hb && wb && !pb && Vb(!0);
+        const gb = (0, ie.z)(),
+          lb = Hb && pb && bb && !gb;
+        (0, eb.useEffect)((() => {
+          if (!lb) return;
+          let bb = null,
+            wb = null,
+            eb = null;
+          const Hb = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, kb.getBillingClient)().purchaseUnderWay,
+            pb = () => {
+              var Mb;
+              null === (Mb = eb) || void 0 === Mb || Mb(), eb = null, null !== bb && (clearTimeout(bb), bb = null), null !== wb && (clearTimeout(wb), wb = null)
             },
-            Xd = () => {
-              (0, KK.r)(!1), (0, KK.o)(!1), Rd(), dd = setTimeout((() => {
-                dd = null, Wd = (0, hK.e)((() => {
-                  Wd = null, Fd() ? Xd() : ((0, KK.r)(!0), Od = setTimeout((() => {
-                    Od = null, Wd = (0, hK.e)((() => {
-                      Wd = null, Fd() ? Xd() : (0, KK.o)(!0)
+            Vb = () => {
+              (0, Vg.m)(!1), (0, Vg.l)(!1), pb(), bb = setTimeout((() => {
+                bb = null, eb = (0, gg.b)((() => {
+                  eb = null, Hb() ? Vb() : ((0, Vg.m)(!0), wb = setTimeout((() => {
+                    wb = null, eb = (0, gg.b)((() => {
+                      eb = null, Hb() ? Vb() : (0, Vg.l)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => md(5329))).then((dd => {
-                    dd.startBackgroundGameSetup()
-                  }), (dd => {
-                    console.warn("Background game setup: its chunk failed to load", dd)
+                  }), 3e3), Promise.resolve().then((() => Mb(5509))).then((bb => {
+                    bb.startBackgroundGameSetup()
+                  }), (bb => {
+                    console.warn("Background game setup: its chunk failed to load", bb)
                   })))
                 }))
               }), 2e3)
             };
-          for (const md of QK) window.addEventListener(md, Xd, {
+          for (const Mb of Lg) window.addEventListener(Mb, Vb, {
             capture: !0,
             passive: !0
           });
-          return Xd(), () => {
-            for (const dd of QK) window.removeEventListener(dd, Xd, {
+          return Vb(), () => {
+            for (const bb of Lg) window.removeEventListener(bb, Vb, {
               capture: !0
             });
-            Rd(), (0, KK.r)(!1), (0, KK.o)(!1)
+            pb(), (0, Vg.m)(!1), (0, Vg.l)(!1)
           }
-        }), [hd])
-      }(Fd && Ed && Ud, "pack" === bd.kind), (0, Wd.useEffect)((() => {
-        Ed && (0, dO.prefetchBillingOfferings)()
-      }), [Ed]), (0, Wd.useEffect)((() => {
-        Ed && !Fd && Ud && (0, tK.u)()
-      }), [Ed, Fd, Ud]);
-      const [xd, Bd] = (0, Wd.useState)(0), [sd, ud] = (0, Wd.useState)(null), [Vd, Ad] = (0, Wd.useState)(null), [rd, Gd] = (0, Wd.useState)(null), [nd, Ld] = (0, Wd.useState)(null), [Pd, jd] = (0, Wd.useState)(0), Dd = (0, Wd.useRef)(null), Id = (0, Wd.useRef)(null), ld = (0, Wd.useRef)(null), Cd = (0, Wd.useRef)(!1), Zd = (0, QO.D)(), kd = (0, Wd.useRef)(0);
+        }), [lb])
+      }(Hb && xb && Kb, "pack" === Bb.kind), (0, eb.useEffect)((() => {
+        xb && (0, Tb.prefetchBillingOfferings)()
+      }), [xb]), (0, eb.useEffect)((() => {
+        xb && !Hb && Kb && (0, Ig.x)()
+      }), [xb, Hb, Kb]);
+      const [rb, Rb] = (0, eb.useState)(0), [cb, Yb] = (0, eb.useState)(null), [Zb, fb] = (0, eb.useState)(null), [Ab, Wb] = (0, eb.useState)(null), [Jb, Sb] = (0, eb.useState)(null), [Nb, Gb] = (0, eb.useState)(0), qb = (0, eb.useRef)(null), ib = (0, eb.useRef)(null), ub = (0, eb.useRef)(null), db = (0, eb.useRef)(!1), Pb = (0, lw.H)(), nb = (0, eb.useRef)(0);
 
-      function fd() {
-        Bd((dd => dd + 1))
-      }(0, Wd.useEffect)((() => {
-        if (Fd) {
-          if (Ev = !0, (0, QO.l)(), Zd && Zd.seq !== kd.current) {
-            var dd;
-            kd.current = Zd.seq, "loginResume" !== Zd.source && (0, QO.z)();
-            const Od = (0, QO.c)(Zd);
-            Td || pd(Od), Ld(null !== (dd = Zd.highlight) && void 0 !== dd ? dd : null);
-            const md = "newPlayerDeal" === Zd.source || "loginResume" === Zd.source && void 0 !== Zd.highlight && (0, yv.g)(hd).includes(Zd.highlight);
-            jd((dd => md ? dd + 1 : 0)), Ad(null), "gift" === Zd.mode && Zd.giftRecipientName ? od.choose(Zd.giftRecipientName, "prefilled") : od.clear(), "gift" !== Zd.mode || Zd.giftRecipientName || fd()
+      function yb() {
+        Rb((bb => bb + 1))
+      }(0, eb.useEffect)((() => {
+        if (Hb) {
+          if (xL = !0, (0, lw.n)(), Pb && Pb.seq !== nb.current) {
+            var bb;
+            nb.current = Pb.seq, "loginResume" !== Pb.source && (0, lw.A)();
+            const wb = (0, lw.d)(Pb);
+            sb || mb(wb), Sb(null !== (bb = Pb.highlight) && void 0 !== bb ? bb : null);
+            const Mb = "newPlayerDeal" === Pb.source || "loginResume" === Pb.source && void 0 !== Pb.highlight && (0, EL.f)(lb).includes(Pb.highlight);
+            Gb((bb => Mb ? bb + 1 : 0)), fb(null), "gift" === Pb.mode && Pb.giftRecipientName ? Ub.choose(Pb.giftRecipientName, "prefilled") : Ub.clear(), "gift" !== Pb.mode || Pb.giftRecipientName || yb()
           }
-        } else jd(0)
-      }), [Fd, Zd]), (0, QO.C)(Fd, Zd, (dd => {
-        (0, TO.reportAnalyticsClick)({
+        } else Gb(0)
+      }), [Hb, Pb]), (0, lw.D)(Hb, Pb, (bb => {
+        (0, Fw.reportAnalyticsClick)({
           id: "store.open",
-          value: dd
+          value: bb
         })
       }));
-      const Md = (0, yv.O)(),
-        mO = null !== nd && null === Md && null === (0, yv.j)((0, yv.c)(hd)) && (0, yv.g)(hd).includes(nd);
-      (0, Wd.useEffect)((() => {
-        if (!nd) return;
-        const dd = setTimeout((() => {
-          Ld(null)
-        }), mO ? 15e3 : 4e3);
+      const ob = (0, EL.O)(),
+        bw = null !== Jb && null === ob && null === (0, EL.j)((0, EL.b)(lb)) && (0, EL.f)(lb).includes(Jb);
+      (0, eb.useEffect)((() => {
+        if (!Jb) return;
+        const bb = setTimeout((() => {
+          Sb(null)
+        }), bw ? 15e3 : 4e3);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(bb)
         }
-      }), [nd, mO]), (0, Wd.useLayoutEffect)((() => {
-        const dd = Dd.current;
-        if (!Fd || !dd) return Id.current = null, void(ld.current = null);
-        var Od;
-        if (Yd) Id.current = Yd, null === (Od = dd.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === Od || Od.focus();
-        else if (Id.current) {
-          const Od = ld.current;
-          null !== Od && (dd.scrollTop = Od);
-          const md = dd.querySelector(`[data-store-item="${Id.current}"]`);
-          if (md) {
-            const Wd = md.getBoundingClientRect(),
-              Fd = dd.getBoundingClientRect();
-            md.focus({
-              preventScroll: null !== Od && Wd.bottom > Fd.top && Wd.top < Fd.bottom
+      }), [Jb, bw]), (0, eb.useLayoutEffect)((() => {
+        const bb = qb.current;
+        if (!Hb || !bb) return ib.current = null, void(ub.current = null);
+        var wb;
+        if (hb) ib.current = hb, null === (wb = bb.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === wb || wb.focus();
+        else if (ib.current) {
+          const wb = ub.current;
+          null !== wb && (bb.scrollTop = wb);
+          const Mb = bb.querySelector(`[data-store-item="${ib.current}"]`);
+          if (Mb) {
+            const eb = Mb.getBoundingClientRect(),
+              Hb = bb.getBoundingClientRect();
+            Mb.focus({
+              preventScroll: null !== wb && eb.bottom > Hb.top && eb.top < Hb.bottom
             })
           }
-          Id.current = null
+          ib.current = null
         }
-      }), [Yd, Fd]), (0, Wd.useEffect)((() => {
-        Ad(null)
-      }), [od.query]), (0, Wd.useEffect)((() => {
-        if (!rd) return;
-        const dd = setTimeout((() => {
-          Gd(null)
+      }), [hb, Hb]), (0, eb.useEffect)((() => {
+        fb(null)
+      }), [Ub.query]), (0, eb.useEffect)((() => {
+        if (!Ab) return;
+        const bb = setTimeout((() => {
+          Wb(null)
         }), 8e3);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(bb)
         }
-      }), [rd]);
-      const WO = hd.superRankInfo,
-        FO = hd.isLoggedIn() || (0, ed.guestsMayBuy)(),
-        RO = hd.getOwnedCosmeticPacks(),
-        XO = (0, OK.j)(od.query),
-        KO = (0, OK.c)({
-          mode: XO,
-          loggedIn: Qd ? FO : null,
-          superRankInfo: WO,
-          soldTierId: (0, zd.x)(Date.now()).product.tierId,
+      }), [Ab]);
+      const ww = lb.superRankInfo,
+        Mw = lb.isLoggedIn() || (0, ab.guestsMayBuy)(),
+        ew = lb.getOwnedCosmeticPacks(),
+        Hw = (0, bg.q)(Ub.query),
+        pw = (0, bg.g)({
+          mode: Hw,
+          loggedIn: Ib ? Mw : null,
+          superRankInfo: ww,
+          soldTierId: (0, vb.v)(Date.now()).product.tierId,
           now: Date.now(),
-          ownedPacks: RO,
-          packs: DX.r,
-          recipient: od.recipient
+          ownedPacks: ew,
+          packs: aV.v,
+          recipient: Ub.recipient
         });
-      (0, Wd.useEffect)((() => {
-        if (!FO || !Fd) return;
-        const dd = (0, yv.g)(hd),
-          Od = (0, QO.z)((Od => !dd.includes(Od.item))),
-          md = Od && (0, OK.h)(Od, DX.r);
-        Od && md && ((0, TO.reportAnalyticsClick)({
+      (0, eb.useEffect)((() => {
+        if (!Mw || !Hb) return;
+        const bb = (0, EL.f)(lb),
+          wb = (0, lw.A)((wb => !bb.includes(wb.item))),
+          Mb = wb && (0, bg.m)(wb, aV.v);
+        wb && Mb && ((0, Fw.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: Od.item
-        }), (0, QO.p)(md))
-      }), [FO, Fd]);
-      const hO = Fd && "gift" === XO,
-        vO = (0, Wd.useRef)(hO);
-      vO.current = hO;
-      const tO = "none" !== od.recipient.status,
-        oO = (0, Wd.useRef)(!1);
-      (0, Wd.useEffect)((() => {
-        hO ? tO && !oO.current && (oO.current = !0, async function(dd) {
-          var Od;
-          if ("gift" === (null === (Od = (0, Yv.k)()) || void 0 === Od ? void 0 : Od.show)) return void wv(Yv.c);
-          const md = await (0, CX.f)();
-          null !== md && md.ungiftable > 0 && dd() && wv(md)
-        }((() => vO.current))) : oO.current = !1
-      }), [hO, tO]);
-      const NO = (0, OK.l)({
-        superRankDaysLeft: KO.superRankDaysLeft,
-        openedThisSession: Ev || Fd,
-        seenNewItems: (0, QO.i)()
+          value: wb.item
+        }), (0, lw.r)(Mb))
+      }), [Mw, Hb]);
+      const Vw = Hb && "gift" === Hw,
+        gw = (0, eb.useRef)(Vw);
+      gw.current = Vw;
+      const Lw = "none" !== Ub.recipient.status,
+        Iw = (0, eb.useRef)(!1);
+      (0, eb.useEffect)((() => {
+        Vw ? Lw && !Iw.current && (Iw.current = !0, async function(bb) {
+          var wb;
+          if ("gift" === (null === (wb = (0, mL.l)()) || void 0 === wb ? void 0 : wb.show)) return void zL(mL.d);
+          const Mb = await (0, PV.d)();
+          null !== Mb && Mb.ungiftable > 0 && bb() && zL(Mb)
+        }((() => gw.current))) : Iw.current = !1
+      }), [Vw, Lw]);
+      const Ow = (0, bg.s)({
+        superRankDaysLeft: pw.superRankDaysLeft,
+        openedThisSession: xL || Hb,
+        seenNewItems: (0, lw.j)()
       });
-      (0, Wd.useEffect)((() => {
-        (0, QO.x)(NO)
-      }), [NO]);
-      const qO = "self" === XO,
-        HO = qv(Fd, Fd && qO && "board" === bd.kind);
-      if (!Fd || !vd) return null;
-      const yO = Hd > Nd && Nd <= 700,
-        bO = !yO && Hd <= 420,
-        pO = "gift" === XO ? Jv(od.recipient) : null,
-        YO = null !== sd,
-        gO = "gift" === XO ? {
-          name: pO,
-          cosmetics: od.recipientCosmetics,
+      (0, eb.useEffect)((() => {
+        (0, lw.x)(Ow)
+      }), [Ow]);
+      const Uw = "self" === Hw,
+        tw = tL(Hb, Hb && Uw && "board" === Bb.kind);
+      if (!Hb || !Lb) return null;
+      const Cw = Eb > tb && tb <= 700,
+        Ew = !Cw && Eb <= 420,
+        Bw = "gift" === Hw ? jL(Ub.recipient) : null,
+        sw = null !== cb,
+        mw = "gift" === Hw ? {
+          name: Bw,
+          cosmetics: Ub.recipientCosmetics,
           gift: !0
         } : {
-          name: Qd && hd.getPlayerName() || null,
-          cosmetics: hd.getPlayerCosmetics(),
+          name: Ib && lb.getPlayerName() || null,
+          cosmetics: lb.getPlayerCosmetics(),
           gift: !1
         };
 
-      function wO(dd) {
-        (0, lX.d)(dd, "gift" === XO ? od.query.trim() : null)
+      function hw(bb) {
+        (0, dV.e)(bb, "gift" === Hw ? Ub.query.trim() : null)
       }
 
-      function aO(dd, Od) {
-        (0, TO.reportAnalyticsClick)({
+      function zw(bb, wb) {
+        (0, Fw.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${Od?"gift":"self"}:${dd}`
-        }), Od && (od.recordGift(Od.name, dd), EO(Od))
+          value: `${wb?"gift":"self"}:${bb}`
+        }), wb && (Ub.recordGift(wb.name, bb), Xw(wb))
       }
 
-      function EO(dd) {
-        ! function(dd) {
+      function Xw(bb) {
+        ! function(bb) {
           try {
-            Hm.k.setItem(mK, (0, OK.r)(FK(), dd))
+            tM.i.setItem(wg, (0, bg.C)(eg(), bb))
           } catch {}
         }({
-          name: dd.name,
-          cosmetics: dd.cosmetics
-        }), pd(av), Gd((Od => {
-          var md;
+          name: bb.name,
+          cosmetics: bb.cosmetics
+        }), mb(XL), Wb((wb => {
+          var Mb;
           return {
-            name: dd.name,
-            seq: (null !== (md = null === Od || void 0 === Od ? void 0 : Od.seq) && void 0 !== md ? md : 0) + 1
+            name: bb.name,
+            seq: (null !== (Mb = null === wb || void 0 === wb ? void 0 : wb.seq) && void 0 !== Mb ? Mb : 0) + 1
           }
         }))
       }
-      async function JO(dd) {
-        var Od, md;
-        if (Cd.current) return;
-        if (!FO) return void wO(dd);
-        Ad(null), Ld(null);
-        const Wd = "gift" === XO ? {
-          name: Jv(od.recipient),
-          cosmetics: od.recipientCosmetics
+      async function xw(bb) {
+        var wb, Mb;
+        if (db.current) return;
+        if (!Mw) return void hw(bb);
+        fb(null), Sb(null);
+        const eb = "gift" === Hw ? {
+          name: jL(Ub.recipient),
+          cosmetics: Ub.recipientCosmetics
         } : null;
-        if (Wd && !Wd.name) return void fd();
-        const Fd = "superRank" === dd ? (0, zd.x)(Date.now()).id : (0, eX.e)(dd);
-        Cd.current = !0;
-        const Rd = await (0, MX.d)(Fd, null !== (Od = null === Wd || void 0 === Wd ? void 0 : Wd.name) && void 0 !== Od ? Od : null);
-        if (Cd.current = !1, !Rd) return;
-        ud(dd);
-        const Xd = await CX.j.purchase(Fd, null !== (md = null === Wd || void 0 === Wd ? void 0 : Wd.name) && void 0 !== md ? md : null, Rd);
-        ud(null), Xd ? Ad(Xd) : (aO(dd, Wd), Wd && (0, dK.e)(Fd, Rd, Wd.name), Wd || (await (0, ZX.flushClientAnalyticsEvents)(), (0, IX.refreshWithoutConfirmation)("superRank" === dd ? "/super-rank-welcome" : `/pack-welcome/${dd}`)))
+        if (eb && !eb.name) return void yb();
+        const Hb = "superRank" === bb ? (0, vb.v)(Date.now()).id : (0, iV.c)(bb);
+        db.current = !0;
+        const pb = await (0, TV.c)(Hb, null !== (wb = null === eb || void 0 === eb ? void 0 : eb.name) && void 0 !== wb ? wb : null);
+        if (db.current = !1, !pb) return;
+        Yb(bb);
+        const Vb = await PV.g.purchase(Hb, null !== (Mb = null === eb || void 0 === eb ? void 0 : eb.name) && void 0 !== Mb ? Mb : null, pb);
+        Yb(null), Vb ? fb(Vb) : (zw(bb, eb), eb && (0, kV.c)(Hb, pb, eb.name), eb || (await (0, nV.flushClientAnalyticsEvents)(), (0, uV.refreshWithoutConfirmation)("superRank" === bb ? "/super-rank-welcome" : `/pack-welcome/${bb}`)))
       }
-      const UO = Rd()("Store", {
-        StoreGift: "gift" === XO,
-        StorePortrait: yO,
-        StoreCompact: bO
+      const jw = pb()("Store", {
+        StoreGift: "gift" === Hw,
+        StorePortrait: Cw,
+        StoreCompact: Ew
       });
-      if ("pack" === bd.kind) {
-        const dd = bd.pack,
-          Od = KO.packs.find((Od => Od.pack === dd));
-        return (0, td.jsx)("div", {
-          ref: Dd,
+      if ("pack" === Bb.kind) {
+        const bb = Bb.pack,
+          wb = pw.packs.find((wb => wb.pack === bb));
+        return (0, Ob.jsx)("div", {
+          ref: qb,
           className: "CosmeticShopContainer",
-          children: (0, td.jsx)(fX.g, {
-            pack: dd,
+          children: (0, Ob.jsx)(oV.f, {
+            pack: bb,
             onBack: () => {
-              pd(av)
+              mb(XL)
             },
-            onPurchased: Od => {
-              aO(dd, Od ? {
-                name: Od,
+            onPurchased: wb => {
+              zw(bb, wb ? {
+                name: wb,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === XO && pO && Od && (0, td.jsxs)(td.Fragment, {
-              children: [(0, td.jsx)(VK, {
-                state: Od.state,
-                item: dd,
-                price: (xO = dd, "superRank" === xO ? (0, zd.x)(Date.now()).price : (0, eX.f)(xO)),
-                busy: YO,
+            giftCta: "gift" === Hw && Bw && wb && (0, Ob.jsxs)(Ob.Fragment, {
+              children: [(0, Ob.jsx)(Zg, {
+                state: wb.state,
+                item: bb,
+                price: (Kw = bb, "superRank" === Kw ? (0, vb.v)(Date.now()).price : (0, iV.e)(Kw)),
+                busy: sw,
                 onAct: () => {
-                  JO(dd)
+                  xw(bb)
                 },
                 onNeedRecipient: () => {
-                  pd(av), fd()
+                  mb(XL), yb()
                 },
                 onLogin: () => {
-                  wO(dd)
+                  hw(bb)
                 },
-                highlight: nd === dd
-              }), Vd && (0, td.jsx)("span", {
+                highlight: Jb === bb
+              }), Zb && (0, Ob.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: Kd(Vd)
+                children: gb(Zb)
               })]
             }),
-            ownedPacks: RO,
-            startAsGift: "gift" === XO,
-            initialGiftRecipient: "gift" === XO ? null !== pO && void 0 !== pO ? pO : od.query.trim() : "",
-            highlightCta: nd === dd
-          }, dd)
+            ownedPacks: ew,
+            startAsGift: "gift" === Hw,
+            initialGiftRecipient: "gift" === Hw ? null !== Bw && void 0 !== Bw ? Bw : Ub.query.trim() : "",
+            highlightCta: Jb === bb
+          }, bb)
         })
       }
-      var xO;
-      return "superRank" === bd.kind && null !== KO.superRank ? (0, td.jsx)("div", {
-        ref: Dd,
-        className: Rd()(UO, "StoreDetailView"),
-        children: (0, td.jsx)(Dh, {
-          state: KO.superRank.state,
-          daysLeft: KO.superRankDaysLeft,
-          wearer: gO,
-          mode: XO,
-          giftName: pO,
-          busy: YO,
-          highlight: "superRank" === nd,
-          purchaseError: Vd,
+      var Kw;
+      return "superRank" === Bb.kind && null !== pw.superRank ? (0, Ob.jsx)("div", {
+        ref: qb,
+        className: pb()(jw, "StoreDetailView"),
+        children: (0, Ob.jsx)(al, {
+          state: pw.superRank.state,
+          daysLeft: pw.superRankDaysLeft,
+          wearer: mw,
+          mode: Hw,
+          giftName: Bw,
+          busy: sw,
+          highlight: "superRank" === Jb,
+          purchaseError: Zb,
           onBack: () => {
-            pd(av)
+            mb(XL)
           },
           onChooseRecipient: () => {
-            pd(av), fd()
+            mb(XL), yb()
           },
           onAct: () => {
-            JO("superRank")
+            xw("superRank")
           },
           onLogin: () => {
-            wO("superRank")
+            hw("superRank")
           }
         })
-      }) : (0, td.jsxs)("div", {
-        ref: Dd,
-        className: UO,
-        onScroll: dd => {
-          ld.current = dd.currentTarget.scrollTop
+      }) : (0, Ob.jsxs)("div", {
+        ref: qb,
+        className: jw,
+        onScroll: bb => {
+          ub.current = bb.currentTarget.scrollTop
         },
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, td.jsx)(TK, {
-            selfName: Qd ? hd.getPlayerName() : "",
-            giftRecipient: od,
-            suggestionsVersion: null !== (Od = null === rd || void 0 === rd ? void 0 : rd.seq) && void 0 !== Od ? Od : 0,
-            pulseSignal: xd,
-            disabled: YO || !Qd
+          children: (0, Ob.jsx)(Bg, {
+            selfName: Ib ? lb.getPlayerName() : "",
+            giftRecipient: Ub,
+            suggestionsVersion: null !== (wb = null === Ab || void 0 === Ab ? void 0 : Ab.seq) && void 0 !== wb ? wb : 0,
+            pulseSignal: rb,
+            disabled: sw || !Ib
           })
-        }), rd && (0, td.jsxs)("div", {
+        }), Ab && (0, Ob.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            Gd(null)
+            Wb(null)
           },
-          children: [(0, td.jsx)(kX.e, {
-            showSignal: rd.seq
-          }), OK.b, " ", Kd("store:giftSent", {
-            name: rd.name
+          children: [(0, Ob.jsx)(yV.e, {
+            showSignal: Ab.seq
+          }), bg.e, " ", gb("store:giftSent", {
+            name: Ab.name
           })]
-        }, rd.seq), !rd && Vd && (0, td.jsx)("div", {
+        }, Ab.seq), !Ab && Zb && (0, Ob.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: Kd(Vd)
-        }), qO && HO.claimFailed, (0, td.jsx)(ch, {
-          layout: KO,
-          mountAtOnce: null !== Id.current,
-          bundleGift: "gift" === XO ? {
-            recipientName: pO,
-            lookingUp: "pending" === od.recipient.status,
-            busy: YO,
-            onNeedRecipient: fd,
-            onSent: dd => {
-              (0, TO.reportAnalyticsClick)({
+          children: gb(Zb)
+        }), Uw && tw.claimFailed, (0, Ob.jsx)(Gl, {
+          layout: pw,
+          mountAtOnce: null !== ib.current,
+          bundleGift: "gift" === Hw ? {
+            recipientName: Bw,
+            lookingUp: "pending" === Ub.recipient.status,
+            busy: sw,
+            onNeedRecipient: yb,
+            onSent: bb => {
+              (0, Fw.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), EO({
-                name: dd,
-                cosmetics: od.recipientCosmetics
+              }), Xw({
+                name: bb,
+                cosmetics: Ub.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, OK.m)(WO),
-          busy: YO,
-          highlightItem: nd,
-          onOpen: function(dd) {
-            (0, TO.reportAnalyticsClick)({
+          superRankTotalDays: (0, bg.u)(ww),
+          busy: sw,
+          highlightItem: Jb,
+          onOpen: function(bb) {
+            (0, Fw.reportAnalyticsClick)({
               id: "store.item_open",
-              value: dd
-            }), pd((0, QO.e)(dd))
+              value: bb
+            }), mb((0, lw.h)(bb))
           },
-          onAct: JO,
-          onNeedRecipient: fd,
-          onLogin: wO,
-          dailyDropTile: qO && HO.tile,
-          rankWearer: gO,
-          dealBanner: "self" === XO && null !== Md && (0, td.jsx)(pv, {
-            view: Md,
-            highlight: nd,
-            scrollSignal: Pd,
+          onAct: xw,
+          onNeedRecipient: yb,
+          onLogin: hw,
+          dailyDropTile: Uw && tw.tile,
+          rankWearer: mw,
+          dealBanner: "self" === Hw && null !== ob && (0, Ob.jsx)(sL, {
+            view: ob,
+            highlight: Jb,
+            scrollSignal: Nb,
             onScrolledIntoView: () => {
-              jd(0)
+              Gb(0)
             }
           })
-        }), "gift" !== XO && !(0, cd.e)(Date.now()) && (0, td.jsx)(Ch, {}), HO.reveal]
+        }), "gift" !== Hw && !(0, Qb.b)(Date.now()) && (0, Ob.jsx)(Pl, {}), tw.reveal]
       })
     }));
-    var xv = md(3752),
-      Bv = md(9977),
-      Sv = md(9799),
-      sv = md(3849),
-      uv = md(3647),
-      Vv = md(3710),
-      iv = md(3720),
-      Av = md(3722),
-      rv = md(3794),
-      Gv = md(3782),
-      nv = md(3296),
-      Lv = md(3361),
-      Pv = md(3310),
-      zv = md(2178),
-      cv = md(3730),
-      jv = md(3366);
+    var rL = Mb(3882),
+      RL = Mb(10170),
+      DL = Mb(10021),
+      cL = Mb(4e3),
+      YL = Mb(3781),
+      ZL = Mb(3841),
+      fL = Mb(3848),
+      AL = Mb(3856),
+      WL = Mb(3948),
+      JL = Mb(3926),
+      SL = Mb(3387),
+      NL = Mb(3459),
+      vL = Mb(3411),
+      QL = Mb(2228),
+      GL = Mb(3860),
+      qL = Mb(3467);
 
-    function Dv(dd) {
+    function aL(bb) {
       let {
-        show: Od
-      } = dd;
-      return Od ? (0, td.jsx)(ev, {}) : null
+        show: wb
+      } = bb;
+      return wb ? (0, Ob.jsx)(iL, {}) : null
     }
 
-    function ev() {
+    function iL() {
       const {
-        t: dd
-      } = (0, Xd.G)(), {
-        followsLeader: Od
-      } = (0, uv.g)(), {
-        loading: md,
-        friends: Fd,
-        requests: hd,
-        invites: Qd
-      } = (0, Zd.h)(), {
-        userContext: od
-      } = (0, qd.d)(), [Nd, Hd] = (0, Wd.useState)(jv.o);
-      (0, Wd.useEffect)((() => {
-        (0, jv.e)()
+        t: bb
+      } = (0, Vb.C)(), {
+        followsLeader: wb
+      } = (0, YL.f)(), {
+        loading: Mb,
+        friends: Hb,
+        requests: lb,
+        invites: Ib
+      } = (0, Pb.n)(), {
+        userContext: Ub
+      } = (0, Cb.e)(), [tb, Eb] = (0, eb.useState)(qL.l);
+      (0, eb.useEffect)((() => {
+        (0, qL.e)()
       }), []);
-      const yd = hd.map((dd => dd.name)),
+      const Fb = lb.map((bb => bb.name)),
         {
-          state: bd,
-          recentRequesters: Td
-        } = (0, Gv.q)(),
-        pd = new Map([...("loaded" === bd.status ? bd.recentPlayers : []).map((dd => [dd.preview.name, dd])), ...Td.map((dd => [dd.name, dd]))]),
-        Yd = (0, Wd.useRef)(null),
-        [Ed, Jd] = (0, Wd.useState)(""),
-        [Ud, xd] = (0, Wd.useState)("Enter"),
-        [Bd, Sd] = (0, Wd.useState)(null);
+          state: Bb,
+          recentRequesters: sb
+        } = (0, JL.o)(),
+        mb = new Map([...("loaded" === Bb.status ? Bb.recentPlayers : []).map((bb => [bb.preview.name, bb])), ...sb.map((bb => [bb.name, bb]))]),
+        hb = (0, eb.useRef)(null),
+        [xb, jb] = (0, eb.useState)(""),
+        [Kb, rb] = (0, eb.useState)("Enter"),
+        [Rb, Db] = (0, eb.useState)(null);
 
-      function sd() {
-        Ed && (xd("Loading"), (0, Pv.j)(Ed, "social_menu").then((dd => {
-          if (Yd.current) switch (dd.kind) {
+      function cb() {
+        xb && (rb("Loading"), (0, vL.h)(xb, "social_menu").then((bb => {
+          if (hb.current) switch (bb.kind) {
             case "sent":
-              xd("Success");
+              rb("Success");
               break;
             case "becameFriends":
-              xd("BecameFriends");
+              rb("BecameFriends");
               break;
             case "failed":
-              Sd(dd.message), xd("Error")
+              Db(bb.message), rb("Error")
           }
         })))
       }
-      return (0, Wd.useEffect)((() => {
-        if ("Enter" === Ud || "Loading" === Ud) return;
-        const dd = setTimeout((() => {
-          Yd.current.value = "", Jd(""), xd("Enter")
-        }), "Success" === Ud ? 1e3 : 4e3);
+      return (0, eb.useEffect)((() => {
+        if ("Enter" === Kb || "Loading" === Kb) return;
+        const bb = setTimeout((() => {
+          hb.current.value = "", jb(""), rb("Enter")
+        }), "Success" === Kb ? 1e3 : 4e3);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(bb)
         }
-      }), [Ud]), (0, td.jsx)("div", {
+      }), [Kb]), (0, Ob.jsx)("div", {
         className: "SocialMenu",
-        children: (0, td.jsxs)("div", {
+        children: (0, Ob.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, td.jsxs)("div", {
+            children: [(0, Ob.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, td.jsx)(Av.e, {
-                label: dd("socialBar:addFriend")
-              }), (0, td.jsxs)("div", {
+              children: [(0, Ob.jsx)(AL.d, {
+                label: bb("socialBar:addFriend")
+              }), (0, Ob.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, td.jsxs)("div", {
-                  className: Rd()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${Ud}`]: !0
+                children: [(0, Ob.jsxs)("div", {
+                  className: pb()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${Kb}`]: !0
                   }),
-                  children: ["Loading" === Ud && (0, td.jsx)(wd.c, {}), "Success" === Ud && (0, td.jsx)(Kd.c, {
+                  children: ["Loading" === Kb && (0, Ob.jsx)(Xb.c, {}), "Success" === Kb && (0, Ob.jsx)(gb.b, {
                     name: "check"
-                  }), "BecameFriends" === Ud && (0, td.jsx)(td.Fragment, {
-                    children: dd("socialBar:nowFriends", {
-                      playerName: Ed
+                  }), "BecameFriends" === Kb && (0, Ob.jsx)(Ob.Fragment, {
+                    children: bb("socialBar:nowFriends", {
+                      playerName: xb
                     })
-                  }), "Error" === Ud && Bd && (0, td.jsx)(td.Fragment, {
-                    children: dd(Bd.translationKey, Bd.params)
+                  }), "Error" === Kb && Rb && (0, Ob.jsx)(Ob.Fragment, {
+                    children: bb(Rb.translationKey, Rb.params)
                   })]
-                }), (0, td.jsxs)("div", {
+                }), (0, Ob.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, td.jsx)(gd.c, {
+                  children: [(0, Ob.jsx)(zb.d, {
                     className: "PlayerSearchInput",
-                    placeholderText: dd("socialBar:enterPlayerName"),
-                    domRef: Yd,
-                    onValueChange: dd => {
-                      Jd((0, Ad.m)(dd)), Yd.current.value = (0, Ad.m)(dd)
+                    placeholderText: bb("socialBar:enterPlayerName"),
+                    domRef: hb,
+                    onValueChange: bb => {
+                      jb((0, fb.m)(bb)), hb.current.value = (0, fb.m)(bb)
                     },
                     onEnter: () => {
-                      Ed && (0, TO.reportAnalyticsClick)({
+                      xb && (0, Fw.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), sd()
+                      }), cb()
                     }
-                  }), (0, td.jsxs)(vd.g, {
+                  }), (0, Ob.jsxs)(Lb.f, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      sd()
+                      cb()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, td.jsx)(Kd.c, {
+                    children: [(0, Ob.jsx)(gb.b, {
                       name: "user-plus"
-                    }), " ", dd("socialBar:sendRequest")]
+                    }), " ", bb("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, td.jsx)(cv.e, {
+              }), (0, Ob.jsx)(GL.d, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), Qd.length > 0 && (0, td.jsxs)("div", {
+            }), Ib.length > 0 && (0, Ob.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, td.jsx)(Av.e, {
-                label: dd("socialBar:invites"),
-                meta: Qd.length
-              }), Qd.map((Od => (0, td.jsxs)("div", {
+              children: [(0, Ob.jsx)(AL.d, {
+                label: bb("socialBar:invites"),
+                meta: Ib.length
+              }), Ib.map((wb => (0, Ob.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, td.jsx)("div", {
+                children: [(0, Ob.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, td.jsx)(nv.c, {
-                    invite: Od
+                  children: (0, Ob.jsx)(SL.b, {
+                    invite: wb
                   })
-                }), (0, td.jsx)("div", {
+                }), (0, Ob.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, td.jsx)(nv.g, {
-                    invite: Od
+                  children: (0, Ob.jsx)(SL.d, {
+                    invite: wb
                   })
-                }), (0, td.jsx)(vd.m, {
+                }), (0, Ob.jsx)(Lb.p, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, Lv.f)(Od)
+                    (0, NL.e)(wb)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${Od.destination.kind}`
+                    value: `social_menu:${wb.destination.kind}`
                   },
-                  children: dd("general:join")
-                }), (0, td.jsx)(HO.g, {
-                  tooltipInner: (0, td.jsx)(td.Fragment, {
-                    children: dd("general:decline")
+                  children: bb("general:join")
+                }), (0, Ob.jsx)(tw.d, {
+                  tooltipInner: (0, Ob.jsx)(Ob.Fragment, {
+                    children: bb("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, td.jsx)(vd.i, {
+                  children: (0, Ob.jsx)(Lb.j, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === Nd || void 0 === Nd ? void 0 : Nd.kind) && Nd.inviteId === Od.id,
+                    padDefaultFocus: "invite" === (null === tb || void 0 === tb ? void 0 : tb.kind) && tb.inviteId === wb.id,
                     onClick: () => {
-                      Zd.d.declineInvite(Od.id)
+                      Pb.e.declineInvite(wb.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${Od.destination.kind}`
+                      value: `social_menu:${wb.destination.kind}`
                     },
-                    children: (0, td.jsx)(Kd.c, {
+                    children: (0, Ob.jsx)(gb.b, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, Od.id)))]
-            }), (0, td.jsxs)("div", {
-              className: Rd()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !md && 0 === hd.length
+              }, wb.id)))]
+            }), (0, Ob.jsxs)("div", {
+              className: pb()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !Mb && 0 === lb.length
               }),
-              children: [(0, td.jsx)(Av.e, {
-                label: (0, td.jsxs)(td.Fragment, {
-                  children: [(0, td.jsx)(Kd.c, {
-                    name: zv.i
-                  }), " ", dd("socialBar:requests")]
+              children: [(0, Ob.jsx)(AL.d, {
+                label: (0, Ob.jsxs)(Ob.Fragment, {
+                  children: [(0, Ob.jsx)(gb.b, {
+                    name: QL.g
+                  }), " ", bb("socialBar:requests")]
                 }),
-                meta: (0, td.jsxs)(td.Fragment, {
-                  children: [hd.length, hd.length === yO.s && (0, td.jsx)("span", {
+                meta: (0, Ob.jsxs)(Ob.Fragment, {
+                  children: [lb.length, lb.length === Cw.q && (0, Ob.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: dd("socialBar:limitReached")
+                    children: bb("socialBar:limitReached")
                   })]
                 })
-              }), md && (0, td.jsx)("div", {
+              }), Mb && (0, Ob.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, td.jsx)(wd.c, {})
-              }), !md && 0 === hd.length && (0, td.jsx)("div", {
+                children: (0, Ob.jsx)(Xb.c, {})
+              }), !Mb && 0 === lb.length && (0, Ob.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: dd("socialBar:noFriendRequests")
-              }), !md && hd.length > 0 && (0, td.jsx)("div", {
+                children: bb("socialBar:noFriendRequests")
+              }), !Mb && lb.length > 0 && (0, Ob.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, td.jsx)(bR.c, {
+                children: (0, Ob.jsx)(Ep.b, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [hd],
-                  children: hd.map(((Od, md) => {
-                    const Wd = pd.get(Od.name);
-                    return (0, td.jsxs)(iv.e, {
-                      playerSocialPreview: Od,
-                      zIndex: hd.length - md,
-                      padDefaultFocus: (0, jv.l)(Nd, Od.name, md),
-                      status: Wd && (0, td.jsx)(rv.e, {
-                        gameNameWithVariation: Wd.gameNameWithVariation,
-                        isPrivateLobby: Wd.isPrivateLobby
+                  observerUpdateDeps: [lb],
+                  children: lb.map(((wb, Mb) => {
+                    const eb = mb.get(wb.name);
+                    return (0, Ob.jsxs)(fL.d, {
+                      playerSocialPreview: wb,
+                      zIndex: lb.length - Mb,
+                      padDefaultFocus: (0, qL.j)(tb, wb.name, Mb),
+                      status: eb && (0, Ob.jsx)(WL.d, {
+                        gameNameWithVariation: eb.gameNameWithVariation,
+                        isPrivateLobby: eb.isPrivateLobby
                       }),
-                      children: [(0, td.jsx)(HO.g, {
-                        tooltipInner: (0, td.jsx)(td.Fragment, {
-                          children: dd("general:accept")
+                      children: [(0, Ob.jsx)(tw.d, {
+                        tooltipInner: (0, Ob.jsx)(Ob.Fragment, {
+                          children: bb("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, td.jsx)(vd.g, {
+                        children: (0, Ob.jsx)(Lb.f, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Hd((0, jv.i)(yd, md)), (0, Pv.g)(Od.name, !0, {
+                            Eb((0, qL.f)(Fb, Mb)), (0, vL.e)(wb.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -9794,19 +9794,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, td.jsx)(Kd.c, {
+                          children: (0, Ob.jsx)(gb.b, {
                             name: "check"
                           })
                         })
-                      }), (0, td.jsx)(HO.g, {
-                        tooltipInner: (0, td.jsx)(td.Fragment, {
-                          children: dd("general:decline")
+                      }), (0, Ob.jsx)(tw.d, {
+                        tooltipInner: (0, Ob.jsx)(Ob.Fragment, {
+                          children: bb("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, td.jsx)(vd.i, {
+                        children: (0, Ob.jsx)(Lb.j, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            Hd((0, jv.i)(yd, md)), (0, Pv.g)(Od.name, !1, {
+                            Eb((0, qL.f)(Fb, Mb)), (0, vL.e)(wb.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -9814,62 +9814,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, td.jsx)(Kd.c, {
+                          children: (0, Ob.jsx)(gb.b, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${Od.name}_${Od.isError}`)
+                    }, `${wb.name}_${wb.isError}`)
                   }))
                 })
               })]
-            }), (0, td.jsx)(rv.l, {})]
-          }), (0, td.jsxs)("div", {
+            }), (0, Ob.jsx)(WL.i, {})]
+          }), (0, Ob.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, td.jsxs)("div", {
+            children: [(0, Ob.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, td.jsx)(Av.e, {
-                label: dd("socialBar:party")
-              }), (0, td.jsx)(Vv.d, {})]
-            }), (0, td.jsxs)("div", {
+              children: [(0, Ob.jsx)(AL.d, {
+                label: bb("socialBar:party")
+              }), (0, Ob.jsx)(ZL.e, {})]
+            }), (0, Ob.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, td.jsx)(Av.e, {
-                label: (0, td.jsxs)(td.Fragment, {
-                  children: [(0, td.jsx)(Kd.c, {
-                    name: zv.e
-                  }), " ", dd("socialBar:friends")]
+              children: [(0, Ob.jsx)(AL.d, {
+                label: (0, Ob.jsxs)(Ob.Fragment, {
+                  children: [(0, Ob.jsx)(gb.b, {
+                    name: QL.c
+                  }), " ", bb("socialBar:friends")]
                 }),
-                meta: (0, td.jsxs)(td.Fragment, {
-                  children: [Fd.length, Fd.length >= (0, yO.d)(od.getPlayerRanks()) && (0, td.jsx)("span", {
+                meta: (0, Ob.jsxs)(Ob.Fragment, {
+                  children: [Hb.length, Hb.length >= (0, Cw.c)(Ub.getPlayerRanks()) && (0, Ob.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: dd("socialBar:limitReached")
+                    children: bb("socialBar:limitReached")
                   })]
                 })
-              }), md && (0, td.jsx)("div", {
+              }), Mb && (0, Ob.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, td.jsx)(wd.c, {})
-              }), !md && 0 === Fd.length && (0, td.jsx)("div", {
+                children: (0, Ob.jsx)(Xb.c, {})
+              }), !Mb && 0 === Hb.length && (0, Ob.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: dd("socialBar:noFriends")
-              }), !md && Fd.length > 0 && (0, td.jsx)("div", {
+                children: bb("socialBar:noFriends")
+              }), !Mb && Hb.length > 0 && (0, Ob.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, td.jsx)(bR.c, {
+                children: (0, Ob.jsx)(Ep.b, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [Fd],
-                  children: Fd.map(((dd, md) => (0, td.jsx)(iv.e, {
-                    playerSocialPreview: dd,
+                  observerUpdateDeps: [Hb],
+                  children: Hb.map(((bb, Mb) => (0, Ob.jsx)(fL.d, {
+                    playerSocialPreview: bb,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: dd => {
-                      Zd.d.removeFriendFromState(dd)
+                    onFriendRemoved: bb => {
+                      Pb.e.removeFriendFromState(bb)
                     },
-                    zIndex: Fd.length - md,
-                    children: (0, td.jsx)(iv.c, {
-                      friend: dd,
-                      followsLeader: Od,
+                    zIndex: Hb.length - Mb,
+                    children: (0, Ob.jsx)(fL.b, {
+                      friend: bb,
+                      followsLeader: wb,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${dd.name}_${dd.isError}`)))
+                  }, `${bb.name}_${bb.isError}`)))
                 })
               })]
             })]
@@ -9877,834 +9877,834 @@ export const modules = {
         })
       })
     }
-    var Iv = md(3560),
-      lv = md(4862),
-      Cv = md(1988),
-      Zv = md(4853),
-      kv = md(4866);
+    var uL = Mb(3696),
+      dL = Mb(5019),
+      PL = Mb(2040),
+      nL = Mb(5011),
+      yL = Mb(5026);
 
-    function fv(dd) {
+    function oL(bb) {
       let {
-        count: Od,
-        claiming: md
-      } = dd;
+        count: wb,
+        claiming: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)();
-      return 0 === Od ? null : (0, td.jsx)(vd.m, {
+        t: eb
+      } = (0, Vb.C)();
+      return 0 === wb ? null : (0, Ob.jsx)(Lb.p, {
         className: "SeasonPassClaimAllButton",
-        loading: md,
+        loading: Mb,
         onClick: () => {
-          lv.f.claimAll().catch((dd => {
-            console.error("Failed to claim all season pass rewards", dd)
+          dL.f.claimAll().catch((bb => {
+            console.error("Failed to claim all season pass rewards", bb)
           }))
         },
-        children: Wd("seasonPass:claimAll", {
-          count: Od
+        children: eb("seasonPass:claimAll", {
+          count: wb
         })
       })
     }
 
-    function Mv(dd) {
+    function TL(bb) {
       let {
-        view: Od,
-        claiming: md
-      } = dd;
+        view: wb,
+        claiming: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)(), {
-        userContext: Fd
-      } = (0, qd.d)(), {
-        config: Rd,
-        state: hd,
-        tier: vd,
-        xpIntoTier: Qd,
-        xpForNextTier: od
-      } = Od, Nd = Date.now(), Hd = (0, kv.k)(Od, Nd), yd = vd >= Rd.tierCount, bd = Hd && !yd && od > 0, Td = od > 0 && !yd ? Math.min(100, Qd / od * 100) : 100, pd = hd.xpToday >= Rd.maxXpPerDay, Yd = null !== Od.xpBoost && Od.xpBoost.endsAtMs > Nd && !pd ? Od.xpBoost : null;
-      return (0, td.jsxs)("header", {
+        t: eb
+      } = (0, Vb.C)(), {
+        userContext: Hb
+      } = (0, Cb.e)(), {
+        config: pb,
+        state: lb,
+        tier: Lb,
+        xpIntoTier: Ib,
+        xpForNextTier: Ub
+      } = wb, tb = Date.now(), Eb = (0, yL.j)(wb, tb), Fb = Lb >= pb.tierCount, Bb = Eb && !Fb && Ub > 0, sb = Ub > 0 && !Fb ? Math.min(100, Ib / Ub * 100) : 100, mb = lb.xpToday >= pb.maxXpPerDay, hb = null !== wb.xpBoost && wb.xpBoost.endsAtMs > tb && !mb ? wb.xpBoost : null;
+      return (0, Ob.jsxs)("header", {
         className: "SeasonPassHeader",
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "SeasonPassHeaderTitleBlock",
-          children: (0, td.jsx)("h1", {
+          children: (0, Ob.jsx)("h1", {
             className: "SeasonPassHeaderTitle",
-            children: Wd("seasonPass:title", {
-              season: hd.seasonNumber
+            children: eb("seasonPass:title", {
+              season: lb.seasonNumber
             })
           })
-        }), (0, td.jsxs)("div", {
+        }), (0, Ob.jsxs)("div", {
           className: "SeasonPassHeaderProgress",
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "SeasonPassHeaderProgressRow",
-            children: [(0, td.jsx)("span", {
+            children: [(0, Ob.jsx)("span", {
               className: "SeasonPassHeaderTierBadge",
-              title: Wd("seasonPass:tier"),
-              "aria-label": `${Wd("seasonPass:tier")} ${vd}`,
-              children: vd
-            }), (0, td.jsxs)("div", {
+              title: eb("seasonPass:tier"),
+              "aria-label": `${eb("seasonPass:tier")} ${Lb}`,
+              children: Lb
+            }), (0, Ob.jsxs)("div", {
               className: "SeasonPassHeaderBar",
               role: "progressbar",
               "aria-valuemin": 0,
               "aria-valuemax": 100,
-              "aria-valuenow": Math.round(Td),
-              children: [(0, td.jsx)("div", {
+              "aria-valuenow": Math.round(sb),
+              children: [(0, Ob.jsx)("div", {
                 className: "SeasonPassHeaderBarFill",
                 style: {
-                  width: `${Td}%`
+                  width: `${sb}%`
                 }
-              }), (0, td.jsxs)("span", {
+              }), (0, Ob.jsxs)("span", {
                 className: "SeasonPassHeaderBarText SmallTextBold",
-                children: [yd && Wd("seasonPass:passComplete"), bd && Wd("seasonPass:xpProgress", {
-                  xp: Qd,
-                  xpForNextTier: od
+                children: [Fb && eb("seasonPass:passComplete"), Bb && eb("seasonPass:xpProgress", {
+                  xp: Ib,
+                  xpForNextTier: Ub
                 })]
               })]
-            }), bd && (0, td.jsxs)(td.Fragment, {
-              children: [(0, td.jsx)(Kd.c, {
+            }), Bb && (0, Ob.jsxs)(Ob.Fragment, {
+              children: [(0, Ob.jsx)(gb.b, {
                 className: "SeasonPassHeaderNextArrow",
                 name: "caret-right"
-              }), (0, td.jsx)("span", {
+              }), (0, Ob.jsx)("span", {
                 className: "SeasonPassHeaderNextTier",
-                children: vd + 1
+                children: Lb + 1
               })]
             })]
-          }), (0, td.jsxs)("div", {
+          }), (0, Ob.jsxs)("div", {
             className: "SeasonPassHeaderFootnotes",
-            children: [(0, td.jsxs)("span", {
+            children: [(0, Ob.jsxs)("span", {
               className: "SeasonPassHeaderTimeLeft",
-              children: [(0, td.jsx)(Kd.c, {
+              children: [(0, Ob.jsx)(gb.b, {
                 name: "hourglass"
-              }), " ", Hd ? Wd("seasonPass:endsIn", {
-                time: (0, Zv.e)((Od.endsAtMs - Nd) / 6e4)
-              }) : (0, LK.e)(Od.claimEndsAtMs, Wd, Nd)]
-            }), Hd && !yd && (0, td.jsx)("span", {
-              className: pd ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
-              children: pd ? Wd("seasonPass:dailyCapReached") : Wd("seasonPass:dailyXp", {
-                xp: hd.xpToday,
-                cap: Rd.maxXpPerDay
+              }), " ", Eb ? eb("seasonPass:endsIn", {
+                time: (0, nL.c)((wb.endsAtMs - tb) / 6e4)
+              }) : (0, Ng.b)(wb.claimEndsAtMs, eb, tb)]
+            }), Eb && !Fb && (0, Ob.jsx)("span", {
+              className: mb ? "SeasonPassHeaderDailyCapped" : "SeasonPassHeaderDaily",
+              children: mb ? eb("seasonPass:dailyCapReached") : eb("seasonPass:dailyXp", {
+                xp: lb.xpToday,
+                cap: pb.maxXpPerDay
               })
-            }), Hd && !yd && Yd && (0, td.jsxs)("span", {
+            }), Eb && !Fb && hb && (0, Ob.jsxs)("span", {
               className: "SeasonPassHeaderBoost",
-              children: [(0, td.jsx)(Kd.c, {
+              children: [(0, Ob.jsx)(gb.b, {
                 name: "angles-up"
-              }), " ", Wd("seasonPass:xpBoostActive", {
-                multiplier: Yd.multiplier,
-                time: (0, Zv.e)(Math.ceil((Yd.endsAtMs - Nd) / 6e4))
+              }), " ", eb("seasonPass:xpBoostActive", {
+                multiplier: hb.multiplier,
+                time: (0, nL.c)(Math.ceil((hb.endsAtMs - tb) / 6e4))
               })]
-            }), Hd && !yd && !pd && !Yd && (0, td.jsx)("span", {
+            }), Eb && !Fb && !mb && !hb && (0, Ob.jsx)("span", {
               className: "SeasonPassHeaderHint",
-              children: Wd("seasonPass:playToEarn")
-            }), Fd.type === Cv.e.ANONYMOUS && (0, td.jsx)("span", {
+              children: eb("seasonPass:playToEarn")
+            }), Hb.type === PL.d.ANONYMOUS && (0, Ob.jsx)("span", {
               className: "SeasonPassHeaderGuest",
-              children: Wd("seasonPass:logInToKeep")
+              children: eb("seasonPass:logInToKeep")
             })]
           })]
-        }), (0, td.jsx)(fv, {
-          count: Od.claimable.length,
-          claiming: md
+        }), (0, Ob.jsx)(oL, {
+          count: wb.claimable.length,
+          claiming: Mb
         })]
       })
     }
-    var dQ = md(4276),
-      OQ = md(4280);
+    var kL = Mb(4443),
+      bI = Mb(4446);
 
-    function mQ(dd) {
-      return null !== (0, LK.p)(dd) || null !== (0, LK.l)(dd)
+    function wI(bb) {
+      return null !== (0, Ng.r)(bb) || null !== (0, Ng.n)(bb)
     }
-    let WQ = null;
+    let MI = null;
 
-    function FQ() {
-      var dd;
-      null === (dd = WQ) || void 0 === dd || dd.tearDownNotification()
+    function eI() {
+      var bb;
+      null === (bb = MI) || void 0 === bb || bb.tearDownNotification()
     }
 
-    function RQ(dd) {
+    function HI(bb) {
       let {
-        reward: Od
-      } = dd;
+        reward: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Xd.G)(), {
-        userContext: Wd
-      } = (0, qd.d)(), Fd = (0, LK.p)(Od);
-      return (0, td.jsxs)("div", {
+        t: Mb
+      } = (0, Vb.C)(), {
+        userContext: eb
+      } = (0, Cb.e)(), Hb = (0, Ng.r)(wb);
+      return (0, Ob.jsxs)("div", {
         className: "PromptGenericPopup SeasonPassRewardPreview",
-        children: [(0, td.jsx)("div", {
+        children: [(0, Ob.jsx)("div", {
           className: "PromptGenericPopupTitle SmallTextBold",
-          children: (0, LK.h)(Od, md)
-        }), null !== Fd && (0, td.jsx)("div", {
+          children: (0, Ng.g)(wb, Mb)
+        }), null !== Hb && (0, Ob.jsx)("div", {
           className: "SeasonPassRewardPreviewProfileEffect",
-          children: (0, td.jsx)(dQ.d, {
-            profileEffect: Fd,
-            name: Wd.getPlayerName(),
-            cosmetics: Wd.getPlayerCosmetics()
+          children: (0, Ob.jsx)(kL.d, {
+            profileEffect: Hb,
+            name: eb.getPlayerName(),
+            cosmetics: eb.getPlayerCosmetics()
           })
-        }), null === Fd && (0, td.jsx)(XQ, {
-          reward: Od
+        }), null === Hb && (0, Ob.jsx)(pI, {
+          reward: wb
         })]
       })
     }
 
-    function XQ(dd) {
+    function pI(bb) {
       let {
-        reward: Od
-      } = dd;
+        reward: wb
+      } = bb;
       const {
-        userContext: md
-      } = (0, qd.d)(), Fd = (0, Wd.useRef)(null), {
-        previewEmote: Rd,
-        playEmote: Xd
-      } = (0, OQ.b)(), Kd = (0, Wd.useMemo)((() => (0, LK.l)(Od)), [Od]), hd = Kd.emote;
-      return (0, td.jsx)("div", {
+        userContext: Mb
+      } = (0, Cb.e)(), Hb = (0, eb.useRef)(null), {
+        previewEmote: pb,
+        playEmote: Vb
+      } = (0, bI.e)(), gb = (0, eb.useMemo)((() => (0, Ng.n)(wb)), [wb]), lb = gb.emote;
+      return (0, Ob.jsx)("div", {
         className: "SeasonPassRewardPreviewCharacter",
-        children: (0, td.jsx)(Wd.Suspense, {
-          fallback: (0, td.jsx)(wd.c, {}),
-          children: (0, td.jsx)(gK.e, {
-            ref: Fd,
+        children: (0, Ob.jsx)(eb.Suspense, {
+          fallback: (0, Ob.jsx)(Xb.c, {}),
+          children: (0, Ob.jsx)(hg.e, {
+            ref: Hb,
             framing: "store",
-            forcedCosmetics: Kd.cosmetics,
-            hK: Rd.id,
-            emotePlaySeq: Rd.seq,
+            forcedCosmetics: gb.cosmetics,
+            Og: pb.id,
+            emotePlaySeq: pb.seq,
             onReady: () => {
-              var dd, Od;
-              null === (dd = Fd.current) || void 0 === dd || dd.resetCamera(), null === (Od = Fd.current) || void 0 === Od || Od.setAllCosmetics(md.getPlayerCosmetics())
+              var bb, wb;
+              null === (bb = Hb.current) || void 0 === bb || bb.resetCamera(), null === (wb = Hb.current) || void 0 === wb || wb.setAllCosmetics(Mb.getPlayerCosmetics())
             },
             onDrawn: () => {
-              null !== hd && Xd(hd)
+              null !== lb && Vb(lb)
             }
           })
         })
       })
     }
 
-    function KQ(dd) {
+    function VI(bb) {
       let {
-        waitingCount: Od
-      } = dd;
+        waitingCount: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Xd.G)();
-      return (0, ed.usePurchasesAllowed)() ? (0, td.jsxs)("div", {
+        t: Mb
+      } = (0, Vb.C)();
+      return (0, ab.usePurchasesAllowed)() ? (0, Ob.jsxs)("div", {
         className: "SeasonPassHyperUpsell",
-        children: [Od > 0 && (0, td.jsx)("span", {
+        children: [wb > 0 && (0, Ob.jsx)("span", {
           className: "SeasonPassHyperUpsellText",
-          children: 1 === Od ? md("seasonPass:hyperRewardWaiting") : md("seasonPass:hyperRewardsWaiting", {
-            count: Od
+          children: 1 === wb ? Mb("seasonPass:hyperRewardWaiting") : Mb("seasonPass:hyperRewardsWaiting", {
+            count: wb
           })
-        }), (0, td.jsxs)("span", {
+        }), (0, Ob.jsxs)("span", {
           className: "SeasonPassHyperUpsellButtonWrapper",
-          children: [(0, td.jsxs)(vd.v, {
+          children: [(0, Ob.jsxs)(Lb.y, {
             className: "SeasonPassHyperUpsellButton",
             onClick: () => {
-              (0, QO.p)({
+              (0, lw.r)({
                 mode: "self",
                 source: "seasonPass",
                 openItem: "superRank"
               })
             },
-            children: [(0, td.jsx)(zd.e, {}), " ", md("homePage:getHyperRank")]
-          }), Od > 0 && (0, td.jsx)("span", {
+            children: [(0, Ob.jsx)(vb.c, {}), " ", Mb("homePage:getHyperRank")]
+          }), wb > 0 && (0, Ob.jsx)("span", {
             className: "SeasonPassHyperUpsellCount",
-            children: Od
+            children: wb
           })]
         })]
       }) : null
     }
-    var hQ = md(35616);
+    var gI = Mb(35394);
 
-    function vQ(dd) {
+    function lI(bb) {
       let {
-        stub: Od,
-        name: md
-      } = dd;
+        stub: wb,
+        name: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)();
-      return (0, td.jsxs)("span", {
+        t: eb
+      } = (0, Vb.C)();
+      return (0, Ob.jsxs)("span", {
         className: "SeasonPassTrackLabelName",
-        children: [(0, td.jsx)("span", {
+        children: [(0, Ob.jsx)("span", {
           className: "SeasonPassTicketStub",
-          children: Od
-        }), (0, td.jsxs)("span", {
+          children: wb
+        }), (0, Ob.jsxs)("span", {
           className: "SeasonPassTicketBody",
-          children: [(0, td.jsx)("span", {
+          children: [(0, Ob.jsx)("span", {
             className: "SeasonPassTicketPass",
-            children: Wd("seasonPass:trackTicketPass")
-          }), (0, td.jsx)("span", {
+            children: eb("seasonPass:trackTicketPass")
+          }), (0, Ob.jsx)("span", {
             className: "SeasonPassTicketName",
-            children: md
+            children: Mb
           })]
         })]
       })
     }
 
-    function QQ(dd) {
-      var Od, md;
+    function LI(bb) {
+      var wb, Mb;
       let {
-        view: Fd,
-        claimingKeys: Rd,
-        hyperWaitingCount: hd,
-        onClaim: vd
-      } = dd;
+        view: Hb,
+        claimingKeys: pb,
+        hyperWaitingCount: lb,
+        onClaim: Lb
+      } = bb;
       const {
-        t: Qd
-      } = (0, Xd.G)(), od = (0, Wd.useRef)(null), {
-        config: Nd,
-        tier: qd,
-        xpIntoTier: Hd,
-        xpForNextTier: yd,
-        state: bd
-      } = Fd, Td = (0, kv.k)(Fd), pd = (0, Wd.useRef)(!1), Yd = null !== (Od = null === (md = Fd.claimable[0]) || void 0 === md ? void 0 : md.tier) && void 0 !== Od ? Od : Math.min(qd + 1, Nd.tierCount);
-      (0, Wd.useLayoutEffect)((() => {
-        if (pd.current) return;
-        const dd = od.current,
-          Od = dd.querySelector(`[data-tier="${Yd}"]`).getBoundingClientRect(),
-          md = dd.getBoundingClientRect();
-        dd.scrollLeft += Od.left - md.left - .3 * dd.clientWidth, dd.scrollTop += Od.top - md.top - .3 * dd.clientHeight
-      }), [Yd]), (0, Wd.useEffect)((() => {
-        const dd = od.current;
+        t: Ib
+      } = (0, Vb.C)(), Ub = (0, eb.useRef)(null), {
+        config: tb,
+        tier: Cb,
+        xpIntoTier: Eb,
+        xpForNextTier: Fb,
+        state: Bb
+      } = Hb, sb = (0, yL.j)(Hb), mb = (0, eb.useRef)(!1), hb = null !== (wb = null === (Mb = Hb.claimable[0]) || void 0 === Mb ? void 0 : Mb.tier) && void 0 !== wb ? wb : Math.min(Cb + 1, tb.tierCount);
+      (0, eb.useLayoutEffect)((() => {
+        if (mb.current) return;
+        const bb = Ub.current,
+          wb = bb.querySelector(`[data-tier="${hb}"]`).getBoundingClientRect(),
+          Mb = bb.getBoundingClientRect();
+        bb.scrollLeft += wb.left - Mb.left - .3 * bb.clientWidth, bb.scrollTop += wb.top - Mb.top - .3 * bb.clientHeight
+      }), [hb]), (0, eb.useEffect)((() => {
+        const bb = Ub.current;
 
-        function Od(Od) {
-          pd.current = !0, Math.abs(Od.deltaY) <= Math.abs(Od.deltaX) || dd.scrollWidth <= dd.clientWidth || (Od.preventDefault(), dd.scrollLeft += Od.deltaY)
+        function wb(wb) {
+          mb.current = !0, Math.abs(wb.deltaY) <= Math.abs(wb.deltaX) || bb.scrollWidth <= bb.clientWidth || (wb.preventDefault(), bb.scrollLeft += wb.deltaY)
         }
-        return dd.addEventListener("wheel", Od, {
+        return bb.addEventListener("wheel", wb, {
           passive: !1
         }), () => {
-          dd.removeEventListener("wheel", Od)
+          bb.removeEventListener("wheel", wb)
         }
       }), []);
-      const gd = yd > 0 ? Hd / yd : 1;
-      return (0, td.jsxs)("div", {
+      const zb = Fb > 0 ? Eb / Fb : 1;
+      return (0, Ob.jsxs)("div", {
         className: "SeasonPassTrack",
-        children: [(0, td.jsxs)("div", {
+        children: [(0, Ob.jsxs)("div", {
           className: "SeasonPassTrackLabels",
-          children: [(0, td.jsxs)("div", {
+          children: [(0, Ob.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelHyper",
-            children: [(0, td.jsx)(vQ, {
-              stub: (0, td.jsx)(zd.e, {}),
-              name: Qd("seasonPass:hyperTrack")
-            }), !bd.hasHyperRank && (0, td.jsx)(KQ, {
-              waitingCount: hd
+            children: [(0, Ob.jsx)(lI, {
+              stub: (0, Ob.jsx)(vb.c, {}),
+              name: Ib("seasonPass:hyperTrack")
+            }), !Bb.hasHyperRank && (0, Ob.jsx)(VI, {
+              waitingCount: lb
             })]
-          }), (0, td.jsxs)("div", {
+          }), (0, Ob.jsxs)("div", {
             className: "SeasonPassTrackLabel SeasonPassTrackLabelFree",
-            children: [(0, td.jsx)(vQ, {
-              stub: (0, td.jsx)(Kd.c, {
+            children: [(0, Ob.jsx)(lI, {
+              stub: (0, Ob.jsx)(gb.b, {
                 name: "star"
               }),
-              name: Qd("seasonPass:freeTrack")
-            }), (0, td.jsx)("span", {
+              name: Ib("seasonPass:freeTrack")
+            }), (0, Ob.jsx)("span", {
               className: "SeasonPassTrackLabelHint",
-              children: Qd("seasonPass:freeTrackHint")
+              children: Ib("seasonPass:freeTrackHint")
             })]
           })]
-        }), (0, td.jsx)("div", {
+        }), (0, Ob.jsx)("div", {
           className: "SeasonPassTrackScroller",
-          ref: od,
+          ref: Ub,
           onPointerDown: () => {
-            pd.current = !0
+            mb.current = !0
           },
-          children: (0, td.jsx)("div", {
+          children: (0, Ob.jsx)("div", {
             className: "SeasonPassTrackRow",
-            children: Nd.tiers.map((dd => {
-              const Od = dd.tier,
-                md = function(dd, Od, md) {
-                  if (dd <= Od) return "reached";
-                  return md && dd === Od + 1 ? "earning" : "locked"
-                }(Od, qd, Td),
-                Wd = "earning" === md;
-              return (0, td.jsx)(tQ, {
-                tierRewards: dd,
-                nodeState: md,
-                progress: Wd ? gd : 0,
-                freeState: Fd.tileState({
-                  tier: Od,
+            children: tb.tiers.map((bb => {
+              const wb = bb.tier,
+                Mb = function(bb, wb, Mb) {
+                  if (bb <= wb) return "reached";
+                  return Mb && bb === wb + 1 ? "earning" : "locked"
+                }(wb, Cb, sb),
+                eb = "earning" === Mb;
+              return (0, Ob.jsx)(II, {
+                tierRewards: bb,
+                nodeState: Mb,
+                progress: eb ? zb : 0,
+                freeState: Hb.tileState({
+                  tier: wb,
                   track: "free"
                 }),
-                hyperState: Fd.tileState({
-                  tier: Od,
+                hyperState: Hb.tileState({
+                  tier: wb,
                   track: "hyper"
                 }),
-                freeClaiming: Rd.has((0, kv.l)({
-                  tier: Od,
+                freeClaiming: pb.has((0, yL.k)({
+                  tier: wb,
                   track: "free"
                 })),
-                hyperClaiming: Rd.has((0, kv.l)({
-                  tier: Od,
+                hyperClaiming: pb.has((0, yL.k)({
+                  tier: wb,
                   track: "hyper"
                 })),
-                hasHyperRank: bd.hasHyperRank,
-                onClaim: vd
-              }, Od)
+                hasHyperRank: Bb.hasHyperRank,
+                onClaim: Lb
+              }, wb)
             }))
           })
         })]
       })
     }
-    const tQ = (0, Wd.memo)((function(dd) {
+    const II = (0, eb.memo)((function(bb) {
       let {
-        tierRewards: Od,
-        nodeState: md,
-        progress: Wd,
-        freeState: Fd,
-        hyperState: Xd,
-        freeClaiming: Kd,
-        hyperClaiming: hd,
-        hasHyperRank: vd,
-        onClaim: Qd
-      } = dd;
+        tierRewards: wb,
+        nodeState: Mb,
+        progress: eb,
+        freeState: Hb,
+        hyperState: Vb,
+        freeClaiming: gb,
+        hyperClaiming: lb,
+        hasHyperRank: Lb,
+        onClaim: Ib
+      } = bb;
       const {
-        tier: od
-      } = Od;
-      return (0, td.jsxs)("div", {
-        className: Rd()("SeasonPassTrackColumn", {
-          SeasonPassTrackColumnLocked: "reached" !== md
+        tier: Ub
+      } = wb;
+      return (0, Ob.jsxs)("div", {
+        className: pb()("SeasonPassTrackColumn", {
+          SeasonPassTrackColumnLocked: "reached" !== Mb
         }),
-        "data-tier": od,
-        children: [(0, td.jsx)(oQ, {
-          tier: od,
+        "data-tier": Ub,
+        children: [(0, Ob.jsx)(OI, {
+          tier: Ub,
           track: "hyper",
-          reward: Od.hyper,
-          tileState: Xd,
-          claiming: hd,
-          padlock: !vd && "claimed" !== Xd,
-          onClaim: Qd
-        }), (0, td.jsxs)("div", {
+          reward: wb.hyper,
+          tileState: Vb,
+          claiming: lb,
+          padlock: !Lb && "claimed" !== Vb,
+          onClaim: Ib
+        }), (0, Ob.jsxs)("div", {
           className: "SeasonPassTrackRoad",
-          children: [(0, td.jsx)("span", {
-            className: Rd()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
-              SeasonPassTrackRoadFilled: "reached" === md
+          children: [(0, Ob.jsx)("span", {
+            className: pb()("SeasonPassTrackRoadHalf SeasonPassTrackRoadLeft", {
+              SeasonPassTrackRoadFilled: "reached" === Mb
             }),
-            children: "earning" === md && (0, td.jsx)("span", {
+            children: "earning" === Mb && (0, Ob.jsx)("span", {
               className: "SeasonPassTrackRoadProgress",
               style: {
-                "--seasonPassRoadProgress": 100 * Wd + "%"
+                "--seasonPassRoadProgress": 100 * eb + "%"
               }
             })
-          }), (0, td.jsx)("span", {
-            className: Rd()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
-              SeasonPassTrackRoadFilled: "reached" === md
+          }), (0, Ob.jsx)("span", {
+            className: pb()("SeasonPassTrackRoadHalf SeasonPassTrackRoadRight", {
+              SeasonPassTrackRoadFilled: "reached" === Mb
             })
-          }), (0, td.jsx)(hQ.d, {
-            tier: od,
-            state: md,
-            progress: Wd
+          }), (0, Ob.jsx)(gI.d, {
+            tier: Ub,
+            state: Mb,
+            progress: eb
           })]
-        }), (0, td.jsx)(oQ, {
-          tier: od,
+        }), (0, Ob.jsx)(OI, {
+          tier: Ub,
           track: "free",
-          reward: Od.free,
-          tileState: Fd,
-          claiming: Kd,
+          reward: wb.free,
+          tileState: Hb,
+          claiming: gb,
           padlock: !1,
-          onClaim: Qd
+          onClaim: Ib
         })]
       })
     }));
 
-    function oQ(dd) {
+    function OI(bb) {
       let {
-        tier: Od,
-        track: md,
-        reward: Wd,
-        tileState: Fd,
-        claiming: Rd,
-        padlock: Xd,
-        onClaim: Kd
-      } = dd;
-      return Wd ? (0, td.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${md}`,
-        children: (0, td.jsx)(eK.e, {
-          reward: Wd,
-          tileState: Fd,
-          track: md,
+        tier: wb,
+        track: Mb,
+        reward: eb,
+        tileState: Hb,
+        claiming: pb,
+        padlock: Vb,
+        onClaim: gb
+      } = bb;
+      return eb ? (0, Ob.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${Mb}`,
+        children: (0, Ob.jsx)(ig.f, {
+          reward: eb,
+          tileState: Hb,
+          track: Mb,
           size: "large",
           onClaim: () => {
-            Kd({
-              tier: Od,
-              track: md
+            gb({
+              tier: wb,
+              track: Mb
             })
           },
-          claiming: Rd,
-          padlock: Xd,
-          onPreview: mQ(Wd) ? () => {
-            ! function(dd) {
-              const Od = XO.NotificationProvider.showCustomPopup({
-                body: (0, td.jsx)(RQ, {
-                  reward: dd
+          claiming: pb,
+          padlock: Vb,
+          onPreview: wI(eb) ? () => {
+            ! function(bb) {
+              const wb = Hw.NotificationProvider.showCustomPopup({
+                body: (0, Ob.jsx)(HI, {
+                  reward: bb
                 })
               });
-              WQ = Od, Od.getResult().finally((() => {
-                WQ === Od && (WQ = null)
+              MI = wb, wb.getResult().finally((() => {
+                MI === wb && (MI = null)
               }))
-            }(Wd)
+            }(eb)
           } : void 0
         })
-      }) : (0, td.jsx)("div", {
-        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${md}`
+      }) : (0, Ob.jsx)("div", {
+        className: `SeasonPassTrackSlot SeasonPassTrackSlot-${Mb}`
       })
     }
 
-    function NQ(dd) {
+    function UI(bb) {
       let {
-        show: Od
-      } = dd;
-      return Od ? (0, td.jsx)(qQ, {}) : null
+        show: wb
+      } = bb;
+      return wb ? (0, Ob.jsx)(tI, {}) : null
     }
 
-    function qQ() {
+    function tI() {
       const {
-        t: dd
-      } = (0, Xd.G)(), Od = (0, lv.g)();
-      return (0, Wd.useEffect)((() => FQ), []), (0, td.jsxs)("div", {
+        t: bb
+      } = (0, Vb.C)(), wb = (0, dL.h)();
+      return (0, eb.useEffect)((() => eI), []), (0, Ob.jsxs)("div", {
         className: "SeasonPassScreen",
-        children: ["loading" === Od.status && (0, td.jsx)(wd.c, {}), "error" === Od.status && (0, td.jsxs)("div", {
+        children: ["loading" === wb.status && (0, Ob.jsx)(Xb.c, {}), "error" === wb.status && (0, Ob.jsxs)("div", {
           className: "SeasonPassScreenNotice",
-          children: [(0, td.jsx)("p", {
+          children: [(0, Ob.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: dd("seasonPass:errorLoad")
-          }), (0, td.jsx)(vd.g, {
+            children: bb("seasonPass:errorLoad")
+          }), (0, Ob.jsx)(Lb.f, {
             className: "SeasonPassScreenRetry",
             onClick: () => {
-              lv.f.retry()
+              dL.f.retry()
             },
-            children: dd("seasonPass:retry")
+            children: bb("seasonPass:retry")
           })]
-        }), "noSeason" === Od.status && (0, td.jsx)("div", {
+        }), "noSeason" === wb.status && (0, Ob.jsx)("div", {
           className: "SeasonPassScreenNotice",
-          children: (0, td.jsx)("p", {
+          children: (0, Ob.jsx)("p", {
             className: "SeasonPassScreenMessage",
-            children: (0, LK.g)(dd)
+            children: (0, Ng.d)(bb)
           })
-        }), "loaded" === Od.status && (0, td.jsx)(HQ, {
-          view: Od.view,
-          claimingKeys: Od.claimingKeys
+        }), "loaded" === wb.status && (0, Ob.jsx)(CI, {
+          view: wb.view,
+          claimingKeys: wb.claimingKeys
         })]
       })
     }
 
-    function HQ(dd) {
+    function CI(bb) {
       let {
-        view: Od,
-        claimingKeys: md
-      } = dd;
-      const Wd = Od.config.tiers.filter((dd => "needsHyper" === Od.tileState({
-          tier: dd.tier,
+        view: wb,
+        claimingKeys: Mb
+      } = bb;
+      const eb = wb.config.tiers.filter((bb => "needsHyper" === wb.tileState({
+          tier: bb.tier,
           track: "hyper"
         }))).length,
-        Fd = md.size > 0;
-      return (0, td.jsxs)("div", {
+        Hb = Mb.size > 0;
+      return (0, Ob.jsxs)("div", {
         className: "SeasonPassScreenLoaded",
-        children: [(0, td.jsx)(Mv, {
-          view: Od,
-          claiming: Fd
-        }), (0, td.jsx)(QQ, {
-          view: Od,
-          claimingKeys: md,
-          hyperWaitingCount: Wd,
-          onClaim: yQ
-        }), (0, td.jsxs)("div", {
+        children: [(0, Ob.jsx)(TL, {
+          view: wb,
+          claiming: Hb
+        }), (0, Ob.jsx)(LI, {
+          view: wb,
+          claimingKeys: Mb,
+          hyperWaitingCount: eb,
+          onClaim: EI
+        }), (0, Ob.jsxs)("div", {
           className: "SeasonPassScreenActions",
-          children: [(0, td.jsx)(fv, {
-            count: Od.claimable.length,
-            claiming: Fd
-          }), !Od.state.hasHyperRank && (0, td.jsx)(KQ, {
-            waitingCount: Wd
+          children: [(0, Ob.jsx)(oL, {
+            count: wb.claimable.length,
+            claiming: Hb
+          }), !wb.state.hasHyperRank && (0, Ob.jsx)(VI, {
+            waitingCount: eb
           })]
         })]
       })
     }
 
-    function yQ(dd) {
-      lv.f.claim(dd).catch((dd => {
-        console.error("Failed to claim season pass reward", dd)
+    function EI(bb) {
+      dL.f.claim(bb).catch((bb => {
+        console.error("Failed to claim season pass reward", bb)
       }))
     }
-    var bQ = md(5455);
-    var TQ = md(4026);
-    const pQ = dd => {
+    var FI = Mb(5601);
+    var BI = Mb(4200);
+    const sI = bb => {
         let {
-          action: Od,
-          padAction: md
-        } = dd;
+          action: wb,
+          padAction: Mb
+        } = bb;
         const {
-          isTouchScreen: Wd
-        } = (0, Jd.p)(["isTouchScreen"]), Fd = (0, IW.C)();
-        return Wd && !Fd ? null : (0, td.jsx)(LW.b, {
+          isTouchScreen: eb
+        } = (0, jb.o)(["isTouchScreen"]), Hb = (0, ie.z)();
+        return eb && !Hb ? null : (0, Ob.jsx)(Se.e, {
           className: "EverythingMenuTabKey",
-          noaAction: Od,
+          noaAction: wb,
           padHidesKey: !0,
-          padMenuShortcut: md
+          padMenuShortcut: Mb
         })
       },
-      YQ = (0, Wd.memo)((function() {
+      mI = (0, eb.memo)((function() {
         const {
-          t: dd
-        } = (0, Xd.G)(), {
-          gameState: Od,
-          openEverythingMenuName: md,
-          crosshairGameView: Fd,
-          everythingMenuOverLoadingScreen: Kd
-        } = (0, Jd.p)(["gameState", "openEverythingMenuName", "crosshairGameView", "everythingMenuOverLoadingScreen"]), {
-          userContext: hd
-        } = (0, qd.d)(), Qd = (0, tF.j)(Date.now()), od = (0, ed.usePurchasesAllowed)(), Nd = (0, QO.F)(), {
-          view: Hd
-        } = (0, om.A)(), yd = "dot" === Nd || null === Nd && "ready" === (null === Hd || void 0 === Hd ? void 0 : Hd.kind), Td = (dd, Od) => (0, td.jsx)(pQ, {
-          action: dd,
-          padAction: Od
-        }), [pd, Yd] = (0, Wd.useState)(null), gd = (0, Wd.useRef)(null), wd = (0, Wd.useRef)(null);
-        (0, Wd.useEffect)((() => {
-          var dd;
-          const Od = null === (dd = wd.current) || void 0 === dd ? void 0 : dd.querySelector(".EverythingMenuTabActive");
-          null === Od || void 0 === Od || Od.scrollIntoView({
+          t: bb
+        } = (0, Vb.C)(), {
+          gameState: wb,
+          openEverythingMenuName: Mb,
+          crosshairGameView: Hb,
+          everythingMenuOverLoadingScreen: gb
+        } = (0, jb.o)(["gameState", "openEverythingMenuName", "crosshairGameView", "everythingMenuOverLoadingScreen"]), {
+          userContext: lb
+        } = (0, Cb.e)(), Ib = (0, LH.k)(Date.now()), Ub = (0, ab.usePurchasesAllowed)(), tb = (0, lw.L)(), {
+          view: Eb
+        } = (0, IM.D)(), Fb = "dot" === tb || null === tb && "ready" === (null === Eb || void 0 === Eb ? void 0 : Eb.kind), sb = (bb, wb) => (0, Ob.jsx)(sI, {
+          action: bb,
+          padAction: wb
+        }), [mb, hb] = (0, eb.useState)(null), zb = (0, eb.useRef)(null), Xb = (0, eb.useRef)(null);
+        (0, eb.useEffect)((() => {
+          var bb;
+          const wb = null === (bb = Xb.current) || void 0 === bb ? void 0 : bb.querySelector(".EverythingMenuTabActive");
+          null === wb || void 0 === wb || wb.scrollIntoView({
             block: "nearest",
             inline: "nearest"
           })
-        }), [md]);
-        const Ed = {
-            ..."inGame" === Od ? {} : (0, vd.X)({
+        }), [Mb]);
+        const xb = {
+            ..."inGame" === wb ? {} : (0, Lb.bb)({
               focusOnClick: !1
             }),
-            ...pF.g
+            ...BH.f
           },
-          Ud = dd => {
-            const Od = (0, YF.i)((Od => {
-              (0, vd.W)(Od.currentTarget), Jd.e.set({
-                openEverythingMenuName: dd
+          Kb = bb => {
+            const wb = (0, sH.e)((wb => {
+              (0, Lb.$)(wb.currentTarget), jb.c.set({
+                openEverythingMenuName: bb
               })
             }), "pointerup");
             return {
-              ...Ed,
-              onPointerDown: dd => {
-                Ed.onPointerDown(dd), Od.onPointerDown(dd)
+              ...xb,
+              onPointerDown: bb => {
+                xb.onPointerDown(bb), wb.onPointerDown(bb)
               },
-              onPointerUp: dd => {
-                Ed.onPointerUp(dd), Od.onPointerUp(dd)
+              onPointerUp: bb => {
+                xb.onPointerUp(bb), wb.onPointerUp(bb)
               },
-              onClick: Od.onClick
+              onClick: wb.onClick
             }
           },
-          xd = null !== md;
-        (0, Wd.useEffect)((() => {
-          md === VO.m.CUSTOMISATION ? (0, TO.reportAnalyticsClick)({
+          rb = null !== Mb;
+        (0, eb.useEffect)((() => {
+          Mb === Zw.l.CUSTOMISATION ? (0, Fw.reportAnalyticsClick)({
             id: "customise.open",
-            value: (0, pK.g)()
-          }) : null === md && Jd.e.get("everythingMenuOverLoadingScreen") && Jd.e.set({
+            value: (0, sg.d)()
+          }) : null === Mb && jb.c.get("everythingMenuOverLoadingScreen") && jb.c.set({
             everythingMenuOverLoadingScreen: !1
           })
-        }), [md]);
-        const Sd = md !== VO.m.COSMETIC_SHOP && !Fd;
-        async function sd() {
+        }), [Mb]);
+        const Db = Mb !== Zw.l.COSMETIC_SHOP && !Hb;
+        async function cb() {
           await async function() {
-            if (!pd) return;
-            await pd(), Yd(null)
-          }(), Jd.e.set({
+            if (!mb) return;
+            await mb(), hb(null)
+          }(), jb.c.set({
             openEverythingMenuName: null
           })
         }
-        const ud = (0, Wd.useRef)(null),
-          Vd = (0, Wd.useCallback)((() => null !== ud.current && (0, Sv.f)(ud.current)), []);
+        const Yb = (0, eb.useRef)(null),
+          Zb = (0, eb.useCallback)((() => null !== Yb.current && (0, DL.e)(Yb.current)), []);
 
-        function Ad() {
-          Vd() || sd()
-        }(0, Wd.useEffect)((() => (0, nX.r)(Vd)), [Vd]);
-        const rd = (0, Wd.useMemo)((() => "inGame" === Od ? {
-            text: dd("settingsMenu:exitGame"),
+        function fb() {
+          Zb() || cb()
+        }(0, eb.useEffect)((() => (0, SV.v)(Zb)), [Zb]);
+        const Ab = (0, eb.useMemo)((() => "inGame" === wb ? {
+            text: bb("settingsMenu:exitGame"),
             onClick: () => {
-              (0, Bv.e)()
+              (0, RL.d)()
             }
-          } : (0, Bd.isDiscordClient)() ? {
-            text: dd("settingsMenu:exitGame"),
+          } : (0, Rb.isDiscordClient)() ? {
+            text: bb("settingsMenu:exitGame"),
             onClick: () => {
-              uO.q.discordActivity().then((dd => {
-                dd.exit("User exited the game")
+              Yw.i.discordActivity().then((bb => {
+                bb.exit("User exited the game")
               }))
             }
-          } : null), [Od, dd]),
-          Gd = xd && !Fd,
-          nd = "inGame" !== Od,
-          Ld = Gd && nd;
-        (0, Wd.useLayoutEffect)((() => {
-          if (Ld) return Jd.e.set({
+          } : null), [wb, bb]),
+          Wb = rb && !Hb,
+          Jb = "inGame" !== wb,
+          Sb = Wb && Jb;
+        (0, eb.useLayoutEffect)((() => {
+          if (Sb) return jb.c.set({
             menuCoversPage: !0
           }), () => {
-            Jd.e.set({
+            jb.c.set({
               menuCoversPage: !1
             })
           }
-        }), [Ld]);
-        const Pd = (0, Wd.useRef)(null);
-        ! function(dd, Od) {
-          (0, Wd.useEffect)((() => {
-            var md;
-            const Wd = (0, bQ.f)();
-            if (!Od || null === Wd || !(0, bQ.d)({
-                site: Bd.siteUsed,
-                isMobileApp: (0, bd.isMobileApp)(),
-                isTouchScreen: Jd.e.get("isTouchScreen")
+        }), [Sb]);
+        const Nb = (0, eb.useRef)(null);
+        ! function(bb, wb) {
+          (0, eb.useEffect)((() => {
+            var Mb;
+            const eb = (0, FI.g)();
+            if (!wb || null === eb || !(0, FI.d)({
+                site: Rb.siteUsed,
+                isMobileApp: (0, Bb.isMobileApp)(),
+                isTouchScreen: jb.c.get("isTouchScreen")
               })) return;
-            const Fd = null === (md = dd.current) || void 0 === md ? void 0 : md.querySelector(".EverythingMenuBackButton");
-            return Fd ? Wd(Fd) : void 0
-          }), [dd, Od])
-        }(Pd, Gd && !(0, nX.k)(md) && "inGame" === Od);
-        const zd = (0, td.jsx)("div", {
+            const Hb = null === (Mb = bb.current) || void 0 === Mb ? void 0 : Mb.querySelector(".EverythingMenuBackButton");
+            return Hb ? eb(Hb) : void 0
+          }), [bb, wb])
+        }(Nb, Wb && !(0, SV.j)(Mb) && "inGame" === wb);
+        const vb = (0, Ob.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: Ad,
-          children: (0, td.jsx)(vd.j, {
+          onClick: fb,
+          children: (0, Ob.jsx)(Lb.l, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, td.jsx)(gF.b, {
-          showing: xd,
+        return (0, Ob.jsx)(mH.c, {
+          showing: rb,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: md === VO.m.SHOP,
-          doGameplayStartStopOnShow: "inGame" === Od,
-          children: (0, td.jsx)(aF.e, {
-            className: Rd()("EverythingMenuContainer", {
-              EverythingMenuOverLoadingScreen: Kd
+          keepsMovement: Mb === Zw.l.SHOP,
+          doGameplayStartStopOnShow: "inGame" === wb,
+          children: (0, Ob.jsx)(zH.e, {
+            className: pb()("EverythingMenuContainer", {
+              EverythingMenuOverLoadingScreen: gb
             }),
-            show: Gd,
-            children: (0, td.jsx)(wF.c, {
-              close: Ad,
+            show: Wb,
+            children: (0, Ob.jsx)(hH.e, {
+              close: fb,
               togglePointerLock: !1,
-              children: (0, td.jsxs)("div", {
+              children: (0, Ob.jsxs)("div", {
                 className: "EverythingMenu",
-                ref: Pd,
-                children: [!(0, nX.k)(md) && (0, td.jsxs)("div", {
+                ref: Nb,
+                children: [!(0, SV.j)(Mb) && (0, Ob.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, td.jsxs)("div", {
+                  children: [(0, Ob.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [rd && (0, td.jsx)(vd.d, {
+                    children: [Ab && (0, Ob.jsx)(Lb.b, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        rd.onClick()
+                        Ab.onClick()
                       },
-                      children: rd.text
-                    }), xd && od && (0, td.jsx)("div", {
-                      ...Ed,
+                      children: Ab.text
+                    }), rb && Ub && (0, Ob.jsx)("div", {
+                      ...xb,
                       className: "EverythingMenuWallet",
-                      title: dd("homePage:getPremiumCurrency"),
+                      title: bb("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, QO.p)({
+                        (0, lw.r)({
                           mode: "self",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, td.jsx)(xv.g, {})
+                      children: (0, Ob.jsx)(rL.g, {})
                     })]
-                  }), (0, td.jsxs)("div", {
+                  }), (0, Ob.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
-                    ref: wd,
+                    ref: Xb,
                     "data-pad-tabs": "1",
-                    children: [(0, td.jsxs)("div", {
-                      ...Ud(VO.m.SETTINGS),
+                    children: [(0, Ob.jsxs)("div", {
+                      ...Kb(Zw.l.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": md === VO.m.SETTINGS ? "true" : void 0,
-                      className: Rd()("EverythingMenuTab", {
-                        EverythingMenuTabActive: md === VO.m.SETTINGS
+                      "data-pad-selected": Mb === Zw.l.SETTINGS ? "true" : void 0,
+                      className: pb()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Mb === Zw.l.SETTINGS
                       }),
-                      children: [dd("general:settings"), Td("OpenSettings", "pause")]
-                    }), (0, td.jsxs)("div", {
-                      ...Ud(VO.m.CUSTOMISATION),
+                      children: [bb("general:settings"), sb("OpenSettings", "pause")]
+                    }), (0, Ob.jsxs)("div", {
+                      ...Kb(Zw.l.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": md === VO.m.CUSTOMISATION ? "true" : void 0,
-                      className: Rd()("EverythingMenuTab", {
-                        EverythingMenuTabActive: md === VO.m.CUSTOMISATION
+                      "data-pad-selected": Mb === Zw.l.CUSTOMISATION ? "true" : void 0,
+                      className: pb()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Mb === Zw.l.CUSTOMISATION
                       }),
-                      children: [dd("general:player"), Td("OpenCharacterCustomization")]
-                    }), bd.featureFlags.useSocialFeatures && (0, td.jsxs)("div", {
-                      ...Ud(VO.m.SOCIAL),
+                      children: [bb("general:player"), sb("OpenCharacterCustomization")]
+                    }), Bb.featureFlags.useSocialFeatures && (0, Ob.jsxs)("div", {
+                      ...Kb(Zw.l.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": md === VO.m.SOCIAL ? "true" : void 0,
-                      className: Rd()("EverythingMenuTab", {
-                        EverythingMenuTabActive: md === VO.m.SOCIAL
+                      "data-pad-selected": Mb === Zw.l.SOCIAL ? "true" : void 0,
+                      className: pb()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Mb === Zw.l.SOCIAL
                       }),
-                      ...(0, TO.getAnalyticsClickAttributes)({
+                      ...(0, Fw.getAnalyticsClickAttributes)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, md === VO.m.SOCIAL),
-                      children: [dd("socialBar:social"), (0, td.jsx)(Iv.d, {})]
-                    }), Qd && (0, td.jsx)("div", {
-                      ...Ud(VO.m.SEASON_PASS),
+                      }, Mb === Zw.l.SOCIAL),
+                      children: [bb("socialBar:social"), (0, Ob.jsx)(uL.c, {})]
+                    }), Ib && (0, Ob.jsx)("div", {
+                      ...Kb(Zw.l.SEASON_PASS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": md === VO.m.SEASON_PASS ? "true" : void 0,
-                      className: Rd()("EverythingMenuTab", {
-                        EverythingMenuTabActive: md === VO.m.SEASON_PASS
+                      "data-pad-selected": Mb === Zw.l.SEASON_PASS ? "true" : void 0,
+                      className: pb()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Mb === Zw.l.SEASON_PASS
                       }),
-                      children: dd("seasonPass:title", {
-                        season: Qd.seasonNumber
+                      children: bb("seasonPass:title", {
+                        season: Ib.seasonNumber
                       })
-                    }), (0, om.r)(Hd) && (0, td.jsxs)("div", {
-                      ...Ud(VO.m.COSMETIC_SHOP),
+                    }), (0, IM.s)(Eb) && (0, Ob.jsxs)("div", {
+                      ...Kb(Zw.l.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": md === VO.m.COSMETIC_SHOP ? "true" : void 0,
-                      className: Rd()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: md === VO.m.COSMETIC_SHOP
+                      "data-pad-selected": Mb === Zw.l.COSMETIC_SHOP ? "true" : void 0,
+                      className: pb()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: Mb === Zw.l.COSMETIC_SHOP
                       }),
-                      children: [(0, td.jsx)("span", {
+                      children: [(0, Ob.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: dd("store:title")
-                      }), "new" === Nd && (0, td.jsx)(Bh, {}), yd && (0, td.jsx)("span", {
+                        children: bb("store:title")
+                      }), "new" === tb && (0, Ob.jsx)(Rl, {}), Fb && (0, Ob.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === Od && (0, td.jsxs)("div", {
-                      ...Ud(VO.m.LOBBY_LEADERBOARD),
+                    }), "inGame" === wb && (0, Ob.jsxs)("div", {
+                      ...Kb(Zw.l.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": md === VO.m.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: Rd()("EverythingMenuTab", {
-                        EverythingMenuTabActive: md === VO.m.LOBBY_LEADERBOARD
+                      "data-pad-selected": Mb === Zw.l.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: pb()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Mb === Zw.l.LOBBY_LEADERBOARD
                       }),
-                      children: [dd("general:lobby"), Td("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [bb("general:lobby"), sb("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, td.jsx)("div", {
+                  }), (0, Ob.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: zd
+                    children: vb
                   })]
-                }), (0, nX.k)(md) && zd, (0, td.jsxs)("div", {
-                  ref: ud,
+                }), (0, SV.j)(Mb) && vb, (0, Ob.jsxs)("div", {
+                  ref: Yb,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": nd ? "1" : "0.85"
+                    "--everythingMenuBodyBackgroundOpacity": Jb ? "1" : "0.85"
                   },
-                  children: [(0, td.jsx)(vF, {
-                    show: md === VO.m.SETTINGS,
-                    setBeforeResumeCallback: Yd
-                  }), (0, td.jsx)(yF, {
-                    show: md === VO.m.CUSTOMISATION
-                  }), (0, td.jsx)(Wd.Suspense, {
+                  children: [(0, Ob.jsx)(gH, {
+                    show: Mb === Zw.l.SETTINGS,
+                    setBeforeResumeCallback: hb
+                  }), (0, Ob.jsx)(CH, {
+                    show: Mb === Zw.l.CUSTOMISATION
+                  }), (0, Ob.jsx)(eb.Suspense, {
                     fallback: null,
-                    children: (0, td.jsx)(SX, {
-                      show: md === VO.m.SHOP
+                    children: (0, Ob.jsx)(DV, {
+                      show: Mb === Zw.l.SHOP
                     })
-                  }), (0, td.jsx)(cX, {
-                    show: md === VO.m.LOBBY_LEADERBOARD
-                  }), od && (0, td.jsx)(Uv, {
-                    show: md === VO.m.COSMETIC_SHOP
-                  }), !od && (0, td.jsx)(Hv, {
-                    show: md === VO.m.COSMETIC_SHOP
-                  }), (0, td.jsx)(Dv, {
-                    show: md === VO.m.SOCIAL
-                  }), (0, td.jsx)(NQ, {
-                    show: md === VO.m.SEASON_PASS
+                  }), (0, Ob.jsx)(GV, {
+                    show: Mb === Zw.l.LOBBY_LEADERBOARD
+                  }), Ub && (0, Ob.jsx)(KL, {
+                    show: Mb === Zw.l.COSMETIC_SHOP
+                  }), !Ub && (0, Ob.jsx)(CL, {
+                    show: Mb === Zw.l.COSMETIC_SHOP
+                  }), (0, Ob.jsx)(aL, {
+                    show: Mb === Zw.l.SOCIAL
+                  }), (0, Ob.jsx)(UI, {
+                    show: Mb === Zw.l.SEASON_PASS
                   })]
-                }), !(0, bd.isMobileApp)() && (0, TQ.j)() && (0, EF.e)(hd.getPlayerRanks()) && (0, td.jsx)(aF.e, {
-                  ref: gd,
+                }), !(0, Bb.isMobileApp)() && (0, BI.k)() && (0, XH.e)(lb.getPlayerRanks()) && (0, Ob.jsx)(zH.e, {
+                  ref: zb,
                   className: "EverythingMenuBannerDiv",
-                  show: Sd,
+                  show: Db,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, td.jsx)(sv.b, {
+                  children: (0, Ob.jsx)(cL.d, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: gd
+                      parentRef: zb
                     },
-                    showing: xd && Sd,
+                    showing: rb && Db,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -10716,135 +10716,135 @@ export const modules = {
         })
       }))
   },
-  35538: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd
+  35327: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => pb
     });
-    var Wd = md(405),
-      Fd = md(35541);
+    var eb = Mb(382),
+      Hb = Mb(35329);
 
-    function Rd(dd, Od, md) {
-      const Rd = Object.entries(Od).sort(((dd, Od) => Od[1] - dd[1])),
-        Xd = (0, Wd.ib)(dd);
-      Xd.push(dd ? "\n\n" : "\n");
-      for (const [Fd, qd] of Rd) {
-        var Kd, hd, vd;
-        const dd = null !== (Kd = null === md || void 0 === md || null === (hd = md[Fd]) || void 0 === hd ? void 0 : hd.icon) && void 0 !== Kd ? Kd : `${Fd} Enchantment`;
-        Xd.push({
-          icon: dd,
+    function pb(bb, wb, Mb) {
+      const pb = Object.entries(wb).sort(((bb, wb) => wb[1] - bb[1])),
+        Vb = (0, eb.Cb)(bb);
+      Vb.push(bb ? "\n\n" : "\n");
+      for (const [Hb, Cb] of pb) {
+        var gb, lb, Lb;
+        const bb = null !== (gb = null === Mb || void 0 === Mb || null === (lb = Mb[Hb]) || void 0 === lb ? void 0 : lb.icon) && void 0 !== gb ? gb : `${Hb} Enchantment`;
+        Vb.push({
+          icon: bb,
           style: {
             fontSize: "1.5rem"
           }
-        }), Xd.push({
-          str: `${Fd} ${null!==(vd=(0,Wd.K)(qd))&&void 0!==vd?vd:qd}\n`
+        }), Vb.push({
+          str: `${Hb} ${null!==(Lb=(0,eb.Y)(Cb))&&void 0!==Lb?Lb:Cb}\n`
         })
       }
-      Xd.push({
+      Vb.push({
         str: "\n"
       });
-      for (const [Wd, qd] of Rd) {
-        var Qd, td, od, Nd;
-        const dd = null !== (Qd = null === md || void 0 === md || null === (td = md[Wd]) || void 0 === td ? void 0 : td.icon) && void 0 !== Qd ? Qd : `${Wd} Enchantment`,
-          Od = null !== (od = null === md || void 0 === md || null === (Nd = md[Wd]) || void 0 === Nd ? void 0 : Nd.description) && void 0 !== od ? od : (0, Fd.i)(Wd);
-        Xd.push({
-          icon: dd,
+      for (const [eb, Cb] of pb) {
+        var Ib, Ob, Ub, tb;
+        const bb = null !== (Ib = null === Mb || void 0 === Mb || null === (Ob = Mb[eb]) || void 0 === Ob ? void 0 : Ob.icon) && void 0 !== Ib ? Ib : `${eb} Enchantment`,
+          wb = null !== (Ub = null === Mb || void 0 === Mb || null === (tb = Mb[eb]) || void 0 === tb ? void 0 : tb.description) && void 0 !== Ub ? Ub : (0, Hb.m)(eb);
+        Vb.push({
+          icon: bb,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), Xd.push({
-          str: Od,
+        }), Vb.push({
+          str: wb,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), Xd.push({
+        }), Vb.push({
           str: "\n"
         })
       }
-      return Xd
+      return Vb
     }
   },
-  35545: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => vd,
-      e: () => Td,
-      g: () => yd,
-      j: () => hd,
-      n: () => bd,
-      r: () => Qd,
-      s: () => od,
-      u: () => Hd,
-      v: () => td
+  35331: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      A: () => Ob,
+      b: () => Lb,
+      f: () => sb,
+      j: () => Fb,
+      m: () => lb,
+      q: () => Bb,
+      t: () => Ib,
+      w: () => Ub,
+      x: () => Eb
     });
-    var Wd = md(387),
-      Fd = md(701),
-      Rd = md(405),
-      Xd = md(2976),
-      Kd = md(35538);
+    var eb = Mb(366),
+      Hb = Mb(661),
+      pb = Mb(382),
+      Vb = Mb(3052),
+      gb = Mb(35327);
 
-    function hd(dd, Od) {
-      var md;
+    function lb(bb, wb) {
+      var Mb;
       let {
-        player: Wd,
-        chestOrCreative: Fd
-      } = dd;
-      var Rd;
-      return Od < Wd.length ? null !== (Rd = Wd[Od]) && void 0 !== Rd ? Rd : null : null !== (md = Fd[Od - Wd.length]) && void 0 !== md ? md : null
+        player: eb,
+        chestOrCreative: Hb
+      } = bb;
+      var pb;
+      return wb < eb.length ? null !== (pb = eb[wb]) && void 0 !== pb ? pb : null : null !== (Mb = Hb[wb - eb.length]) && void 0 !== Mb ? Mb : null
     }
 
-    function vd(dd) {
-      var Od;
-      return null !== (Od = dd.amount) && void 0 !== Od ? Od : 0
+    function Lb(bb) {
+      var wb;
+      return null !== (wb = bb.amount) && void 0 !== wb ? wb : 0
     }
 
-    function Qd(dd) {
-      return 0 === dd.button || void 0 === dd.button
+    function Ib(bb) {
+      return 0 === bb.button || void 0 === bb.button
     }
 
-    function td(dd) {
-      return !!dd.shiftKey
+    function Ob(bb) {
+      return !!bb.shiftKey
     }
 
-    function od(dd) {
-      return "touches" in dd || "touch" === dd.pointerType || "pen" === dd.pointerType
+    function Ub(bb) {
+      return "touches" in bb || "touch" === bb.pointerType || "pen" === bb.pointerType
     }
-    const Nd = new Set,
-      qd = 50;
+    const tb = new Set,
+      Cb = 50;
 
-    function Hd(dd, Od) {
-      var md;
-      const Wd = null === (md = dd[Od]) || void 0 === md ? void 0 : md.displayName;
-      return (0, Fd.O)(Wd) ? "string" !== typeof Od ? "" : (!Nd.has(Od) && Nd.size < qd && (Nd.add(Od), console.warn(`No item called "${Od}", so its hover shows the name as given`)), Od) : Wd
+    function Eb(bb, wb) {
+      var Mb;
+      const eb = null === (Mb = bb[wb]) || void 0 === Mb ? void 0 : Mb.displayName;
+      return (0, Hb.K)(eb) ? "string" !== typeof wb ? "" : (!tb.has(wb) && tb.size < Cb && (tb.add(wb), console.warn(`No item called "${wb}", so its hover shows the name as given`)), wb) : eb
     }
 
-    function yd(dd, Od, md) {
-      var hd, vd, Qd, td, od, Nd, qd, yd, bd, Td, pd, Yd, gd, wd;
-      const Ed = dd.attributes,
-        Jd = null !== (hd = null === (vd = Od[dd.name]) || void 0 === vd ? void 0 : vd.rootName) && void 0 !== hd ? hd : dd.name,
-        Ud = null !== (Qd = null !== (td = Ed.customDisplayName) && void 0 !== td ? td : null === (od = Od[dd.name]) || void 0 === od ? void 0 : od.displayName) && void 0 !== Qd ? Qd : Hd(Od, Jd);
-      let xd = Ud;
-      const Bd = null === (Nd = Ed.customAttributes) || void 0 === Nd ? void 0 : Nd.enchantmentTier;
-      Bd && (xd = (0, Rd.ib)(Ud, {
-        colour: Rd.ab[Bd]
+    function Fb(bb, wb, Mb) {
+      var lb, Lb, Ib, Ob, Ub, tb, Cb, Fb, Bb, sb, mb, hb, zb, Xb;
+      const xb = bb.attributes,
+        jb = null !== (lb = null === (Lb = wb[bb.name]) || void 0 === Lb ? void 0 : Lb.rootName) && void 0 !== lb ? lb : bb.name,
+        Kb = null !== (Ib = null !== (Ob = xb.customDisplayName) && void 0 !== Ob ? Ob : null === (Ub = wb[bb.name]) || void 0 === Ub ? void 0 : Ub.displayName) && void 0 !== Ib ? Ib : Eb(wb, jb);
+      let rb = Kb;
+      const Rb = null === (tb = xb.customAttributes) || void 0 === tb ? void 0 : tb.enchantmentTier;
+      Rb && (rb = (0, pb.Cb)(Kb, {
+        colour: pb.xb[Rb]
       }));
-      const Sd = null !== (qd = null !== (yd = null !== (bd = function(dd, Od) {
-        var md;
-        if (void 0 === dd || null !== (md = Od.customAttributes) && void 0 !== md && md.author) return dd;
-        const Fd = (0, Wd.dc)(dd);
-        return Fd.every((dd => "string" === typeof dd)) ? dd : Fd.map((dd => "string" === typeof dd ? dd : {
-          icon: dd.icon,
+      const Db = null !== (Cb = null !== (Fb = null !== (Bb = function(bb, wb) {
+        var Mb;
+        if (void 0 === bb || null !== (Mb = wb.customAttributes) && void 0 !== Mb && Mb.author) return bb;
+        const Hb = (0, eb.gc)(bb);
+        return Hb.every((bb => "string" === typeof bb)) ? bb : Hb.map((bb => "string" === typeof bb ? bb : {
+          icon: bb.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(Ed.customDescription, Ed)) && void 0 !== bd ? bd : null === (Td = Od[dd.name]) || void 0 === Td ? void 0 : Td.description) && void 0 !== yd ? yd : null === (pd = Od[Jd]) || void 0 === pd ? void 0 : pd.description) && void 0 !== qd ? qd : "";
-      let sd = Sd;
-      if (null !== (Yd = Ed.customAttributes) && void 0 !== Yd && Yd.enchantments) sd = (0, Kd.c)(Sd, Ed.customAttributes.enchantments, Ed.customAttributes.enchantmentData);
-      else if (md[Jd]) sd = (0, Rd.ib)(Sd), sd.push({
+      }(xb.customDescription, xb)) && void 0 !== Bb ? Bb : null === (sb = wb[bb.name]) || void 0 === sb ? void 0 : sb.description) && void 0 !== Fb ? Fb : null === (mb = wb[jb]) || void 0 === mb ? void 0 : mb.description) && void 0 !== Cb ? Cb : "";
+      let cb = Db;
+      if (null !== (hb = xb.customAttributes) && void 0 !== hb && hb.enchantments) cb = (0, gb.d)(Db, xb.customAttributes.enchantments, xb.customAttributes.enchantmentData);
+      else if (Mb[jb]) cb = (0, pb.Cb)(Db), cb.push({
         str: "\n"
-      }), sd.push({
+      }), cb.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -10852,700 +10852,700 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (gd = Ed.customAttributes) && void 0 !== gd && gd.mobSettings) {
-        var ud, Vd;
-        const dd = Ed.customAttributes.mobSettings;
-        var Ad, rd;
-        if (sd = [], (0, Fd.O)(Ed.customAttributes.health) || (sd.push({
+      else if (null !== (zb = xb.customAttributes) && void 0 !== zb && zb.mobSettings) {
+        var Yb, Zb;
+        const bb = xb.customAttributes.mobSettings;
+        var fb, Ab;
+        if (cb = [], (0, Hb.K)(xb.customAttributes.health) || (cb.push({
             str: "\n"
-          }), sd.push({
+          }), cb.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), sd.push({
+          }), cb.push({
             str: " "
-          }), sd.push({
-            str: Ed.customAttributes.health.toString()
-          }), (0, Fd.O)(dd.maxHealth) || (sd.push({
+          }), cb.push({
+            str: xb.customAttributes.health.toString()
+          }), (0, Hb.K)(bb.maxHealth) || (cb.push({
             str: "/"
-          }), sd.push({
-            str: dd.maxHealth.toString()
-          }))), !(0, Fd.O)(dd.attackDamage) && dd.attackDamage > 0 && (sd.push({
+          }), cb.push({
+            str: bb.maxHealth.toString()
+          }))), !(0, Hb.K)(bb.attackDamage) && bb.attackDamage > 0 && (cb.push({
             str: "\n"
-          }), sd.push({
+          }), cb.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), sd.push({
+          }), cb.push({
             str: " "
-          }), sd.push({
-            str: dd.attackDamage.toString()
-          })), !(0, Fd.O)(dd.secondaryAttackDamage) && dd.secondaryAttackDamage > 0 && (sd.push({
+          }), cb.push({
+            str: bb.attackDamage.toString()
+          })), !(0, Hb.K)(bb.secondaryAttackDamage) && bb.secondaryAttackDamage > 0 && (cb.push({
             str: "\n"
-          }), sd.push({
+          }), cb.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), sd.push({
+          }), cb.push({
             str: " "
-          }), sd.push({
-            str: dd.secondaryAttackDamage.toString()
-          })), (0, Fd.O)(dd.baseRunningSpeed) || (sd.push({
+          }), cb.push({
+            str: bb.secondaryAttackDamage.toString()
+          })), (0, Hb.K)(bb.baseRunningSpeed) || (cb.push({
             str: "\n"
-          }), sd.push({
+          }), cb.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), sd.push({
+          }), cb.push({
             str: " "
-          }), sd.push({
-            str: dd.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === dd.metaInfo) sd.push({
+          }), cb.push({
+            str: bb.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === bb.metaInfo) cb.push({
           str: "\n"
-        }), sd.push({
+        }), cb.push({
           str: {
             translationKey: "general:has"
           }
-        }), sd.push({
+        }), cb.push({
           str: " "
-        }), sd.push({
-          icon: null !== (Ad = null === (rd = dd.tameInfo) || void 0 === rd ? void 0 : rd.saddleItemName) && void 0 !== Ad ? Ad : "Saddle",
+        }), cb.push({
+          icon: null !== (fb = null === (Ab = bb.tameInfo) || void 0 === Ab ? void 0 : Ab.saddleItemName) && void 0 !== fb ? fb : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (sd.push({
+        if (cb.push({
             str: "\n"
-          }), sd.push({
+          }), cb.push({
             str: "\n"
-          }), dd.petInfo && null !== (ud = dd.tameInfo) && void 0 !== ud && ud.supportsFriendship) {
-          const Od = Xd.b.getIconsFromFriendshipPoints(dd.petInfo.friendshipPoints);
-          for (const dd of Od) sd.push({
-            icon: dd,
+          }), bb.petInfo && null !== (Yb = bb.tameInfo) && void 0 !== Yb && Yb.supportsFriendship) {
+          const wb = Vb.d.getIconsFromFriendshipPoints(bb.petInfo.friendshipPoints);
+          for (const bb of wb) cb.push({
+            icon: bb,
             style: {
               fontSize: "1.5em"
             }
           });
-          sd.push({
+          cb.push({
             str: "\n"
           });
-          const md = Xd.b.getMobHungerLevel(dd.petInfo.lastFedAt);
-          for (const dd of Xd.b.hungerLevelIcons[md]) sd.push({
-            icon: dd,
+          const Mb = Vb.d.getMobHungerLevel(bb.petInfo.lastFedAt);
+          for (const bb of Vb.d.hungerLevelIcons[Mb]) cb.push({
+            icon: bb,
             style: {
               fontSize: "1.5em"
             }
           });
-          sd.push({
+          cb.push({
             str: " "
-          }), sd.push({
-            str: Xd.b.hungerLevelTranslations[md],
+          }), cb.push({
+            str: Vb.d.hungerLevelTranslations[Mb],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (dd.tameInfo && null !== (Vd = dd.tameInfo) && void 0 !== Vd && Vd.supportsFriendship) {
-          var Gd, nd;
-          let Od = null !== (Gd = dd.tameInfo.likedFoods) && void 0 !== Gd ? Gd : [];
-          sd.push({
+        if (bb.tameInfo && null !== (Zb = bb.tameInfo) && void 0 !== Zb && Zb.supportsFriendship) {
+          var Wb, Jb;
+          let wb = null !== (Wb = bb.tameInfo.likedFoods) && void 0 !== Wb ? Wb : [];
+          cb.push({
             str: "\n"
-          }), sd.push({
+          }), cb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Xd.b.feedTextColours[Xd.b.MobFoodType.Superliked]
+              color: Vb.d.feedTextColours[Vb.d.MobFoodType.Superliked]
             }
-          }), sd.push({
+          }), cb.push({
             str: " "
-          }), null !== (nd = dd.petInfo) && void 0 !== nd && nd.superlikedFoodKnown ? (sd.push({
-            icon: dd.petInfo.superlikedFood,
+          }), null !== (Jb = bb.petInfo) && void 0 !== Jb && Jb.superlikedFoodKnown ? (cb.push({
+            icon: bb.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), Od = Od.filter((Od => Od !== dd.petInfo.superlikedFood))) : sd.push({
+          }), wb = wb.filter((wb => wb !== bb.petInfo.superlikedFood))) : cb.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), sd.push({
+          }), cb.push({
             str: "\n"
-          }), sd.push({
+          }), cb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Xd.b.feedTextColours[Xd.b.MobFoodType.Liked]
+              color: Vb.d.feedTextColours[Vb.d.MobFoodType.Liked]
             }
-          }), sd.push({
+          }), cb.push({
             str: " "
           });
-          for (const dd of Od) sd.push({
-            icon: dd,
+          for (const bb of wb) cb.push({
+            icon: bb,
             style: {
               fontSize: "1.5em"
             }
           });
-          sd.push({
+          cb.push({
             str: "\n"
-          }), sd.push({
+          }), cb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Xd.b.feedTextColours[Xd.b.MobFoodType.Neutral]
+              color: Vb.d.feedTextColours[Vb.d.MobFoodType.Neutral]
             }
-          }), sd.push({
+          }), cb.push({
             str: " "
           });
-          for (const md of null !== (Ld = dd.tameInfo.neutralFoods) && void 0 !== Ld ? Ld : []) {
-            var Ld;
-            sd.push({
-              icon: md,
+          for (const Mb of null !== (Sb = bb.tameInfo.neutralFoods) && void 0 !== Sb ? Sb : []) {
+            var Sb;
+            cb.push({
+              icon: Mb,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          sd.push({
+          cb.push({
             str: "\n"
-          }), sd.push({
+          }), cb.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: Xd.b.feedTextColours[Xd.b.MobFoodType.Disliked]
+              color: Vb.d.feedTextColours[Vb.d.MobFoodType.Disliked]
             }
-          }), sd.push({
+          }), cb.push({
             str: " "
           });
-          for (const md of null !== (Pd = dd.tameInfo.dislikedFoods) && void 0 !== Pd ? Pd : []) {
-            var Pd;
-            sd.push({
-              icon: md,
+          for (const Mb of null !== (Nb = bb.tameInfo.dislikedFoods) && void 0 !== Nb ? Nb : []) {
+            var Nb;
+            cb.push({
+              icon: Mb,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        sd.length > 0 ? (sd.shift(), sd.unshift(...(0, Rd.ib)(Sd))) : sd = (0, Rd.ib)(Sd)
+        cb.length > 0 ? (cb.shift(), cb.unshift(...(0, pb.Cb)(Db))) : cb = (0, pb.Cb)(Db)
       }
       return {
-        name: xd,
-        desc: sd,
-        fontStyle: null !== (wd = Ed.customAttributes) && void 0 !== wd && wd.author ? "italic" : "normal"
+        name: rb,
+        desc: cb,
+        fontStyle: null !== (Xb = xb.customAttributes) && void 0 !== Xb && Xb.author ? "italic" : "normal"
       }
     }
 
-    function bd(dd, Od, md, Wd) {
-      const Fd = hd(dd, md),
-        Rd = hd(dd, Wd);
-      if (!Fd) return !1;
-      const Xd = Od[Fd.name].armourReduction,
-        Kd = Od[Rd.name].armourReduction;
-      if (Kd === Xd) {
-        var vd, Qd, td, od;
-        const dd = null !== (vd = null === (Qd = Fd.attributes.customAttributes) || void 0 === Qd ? void 0 : Qd.enchantmentTier) && void 0 !== vd ? vd : "Tier 0",
-          Od = null !== (td = null === (od = Rd.attributes.customAttributes) || void 0 === od ? void 0 : od.enchantmentTier) && void 0 !== td ? td : "Tier 0";
-        return parseInt(dd.replace("Tier ", "")) >= parseInt(Od.replace("Tier ", ""))
+    function Bb(bb, wb, Mb, eb) {
+      const Hb = lb(bb, Mb),
+        pb = lb(bb, eb);
+      if (!Hb) return !1;
+      const Vb = wb[Hb.name].armourReduction,
+        gb = wb[pb.name].armourReduction;
+      if (gb === Vb) {
+        var Lb, Ib, Ob, Ub;
+        const bb = null !== (Lb = null === (Ib = Hb.attributes.customAttributes) || void 0 === Ib ? void 0 : Ib.enchantmentTier) && void 0 !== Lb ? Lb : "Tier 0",
+          wb = null !== (Ob = null === (Ub = pb.attributes.customAttributes) || void 0 === Ub ? void 0 : Ub.enchantmentTier) && void 0 !== Ob ? Ob : "Tier 0";
+        return parseInt(bb.replace("Tier ", "")) >= parseInt(wb.replace("Tier ", ""))
       }
-      return Xd > Kd
+      return Vb > gb
     }
 
-    function Td(dd) {
-      let Od;
-      if ("number" === typeof dd) {
-        const md = document.querySelector(`[data-inven-idx="${dd}"]`);
-        if (!md) return null;
-        Od = md.getBoundingClientRect()
-      } else Od = dd.getBoundingClientRect();
+    function sb(bb) {
+      let wb;
+      if ("number" === typeof bb) {
+        const Mb = document.querySelector(`[data-inven-idx="${bb}"]`);
+        if (!Mb) return null;
+        wb = Mb.getBoundingClientRect()
+      } else wb = bb.getBoundingClientRect();
       return {
-        x: Od.left + Od.width / 2,
-        y: Od.top + Od.height / 2
+        x: wb.left + wb.width / 2,
+        y: wb.top + wb.height / 2
       }
     }
   },
-  35430: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => yd,
-      d: () => bd,
-      g: () => Td
+  35232: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Fb,
+      g: () => Bb,
+      i: () => sb
     });
-    var Wd = md(66),
-      Fd = md(4998),
-      Rd = md(1238),
-      Xd = md(3747),
-      Kd = md(1572),
-      hd = md(1341);
+    var eb = Mb(64),
+      Hb = Mb(5185),
+      pb = Mb(1259),
+      Vb = Mb(3877),
+      gb = Mb(1616),
+      lb = Mb(1364);
 
-    function vd(dd) {
+    function Lb(bb) {
       let {
-        text: Od
-      } = dd;
+        text: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Rd.G)(), [Wd, vd] = (0, Xd.i)();
-      return (0, hd.jsxs)("div", {
+        t: Mb
+      } = (0, pb.C)(), [eb, Lb] = (0, Vb.k)();
+      return (0, lb.jsxs)("div", {
         className: "CopyTextRow",
-        children: [(0, hd.jsx)("div", {
+        children: [(0, lb.jsx)("div", {
           className: "CopyTextRowText",
-          children: Od
-        }), (0, hd.jsx)(Kd.g, {
+          children: wb
+        }), (0, lb.jsx)(gb.f, {
           className: "CopyTextRowButton",
           onClick: () => {
-            (0, Fd.e)(Od).catch((dd => {
-              console.error("Failed to copy text:", dd)
-            })), vd()
+            (0, Hb.d)(wb).catch((bb => {
+              console.error("Failed to copy text:", bb)
+            })), Lb()
           },
-          disabled: Wd,
-          children: md(Wd ? "general:copied" : "general:copy")
+          disabled: eb,
+          children: Mb(eb ? "general:copied" : "general:copy")
         })]
       })
     }
-    var Qd = md(1406),
-      td = md(5194),
-      od = md(3299),
-      Nd = md(107),
-      qd = md(2125),
-      Hd = md(1436);
+    var Ib = Mb(1436),
+      Ob = Mb(5384),
+      Ub = Mb(3391),
+      tb = Mb(110),
+      Cb = Mb(2183),
+      Eb = Mb(1468);
 
-    function yd(dd) {
+    function Fb(bb) {
       let {
-        show: Od,
-        onClose: md
-      } = dd;
+        show: wb,
+        onClose: Mb
+      } = bb;
       const {
-        requestedGameNameWithVariation: Wd,
-        lobbyName: Fd,
-        shownLobbyName: Rd
-      } = (0, qd.h)("connectedGame"), Xd = (0, od.c)(Wd, Fd, !1);
-      return Nd.featureFlags.canUseInviteLinks && (0, hd.jsx)(td.c, {
-        show: Od,
-        close: md,
+        requestedGameNameWithVariation: eb,
+        lobbyName: Hb,
+        shownLobbyName: pb
+      } = (0, Cb.h)("connectedGame"), Vb = (0, Ub.b)(eb, Hb, !1);
+      return tb.featureFlags.canUseInviteLinks && (0, lb.jsx)(Ob.e, {
+        show: wb,
+        close: Mb,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, hd.jsxs)("div", {
+        children: (0, lb.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, hd.jsx)("div", {
+          children: [(0, lb.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, hd.jsxs)("div", {
+          }), (0, lb.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, hd.jsx)("div", {
+            children: [(0, lb.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === Xd ? (0, hd.jsx)(Hd.c, {}) : Xd, (0, hd.jsx)("br", {}), "Lobby Name: ", Rd, (0, hd.jsx)("br", {}), (0, hd.jsx)("br", {}), (0, hd.jsx)("br", {}), (0, hd.jsx)("div", {
+            }), "Game: ", null === Vb ? (0, lb.jsx)(Eb.c, {}) : Vb, (0, lb.jsx)("br", {}), "Lobby Name: ", pb, (0, lb.jsx)("br", {}), (0, lb.jsx)("br", {}), (0, lb.jsx)("br", {}), (0, lb.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, hd.jsx)(bd, {})]
+          }), (0, lb.jsx)(Bb, {})]
         })
       })
     }
 
-    function bd() {
-      var dd;
-      const Od = null !== (dd = Td(Nd.featureFlags.canUseInviteLinks)) && void 0 !== dd ? dd : "Loading Link...";
-      return Nd.featureFlags.canUseInviteLinks && (0, hd.jsx)(vd, {
-        text: Od
+    function Bb() {
+      var bb;
+      const wb = null !== (bb = sb(tb.featureFlags.canUseInviteLinks)) && void 0 !== bb ? bb : "Loading Link...";
+      return tb.featureFlags.canUseInviteLinks && (0, lb.jsx)(Lb, {
+        text: wb
       })
     }
 
-    function Td(dd) {
-      const [Od, md] = (0, Wd.useState)(null);
-      return (0, Wd.useEffect)((() => {
-        if (!dd) return;
-        let Od = !0;
-        return (0, Qd.H)().then((dd => {
-          Od && md(dd)
-        })).catch((dd => {
-          console.error("Failed to get invite link:", dd)
+    function sb(bb) {
+      const [wb, Mb] = (0, eb.useState)(null);
+      return (0, eb.useEffect)((() => {
+        if (!bb) return;
+        let wb = !0;
+        return (0, Ib.v)().then((bb => {
+          wb && Mb(bb)
+        })).catch((bb => {
+          console.error("Failed to get invite link:", bb)
         })), () => {
-          Od = !1
+          wb = !1
         }
-      }), [dd]), Od
+      }), [bb]), wb
     }
   },
-  35602: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => qd,
-      f: () => yd
+  35384: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Cb,
+      c: () => Fb
     });
-    md(35605);
-    var Wd = md(66),
-      Fd = md(1155),
-      Rd = md.n(Fd),
-      Xd = md(1238),
-      Kd = md(1572),
-      hd = md(3635),
-      vd = md(1443),
-      Qd = md(3353),
-      td = md(4177),
-      od = md(3198),
-      Nd = md(1341);
+    Mb(35387);
+    var eb = Mb(64),
+      Hb = Mb(1159),
+      pb = Mb.n(Hb),
+      Vb = Mb(1259),
+      gb = Mb(1616),
+      lb = Mb(3770),
+      Lb = Mb(1475),
+      Ib = Mb(3457),
+      Ob = Mb(4354),
+      Ub = Mb(3285),
+      tb = Mb(1364);
 
-    function qd(dd) {
+    function Cb(bb) {
       let {
-        endsAt: Od,
-        className: md
-      } = dd;
-      return (0, Nd.jsxs)("span", {
-        className: Rd()("NewPlayerDealClock", md),
-        children: [(0, Nd.jsx)(vd.c, {
+        endsAt: wb,
+        className: Mb
+      } = bb;
+      return (0, tb.jsxs)("span", {
+        className: pb()("NewPlayerDealClock", Mb),
+        children: [(0, tb.jsx)(Lb.b, {
           name: "hourglass"
-        }), (0, Nd.jsx)(hd.e, {
-          toTime: Od
+        }), (0, tb.jsx)(lb.h, {
+          toTime: wb
         })]
       })
     }
 
-    function Hd(dd) {
+    function Eb(bb) {
       let {
-        offered: Od,
-        needsLogin: md,
-        busy: Wd,
-        highlight: Fd,
-        onBuy: hd
-      } = dd;
+        offered: wb,
+        needsLogin: Mb,
+        busy: eb,
+        highlight: Hb,
+        onBuy: lb
+      } = bb;
       const {
-        t: vd
-      } = (0, Xd.G)(), {
-        pack: qd
-      } = Od, Hd = (0, td.e)(Od.package);
-      return (0, Nd.jsxs)("div", {
-        className: Rd()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: Fd
+        t: Lb
+      } = (0, Vb.C)(), {
+        pack: Cb
+      } = wb, Eb = (0, Ob.f)(wb.package);
+      return (0, tb.jsxs)("div", {
+        className: pb()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: Hb
         }),
-        children: [(0, Nd.jsxs)("div", {
+        children: [(0, tb.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, Nd.jsx)("img", {
-            src: od.c[Od.tier],
+          children: [(0, tb.jsx)("img", {
+            src: Ub.c[wb.tier],
             alt: "",
             draggable: !1
-          }), (0, Nd.jsx)("span", {
+          }), (0, tb.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: vd("newPlayerDeal:tag")
+            children: Lb("newPlayerDeal:tag")
           })]
-        }), (0, Nd.jsxs)("div", {
+        }), (0, tb.jsxs)("div", {
           className: "NewPlayerDealPackText",
-          children: [(0, Nd.jsx)(Qd.c, {
+          children: [(0, tb.jsx)(Ib.d, {
             className: "NewPlayerDealPackAmount",
-            amount: qd.gems
-          }), (0, Nd.jsx)("span", {
+            amount: Cb.gems
+          }), (0, tb.jsx)("span", {
             className: "NewPlayerDealSplit",
-            children: vd("newPlayerDeal:split", {
-              usual: qd.usualGems.toLocaleString(),
-              bonus: (qd.gems - qd.usualGems).toLocaleString()
+            children: Lb("newPlayerDeal:split", {
+              usual: Cb.usualGems.toLocaleString(),
+              bonus: (Cb.gems - Cb.usualGems).toLocaleString()
             })
           })]
-        }), (0, Nd.jsx)(Kd.m, {
+        }), (0, tb.jsx)(gb.p, {
           className: "NewPlayerDealBuy",
-          loading: Wd,
-          onClick: hd,
-          ariaLabel: vd("newPlayerDeal:buyLabel", {
-            amount: qd.gems.toLocaleString(),
-            price: Hd
+          loading: eb,
+          onClick: lb,
+          ariaLabel: Lb("newPlayerDeal:buyLabel", {
+            amount: Cb.gems.toLocaleString(),
+            price: Eb
           }),
-          children: vd(md ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: Hd
+          children: Lb(Mb ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: Eb
           })
         })]
       })
     }
 
-    function yd(dd) {
+    function Fb(bb) {
       let {
-        view: Od,
-        needsLogin: md,
-        busy: Fd,
-        highlight: Kd,
-        onBuy: hd
-      } = dd;
+        view: wb,
+        needsLogin: Mb,
+        busy: Hb,
+        highlight: gb,
+        onBuy: lb
+      } = bb;
       const {
-        t: vd
-      } = (0, Xd.G)();
-      return (0, Nd.jsxs)("div", {
-        className: Rd()("NewPlayerDealPacks", Od.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [Od.packs.map(((dd, Od) => (0, Nd.jsxs)(Wd.Fragment, {
-          children: [Od > 0 && (0, Nd.jsx)("div", {
+        t: Lb
+      } = (0, Vb.C)();
+      return (0, tb.jsxs)("div", {
+        className: pb()("NewPlayerDealPacks", wb.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [wb.packs.map(((bb, wb) => (0, tb.jsxs)(eb.Fragment, {
+          children: [wb > 0 && (0, tb.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, Nd.jsx)("i", {})
-          }), (0, Nd.jsx)(Hd, {
-            offered: dd,
-            needsLogin: md,
-            busy: Fd,
-            highlight: Kd === dd.pack.packageId,
+            children: (0, tb.jsx)("i", {})
+          }), (0, tb.jsx)(Eb, {
+            offered: bb,
+            needsLogin: Mb,
+            busy: Hb,
+            highlight: gb === bb.pack.packageId,
             onBuy: () => {
-              hd(dd)
+              lb(bb)
             }
           })]
-        }, dd.pack.packageId))), (0, Nd.jsx)("div", {
+        }, bb.pack.packageId))), (0, tb.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, Nd.jsx)("span", {
+          children: (0, tb.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: vd("newPlayerDeal:limit")
+            children: Lb("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  35611: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Ud,
-      d: () => Bd
+  35389: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Kb,
+      f: () => Rb
     });
-    md(35605);
-    var Wd = md(4175),
-      Fd = md(1605),
-      Rd = md(3184),
-      Xd = md(4164),
-      Kd = md(4141),
-      hd = md(4173),
-      vd = md(4122),
-      Qd = md(1238),
-      td = md(1462),
-      od = md(1186),
-      Nd = md(1572),
-      qd = md(1443),
-      Hd = md(3353),
-      yd = md(3758),
-      bd = md(3610),
-      Td = md(3618),
-      pd = md(3621),
-      Yd = md(1341);
-    const gd = new hd.d(vd.getBillingClient, vd.addPurchaseRecordListener);
-    let wd = !1;
+    Mb(35387);
+    var eb = Mb(4350),
+      Hb = Mb(1648),
+      pb = Mb(3263),
+      Vb = Mb(4342),
+      gb = Mb(4325),
+      lb = Mb(4344),
+      Lb = Mb(4308),
+      Ib = Mb(1259),
+      Ob = Mb(1504),
+      Ub = Mb(1179),
+      tb = Mb(1616),
+      Cb = Mb(1475),
+      Eb = Mb(3457),
+      Fb = Mb(3889),
+      Bb = Mb(3744),
+      sb = Mb(3750),
+      mb = Mb(3759),
+      hb = Mb(1364);
+    const zb = new lb.c(Lb.getBillingClient, Lb.addPurchaseRecordListener);
+    let Xb = !1;
 
-    function Ed(dd, Od) {
-      null !== dd && (0, bd.q)(dd) || ((0, Fd.reportAnalyticsClick)({
+    function xb(bb, wb) {
+      null !== bb && (0, Bb.p)(bb) || ((0, Hb.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${Od.pack.packageId}`
-      }), null !== dd && (0, bd.u)(dd), Ud(Od.pack.gems))
+        value: `self:${wb.pack.packageId}`
+      }), null !== bb && (0, Bb.t)(bb), Kb(wb.pack.gems))
     }
 
-    function Jd(dd, Od, md) {
-      const Fd = (0, bd.c)(Od);
-      switch (dd.kind) {
+    function jb(bb, wb, Mb) {
+      const Hb = (0, Bb.b)(wb);
+      switch (bb.kind) {
         case "completed":
-          Ed(Fd, md);
+          xb(Hb, Mb);
           break;
         case "pending":
-          Rd = dd.intentId, Xd = () => {
-            yd.j.refresh(), Ed(Fd, md)
-          }, wd || (wd = !0, gd.listen()), gd.follow(Rd, Xd);
+          pb = bb.intentId, Vb = () => {
+            Fb.g.refresh(), xb(Hb, Mb)
+          }, Xb || (Xb = !0, zb.listen()), zb.follow(pb, Vb);
           break;
         case "unknownPackage":
-          (0, bd.G)(Od, null);
+          (0, Bb.L)(wb, null);
           break;
         case "failed":
-          dd.errorKey === Wd.e.newPlayerDealUnavailable && (0, bd.G)(Od, null)
+          bb.errorKey === eb.c.newPlayerDealUnavailable && (0, Bb.L)(wb, null)
       }
-      var Rd, Xd
+      var pb, Vb
     }
 
-    function Ud(dd) {
-      td.NotificationProvider.showCustomPopup({
-        body: Od => (0, Yd.jsx)(xd, {
-          gems: dd,
-          close: Od
+    function Kb(bb) {
+      Ob.NotificationProvider.showCustomPopup({
+        body: wb => (0, hb.jsx)(rb, {
+          gems: bb,
+          close: wb
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function xd(dd) {
+    function rb(bb) {
       let {
-        gems: Od,
-        close: md
-      } = dd;
+        gems: wb,
+        close: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Qd.G)();
-      return (0, Yd.jsxs)("div", {
+        t: eb
+      } = (0, Ib.C)();
+      return (0, hb.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, Yd.jsxs)("div", {
+        children: [(0, hb.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, Yd.jsx)(qd.c, {
+          children: [(0, hb.jsx)(Cb.b, {
             name: "circle-check"
-          }), (0, Yd.jsx)(Hd.c, {
-            amount: Od
-          }), (0, Yd.jsx)("span", {
-            children: Wd("newPlayerDeal:added")
+          }), (0, hb.jsx)(Eb.d, {
+            amount: wb
+          }), (0, hb.jsx)("span", {
+            children: eb("newPlayerDeal:added")
           })]
-        }), (0, Yd.jsx)(Nd.m, {
+        }), (0, hb.jsx)(tb.p, {
           className: "NewPlayerDealAddedOk",
-          onClick: md,
-          children: Wd("general:ok")
+          onClick: Mb,
+          children: eb("general:ok")
         })]
       })
     }
 
-    function Bd(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xd.d;
+    function Rb(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Vb.e;
       const {
-        userContext: md
-      } = (0, od.d)(), {
-        purchaseUnderWay: Wd,
-        notice: Fd,
-        buy: hd
-      } = (0, Kd.d)(Od), vd = (0, Td.k)(), Qd = md.mayBuy() || (0, Rd.guestsMayBuy)(), td = null === vd ? !Qd : vd.guest && !md.isLoggedIn();
+        userContext: Mb
+      } = (0, Ub.e)(), {
+        purchaseUnderWay: eb,
+        notice: Hb,
+        buy: lb
+      } = (0, gb.b)(wb), Lb = (0, sb.l)(), Ib = Mb.mayBuy() || (0, pb.guestsMayBuy)(), Ob = null === Lb ? !Ib : Lb.guest && !Mb.isLoggedIn();
       return {
-        purchaseUnderWay: Wd,
-        notice: Fd,
-        needsLogin: td,
-        buyPack: function(Wd, Fd) {
-          (0, bd.y)("new_player_deal.buy", (0, pd.e)(Wd.arm, dd, Fd.pack.packageId)), null === vd ? hd(function(dd) {
+        purchaseUnderWay: eb,
+        notice: Hb,
+        needsLogin: Ob,
+        buyPack: function(eb, Hb) {
+          (0, Bb.A)("new_player_deal.buy", (0, mb.b)(eb.arm, bb, Hb.pack.packageId)), null === Lb ? lb(function(bb) {
             return {
-              sku: dd.pack.packageId,
-              tier: dd.tier,
-              amount: dd.pack.gems,
+              sku: bb.pack.packageId,
+              tier: bb.tier,
+              amount: bb.pack.gems,
               bonusPercent: 0,
-              package: dd.package
+              package: bb.package
             }
-          }(Fd), null, {
+          }(Hb), null, {
             followPending: !1
-          }).then((dd => {
-            Jd(dd, md, Fd)
-          })) : td ? Od(Fd.pack.packageId, null) : Ed((0, bd.c)(md), Fd)
+          }).then((bb => {
+            jb(bb, Mb, Hb)
+          })) : Ob ? wb(Hb.pack.packageId, null) : xb((0, Bb.b)(Mb), Hb)
         }
       }
     }
   },
-  35530: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => vd
+  35315: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Lb
     });
-    var Wd = md(66),
-      Fd = md(1155),
-      Rd = md.n(Fd),
-      Xd = md(2125),
-      Kd = md(1341);
+    var eb = Mb(64),
+      Hb = Mb(1159),
+      pb = Mb.n(Hb),
+      Vb = Mb(2183),
+      gb = Mb(1364);
 
-    function hd(dd) {
-      const Od = Math.floor(dd / 3600),
-        md = Math.floor(dd % 3600 / 60),
-        Wd = Math.floor(dd % 60),
-        Fd = `${md.toString().padStart(2,"0")}:${Wd.toString().padStart(2,"0")}`;
-      return Od > 0 ? `${Od}:${Fd}` : Fd
+    function lb(bb) {
+      const wb = Math.floor(bb / 3600),
+        Mb = Math.floor(bb % 3600 / 60),
+        eb = Math.floor(bb % 60),
+        Hb = `${Mb.toString().padStart(2,"0")}:${eb.toString().padStart(2,"0")}`;
+      return wb > 0 ? `${wb}:${Hb}` : Hb
     }
-    const vd = (0, Wd.memo)((function(dd) {
+    const Lb = (0, eb.memo)((function(bb) {
       let {
-        className: Od
-      } = dd;
+        className: wb
+      } = bb;
       const {
-        recording: md,
-        clipping: Wd,
-        seconds: Fd
-      } = (0, Xd.h)("replayRecorder");
-      return md || Wd ? (0, Kd.jsxs)("div", {
-        className: Rd()("RecordingIndicator", {
-          RecordingIndicatorClipping: !md
-        }, Od),
+        recording: Mb,
+        clipping: eb,
+        seconds: Hb
+      } = (0, Vb.h)("replayRecorder");
+      return Mb || eb ? (0, gb.jsxs)("div", {
+        className: pb()("RecordingIndicator", {
+          RecordingIndicatorClipping: !Mb
+        }, wb),
         "data-camera-keeper": "",
-        children: [(0, Kd.jsx)("span", {
+        children: [(0, gb.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, Kd.jsx)("span", {
+        }), (0, gb.jsx)("span", {
           className: "RecordingIndicatorLabel",
-          children: md ? "REC" : "CLIP"
-        }), md && (0, Kd.jsx)("span", {
+          children: Mb ? "REC" : "CLIP"
+        }), Mb && (0, gb.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: hd(Fd)
+          children: lb(Hb)
         })]
       }) : null
     }))
   },
-  35616: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => hd
+  35394: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => lb
     });
-    var Wd = md(1155),
-      Fd = md.n(Wd),
-      Rd = md(1341);
-    const Xd = 21,
-      Kd = 2 * Math.PI * Xd;
+    var eb = Mb(1159),
+      Hb = Mb.n(eb),
+      pb = Mb(1364);
+    const Vb = 21,
+      gb = 2 * Math.PI * Vb;
 
-    function hd(dd) {
+    function lb(bb) {
       let {
-        tier: Od,
-        state: md,
-        progress: Wd,
-        size: hd = "large"
-      } = dd;
-      const vd = Fd()("SeasonPassTierNode", {
-        SeasonPassTierNodeSmall: "small" === hd,
-        SeasonPassTierNodeLarge: "large" === hd,
-        SeasonPassTierNodeReached: "reached" === md,
-        SeasonPassTierNodeEarning: "earning" === md
+        tier: wb,
+        state: Mb,
+        progress: eb,
+        size: lb = "large"
+      } = bb;
+      const Lb = Hb()("SeasonPassTierNode", {
+        SeasonPassTierNodeSmall: "small" === lb,
+        SeasonPassTierNodeLarge: "large" === lb,
+        SeasonPassTierNodeReached: "reached" === Mb,
+        SeasonPassTierNodeEarning: "earning" === Mb
       });
-      if ("earning" !== md || "large" === hd) return (0, Rd.jsx)("span", {
-        className: vd,
-        children: (0, Rd.jsx)("span", {
+      if ("earning" !== Mb || "large" === lb) return (0, pb.jsx)("span", {
+        className: Lb,
+        children: (0, pb.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: Od
+          children: wb
         })
       });
-      const Qd = Math.max(0, Math.min(1, Wd));
-      return (0, Rd.jsxs)("span", {
-        className: vd,
+      const Ib = Math.max(0, Math.min(1, eb));
+      return (0, pb.jsxs)("span", {
+        className: Lb,
         role: "progressbar",
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(100 * Qd),
-        children: [(0, Rd.jsxs)("svg", {
+        "aria-valuenow": Math.round(100 * Ib),
+        children: [(0, pb.jsxs)("svg", {
           className: "SeasonPassTierNodeRing",
           viewBox: "0 0 56 56",
           "aria-hidden": "true",
-          children: [(0, Rd.jsx)("circle", {
+          children: [(0, pb.jsx)("circle", {
             className: "SeasonPassTierNodeRingEdge",
             cx: "28",
             cy: "28",
             r: "26"
-          }), (0, Rd.jsx)("circle", {
+          }), (0, pb.jsx)("circle", {
             className: "SeasonPassTierNodeRingTrack",
             cx: "28",
             cy: "28",
-            r: Xd
-          }), (0, Rd.jsx)("circle", {
+            r: Vb
+          }), (0, pb.jsx)("circle", {
             className: "SeasonPassTierNodeRingFill",
             cx: "28",
             cy: "28",
-            r: Xd,
-            strokeDasharray: `${Qd*Kd} ${Kd}`,
+            r: Vb,
+            strokeDasharray: `${Ib*gb} ${gb}`,
             transform: "rotate(-90 28 28)"
-          }), (0, Rd.jsx)("circle", {
+          }), (0, pb.jsx)("circle", {
             className: "SeasonPassTierNodeRingCore",
             cx: "28",
             cy: "28",
             r: "16"
           })]
-        }), (0, Rd.jsx)("span", {
+        }), (0, pb.jsx)("span", {
           className: "SeasonPassTierNodeNumber",
-          children: Od
+          children: wb
         })]
       })
     }
   },
-  5670: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => yd
+  5789: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Fb
     });
-    var Wd = md(1155),
-      Fd = md.n(Wd),
-      Rd = md(5301),
-      Xd = md(1238),
-      Kd = md(1443),
-      hd = md(1572),
-      vd = md(1627),
-      Qd = md(1462),
-      td = md(3531),
-      od = md(1341);
-    const Nd = {
+    var eb = Mb(1159),
+      Hb = Mb.n(eb),
+      pb = Mb(5480),
+      Vb = Mb(1259),
+      gb = Mb(1475),
+      lb = Mb(1616),
+      Lb = Mb(1677),
+      Ib = Mb(1504),
+      Ob = Mb(3666),
+      Ub = Mb(1364);
+    const tb = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -11573,440 +11573,440 @@ export const modules = {
       }
     };
 
-    function qd(dd) {
+    function Cb(bb) {
       let {
-        platform: Od
-      } = dd;
-      const md = "youtube" === Od;
-      return (0, od.jsxs)("span", {
-        className: Fd()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: md
+        platform: wb
+      } = bb;
+      const Mb = "youtube" === wb;
+      return (0, Ub.jsxs)("span", {
+        className: Hb()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: Mb
         }),
-        children: [md && (0, od.jsx)(td.b, {
+        children: [Mb && (0, Ub.jsx)(Ob.e, {
           variant: "white"
-        }), !md && (0, od.jsx)(Kd.c, {
-          name: Nd[Od].icon,
+        }), !Mb && (0, Ub.jsx)(gb.b, {
+          name: tb[wb].icon,
           kit: "brands"
         })]
       })
     }
 
-    function Hd(dd) {
+    function Eb(bb) {
       let {
-        platform: Od,
-        link: md,
-        editable: Wd,
-        userContext: Fd,
-        onLinksUpdated: td
-      } = dd;
+        platform: wb,
+        link: Mb,
+        editable: eb,
+        userContext: Hb,
+        onLinksUpdated: Ob
+      } = bb;
       const {
-        t: Hd
-      } = (0, Xd.G)(), yd = Nd[Od];
-      if (!md && !Wd) return null;
+        t: Eb
+      } = (0, Vb.C)(), Fb = tb[wb];
+      if (!Mb && !eb) return null;
 
-      function bd() {
-        var dd;
-        if (!Fd || !td) return;
-        Qd.NotificationProvider.showInputPopup({
+      function Bb() {
+        var bb;
+        if (!Hb || !Ob) return;
+        Ib.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: yd.name
+              platform: Fb.name
             }
           },
-          prefixText: Rd.x[Od],
+          prefixText: pb.B[wb],
           placeholderText: "playBloxd",
-          initialValue: null !== (dd = null === md || void 0 === md ? void 0 : md.handle) && void 0 !== dd ? dd : "",
+          initialValue: null !== (bb = null === Mb || void 0 === Mb ? void 0 : Mb.handle) && void 0 !== bb ? bb : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: md ? "general:remove" : void 0
-        }).getResult().then((async dd => {
-          if ("notificationTornDown" !== dd && null !== dd) try {
-            "submit" === dd.type ? await vd.e.setSocialLink(Fd, Od, dd.value) : await vd.e.clearSocialLink(Fd, Od), td()
-          } catch (md) {
-            console.error("Failed to update social link", md), Qd.NotificationProvider.showAlertPopup({
-              title: md.errorMessageForUser,
+          secondaryButtonText: Mb ? "general:remove" : void 0
+        }).getResult().then((async bb => {
+          if ("notificationTornDown" !== bb && null !== bb) try {
+            "submit" === bb.type ? await Lb.e.setSocialLink(Hb, wb, bb.value) : await Lb.e.clearSocialLink(Hb, wb), Ob()
+          } catch (Mb) {
+            console.error("Failed to update social link", Mb), Ib.NotificationProvider.showAlertPopup({
+              title: Mb.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (md) {
-        const dd = `@${md.handle}`;
-        return (0, od.jsxs)("a", {
+      if (Mb) {
+        const bb = `@${Mb.handle}`;
+        return (0, Ub.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: yd.color
+            background: Fb.color
           },
-          href: md.profileUrl,
+          href: Mb.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, od.jsxs)("div", {
+          children: [(0, Ub.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, od.jsx)(qd, {
-              platform: Od
-            }), (0, od.jsx)("span", {
+            children: [(0, Ub.jsx)(Cb, {
+              platform: wb
+            }), (0, Ub.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, od.jsx)("span", {
+              children: (0, Ub.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: dd
+                children: bb
               })
             })]
-          }), Wd && (0, od.jsx)("button", {
+          }), eb && (0, Ub.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, hd.X)({
+            ...(0, lb.bb)({
               stopPropagation: !0
             }),
-            onClick: dd => {
-              dd.stopPropagation(), dd.preventDefault(), bd()
+            onClick: bb => {
+              bb.stopPropagation(), bb.preventDefault(), Bb()
             },
-            children: (0, od.jsx)(Kd.c, {
+            children: (0, Ub.jsx)(gb.b, {
               name: "pen-to-square"
             })
-          }), !Wd && (0, od.jsx)("span", {
+          }), !eb && (0, Ub.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, od.jsx)(Kd.c, {
+            children: (0, Ub.jsx)(gb.b, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, od.jsxs)("button", {
+      return (0, Ub.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: yd.color
+          background: Fb.color
         },
-        ...(0, hd.X)(),
+        ...(0, lb.bb)(),
         onClick: () => {
-          bd()
+          Bb()
         },
-        children: [(0, od.jsx)(qd, {
-          platform: Od
-        }), (0, od.jsxs)("span", {
+        children: [(0, Ub.jsx)(Cb, {
+          platform: wb
+        }), (0, Ub.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, od.jsx)("span", {
+          children: [(0, Ub.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: yd.name
-          }), (0, od.jsx)("span", {
+            children: Fb.name
+          }), (0, Ub.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: Hd("homePage:profileSocialLinkAdd")
+            children: Eb("homePage:profileSocialLinkAdd")
           })]
-        }), (0, od.jsx)("span", {
+        }), (0, Ub.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, od.jsx)(Kd.c, {
+          children: (0, Ub.jsx)(gb.b, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function yd(dd) {
+    function Fb(bb) {
       let {
-        socialLinks: Od,
-        editable: md = !1,
-        userContext: Wd,
-        onLinksUpdated: Fd
-      } = dd;
-      if (!md && 0 === Od.length) return null;
-      const Xd = new Map(Od.map((dd => [dd.platform, dd]))),
-        Kd = md ? Rd.u : Od.map((dd => dd.platform));
-      return (0, od.jsx)("div", {
+        socialLinks: wb,
+        editable: Mb = !1,
+        userContext: eb,
+        onLinksUpdated: Hb
+      } = bb;
+      if (!Mb && 0 === wb.length) return null;
+      const Vb = new Map(wb.map((bb => [bb.platform, bb]))),
+        gb = Mb ? pb.y : wb.map((bb => bb.platform));
+      return (0, Ub.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, od.jsx)("div", {
+        children: (0, Ub.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: Kd.map((dd => (0, od.jsx)(Hd, {
-            platform: dd,
-            link: Xd.get(dd),
-            editable: md,
-            userContext: Wd,
-            onLinksUpdated: Fd
-          }, dd)))
+          children: gb.map((bb => (0, Ub.jsx)(Eb, {
+            platform: bb,
+            link: Vb.get(bb),
+            editable: Mb,
+            userContext: eb,
+            onLinksUpdated: Hb
+          }, bb)))
         })
       })
     }
   },
-  35535: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd
+  35320: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb
     });
-    var Wd = md(5197),
-      Fd = md(5206);
+    var eb = Mb(5387),
+      Hb = Mb(5395);
 
-    function Rd(dd) {
+    function pb(bb) {
       let {
-        children: Od,
-        showing: md,
-        globallyUniqueKey: Rd,
-        alwaysMountChildren: Xd = !1,
-        doGameplayStartStopOnShow: Kd = !0,
-        keepsMovement: hd = !1
-      } = dd;
-      return (0, Fd.e)(!0, md, Rd, hd), (0, Wd.b)(Kd, md), md || Xd ? Od : null
+        children: wb,
+        showing: Mb,
+        globallyUniqueKey: pb,
+        alwaysMountChildren: Vb = !1,
+        doGameplayStartStopOnShow: gb = !0,
+        keepsMovement: lb = !1
+      } = bb;
+      return (0, Hb.d)(!0, Mb, pb, lb), (0, eb.b)(gb, Mb), Mb || Vb ? wb : null
     }
   },
-  35596: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd
+  35377: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => pb
     });
-    var Wd = md(66),
-      Fd = md(4664);
+    var eb = Mb(64),
+      Hb = Mb(4835);
 
-    function Rd() {
-      const [dd, Od] = (0, Wd.useState)(!1);
-      return (0, Wd.useLayoutEffect)((() => {
-        let dd = !0;
-        return (0, Fd.e)().then((() => {
-          dd && Od(!0)
+    function pb() {
+      const [bb, wb] = (0, eb.useState)(!1);
+      return (0, eb.useLayoutEffect)((() => {
+        let bb = !0;
+        return (0, Hb.e)().then((() => {
+          bb && wb(!0)
         })), () => {
-          dd = !1
+          bb = !1
         }
-      }), []), dd
+      }), []), bb
     }
   },
-  7530: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd
+  7771: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb
     });
-    var Wd = md(66),
-      Fd = md(46);
+    var eb = Mb(64),
+      Hb = Mb(43);
 
-    function Rd(dd, Od) {
-      var md;
-      const [Rd, Xd] = (0, Wd.useState)(null !== (md = Fd.k.getItem(dd)) && void 0 !== md ? md : Od);
-      return [Rd, Od => {
-        Fd.k.setItem(dd, Od), Xd(Od)
+    function pb(bb, wb) {
+      var Mb;
+      const [pb, Vb] = (0, eb.useState)(null !== (Mb = Hb.i.getItem(bb)) && void 0 !== Mb ? Mb : wb);
+      return [pb, wb => {
+        Hb.i.setItem(bb, wb), Vb(wb)
       }]
     }
   },
-  35511: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Hd,
-      g: () => qd
+  35294: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Eb,
+      c: () => Cb
     });
-    md(35513);
-    var Wd = md(1155),
-      Fd = md.n(Wd),
-      Rd = md(66),
-      Xd = md(35508);
+    Mb(35298);
+    var eb = Mb(1159),
+      Hb = Mb.n(eb),
+      pb = Mb(64),
+      Vb = Mb(35291);
 
-    function Kd(dd, Od) {
-      return Math.max(1, Math.round(dd * Od))
+    function gb(bb, wb) {
+      return Math.max(1, Math.round(bb * wb))
     }
 
-    function hd(dd, Od) {
-      const md = Od * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        Wd = function(dd, Od) {
-          if (dd.lines) return Kd(dd.lineThickness, Od) % 2;
-          if (dd.dot) return Kd(dd.dotSize, Od) % 2;
-          return vd(dd, Od) % 2
-        }(dd, Od),
-        Fd = Qd(dd.lineThickness * md, Wd),
-        Rd = Kd(dd.lineLength, md),
-        Xd = Math.round(dd.gap * md),
-        hd = dd.outline > 0 ? Kd(dd.outline, md) : 0,
-        od = [];
-      if (dd.lines && (od.push({
-          x: Fd + Xd,
+    function lb(bb, wb) {
+      const Mb = wb * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        eb = function(bb, wb) {
+          if (bb.lines) return gb(bb.lineThickness, wb) % 2;
+          if (bb.dot) return gb(bb.dotSize, wb) % 2;
+          return Lb(bb, wb) % 2
+        }(bb, wb),
+        Hb = Ib(bb.lineThickness * Mb, eb),
+        pb = gb(bb.lineLength, Mb),
+        Vb = Math.round(bb.gap * Mb),
+        lb = bb.outline > 0 ? gb(bb.outline, Mb) : 0,
+        Ub = [];
+      if (bb.lines && (Ub.push({
+          x: Hb + Vb,
           y: 0,
-          w: Rd,
-          h: Fd,
+          w: pb,
+          h: Hb,
           arm: "right"
-        }), od.push({
-          x: -Xd - Rd,
+        }), Ub.push({
+          x: -Vb - pb,
           y: 0,
-          w: Rd,
-          h: Fd,
+          w: pb,
+          h: Hb,
           arm: "left"
-        }), od.push({
+        }), Ub.push({
           x: 0,
-          y: Fd + Xd,
-          w: Fd,
-          h: Rd,
+          y: Hb + Vb,
+          w: Hb,
+          h: pb,
           arm: "down"
-        }), dd.tStyle || od.push({
+        }), bb.tStyle || Ub.push({
           x: 0,
-          y: -Xd - Rd,
-          w: Fd,
-          h: Rd,
+          y: -Vb - pb,
+          w: Hb,
+          h: pb,
           arm: "up"
-        }), 0 === Xd && od.push({
+        }), 0 === Vb && Ub.push({
           x: 0,
           y: 0,
-          w: Fd,
-          h: Fd
-        })), dd.dot) {
-        const Od = Qd(dd.dotSize * md, Wd),
-          Rd = dd.lines && 0 === Xd && dd.dotSize > dd.lineThickness ? Math.max(Od, Fd + 2) : Od,
-          Kd = (Fd - Rd) / 2;
-        od.push({
-          x: Kd,
-          y: Kd,
-          w: Rd,
-          h: Rd
+          w: Hb,
+          h: Hb
+        })), bb.dot) {
+        const wb = Ib(bb.dotSize * Mb, eb),
+          pb = bb.lines && 0 === Vb && bb.dotSize > bb.lineThickness ? Math.max(wb, Hb + 2) : wb,
+          gb = (Hb - pb) / 2;
+        Ub.push({
+          x: gb,
+          y: gb,
+          w: pb,
+          h: pb
         })
       }
-      const Nd = od.map((dd => ({
-        ...dd,
-        x: dd.x - hd,
-        y: dd.y - hd,
-        w: dd.w + 2 * hd,
-        h: dd.h + 2 * hd
+      const tb = Ub.map((bb => ({
+        ...bb,
+        x: bb.x - lb,
+        y: bb.y - lb,
+        w: bb.w + 2 * lb,
+        h: bb.h + 2 * lb
       })));
-      let qd = null,
-        Hd = null;
-      if (dd.circle) {
-        const Od = Kd(dd.circleThickness, md),
-          Rd = function(dd, Od) {
-            return dd + (dd % 2 === Od ? 0 : 1)
-          }(vd(dd, md), Wd),
-          Xd = (Fd - Rd) / 2;
-        qd = td(Xd, Rd, Od), hd > 0 && (Hd = td(Xd - hd, Rd + 2 * hd, Od + 2 * hd))
+      let Cb = null,
+        Eb = null;
+      if (bb.circle) {
+        const wb = gb(bb.circleThickness, Mb),
+          pb = function(bb, wb) {
+            return bb + (bb % 2 === wb ? 0 : 1)
+          }(Lb(bb, Mb), eb),
+          Vb = (Hb - pb) / 2;
+        Cb = Ob(Vb, pb, wb), lb > 0 && (Eb = Ob(Vb - lb, pb + 2 * lb, wb + 2 * lb))
       }
       return {
-        cell: Fd,
-        fills: od,
-        outlines: hd > 0 ? Nd : [],
-        ring: qd,
-        ringOutline: Hd
+        cell: Hb,
+        fills: Ub,
+        outlines: lb > 0 ? tb : [],
+        ring: Cb,
+        ringOutline: Eb
       }
     }
 
-    function vd(dd, Od) {
-      return Math.round(dd.circleRadius * Od * 2 + Kd(dd.circleThickness, Od))
+    function Lb(bb, wb) {
+      return Math.round(bb.circleRadius * wb * 2 + gb(bb.circleThickness, wb))
     }
 
-    function Qd(dd, Od) {
-      return Math.max(2 - Od, 2 * Math.round((dd - Od) / 2) + Od)
+    function Ib(bb, wb) {
+      return Math.max(2 - wb, 2 * Math.round((bb - wb) / 2) + wb)
     }
 
-    function td(dd, Od, md) {
-      const Wd = 2 * md >= Od - 1;
+    function Ob(bb, wb, Mb) {
+      const eb = 2 * Mb >= wb - 1;
       return {
-        x: dd,
-        y: dd,
-        size: Od,
-        border: Math.min(md, Math.floor(Od / 2)),
-        filled: Wd
+        x: bb,
+        y: bb,
+        size: wb,
+        border: Math.min(Mb, Math.floor(wb / 2)),
+        filled: eb
       }
     }
-    var od = md(1341);
-    const Nd = 1.4;
+    var Ub = Mb(1364);
+    const tb = 1.4;
 
-    function qd(dd, Od) {
-      return dd && Od ? `scale(${Nd})` : "scale(1)"
+    function Cb(bb, wb) {
+      return bb && wb ? `scale(${tb})` : "scale(1)"
     }
 
-    function Hd(dd) {
-      return "classic" === dd.settings.style ? (0, od.jsx)(Td, {
-        ...dd
-      }) : (0, od.jsx)(Ud, {
-        ...dd
+    function Eb(bb) {
+      return "classic" === bb.settings.style ? (0, Ub.jsx)(sb, {
+        ...bb
+      }) : (0, Ub.jsx)(Kb, {
+        ...bb
       })
     }
-    const yd = .125;
+    const Fb = .125;
 
-    function bd(dd, Od) {
-      const md = {};
-      if (dd.color !== Xd.d.color && (md.color = (0, Xd.j)(dd.color)), dd.opacity !== Xd.d.opacity && (md.opacity = dd.opacity / 100), dd.outline !== Xd.d.outline || dd.outlineColor !== Xd.d.outlineColor) {
-        const Od = dd.outline,
-          Wd = (0, Xd.j)(dd.outlineColor);
-        md.textShadow = Od > 0 ? `-${Od}px 0 ${Wd}, 0 ${Od}px ${Wd}, ${Od}px 0 ${Wd}, 0 -${Od}px ${Wd}` : "none"
+    function Bb(bb, wb) {
+      const Mb = {};
+      if (bb.color !== Vb.e.color && (Mb.color = (0, Vb.h)(bb.color)), bb.opacity !== Vb.e.opacity && (Mb.opacity = bb.opacity / 100), bb.outline !== Vb.e.outline || bb.outlineColor !== Vb.e.outlineColor) {
+        const wb = bb.outline,
+          eb = (0, Vb.h)(bb.outlineColor);
+        Mb.textShadow = wb > 0 ? `-${wb}px 0 ${eb}, 0 ${wb}px ${eb}, ${wb}px 0 ${eb}, 0 -${wb}px ${eb}` : "none"
       }
-      if (dd.size !== Xd.d.size) {
-        const Wd = dd.size / 100;
-        md.fontSize = Od ? `calc(max(1.3rem, 18px) * ${Wd})` : `calc(1.3rem * ${Wd})`, md.marginTop = `-${yd}em`, md.transformOrigin = `50% calc(50% + ${yd}em)`
+      if (bb.size !== Vb.e.size) {
+        const eb = bb.size / 100;
+        Mb.fontSize = wb ? `calc(max(1.3rem, 18px) * ${eb})` : `calc(1.3rem * ${eb})`, Mb.marginTop = `-${Fb}em`, Mb.transformOrigin = `50% calc(50% + ${Fb}em)`
       }
-      return md
+      return Mb
     }
 
-    function Td(dd) {
+    function sb(bb) {
       let {
-        settings: Od,
-        touch: md,
-        inPreview: Wd,
-        inEditor: Rd,
-        pressed: Xd = !1,
-        pressRef: Kd
-      } = dd;
-      return (0, od.jsx)("div", {
-        className: Fd()("Crosshair", {
-          Touch: md,
-          CrosshairInPreview: Wd,
-          CrosshairInEditor: Rd || Wd
+        settings: wb,
+        touch: Mb,
+        inPreview: eb,
+        inEditor: pb,
+        pressed: Vb = !1,
+        pressRef: gb
+      } = bb;
+      return (0, Ub.jsx)("div", {
+        className: Hb()("Crosshair", {
+          Touch: Mb,
+          CrosshairInPreview: eb,
+          CrosshairInEditor: pb || eb
         }),
-        ref: Kd,
+        ref: gb,
         style: {
-          transform: qd(Xd, Od.growOnClick),
-          ...bd(Od, md)
+          transform: Cb(Vb, wb.growOnClick),
+          ...Bb(wb, Mb)
         },
         children: "+"
       })
     }
 
-    function pd(dd, Od) {
-      return dd / Od + "px"
+    function mb(bb, wb) {
+      return bb / wb + "px"
     }
 
-    function Yd(dd, Od, md, Wd) {
+    function hb(bb, wb, Mb, eb) {
       return {
-        ...Ed(dd, Od, md),
-        width: pd(dd.w, md),
-        height: pd(dd.h, md),
-        background: Wd
+        ...xb(bb, wb, Mb),
+        width: mb(bb.w, Mb),
+        height: mb(bb.h, Mb),
+        background: eb
       }
     }
 
-    function gd(dd, Od, md) {
+    function zb(bb, wb, Mb) {
       return {
-        left: pd(dd.x, Od),
-        top: pd(dd.y, Od),
-        width: pd(dd.size, Od),
-        height: pd(dd.size, Od),
-        borderWidth: pd(dd.border, Od),
-        borderColor: md,
-        background: dd.filled ? md : void 0
+        left: mb(bb.x, wb),
+        top: mb(bb.y, wb),
+        width: mb(bb.size, wb),
+        height: mb(bb.size, wb),
+        borderWidth: mb(bb.border, wb),
+        borderColor: Mb,
+        background: bb.filled ? Mb : void 0
       }
     }
-    const wd = {
+    const Xb = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function Ed(dd, Od, md) {
-      const [Wd, Fd] = dd.arm ? wd[dd.arm] : [0, 0], Rd = Math.round(Od * md);
+    function xb(bb, wb, Mb) {
+      const [eb, Hb] = bb.arm ? Xb[bb.arm] : [0, 0], pb = Math.round(wb * Mb);
       return {
-        left: pd(dd.x + Wd * Rd, md),
-        top: pd(dd.y + Fd * Rd, md)
+        left: mb(bb.x + eb * pb, Mb),
+        top: mb(bb.y + Hb * pb, Mb)
       }
     }
 
-    function Jd(dd) {
-      return dd.arm ? {
-        "data-arm": dd.arm,
-        "data-x": dd.x,
-        "data-y": dd.y
+    function jb(bb) {
+      return bb.arm ? {
+        "data-arm": bb.arm,
+        "data-x": bb.x,
+        "data-y": bb.y
       } : {}
     }
 
-    function Ud(dd) {
+    function Kb(bb) {
       let {
-        settings: Od,
-        inPreview: md,
-        inEditor: Wd,
-        pressed: Kd = !1,
-        spread: vd,
-        spreadRef: Qd
-      } = dd;
-      const td = (0, Rd.useRef)(null),
+        settings: wb,
+        inPreview: Mb,
+        inEditor: eb,
+        pressed: gb = !1,
+        spread: Lb,
+        spreadRef: Ib
+      } = bb;
+      const Ob = (0, pb.useRef)(null),
         {
-          box: qd,
-          dpr: Hd
-        } = function(dd) {
-          const [Od, md] = (0, Rd.useState)({
+          box: Cb,
+          dpr: Eb
+        } = function(bb) {
+          const [wb, Mb] = (0, pb.useState)({
             box: {
               left: 0,
               top: 0,
@@ -12015,200 +12015,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, Rd.useLayoutEffect)((() => {
-            const Od = dd.current;
-            if (!Od) return;
-            const Wd = () => {
-              const dd = Od.getBoundingClientRect(),
-                Wd = window.devicePixelRatio || 1;
-              md((Od => Od.dpr === Wd && Od.box.left === dd.left && Od.box.top === dd.top && Od.box.width === dd.width && Od.box.height === dd.height ? Od : {
+          return (0, pb.useLayoutEffect)((() => {
+            const wb = bb.current;
+            if (!wb) return;
+            const eb = () => {
+              const bb = wb.getBoundingClientRect(),
+                eb = window.devicePixelRatio || 1;
+              Mb((wb => wb.dpr === eb && wb.box.left === bb.left && wb.box.top === bb.top && wb.box.width === bb.width && wb.box.height === bb.height ? wb : {
                 box: {
-                  left: dd.left,
-                  top: dd.top,
-                  width: dd.width,
-                  height: dd.height
+                  left: bb.left,
+                  top: bb.top,
+                  width: bb.width,
+                  height: bb.height
                 },
-                dpr: Wd
+                dpr: eb
               }))
             };
-            Wd();
-            const Fd = new ResizeObserver(Wd);
-            return Fd.observe(Od), window.addEventListener("resize", Wd), window.addEventListener("scroll", Wd, !0), () => {
-              Fd.disconnect(), window.removeEventListener("resize", Wd), window.removeEventListener("scroll", Wd, !0)
+            eb();
+            const Hb = new ResizeObserver(eb);
+            return Hb.observe(wb), window.addEventListener("resize", eb), window.addEventListener("scroll", eb, !0), () => {
+              Hb.disconnect(), window.removeEventListener("resize", eb), window.removeEventListener("scroll", eb, !0)
             }
-          }), [dd]), Od
-        }(td),
-        yd = (0, Rd.useRef)(Hd);
-      yd.current = Hd;
-      const bd = hd(Od, Hd, Kd && Od.growOnClick ? Nd : 1),
-        Td = function(dd, Od, md) {
-          const Wd = Math.round((dd.left + dd.width / 2) * md - Od / 2),
-            Fd = Math.round((dd.top + dd.height / 2) * md - Od / 2);
+          }), [bb]), wb
+        }(Ob),
+        Fb = (0, pb.useRef)(Eb);
+      Fb.current = Eb;
+      const Bb = lb(wb, Eb, gb && wb.growOnClick ? tb : 1),
+        sb = function(bb, wb, Mb) {
+          const eb = Math.round((bb.left + bb.width / 2) * Mb - wb / 2),
+            Hb = Math.round((bb.top + bb.height / 2) * Mb - wb / 2);
           return {
-            x: Wd / md - dd.left,
-            y: Fd / md - dd.top
+            x: eb / Mb - bb.left,
+            y: Hb / Mb - bb.top
           }
-        }(qd, bd.cell, Hd),
-        pd = (0, Xd.j)(Od.color),
-        wd = (0, Xd.j)(Od.outlineColor),
-        Ud = (0, Rd.useRef)(0);
-      (0, Rd.useLayoutEffect)((() => {
-        if (Qd) return Qd.current = dd => {
-          var Od;
-          Ud.current = dd, null === (Od = td.current) || void 0 === Od || Od.querySelectorAll("[data-arm]").forEach((Od => {
-            Object.assign(Od.style, Ed(function(dd) {
+        }(Cb, Bb.cell, Eb),
+        mb = (0, Vb.h)(wb.color),
+        Xb = (0, Vb.h)(wb.outlineColor),
+        Kb = (0, pb.useRef)(0);
+      (0, pb.useLayoutEffect)((() => {
+        if (Ib) return Ib.current = bb => {
+          var wb;
+          Kb.current = bb, null === (wb = Ob.current) || void 0 === wb || wb.querySelectorAll("[data-arm]").forEach((wb => {
+            Object.assign(wb.style, xb(function(bb) {
               return {
-                x: Number(dd.dataset.x),
-                y: Number(dd.dataset.y),
-                arm: dd.dataset.arm
+                x: Number(bb.dataset.x),
+                y: Number(bb.dataset.y),
+                arm: bb.dataset.arm
               }
-            }(Od), dd, yd.current))
+            }(wb), bb, Fb.current))
           }))
         }, () => {
-          Qd.current = null
+          Ib.current = null
         }
-      }), [Qd]);
-      const xd = null !== vd && void 0 !== vd ? vd : Ud.current;
-      return (0, od.jsx)("div", {
-        ref: td,
-        className: Fd()("CrosshairShapes", {
-          CrosshairInPreview: md,
-          CrosshairInEditor: Wd || md,
-          CrosshairSpreads: void 0 !== Qd
+      }), [Ib]);
+      const rb = null !== Lb && void 0 !== Lb ? Lb : Kb.current;
+      return (0, Ub.jsx)("div", {
+        ref: Ob,
+        className: Hb()("CrosshairShapes", {
+          CrosshairInPreview: Mb,
+          CrosshairInEditor: eb || Mb,
+          CrosshairSpreads: void 0 !== Ib
         }),
-        children: (0, od.jsx)("div", {
+        children: (0, Ub.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: Td.x,
-            top: Td.y,
-            opacity: Od.opacity / 100
+            left: sb.x,
+            top: sb.y,
+            opacity: wb.opacity / 100
           },
-          children: (0, od.jsxs)("div", {
+          children: (0, Ub.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [bd.ringOutline && (0, od.jsx)("div", {
+            children: [Bb.ringOutline && (0, Ub.jsx)("div", {
               className: "CrosshairRing",
-              style: gd(bd.ringOutline, Hd, wd)
-            }), bd.outlines.map(((dd, Od) => (0, od.jsx)("div", {
+              style: zb(Bb.ringOutline, Eb, Xb)
+            }), Bb.outlines.map(((bb, wb) => (0, Ub.jsx)("div", {
               className: "CrosshairPart",
-              ...Jd(dd),
-              style: Yd(dd, xd, Hd, wd)
-            }, `o${Od}`))), bd.ring && (0, od.jsx)("div", {
+              ...jb(bb),
+              style: hb(bb, rb, Eb, Xb)
+            }, `o${wb}`))), Bb.ring && (0, Ub.jsx)("div", {
               className: "CrosshairRing",
-              style: gd(bd.ring, Hd, pd)
-            }), bd.fills.map(((dd, Od) => (0, od.jsx)("div", {
+              style: zb(Bb.ring, Eb, mb)
+            }), Bb.fills.map(((bb, wb) => (0, Ub.jsx)("div", {
               className: "CrosshairPart",
-              ...Jd(dd),
-              style: Yd(dd, xd, Hd, pd)
-            }, `f${Od}`)))]
+              ...jb(bb),
+              style: hb(bb, rb, Eb, mb)
+            }, `f${wb}`)))]
           })
         })
       })
     }
   },
-  35521: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Qd,
-      e: () => yd,
-      h: () => Hd
+  35305: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Ib,
+      e: () => Fb,
+      g: () => Eb
     });
-    var Wd = md(35508);
-    const Fd = "XH1-",
-      Rd = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      Xd = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      Kd = ["color", "outlineColor"],
-      hd = 1 + 3 * Kd.length + Xd.length + 1,
-      vd = Math.ceil(8 * hd / Math.log2(62)),
-      Qd = Fd.length + vd;
+    var eb = Mb(35291);
+    const Hb = "XH1-",
+      pb = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      Vb = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      gb = ["color", "outlineColor"],
+      lb = 1 + 3 * gb.length + Vb.length + 1,
+      Lb = Math.ceil(8 * lb / Math.log2(62)),
+      Ib = Hb.length + Lb;
 
-    function td(dd) {
-      let Od = 90;
-      for (const md of dd) Od = 31 * Od + md & 255;
-      return Od
+    function Ob(bb) {
+      let wb = 90;
+      for (const Mb of bb) wb = 31 * wb + Mb & 255;
+      return wb
     }
-    const od = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Nd = BigInt(od.length);
+    const Ub = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      tb = BigInt(Ub.length);
 
-    function qd(dd, Od) {
-      let md = 0n;
-      for (const Fd of dd) {
-        const dd = od.indexOf(Fd);
-        if (dd < 0) return null;
-        md = md * Nd + BigInt(dd)
+    function Cb(bb, wb) {
+      let Mb = 0n;
+      for (const Hb of bb) {
+        const bb = Ub.indexOf(Hb);
+        if (bb < 0) return null;
+        Mb = Mb * tb + BigInt(bb)
       }
-      if (md >> BigInt(8 * Od) !== 0n) return null;
-      const Wd = [];
-      for (let Fd = 0; Fd < Od; Fd++) Wd.unshift(Number(0xffn & md)), md >>= 8n;
-      return Wd
+      if (Mb >> BigInt(8 * wb) !== 0n) return null;
+      const eb = [];
+      for (let Hb = 0; Hb < wb; Hb++) eb.unshift(Number(0xffn & Mb)), Mb >>= 8n;
+      return eb
     }
 
-    function Hd(dd) {
-      let Od = "shapes" === dd.style ? 1 : 0;
-      Rd.forEach(((md, Wd) => {
-        dd[md] && (Od |= 1 << Wd + 1)
+    function Eb(bb) {
+      let wb = "shapes" === bb.style ? 1 : 0;
+      pb.forEach(((Mb, eb) => {
+        bb[Mb] && (wb |= 1 << eb + 1)
       }));
-      const md = [Od];
-      for (const Fd of Kd) {
-        const Od = (0, Wd.f)(Fd, dd[Fd]);
-        md.push(Od >> 16 & 255, Od >> 8 & 255, 255 & Od)
+      const Mb = [wb];
+      for (const Hb of gb) {
+        const wb = (0, eb.f)(Hb, bb[Hb]);
+        Mb.push(wb >> 16 & 255, wb >> 8 & 255, 255 & wb)
       }
-      for (const Fd of Xd) {
+      for (const Hb of Vb) {
         const {
-          min: Od,
-          step: Rd
-        } = Wd.b[Fd];
-        md.push(Math.round(((0, Wd.f)(Fd, dd[Fd]) - Od) / Rd))
+          min: wb,
+          step: pb
+        } = eb.c[Hb];
+        Mb.push(Math.round(((0, eb.f)(Hb, bb[Hb]) - wb) / pb))
       }
-      return md.push(td(md)), Fd + function(dd, Od) {
-        let md = 0n;
-        for (const Fd of dd) md = md << 8n | BigInt(Fd);
-        let Wd = "";
-        for (let Fd = 0; Fd < Od; Fd++) Wd = od[Number(md % Nd)] + Wd, md /= Nd;
-        return Wd
-      }(md, vd)
+      return Mb.push(Ob(Mb)), Hb + function(bb, wb) {
+        let Mb = 0n;
+        for (const Hb of bb) Mb = Mb << 8n | BigInt(Hb);
+        let eb = "";
+        for (let Hb = 0; Hb < wb; Hb++) eb = Ub[Number(Mb % tb)] + eb, Mb /= tb;
+        return eb
+      }(Mb, Lb)
     }
 
-    function yd(dd) {
-      for (const Od of dd.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${vd}})`, "gi"))) {
-        const dd = bd(qd(Od[1], hd));
-        if (dd) return dd
+    function Fb(bb) {
+      for (const wb of bb.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Lb}})`, "gi"))) {
+        const bb = Bb(Cb(wb[1], lb));
+        if (bb) return bb
       }
       return null
     }
 
-    function bd(dd) {
-      if (!dd || dd.length !== hd || td(dd.slice(0, -1)) !== dd[dd.length - 1]) return null;
-      const Od = dd[0],
-        md = {
-          ...Wd.d,
-          style: 1 & Od ? "shapes" : "classic"
+    function Bb(bb) {
+      if (!bb || bb.length !== lb || Ob(bb.slice(0, -1)) !== bb[bb.length - 1]) return null;
+      const wb = bb[0],
+        Mb = {
+          ...eb.e,
+          style: 1 & wb ? "shapes" : "classic"
         };
-      Rd.forEach(((dd, Wd) => {
-        md[dd] = 0 !== (Od & 1 << Wd + 1)
+      pb.forEach(((bb, eb) => {
+        Mb[bb] = 0 !== (wb & 1 << eb + 1)
       }));
-      let Fd = 1;
-      for (const Wd of Kd) md[Wd] = dd[Fd] << 16 | dd[Fd + 1] << 8 | dd[Fd + 2], Fd += 3;
-      for (const Rd of Xd) {
+      let Hb = 1;
+      for (const eb of gb) Mb[eb] = bb[Hb] << 16 | bb[Hb + 1] << 8 | bb[Hb + 2], Hb += 3;
+      for (const pb of Vb) {
         const {
-          min: Od,
-          step: Xd
-        } = Wd.b[Rd];
-        md[Rd] = (0, Wd.f)(Rd, Od + dd[Fd] * Xd), Fd++
+          min: wb,
+          step: Vb
+        } = eb.c[pb];
+        Mb[pb] = (0, eb.f)(pb, wb + bb[Hb] * Vb), Hb++
       }
-      return md
+      return Mb
     }
   },
-  35508: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Wd,
-      d: () => Fd,
-      f: () => Rd,
-      j: () => vd,
-      n: () => hd,
-      o: () => Qd,
-      q: () => Kd,
-      u: () => Xd
+  35291: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => eb,
+      e: () => Hb,
+      f: () => pb,
+      h: () => Lb,
+      k: () => lb,
+      n: () => Ib,
+      p: () => gb,
+      q: () => Vb
     });
-    const Wd = {
+    const eb = {
         opacity: {
           min: 5,
           max: 100,
@@ -12265,7 +12265,7 @@ export const modules = {
           step: 1
         }
       },
-      Fd = Object.freeze({
+      Hb = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -12286,415 +12286,415 @@ export const modules = {
         forGuns: !1
       });
 
-    function Rd(dd, Od) {
-      var md;
+    function pb(bb, wb) {
+      var Mb;
       const {
-        min: Rd,
-        max: Xd,
-        step: Kd
-      } = Wd[dd];
-      if (!Number.isFinite(Od)) return Fd[dd];
-      const hd = (null !== (md = String(Kd).split(".")[1]) && void 0 !== md ? md : "").length,
-        vd = Number((Math.round(Od / Kd) * Kd).toFixed(hd));
-      return Math.min(Xd, Math.max(Rd, vd))
+        min: pb,
+        max: Vb,
+        step: gb
+      } = eb[bb];
+      if (!Number.isFinite(wb)) return Hb[bb];
+      const lb = (null !== (Mb = String(gb).split(".")[1]) && void 0 !== Mb ? Mb : "").length,
+        Lb = Number((Math.round(wb / gb) * gb).toFixed(lb));
+      return Math.min(Vb, Math.max(pb, Lb))
     }
 
-    function Xd(dd, Od, md) {
-      const Wd = "number" === typeof md ? Rd(Od, md) : md;
+    function Vb(bb, wb, Mb) {
+      const eb = "number" === typeof Mb ? pb(wb, Mb) : Mb;
       return {
-        ...dd,
-        [Od]: Wd
+        ...bb,
+        [wb]: eb
       }
     }
 
-    function Kd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(Fd).every((Wd => md.includes(Wd) || dd[Wd] === Od[Wd]))
+    function gb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Hb).every((eb => Mb.includes(eb) || bb[eb] === wb[eb]))
     }
 
-    function hd(dd) {
-      return Kd(dd, Fd)
+    function lb(bb) {
+      return gb(bb, Hb)
     }
 
-    function vd(dd) {
-      return `#${dd.toString(16).padStart(6,"0")}`
+    function Lb(bb) {
+      return `#${bb.toString(16).padStart(6,"0")}`
     }
 
-    function Qd(dd) {
-      const Od = /^#?([0-9a-f]{6})$/i.exec(dd.trim());
-      return Od ? parseInt(Od[1], 16) : null
+    function Ib(bb) {
+      const wb = /^#?([0-9a-f]{6})$/i.exec(bb.trim());
+      return wb ? parseInt(wb[1], 16) : null
     }
   },
-  35524: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => td,
-      g: () => od
+  35309: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Ob,
+      f: () => Ub
     });
-    var Wd = md(66),
-      Fd = md(46),
-      Rd = md(35521),
-      Xd = md(35508);
-    const Kd = "crosshairCode";
-    let hd = null;
-    const vd = new Set;
+    var eb = Mb(64),
+      Hb = Mb(43),
+      pb = Mb(35305),
+      Vb = Mb(35291);
+    const gb = "crosshairCode";
+    let lb = null;
+    const Lb = new Set;
 
-    function Qd() {
-      if (null === hd) {
-        var dd;
-        const Od = Fd.k.getItem(Kd);
-        hd = null !== (dd = "string" === typeof Od ? (0, Rd.e)(Od) : null) && void 0 !== dd ? dd : Xd.d
+    function Ib() {
+      if (null === lb) {
+        var bb;
+        const wb = Hb.i.getItem(gb);
+        lb = null !== (bb = "string" === typeof wb ? (0, pb.e)(wb) : null) && void 0 !== bb ? bb : Vb.e
       }
-      return hd
+      return lb
     }
 
-    function td(dd) {
-      hd = dd, (0, Xd.n)(dd) ? Fd.k.removeItem(Kd) : Fd.k.setItem(Kd, (0, Rd.h)(dd));
-      for (const Od of vd) Od()
+    function Ob(bb) {
+      lb = bb, (0, Vb.k)(bb) ? Hb.i.removeItem(gb) : Hb.i.setItem(gb, (0, pb.g)(bb));
+      for (const wb of Lb) wb()
     }
 
-    function od() {
-      const [dd, Od] = (0, Wd.useState)(Qd);
-      return (0, Wd.useEffect)((() => {
-        const dd = () => {
-          Od(Qd())
+    function Ub() {
+      const [bb, wb] = (0, eb.useState)(Ib);
+      return (0, eb.useEffect)((() => {
+        const bb = () => {
+          wb(Ib())
         };
-        return dd(), md = dd, vd.add(md), () => {
-          vd.delete(md)
+        return bb(), Mb = bb, Lb.add(Mb), () => {
+          Lb.delete(Mb)
         };
-        var md
-      }), []), dd
+        var Mb
+      }), []), bb
     }
   },
-  35559: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Fd,
-      g: () => Xd,
-      j: () => Rd
+  35342: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Hb,
+      d: () => Vb,
+      g: () => pb
     });
-    var Wd = md(66);
-    const Fd = new class {
+    var eb = Mb(64);
+    const Hb = new class {
       constructor() {
         this.inFlight = new Map, this.landings = new Map, this.listeners = new Set
       }
-      getInFlight(dd) {
-        var Od;
-        return null !== (Od = this.inFlight.get(dd)) && void 0 !== Od ? Od : 0
+      getInFlight(bb) {
+        var wb;
+        return null !== (wb = this.inFlight.get(bb)) && void 0 !== wb ? wb : 0
       }
-      setInFlight(dd, Od) {
-        this.getInFlight(dd) !== Od && (this.inFlight.set(dd, Od), this.notify())
+      setInFlight(bb, wb) {
+        this.getInFlight(bb) !== wb && (this.inFlight.set(bb, wb), this.notify())
       }
-      subscribe(dd) {
-        return this.listeners.add(dd), () => {
-          this.listeners.delete(dd)
+      subscribe(bb) {
+        return this.listeners.add(bb), () => {
+          this.listeners.delete(bb)
         }
       }
-      getLanding(dd) {
-        var Od, md;
-        return null !== (Od = null === (md = this.landings.get(dd)) || void 0 === md ? void 0 : md.at(-1)) && void 0 !== Od ? Od : null
+      getLanding(bb) {
+        var wb, Mb;
+        return null !== (wb = null === (Mb = this.landings.get(bb)) || void 0 === Mb ? void 0 : Mb.at(-1)) && void 0 !== wb ? wb : null
       }
-      hasLanding(dd, Od) {
-        var md, Wd;
-        return null !== (md = null === (Wd = this.landings.get(dd)) || void 0 === Wd ? void 0 : Wd.includes(Od)) && void 0 !== md && md
+      hasLanding(bb, wb) {
+        var Mb, eb;
+        return null !== (Mb = null === (eb = this.landings.get(bb)) || void 0 === eb ? void 0 : eb.includes(wb)) && void 0 !== Mb && Mb
       }
-      addLanding(dd, Od) {
-        var md;
-        const Wd = null !== (md = this.landings.get(dd)) && void 0 !== md ? md : [];
-        return this.landings.set(dd, [...Wd, Od]), this.notify(), () => {
-          this.landings.set(dd, this.landings.get(dd).filter((dd => dd !== Od))), this.notify()
+      addLanding(bb, wb) {
+        var Mb;
+        const eb = null !== (Mb = this.landings.get(bb)) && void 0 !== Mb ? Mb : [];
+        return this.landings.set(bb, [...eb, wb]), this.notify(), () => {
+          this.landings.set(bb, this.landings.get(bb).filter((bb => bb !== wb))), this.notify()
         }
       }
       notify() {
-        for (const dd of this.listeners) dd()
+        for (const bb of this.listeners) bb()
       }
     };
 
-    function Rd(dd, Od) {
-      const [md, Rd] = (0, Wd.useState)((() => Fd.getInFlight(dd)));
-      return (0, Wd.useLayoutEffect)((() => {
-        const Od = () => {
-          Rd(Fd.getInFlight(dd))
+    function pb(bb, wb) {
+      const [Mb, pb] = (0, eb.useState)((() => Hb.getInFlight(bb)));
+      return (0, eb.useLayoutEffect)((() => {
+        const wb = () => {
+          pb(Hb.getInFlight(bb))
         };
-        return Od(), Fd.subscribe(Od)
-      }), [dd]), Math.max(0, Od - md)
+        return wb(), Hb.subscribe(wb)
+      }), [bb]), Math.max(0, wb - Mb)
     }
 
-    function Xd(dd, Od) {
-      let md = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      (0, Wd.useLayoutEffect)((() => {
-        if (md) return Fd.addLanding(dd, Od.current)
-      }), [dd, Od, md])
+    function Vb(bb, wb) {
+      let Mb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      (0, eb.useLayoutEffect)((() => {
+        if (Mb) return Hb.addLanding(bb, wb.current)
+      }), [bb, wb, Mb])
     }
   },
-  35452: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Fd,
-      d: () => Wd
+  35253: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Hb,
+      g: () => eb
     });
-    const Wd = "image/jpeg",
-      Fd = "jpg"
+    const eb = "image/jpeg",
+      Hb = "jpg"
   },
-  35458: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => hd,
-      f: () => vd,
-      h: () => Qd
+  35258: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => lb,
+      g: () => Lb,
+      i: () => Ib
     });
-    var Wd = md(1822),
-      Fd = md(4421),
-      Rd = md(107),
-      Xd = md(1906),
-      Kd = md(35452);
+    var eb = Mb(1889),
+      Hb = Mb(4574),
+      pb = Mb(110),
+      Vb = Mb(1980),
+      gb = Mb(35253);
 
-    function hd() {
-      return !(0, Rd.isMobileApp)() || Wd.c.supports("photos")
+    function lb() {
+      return !(0, pb.isMobileApp)() || eb.e.supports("photos")
     }
-    async function vd(dd) {
-      var Od, md;
-      if ((0, Rd.isMobileApp)()) {
+    async function Lb(bb) {
+      var wb, Mb;
+      if ((0, pb.isMobileApp)()) {
         const {
-          saved: Od
-        } = await Wd.c.request("photos.save", {
-          data: await (0, Fd.c)(dd),
-          mimeType: Kd.d
+          saved: wb
+        } = await eb.e.request("photos.save", {
+          data: await (0, Hb.f)(bb),
+          mimeType: gb.g
         });
-        return Od ? "saved" : "denied"
+        return wb ? "saved" : "denied"
       }
-      return (0, Rd.isIOS)() && null !== (Od = (md = navigator).canShare) && void 0 !== Od && Od.call(md, {
-        files: [dd]
-      }) ? Qd(dd) : ((0, Xd.e)(dd, dd.name), "saved")
+      return (0, pb.isIOS)() && null !== (wb = (Mb = navigator).canShare) && void 0 !== wb && wb.call(Mb, {
+        files: [bb]
+      }) ? Ib(bb) : ((0, Vb.d)(bb, bb.name), "saved")
     }
-    async function Qd(dd) {
+    async function Ib(bb) {
       try {
         return await navigator.share({
-          files: [dd]
+          files: [bb]
         }), "shared"
-      } catch (Od) {
-        if (Od instanceof DOMException && "AbortError" === Od.name) return "Ad";
-        if (Od instanceof DOMException && "NotAllowedError" === Od.name) return "needsTap";
-        throw Od
+      } catch (wb) {
+        if (wb instanceof DOMException && "AbortError" === wb.name) return "Yb";
+        if (wb instanceof DOMException && "NotAllowedError" === wb.name) return "needsTap";
+        throw wb
       }
     }
   },
-  35437: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => qd,
-      g: () => Hd,
-      i: () => yd,
-      k: () => bd
+  35237: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Cb,
+      f: () => Eb,
+      j: () => Fb,
+      n: () => Bb
     });
-    var Wd = md(29),
-      Fd = md(35422),
-      Rd = md(1765),
-      Xd = md(35446);
-    const Kd = 64,
-      hd = 8;
-    async function vd(dd) {
+    var eb = Mb(26),
+      Hb = Mb(35213),
+      pb = Mb(1821),
+      Vb = Mb(35246);
+    const gb = 64,
+      lb = 8;
+    async function Lb(bb) {
       try {
-        const Od = await createImageBitmap(dd, {
-          resizeWidth: Kd,
-          resizeHeight: Kd,
+        const wb = await createImageBitmap(bb, {
+          resizeWidth: gb,
+          resizeHeight: gb,
           resizeQuality: "high"
         });
         try {
-          const dd = document.createElement("canvas");
-          dd.width = Kd, dd.height = Kd;
-          const md = dd.getContext("2d", {
+          const bb = document.createElement("canvas");
+          bb.width = gb, bb.height = gb;
+          const Mb = bb.getContext("2d", {
             willReadFrequently: !0
           });
-          return md.drawImage(Od, 0, 0, Kd, Kd),
-            function(dd) {
-              for (let Od = 0; Od < dd.length; Od += 4)
-                if (dd[Od] > hd || dd[Od + 1] > hd || dd[Od + 2] > hd) return !1;
+          return Mb.drawImage(wb, 0, 0, gb, gb),
+            function(bb) {
+              for (let wb = 0; wb < bb.length; wb += 4)
+                if (bb[wb] > lb || bb[wb + 1] > lb || bb[wb + 2] > lb) return !1;
               return !0
-            }(md.getImageData(0, 0, Kd, Kd).data)
+            }(Mb.getImageData(0, 0, gb, gb).data)
         } finally {
-          Od.close()
+          wb.close()
         }
-      } catch (Od) {
-        return console.warn("Screenshot mode: couldn't check whether a photo is blank", Od), !1
+      } catch (wb) {
+        return console.warn("Screenshot mode: couldn't check whether a photo is blank", wb), !1
       }
     }
-    var Qd = md(35452);
-    const td = 8294400,
-      od = .92,
-      Nd = 3;
-    class qd extends Error {
-      constructor(dd) {
-        super(`The photo came out blank ${dd} times`), this.name = "BlankPhotoError"
+    var Ib = Mb(35253);
+    const Ob = 8294400,
+      Ub = .92,
+      tb = 3;
+    class Cb extends Error {
+      constructor(bb) {
+        super(`The photo came out blank ${bb} times`), this.name = "BlankPhotoError"
       }
     }
 
-    function Hd() {
-      (0, Rd.g)(), Wd.e.set({
+    function Eb() {
+      (0, pb.g)(), eb.c.set({
         screenshotMode: !0
       })
     }
 
-    function yd() {
-      Wd.e.set({
+    function Fb() {
+      eb.c.set({
         screenshotMode: !1
       })
     }
-    async function bd() {
-      const dd = performance.now(),
-        Od = await async function(dd, Od) {
-          let md = 0;
-          for (; md < Nd;) {
-            let Fd;
+    async function Bb() {
+      const bb = performance.now(),
+        wb = await async function(bb, wb) {
+          let Mb = 0;
+          for (; Mb < tb;) {
+            let Hb;
             try {
-              Fd = await dd()
-            } catch (Wd) {
-              if (0 === md) throw Wd;
+              Hb = await bb()
+            } catch (eb) {
+              if (0 === Mb) throw eb;
               return {
                 outcome: "failed",
-                error: Wd,
-                blanks: md
+                error: eb,
+                blanks: Mb
               }
             }
-            if (!await Od(Fd)) return {
+            if (!await wb(Hb)) return {
               outcome: "saved",
-              blob: Fd,
-              blanks: md
+              blob: Hb,
+              blanks: Mb
             };
-            md++
+            Mb++
           }
           return {
             outcome: "refused",
-            blanks: md
+            blanks: Mb
           }
         }((async () => {
           const {
-            width: dd,
-            height: Od,
-            scale: md
-          } = function(dd, Od, md) {
-            const Wd = Math.max(1, dd),
-              Fd = Math.max(1, Od),
-              Rd = Math.min(Math.max(1, md), Math.sqrt(td / (Wd * Fd)));
+            width: bb,
+            height: wb,
+            scale: Mb
+          } = function(bb, wb, Mb) {
+            const eb = Math.max(1, bb),
+              Hb = Math.max(1, wb),
+              pb = Math.min(Math.max(1, Mb), Math.sqrt(Ob / (eb * Hb)));
             return {
-              width: Math.round(Wd * Rd),
-              height: Math.round(Fd * Rd),
-              scale: Rd
+              width: Math.round(eb * pb),
+              height: Math.round(Hb * pb),
+              scale: pb
             }
           }(window.innerWidth, window.innerHeight, window.devicePixelRatio);
-          return (await Fd.devTools.capturePhoto(dd, Od, {
-            scale: md,
-            type: Qd.d,
-            quality: od
+          return (await Hb.devTools.capturePhoto(bb, wb, {
+            scale: Mb,
+            type: Ib.g,
+            quality: Ub
           })).blob
-        }), vd);
-      if (Od.blanks > 0) {
-        const Wd = (0, Xd.b)();
-        md.e(310).then((() => md(43012))).then((md => {
+        }), Lb);
+      if (wb.blanks > 0) {
+        const eb = (0, Vb.b)();
+        Mb.e(310).then((() => Mb(42736))).then((Mb => {
           let {
-            reportBlankPhoto: Fd
-          } = md;
-          Fd(Od.blanks, Od.outcome, dd, Wd)
-        })).catch((dd => {
-          console.warn("Screenshot mode: couldn't report a blank photo", dd)
+            reportBlankPhoto: Hb
+          } = Mb;
+          Hb(wb.blanks, wb.outcome, bb, eb)
+        })).catch((bb => {
+          console.warn("Screenshot mode: couldn't report a blank photo", bb)
         }))
       }
-      switch (Od.outcome) {
+      switch (wb.outcome) {
         case "saved":
-          return new File([Od.blob], function(dd) {
-            const Od = dd => String(dd).padStart(2, "0"),
-              md = `${dd.getFullYear()}${Od(dd.getMonth()+1)}${Od(dd.getDate())}`,
-              Wd = `${Od(dd.getHours())}${Od(dd.getMinutes())}${Od(dd.getSeconds())}`;
-            return `bloxd-${md}-${Wd}.${Qd.c}`
+          return new File([wb.blob], function(bb) {
+            const wb = bb => String(bb).padStart(2, "0"),
+              Mb = `${bb.getFullYear()}${wb(bb.getMonth()+1)}${wb(bb.getDate())}`,
+              eb = `${wb(bb.getHours())}${wb(bb.getMinutes())}${wb(bb.getSeconds())}`;
+            return `bloxd-${Mb}-${eb}.${Ib.d}`
           }(new Date), {
-            type: Qd.d
+            type: Ib.g
           });
         case "refused":
-          throw new qd(Od.blanks);
+          throw new Cb(wb.blanks);
         case "failed":
-          throw Od.error
+          throw wb.error
       }
     }
   },
-  35499: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      f: () => Fd
+  35289: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb,
+      i: () => Hb
     });
-    var Wd = md(29);
+    var eb = Mb(26);
 
-    function Fd(dd, Od) {
-      return dd && !Od
+    function Hb(bb, wb) {
+      return bb && !wb
     }
 
-    function Rd() {
-      return Fd(Wd.e.get("isTouchScreen"), Wd.e.get("clientEscMenuOptions").touchActionButtons)
+    function pb() {
+      return Hb(eb.c.get("isTouchScreen"), eb.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  5455: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Xd,
-      f: () => Rd,
-      j: () => Fd
+  5601: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Vb,
+      g: () => pb,
+      k: () => Hb
     });
-    let Wd = null;
+    let eb = null;
 
-    function Fd(dd) {
-      Wd = dd
+    function Hb(bb) {
+      eb = bb
     }
 
-    function Rd() {
-      return Wd
+    function pb() {
+      return eb
     }
 
-    function Xd(dd) {
-      return "bloxd" === dd.site && !dd.isMobileApp && !dd.isTouchScreen
+    function Vb(bb) {
+      return "bloxd" === bb.site && !bb.isMobileApp && !bb.isTouchScreen
     }
   },
-  35426: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Wd
+  35221: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => eb
     });
-    const Wd = new Set(["chunkBorders"])
+    const eb = new Set(["chunkBorders"])
   },
-  35422: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      ALL_DEV_TOOLS: () => Xd,
-      coreDevTools: () => vd,
-      devTools: () => hd
+  35213: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      ALL_DEV_TOOLS: () => Vb,
+      coreDevTools: () => Lb,
+      devTools: () => lb
     });
-    var Wd = md(732),
-      Fd = md(1361),
-      Rd = md(35426);
-    const Xd = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function Kd() {
+    var eb = Mb(698),
+      Hb = Mb(1391),
+      pb = Mb(35221);
+    const Vb = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function gb() {
       const {
-        noaDevTools: dd
-      } = await md.e(270).then((() => md(43004)));
-      return dd
+        noaDevTools: bb
+      } = await Mb.e(270).then((() => Mb(42733)));
+      return bb
     }
-    const hd = new class {
+    const lb = new class {
         constructor() {
-          this.loadHost = Kd, this.tools = Xd
+          this.loadHost = gb, this.tools = Vb
         }
-        setHost(dd) {
-          this.tools = null === dd ? Xd : dd.tools, this.loadHost = null === dd ? Kd : async () => dd
+        setHost(bb) {
+          this.tools = null === bb ? Vb : bb.tools, this.loadHost = null === bb ? gb : async () => bb
         }
-        supports(dd) {
-          return this.tools.has(dd)
+        supports(bb) {
+          return this.tools.has(bb)
         }
-        async downloadScene(dd, Od) {
-          const md = await this.loadHost();
-          await md.downloadScene(dd, Od)
+        async downloadScene(bb, wb) {
+          const Mb = await this.loadHost();
+          await Mb.downloadScene(bb, wb)
         }
-        async setAmbientLightIntensity(dd) {
-          const Od = await this.loadHost();
-          await Od.setAmbientLightIntensity(dd)
+        async setAmbientLightIntensity(bb) {
+          const wb = await this.loadHost();
+          await wb.setAmbientLightIntensity(bb)
         }
-        async capturePhoto(dd, Od, md) {
-          return (await this.loadHost()).capturePhoto(dd, Od, md)
+        async capturePhoto(bb, wb, Mb) {
+          return (await this.loadHost()).capturePhoto(bb, wb, Mb)
         }
         async snapshotNextFrame() {
           return (await this.loadHost()).snapshotNextFrame()
         }
       },
-      vd = {
-        tools: Rd.b,
+      Lb = {
+        tools: pb.b,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -12708,130 +12708,130 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    Wd.G && hd.setHost(vd), (0, Fd.K)((() => {
-      hd.setHost(vd)
+    eb.I && lb.setHost(Lb), (0, Hb.F)((() => {
+      lb.setHost(Lb)
     }))
   },
-  35587: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Kd,
-      g: () => Fd,
-      j: () => td
+  35370: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => gb,
+      c: () => Hb,
+      f: () => Ob
     });
-    var Wd = md(1685);
+    var eb = Mb(1735);
 
-    function Fd(dd) {
-      var Od;
+    function Hb(bb) {
+      var wb;
       return {
-        ...Kd.store,
-        yaw: Kd.store.yaw + (null !== (Od = Wd.b[dd].previewYaw) && void 0 !== Od ? Od : 0)
+        ...gb.store,
+        yaw: gb.store.yaw + (null !== (wb = eb.d[bb].previewYaw) && void 0 !== wb ? wb : 0)
       }
     }
-    const Rd = {
+    const pb = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      Xd = {
-        ...Rd,
+      Vb = {
+        ...pb,
         radius: 33,
         target: [0, 3.9, 0]
       },
-      Kd = {
-        player: Rd,
-        store: Xd,
+      gb = {
+        player: pb,
+        store: Vb,
         showcase: {
-          ...Xd,
+          ...Vb,
           target: [0, 1.9, 0]
         }
       };
 
-    function hd(dd, Od) {
-      dd instanceof Promise ? dd.then(Od).catch((dd => {
-        console.error("Couldn't open the preview", dd)
-      })) : Od(dd)
+    function lb(bb, wb) {
+      bb instanceof Promise ? bb.then(wb).catch((bb => {
+        console.error("Couldn't open the preview", bb)
+      })) : wb(bb)
     }
-    class vd {
-      constructor(dd) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, hd(dd, (dd => {
-          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height), null !== this.view && dd.show(this.view))
+    class Lb {
+      constructor(bb) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, lb(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height), null !== this.view && bb.show(this.view))
         }))
       }
-      show(dd) {
-        var Od;
-        this.view = dd, null === (Od = this.opened) || void 0 === Od || Od.show(dd)
+      show(bb) {
+        var wb;
+        this.view = bb, null === (wb = this.opened) || void 0 === wb || wb.show(bb)
       }
-      resize(dd, Od) {
-        var md;
+      resize(bb, wb) {
+        var Mb;
         this.size = {
-          width: dd,
-          height: Od
-        }, null === (md = this.opened) || void 0 === md || md.resize(dd, Od)
+          width: bb,
+          height: wb
+        }, null === (Mb = this.opened) || void 0 === Mb || Mb.resize(bb, wb)
       }
       close() {
-        var dd;
-        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    class Qd {
-      constructor(dd) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(dd).then((dd => dd.ready)), hd(dd, (dd => {
-          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height))
+    class Ib {
+      constructor(bb) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(bb).then((bb => bb.ready)), lb(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var dd, Od;
-        return null !== (dd = null === (Od = this.opened) || void 0 === Od ? void 0 : Od.isReady()) && void 0 !== dd && dd
+        var bb, wb;
+        return null !== (bb = null === (wb = this.opened) || void 0 === wb ? void 0 : wb.isReady()) && void 0 !== bb && bb
       }
-      setCosmetic(dd, Od) {
-        var md;
-        null === (md = this.opened) || void 0 === md || md.setCosmetic(dd, Od)
+      setCosmetic(bb, wb) {
+        var Mb;
+        null === (Mb = this.opened) || void 0 === Mb || Mb.setCosmetic(bb, wb)
       }
-      setNametag(dd) {
-        var Od;
-        null === (Od = this.opened) || void 0 === Od || Od.setNametag(dd)
+      setNametag(bb) {
+        var wb;
+        null === (wb = this.opened) || void 0 === wb || wb.setNametag(bb)
       }
-      playEmote(dd) {
-        var Od;
-        null === (Od = this.opened) || void 0 === Od || Od.playEmote(dd)
+      playEmote(bb) {
+        var wb;
+        null === (wb = this.opened) || void 0 === wb || wb.playEmote(bb)
       }
-      setOrbit(dd) {
-        var Od;
-        null === (Od = this.opened) || void 0 === Od || Od.setOrbit(dd)
+      setOrbit(bb) {
+        var wb;
+        null === (wb = this.opened) || void 0 === wb || wb.setOrbit(bb)
       }
       resetCamera() {
-        var dd;
-        null === (dd = this.opened) || void 0 === dd || dd.resetCamera()
+        var bb;
+        null === (bb = this.opened) || void 0 === bb || bb.resetCamera()
       }
-      async untilDrawn(dd) {
-        var Od;
-        await this.ready, await (null === (Od = this.opened) || void 0 === Od ? void 0 : Od.untilDrawn(dd))
+      async untilDrawn(bb) {
+        var wb;
+        await this.ready, await (null === (wb = this.opened) || void 0 === wb ? void 0 : wb.untilDrawn(bb))
       }
-      resize(dd, Od) {
-        var md;
+      resize(bb, wb) {
+        var Mb;
         this.size = {
-          width: dd,
-          height: Od
-        }, null === (md = this.opened) || void 0 === md || md.resize(dd, Od)
+          width: bb,
+          height: wb
+        }, null === (Mb = this.opened) || void 0 === Mb || Mb.resize(bb, wb)
       }
       close() {
-        var dd;
-        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    const td = new class {
+    const Ob = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(dd) {
-        this.host = dd
+      setHost(bb) {
+        this.host = bb
       }
-      setDefaultHost(dd) {
-        this.makeDefault = dd
+      setDefaultHost(bb) {
+        this.makeDefault = bb
       }
       current() {
         if (null === this.host) {
@@ -12840,102 +12840,102 @@ export const modules = {
         }
         return this.host
       }
-      openMob(dd) {
-        return new vd(this.current().openMob(dd))
+      openMob(bb) {
+        return new Lb(this.current().openMob(bb))
       }
-      openPet(dd) {
-        return new vd(this.current().openPet(dd))
+      openPet(bb) {
+        return new Lb(this.current().openPet(bb))
       }
-      openMobLineup(dd) {
-        return new vd(this.current().openMobLineup(dd))
+      openMobLineup(bb) {
+        return new Lb(this.current().openMobLineup(bb))
       }
       sharesCharacter() {
         return !0 === this.current().sharesCharacter
       }
-      openCharacter(dd, Od) {
-        return new Qd(this.current().openCharacter(dd, Od))
+      openCharacter(bb, wb) {
+        return new Ib(this.current().openCharacter(bb, wb))
       }
     }
   },
-  35582: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd.c,
-      g: () => Wd.g,
-      i: () => Wd.j
+  35366: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => eb.b,
+      f: () => eb.c,
+      i: () => eb.f
     });
-    var Wd = md(35587);
-    class Fd {
-      constructor(dd) {
-        this.load = dd, this.loaded = null, this.loading = null
+    var eb = Mb(35370);
+    class Hb {
+      constructor(bb) {
+        this.load = bb, this.loaded = null, this.loading = null
       }
-      run(dd) {
-        return null !== this.loaded ? dd(this.loaded) : (this.loading ??= this.load().then((dd => (this.loaded = dd, dd)), (dd => {
-          throw this.loading = null, dd
-        })), this.loading.then(dd))
+      run(bb) {
+        return null !== this.loaded ? bb(this.loaded) : (this.loading ??= this.load().then((bb => (this.loaded = bb, bb)), (bb => {
+          throw this.loading = null, bb
+        })), this.loading.then(bb))
       }
     }
-    class Rd {
+    class pb {
       constructor() {
-        this.sharesCharacter = !0, this.mobScene = new Fd((() => Promise.all([md.e(85), md.e(265), md.e(264), md.e(290), md.e(113), md.e(291), md.e(89), md.e(86), md.e(288), md.e(87), md.e(88), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(312), md.e(261), md.e(279), md.e(293), md.e(296), md.e(91), md.e(253), md.e(267), md.e(112), md.e(124), md.e(258), md.e(142), md.e(90), md.e(122), md.e(311)]).then((() => md(43035))))), this.characterScene = new Fd((() => Promise.all([md.e(85), md.e(265), md.e(264), md.e(290), md.e(113), md.e(291), md.e(89), md.e(86), md.e(288), md.e(87), md.e(88), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(312), md.e(177), md.e(261), md.e(279), md.e(293), md.e(296), md.e(91), md.e(225), md.e(253), md.e(267), md.e(112), md.e(124), md.e(258), md.e(142), md.e(90), md.e(122), md.e(280), md.e(184)]).then((() => md(43148)))))
+        this.sharesCharacter = !0, this.mobScene = new Hb((() => Promise.all([Mb.e(85), Mb.e(265), Mb.e(264), Mb.e(290), Mb.e(113), Mb.e(291), Mb.e(89), Mb.e(86), Mb.e(288), Mb.e(87), Mb.e(88), Mb.e(298), Mb.e(292), Mb.e(297), Mb.e(295), Mb.e(287), Mb.e(312), Mb.e(261), Mb.e(279), Mb.e(293), Mb.e(296), Mb.e(91), Mb.e(253), Mb.e(267), Mb.e(112), Mb.e(124), Mb.e(258), Mb.e(142), Mb.e(90), Mb.e(122), Mb.e(311)]).then((() => Mb(42755))))), this.characterScene = new Hb((() => Promise.all([Mb.e(85), Mb.e(265), Mb.e(264), Mb.e(290), Mb.e(113), Mb.e(291), Mb.e(89), Mb.e(86), Mb.e(288), Mb.e(87), Mb.e(88), Mb.e(298), Mb.e(292), Mb.e(297), Mb.e(295), Mb.e(287), Mb.e(312), Mb.e(177), Mb.e(261), Mb.e(279), Mb.e(293), Mb.e(296), Mb.e(91), Mb.e(225), Mb.e(253), Mb.e(267), Mb.e(112), Mb.e(124), Mb.e(258), Mb.e(142), Mb.e(90), Mb.e(122), Mb.e(280), Mb.e(184)]).then((() => Mb(42854)))))
       }
-      openMob(dd) {
-        return this.mobScene.run((Od => Od.openMobPreview(dd)))
+      openMob(bb) {
+        return this.mobScene.run((wb => wb.openMobPreview(bb)))
       }
-      openPet(dd) {
-        return this.mobScene.run((Od => Od.openPetPreview(dd)))
+      openPet(bb) {
+        return this.mobScene.run((wb => wb.openPetPreview(bb)))
       }
-      openMobLineup(dd) {
-        return this.mobScene.run((Od => Od.openMobLineupPreview(dd)))
+      openMobLineup(bb) {
+        return this.mobScene.run((wb => wb.openMobLineupPreview(bb)))
       }
-      openCharacter(dd, Od) {
-        return this.characterScene.run((md => md.openCharacterPreview(dd, Od)))
+      openCharacter(bb, wb) {
+        return this.characterScene.run((Mb => Mb.openCharacterPreview(bb, wb)))
       }
     }
-    Wd.j.setDefaultHost((() => new Rd))
+    eb.f.setDefaultHost((() => new pb))
   },
-  7602: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Fd,
-      g: () => Rd
+  7848: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Hb,
+      g: () => pb
     });
-    var Wd = md(46);
-    const Fd = "shaderPack";
-    async function Rd() {
-      var dd;
-      let Od = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (dd = await Wd.h.getItem(Fd, Od)) && void 0 !== dd ? dd : null
+    var eb = Mb(43);
+    const Hb = "shaderPack";
+    async function pb() {
+      var bb;
+      let wb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (bb = await eb.h.getItem(Hb, wb)) && void 0 !== bb ? bb : null
     }
   },
-  35465: (dd, Od, md) => {
-    function Wd(dd, Od) {
-      return dd && !Od
+  35260: (bb, wb, Mb) => {
+    function eb(bb, wb) {
+      return bb && !wb
     }
-    md.d(Od, {
-      e: () => Wd
+    Mb.d(wb, {
+      e: () => eb
     })
   },
-  35482: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Rd
+  35281: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb
     });
-    var Wd = md(1368);
+    var eb = Mb(1400);
 
-    function Fd() {
-      var dd, Od;
-      return null !== (dd = null === (Od = screen.orientation) || void 0 === Od ? void 0 : Od.type) && void 0 !== dd ? dd : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Hb() {
+      var bb, wb;
+      return null !== (bb = null === (wb = screen.orientation) || void 0 === wb ? void 0 : wb.type) && void 0 !== bb ? bb : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const Rd = new class {
+    const pb = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && Fd() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Hb() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = Fd(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, Wd.rH)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Hb(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, eb.mE)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -12943,260 +12943,260 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const dd of this.resizers) dd()
+            for (const bb of this.resizers) bb()
           }
         }), 1e3)
       }
-      heldSizer(dd) {
-        let Od = !1;
+      heldSizer(bb) {
+        let wb = !1;
         return () => {
-          if (Od && this.isHeld()) return null;
-          const md = dd();
-          return Od ||= null !== md, md
+          if (wb && this.isHeld()) return null;
+          const Mb = bb();
+          return wb ||= null !== Mb, Mb
         }
       }
-      onRelease(dd) {
-        return this.resizers.add(dd), () => {
-          this.resizers.delete(dd)
+      onRelease(bb) {
+        return this.resizers.add(bb), () => {
+          this.resizers.delete(bb)
         }
       }
     }
   },
-  35428: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Td,
-      i: () => vd,
-      l: () => Hd,
-      m: () => qd
+  35223: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => sb,
+      g: () => Lb,
+      j: () => Eb,
+      k: () => Cb
     });
-    var Wd = md(180),
-      Fd = md(1322),
-      Rd = md(1253),
-      Xd = md(1189),
-      Kd = md(1881);
-    const hd = {
+    var eb = Mb(192),
+      Hb = Mb(1333),
+      pb = Mb(1271),
+      Vb = Mb(1186),
+      gb = Mb(1958);
+    const lb = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function vd(dd) {
-      return hd[dd]
+    function Lb(bb) {
+      return lb[bb]
     }
 
-    function Qd(dd) {
-      return (0, Kd.c)(dd) ? "outdated" : dd instanceof Wd.e ? 429 === dd.httpCode ? "busy" : "server" : "offline"
+    function Ib(bb) {
+      return (0, gb.b)(bb) ? "outdated" : bb instanceof eb.b ? 429 === bb.httpCode ? "busy" : "server" : "offline"
     }
 
-    function td(dd, Od, md) {
-      return (0, Xd.postJsonWithMetricsCookiesAndJsonResponse)(`${Rd.clientSideServerUrls.indexUrl}${Od}`, md, {
+    function Ob(bb, wb, Mb) {
+      return (0, Vb.postJsonWithMetricsCookiesAndJsonResponse)(`${pb.clientSideServerUrls.indexUrl}${wb}`, Mb, {
         retries: 3
-      }, dd.getMetricsCookies()).catch((dd => (console.error("Bad response from the server when trying to change name:", Od, dd), {
+      }, bb.getMetricsCookies()).catch((bb => (console.error("Bad response from the server when trying to change name:", wb, bb), {
         outcome: "failed",
-        failure: Qd(dd)
+        failure: Ib(bb)
       })))
     }
 
-    function od(dd) {
-      return "outcome" in dd && "failed" === dd.outcome
+    function Ub(bb) {
+      return "outcome" in bb && "failed" === bb.outcome
     }
 
-    function Nd(dd) {
-      return console.error("Error when trying to get with new name from DB", dd), {
+    function tb(bb) {
+      return console.error("Error when trying to get with new name from DB", bb), {
         outcome: "refused",
-        message: dd
+        message: bb
       }
     }
-    async function qd(dd) {
-      const Od = await td(dd, "/index/name/random", {});
-      return od(Od) ? Od : "err" in Od ? Nd(Od.err) : (dd.setPlayerName(Od.name), {
+    async function Cb(bb) {
+      const wb = await Ob(bb, "/index/name/random", {});
+      return Ub(wb) ? wb : "err" in wb ? tb(wb.err) : (bb.setPlayerName(wb.name), {
         outcome: "changed",
-        name: Od.name
+        name: wb.name
       })
     }
-    async function Hd(dd, Od) {
-      const md = await td(dd, "/index/name/update", {
-        name: Od
+    async function Eb(bb, wb) {
+      const Mb = await Ob(bb, "/index/name/update", {
+        name: wb
       });
-      return od(md) ? md : "err" in md ? Nd(md.err) : md.nameExists ? {
+      return Ub(Mb) ? Mb : "err" in Mb ? tb(Mb.err) : Mb.nameExists ? {
         outcome: "taken"
-      } : (dd.setPlayerName(Od), {
+      } : (bb.setPlayerName(wb), {
         outcome: "changed",
-        name: Od
+        name: wb
       })
     }
 
-    function yd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const Wd = 1 === Od ? 1 : 10 ** (Od - 1),
-        Rd = String(Wd + Math.floor(md() * (10 ** Od - Wd)));
-      return `${dd.slice(0,Fd.g-Od)}${Rd}`
+    function Fb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const eb = 1 === wb ? 1 : 10 ** (wb - 1),
+        pb = String(eb + Math.floor(Mb() * (10 ** wb - eb)));
+      return `${bb.slice(0,Hb.g-wb)}${pb}`
     }
-    const bd = [1, 2, 3, 4];
-    async function Td(dd, Od) {
-      const md = await Hd(dd, Od);
-      if ("taken" !== md.outcome) return md;
-      for (const Wd of bd) {
-        const md = yd(Od, Wd),
-          Fd = await Hd(dd, md);
-        if ("taken" !== Fd.outcome) return Fd
+    const Bb = [1, 2, 3, 4];
+    async function sb(bb, wb) {
+      const Mb = await Eb(bb, wb);
+      if ("taken" !== Mb.outcome) return Mb;
+      for (const eb of Bb) {
+        const Mb = Fb(wb, eb),
+          Hb = await Eb(bb, Mb);
+        if ("taken" !== Hb.outcome) return Hb
       }
       return {
         outcome: "taken"
       }
     }
   },
-  35446: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      d: () => Fd
+  35246: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => pb,
+      c: () => Hb
     });
-    let Wd = null;
+    let eb = null;
 
-    function Fd() {
-      Wd = performance.now()
+    function Hb() {
+      eb = performance.now()
     }
 
-    function Rd() {
-      return Wd
+    function pb() {
+      return eb
     }
   },
-  35467: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Kd,
-      d: () => hd
+  35266: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => gb,
+      d: () => lb
     });
-    var Wd = md(29);
-    const Fd = 24,
-      Rd = "farNametags",
-      Xd = 1e5;
+    var eb = Mb(26);
+    const Hb = 24,
+      pb = "farNametags",
+      Vb = 1e5;
 
-    function Kd() {
-      var dd;
-      return null === (dd = Wd.e.get("showDistantNametags")) || void 0 === dd || dd
+    function gb() {
+      var bb;
+      return null === (bb = eb.c.get("showDistantNametags")) || void 0 === bb || bb
     }
 
-    function hd() {
-      var dd;
-      return null !== (dd = function() {
-        const dd = new URLSearchParams(window.location.search).get(Rd),
-          Od = null === dd || "" === dd ? NaN : Number(dd);
-        return Number.isFinite(Od) && Od >= 0 ? Math.min(Od, Xd) : null
-      }()) && void 0 !== dd ? dd : Kd() ? 0 : Fd
+    function lb() {
+      var bb;
+      return null !== (bb = function() {
+        const bb = new URLSearchParams(window.location.search).get(pb),
+          wb = null === bb || "" === bb ? NaN : Number(bb);
+        return Number.isFinite(wb) && wb >= 0 ? Math.min(wb, Vb) : null
+      }()) && void 0 !== bb ? bb : gb() ? 0 : Hb
     }
   },
-  35566: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Wd,
-      g: () => Qd
+  35358: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => eb,
+      f: () => Ib
     });
-    const Wd = .01,
-      Fd = .08,
-      Rd = .01,
-      Xd = 5,
-      Kd = 100,
-      hd = 40,
-      vd = 800;
+    const eb = .01,
+      Hb = .08,
+      pb = .01,
+      Vb = 5,
+      gb = 100,
+      lb = 40,
+      Lb = 800;
 
-    function Qd(dd) {
+    function Ib(bb) {
       const {
-        canvas: Od
-      } = dd;
-      let md = null;
-      const Qd = dd => {
-          var Wd;
-          md = {
-            pointer: dd.pointerId,
-            x: dd.clientX,
-            y: dd.clientY
-          }, null === (Wd = Od.setPointerCapture) || void 0 === Wd || Wd.call(Od, dd.pointerId)
+        canvas: wb
+      } = bb;
+      let Mb = null;
+      const Ib = bb => {
+          var eb;
+          Mb = {
+            pointer: bb.pointerId,
+            x: bb.clientX,
+            y: bb.clientY
+          }, null === (eb = wb.setPointerCapture) || void 0 === eb || eb.call(wb, bb.pointerId)
         },
-        td = Od => {
-          var Fd;
-          const Xd = dd.orbit;
-          if ((null === (Fd = md) || void 0 === Fd ? void 0 : Fd.pointer) !== Od.pointerId || null === Xd) return;
-          const Kd = Od.clientX - md.x,
-            hd = Od.clientY - md.y;
-          md = {
-            ...md,
-            x: Od.clientX,
-            y: Od.clientY
-          }, dd.setOrbit({
-            alpha: Xd.alpha - Kd * Wd,
-            beta: Math.min(Math.PI - Rd, Math.max(Rd, Xd.beta - hd * Wd)),
-            radius: Xd.radius
+        Ob = wb => {
+          var Hb;
+          const Vb = bb.orbit;
+          if ((null === (Hb = Mb) || void 0 === Hb ? void 0 : Hb.pointer) !== wb.pointerId || null === Vb) return;
+          const gb = wb.clientX - Mb.x,
+            lb = wb.clientY - Mb.y;
+          Mb = {
+            ...Mb,
+            x: wb.clientX,
+            y: wb.clientY
+          }, bb.setOrbit({
+            alpha: Vb.alpha - gb * eb,
+            beta: Math.min(Math.PI - pb, Math.max(pb, Vb.beta - lb * eb)),
+            radius: Vb.radius
           })
         },
-        od = dd => {
-          var Od;
-          (null === (Od = md) || void 0 === Od ? void 0 : Od.pointer) === dd.pointerId && (md = null)
+        Ub = bb => {
+          var wb;
+          (null === (wb = Mb) || void 0 === wb ? void 0 : wb.pointer) === bb.pointerId && (Mb = null)
         },
-        Nd = Od => {
-          const md = dd.orbit;
-          if (null === md) return;
-          Od.preventDefault();
-          const Wd = Od.deltaY * (Od.deltaMode === WheelEvent.DOM_DELTA_LINE ? hd : Od.deltaMode === WheelEvent.DOM_DELTA_PAGE ? vd : 1),
-            Rd = Math.min(Kd, Math.max(Xd, md.radius + Wd * Fd));
-          dd.setOrbit({
-            ...md,
-            radius: Rd
+        tb = wb => {
+          const Mb = bb.orbit;
+          if (null === Mb) return;
+          wb.preventDefault();
+          const eb = wb.deltaY * (wb.deltaMode === WheelEvent.DOM_DELTA_LINE ? lb : wb.deltaMode === WheelEvent.DOM_DELTA_PAGE ? Lb : 1),
+            pb = Math.min(gb, Math.max(Vb, Mb.radius + eb * Hb));
+          bb.setOrbit({
+            ...Mb,
+            radius: pb
           })
         };
-      return Od.style.touchAction = "none", Od.addEventListener("pointerdown", Qd), Od.addEventListener("pointermove", td), Od.addEventListener("pointerup", od), Od.addEventListener("pointercancel", od), Od.addEventListener("wheel", Nd, {
+      return wb.style.touchAction = "none", wb.addEventListener("pointerdown", Ib), wb.addEventListener("pointermove", Ob), wb.addEventListener("pointerup", Ub), wb.addEventListener("pointercancel", Ub), wb.addEventListener("wheel", tb, {
         passive: !1
       }), () => {
-        Od.removeEventListener("pointerdown", Qd), Od.removeEventListener("pointermove", td), Od.removeEventListener("pointerup", od), Od.removeEventListener("pointercancel", od), Od.removeEventListener("wheel", Nd)
+        wb.removeEventListener("pointerdown", Ib), wb.removeEventListener("pointermove", Ob), wb.removeEventListener("pointerup", Ub), wb.removeEventListener("pointercancel", Ub), wb.removeEventListener("wheel", tb)
       }
     }
   },
-  35490: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => vd,
-      d: () => td,
-      e: () => Qd
+  35285: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Lb,
+      g: () => Ob,
+      h: () => Ib
     });
-    var Wd = md(310),
-      Fd = md(107),
-      Rd = md(145),
-      Xd = md(141),
-      Kd = md(725);
-    const hd = new Set(["mali_bifrost"]);
+    var eb = Mb(309),
+      Hb = Mb(110),
+      pb = Mb(153),
+      Vb = Mb(144),
+      gb = Mb(689);
+    const lb = new Set(["mali_bifrost"]);
 
-    function vd() {
-      if (Kd.e) return;
-      const dd = (0, Fd.pageOperatingSystem)();
-      if ("android" !== dd && "windows" !== dd || (0, Kd.b)("webgl_default")) return;
-      if ("windows" === dd) return dd => "qualcomm" === (0, Fd.normaliseGpuVendor)((0, Xd.d)(dd).vendor);
-      const Od = (0, Rd.p)(),
-        md = null === Od ? (0, Wd.v)() : (0, Wd.j)(Od.vendor, Od.renderer);
-      return null !== md && hd.has(md) ? dd => (0, Wd.q)((0, Xd.d)(dd).vendor, md) : void 0
+    function Lb() {
+      if (gb.f) return;
+      const bb = (0, Hb.pageOperatingSystem)();
+      if ("android" !== bb && "windows" !== bb || (0, gb.c)("webgl_default")) return;
+      if ("windows" === bb) return bb => "qualcomm" === (0, Hb.normaliseGpuVendor)((0, Vb.d)(bb).vendor);
+      const wb = (0, pb.n)(),
+        Mb = null === wb ? (0, eb.x)() : (0, eb.k)(wb.vendor, wb.renderer);
+      return null !== Mb && lb.has(Mb) ? bb => (0, eb.r)((0, Vb.d)(bb).vendor, Mb) : void 0
     }
 
-    function Qd(dd, Od) {
-      return dd ? () => !0 : Od()
+    function Ib(bb, wb) {
+      return bb ? () => !0 : wb()
     }
-    async function td(dd) {
+    async function Ob(bb) {
       try {
-        const Od = Qd(dd, vd),
-          md = navigator.gpu;
-        if (void 0 === Od || void 0 === md) return !1;
-        const Wd = await (0, Xd.o)(md, {
+        const wb = Ib(bb, Lb),
+          Mb = navigator.gpu;
+        if (void 0 === wb || void 0 === Mb) return !1;
+        const eb = await (0, Vb.k)(Mb, {
           seed: !1,
-          compatibility: Od
+          compatibility: wb
         });
-        return "string" !== typeof Wd && Wd.compatibility && !(0, Xd.k)(Wd.adapter)
-      } catch (Od) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", Od), !1
+        return "string" !== typeof eb && eb.compatibility && !(0, Vb.h)(eb.adapter)
+      } catch (wb) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", wb), !1
       }
     }
   },
-  35563: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Fd,
-      g: () => Xd
+  35351: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Hb,
+      d: () => Vb
     });
-    const Wd = [{
+    const eb = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -13378,79 +13378,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Fd(dd) {
-      let Od, md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof dd) {
-        if (!Number.isFinite(dd)) return "0";
-        if (Math.abs(dd) < 100) {
-          const Od = dd < 0 ? "-" : "",
-            md = Math.abs(dd);
-          return md >= 10 ? `${Od}${md.toFixed(1).replace(/\.0$/,"")}` : `${Od}${md.toFixed(2).replace(/\.?0+$/,"")}`
+    function Hb(bb) {
+      let wb, Mb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof bb) {
+        if (!Number.isFinite(bb)) return "0";
+        if (Math.abs(bb) < 100) {
+          const wb = bb < 0 ? "-" : "",
+            Mb = Math.abs(bb);
+          return Mb >= 10 ? `${wb}${Mb.toFixed(1).replace(/\.0$/,"")}` : `${wb}${Mb.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        Od = BigInt(Math.floor(dd))
-      } else Od = dd;
-      const Fd = Od < 0n ? -Od : Od,
-        Rd = Od < 0n ? "-" : "",
-        Xd = Fd.toString();
-      if (Xd.length <= md) return `${Rd}${Xd}`;
-      const Kd = 3 * Math.floor((Xd.length - 1) / 3);
-      if (Kd < 3) return `${Rd}${Xd}`;
-      if (Kd > 3 * Wd.length) {
-        const dd = Xd[0],
-          Od = Xd.slice(1, 3).replace(/0+$/, "");
-        return `${Rd}${Od?`${dd}.${Od}`:dd}e${Xd.length-1}`
+        wb = BigInt(Math.floor(bb))
+      } else wb = bb;
+      const Hb = wb < 0n ? -wb : wb,
+        pb = wb < 0n ? "-" : "",
+        Vb = Hb.toString();
+      if (Vb.length <= Mb) return `${pb}${Vb}`;
+      const gb = 3 * Math.floor((Vb.length - 1) / 3);
+      if (gb < 3) return `${pb}${Vb}`;
+      if (gb > 3 * eb.length) {
+        const bb = Vb[0],
+          wb = Vb.slice(1, 3).replace(/0+$/, "");
+        return `${pb}${wb?`${bb}.${wb}`:bb}e${Vb.length-1}`
       }
       const {
-        threshold: hd,
-        suffix: vd
-      } = Wd[Wd.length - Kd / 3], Qd = Fd / hd, td = Number(1000n * (Fd % hd) / hd), od = Number(Qd) + td / 1e3;
-      let Nd;
-      return Nd = od >= 100 ? Math.floor(od).toString() : od >= 10 ? od.toFixed(1).replace(/\.0$/, "") : od.toFixed(2).replace(/\.?0+$/, ""), `${Rd}${Nd}${vd}`
+        threshold: lb,
+        suffix: Lb
+      } = eb[eb.length - gb / 3], Ib = Hb / lb, Ob = Number(1000n * (Hb % lb) / lb), Ub = Number(Ib) + Ob / 1e3;
+      let tb;
+      return tb = Ub >= 100 ? Math.floor(Ub).toString() : Ub >= 10 ? Ub.toFixed(1).replace(/\.0$/, "") : Ub.toFixed(2).replace(/\.?0+$/, ""), `${pb}${tb}${Lb}`
     }
-    const Rd = Wd.map((dd => {
+    const pb = eb.map((bb => {
       let {
-        threshold: Od,
-        suffix: md
-      } = dd;
+        threshold: wb,
+        suffix: Mb
+      } = bb;
       return {
-        threshold: Number(Od),
-        suffix: md
+        threshold: Number(wb),
+        suffix: Mb
       }
-    })).filter((dd => {
+    })).filter((bb => {
       let {
-        threshold: Od
-      } = dd;
-      return Number.isFinite(Od)
+        threshold: wb
+      } = bb;
+      return Number.isFinite(wb)
     }));
 
-    function Xd(dd) {
-      const Od = Math.abs(dd),
-        md = dd < 0 ? "-" : "";
+    function Vb(bb) {
+      const wb = Math.abs(bb),
+        Mb = bb < 0 ? "-" : "";
       for (const {
-          threshold: Wd,
-          suffix: Fd
+          threshold: eb,
+          suffix: Hb
         }
-        of Rd)
-        if (Od >= Wd) {
-          const dd = Od / Wd;
-          if (dd >= 1e3) return `${md}${Od.toExponential(2).replace("e+","e")}`;
-          let Rd;
-          return Rd = dd >= 100 ? Math.floor(dd).toString() : dd >= 10 ? dd.toFixed(1).replace(/\.0$/, "") : dd.toFixed(2).replace(/\.?0+$/, ""), `${md}${Rd}${Fd}`
-        } return `${md}${Od}`
+        of pb)
+        if (wb >= eb) {
+          const bb = wb / eb;
+          if (bb >= 1e3) return `${Mb}${wb.toExponential(2).replace("e+","e")}`;
+          let pb;
+          return pb = bb >= 100 ? Math.floor(bb).toString() : bb >= 10 ? bb.toFixed(1).replace(/\.0$/, "") : bb.toFixed(2).replace(/\.?0+$/, ""), `${Mb}${pb}${Hb}`
+        } return `${Mb}${wb}`
     }
   },
-  35541: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Qd,
-      c: () => od,
-      e: () => td,
-      i: () => Xd,
-      l: () => vd,
-      m: () => hd
+  35329: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Ib,
+      g: () => Ub,
+      i: () => Ob,
+      m: () => Vb,
+      p: () => Lb,
+      s: () => lb
     });
-    var Wd = md(405);
-    const Fd = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      Rd = {
+    var eb = Mb(382);
+    const Hb = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      pb = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -13525,13 +13525,13 @@ export const modules = {
         }
       };
 
-    function Xd(dd) {
-      var Od;
-      return null !== (Od = Rd[dd]) && void 0 !== Od ? Od : {
+    function Vb(bb) {
+      var wb;
+      return null !== (wb = pb[bb]) && void 0 !== wb ? wb : {
         translationKey: ""
       }
     }
-    const Kd = {
+    const gb = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -13584,77 +13584,77 @@ export const modules = {
       }]
     };
 
-    function hd(dd) {
-      return Fd.includes(dd)
+    function lb(bb) {
+      return Hb.includes(bb)
     }
 
-    function vd(dd) {
-      var Od;
-      return !0 === (null === dd || void 0 === dd || null === (Od = dd.customAttributes) || void 0 === Od ? void 0 : Od.cannotEnchant)
+    function Lb(bb) {
+      var wb;
+      return !0 === (null === bb || void 0 === bb || null === (wb = bb.customAttributes) || void 0 === wb ? void 0 : wb.cannotEnchant)
     }
 
-    function Qd(dd, Od) {
+    function Ib(bb, wb) {
       const {
-        max: md
-      } = Kd[dd].at(-1);
-      return Od <= md
+        max: Mb
+      } = gb[bb].at(-1);
+      return wb <= Mb
     }
 
-    function td(dd) {
-      const Od = Math.sin(dd / 80),
-        md = dd => {
-          if (dd <= 0) return 0;
-          if (dd > 1) return 1;
-          let Od = 0;
-          const md = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let Wd = 0; Wd < md.length; Wd++) {
-            Od += (Wd % 2 === 0 ? 1 : -1) * md[Wd] * Math.pow(dd, 2 + Wd) / (2 + Wd)
+    function Ob(bb) {
+      const wb = Math.sin(bb / 80),
+        Mb = bb => {
+          if (bb <= 0) return 0;
+          if (bb > 1) return 1;
+          let wb = 0;
+          const Mb = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let eb = 0; eb < Mb.length; eb++) {
+            wb += (eb % 2 === 0 ? 1 : -1) * Mb[eb] * Math.pow(bb, 2 + eb) / (2 + eb)
           }
-          return 72 * Od
+          return 72 * wb
         },
-        Wd = .3 - .78 * Od,
-        Fd = .5 - .78 * Od,
-        Rd = .6 - .7 * Od,
-        Xd = .8 - .6 * Od;
-      let Kd = md(Wd),
-        hd = md(Fd) - Kd,
-        vd = md(Rd) - hd - Kd,
-        Qd = md(Xd) - vd - hd - Kd;
-      Wd < .041 && (hd /= 1 - Kd, vd /= 1 - Kd, Qd /= 1 - Kd, Kd = 0), Fd < .041 && (Kd /= 1 - hd, vd /= 1 - hd, Qd /= 1 - hd, hd = 0), Rd < .041 && (Kd /= 1 - vd, hd /= 1 - vd, Qd /= 1 - vd, vd = 0), Xd < .041 && (Kd /= 1 - Qd, hd /= 1 - Qd, vd /= 1 - Qd, Qd = 0);
+        eb = .3 - .78 * wb,
+        Hb = .5 - .78 * wb,
+        pb = .6 - .7 * wb,
+        Vb = .8 - .6 * wb;
+      let gb = Mb(eb),
+        lb = Mb(Hb) - gb,
+        Lb = Mb(pb) - lb - gb,
+        Ib = Mb(Vb) - Lb - lb - gb;
+      eb < .041 && (lb /= 1 - gb, Lb /= 1 - gb, Ib /= 1 - gb, gb = 0), Hb < .041 && (gb /= 1 - lb, Lb /= 1 - lb, Ib /= 1 - lb, lb = 0), pb < .041 && (gb /= 1 - Lb, lb /= 1 - Lb, Ib /= 1 - Lb, Lb = 0), Vb < .041 && (gb /= 1 - Ib, lb /= 1 - Ib, Lb /= 1 - Ib, Ib = 0);
       return {
-        commonProb: Kd,
-        uncommonProb: hd,
-        rareProb: vd,
-        epicProb: Qd,
-        legendaryProb: 1 - (Qd + vd + hd + Kd)
+        commonProb: gb,
+        uncommonProb: lb,
+        rareProb: Lb,
+        epicProb: Ib,
+        legendaryProb: 1 - (Ib + Lb + lb + gb)
       }
     }
 
-    function od(dd, Od) {
+    function Ub(bb, wb) {
       const {
-        min: md,
-        max: Fd
-      } = Kd[dd][Od], Rd = Wd.b.sampleUniformIntDistribution(md, Fd, "includeMax");
+        min: Mb,
+        max: Hb
+      } = gb[bb][wb], pb = eb.e.sampleUniformIntDistribution(Mb, Hb, "includeMax");
       return {
-        ...td(Rd),
-        level: Rd
+        ...Ob(pb),
+        level: pb
       }
     }
   },
-  35513: () => {},
-  35605: () => {},
-  13963: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  35298: () => {},
+  35387: () => {},
+  14099: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  15110: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  15258: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  16610: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  16665: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  17126: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  17203: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

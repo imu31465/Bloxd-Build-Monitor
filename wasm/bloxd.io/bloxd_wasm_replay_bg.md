@@ -1,17 +1,17 @@
 # WASM module: `bloxd_wasm_replay_bg`
 
-> environment **bloxd.io** · build `yteou.5361c997` · analyzed 2026-11-28T13:51:29+09:00
-> source: https://bloxd.io/static/media/bloxd_wasm_replay_bg.e6b557b47050c2d44569.wasm
-> 354,632 bytes (346.3 KB) · sha256 `6fdc64e1f63d992b…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **bloxd.io** · build `welxxc.ffac0572` · analyzed 2026-11-28T21:24:40+09:00
+> source: https://bloxd.io/static/media/bloxd_wasm_replay_bg.7f63b7d2b0ca276cd1b9.wasm
+> 354,552 bytes (346.2 KB) · sha256 `5a90bae27ebce9ac…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- size 354,552 → 354,632 bytes (+80)
-- data bytes 7,266 → 7,346
-- name-section module id `f5fc99872446443b.1124` → `d384db502cbddb65.1124` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 354,632 → 354,552 bytes (-80)
+- data bytes 7,346 → 7,266
+- name-section module id `d384db502cbddb65.1124` → `7039c017aaf662a1.1124` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/34 names kept (identifier names are randomly assigned per build; compare signatures instead)
-- new embedded strings: `Hash table capacity overflow?`; `MeshskyBoxfogColourOverridefogChunkDistanceOverridecameraTin`; `cannot modify the panic hook from a panicking thread`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
-- removed embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `Hash table capacity overflow%`; `MeshskyBoxfogColourOverridefogChunkDistanceOverridecameraTin`; `cannot modify the panic hook from a panicking thread\`
+- new embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `Hash table capacity overflow%`; `MeshskyBoxfogColourOverridefogChunkDistanceOverridecameraTin`; `cannot modify the panic hook from a panicking thread\`
+- removed embedded strings: `Hash table capacity overflow?`; `MeshskyBoxfogColourOverridefogChunkDistanceOverridecameraTin`; `cannot modify the panic hook from a panicking thread`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
 
 ## Overview
 
@@ -22,10 +22,10 @@
 | Code bytes (function bodies) | 345,177 (337.1 KB) |
 | Total local variables | 2,888 |
 | Instructions (scanable bodies) | 168,622 |
-| Data segments / bytes | 38 / 7,346 |
+| Data segments / bytes | 38 / 7,266 |
 | Element segments / entries | 1 / 40 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `d384db502cbddb65.1124` |
+| name-section module id | `7039c017aaf662a1.1124` |
 | Sections | 12 |
 
 ## Sections
@@ -42,7 +42,7 @@
 | 9 | element | 86 | 1 |
 | 12 | datacount | 1 | — |
 | 10 | code | 345,814 | 359 |
-| 11 | data | 7,660 | 38 |
+| 11 | data | 7,580 | 38 |
 | 0 | custom:name | 29 | — |
 
 ## Types
@@ -55,11 +55,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `AUuf.bXg9` | func | `() -> (f64)` |
-| 1 | `AUuf.Ykd0` | func | `(i32 i32) -> ()` |
-| 2 | `AUuf.js3b` | func | `(i32 i32) -> ()` |
-| 3 | `AUuf.QyX1` | func | `(i32 i32) -> (i32)` |
-| 4 | `AUuf.Qv3z` | func | `() -> (i32)` |
+| 0 | `O4Od.Uqsh` | func | `() -> (f64)` |
+| 1 | `O4Od.DwPh` | func | `(i32 i32) -> ()` |
+| 2 | `O4Od.TZ46` | func | `(i32 i32) -> ()` |
+| 3 | `O4Od.lp8v` | func | `(i32 i32) -> (i32)` |
+| 4 | `O4Od.RK8Y` | func | `() -> (i32)` |
 
 ## Exports
 
@@ -67,40 +67,40 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `xlWn` | func | 226 | `(i32 i32) -> ()` |
-| `Zpve` | func | 196 | `(i32 i32) -> ()` |
-| `lMno` | func | 326 | `(i32 i32 i32) -> (i32 i32)` |
-| `fwU7` | func | 359 | `() -> (i32)` |
-| `n9bn` | func | 361 | `() -> ()` |
-| `PXzK` | func | 280 | `(i32) -> (i32)` |
-| `wXV8` | func | 177 | `(i32 i32 i32) -> ()` |
-| `jyIv` | func | 178 | `(i32 i32 i32) -> ()` |
-| `OXZj` | func | 252 | `(i32) -> ()` |
-| `MwAd` | global | 2 | `` |
-| `OtJs` | func | 362 | `() -> (i32)` |
-| `sisW` | func | 201 | `(i32) -> ()` |
+| `XOtO` | func | 226 | `(i32 i32) -> ()` |
+| `MOYp` | func | 254 | `(i32) -> ()` |
+| `E0gw` | func | 361 | `() -> ()` |
+| `gFaC` | func | 231 | `(i32 i32 f32) -> (i32)` |
+| `UEAW` | func | 249 | `(i32) -> (i32)` |
+| `GbKz` | func | 362 | `() -> (i32)` |
+| `yC52` | func | 361 | `() -> ()` |
+| `QJiz` | func | 223 | `(i32 f64 f64 f64 f64 f64 f64) -> ()` |
+| `Jzbq` | func | 162 | `(i32 i32 i32 i32) -> ()` |
+| `T0sg` | func | 321 | `(i32 i32) -> (i32)` |
+| `HDGE` | func | 359 | `() -> (i32)` |
+| `mmpP` | func | 253 | `(i32) -> ()` |
+| `iT4y` | func | 326 | `(i32 i32 i32) -> (i32 i32)` |
+| `oZpv` | func | 252 | `(i32) -> ()` |
 | `memory` | memory | 0 | `` |
-| `l1s4` | func | 203 | `(i32) -> ()` |
-| `gvES` | func | 248 | `(i32 i32 i32) -> ()` |
-| `UBA2` | func | 237 | `(i32) -> (i32)` |
-| `ps8v` | func | 278 | `(i32) -> (i32)` |
-| `S0TE` | func | 250 | `(i32 i32 i32) -> ()` |
-| `WWEA` | func | 245 | `(i32 i32 i32) -> ()` |
-| `G0bt` | func | 240 | `(i32 i32) -> (i32)` |
-| `NMud` | func | 253 | `(i32) -> ()` |
-| `MMMW` | func | 304 | `(i32) -> (i32)` |
-| `sgti` | global | 1 | `` |
-| `QGH3` | func | 231 | `(i32 i32 f32) -> (i32)` |
-| `Z2SQ` | func | 321 | `(i32 i32) -> (i32)` |
-| `su3M` | func | 361 | `() -> ()` |
-| `r9cK` | func | 234 | `(i32) -> (i32)` |
-| `lprA` | func | 162 | `(i32 i32 i32 i32) -> ()` |
-| `WUPd` | func | 254 | `(i32) -> ()` |
-| `RFQ3` | func | 223 | `(i32 f64 f64 f64 f64 f64 f64) -> ()` |
-| `jQ6n` | func | 249 | `(i32) -> (i32)` |
-| `ZVcY` | func | 219 | `() -> (i32)` |
-| `sItz` | func | 323 | `(i32 i32 i32 i32) -> (i32)` |
-| `JZ6k` | func | 181 | `(i32 f32) -> ()` |
+| `nsGr` | global | 2 | `` |
+| `fTPD` | func | 304 | `(i32) -> (i32)` |
+| `ZO0x` | func | 201 | `(i32) -> ()` |
+| `OihM` | func | 250 | `(i32 i32 i32) -> ()` |
+| `f7cG` | func | 196 | `(i32 i32) -> ()` |
+| `WQYF` | func | 203 | `(i32) -> ()` |
+| `YxCK` | func | 323 | `(i32 i32 i32 i32) -> (i32)` |
+| `l8XF` | func | 234 | `(i32) -> (i32)` |
+| `Er5T` | func | 181 | `(i32 f32) -> ()` |
+| `eIYw` | func | 178 | `(i32 i32 i32) -> ()` |
+| `VwdE` | func | 278 | `(i32) -> (i32)` |
+| `YkM8` | func | 248 | `(i32 i32 i32) -> ()` |
+| `gcaM` | func | 280 | `(i32) -> (i32)` |
+| `rAnX` | func | 237 | `(i32) -> (i32)` |
+| `CzRg` | func | 245 | `(i32 i32 i32) -> ()` |
+| `cWVn` | func | 219 | `() -> (i32)` |
+| `H6Nd` | func | 240 | `(i32 i32) -> (i32)` |
+| `JEdE` | global | 1 | `` |
+| `U9U8` | func | 177 | `(i32 i32 i32) -> ()` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -108,7 +108,7 @@
 
 - memory 0: min 17 pages · max ∞ · shared=False
 - table 0: funcref · min 41 · max 41
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1056416, `i32` = i32.const 1056900
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1056336, `i32` = i32.const 1056820
 
 ## Functions
 
@@ -172,17 +172,17 @@ Largest functions:
 Error000102030405060708091011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969
 timeFractionlerpModeprepostt3_t2pointPrecomputespreGradientpostGradientdeltaanimationDurationMsloopModenodeAnimationsrotationpositionscale
 Errornull pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rust
-h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs
-h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter.rs
-h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs
 attempt to divide by zerouser-provided comparison function does not correctly implement a total order
-MeshskyBoxfogColourOverridefogChunkDistanceOverridecameraTintfogOnSkyboxfogBlockDistanceOverridet
+MeshskyBoxfogColourOverridefogChunkDistanceOverridecameraTintfogOnSkyboxfogBlockDistanceOverride(
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/shared/smallsort.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs
 a formatting trait implementation returned an error when the underlying stream did not
 d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/inflate/output_buffer.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/raw_vec/mod.rs
+/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/index.rs
+/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/iter.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/panicking.rs
+/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/string.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/fmt.rs
 d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/inflate/core.rs
 assertion failed: (source_pos + 3) & out_buf_size_mask < out_slice.len()

@@ -1,221 +1,221 @@
 export const id = 611;
 export const ids = [611];
 export const modules = {
-  45334: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      CharacterPreview: () => Nd
+  45153: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      CharacterPreview: () => tb
     });
-    var Wd = md(66),
-      Fd = md(3851),
-      Rd = md(1300),
-      Xd = md(3597),
-      Kd = md(35582),
-      hd = md(4849),
-      vd = md(1341);
-    let Qd = null;
-    const td = [],
-      od = .6 * Math.PI,
-      Nd = (0, Wd.memo)((0, Wd.forwardRef)((function(dd, Od) {
+    var eb = Mb(64),
+      Hb = Mb(4005),
+      pb = Mb(1313),
+      Vb = Mb(3724),
+      gb = Mb(35366),
+      lb = Mb(5003),
+      Lb = Mb(1364);
+    let Ib = null;
+    const Ob = [],
+      Ub = .6 * Math.PI,
+      tb = (0, eb.memo)((0, eb.forwardRef)((function(bb, wb) {
         let {
-          onReady: md,
-          onDrawn: Nd,
-          onSetupFailed: qd,
-          owner: Hd = "other",
-          framing: yd = "player",
-          forcedCosmetics: bd,
-          hK: Td,
-          emotePlaySeq: pd,
-          turntableFromYaw: Yd = null,
-          nametag: gd
-        } = dd;
-        const wd = (0, Wd.useRef)(null),
+          onReady: Mb,
+          onDrawn: tb,
+          onSetupFailed: Cb,
+          owner: Eb = "other",
+          framing: Fb = "player",
+          forcedCosmetics: Bb,
+          Og: sb,
+          emotePlaySeq: mb,
+          turntableFromYaw: hb = null,
+          nametag: zb
+        } = bb;
+        const Xb = (0, eb.useRef)(null),
           {
-            width: Ed,
-            height: Jd
-          } = (0, Fd.b)(wd),
-          Ud = (0, Wd.useRef)({
-            width: Ed,
-            height: Jd
+            width: xb,
+            height: jb
+          } = (0, Hb.b)(Xb),
+          Kb = (0, eb.useRef)({
+            width: xb,
+            height: jb
           });
-        Ud.current = {
-          width: Ed,
-          height: Jd
+        Kb.current = {
+          width: xb,
+          height: jb
         };
-        const xd = (0, Wd.useRef)(null),
-          Bd = (0, Wd.useRef)({}),
-          Sd = (0, Wd.useRef)({}),
-          [sd, ud] = (0, Wd.useState)(!1),
-          Vd = (0, Wd.useRef)(md);
-        Vd.current = md;
-        const Ad = (0, Wd.useRef)(Nd);
-        Ad.current = Nd;
-        const rd = (0, Wd.useRef)(qd);
-        rd.current = qd;
-        const Gd = (0, Wd.useRef)(null),
-          nd = (0, Wd.useRef)(!1),
-          Ld = (0, Wd.useRef)(gd);
-        Ld.current = gd;
-        const Pd = (0, Wd.useRef)(!0),
-          zd = (0, Wd.useRef)(!1),
-          cd = (0, Wd.useCallback)((() => {
-            const dd = xd.current;
-            if (!dd || !Ad.current || nd.current || !zd.current) return;
-            const Od = {};
-            Gd.current = Od, queueMicrotask((() => {
-              if (Gd.current !== Od) return;
-              const md = Promise.all(Rd.s.map((Od => dd.untilDrawn(Od)))).then((() => !0), (dd => (console.error("Failed to draw the character preview", dd), !1))),
-                Wd = new Promise((dd => {
+        const rb = (0, eb.useRef)(null),
+          Rb = (0, eb.useRef)({}),
+          Db = (0, eb.useRef)({}),
+          [cb, Yb] = (0, eb.useState)(!1),
+          Zb = (0, eb.useRef)(Mb);
+        Zb.current = Mb;
+        const fb = (0, eb.useRef)(tb);
+        fb.current = tb;
+        const Ab = (0, eb.useRef)(Cb);
+        Ab.current = Cb;
+        const Wb = (0, eb.useRef)(null),
+          Jb = (0, eb.useRef)(!1),
+          Sb = (0, eb.useRef)(zb);
+        Sb.current = zb;
+        const Nb = (0, eb.useRef)(!0),
+          vb = (0, eb.useRef)(!1),
+          Qb = (0, eb.useCallback)((() => {
+            const bb = rb.current;
+            if (!bb || !fb.current || Jb.current || !vb.current) return;
+            const wb = {};
+            Wb.current = wb, queueMicrotask((() => {
+              if (Wb.current !== wb) return;
+              const Mb = Promise.all(pb.u.map((wb => bb.untilDrawn(wb)))).then((() => !0), (bb => (console.error("Failed to draw the character preview", bb), !1))),
+                eb = new Promise((bb => {
                   setTimeout((() => {
-                    dd(!1)
+                    bb(!1)
                   }), 1e4)
                 }));
-              Promise.race([md, Wd]).then((md => {
-                const Wd = Ad.current;
-                xd.current === dd && Gd.current === Od && !nd.current && Wd && (nd.current = !0, Wd(md))
+              Promise.race([Mb, eb]).then((Mb => {
+                const eb = fb.current;
+                rb.current === bb && Wb.current === wb && !Jb.current && eb && (Jb.current = !0, eb(Mb))
               }))
             }))
           }), []);
-        return (0, Wd.useImperativeHandle)(Od, (() => {
-          const dd = (dd, Od) => {
-            var md;
-            (Bd.current[dd] = Od, null !== bd && void 0 !== bd && bd[dd]) || (null === (md = xd.current) || void 0 === md || md.setCosmetic(dd, Od), cd())
+        return (0, eb.useImperativeHandle)(wb, (() => {
+          const bb = (bb, wb) => {
+            var Mb;
+            (Rb.current[bb] = wb, null !== Bb && void 0 !== Bb && Bb[bb]) || (null === (Mb = rb.current) || void 0 === Mb || Mb.setCosmetic(bb, wb), Qb())
           };
           return {
-            updateCosmetic: dd,
-            setAllCosmetics(Od) {
-              for (const Wd of Rd.s) {
-                var md;
-                dd(Wd, null !== (md = Od[Wd]) && void 0 !== md ? md : (0, Xd.b)(Wd))
+            updateCosmetic: bb,
+            setAllCosmetics(wb) {
+              for (const eb of pb.u) {
+                var Mb;
+                bb(eb, null !== (Mb = wb[eb]) && void 0 !== Mb ? Mb : (0, Vb.b)(eb))
               }
             },
             isReady() {
-              var dd, Od;
-              return null !== (dd = null === (Od = xd.current) || void 0 === Od ? void 0 : Od.isReady()) && void 0 !== dd && dd
+              var bb, wb;
+              return null !== (bb = null === (wb = rb.current) || void 0 === wb ? void 0 : wb.isReady()) && void 0 !== bb && bb
             },
             resetCamera() {
-              var dd;
-              null === (dd = xd.current) || void 0 === dd || dd.resetCamera()
+              var bb;
+              null === (bb = rb.current) || void 0 === bb || bb.resetCamera()
             },
-            setOrbit(dd) {
-              var Od;
-              null === (Od = xd.current) || void 0 === Od || Od.setOrbit(dd)
+            setOrbit(bb) {
+              var wb;
+              null === (wb = rb.current) || void 0 === wb || wb.setOrbit(bb)
             },
-            turnCamera(dd) {
-              var Od;
-              const md = Kd.c[yd];
-              null === (Od = xd.current) || void 0 === Od || Od.setOrbit({
-                ...md,
-                yaw: md.yaw + dd
+            turnCamera(bb) {
+              var wb;
+              const Mb = gb.e[Fb];
+              null === (wb = rb.current) || void 0 === wb || wb.setOrbit({
+                ...Mb,
+                yaw: Mb.yaw + bb
               })
             },
-            async ensureReadyForCapture(dd) {
-              var Od;
-              await (null === (Od = xd.current) || void 0 === Od ? void 0 : Od.untilDrawn(dd))
+            async ensureReadyForCapture(bb) {
+              var wb;
+              await (null === (wb = rb.current) || void 0 === wb ? void 0 : wb.untilDrawn(bb))
             },
             getDevTools() {
-              var dd;
-              return null !== (dd = xd.current) && void 0 !== dd && dd.isReady() ? xd.current.dev : null
+              var bb;
+              return null !== (bb = rb.current) && void 0 !== bb && bb.isReady() ? rb.current.dev : null
             },
-            setNametagShown(dd) {
-              var Od, md;
-              Pd.current = dd, null === (Od = xd.current) || void 0 === Od || Od.setNametag(dd && null !== (md = Ld.current) && void 0 !== md ? md : null)
+            setNametagShown(bb) {
+              var wb, Mb;
+              Nb.current = bb, null === (wb = rb.current) || void 0 === wb || wb.setNametag(bb && null !== (Mb = Sb.current) && void 0 !== Mb ? Mb : null)
             }
           }
-        }), [bd, yd, cd]), (0, Wd.useEffect)((() => {
-          const dd = hd.b.register(Hd);
-          let Od = !0;
-          const md = dd => {
-            const md = xd.current,
-              Wd = Kd.i.openCharacter(wd.current, yd);
-            if (xd.current = Wd, Qd = Wd, md) {
-              md.close();
+        }), [Bb, Fb, Qb]), (0, eb.useEffect)((() => {
+          const bb = lb.e.register(Eb);
+          let wb = !0;
+          const Mb = bb => {
+            const Mb = rb.current,
+              eb = gb.i.openCharacter(Xb.current, Fb);
+            if (rb.current = eb, Ib = eb, Mb) {
+              Mb.close();
               const {
-                width: dd,
-                height: Od
-              } = Ud.current;
-              dd > 0 && Od > 0 && Wd.resize(dd, Od)
+                width: bb,
+                height: wb
+              } = Kb.current;
+              bb > 0 && wb > 0 && eb.resize(bb, wb)
             }
-            Sd.current = {}, ud(!1), Wd.ready.then((() => {
-              if (Od && xd.current === Wd)
-                if (ud(!0), dd) {
-                  Wd.resetCamera();
-                  for (const dd of Rd.s) {
-                    var md;
-                    Wd.setCosmetic(dd, null !== (md = Bd.current[dd]) && void 0 !== md ? md : (0, Xd.b)(dd))
+            Db.current = {}, Yb(!1), eb.ready.then((() => {
+              if (wb && rb.current === eb)
+                if (Yb(!0), bb) {
+                  eb.resetCamera();
+                  for (const bb of pb.u) {
+                    var Mb;
+                    eb.setCosmetic(bb, null !== (Mb = Rb.current[bb]) && void 0 !== Mb ? Mb : (0, Vb.b)(bb))
                   }
-                } else Vd.current()
-            })).catch((dd => {
-              var md;
-              (console.error("Failed to set up the character preview", dd), Od && xd.current === Wd) && (null === (md = rd.current) || void 0 === md || md.call(rd))
+                } else Zb.current()
+            })).catch((bb => {
+              var Mb;
+              (console.error("Failed to set up the character preview", bb), wb && rb.current === eb) && (null === (Mb = Ab.current) || void 0 === Mb || Mb.call(Ab))
             }))
           };
-          md(!1);
-          const Wd = {
+          Mb(!1);
+          const eb = {
             reopen: () => {
-              md(!0)
+              Mb(!0)
             }
           };
-          return td.push(Wd), () => {
-            Od = !1, dd();
-            const md = xd.current;
-            Qd === md && (md.resetCamera(), Qd = null), md.close(), xd.current = null;
-            const Fd = td.indexOf(Wd);
-            if (td.splice(Fd, 1), Fd === td.length && Fd > 0) {
-              const dd = td[Fd - 1];
+          return Ob.push(eb), () => {
+            wb = !1, bb();
+            const Mb = rb.current;
+            Ib === Mb && (Mb.resetCamera(), Ib = null), Mb.close(), rb.current = null;
+            const Hb = Ob.indexOf(eb);
+            if (Ob.splice(Hb, 1), Hb === Ob.length && Hb > 0) {
+              const bb = Ob[Hb - 1];
               queueMicrotask((() => {
-                td.at(-1) === dd && null === Qd && Kd.i.sharesCharacter() && dd.reopen()
+                Ob.at(-1) === bb && null === Ib && gb.i.sharesCharacter() && bb.reopen()
               }))
             }
           }
-        }), []), (0, Wd.useEffect)((() => {
-          Ed <= 0 || Jd <= 0 || xd.current.resize(Ed, Jd)
-        }), [Ed, Jd]), (0, Wd.useEffect)((() => {
-          if (!sd) return;
-          const dd = Sd.current;
-          for (const Od of Rd.s) {
-            const md = null === bd || void 0 === bd ? void 0 : bd[Od],
-              Wd = dd[Od];
-            md && md !== Wd ? xd.current.setCosmetic(Od, md) : !md && Wd && Bd.current[Od] && xd.current.setCosmetic(Od, Bd.current[Od])
+        }), []), (0, eb.useEffect)((() => {
+          xb <= 0 || jb <= 0 || rb.current.resize(xb, jb)
+        }), [xb, jb]), (0, eb.useEffect)((() => {
+          if (!cb) return;
+          const bb = Db.current;
+          for (const wb of pb.u) {
+            const Mb = null === Bb || void 0 === Bb ? void 0 : Bb[wb],
+              eb = bb[wb];
+            Mb && Mb !== eb ? rb.current.setCosmetic(wb, Mb) : !Mb && eb && Rb.current[wb] && rb.current.setCosmetic(wb, Rb.current[wb])
           }
-          Sd.current = {
-            ...bd
-          }, zd.current = !0, cd()
-        }), [bd, sd, cd]), (0, Wd.useEffect)((() => {
-          sd && xd.current.playEmote(null !== Td && void 0 !== Td ? Td : null)
-        }), [Td, pd, sd]), (0, Wd.useEffect)((() => {
-          sd && Pd.current && xd.current.setNametag(null !== gd && void 0 !== gd ? gd : null)
-        }), [gd, sd]), (0, Wd.useEffect)((() => {
-          if (!sd || null === Yd) return;
-          const dd = xd.current,
+          Db.current = {
+            ...Bb
+          }, vb.current = !0, Qb()
+        }), [Bb, cb, Qb]), (0, eb.useEffect)((() => {
+          cb && rb.current.playEmote(null !== sb && void 0 !== sb ? sb : null)
+        }), [sb, mb, cb]), (0, eb.useEffect)((() => {
+          cb && Nb.current && rb.current.setNametag(null !== zb && void 0 !== zb ? zb : null)
+        }), [zb, cb]), (0, eb.useEffect)((() => {
+          if (!cb || null === hb) return;
+          const bb = rb.current,
             {
-              pitch: Od,
-              radius: md
-            } = Kd.c[yd];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return dd.setOrbit({
-            yaw: Yd + od,
-            pitch: Od,
-            radius: md
+              pitch: wb,
+              radius: Mb
+            } = gb.e[Fb];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return bb.setOrbit({
+            yaw: hb + Ub,
+            pitch: wb,
+            radius: Mb
           }), () => {
-            Qd === dd && dd.resetCamera()
+            Ib === bb && bb.resetCamera()
           };
-          const Wd = performance.now();
-          let Fd = 0;
-          const Rd = Xd => {
-            xd.current === dd && (dd.setOrbit({
-              yaw: Yd + (Xd - Wd) / 6e3 * 2 * Math.PI,
-              pitch: Od,
-              radius: md
-            }), Fd = requestAnimationFrame(Rd))
+          const eb = performance.now();
+          let Hb = 0;
+          const pb = Vb => {
+            rb.current === bb && (bb.setOrbit({
+              yaw: hb + (Vb - eb) / 6e3 * 2 * Math.PI,
+              pitch: wb,
+              radius: Mb
+            }), Hb = requestAnimationFrame(pb))
           };
-          return Fd = requestAnimationFrame(Rd), () => {
-            cancelAnimationFrame(Fd), Qd === dd && dd.resetCamera()
+          return Hb = requestAnimationFrame(pb), () => {
+            cancelAnimationFrame(Hb), Ib === bb && bb.resetCamera()
           }
-        }), [sd, Yd]), (0, vd.jsx)("div", {
+        }), [cb, hb]), (0, Lb.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: wd
+          ref: Xb
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

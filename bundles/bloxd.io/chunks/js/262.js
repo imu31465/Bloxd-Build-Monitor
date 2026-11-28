@@ -1,127 +1,127 @@
 export const id = 262;
 export const ids = [262, 268, 273];
 export const modules = {
-  42154: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Xd,
-      f: () => Kd
+  41916: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Vb,
+      d: () => gb
     });
-    var Wd = md(40262),
-      Fd = md(41948),
-      Rd = md(42126),
-      Xd = {};
-    class Kd {
-      constructor(dd) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = dd, this.checkInputs = () => {}
+    var eb = Mb(39971),
+      Hb = Mb(41697),
+      pb = Mb(41879),
+      Vb = {};
+    class gb {
+      constructor(bb) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = bb, this.checkInputs = () => {}
       }
-      add(dd) {
-        const Od = dd.getSimpleName();
-        this.attached[Od] ? Wd.c.Warn("camera input of type " + Od + " already exists on camera") : (this.attached[Od] = dd, dd.camera = this.camera, dd.checkInputs && (this.checkInputs = this._addCheckInputs(dd.checkInputs.bind(dd))), this.attachedToElement && dd.attachControl(this.noPreventDefault))
+      add(bb) {
+        const wb = bb.getSimpleName();
+        this.attached[wb] ? eb.b.Warn("camera input of type " + wb + " already exists on camera") : (this.attached[wb] = bb, bb.camera = this.camera, bb.checkInputs && (this.checkInputs = this._addCheckInputs(bb.checkInputs.bind(bb))), this.attachedToElement && bb.attachControl(this.noPreventDefault))
       }
-      remove(dd) {
-        for (const Od in this.attached) {
-          const md = this.attached[Od];
-          if (md === dd) return md.detachControl(), md.camera = null, delete this.attached[Od], void this.rebuildInputCheck()
+      remove(bb) {
+        for (const wb in this.attached) {
+          const Mb = this.attached[wb];
+          if (Mb === bb) return Mb.detachControl(), Mb.camera = null, delete this.attached[wb], void this.rebuildInputCheck()
         }
       }
-      removeByType(dd) {
-        for (const Od in this.attached) {
-          const md = this.attached[Od];
-          md.getClassName() === dd && (md.detachControl(), md.camera = null, delete this.attached[Od], this.rebuildInputCheck())
+      removeByType(bb) {
+        for (const wb in this.attached) {
+          const Mb = this.attached[wb];
+          Mb.getClassName() === bb && (Mb.detachControl(), Mb.camera = null, delete this.attached[wb], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(dd) {
-        const Od = this.checkInputs;
+      _addCheckInputs(bb) {
+        const wb = this.checkInputs;
         return () => {
-          Od(), dd()
+          wb(), bb()
         }
       }
-      attachInput(dd) {
-        this.attachedToElement && dd.attachControl(this.noPreventDefault)
+      attachInput(bb) {
+        this.attachedToElement && bb.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          dd = !Rd.e.ForceAttachControlToAlwaysPreventDefault && dd, this.attachedToElement = !0, this.noPreventDefault = dd;
-          for (const Od in this.attached) this.attached[Od].attachControl(dd)
+          bb = !pb.c.ForceAttachControlToAlwaysPreventDefault && bb, this.attachedToElement = !0, this.noPreventDefault = bb;
+          for (const wb in this.attached) this.attached[wb].attachControl(bb)
         }
       }
       detachElement() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const Od in this.attached) this.attached[Od].detachControl(), dd && (this.attached[Od].camera = null);
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const wb in this.attached) this.attached[wb].detachControl(), bb && (this.attached[wb].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const dd in this.attached) {
-          const Od = this.attached[dd];
-          Od.checkInputs && (this.checkInputs = this._addCheckInputs(Od.checkInputs.bind(Od)))
+        for (const bb in this.attached) {
+          const wb = this.attached[bb];
+          wb.checkInputs && (this.checkInputs = this._addCheckInputs(wb.checkInputs.bind(wb)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(dd) {
-        const Od = {};
-        for (const md in this.attached) {
-          const dd = this.attached[md],
-            Wd = Fd.b.Serialize(dd);
-          Od[dd.getClassName()] = Wd
+      serialize(bb) {
+        const wb = {};
+        for (const Mb in this.attached) {
+          const bb = this.attached[Mb],
+            eb = Hb.d.Serialize(bb);
+          wb[bb.getClassName()] = eb
         }
-        dd.inputsmgr = Od
+        bb.inputsmgr = wb
       }
-      parse(dd) {
-        const Od = dd.inputsmgr;
-        if (Od) {
+      parse(bb) {
+        const wb = bb.inputsmgr;
+        if (wb) {
           this.clear();
-          for (const dd in Od) {
-            const md = Xd[dd];
-            if (md) {
-              const Wd = Od[dd],
-                Rd = Fd.b.Parse((() => new md), Wd, null);
-              this.add(Rd)
+          for (const bb in wb) {
+            const Mb = Vb[bb];
+            if (Mb) {
+              const eb = wb[bb],
+                pb = Hb.d.Parse((() => new Mb), eb, null);
+              this.add(pb)
             }
           }
         } else
-          for (const md in this.attached) {
-            const Od = Xd[this.attached[md].getClassName()];
-            if (Od) {
-              const Wd = Fd.b.Parse((() => new Od), dd, null);
-              this.remove(this.attached[md]), this.add(Wd)
+          for (const Mb in this.attached) {
+            const wb = Vb[this.attached[Mb].getClassName()];
+            if (wb) {
+              const eb = Hb.d.Parse((() => new wb), bb, null);
+              this.remove(this.attached[Mb]), this.add(eb)
             }
           }
       }
     }
   },
-  42162: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Wd.e
+  41920: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => eb.e
     });
-    var Wd = md(42168);
-    (0, Wd.f)()
+    var eb = Mb(41929);
+    (0, eb.h)()
   },
-  42168: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Qd,
-      f: () => od
+  41929: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Ib,
+      h: () => Ub
     });
-    var Wd = md(41922),
-      Fd = md(41931),
-      Rd = md(38636),
-      Xd = md(38741),
-      Kd = md(42172),
-      hd = md(42132),
-      vd = md(38669);
-    let Qd = (() => {
-        var dd;
-        let Od, md, hd = Kd.c,
-          vd = [],
-          Qd = [],
-          td = [],
-          od = [];
-        return dd = class extends hd {
-          constructor(dd, Od, md, Fd) {
-            super(dd, md, Fd), this.groundColor = (0, Wd.k)(this, vd, new Xd.d(0, 0, 0)), this.direction = ((0, Wd.k)(this, Qd), (0, Wd.k)(this, td, void 0)), (0, Wd.k)(this, od), this.direction = Od || Rd.j.Up()
+    var eb = Mb(41675),
+      Hb = Mb(41679),
+      pb = Mb(38285),
+      Vb = Mb(38406),
+      gb = Mb(41931),
+      lb = Mb(41886),
+      Lb = Mb(38333);
+    let Ib = (() => {
+        var bb;
+        let wb, Mb, lb = gb.d,
+          Lb = [],
+          Ib = [],
+          Ob = [],
+          Ub = [];
+        return bb = class extends lb {
+          constructor(bb, wb, Mb, Hb) {
+            super(bb, Mb, Hb), this.groundColor = (0, eb.m)(this, Lb, new Vb.e(0, 0, 0)), this.direction = ((0, eb.m)(this, Ib), (0, eb.m)(this, Ob, void 0)), (0, eb.m)(this, Ub), this.direction = wb || pb.o.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -129,499 +129,499 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(dd) {
-            return this.direction = Rd.j.Normalize(dd.subtract(Rd.j.Zero())), this.direction
+          setDirectionToTarget(bb) {
+            return this.direction = pb.o.Normalize(bb.subtract(pb.o.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(dd, Od) {
-            const md = Rd.j.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", md.x, md.y, md.z, 0, Od), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), Od), this
+          transferToEffect(bb, wb) {
+            const Mb = pb.o.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", Mb.x, Mb.y, Mb.z, 0, wb), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), wb), this
           }
-          transferToNodeMaterialEffect(dd, Od) {
-            const md = Rd.j.Normalize(this.direction);
-            return dd.setFloat3(Od, md.x, md.y, md.z), this
+          transferToNodeMaterialEffect(bb, wb) {
+            const Mb = pb.o.Normalize(this.direction);
+            return bb.setFloat3(wb, Mb.x, Mb.y, Mb.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = Rd.d.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = pb.b.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return Kd.c.LIGHTTYPEID_HEMISPHERICLIGHT
+            return gb.d.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(dd, Od) {
-            dd["HEMILIGHT" + Od] = !0
+          prepareLightSpecificDefines(bb, wb) {
+            bb["HEMILIGHT" + wb] = !0
           }
         }, (() => {
-          const Rd = "function" === typeof Symbol && Symbol.metadata ? Object.create(hd[Symbol.metadata] ?? null) : void 0;
-          Od = [(0, Fd.m)()], md = [(0, Fd.B)()], (0, Wd.h)(null, null, Od, {
+          const pb = "function" === typeof Symbol && Symbol.metadata ? Object.create(lb[Symbol.metadata] ?? null) : void 0;
+          wb = [(0, Hb.i)()], Mb = [(0, Hb.B)()], (0, eb.i)(null, null, wb, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: dd => "groundColor" in dd,
-              get: dd => dd.groundColor,
-              set: (dd, Od) => {
-                dd.groundColor = Od
+              has: bb => "groundColor" in bb,
+              get: bb => bb.groundColor,
+              set: (bb, wb) => {
+                bb.groundColor = wb
               }
             },
-            metadata: Rd
-          }, vd, Qd), (0, Wd.h)(null, null, md, {
+            metadata: pb
+          }, Lb, Ib), (0, eb.i)(null, null, Mb, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: dd => "direction" in dd,
-              get: dd => dd.direction,
-              set: (dd, Od) => {
-                dd.direction = Od
+              has: bb => "direction" in bb,
+              get: bb => bb.direction,
+              set: (bb, wb) => {
+                bb.direction = wb
               }
             },
-            metadata: Rd
-          }, td, od), Rd && Object.defineProperty(dd, Symbol.metadata, {
+            metadata: pb
+          }, Ob, Ub), pb && Object.defineProperty(bb, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Rd
+            value: pb
           })
-        })(), dd
+        })(), bb
       })(),
-      td = !1;
+      Ob = !1;
 
-    function od() {
-      td || (td = !0, hd.b.AddNodeConstructor("Light_Type_3", ((dd, Od) => () => new Qd(dd, Rd.j.Zero(), Od))), (0, vd.e)("BABYLON.HemisphericLight", Qd))
+    function Ub() {
+      Ob || (Ob = !0, lb.d.AddNodeConstructor("Light_Type_3", ((bb, wb) => () => new Ib(bb, pb.o.Zero(), wb))), (0, Lb.e)("BABYLON.HemisphericLight", Ib))
     }
   },
-  38736: (dd, Od, md) => {
-    md.d(Od, {
-      Color3: () => Wd.d,
-      b: () => Wd.f
+  38401: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      Color3: () => eb.e,
+      c: () => eb.f
     });
-    var Wd = md(38741);
-    (0, Wd.g)()
+    var eb = Mb(38406);
+    (0, eb.h)()
   },
-  39297: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Fd
+  38994: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Hb
     });
-    var Wd = md(39306);
-    class Fd {
-      static GetPlanes(dd) {
-        const Od = [];
-        for (let md = 0; md < 6; md++) Od.push(new Wd.d(0, 0, 0, 0));
-        return Fd.GetPlanesToRef(dd, Od), Od
+    var eb = Mb(39001);
+    class Hb {
+      static GetPlanes(bb) {
+        const wb = [];
+        for (let Mb = 0; Mb < 6; Mb++) wb.push(new eb.d(0, 0, 0, 0));
+        return Hb.GetPlanesToRef(bb, wb), wb
       }
-      static GetNearPlaneToRef(dd, Od) {
-        const md = dd.m;
-        Od.normal.x = md[3] + md[2], Od.normal.y = md[7] + md[6], Od.normal.z = md[11] + md[10], Od.d = md[15] + md[14], Od.normalize()
+      static GetNearPlaneToRef(bb, wb) {
+        const Mb = bb.m;
+        wb.normal.x = Mb[3] + Mb[2], wb.normal.y = Mb[7] + Mb[6], wb.normal.z = Mb[11] + Mb[10], wb.d = Mb[15] + Mb[14], wb.normalize()
       }
-      static GetFarPlaneToRef(dd, Od) {
-        const md = dd.m;
-        Od.normal.x = md[3] - md[2], Od.normal.y = md[7] - md[6], Od.normal.z = md[11] - md[10], Od.d = md[15] - md[14], Od.normalize()
+      static GetFarPlaneToRef(bb, wb) {
+        const Mb = bb.m;
+        wb.normal.x = Mb[3] - Mb[2], wb.normal.y = Mb[7] - Mb[6], wb.normal.z = Mb[11] - Mb[10], wb.d = Mb[15] - Mb[14], wb.normalize()
       }
-      static GetLeftPlaneToRef(dd, Od) {
-        const md = dd.m;
-        Od.normal.x = md[3] + md[0], Od.normal.y = md[7] + md[4], Od.normal.z = md[11] + md[8], Od.d = md[15] + md[12], Od.normalize()
+      static GetLeftPlaneToRef(bb, wb) {
+        const Mb = bb.m;
+        wb.normal.x = Mb[3] + Mb[0], wb.normal.y = Mb[7] + Mb[4], wb.normal.z = Mb[11] + Mb[8], wb.d = Mb[15] + Mb[12], wb.normalize()
       }
-      static GetRightPlaneToRef(dd, Od) {
-        const md = dd.m;
-        Od.normal.x = md[3] - md[0], Od.normal.y = md[7] - md[4], Od.normal.z = md[11] - md[8], Od.d = md[15] - md[12], Od.normalize()
+      static GetRightPlaneToRef(bb, wb) {
+        const Mb = bb.m;
+        wb.normal.x = Mb[3] - Mb[0], wb.normal.y = Mb[7] - Mb[4], wb.normal.z = Mb[11] - Mb[8], wb.d = Mb[15] - Mb[12], wb.normalize()
       }
-      static GetTopPlaneToRef(dd, Od) {
-        const md = dd.m;
-        Od.normal.x = md[3] - md[1], Od.normal.y = md[7] - md[5], Od.normal.z = md[11] - md[9], Od.d = md[15] - md[13], Od.normalize()
+      static GetTopPlaneToRef(bb, wb) {
+        const Mb = bb.m;
+        wb.normal.x = Mb[3] - Mb[1], wb.normal.y = Mb[7] - Mb[5], wb.normal.z = Mb[11] - Mb[9], wb.d = Mb[15] - Mb[13], wb.normalize()
       }
-      static GetBottomPlaneToRef(dd, Od) {
-        const md = dd.m;
-        Od.normal.x = md[3] + md[1], Od.normal.y = md[7] + md[5], Od.normal.z = md[11] + md[9], Od.d = md[15] + md[13], Od.normalize()
+      static GetBottomPlaneToRef(bb, wb) {
+        const Mb = bb.m;
+        wb.normal.x = Mb[3] + Mb[1], wb.normal.y = Mb[7] + Mb[5], wb.normal.z = Mb[11] + Mb[9], wb.d = Mb[15] + Mb[13], wb.normalize()
       }
-      static GetPlanesToRef(dd, Od) {
-        Fd.GetNearPlaneToRef(dd, Od[0]), Fd.GetFarPlaneToRef(dd, Od[1]), Fd.GetLeftPlaneToRef(dd, Od[2]), Fd.GetRightPlaneToRef(dd, Od[3]), Fd.GetTopPlaneToRef(dd, Od[4]), Fd.GetBottomPlaneToRef(dd, Od[5])
+      static GetPlanesToRef(bb, wb) {
+        Hb.GetNearPlaneToRef(bb, wb[0]), Hb.GetFarPlaneToRef(bb, wb[1]), Hb.GetLeftPlaneToRef(bb, wb[2]), Hb.GetRightPlaneToRef(bb, wb[3]), Hb.GetTopPlaneToRef(bb, wb[4]), Hb.GetBottomPlaneToRef(bb, wb[5])
       }
-      static IsPointInFrustum(dd, Od) {
-        for (let md = 0; md < 6; md++)
-          if (Od[md].dotCoordinate(dd) < 0) return !1;
+      static IsPointInFrustum(bb, wb) {
+        for (let Mb = 0; Mb < 6; Mb++)
+          if (wb[Mb].dotCoordinate(bb) < 0) return !1;
         return !0
       }
     }
   },
-  39306: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Fd
+  39001: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Hb
     });
-    var Wd = md(38636);
-    class Fd {
-      constructor(dd, Od, md, Fd) {
-        this.normal = new Wd.j(dd, Od, md), this.d = Fd
+    var eb = Mb(38285);
+    class Hb {
+      constructor(bb, wb, Mb, Hb) {
+        this.normal = new eb.o(bb, wb, Mb), this.d = Hb
       }
-      RRd() {
+      ppb() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new Fd(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new Hb(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let dd = this.normal.getHashCode();
-        return dd = 397 * dd ^ this.d, dd
+        let bb = this.normal.getHashCode();
+        return bb = 397 * bb ^ this.d, bb
       }
       normalize() {
-        const dd = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let Od = 0;
-        return 0 !== dd && (Od = 1 / dd), this.normal.x *= Od, this.normal.y *= Od, this.normal.z *= Od, this.d *= Od, this
+        const bb = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let wb = 0;
+        return 0 !== bb && (wb = 1 / bb), this.normal.x *= wb, this.normal.y *= wb, this.normal.z *= wb, this.d *= wb, this
       }
-      transform(dd) {
-        const Od = Fd._TmpMatrix;
-        dd.invertToRef(Od);
-        const md = Od.m,
-          Wd = this.normal.x,
-          Rd = this.normal.y,
-          Xd = this.normal.z,
-          Kd = this.d,
-          hd = Wd * md[0] + Rd * md[1] + Xd * md[2] + Kd * md[3],
-          vd = Wd * md[4] + Rd * md[5] + Xd * md[6] + Kd * md[7],
-          Qd = Wd * md[8] + Rd * md[9] + Xd * md[10] + Kd * md[11],
-          td = Wd * md[12] + Rd * md[13] + Xd * md[14] + Kd * md[15];
-        return new Fd(hd, vd, Qd, td)
+      transform(bb) {
+        const wb = Hb._TmpMatrix;
+        bb.invertToRef(wb);
+        const Mb = wb.m,
+          eb = this.normal.x,
+          pb = this.normal.y,
+          Vb = this.normal.z,
+          gb = this.d,
+          lb = eb * Mb[0] + pb * Mb[1] + Vb * Mb[2] + gb * Mb[3],
+          Lb = eb * Mb[4] + pb * Mb[5] + Vb * Mb[6] + gb * Mb[7],
+          Ib = eb * Mb[8] + pb * Mb[9] + Vb * Mb[10] + gb * Mb[11],
+          Ob = eb * Mb[12] + pb * Mb[13] + Vb * Mb[14] + gb * Mb[15];
+        return new Hb(lb, Lb, Ib, Ob)
       }
-      dotCoordinate(dd) {
-        return this.normal.x * dd.x + this.normal.y * dd.y + this.normal.z * dd.z + this.d
+      dotCoordinate(bb) {
+        return this.normal.x * bb.x + this.normal.y * bb.y + this.normal.z * bb.z + this.d
       }
-      copyFromPoints(dd, Od, md) {
-        const Wd = Od.x - dd.x,
-          Fd = Od.y - dd.y,
-          Rd = Od.z - dd.z,
-          Xd = md.x - dd.x,
-          Kd = md.y - dd.y,
-          hd = md.z - dd.z,
-          vd = Fd * hd - Rd * Kd,
-          Qd = Rd * Xd - Wd * hd,
-          td = Wd * Kd - Fd * Xd,
-          od = Math.sqrt(vd * vd + Qd * Qd + td * td);
-        let Nd;
-        return Nd = 0 !== od ? 1 / od : 0, this.normal.x = vd * Nd, this.normal.y = Qd * Nd, this.normal.z = td * Nd, this.d = -(this.normal.x * dd.x + this.normal.y * dd.y + this.normal.z * dd.z), this
+      copyFromPoints(bb, wb, Mb) {
+        const eb = wb.x - bb.x,
+          Hb = wb.y - bb.y,
+          pb = wb.z - bb.z,
+          Vb = Mb.x - bb.x,
+          gb = Mb.y - bb.y,
+          lb = Mb.z - bb.z,
+          Lb = Hb * lb - pb * gb,
+          Ib = pb * Vb - eb * lb,
+          Ob = eb * gb - Hb * Vb,
+          Ub = Math.sqrt(Lb * Lb + Ib * Ib + Ob * Ob);
+        let tb;
+        return tb = 0 !== Ub ? 1 / Ub : 0, this.normal.x = Lb * tb, this.normal.y = Ib * tb, this.normal.z = Ob * tb, this.d = -(this.normal.x * bb.x + this.normal.y * bb.y + this.normal.z * bb.z), this
       }
-      isFrontFacingTo(dd, Od) {
-        return Wd.j.Dot(this.normal, dd) <= Od
+      isFrontFacingTo(bb, wb) {
+        return eb.o.Dot(this.normal, bb) <= wb
       }
-      signedDistanceTo(dd) {
-        return Wd.j.Dot(dd, this.normal) + this.d
+      signedDistanceTo(bb) {
+        return eb.o.Dot(bb, this.normal) + this.d
       }
-      static FromArray(dd) {
-        return new Fd(dd[0], dd[1], dd[2], dd[3])
+      static FromArray(bb) {
+        return new Hb(bb[0], bb[1], bb[2], bb[3])
       }
-      static FromPoints(dd, Od, md) {
-        const Wd = new Fd(0, 0, 0, 0);
-        return Wd.copyFromPoints(dd, Od, md), Wd
+      static FromPoints(bb, wb, Mb) {
+        const eb = new Hb(0, 0, 0, 0);
+        return eb.copyFromPoints(bb, wb, Mb), eb
       }
-      static FromPositionAndNormal(dd, Od) {
-        const md = new Fd(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(dd, Od, md)
+      static FromPositionAndNormal(bb, wb) {
+        const Mb = new Hb(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(bb, wb, Mb)
       }
-      static FromPositionAndNormalToRef(dd, Od, md) {
-        return md.normal.Bx(Od), md.normal.normalize(), md.d = -dd.dot(md.normal), md
+      static FromPositionAndNormalToRef(bb, wb, Mb) {
+        return Mb.normal.eZ(wb), Mb.normal.normalize(), Mb.d = -bb.dot(Mb.normal), Mb
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(dd, Od, md) {
-        const Fd = -(Od.x * dd.x + Od.y * dd.y + Od.z * dd.z);
-        return Wd.j.Dot(md, Od) + Fd
+      static SignedDistanceToPlaneFromPositionAndNormal(bb, wb, Mb) {
+        const Hb = -(wb.x * bb.x + wb.y * bb.y + wb.z * bb.z);
+        return eb.o.Dot(Mb, wb) + Hb
       }
     }
-    Fd._TmpMatrix = Wd.d.Identity()
+    Hb._TmpMatrix = eb.b.Identity()
   },
-  38627: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      Matrix: () => Wd.d,
-      Quaternion: () => Wd.e,
-      RegisterMathVector: () => Wd.f,
-      TmpVectors: () => Wd.h,
-      Vector2: () => Wd.i,
-      Cq: () => Wd.j,
-      Vector4: () => Wd.k
+  38281: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      Matrix: () => eb.b,
+      Quaternion: () => eb.e,
+      RegisterMathVector: () => eb.g,
+      TmpVectors: () => eb.j,
+      Vector2: () => eb.m,
+      YC: () => eb.o,
+      Vector4: () => eb.q
     });
-    var Wd = md(38636);
-    (0, Wd.f)()
+    var eb = Mb(38285);
+    (0, eb.g)()
   },
-  39642: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Wd
+  39323: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => eb
     });
-    class Wd {
-      constructor(dd, Od, md, Wd) {
-        this.x = dd, this.y = Od, this.width = md, this.height = Wd
+    class eb {
+      constructor(bb, wb, Mb, eb) {
+        this.x = bb, this.y = wb, this.width = Mb, this.height = eb
       }
-      toGlobal(dd, Od) {
-        return new Wd(this.x * dd, this.y * Od, this.width * dd, this.height * Od)
+      toGlobal(bb, wb) {
+        return new eb(this.x * bb, this.y * wb, this.width * bb, this.height * wb)
       }
-      toGlobalToRef(dd, Od, md) {
-        return md.x = this.x * dd, md.y = this.y * Od, md.width = this.width * dd, md.height = this.height * Od, this
+      toGlobalToRef(bb, wb, Mb) {
+        return Mb.x = this.x * bb, Mb.y = this.y * wb, Mb.width = this.width * bb, Mb.height = this.height * wb, this
       }
       clone() {
-        return new Wd(this.x, this.y, this.width, this.height)
+        return new eb(this.x, this.y, this.width, this.height)
       }
     }
   },
-  42321: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => vd
+  42074: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Lb
     });
-    var Wd = md(38636),
-      Fd = md(38741),
-      Rd = md(42330),
-      Xd = md(42339),
-      Kd = md(42358);
+    var eb = Mb(38285),
+      Hb = Mb(38406),
+      pb = Mb(42078),
+      Vb = Mb(42091),
+      gb = Mb(42107);
 
-    function hd(dd) {
-      let Od = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
-      const md = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
-        Rd = [],
-        hd = dd.width || dd.size || 1,
-        vd = dd.height || dd.size || 1,
-        Qd = dd.depth || dd.size || 1,
-        td = dd.wrap || !1;
-      let od = void 0 === dd.topBaseAt ? 1 : dd.topBaseAt,
-        Nd = void 0 === dd.bottomBaseAt ? 0 : dd.bottomBaseAt;
-      od = (od + 4) % 4, Nd = (Nd + 4) % 4;
-      let qd = [2, 0, 3, 1][od],
-        Hd = [2, 0, 1, 3][Nd],
-        yd = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
-      if (td) {
-        Od = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], yd = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
-        let dd = [
+    function lb(bb) {
+      let wb = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
+      const Mb = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
+        pb = [],
+        lb = bb.width || bb.size || 1,
+        Lb = bb.height || bb.size || 1,
+        Ib = bb.depth || bb.size || 1,
+        Ob = bb.wrap || !1;
+      let Ub = void 0 === bb.topBaseAt ? 1 : bb.topBaseAt,
+        tb = void 0 === bb.bottomBaseAt ? 0 : bb.bottomBaseAt;
+      Ub = (Ub + 4) % 4, tb = (tb + 4) % 4;
+      let Cb = [2, 0, 3, 1][Ub],
+        Eb = [2, 0, 1, 3][tb],
+        Fb = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
+      if (Ob) {
+        wb = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], Fb = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
+        let bb = [
             [1, 1, 1],
             [-1, 1, 1],
             [-1, 1, -1],
             [1, 1, -1]
           ],
-          md = [
+          Mb = [
             [-1, -1, 1],
             [1, -1, 1],
             [1, -1, -1],
             [-1, -1, -1]
           ];
-        const Wd = [17, 18, 19, 16],
-          Fd = [22, 23, 20, 21];
-        for (; qd > 0;) dd.unshift(dd.pop()), Wd.unshift(Wd.pop()), qd--;
-        for (; Hd > 0;) md.unshift(md.pop()), Fd.unshift(Fd.pop()), Hd--;
-        dd = dd.flat(), md = md.flat(), yd = yd.concat(dd).concat(md), Od.push(Wd[0], Wd[2], Wd[3], Wd[0], Wd[1], Wd[2]), Od.push(Fd[0], Fd[2], Fd[3], Fd[0], Fd[1], Fd[2])
+        const eb = [17, 18, 19, 16],
+          Hb = [22, 23, 20, 21];
+        for (; Cb > 0;) bb.unshift(bb.pop()), eb.unshift(eb.pop()), Cb--;
+        for (; Eb > 0;) Mb.unshift(Mb.pop()), Hb.unshift(Hb.pop()), Eb--;
+        bb = bb.flat(), Mb = Mb.flat(), Fb = Fb.concat(bb).concat(Mb), wb.push(eb[0], eb[2], eb[3], eb[0], eb[1], eb[2]), wb.push(Hb[0], Hb[2], Hb[3], Hb[0], Hb[1], Hb[2])
       }
-      const bd = [hd / 2, vd / 2, Qd / 2],
-        Td = yd.reduce(((dd, Od, md) => dd.concat(Od * bd[md % 3])), []),
-        pd = 0 === dd.sideOrientation ? 0 : dd.sideOrientation || Xd.c.DEFAULTSIDE,
-        Yd = dd.faceUV || new Array(6),
-        gd = dd.faceColors,
-        wd = [];
-      for (let Xd = 0; Xd < 6; Xd++) void 0 === Yd[Xd] && (Yd[Xd] = new Wd.k(0, 0, 1, 1)), gd && void 0 === gd[Xd] && (gd[Xd] = new Fd.f(1, 1, 1, 1));
-      for (let Wd = 0; Wd < 6; Wd++)
-        if (Rd.push(Yd[Wd].z, Kd.e ? 1 - Yd[Wd].w : Yd[Wd].w), Rd.push(Yd[Wd].x, Kd.e ? 1 - Yd[Wd].w : Yd[Wd].w), Rd.push(Yd[Wd].x, Kd.e ? 1 - Yd[Wd].y : Yd[Wd].y), Rd.push(Yd[Wd].z, Kd.e ? 1 - Yd[Wd].y : Yd[Wd].y), gd)
-          for (let dd = 0; dd < 4; dd++) wd.push(gd[Wd].r, gd[Wd].g, gd[Wd].b, gd[Wd].a);
-      Xd.c._ComputeSides(pd, Td, Od, md, Rd, dd.frontUVs, dd.backUVs);
-      const Ed = new Xd.c;
-      if (Ed.indices = Od, Ed.positions = Td, Ed.normals = md, Ed.uvs = Rd, gd) {
-        const dd = pd === Xd.c.DOUBLESIDE ? wd.concat(wd) : wd;
-        Ed.colors = dd
+      const Bb = [lb / 2, Lb / 2, Ib / 2],
+        sb = Fb.reduce(((bb, wb, Mb) => bb.concat(wb * Bb[Mb % 3])), []),
+        mb = 0 === bb.sideOrientation ? 0 : bb.sideOrientation || Vb.d.DEFAULTSIDE,
+        hb = bb.faceUV || new Array(6),
+        zb = bb.faceColors,
+        Xb = [];
+      for (let Vb = 0; Vb < 6; Vb++) void 0 === hb[Vb] && (hb[Vb] = new eb.q(0, 0, 1, 1)), zb && void 0 === zb[Vb] && (zb[Vb] = new Hb.f(1, 1, 1, 1));
+      for (let eb = 0; eb < 6; eb++)
+        if (pb.push(hb[eb].z, gb.d ? 1 - hb[eb].w : hb[eb].w), pb.push(hb[eb].x, gb.d ? 1 - hb[eb].w : hb[eb].w), pb.push(hb[eb].x, gb.d ? 1 - hb[eb].y : hb[eb].y), pb.push(hb[eb].z, gb.d ? 1 - hb[eb].y : hb[eb].y), zb)
+          for (let bb = 0; bb < 4; bb++) Xb.push(zb[eb].r, zb[eb].g, zb[eb].b, zb[eb].a);
+      Vb.d._ComputeSides(mb, sb, wb, Mb, pb, bb.frontUVs, bb.backUVs);
+      const xb = new Vb.d;
+      if (xb.indices = wb, xb.positions = sb, xb.normals = Mb, xb.uvs = pb, zb) {
+        const bb = mb === Vb.d.DOUBLESIDE ? Xb.concat(Xb) : Xb;
+        xb.colors = bb
       }
-      return Ed
+      return xb
     }
 
-    function vd(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Wd = new Rd.d(dd, md);
-      Od.sideOrientation = Rd.d._GetDefaultSideOrientation(Od.sideOrientation), Wd._originalBuilderSideOrientation = Od.sideOrientation;
-      return hd(Od).applyToMesh(Wd, Od.updatable), Wd
+    function Lb(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const eb = new pb.e(bb, Mb);
+      wb.sideOrientation = pb.e._GetDefaultSideOrientation(wb.sideOrientation), eb._originalBuilderSideOrientation = wb.sideOrientation;
+      return lb(wb).applyToMesh(eb, wb.updatable), eb
     }
-    let Qd = !1;
-    Qd || (Qd = !0, Xd.c.CreateBox = hd, Rd.d.CreateBox = function(dd, Od) {
-      return vd(dd, {
-        size: Od,
+    let Ib = !1;
+    Ib || (Ib = !0, Vb.d.CreateBox = lb, pb.e.CreateBox = function(bb, wb) {
+      return Lb(bb, {
+        size: wb,
         sideOrientation: arguments.length > 4 ? arguments[4] : void 0,
         updatable: arguments.length > 3 ? arguments[3] : void 0
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     })
   },
-  42384: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => td
+  42132: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Ob
     });
-    var Wd = md(38636),
-      Fd = md(42330),
-      Rd = md(42339),
-      Xd = md(42393),
-      Kd = md(42075),
-      hd = md(40262);
+    var eb = Mb(38285),
+      Hb = Mb(42078),
+      pb = Mb(42091),
+      Vb = Mb(42137),
+      gb = Mb(41816),
+      lb = Mb(39971);
 
-    function vd(dd) {
-      const Od = [],
-        md = [],
-        Wd = dd.lines,
-        Fd = dd.colors,
-        Xd = [];
-      let Kd = 0;
-      for (let Rd = 0; Rd < Wd.length; Rd++) {
-        const dd = Wd[Rd];
-        for (let Wd = 0; Wd < dd.length; Wd++) {
+    function Lb(bb) {
+      const wb = [],
+        Mb = [],
+        eb = bb.lines,
+        Hb = bb.colors,
+        Vb = [];
+      let gb = 0;
+      for (let pb = 0; pb < eb.length; pb++) {
+        const bb = eb[pb];
+        for (let eb = 0; eb < bb.length; eb++) {
           const {
-            x: hd,
-            y: vd,
-            z: Qd
-          } = dd[Wd];
-          if (md.push(hd, vd, Qd), Fd) {
-            const dd = Fd[Rd],
+            x: lb,
+            y: Lb,
+            z: Ib
+          } = bb[eb];
+          if (Mb.push(lb, Lb, Ib), Hb) {
+            const bb = Hb[pb],
               {
-                r: Od,
-                g: md,
-                b: Kd,
-                a: hd
-              } = dd[Wd];
-            Xd.push(Od, md, Kd, hd)
+                r: wb,
+                g: Mb,
+                b: gb,
+                a: lb
+              } = bb[eb];
+            Vb.push(wb, Mb, gb, lb)
           }
-          Wd > 0 && (Od.push(Kd - 1), Od.push(Kd)), Kd++
+          eb > 0 && (wb.push(gb - 1), wb.push(gb)), gb++
         }
       }
-      const hd = new Rd.c;
-      return hd.indices = Od, hd.positions = md, Fd && (hd.colors = Xd), hd
+      const lb = new pb.d;
+      return lb.indices = wb, lb.positions = Mb, Hb && (lb.colors = Vb), lb
     }
 
-    function Qd(dd) {
-      const Od = dd.dashSize || 3,
-        md = dd.gapSize || 1,
-        Fd = dd.dashNb || 200,
-        Xd = dd.points,
-        Kd = [],
-        hd = [],
-        vd = Wd.j.Zero();
-      let Qd, td, od, Nd = 0,
-        qd = 0;
-      for (od = 0; od < Xd.length - 1; od++) Xd[od + 1].subtractToRef(Xd[od], vd), Nd += vd.length();
-      const Hd = Nd / Fd,
-        yd = Od * Hd / (Od + md);
-      for (od = 0; od < Xd.length - 1; od++) {
-        Xd[od + 1].subtractToRef(Xd[od], vd), Qd = Math.floor(vd.length() / Hd), vd.normalize();
-        for (let dd = 0; dd < Qd; dd++) td = Hd * dd, Kd.push(Xd[od].x + td * vd.x, Xd[od].y + td * vd.y, Xd[od].z + td * vd.z), Kd.push(Xd[od].x + (td + yd) * vd.x, Xd[od].y + (td + yd) * vd.y, Xd[od].z + (td + yd) * vd.z), hd.push(qd, qd + 1), qd += 2
+    function Ib(bb) {
+      const wb = bb.dashSize || 3,
+        Mb = bb.gapSize || 1,
+        Hb = bb.dashNb || 200,
+        Vb = bb.points,
+        gb = [],
+        lb = [],
+        Lb = eb.o.Zero();
+      let Ib, Ob, Ub, tb = 0,
+        Cb = 0;
+      for (Ub = 0; Ub < Vb.length - 1; Ub++) Vb[Ub + 1].subtractToRef(Vb[Ub], Lb), tb += Lb.length();
+      const Eb = tb / Hb,
+        Fb = wb * Eb / (wb + Mb);
+      for (Ub = 0; Ub < Vb.length - 1; Ub++) {
+        Vb[Ub + 1].subtractToRef(Vb[Ub], Lb), Ib = Math.floor(Lb.length() / Eb), Lb.normalize();
+        for (let bb = 0; bb < Ib; bb++) Ob = Eb * bb, gb.push(Vb[Ub].x + Ob * Lb.x, Vb[Ub].y + Ob * Lb.y, Vb[Ub].z + Ob * Lb.z), gb.push(Vb[Ub].x + (Ob + Fb) * Lb.x, Vb[Ub].y + (Ob + Fb) * Lb.y, Vb[Ub].z + (Ob + Fb) * Lb.z), lb.push(Cb, Cb + 1), Cb += 2
       }
-      const bd = new Rd.c;
-      return bd.positions = Kd, bd.indices = hd, bd
+      const Bb = new pb.d;
+      return Bb.positions = gb, Bb.indices = lb, Bb
     }
 
-    function td(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Wd = Od.instance,
-        Fd = Od.lines,
-        Rd = Od.colors;
-      if (Wd) {
-        const dd = Wd.getVerticesData(Kd.j.PositionKind);
-        let Od, md;
-        Rd && (Od = Wd.getVerticesData(Kd.j.ColorKind));
-        let Xd = 0,
-          hd = 0;
-        for (let Wd = 0; Wd < Fd.length; Wd++) {
-          const Kd = Fd[Wd];
-          for (let Fd = 0; Fd < Kd.length; Fd++) dd[Xd] = Kd[Fd].x, dd[Xd + 1] = Kd[Fd].y, dd[Xd + 2] = Kd[Fd].z, Rd && Od && (md = Rd[Wd], Od[hd] = md[Fd].r, Od[hd + 1] = md[Fd].g, Od[hd + 2] = md[Fd].b, Od[hd + 3] = md[Fd].a, hd += 4), Xd += 3
+    function Ob(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const eb = wb.instance,
+        Hb = wb.lines,
+        pb = wb.colors;
+      if (eb) {
+        const bb = eb.getVerticesData(gb.i.PositionKind);
+        let wb, Mb;
+        pb && (wb = eb.getVerticesData(gb.i.ColorKind));
+        let Vb = 0,
+          lb = 0;
+        for (let eb = 0; eb < Hb.length; eb++) {
+          const gb = Hb[eb];
+          for (let Hb = 0; Hb < gb.length; Hb++) bb[Vb] = gb[Hb].x, bb[Vb + 1] = gb[Hb].y, bb[Vb + 2] = gb[Hb].z, pb && wb && (Mb = pb[eb], wb[lb] = Mb[Hb].r, wb[lb + 1] = Mb[Hb].g, wb[lb + 2] = Mb[Hb].b, wb[lb + 3] = Mb[Hb].a, lb += 4), Vb += 3
         }
-        return Wd.updateVerticesData(Kd.j.PositionKind, dd, !1, !1), Rd && Od && Wd.updateVerticesData(Kd.j.ColorKind, Od, !1, !1), Wd.refreshBoundingInfo(), Wd
+        return eb.updateVerticesData(gb.i.PositionKind, bb, !1, !1), pb && wb && eb.updateVerticesData(gb.i.ColorKind, wb, !1, !1), eb.refreshBoundingInfo(), eb
       }
-      const hd = !!Rd,
-        Qd = new Xd.e(dd, md, null, void 0, void 0, hd, Od.useVertexAlpha, Od.material);
-      return vd(Od).applyToMesh(Qd, Od.updatable), Qd
+      const lb = !!pb,
+        Ib = new Vb.c(bb, Mb, null, void 0, void 0, lb, wb.useVertexAlpha, wb.material);
+      return Lb(wb).applyToMesh(Ib, wb.updatable), Ib
     }
 
-    function od(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Wd = Od.colors ? [Od.colors] : null;
-      return td(dd, {
-        lines: [Od.points],
-        updatable: Od.updatable,
-        instance: Od.instance,
-        colors: Wd,
-        useVertexAlpha: Od.useVertexAlpha,
-        material: Od.material
-      }, md)
+    function Ub(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const eb = wb.colors ? [wb.colors] : null;
+      return Ob(bb, {
+        lines: [wb.points],
+        updatable: wb.updatable,
+        instance: wb.instance,
+        colors: eb,
+        useVertexAlpha: wb.useVertexAlpha,
+        material: wb.material
+      }, Mb)
     }
 
-    function Nd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Rd = Od.points,
-        Kd = Od.instance,
-        vd = Od.gapSize || 1,
-        td = Od.dashSize || 3;
-      if (Kd) {
-        const dd = dd => {
-          const Od = Wd.j.Zero(),
-            md = dd.length / 6;
-          let Fd, Xd, hd, vd, Qd = 0,
-            td = 0;
-          for (hd = 0; hd < Rd.length - 1; hd++) Rd[hd + 1].subtractToRef(Rd[hd], Od), Qd += Od.length();
-          const od = Qd / md,
-            Nd = Kd._creationDataStorage.dashSize,
-            qd = Nd * od / (Nd + Kd._creationDataStorage.gapSize);
-          for (hd = 0; hd < Rd.length - 1; hd++)
-            for (Rd[hd + 1].subtractToRef(Rd[hd], Od), Fd = Math.floor(Od.length() / od), Od.normalize(), vd = 0; vd < Fd && td < dd.length;) Xd = od * vd, dd[td] = Rd[hd].x + Xd * Od.x, dd[td + 1] = Rd[hd].y + Xd * Od.y, dd[td + 2] = Rd[hd].z + Xd * Od.z, dd[td + 3] = Rd[hd].x + (Xd + qd) * Od.x, dd[td + 4] = Rd[hd].y + (Xd + qd) * Od.y, dd[td + 5] = Rd[hd].z + (Xd + qd) * Od.z, td += 6, vd++;
-          for (; td < dd.length;) dd[td] = Rd[hd].x, dd[td + 1] = Rd[hd].y, dd[td + 2] = Rd[hd].z, td += 3
+    function tb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const pb = wb.points,
+        gb = wb.instance,
+        Lb = wb.gapSize || 1,
+        Ob = wb.dashSize || 3;
+      if (gb) {
+        const bb = bb => {
+          const wb = eb.o.Zero(),
+            Mb = bb.length / 6;
+          let Hb, Vb, lb, Lb, Ib = 0,
+            Ob = 0;
+          for (lb = 0; lb < pb.length - 1; lb++) pb[lb + 1].subtractToRef(pb[lb], wb), Ib += wb.length();
+          const Ub = Ib / Mb,
+            tb = gb._creationDataStorage.dashSize,
+            Cb = tb * Ub / (tb + gb._creationDataStorage.gapSize);
+          for (lb = 0; lb < pb.length - 1; lb++)
+            for (pb[lb + 1].subtractToRef(pb[lb], wb), Hb = Math.floor(wb.length() / Ub), wb.normalize(), Lb = 0; Lb < Hb && Ob < bb.length;) Vb = Ub * Lb, bb[Ob] = pb[lb].x + Vb * wb.x, bb[Ob + 1] = pb[lb].y + Vb * wb.y, bb[Ob + 2] = pb[lb].z + Vb * wb.z, bb[Ob + 3] = pb[lb].x + (Vb + Cb) * wb.x, bb[Ob + 4] = pb[lb].y + (Vb + Cb) * wb.y, bb[Ob + 5] = pb[lb].z + (Vb + Cb) * wb.z, Ob += 6, Lb++;
+          for (; Ob < bb.length;) bb[Ob] = pb[lb].x, bb[Ob + 1] = pb[lb].y, bb[Ob + 2] = pb[lb].z, Ob += 3
         };
-        return (Od.dashNb || Od.dashSize || Od.gapSize || Od.useVertexAlpha || Od.material) && hd.c.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), Kd.updateMeshPositions(dd, !1), Kd
+        return (wb.dashNb || wb.dashSize || wb.gapSize || wb.useVertexAlpha || wb.material) && lb.b.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), gb.updateMeshPositions(bb, !1), gb
       }
-      const od = new Xd.e(dd, md, null, void 0, void 0, void 0, Od.useVertexAlpha, Od.material);
-      return Qd(Od).applyToMesh(od, Od.updatable), od._creationDataStorage = new Fd.h, od._creationDataStorage.dashSize = td, od._creationDataStorage.gapSize = vd, od
+      const Ub = new Vb.c(bb, Mb, null, void 0, void 0, void 0, wb.useVertexAlpha, wb.material);
+      return Ib(wb).applyToMesh(Ub, wb.updatable), Ub._creationDataStorage = new Hb.j, Ub._creationDataStorage.dashSize = Ob, Ub._creationDataStorage.gapSize = Lb, Ub
     }
-    let qd = !1;
-    qd || (qd = !0, Rd.c.CreateLineSystem = vd, Rd.c.CreateDashedLines = Qd, Fd.d.CreateLines = function(dd, Od) {
-      return od(dd, {
-        points: Od,
+    let Cb = !1;
+    Cb || (Cb = !0, pb.d.CreateLineSystem = Lb, pb.d.CreateDashedLines = Ib, Hb.e.CreateLines = function(bb, wb) {
+      return Ub(bb, {
+        points: wb,
         updatable: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         instance: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
-    }, Fd.d.CreateDashedLines = function(dd, Od, md, Wd, Fd) {
-      return Nd(dd, {
-        points: Od,
-        dashSize: md,
-        gapSize: Wd,
-        dashNb: Fd,
+    }, Hb.e.CreateDashedLines = function(bb, wb, Mb, eb, Hb) {
+      return tb(bb, {
+        points: wb,
+        dashSize: Mb,
+        gapSize: eb,
+        dashNb: Hb,
         updatable: arguments.length > 6 ? arguments[6] : void 0,
         instance: arguments.length > 7 ? arguments[7] : void 0
       }, arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null)
     })
   },
-  42393: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => od,
-      f: () => Hd
+  42137: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Ub,
+      f: () => Eb
     });
-    var Wd, Fd, Rd = md(38741),
-      Xd = md(42075),
-      Kd = md(42330),
-      hd = md(42402),
-      vd = md(42208),
-      Qd = md(42406),
-      td = md(41817);
-    class od extends Kd.d {
-      _isShaderMaterial(dd) {
-        return !!dd && "ShaderMaterial" === dd.getClassName()
+    var eb, Hb, pb = Mb(38406),
+      Vb = Mb(41816),
+      gb = Mb(42078),
+      lb = Mb(42140),
+      Lb = Mb(41963),
+      Ib = Mb(42147),
+      Ob = Mb(41554);
+    class Ub extends gb.e {
+      _isShaderMaterial(bb) {
+        return !!bb && "ShaderMaterial" === bb.getClassName()
       }
-      constructor(dd) {
-        let Od = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Wd = arguments.length > 5 ? arguments[5] : void 0,
-          Fd = arguments.length > 6 ? arguments[6] : void 0,
-          Kd = arguments.length > 7 ? arguments[7] : void 0;
-        super(dd, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, Od, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = Wd, this.useVertexAlpha = Fd, this.color = new Rd.d(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, Od && (this.color = Od.color.clone(), this.alpha = Od.alpha, this.useVertexColor = Od.useVertexColor, this.useVertexAlpha = Od.useVertexAlpha), this.intersectionThreshold = .1;
-        const hd = {
-          attributes: [Xd.j.PositionKind],
+      constructor(bb) {
+        let wb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          eb = arguments.length > 5 ? arguments[5] : void 0,
+          Hb = arguments.length > 6 ? arguments[6] : void 0,
+          gb = arguments.length > 7 ? arguments[7] : void 0;
+        super(bb, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, wb, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = eb, this.useVertexAlpha = Hb, this.color = new pb.e(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, wb && (this.color = wb.color.clone(), this.alpha = wb.alpha, this.useVertexColor = wb.useVertexColor, this.useVertexAlpha = wb.useVertexAlpha), this.intersectionThreshold = .1;
+        const lb = {
+          attributes: [Vb.i.PositionKind],
           uniforms: ["world", "viewProjection"],
           needAlphaBlending: !0,
           defines: [],
           useClipPlane: null,
           shaderLanguage: 0
         };
-        if (this.useVertexAlpha ? hd.defines.push("#define VERTEXALPHA") : hd.needAlphaBlending = !1, this.useVertexColor ? (hd.defines.push("#define VERTEXCOLOR"), hd.attributes.push(Xd.j.ColorKind)) : (hd.uniforms.push("color"), this._color4 = new Rd.f), Kd) this.material = Kd;
+        if (this.useVertexAlpha ? lb.defines.push("#define VERTEXALPHA") : lb.needAlphaBlending = !1, this.useVertexColor ? (lb.defines.push("#define VERTEXCOLOR"), lb.attributes.push(Vb.i.ColorKind)) : (lb.uniforms.push("color"), this._color4 = new pb.f), gb) this.material = gb;
         else {
-          this.zV().Iq().isWebGPU && !od.ForceGLSL && (this._shaderLanguage = 1), hd.shaderLanguage = this._shaderLanguage, hd.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([md.e(663).then((() => md(54990))), md.e(669).then((() => md(54997)))]) : await Promise.all([md.e(645).then((() => md(55001))), md.e(651).then((() => md(55004)))])
+          this.RJ().DC().isWebGPU && !Ub.ForceGLSL && (this._shaderLanguage = 1), lb.shaderLanguage = this._shaderLanguage, lb.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([Mb.e(663).then((() => Mb(54784))), Mb.e(669).then((() => Mb(54792)))]) : await Promise.all([Mb.e(645).then((() => Mb(54798))), Mb.e(651).then((() => Mb(54802)))])
           };
-          const dd = new Qd.q("colorShader", this.zV(), "color", hd, !1);
-          dd.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(dd)
+          const bb = new Ib.n("colorShader", this.RJ(), "color", lb, !1);
+          bb.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(bb)
         }
       }
       getClassName() {
@@ -630,193 +630,193 @@ export const modules = {
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(dd) {
-        const Od = this.material;
-        if (Od === dd) return;
-        const md = Od && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(dd), md && Od?.dispose()
+      set material(bb) {
+        const wb = this.material;
+        if (wb === bb) return;
+        const Mb = wb && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(bb), Mb && wb?.dispose()
       }
-      _setInternalMaterial(dd) {
-        this._setMaterial(dd), this.material && (this.material.fillMode = vd.b.LineListDrawMode, this.material.disableLighting = !0)
+      _setInternalMaterial(bb) {
+        this._setMaterial(bb), this.material && (this.material.fillMode = Lb.b.LineListDrawMode, this.material.disableLighting = !0)
       }
       get checkCollisions() {
         return !1
       }
-      set checkCollisions(dd) {}
-      _bind(dd, Od) {
+      set checkCollisions(bb) {}
+      _bind(bb, wb) {
         if (!this._geometry) return this;
-        const md = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(Od, md) : this._geometry._bind(Od, md, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+        const Mb = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(wb, Mb) : this._geometry._bind(wb, Mb, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
           const {
-            r: dd,
-            g: Od,
-            b: md
+            r: bb,
+            g: wb,
+            b: Mb
           } = this.color;
-          this._color4.set(dd, Od, md, this.alpha), this.material.setColor4("color", this._color4)
+          this._color4.set(bb, wb, Mb, this.alpha), this.material.setColor4("color", this._color4)
         }
         return this
       }
-      _draw(dd, Od, md) {
+      _draw(bb, wb, Mb) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const Wd = this.zV().Iq();
-        return this._unIndexed ? Wd.drawArraysType(vd.b.LineListDrawMode, dd.verticesStart, dd.verticesCount, md) : Wd.drawElementsType(vd.b.LineListDrawMode, dd.indexStart, dd.indexCount, md), this
+        const eb = this.RJ().DC();
+        return this._unIndexed ? eb.drawArraysType(Lb.b.LineListDrawMode, bb.verticesStart, bb.verticesCount, Mb) : eb.drawElementsType(Lb.b.LineListDrawMode, bb.indexStart, bb.indexCount, Mb), this
       }
-      dispose(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || Od) && this.material?.dispose(!1, !1, !0), super.dispose(dd)
+      dispose(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || wb) && this.material?.dispose(!1, !1, !0), super.dispose(bb)
       }
-      clone(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          md = arguments.length > 2 ? arguments[2] : void 0;
-        if (Od && void 0 === Od._addToSceneRootNodes) {
-          const md = Od;
-          return md.source = this, new od(dd, this.zV(), md.parent, md.source, md.doNotCloneChildren)
+      clone(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Mb = arguments.length > 2 ? arguments[2] : void 0;
+        if (wb && void 0 === wb._addToSceneRootNodes) {
+          const Mb = wb;
+          return Mb.source = this, new Ub(bb, this.RJ(), Mb.parent, Mb.source, Mb.doNotCloneChildren)
         }
-        return new od(dd, this.zV(), Od, this, md)
+        return new Ub(bb, this.RJ(), wb, this, Mb)
       }
-      createInstance(dd) {
-        const Od = new Nd(dd, this);
-        if (this.xG) {
-          Od.xG = {};
-          for (const dd in this.xG) Od.xG[dd] = this.xG[dd]
+      createInstance(bb) {
+        const wb = new tb(bb, this);
+        if (this.hN) {
+          wb.hN = {};
+          for (const bb in this.hN) wb.hN[bb] = this.hN[bb]
         }
-        return Od
+        return wb
       }
-      serialize(dd) {
-        super.serialize(dd), dd.color = this.color.RRd(), dd.alpha = this.alpha
+      serialize(bb) {
+        super.serialize(bb), bb.color = this.color.ppb(), bb.alpha = this.alpha
       }
-      static Parse(dd, Od) {
-        const md = new od(dd.name, Od);
-        return md.color = Rd.d.FromArray(dd.color), md.alpha = dd.alpha, md
+      static Parse(bb, wb) {
+        const Mb = new Ub(bb.name, wb);
+        return Mb.color = pb.e.FromArray(bb.color), Mb.alpha = bb.alpha, Mb
       }
     }
-    od.ForceGLSL = !1;
-    class Nd extends hd.c {
-      constructor(dd, Od) {
-        super(dd, Od), this.intersectionThreshold = Od.intersectionThreshold
+    Ub.ForceGLSL = !1;
+    class tb extends lb.e {
+      constructor(bb, wb) {
+        super(bb, wb), this.intersectionThreshold = wb.intersectionThreshold
       }
       getClassName() {
         return "InstancedLinesMesh"
       }
     }
-    let qd = !1;
+    let Cb = !1;
 
-    function Hd() {
-      qd || (qd = !0, Kd.d._LinesMeshParser = (dd, Od) => od.Parse(dd, Od))
-    }(Wd = od.prototype).enableEdgesRendering ?? (Wd.enableEdgesRendering = (0, td.i)("LinesMesh", "enableEdgesRendering")), (Fd = Nd.prototype).enableEdgesRendering ?? (Fd.enableEdgesRendering = (0, td.i)("InstancedLinesMesh", "enableEdgesRendering"))
+    function Eb() {
+      Cb || (Cb = !0, gb.e._LinesMeshParser = (bb, wb) => Ub.Parse(bb, wb))
+    }(eb = Ub.prototype).enableEdgesRendering ?? (eb.enableEdgesRendering = (0, Ob.h)("LinesMesh", "enableEdgesRendering")), (Hb = tb.prototype).enableEdgesRendering ?? (Hb.enableEdgesRendering = (0, Ob.h)("InstancedLinesMesh", "enableEdgesRendering"))
   },
-  40260: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Rd
+  39966: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb
     });
-    var Wd = md(40262);
-    const Fd = (dd, Od, md) => dd ? dd.getClassName && "Mesh" === dd.getClassName() ? null : !dd.getClassName || "SubMesh" !== dd.getClassName() && "PhysicsBody" !== dd.getClassName() ? dd.clone ? dd.clone() : Array.isArray(dd) ? dd.slice() : md && "object" === typeof dd ? {
-      ...dd
-    } : null : dd.clone(Od) : null;
-    class Rd {
-      static DeepCopy(dd, Od, md, Rd) {
-        let Xd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Kd = function(dd) {
-          const Od = [];
+    var eb = Mb(39971);
+    const Hb = (bb, wb, Mb) => bb ? bb.getClassName && "Mesh" === bb.getClassName() ? null : !bb.getClassName || "SubMesh" !== bb.getClassName() && "PhysicsBody" !== bb.getClassName() ? bb.clone ? bb.clone() : Array.isArray(bb) ? bb.slice() : Mb && "object" === typeof bb ? {
+      ...bb
+    } : null : bb.clone(wb) : null;
+    class pb {
+      static DeepCopy(bb, wb, Mb, pb) {
+        let Vb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const gb = function(bb) {
+          const wb = [];
           do {
-            const md = Object.getOwnPropertyNames(dd);
-            for (const dd of md) - 1 === Od.indexOf(dd) && Od.push(dd)
-          } while (dd = Object.getPrototypeOf(dd));
-          return Od
-        }(dd);
-        for (const vd of Kd) {
-          if ("_" === vd[0] && (!Rd || -1 === Rd.indexOf(vd))) continue;
-          if (vd.endsWith("Observable")) continue;
-          if (md && -1 !== md.indexOf(vd)) continue;
-          const Kd = dd[vd],
-            Qd = typeof Kd;
-          if ("function" !== Qd) try {
-            if ("object" === Qd)
-              if (Kd instanceof Uint8Array) Od[vd] = Uint8Array.from(Kd);
-              else if (Kd instanceof Array) {
-              if (Od[vd] = [], Kd.length > 0)
-                if ("object" == typeof Kd[0])
-                  for (let dd = 0; dd < Kd.length; dd++) {
-                    const md = Fd(Kd[dd], Od, Xd); - 1 === Od[vd].indexOf(md) && Od[vd].push(md)
-                  } else Od[vd] = Kd.slice(0)
-            } else Od[vd] = Fd(Kd, Od, Xd);
-            else Od[vd] = Kd
-          } catch (hd) {
-            Wd.c.Warn(hd.message)
+            const Mb = Object.getOwnPropertyNames(bb);
+            for (const bb of Mb) - 1 === wb.indexOf(bb) && wb.push(bb)
+          } while (bb = Object.getPrototypeOf(bb));
+          return wb
+        }(bb);
+        for (const Lb of gb) {
+          if ("_" === Lb[0] && (!pb || -1 === pb.indexOf(Lb))) continue;
+          if (Lb.endsWith("Observable")) continue;
+          if (Mb && -1 !== Mb.indexOf(Lb)) continue;
+          const gb = bb[Lb],
+            Ib = typeof gb;
+          if ("function" !== Ib) try {
+            if ("object" === Ib)
+              if (gb instanceof Uint8Array) wb[Lb] = Uint8Array.from(gb);
+              else if (gb instanceof Array) {
+              if (wb[Lb] = [], gb.length > 0)
+                if ("object" == typeof gb[0])
+                  for (let bb = 0; bb < gb.length; bb++) {
+                    const Mb = Hb(gb[bb], wb, Vb); - 1 === wb[Lb].indexOf(Mb) && wb[Lb].push(Mb)
+                  } else wb[Lb] = gb.slice(0)
+            } else wb[Lb] = Hb(gb, wb, Vb);
+            else wb[Lb] = gb
+          } catch (lb) {
+            eb.b.Warn(lb.message)
           }
         }
       }
     }
   },
-  39461: (dd, Od, md) => {
-    function Wd() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (dd => {
-        const Od = 16 * Math.random() | 0;
-        return ("x" === dd ? Od : 3 & Od | 8).toString(16)
+  39148: (bb, wb, Mb) => {
+    function eb() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (bb => {
+        const wb = 16 * Math.random() | 0;
+        return ("x" === bb ? wb : 3 & wb | 8).toString(16)
       }))
     }
-    md.d(Od, {
-      b: () => Wd
+    Mb.d(wb, {
+      c: () => eb
     })
   },
-  40262: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd
+  39971: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => eb
     });
-    class Wd {
-      static _CheckLimit(dd, Od) {
-        let md = Wd._LogLimitOutputs[dd];
-        return md ? md.current++ : (md = {
-          limit: Od,
+    class eb {
+      static _CheckLimit(bb, wb) {
+        let Mb = eb._LogLimitOutputs[bb];
+        return Mb ? Mb.current++ : (Mb = {
+          limit: wb,
           current: 1
-        }, Wd._LogLimitOutputs[dd] = md), md.current <= md.limit
+        }, eb._LogLimitOutputs[bb] = Mb), Mb.current <= Mb.limit
       }
-      static _GenerateLimitMessage(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const md = Wd._LogLimitOutputs[dd];
-        if (!md || !Wd.MessageLimitReached) return;
-        const Fd = this._Levels[Od];
-        md.current === md.limit && Wd[Fd.name](Wd.MessageLimitReached.replace(/%LIMIT%/g, "" + md.limit).replace(/%TYPE%/g, Fd.name ?? ""))
+      static _GenerateLimitMessage(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Mb = eb._LogLimitOutputs[bb];
+        if (!Mb || !eb.MessageLimitReached) return;
+        const Hb = this._Levels[wb];
+        Mb.current === Mb.limit && eb[Hb.name](eb.MessageLimitReached.replace(/%LIMIT%/g, "" + Mb.limit).replace(/%TYPE%/g, Hb.name ?? ""))
       }
-      static _AddLogEntry(dd) {
-        Wd._LogCache = dd + Wd._LogCache, Wd.OnNewCacheEntry && Wd.OnNewCacheEntry(dd)
+      static _AddLogEntry(bb) {
+        eb._LogCache = bb + eb._LogCache, eb.OnNewCacheEntry && eb.OnNewCacheEntry(bb)
       }
-      static _FormatMessage(dd) {
-        const Od = dd => dd < 10 ? "0" + dd : "" + dd,
-          md = new Date;
-        return "[" + Od(md.getHours()) + ":" + Od(md.getMinutes()) + ":" + Od(md.getSeconds()) + "]: " + dd
+      static _FormatMessage(bb) {
+        const wb = bb => bb < 10 ? "0" + bb : "" + bb,
+          Mb = new Date;
+        return "[" + wb(Mb.getHours()) + ":" + wb(Mb.getMinutes()) + ":" + wb(Mb.getSeconds()) + "]: " + bb
       }
-      static _LogDisabled(dd, Od) {}
+      static _LogDisabled(bb, wb) {}
       static _LogEnabled() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Od = arguments.length > 1 ? arguments[1] : void 0,
-          md = arguments.length > 2 ? arguments[2] : void 0;
-        const Fd = Array.isArray(Od) ? Od[0] : Od;
-        if (void 0 !== md && !Wd._CheckLimit(Fd, md)) return;
-        const Rd = Wd._FormatMessage(Fd),
-          Xd = this._Levels[dd],
-          Kd = Array.isArray(Od) ? Od.slice(1) : [];
-        Xd.logFunc && Xd.logFunc("BJS - " + Rd, ...Kd);
-        const hd = `<div style='color:${Xd.color}'>${Rd}</div><br>`;
-        Wd._AddLogEntry(hd), Wd._GenerateLimitMessage(Fd, dd)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          wb = arguments.length > 1 ? arguments[1] : void 0,
+          Mb = arguments.length > 2 ? arguments[2] : void 0;
+        const Hb = Array.isArray(wb) ? wb[0] : wb;
+        if (void 0 !== Mb && !eb._CheckLimit(Hb, Mb)) return;
+        const pb = eb._FormatMessage(Hb),
+          Vb = this._Levels[bb],
+          gb = Array.isArray(wb) ? wb.slice(1) : [];
+        Vb.logFunc && Vb.logFunc("BJS - " + pb, ...gb);
+        const lb = `<div style='color:${Vb.color}'>${pb}</div><br>`;
+        eb._AddLogEntry(lb), eb._GenerateLimitMessage(Hb, bb)
       }
       static get LogCache() {
-        return Wd._LogCache
+        return eb._LogCache
       }
       static ClearLogCache() {
-        Wd._LogCache = "", Wd._LogLimitOutputs = {}, Wd.errorsCount = 0
+        eb._LogCache = "", eb._LogLimitOutputs = {}, eb.errorsCount = 0
       }
-      static set LogLevels(dd) {
-        Wd.Log = Wd._LogDisabled, Wd.Warn = Wd._LogDisabled, Wd.Error = Wd._LogDisabled;
-        const Od = [Wd.MessageLogLevel, Wd.WarningLogLevel, Wd.ErrorLogLevel];
-        for (const md of Od)
-          if ((dd & md) === md) {
-            const dd = this._Levels[md];
-            Wd[dd.name] = Wd._LogEnabled.bind(Wd, md)
+      static set LogLevels(bb) {
+        eb.Log = eb._LogDisabled, eb.Warn = eb._LogDisabled, eb.Error = eb._LogDisabled;
+        const wb = [eb.MessageLogLevel, eb.WarningLogLevel, eb.ErrorLogLevel];
+        for (const Mb of wb)
+          if ((bb & Mb) === Mb) {
+            const bb = this._Levels[Mb];
+            eb[bb.name] = eb._LogEnabled.bind(eb, Mb)
           }
       }
     }
-    Wd.NoneLogLevel = 0, Wd.MessageLogLevel = 1, Wd.WarningLogLevel = 2, Wd.ErrorLogLevel = 4, Wd.AllLogLevel = 7, Wd.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Wd._LogCache = "", Wd._LogLimitOutputs = {}, Wd._Levels = [{}, {
+    eb.NoneLogLevel = 0, eb.MessageLogLevel = 1, eb.WarningLogLevel = 2, eb.ErrorLogLevel = 4, eb.AllLogLevel = 7, eb.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", eb._LogCache = "", eb._LogLimitOutputs = {}, eb._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -828,15 +828,15 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Wd.errorsCount = 0, Wd.Log = Wd._LogEnabled.bind(Wd, Wd.MessageLogLevel), Wd.Warn = Wd._LogEnabled.bind(Wd, Wd.WarningLogLevel), Wd.Error = Wd._LogEnabled.bind(Wd, Wd.ErrorLogLevel)
+    }], eb.errorsCount = 0, eb.Log = eb._LogEnabled.bind(eb, eb.MessageLogLevel), eb.Warn = eb._LogEnabled.bind(eb, eb.WarningLogLevel), eb.Error = eb._LogEnabled.bind(eb, eb.ErrorLogLevel)
   },
-  42016: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Wd.c
+  41759: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => eb.g
     });
-    var Wd = md(42020);
-    (0, Wd.b)()
+    var eb = Mb(41764);
+    (0, eb.d)()
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

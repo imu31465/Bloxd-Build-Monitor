@@ -1,68 +1,68 @@
 export const id = 670;
 export const ids = [670];
 export const modules = {
-  54987: (dd, Od, md) => {
-    function Wd(dd) {
-      return Math.floor(dd / 8)
+  54779: (bb, wb, Mb) => {
+    function eb(bb) {
+      return Math.floor(bb / 8)
     }
 
-    function Fd(dd) {
-      return 1 << dd % 8
+    function Hb(bb) {
+      return 1 << bb % 8
     }
-    md.d(Od, {
-      OptimizeIndices: () => Xd
+    Mb.d(wb, {
+      OptimizeIndices: () => Vb
     });
-    class Rd {
-      constructor(dd) {
-        this.size = dd, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class pb {
+      constructor(bb) {
+        this.size = bb, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(dd) {
-        if (dd >= this.size) throw new RangeError("Bit index out of range");
-        const Od = Wd(dd),
-          md = Fd(dd);
-        return 0 !== (this._byteArray[Od] & md)
+      get(bb) {
+        if (bb >= this.size) throw new RangeError("Bit index out of range");
+        const wb = eb(bb),
+          Mb = Hb(bb);
+        return 0 !== (this._byteArray[wb] & Mb)
       }
-      set(dd, Od) {
-        if (dd >= this.size) throw new RangeError("Bit index out of range");
-        const md = Wd(dd),
-          Rd = Fd(dd);
-        Od ? this._byteArray[md] |= Rd : this._byteArray[md] &= ~Rd
+      set(bb, wb) {
+        if (bb >= this.size) throw new RangeError("Bit index out of range");
+        const Mb = eb(bb),
+          pb = Hb(bb);
+        wb ? this._byteArray[Mb] |= pb : this._byteArray[Mb] &= ~pb
       }
     }
 
-    function Xd(dd) {
-      const Od = [],
-        md = dd.length / 3;
-      for (let Rd = 0; Rd < md; Rd++) Od.push([dd[3 * Rd], dd[3 * Rd + 1], dd[3 * Rd + 2]]);
-      const Wd = new Map;
-      for (let Rd = 0; Rd < Od.length; Rd++) {
-        const dd = Od[Rd];
-        for (const Od of dd) {
-          let dd = Wd.get(Od);
-          dd || Wd.set(Od, dd = []), dd.push(Rd)
+    function Vb(bb) {
+      const wb = [],
+        Mb = bb.length / 3;
+      for (let pb = 0; pb < Mb; pb++) wb.push([bb[3 * pb], bb[3 * pb + 1], bb[3 * pb + 2]]);
+      const eb = new Map;
+      for (let pb = 0; pb < wb.length; pb++) {
+        const bb = wb[pb];
+        for (const wb of bb) {
+          let bb = eb.get(wb);
+          bb || eb.set(wb, bb = []), bb.push(pb)
         }
       }
-      const Fd = new Rd(md),
-        Xd = [],
-        Kd = dd => {
-          const md = [dd];
-          for (; md.length > 0;) {
-            const dd = md.pop();
-            if (!Fd.get(dd)) {
-              Fd.set(dd, !0), Xd.push(Od[dd]);
-              for (const Rd of Od[dd]) {
-                const dd = Wd.get(Rd);
-                if (!dd) return;
-                for (const Od of dd) Fd.get(Od) || md.push(Od)
+      const Hb = new pb(Mb),
+        Vb = [],
+        gb = bb => {
+          const Mb = [bb];
+          for (; Mb.length > 0;) {
+            const bb = Mb.pop();
+            if (!Hb.get(bb)) {
+              Hb.set(bb, !0), Vb.push(wb[bb]);
+              for (const pb of wb[bb]) {
+                const bb = eb.get(pb);
+                if (!bb) return;
+                for (const wb of bb) Hb.get(wb) || Mb.push(wb)
               }
             }
           }
         };
-      for (let Rd = 0; Rd < md; Rd++) Fd.get(Rd) || Kd(Rd);
-      let hd = 0;
-      for (const Rd of Xd) dd[hd++] = Rd[0], dd[hd++] = Rd[1], dd[hd++] = Rd[2]
+      for (let pb = 0; pb < Mb; pb++) Hb.get(pb) || gb(pb);
+      let lb = 0;
+      for (const pb of Vb) bb[lb++] = pb[0], bb[lb++] = pb[1], bb[lb++] = pb[2]
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

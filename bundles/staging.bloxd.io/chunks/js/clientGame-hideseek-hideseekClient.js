@@ -1,11 +1,11 @@
 export const id = 21;
 export const ids = [21];
 export const modules = {
-  41108: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      default: () => Wd
+  40889: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      default: () => eb
     });
-    const Wd = () => ({
+    const eb = () => ({
       plugins: {
         cosmeticCompanions: null
       }
@@ -13,4 +13,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

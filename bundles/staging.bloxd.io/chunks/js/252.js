@@ -1,63 +1,63 @@
 export const id = 252;
 export const ids = [252, 611];
 export const modules = {
-  45327: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      CharacterCustomisationUI: () => bO
+  45145: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      CharacterCustomisationUI: () => Ew
     });
-    var Wd = md(66),
-      Fd = md(3016),
-      Rd = md(4705),
-      Xd = md(4687),
-      Kd = md(1186),
-      hd = md(1189),
-      vd = md(1155),
-      Qd = md.n(vd),
-      td = md(1300),
-      od = md(689),
-      Nd = md(678),
-      qd = md(1238),
-      Hd = md(3143),
-      yd = md(1685),
-      bd = md(3597),
-      Td = md(38256),
-      pd = md(3146),
-      Yd = md(4280),
-      gd = md(2125),
-      wd = md(1572),
-      Ed = md(3181),
-      Jd = md(3277),
-      Ud = md(29),
-      xd = md(3762),
-      Bd = md(1627),
-      Sd = md(2010);
-    class sd {
+    var eb = Mb(64),
+      Hb = Mb(3082),
+      pb = Mb(4873),
+      Vb = Mb(4850),
+      gb = Mb(1179),
+      lb = Mb(1186),
+      Lb = Mb(1159),
+      Ib = Mb.n(Lb),
+      Ob = Mb(1313),
+      Ub = Mb(644),
+      tb = Mb(639),
+      Cb = Mb(1259),
+      Eb = Mb(3217),
+      Fb = Mb(1735),
+      Bb = Mb(3724),
+      sb = Mb(37914),
+      mb = Mb(3222),
+      hb = Mb(4446),
+      zb = Mb(2183),
+      Xb = Mb(1616),
+      xb = Mb(3257),
+      jb = Mb(3357),
+      Kb = Mb(26),
+      rb = Mb(3898),
+      Rb = Mb(1677),
+      Db = Mb(2062);
+    class cb {
       constructor() {
         this.slots = new Map, this.before = new Map, this.accountId = null
       }
-      moveTo(dd) {
-        null !== dd && dd !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = dd)
+      moveTo(bb) {
+        null !== bb && bb !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = bb)
       }
-      isFor(dd) {
-        return null === this.accountId || this.accountId === dd
+      isFor(bb) {
+        return null === this.accountId || this.accountId === bb
       }
-      overlay(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return dd.map(((dd, md) => {
-          var Wd, Fd;
-          return null !== (Wd = null !== (Fd = this.slots.get(md)) && void 0 !== Fd ? Fd : Od.get(md)) && void 0 !== Wd ? Wd : dd
+      overlay(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return bb.map(((bb, Mb) => {
+          var eb, Hb;
+          return null !== (eb = null !== (Hb = this.slots.get(Mb)) && void 0 !== Hb ? Hb : wb.get(Mb)) && void 0 !== eb ? eb : bb
         }))
       }
     }
-    class ud extends xd.e {
+    class Yb extends rb.e {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new sd;
-        super("saved outfits", (async Od => {
-          const md = dd.isFor(Od.whamm),
-            Wd = new Map(dd.slots),
-            Fd = await Bd.e.getSavedOutfits(Od);
-          return md ? dd.overlay(Fd, Wd) : Fd
-        })), this.unsaved = dd, this.started = !1, this.sending = !1
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new cb;
+        super("saved outfits", (async wb => {
+          const Mb = bb.isFor(wb.whamm),
+            eb = new Map(bb.slots),
+            Hb = await Rb.e.getSavedOutfits(wb);
+          return Mb ? bb.overlay(Hb, eb) : Hb
+        })), this.unsaved = bb, this.started = !1, this.sending = !1
       }
       ensureLoaded() {
         if (this.started) {
@@ -65,311 +65,311 @@ export const modules = {
         } else this.started = !0, this.watchAccount();
         this.refresh()
       }
-      save(dd, Od) {
-        var md, Wd;
-        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(dd)) || this.unsaved.before.set(dd, null !== (md = null === (Wd = this.getState().data) || void 0 === Wd ? void 0 : Wd[dd]) && void 0 !== md ? md : {});
-        this.unsaved.slots.set(dd, Od), this.update((md => md.map(((md, Wd) => Wd === dd ? Od : md)))), this.sending || this.sendUnsaved()
+      save(bb, wb) {
+        var Mb, eb;
+        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(bb)) || this.unsaved.before.set(bb, null !== (Mb = null === (eb = this.getState().data) || void 0 === eb ? void 0 : eb[bb]) && void 0 !== Mb ? Mb : {});
+        this.unsaved.slots.set(bb, wb), this.update((Mb => Mb.map(((Mb, eb) => eb === bb ? wb : Mb)))), this.sending || this.sendUnsaved()
       }
-      clear(dd) {
-        this.save(dd, {})
+      clear(bb) {
+        this.save(bb, {})
       }
       async sendUnsaved() {
         this.sending = !0;
-        let dd = !1;
+        let bb = !1;
         for (; this.unsaved.slots.size > 0;) {
-          const md = new Map(this.unsaved.slots);
-          let Wd = this.getState().accountId;
+          const Mb = new Map(this.unsaved.slots);
+          let eb = this.getState().accountId;
           try {
-            const dd = await hd.userContextManager.getCurrentUserContext();
-            if (Wd = dd.whamm, this.unsaved.moveTo(dd.whamm), 0 === this.unsaved.slots.size) {
+            const bb = await lb.userContextManager.getCurrentUserContext();
+            if (eb = bb.whamm, this.unsaved.moveTo(bb.whamm), 0 === this.unsaved.slots.size) {
               this.refresh();
               break
             }
             const {
-              accountId: Od,
-              data: Fd
+              accountId: wb,
+              data: Hb
             } = this.getState();
-            let Rd = Fd;
-            Od === dd.whamm && null !== Rd || (Rd = this.unsaved.overlay(await Bd.e.getSavedOutfits(dd)), this.refresh()), await Bd.e.setSavedOutfits(dd, Rd), this.unsaved.isFor(dd.whamm) && Rd.forEach(((dd, Od) => {
-              const Wd = this.unsaved.slots.get(Od);
-              void 0 === Wd || Wd === md.get(Od) ? this.unsaved.before.delete(Od) : this.unsaved.before.set(Od, dd)
+            let pb = Hb;
+            wb === bb.whamm && null !== pb || (pb = this.unsaved.overlay(await Rb.e.getSavedOutfits(bb)), this.refresh()), await Rb.e.setSavedOutfits(bb, pb), this.unsaved.isFor(bb.whamm) && pb.forEach(((bb, wb) => {
+              const eb = this.unsaved.slots.get(wb);
+              void 0 === eb || eb === Mb.get(wb) ? this.unsaved.before.delete(wb) : this.unsaved.before.set(wb, bb)
             }))
-          } catch (Od) {
-            if (console.error("Failed to save outfits", Od), this.getState().accountId === Wd && [...this.unsaved.slots].every((dd => {
-                let [Od, Wd] = dd;
-                return md.get(Od) === Wd
+          } catch (wb) {
+            if (console.error("Failed to save outfits", wb), this.getState().accountId === eb && [...this.unsaved.slots].every((bb => {
+                let [wb, eb] = bb;
+                return Mb.get(wb) === eb
               }))) {
-              const Od = [...md.values()].every(Td.c);
-              Sd.g.showMessage({
-                translationKey: Od ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
+              const wb = [...Mb.values()].every(sb.d);
+              Db.j.showMessage({
+                translationKey: wb ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
               });
-              const Wd = new Map(this.unsaved.before);
-              this.unsaved.before.clear(), this.update((dd => dd.map(((dd, Od) => {
-                var md;
-                return null !== (md = Wd.get(Od)) && void 0 !== md ? md : dd
-              })))), dd = !0
+              const eb = new Map(this.unsaved.before);
+              this.unsaved.before.clear(), this.update((bb => bb.map(((bb, wb) => {
+                var Mb;
+                return null !== (Mb = eb.get(wb)) && void 0 !== Mb ? Mb : bb
+              })))), bb = !0
             }
           }
-          for (const [dd, Od] of md) this.unsaved.slots.get(dd) === Od && this.unsaved.slots.delete(dd)
+          for (const [bb, wb] of Mb) this.unsaved.slots.get(bb) === wb && this.unsaved.slots.delete(bb)
         }
-        this.sending = !1, dd && this.refresh()
+        this.sending = !1, bb && this.refresh()
       }
     }
-    const Vd = new ud;
-    var Ad = md(45334),
-      rd = md(1679),
-      Gd = md(3249),
-      nd = md(4096),
-      Ld = md(4276),
-      Pd = md(3198),
-      zd = md(1443);
-    md(35582), md(4283);
+    const Zb = new Yb;
+    var fb = Mb(45153),
+      Ab = Mb(1726),
+      Wb = Mb(3329),
+      Jb = Mb(4270),
+      Sb = Mb(4443),
+      Nb = Mb(3285),
+      vb = Mb(1475);
+    Mb(35366), Mb(4448);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var cd = md(3184),
-      jd = md(4298),
-      Dd = md(4303),
-      ed = md(1471),
-      Id = md(3307),
-      ld = md(1462),
-      Cd = md(1341);
+    var Qb = Mb(3263),
+      Gb = Mb(4460),
+      qb = Mb(4466),
+      ab = Mb(1516),
+      ib = Mb(3402),
+      ub = Mb(1504),
+      db = Mb(1364);
 
-    function Zd(dd) {
+    function Pb(bb) {
       let {
-        wornOutfit: Od,
-        onApply: md,
-        onOverwrite: Fd,
-        onDelete: Rd
-      } = dd;
+        wornOutfit: wb,
+        onApply: Mb,
+        onOverwrite: Hb,
+        onDelete: pb
+      } = bb;
       const {
-        t: Xd
-      } = (0, qd.G)(), {
-        accountId: hd,
-        data: vd
-      } = (0, xd.g)(Vd, !1), {
-        userContext: td
-      } = (0, Kd.d)();
-      async function od(dd, Od) {
-        const md = await ld.NotificationProvider.showPromptPopup({
+        t: Vb
+      } = (0, Cb.C)(), {
+        accountId: lb,
+        data: Lb
+      } = (0, rb.j)(Zb, !1), {
+        userContext: Ob
+      } = (0, gb.e)();
+      async function Ub(bb, wb) {
+        const Mb = await ub.NotificationProvider.showPromptPopup({
             title: "homePage:deleteOutfitConfirm",
             confirmText: "general:delete",
             cancelText: "general:cancel",
             destructive: !0
           }).getResult(),
           {
-            accountId: Wd,
-            data: Fd
-          } = Vd.getState();
-        var Xd, Kd;
-        !0 === md && Wd === hd && null !== Fd && (Xd = Fd[dd], Kd = Od, (0, Td.b)(Xd, Kd) && (0, Td.b)(Kd, Xd)) && (Vd.clear(dd), Rd(dd))
+            accountId: eb,
+            data: Hb
+          } = Zb.getState();
+        var Vb, gb;
+        !0 === Mb && eb === lb && null !== Hb && (Vb = Hb[bb], gb = wb, (0, sb.b)(Vb, gb) && (0, sb.b)(gb, Vb)) && (Zb.clear(bb), pb(bb))
       }
-      return (0, Wd.useEffect)((() => {
-        Vd.ensureLoaded()
-      }), []), null === vd || hd !== td.whamm ? null : (0, Cd.jsxs)("div", {
+      return (0, eb.useEffect)((() => {
+        Zb.ensureLoaded()
+      }), []), null === Lb || lb !== Ob.whamm ? null : (0, db.jsxs)("div", {
         className: "CosmeticPackGroup SavedOutfits",
-        children: [(0, Cd.jsx)("div", {
+        children: [(0, db.jsx)("div", {
           className: "CosmeticPackGroupLabel",
-          children: (0, Cd.jsx)("span", {
+          children: (0, db.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: Xd("homePage:myOutfits")
+            children: Vb("homePage:myOutfits")
           })
-        }), (0, Cd.jsx)("div", {
+        }), (0, db.jsx)("div", {
           className: "CharacterPresetsGrid SavedOutfitsGrid",
-          children: vd.map(((dd, Wd) => {
-            const Rd = (0, Td.c)(dd);
-            return (0, Cd.jsxs)("div", {
-              className: Qd()("SavedOutfitSlot", {
-                SavedOutfitSlotFilled: !Rd
+          children: Lb.map(((bb, eb) => {
+            const pb = (0, sb.d)(bb);
+            return (0, db.jsxs)("div", {
+              className: Ib()("SavedOutfitSlot", {
+                SavedOutfitSlotFilled: !pb
               }),
-              children: [(0, Cd.jsxs)("div", {
-                ...(0, wd.X)(),
-                role: Rd ? "button" : "link",
+              children: [(0, db.jsxs)("div", {
+                ...(0, Xb.bb)(),
+                role: pb ? "button" : "link",
                 "data-pad-focusable": !0,
-                className: Qd()("CharacterPresetCard SavedOutfitCard", {
-                  SavedOutfitCardEmpty: Rd,
-                  CharacterPresetCardActive: !Rd && (0, Td.b)(dd, Od)
+                className: Ib()("CharacterPresetCard SavedOutfitCard", {
+                  SavedOutfitCardEmpty: pb,
+                  CharacterPresetCardActive: !pb && (0, sb.b)(bb, wb)
                 }),
                 onClick: () => {
-                  Rd ? Vd.save(Wd, Od) : md(dd)
+                  pb ? Zb.save(eb, wb) : Mb(bb)
                 },
-                children: [Rd && (0, Cd.jsxs)(Cd.Fragment, {
-                  children: [(0, Cd.jsx)(zd.c, {
+                children: [pb && (0, db.jsxs)(db.Fragment, {
+                  children: [(0, db.jsx)(vb.b, {
                     name: "plus"
-                  }), Xd("homePage:saveOutfit")]
-                }), !Rd && (0, Cd.jsxs)(Cd.Fragment, {
-                  children: [(0, Cd.jsx)("div", {
+                  }), Vb("homePage:saveOutfit")]
+                }), !pb && (0, db.jsxs)(db.Fragment, {
+                  children: [(0, db.jsx)("div", {
                     className: "SavedOutfitCardPicture",
-                    children: (0, Cd.jsx)(Id.e, {
-                      cosmetics: dd
+                    children: (0, db.jsx)(ib.e, {
+                      cosmetics: bb
                     })
-                  }), (0, Cd.jsx)(wd.S, {
+                  }), (0, db.jsx)(Xb.Y, {
                     padSecondaryLabelKey: "homePage:saveOutfit",
                     stopPropagation: !0,
                     onClick: () => {
-                      (0, Td.b)(Od, dd) || (Vd.save(Wd, Od), Fd(Wd, dd))
+                      (0, sb.b)(wb, bb) || (Zb.save(eb, wb), Hb(eb, bb))
                     },
-                    children: Xd("general:save")
+                    children: Vb("general:save")
                   })]
                 })]
-              }), !Rd && (0, Cd.jsx)("button", {
+              }), !pb && (0, db.jsx)("button", {
                 type: "button",
                 className: "SavedOutfitDeleteButton",
                 "data-pad-destructive": !0,
-                "aria-label": Xd("general:delete"),
-                title: Xd("general:delete"),
+                "aria-label": Vb("general:delete"),
+                title: Vb("general:delete"),
                 onClick: () => {
-                  od(Wd, dd)
+                  Ub(eb, bb)
                 },
-                children: (0, Cd.jsx)(zd.c, {
+                children: (0, db.jsx)(vb.b, {
                   name: "trash-can"
                 })
               })]
-            }, Wd)
+            }, eb)
           }))
         })]
       })
     }
-    var kd = md(405),
-      fd = md(1466);
+    var nb = Mb(382),
+      yb = Mb(1507);
 
-    function Md() {
-      (0, Ed.p)({
+    function ob() {
+      (0, xb.r)({
         mode: "self",
         source: "characterCustomisation",
         openItem: "superRank"
       })
     }
 
-    function dO(dd) {
+    function Tb(bb) {
       let {
-        KF: Od,
-        hF: md,
-        missingRanks: Wd,
-        playerRanks: Fd,
-        canBuy: Rd,
-        closePopup: Xd
-      } = dd;
+        gH: wb,
+        lH: Mb,
+        missingRanks: eb,
+        playerRanks: Hb,
+        canBuy: pb,
+        closePopup: Vb
+      } = bb;
       const {
-        t: Kd
-      } = (0, qd.G)(), hd = (0, Jd.v)(Date.now()), vd = Nd.n.find((dd => Fd.includes(dd.rank))), Qd = Kd((void 0 === vd ? hd : (0, Jd.p)(vd.id)).nameKey), {
-        title: td,
-        subtitle: Hd,
-        textOpts: yd,
-        soldRankUnlocks: bd
-      } = function(dd, Od, md, Wd) {
-        const Fd = dd.find((dd => !(0, Nd.g)(Nd.n, dd)));
-        if (void 0 === Fd) return {
-          title: md.unlockWithKey,
+        t: gb
+      } = (0, Cb.C)(), lb = (0, jb.s)(Date.now()), Lb = tb.j.find((bb => Hb.includes(bb.rank))), Ib = gb((void 0 === Lb ? lb : (0, jb.q)(Lb.id)).nameKey), {
+        title: Ob,
+        subtitle: Eb,
+        textOpts: Fb,
+        soldRankUnlocks: Bb
+      } = function(bb, wb, Mb, eb) {
+        const Hb = bb.find((bb => !(0, tb.f)(tb.j, bb)));
+        if (void 0 === Hb) return {
+          title: Mb.unlockWithKey,
           soldRankUnlocks: !0
         };
-        if ("youtuber" === Fd) return {
+        if ("youtuber" === Hb) return {
           title: "homePage:youtuberCape",
           subtitle: "homePage:youtuberCapeHow",
           textOpts: {
             subtitle: {
-              tierRank: Wd
+              tierRank: eb
             }
           },
           soldRankUnlocks: !1
         };
-        const Rd = {
-          rank: od.l[Fd].chatTag[0].str
+        const pb = {
+          rank: Ub.l[Hb].chatTag[0].str
         };
         return {
           title: "homePage:creatorCape",
-          subtitle: Od.some(od.n) ? "homePage:creatorCapeOtherTier" : "homePage:creatorCapeHow",
+          subtitle: wb.some(Ub.n) ? "homePage:creatorCapeOtherTier" : "homePage:creatorCapeHow",
           textOpts: {
-            title: Rd,
+            title: pb,
             subtitle: {
-              ...Rd,
-              tierRank: Wd
+              ...pb,
+              tierRank: eb
             }
           },
           soldRankUnlocks: !1
         }
-      }(Wd, Fd, hd, Qd), Td = Rd && bd;
-      return (0, Cd.jsx)(fd.j, {
+      }(eb, Hb, lb, Ib), sb = pb && Bb;
+      return (0, db.jsx)(yb.g, {
         className: "RankLockedCosmeticPopup",
-        title: td,
-        subtitle: Hd,
-        textOpts: yd,
-        confirm: Td ? {
+        title: Ob,
+        subtitle: Eb,
+        textOpts: Fb,
+        confirm: sb ? {
           text: "general:getItNow",
           onClick: () => {
-            Xd(), Md()
+            Vb(), ob()
           }
         } : {
           text: "general:ok",
-          onClick: Xd
+          onClick: Vb
         },
-        cancel: Td ? {
+        cancel: sb ? {
           text: "general:cancel",
-          onClick: Xd
+          onClick: Vb
         } : void 0,
-        children: (0, Cd.jsx)("div", {
+        children: (0, db.jsx)("div", {
           className: "RankLockedCosmeticPicture",
-          children: (0, Cd.jsx)(Dd.e, {
-            KF: Od,
-            hF: md
+          children: (0, db.jsx)(qb.c, {
+            gH: wb,
+            lH: Mb
           })
         })
       })
     }
-    var OO = md(37929);
+    var kb = Mb(37611);
 
-    function mO(dd, Od, md) {
-      return !(0, Gd.y)(dd, Od) && !(0, Gd.G)(dd, Od, md)
+    function bw(bb, wb, Mb) {
+      return !(0, Wb.v)(bb, wb) && !(0, Wb.J)(bb, wb, Mb)
     }
 
-    function WO(dd, Od) {
-      return !(0, Gd.C)(dd, Od)
+    function ww(bb, wb) {
+      return !(0, Wb.G)(bb, wb)
     }
 
-    function FO(dd) {
-      return rd.n.find((Od => (0, rd.d)(Od) === dd))
+    function Mw(bb) {
+      return Ab.n.find((wb => (0, Ab.e)(wb) === bb))
     }
 
-    function RO(dd, Od, md) {
-      var Wd;
-      if (!mO(dd, Od, md)) return null;
-      const Fd = (0, Hd.i)(dd, Od).cosmeticPack;
-      return rd.r.includes(Fd) ? Fd : null !== (Wd = (0, Gd.h)(dd, Od).find((dd => rd.r.includes(dd)))) && void 0 !== Wd ? Wd : null
+    function ew(bb, wb, Mb) {
+      var eb;
+      if (!bw(bb, wb, Mb)) return null;
+      const Hb = (0, Eb.l)(bb, wb).cosmeticPack;
+      return Ab.v.includes(Hb) ? Hb : null !== (eb = (0, Wb.f)(bb, wb).find((bb => Ab.v.includes(bb)))) && void 0 !== eb ? eb : null
     }
 
-    function XO(dd, Od, md) {
-      const Wd = function(dd, Od) {
-          for (const [Wd, Fd] of Object.entries(yd.b)) {
-            var md;
-            if (!(0, Td.b)(Fd.cosmetics, dd) || !WO(Fd.cosmetics, Od)) continue;
-            const Rd = null !== (md = FO(Wd)) && void 0 !== md ? md : Fd.cosmeticPack;
-            if (Object.entries(Fd.cosmetics).every((dd => {
-                let [md, Wd] = dd;
-                return !mO(md, Wd, Od) || (0, Gd.e)(Rd, md, Wd)
-              })) && rd.r.includes(Rd)) return Rd
+    function Hw(bb, wb, Mb) {
+      const eb = function(bb, wb) {
+          for (const [eb, Hb] of Object.entries(Fb.d)) {
+            var Mb;
+            if (!(0, sb.b)(Hb.cosmetics, bb) || !ww(Hb.cosmetics, wb)) continue;
+            const pb = null !== (Mb = Mw(eb)) && void 0 !== Mb ? Mb : Hb.cosmeticPack;
+            if (Object.entries(Hb.cosmetics).every((bb => {
+                let [Mb, eb] = bb;
+                return !bw(Mb, eb, wb) || (0, Wb.e)(pb, Mb, eb)
+              })) && Ab.v.includes(pb)) return pb
           }
           return null
-        }(Od, md),
-        Fd = null === Wd ? [] : [{
+        }(wb, Mb),
+        Hb = null === eb ? [] : [{
           kind: "characters",
-          pack: Wd
+          pack: eb
         }],
-        Rd = "characters" === dd ? td.s : [dd, ...td.s.filter((Od => Od !== dd))];
-      for (const Xd of Rd) {
-        const dd = Od[Xd];
-        if (void 0 === dd || null !== Wd && (0, Gd.e)(Wd, Xd, dd)) continue;
-        const Rd = RO(Xd, dd, md);
-        if (null === Rd) continue;
-        const Kd = void 0 === (0, rd.d)(Rd) ? -1 : Fd.findIndex((dd => dd.pack === Rd)); - 1 === Kd ? Fd.push({
-          kind: Xd,
-          pack: Rd
-        }) : Fd[Kd] = {
+        pb = "characters" === bb ? Ob.u : [bb, ...Ob.u.filter((wb => wb !== bb))];
+      for (const Vb of pb) {
+        const bb = wb[Vb];
+        if (void 0 === bb || null !== eb && (0, Wb.e)(eb, Vb, bb)) continue;
+        const pb = ew(Vb, bb, Mb);
+        if (null === pb) continue;
+        const gb = void 0 === (0, Ab.e)(pb) ? -1 : Hb.findIndex((bb => bb.pack === pb)); - 1 === gb ? Hb.push({
+          kind: Vb,
+          pack: pb
+        }) : Hb[gb] = {
           kind: "characters",
-          pack: Rd
+          pack: pb
         }
       }
-      return Fd
+      return Hb
     }
-    var KO = md(3042);
-    const hO = {
+    var pw = Mb(3113);
+    const Vw = {
       skin: "homePage:getTriedOnSkin",
       hat: "homePage:getTriedOnHat",
       head: "homePage:getTriedOnHead",
@@ -387,688 +387,688 @@ export const modules = {
       aura: "homePage:getTriedOnAura"
     };
 
-    function vO(dd) {
+    function gw(bb) {
       let {
-        gets: Od
-      } = dd;
+        gets: wb
+      } = bb;
       const {
-        t: md
-      } = (0, qd.G)();
-      return (0, Cd.jsx)("div", {
+        t: Mb
+      } = (0, Cb.C)();
+      return (0, db.jsx)("div", {
         className: "CharCustomisationGetTriedOn",
-        children: Od.map((dd => {
+        children: wb.map((bb => {
           let {
-            kind: Od,
-            pack: Wd
-          } = dd;
-          return (0, Cd.jsxs)(wd.m, {
+            kind: wb,
+            pack: eb
+          } = bb;
+          return (0, db.jsxs)(Xb.p, {
             className: "CharCustomisationGetPiece",
             onClick: () => {
-              (0, nd.j)(Wd, "triedOnGet")
+              (0, Jb.i)(eb, "triedOnGet")
             },
-            children: [(0, Cd.jsx)(zd.c, {
+            children: [(0, db.jsx)(vb.b, {
               name: "store"
-            }), "characters" === Od ? md("homePage:getPack", {
-              name: (0, KO.i)(Wd)
-            }) : md(hO[Od])]
-          }, Od + Wd)
+            }), "characters" === wb ? Mb("homePage:getPack", {
+              name: (0, pw.g)(eb)
+            }) : Mb(Vw[wb])]
+          }, wb + eb)
         }))
       })
     }
-    var QO = md(3584),
-      tO = md(3592);
+    var lw = Mb(3715),
+      Lw = Mb(3721);
 
-    function oO(dd, Od, md) {
-      return null !== dd && !(0, QO.f)(tO.c, Od, md, dd.collected, dd.ownedPacks)
+    function Iw(bb, wb, Mb) {
+      return null !== bb && !(0, lw.c)(Lw.b, wb, Mb, bb.collected, bb.ownedPacks)
     }
 
-    function NO(dd) {
+    function Ow(bb) {
       let {
-        locked: Od,
-        children: md
-      } = dd;
-      return Od ? (0, Cd.jsx)(qO, {
-        children: md
-      }) : md
+        locked: wb,
+        children: Mb
+      } = bb;
+      return wb ? (0, db.jsx)(Uw, {
+        children: Mb
+      }) : Mb
     }
 
-    function qO(dd) {
-      var Od;
+    function Uw(bb) {
+      var wb;
       let {
-        children: md
-      } = dd;
+        children: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, qd.G)(), {
-        userContext: Fd
-      } = (0, Kd.d)(), Rd = null !== (Od = Fd.dailyDrop) && void 0 !== Od && Od.hidden ? Wd("dailyDrop:lockedFromHidden") : Wd("dailyDrop:lockedFrom");
-      return (0, Cd.jsx)(ed.g, {
-        tooltipInner: (0, Cd.jsx)(Cd.Fragment, {
-          children: Rd
+        t: eb
+      } = (0, Cb.C)(), {
+        userContext: Hb
+      } = (0, gb.e)(), pb = null !== (wb = Hb.dailyDrop) && void 0 !== wb && wb.hidden ? eb("dailyDrop:lockedFromHidden") : eb("dailyDrop:lockedFrom");
+      return (0, db.jsx)(ab.d, {
+        tooltipInner: (0, db.jsx)(db.Fragment, {
+          children: pb
         }),
-        children: md
+        children: Mb
       })
     }
 
-    function HO(dd) {
+    function tw(bb) {
       let {
-        pack: Od,
-        ownedPacks: md,
-        showStoreLink: Wd = !1,
-        children: Fd
-      } = dd;
+        pack: wb,
+        ownedPacks: Mb,
+        showStoreLink: eb = !1,
+        children: Hb
+      } = bb;
       const {
-        t: Rd
-      } = (0, qd.G)(), Xd = rd.c[Od].purchasable && !md.includes(Od) && rd.r.includes(Od), Kd = nd.n[Od];
-      return (0, Cd.jsxs)("div", {
-        className: Qd()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: Xd
+        t: pb
+      } = (0, Cb.C)(), Vb = Ab.c[wb].purchasable && !Mb.includes(wb) && Ab.v.includes(wb), gb = Jb.m[wb];
+      return (0, db.jsxs)("div", {
+        className: Ib()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: Vb
         }),
-        children: [Kd && (0, Cd.jsx)(Kd, {}), (0, Cd.jsxs)("div", {
+        children: [gb && (0, db.jsx)(gb, {}), (0, db.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, Cd.jsx)("span", {
+          children: [(0, db.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: (0, KO.i)(Od)
-          }), (Xd || Wd) && (0, Cd.jsxs)(wd.C, {
+            children: (0, pw.g)(wb)
+          }), (Vb || eb) && (0, db.jsxs)(Xb.I, {
             onClick: () => {
-              Xd ? (0, nd.j)(Od) : (0, Ed.p)({
+              Vb ? (0, Jb.i)(wb) : (0, xb.r)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, Cd.jsx)(zd.c, {
+            children: [(0, db.jsx)(vb.b, {
               name: "store"
-            }), " ", Rd("general:viewInShop")]
+            }), " ", pb("general:viewInShop")]
           })]
-        }), Xd && "bee" === Od && (0, Cd.jsx)(nd.c, {}), Fd]
+        }), Vb && "bee" === wb && (0, db.jsx)(Jb.b, {}), Hb]
       })
     }
 
-    function yO(dd) {
+    function Cw(bb) {
       let {
-        equippedEmoteIds: Od,
-        ownedPacks: md,
-        canBuy: Wd,
-        onUpdateLoadout: Fd,
-        onEmoteSelected: Rd,
-        onEquipPreviewSkin: Xd
-      } = dd;
+        equippedEmoteIds: wb,
+        ownedPacks: Mb,
+        canBuy: eb,
+        onUpdateLoadout: Hb,
+        onEmoteSelected: pb,
+        onEquipPreviewSkin: Vb
+      } = bb;
       const {
-        t: Kd
-      } = (0, qd.G)(), hd = new Set(Od), vd = new Map, od = Object.keys(Hd.f.emote).sort(((dd, Od) => {
-        var md, Wd, Fd, Rd;
-        return (null !== (md = null === (Wd = (0, Hd.i)("emote", dd)) || void 0 === Wd ? void 0 : Wd.clientIdx) && void 0 !== md ? md : 0) - (null !== (Fd = null === (Rd = (0, Hd.i)("emote", Od)) || void 0 === Rd ? void 0 : Rd.clientIdx) && void 0 !== Fd ? Fd : 0)
-      })).filter((dd => {
-        const Od = (0, Hd.m)("emote", dd),
-          Fd = (0, Gd.G)("emote", dd, md);
-        return !(Od.purchasable && !Fd && !Wd) && (Od.clientSelectable || Fd)
+        t: gb
+      } = (0, Cb.C)(), lb = new Set(wb), Lb = new Map, Ub = Object.keys(Eb.g.emote).sort(((bb, wb) => {
+        var Mb, eb, Hb, pb;
+        return (null !== (Mb = null === (eb = (0, Eb.l)("emote", bb)) || void 0 === eb ? void 0 : eb.clientIdx) && void 0 !== Mb ? Mb : 0) - (null !== (Hb = null === (pb = (0, Eb.l)("emote", wb)) || void 0 === pb ? void 0 : pb.clientIdx) && void 0 !== Hb ? Hb : 0)
+      })).filter((bb => {
+        const wb = (0, Eb.m)("emote", bb),
+          Hb = (0, Wb.J)("emote", bb, Mb);
+        return !(wb.purchasable && !Hb && !eb) && (wb.clientSelectable || Hb)
       }));
-      for (const Qd of od) {
-        const dd = (0, Hd.i)("emote", Qd).cosmeticPack;
-        vd.has(dd) || vd.set(dd, []), vd.get(dd).push(Qd)
+      for (const Ib of Ub) {
+        const bb = (0, Eb.l)("emote", Ib).cosmeticPack;
+        Lb.has(bb) || Lb.set(bb, []), Lb.get(bb).push(Ib)
       }
-      const Nd = Array.from(vd.keys());
-      return (0, Cd.jsxs)("div", {
+      const tb = Array.from(Lb.keys());
+      return (0, db.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, Cd.jsxs)("div", {
+        children: [!1, (0, db.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, Cd.jsx)("span", {
+          children: [(0, db.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: Kd("emotes:equippedCount", {
-              count: Od.length,
-              max: td.k
+            children: gb("emotes:equippedCount", {
+              count: wb.length,
+              max: Ob.n
             })
-          }), (0, Cd.jsx)("span", {
+          }), (0, db.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: Kd("emotes:loadoutHint")
+            children: gb("emotes:loadoutHint")
           })]
-        }), Nd.map((dd => {
-          const Wd = vd.get(dd);
-          return (0, Cd.jsx)(HO, {
-            pack: dd,
-            ownedPacks: md,
-            children: (0, Cd.jsx)("div", {
+        }), tb.map((bb => {
+          const eb = Lb.get(bb);
+          return (0, db.jsx)(tw, {
+            pack: bb,
+            ownedPacks: Mb,
+            children: (0, db.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: Wd.map((dd => {
-                var Wd;
-                const Xd = Od.indexOf(dd),
-                  vd = -1 !== Xd,
-                  od = Od.length >= td.k,
-                  Nd = mO("emote", dd, md),
-                  qd = Nd || !vd && od,
-                  Hd = (0, pd.j)(dd);
-                return (0, Cd.jsxs)("div", {
-                  className: Qd()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: vd
+              children: eb.map((bb => {
+                var eb;
+                const Vb = wb.indexOf(bb),
+                  Lb = -1 !== Vb,
+                  Ub = wb.length >= Ob.n,
+                  tb = bw("emote", bb, Mb),
+                  Cb = tb || !Lb && Ub,
+                  Eb = (0, mb.h)(bb);
+                return (0, db.jsxs)("div", {
+                  className: Ib()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: Lb
                   }),
                   onClick: () => {
-                    Rd(dd)
+                    pb(bb)
                   },
-                  children: [(0, Cd.jsxs)("div", {
+                  children: [(0, db.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, Cd.jsx)("div", {
+                    children: [(0, db.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(${(0,jd.h)("emote",dd)})`
+                        backgroundImage: `url(${(0,Gb.d)("emote",bb)})`
                       },
                       "aria-hidden": !0
-                    }), (0, Cd.jsx)("span", {
+                    }), (0, db.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (Wd = null === Hd || void 0 === Hd ? void 0 : Hd.displayName) && void 0 !== Wd ? Wd : dd
+                      children: null !== (eb = null === Eb || void 0 === Eb ? void 0 : Eb.displayName) && void 0 !== eb ? eb : bb
                     })]
-                  }), (0, Cd.jsxs)("div", {
+                  }), (0, db.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [vd && (0, Cd.jsx)("span", {
+                    children: [Lb && (0, db.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: Xd + 1
-                    }), Nd && (0, Cd.jsx)(zd.c, {
+                      children: Vb + 1
+                    }), tb && (0, db.jsx)(vb.b, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, Cd.jsx)(ed.g, {
-                      tooltipInner: (0, Cd.jsx)(Cd.Fragment, {
-                        children: Kd(vd ? "general:remove" : "general:add")
+                    }), (0, db.jsx)(ab.d, {
+                      tooltipInner: (0, db.jsx)(db.Fragment, {
+                        children: gb(Lb ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, Cd.jsx)("div", {
-                        className: Qd()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: qd,
-                          EmoteCustomPartToggleEquipped: vd
+                      children: (0, db.jsx)("div", {
+                        className: Ib()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: Cb,
+                          EmoteCustomPartToggleEquipped: Lb
                         }),
-                        onClick: md => {
-                          md.stopPropagation(), qd || function(dd) {
-                            hd.has(dd) ? Fd(Od.filter((Od => Od !== dd))) : Od.length >= td.k || Fd([...Od, dd])
-                          }(dd)
+                        onClick: Mb => {
+                          Mb.stopPropagation(), Cb || function(bb) {
+                            lb.has(bb) ? Hb(wb.filter((wb => wb !== bb))) : wb.length >= Ob.n || Hb([...wb, bb])
+                          }(bb)
                         },
-                        children: (0, Cd.jsx)(zd.c, {
-                          name: vd ? "minus" : "plus",
+                        children: (0, db.jsx)(vb.b, {
+                          name: Lb ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, dd)
+                }, bb)
               }))
             })
-          }, dd)
+          }, bb)
         }))]
       })
     }
-    const bO = (0, Wd.memo)((function(dd) {
-      var Od, md;
+    const Ew = (0, eb.memo)((function(bb) {
+      var wb, Mb;
       let {
-        selectedTab: vd
-      } = dd;
-      const pd = "characters" === vd ? "skin" : vd,
+        selectedTab: Lb
+      } = bb;
+      const mb = "characters" === Lb ? "skin" : Lb,
         {
-          t: Ed
-        } = (0, qd.G)(),
+          t: xb
+        } = (0, Cb.C)(),
         {
-          userContext: xd,
-          isUserContextUpdating: Bd
-        } = (0, Kd.d)(),
-        Sd = (0, Fd.d)(),
+          userContext: rb,
+          isUserContextUpdating: Rb
+        } = (0, gb.e)(),
+        Db = (0, Hb.e)(),
         {
-          gameState: sd
-        } = (0, Ud.p)(["gameState"]),
-        [ud, nd] = (0, Wd.useState)({}),
-        jd = (0, Wd.useRef)(ud);
-      jd.current = ud;
-      const [ed, Id] = (0, Wd.useState)({}), [fd, RO] = (0, Wd.useState)(null), {
-        previewEmote: KO,
-        triggerEmote: hO
-      } = (0, Yd.b)(), QO = (0, Wd.useRef)(td.s.reduce(((dd, Od) => (dd[Od] = (0, bd.b)(Od), dd)), {})), tO = (0, Wd.useRef)(!1), qO = (0, Wd.useRef)(null), bO = (0, Wd.useRef)(KO);
-      bO.current = KO;
-      const TO = (0, Wd.useRef)(null),
-        pO = (0, Wd.useRef)(null);
+          gameState: cb
+        } = (0, Kb.o)(["gameState"]),
+        [Yb, Jb] = (0, eb.useState)({}),
+        Gb = (0, eb.useRef)(Yb);
+      Gb.current = Yb;
+      const [ab, ib] = (0, eb.useState)({}), [yb, ew] = (0, eb.useState)(null), {
+        previewEmote: pw,
+        triggerEmote: Vw
+      } = (0, hb.e)(), lw = (0, eb.useRef)(Ob.u.reduce(((bb, wb) => (bb[wb] = (0, Bb.b)(wb), bb)), {})), Lw = (0, eb.useRef)(!1), Uw = (0, eb.useRef)(null), Ew = (0, eb.useRef)(pw);
+      Ew.current = pw;
+      const Fw = (0, eb.useRef)(null),
+        Bw = (0, eb.useRef)(null);
 
-      function YO() {
-        null !== TO.current && (clearTimeout(TO.current), TO.current = null);
-        const dd = pO.current;
-        null !== dd && (pO.current = null, (0, OO.d)(xd, [
-          ["emote", dd]
+      function sw() {
+        null !== Fw.current && (clearTimeout(Fw.current), Fw.current = null);
+        const bb = Bw.current;
+        null !== bb && (Bw.current = null, (0, kb.c)(rb, [
+          ["emote", bb]
         ]))
       }
 
-      function gO(dd, Od, md) {
-        var Wd, Fd, Rd;
-        QO.current = {
-          ...QO.current,
-          [dd]: Od
-        }, Sd(), md && ((0, OO.d)(xd, [
-          [dd, Od]
-        ]), RO(null));
-        const Xd = (0, Hd.i)(dd, Od);
-        if (null !== Xd && void 0 !== Xd && Xd.colourGroup && null !== (Wd = rd.c[Xd.cosmeticPack].colourGroups) && void 0 !== Wd && null !== (Fd = Wd[Xd.colourGroup]) && void 0 !== Fd && Fd.showSwatchSelector) {
-          const md = (0, Hd.h)(Od);
-          md && Id((Od => ({
-            ...Od,
-            [`${Xd.cosmeticPack}_${dd}_${Xd.colourGroup}`]: parseInt(md[1])
+      function mw(bb, wb, Mb) {
+        var eb, Hb, pb;
+        lw.current = {
+          ...lw.current,
+          [bb]: wb
+        }, Db(), Mb && ((0, kb.c)(rb, [
+          [bb, wb]
+        ]), ew(null));
+        const Vb = (0, Eb.l)(bb, wb);
+        if (null !== Vb && void 0 !== Vb && Vb.colourGroup && null !== (eb = Ab.c[Vb.cosmeticPack].colourGroups) && void 0 !== eb && null !== (Hb = eb[Vb.colourGroup]) && void 0 !== Hb && Hb.showSwatchSelector) {
+          const Mb = (0, Eb.i)(wb);
+          Mb && ib((wb => ({
+            ...wb,
+            [`${Vb.cosmeticPack}_${bb}_${Vb.colourGroup}`]: parseInt(Mb[1])
           })))
         }
-        null !== (Rd = qO.current) && void 0 !== Rd && Rd.isReady() && qO.current.updateCosmetic(dd, Od)
+        null !== (pb = Uw.current) && void 0 !== pb && pb.isReady() && Uw.current.updateCosmetic(bb, wb)
       }
 
-      function wO(dd) {
-        nd((Od => {
-          const md = {
-            ...Od
+      function hw(bb) {
+        Jb((wb => {
+          const Mb = {
+            ...wb
           };
-          return delete md[dd], md
+          return delete Mb[bb], Mb
         }))
       }
 
-      function aO(dd, Od) {
+      function zw(bb, wb) {
         let {
-          undoable: md
-        } = Od;
-        Object.keys(ud).length > 0 && nd({});
-        const Wd = function(dd, Od, md, Wd) {
-          return Object.entries(dd).filter((dd => {
-            let [Fd, Rd] = dd;
-            return Od[Fd] !== Rd && !mO(Fd, Rd, md) && !Wd(Fd, Rd)
+          undoable: Mb
+        } = wb;
+        Object.keys(Yb).length > 0 && Jb({});
+        const eb = function(bb, wb, Mb, eb) {
+          return Object.entries(bb).filter((bb => {
+            let [Hb, pb] = bb;
+            return wb[Hb] !== pb && !bw(Hb, pb, Mb) && !eb(Hb, pb)
           }))
-        }(dd, QO.current, EO, ((dd, Od) => oO(JO, dd, Od)));
-        md ? Wd.length > 0 && RO({
+        }(bb, lw.current, Xw, ((bb, wb) => Iw(xw, bb, wb)));
+        Mb ? eb.length > 0 && ew({
           kind: "worn",
-          outfit: (0, Td.g)(QO.current)
-        }) : RO(null);
-        for (const [Fd, Rd] of Wd) gO(Fd, Rd, !1);
-        Wd.length > 0 && (0, OO.d)(xd, Wd)
-      }(0, gd.b)("cosmeticsUpdated", (dd => {
-        let Od = !1;
+          outfit: (0, sb.g)(lw.current)
+        }) : ew(null);
+        for (const [Hb, pb] of eb) mw(Hb, pb, !1);
+        eb.length > 0 && (0, kb.c)(rb, eb)
+      }(0, zb.b)("cosmeticsUpdated", (bb => {
+        let wb = !1;
         for (const {
-            local: md,
-            KF: Wd,
-            hF: Fd
+            local: Mb,
+            gH: eb,
+            lH: Hb
           }
-          of dd) {
-          if (!md) return;
-          Od = !0, tO.current || gO(Wd, Fd, !1), Sd()
+          of bb) {
+          if (!Mb) return;
+          wb = !0, Lw.current || mw(eb, Hb, !1), Db()
         }
-        Od && (tO.current = !0)
-      })), (0, Wd.useEffect)((() => {
-        if (!Bd) {
-          for (const [dd, Od] of Object.entries(xd.getPlayerCosmetics())) gO(dd, Od, !1);
-          Sd()
+        wb && (Lw.current = !0)
+      })), (0, eb.useEffect)((() => {
+        if (!Rb) {
+          for (const [bb, wb] of Object.entries(rb.getPlayerCosmetics())) mw(bb, wb, !1);
+          Db()
         }
-      }), [Bd]), (0, Wd.useEffect)((() => () => {
-        YO()
+      }), [Rb]), (0, eb.useEffect)((() => () => {
+        sw()
       }), []);
-      const EO = xd.getOwnedCosmeticPacks(),
-        JO = function(dd, Od) {
-          return null === dd ? null : {
-            collected: new Set(dd.collected),
-            ownedPacks: Od
+      const Xw = rb.getOwnedCosmeticPacks(),
+        xw = function(bb, wb) {
+          return null === bb ? null : {
+            collected: new Set(bb.collected),
+            ownedPacks: wb
           }
-        }(xd.dailyDrop, EO),
-        UO = (0, cd.usePurchasesAllowed)(),
-        xO = xd.getPlayerRanks(),
-        BO = xd === hd.NULL_USER_CONTEXT ? "" : xd.getPlayerName(),
-        SO = null !== (Od = null !== (md = ud.nameColour) && void 0 !== md ? md : xd.getPlayerCosmetics().nameColour) && void 0 !== Od ? Od : od.b,
-        sO = (0, Wd.useMemo)((() => ({
-          name: BO,
-          ranks: xO,
-          nameColour: SO
-        })), [BO, xO, SO]),
-        uO = Object.keys(Hd.f[pd]).filter((dd => {
-          const Od = (0, Hd.m)(pd, dd),
-            md = (0, Gd.G)(pd, dd, EO);
-          return !(Od.purchasable && !md && !UO) && (Od.clientSelectable || md)
-        })).sort(((dd, Od) => {
-          var md, Wd, Fd, Rd;
-          return (null !== (md = null === (Wd = (0, Hd.i)(pd, dd)) || void 0 === Wd ? void 0 : Wd.clientIdx) && void 0 !== md ? md : 0) - (null !== (Fd = null === (Rd = (0, Hd.i)(pd, Od)) || void 0 === Rd ? void 0 : Rd.clientIdx) && void 0 !== Fd ? Fd : 0)
+        }(rb.dailyDrop, Xw),
+        jw = (0, Qb.usePurchasesAllowed)(),
+        Kw = rb.getPlayerRanks(),
+        rw = rb === lb.NULL_USER_CONTEXT ? "" : rb.getPlayerName(),
+        Rw = null !== (wb = null !== (Mb = Yb.nameColour) && void 0 !== Mb ? Mb : rb.getPlayerCosmetics().nameColour) && void 0 !== wb ? wb : Ub.d,
+        Dw = (0, eb.useMemo)((() => ({
+          name: rw,
+          ranks: Kw,
+          nameColour: Rw
+        })), [rw, Kw, Rw]),
+        Yw = Object.keys(Eb.g[mb]).filter((bb => {
+          const wb = (0, Eb.m)(mb, bb),
+            Mb = (0, Wb.J)(mb, bb, Xw);
+          return !(wb.purchasable && !Mb && !jw) && (wb.clientSelectable || Mb)
+        })).sort(((bb, wb) => {
+          var Mb, eb, Hb, pb;
+          return (null !== (Mb = null === (eb = (0, Eb.l)(mb, bb)) || void 0 === eb ? void 0 : eb.clientIdx) && void 0 !== Mb ? Mb : 0) - (null !== (Hb = null === (pb = (0, Eb.l)(mb, wb)) || void 0 === pb ? void 0 : pb.clientIdx) && void 0 !== Hb ? Hb : 0)
         })),
-        VO = new Map;
-      for (const Wd of uO) {
-        var iO;
-        const dd = null === (iO = (0, Hd.i)(pd, Wd)) || void 0 === iO ? void 0 : iO.cosmeticPack;
-        VO.has(dd) || VO.set(dd, []), VO.get(dd).push(Wd)
+        Zw = new Map;
+      for (const eb of Yw) {
+        var fw;
+        const bb = null === (fw = (0, Eb.l)(mb, eb)) || void 0 === fw ? void 0 : fw.cosmeticPack;
+        Zw.has(bb) || Zw.set(bb, []), Zw.get(bb).push(eb)
       }
-      const AO = function(dd, Od) {
-          const md = new Set,
-            Wd = new Set;
-          for (const [Fd, Rd] of Object.entries(Hd.f[dd])) {
-            if (void 0 === Rd.colourGroup) continue;
-            const Xd = `${Rd.cosmeticPack}_${Rd.colourGroup}`;
-            (mO(dd, Fd, Od) ? Wd : md).add(Xd)
+      const Aw = function(bb, wb) {
+          const Mb = new Set,
+            eb = new Set;
+          for (const [Hb, pb] of Object.entries(Eb.g[bb])) {
+            if (void 0 === pb.colourGroup) continue;
+            const Vb = `${pb.cosmeticPack}_${pb.colourGroup}`;
+            (bw(bb, Hb, wb) ? eb : Mb).add(Vb)
           }
-          return new Set([...md].filter((dd => Wd.has(dd))))
-        }(pd, EO),
-        rO = new Map;
-      for (const [Wd, Fd] of VO) {
-        const dd = [],
-          Od = new Map;
-        for (const Wd of Fd) {
-          var GO, nO;
-          const md = null !== (GO = null === (nO = (0, Hd.i)(pd, Wd)) || void 0 === nO ? void 0 : nO.colourGroup) && void 0 !== GO ? GO : null;
-          Od.has(md) || (Od.set(md, []), dd.push(md)), Od.get(md).push(Wd)
+          return new Set([...Mb].filter((bb => eb.has(bb))))
+        }(mb, Xw),
+        Ww = new Map;
+      for (const [eb, Hb] of Zw) {
+        const bb = [],
+          wb = new Map;
+        for (const eb of Hb) {
+          var Jw, Sw;
+          const Mb = null !== (Jw = null === (Sw = (0, Eb.l)(mb, eb)) || void 0 === Sw ? void 0 : Sw.colourGroup) && void 0 !== Jw ? Jw : null;
+          wb.has(Mb) || (wb.set(Mb, []), bb.push(Mb)), wb.get(Mb).push(eb)
         }
-        const md = dd.map((dd => {
-          var md;
-          const Fd = Od.get(dd),
-            Rd = dd ? null === (md = rd.c[Wd].colourGroups) || void 0 === md ? void 0 : md[dd] : void 0,
-            Xd = !0 === (null === Rd || void 0 === Rd ? void 0 : Rd.showSwatchSelector) && !AO.has(`${Wd}_${dd}`);
-          if (Xd && Rd) {
-            var Kd;
-            const Od = null !== (Kd = ed[`${Wd}_${pd}_${dd}`]) && void 0 !== Kd ? Kd : (0, rd.f)(Rd.colours);
+        const Mb = bb.map((bb => {
+          var Mb;
+          const Hb = wb.get(bb),
+            pb = bb ? null === (Mb = Ab.c[eb].colourGroups) || void 0 === Mb ? void 0 : Mb[bb] : void 0,
+            Vb = !0 === (null === pb || void 0 === pb ? void 0 : pb.showSwatchSelector) && !Aw.has(`${eb}_${bb}`);
+          if (Vb && pb) {
+            var gb;
+            const wb = null !== (gb = ab[`${eb}_${mb}_${bb}`]) && void 0 !== gb ? gb : (0, Ab.f)(pb.colours);
             return {
-              groupName: dd,
-              showSwatch: Xd,
-              cosmetics: Fd.filter((dd => {
-                const md = (0, Hd.h)(dd);
-                return !md || Od.toString() === md[1].toString()
+              groupName: bb,
+              showSwatch: Vb,
+              cosmetics: Hb.filter((bb => {
+                const Mb = (0, Eb.i)(bb);
+                return !Mb || wb.toString() === Mb[1].toString()
               }))
             }
           }
           return {
-            groupName: dd,
-            cosmetics: Fd,
-            showSwatch: Xd
+            groupName: bb,
+            cosmetics: Hb,
+            showSwatch: Vb
           }
         }));
-        rO.set(Wd, md)
+        Ww.set(eb, Mb)
       }
-      const LO = Array.from(VO.keys()),
-        PO = new Map;
-      for (const [Wd, Fd] of Object.entries(yd.b)) {
-        const dd = rd.c[Fd.cosmeticPack],
-          Od = (0, Gd.C)(Fd.cosmetics, EO),
-          md = void 0 !== FO(Wd);
-        (dd.clientSelectable || md || Od) && ((!dd.purchasable || Od || UO) && (PO.has(Fd.cosmeticPack) || PO.set(Fd.cosmeticPack, []), PO.get(Fd.cosmeticPack).push([Wd, Fd])))
+      const Nw = Array.from(Zw.keys()),
+        vw = new Map;
+      for (const [eb, Hb] of Object.entries(Fb.d)) {
+        const bb = Ab.c[Hb.cosmeticPack],
+          wb = (0, Wb.G)(Hb.cosmetics, Xw),
+          Mb = void 0 !== Mw(eb);
+        (bb.clientSelectable || Mb || wb) && ((!bb.purchasable || wb || jw) && (vw.has(Hb.cosmeticPack) || vw.set(Hb.cosmeticPack, []), vw.get(Hb.cosmeticPack).push([eb, Hb])))
       }
-      const zO = Array.from(PO.keys()),
-        cO = UO ? XO(vd, ud, EO) : [],
-        [jO, DO] = (0, Wd.useState)(!1);
-      return !jO && (cO.length > 0 || null !== fd) && DO(!0), (0, Cd.jsxs)("div", {
+      const Qw = Array.from(vw.keys()),
+        Gw = jw ? Hw(Lb, Yb, Xw) : [],
+        [qw, aw] = (0, eb.useState)(!1);
+      return !qw && (Gw.length > 0 || null !== yb) && aw(!0), (0, db.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === pd || "nameColour" === pd) && !(0, Nd.b)(xO) && (0, Cd.jsxs)("div", {
+        children: [("cape" === mb || "nameColour" === mb) && !(0, tb.c)(Kw) && (0, db.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, Cd.jsx)(zd.c, {
+          children: [(0, db.jsx)(vb.b, {
             name: "bolt"
-          }), Ed((0, Jd.v)(Date.now()).unlockWithKey), UO && (0, Cd.jsx)(wd.m, {
+          }), xb((0, jb.s)(Date.now()).unlockWithKey), jw && (0, db.jsx)(Xb.p, {
             onClick: () => {
-              Md()
+              ob()
             },
-            children: Ed("general:getItNow")
+            children: xb("general:getItNow")
           })]
-        }), (0, Cd.jsxs)("div", {
+        }), (0, db.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === vd && (0, Cd.jsxs)("div", {
+          children: ["characters" === Lb && (0, db.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, (0, Cd.jsx)(Zd, {
-              wornOutfit: (0, Td.g)(QO.current),
-              onApply: dd => {
-                aO(dd, {
+            children: [!1, (0, db.jsx)(Pb, {
+              wornOutfit: (0, sb.g)(lw.current),
+              onApply: bb => {
+                zw(bb, {
                   undoable: !0
                 })
               },
-              onOverwrite: (dd, Od) => {
-                RO({
+              onOverwrite: (bb, wb) => {
+                ew({
                   kind: "slot",
-                  slot: dd,
-                  outfit: Od
+                  slot: bb,
+                  outfit: wb
                 })
               },
-              onDelete: dd => {
-                RO((Od => "slot" === (null === Od || void 0 === Od ? void 0 : Od.kind) && Od.slot === dd ? null : Od))
+              onDelete: bb => {
+                ew((wb => "slot" === (null === wb || void 0 === wb ? void 0 : wb.kind) && wb.slot === bb ? null : wb))
               }
-            }), zO.map((dd => {
-              const Od = PO.get(dd);
-              return (0, Cd.jsx)(HO, {
-                pack: dd,
-                ownedPacks: EO,
-                showStoreLink: !rd.p.includes(dd) && Od.some((dd => {
+            }), Qw.map((bb => {
+              const wb = vw.get(bb);
+              return (0, db.jsx)(tw, {
+                pack: bb,
+                ownedPacks: Xw,
+                showStoreLink: !Ab.r.includes(bb) && wb.some((bb => {
                   let [, {
-                    cosmetics: Od
-                  }] = dd;
-                  return WO(Od, EO)
+                    cosmetics: wb
+                  }] = bb;
+                  return ww(wb, Xw)
                 })),
-                children: (0, Cd.jsx)("div", {
+                children: (0, db.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: Od.map((dd => {
-                    let [Od, {
-                      cosmetics: md
-                    }] = dd;
-                    const Wd = WO(md, EO),
-                      Fd = !Wd && function(dd, Od) {
-                        return Object.entries(Od).some((Od => {
-                          let [md, Wd] = Od;
-                          return oO(dd, md, Wd)
+                  children: wb.map((bb => {
+                    let [wb, {
+                      cosmetics: Mb
+                    }] = bb;
+                    const eb = ww(Mb, Xw),
+                      Hb = !eb && function(bb, wb) {
+                        return Object.entries(wb).some((wb => {
+                          let [Mb, eb] = wb;
+                          return Iw(bb, Mb, eb)
                         }))
-                      }(JO, md),
-                      Rd = Wd || Fd,
-                      Xd = (0, Td.b)(md, ud),
-                      Kd = !Xd && (0, Td.b)(md, QO.current);
-                    return (0, Cd.jsx)(NO, {
-                      locked: Fd,
-                      children: (0, Cd.jsxs)("div", {
+                      }(xw, Mb),
+                      pb = eb || Hb,
+                      Vb = (0, sb.b)(Mb, Yb),
+                      gb = !Vb && (0, sb.b)(Mb, lw.current);
+                    return (0, db.jsx)(Ow, {
+                      locked: Hb,
+                      children: (0, db.jsxs)("div", {
                         "data-pad-focusable": !0,
-                        className: Qd()("CharacterPresetCard", {
-                          CharacterPresetCardActive: Kd,
-                          CharacterPresetCardTryingOn: Xd
+                        className: Ib()("CharacterPresetCard", {
+                          CharacterPresetCardActive: gb,
+                          CharacterPresetCardTryingOn: Vb
                         }),
                         onClick: () => {
-                          Rd ? function(dd) {
-                            (0, Td.b)(dd, ud) ? nd({}): nd({
-                              ...dd
+                          pb ? function(bb) {
+                            (0, sb.b)(bb, Yb) ? Jb({}): Jb({
+                              ...bb
                             })
-                          }(md) : aO(md, {
+                          }(Mb) : zw(Mb, {
                             undoable: !0
                           })
                         },
-                        children: [(0, Cd.jsx)("div", {
+                        children: [(0, db.jsx)("div", {
                           className: "CharacterPresetCardPreview",
                           style: {
-                            backgroundImage: `url(${(0,Pd.g)(Od)})`
+                            backgroundImage: `url(${(0,Nb.j)(wb)})`
                           }
-                        }), Rd && (0, Cd.jsx)(zd.c, {
+                        }), pb && (0, db.jsx)(vb.b, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
                       })
-                    }, Od)
+                    }, wb)
                   }))
                 })
-              }, dd)
+              }, bb)
             }))]
-          }), "emote" === vd && (0, Cd.jsx)(yO, {
-            equippedEmoteIds: (0, bd.h)(QO.current.emote),
-            ownedPacks: EO,
-            canBuy: UO,
-            onUpdateLoadout: dd => {
-              const Od = (0, bd.k)(dd);
-              var md;
-              QO.current = {
-                ...QO.current,
-                emote: Od
-              }, xd.setPlayerCosmetics("emote", Od), Sd(), md = Od, pO.current = md, null !== TO.current && clearTimeout(TO.current), TO.current = setTimeout(YO, 350)
+          }), "emote" === Lb && (0, db.jsx)(Cw, {
+            equippedEmoteIds: (0, Bb.f)(lw.current.emote),
+            ownedPacks: Xw,
+            canBuy: jw,
+            onUpdateLoadout: bb => {
+              const wb = (0, Bb.h)(bb);
+              var Mb;
+              lw.current = {
+                ...lw.current,
+                emote: wb
+              }, rb.setPlayerCosmetics("emote", wb), Db(), Mb = wb, Bw.current = Mb, null !== Fw.current && clearTimeout(Fw.current), Fw.current = setTimeout(sw, 350)
             },
-            onEmoteSelected: hO,
+            onEmoteSelected: Vw,
             onEquipPreviewSkin: () => {
-              ! function(dd, Od) {
-                for (const md of td.s)(0, yd.e)(md) && dd(md, "skin" === md ? "skin_preview" : `${md}_none`, !1);
-                Od()
-              }(gO, Sd)
+              ! function(bb, wb) {
+                for (const Mb of Ob.u)(0, Fb.g)(Mb) && bb(Mb, "skin" === Mb ? "skin_preview" : `${Mb}_none`, !1);
+                wb()
+              }(mw, Db)
             }
-          }), "characters" !== vd && "emote" !== vd && (0, Cd.jsxs)("div", {
+          }), "characters" !== Lb && "emote" !== Lb && (0, db.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, LO.map((dd => {
-              const Od = rO.get(dd);
-              return (0, Cd.jsx)(HO, {
-                pack: dd,
-                ownedPacks: EO,
-                children: Od.map((Od => {
-                  var md;
+            children: [!1, Nw.map((bb => {
+              const wb = Ww.get(bb);
+              return (0, db.jsx)(tw, {
+                pack: bb,
+                ownedPacks: Xw,
+                children: wb.map((wb => {
+                  var Mb;
                   let {
-                    groupName: Wd,
-                    cosmetics: Fd,
-                    showSwatch: Rd
-                  } = Od;
-                  const Xd = Wd ? null === (md = rd.c[dd].colourGroups) || void 0 === md ? void 0 : md[Wd] : void 0,
-                    Kd = `${dd}_${pd}_${Wd}`;
-                  return (0, Cd.jsxs)("div", {
+                    groupName: eb,
+                    cosmetics: Hb,
+                    showSwatch: pb
+                  } = wb;
+                  const Vb = eb ? null === (Mb = Ab.c[bb].colourGroups) || void 0 === Mb ? void 0 : Mb[eb] : void 0,
+                    gb = `${bb}_${mb}_${eb}`;
+                  return (0, db.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [Rd && Xd && (0, Cd.jsx)("div", {
+                    children: [pb && Vb && (0, db.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...Xd.colours.map(((dd, Od) => ({
-                        color: dd,
-                        index: Od
-                      })))].sort(((dd, Od) => dd.color.order - Od.color.order)).map((Od => {
-                        var md;
+                      children: [...Vb.colours.map(((bb, wb) => ({
+                        color: bb,
+                        index: wb
+                      })))].sort(((bb, wb) => bb.color.order - wb.color.order)).map((wb => {
+                        var Mb;
                         let {
-                          color: Fd,
-                          index: Rd
-                        } = Od;
-                        return (0, Cd.jsx)("div", {
-                          className: Qd()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (md = ed[Kd]) && void 0 !== md ? md : (0, rd.f)(Xd.colours)) === Rd
+                          color: Hb,
+                          index: pb
+                        } = wb;
+                        return (0, db.jsx)("div", {
+                          className: Ib()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (Mb = ab[gb]) && void 0 !== Mb ? Mb : (0, Ab.f)(Vb.colours)) === pb
                           }),
                           style: {
-                            backgroundColor: `rgb(${Fd.rbg.join(",")})`
+                            backgroundColor: `rgb(${Hb.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var Od;
-                            Id((dd => ({
-                              ...dd,
-                              [Kd]: Rd
+                            var wb;
+                            ib((bb => ({
+                              ...bb,
+                              [gb]: pb
                             })));
-                            const md = ud[pd],
-                              Fd = md ? (0, Hd.i)(pd, md) : null,
-                              Xd = (null === Fd || void 0 === Fd ? void 0 : Fd.cosmeticPack) === dd,
-                              hd = Xd ? md : QO.current[pd],
-                              vd = Xd ? Fd : (0, Hd.i)(pd, hd);
-                            if ((null === vd || void 0 === vd ? void 0 : vd.cosmeticPack) !== dd) return;
-                            if ((null !== (Od = null === vd || void 0 === vd ? void 0 : vd.colourGroup) && void 0 !== Od ? Od : null) !== Wd) return;
-                            const Qd = (0, Hd.h)(hd);
-                            if (Qd) {
-                              const dd = `${pd}_${Qd[0]}_${Rd}`;
-                              mO(pd, dd, EO) || oO(JO, pd, dd) ? nd((Od => ({
-                                ...Od,
-                                [pd]: dd
-                              }))) : (Xd && wO(pd), gO(pd, dd, !0))
+                            const Mb = Yb[mb],
+                              Hb = Mb ? (0, Eb.l)(mb, Mb) : null,
+                              Vb = (null === Hb || void 0 === Hb ? void 0 : Hb.cosmeticPack) === bb,
+                              lb = Vb ? Mb : lw.current[mb],
+                              Lb = Vb ? Hb : (0, Eb.l)(mb, lb);
+                            if ((null === Lb || void 0 === Lb ? void 0 : Lb.cosmeticPack) !== bb) return;
+                            if ((null !== (wb = null === Lb || void 0 === Lb ? void 0 : Lb.colourGroup) && void 0 !== wb ? wb : null) !== eb) return;
+                            const Ib = (0, Eb.i)(lb);
+                            if (Ib) {
+                              const bb = `${mb}_${Ib[0]}_${pb}`;
+                              bw(mb, bb, Xw) || Iw(xw, mb, bb) ? Jb((wb => ({
+                                ...wb,
+                                [mb]: bb
+                              }))) : (Vb && hw(mb), mw(mb, bb, !0))
                             }
                           }
-                        }, Fd.rbg.join())
+                        }, Hb.rbg.join())
                       }))
-                    }), Fd.map((dd => {
-                      const Od = dd === QO.current[pd],
-                        md = ud[pd] === dd,
-                        Wd = mO(pd, dd, EO),
-                        Fd = !Wd && oO(JO, pd, dd),
-                        Rd = Wd || Fd,
-                        Xd = Rd || Od ? [] : function(dd, Od, md) {
-                          if ("cape" === dd) {
+                    }), Hb.map((bb => {
+                      const wb = bb === lw.current[mb],
+                        Mb = Yb[mb] === bb,
+                        eb = bw(mb, bb, Xw),
+                        Hb = !eb && Iw(xw, mb, bb),
+                        pb = eb || Hb,
+                        Vb = pb || wb ? [] : function(bb, wb, Mb) {
+                          if ("cape" === bb) {
                             const {
-                              needsSuperRankPerks: dd,
-                              rank: Wd
-                            } = od.i[Od];
-                            return [...dd && !(0, Nd.b)(md) ? [Nd.q.rank] : [], ...void 0 === Wd || md.includes(Wd) ? [] : [Wd]]
+                              needsSuperRankPerks: bb,
+                              rank: eb
+                            } = Ub.h[wb];
+                            return [...bb && !(0, tb.c)(Mb) ? [tb.n.rank] : [], ...void 0 === eb || Mb.includes(eb) ? [] : [eb]]
                           }
-                          return "nameColour" !== dd || (0, kd.Rd)(md, Od) ? [] : [Nd.q.rank]
-                        }(pd, dd, xO),
-                        Kd = 0 === Xd.length;
-                      return (0, Cd.jsx)(NO, {
-                        locked: Fd,
-                        children: (0, Cd.jsxs)("div", {
+                          return "nameColour" !== bb || (0, nb.Zd)(Mb, wb) ? [] : [tb.n.rank]
+                        }(mb, bb, Kw),
+                        gb = 0 === Vb.length;
+                      return (0, db.jsx)(Ow, {
+                        locked: Hb,
+                        children: (0, db.jsxs)("div", {
                           "data-pad-focusable": !0,
-                          className: Qd()("CharCustomPartWrapper", {
-                            SelectedCharCustomPartWrapper: Od && !md,
-                            TryingOnCharCustomPartWrapper: md,
-                            DisabledCharCustomPartWrapper: !Kd,
-                            CharCustomPartWrapperProfileEffect: "profileEffect" === pd
+                          className: Ib()("CharCustomPartWrapper", {
+                            SelectedCharCustomPartWrapper: wb && !Mb,
+                            TryingOnCharCustomPartWrapper: Mb,
+                            DisabledCharCustomPartWrapper: !gb,
+                            CharCustomPartWrapperProfileEffect: "profileEffect" === mb
                           }),
                           onClick: () => {
-                            if (!Kd) return Od = {
-                              KF: pd,
-                              hF: dd,
-                              missingRanks: Xd,
-                              playerRanks: xO,
-                              canBuy: UO
-                            }, void ld.NotificationProvider.showCustomPopup({
-                              body: dd => (0, Cd.jsx)(dO, {
-                                ...Od,
-                                closePopup: dd
+                            if (!gb) return wb = {
+                              gH: mb,
+                              lH: bb,
+                              missingRanks: Vb,
+                              playerRanks: Kw,
+                              canBuy: jw
+                            }, void ub.NotificationProvider.showCustomPopup({
+                              body: bb => (0, db.jsx)(Tb, {
+                                ...wb,
+                                closePopup: bb
                               }),
                               disableExitButton: !0
                             });
-                            var Od;
-                            if (Rd) nd((Od => {
-                              if (Od[pd] === dd) {
-                                const dd = {
-                                  ...Od
+                            var wb;
+                            if (pb) Jb((wb => {
+                              if (wb[mb] === bb) {
+                                const bb = {
+                                  ...wb
                                 };
-                                return delete dd[pd], dd
+                                return delete bb[mb], bb
                               }
                               return {
-                                ...Od,
-                                [pd]: dd
+                                ...wb,
+                                [mb]: bb
                               }
                             }));
                             else {
-                              var md;
-                              if (ud[pd] && wO(pd), dd === QO.current[pd]) return;
-                              null !== (md = qO.current) && void 0 !== md && md.isReady() && gO(pd, dd, !0)
+                              var Mb;
+                              if (Yb[mb] && hw(mb), bb === lw.current[mb]) return;
+                              null !== (Mb = Uw.current) && void 0 !== Mb && Mb.isReady() && mw(mb, bb, !0)
                             }
                           },
-                          children: ["profileEffect" === pd ? (0, Cd.jsx)(Ld.d, {
-                            profileEffect: dd,
-                            name: xd.getPlayerName(),
-                            cosmetics: xd.getPlayerCosmetics()
-                          }) : (0, Cd.jsx)(Dd.e, {
-                            KF: pd,
-                            hF: dd
-                          }), Rd && (0, Cd.jsx)(zd.c, {
+                          children: ["profileEffect" === mb ? (0, db.jsx)(Sb.d, {
+                            profileEffect: bb,
+                            name: rb.getPlayerName(),
+                            cosmetics: rb.getPlayerCosmetics()
+                          }) : (0, db.jsx)(qb.c, {
+                            gH: mb,
+                            lH: bb
+                          }), pb && (0, db.jsx)(vb.b, {
                             name: "lock",
                             className: "LockedCosmeticIcon"
                           })]
                         })
-                      }, dd)
+                      }, bb)
                     }))]
-                  }, null !== Wd && void 0 !== Wd ? Wd : "ungrouped")
+                  }, null !== eb && void 0 !== eb ? eb : "ungrouped")
                 }))
-              }, dd)
+              }, bb)
             }))]
-          }), (0, Cd.jsxs)("div", {
+          }), (0, db.jsxs)("div", {
             className: "CharCustomisationPreviewColumn",
-            children: [(0, Cd.jsx)(Ad.CharacterPreview, {
-              ref: qO,
-              forcedCosmetics: ud,
-              hK: KO.id,
-              emotePlaySeq: KO.seq,
-              nametag: sO,
+            children: [(0, db.jsx)(fb.CharacterPreview, {
+              ref: Uw,
+              forcedCosmetics: Yb,
+              Og: pw.id,
+              emotePlaySeq: pw.seq,
+              nametag: Dw,
               onReady: () => {
-                for (const dd of td.s) gO(dd, QO.current[dd], !1)
+                for (const bb of Ob.u) mw(bb, lw.current[bb], !1)
               },
-              onDrawn: dd => {
-                var Od, md;
-                const Wd = null === (Od = qO.current) || void 0 === Od || null === (md = Od.getDevTools()) || void 0 === md ? void 0 : md.canvas(),
-                  Fd = (dd, Od) => 0 === Object.keys(jd.current).length && JSON.stringify(xd.getPlayerCosmetics()) === dd && bO.current.seq === Od.seq && null === bO.current.id,
-                  Kd = JSON.stringify(xd.getPlayerCosmetics()),
-                  hd = bO.current;
-                if (!Rd.i || !dd || void 0 === Wd || !Fd(Kd, hd)) return;
-                const vd = (0, Xd.g)(xd),
-                  Qd = qO.current;
-                Qd.setNametagShown(!1), (0, Xd.e)(Wd, vd, (() => Fd(Kd, hd))).catch((dd => {
-                  console.warn("[loading-character] couldn't keep your picture from Customise", dd)
+              onDrawn: bb => {
+                var wb, Mb;
+                const eb = null === (wb = Uw.current) || void 0 === wb || null === (Mb = wb.getDevTools()) || void 0 === Mb ? void 0 : Mb.canvas(),
+                  Hb = (bb, wb) => 0 === Object.keys(Gb.current).length && JSON.stringify(rb.getPlayerCosmetics()) === bb && Ew.current.seq === wb.seq && null === Ew.current.id,
+                  gb = JSON.stringify(rb.getPlayerCosmetics()),
+                  lb = Ew.current;
+                if (!pb.m || !bb || void 0 === eb || !Hb(gb, lb)) return;
+                const Lb = (0, Vb.c)(rb),
+                  Ib = Uw.current;
+                Ib.setNametagShown(!1), (0, Vb.b)(eb, Lb, (() => Hb(gb, lb))).catch((bb => {
+                  console.warn("[loading-character] couldn't keep your picture from Customise", bb)
                 })).finally((() => {
-                  Qd.setNametagShown(!0)
+                  Ib.setNametagShown(!0)
                 }))
               }
-            }), jO && (0, Cd.jsxs)("div", {
+            }), qw && (0, db.jsxs)("div", {
               className: "CharCustomisationPreviewActions",
-              children: [cO.length > 0 && (0, Cd.jsx)(vO, {
-                gets: cO
-              }), fd && (0, Cd.jsxs)(wd.g, {
+              children: [Gw.length > 0 && (0, db.jsx)(gw, {
+                gets: Gw
+              }), yb && (0, db.jsxs)(Xb.f, {
                 className: "CharCustomisationUndo",
                 onClick: () => {
-                  "worn" === fd.kind ? aO(fd.outfit, {
+                  "worn" === yb.kind ? zw(yb.outfit, {
                     undoable: !1
-                  }) : (Vd.save(fd.slot, fd.outfit), RO(null))
+                  }) : (Zb.save(yb.slot, yb.outfit), ew(null))
                 },
-                children: [(0, Cd.jsx)(zd.c, {
+                children: [(0, db.jsx)(vb.b, {
                   name: "rotate-left"
-                }), Ed("general:undo")]
+                }), xb("general:undo")]
               })]
             })]
           })]
@@ -1076,269 +1076,269 @@ export const modules = {
       })
     }))
   },
-  45334: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      CharacterPreview: () => Nd
+  45153: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      CharacterPreview: () => tb
     });
-    var Wd = md(66),
-      Fd = md(3851),
-      Rd = md(1300),
-      Xd = md(3597),
-      Kd = md(35582),
-      hd = md(4849),
-      vd = md(1341);
-    let Qd = null;
-    const td = [],
-      od = .6 * Math.PI,
-      Nd = (0, Wd.memo)((0, Wd.forwardRef)((function(dd, Od) {
+    var eb = Mb(64),
+      Hb = Mb(4005),
+      pb = Mb(1313),
+      Vb = Mb(3724),
+      gb = Mb(35366),
+      lb = Mb(5003),
+      Lb = Mb(1364);
+    let Ib = null;
+    const Ob = [],
+      Ub = .6 * Math.PI,
+      tb = (0, eb.memo)((0, eb.forwardRef)((function(bb, wb) {
         let {
-          onReady: md,
-          onDrawn: Nd,
-          onSetupFailed: qd,
-          owner: Hd = "other",
-          framing: yd = "player",
-          forcedCosmetics: bd,
-          hK: Td,
-          emotePlaySeq: pd,
-          turntableFromYaw: Yd = null,
-          nametag: gd
-        } = dd;
-        const wd = (0, Wd.useRef)(null),
+          onReady: Mb,
+          onDrawn: tb,
+          onSetupFailed: Cb,
+          owner: Eb = "other",
+          framing: Fb = "player",
+          forcedCosmetics: Bb,
+          Og: sb,
+          emotePlaySeq: mb,
+          turntableFromYaw: hb = null,
+          nametag: zb
+        } = bb;
+        const Xb = (0, eb.useRef)(null),
           {
-            width: Ed,
-            height: Jd
-          } = (0, Fd.b)(wd),
-          Ud = (0, Wd.useRef)({
-            width: Ed,
-            height: Jd
+            width: xb,
+            height: jb
+          } = (0, Hb.b)(Xb),
+          Kb = (0, eb.useRef)({
+            width: xb,
+            height: jb
           });
-        Ud.current = {
-          width: Ed,
-          height: Jd
+        Kb.current = {
+          width: xb,
+          height: jb
         };
-        const xd = (0, Wd.useRef)(null),
-          Bd = (0, Wd.useRef)({}),
-          Sd = (0, Wd.useRef)({}),
-          [sd, ud] = (0, Wd.useState)(!1),
-          Vd = (0, Wd.useRef)(md);
-        Vd.current = md;
-        const Ad = (0, Wd.useRef)(Nd);
-        Ad.current = Nd;
-        const rd = (0, Wd.useRef)(qd);
-        rd.current = qd;
-        const Gd = (0, Wd.useRef)(null),
-          nd = (0, Wd.useRef)(!1),
-          Ld = (0, Wd.useRef)(gd);
-        Ld.current = gd;
-        const Pd = (0, Wd.useRef)(!0),
-          zd = (0, Wd.useRef)(!1),
-          cd = (0, Wd.useCallback)((() => {
-            const dd = xd.current;
-            if (!dd || !Ad.current || nd.current || !zd.current) return;
-            const Od = {};
-            Gd.current = Od, queueMicrotask((() => {
-              if (Gd.current !== Od) return;
-              const md = Promise.all(Rd.s.map((Od => dd.untilDrawn(Od)))).then((() => !0), (dd => (console.error("Failed to draw the character preview", dd), !1))),
-                Wd = new Promise((dd => {
+        const rb = (0, eb.useRef)(null),
+          Rb = (0, eb.useRef)({}),
+          Db = (0, eb.useRef)({}),
+          [cb, Yb] = (0, eb.useState)(!1),
+          Zb = (0, eb.useRef)(Mb);
+        Zb.current = Mb;
+        const fb = (0, eb.useRef)(tb);
+        fb.current = tb;
+        const Ab = (0, eb.useRef)(Cb);
+        Ab.current = Cb;
+        const Wb = (0, eb.useRef)(null),
+          Jb = (0, eb.useRef)(!1),
+          Sb = (0, eb.useRef)(zb);
+        Sb.current = zb;
+        const Nb = (0, eb.useRef)(!0),
+          vb = (0, eb.useRef)(!1),
+          Qb = (0, eb.useCallback)((() => {
+            const bb = rb.current;
+            if (!bb || !fb.current || Jb.current || !vb.current) return;
+            const wb = {};
+            Wb.current = wb, queueMicrotask((() => {
+              if (Wb.current !== wb) return;
+              const Mb = Promise.all(pb.u.map((wb => bb.untilDrawn(wb)))).then((() => !0), (bb => (console.error("Failed to draw the character preview", bb), !1))),
+                eb = new Promise((bb => {
                   setTimeout((() => {
-                    dd(!1)
+                    bb(!1)
                   }), 1e4)
                 }));
-              Promise.race([md, Wd]).then((md => {
-                const Wd = Ad.current;
-                xd.current === dd && Gd.current === Od && !nd.current && Wd && (nd.current = !0, Wd(md))
+              Promise.race([Mb, eb]).then((Mb => {
+                const eb = fb.current;
+                rb.current === bb && Wb.current === wb && !Jb.current && eb && (Jb.current = !0, eb(Mb))
               }))
             }))
           }), []);
-        return (0, Wd.useImperativeHandle)(Od, (() => {
-          const dd = (dd, Od) => {
-            var md;
-            (Bd.current[dd] = Od, null !== bd && void 0 !== bd && bd[dd]) || (null === (md = xd.current) || void 0 === md || md.setCosmetic(dd, Od), cd())
+        return (0, eb.useImperativeHandle)(wb, (() => {
+          const bb = (bb, wb) => {
+            var Mb;
+            (Rb.current[bb] = wb, null !== Bb && void 0 !== Bb && Bb[bb]) || (null === (Mb = rb.current) || void 0 === Mb || Mb.setCosmetic(bb, wb), Qb())
           };
           return {
-            updateCosmetic: dd,
-            setAllCosmetics(Od) {
-              for (const Wd of Rd.s) {
-                var md;
-                dd(Wd, null !== (md = Od[Wd]) && void 0 !== md ? md : (0, Xd.b)(Wd))
+            updateCosmetic: bb,
+            setAllCosmetics(wb) {
+              for (const eb of pb.u) {
+                var Mb;
+                bb(eb, null !== (Mb = wb[eb]) && void 0 !== Mb ? Mb : (0, Vb.b)(eb))
               }
             },
             isReady() {
-              var dd, Od;
-              return null !== (dd = null === (Od = xd.current) || void 0 === Od ? void 0 : Od.isReady()) && void 0 !== dd && dd
+              var bb, wb;
+              return null !== (bb = null === (wb = rb.current) || void 0 === wb ? void 0 : wb.isReady()) && void 0 !== bb && bb
             },
             resetCamera() {
-              var dd;
-              null === (dd = xd.current) || void 0 === dd || dd.resetCamera()
+              var bb;
+              null === (bb = rb.current) || void 0 === bb || bb.resetCamera()
             },
-            setOrbit(dd) {
-              var Od;
-              null === (Od = xd.current) || void 0 === Od || Od.setOrbit(dd)
+            setOrbit(bb) {
+              var wb;
+              null === (wb = rb.current) || void 0 === wb || wb.setOrbit(bb)
             },
-            turnCamera(dd) {
-              var Od;
-              const md = Kd.c[yd];
-              null === (Od = xd.current) || void 0 === Od || Od.setOrbit({
-                ...md,
-                yaw: md.yaw + dd
+            turnCamera(bb) {
+              var wb;
+              const Mb = gb.e[Fb];
+              null === (wb = rb.current) || void 0 === wb || wb.setOrbit({
+                ...Mb,
+                yaw: Mb.yaw + bb
               })
             },
-            async ensureReadyForCapture(dd) {
-              var Od;
-              await (null === (Od = xd.current) || void 0 === Od ? void 0 : Od.untilDrawn(dd))
+            async ensureReadyForCapture(bb) {
+              var wb;
+              await (null === (wb = rb.current) || void 0 === wb ? void 0 : wb.untilDrawn(bb))
             },
             getDevTools() {
-              var dd;
-              return null !== (dd = xd.current) && void 0 !== dd && dd.isReady() ? xd.current.dev : null
+              var bb;
+              return null !== (bb = rb.current) && void 0 !== bb && bb.isReady() ? rb.current.dev : null
             },
-            setNametagShown(dd) {
-              var Od, md;
-              Pd.current = dd, null === (Od = xd.current) || void 0 === Od || Od.setNametag(dd && null !== (md = Ld.current) && void 0 !== md ? md : null)
+            setNametagShown(bb) {
+              var wb, Mb;
+              Nb.current = bb, null === (wb = rb.current) || void 0 === wb || wb.setNametag(bb && null !== (Mb = Sb.current) && void 0 !== Mb ? Mb : null)
             }
           }
-        }), [bd, yd, cd]), (0, Wd.useEffect)((() => {
-          const dd = hd.b.register(Hd);
-          let Od = !0;
-          const md = dd => {
-            const md = xd.current,
-              Wd = Kd.i.openCharacter(wd.current, yd);
-            if (xd.current = Wd, Qd = Wd, md) {
-              md.close();
+        }), [Bb, Fb, Qb]), (0, eb.useEffect)((() => {
+          const bb = lb.e.register(Eb);
+          let wb = !0;
+          const Mb = bb => {
+            const Mb = rb.current,
+              eb = gb.i.openCharacter(Xb.current, Fb);
+            if (rb.current = eb, Ib = eb, Mb) {
+              Mb.close();
               const {
-                width: dd,
-                height: Od
-              } = Ud.current;
-              dd > 0 && Od > 0 && Wd.resize(dd, Od)
+                width: bb,
+                height: wb
+              } = Kb.current;
+              bb > 0 && wb > 0 && eb.resize(bb, wb)
             }
-            Sd.current = {}, ud(!1), Wd.ready.then((() => {
-              if (Od && xd.current === Wd)
-                if (ud(!0), dd) {
-                  Wd.resetCamera();
-                  for (const dd of Rd.s) {
-                    var md;
-                    Wd.setCosmetic(dd, null !== (md = Bd.current[dd]) && void 0 !== md ? md : (0, Xd.b)(dd))
+            Db.current = {}, Yb(!1), eb.ready.then((() => {
+              if (wb && rb.current === eb)
+                if (Yb(!0), bb) {
+                  eb.resetCamera();
+                  for (const bb of pb.u) {
+                    var Mb;
+                    eb.setCosmetic(bb, null !== (Mb = Rb.current[bb]) && void 0 !== Mb ? Mb : (0, Vb.b)(bb))
                   }
-                } else Vd.current()
-            })).catch((dd => {
-              var md;
-              (console.error("Failed to set up the character preview", dd), Od && xd.current === Wd) && (null === (md = rd.current) || void 0 === md || md.call(rd))
+                } else Zb.current()
+            })).catch((bb => {
+              var Mb;
+              (console.error("Failed to set up the character preview", bb), wb && rb.current === eb) && (null === (Mb = Ab.current) || void 0 === Mb || Mb.call(Ab))
             }))
           };
-          md(!1);
-          const Wd = {
+          Mb(!1);
+          const eb = {
             reopen: () => {
-              md(!0)
+              Mb(!0)
             }
           };
-          return td.push(Wd), () => {
-            Od = !1, dd();
-            const md = xd.current;
-            Qd === md && (md.resetCamera(), Qd = null), md.close(), xd.current = null;
-            const Fd = td.indexOf(Wd);
-            if (td.splice(Fd, 1), Fd === td.length && Fd > 0) {
-              const dd = td[Fd - 1];
+          return Ob.push(eb), () => {
+            wb = !1, bb();
+            const Mb = rb.current;
+            Ib === Mb && (Mb.resetCamera(), Ib = null), Mb.close(), rb.current = null;
+            const Hb = Ob.indexOf(eb);
+            if (Ob.splice(Hb, 1), Hb === Ob.length && Hb > 0) {
+              const bb = Ob[Hb - 1];
               queueMicrotask((() => {
-                td.at(-1) === dd && null === Qd && Kd.i.sharesCharacter() && dd.reopen()
+                Ob.at(-1) === bb && null === Ib && gb.i.sharesCharacter() && bb.reopen()
               }))
             }
           }
-        }), []), (0, Wd.useEffect)((() => {
-          Ed <= 0 || Jd <= 0 || xd.current.resize(Ed, Jd)
-        }), [Ed, Jd]), (0, Wd.useEffect)((() => {
-          if (!sd) return;
-          const dd = Sd.current;
-          for (const Od of Rd.s) {
-            const md = null === bd || void 0 === bd ? void 0 : bd[Od],
-              Wd = dd[Od];
-            md && md !== Wd ? xd.current.setCosmetic(Od, md) : !md && Wd && Bd.current[Od] && xd.current.setCosmetic(Od, Bd.current[Od])
+        }), []), (0, eb.useEffect)((() => {
+          xb <= 0 || jb <= 0 || rb.current.resize(xb, jb)
+        }), [xb, jb]), (0, eb.useEffect)((() => {
+          if (!cb) return;
+          const bb = Db.current;
+          for (const wb of pb.u) {
+            const Mb = null === Bb || void 0 === Bb ? void 0 : Bb[wb],
+              eb = bb[wb];
+            Mb && Mb !== eb ? rb.current.setCosmetic(wb, Mb) : !Mb && eb && Rb.current[wb] && rb.current.setCosmetic(wb, Rb.current[wb])
           }
-          Sd.current = {
-            ...bd
-          }, zd.current = !0, cd()
-        }), [bd, sd, cd]), (0, Wd.useEffect)((() => {
-          sd && xd.current.playEmote(null !== Td && void 0 !== Td ? Td : null)
-        }), [Td, pd, sd]), (0, Wd.useEffect)((() => {
-          sd && Pd.current && xd.current.setNametag(null !== gd && void 0 !== gd ? gd : null)
-        }), [gd, sd]), (0, Wd.useEffect)((() => {
-          if (!sd || null === Yd) return;
-          const dd = xd.current,
+          Db.current = {
+            ...Bb
+          }, vb.current = !0, Qb()
+        }), [Bb, cb, Qb]), (0, eb.useEffect)((() => {
+          cb && rb.current.playEmote(null !== sb && void 0 !== sb ? sb : null)
+        }), [sb, mb, cb]), (0, eb.useEffect)((() => {
+          cb && Nb.current && rb.current.setNametag(null !== zb && void 0 !== zb ? zb : null)
+        }), [zb, cb]), (0, eb.useEffect)((() => {
+          if (!cb || null === hb) return;
+          const bb = rb.current,
             {
-              pitch: Od,
-              radius: md
-            } = Kd.c[yd];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return dd.setOrbit({
-            yaw: Yd + od,
-            pitch: Od,
-            radius: md
+              pitch: wb,
+              radius: Mb
+            } = gb.e[Fb];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return bb.setOrbit({
+            yaw: hb + Ub,
+            pitch: wb,
+            radius: Mb
           }), () => {
-            Qd === dd && dd.resetCamera()
+            Ib === bb && bb.resetCamera()
           };
-          const Wd = performance.now();
-          let Fd = 0;
-          const Rd = Xd => {
-            xd.current === dd && (dd.setOrbit({
-              yaw: Yd + (Xd - Wd) / 6e3 * 2 * Math.PI,
-              pitch: Od,
-              radius: md
-            }), Fd = requestAnimationFrame(Rd))
+          const eb = performance.now();
+          let Hb = 0;
+          const pb = Vb => {
+            rb.current === bb && (bb.setOrbit({
+              yaw: hb + (Vb - eb) / 6e3 * 2 * Math.PI,
+              pitch: wb,
+              radius: Mb
+            }), Hb = requestAnimationFrame(pb))
           };
-          return Fd = requestAnimationFrame(Rd), () => {
-            cancelAnimationFrame(Fd), Qd === dd && dd.resetCamera()
+          return Hb = requestAnimationFrame(pb), () => {
+            cancelAnimationFrame(Hb), Ib === bb && bb.resetCamera()
           }
-        }), [sd, Yd]), (0, vd.jsx)("div", {
+        }), [cb, hb]), (0, Lb.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: wd
+          ref: Xb
         })
       })))
   },
-  37929: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Xd
+  37611: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Vb
     });
-    var Wd = md(2092),
-      Fd = md(1627);
-    const Rd = new class {
+    var eb = Mb(2142),
+      Hb = Mb(1677);
+    const pb = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(dd, Od) {
-        dd !== this.userContext && this.sendHeld(), this.userContext = dd;
-        for (const [Wd, Fd] of Od) this.pending.set(Wd, Fd);
+      save(bb, wb) {
+        bb !== this.userContext && this.sendHeld(), this.userContext = bb;
+        for (const [eb, Hb] of wb) this.pending.set(eb, Hb);
         if (null !== this.timer) return;
-        const md = this.lastSentAt + 1100 - Date.now();
-        md <= 0 ? this.send(dd) : (this.timer = setTimeout((() => {
+        const Mb = this.lastSentAt + 1100 - Date.now();
+        Mb <= 0 ? this.send(bb) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), md), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), Mb), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(dd) {
-        const Od = Array.from(this.pending, (dd => {
-          let [Od, md] = dd;
+      send(bb) {
+        const wb = Array.from(this.pending, (bb => {
+          let [wb, Mb] = bb;
           return {
-            KF: Od,
-            hF: md
+            gH: wb,
+            lH: Mb
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), Fd.e.updateCosmetics(dd, Od).catch((dd => {
-          console.error("Failed to update cosmetics", dd)
+        this.pending.clear(), this.lastSentAt = Date.now(), Hb.e.updateCosmetics(bb, wb).catch((bb => {
+          console.error("Failed to update cosmetics", bb)
         }))
       }
     };
 
-    function Xd(dd, Od) {
-      for (const [md, Wd] of Od) dd.setPlayerCosmetics(md, Wd);
-      if (null === Wd.gameBridge.latest("connectedGame").websocketUrl) Rd.save(dd, Od);
+    function Vb(bb, wb) {
+      for (const [Mb, eb] of wb) bb.setPlayerCosmetics(Mb, eb);
+      if (null === eb.gameBridge.latest("connectedGame").websocketUrl) pb.save(bb, wb);
       else
-        for (const [md, Fd] of Od) Wd.gameBridge.send("updateMyCosmetic", {
-          KF: md,
-          hF: Fd
+        for (const [Mb, Hb] of wb) eb.gameBridge.send("updateMyCosmetic", {
+          gH: Mb,
+          lH: Hb
         })
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

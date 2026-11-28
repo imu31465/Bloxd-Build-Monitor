@@ -1,31 +1,31 @@
 export const id = 159;
 export const ids = [159];
 export const modules = {
-  7583: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      loadShaderPackTextures: () => Xd,
-      shaderPackTextures: () => Kd
+  7819: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      loadShaderPackTextures: () => Vb,
+      shaderPackTextures: () => gb
     });
-    var Wd = md(5954);
-    let Fd = null,
-      Rd = null;
+    var eb = Mb(6110);
+    let Hb = null,
+      pb = null;
 
-    function Xd() {
-      return Rd ??= Promise.all([md.e(85), md.e(126)]).then((() => md(42438))).then((dd => {
+    function Vb() {
+      return pb ??= Promise.all([Mb.e(85), Mb.e(126)]).then((() => Mb(42174))).then((bb => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: Od,
-          textureNameToIndex: md,
-          textureAnimationData: Rd
-        } = dd;
-        return Fd ??= (0, Wd.h)(md, Rd, Od), Fd
-      })), Rd
+          FORMER_BLOCK_IMAGE_NAMES: wb,
+          textureNameToIndex: Mb,
+          textureAnimationData: pb
+        } = bb;
+        return Hb ??= (0, eb.h)(Mb, pb, wb), Hb
+      })), pb
     }
 
-    function Kd() {
-      if (null === Fd) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Fd
+    function gb() {
+      if (null === Hb) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Hb
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

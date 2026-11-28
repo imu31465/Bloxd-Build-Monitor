@@ -2,17 +2,17 @@
  "context": {
   "module": "bloxd_wasm_anim_bg",
   "environment": "staging.bloxd.io",
-  "build": "yteou.5361c997",
-  "url": "https://staging.bloxd.io/static/media/bloxd_wasm_anim_bg.74aabad87fc497287211.wasm",
-  "sha256": "40ced071a7948ecc9a2ebcc6399db3dd2db0b6c806b64d60ae581d410556b61e",
-  "analyzed_at": "2026-11-28T13:51:33+09:00",
+  "build": "welxxc.ffac0572",
+  "url": "https://staging.bloxd.io/static/media/bloxd_wasm_anim_bg.376b5350f54590266799.wasm",
+  "sha256": "c4812501582860f01a67ad5cb5cac665ddfc865a422d1a2d38caef1ad60a0c73",
+  "analyzed_at": "2026-11-28T21:24:47+09:00",
   "referenced_by": "bloxd-wasm-anim.js"
  },
  "facts": {
   "schema": 1,
   "header": {
    "version": 1,
-   "size": 415838
+   "size": 415630
   },
   "sections": [
    {
@@ -77,7 +77,7 @@
    {
     "id": 11,
     "name": "data",
-    "bytes": 157891,
+    "bytes": 157683,
     "count": 23
    },
    {
@@ -139,36 +139,36 @@
   },
   "imports": [
    {
-    "module": "MgMi",
-    "name": "Gl8X",
+    "module": "pJQS",
+    "name": "b0Tp",
     "kind": "func",
     "index": 0,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "MgMi",
-    "name": "pz15",
+    "module": "pJQS",
+    "name": "enV8",
     "kind": "func",
     "index": 1,
     "type": "(i32) -> ()"
    },
    {
-    "module": "MgMi",
-    "name": "IeCQ",
+    "module": "pJQS",
+    "name": "Khxe",
     "kind": "func",
     "index": 2,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "MgMi",
-    "name": "d6Gx",
+    "module": "pJQS",
+    "name": "lFvs",
     "kind": "func",
     "index": 3,
     "type": "(i32 i32) -> (i32)"
    },
    {
-    "module": "MgMi",
-    "name": "FWRp",
+    "module": "pJQS",
+    "name": "Y4KG",
     "kind": "func",
     "index": 4,
     "type": "(i32 i32) -> ()"
@@ -176,63 +176,63 @@
   ],
   "exports": [
    {
-    "name": "lEKU",
-    "kind": "func",
-    "index": 237,
-    "type": "(i32 i32 i32) -> ()"
-   },
-   {
-    "name": "AZ5Q",
-    "kind": "func",
-    "index": 213,
-    "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)"
-   },
-   {
-    "name": "jav7",
-    "kind": "global",
-    "index": 2,
-    "type": ""
-   },
-   {
-    "name": "XNDm",
+    "name": "jklg",
     "kind": "func",
     "index": 261,
     "type": "() -> ()"
    },
    {
-    "name": "Uyli",
+    "name": "HKY4",
     "kind": "func",
     "index": 228,
     "type": "(i32 i32 i32) -> (i32 i32)"
    },
    {
-    "name": "S8AR",
-    "kind": "func",
-    "index": 222,
-    "type": "(i32 i32) -> (i32)"
-   },
-   {
-    "name": "Zi2p",
-    "kind": "func",
-    "index": 223,
-    "type": "(i32 i32 i32 i32) -> (i32)"
-   },
-   {
-    "name": "P1F1",
-    "kind": "global",
-    "index": 1,
-    "type": ""
-   },
-   {
-    "name": "XYC1",
+    "name": "uj9q",
     "kind": "func",
     "index": 261,
     "type": "() -> ()"
    },
    {
+    "name": "JUT0",
+    "kind": "func",
+    "index": 222,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "eq6o",
+    "kind": "global",
+    "index": 2,
+    "type": ""
+   },
+   {
+    "name": "yqwN",
+    "kind": "func",
+    "index": 213,
+    "type": "(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)"
+   },
+   {
     "name": "memory",
     "kind": "memory",
     "index": 0,
+    "type": ""
+   },
+   {
+    "name": "XLC0",
+    "kind": "func",
+    "index": 223,
+    "type": "(i32 i32 i32 i32) -> (i32)"
+   },
+   {
+    "name": "dy5f",
+    "kind": "func",
+    "index": 237,
+    "type": "(i32 i32 i32) -> ()"
+   },
+   {
+    "name": "nlzW",
+    "kind": "global",
+    "index": 1,
     "type": ""
    }
   ],
@@ -247,13 +247,13 @@
     "index": 1,
     "type": "i32",
     "mutable": false,
-    "init": "i32.const 1206736"
+    "init": "i32.const 1206528"
    },
    {
     "index": 2,
     "type": "i32",
     "mutable": false,
-    "init": "i32.const 1207220"
+    "init": "i32.const 1207012"
    }
   ],
   "memories": [
@@ -283,7 +283,7 @@
   },
   "data": {
    "segments": 23,
-   "bytes": 157694,
+   "bytes": 157486,
    "details": [
     {
      "mode": 0,
@@ -293,96 +293,96 @@
     {
      "mode": 0,
      "offset": "i32.const 1185352",
-     "bytes": 6357
+     "bytes": 6149
     },
     {
      "mode": 0,
-     "offset": "i32.const 1191720",
+     "offset": "i32.const 1191512",
      "bytes": 77
     },
     {
      "mode": 0,
-     "offset": "i32.const 1191808",
+     "offset": "i32.const 1191600",
      "bytes": 139
     },
     {
      "mode": 0,
-     "offset": "i32.const 1191960",
+     "offset": "i32.const 1191752",
      "bytes": 641
     },
     {
      "mode": 0,
-     "offset": "i32.const 1192611",
+     "offset": "i32.const 1192403",
      "bytes": 1
     },
     {
      "mode": 0,
-     "offset": "i32.const 1192624",
+     "offset": "i32.const 1192416",
      "bytes": 4361
     },
     {
      "mode": 0,
-     "offset": "i32.const 1196996",
+     "offset": "i32.const 1196788",
      "bytes": 131
     },
     {
      "mode": 0,
-     "offset": "i32.const 1197139",
+     "offset": "i32.const 1196931",
      "bytes": 11
     },
     {
      "mode": 0,
-     "offset": "i32.const 1197162",
+     "offset": "i32.const 1196954",
      "bytes": 12
     },
     {
      "mode": 0,
-     "offset": "i32.const 1197192",
+     "offset": "i32.const 1196984",
      "bytes": 1089
     },
     {
      "mode": 0,
-     "offset": "i32.const 1198292",
+     "offset": "i32.const 1198084",
      "bytes": 128
     },
     {
      "mode": 0,
-     "offset": "i32.const 1198449",
+     "offset": "i32.const 1198241",
      "bytes": 8
     },
     {
      "mode": 0,
-     "offset": "i32.const 1198504",
+     "offset": "i32.const 1198296",
      "bytes": 1
     },
     {
      "mode": 0,
-     "offset": "i32.const 1198542",
+     "offset": "i32.const 1198334",
      "bytes": 1
     },
     {
      "mode": 0,
-     "offset": "i32.const 1198569",
+     "offset": "i32.const 1198361",
      "bytes": 1
     },
     {
      "mode": 0,
-     "offset": "i32.const 1198666",
+     "offset": "i32.const 1198458",
      "bytes": 2789
     },
     {
      "mode": 0,
-     "offset": "i32.const 1201521",
+     "offset": "i32.const 1201313",
      "bytes": 51
     },
     {
      "mode": 0,
-     "offset": "i32.const 1201584",
+     "offset": "i32.const 1201376",
      "bytes": 912
     },
     {
      "mode": 0,
-     "offset": "i32.const 1202507",
+     "offset": "i32.const 1202299",
      "bytes": 101
     }
    ],
@@ -1223,7 +1223,7 @@
      "bytes": 23
     }
    ],
-   "module_name": "a47151e0c1c7f064.821",
+   "module_name": "7840db7a2504db79.821",
    "producers": {}
   },
   "strings": [
@@ -1240,7 +1240,7 @@
     "text": "multiple statements are not supportedput a ?: inside the true branch of another ?: in parenthesesarrays are not supportedmaterial references are not supportedtexture references are not supportedgeomet"
    },
    {
-    "len": 268,
+    "len": 270,
     "text": "target must be the name of a mob or vehicleBad Unicode escapeJSON nested too deeplyExpected ',' or ']' after array elementUnexpected end of JSON inputtruefalsenullUnexpected tokenNo number after minus"
    },
    {
@@ -1248,8 +1248,8 @@
     "text": "called `Option::unwrap()` on a `None` value0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777"
    },
    {
-    "len": 136,
-    "text": "not an animation file: name it <name>.animation.json or <name>.binding.jsonhas no target: set \"target\" to the mob or vehicle it animates"
+    "len": 138,
+    "text": "not an animation file: name it <name>.animation.json or <name>.binding.jsonhas no target: set \"target\" to the mob or vehicle it animatesE!"
    },
    {
     "len": 114,
@@ -1260,28 +1260,8 @@
     "text": "{ \"name\": \"bit\", \"clip\": \"drill_spin\", \"rate\": \"spin\", \"bones\": [\"Drill\", \"Drill2\", \"Drill3\", \"Drill4\"] },"
    },
    {
-    "len": 105,
-    "text": "h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs"
-   },
-   {
-    "len": 105,
-    "text": "h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/pattern.rs"
-   },
-   {
-    "len": 103,
-    "text": "h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs"
-   },
-   {
-    "len": 101,
-    "text": "h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs"
-   },
-   {
     "len": 101,
     "text": "groundSpeedforwardSpeedintentSpeedverticalSpeedturnRateoccupiedonGroundinFluidcrouchingaiminghitAngle"
-   },
-   {
-    "len": 98,
-    "text": "h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/str.rs"
    },
    {
     "len": 94,
@@ -1317,6 +1297,10 @@
    },
    {
     "len": 79,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/index.rs"
+   },
+   {
+    "len": 79,
     "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/str/pattern.rs"
    },
    {
@@ -1329,11 +1313,19 @@
    },
    {
     "len": 77,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/mod.rs"
+   },
+   {
+    "len": 77,
     "text": "L must divide a cycle evenly into at most 32 parts (1, 0.5, 0.333, 0.25, ...)"
    },
    {
     "len": 76,
     "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/panicking.rs"
+   },
+   {
+    "len": 75,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/string.rs"
    },
    {
     "len": 75,
@@ -1350,6 +1342,10 @@
    {
     "len": 72,
     "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/fmt.rs"
+   },
+   {
+    "len": 72,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/str.rs"
    },
    {
     "len": 71,
@@ -1412,10 +1408,6 @@
     "text": "variablesthe filetargetlayersbloxd.animation.binding.1"
    },
    {
-    "len": 54,
-    "text": "cannot modify the panic hook from a panicking threadU\""
-   },
-   {
     "len": 53,
     "text": "4: another variable has this name in a different case"
    },
@@ -1426,6 +1418,10 @@
    {
     "len": 52,
     "text": "3: vector elements must be numbers or Molang strings"
+   },
+   {
+    "len": 52,
+    "text": "cannot modify the panic hook from a panicking thread"
    },
    {
     "len": 51,
@@ -1466,21 +1462,16 @@
    {
     "len": 46,
     "text": "assertion failed: psize >= size + min_overhead"
+   },
+   {
+    "len": 46,
+    "text": "assertion failed: psize <= size + max_overhead"
    }
   ],
   "parse_errors": [],
   "function_names": {}
  },
  "history": [
-  {
-   "build": "igzsf.a0b73a5f",
-   "at": "2026-11-25T09:40:22+09:00",
-   "size": 415630,
-   "sha256": "47a23fc87ecc8906",
-   "functions": 258,
-   "exports": 10,
-   "imports": 5
-  },
   {
    "build": "dz8ef.98c5e741",
    "at": "2026-11-25T13:06:26+09:00",
@@ -1576,6 +1567,15 @@
    "at": "2026-11-28T13:51:33+09:00",
    "size": 415838,
    "sha256": "40ced071a7948ecc",
+   "functions": 258,
+   "exports": 10,
+   "imports": 5
+  },
+  {
+   "build": "welxxc.ffac0572",
+   "at": "2026-11-28T21:24:47+09:00",
+   "size": 415630,
+   "sha256": "c4812501582860f0",
    "functions": 258,
    "exports": 10,
    "imports": 5

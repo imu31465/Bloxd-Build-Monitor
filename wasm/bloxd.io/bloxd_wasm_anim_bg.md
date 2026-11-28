@@ -1,17 +1,17 @@
 # WASM module: `bloxd_wasm_anim_bg`
 
-> environment **bloxd.io** · build `yteou.5361c997` · analyzed 2026-11-28T13:51:29+09:00
-> source: https://bloxd.io/static/media/bloxd_wasm_anim_bg.74aabad87fc497287211.wasm
-> 415,838 bytes (406.1 KB) · sha256 `40ced071a7948ecc…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **bloxd.io** · build `welxxc.ffac0572` · analyzed 2026-11-28T21:24:40+09:00
+> source: https://bloxd.io/static/media/bloxd_wasm_anim_bg.376b5350f54590266799.wasm
+> 415,630 bytes (405.9 KB) · sha256 `c4812501582860f0…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- size 415,630 → 415,838 bytes (+208)
-- data bytes 157,486 → 157,694
-- name-section module id `f0fb1a0edbee37b7.821` → `a47151e0c1c7f064.821` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 415,838 → 415,630 bytes (-208)
+- data bytes 157,694 → 157,486
+- name-section module id `a47151e0c1c7f064.821` → `7840db7a2504db79.821` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/10 names kept (identifier names are randomly assigned per build; compare signatures instead)
-- new embedded strings: `cannot modify the panic hook from a panicking threadU"`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
-- removed embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `assertion failed: psize <= size + max_overhead`; `cannot modify the panic hook from a panicking thread`
+- new embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `assertion failed: psize <= size + max_overhead`; `cannot modify the panic hook from a panicking thread`
+- removed embedded strings: `cannot modify the panic hook from a panicking threadU"`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
 
 ## Overview
 
@@ -22,10 +22,10 @@
 | Code bytes (function bodies) | 256,664 (250.6 KB) |
 | Total local variables | 1,816 |
 | Instructions (scanable bodies) | 122,044 |
-| Data segments / bytes | 23 / 157,694 |
+| Data segments / bytes | 23 / 157,486 |
 | Element segments / entries | 1 / 60 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `a47151e0c1c7f064.821` |
+| name-section module id | `7840db7a2504db79.821` |
 | Sections | 12 |
 
 ## Sections
@@ -42,7 +42,7 @@
 | 9 | element | 119 | 1 |
 | 12 | datacount | 1 | — |
 | 10 | code | 257,092 | 258 |
-| 11 | data | 157,891 | 23 |
+| 11 | data | 157,683 | 23 |
 | 0 | custom:name | 28 | — |
 
 ## Types
@@ -55,11 +55,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `MgMi.Gl8X` | func | `(i32 i32) -> ()` |
-| 1 | `MgMi.pz15` | func | `(i32) -> ()` |
-| 2 | `MgMi.IeCQ` | func | `(i32 i32) -> ()` |
-| 3 | `MgMi.d6Gx` | func | `(i32 i32) -> (i32)` |
-| 4 | `MgMi.FWRp` | func | `(i32 i32) -> ()` |
+| 0 | `pJQS.b0Tp` | func | `(i32 i32) -> ()` |
+| 1 | `pJQS.enV8` | func | `(i32) -> ()` |
+| 2 | `pJQS.Khxe` | func | `(i32 i32) -> ()` |
+| 3 | `pJQS.lFvs` | func | `(i32 i32) -> (i32)` |
+| 4 | `pJQS.Y4KG` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -67,16 +67,16 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `lEKU` | func | 237 | `(i32 i32 i32) -> ()` |
-| `AZ5Q` | func | 213 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
-| `jav7` | global | 2 | `` |
-| `XNDm` | func | 261 | `() -> ()` |
-| `Uyli` | func | 228 | `(i32 i32 i32) -> (i32 i32)` |
-| `S8AR` | func | 222 | `(i32 i32) -> (i32)` |
-| `Zi2p` | func | 223 | `(i32 i32 i32 i32) -> (i32)` |
-| `P1F1` | global | 1 | `` |
-| `XYC1` | func | 261 | `() -> ()` |
+| `jklg` | func | 261 | `() -> ()` |
+| `HKY4` | func | 228 | `(i32 i32 i32) -> (i32 i32)` |
+| `uj9q` | func | 261 | `() -> ()` |
+| `JUT0` | func | 222 | `(i32 i32) -> (i32)` |
+| `eq6o` | global | 2 | `` |
+| `yqwN` | func | 213 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
 | `memory` | memory | 0 | `` |
+| `XLC0` | func | 223 | `(i32 i32 i32 i32) -> (i32)` |
+| `dy5f` | func | 237 | `(i32 i32 i32) -> ()` |
+| `nlzW` | global | 1 | `` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -84,7 +84,7 @@
 
 - memory 0: min 19 pages · max ∞ · shared=False
 - table 0: funcref · min 61 · max 61
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1206736, `i32` = i32.const 1207220
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1206528, `i32` = i32.const 1207012
 
 ## Functions
 
@@ -150,21 +150,21 @@ Largest functions:
 multiple statements are not supportedput a ?: inside the true branch of another ?: in parenthesesarrays are not supportedmaterial references are not supportedtexture references are not supportedgeomet
 target must be the name of a mob or vehicleBad Unicode escapeJSON nested too deeplyExpected ',' or ']' after array elementUnexpected end of JSON inputtruefalsenullUnexpected tokenNo number after minus
 called `Option::unwrap()` on a `None` value0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777
-not an animation file: name it <name>.animation.json or <name>.binding.jsonhas no target: set "target" to the mob or vehicle it animates
+not an animation file: name it <name>.animation.json or <name>.binding.jsonhas no target: set "target" to the mob or vehicle it animatesE!
 "spin": { "from": "groundSpeed", "gate": "occupied", "scale": 0.2, "min": 0, "max": 2, "rise": 2.5, "fall": 1.2 },
 { "name": "bit", "clip": "drill_spin", "rate": "spin", "bones": ["Drill", "Drill2", "Drill3", "Drill4"] },
-h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs
-h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/str/pattern.rs
-h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/mod.rs
-h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs
 groundSpeedforwardSpeedintentSpeedverticalSpeedturnRateoccupiedonGroundinFluidcrouchingaiminghitAngle
-h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/str.rs
 Expected ',' or '}' after property valueExpected ':' after property nameExpected property name
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs
 override_previous_animation must be true or false"bones" is not an objectis not an object
 W: the game plays this action, so its clip must end (not loop or hold on its last frame)
 a formatting trait implementation returned an error when the underlying stream did not
 "armsFree": { "from": "aiming", "scale": -1, "offset": 1, "rise": 15, "fall": 0 }
+/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/memchr.rs
+/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/raw_vec/mod.rs
+/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/index.rs
+/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/str/pattern.rs
+Unterminated stringBad escaped characterBad control character in string literal
 ```
 
 ## Opcode histogram (aggregated)

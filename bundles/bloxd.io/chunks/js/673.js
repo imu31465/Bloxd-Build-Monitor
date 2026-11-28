@@ -1,35 +1,35 @@
 export const id = 673;
 export const ids = [673];
 export const modules = {
-  64799: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      WorldCodeAiOutOfUsage: () => Kd
+  64438: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      WorldCodeAiOutOfUsage: () => gb
     });
-    var Wd = md(1238),
-      Fd = md(3277),
-      Rd = md(1572),
-      Xd = md(1341);
+    var eb = Mb(1259),
+      Hb = Mb(3357),
+      pb = Mb(1616),
+      Vb = Mb(1364);
 
-    function Kd(dd) {
+    function gb(bb) {
       let {
-        onGetSuperRank: Od
-      } = dd;
+        onGetSuperRank: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Wd.G)(), Kd = (0, Fd.v)(Date.now()), hd = md(Kd.nameKey);
-      return (0, Xd.jsxs)("div", {
+        t: Mb
+      } = (0, eb.C)(), gb = (0, Hb.s)(Date.now()), lb = Mb(gb.nameKey);
+      return (0, Vb.jsxs)("div", {
         className: "WorldCodeAiOutOfUsage",
-        children: [(0, Xd.jsx)("p", {
+        children: [(0, Vb.jsx)("p", {
           className: "WorldCodeAiOutOfUsageText",
-          children: `You don't have any Super Bot.xd usage left - use Bot.xd or get ${hd} for more usage!`
-        }), (0, Xd.jsx)(Rd.m, {
+          children: `You don't have any Super Bot.xd usage left - use Bot.xd or get ${lb} for more usage!`
+        }), (0, Vb.jsx)(pb.p, {
           className: "WorldCodeAiOutOfUsageButton",
-          onClick: Od,
-          children: md(Kd.getKey)
+          onClick: wb,
+          children: Mb(gb.getKey)
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

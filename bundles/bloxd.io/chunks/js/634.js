@@ -1,582 +1,582 @@
 export const id = 634;
 export const ids = [634];
 export const modules = {
-  54284: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      ReadExrDataAsync: () => NO,
-      _ExrTextureLoader: () => oO
+  54094: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      ReadExrDataAsync: () => Ow,
+      _ExrTextureLoader: () => Iw
     });
-    var Wd = md(40262),
-      Fd = md(38663),
-      Rd = md(41997);
-    const Xd = 4,
-      Kd = 4,
-      hd = 1,
-      vd = 2,
-      Qd = 8,
-      td = 65536,
-      od = td >> 3,
-      Nd = 14,
-      qd = 65537,
-      Hd = 1 << Nd,
-      yd = Hd - 1,
-      bd = 59,
-      Td = 63,
-      pd = 2 + Td - bd;
-    var Yd, gd;
+    var eb = Mb(39971),
+      Hb = Mb(38322),
+      pb = Mb(41742);
+    const Vb = 4,
+      gb = 4,
+      lb = 1,
+      Lb = 2,
+      Ib = 8,
+      Ob = 65536,
+      Ub = Ob >> 3,
+      tb = 14,
+      Cb = 65537,
+      Eb = 1 << tb,
+      Fb = Eb - 1,
+      Bb = 59,
+      sb = 63,
+      mb = 2 + sb - Bb;
+    var hb, zb;
 
-    function wd(dd, Od) {
-      const md = new Uint8Array(dd);
-      let Wd = 0;
-      for (; 0 != md[Od.value + Wd];) Wd += 1;
-      const Fd = (new TextDecoder).decode(md.slice(Od.value, Od.value + Wd));
-      return Od.value = Od.value + Wd + 1, Fd
+    function Xb(bb, wb) {
+      const Mb = new Uint8Array(bb);
+      let eb = 0;
+      for (; 0 != Mb[wb.value + eb];) eb += 1;
+      const Hb = (new TextDecoder).decode(Mb.slice(wb.value, wb.value + eb));
+      return wb.value = wb.value + eb + 1, Hb
     }
 
-    function Ed(dd, Od) {
-      const md = dd.getInt32(Od.value, !0);
-      return Od.value += Xd, md
+    function xb(bb, wb) {
+      const Mb = bb.getInt32(wb.value, !0);
+      return wb.value += Vb, Mb
     }
 
-    function Jd(dd, Od) {
-      const md = dd.getUint32(Od.value, !0);
-      return Od.value += Xd, md
+    function jb(bb, wb) {
+      const Mb = bb.getUint32(wb.value, !0);
+      return wb.value += Vb, Mb
     }
 
-    function Ud(dd, Od) {
-      const md = dd.getUint8(Od.value);
-      return Od.value += hd, md
+    function Kb(bb, wb) {
+      const Mb = bb.getUint8(wb.value);
+      return wb.value += lb, Mb
     }
 
-    function xd(dd, Od) {
-      const md = dd.getUint16(Od.value, !0);
-      return Od.value += vd, md
+    function rb(bb, wb) {
+      const Mb = bb.getUint16(wb.value, !0);
+      return wb.value += Lb, Mb
     }
 
-    function Bd(dd, Od) {
-      const md = dd[Od.value];
-      return Od.value += hd, md
+    function Rb(bb, wb) {
+      const Mb = bb[wb.value];
+      return wb.value += lb, Mb
     }
 
-    function Sd(dd, Od) {
-      let md;
-      return md = "getBigInt64" in DataView.prototype ? Number(dd.getBigInt64(Od.value, !0)) : dd.getUint32(Od.value + 4, !0) + Number(dd.getUint32(Od.value, !0) << 32), Od.value += Qd, md
+    function Db(bb, wb) {
+      let Mb;
+      return Mb = "getBigInt64" in DataView.prototype ? Number(bb.getBigInt64(wb.value, !0)) : bb.getUint32(wb.value + 4, !0) + Number(bb.getUint32(wb.value, !0) << 32), wb.value += Ib, Mb
     }
 
-    function sd(dd, Od) {
-      const md = dd.getFloat32(Od.value, !0);
-      return Od.value += Kd, md
+    function cb(bb, wb) {
+      const Mb = bb.getFloat32(wb.value, !0);
+      return wb.value += gb, Mb
     }
 
-    function ud(dd, Od) {
-      return (0, Rd.b)(xd(dd, Od))
+    function Yb(bb, wb) {
+      return (0, pb.c)(rb(bb, wb))
     }
 
-    function Vd(dd, Od) {
-      return (0, Rd.g)((0, Fd.Clamp)(sd(dd, Od), -Rd.d, Rd.d))
+    function Zb(bb, wb) {
+      return (0, pb.i)((0, Hb.Clamp)(cb(bb, wb), -pb.e, pb.e))
     }
 
-    function Ad(dd, Od, md, Wd) {
-      switch (md) {
+    function fb(bb, wb, Mb, eb) {
+      switch (Mb) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(dd, Od, md) {
-            const Wd = (new TextDecoder).decode(new Uint8Array(dd).slice(Od.value, Od.value + md));
-            return Od.value = Od.value + md, Wd
-          }(dd.buffer, Od, Wd);
+          return function(bb, wb, Mb) {
+            const eb = (new TextDecoder).decode(new Uint8Array(bb).slice(wb.value, wb.value + Mb));
+            return wb.value = wb.value + Mb, eb
+          }(bb.buffer, wb, eb);
         case "chlist":
-          return function(dd, Od, md) {
-            const Wd = Od.value,
-              Fd = [];
-            for (; Od.value < Wd + md - 1;) {
-              const md = wd(dd.buffer, Od),
-                Wd = Ed(dd, Od),
-                Rd = Ud(dd, Od);
-              Od.value += 3;
-              const Xd = Ed(dd, Od),
-                Kd = Ed(dd, Od);
-              Fd.push({
-                name: md,
-                pixelType: Wd,
-                pLinear: Rd,
-                xSampling: Xd,
-                ySampling: Kd
+          return function(bb, wb, Mb) {
+            const eb = wb.value,
+              Hb = [];
+            for (; wb.value < eb + Mb - 1;) {
+              const Mb = Xb(bb.buffer, wb),
+                eb = xb(bb, wb),
+                pb = Kb(bb, wb);
+              wb.value += 3;
+              const Vb = xb(bb, wb),
+                gb = xb(bb, wb);
+              Hb.push({
+                name: Mb,
+                pixelType: eb,
+                pLinear: pb,
+                xSampling: Vb,
+                ySampling: gb
               })
             }
-            return Od.value += 1, Fd
-          }(dd, Od, Wd);
+            return wb.value += 1, Hb
+          }(bb, wb, eb);
         case "chromaticities":
-          return function(dd, Od) {
+          return function(bb, wb) {
             return {
-              redX: sd(dd, Od),
-              redY: sd(dd, Od),
-              greenX: sd(dd, Od),
-              greenY: sd(dd, Od),
-              blueX: sd(dd, Od),
-              blueY: sd(dd, Od),
-              whiteX: sd(dd, Od),
-              whiteY: sd(dd, Od)
+              redX: cb(bb, wb),
+              redY: cb(bb, wb),
+              greenX: cb(bb, wb),
+              greenY: cb(bb, wb),
+              blueX: cb(bb, wb),
+              blueY: cb(bb, wb),
+              whiteX: cb(bb, wb),
+              whiteY: cb(bb, wb)
             }
-          }(dd, Od);
+          }(bb, wb);
         case "compression":
-          return function(dd, Od) {
-            return Ud(dd, Od)
-          }(dd, Od);
+          return function(bb, wb) {
+            return Kb(bb, wb)
+          }(bb, wb);
         case "box2i":
-          return function(dd, Od) {
+          return function(bb, wb) {
             return {
-              xMin: Ed(dd, Od),
-              yMin: Ed(dd, Od),
-              xMax: Ed(dd, Od),
-              yMax: Ed(dd, Od)
+              xMin: xb(bb, wb),
+              yMin: xb(bb, wb),
+              xMax: xb(bb, wb),
+              yMax: xb(bb, wb)
             }
-          }(dd, Od);
+          }(bb, wb);
         case "lineOrder":
-          return function(dd, Od) {
-            const md = Ud(dd, Od);
-            return gd[md]
-          }(dd, Od);
+          return function(bb, wb) {
+            const Mb = Kb(bb, wb);
+            return zb[Mb]
+          }(bb, wb);
         case "float":
-          return sd(dd, Od);
+          return cb(bb, wb);
         case "v2f":
-          return function(dd, Od) {
-            return [sd(dd, Od), sd(dd, Od)]
-          }(dd, Od);
+          return function(bb, wb) {
+            return [cb(bb, wb), cb(bb, wb)]
+          }(bb, wb);
         case "v3f":
-          return function(dd, Od) {
-            return [sd(dd, Od), sd(dd, Od), sd(dd, Od)]
-          }(dd, Od);
+          return function(bb, wb) {
+            return [cb(bb, wb), cb(bb, wb), cb(bb, wb)]
+          }(bb, wb);
         case "int":
-          return Ed(dd, Od);
+          return xb(bb, wb);
         case "rational":
-          return function(dd, Od) {
-            return [Ed(dd, Od), Jd(dd, Od)]
-          }(dd, Od);
+          return function(bb, wb) {
+            return [xb(bb, wb), jb(bb, wb)]
+          }(bb, wb);
         case "timecode":
-          return function(dd, Od) {
-            return [Jd(dd, Od), Jd(dd, Od)]
-          }(dd, Od);
+          return function(bb, wb) {
+            return [jb(bb, wb), jb(bb, wb)]
+          }(bb, wb);
         case "preview":
-          return Od.value += Wd, "skipped";
+          return wb.value += eb, "skipped";
         default:
-          return void(Od.value += Wd)
+          return void(wb.value += eb)
       }
     }
 
-    function rd(dd) {
-      for (let Od = 1; Od < dd.length; Od++) {
-        const md = dd[Od - 1] + dd[Od] - 128;
-        dd[Od] = md
+    function Ab(bb) {
+      for (let wb = 1; wb < bb.length; wb++) {
+        const Mb = bb[wb - 1] + bb[wb] - 128;
+        bb[wb] = Mb
       }
     }
 
-    function Gd(dd, Od) {
-      let md = 0,
-        Wd = Math.floor((dd.length + 1) / 2),
-        Fd = 0;
-      const Rd = dd.length - 1;
-      for (; !(Fd > Rd) && (Od[Fd++] = dd[md++], !(Fd > Rd));) Od[Fd++] = dd[Wd++]
-    }! function(dd) {
-      dd[dd.NO_COMPRESSION = 0] = "NO_COMPRESSION", dd[dd.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", dd[dd.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", dd[dd.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", dd[dd.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", dd[dd.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(Yd || (Yd = {})),
-    function(dd) {
-      dd[dd.INCREASING_Y = 0] = "INCREASING_Y", dd[dd.DECREASING_Y = 1] = "DECREASING_Y"
-    }(gd || (gd = {}));
-    const nd = 20000630;
+    function Wb(bb, wb) {
+      let Mb = 0,
+        eb = Math.floor((bb.length + 1) / 2),
+        Hb = 0;
+      const pb = bb.length - 1;
+      for (; !(Hb > pb) && (wb[Hb++] = bb[Mb++], !(Hb > pb));) wb[Hb++] = bb[eb++]
+    }! function(bb) {
+      bb[bb.NO_COMPRESSION = 0] = "NO_COMPRESSION", bb[bb.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", bb[bb.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", bb[bb.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", bb[bb.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", bb[bb.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(hb || (hb = {})),
+    function(bb) {
+      bb[bb.INCREASING_Y = 0] = "INCREASING_Y", bb[bb.DECREASING_Y = 1] = "DECREASING_Y"
+    }(zb || (zb = {}));
+    const Jb = 20000630;
 
-    function Ld(dd, Od) {
-      if (dd.getUint32(0, !0) != nd) throw new Error("Incorrect OpenEXR format");
-      const md = dd.getUint8(4),
-        Fd = dd.getUint8(5),
-        Rd = {
-          singleTile: !!(2 & Fd),
-          longName: !!(4 & Fd),
-          deepFormat: !!(8 & Fd),
-          multiPart: !!(16 & Fd)
+    function Sb(bb, wb) {
+      if (bb.getUint32(0, !0) != Jb) throw new Error("Incorrect OpenEXR format");
+      const Mb = bb.getUint8(4),
+        Hb = bb.getUint8(5),
+        pb = {
+          singleTile: !!(2 & Hb),
+          longName: !!(4 & Hb),
+          deepFormat: !!(8 & Hb),
+          multiPart: !!(16 & Hb)
         };
-      Od.value = 8;
-      const Xd = {};
-      let Kd = !0;
-      for (; Kd;) {
-        const md = wd(dd.buffer, Od);
-        if (md) {
-          const Fd = wd(dd.buffer, Od),
-            Rd = Ad(dd, Od, Fd, Jd(dd, Od));
-          void 0 === Rd ? Wd.c.Warn(`Unknown header attribute type ${Fd}'.`) : Xd[md] = Rd
-        } else Kd = !1
+      wb.value = 8;
+      const Vb = {};
+      let gb = !0;
+      for (; gb;) {
+        const Mb = Xb(bb.buffer, wb);
+        if (Mb) {
+          const Hb = Xb(bb.buffer, wb),
+            pb = fb(bb, wb, Hb, jb(bb, wb));
+          void 0 === pb ? eb.b.Warn(`Unknown header attribute type ${Hb}'.`) : Vb[Mb] = pb
+        } else gb = !1
       }
-      if (0 != (-5 & Fd)) throw new Error("Unsupported file format");
+      if (0 != (-5 & Hb)) throw new Error("Unsupported file format");
       return {
-        version: md,
-        spec: Rd,
-        ...Xd
-      }
-    }
-    const Pd = 32768,
-      zd = 65535;
-
-    function cd(dd, Od, md, Wd, Fd) {
-      for (; md < dd;) Od = Od << 8 | Bd(Wd, Fd), md += 8;
-      return {
-        l: Od >> (md -= dd) & (1 << dd) - 1,
-        c: Od,
-        lc: md
+        version: Mb,
+        spec: pb,
+        ...Vb
       }
     }
+    const Nb = 32768,
+      vb = 65535;
 
-    function jd(dd, Od, md, Wd) {
+    function Qb(bb, wb, Mb, eb, Hb) {
+      for (; Mb < bb;) wb = wb << 8 | Rb(eb, Hb), Mb += 8;
       return {
-        c: dd = dd << 8 | Bd(md, Wd),
-        lc: Od += 8
+        l: wb >> (Mb -= bb) & (1 << bb) - 1,
+        c: wb,
+        lc: Mb
       }
     }
 
-    function Dd(dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd) {
-      if (dd == Od) {
-        if (Wd < 8) {
-          const dd = jd(md, Wd, Fd, Rd);
-          md = dd.c, Wd = dd.lc
+    function Gb(bb, wb, Mb, eb) {
+      return {
+        c: bb = bb << 8 | Rb(Mb, eb),
+        lc: wb += 8
+      }
+    }
+
+    function qb(bb, wb, Mb, eb, Hb, pb, Vb, gb, lb) {
+      if (bb == wb) {
+        if (eb < 8) {
+          const bb = Gb(Mb, eb, Hb, pb);
+          Mb = bb.c, eb = bb.lc
         }
-        let dd = md >> (Wd -= 8);
-        if (dd = new Uint8Array([dd])[0], Kd.value + dd > hd) return null;
-        const Od = Xd[Kd.value - 1];
-        for (; dd-- > 0;) Xd[Kd.value++] = Od
+        let bb = Mb >> (eb -= 8);
+        if (bb = new Uint8Array([bb])[0], gb.value + bb > lb) return null;
+        const wb = Vb[gb.value - 1];
+        for (; bb-- > 0;) Vb[gb.value++] = wb
       } else {
-        if (!(Kd.value < hd)) return null;
-        Xd[Kd.value++] = dd
+        if (!(gb.value < lb)) return null;
+        Vb[gb.value++] = bb
       }
       return {
-        c: md,
-        lc: Wd
+        c: Mb,
+        lc: eb
       }
     }
-    const ed = new Array(59);
+    const ab = new Array(59);
 
-    function Id(dd, Od, md, Wd, Fd, Rd) {
-      const Xd = Od;
-      let Kd = 0,
-        hd = 0;
-      for (; Wd <= Fd; Wd++) {
-        if (Xd.value - Od.value > md) return;
-        let vd = cd(6, Kd, hd, dd, Xd);
-        const Qd = vd.l;
-        if (Kd = vd.c, hd = vd.lc, Rd[Wd] = Qd, Qd == Td) {
-          if (Xd.value - Od.value > md) throw new Error("Error in HufUnpackEncTable");
-          vd = cd(8, Kd, hd, dd, Xd);
-          let Qd = vd.l + pd;
-          if (Kd = vd.c, hd = vd.lc, Wd + Qd > Fd + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; Qd--;) Rd[Wd++] = 0;
-          Wd--
-        } else if (Qd >= bd) {
-          let dd = Qd - bd + 2;
-          if (Wd + dd > Fd + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; dd--;) Rd[Wd++] = 0;
-          Wd--
+    function ib(bb, wb, Mb, eb, Hb, pb) {
+      const Vb = wb;
+      let gb = 0,
+        lb = 0;
+      for (; eb <= Hb; eb++) {
+        if (Vb.value - wb.value > Mb) return;
+        let Lb = Qb(6, gb, lb, bb, Vb);
+        const Ib = Lb.l;
+        if (gb = Lb.c, lb = Lb.lc, pb[eb] = Ib, Ib == sb) {
+          if (Vb.value - wb.value > Mb) throw new Error("Error in HufUnpackEncTable");
+          Lb = Qb(8, gb, lb, bb, Vb);
+          let Ib = Lb.l + mb;
+          if (gb = Lb.c, lb = Lb.lc, eb + Ib > Hb + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; Ib--;) pb[eb++] = 0;
+          eb--
+        } else if (Ib >= Bb) {
+          let bb = Ib - Bb + 2;
+          if (eb + bb > Hb + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; bb--;) pb[eb++] = 0;
+          eb--
         }
-      }! function(dd) {
-        for (let md = 0; md <= 58; ++md) ed[md] = 0;
-        for (let md = 0; md < qd; ++md) ed[dd[md]] += 1;
-        let Od = 0;
-        for (let md = 58; md > 0; --md) {
-          const dd = Od + ed[md] >> 1;
-          ed[md] = Od, Od = dd
+      }! function(bb) {
+        for (let Mb = 0; Mb <= 58; ++Mb) ab[Mb] = 0;
+        for (let Mb = 0; Mb < Cb; ++Mb) ab[bb[Mb]] += 1;
+        let wb = 0;
+        for (let Mb = 58; Mb > 0; --Mb) {
+          const bb = wb + ab[Mb] >> 1;
+          ab[Mb] = wb, wb = bb
         }
-        for (let md = 0; md < qd; ++md) {
-          const Od = dd[md];
-          Od > 0 && (dd[md] = Od | ed[Od]++ << 6)
+        for (let Mb = 0; Mb < Cb; ++Mb) {
+          const wb = bb[Mb];
+          wb > 0 && (bb[Mb] = wb | ab[wb]++ << 6)
         }
-      }(Rd)
+      }(pb)
     }
 
-    function ld(dd) {
-      return 63 & dd
+    function ub(bb) {
+      return 63 & bb
     }
 
-    function Cd(dd) {
-      return dd >> 6
+    function db(bb) {
+      return bb >> 6
     }
 
-    function Zd(dd, Od, md, Wd, Fd, Rd) {
-      const Xd = md.value,
-        Kd = Jd(Od, md),
-        hd = Jd(Od, md);
-      md.value += 4;
-      const vd = Jd(Od, md);
-      if (md.value += 4, Kd < 0 || Kd >= qd || hd < 0 || hd >= qd) throw new Error("Wrong HUF_ENCSIZE");
-      const Qd = new Array(qd),
-        td = new Array(Hd);
-      ! function(dd) {
-        for (let Od = 0; Od < Hd; Od++) dd[Od] = {}, dd[Od].len = 0, dd[Od].lit = 0, dd[Od].p = null
-      }(td);
-      if (Id(dd, md, Wd - (md.value - Xd), Kd, hd, Qd), vd > 8 * (Wd - (md.value - Xd))) throw new Error("Wrong hufUncompress");
-      ! function(dd, Od, md, Wd) {
-        for (; Od <= md; Od++) {
-          const md = Cd(dd[Od]),
-            Fd = ld(dd[Od]);
-          if (md >> Fd) throw new Error("Invalid table entry");
-          if (Fd > Nd) {
-            const dd = Wd[md >> Fd - Nd];
-            if (dd.len) throw new Error("Invalid table entry");
-            if (dd.lit++, dd.p) {
-              const Od = dd.p;
-              dd.p = new Array(dd.lit);
-              for (let md = 0; md < dd.lit - 1; ++md) dd.p[md] = Od[md]
-            } else dd.p = new Array(1);
-            dd.p[dd.lit - 1] = Od
-          } else if (Fd) {
-            let dd = 0;
-            for (let Rd = 1 << Nd - Fd; Rd > 0; Rd--) {
-              const Rd = Wd[(md << Nd - Fd) + dd];
-              if (Rd.len || Rd.p) throw new Error("Invalid table entry");
-              Rd.len = Fd, Rd.lit = Od, dd++
+    function Pb(bb, wb, Mb, eb, Hb, pb) {
+      const Vb = Mb.value,
+        gb = jb(wb, Mb),
+        lb = jb(wb, Mb);
+      Mb.value += 4;
+      const Lb = jb(wb, Mb);
+      if (Mb.value += 4, gb < 0 || gb >= Cb || lb < 0 || lb >= Cb) throw new Error("Wrong HUF_ENCSIZE");
+      const Ib = new Array(Cb),
+        Ob = new Array(Eb);
+      ! function(bb) {
+        for (let wb = 0; wb < Eb; wb++) bb[wb] = {}, bb[wb].len = 0, bb[wb].lit = 0, bb[wb].p = null
+      }(Ob);
+      if (ib(bb, Mb, eb - (Mb.value - Vb), gb, lb, Ib), Lb > 8 * (eb - (Mb.value - Vb))) throw new Error("Wrong hufUncompress");
+      ! function(bb, wb, Mb, eb) {
+        for (; wb <= Mb; wb++) {
+          const Mb = db(bb[wb]),
+            Hb = ub(bb[wb]);
+          if (Mb >> Hb) throw new Error("Invalid table entry");
+          if (Hb > tb) {
+            const bb = eb[Mb >> Hb - tb];
+            if (bb.len) throw new Error("Invalid table entry");
+            if (bb.lit++, bb.p) {
+              const wb = bb.p;
+              bb.p = new Array(bb.lit);
+              for (let Mb = 0; Mb < bb.lit - 1; ++Mb) bb.p[Mb] = wb[Mb]
+            } else bb.p = new Array(1);
+            bb.p[bb.lit - 1] = wb
+          } else if (Hb) {
+            let bb = 0;
+            for (let pb = 1 << tb - Hb; pb > 0; pb--) {
+              const pb = eb[(Mb << tb - Hb) + bb];
+              if (pb.len || pb.p) throw new Error("Invalid table entry");
+              pb.len = Hb, pb.lit = wb, bb++
             }
           }
         }
-      }(Qd, Kd, hd, td),
-      function(dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd) {
-        let vd = 0,
-          Qd = 0;
-        const td = Xd,
-          od = Math.trunc(Wd.value + (Fd + 7) / 8);
-        for (; Wd.value < od;) {
-          let Fd = jd(vd, Qd, md, Wd);
-          for (vd = Fd.c, Qd = Fd.lc; Qd >= Nd;) {
-            const Xd = Od[vd >> Qd - Nd & yd];
-            if (Xd.len) {
-              Qd -= Xd.len;
-              const dd = Dd(Xd.lit, Rd, vd, Qd, md, Wd, Kd, hd, td);
-              dd && (vd = dd.c, Qd = dd.lc)
+      }(Ib, gb, lb, Ob),
+      function(bb, wb, Mb, eb, Hb, pb, Vb, gb, lb) {
+        let Lb = 0,
+          Ib = 0;
+        const Ob = Vb,
+          Ub = Math.trunc(eb.value + (Hb + 7) / 8);
+        for (; eb.value < Ub;) {
+          let Hb = Gb(Lb, Ib, Mb, eb);
+          for (Lb = Hb.c, Ib = Hb.lc; Ib >= tb;) {
+            const Vb = wb[Lb >> Ib - tb & Fb];
+            if (Vb.len) {
+              Ib -= Vb.len;
+              const bb = qb(Vb.lit, pb, Lb, Ib, Mb, eb, gb, lb, Ob);
+              bb && (Lb = bb.c, Ib = bb.lc)
             } else {
-              if (!Xd.p) throw new Error("hufDecode issues");
-              let Od;
-              for (Od = 0; Od < Xd.lit; Od++) {
-                const Nd = ld(dd[Xd.p[Od]]);
-                for (; Qd < Nd && Wd.value < od;) Fd = jd(vd, Qd, md, Wd), vd = Fd.c, Qd = Fd.lc;
-                if (Qd >= Nd && Cd(dd[Xd.p[Od]]) == (vd >> Qd - Nd & (1 << Nd) - 1)) {
-                  Qd -= Nd;
-                  const dd = Dd(Xd.p[Od], Rd, vd, Qd, md, Wd, Kd, hd, td);
-                  dd && (vd = dd.c, Qd = dd.lc);
+              if (!Vb.p) throw new Error("hufDecode issues");
+              let wb;
+              for (wb = 0; wb < Vb.lit; wb++) {
+                const tb = ub(bb[Vb.p[wb]]);
+                for (; Ib < tb && eb.value < Ub;) Hb = Gb(Lb, Ib, Mb, eb), Lb = Hb.c, Ib = Hb.lc;
+                if (Ib >= tb && db(bb[Vb.p[wb]]) == (Lb >> Ib - tb & (1 << tb) - 1)) {
+                  Ib -= tb;
+                  const bb = qb(Vb.p[wb], pb, Lb, Ib, Mb, eb, gb, lb, Ob);
+                  bb && (Lb = bb.c, Ib = bb.lc);
                   break
                 }
               }
-              if (Od == Xd.lit) throw new Error("HufDecode issues")
+              if (wb == Vb.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const qd = 8 - Fd & 7;
-        for (vd >>= qd, Qd -= qd; Qd > 0;) {
-          const dd = Od[vd << Nd - Qd & yd];
-          if (!dd.len) throw new Error("HufDecode issues");
+        const Cb = 8 - Hb & 7;
+        for (Lb >>= Cb, Ib -= Cb; Ib > 0;) {
+          const bb = wb[Lb << tb - Ib & Fb];
+          if (!bb.len) throw new Error("HufDecode issues");
           {
-            Qd -= dd.len;
-            const Od = Dd(dd.lit, Rd, vd, Qd, md, Wd, Kd, hd, td);
-            Od && (vd = Od.c, Qd = Od.lc)
+            Ib -= bb.len;
+            const wb = qb(bb.lit, pb, Lb, Ib, Mb, eb, gb, lb, Ob);
+            wb && (Lb = wb.c, Ib = wb.lc)
           }
         }
-      }(Qd, td, dd, md, vd, hd, Rd, Fd, {
+      }(Ib, Ob, bb, Mb, Lb, lb, pb, Hb, {
         value: 0
       })
     }
 
-    function kd(dd) {
-      return 65535 & dd
+    function nb(bb) {
+      return 65535 & bb
     }
 
-    function fd(dd) {
-      const Od = kd(dd);
-      return Od > 32767 ? Od - 65536 : Od
+    function yb(bb) {
+      const wb = nb(bb);
+      return wb > 32767 ? wb - 65536 : wb
     }
 
-    function Md(dd, Od) {
-      const md = fd(dd),
-        Wd = fd(Od),
-        Fd = md + (1 & Wd) + (Wd >> 1);
+    function ob(bb, wb) {
+      const Mb = yb(bb),
+        eb = yb(wb),
+        Hb = Mb + (1 & eb) + (eb >> 1);
       return {
-        a: Fd,
-        b: Fd - Wd
+        a: Hb,
+        b: Hb - eb
       }
     }
 
-    function dO(dd, Od) {
-      const md = kd(dd),
-        Wd = kd(Od),
-        Fd = md - (Wd >> 1) & zd;
+    function Tb(bb, wb) {
+      const Mb = nb(bb),
+        eb = nb(wb),
+        Hb = Mb - (eb >> 1) & vb;
       return {
-        a: Wd + Fd - Pd & zd,
-        b: Fd
+        a: eb + Hb - Nb & vb,
+        b: Hb
       }
     }
 
-    function OO(dd, Od, md, Wd, Fd, Rd, Xd) {
-      const Kd = Xd < 16384,
-        hd = md > Fd ? Fd : md;
-      let vd, Qd, td = 1;
-      for (; td <= hd;) td <<= 1;
-      for (td >>= 1, vd = td, td >>= 1; td >= 1;) {
-        Qd = 0;
-        const Xd = Qd + Rd * (Fd - vd),
-          hd = Rd * td,
-          od = Rd * vd,
-          Nd = Wd * td,
-          qd = Wd * vd;
-        let Hd, yd, bd, Td;
-        for (; Qd <= Xd; Qd += od) {
-          let Fd = Qd;
-          const Rd = Qd + Wd * (md - vd);
-          for (; Fd <= Rd; Fd += qd) {
-            const md = Fd + Nd,
-              Wd = Fd + hd,
-              Rd = Wd + Nd;
-            if (Kd) {
-              let Xd = Md(dd[Fd + Od], dd[Wd + Od]);
-              Hd = Xd.a, bd = Xd.b, Xd = Md(dd[md + Od], dd[Rd + Od]), yd = Xd.a, Td = Xd.b, Xd = Md(Hd, yd), dd[Fd + Od] = Xd.a, dd[md + Od] = Xd.b, Xd = Md(bd, Td), dd[Wd + Od] = Xd.a, dd[Rd + Od] = Xd.b
+    function kb(bb, wb, Mb, eb, Hb, pb, Vb) {
+      const gb = Vb < 16384,
+        lb = Mb > Hb ? Hb : Mb;
+      let Lb, Ib, Ob = 1;
+      for (; Ob <= lb;) Ob <<= 1;
+      for (Ob >>= 1, Lb = Ob, Ob >>= 1; Ob >= 1;) {
+        Ib = 0;
+        const Vb = Ib + pb * (Hb - Lb),
+          lb = pb * Ob,
+          Ub = pb * Lb,
+          tb = eb * Ob,
+          Cb = eb * Lb;
+        let Eb, Fb, Bb, sb;
+        for (; Ib <= Vb; Ib += Ub) {
+          let Hb = Ib;
+          const pb = Ib + eb * (Mb - Lb);
+          for (; Hb <= pb; Hb += Cb) {
+            const Mb = Hb + tb,
+              eb = Hb + lb,
+              pb = eb + tb;
+            if (gb) {
+              let Vb = ob(bb[Hb + wb], bb[eb + wb]);
+              Eb = Vb.a, Bb = Vb.b, Vb = ob(bb[Mb + wb], bb[pb + wb]), Fb = Vb.a, sb = Vb.b, Vb = ob(Eb, Fb), bb[Hb + wb] = Vb.a, bb[Mb + wb] = Vb.b, Vb = ob(Bb, sb), bb[eb + wb] = Vb.a, bb[pb + wb] = Vb.b
             } else {
-              let Xd = dO(dd[Fd + Od], dd[Wd + Od]);
-              Hd = Xd.a, bd = Xd.b, Xd = dO(dd[md + Od], dd[Rd + Od]), yd = Xd.a, Td = Xd.b, Xd = dO(Hd, yd), dd[Fd + Od] = Xd.a, dd[md + Od] = Xd.b, Xd = dO(bd, Td), dd[Wd + Od] = Xd.a, dd[Rd + Od] = Xd.b
+              let Vb = Tb(bb[Hb + wb], bb[eb + wb]);
+              Eb = Vb.a, Bb = Vb.b, Vb = Tb(bb[Mb + wb], bb[pb + wb]), Fb = Vb.a, sb = Vb.b, Vb = Tb(Eb, Fb), bb[Hb + wb] = Vb.a, bb[Mb + wb] = Vb.b, Vb = Tb(Bb, sb), bb[eb + wb] = Vb.a, bb[pb + wb] = Vb.b
             }
           }
-          if (md & td) {
-            const md = Fd + hd;
-            let Wd;
-            Wd = Kd ? Md(dd[Fd + Od], dd[md + Od]) : dO(dd[Fd + Od], dd[md + Od]), Hd = Wd.a, dd[md + Od] = Wd.b, dd[Fd + Od] = Hd
+          if (Mb & Ob) {
+            const Mb = Hb + lb;
+            let eb;
+            eb = gb ? ob(bb[Hb + wb], bb[Mb + wb]) : Tb(bb[Hb + wb], bb[Mb + wb]), Eb = eb.a, bb[Mb + wb] = eb.b, bb[Hb + wb] = Eb
           }
         }
-        if (Fd & td) {
-          let Fd = Qd;
-          const Rd = Qd + Wd * (md - vd);
-          for (; Fd <= Rd; Fd += qd) {
-            const md = Fd + Nd;
-            let Wd;
-            Wd = Kd ? Md(dd[Fd + Od], dd[md + Od]) : dO(dd[Fd + Od], dd[md + Od]), Hd = Wd.a, dd[md + Od] = Wd.b, dd[Fd + Od] = Hd
+        if (Hb & Ob) {
+          let Hb = Ib;
+          const pb = Ib + eb * (Mb - Lb);
+          for (; Hb <= pb; Hb += Cb) {
+            const Mb = Hb + tb;
+            let eb;
+            eb = gb ? ob(bb[Hb + wb], bb[Mb + wb]) : Tb(bb[Hb + wb], bb[Mb + wb]), Eb = eb.a, bb[Mb + wb] = eb.b, bb[Hb + wb] = Eb
           }
         }
-        vd = td, td >>= 1
+        Lb = Ob, Ob >>= 1
       }
-      return Qd
+      return Ib
     }
 
-    function mO(dd) {
-      return new DataView(dd.array.buffer, dd.offset.value, dd.size)
+    function bw(bb) {
+      return new DataView(bb.array.buffer, bb.offset.value, bb.size)
     }
 
-    function WO(dd) {
-      const Od = dd.viewer.buffer.slice(dd.offset.value, dd.offset.value + dd.size),
-        md = new Uint8Array(function(dd) {
-          let Od = dd.byteLength;
-          const md = [];
-          let Wd = 0;
-          const Fd = new DataView(dd);
-          for (; Od > 0;) {
-            const dd = Fd.getInt8(Wd++);
-            if (dd < 0) {
-              const Rd = -dd;
-              Od -= Rd + 1;
-              for (let dd = 0; dd < Rd; dd++) md.push(Fd.getUint8(Wd++))
+    function ww(bb) {
+      const wb = bb.viewer.buffer.slice(bb.offset.value, bb.offset.value + bb.size),
+        Mb = new Uint8Array(function(bb) {
+          let wb = bb.byteLength;
+          const Mb = [];
+          let eb = 0;
+          const Hb = new DataView(bb);
+          for (; wb > 0;) {
+            const bb = Hb.getInt8(eb++);
+            if (bb < 0) {
+              const pb = -bb;
+              wb -= pb + 1;
+              for (let bb = 0; bb < pb; bb++) Mb.push(Hb.getUint8(eb++))
             } else {
-              const Rd = dd;
-              Od -= 2;
-              const Xd = Fd.getUint8(Wd++);
-              for (let dd = 0; dd < Rd + 1; dd++) md.push(Xd)
+              const pb = bb;
+              wb -= 2;
+              const Vb = Hb.getUint8(eb++);
+              for (let bb = 0; bb < pb + 1; bb++) Mb.push(Vb)
             }
           }
-          return md
-        }(Od)),
-        Wd = new Uint8Array(md.length);
-      return rd(md), Gd(md, Wd), new DataView(Wd.buffer)
+          return Mb
+        }(wb)),
+        eb = new Uint8Array(Mb.length);
+      return Ab(Mb), Wb(Mb, eb), new DataView(eb.buffer)
     }
 
-    function FO(dd) {
-      const Od = dd.array.slice(dd.offset.value, dd.offset.value + dd.size),
-        md = fflate.unzlibSync(Od),
-        Wd = new Uint8Array(md.length);
-      return rd(md), Gd(md, Wd), new DataView(Wd.buffer)
+    function Mw(bb) {
+      const wb = bb.array.slice(bb.offset.value, bb.offset.value + bb.size),
+        Mb = fflate.unzlibSync(wb),
+        eb = new Uint8Array(Mb.length);
+      return Ab(Mb), Wb(Mb, eb), new DataView(eb.buffer)
     }
 
-    function RO(dd) {
-      const Od = dd.array.slice(dd.offset.value, dd.offset.value + dd.size),
-        md = fflate.unzlibSync(Od),
-        Wd = dd.lines * dd.channels * dd.width,
-        Fd = 1 == dd.type ? new Uint16Array(Wd) : new Uint32Array(Wd);
-      let Rd = 0,
-        Xd = 0;
-      const Kd = new Array(4);
-      for (let hd = 0; hd < dd.lines; hd++)
-        for (let Od = 0; Od < dd.channels; Od++) {
-          let Od = 0;
-          switch (dd.type) {
+    function ew(bb) {
+      const wb = bb.array.slice(bb.offset.value, bb.offset.value + bb.size),
+        Mb = fflate.unzlibSync(wb),
+        eb = bb.lines * bb.channels * bb.width,
+        Hb = 1 == bb.type ? new Uint16Array(eb) : new Uint32Array(eb);
+      let pb = 0,
+        Vb = 0;
+      const gb = new Array(4);
+      for (let lb = 0; lb < bb.lines; lb++)
+        for (let wb = 0; wb < bb.channels; wb++) {
+          let wb = 0;
+          switch (bb.type) {
             case 1:
-              Kd[0] = Rd, Kd[1] = Kd[0] + dd.width, Rd = Kd[1] + dd.width;
-              for (let Wd = 0; Wd < dd.width; ++Wd) {
-                Od += md[Kd[0]++] << 8 | md[Kd[1]++], Fd[Xd] = Od, Xd++
+              gb[0] = pb, gb[1] = gb[0] + bb.width, pb = gb[1] + bb.width;
+              for (let eb = 0; eb < bb.width; ++eb) {
+                wb += Mb[gb[0]++] << 8 | Mb[gb[1]++], Hb[Vb] = wb, Vb++
               }
               break;
             case 2:
-              Kd[0] = Rd, Kd[1] = Kd[0] + dd.width, Kd[2] = Kd[1] + dd.width, Rd = Kd[2] + dd.width;
-              for (let Wd = 0; Wd < dd.width; ++Wd) {
-                Od += md[Kd[0]++] << 24 | md[Kd[1]++] << 16 | md[Kd[2]++] << 8, Fd[Xd] = Od, Xd++
+              gb[0] = pb, gb[1] = gb[0] + bb.width, gb[2] = gb[1] + bb.width, pb = gb[2] + bb.width;
+              for (let eb = 0; eb < bb.width; ++eb) {
+                wb += Mb[gb[0]++] << 24 | Mb[gb[1]++] << 16 | Mb[gb[2]++] << 8, Hb[Vb] = wb, Vb++
               }
           }
         }
-      return new DataView(Fd.buffer)
+      return new DataView(Hb.buffer)
     }
 
-    function XO(dd) {
-      const Od = dd.viewer,
-        md = {
-          value: dd.offset.value
+    function Hw(bb) {
+      const wb = bb.viewer,
+        Mb = {
+          value: bb.offset.value
         },
-        Wd = new Uint16Array(dd.width * dd.scanlineBlockSize * (dd.channels * dd.type)),
-        Fd = new Uint8Array(od);
-      let Rd = 0;
-      const Xd = new Array(dd.channels);
-      for (let vd = 0; vd < dd.channels; vd++) Xd[vd] = {}, Xd[vd].start = Rd, Xd[vd].end = Xd[vd].start, Xd[vd].nx = dd.width, Xd[vd].ny = dd.lines, Xd[vd].size = dd.type, Rd += Xd[vd].nx * Xd[vd].ny * Xd[vd].size;
-      const Kd = xd(Od, md),
-        hd = xd(Od, md);
-      if (hd >= od) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (Kd <= hd)
-        for (let vd = 0; vd < hd - Kd + 1; vd++) Fd[vd + Kd] = Ud(Od, md);
-      const Qd = new Uint16Array(td),
-        Nd = function(dd, Od) {
-          let md = 0;
-          for (let Fd = 0; Fd < td; ++Fd)(0 == Fd || dd[Fd >> 3] & 1 << (7 & Fd)) && (Od[md++] = Fd);
-          const Wd = md - 1;
-          for (; md < td;) Od[md++] = 0;
-          return Wd
-        }(Fd, Qd),
-        qd = Jd(Od, md);
-      Zd(dd.array, Od, md, qd, Wd, Rd);
-      for (let vd = 0; vd < dd.channels; ++vd) {
-        const dd = Xd[vd];
-        for (let Od = 0; Od < Xd[vd].size; ++Od) OO(Wd, dd.start + Od, dd.nx, dd.size, dd.ny, dd.nx * dd.size, Nd)
-      }! function(dd, Od, md) {
-        for (let Wd = 0; Wd < md; ++Wd) Od[Wd] = dd[Od[Wd]]
-      }(Qd, Wd, Rd);
-      let Hd = 0;
-      const yd = new Uint8Array(Wd.buffer.byteLength);
-      for (let td = 0; td < dd.lines; td++)
-        for (let Od = 0; Od < dd.channels; Od++) {
-          const dd = Xd[Od],
-            md = dd.nx * dd.size,
-            Fd = new Uint8Array(Wd.buffer, dd.end * vd, md * vd);
-          yd.set(Fd, Hd), Hd += md * vd, dd.end += md
+        eb = new Uint16Array(bb.width * bb.scanlineBlockSize * (bb.channels * bb.type)),
+        Hb = new Uint8Array(Ub);
+      let pb = 0;
+      const Vb = new Array(bb.channels);
+      for (let Lb = 0; Lb < bb.channels; Lb++) Vb[Lb] = {}, Vb[Lb].start = pb, Vb[Lb].end = Vb[Lb].start, Vb[Lb].nx = bb.width, Vb[Lb].ny = bb.lines, Vb[Lb].size = bb.type, pb += Vb[Lb].nx * Vb[Lb].ny * Vb[Lb].size;
+      const gb = rb(wb, Mb),
+        lb = rb(wb, Mb);
+      if (lb >= Ub) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (gb <= lb)
+        for (let Lb = 0; Lb < lb - gb + 1; Lb++) Hb[Lb + gb] = Kb(wb, Mb);
+      const Ib = new Uint16Array(Ob),
+        tb = function(bb, wb) {
+          let Mb = 0;
+          for (let Hb = 0; Hb < Ob; ++Hb)(0 == Hb || bb[Hb >> 3] & 1 << (7 & Hb)) && (wb[Mb++] = Hb);
+          const eb = Mb - 1;
+          for (; Mb < Ob;) wb[Mb++] = 0;
+          return eb
+        }(Hb, Ib),
+        Cb = jb(wb, Mb);
+      Pb(bb.array, wb, Mb, Cb, eb, pb);
+      for (let Lb = 0; Lb < bb.channels; ++Lb) {
+        const bb = Vb[Lb];
+        for (let wb = 0; wb < Vb[Lb].size; ++wb) kb(eb, bb.start + wb, bb.nx, bb.size, bb.ny, bb.nx * bb.size, tb)
+      }! function(bb, wb, Mb) {
+        for (let eb = 0; eb < Mb; ++eb) wb[eb] = bb[wb[eb]]
+      }(Ib, eb, pb);
+      let Eb = 0;
+      const Fb = new Uint8Array(eb.buffer.byteLength);
+      for (let Ob = 0; Ob < bb.lines; Ob++)
+        for (let wb = 0; wb < bb.channels; wb++) {
+          const bb = Vb[wb],
+            Mb = bb.nx * bb.size,
+            Hb = new Uint8Array(eb.buffer, bb.end * Lb, Mb * Lb);
+          Fb.set(Hb, Eb), Eb += Mb * Lb, bb.end += Mb
         }
-      return new DataView(yd.buffer)
+      return new DataView(Fb.buffer)
     }
-    var KO, hO = md(42029);
-    ! function(dd) {
-      dd[dd.Float = 0] = "Float", dd[dd.HalfFloat = 1] = "HalfFloat"
-    }(KO || (KO = {}));
-    class vO {}
-    async function QO(dd, Od, md, Wd) {
-      const Fd = {
+    var pw, Vw = Mb(41771);
+    ! function(bb) {
+      bb[bb.Float = 0] = "Float", bb[bb.HalfFloat = 1] = "HalfFloat"
+    }(pw || (pw = {}));
+    class gw {}
+    async function lw(bb, wb, Mb, eb) {
+      const Hb = {
         size: 0,
-        viewer: Od,
-        array: new Uint8Array(Od.buffer),
-        offset: md,
-        width: dd.dataWindow.xMax - dd.dataWindow.xMin + 1,
-        height: dd.dataWindow.yMax - dd.dataWindow.yMin + 1,
-        channels: dd.channels.length,
+        viewer: wb,
+        array: new Uint8Array(wb.buffer),
+        offset: Mb,
+        width: bb.dataWindow.xMax - bb.dataWindow.xMin + 1,
+        height: bb.dataWindow.yMax - bb.dataWindow.yMin + 1,
+        channels: bb.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (dd.compression) {
-        case Yd.NO_COMPRESSION:
-          Fd.lines = 1, Fd.uncompress = mO;
+      switch (bb.compression) {
+        case hb.NO_COMPRESSION:
+          Hb.lines = 1, Hb.uncompress = bw;
           break;
-        case Yd.RLE_COMPRESSION:
-          Fd.lines = 1, Fd.uncompress = WO;
+        case hb.RLE_COMPRESSION:
+          Hb.lines = 1, Hb.uncompress = ww;
           break;
-        case Yd.ZIPS_COMPRESSION:
-          Fd.lines = 1, Fd.uncompress = FO, await hO.g.LoadScriptAsync(vO.FFLATEUrl);
+        case hb.ZIPS_COMPRESSION:
+          Hb.lines = 1, Hb.uncompress = Mw, await Vw.e.LoadScriptAsync(gw.FFLATEUrl);
           break;
-        case Yd.ZIP_COMPRESSION:
-          Fd.lines = 16, Fd.uncompress = FO, await hO.g.LoadScriptAsync(vO.FFLATEUrl);
+        case hb.ZIP_COMPRESSION:
+          Hb.lines = 16, Hb.uncompress = Mw, await Vw.e.LoadScriptAsync(gw.FFLATEUrl);
           break;
-        case Yd.PIZ_COMPRESSION:
-          Fd.lines = 32, Fd.uncompress = XO;
+        case hb.PIZ_COMPRESSION:
+          Hb.lines = 32, Hb.uncompress = Hw;
           break;
-        case Yd.PXR24_COMPRESSION:
-          Fd.lines = 16, Fd.uncompress = RO, await hO.g.LoadScriptAsync(vO.FFLATEUrl);
+        case hb.PXR24_COMPRESSION:
+          Hb.lines = 16, Hb.uncompress = ew, await Vw.e.LoadScriptAsync(gw.FFLATEUrl);
           break;
         default:
-          throw new Error(Yd[dd.compression] + " is unsupported")
+          throw new Error(hb[bb.compression] + " is unsupported")
       }
-      Fd.scanlineBlockSize = Fd.lines;
-      const Rd = {};
-      for (const Kd of dd.channels) switch (Kd.name) {
+      Hb.scanlineBlockSize = Hb.lines;
+      const pb = {};
+      for (const gb of bb.channels) switch (gb.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          Rd[Kd.name] = !0, Fd.type = Kd.pixelType
+          pb[gb.name] = !0, Hb.type = gb.pixelType
       }
-      let Xd = !1;
-      if (Rd.R && Rd.G && Rd.B && Rd.A) Fd.outputChannels = 4, Fd.decodeChannels = {
+      let Vb = !1;
+      if (pb.R && pb.G && pb.B && pb.A) Hb.outputChannels = 4, Hb.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (Rd.R && Rd.G && Rd.B) Xd = !0, Fd.outputChannels = 4, Fd.decodeChannels = {
+      else if (pb.R && pb.G && pb.B) Vb = !0, Hb.outputChannels = 4, Hb.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (Rd.R && Rd.G) Fd.outputChannels = 2, Fd.decodeChannels = {
+      else if (pb.R && pb.G) Hb.outputChannels = 2, Hb.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (Rd.R) Fd.outputChannels = 1, Fd.decodeChannels = {
+      else if (pb.R) Hb.outputChannels = 1, Hb.decodeChannels = {
         R: 0
       };
       else {
-        if (!Rd.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        Fd.outputChannels = 1, Fd.decodeChannels = {
+        if (!pb.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        Hb.outputChannels = 1, Hb.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === Fd.type) switch (Wd) {
-        case KO.Float:
-          Fd.getter = ud, Fd.inputSize = vd;
+      if (1 === Hb.type) switch (eb) {
+        case pw.Float:
+          Hb.getter = Yb, Hb.inputSize = Lb;
           break;
-        case KO.HalfFloat:
-          Fd.getter = xd, Fd.inputSize = vd
+        case pw.HalfFloat:
+          Hb.getter = rb, Hb.inputSize = Lb
       } else {
-        if (2 !== Fd.type) throw new Error("Unsupported pixelType " + Fd.type + " for " + dd.compression);
-        switch (Wd) {
-          case KO.Float:
-            Fd.getter = sd, Fd.inputSize = Kd;
+        if (2 !== Hb.type) throw new Error("Unsupported pixelType " + Hb.type + " for " + bb.compression);
+        switch (eb) {
+          case pw.Float:
+            Hb.getter = cb, Hb.inputSize = gb;
             break;
-          case KO.HalfFloat:
-            Fd.getter = Vd, Fd.inputSize = Kd
+          case pw.HalfFloat:
+            Hb.getter = Zb, Hb.inputSize = gb
         }
       }
-      Fd.blockCount = Fd.height / Fd.scanlineBlockSize;
-      for (let Kd = 0; Kd < Fd.blockCount; Kd++) Sd(Od, md);
-      const hd = Fd.width * Fd.height * Fd.outputChannels;
-      switch (Wd) {
-        case KO.Float:
-          Fd.byteArray = new Float32Array(hd), Fd.textureType = 1, Xd && Fd.byteArray.fill(1, 0, hd);
+      Hb.blockCount = Hb.height / Hb.scanlineBlockSize;
+      for (let gb = 0; gb < Hb.blockCount; gb++) Db(wb, Mb);
+      const lb = Hb.width * Hb.height * Hb.outputChannels;
+      switch (eb) {
+        case pw.Float:
+          Hb.byteArray = new Float32Array(lb), Hb.textureType = 1, Vb && Hb.byteArray.fill(1, 0, lb);
           break;
-        case KO.HalfFloat:
-          Fd.byteArray = new Uint16Array(hd), Fd.textureType = 2, Xd && Fd.byteArray.fill(15360, 0, hd);
+        case pw.HalfFloat:
+          Hb.byteArray = new Uint16Array(lb), Hb.textureType = 2, Vb && Hb.byteArray.fill(15360, 0, lb);
           break;
         default:
-          throw new Error("Unsupported type: " + Wd)
+          throw new Error("Unsupported type: " + eb)
       }
-      let Qd = 0;
-      for (const Kd of dd.channels) void 0 !== Fd.decodeChannels[Kd.name] && (Fd.channelLineOffsets[Kd.name] = Qd * Fd.width), Qd += 2 * Kd.pixelType;
-      return Fd.bytesPerLine = Fd.width * Qd, Fd.outLineWidth = Fd.width * Fd.outputChannels, "INCREASING_Y" === dd.lineOrder ? Fd.scanOrder = dd => dd : Fd.scanOrder = dd => Fd.height - 1 - dd, 4 == Fd.outputChannels ? (Fd.format = 5, Fd.linearSpace = !0) : (Fd.format = 6, Fd.linearSpace = !1), Fd
+      let Ib = 0;
+      for (const gb of bb.channels) void 0 !== Hb.decodeChannels[gb.name] && (Hb.channelLineOffsets[gb.name] = Ib * Hb.width), Ib += 2 * gb.pixelType;
+      return Hb.bytesPerLine = Hb.width * Ib, Hb.outLineWidth = Hb.width * Hb.outputChannels, "INCREASING_Y" === bb.lineOrder ? Hb.scanOrder = bb => bb : Hb.scanOrder = bb => Hb.height - 1 - bb, 4 == Hb.outputChannels ? (Hb.format = 5, Hb.linearSpace = !0) : (Hb.format = 6, Hb.linearSpace = !1), Hb
     }
 
-    function tO(dd, Od, md, Wd) {
-      const Fd = {
+    function Lw(bb, wb, Mb, eb) {
+      const Hb = {
         value: 0
       };
-      for (let Rd = 0; Rd < dd.height / dd.scanlineBlockSize; Rd++) {
-        const Xd = Ed(md, Wd) - Od.dataWindow.yMin;
-        dd.size = Jd(md, Wd), dd.lines = Xd + dd.scanlineBlockSize > dd.height ? dd.height - Xd : dd.scanlineBlockSize;
-        const Kd = dd.size < dd.lines * dd.bytesPerLine && dd.uncompress ? dd.uncompress(dd) : mO(dd);
-        Wd.value += dd.size;
-        for (let md = 0; md < dd.scanlineBlockSize; md++) {
-          const Wd = Rd * dd.scanlineBlockSize,
-            Xd = md + dd.scanOrder(Wd);
-          if (Xd >= dd.height) continue;
-          const hd = md * dd.bytesPerLine,
-            vd = (dd.height - 1 - Xd) * dd.outLineWidth;
-          for (let md = 0; md < dd.channels; md++) {
-            const Wd = Od.channels[md].name,
-              Rd = dd.channelLineOffsets[Wd],
-              Xd = dd.decodeChannels[Wd];
-            if (void 0 !== Xd) {
-              Fd.value = hd + Rd;
-              for (let Od = 0; Od < dd.width; Od++) {
-                const md = vd + Od * dd.outputChannels + Xd;
-                dd.byteArray && (dd.byteArray[md] = dd.getter(Kd, Fd))
+      for (let pb = 0; pb < bb.height / bb.scanlineBlockSize; pb++) {
+        const Vb = xb(Mb, eb) - wb.dataWindow.yMin;
+        bb.size = jb(Mb, eb), bb.lines = Vb + bb.scanlineBlockSize > bb.height ? bb.height - Vb : bb.scanlineBlockSize;
+        const gb = bb.size < bb.lines * bb.bytesPerLine && bb.uncompress ? bb.uncompress(bb) : bw(bb);
+        eb.value += bb.size;
+        for (let Mb = 0; Mb < bb.scanlineBlockSize; Mb++) {
+          const eb = pb * bb.scanlineBlockSize,
+            Vb = Mb + bb.scanOrder(eb);
+          if (Vb >= bb.height) continue;
+          const lb = Mb * bb.bytesPerLine,
+            Lb = (bb.height - 1 - Vb) * bb.outLineWidth;
+          for (let Mb = 0; Mb < bb.channels; Mb++) {
+            const eb = wb.channels[Mb].name,
+              pb = bb.channelLineOffsets[eb],
+              Vb = bb.decodeChannels[eb];
+            if (void 0 !== Vb) {
+              Hb.value = lb + pb;
+              for (let wb = 0; wb < bb.width; wb++) {
+                const Mb = Lb + wb * bb.outputChannels + Vb;
+                bb.byteArray && (bb.byteArray[Mb] = bb.getter(gb, Hb))
               }
             }
           }
         }
       }
     }
-    vO.DefaultOutputType = KO.HalfFloat, vO.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class oO {
+    gw.DefaultOutputType = pw.HalfFloat, gw.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class Iw {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(dd, Od, md, Wd, Fd) {
+      loadCubeData(bb, wb, Mb, eb, Hb) {
         throw ".exr not supported in Cube."
       }
-      loadData(dd, Od, md) {
-        const Fd = new DataView(dd.buffer),
-          Rd = {
+      loadData(bb, wb, Mb) {
+        const Hb = new DataView(bb.buffer),
+          pb = {
             value: 0
           },
-          Xd = Ld(Fd, Rd);
-        QO(Xd, Fd, Rd, vO.DefaultOutputType).then((dd => {
-          tO(dd, Xd, Fd, Rd);
-          const Wd = Xd.dataWindow.xMax - Xd.dataWindow.xMin + 1,
-            Kd = Xd.dataWindow.yMax - Xd.dataWindow.yMin + 1;
-          md(Wd, Kd, Od.generateMipMaps, !1, (() => {
-            const md = Od.Iq();
-            Od.format = Xd.format, Od.type = dd.textureType, Od.invertY = !1, Od._gammaSpace = !Xd.linearSpace, dd.byteArray && md._uploadDataToTextureDirectly(Od, dd.byteArray, 0, 0, void 0, !0)
+          Vb = Sb(Hb, pb);
+        lw(Vb, Hb, pb, gw.DefaultOutputType).then((bb => {
+          Lw(bb, Vb, Hb, pb);
+          const eb = Vb.dataWindow.xMax - Vb.dataWindow.xMin + 1,
+            gb = Vb.dataWindow.yMax - Vb.dataWindow.yMin + 1;
+          Mb(eb, gb, wb.generateMipMaps, !1, (() => {
+            const Mb = wb.DC();
+            wb.format = Vb.format, wb.type = bb.textureType, wb.invertY = !1, wb._gammaSpace = !Vb.linearSpace, bb.byteArray && Mb._uploadDataToTextureDirectly(wb, bb.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((dd => {
-          Wd.c.Error("Failed to load EXR texture: ", dd)
+        })).catch((bb => {
+          eb.b.Error("Failed to load EXR texture: ", bb)
         }))
       }
     }
-    async function NO(dd) {
-      const Od = new DataView(dd),
-        md = {
+    async function Ow(bb) {
+      const wb = new DataView(bb),
+        Mb = {
           value: 0
         },
-        Fd = Ld(Od, md);
+        Hb = Sb(wb, Mb);
       try {
-        const dd = await QO(Fd, Od, md, KO.Float);
-        return tO(dd, Fd, Od, md), dd.byteArray ? {
-          width: Fd.dataWindow.xMax - Fd.dataWindow.xMin + 1,
-          height: Fd.dataWindow.yMax - Fd.dataWindow.yMin + 1,
-          data: new Float32Array(dd.byteArray)
-        } : (Wd.c.Error("Failed to decode EXR data: No byte array available."), {
+        const bb = await lw(Hb, wb, Mb, pw.Float);
+        return Lw(bb, Hb, wb, Mb), bb.byteArray ? {
+          width: Hb.dataWindow.xMax - Hb.dataWindow.xMin + 1,
+          height: Hb.dataWindow.yMax - Hb.dataWindow.yMin + 1,
+          data: new Float32Array(bb.byteArray)
+        } : (eb.b.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (Rd) {
-        Wd.c.Error("Failed to load EXR data: ", Rd)
+      } catch (pb) {
+        eb.b.Error("Failed to load EXR data: ", pb)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

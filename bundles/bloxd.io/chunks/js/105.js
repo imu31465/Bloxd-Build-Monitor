@@ -1,60 +1,60 @@
 export const id = 105;
 export const ids = [105, 106];
 export const modules = {
-  5571: (dd, Od, md) => {
-    md.d(Od, {
-      $: () => Hd,
-      $b: () => xd,
-      Ab: () => nd,
-      B: () => Xd,
-      C: () => Kd,
-      Db: () => yd,
-      Eb: () => Sd,
-      Fb: () => Bd,
-      G: () => Wd,
-      I: () => Rd,
-      Ib: () => Ld,
-      L: () => Yd,
-      Mb: () => Id,
-      N: () => dO,
-      Ob: () => zd,
-      R: () => td,
-      Rb: () => jd,
-      S: () => od,
-      V: () => Qd,
-      Vb: () => Dd,
-      X: () => vd,
-      Y: () => gd,
-      Yb: () => Ud,
-      Z: () => hd,
-      ab: () => qd,
-      bc: () => Cd,
-      e: () => Td,
-      eb: () => sd,
-      fb: () => Vd,
-      fc: () => Fd,
-      h: () => bd,
-      hc: () => Md,
-      ib: () => Ad,
-      k: () => fd,
-      mb: () => ud,
-      n: () => pd,
-      ob: () => rd,
-      p: () => kd,
-      pb: () => ld,
-      q: () => Nd,
-      r: () => Jd,
-      rb: () => ed,
-      t: () => Zd,
-      tb: () => cd,
-      vb: () => Gd,
-      w: () => Ed,
-      x: () => wd,
-      xb: () => Pd
+  5685: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      $: () => Lb,
+      $b: () => Gb,
+      A: () => Vb,
+      Cb: () => Qb,
+      E: () => gb,
+      Eb: () => Wb,
+      Fb: () => Nb,
+      H: () => eb,
+      Jb: () => Jb,
+      L: () => pb,
+      Lb: () => Fb,
+      O: () => hb,
+      Ob: () => Db,
+      Q: () => Tb,
+      Rb: () => Rb,
+      Sb: () => Sb,
+      U: () => Ob,
+      W: () => Ub,
+      Wb: () => ib,
+      X: () => Ib,
+      Yb: () => vb,
+      b: () => sb,
+      cc: () => qb,
+      db: () => zb,
+      dc: () => Kb,
+      f: () => Bb,
+      fc: () => rb,
+      hb: () => lb,
+      i: () => yb,
+      jb: () => Eb,
+      jc: () => db,
+      m: () => mb,
+      mb: () => Cb,
+      mc: () => Hb,
+      nc: () => ob,
+      p: () => nb,
+      pb: () => cb,
+      q: () => tb,
+      qb: () => Zb,
+      t: () => jb,
+      tb: () => fb,
+      ub: () => Yb,
+      vb: () => Ab,
+      wb: () => ub,
+      x: () => Pb,
+      y: () => xb,
+      yb: () => ab,
+      z: () => Xb
     });
-    const Wd = 32,
-      Fd = 33.333333333333336,
-      Rd = {
+    const eb = 32,
+      Hb = 33.333333333333336,
+      pb = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -88,36 +88,36 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      Xd = {
+      Vb = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Kd = {
+      gb = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      hd = {
+      lb = {
         AheadMask: 15,
         Defaulted: 128,
         LagsShift: 8,
         CountMask: 4095
       },
-      vd = {
+      Lb = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Qd = {
+      Ib = {
         PlayerBound: 32,
         JoinPreload: 64
       },
-      td = 14,
-      od = {
+      Ob = 14,
+      Ub = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -133,14 +133,14 @@ export const modules = {
         FirstViewGaps: 12,
         FirstViewGapMs: 13
       },
-      Nd = {
+      tb = {
         Look: 0,
         Remesh: 1,
         CameraSet: 2
       },
-      qd = 8,
-      Hd = 1,
-      yd = {
+      Cb = 8,
+      Eb = 1,
+      Fb = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -149,16 +149,16 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      bd = 6,
-      Td = 1,
-      pd = {
+      Bb = 6,
+      sb = 1,
+      mb = {
         SetCamDir: 0,
         Forced: 1,
         ScriptedTake: 2,
         ScriptedPose: 3,
         ScriptedRelease: 4
       },
-      Yd = {
+      hb = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -186,12 +186,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      gd = {
+      zb = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      wd = {
+      Xb = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -245,7 +245,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Ed = {
+      xb = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -255,10 +255,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      Jd = 4,
-      Ud = 4,
-      xd = 65535,
-      Bd = {
+      jb = 4,
+      Kb = 4,
+      rb = 65535,
+      Rb = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -271,7 +271,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      Sd = {
+      Db = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -279,12 +279,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      sd = 88,
-      ud = 0,
-      Vd = 24,
-      Ad = 48,
-      rd = 80,
-      Gd = {
+      cb = 88,
+      Yb = 0,
+      Zb = 24,
+      fb = 48,
+      Ab = 80,
+      Wb = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -295,18 +295,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      nd = {
+      Jb = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Ld = {
+      Sb = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Pd = {
+      Nb = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -324,34 +324,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      zd = {
+      vb = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      cd = 65535,
-      jd = {
+      Qb = 65535,
+      Gb = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      Dd = {
+      qb = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      ed = 2,
-      Id = {
+      ab = 2,
+      ib = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      ld = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      Cd = {
+      ub = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      db = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -365,7 +365,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      Zd = {
+      Pb = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -392,7 +392,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      kd = {
+      nb = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -550,8 +550,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      fd = 8,
-      Md = {
+      yb = 8,
+      ob = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -577,129 +577,129 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      dO = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      Tb = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  5568: (dd, Od, md) => {
-    md.d(Od, {
-      $b: () => Wd.Y,
-      Bc: () => Wd.ob,
-      Be: () => qd,
-      C: () => bO,
-      Cb: () => Md,
-      Cd: () => bd,
-      E: () => dO,
-      Ec: () => Wd.tb,
-      F: () => Wd.p,
-      Fb: () => Wd.R,
-      Fd: () => oO,
-      Hd: () => cd,
-      Ib: () => FO,
-      Ic: () => TO,
-      Id: () => Dd,
-      J: () => vd,
-      Jb: () => XO,
-      Jd: () => zd,
-      Kb: () => Wd.S,
-      Kd: () => ld,
-      L: () => Wd.q,
-      Lb: () => Fd.f,
-      Lc: () => qO,
-      Nb: () => Ud,
-      Nc: () => hO,
-      O: () => mO,
-      Pd: () => ed,
-      Qb: () => Pd,
-      Rc: () => Wd.vb,
-      S: () => Wd.r,
-      Tb: () => ud,
-      Td: () => Zd,
-      Vc: () => Wd.xb,
-      W: () => fd,
-      Wd: () => Cd,
-      Xb: () => Sd,
-      Yc: () => Wd.Ab,
-      Yd: () => tO,
-      Z: () => Wd.x,
-      _c: () => OO,
-      ab: () => Wd.B,
-      ae: () => pO,
-      bd: () => Wd.Eb,
-      be: () => gd,
-      c: () => RO,
-      cc: () => Vd,
-      d: () => yd,
-      eb: () => Wd.C,
-      ec: () => wd,
-      f: () => Hd,
-      fb: () => td,
-      fd: () => Wd.Fb,
-      fe: () => kd,
-      gb: () => pd,
-      gd: () => Wd.Ib,
-      h: () => NO,
-      hd: () => Wd.Ob,
-      ic: () => QO,
-      ie: () => nd,
-      j: () => xd,
-      jc: () => Yd,
-      kb: () => Wd.G,
-      kd: () => Wd.Rb,
-      l: () => Jd,
-      ld: () => Wd.Vb,
-      mb: () => Wd.I,
-      mc: () => HO,
-      me: () => Gd,
-      nc: () => Fd.j,
-      nd: () => od,
-      ne: () => rd,
-      ob: () => jd,
-      p: () => Wd.k,
-      pb: () => vO,
-      pd: () => Bd,
-      rb: () => Qd,
-      rc: () => Td,
-      re: () => hd,
-      sc: () => KO,
-      t: () => yO,
-      tc: () => Wd.eb,
-      td: () => Wd.Yb,
-      ud: () => Wd.$b,
-      vb: () => Wd.L,
-      vc: () => Wd.fb,
-      ve: () => Ld,
-      w: () => sd,
-      wb: () => Id,
-      wc: () => Wd.ib,
-      wd: () => Wd.fc,
-      x: () => Xd,
-      xc: () => Wd.mb,
-      y: () => Ad,
-      yb: () => WO,
-      ye: () => YO,
-      zd: () => Rd
+  5678: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      Ac: () => eb.vb,
+      B: () => Ew,
+      Bd: () => pb,
+      Be: () => Sb,
+      Cb: () => eb.U,
+      Cc: () => eb.Cb,
+      Cd: () => Bb,
+      Ce: () => sw,
+      Db: () => Mw,
+      E: () => Tb,
+      Fb: () => Hw,
+      Fd: () => Iw,
+      Gb: () => eb.W,
+      Gc: () => Fw,
+      Ge: () => Cb,
+      Hc: () => Uw,
+      I: () => eb.p,
+      Ib: () => Hb.e,
+      Id: () => Qb,
+      Jd: () => qb,
+      L: () => Lb,
+      Lb: () => Kb,
+      Lc: () => Vw,
+      Ld: () => vb,
+      M: () => eb.q,
+      Nb: () => Nb,
+      Nc: () => eb.Eb,
+      Od: () => ub,
+      Q: () => bw,
+      Rb: () => Yb,
+      Rc: () => eb.Fb,
+      Tc: () => eb.Jb,
+      Td: () => ab,
+      U: () => eb.t,
+      Ub: () => Db,
+      V: () => yb,
+      Vc: () => kb,
+      W: () => eb.z,
+      Wb: () => eb.db,
+      Wd: () => Pb,
+      X: () => eb.A,
+      Zb: () => Zb,
+      Zc: () => eb.Ob,
+      _: () => eb.E,
+      _d: () => db,
+      ab: () => Ob,
+      ad: () => eb.Rb,
+      bc: () => Xb,
+      cd: () => eb.Sb,
+      ce: () => Lw,
+      e: () => ew,
+      eb: () => mb,
+      fc: () => lw,
+      gc: () => hb,
+      gd: () => eb.Yb,
+      ge: () => Bw,
+      h: () => Fb,
+      hc: () => tw,
+      i: () => Eb,
+      ib: () => eb.H,
+      ie: () => zb,
+      jd: () => eb.$b,
+      je: () => nb,
+      k: () => Ow,
+      kb: () => eb.L,
+      kc: () => Hb.k,
+      lc: () => sb,
+      mb: () => Gb,
+      mc: () => pw,
+      md: () => eb.cc,
+      nb: () => gw,
+      nd: () => Ub,
+      ne: () => Jb,
+      o: () => rb,
+      oc: () => eb.pb,
+      od: () => Rb,
+      p: () => jb,
+      pb: () => Ib,
+      qb: () => eb.O,
+      qe: () => Wb,
+      r: () => eb.i,
+      rc: () => eb.qb,
+      sd: () => eb.dc,
+      tc: () => eb.tb,
+      te: () => Ab,
+      u: () => Cw,
+      ub: () => ib,
+      vd: () => eb.fc,
+      w: () => cb,
+      wb: () => ww,
+      wc: () => eb.ub,
+      x: () => Vb,
+      xd: () => eb.mc,
+      xe: () => lb,
+      y: () => fb,
+      zb: () => ob
     });
-    var Wd = md(5571),
-      Fd = md(3372);
-    const Rd = Math.round(1e3 / Wd.fc),
-      Xd = 4,
-      Kd = 2;
+    var eb = Mb(5685),
+      Hb = Mb(3470);
+    const pb = Math.round(1e3 / eb.mc),
+      Vb = 4,
+      gb = 2;
 
-    function hd() {
-      return crypto.getRandomValues(new Uint32Array(Kd))
+    function lb() {
+      return crypto.getRandomValues(new Uint32Array(gb))
     }
-    const vd = {
+    const Lb = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      Qd = 16,
-      td = {
+      Ib = 16,
+      Ob = {
         Draws: 1,
         NetAll: 2,
         StopForSends: 4
       },
-      od = 3,
-      Nd = {
+      Ub = 3,
+      tb = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4,
@@ -707,17 +707,17 @@ export const modules = {
         CellLightUnlit: 16
       };
 
-    function qd(dd) {
-      return (dd.nametagsHidden ? Ed.NametagsHidden : 0) | (dd.crouchToggle ? Ed.CrouchToggle : 0) | (dd.bhopDisabled ? Ed.BhopDisabled : 0) | (dd.disableBobbing ? Ed.DisableBobbing : 0) | (null !== dd.ezTowering ? Ed.EzTowering : 0) | ("jump" === dd.ezTowering ? Ed.EzTowerJump : 0) | (dd.ezBridging ? Ed.EzBridging : 0) | (dd.showChunkBorders ? Ed.ShowChunkBorders : 0) | (dd.touchWalk ? Ed.TouchWalk : 0) | (dd.edgeGuard ? Ed.EdgeGuard : 0) | (dd.edgeGuardLong ? Ed.EdgeGuardLong : 0)
+    function Cb(bb) {
+      return (bb.nametagsHidden ? xb.NametagsHidden : 0) | (bb.crouchToggle ? xb.CrouchToggle : 0) | (bb.bhopDisabled ? xb.BhopDisabled : 0) | (bb.disableBobbing ? xb.DisableBobbing : 0) | (null !== bb.ezTowering ? xb.EzTowering : 0) | ("jump" === bb.ezTowering ? xb.EzTowerJump : 0) | (bb.ezBridging ? xb.EzBridging : 0) | (bb.showChunkBorders ? xb.ShowChunkBorders : 0) | (bb.touchWalk ? xb.TouchWalk : 0) | (bb.edgeGuard ? xb.EdgeGuard : 0) | (bb.edgeGuardLong ? xb.EdgeGuardLong : 0)
     }
-    const Hd = {
+    const Eb = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      yd = {
+      Fb = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -725,7 +725,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      bd = {
+      Bb = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -734,7 +734,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      Td = {
+      sb = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -743,25 +743,25 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      pd = 5,
-      Yd = 4294967295;
+      mb = 5,
+      hb = 4294967295;
 
-    function gd(dd) {
-      const Od = {
+    function zb(bb) {
+      const wb = {
         off: 0,
-        lit: Nd.CellLight,
-        all: Nd.CellLight | Nd.CellLightUnlit
-      } [dd.cellLight];
-      return (dd.showFog ? Nd.ShowFog : 0) | (dd.lighting ? Nd.Lighting : 0) | (dd.chunkFade ? Nd.ChunkFade : 0) | Od
+        lit: tb.CellLight,
+        all: tb.CellLight | tb.CellLightUnlit
+      } [bb.cellLight];
+      return (bb.showFog ? tb.ShowFog : 0) | (bb.lighting ? tb.Lighting : 0) | (bb.chunkFade ? tb.ChunkFade : 0) | wb
     }
-    const wd = {
+    const Xb = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      Ed = {
+      xb = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -775,50 +775,50 @@ export const modules = {
         EzTowerJump: 1024,
         All: 2047
       },
-      Jd = {
+      jb = {
         Release: 1,
         KeepTouches: 2
       },
-      Ud = {
+      Kb = {
         Point: 1,
         Stamped: 2
       },
-      xd = {
+      rb = {
         Add: 1,
         Clear: 2
       },
-      Bd = 1,
-      Sd = 8,
-      sd = 16777215,
-      ud = 4,
-      Vd = {
+      Rb = 1,
+      Db = 8,
+      cb = 16777215,
+      Yb = 4,
+      Zb = {
         Resume: 1
       },
-      Ad = {
+      fb = {
         Held: 1
       };
 
-    function rd(dd, Od) {
-      return (dd | Od << 8) >>> 0
+    function Ab(bb, wb) {
+      return (bb | wb << 8) >>> 0
     }
 
-    function Gd(dd) {
-      return 255 & dd
+    function Wb(bb) {
+      return 255 & bb
     }
 
-    function nd(dd) {
-      return dd >>> 8
+    function Jb(bb) {
+      return bb >>> 8
     }
 
-    function Ld(dd) {
-      return dd + 3 & -4
+    function Sb(bb) {
+      return bb + 3 & -4
     }
-    const Pd = 16777216,
-      zd = 20;
-    const cd = 8,
-      jd = 8,
-      Dd = 16777216,
-      ed = {
+    const Nb = 16777216,
+      vb = 20;
+    const Qb = 8,
+      Gb = 8,
+      qb = 16777216,
+      ab = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -826,19 +826,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      Id = {
+      ib = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      ld = 16,
-      Cd = {
+      ub = 16,
+      db = {
         Lost: 0,
         Gone: 1
       },
-      Zd = {
+      Pb = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -846,18 +846,18 @@ export const modules = {
         Retire: 5
       };
 
-    function kd(dd) {
-      return dd === Zd.WorldgenSeed || dd === Zd.Generate
+    function nb(bb) {
+      return bb === Pb.WorldgenSeed || bb === Pb.Generate
     }
-    const fd = 4,
-      Md = 99,
-      dO = {
+    const yb = 4,
+      ob = 99,
+      Tb = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      OO = {
+      kb = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -866,7 +866,7 @@ export const modules = {
         PIPELINE_FAILED: 1,
         RESTORE_LOST: 2
       },
-      mO = {
+      bw = {
         FRAMES: 65535,
         RESTORE_UNHELD: 65536,
         LINKS_RUNNING: 1 << 17,
@@ -876,7 +876,7 @@ export const modules = {
         OLDEST_LINK_MAX: 1023,
         OLDEST_LINK_UNIT_MS: 100
       },
-      WO = {
+      ww = {
         BYTES: 20,
         CHUNKS: 0,
         BYTES_HELD: 1,
@@ -884,40 +884,40 @@ export const modules = {
         REPLACED: 3,
         DROPPED: 4
       },
-      FO = 12,
-      RO = 16,
-      XO = 4,
-      KO = 12,
-      hO = {
+      Mw = 12,
+      ew = 16,
+      Hw = 4,
+      pw = 12,
+      Vw = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      vO = 4,
-      QO = 8,
-      tO = 8,
-      oO = {
+      gw = 4,
+      lw = 8,
+      Lw = 8,
+      Iw = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      NO = {
+      Ow = {
         Crit: 1,
         HitSelf: 2
       },
-      qO = {
+      Uw = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      HO = {
+      tw = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      yO = 12,
-      bO = {
+      Cw = 12,
+      Ew = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -926,56 +926,56 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      TO = 67108864;
+      Fw = 67108864;
 
-    function pO(dd) {
-      for (const [Od, md] of Object.entries(Wd.p))
-        if (md === dd) return Od;
-      return `Unknown${dd}`
+    function Bw(bb) {
+      for (const [wb, Mb] of Object.entries(eb.p))
+        if (Mb === bb) return wb;
+      return `Unknown${bb}`
     }
 
-    function YO(dd) {
+    function sw(bb) {
       return {
-        status: dd[Wd.I.Status],
-        lastError: dd[Wd.I.LastError],
-        lastErrorDetail: dd[Wd.I.LastErrorDetail],
-        errorCount: dd[Wd.I.ErrorCount],
-        frameIndex: dd[Wd.I.FrameIndex],
-        tickIndex: dd[Wd.I.TickIndex],
-        renderPending: dd[Wd.I.RenderPending],
-        firstView: dd[Wd.I.FirstView],
-        chunksCancelled: dd[Wd.I.ChunksCancelled]
+        status: bb[eb.L.Status],
+        lastError: bb[eb.L.LastError],
+        lastErrorDetail: bb[eb.L.LastErrorDetail],
+        errorCount: bb[eb.L.ErrorCount],
+        frameIndex: bb[eb.L.FrameIndex],
+        tickIndex: bb[eb.L.TickIndex],
+        renderPending: bb[eb.L.RenderPending],
+        firstView: bb[eb.L.FirstView],
+        chunksCancelled: bb[eb.L.ChunksCancelled]
       }
     }
   },
-  5565: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Xd,
-      g: () => Rd,
-      i: () => Fd
+  5675: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Vb,
+      e: () => pb,
+      g: () => Hb
     });
-    var Wd = md(5568);
+    var eb = Mb(5678);
 
-    function Fd(dd) {
-      return "none" !== dd
+    function Hb(bb) {
+      return "none" !== bb
     }
 
-    function Rd(dd, Od) {
-      if (!dd) return "none";
-      switch (Od) {
-        case Wd.eb.Drawn:
+    function pb(bb, wb) {
+      if (!bb) return "none";
+      switch (wb) {
+        case eb._.Drawn:
           return "drawn";
-        case Wd.eb.Paced:
+        case eb._.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function Xd(dd) {
-      return "drawn" === dd
+    function Vb(bb) {
+      return "drawn" === bb
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

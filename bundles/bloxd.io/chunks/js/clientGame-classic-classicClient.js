@@ -1,35 +1,35 @@
 export const id = 12;
 export const ids = [12, 13];
 export const modules = {
-  40044: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Xd
+  39736: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Vb
     });
-    var Wd = md(40048);
-    const Fd = [0, 0, 0];
-    class Rd {
-      constructor(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fd;
-        this.pool = dd, this.origin = Od, this.count = 0, this.free = []
+    var eb = Mb(39744);
+    const Hb = [0, 0, 0];
+    class pb {
+      constructor(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hb;
+        this.pool = bb, this.origin = wb, this.count = 0, this.free = []
       }
       take() {
-        var dd;
-        const Od = null !== (dd = this.free.pop()) && void 0 !== dd ? dd : this.count++;
-        return Od >= this.pool.Mt && this.pool.grow(Math.max(2 * this.pool.Mt, Od + 1)), this.hide(Od), Od
+        var bb;
+        const wb = null !== (bb = this.free.pop()) && void 0 !== bb ? bb : this.count++;
+        return wb >= this.pool.qO && this.pool.grow(Math.max(2 * this.pool.qO, wb + 1)), this.hide(wb), wb
       }
-      release(dd) {
-        this.hide(dd), this.free.push(dd)
+      release(bb) {
+        this.hide(bb), this.free.push(bb)
       }
-      write(dd, Od, md, Fd) {
+      write(bb, wb, Mb, Hb) {
         const {
-          records: Rd
+          records: pb
         } = this.pool, {
-          origin: Xd
-        } = this, Kd = dd * Wd.b;
-        Rd[Kd] = Od - Xd[0], Rd[Kd + 1] = md - Xd[1], Rd[Kd + 2] = Fd - Xd[2], Rd[Kd + Wd.f] = 0, this.pool.markDirty(dd)
+          origin: Vb
+        } = this, gb = bb * eb.e;
+        pb[gb] = wb - Vb[0], pb[gb + 1] = Mb - Vb[1], pb[gb + 2] = Hb - Vb[2], pb[gb + eb.h] = 0, this.pool.markDirty(bb)
       }
-      hide(dd) {
-        this.pool.records[dd * Wd.b + Wd.f] = 1, this.pool.markDirty(dd)
+      hide(bb) {
+        this.pool.records[bb * eb.e + eb.h] = 1, this.pool.markDirty(bb)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,172 +38,172 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class Xd {
-      constructor(dd, Od, md) {
-        this.api = dd, this.model = Od, this.initialCapacity = md, this.kinds = new Map, this.origin = [0, 0, 0]
+    class Vb {
+      constructor(bb, wb, Mb) {
+        this.api = bb, this.model = wb, this.initialCapacity = Mb, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(dd) {
-        let Od = this.kinds.get(dd);
-        if (void 0 === Od) {
-          const md = this.api.createInstancePool({
+      kindOf(bb) {
+        let wb = this.kinds.get(bb);
+        if (void 0 === wb) {
+          const Mb = this.api.createInstancePool({
             ...this.model,
-            item: dd
+            item: bb
           }, this.initialCapacity);
-          null === md || void 0 === md || md.setOrigin(this.origin[0], this.origin[1], this.origin[2]), Od = md && new Rd(md, this.origin), this.kinds.set(dd, Od)
+          null === Mb || void 0 === Mb || Mb.setOrigin(this.origin[0], this.origin[1], this.origin[2]), wb = Mb && new pb(Mb, this.origin), this.kinds.set(bb, wb)
         }
-        return Od
+        return wb
       }
-      follow(dd) {
+      follow(bb) {
         const {
-          origin: Od
+          origin: wb
         } = this;
-        if (Math.abs(dd[0] - Od[0]) <= 512 && Math.abs(dd[1] - Od[1]) <= 512 && Math.abs(dd[2] - Od[2]) <= 512) return !1;
-        Od[0] = Math.floor(dd[0]), Od[1] = Math.floor(dd[1]), Od[2] = Math.floor(dd[2]);
-        for (const md of this.kinds.values()) null === md || void 0 === md || md.pool.setOrigin(Od[0], Od[1], Od[2]);
+        if (Math.abs(bb[0] - wb[0]) <= 512 && Math.abs(bb[1] - wb[1]) <= 512 && Math.abs(bb[2] - wb[2]) <= 512) return !1;
+        wb[0] = Math.floor(bb[0]), wb[1] = Math.floor(bb[1]), wb[2] = Math.floor(bb[2]);
+        for (const Mb of this.kinds.values()) null === Mb || void 0 === Mb || Mb.pool.setOrigin(wb[0], wb[1], wb[2]);
         return !0
       }
       commit() {
-        for (const dd of this.kinds.values()) null === dd || void 0 === dd || dd.commit()
+        for (const bb of this.kinds.values()) null === bb || void 0 === bb || bb.commit()
       }
       dispose() {
-        for (const dd of this.kinds.values()) null === dd || void 0 === dd || dd.dispose();
+        for (const bb of this.kinds.values()) null === bb || void 0 === bb || bb.dispose();
         this.kinds.clear()
       }
     }
   },
-  40879: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      default: () => od
+  40640: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      default: () => Ub
     });
-    const Wd = "Pipe",
-      Fd = "Extractor Pipe",
-      Rd = (new Set([Wd, Fd]), new Set([Wd, Fd, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var Xd = md(40044);
-    class Kd {
-      constructor(dd) {
-        this.api = dd, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new Xd.c(dd, {
+    const eb = "Pipe",
+      Hb = "Extractor Pipe",
+      pb = (new Set([eb, Hb]), new Set([eb, Hb, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var Vb = Mb(39736);
+    class gb {
+      constructor(bb) {
+        this.api = bb, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new Vb.e(bb, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(dd) {
-        if (dd.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${dd.id} with < 2 waypoints`);
-        const Od = this.kinds.kindOf(dd.itemName);
-        if (!Od) return void(this.unshown.has(dd.itemName) || (this.unshown.add(dd.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${dd.itemName}"`)));
-        this.remove(dd.id);
-        const md = function(dd) {
-          return (dd.waypoints.length - 1) / 2 * 1e3
-        }(dd);
-        if (Date.now() - dd.startTimeMs > md + 2e3) return;
-        const Wd = Od.take();
-        this.items.set(dd.id, {
-          kind: Od,
-          slot: Wd,
-          waypoints: dd.waypoints,
-          startTimeMs: dd.startTimeMs,
-          durationMs: md
+      onSpawn(bb) {
+        if (bb.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${bb.id} with < 2 waypoints`);
+        const wb = this.kinds.kindOf(bb.itemName);
+        if (!wb) return void(this.unshown.has(bb.itemName) || (this.unshown.add(bb.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${bb.itemName}"`)));
+        this.remove(bb.id);
+        const Mb = function(bb) {
+          return (bb.waypoints.length - 1) / 2 * 1e3
+        }(bb);
+        if (Date.now() - bb.startTimeMs > Mb + 2e3) return;
+        const eb = wb.take();
+        this.items.set(bb.id, {
+          kind: wb,
+          slot: eb,
+          waypoints: bb.waypoints,
+          startTimeMs: bb.startTimeMs,
+          durationMs: Mb
         })
       }
-      onEnd(dd) {
-        this.remove(dd.id)
+      onEnd(bb) {
+        this.remove(bb.id)
       }
-      FY() {
+      Wm() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const dd = Date.now();
+        const bb = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [Od, md] of this.items) dd - md.startTimeMs > md.durationMs + 2e3 ? this.remove(Od) : this.write(md, dd);
+        for (const [wb, Mb] of this.items) bb - Mb.startTimeMs > Mb.durationMs + 2e3 ? this.remove(wb) : this.write(Mb, bb);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(dd) {
-        const Od = this.items.get(dd);
-        Od && (Od.kind.release(Od.slot), this.items.delete(dd))
+      remove(bb) {
+        const wb = this.items.get(bb);
+        wb && (wb.kind.release(wb.slot), this.items.delete(bb))
       }
-      write(dd, Od) {
-        const md = dd.waypoints.length - 1;
-        let Wd = (Od - dd.startTimeMs) / dd.durationMs;
-        Wd < 0 ? Wd = 0 : Wd > 1 && (Wd = 1);
-        const Fd = Wd * md;
-        let Rd = Math.floor(Fd);
-        Rd >= md && (Rd = md - 1);
-        const Xd = Fd - Rd,
-          [Kd, hd, vd] = dd.waypoints[Rd],
-          [Qd, td, od] = dd.waypoints[Rd + 1];
-        dd.kind.write(dd.slot, Kd + (Qd - Kd) * Xd + .5, hd + (td - hd) * Xd + .5, vd + (od - vd) * Xd + .5)
+      write(bb, wb) {
+        const Mb = bb.waypoints.length - 1;
+        let eb = (wb - bb.startTimeMs) / bb.durationMs;
+        eb < 0 ? eb = 0 : eb > 1 && (eb = 1);
+        const Hb = eb * Mb;
+        let pb = Math.floor(Hb);
+        pb >= Mb && (pb = Mb - 1);
+        const Vb = Hb - pb,
+          [gb, lb, Lb] = bb.waypoints[pb],
+          [Ib, Ob, Ub] = bb.waypoints[pb + 1];
+        bb.kind.write(bb.slot, gb + (Ib - gb) * Vb + .5, lb + (Ob - lb) * Vb + .5, Lb + (Ub - Lb) * Vb + .5)
       }
     }
-    const hd = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      vd = new Set(hd);
-    class Qd {
+    const lb = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      Lb = new Set(lb);
+    class Ib {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(dd) {
-        this.api = dd, this.pipeVisualizer = new Kd(dd)
+      onCreate(bb) {
+        this.api = bb, this.pipeVisualizer = new gb(bb)
       }
       onClose() {
-        var dd;
-        null === (dd = this.pipeVisualizer) || void 0 === dd || dd.dispose(), this.pipeVisualizer = null
+        var bb;
+        null === (bb = this.pipeVisualizer) || void 0 === bb || bb.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(dd, Od) {
+      onReceivedMessageFromServer(bb, wb) {
         const {
-          pipeVisualizer: md
+          pipeVisualizer: Mb
         } = this;
-        if (md)
-          if ("pipeItemSpawnBatch" === dd)
-            for (const Wd of Od.items) md.onSpawn(Wd);
-          else if ("pipeItemEndBatch" === dd)
-          for (const Wd of Od.items) md.onEnd(Wd)
+        if (Mb)
+          if ("pipeItemSpawnBatch" === bb)
+            for (const eb of wb.items) Mb.onSpawn(eb);
+          else if ("pipeItemEndBatch" === bb)
+          for (const eb of wb.items) Mb.onEnd(eb)
       }
-      FY() {
-        var dd;
-        null === (dd = this.pipeVisualizer) || void 0 === dd || dd.FY()
+      Wm() {
+        var bb;
+        null === (bb = this.pipeVisualizer) || void 0 === bb || bb.Wm()
       }
-      onPlayerAttemptAltAction(dd, Od, md, Wd, Fd, Xd) {
-        var Kd;
-        if (!vd.has(this.api.getMetaInfo(Fd).rootName)) return;
-        const hd = null === (Kd = this.api.NWd(dd)) || void 0 === Kd ? void 0 : Kd.name;
-        return void 0 !== hd && Rd.has(hd) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(bb, wb, Mb, eb, Hb, Vb) {
+        var gb;
+        if (!Lb.has(this.api.getMetaInfo(Hb).rootName)) return;
+        const lb = null === (gb = this.api.Leb(bb)) || void 0 === gb ? void 0 : gb.name;
+        return void 0 !== lb && pb.has(lb) ? "preventAction" : void 0
       }
     }
-    var td = md(40884);
-    const od = function(dd, Od, md) {
-      if ("smp2" === md) return (0, td.makeSmp2ClientGame)();
-      if ("survivalFactory" !== md && "survivalFactoryPersistent" !== md) {
+    var Ob = Mb(40645);
+    const Ub = function(bb, wb, Mb) {
+      if ("smp2" === Mb) return (0, Ob.makeSmp2ClientGame)();
+      if ("survivalFactory" !== Mb && "survivalFactoryPersistent" !== Mb) {
         return {}
       }
-      const Wd = new Qd;
+      const eb = new Ib;
       return {
-        onCreate: dd => {
-          Wd.onCreate(dd)
+        onCreate: bb => {
+          eb.onCreate(bb)
         },
         onClose: () => {
-          Wd.onClose()
+          eb.onClose()
         },
-        onReceivedMessageFromServer: (dd, Od) => {
-          Wd.onReceivedMessageFromServer(dd, Od)
+        onReceivedMessageFromServer: (bb, wb) => {
+          eb.onReceivedMessageFromServer(bb, wb)
         },
-        Et: () => {
-          Wd.FY()
+        sO: () => {
+          eb.Wm()
         },
-        altVetoBlocks: hd,
-        onPlayerAttemptAltAction: (dd, Od, md, Fd, Rd, Xd) => Wd.onPlayerAttemptAltAction(dd, Od, md, Fd, Rd, Xd)
+        altVetoBlocks: lb,
+        onPlayerAttemptAltAction: (bb, wb, Mb, Hb, pb, Vb) => eb.onPlayerAttemptAltAction(bb, wb, Mb, Hb, pb, Vb)
       }
     }
   },
-  40887: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      c: () => Xd,
-      d: () => Kd
+  40653: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb,
+      g: () => Vb,
+      h: () => gb
     });
-    var Wd = md(40894),
-      Fd = md(32);
-    const Rd = "smp2OnboardingView",
-      Xd = 5e3;
-    class Kd {
+    var eb = Mb(40661),
+      Hb = Mb(29);
+    const pb = "smp2OnboardingView",
+      Vb = 5e3;
+    class gb {
       constructor() {
         this.view = {
           path: null,
@@ -213,121 +213,121 @@ export const modules = {
       get() {
         return this.view
       }
-      receivePath(dd) {
-        let [Od, md, Fd] = dd;
-        const Rd = Wd.e[Od];
-        if (void 0 === Rd) return;
+      receivePath(bb) {
+        let [wb, Mb, Hb] = bb;
+        const pb = eb.g[wb];
+        if (void 0 === pb) return;
         const {
-          title: Xd,
-          steps: Kd
-        } = Wd.b[Rd];
-        this.lQ({
+          title: Vb,
+          steps: gb
+        } = eb.d[pb];
+        this.iI({
           ...this.view,
-          path: md < Kd.length ? {
-            title: Xd,
-            steps: Kd,
-            step: md,
-            progress: Fd
+          path: Mb < gb.length ? {
+            title: Vb,
+            steps: gb,
+            step: Mb,
+            progress: Hb
           } : null
         })
       }
-      receiveReward(dd) {
-        let [Od, md] = dd;
-        const Fd = Wd.f[Od];
-        if (void 0 !== Fd && !this.seenRewardIds.has(md)) {
-          var Rd;
-          if (this.seenRewardIds.add(md), this.queued.push({
-              ...Fd,
-              id: md
-            }), null === this.view.reward) this.lQ({
+      receiveReward(bb) {
+        let [wb, Mb] = bb;
+        const Hb = eb.k[wb];
+        if (void 0 !== Hb && !this.seenRewardIds.has(Mb)) {
+          var pb;
+          if (this.seenRewardIds.add(Mb), this.queued.push({
+              ...Hb,
+              id: Mb
+            }), null === this.view.reward) this.iI({
             ...this.view,
-            reward: null !== (Rd = this.queued.shift()) && void 0 !== Rd ? Rd : null
+            reward: null !== (pb = this.queued.shift()) && void 0 !== pb ? pb : null
           });
           this.runTimers()
         }
       }
-      setShowing(dd) {
-        this.showing = dd, this.runTimers()
+      setShowing(bb) {
+        this.showing = bb, this.runTimers()
       }
       dispose() {
         this.clearTimers()
       }
       runTimers() {
         this.showing ? this.view.reward && null === this.rewardTimer && (this.rewardTimer = setTimeout((() => {
-          var dd;
-          this.rewardTimer = null, this.lQ({
+          var bb;
+          this.rewardTimer = null, this.iI({
             ...this.view,
-            reward: null !== (dd = this.queued.shift()) && void 0 !== dd ? dd : null
+            reward: null !== (bb = this.queued.shift()) && void 0 !== bb ? bb : null
           }), this.runTimers()
-        }), Xd)) : this.clearTimers()
+        }), Vb)) : this.clearTimers()
       }
       clearTimers() {
         null !== this.rewardTimer && (clearTimeout(this.rewardTimer), this.rewardTimer = null)
       }
-      lQ(dd) {
-        this.view = dd, Fd.j.lQ(Rd, dd)
+      iI(bb) {
+        this.view = bb, Hb.k.iI(pb, bb)
       }
     }
   },
-  40884: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      makeSmp2ClientGame: () => td
+  40645: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      makeSmp2ClientGame: () => Ob
     });
-    var Wd = md(66);
-    const Fd = "smp2FirstSpawn",
-      Rd = "smp2Path",
-      Xd = "smp2Reward";
-    var Kd = md(1796),
-      hd = md(3697),
-      vd = md(3428),
-      Qd = md(40887);
+    var eb = Mb(64);
+    const Hb = "smp2FirstSpawn",
+      pb = "smp2Path",
+      Vb = "smp2Reward";
+    var gb = Mb(1861),
+      lb = Mb(3822),
+      Lb = Mb(3531),
+      Ib = Mb(40653);
 
-    function td() {
-      let dd = !1,
-        Od = !1,
-        td = "loading",
-        od = !1;
-      const Nd = () => {
-          !dd || Od || od || "loading" === td || (Od = !0, (0, Kd.g)({
+    function Ob() {
+      let bb = !1,
+        wb = !1,
+        Ob = "loading",
+        Ub = !1;
+      const tb = () => {
+          !bb || wb || Ub || "loading" === Ob || (wb = !0, (0, gb.g)({
             id: "smp2.first_spawn",
-            value: td
+            value: Ob
           }))
         },
-        qd = new Qd.d;
-      let Hd = null;
+        Cb = new Ib.h;
+      let Eb = null;
       return {
         onCreate: () => {
-          md.e(182).then((() => md(54177))).then((dd => {
+          Mb.e(182).then((() => Mb(53979))).then((bb => {
             let {
-              Smp2OnboardingUi: Od
-            } = dd;
-            od || (Hd = (0, vd.F)((0, Wd.createElement)(Od, {
-              store: qd
-            })), td = "cards")
-          })).catch((dd => {
-            od || (td = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, hd.f)(dd) ? " (chunk load failed)" : ""), dd))
-          })).finally(Nd)
+              Smp2OnboardingUi: wb
+            } = bb;
+            Ub || (Eb = (0, Lb.J)((0, eb.createElement)(wb, {
+              store: Cb
+            })), Ob = "cards")
+          })).catch((bb => {
+            Ub || (Ob = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, lb.e)(bb) ? " (chunk load failed)" : ""), bb))
+          })).finally(tb)
         },
         onClose: () => {
-          var dd;
-          "loading" === td && (td = "no_cards"), Nd(), od = !0, null === (dd = Hd) || void 0 === dd || dd(), qd.dispose()
+          var bb;
+          "loading" === Ob && (Ob = "no_cards"), tb(), Ub = !0, null === (bb = Eb) || void 0 === bb || bb(), Cb.dispose()
         },
-        onReceivedMessageFromServer: (Od, md) => {
-          Od === Fd ? (dd = !0, Nd()) : Od === Rd ? qd.receivePath(md) : Od === Xd && qd.receiveReward(md)
+        onReceivedMessageFromServer: (wb, Mb) => {
+          wb === Hb ? (bb = !0, tb()) : wb === pb ? Cb.receivePath(Mb) : wb === Vb && Cb.receiveReward(Mb)
         }
       }
     }
   },
-  40894: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      e: () => Wd,
-      f: () => Kd,
-      j: () => Xd
+  40661: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => pb,
+      g: () => eb,
+      k: () => gb,
+      o: () => Vb
     });
-    const Wd = ["starter_path", "portal_first"],
-      Fd = "Iron Pickaxe",
-      Rd = {
+    const eb = ["starter_path", "portal_first"],
+      Hb = "Iron Pickaxe",
+      pb = {
         starter_path: {
           title: "Starter Path",
           steps: [{
@@ -377,10 +377,10 @@ export const modules = {
         }
       };
 
-    function Xd(dd) {
-      return "logs" === dd.goal ? dd.amount : 1
+    function Vb(bb) {
+      return "logs" === bb.goal ? bb.amount : 1
     }
-    const Kd = [{
+    const gb = [{
       title: "Starter Path done!",
       text: "+100 gold. The world is yours.",
       icon: "Gold Coin"
@@ -390,19 +390,19 @@ export const modules = {
       icon: "Wood Pickaxe"
     }, {
       title: "Come back tomorrow",
-      text: `A free ${Fd} is waiting for you`,
-      icon: Fd
+      text: `A free ${Hb} is waiting for you`,
+      icon: Hb
     }, {
       title: "Welcome back!",
-      text: `Here's your ${Fd}`,
-      icon: Fd
+      text: `Here's your ${Hb}`,
+      icon: Hb
     }, {
       title: "Nice!",
       text: "Keep exploring: the hub's traders buy what you find",
       icon: "Maple Log"
     }];
-    Wd.flatMap((dd => [...Rd[dd].steps.map((Od => `${dd}:${Od.key}`)), `${dd}:done`]))
+    eb.flatMap((bb => [...pb[bb].steps.map((wb => `${bb}:${wb.key}`)), `${bb}:done`]))
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

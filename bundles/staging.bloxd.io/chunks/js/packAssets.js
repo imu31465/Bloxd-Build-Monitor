@@ -1,291 +1,291 @@
 export const id = 53;
 export const ids = [53, 233];
 export const modules = {
-  35647: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      packDisplayName: () => Hd,
-      packModelMessage: () => yd,
-      packModelSummary: () => Td,
-      refusedPackModels: () => bd
+  35416: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      packDisplayName: () => Eb,
+      packModelMessage: () => Fb,
+      packModelSummary: () => sb,
+      refusedPackModels: () => Bb
     });
-    var Wd = md(35653),
-      Fd = md(35662);
-    const Rd = "DRACO",
-      Xd = 0,
-      Kd = 1,
-      hd = 0,
-      vd = 1,
-      Qd = 32768;
+    var eb = Mb(35420),
+      Hb = Mb(35423);
+    const pb = "DRACO",
+      Vb = 0,
+      gb = 1,
+      lb = 0,
+      Lb = 1,
+      Ib = 32768;
 
-    function td(dd) {
-      const Od = new DataView(dd.buffer, dd.byteOffset, dd.byteLength);
-      let md = 0;
-      const Wd = () => {
-          if (md >= dd.byteLength) throw new RangeError("past the stream");
-          return dd[md++]
+    function Ob(bb) {
+      const wb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
+      let Mb = 0;
+      const eb = () => {
+          if (Mb >= bb.byteLength) throw new RangeError("past the stream");
+          return bb[Mb++]
         },
-        Fd = () => {
-          if (md + 4 > dd.byteLength) throw new RangeError("past the stream");
-          const Wd = Od.getUint32(md, !0);
-          return md += 4, Wd
+        Hb = () => {
+          if (Mb + 4 > bb.byteLength) throw new RangeError("past the stream");
+          const eb = wb.getUint32(Mb, !0);
+          return Mb += 4, eb
         },
-        td = () => {
-          let dd = 0;
-          for (let Od = 0; Od < 35; Od += 7) {
-            const md = Wd();
-            if (dd += (127 & md) * 2 ** Od, 0 === (128 & md)) return dd
+        Ob = () => {
+          let bb = 0;
+          for (let wb = 0; wb < 35; wb += 7) {
+            const Mb = eb();
+            if (bb += (127 & Mb) * 2 ** wb, 0 === (128 & Mb)) return bb
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let dd = 0; dd < Rd.length; dd++)
-          if (Wd() !== Rd.charCodeAt(dd)) return null;
-        const Od = Wd(),
-          od = Wd(),
-          Nd = Wd(),
-          qd = Wd(),
-          Hd = Wd() | Wd() << 8;
-        if (2 !== Od) return null;
-        0 !== (Hd & Qd) && function(dd, Od, md) {
-          const Wd = () => {
-              Od(md())
+        for (let bb = 0; bb < pb.length; bb++)
+          if (eb() !== pb.charCodeAt(bb)) return null;
+        const wb = eb(),
+          Ub = eb(),
+          tb = eb(),
+          Cb = eb(),
+          Eb = eb() | eb() << 8;
+        if (2 !== wb) return null;
+        0 !== (Eb & Ib) && function(bb, wb, Mb) {
+          const eb = () => {
+              wb(Mb())
             },
-            Fd = () => {
-              let md = 1,
-                Fd = !0;
-              for (; md > 0;) {
-                md--, Fd || Wd(), Fd = !1;
-                const Rd = dd();
-                for (let md = 0; md < Rd; md++) Wd(), Od(dd());
-                md += dd()
+            Hb = () => {
+              let Mb = 1,
+                Hb = !0;
+              for (; Mb > 0;) {
+                Mb--, Hb || eb(), Hb = !1;
+                const pb = bb();
+                for (let Mb = 0; Mb < pb; Mb++) eb(), wb(bb());
+                Mb += bb()
               }
             },
-            Rd = dd();
-          for (let Xd = 0; Xd < Rd; Xd++) dd(), Fd();
-          Fd()
-        }(td, (Od => {
-          if (md + Od > dd.byteLength) throw new RangeError("past the stream");
-          md += Od
-        }), Wd);
-        const yd = od < 2 ? Fd : td;
-        if (Nd === Xd) return {
+            pb = bb();
+          for (let Vb = 0; Vb < pb; Vb++) bb(), Hb();
+          Hb()
+        }(Ob, (wb => {
+          if (Mb + wb > bb.byteLength) throw new RangeError("past the stream");
+          Mb += wb
+        }), eb);
+        const Fb = Ub < 2 ? Hb : Ob;
+        if (tb === Vb) return {
           faces: 0,
-          vertices: Fd(),
-          minor: od
+          vertices: Hb(),
+          minor: Ub
         };
-        if (Nd !== Kd) return null;
-        if (qd === hd) {
+        if (tb !== gb) return null;
+        if (Cb === lb) {
           return {
-            faces: yd(),
-            vertices: yd(),
-            minor: od
+            faces: Fb(),
+            vertices: Fb(),
+            minor: Ub
           }
         }
-        if (qd !== vd) return null;
-        Wd(), od < 2 && td();
-        const bd = td();
+        if (Cb !== Lb) return null;
+        eb(), Ub < 2 && Ob();
+        const Bb = Ob();
         return {
-          faces: td(),
-          vertices: bd,
-          minor: od
+          faces: Ob(),
+          vertices: Bb,
+          minor: Ub
         }
       } catch {
         return null
       }
     }
 
-    function od(dd, Od, md) {
-      var Wd, Fd;
-      if (null === (Wd = null === (Fd = dd.extensionsUsed) || void 0 === Fd ? void 0 : Fd.includes("KHR_draco_mesh_compression")) || void 0 === Wd || !Wd) return null;
-      for (const Hd of null !== (Rd = dd.meshes) && void 0 !== Rd ? Rd : []) {
-        var Rd;
-        for (const Wd of Hd.primitives) {
-          var Xd, Kd, hd, vd, Qd, od;
-          const Fd = null === (Xd = Wd.extensions) || void 0 === Xd ? void 0 : Xd.KHR_draco_mesh_compression;
-          if ("object" !== typeof Fd || null === Fd) continue;
-          const Rd = null === (Kd = dd.bufferViews) || void 0 === Kd ? void 0 : Kd[Fd.bufferView];
-          if (null === Od || void 0 === Rd) return Nd;
-          const Hd = null !== (hd = Rd.byteOffset) && void 0 !== hd ? hd : 0,
-            yd = td(Od.subarray(Hd, Hd + Rd.byteLength));
-          if (null === yd && !md) continue;
-          const bd = null !== (vd = dd.accessors) && void 0 !== vd ? vd : [],
-            Td = null === (Qd = bd[Wd.attributes.POSITION]) || void 0 === Qd ? void 0 : Qd.count,
-            pd = void 0 === Wd.indices ? 0 : null === (od = bd[Wd.indices]) || void 0 === od ? void 0 : od.count;
-          if (null === yd || void 0 === Td || void 0 === pd || 3 * yd.faces !== pd || yd.vertices > Td) return Nd;
-          if (md && yd.minor < 2) return qd
+    function Ub(bb, wb, Mb) {
+      var eb, Hb;
+      if (null === (eb = null === (Hb = bb.extensionsUsed) || void 0 === Hb ? void 0 : Hb.includes("KHR_draco_mesh_compression")) || void 0 === eb || !eb) return null;
+      for (const Eb of null !== (pb = bb.meshes) && void 0 !== pb ? pb : []) {
+        var pb;
+        for (const eb of Eb.primitives) {
+          var Vb, gb, lb, Lb, Ib, Ub;
+          const Hb = null === (Vb = eb.extensions) || void 0 === Vb ? void 0 : Vb.KHR_draco_mesh_compression;
+          if ("object" !== typeof Hb || null === Hb) continue;
+          const pb = null === (gb = bb.bufferViews) || void 0 === gb ? void 0 : gb[Hb.bufferView];
+          if (null === wb || void 0 === pb) return tb;
+          const Eb = null !== (lb = pb.byteOffset) && void 0 !== lb ? lb : 0,
+            Fb = Ob(wb.subarray(Eb, Eb + pb.byteLength));
+          if (null === Fb && !Mb) continue;
+          const Bb = null !== (Lb = bb.accessors) && void 0 !== Lb ? Lb : [],
+            sb = null === (Ib = Bb[eb.attributes.POSITION]) || void 0 === Ib ? void 0 : Ib.count,
+            mb = void 0 === eb.indices ? 0 : null === (Ub = Bb[eb.indices]) || void 0 === Ub ? void 0 : Ub.count;
+          if (null === Fb || void 0 === sb || void 0 === mb || 3 * Fb.faces !== mb || Fb.vertices > sb) return tb;
+          if (Mb && Fb.minor < 2) return Cb
         }
       }
       return null
     }
-    const Nd = "has a Draco stream whose counts don't match its accessors",
-      qd = "has a Draco stream too old to decode: export it again";
+    const tb = "has a Draco stream whose counts don't match its accessors",
+      Cb = "has a Draco stream too old to decode: export it again";
 
-    function Hd(dd) {
-      var Od;
-      return null !== (Od = dd.name) && void 0 !== Od ? Od : dd.fromFolderName || dd.id
+    function Eb(bb) {
+      var wb;
+      return null !== (wb = bb.name) && void 0 !== wb ? wb : bb.fromFolderName || bb.id
     }
 
-    function yd(dd, Od, md) {
-      return `Texture pack "${dd}": model "${Od}" was not loaded because it ${md}. The default model is used instead.`
+    function Fb(bb, wb, Mb) {
+      return `Texture pack "${bb}": model "${wb}" was not loaded because it ${Mb}. The default model is used instead.`
     }
 
-    function bd(dd, Od, md) {
+    function Bb(bb, wb, Mb) {
       let {
-        strictDraco: Rd = !1
+        strictDraco: pb = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Xd = {};
-      for (const [Kd, hd] of Object.entries(Od)) {
-        let Od;
-        if (hd.startsWith("data:")) try {
-          const dd = new Uint8Array((0, Fd.n)(hd));
-          if (Od = (0, Wd.e)(dd), null === Od) {
+      const Vb = {};
+      for (const [gb, lb] of Object.entries(wb)) {
+        let wb;
+        if (lb.startsWith("data:")) try {
+          const bb = new Uint8Array((0, Hb.u)(lb));
+          if (wb = (0, eb.e)(bb), null === wb) {
             const {
-              json: md,
-              bin: Wd
-            } = (0, Fd.v)(dd);
-            Od = od(md, Wd, Rd)
+              json: Mb,
+              bin: eb
+            } = (0, Hb.C)(bb);
+            wb = Ub(Mb, eb, pb)
           }
         } catch {
-          Od = "is not a binary glTF 2.0 file"
-        } else Od = "loads data from outside the file";
-        Od && (Xd[Kd] = Od, md && console.warn(yd(dd, Kd, Od)))
+          wb = "is not a binary glTF 2.0 file"
+        } else wb = "loads data from outside the file";
+        wb && (Vb[gb] = wb, Mb && console.warn(Fb(bb, gb, wb)))
       }
-      return Xd
+      return Vb
     }
 
-    function Td(dd, Od) {
-      const md = Object.keys(Od);
-      if (0 === md.length) return null;
-      if (1 === md.length) return yd(dd, md[0], Od[md[0]]);
-      const Wd = md.map((dd => `"${dd}" ${Od[dd]}`)).join("; ");
-      return `Texture pack "${dd}": ${md.length} models were not loaded (${Wd}). The default models are used instead.`
+    function sb(bb, wb) {
+      const Mb = Object.keys(wb);
+      if (0 === Mb.length) return null;
+      if (1 === Mb.length) return Fb(bb, Mb[0], wb[Mb[0]]);
+      const eb = Mb.map((bb => `"${bb}" ${wb[bb]}`)).join("; ");
+      return `Texture pack "${bb}": ${Mb.length} models were not loaded (${eb}). The default models are used instead.`
     }
   },
-  64983: (dd, Od, md) => {
-    md.d(Od, {
-      packAssets: () => bd
+  64631: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      packAssets: () => Bb
     });
-    var Wd = md(2337),
-      Fd = md(2319),
-      Rd = md(35647),
-      Xd = md(4427),
-      Kd = md(4458);
+    var eb = Mb(2380),
+      Hb = Mb(2364),
+      pb = Mb(35416),
+      Vb = Mb(4581),
+      gb = Mb(4604);
 
-    function hd(dd, Od, md, Wd) {
-      const Fd = `${(0,Xd.d)(dd,Od)}|sheets${md}`;
-      return Wd === Kd.c ? Fd : `${Fd}|layers${Wd}`
+    function lb(bb, wb, Mb, eb) {
+      const Hb = `${(0,Vb.d)(bb,wb)}|sheets${Mb}`;
+      return eb === gb.d ? Hb : `${Hb}|layers${eb}`
     }
-    var vd = md(4464),
-      Qd = md(4400),
-      td = md(4385),
-      od = md(4433);
-    var Nd = md(55093);
-    const qd = 256;
-    let Hd = null,
-      yd = null;
+    var Lb = Mb(4607),
+      Ib = Mb(4551),
+      Ob = Mb(4539),
+      Ub = Mb(4587);
+    var tb = Mb(54897);
+    const Cb = 256;
+    let Eb = null,
+      Fb = null;
 
-    function bd(dd) {
-      var Od;
-      let md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Kd.c;
-      if ((null === (Od = Hd) || void 0 === Od ? void 0 : Od.pack) === dd.pack && Hd.maxLayerWidth === md) return Hd.assets;
-      const bd = (0, Nd.g)(dd.pack, (0, Nd.i)(dd));
-      if (null === bd || !(0, Fd.c)(bd)) return Promise.resolve(null);
-      const pd = async function(dd, Od, md) {
-        var Nd;
-        const Hd = null !== (Nd = dd.textureOverrides) && void 0 !== Nd ? Nd : {},
+    function Bb(bb) {
+      var wb;
+      let Mb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gb.d;
+      if ((null === (wb = Eb) || void 0 === wb ? void 0 : wb.pack) === bb.pack && Eb.maxLayerWidth === Mb) return Eb.assets;
+      const Bb = (0, tb.f)(bb.pack, (0, tb.l)(bb));
+      if (null === Bb || !(0, Hb.f)(Bb)) return Promise.resolve(null);
+      const mb = async function(bb, wb, Mb) {
+        var tb;
+        const Eb = null !== (tb = bb.textureOverrides) && void 0 !== tb ? tb : {},
           {
-            id: bd,
-            version: pd
-          } = dd.metaData,
-          Yd = Od && bd !== Wd.n.CUSTOM,
-          gd = {};
-        Yd && (yd = gd);
-        let wd, Ed, Jd = Yd ? await async function(dd, Od, md, Wd) {
-          const Fd = hd(dd, Od, md, Kd.c),
-            Rd = hd(dd, Od, md, Wd),
-            vd = await (0, Xd.i)((dd => dd === Fd || dd === Rd));
-          return null !== vd && (Wd === Kd.c || vd.blockAtlasWidth <= Wd) ? vd : null
-        }(bd, pd, qd, md): null;
-        if (null === Jd) {
+            id: Bb,
+            version: mb
+          } = bb.metaData,
+          hb = wb && Bb !== eb.t.CUSTOM,
+          zb = {};
+        hb && (Fb = zb);
+        let Xb, xb, jb = hb ? await async function(bb, wb, Mb, eb) {
+          const Hb = lb(bb, wb, Mb, gb.d),
+            pb = lb(bb, wb, Mb, eb),
+            Lb = await (0, Vb.i)((bb => bb === Hb || bb === pb));
+          return null !== Lb && (eb === gb.d || Lb.blockAtlasWidth <= eb) ? Lb : null
+        }(Bb, mb, Cb, Mb): null;
+        if (null === jb) {
           const {
-            blockMetadata: dd,
-            getDefaultTexture: Od,
-            textureNameToIndex: Rd
-          } = await (0, Fd.j)(), Kd = (0, Qd.b)(dd, ((dd, md) => ({
-            url: Td(Hd, Od, dd, "block" === md ? td.c.BLOCK : td.c.ITEM)
-          }))), vd = await
-          function(dd, Od, md, Wd, Fd, Rd) {
-            return (0, od.d)((Xd => Xd.WasmTextureWorker.generateRequired(dd, Od, md, Wd, Fd, Rd)))
-          }(dd, Rd, Kd, bd === Wd.d, md, qd), Nd = vd.assets;
-          Jd = {
-            ...Nd,
+            blockMetadata: bb,
+            getDefaultTexture: wb,
+            textureNameToIndex: pb
+          } = await (0, Hb.m)(), gb = (0, Ib.e)(bb, ((bb, Mb) => ({
+            url: sb(Eb, wb, bb, "block" === Mb ? Ob.d.BLOCK : Ob.d.ITEM)
+          }))), Lb = await
+          function(bb, wb, Mb, eb, Hb, pb) {
+            return (0, Ub.e)((Vb => Vb.WasmTextureWorker.generateRequired(bb, wb, Mb, eb, Hb, pb)))
+          }(bb, pb, gb, Bb === eb.d, Mb, Cb), tb = Lb.assets;
+          jb = {
+            ...tb,
             averageColors: {}
-          }, wd = vd.averageColors(), Yd && (Ed = wd.then((async dd => {
-            null !== dd && yd === gd && await
-            function(dd, Od, md, Wd, Fd) {
-              return (0, Xd.m)(hd(dd, Od, Wd, Fd), md)
-            }(bd, pd, {
-              ...Nd,
-              averageColors: dd
-            }, qd, vd.layerCap)
+          }, Xb = Lb.averageColors(), hb && (xb = Xb.then((async bb => {
+            null !== bb && Fb === zb && await
+            function(bb, wb, Mb, eb, Hb) {
+              return (0, Vb.o)(lb(bb, wb, eb, Hb), Mb)
+            }(Bb, mb, {
+              ...tb,
+              averageColors: bb
+            }, Cb, Lb.layerCap)
           })))
         }
-        return function(dd, Od) {
-          var md, Wd;
-          let Fd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((Kd = dd.averageColors, 0 === Object.keys(null !== Kd && void 0 !== Kd ? Kd : {}).length ? null : dd.averageColors)),
-            Xd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var Kd;
-          const hd = null !== (md = Od.textureOverrides) && void 0 !== md ? md : {},
-            Qd = null !== (Wd = Od.modelOverrides) && void 0 !== Wd ? Wd : {},
-            td = 0 === Object.keys(Qd).length ? {} : (0, Rd.refusedPackModels)((0, Rd.packDisplayName)(Od.metaData), Qd, !0, {
+        return function(bb, wb) {
+          var Mb, eb;
+          let Hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((gb = bb.averageColors, 0 === Object.keys(null !== gb && void 0 !== gb ? gb : {}).length ? null : bb.averageColors)),
+            Vb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var gb;
+          const lb = null !== (Mb = wb.textureOverrides) && void 0 !== Mb ? Mb : {},
+            Ib = null !== (eb = wb.modelOverrides) && void 0 !== eb ? eb : {},
+            Ob = 0 === Object.keys(Ib).length ? {} : (0, pb.refusedPackModels)((0, pb.packDisplayName)(wb.metaData), Ib, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: od,
-              rotatedBlockTextures: Nd
-            } = dd,
-            qd = dd => {
-              var Od, md;
-              return null !== (Od = null !== (md = od[dd]) && void 0 !== md ? md : Nd[dd]) && void 0 !== Od ? Od : null
+              animatedBlockTextures: Ub,
+              rotatedBlockTextures: tb
+            } = bb,
+            Cb = bb => {
+              var wb, Mb;
+              return null !== (wb = null !== (Mb = Ub[bb]) && void 0 !== Mb ? Mb : tb[bb]) && void 0 !== wb ? wb : null
             };
           return {
             terrain: {
-              atlasSheets: dd.blockAtlasArr,
-              texture: qd
+              atlasSheets: bb.blockAtlasArr,
+              texture: Cb
             },
-            sheetPixels: [...dd.blockAtlasPixels],
-            heldUntil: Xd,
-            sheetLayout: dd.imagesPerAtlas,
-            sheetWidth: dd.blockAtlasWidth,
-            armourAtlasUrl: dd.armourAtlas,
-            texture: dd => {
-              var Od, md;
-              return null !== (Od = null !== (md = qd(dd)) && void 0 !== md ? md : (0, vd.e)(hd, dd)) && void 0 !== Od ? Od : null
+            sheetPixels: [...bb.blockAtlasPixels],
+            heldUntil: Vb,
+            sheetLayout: bb.imagesPerAtlas,
+            sheetWidth: bb.blockAtlasWidth,
+            armourAtlasUrl: bb.armourAtlas,
+            texture: bb => {
+              var wb, Mb;
+              return null !== (wb = null !== (Mb = Cb(bb)) && void 0 !== Mb ? Mb : (0, Lb.d)(lb, bb)) && void 0 !== wb ? wb : null
             },
-            model: dd => void 0 === td[dd] && Qd[dd] || null,
-            averageColours: Fd
+            model: bb => void 0 === Ob[bb] && Ib[bb] || null,
+            averageColours: Hb
           }
-        }(Jd, dd, wd, Ed)
-      }(bd, null === dd.gameSource, md), Yd = {
-        pack: dd.pack,
-        maxLayerWidth: md,
-        assets: pd
+        }(jb, bb, Xb, xb)
+      }(Bb, null === bb.gameSource, Mb), hb = {
+        pack: bb.pack,
+        maxLayerWidth: Mb,
+        assets: mb
       };
-      return Hd = Yd, pd.catch((() => {
-        Hd === Yd && (Hd = null)
-      })), pd
+      return Eb = hb, mb.catch((() => {
+        Eb === hb && (Eb = null)
+      })), mb
     }
 
-    function Td(dd, Od, Wd, Fd) {
-      const Rd = (0, vd.e)(dd, Wd);
-      if (Rd) return Rd;
+    function sb(bb, wb, eb, Hb) {
+      const pb = (0, Lb.d)(bb, eb);
+      if (pb) return pb;
       try {
-        return Od(Wd, Fd).url
+        return wb(eb, Hb).url
       } catch {
-        return md(4525)
+        return Mb(4682)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

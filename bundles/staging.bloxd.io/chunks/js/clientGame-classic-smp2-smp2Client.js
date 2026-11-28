@@ -1,17 +1,17 @@
 export const id = 13;
 export const ids = [13];
 export const modules = {
-  40887: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      c: () => Xd,
-      d: () => Kd
+  40653: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb,
+      g: () => Vb,
+      h: () => gb
     });
-    var Wd = md(40894),
-      Fd = md(32);
-    const Rd = "smp2OnboardingView",
-      Xd = 5e3;
-    class Kd {
+    var eb = Mb(40661),
+      Hb = Mb(29);
+    const pb = "smp2OnboardingView",
+      Vb = 5e3;
+    class gb {
       constructor() {
         this.view = {
           path: null,
@@ -21,121 +21,121 @@ export const modules = {
       get() {
         return this.view
       }
-      receivePath(dd) {
-        let [Od, md, Fd] = dd;
-        const Rd = Wd.e[Od];
-        if (void 0 === Rd) return;
+      receivePath(bb) {
+        let [wb, Mb, Hb] = bb;
+        const pb = eb.g[wb];
+        if (void 0 === pb) return;
         const {
-          title: Xd,
-          steps: Kd
-        } = Wd.b[Rd];
-        this.lQ({
+          title: Vb,
+          steps: gb
+        } = eb.d[pb];
+        this.iI({
           ...this.view,
-          path: md < Kd.length ? {
-            title: Xd,
-            steps: Kd,
-            step: md,
-            progress: Fd
+          path: Mb < gb.length ? {
+            title: Vb,
+            steps: gb,
+            step: Mb,
+            progress: Hb
           } : null
         })
       }
-      receiveReward(dd) {
-        let [Od, md] = dd;
-        const Fd = Wd.f[Od];
-        if (void 0 !== Fd && !this.seenRewardIds.has(md)) {
-          var Rd;
-          if (this.seenRewardIds.add(md), this.queued.push({
-              ...Fd,
-              id: md
-            }), null === this.view.reward) this.lQ({
+      receiveReward(bb) {
+        let [wb, Mb] = bb;
+        const Hb = eb.k[wb];
+        if (void 0 !== Hb && !this.seenRewardIds.has(Mb)) {
+          var pb;
+          if (this.seenRewardIds.add(Mb), this.queued.push({
+              ...Hb,
+              id: Mb
+            }), null === this.view.reward) this.iI({
             ...this.view,
-            reward: null !== (Rd = this.queued.shift()) && void 0 !== Rd ? Rd : null
+            reward: null !== (pb = this.queued.shift()) && void 0 !== pb ? pb : null
           });
           this.runTimers()
         }
       }
-      setShowing(dd) {
-        this.showing = dd, this.runTimers()
+      setShowing(bb) {
+        this.showing = bb, this.runTimers()
       }
       dispose() {
         this.clearTimers()
       }
       runTimers() {
         this.showing ? this.view.reward && null === this.rewardTimer && (this.rewardTimer = setTimeout((() => {
-          var dd;
-          this.rewardTimer = null, this.lQ({
+          var bb;
+          this.rewardTimer = null, this.iI({
             ...this.view,
-            reward: null !== (dd = this.queued.shift()) && void 0 !== dd ? dd : null
+            reward: null !== (bb = this.queued.shift()) && void 0 !== bb ? bb : null
           }), this.runTimers()
-        }), Xd)) : this.clearTimers()
+        }), Vb)) : this.clearTimers()
       }
       clearTimers() {
         null !== this.rewardTimer && (clearTimeout(this.rewardTimer), this.rewardTimer = null)
       }
-      lQ(dd) {
-        this.view = dd, Fd.j.lQ(Rd, dd)
+      iI(bb) {
+        this.view = bb, Hb.k.iI(pb, bb)
       }
     }
   },
-  40884: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      makeSmp2ClientGame: () => td
+  40645: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      makeSmp2ClientGame: () => Ob
     });
-    var Wd = md(66);
-    const Fd = "smp2FirstSpawn",
-      Rd = "smp2Path",
-      Xd = "smp2Reward";
-    var Kd = md(1796),
-      hd = md(3697),
-      vd = md(3428),
-      Qd = md(40887);
+    var eb = Mb(64);
+    const Hb = "smp2FirstSpawn",
+      pb = "smp2Path",
+      Vb = "smp2Reward";
+    var gb = Mb(1861),
+      lb = Mb(3822),
+      Lb = Mb(3531),
+      Ib = Mb(40653);
 
-    function td() {
-      let dd = !1,
-        Od = !1,
-        td = "loading",
-        od = !1;
-      const Nd = () => {
-          !dd || Od || od || "loading" === td || (Od = !0, (0, Kd.g)({
+    function Ob() {
+      let bb = !1,
+        wb = !1,
+        Ob = "loading",
+        Ub = !1;
+      const tb = () => {
+          !bb || wb || Ub || "loading" === Ob || (wb = !0, (0, gb.g)({
             id: "smp2.first_spawn",
-            value: td
+            value: Ob
           }))
         },
-        qd = new Qd.d;
-      let Hd = null;
+        Cb = new Ib.h;
+      let Eb = null;
       return {
         onCreate: () => {
-          md.e(182).then((() => md(54177))).then((dd => {
+          Mb.e(182).then((() => Mb(53979))).then((bb => {
             let {
-              Smp2OnboardingUi: Od
-            } = dd;
-            od || (Hd = (0, vd.F)((0, Wd.createElement)(Od, {
-              store: qd
-            })), td = "cards")
-          })).catch((dd => {
-            od || (td = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, hd.f)(dd) ? " (chunk load failed)" : ""), dd))
-          })).finally(Nd)
+              Smp2OnboardingUi: wb
+            } = bb;
+            Ub || (Eb = (0, Lb.J)((0, eb.createElement)(wb, {
+              store: Cb
+            })), Ob = "cards")
+          })).catch((bb => {
+            Ub || (Ob = "no_cards", console.error("SMP: couldn't load the onboarding cards" + ((0, lb.e)(bb) ? " (chunk load failed)" : ""), bb))
+          })).finally(tb)
         },
         onClose: () => {
-          var dd;
-          "loading" === td && (td = "no_cards"), Nd(), od = !0, null === (dd = Hd) || void 0 === dd || dd(), qd.dispose()
+          var bb;
+          "loading" === Ob && (Ob = "no_cards"), tb(), Ub = !0, null === (bb = Eb) || void 0 === bb || bb(), Cb.dispose()
         },
-        onReceivedMessageFromServer: (Od, md) => {
-          Od === Fd ? (dd = !0, Nd()) : Od === Rd ? qd.receivePath(md) : Od === Xd && qd.receiveReward(md)
+        onReceivedMessageFromServer: (wb, Mb) => {
+          wb === Hb ? (bb = !0, tb()) : wb === pb ? Cb.receivePath(Mb) : wb === Vb && Cb.receiveReward(Mb)
         }
       }
     }
   },
-  40894: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      e: () => Wd,
-      f: () => Kd,
-      j: () => Xd
+  40661: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => pb,
+      g: () => eb,
+      k: () => gb,
+      o: () => Vb
     });
-    const Wd = ["starter_path", "portal_first"],
-      Fd = "Iron Pickaxe",
-      Rd = {
+    const eb = ["starter_path", "portal_first"],
+      Hb = "Iron Pickaxe",
+      pb = {
         starter_path: {
           title: "Starter Path",
           steps: [{
@@ -185,10 +185,10 @@ export const modules = {
         }
       };
 
-    function Xd(dd) {
-      return "logs" === dd.goal ? dd.amount : 1
+    function Vb(bb) {
+      return "logs" === bb.goal ? bb.amount : 1
     }
-    const Kd = [{
+    const gb = [{
       title: "Starter Path done!",
       text: "+100 gold. The world is yours.",
       icon: "Gold Coin"
@@ -198,19 +198,19 @@ export const modules = {
       icon: "Wood Pickaxe"
     }, {
       title: "Come back tomorrow",
-      text: `A free ${Fd} is waiting for you`,
-      icon: Fd
+      text: `A free ${Hb} is waiting for you`,
+      icon: Hb
     }, {
       title: "Welcome back!",
-      text: `Here's your ${Fd}`,
-      icon: Fd
+      text: `Here's your ${Hb}`,
+      icon: Hb
     }, {
       title: "Nice!",
       text: "Keep exploring: the hub's traders buy what you find",
       icon: "Maple Log"
     }];
-    Wd.flatMap((dd => [...Rd[dd].steps.map((Od => `${dd}:${Od.key}`)), `${dd}:done`]))
+    eb.flatMap((bb => [...pb[bb].steps.map((wb => `${bb}:${wb.key}`)), `${bb}:done`]))
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

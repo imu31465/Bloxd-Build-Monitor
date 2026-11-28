@@ -1,173 +1,173 @@
 export const id = 129;
 export const ids = [129];
 export const modules = {
-  5914: (dd, Od, md) => {
-    function Wd(dd) {
-      return Wd = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(dd) {
-        return typeof dd
-      } : function(dd) {
-        return dd && "function" == typeof Symbol && dd.constructor === Symbol && dd !== Symbol.prototype ? "symbol" : typeof dd
-      }, Wd(dd)
+  6065: (bb, wb, Mb) => {
+    function eb(bb) {
+      return eb = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
+        return typeof bb
+      } : function(bb) {
+        return bb && "function" == typeof Symbol && bb.constructor === Symbol && bb !== Symbol.prototype ? "symbol" : typeof bb
+      }, eb(bb)
     }
-    Object.defineProperty(Od, "__esModule", {
+    Object.defineProperty(wb, "__esModule", {
       value: !0
-    }), Od.default = void 0;
-    var Fd = td(md(1155)),
-      Rd = function(dd, Od) {
-        if (!Od && dd && dd.__esModule) return dd;
-        if (null === dd || "object" !== Wd(dd) && "function" !== typeof dd) return {
-          default: dd
+    }), wb.default = void 0;
+    var Hb = Ob(Mb(1159)),
+      pb = function(bb, wb) {
+        if (!wb && bb && bb.__esModule) return bb;
+        if (null === bb || "object" !== eb(bb) && "function" !== typeof bb) return {
+          default: bb
         };
-        var md = Qd(Od);
-        if (md && md.has(dd)) return md.get(dd);
-        var Fd = {},
-          Rd = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var Xd in dd)
-          if ("default" !== Xd && Object.prototype.hasOwnProperty.call(dd, Xd)) {
-            var Kd = Rd ? Object.getOwnPropertyDescriptor(dd, Xd) : null;
-            Kd && (Kd.get || Kd.set) ? Object.defineProperty(Fd, Xd, Kd) : Fd[Xd] = dd[Xd]
-          } Fd.default = dd, md && md.set(dd, Fd);
-        return Fd
-      }(md(66)),
-      Xd = td(md(5864)),
-      Kd = td(md(5920)),
-      hd = md(5928),
-      vd = md(1341);
+        var Mb = Ib(wb);
+        if (Mb && Mb.has(bb)) return Mb.get(bb);
+        var Hb = {},
+          pb = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var Vb in bb)
+          if ("default" !== Vb && Object.prototype.hasOwnProperty.call(bb, Vb)) {
+            var gb = pb ? Object.getOwnPropertyDescriptor(bb, Vb) : null;
+            gb && (gb.get || gb.set) ? Object.defineProperty(Hb, Vb, gb) : Hb[Vb] = bb[Vb]
+          } Hb.default = bb, Mb && Mb.set(bb, Hb);
+        return Hb
+      }(Mb(64)),
+      Vb = Ob(Mb(6022)),
+      gb = Ob(Mb(6074)),
+      lb = Mb(6083),
+      Lb = Mb(1364);
 
-    function Qd(dd) {
+    function Ib(bb) {
       if ("function" !== typeof WeakMap) return null;
-      var Od = new WeakMap,
-        md = new WeakMap;
-      return (Qd = function(dd) {
-        return dd ? md : Od
-      })(dd)
+      var wb = new WeakMap,
+        Mb = new WeakMap;
+      return (Ib = function(bb) {
+        return bb ? Mb : wb
+      })(bb)
     }
 
-    function td(dd) {
-      return dd && dd.__esModule ? dd : {
-        default: dd
+    function Ob(bb) {
+      return bb && bb.__esModule ? bb : {
+        default: bb
       }
     }
 
-    function od(dd, Od) {
-      var md = "undefined" !== typeof Symbol && dd[Symbol.iterator] || dd["@@iterator"];
-      if (!md) {
-        if (Array.isArray(dd) || (md = function(dd, Od) {
-            if (!dd) return;
-            if ("string" === typeof dd) return Nd(dd, Od);
-            var md = Object.prototype.toString.call(dd).slice(8, -1);
-            "Object" === md && dd.constructor && (md = dd.constructor.name);
-            if ("Map" === md || "Set" === md) return Array.from(dd);
-            if ("Arguments" === md || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(md)) return Nd(dd, Od)
-          }(dd)) || Od && dd && "number" === typeof dd.length) {
-          md && (dd = md);
-          var Wd = 0,
-            Fd = function() {};
+    function Ub(bb, wb) {
+      var Mb = "undefined" !== typeof Symbol && bb[Symbol.iterator] || bb["@@iterator"];
+      if (!Mb) {
+        if (Array.isArray(bb) || (Mb = function(bb, wb) {
+            if (!bb) return;
+            if ("string" === typeof bb) return tb(bb, wb);
+            var Mb = Object.prototype.toString.call(bb).slice(8, -1);
+            "Object" === Mb && bb.constructor && (Mb = bb.constructor.name);
+            if ("Map" === Mb || "Set" === Mb) return Array.from(bb);
+            if ("Arguments" === Mb || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(Mb)) return tb(bb, wb)
+          }(bb)) || wb && bb && "number" === typeof bb.length) {
+          Mb && (bb = Mb);
+          var eb = 0,
+            Hb = function() {};
           return {
-            s: Fd,
+            s: Hb,
             n: function() {
-              return Wd >= dd.length ? {
+              return eb >= bb.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: dd[Wd++]
+                value: bb[eb++]
               }
             },
-            e: function(dd) {
-              throw dd
+            e: function(bb) {
+              throw bb
             },
-            f: Fd
+            f: Hb
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var Rd, Xd = !0,
-        Kd = !1;
+      var pb, Vb = !0,
+        gb = !1;
       return {
         s: function() {
-          md = md.call(dd)
+          Mb = Mb.call(bb)
         },
         n: function() {
-          var dd = md.next();
-          return Xd = dd.done, dd
+          var bb = Mb.next();
+          return Vb = bb.done, bb
         },
-        e: function(dd) {
-          Kd = !0, Rd = dd
+        e: function(bb) {
+          gb = !0, pb = bb
         },
         f: function() {
           try {
-            Xd || null == md.return || md.return()
+            Vb || null == Mb.return || Mb.return()
           } finally {
-            if (Kd) throw Rd
+            if (gb) throw pb
           }
         }
       }
     }
 
-    function Nd(dd, Od) {
-      (null == Od || Od > dd.length) && (Od = dd.length);
-      for (var md = 0, Wd = new Array(Od); md < Od; md++) Wd[md] = dd[md];
-      return Wd
+    function tb(bb, wb) {
+      (null == wb || wb > bb.length) && (wb = bb.length);
+      for (var Mb = 0, eb = new Array(wb); Mb < wb; Mb++) eb[Mb] = bb[Mb];
+      return eb
     }
 
-    function qd(dd, Od) {
-      for (var md = 0; md < Od.length; md++) {
-        var Wd = Od[md];
-        Wd.enumerable = Wd.enumerable || !1, Wd.configurable = !0, "value" in Wd && (Wd.writable = !0), Object.defineProperty(dd, Wd.key, Wd)
+    function Cb(bb, wb) {
+      for (var Mb = 0; Mb < wb.length; Mb++) {
+        var eb = wb[Mb];
+        eb.enumerable = eb.enumerable || !1, eb.configurable = !0, "value" in eb && (eb.writable = !0), Object.defineProperty(bb, eb.key, eb)
       }
     }
 
-    function Hd(dd, Od) {
-      return Hd = Object.setPrototypeOf || function(dd, Od) {
-        return dd.__proto__ = Od, dd
-      }, Hd(dd, Od)
+    function Eb(bb, wb) {
+      return Eb = Object.setPrototypeOf || function(bb, wb) {
+        return bb.__proto__ = wb, bb
+      }, Eb(bb, wb)
     }
 
-    function yd(dd) {
-      var Od = function() {
+    function Fb(bb) {
+      var wb = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
         try {
           return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (dd) {
+        } catch (bb) {
           return !1
         }
       }();
       return function() {
-        var md, Fd = Td(dd);
-        if (Od) {
-          var Rd = Td(this).constructor;
-          md = Reflect.construct(Fd, arguments, Rd)
-        } else md = Fd.apply(this, arguments);
-        return function(dd, Od) {
-          if (Od && ("object" === Wd(Od) || "function" === typeof Od)) return Od;
-          if (void 0 !== Od) throw new TypeError("Derived constructors may only return object or undefined");
-          return bd(dd)
-        }(this, md)
+        var Mb, Hb = sb(bb);
+        if (wb) {
+          var pb = sb(this).constructor;
+          Mb = Reflect.construct(Hb, arguments, pb)
+        } else Mb = Hb.apply(this, arguments);
+        return function(bb, wb) {
+          if (wb && ("object" === eb(wb) || "function" === typeof wb)) return wb;
+          if (void 0 !== wb) throw new TypeError("Derived constructors may only return object or undefined");
+          return Bb(bb)
+        }(this, Mb)
       }
     }
 
-    function bd(dd) {
-      if (void 0 === dd) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return dd
+    function Bb(bb) {
+      if (void 0 === bb) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return bb
     }
 
-    function Td(dd) {
-      return Td = Object.setPrototypeOf ? Object.getPrototypeOf : function(dd) {
-        return dd.__proto__ || Object.getPrototypeOf(dd)
-      }, Td(dd)
+    function sb(bb) {
+      return sb = Object.setPrototypeOf ? Object.getPrototypeOf : function(bb) {
+        return bb.__proto__ || Object.getPrototypeOf(bb)
+      }, sb(bb)
     }
 
-    function pd(dd, Od, md) {
-      return Od in dd ? Object.defineProperty(dd, Od, {
-        value: md,
+    function mb(bb, wb, Mb) {
+      return wb in bb ? Object.defineProperty(bb, wb, {
+        value: Mb,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : dd[Od] = md, dd
+      }) : bb[wb] = Mb, bb
     }
-    var Yd = {
+    var hb = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,258 +183,258 @@ export const modules = {
           }
         }
       },
-      gd = function(dd) {
-        ! function(dd, Od) {
-          if ("function" !== typeof Od && null !== Od) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(dd, "prototype", {
-            value: Object.create(Od && Od.prototype, {
+      zb = function(bb) {
+        ! function(bb, wb) {
+          if ("function" !== typeof wb && null !== wb) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(bb, "prototype", {
+            value: Object.create(wb && wb.prototype, {
               constructor: {
-                value: dd,
+                value: bb,
                 writable: !0,
                 configurable: !0
               }
             }),
             writable: !1
-          }), Od && Hd(dd, Od)
-        }(Xd, dd);
-        var Od, md, Wd, Rd = yd(Xd);
+          }), wb && Eb(bb, wb)
+        }(Vb, bb);
+        var wb, Mb, eb, pb = Fb(Vb);
 
-        function Xd(dd, Od) {
-          var md;
-          return function(dd, Od) {
-            if (!(dd instanceof Od)) throw new TypeError("Cannot call a class as a function")
-          }(this, Xd), pd(bd(md = Rd.call(this, dd, Od)), "handleFormat", (function(dd) {
-            var Od = md.props.format;
-            return Od ? Od(dd) : dd
-          })), pd(bd(md), "handleUpdate", (function() {
-            if (md.slider) {
-              var dd = md.props.orientation,
-                Od = (0, hd.capitalize)(Yd.orientation[dd].dimension),
-                Wd = md.slider["offset".concat(Od)],
-                Fd = md.handle["offset".concat(Od)];
-              md.setState({
-                limit: Wd - Fd,
-                grab: Fd / 2
+        function Vb(bb, wb) {
+          var Mb;
+          return function(bb, wb) {
+            if (!(bb instanceof wb)) throw new TypeError("Cannot call a class as a function")
+          }(this, Vb), mb(Bb(Mb = pb.call(this, bb, wb)), "handleFormat", (function(bb) {
+            var wb = Mb.props.format;
+            return wb ? wb(bb) : bb
+          })), mb(Bb(Mb), "handleUpdate", (function() {
+            if (Mb.slider) {
+              var bb = Mb.props.orientation,
+                wb = (0, lb.capitalize)(hb.orientation[bb].dimension),
+                eb = Mb.slider["offset".concat(wb)],
+                Hb = Mb.handle["offset".concat(wb)];
+              Mb.setState({
+                limit: eb - Hb,
+                grab: Hb / 2
               })
             }
-          })), pd(bd(md), "handleStart", (function(dd) {
-            var Od = md.props.onChangeStart;
-            document.addEventListener("mousemove", md.handleDrag), document.addEventListener("mouseup", md.handleEnd), md.setState({
+          })), mb(Bb(Mb), "handleStart", (function(bb) {
+            var wb = Mb.props.onChangeStart;
+            document.addEventListener("mousemove", Mb.handleDrag), document.addEventListener("mouseup", Mb.handleEnd), Mb.setState({
               active: !0
             }, (function() {
-              Od && Od(dd)
+              wb && wb(bb)
             }))
-          })), pd(bd(md), "handleDrag", (function(dd) {
-            dd.stopPropagation();
-            var Od = md.props.onChange,
-              Wd = dd.target,
-              Fd = Wd.className,
-              Rd = Wd.classList,
-              Xd = Wd.dataset;
-            if (Od && "rangeslider__labels" !== Fd) {
-              var Kd = md.position(dd);
-              Rd && Rd.contains("rangeslider__label-item") && Xd.value && (Kd = parseFloat(Xd.value)), Od && Od(Kd, dd)
+          })), mb(Bb(Mb), "handleDrag", (function(bb) {
+            bb.stopPropagation();
+            var wb = Mb.props.onChange,
+              eb = bb.target,
+              Hb = eb.className,
+              pb = eb.classList,
+              Vb = eb.dataset;
+            if (wb && "rangeslider__labels" !== Hb) {
+              var gb = Mb.position(bb);
+              pb && pb.contains("rangeslider__label-item") && Vb.value && (gb = parseFloat(Vb.value)), wb && wb(gb, bb)
             }
-          })), pd(bd(md), "handleEnd", (function(dd) {
-            var Od = md.props.onChangeComplete;
-            md.setState({
+          })), mb(Bb(Mb), "handleEnd", (function(bb) {
+            var wb = Mb.props.onChangeComplete;
+            Mb.setState({
               active: !1
             }, (function() {
-              Od && Od(dd)
-            })), document.removeEventListener("mousemove", md.handleDrag), document.removeEventListener("mouseup", md.handleEnd)
-          })), pd(bd(md), "handleKeyDown", (function(dd) {
-            dd.preventDefault();
-            var Od, Wd = dd.keyCode,
-              Fd = md.props,
-              Rd = Fd.value,
-              Xd = Fd.min,
-              Kd = Fd.max,
-              hd = Fd.step,
-              vd = Fd.onChange;
-            switch (Wd) {
+              wb && wb(bb)
+            })), document.removeEventListener("mousemove", Mb.handleDrag), document.removeEventListener("mouseup", Mb.handleEnd)
+          })), mb(Bb(Mb), "handleKeyDown", (function(bb) {
+            bb.preventDefault();
+            var wb, eb = bb.keyCode,
+              Hb = Mb.props,
+              pb = Hb.value,
+              Vb = Hb.min,
+              gb = Hb.max,
+              lb = Hb.step,
+              Lb = Hb.onChange;
+            switch (eb) {
               case 38:
               case 39:
-                Od = Rd + hd > Kd ? Kd : Rd + hd, vd && vd(Od, dd);
+                wb = pb + lb > gb ? gb : pb + lb, Lb && Lb(wb, bb);
                 break;
               case 37:
               case 40:
-                Od = Rd - hd < Xd ? Xd : Rd - hd, vd && vd(Od, dd)
+                wb = pb - lb < Vb ? Vb : pb - lb, Lb && Lb(wb, bb)
             }
-          })), pd(bd(md), "getPositionFromValue", (function(dd) {
-            var Od = md.state.limit,
-              Wd = md.props,
-              Fd = Wd.min,
-              Rd = (dd - Fd) / (Wd.max - Fd);
-            return Math.round(Rd * Od)
-          })), pd(bd(md), "getValueFromPosition", (function(dd) {
-            var Od = md.state.limit,
-              Wd = md.props,
-              Fd = Wd.orientation,
-              Rd = Wd.min,
-              Xd = Wd.max,
-              Kd = Wd.step,
-              vd = (0, hd.clamp)(dd, 0, Od) / (Od || 1),
-              Qd = Kd * Math.round(vd * (Xd - Rd) / Kd),
-              td = "horizontal" === Fd ? Qd + Rd : Xd - Qd;
-            return (0, hd.clamp)(td, Rd, Xd)
-          })), pd(bd(md), "position", (function(dd) {
-            var Od = md.state.grab,
-              Wd = md.props,
-              Fd = Wd.orientation,
-              Rd = Wd.reverse,
-              Xd = md.slider,
-              Kd = Yd.orientation[Fd].coordinate,
-              vd = Rd ? Yd.orientation[Fd].reverseDirection : Yd.orientation[Fd].direction,
-              Qd = "client".concat((0, hd.capitalize)(Kd)),
-              td = dd.touches ? dd.touches[0][Qd] : dd[Qd],
-              od = Xd.getBoundingClientRect()[vd],
-              Nd = Rd ? od - td - Od : td - od - Od;
-            return md.getValueFromPosition(Nd)
-          })), pd(bd(md), "coordinates", (function(dd) {
-            var Od = md.state,
-              Wd = Od.limit,
-              Fd = Od.grab,
-              Rd = md.props.orientation,
-              Xd = md.getValueFromPosition(dd),
-              Kd = md.getPositionFromValue(Xd),
-              hd = "horizontal" === Rd ? Kd + Fd : Kd;
+          })), mb(Bb(Mb), "getPositionFromValue", (function(bb) {
+            var wb = Mb.state.limit,
+              eb = Mb.props,
+              Hb = eb.min,
+              pb = (bb - Hb) / (eb.max - Hb);
+            return Math.round(pb * wb)
+          })), mb(Bb(Mb), "getValueFromPosition", (function(bb) {
+            var wb = Mb.state.limit,
+              eb = Mb.props,
+              Hb = eb.orientation,
+              pb = eb.min,
+              Vb = eb.max,
+              gb = eb.step,
+              Lb = (0, lb.clamp)(bb, 0, wb) / (wb || 1),
+              Ib = gb * Math.round(Lb * (Vb - pb) / gb),
+              Ob = "horizontal" === Hb ? Ib + pb : Vb - Ib;
+            return (0, lb.clamp)(Ob, pb, Vb)
+          })), mb(Bb(Mb), "position", (function(bb) {
+            var wb = Mb.state.grab,
+              eb = Mb.props,
+              Hb = eb.orientation,
+              pb = eb.reverse,
+              Vb = Mb.slider,
+              gb = hb.orientation[Hb].coordinate,
+              Lb = pb ? hb.orientation[Hb].reverseDirection : hb.orientation[Hb].direction,
+              Ib = "client".concat((0, lb.capitalize)(gb)),
+              Ob = bb.touches ? bb.touches[0][Ib] : bb[Ib],
+              Ub = Vb.getBoundingClientRect()[Lb],
+              tb = pb ? Ub - Ob - wb : Ob - Ub - wb;
+            return Mb.getValueFromPosition(tb)
+          })), mb(Bb(Mb), "coordinates", (function(bb) {
+            var wb = Mb.state,
+              eb = wb.limit,
+              Hb = wb.grab,
+              pb = Mb.props.orientation,
+              Vb = Mb.getValueFromPosition(bb),
+              gb = Mb.getPositionFromValue(Vb),
+              lb = "horizontal" === pb ? gb + Hb : gb;
             return {
-              fill: "horizontal" === Rd ? hd : Wd - hd,
-              handle: hd,
-              label: hd
+              fill: "horizontal" === pb ? lb : eb - lb,
+              handle: lb,
+              label: lb
             }
-          })), pd(bd(md), "renderLabels", (function(dd) {
-            return (0, vd.jsx)("ul", {
-              ref: function(dd) {
-                md.labels = dd
+          })), mb(Bb(Mb), "renderLabels", (function(bb) {
+            return (0, Lb.jsx)("ul", {
+              ref: function(bb) {
+                Mb.labels = bb
               },
-              className: (0, Fd.default)("rangeslider__labels"),
-              children: dd
+              className: (0, Hb.default)("rangeslider__labels"),
+              children: bb
             })
-          })), md.state = {
+          })), Mb.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, md
+          }, Mb
         }
-        return Od = Xd, (md = [{
+        return wb = Vb, (Mb = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new Kd.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new gb.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
-            var dd = this,
-              Od = this.props,
-              md = Od.value,
-              Wd = Od.orientation,
-              Rd = Od.className,
-              Xd = Od.tooltip,
-              Kd = Od.reverse,
-              hd = Od.labels,
-              Qd = Od.min,
-              td = Od.max,
-              Nd = Od.handleLabel,
-              qd = this.state.active,
-              Hd = Yd.orientation[Wd].dimension,
-              yd = Kd ? Yd.orientation[Wd].reverseDirection : Yd.orientation[Wd].direction,
-              bd = this.getPositionFromValue(md),
-              Td = this.coordinates(bd),
-              gd = pd({}, Hd, "".concat(Td.fill, "px")),
-              wd = pd({}, yd, "".concat(Td.handle, "px")),
-              Ed = Xd && qd,
-              Jd = [],
-              Ud = Object.keys(hd);
-            if (Ud.length > 0) {
-              var xd, Bd = od(Ud = Ud.sort((function(dd, Od) {
-                return Kd ? dd - Od : Od - dd
+            var bb = this,
+              wb = this.props,
+              Mb = wb.value,
+              eb = wb.orientation,
+              pb = wb.className,
+              Vb = wb.tooltip,
+              gb = wb.reverse,
+              lb = wb.labels,
+              Ib = wb.min,
+              Ob = wb.max,
+              tb = wb.handleLabel,
+              Cb = this.state.active,
+              Eb = hb.orientation[eb].dimension,
+              Fb = gb ? hb.orientation[eb].reverseDirection : hb.orientation[eb].direction,
+              Bb = this.getPositionFromValue(Mb),
+              sb = this.coordinates(Bb),
+              zb = mb({}, Eb, "".concat(sb.fill, "px")),
+              Xb = mb({}, Fb, "".concat(sb.handle, "px")),
+              xb = Vb && Cb,
+              jb = [],
+              Kb = Object.keys(lb);
+            if (Kb.length > 0) {
+              var rb, Rb = Ub(Kb = Kb.sort((function(bb, wb) {
+                return gb ? bb - wb : wb - bb
               })));
               try {
-                for (Bd.s(); !(xd = Bd.n()).done;) {
-                  var Sd = xd.value,
-                    sd = this.getPositionFromValue(Sd),
-                    ud = this.coordinates(sd),
-                    Vd = pd({}, yd, "".concat(ud.label, "px"));
-                  Jd.push((0, vd.jsx)("li", {
-                    className: (0, Fd.default)("rangeslider__label-item"),
-                    "data-value": Sd,
+                for (Rb.s(); !(rb = Rb.n()).done;) {
+                  var Db = rb.value,
+                    cb = this.getPositionFromValue(Db),
+                    Yb = this.coordinates(cb),
+                    Zb = mb({}, Fb, "".concat(Yb.label, "px"));
+                  jb.push((0, Lb.jsx)("li", {
+                    className: (0, Hb.default)("rangeslider__label-item"),
+                    "data-value": Db,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: Vd,
-                    children: this.props.labels[Sd]
-                  }, Sd))
+                    style: Zb,
+                    children: this.props.labels[Db]
+                  }, Db))
                 }
-              } catch (Ad) {
-                Bd.e(Ad)
+              } catch (fb) {
+                Rb.e(fb)
               } finally {
-                Bd.f()
+                Rb.f()
               }
             }
-            return (0, vd.jsxs)("div", {
-              ref: function(Od) {
-                dd.slider = Od
+            return (0, Lb.jsxs)("div", {
+              ref: function(wb) {
+                bb.slider = wb
               },
-              className: (0, Fd.default)("rangeslider", "rangeslider-".concat(Wd), {
-                "rangeslider-reverse": Kd
-              }, Rd),
+              className: (0, Hb.default)("rangeslider", "rangeslider-".concat(eb), {
+                "rangeslider-reverse": gb
+              }, pb),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": Qd,
-              "aria-valuemax": td,
-              "aria-valuenow": md,
-              "aria-orientation": Wd,
-              children: [(0, vd.jsx)("div", {
+              "aria-valuemin": Ib,
+              "aria-valuemax": Ob,
+              "aria-valuenow": Mb,
+              "aria-orientation": eb,
+              children: [(0, Lb.jsx)("div", {
                 className: "rangeslider__fill",
-                style: gd
-              }), (0, vd.jsxs)("div", {
-                ref: function(Od) {
-                  dd.handle = Od
+                style: zb
+              }), (0, Lb.jsxs)("div", {
+                ref: function(wb) {
+                  bb.handle = wb
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: wd,
+                style: Xb,
                 tabIndex: 0,
-                children: [Ed && (0, vd.jsx)("div", {
-                  ref: function(Od) {
-                    dd.tooltip = Od
+                children: [xb && (0, Lb.jsx)("div", {
+                  ref: function(wb) {
+                    bb.tooltip = wb
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, vd.jsx)("span", {
-                    children: this.handleFormat(md)
+                  children: (0, Lb.jsx)("span", {
+                    children: this.handleFormat(Mb)
                   })
-                }), (0, vd.jsx)("div", {
+                }), (0, Lb.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: Nd
+                  children: tb
                 })]
-              }), hd && this.renderLabels(Jd)]
+              }), lb && this.renderLabels(jb)]
             })
           }
-        }]) && qd(Od.prototype, md), Wd && qd(Od, Wd), Object.defineProperty(Od, "prototype", {
+        }]) && Cb(wb.prototype, Mb), eb && Cb(wb, eb), Object.defineProperty(wb, "prototype", {
           writable: !1
-        }), Xd
-      }(Rd.Component);
-    pd(gd, "propTypes", {
-      min: Xd.default.number,
-      max: Xd.default.number,
-      step: Xd.default.number,
-      value: Xd.default.number,
-      orientation: Xd.default.string,
-      tooltip: Xd.default.bool,
-      reverse: Xd.default.bool,
-      labels: Xd.default.object,
-      handleLabel: Xd.default.string,
-      format: Xd.default.func,
-      onChangeStart: Xd.default.func,
-      onChange: Xd.default.func,
-      onChangeComplete: Xd.default.func
-    }), pd(gd, "defaultProps", {
+        }), Vb
+      }(pb.Component);
+    mb(zb, "propTypes", {
+      min: Vb.default.number,
+      max: Vb.default.number,
+      step: Vb.default.number,
+      value: Vb.default.number,
+      orientation: Vb.default.string,
+      tooltip: Vb.default.bool,
+      reverse: Vb.default.bool,
+      labels: Vb.default.object,
+      handleLabel: Vb.default.string,
+      format: Vb.default.func,
+      onChangeStart: Vb.default.func,
+      onChange: Vb.default.func,
+      onChangeComplete: Vb.default.func
+    }), mb(zb, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,359 +445,359 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var wd = gd;
-    Od.default = wd
+    var Xb = zb;
+    wb.default = Xb
   },
-  5909: (dd, Od, md) => {
-    var Wd;
-    Od.e = void 0;
-    var Fd = ((Wd = md(5914)) && Wd.__esModule ? Wd : {
-      default: Wd
+  6056: (bb, wb, Mb) => {
+    var eb;
+    wb.e = void 0;
+    var Hb = ((eb = Mb(6065)) && eb.__esModule ? eb : {
+      default: eb
     }).default;
-    Od.e = Fd
+    wb.e = Hb
   },
-  5928: (dd, Od) => {
-    Object.defineProperty(Od, "__esModule", {
+  6083: (bb, wb) => {
+    Object.defineProperty(wb, "__esModule", {
       value: !0
-    }), Od.capitalize = function(dd) {
-      return dd.charAt(0).toUpperCase() + dd.substr(1)
-    }, Od.clamp = function(dd, Od, md) {
-      return Math.min(Math.max(dd, Od), md)
+    }), wb.capitalize = function(bb) {
+      return bb.charAt(0).toUpperCase() + bb.substr(1)
+    }, wb.clamp = function(bb, wb, Mb) {
+      return Math.min(Math.max(bb, wb), Mb)
     }
   },
-  5870: (dd, Od, md) => {
-    var Wd = md(5874);
+  6028: (bb, wb, Mb) => {
+    var eb = Mb(6030);
 
-    function Fd() {}
+    function Hb() {}
 
-    function Rd() {}
-    Rd.resetWarningCache = Fd, dd.exports = function() {
-      function dd(dd, Od, md, Fd, Rd, Xd) {
-        if (Xd !== Wd) {
-          var Kd = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw Kd.name = "Invariant Violation", Kd
+    function pb() {}
+    pb.resetWarningCache = Hb, bb.exports = function() {
+      function bb(bb, wb, Mb, Hb, pb, Vb) {
+        if (Vb !== eb) {
+          var gb = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw gb.name = "Invariant Violation", gb
         }
       }
 
-      function Od() {
-        return dd
+      function wb() {
+        return bb
       }
-      dd.isRequired = dd;
-      var md = {
-        array: dd,
-        bigint: dd,
-        bool: dd,
-        func: dd,
-        number: dd,
-        object: dd,
-        string: dd,
-        symbol: dd,
-        any: dd,
-        arrayOf: Od,
-        element: dd,
-        elementType: dd,
-        instanceOf: Od,
-        node: dd,
-        objectOf: Od,
-        oneOf: Od,
-        oneOfType: Od,
-        shape: Od,
-        exact: Od,
-        checkPropTypes: Rd,
-        resetWarningCache: Fd
+      bb.isRequired = bb;
+      var Mb = {
+        array: bb,
+        bigint: bb,
+        bool: bb,
+        func: bb,
+        number: bb,
+        object: bb,
+        string: bb,
+        symbol: bb,
+        any: bb,
+        arrayOf: wb,
+        element: bb,
+        elementType: bb,
+        instanceOf: wb,
+        node: bb,
+        objectOf: wb,
+        oneOf: wb,
+        oneOfType: wb,
+        shape: wb,
+        exact: wb,
+        checkPropTypes: pb,
+        resetWarningCache: Hb
       };
-      return md.PropTypes = md, md
+      return Mb.PropTypes = Mb, Mb
     }
   },
-  5864: (dd, Od, md) => {
-    dd.exports = md(5870)()
+  6022: (bb, wb, Mb) => {
+    bb.exports = Mb(6028)()
   },
-  5874: dd => {
-    dd.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  6030: bb => {
+    bb.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  5920: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      default: () => Jd
+  6074: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      default: () => jb
     });
-    var Wd = function() {
+    var eb = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function dd(dd, Od) {
-          var md = -1;
-          return dd.some((function(dd, Wd) {
-            return dd[0] === Od && (md = Wd, !0)
-          })), md
+        function bb(bb, wb) {
+          var Mb = -1;
+          return bb.some((function(bb, eb) {
+            return bb[0] === wb && (Mb = eb, !0)
+          })), Mb
         }
         return function() {
-          function Od() {
+          function wb() {
             this.__entries__ = []
           }
-          return Object.defineProperty(Od.prototype, "size", {
+          return Object.defineProperty(wb.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), Od.prototype.get = function(Od) {
-            var md = dd(this.__entries__, Od),
-              Wd = this.__entries__[md];
-            return Wd && Wd[1]
-          }, Od.prototype.set = function(Od, md) {
-            var Wd = dd(this.__entries__, Od);
-            ~Wd ? this.__entries__[Wd][1] = md : this.__entries__.push([Od, md])
-          }, Od.prototype.delete = function(Od) {
-            var md = this.__entries__,
-              Wd = dd(md, Od);
-            ~Wd && md.splice(Wd, 1)
-          }, Od.prototype.has = function(Od) {
-            return !!~dd(this.__entries__, Od)
-          }, Od.prototype.clear = function() {
+          }), wb.prototype.get = function(wb) {
+            var Mb = bb(this.__entries__, wb),
+              eb = this.__entries__[Mb];
+            return eb && eb[1]
+          }, wb.prototype.set = function(wb, Mb) {
+            var eb = bb(this.__entries__, wb);
+            ~eb ? this.__entries__[eb][1] = Mb : this.__entries__.push([wb, Mb])
+          }, wb.prototype.delete = function(wb) {
+            var Mb = this.__entries__,
+              eb = bb(Mb, wb);
+            ~eb && Mb.splice(eb, 1)
+          }, wb.prototype.has = function(wb) {
+            return !!~bb(this.__entries__, wb)
+          }, wb.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, Od.prototype.forEach = function(dd, Od) {
-            void 0 === Od && (Od = null);
-            for (var md = 0, Wd = this.__entries__; md < Wd.length; md++) {
-              var Fd = Wd[md];
-              dd.call(Od, Fd[1], Fd[0])
+          }, wb.prototype.forEach = function(bb, wb) {
+            void 0 === wb && (wb = null);
+            for (var Mb = 0, eb = this.__entries__; Mb < eb.length; Mb++) {
+              var Hb = eb[Mb];
+              bb.call(wb, Hb[1], Hb[0])
             }
-          }, Od
+          }, wb
         }()
       }(),
-      Fd = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      Rd = "undefined" !== typeof md.g && md.g.Math === Math ? md.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      Xd = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(Rd) : function(dd) {
+      Hb = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      pb = "undefined" !== typeof Mb.g && Mb.g.Math === Math ? Mb.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      Vb = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(pb) : function(bb) {
         return setTimeout((function() {
-          return dd(Date.now())
+          return bb(Date.now())
         }), 1e3 / 60)
       };
-    var Kd = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      hd = "undefined" !== typeof MutationObserver,
-      vd = function() {
-        function dd() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(dd, Od) {
-            var md = !1,
-              Wd = !1,
-              Fd = 0;
+    var gb = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      lb = "undefined" !== typeof MutationObserver,
+      Lb = function() {
+        function bb() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(bb, wb) {
+            var Mb = !1,
+              eb = !1,
+              Hb = 0;
 
-            function Rd() {
-              md && (md = !1, dd()), Wd && hd()
+            function pb() {
+              Mb && (Mb = !1, bb()), eb && lb()
             }
 
-            function Kd() {
-              Xd(Rd)
+            function gb() {
+              Vb(pb)
             }
 
-            function hd() {
-              var dd = Date.now();
-              if (md) {
-                if (dd - Fd < 2) return;
-                Wd = !0
-              } else md = !0, Wd = !1, setTimeout(Kd, Od);
-              Fd = dd
+            function lb() {
+              var bb = Date.now();
+              if (Mb) {
+                if (bb - Hb < 2) return;
+                eb = !0
+              } else Mb = !0, eb = !1, setTimeout(gb, wb);
+              Hb = bb
             }
-            return hd
+            return lb
           }(this.refresh.bind(this), 20)
         }
-        return dd.prototype.addObserver = function(dd) {
-          ~this.observers_.indexOf(dd) || this.observers_.push(dd), this.connected_ || this.connect_()
-        }, dd.prototype.removeObserver = function(dd) {
-          var Od = this.observers_,
-            md = Od.indexOf(dd);
-          ~md && Od.splice(md, 1), !Od.length && this.connected_ && this.disconnect_()
-        }, dd.prototype.refresh = function() {
+        return bb.prototype.addObserver = function(bb) {
+          ~this.observers_.indexOf(bb) || this.observers_.push(bb), this.connected_ || this.connect_()
+        }, bb.prototype.removeObserver = function(bb) {
+          var wb = this.observers_,
+            Mb = wb.indexOf(bb);
+          ~Mb && wb.splice(Mb, 1), !wb.length && this.connected_ && this.disconnect_()
+        }, bb.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
-        }, dd.prototype.updateObservers_ = function() {
-          var dd = this.observers_.filter((function(dd) {
-            return dd.gatherActive(), dd.hasActive()
+        }, bb.prototype.updateObservers_ = function() {
+          var bb = this.observers_.filter((function(bb) {
+            return bb.gatherActive(), bb.hasActive()
           }));
-          return dd.forEach((function(dd) {
-            return dd.broadcastActive()
-          })), dd.length > 0
-        }, dd.prototype.connect_ = function() {
-          Fd && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), hd ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          return bb.forEach((function(bb) {
+            return bb.broadcastActive()
+          })), bb.length > 0
+        }, bb.prototype.connect_ = function() {
+          Hb && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), lb ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, dd.prototype.disconnect_ = function() {
-          Fd && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, dd.prototype.onTransitionEnd_ = function(dd) {
-          var Od = dd.propertyName,
-            md = void 0 === Od ? "" : Od;
-          Kd.some((function(dd) {
-            return !!~md.indexOf(dd)
+        }, bb.prototype.disconnect_ = function() {
+          Hb && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, bb.prototype.onTransitionEnd_ = function(bb) {
+          var wb = bb.propertyName,
+            Mb = void 0 === wb ? "" : wb;
+          gb.some((function(bb) {
+            return !!~Mb.indexOf(bb)
           })) && this.refresh()
-        }, dd.getInstance = function() {
-          return this.instance_ || (this.instance_ = new dd), this.instance_
-        }, dd.instance_ = null, dd
+        }, bb.getInstance = function() {
+          return this.instance_ || (this.instance_ = new bb), this.instance_
+        }, bb.instance_ = null, bb
       }(),
-      Qd = function(dd, Od) {
-        for (var md = 0, Wd = Object.keys(Od); md < Wd.length; md++) {
-          var Fd = Wd[md];
-          Object.defineProperty(dd, Fd, {
-            value: Od[Fd],
+      Ib = function(bb, wb) {
+        for (var Mb = 0, eb = Object.keys(wb); Mb < eb.length; Mb++) {
+          var Hb = eb[Mb];
+          Object.defineProperty(bb, Hb, {
+            value: wb[Hb],
             enumerable: !1,
             writable: !1,
             configurable: !0
           })
         }
-        return dd
+        return bb
       },
-      td = function(dd) {
-        return dd && dd.ownerDocument && dd.ownerDocument.defaultView || Rd
+      Ob = function(bb) {
+        return bb && bb.ownerDocument && bb.ownerDocument.defaultView || pb
       },
-      od = Td(0, 0, 0, 0);
+      Ub = sb(0, 0, 0, 0);
 
-    function Nd(dd) {
-      return parseFloat(dd) || 0
+    function tb(bb) {
+      return parseFloat(bb) || 0
     }
 
-    function qd(dd) {
-      for (var Od = [], md = 1; md < arguments.length; md++) Od[md - 1] = arguments[md];
-      return Od.reduce((function(Od, md) {
-        return Od + Nd(dd["border-" + md + "-width"])
+    function Cb(bb) {
+      for (var wb = [], Mb = 1; Mb < arguments.length; Mb++) wb[Mb - 1] = arguments[Mb];
+      return wb.reduce((function(wb, Mb) {
+        return wb + tb(bb["border-" + Mb + "-width"])
       }), 0)
     }
 
-    function Hd(dd) {
-      var Od = dd.clientWidth,
-        md = dd.clientHeight;
-      if (!Od && !md) return od;
-      var Wd = td(dd).getComputedStyle(dd),
-        Fd = function(dd) {
-          for (var Od = {}, md = 0, Wd = ["top", "right", "bottom", "left"]; md < Wd.length; md++) {
-            var Fd = Wd[md],
-              Rd = dd["padding-" + Fd];
-            Od[Fd] = Nd(Rd)
+    function Eb(bb) {
+      var wb = bb.clientWidth,
+        Mb = bb.clientHeight;
+      if (!wb && !Mb) return Ub;
+      var eb = Ob(bb).getComputedStyle(bb),
+        Hb = function(bb) {
+          for (var wb = {}, Mb = 0, eb = ["top", "right", "bottom", "left"]; Mb < eb.length; Mb++) {
+            var Hb = eb[Mb],
+              pb = bb["padding-" + Hb];
+            wb[Hb] = tb(pb)
           }
-          return Od
-        }(Wd),
-        Rd = Fd.left + Fd.right,
-        Xd = Fd.top + Fd.bottom,
-        Kd = Nd(Wd.width),
-        hd = Nd(Wd.height);
-      if ("border-box" === Wd.boxSizing && (Math.round(Kd + Rd) !== Od && (Kd -= qd(Wd, "left", "right") + Rd), Math.round(hd + Xd) !== md && (hd -= qd(Wd, "top", "bottom") + Xd)), ! function(dd) {
-          return dd === td(dd).document.documentElement
-        }(dd)) {
-        var vd = Math.round(Kd + Rd) - Od,
-          Qd = Math.round(hd + Xd) - md;
-        1 !== Math.abs(vd) && (Kd -= vd), 1 !== Math.abs(Qd) && (hd -= Qd)
+          return wb
+        }(eb),
+        pb = Hb.left + Hb.right,
+        Vb = Hb.top + Hb.bottom,
+        gb = tb(eb.width),
+        lb = tb(eb.height);
+      if ("border-box" === eb.boxSizing && (Math.round(gb + pb) !== wb && (gb -= Cb(eb, "left", "right") + pb), Math.round(lb + Vb) !== Mb && (lb -= Cb(eb, "top", "bottom") + Vb)), ! function(bb) {
+          return bb === Ob(bb).document.documentElement
+        }(bb)) {
+        var Lb = Math.round(gb + pb) - wb,
+          Ib = Math.round(lb + Vb) - Mb;
+        1 !== Math.abs(Lb) && (gb -= Lb), 1 !== Math.abs(Ib) && (lb -= Ib)
       }
-      return Td(Fd.left, Fd.top, Kd, hd)
+      return sb(Hb.left, Hb.top, gb, lb)
     }
-    var yd = "undefined" !== typeof SVGGraphicsElement ? function(dd) {
-      return dd instanceof td(dd).SVGGraphicsElement
-    } : function(dd) {
-      return dd instanceof td(dd).SVGElement && "function" === typeof dd.getBBox
+    var Fb = "undefined" !== typeof SVGGraphicsElement ? function(bb) {
+      return bb instanceof Ob(bb).SVGGraphicsElement
+    } : function(bb) {
+      return bb instanceof Ob(bb).SVGElement && "function" === typeof bb.getBBox
     };
 
-    function bd(dd) {
-      return Fd ? yd(dd) ? function(dd) {
-        var Od = dd.getBBox();
-        return Td(0, 0, Od.width, Od.height)
-      }(dd) : Hd(dd) : od
+    function Bb(bb) {
+      return Hb ? Fb(bb) ? function(bb) {
+        var wb = bb.getBBox();
+        return sb(0, 0, wb.width, wb.height)
+      }(bb) : Eb(bb) : Ub
     }
 
-    function Td(dd, Od, md, Wd) {
+    function sb(bb, wb, Mb, eb) {
       return {
-        x: dd,
-        y: Od,
-        width: md,
-        height: Wd
+        x: bb,
+        y: wb,
+        width: Mb,
+        height: eb
       }
     }
-    var pd = function() {
-        function dd(dd) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = Td(0, 0, 0, 0), this.target = dd
+    var mb = function() {
+        function bb(bb) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = sb(0, 0, 0, 0), this.target = bb
         }
-        return dd.prototype.isActive = function() {
-          var dd = bd(this.target);
-          return this.contentRect_ = dd, dd.width !== this.broadcastWidth || dd.height !== this.broadcastHeight
-        }, dd.prototype.broadcastRect = function() {
-          var dd = this.contentRect_;
-          return this.broadcastWidth = dd.width, this.broadcastHeight = dd.height, dd
-        }, dd
+        return bb.prototype.isActive = function() {
+          var bb = Bb(this.target);
+          return this.contentRect_ = bb, bb.width !== this.broadcastWidth || bb.height !== this.broadcastHeight
+        }, bb.prototype.broadcastRect = function() {
+          var bb = this.contentRect_;
+          return this.broadcastWidth = bb.width, this.broadcastHeight = bb.height, bb
+        }, bb
       }(),
-      Yd = function(dd, Od) {
-        var md = function(dd) {
-          var Od = dd.x,
-            md = dd.y,
-            Wd = dd.width,
-            Fd = dd.height,
-            Rd = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            Xd = Object.create(Rd.prototype);
-          return Qd(Xd, {
-            x: Od,
-            y: md,
-            width: Wd,
-            height: Fd,
-            top: md,
-            right: Od + Wd,
-            bottom: Fd + md,
-            left: Od
-          }), Xd
-        }(Od);
-        Qd(this, {
-          target: dd,
-          contentRect: md
+      hb = function(bb, wb) {
+        var Mb = function(bb) {
+          var wb = bb.x,
+            Mb = bb.y,
+            eb = bb.width,
+            Hb = bb.height,
+            pb = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            Vb = Object.create(pb.prototype);
+          return Ib(Vb, {
+            x: wb,
+            y: Mb,
+            width: eb,
+            height: Hb,
+            top: Mb,
+            right: wb + eb,
+            bottom: Hb + Mb,
+            left: wb
+          }), Vb
+        }(wb);
+        Ib(this, {
+          target: bb,
+          contentRect: Mb
         })
       },
-      gd = function() {
-        function dd(dd, Od, md) {
-          if (this.activeObservations_ = [], this.observations_ = new Wd, "function" !== typeof dd) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = dd, this.controller_ = Od, this.callbackCtx_ = md
+      zb = function() {
+        function bb(bb, wb, Mb) {
+          if (this.activeObservations_ = [], this.observations_ = new eb, "function" !== typeof bb) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = bb, this.controller_ = wb, this.callbackCtx_ = Mb
         }
-        return dd.prototype.observe = function(dd) {
+        return bb.prototype.observe = function(bb) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(dd instanceof td(dd).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var Od = this.observations_;
-            Od.has(dd) || (Od.set(dd, new pd(dd)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(bb instanceof Ob(bb).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var wb = this.observations_;
+            wb.has(bb) || (wb.set(bb, new mb(bb)), this.controller_.addObserver(this), this.controller_.refresh())
           }
-        }, dd.prototype.unobserve = function(dd) {
+        }, bb.prototype.unobserve = function(bb) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(dd instanceof td(dd).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var Od = this.observations_;
-            Od.has(dd) && (Od.delete(dd), Od.size || this.controller_.removeObserver(this))
+            if (!(bb instanceof Ob(bb).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var wb = this.observations_;
+            wb.has(bb) && (wb.delete(bb), wb.size || this.controller_.removeObserver(this))
           }
-        }, dd.prototype.disconnect = function() {
+        }, bb.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, dd.prototype.gatherActive = function() {
-          var dd = this;
-          this.clearActive(), this.observations_.forEach((function(Od) {
-            Od.isActive() && dd.activeObservations_.push(Od)
+        }, bb.prototype.gatherActive = function() {
+          var bb = this;
+          this.clearActive(), this.observations_.forEach((function(wb) {
+            wb.isActive() && bb.activeObservations_.push(wb)
           }))
-        }, dd.prototype.broadcastActive = function() {
+        }, bb.prototype.broadcastActive = function() {
           if (this.hasActive()) {
-            var dd = this.callbackCtx_,
-              Od = this.activeObservations_.map((function(dd) {
-                return new Yd(dd.target, dd.broadcastRect())
+            var bb = this.callbackCtx_,
+              wb = this.activeObservations_.map((function(bb) {
+                return new hb(bb.target, bb.broadcastRect())
               }));
-            this.callback_.call(dd, Od, dd), this.clearActive()
+            this.callback_.call(bb, wb, bb), this.clearActive()
           }
-        }, dd.prototype.clearActive = function() {
+        }, bb.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
-        }, dd.prototype.hasActive = function() {
+        }, bb.prototype.hasActive = function() {
           return this.activeObservations_.length > 0
-        }, dd
+        }, bb
       }(),
-      wd = "undefined" !== typeof WeakMap ? new WeakMap : new Wd,
-      Ed = function dd(Od) {
-        if (!(this instanceof dd)) throw new TypeError("Cannot call a class as a function.");
+      Xb = "undefined" !== typeof WeakMap ? new WeakMap : new eb,
+      xb = function bb(wb) {
+        if (!(this instanceof bb)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var md = vd.getInstance(),
-          Wd = new gd(Od, md, this);
-        wd.set(this, Wd)
+        var Mb = Lb.getInstance(),
+          eb = new zb(wb, Mb, this);
+        Xb.set(this, eb)
       };
-    ["observe", "unobserve", "disconnect"].forEach((function(dd) {
-      Ed.prototype[dd] = function() {
-        var Od;
-        return (Od = wd.get(this))[dd].apply(Od, arguments)
+    ["observe", "unobserve", "disconnect"].forEach((function(bb) {
+      xb.prototype[bb] = function() {
+        var wb;
+        return (wb = Xb.get(this))[bb].apply(wb, arguments)
       }
     }));
-    const Jd = "undefined" !== typeof Rd.ResizeObserver ? Rd.ResizeObserver : Ed
+    const jb = "undefined" !== typeof pb.ResizeObserver ? pb.ResizeObserver : xb
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

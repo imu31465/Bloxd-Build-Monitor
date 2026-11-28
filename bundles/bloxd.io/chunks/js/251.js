@@ -1,58 +1,58 @@
 export const id = 251;
 export const ids = [251];
 export const modules = {
-  37915: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Qd,
-      h: () => Kd,
-      l: () => vd,
-      m: () => hd,
-      o: () => pd
+  37602: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Ib,
+      e: () => gb,
+      g: () => Lb,
+      j: () => lb,
+      l: () => mb
     });
-    var Wd = md(708),
-      Fd = md(1906),
-      Rd = md(5571);
-    class Xd {
-      constructor(dd, Od) {
-        this.width = dd, this.Mt = Od, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(dd * Od)
+    var eb = Mb(667),
+      Hb = Mb(1980),
+      pb = Mb(5685);
+    class Vb {
+      constructor(bb, wb) {
+        this.width = bb, this.qO = wb, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(bb * wb)
       }
-      push(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const md = this.data,
-          Wd = this.next * this.width;
-        for (let Fd = 0; Fd < this.width; Fd++) md[Wd + Fd] = dd[Od + Fd];
-        this.next = (this.next + 1) % this.Mt, this.size = Math.min(this.size + 1, this.Mt)
+      push(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const Mb = this.data,
+          eb = this.next * this.width;
+        for (let Hb = 0; Hb < this.width; Hb++) Mb[eb + Hb] = bb[wb + Hb];
+        this.next = (this.next + 1) % this.qO, this.size = Math.min(this.size + 1, this.qO)
       }
       rows() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const md = [],
-          Wd = (this.next - this.size + this.Mt) % this.Mt;
-        for (let Fd = 0; Fd < this.size; Fd++) {
-          const Rd = (Wd + Fd) % this.Mt * this.width;
-          this.data[Rd + dd] >= Od && md.push(Array.from(this.data.subarray(Rd, Rd + this.width)))
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const Mb = [],
+          eb = (this.next - this.size + this.qO) % this.qO;
+        for (let Hb = 0; Hb < this.size; Hb++) {
+          const pb = (eb + Hb) % this.qO * this.width;
+          this.data[pb + bb] >= wb && Mb.push(Array.from(this.data.subarray(pb, pb + this.width)))
         }
-        return md
+        return Mb
       }
       lines() {
-        return this.rows().map((dd => dd.join(",")))
+        return this.rows().map((bb => bb.join(",")))
       }
     }
-    const Kd = 10,
-      hd = {
+    const gb = 10,
+      lb = {
         idle: 0,
-        kQ: 1,
-        sV: 2,
-        rV: 3,
-        Ly: 4
+        nI: 1,
+        OJ: 2,
+        xJ: 3,
+        tF: 4
       },
-      vd = {
+      Lb = {
         none: 0,
         skipped: 1,
         paced: 2,
         drawn: 3
       },
-      Qd = {
+      Ib = {
         lockGained: 1,
         lockLost: 2,
         lockError: 3,
@@ -66,91 +66,91 @@ export const modules = {
         stepsLost: 11,
         cameraSetsLost: 12
       },
-      td = 12e3,
-      od = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      Nd = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      qd = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      Hd = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      yd = ["nowMs", "change", "count"];
+      Ob = 12e3,
+      Ub = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      tb = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      Cb = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      Eb = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      Fb = ["nowMs", "change", "count"];
 
-    function bd(dd) {
-      return "js" === dd ? Qd.jsClient : Qd.wasmClient
+    function Bb(bb) {
+      return "js" === bb ? Ib.jsClient : Ib.wasmClient
     }
-    class Td {
+    class sb {
       constructor() {
-        this.steps = new Xd(Kd, td), this.events = new Xd(Nd.length, td), this.frames = new Xd(qd.length, td), this.cameraSets = new Xd(Rd.h, 256), this.changes = new Xd(yd.length, 256)
+        this.steps = new Vb(gb, Ob), this.events = new Vb(tb.length, Ob), this.frames = new Vb(Cb.length, Ob), this.cameraSets = new Vb(pb.f, 256), this.changes = new Vb(Fb.length, 256)
       }
     }
-    const pd = new class {
+    const mb = new class {
       constructor() {
-        this.rings = null, this.sample = new Float64Array(Nd.length), this.startedClient = null, this.startedAtMs = 0
+        this.rings = null, this.sample = new Float64Array(tb.length), this.startedClient = null, this.startedAtMs = 0
       }
       get client() {
         return this.startedClient
       }
-      start(dd, Od) {
-        this.startedClient = dd, this.startedAtMs = performance.now(), null !== this.rings ? this.change(bd(dd)) : Od && this.allocate()
+      start(bb, wb) {
+        this.startedClient = bb, this.startedAtMs = performance.now(), null !== this.rings ? this.change(Bb(bb)) : wb && this.allocate()
       }
       lockGained() {
-        this.allocate(), this.change(Qd.lockGained)
+        this.allocate(), this.change(Ib.lockGained)
       }
       allocate() {
-        null === this.rings && (this.rings = new Td, null !== this.startedClient && this.changeAt(this.startedAtMs, bd(this.startedClient), 1))
+        null === this.rings && (this.rings = new sb, null !== this.startedClient && this.changeAt(this.startedAtMs, Bb(this.startedClient), 1))
       }
-      step(dd, Od) {
-        var md;
-        dd[Od + 6] !== hd.Ly && (null === (md = this.rings) || void 0 === md || md.steps.push(dd, Od))
+      step(bb, wb) {
+        var Mb;
+        bb[wb + 6] !== lb.tF && (null === (Mb = this.rings) || void 0 === Mb || Mb.steps.push(bb, wb))
       }
-      cameraSet(dd, Od) {
-        var md;
-        null === (md = this.rings) || void 0 === md || md.cameraSets.push(dd, Od)
+      cameraSet(bb, wb) {
+        var Mb;
+        null === (Mb = this.rings) || void 0 === Mb || Mb.cameraSets.push(bb, wb)
       }
-      mouseMove(dd, Od) {
-        const md = this.rings;
-        if (null === md) return;
-        const Wd = this.sample;
-        Wd[0] = dd.timeStamp, Wd[1] = performance.now(), Wd[2] = dd.movementX, Wd[3] = dd.movementY, Wd[4] = Od ? 1 : 0, md.events.push(Wd)
+      mouseMove(bb, wb) {
+        const Mb = this.rings;
+        if (null === Mb) return;
+        const eb = this.sample;
+        eb[0] = bb.timeStamp, eb[1] = performance.now(), eb[2] = bb.movementX, eb[3] = bb.movementY, eb[4] = wb ? 1 : 0, Mb.events.push(eb)
       }
-      frame(dd, Od, md, Wd) {
-        const Fd = this.rings;
-        if (null === Fd || Wd === vd.none) return;
-        const Rd = this.sample;
-        Rd[0] = performance.now(), Rd[1] = dd, Rd[2] = Od, Rd[3] = md, Rd[4] = Wd, Fd.frames.push(Rd)
+      frame(bb, wb, Mb, eb) {
+        const Hb = this.rings;
+        if (null === Hb || eb === Lb.none) return;
+        const pb = this.sample;
+        pb[0] = performance.now(), pb[1] = bb, pb[2] = wb, pb[3] = Mb, pb[4] = eb, Hb.frames.push(pb)
       }
-      change(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), dd, Od)
+      change(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), bb, wb)
       }
-      changeAt(dd, Od, md) {
-        const Wd = this.rings;
-        if (null === Wd) return;
-        const Fd = this.sample;
-        Fd[0] = dd, Fd[1] = Od, Fd[2] = md, Wd.changes.push(Fd)
+      changeAt(bb, wb, Mb) {
+        const eb = this.rings;
+        if (null === eb) return;
+        const Hb = this.sample;
+        Hb[0] = bb, Hb[1] = wb, Hb[2] = Mb, eb.changes.push(Hb)
       }
       dumpText() {
-        var dd, Od;
-        const md = this.rings;
-        return [`look records (${this.startedClient}): ${od.join(",")}`, ...null !== (dd = null === md || void 0 === md ? void 0 : md.steps.lines()) && void 0 !== dd ? dd : [], `mousemove events: ${Nd.join(",")}`, ...null !== (Od = null === md || void 0 === md ? void 0 : md.events.lines()) && void 0 !== Od ? Od : []].join("\n")
+        var bb, wb;
+        const Mb = this.rings;
+        return [`look records (${this.startedClient}): ${Ub.join(",")}`, ...null !== (bb = null === Mb || void 0 === Mb ? void 0 : Mb.steps.lines()) && void 0 !== bb ? bb : [], `mousemove events: ${tb.join(",")}`, ...null !== (wb = null === Mb || void 0 === Mb ? void 0 : Mb.events.lines()) && void 0 !== wb ? wb : []].join("\n")
       }
-      toJson(dd, Od) {
-        var md;
-        const Fd = dd - 6e4,
-          Rd = this.rings,
-          Xd = function(dd, Od) {
-            var md;
-            let Wd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const Rd = null !== (md = null === dd || void 0 === dd ? void 0 : dd.rows(Wd, Fd)) && void 0 !== md ? md : [];
+      toJson(bb, wb) {
+        var Mb;
+        const Hb = bb - 6e4,
+          pb = this.rings,
+          Vb = function(bb, wb) {
+            var Mb;
+            let eb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const pb = null !== (Mb = null === bb || void 0 === bb ? void 0 : bb.rows(eb, Hb)) && void 0 !== Mb ? Mb : [];
             return {
-              columns: Od,
-              fromMs: 0 === Rd.length ? null : Rd[0][Wd],
-              rows: Rd
+              columns: wb,
+              fromMs: 0 === pb.length ? null : pb[0][eb],
+              rows: pb
             }
           };
         return {
-          version: Wd.c,
-          client: null !== (md = this.startedClient) && void 0 !== md ? md : "not started",
+          version: eb.e,
+          client: null !== (Mb = this.startedClient) && void 0 !== Mb ? Mb : "not started",
           savedAt: (new Date).toISOString(),
-          savedAtMs: dd,
+          savedAtMs: bb,
           keptMs: 6e4,
           page: window.location.href,
           userAgent: navigator.userAgent,
@@ -159,206 +159,206 @@ export const modules = {
             width: window.screen.width,
             height: window.screen.height
           },
-          tb: null !== document.pointerLockElement,
+          uF: null !== document.pointerLockElement,
           visibility: document.visibilityState,
-          ...Od,
-          outcomes: hd,
-          frameKinds: vd,
-          changes: Qd,
-          lookSteps: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.steps, od),
-          mouseMoves: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.events, Nd, 1),
-          frames: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.frames, qd),
-          cameraSets: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.cameraSets, Hd),
-          pageChanges: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.changes, yd)
+          ...wb,
+          outcomes: lb,
+          frameKinds: Lb,
+          changes: Ib,
+          lookSteps: Vb(null === pb || void 0 === pb ? void 0 : pb.steps, Ub),
+          mouseMoves: Vb(null === pb || void 0 === pb ? void 0 : pb.events, tb, 1),
+          frames: Vb(null === pb || void 0 === pb ? void 0 : pb.frames, Cb),
+          cameraSets: Vb(null === pb || void 0 === pb ? void 0 : pb.cameraSets, Eb),
+          pageChanges: Vb(null === pb || void 0 === pb ? void 0 : pb.changes, Fb)
         }
       }
-      save(dd) {
-        const Od = JSON.stringify(this.toJson(performance.now(), dd));
-        (0, Fd.e)(new Blob([Od], {
+      save(bb) {
+        const wb = JSON.stringify(this.toJson(performance.now(), bb));
+        (0, Hb.d)(new Blob([wb], {
           type: "application/json"
         }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
       }
     }
   },
-  37908: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      LOOK_DEBUG_HEADER: () => Qd,
-      endLookDebugTake: () => bd,
-      noteLookDroppedCopy: () => Td,
-      saveLookCapture: () => pd,
-      startLookDebug: () => yd
+  37593: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      LOOK_DEBUG_HEADER: () => Ib,
+      endLookDebugTake: () => Bb,
+      noteLookDroppedCopy: () => sb,
+      saveLookCapture: () => mb,
+      startLookDebug: () => Fb
     });
-    var Wd = md(5571),
-      Fd = md(3903),
-      Rd = md(2057);
-    const Xd = new Map(Object.entries(Wd.n).map((dd => {
-      let [Od, md] = dd;
-      return [md, Od]
+    var eb = Mb(5685),
+      Hb = Mb(4060),
+      pb = Mb(2107);
+    const Vb = new Map(Object.entries(eb.m).map((bb => {
+      let [wb, Mb] = bb;
+      return [Mb, wb]
     })));
 
-    function Kd(dd) {
-      return (0, Rd.B)(dd).toFixed(1)
+    function gb(bb) {
+      return (0, pb.E)(bb).toFixed(1)
     }
 
-    function hd(dd, Od) {
-      return `camera set by ${Xd.get(dd[Od+1])}: heading ${`${Kd(dd[Od+2])} -> ${Kd(dd[Od+4])}`} deg, pitch ${`${Kd(dd[Od+3])} -> ${Kd(dd[Od+5])}`} deg, at ${dd[Od].toFixed(1)} ms`
+    function lb(bb, wb) {
+      return `camera set by ${Vb.get(bb[wb+1])}: heading ${`${gb(bb[wb+2])} -> ${gb(bb[wb+4])}`} deg, pitch ${`${gb(bb[wb+3])} -> ${gb(bb[wb+5])}`} deg, at ${bb[wb].toFixed(1)} ms`
     }
-    var vd = md(37915);
-    const Qd = 2;
+    var Lb = Mb(37602);
+    const Ib = 2;
 
-    function td(dd) {
-      return Number.isFinite(dd) ? String(Math.round(10 * dd) / 10) : String(dd)
+    function Ob(bb) {
+      return Number.isFinite(bb) ? String(Math.round(10 * bb) / 10) : String(bb)
     }
 
-    function od(dd) {
-      return Number.isFinite(dd) ? dd.toFixed(1) : String(dd)
+    function Ub(bb) {
+      return Number.isFinite(bb) ? bb.toFixed(1) : String(bb)
     }
-    class Nd {
+    class tb {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.sV = 0, this.pastLimit = 0, this.lockSkips = 0, this.Ly = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.OJ = 0, this.pastLimit = 0, this.lockSkips = 0, this.tF = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
       moved() {
-        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.sV > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.OJ > 0 || this.dropped > 0 || this.cameraSets > 0
       }
       hasEvent() {
-        return this.sV > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.OJ > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
       }
     }
-    class qd {
+    class Cb {
       constructor() {
-        var dd = this;
-        this.topicOn = (0, Fd.o)("look"), this.remote = (0, Fd.q)(), this.tally = new Nd, this.takes = null, this.started = !1, this.record = function(Od) {
-          let md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          if (vd.o.step(Od, md), !dd.topicOn) return;
-          const Wd = Od[md],
-            Fd = Od[md + 1],
-            Rd = Od[md + 2],
-            Xd = Od[md + 3],
-            Kd = Od[md + 4],
-            hd = Od[md + 5],
-            Qd = Od[md + 6],
-            Nd = Od[md + 7],
-            qd = Od[md + 8],
-            Hd = Od[md + 9],
-            yd = dd.tally;
-          switch (yd.frames++, Qd) {
-            case vd.m.idle:
-              return void yd.idle++;
-            case vd.m.Ly:
-              return void yd.Ly++;
-            case vd.m.rV:
-              return yd.lockSkips++, void(0 === Rd && 0 === Xd || dd.outlier(`lock skip dropped raw (${td(Rd)}, ${td(Xd)}) at ${od(Wd)} ms`))
+        var bb = this;
+        this.topicOn = (0, Hb.m)("look"), this.remote = (0, Hb.n)(), this.tally = new tb, this.takes = null, this.started = !1, this.record = function(wb) {
+          let Mb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          if (Lb.l.step(wb, Mb), !bb.topicOn) return;
+          const eb = wb[Mb],
+            Hb = wb[Mb + 1],
+            pb = wb[Mb + 2],
+            Vb = wb[Mb + 3],
+            gb = wb[Mb + 4],
+            lb = wb[Mb + 5],
+            Ib = wb[Mb + 6],
+            tb = wb[Mb + 7],
+            Cb = wb[Mb + 8],
+            Eb = wb[Mb + 9],
+            Fb = bb.tally;
+          switch (Fb.frames++, Ib) {
+            case Lb.j.idle:
+              return void Fb.idle++;
+            case Lb.j.tF:
+              return void Fb.tF++;
+            case Lb.j.xJ:
+              return Fb.lockSkips++, void(0 === pb && 0 === Vb || bb.outlier(`lock skip dropped raw (${Ob(pb)}, ${Ob(Vb)}) at ${Ub(eb)} ms`))
           }
-          yd.looked++, Number.isFinite(Fd) && (yd.dtMin = Math.min(yd.dtMin, Fd), yd.dtMax = Math.max(yd.dtMax, Fd), yd.dtSum += Fd, Fd > 0 && (yd.peakRate = Math.max(yd.peakRate, Math.hypot(Kd, hd) / Fd))), yd.raw[0] += Rd, yd.raw[1] += Xd, yd.turned[0] += Kd, yd.turned[1] += hd;
-          const bd = Math.abs(Rd) > Hd || Math.abs(Xd) > Hd,
-            Td = `raw (${td(Rd)}, ${td(Xd)}) over ${od(Fd)} ms, limit ${td(Hd)}, filter v (${Nd.toFixed(3)}, ${qd.toFixed(3)}) px/ms, at ${od(Wd)} ms`;
-          Qd === vd.m.sV ? (yd.sV++, dd.outlier(`spike put right: ${Td} -> turned (${td(Kd)}, ${td(hd)})`)) : bd ? (yd.pastLimit++, dd.outlier(`kept past limit: ${Td}`)) : Fd > 50 && (yd.longFrames++, dd.remote || dd.outlier(`long frame: ${Td}, turned in full`))
-        }, this.onMouseMove = dd => {
-          const Od = null !== document.pointerLockElement;
-          if (vd.o.mouseMove(dd, Od), !this.topicOn) return;
-          const md = this.tally,
+          Fb.looked++, Number.isFinite(Hb) && (Fb.dtMin = Math.min(Fb.dtMin, Hb), Fb.dtMax = Math.max(Fb.dtMax, Hb), Fb.dtSum += Hb, Hb > 0 && (Fb.peakRate = Math.max(Fb.peakRate, Math.hypot(gb, lb) / Hb))), Fb.raw[0] += pb, Fb.raw[1] += Vb, Fb.turned[0] += gb, Fb.turned[1] += lb;
+          const Bb = Math.abs(pb) > Eb || Math.abs(Vb) > Eb,
+            sb = `raw (${Ob(pb)}, ${Ob(Vb)}) over ${Ub(Hb)} ms, limit ${Ob(Eb)}, filter v (${tb.toFixed(3)}, ${Cb.toFixed(3)}) px/ms, at ${Ub(eb)} ms`;
+          Ib === Lb.j.OJ ? (Fb.OJ++, bb.outlier(`spike put right: ${sb} -> turned (${Ob(gb)}, ${Ob(lb)})`)) : Bb ? (Fb.pastLimit++, bb.outlier(`kept past limit: ${sb}`)) : Hb > 50 && (Fb.longFrames++, bb.remote || bb.outlier(`long frame: ${sb}, turned in full`))
+        }, this.onMouseMove = bb => {
+          const wb = null !== document.pointerLockElement;
+          if (Lb.l.mouseMove(bb, wb), !this.topicOn) return;
+          const Mb = this.tally,
             {
-              movementX: Wd,
-              movementY: Fd
-            } = dd;
-          md.events++;
-          const Rd = Math.max(Math.abs(Wd), Math.abs(Fd));
-          md.eventMax = Math.max(md.eventMax, Rd), Rd >= 200 && (md.bigEvents++, this.eventOutlier(`big mousemove (${Wd}, ${Fd}) at ${od(dd.timeStamp)} ms, lock ${Od?"jK":"free"}`))
+              movementX: eb,
+              movementY: Hb
+            } = bb;
+          Mb.events++;
+          const pb = Math.max(Math.abs(eb), Math.abs(Hb));
+          Mb.eventMax = Math.max(Mb.eventMax, pb), pb >= 200 && (Mb.bigEvents++, this.eventOutlier(`big mousemove (${eb}, ${Hb}) at ${Ub(bb.timeStamp)} ms, lock ${wb?"dg":"free"}`))
         }, this.onLockChange = () => {
-          const dd = document.pointerLockElement;
-          dd ? vd.o.lockGained() : vd.o.change(vd.d.lockLost), this.topicOn && (0, Fd.k)("look", `pointer lock ${dd?`gained (${dd.tagName.toLowerCase()})`:"lost"} at ${od(performance.now())} ms`)
+          const bb = document.pointerLockElement;
+          bb ? Lb.l.lockGained() : Lb.l.change(Lb.c.lockLost), this.topicOn && (0, Hb.j)("look", `pointer lock ${bb?`gained (${bb.tagName.toLowerCase()})`:"lost"} at ${Ub(performance.now())} ms`)
         }, this.onLockError = () => {
-          vd.o.change(vd.d.lockError), this.topicOn && (0, Fd.k)("look", `pointer lock request failed at ${od(performance.now())} ms`)
+          Lb.l.change(Lb.c.lockError), this.topicOn && (0, Hb.j)("look", `pointer lock request failed at ${Ub(performance.now())} ms`)
         }, this.onVisibility = () => {
-          vd.o.change("hidden" === document.visibilityState ? vd.d.hidden : vd.d.visible), this.topicOn && (0, Fd.k)("look", `page ${document.visibilityState} at ${od(performance.now())} ms`)
+          Lb.l.change("hidden" === document.visibilityState ? Lb.c.hidden : Lb.c.visible), this.topicOn && (0, Hb.j)("look", `page ${document.visibilityState} at ${Ub(performance.now())} ms`)
         }, this.onFocus = () => {
-          vd.o.change(vd.d.focus)
+          Lb.l.change(Lb.c.focus)
         }, this.onBlur = () => {
-          vd.o.change(vd.d.blur)
+          Lb.l.change(Lb.c.blur)
         }, this.flush = () => {
           if (this.takeRecords(), !this.topicOn) return;
-          const dd = this.tally;
-          if (this.tally = new Nd, !dd.moved() || this.remote && !dd.hasEvent()) return;
-          const Od = dd.looked > 0 ? dd.dtSum / dd.looked : NaN,
-            md = [`${dd.frames} frames (${dd.looked} looked, ${dd.idle} idle${"wasm"===vd.o.client?`, ${dd.Ly} carried`:""})`, `dt avg ${od(Od)} min ${od(dd.dtMin)} max ${od(dd.dtMax)}, ${dd.longFrames} long`, `${dd.events} mousemoves (max ${td(dd.eventMax)} px, ${dd.bigEvents} big)`, `raw (${td(dd.raw[0])}, ${td(dd.raw[1])}) turned (${td(dd.turned[0])}, ${td(dd.turned[1])})`, `peak ${dd.peakRate.toFixed(2)} px/ms`, `put right ${dd.sV}, past limit ${dd.pastLimit}, lock skips ${dd.lockSkips}`, "lock " + (document.pointerLockElement ? "jK" : "free")];
-          dd.dropped > 0 && md.push(`${dd.dropped} doubled spike copies dropped`), dd.cameraSets > 0 && md.push(`${dd.cameraSets} camera sets`), dd.cameraSetsLost > 0 && md.push(`${dd.cameraSetsLost} camera set records lost`), dd.lost > 0 && md.push(`${dd.lost} records lost`), dd.suppressed > 0 && md.push(`${dd.suppressed} outlier lines not shown`), (0, Fd.k)("look", `1s: ${md.join("; ")}`)
+          const bb = this.tally;
+          if (this.tally = new tb, !bb.moved() || this.remote && !bb.hasEvent()) return;
+          const wb = bb.looked > 0 ? bb.dtSum / bb.looked : NaN,
+            Mb = [`${bb.frames} frames (${bb.looked} looked, ${bb.idle} idle${"wasm"===Lb.l.client?`, ${bb.tF} carried`:""})`, `dt avg ${Ub(wb)} min ${Ub(bb.dtMin)} max ${Ub(bb.dtMax)}, ${bb.longFrames} long`, `${bb.events} mousemoves (max ${Ob(bb.eventMax)} px, ${bb.bigEvents} big)`, `raw (${Ob(bb.raw[0])}, ${Ob(bb.raw[1])}) turned (${Ob(bb.turned[0])}, ${Ob(bb.turned[1])})`, `peak ${bb.peakRate.toFixed(2)} px/ms`, `put right ${bb.OJ}, past limit ${bb.pastLimit}, lock skips ${bb.lockSkips}`, "lock " + (document.pointerLockElement ? "dg" : "free")];
+          bb.dropped > 0 && Mb.push(`${bb.dropped} doubled spike copies dropped`), bb.cameraSets > 0 && Mb.push(`${bb.cameraSets} camera sets`), bb.cameraSetsLost > 0 && Mb.push(`${bb.cameraSetsLost} camera set records lost`), bb.lost > 0 && Mb.push(`${bb.lost} records lost`), bb.suppressed > 0 && Mb.push(`${bb.suppressed} outlier lines not shown`), (0, Hb.j)("look", `1s: ${Mb.join("; ")}`)
         }
       }
-      start(dd, Od) {
-        if (vd.o.start(dd, null !== document.pointerLockElement), this.takes = Od, this.topicOn) {
+      start(bb, wb) {
+        if (Lb.l.start(bb, null !== document.pointerLockElement), this.takes = wb, this.topicOn) {
           const {
-            screen: Od
+            screen: wb
           } = window;
-          (0, Fd.k)("look", `start: ${dd} client, dpr ${window.devicePixelRatio}, screen ${Od.width}x${Od.height}, pointer lock ${document.pointerLockElement?"jK":"free"}`)
+          (0, Hb.j)("look", `start: ${bb} client, dpr ${window.devicePixelRatio}, screen ${wb.width}x${wb.height}, pointer lock ${document.pointerLockElement?"dg":"free"}`)
         }
         this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, Fd.g)("look", (() => vd.o.dumpText())))
+        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, Hb.h)("look", (() => Lb.l.dumpText())))
       }
-      outlier(dd) {
-        const Od = this.tally;
-        Od.outliers >= 20 ? Od.suppressed++ : (Od.outliers++, (0, Fd.k)("look", dd))
+      outlier(bb) {
+        const wb = this.tally;
+        wb.outliers >= 20 ? wb.suppressed++ : (wb.outliers++, (0, Hb.j)("look", bb))
       }
-      eventOutlier(dd) {
-        const Od = this.tally;
-        Od.eventLines >= 10 ? Od.suppressed++ : (Od.eventLines++, (0, Fd.k)("look", dd))
+      eventOutlier(bb) {
+        const wb = this.tally;
+        wb.eventLines >= 10 ? wb.suppressed++ : (wb.eventLines++, (0, Hb.j)("look", bb))
       }
       takeRecords() {
         if (null === this.takes) return;
-        const dd = this.takes.look();
-        if (dd.length >= Qd) {
-          this.counted(vd.d.stepsLost, dd[0]), this.counted(vd.d.droppedCopies, dd[1]);
-          for (let Od = Qd; Od + vd.h <= dd.length; Od += vd.h) this.record(dd, Od)
+        const bb = this.takes.look();
+        if (bb.length >= Ib) {
+          this.counted(Lb.c.stepsLost, bb[0]), this.counted(Lb.c.droppedCopies, bb[1]);
+          for (let wb = Ib; wb + Lb.e <= bb.length; wb += Lb.e) this.record(bb, wb)
         }
-        const Od = this.takes.cameraSets();
-        if (Od.length >= Wd.e) {
-          this.counted(vd.d.cameraSetsLost, Od[0]);
-          for (let dd = Wd.e; dd + Wd.h <= Od.length; dd += Wd.h) vd.o.cameraSet(Od, dd), this.topicOn && (this.tally.cameraSets++, this.outlier(hd(Od, dd)))
+        const wb = this.takes.cameraSets();
+        if (wb.length >= eb.b) {
+          this.counted(Lb.c.cameraSetsLost, wb[0]);
+          for (let bb = eb.b; bb + eb.f <= wb.length; bb += eb.f) Lb.l.cameraSet(wb, bb), this.topicOn && (this.tally.cameraSets++, this.outlier(lb(wb, bb)))
         }
       }
       droppedCopy() {
-        this.counted(vd.d.droppedCopies, 1)
+        this.counted(Lb.c.droppedCopies, 1)
       }
-      counted(dd, Od) {
-        if (0 === Od) return;
-        if (vd.o.change(dd, Od), !this.topicOn) return;
-        const md = this.tally;
-        dd === vd.d.droppedCopies ? md.dropped += Od : dd === vd.d.stepsLost ? md.lost += Od : md.cameraSetsLost += Od
+      counted(bb, wb) {
+        if (0 === wb) return;
+        if (Lb.l.change(bb, wb), !this.topicOn) return;
+        const Mb = this.tally;
+        bb === Lb.c.droppedCopies ? Mb.dropped += wb : bb === Lb.c.stepsLost ? Mb.lost += wb : Mb.cameraSetsLost += wb
       }
       endTake() {
         this.takeRecords(), this.takes = null
       }
     }
-    let Hd = null;
+    let Eb = null;
 
-    function yd(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return Hd ??= new qd, Hd.start(dd, Od), Hd.record
+    function Fb(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return Eb ??= new Cb, Eb.start(bb, wb), Eb.record
     }
 
-    function bd() {
-      var dd;
-      null === (dd = Hd) || void 0 === dd || dd.endTake()
+    function Bb() {
+      var bb;
+      null === (bb = Eb) || void 0 === bb || bb.endTake()
     }
 
-    function Td() {
-      var dd;
-      null === (dd = Hd) || void 0 === dd || dd.droppedCopy()
+    function sb() {
+      var bb;
+      null === (bb = Eb) || void 0 === bb || bb.droppedCopy()
     }
-    async function pd(dd) {
-      var Od;
-      null === (Od = Hd) || void 0 === Od || Od.takeRecords();
+    async function mb(bb) {
+      var wb;
+      null === (wb = Eb) || void 0 === wb || wb.takeRecords();
       const {
-        clientHintsRead: Wd,
-        debugDeviceLines: Fd
-      } = await md.e(35).then((() => md(35407)));
-      await Wd, vd.o.save({
-        ...dd,
-        device: Fd()
+        clientHintsRead: eb,
+        debugDeviceLines: Hb
+      } = await Mb.e(35).then((() => Mb(35197)));
+      await eb, Lb.l.save({
+        ...bb,
+        device: Hb()
       })
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

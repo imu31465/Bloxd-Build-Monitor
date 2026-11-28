@@ -1,263 +1,263 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  37935: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      GiftOpening: () => KO
+  37619: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      GiftOpening: () => pw
     });
-    var Wd = md(66),
-      Fd = md(1155),
-      Rd = md.n(Fd),
-      Xd = md(1238),
-      Kd = md(29),
-      hd = md(1605),
-      vd = md(35582),
-      Qd = md(5194),
-      td = md(1572),
-      od = md(1443),
-      Nd = md(3353),
-      qd = md(3684),
-      Hd = md(3307),
-      yd = md(1186),
-      bd = md(4339),
-      Td = md(1341);
-    const pd = {
+    var eb = Mb(64),
+      Hb = Mb(1159),
+      pb = Mb.n(Hb),
+      Vb = Mb(1259),
+      gb = Mb(26),
+      lb = Mb(1648),
+      Lb = Mb(35366),
+      Ib = Mb(5384),
+      Ob = Mb(1616),
+      Ub = Mb(1475),
+      tb = Mb(3457),
+      Cb = Mb(3813),
+      Eb = Mb(3402),
+      Fb = Mb(1179),
+      Bb = Mb(4501),
+      sb = Mb(1364);
+    const mb = {
       festive: "\ud83c\udf84 \u26c4 \ud83c\udf81",
       sweater: "\u2744"
     };
 
-    function Yd(dd) {
+    function hb(bb) {
       let {
-        wrap: Od,
-        className: md,
-        rootRef: Wd,
-        bodyRef: Fd,
-        lidRef: Xd,
-        seamRef: Kd
-      } = dd;
-      const hd = pd[Od];
-      return (0, Td.jsxs)("div", {
-        className: Rd()("GiftBox", `GiftBoxWrap_${Od}`, md),
-        ref: Wd,
-        children: [(0, Td.jsx)("div", {
+        wrap: wb,
+        className: Mb,
+        rootRef: eb,
+        bodyRef: Hb,
+        lidRef: Vb,
+        seamRef: gb
+      } = bb;
+      const lb = mb[wb];
+      return (0, sb.jsxs)("div", {
+        className: pb()("GiftBox", `GiftBoxWrap_${wb}`, Mb),
+        ref: eb,
+        children: [(0, sb.jsx)("div", {
           className: "GiftBoxPlinth"
-        }), (0, Td.jsxs)("div", {
+        }), (0, sb.jsxs)("div", {
           className: "GiftBoxBody",
-          ref: Fd,
-          children: [(0, Td.jsxs)("div", {
+          ref: Hb,
+          children: [(0, sb.jsxs)("div", {
             className: "GiftBoxCube",
-            children: [(0, Td.jsxs)("div", {
+            children: [(0, sb.jsxs)("div", {
               className: "GiftBoxFace GiftBoxFront",
-              children: [hd && (0, Td.jsx)("span", {
+              children: [lb && (0, sb.jsx)("span", {
                 className: "GiftBoxPrint",
-                children: hd
-              }), "blocks" === Od && (0, Td.jsxs)("svg", {
+                children: lb
+              }), "blocks" === wb && (0, sb.jsxs)("svg", {
                 className: "GiftBoxCracks",
                 viewBox: "0 0 100 80",
                 "aria-hidden": !0,
-                children: [(0, Td.jsx)("polyline", {
+                children: [(0, sb.jsx)("polyline", {
                   points: "50,0 44,18 56,30 47,48 58,62 52,80"
-                }), (0, Td.jsx)("polyline", {
+                }), (0, sb.jsx)("polyline", {
                   points: "44,18 24,26 14,44"
-                }), (0, Td.jsx)("polyline", {
+                }), (0, sb.jsx)("polyline", {
                   points: "56,30 78,36 90,58"
                 })]
               })]
-            }), (0, Td.jsx)("div", {
+            }), (0, sb.jsx)("div", {
               className: "GiftBoxFace GiftBoxSide"
-            }), (0, Td.jsxs)("div", {
+            }), (0, sb.jsxs)("div", {
               className: "GiftBoxLid",
-              ref: Xd,
-              children: [(0, Td.jsx)("div", {
+              ref: Vb,
+              children: [(0, sb.jsx)("div", {
                 className: "GiftBoxFace GiftBoxLidFront"
-              }), (0, Td.jsx)("div", {
+              }), (0, sb.jsx)("div", {
                 className: "GiftBoxFace GiftBoxLidSide"
-              }), (0, Td.jsx)("div", {
+              }), (0, sb.jsx)("div", {
                 className: "GiftBoxFace GiftBoxLidTop"
-              }), (0, Td.jsxs)("div", {
+              }), (0, sb.jsxs)("div", {
                 className: "GiftBoxBow",
-                children: [(0, Td.jsx)("div", {
+                children: [(0, sb.jsx)("div", {
                   className: "GiftBoxBowLoop GiftBoxBowLeft"
-                }), (0, Td.jsx)("div", {
+                }), (0, sb.jsx)("div", {
                   className: "GiftBoxBowLoop GiftBoxBowRight"
-                }), (0, Td.jsx)("div", {
+                }), (0, sb.jsx)("div", {
                   className: "GiftBoxBowKnot"
                 })]
               })]
             })]
-          }), (0, Td.jsx)("div", {
+          }), (0, sb.jsx)("div", {
             className: "GiftBoxSeam",
-            ref: Kd
+            ref: gb
           })]
         })]
       })
     }
-    var gd = md(4977),
-      wd = md(4223),
-      Ed = md(3042);
+    var zb = Mb(5161),
+      Xb = Mb(4399),
+      xb = Mb(3113);
 
-    function Jd(dd, Od) {
-      const [md] = Od.cosmeticPacks;
-      return void 0 !== md ? (0, Ed.i)(md) : Od.superDays > 0 ? dd("paymentHistory:superRankDays", {
-        count: Od.superDays
-      }) : Od.hyperDays > 0 ? dd("paymentHistory:hyperRankDays", {
-        count: Od.hyperDays
-      }) : dd("paymentHistory:premiumCurrency", {
-        count: Od.premiumCurrency
+    function jb(bb, wb) {
+      const [Mb] = wb.cosmeticPacks;
+      return void 0 !== Mb ? (0, xb.g)(Mb) : wb.superDays > 0 ? bb("paymentHistory:superRankDays", {
+        count: wb.superDays
+      }) : wb.hyperDays > 0 ? bb("paymentHistory:hyperRankDays", {
+        count: wb.hyperDays
+      }) : bb("paymentHistory:premiumCurrency", {
+        count: wb.premiumCurrency
       })
     }
 
-    function Ud(dd) {
-      var Od, md;
+    function Kb(bb) {
+      var wb, Mb;
       const {
-        t: Wd
-      } = (0, Xd.G)(), Fd = wd.j.find((Od => Od.id === dd.message));
+        t: eb
+      } = (0, Vb.C)(), Hb = Xb.l.find((wb => wb.id === bb.message));
       return {
-        message: void 0 === Fd ? null : Wd(Fd.key, {
-          name: dd.recipientName,
-          level: null !== (Od = dd.senderLevel) && void 0 !== Od ? Od : 1,
-          tier: null !== (md = dd.tierLabel) && void 0 !== md ? md : ""
+        message: void 0 === Hb ? null : eb(Hb.key, {
+          name: bb.recipientName,
+          level: null !== (wb = bb.senderLevel) && void 0 !== wb ? wb : 1,
+          tier: null !== (Mb = bb.tierLabel) && void 0 !== Mb ? Mb : ""
         }),
-        level: null === dd.senderLevel || "levelFlex" === (null === Fd || void 0 === Fd ? void 0 : Fd.kind) ? null : Wd("giftOpening:gifterLevel", {
-          level: dd.senderLevel
+        level: null === bb.senderLevel || "levelFlex" === (null === Hb || void 0 === Hb ? void 0 : Hb.kind) ? null : eb("giftOpening:gifterLevel", {
+          level: bb.senderLevel
         })
       }
     }
 
-    function xd(dd) {
+    function rb(bb) {
       let {
-        gift: Od,
-        shown: md
-      } = dd;
+        gift: wb,
+        shown: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, Xd.G)(), {
-        message: Fd,
-        level: Kd
-      } = Ud(Od);
-      return (0, Td.jsxs)("div", {
-        className: Rd()("GiftOpeningCard", {
-          GiftOpeningCardShown: md
+        t: eb
+      } = (0, Vb.C)(), {
+        message: Hb,
+        level: gb
+      } = Kb(wb);
+      return (0, sb.jsxs)("div", {
+        className: pb()("GiftOpeningCard", {
+          GiftOpeningCardShown: Mb
         }),
-        children: [(0, Td.jsx)("div", {
+        children: [(0, sb.jsx)("div", {
           className: "GiftOpeningItem SmallTextBold",
-          children: Jd(Wd, Od.items)
-        }), null !== Fd && (0, Td.jsx)("div", {
+          children: jb(eb, wb.items)
+        }), null !== Hb && (0, sb.jsx)("div", {
           className: "GiftOpeningCardMessage SmallTextLight",
-          children: Fd
-        }), (0, Td.jsxs)("div", {
+          children: Hb
+        }), (0, sb.jsxs)("div", {
           className: "GiftOpeningFrom SmallTextLight",
-          children: [Od.senderName, null !== Kd && ` \xb7 ${Kd}`]
+          children: [wb.senderName, null !== gb && ` \xb7 ${gb}`]
         })]
       })
     }
 
-    function Bd(dd) {
+    function Rb(bb) {
       let {
-        gift: Od
-      } = dd;
+        gift: wb
+      } = bb;
       const {
-        message: md,
-        level: Wd
-      } = Ud(Od);
-      return (0, Td.jsxs)(Td.Fragment, {
-        children: [null !== md && (0, Td.jsx)("div", {
+        message: Mb,
+        level: eb
+      } = Kb(wb);
+      return (0, sb.jsxs)(sb.Fragment, {
+        children: [null !== Mb && (0, sb.jsx)("div", {
           className: "GiftOpeningIntroMessage SmallTextLight",
-          children: `"${md}"`
-        }), null !== Wd && (0, Td.jsx)("div", {
+          children: `"${Mb}"`
+        }), null !== eb && (0, sb.jsx)("div", {
           className: "GiftOpeningIntroLevel SmallTextBold",
-          children: Wd
+          children: eb
         })]
       })
     }
 
-    function Sd(dd) {
+    function Db(bb) {
       let {
-        gift: Od,
-        preview: md,
-        analyticsValue: Wd,
-        onReplay: Fd,
-        onClose: Rd
-      } = dd;
+        gift: wb,
+        preview: Mb,
+        analyticsValue: eb,
+        onReplay: Hb,
+        onClose: pb
+      } = bb;
       const {
-        t: vd
-      } = (0, Xd.G)(), {
-        gameState: Qd
-      } = (0, Kd.p)(["gameState"]), Nd = !md && Od.items.cosmeticPacks.length > 0 && !(0, Kd.f)(Qd);
-      return (0, Td.jsxs)("div", {
+        t: Lb
+      } = (0, Vb.C)(), {
+        gameState: Ib
+      } = (0, gb.o)(["gameState"]), tb = !Mb && wb.items.cosmeticPacks.length > 0 && !(0, gb.e)(Ib);
+      return (0, sb.jsxs)("div", {
         className: "GiftOpeningButtons",
-        children: [md && (0, Td.jsxs)(td.g, {
+        children: [Mb && (0, sb.jsxs)(Ob.f, {
           className: "GiftOpeningButton",
           touchPressOn: "pointerup",
-          onClick: Fd,
-          children: [(0, Td.jsx)(od.c, {
+          onClick: Hb,
+          children: [(0, sb.jsx)(Ub.b, {
             name: "rotate-right"
-          }), " ", vd("giftOpening:replay")]
-        }), Nd && (0, Td.jsx)(td.g, {
+          }), " ", Lb("giftOpening:replay")]
+        }), tb && (0, sb.jsx)(Ob.f, {
           className: "GiftOpeningButton",
           padDefaultFocus: !0,
           touchPressOn: "pointerup",
           onClick: () => {
-            (0, hd.reportAnalyticsClick)({
+            (0, lb.reportAnalyticsClick)({
               id: "gift.open_customise",
-              value: Wd
-            }), (0, Ed.q)(), Rd()
+              value: eb
+            }), (0, xb.k)(), pb()
           },
-          children: vd("general:customize")
-        }), (0, Td.jsx)(td.g, {
+          children: Lb("general:customize")
+        }), (0, sb.jsx)(Ob.f, {
           className: "GiftOpeningButton",
-          padDefaultFocus: !Nd,
+          padDefaultFocus: !tb,
           touchPressOn: "pointerup",
-          onClick: Rd,
-          children: vd(md ? "giftOpening:back" : "giftOpening:done")
+          onClick: pb,
+          children: Lb(Mb ? "giftOpening:back" : "giftOpening:done")
         })]
       })
     }
-    var sd = md(37939);
-    const ud = {
+    var cb = Mb(37627);
+    const Yb = {
         1: "harp_pling",
         2: "exp_levelup",
         3: "trumpetFlare"
       },
-      Vd = {
+      Zb = {
         wobble: "chestClose",
         pop: "chestOpen",
         sparkle: "exp_collect"
       },
-      Ad = {
+      fb = {
         wobble: .55,
         pop: .8,
         sparkle: .4,
         sting: .7
       };
 
-    function rd(dd, Od) {
-      return "sting" === dd ? ud[Od] : Vd[dd]
+    function Ab(bb, wb) {
+      return "sting" === bb ? Yb[wb] : Zb[bb]
     }
 
-    function Gd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+    function Wb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
       try {
-        sd.d.play(rd(dd, Od), Ad[dd]).rate(Math.pow(2, 2 * md / 12))
-      } catch (Wd) {
-        console.warn("[gift-opening] a sound failed to play", Wd)
+        cb.c.play(Ab(bb, wb), fb[bb]).rate(Math.pow(2, 2 * Mb / 12))
+      } catch (eb) {
+        console.warn("[gift-opening] a sound failed to play", eb)
       }
     }
-    const nd = "cubic-bezier(0.22, 1, 0.36, 1)";
-    class Ld {
-      constructor(dd, Od) {
-        this.parts = dd, this.options = Od, this.phase = "arrive", this.timers = [], this.animations = [], this.opened = !1, this.popped = !1
+    const Jb = "cubic-bezier(0.22, 1, 0.36, 1)";
+    class Sb {
+      constructor(bb, wb) {
+        this.parts = bb, this.options = wb, this.phase = "arrive", this.timers = [], this.animations = [], this.opened = !1, this.popped = !1
       }
-      setPhase(dd) {
-        this.phase = dd, this.options.onPhase(dd)
+      setPhase(bb) {
+        this.phase = bb, this.options.onPhase(bb)
       }
-      at(dd, Od) {
-        this.timers.push(setTimeout(Od, dd))
+      at(bb, wb) {
+        this.timers.push(setTimeout(wb, bb))
       }
-      animate(dd, Od, md) {
-        this.animations.push(dd.animate(Od, {
+      animate(bb, wb, Mb) {
+        this.animations.push(bb.animate(wb, {
           fill: "forwards",
-          ...md
+          ...Mb
         }))
       }
       markOpened() {
@@ -265,9 +265,9 @@ export const modules = {
       }
       arrive() {
         const {
-          timeline: dd,
-          reducedMotion: Od
-        } = this.options, md = Od ? [{
+          timeline: bb,
+          reducedMotion: wb
+        } = this.options, Mb = wb ? [{
           opacity: 0
         }, {
           opacity: 1
@@ -285,10 +285,10 @@ export const modules = {
         }, {
           transform: "none"
         }];
-        this.animate(this.parts.body, md, {
-          duration: Od ? 200 : dd.arriveMs,
+        this.animate(this.parts.body, Mb, {
+          duration: wb ? 200 : bb.arriveMs,
           fill: "none"
-        }), this.at(Od ? 200 : dd.arriveMs, (() => {
+        }), this.at(wb ? 200 : bb.arriveMs, (() => {
           this.setPhase("wait")
         }))
       }
@@ -318,105 +318,105 @@ export const modules = {
           transform: "none"
         }], {
           duration: 300
-        }), Gd("sting", this.options.tier), this.at(300, (() => {
+        }), Wb("sting", this.options.tier), this.at(300, (() => {
           this.setPhase("done")
         }))
       }
       charge() {
         const {
-          timeline: dd,
-          tier: Od,
-          fx: md
+          timeline: bb,
+          tier: wb,
+          fx: Mb
         } = this.options;
         this.setPhase("charge");
-        const Wd = dd.wobbles,
-          Fd = dd.burstAt,
-          Rd = (dd.chargeMs - 80) / Wd.length,
-          Xd = [{
+        const eb = bb.wobbles,
+          Hb = bb.burstAt,
+          pb = (bb.chargeMs - 80) / eb.length,
+          Vb = [{
             transform: "none",
             offset: 0
           }, {
             transform: "scale(1.06, 0.92)",
-            offset: 80 / Fd
+            offset: 80 / Hb
           }];
-        Wd.forEach(((dd, md) => {
-          const Wd = 80 + md * Rd;
-          Xd.push({
-            transform: `rotate(${dd}deg) translateX(${.3*dd}px)`,
-            offset: (Wd + .3 * Rd) / Fd
-          }), Xd.push({
-            transform: `rotate(${-dd}deg) translateX(${.3*-dd}px)`,
-            offset: (Wd + .75 * Rd) / Fd
-          }), this.at(Wd, (() => {
-            Gd("wobble", Od, md)
+        eb.forEach(((bb, Mb) => {
+          const eb = 80 + Mb * pb;
+          Vb.push({
+            transform: `rotate(${bb}deg) translateX(${.3*bb}px)`,
+            offset: (eb + .3 * pb) / Hb
+          }), Vb.push({
+            transform: `rotate(${-bb}deg) translateX(${.3*-bb}px)`,
+            offset: (eb + .75 * pb) / Hb
+          }), this.at(eb, (() => {
+            Wb("wobble", wb, Mb)
           }))
-        })), Xd.push({
+        })), Vb.push({
           transform: "rotate(0deg)",
-          offset: dd.chargeMs / Fd
-        }), Xd.push({
+          offset: bb.chargeMs / Hb
+        }), Vb.push({
           transform: "scale(1.12, 0.84)",
-          offset: (dd.chargeMs + 40) / Fd
-        }), Xd.push({
+          offset: (bb.chargeMs + 40) / Hb
+        }), Vb.push({
           transform: "scale(1.12, 0.84)",
           offset: 1
-        }), this.animate(this.parts.body, Xd, {
-          duration: Fd
+        }), this.animate(this.parts.body, Vb, {
+          duration: Hb
         });
-        const Kd = [{
+        const gb = [{
           opacity: 0,
           transform: "translate(-50%, -50%) scale(0.6)"
         }];
-        Wd.forEach(((dd, Od) => {
-          const md = (Od + 1) / (Wd.length + .5);
-          Kd.push({
-            opacity: md,
-            transform: `translate(-50%, -50%) scale(${.7+.5*md})`,
-            offset: (80 + (Od + 1) * Rd) / Fd
+        eb.forEach(((bb, wb) => {
+          const Mb = (wb + 1) / (eb.length + .5);
+          gb.push({
+            opacity: Mb,
+            transform: `translate(-50%, -50%) scale(${.7+.5*Mb})`,
+            offset: (80 + (wb + 1) * pb) / Hb
           })
-        })), Kd.push({
+        })), gb.push({
           opacity: 1,
           transform: "translate(-50%, -50%) scale(1.3)"
-        }), this.animate(this.parts.seam, Kd, {
-          duration: Fd,
+        }), this.animate(this.parts.seam, gb, {
+          duration: Hb,
           easing: "linear"
         });
-        const hd = this.parts.box.querySelector(".GiftBoxCracks");
-        hd && this.animate(hd, [{
+        const lb = this.parts.box.querySelector(".GiftBoxCracks");
+        lb && this.animate(lb, [{
           opacity: 0
         }, {
           opacity: 1
         }], {
-          duration: Fd,
+          duration: Hb,
           easing: "steps(3, end)"
         });
         const {
-          x: vd,
-          y: Qd
+          x: Lb,
+          y: Ib
         } = this.boxCentre();
-        null === md || void 0 === md || md.charge(vd, Qd, dd.chargeMs), this.at(Fd, (() => {
-          this.burst(Fd)
+        null === Mb || void 0 === Mb || Mb.charge(Lb, Ib, bb.chargeMs), this.at(Hb, (() => {
+          this.burst(Hb)
         }))
       }
       boxCentre() {
-        const dd = this.parts.box.getBoundingClientRect();
+        const bb = this.parts.box.getBoundingClientRect();
         return {
-          x: dd.left + dd.width / 2,
-          y: dd.top + .45 * dd.height,
-          floorY: dd.bottom
+          x: bb.left + bb.width / 2,
+          y: bb.top + .45 * bb.height,
+          floorY: bb.bottom
         }
       }
-      burst(dd) {
+      burst(bb) {
         const {
-          timeline: Od,
-          tier: md,
-          fx: Wd
+          timeline: wb,
+          tier: Mb,
+          fx: eb
         } = this.options;
         if (this.popped) return;
         this.popped = !0, this.markOpened();
-        const Fd = Od => Math.max(0, Od - dd),
-          Rd = {
+        const Hb = wb => Math.max(0, wb - bb),
+          pb = {
             duration: 620,
-            easing: nd
+            easing: Jb
           };
         this.animate(this.parts.lid, [{
           transform: "translateY(-0.36em)"
@@ -425,15 +425,15 @@ export const modules = {
           offset: .55
         }, {
           transform: "translate(0.6em, -3.2em) rotateZ(40deg) rotateX(40deg)"
-        }], Rd);
-        for (const vd of this.parts.lid.querySelectorAll(":scope > *")) this.animate(vd, [{
+        }], pb);
+        for (const Lb of this.parts.lid.querySelectorAll(":scope > *")) this.animate(Lb, [{
           opacity: 1
         }, {
           opacity: 1,
           offset: .55
         }, {
           opacity: 0
-        }], Rd);
+        }], pb);
         if (this.animate(this.parts.body, [{
             transform: "scale(1.12, 0.84)"
           }, {
@@ -452,11 +452,11 @@ export const modules = {
             transform: "translate(-50%, -50%) scale(3)"
           }], {
             duration: 380,
-            easing: nd
-          }), Od.flashAlpha > 0 && this.animate(this.parts.flash, [{
+            easing: Jb
+          }), wb.flashAlpha > 0 && this.animate(this.parts.flash, [{
             opacity: 0
           }, {
-            opacity: Od.flashAlpha,
+            opacity: wb.flashAlpha,
             offset: .2
           }, {
             opacity: 0
@@ -471,7 +471,7 @@ export const modules = {
             transform: "translate(-50%, -50%) scale(3.6)"
           }], {
             duration: 520,
-            easing: nd
+            easing: Jb
           }), this.animate(this.parts.beam, [{
             opacity: 0,
             transform: "translateX(-50%) scaleY(0)"
@@ -484,17 +484,17 @@ export const modules = {
             transform: "translateX(-50%) scaleY(1) scaleX(0.3)"
           }], {
             duration: 900,
-            easing: nd
-          }), Od.kickPx > 0) {
-          const dd = Od.kickPx;
+            easing: Jb
+          }), wb.kickPx > 0) {
+          const bb = wb.kickPx;
           this.animate(this.parts.shake, [{
             transform: "none"
           }, {
-            transform: `translate(${dd}px, ${-dd}px)`
+            transform: `translate(${bb}px, ${-bb}px)`
           }, {
-            transform: `translate(${.7*-dd}px, ${.5*dd}px)`
+            transform: `translate(${.7*-bb}px, ${.5*bb}px)`
           }, {
-            transform: `translate(${.4*dd}px, ${.3*dd}px)`
+            transform: `translate(${.4*bb}px, ${.3*bb}px)`
           }, {
             transform: "none"
           }], {
@@ -503,25 +503,25 @@ export const modules = {
             fill: "none"
           })
         }
-        Gd("pop", md), Gd("sparkle", md, 2);
+        Wb("pop", Mb), Wb("sparkle", Mb, 2);
         const {
-          x: Xd,
-          y: Kd,
-          floorY: hd
+          x: Vb,
+          y: gb,
+          floorY: lb
         } = this.boxCentre();
-        null === Wd || void 0 === Wd || Wd.burst(Xd, Kd, Od.burstParticles, hd), this.at(Fd(Od.revealAt), (() => {
+        null === eb || void 0 === eb || eb.burst(Vb, gb, wb.burstParticles, lb), this.at(Hb(wb.revealAt), (() => {
           this.reveal()
-        })), this.at(Fd(Od.cardAt), (() => {
+        })), this.at(Hb(wb.cardAt), (() => {
           this.setPhase("card")
-        })), this.at(Fd(Od.buttonsAt), (() => {
+        })), this.at(Hb(wb.buttonsAt), (() => {
           this.setPhase("done")
         }))
       }
       reveal() {
         const {
-          timeline: dd,
-          tier: Od,
-          fx: md
+          timeline: bb,
+          tier: wb,
+          fx: Mb
         } = this.options;
         this.setPhase("reveal"), this.animate(this.parts.character, [{
           opacity: 0,
@@ -535,7 +535,7 @@ export const modules = {
           transform: "none"
         }], {
           duration: 520,
-          easing: nd
+          easing: Jb
         }), this.animate(this.parts.body, [{
           opacity: 1,
           transform: "none"
@@ -546,30 +546,30 @@ export const modules = {
           duration: 420,
           delay: 120,
           easing: "ease-in"
-        }), Gd("sting", Od), null === md || void 0 === md || md.linger(this.boxCentre().x, dd.buttonsAt - dd.revealAt + 1500, dd.rain)
+        }), Wb("sting", wb), null === Mb || void 0 === Mb || Mb.linger(this.boxCentre().x, bb.buttonsAt - bb.revealAt + 1500, bb.rain)
       }
       skip() {
-        var dd;
-        (this.clearTimers(), this.cancelAnimations(), this.popped) || (null === (dd = this.options.fx) || void 0 === dd || dd.clear());
+        var bb;
+        (this.clearTimers(), this.cancelAnimations(), this.popped) || (null === (bb = this.options.fx) || void 0 === bb || bb.clear());
         this.markOpened(), this.parts.body.style.opacity = "0", this.parts.character.style.opacity = "1", this.parts.character.style.transform = "none", this.setPhase("done")
       }
       cancelAnimations() {
-        for (const dd of this.animations) dd.cancel();
+        for (const bb of this.animations) bb.cancel();
         this.animations = []
       }
       clearTimers() {
-        for (const dd of this.timers) clearTimeout(dd);
+        for (const bb of this.timers) clearTimeout(bb);
         this.timers = []
       }
       dispose() {
         this.clearTimers(), this.cancelAnimations(), this.parts.body.style.removeProperty("opacity"), this.parts.character.style.removeProperty("opacity"), this.parts.character.style.removeProperty("transform")
       }
     }
-    const Pd = {
+    const Nb = {
       2: 500,
       3: 1200
     };
-    const zd = {
+    const vb = {
       1: {
         arriveMs: 450,
         wobbles: [5, 9],
@@ -611,80 +611,80 @@ export const modules = {
       }
     };
 
-    function cd(dd) {
-      const Od = zd[dd];
+    function Qb(bb) {
+      const wb = vb[bb];
       return {
-        ...Od,
-        burstAt: Od.chargeMs + Od.hitStopMs
+        ...wb,
+        burstAt: wb.chargeMs + wb.hitStopMs
       }
     }
-    const jd = {
+    const Gb = {
       1: "#5ab8ff",
       2: "#b673ff",
       3: "#ffc83d"
     };
 
-    function Dd(dd, Od, md) {
-      const Wd = document.createElement("canvas"),
-        Fd = Math.ceil(dd * Od);
-      Wd.width = Fd, Wd.height = Fd;
-      const Rd = Wd.getContext("2d");
-      return Rd && md(Rd, Fd), {
-        image: Wd
+    function qb(bb, wb, Mb) {
+      const eb = document.createElement("canvas"),
+        Hb = Math.ceil(bb * wb);
+      eb.width = Hb, eb.height = Hb;
+      const pb = eb.getContext("2d");
+      return pb && Mb(pb, Hb), {
+        image: eb
       }
     }
 
-    function ed(dd, Od) {
-      return Dd(16, Od, ((Od, md) => {
-        Od.fillStyle = dd, Od.fillRect(.3 * md, 0, .4 * md, md)
+    function ab(bb, wb) {
+      return qb(16, wb, ((wb, Mb) => {
+        wb.fillStyle = bb, wb.fillRect(.3 * Mb, 0, .4 * Mb, Mb)
       }))
     }
 
-    function Id(dd, Od, md) {
-      return Dd(14, md, ((md, Wd) => {
-        md.fillStyle = Od, md.fillRect(0, 0, Wd, Wd), md.fillStyle = dd, md.fillRect(0, 0, Wd, .35 * Wd)
+    function ib(bb, wb, Mb) {
+      return qb(14, Mb, ((Mb, eb) => {
+        Mb.fillStyle = wb, Mb.fillRect(0, 0, eb, eb), Mb.fillStyle = bb, Mb.fillRect(0, 0, eb, .35 * eb)
       }))
     }
 
-    function ld(dd, Od) {
-      return Dd(18, Od, ((Od, md) => {
-        Od.fillStyle = dd, Od.beginPath(), Od.moveTo(md / 2, 0), Od.lineTo(.85 * md, .55 * md), Od.lineTo(md / 2, md), Od.lineTo(.2 * md, .45 * md), Od.closePath(), Od.fill(), Od.fillStyle = "rgba(255,255,255,0.55)", Od.beginPath(), Od.moveTo(md / 2, 0), Od.lineTo(.6 * md, .5 * md), Od.lineTo(.2 * md, .45 * md), Od.closePath(), Od.fill()
+    function ub(bb, wb) {
+      return qb(18, wb, ((wb, Mb) => {
+        wb.fillStyle = bb, wb.beginPath(), wb.moveTo(Mb / 2, 0), wb.lineTo(.85 * Mb, .55 * Mb), wb.lineTo(Mb / 2, Mb), wb.lineTo(.2 * Mb, .45 * Mb), wb.closePath(), wb.fill(), wb.fillStyle = "rgba(255,255,255,0.55)", wb.beginPath(), wb.moveTo(Mb / 2, 0), wb.lineTo(.6 * Mb, .5 * Mb), wb.lineTo(.2 * Mb, .45 * Mb), wb.closePath(), wb.fill()
       }))
     }
 
-    function Cd(dd, Od) {
-      return Dd(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20, Od, ((Od, md) => {
-        const Wd = md / 2;
-        Od.fillStyle = dd, Od.beginPath();
-        for (let dd = 0; dd < 10; dd++) {
-          const md = dd % 2 === 0 ? Wd : .45 * Wd,
-            Fd = -Math.PI / 2 + dd * Math.PI / 5;
-          Od.lineTo(Wd + Math.cos(Fd) * md, Wd + Math.sin(Fd) * md)
+    function db(bb, wb) {
+      return qb(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20, wb, ((wb, Mb) => {
+        const eb = Mb / 2;
+        wb.fillStyle = bb, wb.beginPath();
+        for (let bb = 0; bb < 10; bb++) {
+          const Mb = bb % 2 === 0 ? eb : .45 * eb,
+            Hb = -Math.PI / 2 + bb * Math.PI / 5;
+          wb.lineTo(eb + Math.cos(Hb) * Mb, eb + Math.sin(Hb) * Mb)
         }
-        Od.closePath(), Od.fill()
+        wb.closePath(), wb.fill()
       }))
     }
 
-    function Zd(dd, Od) {
-      return Dd(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24, Od, ((Od, md) => {
-        const Wd = Od.createRadialGradient(md / 2, md / 2, 0, md / 2, md / 2, md / 2);
-        Wd.addColorStop(0, "rgba(255,255,255,1)"), Wd.addColorStop(.25, dd), Wd.addColorStop(1, "rgba(0,0,0,0)"), Od.fillStyle = Wd, Od.fillRect(0, 0, md, md)
+    function Pb(bb, wb) {
+      return qb(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24, wb, ((wb, Mb) => {
+        const eb = wb.createRadialGradient(Mb / 2, Mb / 2, 0, Mb / 2, Mb / 2, Mb / 2);
+        eb.addColorStop(0, "rgba(255,255,255,1)"), eb.addColorStop(.25, bb), eb.addColorStop(1, "rgba(0,0,0,0)"), wb.fillStyle = eb, wb.fillRect(0, 0, Mb, Mb)
       }))
     }
-    const kd = {
-      classic: dd => [ed("#e63946", dd), ed("#ffffff", dd), ed("#ffd166", dd), ed("#2a9d8f", dd), Cd("#ffd166", dd, 14)],
-      blocks: dd => [Id("#6abe30", "#8a5a33", dd), Id("#8a5a33", "#6d4426", dd), Id("#9da3a6", "#7b8083", dd), Id("#7ff3f0", "#3fb7c0", dd)],
-      gems: dd => [ld("#b673ff", dd), ld("#ff7ad9", dd), ld("#6fe0ff", dd), ld("#ffffff", dd)],
-      stars: dd => [Cd("#fff6b0", dd), Cd("#ffffff", dd, 14), Cd("#9fd0ff", dd, 12), Zd("#9fd0ff", dd, 16)],
-      legend: dd => [ed("#ffc83d", dd), ed("#ff5d8f", dd), ed("#5ab8ff", dd), ed("#7cf29a", dd), Cd("#ffc83d", dd), Cd("#fff4c2", dd, 14)],
-      sweater: dd => [Zd("#ffffff", dd, 18), Zd("#dff3ff", dd, 12), Cd("#ffffff", dd, 12)],
-      festive: dd => ["\ud83c\udf84", "\u26c4", "\ud83c\udf81", "\u2744\ufe0f", "\u2b50"].map((Od => function(dd, Od) {
-        return Dd(26, Od, ((Od, md) => {
-          Od.font = `${Math.round(.8*md)}px sans-serif`, Od.textAlign = "center", Od.textBaseline = "middle", Od.fillText(dd, md / 2, md / 2 + .05 * md)
+    const nb = {
+      classic: bb => [ab("#e63946", bb), ab("#ffffff", bb), ab("#ffd166", bb), ab("#2a9d8f", bb), db("#ffd166", bb, 14)],
+      blocks: bb => [ib("#6abe30", "#8a5a33", bb), ib("#8a5a33", "#6d4426", bb), ib("#9da3a6", "#7b8083", bb), ib("#7ff3f0", "#3fb7c0", bb)],
+      gems: bb => [ub("#b673ff", bb), ub("#ff7ad9", bb), ub("#6fe0ff", bb), ub("#ffffff", bb)],
+      stars: bb => [db("#fff6b0", bb), db("#ffffff", bb, 14), db("#9fd0ff", bb, 12), Pb("#9fd0ff", bb, 16)],
+      legend: bb => [ab("#ffc83d", bb), ab("#ff5d8f", bb), ab("#5ab8ff", bb), ab("#7cf29a", bb), db("#ffc83d", bb), db("#fff4c2", bb, 14)],
+      sweater: bb => [Pb("#ffffff", bb, 18), Pb("#dff3ff", bb, 12), db("#ffffff", bb, 12)],
+      festive: bb => ["\ud83c\udf84", "\u26c4", "\ud83c\udf81", "\u2744\ufe0f", "\u2b50"].map((wb => function(bb, wb) {
+        return qb(26, wb, ((wb, Mb) => {
+          wb.font = `${Math.round(.8*Mb)}px sans-serif`, wb.textAlign = "center", wb.textBaseline = "middle", wb.fillText(bb, Mb / 2, Mb / 2 + .05 * Mb)
         }))
-      }(Od, dd)))
+      }(wb, bb)))
     };
-    const fd = {
+    const yb = {
       classic: {
         gravity: 1e3,
         speed: [380, 760],
@@ -743,579 +743,579 @@ export const modules = {
       }
     };
 
-    function Md(dd) {
-      let [Od, md] = dd;
-      return Od + Math.random() * (md - Od)
+    function ob(bb) {
+      let [wb, Mb] = bb;
+      return wb + Math.random() * (Mb - wb)
     }
 
-    function dO(dd) {
-      return dd[Math.floor(Math.random() * dd.length)]
+    function Tb(bb) {
+      return bb[Math.floor(Math.random() * bb.length)]
     }
-    class OO {
-      constructor(dd, Od) {
-        var md, Wd, Fd;
-        this.canvas = dd, this.options = Od, this.context = void 0, this.sprites = void 0, this.particles = [], this.scale = void 0, this.frame = 0, this.lastAt = 0, this.embersUntil = 0, this.embersX = 0, this.rainUntil = 0, this.spawnCarry = 0, this.stopped = !1, this.frameMs = [], this.Et = dd => {
-          const Od = Math.min(dd - this.lastAt, 50);
-          this.lastAt = dd, this.spawnLingering(Od), this.step(Od), this.draw();
-          const md = dd < this.embersUntil || dd < this.rainUntil;
-          this.frame = this.particles.length > 0 || md ? requestAnimationFrame(this.Et) : 0, 0 === this.frame && (this.canvas.style.visibility = "hidden")
-        }, this.context = dd.getContext("2d"), this.scale = Math.min(window.devicePixelRatio || 1, Od.phone ? 1.5 : 2), this.sprites = (md = Od.wrap, Wd = jd[Od.tier], Fd = this.scale, {
-          burst: kd[md](Fd),
-          spark: Zd(Wd, Fd),
-          rain: [Cd("#ffc83d", Fd, 16), ed("#ffc83d", Fd), ed("#fff1b8", Fd)]
+    class kb {
+      constructor(bb, wb) {
+        var Mb, eb, Hb;
+        this.canvas = bb, this.options = wb, this.context = void 0, this.sprites = void 0, this.particles = [], this.scale = void 0, this.frame = 0, this.lastAt = 0, this.embersUntil = 0, this.embersX = 0, this.rainUntil = 0, this.spawnCarry = 0, this.stopped = !1, this.frameMs = [], this.sO = bb => {
+          const wb = Math.min(bb - this.lastAt, 50);
+          this.lastAt = bb, this.spawnLingering(wb), this.step(wb), this.draw();
+          const Mb = bb < this.embersUntil || bb < this.rainUntil;
+          this.frame = this.particles.length > 0 || Mb ? requestAnimationFrame(this.sO) : 0, 0 === this.frame && (this.canvas.style.visibility = "hidden")
+        }, this.context = bb.getContext("2d"), this.scale = Math.min(window.devicePixelRatio || 1, wb.phone ? 1.5 : 2), this.sprites = (Mb = wb.wrap, eb = Gb[wb.tier], Hb = this.scale, {
+          burst: nb[Mb](Hb),
+          spark: Pb(eb, Hb),
+          rain: [db("#ffc83d", Hb, 16), ab("#ffc83d", Hb), ab("#fff1b8", Hb)]
         }), this.resize()
       }
       resize() {
         const {
-          clientWidth: dd,
-          clientHeight: Od
+          clientWidth: bb,
+          clientHeight: wb
         } = this.canvas;
-        this.canvas.width = Math.round(dd * this.scale), this.canvas.height = Math.round(Od * this.scale)
+        this.canvas.width = Math.round(bb * this.scale), this.canvas.height = Math.round(wb * this.scale)
       }
-      count(dd) {
-        return Math.round(this.options.phone ? dd / 2 : dd)
+      count(bb) {
+        return Math.round(this.options.phone ? bb / 2 : bb)
       }
-      add(dd) {
+      add(bb) {
         this.particles.push({
           motion: "fall",
-          jB: 0,
-          vy: 0,
+          UW: 0,
+          OW: 0,
           gravity: 0,
           drag: 0,
           rotation: Math.random() * Math.PI * 2,
           spin: 0,
           flutterSpeed: 0,
-          fromX: dd.x,
-          fromY: dd.y,
-          toX: dd.x,
-          toY: dd.y,
+          fromX: bb.x,
+          fromY: bb.y,
+          toX: bb.x,
+          toY: bb.y,
           floorY: 1 / 0,
           additive: !1,
-          ...dd,
+          ...bb,
           flutter: Math.random() * Math.PI * 2,
           ageMs: 0
         }), this.wake()
       }
-      charge(dd, Od, md) {
-        for (let Wd = 0; Wd < this.count(18 + 8 * this.options.tier); Wd++) {
-          const Wd = Math.random() * Math.PI * 2,
-            Fd = Md([120, 240]);
+      charge(bb, wb, Mb) {
+        for (let eb = 0; eb < this.count(18 + 8 * this.options.tier); eb++) {
+          const eb = Math.random() * Math.PI * 2,
+            Hb = ob([120, 240]);
           this.add({
             sprite: this.sprites.spark,
             motion: "converge",
-            x: dd,
-            y: Od,
-            fromX: dd + Math.cos(Wd) * Fd,
-            fromY: Od + Math.sin(Wd) * Fd,
-            size: Md([.5, 1]),
-            lifeMs: md * Md([.55, 1]),
+            x: bb,
+            y: wb,
+            fromX: bb + Math.cos(eb) * Hb,
+            fromY: wb + Math.sin(eb) * Hb,
+            size: ob([.5, 1]),
+            lifeMs: Mb * ob([.55, 1]),
             additive: !0
           })
         }
       }
-      burst(dd, Od, md, Wd) {
-        const Fd = fd[this.options.wrap];
-        for (let Rd = 0; Rd < this.count(md); Rd++) {
-          const md = -Math.PI / 2 + (Math.random() - .5) * Math.PI * 1.5,
-            Rd = Md(Fd.speed);
+      burst(bb, wb, Mb, eb) {
+        const Hb = yb[this.options.wrap];
+        for (let pb = 0; pb < this.count(Mb); pb++) {
+          const Mb = -Math.PI / 2 + (Math.random() - .5) * Math.PI * 1.5,
+            pb = ob(Hb.speed);
           this.add({
-            sprite: dO(this.sprites.burst),
-            x: dd + 30 * (Math.random() - .5),
-            y: Od,
-            jB: Math.cos(md) * Rd,
-            vy: Math.sin(md) * Rd,
-            gravity: Fd.gravity,
-            drag: Fd.drag,
+            sprite: Tb(this.sprites.burst),
+            x: bb + 30 * (Math.random() - .5),
+            y: wb,
+            UW: Math.cos(Mb) * pb,
+            OW: Math.sin(Mb) * pb,
+            gravity: Hb.gravity,
+            drag: Hb.drag,
             spin: 14 * (Math.random() - .5),
-            flutterSpeed: Fd.flutter ? Md([8, 16]) : 0,
-            size: Md([.7, 1.15]),
-            lifeMs: Md(Fd.lifeMs),
-            floorY: Fd.bounce ? Wd : 1 / 0
+            flutterSpeed: Hb.flutter ? ob([8, 16]) : 0,
+            size: ob([.7, 1.15]),
+            lifeMs: ob(Hb.lifeMs),
+            floorY: Hb.bounce ? eb : 1 / 0
           })
         }
-        for (let Rd = 0; Rd < this.count(16 + 8 * this.options.tier); Rd++) {
-          const md = Math.random() * Math.PI * 2,
-            Wd = Md([300, 900]);
+        for (let pb = 0; pb < this.count(16 + 8 * this.options.tier); pb++) {
+          const Mb = Math.random() * Math.PI * 2,
+            eb = ob([300, 900]);
           this.add({
             sprite: this.sprites.spark,
-            x: dd,
-            y: Od,
-            jB: Math.cos(md) * Wd,
-            vy: Math.sin(md) * Wd,
+            x: bb,
+            y: wb,
+            UW: Math.cos(Mb) * eb,
+            OW: Math.sin(Mb) * eb,
             gravity: 200,
             drag: .05,
-            size: Md([.4, .9]),
-            lifeMs: Md([350, 700]),
+            size: ob([.4, .9]),
+            lifeMs: ob([350, 700]),
             additive: !0
           })
         }
       }
-      linger(dd, Od, md) {
-        const Wd = performance.now();
-        this.embersX = dd, this.embersUntil = Wd + Od, this.rainUntil = md ? Wd + Math.min(Od, 1800) : 0, this.wake()
+      linger(bb, wb, Mb) {
+        const eb = performance.now();
+        this.embersX = bb, this.embersUntil = eb + wb, this.rainUntil = Mb ? eb + Math.min(wb, 1800) : 0, this.wake()
       }
-      spawnLingering(dd) {
+      spawnLingering(bb) {
         const {
-          clientWidth: Od,
-          clientHeight: md
-        } = this.canvas, Wd = performance.now(), Fd = (Wd < this.embersUntil ? this.count(14) : 0) + (Wd < this.rainUntil ? this.count(50) : 0);
-        for (this.spawnCarry += Fd * dd / 1e3; this.spawnCarry >= 1;) this.spawnCarry--, Wd < this.rainUntil && Math.random() < .75 ? this.add({
-          sprite: dO(this.sprites.rain),
-          x: Math.random() * Od,
+          clientWidth: wb,
+          clientHeight: Mb
+        } = this.canvas, eb = performance.now(), Hb = (eb < this.embersUntil ? this.count(14) : 0) + (eb < this.rainUntil ? this.count(50) : 0);
+        for (this.spawnCarry += Hb * bb / 1e3; this.spawnCarry >= 1;) this.spawnCarry--, eb < this.rainUntil && Math.random() < .75 ? this.add({
+          sprite: Tb(this.sprites.rain),
+          x: Math.random() * wb,
           y: -20,
-          jB: 60 * (Math.random() - .5),
-          vy: Md([160, 320]),
+          UW: 60 * (Math.random() - .5),
+          OW: ob([160, 320]),
           gravity: 500,
           drag: .2,
           spin: 8 * (Math.random() - .5),
-          flutterSpeed: Md([6, 12]),
-          size: Md([.6, 1]),
+          flutterSpeed: ob([6, 12]),
+          size: ob([.6, 1]),
           lifeMs: 2200
         }) : this.add({
           sprite: this.sprites.spark,
           motion: "float",
-          x: this.embersX + (Math.random() - .5) * Math.min(Od, 420),
-          y: md * Md([.55, .8]),
-          jB: 20 * (Math.random() - .5),
-          vy: -Md([30, 70]),
+          x: this.embersX + (Math.random() - .5) * Math.min(wb, 420),
+          y: Mb * ob([.55, .8]),
+          UW: 20 * (Math.random() - .5),
+          OW: -ob([30, 70]),
           drag: .6,
-          size: Md([.3, .6]),
-          lifeMs: Md([1200, 2e3]),
+          size: ob([.3, .6]),
+          lifeMs: ob([1200, 2e3]),
           additive: !0
         })
       }
       clear() {
-        var dd;
-        this.particles.length = 0, this.embersUntil = 0, this.rainUntil = 0, null === (dd = this.context) || void 0 === dd || dd.clearRect(0, 0, this.canvas.width, this.canvas.height)
+        var bb;
+        this.particles.length = 0, this.embersUntil = 0, this.rainUntil = 0, null === (bb = this.context) || void 0 === bb || bb.clearRect(0, 0, this.canvas.width, this.canvas.height)
       }
       stop() {
         this.stopped = !0, cancelAnimationFrame(this.frame), this.frame = 0, this.clear(), this.canvas.style.visibility = "hidden"
       }
       wake() {
-        0 !== this.frame || this.stopped || (this.lastAt = performance.now(), this.frame = requestAnimationFrame(this.Et), this.canvas.style.visibility = "visible")
+        0 !== this.frame || this.stopped || (this.lastAt = performance.now(), this.frame = requestAnimationFrame(this.sO), this.canvas.style.visibility = "visible")
       }
-      step(dd) {
-        const Od = dd / 1e3;
-        let md = 0;
-        for (const Wd of this.particles)
-          if (Wd.ageMs += dd, !(Wd.ageMs >= Wd.lifeMs)) {
-            if ("converge" === Wd.motion) {
-              const dd = Wd.ageMs / Wd.lifeMs,
-                Od = dd * dd * dd;
-              Wd.x = Wd.fromX + (Wd.toX - Wd.fromX) * Od, Wd.y = Wd.fromY + (Wd.toY - Wd.fromY) * Od
+      step(bb) {
+        const wb = bb / 1e3;
+        let Mb = 0;
+        for (const eb of this.particles)
+          if (eb.ageMs += bb, !(eb.ageMs >= eb.lifeMs)) {
+            if ("converge" === eb.motion) {
+              const bb = eb.ageMs / eb.lifeMs,
+                wb = bb * bb * bb;
+              eb.x = eb.fromX + (eb.toX - eb.fromX) * wb, eb.y = eb.fromY + (eb.toY - eb.fromY) * wb
             } else {
-              const dd = Math.pow(1 - Wd.drag, Od);
-              Wd.jB *= dd, Wd.vy = Wd.vy * dd + Wd.gravity * Od, Wd.x += Wd.jB * Od, Wd.y += Wd.vy * Od, Wd.y > Wd.floorY && Wd.vy > 0 && (Wd.y = Wd.floorY, Wd.vy *= -.35, Wd.jB *= .6, Wd.floorY = 1 / 0)
+              const bb = Math.pow(1 - eb.drag, wb);
+              eb.UW *= bb, eb.OW = eb.OW * bb + eb.gravity * wb, eb.x += eb.UW * wb, eb.y += eb.OW * wb, eb.y > eb.floorY && eb.OW > 0 && (eb.y = eb.floorY, eb.OW *= -.35, eb.UW *= .6, eb.floorY = 1 / 0)
             }
-            Wd.rotation += Wd.spin * Od, Wd.flutter += Wd.flutterSpeed * Od, this.particles[md++] = Wd
-          } this.particles.length = md
+            eb.rotation += eb.spin * wb, eb.flutter += eb.flutterSpeed * wb, this.particles[Mb++] = eb
+          } this.particles.length = Mb
       }
       draw() {
-        const dd = this.context;
-        if (dd) {
-          dd.setTransform(1, 0, 0, 1, 0, 0), dd.clearRect(0, 0, this.canvas.width, this.canvas.height);
-          for (const Od of this.particles) {
-            const md = Od.ageMs / Od.lifeMs,
-              Wd = "converge" === Od.motion ? .35 + .65 * md : Math.min(1, 4 * (1 - md)),
-              Fd = Od.size,
-              Rd = Math.cos(Od.rotation) * Fd,
-              Xd = Math.sin(Od.rotation) * Fd,
-              Kd = 0 === Od.flutterSpeed ? 1 : Math.cos(Od.flutter);
-            dd.globalAlpha = Wd, dd.globalCompositeOperation = Od.additive ? "lighter" : "source-over", dd.setTransform(Rd * Kd, Xd * Kd, -Xd, Rd, Od.x * this.scale, Od.y * this.scale);
+        const bb = this.context;
+        if (bb) {
+          bb.setTransform(1, 0, 0, 1, 0, 0), bb.clearRect(0, 0, this.canvas.width, this.canvas.height);
+          for (const wb of this.particles) {
+            const Mb = wb.ageMs / wb.lifeMs,
+              eb = "converge" === wb.motion ? .35 + .65 * Mb : Math.min(1, 4 * (1 - Mb)),
+              Hb = wb.size,
+              pb = Math.cos(wb.rotation) * Hb,
+              Vb = Math.sin(wb.rotation) * Hb,
+              gb = 0 === wb.flutterSpeed ? 1 : Math.cos(wb.flutter);
+            bb.globalAlpha = eb, bb.globalCompositeOperation = wb.additive ? "lighter" : "source-over", bb.setTransform(pb * gb, Vb * gb, -Vb, pb, wb.x * this.scale, wb.y * this.scale);
             const {
-              image: hd
-            } = Od.sprite;
-            dd.drawImage(hd, -hd.width / 2, -hd.height / 2)
+              image: lb
+            } = wb.sprite;
+            bb.drawImage(lb, -lb.width / 2, -lb.height / 2)
           }
-          dd.globalAlpha = 1, dd.globalCompositeOperation = "source-over"
+          bb.globalAlpha = 1, bb.globalCompositeOperation = "source-over"
         }
       }
     }
-    var mO = md(3287),
-      WO = md(1679),
-      FO = md(1685),
-      RO = md(3249);
-    const XO = 5e3;
+    var bw = Mb(3378),
+      ww = Mb(1726),
+      Mw = Mb(1735),
+      ew = Mb(3329);
+    const Hw = 5e3;
 
-    function KO(dd) {
+    function pw(bb) {
       let {
-        request: Od
-      } = dd;
+        request: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Xd.G)(), {
-        userContext: Fd
-      } = (0, yd.d)(), {
-        gift: pd,
-        preview: Ed
-      } = Od, {
-        isTouchScreen: Jd
-      } = (0, Kd.p)(["isTouchScreen"]), Ud = function(dd) {
-        var Od;
-        const md = wd.n.find((Od => Od.id === dd));
-        return null !== (Od = null === md || void 0 === md ? void 0 : md.id) && void 0 !== Od ? Od : "classic"
-      }(pd.wrap), ud = (Vd = pd.gems) >= Pd[3] ? 3 : Vd >= Pd[2] ? 2 : 1;
-      var Vd;
-      const Ad = `${Ud}:t${ud}`,
-        [Gd] = (0, Wd.useState)((() => function(dd, Od) {
-          const [md] = dd.cosmeticPacks;
-          let Wd = null;
-          if ((0, mO.g)(dd) ? Wd = "rank" : void 0 === md && dd.premiumCurrency > 0 && (Wd = "gems"), void 0 === md) return {
-            cosmetics: Od,
-            badge: Wd
+        t: Mb
+      } = (0, Vb.C)(), {
+        userContext: Hb
+      } = (0, Fb.e)(), {
+        gift: mb,
+        preview: xb
+      } = wb, {
+        isTouchScreen: jb
+      } = (0, gb.o)(["isTouchScreen"]), Kb = function(bb) {
+        var wb;
+        const Mb = Xb.p.find((wb => wb.id === bb));
+        return null !== (wb = null === Mb || void 0 === Mb ? void 0 : Mb.id) && void 0 !== wb ? wb : "classic"
+      }(mb.wrap), Yb = (Zb = mb.gems) >= Nb[3] ? 3 : Zb >= Nb[2] ? 2 : 1;
+      var Zb;
+      const fb = `${Kb}:t${Yb}`,
+        [Wb] = (0, eb.useState)((() => function(bb, wb) {
+          const [Mb] = bb.cosmeticPacks;
+          let eb = null;
+          if ((0, bw.e)(bb) ? eb = "rank" : void 0 === Mb && bb.premiumCurrency > 0 && (eb = "gems"), void 0 === Mb) return {
+            cosmetics: wb,
+            badge: eb
           };
-          const Fd = (0, WO.d)(md),
-            Rd = void 0 === Fd ? void 0 : FO.b[Fd];
-          if (void 0 !== Rd) return {
-            cosmetics: Rd.cosmetics,
-            badge: Wd
+          const Hb = (0, ww.e)(Mb),
+            pb = void 0 === Hb ? void 0 : Mw.d[Hb];
+          if (void 0 !== pb) return {
+            cosmetics: pb.cosmetics,
+            badge: eb
           };
-          const Xd = {
-              ...Od
+          const Vb = {
+              ...wb
             },
-            Kd = new Set;
-          for (const hd of (0, RO.j)(md)) {
-            const [dd, Od] = hd.split("|");
-            Kd.has(dd) || (Kd.add(dd), Xd[dd] = Od)
+            gb = new Set;
+          for (const lb of (0, ew.h)(Mb)) {
+            const [bb, wb] = lb.split("|");
+            gb.has(bb) || (gb.add(bb), Vb[bb] = wb)
           }
           return {
-            cosmetics: Xd,
-            badge: Wd
+            cosmetics: Vb,
+            badge: eb
           }
-        }(pd.items, {
-          ...Fd.getPlayerCosmetics()
+        }(mb.items, {
+          ...Hb.getPlayerCosmetics()
         }))),
-        [nd, zd] = (0, Wd.useState)("arrive"),
-        [Dd, ed] = (0, Wd.useState)(0),
-        [Id, ld] = (0, Wd.useState)(!1),
-        [Cd, Zd] = (0, Wd.useState)(!1),
-        [kd, fd] = (0, Wd.useState)(!1),
-        Md = (0, Wd.useRef)(null),
-        dO = (0, Wd.useRef)(null),
-        KO = {
-          box: (0, Wd.useRef)(null),
-          body: (0, Wd.useRef)(null),
-          lid: (0, Wd.useRef)(null),
-          seam: (0, Wd.useRef)(null),
-          character: (0, Wd.useRef)(null),
-          ring: (0, Wd.useRef)(null),
-          beam: (0, Wd.useRef)(null),
-          flash: (0, Wd.useRef)(null),
-          shake: (0, Wd.useRef)(null),
-          canvas: (0, Wd.useRef)(null)
+        [Jb, vb] = (0, eb.useState)("arrive"),
+        [qb, ab] = (0, eb.useState)(0),
+        [ib, ub] = (0, eb.useState)(!1),
+        [db, Pb] = (0, eb.useState)(!1),
+        [nb, yb] = (0, eb.useState)(!1),
+        ob = (0, eb.useRef)(null),
+        Tb = (0, eb.useRef)(null),
+        pw = {
+          box: (0, eb.useRef)(null),
+          body: (0, eb.useRef)(null),
+          lid: (0, eb.useRef)(null),
+          seam: (0, eb.useRef)(null),
+          character: (0, eb.useRef)(null),
+          ring: (0, eb.useRef)(null),
+          beam: (0, eb.useRef)(null),
+          flash: (0, eb.useRef)(null),
+          shake: (0, eb.useRef)(null),
+          canvas: (0, eb.useRef)(null)
         };
-      (0, bd.c)("paused"), (0, Wd.useEffect)((() => {
-        const dd = setTimeout((() => {
-          fd(!0)
-        }), XO);
+      (0, Bb.g)("paused"), (0, eb.useEffect)((() => {
+        const bb = setTimeout((() => {
+          yb(!0)
+        }), Hw);
         return () => {
-          clearTimeout(dd)
+          clearTimeout(bb)
         }
-      }), []), (0, Wd.useEffect)((() => {
-        const dd = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-          md = KO.canvas.current,
-          Wd = md && !dd ? new OO(md, {
-            wrap: Ud,
-            tier: ud,
-            phone: Jd
+      }), []), (0, eb.useEffect)((() => {
+        const bb = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+          Mb = pw.canvas.current,
+          eb = Mb && !bb ? new kb(Mb, {
+            wrap: Kb,
+            tier: Yb,
+            phone: jb
           }) : null,
-          Fd = () => {
-            null === Wd || void 0 === Wd || Wd.resize()
+          Hb = () => {
+            null === eb || void 0 === eb || eb.resize()
           };
-        window.addEventListener("resize", Fd),
-          function(dd) {
-            for (const Od of ["wobble", "pop", "sparkle", "sting"]) sd.d.preload(rd(Od, dd))
-          }(ud), zd("arrive");
-        const Rd = new Ld({
-          box: KO.box.current,
-          body: KO.body.current,
-          lid: KO.lid.current,
-          seam: KO.seam.current,
-          character: KO.character.current,
-          ring: KO.ring.current,
-          beam: KO.beam.current,
-          flash: KO.flash.current,
-          shake: KO.shake.current
+        window.addEventListener("resize", Hb),
+          function(bb) {
+            for (const wb of ["wobble", "pop", "sparkle", "sting"]) cb.c.preload(Ab(wb, bb))
+          }(Yb), vb("arrive");
+        const pb = new Sb({
+          box: pw.box.current,
+          body: pw.body.current,
+          lid: pw.lid.current,
+          seam: pw.seam.current,
+          character: pw.character.current,
+          ring: pw.ring.current,
+          beam: pw.beam.current,
+          flash: pw.flash.current,
+          shake: pw.shake.current
         }, {
-          tier: ud,
-          timeline: cd(ud),
-          reducedMotion: dd,
-          fx: Wd,
-          onPhase: zd,
+          tier: Yb,
+          timeline: Qb(Yb),
+          reducedMotion: bb,
+          fx: eb,
+          onPhase: vb,
           onOpened: () => {
-            var dd;
-            Ed || ((0, hd.reportAnalyticsClick)({
+            var bb;
+            xb || ((0, lb.reportAnalyticsClick)({
               id: "gift.open_anim",
-              value: Ad
-            }), null === (dd = Od.onOpened) || void 0 === dd || dd.call(Od))
+              value: fb
+            }), null === (bb = wb.onOpened) || void 0 === bb || bb.call(wb))
           }
         });
-        return dO.current = Rd, Rd.arrive(), () => {
-          window.removeEventListener("resize", Fd), Rd.dispose(), Wd && (! function(dd) {
-            if (dd.frameMs.length < 10) return;
-            const Od = [...dd.frameMs].sort(((dd, Od) => dd - Od)),
-              md = {
-                frames: Od.length,
-                medianFps: Math.round(1e3 / Math.max(Od[Math.floor(Od.length / 2)], 1)),
-                p95FrameMs: Math.round(Od[Math.floor(.95 * Od.length)])
+        return Tb.current = pb, pb.arrive(), () => {
+          window.removeEventListener("resize", Hb), pb.dispose(), eb && (! function(bb) {
+            if (bb.frameMs.length < 10) return;
+            const wb = [...bb.frameMs].sort(((bb, wb) => bb - wb)),
+              Mb = {
+                frames: wb.length,
+                medianFps: Math.round(1e3 / Math.max(wb[Math.floor(wb.length / 2)], 1)),
+                p95FrameMs: Math.round(wb[Math.floor(.95 * wb.length)])
               };
-            window.giftOpeningFrames = md, console.info("[gift-opening] frames", md)
-          }(Wd), Wd.stop())
+            window.giftOpeningFrames = Mb, console.info("[gift-opening] frames", Mb)
+          }(eb), eb.stop())
         }
-      }), [Dd]);
-      const hO = () => {
-          (0, gd.b)(Od)
+      }), [qb]);
+      const Vw = () => {
+          (0, zb.e)(wb)
         },
-        vO = () => {
-          var dd;
-          Ed || (0, hd.reportAnalyticsClick)({
+        gw = () => {
+          var bb;
+          xb || (0, lb.reportAnalyticsClick)({
             id: "gift.open_skip",
-            value: `${Ad}:${nd}`
-          }), null === (dd = dO.current) || void 0 === dd || dd.skip()
+            value: `${fb}:${Jb}`
+          }), null === (bb = Tb.current) || void 0 === bb || bb.skip()
         },
-        QO = Id || Cd || kd,
-        tO = "arrive" === nd || "wait" === nd || "charge" === nd,
-        oO = "charge" === nd || "reveal" === nd || "card" === nd || "wait" === nd && QO,
-        NO = {
-          "--gift-tier": jd[ud]
+        lw = ib || db || nb,
+        Lw = "arrive" === Jb || "wait" === Jb || "charge" === Jb,
+        Iw = "charge" === Jb || "reveal" === Jb || "card" === Jb || "wait" === Jb && lw,
+        Ow = {
+          "--gift-tier": Gb[Yb]
         };
-      return (0, Td.jsx)(Qd.c, {
+      return (0, sb.jsx)(Ib.e, {
         className: "GiftOpeningScreen",
-        close: "done" === nd ? hO : oO ? vO : () => {},
+        close: "done" === Jb ? Vw : Iw ? gw : () => {},
         togglePointerLock: !0,
         forcePointerUnlock: !0,
         globallyUniqueKey: "giftOpening",
         closeOnPressBackground: !1,
-        children: (0, Td.jsxs)("div", {
-          className: Rd()("GiftOpening", `GiftOpeningTier${ud}`, `GiftOpeningPhase_${nd}`, {
-            GiftOpeningDrawn: Id
+        children: (0, sb.jsxs)("div", {
+          className: pb()("GiftOpening", `GiftOpeningTier${Yb}`, `GiftOpeningPhase_${Jb}`, {
+            GiftOpeningDrawn: ib
           }),
-          style: NO,
-          ref: KO.shake,
-          children: [(0, Td.jsx)("div", {
+          style: Ow,
+          ref: pw.shake,
+          children: [(0, sb.jsx)("div", {
             className: "GiftOpeningBackdrop"
-          }), (0, Td.jsx)("div", {
+          }), (0, sb.jsx)("div", {
             className: "GiftOpeningRays"
-          }), (0, Td.jsxs)("div", {
+          }), (0, sb.jsxs)("div", {
             className: "GiftOpeningStage",
-            children: [(0, Td.jsx)("div", {
+            children: [(0, sb.jsx)("div", {
               className: "GiftOpeningBeam",
-              ref: KO.beam
-            }), (0, Td.jsxs)("div", {
+              ref: pw.beam
+            }), (0, sb.jsxs)("div", {
               className: "GiftOpeningCharacter",
-              ref: KO.character,
-              children: [(0, Td.jsx)(Wd.Suspense, {
+              ref: pw.character,
+              children: [(0, sb.jsx)(eb.Suspense, {
                 fallback: null,
-                children: (0, Td.jsx)(qd.e, {
-                  ref: Md,
+                children: (0, sb.jsx)(Cb.e, {
+                  ref: ob,
                   framing: "store",
                   owner: "other",
-                  turntableFromYaw: tO ? null : vd.c.store.yaw,
+                  turntableFromYaw: Lw ? null : Lb.e.store.yaw,
                   onNoWebGl: () => {
-                    Zd(!0)
+                    Pb(!0)
                   },
                   onReady: () => {
-                    var dd, Od;
-                    null === (dd = Md.current) || void 0 === dd || dd.resetCamera(), null === (Od = Md.current) || void 0 === Od || Od.setAllCosmetics(Gd.cosmetics)
+                    var bb, wb;
+                    null === (bb = ob.current) || void 0 === bb || bb.resetCamera(), null === (wb = ob.current) || void 0 === wb || wb.setAllCosmetics(Wb.cosmetics)
                   },
                   onDrawn: () => {
-                    ld(!0)
+                    ub(!0)
                   }
                 })
-              }), (Cd || !tO && !Id) && (0, Td.jsx)("div", {
+              }), (db || !Lw && !ib) && (0, sb.jsx)("div", {
                 className: "GiftOpeningHead",
-                children: (0, Td.jsx)(Hd.e, {
-                  cosmetics: Gd.cosmetics
+                children: (0, sb.jsx)(Eb.e, {
+                  cosmetics: Wb.cosmetics
                 })
-              }), Gd.badge && (0, Td.jsx)("div", {
+              }), Wb.badge && (0, sb.jsx)("div", {
                 className: "GiftOpeningBadge",
-                children: "gems" === Gd.badge ? (0, Td.jsx)(Nd.f, {}) : (0, Td.jsx)(od.c, {
+                children: "gems" === Wb.badge ? (0, sb.jsx)(tb.f, {}) : (0, sb.jsx)(Ub.b, {
                   name: "bolt"
                 })
               })]
-            }), (0, Td.jsx)(Yd, {
-              wrap: Ud,
-              className: Rd()("GiftOpeningBox", {
-                GiftOpeningBoxIdle: "wait" === nd
+            }), (0, sb.jsx)(hb, {
+              wrap: Kb,
+              className: pb()("GiftOpeningBox", {
+                GiftOpeningBoxIdle: "wait" === Jb
               }),
-              rootRef: KO.box,
-              bodyRef: KO.body,
-              lidRef: KO.lid,
-              seamRef: KO.seam
-            }), (0, Td.jsx)("div", {
+              rootRef: pw.box,
+              bodyRef: pw.body,
+              lidRef: pw.lid,
+              seamRef: pw.seam
+            }), (0, sb.jsx)("div", {
               className: "GiftOpeningRing",
-              ref: KO.ring
+              ref: pw.ring
             })]
-          }), (0, Td.jsx)("canvas", {
+          }), (0, sb.jsx)("canvas", {
             className: "GiftOpeningFx",
-            ref: KO.canvas
-          }), (0, Td.jsx)("div", {
+            ref: pw.canvas
+          }), (0, sb.jsx)("div", {
             className: "GiftOpeningFlash",
-            ref: KO.flash
-          }), tO && (0, Td.jsxs)("div", {
+            ref: pw.flash
+          }), Lw && (0, sb.jsxs)("div", {
             className: "GiftOpeningTitle",
-            children: [(0, Td.jsx)("div", {
+            children: [(0, sb.jsx)("div", {
               className: "SmallTextBold",
-              children: md("giftOpening:sentYou", {
-                name: pd.senderName
+              children: Mb("giftOpening:sentYou", {
+                name: mb.senderName
               })
-            }), (0, Td.jsx)(Bd, {
-              gift: pd
+            }), (0, sb.jsx)(Rb, {
+              gift: mb
             })]
-          }), "wait" === nd && QO && (0, Td.jsx)("div", {
+          }), "wait" === Jb && lw && (0, sb.jsx)("div", {
             className: "GiftOpeningHint SmallTextBold",
-            children: md("giftOpening:tapToOpen")
-          }), (0, Td.jsx)(xd, {
-            gift: pd,
-            shown: "card" === nd || "done" === nd
-          }), "done" !== nd && (0, Td.jsx)("button", {
+            children: Mb("giftOpening:tapToOpen")
+          }), (0, sb.jsx)(rb, {
+            gift: mb,
+            shown: "card" === Jb || "done" === Jb
+          }), "done" !== Jb && (0, sb.jsx)("button", {
             type: "button",
             className: "GiftOpeningTap",
             "data-pad-default-focus": !0,
-            "aria-label": md("giftOpening:tapToOpen"),
+            "aria-label": Mb("giftOpening:tapToOpen"),
             onClick: () => {
-              var dd;
-              ("wait" !== nd || QO) && (null === (dd = dO.current) || void 0 === dd || dd.tap())
+              var bb;
+              ("wait" !== Jb || lw) && (null === (bb = Tb.current) || void 0 === bb || bb.tap())
             }
-          }), oO && (0, Td.jsxs)(td.i, {
+          }), Iw && (0, sb.jsxs)(Ob.j, {
             className: "GiftOpeningSkip",
-            onClick: vO,
-            children: [md("giftOpening:skip"), " ", (0, Td.jsx)(od.c, {
+            onClick: gw,
+            children: [Mb("giftOpening:skip"), " ", (0, sb.jsx)(Ub.b, {
               name: "arrow-right"
             })]
-          }), "done" === nd && (0, Td.jsx)(Sd, {
-            gift: pd,
-            preview: Ed,
-            analyticsValue: Ad,
+          }), "done" === Jb && (0, sb.jsx)(Db, {
+            gift: mb,
+            preview: xb,
+            analyticsValue: fb,
             onReplay: () => {
-              ed(Dd + 1)
+              ab(qb + 1)
             },
-            onClose: hO
+            onClose: Vw
           })]
         })
       })
     }
   },
-  35587: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Kd,
-      g: () => Fd,
-      j: () => td
+  35370: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => gb,
+      c: () => Hb,
+      f: () => Ob
     });
-    var Wd = md(1685);
+    var eb = Mb(1735);
 
-    function Fd(dd) {
-      var Od;
+    function Hb(bb) {
+      var wb;
       return {
-        ...Kd.store,
-        yaw: Kd.store.yaw + (null !== (Od = Wd.b[dd].previewYaw) && void 0 !== Od ? Od : 0)
+        ...gb.store,
+        yaw: gb.store.yaw + (null !== (wb = eb.d[bb].previewYaw) && void 0 !== wb ? wb : 0)
       }
     }
-    const Rd = {
+    const pb = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      Xd = {
-        ...Rd,
+      Vb = {
+        ...pb,
         radius: 33,
         target: [0, 3.9, 0]
       },
-      Kd = {
-        player: Rd,
-        store: Xd,
+      gb = {
+        player: pb,
+        store: Vb,
         showcase: {
-          ...Xd,
+          ...Vb,
           target: [0, 1.9, 0]
         }
       };
 
-    function hd(dd, Od) {
-      dd instanceof Promise ? dd.then(Od).catch((dd => {
-        console.error("Couldn't open the preview", dd)
-      })) : Od(dd)
+    function lb(bb, wb) {
+      bb instanceof Promise ? bb.then(wb).catch((bb => {
+        console.error("Couldn't open the preview", bb)
+      })) : wb(bb)
     }
-    class vd {
-      constructor(dd) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, hd(dd, (dd => {
-          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height), null !== this.view && dd.show(this.view))
+    class Lb {
+      constructor(bb) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, lb(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height), null !== this.view && bb.show(this.view))
         }))
       }
-      show(dd) {
-        var Od;
-        this.view = dd, null === (Od = this.opened) || void 0 === Od || Od.show(dd)
+      show(bb) {
+        var wb;
+        this.view = bb, null === (wb = this.opened) || void 0 === wb || wb.show(bb)
       }
-      resize(dd, Od) {
-        var md;
+      resize(bb, wb) {
+        var Mb;
         this.size = {
-          width: dd,
-          height: Od
-        }, null === (md = this.opened) || void 0 === md || md.resize(dd, Od)
+          width: bb,
+          height: wb
+        }, null === (Mb = this.opened) || void 0 === Mb || Mb.resize(bb, wb)
       }
       close() {
-        var dd;
-        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    class Qd {
-      constructor(dd) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(dd).then((dd => dd.ready)), hd(dd, (dd => {
-          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height))
+    class Ib {
+      constructor(bb) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(bb).then((bb => bb.ready)), lb(bb, (bb => {
+          this.closed ? bb.close() : (this.opened = bb, null !== this.size && bb.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var dd, Od;
-        return null !== (dd = null === (Od = this.opened) || void 0 === Od ? void 0 : Od.isReady()) && void 0 !== dd && dd
+        var bb, wb;
+        return null !== (bb = null === (wb = this.opened) || void 0 === wb ? void 0 : wb.isReady()) && void 0 !== bb && bb
       }
-      setCosmetic(dd, Od) {
-        var md;
-        null === (md = this.opened) || void 0 === md || md.setCosmetic(dd, Od)
+      setCosmetic(bb, wb) {
+        var Mb;
+        null === (Mb = this.opened) || void 0 === Mb || Mb.setCosmetic(bb, wb)
       }
-      setNametag(dd) {
-        var Od;
-        null === (Od = this.opened) || void 0 === Od || Od.setNametag(dd)
+      setNametag(bb) {
+        var wb;
+        null === (wb = this.opened) || void 0 === wb || wb.setNametag(bb)
       }
-      playEmote(dd) {
-        var Od;
-        null === (Od = this.opened) || void 0 === Od || Od.playEmote(dd)
+      playEmote(bb) {
+        var wb;
+        null === (wb = this.opened) || void 0 === wb || wb.playEmote(bb)
       }
-      setOrbit(dd) {
-        var Od;
-        null === (Od = this.opened) || void 0 === Od || Od.setOrbit(dd)
+      setOrbit(bb) {
+        var wb;
+        null === (wb = this.opened) || void 0 === wb || wb.setOrbit(bb)
       }
       resetCamera() {
-        var dd;
-        null === (dd = this.opened) || void 0 === dd || dd.resetCamera()
+        var bb;
+        null === (bb = this.opened) || void 0 === bb || bb.resetCamera()
       }
-      async untilDrawn(dd) {
-        var Od;
-        await this.ready, await (null === (Od = this.opened) || void 0 === Od ? void 0 : Od.untilDrawn(dd))
+      async untilDrawn(bb) {
+        var wb;
+        await this.ready, await (null === (wb = this.opened) || void 0 === wb ? void 0 : wb.untilDrawn(bb))
       }
-      resize(dd, Od) {
-        var md;
+      resize(bb, wb) {
+        var Mb;
         this.size = {
-          width: dd,
-          height: Od
-        }, null === (md = this.opened) || void 0 === md || md.resize(dd, Od)
+          width: bb,
+          height: wb
+        }, null === (Mb = this.opened) || void 0 === Mb || Mb.resize(bb, wb)
       }
       close() {
-        var dd;
-        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
+        var bb;
+        this.closed = !0, null === (bb = this.opened) || void 0 === bb || bb.close(), this.opened = null
       }
     }
-    const td = new class {
+    const Ob = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(dd) {
-        this.host = dd
+      setHost(bb) {
+        this.host = bb
       }
-      setDefaultHost(dd) {
-        this.makeDefault = dd
+      setDefaultHost(bb) {
+        this.makeDefault = bb
       }
       current() {
         if (null === this.host) {
@@ -1324,187 +1324,187 @@ export const modules = {
         }
         return this.host
       }
-      openMob(dd) {
-        return new vd(this.current().openMob(dd))
+      openMob(bb) {
+        return new Lb(this.current().openMob(bb))
       }
-      openPet(dd) {
-        return new vd(this.current().openPet(dd))
+      openPet(bb) {
+        return new Lb(this.current().openPet(bb))
       }
-      openMobLineup(dd) {
-        return new vd(this.current().openMobLineup(dd))
+      openMobLineup(bb) {
+        return new Lb(this.current().openMobLineup(bb))
       }
       sharesCharacter() {
         return !0 === this.current().sharesCharacter
       }
-      openCharacter(dd, Od) {
-        return new Qd(this.current().openCharacter(dd, Od))
+      openCharacter(bb, wb) {
+        return new Ib(this.current().openCharacter(bb, wb))
       }
     }
   },
-  35582: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd.c,
-      g: () => Wd.g,
-      i: () => Wd.j
+  35366: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => eb.b,
+      f: () => eb.c,
+      i: () => eb.f
     });
-    var Wd = md(35587);
-    class Fd {
-      constructor(dd) {
-        this.load = dd, this.loaded = null, this.loading = null
+    var eb = Mb(35370);
+    class Hb {
+      constructor(bb) {
+        this.load = bb, this.loaded = null, this.loading = null
       }
-      run(dd) {
-        return null !== this.loaded ? dd(this.loaded) : (this.loading ??= this.load().then((dd => (this.loaded = dd, dd)), (dd => {
-          throw this.loading = null, dd
-        })), this.loading.then(dd))
+      run(bb) {
+        return null !== this.loaded ? bb(this.loaded) : (this.loading ??= this.load().then((bb => (this.loaded = bb, bb)), (bb => {
+          throw this.loading = null, bb
+        })), this.loading.then(bb))
       }
     }
-    class Rd {
+    class pb {
       constructor() {
-        this.sharesCharacter = !0, this.mobScene = new Fd((() => Promise.all([md.e(85), md.e(265), md.e(264), md.e(290), md.e(113), md.e(291), md.e(89), md.e(86), md.e(288), md.e(87), md.e(88), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(312), md.e(261), md.e(279), md.e(293), md.e(296), md.e(91), md.e(253), md.e(267), md.e(112), md.e(124), md.e(258), md.e(142), md.e(90), md.e(122), md.e(311)]).then((() => md(43035))))), this.characterScene = new Fd((() => Promise.all([md.e(85), md.e(265), md.e(264), md.e(290), md.e(113), md.e(291), md.e(89), md.e(86), md.e(288), md.e(87), md.e(88), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(312), md.e(177), md.e(261), md.e(279), md.e(293), md.e(296), md.e(91), md.e(225), md.e(253), md.e(267), md.e(112), md.e(124), md.e(258), md.e(142), md.e(90), md.e(122), md.e(280), md.e(184)]).then((() => md(43148)))))
+        this.sharesCharacter = !0, this.mobScene = new Hb((() => Promise.all([Mb.e(85), Mb.e(265), Mb.e(264), Mb.e(290), Mb.e(113), Mb.e(291), Mb.e(89), Mb.e(86), Mb.e(288), Mb.e(87), Mb.e(88), Mb.e(298), Mb.e(292), Mb.e(297), Mb.e(295), Mb.e(287), Mb.e(312), Mb.e(261), Mb.e(279), Mb.e(293), Mb.e(296), Mb.e(91), Mb.e(253), Mb.e(267), Mb.e(112), Mb.e(124), Mb.e(258), Mb.e(142), Mb.e(90), Mb.e(122), Mb.e(311)]).then((() => Mb(42755))))), this.characterScene = new Hb((() => Promise.all([Mb.e(85), Mb.e(265), Mb.e(264), Mb.e(290), Mb.e(113), Mb.e(291), Mb.e(89), Mb.e(86), Mb.e(288), Mb.e(87), Mb.e(88), Mb.e(298), Mb.e(292), Mb.e(297), Mb.e(295), Mb.e(287), Mb.e(312), Mb.e(177), Mb.e(261), Mb.e(279), Mb.e(293), Mb.e(296), Mb.e(91), Mb.e(225), Mb.e(253), Mb.e(267), Mb.e(112), Mb.e(124), Mb.e(258), Mb.e(142), Mb.e(90), Mb.e(122), Mb.e(280), Mb.e(184)]).then((() => Mb(42854)))))
       }
-      openMob(dd) {
-        return this.mobScene.run((Od => Od.openMobPreview(dd)))
+      openMob(bb) {
+        return this.mobScene.run((wb => wb.openMobPreview(bb)))
       }
-      openPet(dd) {
-        return this.mobScene.run((Od => Od.openPetPreview(dd)))
+      openPet(bb) {
+        return this.mobScene.run((wb => wb.openPetPreview(bb)))
       }
-      openMobLineup(dd) {
-        return this.mobScene.run((Od => Od.openMobLineupPreview(dd)))
+      openMobLineup(bb) {
+        return this.mobScene.run((wb => wb.openMobLineupPreview(bb)))
       }
-      openCharacter(dd, Od) {
-        return this.characterScene.run((md => md.openCharacterPreview(dd, Od)))
+      openCharacter(bb, wb) {
+        return this.characterScene.run((Mb => Mb.openCharacterPreview(bb, wb)))
       }
     }
-    Wd.j.setDefaultHost((() => new Rd))
+    eb.f.setDefaultHost((() => new pb))
   },
-  37958: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      d: () => hd,
-      e: () => Xd
+  37646: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb,
+      g: () => lb,
+      i: () => Vb
     });
-    var Wd = md(701),
-      Fd = md(2402);
+    var eb = Mb(661),
+      Hb = Mb(2451);
 
-    function Rd(dd) {
-      return dd === (0, Fd.c)().bV ? (0, Fd.c)().YV : dd
+    function pb(bb) {
+      return bb === (0, Hb.h)().HJ ? (0, Hb.h)().VJ : bb
     }
 
-    function Xd(dd) {
-      return !(0, Wd.O)(dd) && Rd(dd) === (0, Fd.c)().YV
+    function Vb(bb) {
+      return !(0, eb.K)(bb) && pb(bb) === (0, Hb.h)().VJ
     }
-    const Kd = "gravity";
+    const gb = "gravity";
 
-    function hd() {
-      return (0, Fd.c)().physics[Kd][1]
+    function lb() {
+      return (0, Hb.h)().physics[gb][1]
     }
   },
-  37939: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Jd
+  37627: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => jb
     });
-    var Wd = md(37942),
-      Fd = md(218),
-      Rd = md(5641),
-      Xd = md(37948),
-      Kd = md(37955),
-      hd = md(38006),
-      vd = md(37958),
-      Qd = md(415),
-      td = md.n(Qd),
-      od = md(2402),
-      Nd = md(38003),
-      qd = md(32),
-      Hd = md(29),
-      yd = md(37965),
-      bd = md(37974),
-      Td = md(37982),
-      pd = md(37989),
-      Yd = md(37996);
-    const gd = new Set(["note"]);
-    const wd = {
-      stop: () => wd,
-      fade: () => wd,
-      rate: () => wd,
+    var eb = Mb(37630),
+      Hb = Mb(225),
+      pb = Mb(5766),
+      Vb = Mb(37634),
+      gb = Mb(37641),
+      lb = Mb(37695),
+      Lb = Mb(37646),
+      Ib = Mb(398),
+      Ob = Mb.n(Ib),
+      Ub = Mb(2451),
+      tb = Mb(37691),
+      Cb = Mb(29),
+      Eb = Mb(26),
+      Fb = Mb(37653),
+      Bb = Mb(37659),
+      sb = Mb(37668),
+      mb = Mb(37677),
+      hb = Mb(37687);
+    const zb = new Set(["note"]);
+    const Xb = {
+      stop: () => Xb,
+      fade: () => Xb,
+      rate: () => Xb,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => wd,
-      setPannerAttr: () => wd,
-      setPosition: () => wd
+      setRelativeVolume: () => Xb,
+      setPannerAttr: () => Xb,
+      setPosition: () => Xb
     };
-    class Ed {
-      constructor(dd) {
-        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new hd.h, this._howl = (0, Kd.countDecodesAs)(new Rd.Howl({
-          src: [...(0, Wd.t)(dd).src],
+    class xb {
+      constructor(bb) {
+        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new lb.f, this._howl = (0, gb.countDecodesAs)(new pb.Howl({
+          src: [...(0, eb.v)(bb).src],
           pool: 15
         }), "sound"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Od = this._howl.play(Xd.b);
-        dd && this._howl.loop(!0, Od);
-        let md = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), Od);
-        const Wd = {
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const wb = this._howl.play(Vb.b);
+        bb && this._howl.loop(!0, wb);
+        let Mb = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), wb);
+        const eb = {
           stop: () => {
-            var dd;
-            return null === (dd = this.liveHowl()) || void 0 === dd || dd.stop(Od), Wd
+            var bb;
+            return null === (bb = this.liveHowl()) || void 0 === bb || bb.stop(wb), eb
           },
-          fade: (dd, md, Fd) => {
-            var Rd;
-            return null === (Rd = this.liveHowl()) || void 0 === Rd || Rd.fade(dd, md, Fd, Od), Wd
+          fade: (bb, Mb, Hb) => {
+            var pb;
+            return null === (pb = this.liveHowl()) || void 0 === pb || pb.fade(bb, Mb, Hb, wb), eb
           },
-          rate: dd => {
-            var md;
-            return null === (md = this.liveHowl()) || void 0 === md || md.rate(dd, Od), Wd
+          rate: bb => {
+            var Mb;
+            return null === (Mb = this.liveHowl()) || void 0 === Mb || Mb.rate(bb, wb), eb
           },
-          stopsAtOnce: () => this._howl.playing(Od) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(wb) && !this._howl._playLock,
           isAlive: () => {
-            const dd = this._howl._soundById(Od);
-            return !this._loadFailed && !!dd && !dd._ended
+            const bb = this._howl._soundById(wb);
+            return !this._loadFailed && !!bb && !bb._ended
           },
-          getDurationMs: () => this._howl._soundById(Od) ? 1e3 * this._howl.duration(Od) / this._howl.rate(Od) : 0,
-          getVolume: () => md * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => md,
-          setRelativeVolume: dd => {
-            var Fd;
-            if (dd > 1) throw new Error("Volume should be <= 1");
-            return md = Hd.e.get("soundOnFromAd") ? dd : 0, null === (Fd = this.liveHowl()) || void 0 === Fd || Fd.volume(Math.min(1, md * this._volumeMultiplier.getTotalMultipliedVal()), Od), Wd
+          getDurationMs: () => this._howl._soundById(wb) ? 1e3 * this._howl.duration(wb) / this._howl.rate(wb) : 0,
+          getVolume: () => Mb * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => Mb,
+          setRelativeVolume: bb => {
+            var Hb;
+            if (bb > 1) throw new Error("Volume should be <= 1");
+            return Mb = Eb.c.get("soundOnFromAd") ? bb : 0, null === (Hb = this.liveHowl()) || void 0 === Hb || Hb.volume(Math.min(1, Mb * this._volumeMultiplier.getTotalMultipliedVal()), wb), eb
           },
-          setPannerAttr: dd => {
+          setPannerAttr: bb => {
             let {
-              coneInnerAngle: md,
-              coneOuterAngle: Fd = 360,
-              coneOuterGain: Rd,
-              distanceModel: Xd,
-              maxDistance: Kd,
-              panningModel: hd,
-              refDistance: vd,
-              rolloffFactor: Qd
-            } = dd;
+              coneInnerAngle: Mb,
+              coneOuterAngle: Hb = 360,
+              coneOuterGain: pb,
+              distanceModel: Vb,
+              maxDistance: gb,
+              panningModel: lb,
+              refDistance: Lb,
+              rolloffFactor: Ib
+            } = bb;
             return this._setPannerAttr({
-              id: Od,
-              coneInnerAngle: md,
-              coneOuterAngle: Fd,
-              coneOuterGain: Rd,
-              distanceModel: Xd,
-              maxDistance: Kd,
-              panningModel: hd,
-              refDistance: vd,
-              rolloffFactor: Qd
-            }), Wd
+              id: wb,
+              coneInnerAngle: Mb,
+              coneOuterAngle: Hb,
+              coneOuterGain: pb,
+              distanceModel: Vb,
+              maxDistance: gb,
+              panningModel: lb,
+              refDistance: Lb,
+              rolloffFactor: Ib
+            }), eb
           },
-          setPosition: dd => {
-            var md;
-            return null === (md = this.liveHowl()) || void 0 === md || md.pos(dd[2], dd[1], dd[0], Od), Wd
+          setPosition: bb => {
+            var Mb;
+            return null === (Mb = this.liveHowl()) || void 0 === Mb || Mb.pos(bb[2], bb[1], bb[0], wb), eb
           }
         };
-        return Wd
+        return eb
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -1513,143 +1513,143 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, Xd.e)(this._howl, (() => {
+        (0, Vb.d)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(dd) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", dd), this._howl.volume(dd)
+      setGlobalVolume(bb) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", bb), this._howl.volume(bb)
       }
-      _setPannerAttr(dd) {
+      _setPannerAttr(bb) {
         let {
-          id: Od,
-          coneInnerAngle: md = 360,
-          coneOuterAngle: Wd = 360,
-          coneOuterGain: Fd = 0,
-          distanceModel: Rd = "inverse",
-          maxDistance: Xd = 1e3,
-          panningModel: Kd = "HRTF",
-          refDistance: hd = Nd.i,
-          rolloffFactor: vd = 1
-        } = dd;
-        const Qd = this.liveHowl();
-        if (null === Qd) return;
-        Qd.pannerAttr({
-          coneOuterAngle: Wd
-        }, Od);
-        const td = {
-          coneInnerAngle: md,
-          coneOuterAngle: Wd,
-          coneOuterGain: Fd,
-          distanceModel: Rd,
-          maxDistance: Xd,
-          panningModel: Kd,
-          refDistance: hd,
-          rolloffFactor: vd
+          id: wb,
+          coneInnerAngle: Mb = 360,
+          coneOuterAngle: eb = 360,
+          coneOuterGain: Hb = 0,
+          distanceModel: pb = "inverse",
+          maxDistance: Vb = 1e3,
+          panningModel: gb = "HRTF",
+          refDistance: lb = tb.j,
+          rolloffFactor: Lb = 1
+        } = bb;
+        const Ib = this.liveHowl();
+        if (null === Ib) return;
+        Ib.pannerAttr({
+          coneOuterAngle: eb
+        }, wb);
+        const Ob = {
+          coneInnerAngle: Mb,
+          coneOuterAngle: eb,
+          coneOuterGain: Hb,
+          distanceModel: pb,
+          maxDistance: Vb,
+          panningModel: gb,
+          refDistance: lb,
+          rolloffFactor: Lb
         };
-        Qd.pannerAttr(td, Od)
+        Ib.pannerAttr(Ob, wb)
       }
     }
-    const Jd = new class {
+    const jb = new class {
       constructor() {
-        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new yd.d, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, qd.j.subscribe("appManagerUpdated|soundVolume", (dd => {
-          const Od = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
-          for (const md of Od) md.setGlobalVolume(dd)
+        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new Fb.d, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, Cb.k.subscribe("appManagerUpdated|soundVolume", (bb => {
+          const wb = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
+          for (const Mb of wb) Mb.setGlobalVolume(bb)
         }))
       }
-      play(dd, Od) {
-        var md;
-        let Rd, Xd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (md = (0, od.c)()) || void 0 === md ? void 0 : md.YV,
-          Kd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Nd.f,
-          hd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Nd.i,
-          Qd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var qd;
-        (0, od.c)() ? Rd = !!Array.isArray(Xd) || (0, vd.b)(Xd) !== (null === (qd = (0, od.c)()) || void 0 === qd ? void 0 : qd.YV): Rd = !1;
-        const Hd = (0, Wd.j)(dd),
-          bd = this.loadSound(Rd ? this.spatialSounds : this.stereoSounds, dd);
-        if (!Rd) {
-          const dd = bd.play(Qd);
-          return dd.setRelativeVolume(Od), dd
+      play(bb, wb) {
+        var Mb;
+        let pb, Vb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (Mb = (0, Ub.h)()) || void 0 === Mb ? void 0 : Mb.VJ,
+          gb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : tb.f,
+          lb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : tb.j,
+          Ib = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var Cb;
+        (0, Ub.h)() ? pb = !!Array.isArray(Vb) || (0, Lb.e)(Vb) !== (null === (Cb = (0, Ub.h)()) || void 0 === Cb ? void 0 : Cb.VJ): pb = !1;
+        const Eb = (0, eb.k)(bb),
+          Bb = this.loadSound(pb ? this.spatialSounds : this.stereoSounds, bb);
+        if (!pb) {
+          const bb = Bb.play(Ib);
+          return bb.setRelativeVolume(wb), bb
         }
-        const Td = (0, od.c)(),
-          pd = Array.isArray(Xd) ? Xd : Td.qE.hY(Xd),
-          Ed = Td.qE.hY(Td.YV);
-        if (!pd || td().sqrDist(pd, Ed) > Kd * Kd) return wd;
-        let Jd;
-        if (!Qd) {
+        const sb = (0, Ub.h)(),
+          mb = Array.isArray(Vb) ? Vb : sb.pR.Qm(Vb),
+          xb = sb.pR.Qm(sb.VJ);
+        if (!mb || Ob().sqrDist(mb, xb) > gb * gb) return Xb;
+        let jb;
+        if (!Ib) {
           if (!this.spatialVoices.admit({
-              group: gd.has(Hd) ? null : (0, yd.i)(dd),
-              loudness: (0, yd.e)(Od, td().UX(pd, Ed), hd),
+              group: zb.has(Eb) ? null : (0, Fb.i)(bb),
+              loudness: (0, Fb.f)(wb, Ob().DV(mb, xb), lb),
               startMs: performance.now(),
               getDurationMs: () => {
-                var dd, Od;
-                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.getDurationMs()) && void 0 !== dd ? dd : 0
+                var bb, wb;
+                return null !== (bb = null === (wb = jb) || void 0 === wb ? void 0 : wb.getDurationMs()) && void 0 !== bb ? bb : 0
               },
               isAlive: () => {
-                var dd, Od;
-                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.isAlive()) && void 0 !== dd && dd
+                var bb, wb;
+                return null !== (bb = null === (wb = jb) || void 0 === wb ? void 0 : wb.isAlive()) && void 0 !== bb && bb
               },
               canStop: () => {
-                var dd, Od;
-                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.stopsAtOnce()) && void 0 !== dd && dd
+                var bb, wb;
+                return null !== (bb = null === (wb = jb) || void 0 === wb ? void 0 : wb.stopsAtOnce()) && void 0 !== bb && bb
               },
               stop: () => {
-                var dd;
-                null === (dd = Jd) || void 0 === dd || dd.stop()
+                var bb;
+                null === (bb = jb) || void 0 === bb || bb.stop()
               }
-            })) return wd
+            })) return Xb
         }
-        return Jd = bd.play(Qd), Jd.setRelativeVolume(Od), Jd.setPannerAttr({
-          refDistance: hd
-        }), Jd.setPosition([pd[0], pd[1] + Fd.i.yb * Fd.i.playerEyeToHeightRatio, pd[2]]), !Qd && (0, Yd.g)() && (0, Yd.d)(Hd, dd, pd[0] - Ed[0], pd[2] - Ed[2]), Jd
+        return jb = Bb.play(Ib), jb.setRelativeVolume(wb), jb.setPannerAttr({
+          refDistance: lb
+        }), jb.setPosition([mb[0], mb[1] + Hb.e.oF * Hb.e.playerEyeToHeightRatio, mb[2]]), !Ib && (0, hb.e)() && (0, hb.d)(Eb, bb, mb[0] - xb[0], mb[2] - xb[2]), jb
       }
-      preload(dd) {
-        const Od = (0, Wd.o)(dd) ? [dd] : (0, Wd.v)(dd);
-        if (0 === Od.length) throw new Error(`Invalid sound name ${dd} (no sound has it or starts with it)`);
-        for (const md of Od) this.loadSound(this.stereoSounds, md)
+      preload(bb) {
+        const wb = (0, eb.r)(bb) ? [bb] : (0, eb.w)(bb);
+        if (0 === wb.length) throw new Error(`Invalid sound name ${bb} (no sound has it or starts with it)`);
+        for (const Mb of wb) this.loadSound(this.stereoSounds, Mb)
       }
-      preloadAtIdle(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pd.c;
-        const md = dd.filter((dd => !this.idlePreloads.has(dd)));
-        for (const Fd of md) this.idlePreloads.add(Fd);
-        const Wd = this.idlePreloadGeneration;
-        (0, Td.b)(md, {
-          ...Od,
-          Ad: () => Wd !== this.idlePreloadGeneration,
-          fetchFile: dd => {
-            this.idlePreloads.delete(dd);
+      preloadAtIdle(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mb.b;
+        const Mb = bb.filter((bb => !this.idlePreloads.has(bb)));
+        for (const Hb of Mb) this.idlePreloads.add(Hb);
+        const eb = this.idlePreloadGeneration;
+        (0, sb.d)(Mb, {
+          ...wb,
+          Yb: () => eb !== this.idlePreloadGeneration,
+          fetchFile: bb => {
+            this.idlePreloads.delete(bb);
             try {
-              return this.preload(dd), Promise.resolve()
-            } catch (Od) {
-              return Promise.reject(Od)
+              return this.preload(bb), Promise.resolve()
+            } catch (wb) {
+              return Promise.reject(wb)
             }
           }
         })
       }
-      loadSound(dd, Od) {
-        const md = dd[Od];
-        if (md) return md;
-        const Fd = this.makeSound(dd, Od);
-        for (const Xd of null !== (Rd = (0, Wd.s)(Od)) && void 0 !== Rd ? Rd : []) {
-          var Rd;
-          dd[Xd] || this.makeSound(dd, Xd)
+      loadSound(bb, wb) {
+        const Mb = bb[wb];
+        if (Mb) return Mb;
+        const Hb = this.makeSound(bb, wb);
+        for (const Vb of null !== (pb = (0, eb.t)(wb)) && void 0 !== pb ? pb : []) {
+          var pb;
+          bb[Vb] || this.makeSound(bb, Vb)
         }
-        return Fd
+        return Hb
       }
-      makeSound(dd, Od) {
-        (0, pd.g)(Od);
-        const md = new Ed(Od);
-        return md.setGlobalVolume(Hd.e.get("soundVolume")), dd[Od] = md, md
+      makeSound(bb, wb) {
+        (0, mb.f)(wb);
+        const Mb = new xb(wb);
+        return Mb.setGlobalVolume(Eb.c.get("soundVolume")), bb[wb] = Mb, Mb
       }
       freeSoundsAfterGame() {
         this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
       }
       freeSounds() {
-        for (const dd of [this.stereoSounds, this.spatialSounds])
-          for (const [Od, md] of Object.entries(dd)) !bd.b.has((0, Wd.j)(Od)) && md.loaded() && (md.unloadOnceIdle(), delete dd[Od])
+        for (const bb of [this.stereoSounds, this.spatialSounds])
+          for (const [wb, Mb] of Object.entries(bb)) !Bb.d.has((0, eb.k)(wb)) && Mb.loaded() && (Mb.unloadOnceIdle(), delete bb[wb])
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,238 +1,238 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  5901: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => qd,
-      h: () => Yd,
-      i: () => Hd,
-      l: () => pd
+  6050: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Cb,
+      f: () => hb,
+      j: () => Eb,
+      l: () => mb
     });
-    var Wd = md(66),
-      Fd = md(5909),
-      Rd = md(5003),
-      Xd = md(1471),
-      Kd = md(4199),
-      hd = md(1155),
-      vd = md.n(hd),
-      Qd = md(1462),
-      td = md(1890),
-      od = md(5936),
-      Nd = md(1341);
+    var eb = Mb(64),
+      Hb = Mb(6056),
+      pb = Mb(5193),
+      Vb = Mb(1516),
+      gb = Mb(4374),
+      lb = Mb(1159),
+      Lb = Mb.n(lb),
+      Ib = Mb(1504),
+      Ob = Mb(1965),
+      Ub = Mb(6090),
+      tb = Mb(1364);
 
-    function qd(dd) {
+    function Cb(bb) {
       let {
-        label: Od,
-        onClick: md,
-        checked: Wd,
-        circleInfoText: Fd,
-        className: Kd,
-        disabled: hd,
-        note: Qd
-      } = dd;
-      return (0, Nd.jsxs)("div", {
-        "aria-disabled": hd || void 0,
+        label: wb,
+        onClick: Mb,
+        checked: eb,
+        circleInfoText: Hb,
+        className: gb,
+        disabled: lb,
+        note: Ib
+      } = bb;
+      return (0, tb.jsxs)("div", {
+        "aria-disabled": lb || void 0,
         "data-pad-focusable": !0,
-        className: vd()("SettingBox CheckboxContainer", {
-          [Kd]: Kd,
-          SettingBoxDisabled: hd
+        className: Lb()("SettingBox CheckboxContainer", {
+          [gb]: gb,
+          SettingBoxDisabled: lb
         }),
         onClick: () => {
-          hd || md(!Wd)
+          lb || Mb(!eb)
         },
-        children: [(0, Nd.jsxs)("div", {
+        children: [(0, tb.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Nd.jsx)("label", {
+          children: [(0, tb.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Nd.jsx)(Rd.d, {
+            children: (0, tb.jsx)(pb.c, {
               className: "SettingsCheckbox",
-              checked: Wd,
-              disabled: hd,
+              checked: eb,
+              disabled: lb,
               onChange: () => {}
             })
-          }), (0, Nd.jsxs)("div", {
+          }), (0, tb.jsxs)("div", {
             className: "CheckboxText",
-            children: [Od, Fd && (0, Nd.jsx)("span", {
-              onClick: dd => dd.stopPropagation(),
-              children: (0, Nd.jsx)(Xd.d, {
+            children: [wb, Hb && (0, tb.jsx)("span", {
+              onClick: bb => bb.stopPropagation(),
+              children: (0, tb.jsx)(Vb.b, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: Fd
+                hoverInfo: Hb
               })
             })]
           })]
-        }), Qd && (0, Nd.jsx)("div", {
+        }), Ib && (0, tb.jsx)("div", {
           className: "SettingNote",
-          children: Qd
+          children: Ib
         })]
       })
     }
 
-    function Hd(dd) {
+    function Eb(bb) {
       let {
-        name: Od,
-        onChange: md,
-        min: Fd,
-        max: Rd,
-        step: Kd,
-        initValue: hd,
-        circleInfoText: Qd,
-        format: td,
-        className: od,
-        padStep: qd,
-        disabled: Hd = !1,
-        selectableMax: yd,
-        cappedNote: bd,
-        note: pd,
-        onChangeComplete: Yd
-      } = dd;
-      const [gd, wd] = (0, Wd.useState)(hd), Ed = (0, Wd.useRef)(hd);
-      (0, Wd.useEffect)((() => {
-        Ed.current = hd, wd(hd)
-      }), [hd]);
-      const Jd = void 0 !== yd && yd < Rd,
-        Ud = Jd ? {
-          "--slider-selectable": (yd - Fd) / (Rd - Fd)
+        name: wb,
+        onChange: Mb,
+        min: Hb,
+        max: pb,
+        step: gb,
+        initValue: lb,
+        circleInfoText: Ib,
+        format: Ob,
+        className: Ub,
+        padStep: Cb,
+        disabled: Eb = !1,
+        selectableMax: Fb,
+        cappedNote: Bb,
+        note: mb,
+        onChangeComplete: hb
+      } = bb;
+      const [zb, Xb] = (0, eb.useState)(lb), xb = (0, eb.useRef)(lb);
+      (0, eb.useEffect)((() => {
+        xb.current = lb, Xb(lb)
+      }), [lb]);
+      const jb = void 0 !== Fb && Fb < pb,
+        Kb = jb ? {
+          "--slider-selectable": (Fb - Hb) / (pb - Hb)
         } : void 0,
-        xd = Jd && bd ? bd : pd;
-      return (0, Nd.jsxs)("div", {
-        className: vd()("SettingBox SettingsSliderDiv", {
-          [od]: od,
-          SettingBoxDisabled: Hd,
-          SliderCapped: Jd
+        rb = jb && Bb ? Bb : mb;
+      return (0, tb.jsxs)("div", {
+        className: Lb()("SettingBox SettingsSliderDiv", {
+          [Ub]: Ub,
+          SettingBoxDisabled: Eb,
+          SliderCapped: jb
         }),
-        style: Ud,
-        children: [(0, Nd.jsxs)("div", {
+        style: Kb,
+        children: [(0, tb.jsxs)("div", {
           className: "SliderText",
-          children: [`${Od}: ${td?td(gd):gd}`, Qd && (0, Nd.jsx)(Xd.d, {
+          children: [`${wb}: ${Ob?Ob(zb):zb}`, Ib && (0, tb.jsx)(Vb.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Qd
+            hoverInfo: Ib
           })]
-        }), (0, Nd.jsx)("div", {
+        }), (0, tb.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Nd.jsx)(Td, {
-            value: gd,
-            min: Fd,
-            max: Rd,
-            step: Kd,
-            onChange: dd => {
-              if (Jd && dd >= yd && gd === yd) return;
-              const Od = Jd ? Math.min(dd, yd) : dd;
-              Ed.current = Od, wd(Od), md(Od)
+          children: (0, tb.jsx)(sb, {
+            value: zb,
+            min: Hb,
+            max: pb,
+            step: gb,
+            onChange: bb => {
+              if (jb && bb >= Fb && zb === Fb) return;
+              const wb = jb ? Math.min(bb, Fb) : bb;
+              xb.current = wb, Xb(wb), Mb(wb)
             },
-            onChangeComplete: Yd && (() => {
-              Yd(Ed.current)
+            onChangeComplete: hb && (() => {
+              hb(xb.current)
             }),
-            format: td,
-            padStep: qd,
-            disabled: Hd
+            format: Ob,
+            padStep: Cb,
+            disabled: Eb
           })
-        }), xd && (0, Nd.jsx)("div", {
+        }), rb && (0, tb.jsx)("div", {
           className: "SettingNote",
-          children: xd
+          children: rb
         })]
       })
     }
-    const yd = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const Fb = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function bd(dd) {
-      var Od;
-      return (null !== (Od = String(dd).split(".")[1]) && void 0 !== Od ? Od : "").length
+    function Bb(bb) {
+      var wb;
+      return (null !== (wb = String(bb).split(".")[1]) && void 0 !== wb ? wb : "").length
     }
 
-    function Td(dd) {
+    function sb(bb) {
       let {
-        value: Od,
-        min: md,
-        max: Rd,
-        step: Xd,
-        onChange: Kd,
-        orientation: hd,
-        reverse: vd,
-        setIsChanging: Qd,
-        tooltip: td,
-        labels: qd,
-        handleLabel: Hd,
-        format: Td,
-        onChangeStart: pd,
-        onChangeComplete: Yd,
-        padStep: gd,
-        disabled: wd = !1
-      } = dd;
-      const Ed = (0, Wd.useRef)(null),
-        Jd = (0, Wd.useRef)(null);
-      (0, Wd.useLayoutEffect)((() => {
-        var dd, Od, md;
-        const Wd = null !== (dd = null === (Od = Ed.current) || void 0 === Od ? void 0 : Od.querySelector(".rangeslider")) && void 0 !== dd ? dd : null;
-        null === Wd || void 0 === Wd || Wd.setAttribute("data-pad-slider", ""), null === Wd || void 0 === Wd || Wd.setAttribute("data-pad-focusable", ""), null === Wd || void 0 === Wd || null === (md = Wd.querySelector(".rangeslider__handle")) || void 0 === md || md.setAttribute("data-pad-slider-handle", ""), Jd.current = Wd
-      }), []), (0, Wd.useLayoutEffect)((() => {
-        var dd, Od;
-        wd ? null === (dd = Jd.current) || void 0 === dd || dd.setAttribute("aria-disabled", "true") : null === (Od = Jd.current) || void 0 === Od || Od.removeAttribute("aria-disabled")
-      }), [wd]);
-      const Ud = Math.max(bd(Xd), bd(md)),
-        xd = dd => {
-          if (dd >= Rd) return Rd;
-          if (dd <= md) return md;
-          const Od = Number((Math.round((dd - md) / Xd) * Xd + md).toFixed(Ud));
-          return Math.min(Rd, Math.max(md, Od))
+        value: wb,
+        min: Mb,
+        max: pb,
+        step: Vb,
+        onChange: gb,
+        orientation: lb,
+        reverse: Lb,
+        setIsChanging: Ib,
+        tooltip: Ob,
+        labels: Cb,
+        handleLabel: Eb,
+        format: sb,
+        onChangeStart: mb,
+        onChangeComplete: hb,
+        padStep: zb,
+        disabled: Xb = !1
+      } = bb;
+      const xb = (0, eb.useRef)(null),
+        jb = (0, eb.useRef)(null);
+      (0, eb.useLayoutEffect)((() => {
+        var bb, wb, Mb;
+        const eb = null !== (bb = null === (wb = xb.current) || void 0 === wb ? void 0 : wb.querySelector(".rangeslider")) && void 0 !== bb ? bb : null;
+        null === eb || void 0 === eb || eb.setAttribute("data-pad-slider", ""), null === eb || void 0 === eb || eb.setAttribute("data-pad-focusable", ""), null === eb || void 0 === eb || null === (Mb = eb.querySelector(".rangeslider__handle")) || void 0 === Mb || Mb.setAttribute("data-pad-slider-handle", ""), jb.current = eb
+      }), []), (0, eb.useLayoutEffect)((() => {
+        var bb, wb;
+        Xb ? null === (bb = jb.current) || void 0 === bb || bb.setAttribute("aria-disabled", "true") : null === (wb = jb.current) || void 0 === wb || wb.removeAttribute("aria-disabled")
+      }), [Xb]);
+      const Kb = Math.max(Bb(Vb), Bb(Mb)),
+        rb = bb => {
+          if (bb >= pb) return pb;
+          if (bb <= Mb) return Mb;
+          const wb = Number((Math.round((bb - Mb) / Vb) * Vb + Mb).toFixed(Kb));
+          return Math.min(pb, Math.max(Mb, wb))
         },
-        Bd = (0, Wd.useRef)(Yd);
-      Bd.current = Yd, (0, Wd.useEffect)((() => {
-        const dd = Ed.current;
-        if (!dd) return;
-        const Od = dd => {
-          var Od;
-          yd.has(dd.key) && (null === (Od = Bd.current) || void 0 === Od || Od.call(Bd))
+        Rb = (0, eb.useRef)(hb);
+      Rb.current = hb, (0, eb.useEffect)((() => {
+        const bb = xb.current;
+        if (!bb) return;
+        const wb = bb => {
+          var wb;
+          Fb.has(bb.key) && (null === (wb = Rb.current) || void 0 === wb || wb.call(Rb))
         };
-        return dd.addEventListener("keyup", Od), () => {
-          dd.removeEventListener("keyup", Od)
+        return bb.addEventListener("keyup", wb), () => {
+          bb.removeEventListener("keyup", wb)
         }
       }), []);
-      const Sd = (0, Wd.useRef)(!1);
-      return (0, od.f)(Jd, {
-        adjust: dd => {
-          if (wd) return;
-          const Wd = null !== gd && void 0 !== gd ? gd : Math.max(Xd, Math.round((Rd - md) / 20 / Xd) * Xd),
-            Fd = xd(Od + dd * Wd * (vd ? -1 : 1));
-          Fd !== Od && (null === pd || void 0 === pd || pd(), Kd(Fd), null === Yd || void 0 === Yd || Yd())
+      const Db = (0, eb.useRef)(!1);
+      return (0, Ub.f)(jb, {
+        adjust: bb => {
+          if (Xb) return;
+          const eb = null !== zb && void 0 !== zb ? zb : Math.max(Vb, Math.round((pb - Mb) / 20 / Vb) * Vb),
+            Hb = rb(wb + bb * eb * (Lb ? -1 : 1));
+          Hb !== wb && (null === mb || void 0 === mb || mb(), gb(Hb), null === hb || void 0 === hb || hb())
         },
-        setFraction: dd => {
-          if (wd) return;
-          const Wd = xd(md + (vd ? 1 - dd : dd) * (Rd - md));
-          Wd !== Od && (Sd.current || (Sd.current = !0, null === pd || void 0 === pd || pd()), Kd(Wd))
+        setFraction: bb => {
+          if (Xb) return;
+          const eb = rb(Mb + (Lb ? 1 - bb : bb) * (pb - Mb));
+          eb !== wb && (Db.current || (Db.current = !0, null === mb || void 0 === mb || mb()), gb(eb))
         },
         endDrag: () => {
-          Sd.current && (Sd.current = !1, null === Yd || void 0 === Yd || Yd())
+          Db.current && (Db.current = !1, null === hb || void 0 === hb || hb())
         }
-      }), (0, Nd.jsx)("div", {
-        ref: Ed,
+      }), (0, tb.jsx)("div", {
+        ref: xb,
         style: {
           display: "contents"
         },
-        children: (0, Nd.jsx)(Fd.e, {
-          value: Od,
-          min: md,
-          max: Rd,
-          step: Xd,
-          onChange: dd => {
-            Kd(xd(dd))
+        children: (0, tb.jsx)(Hb.e, {
+          value: wb,
+          min: Mb,
+          max: pb,
+          step: Vb,
+          onChange: bb => {
+            gb(rb(bb))
           },
-          orientation: hd,
-          reverse: vd,
-          tooltip: td,
-          labels: qd,
-          handleLabel: Hd,
-          format: Td,
+          orientation: lb,
+          reverse: Lb,
+          tooltip: Ob,
+          labels: Cb,
+          handleLabel: Eb,
+          format: sb,
           onChangeStart: () => {
-            null === pd || void 0 === pd || pd(), null === Qd || void 0 === Qd || Qd(!0)
+            null === mb || void 0 === mb || mb(), null === Ib || void 0 === Ib || Ib(!0)
           },
           onChangeComplete: () => {
-            null === Qd || void 0 === Qd || Qd(!1), null === Yd || void 0 === Yd || Yd()
+            null === Ib || void 0 === Ib || Ib(!1), null === hb || void 0 === hb || hb()
           }
         })
       })
     }
-    async function pd() {
-      const dd = Qd.NotificationProvider.showPromptPopup({
+    async function mb() {
+      const bb = Ib.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -240,456 +240,456 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await dd.getResult() && (0, td.reloadBloxd)()
+      !0 === await bb.getResult() && (0, Ob.reloadBloxd)()
     }
 
-    function Yd(dd) {
+    function hb(bb) {
       let {
-        label: Od,
-        options: md,
-        value: Wd,
-        onChange: Fd,
-        circleInfoText: Rd
-      } = dd;
-      return (0, Nd.jsxs)("div", {
+        label: wb,
+        options: Mb,
+        value: eb,
+        onChange: Hb,
+        circleInfoText: pb
+      } = bb;
+      return (0, tb.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Nd.jsxs)("div", {
+        children: [(0, tb.jsxs)("div", {
           className: "SliderText",
-          children: [Od, Rd && (0, Nd.jsx)(Xd.d, {
+          children: [wb, pb && (0, tb.jsx)(Vb.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Rd
+            hoverInfo: pb
           })]
-        }), (0, Nd.jsx)(Kd.e, {
-          ariaLabel: Od,
-          options: md,
-          value: Wd,
-          onChange: Fd
+        }), (0, tb.jsx)(gb.c, {
+          ariaLabel: wb,
+          options: Mb,
+          value: eb,
+          onChange: Hb
         })]
       })
     }
   },
-  7608: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      default: () => Md
+  7854: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      default: () => ob
     });
-    var Wd = md(66),
-      Fd = md(1650),
-      Rd = md(7512),
-      Xd = md(1286),
-      Kd = md(405),
-      hd = md(1670),
-      vd = md(1436),
-      Qd = md(1641),
-      td = md(1572),
-      od = md(1471),
-      Nd = md(1739),
-      qd = md(3662),
-      Hd = md(3794),
-      yd = md(5220),
-      bd = md(1186),
-      Td = md(1627),
-      pd = md(107),
-      Yd = md(1238);
-    const gd = md.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var wd = md(1155),
-      Ed = md.n(wd),
-      Jd = md(1443),
-      Ud = md(1462),
-      xd = md(7509),
-      Bd = md(1341);
-    const Sd = (0, Wd.lazy)((() => Promise.all([md.e(128), md.e(91), md.e(157), md.e(156), md.e(135), md.e(716)]).then((() => md(7550))).then((dd => ({
-      default: dd.ShaderPackPublishForm
+    var eb = Mb(64),
+      Hb = Mb(1696),
+      pb = Mb(7760),
+      Vb = Mb(1301),
+      gb = Mb(382),
+      lb = Mb(1720),
+      Lb = Mb(1468),
+      Ib = Mb(1686),
+      Ob = Mb(1616),
+      Ub = Mb(1516),
+      tb = Mb(1799),
+      Cb = Mb(3797),
+      Eb = Mb(3948),
+      Fb = Mb(5405),
+      Bb = Mb(1179),
+      sb = Mb(1677),
+      mb = Mb(110),
+      hb = Mb(1259);
+    const zb = Mb.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
+    var Xb = Mb(1159),
+      xb = Mb.n(Xb),
+      jb = Mb(1475),
+      Kb = Mb(1504),
+      rb = Mb(7754),
+      Rb = Mb(1364);
+    const Db = (0, eb.lazy)((() => Promise.all([Mb.e(128), Mb.e(91), Mb.e(157), Mb.e(156), Mb.e(135), Mb.e(716)]).then((() => Mb(7784))).then((bb => ({
+      default: bb.ShaderPackPublishForm
     })))));
 
-    function sd(dd) {
+    function cb(bb) {
       let {
-        details: Od,
-        owner: md,
-        onChanged: Fd
-      } = dd;
+        details: wb,
+        owner: Mb,
+        onChanged: Hb
+      } = bb;
       const {
-        t: Xd
-      } = (0, Yd.G)(), Kd = (0, Qd.useNavigatePreserveSearch)(), {
-        userContext: hd
-      } = (0, bd.d)(), [od, Nd] = (0, Wd.useState)(!1), [qd, Hd] = (0, Wd.useState)(null), [yd, pd] = (0, Wd.useState)(!1), {
-        packId: gd,
-        name: wd,
-        description: sd,
-        live: ud
-      } = Od;
-      async function Vd(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fd;
-        Nd(!0), Hd(null);
+        t: Vb
+      } = (0, hb.C)(), gb = (0, Ib.useNavigatePreserveSearch)(), {
+        userContext: lb
+      } = (0, Bb.e)(), [Ub, tb] = (0, eb.useState)(!1), [Cb, Eb] = (0, eb.useState)(null), [Fb, mb] = (0, eb.useState)(!1), {
+        packId: zb,
+        name: Xb,
+        description: cb,
+        live: Yb
+      } = wb;
+      async function Zb(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hb;
+        tb(!0), Eb(null);
         try {
-          await dd(), Od()
-        } catch (md) {
-          console.error("Failed to change a shader pack", md), Hd((0, xd.w)(md, Xd, "shaderPackListing:ownerActionFailed"))
+          await bb(), wb()
+        } catch (Mb) {
+          console.error("Failed to change a shader pack", Mb), Eb((0, rb.t)(Mb, Vb, "shaderPackListing:ownerActionFailed"))
         } finally {
-          Nd(!1)
+          tb(!1)
         }
       }
-      const Ad = (0, xd.r)(hd);
-      return (0, Bd.jsxs)("section", {
+      const fb = (0, rb.m)(lb);
+      return (0, Rb.jsxs)("section", {
         className: "ShaderPackOwnerPanel",
-        children: [(0, Bd.jsx)("h2", {
+        children: [(0, Rb.jsx)("h2", {
           className: "ShaderPackSectionTitle",
-          children: Xd("general:manage")
-        }), (0, xd.X)(md, !(null === ud || void 0 === ud || !ud.renderId), Date.now(), Xd).map((dd => (0, Bd.jsxs)("div", {
-          className: Ed()("ShaderPackOwnerNotice", {
-            Warning: "warning" === dd.tone
+          children: Vb("general:manage")
+        }), (0, rb.Q)(Mb, !(null === Yb || void 0 === Yb || !Yb.renderId), Date.now(), Vb).map((bb => (0, Rb.jsxs)("div", {
+          className: xb()("ShaderPackOwnerNotice", {
+            Warning: "warning" === bb.tone
           }),
-          children: [(0, Bd.jsx)(Jd.c, {
-            name: "warning" === dd.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, Bd.jsxs)("div", {
-            children: [dd.text, dd.detail && (0, Bd.jsx)("pre", {
+          children: [(0, Rb.jsx)(jb.b, {
+            name: "warning" === bb.tone ? "triangle-exclamation" : "circle-info"
+          }), (0, Rb.jsxs)("div", {
+            children: [bb.text, bb.detail && (0, Rb.jsx)("pre", {
               className: "ShaderPackOwnerNoticeDetail",
-              children: dd.detail
+              children: bb.detail
             })]
           })]
-        }, dd.text))), Od.ban && (0, Bd.jsxs)("div", {
+        }, bb.text))), wb.ban && (0, Rb.jsxs)("div", {
           className: "ShaderPackOwnerNotice Warning",
-          children: [(0, Bd.jsx)(Jd.c, {
+          children: [(0, Rb.jsx)(jb.b, {
             name: "ban"
-          }), (0, Bd.jsxs)("div", {
-            children: ["Banned by ", Od.ban.byName, " on ", new Date(Od.ban.at).toLocaleString()]
+          }), (0, Rb.jsxs)("div", {
+            children: ["Banned by ", wb.ban.byName, " on ", new Date(wb.ban.at).toLocaleString()]
           })]
-        }), qd && (0, Bd.jsx)("div", {
+        }), Cb && (0, Rb.jsx)("div", {
           className: "ShaderPackOwnerError",
-          children: qd
-        }), (0, Bd.jsxs)("div", {
+          children: Cb
+        }), (0, Rb.jsxs)("div", {
           className: "ShaderPackOwnerActions",
-          children: [(0, Bd.jsxs)(td.S, {
-            disabled: od,
+          children: [(0, Rb.jsxs)(Ob.Y, {
+            disabled: Ub,
             onClick: () => {
               !async function() {
-                const dd = await Ud.NotificationProvider.showInputPopup({
+                const bb = await Kb.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:renameTitle",
-                  initialValue: wd,
-                  maxLength: Rd.w,
+                  initialValue: Xb,
+                  maxLength: pb.G,
                   submitText: "general:save",
-                  validate: dd => dd.trim().length < Rd.y ? Xd("shaderPackListing:nameTooShort", {
-                    min: String(Rd.y)
+                  validate: bb => bb.trim().length < pb.H ? Vb("shaderPackListing:nameTooShort", {
+                    min: String(pb.H)
                   }) : null
                 }).getResult();
-                "notificationTornDown" !== dd && "submit" === (null === dd || void 0 === dd ? void 0 : dd.type) && dd.value.trim() !== wd && await Vd((() => Td.e.updateShaderPack(hd, {
-                  packId: gd,
-                  name: dd.value.trim()
+                "notificationTornDown" !== bb && "submit" === (null === bb || void 0 === bb ? void 0 : bb.type) && bb.value.trim() !== Xb && await Zb((() => sb.e.updateShaderPack(lb, {
+                  packId: zb,
+                  name: bb.value.trim()
                 })))
               }()
             },
-            children: [(0, Bd.jsx)(Jd.c, {
+            children: [(0, Rb.jsx)(jb.b, {
               name: "pen"
-            }), " ", Xd("shaderPackListing:rename")]
-          }), (0, Bd.jsxs)(td.S, {
-            disabled: od,
+            }), " ", Vb("shaderPackListing:rename")]
+          }), (0, Rb.jsxs)(Ob.Y, {
+            disabled: Ub,
             onClick: () => {
               !async function() {
-                const dd = await Ud.NotificationProvider.showInputPopup({
+                const bb = await Kb.NotificationProvider.showInputPopup({
                   title: "shaderPackListing:editDescription",
-                  initialValue: sd,
-                  maxLength: Rd.p,
+                  initialValue: cb,
+                  maxLength: pb.y,
                   multiline: !0,
                   allowEmptySubmit: !0,
                   submitText: "general:save"
                 }).getResult();
-                "notificationTornDown" !== dd && "submit" === (null === dd || void 0 === dd ? void 0 : dd.type) && dd.value.trim() !== sd && await Vd((() => Td.e.updateShaderPack(hd, {
-                  packId: gd,
-                  description: dd.value.trim()
+                "notificationTornDown" !== bb && "submit" === (null === bb || void 0 === bb ? void 0 : bb.type) && bb.value.trim() !== cb && await Zb((() => sb.e.updateShaderPack(lb, {
+                  packId: zb,
+                  description: bb.value.trim()
                 })))
               }()
             },
-            children: [(0, Bd.jsx)(Jd.c, {
+            children: [(0, Rb.jsx)(jb.b, {
               name: "file-lines"
-            }), " ", Xd("shaderPackListing:editDescription")]
-          }), (0, Bd.jsxs)(td.S, {
-            disabled: od || md.isBanned && !md.listed,
+            }), " ", Vb("shaderPackListing:editDescription")]
+          }), (0, Rb.jsxs)(Ob.Y, {
+            disabled: Ub || Mb.isBanned && !Mb.listed,
             onClick: () => {
-              Vd((() => Td.e.updateShaderPack(hd, {
-                packId: gd,
-                listed: !md.listed
+              Zb((() => sb.e.updateShaderPack(lb, {
+                packId: zb,
+                listed: !Mb.listed
               })))
             },
-            children: [(0, Bd.jsx)(Jd.c, {
-              name: md.listed ? "eye-slash" : "eye"
-            }), " ", Xd(md.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !md.isBanned && (0, Bd.jsxs)(td.g, {
-            disabled: od,
+            children: [(0, Rb.jsx)(jb.b, {
+              name: Mb.listed ? "eye-slash" : "eye"
+            }), " ", Vb(Mb.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
+          }), !Mb.isBanned && (0, Rb.jsxs)(Ob.f, {
+            disabled: Ub,
             onClick: () => {
-              pd(!yd)
+              mb(!Fb)
             },
-            children: [(0, Bd.jsx)(Jd.c, {
+            children: [(0, Rb.jsx)(jb.b, {
               name: "upload"
-            }), " ", Xd("shaderPackListing:uploadVersion")]
-          }), (0, Bd.jsxs)(td.K, {
-            disabled: od || md.isBanned,
+            }), " ", Vb("shaderPackListing:uploadVersion")]
+          }), (0, Rb.jsxs)(Ob.S, {
+            disabled: Ub || Mb.isBanned,
             onClick: () => {
               !async function() {
-                !0 === await Ud.NotificationProvider.showPromptPopup({
+                !0 === await Kb.NotificationProvider.showPromptPopup({
                   title: "shaderPackListing:deleteTitle",
                   subtitle: "shaderPackListing:deleteSubtitle",
                   confirmText: "general:delete",
                   cancelText: "general:cancel",
                   destructive: !0
-                }).getResult() && await Vd((() => Td.e.deleteShaderPack(hd, gd)), (() => {
-                  Kd(`${xd.U}?section=mine`, {
+                }).getResult() && await Zb((() => sb.e.deleteShaderPack(lb, zb)), (() => {
+                  gb(`${rb.N}?section=mine`, {
                     replace: !0
                   })
                 }))
               }()
             },
-            children: [(0, Bd.jsx)(Jd.c, {
+            children: [(0, Rb.jsx)(jb.b, {
               name: "trash-can"
-            }), " ", Xd("general:delete")]
-          }), Ad && (0, Bd.jsxs)(td.K, {
-            disabled: od,
+            }), " ", Vb("general:delete")]
+          }), fb && (0, Rb.jsxs)(Ob.S, {
+            disabled: Ub,
             onClick: () => {
-              Vd((() => Td.e.setShaderPackBanned(hd, gd, !md.isBanned)))
+              Zb((() => sb.e.setShaderPackBanned(lb, zb, !Mb.isBanned)))
             },
-            children: [(0, Bd.jsx)(Jd.c, {
-              name: md.isBanned ? "circle-check" : "ban"
-            }), " ", md.isBanned ? "Unban" : "Ban"]
+            children: [(0, Rb.jsx)(jb.b, {
+              name: Mb.isBanned ? "circle-check" : "ban"
+            }), " ", Mb.isBanned ? "Unban" : "Ban"]
           })]
-        }), yd && (0, Bd.jsx)(Wd.Suspense, {
-          fallback: (0, Bd.jsx)(vd.c, {}),
-          children: (0, Bd.jsx)(Sd, {
+        }), Fb && (0, Rb.jsx)(eb.Suspense, {
+          fallback: (0, Rb.jsx)(Lb.c, {}),
+          children: (0, Rb.jsx)(Db, {
             existing: {
-              packId: gd,
-              name: wd,
-              description: sd
+              packId: zb,
+              name: Xb,
+              description: cb
             },
             onPublished: () => {
-              pd(!1), Fd()
+              mb(!1), Hb()
             }
           })
         })]
       })
     }
-    var ud = md(86),
-      Vd = md(2057),
-      Ad = md(1333),
-      rd = md(5936),
-      Gd = md(1253),
-      nd = md(7523),
-      Ld = md(7515),
-      Pd = md(7539);
+    var Yb = Mb(81),
+      Zb = Mb(2107),
+      fb = Mb(1350),
+      Ab = Mb(6090),
+      Wb = Mb(1271),
+      Jb = Mb(7768),
+      Sb = Mb(7762),
+      Nb = Mb(7780);
 
-    function zd(dd) {
+    function vb(bb) {
       let {
-        item: Od
-      } = dd;
+        item: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Yd.G)(), [Fd] = (0, nd.j)(), [Xd, Kd] = (0, Wd.useState)(Fd), [hd, vd] = (0, Wd.useState)(!1), [Qd, td] = (0, Wd.useState)(!1), {
-        s3Url: od
-      } = Gd.clientSideServerUrls, {
-        width: Nd,
-        height: qd
-      } = Rd.q.large, Hd = (0, Rd.r)(od, Od, Xd, "large"), {
-        renderVersion: yd
-      } = Od;
-      return (0, Bd.jsxs)("div", {
+        t: Mb
+      } = (0, hb.C)(), [Hb] = (0, Jb.j)(), [Vb, gb] = (0, eb.useState)(Hb), [lb, Lb] = (0, eb.useState)(!1), [Ib, Ob] = (0, eb.useState)(!1), {
+        s3Url: Ub
+      } = Wb.clientSideServerUrls, {
+        width: tb,
+        height: Cb
+      } = pb.z.large, Eb = (0, pb.B)(Ub, wb, Vb, "large"), {
+        renderVersion: Fb
+      } = wb;
+      return (0, Rb.jsxs)("div", {
         className: "ShaderPackPreviews",
-        children: [(0, Bd.jsx)(Pd.d, {
-          selected: Xd,
-          onSelect: dd => {
-            Kd(dd), vd(!1)
+        children: [(0, Rb.jsx)(Nb.c, {
+          selected: Vb,
+          onSelect: bb => {
+            gb(bb), Lb(!1)
           },
-          imageUrl: dd => (0, Rd.r)(od, Od, dd, "thumb")
-        }), (0, Bd.jsxs)("div", {
+          imageUrl: bb => (0, pb.B)(Ub, wb, bb, "thumb")
+        }), (0, Rb.jsxs)("div", {
           className: "ShaderPackPreviewStage",
-          children: [!hd && (0, Bd.jsxs)("button", {
+          children: [!lb && (0, Rb.jsxs)("button", {
             type: "button",
             className: "ShaderPackPreviewMain",
-            title: null === yd ? void 0 : md("shaderPackListing:fullSize"),
-            disabled: null === yd,
+            title: null === Fb ? void 0 : Mb("shaderPackListing:fullSize"),
+            disabled: null === Fb,
             onClick: () => {
-              td(!0)
+              Ob(!0)
             },
-            children: [(0, Bd.jsx)("img", {
-              src: Hd,
-              width: Nd,
-              height: qd,
-              alt: md(xd.hb[Xd]),
+            children: [(0, Rb.jsx)("img", {
+              src: Eb,
+              width: tb,
+              height: Cb,
+              alt: Mb(rb.cb[Vb]),
               draggable: !1
-            }), (0, Bd.jsx)(Ld.d, {
-              item: Od
+            }), (0, Rb.jsx)(Sb.b, {
+              item: wb
             })]
-          }), !hd && null !== yd && (0, Bd.jsxs)(ed, {
+          }), !lb && null !== Fb && (0, Rb.jsxs)(ab, {
             side: "Right",
             onClick: () => {
-              vd(!0)
+              Lb(!0)
             },
-            children: [(0, Bd.jsx)(Jd.c, {
+            children: [(0, Rb.jsx)(jb.b, {
               name: "arrows-left-right"
-            }), " ", md("shaderPackListing:compare")]
-          }), hd && null !== yd && (0, Bd.jsx)(Dd, {
-            item: Od,
-            packUrl: Hd,
-            baselineUrl: (0, Rd.n)(od, yd, Xd, "large")
-          }), hd && (0, Bd.jsx)(ed, {
+            }), " ", Mb("shaderPackListing:compare")]
+          }), lb && null !== Fb && (0, Rb.jsx)(qb, {
+            item: wb,
+            packUrl: Eb,
+            baselineUrl: (0, pb.u)(Ub, Fb, Vb, "large")
+          }), lb && (0, Rb.jsx)(ab, {
             side: "Left",
             onClick: () => {
-              vd(!1)
+              Lb(!1)
             },
-            children: md("shaderPackListing:withPack")
-          }), hd && (0, Bd.jsx)(ed, {
+            children: Mb("shaderPackListing:withPack")
+          }), lb && (0, Rb.jsx)(ab, {
             side: "Right",
             onClick: () => {
-              vd(!1)
+              Lb(!1)
             },
-            children: md("shaderPackListing:withoutPack")
+            children: Mb("shaderPackListing:withoutPack")
           })]
-        }), Qd && (0, Bd.jsx)(cd, {
-          fullUrl: (0, Rd.r)(od, Od, Xd, "full"),
-          largeUrl: Hd,
-          alt: md(xd.hb[Xd]),
+        }), Ib && (0, Rb.jsx)(Qb, {
+          fullUrl: (0, pb.B)(Ub, wb, Vb, "full"),
+          largeUrl: Eb,
+          alt: Mb(rb.cb[Vb]),
           onClose: () => {
-            td(!1)
+            Ob(!1)
           }
         })]
       })
     }
 
-    function cd(dd) {
+    function Qb(bb) {
       let {
-        fullUrl: Od,
-        largeUrl: md,
-        alt: Fd,
-        onClose: Rd
-      } = dd;
-      const Xd = (0, Wd.useRef)(null);
-      return (0, Ad.m)("popup", Xd, Rd), (0, Wd.useEffect)((() => {
-        function dd(dd) {
-          "Escape" === dd.key && (dd.stopPropagation(), Rd())
+        fullUrl: wb,
+        largeUrl: Mb,
+        alt: Hb,
+        onClose: pb
+      } = bb;
+      const Vb = (0, eb.useRef)(null);
+      return (0, fb.r)("popup", Vb, pb), (0, eb.useEffect)((() => {
+        function bb(bb) {
+          "Escape" === bb.key && (bb.stopPropagation(), pb())
         }
-        return window.addEventListener("keydown", dd, !0), () => {
-          window.removeEventListener("keydown", dd, !0)
+        return window.addEventListener("keydown", bb, !0), () => {
+          window.removeEventListener("keydown", bb, !0)
         }
-      }), [Rd]), (0, ud.createPortal)((0, Bd.jsxs)("div", {
-        ref: Xd,
+      }), [pb]), (0, Yb.createPortal)((0, Rb.jsxs)("div", {
+        ref: Vb,
         className: "ShaderPackFullSize",
-        onClick: Rd,
-        children: [(0, Bd.jsx)("img", {
+        onClick: pb,
+        children: [(0, Rb.jsx)("img", {
           className: "ShaderPackFullSizeImage",
-          src: Od,
-          alt: Fd,
+          src: wb,
+          alt: Hb,
           draggable: !1,
           style: {
-            backgroundImage: `url(${md})`
+            backgroundImage: `url(${Mb})`
           }
-        }), (0, Bd.jsx)(td.j, {
+        }), (0, Rb.jsx)(Ob.l, {
           className: "ShaderPackFullSizeClose",
-          onClick: Rd
+          onClick: pb
         })]
       }), document.body)
     }
-    const jd = 5;
+    const Gb = 5;
 
-    function Dd(dd) {
+    function qb(bb) {
       let {
-        item: Od,
-        packUrl: md,
-        baselineUrl: Fd
-      } = dd;
+        item: wb,
+        packUrl: Mb,
+        baselineUrl: Hb
+      } = bb;
       const {
-        t: Xd
-      } = (0, Yd.G)(), [Kd, hd] = (0, Wd.useState)(50), vd = (0, Wd.useRef)(!1), Qd = (0, Wd.useRef)(null), {
-        width: td,
-        height: od
-      } = Rd.q.large;
+        t: Vb
+      } = (0, hb.C)(), [gb, lb] = (0, eb.useState)(50), Lb = (0, eb.useRef)(!1), Ib = (0, eb.useRef)(null), {
+        width: Ob,
+        height: Ub
+      } = pb.z.large;
 
-      function Nd(dd) {
-        hd((Od => (0, Vd.h)(Od + dd, 0, 100)))
+      function tb(bb) {
+        lb((wb => (0, Zb.i)(wb + bb, 0, 100)))
       }
 
-      function qd(dd) {
-        const Od = dd.currentTarget.getBoundingClientRect();
-        hd((0, Vd.h)((dd.clientX - Od.left) / Od.width * 100, 0, 100))
+      function Cb(bb) {
+        const wb = bb.currentTarget.getBoundingClientRect();
+        lb((0, Zb.i)((bb.clientX - wb.left) / wb.width * 100, 0, 100))
       }
-      return (0, rd.f)(Qd, {
-        adjust: dd => {
-          Nd(dd * jd)
+      return (0, Ab.f)(Ib, {
+        adjust: bb => {
+          tb(bb * Gb)
         },
-        setFraction: dd => {
-          hd(100 * dd)
+        setFraction: bb => {
+          lb(100 * bb)
         },
         endDrag: () => {}
-      }), (0, Bd.jsxs)("div", {
-        ref: Qd,
+      }), (0, Rb.jsxs)("div", {
+        ref: Ib,
         className: "ShaderPackCompare",
         "data-pad-slider": "",
         "data-pad-focusable": "",
         role: "slider",
         tabIndex: 0,
-        "aria-label": Xd("shaderPackListing:compare"),
+        "aria-label": Vb("shaderPackListing:compare"),
         "aria-valuemin": 0,
         "aria-valuemax": 100,
-        "aria-valuenow": Math.round(Kd),
+        "aria-valuenow": Math.round(gb),
         style: {
-          "--split": `${Kd}%`
+          "--split": `${gb}%`
         },
-        onKeyDown: function(dd) {
-          const Od = "ArrowLeft" === dd.key ? -jd : "ArrowRight" === dd.key ? jd : 0;
-          0 !== Od && (dd.preventDefault(), Nd(Od))
+        onKeyDown: function(bb) {
+          const wb = "ArrowLeft" === bb.key ? -Gb : "ArrowRight" === bb.key ? Gb : 0;
+          0 !== wb && (bb.preventDefault(), tb(wb))
         },
-        onPointerDown: dd => {
-          vd.current = !0, dd.currentTarget.setPointerCapture(dd.pointerId), qd(dd)
+        onPointerDown: bb => {
+          Lb.current = !0, bb.currentTarget.setPointerCapture(bb.pointerId), Cb(bb)
         },
-        onPointerMove: dd => {
-          vd.current && qd(dd)
+        onPointerMove: bb => {
+          Lb.current && Cb(bb)
         },
         onPointerUp: () => {
-          vd.current = !1
+          Lb.current = !1
         },
         onPointerCancel: () => {
-          vd.current = !1
+          Lb.current = !1
         },
-        children: [(0, Bd.jsx)("img", {
+        children: [(0, Rb.jsx)("img", {
           className: "ShaderPackCompareBaseline",
-          src: Fd,
-          width: td,
-          height: od,
+          src: Hb,
+          width: Ob,
+          height: Ub,
           alt: "",
           draggable: !1,
           style: {
-            backgroundImage: `url(${md})`
+            backgroundImage: `url(${Mb})`
           }
-        }), (0, Bd.jsx)("div", {
+        }), (0, Rb.jsx)("div", {
           className: "ShaderPackCompareLine"
-        }), (0, Bd.jsx)("img", {
+        }), (0, Rb.jsx)("img", {
           className: "ShaderPackComparePack",
-          src: md,
-          width: td,
-          height: od,
+          src: Mb,
+          width: Ob,
+          height: Ub,
           alt: "",
           draggable: !1
-        }), (0, Bd.jsx)(Ld.d, {
-          item: Od,
+        }), (0, Rb.jsx)(Sb.b, {
+          item: wb,
           className: "ShaderPackCompareNotice"
         })]
       })
     }
 
-    function ed(dd) {
+    function ab(bb) {
       let {
-        side: Od,
-        onClick: md,
-        children: Wd
-      } = dd;
-      return (0, Bd.jsx)("button", {
+        side: wb,
+        onClick: Mb,
+        children: eb
+      } = bb;
+      return (0, Rb.jsx)("button", {
         type: "button",
-        className: `ShaderPackStageButton ${Od}`,
-        onClick: md,
-        children: (0, Bd.jsx)("span", {
+        className: `ShaderPackStageButton ${wb}`,
+        onClick: Mb,
+        children: (0, Rb.jsx)("span", {
           className: "ShaderPackStageButtonFace SmallTextBold",
-          children: Wd
+          children: eb
         })
       })
     }
-    var Id = md(5901),
-      ld = md(373),
-      Cd = md(7602);
-    const Zd = {
+    var ib = Mb(6050),
+      ub = Mb(361),
+      db = Mb(7848);
+    const Pb = {
       compiler: "shaderPack:compilerUnavailable",
       download: "shaderPackListing:useDownloadFailed",
       apiVersion: "shaderPackListing:useOtherApiVersion",
@@ -698,349 +698,349 @@ export const modules = {
       save: "shaderPack:saveFailed"
     };
 
-    function kd(dd) {
+    function nb(bb) {
       const {
-        userContext: Od
-      } = (0, bd.d)(), [Fd, Rd] = (0, Wd.useState)(null), [Xd, Kd] = (0, Wd.useState)(!1), [hd, vd] = (0, Wd.useState)(!1), [Qd, td] = (0, Wd.useState)(null), od = null === dd || void 0 === dd ? void 0 : dd.packId, Nd = null === dd || void 0 === dd ? void 0 : dd.sourceHash;
-      return (0, Wd.useEffect)((() => {
-        if (Kd(!1), td(null), void 0 === od) return;
-        let dd = !1;
-        return Promise.all([(0, pd.hasUsableWebGpuAdapter)(), (0, Cd.g)()]).then((Od => {
-          let [md, Wd] = Od;
-          var Fd;
-          dd || (Rd(md), Kd((null === Wd || void 0 === Wd || null === (Fd = Wd.listing) || void 0 === Fd ? void 0 : Fd.packId) === od && Wd.listing.sourceHash === Nd))
-        })).catch((Od => {
-          console.error("Failed to check whether this shader pack can be used", Od), dd || Rd(!1)
+        userContext: wb
+      } = (0, Bb.e)(), [Hb, pb] = (0, eb.useState)(null), [Vb, gb] = (0, eb.useState)(!1), [lb, Lb] = (0, eb.useState)(!1), [Ib, Ob] = (0, eb.useState)(null), Ub = null === bb || void 0 === bb ? void 0 : bb.packId, tb = null === bb || void 0 === bb ? void 0 : bb.sourceHash;
+      return (0, eb.useEffect)((() => {
+        if (gb(!1), Ob(null), void 0 === Ub) return;
+        let bb = !1;
+        return Promise.all([(0, mb.hasUsableWebGpuAdapter)(), (0, db.g)()]).then((wb => {
+          let [Mb, eb] = wb;
+          var Hb;
+          bb || (pb(Mb), gb((null === eb || void 0 === eb || null === (Hb = eb.listing) || void 0 === Hb ? void 0 : Hb.packId) === Ub && eb.listing.sourceHash === tb))
+        })).catch((wb => {
+          console.error("Failed to check whether this shader pack can be used", wb), bb || pb(!1)
         })), () => {
-          dd = !0
+          bb = !0
         }
-      }), [od, Nd]), {
-        webGpuUsable: Fd,
-        inUse: Xd,
-        busy: hd,
-        errorKey: Qd,
+      }), [Ub, tb]), {
+        webGpuUsable: Hb,
+        inUse: Vb,
+        busy: lb,
+        errorKey: Ib,
         use: () => {
-          null !== dd && async function(dd) {
-            vd(!0), td(null);
+          null !== bb && async function(bb) {
+            Lb(!0), Ob(null);
             try {
               const {
-                installListedShaderPack: Wd
-              } = await Promise.all([md.e(91), md.e(157), md.e(136)]).then((() => md(42441))), Fd = await Wd({
-                packId: dd.packId,
-                sourceHash: dd.sourceHash,
-                name: dd.name,
-                ownerName: dd.ownerName,
-                description: dd.description
+                installListedShaderPack: eb
+              } = await Promise.all([Mb.e(91), Mb.e(157), Mb.e(136)]).then((() => Mb(42181))), Hb = await eb({
+                packId: bb.packId,
+                sourceHash: bb.sourceHash,
+                name: bb.name,
+                ownerName: bb.ownerName,
+                description: bb.description
               });
-              if ("failed" === Fd.kind) return void td(Zd[Fd.reason]);
-              Kd(!0), Td.e.recordShaderPackDownload(Od, dd.packId).catch((dd => {
-                console.error("Failed to count a shader pack's download", dd)
-              })), (0, Id.l)()
-            } catch (Wd) {
-              console.error("Failed to use the shader pack", Wd), td("shaderPack:unexpectedError")
+              if ("failed" === Hb.kind) return void Ob(Pb[Hb.reason]);
+              gb(!0), sb.e.recordShaderPackDownload(wb, bb.packId).catch((bb => {
+                console.error("Failed to count a shader pack's download", bb)
+              })), (0, ib.l)()
+            } catch (eb) {
+              console.error("Failed to use the shader pack", eb), Ob("shaderPack:unexpectedError")
             } finally {
-              vd(!1)
+              Lb(!1)
             }
-          }(dd)
+          }(bb)
         }
       }
     }
 
-    function fd(dd) {
+    function yb(bb) {
       let {
-        packUse: Od
-      } = dd;
+        packUse: wb
+      } = bb;
       const {
-        t: md
-      } = (0, Yd.G)(), {
-        webGpuUsable: Wd,
-        inUse: Fd,
-        busy: Rd,
-        errorKey: Xd,
-        use: Kd
-      } = Od;
-      return (0, Bd.jsxs)("div", {
+        t: Mb
+      } = (0, hb.C)(), {
+        webGpuUsable: eb,
+        inUse: Hb,
+        busy: pb,
+        errorKey: Vb,
+        use: gb
+      } = wb;
+      return (0, Rb.jsxs)("div", {
         className: "ShaderPackUse",
-        children: [(0, Bd.jsxs)(td.m, {
-          disabled: !0 !== Wd || Fd,
-          loading: Rd,
-          onClick: Kd,
-          children: [(0, Bd.jsx)(Jd.c, {
-            name: Fd ? "check" : "download"
-          }), " ", md(Fd ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === Wd && (0, Bd.jsx)("div", {
+        children: [(0, Rb.jsxs)(Ob.p, {
+          disabled: !0 !== eb || Hb,
+          loading: pb,
+          onClick: gb,
+          children: [(0, Rb.jsx)(jb.b, {
+            name: Hb ? "check" : "download"
+          }), " ", Mb(Hb ? "shaderPackListing:inUse" : "shaderPackListing:use")]
+        }), !1 === eb && (0, Rb.jsx)("div", {
           className: "ShaderPackUseNote",
-          children: md((0, ld.f)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), Xd && (0, Bd.jsx)("div", {
+          children: Mb((0, ub.j)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), Vb && (0, Rb.jsx)("div", {
           className: "ShaderPackUseNote Error",
-          children: md(Xd)
+          children: Mb(Vb)
         })]
       })
     }
 
-    function Md() {
-      var dd;
+    function ob() {
+      var bb;
       const {
-        t: Od
-      } = (0, Yd.G)(), md = (0, Qd.useNavigatePreserveSearch)(), {
-        packId: Rd
-      } = (0, Fd.u)(), {
-        userContext: Xd,
-        isUserContextUpdating: Kd
-      } = (0, bd.d)(), [od, qd] = (0, Wd.useState)(null), [Hd, pd] = (0, Wd.useState)(null), [gd, wd] = (0, Wd.useState)(0), Ed = (0, Wd.useRef)(0);
+        t: wb
+      } = (0, hb.C)(), Mb = (0, Ib.useNavigatePreserveSearch)(), {
+        packId: pb
+      } = (0, Hb.E)(), {
+        userContext: Vb,
+        isUserContextUpdating: gb
+      } = (0, Bb.e)(), [Ub, Cb] = (0, eb.useState)(null), [Eb, mb] = (0, eb.useState)(null), [zb, Xb] = (0, eb.useState)(0), xb = (0, eb.useRef)(0);
 
-      function Jd() {
-        var dd;
-        null !== (dd = (0, Qd.getPreviousLocation)()) && void 0 !== dd && dd.startsWith(xd.U) ? md(-1) : md(xd.U)
-      }(0, yd.d)(Jd), (0, nd.e)(), (0, Wd.useEffect)((() => {
-        if (Kd || void 0 === Rd) return;
-        const dd = ++Ed.current;
-        pd(null), Td.e.getShaderPack(Xd, Rd).then((Od => {
-          Ed.current === dd && qd(Od)
-        })).catch((Od => {
-          Ed.current === dd && (console.error("Failed to get the shader pack", Od), qd(null), pd({
-            error: Od
+      function jb() {
+        var bb;
+        null !== (bb = (0, Ib.getPreviousLocation)()) && void 0 !== bb && bb.startsWith(rb.N) ? Mb(-1) : Mb(rb.N)
+      }(0, Fb.e)(jb), (0, Jb.d)(), (0, eb.useEffect)((() => {
+        if (gb || void 0 === pb) return;
+        const bb = ++xb.current;
+        mb(null), sb.e.getShaderPack(Vb, pb).then((wb => {
+          xb.current === bb && Cb(wb)
+        })).catch((wb => {
+          xb.current === bb && (console.error("Failed to get the shader pack", wb), Cb(null), mb({
+            error: wb
           }))
         }))
-      }), [Rd, Xd, Kd, gd]);
-      const Ud = () => {
-          wd((dd => dd + 1))
+      }), [pb, Vb, gb, zb]);
+      const Kb = () => {
+          Xb((bb => bb + 1))
         },
-        Sd = (null === od || void 0 === od ? void 0 : od.packId) === Rd ? od : null,
-        ud = (0, nd.k)(),
-        Vd = kd(null !== (dd = null === Sd || void 0 === Sd ? void 0 : Sd.live) && void 0 !== dd ? dd : null),
-        Ad = null !== Sd && void 0 !== Sd && Sd.live ? (0, Bd.jsx)(dO, {
-          item: Sd.live,
-          favourites: ud,
-          packUse: Vd
+        Db = (null === Ub || void 0 === Ub ? void 0 : Ub.packId) === pb ? Ub : null,
+        Yb = (0, Jb.n)(),
+        Zb = nb(null !== (bb = null === Db || void 0 === Db ? void 0 : Db.live) && void 0 !== bb ? bb : null),
+        fb = null !== Db && void 0 !== Db && Db.live ? (0, Rb.jsx)(Tb, {
+          item: Db.live,
+          favourites: Yb,
+          packUse: Zb
         }) : null;
-      return (0, Bd.jsxs)("article", {
+      return (0, Rb.jsxs)("article", {
         className: "ShaderPackInformation AnimFadeIn",
-        children: [null !== Sd && (0, Bd.jsx)(Nd.c, {
-          meta: (0, hd.eb)(Sd.name)
-        }), (0, Bd.jsx)(td.d, {
-          onClick: Jd,
-          children: Od("shaderPackListing:backToPacks")
-        }), null === Sd && null === Hd && (0, Bd.jsx)("div", {
+        children: [null !== Db && (0, Rb.jsx)(tb.d, {
+          meta: (0, lb.T)(Db.name)
+        }), (0, Rb.jsx)(Ob.b, {
+          onClick: jb,
+          children: wb("shaderPackListing:backToPacks")
+        }), null === Db && null === Eb && (0, Rb.jsx)("div", {
           className: "ShaderPackInformationMessage",
-          children: (0, Bd.jsx)(vd.c, {})
-        }), null !== Hd && (0, Bd.jsxs)("div", {
+          children: (0, Rb.jsx)(Lb.c, {})
+        }), null !== Eb && (0, Rb.jsxs)("div", {
           className: "ShaderPackInformationMessage",
-          children: [(0, xd.w)(Hd.error, Od, "shaderPackListing:loadPackFailed"), (0, Bd.jsx)(td.g, {
-            onClick: Ud,
-            children: Od("general:tryAgain")
+          children: [(0, rb.t)(Eb.error, wb, "shaderPackListing:loadPackFailed"), (0, Rb.jsx)(Ob.f, {
+            onClick: Kb,
+            children: wb("general:tryAgain")
           })]
-        }), null !== Sd && null === Hd && (0, Bd.jsxs)("div", {
+        }), null !== Db && null === Eb && (0, Rb.jsxs)("div", {
           className: "ShaderPackInformationBody",
-          children: [(0, Bd.jsxs)("header", {
+          children: [(0, Rb.jsxs)("header", {
             className: "ShaderPackInformationHeader",
-            children: [(0, Bd.jsx)("h1", {
+            children: [(0, Rb.jsx)("h1", {
               className: "FullyFancyText",
-              children: Sd.name
-            }), Ad]
-          }), Sd.live && (0, Bd.jsx)(zd, {
-            item: Sd.live
-          }), Sd.live && (0, Bd.jsx)(OO, {
-            item: Sd.live,
-            ownerPreview: Sd.ownerPreview,
-            bloxdhubSlug: Sd.bloxdhubSlug,
-            actions: Ad
-          }), Sd.owner && (0, Bd.jsx)(sd, {
-            details: Sd,
-            owner: Sd.owner,
-            onChanged: Ud
+              children: Db.name
+            }), fb]
+          }), Db.live && (0, Rb.jsx)(vb, {
+            item: Db.live
+          }), Db.live && (0, Rb.jsx)(kb, {
+            item: Db.live,
+            ownerPreview: Db.ownerPreview,
+            bloxdhubSlug: Db.bloxdhubSlug,
+            actions: fb
+          }), Db.owner && (0, Rb.jsx)(cb, {
+            details: Db,
+            owner: Db.owner,
+            onChanged: Kb
           })]
         })]
       })
     }
 
-    function dO(dd) {
+    function Tb(bb) {
       let {
-        item: Od,
-        favourites: md,
-        packUse: Wd
-      } = dd;
-      const Fd = md.isFavourite(Od.packId);
-      return (0, Bd.jsxs)("div", {
+        item: wb,
+        favourites: Mb,
+        packUse: eb
+      } = bb;
+      const Hb = Mb.isFavourite(wb.packId);
+      return (0, Rb.jsxs)("div", {
         className: "ShaderPackInformationActions",
-        children: [pd.featureFlags.settings.canUseShaderPacks && (0, Bd.jsx)(fd, {
-          packUse: Wd
-        }), (0, Bd.jsx)(td.z, {
+        children: [mb.featureFlags.settings.canUseShaderPacks && (0, Rb.jsx)(yb, {
+          packUse: eb
+        }), (0, Rb.jsx)(Ob.C, {
           className: "ShaderPackInformationLike",
           onClick: () => {
-            md.toggle(Od.packId)
+            Mb.toggle(wb.packId)
           },
-          isLiked: !0 === Fd,
-          isLoading: null === Fd
+          isLiked: !0 === Hb,
+          isLoading: null === Hb
         })]
       })
     }
 
-    function OO(dd) {
+    function kb(bb) {
       let {
-        item: Od,
-        ownerPreview: md,
-        bloxdhubSlug: Wd,
-        actions: Fd
-      } = dd;
+        item: wb,
+        ownerPreview: Mb,
+        bloxdhubSlug: eb,
+        actions: Hb
+      } = bb;
       const {
-        t: Kd
-      } = (0, Yd.G)(), hd = (0, Hd.v)(), vd = null === Wd ? null : (0, Rd.f)(Wd);
-      return (0, Bd.jsxs)("div", {
+        t: gb
+      } = (0, hb.C)(), lb = (0, Eb.m)(), Lb = null === eb ? null : (0, pb.i)(eb);
+      return (0, Rb.jsxs)("div", {
         className: "ShaderPackFacts",
-        children: [Od.description && (0, Bd.jsx)("p", {
+        children: [wb.description && (0, Rb.jsx)("p", {
           className: "ShaderPackDescription",
-          children: Od.description
-        }), (0, Bd.jsxs)("div", {
+          children: wb.description
+        }), (0, Rb.jsxs)("div", {
           className: "ShaderPackFeatureList",
-          children: [(null !== md || null !== vd) && (0, Bd.jsx)("div", {
+          children: [(null !== Mb || null !== Lb) && (0, Rb.jsx)("div", {
             className: "ShaderPackAuthor",
-            children: null !== md ? (0, Bd.jsxs)(Bd.Fragment, {
-              children: [(0, Bd.jsx)(qd.c, {
-                playerSocialPreview: md,
+            children: null !== Mb ? (0, Rb.jsxs)(Rb.Fragment, {
+              children: [(0, Rb.jsx)(Cb.d, {
+                playerSocialPreview: Mb,
                 showLocation: !1,
                 linkToProfile: !0
-              }), null !== vd && (0, Bd.jsx)("a", {
+              }), null !== Lb && (0, Rb.jsx)("a", {
                 className: "ShaderPackBloxdhubLogo",
-                href: vd,
+                href: Lb,
                 target: "_blank",
                 rel: "noopener noreferrer",
-                children: (0, Bd.jsx)("img", {
-                  src: gd,
-                  alt: Rd.d
+                children: (0, Rb.jsx)("img", {
+                  src: zb,
+                  alt: pb.e
                 })
               })]
-            }) : (0, Bd.jsxs)("a", {
+            }) : (0, Rb.jsxs)("a", {
               className: "ShaderPackBloxdhubName",
-              href: vd,
+              href: Lb,
               target: "_blank",
               rel: "noopener noreferrer",
-              children: [Rd.d, (0, Bd.jsx)("img", {
-                src: gd,
+              children: [pb.e, (0, Rb.jsx)("img", {
+                src: zb,
                 alt: ""
               })]
             })
-          }), xd.z.filter((dd => Od.features.includes(dd))).map((dd => (0, Bd.jsx)(Qd.LinkPreserveSearch, {
+          }), rb.w.filter((bb => wb.features.includes(bb))).map((bb => (0, Rb.jsx)(Ib.LinkPreserveSearch, {
             className: "ShaderPackFeature",
-            to: (0, xd.N)(dd),
-            children: Kd(xd.O[dd])
-          }, dd)))]
-        }), Fd, (0, Bd.jsxs)("dl", {
+            to: (0, rb.G)(bb),
+            children: gb(rb.H[bb])
+          }, bb)))]
+        }), Hb, (0, Rb.jsxs)("dl", {
           className: "ShaderPackFactList",
-          children: [(0, Bd.jsxs)("div", {
-            children: [(0, Bd.jsx)("dt", {
-              children: Kd("shaderPackListing:downloads")
-            }), (0, Bd.jsx)("dd", {
-              children: (0, Xd.M)(Od.downloads)
+          children: [(0, Rb.jsxs)("div", {
+            children: [(0, Rb.jsx)("dt", {
+              children: gb("shaderPackListing:downloads")
+            }), (0, Rb.jsx)("dd", {
+              children: (0, Vb.L)(wb.downloads)
             })]
-          }), (0, Bd.jsx)(mO, {
-            label: Kd("shaderPackListing:updated"),
-            time: Od.listedUpdatedAt,
-            now: hd
-          }), (0, Bd.jsx)(mO, {
-            label: Kd("shaderPackListing:created"),
-            time: Od.publishedAt,
-            now: hd
-          }), null !== Od.gpuCost && (0, Bd.jsxs)("div", {
-            children: [(0, Bd.jsx)("dt", {
-              children: Kd("shaderPackListing:lag")
-            }), (0, Bd.jsx)("dd", {
-              children: Kd("shaderPackListing:lagPercent", {
-                percent: String((0, xd.R)(Od.gpuCost))
+          }), (0, Rb.jsx)(bw, {
+            label: gb("shaderPackListing:updated"),
+            time: wb.listedUpdatedAt,
+            now: lb
+          }), (0, Rb.jsx)(bw, {
+            label: gb("shaderPackListing:created"),
+            time: wb.publishedAt,
+            now: lb
+          }), null !== wb.gpuCost && (0, Rb.jsxs)("div", {
+            children: [(0, Rb.jsx)("dt", {
+              children: gb("shaderPackListing:lag")
+            }), (0, Rb.jsx)("dd", {
+              children: gb("shaderPackListing:lagPercent", {
+                percent: String((0, rb.L)(wb.gpuCost))
               })
             })]
-          }), (0, Bd.jsxs)("div", {
-            children: [(0, Bd.jsx)("dt", {
-              children: Kd("shaderPackListing:size")
-            }), (0, Bd.jsx)("dd", {
-              children: Kd("shaderPackListing:sizeValue", {
-                kilobytes: String((0, xd.Q)(Od.sourceBytes))
+          }), (0, Rb.jsxs)("div", {
+            children: [(0, Rb.jsx)("dt", {
+              children: gb("shaderPackListing:size")
+            }), (0, Rb.jsx)("dd", {
+              children: gb("shaderPackListing:sizeValue", {
+                kilobytes: String((0, rb.I)(wb.sourceBytes))
               })
             })]
-          }), (0, Bd.jsxs)("div", {
-            children: [(0, Bd.jsx)("dt", {
-              children: Kd("shaderPackListing:files")
-            }), (0, Bd.jsx)("dd", {
-              children: Od.fileCount
+          }), (0, Rb.jsxs)("div", {
+            children: [(0, Rb.jsx)("dt", {
+              children: gb("shaderPackListing:files")
+            }), (0, Rb.jsx)("dd", {
+              children: wb.fileCount
             })]
           })]
         })]
       })
     }
 
-    function mO(dd) {
+    function bw(bb) {
       let {
-        label: Od,
-        time: md,
-        now: Wd
-      } = dd;
+        label: wb,
+        time: Mb,
+        now: eb
+      } = bb;
       const {
-        t: Fd,
-        selectedLanguage: Rd
-      } = (0, Yd.G)(), Xd = new Date(md);
-      let hd = Xd.toLocaleDateString();
-      if (Wd - md <= 30 * Kd.f) {
-        const dd = (0, Yd.p)(Rd.code, "shaderPackListing:timeAgo");
-        hd = Fd("shaderPackListing:timeAgo", {
-          time: (0, Kd.Q)(dd, md, Wd)
+        t: Hb,
+        selectedLanguage: pb
+      } = (0, hb.C)(), Vb = new Date(Mb);
+      let lb = Vb.toLocaleDateString();
+      if (eb - Mb <= 30 * gb.l) {
+        const bb = (0, hb.l)(pb.code, "shaderPackListing:timeAgo");
+        lb = Hb("shaderPackListing:timeAgo", {
+          time: (0, gb.ib)(bb, Mb, eb)
         })
       }
-      return (0, Bd.jsx)(od.g, {
-        tooltipInner: Xd.toLocaleString(),
-        children: (0, Bd.jsxs)("div", {
-          children: [(0, Bd.jsx)("dt", {
-            children: Od
-          }), (0, Bd.jsx)("dd", {
-            children: hd
+      return (0, Rb.jsx)(Ub.d, {
+        tooltipInner: Vb.toLocaleString(),
+        children: (0, Rb.jsxs)("div", {
+          children: [(0, Rb.jsx)("dt", {
+            children: wb
+          }), (0, Rb.jsx)("dd", {
+            children: lb
           })]
         })
       })
     }
   },
-  5936: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd,
-      f: () => Xd
+  6090: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb,
+      f: () => Vb
     });
-    var Wd = md(66);
-    const Fd = new WeakMap,
-      Rd = dd => {
-        var Od;
-        const md = dd.closest("[data-pad-slider]");
-        return md && null !== (Od = Fd.get(md)) && void 0 !== Od ? Od : null
+    var eb = Mb(64);
+    const Hb = new WeakMap,
+      pb = bb => {
+        var wb;
+        const Mb = bb.closest("[data-pad-slider]");
+        return Mb && null !== (wb = Hb.get(Mb)) && void 0 !== wb ? wb : null
       },
-      Xd = (dd, Od) => {
-        const md = (0, Wd.useRef)(Od);
-        md.current = Od, (0, Wd.useEffect)((() => {
-          if (dd.current) return ((dd, Od) => (Fd.set(dd, Od), () => {
-            Fd.get(dd) === Od && Fd.delete(dd)
-          }))(dd.current, {
-            adjust: dd => {
-              md.current.adjust(dd)
+      Vb = (bb, wb) => {
+        const Mb = (0, eb.useRef)(wb);
+        Mb.current = wb, (0, eb.useEffect)((() => {
+          if (bb.current) return ((bb, wb) => (Hb.set(bb, wb), () => {
+            Hb.get(bb) === wb && Hb.delete(bb)
+          }))(bb.current, {
+            adjust: bb => {
+              Mb.current.adjust(bb)
             },
-            setFraction: dd => {
-              md.current.setFraction(dd)
+            setFraction: bb => {
+              Mb.current.setFraction(bb)
             },
             endDrag: () => {
-              md.current.endDrag()
+              Mb.current.endDrag()
             }
           })
-        }), [dd])
+        }), [bb])
       }
   },
-  7602: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Fd,
-      g: () => Rd
+  7848: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Hb,
+      g: () => pb
     });
-    var Wd = md(46);
-    const Fd = "shaderPack";
-    async function Rd() {
-      var dd;
-      let Od = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (dd = await Wd.h.getItem(Fd, Od)) && void 0 !== dd ? dd : null
+    var eb = Mb(43);
+    const Hb = "shaderPack";
+    async function pb() {
+      var bb;
+      let wb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (bb = await eb.h.getItem(Hb, wb)) && void 0 !== bb ? bb : null
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

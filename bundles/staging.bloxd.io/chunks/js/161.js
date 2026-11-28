@@ -1,727 +1,727 @@
 export const id = 161;
 export const ids = [161];
 export const modules = {
-  35381: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Kd,
-      f: () => Xd
+  35175: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => gb,
+      g: () => Vb
     });
-    var Wd = md(310),
-      Fd = md(145),
-      Rd = md(35387);
+    var eb = Mb(309),
+      Hb = Mb(153),
+      pb = Mb(35179);
 
-    function Xd() {
-      var dd, Od, md;
-      return null !== (dd = (0, Wd.n)(null !== (Od = null === (md = (0, Fd.p)()) || void 0 === md ? void 0 : md.renderer) && void 0 !== Od ? Od : null, (0, Fd.l)())) && void 0 !== dd ? dd : "unknown"
+    function Vb() {
+      var bb, wb, Mb;
+      return null !== (bb = (0, eb.o)(null !== (wb = null === (Mb = (0, Hb.n)()) || void 0 === Mb ? void 0 : Mb.renderer) && void 0 !== wb ? wb : null, (0, Hb.k)())) && void 0 !== bb ? bb : "unknown"
     }
 
-    function Kd(dd, Od, md, Wd, Fd) {
-      const Xd = null === Od ? "untimed" : `${Math.round(Od)} ms`;
-      return `frames stalled, ${md}, gpu ${(0,Rd.d)(Fd)}, blocking ${Xd}, drawn ${Math.round(dd)} ms apart, timers ${Wd.timers}, timer gap ${Math.round(Wd.longestGapMs)} ms`
+    function gb(bb, wb, Mb, eb, Hb) {
+      const Vb = null === wb ? "untimed" : `${Math.round(wb)} ms`;
+      return `frames stalled, ${Mb}, gpu ${(0,pb.b)(Hb)}, blocking ${Vb}, drawn ${Math.round(bb)} ms apart, timers ${eb.timers}, timer gap ${Math.round(eb.longestGapMs)} ms`
     }
   },
-  40634: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => hd
+  40381: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => lb
     });
-    var Wd = md(10092),
-      Fd = md(38109),
-      Rd = md(40638);
-    const Xd = {
+    var eb = Mb(10278),
+      Hb = Mb(37772),
+      pb = Mb(40386);
+    const Vb = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      Kd = {
+      gb = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function hd(dd, Od) {
-      if (dd instanceof Fd.i) return {
-        at: Xd[Od],
+    function lb(bb, wb) {
+      if (bb instanceof Hb.e) return {
+        at: Vb[wb],
         code: 0
       };
-      const md = (0, Wd.f)(dd),
-        hd = "number" === typeof md ? md : 0;
-      return null !== (0, Rd.f)(hd).name ? {
+      const Mb = (0, eb.e)(bb),
+        lb = "number" === typeof Mb ? Mb : 0;
+      return null !== (0, pb.g)(lb).name ? {
         at: "refused",
-        code: hd
+        code: lb
       } : {
-        at: Kd[Od],
-        code: hd
+        at: gb[wb],
+        code: lb
       }
     }
   },
-  10092: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd,
-      f: () => Xd,
-      h: () => Kd,
-      i: () => vd,
-      j: () => hd
+  10278: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => pb,
+      e: () => Vb,
+      f: () => gb,
+      g: () => Lb,
+      j: () => lb
     });
-    var Wd = md(218),
-      Fd = md(5294);
+    var eb = Mb(225),
+      Hb = Mb(5472);
 
-    function Rd(dd) {
-      return Xd(dd) === Wd.e.gameOrPluginOnPlayerAuthRejected.code
+    function pb(bb) {
+      return Vb(bb) === eb.b.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function Xd(dd) {
-      return "object" === typeof dd && null !== dd ? dd.code : void 0
+    function Vb(bb) {
+      return "object" === typeof bb && null !== bb ? bb.code : void 0
     }
 
-    function Kd(dd) {
-      var Od;
-      return null !== (Od = Object.keys(Fd.e).find((Od => Fd.e[Od] === dd))) && void 0 !== Od ? Od : null
+    function gb(bb) {
+      var wb;
+      return null !== (wb = Object.keys(Hb.c).find((wb => Hb.c[wb] === bb))) && void 0 !== wb ? wb : null
     }
 
-    function hd(dd) {
-      return "notWhitelisted" === dd ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function lb(bb) {
+      return "notWhitelisted" === bb ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const vd = {
+    const Lb = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  35387: (dd, Od, md) => {
-    function Wd(dd) {
-      return String(dd).replace(/\d/g, (dd => String.fromCharCode(97 + Number(dd))))
+  35179: (bb, wb, Mb) => {
+    function eb(bb) {
+      return String(bb).replace(/\d/g, (bb => String.fromCharCode(97 + Number(bb))))
     }
-    md.d(Od, {
-      d: () => Wd
+    Mb.d(wb, {
+      b: () => eb
     })
   },
-  40638: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      f: () => hd,
-      i: () => Xd,
-      m: () => Fd
+  40386: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb,
+      g: () => lb,
+      k: () => Vb,
+      m: () => Hb
     });
-    var Wd = md(218);
+    var eb = Mb(225);
 
-    function Fd(dd) {
-      const Od = dd.endsWith(Wd.m);
+    function Hb(bb) {
+      const wb = bb.endsWith(eb.g);
       return {
-        text: (Od ? dd.slice(0, -Wd.m.length) : dd) || null,
-        dropsCache: Od
+        text: (wb ? bb.slice(0, -eb.g.length) : bb) || null,
+        dropsCache: wb
       }
     }
-    const Rd = "Either your internet isn't working or this is a bug.";
+    const pb = "Either your internet isn't working or this is a bug.";
 
-    function Xd(dd, Od) {
-      const md = hd(dd);
-      return null !== md.name && "" === Wd.e[md.name].text && null !== Od ? Od : md.reason
+    function Vb(bb, wb) {
+      const Mb = lb(bb);
+      return null !== Mb.name && "" === eb.b[Mb.name].text && null !== wb ? wb : Mb.reason
     }
-    const Kd = "You were removed from the game.";
+    const gb = "You were removed from the game.";
 
-    function hd(dd) {
-      var Od;
-      let md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Fd = null !== (Od = Object.keys(Wd.e).find((Od => Wd.e[Od].code === dd))) && void 0 !== Od ? Od : null;
-      if (null === Fd) return {
-        code: dd,
-        name: Fd,
-        reason: null !== md && void 0 !== md ? md : `${Rd}\nCode: ${dd}`,
+    function lb(bb) {
+      var wb;
+      let Mb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const Hb = null !== (wb = Object.keys(eb.b).find((wb => eb.b[wb].code === bb))) && void 0 !== wb ? wb : null;
+      if (null === Hb) return {
+        code: bb,
+        name: Hb,
+        reason: null !== Mb && void 0 !== Mb ? Mb : `${pb}\nCode: ${bb}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: Xd,
-        canReconnect: hd = !1
-      } = Wd.e[Fd], vd = dd === Wd.e.outdatedVersion.code || dd === Wd.e.loadRecaptchaError.code;
+        text: Vb,
+        canReconnect: lb = !1
+      } = eb.b[Hb], Lb = bb === eb.b.outdatedVersion.code || bb === eb.b.loadRecaptchaError.code;
       return {
-        code: dd,
-        name: Fd,
-        reason: "" !== Xd ? Xd : null !== md && void 0 !== md ? md : dd === Wd.e.gameOrPluginKick.code ? Kd : `Code: ${dd}`,
-        canReconnect: hd,
-        automaticallyReconnect: dd === Wd.e.customGameUpdated.code || dd === Wd.e.duplicateLobbyNameError.code,
-        requiresRefresh: vd
+        code: bb,
+        name: Hb,
+        reason: "" !== Vb ? Vb : null !== Mb && void 0 !== Mb ? Mb : bb === eb.b.gameOrPluginKick.code ? gb : `Code: ${bb}`,
+        canReconnect: lb,
+        automaticallyReconnect: bb === eb.b.customGameUpdated.code || bb === eb.b.duplicateLobbyNameError.code,
+        requiresRefresh: Lb
       }
     }
   },
-  42609: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Wd,
-      f: () => Qd,
-      j: () => Xd,
-      n: () => Fd,
-      p: () => Kd,
-      t: () => vd
+  42303: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => eb,
+      e: () => Ib,
+      i: () => Vb,
+      j: () => Hb,
+      m: () => gb,
+      o: () => Lb
     });
-    class Wd extends Error {
+    class eb extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function Fd(dd) {
-      return dd instanceof RangeError && /call stack/i.test(dd.message) || dd instanceof Error && "InternalError" === dd.name && /recursion/i.test(dd.message)
+    function Hb(bb) {
+      return bb instanceof RangeError && /call stack/i.test(bb.message) || bb instanceof Error && "InternalError" === bb.name && /recursion/i.test(bb.message)
     }
-    const Rd = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const pb = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function Xd(dd) {
-      var Od;
-      return dd instanceof WebAssembly.RuntimeError || dd instanceof Wd || Fd(dd) && Rd.test(null !== (Od = dd.stack) && void 0 !== Od ? Od : "")
-    }
-
-    function Kd(dd, Od) {
-      if (Xd(dd)) throw dd;
-      console.error(Od, dd)
+    function Vb(bb) {
+      var wb;
+      return bb instanceof WebAssembly.RuntimeError || bb instanceof eb || Hb(bb) && pb.test(null !== (wb = bb.stack) && void 0 !== wb ? wb : "")
     }
 
-    function hd(dd, Od, md, Fd, Rd) {
-      if (Od % Fd !== 0 || Od + md > dd.byteLength) throw new Wd(`${Rd}: ${md} bytes at ${Od}, ${Fd}-aligned, outside ${dd.byteLength} bytes of memory`)
+    function gb(bb, wb) {
+      if (Vb(bb)) throw bb;
+      console.error(wb, bb)
     }
 
-    function vd(dd, Od, md, Wd, Fd) {
-      return 0 === md ? null : (hd(Od, md, Wd * dd.BYTES_PER_ELEMENT, dd.BYTES_PER_ELEMENT, Fd), new dd(Od, md, Wd))
+    function lb(bb, wb, Mb, Hb, pb) {
+      if (wb % Hb !== 0 || wb + Mb > bb.byteLength) throw new eb(`${pb}: ${Mb} bytes at ${wb}, ${Hb}-aligned, outside ${bb.byteLength} bytes of memory`)
     }
 
-    function Qd(dd, Od, md, Wd, Fd) {
-      return 0 === Od ? null : (hd(dd, Od, md, Wd, Fd), new DataView(dd, Od, md))
+    function Lb(bb, wb, Mb, eb, Hb) {
+      return 0 === Mb ? null : (lb(wb, Mb, eb * bb.BYTES_PER_ELEMENT, bb.BYTES_PER_ELEMENT, Hb), new bb(wb, Mb, eb))
+    }
+
+    function Ib(bb, wb, Mb, eb, Hb) {
+      return 0 === wb ? null : (lb(bb, wb, Mb, eb, Hb), new DataView(bb, wb, Mb))
     }
   },
-  42658: (dd, Od, md) => {
-    md.d(Od, {
-      $: () => HO,
-      A: () => mO,
-      E: () => FO,
-      F: () => fd,
-      I: () => hO,
-      L: () => KO,
-      N: () => RO,
-      P: () => QO,
-      S: () => wO,
-      T: () => vO,
-      V: () => XO,
-      X: () => tO,
-      _: () => rd,
-      ab: () => TO,
-      d: () => Vd,
-      eb: () => Gd,
-      f: () => aO,
-      gb: () => nd,
-      h: () => xO,
-      i: () => bO,
-      l: () => gO,
-      p: () => qO,
-      t: () => YO,
-      w: () => pO,
-      z: () => UO
+  42375: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      C: () => Mw,
+      D: () => yb,
+      F: () => Vw,
+      H: () => pw,
+      L: () => ew,
+      M: () => lw,
+      O: () => hw,
+      S: () => gw,
+      W: () => Hw,
+      _: () => Lw,
+      bb: () => Ab,
+      c: () => Zb,
+      d: () => zw,
+      db: () => tw,
+      f: () => Kw,
+      hb: () => Fw,
+      j: () => Ew,
+      kb: () => Wb,
+      m: () => mw,
+      nb: () => Jb,
+      q: () => Uw,
+      s: () => sw,
+      v: () => Bw,
+      x: () => jw,
+      z: () => bw
     });
-    var Wd = md(387),
-      Fd = md(302),
-      Rd = md(310),
-      Xd = md(29),
-      Kd = md(3903),
-      hd = md(763),
-      vd = md(5173),
-      Qd = md(3876),
-      td = md(4674),
-      od = md(107),
-      Nd = md(151),
-      qd = md(382),
-      Hd = md(46),
-      yd = md(373),
-      bd = md(132),
-      Td = md(725),
-      pd = md(364),
-      Yd = md(145),
-      gd = md(141),
-      wd = md(5571),
-      Ed = md(42661),
-      Jd = md(1786),
-      Ud = md(42663),
-      xd = md(42665),
-      Bd = md(35490),
-      Sd = md(42673),
-      sd = md(42677);
-    const ud = "bloxd-webgpuOffAfterLoss",
-      Vd = "context:webgl",
-      Ad = "probe:threw";
+    var eb = Mb(366),
+      Hb = Mb(303),
+      pb = Mb(309),
+      Vb = Mb(26),
+      gb = Mb(4060),
+      lb = Mb(737),
+      Lb = Mb(5363),
+      Ib = Mb(4034),
+      Ob = Mb(4843),
+      Ub = Mb(110),
+      tb = Mb(160),
+      Cb = Mb(364),
+      Eb = Mb(43),
+      Fb = Mb(361),
+      Bb = Mb(135),
+      sb = Mb(689),
+      mb = Mb(352),
+      hb = Mb(153),
+      zb = Mb(144),
+      Xb = Mb(5685),
+      xb = Mb(42379),
+      jb = Mb(1848),
+      Kb = Mb(42387),
+      rb = Mb(42390),
+      Rb = Mb(35285),
+      Db = Mb(42399),
+      cb = Mb(42401);
+    const Yb = "bloxd-webgpuOffAfterLoss",
+      Zb = "context:webgl",
+      fb = "probe:threw";
 
-    function rd(dd) {
-      return dd.includes("Web page caused context loss and was blocked")
+    function Ab(bb) {
+      return bb.includes("Web page caused context loss and was blocked")
     }
 
-    function Gd() {
-      const dd = document.createElement("canvas");
-      let Od = "";
-      dd.addEventListener("webglcontextcreationerror", (dd => {
-        Od = dd.statusMessage
+    function Wb() {
+      const bb = document.createElement("canvas");
+      let wb = "";
+      bb.addEventListener("webglcontextcreationerror", (bb => {
+        wb = bb.statusMessage
       }));
       try {
-        var md, Wd;
-        null === (md = dd.getContext("webgl")) || void 0 === md || null === (Wd = md.getExtension("WEBGL_lose_context")) || void 0 === Wd || Wd.loseContext()
-      } catch (Fd) {
-        return String(Fd)
+        var Mb, eb;
+        null === (Mb = bb.getContext("webgl")) || void 0 === Mb || null === (eb = Mb.getExtension("WEBGL_lose_context")) || void 0 === eb || eb.loseContext()
+      } catch (Hb) {
+        return String(Hb)
       }
-      return Od
+      return wb
     }
 
-    function nd(dd) {
-      let Od;
+    function Jb(bb) {
+      let wb;
       try {
-        Od = dd.getContext("webgl", {
-          powerPreference: Yd.d
+        wb = bb.getContext("webgl", {
+          powerPreference: hb.d
         })
       } catch {
-        Od = null
+        wb = null
       }
-      if (null === Od) return null;
-      let md = null;
+      if (null === wb) return null;
+      let Mb = null;
       try {
-        const dd = Od.getParameter(Od.MAX_TEXTURE_SIZE);
-        md = "number" === typeof dd && dd > 0 ? dd : null
+        const bb = wb.getParameter(wb.MAX_TEXTURE_SIZE);
+        Mb = "number" === typeof bb && bb > 0 ? bb : null
       } catch {
-        md = null
+        Mb = null
       }
       try {
-        var Wd;
-        null === (Wd = Od.getExtension("WEBGL_lose_context")) || void 0 === Wd || Wd.loseContext()
+        var eb;
+        null === (eb = wb.getExtension("WEBGL_lose_context")) || void 0 === eb || eb.loseContext()
       } catch {}
-      return md
+      return Mb
     }
-    const Ld = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
+    const Sb = new Set(["android_arm", "chromeos_other", "chromeos_intel", "windows_intel_low", "ios"]);
 
-    function Pd() {
-      return "ios" === (0, od.getOperatingSystem)() ? "ios" : "other"
+    function Nb() {
+      return "ios" === (0, Ub.getOperatingSystem)() ? "ios" : "other"
     }
-    const zd = "mali_valhall",
-      cd = new Set(["nvidia_pre_turing"]),
-      jd = new Set(["intel_gen7_8"]),
-      Dd = new Set(["powervr_rogue"]);
+    const vb = "mali_valhall",
+      Qb = new Set(["nvidia_pre_turing"]),
+      Gb = new Set(["intel_gen7_8"]),
+      qb = new Set(["powervr_rogue"]);
 
-    function ed(dd, Od, md) {
-      return Ld.has(dd) ? "android_arm" === dd && Od === zd && "mobileAndroid" !== md ? "webgpu_default" : "webgl_default" : null
+    function ab(bb, wb, Mb) {
+      return Sb.has(bb) ? "android_arm" === bb && wb === vb && "mobileAndroid" !== Mb ? "webgpu_default" : "webgl_default" : null
     }
 
-    function Id(dd) {
-      return function(dd) {
+    function ib(bb) {
+      return function(bb) {
         try {
-          return dd()
+          return bb()
         } catch {
           return null
         }
       }((() => {
-        var Od, md, Wd, Xd;
-        const Kd = null !== (Od = null === (md = dd.info) || void 0 === md ? void 0 : md.vendor) && void 0 !== Od ? Od : "";
-        return "windows" === (0, od.getOperatingSystem)() && "" !== Kd && "intel" !== (0, od.normaliseGpuVendor)(Kd) ? null : ((0, od.seedGpuVendor)(Kd), ed((0, Fd.g)(), (0, Rd.g)(Kd, null !== (Wd = null === (Xd = dd.info) || void 0 === Xd ? void 0 : Xd.architecture) && void 0 !== Wd ? Wd : ""), Nd.siteUsed))
+        var wb, Mb, eb, Vb;
+        const gb = null !== (wb = null === (Mb = bb.info) || void 0 === Mb ? void 0 : Mb.vendor) && void 0 !== wb ? wb : "";
+        return "windows" === (0, Ub.getOperatingSystem)() && "" !== gb && "intel" !== (0, Ub.normaliseGpuVendor)(gb) ? null : ((0, Ub.seedGpuVendor)(gb), ab((0, Hb.k)(), (0, pb.i)(gb, null !== (eb = null === (Vb = bb.info) || void 0 === Vb ? void 0 : Vb.architecture) && void 0 !== eb ? eb : ""), tb.siteUsed))
       }))
     }
 
-    function ld() {
-      var dd;
+    function ub() {
+      var bb;
       return {
-        gpu: null !== (dd = navigator.gpu) && void 0 !== dd ? dd : null,
-        webgl2: Sd.h,
-        webgl1: () => function(dd) {
-          let Od, md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ed.b;
+        gpu: null !== (bb = navigator.gpu) && void 0 !== bb ? bb : null,
+        webgl2: Db.e,
+        webgl1: () => function(bb) {
+          let wb, Mb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xb.e;
           try {
-            Od = dd.getContext("webgl")
+            wb = bb.getContext("webgl")
           } catch {
-            Od = null
+            wb = null
           }
-          if (null === Od) return [Vd];
-          const Wd = [];
+          if (null === wb) return [Zb];
+          const eb = [];
           try {
-            for (const Fd of md.extensions) null === Od.getExtension(Fd) && Wd.push(Fd);
-            for (const [Fd, Rd] of Object.entries(md.limits)) {
-              const dd = Od[Fd],
-                md = "number" === typeof dd ? Od.getParameter(dd) : null;
-              ("number" !== typeof md || md < Rd) && Wd.push(`limit:${Fd}`)
+            for (const Hb of Mb.extensions) null === wb.getExtension(Hb) && eb.push(Hb);
+            for (const [Hb, pb] of Object.entries(Mb.limits)) {
+              const bb = wb[Hb],
+                Mb = "number" === typeof bb ? wb.getParameter(bb) : null;
+              ("number" !== typeof Mb || Mb < pb) && eb.push(`limit:${Hb}`)
             }
-            const dd = Od.getShaderPrecisionFormat(Od.VERTEX_SHADER, Od.HIGH_FLOAT);
-            (null === dd || dd.precision < md.vertexHighFloatBits) && Wd.push("precision:vertex_high_float")
+            const bb = wb.getShaderPrecisionFormat(wb.VERTEX_SHADER, wb.HIGH_FLOAT);
+            (null === bb || bb.precision < Mb.vertexHighFloatBits) && eb.push("precision:vertex_high_float")
           } catch {
-            Wd.push(Ad)
+            eb.push(fb)
           }
           try {
-            var Fd;
-            null === (Fd = Od.getExtension("WEBGL_lose_context")) || void 0 === Fd || Fd.loseContext()
+            var Hb;
+            null === (Hb = wb.getExtension("WEBGL_lose_context")) || void 0 === Hb || Hb.loseContext()
           } catch {}
-          return Wd
+          return eb
         }(document.createElement("canvas")),
-        webgl1First: () => Zd((() => function(dd, Od) {
-          if ("chrome_os" !== dd) return !1;
-          const md = Od();
-          return null !== md && Dd.has((0, Rd.j)(md.vendor, md.renderer))
-        }((0, od.getOperatingSystem)(), Yd.A))),
-        offAfterLoss: dd => Zd((() => dd ? (0, yd.J)() : Xd.e.isWebGpuOffAfterLoss())),
-        fewWasmMemories: pd.h,
-        oldIntelDriver: dd => Zd((() => (0, bd.c)(dd))),
-        intelGen9: dd => Zd((() => (0, bd.o)(dd))),
-        storeIntelGen9Verdict: dd => {
-          Hd.k.setItem(bd.F, dd)
+        webgl1First: () => Pb((() => function(bb, wb) {
+          if ("chrome_os" !== bb) return !1;
+          const Mb = wb();
+          return null !== Mb && qb.has((0, pb.k)(Mb.vendor, Mb.renderer))
+        }((0, Ub.getOperatingSystem)(), hb.z))),
+        offAfterLoss: bb => Pb((() => bb ? (0, Fb.E)() : Vb.c.isWebGpuOffAfterLoss())),
+        fewWasmMemories: mb.c,
+        oldIntelDriver: bb => Pb((() => (0, Bb.g)(bb))),
+        intelGen9: bb => Pb((() => (0, Bb.p)(bb))),
+        storeIntelGen9Verdict: bb => {
+          Eb.i.setItem(Bb.C, bb)
         },
-        gpuClassWebGlArm: Id,
-        storeGpuClassVerdict: dd => {
-          Hd.k.setItem(bd.C, dd)
+        gpuClassWebGlArm: ib,
+        storeGpuClassVerdict: bb => {
+          Eb.i.setItem(Bb.B, bb)
         },
-        gpuClassOnWebGl: dd => (0, Td.b)(dd),
-        webGlDefaultFamily: dd => jd.has((0, Rd.g)(dd.vendor, dd.architecture)),
-        storeWebGlDefaultFamilyVerdict: dd => {
-          Hd.k.setItem(bd.P, dd)
+        gpuClassOnWebGl: bb => (0, sb.c)(bb),
+        webGlDefaultFamily: bb => Gb.has((0, pb.i)(bb.vendor, bb.architecture)),
+        storeWebGlDefaultFamilyVerdict: bb => {
+          Eb.i.setItem(Bb.L, bb)
         },
-        override: () => Cd(),
-        claimed: () => kd((0, hd.k)()),
+        override: () => db(),
+        claimed: () => nb((0, lb.p)()),
         webGpuSetting: () => {
-          const dd = Hd.k.getItem(Wd.kc);
-          return "boolean" === typeof dd ? dd : null
+          const bb = Eb.i.getItem(eb.mc);
+          return "boolean" === typeof bb ? bb : null
         },
-        heldBack: () => Td.e,
-        storeHoldbackSpared: dd => {
-          Hd.k.setItem(bd.A, dd)
+        heldBack: () => sb.f,
+        storeHoldbackSpared: bb => {
+          Eb.i.setItem(Bb.z, bb)
         },
-        intelGen9OnWebGl: () => Td.f,
-        Jq: () => Zd((() => (0, td.e)(od.featureFlags.settings.canUseShaderPacks))),
-        windows: () => Zd((() => "windows" === (0, od.getOperatingSystem)())),
-        defaultCompatibility: Bd.b
+        intelGen9OnWebGl: () => sb.i,
+        LC: () => Pb((() => (0, Ob.g)(Ub.featureFlags.settings.canUseShaderPacks))),
+        windows: () => Pb((() => "windows" === (0, Ub.getOperatingSystem)())),
+        defaultCompatibility: Rb.d
       }
     }
 
-    function Cd() {
-      let dd = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      if ((0, Kd.o)("render") && "webgl1" === (0, Kd.m)("renderer")) return "webgl1";
-      const Od = [() => new URLSearchParams(window.location.search).get(Qd.b), () => Hd.k.getItem(Qd.d), () => {
-        const Od = localStorage.getItem(ud);
-        return null !== Od && dd && localStorage.removeItem(ud), "1" === Od ? "webgl2" : null
+    function db() {
+      let bb = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      if ((0, gb.m)("render") && "webgl1" === (0, gb.k)("renderer")) return "webgl1";
+      const wb = [() => new URLSearchParams(window.location.search).get(Ib.c), () => Eb.i.getItem(Ib.e), () => {
+        const wb = localStorage.getItem(Yb);
+        return null !== wb && bb && localStorage.removeItem(Yb), "1" === wb ? "webgl2" : null
       }];
-      for (const md of Od) {
-        let dd = null;
+      for (const Mb of wb) {
+        let bb = null;
         try {
-          dd = kd(md())
+          bb = nb(Mb())
         } catch {}
-        if (null !== dd) return dd
+        if (null !== bb) return bb
       }
       return null
     }
 
-    function Zd(dd) {
+    function Pb(bb) {
       try {
-        return dd()
+        return bb()
       } catch {
         return !1
       }
     }
 
-    function kd(dd) {
-      return "lite" === dd ? "webgpu" : "webgl2" === dd || "babylon" === dd ? "webgl" : null
+    function nb(bb) {
+      return "lite" === bb ? "webgpu" : "webgl2" === bb || "babylon" === bb ? "webgl" : null
     }
 
-    function fd(dd) {
-      return "none" === dd || "compatibility_mode" === dd
+    function yb(bb) {
+      return "none" === bb || "compatibility_mode" === bb
     }
-    async function Md() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ld();
-      const Od = await async function(dd) {
-        const Od = OO(dd),
+    async function ob() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ub();
+      const wb = await async function(bb) {
+        const wb = kb(bb),
           {
-            source: md
-          } = Od,
-          Wd = !Od.asked,
-          Fd = "gpu" in Od && Od.heldBack,
-          Xd = function(dd) {
-            let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            return Fd && !fd(dd) ? {
+            source: Mb
+          } = wb,
+          eb = !wb.asked,
+          Hb = "gpu" in wb && wb.heldBack,
+          Vb = function(bb) {
+            let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            return Hb && !yb(bb) ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: md
+              source: Mb
             } : {
-              reason: dd,
-              adapter: Od,
-              source: md
+              reason: bb,
+              adapter: wb,
+              source: Mb
             }
           };
-        if (!("gpu" in Od)) return Xd(Od.refused);
-        let Kd;
+        if (!("gpu" in wb)) return Vb(wb.refused);
+        let gb;
         try {
-          Kd = await (0, Jd.k)((0, gd.o)(Od.gpu, {
-            compatibility: dO(dd, Od)
-          }), EO, `requestAdapter didn't settle in ${EO/1e3} s`)
+          gb = await (0, jb.n)((0, zb.k)(wb.gpu, {
+            compatibility: Tb(bb, wb)
+          }), Xw, `requestAdapter didn't settle in ${Xw/1e3} s`)
         } catch {
-          return Xd("adapter_error")
+          return Vb("adapter_error")
         }
-        if ("string" === typeof Kd) return Xd(Kd);
+        if ("string" === typeof gb) return Vb(gb);
         const {
-          adapter: hd,
-          compatibility: vd
-        } = Kd, Qd = (0, gd.d)(hd);
-        if ((0, gd.k)(hd)) return Xd("software_adapter", Qd);
-        const td = dd.windows() && function(dd) {
-          return cd.has((0, Rd.g)(dd.vendor, dd.architecture))
-        }(Qd);
-        if (dd.storeHoldbackSpared(td), Fd && !td) return Xd("webgl_holdback");
-        const od = dd.intelGen9(hd);
-        dd.storeIntelGen9Verdict(od);
-        const Nd = od ? null : dd.gpuClassWebGlArm(hd);
-        dd.storeGpuClassVerdict(null !== Nd && void 0 !== Nd && Nd);
-        const qd = dd.webGlDefaultFamily(Qd);
-        if (dd.storeWebGlDefaultFamilyVerdict(qd), Wd && dd.oldIntelDriver(hd)) return Xd("old_intel_driver", Qd);
-        if ("default" === md && od && dd.intelGen9OnWebGl()) return Xd("intel_gen9", Qd);
-        if ("default" === md && null !== Nd && dd.gpuClassOnWebGl(Nd)) return Xd("gpu_class_webgl", Qd);
-        if ("default" === md && qd) return Xd("gpu_wasm_arm", Qd);
-        return Xd(vd ? "compatibility_mode" : "none", Qd)
-      }(dd);
-      if (fd(Od.reason)) return {
+          adapter: lb,
+          compatibility: Lb
+        } = gb, Ib = (0, zb.d)(lb);
+        if ((0, zb.h)(lb)) return Vb("software_adapter", Ib);
+        const Ob = bb.windows() && function(bb) {
+          return Qb.has((0, pb.i)(bb.vendor, bb.architecture))
+        }(Ib);
+        if (bb.storeHoldbackSpared(Ob), Hb && !Ob) return Vb("webgl_holdback");
+        const Ub = bb.intelGen9(lb);
+        bb.storeIntelGen9Verdict(Ub);
+        const tb = Ub ? null : bb.gpuClassWebGlArm(lb);
+        bb.storeGpuClassVerdict(null !== tb && void 0 !== tb && tb);
+        const Cb = bb.webGlDefaultFamily(Ib);
+        if (bb.storeWebGlDefaultFamilyVerdict(Cb), eb && bb.oldIntelDriver(lb)) return Vb("old_intel_driver", Ib);
+        if ("default" === Mb && Ub && bb.intelGen9OnWebGl()) return Vb("intel_gen9", Ib);
+        if ("default" === Mb && null !== tb && bb.gpuClassOnWebGl(tb)) return Vb("gpu_class_webgl", Ib);
+        if ("default" === Mb && Cb) return Vb("gpu_wasm_arm", Ib);
+        return Vb(Lb ? "compatibility_mode" : "none", Ib)
+      }(bb);
+      if (yb(wb.reason)) return {
         backend: "webgpu",
-        ...Od
+        ...wb
       };
-      const md = "webgl1" === dd.override(),
-        Wd = "not_requested" === Od.reason && ("override" === Od.source || "claim" === Od.source),
-        Fd = !md && !Wd && dd.webgl1First();
-      if (!md && !Fd && dd.webgl2()) return {
+      const Mb = "webgl1" === bb.override(),
+        eb = "not_requested" === wb.reason && ("override" === wb.source || "claim" === wb.source),
+        Hb = !Mb && !eb && bb.webgl1First();
+      if (!Mb && !Hb && bb.webgl2()) return {
         backend: "webgl",
-        ...Od
+        ...wb
       };
-      const Xd = dd.webgl1();
-      return 0 === Xd.length ? {
+      const Vb = bb.webgl1();
+      return 0 === Vb.length ? {
         backend: "webgl1",
-        ...Od
-      } : Fd && dd.webgl2() ? {
+        ...wb
+      } : Hb && bb.webgl2() ? {
         backend: "webgl",
-        ...Od
+        ...wb
       } : {
-        missing: Xd
+        missing: Vb
       }
     }
 
-    function dO(dd, Od) {
+    function Tb(bb, wb) {
       let {
-        source: md,
-        asked: Wd
-      } = Od;
-      return Wd || "default" === md ? (0, Bd.e)(Wd, dd.defaultCompatibility) : void 0
+        source: Mb,
+        asked: eb
+      } = wb;
+      return eb || "default" === Mb ? (0, Rb.h)(eb, bb.defaultCompatibility) : void 0
     }
 
-    function OO(dd) {
-      const Od = dd.override(),
-        md = dd.webGpuSetting(),
-        Wd = null === Od && !0 !== md && dd.Jq(),
-        Fd = null !== Od || null !== md || Wd ? null : dd.claimed(),
-        Rd = null !== Od ? "override" : !0 === md ? "setting" : Wd ? "pack" : !1 === md ? "setting" : null !== Fd ? "claim" : "default",
-        Xd = function(dd) {
-          return "override" === dd || "setting" === dd
-        }(Rd);
-      if ("webgl" === Od || "webgl1" === Od || "webgl" === Fd || "setting" === Rd && !1 === md) return {
-        source: Rd,
-        asked: Xd,
+    function kb(bb) {
+      const wb = bb.override(),
+        Mb = bb.webGpuSetting(),
+        eb = null === wb && !0 !== Mb && bb.LC(),
+        Hb = null !== wb || null !== Mb || eb ? null : bb.claimed(),
+        pb = null !== wb ? "override" : !0 === Mb ? "setting" : eb ? "pack" : !1 === Mb ? "setting" : null !== Hb ? "claim" : "default",
+        Vb = function(bb) {
+          return "override" === bb || "setting" === bb
+        }(pb);
+      if ("webgl" === wb || "webgl1" === wb || "webgl" === Hb || "setting" === pb && !1 === Mb) return {
+        source: pb,
+        asked: Vb,
         refused: "not_requested"
       };
-      if (!dd.gpu) return {
-        source: Rd,
-        asked: Xd,
+      if (!bb.gpu) return {
+        source: pb,
+        asked: Vb,
         refused: "no_webgpu_api"
       };
-      const Kd = "default" === Rd && dd.heldBack();
-      if (Kd && !dd.windows()) return {
-        source: Rd,
-        asked: Xd,
+      const gb = "default" === pb && bb.heldBack();
+      if (gb && !bb.windows()) return {
+        source: pb,
+        asked: Vb,
         refused: "webgl_holdback"
       };
-      const hd = Xd ? null : dd.offAfterLoss("pack" === Rd) ? "off_after_loss" : dd.fewWasmMemories() ? "few_wasm_memories" : null;
-      return null !== hd ? {
-        source: Rd,
-        asked: Xd,
-        refused: Kd ? "webgl_holdback" : hd
+      const lb = Vb ? null : bb.offAfterLoss("pack" === pb) ? "off_after_loss" : bb.fewWasmMemories() ? "few_wasm_memories" : null;
+      return null !== lb ? {
+        source: pb,
+        asked: Vb,
+        refused: gb ? "webgl_holdback" : lb
       } : {
-        source: Rd,
-        asked: Xd,
-        heldBack: Kd,
-        gpu: dd.gpu
+        source: pb,
+        asked: Vb,
+        heldBack: gb,
+        gpu: bb.gpu
       }
     }
 
-    function mO() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
-          ...ld(),
-          override: () => Cd(!1)
+    function bw() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+          ...ub(),
+          override: () => db(!1)
         },
-        Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : od.isWebKit,
-        md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Pd;
+        wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ub.isWebKit,
+        Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Nb;
       try {
-        if (!Od()) return !1;
-        const Wd = OO(dd);
-        if (!("gpu" in Wd) || Wd.heldBack) return !1;
-        const Fd = "default" === Wd.source ? ed(md(), "apple", Nd.siteUsed) : null;
-        return null === Fd || !dd.gpuClassOnWebGl(Fd)
-      } catch (Wd) {
-        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", Wd), !1
+        if (!wb()) return !1;
+        const eb = kb(bb);
+        if (!("gpu" in eb) || eb.heldBack) return !1;
+        const Hb = "default" === eb.source ? ab(Mb(), "apple", tb.siteUsed) : null;
+        return null === Hb || !bb.gpuClassOnWebGl(Hb)
+      } catch (eb) {
+        return console.warn("[bloxd-wasm-client] the WebGPU guess failed: guessing WebGL2", eb), !1
       }
     }
-    let WO = !1;
-    async function FO(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ld();
-      if (null === dd) return null;
-      const md = await Md(Od);
-      return WO = !("missing" in md) && "webgpu" === md.backend && "claim" === md.source, "missing" in md ? md : {
-        ...md,
-        load: dd[md.backend]
+    let ww = !1;
+    async function Mw(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ub();
+      if (null === bb) return null;
+      const Mb = await ob(wb);
+      return ww = !("missing" in Mb) && "webgpu" === Mb.backend && "claim" === Mb.source, "missing" in Mb ? Mb : {
+        ...Mb,
+        load: bb[Mb.backend]
       }
     }
-    async function RO(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ld().gpu,
-        Wd = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== dd.backend) return !1;
-      const Fd = NO(dd, Od, "indirectDraws", "off", "on");
-      if (null !== Fd) return Fd;
-      if (null !== dd.adapter && (0, bd.q)(dd.adapter, Wd)) return !0;
-      if (null === md) return !1;
+    async function ew(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ub().gpu,
+        eb = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== bb.backend) return !1;
+      const Hb = Ow(bb, wb, "indirectDraws", "off", "on");
+      if (null !== Hb) return Hb;
+      if (null !== bb.adapter && (0, Bb.s)(bb.adapter, eb)) return !0;
+      if (null === Mb) return !1;
       try {
-        var Rd;
-        const dd = await (0, Jd.k)(md.requestAdapter({
+        var pb;
+        const bb = await (0, jb.n)(Mb.requestAdapter({
           powerPreference: "low-power"
-        }).then((async dd => (null !== dd && await (0, gd.g)(dd), dd))), EO, `the low-power requestAdapter didn't settle in ${EO/1e3} s`);
-        return (0, bd.q)(null !== (Rd = null === dd || void 0 === dd ? void 0 : dd.info) && void 0 !== Rd ? Rd : {}, Wd)
-      } catch (Xd) {
-        return Xd instanceof Jd.f
+        }).then((async bb => (null !== bb && await (0, zb.f)(bb), bb))), Xw, `the low-power requestAdapter didn't settle in ${Xw/1e3} s`);
+        return (0, Bb.s)(null !== (pb = null === bb || void 0 === bb ? void 0 : bb.info) && void 0 !== pb ? pb : {}, eb)
+      } catch (Vb) {
+        return Vb instanceof jb.h
       }
     }
 
-    function XO(dd, Od, md) {
-      let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, od.pageOperatingSystem)();
-      if ("webgpu" !== dd.backend) return !1;
-      const Fd = NO(dd, Od, "terrainFetch", "texture", "storage");
-      return null !== Fd ? Fd : null !== dd.adapter && ((0, bd.j)(dd.adapter, md) || (0, bd.f)(dd.adapter, Wd))
+    function Hw(bb, wb, Mb) {
+      let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : (0, Ub.pageOperatingSystem)();
+      if ("webgpu" !== bb.backend) return !1;
+      const Hb = Ow(bb, wb, "terrainFetch", "texture", "storage");
+      return null !== Hb ? Hb : null !== bb.adapter && ((0, Bb.m)(bb.adapter, Mb) || (0, Bb.k)(bb.adapter, eb))
     }
 
-    function KO(dd, Od) {
-      if ("webgpu" !== dd.backend) return !1;
-      const md = NO(dd, Od, "skyOrder", "early", "last");
-      return null !== md ? md : null !== dd.adapter && (0, Rd.g)(dd.adapter.vendor, dd.adapter.architecture) === zd
+    function pw(bb, wb) {
+      if ("webgpu" !== bb.backend) return !1;
+      const Mb = Ow(bb, wb, "skyOrder", "early", "last");
+      return null !== Mb ? Mb : null !== bb.adapter && (0, pb.i)(bb.adapter.vendor, bb.adapter.architecture) === vb
     }
 
-    function hO(dd, Od) {
-      if ("webgpu" !== dd.backend) return !1;
-      const md = NO(dd, Od, "uploadCopies", "off", "on");
-      return null !== md ? md : null !== dd.adapter && "powervr_rogue" === (0, Rd.g)(dd.adapter.vendor, dd.adapter.architecture)
+    function Vw(bb, wb) {
+      if ("webgpu" !== bb.backend) return !1;
+      const Mb = Ow(bb, wb, "uploadCopies", "off", "on");
+      return null !== Mb ? Mb : null !== bb.adapter && "powervr_rogue" === (0, pb.i)(bb.adapter.vendor, bb.adapter.architecture)
     }
 
-    function vO(dd, Od, md) {
-      if ("webgpu" !== dd.backend) return !1;
-      const Wd = NO(dd, Od, "sceneDepth", "off", "on");
-      return null !== Wd ? Wd : null !== dd.adapter && (0, bd.k)(dd.adapter, md)
+    function gw(bb, wb, Mb) {
+      if ("webgpu" !== bb.backend) return !1;
+      const eb = Ow(bb, wb, "sceneDepth", "off", "on");
+      return null !== eb ? eb : null !== bb.adapter && (0, Bb.n)(bb.adapter, Mb)
     }
 
-    function QO(dd, Od) {
-      return "webgl" === dd.backend ? NO(dd, Od, "instancedTerrain", "1", "0") : null
+    function lw(bb, wb) {
+      return "webgl" === bb.backend ? Ow(bb, wb, "instancedTerrain", "1", "0") : null
     }
 
-    function tO(dd, Od) {
-      return "webgpu" !== dd.backend || Od && (null === dd.adapter || !(0, yd.N)(dd.adapter))
+    function Lw(bb, wb) {
+      return "webgpu" !== bb.backend || wb && (null === bb.adapter || !(0, Fb.G)(bb.adapter))
     }
 
-    function oO(dd, Od, md, Wd) {
-      const Fd = new URLSearchParams(Od).get(md),
-        Rd = null !== Fd && void 0 !== Fd ? Fd : null === dd ? null : (0, hd.g)(md);
-      return null !== Rd && Wd(Rd) ? (WO ||= null === Fd && "webgpu" === (null === dd || void 0 === dd ? void 0 : dd.backend), Rd) : null
+    function Iw(bb, wb, Mb, eb) {
+      const Hb = new URLSearchParams(wb).get(Mb),
+        pb = null !== Hb && void 0 !== Hb ? Hb : null === bb ? null : (0, lb.i)(Mb);
+      return null !== pb && eb(pb) ? (ww ||= null === Hb && "webgpu" === (null === bb || void 0 === bb ? void 0 : bb.backend), pb) : null
     }
 
-    function NO(dd, Od, md, Wd, Fd) {
-      const Rd = oO(dd, Od, md, (dd => dd === Wd || dd === Fd));
-      return null === Rd ? null : Rd === Wd
+    function Ow(bb, wb, Mb, eb, Hb) {
+      const pb = Iw(bb, wb, Mb, (bb => bb === eb || bb === Hb));
+      return null === pb ? null : pb === eb
     }
 
-    function qO(dd) {
-      return null !== dd && "missing" in dd
+    function Uw(bb) {
+      return null !== bb && "missing" in bb
     }
 
-    function HO(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !TO(),
-        md = arguments.length > 2 ? arguments[2] : void 0;
-      return Od ? function(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xd.e,
-          md = arguments.length > 2 ? arguments[2] : void 0;
+    function tw(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !Fw(),
+        Mb = arguments.length > 2 ? arguments[2] : void 0;
+      return wb ? function(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Vb.c,
+          Mb = arguments.length > 2 ? arguments[2] : void 0;
         try {
-          const Wd = "start_failed" === dd || "pipeline_failed" === dd,
-            Fd = (0, sd.j)(dd, md),
-            Rd = Od.turnOffWebGpuAfterDeviceLoss(Wd ? "visible" : (0, yd.g)((0, qd.i)()), Wd, Fd);
-          return WO && (0, hd.u)("webgpuLoss"), Od.isWebGpuOffAfterLoss() && "webgpu" === kd(Hd.k.getItem(Qd.d)) && Hd.k.removeItem(Qd.d), (0, Kd.o)("webgpuloss") && (0, vd.e)((Od => {
-            var md;
-            Od.noteWebGpuLoss("wasm", Rd ? dd : `${dd}, which storage didn't keep`, null !== (md = Fd.message) && void 0 !== md ? md : null)
-          })), Rd
+          const eb = "start_failed" === bb || "pipeline_failed" === bb,
+            Hb = (0, cb.j)(bb, Mb),
+            pb = wb.turnOffWebGpuAfterDeviceLoss(eb ? "visible" : (0, Fb.l)((0, Cb.k)()), eb, Hb);
+          return ww && (0, lb.w)("webgpuLoss"), wb.isWebGpuOffAfterLoss() && "webgpu" === nb(Eb.i.getItem(Ib.e)) && Eb.i.removeItem(Ib.e), (0, gb.m)("webgpuloss") && (0, Lb.d)((wb => {
+            var Mb;
+            wb.noteWebGpuLoss("wasm", pb ? bb : `${bb}, which storage didn't keep`, null !== (Mb = Hb.message) && void 0 !== Mb ? Mb : null)
+          })), pb
         } catch {
           return !1
         }
-      }(dd, Xd.e, md) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+      }(bb, Vb.c, Mb) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const yO = "framePacing";
+    const Cw = "framePacing";
 
-    function bO(dd, Od) {
-      const md = oO("webgpu" === (null === Od || void 0 === Od ? void 0 : Od.backend) ? Od : null, dd, yO, (dd => /^\d{1,9}$/.test(dd)));
-      return null === md ? void 0 : Number(md)
+    function Ew(bb, wb) {
+      const Mb = Iw("webgpu" === (null === wb || void 0 === wb ? void 0 : wb.backend) ? wb : null, bb, Cw, (bb => /^\d{1,9}$/.test(bb)));
+      return null === Mb ? void 0 : Number(Mb)
     }
 
-    function TO() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function Fw() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === kd(new URLSearchParams(dd).get(Qd.b))
+        return "webgpu" === nb(new URLSearchParams(bb).get(Ib.c))
       } catch {
         return !1
       }
     }
 
-    function pO(dd) {
-      return !!YO(dd) || dd instanceof Error && !(dd instanceof WebAssembly.RuntimeError) && dd.message.startsWith(`${wd.p.RenderSurfaceUnusable}:`)
+    function Bw(bb) {
+      return !!sw(bb) || bb instanceof Error && !(bb instanceof WebAssembly.RuntimeError) && bb.message.startsWith(`${Xb.p.RenderSurfaceUnusable}:`)
     }
 
-    function YO(dd) {
+    function sw(bb) {
       const {
-        name: Od,
-        message: md
-      } = null !== dd && void 0 !== dd ? dd : {};
-      return "InvalidStateError" === Od && "string" === typeof md && md.startsWith("GPUDevice.")
+        name: wb,
+        message: Mb
+      } = null !== bb && void 0 !== bb ? bb : {};
+      return "InvalidStateError" === wb && "string" === typeof Mb && Mb.startsWith("GPUDevice.")
     }
 
-    function gO(dd) {
-      const Od = dd;
-      return "function" === typeof Od.fFd && "function" === typeof Od.MFd ? Od : null
+    function mw(bb) {
+      const wb = bb;
+      return "function" === typeof wb.kHb && "function" === typeof wb.bpb ? wb : null
     }
 
-    function wO(dd) {
-      return "function" === typeof dd.qb ? dd : null
+    function hw(bb) {
+      return "function" === typeof bb.nF ? bb : null
     }
-    const aO = "openRenderer";
-    const EO = 5e3,
-      JO = 15e3;
+    const zw = "openRenderer";
+    const Xw = 5e3,
+      xw = 15e3;
 
-    function UO(dd, Od, md, Wd, Fd, Rd) {
-      return (0, Jd.k)(function(dd, Od, md, Wd, Fd, Rd) {
-        const Xd = (0, Ud.f)(dd, Od, (() => dd.qb(md, Wd, Fd, Rd.indirectHangs, Rd.storagePullBreaks, Rd.splitPassBreaks, Rd.earlySky, Rd.instancedTerrain, Rd.cellLight, Rd.framesAhead, Rd.webGpuRestores, Rd.bufferCopiesCrash))),
+    function jw(bb, wb, Mb, eb, Hb, pb) {
+      return (0, jb.n)(function(bb, wb, Mb, eb, Hb, pb) {
+        const Vb = (0, Kb.e)(bb, wb, (() => bb.nF(Mb, eb, Hb, pb.indirectHangs, pb.storagePullBreaks, pb.splitPassBreaks, pb.earlySky, pb.instancedTerrain, pb.cellLight, pb.framesAhead, pb.webGpuRestores, pb.bufferCopiesCrash))),
           {
-            firstVertex: Kd
-          } = Rd;
-        return void 0 === Kd ? Xd : Xd.then((dd => ((0, xd.d)(md, Kd), dd)))
-      }(dd, Od, md, Wd, Fd, Rd), JO, `${wd.p.RenderSurfaceUnusable}: the renderer didn't open in ${JO/1e3} s`, BO)
+            firstVertex: gb
+          } = pb;
+        return void 0 === gb ? Vb : Vb.then((bb => ((0, rb.e)(Mb, gb), bb)))
+      }(bb, wb, Mb, eb, Hb, pb), xw, `${Xb.p.RenderSurfaceUnusable}: the renderer didn't open in ${xw/1e3} s`, rw)
     }
-    async function xO(dd, Od, md, Wd, Fd, Rd) {
-      if ("function" !== typeof dd.DFd) throw new Error("this core has no set_renderer");
-      const Xd = await UO(Od, aO, md, Fd, Wd, Rd);
+    async function Kw(bb, wb, Mb, eb, Hb, pb) {
+      if ("function" !== typeof bb.uHb) throw new Error("this core has no set_renderer");
+      const Vb = await jw(wb, zw, Mb, Hb, eb, pb);
       try {
-        dd.DFd(Xd)
-      } catch (Kd) {
-        throw BO(Xd), Kd
+        bb.uHb(Vb)
+      } catch (gb) {
+        throw rw(Vb), gb
       }
     }
 
-    function BO(dd) {
+    function rw(bb) {
       try {
-        dd.free()
+        bb.free()
       } catch {}
     }
   },
-  42804: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Wd
+  42519: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => eb
     });
-    const Wd = {
+    const eb = {
       destroy_stage_0: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAK0lEQVQYlWP8//8/IwMewIRPknQFjIyM/wmaYGdn9w9FE7IjYSagiFHsCwCM7A/Ccc+NjAAAAABJRU5ErkJggg==",
       destroy_stage_1: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAQklEQVQYlYWPMQ4AIAgDOeO7+v9XWScMOGinpjmgYJt4aKQB/ASqKtwASeuGZxrbAEhyRJxe1JJ1debtRIZt6PfmBqYNG36KBWHbAAAAAElFTkSuQmCC",
       destroy_stage_2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAARUlEQVQYlYWPwQnAMAwDdaVr2ftPVfWVIBJC9DI6LMvYRpIAjzn1rMaq9wQAbwnd/SWUJNkmb1eVkx07zPK5PaLTu37xA3+wH3UI6vmHAAAAAElFTkSuQmCC",
@@ -734,294 +734,294 @@ export const modules = {
       destroy_stage_9: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAUElEQVQYlW2OyQ3AMAgEhyhtQfF2X9m8IKvIvBDMHkgKSQGQmcJGUtBAZsr3hm6Aqnr4zUBOt4vfJh8gIuTPtdZFK1ztXUbtcXvvz/nU3F1eyBpW2eqlL9QAAAAASUVORK5CYII="
     }
   },
-  42713: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => qd,
-      d: () => Hd,
-      f: () => od,
-      g: () => td
+  42437: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Cb,
+      f: () => Eb,
+      g: () => Ub,
+      k: () => Ob
     });
-    const Wd = 2e3,
-      Fd = "unavailable";
-    let Rd = () => Promise.resolve().then((() => md(1922))),
-      Xd = null,
-      Kd = null,
-      hd = vd();
+    const eb = 2e3,
+      Hb = "unavailable";
+    let pb = () => Promise.resolve().then((() => Mb(1989))),
+      Vb = null,
+      gb = null,
+      lb = Lb();
 
-    function vd() {
-      let dd = () => {};
+    function Lb() {
+      let bb = () => {};
       return {
-        promise: new Promise((Od => {
-          dd = () => {
-            Od(null)
+        promise: new Promise((wb => {
+          bb = () => {
+            wb(null)
           }
         })),
-        resolve: dd
+        resolve: bb
       }
     }
 
-    function Qd() {
-      if (null === Xd) {
-        const dd = Rd();
-        Xd = dd, dd.then((Od => {
-          Xd === dd && (Kd = Od)
+    function Ib() {
+      if (null === Vb) {
+        const bb = pb();
+        Vb = bb, bb.then((wb => {
+          Vb === bb && (gb = wb)
         }), (() => {
-          Xd === dd && (Xd = null)
+          Vb === bb && (Vb = null)
         }))
       }
-      return Xd
+      return Vb
     }
 
-    function td() {
-      Qd().catch((() => {}))
+    function Ob() {
+      Ib().catch((() => {}))
     }
 
-    function od() {
-      hd.resolve()
+    function Ub() {
+      lb.resolve()
     }
 
-    function Nd(dd, Od, md, Wd) {
-      if (null === dd) return {
-        errorKind: Od,
-        fingerprint: Fd,
-        dedupe: `${Od}|${Wd}`
+    function tb(bb, wb, Mb, eb) {
+      if (null === bb) return {
+        errorKind: wb,
+        fingerprint: Hb,
+        dedupe: `${wb}|${eb}`
       };
       const {
-        fingerprint: Rd
-      } = dd.clientErrorKey(Od, md, Wd);
+        fingerprint: pb
+      } = bb.clientErrorKey(wb, Mb, eb);
       return {
-        errorKind: Od,
-        fingerprint: Rd,
-        dedupe: Rd
+        errorKind: wb,
+        fingerprint: pb,
+        dedupe: pb
       }
     }
 
-    function qd(dd, Od, md, Wd) {
-      return null === Kd ? Wd ? (td(), Nd(null, dd, Od, md)) : null : Nd(Kd, dd, Od, md)
+    function Cb(bb, wb, Mb, eb) {
+      return null === gb ? eb ? (Ob(), tb(null, bb, wb, Mb)) : null : tb(gb, bb, wb, Mb)
     }
-    async function Hd(dd, Od, md) {
-      let Fd;
-      const Rd = new Promise((dd => {
-        Fd = setTimeout((() => {
-          dd(null)
-        }), Wd)
+    async function Eb(bb, wb, Mb) {
+      let Hb;
+      const pb = new Promise((bb => {
+        Hb = setTimeout((() => {
+          bb(null)
+        }), eb)
       }));
       try {
-        return Nd(await Promise.race([Qd(), Rd, hd.promise]), dd, Od, md)
+        return tb(await Promise.race([Ib(), pb, lb.promise]), bb, wb, Mb)
       } catch {
-        return Nd(null, dd, Od, md)
+        return tb(null, bb, wb, Mb)
       } finally {
-        clearTimeout(Fd)
+        clearTimeout(Hb)
       }
     }
   },
-  42709: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      BUILT_IN_ANIMATIONS_SITE: () => mO,
-      CAMERA_DIRECTOR_SITE: () => hO,
-      CORE_ERRORS_SITE: () => ed,
-      EVENT_OVERFLOW_SITE: () => OO,
-      FIRST_VIEW_SITE: () => RO,
-      GraphicsLostError: () => Rm,
-      JOIN_SITE: () => ld,
-      LEAVE_SITE: () => Cd,
-      MAIN_THREAD_SITE: () => XO,
-      MODEL_FEED_SITE: () => Zd,
-      MODEL_POOL_SITE: () => kd,
-      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => tO,
-      NON_FATAL_REPORTS_PER_SESSION: () => SO,
-      PREVIEW_ANIMATIONS_SITE: () => dO,
-      RENDER_RELOAD_SITE: () => Md,
-      REQUEST_DEVICE_SITE: () => KO,
-      TEXTURE_NAMES_SITE: () => fd,
-      TEXTURE_PACK_FEED_SITE: () => WO,
-      TEXTURE_PACK_SWAP_SITE: () => FO,
-      TurnstilePageError: () => bm,
-      WASM_LOAD_SITE: () => Id,
-      countRenderLost: () => dW,
-      crashError: () => rO,
-      crashReportsSettled: () => IO,
-      deviceLossFields: () => fO,
-      deviceLossWords: () => Zm,
-      flushCrashReports: () => DO,
-      joinFailureCode: () => Tm,
-      loadRecoveryCode: () => tm,
-      lokiTransport: () => qO,
-      modelFailureCode: () => Jm,
-      readTrap: () => Om,
-      renderLoss: () => Mm,
-      renderReloadMessage: () => km,
-      reportCameraDirectorFault: () => em,
-      reportCoreErrors: () => ZO,
-      reportCrash: () => GO,
-      reportDataLoadFailure: () => XW,
-      reportDisconnect: () => am,
-      reportDroppedRequiredLimits: () => Nm,
-      reportEventOverflow: () => Vm,
-      reportFirstViewNoTerrain: () => Pm,
-      reportFirstViewUnshown: () => zm,
-      reportLightFault: () => rm,
-      reportLoadRecovery: () => om,
-      reportLoadReload: () => Hm,
-      reportMainStall: () => cm,
-      reportMemoryShed: () => nm,
-      reportModelFailure: () => Um,
-      reportModelPoolFailure: () => xm,
-      reportModelsModuleRetry: () => Bm,
-      reportNoBackendRetry: () => hm,
-      reportPageJoinFailure: () => Ym,
-      reportReconnectGaveUp: () => Em,
-      reportRenderRecovery: () => zO,
-      reportRenderReload: () => WW,
-      reportReplayFault: () => Dm,
-      reportStaleBuildReload: () => hW,
-      reportStoppedCore: () => Wm,
-      reportTerrainTextureFailure: () => FW,
-      reportTexturePackFeedLoadFailure: () => sm,
-      reportTexturePackKeptOut: () => um,
-      reportUnstreamedCoreLoad: () => ym,
-      reportUnusedSeat: () => wm,
-      reportWorkerLost: () => im,
-      reportWorkerStartTimeout: () => jm,
-      reportWorldgenGaveUp: () => Gm,
-      reportWorldgenLoadFailure: () => Sm,
-      reportWorldgenWorkerLost: () => Am,
-      resetCrashReports: () => lO,
-      setCrashAdPreload: () => aO,
-      setCrashBackend: () => wO,
-      setCrashScreen: () => pO,
-      setCrashTransport: () => bO,
-      showCrash: () => mm,
-      showJoinFailure: () => pm,
-      showUnsupported: () => Xm,
-      unknownSkyWords: () => CO,
-      unsupportedCrashScreen: () => Km,
-      warmCrashCounts: () => LO
+  42434: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      BUILT_IN_ANIMATIONS_SITE: () => bw,
+      CAMERA_DIRECTOR_SITE: () => Vw,
+      CORE_ERRORS_SITE: () => ab,
+      EVENT_OVERFLOW_SITE: () => kb,
+      FIRST_VIEW_SITE: () => ew,
+      GraphicsLostError: () => HM,
+      JOIN_SITE: () => ub,
+      LEAVE_SITE: () => db,
+      MAIN_THREAD_SITE: () => Hw,
+      MODEL_FEED_SITE: () => Pb,
+      MODEL_POOL_SITE: () => nb,
+      NON_FATAL_LOKI_REPORTS_PER_PAGE: () => Lw,
+      NON_FATAL_REPORTS_PER_SESSION: () => Rw,
+      PREVIEW_ANIMATIONS_SITE: () => Tb,
+      RENDER_RELOAD_SITE: () => ob,
+      REQUEST_DEVICE_SITE: () => pw,
+      TEXTURE_NAMES_SITE: () => yb,
+      TEXTURE_PACK_FEED_SITE: () => ww,
+      TEXTURE_PACK_SWAP_SITE: () => Mw,
+      TurnstilePageError: () => EM,
+      WASM_LOAD_SITE: () => ib,
+      countRenderLost: () => TM,
+      crashError: () => Ww,
+      crashReportsSettled: () => uw,
+      deviceLossFields: () => ow,
+      deviceLossWords: () => PM,
+      flushCrashReports: () => aw,
+      joinFailureCode: () => FM,
+      loadRecoveryCode: () => LM,
+      lokiTransport: () => Uw,
+      modelFailureCode: () => xM,
+      readTrap: () => bM,
+      renderLoss: () => oM,
+      renderReloadMessage: () => nM,
+      reportCameraDirectorFault: () => aM,
+      reportCoreErrors: () => nw,
+      reportCrash: () => Jw,
+      reportDataLoadFailure: () => He,
+      reportDisconnect: () => zM,
+      reportDroppedRequiredLimits: () => OM,
+      reportEventOverflow: () => YM,
+      reportFirstViewNoTerrain: () => NM,
+      reportFirstViewUnshown: () => vM,
+      reportLightFault: () => AM,
+      reportLoadRecovery: () => IM,
+      reportLoadReload: () => tM,
+      reportMainStall: () => QM,
+      reportMemoryShed: () => JM,
+      reportModelFailure: () => jM,
+      reportModelPoolFailure: () => KM,
+      reportModelsModuleRetry: () => rM,
+      reportNoBackendRetry: () => gM,
+      reportPageJoinFailure: () => sM,
+      reportReconnectGaveUp: () => XM,
+      reportRenderRecovery: () => Qw,
+      reportRenderReload: () => we,
+      reportReplayFault: () => qM,
+      reportStaleBuildReload: () => Ve,
+      reportStoppedCore: () => MM,
+      reportTerrainTextureFailure: () => Me,
+      reportTexturePackFeedLoadFailure: () => DM,
+      reportTexturePackKeptOut: () => cM,
+      reportUnstreamedCoreLoad: () => CM,
+      reportUnusedSeat: () => hM,
+      reportWorkerLost: () => ZM,
+      reportWorkerStartTimeout: () => GM,
+      reportWorldgenGaveUp: () => WM,
+      reportWorldgenLoadFailure: () => RM,
+      reportWorldgenWorkerLost: () => fM,
+      resetCrashReports: () => dw,
+      setCrashAdPreload: () => zw,
+      setCrashBackend: () => hw,
+      setCrashScreen: () => Bw,
+      setCrashTransport: () => Ew,
+      showCrash: () => wM,
+      showJoinFailure: () => BM,
+      showUnsupported: () => pM,
+      unknownSkyWords: () => Pw,
+      unsupportedCrashScreen: () => VM,
+      warmCrashCounts: () => Nw
     });
-    var Wd = md(1122),
-      Fd = md(1424),
-      Rd = md(202),
-      Xd = md(1415),
-      Kd = md(1368),
-      hd = md(310),
-      vd = md(1925),
-      Qd = md(4948),
-      td = md(42713),
-      od = md(5568),
-      Nd = md(42721),
-      qd = md(35387),
-      Hd = md(2482),
-      yd = md(35381),
-      bd = md(5064),
-      Td = md(151),
-      pd = md(145),
-      Yd = md(2484),
-      gd = md(38109),
-      wd = md(1786),
-      Ed = md(42733),
-      Jd = md(42743),
-      Ud = md(42552),
-      xd = md(42758),
-      Bd = md(42761),
-      Sd = md(38102),
-      sd = md(2421),
-      ud = md(2425),
-      Vd = md(42772),
-      Ad = md(42751),
-      rd = md(42797),
-      Gd = md(38397),
-      nd = md(732),
-      Ld = md(4447),
-      Pd = md(37644),
-      zd = md(42663),
-      cd = md(37659),
-      jd = md(42807);
-    const Dd = "[bloxd-wasm-client]",
-      ed = "coreErrors",
-      Id = "wasmLoad",
-      ld = "join",
-      Cd = "leave",
-      Zd = "modelFeed",
-      kd = "modelWorkerPool",
-      fd = "textureNames",
-      Md = "renderReload",
-      dO = "previewAnimations",
-      OO = "eventOverflow",
-      mO = "builtInAnimations",
-      WO = "texturePackFeed",
-      FO = "texturePackSwap",
-      RO = "firstView",
-      XO = "mainThread",
-      KO = "requestDevice",
-      hO = "cameraDirector",
-      vO = 300,
-      QO = 64,
-      tO = 8;
-    let oO = 0;
-    const NO = new Set,
-      qO = (dd, Od) => {
-        const md = EO[dd.kind],
-          Wd = {
-            backend: YO,
-            adPreload: gO
+    var eb = Mb(1126),
+      Hb = Mb(1455),
+      pb = Mb(211),
+      Vb = Mb(1447),
+      gb = Mb(1400),
+      lb = Mb(309),
+      Lb = Mb(1992),
+      Ib = Mb(5112),
+      Ob = Mb(42437),
+      Ub = Mb(5678),
+      tb = Mb(42441),
+      Cb = Mb(35179),
+      Eb = Mb(2529),
+      Fb = Mb(35175),
+      Bb = Mb(5243),
+      sb = Mb(160),
+      mb = Mb(153),
+      hb = Mb(2536),
+      zb = Mb(37772),
+      Xb = Mb(1848),
+      xb = Mb(42454),
+      jb = Mb(42465),
+      Kb = Mb(42263),
+      rb = Mb(42475),
+      Rb = Mb(42481),
+      Db = Mb(37764),
+      cb = Mb(2463),
+      Yb = Mb(2471),
+      Zb = Mb(42493),
+      fb = Mb(42472),
+      Ab = Mb(42515),
+      Wb = Mb(38062),
+      Jb = Mb(698),
+      Sb = Mb(4593),
+      Nb = Mb(37398),
+      vb = Mb(42387),
+      Qb = Mb(37406),
+      Gb = Mb(42525);
+    const qb = "[bloxd-wasm-client]",
+      ab = "coreErrors",
+      ib = "wasmLoad",
+      ub = "join",
+      db = "leave",
+      Pb = "modelFeed",
+      nb = "modelWorkerPool",
+      yb = "textureNames",
+      ob = "renderReload",
+      Tb = "previewAnimations",
+      kb = "eventOverflow",
+      bw = "builtInAnimations",
+      ww = "texturePackFeed",
+      Mw = "texturePackSwap",
+      ew = "firstView",
+      Hw = "mainThread",
+      pw = "requestDevice",
+      Vw = "cameraDirector",
+      gw = 300,
+      lw = 64,
+      Lw = 8;
+    let Iw = 0;
+    const Ow = new Set,
+      Uw = (bb, wb) => {
+        const Mb = Xw[bb.kind],
+          eb = {
+            backend: sw,
+            adPreload: mw
           };
-        if (null === md) return void HO(dd, Od, Wd, null);
-        const Fd = (0, td.b)(md, dd.message, dd.code, dd.fatal);
-        null === Fd ? jO("Loki", (async () => {
-          HO(dd, Od, Wd, await (0, td.d)(md, dd.message, dd.code))
-        })) : HO(dd, Od, Wd, Fd)
+        if (null === Mb) return void tw(bb, wb, eb, null);
+        const Hb = (0, Ob.c)(Mb, bb.message, bb.code, bb.fatal);
+        null === Hb ? qw("Loki", (async () => {
+          tw(bb, wb, eb, await (0, Ob.f)(Mb, bb.message, bb.code))
+        })) : tw(bb, wb, eb, Hb)
       };
 
-    function HO(dd, Od, md, Wd) {
+    function tw(bb, wb, Mb, eb) {
       let {
-        backend: Fd,
-        adPreload: Rd
-      } = md;
+        backend: Hb,
+        adPreload: pb
+      } = Mb;
       const {
-        kind: Xd,
-        code: hd,
-        site: Qd,
-        fatal: td,
-        details: od
-      } = dd;
-      if (!td)
-        if (null === Wd || (0, vd.d)(Wd.errorKind) || NO.has(Wd.dedupe)) {
-          if (oO >= tO) return;
-          oO++
-        } else NO.add(Wd.dedupe);
-      const Nd = {
-        ...od,
-        kind: Xd,
-        code: hd,
-        site: Qd,
-        fatal: String(td),
-        backend: Fd
+        kind: Vb,
+        code: lb,
+        site: Ib,
+        fatal: Ob,
+        details: Ub
+      } = bb;
+      if (!Ob)
+        if (null === eb || (0, Lb.d)(eb.errorKind) || Ow.has(eb.dedupe)) {
+          if (Iw >= Lw) return;
+          Iw++
+        } else Ow.add(eb.dedupe);
+      const tb = {
+        ...Ub,
+        kind: Vb,
+        code: lb,
+        site: Ib,
+        fatal: String(Ob),
+        backend: Hb
       };
-      Rd && (Nd.adPreload = "true"), null !== Wd && (Nd.errorKind = Wd.errorKind, Nd.fingerprint = Wd.fingerprint), Od instanceof Error && "string" === typeof Od.stack && (Nd.causeStack = Od.stack.slice(0, 2e3)), (0, Kd.rH)(rO(dd, Od), Nd)
+      pb && (tb.adPreload = "true"), null !== eb && (tb.errorKind = eb.errorKind, tb.fingerprint = eb.fingerprint), wb instanceof Error && "string" === typeof wb.stack && (tb.causeStack = wb.stack.slice(0, 2e3)), (0, gb.mE)(Ww(bb, wb), tb)
     }
-    let yO = qO;
+    let Cw = Uw;
 
-    function bO(dd) {
-      const Od = yO;
-      return yO = dd, Od
+    function Ew(bb) {
+      const wb = Cw;
+      return Cw = bb, wb
     }
-    let TO = () => {};
+    let Fw = () => {};
 
-    function pO(dd) {
-      const Od = TO;
-      return TO = dd, Od
+    function Bw(bb) {
+      const wb = Fw;
+      return Fw = bb, wb
     }
-    let YO = "unpicked",
-      gO = !1;
+    let sw = "unpicked",
+      mw = !1;
 
-    function wO(dd) {
-      YO = dd
+    function hw(bb) {
+      sw = bb
     }
 
-    function aO(dd) {
-      gO = dd
+    function zw(bb) {
+      mw = bb
     }
-    const EO = {
+    const Xw = {
         crash: "wasm_load",
         unsupported: "wasm_load",
         model: "wasm_load",
@@ -1047,7 +1047,7 @@ export const modules = {
         linkCensus: "wasm_load",
         linksReadAfterView: "wasm_load"
       },
-      JO = {
+      xw = {
         coreError: "wasm_load",
         recovered: "wasm_load",
         unstreamedLoad: "wasm_load",
@@ -1056,481 +1056,481 @@ export const modules = {
         mainStall: "wasm_load",
         texturePackKeptOut: "texture_pack"
       },
-      UO = new Set(["unstreamedLoad"]),
-      xO = new Set(["linkCensus", "linksReadAfterView"]);
-    let BO = !1;
-    const SO = 20,
-      sO = new Map;
-    let uO = 0,
-      VO = 0;
-    const iO = new Set,
-      AO = new Set;
+      jw = new Set(["unstreamedLoad"]),
+      Kw = new Set(["linkCensus", "linksReadAfterView"]);
+    let rw = !1;
+    const Rw = 20,
+      Dw = new Map;
+    let Yw = 0,
+      Zw = 0;
+    const fw = new Set,
+      Aw = new Set;
 
-    function rO(dd, Od) {
-      const md = Object.assign(new Error(`${dd.code}: ${dd.message}`), {
+    function Ww(bb, wb) {
+      const Mb = Object.assign(new Error(`${bb.code}: ${bb.message}`), {
         name: "WasmClientCrash",
-        cause: null !== Od && void 0 !== Od ? Od : void 0
+        cause: null !== wb && void 0 !== wb ? wb : void 0
       });
-      return Od instanceof Error && Od.stack && (md.stack = Od.stack), md
+      return wb instanceof Error && wb.stack && (Mb.stack = wb.stack), Mb
     }
 
-    function GO(dd) {
-      var Od, Wd;
+    function Jw(bb) {
+      var wb, eb;
       const {
-        kind: Fd,
-        code: Rd,
-        site: Xd,
-        fatal: Kd,
-        message: hd,
-        error: vd
-      } = dd, Qd = !1 !== dd.toTransport && !UO.has(Fd), td = !Kd && Qd && !xO.has(Fd), od = {
-        kind: Fd,
-        code: Rd,
-        site: Xd,
-        fatal: Kd,
-        message: hd,
-        details: null !== (Od = dd.details) && void 0 !== Od ? Od : {}
-      }, Nd = `${Rd}@${Xd}${void 0===dd.instance?"":`#${dd.instance}`}${Kd?"!":""}`, qd = (null !== (Wd = sO.get(Nd)) && void 0 !== Wd ? Wd : 0) + 1;
-      if (sO.set(Nd, qd), void 0 !== dd.countAs && 1 === qd && PO(dd.countAs), qd > 1 ? 0 === (qd & qd - 1) && cO((() => {
-          console.warn(`${Dd} ${Rd} at ${Xd} reported ${qd} times`)
-        })) : td && uO >= SO ? cO((() => {
-          console.warn(`${Dd} ${Fd} ${Rd} at ${Xd}: ${hd} (not sent: the session's ${SO} went)`, od.details, null !== vd && void 0 !== vd ? vd : "")
-        })) : (td && uO++, function(dd, Od, Wd, Fd) {
-          var Rd, Xd;
+        kind: Hb,
+        code: pb,
+        site: Vb,
+        fatal: gb,
+        message: lb,
+        error: Lb
+      } = bb, Ib = !1 !== bb.toTransport && !jw.has(Hb), Ob = !gb && Ib && !Kw.has(Hb), Ub = {
+        kind: Hb,
+        code: pb,
+        site: Vb,
+        fatal: gb,
+        message: lb,
+        details: null !== (wb = bb.details) && void 0 !== wb ? wb : {}
+      }, tb = `${pb}@${Vb}${void 0===bb.instance?"":`#${bb.instance}`}${gb?"!":""}`, Cb = (null !== (eb = Dw.get(tb)) && void 0 !== eb ? eb : 0) + 1;
+      if (Dw.set(tb, Cb), void 0 !== bb.countAs && 1 === Cb && vw(bb.countAs), Cb > 1 ? 0 === (Cb & Cb - 1) && Gw((() => {
+          console.warn(`${qb} ${pb} at ${Vb} reported ${Cb} times`)
+        })) : Ob && Yw >= Rw ? Gw((() => {
+          console.warn(`${qb} ${Hb} ${pb} at ${Vb}: ${lb} (not sent: the session's ${Rw} went)`, Ub.details, null !== Lb && void 0 !== Lb ? Lb : "")
+        })) : (Ob && Yw++, function(bb, wb, eb, Hb) {
+          var pb, Vb;
           const {
-            kind: Kd,
-            code: hd,
-            site: vd,
-            fatal: Qd,
-            message: td,
-            details: od
-          } = dd;
-          cO((() => {
-            (Qd ? console.error : console.warn)(`${Dd} ${Kd} ${hd} at ${vd}: ${td}`, od, null !== Od && void 0 !== Od ? Od : "")
+            kind: gb,
+            code: lb,
+            site: Lb,
+            fatal: Ib,
+            message: Ob,
+            details: Ub
+          } = bb;
+          Gw((() => {
+            (Ib ? console.error : console.warn)(`${qb} ${gb} ${lb} at ${Lb}: ${Ob}`, Ub, null !== wb && void 0 !== wb ? wb : "")
           }));
-          const Nd = JO[Kd],
-            qd = null !== (Rd = null !== (Xd = EO[Kd]) && void 0 !== Xd ? Xd : Nd) && void 0 !== Rd ? Rd : null;
-          Fd || null === qd || nO((async () => {
+          const tb = xw[gb],
+            Cb = null !== (pb = null !== (Vb = Xw[gb]) && void 0 !== Vb ? Vb : tb) && void 0 !== pb ? pb : null;
+          Hb || null === Cb || Sw((async () => {
             const {
-              reportCappedWasmFailure: Od,
-              reportUncappedWasmFailure: Wd,
-              reportWasmFailure: Fd
-            } = await md.e(218).then((() => md(35375))), Rd = xO.has(Kd) ? Wd : void 0 === Nd ? Fd : Od, Xd = function(dd) {
+              reportCappedWasmFailure: wb,
+              reportUncappedWasmFailure: eb,
+              reportWasmFailure: Hb
+            } = await Mb.e(218).then((() => Mb(35167))), pb = Kw.has(gb) ? eb : void 0 === tb ? Hb : wb, Vb = function(bb) {
               let {
-                kind: Od,
-                site: md,
-                fatal: Wd,
-                details: Fd
-              } = dd;
-              if ("crash" !== Od) return;
+                kind: wb,
+                site: Mb,
+                fatal: eb,
+                details: Hb
+              } = bb;
+              if ("crash" !== wb) return;
               return {
-                ...Fd,
-                site: md,
-                fatal: String(Wd)
+                ...Hb,
+                site: Mb,
+                fatal: String(eb)
               }
-            }(dd);
-            void 0 === Xd ? Rd(qd, td, hd) : Rd(qd, td, hd, Xd)
+            }(bb);
+            void 0 === Vb ? pb(Cb, Ob, lb) : pb(Cb, Ob, lb, Vb)
           }));
-          Wd && cO((() => {
-            yO(dd, Od)
+          eb && Gw((() => {
+            Cw(bb, wb)
           }))
-        }(od, vd, Qd, void 0 !== dd.countAs)), Kd) {
-        var Hd;
-        const Od = null !== (Hd = dd.screen) && void 0 !== Hd ? Hd : {
-          text: (0, Gd.f)(od, !0),
+        }(Ub, Lb, Ib, void 0 !== bb.countAs)), gb) {
+        var Eb;
+        const wb = null !== (Eb = bb.screen) && void 0 !== Eb ? Eb : {
+          text: (0, Wb.d)(Ub, !0),
           reload: !0,
           stillBlocked: null
         };
-        cO((() => {
-          TO(Od)
+        Gw((() => {
+          Fw(wb)
         }))
       }
-      return od
+      return Ub
     }
 
-    function nO(dd) {
-      jO("counts", (async () => {
+    function Sw(bb) {
+      qw("counts", (async () => {
         const {
-          peekVisitSessionId: Od
-        } = await Promise.resolve().then((() => md(747)));
-        null !== Od() && (await dd(), BO = !0)
+          peekVisitSessionId: wb
+        } = await Promise.resolve().then((() => Mb(715)));
+        null !== wb() && (await bb(), rw = !0)
       }))
     }
 
-    function LO() {
-      Promise.all([Promise.resolve().then((() => md(747))), md.e(218).then((() => md(35375)))]).catch((dd => {
-        console.warn(`${Dd} the counts' modules didn't load ahead`, dd)
+    function Nw() {
+      Promise.all([Promise.resolve().then((() => Mb(715))), Mb.e(218).then((() => Mb(35167)))]).catch((bb => {
+        console.warn(`${qb} the counts' modules didn't load ahead`, bb)
       }))
     }
 
-    function PO(dd) {
-      iO.has(dd.errorKind) || (iO.add(dd.errorKind), nO((async () => {
+    function vw(bb) {
+      fw.has(bb.errorKind) || (fw.add(bb.errorKind), Sw((async () => {
         const {
-          reportClientError: Od
-        } = await Promise.resolve().then((() => md(1916)));
-        Od(dd.errorKind, dd.error, dd.code, !0, void 0, dd.fields)
+          reportClientError: wb
+        } = await Promise.resolve().then((() => Mb(1987)));
+        wb(bb.errorKind, bb.error, bb.code, !0, void 0, bb.fields)
       })))
     }
 
-    function zO(dd, Od) {
-      jO("render_lost", (async () => {
+    function Qw(bb, wb) {
+      qw("render_lost", (async () => {
         const [{
-          reportClientError: Wd
+          reportClientError: eb
         }, {
-          CAPPED_COUNTS_VISIT_CAP: Fd
-        }] = await Promise.all([Promise.resolve().then((() => md(1916))), md.e(218).then((() => md(35375)))]);
-        Wd("render_lost", Od, dd, !0, Fd)
+          CAPPED_COUNTS_VISIT_CAP: Hb
+        }] = await Promise.all([Promise.resolve().then((() => Mb(1987))), Mb.e(218).then((() => Mb(35167)))]);
+        eb("render_lost", wb, bb, !0, Hb)
       }))
     }
 
-    function cO(dd) {
+    function Gw(bb) {
       try {
-        dd()
-      } catch (Od) {
+        bb()
+      } catch (wb) {
         try {
-          console.warn(`${Dd} could not send a report`, Od)
+          console.warn(`${qb} could not send a report`, wb)
         } catch {}
       }
     }
 
-    function jO(dd, Od) {
+    function qw(bb, wb) {
       try {
-        const md = Od().catch((Od => {
-          console.warn(`${Dd} could not send the report to ${dd}`, Od)
+        const Mb = wb().catch((wb => {
+          console.warn(`${qb} could not send the report to ${bb}`, wb)
         })).finally((() => {
-          AO.delete(md)
+          Aw.delete(Mb)
         }));
-        AO.add(md)
-      } catch (md) {
-        console.warn(`${Dd} could not send the report to ${dd}`, md)
+        Aw.add(Mb)
+      } catch (Mb) {
+        console.warn(`${qb} could not send the report to ${bb}`, Mb)
       }
     }
-    async function DO(dd) {
-      let Od;
-      (0, td.f)();
-      const md = new Promise((md => {
-        Od = setTimeout(md, dd)
+    async function aw(bb) {
+      let wb;
+      (0, Ob.g)();
+      const Mb = new Promise((Mb => {
+        wb = setTimeout(Mb, bb)
       }));
-      await Promise.race([eO(), md]), clearTimeout(Od)
+      await Promise.race([iw(), Mb]), clearTimeout(wb)
     }
-    async function eO() {
-      if (await Promise.allSettled([...AO]), BO) try {
+    async function iw() {
+      if (await Promise.allSettled([...Aw]), rw) try {
         const {
-          flushClientAnalyticsEvents: dd
-        } = await Promise.resolve().then((() => md(1620)));
-        await dd()
-      } catch (dd) {
-        console.warn(`${Dd} could not send the counts`, dd)
+          flushClientAnalyticsEvents: bb
+        } = await Promise.resolve().then((() => Mb(1672)));
+        await bb()
+      } catch (bb) {
+        console.warn(`${qb} could not send the counts`, bb)
       }
     }
-    async function IO() {
-      for (; AO.size > 0;) await Promise.allSettled([...AO])
+    async function uw() {
+      for (; Aw.size > 0;) await Promise.allSettled([...Aw])
     }
 
-    function lO() {
-      sO.clear(), uO = 0, BO = !1, oO = 0, NO.clear(), VO = 0, iO.clear(), (0, Nd.t)()
+    function dw() {
+      Dw.clear(), Yw = 0, rw = !1, Iw = 0, Ow.clear(), Zw = 0, fw.clear(), (0, tb.t)()
     }
 
-    function CO(dd) {
-      const Od = "object" === typeof dd && null !== dd ? dd.type : dd;
-      return "string" !== typeof Od ? "sky not named" : `sky ${JSON.stringify(Array.from(Od).slice(0,QO).join(""))}`
+    function Pw(bb) {
+      const wb = "object" === typeof bb && null !== bb ? bb.type : bb;
+      return "string" !== typeof wb ? "sky not named" : `sky ${JSON.stringify(Array.from(wb).slice(0,lw).join(""))}`
     }
 
-    function ZO(dd, Od, md, Wd) {
-      VO += Od;
+    function nw(bb, wb, Mb, eb) {
+      Zw += wb;
       for (const {
-          code: Kd,
-          detail: hd
+          code: gb,
+          detail: lb
         }
-        of dd) {
-        var Fd, Rd, Xd;
-        const dd = (0, od.ae)(Kd),
-          Od = (0, Nd.h)(Kd, hd),
-          vd = Od ? "CORE-RenderLinkPending" : `CORE-${dd}`,
-          Qd = (0, Nd.d)(Kd, hd),
-          td = null === Wd || void 0 === Wd ? void 0 : Wd(Kd, hd),
-          Hd = void 0 !== (null === Qd || void 0 === Qd ? void 0 : Qd.gpuDetails),
-          yd = Hd ? null === (Fd = (0, pd.y)()) || void 0 === Fd ? void 0 : Fd.renderer : void 0,
-          bd = Hd ? ` ${(0,Nd.m)()}` : "",
-          Td = Array.from([yd && `gpu ${(0,qd.d)(yd)}`, td].filter(Boolean).join("; ")).slice(0, vO).join(""),
-          Yd = `core error ${dd}${null!==(Rd=null===Qd||void 0===Qd?void 0:Qd.words)&&void 0!==Rd?Rd:""}${bd}${Td?`: ${Td}`:""}`,
-          gd = {
-            errorCode: String(Kd),
-            detail: String(hd),
-            droppedBefore: String(VO),
-            wasmBuild: md.wasm,
-            clientVersion: md.client,
-            ...null === Qd || void 0 === Qd ? void 0 : Qd.gpuDetails,
-            ...fO(Kd, hd)
+        of bb) {
+        var Hb, pb, Vb;
+        const bb = (0, Ub.ge)(gb),
+          wb = (0, tb.j)(gb, lb),
+          Lb = wb ? "CORE-RenderLinkPending" : `CORE-${bb}`,
+          Ib = (0, tb.e)(gb, lb),
+          Ob = null === eb || void 0 === eb ? void 0 : eb(gb, lb),
+          Eb = void 0 !== (null === Ib || void 0 === Ib ? void 0 : Ib.gpuDetails),
+          Fb = Eb ? null === (Hb = (0, mb.x)()) || void 0 === Hb ? void 0 : Hb.renderer : void 0,
+          Bb = Eb ? ` ${(0,tb.o)()}` : "",
+          sb = Array.from([Fb && `gpu ${(0,Cb.b)(Fb)}`, Ob].filter(Boolean).join("; ")).slice(0, gw).join(""),
+          hb = `core error ${bb}${null!==(pb=null===Ib||void 0===Ib?void 0:Ib.words)&&void 0!==pb?pb:""}${Bb}${sb?`: ${sb}`:""}`,
+          zb = {
+            errorCode: String(gb),
+            detail: String(lb),
+            droppedBefore: String(Zw),
+            wasmBuild: Mb.wasm,
+            clientVersion: Mb.client,
+            ...null === Ib || void 0 === Ib ? void 0 : Ib.gpuDetails,
+            ...ow(gb, lb)
           };
-        null !== Qd && (0, Nd.s)(Qd) ? cO((() => {
-          console.warn(`${Dd} coreError ${vd}: ${Yd} (not sent: the session's render warnings of its kind went)`, gd)
-        })) : kO(Kd) ? cO((() => {
-          console.warn(`${Dd} coreError ${vd}: ${Yd} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, gd)
-        })) : GO({
-          kind: Od ? "recovered" : dm(Kd, hd),
-          code: vd,
-          site: ed,
+        null !== Ib && (0, tb.r)(Ib) ? Gw((() => {
+          console.warn(`${qb} coreError ${Lb}: ${hb} (not sent: the session's render warnings of its kind went)`, zb)
+        })) : yw(gb) ? Gw((() => {
+          console.warn(`${qb} coreError ${Lb}: ${hb} (not sent: World Code's own sound or clip name, a warning as in the JS client)`, zb)
+        })) : Jw({
+          kind: wb ? "recovered" : kw(gb, lb),
+          code: Lb,
+          site: ab,
           fatal: !1,
-          message: Yd,
-          details: gd,
-          instance: null !== (Xd = null === Qd || void 0 === Qd ? void 0 : Qd.instance) && void 0 !== Xd ? Xd : MO(Kd, hd)
+          message: hb,
+          details: zb,
+          instance: null !== (Vb = null === Ib || void 0 === Ib ? void 0 : Ib.instance) && void 0 !== Vb ? Vb : Tw(gb, lb)
         })
       }
     }
 
-    function kO(dd) {
-      if (dd !== od.F.AudioUnknownSound && dd !== od.F.PresentationClipUnplayable) return !1;
+    function yw(bb) {
+      if (bb !== Ub.I.AudioUnknownSound && bb !== Ub.I.PresentationClipUnplayable) return !1;
       const {
-        gameNameWithVariation: Od,
-        lobbyName: md
-      } = (0, Xd.b)();
-      return null !== Od && (!!(0, Wd.k)(Od) || dd === od.F.AudioUnknownSound && (0, Fd.i)(Od, md))
+        gameNameWithVariation: wb,
+        lobbyName: Mb
+      } = (0, Vb.e)();
+      return null !== wb && (!!(0, eb.j)(wb) || bb === Ub.I.AudioUnknownSound && (0, Hb.e)(wb, Mb))
     }
 
-    function fO(dd, Od) {
-      if (dd !== od.F.RenderDeviceLost) return;
-      const md = Od >>> od.O.LINKS_IN_FLIGHT_SHIFT & od.O.LINKS_IN_FLIGHT_MAX,
-        Wd = Od >>> od.O.OLDEST_LINK_SHIFT & od.O.OLDEST_LINK_MAX;
+    function ow(bb, wb) {
+      if (bb !== Ub.I.RenderDeviceLost) return;
+      const Mb = wb >>> Ub.Q.LINKS_IN_FLIGHT_SHIFT & Ub.Q.LINKS_IN_FLIGHT_MAX,
+        eb = wb >>> Ub.Q.OLDEST_LINK_SHIFT & Ub.Q.OLDEST_LINK_MAX;
       return {
-        linksInFlight: String(md),
-        oldestLinkMs: String(Wd * od.O.OLDEST_LINK_UNIT_MS)
+        linksInFlight: String(Mb),
+        oldestLinkMs: String(eb * Ub.Q.OLDEST_LINK_UNIT_MS)
       }
     }
 
-    function MO(dd, Od) {
-      return dd === od.F.RenderDeviceLost && 0 !== (Od & od.O.RESTORE_UNHELD) ? "restoreUnheld" : void 0
+    function Tw(bb, wb) {
+      return bb === Ub.I.RenderDeviceLost && 0 !== (wb & Ub.Q.RESTORE_UNHELD) ? "restoreUnheld" : void 0
     }
 
-    function dm(dd, Od) {
-      return dd === od.F.JobsHeapGaveUp ? "meshHeap" : (0, Nd.k)(dd, Od) ? "linksReadAfterView" : (0, Nd.g)(dd, Od) ? "linkCensus" : "coreError"
+    function kw(bb, wb) {
+      return bb === Ub.I.JobsHeapGaveUp ? "meshHeap" : (0, tb.n)(bb, wb) ? "linksReadAfterView" : (0, tb.g)(bb, wb) ? "linkCensus" : "coreError"
     }
 
-    function Om(dd) {
-      return (0, Pd.m)(dd instanceof zd.e ? dd.trap : dd, sd.B, sd.hb)
+    function bM(bb) {
+      return (0, Nb.k)(bb instanceof vb.d ? bb.trap : bb, cb.x, cb.Z)
     }
 
-    function mm(dd, Od, md) {
-      return Fm(dd, Od, md, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
+    function wM(bb, wb, Mb) {
+      return eM(bb, wb, Mb, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !0)
     }
 
-    function Wm(dd, Od, md) {
-      return Fm(dd, Od, md, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
+    function MM(bb, wb, Mb) {
+      return eM(bb, wb, Mb, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, !1)
     }
 
-    function Fm(dd, Od, md, Wd, Fd) {
+    function eM(bb, wb, Mb, eb, Hb) {
       let {
-        memoryDetails: Rd = {},
-        memoryStep: Xd
-      } = Wd;
+        memoryDetails: pb = {},
+        memoryStep: Vb
+      } = eb;
       const {
-        code: Kd,
-        details: hd,
-        message: vd
-      } = (0, Ed.I)(dd, Od), Qd = [];
-      Object.assign(hd, (0, cd.e)(dd.error)), null !== md && (hd.trapKind = md.kind, null !== md.panic && (hd.panic = (0, Pd.l)(md.panic)), md.refusedBytes > 0 && (hd.refusedAllocation = String(md.refusedBytes)), Qd.push((0, Pd.q)(md.kind, md.refusedBytes))), void 0 !== Xd && Qd.push(`memory=${Xd}`);
-      const td = dd.error instanceof Rm;
-      return td && (0, nd.F)(), GO({
+        code: gb,
+        details: lb,
+        message: Lb
+      } = (0, xb.L)(bb, wb), Ib = [];
+      Object.assign(lb, (0, Qb.g)(bb.error)), null !== Mb && (lb.trapKind = Mb.kind, null !== Mb.panic && (lb.panic = (0, Nb.h)(Mb.panic)), Mb.refusedBytes > 0 && (lb.refusedAllocation = String(Mb.refusedBytes)), Ib.push((0, Nb.o)(Mb.kind, Mb.refusedBytes))), void 0 !== Vb && Ib.push(`memory=${Vb}`);
+      const Ob = bb.error instanceof HM;
+      return Ob && (0, Jb.G)(), Jw({
         kind: "crash",
-        code: Kd,
-        site: dd.site,
-        fatal: Fd,
-        message: [...Qd, vd].join("; "),
+        code: gb,
+        site: bb.site,
+        fatal: Hb,
+        message: [...Ib, Lb].join("; "),
         details: {
-          ...hd,
-          ...Rd,
-          ...void 0 === Xd ? {} : {
-            memoryStep: Xd
+          ...lb,
+          ...pb,
+          ...void 0 === Vb ? {} : {
+            memoryStep: Vb
           }
         },
-        error: dd.error,
-        screen: td ? Km("graphicsLost") : void 0
+        error: bb.error,
+        screen: Ob ? VM("graphicsLost") : void 0
       })
     }
-    class Rm extends Error {}
+    class HM extends Error {}
 
-    function Xm(dd, Od, md) {
-      let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      return "download" !== dd && (0, nd.F)(), GO({
+    function pM(bb, wb, Mb) {
+      let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      return "download" !== bb && (0, Jb.G)(), Jw({
         kind: "unsupported",
-        code: Od,
-        site: Id,
+        code: wb,
+        site: ib,
         fatal: !0,
-        message: md,
+        message: Mb,
         details: {
-          ...Wd,
-          cause: dd,
-          status: Od
+          ...eb,
+          cause: bb,
+          status: wb
         },
-        screen: Km(dd)
+        screen: VM(bb)
       })
     }
 
-    function Km(dd) {
-      const Od = (0, Rd.q)(Td.siteUsed),
-        md = (0, Gd.v)(dd, Od),
-        Wd = "noContext" === dd || "graphicsLost" === dd ? (0, Gd.o)(dd, Od) : null;
+    function VM(bb) {
+      const wb = (0, pb.x)(sb.siteUsed),
+        Mb = (0, Wb.q)(bb, wb),
+        eb = "noContext" === bb || "graphicsLost" === bb ? (0, Wb.l)(bb, wb) : null;
       return {
-        text: md,
-        reload: "general:tryAgain" === md.confirm,
-        stillBlocked: Wd
+        text: Mb,
+        reload: "general:tryAgain" === Mb.confirm,
+        stillBlocked: eb
       }
     }
 
-    function hm(dd, Od, md) {
-      return GO({
+    function gM(bb, wb, Mb) {
+      return Jw({
         kind: "recovered",
-        code: "reprobed" === dd ? "no_backend_reprobed" : "no_backend_wasm_reload",
-        site: Id,
+        code: "reprobed" === bb ? "no_backend_reprobed" : "no_backend_wasm_reload",
+        site: ib,
         fatal: !1,
-        message: md,
+        message: Mb,
         details: {
           ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-          decline: Od,
-          step: dd
+          decline: wb,
+          step: bb
         }
       })
     }
-    const Qm = 9;
+    const lM = 9;
 
-    function tm(dd) {
-      const Od = "recovered" === dd.outcome ? "recovered" : "gave_up",
-        md = "load" === dd.step ? `wasm_load_${Od}${dd.oom?"_oom":""}` : `no_context_${Od}`;
-      return "recovered" === dd.outcome ? `${md}_t${Math.min(dd.tries,Qm)}` : "load" === dd.step ? `${md}_${dd.stage}` : md
+    function LM(bb) {
+      const wb = "recovered" === bb.outcome ? "recovered" : "gave_up",
+        Mb = "load" === bb.step ? `wasm_load_${wb}${bb.oom?"_oom":""}` : `no_context_${wb}`;
+      return "recovered" === bb.outcome ? `${Mb}_t${Math.min(bb.tries,lM)}` : "load" === bb.step ? `${Mb}_${bb.stage}` : Mb
     }
 
-    function om(dd) {
+    function IM(bb) {
       const {
-        step: Od,
-        outcome: md,
-        tries: Wd,
-        detail: Fd,
-        details: Rd = {}
-      } = dd, Xd = "load" === dd.step ? {
-        stage: dd.stage,
-        ...dd.oom ? {
+        step: wb,
+        outcome: Mb,
+        tries: eb,
+        detail: Hb,
+        details: pb = {}
+      } = bb, Vb = "load" === bb.step ? {
+        stage: bb.stage,
+        ...bb.oom ? {
           oom: "true"
         } : {}
       } : {};
-      return GO({
+      return Jw({
         kind: "recovered",
-        code: tm(dd),
-        site: Id,
+        code: LM(bb),
+        site: ib,
         fatal: !1,
-        message: Fd,
+        message: Hb,
         details: {
-          ...Rd,
-          step: Od,
-          outcome: md,
-          tries: String(Wd),
-          ...Xd
+          ...pb,
+          step: wb,
+          outcome: Mb,
+          tries: String(eb),
+          ...Vb
         }
       })
     }
 
-    function Nm(dd) {
-      return GO({
+    function OM(bb) {
+      return Jw({
         kind: "recovered",
         code: "WEBGPU-unknownLimits",
-        site: KO,
+        site: pw,
         fatal: !1,
         message: "WebGPU dropped required limits the browser doesn't name",
         details: {
-          limits: dd.join(",")
+          limits: bb.join(",")
         }
       })
     }
-    const qm = "reload=wasm";
+    const UM = "reload=wasm";
 
-    function Hm(dd, Od, md) {
-      return GO({
+    function tM(bb, wb, Mb) {
+      return Jw({
         kind: "unsupported",
-        code: Od,
-        site: Id,
+        code: wb,
+        site: ib,
         fatal: !1,
-        message: [qm, md].join("; "),
+        message: [UM, Mb].join("; "),
         details: {
-          cause: dd,
-          status: Od,
+          cause: bb,
+          status: wb,
           fallback: "wasmReload"
         }
       })
     }
 
-    function ym() {
+    function CM() {
       const {
-        code: dd,
-        message: Od
-      } = Ld.c;
-      return GO({
+        code: bb,
+        message: wb
+      } = Sb.c;
+      return Jw({
         kind: "unstreamedLoad",
-        code: dd,
-        site: Id,
+        code: bb,
+        site: ib,
         fatal: !1,
-        message: Od
+        message: wb
       })
     }
-    class bm extends Error {
+    class EM extends Error {
       constructor() {
         super("the shell's page can't run the Turnstile check: join from /play"), this.name = "TurnstilePageError"
       }
     }
 
-    function Tm(dd) {
-      return dd instanceof xd.n ? 0 === dd.code ? "JOIN-matchmake" : `JOIN-${dd.code}` : dd instanceof xd.e ? 0 === dd.code ? `JOIN-${dd.stage}` : `JOIN-${dd.stage}-${dd.code}` : dd instanceof Ud.e ? "JOIN-gameCode" : dd instanceof bm ? "JOIN-turnstilePage" : dd instanceof xd.v ? "JOIN-trafficCheck" : dd instanceof gd.i ? "JOIN-timeout" : "JOIN-network"
+    function FM(bb) {
+      return bb instanceof rb.k ? 0 === bb.code ? "JOIN-matchmake" : `JOIN-${bb.code}` : bb instanceof rb.b ? 0 === bb.code ? `JOIN-${bb.stage}` : `JOIN-${bb.stage}-${bb.code}` : bb instanceof Kb.e ? "JOIN-gameCode" : bb instanceof EM ? "JOIN-turnstilePage" : bb instanceof rb.w ? "JOIN-trafficCheck" : bb instanceof zb.e ? "JOIN-timeout" : "JOIN-network"
     }
 
-    function pm(dd, Od) {
-      const md = (0, cd.h)(dd),
-        Wd = {
-          wasmBuild: Od.wasm,
-          clientVersion: Od.client
+    function BM(bb, wb) {
+      const Mb = (0, Qb.j)(bb),
+        eb = {
+          wasmBuild: wb.wasm,
+          clientVersion: wb.client
         },
-        Fd = dd instanceof bm ? {
-          text: (0, Gd.q)(),
+        Hb = bb instanceof EM ? {
+          text: (0, Wb.m)(),
           reload: !1,
           stillBlocked: null
         } : void 0,
-        Rd = (0, Bd.f)(dd),
-        Xd = "expected" !== Rd;
-      return GO({
+        pb = (0, Rb.d)(bb),
+        Vb = "expected" !== pb;
+      return Jw({
         kind: "join",
-        code: Tm(dd),
-        site: ld,
+        code: FM(bb),
+        site: ub,
         fatal: !0,
-        message: md,
-        details: Wd,
-        error: dd,
-        screen: Fd,
-        toTransport: Xd,
-        instance: Rd
+        message: Mb,
+        details: eb,
+        error: bb,
+        screen: Hb,
+        toTransport: Vb,
+        instance: pb
       })
     }
 
-    function Ym(dd, Od, md) {
-      var Wd;
-      const Fd = (0, Bd.f)(dd),
-        Rd = {
-          cause: (dd instanceof xd.e || dd instanceof xd.n) && null !== (Wd = dd.serverText) && void 0 !== Wd ? Wd : "",
-          sinceJoinStart: (0, Yd.d)(md.sinceJoinStartMs),
-          game: md.game,
-          ...(0, Yd.o)(),
-          wasmBuild: Od.wasm,
-          clientVersion: Od.client
+    function sM(bb, wb, Mb) {
+      var eb;
+      const Hb = (0, Rb.d)(bb),
+        pb = {
+          cause: (bb instanceof rb.b || bb instanceof rb.k) && null !== (eb = bb.serverText) && void 0 !== eb ? eb : "",
+          sinceJoinStart: (0, hb.e)(Mb.sinceJoinStartMs),
+          game: Mb.game,
+          ...(0, hb.l)(),
+          wasmBuild: wb.wasm,
+          clientVersion: wb.client
         };
-      return GO({
+      return Jw({
         kind: "pageJoin",
-        code: Tm(dd),
-        site: ld,
+        code: FM(bb),
+        site: ub,
         fatal: !1,
-        message: (0, cd.h)(dd),
-        details: Rd,
-        error: dd,
-        toTransport: "unrecognised" === Fd,
-        instance: Fd
+        message: (0, Qb.j)(bb),
+        details: pb,
+        error: bb,
+        toTransport: "unrecognised" === Hb,
+        instance: Hb
       })
     }
-    const gm = {
+    const mM = {
       renewed: {
         code: "CORE-seatRenewed",
         message: "the early seat outlasted the room's hold, so the join reserved another"
@@ -1549,673 +1549,673 @@ export const modules = {
       }
     };
 
-    function wm(dd, Od) {
+    function hM(bb, wb) {
       let {
-        unused: md,
-        answered: Wd,
-        XV: Fd
-      } = dd;
+        unused: Mb,
+        answered: eb,
+        fW: Hb
+      } = bb;
       const {
-        code: Rd,
-        message: Xd
-      } = gm[md], Kd = {
-        unused: md,
-        answered: String(Wd),
-        XV: String(Fd),
-        wasmBuild: Od.wasm,
-        clientVersion: Od.client
+        code: pb,
+        message: Vb
+      } = mM[Mb], gb = {
+        unused: Mb,
+        answered: String(eb),
+        fW: String(Hb),
+        wasmBuild: wb.wasm,
+        clientVersion: wb.client
       };
-      return GO({
+      return Jw({
         kind: "seat",
-        code: Rd,
-        site: ld,
+        code: pb,
+        site: ub,
         fatal: !1,
-        message: Xd,
-        details: Kd
+        message: Vb,
+        details: gb
       })
     }
 
-    function am(dd, Od, md) {
-      var Wd;
-      let Fd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (Wd = dd.name) && void 0 !== Wd ? Wd : String(dd.code);
-      const Rd = {
-          closeCode: String(dd.code),
-          recognised: String(null !== dd.name),
-          closeReason: md.closeReason,
-          sinceJoined: (0, Yd.d)(md.sinceJoinedMs),
-          game: md.game,
-          ...(0, Yd.o)(),
-          wasmBuild: Od.wasm,
-          clientVersion: Od.client
+    function zM(bb, wb, Mb) {
+      var eb;
+      let Hb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null !== (eb = bb.name) && void 0 !== eb ? eb : String(bb.code);
+      const pb = {
+          closeCode: String(bb.code),
+          recognised: String(null !== bb.name),
+          closeReason: Mb.closeReason,
+          sinceJoined: (0, hb.e)(Mb.sinceJoinedMs),
+          game: Mb.game,
+          ...(0, hb.l)(),
+          wasmBuild: wb.wasm,
+          clientVersion: wb.client
         },
-        Xd = null === dd.name && !(0, Yd.g)(dd.code);
-      return GO({
+        Vb = null === bb.name && !(0, hb.g)(bb.code);
+      return Jw({
         kind: "disconnect",
-        code: Fd,
-        site: Cd,
+        code: Hb,
+        site: db,
         fatal: !1,
         message: "Left room",
-        details: Rd,
-        toTransport: Xd
+        details: pb,
+        toTransport: Vb
       })
     }
 
-    function Em(dd, Od) {
-      const md = {
-        ...(0, Hd.o)(dd),
-        wasmBuild: Od.wasm,
-        clientVersion: Od.client
+    function XM(bb, wb) {
+      const Mb = {
+        ...(0, Eb.o)(bb),
+        wasmBuild: wb.wasm,
+        clientVersion: wb.client
       };
-      return GO({
+      return Jw({
         kind: "disconnect",
-        code: `reconnect-${dd.reason}`,
-        site: ld,
+        code: `reconnect-${bb.reason}`,
+        site: ub,
         fatal: !1,
         message: "Reconnect failed",
-        details: md
+        details: Mb
       })
     }
 
-    function Jm(dd) {
-      return dd.error instanceof ud.e ? `MODEL-${dd.error.status}` : dd.error instanceof Vd.l ? "MODEL-ring" : "MODEL-network"
+    function xM(bb) {
+      return bb.error instanceof Yb.g ? `MODEL-${bb.error.status}` : bb.error instanceof Zb.l ? "MODEL-ring" : "MODEL-network"
     }
 
-    function Um(dd, Od) {
-      const md = Jm(dd),
-        Wd = `model file ${dd.file} ${dd.startup?"(startup) ":""}could not load`,
-        Fd = {
-          file: String(dd.file),
-          url: dd.url,
-          wasmBuild: Od.wasm,
-          clientVersion: Od.client
+    function jM(bb, wb) {
+      const Mb = xM(bb),
+        eb = `model file ${bb.file} ${bb.startup?"(startup) ":""}could not load`,
+        Hb = {
+          file: String(bb.file),
+          url: bb.url,
+          wasmBuild: wb.wasm,
+          clientVersion: wb.client
         };
-      return GO({
-        kind: dd.startup ? "model" : "modelLate",
-        code: md,
-        site: Zd,
-        fatal: dd.startup,
-        message: Wd,
-        details: Fd,
-        error: dd.error
+      return Jw({
+        kind: bb.startup ? "model" : "modelLate",
+        code: Mb,
+        site: Pb,
+        fatal: bb.startup,
+        message: eb,
+        details: Hb,
+        error: bb.error
       })
     }
 
-    function xm(dd, Od) {
-      const md = {
-        wasmBuild: Od.wasm,
-        clientVersion: Od.client
+    function KM(bb, wb) {
+      const Mb = {
+        wasmBuild: wb.wasm,
+        clientVersion: wb.client
       };
-      return GO({
+      return Jw({
         kind: "model",
         code: "CORE-modelWorkerPool",
-        site: kd,
+        site: nb,
         fatal: !1,
         message: "the model workers could not start: no model can build",
-        details: md,
-        error: dd
+        details: Mb,
+        error: bb
       })
     }
 
-    function Bm(dd, Od, md) {
-      const Wd = {
-        delayMs: String(Od),
-        wasmBuild: md.wasm,
-        clientVersion: md.client
+    function rM(bb, wb, Mb) {
+      const eb = {
+        delayMs: String(wb),
+        wasmBuild: Mb.wasm,
+        clientVersion: Mb.client
       };
-      dd instanceof ud.e && (Wd.status = String(dd.status));
-      return GO({
+      bb instanceof Yb.g && (eb.status = String(bb.status));
+      return Jw({
         kind: "recovered",
         code: "CORE-modelsModuleRetry",
-        site: kd,
+        site: nb,
         fatal: !1,
         message: "the models module didn't download: fetching it again",
-        details: Wd,
-        error: dd
+        details: eb,
+        error: bb
       })
     }
 
-    function Sm(dd, Od) {
-      const md = {
-        wasmBuild: Od.wasm,
-        clientVersion: Od.client
+    function RM(bb, wb) {
+      const Mb = {
+        wasmBuild: wb.wasm,
+        clientVersion: wb.client
       };
-      return GO({
+      return Jw({
         kind: "worldgenLoad",
         code: "CORE-worldgenLoad",
-        site: Ed.D,
+        site: xb.I,
         fatal: !1,
         message: "world-gen worker code could not load",
-        details: md,
-        error: dd
+        details: Mb,
+        error: bb
       })
     }
 
-    function sm(dd, Od) {
-      const md = {
-        wasmBuild: Od.wasm,
-        clientVersion: Od.client
+    function DM(bb, wb) {
+      const Mb = {
+        wasmBuild: wb.wasm,
+        clientVersion: wb.client
       };
-      return GO({
+      return Jw({
         kind: "texturePackLoad",
         code: "CORE-texturePackLoad",
-        site: WO,
+        site: ww,
         fatal: !1,
         message: "texture pack feed code could not load",
-        details: md,
-        error: dd
+        details: Mb,
+        error: bb
       })
     }
 
-    function um(dd, Od, md, Wd) {
-      const Fd = {
-        wasmBuild: Wd.wasm,
-        clientVersion: Wd.client
+    function cM(bb, wb, Mb, eb) {
+      const Hb = {
+        wasmBuild: eb.wasm,
+        clientVersion: eb.client
       };
-      return GO({
+      return Jw({
         kind: "texturePackKeptOut",
-        code: (0, Qd.h)("wasm", dd, Od),
-        site: FO,
+        code: (0, Ib.e)("wasm", bb, wb),
+        site: Mw,
         fatal: !1,
-        message: Od.detail,
-        details: Fd,
-        error: md
+        message: wb.detail,
+        details: Hb,
+        error: Mb
       })
     }
 
-    function Vm(dd, Od) {
+    function YM(bb, wb) {
       const {
-        frames: md,
-        acks: Wd,
-        mask: Fd,
-        outcome: Rd
-      } = dd, Xd = {
-        frames: String(md),
-        acks: String(Wd),
-        mask: String(Fd),
-        outcome: null !== Rd && void 0 !== Rd ? Rd : "resynced",
-        wasmBuild: Od.wasm,
-        clientVersion: Od.client
+        frames: Mb,
+        acks: eb,
+        mask: Hb,
+        outcome: pb
+      } = bb, Vb = {
+        frames: String(Mb),
+        acks: String(eb),
+        mask: String(Hb),
+        outcome: null !== pb && void 0 !== pb ? pb : "resynced",
+        wasmBuild: wb.wasm,
+        clientVersion: wb.client
       };
-      return GO({
+      return Jw({
         kind: "recovered",
-        code: "rejoined" === Rd ? "CORE-eventOverflowRejoin" : "failed" === Rd ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
-        site: OO,
+        code: "rejoined" === pb ? "CORE-eventOverflowRejoin" : "failed" === pb ? "CORE-eventOverflowFailed" : "CORE-eventOverflow",
+        site: kb,
         fatal: !1,
-        message: `the event buffer refused records in ${md} frames`,
-        details: Xd
+        message: `the event buffer refused records in ${Mb} frames`,
+        details: Vb
       })
     }
 
-    function im(dd, Od, md) {
-      return GO({
+    function ZM(bb, wb, Mb) {
+      return Jw({
         kind: "recovered",
         code: "CORE-workerLost",
-        site: dd,
+        site: bb,
         fatal: !1,
-        message: `a ${dd} worker was lost`,
+        message: `a ${bb} worker was lost`,
         details: {
-          reason: Od,
-          wasmBuild: md.wasm,
-          clientVersion: md.client
+          reason: wb,
+          wasmBuild: Mb.wasm,
+          clientVersion: Mb.client
         }
       })
     }
 
-    function Am(dd, Od, md, Wd) {
-      const Fd = {
-          reason: dd,
-          pageBuild: Wd.build,
-          pageAgeMin: String(Math.floor(Wd.ageMs / 6e4)),
-          wasmBuild: md.wasm,
-          clientVersion: md.client
+    function fM(bb, wb, Mb, eb) {
+      const Hb = {
+          reason: bb,
+          pageBuild: eb.build,
+          pageAgeMin: String(Math.floor(eb.ageMs / 6e4)),
+          wasmBuild: Mb.wasm,
+          clientVersion: Mb.client
         },
-        Rd = Od ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
-      return GO({
+        pb = wb ? "a world-gen worker's code did not load" : "a world-gen worker was lost";
+      return Jw({
         kind: "recovered",
         code: "CORE-worldgenWorkerLost",
-        site: Ed.D,
+        site: xb.I,
         fatal: !1,
-        message: Rd,
-        details: Fd
+        message: pb,
+        details: Hb
       })
     }
 
-    function rm(dd, Od, md) {
-      const Wd = {
-        wasmBuild: md.wasm,
-        clientVersion: md.client
+    function AM(bb, wb, Mb) {
+      const eb = {
+        wasmBuild: Mb.wasm,
+        clientVersion: Mb.client
       };
-      return GO({
+      return Jw({
         kind: "recovered",
-        code: dd,
-        site: Ed.q,
+        code: bb,
+        site: xb.u,
         fatal: !1,
-        message: Od,
-        details: Wd
+        message: wb,
+        details: eb
       })
     }
 
-    function Gm(dd, Od) {
-      const md = {
-        lastReason: dd,
-        wasmBuild: Od.wasm,
-        clientVersion: Od.client
+    function WM(bb, wb) {
+      const Mb = {
+        lastReason: bb,
+        wasmBuild: wb.wasm,
+        clientVersion: wb.client
       };
-      return GO({
+      return Jw({
         kind: "recovered",
         code: "CORE-worldgenGaveUp",
-        site: Ed.D,
+        site: xb.I,
         fatal: !1,
         message: "no world-gen worker generated: chunks come whole",
-        details: md
+        details: Mb
       })
     }
 
-    function nm(dd, Od, md) {
-      return GO({
+    function JM(bb, wb, Mb) {
+      return Jw({
         kind: "recovered",
         code: "CORE-memoryShed",
-        site: Ed.p,
+        site: xb.t,
         fatal: !1,
-        message: `${(0,Sd.E)(dd)}: the session shed load`,
+        message: `${(0,Db.B)(bb)}: the session shed load`,
         details: {
-          cause: dd,
-          ...Od,
-          wasmBuild: md.wasm,
-          clientVersion: md.client
+          cause: bb,
+          ...wb,
+          wasmBuild: Mb.wasm,
+          clientVersion: Mb.client
         }
       })
     }
 
-    function Lm(dd, Od, md, Wd) {
-      var Fd, Rd;
+    function SM(bb, wb, Mb, eb) {
+      var Hb, pb;
       return {
-        game: dd,
-        cause: Od,
-        census: null === md ? "none" : JSON.stringify(md),
-        gpu: null !== (Fd = null === (Rd = (0, pd.y)()) || void 0 === Rd ? void 0 : Rd.renderer) && void 0 !== Fd ? Fd : "",
-        browser: (0, Nd.m)(),
-        wasmBuild: Wd.wasm,
-        clientVersion: Wd.client
+        game: bb,
+        cause: wb,
+        census: null === Mb ? "none" : JSON.stringify(Mb),
+        gpu: null !== (Hb = null === (pb = (0, mb.x)()) || void 0 === pb ? void 0 : pb.renderer) && void 0 !== Hb ? Hb : "",
+        browser: (0, tb.o)(),
+        wasmBuild: eb.wasm,
+        clientVersion: eb.client
       }
     }
 
-    function Pm(dd, Od, md, Wd) {
-      const Fd = (0, Nd.p)(),
-        Rd = {
-          ...Lm(dd, Od, md, Wd),
-          renderWarned: String(Fd)
+    function NM(bb, wb, Mb, eb) {
+      const Hb = (0, tb.p)(),
+        pb = {
+          ...SM(bb, wb, Mb, eb),
+          renderWarned: String(Hb)
         },
-        Xd = `first view drew no whole terrain in ${Ad.e/1e3} s, ${Od}${Fd?", render warned":""}`;
-      return GO({
+        Vb = `first view drew no whole terrain in ${fb.d/1e3} s, ${wb}${Hb?", render warned":""}`;
+      return Jw({
         kind: "noTerrain",
         code: "CORE-firstViewNoTerrain",
-        site: RO,
+        site: ew,
         fatal: !1,
-        message: Xd,
-        details: Rd
+        message: Vb,
+        details: pb
       })
     }
 
-    function zm(dd, Od, md, Wd, Fd) {
-      const Rd = {
-          ...Lm(dd, md.cause, Wd, Fd),
-          waitedMs: String(Math.round(Od.waitedMs)),
-          visibleMs: String(Math.round(Od.visibleMs)),
-          drawnMs: String(Math.round(Od.drawnMs)),
-          frames: String(Od.frames),
-          renderPending: String(md.renderPending),
-          viewWait: null === md.wait ? "none" : md.wait.slice(0, 6).join(",")
+    function vM(bb, wb, Mb, eb, Hb) {
+      const pb = {
+          ...SM(bb, Mb.cause, eb, Hb),
+          waitedMs: String(Math.round(wb.waitedMs)),
+          visibleMs: String(Math.round(wb.visibleMs)),
+          drawnMs: String(Math.round(wb.drawnMs)),
+          frames: String(wb.frames),
+          renderPending: String(Mb.renderPending),
+          viewWait: null === Mb.wait ? "none" : Mb.wait.slice(0, 6).join(",")
         },
-        Xd = (0, Jd.i)(Od, md);
-      return GO({
+        Vb = (0, jb.f)(wb, Mb);
+      return Jw({
         kind: "viewUnshown",
         code: "CORE-firstViewUnshown",
-        site: RO,
+        site: ew,
         fatal: !1,
-        message: Xd,
-        details: Rd
+        message: Vb,
+        details: pb
       })
     }
 
-    function cm(dd, Od, md, Wd, Fd) {
-      const Rd = (0, yd.f)(),
-        Xd = (0, yd.e)(dd, Od, md, Wd, Rd),
-        Kd = {
-          gpuModel: Rd,
-          wasmBuild: Fd.wasm,
-          clientVersion: Fd.client
+    function QM(bb, wb, Mb, eb, Hb) {
+      const pb = (0, Fb.g)(),
+        Vb = (0, Fb.d)(bb, wb, Mb, eb, pb),
+        gb = {
+          gpuModel: pb,
+          wasmBuild: Hb.wasm,
+          clientVersion: Hb.client
         };
-      return GO({
+      return Jw({
         kind: "mainStall",
         code: "CORE-mainStall",
-        site: XO,
+        site: Hw,
         fatal: !1,
-        message: Xd,
-        details: Kd
+        message: Vb,
+        details: gb
       })
     }
 
-    function jm(dd, Od, md) {
-      return GO({
+    function GM(bb, wb, Mb) {
+      return Jw({
         kind: "recovered",
         code: "CORE-workerStartTimeout",
-        site: dd,
+        site: bb,
         fatal: !1,
-        message: `a ${dd} worker did not start`,
+        message: `a ${bb} worker did not start`,
         details: {
-          waitedMs: String(Math.round(Od)),
-          wasmBuild: md.wasm,
-          clientVersion: md.client
+          waitedMs: String(Math.round(wb)),
+          wasmBuild: Mb.wasm,
+          clientVersion: Mb.client
         }
       })
     }
 
-    function Dm(dd, Od, md) {
-      return GO({
+    function qM(bb, wb, Mb) {
+      return Jw({
         kind: "recovered",
         code: "CORE-replayFault",
-        site: dd,
+        site: bb,
         fatal: !1,
-        message: `the replay's ${dd} failed`,
+        message: `the replay's ${bb} failed`,
         details: {
-          wasmBuild: md.wasm,
-          clientVersion: md.client
+          wasmBuild: Mb.wasm,
+          clientVersion: Mb.client
         },
-        error: Od
+        error: wb
       })
     }
 
-    function em(dd, Od) {
-      const md = {
-          wasmBuild: Od.wasm,
-          clientVersion: Od.client
+    function aM(bb, wb) {
+      const Mb = {
+          wasmBuild: wb.wasm,
+          clientVersion: wb.client
         },
-        Wd = dd instanceof Error ? dd.message : String(dd);
-      return GO({
+        eb = bb instanceof Error ? bb.message : String(bb);
+      return Jw({
         kind: "recovered",
         code: "CORE-cameraDirector",
-        site: hO,
+        site: Vw,
         fatal: !1,
         message: "the scripted camera's director threw",
-        details: md,
-        instance: Wd,
-        error: dd
+        details: Mb,
+        instance: eb,
+        error: bb
       })
     }
-    const Im = {
+    const iM = {
       lost: "render device was lost",
       frames_refused: "render device refused a frame",
       start_failed: "renderer couldn't start",
       pipeline_failed: "renderer's pipeline failed"
     };
 
-    function lm(dd) {
-      if (0 === dd) return "none";
-      const Od = [60, 600, 3600].find((Od => dd < Od));
-      return void 0 === Od ? "ge3600" : `lt${Od}`
+    function uM(bb) {
+      if (0 === bb) return "none";
+      const wb = [60, 600, 3600].find((wb => bb < wb));
+      return void 0 === wb ? "ge3600" : `lt${wb}`
     }
 
-    function Cm(dd, Od) {
-      return null === dd ? "unbound" : (0, bd.e)(Od - dd)
+    function dM(bb, wb) {
+      return null === bb ? "unbound" : (0, Bb.i)(wb - bb)
     }
 
-    function Zm(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
-      return [0 !== (dd & od.O.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (dd & od.O.LINKS_RUNNING) ? "links running" : "", `frames ${(0,qd.d)(lm(dd&od.O.FRAMES))}`, `up ${(0,qd.d)(Cm(Od,md))}`].filter(Boolean).join(", ")
+    function PM(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : performance.now();
+      return [0 !== (bb & Ub.Q.RESTORE_UNHELD) ? "restore unheld" : "", 0 !== (bb & Ub.Q.LINKS_RUNNING) ? "links running" : "", `frames ${(0,Cb.b)(uM(bb&Ub.Q.FRAMES))}`, `up ${(0,Cb.b)(dM(wb,Mb))}`].filter(Boolean).join(", ")
     }
 
-    function km(dd, Od, md) {
-      const Wd = "lost" === Od && void 0 !== md ? ` (${md})` : "";
-      return `the ${dd} ${Im[Od]}${Wd}`
+    function nM(bb, wb, Mb) {
+      const eb = "lost" === wb && void 0 !== Mb ? ` (${Mb})` : "";
+      return `the ${bb} ${iM[wb]}${eb}`
     }
-    const fm = {
+    const yM = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
 
-    function Mm(dd, Od, md, Wd) {
-      var Fd;
+    function oM(bb, wb, Mb, eb) {
+      var Hb;
       let {
-        restoreLost: Rd = !1,
-        adapterRemembered: Xd = !1
-      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, Kd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
-      const hd = null === md || void 0 === md ? void 0 : md.message,
-        vd = "pipeline_failed" === Od ? Od : md instanceof wd.f ? "timeout" : (0, bd.i)("frames_refused" === Od, "string" === typeof hd ? hd : ""),
-        Qd = null === Wd.boundAtMs ? "unbound" : `up${(0,bd.d)(Kd-Wd.boundAtMs)}`,
-        td = null === Wd.adapter ? "no adapter" : (0, bd.h)(Wd.adapter),
-        od = `${!0===Wd.indirectHangs?" ih":""}${!0===Wd.restoresSkipped?" nr":""}${Rd?" rl":""}${Xd?" ar":""}`,
-        Nd = `${vd} ${(0,wd.i)()?"hidden":"visible"} ${Qd}${od} ${td}`;
-      if ("webgpu" !== dd || "lost" !== Od && "frames_refused" !== Od) return {
-        detail: Nd,
+        restoreLost: pb = !1,
+        adapterRemembered: Vb = !1
+      } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, gb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : performance.now();
+      const lb = null === Mb || void 0 === Mb ? void 0 : Mb.message,
+        Lb = "pipeline_failed" === wb ? wb : Mb instanceof Xb.h ? "timeout" : (0, Bb.t)("frames_refused" === wb, "string" === typeof lb ? lb : ""),
+        Ib = null === eb.boundAtMs ? "unbound" : `up${(0,Bb.g)(gb-eb.boundAtMs)}`,
+        Ob = null === eb.adapter ? "no adapter" : (0, Bb.p)(eb.adapter),
+        Ub = `${!0===eb.indirectHangs?" ih":""}${!0===eb.restoresSkipped?" nr":""}${pb?" rl":""}${Vb?" ar":""}`,
+        tb = `${Lb} ${(0,Xb.k)()?"hidden":"visible"} ${Ib}${Ub} ${Ob}`;
+      if ("webgpu" !== bb || "lost" !== wb && "frames_refused" !== wb) return {
+        detail: tb,
         count: void 0
       };
       return {
-        detail: Nd,
+        detail: tb,
         count: {
           errorKind: "render_lost",
-          error: new Error(Nd),
-          code: (0, bd.u)(vd, null !== (Fd = Wd.boundAtMs) && void 0 !== Fd ? Fd : Kd, Kd).code,
+          error: new Error(tb),
+          code: (0, Bb.D)(Lb, null !== (Hb = eb.boundAtMs) && void 0 !== Hb ? Hb : gb, gb).code,
           fields: {
-            renderBackend: jd.e.webgpu
+            renderBackend: Gb.b.webgpu
           }
         }
       }
     }
 
-    function dW(dd, Od, md) {
+    function TM(bb, wb, Mb) {
       const {
-        count: Wd
-      } = Mm("webgpu", dd, Od, md);
-      void 0 !== Wd && PO(Wd)
+        count: eb
+      } = oM("webgpu", bb, wb, Mb);
+      void 0 !== eb && vw(eb)
     }
-    const OW = {
+    const kM = {
       samples: null,
       sunShadows: null,
       renderDistance: null
     };
 
-    function mW(dd) {
-      var Od;
-      return null !== (Od = dd instanceof Error ? dd.reason : void 0) && void 0 !== Od ? Od : ""
+    function be(bb) {
+      var wb;
+      return null !== (wb = bb instanceof Error ? bb.reason : void 0) && void 0 !== wb ? wb : ""
     }
 
-    function WW(dd, Od, Wd) {
-      var Fd, Rd, Xd, Kd, vd;
+    function we(bb, wb, eb) {
+      var Hb, pb, Vb, gb, Lb;
       let {
-        from: Qd,
-        cause: td = "lost",
-        restoreLost: od = !1,
-        adapterRemembered: Hd = !1,
-        error: yd,
-        context: pd = fm,
-        session: Yd = OW
-      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, gd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
+        from: Ib,
+        cause: Ob = "lost",
+        restoreLost: Ub = !1,
+        adapterRemembered: Eb = !1,
+        error: Fb,
+        context: mb = yM,
+        session: hb = kM
+      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {}, zb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : performance.now();
       const {
-        detail: wd,
-        count: Ed
-      } = Mm(dd, td, yd, pd, {
-        restoreLost: od,
-        adapterRemembered: Hd
-      }, gd), Jd = {
-        reloadFrom: null !== Qd && void 0 !== Qd ? Qd : "",
-        losses: String(Od),
-        cause: td,
-        detail: wd,
-        vendor: null !== (Fd = null === (Rd = pd.adapter) || void 0 === Rd ? void 0 : Rd.vendor) && void 0 !== Fd ? Fd : "",
-        architecture: null !== (Xd = null === (Kd = pd.adapter) || void 0 === Kd ? void 0 : Kd.architecture) && void 0 !== Xd ? Xd : "",
-        indirectHangs: String(pd.indirectHangs),
-        restoresSkipped: String(pd.restoresSkipped),
-        restoreLost: String(od),
-        adapterRemembered: String(Hd),
-        lossReason: mW(yd),
-        samples: String(Yd.samples),
-        sunShadows: String(Yd.sunShadows),
-        renderDistance: String(Yd.renderDistance),
-        gpuFamily: null !== (vd = (0, hd.d)()) && void 0 !== vd ? vd : "",
-        browser: (0, Nd.m)(),
-        siteUsed: Td.siteUsed,
-        wasmBuild: Wd.wasm,
-        clientVersion: Wd.client
-      }, Ud = "webgpu" !== dd && void 0 !== Qd ? function(dd, Od, md, Wd) {
-        return `: ${dd}, ${Od?"restore lost":"not restored"}, up ${(0,qd.d)(Cm(md,Wd))}`
-      }(Qd, od, pd.boundAtMs, gd) : "", xd = `${km(dd,td)}${Ud}`, Bd = GO({
+        detail: Xb,
+        count: xb
+      } = oM(bb, Ob, Fb, mb, {
+        restoreLost: Ub,
+        adapterRemembered: Eb
+      }, zb), jb = {
+        reloadFrom: null !== Ib && void 0 !== Ib ? Ib : "",
+        losses: String(wb),
+        cause: Ob,
+        detail: Xb,
+        vendor: null !== (Hb = null === (pb = mb.adapter) || void 0 === pb ? void 0 : pb.vendor) && void 0 !== Hb ? Hb : "",
+        architecture: null !== (Vb = null === (gb = mb.adapter) || void 0 === gb ? void 0 : gb.architecture) && void 0 !== Vb ? Vb : "",
+        indirectHangs: String(mb.indirectHangs),
+        restoresSkipped: String(mb.restoresSkipped),
+        restoreLost: String(Ub),
+        adapterRemembered: String(Eb),
+        lossReason: be(Fb),
+        samples: String(hb.samples),
+        sunShadows: String(hb.sunShadows),
+        renderDistance: String(hb.renderDistance),
+        gpuFamily: null !== (Lb = (0, lb.e)()) && void 0 !== Lb ? Lb : "",
+        browser: (0, tb.o)(),
+        siteUsed: sb.siteUsed,
+        wasmBuild: eb.wasm,
+        clientVersion: eb.client
+      }, Kb = "webgpu" !== bb && void 0 !== Ib ? function(bb, wb, Mb, eb) {
+        return `: ${bb}, ${wb?"restore lost":"not restored"}, up ${(0,Cb.b)(dM(Mb,eb))}`
+      }(Ib, Ub, mb.boundAtMs, zb) : "", rb = `${nM(bb,Ob)}${Kb}`, Rb = Jw({
         kind: "recovered",
         code: "CORE-renderLost",
-        site: Md,
+        site: ob,
         fatal: !1,
-        message: xd,
-        details: Jd,
-        error: yd,
-        countAs: Ed
+        message: rb,
+        details: jb,
+        error: Fb,
+        countAs: xb
       });
-      return jO("ga", (async () => {
+      return qw("ga", (async () => {
         const {
-          logError: Od
-        } = await Promise.resolve().then((() => md(3986))), Wd = `${bd.c["webgpu"===dd?"WebGPU":"WebGL2"]}\n Error: ${wd}`;
-        Od("warning", Wd), Od("error", Wd)
-      })), Bd
+          logError: wb
+        } = await Promise.resolve().then((() => Mb(4155))), eb = `${Bb.d["webgpu"===bb?"WebGPU":"WebGL2"]}\n Error: ${Xb}`;
+        wb("warning", eb), wb("error", eb)
+      })), Rb
     }
 
-    function FW(dd, Od) {
-      var md, Wd;
-      const Fd = null === dd.name ? "TEXTURE-sources" : null === dd.url ? "TEXTURE-nourl" : dd.error instanceof rd.b ? `TEXTURE-${dd.error.status}` : "TEXTURE-network",
-        Rd = null === dd.name ? "terrain textures could not load" : `terrain texture ${dd.name} could not load`,
-        Xd = {
-          texture: null !== (md = dd.name) && void 0 !== md ? md : "",
-          url: null !== (Wd = dd.url) && void 0 !== Wd ? Wd : "",
-          wasmBuild: Od.wasm,
-          clientVersion: Od.client
+    function Me(bb, wb) {
+      var Mb, eb;
+      const Hb = null === bb.name ? "TEXTURE-sources" : null === bb.url ? "TEXTURE-nourl" : bb.error instanceof Ab.c ? `TEXTURE-${bb.error.status}` : "TEXTURE-network",
+        pb = null === bb.name ? "terrain textures could not load" : `terrain texture ${bb.name} could not load`,
+        Vb = {
+          texture: null !== (Mb = bb.name) && void 0 !== Mb ? Mb : "",
+          url: null !== (eb = bb.url) && void 0 !== eb ? eb : "",
+          wasmBuild: wb.wasm,
+          clientVersion: wb.client
         };
-      return GO({
+      return Jw({
         kind: "terrainTexture",
-        code: Fd,
-        site: Ed.B,
+        code: Hb,
+        site: xb.H,
         fatal: !1,
-        message: Rd,
-        details: Xd,
-        error: dd.error
+        message: pb,
+        details: Vb,
+        error: bb.error
       })
     }
-    const RW = {
+    const ee = {
       previewAnimations: {
-        site: dO,
+        site: Tb,
         prefix: "ANIMS",
         name: "the previews' animations"
       },
       builtInAnimations: {
-        site: mO,
+        site: bw,
         prefix: "BUILTIN",
         name: "the built-in animations"
       }
     };
 
-    function XW(dd, Od, md, Wd) {
+    function He(bb, wb, Mb, eb) {
       const {
-        site: Fd,
-        prefix: Rd,
-        name: Xd
-      } = RW[dd], {
-        stage: Kd,
-        error: hd
-      } = md;
-      return GO({
-        kind: dd,
-        code: "decode" === Kd ? null === hd ? `${Rd}-decode` : `${Rd}-trap` : hd instanceof ud.e ? `${Rd}-${hd.status}` : `${Rd}-network`,
-        site: Fd,
+        site: Hb,
+        prefix: pb,
+        name: Vb
+      } = ee[bb], {
+        stage: gb,
+        error: lb
+      } = Mb;
+      return Jw({
+        kind: bb,
+        code: "decode" === gb ? null === lb ? `${pb}-decode` : `${pb}-trap` : lb instanceof Yb.g ? `${pb}-${lb.status}` : `${pb}-network`,
+        site: Hb,
         fatal: !1,
-        message: "decode" === Kd ? `${Xd} did not decode` : `${Xd} could not load`,
+        message: "decode" === gb ? `${Vb} did not decode` : `${Vb} could not load`,
         details: {
-          url: Od,
-          wasmBuild: Wd.wasm,
-          clientVersion: Wd.client
+          url: wb,
+          wasmBuild: eb.wasm,
+          clientVersion: eb.client
         },
-        error: hd
+        error: lb
       })
     }
-    const KW = "staleBuild";
+    const pe = "staleBuild";
 
-    function hW(dd, Od, md) {
-      const Wd = {
-          failedSite: dd.site,
-          url: dd.url,
-          from: dd.from,
-          sameBuild: String(dd.from === Od),
-          reloadMs: String(Math.max(0, Date.now() - dd.at)),
-          wasmBuild: md.wasm,
-          clientVersion: md.client
+    function Ve(bb, wb, Mb) {
+      const eb = {
+          failedSite: bb.site,
+          url: bb.url,
+          from: bb.from,
+          sameBuild: String(bb.from === wb),
+          reloadMs: String(Math.max(0, Date.now() - bb.at)),
+          wasmBuild: Mb.wasm,
+          clientVersion: Mb.client
         },
-        Fd = `reloaded into a newer build after ${dd.site} failed to load: ${dd.error}`;
-      return GO({
+        Hb = `reloaded into a newer build after ${bb.site} failed to load: ${bb.error}`;
+      return Jw({
         kind: "staleBuild",
         code: "CORE-staleBuild",
-        site: KW,
+        site: pe,
         fatal: !1,
-        message: Fd,
-        details: Wd
+        message: Hb,
+        details: eb
       })
     }
   },
-  42751: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Kd,
-      e: () => Fd,
-      g: () => Xd,
-      k: () => hd
+  42472: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => gb,
+      d: () => Hb,
+      g: () => Vb,
+      h: () => lb
     });
-    var Wd = md(5571);
-    const Fd = 3e4,
-      Rd = 900;
+    var eb = Mb(5685);
+    const Hb = 3e4,
+      pb = 900;
 
-    function Xd(dd, Od) {
-      const md = null === dd ? 0 : Od - dd;
-      return md <= Rd ? md : 0
+    function Vb(bb, wb) {
+      const Mb = null === bb ? 0 : wb - bb;
+      return Mb <= pb ? Mb : 0
     }
-    class Kd {
-      constructor(dd) {
-        this.Wt = dd, this.waitedMs = 0, this.lastMs = null
+    class gb {
+      constructor(bb) {
+        this.bO = bb, this.waitedMs = 0, this.lastMs = null
       }
-      frame(dd, Od) {
-        return !!Od || (this.waitedMs += Xd(this.lastMs, dd), this.lastMs = dd, !(this.waitedMs < Fd) && (this.Wt(), !0))
+      frame(bb, wb) {
+        return !!wb || (this.waitedMs += Vb(this.lastMs, bb), this.lastMs = bb, !(this.waitedMs < Hb) && (this.bO(), !0))
       }
     }
 
-    function hd(dd, Od) {
-      return 0 === (dd & Wd.X.ChunkRequested) ? "no_chunk_request" : 0 === (dd & Wd.X.ChunkStored) ? "chunk_not_stored" : 0 === (dd & Wd.X.MeshLanded) ? "not_meshed" : null === Od ? "no_frame_drawn" : 0 === Od.terrainParts ? "no_terrain_parts" : Od.terrainCompiling > 0 ? "terrain_compiling" : Od.terrainOpaque + Od.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
+    function lb(bb, wb) {
+      return 0 === (bb & eb.$.ChunkRequested) ? "no_chunk_request" : 0 === (bb & eb.$.ChunkStored) ? "chunk_not_stored" : 0 === (bb & eb.$.MeshLanded) ? "not_meshed" : null === wb ? "no_frame_drawn" : 0 === wb.terrainParts ? "no_terrain_parts" : wb.terrainCompiling > 0 ? "terrain_compiling" : wb.terrainOpaque + wb.terrainTransparent === 0 ? "terrain_not_drawn" : "view_incomplete"
     }
   },
-  42743: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => hd,
-      e: () => Xd,
-      i: () => Qd
+  42465: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => lb,
+      e: () => Vb,
+      f: () => Ib
     });
-    var Wd = md(210),
-      Fd = md(42751);
-    const Rd = ["view", "startup", "skipped"];
+    var eb = Mb(214),
+      Hb = Mb(42472);
+    const pb = ["view", "startup", "skipped"];
 
-    function Xd(dd) {
-      return 0 === dd.clientWidth || 0 === dd.clientHeight || 0 === dd.width || 0 === dd.height
+    function Vb(bb) {
+      return 0 === bb.clientWidth || 0 === bb.clientHeight || 0 === bb.width || 0 === bb.height
     }
 
-    function Kd(dd) {
-      if (null === dd) return "none";
-      const [Od, md, Wd, Fd] = dd, Rd = [
-        ["link", Od],
-        ["terrain", md],
-        ["jK", Wd],
-        ["other", Fd]
+    function gb(bb) {
+      if (null === bb) return "none";
+      const [wb, Mb, eb, Hb] = bb, pb = [
+        ["link", wb],
+        ["terrain", Mb],
+        ["dg", eb],
+        ["other", Hb]
       ];
-      let Xd = "none",
-        Kd = 0;
-      for (const [hd, vd] of Rd) vd > Kd && (Xd = hd, Kd = vd);
-      return Xd
+      let Vb = "none",
+        gb = 0;
+      for (const [lb, Lb] of pb) Lb > gb && (Vb = lb, gb = Lb);
+      return Vb
     }
-    class hd {
-      constructor(dd) {
-        this.gap = dd, this.chunkAtMs = null, this.lastFrameMs = null, this.drawnMs = 0, this.frames = 0, this.visibleFromMs = null, this.undrawn = {
+    class lb {
+      constructor(bb) {
+        this.gap = bb, this.chunkAtMs = null, this.lastFrameMs = null, this.drawnMs = 0, this.frames = 0, this.visibleFromMs = null, this.undrawn = {
           view: 0,
           startup: 0,
           skipped: 0
@@ -2224,156 +2224,156 @@ export const modules = {
       get open() {
         return null !== this.chunkAtMs && !this.over
       }
-      playerChunk(dd, Od) {
-        null !== this.chunkAtMs || this.over || (this.chunkAtMs = dd, Od || this.pageShown(dd))
+      playerChunk(bb, wb) {
+        null !== this.chunkAtMs || this.over || (this.chunkAtMs = bb, wb || this.pageShown(bb))
       }
-      pageShown(dd) {
-        this.open && null === this.visibleFromMs && (this.visibleFromMs = dd, this.gap.restart(dd))
+      pageShown(bb) {
+        this.open && null === this.visibleFromMs && (this.visibleFromMs = bb, this.gap.restart(bb))
       }
-      animationFrame(dd, Od, md) {
-        !this.open || null === this.visibleFromMs || dd <= this.visibleFromMs || (this.gap.animationFrame(), "paced" === Od ? this.gap.paced() : "skipped" === Od ? this.undrawn.skipped++ : "none" === Od && this.undrawn[md ? "startup" : "view"]++)
+      animationFrame(bb, wb, Mb) {
+        !this.open || null === this.visibleFromMs || bb <= this.visibleFromMs || (this.gap.animationFrame(), "paced" === wb ? this.gap.paced() : "skipped" === wb ? this.undrawn.skipped++ : "none" === wb && this.undrawn[Mb ? "startup" : "view"]++)
       }
-      frame(dd) {
-        this.open && (this.drawnMs += (0, Fd.g)(this.lastFrameMs, dd), this.lastFrameMs = dd, this.frames++)
+      frame(bb) {
+        this.open && (this.drawnMs += (0, Hb.g)(this.lastFrameMs, bb), this.lastFrameMs = bb, this.frames++)
       }
       shown() {
         this.over = !0, this.gap.stop()
       }
-      end(dd, Od) {
+      end(bb, wb) {
         if (null === this.chunkAtMs || this.over) return null;
         this.over = !0;
-        const md = null === this.visibleFromMs ? null : this.gap.words(!1, Od);
+        const Mb = null === this.visibleFromMs ? null : this.gap.words(!1, wb);
         return this.gap.stop(), {
-          end: dd,
-          waitedMs: Math.max(Od - this.chunkAtMs, 0),
-          visibleMs: null === this.visibleFromMs ? 0 : Math.max(Od - this.visibleFromMs, 0),
+          end: bb,
+          waitedMs: Math.max(wb - this.chunkAtMs, 0),
+          visibleMs: null === this.visibleFromMs ? 0 : Math.max(wb - this.visibleFromMs, 0),
           drawnMs: this.drawnMs,
           frames: this.frames,
           undrawn: {
             ...this.undrawn
           },
-          page: md
+          page: Mb
         }
       }
     }
 
-    function vd(dd) {
-      return dd < 5e3 ? "brief" : dd < 15e3 ? "short" : dd < 6e4 ? "long" : "very_long"
+    function Lb(bb) {
+      return bb < 5e3 ? "brief" : bb < 15e3 ? "short" : bb < 6e4 ? "long" : "very_long"
     }
 
-    function Qd(dd, Od) {
-      var md, Fd;
-      const Xd = [...null === dd.page ? [] : dd.page.split(" "), ...Rd.filter((Od => dd.undrawn[Od] > 0)).map((dd => `undrawn:${dd}`)), ...Od.canvasEmpty ? ["canvas:empty"] : []],
-        hd = [
-          ["", `first view unshown, ${Od.cause}, ended ${dd.end}`],
-          [", ", 0 === dd.visibleMs ? "visible none" : `visible ${vd(dd.visibleMs)}`],
-          [", ", 0 === dd.frames ? "no frames" : `drew ${vd(dd.drawnMs)}`], ...Xd.map(((dd, Od) => [0 === Od ? ", " : " ", dd])), [", ", `waited ${vd(dd.waitedMs)}`],
-          [", ", Od.bound ? "bound" : "unbound"], ...Od.preload ? [
+    function Ib(bb, wb) {
+      var Mb, Hb;
+      const Vb = [...null === bb.page ? [] : bb.page.split(" "), ...pb.filter((wb => bb.undrawn[wb] > 0)).map((bb => `undrawn:${bb}`)), ...wb.canvasEmpty ? ["canvas:empty"] : []],
+        lb = [
+          ["", `first view unshown, ${wb.cause}, ended ${bb.end}`],
+          [", ", 0 === bb.visibleMs ? "visible none" : `visible ${Lb(bb.visibleMs)}`],
+          [", ", 0 === bb.frames ? "no frames" : `drew ${Lb(bb.drawnMs)}`], ...Vb.map(((bb, wb) => [0 === wb ? ", " : " ", bb])), [", ", `waited ${Lb(bb.waitedMs)}`],
+          [", ", wb.bound ? "bound" : "unbound"], ...wb.preload ? [
             [", ", "preload"]
           ] : [],
-          [", ", Od.startupLoaded ? "startup in" : "startup out"],
-          [", ", Od.renderPending > 0 ? "render pending" : "render resolved"],
-          [", ", `lacked ${Kd(Od.wait)}${(null!==(md=null===(Fd=Od.wait)||void 0===Fd?void 0:Fd[4])&&void 0!==md?md:0)>0?" gapped":""}`]
+          [", ", wb.startupLoaded ? "startup in" : "startup out"],
+          [", ", wb.renderPending > 0 ? "render pending" : "render resolved"],
+          [", ", `lacked ${gb(wb.wait)}${(null!==(Mb=null===(Hb=wb.wait)||void 0===Hb?void 0:Hb[4])&&void 0!==Mb?Mb:0)>0?" gapped":""}`]
         ];
-      let Qd = "";
-      for (const [Rd, Kd] of hd) {
-        const dd = Qd + Rd + Kd;
-        if (dd.length > Wd.fb) break;
-        Qd = dd
+      let Ib = "";
+      for (const [pb, gb] of lb) {
+        const bb = Ib + pb + gb;
+        if (bb.length > eb.eb) break;
+        Ib = bb
       }
-      return Qd
+      return Ib
     }
   },
-  42552: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Wd,
-      h: () => bd,
-      l: () => Hd,
-      p: () => yd,
-      q: () => od,
-      t: () => Nd,
-      u: () => Qd,
-      w: () => td,
-      x: () => qd
+  42263: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      D: () => Ob,
+      F: () => Cb,
+      e: () => eb,
+      i: () => Bb,
+      m: () => Eb,
+      p: () => Fb,
+      s: () => Ub,
+      w: () => tb,
+      z: () => Ib
     });
-    class Wd extends Error {
-      constructor(dd) {
-        super(`the join's code did not load: ${dd instanceof Error?dd.message:String(dd)}`, {
-          cause: dd
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === dd || void 0 === dd ? void 0 : dd.request
+    class eb extends Error {
+      constructor(bb) {
+        super(`the join's code did not load: ${bb instanceof Error?bb.message:String(bb)}`, {
+          cause: bb
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === bb || void 0 === bb ? void 0 : bb.request
       }
     }
-    let Fd = null,
-      Rd = null,
-      Xd = null;
-    const Kd = [];
-    let hd = null;
+    let Hb = null,
+      pb = null,
+      Vb = null;
+    const gb = [];
+    let lb = null;
 
-    function vd(dd, Od) {
+    function Lb(bb, wb) {
       try {
-        dd(Od)
-      } catch (md) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", md)
+        bb(wb)
+      } catch (Mb) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", Mb)
       }
     }
 
-    function Qd() {
-      return hd
+    function Ib() {
+      return lb
     }
 
-    function td(dd) {
-      Kd.push(dd), null !== hd && vd(dd, hd)
+    function Ob(bb) {
+      gb.push(bb), null !== lb && Lb(bb, lb)
     }
 
-    function od(dd) {
-      return Fd ??= Promise.all([md.e(85), md.e(113), md.e(88), md.e(177), md.e(91), md.e(225), md.e(253), md.e(112), md.e(142), md.e(246), md.e(245), md.e(307), md.e(244), md.e(223), md.e(50), md.e(224), md.e(127), md.e(214), md.e(281), md.e(143), md.e(103), md.e(69)]).then((() => md(55013))).then((Od => {
-        Od.loadAudio(dd), hd = Od;
-        for (const dd of Kd) vd(dd, Od);
-        return Od
-      })).catch((dd => {
-        throw Fd = null, dd
-      })), Fd
+    function Ub(bb) {
+      return Hb ??= Promise.all([Mb.e(85), Mb.e(113), Mb.e(88), Mb.e(177), Mb.e(91), Mb.e(225), Mb.e(253), Mb.e(112), Mb.e(142), Mb.e(246), Mb.e(245), Mb.e(307), Mb.e(244), Mb.e(223), Mb.e(50), Mb.e(224), Mb.e(127), Mb.e(214), Mb.e(281), Mb.e(143), Mb.e(103), Mb.e(69)]).then((() => Mb(54811))).then((wb => {
+        wb.loadAudio(bb), lb = wb;
+        for (const bb of gb) Lb(bb, wb);
+        return wb
+      })).catch((bb => {
+        throw Hb = null, bb
+      })), Hb
     }
-    async function Nd(dd, Od) {
+    async function tb(bb, wb) {
       try {
-        const md = await od(dd);
-        await md.loadClientGame(Od)
-      } catch (md) {
-        throw new Wd(md)
+        const Mb = await Ub(bb);
+        await Mb.loadClientGame(wb)
+      } catch (Mb) {
+        throw new eb(Mb)
       }
     }
 
-    function qd(dd, Od) {
-      Rd = {
-        running: dd,
-        shell: Od
+    function Cb(bb, wb) {
+      pb = {
+        running: bb,
+        shell: wb
       }
     }
 
-    function Hd() {
-      return Xd
+    function Eb() {
+      return Vb
     }
-    async function yd(dd) {
-      const Od = Rd;
-      if ((null === Od || void 0 === Od ? void 0 : Od.running) !== dd) throw new Error("the core's session has ended");
-      const md = await od(Od.shell.audio).catch((dd => {
-        throw new Wd(dd)
+    async function Fb(bb) {
+      const wb = pb;
+      if ((null === wb || void 0 === wb ? void 0 : wb.running) !== bb) throw new Error("the core's session has ended");
+      const Mb = await Ub(wb.shell.audio).catch((bb => {
+        throw new eb(bb)
       }));
-      if (null !== Xd) return Xd;
-      if (Rd !== Od || dd.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (Xd = md.startGameHost(dd, Od.shell), null === Xd) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return Xd
+      if (null !== Vb) return Vb;
+      if (pb !== wb || bb.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (Vb = Mb.startGameHost(bb, wb.shell), null === Vb) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return Vb
     }
 
-    function bd() {
-      null !== Xd && (null !== hd ? hd.endGameHost(Xd) : Xd.closeGame()), Xd = null, Rd = null
+    function Bb() {
+      null !== Vb && (null !== lb ? lb.endGameHost(Vb) : Vb.closeGame()), Vb = null, pb = null
     }
   },
-  42661: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Wd
+  42379: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => eb
     });
-    const Wd = {
+    const eb = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -2386,136 +2386,136 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  42758: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => vd,
-      h: () => Rd,
-      k: () => Xd,
-      m: () => Fd,
-      n: () => Nd,
-      o: () => Qd,
-      p: () => hd,
-      r: () => od,
-      v: () => td,
-      x: () => Kd
+  42475: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Lb,
+      d: () => pb,
+      f: () => Vb,
+      g: () => Hb,
+      k: () => tb,
+      n: () => Ib,
+      q: () => lb,
+      s: () => Ub,
+      w: () => Ob,
+      z: () => gb
     });
-    var Wd = md(1951);
-    const Fd = new Uint8Array([12]),
-      Rd = 2e3,
-      Xd = 257;
+    var eb = Mb(2014);
+    const Hb = new Uint8Array([12]),
+      pb = 2e3,
+      Vb = 257;
 
-    function Kd(dd) {
-      const Od = new Uint8Array(4);
-      return new DataView(Od.buffer).setUint32(0, dd, !0), Od
+    function gb(bb) {
+      const wb = new Uint8Array(4);
+      return new DataView(wb.buffer).setUint32(0, bb, !0), wb
     }
-    class hd extends Error {
+    class lb extends Error {
       constructor() {
         super("the game was left while it reconnected"), this.name = "AbortError"
       }
     }
-    class vd extends Error {
-      constructor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Fd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        super(dd), this.stage = Od, this.code = md, this.serverText = Wd, this.socketOpened = Fd, this.name = "JoinError"
+    class Lb extends Error {
+      constructor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          Hb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        super(bb), this.stage = wb, this.code = Mb, this.serverText = eb, this.socketOpened = Hb, this.name = "JoinError"
       }
     }
-    class Qd extends Error {
-      constructor(dd) {
-        super(dd), this.final = !0, this.name = "ResumeRefusedError"
+    class Ib extends Error {
+      constructor(bb) {
+        super(bb), this.final = !0, this.name = "ResumeRefusedError"
       }
     }
-    class td extends Error {
-      constructor(dd) {
-        super((0, Wd.d)(dd), {
-          cause: dd
+    class Ob extends Error {
+      constructor(bb) {
+        super((0, eb.e)(bb), {
+          cause: bb
         }), this.name = "TrafficCheckError"
       }
     }
-    class od extends Error {
-      constructor(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        super(dd, {
-          cause: md
-        }), this.networkLost = Od, this.httpStatus = Wd, this.name = "SeatRequestError"
+    class Ub extends Error {
+      constructor(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        super(bb, {
+          cause: Mb
+        }), this.networkLost = wb, this.httpStatus = eb, this.name = "SeatRequestError"
       }
     }
-    class Nd extends Error {
-      constructor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(dd), this.code = Od, this.serverText = md, this.name = "MatchmakeError"
+    class tb extends Error {
+      constructor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(bb), this.code = wb, this.serverText = Mb, this.name = "MatchmakeError"
       }
     }
   },
-  42761: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Nd,
-      f: () => od,
-      i: () => qd
+  42481: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => tb,
+      d: () => Ub,
+      h: () => Cb
     });
-    var Wd = md(3697),
-      Fd = md(2484),
-      Rd = md(40634),
-      Xd = md(38109),
-      Kd = md(40638),
-      hd = md(42758),
-      vd = md(42763);
-    const Qd = "seat reservation expired.",
-      td = "early_leave";
+    var eb = Mb(3822),
+      Hb = Mb(2536),
+      pb = Mb(40381),
+      Vb = Mb(37772),
+      gb = Mb(40386),
+      lb = Mb(42475),
+      Lb = Mb(42486);
+    const Ib = "seat reservation expired.",
+      Ob = "early_leave";
 
-    function od(dd) {
-      if (dd instanceof Xd.i) return "expected";
-      if (dd instanceof hd.r) return dd.networkLost ? "expected" : "unrecognised";
-      if (dd instanceof hd.e) {
-        if ("closed" === dd.stage && (0 === dd.code || (0, Fd.g)(dd.code))) return "expected";
-        if ("roomError" === dd.stage && (dd.serverText === Qd || dd.serverText === td)) return "expected"
+    function Ub(bb) {
+      if (bb instanceof Vb.e) return "expected";
+      if (bb instanceof lb.s) return bb.networkLost ? "expected" : "unrecognised";
+      if (bb instanceof lb.b) {
+        if ("closed" === bb.stage && (0 === bb.code || (0, Hb.g)(bb.code))) return "expected";
+        if ("roomError" === bb.stage && (bb.serverText === Ib || bb.serverText === Ob)) return "expected"
       }
-      return dd instanceof hd.e || dd instanceof hd.n ? null === (0, Kd.f)(dd.code).name ? "unrecognised" : "known" : (0, Wd.f)(dd) ? "expected" : dd instanceof hd.v || dd instanceof vd.e ? "known" : "unrecognised"
+      return bb instanceof lb.b || bb instanceof lb.k ? null === (0, gb.g)(bb.code).name ? "unrecognised" : "known" : (0, eb.e)(bb) ? "expected" : bb instanceof lb.w || bb instanceof Lb.b ? "known" : "unrecognised"
     }
 
-    function Nd(dd) {
-      return dd instanceof Xd.i ? "timedOut" : "expected" !== od(dd) || (0, Wd.f)(dd) || dd instanceof hd.e && 1001 === dd.code ? void 0 : "failed"
+    function tb(bb) {
+      return bb instanceof Vb.e ? "timedOut" : "expected" !== Ub(bb) || (0, eb.e)(bb) || bb instanceof lb.b && 1001 === bb.code ? void 0 : "failed"
     }
 
-    function qd(dd) {
-      return dd instanceof hd.e && "attach" !== dd.stage ? (0, Rd.b)(dd, "closed" !== dd.stage || dd.socketOpened ? "socket" : "socket_unopened") : dd instanceof hd.r ? {
+    function Cb(bb) {
+      return bb instanceof lb.b && "attach" !== bb.stage ? (0, pb.d)(bb, "closed" !== bb.stage || bb.socketOpened ? "socket" : "socket_unopened") : bb instanceof lb.s ? {
         at: "seat_lost",
-        code: dd.httpStatus
-      } : dd instanceof hd.n || dd instanceof Xd.i ? (0, Rd.b)(dd, dd instanceof Xd.i ? dd.leg : "seat") : void 0
+        code: bb.httpStatus
+      } : bb instanceof lb.k || bb instanceof Vb.e ? (0, pb.d)(bb, bb instanceof Vb.e ? bb.leg : "seat") : void 0
     }
   },
-  42772: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => hd,
-      e: () => vd,
-      h: () => Nd,
-      l: () => td
+  42493: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => lb,
+      f: () => Lb,
+      i: () => tb,
+      l: () => Ob
     });
-    var Wd = md(2425),
-      Fd = md(5568),
-      Rd = md(42779),
-      Xd = md(42788),
-      Kd = md(37659);
-    const hd = 395,
-      vd = 2147483648,
-      Qd = new Uint8Array(0);
-    class td extends Error {
+    var eb = Mb(2471),
+      Hb = Mb(5678),
+      pb = Mb(42502),
+      Vb = Mb(42509),
+      gb = Mb(37406);
+    const lb = 395,
+      Lb = 2147483648,
+      Ib = new Uint8Array(0);
+    class Ob extends Error {
       constructor() {
         super(...arguments), this.name = "ModelRingError"
       }
     }
-    class od extends Error {
+    class Ub extends Error {
       constructor() {
         super(...arguments), this.name = "ModelPackRefusedError"
       }
     }
-    class Nd {
-      constructor(dd, Od, md) {
-        var Wd, Fd, Xd, Kd;
-        let hd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        this.files = dd, this.build = Od, this.onFailure = md, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.kQ = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (Wd = hd.fetchFile) && void 0 !== Wd ? Wd : dd => (0, Rd.i)(dd), this.onWritten = null !== (Fd = hd.onWritten) && void 0 !== Fd ? Fd : null, this.onTaken = null !== (Xd = hd.onTaken) && void 0 !== Xd ? Xd : null, this.onPackFileFailed = null !== (Kd = hd.onPackFileFailed) && void 0 !== Kd ? Kd : null, this.startupLeft = new Set(dd.startup);
-        for (const Rd of dd.startup) this.request(Rd)
+    class tb {
+      constructor(bb, wb, Mb) {
+        var eb, Hb, Vb, gb;
+        let lb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+        this.files = bb, this.build = wb, this.onFailure = Mb, this.ready = [], this.pending = new Map, this.written = new Map, this.drawn = new Map, this.undrawn = new Set, this.nI = new Map, this.keptTotal = 0, this.refusedPack = new Map, this.startupLeft = void 0, this.fetchFile = void 0, this.onWritten = void 0, this.onTaken = void 0, this.onPackFileFailed = void 0, this.refreshes = 0, this.nextSeq = 1, this.fetchFile = null !== (eb = lb.fetchFile) && void 0 !== eb ? eb : bb => (0, pb.g)(bb), this.onWritten = null !== (Hb = lb.onWritten) && void 0 !== Hb ? Hb : null, this.onTaken = null !== (Vb = lb.onTaken) && void 0 !== Vb ? Vb : null, this.onPackFileFailed = null !== (gb = lb.onPackFileFailed) && void 0 !== gb ? gb : null, this.startupLeft = new Set(bb.startup);
+        for (const pb of bb.startup) this.request(pb)
       }
       get startupDone() {
         return 0 === this.startupLeft.size
@@ -2535,693 +2535,693 @@ export const modules = {
       get keptBytes() {
         return this.keptTotal
       }
-      drawnUrl(dd) {
-        return this.drawn.get(dd)
+      drawnUrl(bb) {
+        return this.drawn.get(bb)
       }
-      request(dd) {
-        const Od = this.pending.get(dd);
-        if (!0 === (null === Od || void 0 === Od ? void 0 : Od.ask)) return;
-        const md = this.ot(dd, !0);
-        md.recheck = void 0 !== Od;
-        const Wd = this.drawn.get(dd);
-        if (void 0 !== Wd) return md.jK = !0, md.recheck = !0, void this.fetch(dd, md, Wd);
-        this.fetchWanted(dd, md)
+      request(bb) {
+        const wb = this.pending.get(bb);
+        if (!0 === (null === wb || void 0 === wb ? void 0 : wb.ask)) return;
+        const Mb = this.LO(bb, !0);
+        Mb.recheck = void 0 !== wb;
+        const eb = this.drawn.get(bb);
+        if (void 0 !== eb) return Mb.dg = !0, Mb.recheck = !0, void this.fetch(bb, Mb, eb);
+        this.fetchWanted(bb, Mb)
       }
       async refresh() {
-        const dd = ++this.refreshes,
-          Od = new Set;
-        for (const Xd of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
-          for (const dd of Xd) 0 === (dd & Rd.g) && Od.add(dd);
-        const md = [...Od];
-        let Wd;
+        const bb = ++this.refreshes,
+          wb = new Set;
+        for (const Vb of [this.drawn.keys(), this.written.keys(), this.pending.keys(), this.undrawn.values()])
+          for (const bb of Vb) 0 === (bb & pb.f) && wb.add(bb);
+        const Mb = [...wb];
+        let eb;
         try {
-          Wd = await Promise.all(md.map((dd => this.wanted(dd))))
+          eb = await Promise.all(Mb.map((bb => this.wanted(bb))))
         } catch {
           return null
         }
-        if (dd !== this.refreshes) return null;
-        const Fd = {
+        if (bb !== this.refreshes) return null;
+        const Hb = {
           resent: 0,
           refetched: 0,
-          delivered: md.filter((dd => this.drawn.has(dd))).length
+          delivered: Mb.filter((bb => this.drawn.has(bb))).length
         };
-        return md.forEach(((dd, Od) => {
+        return Mb.forEach(((bb, wb) => {
           const {
-            url: md,
-            inPlaceOf: Rd
-          } = Wd[Od], Xd = this.pending.get(dd);
-          if (void 0 !== Xd) {
-            if (Xd.jK || void 0 === Xd.url) return void(Xd.recheck = !0);
-            if (Xd.url === md) return;
-            Fd.refetched++;
-            const Od = this.ot(dd, Xd.ask);
-            return Od.recheck = Xd.recheck, void this.fetch(dd, Od, md, Rd)
+            url: Mb,
+            inPlaceOf: pb
+          } = eb[wb], Vb = this.pending.get(bb);
+          if (void 0 !== Vb) {
+            if (Vb.dg || void 0 === Vb.url) return void(Vb.recheck = !0);
+            if (Vb.url === Mb) return;
+            Hb.refetched++;
+            const wb = this.LO(bb, Vb.ask);
+            return wb.recheck = Vb.recheck, void this.fetch(bb, wb, Mb, pb)
           }
-          const Kd = this.written.get(dd);
-          void 0 === Kd ? this.drawn.get(dd) !== (null !== md && void 0 !== md ? md : void 0) && (Fd.resent++, this.fetch(dd, this.ot(dd, !1), md, Rd)) : Kd.url !== (null !== md && void 0 !== md ? md : "") && (Kd.attempt.recheck = !0)
-        })), Fd
+          const gb = this.written.get(bb);
+          void 0 === gb ? this.drawn.get(bb) !== (null !== Mb && void 0 !== Mb ? Mb : void 0) && (Hb.resent++, this.fetch(bb, this.LO(bb, !1), Mb, pb)) : gb.url !== (null !== Mb && void 0 !== Mb ? Mb : "") && (gb.attempt.recheck = !0)
+        })), Hb
       }
-      taken(dd, Od) {
-        const md = new Set,
-          Wd = new Set;
-        for (const Fd of Array.from(Od)) 0 === (Fd & vd) ? md.add(Fd) : Wd.add((Fd & ~vd) >>> 0);
-        for (const [Fd, Rd] of this.written) Rd.seq > dd || (this.written.delete(Fd), md.has(Rd.seq) ? this.refusedFile(Fd, Rd) : this.takenFile(Fd, Rd, !Rd.empty && !Wd.has(Rd.seq)))
+      taken(bb, wb) {
+        const Mb = new Set,
+          eb = new Set;
+        for (const Hb of Array.from(wb)) 0 === (Hb & Lb) ? Mb.add(Hb) : eb.add((Hb & ~Lb) >>> 0);
+        for (const [Hb, pb] of this.written) pb.seq > bb || (this.written.delete(Hb), Mb.has(pb.seq) ? this.refusedFile(Hb, pb) : this.takenFile(Hb, pb, !pb.empty && !eb.has(pb.seq)))
       }
-      takenFile(dd, Od, md) {
+      takenFile(bb, wb, Mb) {
         const {
-          attempt: Wd
-        } = Od;
-        if (md) {
-          var Fd;
-          this.drawn.set(dd, Od.url), this.undrawn.delete(dd), void 0 !== Wd.inPlaceOf ? this.refusedPack.set(dd, Wd.inPlaceOf) : Wd.jK || this.refusedPack.delete(dd), null === (Fd = this.onTaken) || void 0 === Fd || Fd.call(this, dd, !0);
-          const md = this.pending.get(dd);
-          if (!0 === (null === md || void 0 === md ? void 0 : md.jK) && md.url !== Od.url) {
-            const md = this.ot(dd, !0);
-            md.jK = !0, md.recheck = !0, this.fetch(dd, md, Od.url)
+          attempt: eb
+        } = wb;
+        if (Mb) {
+          var Hb;
+          this.drawn.set(bb, wb.url), this.undrawn.delete(bb), void 0 !== eb.inPlaceOf ? this.refusedPack.set(bb, eb.inPlaceOf) : eb.dg || this.refusedPack.delete(bb), null === (Hb = this.onTaken) || void 0 === Hb || Hb.call(this, bb, !0);
+          const Mb = this.pending.get(bb);
+          if (!0 === (null === Mb || void 0 === Mb ? void 0 : Mb.dg) && Mb.url !== wb.url) {
+            const Mb = this.LO(bb, !0);
+            Mb.dg = !0, Mb.recheck = !0, this.fetch(bb, Mb, wb.url)
           }
         } else {
-          var Rd;
-          this.drawn.has(dd) || this.undrawn.add(dd), null === (Rd = this.onTaken) || void 0 === Rd || Rd.call(this, dd, !1)
+          var pb;
+          this.drawn.has(bb) || this.undrawn.add(bb), null === (pb = this.onTaken) || void 0 === pb || pb.call(this, bb, !1)
         }
-        Wd.recheck && this.resendIfChanged(dd)
+        eb.recheck && this.resendIfChanged(bb)
       }
-      refusedFile(dd, Od) {
-        var md, Wd;
-        if (null === (md = this.onTaken) || void 0 === md || md.call(this, dd, !1), this.refusedPack.set(dd, Od.url), this.pending.has(dd)) return void(null === (Wd = this.onPackFileFailed) || void 0 === Wd || Wd.call(this, dd, qd(Od.url)));
-        const Fd = this.ot(dd, Od.attempt.ask);
-        Fd.recheck = Od.attempt.recheck, this.afterRefusal(dd, Fd, Od.url)
+      refusedFile(bb, wb) {
+        var Mb, eb;
+        if (null === (Mb = this.onTaken) || void 0 === Mb || Mb.call(this, bb, !1), this.refusedPack.set(bb, wb.url), this.pending.has(bb)) return void(null === (eb = this.onPackFileFailed) || void 0 === eb || eb.call(this, bb, Cb(wb.url)));
+        const Hb = this.LO(bb, wb.attempt.ask);
+        Hb.recheck = wb.attempt.recheck, this.afterRefusal(bb, Hb, wb.url)
       }
-      async afterRefusal(dd, Od, md) {
-        var Wd;
-        let Fd;
+      async afterRefusal(bb, wb, Mb) {
+        var eb;
+        let Hb;
         try {
-          Fd = await this.wanted(dd)
-        } catch (Rd) {
-          return void(this.pending.get(dd) === Od && this.giveUp(dd, Od, md, Rd))
+          Hb = await this.wanted(bb)
+        } catch (pb) {
+          return void(this.pending.get(bb) === wb && this.giveUp(bb, wb, Mb, pb))
         }
-        this.pending.get(dd) === Od && (Fd.inPlaceOf !== md ? Od.ask || (null !== (Wd = Fd.url) && void 0 !== Wd ? Wd : void 0) !== this.drawn.get(dd) ? this.fetch(dd, Od, Fd.url, Fd.inPlaceOf) : this.pending.delete(dd) : this.fallBack(dd, Od, md, qd(md)))
+        this.pending.get(bb) === wb && (Hb.inPlaceOf !== Mb ? wb.ask || (null !== (eb = Hb.url) && void 0 !== eb ? eb : void 0) !== this.drawn.get(bb) ? this.fetch(bb, wb, Hb.url, Hb.inPlaceOf) : this.pending.delete(bb) : this.fallBack(bb, wb, Mb, Cb(Mb)))
       }
-      ot(dd, Od) {
-        const md = {
+      LO(bb, wb) {
+        const Mb = {
           url: void 0,
-          ask: Od,
-          jK: !1,
+          ask: wb,
+          dg: !1,
           recheck: !1,
           inPlaceOf: void 0
         };
-        this.pending.set(dd, md);
-        for (let Wd = this.ready.length - 1; Wd >= 0; Wd--) this.ready[Wd].file === dd && this.ready.splice(Wd, 1);
-        return md
+        this.pending.set(bb, Mb);
+        for (let eb = this.ready.length - 1; eb >= 0; eb--) this.ready[eb].file === bb && this.ready.splice(eb, 1);
+        return Mb
       }
-      async wanted(dd) {
-        const Od = await this.files.url(dd);
-        return null !== Od && this.refusedPack.get(dd) === Od ? {
-          url: await this.files.shippedUrl(dd),
-          inPlaceOf: Od
+      async wanted(bb) {
+        const wb = await this.files.url(bb);
+        return null !== wb && this.refusedPack.get(bb) === wb ? {
+          url: await this.files.shippedUrl(bb),
+          inPlaceOf: wb
         } : {
-          url: Od,
+          url: wb,
           inPlaceOf: void 0
         }
       }
-      fetchWanted(dd, Od) {
-        const md = this.files.url(dd);
-        md instanceof Promise ? md.then((md => {
-          this.fetchFound(dd, Od, md)
-        }), (md => {
-          this.pending.get(dd) === Od && this.giveUp(dd, Od, "", md)
-        })) : this.fetchFound(dd, Od, md)
+      fetchWanted(bb, wb) {
+        const Mb = this.files.url(bb);
+        Mb instanceof Promise ? Mb.then((Mb => {
+          this.fetchFound(bb, wb, Mb)
+        }), (Mb => {
+          this.pending.get(bb) === wb && this.giveUp(bb, wb, "", Mb)
+        })) : this.fetchFound(bb, wb, Mb)
       }
-      fetchFound(dd, Od, md) {
-        null !== md && this.refusedPack.get(dd) === md ? Promise.resolve(this.files.shippedUrl(dd)).then((Wd => {
-          this.fetch(dd, Od, Wd, md)
-        }), (Wd => {
-          this.pending.get(dd) === Od && this.giveUp(dd, Od, md, Wd)
-        })) : this.fetch(dd, Od, md)
+      fetchFound(bb, wb, Mb) {
+        null !== Mb && this.refusedPack.get(bb) === Mb ? Promise.resolve(this.files.shippedUrl(bb)).then((eb => {
+          this.fetch(bb, wb, eb, Mb)
+        }), (eb => {
+          this.pending.get(bb) === wb && this.giveUp(bb, wb, Mb, eb)
+        })) : this.fetch(bb, wb, Mb)
       }
-      fetch(dd, Od, md, Wd) {
-        this.pending.get(dd) === Od && (Od.url = md, Od.inPlaceOf = Wd, null !== md ? this.load(dd, Od, md) : this.buildFile(dd, Od, "", Qd))
+      fetch(bb, wb, Mb, eb) {
+        this.pending.get(bb) === wb && (wb.url = Mb, wb.inPlaceOf = eb, null !== Mb ? this.load(bb, wb, Mb) : this.buildFile(bb, wb, "", Ib))
       }
-      load(dd, Od, md) {
-        const Wd = this.kQ.get(dd);
-        (null === Wd || void 0 === Wd ? void 0 : Wd.url) !== md ? this.fetchFile(md).then((Wd => {
-          var Fd, Rd;
-          this.pending.get(dd) === Od && (this.keptTotal += Wd.byteLength - (null !== (Fd = null === (Rd = this.kQ.get(dd)) || void 0 === Rd ? void 0 : Rd.glb.byteLength) && void 0 !== Fd ? Fd : 0), this.kQ.set(dd, {
-            url: md,
-            glb: Wd
-          }), this.buildFile(dd, Od, md, Wd))
-        }), (Wd => {
-          this.pending.get(dd) === Od && this.fallBack(dd, Od, md, Wd)
-        })) : this.buildFile(dd, Od, md, Wd.glb)
+      load(bb, wb, Mb) {
+        const eb = this.nI.get(bb);
+        (null === eb || void 0 === eb ? void 0 : eb.url) !== Mb ? this.fetchFile(Mb).then((eb => {
+          var Hb, pb;
+          this.pending.get(bb) === wb && (this.keptTotal += eb.byteLength - (null !== (Hb = null === (pb = this.nI.get(bb)) || void 0 === pb ? void 0 : pb.glb.byteLength) && void 0 !== Hb ? Hb : 0), this.nI.set(bb, {
+            url: Mb,
+            glb: eb
+          }), this.buildFile(bb, wb, Mb, eb))
+        }), (eb => {
+          this.pending.get(bb) === wb && this.fallBack(bb, wb, Mb, eb)
+        })) : this.buildFile(bb, wb, Mb, eb.glb)
       }
-      buildFile(dd, Od, md, Wd) {
-        let Fd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Xd = Wd.byteLength > 0 && (0, Rd.l)(md) ? (dd | Rd.e) >>> 0 : dd;
-        this.queueRecord(dd, Od, md, Wd, this.build(Xd, Wd), Fd)
+      buildFile(bb, wb, Mb, eb) {
+        let Hb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Vb = eb.byteLength > 0 && (0, pb.i)(Mb) ? (bb | pb.b) >>> 0 : bb;
+        this.queueRecord(bb, wb, Mb, eb, this.build(Vb, eb), Hb)
       }
-      queueRecord(dd, Od, md, Wd, Rd, Kd) {
-        Rd.then((Rd => {
-          if (this.pending.get(dd) !== Od) return;
-          if (Fd.p + (0, Fd.ve)(Rd.byteLength) > Fd.Ic) return void this.ringRefused(dd, Od, md, new td(`${Hd(md)}'s record is ${Rd.byteLength-Xd.d} bytes, past the cmd ring's ${Fd.Ic}`), Kd);
-          const hd = {
-            file: dd,
-            url: md,
-            payload: Rd,
-            glb: Wd,
-            attempt: Od
+      queueRecord(bb, wb, Mb, eb, pb, gb) {
+        pb.then((pb => {
+          if (this.pending.get(bb) !== wb) return;
+          if (Hb.r + (0, Hb.Be)(pb.byteLength) > Hb.Gc) return void this.ringRefused(bb, wb, Mb, new Ob(`${Eb(Mb)}'s record is ${pb.byteLength-Vb.b} bytes, past the cmd ring's ${Hb.Gc}`), gb);
+          const lb = {
+            file: bb,
+            url: Mb,
+            payload: pb,
+            glb: eb,
+            attempt: wb
           };
-          Kd ? this.ready.unshift(hd) : this.ready.push(hd)
+          gb ? this.ready.unshift(lb) : this.ready.push(lb)
         }))
       }
-      async fallBack(dd, Od, md, Wd) {
-        var Fd;
-        let Rd = null,
-          Xd = Wd;
+      async fallBack(bb, wb, Mb, eb) {
+        var Hb;
+        let pb = null,
+          Vb = eb;
         try {
-          Rd = await this.files.shippedUrl(dd)
-        } catch (Kd) {
-          Xd = Kd
+          pb = await this.files.shippedUrl(bb)
+        } catch (gb) {
+          Vb = gb
         }
-        this.pending.get(dd) === Od && (null !== Rd && Rd !== md ? (null === (Fd = this.onPackFileFailed) || void 0 === Fd || Fd.call(this, dd, Wd), Od.ask || this.drawn.get(dd) !== Rd ? (Od.url = Rd, Od.inPlaceOf = md, this.load(dd, Od, Rd)) : this.pending.delete(dd)) : this.giveUp(dd, Od, md, Xd))
+        this.pending.get(bb) === wb && (null !== pb && pb !== Mb ? (null === (Hb = this.onPackFileFailed) || void 0 === Hb || Hb.call(this, bb, eb), wb.ask || this.drawn.get(bb) !== pb ? (wb.url = pb, wb.inPlaceOf = Mb, this.load(bb, wb, pb)) : this.pending.delete(bb)) : this.giveUp(bb, wb, Mb, Vb))
       }
-      ringRefused(dd, Od, md, Wd) {
-        let Fd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        (0, Rd.l)(md) ? this.fallBack(dd, Od, md, Wd): this.giveUp(dd, Od, md, Wd, Fd)
+      ringRefused(bb, wb, Mb, eb) {
+        let Hb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        (0, pb.i)(Mb) ? this.fallBack(bb, wb, Mb, eb): this.giveUp(bb, wb, Mb, eb, Hb)
       }
-      giveUp(dd, Od, md, Fd) {
-        let Rd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      giveUp(bb, wb, Mb, Hb) {
+        let pb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         this.onFailure({
-          file: dd,
-          url: Hd(md),
-          error: Fd,
-          startup: this.startupLeft.has(dd)
-        }), Od.ask || !this.drawn.has(dd) ? (0, Wd.R)(Fd) ? this.queueRecord(dd, Od, md, Qd, Promise.resolve((0, Xd.n)(dd, (0, Kd.h)(Fd))), Rd) : this.buildFile(dd, Od, md, Qd, Rd) : this.pending.delete(dd)
+          file: bb,
+          url: Eb(Mb),
+          error: Hb,
+          startup: this.startupLeft.has(bb)
+        }), wb.ask || !this.drawn.has(bb) ? (0, eb.M)(Hb) ? this.queueRecord(bb, wb, Mb, Ib, Promise.resolve((0, Vb.m)(bb, (0, gb.j)(Hb))), pb) : this.buildFile(bb, wb, Mb, Ib, pb) : this.pending.delete(bb)
       }
-      async resendIfChanged(dd) {
-        var Od;
-        if (0 !== (dd & Rd.g)) return;
-        let md;
+      async resendIfChanged(bb) {
+        var wb;
+        if (0 !== (bb & pb.f)) return;
+        let Mb;
         try {
-          md = await this.wanted(dd)
+          Mb = await this.wanted(bb)
         } catch {
           return
-        }(null !== (Od = md.url) && void 0 !== Od ? Od : void 0) === this.drawn.get(dd) || this.pending.has(dd) || this.written.has(dd) || this.fetch(dd, this.ot(dd, !1), md.url, md.inPlaceOf)
+        }(null !== (wb = Mb.url) && void 0 !== wb ? wb : void 0) === this.drawn.get(bb) || this.pending.has(bb) || this.written.has(bb) || this.fetch(bb, this.LO(bb, !1), Mb.url, Mb.inPlaceOf)
       }
-      drain(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null === dd) return;
-        let md = 0,
-          Wd = 0;
-        for (; Wd < this.ready.length && md < 262144;) {
-          const Kd = this.ready[Wd];
-          if (this.written.has(Kd.file)) {
-            Wd++;
+      drain(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null === bb) return;
+        let Mb = 0,
+          eb = 0;
+        for (; eb < this.ready.length && Mb < 262144;) {
+          const gb = this.ready[eb];
+          if (this.written.has(gb.file)) {
+            eb++;
             continue
           }
-          const Qd = this.nextSeq;
-          new DataView(Kd.payload.buffer, Kd.payload.byteOffset, Kd.payload.byteLength).setUint32(Xd.h, Qd, !0);
-          const od = Kd.attempt.jK && Kd.glb.byteLength > 0 && this.drawn.get(Kd.file) === Kd.url;
-          if (dd(hd, od ? 1 : 0, Kd.payload)) {
-            if (this.nextSeq = Qd >= vd - 1 ? 1 : Qd + 1, this.ready.splice(Wd, 1), md += Kd.payload.byteLength, this.pending.delete(Kd.file), this.startupLeft.delete(Kd.file), this.written.set(Kd.file, {
-                seq: Qd,
-                url: Kd.url,
-                empty: 0 === Kd.glb.byteLength,
-                attempt: Kd.attempt
-              }), Kd.glb.byteLength > 0) try {
-              var Fd;
-              null === (Fd = this.onWritten) || void 0 === Fd || Fd.call(this, Kd.file, Kd.glb)
-            } catch (Rd) {
-              console.warn("ModelFeed: reading the file's images failed", Rd)
+          const Ib = this.nextSeq;
+          new DataView(gb.payload.buffer, gb.payload.byteOffset, gb.payload.byteLength).setUint32(Vb.f, Ib, !0);
+          const Ub = gb.attempt.dg && gb.glb.byteLength > 0 && this.drawn.get(gb.file) === gb.url;
+          if (bb(lb, Ub ? 1 : 0, gb.payload)) {
+            if (this.nextSeq = Ib >= Lb - 1 ? 1 : Ib + 1, this.ready.splice(eb, 1), Mb += gb.payload.byteLength, this.pending.delete(gb.file), this.startupLeft.delete(gb.file), this.written.set(gb.file, {
+                seq: Ib,
+                url: gb.url,
+                empty: 0 === gb.glb.byteLength,
+                attempt: gb.attempt
+              }), gb.glb.byteLength > 0) try {
+              var Hb;
+              null === (Hb = this.onWritten) || void 0 === Hb || Hb.call(this, gb.file, gb.glb)
+            } catch (pb) {
+              console.warn("ModelFeed: reading the file's images failed", pb)
             }
           } else {
-            if (null === Od || 0 === Kd.glb.byteLength || Od(Kd.payload.byteLength)) return;
-            this.ready.splice(Wd, 1);
-            const dd = new td(`${Hd(Kd.url)}'s record is ${Kd.payload.byteLength-Xd.d} bytes, more than the cmd ring can grow to take`);
-            this.ringRefused(Kd.file, Kd.attempt, Kd.url, dd, !0)
+            if (null === wb || 0 === gb.glb.byteLength || wb(gb.payload.byteLength)) return;
+            this.ready.splice(eb, 1);
+            const bb = new Ob(`${Eb(gb.url)}'s record is ${gb.payload.byteLength-Vb.b} bytes, more than the cmd ring can grow to take`);
+            this.ringRefused(gb.file, gb.attempt, gb.url, bb, !0)
           }
         }
       }
     }
 
-    function qd(dd) {
-      return new od(`presentation refused ${Hd(dd)}`)
+    function Cb(bb) {
+      return new Ub(`presentation refused ${Eb(bb)}`)
     }
 
-    function Hd(dd) {
-      return dd.startsWith("data:") ? `${dd.slice(0,Math.min(Math.max(dd.indexOf(","),5),64))},...` : dd
+    function Eb(bb) {
+      return bb.startsWith("data:") ? `${bb.slice(0,Math.min(Math.max(bb.indexOf(","),5),64))},...` : bb
     }
   },
-  42779: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Xd,
-      g: () => Rd,
-      i: () => Qd,
-      l: () => Kd,
-      n: () => vd,
-      o: () => hd
+  42502: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Vb,
+      f: () => pb,
+      g: () => Ib,
+      i: () => gb,
+      j: () => Lb,
+      n: () => lb
     });
-    var Wd = md(2425),
-      Fd = md(4421);
-    const Rd = 2147483648,
-      Xd = 1073741824;
+    var eb = Mb(2471),
+      Hb = Mb(4574);
+    const pb = 2147483648,
+      Vb = 1073741824;
 
-    function Kd(dd) {
-      return dd.startsWith("data:")
+    function gb(bb) {
+      return bb.startsWith("data:")
     }
 
-    function hd(dd) {
+    function lb(bb) {
       let {
-        onTableFailed: Od,
-        packUrl: md
+        onTableFailed: wb,
+        packUrl: Mb
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const Wd = vd();
-      Wd.catch((dd => {
-        null === Od || void 0 === Od || Od(dd)
+      const eb = Lb();
+      eb.catch((bb => {
+        null === wb || void 0 === wb || wb(bb)
       }));
-      const Fd = async Od => (await Wd).fileUrl((Od & ~Rd) >>> 0, dd);
+      const Hb = async wb => (await eb).fileUrl((wb & ~pb) >>> 0, bb);
       return {
         startup: [],
-        url: async dd => {
-          if (md && 0 === (dd & Rd)) {
-            const Od = await Wd,
-              Fd = Od.filePackName(dd),
-              Rd = null === Fd || "lifeform" === Od.fileSource(dd) ? null : md(Fd);
-            if (null !== Rd) return Rd
+        url: async bb => {
+          if (Mb && 0 === (bb & pb)) {
+            const wb = await eb,
+              Hb = wb.filePackName(bb),
+              pb = null === Hb || "lifeform" === wb.fileSource(bb) ? null : Mb(Hb);
+            if (null !== pb) return pb
           }
-          return Fd(dd)
+          return Hb(bb)
         },
-        shippedUrl: Fd
+        shippedUrl: Hb
       }
     }
 
-    function vd() {
-      return md.e(50).then((() => md(45365)))
+    function Lb() {
+      return Mb.e(50).then((() => Mb(45181)))
     }
-    async function Qd(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-      return dd.startsWith("data:") ? (0, Fd.b)(dd.slice(dd.indexOf(",") + 1), Od) : (0, Wd.J)(dd, {
-        spare: Od
+    async function Ib(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+      return bb.startsWith("data:") ? (0, Hb.c)(bb.slice(bb.indexOf(",") + 1), wb) : (0, eb.C)(bb, {
+        spare: wb
       })
     }
   },
-  42788: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => hd,
-      h: () => vd,
-      j: () => qd,
-      n: () => od,
-      q: () => td,
-      r: () => Nd
+  42509: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => lb,
+      f: () => Lb,
+      j: () => Cb,
+      m: () => Ub,
+      o: () => Ob,
+      p: () => tb
     });
-    const Wd = 826427981,
-      Fd = 1,
-      Rd = 2,
-      Xd = 44,
-      Kd = 58,
-      hd = 8,
-      vd = 4;
+    const eb = 826427981,
+      Hb = 1,
+      pb = 2,
+      Vb = 44,
+      gb = 58,
+      lb = 8,
+      Lb = 4;
 
-    function Qd(dd, Od, md) {
-      const Fd = (new TextEncoder).encode(md),
-        Rd = hd + 4 * (Od.length + 2),
-        Xd = new Uint8Array(Rd + (Fd.byteLength + 3 & -4)),
-        Kd = new DataView(Xd.buffer);
-      return Kd.setUint32(0, dd, !0), Kd.setUint32(hd, Wd, !0), Od.forEach(((dd, Od) => {
-        Kd.setUint32(hd + 4 * (Od + 1), dd, !0)
-      })), Kd.setUint32(Rd - 4, Fd.byteLength, !0), Xd.set(Fd, Rd), Xd
+    function Ib(bb, wb, Mb) {
+      const Hb = (new TextEncoder).encode(Mb),
+        pb = lb + 4 * (wb.length + 2),
+        Vb = new Uint8Array(pb + (Hb.byteLength + 3 & -4)),
+        gb = new DataView(Vb.buffer);
+      return gb.setUint32(0, bb, !0), gb.setUint32(lb, eb, !0), wb.forEach(((bb, wb) => {
+        gb.setUint32(lb + 4 * (wb + 1), bb, !0)
+      })), gb.setUint32(pb - 4, Hb.byteLength, !0), Vb.set(Hb, pb), Vb
     }
 
-    function td(dd, Od) {
-      return Qd(dd, [Rd], Od)
+    function Ob(bb, wb) {
+      return Ib(bb, [pb], wb)
     }
 
-    function od(dd, Od) {
-      return Qd(dd, [Fd, Kd], Od)
+    function Ub(bb, wb) {
+      return Ib(bb, [Hb, gb], wb)
     }
 
-    function Nd(dd, Od) {
-      return Qd(dd, [Fd, Xd], Od)
+    function tb(bb, wb) {
+      return Ib(bb, [Hb, Vb], wb)
     }
 
-    function qd(dd) {
-      const Od = hd;
-      if (dd.byteLength < Od + 12) return !1;
-      const md = new DataView(dd.buffer, dd.byteOffset, dd.byteLength);
-      return md.getUint32(Od, !0) === Wd && md.getUint32(Od + 4, !0) === Fd && md.getUint32(Od + 8, !0) === Xd
+    function Cb(bb) {
+      const wb = lb;
+      if (bb.byteLength < wb + 12) return !1;
+      const Mb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
+      return Mb.getUint32(wb, !0) === eb && Mb.getUint32(wb + 4, !0) === Hb && Mb.getUint32(wb + 8, !0) === Vb
     }
   },
-  42663: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Fd,
-      f: () => Qd,
-      h: () => Xd,
-      k: () => hd
+  42387: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Hb,
+      e: () => Ib,
+      i: () => Vb,
+      j: () => lb
     });
-    var Wd = md(37659);
-    class Fd extends Error {
-      constructor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${dd}: the module trapped${md?" in an earlier call":""}: ${String(Od)}`, {
-          cause: Od
-        }), this.site = dd, this.trap = Od, this.earlier = md, this.name = "ModuleTrapError", Od instanceof Error && void 0 !== Od.stack && (this.stack = `${this.name}: ${this.message}\n${Od.stack}`)
+    var eb = Mb(37406);
+    class Hb extends Error {
+      constructor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${bb}: the module trapped${Mb?" in an earlier call":""}: ${String(wb)}`, {
+          cause: wb
+        }), this.site = bb, this.trap = wb, this.earlier = Mb, this.name = "ModuleTrapError", wb instanceof Error && void 0 !== wb.stack && (this.stack = `${this.name}: ${this.message}\n${wb.stack}`)
       }
     }
-    const Rd = new WeakMap;
+    const pb = new WeakMap;
 
-    function Xd(dd) {
-      return Rd.has(dd)
+    function Vb(bb) {
+      return pb.has(bb)
     }
 
-    function Kd(dd, Od) {
-      Rd.has(dd) || Rd.set(dd, Od)
+    function gb(bb, wb) {
+      pb.has(bb) || pb.set(bb, wb)
     }
 
-    function hd(dd, Od) {
-      return !!(0, Wd.f)(Od) && (Kd(dd, Od), !0)
+    function lb(bb, wb) {
+      return !!(0, eb.h)(wb) && (gb(bb, wb), !0)
     }
-    const vd = [
-      ["error", dd => dd.error],
-      ["unhandledrejection", dd => dd.reason]
+    const Lb = [
+      ["error", bb => bb.error],
+      ["unhandledrejection", bb => bb.reason]
     ];
 
-    function Qd(dd, Od, md) {
-      let Xd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return Rd.has(dd) ? Promise.reject(new Fd(Od, Rd.get(dd), !0)) : new Promise(((Rd, hd) => {
-        const Qd = md => {
-            Kd(dd, md), Nd(), hd(new Fd(Od, md))
+    function Ib(bb, wb, Mb) {
+      let Vb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return pb.has(bb) ? Promise.reject(new Hb(wb, pb.get(bb), !0)) : new Promise(((pb, lb) => {
+        const Ib = Mb => {
+            gb(bb, Mb), tb(), lb(new Hb(wb, Mb))
           },
-          td = dd => {
-            dd instanceof WebAssembly.RuntimeError ? Qd(dd) : (Nd(), hd(dd))
+          Ob = bb => {
+            bb instanceof WebAssembly.RuntimeError ? Ib(bb) : (tb(), lb(bb))
           },
-          od = vd.map((dd => {
-            let [Od, md] = dd;
-            return [Od, dd => {
-              const Od = md(dd);
-              (0, Wd.f)(Od) && Qd(Od)
+          Ub = Lb.map((bb => {
+            let [wb, Mb] = bb;
+            return [wb, bb => {
+              const wb = Mb(bb);
+              (0, eb.h)(wb) && Ib(wb)
             }]
           })),
-          Nd = () => {
-            for (const [dd, Od] of od) null === Xd || void 0 === Xd || Xd.removeEventListener(dd, Od)
+          tb = () => {
+            for (const [bb, wb] of Ub) null === Vb || void 0 === Vb || Vb.removeEventListener(bb, wb)
           };
-        for (const [dd, Od] of od) null === Xd || void 0 === Xd || Xd.addEventListener(dd, Od);
-        let qd;
+        for (const [bb, wb] of Ub) null === Vb || void 0 === Vb || Vb.addEventListener(bb, wb);
+        let Cb;
         try {
-          qd = md()
-        } catch (Hd) {
-          return void td(Hd)
+          Cb = Mb()
+        } catch (Eb) {
+          return void Ob(Eb)
         }
-        qd.then((dd => {
-          Nd(), Rd(dd)
-        }), td)
+        Cb.then((bb => {
+          tb(), pb(bb)
+        }), Ob)
       }))
     }
   },
-  42693: (dd, Od, md) => {
-    md.d(Od, {
-      C: () => Cd,
-      E: () => Ld,
-      G: () => Sd,
-      H: () => Gd,
-      I: () => kd,
-      J: () => nd,
-      K: () => Dd,
-      O: () => zd,
-      S: () => rd,
-      V: () => fd,
-      b: () => Bd,
-      f: () => Jd,
-      h: () => jd,
-      j: () => Pd,
-      n: () => Ed,
-      r: () => xd,
-      s: () => gd,
-      t: () => ud,
-      w: () => Ad,
-      z: () => Zd
+  42422: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      B: () => db,
+      D: () => Sb,
+      E: () => Db,
+      G: () => Wb,
+      I: () => nb,
+      J: () => Jb,
+      K: () => qb,
+      N: () => vb,
+      O: () => Ab,
+      P: () => yb,
+      e: () => Rb,
+      f: () => jb,
+      i: () => Gb,
+      j: () => Nb,
+      m: () => xb,
+      q: () => rb,
+      r: () => zb,
+      t: () => Yb,
+      v: () => fb,
+      x: () => Pb
     });
-    var Wd = md(231),
-      Fd = md(29),
-      Rd = md(4802),
-      Xd = md(145),
-      Kd = md(382),
-      hd = md(46),
-      vd = md(364),
-      Qd = md(42658),
-      td = md(42665),
-      od = md(38087),
-      Nd = md(42701),
-      qd = (md(42685), md(42807)),
-      Hd = md(42729),
-      yd = md(42673);
-    const bd = "wasmJoinBuild";
-    let Td = null,
-      pd = null,
-      Yd = null;
+    var eb = Mb(236),
+      Hb = Mb(26),
+      pb = Mb(4950),
+      Vb = Mb(153),
+      gb = Mb(364),
+      lb = Mb(43),
+      Lb = Mb(352),
+      Ib = Mb(42375),
+      Ob = Mb(42390),
+      Ub = Mb(37754),
+      tb = Mb(42427),
+      Cb = (Mb(42406), Mb(42525)),
+      Eb = Mb(42450),
+      Fb = Mb(42399);
+    const Bb = "wasmJoinBuild";
+    let sb = null,
+      mb = null,
+      hb = null;
 
-    function gd(dd) {
-      Yd = dd
+    function zb(bb) {
+      hb = bb
     }
-    let wd = !1;
+    let Xb = !1;
 
-    function Ed() {
-      wd = !0
-    }
-
-    function Jd() {
-      return wd
-    }
-    let Ud = !1;
-
-    function xd() {
-      Ud = !0
+    function xb() {
+      Xb = !0
     }
 
-    function Bd() {
-      return Ud
+    function jb() {
+      return Xb
+    }
+    let Kb = !1;
+
+    function rb() {
+      Kb = !0
     }
 
-    function Sd() {
-      return Yd
-    }
-    let sd = null;
-
-    function ud(dd) {
-      sd = dd, (0, Kd.e)(dd)
-    }
-    const Vd = "wasmClientRenderLost";
-
-    function Ad() {
-      hd.o.setItem(Vd, !0)
+    function Rb() {
+      return Kb
     }
 
-    function rd() {
-      return !0 === hd.o.getItem(Vd)
+    function Db() {
+      return hb
+    }
+    let cb = null;
+
+    function Yb(bb) {
+      cb = bb, (0, gb.e)(bb)
+    }
+    const Zb = "wasmClientRenderLost";
+
+    function fb() {
+      lb.j.setItem(Zb, !0)
     }
 
-    function Gd() {
-      return sd
+    function Ab() {
+      return !0 === lb.j.getItem(Zb)
     }
 
-    function nd() {
-      if (null === Td) {
-        hd.k.removeItem("wasmLastPick"), hd.k.removeItem("wasmGuessVerdict");
+    function Wb() {
+      return cb
+    }
+
+    function Jb() {
+      if (null === sb) {
+        lb.i.removeItem("wasmLastPick"), lb.i.removeItem("wasmGuessVerdict");
         try {
           localStorage.removeItem("wasmClientMisdrawnGpu"), localStorage.removeItem("wasmClientGameGpu")
-        } catch {}(0, Kd.j)(), Td = (0, vd.p)().then((() => (0, Qd.E)(Nd.g))).then((dd => (null === dd || (0, Qd.p)(dd) || (pd = qd.e[dd.backend], Fd.e.followGameGpu("webgpu" === dd.backend ? dd.adapter : null), "webgpu" === dd.backend && (0, Hd.e)()), dd)))
+        } catch {}(0, gb.n)(), sb = (0, Lb.l)().then((() => (0, Ib.C)(tb.e))).then((bb => (null === bb || (0, Ib.q)(bb) || (mb = Cb.b[bb.backend], Hb.c.followGameGpu("webgpu" === bb.backend ? bb.adapter : null), "webgpu" === bb.backend && (0, Eb.e)()), bb)))
       }
-      return Td
+      return sb
     }
 
-    function Ld() {
-      return pd
+    function Sb() {
+      return mb
     }
 
-    function Pd(dd) {
-      return dd ? dd.load() : Promise.resolve().then((function() {
-        var dd = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw dd.code = "MODULE_NOT_FOUND", dd
-      })).then((dd => dd.bloxdWasmClient))
+    function Nb(bb) {
+      return bb ? bb.load() : Promise.resolve().then((function() {
+        var bb = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw bb.code = "MODULE_NOT_FOUND", bb
+      })).then((bb => bb.bloxdWasmClient))
     }
 
-    function zd(dd) {
-      hd.k.setItem(bd, dd)
+    function vb(bb) {
+      lb.i.setItem(Bb, bb)
     }
 
-    function cd(dd, Od) {
-      const md = hd.k.getItem(bd);
-      return null === md ? function(dd) {
-        if (void 0 !== (0, Wd.b)(dd, "webgpu") && (0, Qd.A)()) return "webgpu";
-        return !1 === (0, Xd.t)() ? "webgl1" : "webgl"
-      }(dd) : "none" === md ? null : "string" === typeof md && void 0 !== (0, Wd.b)(dd, md) ? md : (Od && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(md)}, is none of this client's: guessing WebGL2's`), "webgl")
+    function Qb(bb, wb) {
+      const Mb = lb.i.getItem(Bb);
+      return null === Mb ? function(bb) {
+        if (void 0 !== (0, eb.c)(bb, "webgpu") && (0, Ib.z)()) return "webgpu";
+        return !1 === (0, Vb.r)() ? "webgl1" : "webgl"
+      }(bb) : "none" === Mb ? null : "string" === typeof Mb && void 0 !== (0, eb.c)(bb, Mb) ? Mb : (wb && console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(Mb)}, is none of this client's: guessing WebGL2's`), "webgl")
     }
-    async function jd() {
-      if (null === Nd.g) return Pd(null);
-      const dd = cd(Nd.g, !0);
-      return null === dd ? null : Nd.g[dd]()
+    async function Gb() {
+      if (null === tb.e) return Nb(null);
+      const bb = Qb(tb.e, !0);
+      return null === bb ? null : tb.e[bb]()
     }
 
-    function Dd() {
-      null === Td && null !== Nd.g && "webgl" === cd(Nd.g, !1) && (0, yd.e)()
+    function qb() {
+      null === sb && null !== tb.e && "webgl" === Qb(tb.e, !1) && (0, Fb.c)()
     }
-    let ed = null,
-      Id = null,
-      ld = null;
+    let ab = null,
+      ib = null,
+      ub = null;
 
-    function Cd() {
-      return ed ??= nd().then((async dd => {
-        const Od = null !== dd && !(0, Qd.p)(dd),
-          md = {
-            indirectHangs: Od && await (0, Qd.N)(dd, window.location.search),
-            storagePullBreaks: Od && (0, Qd.V)(dd, window.location.search),
-            splitPassBreaks: Od && (0, Qd.T)(dd, window.location.search),
-            earlySky: Od && (0, Qd.L)(dd, window.location.search),
-            instancedTerrain: Od ? (0, Qd.P)(dd, window.location.search) : null,
-            cellLight: Od && await (0, Rd.g)("cellLight"),
-            framesAhead: (0, Qd.i)(window.location.search, Od ? dd : null),
-            webGpuRestores: !Od || (0, Qd.X)(dd, (0, od.c)()),
-            bufferCopiesCrash: Od && (0, Qd.I)(dd, window.location.search),
-            firstVertex: Od ? (0, td.h)(dd.backend, window.location.search) : void 0
+    function db() {
+      return ab ??= Jb().then((async bb => {
+        const wb = null !== bb && !(0, Ib.q)(bb),
+          Mb = {
+            indirectHangs: wb && await (0, Ib.L)(bb, window.location.search),
+            storagePullBreaks: wb && (0, Ib.W)(bb, window.location.search),
+            splitPassBreaks: wb && (0, Ib.S)(bb, window.location.search),
+            earlySky: wb && (0, Ib.H)(bb, window.location.search),
+            instancedTerrain: wb ? (0, Ib.M)(bb, window.location.search) : null,
+            cellLight: wb && await (0, pb.h)("cellLight"),
+            framesAhead: (0, Ib.j)(window.location.search, wb ? bb : null),
+            webGpuRestores: !wb || (0, Ib._)(bb, (0, Ub.b)()),
+            bufferCopiesCrash: wb && (0, Ib.F)(bb, window.location.search),
+            firstVertex: wb ? (0, Ob.h)(bb.backend, window.location.search) : void 0
           };
-        return Id = md.indirectHangs, ld = !md.webGpuRestores, md
-      })), ed
+        return ib = Mb.indirectHangs, ub = !Mb.webGpuRestores, Mb
+      })), ab
     }
 
-    function Zd() {
-      return Id
+    function Pb() {
+      return ib
     }
 
-    function kd() {
-      return ld
+    function nb() {
+      return ub
     }
-    async function fd() {
-      const dd = null === Td ? null : await Td;
-      return null !== dd && (0, Qd.p)(dd) && (Td = null, ed = null, Id = null, ld = null), nd()
+    async function yb() {
+      const bb = null === sb ? null : await sb;
+      return null !== bb && (0, Ib.q)(bb) && (sb = null, ab = null, ib = null, ub = null), Jb()
     }
   },
-  42811: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => hd,
-      e: () => vd
+  42528: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => lb,
+      g: () => Lb
     });
-    var Wd = md(37688),
-      Fd = md(42640),
-      Rd = md(5055),
-      Xd = md(364),
-      Kd = md(38087);
-    async function hd(dd, Od) {
-      return await Promise.all([(0, Rd.g)(void 0, !0), (0, Xd.p)()]), (0, Wd.l)(dd, Fd.e, {
-        ...Od,
-        memoryMaximumBytes: (0, Kd.l)()
+    var eb = Mb(37435),
+      Hb = Mb(42353),
+      pb = Mb(5235),
+      Vb = Mb(352),
+      gb = Mb(37754);
+    async function lb(bb, wb) {
+      return await Promise.all([(0, pb.e)(void 0, !0), (0, Vb.l)()]), (0, eb.o)(bb, Hb.h, {
+        ...wb,
+        memoryMaximumBytes: (0, gb.o)()
       })
     }
-    async function vd() {
-      return await (0, Rd.g)(void 0, !0), (0, Wd.n)((0, Kd.l)())
+    async function Lb() {
+      return await (0, pb.e)(void 0, !0), (0, eb.r)((0, gb.o)())
     }
   },
-  42665: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Kd,
-      h: () => Rd
+  42390: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => gb,
+      h: () => pb
     });
-    var Wd = md(310);
-    const Fd = "provokingVertex";
+    var eb = Mb(309);
+    const Hb = "provokingVertex";
 
-    function Rd(dd, Od) {
-      if ("webgl" !== dd) return;
-      const md = new URLSearchParams(Od).get(Fd);
-      return "first" === md || "last" !== md && null
+    function pb(bb, wb) {
+      if ("webgl" !== bb) return;
+      const Mb = new URLSearchParams(wb).get(Hb);
+      return "first" === Mb || "last" !== Mb && null
     }
-    const Xd = new WeakSet;
+    const Vb = new WeakSet;
 
-    function Kd(dd, Od) {
-      var md, Fd;
-      let Rd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (md = null === (Fd = globalThis.navigator) || void 0 === Fd ? void 0 : Fd.userAgent) && void 0 !== md ? md : "";
+    function gb(bb, wb) {
+      var Mb, Hb;
+      let pb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Mb = null === (Hb = globalThis.navigator) || void 0 === Hb ? void 0 : Hb.userAgent) && void 0 !== Mb ? Mb : "";
       try {
-        !1 === Od || Xd.has(dd) || (Xd.add(dd), dd.addEventListener("webglcontextrestored", (() => {
-          Kd(dd, Od, Rd)
+        !1 === wb || Vb.has(bb) || (Vb.add(bb), bb.addEventListener("webglcontextrestored", (() => {
+          gb(bb, wb, pb)
         })));
-        const md = dd.getContext("webgl2");
-        if (null === md || md.isContextLost()) return !1;
-        if (!(null !== Od && void 0 !== Od ? Od : function(dd, Od) {
-            var md, Fd;
-            const Rd = dd.getExtension("WEBGL_debug_renderer_info");
-            if (null === Rd) return !1;
-            return function(dd, Od, md) {
-              return md.includes("Windows") && "adreno_6" === (0, Wd.j)(dd, Od)
-            }(String(null !== (md = dd.getParameter(Rd.UNMASKED_VENDOR_WEBGL)) && void 0 !== md ? md : ""), String(null !== (Fd = dd.getParameter(Rd.UNMASKED_RENDERER_WEBGL)) && void 0 !== Fd ? Fd : ""), Od)
-          }(md, Rd))) return !1;
-        const Fd = md.getExtension("WEBGL_provoking_vertex");
-        return null !== Fd && (Fd.provokingVertexWEBGL(Fd.FIRST_VERTEX_CONVENTION_WEBGL), console.info("WebGL2 draws flat varyings from the first vertex (WEBGL_provoking_vertex)"), !0)
-      } catch (hd) {
-        return console.warn("WebGL2's provoking vertex couldn't be set: flat varyings draw from the last vertex", hd), !1
+        const Mb = bb.getContext("webgl2");
+        if (null === Mb || Mb.isContextLost()) return !1;
+        if (!(null !== wb && void 0 !== wb ? wb : function(bb, wb) {
+            var Mb, Hb;
+            const pb = bb.getExtension("WEBGL_debug_renderer_info");
+            if (null === pb) return !1;
+            return function(bb, wb, Mb) {
+              return Mb.includes("Windows") && "adreno_6" === (0, eb.k)(bb, wb)
+            }(String(null !== (Mb = bb.getParameter(pb.UNMASKED_VENDOR_WEBGL)) && void 0 !== Mb ? Mb : ""), String(null !== (Hb = bb.getParameter(pb.UNMASKED_RENDERER_WEBGL)) && void 0 !== Hb ? Hb : ""), wb)
+          }(Mb, pb))) return !1;
+        const Hb = Mb.getExtension("WEBGL_provoking_vertex");
+        return null !== Hb && (Hb.provokingVertexWEBGL(Hb.FIRST_VERTEX_CONVENTION_WEBGL), console.info("WebGL2 draws flat varyings from the first vertex (WEBGL_provoking_vertex)"), !0)
+      } catch (lb) {
+        return console.warn("WebGL2's provoking vertex couldn't be set: flat varyings draw from the last vertex", lb), !1
       }
     }
   },
-  42677: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => vd,
-      g: () => Kd,
-      j: () => Qd,
-      k: () => Xd
+  42401: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Lb,
+      f: () => gb,
+      j: () => Ib,
+      l: () => Vb
     });
-    var Wd = md(399),
-      Fd = md(720);
-    let Rd;
+    var eb = Mb(375),
+      Hb = Mb(681);
+    let pb;
 
-    function Xd(dd) {
-      var Od;
-      const md = Rd;
-      return Rd = void 0, null !== (Od = hd(dd)) && void 0 !== Od ? Od : md
+    function Vb(bb) {
+      var wb;
+      const Mb = pb;
+      return pb = void 0, null !== (wb = lb(bb)) && void 0 !== wb ? wb : Mb
     }
 
-    function Kd(dd) {
+    function gb(bb) {
       try {
-        const Od = hd(dd);
-        void 0 !== Od && (Rd = Od, (0, Fd.f)((0, Wd.n)(Od.reason, Od.message)))
-      } catch (Od) {
-        console.warn("Couldn't keep the WebGPU loss's cause", Od)
+        const wb = lb(bb);
+        void 0 !== wb && (pb = wb, (0, Hb.g)((0, eb.p)(wb.reason, wb.message)))
+      } catch (wb) {
+        console.warn("Couldn't keep the WebGPU loss's cause", wb)
       }
     }
 
-    function hd(dd) {
-      var Od;
-      const md = null === dd || void 0 === dd || null === (Od = dd.KKd) || void 0 === Od ? void 0 : Od.call(dd),
-        Wd = null === dd || void 0 === dd ? void 0 : dd.XKd();
-      if (void 0 === Wd) return;
-      const Fd = new Error(Wd);
-      return void 0 !== md && (Fd.reason = md), Fd
+    function lb(bb) {
+      var wb;
+      const Mb = null === bb || void 0 === bb || null === (wb = bb.Lgb) || void 0 === wb ? void 0 : wb.call(bb),
+        eb = null === bb || void 0 === bb ? void 0 : bb.lgb();
+      if (void 0 === eb) return;
+      const Hb = new Error(eb);
+      return void 0 !== Mb && (Hb.reason = Mb), Hb
     }
 
-    function vd(dd) {
-      return dd instanceof Error ? dd : void 0
+    function Lb(bb) {
+      return bb instanceof Error ? bb : void 0
     }
 
-    function Qd(dd, Od) {
-      return "lost" !== dd && "frames_refused" !== dd ? {} : (0, Wd.n)("frames_refused" === dd ? dd : null === Od || void 0 === Od ? void 0 : Od.reason, null === Od || void 0 === Od ? void 0 : Od.message)
+    function Ib(bb, wb) {
+      return "lost" !== bb && "frames_refused" !== bb ? {} : (0, eb.p)("frames_refused" === bb ? bb : null === wb || void 0 === wb ? void 0 : wb.reason, null === wb || void 0 === wb ? void 0 : wb.message)
     }
   },
-  42721: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Bd,
-      g: () => Ed,
-      h: () => wd,
-      k: () => gd,
-      m: () => xd,
-      p: () => Vd,
-      s: () => ud,
-      t: () => Ad
+  42441: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Rb,
+      g: () => xb,
+      j: () => Xb,
+      n: () => zb,
+      o: () => rb,
+      p: () => Zb,
+      r: () => Yb,
+      t: () => fb
     });
-    var Wd = md(5571),
-      Fd = md(42729),
-      Rd = md(35387);
-    const Xd = 1,
-      Kd = 18,
-      hd = 19,
-      vd = 20,
-      Qd = 21,
-      td = 22,
-      od = 23,
-      Nd = {
-        [Xd]: "link",
+    var eb = Mb(5685),
+      Hb = Mb(42450),
+      pb = Mb(35179);
+    const Vb = 1,
+      gb = 18,
+      lb = 19,
+      Lb = 20,
+      Ib = 21,
+      Ob = 22,
+      Ub = 23,
+      tb = {
+        [Vb]: "link",
         2: "draw",
         3: "draw base vertex",
         4: "draw no index buffer",
@@ -3234,28 +3234,28 @@ export const modules = {
         13: "draw short constant",
         15: "draw no zero buffer",
         16: "draw feedback loop",
-        [Kd]: "retry linked",
-        [hd]: "fallback linked",
-        [vd]: "fallback failed",
-        [Qd]: "link stalled",
-        [td]: "link left pending",
-        [od]: "moved to general",
+        [gb]: "retry linked",
+        [lb]: "fallback linked",
+        [Lb]: "fallback failed",
+        [Ib]: "link stalled",
+        [Ob]: "link left pending",
+        [Ub]: "moved to general",
         32: "compile validation",
         33: "compile internal",
         34: "compile timeout"
       };
 
-    function qd(dd, Od, md) {
-      return dd === Kd ? "program retry" : dd === Xd ? "program link" : dd === Qd ? "program link stall" : dd === td ? "program link pending" : dd === hd || dd === vd || dd === od ? `program ${Od} ${md}` : "program"
+    function Cb(bb, wb, Mb) {
+      return bb === gb ? "program retry" : bb === Vb ? "program link" : bb === Ib ? "program link stall" : bb === Ob ? "program link pending" : bb === lb || bb === Lb || bb === Ub ? `program ${wb} ${Mb}` : "program"
     }
-    const Hd = {
+    const Eb = {
         1: "renderer",
         2: "sky",
         3: "meshes",
         4: "terrain",
         5: "scene warm stuck"
       },
-      yd = {
+      Fb = {
         0: "transform",
         1: "object",
         2: "instance batch",
@@ -3268,18 +3268,18 @@ export const modules = {
         10: "text plane",
         11: "object chunk"
       },
-      bd = {
+      Bb = {
         1: "mesh undecodable",
         2: "part refused",
         3: "terrain ids full",
         4: "unknown terrain id",
         5: "buffer failed"
       },
-      Td = {
+      sb = {
         11: "none read after view",
         12: "some read after view"
       },
-      pd = {
+      mb = {
         1: "view waited drained",
         2: "view waited capped",
         3: "none after view",
@@ -3287,26 +3287,26 @@ export const modules = {
         5: "no wait no clock",
         6: "no wait parallel links",
         7: "view shown unheld",
-        ...Td
+        ...sb
       },
-      Yd = {
+      hb = {
         8: "view",
         9: "minute",
         10: "loss"
       };
 
-    function gd(dd, Od) {
-      return dd === Wd.p.RenderSerialLinks && void 0 !== Td[Od]
+    function zb(bb, wb) {
+      return bb === eb.p.RenderSerialLinks && void 0 !== sb[wb]
     }
 
-    function wd(dd, Od) {
-      return dd === Wd.p.RenderInternal && (Od >>> 8 & 255) === td
+    function Xb(bb, wb) {
+      return bb === eb.p.RenderInternal && (wb >>> 8 & 255) === Ob
     }
 
-    function Ed(dd, Od) {
-      return dd === Wd.p.RenderSerialLinks && void 0 !== Yd[15 & Od]
+    function xb(bb, wb) {
+      return bb === eb.p.RenderSerialLinks && void 0 !== hb[15 & wb]
     }
-    const Jd = {
+    const jb = {
       1280: "invalid enum",
       1281: "invalid value",
       1282: "invalid operation",
@@ -3315,89 +3315,89 @@ export const modules = {
       37442: "context lost"
     };
 
-    function Ud(dd, Od) {
-      var md;
-      return null !== (md = dd[Od]) && void 0 !== md ? md : (0, Rd.d)(Od)
+    function Kb(bb, wb) {
+      var Mb;
+      return null !== (Mb = bb[wb]) && void 0 !== Mb ? Mb : (0, pb.b)(wb)
     }
 
-    function xd() {
-      return (0, Rd.d)((0, Fd.b)())
+    function rb() {
+      return (0, pb.b)((0, Hb.c)())
     }
 
-    function Bd(dd, Od) {
-      switch (dd) {
-        case Wd.p.RenderSceneRowNotDrawn:
+    function Rb(bb, wb) {
+      switch (bb) {
+        case eb.p.RenderSceneRowNotDrawn:
           return {
-            words: ` ${Ud(yd,Od)}`, instance: String(Od), group: String(dd)
+            words: ` ${Kb(Fb,wb)}`, instance: String(wb), group: String(bb)
           };
-        case Wd.p.RenderChunkMeshNotDrawn: {
-          const md = 0 === (128 & Od) ? "" : " shortage",
-            Wd = Od >>> 8;
+        case eb.p.RenderChunkMeshNotDrawn: {
+          const Mb = 0 === (128 & wb) ? "" : " shortage",
+            eb = wb >>> 8;
           return {
-            words: ` ${Ud(bd,127&Od)}${md}${0===Wd?"":` kind ${(0,Rd.d)(Wd)}`}`,
-            instance: String(Od),
-            group: String(dd)
+            words: ` ${Kb(Bb,127&wb)}${Mb}${0===eb?"":` kind ${(0,pb.b)(eb)}`}`,
+            instance: String(wb),
+            group: String(bb)
           }
         }
-        case Wd.p.RenderInternal: {
-          const md = Ud(Hd, 255 & Od),
-            Wd = Od >>> 8 & 255;
-          if (0 === Wd) return {
-            words: ` ${md}`,
-            instance: String(Od),
-            group: String(dd)
+        case eb.p.RenderInternal: {
+          const Mb = Kb(Eb, 255 & wb),
+            eb = wb >>> 8 & 255;
+          if (0 === eb) return {
+            words: ` ${Mb}`,
+            instance: String(wb),
+            group: String(bb)
           };
-          const Fd = Ud(Nd, Wd),
-            Xd = Od >>> 16;
+          const Hb = Kb(tb, eb),
+            Vb = wb >>> 16;
           return {
-            words: ` ${md} ${Fd} program ${(0,Rd.d)(Xd)}`,
-            instance: `${md} ${Fd} ${Xd}`,
-            group: qd(Wd, Fd, md),
+            words: ` ${Mb} ${Hb} program ${(0,pb.b)(Vb)}`,
+            instance: `${Mb} ${Hb} ${Vb}`,
+            group: Cb(eb, Hb, Mb),
             gpuDetails: {
-              programFailure: Fd,
-              program: String(Xd)
+              programFailure: Hb,
+              program: String(Vb)
             }
           }
         }
-        case Wd.p.RenderSerialLinks: {
-          if (Ed(dd, Od)) {
-            const dd = function(dd) {
-              const Od = (Od, md) => (0, Rd.d)(dd >>> Od & (1 << md) - 1),
-                md = dd >>> 30 & 1 ? " restored" : "";
-              return `link census ${Yd[15&dd]} linked ${Od(22,8)} failed ${Od(4,6)} retried ${Od(10,6)} fallback ${Od(16,6)}${md}`
-            }(Od);
+        case eb.p.RenderSerialLinks: {
+          if (xb(bb, wb)) {
+            const bb = function(bb) {
+              const wb = (wb, Mb) => (0, pb.b)(bb >>> wb & (1 << Mb) - 1),
+                Mb = bb >>> 30 & 1 ? " restored" : "";
+              return `link census ${hb[15&bb]} linked ${wb(22,8)} failed ${wb(4,6)} retried ${wb(10,6)} fallback ${wb(16,6)}${Mb}`
+            }(wb);
             return {
-              words: ` ${dd}`,
-              instance: String(15 & Od),
+              words: ` ${bb}`,
+              instance: String(15 & wb),
               group: "link census",
               gpuDetails: {
-                linkCensus: dd
+                linkCensus: bb
               }
             }
           }
-          const md = Ud(pd, Od);
+          const Mb = Kb(mb, wb);
           return {
-            words: ` ${md}`,
-            instance: String(Od),
-            group: String(dd),
+            words: ` ${Mb}`,
+            instance: String(wb),
+            group: String(bb),
             gpuDetails: {
-              serialLinks: md
+              serialLinks: Mb
             }
           }
         }
-        case Wd.p.RenderGlErrorAfterRestore: {
-          const md = Ud(Jd, 65535 & Od),
-            Wd = Od >>> 16,
-            Fd = 65535 !== Wd;
+        case eb.p.RenderGlErrorAfterRestore: {
+          const Mb = Kb(jb, 65535 & wb),
+            eb = wb >>> 16,
+            Hb = 65535 !== eb;
           return {
-            words: ` ${md}${Fd?` program ${(0,Rd.d)(Wd)}`:""}`,
-            instance: String(Od),
-            group: String(dd),
-            gpuDetails: Fd ? {
-              glError: md,
-              program: String(Wd)
+            words: ` ${Mb}${Hb?` program ${(0,pb.b)(eb)}`:""}`,
+            instance: String(wb),
+            group: String(bb),
+            gpuDetails: Hb ? {
+              glError: Mb,
+              program: String(eb)
             } : {
-              glError: md
+              glError: Mb
             }
           }
         }
@@ -3405,148 +3405,148 @@ export const modules = {
           return null
       }
     }
-    const Sd = 2,
-      sd = new Map;
+    const Db = 2,
+      cb = new Map;
 
-    function ud(dd) {
+    function Yb(bb) {
       let {
-        group: Od,
-        instance: md
-      } = dd, Wd = sd.get(Od);
-      return void 0 === Wd && (Wd = [], sd.set(Od, Wd)), !Wd.includes(md) && (Wd.length >= Sd || (Wd.push(md), !1))
+        group: wb,
+        instance: Mb
+      } = bb, eb = cb.get(wb);
+      return void 0 === eb && (eb = [], cb.set(wb, eb)), !eb.includes(Mb) && (eb.length >= Db || (eb.push(Mb), !1))
     }
 
-    function Vd() {
-      return sd.size > 0
+    function Zb() {
+      return cb.size > 0
     }
 
-    function Ad() {
-      sd.clear()
+    function fb() {
+      cb.clear()
     }
   },
-  42701: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Xd,
-      g: () => Rd
+  42427: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Vb,
+      e: () => pb
     });
-    var Wd = md(42709);
-    const Fd = new WeakSet;
-    const Rd = {
+    var eb = Mb(42434);
+    const Hb = new WeakSet;
+    const pb = {
         webgpu: async () => (function() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
-          if (void 0 === dd || Fd.has(dd.prototype)) return;
-          Fd.add(dd.prototype);
-          const Od = dd.prototype.requestDevice;
-          dd.prototype.requestDevice = function(dd) {
-            var md;
-            const Fd = null !== (md = null === dd || void 0 === dd ? void 0 : dd.requiredLimits) && void 0 !== md ? md : {},
-              Rd = Object.keys(Fd).filter((dd => !(dd in this.limits)));
-            if (0 === Rd.length) return Od.call(this, dd);
-            const Xd = Object.fromEntries(Object.entries(Fd).filter((dd => {
-              let [Od] = dd;
-              return Od in this.limits
+          let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : globalThis.GPUAdapter;
+          if (void 0 === bb || Hb.has(bb.prototype)) return;
+          Hb.add(bb.prototype);
+          const wb = bb.prototype.requestDevice;
+          bb.prototype.requestDevice = function(bb) {
+            var Mb;
+            const Hb = null !== (Mb = null === bb || void 0 === bb ? void 0 : bb.requiredLimits) && void 0 !== Mb ? Mb : {},
+              pb = Object.keys(Hb).filter((bb => !(bb in this.limits)));
+            if (0 === pb.length) return wb.call(this, bb);
+            const Vb = Object.fromEntries(Object.entries(Hb).filter((bb => {
+              let [wb] = bb;
+              return wb in this.limits
             })));
-            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${Rd.join(", ")}`), (0, Wd.reportDroppedRequiredLimits)(Rd), Od.call(this, {
-              ...dd,
-              requiredLimits: Xd
+            return console.warn(`WebGPU: dropped required limits this browser doesn't name: ${pb.join(", ")}`), (0, eb.reportDroppedRequiredLimits)(pb), wb.call(this, {
+              ...bb,
+              requiredLimits: Vb
             })
           }
-        }(), (await md.e(8).then((() => md(55031)))).bloxdWasmWebgpu),
-        webgl: async () => (await md.e(6).then((() => md(55035)))).bloxdWasmWebgl,
-        webgl1: async () => (await md.e(7).then((() => md(55046)))).bloxdWasmWebgl1
+        }(), (await Mb.e(8).then((() => Mb(54831)))).bloxdWasmWebgpu),
+        webgl: async () => (await Mb.e(6).then((() => Mb(54837)))).bloxdWasmWebgl,
+        webgl1: async () => (await Mb.e(7).then((() => Mb(54846)))).bloxdWasmWebgl1
       },
-      Xd = async () => (await md.e(5).then((() => md(55056)))).compileAnimationPackInWasm
+      Vb = async () => (await Mb.e(5).then((() => Mb(54858)))).compileAnimationPackInWasm
   },
-  42763: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => bd,
-      i: () => yd,
-      j: () => gd
+  42486: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Bb,
+      e: () => Fb,
+      i: () => zb
     });
-    var Wd = md(7592),
-      Fd = md(32),
-      Rd = md(4940),
-      Xd = md(5571),
-      Kd = md(7586),
-      hd = md(42770);
+    var eb = Mb(7825),
+      Hb = Mb(29),
+      pb = Mb(5108),
+      Vb = Mb(5685),
+      gb = Mb(7821),
+      lb = Mb(42488);
 
-    function vd(dd, Od) {
-      const md = (0, Kd.e)(Od.variants);
-      return dd.setShaderPack(md.variantFlags, md.hooks, md.moduleCodes, (0, hd.w)(Od.layers), hd.l[Od.policy], Od.keepCircleShadows)
+    function Lb(bb, wb) {
+      const Mb = (0, gb.e)(wb.variants);
+      return bb.setShaderPack(Mb.variantFlags, Mb.hooks, Mb.moduleCodes, (0, lb.B)(wb.layers), lb.p[wb.policy], wb.keepCircleShadows)
     }
-    const Qd = 0,
-      td = 1,
-      od = 2,
-      Nd = "shaderPack:failedToCompile",
-      qd = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
-      Hd = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
+    const Ib = 0,
+      Ob = 1,
+      Ub = 2,
+      tb = "shaderPack:failedToCompile",
+      Cb = new Set(["no_webgpu_api", "no_adapter", "compatibility_held", "software_adapter", "adapter_error", "start_no_adapter"]),
+      Eb = new Set(["not_requested", "off_after_loss", "gpu_class_webgl", "gpu_wasm_arm"]);
 
-    function yd(dd, Od, md) {
-      var Wd;
-      const Fd = null !== (Wd = null === dd || void 0 === dd ? void 0 : dd.reason) && void 0 !== Wd ? Wd : "none";
-      return qd.has(Fd) ? {
-        messageKey: Od ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
+    function Fb(bb, wb, Mb) {
+      var eb;
+      const Hb = null !== (eb = null === bb || void 0 === bb ? void 0 : bb.reason) && void 0 !== eb ? eb : "none";
+      return Cb.has(Hb) ? {
+        messageKey: wb ? "shaderPack:failedWebGpuDisabledUntilRestart" : "shaderPack:failedNoWebGpu",
         noAdapter: !0
-      } : "not_requested" === Fd && "override" === (null === dd || void 0 === dd ? void 0 : dd.source) ? {
+      } : "not_requested" === Hb && "override" === (null === bb || void 0 === bb ? void 0 : bb.source) ? {
         messageKey: "shaderPack:failedRendererOverride",
         noAdapter: !1
       } : {
-        messageKey: Hd.has(Fd) && !md ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
+        messageKey: Eb.has(Hb) && !Mb ? "shaderPack:failedWebGpuOff" : "shaderPack:failedNoWebGpu",
         noAdapter: !1
       }
     }
-    class bd extends Error {
-      constructor(dd) {
-        super(`the shader pack can't run in this game: ${dd}`), this.messageKey = dd, this.name = "ShaderPackJoinError"
+    class Bb extends Error {
+      constructor(bb) {
+        super(`the shader pack can't run in this game: ${bb}`), this.messageKey = bb, this.name = "ShaderPackJoinError"
       }
     }
-    const Td = "strict";
-    class pd {
-      constructor(dd) {
-        this.deps = dd, this.pagePack = void 0, this.loaded = null, this.policy = Td, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = dd.load().catch((Od => (dd.warn("the shader pack could not load: the game draws without it", Od), {
+    const sb = "strict";
+    class mb {
+      constructor(bb) {
+        this.deps = bb, this.pagePack = void 0, this.loaded = null, this.policy = sb, this.failedPolicies = new Set, this.failedModelPolicies = new Set, this.refused = !1, this.joined = !1, this.playing = !1, this.game = 0, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1, this.pagePack = bb.load().catch((wb => (bb.warn("the shader pack could not load: the game draws without it", wb), {
           status: "none"
-        }))).then((dd => (this.loaded = dd, "active" === dd.status && (this.handOverToPreviews(dd), null !== dd.harnessPolicy && (this.policy = dd.harnessPolicy, this.handOver())), dd)))
+        }))).then((bb => (this.loaded = bb, "active" === bb.status && (this.handOverToPreviews(bb), null !== bb.harnessPolicy && (this.policy = bb.harnessPolicy, this.handOver())), bb)))
       }
-      async join(dd) {
+      async join(bb) {
         this.leave();
-        const Od = this.game,
-          [md, Fd] = await Promise.all([this.pagePack, this.policyOf(dd)]);
-        if (Od !== this.game || "none" === md.status) return null;
-        const Rd = "active" === md.status ? md.pack.variants : md.variants,
-          Xd = (0, Wd.k)(Rd, Fd);
-        if (Xd && "active" === md.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
-        if (Xd) {
-          const dd = this.cantRun(md, Fd);
-          if (null !== dd) return dd
-        } else if ("blocked" === md.status || null === this.deps.core) return null;
-        return this.policy = Fd, this.handOver(), Xd && this.refused ? Nd : (this.joined = !0, this.offInThisGame = !Xd, null)
+        const wb = this.game,
+          [Mb, Hb] = await Promise.all([this.pagePack, this.policyOf(bb)]);
+        if (wb !== this.game || "none" === Mb.status) return null;
+        const pb = "active" === Mb.status ? Mb.pack.variants : Mb.variants,
+          Vb = (0, eb.i)(pb, Hb);
+        if (Vb && "active" === Mb.status && null === this.deps.core) return this.joined = !0, this.offInThisGame = !0, this.couldntRun = this.deps.noWebGpu.messageKey, null;
+        if (Vb) {
+          const bb = this.cantRun(Mb, Hb);
+          if (null !== bb) return bb
+        } else if ("blocked" === Mb.status || null === this.deps.core) return null;
+        return this.policy = Hb, this.handOver(), Vb && this.refused ? tb : (this.joined = !0, this.offInThisGame = !Vb, null)
       }
-      async replay(dd) {
-        const Od = await this.join(dd);
-        null === Od ? this.playable() : this.deps.failInGame(Od)
+      async replay(bb) {
+        const wb = await this.join(bb);
+        null === wb ? this.playable() : this.deps.failInGame(wb)
       }
-      cantRun(dd, Od) {
+      cantRun(bb, wb) {
         const {
-          core: md,
-          noWebGpu: Wd
+          core: Mb,
+          noWebGpu: eb
         } = this.deps;
-        if ("blocked" === dd.status) {
-          return "shaderPack:failedUnchecked" === dd.messageKey && null === md && Wd.noAdapter ? Wd.messageKey : dd.messageKey
+        if ("blocked" === bb.status) {
+          return "shaderPack:failedUnchecked" === bb.messageKey && null === Mb && eb.noAdapter ? eb.messageKey : bb.messageKey
         }
-        return this.refused || this.failedPolicies.has(Od) ? Nd : null
+        return this.refused || this.failedPolicies.has(wb) ? tb : null
       }
       runsInJoinedGame() {
         return this.joined && !this.offInThisGame
       }
       reachInJoinedGame() {
-        var dd;
-        return this.runsInJoinedGame() && "active" === (null === (dd = this.loaded) || void 0 === dd ? void 0 : dd.status) ? function(dd, Od) {
-          const md = dd.filter((dd => (0, Wd.k)([dd], Od))),
-            Fd = dd => md.some((Od => Od[dd]));
+        var bb;
+        return this.runsInJoinedGame() && "active" === (null === (bb = this.loaded) || void 0 === bb ? void 0 : bb.status) ? function(bb, wb) {
+          const Mb = bb.filter((bb => (0, eb.i)([bb], wb))),
+            Hb = bb => Mb.some((wb => wb[bb]));
           return {
-            sceneDepth: Fd("sceneDepth"),
-            sunShadow: Fd("sunShadow"),
-            airShadow: Fd("airShadow")
+            sceneDepth: Hb("sceneDepth"),
+            sunShadow: Hb("sunShadow"),
+            airShadow: Hb("airShadow")
           }
         }(this.loaded.pack.variants, this.policy) : null
       }
@@ -3554,691 +3554,691 @@ export const modules = {
         return this.couldntRun
       }
       playable() {
-        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(Nd) : (null !== this.couldntRun ? this.notify(Rd.d, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.policy) && this.notifyModelFallback()))
+        this.joined && !this.playing && (this.playing = !0, this.failedWhileJoining ? this.fail(tb) : (null !== this.couldntRun ? this.notify(pb.d, this.couldntRun) : this.offInThisGame && this.notify("shaderPack:offInThisGame"), this.failedModelPolicies.has(this.policy) && this.notifyModelFallback()))
       }
       leave() {
         this.game++, this.joined = !1, this.playing = !1, this.failedWhileJoining = !1, this.offInThisGame = !1, this.couldntRun = null, this.modelsNotified = !1
       }
-      coreErrors(dd) {
+      coreErrors(bb) {
         for (const {
-            code: Od,
-            detail: md
+            code: wb,
+            detail: Mb
           }
-          of dd)
-          if (Od === Xd.p.RenderShaderPackNotRun) switch (255 & md) {
-            case Qd:
+          of bb)
+          if (wb === Vb.p.RenderShaderPackNotRun) switch (255 & Mb) {
+            case Ib:
               this.refused = !0, this.failed();
               break;
-            case td:
+            case Ob:
               this.failedPolicies.add(this.policy), this.failed();
               break;
-            case od:
+            case Ub:
               this.failedModelPolicies.add(this.policy), this.playing && this.notifyModelFallback()
           }
       }
       failed() {
-        this.joined && !this.offInThisGame && (this.playing ? this.fail(Nd) : this.failedWhileJoining = !0)
+        this.joined && !this.offInThisGame && (this.playing ? this.fail(tb) : this.failedWhileJoining = !0)
       }
-      fail(dd) {
-        this.leave(), this.deps.failInGame(dd)
+      fail(bb) {
+        this.leave(), this.deps.failInGame(bb)
       }
       notifyModelFallback() {
         this.modelsNotified || (this.modelsNotified = !0, this.notify("shaderPack:modelsWithoutPack"))
       }
-      notify(dd, Od) {
-        const md = this.game;
-        this.deps.notify(dd, (() => md === this.game && this.joined), Od)
+      notify(bb, wb) {
+        const Mb = this.game;
+        this.deps.notify(bb, (() => Mb === this.game && this.joined), wb)
       }
       handOver() {
-        var dd;
+        var bb;
         const {
-          core: Od
+          core: wb
         } = this.deps;
-        null !== Od && "active" === (null === (dd = this.loaded) || void 0 === dd ? void 0 : dd.status) && (vd(Od, {
+        null !== wb && "active" === (null === (bb = this.loaded) || void 0 === bb ? void 0 : bb.status) && (Lb(wb, {
           ...this.loaded.pack,
           policy: this.policy
         }) || (this.refused = !0, this.deps.warn("the core refused the shader pack: the games it runs in fail", null)))
       }
-      handOverToPreviews(dd) {
+      handOverToPreviews(bb) {
         let {
-          pack: Od,
-          harnessPolicy: md
-        } = dd;
+          pack: wb,
+          harnessPolicy: Mb
+        } = bb;
         const {
-          previews: Wd
+          previews: eb
         } = this.deps;
-        null !== Wd && vd(Wd, {
-          ...Od,
-          policy: null !== md && void 0 !== md ? md : Td
+        null !== eb && Lb(eb, {
+          ...wb,
+          policy: null !== Mb && void 0 !== Mb ? Mb : sb
         })
       }
-      policyOf(dd) {
-        return this.deps.policyOf(dd).catch((dd => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", dd), Td)))
+      policyOf(bb) {
+        return this.deps.policyOf(bb).catch((bb => (this.deps.warn("the game's shader pack policy could not load: the policy of a game without one", bb), sb)))
       }
     }
-    const Yd = "wasmShaderPackNotice";
+    const hb = "wasmShaderPackNotice";
 
-    function gd(dd, Od, md, Wd) {
-      return Fd.j.subscribe(Yd, (dd => {
+    function zb(bb, wb, Mb, eb) {
+      return Hb.k.subscribe(hb, (bb => {
         let {
-          translationKey: Od,
-          stillCurrent: md,
-          reasonKey: Wd
-        } = dd;
-        md() && Fd.j.lQ("chat", (0, Rd.i)(Od, Wd))
-      })), new pd({
-        load: wd,
-        policyOf: Ed,
-        core: dd,
-        previews: Od,
-        noWebGpu: md,
-        notify: (dd, Od, md) => {
-          const Wd = {
-            translationKey: dd,
-            stillCurrent: Od,
-            reasonKey: md
+          translationKey: wb,
+          stillCurrent: Mb,
+          reasonKey: eb
+        } = bb;
+        Mb() && Hb.k.iI("chat", (0, pb.i)(wb, eb))
+      })), new mb({
+        load: Xb,
+        policyOf: xb,
+        core: bb,
+        previews: wb,
+        noWebGpu: Mb,
+        notify: (bb, wb, Mb) => {
+          const eb = {
+            translationKey: bb,
+            stillCurrent: wb,
+            reasonKey: Mb
           };
-          Fd.j.lQ(Yd, Wd, !0)
+          Hb.k.iI(hb, eb, !0)
         },
-        failInGame: dd => {
-          Fd.j.lQ(Rd.h, dd)
+        failInGame: bb => {
+          Hb.k.iI(pb.h, bb)
         },
-        warn: Wd
+        warn: eb
       })
     }
-    async function wd() {
+    async function Xb() {
       const [{
-        shaderPackPage: dd,
-        harnessShaderPackMode: Od
+        shaderPackPage: bb,
+        harnessShaderPackMode: wb
       }, {
-        shaderPackTextures: Wd
-      }] = await Promise.all([md.e(138).then((() => md(40819))), md.e(139).then((() => md(7583)))]), Fd = await dd.load();
-      return "active" !== Fd.status ? Fd : {
+        shaderPackTextures: eb
+      }] = await Promise.all([Mb.e(138).then((() => Mb(40569))), Mb.e(139).then((() => Mb(7819)))]), Hb = await bb.load();
+      return "active" !== Hb.status ? Hb : {
         status: "active",
         pack: {
-          variants: Fd.pack.variants,
-          layers: Wd().layers,
-          keepCircleShadows: Fd.pack.keepCircleShadows
+          variants: Hb.pack.variants,
+          layers: eb().layers,
+          keepCircleShadows: Hb.pack.keepCircleShadows
         },
-        harnessPolicy: Od()
+        harnessPolicy: wb()
       }
     }
-    async function Ed(dd) {
-      var Od;
+    async function xb(bb) {
+      var wb;
       const [{
-        shaderPackPage: Wd,
-        harnessShaderPackMode: Fd
+        shaderPackPage: eb,
+        harnessShaderPackMode: Hb
       }, {
-        getShaderPackPolicy: Rd
-      }] = await Promise.all([md.e(138).then((() => md(40819))), md.e(108).then((() => md(45310)))]);
-      return await Wd.load(), null !== (Od = Fd()) && void 0 !== Od ? Od : Rd(dd)
+        getShaderPackPolicy: pb
+      }] = await Promise.all([Mb.e(138).then((() => Mb(40569))), Mb.e(108).then((() => Mb(45128)))]);
+      return await eb.load(), null !== (wb = Hb()) && void 0 !== wb ? wb : pb(bb)
     }
   },
-  42797: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Kd,
-      f: () => yd,
-      i: () => hd,
-      l: () => vd,
-      m: () => Qd,
-      n: () => od
+  42515: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => gb,
+      e: () => Fb,
+      f: () => lb,
+      g: () => Lb,
+      i: () => Ib,
+      m: () => Ub
     });
-    var Wd = md(37729),
-      Fd = md(42804);
-    const Rd = "atlas:",
-      Xd = 3e4;
-    class Kd extends Error {
-      constructor(dd, Od) {
-        super(`fetching ${dd} answered HTTP ${Od}`), this.url = dd, this.status = Od, this.name = "TerrainTextureFetchError"
+    var eb = Mb(37455),
+      Hb = Mb(42519);
+    const pb = "atlas:",
+      Vb = 3e4;
+    class gb extends Error {
+      constructor(bb, wb) {
+        super(`fetching ${bb} answered HTTP ${wb}`), this.url = bb, this.status = wb, this.name = "TerrainTextureFetchError"
       }
     }
 
-    function hd(dd) {
-      if (!dd.startsWith(Rd)) return null;
-      const Od = Number(dd.slice(Rd.length));
-      return Number.isInteger(Od) && Od >= 0 ? Od : null
+    function lb(bb) {
+      if (!bb.startsWith(pb)) return null;
+      const wb = Number(bb.slice(pb.length));
+      return Number.isInteger(wb) && wb >= 0 ? wb : null
     }
-    async function vd() {
-      const dd = await md.e(235).then((() => md(35669)));
+    async function Lb() {
+      const bb = await Mb.e(235).then((() => Mb(35425)));
       return {
-        atlasSheets: dd.blockAtlasUrls,
-        texture: Od => {
-          var md, Wd, Rd;
-          return null !== (md = null !== (Wd = null !== (Rd = dd.animatedBlockTextures[Od]) && void 0 !== Rd ? Rd : dd.rotatedBlockTextures[Od]) && void 0 !== Wd ? Wd : Fd.b[Od]) && void 0 !== md ? md : null
+        atlasSheets: bb.blockAtlasUrls,
+        texture: wb => {
+          var Mb, eb, pb;
+          return null !== (Mb = null !== (eb = null !== (pb = bb.animatedBlockTextures[wb]) && void 0 !== pb ? pb : bb.rotatedBlockTextures[wb]) && void 0 !== eb ? eb : Hb.b[wb]) && void 0 !== Mb ? Mb : null
         }
       }
     }
-    async function Qd(dd) {
-      const Od = new AbortController,
-        md = setTimeout((() => {
-          Od.abort(new DOMException(`${dd} took over ${Xd} ms`, "TimeoutError"))
-        }), Xd);
-      let Wd;
+    async function Ib(bb) {
+      const wb = new AbortController,
+        Mb = setTimeout((() => {
+          wb.abort(new DOMException(`${bb} took over ${Vb} ms`, "TimeoutError"))
+        }), Vb);
+      let eb;
       try {
-        const md = await fetch(dd, {
-          signal: Od.signal
+        const Mb = await fetch(bb, {
+          signal: wb.signal
         });
-        if (!md.ok) throw new Kd(dd, md.status);
-        Wd = await md.blob()
+        if (!Mb.ok) throw new gb(bb, Mb.status);
+        eb = await Mb.blob()
       } finally {
-        clearTimeout(md)
+        clearTimeout(Mb)
       }
-      const Fd = await createImageBitmap(Wd, {
+      const Hb = await createImageBitmap(eb, {
         premultiplyAlpha: "none",
         colorSpaceConversion: "none"
       });
       try {
-        return od(Fd)
+        return Ub(Hb)
       } finally {
-        Fd.close()
+        Hb.close()
       }
     }
-    const td = 8192;
+    const Ob = 8192;
 
-    function od(dd) {
+    function Ub(bb) {
       const {
-        width: Od,
-        height: md
-      } = dd, Fd = Math.max(1, Math.min(md, td)), Rd = (0, Wd.i)(Od, Fd, {
+        width: wb,
+        height: Mb
+      } = bb, Hb = Math.max(1, Math.min(Mb, Ob)), pb = (0, eb.g)(wb, Hb, {
         willReadFrequently: !0
       });
-      if (!Rd) throw new Error("no 2D context to read the texture back");
-      Rd.globalCompositeOperation = "copy";
-      const Xd = new Uint8Array(Od * md * 4);
-      for (let Wd = 0; Wd < md; Wd += Fd) {
-        const Kd = Math.min(Fd, md - Wd);
-        Rd.drawImage(dd, 0, Wd, Od, Kd, 0, 0, Od, Kd), Xd.set(Rd.getImageData(0, 0, Od, Kd).data, Wd * Od * 4)
+      if (!pb) throw new Error("no 2D context to read the texture back");
+      pb.globalCompositeOperation = "copy";
+      const Vb = new Uint8Array(wb * Mb * 4);
+      for (let eb = 0; eb < Mb; eb += Hb) {
+        const gb = Math.min(Hb, Mb - eb);
+        pb.drawImage(bb, 0, eb, wb, gb, 0, 0, wb, gb), Vb.set(pb.getImageData(0, 0, wb, gb).data, eb * wb * 4)
       }
       return {
-        width: Od,
-        height: md,
-        pixels: Xd
+        width: wb,
+        height: Mb,
+        pixels: Vb
       }
     }
-    async function Nd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Qd;
-      const Wd = [],
-        Fd = await Promise.all(dd.map((async dd => {
-          var Fd, Xd;
-          const Kd = null !== (Fd = null === (Xd = Od.decoded) || void 0 === Xd ? void 0 : Xd.call(Od, dd)) && void 0 !== Fd ? Fd : null,
-            vd = null === Kd ? function(dd, Od) {
-              if (dd.startsWith(Rd)) {
-                var md;
-                const Wd = hd(dd);
-                return null === Wd ? null : null !== (md = Od.atlasSheets[Wd]) && void 0 !== md ? md : null
+    async function tb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ib;
+      const eb = [],
+        Hb = await Promise.all(bb.map((async bb => {
+          var Hb, Vb;
+          const gb = null !== (Hb = null === (Vb = wb.decoded) || void 0 === Vb ? void 0 : Vb.call(wb, bb)) && void 0 !== Hb ? Hb : null,
+            Lb = null === gb ? function(bb, wb) {
+              if (bb.startsWith(pb)) {
+                var Mb;
+                const eb = lb(bb);
+                return null === eb ? null : null !== (Mb = wb.atlasSheets[eb]) && void 0 !== Mb ? Mb : null
               }
-              return Od.texture(dd)
-            }(dd, Od) : null,
-            Qd = null !== Kd && void 0 !== Kd ? Kd : null === vd ? null : md(vd);
-          if (null === Qd) return Wd.push({
-            name: dd,
-            url: vd,
-            error: new Error(`no URL for terrain texture ${dd}`)
+              return wb.texture(bb)
+            }(bb, wb) : null,
+            Ib = null !== gb && void 0 !== gb ? gb : null === Lb ? null : Mb(Lb);
+          if (null === Ib) return eb.push({
+            name: bb,
+            url: Lb,
+            error: new Error(`no URL for terrain texture ${bb}`)
           }), null;
           try {
-            const Od = await Qd;
-            if (Od.pixels.byteLength !== Od.width * Od.height * 4) throw new Error(`decoded ${Od.pixels.byteLength} bytes for ${Od.width}x${Od.height} texels`);
+            const wb = await Ib;
+            if (wb.pixels.byteLength !== wb.width * wb.height * 4) throw new Error(`decoded ${wb.pixels.byteLength} bytes for ${wb.width}x${wb.height} texels`);
             return {
-              name: dd,
-              texture: Od
+              name: bb,
+              texture: wb
             }
-          } catch (td) {
-            return Wd.push({
-              name: dd,
-              url: vd,
-              error: td
+          } catch (Ob) {
+            return eb.push({
+              name: bb,
+              url: Lb,
+              error: Ob
             }), null
           }
         }))),
-        Xd = Fd.filter((dd => null !== dd)),
-        Kd = new Uint32Array(2 * Xd.length);
-      Xd.forEach(((dd, Od) => {
+        Vb = Hb.filter((bb => null !== bb)),
+        gb = new Uint32Array(2 * Vb.length);
+      Vb.forEach(((bb, wb) => {
         let {
-          texture: md
-        } = dd;
-        Kd[2 * Od] = md.width, Kd[2 * Od + 1] = md.height
+          texture: Mb
+        } = bb;
+        gb[2 * wb] = Mb.width, gb[2 * wb + 1] = Mb.height
       }));
       return {
         handOver: {
-          names: Xd.map((dd => {
+          names: Vb.map((bb => {
             let {
-              name: Od
-            } = dd;
-            return Od
+              name: wb
+            } = bb;
+            return wb
           })),
-          textures: Xd.map((dd => {
+          textures: Vb.map((bb => {
             let {
-              texture: Od
-            } = dd;
-            return Od.pixels
+              texture: wb
+            } = bb;
+            return wb.pixels
           })),
-          sizes: Kd
+          sizes: gb
         },
-        failures: Wd
+        failures: eb
       }
     }
-    const qd = [2e3, 1e4, 3e4, 6e4, 12e4];
+    const Cb = [2e3, 1e4, 3e4, 6e4, 12e4];
 
-    function Hd() {}
-    class yd {
-      constructor(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qd,
-          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
-        this.core = dd, this.retryMs = Od, this.keepBelow = md, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
+    function Eb() {}
+    class Fb {
+      constructor(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Cb,
+          Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1048576;
+        this.core = bb, this.retryMs = wb, this.keepBelow = Mb, this.started = 0, this.landed = 0, this.current = null, this.restoring = null
       }
-      async swap(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vd,
-          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Wd = ++this.started,
-          Fd = {
-            decode: md.decode,
-            wholeAtlas: md.wholeAtlas
+      async swap(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Lb,
+          Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const eb = ++this.started,
+          Hb = {
+            decode: Mb.decode,
+            wholeAtlas: Mb.wholeAtlas
           };
-        return this.loadAndHandOver(Od, Fd, dd, (() => {
-          var dd;
-          return Wd < this.landed || !1 === (null === (dd = md.wanted) || void 0 === dd ? void 0 : dd.call(md))
+        return this.loadAndHandOver(wb, Hb, bb, (() => {
+          var bb;
+          return eb < this.landed || !1 === (null === (bb = Mb.wanted) || void 0 === bb ? void 0 : bb.call(Mb))
         }), {
-          onTaken: (dd, md) => {
-            this.landed = Wd, this.current = {
-              mine: Wd,
-              sources: Od,
-              load: Fd,
-              kQ: dd,
-              failed: md
+          onTaken: (bb, Mb) => {
+            this.landed = eb, this.current = {
+              mine: eb,
+              sources: wb,
+              load: Hb,
+              nI: bb,
+              failed: Mb
             }
           }
         })
       }
-      restore(dd) {
-        var Od;
-        const md = this.current;
-        if (null === md) return Promise.resolve(null);
-        if ((null === (Od = this.restoring) || void 0 === Od ? void 0 : Od.mine) === md.mine) return this.restoring.done;
-        const Wd = {
-          mine: md.mine,
-          done: this.restoreLanded(md, dd).finally((() => {
-            this.restoring === Wd && (this.restoring = null)
+      restore(bb) {
+        var wb;
+        const Mb = this.current;
+        if (null === Mb) return Promise.resolve(null);
+        if ((null === (wb = this.restoring) || void 0 === wb ? void 0 : wb.mine) === Mb.mine) return this.restoring.done;
+        const eb = {
+          mine: Mb.mine,
+          done: this.restoreLanded(Mb, bb).finally((() => {
+            this.restoring === eb && (this.restoring = null)
           }))
         };
-        return this.restoring = Wd, Wd.done
+        return this.restoring = eb, eb.done
       }
-      async restoreLanded(dd, Od) {
-        const md = () => this.landed !== dd.mine,
+      async restoreLanded(bb, wb) {
+        const Mb = () => this.landed !== bb.mine,
           {
-            kQ: Wd
-          } = dd;
-        if (null !== Wd) return this.stopped() ? null : this.core.setTerrainTextures(Wd.names, Wd.textures, Wd.sizes);
-        let Fd = Od;
-        for (let Rd = 0;; Rd++) {
-          const Od = this.retryMs.at(Rd),
-            Wd = {
-              allOrNothingExcept: void 0 === Od ? void 0 : dd.failed
+            nI: eb
+          } = bb;
+        if (null !== eb) return this.stopped() ? null : this.core.setTerrainTextures(eb.names, eb.textures, eb.sizes);
+        let Hb = wb;
+        for (let pb = 0;; pb++) {
+          const wb = this.retryMs.at(pb),
+            eb = {
+              allOrNothingExcept: void 0 === wb ? void 0 : bb.failed
             },
-            Xd = await this.loadAndHandOver(dd.sources, dd.load, Fd, md, Wd);
-          if (!1 !== Xd || void 0 === Od || this.stopped()) return Xd;
-          if (Fd = Hd, await new Promise((dd => {
-              setTimeout(dd, Od)
-            })), md()) return null
+            Vb = await this.loadAndHandOver(bb.sources, bb.load, Hb, Mb, eb);
+          if (!1 !== Vb || void 0 === wb || this.stopped()) return Vb;
+          if (Hb = Eb, await new Promise((bb => {
+              setTimeout(bb, wb)
+            })), Mb()) return null
         }
       }
       stopped() {
         return !0 === this.core.isStopped
       }
-      async loadAndHandOver(dd, Od, md, Wd) {
-        let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      async loadAndHandOver(bb, wb, Mb, eb) {
+        let Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
         if (this.stopped()) return null;
-        const Rd = this.core.terrainTextureNames();
-        var Xd;
-        if (0 === Rd.length) return null === (Xd = Fd.onTaken) || void 0 === Xd || Xd.call(Fd, null, new Set), !0;
-        let Kd, vd;
+        const pb = this.core.terrainTextureNames();
+        var Vb;
+        if (0 === pb.length) return null === (Vb = Hb.onTaken) || void 0 === Vb || Vb.call(Hb, null, new Set), !0;
+        let gb, Lb;
         try {
-          Kd = await dd(), vd = await Nd(Rd, Kd, Od.decode)
-        } catch (yd) {
-          return Wd() ? null : (md({
+          gb = await bb(), Lb = await tb(pb, gb, wb.decode)
+        } catch (Fb) {
+          return eb() ? null : (Mb({
             name: null,
             url: null,
-            error: yd
+            error: Fb
           }), !1)
         }
-        if (Wd() || this.stopped()) return null;
-        for (const hd of vd.failures) md(hd);
-        const Qd = Fd.allOrNothingExcept;
-        if (void 0 !== Qd && vd.failures.some((dd => {
+        if (eb() || this.stopped()) return null;
+        for (const lb of Lb.failures) Mb(lb);
+        const Ib = Hb.allOrNothingExcept;
+        if (void 0 !== Ib && Lb.failures.some((bb => {
             let {
-              name: Od
-            } = dd;
-            return null === Od || !Qd.has(Od)
-          })) || !0 === Od.wholeAtlas && vd.failures.some((dd => {
+              name: wb
+            } = bb;
+            return null === wb || !Ib.has(wb)
+          })) || !0 === wb.wholeAtlas && Lb.failures.some((bb => {
             let {
-              name: Od
-            } = dd;
-            return null === Od || null !== hd(Od)
+              name: wb
+            } = bb;
+            return null === wb || null !== lb(wb)
           }))) return !1;
         const {
-          handOver: td
-        } = vd, od = function(dd) {
-          return dd.textures.reduce(((dd, Od) => dd + Od.byteLength), 0)
-        }(td) < this.keepBelow, qd = this.core.setTerrainTextures(td.names, td.textures, td.sizes, od ? void 0 : () => {
-          !async function(dd, Od) {
-            await Od;
+          handOver: Ob
+        } = Lb, Ub = function(bb) {
+          return bb.textures.reduce(((bb, wb) => bb + wb.byteLength), 0)
+        }(Ob) < this.keepBelow, Cb = this.core.setTerrainTextures(Ob.names, Ob.textures, Ob.sizes, Ub ? void 0 : () => {
+          !async function(bb, wb) {
+            await wb;
             for (const {
-                buffer: Wd
+                buffer: eb
               }
-              of dd) {
-              const dd = Wd;
-              var md;
-              if (!dd.detached) null === (md = dd.transfer) || void 0 === md || md.call(dd, 0)
+              of bb) {
+              const bb = eb;
+              var Mb;
+              if (!bb.detached) null === (Mb = bb.transfer) || void 0 === Mb || Mb.call(bb, 0)
             }
-          }(td.textures, Kd.heldUntil)
+          }(Ob.textures, gb.heldUntil)
         });
-        if (qd) {
-          var Hd;
-          const dd = new Set(vd.failures.flatMap((dd => {
+        if (Cb) {
+          var Eb;
+          const bb = new Set(Lb.failures.flatMap((bb => {
             let {
-              name: Od
-            } = dd;
-            return null === Od ? [] : [Od]
+              name: wb
+            } = bb;
+            return null === wb ? [] : [wb]
           })));
-          null === (Hd = Fd.onTaken) || void 0 === Hd || Hd.call(Fd, od ? td : null, dd)
+          null === (Eb = Hb.onTaken) || void 0 === Eb || Eb.call(Hb, Ub ? Ob : null, bb)
         }
-        return qd
+        return Cb
       }
     }
   },
-  35490: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => vd,
-      d: () => td,
-      e: () => Qd
+  35285: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Lb,
+      g: () => Ob,
+      h: () => Ib
     });
-    var Wd = md(310),
-      Fd = md(107),
-      Rd = md(145),
-      Xd = md(141),
-      Kd = md(725);
-    const hd = new Set(["mali_bifrost"]);
+    var eb = Mb(309),
+      Hb = Mb(110),
+      pb = Mb(153),
+      Vb = Mb(144),
+      gb = Mb(689);
+    const lb = new Set(["mali_bifrost"]);
 
-    function vd() {
-      if (Kd.e) return;
-      const dd = (0, Fd.pageOperatingSystem)();
-      if ("android" !== dd && "windows" !== dd || (0, Kd.b)("webgl_default")) return;
-      if ("windows" === dd) return dd => "qualcomm" === (0, Fd.normaliseGpuVendor)((0, Xd.d)(dd).vendor);
-      const Od = (0, Rd.p)(),
-        md = null === Od ? (0, Wd.v)() : (0, Wd.j)(Od.vendor, Od.renderer);
-      return null !== md && hd.has(md) ? dd => (0, Wd.q)((0, Xd.d)(dd).vendor, md) : void 0
+    function Lb() {
+      if (gb.f) return;
+      const bb = (0, Hb.pageOperatingSystem)();
+      if ("android" !== bb && "windows" !== bb || (0, gb.c)("webgl_default")) return;
+      if ("windows" === bb) return bb => "qualcomm" === (0, Hb.normaliseGpuVendor)((0, Vb.d)(bb).vendor);
+      const wb = (0, pb.n)(),
+        Mb = null === wb ? (0, eb.x)() : (0, eb.k)(wb.vendor, wb.renderer);
+      return null !== Mb && lb.has(Mb) ? bb => (0, eb.r)((0, Vb.d)(bb).vendor, Mb) : void 0
     }
 
-    function Qd(dd, Od) {
-      return dd ? () => !0 : Od()
+    function Ib(bb, wb) {
+      return bb ? () => !0 : wb()
     }
-    async function td(dd) {
+    async function Ob(bb) {
       try {
-        const Od = Qd(dd, vd),
-          md = navigator.gpu;
-        if (void 0 === Od || void 0 === md) return !1;
-        const Wd = await (0, Xd.o)(md, {
+        const wb = Ib(bb, Lb),
+          Mb = navigator.gpu;
+        if (void 0 === wb || void 0 === Mb) return !1;
+        const eb = await (0, Vb.k)(Mb, {
           seed: !1,
-          compatibility: Od
+          compatibility: wb
         });
-        return "string" !== typeof Wd && Wd.compatibility && !(0, Xd.k)(Wd.adapter)
-      } catch (Od) {
-        return console.error("WebGPU compatibility-mode adapter request failed.", Od), !1
+        return "string" !== typeof eb && eb.compatibility && !(0, Vb.h)(eb.adapter)
+      } catch (wb) {
+        return console.error("WebGPU compatibility-mode adapter request failed.", wb), !1
       }
     }
   },
-  42729: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => hd,
-      e: () => vd
+  42450: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => lb,
+      e: () => Lb
     });
-    var Wd = md(107),
-      Fd = md(5064);
-    const Rd = "webgpuPipeline";
+    var eb = Mb(110),
+      Hb = Mb(5243);
+    const pb = "webgpuPipeline";
 
-    function Xd(dd) {
-      return dd.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function Vb(bb) {
+      return bb.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let Kd = null;
+    let gb = null;
 
-    function hd() {
-      if (null === Kd) try {
-        dd = (0, Wd.getBrowserName)(), Od = (0, Wd.getBrowserVersion)(), md = (0, Wd.getOperatingSystem)(), Fd = (0, Wd.getOperatingSystemVersion)(), Kd = `${dd.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===Od?"unknown":Xd(Od)}-${md}${void 0===Fd?"":`_${Xd(Fd)}`}`
-      } catch (Rd) {
-        console.warn("The user agent couldn't be read for its browser code", Rd), Kd = "unknown"
+    function lb() {
+      if (null === gb) try {
+        bb = (0, eb.getBrowserName)(), wb = (0, eb.getBrowserVersion)(), Mb = (0, eb.getOperatingSystem)(), Hb = (0, eb.getOperatingSystemVersion)(), gb = `${bb.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===wb?"unknown":Vb(wb)}-${Mb}${void 0===Hb?"":`_${Vb(Hb)}`}`
+      } catch (pb) {
+        console.warn("The user agent couldn't be read for its browser code", pb), gb = "unknown"
       }
-      var dd, Od, md, Fd;
-      return Kd
+      var bb, wb, Mb, Hb;
+      return gb
     }
 
-    function vd() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const Od = `WGPU-${hd()}`,
-        Wd = (dd, Wd) => {
+    function Lb() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const wb = `WGPU-${lb()}`,
+        eb = (bb, eb) => {
           const {
-            reason: Xd,
-            message: Kd
-          } = Wd, hd = String(Kd);
-          if ((0, Fd.q)(Xd, hd)) return;
-          const vd = {
-            pipeline: null !== dd && void 0 !== dd ? dd : "",
-            reason: String(Xd),
-            browserMessage: hd
+            reason: Vb,
+            message: gb
+          } = eb, lb = String(gb);
+          if ((0, Hb.B)(Vb, lb)) return;
+          const Lb = {
+            pipeline: null !== bb && void 0 !== bb ? bb : "",
+            reason: String(Vb),
+            browserMessage: lb
           };
-          Promise.resolve().then((() => md(42709))).then((dd => {
+          Promise.resolve().then((() => Mb(42434))).then((bb => {
             let {
-              reportCrash: md
-            } = dd;
-            md({
+              reportCrash: Mb
+            } = bb;
+            Mb({
               kind: "coreError",
-              code: Od,
-              site: Rd,
+              code: wb,
+              site: pb,
               fatal: !1,
-              message: `${vd.pipeline} ${vd.reason}: ${vd.browserMessage}`,
-              details: vd,
-              error: Wd
+              message: `${Lb.pipeline} ${Lb.reason}: ${Lb.browserMessage}`,
+              details: Lb,
+              error: eb
             })
-          })).catch((dd => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", dd)
+          })).catch((bb => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", bb)
           }))
         },
-        Xd = dd.createRenderPipelineAsync;
-      dd.createRenderPipelineAsync = function(dd) {
-        return Xd.call(this, dd).catch((Od => {
-          throw Wd(dd.label, Od), Od
+        Vb = bb.createRenderPipelineAsync;
+      bb.createRenderPipelineAsync = function(bb) {
+        return Vb.call(this, bb).catch((wb => {
+          throw eb(bb.label, wb), wb
         }))
       };
-      const Kd = dd.createComputePipelineAsync;
-      dd.createComputePipelineAsync = function(dd) {
-        return Kd.call(this, dd).catch((Od => {
-          throw Wd(dd.label, Od), Od
+      const gb = bb.createComputePipelineAsync;
+      bb.createComputePipelineAsync = function(bb) {
+        return gb.call(this, bb).catch((wb => {
+          throw eb(bb.label, wb), wb
         }))
       }
     }
   },
-  42673: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Kd,
-      h: () => hd
+  42399: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => gb,
+      e: () => lb
     });
-    var Wd = md(145);
-    let Fd = !1;
+    var eb = Mb(153);
+    let Hb = !1;
 
-    function Rd() {
-      let dd = null;
+    function pb() {
+      let bb = null;
       try {
-        return dd = document.createElement("canvas").getContext("webgl2"), null !== dd
+        return bb = document.createElement("canvas").getContext("webgl2"), null !== bb
       } catch {
         return !1
       } finally {
         try {
-          var Od, md;
-          null === (Od = dd) || void 0 === Od || null === (md = Od.getExtension("WEBGL_lose_context")) || void 0 === md || md.loseContext()
+          var wb, Mb;
+          null === (wb = bb) || void 0 === wb || null === (Mb = wb.getExtension("WEBGL_lose_context")) || void 0 === Mb || Mb.loseContext()
         } catch {}
       }
     }
 
-    function Xd() {
-      "hidden" === document.visibilityState && (Fd = !1, document.removeEventListener("visibilitychange", Xd))
+    function Vb() {
+      "hidden" === document.visibilityState && (Hb = !1, document.removeEventListener("visibilitychange", Vb))
     }
 
-    function Kd() {
-      Fd || "visible" !== document.visibilityState || !(0, Wd.q)() && !Rd() || (Fd = !0, document.addEventListener("visibilitychange", Xd))
+    function gb() {
+      Hb || "visible" !== document.visibilityState || !(0, eb.q)() && !pb() || (Hb = !0, document.addEventListener("visibilitychange", Vb))
     }
 
-    function hd() {
-      return Fd || Rd()
+    function lb() {
+      return Hb || pb()
     }
   },
-  42656: (dd, Od, md) => {
-    dd.exports = md.p + "static/media/bloxd_wasm_models_bg.bcb5a039647a5110be86.wasm"
+  42366: (bb, wb, Mb) => {
+    bb.exports = Mb.p + "static/media/bloxd_wasm_models_bg.fd4d14f832799978af36.wasm"
   },
-  42649: (dd, Od, md) => {
-    dd.exports = md.p + "static/media/bloxd_wasm_workers_bg.90b05c84385377d1ddee.wasm"
+  42361: (bb, wb, Mb) => {
+    bb.exports = Mb.p + "static/media/bloxd_wasm_workers_bg.8e9546dac9305a8173d9.wasm"
   },
-  42640: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Fd,
-      e: () => Wd
+  42353: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Hb,
+      h: () => eb
     });
-    const Wd = {
+    const eb = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new md.U(md(42649))
+        return new Mb.U(Mb(42361))
       }
     };
-    const Fd = {
+    const Hb = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new md.U(md(42656))
+        return new Mb.U(Mb(42366))
       }
     }
   },
-  7586: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Yd,
-      f: () => gd,
-      g: () => Td,
-      j: () => bd
+  7821: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => hb,
+      i: () => zb,
+      l: () => sb,
+      n: () => Bb
     });
-    var Wd = md(7592);
-    const Fd = 6,
-      Rd = 3,
-      Xd = 1,
-      Kd = 2,
-      hd = 4,
-      vd = 8,
-      Qd = 16,
-      td = 32,
-      od = 64,
-      Nd = 128,
-      qd = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var eb = Mb(7825);
+    const Hb = 6,
+      pb = 3,
+      Vb = 1,
+      gb = 2,
+      lb = 4,
+      Lb = 8,
+      Ib = 16,
+      Ob = 32,
+      Ub = 64,
+      tb = 128,
+      Cb = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Hd(dd) {
-      if (!dd) return 0;
-      const Od = qd.indexOf(dd);
-      if (Od <= 0) throw new Error(`"${dd}" is not a shader pack hook function`);
-      return Od
+    function Eb(bb) {
+      if (!bb) return 0;
+      const wb = Cb.indexOf(bb);
+      if (wb <= 0) throw new Error(`"${bb}" is not a shader pack hook function`);
+      return wb
     }
 
-    function yd(dd) {
-      if (0 === dd) return null;
-      const Od = qd[dd];
-      if (void 0 === Od) throw new Error(`${dd} is not a shader pack hook function id`);
-      return Od
+    function Fb(bb) {
+      if (0 === bb) return null;
+      const wb = Cb[bb];
+      if (void 0 === wb) throw new Error(`${bb} is not a shader pack hook function id`);
+      return wb
     }
 
-    function bd(dd) {
-      const Od = Wd.c.length;
+    function Bb(bb) {
+      const wb = eb.d.length;
       return {
-        strict: dd >= Od,
-        program: Wd.c[dd % Od]
+        strict: bb >= wb,
+        program: eb.d[bb % wb]
       }
     }
 
-    function Td(dd) {
-      return Number(dd.strict) * Wd.c.length + Wd.c.indexOf(dd.program)
+    function sb(bb) {
+      return Number(bb.strict) * eb.d.length + eb.d.indexOf(bb.program)
     }
 
-    function pd(dd) {
-      return "" === dd ? [] : dd.split(" ")
+    function mb(bb) {
+      return "" === bb ? [] : bb.split(" ")
     }
 
-    function Yd(dd) {
-      const Od = {
-        variantFlags: new Uint8Array(Fd),
-        hooks: new Uint8Array(Fd * Rd),
-        moduleCodes: Array(Fd).fill(""),
-        reads: Array(2 * Fd).fill("")
+    function hb(bb) {
+      const wb = {
+        variantFlags: new Uint8Array(Hb),
+        hooks: new Uint8Array(Hb * pb),
+        moduleCodes: Array(Hb).fill(""),
+        reads: Array(2 * Hb).fill("")
       };
-      for (const md of dd) {
-        const dd = Td(md.key),
-          Wd = (dd, Od) => null === md.hooks.surface || md.reads.fragment.includes(dd) ? 0 : Od;
-        Od.variantFlags[dd] = (md.sceneDepth ? Xd : 0) | (md.movesVertices ? Kd : 0) | (md.sunShadow ? hd : 0) | (md.airShadow ? vd : 0) | (md.discards ? Qd : 0) | Wd("localPosition", td) | Wd("enchantSpeed", od) | Wd("enchantTier", Nd), Od.hooks[dd * Rd] = Hd(md.hooks.vertex), Od.hooks[dd * Rd + 1] = Hd(md.hooks.surface), Od.hooks[dd * Rd + 2] = Hd(md.hooks.light), Od.moduleCodes[dd] = md.moduleCode, Od.reads[2 * dd] = md.reads.vertex.join(" "), Od.reads[2 * dd + 1] = md.reads.fragment.join(" ")
+      for (const Mb of bb) {
+        const bb = sb(Mb.key),
+          eb = (bb, wb) => null === Mb.hooks.surface || Mb.reads.fragment.includes(bb) ? 0 : wb;
+        wb.variantFlags[bb] = (Mb.sceneDepth ? Vb : 0) | (Mb.movesVertices ? gb : 0) | (Mb.sunShadow ? lb : 0) | (Mb.airShadow ? Lb : 0) | (Mb.discards ? Ib : 0) | eb("localPosition", Ob) | eb("enchantSpeed", Ub) | eb("enchantTier", tb), wb.hooks[bb * pb] = Eb(Mb.hooks.vertex), wb.hooks[bb * pb + 1] = Eb(Mb.hooks.surface), wb.hooks[bb * pb + 2] = Eb(Mb.hooks.light), wb.moduleCodes[bb] = Mb.moduleCode, wb.reads[2 * bb] = Mb.reads.vertex.join(" "), wb.reads[2 * bb + 1] = Mb.reads.fragment.join(" ")
       }
-      return Od
+      return wb
     }
 
-    function gd(dd) {
+    function zb(bb) {
       const {
-        hooks: Od,
-        moduleCodes: md,
-        reads: Wd
-      } = dd;
-      return Array.from(dd.variantFlags, ((dd, Fd) => {
-        const td = Fd * Rd;
+        hooks: wb,
+        moduleCodes: Mb,
+        reads: eb
+      } = bb;
+      return Array.from(bb.variantFlags, ((bb, Hb) => {
+        const Ob = Hb * pb;
         return {
-          key: bd(Fd),
+          key: Bb(Hb),
           hooks: {
-            vertex: yd(Od[td]),
-            surface: yd(Od[td + 1]),
-            light: yd(Od[td + 2])
+            vertex: Fb(wb[Ob]),
+            surface: Fb(wb[Ob + 1]),
+            light: Fb(wb[Ob + 2])
           },
-          moduleCode: md[Fd],
-          sceneDepth: 0 !== (dd & Xd),
-          sunShadow: 0 !== (dd & hd),
-          airShadow: 0 !== (dd & vd),
-          movesVertices: 0 !== (dd & Kd),
-          discards: 0 !== (dd & Qd),
+          moduleCode: Mb[Hb],
+          sceneDepth: 0 !== (bb & Vb),
+          sunShadow: 0 !== (bb & lb),
+          airShadow: 0 !== (bb & Lb),
+          movesVertices: 0 !== (bb & gb),
+          discards: 0 !== (bb & Ib),
           reads: {
-            vertex: pd(Wd[2 * Fd]),
-            fragment: pd(Wd[2 * Fd + 1])
+            vertex: mb(eb[2 * Hb]),
+            fragment: mb(eb[2 * Hb + 1])
           }
         }
       }))
     }
   },
-  42770: (dd, Od, md) => {
-    md.d(Od, {
-      D: () => qd,
-      c: () => Fd,
-      e: () => Wd,
-      i: () => od,
-      k: () => Qd,
-      l: () => yd,
-      n: () => Rd,
-      p: () => Kd,
-      r: () => hd,
-      s: () => Xd,
-      w: () => Hd,
-      z: () => Nd
+  42488: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      B: () => Eb,
+      C: () => tb,
+      E: () => Cb,
+      c: () => Hb,
+      g: () => eb,
+      j: () => Ub,
+      l: () => Ib,
+      p: () => Fb,
+      r: () => pb,
+      u: () => gb,
+      v: () => lb,
+      x: () => Vb
     });
-    const Wd = 3,
-      Fd = 0,
-      Rd = 1,
-      Xd = 2,
-      Kd = {
+    const eb = 3,
+      Hb = 0,
+      pb = 1,
+      Vb = 2,
+      gb = {
         uniform: 3,
-        QN: 4,
+        GU: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      hd = 10,
-      vd = "BloxdPackInputs",
-      Qd = "bloxdPackInputs",
-      td = [{
+      lb = 10,
+      Lb = "BloxdPackInputs",
+      Ib = "bloxdPackInputs",
+      Ob = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -4263,74 +4263,74 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      od = 80;
+      Ub = 80;
 
-    function Nd() {
-      const dd = td.map((dd => {
+    function tb() {
+      const bb = Ob.map((bb => {
         let {
-          name: Od,
-          type: md
-        } = dd;
-        return `    ${Od}: ${md},\n`
+          name: wb,
+          type: Mb
+        } = bb;
+        return `    ${wb}: ${Mb},\n`
       })).join("");
-      return `struct ${vd} {\n${dd}}\n@group(${Wd}) @binding(${Fd}) var<uniform> ${Qd}: ${vd};\n`
+      return `struct ${Lb} {\n${bb}}\n@group(${eb}) @binding(${Hb}) var<uniform> ${Ib}: ${Lb};\n`
     }
 
-    function qd(dd, Od) {
-      const md = new DataView(dd, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, od),
-        [Wd, Fd, Rd, Xd, Kd, hd] = td;
-      md.setFloat32(Wd.offset, Od.seconds, !0), md.setUint32(Fd.offset, Od.lit ? 1 : 0, !0);
-      for (let vd = 0; vd < 3; vd++) md.setInt32(Rd.offset + 4 * vd, Od.renderOffset[vd], !0), md.setFloat32(Xd.offset + 4 * vd, Od.TOd[vd], !0), md.setFloat32(Kd.offset + 4 * vd, Od.eyePosition[vd], !0), md.setFloat32(hd.offset + 4 * vd, Od.shadowDirection[vd], !0)
+    function Cb(bb, wb) {
+      const Mb = new DataView(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Ub),
+        [eb, Hb, pb, Vb, gb, lb] = Ob;
+      Mb.setFloat32(eb.offset, wb.seconds, !0), Mb.setUint32(Hb.offset, wb.lit ? 1 : 0, !0);
+      for (let Lb = 0; Lb < 3; Lb++) Mb.setInt32(pb.offset + 4 * Lb, wb.renderOffset[Lb], !0), Mb.setFloat32(Vb.offset + 4 * Lb, wb.jwb[Lb], !0), Mb.setFloat32(gb.offset + 4 * Lb, wb.eyePosition[Lb], !0), Mb.setFloat32(lb.offset + 4 * Lb, wb.shadowDirection[Lb], !0)
     }
 
-    function Hd(dd) {
-      const Od = new Uint32Array(Math.max(1, dd.length));
-      return dd.forEach(((dd, md) => {
+    function Eb(bb) {
+      const wb = new Uint32Array(Math.max(1, bb.length));
+      return bb.forEach(((bb, Mb) => {
         let {
-          id: Wd,
-          rotation: Fd
-        } = dd;
-        Od[md] = 65535 & Wd | (3 & Fd) << 16
-      })), Od
+          id: eb,
+          rotation: Hb
+        } = bb;
+        wb[Mb] = 65535 & eb | (3 & Hb) << 16
+      })), wb
     }
-    const yd = {
+    const Fb = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  7592: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd,
-      g: () => Xd,
-      k: () => Kd,
-      m: () => Fd,
-      q: () => Rd
+  7825: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => eb,
+      f: () => Vb,
+      i: () => gb,
+      l: () => Hb,
+      o: () => pb
     });
-    const Wd = ["terrain", "liquid", "model"];
+    const eb = ["terrain", "liquid", "model"];
 
-    function Fd() {
-      const dd = [];
-      for (const Od of [!1, !0])
-        for (const md of Wd) dd.push({
-          strict: Od,
-          program: md
+    function Hb() {
+      const bb = [];
+      for (const wb of [!1, !0])
+        for (const Mb of eb) bb.push({
+          strict: wb,
+          program: Mb
         });
-      return dd
+      return bb
     }
 
-    function Rd(dd) {
-      return `${dd.strict?"strict":"allow"}.${dd.program}`
+    function pb(bb) {
+      return `${bb.strict?"strict":"allow"}.${bb.program}`
     }
 
-    function Xd(dd) {
-      return !dd.hooks.vertex && !dd.hooks.surface && !dd.hooks.light
+    function Vb(bb) {
+      return !bb.hooks.vertex && !bb.hooks.surface && !bb.hooks.light
     }
 
-    function Kd(dd, Od) {
-      return "off" !== Od && (null === dd || dd.some((dd => dd.key.strict === ("strict" === Od) && !Xd(dd))))
+    function gb(bb, wb) {
+      return "off" !== wb && (null === bb || bb.some((bb => bb.key.strict === ("strict" === wb) && !Vb(bb))))
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

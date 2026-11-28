@@ -1,130 +1,130 @@
 export const id = 282;
 export const ids = [282];
 export const modules = {
-  41067: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Fd
+  40831: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Hb
     });
-    const Wd = 1e3;
+    const eb = 1e3;
 
-    function Fd(dd, Od) {
-      const md = performance.now() + dd;
-      return 0 !== Od && Math.abs(md - Od) < Wd ? Od : md
+    function Hb(bb, wb) {
+      const Mb = performance.now() + bb;
+      return 0 !== wb && Math.abs(Mb - wb) < eb ? wb : Mb
     }
   },
-  41241: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      default: () => Qm
+  41009: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      default: () => lM
     });
-    var Wd = md(66);
-    const Fd = "shootingLobby",
-      Rd = {
+    var eb = Mb(64);
+    const Hb = "shootingLobby",
+      pb = {
         Red: "#fc6464",
         Blue: "#4f94f1"
       };
 
-    function Xd(dd, Od) {
-      const md = dd.reduce(((dd, Od) => dd + Od[5]), 0);
-      return 0 === md ? 0 === dd.length ? 0 : Math.round(100 / dd.length) : Math.round(dd[Od][5] / md * 100)
+    function Vb(bb, wb) {
+      const Mb = bb.reduce(((bb, wb) => bb + wb[5]), 0);
+      return 0 === Mb ? 0 === bb.length ? 0 : Math.round(100 / bb.length) : Math.round(bb[wb][5] / Mb * 100)
     }
-    var Kd = md(32),
-      hd = md(3428),
-      vd = md(41063),
-      Qd = md(41061),
-      td = md(1155),
-      od = md.n(td),
-      Nd = md(2125),
-      qd = md(1443),
-      Hd = md(1572),
-      yd = md(5194),
-      bd = md(5693),
-      Td = md(38259),
-      pd = md(1238),
-      Yd = md(405),
-      gd = md(3307),
-      wd = md(1315),
-      Ed = md(1341);
-    const Jd = "shootingOverlays:";
+    var gb = Mb(29),
+      lb = Mb(3531),
+      Lb = Mb(40829),
+      Ib = Mb(40827),
+      Ob = Mb(1159),
+      Ub = Mb.n(Ob),
+      tb = Mb(2183),
+      Cb = Mb(1475),
+      Eb = Mb(1616),
+      Fb = Mb(5384),
+      Bb = Mb(5822),
+      sb = Mb(37923),
+      mb = Mb(1259),
+      hb = Mb(382),
+      zb = Mb(3402),
+      Xb = Mb(1329),
+      xb = Mb(1364);
+    const jb = "shootingOverlays:";
 
-    function Ud(dd, Od) {
-      var md;
-      return "tdm" === Od && sd(dd) ? Rd[dd] : null !== (md = (0, Yd.bb)(dd)) && void 0 !== md ? md : "#ffffff"
+    function Kb(bb, wb) {
+      var Mb;
+      return "tdm" === wb && cb(bb) ? pb[bb] : null !== (Mb = (0, hb.yb)(bb)) && void 0 !== Mb ? Mb : "#ffffff"
     }
 
-    function xd(dd, Od) {
+    function rb(bb, wb) {
       return {
-        "--team": Ud(dd, Od)
+        "--team": Kb(bb, wb)
       }
     }
-    const Bd = {
-        Red: `${Jd}teamRed`,
-        Blue: `${Jd}teamBlue`
+    const Rb = {
+        Red: `${jb}teamRed`,
+        Blue: `${jb}teamBlue`
       },
-      Sd = {
-        diamonds: `${Jd}mutation_diamonds`,
-        explosives: `${Jd}mutation_explosives`,
-        gungame: `${Jd}mutation_gungame`
+      Db = {
+        diamonds: `${jb}mutation_diamonds`,
+        explosives: `${jb}mutation_explosives`,
+        gungame: `${jb}mutation_gungame`
       };
 
-    function sd(dd) {
-      return Object.hasOwn(Rd, dd)
+    function cb(bb) {
+      return Object.hasOwn(pb, bb)
     }
-    const ud = {
+    const Yb = {
       normal: "streak",
       explosives: "streak",
       diamonds: "diamonds",
       gungame: "kills"
     };
 
-    function Vd(dd) {
-      return ud[dd]
+    function Zb(bb) {
+      return Yb[bb]
     }
 
-    function Ad() {
-      const dd = (0, Nd.h)("hiddenPlayerNames");
-      return (0, Wd.useCallback)((Od => "" === Od ? "" : (0, wd.e)(Od, dd)), [dd])
+    function fb() {
+      const bb = (0, tb.h)("hiddenPlayerNames");
+      return (0, eb.useCallback)((wb => "" === wb ? "" : (0, Xb.c)(wb, bb)), [bb])
     }
 
-    function rd(dd) {
-      var Od;
+    function Ab(bb) {
+      var wb;
       let {
-        playerId: md
-      } = dd;
-      const Wd = null === (Od = (0, Nd.h)("players").byId[md]) || void 0 === Od ? void 0 : Od.cosmetics;
-      return (0, Ed.jsx)(gd.e, {
-        cosmetics: null !== Wd && void 0 !== Wd ? Wd : {}
+        playerId: Mb
+      } = bb;
+      const eb = null === (wb = (0, tb.h)("players").byId[Mb]) || void 0 === wb ? void 0 : wb.cosmetics;
+      return (0, xb.jsx)(zb.e, {
+        cosmetics: null !== eb && void 0 !== eb ? eb : {}
       })
     }
 
-    function Gd(dd) {
+    function Wb(bb) {
       let {
-        icon: Od,
-        value: md,
-        label: Wd,
-        gold: Fd = !1
-      } = dd;
-      return (0, Ed.jsxs)("div", {
+        icon: wb,
+        value: Mb,
+        label: eb,
+        gold: Hb = !1
+      } = bb;
+      return (0, xb.jsxs)("div", {
         className: "ShootingStat",
-        children: [(0, Ed.jsxs)("b", {
-          className: od()("FullyFancyText", {
-            Gold: Fd
+        children: [(0, xb.jsxs)("b", {
+          className: Ub()("FullyFancyText", {
+            Gold: Hb
           }),
-          children: [Od && (0, Ed.jsx)(qd.c, {
-            name: Od
-          }), md]
-        }), (0, Ed.jsx)("span", {
+          children: [wb && (0, xb.jsx)(Cb.b, {
+            name: wb
+          }), Mb]
+        }), (0, xb.jsx)("span", {
           className: "SmallTextBold",
-          children: Wd
+          children: eb
         })]
       })
     }
-    var nd = md(1503),
-      Ld = md(41067);
+    var Jb = Mb(1557),
+      Sb = Mb(40831);
 
-    function Pd(dd) {
-      return `shooting:${dd}`
+    function Nb(bb) {
+      return `shooting:${bb}`
     }
-    class zd {
+    class vb {
       constructor() {
         this.slices = {
           hud: {
@@ -147,296 +147,296 @@ export const modules = {
           death: null
         }, this.seq = 0
       }
-      get(dd) {
-        return this.slices[dd]
+      get(bb) {
+        return this.slices[bb]
       }
-      Yt(dd, Od) {
-        switch (dd) {
+      EO(bb, wb) {
+        switch (bb) {
           case "shootingHud":
-            return this.receiveHud(Od), !0;
-          case Fd: {
-            const dd = Od;
+            return this.receiveHud(wb), !0;
+          case Hb: {
+            const bb = wb;
             return this.set("lobby", {
-              wire: dd,
-              startsAt: "lobby" === dd[0] ? (0, Ld.c)(dd[2], this.slices.lobby.startsAt) : 0
+              wire: bb,
+              startsAt: "lobby" === bb[0] ? (0, Sb.b)(bb[2], this.slices.lobby.startsAt) : 0
             }), !0
           }
           case "shootingRoundEnd": {
-            const dd = Od;
+            const bb = wb;
             return this.set("roundEnd", {
-              wire: dd,
-              lobbyAt: "roundEnd" === dd[0] ? performance.now() + dd[17] : 0
+              wire: bb,
+              lobbyAt: "roundEnd" === bb[0] ? performance.now() + bb[17] : 0
             }), !0
           }
           case "shootingLeaderboard":
-            return this.set("leaderboard", Od), !0;
+            return this.set("leaderboard", wb), !0;
           case "shootingKillfeed": {
-            const dd = {
+            const bb = {
               seq: ++this.seq,
               at: performance.now(),
-              wire: Od
+              wire: wb
             };
-            return this.set("killfeed", [...this.slices.killfeed.slice(-11), dd]), !0
+            return this.set("killfeed", [...this.slices.killfeed.slice(-11), bb]), !0
           }
           case "shootingEvent":
-            return this.receiveEvent(Od), !0;
+            return this.receiveEvent(wb), !0;
           default:
             return !1
         }
       }
-      receiveHud(dd) {
-        var Od;
-        const md = this.slices.hud,
-          Wd = (null === (Od = md.wire) || void 0 === Od ? void 0 : Od[1]) === dd[1];
-        md.wire && !Wd && (this.set("kill", null), this.set("tier", null), this.set("death", null)), this.set("hud", {
-          wire: dd,
-          endsAt: (0, Ld.c)(dd[4], Wd ? md.endsAt : 0),
-          spawnProtectionEndsAt: 0 === dd[13] ? 0 : (0, Ld.c)(dd[13], md.spawnProtectionEndsAt)
+      receiveHud(bb) {
+        var wb;
+        const Mb = this.slices.hud,
+          eb = (null === (wb = Mb.wire) || void 0 === wb ? void 0 : wb[1]) === bb[1];
+        Mb.wire && !eb && (this.set("kill", null), this.set("tier", null), this.set("death", null)), this.set("hud", {
+          wire: bb,
+          endsAt: (0, Sb.b)(bb[4], eb ? Mb.endsAt : 0),
+          spawnProtectionEndsAt: 0 === bb[13] ? 0 : (0, Sb.b)(bb[13], Mb.spawnProtectionEndsAt)
         })
       }
-      receiveEvent(dd) {
-        const Od = {
+      receiveEvent(bb) {
+        const wb = {
           seq: ++this.seq,
           at: performance.now()
         };
-        switch (dd[0]) {
+        switch (bb[0]) {
           case "kill":
             this.set("kill", {
-              ...Od,
-              wire: dd
+              ...wb,
+              wire: bb
             });
             break;
           case "tier":
             this.set("tier", {
-              ...Od,
-              wire: dd
+              ...wb,
+              wire: bb
             });
             break;
           case "death":
             this.set("death", {
-              ...Od,
-              wire: dd
+              ...wb,
+              wire: bb
             })
         }
       }
-      set(dd, Od) {
-        this.slices[dd] = Od, Kd.j.lQ(Pd(dd), Od, !0)
+      set(bb, wb) {
+        this.slices[bb] = wb, gb.k.iI(Nb(bb), wb, !0)
       }
     }
 
-    function cd(dd, Od) {
-      return (0, nd.e)(Pd(Od), (() => dd.get(Od)))
+    function Qb(bb, wb) {
+      return (0, Jb.b)(Nb(wb), (() => bb.get(wb)))
     }
-    const jd = ["Red", "Blue"],
-      Dd = {
-        streak: `${Jd}scoreIs_streak`,
-        diamonds: `${Jd}scoreIs_diamonds`,
-        kills: `${Jd}scoreIs_kills`
+    const Gb = ["Red", "Blue"],
+      qb = {
+        streak: `${jb}scoreIs_streak`,
+        diamonds: `${jb}scoreIs_diamonds`,
+        kills: `${jb}scoreIs_kills`
       };
 
-    function ed(dd) {
-      var Od;
+    function ab(bb) {
+      var wb;
       let {
-        store: md,
-        variation: Wd
-      } = dd;
+        store: Mb,
+        variation: eb
+      } = bb;
       const {
-        t: Fd
-      } = (0, pd.G)(), Rd = cd(md, "leaderboard"), Xd = cd(md, "hud"), [, Kd = "lobby", , vd = "normal", , , Qd = "", , , td = null] = null !== (Od = Xd.wire) && void 0 !== Od ? Od : [], bd = (0, Td.h)("match" === Kd ? Xd.endsAt : 0), Yd = (0, Nd.h)("players").localId, gd = "tdm" === Wd, wd = "normal" === vd ? null : Sd[vd], Ud = "Blue" === Qd ? [...jd].reverse() : jd, xd = dd => "tdm" !== (null === td || void 0 === td ? void 0 : td[0]) ? 0 : "Red" === dd ? td[1] : td[2];
-      return (0, Ed.jsx)(yd.c, {
-        close: hd.h,
+        t: Hb
+      } = (0, mb.C)(), pb = Qb(Mb, "leaderboard"), Vb = Qb(Mb, "hud"), [, gb = "lobby", , Lb = "normal", , , Ib = "", , , Ob = null] = null !== (wb = Vb.wire) && void 0 !== wb ? wb : [], Bb = (0, sb.i)("match" === gb ? Vb.endsAt : 0), hb = (0, tb.h)("players").localId, zb = "tdm" === eb, Xb = "normal" === Lb ? null : Db[Lb], Kb = "Blue" === Ib ? [...Gb].reverse() : Gb, rb = bb => "tdm" !== (null === Ob || void 0 === Ob ? void 0 : Ob[0]) ? 0 : "Red" === bb ? Ob[1] : Ob[2];
+      return (0, xb.jsx)(Fb.e, {
+        close: lb.o,
         togglePointerLock: !1,
         className: "ShootingBoardOverlay",
-        children: (0, Ed.jsxs)("section", {
-          className: od()("ShootingBoard", {
-            ShootingBoardFfa: !gd
+        children: (0, xb.jsxs)("section", {
+          className: Ub()("ShootingBoard", {
+            ShootingBoardFfa: !zb
           }),
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "shootingBoardTitle",
-          children: [(0, Ed.jsxs)("header", {
+          children: [(0, xb.jsxs)("header", {
             className: "ShootingBoardHeader",
-            children: [(0, Ed.jsxs)("h2", {
+            children: [(0, xb.jsxs)("h2", {
               id: "shootingBoardTitle",
               className: "SmallTextBold",
-              children: [(0, Ed.jsx)(qd.c, {
+              children: [(0, xb.jsx)(Cb.b, {
                 name: "list"
-              }), Fd(gd ? `${Jd}teamDeathmatch` : `${Jd}freeForAll`)]
-            }), (0, Ed.jsxs)("div", {
+              }), Hb(zb ? `${jb}teamDeathmatch` : `${jb}freeForAll`)]
+            }), (0, xb.jsxs)("div", {
               className: "ShootingBoardMeta SmallTextBold",
-              children: [wd && (0, Ed.jsx)("span", {
-                children: Fd(wd)
-              }), "match" === Kd && (0, Ed.jsxs)("span", {
-                children: [(0, Ed.jsx)(qd.c, {
+              children: [Xb && (0, xb.jsx)("span", {
+                children: Hb(Xb)
+              }), "match" === gb && (0, xb.jsxs)("span", {
+                children: [(0, xb.jsx)(Cb.b, {
                   name: "stopwatch"
-                }), " ", (0, Td.d)(bd)]
+                }), " ", (0, sb.b)(Bb)]
               })]
-            }), (0, Ed.jsx)(Hd.j, {
+            }), (0, xb.jsx)(Eb.l, {
               className: "ShootingBoardClose",
-              onClick: hd.h
+              onClick: lb.o
             })]
-          }), (0, Ed.jsxs)("div", {
+          }), (0, xb.jsxs)("div", {
             className: "ShootingBoardColumns",
-            children: [gd && Ud.map((dd => (0, Ed.jsx)(Id, {
-              title: Fd(Bd[dd]),
+            children: [zb && Kb.map((bb => (0, xb.jsx)(ib, {
+              title: Hb(Rb[bb]),
               team: {
-                id: dd,
-                score: xd(dd),
-                mine: dd === Qd
+                id: bb,
+                score: rb(bb),
+                mine: bb === Ib
               },
-              rows: Rd.filter((Od => Od[2] === dd)),
-              localId: Yd
-            }, dd))), !gd && (0, Ed.jsx)(Id, {
-              title: Fd(`${Jd}players`),
+              rows: pb.filter((wb => wb[2] === bb)),
+              localId: hb
+            }, bb))), !zb && (0, xb.jsx)(ib, {
+              title: Hb(`${jb}players`),
               team: null,
-              rows: Rd,
-              localId: Yd
+              rows: pb,
+              localId: hb
             })]
-          }), (0, Ed.jsxs)("footer", {
+          }), (0, xb.jsxs)("footer", {
             className: "ShootingBoardFooter SmallTextBold",
-            children: [(0, Ed.jsx)("span", {
-              children: Fd(Dd[Vd(vd)])
-            }), (0, Ed.jsx)("span", {
-              children: Fd(`${Jd}kdLegend`)
+            children: [(0, xb.jsx)("span", {
+              children: Hb(qb[Zb(Lb)])
+            }), (0, xb.jsx)("span", {
+              children: Hb(`${jb}kdLegend`)
             })]
           })]
         })
       })
     }
 
-    function Id(dd) {
+    function ib(bb) {
       let {
-        title: Od,
-        team: md,
-        rows: Wd,
-        localId: Fd
-      } = dd;
+        title: wb,
+        team: Mb,
+        rows: eb,
+        localId: Hb
+      } = bb;
       const {
-        t: Rd
-      } = (0, pd.G)(), Xd = Ad(), Kd = [{
+        t: pb
+      } = (0, mb.C)(), Vb = fb(), gb = [{
         key: "name",
-        header: (0, Ed.jsxs)("span", {
+        header: (0, xb.jsxs)("span", {
           className: "ShootingBoardTeam",
-          children: [(0, Ed.jsxs)("span", {
-            children: [Od, (null === md || void 0 === md ? void 0 : md.mine) && (0, Ed.jsxs)("span", {
+          children: [(0, xb.jsxs)("span", {
+            children: [wb, (null === Mb || void 0 === Mb ? void 0 : Mb.mine) && (0, xb.jsxs)("span", {
               className: "ShootingBoardYou",
-              children: [" \xb7 ", Rd(`${Jd}you`)]
+              children: [" \xb7 ", pb(`${jb}you`)]
             })]
-          }), md && (0, Ed.jsx)("b", {
-            children: md.score
+          }), Mb && (0, xb.jsx)("b", {
+            children: Mb.score
           })]
         })
       }, {
         key: "kills",
-        header: (0, Ed.jsx)("abbr", {
-          title: Rd(`${Jd}kills`),
-          children: Rd(`${Jd}killsShort`)
+        header: (0, xb.jsx)("abbr", {
+          title: pb(`${jb}kills`),
+          children: pb(`${jb}killsShort`)
         })
       }, {
         key: "deaths",
-        header: (0, Ed.jsx)("abbr", {
-          title: Rd(`${Jd}deaths`),
-          children: Rd(`${Jd}deathsShort`)
+        header: (0, xb.jsx)("abbr", {
+          title: pb(`${jb}deaths`),
+          children: pb(`${jb}deathsShort`)
         })
       }, {
         key: "score",
-        header: Rd(`${Jd}score`)
+        header: pb(`${jb}score`)
       }];
-      return (0, Ed.jsx)("div", {
+      return (0, xb.jsx)("div", {
         className: "ShootingBoardColumn",
-        style: md ? xd(md.id, "tdm") : void 0,
-        children: (0, Ed.jsx)(bd.e, {
-          className: od()("ShootingBoardTable", {
-            Team: md
+        style: Mb ? rb(Mb.id, "tdm") : void 0,
+        children: (0, xb.jsx)(Bb.c, {
+          className: Ub()("ShootingBoardTable", {
+            Team: Mb
           }),
-          columns: Kd,
-          rows: Wd,
-          getRowKey: dd => dd[0],
-          renderRow: (dd, Od) => {
-            const [Wd, Rd, Kd, hd, vd, Qd, td] = dd, Nd = Od + 1;
-            return (0, Ed.jsxs)("tr", {
-              className: od()({
-                Mine: Wd === Fd,
-                Dead: !td
+          columns: gb,
+          rows: eb,
+          getRowKey: bb => bb[0],
+          renderRow: (bb, wb) => {
+            const [eb, pb, gb, lb, Lb, Ib, Ob] = bb, tb = wb + 1;
+            return (0, xb.jsxs)("tr", {
+              className: Ub()({
+                Mine: eb === Hb,
+                Dead: !Ob
               }),
-              style: md ? void 0 : xd(Kd, "ffa"),
-              children: [(0, Ed.jsx)("td", {
-                children: (0, Ed.jsxs)("span", {
+              style: Mb ? void 0 : rb(gb, "ffa"),
+              children: [(0, xb.jsx)("td", {
+                children: (0, xb.jsxs)("span", {
                   className: "ShootingBoardName",
-                  children: [!md && (0, Ed.jsx)("span", {
-                    className: od()("ShootingBoardPlace", `Place${Nd}`),
-                    children: Nd
-                  }), (0, Ed.jsx)(rd, {
-                    playerId: Wd
-                  }), (0, Ed.jsx)("span", {
+                  children: [!Mb && (0, xb.jsx)("span", {
+                    className: Ub()("ShootingBoardPlace", `Place${tb}`),
+                    children: tb
+                  }), (0, xb.jsx)(Ab, {
+                    playerId: eb
+                  }), (0, xb.jsx)("span", {
                     className: "ShootingBoardNameText",
-                    children: Xd(Rd)
+                    children: Vb(pb)
                   })]
                 })
-              }), (0, Ed.jsx)("td", {
-                children: hd
-              }), (0, Ed.jsx)("td", {
-                children: vd
-              }), (0, Ed.jsx)("td", {
+              }), (0, xb.jsx)("td", {
+                children: lb
+              }), (0, xb.jsx)("td", {
+                children: Lb
+              }), (0, xb.jsx)("td", {
                 className: "ShootingBoardScore",
-                children: Qd
+                children: Ib
               })]
             })
           }
         })
       })
     }
-    var ld = md(38243),
-      Cd = md(38302),
-      Zd = md(29),
-      kd = md(5691),
-      fd = md(2130),
-      Md = md(5206),
-      dO = md(3645),
-      OO = md(1566),
-      mO = md(1596),
-      WO = md(40123);
-    const FO = "shooting:vote";
-    class RO {
-      constructor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new WO.d;
-        this.lQ = dd, this.sendCommand = Od, this.pacer = md, this.view = {
+    var ub = Mb(37898),
+      db = Mb(37956),
+      Pb = Mb(26),
+      nb = Mb(5817),
+      yb = Mb(2190),
+      ob = Mb(5395),
+      Tb = Mb(3778),
+      kb = Mb(1611),
+      bw = Mb(1646),
+      ww = Mb(39819);
+    const Mw = "shooting:vote";
+    class ew {
+      constructor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new ww.d;
+        this.iI = bb, this.sendCommand = wb, this.pacer = Mb, this.view = {
           hidden: !1,
           pending: null
-        }, this.unsent = !1, this.cardsKey = "", this.pendingTimer = null, this.unsubscribePacer = void 0, this.vote = dd => {
+        }, this.unsent = !1, this.cardsKey = "", this.pendingTimer = null, this.unsubscribePacer = void 0, this.vote = bb => {
           this.unsent = !0, this.set({
             ...this.view,
-            pending: dd
+            pending: bb
           }), this.flush()
-        }, this.setHidden = dd => {
+        }, this.setHidden = bb => {
           this.set({
             ...this.view,
-            hidden: dd
+            hidden: bb
           })
         }, this.flush = () => {
-          const dd = this.view.pending;
-          this.unsent && null !== dd && this.pacer.tryStart() && (this.unsent = !1, this.sendCommand(`mapvote ${dd}`), this.clearPendingTimer(), this.pendingTimer = setTimeout((() => {
-            this.pendingTimer = null, this.unsent || this.view.pending !== dd || this.set({
+          const bb = this.view.pending;
+          this.unsent && null !== bb && this.pacer.tryStart() && (this.unsent = !1, this.sendCommand(`mapvote ${bb}`), this.clearPendingTimer(), this.pendingTimer = setTimeout((() => {
+            this.pendingTimer = null, this.unsent || this.view.pending !== bb || this.set({
               ...this.view,
               pending: null
             })
           }), 5e3))
-        }, this.unsubscribePacer = md.subscribe(this.flush)
+        }, this.unsubscribePacer = Mb.subscribe(this.flush)
       }
       getView() {
         return this.view
       }
-      onLobby(dd) {
-        const Od = "lobby" === dd[0] ? dd[9] : [],
-          md = Od.map((dd => dd[0])).join("\n");
-        if (md !== this.cardsKey) return this.cardsKey = md, this.unsent = !1, void this.set({
+      onLobby(bb) {
+        const wb = "lobby" === bb[0] ? bb[9] : [],
+          Mb = wb.map((bb => bb[0])).join("\n");
+        if (Mb !== this.cardsKey) return this.cardsKey = Mb, this.unsent = !1, void this.set({
           hidden: !1,
           pending: null
         });
-        const Wd = this.view.pending;
-        if (null === Wd) return;
-        const Fd = Od.find((dd => dd[0] === Wd));
-        (!Fd || Fd[6] && !this.unsent) && (this.unsent = !1, this.set({
+        const eb = this.view.pending;
+        if (null === eb) return;
+        const Hb = wb.find((bb => bb[0] === eb));
+        (!Hb || Hb[6] && !this.unsent) && (this.unsent = !1, this.set({
           ...this.view,
           pending: null
         }))
@@ -447,254 +447,254 @@ export const modules = {
       clearPendingTimer() {
         null !== this.pendingTimer && (clearTimeout(this.pendingTimer), this.pendingTimer = null)
       }
-      set(dd) {
-        this.view = dd, this.lQ(dd)
+      set(bb) {
+        this.view = bb, this.iI(bb)
       }
     }
-    const XO = "ShootingVoteStripOpen";
+    const Hw = "ShootingVoteStripOpen";
 
-    function KO(dd) {
-      var Od, md, Fd, Rd, Kd;
+    function pw(bb) {
+      var wb, Mb, Hb, pb, gb;
       let {
-        maps: hd,
-        votes: vd
-      } = dd;
+        maps: lb,
+        votes: Lb
+      } = bb;
       const {
-        t: Qd
-      } = (0, pd.G)(), td = (0, OO.i)(FO, vd.getView()), {
-        isTouchScreen: Nd,
-        openInGameMenuName: Hd,
-        openEverythingMenuName: yd
-      } = (0, Zd.p)(["isTouchScreen", "openInGameMenuName", "openEverythingMenuName"]), bd = null !== Hd || null !== yd, Td = (0, dO.d)();
-      (0, Md.e)(!0, !Nd && !td.hidden && !bd && !Td, "shootingVoteStrip", !0), (0, Wd.useEffect)((() => {
-        if (!td.hidden && !Nd) return document.body.classList.add(XO), () => {
-          document.body.classList.remove(XO)
+        t: Ib
+      } = (0, mb.C)(), Ob = (0, kb.h)(Mw, Lb.getView()), {
+        isTouchScreen: tb,
+        openInGameMenuName: Eb,
+        openEverythingMenuName: Fb
+      } = (0, Pb.o)(["isTouchScreen", "openInGameMenuName", "openEverythingMenuName"]), Bb = null !== Eb || null !== Fb, sb = (0, Tb.b)();
+      (0, ob.d)(!0, !tb && !Ob.hidden && !Bb && !sb, "shootingVoteStrip", !0), (0, eb.useEffect)((() => {
+        if (!Ob.hidden && !tb) return document.body.classList.add(Hw), () => {
+          document.body.classList.remove(Hw)
         }
-      }), [td.hidden, Nd]);
-      const Yd = null !== (Od = null !== (md = td.pending) && void 0 !== md ? md : null === (Fd = hd.find((dd => dd[6]))) || void 0 === Fd ? void 0 : Fd[0]) && void 0 !== Od ? Od : null,
-        gd = null !== (Rd = null === (Kd = hd.find((dd => dd[0] === Yd))) || void 0 === Kd ? void 0 : Kd[1]) && void 0 !== Rd ? Rd : null;
-      return td.hidden ? (0, Ed.jsxs)("button", {
+      }), [Ob.hidden, tb]);
+      const hb = null !== (wb = null !== (Mb = Ob.pending) && void 0 !== Mb ? Mb : null === (Hb = lb.find((bb => bb[6]))) || void 0 === Hb ? void 0 : Hb[0]) && void 0 !== wb ? wb : null,
+        zb = null !== (pb = null === (gb = lb.find((bb => bb[0] === hb))) || void 0 === gb ? void 0 : gb[1]) && void 0 !== pb ? pb : null;
+      return Ob.hidden ? (0, xb.jsxs)("button", {
         type: "button",
         className: "ShootingVoteChip",
         "data-over-keys": "",
-        ...(0, mO.i)((() => {
-          vd.setHidden(!1)
+        ...(0, bw.e)((() => {
+          Lb.setHidden(!1)
         }), "pointerup"),
-        children: [(0, Ed.jsx)("span", {
+        children: [(0, xb.jsx)("span", {
           className: "ShootingVoteChipLabel",
-          children: Qd("shootingLobby:mapVote")
-        }), (0, Ed.jsx)("span", {
+          children: Ib("shootingLobby:mapVote")
+        }), (0, xb.jsx)("span", {
           className: "ShootingVoteChipVote",
-          children: null !== gd && void 0 !== gd ? gd : Qd("shootingLobby:notVoted")
-        }), !Nd && (0, Ed.jsxs)("span", {
+          children: null !== zb && void 0 !== zb ? zb : Ib("shootingLobby:notVoted")
+        }), !tb && (0, xb.jsxs)("span", {
           className: "ShootingVoteChipShop",
-          children: [Qd("shootingLobby:voteInShop"), (0, Ed.jsx)(fd.b, {
+          children: [Ib("shootingLobby:voteInShop"), (0, xb.jsx)(yb.e, {
             noaAction: "OpenShop",
             padHidesKey: !0
           })]
-        }), (0, Ed.jsx)(qd.c, {
+        }), (0, xb.jsx)(Cb.b, {
           name: "angle-up"
         })]
-      }) : (0, Ed.jsxs)("div", {
-        className: od()("ShootingVoteStrip", {
-          Touch: Nd
+      }) : (0, xb.jsxs)("div", {
+        className: Ub()("ShootingVoteStrip", {
+          Touch: tb
         }),
         "data-over-keys": "",
-        children: [(0, Ed.jsxs)("div", {
+        children: [(0, xb.jsxs)("div", {
           className: "ShootingVoteHeader",
-          children: [(0, Ed.jsx)("span", {
+          children: [(0, xb.jsx)("span", {
             className: "ShootingVoteTitle",
-            children: Qd("shootingLobby:voteTitle")
-          }), (0, Ed.jsx)("span", {
+            children: Ib("shootingLobby:voteTitle")
+          }), (0, xb.jsx)("span", {
             className: "ShootingVoteHint",
-            children: Qd("shootingLobby:voteHint")
-          }), (0, Ed.jsxs)("button", {
+            children: Ib("shootingLobby:voteHint")
+          }), (0, xb.jsxs)("button", {
             type: "button",
             className: "ShootingVoteHide",
-            ...(0, mO.i)((() => {
-              vd.setHidden(!0)
+            ...(0, bw.e)((() => {
+              Lb.setHidden(!0)
             }), "pointerup"),
-            children: [Qd("shootingLobby:hide"), (0, Ed.jsx)(qd.c, {
+            children: [Ib("shootingLobby:hide"), (0, xb.jsx)(Cb.b, {
               name: "angle-down"
             })]
           })]
-        }), (0, Ed.jsx)("div", {
+        }), (0, xb.jsx)("div", {
           className: "ShootingVoteCards",
-          children: hd.map(((dd, Od) => (0, Ed.jsx)(hO, {
-            map: dd,
-            chance: Xd(hd, Od),
-            mine: Yd === dd[0],
-            onVote: vd.vote,
-            showHeads: !Nd
-          }, dd[0])))
+          children: lb.map(((bb, wb) => (0, xb.jsx)(Vw, {
+            map: bb,
+            chance: Vb(lb, wb),
+            mine: hb === bb[0],
+            onVote: Lb.vote,
+            showHeads: !tb
+          }, bb[0])))
         })]
       })
     }
 
-    function hO(dd) {
+    function Vw(bb) {
       let {
-        map: Od,
-        chance: md,
-        mine: Fd,
-        onVote: Rd,
-        showHeads: Xd
-      } = dd;
+        map: wb,
+        chance: Mb,
+        mine: Hb,
+        onVote: pb,
+        showHeads: Vb
+      } = bb;
       const {
-        t: Kd
-      } = (0, pd.G)(), [hd, vd, Qd, td, Nd, Hd, , yd, bd] = Od, [Td, Yd] = (0, Wd.useState)(!1);
-      return (0, Ed.jsxs)("button", {
+        t: gb
+      } = (0, mb.C)(), [lb, Lb, Ib, Ob, tb, Eb, , Fb, Bb] = wb, [sb, hb] = (0, eb.useState)(!1);
+      return (0, xb.jsxs)("button", {
         type: "button",
-        className: od()("ShootingMapCard", {
-          Mine: Fd
+        className: Ub()("ShootingMapCard", {
+          Mine: Hb
         }),
-        "aria-pressed": Fd,
-        ...(0, mO.i)((() => {
-          Fd || Rd(hd)
+        "aria-pressed": Hb,
+        ...(0, bw.e)((() => {
+          Hb || pb(lb)
         }), "pointerup"),
-        children: [(0, Ed.jsxs)("div", {
+        children: [(0, xb.jsxs)("div", {
           className: "ShootingMapCardImage",
-          children: [null !== bd && (0, Ed.jsx)(kd.e, {
+          children: [null !== Bb && (0, xb.jsx)(nb.e, {
             game: {
-              schematicId: bd
+              schematicId: Bb
             }
-          }), null === bd && !Td && (0, Ed.jsx)("img", {
+          }), null === Bb && !sb && (0, xb.jsx)("img", {
             alt: "",
-            src: `/textures/games/shooting/${Qd}`,
+            src: `/textures/games/shooting/${Ib}`,
             onError: () => {
-              Yd(!0)
+              hb(!0)
             }
-          }), Nd && (0, Ed.jsx)("span", {
+          }), tb && (0, xb.jsx)("span", {
             className: "ShootingMapCardNew",
-            children: Kd("shootingLobby:new")
-          }), "normal" !== td && (0, Ed.jsx)("span", {
+            children: gb("shootingLobby:new")
+          }), "normal" !== Ob && (0, xb.jsx)("span", {
             className: "ShootingMapCardMutation",
-            children: Kd(Sd[td])
-          }), Fd && (0, Ed.jsx)("span", {
+            children: gb(Db[Ob])
+          }), Hb && (0, xb.jsx)("span", {
             className: "ShootingMapCardCheck",
-            children: (0, Ed.jsx)(qd.c, {
+            children: (0, xb.jsx)(Cb.b, {
               name: "check"
             })
           })]
-        }), (0, Ed.jsxs)("div", {
+        }), (0, xb.jsxs)("div", {
           className: "ShootingMapCardInfo",
-          children: [(0, Ed.jsx)("span", {
+          children: [(0, xb.jsx)("span", {
             className: "ShootingMapCardName",
-            children: vd
-          }), (0, Ed.jsxs)("span", {
+            children: Lb
+          }), (0, xb.jsxs)("span", {
             className: "ShootingMapCardVotes",
-            children: [Hd, (0, Ed.jsx)(qd.c, {
+            children: [Eb, (0, xb.jsx)(Cb.b, {
               name: "user"
             })]
           })]
-        }), (0, Ed.jsx)("div", {
+        }), (0, xb.jsx)("div", {
           className: "ShootingMapCardBar",
-          children: (0, Ed.jsx)("i", {
+          children: (0, xb.jsx)("i", {
             style: {
-              width: `${md}%`
+              width: `${Mb}%`
             }
           })
-        }), (0, Ed.jsxs)("div", {
+        }), (0, xb.jsxs)("div", {
           className: "ShootingMapCardFooter",
-          children: [Xd && (0, Ed.jsx)(vO, {
-            voters: yd
-          }), (0, Ed.jsx)("span", {
+          children: [Vb && (0, xb.jsx)(gw, {
+            voters: Fb
+          }), (0, xb.jsx)("span", {
             className: "ShootingMapCardChance",
-            children: Kd("shootingLobby:chance", {
-              percent: md
+            children: gb("shootingLobby:chance", {
+              percent: Mb
             })
           })]
         })]
       })
     }
 
-    function vO(dd) {
+    function gw(bb) {
       let {
-        voters: Od
-      } = dd;
-      const md = (0, Nd.h)("players");
-      return (0, Ed.jsx)("span", {
+        voters: wb
+      } = bb;
+      const Mb = (0, tb.h)("players");
+      return (0, xb.jsx)("span", {
         className: "ShootingMapCardHeads",
-        children: Od.slice(0, 8).map((dd => {
-          var Od;
-          return (null === (Od = md.byId[dd]) || void 0 === Od ? void 0 : Od.cosmetics) && (0, Ed.jsx)(rd, {
-            playerId: dd
-          }, dd)
+        children: wb.slice(0, 8).map((bb => {
+          var wb;
+          return (null === (wb = Mb.byId[bb]) || void 0 === wb ? void 0 : wb.cosmetics) && (0, xb.jsx)(Ab, {
+            playerId: bb
+          }, bb)
         }))
       })
     }
 
-    function QO(dd) {
+    function lw(bb) {
       let {
-        store: Od,
-        votes: md,
-        variation: Wd
-      } = dd;
-      const Fd = cd(Od, "lobby"),
-        Rd = (0, Nd.h)("localPlayerAlive"),
-        Xd = (0, Nd.f)("connectedGame", (dd => dd.replay));
-      if ("lobby" !== Fd.wire[0] || Xd) return null;
-      const Kd = Fd.wire;
-      return (0, Ed.jsxs)(Ed.Fragment, {
-        children: [(0, Ed.jsx)(tO, {
-          wire: Kd,
-          startsAt: Fd.startsAt,
-          variation: Wd
-        }), Rd && Kd[9].length > 0 && (0, Ed.jsx)(ld.h, {
-          children: (0, Ed.jsx)(KO, {
-            maps: Kd[9],
-            votes: md
+        store: wb,
+        votes: Mb,
+        variation: eb
+      } = bb;
+      const Hb = Qb(wb, "lobby"),
+        pb = (0, tb.h)("localPlayerAlive"),
+        Vb = (0, tb.e)("connectedGame", (bb => bb.replay));
+      if ("lobby" !== Hb.wire[0] || Vb) return null;
+      const gb = Hb.wire;
+      return (0, xb.jsxs)(xb.Fragment, {
+        children: [(0, xb.jsx)(Lw, {
+          wire: gb,
+          startsAt: Hb.startsAt,
+          variation: eb
+        }), pb && gb[9].length > 0 && (0, xb.jsx)(ub.d, {
+          children: (0, xb.jsx)(pw, {
+            maps: gb[9],
+            votes: Mb
           })
         })]
       })
     }
-    const tO = (0, Wd.memo)((function(dd) {
+    const Lw = (0, eb.memo)((function(bb) {
       let {
-        wire: Od,
-        startsAt: md,
-        variation: Fd
-      } = dd;
+        wire: wb,
+        startsAt: Mb,
+        variation: Hb
+      } = bb;
       const {
-        t: Rd
-      } = (0, pd.G)(), [Xd, Kd] = (0, Wd.useState)(null), [hd, vd] = (0, Wd.useState)(null), Qd = (0, Cd.l)(Xd, hd), [, td, , od, Nd, Hd, yd, bd, Td] = Od, {
-        isTouchScreen: Yd
-      } = (0, Zd.p)(["isTouchScreen"]);
-      return (0, Ed.jsx)("div", {
-        ref: vd,
+        t: pb
+      } = (0, mb.C)(), [Vb, gb] = (0, eb.useState)(null), [lb, Lb] = (0, eb.useState)(null), Ib = (0, db.s)(Vb, lb), [, Ob, , Ub, tb, Eb, Fb, Bb, sb] = wb, {
+        isTouchScreen: hb
+      } = (0, Pb.o)(["isTouchScreen"]);
+      return (0, xb.jsx)("div", {
+        ref: Lb,
         className: "ShootingLobbyStatusContainer",
-        style: null === Qd ? void 0 : {
-          top: Qd
+        style: null === Ib ? void 0 : {
+          top: Ib
         },
-        children: (0, Ed.jsxs)("div", {
-          ref: Kd,
+        children: (0, xb.jsxs)("div", {
+          ref: gb,
           className: "ShootingLobbyStatus",
-          children: [(0, Ed.jsx)(oO, {
-            waiting: "waiting" === td,
-            startsAt: md
-          }), "tdm" === Fd && (0, Ed.jsxs)("div", {
+          children: [(0, xb.jsx)(Iw, {
+            waiting: "waiting" === Ob,
+            startsAt: Mb
+          }), "tdm" === Hb && (0, xb.jsxs)("div", {
             className: "ShootingLobbyTeams",
-            children: [(0, Ed.jsx)(NO, {
+            children: [(0, xb.jsx)(Ow, {
               team: "Blue",
-              count: yd,
-              cap: bd,
-              mine: "Blue" === Td
-            }), (0, Ed.jsx)("span", {
+              count: Fb,
+              cap: Bb,
+              mine: "Blue" === sb
+            }), (0, xb.jsx)("span", {
               className: "ShootingLobbyTeamHint",
-              children: Rd(Yd ? "shootingLobby:teamHintTouch" : "" === Td ? "shootingLobby:teamHintPick" : "shootingLobby:teamHintSwitch")
-            }), (0, Ed.jsx)(NO, {
+              children: pb(hb ? "shootingLobby:teamHintTouch" : "" === sb ? "shootingLobby:teamHintPick" : "shootingLobby:teamHintSwitch")
+            }), (0, xb.jsx)(Ow, {
               team: "Red",
-              count: Hd,
-              cap: bd,
-              mine: "Red" === Td
+              count: Eb,
+              cap: Bb,
+              mine: "Red" === sb
             })]
-          }), "ffa" === Fd && (0, Ed.jsx)("div", {
+          }), "ffa" === Hb && (0, xb.jsx)("div", {
             className: "ShootingLobbyTeams",
-            children: (0, Ed.jsxs)("span", {
+            children: (0, xb.jsxs)("span", {
               className: "ShootingLobbyPlayers",
-              children: [(0, Ed.jsx)(qd.c, {
+              children: [(0, xb.jsx)(Cb.b, {
                 name: "user-group"
-              }), Rd("shootingLobby:players", {
-                count: od,
-                max: Nd
+              }), pb("shootingLobby:players", {
+                count: Ub,
+                max: tb
               })]
             })
           })]
@@ -702,687 +702,687 @@ export const modules = {
       })
     }));
 
-    function oO(dd) {
+    function Iw(bb) {
       let {
-        waiting: Od,
-        startsAt: md
-      } = dd;
+        waiting: wb,
+        startsAt: Mb
+      } = bb;
       const {
-        t: Wd
-      } = (0, pd.G)(), Fd = (0, Td.h)(Od ? 0 : md);
-      return (0, Ed.jsxs)("div", {
+        t: eb
+      } = (0, mb.C)(), Hb = (0, sb.i)(wb ? 0 : Mb);
+      return (0, xb.jsxs)("div", {
         className: "ShootingLobbyCountdown",
-        children: [Od && (0, Ed.jsx)("span", {
+        children: [wb && (0, xb.jsx)("span", {
           className: "ShootingLobbyCountdownLabel",
-          children: Wd("shootingLobby:waiting")
-        }), !Od && (0, Ed.jsxs)(Ed.Fragment, {
-          children: [(0, Ed.jsx)("span", {
+          children: eb("shootingLobby:waiting")
+        }), !wb && (0, xb.jsxs)(xb.Fragment, {
+          children: [(0, xb.jsx)("span", {
             className: "ShootingLobbyCountdownLabel",
-            children: Wd("shootingLobby:startingIn")
-          }), (0, Ed.jsx)("span", {
-            className: od()("ShootingLobbyCountdownTime", {
-              Soon: Fd < 10
+            children: eb("shootingLobby:startingIn")
+          }), (0, xb.jsx)("span", {
+            className: Ub()("ShootingLobbyCountdownTime", {
+              Soon: Hb < 10
             }),
-            children: (0, Td.d)(Fd)
+            children: (0, sb.b)(Hb)
           })]
         })]
       })
     }
 
-    function NO(dd) {
+    function Ow(bb) {
       let {
-        team: Od,
-        count: md,
-        cap: Wd,
-        mine: Fd
-      } = dd;
+        team: wb,
+        count: Mb,
+        cap: eb,
+        mine: Hb
+      } = bb;
       const {
-        t: Rd
-      } = (0, pd.G)();
-      return (0, Ed.jsxs)("span", {
-        className: od()("ShootingLobbyTeam", {
-          Mine: Fd,
-          Full: md >= Wd
+        t: pb
+      } = (0, mb.C)();
+      return (0, xb.jsxs)("span", {
+        className: Ub()("ShootingLobbyTeam", {
+          Mine: Hb,
+          Full: Mb >= eb
         }),
-        style: xd(Od, "tdm"),
-        children: [Rd(Bd[Od]), (0, Ed.jsx)("span", {
+        style: rb(wb, "tdm"),
+        children: [pb(Rb[wb]), (0, xb.jsx)("span", {
           className: "ShootingLobbyTeamCount",
-          children: Rd("shootingLobby:teamCount", {
-            count: md,
-            cap: Wd
+          children: pb("shootingLobby:teamCount", {
+            count: Mb,
+            cap: eb
           })
         })]
       })
     }
-    var qO = md(38172),
-      HO = md(1890),
-      yO = md(2079);
-    const bO = "--cubeWarfareKillfeedOffset",
-      TO = (0, Wd.memo)((function(dd) {
+    var Uw = Mb(37820),
+      tw = Mb(1965),
+      Cw = Mb(2130);
+    const Ew = "--cubeWarfareKillfeedOffset",
+      Fw = (0, eb.memo)((function(bb) {
         let {
-          wire: Od,
-          endsAt: md,
-          leaderboard: Fd
-        } = dd;
+          wire: wb,
+          endsAt: Mb,
+          leaderboard: Hb
+        } = bb;
         const {
-          t: Rd
-        } = (0, pd.G)(), {
-          isTouchScreen: Xd
-        } = (0, Zd.p)(["isTouchScreen"]), [Kd, hd] = (0, Wd.useState)(null), [vd, Qd] = (0, Wd.useState)(null), td = (0, Cd.l)(vd, Kd, Xd);
-        ! function(dd, Od) {
-          (0, Wd.useLayoutEffect)((() => {
-            if (!dd || null === Od) return;
-            let md = null;
-            const Wd = dd => {
-                md = dd, null === dd ? document.body.style.removeProperty(bO) : document.body.style.setProperty(bO, `${dd}px`)
+          t: pb
+        } = (0, mb.C)(), {
+          isTouchScreen: Vb
+        } = (0, Pb.o)(["isTouchScreen"]), [gb, lb] = (0, eb.useState)(null), [Lb, Ib] = (0, eb.useState)(null), Ob = (0, db.s)(Lb, gb, Vb);
+        ! function(bb, wb) {
+          (0, eb.useLayoutEffect)((() => {
+            if (!bb || null === wb) return;
+            let Mb = null;
+            const eb = bb => {
+                Mb = bb, null === bb ? document.body.style.removeProperty(Ew) : document.body.style.setProperty(Ew, `${bb}px`)
               },
-              Fd = () => {
-                var Od;
-                const Fd = document.querySelector(".InGameUi .Killfeed");
-                if (!Fd) return void Wd(null);
-                const Rd = .3 * (0, HO.getRemInPx)(),
-                  Xd = Fd.getBoundingClientRect().top - (null !== (Od = md) && void 0 !== Od ? Od : Rd);
-                Wd(Math.max(Math.ceil(Rd), Math.ceil(dd.getBoundingClientRect().bottom + Cd.d - Xd)))
+              Hb = () => {
+                var wb;
+                const Hb = document.querySelector(".InGameUi .Killfeed");
+                if (!Hb) return void eb(null);
+                const pb = .3 * (0, tw.getRemInPx)(),
+                  Vb = Hb.getBoundingClientRect().top - (null !== (wb = Mb) && void 0 !== wb ? wb : pb);
+                eb(Math.max(Math.ceil(pb), Math.ceil(bb.getBoundingClientRect().bottom + db.e - Vb)))
               },
-              Rd = new ResizeObserver(Fd);
-            Rd.observe(dd);
-            const Xd = document.querySelector(`.InGameUi .${Cd.h}`);
-            return Xd && Rd.observe(Xd), Fd(), window.addEventListener("resize", Fd), () => {
-              Rd.disconnect(), window.removeEventListener("resize", Fd), Wd(null)
+              pb = new ResizeObserver(Hb);
+            pb.observe(bb);
+            const Vb = document.querySelector(`.InGameUi .${db.k}`);
+            return Vb && pb.observe(Vb), Hb(), window.addEventListener("resize", Hb), () => {
+              pb.disconnect(), window.removeEventListener("resize", Hb), eb(null)
             }
-          }), [dd, Od])
-        }(Kd, td);
-        const [, , od, Nd, , qd, Hd, yd, bd, Td, Yd] = Od, gd = qd > 0 ? Rd("cubeWarfareHud:firstTo", {
-          target: qd
-        }) : Rd("cubeWarfareHud:timeLeft");
-        return (0, Ed.jsxs)("div", {
-          ref: hd,
+          }), [bb, wb])
+        }(gb, Ob);
+        const [, , Ub, tb, , Cb, Eb, Fb, Bb, sb, hb] = wb, zb = Cb > 0 ? pb("cubeWarfareHud:firstTo", {
+          target: Cb
+        }) : pb("cubeWarfareHud:timeLeft");
+        return (0, xb.jsxs)("div", {
+          ref: lb,
           className: "CubeWarfareScoreBarContainer",
-          style: null === td ? void 0 : {
-            top: td
+          style: null === Ob ? void 0 : {
+            top: Ob
           },
-          children: [(0, Ed.jsxs)("div", {
-            ref: Qd,
+          children: [(0, xb.jsxs)("div", {
+            ref: Ib,
             className: "CubeWarfareScoreBar",
-            children: ["tdm" === Td[0] && (0, Ed.jsx)(YO, {
-              myTeam: Hd,
-              redScore: Td[1],
-              blueScore: Td[2],
-              leaderboard: Fd,
-              target: "diamonds" === Nd ? qd : 0,
-              clock: (0, Ed.jsx)(pO, {
-                endsAt: md,
-                label: gd
+            children: ["tdm" === sb[0] && (0, xb.jsx)(sw, {
+              myTeam: Eb,
+              redScore: sb[1],
+              blueScore: sb[2],
+              leaderboard: Hb,
+              target: "diamonds" === tb ? Cb : 0,
+              clock: (0, xb.jsx)(Bw, {
+                endsAt: Mb,
+                label: zb
               })
-            }), "ffa" === Td[0] && (0, Ed.jsx)(gO, {
-              myTeam: Hd,
-              myScore: bd,
-              myRank: Td[1],
-              playerCount: Td[2],
-              leader: Td[3],
-              second: Td[4],
-              spectating: yd,
-              target: qd,
-              clock: (0, Ed.jsx)(pO, {
-                endsAt: md,
-                label: gd
+            }), "ffa" === sb[0] && (0, xb.jsx)(mw, {
+              myTeam: Eb,
+              myScore: Bb,
+              myRank: sb[1],
+              playerCount: sb[2],
+              leader: sb[3],
+              second: sb[4],
+              spectating: Fb,
+              target: Cb,
+              clock: (0, xb.jsx)(Bw, {
+                endsAt: Mb,
+                label: zb
               })
             })]
-          }), null !== Yd && (0, Ed.jsxs)("div", {
+          }), null !== hb && (0, xb.jsxs)("div", {
             className: "CubeWarfareScoreLine SmallTextBold",
-            children: [(0, Ed.jsx)("span", {
-              children: Rd("cubeWarfareHud:gungameKills", {
-                kills: Yd[0],
-                target: qd
+            children: [(0, xb.jsx)("span", {
+              children: pb("cubeWarfareHud:gungameKills", {
+                kills: hb[0],
+                target: Cb
               })
-            }), "" !== Yd[2] && (0, Ed.jsxs)(Ed.Fragment, {
-              children: [(0, Ed.jsx)("span", {
+            }), "" !== hb[2] && (0, xb.jsxs)(xb.Fragment, {
+              children: [(0, xb.jsx)("span", {
                 "aria-hidden": !0,
                 children: "\xb7"
-              }), (0, Ed.jsx)("span", {
-                children: Rd("cubeWarfareHud:nextWeapon")
-              }), (0, Ed.jsx)("span", {
+              }), (0, xb.jsx)("span", {
+                children: pb("cubeWarfareHud:nextWeapon")
+              }), (0, xb.jsx)("span", {
                 className: "CubeWarfareScoreLineItem",
-                children: (0, Ed.jsx)(yO.c, {
-                  itemName: Yd[2],
+                children: (0, xb.jsx)(Cw.c, {
+                  itemName: hb[2],
                   amount: 0,
                   gunTransform: "none"
                 })
               })]
             })]
-          }), null === Yd && "diamonds" === Nd && (0, Ed.jsxs)("div", {
+          }), null === hb && "diamonds" === tb && (0, xb.jsxs)("div", {
             className: "CubeWarfareScoreLine SmallTextBold",
-            children: [(0, Ed.jsx)("span", {
+            children: [(0, xb.jsx)("span", {
               className: "CubeWarfareScoreLineItem",
-              children: (0, Ed.jsx)(yO.c, {
+              children: (0, xb.jsx)(Cw.c, {
                 itemName: "Diamond",
                 amount: 0
               })
-            }), (0, Ed.jsx)("span", {
-              children: Rd("cubeWarfareHud:collectDiamonds")
+            }), (0, xb.jsx)("span", {
+              children: pb("cubeWarfareHud:collectDiamonds")
             })]
-          }), null === Yd && "diamonds" !== Nd && "tdm" === od && !yd && (0, Ed.jsxs)("div", {
+          }), null === hb && "diamonds" !== tb && "tdm" === Ub && !Fb && (0, xb.jsxs)("div", {
             className: "CubeWarfareScoreLine SmallTextBold",
-            children: [(0, Ed.jsx)("span", {
-              children: Rd("cubeWarfareHud:yourScore")
-            }), (0, Ed.jsx)("b", {
-              children: bd
+            children: [(0, xb.jsx)("span", {
+              children: pb("cubeWarfareHud:yourScore")
+            }), (0, xb.jsx)("b", {
+              children: Bb
             })]
           })]
         })
       }));
 
-    function pO(dd) {
+    function Bw(bb) {
       let {
-        endsAt: Od,
-        label: md
-      } = dd;
-      const Wd = (0, Td.h)(Od);
-      return (0, Ed.jsxs)("div", {
+        endsAt: wb,
+        label: Mb
+      } = bb;
+      const eb = (0, sb.i)(wb);
+      return (0, xb.jsxs)("div", {
         className: "CubeWarfareClock",
-        children: [(0, Ed.jsx)("div", {
-          className: od()("CubeWarfareClockTime", {
-            Urgent: Wd < 60
+        children: [(0, xb.jsx)("div", {
+          className: Ub()("CubeWarfareClockTime", {
+            Urgent: eb < 60
           }),
-          children: (0, Td.d)(Wd)
-        }), (0, Ed.jsx)("div", {
+          children: (0, sb.b)(eb)
+        }), (0, xb.jsx)("div", {
           className: "CubeWarfareClockLabel",
-          children: md
+          children: Mb
         })]
       })
     }
 
-    function YO(dd) {
+    function sw(bb) {
       const {
-        t: Od
-      } = (0, pd.G)(), md = Od => dd.leaderboard.filter((dd => dd[2] === Od)), Wd = {
+        t: wb
+      } = (0, mb.C)(), Mb = wb => bb.leaderboard.filter((bb => bb[2] === wb)), eb = {
         team: "Red",
-        name: Od(Bd.Red),
-        score: dd.redScore,
-        members: md("Red")
-      }, Fd = {
+        name: wb(Rb.Red),
+        score: bb.redScore,
+        members: Mb("Red")
+      }, Hb = {
         team: "Blue",
-        name: Od(Bd.Blue),
-        score: dd.blueScore,
-        members: md("Blue")
-      }, [Rd, Xd] = "Blue" === dd.myTeam ? [Fd, Wd] : [Wd, Fd], Kd = (md, Wd) => (0, Ed.jsxs)("div", {
-        className: od()("CubeWarfareSide", Wd, `Team-${md.team}`, {
-          Mine: md.team === dd.myTeam
+        name: wb(Rb.Blue),
+        score: bb.blueScore,
+        members: Mb("Blue")
+      }, [pb, Vb] = "Blue" === bb.myTeam ? [Hb, eb] : [eb, Hb], gb = (Mb, eb) => (0, xb.jsxs)("div", {
+        className: Ub()("CubeWarfareSide", eb, `Team-${Mb.team}`, {
+          Mine: Mb.team === bb.myTeam
         }),
-        style: xd(md.team, "tdm"),
-        children: [md.team === dd.myTeam && (0, Ed.jsx)("span", {
+        style: rb(Mb.team, "tdm"),
+        children: [Mb.team === bb.myTeam && (0, xb.jsx)("span", {
           className: "CubeWarfareYouTag",
-          children: Od("shootingOverlays:you")
-        }), (0, Ed.jsx)("div", {
+          children: wb("shootingOverlays:you")
+        }), (0, xb.jsx)("div", {
           className: "CubeWarfareHeads",
-          children: md.members.map((dd => {
-            let [Od, , , , , , md] = dd;
-            return (0, Ed.jsx)("span", {
-              className: od()("CubeWarfareHead", {
-                Dead: !md
+          children: Mb.members.map((bb => {
+            let [wb, , , , , , Mb] = bb;
+            return (0, xb.jsx)("span", {
+              className: Ub()("CubeWarfareHead", {
+                Dead: !Mb
               }),
-              children: (0, Ed.jsx)(rd, {
-                playerId: Od
+              children: (0, xb.jsx)(Ab, {
+                playerId: wb
               })
-            }, Od)
+            }, wb)
           }))
-        }), (0, Ed.jsxs)("div", {
+        }), (0, xb.jsxs)("div", {
           className: "CubeWarfareSideText",
-          children: [(0, Ed.jsx)("div", {
+          children: [(0, xb.jsx)("div", {
             className: "CubeWarfareSideName",
-            children: (0, Ed.jsx)("span", {
+            children: (0, xb.jsx)("span", {
               className: "CubeWarfareSideLabel",
-              children: md.name
+              children: Mb.name
             })
-          }), (0, Ed.jsx)("div", {
+          }), (0, xb.jsx)("div", {
             className: "CubeWarfareSideScore SmallTextBold",
-            children: md.score
+            children: Mb.score
           })]
-        }), (0, Ed.jsx)(wO, {
-          score: md.score,
-          target: dd.target
+        }), (0, xb.jsx)(hw, {
+          score: Mb.score,
+          target: bb.target
         })]
       });
-      return (0, Ed.jsxs)(Ed.Fragment, {
-        children: [Kd(Rd, "Left"), dd.clock, Kd(Xd, "Right")]
+      return (0, xb.jsxs)(xb.Fragment, {
+        children: [gb(pb, "Left"), bb.clock, gb(Vb, "Right")]
       })
     }
 
-    function gO(dd) {
-      var Od;
+    function mw(bb) {
+      var wb;
       const {
-        t: md
-      } = (0, pd.G)(), Wd = Ad(), Fd = null !== (Od = dd.second) && void 0 !== Od ? Od : dd.spectating || dd.playerCount > 1 ? dd.leader : null;
-      return (0, Ed.jsxs)(Ed.Fragment, {
-        children: [!dd.spectating && (0, Ed.jsxs)("div", {
-          className: od()("CubeWarfareSide", "Left", "Mine", "Ffa"),
+        t: Mb
+      } = (0, mb.C)(), eb = fb(), Hb = null !== (wb = bb.second) && void 0 !== wb ? wb : bb.spectating || bb.playerCount > 1 ? bb.leader : null;
+      return (0, xb.jsxs)(xb.Fragment, {
+        children: [!bb.spectating && (0, xb.jsxs)("div", {
+          className: Ub()("CubeWarfareSide", "Left", "Mine", "Ffa"),
           style: {
-            "--team": (0, Yd.bb)(dd.myTeam)
+            "--team": (0, hb.yb)(bb.myTeam)
           },
-          children: [(0, Ed.jsx)("span", {
+          children: [(0, xb.jsx)("span", {
             className: "CubeWarfareYouTag",
-            children: md("shootingOverlays:you")
-          }), (0, Ed.jsxs)("div", {
+            children: Mb("shootingOverlays:you")
+          }), (0, xb.jsxs)("div", {
             className: "CubeWarfareSideText",
-            children: [(0, Ed.jsx)("div", {
+            children: [(0, xb.jsx)("div", {
               className: "CubeWarfareSideName",
-              children: (0, Ed.jsx)("span", {
+              children: (0, xb.jsx)("span", {
                 className: "CubeWarfareSideLabel",
-                children: md("cubeWarfareHud:rank", {
-                  rank: dd.myRank
+                children: Mb("cubeWarfareHud:rank", {
+                  rank: bb.myRank
                 })
               })
-            }), (0, Ed.jsx)("div", {
+            }), (0, xb.jsx)("div", {
               className: "CubeWarfareSideScore SmallTextBold",
-              children: dd.myScore
+              children: bb.myScore
             })]
-          }), (0, Ed.jsx)(wO, {
-            score: dd.myScore,
-            target: dd.target
+          }), (0, xb.jsx)(hw, {
+            score: bb.myScore,
+            target: bb.target
           })]
-        }), dd.clock, null !== Fd && (0, Ed.jsxs)("div", {
-          className: od()("CubeWarfareSide", "Right", "Ffa"),
-          children: [(0, Ed.jsxs)("div", {
+        }), bb.clock, null !== Hb && (0, xb.jsxs)("div", {
+          className: Ub()("CubeWarfareSide", "Right", "Ffa"),
+          children: [(0, xb.jsxs)("div", {
             className: "CubeWarfareSideText",
-            children: [(0, Ed.jsxs)("div", {
+            children: [(0, xb.jsxs)("div", {
               className: "CubeWarfareSideName",
-              children: [(0, Ed.jsx)("span", {
+              children: [(0, xb.jsx)("span", {
                 className: "CubeWarfareSideLabel",
-                children: null !== dd.second ? md("cubeWarfareHud:second") : md("cubeWarfareHud:leader")
-              }), (0, Ed.jsx)("span", {
+                children: null !== bb.second ? Mb("cubeWarfareHud:second") : Mb("cubeWarfareHud:leader")
+              }), (0, xb.jsx)("span", {
                 className: "CubeWarfareSideWho",
-                children: Wd(Fd[1])
+                children: eb(Hb[1])
               })]
-            }), (0, Ed.jsx)("div", {
+            }), (0, xb.jsx)("div", {
               className: "CubeWarfareSideScore SmallTextBold",
-              children: Fd[2]
+              children: Hb[2]
             })]
-          }), (0, Ed.jsx)(wO, {
-            score: Fd[2],
-            target: dd.target
+          }), (0, xb.jsx)(hw, {
+            score: Hb[2],
+            target: bb.target
           })]
         })]
       })
     }
 
-    function wO(dd) {
+    function hw(bb) {
       let {
-        score: Od,
-        target: md
-      } = dd;
-      return (0, Ed.jsx)("div", {
-        className: od()("CubeWarfareStrip", {
-          Progress: md > 0
+        score: wb,
+        target: Mb
+      } = bb;
+      return (0, xb.jsx)("div", {
+        className: Ub()("CubeWarfareStrip", {
+          Progress: Mb > 0
         }),
-        children: md > 0 && (0, Ed.jsx)("i", {
+        children: Mb > 0 && (0, xb.jsx)("i", {
           style: {
-            transform: `scaleX(${Math.min(1,Od/md)})`
+            transform: `scaleX(${Math.min(1,wb/Mb)})`
           }
         })
       })
     }
-    const aO = (0, Wd.memo)((function(dd) {
+    const zw = (0, eb.memo)((function(bb) {
       let {
-        wire: Od
-      } = dd;
+        wire: wb
+      } = bb;
       const {
-        isTouchScreen: md
-      } = (0, Zd.p)(["isTouchScreen"]);
-      return md ? (0, Ed.jsx)("div", {
+        isTouchScreen: Mb
+      } = (0, Pb.o)(["isTouchScreen"]);
+      return Mb ? (0, xb.jsx)("div", {
         className: "CubeWarfarePerkColumnTouch",
-        children: (0, Ed.jsx)(EO, {
-          wire: Od,
+        children: (0, xb.jsx)(Xw, {
+          wire: wb,
           touch: !0
         })
-      }) : (0, Ed.jsx)(ld.h, {
+      }) : (0, xb.jsx)(ub.d, {
         placement: "bottomLeft",
-        children: (0, Ed.jsx)(EO, {
-          wire: Od
+        children: (0, xb.jsx)(Xw, {
+          wire: wb
         })
       })
     }));
 
-    function EO(dd) {
+    function Xw(bb) {
       let {
-        wire: Od,
-        touch: md = !1
-      } = dd;
+        wire: wb,
+        touch: Mb = !1
+      } = bb;
       const {
-        t: Wd
-      } = (0, pd.G)(), Fd = Od[11], Rd = Od[12], Xd = Rd.findIndex((dd => {
-        let [, Od] = dd;
-        return Fd < Od
+        t: eb
+      } = (0, mb.C)(), Hb = wb[11], pb = wb[12], Vb = pb.findIndex((bb => {
+        let [, wb] = bb;
+        return Hb < wb
       }));
-      return (0, Ed.jsxs)("div", {
+      return (0, xb.jsxs)("div", {
         className: "CubeWarfarePerkColumn",
-        children: [(0, Ed.jsxs)("div", {
+        children: [(0, xb.jsxs)("div", {
           className: "CubeWarfarePerkPoints SmallTextBold",
-          children: [(0, Ed.jsx)(qd.c, {
+          children: [(0, xb.jsx)(Cb.b, {
             name: "crosshairs"
-          }), Fd]
-        }), Rd.map(((dd, Od) => {
-          let [Kd, hd, vd, Qd, td] = dd;
-          const Nd = Fd >= hd,
-            Hd = 0 === Od ? 0 : Rd[Od - 1][1],
-            yd = Nd ? 1 : Od === Xd ? Math.max(0, (Fd - Hd) / (hd - Hd)) : 0;
-          return (0, Ed.jsxs)("div", {
-            className: od()("CubeWarfarePerk", {
-              Active: td,
-              Reached: Nd,
-              Next: Od === Xd
+          }), Hb]
+        }), pb.map(((bb, wb) => {
+          let [gb, lb, Lb, Ib, Ob] = bb;
+          const tb = Hb >= lb,
+            Eb = 0 === wb ? 0 : pb[wb - 1][1],
+            Fb = tb ? 1 : wb === Vb ? Math.max(0, (Hb - Eb) / (lb - Eb)) : 0;
+          return (0, xb.jsxs)("div", {
+            className: Ub()("CubeWarfarePerk", {
+              Active: Ob,
+              Reached: tb,
+              Next: wb === Vb
             }),
-            children: [(0, Ed.jsxs)("div", {
+            children: [(0, xb.jsxs)("div", {
               className: "CubeWarfarePerkTile",
-              children: [!Nd && (0, Ed.jsx)("div", {
+              children: [!tb && (0, xb.jsx)("div", {
                 className: "CubeWarfarePerkFill",
                 style: {
-                  transform: `scaleY(${yd})`
+                  transform: `scaleY(${Fb})`
                 }
-              }), (0, Ed.jsx)(qd.c, {
-                name: Qd || "lock"
+              }), (0, xb.jsx)(Cb.b, {
+                name: Ib || "lock"
               })]
-            }), (0, Ed.jsxs)("div", {
+            }), (0, xb.jsxs)("div", {
               className: "CubeWarfarePerkText SmallTextBold",
-              children: [(0, Ed.jsx)("span", {
+              children: [(0, xb.jsx)("span", {
                 className: "CubeWarfarePerkName",
-                children: vd || Wd("cubeWarfareHud:tier", {
-                  tier: Kd
+                children: Lb || eb("cubeWarfareHud:tier", {
+                  tier: gb
                 })
-              }), (0, Ed.jsxs)("small", {
-                children: [Nd && Wd(td ? "cubeWarfareHud:active" : "cubeWarfareHud:noPerk"), !Nd && !md && Wd("cubeWarfareHud:toGo", {
-                  count: hd - Fd
-                }), !Nd && md && (0, Ed.jsxs)(Ed.Fragment, {
-                  children: [(0, Ed.jsx)(qd.c, {
+              }), (0, xb.jsxs)("small", {
+                children: [tb && eb(Ob ? "cubeWarfareHud:active" : "cubeWarfareHud:noPerk"), !tb && !Mb && eb("cubeWarfareHud:toGo", {
+                  count: lb - Hb
+                }), !tb && Mb && (0, xb.jsxs)(xb.Fragment, {
+                  children: [(0, xb.jsx)(Cb.b, {
                     name: "crosshairs"
-                  }), " ", hd]
+                  }), " ", lb]
                 })]
               })]
             })]
-          }, Kd)
+          }, gb)
         }))]
       })
     }
 
-    function JO(dd) {
-      const [, Od] = (0, Wd.useReducer)((dd => dd + 1), 0);
-      (0, Wd.useEffect)((() => {
-        const md = dd - performance.now();
-        if (0 === dd || md <= 0) return;
-        const Wd = window.setTimeout(Od, md);
+    function xw(bb) {
+      const [, wb] = (0, eb.useReducer)((bb => bb + 1), 0);
+      (0, eb.useEffect)((() => {
+        const Mb = bb - performance.now();
+        if (0 === bb || Mb <= 0) return;
+        const eb = window.setTimeout(wb, Mb);
         return () => {
-          window.clearTimeout(Wd)
+          window.clearTimeout(eb)
         }
-      }), [dd])
+      }), [bb])
     }
-    const UO = ["", "", "cubeWarfareHud:doubleKill", "cubeWarfareHud:tripleKill", "cubeWarfareHud:quadKill", "cubeWarfareHud:rampage"];
+    const jw = ["", "", "cubeWarfareHud:doubleKill", "cubeWarfareHud:tripleKill", "cubeWarfareHud:quadKill", "cubeWarfareHud:rampage"];
 
-    function xO(dd) {
+    function Kw(bb) {
       let {
-        store: Od
-      } = dd;
-      const md = uO(cd(Od, "kill"), 2500),
-        Wd = Ad();
-      return md ? (0, Ed.jsx)(SO, {
-        victimName: Wd(md.wire[2]),
-        headshot: md.wire[4],
-        killsThisLife: md.wire[5],
-        gold: md.wire[6]
-      }, md.seq) : null
-    }
-
-    function BO(dd) {
-      let {
-        store: Od
-      } = dd;
-      const md = uO(cd(Od, "tier"), 3500);
-      return md ? (0, Ed.jsx)(sO, {
-        tier: md.wire[1],
-        perk: md.wire[2],
-        icon: md.wire[3]
-      }, md.seq) : null
+        store: wb
+      } = bb;
+      const Mb = Yw(Qb(wb, "kill"), 2500),
+        eb = fb();
+      return Mb ? (0, xb.jsx)(Rw, {
+        victimName: eb(Mb.wire[2]),
+        headshot: Mb.wire[4],
+        killsThisLife: Mb.wire[5],
+        gold: Mb.wire[6]
+      }, Mb.seq) : null
     }
 
-    function SO(dd) {
+    function rw(bb) {
       let {
-        victimName: Od,
-        headshot: md,
-        killsThisLife: Wd,
-        gold: Fd
-      } = dd;
+        store: wb
+      } = bb;
+      const Mb = Yw(Qb(wb, "tier"), 3500);
+      return Mb ? (0, xb.jsx)(Dw, {
+        tier: Mb.wire[1],
+        perk: Mb.wire[2],
+        icon: Mb.wire[3]
+      }, Mb.seq) : null
+    }
+
+    function Rw(bb) {
+      let {
+        victimName: wb,
+        headshot: Mb,
+        killsThisLife: eb,
+        gold: Hb
+      } = bb;
       const {
-        t: Rd
-      } = (0, pd.G)(), Xd = UO[Math.min(Wd, UO.length - 1)];
-      return (0, Ed.jsxs)("div", {
+        t: pb
+      } = (0, mb.C)(), Vb = jw[Math.min(eb, jw.length - 1)];
+      return (0, xb.jsxs)("div", {
         className: "CubeWarfareKillPop",
-        children: [Xd && (0, Ed.jsx)("div", {
+        children: [Vb && (0, xb.jsx)("div", {
           className: "CubeWarfareMultiKill SmallTextBold",
-          children: Rd(Xd)
-        }), (0, Ed.jsxs)("div", {
+          children: pb(Vb)
+        }), (0, xb.jsxs)("div", {
           className: "CubeWarfareKillLine SmallTextBold",
-          children: [(0, Ed.jsx)("span", {
+          children: [(0, xb.jsx)("span", {
             className: "CubeWarfareKillTag",
-            children: Rd("cubeWarfareHud:eliminated")
-          }), (0, Ed.jsx)("span", {
+            children: pb("cubeWarfareHud:eliminated")
+          }), (0, xb.jsx)("span", {
             className: "CubeWarfareKillName",
-            children: Od
+            children: wb
           })]
-        }), (0, Ed.jsxs)("div", {
+        }), (0, xb.jsxs)("div", {
           className: "CubeWarfareKillRewards",
-          children: [Fd > 0 && (0, Ed.jsxs)("span", {
+          children: [Hb > 0 && (0, xb.jsxs)("span", {
             className: "CubeWarfareReward Gold SmallTextBold",
-            children: [`+${Fd}`, (0, Ed.jsx)(qd.c, {
+            children: [`+${Hb}`, (0, xb.jsx)(Cb.b, {
               name: "coins",
               className: "CubeWarfareCoin"
             })]
-          }), md && (0, Ed.jsxs)("span", {
+          }), Mb && (0, xb.jsxs)("span", {
             className: "CubeWarfareReward Headshot SmallTextBold",
-            children: [(0, Ed.jsx)(qd.c, {
+            children: [(0, xb.jsx)(Cb.b, {
               name: "crosshairs"
-            }), Rd("shootingOverlays:headshot")]
+            }), pb("shootingOverlays:headshot")]
           })]
         })]
       })
     }
 
-    function sO(dd) {
+    function Dw(bb) {
       let {
-        tier: Od,
-        perk: md,
-        icon: Wd
-      } = dd;
+        tier: wb,
+        perk: Mb,
+        icon: eb
+      } = bb;
       const {
-        t: Fd
-      } = (0, pd.G)();
-      return (0, Ed.jsxs)("div", {
+        t: Hb
+      } = (0, mb.C)();
+      return (0, xb.jsxs)("div", {
         className: "CubeWarfareTierBanner",
-        children: [(0, Ed.jsx)("div", {
+        children: [(0, xb.jsx)("div", {
           className: "CubeWarfareTierIcon",
-          children: (0, Ed.jsx)(qd.c, {
-            name: Wd || "crosshairs"
+          children: (0, xb.jsx)(Cb.b, {
+            name: eb || "crosshairs"
           })
-        }), (0, Ed.jsxs)("div", {
-          children: [(0, Ed.jsx)("div", {
+        }), (0, xb.jsxs)("div", {
+          children: [(0, xb.jsx)("div", {
             className: "CubeWarfareTierTitle",
-            children: Fd("cubeWarfareHud:tierReached", {
-              tier: Od
+            children: Hb("cubeWarfareHud:tierReached", {
+              tier: wb
             })
-          }), (0, Ed.jsx)("div", {
+          }), (0, xb.jsx)("div", {
             className: "CubeWarfareTierPerk SmallTextBold",
-            children: md ? Fd("cubeWarfareHud:perkActive", {
-              perk: md
-            }) : Fd("cubeWarfareHud:noPerk")
+            children: Mb ? Hb("cubeWarfareHud:perkActive", {
+              perk: Mb
+            }) : Hb("cubeWarfareHud:noPerk")
           })]
         })]
       })
     }
 
-    function uO(dd, Od) {
-      return JO(dd ? dd.at + Od : 0), dd && performance.now() - dd.at < Od ? dd : null
+    function Yw(bb, wb) {
+      return xw(bb ? bb.at + wb : 0), bb && performance.now() - bb.at < wb ? bb : null
     }
-    var VO = md(3403);
+    var Zw = Mb(3503);
 
-    function iO() {
-      var dd, Od;
-      const md = null === (dd = (0, VO.j)("currencyAmounts")) || void 0 === dd || null === (Od = dd.gold) || void 0 === Od ? void 0 : Od.amount,
-        [Fd, Rd] = (0, Wd.useState)(0),
-        Xd = (0, Wd.useRef)(md);
-      return (0, Wd.useEffect)((() => {
-        void 0 !== md && void 0 !== Xd.current && md > Xd.current && Rd((dd => dd + 1)), Xd.current = md
-      }), [md]), void 0 === md ? null : (0, Ed.jsx)(ld.h, {
+    function fw() {
+      var bb, wb;
+      const Mb = null === (bb = (0, Zw.k)("currencyAmounts")) || void 0 === bb || null === (wb = bb.gold) || void 0 === wb ? void 0 : wb.amount,
+        [Hb, pb] = (0, eb.useState)(0),
+        Vb = (0, eb.useRef)(Mb);
+      return (0, eb.useEffect)((() => {
+        void 0 !== Mb && void 0 !== Vb.current && Mb > Vb.current && pb((bb => bb + 1)), Vb.current = Mb
+      }), [Mb]), void 0 === Mb ? null : (0, xb.jsx)(ub.d, {
         placement: "statBars",
-        children: (0, Ed.jsxs)("div", {
-          className: od()("CubeWarfareWallet SmallTextBold", {
-            Bump: Fd > 0
+        children: (0, xb.jsxs)("div", {
+          className: Ub()("CubeWarfareWallet SmallTextBold", {
+            Bump: Hb > 0
           }),
-          children: [(0, Ed.jsx)(qd.c, {
+          children: [(0, xb.jsx)(Cb.b, {
             name: "coins",
             className: "CubeWarfareCoin"
-          }), md]
-        }, Fd)
+          }), Mb]
+        }, Hb)
       })
     }
 
-    function AO(dd) {
+    function Aw(bb) {
       let {
-        endsAt: Od
-      } = dd;
-      return 0 === Od ? null : (0, Ed.jsx)(GO, {
-        endsAt: Od
-      }, Od)
+        endsAt: wb
+      } = bb;
+      return 0 === wb ? null : (0, xb.jsx)(Jw, {
+        endsAt: wb
+      }, wb)
     }
 
-    function rO(dd) {
+    function Ww(bb) {
       let {
-        endsAt: Od
-      } = dd;
-      return JO(Od), Od <= performance.now() ? null : (0, Ed.jsx)("div", {
+        endsAt: wb
+      } = bb;
+      return xw(wb), wb <= performance.now() ? null : (0, xb.jsx)("div", {
         className: "CubeWarfareProtectionEdge"
       })
     }
 
-    function GO(dd) {
+    function Jw(bb) {
       let {
-        endsAt: Od
-      } = dd;
+        endsAt: wb
+      } = bb;
       const {
-        t: md
-      } = (0, pd.G)(), [Fd] = (0, Wd.useState)((() => Math.max(0, Od - performance.now())));
-      return JO(Od), Od <= performance.now() ? null : (0, Ed.jsxs)("div", {
+        t: Mb
+      } = (0, mb.C)(), [Hb] = (0, eb.useState)((() => Math.max(0, wb - performance.now())));
+      return xw(wb), wb <= performance.now() ? null : (0, xb.jsxs)("div", {
         className: "CubeWarfareProtection",
-        children: [(0, Ed.jsx)(qd.c, {
+        children: [(0, xb.jsx)(Cb.b, {
           name: "shield-halved",
           className: "CubeWarfareProtectionIcon"
-        }), (0, Ed.jsxs)("div", {
+        }), (0, xb.jsxs)("div", {
           className: "CubeWarfareProtectionText SmallTextBold",
-          children: [md("cubeWarfareHud:spawnProtected"), (0, Ed.jsx)("small", {
-            children: md("cubeWarfareHud:spawnProtectedHint")
+          children: [Mb("cubeWarfareHud:spawnProtected"), (0, xb.jsx)("small", {
+            children: Mb("cubeWarfareHud:spawnProtectedHint")
           })]
-        }), (0, Ed.jsx)("div", {
+        }), (0, xb.jsx)("div", {
           className: "CubeWarfareProtectionDrain",
           style: {
-            "--cubeWarfareDrainMs": `${Fd}ms`
+            "--cubeWarfareDrainMs": `${Hb}ms`
           }
         })]
       })
     }
 
-    function nO(dd) {
+    function Sw(bb) {
       let {
-        place: Od,
-        hidden: md = !1,
-        children: Wd
-      } = dd;
-      return "OverHotbar" !== Od ? (0, Ed.jsx)("div", {
-        className: od()("CubeWarfareCentreSlot", Od, {
-          Hidden: md
+        place: wb,
+        hidden: Mb = !1,
+        children: eb
+      } = bb;
+      return "OverHotbar" !== wb ? (0, xb.jsx)("div", {
+        className: Ub()("CubeWarfareCentreSlot", wb, {
+          Hidden: Mb
         }),
-        children: Wd
-      }) : (0, Ed.jsx)(ld.h, {
-        children: (0, Ed.jsx)("div", {
+        children: eb
+      }) : (0, xb.jsx)(ub.d, {
+        children: (0, xb.jsx)("div", {
           className: "CubeWarfareOverHotbar",
-          children: (0, Ed.jsx)("div", {
+          children: (0, xb.jsx)("div", {
             className: "CubeWarfareCentreSlot OverHotbar",
-            children: Wd
+            children: eb
           })
         })
       })
     }
-    const LO = dd => {
-      var Od;
-      const md = null === (Od = dd.attributes.customAttributes) || void 0 === Od ? void 0 : Od.shotsLeft;
-      return "number" === typeof md && dd.clipSize ? (0, Ed.jsx)(PO, {
-        item: dd,
-        shotsLeft: md,
-        clipSize: dd.clipSize
+    const Nw = bb => {
+      var wb;
+      const Mb = null === (wb = bb.attributes.customAttributes) || void 0 === wb ? void 0 : wb.shotsLeft;
+      return "number" === typeof Mb && bb.clipSize ? (0, xb.jsx)(vw, {
+        item: bb,
+        shotsLeft: Mb,
+        clipSize: bb.clipSize
       }) : null
     };
 
-    function PO(dd) {
+    function vw(bb) {
       let {
-        item: Od,
-        shotsLeft: md,
-        clipSize: Fd
-      } = dd;
+        item: wb,
+        shotsLeft: Mb,
+        clipSize: Hb
+      } = bb;
       const {
-        t: Rd
-      } = (0, pd.G)(), Xd = function(dd, Od, md) {
-        const [Fd, Rd] = (0, Wd.useState)(null), Xd = (0, Wd.useRef)(dd), Kd = (0, Wd.useRef)(0);
-        return (0, OO.f)("middleScreenBarInitiate", (dd => {
+        t: pb
+      } = (0, mb.C)(), Vb = function(bb, wb, Mb) {
+        const [Hb, pb] = (0, eb.useState)(null), Vb = (0, eb.useRef)(bb), gb = (0, eb.useRef)(0);
+        return (0, kb.e)("middleScreenBarInitiate", (bb => {
           let {
-            duration: md
-          } = dd;
-          md >= 400 && Xd.current < Od && Rd({
-            key: ++Kd.current,
-            ms: md
+            duration: Mb
+          } = bb;
+          Mb >= 400 && Vb.current < wb && pb({
+            key: ++gb.current,
+            ms: Mb
           })
-        })), (0, OO.f)("middleScreenBarRemove", (() => {
-          Rd(null)
-        })), (0, Wd.useEffect)((() => {
-          const Od = dd > Xd.current;
-          Xd.current = dd, Od && Rd(null)
-        }), [dd]), (0, Wd.useEffect)((() => {
-          Rd(null)
-        }), [md]), (0, Wd.useEffect)((() => {
-          if (!Fd) return;
-          const dd = window.setTimeout((() => {
-            Rd(null)
-          }), Fd.ms);
+        })), (0, kb.e)("middleScreenBarRemove", (() => {
+          pb(null)
+        })), (0, eb.useEffect)((() => {
+          const wb = bb > Vb.current;
+          Vb.current = bb, wb && pb(null)
+        }), [bb]), (0, eb.useEffect)((() => {
+          pb(null)
+        }), [Mb]), (0, eb.useEffect)((() => {
+          if (!Hb) return;
+          const bb = window.setTimeout((() => {
+            pb(null)
+          }), Hb.ms);
           return () => {
-            window.clearTimeout(dd)
+            window.clearTimeout(bb)
           }
-        }), [Fd]), Fd
-      }(md, Fd, Od.instance), Kd = md <= Math.ceil(.25 * Fd);
-      return (0, Ed.jsx)(ld.h, {
+        }), [Hb]), Hb
+      }(Mb, Hb, wb.instance), gb = Mb <= Math.ceil(.25 * Hb);
+      return (0, xb.jsx)(ub.d, {
         placement: "statBars",
-        children: (0, Ed.jsxs)("div", {
-          className: od()("CubeWarfareAmmo", {
-            Low: Kd,
-            Reloading: null !== Xd
+        children: (0, xb.jsxs)("div", {
+          className: Ub()("CubeWarfareAmmo", {
+            Low: gb,
+            Reloading: null !== Vb
           }),
-          children: [null === Xd && (0, Ed.jsxs)(Ed.Fragment, {
-            children: [(0, Ed.jsx)("span", {
+          children: [null === Vb && (0, xb.jsxs)(xb.Fragment, {
+            children: [(0, xb.jsx)("span", {
               className: "CubeWarfareAmmoMag SmallTextBold",
-              children: md
-            }), (0, Ed.jsx)("span", {
+              children: Mb
+            }), (0, xb.jsx)("span", {
               className: "CubeWarfareAmmoClip SmallTextBold",
-              children: `/ ${Fd}`
+              children: `/ ${Hb}`
             })]
-          }), null !== Xd && (0, Ed.jsxs)("span", {
+          }), null !== Vb && (0, xb.jsxs)("span", {
             className: "CubeWarfareAmmoReloading SmallTextBold",
-            children: [Rd("cubeWarfareHud:reloading"), (0, Ed.jsx)("i", {
+            children: [pb("cubeWarfareHud:reloading"), (0, xb.jsx)("i", {
               className: "CubeWarfareAmmoReloadBar",
               style: {
-                "--cubeWarfareReloadMs": `${Xd.ms}ms`
+                "--cubeWarfareReloadMs": `${Vb.ms}ms`
               }
-            }, Xd.key)]
-          }), (0, Ed.jsx)("span", {
+            }, Vb.key)]
+          }), (0, xb.jsx)("span", {
             className: "CubeWarfareAmmoGun",
-            children: (0, Ed.jsx)(yO.c, {
-              itemName: Od.name,
+            children: (0, xb.jsx)(Cw.c, {
+              itemName: wb.name,
               amount: 0,
               gunTransform: "none"
             })
-          }), Kd && null === Xd && (0, Ed.jsx)(fd.b, {
+          }), gb && null === Vb && (0, xb.jsx)(yb.e, {
             noaAction: "ReloadGun",
             className: "CubeWarfareAmmoKey",
             padHidesKey: !0
@@ -1391,671 +1391,671 @@ export const modules = {
       })
     }
 
-    function zO(dd) {
+    function Qw(bb) {
       let {
-        store: Od
-      } = dd;
-      const md = cd(Od, "hud"),
-        Fd = cd(Od, "leaderboard"),
-        Rd = (0, Nd.f)("connectedGame", (dd => dd.replay));
-      ! function(dd) {
-        (0, Wd.useEffect)((() => {
-          const Od = (0, qO.l)({
-              headshot: (Od, md) => {
-                var Wd;
-                const Fd = performance.now(),
-                  Rd = dd.get("killfeed").findLast((dd => {
+        store: wb
+      } = bb;
+      const Mb = Qb(wb, "hud"),
+        Hb = Qb(wb, "leaderboard"),
+        pb = (0, tb.e)("connectedGame", (bb => bb.replay));
+      ! function(bb) {
+        (0, eb.useEffect)((() => {
+          const wb = (0, Uw.k)({
+              headshot: (wb, Mb) => {
+                var eb;
+                const Hb = performance.now(),
+                  pb = bb.get("killfeed").findLast((bb => {
                     let {
-                      at: Wd,
-                      wire: Rd
-                    } = dd;
-                    return Rd[0] === Od && Rd[1] === md && Fd - Wd < 3e3
+                      at: eb,
+                      wire: pb
+                    } = bb;
+                    return pb[0] === wb && pb[1] === Mb && Hb - eb < 3e3
                   }));
-                return null !== (Wd = null === Rd || void 0 === Rd ? void 0 : Rd.wire[3]) && void 0 !== Wd && Wd
+                return null !== (eb = null === pb || void 0 === pb ? void 0 : pb.wire[3]) && void 0 !== eb && eb
               },
-              streakLabel: dd => `\xd7${dd}`
+              streakLabel: bb => `\xd7${bb}`
             }),
-            md = (0, qO.j)(LO);
+            Mb = (0, Uw.j)(Nw);
           return () => {
-            Od(), md()
+            wb(), Mb()
           }
-        }), [dd])
-      }(Od);
-      const Xd = md.wire;
-      if (!Xd || "match" !== Xd[1] || Rd) return null;
-      const Kd = !Xd[7];
-      return (0, Ed.jsxs)("div", {
+        }), [bb])
+      }(wb);
+      const Vb = Mb.wire;
+      if (!Vb || "match" !== Vb[1] || pb) return null;
+      const gb = !Vb[7];
+      return (0, xb.jsxs)("div", {
         className: "CubeWarfareHud",
-        children: [(0, Ed.jsx)(TO, {
-          wire: Xd,
-          endsAt: md.endsAt,
-          leaderboard: Fd
-        }), Kd && (0, Ed.jsxs)(Ed.Fragment, {
-          children: [(0, Ed.jsx)(aO, {
-            wire: Xd
-          }), (0, Ed.jsx)(cO, {
-            store: Od,
-            protectionEndsAt: md.spawnProtectionEndsAt
-          }), (0, Ed.jsx)(iO, {}), (0, Ed.jsx)(rO, {
-            endsAt: md.spawnProtectionEndsAt
+        children: [(0, xb.jsx)(Fw, {
+          wire: Vb,
+          endsAt: Mb.endsAt,
+          leaderboard: Hb
+        }), gb && (0, xb.jsxs)(xb.Fragment, {
+          children: [(0, xb.jsx)(zw, {
+            wire: Vb
+          }), (0, xb.jsx)(Gw, {
+            store: wb,
+            protectionEndsAt: Mb.spawnProtectionEndsAt
+          }), (0, xb.jsx)(fw, {}), (0, xb.jsx)(Ww, {
+            endsAt: Mb.spawnProtectionEndsAt
           })]
         })]
       })
     }
 
-    function cO(dd) {
+    function Gw(bb) {
       let {
-        store: Od,
-        protectionEndsAt: md
-      } = dd;
+        store: wb,
+        protectionEndsAt: Mb
+      } = bb;
       const {
-        isTouchScreen: Wd
-      } = (0, Zd.p)(["isTouchScreen"]), Fd = (0, OO.i)("aimingOverlay", "none"), Rd = (0, Ed.jsx)(AO, {
-        endsAt: md
-      }), Xd = (0, Ed.jsx)(BO, {
-        store: Od
-      }), Kd = (0, Ed.jsx)(xO, {
-        store: Od
+        isTouchScreen: eb
+      } = (0, Pb.o)(["isTouchScreen"]), Hb = (0, kb.h)("aimingOverlay", "none"), pb = (0, xb.jsx)(Aw, {
+        endsAt: Mb
+      }), Vb = (0, xb.jsx)(rw, {
+        store: wb
+      }), gb = (0, xb.jsx)(Kw, {
+        store: wb
       });
-      if (!Wd) return (0, Ed.jsxs)(nO, {
+      if (!eb) return (0, xb.jsxs)(Sw, {
         place: "OverHotbar",
-        children: [Rd, Xd, Kd]
+        children: [pb, Vb, gb]
       });
-      const hd = "sniper" === Fd;
-      return (0, Ed.jsxs)(Ed.Fragment, {
-        children: [(0, Ed.jsxs)(nO, {
+      const lb = "sniper" === Hb;
+      return (0, xb.jsxs)(xb.Fragment, {
+        children: [(0, xb.jsxs)(Sw, {
           place: "AboveCrosshair",
-          hidden: hd,
-          children: [Rd, Kd]
-        }), (0, Ed.jsx)(nO, {
+          hidden: lb,
+          children: [pb, gb]
+        }), (0, xb.jsx)(Sw, {
           place: "BelowCrosshair",
-          hidden: hd,
-          children: Xd
+          hidden: lb,
+          children: Vb
         })]
       })
     }
-    var jO = md(387);
-    const DO = 2 * Math.PI * 19;
+    var qw = Mb(366);
+    const aw = 2 * Math.PI * 19;
 
-    function eO(dd) {
-      var Od, md;
+    function iw(bb) {
+      var wb, Mb;
       let {
-        store: Fd,
-        variation: Rd,
-        state: Xd
-      } = dd;
+        store: Hb,
+        variation: pb,
+        state: Vb
+      } = bb;
       const {
-        t: Kd
-      } = (0, pd.G)(), hd = cd(Fd, "death"), vd = cd(Fd, "leaderboard"), Qd = Ad(), td = (0, Wd.useRef)(performance.now()), od = (0, Wd.useRef)(Xd.alive);
-      !Xd.alive && od.current && (td.current = performance.now()), od.current = Xd.alive;
-      const Nd = (0, Wd.useRef)(null);
-      hd && hd.at >= td.current - 3e3 && (Nd.current = {
-        diedAt: td.current,
-        wire: hd.wire
+        t: gb
+      } = (0, mb.C)(), lb = Qb(Hb, "death"), Lb = Qb(Hb, "leaderboard"), Ib = fb(), Ob = (0, eb.useRef)(performance.now()), Ub = (0, eb.useRef)(Vb.alive);
+      !Vb.alive && Ub.current && (Ob.current = performance.now()), Ub.current = Vb.alive;
+      const tb = (0, eb.useRef)(null);
+      lb && lb.at >= Ob.current - 3e3 && (tb.current = {
+        diedAt: Ob.current,
+        wire: lb.wire
       });
-      const yd = (null === (Od = Nd.current) || void 0 === Od ? void 0 : Od.diedAt) === td.current ? Nd.current.wire : null,
-        [, bd, Td, Yd, gd, wd, xd, Bd, Sd] = null !== yd && void 0 !== yd ? yd : [],
-        sd = "player" === bd && "" !== Td,
-        ud = null === (md = vd.find((dd => dd[0] === Td))) || void 0 === md ? void 0 : md[2];
-      return (0, Ed.jsxs)("div", {
+      const Fb = (null === (wb = tb.current) || void 0 === wb ? void 0 : wb.diedAt) === Ob.current ? tb.current.wire : null,
+        [, Bb, sb, hb, zb, Xb, rb, Rb, Db] = null !== Fb && void 0 !== Fb ? Fb : [],
+        cb = "player" === Bb && "" !== sb,
+        Yb = null === (Mb = Lb.find((bb => bb[0] === sb))) || void 0 === Mb ? void 0 : Mb[2];
+      return (0, xb.jsxs)("div", {
         className: "ShootingDeathCard",
         style: {
-          "--killer": sd && ud ? Ud(ud, Rd) : void 0
+          "--killer": cb && Yb ? Kb(Yb, pb) : void 0
         },
-        children: [(0, Ed.jsxs)("div", {
+        children: [(0, xb.jsxs)("div", {
           className: "ShootingDeathKiller",
-          children: [sd && (0, Ed.jsx)("div", {
+          children: [cb && (0, xb.jsx)("div", {
             className: "ShootingDeathHead",
-            children: (0, Ed.jsx)(rd, {
-              playerId: Td
+            children: (0, xb.jsx)(Ab, {
+              playerId: sb
             })
-          }), !sd && (0, Ed.jsx)("div", {
+          }), !cb && (0, xb.jsx)("div", {
             className: "ShootingDeathHead ShootingDeathSkull",
-            children: (0, Ed.jsx)(qd.c, {
+            children: (0, xb.jsx)(Cb.b, {
               name: "skull"
             })
-          }), (0, Ed.jsxs)("div", {
+          }), (0, xb.jsxs)("div", {
             className: "ShootingDeathWho",
-            children: [sd && (0, Ed.jsxs)(Ed.Fragment, {
-              children: [(0, Ed.jsx)("div", {
+            children: [cb && (0, xb.jsxs)(xb.Fragment, {
+              children: [(0, xb.jsx)("div", {
                 className: "ShootingDeathEyebrow SmallTextBold",
-                children: Kd(`${Jd}killedBy`)
-              }), (0, Ed.jsx)("div", {
+                children: gb(`${jb}killedBy`)
+              }), (0, xb.jsx)("div", {
                 className: "ShootingDeathName FullyFancyText",
-                children: Qd(null !== Yd && void 0 !== Yd ? Yd : "")
+                children: Ib(null !== hb && void 0 !== hb ? hb : "")
               })]
-            }), !sd && (0, Ed.jsx)("div", {
+            }), !cb && (0, xb.jsx)("div", {
               className: "ShootingDeathName FullyFancyText",
-              children: Kd(IO(bd))
-            }), gd && (0, Ed.jsxs)("div", {
+              children: gb(uw(Bb))
+            }), zb && (0, xb.jsxs)("div", {
               className: "ShootingDeathWeapon SmallTextBold",
-              children: [(0, Ed.jsx)("span", {
+              children: [(0, xb.jsx)("span", {
                 className: "ShootingDeathGun",
-                children: (0, Ed.jsx)(yO.c, {
-                  itemName: gd,
+                children: (0, xb.jsx)(Cw.c, {
+                  itemName: zb,
                   amount: 0,
                   gunTransform: "none"
                 })
-              }), (0, Ed.jsx)("span", {
-                children: gd
-              }), wd && (0, Ed.jsxs)("span", {
+              }), (0, xb.jsx)("span", {
+                children: zb
+              }), Xb && (0, xb.jsxs)("span", {
                 className: "ShootingDeathHeadshot",
-                children: [(0, Ed.jsx)(qd.c, {
+                children: [(0, xb.jsx)(Cb.b, {
                   name: "crosshairs"
-                }), " ", Kd(`${Jd}headshot`)]
+                }), " ", gb(`${jb}headshot`)]
               })]
             })]
-          }), (0, Ed.jsx)(lO, {
-            secondsLeft: Xd.secondsLeft,
-            totalSeconds: Xd.totalSeconds,
-            alive: Xd.alive
+          }), (0, xb.jsx)(dw, {
+            secondsLeft: Vb.secondsLeft,
+            totalSeconds: Vb.totalSeconds,
+            alive: Vb.alive
           })]
-        }), yd && (0, Ed.jsxs)("div", {
+        }), Fb && (0, xb.jsxs)("div", {
           className: "ShootingDeathLife",
-          children: [(0, Ed.jsx)(Gd, {
-            value: String(xd),
-            label: Kd(`${Jd}killsThisLife`)
-          }), (0, Ed.jsx)(Gd, {
+          children: [(0, xb.jsx)(Wb, {
+            value: String(rb),
+            label: gb(`${jb}killsThisLife`)
+          }), (0, xb.jsx)(Wb, {
             icon: "crosshairs",
-            value: String(Bd),
-            label: Kd(`${Jd}streakPoints`)
-          }), (0, Ed.jsx)(Gd, {
+            value: String(Rb),
+            label: gb(`${jb}streakPoints`)
+          }), (0, xb.jsx)(Wb, {
             icon: "coins",
-            value: `+${Sd}`,
-            label: Kd(`${Jd}goldEarned`),
+            value: `+${Db}`,
+            label: gb(`${jb}goldEarned`),
             gold: !0
           })]
-        }), (0, Ed.jsxs)("div", {
+        }), (0, xb.jsxs)("div", {
           className: "ShootingDeathActions",
-          children: [(0, Ed.jsx)(Hd.g, {
+          children: [(0, xb.jsx)(Eb.f, {
             className: "ShootingDeathLoadout",
             onClick: () => {
-              Zd.e.set({
-                openEverythingMenuName: jO.m.SHOP
+              Pb.c.set({
+                openEverythingMenuName: qw.l.SHOP
               })
             },
             touchPressOn: "pointerup",
-            children: (0, Ed.jsxs)("span", {
+            children: (0, xb.jsxs)("span", {
               className: "ShootingDeathLoadoutText",
-              children: [Kd(`${Jd}changeLoadout`), (0, Ed.jsx)(fd.b, {
+              children: [gb(`${jb}changeLoadout`), (0, xb.jsx)(yb.e, {
                 noaAction: "OpenShop",
                 padHidesKey: !0
               })]
             })
-          }), (0, Ed.jsx)("div", {
+          }), (0, xb.jsx)("div", {
             className: "ShootingDeathStatus FullyFancyText",
-            children: Xd.status
+            children: Vb.status
           })]
         })]
       })
     }
 
-    function IO(dd) {
-      switch (dd) {
+    function uw(bb) {
+      switch (bb) {
         case "self":
-          return `${Jd}diedSelf`;
+          return `${jb}diedSelf`;
         case "void":
-          return `${Jd}diedVoid`;
+          return `${jb}diedVoid`;
         default:
           return "respawnPage:youDied"
       }
     }
 
-    function lO(dd) {
+    function dw(bb) {
       let {
-        secondsLeft: Od,
-        totalSeconds: md,
-        alive: Wd
-      } = dd;
-      const Fd = Wd || Od <= 0,
-        Rd = md > 0 ? Math.min(1, Od / md) : 0;
-      return (0, Ed.jsxs)("div", {
+        secondsLeft: wb,
+        totalSeconds: Mb,
+        alive: eb
+      } = bb;
+      const Hb = eb || wb <= 0,
+        pb = Mb > 0 ? Math.min(1, wb / Mb) : 0;
+      return (0, xb.jsxs)("div", {
         className: "ShootingDeathRing",
-        children: [(0, Ed.jsxs)("svg", {
+        children: [(0, xb.jsxs)("svg", {
           viewBox: "0 0 44 44",
-          children: [(0, Ed.jsx)("circle", {
+          children: [(0, xb.jsx)("circle", {
             className: "ShootingDeathRingTrack",
             cx: "22",
             cy: "22",
             r: 19
-          }), (0, Ed.jsx)("circle", {
+          }), (0, xb.jsx)("circle", {
             className: "ShootingDeathRingFill",
             cx: "22",
             cy: "22",
             r: 19,
-            strokeDasharray: DO,
-            strokeDashoffset: DO * (1 - (Fd ? 0 : Rd))
+            strokeDasharray: aw,
+            strokeDashoffset: aw * (1 - (Hb ? 0 : pb))
           })]
-        }), (0, Ed.jsxs)("b", {
+        }), (0, xb.jsxs)("b", {
           className: "FullyFancyText",
-          children: [Fd && (0, Ed.jsx)(qd.c, {
+          children: [Hb && (0, xb.jsx)(Cb.b, {
             name: "check"
-          }), !Fd && Od]
+          }), !Hb && wb]
         })]
       })
     }
-    const CO = [1, 0, 2],
-      ZO = [`${Jd}place1`, `${Jd}place2`, `${Jd}place3`],
-      kO = [`${Jd}place1Short`, `${Jd}place2Short`, `${Jd}place3Short`],
-      fO = {
-        streak: `${Jd}reasonTimeUp_streak`,
-        diamonds: `${Jd}reasonTimeUp_diamonds`,
-        kills: `${Jd}reasonTimeUp_kills`
+    const Pw = [1, 0, 2],
+      nw = [`${jb}place1`, `${jb}place2`, `${jb}place3`],
+      yw = [`${jb}place1Short`, `${jb}place2Short`, `${jb}place3Short`],
+      ow = {
+        streak: `${jb}reasonTimeUp_streak`,
+        diamonds: `${jb}reasonTimeUp_diamonds`,
+        kills: `${jb}reasonTimeUp_kills`
       },
-      MO = {
+      Tw = {
         streak: null,
-        diamonds: `${Jd}reasonTarget_diamonds`,
-        kills: `${Jd}reasonTarget_kills`
+        diamonds: `${jb}reasonTarget_diamonds`,
+        kills: `${jb}reasonTarget_kills`
       };
 
-    function dm(dd) {
+    function kw(bb) {
       let {
-        store: Od
-      } = dd;
-      const md = cd(Od, "roundEnd"),
-        Wd = cd(Od, "hud").wire,
-        Fd = (0, Nd.h)("localPlayerAlive"),
-        Rd = (0, Td.h)(md.lobbyAt),
-        Xd = (0, Nd.f)("connectedGame", (dd => dd.replay));
-      return "roundEnd" !== md.wire[0] || !Wd || !Fd || Rd <= 0 || Xd ? null : (0, Ed.jsx)(Om, {
-        wire: md.wire,
-        hud: Wd,
-        lobbyAt: md.lobbyAt,
-        secondsLeft: Rd
-      }, md.lobbyAt)
+        store: wb
+      } = bb;
+      const Mb = Qb(wb, "roundEnd"),
+        eb = Qb(wb, "hud").wire,
+        Hb = (0, tb.h)("localPlayerAlive"),
+        pb = (0, sb.i)(Mb.lobbyAt),
+        Vb = (0, tb.e)("connectedGame", (bb => bb.replay));
+      return "roundEnd" !== Mb.wire[0] || !eb || !Hb || pb <= 0 || Vb ? null : (0, xb.jsx)(bM, {
+        wire: Mb.wire,
+        hud: eb,
+        lobbyAt: Mb.lobbyAt,
+        secondsLeft: pb
+      }, Mb.lobbyAt)
     }
-    const Om = (0, Wd.memo)((function(dd) {
+    const bM = (0, eb.memo)((function(bb) {
       let {
-        wire: Od,
-        hud: md,
-        lobbyAt: Fd,
-        secondsLeft: Rd
-      } = dd;
+        wire: wb,
+        hud: Mb,
+        lobbyAt: Hb,
+        secondsLeft: pb
+      } = bb;
       const {
-        t: Xd
-      } = (0, pd.G)(), [Kd] = (0, Wd.useState)((() => Math.max(0, Fd - performance.now()))), hd = Ad(), [, vd, Qd, td, , Nd, qd, Hd, yd, bd, , Td, Yd, gd, wd, Ud, Sd, sd] = Od, [, , ud, rd, , nd, Ld, Pd] = md, zd = "tdm" === ud, cd = dd => dd === Ld ? Xd(`${Jd}teamYours`, {
-        team: Xd(Bd[dd])
-      }) : Xd(Bd[dd]);
-      return (0, Ed.jsxs)("div", {
-        className: od()("ShootingResults", "win" === vd ? "Won" : "Lost"),
+        t: Vb
+      } = (0, mb.C)(), [gb] = (0, eb.useState)((() => Math.max(0, Hb - performance.now()))), lb = fb(), [, Lb, Ib, Ob, , tb, Cb, Eb, Fb, Bb, , sb, hb, zb, Xb, Kb, Db, cb] = wb, [, , Yb, Ab, , Jb, Sb, Nb] = Mb, vb = "tdm" === Yb, Qb = bb => bb === Sb ? Vb(`${jb}teamYours`, {
+        team: Vb(Rb[bb])
+      }) : Vb(Rb[bb]);
+      return (0, xb.jsxs)("div", {
+        className: Ub()("ShootingResults", "win" === Lb ? "Won" : "Lost"),
         style: {
-          "--lobbyMs": `${sd}ms`,
-          "--lobbyElapsedMs": `${Math.max(0,sd-Kd)}ms`
+          "--lobbyMs": `${cb}ms`,
+          "--lobbyElapsedMs": `${Math.max(0,cb-gb)}ms`
         },
-        children: [(0, Ed.jsx)("div", {
+        children: [(0, xb.jsx)("div", {
           className: "ShootingResultsTitle FullyFancyText",
-          children: mm(Xd, Od, zd, Pd, hd)
-        }), (0, Ed.jsxs)("div", {
+          children: wM(Vb, wb, vb, Nb, lb)
+        }), (0, xb.jsxs)("div", {
           className: "ShootingResultsScore FullyFancyText",
-          children: [zd && (0, Ed.jsxs)(Ed.Fragment, {
-            children: [(0, Ed.jsx)("span", {
+          children: [vb && (0, xb.jsxs)(xb.Fragment, {
+            children: [(0, xb.jsx)("span", {
               className: "ShootingResultsTeam",
-              children: cd("Red")
-            }), (0, Ed.jsx)("b", {
-              style: xd("Red", "tdm"),
-              children: Hd
-            }), (0, Ed.jsx)("span", {
+              children: Qb("Red")
+            }), (0, xb.jsx)("b", {
+              style: rb("Red", "tdm"),
+              children: Eb
+            }), (0, xb.jsx)("span", {
               className: "ShootingResultsDash",
               children: "\u2013"
-            }), (0, Ed.jsx)("b", {
-              style: xd("Blue", "tdm"),
-              children: yd
-            }), (0, Ed.jsx)("span", {
+            }), (0, xb.jsx)("b", {
+              style: rb("Blue", "tdm"),
+              children: Fb
+            }), (0, xb.jsx)("span", {
               className: "ShootingResultsTeam",
-              children: cd("Blue")
+              children: Qb("Blue")
             })]
-          }), !zd && ("win" === vd || "" !== Nd) && (0, Ed.jsxs)(Ed.Fragment, {
-            children: [(0, Ed.jsx)("span", {
+          }), !vb && ("win" === Lb || "" !== tb) && (0, xb.jsxs)(xb.Fragment, {
+            children: [(0, xb.jsx)("span", {
               className: "ShootingResultsTeam",
-              children: "win" === vd ? Xd(`${Jd}youWonWith`) : Xd(`${Jd}playerWonWith`, {
-                name: hd(Nd)
+              children: "win" === Lb ? Vb(`${jb}youWonWith`) : Vb(`${jb}playerWonWith`, {
+                name: lb(tb)
               })
-            }), (0, Ed.jsx)("b", {
-              style: xd(td, "ffa"),
-              children: bd
+            }), (0, xb.jsx)("b", {
+              style: rb(Ob, "ffa"),
+              children: Bb
             })]
           })]
-        }), (0, Ed.jsx)("div", {
+        }), (0, xb.jsx)("div", {
           className: "ShootingResultsWhy SmallTextBold",
-          children: Wm(Xd, qd, zd, Vd(rd), nd)
-        }), Td.length > 0 && (0, Ed.jsx)("div", {
+          children: MM(Vb, Cb, vb, Zb(Ab), Jb)
+        }), sb.length > 0 && (0, xb.jsx)("div", {
           className: "ShootingResultsPodium",
-          children: CO.filter((dd => dd < Td.length)).map((dd => (0, Ed.jsx)(Fm, {
-            entry: Td[dd],
-            place: dd,
-            mvp: Td[dd][0] === Yd,
-            tdm: zd
-          }, dd)))
-        }), !Pd && (0, Ed.jsxs)("div", {
+          children: Pw.filter((bb => bb < sb.length)).map((bb => (0, xb.jsx)(eM, {
+            entry: sb[bb],
+            place: bb,
+            mvp: sb[bb][0] === hb,
+            tdm: vb
+          }, bb)))
+        }), !Nb && (0, xb.jsxs)("div", {
           className: "ShootingResultsYou",
-          children: [(0, Ed.jsx)(Gd, {
-            value: String(gd),
-            label: Xd(`${Jd}kills`)
-          }), (0, Ed.jsx)(Gd, {
-            value: String(wd),
-            label: Xd(`${Jd}deaths`)
-          }), (0, Ed.jsx)(Gd, {
+          children: [(0, xb.jsx)(Wb, {
+            value: String(zb),
+            label: Vb(`${jb}kills`)
+          }), (0, xb.jsx)(Wb, {
+            value: String(Xb),
+            label: Vb(`${jb}deaths`)
+          }), (0, xb.jsx)(Wb, {
             icon: "crosshairs",
-            value: String(Ud),
-            label: Xd(`${Jd}bestStreak`)
-          }), (0, Ed.jsx)(Gd, {
+            value: String(Kb),
+            label: Vb(`${jb}bestStreak`)
+          }), (0, xb.jsx)(Wb, {
             icon: "coins",
-            value: `+${Sd}`,
-            label: Xd(`${Jd}goldEarned`),
+            value: `+${Db}`,
+            label: Vb(`${jb}goldEarned`),
             gold: !0
           })]
-        }), (0, Ed.jsxs)("div", {
+        }), (0, xb.jsxs)("div", {
           className: "ShootingResultsNext SmallTextBold",
-          children: [(0, Ed.jsx)("span", {
-            children: Xd(`${Jd}backToLobby`, {
-              seconds: String(Rd)
+          children: [(0, xb.jsx)("span", {
+            children: Vb(`${jb}backToLobby`, {
+              seconds: String(pb)
             })
-          }), (0, Ed.jsx)("span", {
+          }), (0, xb.jsx)("span", {
             className: "ShootingResultsBar",
-            children: (0, Ed.jsx)("i", {})
+            children: (0, xb.jsx)("i", {})
           })]
         })]
       })
     }));
 
-    function mm(dd, Od, md, Wd, Fd) {
-      const [, Rd, Xd, Kd, , hd] = Od;
-      return Wd && md ? dd(`${Jd}teamWins`, {
-        team: sd(Kd) ? dd(Bd[Kd]) : Kd
-      }) : Wd ? "" === hd ? dd(`${Jd}matchOver`) : dd(`${Jd}playerWins`, {
-        name: Fd(hd)
-      }) : "win" === Rd ? dd(`${Jd}victory`) : md || 0 === Xd ? dd(`${Jd}defeat`) : Xd <= ZO.length ? dd(ZO[Xd - 1]) : dd(`${Jd}placeNth`, {
-        place: String(Xd)
+    function wM(bb, wb, Mb, eb, Hb) {
+      const [, pb, Vb, gb, , lb] = wb;
+      return eb && Mb ? bb(`${jb}teamWins`, {
+        team: cb(gb) ? bb(Rb[gb]) : gb
+      }) : eb ? "" === lb ? bb(`${jb}matchOver`) : bb(`${jb}playerWins`, {
+        name: Hb(lb)
+      }) : "win" === pb ? bb(`${jb}victory`) : Mb || 0 === Vb ? bb(`${jb}defeat`) : Vb <= nw.length ? bb(nw[Vb - 1]) : bb(`${jb}placeNth`, {
+        place: String(Vb)
       })
     }
 
-    function Wm(dd, Od, md, Wd, Fd) {
-      switch (Od) {
+    function MM(bb, wb, Mb, eb, Hb) {
+      switch (wb) {
         case "timeUp":
-          return dd(fO[Wd]);
+          return bb(ow[eb]);
         case "target": {
-          const Od = MO[Wd];
-          return Od && Fd > 0 ? dd(Od, {
-            target: String(Fd)
-          }) : dd(`${Jd}reasonTarget`)
+          const wb = Tw[eb];
+          return wb && Hb > 0 ? bb(wb, {
+            target: String(Hb)
+          }) : bb(`${jb}reasonTarget`)
         }
         case "lastTeam":
-          return dd(md ? `${Jd}reasonLastTeam` : `${Jd}reasonLastPlayer`)
+          return bb(Mb ? `${jb}reasonLastTeam` : `${jb}reasonLastPlayer`)
       }
     }
 
-    function Fm(dd) {
+    function eM(bb) {
       let {
-        entry: Od,
-        place: md,
-        mvp: Wd,
-        tdm: Fd
-      } = dd;
+        entry: wb,
+        place: Mb,
+        mvp: eb,
+        tdm: Hb
+      } = bb;
       const {
-        t: Rd
-      } = (0, pd.G)(), Xd = Ad(), [Kd, hd, vd, Qd, td] = Od, Hd = (0, Nd.h)("players").localId;
-      return (0, Ed.jsxs)("div", {
-        className: od()("ShootingPodiumCard", `Place${md+1}`, {
-          Mvp: Wd,
-          Mine: Kd === Hd,
-          Team: Fd
+        t: pb
+      } = (0, mb.C)(), Vb = fb(), [gb, lb, Lb, Ib, Ob] = wb, Eb = (0, tb.h)("players").localId;
+      return (0, xb.jsxs)("div", {
+        className: Ub()("ShootingPodiumCard", `Place${Mb+1}`, {
+          Mvp: eb,
+          Mine: gb === Eb,
+          Team: Hb
         }),
-        style: Fd ? xd(vd, "tdm") : void 0,
-        children: [Wd && (0, Ed.jsx)("span", {
+        style: Hb ? rb(Lb, "tdm") : void 0,
+        children: [eb && (0, xb.jsx)("span", {
           className: "ShootingPodiumCrown",
-          children: (0, Ed.jsx)(qd.c, {
+          children: (0, xb.jsx)(Cb.b, {
             name: "crown"
           })
-        }), (0, Ed.jsx)("div", {
+        }), (0, xb.jsx)("div", {
           className: "ShootingPodiumHead",
-          children: (0, Ed.jsx)(rd, {
-            playerId: Kd
+          children: (0, xb.jsx)(Ab, {
+            playerId: gb
           })
-        }), (0, Ed.jsxs)("div", {
+        }), (0, xb.jsxs)("div", {
           className: "ShootingPodiumPlace SmallTextBold",
-          children: [Rd(kO[md]), Wd && ` \xb7 ${Rd(`${Jd}mvp`)}`]
-        }), (0, Ed.jsx)("div", {
+          children: [pb(yw[Mb]), eb && ` \xb7 ${pb(`${jb}mvp`)}`]
+        }), (0, xb.jsx)("div", {
           className: "ShootingPodiumName SmallTextBold",
-          children: Xd(hd)
-        }), (0, Ed.jsx)("div", {
+          children: Vb(lb)
+        }), (0, xb.jsx)("div", {
           className: "ShootingPodiumStats SmallTextBold",
-          children: Rd(`${Jd}podiumStats`, {
-            kills: String(Qd),
-            score: String(td)
+          children: pb(`${jb}podiumStats`, {
+            kills: String(Ib),
+            score: String(Ob)
           })
         })]
       })
     }
 
-    function Rm(dd) {
-      var Od, md;
+    function HM(bb) {
+      var wb, Mb;
       let {
-        store: Fd,
-        variation: Rd
-      } = dd;
-      const Xd = "lobby" !== (null !== (Od = null === (md = cd(Fd, "hud").wire) || void 0 === md ? void 0 : md[1]) && void 0 !== Od ? Od : "lobby");
-      return (0, Wd.useEffect)((() => {
-        if (!Xd) return;
-        const dd = (0, hd.u)(hd.q);
+        store: Hb,
+        variation: pb
+      } = bb;
+      const Vb = "lobby" !== (null !== (wb = null === (Mb = Qb(Hb, "hud").wire) || void 0 === Mb ? void 0 : Mb[1]) && void 0 !== wb ? wb : "lobby");
+      return (0, eb.useEffect)((() => {
+        if (!Vb) return;
+        const bb = (0, lb.z)(lb.y);
         return () => {
-          dd(), (0, hd.g)()
+          bb(), (0, lb.l)()
         }
-      }), [Xd]), (0, Wd.useEffect)((() => (0, hd.C)((dd => (0, Ed.jsx)(eO, {
-        store: Fd,
-        variation: Rd,
-        state: dd
-      })))), [Fd, Rd]), (0, Ed.jsx)(dm, {
-        store: Fd
+      }), [Vb]), (0, eb.useEffect)((() => (0, lb.F)((bb => (0, xb.jsx)(iw, {
+        store: Hb,
+        variation: pb,
+        state: bb
+      })))), [Hb, pb]), (0, xb.jsx)(kw, {
+        store: Hb
       })
     }
 
-    function Xm(dd) {
-      return (0, Ed.jsxs)(Ed.Fragment, {
-        children: [(0, Ed.jsx)(zO, {
-          ...dd
-        }), (0, Ed.jsx)(Rm, {
-          ...dd
-        }), (0, Ed.jsx)(QO, {
-          ...dd
+    function pM(bb) {
+      return (0, xb.jsxs)(xb.Fragment, {
+        children: [(0, xb.jsx)(Qw, {
+          ...bb
+        }), (0, xb.jsx)(HM, {
+          ...bb
+        }), (0, xb.jsx)(lw, {
+          ...bb
         })]
       })
     }
-    const Km = "CubeWarfareUi",
-      hm = "CubeWarfareFfa",
-      Qm = function(dd, Od, md, Rd) {
+    const VM = "CubeWarfareUi",
+      gM = "CubeWarfareFfa",
+      lM = function(bb, wb, Mb, pb) {
         let {
-          localPlayerId: Xd
-        } = Rd;
-        const td = new zd,
-          od = "tdm" === md ? "tdm" : "ffa";
-        let Nd = null,
-          qd = null,
-          Hd = null;
+          localPlayerId: Vb
+        } = pb;
+        const Ob = new vb,
+          Ub = "tdm" === Mb ? "tdm" : "ffa";
+        let tb = null,
+          Cb = null,
+          Eb = null;
         return {
-          onCreate: dd => {
-            document.body.classList.add(Km), document.body.classList.toggle(hm, "ffa" === od), qd = new Qd.e(dd, Xd), Hd = new RO((dd => {
-              Kd.j.lQ(FO, dd, !0)
-            }), (Od => {
-              dd.sendCommand(Od)
-            })), Nd = (0, hd.F)((0, Wd.createElement)(Wd.Fragment, null, (0, Wd.createElement)(vd.d, {
-              controller: qd
-            }), (0, Wd.createElement)(Xm, {
-              store: td,
-              votes: Hd,
-              variation: od
+          onCreate: bb => {
+            document.body.classList.add(VM), document.body.classList.toggle(gM, "ffa" === Ub), Cb = new Ib.b(bb, Vb), Eb = new ew((bb => {
+              gb.k.iI(Mw, bb, !0)
+            }), (wb => {
+              bb.sendCommand(wb)
+            })), tb = (0, lb.J)((0, eb.createElement)(eb.Fragment, null, (0, eb.createElement)(Lb.c, {
+              controller: Cb
+            }), (0, eb.createElement)(pM, {
+              store: Ob,
+              votes: Eb,
+              variation: Ub
             })), {
-              content: (0, Wd.createElement)(ed, {
-                store: td,
-                variation: od
+              content: (0, eb.createElement)(ab, {
+                store: Ob,
+                variation: Ub
               })
             })
           },
           onClose: () => {
-            var dd, Od, md;
-            document.body.classList.remove(Km, hm), null === (dd = Nd) || void 0 === dd || dd(), Nd = null, null === (Od = qd) || void 0 === Od || Od.dispose(), qd = null, null === (md = Hd) || void 0 === md || md.dispose(), Hd = null
+            var bb, wb, Mb;
+            document.body.classList.remove(VM, gM), null === (bb = tb) || void 0 === bb || bb(), tb = null, null === (wb = Cb) || void 0 === wb || wb.dispose(), Cb = null, null === (Mb = Eb) || void 0 === Mb || Mb.dispose(), Eb = null
           },
-          onAfterRender: (dd, Od) => {
-            var md;
-            null === (md = qd) || void 0 === md || md.frame(Od.cameraHeading)
+          onAfterRender: (bb, wb) => {
+            var Mb;
+            null === (Mb = Cb) || void 0 === Mb || Mb.frame(wb.cameraHeading)
           },
-          onReceivedMessageFromServer: (dd, Od) => {
-            var md;
-            (td.Yt(dd, Od), dd === Fd) && (null === (md = Hd) || void 0 === md || md.onLobby(td.get("lobby").wire))
+          onReceivedMessageFromServer: (bb, wb) => {
+            var Mb;
+            (Ob.EO(bb, wb), bb === Hb) && (null === (Mb = Eb) || void 0 === Mb || Mb.onLobby(Ob.get("lobby").wire))
           }
         }
       }
   },
-  41063: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Rd
+  40829: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb
     });
-    var Wd = md(66),
-      Fd = md(1341);
-    const Rd = (0, Wd.memo)((function(dd) {
+    var eb = Mb(64),
+      Hb = Mb(1364);
+    const pb = (0, eb.memo)((function(bb) {
       let {
-        controller: Od
-      } = dd;
-      return (0, Fd.jsxs)("div", {
+        controller: wb
+      } = bb;
+      return (0, Hb.jsxs)("div", {
         className: "DamageFeedback",
-        ref: Od.bindElement,
-        children: [(0, Fd.jsx)("div", {
+        ref: wb.bindElement,
+        children: [(0, Hb.jsx)("div", {
           className: "DamageFeedbackLow",
-          children: (0, Fd.jsx)("div", {
+          children: (0, Hb.jsx)("div", {
             className: "DamageFeedbackShade"
           })
-        }), (0, Fd.jsx)("div", {
+        }), (0, Hb.jsx)("div", {
           className: "DamageFeedbackArcs"
         })]
       })
     }))
   },
-  41061: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Kd
+  40827: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => gb
     });
-    var Wd = md(32);
-    const Fd = "DamageFeedbackArcsShown",
-      Rd = .45,
-      Xd = .2;
-    class Kd {
-      constructor(dd, Od) {
+    var eb = Mb(29);
+    const Hb = "DamageFeedbackArcsShown",
+      pb = .45,
+      Vb = .2;
+    class gb {
+      constructor(bb, wb) {
         let {
-          arcs: md = !0,
-          edgeGlow: Fd = !0,
-          lowHealthShade: Rd = !0,
-          enabled: Xd = !0
+          arcs: Mb = !0,
+          edgeGlow: Hb = !0,
+          lowHealthShade: pb = !0,
+          enabled: Vb = !0
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.api = dd, this.localPlayerId = Od, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+        this.api = bb, this.localPlayerId = wb, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.nF = 1, this.dead = !1, this.enabled = void 0, this.parts = void 0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = dd => {
-          var Od, md;
-          this.clearHits(), this.root = dd, this.lowLayer = null !== (Od = null === dd || void 0 === dd ? void 0 : dd.querySelector(".DamageFeedbackLow")) && void 0 !== Od ? Od : null, this.arcLayer = null !== (md = null === dd || void 0 === dd ? void 0 : dd.querySelector(".DamageFeedbackArcs")) && void 0 !== md ? md : null, this.showRoot(), this.drawLow()
+        }, this.maxHealth = null, this.vH = 1, this.dead = !1, this.enabled = void 0, this.parts = void 0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = bb => {
+          var wb, Mb;
+          this.clearHits(), this.root = bb, this.lowLayer = null !== (wb = null === bb || void 0 === bb ? void 0 : bb.querySelector(".DamageFeedbackLow")) && void 0 !== wb ? wb : null, this.arcLayer = null !== (Mb = null === bb || void 0 === bb ? void 0 : bb.querySelector(".DamageFeedbackArcs")) && void 0 !== Mb ? Mb : null, this.showRoot(), this.drawLow()
         }, this.parts = {
-          arcs: md,
-          edgeGlow: Fd,
-          lowHealthShade: Rd
-        }, this.enabled = Xd, this.token = Wd.j.subscribe("damagedByOtherPlayer", (dd => {
+          arcs: Mb,
+          edgeGlow: Hb,
+          lowHealthShade: pb
+        }, this.enabled = Vb, this.token = eb.k.subscribe("damagedByOtherPlayer", (bb => {
           let {
-            direction: Od,
-            rF: md
-          } = dd;
-          this.onHurt(Od, md)
+            direction: wb,
+            SH: Mb
+          } = bb;
+          this.onHurt(wb, Mb)
         })), this.syncHealth(), this.showCustomDamage()
       }
-      rY(dd) {
-        dd !== this.enabled && (this.enabled = dd, this.showCustomDamage(), dd || this.clearHits(), this.showRoot())
+      Bx(bb) {
+        bb !== this.enabled && (this.enabled = bb, this.showCustomDamage(), bb || this.clearHits(), this.showRoot())
       }
-      frame(dd) {
-        this.syncHealth(), this.cameraHeading = dd;
-        for (const Od of this.arcs) this.drawArcAngle(Od)
+      frame(bb) {
+        this.syncHealth(), this.cameraHeading = bb;
+        for (const wb of this.arcs) this.drawArcAngle(wb)
       }
       dispose() {
-        Wd.j.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Fd)
+        eb.k.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Hb)
       }
       showCustomDamage() {
-        document.body.classList.toggle(Fd, this.enabled && this.parts.arcs)
+        document.body.classList.toggle(Hb, this.enabled && this.parts.arcs)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const dd = this.api.getClientOption(this.localPlayerId, "_health"),
-          Od = this.api.getClientOption(this.localPlayerId, "_shield"),
-          md = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(dd, this.readHealth) && Object.is(Od, this.readShield) && Object.is(md, this.readMaxHealth)) return;
-        if (this.readHealth = dd, this.readShield = Od, this.readMaxHealth = md, null === dd || void 0 === dd || !md) return this.lastHealthPool = null, this.maxHealth = null, this.nF = 1, this.dead = !1, void this.drawLow();
-        const Wd = dd + (null !== Od && void 0 !== Od ? Od : 0);
-        if (null !== this.lastHealthPool && Wd < this.lastHealthPool) {
-          const dd = performance.now(),
-            Od = (this.lastHealthPool - Wd) / md;
-          this.lastDrop = dd - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + Od,
+        const bb = this.api.getClientOption(this.localPlayerId, "_health"),
+          wb = this.api.getClientOption(this.localPlayerId, "_shield"),
+          Mb = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(bb, this.readHealth) && Object.is(wb, this.readShield) && Object.is(Mb, this.readMaxHealth)) return;
+        if (this.readHealth = bb, this.readShield = wb, this.readMaxHealth = Mb, null === bb || void 0 === bb || !Mb) return this.lastHealthPool = null, this.maxHealth = null, this.vH = 1, this.dead = !1, void this.drawLow();
+        const eb = bb + (null !== wb && void 0 !== wb ? wb : 0);
+        if (null !== this.lastHealthPool && eb < this.lastHealthPool) {
+          const bb = performance.now(),
+            wb = (this.lastHealthPool - eb) / Mb;
+          this.lastDrop = bb - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + wb,
             at: this.lastDrop.at
           } : {
-            frac: Od,
-            at: dd
+            frac: wb,
+            at: bb
           }
         }
-        this.dead = dd <= 0, this.dead && this.clearHits(), this.lastHealthPool = Wd, this.maxHealth = md, this.nF = dd > 0 ? dd / md : 1, this.drawLow()
+        this.dead = bb <= 0, this.dead && this.clearHits(), this.lastHealthPool = eb, this.maxHealth = Mb, this.vH = bb > 0 ? bb / Mb : 1, this.drawLow()
       }
-      onHurt(dd, Od) {
+      onHurt(bb, wb) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const md = Math.min(1, this.takeDamageFrac(Od) / .3);
-        null !== dd && this.parts.arcs && this.showArc(dd, md), this.parts.edgeGlow && this.flashEdge(null === dd ? null : dd - this.cameraHeading, .4 + .6 * md)
+        const Mb = Math.min(1, this.takeDamageFrac(wb) / .3);
+        null !== bb && this.parts.arcs && this.showArc(bb, Mb), this.parts.edgeGlow && this.flashEdge(null === bb ? null : bb - this.cameraHeading, .4 + .6 * Mb)
       }
-      takeDamageFrac(dd) {
-        if (void 0 !== dd && this.maxHealth) return dd / this.maxHealth;
+      takeDamageFrac(bb) {
+        if (void 0 !== bb && this.maxHealth) return bb / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: Od
+          frac: wb
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, Od
+        }, wb
       }
       drawLow() {
         if (!this.lowLayer || !this.parts.lowHealthShade) return;
-        const dd = vd((Rd - this.nF) / .25),
-          Od = vd((Xd - this.nF) / .15000000000000002),
-          md = this.nF < Rd;
-        this.lowLayer.classList.toggle("Active", md), this.lowLayer.classList.toggle("Critical", this.nF < Xd), this.lowLayer.style.opacity = String(md ? .55 + .3 * dd + .15 * Od : 0)
+        const bb = Lb((pb - this.vH) / .25),
+          wb = Lb((Vb - this.vH) / .15000000000000002),
+          Mb = this.vH < pb;
+        this.lowLayer.classList.toggle("Active", Mb), this.lowLayer.classList.toggle("Critical", this.vH < Vb), this.lowLayer.style.opacity = String(Mb ? .55 + .3 * bb + .15 * wb : 0)
       }
-      showArc(dd, Od) {
-        var md, Wd;
+      showArc(bb, wb) {
+        var Mb, eb;
         if (!this.arcLayer) return;
-        let Fd = this.arcs.find((Od => hd(Od.direction, dd) < .6));
-        if (!Fd) {
-          const Od = document.createElement("div");
-          Od.className = "DamageFeedbackArc", Od.appendChild(document.createElement("div")).className = "DamageFeedbackArcBand", this.arcLayer.appendChild(Od), Fd = {
-            element: Od,
-            direction: dd,
+        let Hb = this.arcs.find((wb => lb(wb.direction, bb) < .6));
+        if (!Hb) {
+          const wb = document.createElement("div");
+          wb.className = "DamageFeedbackArc", wb.appendChild(document.createElement("div")).className = "DamageFeedbackArcBand", this.arcLayer.appendChild(wb), Hb = {
+            element: wb,
+            direction: bb,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(Fd)
+          }, this.arcs.push(Hb)
         }
-        Fd.direction = dd, this.drawArcAngle(Fd);
-        const Rd = Fd.fade ? Number(getComputedStyle(Fd.element).opacity) : 0;
-        null === (md = Fd.fade) || void 0 === md || md.cancel(), null === (Wd = Fd.pop) || void 0 === Wd || Wd.cancel(), Fd.element.style.opacity = "1";
-        const Xd = Fd.element.animate([{
-          opacity: Rd
+        Hb.direction = bb, this.drawArcAngle(Hb);
+        const pb = Hb.fade ? Number(getComputedStyle(Hb.element).opacity) : 0;
+        null === (Mb = Hb.fade) || void 0 === Mb || Mb.cancel(), null === (eb = Hb.pop) || void 0 === eb || eb.cancel(), Hb.element.style.opacity = "1";
+        const Vb = Hb.element.animate([{
+          opacity: pb
         }, {
           opacity: 1
         }], 144);
-        Fd.fade = Xd, Fd.pop = Fd.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * Od
+        Hb.fade = Vb, Hb.pop = Hb.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * wb
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const Kd = Fd;
-        Xd.onfinish = () => {
-          if (Kd.fade !== Xd) return;
-          const dd = Kd.element.animate([{
+        const gb = Hb;
+        Vb.onfinish = () => {
+          if (gb.fade !== Vb) return;
+          const bb = gb.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -2065,120 +2065,120 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          dd.startTime = Xd.startTime, Kd.fade = dd, dd.onfinish = () => {
-            Kd.fade === dd && (Kd.element.remove(), Qd(this.arcs, Kd))
+          bb.startTime = Vb.startTime, gb.fade = bb, bb.onfinish = () => {
+            gb.fade === bb && (gb.element.remove(), Ib(this.arcs, gb))
           }
         }
       }
-      drawArcAngle(dd) {
-        const Od = dd.direction - this.cameraHeading;
-        (null === dd.drawnAngle || Math.abs(Od - dd.drawnAngle) > .005) && (dd.drawnAngle = Od, dd.element.style.rotate = `${Od}rad`)
+      drawArcAngle(bb) {
+        const wb = bb.direction - this.cameraHeading;
+        (null === bb.drawnAngle || Math.abs(wb - bb.drawnAngle) > .005) && (bb.drawnAngle = wb, bb.element.style.rotate = `${wb}rad`)
       }
-      flashEdge(dd, Od) {
-        var md, Wd, Fd;
+      flashEdge(bb, wb) {
+        var Mb, eb, Hb;
         if (!this.root) return;
-        let Rd = this.flashes.find((Od => null === Od.angle || null === dd ? Od.angle === dd : hd(Od.angle, dd) < .5));
-        if (!Rd) {
-          const Od = document.createElement("div");
-          Od.className = "DamageFeedbackFlash";
-          const md = Od.appendChild(document.createElement("div"));
-          md.className = "DamageFeedbackFlashGlow", this.root.insertBefore(Od, this.arcLayer), Rd = {
-            element: Od,
-            glow: md,
-            angle: dd,
+        let pb = this.flashes.find((wb => null === wb.angle || null === bb ? wb.angle === bb : lb(wb.angle, bb) < .5));
+        if (!pb) {
+          const wb = document.createElement("div");
+          wb.className = "DamageFeedbackFlash";
+          const Mb = wb.appendChild(document.createElement("div"));
+          Mb.className = "DamageFeedbackFlashGlow", this.root.insertBefore(wb, this.arcLayer), pb = {
+            element: wb,
+            glow: Mb,
+            angle: bb,
             level: 0,
             animation: null
-          }, this.flashes.push(Rd)
+          }, this.flashes.push(pb)
         }
-        const Xd = null === (md = Rd.animation) || void 0 === md || null === (Wd = md.effect) || void 0 === Wd ? void 0 : Wd.getComputedTiming().progress,
-          Kd = null === Xd || void 0 === Xd ? 0 : Rd.level * (1 - Xd);
-        Rd.level = Math.min(1, Math.max(Od, Kd + .6 * Od)), Rd.angle = dd;
+        const Vb = null === (Mb = pb.animation) || void 0 === Mb || null === (eb = Mb.effect) || void 0 === eb ? void 0 : eb.getComputedTiming().progress,
+          gb = null === Vb || void 0 === Vb ? 0 : pb.level * (1 - Vb);
+        pb.level = Math.min(1, Math.max(wb, gb + .6 * wb)), pb.angle = bb;
         const {
-          x: vd,
-          y: td,
-          rx: od,
-          ry: Nd
-        } = function(dd, Od) {
-          const md = window.innerWidth,
-            Wd = window.innerHeight;
-          if (null === dd) return {
-            x: md / 2,
-            y: Wd / 2,
+          x: Lb,
+          y: Ob,
+          rx: Ub,
+          ry: tb
+        } = function(bb, wb) {
+          const Mb = window.innerWidth,
+            eb = window.innerHeight;
+          if (null === bb) return {
+            x: Mb / 2,
+            y: eb / 2,
             rx: 0,
             ry: 0
           };
-          const Fd = Math.sin(dd),
-            Rd = -Math.cos(dd),
-            Xd = md / 2 / Math.max(1e-6, Math.abs(Fd)),
-            Kd = Wd / 2 / Math.max(1e-6, Math.abs(Rd)),
-            hd = Math.min(Xd, Kd),
-            vd = Math.round(md / 2 + Fd * hd),
-            Qd = Math.round(Wd / 2 + Rd * hd),
-            td = Wd / 100 * (.85 + .25 * Od),
-            od = Xd <= Kd,
-            Nd = Math.round((od ? 30 : 74) * td),
-            qd = Math.round((od ? 58 : 26) * td);
+          const Hb = Math.sin(bb),
+            pb = -Math.cos(bb),
+            Vb = Mb / 2 / Math.max(1e-6, Math.abs(Hb)),
+            gb = eb / 2 / Math.max(1e-6, Math.abs(pb)),
+            lb = Math.min(Vb, gb),
+            Lb = Math.round(Mb / 2 + Hb * lb),
+            Ib = Math.round(eb / 2 + pb * lb),
+            Ob = eb / 100 * (.85 + .25 * wb),
+            Ub = Vb <= gb,
+            tb = Math.round((Ub ? 30 : 74) * Ob),
+            Cb = Math.round((Ub ? 58 : 26) * Ob);
           return {
-            x: vd,
-            y: Qd,
-            rx: Nd,
-            ry: qd
+            x: Lb,
+            y: Ib,
+            rx: tb,
+            ry: Cb
           }
-        }(dd, Rd.level), {
-          style: qd
-        } = Rd.glow;
-        Rd.glow.classList.toggle("Everywhere", null === dd), qd.setProperty("--glowX", `${vd}px`), qd.setProperty("--glowY", `${td}px`), qd.setProperty("--glowRx", `${od}px`), qd.setProperty("--glowRy", `${Nd}px`), Rd.element.style.transformOrigin = `${vd}px ${td}px`, null === (Fd = Rd.animation) || void 0 === Fd || Fd.cancel();
-        const Hd = Rd.element.animate([{
+        }(bb, pb.level), {
+          style: Cb
+        } = pb.glow;
+        pb.glow.classList.toggle("Everywhere", null === bb), Cb.setProperty("--glowX", `${Lb}px`), Cb.setProperty("--glowY", `${Ob}px`), Cb.setProperty("--glowRx", `${Ub}px`), Cb.setProperty("--glowRy", `${tb}px`), pb.element.style.transformOrigin = `${Lb}px ${Ob}px`, null === (Hb = pb.animation) || void 0 === Hb || Hb.cancel();
+        const Eb = pb.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: Rd.level,
+          opacity: pb.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * Rd.level,
+          opacity: .8 * pb.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * Rd.level
+          duration: 520 + 180 * pb.level
         });
-        Rd.animation = Hd;
-        const yd = Rd;
-        Hd.onfinish = () => {
-          yd.animation === Hd && (yd.element.remove(), Qd(this.flashes, yd))
+        pb.animation = Eb;
+        const Fb = pb;
+        Eb.onfinish = () => {
+          Fb.animation === Eb && (Fb.element.remove(), Ib(this.flashes, Fb))
         }
       }
       clearHits() {
-        for (const Wd of this.arcs) {
-          var dd, Od;
-          null === (dd = Wd.fade) || void 0 === dd || dd.cancel(), Wd.fade = null, null === (Od = Wd.pop) || void 0 === Od || Od.cancel(), Wd.element.remove()
+        for (const eb of this.arcs) {
+          var bb, wb;
+          null === (bb = eb.fade) || void 0 === bb || bb.cancel(), eb.fade = null, null === (wb = eb.pop) || void 0 === wb || wb.cancel(), eb.element.remove()
         }
         this.arcs.length = 0;
-        for (const Wd of this.flashes) {
-          var md;
-          null === (md = Wd.animation) || void 0 === md || md.cancel(), Wd.element.remove()
+        for (const eb of this.flashes) {
+          var Mb;
+          null === (Mb = eb.animation) || void 0 === Mb || Mb.cancel(), eb.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function hd(dd, Od) {
-      return Math.abs(Math.atan2(Math.sin(dd - Od), Math.cos(dd - Od)))
+    function lb(bb, wb) {
+      return Math.abs(Math.atan2(Math.sin(bb - wb), Math.cos(bb - wb)))
     }
 
-    function vd(dd) {
-      return Math.max(0, Math.min(1, dd))
+    function Lb(bb) {
+      return Math.max(0, Math.min(1, bb))
     }
 
-    function Qd(dd, Od) {
-      const md = dd.indexOf(Od); - 1 !== md && dd.splice(md, 1)
+    function Ib(bb, wb) {
+      const Mb = bb.indexOf(wb); - 1 !== Mb && bb.splice(Mb, 1)
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

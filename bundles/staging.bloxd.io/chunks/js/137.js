@@ -1,106 +1,106 @@
 export const id = 137;
 export const ids = [137, 139, 159, 160];
 export const modules = {
-  5951: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd.f,
-      g: () => Fd,
-      k: () => Wd.o
+  6105: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => eb.g,
+      f: () => Hb,
+      h: () => eb.j
     });
-    var Wd = md(5954);
-    const Fd = [!1, !0].flatMap((dd => ["terrain", "liquid", "model"].map((Od => ({
-      strict: dd,
-      program: Od
+    var eb = Mb(6110);
+    const Hb = [!1, !0].flatMap((bb => ["terrain", "liquid", "model"].map((wb => ({
+      strict: bb,
+      program: wb
     })))))
   },
-  7598: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      forgetShaderPackActiveHint: () => Sd,
-      isOtherApiVersion: () => Jd,
-      isShaderPackActive: () => Yd,
-      isShaderPackChangePending: () => Ed,
-      markShaderPackChangePending: () => wd,
-      pageShaderPackValidationVersion: () => Ud,
-      reconcileStoredShaderPackHint: () => Bd,
-      removeShaderPack: () => pd,
-      replaceShaderPack: () => yd,
-      saveShaderPack: () => Hd,
-      shaderPackNeedsCheck: () => xd,
-      storedPackOutcome: () => gd,
-      storedShaderPackFiles: () => od,
-      toStoredShaderPack: () => td
+  7840: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      forgetShaderPackActiveHint: () => Db,
+      isOtherApiVersion: () => jb,
+      isShaderPackActive: () => hb,
+      isShaderPackChangePending: () => xb,
+      markShaderPackChangePending: () => Xb,
+      pageShaderPackValidationVersion: () => Kb,
+      reconcileStoredShaderPackHint: () => Rb,
+      removeShaderPack: () => mb,
+      replaceShaderPack: () => Fb,
+      saveShaderPack: () => Eb,
+      shaderPackNeedsCheck: () => rb,
+      storedPackOutcome: () => zb,
+      storedShaderPackFiles: () => Ub,
+      toStoredShaderPack: () => Ob
     });
-    var Wd = md(5954),
-      Fd = md(5951),
-      Rd = md(46),
-      Xd = md(4674),
-      Kd = md(7602),
-      hd = md(7583);
-    const vd = "shaderPackChangePending";
-    let Qd = null;
+    var eb = Mb(6110),
+      Hb = Mb(6105),
+      pb = Mb(43),
+      Vb = Mb(4843),
+      gb = Mb(7848),
+      lb = Mb(7819);
+    const Lb = "shaderPackChangePending";
+    let Ib = null;
 
-    function td(dd, Od, md) {
+    function Ob(bb, wb, Mb) {
       return {
-        manifest: dd.manifest,
-        files: (0, Wd.v)(dd.files),
-        validation: Od,
-        ...md && {
-          listing: md
+        manifest: bb.manifest,
+        files: (0, eb.t)(bb.files),
+        validation: wb,
+        ...Mb && {
+          listing: Mb
         }
       }
     }
 
-    function od(dd) {
-      return Object.keys(dd.files).map((Od => ({
-        path: Od,
-        source: dd.files[Od]
+    function Ub(bb) {
+      return Object.keys(bb.files).map((wb => ({
+        path: wb,
+        source: bb.files[wb]
       })))
     }
-    let Nd = Promise.resolve();
+    let tb = Promise.resolve();
 
-    function qd(dd) {
-      const Od = Nd.then(dd);
-      return Nd = Od.catch((() => {})), Od
-    }
-
-    function Hd(dd, Od) {
-      return qd((() => bd(dd, Od)))
+    function Cb(bb) {
+      const wb = tb.then(bb);
+      return tb = wb.catch((() => {})), wb
     }
 
-    function yd(dd, Od, md) {
-      return qd((async () => JSON.stringify(await (0, Kd.g)()) === JSON.stringify(dd) && (null === Od ? (await Td(), !0) : bd(Od, md))))
-    }
-    async function bd(dd, Od) {
-      const md = await Rd.h.setItem(Kd.e, dd);
-      return md && sd(dd, Od), md
-    }
-    async function Td() {
-      await Rd.h.removeItem(Kd.e), Rd.k.removeItem(Xd.d)
+    function Eb(bb, wb) {
+      return Cb((() => Bb(bb, wb)))
     }
 
-    function pd() {
-      return qd(Td)
+    function Fb(bb, wb, Mb) {
+      return Cb((async () => JSON.stringify(await (0, gb.g)()) === JSON.stringify(bb) && (null === wb ? (await sb(), !0) : Bb(wb, Mb))))
+    }
+    async function Bb(bb, wb) {
+      const Mb = await pb.h.setItem(gb.c, bb);
+      return Mb && cb(bb, wb), Mb
+    }
+    async function sb() {
+      await pb.h.removeItem(gb.c), pb.i.removeItem(Vb.d)
     }
 
-    function Yd(dd, Od) {
-      return "active" === gd(dd, Od).kind
+    function mb() {
+      return Cb(sb)
     }
 
-    function gd(dd, Od) {
-      var md;
-      return null === dd ? {
+    function hb(bb, wb) {
+      return "active" === zb(bb, wb).kind
+    }
+
+    function zb(bb, wb) {
+      var Mb;
+      return null === bb ? {
         kind: "none",
         reason: "nothingStored"
-      } : Jd(dd) ? {
+      } : jb(bb) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (md = dd.validation) || void 0 === md ? void 0 : md.ok) || dd.validation.fromRecheck ? null === Od ? {
+      } : !1 !== (null === (Mb = bb.validation) || void 0 === Mb ? void 0 : Mb.ok) || bb.validation.fromRecheck ? null === wb ? {
         kind: "none",
         reason: "noCompiler"
-      } : xd(dd, Od) ? {
+      } : rb(bb, wb) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : dd.validation.ok ? {
+      } : bb.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -111,263 +111,263 @@ export const modules = {
       }
     }
 
-    function wd() {
-      Rd.o.setItem(vd, performance.timeOrigin)
+    function Xb() {
+      pb.j.setItem(Lb, performance.timeOrigin)
     }
 
-    function Ed() {
-      return Rd.o.getItem(vd) === performance.timeOrigin
+    function xb() {
+      return pb.j.getItem(Lb) === performance.timeOrigin
     }
 
-    function Jd(dd) {
-      return !(0, Fd.k)(dd.manifest.apiVersion)
+    function jb(bb) {
+      return !(0, Hb.h)(bb.manifest.apiVersion)
     }
 
-    function Ud(dd) {
-      return Qd ??= dd.HV((0, hd.shaderPackTextures)()), Qd
+    function Kb(bb) {
+      return Ib ??= bb.MJ((0, lb.shaderPackTextures)()), Ib
     }
 
-    function xd(dd, Od) {
-      var md;
-      return (null === (md = dd.validation) || void 0 === md ? void 0 : md.headerVersion) !== Ud(Od)
+    function rb(bb, wb) {
+      var Mb;
+      return (null === (Mb = bb.validation) || void 0 === Mb ? void 0 : Mb.headerVersion) !== Kb(wb)
     }
 
-    function Bd(dd) {
-      return qd((async () => {
-        sd(await (0, Kd.g)(!0), dd)
+    function Rb(bb) {
+      return Cb((async () => {
+        cb(await (0, gb.g)(!0), bb)
       }))
     }
 
-    function Sd() {
-      return qd((async () => {
-        Rd.k.removeItem(Xd.d)
+    function Db() {
+      return Cb((async () => {
+        pb.i.removeItem(Vb.d)
       }))
     }
 
-    function sd(dd, Od) {
-      Yd(dd, Od) ? Rd.k.setItem(Xd.d, !0) : Rd.k.removeItem(Xd.d)
+    function cb(bb, wb) {
+      hb(bb, wb) ? pb.i.setItem(Vb.d, !0) : pb.i.removeItem(Vb.d)
     }
   },
-  7602: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Fd,
-      g: () => Rd
+  7848: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Hb,
+      g: () => pb
     });
-    var Wd = md(46);
-    const Fd = "shaderPack";
-    async function Rd() {
-      var dd;
-      let Od = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (dd = await Wd.h.getItem(Fd, Od)) && void 0 !== dd ? dd : null
+    var eb = Mb(43);
+    const Hb = "shaderPack";
+    async function pb() {
+      var bb;
+      let wb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (bb = await eb.h.getItem(Hb, wb)) && void 0 !== bb ? bb : null
     }
   },
-  7583: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      loadShaderPackTextures: () => Xd,
-      shaderPackTextures: () => Kd
+  7819: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      loadShaderPackTextures: () => Vb,
+      shaderPackTextures: () => gb
     });
-    var Wd = md(5954);
-    let Fd = null,
-      Rd = null;
+    var eb = Mb(6110);
+    let Hb = null,
+      pb = null;
 
-    function Xd() {
-      return Rd ??= Promise.all([md.e(85), md.e(126)]).then((() => md(42438))).then((dd => {
+    function Vb() {
+      return pb ??= Promise.all([Mb.e(85), Mb.e(126)]).then((() => Mb(42174))).then((bb => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: Od,
-          textureNameToIndex: md,
-          textureAnimationData: Rd
-        } = dd;
-        return Fd ??= (0, Wd.h)(md, Rd, Od), Fd
-      })), Rd
+          FORMER_BLOCK_IMAGE_NAMES: wb,
+          textureNameToIndex: Mb,
+          textureAnimationData: pb
+        } = bb;
+        return Hb ??= (0, eb.h)(Mb, pb, wb), Hb
+      })), pb
     }
 
-    function Kd() {
-      if (null === Fd) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Fd
+    function gb() {
+      if (null === Hb) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Hb
     }
   },
-  5954: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Kd,
-      e: () => Xd,
-      f: () => Wd,
-      h: () => Hd,
-      l: () => td,
-      o: () => Fd,
-      p: () => Rd,
-      r: () => vd,
-      v: () => Qd,
-      w: () => od
+  6110: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => gb,
+      e: () => Vb,
+      g: () => eb,
+      h: () => Eb,
+      i: () => Ob,
+      j: () => Hb,
+      l: () => pb,
+      p: () => Lb,
+      t: () => Ib,
+      x: () => Ub
     });
-    const Wd = 5;
+    const eb = 5;
 
-    function Fd(dd) {
-      return dd === Wd
+    function Hb(bb) {
+      return bb === eb
     }
 
-    function Rd(dd) {
-      return [...dd.features]
+    function pb(bb) {
+      return [...bb.features]
     }
-    const Xd = 262144,
-      Kd = 256,
-      hd = 256;
+    const Vb = 262144,
+      gb = 256,
+      lb = 256;
 
-    function vd(dd) {
-      if ("object" !== typeof dd || null === dd || Array.isArray(dd)) return "The pack has no files.";
-      const Od = [];
-      for (const [md, Wd] of Object.entries(dd)) {
-        if ("string" !== typeof Wd) return `${md} isn't text.`;
-        Od.push({
-          path: md,
-          source: Wd
+    function Lb(bb) {
+      if ("object" !== typeof bb || null === bb || Array.isArray(bb)) return "The pack has no files.";
+      const wb = [];
+      for (const [Mb, eb] of Object.entries(bb)) {
+        if ("string" !== typeof eb) return `${Mb} isn't text.`;
+        wb.push({
+          path: Mb,
+          source: eb
         })
       }
-      return Od.sort(((dd, Od) => td(dd.path, Od.path))),
-        function(dd) {
-          if (0 === dd.length) return "The pack has no .wgsl files.";
-          if (dd.length > Kd) return `The pack has more than ${Kd} .wgsl files.`;
-          const Od = new Set;
+      return wb.sort(((bb, wb) => Ob(bb.path, wb.path))),
+        function(bb) {
+          if (0 === bb.length) return "The pack has no .wgsl files.";
+          if (bb.length > gb) return `The pack has more than ${gb} .wgsl files.`;
+          const wb = new Set;
           for (const {
-              path: md
+              path: Mb
             }
-            of dd) {
-            const dd = Nd(md);
-            if (null !== dd) return dd;
-            if (Od.has(md)) return `The pack has two files at ${md}.`;
-            Od.add(md)
+            of bb) {
+            const bb = tb(Mb);
+            if (null !== bb) return bb;
+            if (wb.has(Mb)) return `The pack has two files at ${Mb}.`;
+            wb.add(Mb)
           }
-          return od(dd) > Xd ? `The pack's .wgsl files are over ${Xd/1024} KB in total.` : null
-        }(Od) ?? Od
+          return Ub(bb) > Vb ? `The pack's .wgsl files are over ${Vb/1024} KB in total.` : null
+        }(wb) ?? wb
     }
 
-    function Qd(dd) {
-      const Od = {};
-      for (const md of dd) Od[md.path] = md.source;
-      return Od
+    function Ib(bb) {
+      const wb = {};
+      for (const Mb of bb) wb[Mb.path] = Mb.source;
+      return wb
     }
 
-    function td(dd, Od) {
-      return dd < Od ? -1 : dd > Od ? 1 : 0
+    function Ob(bb, wb) {
+      return bb < wb ? -1 : bb > wb ? 1 : 0
     }
 
-    function od(dd) {
-      const Od = new TextEncoder;
-      let md = 0;
+    function Ub(bb) {
+      const wb = new TextEncoder;
+      let Mb = 0;
       for (const {
-          source: Wd
+          source: eb
         }
-        of dd) md += Od.encode(Wd).byteLength;
-      return md
+        of bb) Mb += wb.encode(eb).byteLength;
+      return Mb
     }
 
-    function Nd(dd) {
-      if (!dd.toLowerCase().endsWith(".wgsl")) return `${dd} isn't a .wgsl file.`;
-      if (dd.length > hd) return `A file path is over ${hd} characters.`;
-      if (dd.includes("\\") || /[\u0000-\u001f]/.test(dd)) return `${dd} isn't a valid file path.`;
-      return dd.split("/").some((dd => "" === dd || "." === dd || ".." === dd)) ? `${dd} isn't a valid file path.` : null
+    function tb(bb) {
+      if (!bb.toLowerCase().endsWith(".wgsl")) return `${bb} isn't a .wgsl file.`;
+      if (bb.length > lb) return `A file path is over ${lb} characters.`;
+      if (bb.includes("\\") || /[\u0000-\u001f]/.test(bb)) return `${bb} isn't a valid file path.`;
+      return bb.split("/").some((bb => "" === bb || "." === bb || ".." === bb)) ? `${bb} isn't a valid file path.` : null
     }
-    const qd = /^(.*)\[rot\[([1-4])$/;
+    const Cb = /^(.*)\[rot\[([1-4])$/;
 
-    function Hd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Wd = new Map;
-      Od.forEach(((dd, Od) => {
+    function Eb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const eb = new Map;
+      wb.forEach(((bb, wb) => {
         let {
-          numAnimStates: md,
-          animStartIdx: Fd
-        } = dd;
-        for (let Rd = 1; Rd < md; Rd++) Wd.set(Fd + Rd - 1, Od)
+          numAnimStates: Mb,
+          animStartIdx: Hb
+        } = bb;
+        for (let pb = 1; pb < Mb; pb++) eb.set(Hb + pb - 1, wb)
       }));
-      const Fd = Object.entries(dd),
-        Rd = new Map;
-      for (const [Hd, yd] of Fd) {
-        const dd = qd.exec(Hd);
-        "1" === dd?.[2] && Rd.set(dd[1], yd + 1)
+      const Hb = Object.entries(bb),
+        pb = new Map;
+      for (const [Eb, Fb] of Hb) {
+        const bb = Cb.exec(Eb);
+        "1" === bb?.[2] && pb.set(bb[1], Fb + 1)
       }
-      const Xd = dd => {
-          const Od = qd.exec(dd);
-          return Od && Rd.has(Od[1]) ? {
-            root: Od[1],
-            rotation: Number(Od[2]) - 1
+      const Vb = bb => {
+          const wb = Cb.exec(bb);
+          return wb && pb.has(wb[1]) ? {
+            root: wb[1],
+            rotation: Number(wb[2]) - 1
           } : null
         },
-        Kd = new Set(Fd.map((dd => {
-          let [Od] = dd;
-          return Xd(Od)?.root ?? Od
+        gb = new Set(Hb.map((bb => {
+          let [wb] = bb;
+          return Vb(wb)?.root ?? wb
         }))),
-        hd = (dd, md) => {
-          const Wd = dd.replace(/_?0$/, "");
-          return (Od[md]?.numAnimStates ?? 0) > 1 && !Kd.has(Wd) ? Wd : dd
+        lb = (bb, Mb) => {
+          const eb = bb.replace(/_?0$/, "");
+          return (wb[Mb]?.numAnimStates ?? 0) > 1 && !gb.has(eb) ? eb : bb
         },
-        vd = new Map;
-      for (const [qd, Hd] of Fd) vd.set(Hd, hd(Xd(qd)?.root ?? qd, Hd));
-      const Qd = Fd.reduce(((dd, Od) => {
-          let [, md] = Od;
-          return Math.max(dd, md + 1)
+        Lb = new Map;
+      for (const [Cb, Eb] of Hb) Lb.set(Eb, lb(Vb(Cb)?.root ?? Cb, Eb));
+      const Ib = Hb.reduce(((bb, wb) => {
+          let [, Mb] = wb;
+          return Math.max(bb, Mb + 1)
         }), 0),
-        td = Array.from({
-          length: Qd
-        }, ((dd, Od) => ({
-          id: Od + 1,
+        Ob = Array.from({
+          length: Ib
+        }, ((bb, wb) => ({
+          id: wb + 1,
           rotation: 0
         }))),
-        od = new Map,
-        Nd = new Map;
-      for (const [qd, Hd] of Fd) {
-        const dd = Xd(qd),
-          Od = Wd.get(Hd);
-        if (void 0 !== Od) {
-          const md = vd.get(Od);
-          Nd.set(qd, {
-            name: qd,
-            texture: md,
+        Ub = new Map,
+        tb = new Map;
+      for (const [Cb, Eb] of Hb) {
+        const bb = Vb(Cb),
+          wb = eb.get(Eb);
+        if (void 0 !== wb) {
+          const Mb = Lb.get(wb);
+          tb.set(Cb, {
+            name: Cb,
+            texture: Mb,
             kind: "frame"
-          }), dd && !Nd.has(dd.root) && Nd.set(dd.root, {
-            name: dd.root,
-            texture: md,
+          }), bb && !tb.has(bb.root) && tb.set(bb.root, {
+            name: bb.root,
+            texture: Mb,
             kind: "frame"
           });
           continue
         }
-        const md = vd.get(Hd),
-          Fd = dd?.root ?? qd;
-        if (md !== Fd && Nd.set(Fd, {
-            name: Fd,
-            texture: md,
+        const Mb = Lb.get(Eb),
+          Hb = bb?.root ?? Cb;
+        if (Mb !== Hb && tb.set(Hb, {
+            name: Hb,
+            texture: Mb,
             kind: "frame"
-          }), dd) {
-          const Od = Rd.get(dd.root);
-          td[Hd] = {
-            id: Od,
-            rotation: dd.rotation
-          }, od.set(md, Od), Nd.set(qd, {
-            name: qd,
-            texture: md,
+          }), bb) {
+          const wb = pb.get(bb.root);
+          Ob[Eb] = {
+            id: wb,
+            rotation: bb.rotation
+          }, Ub.set(Mb, wb), tb.set(Cb, {
+            name: Cb,
+            texture: Mb,
             kind: "rotation"
           })
-        } else od.set(md, Hd + 1)
+        } else Ub.set(Mb, Eb + 1)
       }
-      for (const qd of od.keys()) Nd.delete(qd);
-      for (const [qd, Hd] of md) {
-        const dd = od.get(Hd);
-        void 0 === dd || od.has(qd) || (od.set(qd, dd), Nd.delete(qd))
+      for (const Cb of Ub.keys()) tb.delete(Cb);
+      for (const [Cb, Eb] of Mb) {
+        const bb = Ub.get(Eb);
+        void 0 === bb || Ub.has(Cb) || (Ub.set(Cb, bb), tb.delete(Cb))
       }
       return {
-        named: [...od].sort(((dd, Od) => {
-          let [md] = dd, [Wd] = Od;
-          return md < Wd ? -1 : md > Wd ? 1 : 0
-        })).map((dd => {
-          let [Od, md] = dd;
+        named: [...Ub].sort(((bb, wb) => {
+          let [Mb] = bb, [eb] = wb;
+          return Mb < eb ? -1 : Mb > eb ? 1 : 0
+        })).map((bb => {
+          let [wb, Mb] = bb;
           return {
-            name: Od,
-            id: md
+            name: wb,
+            id: Mb
           }
         })),
-        aliases: [...Nd.values()],
-        layers: td
+        aliases: [...tb.values()],
+        layers: Ob
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

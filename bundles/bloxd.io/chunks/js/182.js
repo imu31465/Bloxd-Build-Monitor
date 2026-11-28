@@ -1,247 +1,247 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  38243: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => yd,
-      h: () => bd,
-      i: () => od,
-      k: () => td
+  37898: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Fb,
+      d: () => Bb,
+      e: () => Ub,
+      g: () => Ob
     });
-    var Wd = md(35535),
-      Fd = md(3428),
-      Rd = md(3432),
-      Xd = md(9850),
-      Kd = md(1566),
-      hd = md(66),
-      vd = md(86),
-      Qd = md(1341);
+    var eb = Mb(35320),
+      Hb = Mb(3531),
+      pb = Mb(3538),
+      Vb = Mb(10064),
+      gb = Mb(1611),
+      lb = Mb(64),
+      Lb = Mb(81),
+      Ib = Mb(1364);
 
-    function td() {
-      var dd;
-      return (0, Kd.i)(Fd.d, (0, Fd.n)()), (0, Qd.jsx)(Qd.Fragment, {
-        children: null === (dd = (0, Fd.n)()) || void 0 === dd ? void 0 : dd.content
+    function Ob() {
+      var bb;
+      return (0, gb.h)(Hb.e, (0, Hb.x)()), (0, Ib.jsx)(Ib.Fragment, {
+        children: null === (bb = (0, Hb.x)()) || void 0 === bb ? void 0 : bb.content
       })
     }
 
-    function od(dd) {
-      var Od;
+    function Ub(bb) {
+      var wb;
       let {
-        show: md
-      } = dd;
-      (0, Kd.i)(Fd.d, (0, Fd.n)());
-      const vd = null === (Od = (0, Fd.n)()) || void 0 === Od ? void 0 : Od.menu;
-      return (0, hd.useEffect)((() => {
-        var dd;
-        md || (null === vd || void 0 === vd || null === (dd = vd.onClose) || void 0 === dd || dd.call(vd), (0, Rd.q)())
-      }), [md, vd]), (0, hd.useEffect)((() => md ? (0, Xd.d)(Rd.y, Rd.h) : void 0), [md]), (0, Qd.jsx)(Wd.b, {
-        showing: md,
+        show: Mb
+      } = bb;
+      (0, gb.h)(Hb.e, (0, Hb.x)());
+      const Lb = null === (wb = (0, Hb.x)()) || void 0 === wb ? void 0 : wb.menu;
+      return (0, lb.useEffect)((() => {
+        var bb;
+        Mb || (null === Lb || void 0 === Lb || null === (bb = Lb.onClose) || void 0 === bb || bb.call(Lb), (0, pb.l)())
+      }), [Mb, Lb]), (0, lb.useEffect)((() => Mb ? (0, Vb.g)(pb.u, pb.g) : void 0), [Mb]), (0, Ib.jsx)(eb.c, {
+        showing: Mb,
         globallyUniqueKey: "clientGameMenu",
-        children: null === vd || void 0 === vd ? void 0 : vd.content
+        children: null === Lb || void 0 === Lb ? void 0 : Lb.content
       })
     }
-    const Nd = new Map,
-      qd = new Set;
+    const tb = new Map,
+      Cb = new Set;
 
-    function Hd(dd, Od) {
-      Od ? Nd.set(dd, Od) : Nd.delete(dd);
-      for (const md of qd) md()
+    function Eb(bb, wb) {
+      wb ? tb.set(bb, wb) : tb.delete(bb);
+      for (const Mb of Cb) Mb()
     }
 
-    function yd(dd) {
+    function Fb(bb) {
       let {
-        placement: Od = "bottom"
-      } = dd;
-      const md = (0, hd.useRef)(null);
-      return (0, hd.useLayoutEffect)((() => {
-        const dd = md.current;
-        return Hd(Od, dd), () => {
-          Nd.get(Od) === dd && Hd(Od, null)
+        placement: wb = "bottom"
+      } = bb;
+      const Mb = (0, lb.useRef)(null);
+      return (0, lb.useLayoutEffect)((() => {
+        const bb = Mb.current;
+        return Eb(wb, bb), () => {
+          tb.get(wb) === bb && Eb(wb, null)
         }
-      }), [Od]), (0, Qd.jsx)("div", {
-        ref: md,
-        id: `clientGameHud-${Od}`,
+      }), [wb]), (0, Ib.jsx)("div", {
+        ref: Mb,
+        id: `clientGameHud-${wb}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function bd(dd) {
+    function Bb(bb) {
       let {
-        children: Od,
-        placement: md = "bottom"
-      } = dd;
-      const [Wd, Fd] = (0, hd.useState)((() => {
-        var dd;
-        return null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null
+        children: wb,
+        placement: Mb = "bottom"
+      } = bb;
+      const [eb, Hb] = (0, lb.useState)((() => {
+        var bb;
+        return null !== (bb = tb.get(Mb)) && void 0 !== bb ? bb : null
       }));
-      return (0, hd.useEffect)((() => {
-        const dd = () => {
-          var dd;
-          Fd(null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null)
+      return (0, lb.useEffect)((() => {
+        const bb = () => {
+          var bb;
+          Hb(null !== (bb = tb.get(Mb)) && void 0 !== bb ? bb : null)
         };
-        return qd.add(dd), dd(), () => {
-          qd.delete(dd)
+        return Cb.add(bb), bb(), () => {
+          Cb.delete(bb)
         }
-      }), [md]), Wd ? (0, vd.createPortal)(Od, Wd) : null
+      }), [Mb]), eb ? (0, Lb.createPortal)(wb, eb) : null
     }
   },
-  35535: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd
+  35320: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb
     });
-    var Wd = md(5197),
-      Fd = md(5206);
+    var eb = Mb(5387),
+      Hb = Mb(5395);
 
-    function Rd(dd) {
+    function pb(bb) {
       let {
-        children: Od,
-        showing: md,
-        globallyUniqueKey: Rd,
-        alwaysMountChildren: Xd = !1,
-        doGameplayStartStopOnShow: Kd = !0,
-        keepsMovement: hd = !1
-      } = dd;
-      return (0, Fd.e)(!0, md, Rd, hd), (0, Wd.b)(Kd, md), md || Xd ? Od : null
+        children: wb,
+        showing: Mb,
+        globallyUniqueKey: pb,
+        alwaysMountChildren: Vb = !1,
+        doGameplayStartStopOnShow: gb = !0,
+        keepsMovement: lb = !1
+      } = bb;
+      return (0, Hb.d)(!0, Mb, pb, lb), (0, eb.b)(gb, Mb), Mb || Vb ? wb : null
     }
   },
-  9850: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      d: () => Fd
+  10064: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => pb,
+      g: () => Hb
     });
-    let Wd = null;
-    const Fd = function(dd) {
-        const Od = {
-          cycle: dd,
+    let eb = null;
+    const Hb = function(bb) {
+        const wb = {
+          cycle: bb,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Wd = Od, () => {
-          Wd === Od && (Wd = null)
+        return eb = wb, () => {
+          eb === wb && (eb = null)
         }
       },
-      Rd = () => {
-        var dd;
-        return null !== (dd = Wd) && void 0 !== dd && dd.canCycle() ? Wd.cycle : null
+      pb = () => {
+        var bb;
+        return null !== (bb = eb) && void 0 !== bb && bb.canCycle() ? eb.cycle : null
       }
   },
-  54177: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      Smp2OnboardingUi: () => Hd
+  53979: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      Smp2OnboardingUi: () => Eb
     });
-    var Wd = md(66),
-      Fd = md(1155),
-      Rd = md.n(Fd),
-      Xd = md(40894),
-      Kd = md(32),
-      hd = md(38243),
-      vd = md(3039),
-      Qd = md(2079),
-      td = md(3645),
-      od = md(29),
-      Nd = md(40887),
-      qd = md(1341);
+    var eb = Mb(64),
+      Hb = Mb(1159),
+      pb = Mb.n(Hb),
+      Vb = Mb(40661),
+      gb = Mb(29),
+      lb = Mb(37898),
+      Lb = Mb(3108),
+      Ib = Mb(2130),
+      Ob = Mb(3778),
+      Ub = Mb(26),
+      tb = Mb(40653),
+      Cb = Mb(1364);
 
-    function Hd(dd) {
+    function Eb(bb) {
       let {
-        store: Od
-      } = dd;
-      const md = function(dd) {
-          const [Od, md] = (0, Wd.useState)((() => dd.get()));
-          return (0, Wd.useEffect)((() => {
-            const Od = Kd.j.subscribe(Nd.b, (dd => {
-              md(dd)
+        store: wb
+      } = bb;
+      const Mb = function(bb) {
+          const [wb, Mb] = (0, eb.useState)((() => bb.get()));
+          return (0, eb.useEffect)((() => {
+            const wb = gb.k.subscribe(tb.c, (bb => {
+              Mb(bb)
             }));
-            return md(dd.get()), () => {
-              Kd.j.unsubscribe(Od)
+            return Mb(bb.get()), () => {
+              gb.k.unsubscribe(wb)
             }
-          }), [dd]), Od
-        }(Od),
-        Fd = (0, td.d)(),
+          }), [bb]), wb
+        }(wb),
+        Hb = (0, Ob.b)(),
         {
-          openInGameMenuName: Rd,
-          openEverythingMenuName: Xd
-        } = (0, od.p)(["openInGameMenuName", "openEverythingMenuName"]),
-        Hd = !Fd && null === Rd && null === Xd;
-      (0, Wd.useEffect)((() => {
-        Od.setShowing(Hd)
-      }), [Od, Hd]);
-      const bd = Boolean(md.path);
-      return (0, Wd.useEffect)((() => {
-        if (bd) return (0, vd.f)()
-      }), [bd]), Hd ? (0, qd.jsxs)(qd.Fragment, {
-        children: [md.path && (0, qd.jsx)(hd.h, {
+          openInGameMenuName: pb,
+          openEverythingMenuName: Vb
+        } = (0, Ub.o)(["openInGameMenuName", "openEverythingMenuName"]),
+        Eb = !Hb && null === pb && null === Vb;
+      (0, eb.useEffect)((() => {
+        wb.setShowing(Eb)
+      }), [wb, Eb]);
+      const Bb = Boolean(Mb.path);
+      return (0, eb.useEffect)((() => {
+        if (Bb) return (0, Lb.f)()
+      }), [Bb]), Eb ? (0, Cb.jsxs)(Cb.Fragment, {
+        children: [Mb.path && (0, Cb.jsx)(lb.d, {
           placement: "topRight",
-          children: (0, qd.jsx)(yd, {
-            path: md.path
+          children: (0, Cb.jsx)(Fb, {
+            path: Mb.path
           })
-        }), md.reward && (0, qd.jsxs)("div", {
+        }), Mb.reward && (0, Cb.jsxs)("div", {
           className: "Smp2RewardCard",
           role: "status",
           style: {
-            "--smp2-reward-show-ms": `${Nd.c}ms`
+            "--smp2-reward-show-ms": `${tb.g}ms`
           },
-          children: [(0, qd.jsx)("span", {
+          children: [(0, Cb.jsx)("span", {
             className: "Smp2RewardBurst",
             "aria-hidden": "true"
-          }), (0, qd.jsx)("div", {
+          }), (0, Cb.jsx)("div", {
             className: "Smp2RewardIcon",
-            children: (0, qd.jsx)(Qd.c, {
-              itemName: md.reward.icon,
+            children: (0, Cb.jsx)(Ib.c, {
+              itemName: Mb.reward.icon,
               amount: 1
             })
-          }), (0, qd.jsxs)("div", {
+          }), (0, Cb.jsxs)("div", {
             className: "Smp2RewardText",
-            children: [(0, qd.jsx)("strong", {
-              children: md.reward.title
-            }), (0, qd.jsx)("span", {
-              children: md.reward.text
+            children: [(0, Cb.jsx)("strong", {
+              children: Mb.reward.title
+            }), (0, Cb.jsx)("span", {
+              children: Mb.reward.text
             })]
           })]
-        }, md.reward.id)]
+        }, Mb.reward.id)]
       }) : null
     }
 
-    function yd(dd) {
+    function Fb(bb) {
       let {
-        path: Od
-      } = dd;
-      const md = Od.steps[Od.step],
-        Wd = (0, Xd.j)(md);
-      return (0, qd.jsxs)("div", {
+        path: wb
+      } = bb;
+      const Mb = wb.steps[wb.step],
+        eb = (0, Vb.o)(Mb);
+      return (0, Cb.jsxs)("div", {
         className: "Smp2PathCard",
-        children: [(0, qd.jsx)("span", {
+        children: [(0, Cb.jsx)("span", {
           className: "Smp2PathTitle",
-          children: Od.title
-        }), (0, qd.jsx)("div", {
+          children: wb.title
+        }), (0, Cb.jsx)("div", {
           className: "Smp2PathSegments",
           "aria-hidden": "true",
-          children: Od.steps.map(((dd, md) => (0, qd.jsx)("span", {
-            className: Rd()("Smp2PathSegment", {
-              Filled: md < Od.step,
-              Current: md === Od.step
+          children: wb.steps.map(((bb, Mb) => (0, Cb.jsx)("span", {
+            className: pb()("Smp2PathSegment", {
+              Filled: Mb < wb.step,
+              Current: Mb === wb.step
             })
-          }, dd.key)))
-        }), (0, qd.jsxs)("div", {
+          }, bb.key)))
+        }), (0, Cb.jsxs)("div", {
           className: "Smp2PathStep",
-          children: [(0, qd.jsx)("div", {
+          children: [(0, Cb.jsx)("div", {
             className: "Smp2PathStepIcon",
-            children: (0, qd.jsx)(Qd.c, {
-              itemName: md.icon,
+            children: (0, Cb.jsx)(Ib.c, {
+              itemName: Mb.icon,
               amount: 1
             })
-          }), (0, qd.jsx)("span", {
+          }), (0, Cb.jsx)("span", {
             className: "Smp2PathStepText",
-            children: md.text
-          }), Wd > 1 && (0, qd.jsxs)("span", {
+            children: Mb.text
+          }), eb > 1 && (0, Cb.jsxs)("span", {
             className: "Smp2PathStepProgress",
-            children: [Od.progress, "/", Wd]
+            children: [wb.progress, "/", eb]
           })]
-        }, `${Od.step}`)]
+        }, `${wb.step}`)]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,152 +1,152 @@
 export const id = 75;
 export const ids = [75, 186];
 export const modules = {
-  38243: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => yd,
-      h: () => bd,
-      i: () => od,
-      k: () => td
+  37898: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Fb,
+      d: () => Bb,
+      e: () => Ub,
+      g: () => Ob
     });
-    var Wd = md(35535),
-      Fd = md(3428),
-      Rd = md(3432),
-      Xd = md(9850),
-      Kd = md(1566),
-      hd = md(66),
-      vd = md(86),
-      Qd = md(1341);
+    var eb = Mb(35320),
+      Hb = Mb(3531),
+      pb = Mb(3538),
+      Vb = Mb(10064),
+      gb = Mb(1611),
+      lb = Mb(64),
+      Lb = Mb(81),
+      Ib = Mb(1364);
 
-    function td() {
-      var dd;
-      return (0, Kd.i)(Fd.d, (0, Fd.n)()), (0, Qd.jsx)(Qd.Fragment, {
-        children: null === (dd = (0, Fd.n)()) || void 0 === dd ? void 0 : dd.content
+    function Ob() {
+      var bb;
+      return (0, gb.h)(Hb.e, (0, Hb.x)()), (0, Ib.jsx)(Ib.Fragment, {
+        children: null === (bb = (0, Hb.x)()) || void 0 === bb ? void 0 : bb.content
       })
     }
 
-    function od(dd) {
-      var Od;
+    function Ub(bb) {
+      var wb;
       let {
-        show: md
-      } = dd;
-      (0, Kd.i)(Fd.d, (0, Fd.n)());
-      const vd = null === (Od = (0, Fd.n)()) || void 0 === Od ? void 0 : Od.menu;
-      return (0, hd.useEffect)((() => {
-        var dd;
-        md || (null === vd || void 0 === vd || null === (dd = vd.onClose) || void 0 === dd || dd.call(vd), (0, Rd.q)())
-      }), [md, vd]), (0, hd.useEffect)((() => md ? (0, Xd.d)(Rd.y, Rd.h) : void 0), [md]), (0, Qd.jsx)(Wd.b, {
-        showing: md,
+        show: Mb
+      } = bb;
+      (0, gb.h)(Hb.e, (0, Hb.x)());
+      const Lb = null === (wb = (0, Hb.x)()) || void 0 === wb ? void 0 : wb.menu;
+      return (0, lb.useEffect)((() => {
+        var bb;
+        Mb || (null === Lb || void 0 === Lb || null === (bb = Lb.onClose) || void 0 === bb || bb.call(Lb), (0, pb.l)())
+      }), [Mb, Lb]), (0, lb.useEffect)((() => Mb ? (0, Vb.g)(pb.u, pb.g) : void 0), [Mb]), (0, Ib.jsx)(eb.c, {
+        showing: Mb,
         globallyUniqueKey: "clientGameMenu",
-        children: null === vd || void 0 === vd ? void 0 : vd.content
+        children: null === Lb || void 0 === Lb ? void 0 : Lb.content
       })
     }
-    const Nd = new Map,
-      qd = new Set;
+    const tb = new Map,
+      Cb = new Set;
 
-    function Hd(dd, Od) {
-      Od ? Nd.set(dd, Od) : Nd.delete(dd);
-      for (const md of qd) md()
+    function Eb(bb, wb) {
+      wb ? tb.set(bb, wb) : tb.delete(bb);
+      for (const Mb of Cb) Mb()
     }
 
-    function yd(dd) {
+    function Fb(bb) {
       let {
-        placement: Od = "bottom"
-      } = dd;
-      const md = (0, hd.useRef)(null);
-      return (0, hd.useLayoutEffect)((() => {
-        const dd = md.current;
-        return Hd(Od, dd), () => {
-          Nd.get(Od) === dd && Hd(Od, null)
+        placement: wb = "bottom"
+      } = bb;
+      const Mb = (0, lb.useRef)(null);
+      return (0, lb.useLayoutEffect)((() => {
+        const bb = Mb.current;
+        return Eb(wb, bb), () => {
+          tb.get(wb) === bb && Eb(wb, null)
         }
-      }), [Od]), (0, Qd.jsx)("div", {
-        ref: md,
-        id: `clientGameHud-${Od}`,
+      }), [wb]), (0, Ib.jsx)("div", {
+        ref: Mb,
+        id: `clientGameHud-${wb}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function bd(dd) {
+    function Bb(bb) {
       let {
-        children: Od,
-        placement: md = "bottom"
-      } = dd;
-      const [Wd, Fd] = (0, hd.useState)((() => {
-        var dd;
-        return null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null
+        children: wb,
+        placement: Mb = "bottom"
+      } = bb;
+      const [eb, Hb] = (0, lb.useState)((() => {
+        var bb;
+        return null !== (bb = tb.get(Mb)) && void 0 !== bb ? bb : null
       }));
-      return (0, hd.useEffect)((() => {
-        const dd = () => {
-          var dd;
-          Fd(null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null)
+      return (0, lb.useEffect)((() => {
+        const bb = () => {
+          var bb;
+          Hb(null !== (bb = tb.get(Mb)) && void 0 !== bb ? bb : null)
         };
-        return qd.add(dd), dd(), () => {
-          qd.delete(dd)
+        return Cb.add(bb), bb(), () => {
+          Cb.delete(bb)
         }
-      }), [md]), Wd ? (0, vd.createPortal)(Od, Wd) : null
+      }), [Mb]), eb ? (0, Lb.createPortal)(wb, eb) : null
     }
   },
-  38264: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Hd,
-      f: () => wd
+  37930: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Eb,
+      e: () => Xb
     });
-    md(35513);
-    var Wd = md(66),
-      Fd = md(1566),
-      Rd = md(2092),
-      Xd = md(2125),
-      Kd = md(29),
-      hd = md(3403),
-      vd = md(38273),
-      Qd = md(38280),
-      td = md(35499),
-      od = md(35511),
-      Nd = md(35524),
-      qd = md(1341);
-    const Hd = (0, Wd.memo)((function() {
-      var dd;
+    Mb(35298);
+    var eb = Mb(64),
+      Hb = Mb(1611),
+      pb = Mb(2142),
+      Vb = Mb(2183),
+      gb = Mb(26),
+      lb = Mb(3503),
+      Lb = Mb(37933),
+      Ib = Mb(37936),
+      Ob = Mb(35289),
+      Ub = Mb(35294),
+      tb = Mb(35309),
+      Cb = Mb(1364);
+    const Eb = (0, eb.memo)((function() {
+      var bb;
       const {
-        isTouchScreen: Od,
-        clientEscMenuOptions: md,
-        scriptedCameraFacing: Rd,
-        crosshairShownOverride: Hd,
-        crosshairGameView: bd
-      } = (0, Kd.p)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), Td = (0, hd.j)("gunshotOrigin"), pd = (0, Wd.useRef)(null), Yd = (0, Wd.useRef)(!1), [gd, Ed] = (0, Wd.useState)(yd);
-      (0, Fd.f)("cameraZoomSet", Ed), (0, Wd.useEffect)((() => {
-        Ed(yd())
+        isTouchScreen: wb,
+        clientEscMenuOptions: Mb,
+        scriptedCameraFacing: pb,
+        crosshairShownOverride: Eb,
+        crosshairGameView: Bb
+      } = (0, gb.o)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), sb = (0, lb.k)("gunshotOrigin"), mb = (0, eb.useRef)(null), hb = (0, eb.useRef)(!1), [zb, xb] = (0, eb.useState)(Fb);
+      (0, Hb.e)("cameraZoomSet", xb), (0, eb.useEffect)((() => {
+        xb(Fb())
       }), []);
-      const Jd = (0, Xd.h)("heldItemAim"),
-        xd = Jd.gun,
-        Bd = (0, Nd.g)(),
-        Sd = (0, Wd.useRef)(Bd);
-      Sd.current = Bd;
-      const [sd, ud] = (0, Wd.useState)(!1);
-      (0, Wd.useEffect)((() => (0, Qd.h)("crosshairAccuracy", wd)), []), (0, Fd.f)("mouseState", (dd => {
+      const jb = (0, Vb.h)("heldItemAim"),
+        rb = jb.gun,
+        Rb = (0, tb.f)(),
+        Db = (0, eb.useRef)(Rb);
+      Db.current = Rb;
+      const [cb, Yb] = (0, eb.useState)(!1);
+      (0, eb.useEffect)((() => (0, Ib.e)("crosshairAccuracy", Xb)), []), (0, Hb.e)("mouseState", (bb => {
         let {
-          isDown: Od
-        } = dd;
-        Yd.current = Od, pd.current && (pd.current.style.transform = (0, od.g)(Od, Sd.current.growOnClick)), "shapes" === Sd.current.style && ud(Od)
+          isDown: wb
+        } = bb;
+        hb.current = wb, mb.current && (mb.current.style.transform = (0, Ub.c)(wb, Db.current.growOnClick)), "shapes" === Db.current.style && Yb(wb)
       }));
-      const Vd = (0, td.f)(Od, md.touchActionButtons);
-      return (null !== (dd = (0, vd.c)(bd, Hd)) && void 0 !== dd ? dd : (0, vd.j)(Jd, gd > 1, Vd, Td)) ? "movement" === Rd || "cursor" === Rd ? null : (0, qd.jsxs)(qd.Fragment, {
-        children: [xd && (0, qd.jsx)(Ud, {
-          custom: Bd.forGuns && "shapes" === Bd.style ? Bd : null,
-          touch: Od
-        }), !xd && (0, qd.jsx)(od.d, {
-          settings: Bd,
-          touch: Od,
-          pressRef: pd,
-          pressed: "shapes" === Bd.style ? sd : Yd.current
+      const Zb = (0, Ob.i)(wb, Mb.touchActionButtons);
+      return (null !== (bb = (0, Lb.b)(Bb, Eb)) && void 0 !== bb ? bb : (0, Lb.i)(jb, zb > 1, Zb, sb)) ? "movement" === pb || "cursor" === pb ? null : (0, Cb.jsxs)(Cb.Fragment, {
+        children: [rb && (0, Cb.jsx)(Kb, {
+          custom: Rb.forGuns && "shapes" === Rb.style ? Rb : null,
+          touch: wb
+        }), !rb && (0, Cb.jsx)(Ub.b, {
+          settings: Rb,
+          touch: wb,
+          pressRef: mb,
+          pressed: "shapes" === Rb.style ? cb : hb.current
         })]
       }) : null
     }));
 
-    function yd() {
-      return Rd.gameBridge.lookup("cameraZoom", null)
+    function Fb() {
+      return pb.gameBridge.lookup("cameraZoom", null)
     }
-    const bd = [{
+    const Bb = [{
         current: null
       }, {
         current: null
@@ -155,359 +155,359 @@ export const modules = {
       }, {
         current: null
       }],
-      Td = {
+      sb = {
         current: null
       },
-      pd = {
+      mb = {
         current: null
       };
-    let Yd = 0,
-      gd = 0;
+    let hb = 0,
+      zb = 0;
 
-    function wd(dd) {
-      gd = dd, bd[0].current || Td.current || pd.current ? Jd(dd) : Yd = dd
+    function Xb(bb) {
+      zb = bb, Bb[0].current || sb.current || mb.current ? jb(bb) : hb = bb
     }
 
-    function Ed(dd) {
-      return ((0, vd.g)(dd) - (0, vd.g)(0)) * window.innerHeight / 100
+    function xb(bb) {
+      return ((0, Lb.f)(bb) - (0, Lb.f)(0)) * window.innerHeight / 100
     }
 
-    function Jd(dd) {
-      var Od;
-      if (null === (Od = pd.current) || void 0 === Od || Od.call(pd, Ed(dd)), bd[0].current) {
-        const Od = `${(0,vd.g)(dd)}vh`;
-        bd[0].current.style.transform = `translateX(calc(0px - ${Od}))`, bd[1].current.style.transform = `translateX(calc(0px + ${Od}))`, bd[2].current.style.transform = `translateY(calc(0px - ${Od}))`, bd[3].current.style.transform = `translateY(calc(0px + ${Od}))`
+    function jb(bb) {
+      var wb;
+      if (null === (wb = mb.current) || void 0 === wb || wb.call(mb, xb(bb)), Bb[0].current) {
+        const wb = `${(0,Lb.f)(bb)}vh`;
+        Bb[0].current.style.transform = `translateX(calc(0px - ${wb}))`, Bb[1].current.style.transform = `translateX(calc(0px + ${wb}))`, Bb[2].current.style.transform = `translateY(calc(0px - ${wb}))`, Bb[3].current.style.transform = `translateY(calc(0px + ${wb}))`
       }
-      Td.current && (Td.current.style.filter = `blur(${Math.round(dd/10)}px)`)
+      sb.current && (sb.current.style.filter = `blur(${Math.round(bb/10)}px)`)
     }
 
-    function Ud(dd) {
+    function Kb(bb) {
       let {
-        custom: Od,
-        touch: md
-      } = dd;
-      const Rd = (0, Fd.i)("aimingOverlay", "none"),
-        Xd = "1.2vh",
-        Kd = "0.3vh";
-      (0, Wd.useEffect)((() => {
-        Yd && Jd(Yd)
+        custom: wb,
+        touch: Mb
+      } = bb;
+      const pb = (0, Hb.h)("aimingOverlay", "none"),
+        Vb = "1.2vh",
+        gb = "0.3vh";
+      (0, eb.useEffect)((() => {
+        hb && jb(hb)
       }), []);
-      const hd = (0, Wd.useRef)(null !== Od);
-      return (0, Wd.useLayoutEffect)((() => {
-        var dd;
-        Od ? null === (dd = pd.current) || void 0 === dd || dd.call(pd, Ed(gd)) : hd.current && Jd(gd);
-        hd.current = null !== Od
-      }), [Od]), (0, qd.jsxs)(qd.Fragment, {
-        children: ["sniper" === Rd && (0, qd.jsxs)("div", {
-          ref: Td,
+      const lb = (0, eb.useRef)(null !== wb);
+      return (0, eb.useLayoutEffect)((() => {
+        var bb;
+        wb ? null === (bb = mb.current) || void 0 === bb || bb.call(mb, xb(zb)) : lb.current && jb(zb);
+        lb.current = null !== wb
+      }), [wb]), (0, Cb.jsxs)(Cb.Fragment, {
+        children: ["sniper" === pb && (0, Cb.jsxs)("div", {
+          ref: sb,
           className: "GunCrosshairOverlayWrapper",
-          children: [(0, qd.jsx)("div", {
+          children: [(0, Cb.jsx)("div", {
             className: "GunCrosshairOverlay"
-          }), (0, qd.jsx)("div", {
+          }), (0, Cb.jsx)("div", {
             className: "GunCrosshairOverlayLine1"
-          }), (0, qd.jsx)("div", {
+          }), (0, Cb.jsx)("div", {
             className: "GunCrosshairOverlayLine2"
-          }), (0, qd.jsx)("div", {
+          }), (0, Cb.jsx)("div", {
             className: "GunCrosshairOverlayDot"
           })]
-        }), (0, qd.jsxs)("div", {
+        }), (0, Cb.jsxs)("div", {
           className: "GunCrosshairWrapper",
           style: {
-            opacity: "sniper" === Rd ? 0 : 1
+            opacity: "sniper" === pb ? 0 : 1
           },
-          children: [Od && (0, qd.jsx)(od.d, {
-            settings: Od,
-            touch: md,
-            spreadRef: pd
-          }), !Od && (0, qd.jsxs)(qd.Fragment, {
-            children: [(0, qd.jsx)("div", {
+          children: [wb && (0, Cb.jsx)(Ub.b, {
+            settings: wb,
+            touch: Mb,
+            spreadRef: mb
+          }), !wb && (0, Cb.jsxs)(Cb.Fragment, {
+            children: [(0, Cb.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: Xd,
-                height: Kd,
+                width: Vb,
+                height: gb,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: bd[0]
-            }), (0, qd.jsx)("div", {
+              ref: Bb[0]
+            }), (0, Cb.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: Xd,
-                height: Kd,
+                width: Vb,
+                height: gb,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: bd[1]
-            }), (0, qd.jsx)("div", {
+              ref: Bb[1]
+            }), (0, Cb.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: Kd,
-                height: Xd,
+                width: gb,
+                height: Vb,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: bd[2]
-            }), (0, qd.jsx)("div", {
+              ref: Bb[2]
+            }), (0, Cb.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: Kd,
-                height: Xd,
+                width: gb,
+                height: Vb,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: bd[3]
+              ref: Bb[3]
             })]
           })]
         })]
       })
     }
   },
-  35535: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd
+  35320: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb
     });
-    var Wd = md(5197),
-      Fd = md(5206);
+    var eb = Mb(5387),
+      Hb = Mb(5395);
 
-    function Rd(dd) {
+    function pb(bb) {
       let {
-        children: Od,
-        showing: md,
-        globallyUniqueKey: Rd,
-        alwaysMountChildren: Xd = !1,
-        doGameplayStartStopOnShow: Kd = !0,
-        keepsMovement: hd = !1
-      } = dd;
-      return (0, Fd.e)(!0, md, Rd, hd), (0, Wd.b)(Kd, md), md || Xd ? Od : null
+        children: wb,
+        showing: Mb,
+        globallyUniqueKey: pb,
+        alwaysMountChildren: Vb = !1,
+        doGameplayStartStopOnShow: gb = !0,
+        keepsMovement: lb = !1
+      } = bb;
+      return (0, Hb.d)(!0, Mb, pb, lb), (0, eb.b)(gb, Mb), Mb || Vb ? wb : null
     }
   },
-  35511: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Hd,
-      g: () => qd
+  35294: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Eb,
+      c: () => Cb
     });
-    md(35513);
-    var Wd = md(1155),
-      Fd = md.n(Wd),
-      Rd = md(66),
-      Xd = md(35508);
+    Mb(35298);
+    var eb = Mb(1159),
+      Hb = Mb.n(eb),
+      pb = Mb(64),
+      Vb = Mb(35291);
 
-    function Kd(dd, Od) {
-      return Math.max(1, Math.round(dd * Od))
+    function gb(bb, wb) {
+      return Math.max(1, Math.round(bb * wb))
     }
 
-    function hd(dd, Od) {
-      const md = Od * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        Wd = function(dd, Od) {
-          if (dd.lines) return Kd(dd.lineThickness, Od) % 2;
-          if (dd.dot) return Kd(dd.dotSize, Od) % 2;
-          return vd(dd, Od) % 2
-        }(dd, Od),
-        Fd = Qd(dd.lineThickness * md, Wd),
-        Rd = Kd(dd.lineLength, md),
-        Xd = Math.round(dd.gap * md),
-        hd = dd.outline > 0 ? Kd(dd.outline, md) : 0,
-        od = [];
-      if (dd.lines && (od.push({
-          x: Fd + Xd,
+    function lb(bb, wb) {
+      const Mb = wb * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        eb = function(bb, wb) {
+          if (bb.lines) return gb(bb.lineThickness, wb) % 2;
+          if (bb.dot) return gb(bb.dotSize, wb) % 2;
+          return Lb(bb, wb) % 2
+        }(bb, wb),
+        Hb = Ib(bb.lineThickness * Mb, eb),
+        pb = gb(bb.lineLength, Mb),
+        Vb = Math.round(bb.gap * Mb),
+        lb = bb.outline > 0 ? gb(bb.outline, Mb) : 0,
+        Ub = [];
+      if (bb.lines && (Ub.push({
+          x: Hb + Vb,
           y: 0,
-          w: Rd,
-          h: Fd,
+          w: pb,
+          h: Hb,
           arm: "right"
-        }), od.push({
-          x: -Xd - Rd,
+        }), Ub.push({
+          x: -Vb - pb,
           y: 0,
-          w: Rd,
-          h: Fd,
+          w: pb,
+          h: Hb,
           arm: "left"
-        }), od.push({
+        }), Ub.push({
           x: 0,
-          y: Fd + Xd,
-          w: Fd,
-          h: Rd,
+          y: Hb + Vb,
+          w: Hb,
+          h: pb,
           arm: "down"
-        }), dd.tStyle || od.push({
+        }), bb.tStyle || Ub.push({
           x: 0,
-          y: -Xd - Rd,
-          w: Fd,
-          h: Rd,
+          y: -Vb - pb,
+          w: Hb,
+          h: pb,
           arm: "up"
-        }), 0 === Xd && od.push({
+        }), 0 === Vb && Ub.push({
           x: 0,
           y: 0,
-          w: Fd,
-          h: Fd
-        })), dd.dot) {
-        const Od = Qd(dd.dotSize * md, Wd),
-          Rd = dd.lines && 0 === Xd && dd.dotSize > dd.lineThickness ? Math.max(Od, Fd + 2) : Od,
-          Kd = (Fd - Rd) / 2;
-        od.push({
-          x: Kd,
-          y: Kd,
-          w: Rd,
-          h: Rd
+          w: Hb,
+          h: Hb
+        })), bb.dot) {
+        const wb = Ib(bb.dotSize * Mb, eb),
+          pb = bb.lines && 0 === Vb && bb.dotSize > bb.lineThickness ? Math.max(wb, Hb + 2) : wb,
+          gb = (Hb - pb) / 2;
+        Ub.push({
+          x: gb,
+          y: gb,
+          w: pb,
+          h: pb
         })
       }
-      const Nd = od.map((dd => ({
-        ...dd,
-        x: dd.x - hd,
-        y: dd.y - hd,
-        w: dd.w + 2 * hd,
-        h: dd.h + 2 * hd
+      const tb = Ub.map((bb => ({
+        ...bb,
+        x: bb.x - lb,
+        y: bb.y - lb,
+        w: bb.w + 2 * lb,
+        h: bb.h + 2 * lb
       })));
-      let qd = null,
-        Hd = null;
-      if (dd.circle) {
-        const Od = Kd(dd.circleThickness, md),
-          Rd = function(dd, Od) {
-            return dd + (dd % 2 === Od ? 0 : 1)
-          }(vd(dd, md), Wd),
-          Xd = (Fd - Rd) / 2;
-        qd = td(Xd, Rd, Od), hd > 0 && (Hd = td(Xd - hd, Rd + 2 * hd, Od + 2 * hd))
+      let Cb = null,
+        Eb = null;
+      if (bb.circle) {
+        const wb = gb(bb.circleThickness, Mb),
+          pb = function(bb, wb) {
+            return bb + (bb % 2 === wb ? 0 : 1)
+          }(Lb(bb, Mb), eb),
+          Vb = (Hb - pb) / 2;
+        Cb = Ob(Vb, pb, wb), lb > 0 && (Eb = Ob(Vb - lb, pb + 2 * lb, wb + 2 * lb))
       }
       return {
-        cell: Fd,
-        fills: od,
-        outlines: hd > 0 ? Nd : [],
-        ring: qd,
-        ringOutline: Hd
+        cell: Hb,
+        fills: Ub,
+        outlines: lb > 0 ? tb : [],
+        ring: Cb,
+        ringOutline: Eb
       }
     }
 
-    function vd(dd, Od) {
-      return Math.round(dd.circleRadius * Od * 2 + Kd(dd.circleThickness, Od))
+    function Lb(bb, wb) {
+      return Math.round(bb.circleRadius * wb * 2 + gb(bb.circleThickness, wb))
     }
 
-    function Qd(dd, Od) {
-      return Math.max(2 - Od, 2 * Math.round((dd - Od) / 2) + Od)
+    function Ib(bb, wb) {
+      return Math.max(2 - wb, 2 * Math.round((bb - wb) / 2) + wb)
     }
 
-    function td(dd, Od, md) {
-      const Wd = 2 * md >= Od - 1;
+    function Ob(bb, wb, Mb) {
+      const eb = 2 * Mb >= wb - 1;
       return {
-        x: dd,
-        y: dd,
-        size: Od,
-        border: Math.min(md, Math.floor(Od / 2)),
-        filled: Wd
+        x: bb,
+        y: bb,
+        size: wb,
+        border: Math.min(Mb, Math.floor(wb / 2)),
+        filled: eb
       }
     }
-    var od = md(1341);
-    const Nd = 1.4;
+    var Ub = Mb(1364);
+    const tb = 1.4;
 
-    function qd(dd, Od) {
-      return dd && Od ? `scale(${Nd})` : "scale(1)"
+    function Cb(bb, wb) {
+      return bb && wb ? `scale(${tb})` : "scale(1)"
     }
 
-    function Hd(dd) {
-      return "classic" === dd.settings.style ? (0, od.jsx)(Td, {
-        ...dd
-      }) : (0, od.jsx)(Ud, {
-        ...dd
+    function Eb(bb) {
+      return "classic" === bb.settings.style ? (0, Ub.jsx)(sb, {
+        ...bb
+      }) : (0, Ub.jsx)(Kb, {
+        ...bb
       })
     }
-    const yd = .125;
+    const Fb = .125;
 
-    function bd(dd, Od) {
-      const md = {};
-      if (dd.color !== Xd.d.color && (md.color = (0, Xd.j)(dd.color)), dd.opacity !== Xd.d.opacity && (md.opacity = dd.opacity / 100), dd.outline !== Xd.d.outline || dd.outlineColor !== Xd.d.outlineColor) {
-        const Od = dd.outline,
-          Wd = (0, Xd.j)(dd.outlineColor);
-        md.textShadow = Od > 0 ? `-${Od}px 0 ${Wd}, 0 ${Od}px ${Wd}, ${Od}px 0 ${Wd}, 0 -${Od}px ${Wd}` : "none"
+    function Bb(bb, wb) {
+      const Mb = {};
+      if (bb.color !== Vb.e.color && (Mb.color = (0, Vb.h)(bb.color)), bb.opacity !== Vb.e.opacity && (Mb.opacity = bb.opacity / 100), bb.outline !== Vb.e.outline || bb.outlineColor !== Vb.e.outlineColor) {
+        const wb = bb.outline,
+          eb = (0, Vb.h)(bb.outlineColor);
+        Mb.textShadow = wb > 0 ? `-${wb}px 0 ${eb}, 0 ${wb}px ${eb}, ${wb}px 0 ${eb}, 0 -${wb}px ${eb}` : "none"
       }
-      if (dd.size !== Xd.d.size) {
-        const Wd = dd.size / 100;
-        md.fontSize = Od ? `calc(max(1.3rem, 18px) * ${Wd})` : `calc(1.3rem * ${Wd})`, md.marginTop = `-${yd}em`, md.transformOrigin = `50% calc(50% + ${yd}em)`
+      if (bb.size !== Vb.e.size) {
+        const eb = bb.size / 100;
+        Mb.fontSize = wb ? `calc(max(1.3rem, 18px) * ${eb})` : `calc(1.3rem * ${eb})`, Mb.marginTop = `-${Fb}em`, Mb.transformOrigin = `50% calc(50% + ${Fb}em)`
       }
-      return md
+      return Mb
     }
 
-    function Td(dd) {
+    function sb(bb) {
       let {
-        settings: Od,
-        touch: md,
-        inPreview: Wd,
-        inEditor: Rd,
-        pressed: Xd = !1,
-        pressRef: Kd
-      } = dd;
-      return (0, od.jsx)("div", {
-        className: Fd()("Crosshair", {
-          Touch: md,
-          CrosshairInPreview: Wd,
-          CrosshairInEditor: Rd || Wd
+        settings: wb,
+        touch: Mb,
+        inPreview: eb,
+        inEditor: pb,
+        pressed: Vb = !1,
+        pressRef: gb
+      } = bb;
+      return (0, Ub.jsx)("div", {
+        className: Hb()("Crosshair", {
+          Touch: Mb,
+          CrosshairInPreview: eb,
+          CrosshairInEditor: pb || eb
         }),
-        ref: Kd,
+        ref: gb,
         style: {
-          transform: qd(Xd, Od.growOnClick),
-          ...bd(Od, md)
+          transform: Cb(Vb, wb.growOnClick),
+          ...Bb(wb, Mb)
         },
         children: "+"
       })
     }
 
-    function pd(dd, Od) {
-      return dd / Od + "px"
+    function mb(bb, wb) {
+      return bb / wb + "px"
     }
 
-    function Yd(dd, Od, md, Wd) {
+    function hb(bb, wb, Mb, eb) {
       return {
-        ...Ed(dd, Od, md),
-        width: pd(dd.w, md),
-        height: pd(dd.h, md),
-        background: Wd
+        ...xb(bb, wb, Mb),
+        width: mb(bb.w, Mb),
+        height: mb(bb.h, Mb),
+        background: eb
       }
     }
 
-    function gd(dd, Od, md) {
+    function zb(bb, wb, Mb) {
       return {
-        left: pd(dd.x, Od),
-        top: pd(dd.y, Od),
-        width: pd(dd.size, Od),
-        height: pd(dd.size, Od),
-        borderWidth: pd(dd.border, Od),
-        borderColor: md,
-        background: dd.filled ? md : void 0
+        left: mb(bb.x, wb),
+        top: mb(bb.y, wb),
+        width: mb(bb.size, wb),
+        height: mb(bb.size, wb),
+        borderWidth: mb(bb.border, wb),
+        borderColor: Mb,
+        background: bb.filled ? Mb : void 0
       }
     }
-    const wd = {
+    const Xb = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function Ed(dd, Od, md) {
-      const [Wd, Fd] = dd.arm ? wd[dd.arm] : [0, 0], Rd = Math.round(Od * md);
+    function xb(bb, wb, Mb) {
+      const [eb, Hb] = bb.arm ? Xb[bb.arm] : [0, 0], pb = Math.round(wb * Mb);
       return {
-        left: pd(dd.x + Wd * Rd, md),
-        top: pd(dd.y + Fd * Rd, md)
+        left: mb(bb.x + eb * pb, Mb),
+        top: mb(bb.y + Hb * pb, Mb)
       }
     }
 
-    function Jd(dd) {
-      return dd.arm ? {
-        "data-arm": dd.arm,
-        "data-x": dd.x,
-        "data-y": dd.y
+    function jb(bb) {
+      return bb.arm ? {
+        "data-arm": bb.arm,
+        "data-x": bb.x,
+        "data-y": bb.y
       } : {}
     }
 
-    function Ud(dd) {
+    function Kb(bb) {
       let {
-        settings: Od,
-        inPreview: md,
-        inEditor: Wd,
-        pressed: Kd = !1,
-        spread: vd,
-        spreadRef: Qd
-      } = dd;
-      const td = (0, Rd.useRef)(null),
+        settings: wb,
+        inPreview: Mb,
+        inEditor: eb,
+        pressed: gb = !1,
+        spread: Lb,
+        spreadRef: Ib
+      } = bb;
+      const Ob = (0, pb.useRef)(null),
         {
-          box: qd,
-          dpr: Hd
-        } = function(dd) {
-          const [Od, md] = (0, Rd.useState)({
+          box: Cb,
+          dpr: Eb
+        } = function(bb) {
+          const [wb, Mb] = (0, pb.useState)({
             box: {
               left: 0,
               top: 0,
@@ -516,200 +516,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, Rd.useLayoutEffect)((() => {
-            const Od = dd.current;
-            if (!Od) return;
-            const Wd = () => {
-              const dd = Od.getBoundingClientRect(),
-                Wd = window.devicePixelRatio || 1;
-              md((Od => Od.dpr === Wd && Od.box.left === dd.left && Od.box.top === dd.top && Od.box.width === dd.width && Od.box.height === dd.height ? Od : {
+          return (0, pb.useLayoutEffect)((() => {
+            const wb = bb.current;
+            if (!wb) return;
+            const eb = () => {
+              const bb = wb.getBoundingClientRect(),
+                eb = window.devicePixelRatio || 1;
+              Mb((wb => wb.dpr === eb && wb.box.left === bb.left && wb.box.top === bb.top && wb.box.width === bb.width && wb.box.height === bb.height ? wb : {
                 box: {
-                  left: dd.left,
-                  top: dd.top,
-                  width: dd.width,
-                  height: dd.height
+                  left: bb.left,
+                  top: bb.top,
+                  width: bb.width,
+                  height: bb.height
                 },
-                dpr: Wd
+                dpr: eb
               }))
             };
-            Wd();
-            const Fd = new ResizeObserver(Wd);
-            return Fd.observe(Od), window.addEventListener("resize", Wd), window.addEventListener("scroll", Wd, !0), () => {
-              Fd.disconnect(), window.removeEventListener("resize", Wd), window.removeEventListener("scroll", Wd, !0)
+            eb();
+            const Hb = new ResizeObserver(eb);
+            return Hb.observe(wb), window.addEventListener("resize", eb), window.addEventListener("scroll", eb, !0), () => {
+              Hb.disconnect(), window.removeEventListener("resize", eb), window.removeEventListener("scroll", eb, !0)
             }
-          }), [dd]), Od
-        }(td),
-        yd = (0, Rd.useRef)(Hd);
-      yd.current = Hd;
-      const bd = hd(Od, Hd, Kd && Od.growOnClick ? Nd : 1),
-        Td = function(dd, Od, md) {
-          const Wd = Math.round((dd.left + dd.width / 2) * md - Od / 2),
-            Fd = Math.round((dd.top + dd.height / 2) * md - Od / 2);
+          }), [bb]), wb
+        }(Ob),
+        Fb = (0, pb.useRef)(Eb);
+      Fb.current = Eb;
+      const Bb = lb(wb, Eb, gb && wb.growOnClick ? tb : 1),
+        sb = function(bb, wb, Mb) {
+          const eb = Math.round((bb.left + bb.width / 2) * Mb - wb / 2),
+            Hb = Math.round((bb.top + bb.height / 2) * Mb - wb / 2);
           return {
-            x: Wd / md - dd.left,
-            y: Fd / md - dd.top
+            x: eb / Mb - bb.left,
+            y: Hb / Mb - bb.top
           }
-        }(qd, bd.cell, Hd),
-        pd = (0, Xd.j)(Od.color),
-        wd = (0, Xd.j)(Od.outlineColor),
-        Ud = (0, Rd.useRef)(0);
-      (0, Rd.useLayoutEffect)((() => {
-        if (Qd) return Qd.current = dd => {
-          var Od;
-          Ud.current = dd, null === (Od = td.current) || void 0 === Od || Od.querySelectorAll("[data-arm]").forEach((Od => {
-            Object.assign(Od.style, Ed(function(dd) {
+        }(Cb, Bb.cell, Eb),
+        mb = (0, Vb.h)(wb.color),
+        Xb = (0, Vb.h)(wb.outlineColor),
+        Kb = (0, pb.useRef)(0);
+      (0, pb.useLayoutEffect)((() => {
+        if (Ib) return Ib.current = bb => {
+          var wb;
+          Kb.current = bb, null === (wb = Ob.current) || void 0 === wb || wb.querySelectorAll("[data-arm]").forEach((wb => {
+            Object.assign(wb.style, xb(function(bb) {
               return {
-                x: Number(dd.dataset.x),
-                y: Number(dd.dataset.y),
-                arm: dd.dataset.arm
+                x: Number(bb.dataset.x),
+                y: Number(bb.dataset.y),
+                arm: bb.dataset.arm
               }
-            }(Od), dd, yd.current))
+            }(wb), bb, Fb.current))
           }))
         }, () => {
-          Qd.current = null
+          Ib.current = null
         }
-      }), [Qd]);
-      const xd = null !== vd && void 0 !== vd ? vd : Ud.current;
-      return (0, od.jsx)("div", {
-        ref: td,
-        className: Fd()("CrosshairShapes", {
-          CrosshairInPreview: md,
-          CrosshairInEditor: Wd || md,
-          CrosshairSpreads: void 0 !== Qd
+      }), [Ib]);
+      const rb = null !== Lb && void 0 !== Lb ? Lb : Kb.current;
+      return (0, Ub.jsx)("div", {
+        ref: Ob,
+        className: Hb()("CrosshairShapes", {
+          CrosshairInPreview: Mb,
+          CrosshairInEditor: eb || Mb,
+          CrosshairSpreads: void 0 !== Ib
         }),
-        children: (0, od.jsx)("div", {
+        children: (0, Ub.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: Td.x,
-            top: Td.y,
-            opacity: Od.opacity / 100
+            left: sb.x,
+            top: sb.y,
+            opacity: wb.opacity / 100
           },
-          children: (0, od.jsxs)("div", {
+          children: (0, Ub.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [bd.ringOutline && (0, od.jsx)("div", {
+            children: [Bb.ringOutline && (0, Ub.jsx)("div", {
               className: "CrosshairRing",
-              style: gd(bd.ringOutline, Hd, wd)
-            }), bd.outlines.map(((dd, Od) => (0, od.jsx)("div", {
+              style: zb(Bb.ringOutline, Eb, Xb)
+            }), Bb.outlines.map(((bb, wb) => (0, Ub.jsx)("div", {
               className: "CrosshairPart",
-              ...Jd(dd),
-              style: Yd(dd, xd, Hd, wd)
-            }, `o${Od}`))), bd.ring && (0, od.jsx)("div", {
+              ...jb(bb),
+              style: hb(bb, rb, Eb, Xb)
+            }, `o${wb}`))), Bb.ring && (0, Ub.jsx)("div", {
               className: "CrosshairRing",
-              style: gd(bd.ring, Hd, pd)
-            }), bd.fills.map(((dd, Od) => (0, od.jsx)("div", {
+              style: zb(Bb.ring, Eb, mb)
+            }), Bb.fills.map(((bb, wb) => (0, Ub.jsx)("div", {
               className: "CrosshairPart",
-              ...Jd(dd),
-              style: Yd(dd, xd, Hd, pd)
-            }, `f${Od}`)))]
+              ...jb(bb),
+              style: hb(bb, rb, Eb, mb)
+            }, `f${wb}`)))]
           })
         })
       })
     }
   },
-  35521: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Qd,
-      e: () => yd,
-      h: () => Hd
+  35305: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Ib,
+      e: () => Fb,
+      g: () => Eb
     });
-    var Wd = md(35508);
-    const Fd = "XH1-",
-      Rd = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      Xd = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      Kd = ["color", "outlineColor"],
-      hd = 1 + 3 * Kd.length + Xd.length + 1,
-      vd = Math.ceil(8 * hd / Math.log2(62)),
-      Qd = Fd.length + vd;
+    var eb = Mb(35291);
+    const Hb = "XH1-",
+      pb = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      Vb = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      gb = ["color", "outlineColor"],
+      lb = 1 + 3 * gb.length + Vb.length + 1,
+      Lb = Math.ceil(8 * lb / Math.log2(62)),
+      Ib = Hb.length + Lb;
 
-    function td(dd) {
-      let Od = 90;
-      for (const md of dd) Od = 31 * Od + md & 255;
-      return Od
+    function Ob(bb) {
+      let wb = 90;
+      for (const Mb of bb) wb = 31 * wb + Mb & 255;
+      return wb
     }
-    const od = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Nd = BigInt(od.length);
+    const Ub = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      tb = BigInt(Ub.length);
 
-    function qd(dd, Od) {
-      let md = 0n;
-      for (const Fd of dd) {
-        const dd = od.indexOf(Fd);
-        if (dd < 0) return null;
-        md = md * Nd + BigInt(dd)
+    function Cb(bb, wb) {
+      let Mb = 0n;
+      for (const Hb of bb) {
+        const bb = Ub.indexOf(Hb);
+        if (bb < 0) return null;
+        Mb = Mb * tb + BigInt(bb)
       }
-      if (md >> BigInt(8 * Od) !== 0n) return null;
-      const Wd = [];
-      for (let Fd = 0; Fd < Od; Fd++) Wd.unshift(Number(0xffn & md)), md >>= 8n;
-      return Wd
+      if (Mb >> BigInt(8 * wb) !== 0n) return null;
+      const eb = [];
+      for (let Hb = 0; Hb < wb; Hb++) eb.unshift(Number(0xffn & Mb)), Mb >>= 8n;
+      return eb
     }
 
-    function Hd(dd) {
-      let Od = "shapes" === dd.style ? 1 : 0;
-      Rd.forEach(((md, Wd) => {
-        dd[md] && (Od |= 1 << Wd + 1)
+    function Eb(bb) {
+      let wb = "shapes" === bb.style ? 1 : 0;
+      pb.forEach(((Mb, eb) => {
+        bb[Mb] && (wb |= 1 << eb + 1)
       }));
-      const md = [Od];
-      for (const Fd of Kd) {
-        const Od = (0, Wd.f)(Fd, dd[Fd]);
-        md.push(Od >> 16 & 255, Od >> 8 & 255, 255 & Od)
+      const Mb = [wb];
+      for (const Hb of gb) {
+        const wb = (0, eb.f)(Hb, bb[Hb]);
+        Mb.push(wb >> 16 & 255, wb >> 8 & 255, 255 & wb)
       }
-      for (const Fd of Xd) {
+      for (const Hb of Vb) {
         const {
-          min: Od,
-          step: Rd
-        } = Wd.b[Fd];
-        md.push(Math.round(((0, Wd.f)(Fd, dd[Fd]) - Od) / Rd))
+          min: wb,
+          step: pb
+        } = eb.c[Hb];
+        Mb.push(Math.round(((0, eb.f)(Hb, bb[Hb]) - wb) / pb))
       }
-      return md.push(td(md)), Fd + function(dd, Od) {
-        let md = 0n;
-        for (const Fd of dd) md = md << 8n | BigInt(Fd);
-        let Wd = "";
-        for (let Fd = 0; Fd < Od; Fd++) Wd = od[Number(md % Nd)] + Wd, md /= Nd;
-        return Wd
-      }(md, vd)
+      return Mb.push(Ob(Mb)), Hb + function(bb, wb) {
+        let Mb = 0n;
+        for (const Hb of bb) Mb = Mb << 8n | BigInt(Hb);
+        let eb = "";
+        for (let Hb = 0; Hb < wb; Hb++) eb = Ub[Number(Mb % tb)] + eb, Mb /= tb;
+        return eb
+      }(Mb, Lb)
     }
 
-    function yd(dd) {
-      for (const Od of dd.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${vd}})`, "gi"))) {
-        const dd = bd(qd(Od[1], hd));
-        if (dd) return dd
+    function Fb(bb) {
+      for (const wb of bb.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Lb}})`, "gi"))) {
+        const bb = Bb(Cb(wb[1], lb));
+        if (bb) return bb
       }
       return null
     }
 
-    function bd(dd) {
-      if (!dd || dd.length !== hd || td(dd.slice(0, -1)) !== dd[dd.length - 1]) return null;
-      const Od = dd[0],
-        md = {
-          ...Wd.d,
-          style: 1 & Od ? "shapes" : "classic"
+    function Bb(bb) {
+      if (!bb || bb.length !== lb || Ob(bb.slice(0, -1)) !== bb[bb.length - 1]) return null;
+      const wb = bb[0],
+        Mb = {
+          ...eb.e,
+          style: 1 & wb ? "shapes" : "classic"
         };
-      Rd.forEach(((dd, Wd) => {
-        md[dd] = 0 !== (Od & 1 << Wd + 1)
+      pb.forEach(((bb, eb) => {
+        Mb[bb] = 0 !== (wb & 1 << eb + 1)
       }));
-      let Fd = 1;
-      for (const Wd of Kd) md[Wd] = dd[Fd] << 16 | dd[Fd + 1] << 8 | dd[Fd + 2], Fd += 3;
-      for (const Rd of Xd) {
+      let Hb = 1;
+      for (const eb of gb) Mb[eb] = bb[Hb] << 16 | bb[Hb + 1] << 8 | bb[Hb + 2], Hb += 3;
+      for (const pb of Vb) {
         const {
-          min: Od,
-          step: Xd
-        } = Wd.b[Rd];
-        md[Rd] = (0, Wd.f)(Rd, Od + dd[Fd] * Xd), Fd++
+          min: wb,
+          step: Vb
+        } = eb.c[pb];
+        Mb[pb] = (0, eb.f)(pb, wb + bb[Hb] * Vb), Hb++
       }
-      return md
+      return Mb
     }
   },
-  35508: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Wd,
-      d: () => Fd,
-      f: () => Rd,
-      j: () => vd,
-      n: () => hd,
-      o: () => Qd,
-      q: () => Kd,
-      u: () => Xd
+  35291: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => eb,
+      e: () => Hb,
+      f: () => pb,
+      h: () => Lb,
+      k: () => lb,
+      n: () => Ib,
+      p: () => gb,
+      q: () => Vb
     });
-    const Wd = {
+    const eb = {
         opacity: {
           min: 5,
           max: 100,
@@ -766,7 +766,7 @@ export const modules = {
           step: 1
         }
       },
-      Fd = Object.freeze({
+      Hb = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -787,533 +787,533 @@ export const modules = {
         forGuns: !1
       });
 
-    function Rd(dd, Od) {
-      var md;
+    function pb(bb, wb) {
+      var Mb;
       const {
-        min: Rd,
-        max: Xd,
-        step: Kd
-      } = Wd[dd];
-      if (!Number.isFinite(Od)) return Fd[dd];
-      const hd = (null !== (md = String(Kd).split(".")[1]) && void 0 !== md ? md : "").length,
-        vd = Number((Math.round(Od / Kd) * Kd).toFixed(hd));
-      return Math.min(Xd, Math.max(Rd, vd))
+        min: pb,
+        max: Vb,
+        step: gb
+      } = eb[bb];
+      if (!Number.isFinite(wb)) return Hb[bb];
+      const lb = (null !== (Mb = String(gb).split(".")[1]) && void 0 !== Mb ? Mb : "").length,
+        Lb = Number((Math.round(wb / gb) * gb).toFixed(lb));
+      return Math.min(Vb, Math.max(pb, Lb))
     }
 
-    function Xd(dd, Od, md) {
-      const Wd = "number" === typeof md ? Rd(Od, md) : md;
+    function Vb(bb, wb, Mb) {
+      const eb = "number" === typeof Mb ? pb(wb, Mb) : Mb;
       return {
-        ...dd,
-        [Od]: Wd
+        ...bb,
+        [wb]: eb
       }
     }
 
-    function Kd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(Fd).every((Wd => md.includes(Wd) || dd[Wd] === Od[Wd]))
+    function gb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Hb).every((eb => Mb.includes(eb) || bb[eb] === wb[eb]))
     }
 
-    function hd(dd) {
-      return Kd(dd, Fd)
+    function lb(bb) {
+      return gb(bb, Hb)
     }
 
-    function vd(dd) {
-      return `#${dd.toString(16).padStart(6,"0")}`
+    function Lb(bb) {
+      return `#${bb.toString(16).padStart(6,"0")}`
     }
 
-    function Qd(dd) {
-      const Od = /^#?([0-9a-f]{6})$/i.exec(dd.trim());
-      return Od ? parseInt(Od[1], 16) : null
+    function Ib(bb) {
+      const wb = /^#?([0-9a-f]{6})$/i.exec(bb.trim());
+      return wb ? parseInt(wb[1], 16) : null
     }
   },
-  35524: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => td,
-      g: () => od
+  35309: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Ob,
+      f: () => Ub
     });
-    var Wd = md(66),
-      Fd = md(46),
-      Rd = md(35521),
-      Xd = md(35508);
-    const Kd = "crosshairCode";
-    let hd = null;
-    const vd = new Set;
+    var eb = Mb(64),
+      Hb = Mb(43),
+      pb = Mb(35305),
+      Vb = Mb(35291);
+    const gb = "crosshairCode";
+    let lb = null;
+    const Lb = new Set;
 
-    function Qd() {
-      if (null === hd) {
-        var dd;
-        const Od = Fd.k.getItem(Kd);
-        hd = null !== (dd = "string" === typeof Od ? (0, Rd.e)(Od) : null) && void 0 !== dd ? dd : Xd.d
+    function Ib() {
+      if (null === lb) {
+        var bb;
+        const wb = Hb.i.getItem(gb);
+        lb = null !== (bb = "string" === typeof wb ? (0, pb.e)(wb) : null) && void 0 !== bb ? bb : Vb.e
       }
-      return hd
+      return lb
     }
 
-    function td(dd) {
-      hd = dd, (0, Xd.n)(dd) ? Fd.k.removeItem(Kd) : Fd.k.setItem(Kd, (0, Rd.h)(dd));
-      for (const Od of vd) Od()
+    function Ob(bb) {
+      lb = bb, (0, Vb.k)(bb) ? Hb.i.removeItem(gb) : Hb.i.setItem(gb, (0, pb.g)(bb));
+      for (const wb of Lb) wb()
     }
 
-    function od() {
-      const [dd, Od] = (0, Wd.useState)(Qd);
-      return (0, Wd.useEffect)((() => {
-        const dd = () => {
-          Od(Qd())
+    function Ub() {
+      const [bb, wb] = (0, eb.useState)(Ib);
+      return (0, eb.useEffect)((() => {
+        const bb = () => {
+          wb(Ib())
         };
-        return dd(), md = dd, vd.add(md), () => {
-          vd.delete(md)
+        return bb(), Mb = bb, Lb.add(Mb), () => {
+          Lb.delete(Mb)
         };
-        var md
-      }), []), dd
+        var Mb
+      }), []), bb
     }
   },
-  10106: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Fd,
-      f: () => Xd
+  10292: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Hb,
+      e: () => Vb
     });
-    var Wd = md(210);
-    class Fd {
+    var eb = Mb(214);
+    class Hb {
       constructor() {
         this.marks = new Map, this.fromTap = !1
       }
-      mark(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        this.marks.has(dd) || this.marks.set(dd, Od)
+      mark(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        this.marks.has(bb) || this.marks.set(bb, wb)
       }
       marked() {
-        return Wd.V.flatMap((dd => {
-          var Od;
-          const md = null !== (Od = this.marks.get(dd)) && void 0 !== Od ? Od : Rd.marks.get(dd);
-          return void 0 === md ? [] : [
-            [dd, md]
+        return eb.R.flatMap((bb => {
+          var wb;
+          const Mb = null !== (wb = this.marks.get(bb)) && void 0 !== wb ? wb : pb.marks.get(bb);
+          return void 0 === Mb ? [] : [
+            [bb, Mb]
           ]
         }))
       }
     }
-    const Rd = new Fd;
+    const pb = new Hb;
 
-    function Xd(dd) {
-      Rd.mark(dd)
+    function Vb(bb) {
+      pb.mark(bb)
     }
   },
-  38273: (dd, Od, md) => {
-    function Wd(dd, Od, md, Wd) {
-      return !(md && !dd.aimable) && (!Od || dd.gun && "head" !== Wd)
+  37933: (bb, wb, Mb) => {
+    function eb(bb, wb, Mb, eb) {
+      return !(Mb && !bb.aimable) && (!wb || bb.gun && "head" !== eb)
     }
 
-    function Fd(dd) {
-      return Math.max(.1 * dd, 1)
+    function Hb(bb) {
+      return Math.max(.1 * bb, 1)
     }
 
-    function Rd(dd, Od) {
-      return !dd && Od
+    function pb(bb, wb) {
+      return !bb && wb
     }
-    md.d(Od, {
-      c: () => Rd,
-      g: () => Fd,
-      j: () => Wd
+    Mb.d(wb, {
+      b: () => pb,
+      f: () => Hb,
+      i: () => eb
     })
   },
-  38280: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Kd,
-      h: () => Xd
+  37936: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => gb,
+      e: () => Vb
     });
-    let Wd = null;
-    const Fd = {
+    let eb = null;
+    const Hb = {
         crosshairAccuracy: [],
         turnDamageIndicators: [],
         turnSoundCues: []
       },
-      Rd = {
-        crosshairAccuracy: dd => {
-          const Od = Fd.crosshairAccuracy.at(-1);
-          Od ? Od.hook(dd) : Wd = dd
+      pb = {
+        crosshairAccuracy: bb => {
+          const wb = Hb.crosshairAccuracy.at(-1);
+          wb ? wb.hook(bb) : eb = bb
         },
-        turnDamageIndicators: dd => {
-          var Od;
-          null === (Od = Fd.turnDamageIndicators.at(-1)) || void 0 === Od || Od.hook(dd)
+        turnDamageIndicators: bb => {
+          var wb;
+          null === (wb = Hb.turnDamageIndicators.at(-1)) || void 0 === wb || wb.hook(bb)
         },
-        turnSoundCues: dd => {
-          var Od;
-          null === (Od = Fd.turnSoundCues.at(-1)) || void 0 === Od || Od.hook(dd)
+        turnSoundCues: bb => {
+          var wb;
+          null === (wb = Hb.turnSoundCues.at(-1)) || void 0 === wb || wb.hook(bb)
         }
       };
 
-    function Xd(dd, Od) {
-      const md = {
-          hook: Od
+    function Vb(bb, wb) {
+      const Mb = {
+          hook: wb
         },
-        Xd = Fd[dd];
-      if (Xd.push(md), "crosshairAccuracy" === dd && null !== Wd) {
-        const dd = Wd;
-        Wd = null, Rd.crosshairAccuracy(dd)
+        Vb = Hb[bb];
+      if (Vb.push(Mb), "crosshairAccuracy" === bb && null !== eb) {
+        const bb = eb;
+        eb = null, pb.crosshairAccuracy(bb)
       }
       return () => {
-        const dd = Xd.indexOf(md); - 1 !== dd && Xd.splice(dd, 1)
+        const bb = Vb.indexOf(Mb); - 1 !== bb && Vb.splice(bb, 1)
       }
     }
 
-    function Kd() {
-      return Rd
+    function gb() {
+      return pb
     }
   },
-  35499: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      f: () => Fd
+  35289: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb,
+      i: () => Hb
     });
-    var Wd = md(29);
+    var eb = Mb(26);
 
-    function Fd(dd, Od) {
-      return dd && !Od
+    function Hb(bb, wb) {
+      return bb && !wb
     }
 
-    function Rd() {
-      return Fd(Wd.e.get("isTouchScreen"), Wd.e.get("clientEscMenuOptions").touchActionButtons)
+    function pb() {
+      return Hb(eb.c.get("isTouchScreen"), eb.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  9850: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      d: () => Fd
+  10064: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => pb,
+      g: () => Hb
     });
-    let Wd = null;
-    const Fd = function(dd) {
-        const Od = {
-          cycle: dd,
+    let eb = null;
+    const Hb = function(bb) {
+        const wb = {
+          cycle: bb,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Wd = Od, () => {
-          Wd === Od && (Wd = null)
+        return eb = wb, () => {
+          eb === wb && (eb = null)
         }
       },
-      Rd = () => {
-        var dd;
-        return null !== (dd = Wd) && void 0 !== dd && dd.canCycle() ? Wd.cycle : null
+      pb = () => {
+        var bb;
+        return null !== (bb = eb) && void 0 !== bb && bb.canCycle() ? eb.cycle : null
       }
   },
-  37958: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      d: () => hd,
-      e: () => Xd
+  37646: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb,
+      g: () => lb,
+      i: () => Vb
     });
-    var Wd = md(701),
-      Fd = md(2402);
+    var eb = Mb(661),
+      Hb = Mb(2451);
 
-    function Rd(dd) {
-      return dd === (0, Fd.c)().bV ? (0, Fd.c)().YV : dd
+    function pb(bb) {
+      return bb === (0, Hb.h)().HJ ? (0, Hb.h)().VJ : bb
     }
 
-    function Xd(dd) {
-      return !(0, Wd.O)(dd) && Rd(dd) === (0, Fd.c)().YV
+    function Vb(bb) {
+      return !(0, eb.K)(bb) && pb(bb) === (0, Hb.h)().VJ
     }
-    const Kd = "gravity";
+    const gb = "gravity";
 
-    function hd() {
-      return (0, Fd.c)().physics[Kd][1]
+    function lb() {
+      return (0, Hb.h)().physics[gb][1]
     }
   },
-  38063: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      InGameUi: () => Ud.e,
-      LobbyLeaderboard: () => xd.c,
-      loadCharacterCustomisationUI: () => Bd,
-      loadCharacterPreview: () => Sd,
-      matchmakeAndPlay: () => Ad,
-      matchmakeForAhead: () => Kd.f,
-      setUpGame: () => sd
+  37737: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      InGameUi: () => Kb.e,
+      LobbyLeaderboard: () => rb.b,
+      loadCharacterCustomisationUI: () => Rb,
+      loadCharacterPreview: () => Db,
+      matchmakeAndPlay: () => fb,
+      matchmakeForAhead: () => gb.c,
+      setUpGame: () => cb
     });
-    var Wd = md(1304),
-      Fd = md(180),
-      Rd = md(29),
-      Xd = md(38068),
-      Kd = md(38071),
-      hd = md(2116),
-      vd = md(38112);
+    var eb = Mb(1319),
+      Hb = Mb(192),
+      pb = Mb(26),
+      Vb = Mb(37742),
+      gb = Mb(37744),
+      lb = Mb(2167),
+      Lb = Mb(37776);
 
-    function Qd() {
-      return !1 !== hd.e.get("canCustomiseChar")
+    function Ib() {
+      return !1 !== lb.c.get("canCustomiseChar")
     }
-    let td = !1;
-    var od = md(1415),
-      Nd = md(5341),
-      qd = md(1306),
-      Hd = md(285),
-      yd = md(4820),
-      bd = md(5336),
-      Td = md(10097);
+    let Ob = !1;
+    var Ub = Mb(1447),
+      tb = Mb(5514),
+      Cb = Mb(1321),
+      Eb = Mb(294),
+      Fb = Mb(4967),
+      Bb = Mb(5511),
+      sb = Mb(10286);
 
-    function pd() {
-      return function(dd) {
-        var Od;
-        return !0 !== (null === dd || void 0 === dd ? void 0 : dd.saveData) && !/2g$/.test(null !== (Od = null === dd || void 0 === dd ? void 0 : dd.effectiveType) && void 0 !== Od ? Od : "")
+    function mb() {
+      return function(bb) {
+        var wb;
+        return !0 !== (null === bb || void 0 === bb ? void 0 : bb.saveData) && !/2g$/.test(null !== (wb = null === bb || void 0 === bb ? void 0 : bb.effectiveType) && void 0 !== wb ? wb : "")
       }(navigator.connection)
     }
 
-    function Yd() {
+    function hb() {
       return {
-        joinStarted: bd.d,
-        language: qd.f.get().getCurrentLanguageCode()
+        joinStarted: Bb.d,
+        language: Cb.g.get().getCurrentLanguageCode()
       }
     }
 
-    function gd() {
-      return new Promise((dd => {
-        (0, Nd.y)(dd)
+    function zb() {
+      return new Promise((bb => {
+        (0, tb.q)(bb)
       }))
     }
 
-    function wd() {
-      (0, bd.d)() || (0, Td.loadWasmPlayAhead)().catch((dd => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", dd)
+    function Xb() {
+      (0, Bb.d)() || (0, sb.loadWasmPlayAhead)().catch((bb => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", bb)
       }))
     }
-    var Ed = md(4664),
-      Jd = md(843);
-    var Ud = md(38128),
-      xd = md(38540);
+    var xb = Mb(4835),
+      jb = Mb(829);
+    var Kb = Mb(37788),
+      rb = Mb(38207);
 
-    function Bd() {
-      return md.e(252).then((() => md(45327)))
+    function Rb() {
+      return Mb.e(252).then((() => Mb(45145)))
     }
 
-    function Sd() {
-      return md.e(611).then((() => md(45334)))
+    function Db() {
+      return Mb.e(611).then((() => Mb(45153)))
     }
-    async function sd() {
+    async function cb() {
       return await async function() {
-        if ((0, Nd.e)()) {
-          if (pd()) try {
-            await (0, Nd.u)("wasm loads ahead");
-            const dd = await (0, Td.importClientLoad)();
-            await Promise.race([dd.startLoadAheadOfJoin(Yd()), gd()]), await (0, Nd.u)("wasm previews");
+        if ((0, tb.f)()) {
+          if (mb()) try {
+            await (0, tb.p)("wasm loads ahead");
+            const bb = await (0, sb.importClientLoad)();
+            await Promise.race([bb.startLoadAheadOfJoin(hb()), zb()]), await (0, tb.p)("wasm previews");
             const {
-              pagePreviews: Od
-            } = await Promise.all([md.e(177), md.e(91), md.e(225), md.e(158), md.e(246), md.e(245), md.e(244), md.e(223), md.e(50), md.e(161), md.e(243), md.e(72)]).then((() => md(45347)));
-            Od().prefetch((0, Nd.e)() ? Nd.u : void 0)
-          } catch (dd) {
-            console.warn("[bloxd-wasm-client] the previews' loads ahead of need did not start: the open loads them itself", dd)
+              pagePreviews: wb
+            } = await Promise.all([Mb.e(177), Mb.e(91), Mb.e(225), Mb.e(158), Mb.e(246), Mb.e(245), Mb.e(244), Mb.e(223), Mb.e(50), Mb.e(161), Mb.e(243), Mb.e(72)]).then((() => Mb(45163)));
+            wb().prefetch((0, tb.f)() ? tb.p : void 0)
+          } catch (bb) {
+            console.warn("[bloxd-wasm-client] the previews' loads ahead of need did not start: the open loads them itself", bb)
           }
-          await gd()
+          await zb()
         }
-      }(), (0, Td.loadWasmPreviews)()
+      }(), (0, sb.loadWasmPreviews)()
     }
-    td || (td = !0, document.addEventListener("keydown", (dd => {
-      (0, vd.d)(dd, Qd)
-    }))), pd() && (0, yd.e)((() => {
-      (0, bd.d)() || (0, Td.importClientLoad)().then((async dd => {
-        if ((0, bd.d)()) return;
-        const Od = dd.startLoadAheadOfJoin(Yd());
-        (0, Hd.e)((() => {
-          (0, bd.d)() || dd.probeWebgl2AheadOfJoin()
-        })), await Od, (0, Hd.e)(wd)
-      }), (dd => {
-        console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", dd)
+    Ob || (Ob = !0, document.addEventListener("keydown", (bb => {
+      (0, Lb.c)(bb, Ib)
+    }))), mb() && (0, Fb.e)((() => {
+      (0, Bb.d)() || (0, sb.importClientLoad)().then((async bb => {
+        if ((0, Bb.d)()) return;
+        const wb = bb.startLoadAheadOfJoin(hb());
+        (0, Eb.b)((() => {
+          (0, Bb.d)() || bb.probeWebgl2AheadOfJoin()
+        })), await wb, (0, Eb.b)(Xb)
+      }), (bb => {
+        console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", bb)
       }))
     }));
-    const ud = Rd.e.get("router");
-    null === ud ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function dd(Od) {
-      if ((0, Jd.e)(Od.state.location.pathname)) return void(0, Td.loadWasmPlay)().catch((() => {}));
-      const md = Od.subscribe((Wd => {
-        (0, Jd.e)(Wd.location.pathname) && (md(), (0, Ed.e)().then((() => {
-          dd(Od)
+    const Yb = pb.c.get("router");
+    null === Yb ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function bb(wb) {
+      if ((0, jb.c)(wb.state.location.pathname)) return void(0, sb.loadWasmPlay)().catch((() => {}));
+      const Mb = wb.subscribe((eb => {
+        (0, jb.c)(eb.location.pathname) && (Mb(), (0, xb.e)().then((() => {
+          bb(wb)
         })))
       }))
-    }(ud), (0, Xd.d)();
-    const Vd = (0, Kd.d)((async function(dd, Od) {
+    }(Yb), (0, Vb.b)();
+    const Zb = (0, gb.b)((async function(bb, wb) {
       let {
-        place: md,
-        userContext: Rd,
-        direct: Xd,
-        matchedAt: Kd,
-        rematch: hd
-      } = dd;
-      const vd = Xd ? 1 / 0 : Kd;
-      let Qd;
+        place: Mb,
+        userContext: pb,
+        direct: Vb,
+        matchedAt: gb,
+        rematch: lb
+      } = bb;
+      const Lb = Vb ? 1 / 0 : gb;
+      let Ib;
       try {
-        Qd = await (0, Td.loadWasmPlay)()
-      } catch (td) {
-        return console.error("The wasm client did not load:", td), (0, od.l)({
+        Ib = await (0, sb.loadWasmPlay)()
+      } catch (Ob) {
+        return console.error("The wasm client did not load:", Ob), (0, Ub.n)({
           websocketUrl: null
-        }), Wd.e.errorWithCode(String(td), Fd.l.CONNECT_TO_GAME_SERVER, {
-          error: td,
-          severity: Od.aborted ? "low" : "medium",
-          Ad: Od.aborted
+        }), eb.d.errorWithCode(String(Ob), Hb.i.CONNECT_TO_GAME_SERVER, {
+          error: Ob,
+          severity: wb.aborted ? "low" : "medium",
+          Yb: wb.aborted
         })
       }
-      return Qd.playWasmGame({
-        userContext: Rd,
-        place: md,
-        matchedAt: vd,
-        rematch: hd
-      }, Od)
+      return Ib.playWasmGame({
+        userContext: pb,
+        place: Mb,
+        matchedAt: Lb,
+        rematch: lb
+      }, wb)
     }));
 
-    function Ad() {
-      return (0, Td.loadWasmPlay)().catch((() => {})), Vd(...arguments)
+    function fb() {
+      return (0, sb.loadWasmPlay)().catch((() => {})), Zb(...arguments)
     }
   },
-  10097: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      importClientLoad: () => td,
-      loadWasmPlay: () => qd,
-      loadWasmPlayAhead: () => Hd,
-      loadWasmPreviews: () => yd
+  10286: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      importClientLoad: () => Ob,
+      loadWasmPlay: () => Cb,
+      loadWasmPlayAhead: () => Eb,
+      loadWasmPreviews: () => Fb
     });
-    var Wd = md(4365),
-      Fd = md(3206),
-      Rd = md(2319),
-      Xd = md(5318),
-      Kd = md(4734),
-      hd = md(5336),
-      vd = md(10106);
-    let Qd = null;
+    var eb = Mb(4522),
+      Hb = Mb(3287),
+      pb = Mb(2364),
+      Vb = Mb(5498),
+      gb = Mb(4896),
+      lb = Mb(5511),
+      Lb = Mb(10292);
+    let Ib = null;
 
-    function td() {
-      return Promise.all([md.e(91), md.e(105), md.e(241), md.e(158), md.e(245), md.e(161), md.e(256), md.e(71)]).then((() => md(42638)))
+    function Ob() {
+      return Promise.all([Mb.e(91), Mb.e(105), Mb.e(241), Mb.e(158), Mb.e(245), Mb.e(161), Mb.e(256), Mb.e(71)]).then((() => Mb(42346)))
     }
 
-    function od() {
-      return Promise.all([md.e(88), md.e(91), md.e(105), md.e(241), md.e(158), md.e(245), md.e(223), md.e(161), md.e(251), md.e(243), md.e(103), md.e(247), md.e(256), md.e(76)]).then((() => md(42818)))
+    function Ub() {
+      return Promise.all([Mb.e(88), Mb.e(91), Mb.e(105), Mb.e(241), Mb.e(158), Mb.e(245), Mb.e(223), Mb.e(161), Mb.e(251), Mb.e(243), Mb.e(103), Mb.e(247), Mb.e(256), Mb.e(76)]).then((() => Mb(42531)))
     }
 
-    function Nd() {
-      Promise.all([md.e(85), md.e(89), md.e(86), md.e(87), md.e(88), md.e(105), md.e(102), md.e(307), md.e(127), md.e(281), md.e(255), md.e(247), md.e(55)]).then((() => md(42968))).catch((() => {}))
+    function tb() {
+      Promise.all([Mb.e(85), Mb.e(89), Mb.e(86), Mb.e(87), Mb.e(88), Mb.e(105), Mb.e(102), Mb.e(307), Mb.e(127), Mb.e(281), Mb.e(255), Mb.e(247), Mb.e(55)]).then((() => Mb(42677))).catch((() => {}))
     }
 
-    function qd() {
-      return Xd.b.cancelDownloadForJoin(), (0, Kd.c)(), (0, Fd.f)(), (0, hd.e)(), (0, Rd.g)(), Nd(), td().then((dd => {
+    function Cb() {
+      return Vb.b.cancelDownloadForJoin(), (0, gb.e)(), (0, Hb.f)(), (0, lb.f)(), (0, pb.j)(), tb(), Ob().then((bb => {
         let {
-          startJoinLoad: Od
-        } = dd;
-        Od()
-      }), (() => {})), Qd ??= od().then((dd => ((0, vd.f)("phase_chunk"), dd.startWasmPlay(), (0, vd.f)("phase_start"), dd.followPageUiPack((dd => {
-        Wd.c.showGamePack(dd)
-      })), dd)), (dd => {
-        throw Qd = null, dd
-      })), Qd
+          startJoinLoad: wb
+        } = bb;
+        wb()
+      }), (() => {})), Ib ??= Ub().then((bb => ((0, Lb.e)("phase_chunk"), bb.startWasmPlay(), (0, Lb.e)("phase_start"), bb.followPageUiPack((bb => {
+        eb.d.showGamePack(bb)
+      })), bb)), (bb => {
+        throw Ib = null, bb
+      })), Ib
     }
 
-    function Hd() {
-      return Nd(), md.e(132).then((() => md(42999))).catch((() => {})), od().then((() => {
-        (0, vd.f)("phase_chunk")
+    function Eb() {
+      return tb(), Mb.e(132).then((() => Mb(42721))).catch((() => {})), Ub().then((() => {
+        (0, Lb.e)("phase_chunk")
       }))
     }
 
-    function yd() {
-      return od().then((dd => {
-        dd.startWasmPreviews(), dd.prefetchWasmPreviews()
+    function Fb() {
+      return Ub().then((bb => {
+        bb.startWasmPreviews(), bb.prefetchWasmPreviews()
       }))
     }
   },
-  37939: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Jd
+  37627: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => jb
     });
-    var Wd = md(37942),
-      Fd = md(218),
-      Rd = md(5641),
-      Xd = md(37948),
-      Kd = md(37955),
-      hd = md(38006),
-      vd = md(37958),
-      Qd = md(415),
-      td = md.n(Qd),
-      od = md(2402),
-      Nd = md(38003),
-      qd = md(32),
-      Hd = md(29),
-      yd = md(37965),
-      bd = md(37974),
-      Td = md(37982),
-      pd = md(37989),
-      Yd = md(37996);
-    const gd = new Set(["note"]);
-    const wd = {
-      stop: () => wd,
-      fade: () => wd,
-      rate: () => wd,
+    var eb = Mb(37630),
+      Hb = Mb(225),
+      pb = Mb(5766),
+      Vb = Mb(37634),
+      gb = Mb(37641),
+      lb = Mb(37695),
+      Lb = Mb(37646),
+      Ib = Mb(398),
+      Ob = Mb.n(Ib),
+      Ub = Mb(2451),
+      tb = Mb(37691),
+      Cb = Mb(29),
+      Eb = Mb(26),
+      Fb = Mb(37653),
+      Bb = Mb(37659),
+      sb = Mb(37668),
+      mb = Mb(37677),
+      hb = Mb(37687);
+    const zb = new Set(["note"]);
+    const Xb = {
+      stop: () => Xb,
+      fade: () => Xb,
+      rate: () => Xb,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => wd,
-      setPannerAttr: () => wd,
-      setPosition: () => wd
+      setRelativeVolume: () => Xb,
+      setPannerAttr: () => Xb,
+      setPosition: () => Xb
     };
-    class Ed {
-      constructor(dd) {
-        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new hd.h, this._howl = (0, Kd.countDecodesAs)(new Rd.Howl({
-          src: [...(0, Wd.t)(dd).src],
+    class xb {
+      constructor(bb) {
+        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new lb.f, this._howl = (0, gb.countDecodesAs)(new pb.Howl({
+          src: [...(0, eb.v)(bb).src],
           pool: 15
         }), "sound"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Od = this._howl.play(Xd.b);
-        dd && this._howl.loop(!0, Od);
-        let md = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), Od);
-        const Wd = {
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const wb = this._howl.play(Vb.b);
+        bb && this._howl.loop(!0, wb);
+        let Mb = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), wb);
+        const eb = {
           stop: () => {
-            var dd;
-            return null === (dd = this.liveHowl()) || void 0 === dd || dd.stop(Od), Wd
+            var bb;
+            return null === (bb = this.liveHowl()) || void 0 === bb || bb.stop(wb), eb
           },
-          fade: (dd, md, Fd) => {
-            var Rd;
-            return null === (Rd = this.liveHowl()) || void 0 === Rd || Rd.fade(dd, md, Fd, Od), Wd
+          fade: (bb, Mb, Hb) => {
+            var pb;
+            return null === (pb = this.liveHowl()) || void 0 === pb || pb.fade(bb, Mb, Hb, wb), eb
           },
-          rate: dd => {
-            var md;
-            return null === (md = this.liveHowl()) || void 0 === md || md.rate(dd, Od), Wd
+          rate: bb => {
+            var Mb;
+            return null === (Mb = this.liveHowl()) || void 0 === Mb || Mb.rate(bb, wb), eb
           },
-          stopsAtOnce: () => this._howl.playing(Od) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(wb) && !this._howl._playLock,
           isAlive: () => {
-            const dd = this._howl._soundById(Od);
-            return !this._loadFailed && !!dd && !dd._ended
+            const bb = this._howl._soundById(wb);
+            return !this._loadFailed && !!bb && !bb._ended
           },
-          getDurationMs: () => this._howl._soundById(Od) ? 1e3 * this._howl.duration(Od) / this._howl.rate(Od) : 0,
-          getVolume: () => md * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => md,
-          setRelativeVolume: dd => {
-            var Fd;
-            if (dd > 1) throw new Error("Volume should be <= 1");
-            return md = Hd.e.get("soundOnFromAd") ? dd : 0, null === (Fd = this.liveHowl()) || void 0 === Fd || Fd.volume(Math.min(1, md * this._volumeMultiplier.getTotalMultipliedVal()), Od), Wd
+          getDurationMs: () => this._howl._soundById(wb) ? 1e3 * this._howl.duration(wb) / this._howl.rate(wb) : 0,
+          getVolume: () => Mb * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => Mb,
+          setRelativeVolume: bb => {
+            var Hb;
+            if (bb > 1) throw new Error("Volume should be <= 1");
+            return Mb = Eb.c.get("soundOnFromAd") ? bb : 0, null === (Hb = this.liveHowl()) || void 0 === Hb || Hb.volume(Math.min(1, Mb * this._volumeMultiplier.getTotalMultipliedVal()), wb), eb
           },
-          setPannerAttr: dd => {
+          setPannerAttr: bb => {
             let {
-              coneInnerAngle: md,
-              coneOuterAngle: Fd = 360,
-              coneOuterGain: Rd,
-              distanceModel: Xd,
-              maxDistance: Kd,
-              panningModel: hd,
-              refDistance: vd,
-              rolloffFactor: Qd
-            } = dd;
+              coneInnerAngle: Mb,
+              coneOuterAngle: Hb = 360,
+              coneOuterGain: pb,
+              distanceModel: Vb,
+              maxDistance: gb,
+              panningModel: lb,
+              refDistance: Lb,
+              rolloffFactor: Ib
+            } = bb;
             return this._setPannerAttr({
-              id: Od,
-              coneInnerAngle: md,
-              coneOuterAngle: Fd,
-              coneOuterGain: Rd,
-              distanceModel: Xd,
-              maxDistance: Kd,
-              panningModel: hd,
-              refDistance: vd,
-              rolloffFactor: Qd
-            }), Wd
+              id: wb,
+              coneInnerAngle: Mb,
+              coneOuterAngle: Hb,
+              coneOuterGain: pb,
+              distanceModel: Vb,
+              maxDistance: gb,
+              panningModel: lb,
+              refDistance: Lb,
+              rolloffFactor: Ib
+            }), eb
           },
-          setPosition: dd => {
-            var md;
-            return null === (md = this.liveHowl()) || void 0 === md || md.pos(dd[2], dd[1], dd[0], Od), Wd
+          setPosition: bb => {
+            var Mb;
+            return null === (Mb = this.liveHowl()) || void 0 === Mb || Mb.pos(bb[2], bb[1], bb[0], wb), eb
           }
         };
-        return Wd
+        return eb
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -1322,198 +1322,198 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, Xd.e)(this._howl, (() => {
+        (0, Vb.d)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(dd) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", dd), this._howl.volume(dd)
+      setGlobalVolume(bb) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", bb), this._howl.volume(bb)
       }
-      _setPannerAttr(dd) {
+      _setPannerAttr(bb) {
         let {
-          id: Od,
-          coneInnerAngle: md = 360,
-          coneOuterAngle: Wd = 360,
-          coneOuterGain: Fd = 0,
-          distanceModel: Rd = "inverse",
-          maxDistance: Xd = 1e3,
-          panningModel: Kd = "HRTF",
-          refDistance: hd = Nd.i,
-          rolloffFactor: vd = 1
-        } = dd;
-        const Qd = this.liveHowl();
-        if (null === Qd) return;
-        Qd.pannerAttr({
-          coneOuterAngle: Wd
-        }, Od);
-        const td = {
-          coneInnerAngle: md,
-          coneOuterAngle: Wd,
-          coneOuterGain: Fd,
-          distanceModel: Rd,
-          maxDistance: Xd,
-          panningModel: Kd,
-          refDistance: hd,
-          rolloffFactor: vd
+          id: wb,
+          coneInnerAngle: Mb = 360,
+          coneOuterAngle: eb = 360,
+          coneOuterGain: Hb = 0,
+          distanceModel: pb = "inverse",
+          maxDistance: Vb = 1e3,
+          panningModel: gb = "HRTF",
+          refDistance: lb = tb.j,
+          rolloffFactor: Lb = 1
+        } = bb;
+        const Ib = this.liveHowl();
+        if (null === Ib) return;
+        Ib.pannerAttr({
+          coneOuterAngle: eb
+        }, wb);
+        const Ob = {
+          coneInnerAngle: Mb,
+          coneOuterAngle: eb,
+          coneOuterGain: Hb,
+          distanceModel: pb,
+          maxDistance: Vb,
+          panningModel: gb,
+          refDistance: lb,
+          rolloffFactor: Lb
         };
-        Qd.pannerAttr(td, Od)
+        Ib.pannerAttr(Ob, wb)
       }
     }
-    const Jd = new class {
+    const jb = new class {
       constructor() {
-        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new yd.d, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, qd.j.subscribe("appManagerUpdated|soundVolume", (dd => {
-          const Od = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
-          for (const md of Od) md.setGlobalVolume(dd)
+        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new Fb.d, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, Cb.k.subscribe("appManagerUpdated|soundVolume", (bb => {
+          const wb = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
+          for (const Mb of wb) Mb.setGlobalVolume(bb)
         }))
       }
-      play(dd, Od) {
-        var md;
-        let Rd, Xd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (md = (0, od.c)()) || void 0 === md ? void 0 : md.YV,
-          Kd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Nd.f,
-          hd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Nd.i,
-          Qd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var qd;
-        (0, od.c)() ? Rd = !!Array.isArray(Xd) || (0, vd.b)(Xd) !== (null === (qd = (0, od.c)()) || void 0 === qd ? void 0 : qd.YV): Rd = !1;
-        const Hd = (0, Wd.j)(dd),
-          bd = this.loadSound(Rd ? this.spatialSounds : this.stereoSounds, dd);
-        if (!Rd) {
-          const dd = bd.play(Qd);
-          return dd.setRelativeVolume(Od), dd
+      play(bb, wb) {
+        var Mb;
+        let pb, Vb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (Mb = (0, Ub.h)()) || void 0 === Mb ? void 0 : Mb.VJ,
+          gb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : tb.f,
+          lb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : tb.j,
+          Ib = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var Cb;
+        (0, Ub.h)() ? pb = !!Array.isArray(Vb) || (0, Lb.e)(Vb) !== (null === (Cb = (0, Ub.h)()) || void 0 === Cb ? void 0 : Cb.VJ): pb = !1;
+        const Eb = (0, eb.k)(bb),
+          Bb = this.loadSound(pb ? this.spatialSounds : this.stereoSounds, bb);
+        if (!pb) {
+          const bb = Bb.play(Ib);
+          return bb.setRelativeVolume(wb), bb
         }
-        const Td = (0, od.c)(),
-          pd = Array.isArray(Xd) ? Xd : Td.qE.hY(Xd),
-          Ed = Td.qE.hY(Td.YV);
-        if (!pd || td().sqrDist(pd, Ed) > Kd * Kd) return wd;
-        let Jd;
-        if (!Qd) {
+        const sb = (0, Ub.h)(),
+          mb = Array.isArray(Vb) ? Vb : sb.pR.Qm(Vb),
+          xb = sb.pR.Qm(sb.VJ);
+        if (!mb || Ob().sqrDist(mb, xb) > gb * gb) return Xb;
+        let jb;
+        if (!Ib) {
           if (!this.spatialVoices.admit({
-              group: gd.has(Hd) ? null : (0, yd.i)(dd),
-              loudness: (0, yd.e)(Od, td().UX(pd, Ed), hd),
+              group: zb.has(Eb) ? null : (0, Fb.i)(bb),
+              loudness: (0, Fb.f)(wb, Ob().DV(mb, xb), lb),
               startMs: performance.now(),
               getDurationMs: () => {
-                var dd, Od;
-                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.getDurationMs()) && void 0 !== dd ? dd : 0
+                var bb, wb;
+                return null !== (bb = null === (wb = jb) || void 0 === wb ? void 0 : wb.getDurationMs()) && void 0 !== bb ? bb : 0
               },
               isAlive: () => {
-                var dd, Od;
-                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.isAlive()) && void 0 !== dd && dd
+                var bb, wb;
+                return null !== (bb = null === (wb = jb) || void 0 === wb ? void 0 : wb.isAlive()) && void 0 !== bb && bb
               },
               canStop: () => {
-                var dd, Od;
-                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.stopsAtOnce()) && void 0 !== dd && dd
+                var bb, wb;
+                return null !== (bb = null === (wb = jb) || void 0 === wb ? void 0 : wb.stopsAtOnce()) && void 0 !== bb && bb
               },
               stop: () => {
-                var dd;
-                null === (dd = Jd) || void 0 === dd || dd.stop()
+                var bb;
+                null === (bb = jb) || void 0 === bb || bb.stop()
               }
-            })) return wd
+            })) return Xb
         }
-        return Jd = bd.play(Qd), Jd.setRelativeVolume(Od), Jd.setPannerAttr({
-          refDistance: hd
-        }), Jd.setPosition([pd[0], pd[1] + Fd.i.yb * Fd.i.playerEyeToHeightRatio, pd[2]]), !Qd && (0, Yd.g)() && (0, Yd.d)(Hd, dd, pd[0] - Ed[0], pd[2] - Ed[2]), Jd
+        return jb = Bb.play(Ib), jb.setRelativeVolume(wb), jb.setPannerAttr({
+          refDistance: lb
+        }), jb.setPosition([mb[0], mb[1] + Hb.e.oF * Hb.e.playerEyeToHeightRatio, mb[2]]), !Ib && (0, hb.e)() && (0, hb.d)(Eb, bb, mb[0] - xb[0], mb[2] - xb[2]), jb
       }
-      preload(dd) {
-        const Od = (0, Wd.o)(dd) ? [dd] : (0, Wd.v)(dd);
-        if (0 === Od.length) throw new Error(`Invalid sound name ${dd} (no sound has it or starts with it)`);
-        for (const md of Od) this.loadSound(this.stereoSounds, md)
+      preload(bb) {
+        const wb = (0, eb.r)(bb) ? [bb] : (0, eb.w)(bb);
+        if (0 === wb.length) throw new Error(`Invalid sound name ${bb} (no sound has it or starts with it)`);
+        for (const Mb of wb) this.loadSound(this.stereoSounds, Mb)
       }
-      preloadAtIdle(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pd.c;
-        const md = dd.filter((dd => !this.idlePreloads.has(dd)));
-        for (const Fd of md) this.idlePreloads.add(Fd);
-        const Wd = this.idlePreloadGeneration;
-        (0, Td.b)(md, {
-          ...Od,
-          Ad: () => Wd !== this.idlePreloadGeneration,
-          fetchFile: dd => {
-            this.idlePreloads.delete(dd);
+      preloadAtIdle(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mb.b;
+        const Mb = bb.filter((bb => !this.idlePreloads.has(bb)));
+        for (const Hb of Mb) this.idlePreloads.add(Hb);
+        const eb = this.idlePreloadGeneration;
+        (0, sb.d)(Mb, {
+          ...wb,
+          Yb: () => eb !== this.idlePreloadGeneration,
+          fetchFile: bb => {
+            this.idlePreloads.delete(bb);
             try {
-              return this.preload(dd), Promise.resolve()
-            } catch (Od) {
-              return Promise.reject(Od)
+              return this.preload(bb), Promise.resolve()
+            } catch (wb) {
+              return Promise.reject(wb)
             }
           }
         })
       }
-      loadSound(dd, Od) {
-        const md = dd[Od];
-        if (md) return md;
-        const Fd = this.makeSound(dd, Od);
-        for (const Xd of null !== (Rd = (0, Wd.s)(Od)) && void 0 !== Rd ? Rd : []) {
-          var Rd;
-          dd[Xd] || this.makeSound(dd, Xd)
+      loadSound(bb, wb) {
+        const Mb = bb[wb];
+        if (Mb) return Mb;
+        const Hb = this.makeSound(bb, wb);
+        for (const Vb of null !== (pb = (0, eb.t)(wb)) && void 0 !== pb ? pb : []) {
+          var pb;
+          bb[Vb] || this.makeSound(bb, Vb)
         }
-        return Fd
+        return Hb
       }
-      makeSound(dd, Od) {
-        (0, pd.g)(Od);
-        const md = new Ed(Od);
-        return md.setGlobalVolume(Hd.e.get("soundVolume")), dd[Od] = md, md
+      makeSound(bb, wb) {
+        (0, mb.f)(wb);
+        const Mb = new xb(wb);
+        return Mb.setGlobalVolume(Eb.c.get("soundVolume")), bb[wb] = Mb, Mb
       }
       freeSoundsAfterGame() {
         this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
       }
       freeSounds() {
-        for (const dd of [this.stereoSounds, this.spatialSounds])
-          for (const [Od, md] of Object.entries(dd)) !bd.b.has((0, Wd.j)(Od)) && md.loaded() && (md.unloadOnceIdle(), delete dd[Od])
+        for (const bb of [this.stereoSounds, this.spatialSounds])
+          for (const [wb, Mb] of Object.entries(bb)) !Bb.d.has((0, eb.k)(wb)) && Mb.loaded() && (Mb.unloadOnceIdle(), delete bb[wb])
       }
     }
   },
-  37755: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => wd,
-      e: () => Bd,
-      i: () => Sd,
-      m: () => sd
+  37471: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Xb,
+      e: () => Rb,
+      h: () => Db,
+      j: () => cb
     });
-    var Wd = md(37763),
-      Fd = md(7874),
-      Rd = md(7953),
-      Xd = md(37765),
-      Kd = md(37772),
-      hd = md(37775),
-      vd = md(8286),
-      Qd = md(8407),
-      td = md(37784),
-      od = md(8587),
-      Nd = md(7723),
-      qd = md(8838),
-      Hd = md(37787),
-      yd = md(37789),
-      bd = md(8874),
-      Td = md(37796),
-      pd = md(37801),
-      Yd = md(405);
-    const gd = {
-        redTeam: Rd.e,
-        blueTeam: yd.d,
-        greenTeam: pd.f,
-        yellowTeam: bd.c,
-        cyanTeam: hd.e,
-        whiteTeam: Nd.faPlus,
-        pinkTeam: Qd.e,
-        grayTeam: td.f,
-        blackTeam: Hd.d,
-        orangeTeam: Td.f,
-        lilacTeam: Xd.h,
-        purpleTeam: od.g,
-        magentaTeam: Kd.h,
-        brownTeam: Wd.g,
-        limeTeam: Fd.faBolt,
-        lightGrayTeam: vd.g,
-        lightBlueTeam: qd.e
+    var eb = Mb(37475),
+      Hb = Mb(8107),
+      pb = Mb(8175),
+      Vb = Mb(37478),
+      gb = Mb(37480),
+      lb = Mb(37486),
+      Lb = Mb(8465),
+      Ib = Mb(8583),
+      Ob = Mb(37490),
+      Ub = Mb(8793),
+      tb = Mb(7982),
+      Cb = Mb(9065),
+      Eb = Mb(37496),
+      Fb = Mb(37503),
+      Bb = Mb(9091),
+      sb = Mb(37507),
+      mb = Mb(37509),
+      hb = Mb(382);
+    const zb = {
+        redTeam: pb.c,
+        blueTeam: Fb.h,
+        greenTeam: mb.e,
+        yellowTeam: Bb.d,
+        cyanTeam: lb.g,
+        whiteTeam: tb.faPlus,
+        pinkTeam: Ib.g,
+        grayTeam: Ob.d,
+        blackTeam: Eb.e,
+        orangeTeam: sb.h,
+        lilacTeam: Vb.d,
+        purpleTeam: Ub.g,
+        magentaTeam: gb.f,
+        brownTeam: eb.f,
+        limeTeam: Hb.faBolt,
+        lightGrayTeam: Lb.e,
+        lightBlueTeam: Cb.d
       },
-      wd = Object.fromEntries(Object.values(gd).map((dd => [Ed(dd), dd])));
+      Xb = Object.fromEntries(Object.values(zb).map((bb => [xb(bb), bb])));
 
-    function Ed(dd) {
-      return `team-${dd.iconName}`
+    function xb(bb) {
+      return `team-${bb.iconName}`
     }
-    const Jd = new Map;
-    for (const [ud, Vd] of Object.entries(gd)) {
-      const dd = Ed(Vd),
-        Od = Yd.E[ud];
-      Od && Jd.set(Od.toLowerCase(), {
-        icon: dd,
+    const jb = new Map;
+    for (const [Yb, Zb] of Object.entries(zb)) {
+      const bb = xb(Zb),
+        wb = hb.O[Yb];
+      wb && jb.set(wb.toLowerCase(), {
+        icon: bb,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -1523,46 +1523,46 @@ export const modules = {
         visible: !0
       })
     }
-    let Ud = !1;
-    const xd = new Set;
+    let Kb = !1;
+    const rb = new Set;
 
-    function Bd(dd) {
-      if (dd !== Ud) {
-        Ud = dd;
-        for (const dd of xd) dd()
+    function Rb(bb) {
+      if (bb !== Kb) {
+        Kb = bb;
+        for (const bb of rb) bb()
       }
     }
 
-    function Sd(dd) {
-      var Od;
-      return "string" === typeof dd && Ud && null !== (Od = Jd.get(dd.toLowerCase())) && void 0 !== Od ? Od : null
+    function Db(bb) {
+      var wb;
+      return "string" === typeof bb && Kb && null !== (wb = jb.get(bb.toLowerCase())) && void 0 !== wb ? wb : null
     }
 
-    function sd(dd) {
-      return xd.add(dd), () => {
-        xd.delete(dd)
+    function cb(bb) {
+      return rb.add(bb), () => {
+        rb.delete(bb)
       }
     }
   },
-  37819: (dd, Od, md) => {
-    md.d(Od, {
-      A: () => td,
-      E: () => Hd,
-      F: () => yd,
-      J: () => bd,
-      K: () => pd,
-      c: () => Fd,
-      f: () => Nd,
-      g: () => Xd,
-      k: () => qd,
-      o: () => Td,
-      p: () => od,
-      t: () => Yd,
-      w: () => Rd,
-      z: () => Qd
+  37519: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      A: () => Ib,
+      E: () => Ob,
+      F: () => Eb,
+      J: () => Fb,
+      N: () => Bb,
+      P: () => mb,
+      e: () => Hb,
+      f: () => tb,
+      j: () => Vb,
+      n: () => Cb,
+      q: () => sb,
+      u: () => Ub,
+      w: () => hb,
+      z: () => pb
     });
-    var Wd = md(2057);
-    const Fd = [{
+    var eb = Mb(2107);
+    const Hb = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1579,68 +1579,68 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function Rd(dd) {
-      return (0, Wd.v)(dd.toWellFormed().replace(/\uFFFD+/g, "\ufffd"))
+    function pb(bb) {
+      return (0, eb.w)(bb.toWellFormed().replace(/\uFFFD+/g, "\ufffd"))
     }
 
-    function Xd(dd, Od) {
+    function Vb(bb, wb) {
       const {
-        numLines: md,
-        charsPerLine: Wd
-      } = Fd[Od];
-      return gd(dd, md, Wd, !1)
+        numLines: Mb,
+        charsPerLine: eb
+      } = Hb[wb];
+      return zb(bb, Mb, eb, !1)
     }
-    const Kd = 7 / 8,
-      hd = .25,
-      vd = 8;
+    const gb = 7 / 8,
+      lb = .25,
+      Lb = 8;
 
-    function Qd(dd, Od) {
+    function Ib(bb, wb) {
       return {
-        width: Math.min(dd, vd) - 2 * hd,
-        height: Math.min(Od, vd) - 2 * hd
+        width: Math.min(bb, Lb) - 2 * lb,
+        height: Math.min(wb, Lb) - 2 * lb
       }
     }
 
-    function td(dd, Od, md) {
-      const Wd = Qd(dd, Od),
+    function Ob(bb, wb, Mb) {
+      const eb = Ib(bb, wb),
         {
-          numLines: Rd,
-          charsPerLine: Xd
-        } = Fd[md];
+          numLines: pb,
+          charsPerLine: Vb
+        } = Hb[Mb];
       return {
-        numLines: Math.max(1, Math.floor(Rd / Kd * Wd.height)),
-        charsPerLine: Math.max(1, Math.floor(Xd * Wd.width))
+        numLines: Math.max(1, Math.floor(pb / gb * eb.height)),
+        charsPerLine: Math.max(1, Math.floor(Vb * eb.width))
       }
     }
 
-    function od(dd, Od, md, Wd) {
+    function Ub(bb, wb, Mb, eb) {
       const {
-        numLines: Fd,
-        charsPerLine: Rd
-      } = td(md, Wd, Od);
-      return gd(dd, Fd, Rd, !1)
+        numLines: Hb,
+        charsPerLine: pb
+      } = Ob(Mb, eb, wb);
+      return zb(bb, Hb, pb, !1)
     }
-    const Nd = 32e3;
+    const tb = 32e3;
 
-    function qd(dd) {
-      return dd.slice(0, Nd)
+    function Cb(bb) {
+      return bb.slice(0, tb)
     }
-    const Hd = 512e3,
-      yd = 64,
-      bd = Hd;
+    const Eb = 512e3,
+      Fb = 64,
+      Bb = Eb;
 
-    function Td(dd, Od) {
-      const md = Math.max(0, bd - Od),
-        Wd = Math.min(Hd, md);
-      return dd.slice(0, Wd)
+    function sb(bb, wb) {
+      const Mb = Math.max(0, Bb - wb),
+        eb = Math.min(Eb, Mb);
+      return bb.slice(0, eb)
     }
-    const pd = {
+    const mb = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      NQ: {
+      UI: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1652,120 +1652,120 @@ export const modules = {
       }
     };
 
-    function Yd(dd, Od) {
+    function hb(bb, wb) {
       const {
-        numLines: md,
-        charsPerLine: Wd
-      } = pd[Od];
-      return gd(dd, md, Wd, !1)
+        numLines: Mb,
+        charsPerLine: eb
+      } = mb[wb];
+      return zb(bb, Mb, eb, !1)
     }
 
-    function gd(dd, Od, md, Wd, Fd) {
-      (Fd || Wd) && (dd = dd.slice(0, null !== Fd && void 0 !== Fd ? Fd : Od * md));
-      const Rd = dd.split("\n");
-      if (Rd.length > Od && Rd.splice(Od, Rd.length - Od), !Wd)
-        for (let Xd = 0; Xd < Rd.length; Xd++) {
-          const dd = Rd[Xd];
-          dd.length > md && (Rd[Xd] = dd.substring(0, md), Rd.length < Od && Rd.splice(Xd + 1, 0, dd.substring(md)))
+    function zb(bb, wb, Mb, eb, Hb) {
+      (Hb || eb) && (bb = bb.slice(0, null !== Hb && void 0 !== Hb ? Hb : wb * Mb));
+      const pb = bb.split("\n");
+      if (pb.length > wb && pb.splice(wb, pb.length - wb), !eb)
+        for (let Vb = 0; Vb < pb.length; Vb++) {
+          const bb = pb[Vb];
+          bb.length > Mb && (pb[Vb] = bb.substring(0, Mb), pb.length < wb && pb.splice(Vb + 1, 0, bb.substring(Mb)))
         }
-      return Rd.join("\n")
+      return pb.join("\n")
     }
   },
-  38388: (dd, Od, md) => {
-    function Wd(dd, Od) {
-      var md, Wd, Fd, Rd, Xd, Kd, hd, vd;
-      return dd.name === Od.name && ((null === (md = dd.attributes) || void 0 === md || null === (Wd = md.customAttributes) || void 0 === Wd ? void 0 : Wd.stackKey) === (null === (Fd = Od.attributes) || void 0 === Fd || null === (Rd = Fd.customAttributes) || void 0 === Rd ? void 0 : Rd.stackKey) && (!0 !== (null === (Xd = dd.attributes) || void 0 === Xd || null === (Kd = Xd.customAttributes) || void 0 === Kd ? void 0 : Kd.unstackable) && !0 !== (null === (hd = Od.attributes) || void 0 === hd || null === (vd = hd.customAttributes) || void 0 === vd ? void 0 : vd.unstackable)))
+  38055: (bb, wb, Mb) => {
+    function eb(bb, wb) {
+      var Mb, eb, Hb, pb, Vb, gb, lb, Lb;
+      return bb.name === wb.name && ((null === (Mb = bb.attributes) || void 0 === Mb || null === (eb = Mb.customAttributes) || void 0 === eb ? void 0 : eb.stackKey) === (null === (Hb = wb.attributes) || void 0 === Hb || null === (pb = Hb.customAttributes) || void 0 === pb ? void 0 : pb.stackKey) && (!0 !== (null === (Vb = bb.attributes) || void 0 === Vb || null === (gb = Vb.customAttributes) || void 0 === gb ? void 0 : gb.unstackable) && !0 !== (null === (lb = wb.attributes) || void 0 === lb || null === (Lb = lb.customAttributes) || void 0 === Lb ? void 0 : Lb.unstackable)))
     }
-    md.d(Od, {
-      b: () => Wd
+    Mb.d(wb, {
+      b: () => eb
     })
   },
-  5819: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Fd,
-      f: () => Rd
+  5967: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Hb,
+      g: () => pb
     });
-    var Wd = md(5769);
-    const Fd = "Air",
-      Rd = Object.freeze(new Wd.f(Fd, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var eb = Mb(5914);
+    const Hb = "Air",
+      pb = Object.freeze(new eb.g(Hb, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38474: (dd, Od, md) => {
-    function Wd(dd) {
-      return dd.includes("Leaf Bed")
+  38145: (bb, wb, Mb) => {
+    function eb(bb) {
+      return bb.includes("Leaf Bed")
     }
 
-    function Fd(dd) {
-      return / Bed(?: Head)?(?:\||$)/.test(dd) && !Wd(dd)
+    function Hb(bb) {
+      return / Bed(?: Head)?(?:\||$)/.test(bb) && !eb(bb)
     }
 
-    function Rd(dd) {
-      return dd.includes(" Strongbed")
+    function pb(bb) {
+      return bb.includes(" Strongbed")
     }
 
-    function Xd(dd) {
-      return Wd(dd) || Fd(dd) || Rd(dd)
+    function Vb(bb) {
+      return eb(bb) || Hb(bb) || pb(bb)
     }
-    md.d(Od, {
-      e: () => Xd,
-      f: () => Wd,
-      j: () => Rd,
-      l: () => Fd
+    Mb.d(wb, {
+      e: () => Vb,
+      f: () => eb,
+      g: () => pb,
+      i: () => Hb
     })
   },
-  38469: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => vd
+  38139: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Lb
     });
-    var Wd = md(38474),
-      Fd = md(5733);
-    const Rd = [],
-      Xd = [],
-      Kd = [],
-      hd = [];
-    for (const Qd of Object.keys(Fd.k))(0, Wd.f)(Qd) ? Rd.push(Qd) : (0, Wd.l)(Qd) && Xd.push(Qd), (0, Wd.j)(Qd) && Kd.push(Qd), (Qd.includes(" Bed Head") || Qd.includes(" Strongbed Head")) && hd.push(Qd);
-    const vd = {
-      leafBeds: Rd,
-      woolBeds: Xd,
-      strongBeds: Kd,
-      beds: [...Rd, ...Xd, ...Kd],
-      bedHeads: hd,
+    var eb = Mb(38145),
+      Hb = Mb(5868);
+    const pb = [],
+      Vb = [],
+      gb = [],
+      lb = [];
+    for (const Ib of Object.keys(Hb.l))(0, eb.f)(Ib) ? pb.push(Ib) : (0, eb.i)(Ib) && Vb.push(Ib), (0, eb.g)(Ib) && gb.push(Ib), (Ib.includes(" Bed Head") || Ib.includes(" Strongbed Head")) && lb.push(Ib);
+    const Lb = {
+      leafBeds: pb,
+      woolBeds: Vb,
+      strongBeds: gb,
+      beds: [...pb, ...Vb, ...gb],
+      bedHeads: lb,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  7410: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Xd,
-      f: () => Fd,
-      g: () => hd,
-      k: () => Rd,
-      n: () => vd,
-      q: () => Wd,
-      t: () => Kd
+  7634: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Vb,
+      h: () => Hb,
+      j: () => lb,
+      n: () => pb,
+      p: () => Lb,
+      r: () => eb,
+      t: () => gb
     });
-    let Wd = function(dd) {
-        return dd[dd.DEFAULT = 0] = "DEFAULT", dd[dd.BOAT = 1] = "BOAT", dd[dd.GLIDER = 2] = "GLIDER", dd[dd.BALLOON = 3] = "BALLOON", dd[dd.SLEEPING = 4] = "SLEEPING", dd[dd.RIDING_MOB = 5] = "RIDING_MOB", dd[dd.CAR = 6] = "CAR", dd[dd.HOVERCRAFT = 7] = "HOVERCRAFT", dd
+    let eb = function(bb) {
+        return bb[bb.DEFAULT = 0] = "DEFAULT", bb[bb.BOAT = 1] = "BOAT", bb[bb.GLIDER = 2] = "GLIDER", bb[bb.BALLOON = 3] = "BALLOON", bb[bb.SLEEPING = 4] = "SLEEPING", bb[bb.RIDING_MOB = 5] = "RIDING_MOB", bb[bb.CAR = 6] = "CAR", bb[bb.HOVERCRAFT = 7] = "HOVERCRAFT", bb
       }({}),
-      Fd = function(dd) {
-        return dd[dd.WOOD = 0] = "WOOD", dd[dd.OBSIDIAN = 1] = "OBSIDIAN", dd[dd.SPEED = 2] = "SPEED", dd
+      Hb = function(bb) {
+        return bb[bb.WOOD = 0] = "WOOD", bb[bb.OBSIDIAN = 1] = "OBSIDIAN", bb[bb.SPEED = 2] = "SPEED", bb
       }({}),
-      Rd = function(dd) {
-        return dd[dd.WOOD = 0] = "WOOD", dd[dd.IRON = 1] = "IRON", dd[dd.GOLD = 2] = "GOLD", dd[dd.DIAMOND = 3] = "DIAMOND", dd
+      pb = function(bb) {
+        return bb[bb.WOOD = 0] = "WOOD", bb[bb.IRON = 1] = "IRON", bb[bb.GOLD = 2] = "GOLD", bb[bb.DIAMOND = 3] = "DIAMOND", bb
       }({}),
-      Xd = function(dd) {
-        return dd[dd.YELLOW = 0] = "YELLOW", dd[dd.WHITE = 1] = "WHITE", dd[dd.RED = 2] = "RED", dd[dd.PURPLE = 3] = "PURPLE", dd[dd.PINK = 4] = "PINK", dd[dd.ORANGE = 5] = "ORANGE", dd[dd.MAGENTA = 6] = "MAGENTA", dd[dd.LIME = 7] = "LIME", dd[dd.LIGHT_GRAY = 8] = "LIGHT_GRAY", dd[dd.LIGHT_BLUE = 9] = "LIGHT_BLUE", dd[dd.GREEN = 10] = "GREEN", dd[dd.GRAY = 11] = "GRAY", dd[dd.CYAN = 12] = "CYAN", dd[dd.BROWN = 13] = "BROWN", dd[dd.BLUE = 14] = "BLUE", dd[dd.BLACK = 15] = "BLACK", dd
+      Vb = function(bb) {
+        return bb[bb.YELLOW = 0] = "YELLOW", bb[bb.WHITE = 1] = "WHITE", bb[bb.RED = 2] = "RED", bb[bb.PURPLE = 3] = "PURPLE", bb[bb.PINK = 4] = "PINK", bb[bb.ORANGE = 5] = "ORANGE", bb[bb.MAGENTA = 6] = "MAGENTA", bb[bb.LIME = 7] = "LIME", bb[bb.LIGHT_GRAY = 8] = "LIGHT_GRAY", bb[bb.LIGHT_BLUE = 9] = "LIGHT_BLUE", bb[bb.GREEN = 10] = "GREEN", bb[bb.GRAY = 11] = "GRAY", bb[bb.CYAN = 12] = "CYAN", bb[bb.BROWN = 13] = "BROWN", bb[bb.BLUE = 14] = "BLUE", bb[bb.BLACK = 15] = "BLACK", bb
       }({}),
-      Kd = function(dd) {
-        return dd[dd.ROTATION_1 = 0] = "ROTATION_1", dd[dd.ROTATION_2 = 1] = "ROTATION_2", dd[dd.ROTATION_3 = 2] = "ROTATION_3", dd[dd.ROTATION_4 = 3] = "ROTATION_4", dd
+      gb = function(bb) {
+        return bb[bb.ROTATION_1 = 0] = "ROTATION_1", bb[bb.ROTATION_2 = 1] = "ROTATION_2", bb[bb.ROTATION_3 = 2] = "ROTATION_3", bb[bb.ROTATION_4 = 3] = "ROTATION_4", bb
       }({}),
-      hd = function(dd) {
-        return dd[dd.KART = 0] = "KART", dd[dd.OFF_ROADER = 1] = "OFF_ROADER", dd[dd.CAR = 2] = "CAR", dd[dd.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", dd[dd.ARMORED_CAR = 4] = "ARMORED_CAR", dd[dd.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", dd[dd.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", dd[dd.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", dd
+      lb = function(bb) {
+        return bb[bb.KART = 0] = "KART", bb[bb.OFF_ROADER = 1] = "OFF_ROADER", bb[bb.CAR = 2] = "CAR", bb[bb.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", bb[bb.ARMORED_CAR = 4] = "ARMORED_CAR", bb[bb.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", bb[bb.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", bb[bb.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", bb
       }({});
-    Wd.DEFAULT, Wd.BOAT, Fd.SPEED, Wd.GLIDER, Rd.DIAMOND, Wd.BALLOON, Xd.BLACK, Wd.SLEEPING, Kd.ROTATION_4, Wd.RIDING_MOB, Wd.CAR, hd.MOONSTONE_MINING_DRILL, Wd.HOVERCRAFT;
-    let vd = function(dd) {
-      return dd[dd.NORMAL = 0] = "NORMAL", dd[dd.GLIDING = 1] = "GLIDING", dd[dd.FLOATING = 2] = "FLOATING", dd
+    eb.DEFAULT, eb.BOAT, Hb.SPEED, eb.GLIDER, pb.DIAMOND, eb.BALLOON, Vb.BLACK, eb.SLEEPING, gb.ROTATION_4, eb.RIDING_MOB, eb.CAR, lb.MOONSTONE_MINING_DRILL, eb.HOVERCRAFT;
+    let Lb = function(bb) {
+      return bb[bb.NORMAL = 0] = "NORMAL", bb[bb.GLIDING = 1] = "GLIDING", bb[bb.FLOATING = 2] = "FLOATING", bb
     }({})
   },
-  35513: () => {}
+  35298: () => {}
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,84 +1,84 @@
 export const id = 217;
 export const ids = [217, 218];
 export const modules = {
-  35371: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      reportJsMainStall: () => Kd,
-      resetJsMainStallReport: () => hd
+  35159: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      reportJsMainStall: () => gb,
+      resetJsMainStallReport: () => lb
     });
-    var Wd = md(35375),
-      Fd = md(1916),
-      Rd = md(35381);
-    let Xd = !1;
+    var eb = Mb(35167),
+      Hb = Mb(1987),
+      pb = Mb(35175);
+    let Vb = !1;
 
-    function Kd(dd, Od, md, Kd) {
-      Xd || (Xd = !0, (0, Fd.reportClientError)("wasm_load", (0, Rd.e)(dd, Od, md, Kd, (0, Rd.f)()), "JS-mainStall", !0, Wd.CAPPED_COUNTS_VISIT_CAP))
+    function gb(bb, wb, Mb, gb) {
+      Vb || (Vb = !0, (0, Hb.reportClientError)("wasm_load", (0, pb.d)(bb, wb, Mb, gb, (0, pb.g)()), "JS-mainStall", !0, eb.CAPPED_COUNTS_VISIT_CAP))
     }
 
-    function hd() {
-      Xd = !1
+    function lb() {
+      Vb = !1
     }
   },
-  35381: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Kd,
-      f: () => Xd
+  35175: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => gb,
+      g: () => Vb
     });
-    var Wd = md(310),
-      Fd = md(145),
-      Rd = md(35387);
+    var eb = Mb(309),
+      Hb = Mb(153),
+      pb = Mb(35179);
 
-    function Xd() {
-      var dd, Od, md;
-      return null !== (dd = (0, Wd.n)(null !== (Od = null === (md = (0, Fd.p)()) || void 0 === md ? void 0 : md.renderer) && void 0 !== Od ? Od : null, (0, Fd.l)())) && void 0 !== dd ? dd : "unknown"
+    function Vb() {
+      var bb, wb, Mb;
+      return null !== (bb = (0, eb.o)(null !== (wb = null === (Mb = (0, Hb.n)()) || void 0 === Mb ? void 0 : Mb.renderer) && void 0 !== wb ? wb : null, (0, Hb.k)())) && void 0 !== bb ? bb : "unknown"
     }
 
-    function Kd(dd, Od, md, Wd, Fd) {
-      const Xd = null === Od ? "untimed" : `${Math.round(Od)} ms`;
-      return `frames stalled, ${md}, gpu ${(0,Rd.d)(Fd)}, blocking ${Xd}, drawn ${Math.round(dd)} ms apart, timers ${Wd.timers}, timer gap ${Math.round(Wd.longestGapMs)} ms`
+    function gb(bb, wb, Mb, eb, Hb) {
+      const Vb = null === wb ? "untimed" : `${Math.round(wb)} ms`;
+      return `frames stalled, ${Mb}, gpu ${(0,pb.b)(Hb)}, blocking ${Vb}, drawn ${Math.round(bb)} ms apart, timers ${eb.timers}, timer gap ${Math.round(eb.longestGapMs)} ms`
     }
   },
-  35375: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      CAPPED_COUNTS_VISIT_CAP: () => Rd,
-      reportCappedWasmFailure: () => hd,
-      reportUncappedWasmFailure: () => Kd,
-      reportWasmCrash: () => Fd,
-      reportWasmFailure: () => Xd
+  35167: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      CAPPED_COUNTS_VISIT_CAP: () => pb,
+      reportCappedWasmFailure: () => lb,
+      reportUncappedWasmFailure: () => gb,
+      reportWasmCrash: () => Hb,
+      reportWasmFailure: () => Vb
     });
-    var Wd = md(1916);
+    var eb = Mb(1987);
 
-    function Fd(dd) {
-      (0, Wd.reportClientError)("wasm_load", dd.message, dd.code)
+    function Hb(bb) {
+      (0, eb.reportClientError)("wasm_load", bb.message, bb.code)
     }
-    const Rd = Wd.MAX_ERRORS_PER_VISIT - 4;
+    const pb = eb.MAX_ERRORS_PER_VISIT - 4;
 
-    function Xd(dd, Od, md, Fd) {
-      (0, Wd.reportClientError)(dd, Od, md, !1, Wd.MAX_ERRORS_PER_VISIT, {
-        context: Fd
+    function Vb(bb, wb, Mb, Hb) {
+      (0, eb.reportClientError)(bb, wb, Mb, !1, eb.MAX_ERRORS_PER_VISIT, {
+        context: Hb
       })
     }
 
-    function Kd(dd, Od, md, Fd) {
-      (0, Wd.reportClientError)(dd, Od, md, !1, 1 / 0, {
-        context: Fd
+    function gb(bb, wb, Mb, Hb) {
+      (0, eb.reportClientError)(bb, wb, Mb, !1, 1 / 0, {
+        context: Hb
       })
     }
 
-    function hd(dd, Od, md, Fd) {
-      (0, Wd.reportClientError)(dd, Od, md, !1, Rd, {
-        context: Fd
+    function lb(bb, wb, Mb, Hb) {
+      (0, eb.reportClientError)(bb, wb, Mb, !1, pb, {
+        context: Hb
       })
     }
   },
-  35387: (dd, Od, md) => {
-    function Wd(dd) {
-      return String(dd).replace(/\d/g, (dd => String.fromCharCode(97 + Number(dd))))
+  35179: (bb, wb, Mb) => {
+    function eb(bb) {
+      return String(bb).replace(/\d/g, (bb => String.fromCharCode(97 + Number(bb))))
     }
-    md.d(Od, {
-      d: () => Wd
+    Mb.d(wb, {
+      b: () => eb
     })
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

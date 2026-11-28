@@ -1,2445 +1,2445 @@
 export const id = 213;
 export const ids = [213];
 export const modules = {
-  10404: (dd, Od) => {
-    Od.discordURLBuilder = function(dd) {
-      var Od;
-      const md = (null === (Od = null === window || void 0 === window ? void 0 : window.location) || void 0 === Od ? void 0 : Od.hostname) || "localhost",
-        Wd = dd.hostname.split("."),
-        Fd = !dd.hostname.includes("trycloudflare.com") && !dd.hostname.includes("discordsays.com") && Wd.length > 2 ? `/${Wd[0]}` : "";
-      return dd.pathname.startsWith("/.proxy") ? `${dd.protocol}//${md}${Fd}${dd.pathname}${dd.search}` : `${dd.protocol}//${md}/.proxy/colyseus${Fd}${dd.pathname}${dd.search}`
+  10593: (bb, wb) => {
+    wb.discordURLBuilder = function(bb) {
+      var wb;
+      const Mb = (null === (wb = null === window || void 0 === window ? void 0 : window.location) || void 0 === wb ? void 0 : wb.hostname) || "localhost",
+        eb = bb.hostname.split("."),
+        Hb = !bb.hostname.includes("trycloudflare.com") && !bb.hostname.includes("discordsays.com") && eb.length > 2 ? `/${eb[0]}` : "";
+      return bb.pathname.startsWith("/.proxy") ? `${bb.protocol}//${Mb}${Hb}${bb.pathname}${bb.search}` : `${bb.protocol}//${Mb}/.proxy/colyseus${Hb}${bb.pathname}${bb.search}`
     }
   },
-  10396: (dd, Od, md) => {
-    var Wd, Fd, Rd, Xd, Kd = md(10311),
-      hd = md(10402),
-      vd = md(10361);
-    Wd = new WeakMap, Fd = new WeakMap, Rd = new WeakMap, Xd = new WeakMap, Od.Auth = class {
-      constructor(dd) {
-        this.http = dd, this.settings = {
+  10581: (bb, wb, Mb) => {
+    var eb, Hb, pb, Vb, gb = Mb(10488),
+      lb = Mb(10590),
+      Lb = Mb(10549);
+    eb = new WeakMap, Hb = new WeakMap, pb = new WeakMap, Vb = new WeakMap, wb.Auth = class {
+      constructor(bb) {
+        this.http = bb, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, Wd.set(this, !1), Fd.set(this, void 0), Rd.set(this, void 0), Xd.set(this, vd.createNanoEvents()), hd.getItem(this.settings.key, (dd => this.token = dd))
+        }, eb.set(this, !1), Hb.set(this, void 0), pb.set(this, void 0), Vb.set(this, Lb.createNanoEvents()), lb.getItem(this.settings.key, (bb => this.token = bb))
       }
-      set token(dd) {
-        this.http.authToken = dd
+      set token(bb) {
+        this.http.authToken = bb
       }
       get token() {
         return this.http.authToken
       }
-      onChange(dd) {
-        const Od = Kd.__classPrivateFieldGet(this, Xd, "f").on("change", dd);
-        return Kd.__classPrivateFieldGet(this, Wd, "f") || Kd.__classPrivateFieldSet(this, Fd, new Promise(((dd, Od) => {
-          this.getUserData().then((dd => {
-            this.emitChange(Object.assign(Object.assign({}, dd), {
+      onChange(bb) {
+        const wb = gb.__classPrivateFieldGet(this, Vb, "f").on("change", bb);
+        return gb.__classPrivateFieldGet(this, eb, "f") || gb.__classPrivateFieldSet(this, Hb, new Promise(((bb, wb) => {
+          this.getUserData().then((bb => {
+            this.emitChange(Object.assign(Object.assign({}, bb), {
               token: this.token
             }))
-          })).catch((dd => {
+          })).catch((bb => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            dd()
+            bb()
           }))
-        })), "f"), Kd.__classPrivateFieldSet(this, Wd, !0, "f"), Od
+        })), "f"), gb.__classPrivateFieldSet(this, eb, !0, "f"), wb
       }
       getUserData() {
-        return Kd.__awaiter(this, void 0, void 0, (function*() {
+        return gb.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(dd, Od, md) {
-        return Kd.__awaiter(this, void 0, void 0, (function*() {
-          const Wd = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(bb, wb, Mb) {
+        return gb.__awaiter(this, void 0, void 0, (function*() {
+          const eb = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: dd,
-              password: Od,
-              options: md
+              email: bb,
+              password: wb,
+              options: Mb
             }
           })).data;
-          return this.emitChange(Wd), Wd
+          return this.emitChange(eb), eb
         }))
       }
-      signInWithEmailAndPassword(dd, Od) {
-        return Kd.__awaiter(this, void 0, void 0, (function*() {
-          const md = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(bb, wb) {
+        return gb.__awaiter(this, void 0, void 0, (function*() {
+          const Mb = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: dd,
-              password: Od
+              email: bb,
+              password: wb
             }
           })).data;
-          return this.emitChange(md), md
+          return this.emitChange(Mb), Mb
         }))
       }
-      signInAnonymously(dd) {
-        return Kd.__awaiter(this, void 0, void 0, (function*() {
-          const Od = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(bb) {
+        return gb.__awaiter(this, void 0, void 0, (function*() {
+          const wb = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: dd
+              options: bb
             }
           })).data;
-          return this.emitChange(Od), Od
+          return this.emitChange(wb), wb
         }))
       }
-      sendPasswordResetEmail(dd) {
-        return Kd.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(bb) {
+        return gb.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: dd
+              email: bb
             }
           })).data
         }))
       }
-      signInWithProvider(dd) {
-        return Kd.__awaiter(this, arguments, void 0, (function*(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((md, Wd) => {
-            const Fd = Od.width || 480,
-              Xd = Od.height || 768,
-              hd = this.token ? `?token=${this.token}` : "",
-              vd = `Login with ${dd[0].toUpperCase()+dd.substring(1)}`,
-              Qd = this.http.client.getHttpEndpoint(`${Od.prefix||`${this.settings.path}/provider`}/${dd}${hd}`),
-              td = screen.width / 2 - Fd / 2,
-              od = screen.height / 2 - Xd / 2;
-            Kd.__classPrivateFieldSet(this, Rd, window.open(Qd, vd, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Fd + ", height=" + Xd + ", top=" + od + ", left=" + td), "f");
-            const Nd = dd => {
-                void 0 === dd.data.user && void 0 === dd.data.token || (clearInterval(qd), Kd.__classPrivateFieldGet(this, Rd, "f").close(), Kd.__classPrivateFieldSet(this, Rd, void 0, "f"), window.removeEventListener("message", Nd), void 0 !== dd.data.error ? Wd(dd.data.error) : (md(dd.data), this.emitChange(dd.data)))
+      signInWithProvider(bb) {
+        return gb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((Mb, eb) => {
+            const Hb = wb.width || 480,
+              Vb = wb.height || 768,
+              lb = this.token ? `?token=${this.token}` : "",
+              Lb = `Login with ${bb[0].toUpperCase()+bb.substring(1)}`,
+              Ib = this.http.client.getHttpEndpoint(`${wb.prefix||`${this.settings.path}/provider`}/${bb}${lb}`),
+              Ob = screen.width / 2 - Hb / 2,
+              Ub = screen.height / 2 - Vb / 2;
+            gb.__classPrivateFieldSet(this, pb, window.open(Ib, Lb, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Hb + ", height=" + Vb + ", top=" + Ub + ", left=" + Ob), "f");
+            const tb = bb => {
+                void 0 === bb.data.user && void 0 === bb.data.token || (clearInterval(Cb), gb.__classPrivateFieldGet(this, pb, "f").close(), gb.__classPrivateFieldSet(this, pb, void 0, "f"), window.removeEventListener("message", tb), void 0 !== bb.data.error ? eb(bb.data.error) : (Mb(bb.data), this.emitChange(bb.data)))
               },
-              qd = setInterval((() => {
-                Kd.__classPrivateFieldGet(this, Rd, "f") && !Kd.__classPrivateFieldGet(this, Rd, "f").closed || (Kd.__classPrivateFieldSet(this, Rd, void 0, "f"), Wd("Ad"), window.removeEventListener("message", Nd))
+              Cb = setInterval((() => {
+                gb.__classPrivateFieldGet(this, pb, "f") && !gb.__classPrivateFieldGet(this, pb, "f").closed || (gb.__classPrivateFieldSet(this, pb, void 0, "f"), eb("Yb"), window.removeEventListener("message", tb))
               }), 200);
-            window.addEventListener("message", Nd)
+            window.addEventListener("message", tb)
           }))
         }))
       }
       signOut() {
-        return Kd.__awaiter(this, void 0, void 0, (function*() {
+        return gb.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(dd) {
-        void 0 !== dd.token && (this.token = dd.token, null === dd.token ? hd.removeItem(this.settings.key) : hd.setItem(this.settings.key, dd.token)), Kd.__classPrivateFieldGet(this, Xd, "f").emit("change", dd)
+      emitChange(bb) {
+        void 0 !== bb.token && (this.token = bb.token, null === bb.token ? lb.removeItem(this.settings.key) : lb.setItem(this.settings.key, bb.token)), gb.__classPrivateFieldGet(this, Vb, "f").emit("change", bb)
       }
     }
   },
-  10307: (dd, Od, md) => {
-    var Wd, Fd = md(10311),
-      Rd = md(10313),
-      Xd = md(10315),
-      Kd = md(10385),
-      hd = md(10396),
-      vd = md(10404);
-    class Qd extends Error {
-      constructor(dd, Od) {
-        super(dd), this.code = Od, this.name = "MatchMakeError", Object.setPrototypeOf(this, Qd.prototype)
+  10486: (bb, wb, Mb) => {
+    var eb, Hb = Mb(10488),
+      pb = Mb(10493),
+      Vb = Mb(10500),
+      gb = Mb(10572),
+      lb = Mb(10581),
+      Lb = Mb(10593);
+    class Ib extends Error {
+      constructor(bb, wb) {
+        super(bb), this.code = wb, this.name = "MatchMakeError", Object.setPrototypeOf(this, Ib.prototype)
       }
     }
-    const td = "undefined" !== typeof window && "undefined" !== typeof(null === (Wd = null === window || void 0 === window ? void 0 : window.location) || void 0 === Wd ? void 0 : Wd.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class od {
+    const Ob = "undefined" !== typeof window && "undefined" !== typeof(null === (eb = null === window || void 0 === window ? void 0 : window.location) || void 0 === eb ? void 0 : eb.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class Ub {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : td,
-          Od = arguments.length > 1 ? arguments[1] : void 0;
-        var md, Wd;
-        if ("string" === typeof dd) {
-          const Od = dd.startsWith("/") ? new URL(dd, td) : new URL(dd),
-            md = "https:" === Od.protocol || "wss:" === Od.protocol,
-            Wd = Number(Od.port || (md ? 443 : 80));
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ob,
+          wb = arguments.length > 1 ? arguments[1] : void 0;
+        var Mb, eb;
+        if ("string" === typeof bb) {
+          const wb = bb.startsWith("/") ? new URL(bb, Ob) : new URL(bb),
+            Mb = "https:" === wb.protocol || "wss:" === wb.protocol,
+            eb = Number(wb.port || (Mb ? 443 : 80));
           this.settings = {
-            hostname: Od.hostname,
-            pathname: Od.pathname,
-            port: Wd,
-            secure: md,
-            searchParams: Od.searchParams.toString() || void 0
+            hostname: wb.hostname,
+            pathname: wb.pathname,
+            port: eb,
+            secure: Mb,
+            searchParams: wb.searchParams.toString() || void 0
           }
-        } else void 0 === dd.port && (dd.port = dd.secure ? 443 : 80), void 0 === dd.pathname && (dd.pathname = ""), this.settings = dd;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new Kd.HTTP(this, (null === Od || void 0 === Od ? void 0 : Od.headers) || {}), this.auth = new hd.Auth(this.http), this.urlBuilder = null === Od || void 0 === Od ? void 0 : Od.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Wd = null === (md = null === window || void 0 === window ? void 0 : window.location) || void 0 === md ? void 0 : md.hostname) || void 0 === Wd ? void 0 : Wd.includes("discordsays.com")) && (this.urlBuilder = vd.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === bb.port && (bb.port = bb.secure ? 443 : 80), void 0 === bb.pathname && (bb.pathname = ""), this.settings = bb;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new gb.HTTP(this, (null === wb || void 0 === wb ? void 0 : wb.headers) || {}), this.auth = new lb.Auth(this.http), this.urlBuilder = null === wb || void 0 === wb ? void 0 : wb.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (eb = null === (Mb = null === window || void 0 === window ? void 0 : window.location) || void 0 === Mb ? void 0 : Mb.hostname) || void 0 === eb ? void 0 : eb.includes("discordsays.com")) && (this.urlBuilder = Lb.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(dd) {
-        return Fd.__awaiter(this, arguments, void 0, (function*(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            md = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", dd, Od, md)
+      joinOrCreate(bb) {
+        return Hb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Mb = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", bb, wb, Mb)
         }))
       }
-      create(dd) {
-        return Fd.__awaiter(this, arguments, void 0, (function*(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            md = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", dd, Od, md)
+      create(bb) {
+        return Hb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Mb = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", bb, wb, Mb)
         }))
       }
-      join(dd) {
-        return Fd.__awaiter(this, arguments, void 0, (function*(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            md = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", dd, Od, md)
+      join(bb) {
+        return Hb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Mb = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", bb, wb, Mb)
         }))
       }
-      joinById(dd) {
-        return Fd.__awaiter(this, arguments, void 0, (function*(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            md = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", dd, Od, md)
+      joinById(bb) {
+        return Hb.__awaiter(this, arguments, void 0, (function*(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Mb = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", bb, wb, Mb)
         }))
       }
-      reconnect(dd, Od) {
-        return Fd.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof dd && "string" === typeof Od) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [md, Wd] = dd.split(":");
-          if (!md || !Wd) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", md, {
-            reconnectionToken: Wd
-          }, Od)
+      reconnect(bb, wb) {
+        return Hb.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof bb && "string" === typeof wb) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [Mb, eb] = bb.split(":");
+          if (!Mb || !eb) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", Mb, {
+            reconnectionToken: eb
+          }, wb)
         }))
       }
-      consumeSeatReservation(dd, Od, md) {
-        return Fd.__awaiter(this, void 0, void 0, (function*() {
-          const Wd = this.createRoom(dd.room.name, Od);
-          Wd.roomId = dd.room.roomId, Wd.sessionId = dd.sessionId;
-          const Xd = {
-            sessionId: Wd.sessionId
+      consumeSeatReservation(bb, wb, Mb) {
+        return Hb.__awaiter(this, void 0, void 0, (function*() {
+          const eb = this.createRoom(bb.room.name, wb);
+          eb.roomId = bb.room.roomId, eb.sessionId = bb.sessionId;
+          const Vb = {
+            sessionId: eb.sessionId
           };
-          dd.reconnectionToken && (Xd.reconnectionToken = dd.reconnectionToken);
-          const Kd = md || Wd;
-          return Wd.connect(this.buildEndpoint(dd.room, Xd, dd.protocol), dd.devMode && (() => Fd.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Wd.roomId}'...`);
-            let md = 0;
-            const Rd = () => Fd.__awaiter(this, void 0, void 0, (function*() {
-              md++;
+          bb.reconnectionToken && (Vb.reconnectionToken = bb.reconnectionToken);
+          const gb = Mb || eb;
+          return eb.connect(this.buildEndpoint(bb.room, Vb, bb.protocol), bb.devMode && (() => Hb.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${eb.roomId}'...`);
+            let Mb = 0;
+            const pb = () => Hb.__awaiter(this, void 0, void 0, (function*() {
+              Mb++;
               try {
-                yield this.consumeSeatReservation(dd, Od, Kd), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Wd.roomId}'`)
-              } catch (Fd) {
-                md < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${md} out of 8)`), setTimeout(Rd, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(bb, wb, gb), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${eb.roomId}'`)
+              } catch (Hb) {
+                Mb < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Mb} out of 8)`), setTimeout(pb, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(Rd, 2e3)
-          }))), Kd, dd, this.http.headers), new Promise(((dd, Od) => {
-            const md = (dd, md) => Od(new Rd.ServerError(dd, md));
-            Kd.onError.once(md), Kd.onJoin.once((() => {
-              Kd.onError.remove(md), setTimeout((() => {
+            setTimeout(pb, 2e3)
+          }))), gb, bb, this.http.headers), new Promise(((bb, wb) => {
+            const Mb = (bb, Mb) => wb(new pb.ServerError(bb, Mb));
+            gb.onError.once(Mb), gb.onJoin.once((() => {
+              gb.onError.remove(Mb), setTimeout((() => {
                 try {
-                  const dd = [85, 117, 234, 34, 168, 75, 206, 104, 132, 71, 112, 106, 82, 168, 228, 182, 49, 12, 225, 52];
-                  dd && Kd.pw(128, new Uint8Array(dd))
+                  const bb = [85, 117, 234, 34, 168, 75, 206, 104, 132, 71, 112, 106, 82, 168, 228, 182, 49, 12, 225, 52];
+                  bb && gb.sK(128, new Uint8Array(bb))
                 } catch {}
-              }), 3e3), dd(Kd)
+              }), 3e3), bb(gb)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(dd, Od) {
-        return Fd.__awaiter(this, arguments, void 0, (function*(dd, Od) {
-          let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            Wd = arguments.length > 3 ? arguments[3] : void 0,
-            Fd = arguments.length > 4 ? arguments[4] : void 0;
-          const Rd = (yield this.http.post(`matchmake/${dd}/${Od}`, {
+      createMatchMakeRequest(bb, wb) {
+        return Hb.__awaiter(this, arguments, void 0, (function*(bb, wb) {
+          let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            eb = arguments.length > 3 ? arguments[3] : void 0,
+            Hb = arguments.length > 4 ? arguments[4] : void 0;
+          const pb = (yield this.http.post(`matchmake/${bb}/${wb}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(md)
+            body: JSON.stringify(Mb)
           })).data;
-          if (Rd.error) throw new Qd(Rd.error, Rd.code);
-          return "reconnect" === dd && (Rd.reconnectionToken = md.reconnectionToken), yield this.consumeSeatReservation(Rd, Wd, Fd)
+          if (pb.error) throw new Ib(pb.error, pb.code);
+          return "reconnect" === bb && (pb.reconnectionToken = Mb.reconnectionToken), yield this.consumeSeatReservation(pb, eb, Hb)
         }))
       }
-      createRoom(dd, Od) {
-        return new Xd.wo(dd, Od)
+      createRoom(bb, wb) {
+        return new Vb.VU(bb, wb)
       }
-      buildEndpoint(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          Wd = this.settings.searchParams || "";
-        this.http.authToken && (Od._authToken = this.http.authToken);
-        for (const Xd in Od) Od.hasOwnProperty(Xd) && (Wd += (Wd ? "&" : "") + `${Xd}=${Od[Xd]}`);
-        "h3" === md && (md = "http");
-        let Fd = this.settings.secure ? `${md}s://` : `${md}://`;
-        dd.publicAddress ? Fd += `${dd.publicAddress}` : Fd += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const Rd = `${Fd}/${dd.processId}/${dd.roomId}?${Wd}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(Rd)) : Rd
+      buildEndpoint(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          eb = this.settings.searchParams || "";
+        this.http.authToken && (wb._authToken = this.http.authToken);
+        for (const Vb in wb) wb.hasOwnProperty(Vb) && (eb += (eb ? "&" : "") + `${Vb}=${wb[Vb]}`);
+        "h3" === Mb && (Mb = "http");
+        let Hb = this.settings.secure ? `${Mb}s://` : `${Mb}://`;
+        bb.publicAddress ? Hb += `${bb.publicAddress}` : Hb += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const pb = `${Hb}/${bb.processId}/${bb.roomId}?${eb}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(pb)) : pb
       }
       getHttpEndpoint() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const Od = dd.startsWith("/") ? dd : `/${dd}`;
-        let md = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Od}`;
-        return this.settings.searchParams && (md += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(md)) : md
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const wb = bb.startsWith("/") ? bb : `/${bb}`;
+        let Mb = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${wb}`;
+        return this.settings.searchParams && (Mb += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Mb)) : Mb
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    od.VERSION = "0.16.22", Od.Client = od, Od.MatchMakeError = Qd
+    Ub.VERSION = "0.16.22", wb.Client = Ub, wb.MatchMakeError = Ib
   },
-  10320: (dd, Od, md) => {
-    var Wd = md(10326),
-      Fd = md(10332);
-    Od.Connection = class {
-      constructor(dd) {
-        if (this.events = {}, "h3" === dd) this.transport = new Wd.H3TransportTransport(this.events);
-        else this.transport = new Fd.WebSocketTransport(this.events)
+  10506: (bb, wb, Mb) => {
+    var eb = Mb(10509),
+      Hb = Mb(10521);
+    wb.Connection = class {
+      constructor(bb) {
+        if (this.events = {}, "h3" === bb) this.transport = new eb.H3TransportTransport(this.events);
+        else this.transport = new Hb.WebSocketTransport(this.events)
       }
-      connect(dd, Od) {
-        this.transport.connect.call(this.transport, dd, Od)
+      connect(bb, wb) {
+        this.transport.connect.call(this.transport, bb, wb)
       }
-      send(dd) {
-        this.transport.send(dd)
+      send(bb) {
+        this.transport.send(bb)
       }
-      sendUnreliable(dd) {
-        this.transport.sendUnreliable(dd)
+      sendUnreliable(bb) {
+        this.transport.sendUnreliable(bb)
       }
-      close(dd, Od) {
-        this.transport.close(dd, Od)
+      close(bb, wb) {
+        this.transport.close(bb, wb)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  10385: (dd, Od, md) => {
-    var Wd = md(10313);
+  10572: (bb, wb, Mb) => {
+    var eb = Mb(10493);
 
-    function Fd(dd) {
-      var Od = Object.create(null);
-      return dd && Object.keys(dd).forEach((function(md) {
-        if ("default" !== md) {
-          var Wd = Object.getOwnPropertyDescriptor(dd, md);
-          Object.defineProperty(Od, md, Wd.get ? Wd : {
+    function Hb(bb) {
+      var wb = Object.create(null);
+      return bb && Object.keys(bb).forEach((function(Mb) {
+        if ("default" !== Mb) {
+          var eb = Object.getOwnPropertyDescriptor(bb, Mb);
+          Object.defineProperty(wb, Mb, eb.get ? eb : {
             enumerable: !0,
             get: function() {
-              return dd[md]
+              return bb[Mb]
             }
           })
         }
-      })), Od.default = dd, Object.freeze(Od)
+      })), wb.default = bb, Object.freeze(wb)
     }
-    var Rd = Fd(md(10393));
-    Od.HTTP = class {
-      constructor(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = dd, this.headers = Od
+    var pb = Hb(Mb(10579));
+    wb.HTTP = class {
+      constructor(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = bb, this.headers = wb
       }
-      get(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", dd, Od)
+      get(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", bb, wb)
       }
-      post(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", dd, Od)
+      post(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", bb, wb)
       }
-      del(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", dd, Od)
+      del(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", bb, wb)
       }
-      put(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", dd, Od)
+      put(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", bb, wb)
       }
-      request(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return Rd[dd](this.client.getHttpEndpoint(Od), this.getOptions(md)).catch((dd => {
-          var Od;
-          if (dd.aborted) throw new Wd.AbortError("Request aborted");
-          const md = dd.statusCode,
-            Fd = (null === (Od = dd.data) || void 0 === Od ? void 0 : Od.error) || dd.statusMessage || dd.message;
-          if (!md && !Fd) throw dd;
-          throw new Wd.ServerError(md, Fd)
+      request(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return pb[bb](this.client.getHttpEndpoint(wb), this.getOptions(Mb)).catch((bb => {
+          var wb;
+          if (bb.aborted) throw new eb.AbortError("Request aborted");
+          const Mb = bb.statusCode,
+            Hb = (null === (wb = bb.data) || void 0 === wb ? void 0 : wb.error) || bb.statusMessage || bb.message;
+          if (!Mb && !Hb) throw bb;
+          throw new eb.ServerError(Mb, Hb)
         }))
       }
-      getOptions(dd) {
-        return dd.headers = Object.assign({}, this.headers, dd.headers), this.authToken && (dd.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (dd.withCredentials = !0), dd
+      getOptions(bb) {
+        return bb.headers = Object.assign({}, this.headers, bb.headers), this.authToken && (bb.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (bb.withCredentials = !0), bb
       }
     }
   },
-  10345: (dd, Od) => {
-    var md, Wd;
-    Od.Protocol = void 0, (md = Od.Protocol || (Od.Protocol = {}))[md.HANDSHAKE = 9] = "HANDSHAKE", md[md.JOIN_ROOM = 10] = "JOIN_ROOM", md[md.ERROR = 11] = "ERROR", md[md.LEAVE_ROOM = 12] = "LEAVE_ROOM", md[md.ROOM_DATA = 13] = "ROOM_DATA", md[md.ROOM_STATE = 14] = "ROOM_STATE", md[md.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", md[md.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", md[md.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Od.ErrorCode = void 0, (Wd = Od.ErrorCode || (Od.ErrorCode = {}))[Wd.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Wd[Wd.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Wd[Wd.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Wd[Wd.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Wd[Wd.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Wd[Wd.AUTH_FAILED = 4215] = "AUTH_FAILED", Wd[Wd.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  10532: (bb, wb) => {
+    var Mb, eb;
+    wb.Protocol = void 0, (Mb = wb.Protocol || (wb.Protocol = {}))[Mb.HANDSHAKE = 9] = "HANDSHAKE", Mb[Mb.JOIN_ROOM = 10] = "JOIN_ROOM", Mb[Mb.ERROR = 11] = "ERROR", Mb[Mb.LEAVE_ROOM = 12] = "LEAVE_ROOM", Mb[Mb.ROOM_DATA = 13] = "ROOM_DATA", Mb[Mb.ROOM_STATE = 14] = "ROOM_STATE", Mb[Mb.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Mb[Mb.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Mb[Mb.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", wb.ErrorCode = void 0, (eb = wb.ErrorCode || (wb.ErrorCode = {}))[eb.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", eb[eb.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", eb[eb.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", eb[eb.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", eb[eb.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", eb[eb.AUTH_FAILED = 4215] = "AUTH_FAILED", eb[eb.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  10315: (dd, Od, md) => {
-    var Wd = md(10320),
-      Fd = md(10345),
-      Rd = md(10353),
-      Xd = md(10361),
-      Kd = md(10367),
-      hd = md(10329),
-      vd = md(10375),
-      Qd = md(10313),
-      td = md(10377);
-    class od {
-      constructor(dd, Od) {
-        this.onStateChange = Kd.createSignal(), this.onError = Kd.createSignal(), this.TY = Kd.createSignal(), this.onJoin = Kd.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Xd.createNanoEvents(), this.roomId = null, this.name = dd, this.packr = new td.Packr, this.packr.encode(void 0), Od && (this.lT = new(Rd.getSerializer("schema")), this.rootSchema = Od, this.lT.state = new Od), this.onError(((dd, Od) => {
-          var md;
-          return null === (md = console.warn) || void 0 === md ? void 0 : md.call(console, `colyseus.js - onError => (${dd}) ${Od}`)
-        })), this.TY((() => this.eT()))
+  10500: (bb, wb, Mb) => {
+    var eb = Mb(10506),
+      Hb = Mb(10532),
+      pb = Mb(10541),
+      Vb = Mb(10549),
+      gb = Mb(10554),
+      lb = Mb(10517),
+      Lb = Mb(10563),
+      Ib = Mb(10493),
+      Ob = Mb(10566);
+    class Ub {
+      constructor(bb, wb) {
+        this.onStateChange = gb.createSignal(), this.onError = gb.createSignal(), this.Yz = gb.createSignal(), this.onJoin = gb.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Vb.createNanoEvents(), this.roomId = null, this.name = bb, this.packr = new Ob.Packr, this.packr.encode(void 0), wb && (this.yB = new(pb.getSerializer("schema")), this.rootSchema = wb, this.yB.state = new wb), this.onError(((bb, wb) => {
+          var Mb;
+          return null === (Mb = console.warn) || void 0 === Mb ? void 0 : Mb.call(console, `colyseus.js - onError => (${bb}) ${wb}`)
+        })), this.Yz((() => this.nB()))
       }
-      connect(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          Fd = arguments.length > 3 ? arguments[3] : void 0,
-          Rd = arguments.length > 4 ? arguments[4] : void 0;
-        const Xd = new Wd.Connection(Fd.protocol);
-        if (md.connection = Xd, Xd.events.onmessage = od.prototype.onMessageCallback.bind(md), Xd.events.onclose = function(dd) {
-            var Wd;
-            if (!md.hasJoined) return null === (Wd = console.warn) || void 0 === Wd || Wd.call(console, `Room connection was closed unexpectedly (${dd.code}): ${dd.reason}`), void md.onError.invoke(dd.code, dd.reason);
-            dd.code === Qd.CloseCode.DEVMODE_RESTART && Od ? Od() : (md.TY.invoke(dd.code, dd.reason), md.destroy())
-          }, Xd.events.onerror = function(dd) {
-            var Od;
-            null === (Od = console.warn) || void 0 === Od || Od.call(console, `Room, onError (${dd.code}): ${dd.reason}`), md.onError.invoke(dd.code, dd.reason)
-          }, "h3" === Fd.protocol) {
-          const Od = new URL(dd);
-          Xd.connect(Od.origin, Fd)
-        } else Xd.connect(dd, Rd)
+      connect(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          Hb = arguments.length > 3 ? arguments[3] : void 0,
+          pb = arguments.length > 4 ? arguments[4] : void 0;
+        const Vb = new eb.Connection(Hb.protocol);
+        if (Mb.connection = Vb, Vb.events.onmessage = Ub.prototype.onMessageCallback.bind(Mb), Vb.events.onclose = function(bb) {
+            var eb;
+            if (!Mb.hasJoined) return null === (eb = console.warn) || void 0 === eb || eb.call(console, `Room connection was closed unexpectedly (${bb.code}): ${bb.reason}`), void Mb.onError.invoke(bb.code, bb.reason);
+            bb.code === Ib.CloseCode.DEVMODE_RESTART && wb ? wb() : (Mb.Yz.invoke(bb.code, bb.reason), Mb.destroy())
+          }, Vb.events.onerror = function(bb) {
+            var wb;
+            null === (wb = console.warn) || void 0 === wb || wb.call(console, `Room, onError (${bb.code}): ${bb.reason}`), Mb.onError.invoke(bb.code, bb.reason)
+          }, "h3" === Hb.protocol) {
+          const wb = new URL(bb);
+          Vb.connect(wb.origin, Hb)
+        } else Vb.connect(bb, pb)
       }
       leave() {
-        let dd = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((Od => {
-          this.TY((dd => Od(dd))), this.connection ? dd ? (this.packr.buffer[0] = Fd.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.TY.invoke(Qd.CloseCode.CONSENTED)
+        let bb = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((wb => {
+          this.Yz((bb => wb(bb))), this.connection ? bb ? (this.packr.buffer[0] = Hb.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.Yz.invoke(Ib.CloseCode.CONSENTED)
         }))
       }
-      bY(dd, Od) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(dd), Od)
+      Tm(bb, wb) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(bb), wb)
       }
-      send(dd, Od) {
-        const md = {
+      send(bb, wb) {
+        const Mb = {
           offset: 1
         };
-        this.packr.buffer[0] = Fd.Protocol.ROOM_DATA, "string" === typeof dd ? hd.encode.string(this.packr.buffer, dd, md) : hd.encode.number(this.packr.buffer, dd, md), this.packr.position = 0;
-        const Wd = void 0 !== Od ? this.packr.pack(Od, 2048 + md.offset) : this.packr.buffer.subarray(0, md.offset);
-        this.connection.send(Wd)
+        this.packr.buffer[0] = Hb.Protocol.ROOM_DATA, "string" === typeof bb ? lb.encode.string(this.packr.buffer, bb, Mb) : lb.encode.number(this.packr.buffer, bb, Mb), this.packr.position = 0;
+        const eb = void 0 !== wb ? this.packr.pack(wb, 2048 + Mb.offset) : this.packr.buffer.subarray(0, Mb.offset);
+        this.connection.send(eb)
       }
-      sendUnreliable(dd, Od) {
-        const md = {
+      sendUnreliable(bb, wb) {
+        const Mb = {
           offset: 1
         };
-        this.packr.buffer[0] = Fd.Protocol.ROOM_DATA, "string" === typeof dd ? hd.encode.string(this.packr.buffer, dd, md) : hd.encode.number(this.packr.buffer, dd, md), this.packr.position = 0;
-        const Wd = void 0 !== Od ? this.packr.pack(Od, 2048 + md.offset) : this.packr.buffer.subarray(0, md.offset);
-        this.connection.sendUnreliable(Wd)
+        this.packr.buffer[0] = Hb.Protocol.ROOM_DATA, "string" === typeof bb ? lb.encode.string(this.packr.buffer, bb, Mb) : lb.encode.number(this.packr.buffer, bb, Mb), this.packr.position = 0;
+        const eb = void 0 !== wb ? this.packr.pack(wb, 2048 + Mb.offset) : this.packr.buffer.subarray(0, Mb.offset);
+        this.connection.sendUnreliable(eb)
       }
-      pw(dd, Od) {
-        const md = {
+      sK(bb, wb) {
+        const Mb = {
           offset: 1
         };
-        if (this.packr.buffer[0] = Fd.Protocol.ROOM_DATA_BYTES, "string" === typeof dd ? hd.encode.string(this.packr.buffer, dd, md) : hd.encode.number(this.packr.buffer, dd, md), Od.byteLength + md.offset > this.packr.buffer.byteLength) {
-          const dd = new Uint8Array(md.offset + Od.byteLength);
-          dd.set(this.packr.buffer), this.packr.useBuffer(dd)
+        if (this.packr.buffer[0] = Hb.Protocol.ROOM_DATA_BYTES, "string" === typeof bb ? lb.encode.string(this.packr.buffer, bb, Mb) : lb.encode.number(this.packr.buffer, bb, Mb), wb.byteLength + Mb.offset > this.packr.buffer.byteLength) {
+          const bb = new Uint8Array(Mb.offset + wb.byteLength);
+          bb.set(this.packr.buffer), this.packr.useBuffer(bb)
         }
-        this.packr.buffer.set(Od, md.offset), this.connection.send(this.packr.buffer.subarray(0, md.offset + Od.byteLength))
+        this.packr.buffer.set(wb, Mb.offset), this.connection.send(this.packr.buffer.subarray(0, Mb.offset + wb.byteLength))
       }
       get state() {
-        return this.lT.getState()
+        return this.yB.getState()
       }
-      eT() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.TY.clear(), this.onMessageHandlers.events = {}, this.lT instanceof vd.KV && (this.lT.Ft.root.callbacks = {})
+      nB() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.Yz.clear(), this.onMessageHandlers.events = {}, this.yB instanceof Lb.vW && (this.yB.wO.root.callbacks = {})
       }
-      onMessageCallback(dd) {
-        const Od = new Uint8Array(dd.data),
-          md = {
+      onMessageCallback(bb) {
+        const wb = new Uint8Array(bb.data),
+          Mb = {
             offset: 1
           },
-          Wd = Od[0];
-        if (Wd === Fd.Protocol.JOIN_ROOM) {
-          const dd = hd.decode.utf8Read(Od, md, Od[md.offset++]);
-          if (this.serializerId = hd.decode.utf8Read(Od, md, Od[md.offset++]), !this.lT) {
-            const dd = Rd.getSerializer(this.serializerId);
-            this.lT = new dd
+          eb = wb[0];
+        if (eb === Hb.Protocol.JOIN_ROOM) {
+          const bb = lb.decode.utf8Read(wb, Mb, wb[Mb.offset++]);
+          if (this.serializerId = lb.decode.utf8Read(wb, Mb, wb[Mb.offset++]), !this.yB) {
+            const bb = pb.getSerializer(this.serializerId);
+            this.yB = new bb
           }
-          Od.byteLength > md.offset && this.lT.handshake && this.lT.handshake(Od, md), this.reconnectionToken = `${this.roomId}:${dd}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Fd.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (Wd === Fd.Protocol.ERROR) {
-          const dd = hd.decode.number(Od, md),
-            Wd = hd.decode.string(Od, md);
-          this.onError.invoke(dd, Wd)
-        } else if (Wd === Fd.Protocol.LEAVE_ROOM) this.leave();
-        else if (Wd === Fd.Protocol.ROOM_STATE) this.lT.setState(Od, md), this.onStateChange.invoke(this.lT.getState());
-        else if (Wd === Fd.Protocol.ROOM_STATE_PATCH) this.lT.patch(Od, md), this.onStateChange.invoke(this.lT.getState());
-        else if (Wd === Fd.Protocol.ROOM_DATA) {
-          const dd = hd.decode.stringCheck(Od, md) ? hd.decode.string(Od, md) : hd.decode.number(Od, md),
-            Wd = Od.byteLength > md.offset ? td.unpack(Od, {
-              start: md.offset
+          wb.byteLength > Mb.offset && this.yB.handshake && this.yB.handshake(wb, Mb), this.reconnectionToken = `${this.roomId}:${bb}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Hb.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (eb === Hb.Protocol.ERROR) {
+          const bb = lb.decode.number(wb, Mb),
+            eb = lb.decode.string(wb, Mb);
+          this.onError.invoke(bb, eb)
+        } else if (eb === Hb.Protocol.LEAVE_ROOM) this.leave();
+        else if (eb === Hb.Protocol.ROOM_STATE) this.yB.setState(wb, Mb), this.onStateChange.invoke(this.yB.getState());
+        else if (eb === Hb.Protocol.ROOM_STATE_PATCH) this.yB.patch(wb, Mb), this.onStateChange.invoke(this.yB.getState());
+        else if (eb === Hb.Protocol.ROOM_DATA) {
+          const bb = lb.decode.stringCheck(wb, Mb) ? lb.decode.string(wb, Mb) : lb.decode.number(wb, Mb),
+            eb = wb.byteLength > Mb.offset ? Ob.unpack(wb, {
+              start: Mb.offset
             }) : void 0;
-          this.dispatchMessage(dd, Wd)
-        } else if (Wd === Fd.Protocol.ROOM_DATA_BYTES) {
-          const dd = hd.decode.stringCheck(Od, md) ? hd.decode.string(Od, md) : hd.decode.number(Od, md);
-          this.dispatchMessage(dd, Od.subarray(md.offset))
+          this.dispatchMessage(bb, eb)
+        } else if (eb === Hb.Protocol.ROOM_DATA_BYTES) {
+          const bb = lb.decode.stringCheck(wb, Mb) ? lb.decode.string(wb, Mb) : lb.decode.number(wb, Mb);
+          this.dispatchMessage(bb, wb.subarray(Mb.offset))
         }
       }
-      dispatchMessage(dd, Od) {
-        var md;
-        const Wd = this.getMessageHandlerKey(dd);
-        this.onMessageHandlers.events[Wd] ? this.onMessageHandlers.emit(Wd, Od) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", dd, Od) : null === (md = console.warn) || void 0 === md || md.call(console, `colyseus.js: onMessage() not registered for type '${dd}'.`)
+      dispatchMessage(bb, wb) {
+        var Mb;
+        const eb = this.getMessageHandlerKey(bb);
+        this.onMessageHandlers.events[eb] ? this.onMessageHandlers.emit(eb, wb) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", bb, wb) : null === (Mb = console.warn) || void 0 === Mb || Mb.call(console, `colyseus.js: onMessage() not registered for type '${bb}'.`)
       }
       destroy() {
-        this.lT && this.lT.teardown()
+        this.yB && this.yB.teardown()
       }
-      getMessageHandlerKey(dd) {
-        switch (typeof dd) {
+      getMessageHandlerKey(bb) {
+        switch (typeof bb) {
           case "string":
-            return dd;
+            return bb;
           case "number":
-            return `i${dd}`;
+            return `i${bb}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    Od.wo = od
+    wb.VU = Ub
   },
-  10402: (dd, Od, md) => {
-    var Wd = md(10311);
-    let Fd;
+  10590: (bb, wb, Mb) => {
+    var eb = Mb(10488);
+    let Hb;
 
-    function Rd() {
-      if (!Fd) try {
-        Fd = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (dd) {}
-      return Fd || "undefined" === typeof globalThis.indexedDB || (Fd = new Xd), Fd || (Fd = {
+    function pb() {
+      if (!Hb) try {
+        Hb = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (bb) {}
+      return Hb || "undefined" === typeof globalThis.indexedDB || (Hb = new Vb), Hb || (Hb = {
         cache: {},
-        setItem: function(dd, Od) {
-          this.cache[dd] = Od
+        setItem: function(bb, wb) {
+          this.cache[bb] = wb
         },
-        getItem: function(dd) {
-          this.cache[dd]
+        getItem: function(bb) {
+          this.cache[bb]
         },
-        removeItem: function(dd) {
-          delete this.cache[dd]
+        removeItem: function(bb) {
+          delete this.cache[bb]
         }
-      }), Fd
+      }), Hb
     }
-    class Xd {
+    class Vb {
       constructor() {
-        this.dbPromise = new Promise((dd => {
-          const Od = indexedDB.open("_colyseus_storage", 1);
-          Od.onupgradeneeded = () => Od.result.createObjectStore("store"), Od.onsuccess = () => dd(Od.result)
+        this.dbPromise = new Promise((bb => {
+          const wb = indexedDB.open("_colyseus_storage", 1);
+          wb.onupgradeneeded = () => wb.result.createObjectStore("store"), wb.onsuccess = () => bb(wb.result)
         }))
       }
-      tx(dd, Od) {
-        return Wd.__awaiter(this, void 0, void 0, (function*() {
-          const md = (yield this.dbPromise).transaction("store", dd).objectStore("store");
-          return Od(md)
+      tx(bb, wb) {
+        return eb.__awaiter(this, void 0, void 0, (function*() {
+          const Mb = (yield this.dbPromise).transaction("store", bb).objectStore("store");
+          return wb(Mb)
         }))
       }
-      setItem(dd, Od) {
-        return this.tx("readwrite", (md => md.put(Od, dd))).then()
+      setItem(bb, wb) {
+        return this.tx("readwrite", (Mb => Mb.put(wb, bb))).then()
       }
-      getItem(dd) {
-        return Wd.__awaiter(this, void 0, void 0, (function*() {
-          const Od = yield this.tx("readonly", (Od => Od.get(dd)));
-          return new Promise((dd => {
-            Od.onsuccess = () => dd(Od.result)
+      getItem(bb) {
+        return eb.__awaiter(this, void 0, void 0, (function*() {
+          const wb = yield this.tx("readonly", (wb => wb.get(bb)));
+          return new Promise((bb => {
+            wb.onsuccess = () => bb(wb.result)
           }))
         }))
       }
-      removeItem(dd) {
-        return this.tx("readwrite", (Od => Od.delete(dd))).then()
+      removeItem(bb) {
+        return this.tx("readwrite", (wb => wb.delete(bb))).then()
       }
     }
-    Od.getItem = function(dd, Od) {
-      const md = Rd().getItem(dd);
-      "undefined" !== typeof Promise && md instanceof Promise ? md.then((dd => Od(dd))) : Od(md)
-    }, Od.removeItem = function(dd) {
-      Rd().removeItem(dd)
-    }, Od.setItem = function(dd, Od) {
-      Rd().setItem(dd, Od)
+    wb.getItem = function(bb, wb) {
+      const Mb = pb().getItem(bb);
+      "undefined" !== typeof Promise && Mb instanceof Promise ? Mb.then((bb => wb(bb))) : wb(Mb)
+    }, wb.removeItem = function(bb) {
+      pb().removeItem(bb)
+    }, wb.setItem = function(bb, wb) {
+      pb().setItem(bb, wb)
     }
   },
-  10361: (dd, Od) => {
-    Od.createNanoEvents = () => ({
-      emit(dd) {
-        let Od = this.events[dd] || [];
-        for (var md = arguments.length, Wd = new Array(md > 1 ? md - 1 : 0), Fd = 1; Fd < md; Fd++) Wd[Fd - 1] = arguments[Fd];
-        for (let Rd = 0, Xd = Od.length; Rd < Xd; Rd++) Od[Rd](...Wd)
+  10549: (bb, wb) => {
+    wb.createNanoEvents = () => ({
+      emit(bb) {
+        let wb = this.events[bb] || [];
+        for (var Mb = arguments.length, eb = new Array(Mb > 1 ? Mb - 1 : 0), Hb = 1; Hb < Mb; Hb++) eb[Hb - 1] = arguments[Hb];
+        for (let pb = 0, Vb = wb.length; pb < Vb; pb++) wb[pb](...eb)
       },
       events: {},
-      on(dd, Od) {
-        var md;
-        return (null === (md = this.events[dd]) || void 0 === md ? void 0 : md.push(Od)) || (this.events[dd] = [Od]), () => {
-          var md;
-          this.events[dd] = null === (md = this.events[dd]) || void 0 === md ? void 0 : md.filter((dd => Od !== dd))
+      on(bb, wb) {
+        var Mb;
+        return (null === (Mb = this.events[bb]) || void 0 === Mb ? void 0 : Mb.push(wb)) || (this.events[bb] = [wb]), () => {
+          var Mb;
+          this.events[bb] = null === (Mb = this.events[bb]) || void 0 === Mb ? void 0 : Mb.filter((bb => wb !== bb))
         }
       }
     })
   },
-  10367: (dd, Od) => {
-    class md {
+  10554: (bb, wb) => {
+    class Mb {
       constructor() {
         this.handlers = []
       }
-      register(dd) {
-        return this.handlers.push(dd), this
+      register(bb) {
+        return this.handlers.push(bb), this
       }
       invoke() {
-        for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-        this.handlers.forEach((dd => dd.apply(this, Od)))
+        for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+        this.handlers.forEach((bb => bb.apply(this, wb)))
       }
       invokeAsync() {
-        for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-        return Promise.all(this.handlers.map((dd => dd.apply(this, Od))))
+        for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+        return Promise.all(this.handlers.map((bb => bb.apply(this, wb))))
       }
-      remove(dd) {
-        const Od = this.handlers.indexOf(dd);
-        this.handlers[Od] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(bb) {
+        const wb = this.handlers.indexOf(bb);
+        this.handlers[wb] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    Od.EventEmitter = md, Od.createSignal = function() {
-      const dd = new md;
+    wb.EventEmitter = Mb, wb.createSignal = function() {
+      const bb = new Mb;
 
-      function Od(Od) {
-        return dd.register(Od, null === this)
+      function wb(wb) {
+        return bb.register(wb, null === this)
       }
-      return Od.once = Od => {
-        const md = function() {
-          for (var Wd = arguments.length, Fd = new Array(Wd), Rd = 0; Rd < Wd; Rd++) Fd[Rd] = arguments[Rd];
-          Od.apply(this, Fd), dd.remove(md)
+      return wb.once = wb => {
+        const Mb = function() {
+          for (var eb = arguments.length, Hb = new Array(eb), pb = 0; pb < eb; pb++) Hb[pb] = arguments[pb];
+          wb.apply(this, Hb), bb.remove(Mb)
         };
-        dd.register(md)
-      }, Od.remove = Od => dd.remove(Od), Od.invoke = function() {
-        return dd.invoke(...arguments)
-      }, Od.invokeAsync = function() {
-        return dd.invokeAsync(...arguments)
-      }, Od.clear = () => dd.clear(), Od
+        bb.register(Mb)
+      }, wb.remove = wb => bb.remove(wb), wb.invoke = function() {
+        return bb.invoke(...arguments)
+      }, wb.invokeAsync = function() {
+        return bb.invokeAsync(...arguments)
+      }, wb.clear = () => bb.clear(), wb
     }
   },
-  10313: (dd, Od) => {
-    var md;
-    Od.CloseCode = void 0, (md = Od.CloseCode || (Od.CloseCode = {}))[md.CONSENTED = 4e3] = "CONSENTED", md[md.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class Wd extends Error {
-      constructor(dd, Od) {
-        super(Od), this.name = "ServerError", this.code = dd
+  10493: (bb, wb) => {
+    var Mb;
+    wb.CloseCode = void 0, (Mb = wb.CloseCode || (wb.CloseCode = {}))[Mb.CONSENTED = 4e3] = "CONSENTED", Mb[Mb.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class eb extends Error {
+      constructor(bb, wb) {
+        super(wb), this.name = "ServerError", this.code = bb
       }
     }
-    class Fd extends Error {
-      constructor(dd) {
-        super(dd), this.name = "AbortError"
+    class Hb extends Error {
+      constructor(bb) {
+        super(bb), this.name = "AbortError"
       }
     }
-    Od.AbortError = Fd, Od.ServerError = Wd
+    wb.AbortError = Hb, wb.ServerError = eb
   },
-  10297: (dd, Od, md) => {
-    md(10303);
-    var Wd = md(10307),
-      Fd = md(10345),
-      Rd = md(10315),
-      Xd = md(10396),
-      Kd = md(10313),
-      hd = md(10375),
-      vd = md(10409),
-      Qd = md(10353);
-    Qd.registerSerializer("schema", hd.KV), Qd.registerSerializer("none", vd.NoneSerializer), Od.Client = Wd.Client, Od.MatchMakeError = Wd.MatchMakeError, Object.defineProperty(Od, "ErrorCode", {
+  10476: (bb, wb, Mb) => {
+    Mb(10479);
+    var eb = Mb(10486),
+      Hb = Mb(10532),
+      pb = Mb(10500),
+      Vb = Mb(10581),
+      gb = Mb(10493),
+      lb = Mb(10563),
+      Lb = Mb(10602),
+      Ib = Mb(10541);
+    Ib.registerSerializer("schema", lb.vW), Ib.registerSerializer("none", Lb.NoneSerializer), wb.Client = eb.Client, wb.MatchMakeError = eb.MatchMakeError, Object.defineProperty(wb, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return Fd.ErrorCode
+        return Hb.ErrorCode
       }
-    }), Object.defineProperty(Od, "Protocol", {
+    }), Object.defineProperty(wb, "Protocol", {
       enumerable: !0,
       get: function() {
-        return Fd.Protocol
+        return Hb.Protocol
       }
-    }), Od.wo = Rd.wo, Od.Auth = Xd.Auth, Od.ServerError = Kd.ServerError, Od.KV = hd.KV, Od.getStateCallbacks = hd.getStateCallbacks, Od.registerSerializer = Qd.registerSerializer
+    }), wb.VU = pb.VU, wb.Auth = Vb.Auth, wb.ServerError = gb.ServerError, wb.vW = lb.vW, wb.getStateCallbacks = lb.getStateCallbacks, wb.registerSerializer = Ib.registerSerializer
   },
-  10303: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = dd => null !== dd && "object" === typeof dd && dd.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  10479: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = bb => null !== bb && "object" === typeof bb && bb.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  10409: (dd, Od) => {
-    Od.NoneSerializer = class {
-      setState(dd) {}
+  10602: (bb, wb) => {
+    wb.NoneSerializer = class {
+      setState(bb) {}
       getState() {
         return null
       }
-      patch(dd) {}
+      patch(bb) {}
       teardown() {}
-      handshake(dd) {}
+      handshake(bb) {}
     }
   },
-  10375: (dd, Od, md) => {
-    var Wd = md(10329);
-    Od.KV = class {
-      setState(dd, Od) {
-        this.Ft.decode(dd, Od)
+  10563: (bb, wb, Mb) => {
+    var eb = Mb(10517);
+    wb.vW = class {
+      setState(bb, wb) {
+        this.wO.decode(bb, wb)
       }
       getState() {
         return this.state
       }
-      patch(dd, Od) {
-        return this.Ft.decode(dd, Od)
+      patch(bb, wb) {
+        return this.wO.decode(bb, wb)
       }
       teardown() {
-        this.Ft.root.clearRefs()
+        this.wO.root.clearRefs()
       }
-      handshake(dd, Od) {
-        this.state ? (Wd.Reflection.decode(dd, Od), this.Ft = new Wd.Decoder(this.state)) : (this.Ft = Wd.Reflection.decode(dd, Od), this.state = this.Ft.state)
+      handshake(bb, wb) {
+        this.state ? (eb.Reflection.decode(bb, wb), this.wO = new eb.Decoder(this.state)) : (this.wO = eb.Reflection.decode(bb, wb), this.state = this.wO.state)
       }
-    }, Od.getStateCallbacks = function(dd) {
+    }, wb.getStateCallbacks = function(bb) {
       try {
-        return Wd.getDecoderStateCallbacks(dd.lT.Ft)
-      } catch (Od) {
+        return eb.getDecoderStateCallbacks(bb.yB.wO)
+      } catch (wb) {
         return
       }
     }
   },
-  10353: (dd, Od) => {
-    const md = {};
-    Od.getSerializer = function(dd) {
-      const Od = md[dd];
-      if (!Od) throw new Error("missing serializer: " + dd);
-      return Od
-    }, Od.registerSerializer = function(dd, Od) {
-      md[dd] = Od
+  10541: (bb, wb) => {
+    const Mb = {};
+    wb.getSerializer = function(bb) {
+      const wb = Mb[bb];
+      if (!wb) throw new Error("missing serializer: " + bb);
+      return wb
+    }, wb.registerSerializer = function(bb, wb) {
+      Mb[bb] = wb
     }
   },
-  10326: (dd, Od, md) => {
-    var Wd = md(10311),
-      Fd = md(10329);
-    Od.H3TransportTransport = class {
-      constructor(dd) {
-        this.events = dd, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  10509: (bb, wb, Mb) => {
+    var eb = Mb(10488),
+      Hb = Mb(10517);
+    wb.H3TransportTransport = class {
+      constructor(bb) {
+        this.events = bb, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const md = Od.fingerprint && {
+      connect(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Mb = wb.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(Od.fingerprint).buffer
+            value: new Uint8Array(wb.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(dd, md), this.wt.ready.then((dd => {
-          console.log("WebTransport ready!", dd), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((dd => {
-            this.reader = dd.value.readable.getReader(), this.writer = dd.value.writable.getWriter(), this.sendSeatReservation(Od.room.roomId, Od.sessionId, Od.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((dd => {
-            console.error("failed to read incoming stream", dd), console.error("TODO: close the connection")
+        this.wt = new WebTransport(bb, Mb), this.wt.ready.then((bb => {
+          console.log("WebTransport ready!", bb), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((bb => {
+            this.reader = bb.value.readable.getReader(), this.writer = bb.value.writable.getWriter(), this.sendSeatReservation(wb.room.roomId, wb.sessionId, wb.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((bb => {
+            console.error("failed to read incoming stream", bb), console.error("TODO: close the connection")
           }))
-        })).catch((dd => {
-          console.log("WebTransport not ready!", dd), this._close()
-        })), this.wt.closed.then((dd => {
-          console.log("WebTransport closed w/ success", dd), this.events.onclose({
-            code: dd.closeCode,
-            reason: dd.reason
+        })).catch((bb => {
+          console.log("WebTransport not ready!", bb), this._close()
+        })), this.wt.closed.then((bb => {
+          console.log("WebTransport closed w/ success", bb), this.events.onclose({
+            code: bb.closeCode,
+            reason: bb.reason
           })
-        })).catch((dd => {
-          console.log("WebTransport closed w/ error", dd), this.events.onerror(dd), this.events.onclose({
-            code: dd.closeCode,
-            reason: dd.reason
+        })).catch((bb => {
+          console.log("WebTransport closed w/ error", bb), this.events.onerror(bb), this.events.onclose({
+            code: bb.closeCode,
+            reason: bb.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(dd) {
-        const Od = Fd.encode.number(this.lengthPrefixBuffer, dd.length, {
+      send(bb) {
+        const wb = Hb.encode.number(this.lengthPrefixBuffer, bb.length, {
             offset: 0
           }),
-          md = new Uint8Array(Od + dd.length);
-        md.set(this.lengthPrefixBuffer.subarray(0, Od), 0), md.set(dd, Od), this.writer.write(md)
+          Mb = new Uint8Array(wb + bb.length);
+        Mb.set(this.lengthPrefixBuffer.subarray(0, wb), 0), Mb.set(bb, wb), this.writer.write(Mb)
       }
-      sendUnreliable(dd) {
-        const Od = Fd.encode.number(this.lengthPrefixBuffer, dd.length, {
+      sendUnreliable(bb) {
+        const wb = Hb.encode.number(this.lengthPrefixBuffer, bb.length, {
             offset: 0
           }),
-          md = new Uint8Array(Od + dd.length);
-        md.set(this.lengthPrefixBuffer.subarray(0, Od), 0), md.set(dd, Od), this.unreliableWriter.write(md)
+          Mb = new Uint8Array(wb + bb.length);
+        Mb.set(this.lengthPrefixBuffer.subarray(0, wb), 0), Mb.set(bb, wb), this.unreliableWriter.write(Mb)
       }
-      close(dd, Od) {
+      close(bb, wb) {
         try {
           this.wt.close({
-            closeCode: dd,
-            reason: Od
+            closeCode: bb,
+            reason: wb
           })
-        } catch (md) {
-          console.error(md)
+        } catch (Mb) {
+          console.error(Mb)
         }
       }
       readIncomingData() {
-        return Wd.__awaiter(this, void 0, void 0, (function*() {
-          let dd;
+        return eb.__awaiter(this, void 0, void 0, (function*() {
+          let bb;
           for (; this.isOpen;) {
             try {
-              dd = yield this.reader.read();
-              const Od = dd.value,
-                md = {
+              bb = yield this.reader.read();
+              const wb = bb.value,
+                Mb = {
                   offset: 0
                 };
               do {
-                const dd = Fd.decode.number(Od, md);
+                const bb = Hb.decode.number(wb, Mb);
                 this.events.onmessage({
-                  data: Od.subarray(md.offset, md.offset + dd)
-                }), md.offset += dd
-              } while (md.offset < Od.length)
-            } catch (Od) {
-              -1 === Od.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Od);
+                  data: wb.subarray(Mb.offset, Mb.offset + bb)
+                }), Mb.offset += bb
+              } while (Mb.offset < wb.length)
+            } catch (wb) {
+              -1 === wb.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", wb);
               break
             }
-            if (dd.done) break
+            if (bb.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return Wd.__awaiter(this, void 0, void 0, (function*() {
-          let dd;
+        return eb.__awaiter(this, void 0, void 0, (function*() {
+          let bb;
           for (; this.isOpen;) {
             try {
-              dd = yield this.unreliableReader.read();
-              const Od = dd.value,
-                md = {
+              bb = yield this.unreliableReader.read();
+              const wb = bb.value,
+                Mb = {
                   offset: 0
                 };
               do {
-                const dd = Fd.decode.number(Od, md);
+                const bb = Hb.decode.number(wb, Mb);
                 this.events.onmessage({
-                  data: Od.subarray(md.offset, md.offset + dd)
-                }), md.offset += dd
-              } while (md.offset < Od.length)
-            } catch (Od) {
-              -1 === Od.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Od);
+                  data: wb.subarray(Mb.offset, Mb.offset + bb)
+                }), Mb.offset += bb
+              } while (Mb.offset < wb.length)
+            } catch (wb) {
+              -1 === wb.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", wb);
               break
             }
-            if (dd.done) break
+            if (bb.done) break
           }
         }))
       }
-      sendSeatReservation(dd, Od, md) {
-        const Wd = {
+      sendSeatReservation(bb, wb, Mb) {
+        const eb = {
             offset: 0
           },
-          Rd = [];
-        Fd.encode.string(Rd, dd, Wd), Fd.encode.string(Rd, Od, Wd), md && Fd.encode.string(Rd, md, Wd), this.writer.write(new Uint8Array(Rd).buffer)
+          pb = [];
+        Hb.encode.string(pb, bb, eb), Hb.encode.string(pb, wb, eb), Mb && Hb.encode.string(pb, Mb, eb), this.writer.write(new Uint8Array(pb).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  10332: (dd, Od, md) => {
-    var Wd = md(10341);
-    const Fd = globalThis.WebSocket || Wd;
-    Od.WebSocketTransport = class {
-      constructor(dd) {
-        this.events = dd
+  10521: (bb, wb, Mb) => {
+    var eb = Mb(10525);
+    const Hb = globalThis.WebSocket || eb;
+    wb.WebSocketTransport = class {
+      constructor(bb) {
+        this.events = bb
       }
-      send(dd) {
-        this.ws.send(dd)
+      send(bb) {
+        this.ws.send(bb)
       }
-      sendUnreliable(dd) {
+      sendUnreliable(bb) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(dd, Od) {
+      connect(bb, wb) {
         try {
-          this.ws = new Fd(dd, {
-            headers: Od,
+          this.ws = new Hb(bb, {
+            headers: wb,
             protocols: this.protocols
           })
-        } catch (md) {
-          this.ws = new Fd(dd, this.protocols)
+        } catch (Mb) {
+          this.ws = new Hb(bb, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(dd, Od) {
-        this.ws.close(dd, Od)
+      close(bb, wb) {
+        this.ws.close(bb, wb)
       }
       get isOpen() {
-        return this.ws.readyState === Fd.OPEN
+        return this.ws.readyState === Hb.OPEN
       }
     }
   },
-  10341: dd => {
-    dd.exports = function() {
+  10525: bb => {
+    bb.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  10393: (dd, Od, md) => {
-    function Wd(dd, Od) {
-      Od.headers = dd.headers || {}, Od.statusMessage = dd.statusText, Od.statusCode = dd.status, Od.data = dd.response
+  10579: (bb, wb, Mb) => {
+    function eb(bb, wb) {
+      wb.headers = bb.headers || {}, wb.statusMessage = bb.statusText, wb.statusCode = bb.status, wb.data = bb.response
     }
 
-    function Fd(dd, Od, md) {
-      return new Promise((function(Fd, Rd) {
-        md = md || {};
-        var Xd, Kd, hd, vd = new XMLHttpRequest,
-          Qd = md.body,
-          td = md.headers || {};
-        for (Xd in md.timeout && (vd.timeout = md.timeout), vd.ontimeout = vd.onerror = function(dd) {
-            dd.timeout = "timeout" == dd.type, Rd(dd)
-          }, vd.onabort = function(dd) {
-            dd.aborted = !0, Rd(dd)
-          }, vd.open(dd, Od.href || Od), vd.onload = function() {
-            for (hd = vd.getAllResponseHeaders().trim().split(/[\r\n]+/), Wd(vd, vd); Kd = hd.shift();) Kd = Kd.split(": "), vd.headers[Kd.shift().toLowerCase()] = Kd.join(": ");
-            if ((Kd = vd.headers["content-type"]) && ~Kd.indexOf("application/json")) try {
-              vd.data = JSON.parse(vd.data, md.reviver)
-            } catch (dd) {
-              return Wd(vd, dd), Rd(dd)
-            }(vd.status >= 400 ? Rd : Fd)(vd)
-          }, typeof FormData < "u" && Qd instanceof FormData || Qd && "object" == typeof Qd && (td["content-type"] = "application/json", Qd = JSON.stringify(Qd)), vd.withCredentials = !!md.withCredentials, td) vd.setRequestHeader(Xd, td[Xd]);
-        vd.send(Qd), md.signal && md.signal.addEventListener("abort", (function() {
-          vd.abort()
+    function Hb(bb, wb, Mb) {
+      return new Promise((function(Hb, pb) {
+        Mb = Mb || {};
+        var Vb, gb, lb, Lb = new XMLHttpRequest,
+          Ib = Mb.body,
+          Ob = Mb.headers || {};
+        for (Vb in Mb.timeout && (Lb.timeout = Mb.timeout), Lb.ontimeout = Lb.onerror = function(bb) {
+            bb.timeout = "timeout" == bb.type, pb(bb)
+          }, Lb.onabort = function(bb) {
+            bb.aborted = !0, pb(bb)
+          }, Lb.open(bb, wb.href || wb), Lb.onload = function() {
+            for (lb = Lb.getAllResponseHeaders().trim().split(/[\r\n]+/), eb(Lb, Lb); gb = lb.shift();) gb = gb.split(": "), Lb.headers[gb.shift().toLowerCase()] = gb.join(": ");
+            if ((gb = Lb.headers["content-type"]) && ~gb.indexOf("application/json")) try {
+              Lb.data = JSON.parse(Lb.data, Mb.reviver)
+            } catch (bb) {
+              return eb(Lb, bb), pb(bb)
+            }(Lb.status >= 400 ? pb : Hb)(Lb)
+          }, typeof FormData < "u" && Ib instanceof FormData || Ib && "object" == typeof Ib && (Ob["content-type"] = "application/json", Ib = JSON.stringify(Ib)), Lb.withCredentials = !!Mb.withCredentials, Ob) Lb.setRequestHeader(Vb, Ob[Vb]);
+        Lb.send(Ib), Mb.signal && Mb.signal.addEventListener("abort", (function() {
+          Lb.abort()
         }))
       }))
     }
-    md.r(Od), md.d(Od, {
-      del: () => hd,
-      get: () => Rd,
-      patch: () => Kd,
-      post: () => Xd,
-      put: () => vd,
-      send: () => Fd
+    Mb.r(wb), Mb.d(wb, {
+      del: () => lb,
+      get: () => pb,
+      patch: () => gb,
+      post: () => Vb,
+      put: () => Lb,
+      send: () => Hb
     });
-    var Rd = Fd.bind(Fd, "GET"),
-      Xd = Fd.bind(Fd, "POST"),
-      Kd = Fd.bind(Fd, "PATCH"),
-      hd = Fd.bind(Fd, "DELETE"),
-      vd = Fd.bind(Fd, "PUT")
+    var pb = Hb.bind(Hb, "GET"),
+      Vb = Hb.bind(Hb, "POST"),
+      gb = Hb.bind(Hb, "PATCH"),
+      lb = Hb.bind(Hb, "DELETE"),
+      Lb = Hb.bind(Hb, "PUT")
   },
-  10377: (dd, Od, md) => {
-    var Wd, Fd, Rd;
-    md.r(Od), md.d(Od, {
-      ALWAYS: () => CO,
-      C1: () => gd,
-      DECIMAL_FIT: () => kO,
-      DECIMAL_ROUND: () => ZO,
-      Decoder: () => QO,
-      Encoder: () => IO,
-      FLOAT32_OPTIONS: () => HO,
-      NEVER: () => lO,
-      Packr: () => rO,
-      RESERVE_START_SPACE: () => dm,
-      RESET_BUFFER_MODE: () => MO,
-      REUSE_BUFFER_MODE: () => fO,
-      Unpackr: () => Bd,
-      addExtension: () => zO,
-      clearSource: () => hO,
-      decode: () => qO,
-      decodeIter: () => Om,
-      encode: () => eO,
-      encodeIter: () => mm,
-      isNativeAccelerationEnabled: () => cd,
-      mapsAsObjects: () => Fm,
-      pack: () => DO,
-      roundFloat32: () => gO,
-      unpack: () => oO,
-      unpackMultiple: () => NO,
-      useRecords: () => Wm
+  10566: (bb, wb, Mb) => {
+    var eb, Hb, pb;
+    Mb.r(wb), Mb.d(wb, {
+      ALWAYS: () => Pw,
+      C1: () => zb,
+      DECIMAL_FIT: () => yw,
+      DECIMAL_ROUND: () => nw,
+      Decoder: () => lw,
+      Encoder: () => uw,
+      FLOAT32_OPTIONS: () => tw,
+      NEVER: () => dw,
+      Packr: () => Ww,
+      RESERVE_START_SPACE: () => kw,
+      RESET_BUFFER_MODE: () => Tw,
+      REUSE_BUFFER_MODE: () => ow,
+      Unpackr: () => Rb,
+      addExtension: () => Qw,
+      clearSource: () => Vw,
+      decode: () => Uw,
+      decodeIter: () => bM,
+      encode: () => iw,
+      encodeIter: () => wM,
+      isNativeAccelerationEnabled: () => Qb,
+      mapsAsObjects: () => eM,
+      pack: () => aw,
+      roundFloat32: () => mw,
+      unpack: () => Iw,
+      unpackMultiple: () => Ow,
+      useRecords: () => MM
     });
     try {
-      Wd = new TextDecoder
-    } catch (Rm) {}
-    var Xd = 0;
-    const Kd = [];
-    var hd, vd, Qd, td, od, Nd = Kd,
-      qd = 0,
-      Hd = {},
-      yd = 0,
-      bd = 0,
-      Td = [],
-      pd = {
+      eb = new TextDecoder
+    } catch (HM) {}
+    var Vb = 0;
+    const gb = [];
+    var lb, Lb, Ib, Ob, Ub, tb = gb,
+      Cb = 0,
+      Eb = {},
+      Fb = 0,
+      Bb = 0,
+      sb = [],
+      mb = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class Yd {}
-    const gd = new Yd;
-    gd.name = "MessagePack 0xC1";
-    var wd, Ed, Jd, Ud = !1,
-      xd = 2;
+    class hb {}
+    const zb = new hb;
+    zb.name = "MessagePack 0xC1";
+    var Xb, xb, jb, Kb = !1,
+      rb = 2;
     try {
       new Function("")
-    } catch (Rm) {
-      xd = 1 / 0
+    } catch (HM) {
+      rb = 1 / 0
     }
-    class Bd {
-      constructor(dd) {
-        dd && (!1 === dd.useRecords && void 0 === dd.mapsAsObjects && (dd.mapsAsObjects = !0), dd.sequential && !1 !== dd.trusted && (dd.trusted = !0, dd.structures || 0 == dd.useRecords || (dd.structures = [], dd.maxSharedStructures || (dd.maxSharedStructures = 0))), dd.structures ? dd.structures.sharedLength = dd.structures.length : dd.getStructures && ((dd.structures = []).uninitialized = !0, dd.structures.sharedLength = 0), dd.int64AsNumber && (dd.int64AsType = "number")), Object.assign(this, dd)
+    class Rb {
+      constructor(bb) {
+        bb && (!1 === bb.useRecords && void 0 === bb.mapsAsObjects && (bb.mapsAsObjects = !0), bb.sequential && !1 !== bb.trusted && (bb.trusted = !0, bb.structures || 0 == bb.useRecords || (bb.structures = [], bb.maxSharedStructures || (bb.maxSharedStructures = 0))), bb.structures ? bb.structures.sharedLength = bb.structures.length : bb.getStructures && ((bb.structures = []).uninitialized = !0, bb.structures.sharedLength = 0), bb.int64AsNumber && (bb.int64AsType = "number")), Object.assign(this, bb)
       }
-      unpack(dd, Od) {
-        if (Fd) return KO((() => (hO(), this ? this.unpack(dd, Od) : Bd.prototype.unpack.call(pd, dd, Od))));
-        dd.buffer || dd.constructor !== ArrayBuffer || (dd = "undefined" !== typeof Buffer ? Buffer.from(dd) : new Uint8Array(dd)), "object" === typeof Od ? (Rd = Od.end || dd.length, Xd = Od.start || 0) : (Xd = 0, Rd = Od > -1 ? Od : dd.length), qd = 0, bd = 0, vd = null, Nd = Kd, Qd = null, Fd = dd;
+      unpack(bb, wb) {
+        if (Hb) return pw((() => (Vw(), this ? this.unpack(bb, wb) : Rb.prototype.unpack.call(mb, bb, wb))));
+        bb.buffer || bb.constructor !== ArrayBuffer || (bb = "undefined" !== typeof Buffer ? Buffer.from(bb) : new Uint8Array(bb)), "object" === typeof wb ? (pb = wb.end || bb.length, Vb = wb.start || 0) : (Vb = 0, pb = wb > -1 ? wb : bb.length), Cb = 0, Bb = 0, Lb = null, tb = gb, Ib = null, Hb = bb;
         try {
-          od = dd.dataView || (dd.dataView = new DataView(dd.buffer, dd.byteOffset, dd.byteLength))
-        } catch (Rm) {
-          if (Fd = null, dd instanceof Uint8Array) throw Rm;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (dd && "object" == typeof dd ? dd.constructor.name : typeof dd))
+          Ub = bb.dataView || (bb.dataView = new DataView(bb.buffer, bb.byteOffset, bb.byteLength))
+        } catch (HM) {
+          if (Hb = null, bb instanceof Uint8Array) throw HM;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (bb && "object" == typeof bb ? bb.constructor.name : typeof bb))
         }
-        if (this instanceof Bd) {
-          if (Hd = this, this.structures) return hd = this.structures, Sd(Od);
-          (!hd || hd.length > 0) && (hd = [])
-        } else Hd = pd, (!hd || hd.length > 0) && (hd = []);
-        return Sd(Od)
+        if (this instanceof Rb) {
+          if (Eb = this, this.structures) return lb = this.structures, Db(wb);
+          (!lb || lb.length > 0) && (lb = [])
+        } else Eb = mb, (!lb || lb.length > 0) && (lb = []);
+        return Db(wb)
       }
-      unpackMultiple(dd, Od) {
-        let md, Wd = 0;
+      unpackMultiple(bb, wb) {
+        let Mb, eb = 0;
         try {
-          Ud = !0;
-          let Fd = dd.length,
-            Rd = this ? this.unpack(dd, Fd) : tO.unpack(dd, Fd);
-          if (!Od) {
-            for (md = [Rd]; Xd < Fd;) Wd = Xd, md.push(Sd());
-            return md
+          Kb = !0;
+          let Hb = bb.length,
+            pb = this ? this.unpack(bb, Hb) : Lw.unpack(bb, Hb);
+          if (!wb) {
+            for (Mb = [pb]; Vb < Hb;) eb = Vb, Mb.push(Db());
+            return Mb
           }
-          if (!1 === Od(Rd, Wd, Xd)) return;
-          for (; Xd < Fd;)
-            if (Wd = Xd, !1 === Od(Sd(), Wd, Xd)) return
-        } catch (Rm) {
-          throw Rm.lastPosition = Wd, Rm.values = md, Rm
+          if (!1 === wb(pb, eb, Vb)) return;
+          for (; Vb < Hb;)
+            if (eb = Vb, !1 === wb(Db(), eb, Vb)) return
+        } catch (HM) {
+          throw HM.lastPosition = eb, HM.values = Mb, HM
         } finally {
-          Ud = !1, hO()
+          Kb = !1, Vw()
         }
       }
-      _mergeStructures(dd, Od) {
-        Ed && (dd = Ed.call(this, dd)), dd = dd || [], Object.isFrozen(dd) && (dd = dd.map((dd => dd.slice(0))));
-        for (let md = 0, Wd = dd.length; md < Wd; md++) {
-          let Od = dd[md];
-          Od && (Od.isShared = !0, md >= 32 && (Od.highByte = md - 32 >> 5))
+      _mergeStructures(bb, wb) {
+        xb && (bb = xb.call(this, bb)), bb = bb || [], Object.isFrozen(bb) && (bb = bb.map((bb => bb.slice(0))));
+        for (let Mb = 0, eb = bb.length; Mb < eb; Mb++) {
+          let wb = bb[Mb];
+          wb && (wb.isShared = !0, Mb >= 32 && (wb.highByte = Mb - 32 >> 5))
         }
-        dd.sharedLength = dd.length;
-        for (let md in Od || [])
-          if (md >= 0) {
-            let Wd = dd[md],
-              Fd = Od[md];
-            Fd && (Wd && ((dd.restoreStructures || (dd.restoreStructures = []))[md] = Wd), dd[md] = Fd)
-          } return this.structures = dd
+        bb.sharedLength = bb.length;
+        for (let Mb in wb || [])
+          if (Mb >= 0) {
+            let eb = bb[Mb],
+              Hb = wb[Mb];
+            Hb && (eb && ((bb.restoreStructures || (bb.restoreStructures = []))[Mb] = eb), bb[Mb] = Hb)
+          } return this.structures = bb
       }
-      decode(dd, Od) {
-        return this.unpack(dd, Od)
+      decode(bb, wb) {
+        return this.unpack(bb, wb)
       }
     }
 
-    function Sd(dd) {
+    function Db(bb) {
       try {
-        if (!Hd.trusted && !Ud) {
-          let dd = hd.sharedLength || 0;
-          dd < hd.length && (hd.length = dd)
+        if (!Eb.trusted && !Kb) {
+          let bb = lb.sharedLength || 0;
+          bb < lb.length && (lb.length = bb)
         }
-        let Od;
-        if (Hd.randomAccessStructure && Fd[Xd] < 64 && Fd[Xd] >= 32 && wd ? (Od = wd(Fd, Xd, Rd, Hd), Fd = null, dd && dd.lazy || !Od || (Od = Od.toJSON()), Xd = Rd) : Od = ud(), Qd && (Xd = Qd.postBundlePosition, Qd = null), Ud && (hd.restoreStructures = null), Xd == Rd) hd && hd.restoreStructures && sd(), hd = null, Fd = null, td && (td = null);
+        let wb;
+        if (Eb.randomAccessStructure && Hb[Vb] < 64 && Hb[Vb] >= 32 && Xb ? (wb = Xb(Hb, Vb, pb, Eb), Hb = null, bb && bb.lazy || !wb || (wb = wb.toJSON()), Vb = pb) : wb = Yb(), Ib && (Vb = Ib.postBundlePosition, Ib = null), Kb && (lb.restoreStructures = null), Vb == pb) lb && lb.restoreStructures && cb(), lb = null, Hb = null, Ob && (Ob = null);
         else {
-          if (Xd > Rd) throw new Error("Unexpected end of MessagePack data");
-          if (!Ud) {
-            let dd;
+          if (Vb > pb) throw new Error("Unexpected end of MessagePack data");
+          if (!Kb) {
+            let bb;
             try {
-              dd = JSON.stringify(Od, ((dd, Od) => "bigint" === typeof Od ? `${Od}n` : Od)).slice(0, 100)
-            } catch (Rm) {
-              dd = "(JSON view not available " + Rm + ")"
+              bb = JSON.stringify(wb, ((bb, wb) => "bigint" === typeof wb ? `${wb}n` : wb)).slice(0, 100)
+            } catch (HM) {
+              bb = "(JSON view not available " + HM + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + dd)
+            throw new Error("Data read, but end of buffer not reached " + bb)
           }
         }
-        return Od
-      } catch (Rm) {
-        throw hd && hd.restoreStructures && sd(), hO(), (Rm instanceof RangeError || Rm.message.startsWith("Unexpected end of buffer") || Xd > Rd) && (Rm.incomplete = !0), Rm
+        return wb
+      } catch (HM) {
+        throw lb && lb.restoreStructures && cb(), Vw(), (HM instanceof RangeError || HM.message.startsWith("Unexpected end of buffer") || Vb > pb) && (HM.incomplete = !0), HM
       }
     }
 
-    function sd() {
-      for (let dd in hd.restoreStructures) hd[dd] = hd.restoreStructures[dd];
-      hd.restoreStructures = null
+    function cb() {
+      for (let bb in lb.restoreStructures) lb[bb] = lb.restoreStructures[bb];
+      lb.restoreStructures = null
     }
 
-    function ud() {
-      let dd = Fd[Xd++];
-      if (dd < 160) {
-        if (dd < 128) {
-          if (dd < 64) return dd;
+    function Yb() {
+      let bb = Hb[Vb++];
+      if (bb < 160) {
+        if (bb < 128) {
+          if (bb < 64) return bb;
           {
-            let Od = hd[63 & dd] || Hd.getStructures && Gd()[63 & dd];
-            return Od ? (Od.read || (Od.read = Ad(Od, 63 & dd)), Od.read()) : dd
+            let wb = lb[63 & bb] || Eb.getStructures && Wb()[63 & bb];
+            return wb ? (wb.read || (wb.read = fb(wb, 63 & bb)), wb.read()) : bb
           }
         }
-        if (dd < 144) {
-          if (dd -= 128, Hd.mapsAsObjects) {
-            let Od = {};
-            for (let md = 0; md < dd; md++) {
-              let dd = dO();
-              "__proto__" === dd && (dd = "__proto_"), Od[dd] = ud()
+        if (bb < 144) {
+          if (bb -= 128, Eb.mapsAsObjects) {
+            let wb = {};
+            for (let Mb = 0; Mb < bb; Mb++) {
+              let bb = Tb();
+              "__proto__" === bb && (bb = "__proto_"), wb[bb] = Yb()
             }
-            return Od
+            return wb
           } {
-            let Od = new Map;
-            for (let md = 0; md < dd; md++) Od.set(ud(), ud());
-            return Od
+            let wb = new Map;
+            for (let Mb = 0; Mb < bb; Mb++) wb.set(Yb(), Yb());
+            return wb
           }
         } {
-          dd -= 144;
-          let Od = new Array(dd);
-          for (let md = 0; md < dd; md++) Od[md] = ud();
-          return Hd.freezeData ? Object.freeze(Od) : Od
+          bb -= 144;
+          let wb = new Array(bb);
+          for (let Mb = 0; Mb < bb; Mb++) wb[Mb] = Yb();
+          return Eb.freezeData ? Object.freeze(wb) : wb
         }
       }
-      if (dd < 192) {
-        let Od = dd - 160;
-        if (bd >= Xd) return vd.slice(Xd - yd, (Xd += Od) - yd);
-        if (0 == bd && Rd < 140) {
-          let dd = Od < 16 ? Cd(Od) : ld(Od);
-          if (null != dd) return dd
+      if (bb < 192) {
+        let wb = bb - 160;
+        if (Bb >= Vb) return Lb.slice(Vb - Fb, (Vb += wb) - Fb);
+        if (0 == Bb && pb < 140) {
+          let bb = wb < 16 ? db(wb) : ub(wb);
+          if (null != bb) return bb
         }
-        return nd(Od)
+        return Jb(wb)
       } {
-        let Od;
-        switch (dd) {
+        let wb;
+        switch (bb) {
           case 192:
             return null;
           case 193:
-            return Qd ? (Od = ud(), Od > 0 ? Qd[1].slice(Qd.position1, Qd.position1 += Od) : Qd[0].slice(Qd.position0, Qd.position0 -= Od)) : gd;
+            return Ib ? (wb = Yb(), wb > 0 ? Ib[1].slice(Ib.position1, Ib.position1 += wb) : Ib[0].slice(Ib.position0, Ib.position0 -= wb)) : zb;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (Od = Fd[Xd++], void 0 === Od) throw new Error("Unexpected end of buffer");
-            return kd(Od);
+            if (wb = Hb[Vb++], void 0 === wb) throw new Error("Unexpected end of buffer");
+            return nb(wb);
           case 197:
-            return Od = od.getUint16(Xd), Xd += 2, kd(Od);
+            return wb = Ub.getUint16(Vb), Vb += 2, nb(wb);
           case 198:
-            return Od = od.getUint32(Xd), Xd += 4, kd(Od);
+            return wb = Ub.getUint32(Vb), Vb += 4, nb(wb);
           case 199:
-            return fd(Fd[Xd++]);
+            return yb(Hb[Vb++]);
           case 200:
-            return Od = od.getUint16(Xd), Xd += 2, fd(Od);
+            return wb = Ub.getUint16(Vb), Vb += 2, yb(wb);
           case 201:
-            return Od = od.getUint32(Xd), Xd += 4, fd(Od);
+            return wb = Ub.getUint32(Vb), Vb += 4, yb(wb);
           case 202:
-            if (Od = od.getFloat32(Xd), Hd.useFloat32 > 2) {
-              let dd = vO[(127 & Fd[Xd]) << 1 | Fd[Xd + 1] >> 7];
-              return Xd += 4, (dd * Od + (Od > 0 ? .5 : -.5) | 0) / dd
+            if (wb = Ub.getFloat32(Vb), Eb.useFloat32 > 2) {
+              let bb = gw[(127 & Hb[Vb]) << 1 | Hb[Vb + 1] >> 7];
+              return Vb += 4, (bb * wb + (wb > 0 ? .5 : -.5) | 0) / bb
             }
-            return Xd += 4, Od;
+            return Vb += 4, wb;
           case 203:
-            return Od = od.getFloat64(Xd), Xd += 8, Od;
+            return wb = Ub.getFloat64(Vb), Vb += 8, wb;
           case 204:
-            return Fd[Xd++];
+            return Hb[Vb++];
           case 205:
-            return Od = od.getUint16(Xd), Xd += 2, Od;
+            return wb = Ub.getUint16(Vb), Vb += 2, wb;
           case 206:
-            return Od = od.getUint32(Xd), Xd += 4, Od;
+            return wb = Ub.getUint32(Vb), Vb += 4, wb;
           case 207:
-            return "number" === Hd.int64AsType ? (Od = 4294967296 * od.getUint32(Xd), Od += od.getUint32(Xd + 4)) : "string" === Hd.int64AsType ? Od = od.getBigUint64(Xd).toString() : "auto" === Hd.int64AsType ? (Od = od.getBigUint64(Xd), Od <= BigInt(2) << BigInt(52) && (Od = Number(Od))) : Od = od.getBigUint64(Xd), Xd += 8, Od;
+            return "number" === Eb.int64AsType ? (wb = 4294967296 * Ub.getUint32(Vb), wb += Ub.getUint32(Vb + 4)) : "string" === Eb.int64AsType ? wb = Ub.getBigUint64(Vb).toString() : "auto" === Eb.int64AsType ? (wb = Ub.getBigUint64(Vb), wb <= BigInt(2) << BigInt(52) && (wb = Number(wb))) : wb = Ub.getBigUint64(Vb), Vb += 8, wb;
           case 208:
-            return od.getInt8(Xd++);
+            return Ub.getInt8(Vb++);
           case 209:
-            return Od = od.getInt16(Xd), Xd += 2, Od;
+            return wb = Ub.getInt16(Vb), Vb += 2, wb;
           case 210:
-            return Od = od.getInt32(Xd), Xd += 4, Od;
+            return wb = Ub.getInt32(Vb), Vb += 4, wb;
           case 211:
-            return "number" === Hd.int64AsType ? (Od = 4294967296 * od.getInt32(Xd), Od += od.getUint32(Xd + 4)) : "string" === Hd.int64AsType ? Od = od.getBigInt64(Xd).toString() : "auto" === Hd.int64AsType ? (Od = od.getBigInt64(Xd), Od >= BigInt(-2) << BigInt(52) && Od <= BigInt(2) << BigInt(52) && (Od = Number(Od))) : Od = od.getBigInt64(Xd), Xd += 8, Od;
+            return "number" === Eb.int64AsType ? (wb = 4294967296 * Ub.getInt32(Vb), wb += Ub.getUint32(Vb + 4)) : "string" === Eb.int64AsType ? wb = Ub.getBigInt64(Vb).toString() : "auto" === Eb.int64AsType ? (wb = Ub.getBigInt64(Vb), wb >= BigInt(-2) << BigInt(52) && wb <= BigInt(2) << BigInt(52) && (wb = Number(wb))) : wb = Ub.getBigInt64(Vb), Vb += 8, wb;
           case 212:
-            if (Od = Fd[Xd++], 114 == Od) return mO(63 & Fd[Xd++]);
+            if (wb = Hb[Vb++], 114 == wb) return bw(63 & Hb[Vb++]);
             {
-              let dd = Td[Od];
-              if (dd) return dd.read ? (Xd++, dd.read(ud())) : dd.noBuffer ? (Xd++, dd()) : dd(Fd.subarray(Xd, ++Xd));
-              throw new Error("Unknown extension " + Od)
+              let bb = sb[wb];
+              if (bb) return bb.read ? (Vb++, bb.read(Yb())) : bb.noBuffer ? (Vb++, bb()) : bb(Hb.subarray(Vb, ++Vb));
+              throw new Error("Unknown extension " + wb)
             }
           case 213:
-            return Od = Fd[Xd], 114 == Od ? (Xd++, mO(63 & Fd[Xd++], Fd[Xd++])) : fd(2);
+            return wb = Hb[Vb], 114 == wb ? (Vb++, bw(63 & Hb[Vb++], Hb[Vb++])) : yb(2);
           case 214:
-            return fd(4);
+            return yb(4);
           case 215:
-            return fd(8);
+            return yb(8);
           case 216:
-            return fd(16);
+            return yb(16);
           case 217:
-            return Od = Fd[Xd++], bd >= Xd ? vd.slice(Xd - yd, (Xd += Od) - yd) : Ld(Od);
+            return wb = Hb[Vb++], Bb >= Vb ? Lb.slice(Vb - Fb, (Vb += wb) - Fb) : Sb(wb);
           case 218:
-            return Od = od.getUint16(Xd), bd >= (Xd += 2) ? vd.slice(Xd - yd, (Xd += Od) - yd) : Pd(Od);
+            return wb = Ub.getUint16(Vb), Bb >= (Vb += 2) ? Lb.slice(Vb - Fb, (Vb += wb) - Fb) : Nb(wb);
           case 219:
-            return Od = od.getUint32(Xd), bd >= (Xd += 4) ? vd.slice(Xd - yd, (Xd += Od) - yd) : zd(Od);
+            return wb = Ub.getUint32(Vb), Bb >= (Vb += 4) ? Lb.slice(Vb - Fb, (Vb += wb) - Fb) : vb(wb);
           case 220:
-            return Od = od.getUint16(Xd), Xd += 2, Dd(Od);
+            return wb = Ub.getUint16(Vb), Vb += 2, qb(wb);
           case 221:
-            return Od = od.getUint32(Xd), Xd += 4, Dd(Od);
+            return wb = Ub.getUint32(Vb), Vb += 4, qb(wb);
           case 222:
-            return Od = od.getUint16(Xd), Xd += 2, ed(Od);
+            return wb = Ub.getUint16(Vb), Vb += 2, ab(wb);
           case 223:
-            return Od = od.getUint32(Xd), Xd += 4, ed(Od);
+            return wb = Ub.getUint32(Vb), Vb += 4, ab(wb);
           default:
-            if (dd >= 224) return dd - 256;
-            if (void 0 === dd) {
-              let dd = new Error("Unexpected end of MessagePack data");
-              throw dd.incomplete = !0, dd
+            if (bb >= 224) return bb - 256;
+            if (void 0 === bb) {
+              let bb = new Error("Unexpected end of MessagePack data");
+              throw bb.incomplete = !0, bb
             }
-            throw new Error("Unknown MessagePack token " + dd)
+            throw new Error("Unknown MessagePack token " + bb)
         }
       }
     }
-    const Vd = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const Zb = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function Ad(dd, Od) {
-      function md() {
-        if (md.count++ > xd) {
-          let md = dd.read = new Function("r", "return function(){return " + (Hd.freezeData ? "Object.freeze" : "") + "({" + dd.map((dd => "__proto__" === dd ? "__proto_:r()" : Vd.test(dd) ? dd + ":r()" : "[" + JSON.stringify(dd) + "]:r()")).join(",") + "})}")(ud);
-          return 0 === dd.highByte && (dd.read = rd(Od, dd.read)), md()
+    function fb(bb, wb) {
+      function Mb() {
+        if (Mb.count++ > rb) {
+          let Mb = bb.read = new Function("r", "return function(){return " + (Eb.freezeData ? "Object.freeze" : "") + "({" + bb.map((bb => "__proto__" === bb ? "__proto_:r()" : Zb.test(bb) ? bb + ":r()" : "[" + JSON.stringify(bb) + "]:r()")).join(",") + "})}")(Yb);
+          return 0 === bb.highByte && (bb.read = Ab(wb, bb.read)), Mb()
         }
-        let Wd = {};
-        for (let Od = 0, md = dd.length; Od < md; Od++) {
-          let md = dd[Od];
-          "__proto__" === md && (md = "__proto_"), Wd[md] = ud()
+        let eb = {};
+        for (let wb = 0, Mb = bb.length; wb < Mb; wb++) {
+          let Mb = bb[wb];
+          "__proto__" === Mb && (Mb = "__proto_"), eb[Mb] = Yb()
         }
-        return Hd.freezeData ? Object.freeze(Wd) : Wd
+        return Eb.freezeData ? Object.freeze(eb) : eb
       }
-      return md.count = 0, 0 === dd.highByte ? rd(Od, md) : md
+      return Mb.count = 0, 0 === bb.highByte ? Ab(wb, Mb) : Mb
     }
-    const rd = (dd, Od) => function() {
-      let md = Fd[Xd++];
-      if (0 === md) return Od();
-      let Wd = dd < 32 ? -(dd + (md << 5)) : dd + (md << 5),
-        Rd = hd[Wd] || Gd()[Wd];
-      if (!Rd) throw new Error("Record id is not defined for " + Wd);
-      return Rd.read || (Rd.read = Ad(Rd, dd)), Rd.read()
+    const Ab = (bb, wb) => function() {
+      let Mb = Hb[Vb++];
+      if (0 === Mb) return wb();
+      let eb = bb < 32 ? -(bb + (Mb << 5)) : bb + (Mb << 5),
+        pb = lb[eb] || Wb()[eb];
+      if (!pb) throw new Error("Record id is not defined for " + eb);
+      return pb.read || (pb.read = fb(pb, bb)), pb.read()
     };
 
-    function Gd() {
-      let dd = KO((() => (Fd = null, Hd.getStructures())));
-      return hd = Hd._mergeStructures(dd, hd)
+    function Wb() {
+      let bb = pw((() => (Hb = null, Eb.getStructures())));
+      return lb = Eb._mergeStructures(bb, lb)
     }
-    var nd = jd,
-      Ld = jd,
-      Pd = jd,
-      zd = jd;
-    let cd = !1;
+    var Jb = Gb,
+      Sb = Gb,
+      Nb = Gb,
+      vb = Gb;
+    let Qb = !1;
 
-    function jd(dd) {
-      let Od;
-      if (dd < 16 && (Od = Cd(dd))) return Od;
-      if (dd > 64 && Wd) return Wd.decode(Fd.subarray(Xd, Xd += dd));
-      const md = Xd + dd,
-        Rd = [];
-      for (Od = ""; Xd < md;) {
-        const dd = Fd[Xd++];
-        if (0 === (128 & dd)) Rd.push(dd);
-        else if (192 === (224 & dd)) {
-          const Od = 63 & Fd[Xd++];
-          Rd.push((31 & dd) << 6 | Od)
-        } else if (224 === (240 & dd)) {
-          const Od = 63 & Fd[Xd++],
-            md = 63 & Fd[Xd++];
-          Rd.push((31 & dd) << 12 | Od << 6 | md)
-        } else if (240 === (248 & dd)) {
-          let Od = (7 & dd) << 18 | (63 & Fd[Xd++]) << 12 | (63 & Fd[Xd++]) << 6 | 63 & Fd[Xd++];
-          Od > 65535 && (Od -= 65536, Rd.push(Od >>> 10 & 1023 | 55296), Od = 56320 | 1023 & Od), Rd.push(Od)
-        } else Rd.push(dd);
-        Rd.length >= 4096 && (Od += Id.apply(String, Rd), Rd.length = 0)
+    function Gb(bb) {
+      let wb;
+      if (bb < 16 && (wb = db(bb))) return wb;
+      if (bb > 64 && eb) return eb.decode(Hb.subarray(Vb, Vb += bb));
+      const Mb = Vb + bb,
+        pb = [];
+      for (wb = ""; Vb < Mb;) {
+        const bb = Hb[Vb++];
+        if (0 === (128 & bb)) pb.push(bb);
+        else if (192 === (224 & bb)) {
+          const wb = 63 & Hb[Vb++];
+          pb.push((31 & bb) << 6 | wb)
+        } else if (224 === (240 & bb)) {
+          const wb = 63 & Hb[Vb++],
+            Mb = 63 & Hb[Vb++];
+          pb.push((31 & bb) << 12 | wb << 6 | Mb)
+        } else if (240 === (248 & bb)) {
+          let wb = (7 & bb) << 18 | (63 & Hb[Vb++]) << 12 | (63 & Hb[Vb++]) << 6 | 63 & Hb[Vb++];
+          wb > 65535 && (wb -= 65536, pb.push(wb >>> 10 & 1023 | 55296), wb = 56320 | 1023 & wb), pb.push(wb)
+        } else pb.push(bb);
+        pb.length >= 4096 && (wb += ib.apply(String, pb), pb.length = 0)
       }
-      return Rd.length > 0 && (Od += Id.apply(String, Rd)), Od
+      return pb.length > 0 && (wb += ib.apply(String, pb)), wb
     }
 
-    function Dd(dd) {
-      let Od = new Array(dd);
-      for (let md = 0; md < dd; md++) Od[md] = ud();
-      return Hd.freezeData ? Object.freeze(Od) : Od
+    function qb(bb) {
+      let wb = new Array(bb);
+      for (let Mb = 0; Mb < bb; Mb++) wb[Mb] = Yb();
+      return Eb.freezeData ? Object.freeze(wb) : wb
     }
 
-    function ed(dd) {
-      if (Hd.mapsAsObjects) {
-        let Od = {};
-        for (let md = 0; md < dd; md++) {
-          let dd = dO();
-          "__proto__" === dd && (dd = "__proto_"), Od[dd] = ud()
+    function ab(bb) {
+      if (Eb.mapsAsObjects) {
+        let wb = {};
+        for (let Mb = 0; Mb < bb; Mb++) {
+          let bb = Tb();
+          "__proto__" === bb && (bb = "__proto_"), wb[bb] = Yb()
         }
-        return Od
+        return wb
       } {
-        let Od = new Map;
-        for (let md = 0; md < dd; md++) Od.set(ud(), ud());
-        return Od
+        let wb = new Map;
+        for (let Mb = 0; Mb < bb; Mb++) wb.set(Yb(), Yb());
+        return wb
       }
     }
-    var Id = String.fromCharCode;
+    var ib = String.fromCharCode;
 
-    function ld(dd) {
-      let Od = Xd,
-        md = new Array(dd);
-      for (let Wd = 0; Wd < dd; Wd++) {
-        const dd = Fd[Xd++];
-        if ((128 & dd) > 0) return void(Xd = Od);
-        md[Wd] = dd
+    function ub(bb) {
+      let wb = Vb,
+        Mb = new Array(bb);
+      for (let eb = 0; eb < bb; eb++) {
+        const bb = Hb[Vb++];
+        if ((128 & bb) > 0) return void(Vb = wb);
+        Mb[eb] = bb
       }
-      return Id.apply(String, md)
+      return ib.apply(String, Mb)
     }
 
-    function Cd(dd) {
-      if (dd < 4) {
-        if (dd < 2) {
-          if (0 === dd) return "";
+    function db(bb) {
+      if (bb < 4) {
+        if (bb < 2) {
+          if (0 === bb) return "";
           {
-            let dd = Fd[Xd++];
-            return (128 & dd) > 1 ? void(Xd -= 1) : Id(dd)
+            let bb = Hb[Vb++];
+            return (128 & bb) > 1 ? void(Vb -= 1) : ib(bb)
           }
         } {
-          let Od = Fd[Xd++],
-            md = Fd[Xd++];
-          if ((128 & Od) > 0 || (128 & md) > 0) return void(Xd -= 2);
-          if (dd < 3) return Id(Od, md);
-          let Wd = Fd[Xd++];
-          return (128 & Wd) > 0 ? void(Xd -= 3) : Id(Od, md, Wd)
+          let wb = Hb[Vb++],
+            Mb = Hb[Vb++];
+          if ((128 & wb) > 0 || (128 & Mb) > 0) return void(Vb -= 2);
+          if (bb < 3) return ib(wb, Mb);
+          let eb = Hb[Vb++];
+          return (128 & eb) > 0 ? void(Vb -= 3) : ib(wb, Mb, eb)
         }
       } {
-        let Od = Fd[Xd++],
-          md = Fd[Xd++],
-          Wd = Fd[Xd++],
-          Rd = Fd[Xd++];
-        if ((128 & Od) > 0 || (128 & md) > 0 || (128 & Wd) > 0 || (128 & Rd) > 0) return void(Xd -= 4);
-        if (dd < 6) {
-          if (4 === dd) return Id(Od, md, Wd, Rd);
+        let wb = Hb[Vb++],
+          Mb = Hb[Vb++],
+          eb = Hb[Vb++],
+          pb = Hb[Vb++];
+        if ((128 & wb) > 0 || (128 & Mb) > 0 || (128 & eb) > 0 || (128 & pb) > 0) return void(Vb -= 4);
+        if (bb < 6) {
+          if (4 === bb) return ib(wb, Mb, eb, pb);
           {
-            let dd = Fd[Xd++];
-            return (128 & dd) > 0 ? void(Xd -= 5) : Id(Od, md, Wd, Rd, dd)
+            let bb = Hb[Vb++];
+            return (128 & bb) > 0 ? void(Vb -= 5) : ib(wb, Mb, eb, pb, bb)
           }
         }
-        if (dd < 8) {
-          let Kd = Fd[Xd++],
-            hd = Fd[Xd++];
-          if ((128 & Kd) > 0 || (128 & hd) > 0) return void(Xd -= 6);
-          if (dd < 7) return Id(Od, md, Wd, Rd, Kd, hd);
-          let vd = Fd[Xd++];
-          return (128 & vd) > 0 ? void(Xd -= 7) : Id(Od, md, Wd, Rd, Kd, hd, vd)
+        if (bb < 8) {
+          let gb = Hb[Vb++],
+            lb = Hb[Vb++];
+          if ((128 & gb) > 0 || (128 & lb) > 0) return void(Vb -= 6);
+          if (bb < 7) return ib(wb, Mb, eb, pb, gb, lb);
+          let Lb = Hb[Vb++];
+          return (128 & Lb) > 0 ? void(Vb -= 7) : ib(wb, Mb, eb, pb, gb, lb, Lb)
         } {
-          let Kd = Fd[Xd++],
-            hd = Fd[Xd++],
-            vd = Fd[Xd++],
-            Qd = Fd[Xd++];
-          if ((128 & Kd) > 0 || (128 & hd) > 0 || (128 & vd) > 0 || (128 & Qd) > 0) return void(Xd -= 8);
-          if (dd < 10) {
-            if (8 === dd) return Id(Od, md, Wd, Rd, Kd, hd, vd, Qd);
+          let gb = Hb[Vb++],
+            lb = Hb[Vb++],
+            Lb = Hb[Vb++],
+            Ib = Hb[Vb++];
+          if ((128 & gb) > 0 || (128 & lb) > 0 || (128 & Lb) > 0 || (128 & Ib) > 0) return void(Vb -= 8);
+          if (bb < 10) {
+            if (8 === bb) return ib(wb, Mb, eb, pb, gb, lb, Lb, Ib);
             {
-              let dd = Fd[Xd++];
-              return (128 & dd) > 0 ? void(Xd -= 9) : Id(Od, md, Wd, Rd, Kd, hd, vd, Qd, dd)
+              let bb = Hb[Vb++];
+              return (128 & bb) > 0 ? void(Vb -= 9) : ib(wb, Mb, eb, pb, gb, lb, Lb, Ib, bb)
             }
           }
-          if (dd < 12) {
-            let td = Fd[Xd++],
-              od = Fd[Xd++];
-            if ((128 & td) > 0 || (128 & od) > 0) return void(Xd -= 10);
-            if (dd < 11) return Id(Od, md, Wd, Rd, Kd, hd, vd, Qd, td, od);
-            let Nd = Fd[Xd++];
-            return (128 & Nd) > 0 ? void(Xd -= 11) : Id(Od, md, Wd, Rd, Kd, hd, vd, Qd, td, od, Nd)
+          if (bb < 12) {
+            let Ob = Hb[Vb++],
+              Ub = Hb[Vb++];
+            if ((128 & Ob) > 0 || (128 & Ub) > 0) return void(Vb -= 10);
+            if (bb < 11) return ib(wb, Mb, eb, pb, gb, lb, Lb, Ib, Ob, Ub);
+            let tb = Hb[Vb++];
+            return (128 & tb) > 0 ? void(Vb -= 11) : ib(wb, Mb, eb, pb, gb, lb, Lb, Ib, Ob, Ub, tb)
           } {
-            let td = Fd[Xd++],
-              od = Fd[Xd++],
-              Nd = Fd[Xd++],
-              qd = Fd[Xd++];
-            if ((128 & td) > 0 || (128 & od) > 0 || (128 & Nd) > 0 || (128 & qd) > 0) return void(Xd -= 12);
-            if (dd < 14) {
-              if (12 === dd) return Id(Od, md, Wd, Rd, Kd, hd, vd, Qd, td, od, Nd, qd);
+            let Ob = Hb[Vb++],
+              Ub = Hb[Vb++],
+              tb = Hb[Vb++],
+              Cb = Hb[Vb++];
+            if ((128 & Ob) > 0 || (128 & Ub) > 0 || (128 & tb) > 0 || (128 & Cb) > 0) return void(Vb -= 12);
+            if (bb < 14) {
+              if (12 === bb) return ib(wb, Mb, eb, pb, gb, lb, Lb, Ib, Ob, Ub, tb, Cb);
               {
-                let dd = Fd[Xd++];
-                return (128 & dd) > 0 ? void(Xd -= 13) : Id(Od, md, Wd, Rd, Kd, hd, vd, Qd, td, od, Nd, qd, dd)
+                let bb = Hb[Vb++];
+                return (128 & bb) > 0 ? void(Vb -= 13) : ib(wb, Mb, eb, pb, gb, lb, Lb, Ib, Ob, Ub, tb, Cb, bb)
               }
             } {
-              let Hd = Fd[Xd++],
-                yd = Fd[Xd++];
-              if ((128 & Hd) > 0 || (128 & yd) > 0) return void(Xd -= 14);
-              if (dd < 15) return Id(Od, md, Wd, Rd, Kd, hd, vd, Qd, td, od, Nd, qd, Hd, yd);
-              let bd = Fd[Xd++];
-              return (128 & bd) > 0 ? void(Xd -= 15) : Id(Od, md, Wd, Rd, Kd, hd, vd, Qd, td, od, Nd, qd, Hd, yd, bd)
+              let Eb = Hb[Vb++],
+                Fb = Hb[Vb++];
+              if ((128 & Eb) > 0 || (128 & Fb) > 0) return void(Vb -= 14);
+              if (bb < 15) return ib(wb, Mb, eb, pb, gb, lb, Lb, Ib, Ob, Ub, tb, Cb, Eb, Fb);
+              let Bb = Hb[Vb++];
+              return (128 & Bb) > 0 ? void(Vb -= 15) : ib(wb, Mb, eb, pb, gb, lb, Lb, Ib, Ob, Ub, tb, Cb, Eb, Fb, Bb)
             }
           }
         }
       }
     }
 
-    function Zd() {
-      let dd, Od = Fd[Xd++];
-      if (Od < 192) dd = Od - 160;
-      else switch (Od) {
+    function Pb() {
+      let bb, wb = Hb[Vb++];
+      if (wb < 192) bb = wb - 160;
+      else switch (wb) {
         case 217:
-          dd = Fd[Xd++];
+          bb = Hb[Vb++];
           break;
         case 218:
-          dd = od.getUint16(Xd), Xd += 2;
+          bb = Ub.getUint16(Vb), Vb += 2;
           break;
         case 219:
-          dd = od.getUint32(Xd), Xd += 4;
+          bb = Ub.getUint32(Vb), Vb += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return jd(dd)
+      return Gb(bb)
     }
 
-    function kd(dd) {
-      return Hd.copyBuffers ? Uint8Array.prototype.slice.call(Fd, Xd, Xd += dd) : Fd.subarray(Xd, Xd += dd)
+    function nb(bb) {
+      return Eb.copyBuffers ? Uint8Array.prototype.slice.call(Hb, Vb, Vb += bb) : Hb.subarray(Vb, Vb += bb)
     }
 
-    function fd(dd) {
-      let Od = Fd[Xd++];
-      if (Td[Od]) {
-        let md;
-        return Td[Od](Fd.subarray(Xd, md = Xd += dd), (dd => {
-          Xd = dd;
+    function yb(bb) {
+      let wb = Hb[Vb++];
+      if (sb[wb]) {
+        let Mb;
+        return sb[wb](Hb.subarray(Vb, Mb = Vb += bb), (bb => {
+          Vb = bb;
           try {
-            return ud()
+            return Yb()
           } finally {
-            Xd = md
+            Vb = Mb
           }
         }))
       }
-      throw new Error("Unknown extension type " + Od)
+      throw new Error("Unknown extension type " + wb)
     }
-    var Md = new Array(4096);
+    var ob = new Array(4096);
 
-    function dO() {
-      let dd = Fd[Xd++];
-      if (!(dd >= 160 && dd < 192)) return Xd--, OO(ud());
-      if (dd -= 160, bd >= Xd) return vd.slice(Xd - yd, (Xd += dd) - yd);
-      if (!(0 == bd && Rd < 180)) return nd(dd);
-      let Od, md = 4095 & (dd << 5 ^ (dd > 1 ? od.getUint16(Xd) : dd > 0 ? Fd[Xd] : 0)),
-        Wd = Md[md],
-        Kd = Xd,
-        hd = Xd + dd - 3,
-        Qd = 0;
-      if (Wd && Wd.bytes == dd) {
-        for (; Kd < hd;) {
-          if (Od = od.getUint32(Kd), Od != Wd[Qd++]) {
-            Kd = 1879048192;
+    function Tb() {
+      let bb = Hb[Vb++];
+      if (!(bb >= 160 && bb < 192)) return Vb--, kb(Yb());
+      if (bb -= 160, Bb >= Vb) return Lb.slice(Vb - Fb, (Vb += bb) - Fb);
+      if (!(0 == Bb && pb < 180)) return Jb(bb);
+      let wb, Mb = 4095 & (bb << 5 ^ (bb > 1 ? Ub.getUint16(Vb) : bb > 0 ? Hb[Vb] : 0)),
+        eb = ob[Mb],
+        gb = Vb,
+        lb = Vb + bb - 3,
+        Ib = 0;
+      if (eb && eb.bytes == bb) {
+        for (; gb < lb;) {
+          if (wb = Ub.getUint32(gb), wb != eb[Ib++]) {
+            gb = 1879048192;
             break
           }
-          Kd += 4
+          gb += 4
         }
-        for (hd += 3; Kd < hd;)
-          if (Od = Fd[Kd++], Od != Wd[Qd++]) {
-            Kd = 1879048192;
+        for (lb += 3; gb < lb;)
+          if (wb = Hb[gb++], wb != eb[Ib++]) {
+            gb = 1879048192;
             break
-          } if (Kd === hd) return Xd = Kd, Wd.string;
-        hd -= 3, Kd = Xd
+          } if (gb === lb) return Vb = gb, eb.string;
+        lb -= 3, gb = Vb
       }
-      for (Wd = [], Md[md] = Wd, Wd.bytes = dd; Kd < hd;) Od = od.getUint32(Kd), Wd.push(Od), Kd += 4;
-      for (hd += 3; Kd < hd;) Od = Fd[Kd++], Wd.push(Od);
-      let td = dd < 16 ? Cd(dd) : ld(dd);
-      return Wd.string = null != td ? td : nd(dd)
+      for (eb = [], ob[Mb] = eb, eb.bytes = bb; gb < lb;) wb = Ub.getUint32(gb), eb.push(wb), gb += 4;
+      for (lb += 3; gb < lb;) wb = Hb[gb++], eb.push(wb);
+      let Ob = bb < 16 ? db(bb) : ub(bb);
+      return eb.string = null != Ob ? Ob : Jb(bb)
     }
 
-    function OO(dd) {
-      if ("string" === typeof dd) return dd;
-      if ("number" === typeof dd || "boolean" === typeof dd || "bigint" === typeof dd) return dd.toString();
-      if (null == dd) return dd + "";
-      if (Hd.allowArraysInMapKeys && Array.isArray(dd) && dd.flat().every((dd => ["string", "number", "boolean", "bigint"].includes(typeof dd)))) return dd.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof dd)
+    function kb(bb) {
+      if ("string" === typeof bb) return bb;
+      if ("number" === typeof bb || "boolean" === typeof bb || "bigint" === typeof bb) return bb.toString();
+      if (null == bb) return bb + "";
+      if (Eb.allowArraysInMapKeys && Array.isArray(bb) && bb.flat().every((bb => ["string", "number", "boolean", "bigint"].includes(typeof bb)))) return bb.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof bb)
     }
-    const mO = (dd, Od) => {
-      let md = ud().map(OO),
-        Wd = dd;
-      void 0 !== Od && (dd = dd < 32 ? -((Od << 5) + dd) : (Od << 5) + dd, md.highByte = Od);
-      let Fd = hd[dd];
-      return Fd && (Fd.isShared || Ud) && ((hd.restoreStructures || (hd.restoreStructures = []))[dd] = Fd), hd[dd] = md, md.read = Ad(md, Wd), md.read()
+    const bw = (bb, wb) => {
+      let Mb = Yb().map(kb),
+        eb = bb;
+      void 0 !== wb && (bb = bb < 32 ? -((wb << 5) + bb) : (wb << 5) + bb, Mb.highByte = wb);
+      let Hb = lb[bb];
+      return Hb && (Hb.isShared || Kb) && ((lb.restoreStructures || (lb.restoreStructures = []))[bb] = Hb), lb[bb] = Mb, Mb.read = fb(Mb, eb), Mb.read()
     };
-    Td[0] = () => {}, Td[0].noBuffer = !0, Td[66] = dd => {
-      let Od = dd.length,
-        md = BigInt(128 & dd[0] ? dd[0] - 256 : dd[0]);
-      for (let Wd = 1; Wd < Od; Wd++) md <<= BigInt(8), md += BigInt(dd[Wd]);
-      return md
+    sb[0] = () => {}, sb[0].noBuffer = !0, sb[66] = bb => {
+      let wb = bb.length,
+        Mb = BigInt(128 & bb[0] ? bb[0] - 256 : bb[0]);
+      for (let eb = 1; eb < wb; eb++) Mb <<= BigInt(8), Mb += BigInt(bb[eb]);
+      return Mb
     };
-    let WO = {
+    let ww = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    Td[101] = () => {
-      let dd = ud();
-      return (WO[dd[0]] || Error)(dd[1], {
-        cause: dd[2]
+    sb[101] = () => {
+      let bb = Yb();
+      return (ww[bb[0]] || Error)(bb[1], {
+        cause: bb[2]
       })
-    }, Td[105] = dd => {
-      if (!1 === Hd.structuredClone) throw new Error("Structured clone extension is disabled");
-      let Od = od.getUint32(Xd - 4);
-      td || (td = new Map);
-      let md, Wd = Fd[Xd];
-      md = Wd >= 144 && Wd < 160 || 220 == Wd || 221 == Wd ? [] : {};
-      let Rd = {
-        target: md
+    }, sb[105] = bb => {
+      if (!1 === Eb.structuredClone) throw new Error("Structured clone extension is disabled");
+      let wb = Ub.getUint32(Vb - 4);
+      Ob || (Ob = new Map);
+      let Mb, eb = Hb[Vb];
+      Mb = eb >= 144 && eb < 160 || 220 == eb || 221 == eb ? [] : {};
+      let pb = {
+        target: Mb
       };
-      td.set(Od, Rd);
-      let Kd = ud();
-      return Rd.used ? Object.assign(md, Kd) : (Rd.target = Kd, Kd)
-    }, Td[112] = dd => {
-      if (!1 === Hd.structuredClone) throw new Error("Structured clone extension is disabled");
-      let Od = od.getUint32(Xd - 4),
-        md = td.get(Od);
-      return md.used = !0, md.target
-    }, Td[115] = () => new Set(ud());
-    const FO = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((dd => dd + "Array"));
-    let RO = "object" === typeof globalThis ? globalThis : window;
-    Td[116] = dd => {
-      let Od = dd[0],
-        md = FO[Od];
-      if (!md) {
-        if (16 === Od) {
-          let Od = new ArrayBuffer(dd.length - 1);
-          return new Uint8Array(Od).set(dd.subarray(1)), Od
+      Ob.set(wb, pb);
+      let gb = Yb();
+      return pb.used ? Object.assign(Mb, gb) : (pb.target = gb, gb)
+    }, sb[112] = bb => {
+      if (!1 === Eb.structuredClone) throw new Error("Structured clone extension is disabled");
+      let wb = Ub.getUint32(Vb - 4),
+        Mb = Ob.get(wb);
+      return Mb.used = !0, Mb.target
+    }, sb[115] = () => new Set(Yb());
+    const Mw = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((bb => bb + "Array"));
+    let ew = "object" === typeof globalThis ? globalThis : window;
+    sb[116] = bb => {
+      let wb = bb[0],
+        Mb = Mw[wb];
+      if (!Mb) {
+        if (16 === wb) {
+          let wb = new ArrayBuffer(bb.length - 1);
+          return new Uint8Array(wb).set(bb.subarray(1)), wb
         }
-        throw new Error("Could not find typed array for code " + Od)
+        throw new Error("Could not find typed array for code " + wb)
       }
-      return new RO[md](Uint8Array.prototype.slice.call(dd, 1).buffer)
-    }, Td[120] = () => {
-      let dd = ud();
-      return new RegExp(dd[0], dd[1])
+      return new ew[Mb](Uint8Array.prototype.slice.call(bb, 1).buffer)
+    }, sb[120] = () => {
+      let bb = Yb();
+      return new RegExp(bb[0], bb[1])
     };
-    const XO = [];
+    const Hw = [];
 
-    function KO(dd) {
-      Jd && Jd();
-      let Od = Rd,
-        md = Xd,
-        Wd = qd,
-        Kd = yd,
-        Td = bd,
-        pd = vd,
-        Yd = Nd,
-        gd = td,
-        wd = Qd,
-        Ed = new Uint8Array(Fd.slice(0, Rd)),
-        xd = hd,
-        Bd = hd.slice(0, hd.length),
-        Sd = Hd,
-        sd = Ud,
-        ud = dd();
-      return Rd = Od, Xd = md, qd = Wd, yd = Kd, bd = Td, vd = pd, Nd = Yd, td = gd, Qd = wd, Fd = Ed, Ud = sd, (hd = xd).splice(0, hd.length, ...Bd), Hd = Sd, od = new DataView(Fd.buffer, Fd.byteOffset, Fd.byteLength), ud
+    function pw(bb) {
+      jb && jb();
+      let wb = pb,
+        Mb = Vb,
+        eb = Cb,
+        gb = Fb,
+        sb = Bb,
+        mb = Lb,
+        hb = tb,
+        zb = Ob,
+        Xb = Ib,
+        xb = new Uint8Array(Hb.slice(0, pb)),
+        rb = lb,
+        Rb = lb.slice(0, lb.length),
+        Db = Eb,
+        cb = Kb,
+        Yb = bb();
+      return pb = wb, Vb = Mb, Cb = eb, Fb = gb, Bb = sb, Lb = mb, tb = hb, Ob = zb, Ib = Xb, Hb = xb, Kb = cb, (lb = rb).splice(0, lb.length, ...Rb), Eb = Db, Ub = new DataView(Hb.buffer, Hb.byteOffset, Hb.byteLength), Yb
     }
 
-    function hO() {
-      Fd = null, td = null, hd = null
+    function Vw() {
+      Hb = null, Ob = null, lb = null
     }
-    Td[98] = dd => {
-      let Od = (dd[0] << 24) + (dd[1] << 16) + (dd[2] << 8) + dd[3],
-        md = Xd;
-      return Xd += Od - dd.length, Qd = XO, (Qd = [Zd(), Zd()]).position0 = 0, Qd.position1 = 0, Qd.postBundlePosition = Xd, Xd = md, ud()
-    }, Td[255] = dd => 4 == dd.length ? new Date(1e3 * (16777216 * dd[0] + (dd[1] << 16) + (dd[2] << 8) + dd[3])) : 8 == dd.length ? new Date(((dd[0] << 22) + (dd[1] << 14) + (dd[2] << 6) + (dd[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & dd[3]) + 16777216 * dd[4] + (dd[5] << 16) + (dd[6] << 8) + dd[7])) : 12 == dd.length ? new Date(((dd[0] << 24) + (dd[1] << 16) + (dd[2] << 8) + dd[3]) / 1e6 + 1e3 * ((128 & dd[4] ? -281474976710656 : 0) + 1099511627776 * dd[6] + 4294967296 * dd[7] + 16777216 * dd[8] + (dd[9] << 16) + (dd[10] << 8) + dd[11])) : new Date("invalid");
-    const vO = new Array(147);
-    for (let Xm = 0; Xm < 256; Xm++) vO[Xm] = +("1e" + Math.floor(45.15 - .30103 * Xm));
-    const QO = Bd;
-    var tO = new Bd({
+    sb[98] = bb => {
+      let wb = (bb[0] << 24) + (bb[1] << 16) + (bb[2] << 8) + bb[3],
+        Mb = Vb;
+      return Vb += wb - bb.length, Ib = Hw, (Ib = [Pb(), Pb()]).position0 = 0, Ib.position1 = 0, Ib.postBundlePosition = Vb, Vb = Mb, Yb()
+    }, sb[255] = bb => 4 == bb.length ? new Date(1e3 * (16777216 * bb[0] + (bb[1] << 16) + (bb[2] << 8) + bb[3])) : 8 == bb.length ? new Date(((bb[0] << 22) + (bb[1] << 14) + (bb[2] << 6) + (bb[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & bb[3]) + 16777216 * bb[4] + (bb[5] << 16) + (bb[6] << 8) + bb[7])) : 12 == bb.length ? new Date(((bb[0] << 24) + (bb[1] << 16) + (bb[2] << 8) + bb[3]) / 1e6 + 1e3 * ((128 & bb[4] ? -281474976710656 : 0) + 1099511627776 * bb[6] + 4294967296 * bb[7] + 16777216 * bb[8] + (bb[9] << 16) + (bb[10] << 8) + bb[11])) : new Date("invalid");
+    const gw = new Array(147);
+    for (let pM = 0; pM < 256; pM++) gw[pM] = +("1e" + Math.floor(45.15 - .30103 * pM));
+    const lw = Rb;
+    var Lw = new Rb({
       useRecords: !1
     });
-    const oO = tO.unpack,
-      NO = tO.unpackMultiple,
-      qO = tO.unpack,
-      HO = {
+    const Iw = Lw.unpack,
+      Ow = Lw.unpackMultiple,
+      Uw = Lw.unpack,
+      tw = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let yO, bO, TO, pO = new Float32Array(1),
-      YO = new Uint8Array(pO.buffer, 0, 4);
+    let Cw, Ew, Fw, Bw = new Float32Array(1),
+      sw = new Uint8Array(Bw.buffer, 0, 4);
 
-    function gO(dd) {
-      pO[0] = dd;
-      let Od = vO[(127 & YO[3]) << 1 | YO[2] >> 7];
-      return (Od * dd + (dd > 0 ? .5 : -.5) | 0) / Od
+    function mw(bb) {
+      Bw[0] = bb;
+      let wb = gw[(127 & sw[3]) << 1 | sw[2] >> 7];
+      return (wb * bb + (bb > 0 ? .5 : -.5) | 0) / wb
     }
     try {
-      yO = new TextEncoder
-    } catch (Rm) {}
-    const wO = "undefined" !== typeof Buffer,
-      aO = wO ? function(dd) {
-        return Buffer.allocUnsafeSlow(dd)
+      Cw = new TextEncoder
+    } catch (HM) {}
+    const hw = "undefined" !== typeof Buffer,
+      zw = hw ? function(bb) {
+        return Buffer.allocUnsafeSlow(bb)
       } : Uint8Array,
-      EO = wO ? Buffer : Uint8Array,
-      JO = wO ? 4294967296 : 2144337920;
-    let UO, xO, BO, SO, sO, uO = 0,
-      VO = null;
-    const iO = /[\u0080-\uFFFF]/,
-      AO = Symbol("record-id");
-    class rO extends Bd {
-      constructor(dd) {
-        let Od, md, Wd, Fd;
-        super(dd), this.offset = 0;
-        let Rd = EO.prototype.utf8Write ? function(dd, Od) {
-            return UO.utf8Write(dd, Od, UO.byteLength - Od)
-          } : !(!yO || !yO.encodeInto) && function(dd, Od) {
-            return yO.encodeInto(dd, UO.subarray(Od)).written
+      Xw = hw ? Buffer : Uint8Array,
+      xw = hw ? 4294967296 : 2144337920;
+    let jw, Kw, rw, Rw, Dw, Yw = 0,
+      Zw = null;
+    const fw = /[\u0080-\uFFFF]/,
+      Aw = Symbol("record-id");
+    class Ww extends Rb {
+      constructor(bb) {
+        let wb, Mb, eb, Hb;
+        super(bb), this.offset = 0;
+        let pb = Xw.prototype.utf8Write ? function(bb, wb) {
+            return jw.utf8Write(bb, wb, jw.byteLength - wb)
+          } : !(!Cw || !Cw.encodeInto) && function(bb, wb) {
+            return Cw.encodeInto(bb, jw.subarray(wb)).written
           },
-          Xd = this;
-        dd || (dd = {});
-        let Kd = dd && dd.sequential,
-          hd = dd.structures || dd.saveStructures,
-          vd = dd.maxSharedStructures;
-        if (null == vd && (vd = hd ? 32 : 0), vd > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        dd.structuredClone && void 0 == dd.moreTypes && (this.moreTypes = !0);
-        let Qd = dd.maxOwnStructures;
-        null == Qd && (Qd = hd ? 32 : 64), this.structures || 0 == dd.useRecords || (this.structures = []);
-        let td = vd > 32 || Qd + vd > 64,
-          od = vd + 64,
-          Nd = vd + Qd + 64;
-        if (Nd > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let qd = [],
-          Hd = 0,
-          yd = 0;
-        this.pack = this.encode = function(dd, Rd) {
-          if (UO || (UO = new aO(8192), BO = UO.dataView || (UO.dataView = new DataView(UO.buffer, 0, 8192)), uO = 0), SO = UO.length - 10, SO - uO < 2048 ? (UO = new aO(UO.length), BO = UO.dataView || (UO.dataView = new DataView(UO.buffer, 0, UO.length)), SO = UO.length - 10, uO = 0) : uO = uO + 7 & 2147483640, Od = uO, Rd & dm && (uO += 255 & Rd), Fd = Xd.structuredClone ? new Map : null, Xd.bundleStrings && "string" !== typeof dd ? (VO = [], VO.size = 1 / 0) : VO = null, Wd = Xd.structures, Wd) {
-            Wd.uninitialized && (Wd = Xd._mergeStructures(Xd.getStructures()));
-            let dd = Wd.sharedLength || 0;
-            if (dd > vd) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Wd.sharedLength);
-            if (!Wd.transitions) {
-              Wd.transitions = Object.create(null);
-              for (let Od = 0; Od < dd; Od++) {
-                let dd = Wd[Od];
-                if (!dd) continue;
-                let md, Fd = Wd.transitions;
-                for (let Od = 0, Wd = dd.length; Od < Wd; Od++) {
-                  let Wd = dd[Od];
-                  md = Fd[Wd], md || (md = Fd[Wd] = Object.create(null)), Fd = md
+          Vb = this;
+        bb || (bb = {});
+        let gb = bb && bb.sequential,
+          lb = bb.structures || bb.saveStructures,
+          Lb = bb.maxSharedStructures;
+        if (null == Lb && (Lb = lb ? 32 : 0), Lb > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        bb.structuredClone && void 0 == bb.moreTypes && (this.moreTypes = !0);
+        let Ib = bb.maxOwnStructures;
+        null == Ib && (Ib = lb ? 32 : 64), this.structures || 0 == bb.useRecords || (this.structures = []);
+        let Ob = Lb > 32 || Ib + Lb > 64,
+          Ub = Lb + 64,
+          tb = Lb + Ib + 64;
+        if (tb > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let Cb = [],
+          Eb = 0,
+          Fb = 0;
+        this.pack = this.encode = function(bb, pb) {
+          if (jw || (jw = new zw(8192), rw = jw.dataView || (jw.dataView = new DataView(jw.buffer, 0, 8192)), Yw = 0), Rw = jw.length - 10, Rw - Yw < 2048 ? (jw = new zw(jw.length), rw = jw.dataView || (jw.dataView = new DataView(jw.buffer, 0, jw.length)), Rw = jw.length - 10, Yw = 0) : Yw = Yw + 7 & 2147483640, wb = Yw, pb & kw && (Yw += 255 & pb), Hb = Vb.structuredClone ? new Map : null, Vb.bundleStrings && "string" !== typeof bb ? (Zw = [], Zw.size = 1 / 0) : Zw = null, eb = Vb.structures, eb) {
+            eb.uninitialized && (eb = Vb._mergeStructures(Vb.getStructures()));
+            let bb = eb.sharedLength || 0;
+            if (bb > Lb) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + eb.sharedLength);
+            if (!eb.transitions) {
+              eb.transitions = Object.create(null);
+              for (let wb = 0; wb < bb; wb++) {
+                let bb = eb[wb];
+                if (!bb) continue;
+                let Mb, Hb = eb.transitions;
+                for (let wb = 0, eb = bb.length; wb < eb; wb++) {
+                  let eb = bb[wb];
+                  Mb = Hb[eb], Mb || (Mb = Hb[eb] = Object.create(null)), Hb = Mb
                 }
-                Fd[AO] = Od + 64
+                Hb[Aw] = wb + 64
               }
-              this.lastNamedStructuresLength = dd
+              this.lastNamedStructuresLength = bb
             }
-            Kd || (Wd.nextId = dd + 64)
+            gb || (eb.nextId = bb + 64)
           }
-          let hd;
-          md && (md = !1);
+          let lb;
+          Mb && (Mb = !1);
           try {
-            Xd.randomAccessStructure && dd && dd.constructor && dd.constructor === Object ? Bd(dd) : pd(dd);
-            let md = VO;
-            if (VO && PO(Od, pd, 0), Fd && Fd.idsToInsert) {
-              let dd = Fd.idsToInsert.sort(((dd, Od) => dd.offset > Od.offset ? 1 : -1)),
-                Wd = dd.length,
-                Rd = -1;
-              for (; md && Wd > 0;) {
-                let Fd = dd[--Wd].offset + Od;
-                Fd < md.stringsPosition + Od && -1 === Rd && (Rd = 0), Fd > md.position + Od ? Rd >= 0 && (Rd += 6) : (Rd >= 0 && (BO.setUint32(md.position + Od, BO.getUint32(md.position + Od) + Rd), Rd = -1), md = md.previous, Wd++)
+            Vb.randomAccessStructure && bb && bb.constructor && bb.constructor === Object ? Rb(bb) : mb(bb);
+            let Mb = Zw;
+            if (Zw && vw(wb, mb, 0), Hb && Hb.idsToInsert) {
+              let bb = Hb.idsToInsert.sort(((bb, wb) => bb.offset > wb.offset ? 1 : -1)),
+                eb = bb.length,
+                pb = -1;
+              for (; Mb && eb > 0;) {
+                let Hb = bb[--eb].offset + wb;
+                Hb < Mb.stringsPosition + wb && -1 === pb && (pb = 0), Hb > Mb.position + wb ? pb >= 0 && (pb += 6) : (pb >= 0 && (rw.setUint32(Mb.position + wb, rw.getUint32(Mb.position + wb) + pb), pb = -1), Mb = Mb.previous, eb++)
               }
-              Rd >= 0 && md && BO.setUint32(md.position + Od, BO.getUint32(md.position + Od) + Rd), uO += 6 * dd.length, uO > SO && Jd(uO), Xd.offset = uO;
-              let Kd = function(dd, Od) {
-                let md, Wd = 6 * Od.length,
-                  Fd = dd.length - Wd;
-                for (; md = Od.pop();) {
-                  let Od = md.offset,
-                    Rd = md.id;
-                  dd.copyWithin(Od + Wd, Od, Fd), Wd -= 6;
-                  let Xd = Od + Wd;
-                  dd[Xd++] = 214, dd[Xd++] = 105, dd[Xd++] = Rd >> 24, dd[Xd++] = Rd >> 16 & 255, dd[Xd++] = Rd >> 8 & 255, dd[Xd++] = 255 & Rd, Fd = Od
+              pb >= 0 && Mb && rw.setUint32(Mb.position + wb, rw.getUint32(Mb.position + wb) + pb), Yw += 6 * bb.length, Yw > Rw && jb(Yw), Vb.offset = Yw;
+              let gb = function(bb, wb) {
+                let Mb, eb = 6 * wb.length,
+                  Hb = bb.length - eb;
+                for (; Mb = wb.pop();) {
+                  let wb = Mb.offset,
+                    pb = Mb.id;
+                  bb.copyWithin(wb + eb, wb, Hb), eb -= 6;
+                  let Vb = wb + eb;
+                  bb[Vb++] = 214, bb[Vb++] = 105, bb[Vb++] = pb >> 24, bb[Vb++] = pb >> 16 & 255, bb[Vb++] = pb >> 8 & 255, bb[Vb++] = 255 & pb, Hb = wb
                 }
-                return dd
-              }(UO.subarray(Od, uO), dd);
-              return Fd = null, Kd
+                return bb
+              }(jw.subarray(wb, Yw), bb);
+              return Hb = null, gb
             }
-            return Xd.offset = uO, Rd & fO ? (UO.start = Od, UO.end = uO, UO) : UO.subarray(Od, uO)
-          } catch (Rm) {
-            throw hd = Rm, Rm
+            return Vb.offset = Yw, pb & ow ? (jw.start = wb, jw.end = Yw, jw) : jw.subarray(wb, Yw)
+          } catch (HM) {
+            throw lb = HM, HM
           } finally {
-            if (Wd && (bd(), md && Xd.saveStructures)) {
-              let md = Wd.sharedLength || 0,
-                Fd = UO.subarray(Od, uO),
-                Kd = cO(Wd, Xd);
-              if (!hd) return !1 === Xd.saveStructures(Kd, Kd.isCompatible) ? Xd.pack(dd, Rd) : (Xd.lastNamedStructuresLength = md, UO.length > 1073741824 && (UO = null), Fd)
+            if (eb && (Bb(), Mb && Vb.saveStructures)) {
+              let Mb = eb.sharedLength || 0,
+                Hb = jw.subarray(wb, Yw),
+                gb = Gw(eb, Vb);
+              if (!lb) return !1 === Vb.saveStructures(gb, gb.isCompatible) ? Vb.pack(bb, pb) : (Vb.lastNamedStructuresLength = Mb, jw.length > 1073741824 && (jw = null), Hb)
             }
-            UO.length > 1073741824 && (UO = null), Rd & MO && (uO = Od)
+            jw.length > 1073741824 && (jw = null), pb & Tw && (Yw = wb)
           }
         };
-        const bd = () => {
-            yd < 10 && yd++;
-            let dd = Wd.sharedLength || 0;
-            if (Wd.length > dd && !Kd && (Wd.length = dd), Hd > 1e4) Wd.transitions = null, yd = 0, Hd = 0, qd.length > 0 && (qd = []);
-            else if (qd.length > 0 && !Kd) {
-              for (let dd = 0, Od = qd.length; dd < Od; dd++) qd[dd][AO] = 0;
-              qd = []
+        const Bb = () => {
+            Fb < 10 && Fb++;
+            let bb = eb.sharedLength || 0;
+            if (eb.length > bb && !gb && (eb.length = bb), Eb > 1e4) eb.transitions = null, Fb = 0, Eb = 0, Cb.length > 0 && (Cb = []);
+            else if (Cb.length > 0 && !gb) {
+              for (let bb = 0, wb = Cb.length; bb < wb; bb++) Cb[bb][Aw] = 0;
+              Cb = []
             }
           },
-          Td = dd => {
-            var Od = dd.length;
-            Od < 16 ? UO[uO++] = 144 | Od : Od < 65536 ? (UO[uO++] = 220, UO[uO++] = Od >> 8, UO[uO++] = 255 & Od) : (UO[uO++] = 221, BO.setUint32(uO, Od), uO += 4);
-            for (let md = 0; md < Od; md++) pd(dd[md])
+          sb = bb => {
+            var wb = bb.length;
+            wb < 16 ? jw[Yw++] = 144 | wb : wb < 65536 ? (jw[Yw++] = 220, jw[Yw++] = wb >> 8, jw[Yw++] = 255 & wb) : (jw[Yw++] = 221, rw.setUint32(Yw, wb), Yw += 4);
+            for (let Mb = 0; Mb < wb; Mb++) mb(bb[Mb])
           },
-          pd = dd => {
-            uO > SO && (UO = Jd(uO));
-            var md, Wd = typeof dd;
-            if ("string" === Wd) {
-              let Wd, Fd = dd.length;
-              if (VO && Fd >= 4 && Fd < 4096) {
-                if ((VO.size += Fd) > 21760) {
-                  let dd, md, Wd = (VO[0] ? 3 * VO[0].length + VO[1].length : 0) + 10;
-                  uO + Wd > SO && (UO = Jd(uO + Wd)), VO.position ? (md = VO, UO[uO] = 200, uO += 3, UO[uO++] = 98, dd = uO - Od, uO += 4, PO(Od, pd, 0), BO.setUint16(dd + Od - 3, uO - Od - dd)) : (UO[uO++] = 214, UO[uO++] = 98, dd = uO - Od, uO += 4), VO = ["", ""], VO.previous = md, VO.size = 0, VO.position = dd
+          mb = bb => {
+            Yw > Rw && (jw = jb(Yw));
+            var Mb, eb = typeof bb;
+            if ("string" === eb) {
+              let eb, Hb = bb.length;
+              if (Zw && Hb >= 4 && Hb < 4096) {
+                if ((Zw.size += Hb) > 21760) {
+                  let bb, Mb, eb = (Zw[0] ? 3 * Zw[0].length + Zw[1].length : 0) + 10;
+                  Yw + eb > Rw && (jw = jb(Yw + eb)), Zw.position ? (Mb = Zw, jw[Yw] = 200, Yw += 3, jw[Yw++] = 98, bb = Yw - wb, Yw += 4, vw(wb, mb, 0), rw.setUint16(bb + wb - 3, Yw - wb - bb)) : (jw[Yw++] = 214, jw[Yw++] = 98, bb = Yw - wb, Yw += 4), Zw = ["", ""], Zw.previous = Mb, Zw.size = 0, Zw.position = bb
                 }
-                let md = iO.test(dd);
-                return VO[md ? 0 : 1] += dd, UO[uO++] = 193, void pd(md ? -Fd : Fd)
+                let Mb = fw.test(bb);
+                return Zw[Mb ? 0 : 1] += bb, jw[Yw++] = 193, void mb(Mb ? -Hb : Hb)
               }
-              Wd = Fd < 32 ? 1 : Fd < 256 ? 2 : Fd < 65536 ? 3 : 5;
-              let Xd = 3 * Fd;
-              if (uO + Xd > SO && (UO = Jd(uO + Xd)), Fd < 64 || !Rd) {
-                let Od, Rd, Xd, Kd = uO + Wd;
-                for (Od = 0; Od < Fd; Od++) Rd = dd.charCodeAt(Od), Rd < 128 ? UO[Kd++] = Rd : Rd < 2048 ? (UO[Kd++] = Rd >> 6 | 192, UO[Kd++] = 63 & Rd | 128) : 55296 === (64512 & Rd) && 56320 === (64512 & (Xd = dd.charCodeAt(Od + 1))) ? (Rd = 65536 + ((1023 & Rd) << 10) + (1023 & Xd), Od++, UO[Kd++] = Rd >> 18 | 240, UO[Kd++] = Rd >> 12 & 63 | 128, UO[Kd++] = Rd >> 6 & 63 | 128, UO[Kd++] = 63 & Rd | 128) : (UO[Kd++] = Rd >> 12 | 224, UO[Kd++] = Rd >> 6 & 63 | 128, UO[Kd++] = 63 & Rd | 128);
-                md = Kd - uO - Wd
-              } else md = Rd(dd, uO + Wd);
-              md < 32 ? UO[uO++] = 160 | md : md < 256 ? (Wd < 2 && UO.copyWithin(uO + 2, uO + 1, uO + 1 + md), UO[uO++] = 217, UO[uO++] = md) : md < 65536 ? (Wd < 3 && UO.copyWithin(uO + 3, uO + 2, uO + 2 + md), UO[uO++] = 218, UO[uO++] = md >> 8, UO[uO++] = 255 & md) : (Wd < 5 && UO.copyWithin(uO + 5, uO + 3, uO + 3 + md), UO[uO++] = 219, BO.setUint32(uO, md), uO += 4), uO += md
-            } else if ("number" === Wd)
-              if (dd >>> 0 === dd) dd < 32 || dd < 128 && !1 === this.useRecords || dd < 64 && !this.randomAccessStructure ? UO[uO++] = dd : dd < 256 ? (UO[uO++] = 204, UO[uO++] = dd) : dd < 65536 ? (UO[uO++] = 205, UO[uO++] = dd >> 8, UO[uO++] = 255 & dd) : (UO[uO++] = 206, BO.setUint32(uO, dd), uO += 4);
-              else if ((dd | 0) === dd) dd >= -32 ? UO[uO++] = 256 + dd : dd >= -128 ? (UO[uO++] = 208, UO[uO++] = dd + 256) : dd >= -32768 ? (UO[uO++] = 209, BO.setInt16(uO, dd), uO += 2) : (UO[uO++] = 210, BO.setInt32(uO, dd), uO += 4);
+              eb = Hb < 32 ? 1 : Hb < 256 ? 2 : Hb < 65536 ? 3 : 5;
+              let Vb = 3 * Hb;
+              if (Yw + Vb > Rw && (jw = jb(Yw + Vb)), Hb < 64 || !pb) {
+                let wb, pb, Vb, gb = Yw + eb;
+                for (wb = 0; wb < Hb; wb++) pb = bb.charCodeAt(wb), pb < 128 ? jw[gb++] = pb : pb < 2048 ? (jw[gb++] = pb >> 6 | 192, jw[gb++] = 63 & pb | 128) : 55296 === (64512 & pb) && 56320 === (64512 & (Vb = bb.charCodeAt(wb + 1))) ? (pb = 65536 + ((1023 & pb) << 10) + (1023 & Vb), wb++, jw[gb++] = pb >> 18 | 240, jw[gb++] = pb >> 12 & 63 | 128, jw[gb++] = pb >> 6 & 63 | 128, jw[gb++] = 63 & pb | 128) : (jw[gb++] = pb >> 12 | 224, jw[gb++] = pb >> 6 & 63 | 128, jw[gb++] = 63 & pb | 128);
+                Mb = gb - Yw - eb
+              } else Mb = pb(bb, Yw + eb);
+              Mb < 32 ? jw[Yw++] = 160 | Mb : Mb < 256 ? (eb < 2 && jw.copyWithin(Yw + 2, Yw + 1, Yw + 1 + Mb), jw[Yw++] = 217, jw[Yw++] = Mb) : Mb < 65536 ? (eb < 3 && jw.copyWithin(Yw + 3, Yw + 2, Yw + 2 + Mb), jw[Yw++] = 218, jw[Yw++] = Mb >> 8, jw[Yw++] = 255 & Mb) : (eb < 5 && jw.copyWithin(Yw + 5, Yw + 3, Yw + 3 + Mb), jw[Yw++] = 219, rw.setUint32(Yw, Mb), Yw += 4), Yw += Mb
+            } else if ("number" === eb)
+              if (bb >>> 0 === bb) bb < 32 || bb < 128 && !1 === this.useRecords || bb < 64 && !this.randomAccessStructure ? jw[Yw++] = bb : bb < 256 ? (jw[Yw++] = 204, jw[Yw++] = bb) : bb < 65536 ? (jw[Yw++] = 205, jw[Yw++] = bb >> 8, jw[Yw++] = 255 & bb) : (jw[Yw++] = 206, rw.setUint32(Yw, bb), Yw += 4);
+              else if ((bb | 0) === bb) bb >= -32 ? jw[Yw++] = 256 + bb : bb >= -128 ? (jw[Yw++] = 208, jw[Yw++] = bb + 256) : bb >= -32768 ? (jw[Yw++] = 209, rw.setInt16(Yw, bb), Yw += 2) : (jw[Yw++] = 210, rw.setInt32(Yw, bb), Yw += 4);
             else {
-              let Od;
-              if ((Od = this.useFloat32) > 0 && dd < 4294967296 && dd >= -2147483648) {
-                let md;
-                if (UO[uO++] = 202, BO.setFloat32(uO, dd), Od < 4 || ((md = dd * vO[(127 & UO[uO]) << 1 | UO[uO + 1] >> 7]) | 0) === md) return void(uO += 4);
-                uO--
+              let wb;
+              if ((wb = this.useFloat32) > 0 && bb < 4294967296 && bb >= -2147483648) {
+                let Mb;
+                if (jw[Yw++] = 202, rw.setFloat32(Yw, bb), wb < 4 || ((Mb = bb * gw[(127 & jw[Yw]) << 1 | jw[Yw + 1] >> 7]) | 0) === Mb) return void(Yw += 4);
+                Yw--
               }
-              UO[uO++] = 203, BO.setFloat64(uO, dd), uO += 8
-            } else if ("object" === Wd || "function" === Wd)
-              if (dd) {
-                if (Fd) {
-                  let md = Fd.get(dd);
-                  if (md) {
-                    if (!md.id) {
-                      let dd = Fd.idsToInsert || (Fd.idsToInsert = []);
-                      md.id = dd.push(md)
+              jw[Yw++] = 203, rw.setFloat64(Yw, bb), Yw += 8
+            } else if ("object" === eb || "function" === eb)
+              if (bb) {
+                if (Hb) {
+                  let Mb = Hb.get(bb);
+                  if (Mb) {
+                    if (!Mb.id) {
+                      let bb = Hb.idsToInsert || (Hb.idsToInsert = []);
+                      Mb.id = bb.push(Mb)
                     }
-                    return UO[uO++] = 214, UO[uO++] = 112, BO.setUint32(uO, md.id), void(uO += 4)
+                    return jw[Yw++] = 214, jw[Yw++] = 112, rw.setUint32(Yw, Mb.id), void(Yw += 4)
                   }
-                  Fd.set(dd, {
-                    offset: uO - Od
+                  Hb.set(bb, {
+                    offset: Yw - wb
                   })
                 }
-                let Rd = dd.constructor;
-                if (Rd === Object) Ed(dd);
-                else if (Rd === Array) Td(dd);
-                else if (Rd === Map)
-                  if (this.mapAsEmptyObject) UO[uO++] = 128;
+                let pb = bb.constructor;
+                if (pb === Object) xb(bb);
+                else if (pb === Array) sb(bb);
+                else if (pb === Map)
+                  if (this.mapAsEmptyObject) jw[Yw++] = 128;
                   else {
-                    (md = dd.size) < 16 ? UO[uO++] = 128 | md : md < 65536 ? (UO[uO++] = 222, UO[uO++] = md >> 8, UO[uO++] = 255 & md) : (UO[uO++] = 223, BO.setUint32(uO, md), uO += 4);
-                    for (let [Od, md] of dd) pd(Od), pd(md)
+                    (Mb = bb.size) < 16 ? jw[Yw++] = 128 | Mb : Mb < 65536 ? (jw[Yw++] = 222, jw[Yw++] = Mb >> 8, jw[Yw++] = 255 & Mb) : (jw[Yw++] = 223, rw.setUint32(Yw, Mb), Yw += 4);
+                    for (let [wb, Mb] of bb) mb(wb), mb(Mb)
                   }
                 else {
-                  for (let Od = 0, md = bO.length; Od < md; Od++) {
-                    if (dd instanceof TO[Od]) {
-                      let md = bO[Od];
-                      if (md.write) {
-                        md.type && (UO[uO++] = 212, UO[uO++] = md.type, UO[uO++] = 0);
-                        let Od = md.write.call(this, dd);
-                        return void(Od === dd ? Array.isArray(dd) ? Td(dd) : Ed(dd) : pd(Od))
+                  for (let wb = 0, Mb = Ew.length; wb < Mb; wb++) {
+                    if (bb instanceof Fw[wb]) {
+                      let Mb = Ew[wb];
+                      if (Mb.write) {
+                        Mb.type && (jw[Yw++] = 212, jw[Yw++] = Mb.type, jw[Yw++] = 0);
+                        let wb = Mb.write.call(this, bb);
+                        return void(wb === bb ? Array.isArray(bb) ? sb(bb) : xb(bb) : mb(wb))
                       }
-                      let Wd, Fd = UO,
-                        Rd = BO,
-                        Xd = uO;
-                      UO = null;
+                      let eb, Hb = jw,
+                        pb = rw,
+                        Vb = Yw;
+                      jw = null;
                       try {
-                        Wd = md.pack.call(this, dd, (dd => (UO = Fd, Fd = null, uO += dd, uO > SO && Jd(uO), {
-                          target: UO,
-                          targetView: BO,
-                          position: uO - dd
-                        })), pd)
+                        eb = Mb.pack.call(this, bb, (bb => (jw = Hb, Hb = null, Yw += bb, Yw > Rw && jb(Yw), {
+                          target: jw,
+                          targetView: rw,
+                          position: Yw - bb
+                        })), mb)
                       } finally {
-                        Fd && (UO = Fd, BO = Rd, uO = Xd, SO = UO.length - 10)
+                        Hb && (jw = Hb, rw = pb, Yw = Vb, Rw = jw.length - 10)
                       }
-                      return void(Wd && (Wd.length + uO > SO && Jd(Wd.length + uO), uO = LO(Wd, UO, uO, md.type)))
+                      return void(eb && (eb.length + Yw > Rw && jb(eb.length + Yw), Yw = Nw(eb, jw, Yw, Mb.type)))
                     }
                   }
-                  if (Array.isArray(dd)) Td(dd);
+                  if (Array.isArray(bb)) sb(bb);
                   else {
-                    if (dd.toJSON) {
-                      const Od = dd.toJSON();
-                      if (Od !== dd) return pd(Od)
+                    if (bb.toJSON) {
+                      const wb = bb.toJSON();
+                      if (wb !== bb) return mb(wb)
                     }
-                    if ("function" === Wd) return pd(this.writeFunction && this.writeFunction(dd));
-                    Ed(dd)
+                    if ("function" === eb) return mb(this.writeFunction && this.writeFunction(bb));
+                    xb(bb)
                   }
                 }
-              } else UO[uO++] = 192;
-            else if ("boolean" === Wd) UO[uO++] = dd ? 195 : 194;
-            else if ("bigint" === Wd) {
-              if (dd < BigInt(1) << BigInt(63) && dd >= -(BigInt(1) << BigInt(63))) UO[uO++] = 211, BO.setBigInt64(uO, dd);
-              else if (dd < BigInt(1) << BigInt(64) && dd > 0) UO[uO++] = 207, BO.setBigUint64(uO, dd);
+              } else jw[Yw++] = 192;
+            else if ("boolean" === eb) jw[Yw++] = bb ? 195 : 194;
+            else if ("bigint" === eb) {
+              if (bb < BigInt(1) << BigInt(63) && bb >= -(BigInt(1) << BigInt(63))) jw[Yw++] = 211, rw.setBigInt64(Yw, bb);
+              else if (bb < BigInt(1) << BigInt(64) && bb > 0) jw[Yw++] = 207, rw.setBigUint64(Yw, bb);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return pd(dd.toString());
-                  if (this.useBigIntExtension && dd < BigInt(2) ** BigInt(1023) && dd > -(BigInt(2) ** BigInt(1023))) {
-                    UO[uO++] = 199, uO++, UO[uO++] = 66;
-                    let Od, md = [];
+                  if (this.largeBigIntToString) return mb(bb.toString());
+                  if (this.useBigIntExtension && bb < BigInt(2) ** BigInt(1023) && bb > -(BigInt(2) ** BigInt(1023))) {
+                    jw[Yw++] = 199, Yw++, jw[Yw++] = 66;
+                    let wb, Mb = [];
                     do {
-                      let Wd = dd & BigInt(255);
-                      Od = (Wd & BigInt(128)) === (dd < BigInt(0) ? BigInt(128) : BigInt(0)), md.push(Wd), dd >>= BigInt(8)
-                    } while (dd !== BigInt(0) && dd !== BigInt(-1) || !Od);
-                    UO[uO - 2] = md.length;
-                    for (let dd = md.length; dd > 0;) UO[uO++] = Number(md[--dd]);
+                      let eb = bb & BigInt(255);
+                      wb = (eb & BigInt(128)) === (bb < BigInt(0) ? BigInt(128) : BigInt(0)), Mb.push(eb), bb >>= BigInt(8)
+                    } while (bb !== BigInt(0) && bb !== BigInt(-1) || !wb);
+                    jw[Yw - 2] = Mb.length;
+                    for (let bb = Mb.length; bb > 0;) jw[Yw++] = Number(Mb[--bb]);
                     return
                   }
-                  throw new RangeError(dd + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(bb + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                UO[uO++] = 203, BO.setFloat64(uO, Number(dd))
+                jw[Yw++] = 203, rw.setFloat64(Yw, Number(bb))
               }
-              uO += 8
+              Yw += 8
             } else {
-              if ("undefined" !== Wd) throw new Error("Unknown type: " + Wd);
-              this.encodeUndefinedAsNil ? UO[uO++] = 192 : (UO[uO++] = 212, UO[uO++] = 0, UO[uO++] = 0)
+              if ("undefined" !== eb) throw new Error("Unknown type: " + eb);
+              this.encodeUndefinedAsNil ? jw[Yw++] = 192 : (jw[Yw++] = 212, jw[Yw++] = 0, jw[Yw++] = 0)
             }
           },
-          Yd = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? dd => {
-            let Od;
+          hb = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? bb => {
+            let wb;
             if (this.skipValues) {
-              Od = [];
-              for (let md in dd) "function" === typeof dd.hasOwnProperty && !dd.hasOwnProperty(md) || this.skipValues.includes(dd[md]) || Od.push(md)
-            } else Od = Object.keys(dd);
-            let md, Wd = Od.length;
-            if (Wd < 16 ? UO[uO++] = 128 | Wd : Wd < 65536 ? (UO[uO++] = 222, UO[uO++] = Wd >> 8, UO[uO++] = 255 & Wd) : (UO[uO++] = 223, BO.setUint32(uO, Wd), uO += 4), this.coercibleKeyAsNumber)
-              for (let Fd = 0; Fd < Wd; Fd++) {
-                md = Od[Fd];
-                let Wd = Number(md);
-                pd(isNaN(Wd) ? md : Wd), pd(dd[md])
+              wb = [];
+              for (let Mb in bb) "function" === typeof bb.hasOwnProperty && !bb.hasOwnProperty(Mb) || this.skipValues.includes(bb[Mb]) || wb.push(Mb)
+            } else wb = Object.keys(bb);
+            let Mb, eb = wb.length;
+            if (eb < 16 ? jw[Yw++] = 128 | eb : eb < 65536 ? (jw[Yw++] = 222, jw[Yw++] = eb >> 8, jw[Yw++] = 255 & eb) : (jw[Yw++] = 223, rw.setUint32(Yw, eb), Yw += 4), this.coercibleKeyAsNumber)
+              for (let Hb = 0; Hb < eb; Hb++) {
+                Mb = wb[Hb];
+                let eb = Number(Mb);
+                mb(isNaN(eb) ? Mb : eb), mb(bb[Mb])
               } else
-                for (let Fd = 0; Fd < Wd; Fd++) pd(md = Od[Fd]), pd(dd[md])
-          } : dd => {
-            UO[uO++] = 222;
-            let md = uO - Od;
-            uO += 2;
-            let Wd = 0;
-            for (let Od in dd)("function" !== typeof dd.hasOwnProperty || dd.hasOwnProperty(Od)) && (pd(Od), pd(dd[Od]), Wd++);
-            if (Wd > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            UO[md++ + Od] = Wd >> 8, UO[md + Od] = 255 & Wd
+                for (let Hb = 0; Hb < eb; Hb++) mb(Mb = wb[Hb]), mb(bb[Mb])
+          } : bb => {
+            jw[Yw++] = 222;
+            let Mb = Yw - wb;
+            Yw += 2;
+            let eb = 0;
+            for (let wb in bb)("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(wb)) && (mb(wb), mb(bb[wb]), eb++);
+            if (eb > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            jw[Mb++ + wb] = eb >> 8, jw[Mb + wb] = 255 & eb
           },
-          gd = !1 === this.useRecords ? Yd : dd.progressiveRecords && !td ? dd => {
-            let md, Fd, Rd = Wd.transitions || (Wd.transitions = Object.create(null)),
-              Xd = uO++ - Od;
-            for (let Kd in dd)
-              if ("function" !== typeof dd.hasOwnProperty || dd.hasOwnProperty(Kd)) {
-                if (md = Rd[Kd], md) Rd = md;
+          zb = !1 === this.useRecords ? hb : bb.progressiveRecords && !Ob ? bb => {
+            let Mb, Hb, pb = eb.transitions || (eb.transitions = Object.create(null)),
+              Vb = Yw++ - wb;
+            for (let gb in bb)
+              if ("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(gb)) {
+                if (Mb = pb[gb], Mb) pb = Mb;
                 else {
-                  let hd = Object.keys(dd),
-                    vd = Rd;
-                  Rd = Wd.transitions;
-                  let Qd = 0;
-                  for (let dd = 0, Od = hd.length; dd < Od; dd++) {
-                    let Od = hd[dd];
-                    md = Rd[Od], md || (md = Rd[Od] = Object.create(null), Qd++), Rd = md
+                  let lb = Object.keys(bb),
+                    Lb = pb;
+                  pb = eb.transitions;
+                  let Ib = 0;
+                  for (let bb = 0, wb = lb.length; bb < wb; bb++) {
+                    let wb = lb[bb];
+                    Mb = pb[wb], Mb || (Mb = pb[wb] = Object.create(null), Ib++), pb = Mb
                   }
-                  Xd + Od + 1 == uO ? (uO--, Ud(Rd, hd, Qd)) : xd(Rd, hd, Xd, Qd), Fd = !0, Rd = vd[Kd]
+                  Vb + wb + 1 == Yw ? (Yw--, Kb(pb, lb, Ib)) : rb(pb, lb, Vb, Ib), Hb = !0, pb = Lb[gb]
                 }
-                pd(dd[Kd])
-              } if (!Fd) {
-              let md = Rd[AO];
-              md ? UO[Xd + Od] = md : xd(Rd, Object.keys(dd), Xd, 0)
+                mb(bb[gb])
+              } if (!Hb) {
+              let Mb = pb[Aw];
+              Mb ? jw[Vb + wb] = Mb : rb(pb, Object.keys(bb), Vb, 0)
             }
-          } : dd => {
-            let Od, md = Wd.transitions || (Wd.transitions = Object.create(null)),
-              Fd = 0;
-            for (let Wd in dd)("function" !== typeof dd.hasOwnProperty || dd.hasOwnProperty(Wd)) && (Od = md[Wd], Od || (Od = md[Wd] = Object.create(null), Fd++), md = Od);
-            let Rd = md[AO];
-            Rd ? Rd >= 96 && td ? (UO[uO++] = 96 + (31 & (Rd -= 96)), UO[uO++] = Rd >> 5) : UO[uO++] = Rd : Ud(md, md.__keys__ || Object.keys(dd), Fd);
-            for (let Wd in dd)("function" !== typeof dd.hasOwnProperty || dd.hasOwnProperty(Wd)) && pd(dd[Wd])
+          } : bb => {
+            let wb, Mb = eb.transitions || (eb.transitions = Object.create(null)),
+              Hb = 0;
+            for (let eb in bb)("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(eb)) && (wb = Mb[eb], wb || (wb = Mb[eb] = Object.create(null), Hb++), Mb = wb);
+            let pb = Mb[Aw];
+            pb ? pb >= 96 && Ob ? (jw[Yw++] = 96 + (31 & (pb -= 96)), jw[Yw++] = pb >> 5) : jw[Yw++] = pb : Kb(Mb, Mb.__keys__ || Object.keys(bb), Hb);
+            for (let eb in bb)("function" !== typeof bb.hasOwnProperty || bb.hasOwnProperty(eb)) && mb(bb[eb])
           },
-          wd = "function" == typeof this.useRecords && this.useRecords,
-          Ed = wd ? dd => {
-            wd(dd) ? gd(dd) : Yd(dd)
-          } : gd,
-          Jd = dd => {
-            let md;
-            if (dd > 16777216) {
-              if (dd - Od > JO) throw new Error("Packed buffer would be larger than maximum buffer size");
-              md = Math.min(JO, 4096 * Math.round(Math.max((dd - Od) * (dd > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else md = 1 + (Math.max(dd - Od << 2, UO.length - 1) >> 12) << 12;
-            let Wd = new aO(md);
-            return BO = Wd.dataView || (Wd.dataView = new DataView(Wd.buffer, 0, md)), dd = Math.min(dd, UO.length), UO.copy ? UO.copy(Wd, 0, Od, dd) : Wd.set(UO.slice(Od, dd)), uO -= Od, Od = 0, SO = Wd.length - 10, UO = Wd
+          Xb = "function" == typeof this.useRecords && this.useRecords,
+          xb = Xb ? bb => {
+            Xb(bb) ? zb(bb) : hb(bb)
+          } : zb,
+          jb = bb => {
+            let Mb;
+            if (bb > 16777216) {
+              if (bb - wb > xw) throw new Error("Packed buffer would be larger than maximum buffer size");
+              Mb = Math.min(xw, 4096 * Math.round(Math.max((bb - wb) * (bb > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else Mb = 1 + (Math.max(bb - wb << 2, jw.length - 1) >> 12) << 12;
+            let eb = new zw(Mb);
+            return rw = eb.dataView || (eb.dataView = new DataView(eb.buffer, 0, Mb)), bb = Math.min(bb, jw.length), jw.copy ? jw.copy(eb, 0, wb, bb) : eb.set(jw.slice(wb, bb)), Yw -= wb, wb = 0, Rw = eb.length - 10, jw = eb
           },
-          Ud = (dd, Od, Fd) => {
-            let Rd = Wd.nextId;
-            Rd || (Rd = 64), Rd < od && this.shouldShareStructure && !this.shouldShareStructure(Od) ? (Rd = Wd.nextOwnId, Rd < Nd || (Rd = od), Wd.nextOwnId = Rd + 1) : (Rd >= Nd && (Rd = od), Wd.nextId = Rd + 1);
-            let Xd = Od.highByte = Rd >= 96 && td ? Rd - 96 >> 5 : -1;
-            dd[AO] = Rd, dd.__keys__ = Od, Wd[Rd - 64] = Od, Rd < od ? (Od.isShared = !0, Wd.sharedLength = Rd - 63, md = !0, Xd >= 0 ? (UO[uO++] = 96 + (31 & Rd), UO[uO++] = Xd) : UO[uO++] = Rd) : (Xd >= 0 ? (UO[uO++] = 213, UO[uO++] = 114, UO[uO++] = 96 + (31 & Rd), UO[uO++] = Xd) : (UO[uO++] = 212, UO[uO++] = 114, UO[uO++] = Rd), Fd && (Hd += yd * Fd), qd.length >= Qd && (qd.shift()[AO] = 0), qd.push(dd), pd(Od))
+          Kb = (bb, wb, Hb) => {
+            let pb = eb.nextId;
+            pb || (pb = 64), pb < Ub && this.shouldShareStructure && !this.shouldShareStructure(wb) ? (pb = eb.nextOwnId, pb < tb || (pb = Ub), eb.nextOwnId = pb + 1) : (pb >= tb && (pb = Ub), eb.nextId = pb + 1);
+            let Vb = wb.highByte = pb >= 96 && Ob ? pb - 96 >> 5 : -1;
+            bb[Aw] = pb, bb.__keys__ = wb, eb[pb - 64] = wb, pb < Ub ? (wb.isShared = !0, eb.sharedLength = pb - 63, Mb = !0, Vb >= 0 ? (jw[Yw++] = 96 + (31 & pb), jw[Yw++] = Vb) : jw[Yw++] = pb) : (Vb >= 0 ? (jw[Yw++] = 213, jw[Yw++] = 114, jw[Yw++] = 96 + (31 & pb), jw[Yw++] = Vb) : (jw[Yw++] = 212, jw[Yw++] = 114, jw[Yw++] = pb), Hb && (Eb += Fb * Hb), Cb.length >= Ib && (Cb.shift()[Aw] = 0), Cb.push(bb), mb(wb))
           },
-          xd = (dd, md, Wd, Fd) => {
-            let Rd = UO,
-              Xd = uO,
-              Kd = SO,
-              hd = Od;
-            UO = xO, uO = 0, Od = 0, UO || (xO = UO = new aO(8192)), SO = UO.length - 10, Ud(dd, md, Fd), xO = UO;
-            let vd = uO;
-            if (UO = Rd, uO = Xd, SO = Kd, Od = hd, vd > 1) {
-              let dd = uO + vd - 1;
-              dd > SO && Jd(dd);
-              let md = Wd + Od;
-              UO.copyWithin(md + vd, md + 1, uO), UO.set(xO.slice(0, vd), md), uO = dd
-            } else UO[Wd + Od] = xO[0]
+          rb = (bb, Mb, eb, Hb) => {
+            let pb = jw,
+              Vb = Yw,
+              gb = Rw,
+              lb = wb;
+            jw = Kw, Yw = 0, wb = 0, jw || (Kw = jw = new zw(8192)), Rw = jw.length - 10, Kb(bb, Mb, Hb), Kw = jw;
+            let Lb = Yw;
+            if (jw = pb, Yw = Vb, Rw = gb, wb = lb, Lb > 1) {
+              let bb = Yw + Lb - 1;
+              bb > Rw && jb(bb);
+              let Mb = eb + wb;
+              jw.copyWithin(Mb + Lb, Mb + 1, Yw), jw.set(Kw.slice(0, Lb), Mb), Yw = bb
+            } else jw[eb + wb] = Kw[0]
           },
-          Bd = dd => {
-            let Fd = sO(dd, UO, Od, uO, Wd, Jd, ((dd, Od, Wd) => {
-              if (Wd) return md = !0;
-              uO = Od;
-              let Fd = UO;
-              return pd(dd), bd(), Fd !== UO ? {
-                position: uO,
-                targetView: BO,
-                target: UO
-              } : uO
+          Rb = bb => {
+            let Hb = Dw(bb, jw, wb, Yw, eb, jb, ((bb, wb, eb) => {
+              if (eb) return Mb = !0;
+              Yw = wb;
+              let Hb = jw;
+              return mb(bb), Bb(), Hb !== jw ? {
+                position: Yw,
+                targetView: rw,
+                target: jw
+              } : Yw
             }), this);
-            if (0 === Fd) return Ed(dd);
-            uO = Fd
+            if (0 === Hb) return xb(bb);
+            Yw = Hb
           }
       }
-      useBuffer(dd) {
-        UO = dd, BO = UO.dataView || (UO.dataView = new DataView(UO.buffer, UO.byteOffset, UO.byteLength)), uO = 0
+      useBuffer(bb) {
+        jw = bb, rw = jw.dataView || (jw.dataView = new DataView(jw.buffer, jw.byteOffset, jw.byteLength)), Yw = 0
       }
-      set position(dd) {
-        uO = dd
+      set position(bb) {
+        Yw = bb
       }
       get position() {
-        return uO
+        return Yw
       }
-      set buffer(dd) {
-        UO = dd
+      set buffer(bb) {
+        jw = bb
       }
       get buffer() {
-        return UO
+        return jw
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function GO(dd, Od, md, Wd) {
-      let Fd = dd.byteLength;
-      if (Fd + 1 < 256) {
+    function Jw(bb, wb, Mb, eb) {
+      let Hb = bb.byteLength;
+      if (Hb + 1 < 256) {
         var {
-          target: Rd,
-          position: Xd
-        } = md(4 + Fd);
-        Rd[Xd++] = 199, Rd[Xd++] = Fd + 1
-      } else if (Fd + 1 < 65536) {
+          target: pb,
+          position: Vb
+        } = Mb(4 + Hb);
+        pb[Vb++] = 199, pb[Vb++] = Hb + 1
+      } else if (Hb + 1 < 65536) {
         var {
-          target: Rd,
-          position: Xd
-        } = md(5 + Fd);
-        Rd[Xd++] = 200, Rd[Xd++] = Fd + 1 >> 8, Rd[Xd++] = Fd + 1 & 255
+          target: pb,
+          position: Vb
+        } = Mb(5 + Hb);
+        pb[Vb++] = 200, pb[Vb++] = Hb + 1 >> 8, pb[Vb++] = Hb + 1 & 255
       } else {
         var {
-          target: Rd,
-          position: Xd,
-          targetView: Kd
-        } = md(7 + Fd);
-        Rd[Xd++] = 201, Kd.setUint32(Xd, Fd + 1), Xd += 4
+          target: pb,
+          position: Vb,
+          targetView: gb
+        } = Mb(7 + Hb);
+        pb[Vb++] = 201, gb.setUint32(Vb, Hb + 1), Vb += 4
       }
-      Rd[Xd++] = 116, Rd[Xd++] = Od, dd.buffer || (dd = new Uint8Array(dd)), Rd.set(new Uint8Array(dd.buffer, dd.byteOffset, dd.byteLength), Xd)
+      pb[Vb++] = 116, pb[Vb++] = wb, bb.buffer || (bb = new Uint8Array(bb)), pb.set(new Uint8Array(bb.buffer, bb.byteOffset, bb.byteLength), Vb)
     }
 
-    function nO(dd, Od) {
-      let md = dd.byteLength;
-      var Wd, Fd;
-      if (md < 256) {
+    function Sw(bb, wb) {
+      let Mb = bb.byteLength;
+      var eb, Hb;
+      if (Mb < 256) {
         var {
-          target: Wd,
-          position: Fd
-        } = Od(md + 2);
-        Wd[Fd++] = 196, Wd[Fd++] = md
-      } else if (md < 65536) {
+          target: eb,
+          position: Hb
+        } = wb(Mb + 2);
+        eb[Hb++] = 196, eb[Hb++] = Mb
+      } else if (Mb < 65536) {
         var {
-          target: Wd,
-          position: Fd
-        } = Od(md + 3);
-        Wd[Fd++] = 197, Wd[Fd++] = md >> 8, Wd[Fd++] = 255 & md
+          target: eb,
+          position: Hb
+        } = wb(Mb + 3);
+        eb[Hb++] = 197, eb[Hb++] = Mb >> 8, eb[Hb++] = 255 & Mb
       } else {
         var {
-          target: Wd,
-          position: Fd,
-          targetView: Rd
-        } = Od(md + 5);
-        Wd[Fd++] = 198, Rd.setUint32(Fd, md), Fd += 4
+          target: eb,
+          position: Hb,
+          targetView: pb
+        } = wb(Mb + 5);
+        eb[Hb++] = 198, pb.setUint32(Hb, Mb), Hb += 4
       }
-      Wd.set(dd, Fd)
+      eb.set(bb, Hb)
     }
 
-    function LO(dd, Od, md, Wd) {
-      let Fd = dd.length;
-      switch (Fd) {
+    function Nw(bb, wb, Mb, eb) {
+      let Hb = bb.length;
+      switch (Hb) {
         case 1:
-          Od[md++] = 212;
+          wb[Mb++] = 212;
           break;
         case 2:
-          Od[md++] = 213;
+          wb[Mb++] = 213;
           break;
         case 4:
-          Od[md++] = 214;
+          wb[Mb++] = 214;
           break;
         case 8:
-          Od[md++] = 215;
+          wb[Mb++] = 215;
           break;
         case 16:
-          Od[md++] = 216;
+          wb[Mb++] = 216;
           break;
         default:
-          Fd < 256 ? (Od[md++] = 199, Od[md++] = Fd) : Fd < 65536 ? (Od[md++] = 200, Od[md++] = Fd >> 8, Od[md++] = 255 & Fd) : (Od[md++] = 201, Od[md++] = Fd >> 24, Od[md++] = Fd >> 16 & 255, Od[md++] = Fd >> 8 & 255, Od[md++] = 255 & Fd)
+          Hb < 256 ? (wb[Mb++] = 199, wb[Mb++] = Hb) : Hb < 65536 ? (wb[Mb++] = 200, wb[Mb++] = Hb >> 8, wb[Mb++] = 255 & Hb) : (wb[Mb++] = 201, wb[Mb++] = Hb >> 24, wb[Mb++] = Hb >> 16 & 255, wb[Mb++] = Hb >> 8 & 255, wb[Mb++] = 255 & Hb)
       }
-      return Od[md++] = Wd, Od.set(dd, md), md += Fd
+      return wb[Mb++] = eb, wb.set(bb, Mb), Mb += Hb
     }
 
-    function PO(dd, Od, md) {
-      if (VO.length > 0) {
-        BO.setUint32(VO.position + dd, uO + md - VO.position - dd), VO.stringsPosition = uO - dd;
-        let Wd = VO;
-        VO = null, Od(Wd[0]), Od(Wd[1])
+    function vw(bb, wb, Mb) {
+      if (Zw.length > 0) {
+        rw.setUint32(Zw.position + bb, Yw + Mb - Zw.position - bb), Zw.stringsPosition = Yw - bb;
+        let eb = Zw;
+        Zw = null, wb(eb[0]), wb(eb[1])
       }
     }
 
-    function zO(dd) {
-      if (dd.Class) {
-        if (!dd.pack && !dd.write) throw new Error("Extension has no pack or write function");
-        if (dd.pack && !dd.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        TO.unshift(dd.Class), bO.unshift(dd)
-      }! function(dd) {
-        dd.unpack ? Td[dd.type] = dd.unpack : Td[dd.type] = dd
-      }(dd)
+    function Qw(bb) {
+      if (bb.Class) {
+        if (!bb.pack && !bb.write) throw new Error("Extension has no pack or write function");
+        if (bb.pack && !bb.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        Fw.unshift(bb.Class), Ew.unshift(bb)
+      }! function(bb) {
+        bb.unpack ? sb[bb.type] = bb.unpack : sb[bb.type] = bb
+      }(bb)
     }
 
-    function cO(dd, Od) {
-      return dd.isCompatible = dd => {
-        let md = !dd || (Od.lastNamedStructuresLength || 0) === dd.length;
-        return md || Od._mergeStructures(dd), md
-      }, dd
+    function Gw(bb, wb) {
+      return bb.isCompatible = bb => {
+        let Mb = !bb || (wb.lastNamedStructuresLength || 0) === bb.length;
+        return Mb || wb._mergeStructures(bb), Mb
+      }, bb
     }
-    TO = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, Yd], bO = [{
-      pack(dd, Od, md) {
-        let Wd = dd.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === dd.getMilliseconds()) && Wd >= 0 && Wd < 4294967296) {
+    Fw = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, hb], Ew = [{
+      pack(bb, wb, Mb) {
+        let eb = bb.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === bb.getMilliseconds()) && eb >= 0 && eb < 4294967296) {
           let {
-            target: dd,
-            targetView: md,
-            position: Fd
-          } = Od(6);
-          dd[Fd++] = 214, dd[Fd++] = 255, md.setUint32(Fd, Wd)
-        } else if (Wd > 0 && Wd < 4294967296) {
+            target: bb,
+            targetView: Mb,
+            position: Hb
+          } = wb(6);
+          bb[Hb++] = 214, bb[Hb++] = 255, Mb.setUint32(Hb, eb)
+        } else if (eb > 0 && eb < 4294967296) {
           let {
-            target: md,
-            targetView: Fd,
-            position: Rd
-          } = Od(10);
-          md[Rd++] = 215, md[Rd++] = 255, Fd.setUint32(Rd, 4e6 * dd.getMilliseconds() + (Wd / 1e3 / 4294967296 | 0)), Fd.setUint32(Rd + 4, Wd)
-        } else if (isNaN(Wd)) {
-          if (this.onInvalidDate) return Od(0), md(this.onInvalidDate());
+            target: Mb,
+            targetView: Hb,
+            position: pb
+          } = wb(10);
+          Mb[pb++] = 215, Mb[pb++] = 255, Hb.setUint32(pb, 4e6 * bb.getMilliseconds() + (eb / 1e3 / 4294967296 | 0)), Hb.setUint32(pb + 4, eb)
+        } else if (isNaN(eb)) {
+          if (this.onInvalidDate) return wb(0), Mb(this.onInvalidDate());
           let {
-            target: dd,
-            targetView: Wd,
-            position: Fd
-          } = Od(3);
-          dd[Fd++] = 212, dd[Fd++] = 255, dd[Fd++] = 255
+            target: bb,
+            targetView: eb,
+            position: Hb
+          } = wb(3);
+          bb[Hb++] = 212, bb[Hb++] = 255, bb[Hb++] = 255
         } else {
           let {
-            target: md,
-            targetView: Fd,
-            position: Rd
-          } = Od(15);
-          md[Rd++] = 199, md[Rd++] = 12, md[Rd++] = 255, Fd.setUint32(Rd, 1e6 * dd.getMilliseconds()), Fd.setBigInt64(Rd + 4, BigInt(Math.floor(Wd)))
+            target: Mb,
+            targetView: Hb,
+            position: pb
+          } = wb(15);
+          Mb[pb++] = 199, Mb[pb++] = 12, Mb[pb++] = 255, Hb.setUint32(pb, 1e6 * bb.getMilliseconds()), Hb.setBigInt64(pb + 4, BigInt(Math.floor(eb)))
         }
       }
     }, {
-      pack(dd, Od, md) {
-        if (this.setAsEmptyObject) return Od(0), md({});
-        let Wd = Array.from(dd),
+      pack(bb, wb, Mb) {
+        if (this.setAsEmptyObject) return wb(0), Mb({});
+        let eb = Array.from(bb),
           {
-            target: Fd,
-            position: Rd
-          } = Od(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Fd[Rd++] = 212, Fd[Rd++] = 115, Fd[Rd++] = 0), md(Wd)
+            target: Hb,
+            position: pb
+          } = wb(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Hb[pb++] = 212, Hb[pb++] = 115, Hb[pb++] = 0), Mb(eb)
       }
     }, {
-      pack(dd, Od, md) {
+      pack(bb, wb, Mb) {
         let {
-          target: Wd,
-          position: Fd
-        } = Od(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Wd[Fd++] = 212, Wd[Fd++] = 101, Wd[Fd++] = 0), md([dd.name, dd.message, dd.cause])
+          target: eb,
+          position: Hb
+        } = wb(this.moreTypes ? 3 : 0);
+        this.moreTypes && (eb[Hb++] = 212, eb[Hb++] = 101, eb[Hb++] = 0), Mb([bb.name, bb.message, bb.cause])
       }
     }, {
-      pack(dd, Od, md) {
+      pack(bb, wb, Mb) {
         let {
-          target: Wd,
-          position: Fd
-        } = Od(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Wd[Fd++] = 212, Wd[Fd++] = 120, Wd[Fd++] = 0), md([dd.source, dd.flags])
+          target: eb,
+          position: Hb
+        } = wb(this.moreTypes ? 3 : 0);
+        this.moreTypes && (eb[Hb++] = 212, eb[Hb++] = 120, eb[Hb++] = 0), Mb([bb.source, bb.flags])
       }
     }, {
-      pack(dd, Od) {
-        this.moreTypes ? GO(dd, 16, Od) : nO(wO ? Buffer.from(dd) : new Uint8Array(dd), Od)
+      pack(bb, wb) {
+        this.moreTypes ? Jw(bb, 16, wb) : Sw(hw ? Buffer.from(bb) : new Uint8Array(bb), wb)
       }
     }, {
-      pack(dd, Od) {
-        let md = dd.constructor;
-        md !== EO && this.moreTypes ? GO(dd, FO.indexOf(md.name), Od) : nO(dd, Od)
+      pack(bb, wb) {
+        let Mb = bb.constructor;
+        Mb !== Xw && this.moreTypes ? Jw(bb, Mw.indexOf(Mb.name), wb) : Sw(bb, wb)
       }
     }, {
-      pack(dd, Od) {
+      pack(bb, wb) {
         let {
-          target: md,
-          position: Wd
-        } = Od(1);
-        md[Wd] = 193
+          target: Mb,
+          position: eb
+        } = wb(1);
+        Mb[eb] = 193
       }
     }];
-    let jO = new rO({
+    let qw = new Ww({
       useRecords: !1
     });
-    const DO = jO.pack,
-      eO = jO.pack,
-      IO = rO,
+    const aw = qw.pack,
+      iw = qw.pack,
+      uw = Ww,
       {
-        NEVER: lO,
-        ALWAYS: CO,
-        DECIMAL_ROUND: ZO,
-        DECIMAL_FIT: kO
-      } = HO,
-      fO = 512,
-      MO = 1024,
-      dm = 2048;
-    const Om = function(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!dd || "object" !== typeof dd) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const md = new Bd(Od);
-        let Wd;
-        const Fd = dd => {
-          let Od;
-          Wd && (dd = Buffer.concat([Wd, dd]), Wd = void 0);
+        NEVER: dw,
+        ALWAYS: Pw,
+        DECIMAL_ROUND: nw,
+        DECIMAL_FIT: yw
+      } = tw,
+      ow = 512,
+      Tw = 1024,
+      kw = 2048;
+    const bM = function(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!bb || "object" !== typeof bb) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const Mb = new Rb(wb);
+        let eb;
+        const Hb = bb => {
+          let wb;
+          eb && (bb = Buffer.concat([eb, bb]), eb = void 0);
           try {
-            Od = md.unpackMultiple(dd)
-          } catch (Fd) {
-            if (!Fd.incomplete) throw Fd;
-            Wd = dd.slice(Fd.lastPosition), Od = Fd.values
+            wb = Mb.unpackMultiple(bb)
+          } catch (Hb) {
+            if (!Hb.incomplete) throw Hb;
+            eb = bb.slice(Hb.lastPosition), wb = Hb.values
           }
-          return Od
+          return wb
         };
-        return "function" === typeof dd[Symbol.iterator] ? function*() {
-          for (const Od of dd) yield* Fd(Od)
-        }() : "function" === typeof dd[Symbol.asyncIterator] ? async function*() {
-          for await (const Od of dd) yield* Fd(Od)
+        return "function" === typeof bb[Symbol.iterator] ? function*() {
+          for (const wb of bb) yield* Hb(wb)
+        }() : "function" === typeof bb[Symbol.asyncIterator] ? async function*() {
+          for await (const wb of bb) yield* Hb(wb)
         }(): void 0
       },
-      mm = function(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (dd && "object" === typeof dd) {
-          if ("function" === typeof dd[Symbol.iterator]) return function*(dd, Od) {
-            const md = new rO(Od);
-            for (const Wd of dd) yield md.pack(Wd)
-          }(dd, Od);
-          if ("function" === typeof dd.then || "function" === typeof dd[Symbol.asyncIterator]) return async function*(dd, Od) {
-            const md = new rO(Od);
-            for await (const Wd of dd) yield md.pack(Wd)
-          }(dd, Od);
+      wM = function(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (bb && "object" === typeof bb) {
+          if ("function" === typeof bb[Symbol.iterator]) return function*(bb, wb) {
+            const Mb = new Ww(wb);
+            for (const eb of bb) yield Mb.pack(eb)
+          }(bb, wb);
+          if ("function" === typeof bb.then || "function" === typeof bb[Symbol.asyncIterator]) return async function*(bb, wb) {
+            const Mb = new Ww(wb);
+            for await (const eb of bb) yield Mb.pack(eb)
+          }(bb, wb);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      Wm = !1,
-      Fm = !0
+      MM = !1,
+      eM = !0
   },
-  10329: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      $changes: () => Hd,
-      $childType: () => yd,
-      $decoder: () => Qd,
-      $deleteByIndex: () => Nd,
-      $encoder: () => vd,
-      $filter: () => td,
-      $getByIndex: () => od,
-      $numFields: () => xd,
-      $refId: () => Kd,
-      $track: () => hd,
-      $values: () => gd,
-      ArraySchema: () => RW,
-      Callbacks: () => RF,
-      ChangeTree: () => Vm,
-      CollectionSchema: () => hW,
-      Decoder: () => kW,
-      Encoder: () => IW,
-      FieldBuilder: () => tW,
-      MapSchema: () => KW,
-      Metadata: () => ZO,
-      OPERATION: () => Fd,
-      Reflection: () => OF,
-      ReflectionField: () => MW,
-      ReflectionType: () => dF,
-      Root: () => iW,
-      Schema: () => uW,
-      SetSchema: () => vW,
-      StateCallbackStrategy: () => FF,
-      StateView: () => LW,
-      StreamSchema: () => QW,
-      TypeContext: () => cO,
-      createPool: () => KF,
-      decode: () => gO,
-      decodeKeyValueOperation: () => Mm,
-      decodeSchemaOperation: () => fm,
-      defineCustomTypes: () => JO,
-      defineTypes: () => BW,
-      deprecated: () => UW,
-      dumpChanges: () => sW,
-      encode: () => WO,
-      encodeArray: () => zm,
-      encodeIndexedEntry: () => Lm,
-      encodeKeyValueOperation: () => Pm,
-      encodeMapEntry: () => nm,
-      encodeSchemaOperation: () => Gm,
-      xq: () => TW,
-      fullStateOnly: () => wW,
-      getDecoderStateCallbacks: () => mF,
-      getEncodeDescriptor: () => mm,
-      getRawChangesCallback: () => WF,
-      isBuilder: () => oW,
-      patchOnly: () => gW,
-      registerType: () => EO,
-      schema: () => SW,
-      t: () => yW,
-      type: () => aW,
-      unreliable: () => YW,
-      view: () => pW
+  10517: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      $changes: () => Eb,
+      $childType: () => Fb,
+      $decoder: () => Ib,
+      $deleteByIndex: () => tb,
+      $encoder: () => Lb,
+      $filter: () => Ob,
+      $getByIndex: () => Ub,
+      $numFields: () => rb,
+      $refId: () => gb,
+      $track: () => lb,
+      $values: () => zb,
+      ArraySchema: () => ee,
+      Callbacks: () => eH,
+      ChangeTree: () => YM,
+      CollectionSchema: () => Ve,
+      Decoder: () => ne,
+      Encoder: () => ie,
+      FieldBuilder: () => Le,
+      MapSchema: () => pe,
+      Metadata: () => nw,
+      OPERATION: () => Hb,
+      Reflection: () => ke,
+      ReflectionField: () => oe,
+      ReflectionType: () => Te,
+      Root: () => Ze,
+      Schema: () => ce,
+      SetSchema: () => ge,
+      StateCallbackStrategy: () => MH,
+      StateView: () => Se,
+      StreamSchema: () => le,
+      TypeContext: () => Gw,
+      createPool: () => pH,
+      decode: () => mw,
+      decodeKeyValueOperation: () => oM,
+      decodeSchemaOperation: () => yM,
+      defineCustomTypes: () => xw,
+      defineTypes: () => re,
+      deprecated: () => je,
+      dumpChanges: () => De,
+      encode: () => ww,
+      encodeArray: () => vM,
+      encodeIndexedEntry: () => SM,
+      encodeKeyValueOperation: () => NM,
+      encodeMapEntry: () => JM,
+      encodeSchemaOperation: () => WM,
+      OC: () => Fe,
+      fullStateOnly: () => he,
+      getDecoderStateCallbacks: () => bH,
+      getEncodeDescriptor: () => wM,
+      getRawChangesCallback: () => wH,
+      isBuilder: () => Ie,
+      patchOnly: () => me,
+      registerType: () => Xw,
+      schema: () => Re,
+      t: () => Ce,
+      type: () => ze,
+      unreliable: () => se,
+      view: () => Be
     });
-    const Wd = 255;
-    var Fd;
+    const eb = 255;
+    var Hb;
 
-    function Rd(dd) {
-      Object.defineProperty(dd, Symbol.metadata, {
+    function pb(bb) {
+      Object.defineProperty(bb, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(dd) {
-      dd[dd.ADD = 128] = "ADD", dd[dd.REPLACE = 0] = "REPLACE", dd[dd.DELETE = 64] = "DELETE", dd[dd.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", dd[dd.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", dd[dd.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", dd[dd.CLEAR = 10] = "CLEAR", dd[dd.REVERSE = 15] = "REVERSE", dd[dd.MOVE = 32] = "MOVE", dd[dd.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", dd[dd.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(Fd || (Fd = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const Xd = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(bb) {
+      bb[bb.ADD = 128] = "ADD", bb[bb.REPLACE = 0] = "REPLACE", bb[bb.DELETE = 64] = "DELETE", bb[bb.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", bb[bb.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", bb[bb.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", bb[bb.CLEAR = 10] = "CLEAR", bb[bb.REVERSE = 15] = "REVERSE", bb[bb.MOVE = 32] = "MOVE", bb[bb.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", bb[bb.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(Hb || (Hb = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const Vb = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const dd = "colyseus.symbolRegistry",
-        Od = Xd[dd] || (Xd[dd] = Object.create(null));
-      Symbol.for = function(dd) {
-        return Od[dd] || (Od[dd] = Symbol(dd))
-      }, Symbol.keyFor = function(dd) {
-        for (const md in Od)
-          if (Od[md] === dd) return md
+      const bb = "colyseus.symbolRegistry",
+        wb = Vb[bb] || (Vb[bb] = Object.create(null));
+      Symbol.for = function(bb) {
+        return wb[bb] || (wb[bb] = Symbol(bb))
+      }, Symbol.keyFor = function(bb) {
+        for (const Mb in wb)
+          if (wb[Mb] === bb) return Mb
       }
     }
-    const Kd = Symbol.for("$refId"),
-      hd = "~track",
-      vd = "~encoder",
-      Qd = "~decoder",
-      td = "~filter",
-      od = "~getByIndex",
-      Nd = "~deleteByIndex",
-      qd = "~resyncPrune",
-      Hd = Symbol.for("$changes"),
-      yd = Symbol.for("$childType"),
-      bd = Symbol.for("$proxyTarget"),
-      Td = "~onEncodeEnd",
-      pd = "~reset",
-      Yd = "~onDecodeEnd",
-      gd = Symbol.for("$values"),
-      wd = "~builder",
-      Ed = "~descriptors",
-      Jd = "~__encodeDescriptor",
-      Ud = "~encoders",
-      xd = "~__numFields",
-      Bd = "~__refTypeFieldIndexes",
-      Sd = "~__viewFieldIndexes",
-      sd = "$__fieldIndexesByViewTag",
-      ud = "~__unreliableFieldIndexes",
-      Vd = "~__patchOnlyFieldIndexes",
-      Ad = "~__fullSyncSkipIndexes",
-      rd = "~__fullStateOnlyFieldIndexes",
-      Gd = "~__streamFieldIndexes",
-      nd = "~__streamPriorities";
-    let Ld;
+    const gb = Symbol.for("$refId"),
+      lb = "~track",
+      Lb = "~encoder",
+      Ib = "~decoder",
+      Ob = "~filter",
+      Ub = "~getByIndex",
+      tb = "~deleteByIndex",
+      Cb = "~resyncPrune",
+      Eb = Symbol.for("$changes"),
+      Fb = Symbol.for("$childType"),
+      Bb = Symbol.for("$proxyTarget"),
+      sb = "~onEncodeEnd",
+      mb = "~reset",
+      hb = "~onDecodeEnd",
+      zb = Symbol.for("$values"),
+      Xb = "~builder",
+      xb = "~descriptors",
+      jb = "~__encodeDescriptor",
+      Kb = "~encoders",
+      rb = "~__numFields",
+      Rb = "~__refTypeFieldIndexes",
+      Db = "~__viewFieldIndexes",
+      cb = "$__fieldIndexesByViewTag",
+      Yb = "~__unreliableFieldIndexes",
+      Zb = "~__patchOnlyFieldIndexes",
+      fb = "~__fullSyncSkipIndexes",
+      Ab = "~__fullStateOnlyFieldIndexes",
+      Wb = "~__streamFieldIndexes",
+      Jb = "~__streamPriorities";
+    let Sb;
     try {
-      Ld = new TextEncoder
-    } catch (hF) {}
-    const Pd = new ArrayBuffer(8),
-      zd = new Int32Array(Pd),
-      cd = new Float32Array(Pd),
-      jd = new Float64Array(Pd),
-      Dd = new BigInt64Array(Pd),
-      ed = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(dd, Od) {
-        for (var md = 0, Wd = 0, Fd = 0, Rd = dd.length; Fd < Rd; Fd++)(md = dd.charCodeAt(Fd)) < 128 ? Wd += 1 : md < 2048 ? Wd += 2 : md < 55296 || md >= 57344 ? Wd += 3 : (Fd++, Wd += 4);
-        return Wd
+      Sb = new TextEncoder
+    } catch (VH) {}
+    const Nb = new ArrayBuffer(8),
+      vb = new Int32Array(Nb),
+      Qb = new Float32Array(Nb),
+      Gb = new Float64Array(Nb),
+      qb = new BigInt64Array(Nb),
+      ab = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(bb, wb) {
+        for (var Mb = 0, eb = 0, Hb = 0, pb = bb.length; Hb < pb; Hb++)(Mb = bb.charCodeAt(Hb)) < 128 ? eb += 1 : Mb < 2048 ? eb += 2 : Mb < 55296 || Mb >= 57344 ? eb += 3 : (Hb++, eb += 4);
+        return eb
       };
 
-    function Id(dd, Od, md) {
-      for (var Wd = 0, Fd = 0, Rd = Od.length; Fd < Rd; Fd++)(Wd = Od.charCodeAt(Fd)) < 128 ? dd[md.offset++] = Wd : Wd < 2048 ? (dd[md.offset] = 192 | Wd >> 6, dd[md.offset + 1] = 128 | 63 & Wd, md.offset += 2) : Wd < 55296 || Wd >= 57344 ? (dd[md.offset] = 224 | Wd >> 12, dd[md.offset + 1] = 128 | Wd >> 6 & 63, dd[md.offset + 2] = 128 | 63 & Wd, md.offset += 3) : (Fd++, Wd = 65536 + ((1023 & Wd) << 10 | 1023 & Od.charCodeAt(Fd)), dd[md.offset] = 240 | Wd >> 18, dd[md.offset + 1] = 128 | Wd >> 12 & 63, dd[md.offset + 2] = 128 | Wd >> 6 & 63, dd[md.offset + 3] = 128 | 63 & Wd, md.offset += 4)
+    function ib(bb, wb, Mb) {
+      for (var eb = 0, Hb = 0, pb = wb.length; Hb < pb; Hb++)(eb = wb.charCodeAt(Hb)) < 128 ? bb[Mb.offset++] = eb : eb < 2048 ? (bb[Mb.offset] = 192 | eb >> 6, bb[Mb.offset + 1] = 128 | 63 & eb, Mb.offset += 2) : eb < 55296 || eb >= 57344 ? (bb[Mb.offset] = 224 | eb >> 12, bb[Mb.offset + 1] = 128 | eb >> 6 & 63, bb[Mb.offset + 2] = 128 | 63 & eb, Mb.offset += 3) : (Hb++, eb = 65536 + ((1023 & eb) << 10 | 1023 & wb.charCodeAt(Hb)), bb[Mb.offset] = 240 | eb >> 18, bb[Mb.offset + 1] = 128 | eb >> 12 & 63, bb[Mb.offset + 2] = 128 | eb >> 6 & 63, bb[Mb.offset + 3] = 128 | 63 & eb, Mb.offset += 4)
     }
 
-    function ld(dd, Od, md) {
-      dd[md.offset++] = 255 & Od
+    function ub(bb, wb, Mb) {
+      bb[Mb.offset++] = 255 & wb
     }
 
-    function Cd(dd, Od, md) {
-      dd[md.offset++] = 255 & Od, dd[md.offset++] = Od >> 8 & 255
+    function db(bb, wb, Mb) {
+      bb[Mb.offset++] = 255 & wb, bb[Mb.offset++] = wb >> 8 & 255
     }
 
-    function Zd(dd, Od, md) {
-      dd[md.offset++] = 255 & Od, dd[md.offset++] = Od >> 8 & 255
+    function Pb(bb, wb, Mb) {
+      bb[Mb.offset++] = 255 & wb, bb[Mb.offset++] = wb >> 8 & 255
     }
 
-    function kd(dd, Od, md) {
-      dd[md.offset++] = 255 & Od, dd[md.offset++] = Od >> 8 & 255, dd[md.offset++] = Od >> 16 & 255, dd[md.offset++] = Od >> 24 & 255
+    function nb(bb, wb, Mb) {
+      bb[Mb.offset++] = 255 & wb, bb[Mb.offset++] = wb >> 8 & 255, bb[Mb.offset++] = wb >> 16 & 255, bb[Mb.offset++] = wb >> 24 & 255
     }
 
-    function fd(dd, Od, md) {
-      const Wd = Od >> 24,
-        Fd = Od >> 16,
-        Rd = Od >> 8,
-        Xd = Od;
-      dd[md.offset++] = 255 & Xd, dd[md.offset++] = 255 & Rd, dd[md.offset++] = 255 & Fd, dd[md.offset++] = 255 & Wd
+    function yb(bb, wb, Mb) {
+      const eb = wb >> 24,
+        Hb = wb >> 16,
+        pb = wb >> 8,
+        Vb = wb;
+      bb[Mb.offset++] = 255 & Vb, bb[Mb.offset++] = 255 & pb, bb[Mb.offset++] = 255 & Hb, bb[Mb.offset++] = 255 & eb
     }
 
-    function Md(dd, Od, md) {
-      const Wd = Math.floor(Od / Math.pow(2, 32));
-      fd(dd, Od >>> 0, md), fd(dd, Wd, md)
+    function ob(bb, wb, Mb) {
+      const eb = Math.floor(wb / Math.pow(2, 32));
+      yb(bb, wb >>> 0, Mb), yb(bb, eb, Mb)
     }
 
-    function dO(dd, Od, md) {
-      const Wd = Od / Math.pow(2, 32) | 0;
-      fd(dd, Od >>> 0, md), fd(dd, Wd, md)
+    function Tb(bb, wb, Mb) {
+      const eb = wb / Math.pow(2, 32) | 0;
+      yb(bb, wb >>> 0, Mb), yb(bb, eb, Mb)
     }
 
-    function OO(dd, Od, md) {
-      cd[0] = Od, kd(dd, zd[0], md)
+    function kb(bb, wb, Mb) {
+      Qb[0] = wb, nb(bb, vb[0], Mb)
     }
 
-    function mO(dd, Od, md) {
-      jd[0] = Od, kd(dd, zd[0], md), kd(dd, zd[1], md)
+    function bw(bb, wb, Mb) {
+      Gb[0] = wb, nb(bb, vb[0], Mb), nb(bb, vb[1], Mb)
     }
-    const WO = {
-        int8: ld,
-        uint8: function(dd, Od, md) {
-          dd[md.offset++] = 255 & Od
+    const ww = {
+        int8: ub,
+        uint8: function(bb, wb, Mb) {
+          bb[Mb.offset++] = 255 & wb
         },
-        int16: Cd,
-        uint16: Zd,
-        int32: kd,
-        uint32: fd,
-        int64: Md,
-        uint64: dO,
-        bigint64: function(dd, Od, md) {
-          Dd[0] = BigInt.asIntN(64, Od), kd(dd, zd[0], md), kd(dd, zd[1], md)
+        int16: db,
+        uint16: Pb,
+        int32: nb,
+        uint32: yb,
+        int64: ob,
+        uint64: Tb,
+        bigint64: function(bb, wb, Mb) {
+          qb[0] = BigInt.asIntN(64, wb), nb(bb, vb[0], Mb), nb(bb, vb[1], Mb)
         },
-        biguint64: function(dd, Od, md) {
-          Dd[0] = BigInt.asIntN(64, Od), kd(dd, zd[0], md), kd(dd, zd[1], md)
+        biguint64: function(bb, wb, Mb) {
+          qb[0] = BigInt.asIntN(64, wb), nb(bb, vb[0], Mb), nb(bb, vb[1], Mb)
         },
-        float32: OO,
-        float64: mO,
-        boolean: function(dd, Od, md) {
-          dd[md.offset++] = Od ? 1 : 0
+        float32: kb,
+        float64: bw,
+        boolean: function(bb, wb, Mb) {
+          bb[Mb.offset++] = wb ? 1 : 0
         },
-        string: function(dd, Od, md) {
-          Od || (Od = "");
-          let Wd = ed(Od, "utf8"),
-            Fd = 0;
-          if (Wd < 32) dd[md.offset++] = 160 | Wd, Fd = 1;
-          else if (Wd < 256) dd[md.offset++] = 217, dd[md.offset++] = Wd, Fd = 2;
-          else if (Wd < 65536) dd[md.offset++] = 218, Zd(dd, Wd, md), Fd = 3;
+        string: function(bb, wb, Mb) {
+          wb || (wb = "");
+          let eb = ab(wb, "utf8"),
+            Hb = 0;
+          if (eb < 32) bb[Mb.offset++] = 160 | eb, Hb = 1;
+          else if (eb < 256) bb[Mb.offset++] = 217, bb[Mb.offset++] = eb, Hb = 2;
+          else if (eb < 65536) bb[Mb.offset++] = 218, Pb(bb, eb, Mb), Hb = 3;
           else {
-            if (!(Wd < 4294967296)) throw new Error("String too long");
-            dd[md.offset++] = 219, fd(dd, Wd, md), Fd = 5
+            if (!(eb < 4294967296)) throw new Error("String too long");
+            bb[Mb.offset++] = 219, yb(bb, eb, Mb), Hb = 5
           }
-          return Id(dd, Od, md), Fd + Wd
+          return ib(bb, wb, Mb), Hb + eb
         },
-        number: function dd(Od, md, Wd) {
-          return isNaN(md) ? dd(Od, 0, Wd) : isFinite(md) ? md !== (0 | md) ? Math.abs(md) <= 34028235e31 && (cd[0] = md, Math.abs(Math.abs(cd[0]) - Math.abs(md)) < 1e-4) ? (Od[Wd.offset++] = 202, OO(Od, md, Wd), 5) : (Od[Wd.offset++] = 203, mO(Od, md, Wd), 9) : md >= 0 ? md < 128 ? (Od[Wd.offset++] = 255 & md, 1) : md < 256 ? (Od[Wd.offset++] = 204, Od[Wd.offset++] = 255 & md, 2) : md < 65536 ? (Od[Wd.offset++] = 205, Zd(Od, md, Wd), 3) : md < 4294967296 ? (Od[Wd.offset++] = 206, fd(Od, md, Wd), 5) : (Od[Wd.offset++] = 207, dO(Od, md, Wd), 9) : md >= -32 ? (Od[Wd.offset++] = 224 | md + 32, 1) : md >= -128 ? (Od[Wd.offset++] = 208, ld(Od, md, Wd), 2) : md >= -32768 ? (Od[Wd.offset++] = 209, Cd(Od, md, Wd), 3) : md >= -2147483648 ? (Od[Wd.offset++] = 210, kd(Od, md, Wd), 5) : (Od[Wd.offset++] = 211, Md(Od, md, Wd), 9) : dd(Od, md > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Wd)
+        number: function bb(wb, Mb, eb) {
+          return isNaN(Mb) ? bb(wb, 0, eb) : isFinite(Mb) ? Mb !== (0 | Mb) ? Math.abs(Mb) <= 34028235e31 && (Qb[0] = Mb, Math.abs(Math.abs(Qb[0]) - Math.abs(Mb)) < 1e-4) ? (wb[eb.offset++] = 202, kb(wb, Mb, eb), 5) : (wb[eb.offset++] = 203, bw(wb, Mb, eb), 9) : Mb >= 0 ? Mb < 128 ? (wb[eb.offset++] = 255 & Mb, 1) : Mb < 256 ? (wb[eb.offset++] = 204, wb[eb.offset++] = 255 & Mb, 2) : Mb < 65536 ? (wb[eb.offset++] = 205, Pb(wb, Mb, eb), 3) : Mb < 4294967296 ? (wb[eb.offset++] = 206, yb(wb, Mb, eb), 5) : (wb[eb.offset++] = 207, Tb(wb, Mb, eb), 9) : Mb >= -32 ? (wb[eb.offset++] = 224 | Mb + 32, 1) : Mb >= -128 ? (wb[eb.offset++] = 208, ub(wb, Mb, eb), 2) : Mb >= -32768 ? (wb[eb.offset++] = 209, db(wb, Mb, eb), 3) : Mb >= -2147483648 ? (wb[eb.offset++] = 210, nb(wb, Mb, eb), 5) : (wb[eb.offset++] = 211, ob(wb, Mb, eb), 9) : bb(wb, Mb > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, eb)
         },
-        utf8Write: Id,
-        utf8Length: ed
+        utf8Write: ib,
+        utf8Length: ab
       },
-      FO = new ArrayBuffer(8),
-      RO = new Int32Array(FO),
-      XO = new Float32Array(FO),
-      KO = new Float64Array(FO),
-      hO = new BigUint64Array(FO),
-      vO = new BigInt64Array(FO);
+      Mw = new ArrayBuffer(8),
+      ew = new Int32Array(Mw),
+      Hw = new Float32Array(Mw),
+      pw = new Float64Array(Mw),
+      Vw = new BigUint64Array(Mw),
+      gw = new BigInt64Array(Mw);
 
-    function QO(dd, Od, md) {
-      md > dd.length - Od.offset && (md = dd.length - Od.offset);
-      for (var Wd = "", Fd = 0, Rd = Od.offset, Xd = Od.offset + md; Rd < Xd; Rd++) {
-        var Kd = dd[Rd];
-        if (0 !== (128 & Kd))
-          if (192 !== (224 & Kd))
-            if (224 !== (240 & Kd)) {
-              if (240 !== (248 & Kd)) {
-                console.error("decode.utf8Read(): Invalid byte " + Kd + " at offset " + Rd + ". Skip to end of string: " + (Od.offset + md));
+    function lw(bb, wb, Mb) {
+      Mb > bb.length - wb.offset && (Mb = bb.length - wb.offset);
+      for (var eb = "", Hb = 0, pb = wb.offset, Vb = wb.offset + Mb; pb < Vb; pb++) {
+        var gb = bb[pb];
+        if (0 !== (128 & gb))
+          if (192 !== (224 & gb))
+            if (224 !== (240 & gb)) {
+              if (240 !== (248 & gb)) {
+                console.error("decode.utf8Read(): Invalid byte " + gb + " at offset " + pb + ". Skip to end of string: " + (wb.offset + Mb));
                 break
-              }(Fd = (7 & Kd) << 18 | (63 & dd[++Rd]) << 12 | (63 & dd[++Rd]) << 6 | 63 & dd[++Rd]) >= 65536 ? (Fd -= 65536, Wd += String.fromCharCode(55296 + (Fd >>> 10), 56320 + (1023 & Fd))) : Wd += String.fromCharCode(Fd)
-            } else Wd += String.fromCharCode((15 & Kd) << 12 | (63 & dd[++Rd]) << 6 | 63 & dd[++Rd]);
-        else Wd += String.fromCharCode((31 & Kd) << 6 | 63 & dd[++Rd]);
-        else Wd += String.fromCharCode(Kd)
+              }(Hb = (7 & gb) << 18 | (63 & bb[++pb]) << 12 | (63 & bb[++pb]) << 6 | 63 & bb[++pb]) >= 65536 ? (Hb -= 65536, eb += String.fromCharCode(55296 + (Hb >>> 10), 56320 + (1023 & Hb))) : eb += String.fromCharCode(Hb)
+            } else eb += String.fromCharCode((15 & gb) << 12 | (63 & bb[++pb]) << 6 | 63 & bb[++pb]);
+        else eb += String.fromCharCode((31 & gb) << 6 | 63 & bb[++pb]);
+        else eb += String.fromCharCode(gb)
       }
-      return Od.offset += md, Wd
+      return wb.offset += Mb, eb
     }
 
-    function tO(dd, Od) {
-      return oO(dd, Od) << 24 >> 24
+    function Lw(bb, wb) {
+      return Iw(bb, wb) << 24 >> 24
     }
 
-    function oO(dd, Od) {
-      return dd[Od.offset++]
+    function Iw(bb, wb) {
+      return bb[wb.offset++]
     }
 
-    function NO(dd, Od) {
-      return qO(dd, Od) << 16 >> 16
+    function Ow(bb, wb) {
+      return Uw(bb, wb) << 16 >> 16
     }
 
-    function qO(dd, Od) {
-      return dd[Od.offset++] | dd[Od.offset++] << 8
+    function Uw(bb, wb) {
+      return bb[wb.offset++] | bb[wb.offset++] << 8
     }
 
-    function HO(dd, Od) {
-      return dd[Od.offset++] | dd[Od.offset++] << 8 | dd[Od.offset++] << 16 | dd[Od.offset++] << 24
+    function tw(bb, wb) {
+      return bb[wb.offset++] | bb[wb.offset++] << 8 | bb[wb.offset++] << 16 | bb[wb.offset++] << 24
     }
 
-    function yO(dd, Od) {
-      return HO(dd, Od) >>> 0
+    function Cw(bb, wb) {
+      return tw(bb, wb) >>> 0
     }
 
-    function bO(dd, Od) {
-      return RO[0] = HO(dd, Od), XO[0]
+    function Ew(bb, wb) {
+      return ew[0] = tw(bb, wb), Hw[0]
     }
 
-    function TO(dd, Od) {
-      return RO[0] = HO(dd, Od), RO[1] = HO(dd, Od), KO[0]
+    function Fw(bb, wb) {
+      return ew[0] = tw(bb, wb), ew[1] = tw(bb, wb), pw[0]
     }
 
-    function pO(dd, Od) {
-      const md = yO(dd, Od);
-      return HO(dd, Od) * Math.pow(2, 32) + md
+    function Bw(bb, wb) {
+      const Mb = Cw(bb, wb);
+      return tw(bb, wb) * Math.pow(2, 32) + Mb
     }
 
-    function YO(dd, Od) {
-      const md = yO(dd, Od);
-      return yO(dd, Od) * Math.pow(2, 32) + md
+    function sw(bb, wb) {
+      const Mb = Cw(bb, wb);
+      return Cw(bb, wb) * Math.pow(2, 32) + Mb
     }
-    const gO = {
-        utf8Read: QO,
-        int8: tO,
-        uint8: oO,
-        int16: NO,
-        uint16: qO,
-        int32: HO,
-        uint32: yO,
-        float32: bO,
-        float64: TO,
-        int64: pO,
-        uint64: YO,
-        bigint64: function(dd, Od) {
-          return RO[0] = HO(dd, Od), RO[1] = HO(dd, Od), vO[0]
+    const mw = {
+        utf8Read: lw,
+        int8: Lw,
+        uint8: Iw,
+        int16: Ow,
+        uint16: Uw,
+        int32: tw,
+        uint32: Cw,
+        float32: Ew,
+        float64: Fw,
+        int64: Bw,
+        uint64: sw,
+        bigint64: function(bb, wb) {
+          return ew[0] = tw(bb, wb), ew[1] = tw(bb, wb), gw[0]
         },
-        biguint64: function(dd, Od) {
-          return RO[0] = HO(dd, Od), RO[1] = HO(dd, Od), hO[0]
+        biguint64: function(bb, wb) {
+          return ew[0] = tw(bb, wb), ew[1] = tw(bb, wb), Vw[0]
         },
-        boolean: function(dd, Od) {
-          return oO(dd, Od) > 0
+        boolean: function(bb, wb) {
+          return Iw(bb, wb) > 0
         },
-        string: function(dd, Od) {
-          const md = dd[Od.offset++];
-          let Wd;
-          return md < 192 ? Wd = 31 & md : 217 === md ? Wd = oO(dd, Od) : 218 === md ? Wd = qO(dd, Od) : 219 === md && (Wd = yO(dd, Od)), QO(dd, Od, Wd)
+        string: function(bb, wb) {
+          const Mb = bb[wb.offset++];
+          let eb;
+          return Mb < 192 ? eb = 31 & Mb : 217 === Mb ? eb = Iw(bb, wb) : 218 === Mb ? eb = Uw(bb, wb) : 219 === Mb && (eb = Cw(bb, wb)), lw(bb, wb, eb)
         },
-        number: function(dd, Od) {
-          const md = dd[Od.offset++];
-          return md < 128 ? md : 202 === md ? bO(dd, Od) : 203 === md ? TO(dd, Od) : 204 === md ? oO(dd, Od) : 205 === md ? qO(dd, Od) : 206 === md ? yO(dd, Od) : 207 === md ? YO(dd, Od) : 208 === md ? tO(dd, Od) : 209 === md ? NO(dd, Od) : 210 === md ? HO(dd, Od) : 211 === md ? pO(dd, Od) : md > 223 ? -1 * (255 - md + 1) : void 0
+        number: function(bb, wb) {
+          const Mb = bb[wb.offset++];
+          return Mb < 128 ? Mb : 202 === Mb ? Ew(bb, wb) : 203 === Mb ? Fw(bb, wb) : 204 === Mb ? Iw(bb, wb) : 205 === Mb ? Uw(bb, wb) : 206 === Mb ? Cw(bb, wb) : 207 === Mb ? sw(bb, wb) : 208 === Mb ? Lw(bb, wb) : 209 === Mb ? Ow(bb, wb) : 210 === Mb ? tw(bb, wb) : 211 === Mb ? Bw(bb, wb) : Mb > 223 ? -1 * (255 - Mb + 1) : void 0
         },
-        stringCheck: function(dd, Od) {
-          const md = dd[Od.offset];
-          return md < 192 && md > 160 || 217 === md || 218 === md || 219 === md
+        stringCheck: function(bb, wb) {
+          const Mb = bb[wb.offset];
+          return Mb < 192 && Mb > 160 || 217 === Mb || 218 === Mb || 219 === Mb
         }
       },
-      wO = {},
-      aO = new Map;
+      hw = {},
+      zw = new Map;
 
-    function EO(dd, Od) {
-      Od.constructor && (Object.prototype.hasOwnProperty.call(Od, "constructor") && null == Od.constructor[Symbol.metadata] && Rd(Od.constructor), aO.set(Od.constructor, dd), wO[dd] = Od), Od.encode && (WO[dd] = Od.encode), Od.decode && (gO[dd] = Od.decode)
+    function Xw(bb, wb) {
+      wb.constructor && (Object.prototype.hasOwnProperty.call(wb, "constructor") && null == wb.constructor[Symbol.metadata] && pb(wb.constructor), zw.set(wb.constructor, bb), hw[bb] = wb), wb.encode && (ww[bb] = wb.encode), wb.decode && (mw[bb] = wb.decode)
     }
 
-    function JO(dd) {
-      for (const Od in dd) EO(Od, dd[Od]);
-      return dd => aW(dd)
+    function xw(bb) {
+      for (const wb in bb) Xw(wb, bb[wb]);
+      return bb => ze(bb)
     }
-    const UO = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const jw = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function xO() {
+    function Kw() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function BO(dd) {
-      return dd._stream ??= xO()
+    function rw(bb) {
+      return bb._stream ??= Kw()
     }
 
-    function SO(dd, Od, md) {
-      0 === Od.activeViews.size && BO(dd).broadcastPending.add(md)
+    function Rw(bb, wb, Mb) {
+      0 === wb.activeViews.size && rw(bb).broadcastPending.add(Mb)
     }
 
-    function sO(dd, Od, md, Wd) {
-      const Rd = dd._stream;
-      if (void 0 === Rd) return !0;
-      let Xd = !1;
-      return Rd.broadcastPending.delete(Wd) ? Xd = !0 : Rd.sentBroadcast.delete(Wd) && Rd.broadcastDeletes.add(Wd), Od.forEachActiveView((dd => {
-        const Od = Rd.pendingByView.get(dd.id);
-        if (Od?.has(Wd)) return Od.delete(Wd), void(Xd = !0);
-        const Kd = Rd.sentByView.get(dd.id);
-        if (Kd?.has(Wd)) {
-          Kd.delete(Wd);
-          let Od = dd.changes.get(md);
-          void 0 === Od && (Od = new Map, dd.changes.set(md, Od)), Od.set(Wd, Fd.DELETE)
+    function Dw(bb, wb, Mb, eb) {
+      const pb = bb._stream;
+      if (void 0 === pb) return !0;
+      let Vb = !1;
+      return pb.broadcastPending.delete(eb) ? Vb = !0 : pb.sentBroadcast.delete(eb) && pb.broadcastDeletes.add(eb), wb.forEachActiveView((bb => {
+        const wb = pb.pendingByView.get(bb.id);
+        if (wb?.has(eb)) return wb.delete(eb), void(Vb = !0);
+        const gb = pb.sentByView.get(bb.id);
+        if (gb?.has(eb)) {
+          gb.delete(eb);
+          let wb = bb.changes.get(Mb);
+          void 0 === wb && (wb = new Map, bb.changes.set(Mb, wb)), wb.set(eb, Hb.DELETE)
         }
-      })), Xd
+      })), Vb
     }
 
-    function uO(dd, Od) {
-      const md = dd._stream?.pendingByView;
-      if (void 0 === md) return !1;
-      for (const [Wd, Fd] of md)
-        if (Fd.size > 0 && void 0 !== Od.activeViews.get(Wd)?.deref()) return !0;
+    function Yw(bb, wb) {
+      const Mb = bb._stream?.pendingByView;
+      if (void 0 === Mb) return !1;
+      for (const [eb, Hb] of Mb)
+        if (Hb.size > 0 && void 0 !== wb.activeViews.get(eb)?.deref()) return !0;
       return !1
     }
 
-    function VO(dd) {
-      const Od = dd._stream;
-      return void 0 !== Od && (Od.broadcastPending.size > 0 || Od.broadcastDeletes.size > 0)
+    function Zw(bb) {
+      const wb = bb._stream;
+      return void 0 !== wb && (wb.broadcastPending.size > 0 || wb.broadcastDeletes.size > 0)
     }
 
-    function iO(dd, Od, md) {
-      const Wd = BO(dd);
-      let Fd = Wd.pendingByView.get(Od);
-      void 0 === Fd && (Fd = new Set, Wd.pendingByView.set(Od, Fd)), Fd.add(md)
+    function fw(bb, wb, Mb) {
+      const eb = rw(bb);
+      let Hb = eb.pendingByView.get(wb);
+      void 0 === Hb && (Hb = new Set, eb.pendingByView.set(wb, Hb)), Hb.add(Mb)
     }
 
-    function AO(dd, Od) {
-      const md = dd._stream;
-      void 0 !== md && (md.pendingByView.delete(Od), md.sentByView.delete(Od), md.priorityByView?.delete(Od))
+    function Aw(bb, wb) {
+      const Mb = bb._stream;
+      void 0 !== Mb && (Mb.pendingByView.delete(wb), Mb.sentByView.delete(wb), Mb.priorityByView?.delete(wb))
     }
-    const rO = {
+    const Ww = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function GO(dd) {
-      if (null == dd || "object" !== typeof dd) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function Jw(bb) {
+      if (null == bb || "object" !== typeof bb) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: Od,
-        max: md
-      } = dd;
-      if ("number" !== typeof Od || "number" !== typeof md || !(md > Od) || !Number.isFinite(Od) || !Number.isFinite(md)) throw new Error(`t.quantized(): require finite min < max (got min=${Od}, max=${md}).`);
-      const Wd = dd.bits ?? 16;
-      if (8 !== Wd && 16 !== Wd && 32 !== Wd) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Wd}).`);
-      const Fd = dd.mode ?? "clamp";
-      if ("clamp" !== Fd && "wrap" !== Fd) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Fd)}).`);
-      const Rd = "wrap" === Fd,
-        Xd = Math.pow(2, Wd);
+        min: wb,
+        max: Mb
+      } = bb;
+      if ("number" !== typeof wb || "number" !== typeof Mb || !(Mb > wb) || !Number.isFinite(wb) || !Number.isFinite(Mb)) throw new Error(`t.quantized(): require finite min < max (got min=${wb}, max=${Mb}).`);
+      const eb = bb.bits ?? 16;
+      if (8 !== eb && 16 !== eb && 32 !== eb) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${eb}).`);
+      const Hb = bb.mode ?? "clamp";
+      if ("clamp" !== Hb && "wrap" !== Hb) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Hb)}).`);
+      const pb = "wrap" === Hb,
+        Vb = Math.pow(2, eb);
       return {
-        min: Od,
-        max: md,
-        bits: Wd,
-        wrap: Rd,
-        wire: rO[Wd],
-        range: md - Od,
-        span: Rd ? Xd : Od === -md ? Xd - 2 : Xd - 1
+        min: wb,
+        max: Mb,
+        bits: eb,
+        wrap: pb,
+        wire: Ww[eb],
+        range: Mb - wb,
+        span: pb ? Vb : wb === -Mb ? Vb - 2 : Vb - 1
       }
     }
 
-    function nO(dd) {
-      return null !== dd && "object" === typeof dd && void 0 !== dd.quantized
+    function Sw(bb) {
+      return null !== bb && "object" === typeof bb && void 0 !== bb.quantized
     }
 
-    function LO(dd, Od) {
-      if (dd.wrap) {
-        if (!Number.isFinite(Od)) return 0;
-        const md = dd.range;
-        let Wd = (Od - dd.min) % md;
-        Wd < 0 && (Wd += md);
-        const Fd = dd.span;
-        return Math.floor(Wd / md * Fd + .5) % Fd
+    function Nw(bb, wb) {
+      if (bb.wrap) {
+        if (!Number.isFinite(wb)) return 0;
+        const Mb = bb.range;
+        let eb = (wb - bb.min) % Mb;
+        eb < 0 && (eb += Mb);
+        const Hb = bb.span;
+        return Math.floor(eb / Mb * Hb + .5) % Hb
       }
-      if (Od !== Od) return 0;
-      const md = Od < dd.min ? dd.min : Od > dd.max ? dd.max : Od;
-      return Math.floor((md - dd.min) / dd.range * dd.span + .5)
+      if (wb !== wb) return 0;
+      const Mb = wb < bb.min ? bb.min : wb > bb.max ? bb.max : wb;
+      return Math.floor((Mb - bb.min) / bb.range * bb.span + .5)
     }
 
-    function PO(dd, Od) {
-      return dd.min + Od / dd.span * dd.range
+    function vw(bb, wb) {
+      return bb.min + wb / bb.span * bb.range
     }
 
-    function zO(dd) {
-      const Od = WO[dd.wire];
-      return (md, Wd, Fd) => Od(md, LO(dd, Wd), Fd)
+    function Qw(bb) {
+      const wb = ww[bb.wire];
+      return (Mb, eb, Hb) => wb(Mb, Nw(bb, eb), Hb)
     }
-    class cO {
+    class Gw {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(dd) {
-        const Od = Object.getPrototypeOf(dd);
-        if (Od !== uW) {
-          let md = cO.inheritedTypes.get(Od);
-          md || (md = new Set, cO.inheritedTypes.set(Od, md)), md.add(dd)
+      static register(bb) {
+        const wb = Object.getPrototypeOf(bb);
+        if (wb !== ce) {
+          let Mb = Gw.inheritedTypes.get(wb);
+          Mb || (Mb = new Set, Gw.inheritedTypes.set(wb, Mb)), Mb.add(bb)
         }
       }
-      static cache(dd) {
-        let Od = cO.cachedContexts.get(dd);
-        return Od || (Od = new cO(dd), cO.cachedContexts.set(dd, Od)), Od
+      static cache(bb) {
+        let wb = Gw.cachedContexts.get(bb);
+        return wb || (wb = new Gw(bb), Gw.cachedContexts.set(bb, wb)), wb
       }
-      constructor(dd) {
-        dd && this.discoverTypes(dd)
+      constructor(bb) {
+        bb && this.discoverTypes(bb)
       }
-      has(dd) {
-        return this.schemas.has(dd)
+      has(bb) {
+        return this.schemas.has(bb)
       }
-      get(dd) {
-        return this.types[dd]
+      get(bb) {
+        return this.types[bb]
       }
-      add(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(dd) && (this.types[Od] = dd, null == dd[Symbol.metadata] && ZO.initialize(dd), this.schemas.set(dd, Od), !0)
+      add(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(bb) && (this.types[wb] = bb, null == bb[Symbol.metadata] && nw.initialize(bb), this.schemas.set(bb, wb), !0)
       }
-      getTypeId(dd) {
-        return this.schemas.get(dd)
+      getTypeId(bb) {
+        return this.schemas.get(bb)
       }
-      discoverTypes(dd) {
-        if (!this.add(dd)) return;
-        cO.inheritedTypes.get(dd)?.forEach((dd => {
-          this.discoverTypes(dd)
+      discoverTypes(bb) {
+        if (!this.add(bb)) return;
+        Gw.inheritedTypes.get(bb)?.forEach((bb => {
+          this.discoverTypes(bb)
         }));
-        let Od = dd;
+        let wb = bb;
         for (;
-          (Od = Object.getPrototypeOf(Od)) && Od !== uW && Od !== Function.prototype;) this.discoverTypes(Od);
-        const md = dd[Symbol.metadata];
-        (md[Sd] || md[Gd]) && (this.hasFilters = !0);
-        for (const Wd in md) {
-          const dd = md[Wd].type;
-          if ("string" !== typeof dd && !nO(dd))
-            if ("function" === typeof dd) this.discoverTypes(dd);
+          (wb = Object.getPrototypeOf(wb)) && wb !== ce && wb !== Function.prototype;) this.discoverTypes(wb);
+        const Mb = bb[Symbol.metadata];
+        (Mb[Db] || Mb[Wb]) && (this.hasFilters = !0);
+        for (const eb in Mb) {
+          const bb = Mb[eb].type;
+          if ("string" !== typeof bb && !Sw(bb))
+            if ("function" === typeof bb) this.discoverTypes(bb);
             else {
-              const Od = Object.values(dd)[0];
-              if ("string" === typeof Od) continue;
-              this.discoverTypes(Od)
+              const wb = Object.values(bb)[0];
+              if ("string" === typeof wb) continue;
+              this.discoverTypes(wb)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function jO(dd) {
-      const Od = eO(dd);
-      return Od ? {
-        complexTypeKlass: wO[Od],
-        childType: dd[Od]
+    function qw(bb) {
+      const wb = iw(bb);
+      return wb ? {
+        complexTypeKlass: hw[wb],
+        childType: bb[wb]
       } : {
         complexTypeKlass: !1,
-        childType: dd
+        childType: bb
       }
     }
 
-    function DO(dd, Od) {
-      const md = IO(dd),
-        Wd = eO(md),
-        Fd = Wd && eO(md[Wd]);
-      if (Fd) throw new Error(`${Od?`${Od}: `:""}@colyseus/schema: nested collections are not supported ("${Wd}" of "${Fd}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Fd} in a Schema class.`);
-      return md
+    function aw(bb, wb) {
+      const Mb = uw(bb),
+        eb = iw(Mb),
+        Hb = eb && iw(Mb[eb]);
+      if (Hb) throw new Error(`${wb?`${wb}: `:""}@colyseus/schema: nested collections are not supported ("${eb}" of "${Hb}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Hb} in a Schema class.`);
+      return Mb
     }
 
-    function eO(dd) {
-      return "object" === typeof dd && null !== dd ? Object.keys(dd).find((dd => void 0 !== wO[dd])) : void 0
+    function iw(bb) {
+      return "object" === typeof bb && null !== bb ? Object.keys(bb).find((bb => void 0 !== hw[bb])) : void 0
     }
 
-    function IO(dd) {
-      if ("object" !== typeof dd || null === dd) return dd;
-      if (Array.isArray(dd)) return {
-        array: IO(dd[0])
+    function uw(bb) {
+      if ("object" !== typeof bb || null === bb) return bb;
+      if (Array.isArray(bb)) return {
+        array: uw(bb[0])
       };
-      const Od = function(dd) {
-        const Od = Object.keys(dd),
-          md = Od.filter((dd => /\d+/.test(dd)));
-        if (md.length > 0 && md.length === Od.length / 2 && dd[dd[md[0]]] == md[0]) return "number";
-        if (Od.length > 0 && Od.every((Od => dd[Od] === Od))) return "string"
-      }(dd);
-      if (Od) return Od;
-      if (nO(dd)) return "string" === typeof dd.quantized.wire ? dd : {
-        quantized: GO(dd.quantized)
+      const wb = function(bb) {
+        const wb = Object.keys(bb),
+          Mb = wb.filter((bb => /\d+/.test(bb)));
+        if (Mb.length > 0 && Mb.length === wb.length / 2 && bb[bb[Mb[0]]] == Mb[0]) return "number";
+        if (wb.length > 0 && wb.every((wb => bb[wb] === wb))) return "string"
+      }(bb);
+      if (wb) return wb;
+      if (Sw(bb)) return "string" === typeof bb.quantized.wire ? bb : {
+        quantized: Jw(bb.quantized)
       };
-      if (void 0 !== dd.type) return IO(dd.type);
-      const md = eO(dd);
-      return md && (dd[md] = IO(dd[md])), dd
+      if (void 0 !== bb.type) return uw(bb.type);
+      const Mb = iw(bb);
+      return Mb && (bb[Mb] = uw(bb[Mb])), bb
     }
-    const lO = [Bd, ud, Vd, Ad, rd, Gd, Ud];
+    const dw = [Rb, Yb, Zb, fb, Ab, Wb, Kb];
 
-    function CO(dd, Od, md) {
-      dd[Od] || Object.defineProperty(dd, Od, {
+    function Pw(bb, wb, Mb) {
+      bb[wb] || Object.defineProperty(bb, wb, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), dd[Od].push(md)
+      }), bb[wb].push(Mb)
     }
-    const ZO = {
-        addField(dd, Od, md, Wd, Fd) {
-          if (Od >= 63) throw new Error(`Can't define field '${md}'.\nSchema instances may only have up to 63 fields.`);
-          dd[Od] = Object.assign(dd[Od] || {}, {
-            type: Wd,
-            index: Od,
-            name: md
-          }), Object.defineProperty(dd, Ed, {
-            value: dd[Ed] || {},
+    const nw = {
+        addField(bb, wb, Mb, eb, Hb) {
+          if (wb >= 63) throw new Error(`Can't define field '${Mb}'.\nSchema instances may only have up to 63 fields.`);
+          bb[wb] = Object.assign(bb[wb] || {}, {
+            type: eb,
+            index: wb,
+            name: Mb
+          }), Object.defineProperty(bb, xb, {
+            value: bb[xb] || {},
             enumerable: !1,
             configurable: !0
-          }), dd[Ed][md] = Fd || {
+          }), bb[xb][Mb] = Hb || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(dd, xd, {
-            value: Od,
+          }, Object.defineProperty(bb, rb, {
+            value: wb,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(dd, md, {
-            value: Od,
+          }), Object.defineProperty(bb, Mb, {
+            value: wb,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof dd[Od].type || nO(dd[Od].type) || (void 0 === dd[Bd] && Object.defineProperty(dd, Bd, {
+          }), "string" === typeof bb[wb].type || Sw(bb[wb].type) || (void 0 === bb[Rb] && Object.defineProperty(bb, Rb, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), dd[Bd].push(Od));
-          const Rd = dd[Od].type;
-          if (Rd && "object" === typeof Rd && void 0 !== Rd.stream) {
-            if (void 0 !== Rd.array) throw new Error(UO);
-            dd[Od].stream = !0, dd[Gd] || Object.defineProperty(dd, Gd, {
+          }), bb[Rb].push(wb));
+          const pb = bb[wb].type;
+          if (pb && "object" === typeof pb && void 0 !== pb.stream) {
+            if (void 0 !== pb.array) throw new Error(jw);
+            bb[wb].stream = !0, bb[Wb] || Object.defineProperty(bb, Wb, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), dd[Gd].includes(Od) || dd[Gd].push(Od);
-            const Fd = Wd?.priority;
-            "function" === typeof Fd && ZO.setStreamPriority(dd, md, Fd)
+            }), bb[Wb].includes(wb) || bb[Wb].push(wb);
+            const Hb = eb?.priority;
+            "function" === typeof Hb && nw.setStreamPriority(bb, Mb, Hb)
           }
         },
-        setTag(dd, Od, md) {
-          const Wd = dd[Od];
-          if (dd[Wd].tag = md, dd[Sd] || (Object.defineProperty(dd, Sd, {
+        setTag(bb, wb, Mb) {
+          const eb = bb[wb];
+          if (bb[eb].tag = Mb, bb[Db] || (Object.defineProperty(bb, Db, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(dd, sd, {
+            }), Object.defineProperty(bb, cb, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), dd[Sd].push(Wd), md < 0) dd[sd][md] || (dd[sd][md] = []), dd[sd][md].push(Wd);
+            })), bb[Db].push(eb), Mb < 0) bb[cb][Mb] || (bb[cb][Mb] = []), bb[cb][Mb].push(eb);
           else
-            for (let Fd = md; Fd > 0; Fd &= Fd - 1) {
-              const Od = Fd & -Fd;
-              dd[sd][Od] || (dd[sd][Od] = []), dd[sd][Od].push(Wd)
+            for (let Hb = Mb; Hb > 0; Hb &= Hb - 1) {
+              const wb = Hb & -Hb;
+              bb[cb][wb] || (bb[cb][wb] = []), bb[cb][wb].push(eb)
             }
         },
-        setUnreliable(dd, Od) {
-          const md = dd[Od];
-          if ("string" !== typeof dd[md].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Od}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          dd[md].unreliable = !0, dd[ud] || Object.defineProperty(dd, ud, {
+        setUnreliable(bb, wb) {
+          const Mb = bb[wb];
+          if ("string" !== typeof bb[Mb].type) throw new Error(`@unreliable cannot be applied to ref-type field "${wb}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          bb[Mb].unreliable = !0, bb[Yb] || Object.defineProperty(bb, Yb, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), dd[ud].push(md)
+          }), bb[Yb].push(Mb)
         },
-        setPatchOnly(dd, Od) {
-          const md = dd[Od];
-          if (dd[md].fullStateOnly) throw new Error(`field "${Od}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          dd[md].patchOnly = !0, CO(dd, Vd, md), CO(dd, Ad, md)
+        setPatchOnly(bb, wb) {
+          const Mb = bb[wb];
+          if (bb[Mb].fullStateOnly) throw new Error(`field "${wb}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          bb[Mb].patchOnly = !0, Pw(bb, Zb, Mb), Pw(bb, fb, Mb)
         },
-        setDeprecated(dd, Od) {
-          const md = dd[Od];
-          dd[md].deprecated = !0, CO(dd, Ad, md), Object.defineProperty(dd, md, {
-            value: dd[md],
+        setDeprecated(bb, wb) {
+          const Mb = bb[wb];
+          bb[Mb].deprecated = !0, Pw(bb, fb, Mb), Object.defineProperty(bb, Mb, {
+            value: bb[Mb],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(dd, Od) {
-          const md = dd[Od];
-          if (dd[md].patchOnly) throw new Error(`field "${Od}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          dd[md].fullStateOnly = !0, CO(dd, rd, md)
+        setFullStateOnly(bb, wb) {
+          const Mb = bb[wb];
+          if (bb[Mb].patchOnly) throw new Error(`field "${wb}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          bb[Mb].fullStateOnly = !0, Pw(bb, Ab, Mb)
         },
-        setStream(dd, Od) {
-          const md = dd[Od];
-          dd[md].stream = !0, dd[Gd] || Object.defineProperty(dd, Gd, {
+        setStream(bb, wb) {
+          const Mb = bb[wb];
+          bb[Mb].stream = !0, bb[Wb] || Object.defineProperty(bb, Wb, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), dd[Gd].push(md)
+          }), bb[Wb].push(Mb)
         },
-        setStreamPriority(dd, Od, md) {
-          const Wd = dd[Od];
-          dd[nd] || Object.defineProperty(dd, nd, {
+        setStreamPriority(bb, wb, Mb) {
+          const eb = bb[wb];
+          bb[Jb] || Object.defineProperty(bb, Jb, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), dd[nd][Wd] = md
+          }), bb[Jb][eb] = Mb
         },
-        getStreamPriority: (dd, Od) => dd?.[nd]?.[Od],
-        defineField(dd, Od, md, Wd, Fd) {
-          const Rd = DO(Fd, `${dd.name}.${Wd}`),
+        getStreamPriority: (bb, wb) => bb?.[Jb]?.[wb],
+        defineField(bb, wb, Mb, eb, Hb) {
+          const pb = aw(Hb, `${bb.name}.${eb}`),
             {
-              complexTypeKlass: Xd,
-              childType: Kd
-            } = jO(Rd);
-          ZO.addField(Od, md, Wd, Rd, JW(Wd, md, Kd, Xd)), Od[Ed][Wd] && Object.defineProperty(dd.prototype, Wd, Od[Ed][Wd]), ("string" === typeof Rd || nO(Rd)) && (Od[Ud] || Object.defineProperty(Od, Ud, {
+              complexTypeKlass: Vb,
+              childType: gb
+            } = qw(pb);
+          nw.addField(wb, Mb, eb, pb, xe(eb, Mb, gb, Vb)), wb[xb][eb] && Object.defineProperty(bb.prototype, eb, wb[xb][eb]), ("string" === typeof pb || Sw(pb)) && (wb[Kb] || Object.defineProperty(wb, Kb, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), Od[Ud][md] = "string" === typeof Rd ? WO[Rd] : zO(Rd.quantized))
+          }), wb[Kb][Mb] = "string" === typeof pb ? ww[pb] : Qw(pb.quantized))
         },
-        setFields(dd, Od) {
-          const md = dd.prototype.constructor;
-          cO.register(md);
-          const Wd = Object.getPrototypeOf(md),
-            Fd = Wd && Wd[Symbol.metadata],
-            Rd = ZO.initialize(md);
-          md[hd] || (md[hd] = uW[hd]), md[vd] || (md[vd] = uW[vd]), md[Qd] || (md[Qd] = uW[Qd]), md.prototype.toJSON || (md.prototype.toJSON = uW.prototype.toJSON);
-          let Xd = Rd[xd] ?? (Fd && Fd[xd]) ?? -1;
-          Xd++, Rd[Ud] || Object.defineProperty(Rd, Ud, {
-            value: Fd?.[Ud] ? [...Fd[Ud]] : [],
+        setFields(bb, wb) {
+          const Mb = bb.prototype.constructor;
+          Gw.register(Mb);
+          const eb = Object.getPrototypeOf(Mb),
+            Hb = eb && eb[Symbol.metadata],
+            pb = nw.initialize(Mb);
+          Mb[lb] || (Mb[lb] = ce[lb]), Mb[Lb] || (Mb[Lb] = ce[Lb]), Mb[Ib] || (Mb[Ib] = ce[Ib]), Mb.prototype.toJSON || (Mb.prototype.toJSON = ce.prototype.toJSON);
+          let Vb = pb[rb] ?? (Hb && Hb[rb]) ?? -1;
+          Vb++, pb[Kb] || Object.defineProperty(pb, Kb, {
+            value: Hb?.[Kb] ? [...Hb[Kb]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const Kd in Od) {
-            if (void 0 !== Rd[Kd]) throw new Error(`@colyseus/schema: Duplicate '${Kd}' definition on '${md.name||"(anonymous)"}'.`);
-            ZO.defineField(md, Rd, Xd, Kd, Od[Kd]), Xd++
+          for (const gb in wb) {
+            if (void 0 !== pb[gb]) throw new Error(`@colyseus/schema: Duplicate '${gb}' definition on '${Mb.name||"(anonymous)"}'.`);
+            nw.defineField(Mb, pb, Vb, gb, wb[gb]), Vb++
           }
-          return dd
+          return bb
         },
-        isDeprecated: (dd, Od) => !0 === dd[Od].deprecated,
-        initialize(dd) {
-          const Od = Object.getPrototypeOf(dd),
-            md = Od[Symbol.metadata];
-          let Wd = dd[Symbol.metadata] ?? Object.create(null);
-          if (Od !== uW && Wd === md && (Wd = Object.create(null), md)) {
-            Object.setPrototypeOf(Wd, md), Object.defineProperty(Wd, xd, {
-              value: md[xd],
+        isDeprecated: (bb, wb) => !0 === bb[wb].deprecated,
+        initialize(bb) {
+          const wb = Object.getPrototypeOf(bb),
+            Mb = wb[Symbol.metadata];
+          let eb = bb[Symbol.metadata] ?? Object.create(null);
+          if (wb !== ce && eb === Mb && (eb = Object.create(null), Mb)) {
+            Object.setPrototypeOf(eb, Mb), Object.defineProperty(eb, rb, {
+              value: Mb[rb],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== md[Sd] && (Object.defineProperty(Wd, Sd, {
-              value: [...md[Sd]],
+            }), void 0 !== Mb[Db] && (Object.defineProperty(eb, Db, {
+              value: [...Mb[Db]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(Wd, sd, {
+            }), Object.defineProperty(eb, cb, {
               value: {
-                ...md[sd]
+                ...Mb[cb]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const dd of lO) {
-              const Od = md[dd];
-              void 0 !== Od && Object.defineProperty(Wd, dd, {
-                value: [...Od],
+            for (const bb of dw) {
+              const wb = Mb[bb];
+              void 0 !== wb && Object.defineProperty(eb, bb, {
+                value: [...wb],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(Wd, Ed, {
+            Object.defineProperty(eb, xb, {
               value: {
-                ...md[Ed]
+                ...Mb[xb]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(dd, Symbol.metadata, {
-            value: Wd,
+          return Object.defineProperty(bb, Symbol.metadata, {
+            value: eb,
             writable: !1,
             configurable: !0
-          }), Wd
+          }), eb
         },
-        isValidInstance: dd => dd.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(dd.constructor[Symbol.metadata], xd),
-        getFields(dd) {
-          const Od = dd[Symbol.metadata],
-            md = {};
-          for (let Wd = 0; Wd <= Od[xd]; Wd++) md[Od[Wd].name] = Od[Wd].type;
-          return md
+        isValidInstance: bb => bb.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(bb.constructor[Symbol.metadata], rb),
+        getFields(bb) {
+          const wb = bb[Symbol.metadata],
+            Mb = {};
+          for (let eb = 0; eb <= wb[rb]; eb++) Mb[wb[eb].name] = wb[eb].type;
+          return Mb
         },
-        hasViewTagAtIndex: (dd, Od) => dd?.[Sd]?.includes(Od),
-        hasUnreliableAtIndex: (dd, Od) => dd?.[ud]?.includes(Od),
-        hasPatchOnlyAtIndex: (dd, Od) => dd?.[Vd]?.includes(Od),
-        hasFullStateOnlyAtIndex: (dd, Od) => dd?.[rd]?.includes(Od),
-        hasStreamAtIndex: (dd, Od) => dd?.[Gd]?.includes(Od)
+        hasViewTagAtIndex: (bb, wb) => bb?.[Db]?.includes(wb),
+        hasUnreliableAtIndex: (bb, wb) => bb?.[Yb]?.includes(wb),
+        hasPatchOnlyAtIndex: (bb, wb) => bb?.[Zb]?.includes(wb),
+        hasFullStateOnlyAtIndex: (bb, wb) => bb?.[Ab]?.includes(wb),
+        hasStreamAtIndex: (bb, wb) => bb?.[Wb]?.includes(wb)
       },
-      kO = (dd, Od, md) => dd(Od, md);
-    class fO {
+      yw = (bb, wb, Mb) => bb(wb, Mb);
+    class ow {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(dd) {
-        this.ops = new Uint8Array(Math.max(dd + 1, 1))
+      constructor(bb) {
+        this.ops = new Uint8Array(Math.max(bb + 1, 1))
       }
-      record(dd, Od) {
-        const md = this.ops[dd];
-        0 === md ? this.ops[dd] = Od : (md === Fd.DELETE || md === Fd.ADD && Od === Fd.DELETE_AND_ADD) && (this.ops[dd] = Fd.DELETE_AND_ADD), dd < 32 ? this.dirtyLow |= 1 << dd : this.dirtyHigh |= 1 << dd - 32
+      record(bb, wb) {
+        const Mb = this.ops[bb];
+        0 === Mb ? this.ops[bb] = wb : (Mb === Hb.DELETE || Mb === Hb.ADD && wb === Hb.DELETE_AND_ADD) && (this.ops[bb] = Hb.DELETE_AND_ADD), bb < 32 ? this.dirtyLow |= 1 << bb : this.dirtyHigh |= 1 << bb - 32
       }
-      recordDelete(dd, Od) {
-        this.ops[dd] = Od, dd < 32 ? this.dirtyLow |= 1 << dd : this.dirtyHigh |= 1 << dd - 32
+      recordDelete(bb, wb) {
+        this.ops[bb] = wb, bb < 32 ? this.dirtyLow |= 1 << bb : this.dirtyHigh |= 1 << bb - 32
       }
-      recordRaw(dd, Od) {
-        this.record(dd, Od)
+      recordRaw(bb, wb) {
+        this.record(bb, wb)
       }
-      operationAt(dd) {
-        const Od = this.ops[dd];
-        return 0 === Od ? void 0 : Od
+      operationAt(bb) {
+        const wb = this.ops[bb];
+        return 0 === wb ? void 0 : wb
       }
-      setOperationAt(dd, Od) {
-        this.ops[dd] = Od
+      setOperationAt(bb, wb) {
+        this.ops[bb] = wb
       }
-      forEach(dd) {
-        this.forEachWithCtx(dd, kO)
+      forEach(bb) {
+        this.forEachWithCtx(bb, yw)
       }
-      forEachWithCtx(dd, Od) {
-        let md = this.dirtyLow,
-          Wd = this.dirtyHigh;
-        const Fd = this.ops;
-        for (; 0 !== md;) {
-          const Wd = md & -md,
-            Rd = 31 - Math.clz32(Wd);
-          md ^= Wd, Od(dd, Rd, Fd[Rd])
+      forEachWithCtx(bb, wb) {
+        let Mb = this.dirtyLow,
+          eb = this.dirtyHigh;
+        const Hb = this.ops;
+        for (; 0 !== Mb;) {
+          const eb = Mb & -Mb,
+            pb = 31 - Math.clz32(eb);
+          Mb ^= eb, wb(bb, pb, Hb[pb])
         }
-        for (; 0 !== Wd;) {
-          const md = Wd & -Wd,
-            Rd = 31 - Math.clz32(md) + 32;
-          Wd ^= md, Od(dd, Rd, Fd[Rd])
+        for (; 0 !== eb;) {
+          const Mb = eb & -eb,
+            pb = 31 - Math.clz32(Mb) + 32;
+          eb ^= Mb, wb(bb, pb, Hb[pb])
         }
       }
       size() {
-        return dm(this.dirtyLow) + dm(this.dirtyHigh)
+        return kw(this.dirtyLow) + kw(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class MO {
-      dH = new Map;
+    class Tw {
+      JC = new Map;
       pureOps = [];
-      record(dd, Od) {
-        const md = this.dH.get(dd);
-        void 0 === md ? this.dH.set(dd, Od) : (md === Fd.DELETE || md === Fd.ADD && Od === Fd.DELETE_AND_ADD) && this.dH.set(dd, Fd.DELETE_AND_ADD)
+      record(bb, wb) {
+        const Mb = this.JC.get(bb);
+        void 0 === Mb ? this.JC.set(bb, wb) : (Mb === Hb.DELETE || Mb === Hb.ADD && wb === Hb.DELETE_AND_ADD) && this.JC.set(bb, Hb.DELETE_AND_ADD)
       }
-      recordDelete(dd, Od) {
-        this.dH.set(dd, Od)
+      recordDelete(bb, wb) {
+        this.JC.set(bb, wb)
       }
-      recordRaw(dd, Od) {
-        this.dH.set(dd, Od)
+      recordRaw(bb, wb) {
+        this.JC.set(bb, wb)
       }
-      recordPure(dd) {
-        this.pureOps.push([this.dH.size, dd])
+      recordPure(bb) {
+        this.pureOps.push([this.JC.size, bb])
       }
-      operationAt(dd) {
-        return this.dH.get(dd)
+      operationAt(bb) {
+        return this.JC.get(bb)
       }
-      setOperationAt(dd, Od) {
-        this.dH.has(dd) && this.dH.set(dd, Od)
+      setOperationAt(bb, wb) {
+        this.JC.has(bb) && this.JC.set(bb, wb)
       }
-      forEach(dd) {
-        this.forEachWithCtx(dd, kO)
+      forEach(bb) {
+        this.forEachWithCtx(bb, yw)
       }
-      forEachWithCtx(dd, Od) {
-        const md = this.pureOps;
-        if (md.length > 0) {
-          let Wd = 0,
-            Fd = 0;
-          for (const [Rd, Xd] of this.dH) {
-            for (; Wd < md.length && md[Wd][0] <= Fd;) {
-              const Fd = md[Wd++][1];
-              Od(dd, -Fd, Fd)
+      forEachWithCtx(bb, wb) {
+        const Mb = this.pureOps;
+        if (Mb.length > 0) {
+          let eb = 0,
+            Hb = 0;
+          for (const [pb, Vb] of this.JC) {
+            for (; eb < Mb.length && Mb[eb][0] <= Hb;) {
+              const Hb = Mb[eb++][1];
+              wb(bb, -Hb, Hb)
             }
-            Od(dd, Rd, Xd), Fd++
+            wb(bb, pb, Vb), Hb++
           }
-          for (; Wd < md.length;) {
-            const Fd = md[Wd++][1];
-            Od(dd, -Fd, Fd)
+          for (; eb < Mb.length;) {
+            const Hb = Mb[eb++][1];
+            wb(bb, -Hb, Hb)
           }
         } else
-          for (const [Wd, Fd] of this.dH) Od(dd, Wd, Fd)
+          for (const [eb, Hb] of this.JC) wb(bb, eb, Hb)
       }
       size() {
-        return this.dH.size + this.pureOps.length
+        return this.JC.size + this.pureOps.length
       }
       has() {
-        return this.dH.size > 0 || this.pureOps.length > 0
+        return this.JC.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.dH.clear(), this.pureOps.length = 0
+        this.JC.clear(), this.pureOps.length = 0
       }
-      shift(dd) {
-        const Od = new Map;
-        for (const [md, Wd] of this.dH) Od.set(md + dd, Wd);
-        this.dH = Od
+      shift(bb) {
+        const wb = new Map;
+        for (const [Mb, eb] of this.JC) wb.set(Mb + bb, eb);
+        this.JC = wb
       }
     }
 
-    function dm(dd) {
-      return 16843009 * ((dd = (858993459 & (dd -= dd >>> 1 & 1431655765)) + (dd >>> 2 & 858993459)) + (dd >>> 4) & 252645135) >>> 24
+    function kw(bb) {
+      return 16843009 * ((bb = (858993459 & (bb -= bb >>> 1 & 1431655765)) + (bb >>> 2 & 858993459)) + (bb >>> 4) & 252645135) >>> 24
     }
 
-    function Om(dd) {
-      if (void 0 === dd) return 0;
-      let Od = 0;
-      for (let md = 0, Wd = dd.length; md < Wd; md++) {
-        const Wd = dd[md];
-        Wd < 32 && (Od |= 1 << Wd)
+    function bM(bb) {
+      if (void 0 === bb) return 0;
+      let wb = 0;
+      for (let Mb = 0, eb = bb.length; Mb < eb; Mb++) {
+        const eb = bb[Mb];
+        eb < 32 && (wb |= 1 << eb)
       }
-      return Od
+      return wb
     }
 
-    function mm(dd) {
-      const Od = dd.constructor;
-      if (Object.prototype.hasOwnProperty.call(Od, Jd)) return Od[Jd];
-      const md = Od[Symbol.metadata],
-        Wd = ZO.isValidInstance(dd),
-        Fd = (md?.[Sd]?.length ?? 0) > 0,
-        Rd = function(dd) {
-          const Od = [],
-            md = [],
-            Wd = [],
-            Fd = [],
-            Rd = dd?.[xd];
-          if (void 0 === Rd) return {
-            names: Od,
-            types: md,
-            tags: Wd,
-            encoders: Fd
+    function wM(bb) {
+      const wb = bb.constructor;
+      if (Object.prototype.hasOwnProperty.call(wb, jb)) return wb[jb];
+      const Mb = wb[Symbol.metadata],
+        eb = nw.isValidInstance(bb),
+        Hb = (Mb?.[Db]?.length ?? 0) > 0,
+        pb = function(bb) {
+          const wb = [],
+            Mb = [],
+            eb = [],
+            Hb = [],
+            pb = bb?.[rb];
+          if (void 0 === pb) return {
+            names: wb,
+            types: Mb,
+            tags: eb,
+            encoders: Hb
           };
-          const Xd = dd[Ud];
-          for (let Kd = 0; Kd <= Rd; Kd++) {
-            const Rd = dd[Kd];
-            void 0 !== Rd ? (Od[Kd] = Rd.name, md[Kd] = Rd.type, Wd[Kd] = Rd.tag, Fd[Kd] = Xd?.[Kd]) : (Od[Kd] = void 0, md[Kd] = void 0, Wd[Kd] = void 0, Fd[Kd] = void 0)
+          const Vb = bb[Kb];
+          for (let gb = 0; gb <= pb; gb++) {
+            const pb = bb[gb];
+            void 0 !== pb ? (wb[gb] = pb.name, Mb[gb] = pb.type, eb[gb] = pb.tag, Hb[gb] = Vb?.[gb]) : (wb[gb] = void 0, Mb[gb] = void 0, eb[gb] = void 0, Hb[gb] = void 0)
           }
           return {
-            names: Od,
-            types: md,
-            tags: Wd,
-            encoders: Fd
+            names: wb,
+            types: Mb,
+            tags: eb,
+            encoders: Hb
           }
-        }(md),
-        Xd = Wd && !Fd ? void 0 : Od[td],
-        Kd = {
-          encoder: Od[vd],
-          filter: Xd,
-          metadata: md,
-          isSchema: Wd,
-          filterBitmask: Wd ? Om(md?.[Sd]) : 0,
-          hasAnyFullStateOnly: (md?.[rd]?.length ?? 0) > 0,
-          hasAnyUnreliable: (md?.[ud]?.length ?? 0) > 0,
-          hasAnyStream: (md?.[Gd]?.length ?? 0) > 0,
-          hasAnyView: Fd,
-          fullStateOnlyBitmask: Om(md?.[rd]),
-          unreliableBitmask: Om(md?.[ud]),
-          streamBitmask: Om(md?.[Gd]),
-          names: Rd.names,
-          types: Rd.types,
-          tags: Rd.tags,
-          encoders: Rd.encoders
+        }(Mb),
+        Vb = eb && !Hb ? void 0 : wb[Ob],
+        gb = {
+          encoder: wb[Lb],
+          filter: Vb,
+          metadata: Mb,
+          isSchema: eb,
+          filterBitmask: eb ? bM(Mb?.[Db]) : 0,
+          hasAnyFullStateOnly: (Mb?.[Ab]?.length ?? 0) > 0,
+          hasAnyUnreliable: (Mb?.[Yb]?.length ?? 0) > 0,
+          hasAnyStream: (Mb?.[Wb]?.length ?? 0) > 0,
+          hasAnyView: Hb,
+          fullStateOnlyBitmask: bM(Mb?.[Ab]),
+          unreliableBitmask: bM(Mb?.[Yb]),
+          streamBitmask: bM(Mb?.[Wb]),
+          names: pb.names,
+          types: pb.types,
+          tags: pb.tags,
+          encoders: pb.encoders
         };
-      return Object.defineProperty(Od, Jd, {
-        value: Kd,
+      return Object.defineProperty(wb, jb, {
+        value: gb,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), Kd
+      }), gb
     }
 
-    function Wm(dd, Od) {
-      if (void 0 !== dd.parentRef && Od(dd.parentRef, dd._parentIndex)) return !0;
-      for (let md = dd.extraParents; void 0 !== md; md = md.next)
-        if (Od(md.ref, md.index)) return !0;
+    function MM(bb, wb) {
+      if (void 0 !== bb.parentRef && wb(bb.parentRef, bb._parentIndex)) return !0;
+      for (let Mb = bb.extraParents; void 0 !== Mb; Mb = Mb.next)
+        if (wb(Mb.ref, Mb.index)) return !0;
       return !1
     }
-    const Fm = (dd, Od) => {
-        dd.isFieldUnreliable(Od) ? dd.ensureUnreliableRecorder().record(Od, Fd.ADD) : dd.record(Od, Fd.ADD)
+    const eM = (bb, wb) => {
+        bb.isFieldUnreliable(wb) ? bb.ensureUnreliableRecorder().record(wb, Hb.ADD) : bb.record(wb, Hb.ADD)
       },
-      Rm = (dd, Od) => dd(Od);
+      HM = (bb, wb) => bb(wb);
 
-    function Xm(dd, Od, md) {
-      const Wd = dd.refTarget;
-      if (void 0 !== Wd[yd]) {
-        if (dd.isPatchOnly) return;
-        if (Array.isArray(Wd.items)) {
-          const dd = Wd.items;
-          for (let Wd = 0, Fd = dd.length; Wd < Fd; Wd++) void 0 !== dd[Wd] && md(Od, Wd)
-        } else if (void 0 !== Wd.journal)
-          for (const [dd, Fd] of Wd.journal.keyByIndex) Wd.$items.has(Fd) && md(Od, dd);
-        else if (void 0 !== Wd.$items)
-          for (const dd of Wd.$items.keys()) md(Od, dd)
+    function pM(bb, wb, Mb) {
+      const eb = bb.refTarget;
+      if (void 0 !== eb[Fb]) {
+        if (bb.isPatchOnly) return;
+        if (Array.isArray(eb.items)) {
+          const bb = eb.items;
+          for (let eb = 0, Hb = bb.length; eb < Hb; eb++) void 0 !== bb[eb] && Mb(wb, eb)
+        } else if (void 0 !== eb.journal)
+          for (const [bb, Hb] of eb.journal.keyByIndex) eb.$items.has(Hb) && Mb(wb, bb);
+        else if (void 0 !== eb.$items)
+          for (const bb of eb.$items.keys()) Mb(wb, bb)
       } else {
-        const Fd = dd.metadata;
-        if (!Fd) return;
-        const Rd = Fd[xd] ?? -1,
-          Xd = Fd[Ad],
-          Kd = dd.encDescriptor.names;
-        for (let dd = 0; dd <= Rd; dd++) {
-          const Fd = Kd[dd];
-          if (void 0 === Fd) continue;
-          if (Xd && Xd.includes(dd)) continue;
-          const Rd = Wd[Fd];
-          void 0 !== Rd && null !== Rd && md(Od, dd)
+        const Hb = bb.metadata;
+        if (!Hb) return;
+        const pb = Hb[rb] ?? -1,
+          Vb = Hb[fb],
+          gb = bb.encDescriptor.names;
+        for (let bb = 0; bb <= pb; bb++) {
+          const Hb = gb[bb];
+          if (void 0 === Hb) continue;
+          if (Vb && Vb.includes(bb)) continue;
+          const pb = eb[Hb];
+          void 0 !== pb && null !== pb && Mb(wb, bb)
         }
       }
     }
 
-    function Km(dd, Od, md, Wd) {
-      ! function(dd, Od, md) {
-        if (!Od) return;
-        const Wd = Od[Hd],
-          Fd = !Wd._isSchema;
-        let Rd;
-        Fd ? (Od = Wd.parent, md = Wd.parentIndex, Rd = Od?.[Hd].metadata) : Rd = Wd.metadata;
-        const Xd = (Rd?.[Vd]?.includes(md) ? xm : 0) | (Rd?.[rd]?.includes(md) ? Bm : 0),
-          Kd = Wd.flags & um | Xd,
-          hd = dd.flags;
-        dd.flags = hd | Kd;
-        Kd & ~hd & Bm && (dd.reset(), dd.unreliableRecorder?.reset());
-        const vd = dd.root?.types;
-        if (!vd?.hasFilters) return;
-        const Qd = Rd?.[Sd]?.includes(md) ?? !1,
-          td = Rd?.[Gd]?.includes(md) ?? !1,
-          od = Wd.isFiltered || Qd || td;
-        if (dd.isFiltered = od, td && !Fd) {
-          dd.isStreamCollection = !0;
-          const Od = BO(dd.ref);
-          if (void 0 === Od.priority) {
-            const dd = ZO.getStreamPriority(Rd, md);
-            void 0 !== dd && (Od.priority = dd)
+    function VM(bb, wb, Mb, eb) {
+      ! function(bb, wb, Mb) {
+        if (!wb) return;
+        const eb = wb[Eb],
+          Hb = !eb._isSchema;
+        let pb;
+        Hb ? (wb = eb.parent, Mb = eb.parentIndex, pb = wb?.[Eb].metadata) : pb = eb.metadata;
+        const Vb = (pb?.[Zb]?.includes(Mb) ? KM : 0) | (pb?.[Ab]?.includes(Mb) ? rM : 0),
+          gb = eb.flags & cM | Vb,
+          lb = bb.flags;
+        bb.flags = lb | gb;
+        gb & ~lb & rM && (bb.reset(), bb.unreliableRecorder?.reset());
+        const Lb = bb.root?.types;
+        if (!Lb?.hasFilters) return;
+        const Ib = pb?.[Db]?.includes(Mb) ?? !1,
+          Ob = pb?.[Wb]?.includes(Mb) ?? !1,
+          Ub = eb.isFiltered || Ib || Ob;
+        if (bb.isFiltered = Ub, Ob && !Hb) {
+          bb.isStreamCollection = !0;
+          const wb = rw(bb.ref);
+          if (void 0 === wb.priority) {
+            const bb = nw.getStreamPriority(pb, Mb);
+            void 0 !== bb && (wb.priority = bb)
           }
-          dd.root?.registerStream(dd.ref)
+          bb.root?.registerStream(bb.ref)
         }
-        if (od) {
-          const Od = Qm(dd);
-          dd.isVisibilitySharedWithParent = Wd.isFiltered && Od && !td && (!Qd || Fd && Rd[md].tag !== bW)
+        if (Ub) {
+          const wb = lM(bb);
+          bb.isVisibilitySharedWithParent = eb.isFiltered && wb && !Ob && (!Ib || Hb && pb[Mb].tag !== Ee)
         }
-      }(dd, Od, md), dd.isFullStateOnly || (dd.has() && dd.root?.enqueueChangeTree(dd), dd.unreliableRecorder?.has() && dd.root?.enqueueUnreliable(dd), dd.has() || dd.unreliableRecorder?.has() || dd.root?.enqueueChangeTree(dd))
+      }(bb, wb, Mb), bb.isFullStateOnly || (bb.has() && bb.root?.enqueueChangeTree(bb), bb.unreliableRecorder?.has() && bb.root?.enqueueUnreliable(bb), bb.has() || bb.unreliableRecorder?.has() || bb.root?.enqueueChangeTree(bb))
     }
 
-    function hm(dd) {
-      const Od = dd.pendingFilterRefresh;
-      for (let md = 0; md < Od.length; md++) {
-        const dd = Od[md];
-        0 !== (dd.flags & sm) && tm(dd)
+    function gM(bb) {
+      const wb = bb.pendingFilterRefresh;
+      for (let Mb = 0; Mb < wb.length; Mb++) {
+        const bb = wb[Mb];
+        0 !== (bb.flags & DM) && LM(bb)
       }
-      Od.length = 0
+      wb.length = 0
     }
 
-    function Qm(dd) {
-      return dd._isSchema || "string" !== typeof dd.refTarget[yd]
+    function lM(bb) {
+      return bb._isSchema || "string" !== typeof bb.refTarget[Fb]
     }
 
-    function tm(dd) {
-      dd.flags &= ~sm;
-      const Od = dd.root;
-      if (void 0 === Od || void 0 === dd.parentRef) return;
-      const md = Qm(dd);
-      let Wd = ym(dd, dd.parentRef, dd._parentIndex, md);
-      for (let Rd = dd.extraParents; void 0 !== Rd && Wd !== Hm; Rd = Rd.next) Wd |= ym(dd, Rd.ref, Rd.index, md);
-      if (0 === Wd) return;
-      dd.isVisibilitySharedWithParent = 0 !== (Wd & qm);
-      const Fd = 0 === (Wd & Nm);
-      Fd !== dd.isFiltered && (dd.isFiltered = Fd, Fd || dd.isFullStateOnly || (dd.forEachLiveWithCtx(dd, Fm), dd.has() && Od.enqueueChangeTree(dd), dd.unreliableRecorder?.has() && Od.enqueueUnreliable(dd)), dd.forEachChildWithCtx(dd, bm))
+    function LM(bb) {
+      bb.flags &= ~DM;
+      const wb = bb.root;
+      if (void 0 === wb || void 0 === bb.parentRef) return;
+      const Mb = lM(bb);
+      let eb = CM(bb, bb.parentRef, bb._parentIndex, Mb);
+      for (let pb = bb.extraParents; void 0 !== pb && eb !== tM; pb = pb.next) eb |= CM(bb, pb.ref, pb.index, Mb);
+      if (0 === eb) return;
+      bb.isVisibilitySharedWithParent = 0 !== (eb & UM);
+      const Hb = 0 === (eb & OM);
+      Hb !== bb.isFiltered && (bb.isFiltered = Hb, Hb || bb.isFullStateOnly || (bb.forEachLiveWithCtx(bb, eM), bb.has() && wb.enqueueChangeTree(bb), bb.unreliableRecorder?.has() && wb.enqueueUnreliable(bb)), bb.forEachChildWithCtx(bb, EM))
     }
-    const om = 1,
-      Nm = 2,
-      qm = 4,
-      Hm = om | Nm | qm;
+    const IM = 1,
+      OM = 2,
+      UM = 4,
+      tM = IM | OM | UM;
 
-    function ym(dd, Od, md, Wd) {
-      const Fd = Od[Hd];
-      if (Fd.root !== dd.root || ! function(dd, Od, md) {
-          const Wd = Od.refTarget;
-          if (Od.isArray) {
-            const Od = Wd.items,
-              Fd = Od[md];
-            if (void 0 !== Fd && Fd[Hd] === dd) return !0;
-            for (let md = 0, Wd = Od.length; md < Wd; md++) {
-              const Wd = Od[md];
-              if (void 0 !== Wd && Wd[Hd] === dd) return !0
+    function CM(bb, wb, Mb, eb) {
+      const Hb = wb[Eb];
+      if (Hb.root !== bb.root || ! function(bb, wb, Mb) {
+          const eb = wb.refTarget;
+          if (wb.isArray) {
+            const wb = eb.items,
+              Hb = wb[Mb];
+            if (void 0 !== Hb && Hb[Eb] === bb) return !0;
+            for (let Mb = 0, eb = wb.length; Mb < eb; Mb++) {
+              const eb = wb[Mb];
+              if (void 0 !== eb && eb[Eb] === bb) return !0
             }
             return !1
           }
-          const Fd = Od.getValue(md);
-          return void 0 !== Fd && Fd[Hd] === dd
-        }(dd, Fd, md)) return 0;
-      Fd.flags & sm && tm(Fd);
-      let Rd = om;
-      if (Fd._isSchema) {
-        void 0 !== Fd.encDescriptor.tags[md] || Fd.isFieldStream(md) || (Fd.isFiltered ? Wd && (Rd |= qm) : Rd |= Nm)
-      } else if (Fd.isFiltered) {
-        if (Wd && !Fd.isStreamCollection) {
-          const dd = Fd.parent?.[Hd];
-          (dd?._isSchema ? dd.encDescriptor.tags[Fd.parentIndex] : void 0) !== bW && (Rd |= qm)
+          const Hb = wb.getValue(Mb);
+          return void 0 !== Hb && Hb[Eb] === bb
+        }(bb, Hb, Mb)) return 0;
+      Hb.flags & DM && LM(Hb);
+      let pb = IM;
+      if (Hb._isSchema) {
+        void 0 !== Hb.encDescriptor.tags[Mb] || Hb.isFieldStream(Mb) || (Hb.isFiltered ? eb && (pb |= UM) : pb |= OM)
+      } else if (Hb.isFiltered) {
+        if (eb && !Hb.isStreamCollection) {
+          const bb = Hb.parent?.[Eb];
+          (bb?._isSchema ? bb.encDescriptor.tags[Hb.parentIndex] : void 0) !== Ee && (pb |= UM)
         }
-      } else Rd |= Nm;
-      return Rd
+      } else pb |= OM;
+      return pb
     }
-    const bm = (dd, Od, md) => {
-      tm(Od)
+    const EM = (bb, wb, Mb) => {
+      LM(wb)
     };
 
-    function Tm(dd, Od, md, Wd) {
-      if (dd.addParent(Od, Wd), !md) return;
-      const Fd = md.add(dd);
-      md !== dd.root && (dd.root = md, Km(dd, Od, Wd));
-      const Rd = Od?.[Hd];
-      if (void 0 !== Rd && void 0 !== Rd.subscribedViews && void 0 !== Od[yd] && function(dd, Od, md, Wd) {
-          const Fd = dd.subscribedViews;
-          if (void 0 === Fd) return;
-          const Rd = dd.isStreamCollection,
-            Xd = Rd ? dd.ref : void 0,
-            Kd = Rd ? void 0 : md[Hd];
-          for (let hd = 0, vd = Fd.length; hd < vd; hd++) {
-            let dd = Fd[hd];
-            for (; 0 !== dd;) {
-              const md = dd & -dd;
-              dd ^= md;
-              const vd = 32 * hd + (31 - Math.clz32(md)),
-                Qd = Wd.activeViews.get(vd),
-                td = Qd?.deref();
-              void 0 !== td ? Rd ? iO(Xd, vd, Od) : void 0 !== Kd && td.markVisible(Kd) : Fd[hd] &= ~md
+    function FM(bb, wb, Mb, eb) {
+      if (bb.addParent(wb, eb), !Mb) return;
+      const Hb = Mb.add(bb);
+      Mb !== bb.root && (bb.root = Mb, VM(bb, wb, eb));
+      const pb = wb?.[Eb];
+      if (void 0 !== pb && void 0 !== pb.subscribedViews && void 0 !== wb[Fb] && function(bb, wb, Mb, eb) {
+          const Hb = bb.subscribedViews;
+          if (void 0 === Hb) return;
+          const pb = bb.isStreamCollection,
+            Vb = pb ? bb.ref : void 0,
+            gb = pb ? void 0 : Mb[Eb];
+          for (let lb = 0, Lb = Hb.length; lb < Lb; lb++) {
+            let bb = Hb[lb];
+            for (; 0 !== bb;) {
+              const Mb = bb & -bb;
+              bb ^= Mb;
+              const Lb = 32 * lb + (31 - Math.clz32(Mb)),
+                Ib = eb.activeViews.get(Lb),
+                Ob = Ib?.deref();
+              void 0 !== Ob ? pb ? fw(Vb, Lb, wb) : void 0 !== gb && Ob.markVisible(gb) : Hb[lb] &= ~Mb
             }
           }
-        }(Rd, Wd, dd.ref, md), Fd) {
-        let Od = wm[am];
-        void 0 === Od && (Od = {
+        }(pb, eb, bb.ref, Mb), Hb) {
+        let wb = hM[zM];
+        void 0 === wb && (wb = {
           parentRef: void 0,
           root: void 0
-        }, wm[am] = Od), Od.parentRef = dd.ref, Od.root = md, am++, Ym(dd, Od, Em), am--
+        }, hM[zM] = wb), wb.parentRef = bb.ref, wb.root = Mb, zM++, sM(bb, wb, XM), zM--
       }
     }
 
-    function pm(dd, Od, md) {
-      dd(Od, md)
+    function BM(bb, wb, Mb) {
+      bb(wb, Mb)
     }
 
-    function Ym(dd, Od, md) {
-      const Wd = dd.refTarget;
-      if (Wd[yd]) {
-        if ("string" !== typeof Wd[yd]) {
-          const dd = Wd.items;
-          if (void 0 !== dd)
-            for (let Wd = 0, Fd = dd.length; Wd < Fd; Wd++) {
-              const Fd = dd[Wd];
-              Fd && md(Od, Fd[Hd], Wd)
+    function sM(bb, wb, Mb) {
+      const eb = bb.refTarget;
+      if (eb[Fb]) {
+        if ("string" !== typeof eb[Fb]) {
+          const bb = eb.items;
+          if (void 0 !== bb)
+            for (let eb = 0, Hb = bb.length; eb < Hb; eb++) {
+              const Hb = bb[eb];
+              Hb && Mb(wb, Hb[Eb], eb)
             } else {
-              const dd = Wd.$items,
-                Fd = Wd._collectionIndexes;
-              for (const Wd of dd.keys()) {
-                const Rd = dd.get(Wd);
-                Rd && md(Od, Rd[Hd], Fd?.[Wd] ?? Wd)
+              const bb = eb.$items,
+                Hb = eb._collectionIndexes;
+              for (const eb of bb.keys()) {
+                const pb = bb.get(eb);
+                pb && Mb(wb, pb[Eb], Hb?.[eb] ?? eb)
               }
             }
         }
       } else {
-        const Fd = dd.metadata,
-          Rd = Fd?.[Bd];
-        if (!Rd) return;
-        const Xd = dd.encDescriptor.names;
-        for (let dd = 0, Kd = Rd.length; dd < Kd; dd++) {
-          const Fd = Rd[dd],
-            Kd = Wd[Xd[Fd]];
-          Kd && md(Od, Kd[Hd], Fd)
+        const Hb = bb.metadata,
+          pb = Hb?.[Rb];
+        if (!pb) return;
+        const Vb = bb.encDescriptor.names;
+        for (let bb = 0, gb = pb.length; bb < gb; bb++) {
+          const Hb = pb[bb],
+            gb = eb[Vb[Hb]];
+          gb && Mb(wb, gb[Eb], Hb)
         }
       }
     }
 
-    function gm(dd, Od, md) {
-      Od.root !== dd ? Od.setRoot(dd) : dd.add(Od)
+    function mM(bb, wb, Mb) {
+      wb.root !== bb ? wb.setRoot(bb) : bb.add(wb)
     }
-    const wm = [];
-    let am = 0;
+    const hM = [];
+    let zM = 0;
 
-    function Em(dd, Od, md) {
-      if (Od.root === dd.root) return dd.root.add(Od), void dd.root.moveNextToParent(Od);
-      Od.setParent(dd.parentRef, dd.root, md)
+    function XM(bb, wb, Mb) {
+      if (wb.root === bb.root) return bb.root.add(wb), void bb.root.moveNextToParent(wb);
+      wb.setParent(bb.parentRef, bb.root, Mb)
     }
 
-    function Jm(dd, Od, md) {
-      const Wd = (3 & md) << 3;
-      return md < 4 ? dd >>> Wd & 255 : Od >>> Wd & 255
+    function xM(bb, wb, Mb) {
+      const eb = (3 & Mb) << 3;
+      return Mb < 4 ? bb >>> eb & 255 : wb >>> eb & 255
     }
-    const Um = (dd, Od, md) => dd(Od, md);
-    const xm = 16,
-      Bm = 32,
-      Sm = 128,
-      sm = 256,
-      um = xm | Bm;
-    class Vm {
+    const jM = (bb, wb, Mb) => bb(wb, Mb);
+    const KM = 16,
+      rM = 32,
+      RM = 128,
+      DM = 256,
+      cM = KM | rM;
+    class YM {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(dd) {
-        this.flags = dd ? 1 | this.flags : -2 & this.flags
+      set isFiltered(bb) {
+        this.flags = bb ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(dd) {
-        this.flags = dd ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(bb) {
+        this.flags = bb ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(dd) {
-        this.flags = dd ? 4 | this.flags : -5 & this.flags
+      set isNew(bb) {
+        this.flags = bb ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(dd) {
-        this.flags = dd ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(bb) {
+        this.flags = bb ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & xm)
+        return 0 !== (this.flags & KM)
       }
-      set isPatchOnly(dd) {
-        this.flags = dd ? this.flags | xm : this.flags & ~xm
+      set isPatchOnly(bb) {
+        this.flags = bb ? this.flags | KM : this.flags & ~KM
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & Bm)
+        return 0 !== (this.flags & rM)
       }
-      set isFullStateOnly(dd) {
-        this.flags = dd ? this.flags | Bm : this.flags & ~Bm
+      set isFullStateOnly(bb) {
+        this.flags = bb ? this.flags | rM : this.flags & ~rM
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(dd) {
-        this.flags = dd ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(bb) {
+        this.flags = bb ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & Sm)
+        return 0 !== (this.flags & RM)
       }
-      set needsRestage(dd) {
-        this.flags = dd ? this.flags | Sm : -129 & this.flags
+      set needsRestage(bb) {
+        this.flags = bb ? this.flags | RM : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new fO(this.metadata?.[xd] ?? 0) : new MO), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new ow(this.metadata?.[rb] ?? 0) : new Tw), this.unreliableRecorder
       }
-      isFieldUnreliable(dd) {
-        const Od = this.encDescriptor;
-        return !!Od.hasAnyUnreliable && (dd < 32 ? 0 !== (Od.unreliableBitmask & 1 << dd) : ZO.hasUnreliableAtIndex(this.metadata, dd))
+      isFieldUnreliable(bb) {
+        const wb = this.encDescriptor;
+        return !!wb.hasAnyUnreliable && (bb < 32 ? 0 !== (wb.unreliableBitmask & 1 << bb) : nw.hasUnreliableAtIndex(this.metadata, bb))
       }
-      isFieldFullStateOnly(dd) {
+      isFieldFullStateOnly(bb) {
         if (this.isFullStateOnly) return !0;
-        const Od = this.encDescriptor;
-        return !!Od.hasAnyFullStateOnly && (dd < 32 ? 0 !== (Od.fullStateOnlyBitmask & 1 << dd) : ZO.hasFullStateOnlyAtIndex(this.metadata, dd))
+        const wb = this.encDescriptor;
+        return !!wb.hasAnyFullStateOnly && (bb < 32 ? 0 !== (wb.fullStateOnlyBitmask & 1 << bb) : nw.hasFullStateOnlyAtIndex(this.metadata, bb))
       }
-      isFieldStream(dd) {
-        const Od = this.encDescriptor;
-        return !!Od.hasAnyStream && (dd < 32 ? 0 !== (Od.streamBitmask & 1 << dd) : ZO.hasStreamAtIndex(this.metadata, dd))
+      isFieldStream(bb) {
+        const wb = this.encDescriptor;
+        return !!wb.hasAnyStream && (bb < 32 ? 0 !== (wb.streamBitmask & 1 << bb) : nw.hasStreamAtIndex(this.metadata, bb))
       }
-      constructor(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd;
-        this.ref = dd, this.refTarget = Od;
-        const md = mm(dd);
-        this.encDescriptor = md, this.metadata = md.metadata;
-        const Wd = md.isSchema;
-        if (this._isSchema = Wd, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Wd) {
-          const dd = this.metadata?.[xd] ?? 0;
-          dd > 7 && (this.ops = new Uint8Array(dd + 1))
+      constructor(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb;
+        this.ref = bb, this.refTarget = wb;
+        const Mb = wM(bb);
+        this.encDescriptor = Mb, this.metadata = Mb.metadata;
+        const eb = Mb.isSchema;
+        if (this._isSchema = eb, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, eb) {
+          const bb = this.metadata?.[rb] ?? 0;
+          bb > 7 && (this.ops = new Uint8Array(bb + 1))
         } else this.collDirty = new Map
       }
-      _opAt(dd) {
-        const Od = this.ops;
-        if (void 0 !== Od) return Od[dd];
-        const md = (3 & dd) << 3;
-        return dd < 4 ? this.opsLow >>> md & 255 : this.opsHigh >>> md & 255
+      _opAt(bb) {
+        const wb = this.ops;
+        if (void 0 !== wb) return wb[bb];
+        const Mb = (3 & bb) << 3;
+        return bb < 4 ? this.opsLow >>> Mb & 255 : this.opsHigh >>> Mb & 255
       }
-      _opPut(dd, Od) {
-        const md = this.ops;
-        if (void 0 !== md) return void(md[dd] = Od);
-        const Wd = (3 & dd) << 3,
-          Fd = ~(255 << Wd);
-        dd < 4 ? this.opsLow = this.opsLow & Fd | Od << Wd : this.opsHigh = this.opsHigh & Fd | Od << Wd
+      _opPut(bb, wb) {
+        const Mb = this.ops;
+        if (void 0 !== Mb) return void(Mb[bb] = wb);
+        const eb = (3 & bb) << 3,
+          Hb = ~(255 << eb);
+        bb < 4 ? this.opsLow = this.opsLow & Hb | wb << eb : this.opsHigh = this.opsHigh & Hb | wb << eb
       }
-      _markDirty(dd) {
-        dd < 32 ? this.dirtyLow |= 1 << dd : this.dirtyHigh |= 1 << dd - 32
+      _markDirty(bb) {
+        bb < 32 ? this.dirtyLow |= 1 << bb : this.dirtyHigh |= 1 << bb - 32
       }
-      record(dd, Od) {
+      record(bb, wb) {
         if (this._isSchema) {
-          const md = this._opAt(dd);
-          0 === md ? this._opPut(dd, Od) : (md === Fd.DELETE || md === Fd.ADD && Od === Fd.DELETE_AND_ADD) && this._opPut(dd, Fd.DELETE_AND_ADD), this._markDirty(dd)
+          const Mb = this._opAt(bb);
+          0 === Mb ? this._opPut(bb, wb) : (Mb === Hb.DELETE || Mb === Hb.ADD && wb === Hb.DELETE_AND_ADD) && this._opPut(bb, Hb.DELETE_AND_ADD), this._markDirty(bb)
         } else {
-          const md = this.collDirty,
-            Wd = md.get(dd);
-          let Rd;
-          Rd = void 0 === Wd ? Od : Wd === Fd.DELETE || Wd === Fd.ADD && Od === Fd.DELETE_AND_ADD ? Fd.DELETE_AND_ADD : Wd, md.set(dd, Rd)
+          const Mb = this.collDirty,
+            eb = Mb.get(bb);
+          let pb;
+          pb = void 0 === eb ? wb : eb === Hb.DELETE || eb === Hb.ADD && wb === Hb.DELETE_AND_ADD ? Hb.DELETE_AND_ADD : eb, Mb.set(bb, pb)
         }
       }
-      recordDelete(dd, Od) {
-        this._isSchema ? (this._opPut(dd, Od), this._markDirty(dd)) : this.collDirty.set(dd, Od)
+      recordDelete(bb, wb) {
+        this._isSchema ? (this._opPut(bb, wb), this._markDirty(bb)) : this.collDirty.set(bb, wb)
       }
-      recordRaw(dd, Od) {
-        this._isSchema ? (this._opPut(dd, Od), this._markDirty(dd)) : this.collDirty.set(dd, Od)
+      recordRaw(bb, wb) {
+        this._isSchema ? (this._opPut(bb, wb), this._markDirty(bb)) : this.collDirty.set(bb, wb)
       }
-      recordPure(dd) {
+      recordPure(bb) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, dd])
+        (this.collPureOps ??= []).push([this.collDirty.size, bb])
       }
-      operationAt(dd) {
+      operationAt(bb) {
         if (this._isSchema) {
-          const Od = this._opAt(dd);
-          return 0 === Od ? void 0 : Od
+          const wb = this._opAt(bb);
+          return 0 === wb ? void 0 : wb
         }
-        return this.collDirty.get(dd)
+        return this.collDirty.get(bb)
       }
-      setOperationAt(dd, Od) {
-        if (this._isSchema) this._opPut(dd, Od);
+      setOperationAt(bb, wb) {
+        if (this._isSchema) this._opPut(bb, wb);
         else {
-          const md = this.collDirty;
-          md.has(dd) && md.set(dd, Od)
+          const Mb = this.collDirty;
+          Mb.has(bb) && Mb.set(bb, wb)
         }
       }
-      forEach(dd) {
-        this.forEachWithCtx(dd, Um)
+      forEach(bb) {
+        this.forEachWithCtx(bb, jM)
       }
-      forEachWithCtx(dd, Od) {
+      forEachWithCtx(bb, wb) {
         if (this._isSchema) {
-          let md = this.dirtyLow,
-            Wd = this.dirtyHigh;
-          const Fd = this.ops;
-          if (void 0 !== Fd) {
-            for (; 0 !== md;) {
-              const Wd = md & -md,
-                Rd = 31 - Math.clz32(Wd);
-              md ^= Wd, Od(dd, Rd, Fd[Rd])
+          let Mb = this.dirtyLow,
+            eb = this.dirtyHigh;
+          const Hb = this.ops;
+          if (void 0 !== Hb) {
+            for (; 0 !== Mb;) {
+              const eb = Mb & -Mb,
+                pb = 31 - Math.clz32(eb);
+              Mb ^= eb, wb(bb, pb, Hb[pb])
             }
-            for (; 0 !== Wd;) {
-              const md = Wd & -Wd,
-                Rd = 31 - Math.clz32(md) + 32;
-              Wd ^= md, Od(dd, Rd, Fd[Rd])
+            for (; 0 !== eb;) {
+              const Mb = eb & -eb,
+                pb = 31 - Math.clz32(Mb) + 32;
+              eb ^= Mb, wb(bb, pb, Hb[pb])
             }
           } else {
-            const Wd = this.opsLow,
-              Fd = this.opsHigh;
-            for (; 0 !== md;) {
-              const Rd = md & -md,
-                Xd = 31 - Math.clz32(Rd);
-              md ^= Rd, Od(dd, Xd, Jm(Wd, Fd, Xd))
+            const eb = this.opsLow,
+              Hb = this.opsHigh;
+            for (; 0 !== Mb;) {
+              const pb = Mb & -Mb,
+                Vb = 31 - Math.clz32(pb);
+              Mb ^= pb, wb(bb, Vb, xM(eb, Hb, Vb))
             }
           }
           return
         }
-        const md = this.collDirty,
-          Wd = this.collPureOps;
-        if (void 0 !== Wd && Wd.length > 0) {
-          let Fd = 0,
-            Rd = 0;
-          for (const [Xd, Kd] of md) {
-            for (; Fd < Wd.length && Wd[Fd][0] <= Rd;) {
-              const md = Wd[Fd++][1];
-              Od(dd, -md, md)
+        const Mb = this.collDirty,
+          eb = this.collPureOps;
+        if (void 0 !== eb && eb.length > 0) {
+          let Hb = 0,
+            pb = 0;
+          for (const [Vb, gb] of Mb) {
+            for (; Hb < eb.length && eb[Hb][0] <= pb;) {
+              const Mb = eb[Hb++][1];
+              wb(bb, -Mb, Mb)
             }
-            Od(dd, Xd, Kd), Rd++
+            wb(bb, Vb, gb), pb++
           }
-          for (; Fd < Wd.length;) {
-            const md = Wd[Fd++][1];
-            Od(dd, -md, md)
+          for (; Hb < eb.length;) {
+            const Mb = eb[Hb++][1];
+            wb(bb, -Mb, Mb)
           }
         } else
-          for (const [Fd, Rd] of md) Od(dd, Fd, Rd)
+          for (const [Hb, pb] of Mb) wb(bb, Hb, pb)
       }
       size() {
-        return this._isSchema ? dm(this.dirtyLow) + dm(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? kw(this.dirtyLow) + kw(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(dd, Od) {
+      insertAt(bb, wb) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const md = this.collDirty,
-          Wd = new Map,
-          Rd = !this.paused && !this.isFullStateOnly;
-        if (dd > 0)
-          for (const [Fd, Xd] of md) Fd < dd && Wd.set(Fd, Xd);
-        if (Rd)
-          for (let Xd = 0; Xd < Od; Xd++) Wd.set(dd + Xd, Fd.ADD);
-        for (const [Fd, Xd] of md) Fd >= dd && Wd.set(Fd + Od, Xd);
-        this.collDirty = Wd, Rd && this.root?.enqueueChangeTree(this)
+        const Mb = this.collDirty,
+          eb = new Map,
+          pb = !this.paused && !this.isFullStateOnly;
+        if (bb > 0)
+          for (const [Hb, Vb] of Mb) Hb < bb && eb.set(Hb, Vb);
+        if (pb)
+          for (let Vb = 0; Vb < wb; Vb++) eb.set(bb + Vb, Hb.ADD);
+        for (const [Hb, Vb] of Mb) Hb >= bb && eb.set(Hb + wb, Vb);
+        this.collDirty = eb, pb && this.root?.enqueueChangeTree(this)
       }
-      removeAt(dd, Od) {
+      removeAt(bb, wb) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const md = this.collDirty,
-          Wd = dd + Od;
-        let Fd = !1;
-        for (const Xd of md.keys())
-          if (Xd >= Wd) {
-            Fd = !0;
+        const Mb = this.collDirty,
+          eb = bb + wb;
+        let Hb = !1;
+        for (const Vb of Mb.keys())
+          if (Vb >= eb) {
+            Hb = !0;
             break
-          } if (!Fd) {
-          for (let Od = dd; Od < Wd; Od++) md.delete(Od);
+          } if (!Hb) {
+          for (let wb = bb; wb < eb; wb++) Mb.delete(wb);
           return
         }
-        const Rd = new Map;
-        for (const [Xd, Kd] of md) Xd < dd ? Rd.set(Xd, Kd) : Xd >= Wd && Rd.set(Xd - Od, Kd);
-        this.collDirty = Rd
+        const pb = new Map;
+        for (const [Vb, gb] of Mb) Vb < bb ? pb.set(Vb, gb) : Vb >= eb && pb.set(Vb - wb, gb);
+        this.collDirty = pb
       }
-      unshift(dd) {
-        this.insertAt(0, dd)
+      unshift(bb) {
+        this.insertAt(0, bb)
       }
-      setRoot(dd) {
-        ! function(dd, Od) {
-          dd.root = Od;
-          const md = Od.add(dd);
-          Km(dd, dd.parent, dd.parentIndex), md && Ym(dd, Od, gm)
-        }(this, dd)
+      setRoot(bb) {
+        ! function(bb, wb) {
+          bb.root = wb;
+          const Mb = wb.add(bb);
+          VM(bb, bb.parent, bb.parentIndex), Mb && sM(bb, wb, mM)
+        }(this, bb)
       }
-      setParent(dd, Od, md) {
-        Tm(this, dd, Od, md)
+      setParent(bb, wb, Mb) {
+        FM(this, bb, wb, Mb)
       }
-      forEachChild(dd) {
-        Ym(this, dd, pm)
+      forEachChild(bb) {
+        sM(this, bb, BM)
       }
-      forEachChildWithCtx(dd, Od) {
-        Ym(this, dd, Od)
+      forEachChildWithCtx(bb, wb) {
+        sM(this, bb, wb)
       }
-      forEachLive(dd) {
-        Xm(this, dd, Rm)
+      forEachLive(bb) {
+        pM(this, bb, HM)
       }
-      forEachLiveWithCtx(dd, Od) {
-        Xm(this, dd, Od)
+      forEachLiveWithCtx(bb, wb) {
+        pM(this, bb, wb)
       }
-      operation(dd) {
-        this.paused || this.isFullStateOnly || (this.recordPure(dd), this.root?.enqueueChangeTree(this))
+      operation(bb) {
+        this.paused || this.isFullStateOnly || (this.recordPure(bb), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(dd, Od, md) {
-        if (!this.paused && !this.isFieldFullStateOnly(dd)) {
-          if (this.isFieldUnreliable(dd) && !this.isNew) {
-            const Wd = this.ensureUnreliableRecorder();
-            return md ? Wd.recordRaw(dd, Od) : Wd.record(dd, Od), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(bb, wb, Mb) {
+        if (!this.paused && !this.isFieldFullStateOnly(bb)) {
+          if (this.isFieldUnreliable(bb) && !this.isNew) {
+            const eb = this.ensureUnreliableRecorder();
+            return Mb ? eb.recordRaw(bb, wb) : eb.record(bb, wb), void this.root?.enqueueUnreliable(this)
           }
-          md ? this.recordRaw(dd, Od) : this.record(dd, Od), this.root?.enqueueChangeTree(this)
+          Mb ? this.recordRaw(bb, wb) : this.record(bb, wb), this.root?.enqueueChangeTree(this)
         }
       }
-      change(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fd.ADD;
-        this._routeAndRecord(dd, Od, !1)
+      change(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hb.ADD;
+        this._routeAndRecord(bb, wb, !1)
       }
-      indexedOperation(dd, Od) {
-        this._routeAndRecord(dd, Od, !0)
+      indexedOperation(bb, wb) {
+        this._routeAndRecord(bb, wb, !0)
       }
-      getChange(dd) {
-        return this.operationAt(dd)
+      getChange(bb) {
+        return this.operationAt(bb)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(dd) {
-        const Od = this.paused;
+      untracked(bb) {
+        const wb = this.paused;
         this.paused = !0;
         try {
-          return dd()
+          return bb()
         } finally {
-          this.paused = Od
+          this.paused = wb
         }
       }
-      markDirty(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fd.ADD;
-        const md = this.paused;
+      markDirty(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hb.ADD;
+        const Mb = this.paused;
         this.paused = !1;
         try {
-          this.change(dd, Od)
+          this.change(bb, wb)
         } finally {
-          this.paused = md
+          this.paused = Mb
         }
       }
-      getValue(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[od](dd, Od)
+      getValue(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[Ub](bb, wb)
       }
-      delete(dd, Od) {
-        if (void 0 === dd) {
+      delete(bb, wb) {
+        if (void 0 === bb) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${dd}'`)
-          } catch (hF) {
-            console.warn(hF)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${bb}'`)
+          } catch (VH) {
+            console.warn(VH)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(dd)) return this.getValue(dd);
-        const md = this.isFieldUnreliable(dd) && !this.isNew;
-        md ? this.ensureUnreliableRecorder().recordDelete(dd, Od ?? Fd.DELETE) : this.recordDelete(dd, Od ?? Fd.DELETE);
-        const Wd = this.getValue(dd);
-        return Wd && Wd[Hd] && this.root?.remove(Wd[Hd]), md ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Wd
+        if (this.paused || this.isFieldFullStateOnly(bb)) return this.getValue(bb);
+        const Mb = this.isFieldUnreliable(bb) && !this.isNew;
+        Mb ? this.ensureUnreliableRecorder().recordDelete(bb, wb ?? Hb.DELETE) : this.recordDelete(bb, wb ?? Hb.DELETE);
+        const eb = this.getValue(bb);
+        return eb && eb[Eb] && this.root?.remove(eb[Eb]), Mb ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), eb
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[Td]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[sb]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[Td]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[sb]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[Td]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[sb]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const dd = dd => {
-          if (dd < 0) return;
-          const Od = this.getValue(dd);
-          Od && Od[Hd] && Od[Hd].discardAll()
+        const bb = bb => {
+          if (bb < 0) return;
+          const wb = this.getValue(bb);
+          wb && wb[Eb] && wb[Eb].discardAll()
         };
-        this.forEach(dd), this.unreliableRecorder?.forEach(dd), this.discard()
+        this.forEach(bb), this.unreliableRecorder?.forEach(bb), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(dd, Od) {
-        ! function(dd, Od, md) {
-          if (dd.parentRef) {
-            if (dd.parentRef[Hd] === Od[Hd]) return void(dd._parentIndex = md);
-            if (Wm(dd, ((dd, md) => dd[Hd] === Od[Hd]))) return void(dd._parentIndex = md)
+      addParent(bb, wb) {
+        ! function(bb, wb, Mb) {
+          if (bb.parentRef) {
+            if (bb.parentRef[Eb] === wb[Eb]) return void(bb._parentIndex = Mb);
+            if (MM(bb, ((bb, Mb) => bb[Eb] === wb[Eb]))) return void(bb._parentIndex = Mb)
           }
-          void 0 === dd.parentRef ? (dd.parentRef = Od, dd._parentIndex = md) : (dd.extraParents = {
-            ref: dd.parentRef,
-            index: dd._parentIndex,
-            next: dd.extraParents
-          }, dd.parentRef = Od, dd._parentIndex = md)
-        }(this, dd, Od)
+          void 0 === bb.parentRef ? (bb.parentRef = wb, bb._parentIndex = Mb) : (bb.extraParents = {
+            ref: bb.parentRef,
+            index: bb._parentIndex,
+            next: bb.extraParents
+          }, bb.parentRef = wb, bb._parentIndex = Mb)
+        }(this, bb, wb)
       }
-      setParentIndex(dd, Od) {
-        ! function(dd, Od, md) {
-          if (void 0 !== dd.extraParents)
-            if (dd.parentRef[Hd] !== Od[Hd]) {
-              for (let Wd = dd.extraParents; void 0 !== Wd; Wd = Wd.next)
-                if (Wd.ref[Hd] === Od[Hd]) return void(Wd.index = md)
-            } else dd._parentIndex = md;
-          else dd._parentIndex = md
-        }(this, dd, Od)
+      setParentIndex(bb, wb) {
+        ! function(bb, wb, Mb) {
+          if (void 0 !== bb.extraParents)
+            if (bb.parentRef[Eb] !== wb[Eb]) {
+              for (let eb = bb.extraParents; void 0 !== eb; eb = eb.next)
+                if (eb.ref[Eb] === wb[Eb]) return void(eb.index = Mb)
+            } else bb._parentIndex = Mb;
+          else bb._parentIndex = Mb
+        }(this, bb, wb)
       }
       removeParent() {
-        return function(dd, Od) {
-          if (dd.parentRef && dd.parentRef[Hd] === Od[Hd]) return dd.extraParents ? (dd.parentRef = dd.extraParents.ref, dd._parentIndex = dd.extraParents.index, dd.extraParents = dd.extraParents.next) : (dd.parentRef = void 0, dd._parentIndex = void 0), !0;
-          let md = dd.extraParents,
-            Wd = null;
-          for (; md;) {
-            if (md.ref[Hd] === Od[Hd]) return Wd ? Wd.next = md.next : dd.extraParents = md.next, !0;
-            Wd = md, md = md.next
+        return function(bb, wb) {
+          if (bb.parentRef && bb.parentRef[Eb] === wb[Eb]) return bb.extraParents ? (bb.parentRef = bb.extraParents.ref, bb._parentIndex = bb.extraParents.index, bb.extraParents = bb.extraParents.next) : (bb.parentRef = void 0, bb._parentIndex = void 0), !0;
+          let Mb = bb.extraParents,
+            eb = null;
+          for (; Mb;) {
+            if (Mb.ref[Eb] === wb[Eb]) return eb ? eb.next = Mb.next : bb.extraParents = Mb.next, !0;
+            eb = Mb, Mb = Mb.next
           }
-          return void 0 === dd.parentRef
+          return void 0 === bb.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(dd) {
-        return function(dd, Od) {
-          if (void 0 !== dd.parentRef && Od(dd.parentRef, dd._parentIndex)) return {
-            ref: dd.parentRef,
-            index: dd._parentIndex
+      findParent(bb) {
+        return function(bb, wb) {
+          if (void 0 !== bb.parentRef && wb(bb.parentRef, bb._parentIndex)) return {
+            ref: bb.parentRef,
+            index: bb._parentIndex
           };
-          for (let md = dd.extraParents; void 0 !== md; md = md.next)
-            if (Od(md.ref, md.index)) return {
-              ref: md.ref,
-              index: md.index
+          for (let Mb = bb.extraParents; void 0 !== Mb; Mb = Mb.next)
+            if (wb(Mb.ref, Mb.index)) return {
+              ref: Mb.ref,
+              index: Mb.index
             }
-        }(this, dd)
+        }(this, bb)
       }
-      hasParent(dd) {
-        return Wm(this, dd)
+      hasParent(bb) {
+        return MM(this, bb)
       }
-      indexInParent(dd) {
-        return function(dd, Od) {
-          if (dd.parentRef && dd.parentRef[Hd] === Od[Hd]) return dd._parentIndex;
-          for (let md = dd.extraParents; void 0 !== md; md = md.next)
-            if (md.ref[Hd] === Od[Hd]) return md.index
-        }(this, dd)
+      indexInParent(bb) {
+        return function(bb, wb) {
+          if (bb.parentRef && bb.parentRef[Eb] === wb[Eb]) return bb._parentIndex;
+          for (let Mb = bb.extraParents; void 0 !== Mb; Mb = Mb.next)
+            if (Mb.ref[Eb] === wb[Eb]) return Mb.index
+        }(this, bb)
       }
       getAllParents() {
-        return function(dd) {
-          const Od = [];
-          dd.parentRef && Od.push({
-            ref: dd.parentRef,
-            index: dd._parentIndex
+        return function(bb) {
+          const wb = [];
+          bb.parentRef && wb.push({
+            ref: bb.parentRef,
+            index: bb._parentIndex
           });
-          let md = dd.extraParents;
-          for (; md;) Od.push({
-            ref: md.ref,
-            index: md.index
-          }), md = md.next;
-          return Od
+          let Mb = bb.extraParents;
+          for (; Mb;) wb.push({
+            ref: Mb.ref,
+            index: Mb.index
+          }), Mb = Mb.next;
+          return wb
         }(this)
       }
     }
-    class im {
+    class ZM {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(dd) {
-        this.ref = dd
+      constructor(bb) {
+        this.ref = bb
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(dd) {
-        return dd()
+      untracked(bb) {
+        return bb()
       }
       markDirty() {}
-      forEachChild(dd) {
-        const Od = this.ref;
-        if (Od[yd]) {
-          if ("string" !== typeof Od[yd])
-            for (const [md, Wd] of Od.entries()) Wd && dd(Wd[Hd], Od._collectionIndexes?.[md] ?? md);
+      forEachChild(bb) {
+        const wb = this.ref;
+        if (wb[Fb]) {
+          if ("string" !== typeof wb[Fb])
+            for (const [Mb, eb] of wb.entries()) eb && bb(eb[Eb], wb._collectionIndexes?.[Mb] ?? Mb);
           return
         }
-        const md = Od.constructor,
-          Wd = md?.[Symbol.metadata];
-        if (!Wd) return;
-        const Fd = Wd[Bd] ?? [];
-        for (let Rd = 0; Rd < Fd.length; Rd++) {
-          const md = Fd[Rd],
-            Xd = Od[Wd[md].name];
-          Xd && dd(Xd[Hd], md)
+        const Mb = wb.constructor,
+          eb = Mb?.[Symbol.metadata];
+        if (!eb) return;
+        const Hb = eb[Rb] ?? [];
+        for (let pb = 0; pb < Hb.length; pb++) {
+          const Mb = Hb[pb],
+            Vb = wb[eb[Mb].name];
+          Vb && bb(Vb[Eb], Mb)
         }
       }
-      forEachChildWithCtx(dd, Od) {
-        this.forEachChild(((md, Wd) => Od(dd, md, Wd)))
+      forEachChildWithCtx(bb, wb) {
+        this.forEachChild(((Mb, eb) => wb(bb, Mb, eb)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function Am(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd;
-      var md;
-      Object.defineProperty(dd, Hd, {
-        value: (md = Od, new im(md)),
+    function fM(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb;
+      var Mb;
+      Object.defineProperty(bb, Eb, {
+        value: (Mb = wb, new ZM(Mb)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function rm(dd, Od, md, Wd, Rd, Xd, hd) {
-      void 0 !== hd ? hd(Od, Wd, Xd) : "string" === typeof md ? WO[md]?.(Od, Wd, Xd) : null != md[Symbol.metadata] ? (WO.number(Od, Wd[Kd], Xd), (Rd & Fd.ADD) === Fd.ADD && dd.tryEncodeTypeId(Od, md, Wd.constructor, Xd)) : WO.number(Od, Wd[Kd], Xd)
+    function AM(bb, wb, Mb, eb, pb, Vb, lb) {
+      void 0 !== lb ? lb(wb, eb, Vb) : "string" === typeof Mb ? ww[Mb]?.(wb, eb, Vb) : null != Mb[Symbol.metadata] ? (ww.number(wb, eb[gb], Vb), (pb & Hb.ADD) === Hb.ADD && bb.tryEncodeTypeId(wb, Mb, eb.constructor, Vb)) : ww.number(wb, eb[gb], Vb)
     }
-    const Gm = function(dd, Od, md, Wd, Rd, Xd, Kd, hd) {
-        if (Od[Xd.offset++] = 255 & (Wd | Rd), Rd === Fd.DELETE) return;
-        const vd = md.encDescriptor,
-          Qd = md.ref,
-          td = Qd[gd][Wd] ?? Qd[vd.names[Wd]];
-        rm(dd, Od, vd.types[Wd], td, Rd, Xd, vd.encoders[Wd])
+    const WM = function(bb, wb, Mb, eb, pb, Vb, gb, lb) {
+        if (wb[Vb.offset++] = 255 & (eb | pb), pb === Hb.DELETE) return;
+        const Lb = Mb.encDescriptor,
+          Ib = Mb.ref,
+          Ob = Ib[zb][eb] ?? Ib[Lb.names[eb]];
+        AM(bb, wb, Lb.types[eb], Ob, pb, Vb, Lb.encoders[eb])
       },
-      nm = function(dd, Od, md, Wd, Rd, Xd) {
-        if (Od[Xd.offset++] = 255 & Rd, WO.number(Od, Wd, Xd), Rd === Fd.DELETE) return;
-        const Kd = md.ref;
-        if ((Rd & Fd.ADD) === Fd.ADD) {
-          const dd = Kd.$indexes.get(Wd);
-          WO.string(Od, dd, Xd)
+      JM = function(bb, wb, Mb, eb, pb, Vb) {
+        if (wb[Vb.offset++] = 255 & pb, ww.number(wb, eb, Vb), pb === Hb.DELETE) return;
+        const gb = Mb.ref;
+        if ((pb & Hb.ADD) === Hb.ADD) {
+          const bb = gb.$indexes.get(eb);
+          ww.string(wb, bb, Vb)
         }
-        rm(dd, Od, Kd[yd], Kd[od](Wd), Rd, Xd)
+        AM(bb, wb, gb[Fb], gb[Ub](eb), pb, Vb)
       },
-      Lm = function(dd, Od, md, Wd, Rd, Xd) {
-        if (Od[Xd.offset++] = 255 & Rd, WO.number(Od, Wd, Xd), Rd === Fd.DELETE) return;
-        const Kd = md.ref;
-        rm(dd, Od, Kd[yd], Kd[od](Wd), Rd, Xd)
+      SM = function(bb, wb, Mb, eb, pb, Vb) {
+        if (wb[Vb.offset++] = 255 & pb, ww.number(wb, eb, Vb), pb === Hb.DELETE) return;
+        const gb = Mb.ref;
+        AM(bb, wb, gb[Fb], gb[Ub](eb), pb, Vb)
       },
-      Pm = function(dd, Od, md, Wd, Rd, Xd) {
-        const Kd = md.ref;
-        (Rd & Fd.ADD) === Fd.ADD && "function" === typeof Kd.set ? nm(dd, Od, md, Wd, Rd, Xd) : Lm(dd, Od, md, Wd, Rd, Xd)
+      NM = function(bb, wb, Mb, eb, pb, Vb) {
+        const gb = Mb.ref;
+        (pb & Hb.ADD) === Hb.ADD && "function" === typeof gb.set ? JM(bb, wb, Mb, eb, pb, Vb) : SM(bb, wb, Mb, eb, pb, Vb)
       },
-      zm = function(dd, Od, md, Wd, Rd, Xd, hd, vd) {
-        const Qd = md.refTarget,
-          td = Qd[yd],
-          Nd = "string" !== typeof td;
-        let qd;
-        if (vd && md.isFiltered && Nd) {
-          const dd = Qd.tmpItems[Wd];
-          if (!dd) return;
-          if (qd = dd[Kd], Rd === Fd.DELETE) Rd = Fd.DELETE_BY_REFID;
-          else if ((Rd & Fd.ADD) === Fd.ADD) Rd = Fd.ADD_BY_REFID;
-          else if ((Rd & Fd.MOVE) === Fd.MOVE) return
-        } else if (Rd === Fd.DELETE && Nd) {
-          const dd = Qd.tmpItems[Wd];
-          if (!dd) return;
-          qd = dd[Kd], Rd = Fd.DELETE_BY_REFID
-        } else qd = Wd;
-        if (Od[Xd.offset++] = 255 & Rd, WO.number(Od, qd, Xd), Rd === Fd.DELETE || Rd === Fd.DELETE_BY_REFID) return;
-        rm(dd, Od, td, Qd[od](Wd, hd), Rd, Xd)
+      vM = function(bb, wb, Mb, eb, pb, Vb, lb, Lb) {
+        const Ib = Mb.refTarget,
+          Ob = Ib[Fb],
+          tb = "string" !== typeof Ob;
+        let Cb;
+        if (Lb && Mb.isFiltered && tb) {
+          const bb = Ib.tmpItems[eb];
+          if (!bb) return;
+          if (Cb = bb[gb], pb === Hb.DELETE) pb = Hb.DELETE_BY_REFID;
+          else if ((pb & Hb.ADD) === Hb.ADD) pb = Hb.ADD_BY_REFID;
+          else if ((pb & Hb.MOVE) === Hb.MOVE) return
+        } else if (pb === Hb.DELETE && tb) {
+          const bb = Ib.tmpItems[eb];
+          if (!bb) return;
+          Cb = bb[gb], pb = Hb.DELETE_BY_REFID
+        } else Cb = eb;
+        if (wb[Vb.offset++] = 255 & pb, ww.number(wb, Cb, Vb), pb === Hb.DELETE || pb === Hb.DELETE_BY_REFID) return;
+        AM(bb, wb, Ob, Ib[Ub](eb, lb), pb, Vb)
       };
 
-    function cm(dd, Od, md, Wd, Rd, Xd, hd) {
-      const vd = dd.resyncVisited;
-      let Qd = vd.get(dd.currentRefId);
-      if (void 0 === Qd && vd.set(dd.currentRefId, Qd = new Set), Qd.add(Wd), void 0 !== Rd && md === Fd.ADD && Rd !== Xd) {
-        const md = Rd[Kd];
-        void 0 !== md && (dd.root.removeRef(md), hd?.push({
-          ref: Od,
-          refId: dd.currentRefId,
-          op: Fd.DELETE,
-          dynamicIndex: Wd,
+    function QM(bb, wb, Mb, eb, pb, Vb, lb) {
+      const Lb = bb.resyncVisited;
+      let Ib = Lb.get(bb.currentRefId);
+      if (void 0 === Ib && Lb.set(bb.currentRefId, Ib = new Set), Ib.add(eb), void 0 !== pb && Mb === Hb.ADD && pb !== Vb) {
+        const Mb = pb[gb];
+        void 0 !== Mb && (bb.root.removeRef(Mb), lb?.push({
+          ref: wb,
+          refId: bb.currentRefId,
+          op: Hb.DELETE,
+          dynamicIndex: eb,
           value: void 0,
-          previousValue: Rd
+          previousValue: pb
         }))
       }
     }
 
-    function jm(dd, Od, md, Wd) {
-      const Fd = Od[Kd];
-      if (void 0 === Fd || md.has(Fd)) return;
-      md.add(Fd);
-      const Rd = Od.constructor[Symbol.metadata],
-        Xd = Rd?.[Bd];
-      if (void 0 === Xd) return;
-      const hd = Rd[Vd];
-      for (let Kd = 0; Kd < Xd.length; Kd++) {
-        const Fd = Xd[Kd];
-        if (void 0 !== hd && hd.includes(Fd)) continue;
-        const vd = Rd[Fd],
-          Qd = Od[vd.name];
-        Qd && (uW.is(vd.type) ? jm(dd, Qd, md, Wd) : Dm(dd, Qd, md, Wd))
+    function GM(bb, wb, Mb, eb) {
+      const Hb = wb[gb];
+      if (void 0 === Hb || Mb.has(Hb)) return;
+      Mb.add(Hb);
+      const pb = wb.constructor[Symbol.metadata],
+        Vb = pb?.[Rb];
+      if (void 0 === Vb) return;
+      const lb = pb[Zb];
+      for (let gb = 0; gb < Vb.length; gb++) {
+        const Hb = Vb[gb];
+        if (void 0 !== lb && lb.includes(Hb)) continue;
+        const Lb = pb[Hb],
+          Ib = wb[Lb.name];
+        Ib && (ce.is(Lb.type) ? GM(bb, Ib, Mb, eb) : qM(bb, Ib, Mb, eb))
       }
     }
 
-    function Dm(dd, Od, md, Wd) {
-      const Rd = Od[bd] ?? Od,
-        Xd = Rd[Kd];
-      if (void 0 === Xd || md.has(Xd)) return;
-      md.add(Xd);
-      const hd = dd.resyncVisited.get(Xd);
-      if (void 0 === hd) return;
-      const vd = dd.root;
-      Rd[qd](hd, ((dd, md) => {
-        Wd?.push({
-          ref: Od,
-          refId: Xd,
-          op: Fd.DELETE,
-          dynamicIndex: md,
+    function qM(bb, wb, Mb, eb) {
+      const pb = wb[Bb] ?? wb,
+        Vb = pb[gb];
+      if (void 0 === Vb || Mb.has(Vb)) return;
+      Mb.add(Vb);
+      const lb = bb.resyncVisited.get(Vb);
+      if (void 0 === lb) return;
+      const Lb = bb.root;
+      pb[Cb](lb, ((bb, Mb) => {
+        eb?.push({
+          ref: wb,
+          refId: Vb,
+          op: Hb.DELETE,
+          dynamicIndex: Mb,
           value: void 0,
-          previousValue: dd
+          previousValue: bb
         });
-        const Rd = dd?.[Kd];
-        void 0 !== Rd && vd.removeRef(Rd)
-      }), (Od => {
-        uW.isSchema(Od) && jm(dd, Od, md, Wd)
+        const pb = bb?.[gb];
+        void 0 !== pb && Lb.removeRef(pb)
+      }), (wb => {
+        ce.isSchema(wb) && GM(bb, wb, Mb, eb)
       }))
     }
-    const em = 1,
-      Im = 2,
-      lm = 3,
-      Cm = 4,
-      Zm = 5;
+    const aM = 1,
+      iM = 2,
+      uM = 3,
+      dM = 4,
+      PM = 5;
 
-    function km(dd, Od, md, Wd, Rd, Xd, hd, vd, Qd) {
-      const td = dd.root;
-      let od;
-      if ((Od & Fd.DELETE) === Fd.DELETE) {
-        const dd = Rd?.[Kd];
-        void 0 !== dd && td.removeRef(dd), Od !== Fd.DELETE_AND_ADD && md[Nd](Wd), od = void 0
+    function nM(bb, wb, Mb, eb, pb, Vb, lb, Lb, Ib) {
+      const Ob = bb.root;
+      let Ub;
+      if ((wb & Hb.DELETE) === Hb.DELETE) {
+        const bb = pb?.[gb];
+        void 0 !== bb && Ob.removeRef(bb), wb !== Hb.DELETE_AND_ADD && Mb[tb](eb), Ub = void 0
       }
-      if (Od === Fd.DELETE);
-      else if ("string" === typeof Xd) od = gO[Xd](hd, vd);
-      else if (nO(Xd)) od = function(dd, Od, md) {
-        return PO(dd, (0, gO[dd.wire])(Od, md))
-      }(Xd.quantized, hd, vd);
-      else if (uW.is(Xd)) {
-        const md = gO.number(hd, vd);
-        if (od = td.refs.get(md), (Od & Fd.ADD) === Fd.ADD) {
-          const Wd = dd.getInstanceType(hd, vd, Xd);
-          od || (od = dd.createInstanceOfType(Wd)), td.addRef(md, od, od !== Rd || Od === Fd.DELETE_AND_ADD && od === Rd)
+      if (wb === Hb.DELETE);
+      else if ("string" === typeof Vb) Ub = mw[Vb](lb, Lb);
+      else if (Sw(Vb)) Ub = function(bb, wb, Mb) {
+        return vw(bb, (0, mw[bb.wire])(wb, Mb))
+      }(Vb.quantized, lb, Lb);
+      else if (ce.is(Vb)) {
+        const Mb = mw.number(lb, Lb);
+        if (Ub = Ob.refs.get(Mb), (wb & Hb.ADD) === Hb.ADD) {
+          const eb = bb.getInstanceType(lb, Lb, Vb);
+          Ub || (Ub = bb.createInstanceOfType(eb)), Ob.addRef(Mb, Ub, Ub !== pb || wb === Hb.DELETE_AND_ADD && Ub === pb)
         }
       } else {
-        const md = (qd = Object.keys(Xd)[0], wO[qd]),
-          Wd = gO.number(hd, vd);
-        null !== dd.resyncVisited && function(dd, Od) {
-          const md = dd.resyncVisited;
-          md.has(Od) || md.set(Od, new Set)
-        }(dd, Wd);
-        const Nd = td.refs.has(Wd) ? Rd || td.refs.get(Wd) : md.constructor.initializeForDecoder();
-        if (od = Nd.clone(!0), od[yd] = Object.values(Xd)[0], Rd) {
-          let dd = Rd[Kd];
-          if (void 0 !== dd && Wd !== dd) {
-            (Od & Fd.DELETE) !== Fd.DELETE && td.removeRef(dd);
-            const md = Rd.entries();
-            let Wd;
+        const Mb = (Cb = Object.keys(Vb)[0], hw[Cb]),
+          eb = mw.number(lb, Lb);
+        null !== bb.resyncVisited && function(bb, wb) {
+          const Mb = bb.resyncVisited;
+          Mb.has(wb) || Mb.set(wb, new Set)
+        }(bb, eb);
+        const tb = Ob.refs.has(eb) ? pb || Ob.refs.get(eb) : Mb.constructor.initializeForDecoder();
+        if (Ub = tb.clone(!0), Ub[Fb] = Object.values(Vb)[0], pb) {
+          let bb = pb[gb];
+          if (void 0 !== bb && eb !== bb) {
+            (wb & Hb.DELETE) !== Hb.DELETE && Ob.removeRef(bb);
+            const Mb = pb.entries();
+            let eb;
             for (;
-              (Wd = md.next()) && !Wd.done;) {
-              const [Od, md] = Wd.value;
-              "object" === typeof md && (dd = md[Kd]), Qd?.push({
-                ref: Rd,
-                refId: dd,
-                op: Fd.DELETE,
-                field: Od,
+              (eb = Mb.next()) && !eb.done;) {
+              const [wb, Mb] = eb.value;
+              "object" === typeof Mb && (bb = Mb[gb]), Ib?.push({
+                ref: pb,
+                refId: bb,
+                op: Hb.DELETE,
+                field: wb,
                 value: void 0,
-                previousValue: md
+                previousValue: Mb
               })
             }
           }
         }
-        td.addRef(Wd, od, Nd !== Rd || Od === Fd.DELETE_AND_ADD && Nd === Rd)
+        Ob.addRef(eb, Ub, tb !== pb || wb === Hb.DELETE_AND_ADD && tb === pb)
       }
-      var qd;
-      return od
+      var Cb;
+      return Ub
     }
-    const fm = function(dd, Od, md, Wd, Fd) {
-        const Rd = Od[md.offset++],
-          Xd = Wd.constructor[Symbol.metadata],
-          Kd = Rd >> 6 << 6,
-          hd = Rd % (Kd || 255),
-          vd = Xd[hd];
-        if (void 0 === vd) return console.warn("@colyseus/schema: field not defined at", {
-          index: hd,
-          ref: Wd.constructor.name,
-          metadata: Xd
+    const yM = function(bb, wb, Mb, eb, Hb) {
+        const pb = wb[Mb.offset++],
+          Vb = eb.constructor[Symbol.metadata],
+          gb = pb >> 6 << 6,
+          lb = pb % (gb || 255),
+          Lb = Vb[lb];
+        if (void 0 === Lb) return console.warn("@colyseus/schema: field not defined at", {
+          index: lb,
+          ref: eb.constructor.name,
+          metadata: Vb
         }), -1;
-        const Qd = !0 === vd.deprecated,
-          td = Qd ? void 0 : Wd[od](hd),
-          Nd = km(dd, Kd, Wd, hd, td, vd.type, Od, md, Fd);
-        Qd || (null !== Nd && void 0 !== Nd && (Wd[vd.name] = Nd), td !== Nd && Fd?.push({
-          ref: Wd,
-          refId: dd.currentRefId,
-          op: Kd,
-          field: vd.name,
-          value: Nd,
-          previousValue: td
+        const Ib = !0 === Lb.deprecated,
+          Ob = Ib ? void 0 : eb[Ub](lb),
+          tb = nM(bb, gb, eb, lb, Ob, Lb.type, wb, Mb, Hb);
+        Ib || (null !== tb && void 0 !== tb && (eb[Lb.name] = tb), Ob !== tb && Hb?.push({
+          ref: eb,
+          refId: bb.currentRefId,
+          op: gb,
+          field: Lb.name,
+          value: tb,
+          previousValue: Ob
         }))
       },
-      Mm = function(dd, Od, md, Wd, Rd) {
-        const Xd = Wd[bd] ?? Wd,
-          Kd = Od[md.offset++];
-        if (Kd === Fd.CLEAR) return dd.removeChildRefs(Xd, Rd), void Xd.clear();
-        const hd = gO.number(Od, md),
-          vd = Xd[yd],
-          Qd = Xd.constructor.COLLECTION_KIND;
-        let td;
-        (Kd & Fd.ADD) === Fd.ADD ? Qd === em ? (td = gO.string(Od, md), Xd.setIndex(hd, td)) : td = hd : td = Xd.getIndex(hd);
-        const Nd = Xd[od](hd),
-          qd = km(dd, Kd, Wd, hd, Nd, vd, Od, md, Rd);
-        if (null !== dd.resyncVisited && cm(dd, Wd, Kd, td, Nd, qd, Rd), null !== qd && void 0 !== qd) switch (Qd) {
-          case em:
-            Xd.$items.set(td, qd);
+      oM = function(bb, wb, Mb, eb, pb) {
+        const Vb = eb[Bb] ?? eb,
+          gb = wb[Mb.offset++];
+        if (gb === Hb.CLEAR) return bb.removeChildRefs(Vb, pb), void Vb.clear();
+        const lb = mw.number(wb, Mb),
+          Lb = Vb[Fb],
+          Ib = Vb.constructor.COLLECTION_KIND;
+        let Ob;
+        (gb & Hb.ADD) === Hb.ADD ? Ib === aM ? (Ob = mw.string(wb, Mb), Vb.setIndex(lb, Ob)) : Ob = lb : Ob = Vb.getIndex(lb);
+        const tb = Vb[Ub](lb),
+          Cb = nM(bb, gb, eb, lb, tb, Lb, wb, Mb, pb);
+        if (null !== bb.resyncVisited && QM(bb, eb, gb, Ob, tb, Cb, pb), null !== Cb && void 0 !== Cb) switch (Ib) {
+          case aM:
+            Vb.$items.set(Ob, Cb);
             break;
-          case Im:
-            Xd.$setAt(hd, qd, null !== dd.resyncVisited && Kd === Fd.ADD ? Fd.REPLACE : Kd);
+          case iM:
+            Vb.$setAt(lb, Cb, null !== bb.resyncVisited && gb === Hb.ADD ? Hb.REPLACE : gb);
             break;
-          case lm:
-          case Cm:
-          case Zm:
-            Xd.$items.has(hd) || (Xd.$items.set(hd, qd), "number" === typeof Xd.$refId && hd >= Xd.$refId && (Xd.$refId = hd + 1));
+          case uM:
+          case dM:
+          case PM:
+            Vb.$items.has(lb) || (Vb.$items.set(lb, Cb), "number" === typeof Vb.$refId && lb >= Vb.$refId && (Vb.$refId = lb + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Xd.constructor?.name} \u2014 item at index ${hd} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Vb.constructor?.name} \u2014 item at index ${lb} was not stored.`)
         }
-        Nd !== qd && Rd?.push({
-          ref: Wd,
-          refId: dd.currentRefId,
-          op: Kd,
-          dynamicIndex: td,
-          value: qd,
-          previousValue: Nd
+        tb !== Cb && pb?.push({
+          ref: eb,
+          refId: bb.currentRefId,
+          op: gb,
+          dynamicIndex: Ob,
+          value: Cb,
+          previousValue: tb
         })
       },
-      dW = function(dd, Od, md, Wd, Rd) {
-        const Xd = Wd[bd] ?? Wd;
-        let Kd, hd = Od[md.offset++];
-        if (hd === Fd.CLEAR) return dd.removeChildRefs(Xd, Rd), void Xd.clear();
-        if (hd === Fd.REVERSE) return void Xd.items.reverse();
-        if (hd === Fd.DELETE_BY_REFID) {
-          const hd = gO.number(Od, md),
-            vd = dd.root.refs.get(hd);
-          if (void 0 === vd) return;
-          if (dd.root.removeRef(hd), Kd = Xd.findIndex((dd => dd === vd)), -1 === Kd) return;
-          return Xd[Nd](Kd), void Rd?.push({
-            ref: Wd,
-            refId: dd.currentRefId,
-            op: Fd.DELETE,
-            dynamicIndex: Kd,
+      TM = function(bb, wb, Mb, eb, pb) {
+        const Vb = eb[Bb] ?? eb;
+        let gb, lb = wb[Mb.offset++];
+        if (lb === Hb.CLEAR) return bb.removeChildRefs(Vb, pb), void Vb.clear();
+        if (lb === Hb.REVERSE) return void Vb.items.reverse();
+        if (lb === Hb.DELETE_BY_REFID) {
+          const lb = mw.number(wb, Mb),
+            Lb = bb.root.refs.get(lb);
+          if (void 0 === Lb) return;
+          if (bb.root.removeRef(lb), gb = Vb.findIndex((bb => bb === Lb)), -1 === gb) return;
+          return Vb[tb](gb), void pb?.push({
+            ref: eb,
+            refId: bb.currentRefId,
+            op: Hb.DELETE,
+            dynamicIndex: gb,
             value: void 0,
-            previousValue: vd
+            previousValue: Lb
           })
         }
-        if (hd === Fd.ADD_BY_REFID) {
-          const Wd = gO.number(Od, md),
-            Fd = dd.root.refs.get(Wd);
-          Fd && (Kd = Xd.findIndex((dd => dd === Fd))), -1 !== Kd && void 0 !== Kd || (Kd = Xd.length)
-        } else Kd = gO.number(Od, md);
-        const vd = Xd[yd];
-        let Qd = Kd;
-        const td = Xd.items[Kd],
-          od = km(dd, hd, Wd, Kd, td, vd, Od, md, Rd);
-        null !== dd.resyncVisited && cm(dd, Wd, hd, Kd, td, od, Rd), null !== od && void 0 !== od && od !== td && Xd.$setAt(Kd, od, null !== dd.resyncVisited && hd === Fd.ADD ? Fd.REPLACE : hd), td !== od && Rd?.push({
-          ref: Wd,
-          refId: dd.currentRefId,
-          op: hd,
-          dynamicIndex: Qd,
-          value: od,
-          previousValue: td
+        if (lb === Hb.ADD_BY_REFID) {
+          const eb = mw.number(wb, Mb),
+            Hb = bb.root.refs.get(eb);
+          Hb && (gb = Vb.findIndex((bb => bb === Hb))), -1 !== gb && void 0 !== gb || (gb = Vb.length)
+        } else gb = mw.number(wb, Mb);
+        const Lb = Vb[Fb];
+        let Ib = gb;
+        const Ob = Vb.items[gb],
+          Ub = nM(bb, lb, eb, gb, Ob, Lb, wb, Mb, pb);
+        null !== bb.resyncVisited && QM(bb, eb, lb, gb, Ob, Ub, pb), null !== Ub && void 0 !== Ub && Ub !== Ob && Vb.$setAt(gb, Ub, null !== bb.resyncVisited && lb === Hb.ADD ? Hb.REPLACE : lb), Ob !== Ub && pb?.push({
+          ref: eb,
+          refId: bb.currentRefId,
+          op: lb,
+          dynamicIndex: Ib,
+          value: Ub,
+          previousValue: Ob
         })
       };
-    class OW extends Error {}
+    class kM extends Error {}
 
-    function mW(dd, Od, md, Wd) {
-      if (!(dd instanceof Od)) throw new OW(`a '${Od.name}' was expected, but '${dd&&dd.constructor.name}' was provided in ${md.constructor.name}#${Wd}`)
+    function be(bb, wb, Mb, eb) {
+      if (!(bb instanceof wb)) throw new kM(`a '${wb.name}' was expected, but '${bb&&bb.constructor.name}' was provided in ${Mb.constructor.name}#${eb}`)
     }
-    const WW = (dd, Od) => {
-        const md = dd.toString(),
-          Wd = Od.toString();
-        return md < Wd ? -1 : md > Wd ? 1 : 0
+    const we = (bb, wb) => {
+        const Mb = bb.toString(),
+          eb = wb.toString();
+        return Mb < eb ? -1 : Mb > eb ? 1 : 0
       },
-      FW = {
-        get: (dd, Od) => "symbol" === typeof Od || isNaN(Od) ? Reflect.get(dd, Od) : dd.items[Od],
-        set: (dd, Od, md) => {
-          if ("symbol" !== typeof Od && !isNaN(Od)) {
-            if (void 0 === md || null === md) dd.$deleteAt(Od);
+      Me = {
+        get: (bb, wb) => "symbol" === typeof wb || isNaN(wb) ? Reflect.get(bb, wb) : bb.items[wb],
+        set: (bb, wb, Mb) => {
+          if ("symbol" !== typeof wb && !isNaN(wb)) {
+            if (void 0 === Mb || null === Mb) bb.$deleteAt(wb);
             else {
-              let Wd;
-              if (md[Hd]) {
-                mW(md, dd[yd], dd, Od);
-                const Rd = dd.items[Od];
-                dd.isMovingItems ? (Wd = dd.$wireIndex(Number(Od)), void 0 !== Rd ? md[Hd].isNew ? dd[Hd].indexedOperation(Wd, Fd.MOVE_AND_ADD) : (dd[Hd].getChange(Wd) & Fd.DELETE) === Fd.DELETE ? dd[Hd].indexedOperation(Wd, Fd.DELETE_AND_MOVE) : dd[Hd].indexedOperation(Wd, Fd.MOVE) : md[Hd].isNew && dd[Hd].indexedOperation(Wd, Fd.ADD), md[Hd].setParent(dd, dd[Hd].root, Wd)) : Wd = dd.$changeAt(Number(Od), md), void 0 !== Rd && Rd[Hd].root?.remove(Rd[Hd])
-              } else Wd = dd.$changeAt(Number(Od), md);
-              dd.items[Od] = md, void 0 !== Wd && (dd.tmpItems[Wd] = md)
+              let eb;
+              if (Mb[Eb]) {
+                be(Mb, bb[Fb], bb, wb);
+                const pb = bb.items[wb];
+                bb.isMovingItems ? (eb = bb.$wireIndex(Number(wb)), void 0 !== pb ? Mb[Eb].isNew ? bb[Eb].indexedOperation(eb, Hb.MOVE_AND_ADD) : (bb[Eb].getChange(eb) & Hb.DELETE) === Hb.DELETE ? bb[Eb].indexedOperation(eb, Hb.DELETE_AND_MOVE) : bb[Eb].indexedOperation(eb, Hb.MOVE) : Mb[Eb].isNew && bb[Eb].indexedOperation(eb, Hb.ADD), Mb[Eb].setParent(bb, bb[Eb].root, eb)) : eb = bb.$changeAt(Number(wb), Mb), void 0 !== pb && pb[Eb].root?.remove(pb[Eb])
+              } else eb = bb.$changeAt(Number(wb), Mb);
+              bb.items[wb] = Mb, void 0 !== eb && (bb.tmpItems[eb] = Mb)
             }
             return !0
           }
-          return Reflect.set(dd, Od, md)
+          return Reflect.set(bb, wb, Mb)
         },
-        deleteProperty: (dd, Od) => ("number" === typeof Od ? dd.$deleteAt(Od) : delete dd[Od], !0),
-        has: (dd, Od) => "symbol" === typeof Od || isNaN(Number(Od)) ? Reflect.has(dd, Od) : Reflect.has(dd.items, Od)
+        deleteProperty: (bb, wb) => ("number" === typeof wb ? bb.$deleteAt(wb) : delete bb[wb], !0),
+        has: (bb, wb) => "symbol" === typeof wb || isNaN(Number(wb)) ? Reflect.has(bb, wb) : Reflect.has(bb.items, wb)
       };
-    class RW {
-      [Hd];
-      [Kd];
-      [bd];
-      [yd];
+    class ee {
+      [Eb];
+      [gb];
+      [Bb];
+      [Fb];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[vd] = zm;
-      static[Qd] = dW;
-      static COLLECTION_KIND = Im;
-      static[td](dd, Od, md) {
-        if (!md) return !0;
-        const Wd = dd[bd] ?? dd;
-        return "string" === typeof Wd[yd] || md.isChangeTreeVisible(Wd.tmpItems[Od]?.[Hd])
+      static[Lb] = vM;
+      static[Ib] = TM;
+      static COLLECTION_KIND = iM;
+      static[Ob](bb, wb, Mb) {
+        if (!Mb) return !0;
+        const eb = bb[Bb] ?? bb;
+        return "string" === typeof eb[Fb] || Mb.isChangeTreeVisible(eb.tmpItems[wb]?.[Eb])
       }
-      static is(dd) {
-        return Array.isArray(dd) || void 0 !== dd.array
+      static is(bb) {
+        return Array.isArray(bb) || void 0 !== bb.array
       }
-      static from(dd) {
-        return new RW(...Array.from(dd))
+      static from(bb) {
+        return new ee(...Array.from(bb))
       }
       constructor() {
-        this[yd] = void 0, this[bd] = this;
-        const dd = new Proxy(this, FW);
-        return Object.defineProperty(this, Hd, {
-          value: new Vm(dd, this),
+        this[Fb] = void 0, this[Bb] = this;
+        const bb = new Proxy(this, Me);
+        return Object.defineProperty(this, Eb, {
+          value: new YM(bb, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), dd
+        }), arguments.length > 0 && this.push(...arguments), bb
       }
       static initializeForDecoder() {
-        const dd = Object.create(RW.prototype);
-        dd.items = [], dd.isMovingItems = !1, dd._needsCompaction = !1, dd[yd] = void 0, dd[bd] = dd;
-        const Od = new Proxy(dd, FW);
-        return Am(dd, Od), Od
+        const bb = Object.create(ee.prototype);
+        bb.items = [], bb.isMovingItems = !1, bb._needsCompaction = !1, bb[Fb] = void 0, bb[Bb] = bb;
+        const wb = new Proxy(bb, Me);
+        return fM(bb, wb), wb
       }
-      set length(dd) {
-        0 === dd ? this.clear() : dd < this.items.length ? this.splice(dd, this.length - dd) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(bb) {
+        0 === bb ? this.clear() : bb < this.items.length ? this.splice(bb, this.length - bb) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[Hd].pause()
+        this[Eb].pause()
       }
       resumeTracking() {
-        this[Hd].resume()
+        this[Eb].resume()
       }
-      untracked(dd) {
-        return this[Hd].untracked(dd)
+      untracked(bb) {
+        return this[Eb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[Hd].paused
+        return this[Eb].paused
       }
       push() {
-        const dd = this[bd],
-          Od = dd.items,
-          md = dd.tmpItems,
-          Wd = dd[Hd],
-          Rd = dd[yd];
-        let Xd = md.length;
-        for (let Kd = 0, hd = arguments.length; Kd < hd; Kd++, Xd++) {
-          const hd = Kd < 0 || arguments.length <= Kd ? void 0 : arguments[Kd];
-          if (void 0 === hd || null === hd) return;
-          "object" === typeof hd && Rd && mW(hd, Rd, dd, Kd), Wd.indexedOperation(Xd, Fd.ADD), Od.push(hd), md.push(hd), hd[Hd]?.setParent(this, Wd.root, Xd)
+        const bb = this[Bb],
+          wb = bb.items,
+          Mb = bb.tmpItems,
+          eb = bb[Eb],
+          pb = bb[Fb];
+        let Vb = Mb.length;
+        for (let gb = 0, lb = arguments.length; gb < lb; gb++, Vb++) {
+          const lb = gb < 0 || arguments.length <= gb ? void 0 : arguments[gb];
+          if (void 0 === lb || null === lb) return;
+          "object" === typeof lb && pb && be(lb, pb, bb, gb), eb.indexedOperation(Vb, Hb.ADD), wb.push(lb), Mb.push(lb), lb[Eb]?.setParent(this, eb.root, Vb)
         }
-        return Xd
+        return Vb
       }
       pop() {
-        const dd = this[bd],
-          Od = dd.tmpItems,
-          md = dd.deletedIndexes;
-        let Wd = -1;
-        for (let Rd = Od.length - 1; Rd >= 0; Rd--)
-          if (!0 !== md[Rd]) {
-            Wd = Rd;
+        const bb = this[Bb],
+          wb = bb.tmpItems,
+          Mb = bb.deletedIndexes;
+        let eb = -1;
+        for (let pb = wb.length - 1; pb >= 0; pb--)
+          if (!0 !== Mb[pb]) {
+            eb = pb;
             break
-          } if (Wd < 0) return;
-        const Fd = dd.$isUnsentAdd(Wd);
-        return dd[Hd].delete(Wd), Fd ? dd.$cancelAdd(Wd) : md[Wd] = !0, dd.items.pop()
+          } if (eb < 0) return;
+        const Hb = bb.$isUnsentAdd(eb);
+        return bb[Eb].delete(eb), Hb ? bb.$cancelAdd(eb) : Mb[eb] = !0, bb.items.pop()
       }
-      at(dd) {
-        return dd < 0 && (dd += this.length), this.items[dd]
+      at(bb) {
+        return bb < 0 && (bb += this.length), this.items[bb]
       }
-      $wireIndex(dd) {
-        const Od = this.deletedIndexes;
-        if (0 === Od.length) return dd;
-        const md = this.tmpItems;
-        let Wd = 0;
-        for (let Fd = 0; Fd < md.length; Fd++)
-          if (!0 !== Od[Fd]) {
-            if (Wd === dd) return Fd;
-            Wd++
-          } return md.length + (dd - Wd)
+      $wireIndex(bb) {
+        const wb = this.deletedIndexes;
+        if (0 === wb.length) return bb;
+        const Mb = this.tmpItems;
+        let eb = 0;
+        for (let Hb = 0; Hb < Mb.length; Hb++)
+          if (!0 !== wb[Hb]) {
+            if (eb === bb) return Hb;
+            eb++
+          } return Mb.length + (bb - eb)
       }
-      $isUnsentAdd(dd) {
-        const Od = this[Hd];
-        return 0 === (576 & Od.flags) && !Od.paused && "string" !== typeof this[yd] && Od.operationAt(dd) === Fd.ADD
+      $isUnsentAdd(bb) {
+        const wb = this[Eb];
+        return 0 === (576 & wb.flags) && !wb.paused && "string" !== typeof this[Fb] && wb.operationAt(bb) === Hb.ADD
       }
-      $cancelAdd(dd) {
-        let Od = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const md = this[Hd],
-          Wd = this.tmpItems[dd];
-        this.tmpItems.splice(dd, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(dd, 1), md.removeAt(dd, 1);
-        const Fd = Wd?.[Hd];
-        void 0 !== Fd && void 0 === Fd.root && Fd.removeParent(this), Od && this.$reindexChildren(dd)
+      $cancelAdd(bb) {
+        let wb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Mb = this[Eb],
+          eb = this.tmpItems[bb];
+        this.tmpItems.splice(bb, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(bb, 1), Mb.removeAt(bb, 1);
+        const Hb = eb?.[Eb];
+        void 0 !== Hb && void 0 === Hb.root && Hb.removeParent(this), wb && this.$reindexChildren(bb)
       }
-      $reindexChildren(dd, Od) {
-        if (!this[Hd].hasFilteredFields) return;
-        if ("string" === typeof this[yd]) return;
-        const md = this.tmpItems,
-          Wd = md.length;
-        if (void 0 !== Od)
-          for (; dd < Wd && md[dd] === Od[dd];) dd++;
-        for (let Fd = dd; Fd < Wd; Fd++) md[Fd]?.[Hd]?.setParentIndex(this, Fd)
+      $reindexChildren(bb, wb) {
+        if (!this[Eb].hasFilteredFields) return;
+        if ("string" === typeof this[Fb]) return;
+        const Mb = this.tmpItems,
+          eb = Mb.length;
+        if (void 0 !== wb)
+          for (; bb < eb && Mb[bb] === wb[bb];) bb++;
+        for (let Hb = bb; Hb < eb; Hb++) Mb[Hb]?.[Eb]?.setParentIndex(this, Hb)
       }
-      $changeAt(dd, Od) {
-        if (void 0 === Od || null === Od) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[dd] === Od) return;
-        const md = void 0 !== this.items[dd] ? "object" === typeof Od ? Fd.DELETE_AND_ADD : Fd.REPLACE : Fd.ADD,
-          Wd = this.$wireIndex(dd),
-          Rd = this[Hd];
-        return Rd.change(Wd, md), Od[Hd]?.setParent(this, Rd.root, Wd), Wd
+      $changeAt(bb, wb) {
+        if (void 0 === wb || null === wb) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[bb] === wb) return;
+        const Mb = void 0 !== this.items[bb] ? "object" === typeof wb ? Hb.DELETE_AND_ADD : Hb.REPLACE : Hb.ADD,
+          eb = this.$wireIndex(bb),
+          pb = this[Eb];
+        return pb.change(eb, Mb), wb[Eb]?.setParent(this, pb.root, eb), eb
       }
-      $deleteAt(dd, Od) {
-        this[Hd].delete(this.$wireIndex(dd), Od)
+      $deleteAt(bb, wb) {
+        this[Eb].delete(this.$wireIndex(bb), wb)
       }
-      $setAt(dd, Od, md) {
-        md === Fd.ADD && void 0 !== this.items[dd] ? this.items.splice(dd, 0, Od) : md === Fd.DELETE_AND_MOVE ? (this.items.splice(dd, 1), this.items[dd] = Od) : (dd > this.items.length && (this._needsCompaction = !0), this.items[dd] = Od)
+      $setAt(bb, wb, Mb) {
+        Mb === Hb.ADD && void 0 !== this.items[bb] ? this.items.splice(bb, 0, wb) : Mb === Hb.DELETE_AND_MOVE ? (this.items.splice(bb, 1), this.items[bb] = wb) : (bb > this.items.length && (this._needsCompaction = !0), this.items[bb] = wb)
       }
       clear() {
-        const dd = this[bd];
-        if (0 === dd.items.length) return;
-        const Od = dd[Hd];
-        Od.forEachChild(((dd, md) => {
-          Od.root?.remove(dd)
-        })), Od.discard(), Od.operation(Fd.CLEAR), dd.items.length = 0, dd.tmpItems.length = 0
-      } [pd]() {
-        const dd = this[bd] ?? this,
-          Od = dd[Hd];
-        if (Od.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const md = dd.items;
-        for (let Wd = 0; Wd < md.length; Wd++) md[Wd]?.[pd]?.();
-        dd.items.length = 0, dd.tmpItems.length = 0, dd.deletedIndexes.length = 0, Od.recycle(), dd[Kd] = void 0
+        const bb = this[Bb];
+        if (0 === bb.items.length) return;
+        const wb = bb[Eb];
+        wb.forEachChild(((bb, Mb) => {
+          wb.root?.remove(bb)
+        })), wb.discard(), wb.operation(Hb.CLEAR), bb.items.length = 0, bb.tmpItems.length = 0
+      } [mb]() {
+        const bb = this[Bb] ?? this,
+          wb = bb[Eb];
+        if (wb.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const Mb = bb.items;
+        for (let eb = 0; eb < Mb.length; eb++) Mb[eb]?.[mb]?.();
+        bb.items.length = 0, bb.tmpItems.length = 0, bb.deletedIndexes.length = 0, wb.recycle(), bb[gb] = void 0
       }
       concat() {
-        return new RW(...this.items.concat(...arguments))
+        return new ee(...this.items.concat(...arguments))
       }
-      join(dd) {
-        return this.items.join(dd)
+      join(bb) {
+        return this.items.join(bb)
       }
       reverse() {
-        const dd = this[bd],
-          Od = dd[Hd];
-        if (Od.has() || dd.deletedIndexes.length > 0) {
-          const Od = dd.items.slice().reverse();
-          return this.clear(), this.push(...Od), this
+        const bb = this[Bb],
+          wb = bb[Eb];
+        if (wb.has() || bb.deletedIndexes.length > 0) {
+          const wb = bb.items.slice().reverse();
+          return this.clear(), this.push(...wb), this
         }
-        return Od.operation(Fd.REVERSE), dd.items.reverse(), dd.tmpItems.reverse(), dd.$reindexChildren(0), this
+        return wb.operation(Hb.REVERSE), bb.items.reverse(), bb.tmpItems.reverse(), bb.$reindexChildren(0), this
       }
       shift() {
-        const dd = this[bd],
-          Od = dd.items;
-        if (0 === Od.length) return;
-        const md = dd[Hd],
-          Wd = dd.deletedIndexes;
-        let Rd = 0;
-        for (; !0 === Wd[Rd];) Rd++;
-        const Xd = dd.$isUnsentAdd(Rd);
-        return md.delete(Rd, Fd.DELETE), Xd ? dd.$cancelAdd(Rd) : Wd[Rd] = !0, Od.shift()
+        const bb = this[Bb],
+          wb = bb.items;
+        if (0 === wb.length) return;
+        const Mb = bb[Eb],
+          eb = bb.deletedIndexes;
+        let pb = 0;
+        for (; !0 === eb[pb];) pb++;
+        const Vb = bb.$isUnsentAdd(pb);
+        return Mb.delete(pb, Hb.DELETE), Vb ? bb.$cancelAdd(pb) : eb[pb] = !0, wb.shift()
       }
-      slice(dd, Od) {
-        const md = new RW;
-        return md.push(...this.items.slice(dd, Od)), md
+      slice(bb, wb) {
+        const Mb = new ee;
+        return Mb.push(...this.items.slice(bb, wb)), Mb
       }
       sort() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : WW;
-        const Od = this[bd];
-        Od.isMovingItems = !0;
-        const md = Od[Hd];
-        return Od.items.sort(dd).forEach(((dd, Od) => md.change(Od, Fd.REPLACE))), Od.tmpItems.sort(dd), Od.$reindexChildren(0), Od.isMovingItems = !1, this
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : we;
+        const wb = this[Bb];
+        wb.isMovingItems = !0;
+        const Mb = wb[Eb];
+        return wb.items.sort(bb).forEach(((bb, wb) => Mb.change(wb, Hb.REPLACE))), wb.tmpItems.sort(bb), wb.$reindexChildren(0), wb.isMovingItems = !1, this
       }
-      splice(dd, Od) {
-        const md = this[bd],
-          Wd = md[Hd],
-          Rd = md.items,
-          Xd = md.tmpItems,
-          Kd = md.deletedIndexes,
-          hd = Rd.length,
-          vd = Xd.length;
-        for (var Qd = arguments.length, td = new Array(Qd > 2 ? Qd - 2 : 0), od = 2; od < Qd; od++) td[od - 2] = arguments[od];
-        const Nd = td.length,
-          qd = [];
-        for (let Fd = 0; Fd < vd; Fd++) !0 !== Kd[Fd] && qd.push(Fd);
-        let yd;
-        if (hd > dd) {
-          void 0 === Od && (Od = hd - dd);
-          for (let Rd = dd; Rd < dd + Od; Rd++) {
-            const dd = qd[Rd],
-              Od = md.$isUnsentAdd(dd);
-            Wd.delete(dd, Fd.DELETE), Od ? (yd ??= []).push(dd) : Kd[dd] = !0
+      splice(bb, wb) {
+        const Mb = this[Bb],
+          eb = Mb[Eb],
+          pb = Mb.items,
+          Vb = Mb.tmpItems,
+          gb = Mb.deletedIndexes,
+          lb = pb.length,
+          Lb = Vb.length;
+        for (var Ib = arguments.length, Ob = new Array(Ib > 2 ? Ib - 2 : 0), Ub = 2; Ub < Ib; Ub++) Ob[Ub - 2] = arguments[Ub];
+        const tb = Ob.length,
+          Cb = [];
+        for (let Hb = 0; Hb < Lb; Hb++) !0 !== gb[Hb] && Cb.push(Hb);
+        let Fb;
+        if (lb > bb) {
+          void 0 === wb && (wb = lb - bb);
+          for (let pb = bb; pb < bb + wb; pb++) {
+            const bb = Cb[pb],
+              wb = Mb.$isUnsentAdd(bb);
+            eb.delete(bb, Hb.DELETE), wb ? (Fb ??= []).push(bb) : gb[bb] = !0
           }
-        } else Od = 0;
-        if (Nd > 0) {
-          const Rd = qd[dd] ?? hd,
-            vd = Math.min(Nd, Od);
-          for (let dd = 0; dd < vd; dd++) {
-            const Od = Rd + dd;
-            let md;
-            const hd = void 0 !== yd ? yd.indexOf(Od) : -1; - 1 !== hd ? (yd.splice(hd, 1), md = Fd.ADD) : md = Kd[Od] ? Fd.DELETE_AND_ADD : Fd.ADD, Wd.indexedOperation(Od, md), Xd[Od] = td[dd], Kd[Od] = !1, td[dd][Hd]?.setParent(this, Wd.root, Od)
+        } else wb = 0;
+        if (tb > 0) {
+          const pb = Cb[bb] ?? lb,
+            Lb = Math.min(tb, wb);
+          for (let bb = 0; bb < Lb; bb++) {
+            const wb = pb + bb;
+            let Mb;
+            const lb = void 0 !== Fb ? Fb.indexOf(wb) : -1; - 1 !== lb ? (Fb.splice(lb, 1), Mb = Hb.ADD) : Mb = gb[wb] ? Hb.DELETE_AND_ADD : Hb.ADD, eb.indexedOperation(wb, Mb), Vb[wb] = Ob[bb], gb[wb] = !1, Ob[bb][Eb]?.setParent(this, eb.root, wb)
           }
-          const Qd = Nd - vd;
-          if (Qd > 0) {
-            const dd = Rd + vd;
-            Wd.insertAt(dd, Qd);
-            for (let Od = 0; Od < Qd; Od++) td[vd + Od][Hd]?.setParent(this, Wd.root, dd + Od);
-            Kd.length > 0 && Kd.splice(dd, 0, ...new Array(Qd).fill(!1)), Xd.splice(dd, 0, ...td.slice(vd)), md.$reindexChildren(dd + Qd)
+          const Ib = tb - Lb;
+          if (Ib > 0) {
+            const bb = pb + Lb;
+            eb.insertAt(bb, Ib);
+            for (let wb = 0; wb < Ib; wb++) Ob[Lb + wb][Eb]?.setParent(this, eb.root, bb + wb);
+            gb.length > 0 && gb.splice(bb, 0, ...new Array(Ib).fill(!1)), Vb.splice(bb, 0, ...Ob.slice(Lb)), Mb.$reindexChildren(bb + Ib)
           }
         }
-        if (void 0 !== yd && yd.length > 0) {
-          for (let dd = yd.length - 1; dd >= 0; dd--) md.$cancelAdd(yd[dd], !1);
-          md.$reindexChildren(yd[0])
+        if (void 0 !== Fb && Fb.length > 0) {
+          for (let bb = Fb.length - 1; bb >= 0; bb--) Mb.$cancelAdd(Fb[bb], !1);
+          Mb.$reindexChildren(Fb[0])
         }
-        return Wd.root?.enqueueChangeTree(Wd), Rd.splice(dd, Od, ...td)
+        return eb.root?.enqueueChangeTree(eb), pb.splice(bb, wb, ...Ob)
       }
       unshift() {
-        const dd = this[bd],
-          Od = dd[Hd];
-        Od.unshift(arguments.length);
-        for (let Wd = 0; Wd < arguments.length; Wd++)(Wd < 0 || arguments.length <= Wd ? void 0 : arguments[Wd])?.[Hd]?.setParent(this, Od.root, Wd);
-        const md = dd.deletedIndexes;
-        return md.length > 0 && md.unshift(...new Array(arguments.length).fill(!1)), dd.tmpItems.unshift(...arguments), dd.$reindexChildren(arguments.length), dd.items.unshift(...arguments)
+        const bb = this[Bb],
+          wb = bb[Eb];
+        wb.unshift(arguments.length);
+        for (let eb = 0; eb < arguments.length; eb++)(eb < 0 || arguments.length <= eb ? void 0 : arguments[eb])?.[Eb]?.setParent(this, wb.root, eb);
+        const Mb = bb.deletedIndexes;
+        return Mb.length > 0 && Mb.unshift(...new Array(arguments.length).fill(!1)), bb.tmpItems.unshift(...arguments), bb.$reindexChildren(arguments.length), bb.items.unshift(...arguments)
       }
-      indexOf(dd, Od) {
-        return this.items.indexOf(dd, Od)
+      indexOf(bb, wb) {
+        return this.items.indexOf(bb, wb)
       }
-      lastIndexOf(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(dd, Od)
+      lastIndexOf(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(bb, wb)
       }
-      every(dd, Od) {
-        return this.items.every(dd, Od)
+      every(bb, wb) {
+        return this.items.every(bb, wb)
       }
-      some(dd, Od) {
-        return this.items.some(dd, Od)
+      some(bb, wb) {
+        return this.items.some(bb, wb)
       }
-      forEach(dd, Od) {
-        return this.items.forEach(dd, Od)
+      forEach(bb, wb) {
+        return this.items.forEach(bb, wb)
       }
-      map(dd, Od) {
-        return this.items.map(dd, Od)
+      map(bb, wb) {
+        return this.items.map(bb, wb)
       }
-      filter(dd, Od) {
-        return this.items.filter(dd, Od)
+      filter(bb, wb) {
+        return this.items.filter(bb, wb)
       }
-      reduce(dd, Od) {
+      reduce(bb, wb) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(dd, Od) {
+      reduceRight(bb, wb) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(dd, Od) {
-        return this.items.find(dd, Od)
+      find(bb, wb) {
+        return this.items.find(bb, wb)
       }
-      findIndex(dd, Od) {
-        return this.items.findIndex(dd, Od)
+      findIndex(bb, wb) {
+        return this.items.findIndex(bb, wb)
       }
-      fill(dd, Od, md) {
+      fill(bb, wb, Mb) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(dd, Od, md) {
+      copyWithin(bb, wb, Mb) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return RW
+        return ee
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(dd, Od) {
-        return this.items.includes(dd, Od)
+      includes(bb, wb) {
+        return this.items.includes(bb, wb)
       }
-      flatMap(dd, Od) {
+      flatMap(bb, wb) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(dd) {
+      flat(bb) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
+        for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(dd, Od) {
-        const md = this.items.slice();
-        return dd < 0 && (dd += this.length), md[dd] = Od, new RW(...md)
+      with(bb, wb) {
+        const Mb = this.items.slice();
+        return bb < 0 && (bb += this.length), Mb[bb] = wb, new ee(...Mb)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(dd) {
-        return this.items.slice().sort(dd)
+      toSorted(bb) {
+        return this.items.slice().sort(bb)
       }
-      toSpliced(dd, Od) {
-        for (var md = arguments.length, Wd = new Array(md > 2 ? md - 2 : 0), Fd = 2; Fd < md; Fd++) Wd[Fd - 2] = arguments[Fd];
-        const Rd = this.items.slice();
-        return Rd.splice.apply(Rd, arguments), Rd
+      toSpliced(bb, wb) {
+        for (var Mb = arguments.length, eb = new Array(Mb > 2 ? Mb - 2 : 0), Hb = 2; Hb < Mb; Hb++) eb[Hb - 2] = arguments[Hb];
+        const pb = this.items.slice();
+        return pb.splice.apply(pb, arguments), pb
       }
       shuffle() {
-        return this.move((dd => {
-          let Od = this.items.length;
-          for (; 0 != Od;) {
-            let dd = Math.floor(Math.random() * Od);
-            Od--, [this[Od], this[dd]] = [this[dd], this[Od]]
+        return this.move((bb => {
+          let wb = this.items.length;
+          for (; 0 != wb;) {
+            let bb = Math.floor(Math.random() * wb);
+            wb--, [this[wb], this[bb]] = [this[bb], this[wb]]
           }
         }))
       }
-      move(dd) {
-        return this.isMovingItems = !0, dd(this), this.isMovingItems = !1, this
-      } [od](dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const md = this[bd] ?? this;
-        return Od || md.deletedIndexes[dd] ? md.items[dd] : md.tmpItems[dd] || md.items[dd]
-      } [Nd](dd) {
-        const Od = this[bd] ?? this;
-        Od.items[dd] = void 0, Od._needsCompaction = !0
-      } [Td]() {
-        const dd = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, dd), this.deletedIndexes.length = 0)
-      } [Yd]() {
-        const dd = this[bd] ?? this;
-        dd._needsCompaction && (dd._needsCompaction = !1, dd.items = dd.items.filter((dd => void 0 !== dd)))
-      } [qd](dd, Od, md) {
-        const Wd = this[bd] ?? this,
-          Fd = Wd.items;
-        let Rd = !1;
-        for (let Xd = 0; Xd < Fd.length; Xd++) {
-          const Kd = Fd[Xd];
-          dd.has(Xd) ? md(Kd) : (Rd = !0, Od(Kd, Xd), Wd[Nd](Xd))
+      move(bb) {
+        return this.isMovingItems = !0, bb(this), this.isMovingItems = !1, this
+      } [Ub](bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Mb = this[Bb] ?? this;
+        return wb || Mb.deletedIndexes[bb] ? Mb.items[bb] : Mb.tmpItems[bb] || Mb.items[bb]
+      } [tb](bb) {
+        const wb = this[Bb] ?? this;
+        wb.items[bb] = void 0, wb._needsCompaction = !0
+      } [sb]() {
+        const bb = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, bb), this.deletedIndexes.length = 0)
+      } [hb]() {
+        const bb = this[Bb] ?? this;
+        bb._needsCompaction && (bb._needsCompaction = !1, bb.items = bb.items.filter((bb => void 0 !== bb)))
+      } [Cb](bb, wb, Mb) {
+        const eb = this[Bb] ?? this,
+          Hb = eb.items;
+        let pb = !1;
+        for (let Vb = 0; Vb < Hb.length; Vb++) {
+          const gb = Hb[Vb];
+          bb.has(Vb) ? Mb(gb) : (pb = !0, wb(gb, Vb), eb[tb](Vb))
         }
-        Rd && Wd[Yd]()
+        pb && eb[hb]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((dd => "function" === typeof dd.toJSON ? dd.toJSON() : dd))
+        return this.toArray().map((bb => "function" === typeof bb.toJSON ? bb.toJSON() : bb))
       }
-      clone(dd) {
-        let Od;
-        return dd ? (Od = new RW, Od.push(...this.items)) : Od = new RW(...this.map((dd => dd[Hd] ? dd.clone() : dd))), Od
+      clone(bb) {
+        let wb;
+        return bb ? (wb = new ee, wb.push(...this.items)) : wb = new ee(...this.map((bb => bb[Eb] ? bb.clone() : bb))), wb
       }
     }
-    EO("array", {
-      constructor: RW
+    Xw("array", {
+      constructor: ee
     });
-    class XW {
+    class He {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(dd) {
-        const Od = this.indexByKey[dd];
-        return void 0 === Od ? void 0 : Od
+      indexOf(bb) {
+        const wb = this.indexByKey[bb];
+        return void 0 === wb ? void 0 : wb
       }
-      assign(dd) {
-        const Od = this.nextIndex++;
-        return this.indexByKey[dd] = Od, this.keyByIndex.set(Od, dd), Od
+      assign(bb) {
+        const wb = this.nextIndex++;
+        return this.indexByKey[bb] = wb, this.keyByIndex.set(wb, bb), wb
       }
-      snapshot(dd, Od) {
-        (this.snapshots ??= new Map).set(dd, Od)
+      snapshot(bb, wb) {
+        (this.snapshots ??= new Map).set(bb, wb)
       }
-      forgetSnapshot(dd) {
-        this.snapshots?.delete(dd)
+      forgetSnapshot(bb) {
+        this.snapshots?.delete(bb)
       }
-      snapshotAt(dd) {
-        return this.snapshots?.get(dd)
+      snapshotAt(bb) {
+        return this.snapshots?.get(bb)
       }
-      setIndex(dd, Od) {
-        this.keyByIndex.set(dd, Od), this.indexByKey[Od] = dd
+      setIndex(bb, wb) {
+        this.keyByIndex.set(bb, wb), this.indexByKey[wb] = bb
       }
-      keyOf(dd) {
-        return this.keyByIndex.get(dd)
+      keyOf(bb) {
+        return this.keyByIndex.get(bb)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [dd] of this.snapshots) {
-            const Od = this.keyByIndex.get(dd);
-            void 0 !== Od && (delete this.indexByKey[Od], this.keyByIndex.delete(dd))
+          for (const [bb] of this.snapshots) {
+            const wb = this.keyByIndex.get(bb);
+            void 0 !== wb && (delete this.indexByKey[wb], this.keyByIndex.delete(bb))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class KW {
-      [Hd];
-      [Kd];
+    class pe {
+      [Eb];
+      [gb];
       childType;
-      [yd];
+      [Fb];
       $items = new Map;
-      journal = new XW;
+      journal = new He;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(dd) {
-        (this._stream ??= xO()).maxPerTick = dd
+      set maxPerTick(bb) {
+        (this._stream ??= Kw()).maxPerTick = bb
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(dd) {
-        (this._stream ??= xO()).priority = dd
+      set priority(bb) {
+        (this._stream ??= Kw()).priority = bb
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[vd] = nm;
-      static[Qd] = Mm;
-      static COLLECTION_KIND = em;
-      static[td](dd, Od, md) {
-        if (!md || "string" === typeof dd[yd]) return !0;
-        const Wd = dd[od](Od) ?? dd.journal.snapshotAt(Od);
-        return md.isChangeTreeVisible(Wd[Hd])
+      static[Lb] = JM;
+      static[Ib] = oM;
+      static COLLECTION_KIND = aM;
+      static[Ob](bb, wb, Mb) {
+        if (!Mb || "string" === typeof bb[Fb]) return !0;
+        const eb = bb[Ub](wb) ?? bb.journal.snapshotAt(wb);
+        return Mb.isChangeTreeVisible(eb[Eb])
       }
-      static is(dd) {
-        return void 0 !== dd.map
+      static is(bb) {
+        return void 0 !== bb.map
       }
-      constructor(dd) {
-        if (Object.defineProperty(this, Hd, {
-            value: new Vm(this),
+      constructor(bb) {
+        if (Object.defineProperty(this, Eb, {
+            value: new YM(this),
             enumerable: !1,
             writable: !0
-          }), this[yd] = void 0, dd)
-          if (dd instanceof Map || dd instanceof KW) dd.forEach(((dd, Od) => this.set(Od, dd)));
+          }), this[Fb] = void 0, bb)
+          if (bb instanceof Map || bb instanceof pe) bb.forEach(((bb, wb) => this.set(wb, bb)));
           else
-            for (const Od in dd) this.set(Od, dd[Od])
+            for (const wb in bb) this.set(wb, bb[wb])
       }
       static initializeForDecoder() {
-        const dd = Object.create(KW.prototype);
-        return dd.$items = new Map, dd.journal = new XW, dd[yd] = void 0, Am(dd), dd
+        const bb = Object.create(pe.prototype);
+        return bb.$items = new Map, bb.journal = new He, bb[Fb] = void 0, fM(bb), bb
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return KW
+        return pe
       }
-      set(dd, Od) {
-        if (void 0 === Od || null === Od) throw new Error(`MapSchema#set('${dd}', ${Od}): trying to set ${Od} value on '${dd}'.`);
-        "object" === typeof Od && this[yd] && mW(Od, this[yd], this, dd), dd = dd.toString();
-        const md = this[Hd],
-          Wd = void 0 !== Od[Hd],
-          Rd = this.journal;
-        let Xd, Kd = Rd.indexOf(dd);
-        if (void 0 !== Kd) {
-          Xd = Fd.REPLACE;
-          const md = this.$items.get(dd);
-          if (md === Od) return;
-          Wd && (Xd = Fd.DELETE_AND_ADD, void 0 !== md && md[Hd].root?.remove(md[Hd])), void 0 !== Rd.snapshotAt(Kd) && Rd.forgetSnapshot(Kd)
-        } else Kd = Rd.assign(dd), Xd = Fd.ADD;
-        return this.$items.set(dd, Od), Xd === Fd.ADD && md.isStreamCollection ? void 0 !== md.root && SO(this, md.root, Kd) : md.change(Kd, Xd), Wd && Od[Hd].setParent(this, md.root, Kd), this
+      set(bb, wb) {
+        if (void 0 === wb || null === wb) throw new Error(`MapSchema#set('${bb}', ${wb}): trying to set ${wb} value on '${bb}'.`);
+        "object" === typeof wb && this[Fb] && be(wb, this[Fb], this, bb), bb = bb.toString();
+        const Mb = this[Eb],
+          eb = void 0 !== wb[Eb],
+          pb = this.journal;
+        let Vb, gb = pb.indexOf(bb);
+        if (void 0 !== gb) {
+          Vb = Hb.REPLACE;
+          const Mb = this.$items.get(bb);
+          if (Mb === wb) return;
+          eb && (Vb = Hb.DELETE_AND_ADD, void 0 !== Mb && Mb[Eb].root?.remove(Mb[Eb])), void 0 !== pb.snapshotAt(gb) && pb.forgetSnapshot(gb)
+        } else gb = pb.assign(bb), Vb = Hb.ADD;
+        return this.$items.set(bb, wb), Vb === Hb.ADD && Mb.isStreamCollection ? void 0 !== Mb.root && Rw(this, Mb.root, gb) : Mb.change(gb, Vb), eb && wb[Eb].setParent(this, Mb.root, gb), this
       }
-      get(dd) {
-        return this.$items.get(dd)
+      get(bb) {
+        return this.$items.get(bb)
       }
-      getOrInsert(dd, Od) {
-        return this.$items.has(dd) ? this.$items.get(dd) : (this.set(dd, Od), Od)
+      getOrInsert(bb, wb) {
+        return this.$items.has(bb) ? this.$items.get(bb) : (this.set(bb, wb), wb)
       }
-      getOrInsertComputed(dd, Od) {
-        if (this.$items.has(dd)) return this.$items.get(dd);
-        const md = Od(dd);
-        return this.set(dd, md), md
+      getOrInsertComputed(bb, wb) {
+        if (this.$items.has(bb)) return this.$items.get(bb);
+        const Mb = wb(bb);
+        return this.set(bb, Mb), Mb
       }
-      delete(dd) {
-        if (!this.$items.has(dd)) return !1;
-        const Od = this.journal.indexOf(dd),
-          md = this.$items.get(dd),
-          Wd = this[Hd];
-        if (Wd.isStreamCollection) {
-          const Fd = Wd.root;
-          let Rd = !1;
-          return void 0 !== Fd && (Rd = sO(this, Fd, this[Kd], Od)), void 0 !== md?.[Hd] && Fd?.remove(md[Hd]), this.$items.delete(dd), Rd || this.journal.snapshot(Od, md), !0
+      delete(bb) {
+        if (!this.$items.has(bb)) return !1;
+        const wb = this.journal.indexOf(bb),
+          Mb = this.$items.get(bb),
+          eb = this[Eb];
+        if (eb.isStreamCollection) {
+          const Hb = eb.root;
+          let pb = !1;
+          return void 0 !== Hb && (pb = Dw(this, Hb, this[gb], wb)), void 0 !== Mb?.[Eb] && Hb?.remove(Mb[Eb]), this.$items.delete(bb), pb || this.journal.snapshot(wb, Mb), !0
         }
-        return this.journal.snapshot(Od, md), Wd.delete(Od), this.$items.delete(dd)
+        return this.journal.snapshot(wb, Mb), eb.delete(wb), this.$items.delete(bb)
       }
       clear() {
-        const dd = this[Hd];
-        dd.discard(), dd.forEachChild(((Od, md) => {
-          dd.root?.remove(Od)
-        })), this.journal.reset(), this.$items.clear(), dd.operation(Fd.CLEAR)
-      } [pd]() {
-        const dd = this[Hd];
-        if (dd.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((dd => dd?.[pd]?.())), this.$items.clear(), this.journal.reset(), dd.recycle(), this[Kd] = void 0
+        const bb = this[Eb];
+        bb.discard(), bb.forEachChild(((wb, Mb) => {
+          bb.root?.remove(wb)
+        })), this.journal.reset(), this.$items.clear(), bb.operation(Hb.CLEAR)
+      } [mb]() {
+        const bb = this[Eb];
+        if (bb.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((bb => bb?.[mb]?.())), this.$items.clear(), this.journal.reset(), bb.recycle(), this[gb] = void 0
       }
-      has(dd) {
-        return this.$items.has(dd)
+      has(bb) {
+        return this.$items.has(bb)
       }
-      forEach(dd) {
-        this.$items.forEach(dd)
+      forEach(bb) {
+        this.$items.forEach(bb)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Hd].pause()
+        this[Eb].pause()
       }
       resumeTracking() {
-        this[Hd].resume()
+        this[Eb].resume()
       }
-      untracked(dd) {
-        return this[Hd].untracked(dd)
+      untracked(bb) {
+        return this[Eb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[Hd].paused
+        return this[Eb].paused
       }
-      setIndex(dd, Od) {
-        this.journal.setIndex(dd, Od)
+      setIndex(bb, wb) {
+        this.journal.setIndex(bb, wb)
       }
-      getIndex(dd) {
-        return this.journal.keyOf(dd)
-      } [od](dd) {
-        const Od = this.journal.keyOf(dd);
-        return void 0 !== Od ? this.$items.get(Od) : void 0
-      } [Nd](dd) {
-        const Od = this.journal.keyOf(dd);
-        void 0 !== Od && (this.$items.delete(Od), this.journal.keyByIndex.delete(dd))
-      } [qd](dd, Od, md) {
-        let Wd = null;
-        if (this.$items.forEach(((Fd, Rd) => {
-            dd.has(Rd) ? md(Fd) : ((Wd ??= new Set).add(Rd), Od(Fd, Rd))
-          })), null !== Wd) {
-          Wd.forEach((dd => {
-            this.$items.delete(dd), delete this.journal.indexByKey[dd]
+      getIndex(bb) {
+        return this.journal.keyOf(bb)
+      } [Ub](bb) {
+        const wb = this.journal.keyOf(bb);
+        return void 0 !== wb ? this.$items.get(wb) : void 0
+      } [tb](bb) {
+        const wb = this.journal.keyOf(bb);
+        void 0 !== wb && (this.$items.delete(wb), this.journal.keyByIndex.delete(bb))
+      } [Cb](bb, wb, Mb) {
+        let eb = null;
+        if (this.$items.forEach(((Hb, pb) => {
+            bb.has(pb) ? Mb(Hb) : ((eb ??= new Set).add(pb), wb(Hb, pb))
+          })), null !== eb) {
+          eb.forEach((bb => {
+            this.$items.delete(bb), delete this.journal.indexByKey[bb]
           }));
-          const dd = [];
-          this.journal.keyByIndex.forEach(((Od, md) => {
-            Wd.has(Od) && dd.push(md)
+          const bb = [];
+          this.journal.keyByIndex.forEach(((wb, Mb) => {
+            eb.has(wb) && bb.push(Mb)
           }));
-          for (let Od = 0; Od < dd.length; Od++) this.journal.keyByIndex.delete(dd[Od])
+          for (let wb = 0; wb < bb.length; wb++) this.journal.keyByIndex.delete(bb[wb])
         }
-      } [Td]() {
+      } [sb]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(dd) {
-        AO(this, dd)
+      _dropView(bb) {
+        Aw(this, bb)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (dd => {
-          let [Od, md] = dd;
-          return [Od, "function" === typeof md.toJSON ? md.toJSON() : md]
+        return Object.fromEntries(Array.from(this, (bb => {
+          let [wb, Mb] = bb;
+          return [wb, "function" === typeof Mb.toJSON ? Mb.toJSON() : Mb]
         })))
       }
-      clone(dd) {
-        let Od;
-        return dd ? Od = Object.assign(new KW, this) : (Od = new KW, this.forEach(((dd, md) => {
-          dd[Hd] ? Od.set(md, dd.clone()) : Od.set(md, dd)
-        }))), Od
+      clone(bb) {
+        let wb;
+        return bb ? wb = Object.assign(new pe, this) : (wb = new pe, this.forEach(((bb, Mb) => {
+          bb[Eb] ? wb.set(Mb, bb.clone()) : wb.set(Mb, bb)
+        }))), wb
       }
     }
-    EO("map", {
-      constructor: KW
+    Xw("map", {
+      constructor: pe
     });
-    class hW {
-      [Hd];
-      [Kd];
-      [yd];
+    class Ve {
+      [Eb];
+      [gb];
+      [Fb];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(dd) {
-        (this._stream ??= xO()).maxPerTick = dd
+      set maxPerTick(bb) {
+        (this._stream ??= Kw()).maxPerTick = bb
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(dd) {
-        (this._stream ??= xO()).priority = dd
+      set priority(bb) {
+        (this._stream ??= Kw()).priority = bb
       }
-      static[vd] = Lm;
-      static[Qd] = Mm;
-      static COLLECTION_KIND = Cm;
-      static[td](dd, Od, md) {
-        return !md || "string" === typeof dd[yd] || md.isChangeTreeVisible((dd[od](Od) ?? dd.deletedItems[Od])[Hd])
+      static[Lb] = SM;
+      static[Ib] = oM;
+      static COLLECTION_KIND = dM;
+      static[Ob](bb, wb, Mb) {
+        return !Mb || "string" === typeof bb[Fb] || Mb.isChangeTreeVisible((bb[Ub](wb) ?? bb.deletedItems[wb])[Eb])
       }
-      static is(dd) {
-        return void 0 !== dd.collection
+      static is(bb) {
+        return void 0 !== bb.collection
       }
-      constructor(dd) {
-        Object.defineProperty(this, Hd, {
-          value: new Vm(this),
+      constructor(bb) {
+        Object.defineProperty(this, Eb, {
+          value: new YM(this),
           enumerable: !1,
           writable: !0
-        }), this[yd] = void 0, dd && dd.forEach((dd => this.add(dd)))
+        }), this[Fb] = void 0, bb && bb.forEach((bb => this.add(bb)))
       }
       static initializeForDecoder() {
-        const dd = Object.create(hW.prototype);
-        return dd.$items = new Map, dd.deletedItems = {}, dd.$refId = 0, dd[yd] = void 0, Am(dd), dd
+        const bb = Object.create(Ve.prototype);
+        return bb.$items = new Map, bb.deletedItems = {}, bb.$refId = 0, bb[Fb] = void 0, fM(bb), bb
       }
-      add(dd) {
-        const Od = this.$refId++,
-          md = this[Hd];
-        return this.$items.set(Od, dd), md.isStreamCollection ? void 0 !== md.root && SO(this, md.root, Od) : md.change(Od), void 0 !== dd[Hd] && dd[Hd].setParent(this, md.root, Od), Od
+      add(bb) {
+        const wb = this.$refId++,
+          Mb = this[Eb];
+        return this.$items.set(wb, bb), Mb.isStreamCollection ? void 0 !== Mb.root && Rw(this, Mb.root, wb) : Mb.change(wb), void 0 !== bb[Eb] && bb[Eb].setParent(this, Mb.root, wb), wb
       }
-      at(dd) {
-        const Od = Array.from(this.$items.keys())[dd];
-        return this.$items.get(Od)
+      at(bb) {
+        const wb = Array.from(this.$items.keys())[bb];
+        return this.$items.get(wb)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(dd) {
-        const Od = this.$items.entries();
-        let md, Wd;
+      delete(bb) {
+        const wb = this.$items.entries();
+        let Mb, eb;
         for (;
-          (Wd = Od.next()) && !Wd.done;)
-          if (dd === Wd.value[1]) {
-            md = Wd.value[0];
+          (eb = wb.next()) && !eb.done;)
+          if (bb === eb.value[1]) {
+            Mb = eb.value[0];
             break
-          } if (void 0 === md) return !1;
-        const Fd = this[Hd];
-        if (Fd.isStreamCollection) {
-          const dd = Fd.root,
-            Od = this.$items.get(md);
-          return void 0 !== dd && sO(this, dd, this[Kd], md), void 0 !== Od?.[Hd] && dd?.remove(Od[Hd]), this.deletedItems[md] = Od, this.$items.delete(md)
+          } if (void 0 === Mb) return !1;
+        const Hb = this[Eb];
+        if (Hb.isStreamCollection) {
+          const bb = Hb.root,
+            wb = this.$items.get(Mb);
+          return void 0 !== bb && Dw(this, bb, this[gb], Mb), void 0 !== wb?.[Eb] && bb?.remove(wb[Eb]), this.deletedItems[Mb] = wb, this.$items.delete(Mb)
         }
-        return this.deletedItems[md] = Fd.delete(md), this.$items.delete(md)
+        return this.deletedItems[Mb] = Hb.delete(Mb), this.$items.delete(Mb)
       }
       clear() {
-        const dd = this[Hd];
-        dd.discard(), dd.forEachChild(((Od, md) => {
-          dd.root?.remove(Od)
-        })), this.$items.clear(), dd.operation(Fd.CLEAR)
-      } [pd]() {
-        const dd = this[Hd];
-        if (dd.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((dd => dd?.[pd]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, dd.recycle(), this[Kd] = void 0
+        const bb = this[Eb];
+        bb.discard(), bb.forEachChild(((wb, Mb) => {
+          bb.root?.remove(wb)
+        })), this.$items.clear(), bb.operation(Hb.CLEAR)
+      } [mb]() {
+        const bb = this[Eb];
+        if (bb.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((bb => bb?.[mb]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, bb.recycle(), this[gb] = void 0
       }
-      has(dd) {
-        return Array.from(this.$items.values()).some((Od => Od === dd))
+      has(bb) {
+        return Array.from(this.$items.values()).some((wb => wb === bb))
       }
-      forEach(dd) {
-        this.$items.forEach(((Od, md, Wd) => dd(Od, md, this)))
+      forEach(bb) {
+        this.$items.forEach(((wb, Mb, eb) => bb(wb, Mb, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Hd].pause()
+        this[Eb].pause()
       }
       resumeTracking() {
-        this[Hd].resume()
+        this[Eb].resume()
       }
-      untracked(dd) {
-        return this[Hd].untracked(dd)
+      untracked(bb) {
+        return this[Eb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[Hd].paused
+        return this[Eb].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(dd, Od) {}
-      getIndex(dd) {
-        return dd
-      } [od](dd) {
-        return this.$items.get(dd)
-      } [Nd](dd) {
-        this.$items.delete(dd)
-      } [qd](dd, Od, md) {
-        let Wd = null;
-        if (this.$items.forEach(((Fd, Rd) => {
-            dd.has(Rd) ? md(Fd) : ((Wd ??= []).push(Rd), Od(Fd, Rd))
-          })), null !== Wd)
-          for (let Fd = 0; Fd < Wd.length; Fd++) this[Nd](Wd[Fd])
-      } [Td]() {
-        for (const dd in this.deletedItems) delete this.deletedItems[dd]
+      setIndex(bb, wb) {}
+      getIndex(bb) {
+        return bb
+      } [Ub](bb) {
+        return this.$items.get(bb)
+      } [tb](bb) {
+        this.$items.delete(bb)
+      } [Cb](bb, wb, Mb) {
+        let eb = null;
+        if (this.$items.forEach(((Hb, pb) => {
+            bb.has(pb) ? Mb(Hb) : ((eb ??= []).push(pb), wb(Hb, pb))
+          })), null !== eb)
+          for (let Hb = 0; Hb < eb.length; Hb++) this[tb](eb[Hb])
+      } [sb]() {
+        for (const bb in this.deletedItems) delete this.deletedItems[bb]
       }
-      _dropView(dd) {
-        AO(this, dd)
+      _dropView(bb) {
+        Aw(this, bb)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const dd = [];
-        return this.forEach(((Od, md) => {
-          dd.push("function" === typeof Od.toJSON ? Od.toJSON() : Od)
-        })), dd
+        const bb = [];
+        return this.forEach(((wb, Mb) => {
+          bb.push("function" === typeof wb.toJSON ? wb.toJSON() : wb)
+        })), bb
       }
-      clone(dd) {
-        let Od;
-        return dd ? Od = Object.assign(new hW, this) : (Od = new hW, this.forEach((dd => {
-          dd[Hd] ? Od.add(dd.clone()) : Od.add(dd)
-        }))), Od
+      clone(bb) {
+        let wb;
+        return bb ? wb = Object.assign(new Ve, this) : (wb = new Ve, this.forEach((bb => {
+          bb[Eb] ? wb.add(bb.clone()) : wb.add(bb)
+        }))), wb
       }
     }
-    EO("collection", {
-      constructor: hW
+    Xw("collection", {
+      constructor: Ve
     });
-    class vW {
-      [Hd];
-      [Kd];
-      [yd];
+    class ge {
+      [Eb];
+      [gb];
+      [Fb];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(dd) {
-        (this._stream ??= xO()).maxPerTick = dd
+      set maxPerTick(bb) {
+        (this._stream ??= Kw()).maxPerTick = bb
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(dd) {
-        (this._stream ??= xO()).priority = dd
+      set priority(bb) {
+        (this._stream ??= Kw()).priority = bb
       }
-      static[vd] = Lm;
-      static[Qd] = Mm;
-      static COLLECTION_KIND = lm;
-      static[td](dd, Od, md) {
-        return !md || "string" === typeof dd[yd] || md.isVisible((dd[od](Od) ?? dd.deletedItems[Od])[Hd])
+      static[Lb] = SM;
+      static[Ib] = oM;
+      static COLLECTION_KIND = uM;
+      static[Ob](bb, wb, Mb) {
+        return !Mb || "string" === typeof bb[Fb] || Mb.isVisible((bb[Ub](wb) ?? bb.deletedItems[wb])[Eb])
       }
-      static is(dd) {
-        return void 0 !== dd.set
+      static is(bb) {
+        return void 0 !== bb.set
       }
-      constructor(dd) {
-        Object.defineProperty(this, Hd, {
-          value: new Vm(this),
+      constructor(bb) {
+        Object.defineProperty(this, Eb, {
+          value: new YM(this),
           enumerable: !1,
           writable: !0
-        }), this[yd] = void 0, dd && dd.forEach((dd => this.add(dd)))
+        }), this[Fb] = void 0, bb && bb.forEach((bb => this.add(bb)))
       }
       static initializeForDecoder() {
-        const dd = Object.create(vW.prototype);
-        return dd.$items = new Map, dd.deletedItems = {}, dd.$refId = 0, dd[yd] = void 0, Am(dd), dd
+        const bb = Object.create(ge.prototype);
+        return bb.$items = new Map, bb.deletedItems = {}, bb.$refId = 0, bb[Fb] = void 0, fM(bb), bb
       }
-      add(dd) {
-        if (this.has(dd)) return !1;
-        const Od = this.$refId++,
-          md = this[Hd];
-        return this.$items.set(Od, dd), md.isStreamCollection ? void 0 !== md.root && SO(this, md.root, Od) : md.change(Od, Fd.ADD), void 0 !== dd[Hd] && dd[Hd].setParent(this, md.root, Od), Od
+      add(bb) {
+        if (this.has(bb)) return !1;
+        const wb = this.$refId++,
+          Mb = this[Eb];
+        return this.$items.set(wb, bb), Mb.isStreamCollection ? void 0 !== Mb.root && Rw(this, Mb.root, wb) : Mb.change(wb, Hb.ADD), void 0 !== bb[Eb] && bb[Eb].setParent(this, Mb.root, wb), wb
       }
       entries() {
         return this.$items.entries()
       }
-      delete(dd) {
-        const Od = this.$items.entries();
-        let md, Wd;
+      delete(bb) {
+        const wb = this.$items.entries();
+        let Mb, eb;
         for (;
-          (Wd = Od.next()) && !Wd.done;)
-          if (dd === Wd.value[1]) {
-            md = Wd.value[0];
+          (eb = wb.next()) && !eb.done;)
+          if (bb === eb.value[1]) {
+            Mb = eb.value[0];
             break
-          } if (void 0 === md) return !1;
-        const Fd = this[Hd];
-        if (Fd.isStreamCollection) {
-          const dd = Fd.root,
-            Od = this.$items.get(md);
-          return void 0 !== dd && sO(this, dd, this[Kd], md), void 0 !== Od?.[Hd] && dd?.remove(Od[Hd]), this.deletedItems[md] = Od, this.$items.delete(md)
+          } if (void 0 === Mb) return !1;
+        const Hb = this[Eb];
+        if (Hb.isStreamCollection) {
+          const bb = Hb.root,
+            wb = this.$items.get(Mb);
+          return void 0 !== bb && Dw(this, bb, this[gb], Mb), void 0 !== wb?.[Eb] && bb?.remove(wb[Eb]), this.deletedItems[Mb] = wb, this.$items.delete(Mb)
         }
-        return this.deletedItems[md] = Fd.delete(md), this.$items.delete(md)
+        return this.deletedItems[Mb] = Hb.delete(Mb), this.$items.delete(Mb)
       }
       clear() {
-        const dd = this[Hd];
-        dd.discard(), this.$items.clear(), dd.operation(Fd.CLEAR)
-      } [pd]() {
-        const dd = this[Hd];
-        if (dd.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((dd => dd?.[pd]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, dd.recycle(), this[Kd] = void 0
+        const bb = this[Eb];
+        bb.discard(), this.$items.clear(), bb.operation(Hb.CLEAR)
+      } [mb]() {
+        const bb = this[Eb];
+        if (bb.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((bb => bb?.[mb]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, bb.recycle(), this[gb] = void 0
       }
-      has(dd) {
-        const Od = this.$items.values();
-        let md, Wd = !1;
+      has(bb) {
+        const wb = this.$items.values();
+        let Mb, eb = !1;
         for (;
-          (md = Od.next()) && !md.done;)
-          if (dd === md.value) {
-            Wd = !0;
+          (Mb = wb.next()) && !Mb.done;)
+          if (bb === Mb.value) {
+            eb = !0;
             break
-          } return Wd
+          } return eb
       }
-      forEach(dd) {
-        this.$items.forEach(((Od, md, Wd) => dd(Od, md, this)))
+      forEach(bb) {
+        this.$items.forEach(((wb, Mb, eb) => bb(wb, Mb, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Hd].pause()
+        this[Eb].pause()
       }
       resumeTracking() {
-        this[Hd].resume()
+        this[Eb].resume()
       }
-      untracked(dd) {
-        return this[Hd].untracked(dd)
+      untracked(bb) {
+        return this[Eb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[Hd].paused
+        return this[Eb].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(dd, Od) {}
-      getIndex(dd) {
-        return dd
-      } [od](dd) {
-        return this.$items.get(dd)
-      } [Nd](dd) {
-        this.$items.delete(dd)
-      } [qd](dd, Od, md) {
-        let Wd = null;
-        if (this.$items.forEach(((Fd, Rd) => {
-            dd.has(Rd) ? md(Fd) : ((Wd ??= []).push(Rd), Od(Fd, Rd))
-          })), null !== Wd)
-          for (let Fd = 0; Fd < Wd.length; Fd++) this[Nd](Wd[Fd])
-      } [Td]() {
-        for (const dd in this.deletedItems) delete this.deletedItems[dd]
+      setIndex(bb, wb) {}
+      getIndex(bb) {
+        return bb
+      } [Ub](bb) {
+        return this.$items.get(bb)
+      } [tb](bb) {
+        this.$items.delete(bb)
+      } [Cb](bb, wb, Mb) {
+        let eb = null;
+        if (this.$items.forEach(((Hb, pb) => {
+            bb.has(pb) ? Mb(Hb) : ((eb ??= []).push(pb), wb(Hb, pb))
+          })), null !== eb)
+          for (let Hb = 0; Hb < eb.length; Hb++) this[tb](eb[Hb])
+      } [sb]() {
+        for (const bb in this.deletedItems) delete this.deletedItems[bb]
       }
-      _dropView(dd) {
-        AO(this, dd)
+      _dropView(bb) {
+        Aw(this, bb)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const dd = [];
-        return this.forEach(((Od, md) => {
-          dd.push("function" === typeof Od.toJSON ? Od.toJSON() : Od)
-        })), dd
+        const bb = [];
+        return this.forEach(((wb, Mb) => {
+          bb.push("function" === typeof wb.toJSON ? wb.toJSON() : wb)
+        })), bb
       }
-      clone(dd) {
-        let Od;
-        return dd ? Od = Object.assign(new vW, this) : (Od = new vW, this.forEach((dd => {
-          dd[Hd] ? Od.add(dd.clone()) : Od.add(dd)
-        }))), Od
+      clone(bb) {
+        let wb;
+        return bb ? wb = Object.assign(new ge, this) : (wb = new ge, this.forEach((bb => {
+          bb[Eb] ? wb.add(bb.clone()) : wb.add(bb)
+        }))), wb
       }
     }
-    EO("set", {
-      constructor: vW
+    Xw("set", {
+      constructor: ge
     });
-    class QW {
-      [Hd];
-      [Kd];
-      [yd];
+    class le {
+      [Eb];
+      [gb];
+      [Fb];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(dd) {
-        (this._stream ??= xO()).maxPerTick = dd
+      set maxPerTick(bb) {
+        (this._stream ??= Kw()).maxPerTick = bb
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(dd) {
-        (this._stream ??= xO()).priority = dd
+      set priority(bb) {
+        (this._stream ??= Kw()).priority = bb
       }
       static $isStream = !0;
-      static[vd] = Lm;
-      static[Qd] = Mm;
-      static COLLECTION_KIND = Zm;
-      static[td](dd, Od, md) {
-        if (!md) return !0;
-        const Wd = dd[od](Od);
-        return void 0 !== Wd && md.isVisible(Wd[Hd])
+      static[Lb] = SM;
+      static[Ib] = oM;
+      static COLLECTION_KIND = PM;
+      static[Ob](bb, wb, Mb) {
+        if (!Mb) return !0;
+        const eb = bb[Ub](wb);
+        return void 0 !== eb && Mb.isVisible(eb[Eb])
       }
-      static is(dd) {
-        return dd && void 0 !== dd.stream
+      static is(bb) {
+        return bb && void 0 !== bb.stream
       }
       constructor() {
-        Object.defineProperty(this, Hd, {
-          value: new Vm(this),
+        Object.defineProperty(this, Eb, {
+          value: new YM(this),
           enumerable: !1,
           writable: !0
-        }), this[yd] = void 0
+        }), this[Fb] = void 0
       }
       static initializeForDecoder() {
-        const dd = Object.create(QW.prototype);
-        return dd.$items = new Map, dd.$nextPosition = 0, dd._itemIndex = new Map, dd[yd] = void 0, Am(dd), dd
+        const bb = Object.create(le.prototype);
+        return bb.$items = new Map, bb.$nextPosition = 0, bb._itemIndex = new Map, bb[Fb] = void 0, fM(bb), bb
       }
-      add(dd) {
-        if (this._itemIndex.has(dd)) return -1;
-        const Od = this.$nextPosition++;
-        this.$items.set(Od, dd), this._itemIndex.set(dd, Od);
-        const md = this[Hd].root;
-        return void 0 !== dd[Hd] && dd[Hd].setParent(this, md, Od), void 0 !== md && SO(this, md, Od), Od
+      add(bb) {
+        if (this._itemIndex.has(bb)) return -1;
+        const wb = this.$nextPosition++;
+        this.$items.set(wb, bb), this._itemIndex.set(bb, wb);
+        const Mb = this[Eb].root;
+        return void 0 !== bb[Eb] && bb[Eb].setParent(this, Mb, wb), void 0 !== Mb && Rw(this, Mb, wb), wb
       }
-      remove(dd) {
-        const Od = this._itemIndex.get(dd);
-        if (void 0 === Od) return !1;
-        this._itemIndex.delete(dd), this.$items.delete(Od);
-        const md = this[Hd].root;
-        return void 0 !== md && (sO(this, md, this[Kd], Od), void 0 !== dd[Hd] && md.remove(dd[Hd])), !0
+      remove(bb) {
+        const wb = this._itemIndex.get(bb);
+        if (void 0 === wb) return !1;
+        this._itemIndex.delete(bb), this.$items.delete(wb);
+        const Mb = this[Eb].root;
+        return void 0 !== Mb && (Dw(this, Mb, this[gb], wb), void 0 !== bb[Eb] && Mb.remove(bb[Eb])), !0
       }
-      has(dd) {
-        return this._itemIndex.has(dd)
+      has(bb) {
+        return this._itemIndex.has(bb)
       }
       clear() {
-        const dd = this[Hd].root;
-        if (void 0 !== dd) {
-          ! function(dd, Od, md) {
-            const Wd = dd._stream;
-            if (void 0 !== Wd) {
-              Wd.broadcastPending.clear();
-              for (const dd of Wd.sentBroadcast) Wd.broadcastDeletes.add(dd);
-              Wd.sentBroadcast.clear(), Od.forEachActiveView((dd => {
-                Wd.pendingByView.get(dd.id)?.clear();
-                const Od = Wd.sentByView.get(dd.id);
-                if (void 0 !== Od && Od.size > 0) {
-                  let Wd = dd.changes.get(md);
-                  void 0 === Wd && (Wd = new Map, dd.changes.set(md, Wd));
-                  for (const dd of Od) Wd.set(dd, Fd.DELETE);
-                  Od.clear()
+        const bb = this[Eb].root;
+        if (void 0 !== bb) {
+          ! function(bb, wb, Mb) {
+            const eb = bb._stream;
+            if (void 0 !== eb) {
+              eb.broadcastPending.clear();
+              for (const bb of eb.sentBroadcast) eb.broadcastDeletes.add(bb);
+              eb.sentBroadcast.clear(), wb.forEachActiveView((bb => {
+                eb.pendingByView.get(bb.id)?.clear();
+                const wb = eb.sentByView.get(bb.id);
+                if (void 0 !== wb && wb.size > 0) {
+                  let eb = bb.changes.get(Mb);
+                  void 0 === eb && (eb = new Map, bb.changes.set(Mb, eb));
+                  for (const bb of wb) eb.set(bb, Hb.DELETE);
+                  wb.clear()
                 }
               }))
             }
-          }(this, dd, this[Kd]);
-          for (const Od of this.$items.values()) void 0 !== Od[Hd] && dd.remove(Od[Hd])
+          }(this, bb, this[gb]);
+          for (const wb of this.$items.values()) void 0 !== wb[Eb] && bb.remove(wb[Eb])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(dd) {
-        for (const [Od, md] of this.$items) dd(md, Od, this)
+      forEach(bb) {
+        for (const [wb, Mb] of this.$items) bb(Mb, wb, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(dd, Od) {}
-      getIndex(dd) {
-        return dd
-      } [od](dd) {
-        return this.$items.get(dd)
-      } [Nd](dd) {
-        const Od = this.$items.get(dd);
-        void 0 !== Od && (this._itemIndex.delete(Od), this.$items.delete(dd))
-      } [qd]() {} [Td]() {}
+      setIndex(bb, wb) {}
+      getIndex(bb) {
+        return bb
+      } [Ub](bb) {
+        return this.$items.get(bb)
+      } [tb](bb) {
+        const wb = this.$items.get(bb);
+        void 0 !== wb && (this._itemIndex.delete(wb), this.$items.delete(bb))
+      } [Cb]() {} [sb]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const dd = [];
-        return this.forEach((Od => {
-          dd.push("function" === typeof Od?.toJSON ? Od.toJSON() : Od)
-        })), dd
+        const bb = [];
+        return this.forEach((wb => {
+          bb.push("function" === typeof wb?.toJSON ? wb.toJSON() : wb)
+        })), bb
       }
-      clone(dd) {
-        if (dd) {
-          return Object.assign(new QW, this)
+      clone(bb) {
+        if (bb) {
+          return Object.assign(new le, this)
         }
-        const Od = new QW;
-        return Od.maxPerTick = this.maxPerTick, this.forEach((dd => {
-          Od.add("function" === typeof dd?.clone ? dd.clone() : dd)
-        })), Od
+        const wb = new le;
+        return wb.maxPerTick = this.maxPerTick, this.forEach((bb => {
+          wb.add("function" === typeof bb?.clone ? bb.clone() : bb)
+        })), wb
       }
-      _dropView(dd) {
-        AO(this, dd)
+      _dropView(bb) {
+        Aw(this, bb)
       }
       _unregister() {}
     }
-    EO("stream", {
-      constructor: QW
+    Xw("stream", {
+      constructor: le
     });
-    class tW {
-      [wd] = !0;
+    class Le {
+      [Xb] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(dd) {
-        this._type = dd
+      constructor(bb) {
+        this._type = bb
       }
-      default (dd) {
-        return this._default = dd, this._hasDefault = !0, this
+      default (bb) {
+        return this._default = bb, this._hasDefault = !0, this
       }
-      view(dd) {
-        return this._view = dd ?? -1, this
+      view(bb) {
+        return this._view = bb ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const dd = this._type;
-        if (dd && "object" === typeof dd && void 0 !== dd.array) throw new Error(UO);
+        const bb = this._type;
+        if (bb && "object" === typeof bb && void 0 !== bb.array) throw new Error(jw);
         return this._stream = !0, this
       }
-      priority(dd) {
-        return this._streamPriority = dd, this
+      priority(bb) {
+        return this._streamPriority = bb, this
       }
       deprecated() {
-        let dd = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = dd, this
+        let bb = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = bb, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function oW(dd) {
-      return null != dd && !0 === dd[wd]
+    function Ie(bb) {
+      return null != bb && !0 === bb[Xb]
     }
 
-    function NW(dd) {
-      return () => new tW(dd)
+    function Oe(bb) {
+      return () => new Le(bb)
     }
 
-    function qW(dd) {
-      if (oW(dd)) {
-        const Od = dd._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Od?`use the type name instead: t.array("${Od}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function Ue(bb) {
+      if (Ie(bb)) {
+        const wb = bb._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof wb?`use the type name instead: t.array("${wb}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return dd
+      return bb
     }
 
-    function HW(dd) {
-      return new tW({
-        quantized: GO(dd)
+    function te(bb) {
+      return new Le({
+        quantized: Jw(bb)
       })
     }
-    const yW = Object.freeze({
-        string: NW("string"),
-        number: NW("number"),
-        boolean: NW("boolean"),
-        int8: NW("int8"),
-        uint8: NW("uint8"),
-        int16: NW("int16"),
-        uint16: NW("uint16"),
-        int32: NW("int32"),
-        uint32: NW("uint32"),
-        int64: NW("int64"),
-        uint64: NW("uint64"),
-        float32: NW("float32"),
-        float64: NW("float64"),
-        bigint64: NW("bigint64"),
-        biguint64: NW("biguint64"),
-        ref: dd => new tW(dd),
-        array: dd => new tW({
-          array: qW(dd)
+    const Ce = Object.freeze({
+        string: Oe("string"),
+        number: Oe("number"),
+        boolean: Oe("boolean"),
+        int8: Oe("int8"),
+        uint8: Oe("uint8"),
+        int16: Oe("int16"),
+        uint16: Oe("uint16"),
+        int32: Oe("int32"),
+        uint32: Oe("uint32"),
+        int64: Oe("int64"),
+        uint64: Oe("uint64"),
+        float32: Oe("float32"),
+        float64: Oe("float64"),
+        bigint64: Oe("bigint64"),
+        biguint64: Oe("biguint64"),
+        ref: bb => new Le(bb),
+        array: bb => new Le({
+          array: Ue(bb)
         }),
-        map: dd => new tW({
-          map: qW(dd)
+        map: bb => new Le({
+          map: Ue(bb)
         }),
-        set: dd => new tW({
-          set: qW(dd)
+        set: bb => new Le({
+          set: Ue(bb)
         }),
-        collection: dd => new tW({
-          collection: qW(dd)
+        collection: bb => new Le({
+          collection: Ue(bb)
         }),
-        stream: dd => {
-          const Od = new tW({
-            stream: qW(dd)
+        stream: bb => {
+          const wb = new Le({
+            stream: Ue(bb)
           });
-          return Od._stream = !0, Od
+          return wb._stream = !0, wb
         },
-        quantized: HW,
-        angle: dd => HW({
+        quantized: te,
+        angle: bb => te({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: dd?.bits ?? 16
+          bits: bb?.bits ?? 16
         })
       }),
-      bW = -1;
+      Ee = -1;
 
-    function TW(dd) {
-      return cO.register(dd), dd
+    function Fe(bb) {
+      return Gw.register(bb), bb
     }
 
-    function pW() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bW;
-      return function(Od, md) {
-        const Wd = ZO.initialize(Od.constructor);
-        ZO.setTag(Wd, md, dd)
+    function Be() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ee;
+      return function(wb, Mb) {
+        const eb = nw.initialize(wb.constructor);
+        nw.setTag(eb, Mb, bb)
       }
     }
 
-    function YW(dd, Od) {
-      const md = ZO.initialize(dd.constructor);
-      ZO.setUnreliable(md, Od)
+    function se(bb, wb) {
+      const Mb = nw.initialize(bb.constructor);
+      nw.setUnreliable(Mb, wb)
     }
 
-    function gW(dd, Od) {
-      const md = ZO.initialize(dd.constructor);
-      ZO.setPatchOnly(md, Od)
+    function me(bb, wb) {
+      const Mb = nw.initialize(bb.constructor);
+      nw.setPatchOnly(Mb, wb)
     }
 
-    function wW(dd, Od) {
-      const md = ZO.initialize(dd.constructor);
-      ZO.setFullStateOnly(md, Od)
+    function he(bb, wb) {
+      const Mb = nw.initialize(bb.constructor);
+      nw.setFullStateOnly(Mb, wb)
     }
 
-    function aW(dd, Od) {
-      return function(md, Wd) {
-        const Fd = md.constructor;
-        if (!dd) throw new Error(`${Fd.name}: @type() reference provided for "${Wd}" is undefined. Make sure you don't have any circular dependencies.`);
-        dd = DO(dd, `${Fd.name}.${Wd}`), cO.register(Fd);
-        const Rd = Object.getPrototypeOf(Fd)[Symbol.metadata],
-          Xd = ZO.initialize(Fd);
-        let Kd = Xd[Wd];
-        if (void 0 !== Xd[Kd]) {
-          if (Xd[Kd].deprecated) return;
-          if (void 0 !== Xd[Kd].type) {
-            const dd = new Error(`@colyseus/schema: Duplicate '${Wd}' definition on '${Fd.name}'.\nCheck @type() annotation`);
-            throw new Error(`${dd.message} ${dd.stack.split("\n")[4].trim()}`)
+    function ze(bb, wb) {
+      return function(Mb, eb) {
+        const Hb = Mb.constructor;
+        if (!bb) throw new Error(`${Hb.name}: @type() reference provided for "${eb}" is undefined. Make sure you don't have any circular dependencies.`);
+        bb = aw(bb, `${Hb.name}.${eb}`), Gw.register(Hb);
+        const pb = Object.getPrototypeOf(Hb)[Symbol.metadata],
+          Vb = nw.initialize(Hb);
+        let gb = Vb[eb];
+        if (void 0 !== Vb[gb]) {
+          if (Vb[gb].deprecated) return;
+          if (void 0 !== Vb[gb].type) {
+            const bb = new Error(`@colyseus/schema: Duplicate '${eb}' definition on '${Hb.name}'.\nCheck @type() annotation`);
+            throw new Error(`${bb.message} ${bb.stack.split("\n")[4].trim()}`)
           }
-        } else Kd = Xd[xd] ?? (Rd && Rd[xd]) ?? -1, Kd++;
-        if (Od && Od.manual) ZO.addField(Xd, Kd, Wd, dd, {
+        } else gb = Vb[rb] ?? (pb && pb[rb]) ?? -1, gb++;
+        if (wb && wb.manual) nw.addField(Vb, gb, eb, bb, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: Od,
-            childType: md
-          } = jO(dd);
-          ZO.addField(Xd, Kd, Wd, dd, JW(Wd, Kd, md, Od))
+            complexTypeKlass: wb,
+            childType: Mb
+          } = qw(bb);
+          nw.addField(Vb, gb, eb, bb, xe(eb, gb, Mb, wb))
         }
-        Xd[Ed][Wd] && Object.defineProperty(md, Wd, Xd[Ed][Wd]), ("string" === typeof dd || nO(dd)) && (Xd[Ud] || Object.defineProperty(Xd, Ud, {
+        Vb[xb][eb] && Object.defineProperty(Mb, eb, Vb[xb][eb]), ("string" === typeof bb || Sw(bb)) && (Vb[Kb] || Object.defineProperty(Vb, Kb, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), Xd[Ud][Kd] = "string" === typeof dd ? WO[dd] : zO(dd.quantized))
+        }), Vb[Kb][gb] = "string" === typeof bb ? ww[bb] : Qw(bb.quantized))
       }
     }
-    const EW = {
+    const Xe = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function JW(dd, Od, md, Wd) {
-      let Rd;
-      return Rd = Wd ? function(dd, Od, md, Wd) {
-        const Rd = Wd.constructor === RW,
-          Xd = Wd.constructor === KW;
-        return function(dd) {
-          const Wd = this[gd],
-            Kd = Wd[Od];
-          if (dd !== Kd) {
-            if (void 0 !== dd && null !== dd) {
-              if (!Rd || dd instanceof RW)
-                if (!Xd || dd instanceof KW) dd[yd] = md;
+    function xe(bb, wb, Mb, eb) {
+      let pb;
+      return pb = eb ? function(bb, wb, Mb, eb) {
+        const pb = eb.constructor === ee,
+          Vb = eb.constructor === pe;
+        return function(bb) {
+          const eb = this[zb],
+            gb = eb[wb];
+          if (bb !== gb) {
+            if (void 0 !== bb && null !== bb) {
+              if (!pb || bb instanceof ee)
+                if (!Vb || bb instanceof pe) bb[Fb] = Mb;
                 else {
-                  const Od = new KW;
-                  if (Od[yd] = md, dd instanceof Map) dd.forEach(((dd, md) => Od.set(md, dd)));
+                  const wb = new pe;
+                  if (wb[Fb] = Mb, bb instanceof Map) bb.forEach(((bb, Mb) => wb.set(Mb, bb)));
                   else
-                    for (const md in dd) Od.set(md, dd[md]);
-                  dd = Od
+                    for (const Mb in bb) wb.set(Mb, bb[Mb]);
+                  bb = wb
                 }
               else {
-                const Od = new RW;
-                Od[yd] = md, Od.push(...dd), dd = Od
+                const wb = new ee;
+                wb[Fb] = Mb, wb.push(...bb), bb = wb
               }
-              const Wd = this[Hd],
-                vd = this.constructor;
-              void 0 !== Kd && null !== Kd && Kd[Hd] ? (Wd.root?.remove(Kd[Hd]), vd[hd](Wd, Od, Fd.DELETE_AND_ADD)) : vd[hd](Wd, Od, Fd.ADD), dd[Hd]?.setParent(this, Wd.root, Od)
-            } else void 0 !== Kd && null !== Kd && this[Hd].delete(Od);
-            Wd[Od] = dd
+              const eb = this[Eb],
+                Lb = this.constructor;
+              void 0 !== gb && null !== gb && gb[Eb] ? (eb.root?.remove(gb[Eb]), Lb[lb](eb, wb, Hb.DELETE_AND_ADD)) : Lb[lb](eb, wb, Hb.ADD), bb[Eb]?.setParent(this, eb.root, wb)
+            } else void 0 !== gb && null !== gb && this[Eb].delete(wb);
+            eb[wb] = bb
           }
         }
-      }(0, Od, md, Wd) : "string" === typeof md ? function(dd, Od, md) {
-        const Wd = EW[md],
-          Rd = "string" === md,
-          Xd = "boolean" === md;
-        return function(md) {
-          const Kd = this[gd],
-            vd = Kd[Od];
-          if (md !== vd) {
-            if (void 0 !== md && null !== md) {
-              if (!Xd && void 0 !== Wd && typeof md !== Wd && (!Rd || null !== md)) {
-                const Od = md && md.constructor ? ` (${md.constructor.name})` : "";
-                throw new OW(`a '${Wd}' was expected, but '${JSON.stringify(md)}'${Od} was provided in ${this.constructor.name}#${dd}`)
+      }(0, wb, Mb, eb) : "string" === typeof Mb ? function(bb, wb, Mb) {
+        const eb = Xe[Mb],
+          pb = "string" === Mb,
+          Vb = "boolean" === Mb;
+        return function(Mb) {
+          const gb = this[zb],
+            Lb = gb[wb];
+          if (Mb !== Lb) {
+            if (void 0 !== Mb && null !== Mb) {
+              if (!Vb && void 0 !== eb && typeof Mb !== eb && (!pb || null !== Mb)) {
+                const wb = Mb && Mb.constructor ? ` (${Mb.constructor.name})` : "";
+                throw new kM(`a '${eb}' was expected, but '${JSON.stringify(Mb)}'${wb} was provided in ${this.constructor.name}#${bb}`)
               }
-              this.constructor[hd](this[Hd], Od, Fd.ADD)
-            } else void 0 !== vd && null !== vd && this[Hd].delete(Od);
-            Kd[Od] = md
+              this.constructor[lb](this[Eb], wb, Hb.ADD)
+            } else void 0 !== Lb && null !== Lb && this[Eb].delete(wb);
+            gb[wb] = Mb
           }
         }
-      }(dd, Od, md) : nO(md) ? function(dd, Od, md) {
-        return function(Wd) {
-          const Rd = this[gd],
-            Xd = Rd[Od];
-          if (void 0 !== Wd && null !== Wd) {
-            if ("number" !== typeof Wd) throw new OW(`a 'number' was expected, but '${JSON.stringify(Wd)}' was provided in ${this.constructor.name}#${dd}`);
-            if ((Wd = PO(md, LO(md, Wd))) === Xd) return;
-            this.constructor[hd](this[Hd], Od, Fd.ADD)
+      }(bb, wb, Mb) : Sw(Mb) ? function(bb, wb, Mb) {
+        return function(eb) {
+          const pb = this[zb],
+            Vb = pb[wb];
+          if (void 0 !== eb && null !== eb) {
+            if ("number" !== typeof eb) throw new kM(`a 'number' was expected, but '${JSON.stringify(eb)}' was provided in ${this.constructor.name}#${bb}`);
+            if ((eb = vw(Mb, Nw(Mb, eb))) === Vb) return;
+            this.constructor[lb](this[Eb], wb, Hb.ADD)
           } else {
-            if (Wd === Xd) return;
-            void 0 !== Xd && null !== Xd && this[Hd].delete(Od)
+            if (eb === Vb) return;
+            void 0 !== Vb && null !== Vb && this[Eb].delete(wb)
           }
-          Rd[Od] = Wd
+          pb[wb] = eb
         }
-      }(dd, Od, md.quantized) : function(dd, Od, md) {
-        return function(Wd) {
-          const Rd = this[gd],
-            Xd = Rd[Od];
-          if (Wd !== Xd) {
-            if (void 0 !== Wd && null !== Wd) {
-              mW(Wd, md, this, dd);
-              const Rd = this[Hd],
-                Kd = this.constructor;
-              void 0 !== Xd && null !== Xd && Xd[Hd] ? (Rd.root?.remove(Xd[Hd]), Kd[hd](Rd, Od, Fd.DELETE_AND_ADD)) : Kd[hd](Rd, Od, Fd.ADD), Wd[Hd]?.setParent(this, Rd.root, Od)
-            } else void 0 !== Xd && null !== Xd && this[Hd].delete(Od);
-            Rd[Od] = Wd
+      }(bb, wb, Mb.quantized) : function(bb, wb, Mb) {
+        return function(eb) {
+          const pb = this[zb],
+            Vb = pb[wb];
+          if (eb !== Vb) {
+            if (void 0 !== eb && null !== eb) {
+              be(eb, Mb, this, bb);
+              const pb = this[Eb],
+                gb = this.constructor;
+              void 0 !== Vb && null !== Vb && Vb[Eb] ? (pb.root?.remove(Vb[Eb]), gb[lb](pb, wb, Hb.DELETE_AND_ADD)) : gb[lb](pb, wb, Hb.ADD), eb[Eb]?.setParent(this, pb.root, wb)
+            } else void 0 !== Vb && null !== Vb && this[Eb].delete(wb);
+            pb[wb] = eb
           }
         }
-      }(dd, Od, md), {
+      }(bb, wb, Mb), {
         get: function() {
-          return this[gd][Od]
+          return this[zb][wb]
         },
-        set: Rd,
+        set: pb,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function UW() {
-      let dd = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(Od, md) {
-        const Wd = ZO.initialize(Od.constructor);
-        ZO.setDeprecated(Wd, md), dd && (Wd[Ed] ??= {}, Wd[Ed][md] = {
+    function je() {
+      let bb = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(wb, Mb) {
+        const eb = nw.initialize(wb.constructor);
+        nw.setDeprecated(eb, Mb), bb && (eb[xb] ??= {}, eb[xb][Mb] = {
           get: function() {
-            throw new Error(`${md} is deprecated.`)
+            throw new Error(`${Mb} is deprecated.`)
           },
-          set: function(dd) {},
+          set: function(bb) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(Od, md, Wd[Ed][md]))
+        }, Object.defineProperty(wb, Mb, eb[xb][Mb]))
       }
     }
-    let xW = !1;
+    let Ke = !1;
 
-    function BW(dd, Od, md) {
-      xW || (xW = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let Wd in Od) aW(Od[Wd], md)(dd.prototype, Wd);
-      return dd
+    function re(bb, wb, Mb) {
+      Ke || (Ke = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let eb in wb) ze(wb[eb], Mb)(bb.prototype, eb);
+      return bb
     }
 
-    function SW(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uW;
-      if (null == dd || "object" !== typeof dd) throw new Error(`schema(): first argument must be a fields object (got ${typeof dd}).`);
-      const Wd = {},
-        Fd = {},
-        Rd = {},
-        Xd = {},
-        Kd = (dd, Od) => {
-          if (Od.hasDefault)((dd, Od) => {
-            "function" === typeof Od ? Xd[dd] = Od : Od && "function" === typeof Od.clone ? Xd[dd] = () => Od.clone() : Rd[dd] = Od
-          })(dd, Od.default);
-          else if (!Od.optional) {
-            const md = function(dd) {
-              if (dd && "object" === typeof dd) {
-                if (void 0 !== dd.array) return () => new RW;
-                if (void 0 !== dd.map) return () => new KW;
-                if (void 0 !== dd.set) return () => new vW;
-                if (void 0 !== dd.collection) return () => new hW;
-                if (void 0 !== dd.stream) return () => new QW
-              } else if ("function" === typeof dd && uW.is(dd) && (!dd.prototype.initialize || 0 === dd.prototype.initialize.length)) return () => new dd
-            }(Od.type);
-            md && (Xd[dd] = md)
+    function Re(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ce;
+      if (null == bb || "object" !== typeof bb) throw new Error(`schema(): first argument must be a fields object (got ${typeof bb}).`);
+      const eb = {},
+        Hb = {},
+        pb = {},
+        Vb = {},
+        gb = (bb, wb) => {
+          if (wb.hasDefault)((bb, wb) => {
+            "function" === typeof wb ? Vb[bb] = wb : wb && "function" === typeof wb.clone ? Vb[bb] = () => wb.clone() : pb[bb] = wb
+          })(bb, wb.default);
+          else if (!wb.optional) {
+            const Mb = function(bb) {
+              if (bb && "object" === typeof bb) {
+                if (void 0 !== bb.array) return () => new ee;
+                if (void 0 !== bb.map) return () => new pe;
+                if (void 0 !== bb.set) return () => new ge;
+                if (void 0 !== bb.collection) return () => new Ve;
+                if (void 0 !== bb.stream) return () => new le
+              } else if ("function" === typeof bb && ce.is(bb) && (!bb.prototype.initialize || 0 === bb.prototype.initialize.length)) return () => new bb
+            }(wb.type);
+            Mb && (Vb[bb] = Mb)
           }
         },
-        hd = {},
-        vd = [],
-        Qd = [],
-        td = {},
-        od = [],
-        Nd = [],
-        qd = {},
-        Hd = [];
-      for (const gd in dd) {
-        const md = dd[gd],
-          Rd = `schema(${Od?`'${Od}'`:""}): field '${gd}'`;
-        if (oW(md)) {
-          const dd = md.toDefinition();
-          if (dd.noSync) {
-            if (void 0 !== dd.view || dd.unreliable || dd.patchOnly || dd.fullStateOnly || dd.stream) throw new Error(`${Rd} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            Kd(gd, dd);
+        lb = {},
+        Lb = [],
+        Ib = [],
+        Ob = {},
+        Ub = [],
+        tb = [],
+        Cb = {},
+        Eb = [];
+      for (const zb in bb) {
+        const Mb = bb[zb],
+          pb = `schema(${wb?`'${wb}'`:""}): field '${zb}'`;
+        if (Ie(Mb)) {
+          const bb = Mb.toDefinition();
+          if (bb.noSync) {
+            if (void 0 !== bb.view || bb.unreliable || bb.patchOnly || bb.fullStateOnly || bb.stream) throw new Error(`${pb} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            gb(zb, bb);
             continue
           }
-          if (dd.patchOnly && dd.fullStateOnly) throw new Error(`${Rd} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const Od = DO(dd.type, Rd);
-          if ("function" === typeof Od && !uW.is(Od)) throw new Error(`${Rd} is a synced ref to non-Schema class '${Od.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          Wd[gd] = Od, void 0 !== dd.view && (hd[gd] = dd.view), dd.unreliable && vd.push(gd), dd.patchOnly && Qd.push(gd), dd.deprecated && (td[gd] = dd.deprecatedThrows), dd.fullStateOnly && od.push(gd), dd.stream && Nd.push(gd), void 0 !== dd.streamPriority && (qd[gd] = dd.streamPriority), dd.optional && Hd.push(gd), Kd(gd, dd)
+          if (bb.patchOnly && bb.fullStateOnly) throw new Error(`${pb} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const wb = aw(bb.type, pb);
+          if ("function" === typeof wb && !ce.is(wb)) throw new Error(`${pb} is a synced ref to non-Schema class '${wb.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          eb[zb] = wb, void 0 !== bb.view && (lb[zb] = bb.view), bb.unreliable && Lb.push(zb), bb.patchOnly && Ib.push(zb), bb.deprecated && (Ob[zb] = bb.deprecatedThrows), bb.fullStateOnly && Ub.push(zb), bb.stream && tb.push(zb), void 0 !== bb.streamPriority && (Cb[zb] = bb.streamPriority), bb.optional && Eb.push(zb), gb(zb, bb)
         } else {
-          if ("function" !== typeof md) throw new Error(`${Rd} must be a t.* builder, Schema subclass, or method (got ${typeof md}).`);
-          uW.is(md) ? (Wd[gd] = md, md.prototype.initialize && 0 !== md.prototype.initialize.length || (Xd[gd] = () => new md)) : Fd[gd] = md
+          if ("function" !== typeof Mb) throw new Error(`${pb} must be a t.* builder, Schema subclass, or method (got ${typeof Mb}).`);
+          ce.is(Mb) ? (eb[zb] = Mb, Mb.prototype.initialize && 0 !== Mb.prototype.initialize.length || (Vb[zb] = () => new Mb)) : Hb[zb] = Mb
         }
       }
-      const yd = dd => {
-          for (const Od in Rd) dd[Od] = Rd[Od];
-          for (const Od in Xd) dd[Od] = Xd[Od]()
+      const Fb = bb => {
+          for (const wb in pb) bb[wb] = pb[wb];
+          for (const wb in Vb) bb[wb] = Vb[wb]()
         },
-        bd = () => {
-          const dd = {};
-          return yd(dd), dd
+        Bb = () => {
+          const bb = {};
+          return Fb(bb), bb
         },
-        Td = "function" === typeof Fd.initialize,
-        pd = Fd.initialize ?? md._initialize,
-        Yd = class extends md {
+        sb = "function" === typeof Hb.initialize,
+        mb = Hb.initialize ?? Mb._initialize,
+        hb = class extends Mb {
           constructor() {
-            for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-            const Fd = Od[0];
-            void 0 === Fd ? (super(), yd(this)) : super(Object.assign(bd(), Td ? (dd => {
-              const Od = Object.keys(Wd),
-                md = {};
-              for (const Wd in dd) Od.includes(Wd) || (md[Wd] = dd[Wd]);
-              return md
-            })(Fd) : Fd)), pd && new.target === Yd && pd.apply(this, Od)
+            for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+            const Hb = wb[0];
+            void 0 === Hb ? (super(), Fb(this)) : super(Object.assign(Bb(), sb ? (bb => {
+              const wb = Object.keys(eb),
+                Mb = {};
+              for (const eb in bb) wb.includes(eb) || (Mb[eb] = bb[eb]);
+              return Mb
+            })(Hb) : Hb)), mb && new.target === hb && mb.apply(this, wb)
           }
         };
-      Od && Object.defineProperty(Yd, "name", {
-        value: Od
-      }), ZO.setFields(Yd, Wd), Yd._getDefaultValues = bd, Yd._initialize = pd, Object.assign(Yd.prototype, Fd);
-      for (const gd in hd) pW(hd[gd])(Yd.prototype, gd);
-      for (const gd of vd) YW(Yd.prototype, gd);
-      for (const gd of Qd) gW(Yd.prototype, gd);
-      for (const gd in td) UW(td[gd])(Yd.prototype, gd);
-      if (od.length > 0 || Nd.length > 0) {
-        const dd = Yd[Symbol.metadata];
-        for (const Od of od) ZO.setFullStateOnly(dd, Od);
-        for (const Od of Nd) ZO.setStream(dd, Od);
-        for (const Od in qd) ZO.setStreamPriority(dd, Od, qd[Od])
+      wb && Object.defineProperty(hb, "name", {
+        value: wb
+      }), nw.setFields(hb, eb), hb._getDefaultValues = Bb, hb._initialize = mb, Object.assign(hb.prototype, Hb);
+      for (const zb in lb) Be(lb[zb])(hb.prototype, zb);
+      for (const zb of Lb) se(hb.prototype, zb);
+      for (const zb of Ib) me(hb.prototype, zb);
+      for (const zb in Ob) je(Ob[zb])(hb.prototype, zb);
+      if (Ub.length > 0 || tb.length > 0) {
+        const bb = hb[Symbol.metadata];
+        for (const wb of Ub) nw.setFullStateOnly(bb, wb);
+        for (const wb of tb) nw.setStream(bb, wb);
+        for (const wb in Cb) nw.setStreamPriority(bb, wb, Cb[wb])
       }
-      if (Hd.length > 0) {
-        const dd = Yd[Symbol.metadata];
-        for (const Od of Hd) dd[dd[Od]].optional = !0
+      if (Eb.length > 0) {
+        const bb = hb[Symbol.metadata];
+        for (const wb of Eb) bb[bb[wb]].optional = !0
       }
-      return Yd.extend = (dd, Od) => SW(dd, Od, Yd), Yd
+      return hb.extend = (bb, wb) => Re(bb, wb, hb), hb
     }
 
-    function sW(dd) {
-      const Od = dd[Hd].root,
-        md = {
+    function De(bb) {
+      const wb = bb[Eb].root,
+        Mb = {
           ops: {},
           refs: []
         };
-      let Wd = Od.changes.next;
-      for (; Wd;) {
-        const dd = Wd.changeTree;
-        void 0 !== dd ? (md.refs.push(`refId#${dd.ref[Kd]}`), dd.forEach(((dd, Od) => {
-          if (dd < 0 || !Od) return;
-          const Wd = Fd[Od];
-          md.ops[Wd] || (md.ops[Wd] = 0), md.ops[Wd]++
-        })), Wd = Wd.next) : Wd = Wd.next
+      let eb = wb.changes.next;
+      for (; eb;) {
+        const bb = eb.changeTree;
+        void 0 !== bb ? (Mb.refs.push(`refId#${bb.ref[gb]}`), bb.forEach(((bb, wb) => {
+          if (bb < 0 || !wb) return;
+          const eb = Hb[wb];
+          Mb.ops[eb] || (Mb.ops[eb] = 0), Mb.ops[eb]++
+        })), eb = eb.next) : eb = eb.next
       }
-      return md
+      return Mb
     }
-    class uW {
-      static[vd] = Gm;
-      static[Qd] = fm;
-      [Kd];
-      [gd];
-      static initialize(dd) {
-        Object.defineProperty(dd, Hd, {
-          value: new Vm(dd),
+    class ce {
+      static[Lb] = WM;
+      static[Ib] = yM;
+      [gb];
+      [zb];
+      static initialize(bb) {
+        Object.defineProperty(bb, Eb, {
+          value: new YM(bb),
           enumerable: !1,
           writable: !0
-        }), dd[gd] = []
+        }), bb[zb] = []
       }
       static initializeForDecoder() {
-        const dd = Object.create(this.prototype);
-        return Am(dd), dd[gd] = [], dd
+        const bb = Object.create(this.prototype);
+        return fM(bb), bb[zb] = [], bb
       }
-      static reset(dd) {
-        const Od = dd?.[Hd];
-        if (void 0 === Od || "function" !== typeof Od.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== Od.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${dd.constructor.name}) with multiple parents.`);
-        dd[pd]()
-      } [pd]() {
-        const dd = this.constructor[Symbol.metadata],
-          Od = dd?.[Bd] ?? [],
-          md = this[gd];
-        for (let Wd = 0; Wd < Od.length; Wd++) {
-          const dd = md[Od[Wd]];
-          dd?.[pd]?.()
+      static reset(bb) {
+        const wb = bb?.[Eb];
+        if (void 0 === wb || "function" !== typeof wb.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== wb.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${bb.constructor.name}) with multiple parents.`);
+        bb[mb]()
+      } [mb]() {
+        const bb = this.constructor[Symbol.metadata],
+          wb = bb?.[Rb] ?? [],
+          Mb = this[zb];
+        for (let eb = 0; eb < wb.length; eb++) {
+          const bb = Mb[wb[eb]];
+          bb?.[mb]?.()
         }
-        this[Hd].recycle(), this[Kd] = void 0
+        this[Eb].recycle(), this[gb] = void 0
       }
-      static is(dd) {
-        const Od = dd[Symbol.metadata];
-        return "object" === typeof Od && null !== Od
+      static is(bb) {
+        const wb = bb[Symbol.metadata];
+        return "object" === typeof wb && null !== wb
       }
-      static isSchema(dd) {
-        return "function" === typeof dd?.assign
+      static isSchema(bb) {
+        return "function" === typeof bb?.assign
       }
-      static[hd](dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Fd.ADD;
-        dd.change(Od, md)
+      static[lb](bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Hb.ADD;
+        bb.change(wb, Mb)
       }
-      static[td](dd, Od, md) {
-        const Wd = dd.constructor[Symbol.metadata],
-          Fd = Wd[Od]?.tag;
-        return void 0 === md ? void 0 === Fd : void 0 === Fd || (Fd === bW ? md.isChangeTreeVisible(dd[Hd]) : md.hasTagOnTree(dd[Hd], Fd))
+      static[Ob](bb, wb, Mb) {
+        const eb = bb.constructor[Symbol.metadata],
+          Hb = eb[wb]?.tag;
+        return void 0 === Mb ? void 0 === Hb : void 0 === Hb || (Hb === Ee ? Mb.isChangeTreeVisible(bb[Eb]) : Mb.hasTagOnTree(bb[Eb], Hb))
       }
-      constructor(dd) {
-        uW.initialize(this), dd && uW.assignProps(this, dd)
+      constructor(bb) {
+        ce.initialize(this), bb && ce.assignProps(this, bb)
       }
-      assign(dd) {
-        return uW.assignProps(this, dd), this
+      assign(bb) {
+        return ce.assignProps(this, bb), this
       }
-      static assignProps(dd, Od) {
-        const md = dd.constructor[Symbol.metadata];
-        if (md && void 0 !== md[xd])
-          for (let Fd = 0; Fd <= md[xd]; Fd++) {
-            const Wd = md[Fd];
-            if (!Wd) continue;
-            const Rd = Od[Wd.name];
-            void 0 !== Rd && (dd[Wd.name] = Rd)
+      static assignProps(bb, wb) {
+        const Mb = bb.constructor[Symbol.metadata];
+        if (Mb && void 0 !== Mb[rb])
+          for (let Hb = 0; Hb <= Mb[rb]; Hb++) {
+            const eb = Mb[Hb];
+            if (!eb) continue;
+            const pb = wb[eb.name];
+            void 0 !== pb && (bb[eb.name] = pb)
           }
-        const Wd = Object.keys(Od);
-        for (let Fd = 0; Fd < Wd.length; Fd++) {
-          const Rd = Wd[Fd];
-          md && void 0 !== md[Rd] || (dd[Rd] = Od[Rd])
+        const eb = Object.keys(wb);
+        for (let Hb = 0; Hb < eb.length; Hb++) {
+          const pb = eb[Hb];
+          Mb && void 0 !== Mb[pb] || (bb[pb] = wb[pb])
         }
       }
-      restore(dd) {
-        const Od = this.constructor[Symbol.metadata];
-        for (const md in Od) {
-          const Wd = Od[md],
-            Fd = Wd.name,
-            Rd = Wd.type,
-            Xd = dd[Fd];
-          if (void 0 !== Xd && null !== Xd)
-            if ("string" === typeof Rd) this[Fd] = Xd;
-            else if (uW.is(Rd)) {
-            const dd = new Rd;
-            dd.restore(Xd), this[Fd] = dd
-          } else if ("object" === typeof Rd) {
-            const dd = Object.keys(Rd)[0],
-              Od = Rd[dd];
-            if ("map" === dd) {
-              const dd = this[Fd];
-              for (const md in Xd)
-                if (uW.is(Od)) {
-                  const Wd = new Od;
-                  Wd.restore(Xd[md]), dd.set(md, Wd)
-                } else dd.set(md, Xd[md])
-            } else if ("array" === dd) {
-              const dd = this[Fd];
-              for (let md = 0; md < Xd.length; md++)
-                if (uW.is(Od)) {
-                  const Wd = new Od;
-                  Wd.restore(Xd[md]), dd.push(Wd)
-                } else dd.push(Xd[md])
+      restore(bb) {
+        const wb = this.constructor[Symbol.metadata];
+        for (const Mb in wb) {
+          const eb = wb[Mb],
+            Hb = eb.name,
+            pb = eb.type,
+            Vb = bb[Hb];
+          if (void 0 !== Vb && null !== Vb)
+            if ("string" === typeof pb) this[Hb] = Vb;
+            else if (ce.is(pb)) {
+            const bb = new pb;
+            bb.restore(Vb), this[Hb] = bb
+          } else if ("object" === typeof pb) {
+            const bb = Object.keys(pb)[0],
+              wb = pb[bb];
+            if ("map" === bb) {
+              const bb = this[Hb];
+              for (const Mb in Vb)
+                if (ce.is(wb)) {
+                  const eb = new wb;
+                  eb.restore(Vb[Mb]), bb.set(Mb, eb)
+                } else bb.set(Mb, Vb[Mb])
+            } else if ("array" === bb) {
+              const bb = this[Hb];
+              for (let Mb = 0; Mb < Vb.length; Mb++)
+                if (ce.is(wb)) {
+                  const eb = new wb;
+                  eb.restore(Vb[Mb]), bb.push(eb)
+                } else bb.push(Vb[Mb])
             }
           }
         }
         return this
       }
-      setDirty(dd, Od) {
-        const md = this.constructor[Symbol.metadata];
-        this[Hd].change(md[md[dd]].index, Od)
+      setDirty(bb, wb) {
+        const Mb = this.constructor[Symbol.metadata];
+        this[Eb].change(Mb[Mb[bb]].index, wb)
       }
       pauseTracking() {
-        this[Hd].pause()
+        this[Eb].pause()
       }
       resumeTracking() {
-        this[Hd].resume()
+        this[Eb].resume()
       }
-      untracked(dd) {
-        return this[Hd].untracked(dd)
+      untracked(bb) {
+        return this[Eb].untracked(bb)
       }
       get isTrackingPaused() {
-        return this[Hd].paused
+        return this[Eb].paused
       }
       clone() {
-        const dd = Object.create(this.constructor.prototype);
-        uW.initialize(dd);
-        const Od = this.constructor[Symbol.metadata];
-        for (const md in Od) {
-          const Wd = Od[md].name;
-          "object" === typeof this[Wd] && "function" === typeof this[Wd]?.clone ? dd[Wd] = this[Wd].clone() : dd[Wd] = this[Wd]
+        const bb = Object.create(this.constructor.prototype);
+        ce.initialize(bb);
+        const wb = this.constructor[Symbol.metadata];
+        for (const Mb in wb) {
+          const eb = wb[Mb].name;
+          "object" === typeof this[eb] && "function" === typeof this[eb]?.clone ? bb[eb] = this[eb].clone() : bb[eb] = this[eb]
         }
-        return dd
+        return bb
       }
       toJSON() {
-        const dd = {},
-          Od = this.constructor[Symbol.metadata];
-        for (const md in Od) {
-          const Wd = Od[md],
-            Fd = Wd.name;
-          Wd.deprecated || null === this[Fd] || "undefined" === typeof this[Fd] || (dd[Fd] = "function" === typeof this[Fd].toJSON ? this[Fd].toJSON() : this[Fd])
+        const bb = {},
+          wb = this.constructor[Symbol.metadata];
+        for (const Mb in wb) {
+          const eb = wb[Mb],
+            Hb = eb.name;
+          eb.deprecated || null === this[Hb] || "undefined" === typeof this[Hb] || (bb[Hb] = "function" === typeof this[Hb].toJSON ? this[Hb].toJSON() : this[Hb])
         }
-        return dd
+        return bb
       }
       discardAllChanges() {
-        this[Hd].discardAll()
-      } [od](dd) {
-        return this[this.constructor[Symbol.metadata][dd].name]
-      } [Nd](dd) {
-        this[this.constructor[Symbol.metadata][dd].name] = void 0
+        this[Eb].discardAll()
+      } [Ub](bb) {
+        return this[this.constructor[Symbol.metadata][bb].name]
+      } [tb](bb) {
+        this[this.constructor[Symbol.metadata][bb].name] = void 0
       }
-      static debugRefIds(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Wd = arguments.length > 3 ? arguments[3] : void 0,
-          Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const Rd = Od ? ` - ${JSON.stringify(dd.toJSON())}` : "",
-          Xd = dd[Hd],
-          hd = dd[Kd],
-          vd = Wd ? Wd.root.refCount[hd] : Xd.refCount,
-          Qd = vd > 1 ? ` [\xd7${vd}]` : "";
-        let td = `${function(dd){return new Array(dd).fill(0).map(((Od,md)=>md===dd-1?"\u2514\u2500 ":"   ")).join("")}(md)}${Fd}${dd.constructor.name} (refId: ${hd})${Qd}${Rd}\n`;
-        return Xd.forEachChild(((Fd, Rd) => {
-          let Xd = Rd;
-          "number" === typeof Rd && dd.$indexes && (Xd = dd.$indexes.get(Rd) ?? Rd);
-          const Kd = void 0 !== dd.forEach && void 0 !== Xd ? `["${Xd}"]: ` : "";
-          td += this.debugRefIds(Fd.ref, Od, md + 1, Wd, Kd)
-        })), td
+      static debugRefIds(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          eb = arguments.length > 3 ? arguments[3] : void 0,
+          Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const pb = wb ? ` - ${JSON.stringify(bb.toJSON())}` : "",
+          Vb = bb[Eb],
+          lb = bb[gb],
+          Lb = eb ? eb.root.refCount[lb] : Vb.refCount,
+          Ib = Lb > 1 ? ` [\xd7${Lb}]` : "";
+        let Ob = `${function(bb){return new Array(bb).fill(0).map(((wb,Mb)=>Mb===bb-1?"\u2514\u2500 ":"   ")).join("")}(Mb)}${Hb}${bb.constructor.name} (refId: ${lb})${Ib}${pb}\n`;
+        return Vb.forEachChild(((Hb, pb) => {
+          let Vb = pb;
+          "number" === typeof pb && bb.$indexes && (Vb = bb.$indexes.get(pb) ?? pb);
+          const gb = void 0 !== bb.forEach && void 0 !== Vb ? `["${Vb}"]: ` : "";
+          Ob += this.debugRefIds(Hb.ref, wb, Mb + 1, eb, gb)
+        })), Ob
       }
-      static debugRefIdEncodingOrder(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const md = [],
-          Wd = dd[Hd];
-        if ("changes" === Od) {
-          let dd = Wd.root.changes?.next;
-          for (; dd;) dd.changeTree && md.push(dd.changeTree.ref[Kd]), dd = dd.next;
-          return md
+      static debugRefIdEncodingOrder(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const Mb = [],
+          eb = bb[Eb];
+        if ("changes" === wb) {
+          let bb = eb.root.changes?.next;
+          for (; bb;) bb.changeTree && Mb.push(bb.changeTree.ref[gb]), bb = bb.next;
+          return Mb
         }
-        const Fd = "allFilteredChanges" === Od,
-          Rd = new Set,
-          Xd = dd => {
-            Rd.has(dd) || (Rd.add(dd), dd.isFiltered === Fd && md.push(dd.ref[Kd]), dd.forEachChild(((dd, Od) => Xd(dd))))
+        const Hb = "allFilteredChanges" === wb,
+          pb = new Set,
+          Vb = bb => {
+            pb.has(bb) || (pb.add(bb), bb.isFiltered === Hb && Mb.push(bb.ref[gb]), bb.forEachChild(((bb, wb) => Vb(bb))))
           };
-        return Xd(Wd), md
+        return Vb(eb), Mb
       }
-      static debugRefIdsFromDecoder(dd) {
-        return this.debugRefIds(dd.state, !1, 0, dd)
+      static debugRefIdsFromDecoder(bb) {
+        return this.debugRefIds(bb.state, !1, 0, bb)
       }
-      static debugChanges(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const md = dd[Hd],
-          Wd = Od ? "allChanges" : "changes";
-        let Rd = `${dd.constructor.name} (${dd[Kd]}) -> .${Wd}:\n`;
-        return Od ? md.forEachLive((dd => {
-          Rd += `- [${dd}]: ADD (${JSON.stringify(md.getValue(Number(dd),!0))})\n`
-        })) : md.forEach(((dd, Od) => {
-          dd < 0 || !Od || (Rd += `- [${dd}]: ${Fd[Od]} (${JSON.stringify(md.getValue(Number(dd),!1))})\n`)
-        })), Rd
+      static debugChanges(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Mb = bb[Eb],
+          eb = wb ? "allChanges" : "changes";
+        let pb = `${bb.constructor.name} (${bb[gb]}) -> .${eb}:\n`;
+        return wb ? Mb.forEachLive((bb => {
+          pb += `- [${bb}]: ADD (${JSON.stringify(Mb.getValue(Number(bb),!0))})\n`
+        })) : Mb.forEach(((bb, wb) => {
+          bb < 0 || !wb || (pb += `- [${bb}]: ${Hb[wb]} (${JSON.stringify(Mb.getValue(Number(bb),!1))})\n`)
+        })), pb
       }
     }
-    Rd(uW);
-    const VW = {
+    pb(ce);
+    const Ye = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class iW {
+    class Ze {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const dd = {};
-        for (const Od in this.changeTrees) dd[Od] = this.changeTrees[Od].refCount;
-        return dd
+        const bb = {};
+        for (const wb in this.changeTrees) bb[wb] = this.changeTrees[wb].refCount;
+        return bb
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(dd) {
-        this.types.hasFilters && (dd.flags & sm || (dd.flags |= sm, this.pendingFilterRefresh.push(dd)))
+      enqueueFilterRefresh(bb) {
+        this.types.hasFilters && (bb.flags & DM || (bb.flags |= DM, this.pendingFilterRefresh.push(bb)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(dd) {
-        this._freeViewIds.push(dd)
+      releaseViewId(bb) {
+        this._freeViewIds.push(bb)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(dd) {
-        this.activeViews.set(dd.id, new WeakRef(dd))
+      registerView(bb) {
+        this.activeViews.set(bb.id, new WeakRef(bb))
       }
-      unregisterView(dd) {
-        this.activeViews.delete(dd.id);
-        const Od = dd.id;
-        for (const md of this.streamTrees) md._dropView(Od)
+      unregisterView(bb) {
+        this.activeViews.delete(bb.id);
+        const wb = bb.id;
+        for (const Mb of this.streamTrees) Mb._dropView(wb)
       }
-      forEachActiveView(dd) {
-        for (const [Od, md] of this.activeViews) {
-          const Wd = md.deref();
-          if (void 0 !== Wd) dd(Wd);
+      forEachActiveView(bb) {
+        for (const [wb, Mb] of this.activeViews) {
+          const eb = Mb.deref();
+          if (void 0 !== eb) bb(eb);
           else {
-            this.activeViews.delete(Od);
-            for (const dd of this.streamTrees) dd._dropView(Od)
+            this.activeViews.delete(wb);
+            for (const bb of this.streamTrees) bb._dropView(wb)
           }
         }
       }
-      registerStream(dd) {
-        this.streamTrees.add(dd)
+      registerStream(bb) {
+        this.streamTrees.add(bb)
       }
-      unregisterStream(dd) {
-        this.streamTrees.delete(dd)
+      unregisterStream(bb) {
+        this.streamTrees.delete(bb)
       }
-      constructor(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = dd, this.nextUniqueId = Od
+      constructor(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = bb, this.nextUniqueId = wb
       }
-      add(dd) {
-        const Od = dd.ref;
-        void 0 === Od[Kd] && (VW.value = this.nextUniqueId++, Object.defineProperty(Od, Kd, VW));
-        const md = Od[Kd],
-          Wd = void 0 === this.changeTrees[md];
-        Wd && (this.changeTrees[md] = dd), dd.needsRestage && (dd.needsRestage = !1, dd.forEachLiveWithCtx(dd, Fm));
-        const Fd = Wd ? 0 : dd.refCount;
-        return dd.refCount = Fd + 1, Fd > 0 && this.enqueueFilterRefresh(dd), Wd
+      add(bb) {
+        const wb = bb.ref;
+        void 0 === wb[gb] && (Ye.value = this.nextUniqueId++, Object.defineProperty(wb, gb, Ye));
+        const Mb = wb[gb],
+          eb = void 0 === this.changeTrees[Mb];
+        eb && (this.changeTrees[Mb] = bb), bb.needsRestage && (bb.needsRestage = !1, bb.forEachLiveWithCtx(bb, eM));
+        const Hb = eb ? 0 : bb.refCount;
+        return bb.refCount = Hb + 1, Hb > 0 && this.enqueueFilterRefresh(bb), eb
       }
-      remove(dd) {
-        const Od = dd.refCount - 1;
-        if (Od <= 0) {
-          if (dd.root = void 0, delete this.changeTrees[dd.ref[Kd]], dd.isStreamCollection) {
-            const Od = dd.ref;
-            Od._unregister?.(), this.unregisterStream(Od)
+      remove(bb) {
+        const wb = bb.refCount - 1;
+        if (wb <= 0) {
+          if (bb.root = void 0, delete this.changeTrees[bb.ref[gb]], bb.isStreamCollection) {
+            const wb = bb.ref;
+            wb._unregister?.(), this.unregisterStream(wb)
           }
-          this.removeFromQueue(dd), this.removeFromUnreliableQueue(dd), dd.refCount = 0, dd.needsRestage = !0, dd.forEachChild(((Od, md) => {
-            Od.removeParent(dd.ref) && (void 0 === Od.parentRef || Od.refCount > 0 ? this.remove(Od) : this.moveNextToParent(Od))
+          this.removeFromQueue(bb), this.removeFromUnreliableQueue(bb), bb.refCount = 0, bb.needsRestage = !0, bb.forEachChild(((wb, Mb) => {
+            wb.removeParent(bb.ref) && (void 0 === wb.parentRef || wb.refCount > 0 ? this.remove(wb) : this.moveNextToParent(wb))
           }))
-        } else dd.refCount = Od, this.enqueueFilterRefresh(dd), this.recursivelyMoveNextToParent(dd);
-        return Od
+        } else bb.refCount = wb, this.enqueueFilterRefresh(bb), this.recursivelyMoveNextToParent(bb);
+        return wb
       }
-      recursivelyMoveNextToParent(dd) {
-        this.moveNextToParent(dd), dd.forEachChild(((dd, Od) => this.recursivelyMoveNextToParent(dd)))
+      recursivelyMoveNextToParent(bb) {
+        this.moveNextToParent(bb), bb.forEachChild(((bb, wb) => this.recursivelyMoveNextToParent(bb)))
       }
-      moveNextToParent(dd) {
-        dd.changesNode && this._moveNextToParentInList(this.changes, dd, dd.changesNode, "changesNode"), dd.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, dd, dd.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(bb) {
+        bb.changesNode && this._moveNextToParentInList(this.changes, bb, bb.changesNode, "changesNode"), bb.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, bb, bb.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(dd, Od, md, Wd) {
-        const Fd = Od.parent;
-        if (!Fd || !Fd[Hd]) return;
-        const Rd = Fd[Hd][Wd];
-        Rd && Rd !== md && (md.position > Rd.position || (md.prev ? md.prev.next = md.next : dd.next = md.next, md.next ? md.next.prev = md.prev : dd.tail = md.prev, md.prev = dd.tail, md.next = void 0, dd.tail.next = md, dd.tail = md, md.position = dd.nextPosition++))
+      _moveNextToParentInList(bb, wb, Mb, eb) {
+        const Hb = wb.parent;
+        if (!Hb || !Hb[Eb]) return;
+        const pb = Hb[Eb][eb];
+        pb && pb !== Mb && (Mb.position > pb.position || (Mb.prev ? Mb.prev.next = Mb.next : bb.next = Mb.next, Mb.next ? Mb.next.prev = Mb.prev : bb.tail = Mb.prev, Mb.prev = bb.tail, Mb.next = void 0, bb.tail.next = Mb, bb.tail = Mb, Mb.position = bb.nextPosition++))
       }
-      enqueueChangeTree(dd) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd.changesNode) || (dd.changesNode = this._appendToList(this.changes, dd))
+      enqueueChangeTree(bb) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb.changesNode) || (bb.changesNode = this._appendToList(this.changes, bb))
       }
-      enqueueUnreliable(dd) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd.unreliableChangesNode) || (dd.unreliableChangesNode = this._appendToList(this.unreliableChanges, dd))
+      enqueueUnreliable(bb) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bb.unreliableChangesNode) || (bb.unreliableChangesNode = this._appendToList(this.unreliableChanges, bb))
       }
-      _appendToList(dd, Od) {
-        const md = this._nodePool;
-        let Wd;
-        return md.length > 0 ? (Wd = md.pop(), Wd.changeTree = Od, Wd.next = void 0, Wd.prev = void 0) : Wd = {
-          changeTree: Od,
+      _appendToList(bb, wb) {
+        const Mb = this._nodePool;
+        let eb;
+        return Mb.length > 0 ? (eb = Mb.pop(), eb.changeTree = wb, eb.next = void 0, eb.prev = void 0) : eb = {
+          changeTree: wb,
           next: void 0,
           prev: void 0,
           position: 0
-        }, dd.next ? (Wd.prev = dd.tail, dd.tail.next = Wd, dd.tail = Wd) : (dd.nextPosition = 0, dd.next = Wd, dd.tail = Wd), Wd.position = dd.nextPosition++, Wd
+        }, bb.next ? (eb.prev = bb.tail, bb.tail.next = eb, bb.tail = eb) : (bb.nextPosition = 0, bb.next = eb, bb.tail = eb), eb.position = bb.nextPosition++, eb
       }
-      releaseNode(dd) {
-        dd.changeTree = void 0, dd.prev = void 0, dd.next = void 0, this._nodePool.push(dd)
+      releaseNode(bb) {
+        bb.changeTree = void 0, bb.prev = void 0, bb.next = void 0, this._nodePool.push(bb)
       }
-      removeFromQueue(dd) {
-        return this._removeNode(this.changes, dd, dd.changesNode, "changesNode")
+      removeFromQueue(bb) {
+        return this._removeNode(this.changes, bb, bb.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(dd) {
-        return this._removeNode(this.unreliableChanges, dd, dd.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(bb) {
+        return this._removeNode(this.unreliableChanges, bb, bb.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(dd, Od, md, Wd) {
-        return !(!md || md.changeTree !== Od) && (md.prev ? md.prev.next = md.next : dd.next = md.next, md.next ? md.next.prev = md.prev : dd.tail = md.prev, Od[Wd] = void 0, this.releaseNode(md), !0)
+      _removeNode(bb, wb, Mb, eb) {
+        return !(!Mb || Mb.changeTree !== wb) && (Mb.prev ? Mb.prev.next = Mb.next : bb.next = Mb.next, Mb.next ? Mb.next.prev = Mb.prev : bb.tail = Mb.prev, wb[eb] = void 0, this.releaseNode(Mb), !0)
       }
     }
 
-    function AW(dd, Od) {
-      if (-1 === Od || Od >= dd.length) return !1;
-      const md = dd.length - 1;
-      for (let Wd = Od; Wd < md; Wd++) dd[Wd] = dd[Wd + 1];
-      return dd.length = md, !0
+    function fe(bb, wb) {
+      if (-1 === wb || wb >= bb.length) return !1;
+      const Mb = bb.length - 1;
+      for (let eb = wb; eb < Mb; eb++) bb[eb] = bb[eb + 1];
+      return bb.length = Mb, !0
     }
 
-    function rW(dd, Od, md) {
-      const Wd = ~md,
-        Fd = dd.changeTrees;
-      for (const Rd in Fd) {
-        const dd = Fd[Rd],
-          md = dd.visibleViews;
-        void 0 !== md && Od < md.length && (md[Od] &= Wd);
-        const Xd = dd.subscribedViews;
-        void 0 !== Xd && Od < Xd.length && (Xd[Od] &= Wd);
-        const Kd = dd.tagViews;
-        void 0 !== Kd && Kd.forEach((dd => {
-          Od < dd.length && (dd[Od] &= Wd)
+    function Ae(bb, wb, Mb) {
+      const eb = ~Mb,
+        Hb = bb.changeTrees;
+      for (const pb in Hb) {
+        const bb = Hb[pb],
+          Mb = bb.visibleViews;
+        void 0 !== Mb && wb < Mb.length && (Mb[wb] &= eb);
+        const Vb = bb.subscribedViews;
+        void 0 !== Vb && wb < Vb.length && (Vb[wb] &= eb);
+        const gb = bb.tagViews;
+        void 0 !== gb && gb.forEach((bb => {
+          wb < bb.length && (bb[wb] &= eb)
         }))
       }
     }
-    const GW = new FinalizationRegistry((dd => {
+    const We = new FinalizationRegistry((bb => {
       let {
-        root: Od,
-        id: md,
-        slot: Wd,
-        bit: Fd
-      } = dd;
-      rW(Od, Wd, Fd), Od.activeViews.delete(md);
-      for (const Rd of Od.streamTrees) Rd._dropView(md);
-      Od.releaseViewId(md)
+        root: wb,
+        id: Mb,
+        slot: eb,
+        bit: Hb
+      } = bb;
+      Ae(wb, eb, Hb), wb.activeViews.delete(Mb);
+      for (const pb of wb.streamTrees) pb._dropView(Mb);
+      wb.releaseViewId(Mb)
     }));
 
-    function nW(dd) {
-      if (void 0 === dd) return "undefined";
-      if (null === dd) return "null";
-      const Od = typeof dd;
-      return "string" === Od ? JSON.stringify(dd.length > 30 ? `${dd.slice(0,30)}\u2026` : dd) : "object" !== Od && "function" !== Od ? `${Od} ${String(dd)}` : Array.isArray(dd) ? `Array(${dd.length})` : dd.constructor?.name ?? "Object"
+    function Je(bb) {
+      if (void 0 === bb) return "undefined";
+      if (null === bb) return "null";
+      const wb = typeof bb;
+      return "string" === wb ? JSON.stringify(bb.length > 30 ? `${bb.slice(0,30)}\u2026` : bb) : "object" !== wb && "function" !== wb ? `${wb} ${String(bb)}` : Array.isArray(bb) ? `Array(${bb.length})` : bb.constructor?.name ?? "Object"
     }
-    class LW {
+    class Se {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = dd, dd && (this.items = [])
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = bb, bb && (this.items = [])
       }
-      _bindRoot(dd) {
-        void 0 === this._root && (this._root = dd, this.id = dd.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), dd.registerView(this), GW.register(this, {
-          root: dd,
+      _bindRoot(bb) {
+        void 0 === this._root && (this._root = bb, this.id = bb.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), bb.registerView(this), We.register(this, {
+          root: bb,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), rW(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), GW.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), Ae(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), We.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(dd) {
-        const Od = dd.visibleViews,
-          md = this._slot;
-        return void 0 !== Od && md < Od.length && 0 !== (Od[md] & this._bit)
+      isVisible(bb) {
+        const wb = bb.visibleViews,
+          Mb = this._slot;
+        return void 0 !== wb && Mb < wb.length && 0 !== (wb[Mb] & this._bit)
       }
-      markVisible(dd) {
-        const Od = this._slot;
-        let md = dd.visibleViews;
-        for (void 0 === md && (md = dd.visibleViews = []); md.length <= Od;) md.push(0);
-        md[Od] |= this._bit
+      markVisible(bb) {
+        const wb = this._slot;
+        let Mb = bb.visibleViews;
+        for (void 0 === Mb && (Mb = bb.visibleViews = []); Mb.length <= wb;) Mb.push(0);
+        Mb[wb] |= this._bit
       }
-      unmarkVisible(dd) {
-        const Od = dd.visibleViews;
-        if (void 0 === Od) return;
-        const md = this._slot;
-        md < Od.length && (Od[md] &= ~this._bit)
+      unmarkVisible(bb) {
+        const wb = bb.visibleViews;
+        if (void 0 === wb) return;
+        const Mb = this._slot;
+        Mb < wb.length && (wb[Mb] &= ~this._bit)
       }
-      isSubscribed(dd) {
-        const Od = dd.subscribedViews,
-          md = this._slot;
-        return void 0 !== Od && md < Od.length && 0 !== (Od[md] & this._bit)
+      isSubscribed(bb) {
+        const wb = bb.subscribedViews,
+          Mb = this._slot;
+        return void 0 !== wb && Mb < wb.length && 0 !== (wb[Mb] & this._bit)
       }
-      _setSubscribed(dd) {
-        const Od = this._slot;
-        let md = dd.subscribedViews;
-        for (void 0 === md && (md = dd.subscribedViews = []); md.length <= Od;) md.push(0);
-        md[Od] |= this._bit
+      _setSubscribed(bb) {
+        const wb = this._slot;
+        let Mb = bb.subscribedViews;
+        for (void 0 === Mb && (Mb = bb.subscribedViews = []); Mb.length <= wb;) Mb.push(0);
+        Mb[wb] |= this._bit
       }
-      _clearSubscribed(dd) {
-        const Od = dd.subscribedViews;
-        if (void 0 === Od) return;
-        const md = this._slot;
-        md < Od.length && (Od[md] &= ~this._bit)
+      _clearSubscribed(bb) {
+        const wb = bb.subscribedViews;
+        if (void 0 === wb) return;
+        const Mb = this._slot;
+        Mb < wb.length && (wb[Mb] &= ~this._bit)
       }
-      hasTagOnTree(dd, Od) {
-        const md = dd.tagViews;
-        if (void 0 === md) return !1;
-        const Wd = this._slot,
-          Fd = this._bit;
-        for (let Rd = Od; 0 !== Rd; Rd &= Rd - 1) {
-          const dd = md.get(Rd & -Rd);
-          if (void 0 !== dd && Wd < dd.length && 0 !== (dd[Wd] & Fd)) return !0
+      hasTagOnTree(bb, wb) {
+        const Mb = bb.tagViews;
+        if (void 0 === Mb) return !1;
+        const eb = this._slot,
+          Hb = this._bit;
+        for (let pb = wb; 0 !== pb; pb &= pb - 1) {
+          const bb = Mb.get(pb & -pb);
+          if (void 0 !== bb && eb < bb.length && 0 !== (bb[eb] & Hb)) return !0
         }
         return !1
       }
-      addTag(dd, Od) {
-        if (Od === bW) return;
-        let md = dd.tagViews;
-        void 0 === md && (md = dd.tagViews = new Map);
-        const Wd = this._slot,
-          Fd = this._bit;
-        for (let Rd = Od; Rd > 0; Rd &= Rd - 1) {
-          const dd = Rd & -Rd;
-          let Od = md.get(dd);
-          for (void 0 === Od && (Od = [], md.set(dd, Od)); Od.length <= Wd;) Od.push(0);
-          Od[Wd] |= Fd
+      addTag(bb, wb) {
+        if (wb === Ee) return;
+        let Mb = bb.tagViews;
+        void 0 === Mb && (Mb = bb.tagViews = new Map);
+        const eb = this._slot,
+          Hb = this._bit;
+        for (let pb = wb; pb > 0; pb &= pb - 1) {
+          const bb = pb & -pb;
+          let wb = Mb.get(bb);
+          for (void 0 === wb && (wb = [], Mb.set(bb, wb)); wb.length <= eb;) wb.push(0);
+          wb[eb] |= Hb
         }
       }
-      removeTag(dd, Od) {
-        if (Od === bW) return;
-        const md = dd.tagViews;
-        if (void 0 === md) return;
-        const Wd = this._slot,
-          Fd = ~this._bit;
-        for (let Rd = Od; Rd > 0; Rd &= Rd - 1) {
-          const dd = md.get(Rd & -Rd);
-          void 0 !== dd && Wd < dd.length && (dd[Wd] &= Fd)
+      removeTag(bb, wb) {
+        if (wb === Ee) return;
+        const Mb = bb.tagViews;
+        if (void 0 === Mb) return;
+        const eb = this._slot,
+          Hb = ~this._bit;
+        for (let pb = wb; pb > 0; pb &= pb - 1) {
+          const bb = Mb.get(pb & -pb);
+          void 0 !== bb && eb < bb.length && (bb[eb] &= Hb)
         }
       }
-      removeAllTagsOnTree(dd) {
-        const Od = dd.tagViews;
-        if (void 0 === Od) return;
-        const md = this._slot,
-          Wd = ~this._bit;
-        Od.forEach((dd => {
-          md < dd.length && (dd[md] &= Wd)
+      removeAllTagsOnTree(bb) {
+        const wb = bb.tagViews;
+        if (void 0 === wb) return;
+        const Mb = this._slot,
+          eb = ~this._bit;
+        wb.forEach((bb => {
+          Mb < bb.length && (bb[Mb] &= eb)
         }))
       }
-      add(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bW,
-          md = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(dd, Od, md, !1)
+      add(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ee,
+          Mb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(bb, wb, Mb, !1)
       }
-      _addImmediate(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bW;
-        this._add(dd, Od, !0, !0)
+      _addImmediate(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ee;
+        this._add(bb, wb, !0, !0)
       }
-      _add(dd, Od, md, Wd) {
-        const Rd = dd?.[Hd];
-        if (!Rd) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${nW(dd)}`), !1;
-        const Xd = Rd.parent;
-        if (!Xd && 0 !== dd[Kd]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Rd.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== Rd.root && this._bindRoot(Rd.root);
-        const hd = Xd?.[Hd];
-        if (!Wd && hd?.isStreamCollection) return iO(Xd, this.id, Rd.parentIndex), !0;
-        const vd = dd.constructor[Symbol.metadata],
-          Qd = this.isVisible(Rd);
-        if (!this.iterable || !md || Qd && -1 !== this.items.indexOf(dd) || this.items.push(dd), this.markVisible(Rd), md && Xd && this.addParentOf(Rd, Od), !Wd && Rd.isStreamCollection) return !0;
-        if (Od === bW && Rd.isNew) return this._markSubtreeVisible(Rd, Od), !1;
-        let td = this.changes.get(dd[Kd]);
-        void 0 === td && (td = new Map, this.changes.set(dd[Kd], td));
-        let od = !1;
-        const Nd = Rd.encDescriptor.tags;
-        if (Rd.forEachChild(((dd, md) => {
-            const Wd = Nd[md];
-            if (void 0 !== Wd) {
-              if (!(Wd === bW || Od !== bW && 0 !== (Wd & Od))) return
+      _add(bb, wb, Mb, eb) {
+        const pb = bb?.[Eb];
+        if (!pb) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${Je(bb)}`), !1;
+        const Vb = pb.parent;
+        if (!Vb && 0 !== bb[gb]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${pb.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== pb.root && this._bindRoot(pb.root);
+        const lb = Vb?.[Eb];
+        if (!eb && lb?.isStreamCollection) return fw(Vb, this.id, pb.parentIndex), !0;
+        const Lb = bb.constructor[Symbol.metadata],
+          Ib = this.isVisible(pb);
+        if (!this.iterable || !Mb || Ib && -1 !== this.items.indexOf(bb) || this.items.push(bb), this.markVisible(pb), Mb && Vb && this.addParentOf(pb, wb), !eb && pb.isStreamCollection) return !0;
+        if (wb === Ee && pb.isNew) return this._markSubtreeVisible(pb, wb), !1;
+        let Ob = this.changes.get(bb[gb]);
+        void 0 === Ob && (Ob = new Map, this.changes.set(bb[gb], Ob));
+        let Ub = !1;
+        const tb = pb.encDescriptor.tags;
+        if (pb.forEachChild(((bb, Mb) => {
+            const eb = tb[Mb];
+            if (void 0 !== eb) {
+              if (!(eb === Ee || wb !== Ee && 0 !== (eb & wb))) return
             }
-            this.add(dd.ref, Od, !1) && (od = !0)
-          })), Od !== bW) {
-          this.addTag(Rd, Od);
-          const dd = vd?.[sd];
-          if (void 0 !== dd)
-            for (let md = Od; md > 0; md &= md - 1) dd[md & -md]?.forEach((dd => {
-              Rd.getChange(dd) !== Fd.DELETE && td.set(dd, Fd.ADD)
+            this.add(bb.ref, wb, !1) && (Ub = !0)
+          })), wb !== Ee) {
+          this.addTag(pb, wb);
+          const bb = Lb?.[cb];
+          if (void 0 !== bb)
+            for (let Mb = wb; Mb > 0; Mb &= Mb - 1) bb[Mb & -Mb]?.forEach((bb => {
+              pb.getChange(bb) !== Hb.DELETE && Ob.set(bb, Hb.ADD)
             }))
         }
-        if ((Od === bW || !Qd) && (!Rd.isNew || od))
-          if (Rd.isArray && "string" !== typeof Rd.refTarget[yd]) Rd.refTarget.items.length > 0 && (td.set(-1, Fd.ADD), od = !0);
+        if ((wb === Ee || !Ib) && (!pb.isNew || Ub))
+          if (pb.isArray && "string" !== typeof pb.refTarget[Fb]) pb.refTarget.items.length > 0 && (Ob.set(-1, Hb.ADD), Ub = !0);
           else {
-            const dd = Rd.encDescriptor.tags;
-            Rd.forEachLive((md => {
-              const Wd = dd[md];
-              (void 0 === Wd || Wd === bW || Od !== bW && 0 !== (Wd & Od)) && (td.set(md, Fd.ADD), od = !0)
+            const bb = pb.encDescriptor.tags;
+            pb.forEachLive((Mb => {
+              const eb = bb[Mb];
+              (void 0 === eb || eb === Ee || wb !== Ee && 0 !== (eb & wb)) && (Ob.set(Mb, Hb.ADD), Ub = !0)
             }))
-          } return od
+          } return Ub
       }
-      _markSubtreeVisible(dd, Od) {
-        const md = dd.encDescriptor.tags;
-        dd.forEachChild(((dd, Wd) => {
-          const Fd = md[Wd];
-          if (void 0 !== Fd) {
-            if (!(Fd === bW || Od !== bW && 0 !== (Fd & Od))) return
+      _markSubtreeVisible(bb, wb) {
+        const Mb = bb.encDescriptor.tags;
+        bb.forEachChild(((bb, eb) => {
+          const Hb = Mb[eb];
+          if (void 0 !== Hb) {
+            if (!(Hb === Ee || wb !== Ee && 0 !== (Hb & wb))) return
           }
-          dd.isNew ? (this.markVisible(dd), this._markSubtreeVisible(dd, Od)) : this._add(dd.ref, Od, !1, !1)
+          bb.isNew ? (this.markVisible(bb), this._markSubtreeVisible(bb, wb)) : this._add(bb.ref, wb, !1, !1)
         }))
       }
-      addParentOf(dd, Od) {
-        const md = dd.parent[Hd],
-          Wd = dd.parentIndex;
-        this.isVisible(md) || this.markVisible(md);
-        const Rd = md.parent?.[Hd];
-        if (Rd && this.addParentOf(md, Od), md.hasFilteredFields && md.getChange(Wd) !== Fd.DELETE) {
-          let Rd = this.changes.get(md.ref[Kd]);
-          void 0 === Rd && (Rd = new Map, this.changes.set(md.ref[Kd], Rd));
-          const Xd = md.encDescriptor.tags[Wd];
-          void 0 !== Xd && Xd !== bW && 0 !== (Xd & Od) && this.addTag(md, Od), Rd.set(md.isArray ? dd : Wd, Fd.ADD)
+      addParentOf(bb, wb) {
+        const Mb = bb.parent[Eb],
+          eb = bb.parentIndex;
+        this.isVisible(Mb) || this.markVisible(Mb);
+        const pb = Mb.parent?.[Eb];
+        if (pb && this.addParentOf(Mb, wb), Mb.hasFilteredFields && Mb.getChange(eb) !== Hb.DELETE) {
+          let pb = this.changes.get(Mb.ref[gb]);
+          void 0 === pb && (pb = new Map, this.changes.set(Mb.ref[gb], pb));
+          const Vb = Mb.encDescriptor.tags[eb];
+          void 0 !== Vb && Vb !== Ee && 0 !== (Vb & wb) && this.addTag(Mb, wb), pb.set(Mb.isArray ? bb : eb, Hb.ADD)
         }
       }
-      _touchAncestorsOf(dd) {
-        let Od = dd.parent?.[Hd];
-        if (void 0 === Od) return;
-        const md = [];
-        for (; void 0 !== Od;) {
-          if (Od.hasFilteredFields) {
-            const dd = Od.ref[Kd];
-            if (this.changes.has(dd)) break;
-            md.push(Od)
+      _touchAncestorsOf(bb) {
+        let wb = bb.parent?.[Eb];
+        if (void 0 === wb) return;
+        const Mb = [];
+        for (; void 0 !== wb;) {
+          if (wb.hasFilteredFields) {
+            const bb = wb.ref[gb];
+            if (this.changes.has(bb)) break;
+            Mb.push(wb)
           }
-          Od = Od.parent?.[Hd]
+          wb = wb.parent?.[Eb]
         }
-        for (let Wd = md.length - 1; Wd >= 0; Wd--) this.changes.set(md[Wd].ref[Kd], new Map)
+        for (let eb = Mb.length - 1; eb >= 0; eb--) this.changes.set(Mb[eb].ref[gb], new Map)
       }
-      remove(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bW,
-          md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Wd = dd?.[Hd];
-        if (!Wd) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${nW(dd)}`), this;
-        const Rd = Wd.parent?.[Hd];
-        if (Rd?.isStreamCollection) return this.unmarkVisible(Wd), this.iterable && !md && AW(this.items, this.items.indexOf(dd)),
-          function(dd, Od, md, Wd, Rd) {
-            const Xd = dd._stream;
-            if (void 0 === Xd) return !1;
-            const Kd = Xd.pendingByView.get(Od);
-            if (Kd?.has(Wd)) return Kd.delete(Wd), !1;
-            const hd = Xd.sentByView.get(Od);
-            if (hd?.has(Wd)) {
-              hd.delete(Wd);
-              let dd = Rd.get(md);
-              return void 0 === dd && (dd = new Map, Rd.set(md, dd)), dd.set(Wd, Fd.DELETE), !0
+      remove(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ee,
+          Mb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const eb = bb?.[Eb];
+        if (!eb) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${Je(bb)}`), this;
+        const pb = eb.parent?.[Eb];
+        if (pb?.isStreamCollection) return this.unmarkVisible(eb), this.iterable && !Mb && fe(this.items, this.items.indexOf(bb)),
+          function(bb, wb, Mb, eb, pb) {
+            const Vb = bb._stream;
+            if (void 0 === Vb) return !1;
+            const gb = Vb.pendingByView.get(wb);
+            if (gb?.has(eb)) return gb.delete(eb), !1;
+            const lb = Vb.sentByView.get(wb);
+            if (lb?.has(eb)) {
+              lb.delete(eb);
+              let bb = pb.get(Mb);
+              return void 0 === bb && (bb = new Map, pb.set(Mb, bb)), bb.set(eb, Hb.DELETE), !0
             }
-          }(Wd.parent, this.id, Wd.parent[Kd], Wd.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Wd), this;
-        if (Wd.isStreamCollection) {
-          this.unmarkVisible(Wd), this.iterable && !md && AW(this.items, this.items.indexOf(dd));
-          const Od = Wd.ref,
-            Rd = Od._stream;
-          if (void 0 !== Rd) {
-            Rd.pendingByView.get(this.id)?.clear();
-            const dd = Rd.sentByView.get(this.id);
-            if (void 0 !== dd && dd.size > 0) {
-              const md = Od[Kd];
-              let Wd = this.changes.get(md);
-              void 0 === Wd && (Wd = new Map, this.changes.set(md, Wd));
-              for (const Od of dd) Wd.set(Od, Fd.DELETE);
-              dd.clear()
+          }(eb.parent, this.id, eb.parent[gb], eb.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(eb), this;
+        if (eb.isStreamCollection) {
+          this.unmarkVisible(eb), this.iterable && !Mb && fe(this.items, this.items.indexOf(bb));
+          const wb = eb.ref,
+            pb = wb._stream;
+          if (void 0 !== pb) {
+            pb.pendingByView.get(this.id)?.clear();
+            const bb = pb.sentByView.get(this.id);
+            if (void 0 !== bb && bb.size > 0) {
+              const Mb = wb[gb];
+              let eb = this.changes.get(Mb);
+              void 0 === eb && (eb = new Map, this.changes.set(Mb, eb));
+              for (const wb of bb) eb.set(wb, Hb.DELETE);
+              bb.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(Wd), this.iterable && !md && AW(this.items, this.items.indexOf(dd));
-        const Xd = Wd.ref,
-          hd = Xd.constructor[Symbol.metadata],
-          vd = Xd[Kd];
-        this._touchAncestorsOf(Wd);
-        let Qd = this.changes.get(vd);
-        if (void 0 === Qd && (Qd = new Map, this.changes.set(vd, Qd)), Od === bW) {
-          const dd = Wd.parent;
-          if (dd && !ZO.isValidInstance(dd) && Wd.isFiltered) {
-            const Od = Rd.isArray ? Wd : Wd.parentIndex,
-              md = dd[Kd];
-            let Xd = this.changes.get(md);
-            void 0 === Xd ? (Xd = new Map, this.changes.set(md, Xd)) : Xd.get(Od) === Fd.ADD && this._dropPendingEntries(Wd), Xd.set(Od, Fd.DELETE), this._recursiveDeleteVisibleChangeTree(Wd)
-          } else hd?.[Sd]?.forEach((dd => this._removeViewField(Wd, Qd, dd)))
+        this.unmarkVisible(eb), this.iterable && !Mb && fe(this.items, this.items.indexOf(bb));
+        const Vb = eb.ref,
+          lb = Vb.constructor[Symbol.metadata],
+          Lb = Vb[gb];
+        this._touchAncestorsOf(eb);
+        let Ib = this.changes.get(Lb);
+        if (void 0 === Ib && (Ib = new Map, this.changes.set(Lb, Ib)), wb === Ee) {
+          const bb = eb.parent;
+          if (bb && !nw.isValidInstance(bb) && eb.isFiltered) {
+            const wb = pb.isArray ? eb : eb.parentIndex,
+              Mb = bb[gb];
+            let Vb = this.changes.get(Mb);
+            void 0 === Vb ? (Vb = new Map, this.changes.set(Mb, Vb)) : Vb.get(wb) === Hb.ADD && this._dropPendingEntries(eb), Vb.set(wb, Hb.DELETE), this._recursiveDeleteVisibleChangeTree(eb)
+          } else lb?.[Db]?.forEach((bb => this._removeViewField(eb, Ib, bb)))
         } else {
-          const dd = hd?.[sd];
-          if (void 0 !== dd)
-            for (let md = Od; md > 0; md &= md - 1) dd[md & -md]?.forEach((dd => this._removeViewField(Wd, Qd, dd)))
+          const bb = lb?.[cb];
+          if (void 0 !== bb)
+            for (let Mb = wb; Mb > 0; Mb &= Mb - 1) bb[Mb & -Mb]?.forEach((bb => this._removeViewField(eb, Ib, bb)))
         }
-        return void 0 === Od ? this.removeAllTagsOnTree(Wd) : this.removeTag(Wd, Od), this
+        return void 0 === wb ? this.removeAllTagsOnTree(eb) : this.removeTag(eb, wb), this
       }
-      has(dd) {
-        return this.isVisible(dd[Hd])
+      has(bb) {
+        return this.isVisible(bb[Eb])
       }
-      hasTag(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bW;
-        return this.hasTagOnTree(dd[Hd], Od)
+      hasTag(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ee;
+        return this.hasTagOnTree(bb[Eb], wb)
       }
-      subscribe(dd, Od) {
-        const md = dd?.[Hd];
-        if (!md) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${nW(dd)}`), this;
-        if (void 0 === this._root && void 0 !== md.root && this._bindRoot(md.root), void 0 !== Od)
-          if (md.isStreamCollection) {
-            const md = BO(dd);
-            null === Od ? md.priorityByView?.delete(this.id) : (md.priorityByView ??= new Map).set(this.id, Od)
+      subscribe(bb, wb) {
+        const Mb = bb?.[Eb];
+        if (!Mb) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${Je(bb)}`), this;
+        if (void 0 === this._root && void 0 !== Mb.root && this._bindRoot(Mb.root), void 0 !== wb)
+          if (Mb.isStreamCollection) {
+            const Mb = rw(bb);
+            null === wb ? Mb.priorityByView?.delete(this.id) : (Mb.priorityByView ??= new Map).set(this.id, wb)
           } else {
-            const Od = dd?.constructor?.name ?? "collection",
-              Wd = md.parent;
-            if (void 0 === Wd) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Od} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const wb = bb?.constructor?.name ?? "collection",
+              eb = Mb.parent;
+            if (void 0 === eb) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${wb} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const dd = Wd?.constructor?.[Symbol.metadata]?.[md.parentIndex]?.name,
-                Fd = dd ? `${Wd.constructor.name}#${dd}` : Od;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Fd} is a ${Od}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const bb = eb?.constructor?.[Symbol.metadata]?.[Mb.parentIndex]?.name,
+                Hb = bb ? `${eb.constructor.name}#${bb}` : wb;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Hb} is a ${wb}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(md)) return this;
-        const Wd = void 0 !== md.parent && !this.isVisible(md);
-        if (Wd ? (this.addParentOf(md, bW), this._add(dd, bW, !1, !1)) : this.markVisible(md), this._setSubscribed(md), md.isStreamCollection) {
-          const Od = dd;
-          md.forEachChild(((dd, md) => {
-            iO(Od, this.id, md)
+          } if (this.isSubscribed(Mb)) return this;
+        const eb = void 0 !== Mb.parent && !this.isVisible(Mb);
+        if (eb ? (this.addParentOf(Mb, Ee), this._add(bb, Ee, !1, !1)) : this.markVisible(Mb), this._setSubscribed(Mb), Mb.isStreamCollection) {
+          const wb = bb;
+          Mb.forEachChild(((bb, Mb) => {
+            fw(wb, this.id, Mb)
           }))
-        } else Wd || md.forEachChild((dd => {
-          this.markVisible(dd)
+        } else eb || Mb.forEachChild((bb => {
+          this.markVisible(bb)
         }));
         return this
       }
-      unsubscribe(dd) {
-        const Od = dd?.[Hd];
-        if (!Od) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${nW(dd)}`), this;
-        if (!this.isSubscribed(Od)) return this;
-        this._clearSubscribed(Od);
-        const md = Od.ref[Kd];
-        if (Od.isStreamCollection) {
-          const Od = dd._stream;
-          if (void 0 !== Od) {
-            Od.pendingByView.get(this.id)?.clear();
-            const dd = Od.sentByView.get(this.id);
-            if (void 0 !== dd && dd.size > 0) {
-              let Od = this.changes.get(md);
-              void 0 === Od && (Od = new Map, this.changes.set(md, Od));
-              for (const md of dd) Od.set(md, Fd.DELETE);
-              dd.clear()
+      unsubscribe(bb) {
+        const wb = bb?.[Eb];
+        if (!wb) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${Je(bb)}`), this;
+        if (!this.isSubscribed(wb)) return this;
+        this._clearSubscribed(wb);
+        const Mb = wb.ref[gb];
+        if (wb.isStreamCollection) {
+          const wb = bb._stream;
+          if (void 0 !== wb) {
+            wb.pendingByView.get(this.id)?.clear();
+            const bb = wb.sentByView.get(this.id);
+            if (void 0 !== bb && bb.size > 0) {
+              let wb = this.changes.get(Mb);
+              void 0 === wb && (wb = new Map, this.changes.set(Mb, wb));
+              for (const Mb of bb) wb.set(Mb, Hb.DELETE);
+              bb.clear()
             }
           }
         } else {
-          const dd = Od.isArray;
-          let Wd = this.changes.get(md);
-          Od.forEachChild(((Od, Rd) => {
-            void 0 === Wd && (Wd = new Map, this.changes.set(md, Wd)), Wd.set(dd ? Od : Rd, Fd.DELETE), this.unmarkVisible(Od)
+          const bb = wb.isArray;
+          let eb = this.changes.get(Mb);
+          wb.forEachChild(((wb, pb) => {
+            void 0 === eb && (eb = new Map, this.changes.set(Mb, eb)), eb.set(bb ? wb : pb, Hb.DELETE), this.unmarkVisible(wb)
           }))
         }
-        return this.unmarkVisible(Od), this
+        return this.unmarkVisible(wb), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let dd = 0, Od = this.items.length; dd < Od; dd++) this.remove(this.items[dd], bW, !0);
+        for (let bb = 0, wb = this.items.length; bb < wb; bb++) this.remove(this.items[bb], Ee, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(dd) {
-        let Od = this.isVisible(dd);
-        if (!Od && dd.isVisibilitySharedWithParent)
-          if (this.isVisible(dd.parent[Hd])) this.markVisible(dd), Od = !0;
+      isChangeTreeVisible(bb) {
+        let wb = this.isVisible(bb);
+        if (!wb && bb.isVisibilitySharedWithParent)
+          if (this.isVisible(bb.parent[Eb])) this.markVisible(bb), wb = !0;
           else
-            for (let md = dd.extraParents; void 0 !== md; md = md.next) {
-              const Wd = md.ref[Hd];
-              if (Wd.isFiltered && this.isVisible(Wd)) {
-                this.markVisible(dd), Od = !0;
+            for (let Mb = bb.extraParents; void 0 !== Mb; Mb = Mb.next) {
+              const eb = Mb.ref[Eb];
+              if (eb.isFiltered && this.isVisible(eb)) {
+                this.markVisible(bb), wb = !0;
                 break
               }
             }
-        return Od
+        return wb
       }
-      _recursiveDeleteVisibleChangeTree(dd) {
-        dd.forEachChild((dd => {
-          this.unmarkVisible(dd), this._recursiveDeleteVisibleChangeTree(dd)
+      _recursiveDeleteVisibleChangeTree(bb) {
+        bb.forEachChild((bb => {
+          this.unmarkVisible(bb), this._recursiveDeleteVisibleChangeTree(bb)
         }))
       }
-      _dropPendingEntries(dd) {
-        this.changes.delete(dd.ref[Kd]), dd.forEachChild((dd => this._dropPendingEntries(dd)))
+      _dropPendingEntries(bb) {
+        this.changes.delete(bb.ref[gb]), bb.forEachChild((bb => this._dropPendingEntries(bb)))
       }
-      _removeViewField(dd, Od, md) {
-        const Wd = Od.get(md) === Fd.ADD;
-        Od.set(md, Fd.DELETE);
-        const Rd = dd.ref[dd.encDescriptor.names[md]],
-          Xd = Rd?.[Hd];
-        Xd && (this.unmarkVisible(Xd), this._recursiveDeleteVisibleChangeTree(Xd), Wd && this._dropPendingEntries(Xd))
+      _removeViewField(bb, wb, Mb) {
+        const eb = wb.get(Mb) === Hb.ADD;
+        wb.set(Mb, Hb.DELETE);
+        const pb = bb.ref[bb.encDescriptor.names[Mb]],
+          Vb = pb?.[Eb];
+        Vb && (this.unmarkVisible(Vb), this._recursiveDeleteVisibleChangeTree(Vb), eb && this._dropPendingEntries(Vb))
       }
     }
 
-    function PW(dd) {
-      dd.structSwitchEmitted || (dd.shouldEmitSwitch && (dd.buffer[dd.it.offset++] = 255, WO.number(dd.buffer, dd.ref[Kd], dd.it)), dd.structSwitchEmitted = !0)
+    function Ne(bb) {
+      bb.structSwitchEmitted || (bb.shouldEmitSwitch && (bb.buffer[bb.it.offset++] = 255, ww.number(bb.buffer, bb.ref[gb], bb.it)), bb.structSwitchEmitted = !0)
     }
 
-    function zW(dd, Od) {
-      DW(dd, Od, Fd.ADD)
+    function ve(bb, wb) {
+      qe(bb, wb, Hb.ADD)
     }
 
-    function cW(dd, Od) {
-      if (Od._fullSyncGen === dd.gen) return;
-      Od._fullSyncGen = dd.gen;
-      if (!dd.hasView || dd.view.isChangeTreeVisible(Od)) {
-        const md = Od.encDescriptor;
-        dd.changeTree = Od, dd.ref = Od.ref, dd.encoder = md.encoder, dd.filter = md.filter, dd.metadata = md.metadata, dd.treeIsFiltered = Od.isFiltered, dd.isSchema = md.isSchema, dd.filterBitmask = md.filterBitmask, dd.tags = md.tags, dd.structSwitchEmitted = !1, dd.shouldEmitSwitch = dd.hasView || dd.it.offset > dd.initialOffset || Od !== dd.rootChangeTree, Od.isArray && Od.collDirty.size > 0 && (Od.flags |= 512), Xm(Od, dd, zW)
+    function Qe(bb, wb) {
+      if (wb._fullSyncGen === bb.gen) return;
+      wb._fullSyncGen = bb.gen;
+      if (!bb.hasView || bb.view.isChangeTreeVisible(wb)) {
+        const Mb = wb.encDescriptor;
+        bb.changeTree = wb, bb.ref = wb.ref, bb.encoder = Mb.encoder, bb.filter = Mb.filter, bb.metadata = Mb.metadata, bb.treeIsFiltered = wb.isFiltered, bb.isSchema = Mb.isSchema, bb.filterBitmask = Mb.filterBitmask, bb.tags = Mb.tags, bb.structSwitchEmitted = !1, bb.shouldEmitSwitch = bb.hasView || bb.it.offset > bb.initialOffset || wb !== bb.rootChangeTree, wb.isArray && wb.collDirty.size > 0 && (wb.flags |= 512), pM(wb, bb, ve)
       }
-      Ym(Od, dd, jW)
+      sM(wb, bb, Ge)
     }
 
-    function jW(dd, Od, md) {
-      cW(dd, Od)
+    function Ge(bb, wb, Mb) {
+      Qe(bb, wb)
     }
 
-    function DW(dd, Od, md) {
-      if (Od < 0) {
-        if (dd.treeIsFiltered !== dd.emitFiltered) return;
-        return PW(dd), void(dd.buffer[dd.it.offset++] = 255 & Math.abs(Od))
+    function qe(bb, wb, Mb) {
+      if (wb < 0) {
+        if (bb.treeIsFiltered !== bb.emitFiltered) return;
+        return Ne(bb), void(bb.buffer[bb.it.offset++] = 255 & Math.abs(wb))
       }
-      if ((dd.isSchema ? dd.treeIsFiltered || (Od < 32 ? 0 !== (dd.filterBitmask & 1 << Od) : void 0 !== dd.tags[Od]) : dd.treeIsFiltered) !== dd.emitFiltered) return;
-      const Wd = dd.isEncodeAll ? Fd.ADD : md;
-      void 0 !== Wd && (void 0 === dd.filter || dd.filter(dd.ref, Od, dd.view)) && (PW(dd), dd.encoder(dd.self, dd.buffer, dd.changeTree, Od, Wd, dd.it, dd.isEncodeAll, dd.hasView, dd.metadata))
+      if ((bb.isSchema ? bb.treeIsFiltered || (wb < 32 ? 0 !== (bb.filterBitmask & 1 << wb) : void 0 !== bb.tags[wb]) : bb.treeIsFiltered) !== bb.emitFiltered) return;
+      const eb = bb.isEncodeAll ? Hb.ADD : Mb;
+      void 0 !== eb && (void 0 === bb.filter || bb.filter(bb.ref, wb, bb.view)) && (Ne(bb), bb.encoder(bb.self, bb.buffer, bb.changeTree, wb, eb, bb.it, bb.isEncodeAll, bb.hasView, bb.metadata))
     }
 
-    function eW(dd, Od) {
-      const md = new Uint8Array(dd.length + Od.length);
-      return md.set(dd, 0), md.set(Od, dd.length), md
+    function ae(bb, wb) {
+      const Mb = new Uint8Array(bb.length + wb.length);
+      return Mb.set(bb, 0), Mb.set(wb, bb.length), Mb
     }
-    class IW {
+    class ie {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(IW.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(ie.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(dd, Od) {
-        this.context = cO.cache(dd.constructor), this.root = Od ?? new iW(this.context), this.setState(dd)
+      constructor(bb, wb) {
+        this.context = Gw.cache(bb.constructor), this.root = wb ?? new Ze(this.context), this.setState(bb)
       }
-      setState(dd) {
-        this.state = dd, this.state[Hd].setRoot(this.root)
+      setState(bb) {
+        this.state = bb, this.state[Eb].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Od = arguments.length > 1 ? arguments[1] : void 0,
-          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dd.offset;
-        return this._encodeChannel(dd, Od, md, Wd, !1)
+          wb = arguments.length > 1 ? arguments[1] : void 0,
+          Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb.offset;
+        return this._encodeChannel(bb, wb, Mb, eb, !1)
       }
       encodeUnreliable() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Od = arguments.length > 1 ? arguments[1] : void 0,
-          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dd.offset;
-        return this._encodeChannel(dd, Od, md, Wd, !0)
+          wb = arguments.length > 1 ? arguments[1] : void 0,
+          Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bb.offset;
+        return this._encodeChannel(bb, wb, Mb, eb, !0)
       }
-      _encodeChannel(dd, Od, md, Wd, Fd) {
-        this.root.pendingFilterRefresh.length > 0 && hm(this.root);
-        const Rd = void 0 !== Od,
-          Xd = this.state[Hd],
-          Kd = this._encodeCtx;
-        Kd.self = this, Kd.buffer = md, Kd.it = dd, Kd.view = Od, Kd.isEncodeAll = !1, Kd.hasView = Rd, Kd.emitFiltered = Rd;
-        let hd = Fd ? this.root.unreliableChanges : this.root.changes;
-        for (; hd = hd.next;) {
-          const md = hd.changeTree;
-          if (Rd && !Od.isChangeTreeVisible(md)) continue;
-          const vd = Fd ? md.unreliableRecorder : md;
-          if (!vd || !vd.has()) continue;
-          const Qd = md.encDescriptor;
-          Kd.changeTree = md, Kd.ref = md.ref, Kd.encoder = Qd.encoder, Kd.filter = Qd.filter, Kd.metadata = Qd.metadata, Kd.treeIsFiltered = md.isFiltered, Kd.isSchema = Qd.isSchema, Kd.filterBitmask = Qd.filterBitmask, Kd.tags = Qd.tags, Kd.structSwitchEmitted = !1, Kd.isRootTree = md === Xd, Kd.shouldEmitSwitch = Rd || dd.offset > Wd || !Kd.isRootTree, vd.forEachWithCtx(Kd, DW)
+      _encodeChannel(bb, wb, Mb, eb, Hb) {
+        this.root.pendingFilterRefresh.length > 0 && gM(this.root);
+        const pb = void 0 !== wb,
+          Vb = this.state[Eb],
+          gb = this._encodeCtx;
+        gb.self = this, gb.buffer = Mb, gb.it = bb, gb.view = wb, gb.isEncodeAll = !1, gb.hasView = pb, gb.emitFiltered = pb;
+        let lb = Hb ? this.root.unreliableChanges : this.root.changes;
+        for (; lb = lb.next;) {
+          const Mb = lb.changeTree;
+          if (pb && !wb.isChangeTreeVisible(Mb)) continue;
+          const Lb = Hb ? Mb.unreliableRecorder : Mb;
+          if (!Lb || !Lb.has()) continue;
+          const Ib = Mb.encDescriptor;
+          gb.changeTree = Mb, gb.ref = Mb.ref, gb.encoder = Ib.encoder, gb.filter = Ib.filter, gb.metadata = Ib.metadata, gb.treeIsFiltered = Mb.isFiltered, gb.isSchema = Ib.isSchema, gb.filterBitmask = Ib.filterBitmask, gb.tags = Ib.tags, gb.structSwitchEmitted = !1, gb.isRootTree = Mb === Vb, gb.shouldEmitSwitch = pb || bb.offset > eb || !gb.isRootTree, Lb.forEachWithCtx(gb, qe)
         }
-        return Fd || Rd || !this._isStreamBroadcastMode || this._emitStreamBroadcast(md, dd), dd.offset > md.byteLength ? (md = this._resizeBuffer(md, dd.offset), dd.offset = Wd, this._encodeChannel(dd, Od, md, Wd, Fd)) : md.subarray(0, dd.offset)
+        return Hb || pb || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Mb, bb), bb.offset > Mb.byteLength ? (Mb = this._resizeBuffer(Mb, bb.offset), bb.offset = eb, this._encodeChannel(bb, wb, Mb, eb, Hb)) : Mb.subarray(0, bb.offset)
       }
-      encodeFullSync(dd, Od, md, Wd) {
-        let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : dd.offset;
-        this.root.pendingFilterRefresh.length > 0 && hm(this.root);
-        const Rd = void 0 !== Wd,
-          Xd = this.state[Hd],
-          Kd = this._encodeCtx;
-        return Kd.self = this, Kd.buffer = Od, Kd.it = dd, Kd.view = Wd, Kd.isEncodeAll = !0, Kd.hasView = Rd, Kd.emitFiltered = md, Kd.gen = ++this._fullSyncGen, Kd.initialOffset = Fd, Kd.rootChangeTree = Xd, cW(Kd, Xd), dd.offset > Od.byteLength ? (Od = this._resizeBuffer(Od, dd.offset), dd.offset = Fd, this.encodeFullSync(dd, Od, md, Wd, Fd)) : Od.subarray(0, dd.offset)
+      encodeFullSync(bb, wb, Mb, eb) {
+        let Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : bb.offset;
+        this.root.pendingFilterRefresh.length > 0 && gM(this.root);
+        const pb = void 0 !== eb,
+          Vb = this.state[Eb],
+          gb = this._encodeCtx;
+        return gb.self = this, gb.buffer = wb, gb.it = bb, gb.view = eb, gb.isEncodeAll = !0, gb.hasView = pb, gb.emitFiltered = Mb, gb.gen = ++this._fullSyncGen, gb.initialOffset = Hb, gb.rootChangeTree = Vb, Qe(gb, Vb), bb.offset > wb.byteLength ? (wb = this._resizeBuffer(wb, bb.offset), bb.offset = Hb, this.encodeFullSync(bb, wb, Mb, eb, Hb)) : wb.subarray(0, bb.offset)
       }
-      _resizeBuffer(dd, Od) {
-        const md = Math.ceil(Od / IW.BUFFER_SIZE) * IW.BUFFER_SIZE,
-          Wd = new Uint8Array(md);
-        return Wd.set(dd), dd === this.sharedBuffer && (this.sharedBuffer = Wd), Wd
+      _resizeBuffer(bb, wb) {
+        const Mb = Math.ceil(wb / ie.BUFFER_SIZE) * ie.BUFFER_SIZE,
+          eb = new Uint8Array(Mb);
+        return eb.set(bb), bb === this.sharedBuffer && (this.sharedBuffer = eb), eb
       }
       encodeAll() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(dd, Od, !1)
+          wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(bb, wb, !1)
       }
-      encodeAllView(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Fd = md.offset;
-        return Wd = this.encodeFullSync(md, Wd, !0, dd, Fd), eW(Wd.subarray(0, Od), Wd.subarray(Fd, md.offset))
+      encodeAllView(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Hb = Mb.offset;
+        return eb = this.encodeFullSync(Mb, eb, !0, bb, Hb), ae(eb.subarray(0, wb), eb.subarray(Hb, Mb.offset))
       }
-      ensureCapacity(dd, Od) {
-        if (Od + IW.BUFFER_SIZE <= dd.byteLength) return dd;
-        const md = Math.ceil((Od + IW.BUFFER_SIZE) / IW.BUFFER_SIZE) * IW.BUFFER_SIZE,
-          Wd = new Uint8Array(md);
-        return Wd.set(dd.subarray(0, Od)), dd === this.sharedBuffer && (this.sharedBuffer = Wd), Wd
+      ensureCapacity(bb, wb) {
+        if (wb + ie.BUFFER_SIZE <= bb.byteLength) return bb;
+        const Mb = Math.ceil((wb + ie.BUFFER_SIZE) / ie.BUFFER_SIZE) * ie.BUFFER_SIZE,
+          eb = new Uint8Array(Mb);
+        return eb.set(bb.subarray(0, wb)), bb === this.sharedBuffer && (this.sharedBuffer = eb), eb
       }
-      encodeView(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          Rd = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const Xd = md.offset;
-        this._emitStreamPriority(dd);
-        for (const hd of dd.changes.keys()) {
-          const Od = dd.changes.get(hd),
-            Rd = this.root.changeTrees[hd];
-          if (void 0 === Rd) {
-            dd.changes.delete(hd);
+      encodeView(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          pb = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const Vb = Mb.offset;
+        this._emitStreamPriority(bb);
+        for (const lb of bb.changes.keys()) {
+          const wb = bb.changes.get(lb),
+            pb = this.root.changeTrees[lb];
+          if (void 0 === pb) {
+            bb.changes.delete(lb);
             continue
           }
-          if (0 === Od.size) continue;
-          const Xd = Rd.encDescriptor,
-            vd = Xd.encoder,
-            Qd = Xd.metadata,
-            td = Rd.ref,
-            Nd = Rd.refTarget;
-          Wd = this.ensureCapacity(Wd, md.offset), Wd[md.offset++] = 255, WO.number(Wd, td[Kd], md);
-          for (const [hd, qd] of Od) {
-            let Od;
-            if (-1 === hd) {
-              const dd = Nd.tmpItems,
-                Od = Nd.deletedIndexes;
-              for (let Xd = 0; Xd < dd.length; Xd++) void 0 !== dd[Xd] && !0 !== Od[Xd] && vd(this, Wd, Rd, Xd, Fd.ADD, md, !1, !0, Qd);
+          if (0 === wb.size) continue;
+          const Vb = pb.encDescriptor,
+            Lb = Vb.encoder,
+            Ib = Vb.metadata,
+            Ob = pb.ref,
+            tb = pb.refTarget;
+          eb = this.ensureCapacity(eb, Mb.offset), eb[Mb.offset++] = 255, ww.number(eb, Ob[gb], Mb);
+          for (const [lb, Cb] of wb) {
+            let wb;
+            if (-1 === lb) {
+              const bb = tb.tmpItems,
+                wb = tb.deletedIndexes;
+              for (let Vb = 0; Vb < bb.length; Vb++) void 0 !== bb[Vb] && !0 !== wb[Vb] && Lb(this, eb, pb, Vb, Hb.ADD, Mb, !1, !0, Ib);
               continue
             }
-            if ("number" === typeof hd) Od = hd;
+            if ("number" === typeof lb) wb = lb;
             else {
-              const md = hd.indexInParent(td);
-              if (void 0 === md) continue;
-              if (Od = md, qd === Fd.ADD && Rd.getChange(Od) === Fd.DELETE) {
-                dd.changes.delete(hd.ref[Kd]);
+              const Mb = lb.indexInParent(Ob);
+              if (void 0 === Mb) continue;
+              if (wb = Mb, Cb === Hb.ADD && pb.getChange(wb) === Hb.DELETE) {
+                bb.changes.delete(lb.ref[gb]);
                 continue
               }
             }
-            vd(this, Wd, Rd, Od, void 0 !== Nd[od](Od) && qd || Fd.DELETE, md, !1, !0, Qd)
+            Lb(this, eb, pb, wb, void 0 !== tb[Ub](wb) && Cb || Hb.DELETE, Mb, !1, !0, Ib)
           }
         }
-        return dd.changes.clear(), Wd = this.encode(md, dd, Wd), Rd ? eW(Wd.subarray(0, Od), Wd.subarray(Xd, md.offset)) : Wd.subarray(Xd, md.offset)
+        return bb.changes.clear(), eb = this.encode(Mb, bb, eb), pb ? ae(eb.subarray(0, wb), eb.subarray(Vb, Mb.offset)) : eb.subarray(Vb, Mb.offset)
       }
-      encodeUnreliableView(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Fd = md.offset;
-        return Wd = this.encodeUnreliable(md, dd, Wd, Fd), eW(Wd.subarray(0, Od), Wd.subarray(Fd, md.offset))
+      encodeUnreliableView(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Hb = Mb.offset;
+        return eb = this.encodeUnreliable(Mb, bb, eb, Hb), ae(eb.subarray(0, wb), eb.subarray(Hb, Mb.offset))
       }
-      _emitStreamBroadcast(dd, Od) {
-        const md = this.root.streamTrees;
-        for (const Wd of md) {
-          const md = Wd,
-            Rd = md[Hd],
-            Xd = md[Kd];
-          if (void 0 === Xd) continue;
-          const hd = md._stream,
-            vd = hd.broadcastDeletes,
-            Qd = hd.broadcastPending,
-            td = hd.sentBroadcast,
-            Nd = vd.size > 0,
-            qd = Qd.size > 0,
-            yd = Rd.encDescriptor,
-            bd = yd.encoder,
-            Td = yd.metadata;
-          if (Nd || qd) {
-            if (dd[Od.offset++] = 255, WO.number(dd, Xd, Od), Nd) {
-              for (const md of vd) bd(this, dd, Rd, md, Fd.DELETE, Od, !1, !1, Td);
-              vd.clear()
+      _emitStreamBroadcast(bb, wb) {
+        const Mb = this.root.streamTrees;
+        for (const eb of Mb) {
+          const Mb = eb,
+            pb = Mb[Eb],
+            Vb = Mb[gb];
+          if (void 0 === Vb) continue;
+          const lb = Mb._stream,
+            Lb = lb.broadcastDeletes,
+            Ib = lb.broadcastPending,
+            Ob = lb.sentBroadcast,
+            tb = Lb.size > 0,
+            Cb = Ib.size > 0,
+            Fb = pb.encDescriptor,
+            Bb = Fb.encoder,
+            sb = Fb.metadata;
+          if (tb || Cb) {
+            if (bb[wb.offset++] = 255, ww.number(bb, Vb, wb), tb) {
+              for (const Mb of Lb) Bb(this, bb, pb, Mb, Hb.DELETE, wb, !1, !1, sb);
+              Lb.clear()
             }
-            const Wd = hd.maxPerTick,
-              qd = [];
-            let yd = 0;
-            const pd = [];
-            for (const Xd of Qd) {
-              if (yd >= Wd) break;
-              const Kd = md[od](Xd);
-              void 0 !== Kd ? (bd(this, dd, Rd, Xd, Fd.ADD, Od, !1, !1, Td), td.add(Xd), qd.push(Kd), pd.push(Xd), yd++) : pd.push(Xd)
+            const eb = lb.maxPerTick,
+              Cb = [];
+            let Fb = 0;
+            const mb = [];
+            for (const Vb of Ib) {
+              if (Fb >= eb) break;
+              const gb = Mb[Ub](Vb);
+              void 0 !== gb ? (Bb(this, bb, pb, Vb, Hb.ADD, wb, !1, !1, sb), Ob.add(Vb), Cb.push(gb), mb.push(Vb), Fb++) : mb.push(Vb)
             }
-            for (const dd of pd) Qd.delete(dd);
-            for (const md of qd) {
-              const Wd = md[Hd];
-              if (void 0 === Wd) continue;
-              const Rd = md[Kd];
-              if (void 0 === Rd) continue;
-              dd[Od.offset++] = 255, WO.number(dd, Rd, Od);
-              const Xd = Wd.encDescriptor,
-                hd = Xd.encoder,
-                vd = Xd.metadata;
-              Wd.forEachLive((md => {
-                ZO.hasUnreliableAtIndex(vd, md) || hd(this, dd, Wd, md, Fd.ADD, Od, !1, !1, vd)
+            for (const bb of mb) Ib.delete(bb);
+            for (const Mb of Cb) {
+              const eb = Mb[Eb];
+              if (void 0 === eb) continue;
+              const pb = Mb[gb];
+              if (void 0 === pb) continue;
+              bb[wb.offset++] = 255, ww.number(bb, pb, wb);
+              const Vb = eb.encDescriptor,
+                lb = Vb.encoder,
+                Lb = Vb.metadata;
+              eb.forEachLive((Mb => {
+                nw.hasUnreliableAtIndex(Lb, Mb) || lb(this, bb, eb, Mb, Hb.ADD, wb, !1, !1, Lb)
               }))
             }
           }
-          for (const Wd of td) {
-            const Fd = md[od](Wd);
-            if (void 0 === Fd) continue;
-            const Rd = Fd[Hd];
-            if (void 0 === Rd || !Rd.has()) continue;
-            const Xd = Fd[Kd];
-            if (void 0 === Xd) continue;
-            dd[Od.offset++] = 255, WO.number(dd, Xd, Od);
-            const hd = Rd.encDescriptor,
-              vd = hd.encoder,
-              Qd = hd.metadata;
-            Rd.forEach(((md, Wd) => {
-              md < 0 || ZO.hasUnreliableAtIndex(Qd, md) || vd(this, dd, Rd, md, Wd, Od, !1, !1, Qd)
+          for (const eb of Ob) {
+            const Hb = Mb[Ub](eb);
+            if (void 0 === Hb) continue;
+            const pb = Hb[Eb];
+            if (void 0 === pb || !pb.has()) continue;
+            const Vb = Hb[gb];
+            if (void 0 === Vb) continue;
+            bb[wb.offset++] = 255, ww.number(bb, Vb, wb);
+            const lb = pb.encDescriptor,
+              Lb = lb.encoder,
+              Ib = lb.metadata;
+            pb.forEach(((Mb, eb) => {
+              Mb < 0 || nw.hasUnreliableAtIndex(Ib, Mb) || Lb(this, bb, pb, Mb, eb, wb, !1, !1, Ib)
             }))
           }
         }
       }
-      _emitStreamPriority(dd) {
-        const Od = this.root.streamTrees;
-        if (0 === Od.size) return;
-        const md = dd.id;
-        for (const Wd of Od) {
-          const Od = Wd,
-            Rd = Od._stream,
-            Xd = Rd.pendingByView.get(md);
-          if (void 0 === Xd || 0 === Xd.size) continue;
-          const hd = Rd.priorityByView?.get(md),
-            vd = void 0 !== hd,
-            Qd = Rd.priority,
-            td = Rd.maxPerTick,
-            Nd = [],
-            qd = [];
-          if (vd || void 0 !== Qd) {
-            const md = [],
-              Wd = [];
-            let Fd = 0;
-            for (const Rd of Xd) {
-              const Xd = Od[od](Rd);
-              if (void 0 === Xd) {
-                qd.push(Rd);
+      _emitStreamPriority(bb) {
+        const wb = this.root.streamTrees;
+        if (0 === wb.size) return;
+        const Mb = bb.id;
+        for (const eb of wb) {
+          const wb = eb,
+            pb = wb._stream,
+            Vb = pb.pendingByView.get(Mb);
+          if (void 0 === Vb || 0 === Vb.size) continue;
+          const lb = pb.priorityByView?.get(Mb),
+            Lb = void 0 !== lb,
+            Ib = pb.priority,
+            Ob = pb.maxPerTick,
+            tb = [],
+            Cb = [];
+          if (Lb || void 0 !== Ib) {
+            const Mb = [],
+              eb = [];
+            let Hb = 0;
+            for (const pb of Vb) {
+              const Vb = wb[Ub](pb);
+              if (void 0 === Vb) {
+                Cb.push(pb);
                 continue
               }
-              const Kd = vd ? hd(Xd) : Qd(dd, Xd);
-              if (Fd < td) {
-                let dd = Fd++;
-                for (; dd > 0 && Wd[dd - 1] < Kd;) Wd[dd] = Wd[dd - 1], md[dd] = md[dd - 1], dd--;
-                Wd[dd] = Kd, md[dd] = Rd
-              } else if (Kd > Wd[td - 1]) {
-                let dd = td - 1;
-                for (; dd > 0 && Wd[dd - 1] < Kd;) Wd[dd] = Wd[dd - 1], md[dd] = md[dd - 1], dd--;
-                Wd[dd] = Kd, md[dd] = Rd
+              const gb = Lb ? lb(Vb) : Ib(bb, Vb);
+              if (Hb < Ob) {
+                let bb = Hb++;
+                for (; bb > 0 && eb[bb - 1] < gb;) eb[bb] = eb[bb - 1], Mb[bb] = Mb[bb - 1], bb--;
+                eb[bb] = gb, Mb[bb] = pb
+              } else if (gb > eb[Ob - 1]) {
+                let bb = Ob - 1;
+                for (; bb > 0 && eb[bb - 1] < gb;) eb[bb] = eb[bb - 1], Mb[bb] = Mb[bb - 1], bb--;
+                eb[bb] = gb, Mb[bb] = pb
               }
             }
-            for (let dd = 0; dd < Fd; dd++) Nd.push(md[dd])
+            for (let bb = 0; bb < Hb; bb++) tb.push(Mb[bb])
           } else
-            for (const dd of Xd) {
-              if (Nd.length >= td) break;
-              Nd.push(dd)
+            for (const bb of Vb) {
+              if (tb.length >= Ob) break;
+              tb.push(bb)
             }
-          for (const dd of qd) Xd.delete(dd);
-          const yd = Nd.length;
-          let bd = Rd.sentByView.get(md);
-          void 0 === bd && (bd = new Set, Rd.sentByView.set(md, bd));
-          for (let md = 0; md < yd; md++) {
-            const Wd = Nd[md],
-              Rd = Od[od](Wd);
-            if (void 0 === Rd) {
-              Xd.delete(Wd);
+          for (const bb of Cb) Vb.delete(bb);
+          const Fb = tb.length;
+          let Bb = pb.sentByView.get(Mb);
+          void 0 === Bb && (Bb = new Set, pb.sentByView.set(Mb, Bb));
+          for (let Mb = 0; Mb < Fb; Mb++) {
+            const eb = tb[Mb],
+              pb = wb[Ub](eb);
+            if (void 0 === pb) {
+              Vb.delete(eb);
               continue
             }
-            dd._addImmediate(Rd);
-            const hd = Rd[Hd];
-            if (void 0 !== hd) {
-              const Od = Rd[Kd];
-              let md = dd.changes.get(Od);
-              void 0 === md && (md = new Map, dd.changes.set(Od, md));
-              const Wd = hd.metadata;
-              hd.forEachLive((dd => {
-                ZO.hasUnreliableAtIndex(Wd, dd) || md.set(dd, Fd.ADD)
+            bb._addImmediate(pb);
+            const lb = pb[Eb];
+            if (void 0 !== lb) {
+              const wb = pb[gb];
+              let Mb = bb.changes.get(wb);
+              void 0 === Mb && (Mb = new Map, bb.changes.set(wb, Mb));
+              const eb = lb.metadata;
+              lb.forEachLive((bb => {
+                nw.hasUnreliableAtIndex(eb, bb) || Mb.set(bb, Hb.ADD)
               }))
             }
-            Xd.delete(Wd), bd.add(Wd)
+            Vb.delete(eb), Bb.add(eb)
           }
         }
       }
       discardChanges() {
-        const dd = this.root.changes;
-        let Od = dd.next;
-        const md = this.root;
-        for (; Od;) {
-          const dd = Od.next;
-          Od.changeTree.endEncode(), md.releaseNode(Od), Od = dd
+        const bb = this.root.changes;
+        let wb = bb.next;
+        const Mb = this.root;
+        for (; wb;) {
+          const bb = wb.next;
+          wb.changeTree.endEncode(), Mb.releaseNode(wb), wb = bb
         }
-        dd.next = void 0, dd.tail = void 0
+        bb.next = void 0, bb.tail = void 0
       }
       discardUnreliableChanges() {
-        const dd = this.root.unreliableChanges;
-        let Od = dd.next;
-        const md = this.root;
-        for (; Od;) {
-          const dd = Od.next;
-          Od.changeTree.endEncodeUnreliable(), md.releaseNode(Od), Od = dd
+        const bb = this.root.unreliableChanges;
+        let wb = bb.next;
+        const Mb = this.root;
+        for (; wb;) {
+          const bb = wb.next;
+          wb.changeTree.endEncodeUnreliable(), Mb.releaseNode(wb), wb = bb
         }
-        dd.next = void 0, dd.tail = void 0
+        bb.next = void 0, bb.tail = void 0
       }
-      tryEncodeTypeId(dd, Od, md, Wd) {
-        const Fd = this.context.getTypeId(Od),
-          Rd = this.context.getTypeId(md);
-        void 0 !== Rd ? Fd !== Rd && (dd[Wd.offset++] = 213, WO.number(dd, Rd, Wd)) : console.warn(`@colyseus/schema WARNING: Class "${md.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(bb, wb, Mb, eb) {
+        const Hb = this.context.getTypeId(wb),
+          pb = this.context.getTypeId(Mb);
+        void 0 !== pb ? Hb !== pb && (bb[eb.offset++] = 213, ww.number(bb, pb, eb)) : console.warn(`@colyseus/schema WARNING: Class "${Mb.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const dd = this.root;
-        if (0 === dd.streamTrees.size) return !1;
-        const Od = 0 === dd.activeViews.size;
-        for (const md of dd.streamTrees)
-          if (Od ? VO(md) : uO(md, dd)) return !0;
+        const bb = this.root;
+        if (0 === bb.streamTrees.size) return !1;
+        const wb = 0 === bb.activeViews.size;
+        for (const Mb of bb.streamTrees)
+          if (wb ? Zw(Mb) : Yw(Mb, bb)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class lW extends Error {
-      constructor(dd) {
-        super(dd), this.name = "DecodingWarning"
+    class ue extends Error {
+      constructor(bb) {
+        super(bb), this.name = "DecodingWarning"
       }
     }
-    const CW = {
+    const de = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class ZW {
+    class Pe {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(dd, Od) {
-        let md = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(dd, Od), void 0 === Od[Kd] ? (CW.value = dd, Object.defineProperty(Od, Kd, CW)) : Od[Kd] !== dd && (Od[Kd] = dd), md && (this.refCount[dd] = (this.refCount[dd] || 0) + 1), this.deletedRefs.has(dd) && this.deletedRefs.delete(dd)
+      addRef(bb, wb) {
+        let Mb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(bb, wb), void 0 === wb[gb] ? (de.value = bb, Object.defineProperty(wb, gb, de)) : wb[gb] !== bb && (wb[gb] = bb), Mb && (this.refCount[bb] = (this.refCount[bb] || 0) + 1), this.deletedRefs.has(bb) && this.deletedRefs.delete(bb)
       }
-      removeRef(dd) {
-        const Od = this.refCount[dd];
-        if (void 0 !== Od)
-          if (0 !== Od)(this.refCount[dd] = Od - 1) <= 0 && this.deletedRefs.add(dd);
+      removeRef(bb) {
+        const wb = this.refCount[bb];
+        if (void 0 !== wb)
+          if (0 !== wb)(this.refCount[bb] = wb - 1) <= 0 && this.deletedRefs.add(bb);
           else try {
-            const Od = this.refs.get(dd);
-            throw new lW(`trying to remove refId '${dd}' with 0 refCount (${Od.constructor.name}: ${JSON.stringify(Od)})`)
-          } catch (hF) {
-            console.warn(hF)
+            const wb = this.refs.get(bb);
+            throw new ue(`trying to remove refId '${bb}' with 0 refCount (${wb.constructor.name}: ${JSON.stringify(wb)})`)
+          } catch (VH) {
+            console.warn(VH)
           } else try {
-            throw new lW("trying to remove refId that doesn't exist: " + dd)
-          } catch (hF) {
-            console.warn(hF)
+            throw new ue("trying to remove refId that doesn't exist: " + bb)
+          } catch (VH) {
+            console.warn(VH)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((dd => {
-          if (this.refCount[dd] > 0) return;
-          const Od = this.refs.get(dd),
-            md = Od.constructor[Symbol.metadata];
-          if (null != md)
-            for (const Wd in md) {
-              const dd = Od[md[Wd].name];
-              if ("object" === typeof dd && dd) {
-                const Od = dd[Kd];
-                void 0 === Od || this.deletedRefs.has(Od) || this.removeRef(Od)
+        this.deletedRefs.forEach((bb => {
+          if (this.refCount[bb] > 0) return;
+          const wb = this.refs.get(bb),
+            Mb = wb.constructor[Symbol.metadata];
+          if (null != Mb)
+            for (const eb in Mb) {
+              const bb = wb[Mb[eb].name];
+              if ("object" === typeof bb && bb) {
+                const wb = bb[gb];
+                void 0 === wb || this.deletedRefs.has(wb) || this.removeRef(wb)
               }
-            } else "function" === typeof Od[yd] && Array.from(Od.values()).forEach((dd => {
-              const Od = dd[Kd];
-              void 0 === Od || this.deletedRefs.has(Od) || this.removeRef(Od)
+            } else "function" === typeof wb[Fb] && Array.from(wb.values()).forEach((bb => {
+              const wb = bb[gb];
+              void 0 === wb || this.deletedRefs.has(wb) || this.removeRef(wb)
             }));
-          this.refs.delete(dd), delete this.refCount[dd], delete this.callbacks[dd]
+          this.refs.delete(bb), delete this.refCount[bb], delete this.callbacks[bb]
         })), this.deletedRefs.clear()
       }
-      addCallback(dd, Od, md) {
-        if (void 0 === dd) {
-          const dd = "number" === typeof Od ? Fd[Od] : Od;
-          throw new Error(`Can't addCallback on '${dd}' (refId is undefined)`)
+      addCallback(bb, wb, Mb) {
+        if (void 0 === bb) {
+          const bb = "number" === typeof wb ? Hb[wb] : wb;
+          throw new Error(`Can't addCallback on '${bb}' (refId is undefined)`)
         }
-        return this.callbacks[dd] || (this.callbacks[dd] = {}), this.callbacks[dd][Od] || (this.callbacks[dd][Od] = []), this.callbacks[dd][Od].push(md), () => this.removeCallback(dd, Od, md)
+        return this.callbacks[bb] || (this.callbacks[bb] = {}), this.callbacks[bb][wb] || (this.callbacks[bb][wb] = []), this.callbacks[bb][wb].push(Mb), () => this.removeCallback(bb, wb, Mb)
       }
-      removeCallback(dd, Od, md) {
-        const Wd = this.callbacks?.[dd]?.[Od]?.indexOf(md);
-        void 0 !== Wd && -1 !== Wd && AW(this.callbacks[dd][Od], Wd)
+      removeCallback(bb, wb, Mb) {
+        const eb = this.callbacks?.[bb]?.[wb]?.indexOf(Mb);
+        void 0 !== eb && -1 !== eb && fe(this.callbacks[bb][wb], eb)
       }
     }
-    class kW {
+    class ne {
       context;
       state;
       root;
       currentRefId = 0;
-      hV;
+      iW;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(dd, Od) {
-        this.setState(dd), this.context = Od || new cO(dd.constructor)
+      constructor(bb, wb) {
+        this.setState(bb), this.context = wb || new Gw(bb.constructor)
       }
-      setState(dd) {
-        this.state = dd, this.root = new ZW, this.root.addRef(0, dd)
+      setState(bb) {
+        this.state = bb, this.root = new Pe, this.root.addRef(0, bb)
       }
-      decode(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const Fd = void 0 !== this.hV ? [] : null,
-          Rd = this.root,
-          Xd = dd.byteLength;
-        let Kd = md.constructor[Qd];
-        for (this.currentRefId = 0; Od.offset < Xd;) {
-          if (dd[Od.offset] == Wd) {
-            Od.offset++, md[Yd]?.();
-            const Wd = gO.number(dd, Od),
-              Fd = Rd.refs.get(Wd);
-            Fd ? (md = Fd, Kd = md.constructor[Qd], this.currentRefId = Wd) : (console.error(`"refId" not found: ${Wd}`, {
-              previousRef: md,
+          Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const Hb = void 0 !== this.iW ? [] : null,
+          pb = this.root,
+          Vb = bb.byteLength;
+        let gb = Mb.constructor[Ib];
+        for (this.currentRefId = 0; wb.offset < Vb;) {
+          if (bb[wb.offset] == eb) {
+            wb.offset++, Mb[hb]?.();
+            const eb = mw.number(bb, wb),
+              Hb = pb.refs.get(eb);
+            Hb ? (Mb = Hb, gb = Mb.constructor[Ib], this.currentRefId = eb) : (console.error(`"refId" not found: ${eb}`, {
+              previousRef: Mb,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(dd, Od, Xd));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(bb, wb, Vb));
             continue
-          } - 1 !== Kd(this, dd, Od, md, Fd) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(dd, Od, Xd))
+          } - 1 !== gb(this, bb, wb, Mb, Hb) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(bb, wb, Vb))
         }
-        return md[Yd]?.(), null !== this.resyncVisited && function(dd, Od) {
-          dd.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : jm(dd, dd.state, new Set, Od)
-        }(this, Fd), null !== Fd && this.hV?.(Fd), Rd.garbageCollectDeletedRefs(), Fd
+        return Mb[hb]?.(), null !== this.resyncVisited && function(bb, wb) {
+          bb.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : GM(bb, bb.state, new Set, wb)
+        }(this, Hb), null !== Hb && this.iW?.(Hb), pb.garbageCollectDeletedRefs(), Hb
       }
-      decodeResync(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(dd, Od)
+          return this.decode(bb, wb)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(dd, Od, md) {
+      skipCurrentStructure(bb, wb, Mb) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const Fd = {
-          offset: Od.offset
+        const Hb = {
+          offset: wb.offset
         };
-        for (; Od.offset < md && (dd[Od.offset] !== Wd || (Fd.offset = Od.offset + 1, !this.root.refs.has(gO.number(dd, Fd))));) Od.offset++
+        for (; wb.offset < Mb && (bb[wb.offset] !== eb || (Hb.offset = wb.offset + 1, !this.root.refs.has(mw.number(bb, Hb))));) wb.offset++
       }
-      getInstanceType(dd, Od, md) {
-        let Wd;
-        if (213 === dd[Od.offset]) {
-          Od.offset++;
-          const md = gO.number(dd, Od);
-          Wd = this.context.get(md)
+      getInstanceType(bb, wb, Mb) {
+        let eb;
+        if (213 === bb[wb.offset]) {
+          wb.offset++;
+          const Mb = mw.number(bb, wb);
+          eb = this.context.get(Mb)
         }
-        return Wd || md
+        return eb || Mb
       }
-      createInstanceOfType(dd) {
-        return dd.initializeForDecoder()
+      createInstanceOfType(bb) {
+        return bb.initializeForDecoder()
       }
-      removeChildRefs(dd, Od) {
-        const md = "string" !== typeof dd[yd],
-          Wd = dd[Kd];
-        dd.forEach(((Rd, Xd) => {
-          Od?.push({
-            ref: dd,
-            refId: Wd,
-            op: Fd.DELETE,
-            field: Xd,
+      removeChildRefs(bb, wb) {
+        const Mb = "string" !== typeof bb[Fb],
+          eb = bb[gb];
+        bb.forEach(((pb, Vb) => {
+          wb?.push({
+            ref: bb,
+            refId: eb,
+            op: Hb.DELETE,
+            field: Vb,
             value: void 0,
-            previousValue: Rd
-          }), md && this.root.removeRef(Rd[Kd])
+            previousValue: pb
+          }), Mb && this.root.removeRef(pb[gb])
         }))
       }
     }
-    const fW = SW({
-        min: yW.float64(),
-        max: yW.float64(),
-        bits: yW.uint8(),
-        mode: yW.uint8()
+    const ye = Re({
+        min: Ce.float64(),
+        max: Ce.float64(),
+        bits: Ce.uint8(),
+        mode: Ce.uint8()
       }, "QuantizedDescriptor"),
-      MW = SW({
-        name: yW.string(),
-        type: yW.string(),
-        referencedType: yW.number(),
-        childPrimitive: yW.string(),
-        quantized: yW.ref(fW).optional()
+      oe = Re({
+        name: Ce.string(),
+        type: Ce.string(),
+        referencedType: Ce.number(),
+        childPrimitive: Ce.string(),
+        quantized: Ce.ref(ye).optional()
       }, "ReflectionField"),
-      dF = SW({
-        id: yW.number(),
-        extendsId: yW.number(),
-        fields: yW.array(MW)
+      Te = Re({
+        id: Ce.number(),
+        extendsId: Ce.number(),
+        fields: Ce.array(oe)
       }, "ReflectionType"),
-      OF = SW({
-        types: yW.array(dF),
-        rootType: yW.number()
+      ke = Re({
+        types: Ce.array(Te),
+        rootType: Ce.number()
       }, "Reflection");
 
-    function mF(dd) {
-      const Od = dd.root,
-        md = Od.callbacks,
-        Wd = new WeakMap;
-      let Rd;
+    function bH(bb) {
+      const wb = bb.root,
+        Mb = wb.callbacks,
+        eb = new WeakMap;
+      let pb;
 
-      function Xd(dd, md) {
-        let vd = md.instance?.constructor[Symbol.metadata] || dd,
-          Qd = md.instance && "function" === typeof md.instance.forEach || dd && !uW.is(dd);
-        if (vd && !Qd) {
-          const dd = function(dd, Fd, Xd, hd) {
-            return hd && void 0 !== md.instance[Fd] && !Wd.has(Rd) && Xd(md.instance[Fd], void 0), Od.addCallback(dd[Kd], Fd, Xd)
+      function Vb(bb, Mb) {
+        let Lb = Mb.instance?.constructor[Symbol.metadata] || bb,
+          Ib = Mb.instance && "function" === typeof Mb.instance.forEach || bb && !ce.is(bb);
+        if (Lb && !Ib) {
+          const bb = function(bb, Hb, Vb, lb) {
+            return lb && void 0 !== Mb.instance[Hb] && !eb.has(pb) && Vb(Mb.instance[Hb], void 0), wb.addCallback(bb[gb], Hb, Vb)
           };
           return new Proxy({
-            listen: function(Od, Fd) {
-              let Xd = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (md.instance) return dd(md.instance, Od, Fd, Xd);
+            listen: function(wb, Hb) {
+              let Vb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (Mb.instance) return bb(Mb.instance, wb, Hb, Vb);
               {
-                let Kd = () => {};
-                return md.onInstanceAvailable(((md, hd) => {
-                  Kd = dd(md, Od, Fd, Xd && hd && !Wd.has(Rd))
-                })), () => Kd()
+                let gb = () => {};
+                return Mb.onInstanceAvailable(((Mb, lb) => {
+                  gb = bb(Mb, wb, Hb, Vb && lb && !eb.has(pb))
+                })), () => gb()
               }
             },
-            onChange: function(dd) {
-              return Od.addCallback(md.instance[Kd], Fd.REPLACE, dd)
+            onChange: function(bb) {
+              return wb.addCallback(Mb.instance[gb], Hb.REPLACE, bb)
             },
-            bindTo: function(dd, Wd) {
-              return Wd || (Wd = Object.keys(vd).map((dd => vd[dd].name))), Od.addCallback(md.instance[Kd], Fd.REPLACE, (() => {
-                Wd.forEach((Od => dd[Od] = md.instance[Od]))
+            bindTo: function(bb, eb) {
+              return eb || (eb = Object.keys(Lb).map((bb => Lb[bb].name))), wb.addCallback(Mb.instance[gb], Hb.REPLACE, (() => {
+                eb.forEach((wb => bb[wb] = Mb.instance[wb]))
               }))
             }
           }, {
-            get(dd, Od) {
-              const Wd = vd[vd[Od]];
-              if (Wd) {
-                const dd = md.instance?.[Od],
-                  Fd = Wd => {
-                    const Fd = hd(md.instance).listen(Od, ((dd, Od) => {
-                      Wd(dd, !1), Fd?.()
+            get(bb, wb) {
+              const eb = Lb[Lb[wb]];
+              if (eb) {
+                const bb = Mb.instance?.[wb],
+                  Hb = eb => {
+                    const Hb = lb(Mb.instance).listen(wb, ((bb, wb) => {
+                      eb(bb, !1), Hb?.()
                     }), !1);
-                    void 0 !== dd?.[Kd] && Wd(dd, !0)
+                    void 0 !== bb?.[gb] && eb(bb, !0)
                   };
-                return Xd(Wd.type, {
-                  instance: void 0 !== dd?.[Kd] && dd,
-                  parentInstance: md.instance,
-                  onInstanceAvailable: Fd
+                return Vb(eb.type, {
+                  instance: void 0 !== bb?.[gb] && bb,
+                  parentInstance: Mb.instance,
+                  onInstanceAvailable: Hb
                 })
               }
-              return dd[Od]
+              return bb[wb]
             },
-            has: (dd, Od) => void 0 !== vd[Od],
-            set(dd, Od, md) {
+            has: (bb, wb) => void 0 !== Lb[wb],
+            set(bb, wb, Mb) {
               throw new Error("not allowed")
             },
-            deleteProperty(dd, Od) {
+            deleteProperty(bb, wb) {
               throw new Error("not allowed")
             }
           })
         } {
-          const dd = function(dd, md, Xd) {
-              return Xd && dd.forEach(((dd, Od) => md(dd, Od))), Od.addCallback(dd[Kd], Fd.ADD, ((dd, Od) => {
-                Wd.set(md, !0), Rd = md, md(dd, Od), Wd.delete(md), Rd = void 0
+          const bb = function(bb, Mb, Vb) {
+              return Vb && bb.forEach(((bb, wb) => Mb(bb, wb))), wb.addCallback(bb[gb], Hb.ADD, ((bb, wb) => {
+                eb.set(Mb, !0), pb = Mb, Mb(bb, wb), eb.delete(Mb), pb = void 0
               }))
             },
-            Xd = function(dd, md) {
-              return Od.addCallback(dd[Kd], Fd.DELETE, md)
+            Vb = function(bb, Mb) {
+              return wb.addCallback(bb[gb], Hb.DELETE, Mb)
             },
-            hd = function(dd, md) {
-              return Od.addCallback(dd[Kd], Fd.REPLACE, md)
+            lb = function(bb, Mb) {
+              return wb.addCallback(bb[gb], Hb.REPLACE, Mb)
             };
           return new Proxy({
-            QE: function(Od) {
-              let Fd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (md.instance) return dd(md.instance, Od, Fd && !Wd.has(Rd));
-              if (md.onInstanceAvailable) {
-                let Xd = () => {};
-                return md.onInstanceAvailable(((md, Kd) => {
-                  Xd = dd(md, Od, Fd && Kd && !Wd.has(Rd))
-                })), () => Xd()
+            bR: function(wb) {
+              let Hb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (Mb.instance) return bb(Mb.instance, wb, Hb && !eb.has(pb));
+              if (Mb.onInstanceAvailable) {
+                let Vb = () => {};
+                return Mb.onInstanceAvailable(((Mb, gb) => {
+                  Vb = bb(Mb, wb, Hb && gb && !eb.has(pb))
+                })), () => Vb()
               }
             },
-            qS: function(dd) {
-              if (md.instance) return Xd(md.instance, dd);
-              if (md.onInstanceAvailable) {
-                let Od = () => {};
-                return md.onInstanceAvailable((md => {
-                  Od = Xd(md, dd)
-                })), () => Od()
+            FW: function(bb) {
+              if (Mb.instance) return Vb(Mb.instance, bb);
+              if (Mb.onInstanceAvailable) {
+                let wb = () => {};
+                return Mb.onInstanceAvailable((Mb => {
+                  wb = Vb(Mb, bb)
+                })), () => wb()
               }
             },
-            onChange: function(dd) {
-              if (md.instance) return hd(md.instance, dd);
-              if (md.onInstanceAvailable) {
-                let Od = () => {};
-                return md.onInstanceAvailable((md => {
-                  Od = hd(md, dd)
-                })), () => Od()
+            onChange: function(bb) {
+              if (Mb.instance) return lb(Mb.instance, bb);
+              if (Mb.onInstanceAvailable) {
+                let wb = () => {};
+                return Mb.onInstanceAvailable((Mb => {
+                  wb = lb(Mb, bb)
+                })), () => wb()
               }
             }
           }, {
-            get(dd, Od) {
-              if (!dd[Od]) throw new Error(`Can't access '${Od}' through callback proxy. access the instance directly.`);
-              return dd[Od]
+            get(bb, wb) {
+              if (!bb[wb]) throw new Error(`Can't access '${wb}' through callback proxy. access the instance directly.`);
+              return bb[wb]
             },
-            has: (dd, Od) => void 0 !== dd[Od],
-            set(dd, Od, md) {
+            has: (bb, wb) => void 0 !== bb[wb],
+            set(bb, wb, Mb) {
               throw new Error("not allowed")
             },
-            deleteProperty(dd, Od) {
+            deleteProperty(bb, wb) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function hd(dd) {
-        return Xd(void 0, {
-          instance: dd
+      function lb(bb) {
+        return Vb(void 0, {
+          instance: bb
         })
       }
-      return dd.hV = function(dd) {
-        const Od = new Set;
-        for (let Wd = 0, Rd = dd.length; Wd < Rd; Wd++) {
-          const Rd = dd[Wd],
-            Xd = Rd.refId,
-            hd = Rd.ref,
-            vd = md[Xd];
-          if (vd) {
-            if ((Rd.op & Fd.DELETE) === Fd.DELETE && uW.isSchema(Rd.previousValue)) {
-              const dd = md[Rd.previousValue[Kd]]?.[Fd.DELETE];
-              for (let Od = dd?.length - 1; Od >= 0; Od--) dd[Od]()
+      return bb.iW = function(bb) {
+        const wb = new Set;
+        for (let eb = 0, pb = bb.length; eb < pb; eb++) {
+          const pb = bb[eb],
+            Vb = pb.refId,
+            lb = pb.ref,
+            Lb = Mb[Vb];
+          if (Lb) {
+            if ((pb.op & Hb.DELETE) === Hb.DELETE && ce.isSchema(pb.previousValue)) {
+              const bb = Mb[pb.previousValue[gb]]?.[Hb.DELETE];
+              for (let wb = bb?.length - 1; wb >= 0; wb--) bb[wb]()
             }
-            if (uW.isSchema(hd)) {
-              if (!Od.has(Xd)) {
-                const dd = vd?.[Fd.REPLACE];
-                for (let Od = dd?.length - 1; Od >= 0; Od--) dd[Od]()
+            if (ce.isSchema(lb)) {
+              if (!wb.has(Vb)) {
+                const bb = Lb?.[Hb.REPLACE];
+                for (let wb = bb?.length - 1; wb >= 0; wb--) bb[wb]()
               }
-              if (vd.hasOwnProperty(Rd.field)) {
-                const dd = vd[Rd.field];
-                for (let Od = dd?.length - 1; Od >= 0; Od--) dd[Od](Rd.value, Rd.previousValue)
+              if (Lb.hasOwnProperty(pb.field)) {
+                const bb = Lb[pb.field];
+                for (let wb = bb?.length - 1; wb >= 0; wb--) bb[wb](pb.value, pb.previousValue)
               }
             } else {
-              if ((Rd.op & Fd.DELETE) === Fd.DELETE) {
-                if (void 0 !== Rd.previousValue) {
-                  const dd = vd[Fd.DELETE];
-                  for (let Od = dd?.length - 1; Od >= 0; Od--) dd[Od](Rd.previousValue, Rd.dynamicIndex ?? Rd.field)
+              if ((pb.op & Hb.DELETE) === Hb.DELETE) {
+                if (void 0 !== pb.previousValue) {
+                  const bb = Lb[Hb.DELETE];
+                  for (let wb = bb?.length - 1; wb >= 0; wb--) bb[wb](pb.previousValue, pb.dynamicIndex ?? pb.field)
                 }
-                if ((Rd.op & Fd.ADD) === Fd.ADD) {
-                  const dd = vd[Fd.ADD];
-                  for (let Od = dd?.length - 1; Od >= 0; Od--) dd[Od](Rd.value, Rd.dynamicIndex ?? Rd.field)
+                if ((pb.op & Hb.ADD) === Hb.ADD) {
+                  const bb = Lb[Hb.ADD];
+                  for (let wb = bb?.length - 1; wb >= 0; wb--) bb[wb](pb.value, pb.dynamicIndex ?? pb.field)
                 }
-              } else if ((Rd.op & Fd.ADD) === Fd.ADD && Rd.previousValue !== Rd.value) {
-                const dd = vd[Fd.ADD];
-                for (let Od = dd?.length - 1; Od >= 0; Od--) dd[Od](Rd.value, Rd.dynamicIndex ?? Rd.field)
+              } else if ((pb.op & Hb.ADD) === Hb.ADD && pb.previousValue !== pb.value) {
+                const bb = Lb[Hb.ADD];
+                for (let wb = bb?.length - 1; wb >= 0; wb--) bb[wb](pb.value, pb.dynamicIndex ?? pb.field)
               }
-              if (Rd.value !== Rd.previousValue && (void 0 !== Rd.value || void 0 !== Rd.previousValue)) {
-                const dd = vd[Fd.REPLACE];
-                for (let Od = dd?.length - 1; Od >= 0; Od--) dd[Od](Rd.value, Rd.dynamicIndex ?? Rd.field)
+              if (pb.value !== pb.previousValue && (void 0 !== pb.value || void 0 !== pb.previousValue)) {
+                const bb = Lb[Hb.REPLACE];
+                for (let wb = bb?.length - 1; wb >= 0; wb--) bb[wb](pb.value, pb.dynamicIndex ?? pb.field)
               }
             }
-            Od.add(Xd)
+            wb.add(Vb)
           }
         }
-      }, hd
+      }, lb
     }
 
-    function WF(dd, Od) {
-      dd.hV = Od
+    function wH(bb, wb) {
+      bb.iW = wb
     }
-    OF.encode = function(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    ke.encode = function(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const md = dd.context,
-        Wd = new OF,
-        Fd = new IW(Wd),
-        Rd = md.schemas.get(dd.state.constructor);
-      Rd > 0 && (Wd.rootType = Rd);
-      const Xd = new Set,
-        Kd = {},
-        hd = dd => {
-          if (void 0 === dd.extendsId || Xd.has(dd.extendsId)) {
-            Xd.add(dd.id), Wd.types.push(dd);
-            const Od = Kd[dd.id];
-            void 0 !== Od && (delete Kd[dd.id], Od.forEach((dd => hd(dd))))
-          } else void 0 === Kd[dd.extendsId] && (Kd[dd.extendsId] = []), Kd[dd.extendsId].push(dd)
+      const Mb = bb.context,
+        eb = new ke,
+        Hb = new ie(eb),
+        pb = Mb.schemas.get(bb.state.constructor);
+      pb > 0 && (eb.rootType = pb);
+      const Vb = new Set,
+        gb = {},
+        lb = bb => {
+          if (void 0 === bb.extendsId || Vb.has(bb.extendsId)) {
+            Vb.add(bb.id), eb.types.push(bb);
+            const wb = gb[bb.id];
+            void 0 !== wb && (delete gb[bb.id], wb.forEach((bb => lb(bb))))
+          } else void 0 === gb[bb.extendsId] && (gb[bb.extendsId] = []), gb[bb.extendsId].push(bb)
         };
-      md.schemas.forEach(((dd, Od) => {
-        const Wd = new dF;
-        Wd.id = Number(dd);
-        const Fd = Object.getPrototypeOf(Od);
-        Fd !== uW && (Wd.extendsId = md.schemas.get(Fd));
-        const Rd = Od[Symbol.metadata];
-        if (Rd !== Fd[Symbol.metadata]) {
-          const dd = Rd[xd] ?? -1;
-          for (let Od = 0; Od <= dd; Od++) {
-            const dd = Rd[Od];
-            if (void 0 === dd) continue;
-            const Fd = dd.name;
-            if (!Object.prototype.hasOwnProperty.call(Rd, Fd)) continue;
-            const Xd = new MW;
-            let Kd;
-            if (Xd.name = Fd, "string" === typeof dd.type) Kd = dd.type;
-            else if (nO(dd.type)) {
-              const Od = dd.type.quantized;
-              Kd = "quantized";
-              const md = new fW;
-              md.min = Od.min, md.max = Od.max, md.bits = Od.bits, md.mode = Od.wrap ? 1 : 0, Xd.quantized = md
+      Mb.schemas.forEach(((bb, wb) => {
+        const eb = new Te;
+        eb.id = Number(bb);
+        const Hb = Object.getPrototypeOf(wb);
+        Hb !== ce && (eb.extendsId = Mb.schemas.get(Hb));
+        const pb = wb[Symbol.metadata];
+        if (pb !== Hb[Symbol.metadata]) {
+          const bb = pb[rb] ?? -1;
+          for (let wb = 0; wb <= bb; wb++) {
+            const bb = pb[wb];
+            if (void 0 === bb) continue;
+            const Hb = bb.name;
+            if (!Object.prototype.hasOwnProperty.call(pb, Hb)) continue;
+            const Vb = new oe;
+            let gb;
+            if (Vb.name = Hb, "string" === typeof bb.type) gb = bb.type;
+            else if (Sw(bb.type)) {
+              const wb = bb.type.quantized;
+              gb = "quantized";
+              const Mb = new ye;
+              Mb.min = wb.min, Mb.max = wb.max, Mb.bits = wb.bits, Mb.mode = wb.wrap ? 1 : 0, Vb.quantized = Mb
             } else {
-              let Od;
-              uW.is(dd.type) ? (Kd = "ref", Od = dd.type) : (Kd = Object.keys(dd.type)[0], "string" === typeof dd.type[Kd] ? Xd.childPrimitive = dd.type[Kd] : Od = dd.type[Kd]), Xd.referencedType = Od ? md.getTypeId(Od) : -1
+              let wb;
+              ce.is(bb.type) ? (gb = "ref", wb = bb.type) : (gb = Object.keys(bb.type)[0], "string" === typeof bb.type[gb] ? Vb.childPrimitive = bb.type[gb] : wb = bb.type[gb]), Vb.referencedType = wb ? Mb.getTypeId(wb) : -1
             }
-            Xd.type = Kd, Wd.fields.push(Xd)
+            Vb.type = gb, eb.fields.push(Vb)
           }
         }
-        hd(Wd)
+        lb(eb)
       }));
-      for (const vd in Kd) Kd[vd].forEach((dd => Wd.types.push(dd)));
-      return Fd.encodeAll(Od).slice(0, Od.offset)
-    }, OF.decode = function(dd, Od) {
-      const md = new OF;
-      new kW(md).decode(dd, Od);
-      const Wd = new cO;
-      md.types.forEach((dd => {
-        const Od = Wd.get(dd.extendsId) ?? uW,
-          md = class extends Od {};
-        cO.register(md), Wd.add(md, dd.id)
+      for (const Lb in gb) gb[Lb].forEach((bb => eb.types.push(bb)));
+      return Hb.encodeAll(wb).slice(0, wb.offset)
+    }, ke.decode = function(bb, wb) {
+      const Mb = new ke;
+      new ne(Mb).decode(bb, wb);
+      const eb = new Gw;
+      Mb.types.forEach((bb => {
+        const wb = eb.get(bb.extendsId) ?? ce,
+          Mb = class extends wb {};
+        Gw.register(Mb), eb.add(Mb, bb.id)
       }), {});
-      md.types.forEach((dd => {
-        const Od = Wd.get(dd.id),
-          Fd = ZO.initialize(Od),
-          Rd = [];
-        let Xd = dd;
+      Mb.types.forEach((bb => {
+        const wb = eb.get(bb.id),
+          Hb = nw.initialize(wb),
+          pb = [];
+        let Vb = bb;
         do {
-          Rd.push(Xd), Xd = md.types.find((dd => dd.id === Xd.extendsId))
-        } while (Xd);
-        let Kd = 0;
-        Rd.reverse().forEach((dd => {
-          ((dd, Od, md) => {
-            Od.fields.forEach(((Od, Fd) => {
-              const Rd = md + Fd;
-              if (void 0 !== Od.quantized) {
-                const md = Od.quantized;
-                ZO.addField(dd, Rd, Od.name, {
-                  quantized: GO({
-                    min: md.min,
-                    max: md.max,
-                    bits: md.bits,
-                    mode: 1 === md.mode ? "wrap" : "clamp"
+          pb.push(Vb), Vb = Mb.types.find((bb => bb.id === Vb.extendsId))
+        } while (Vb);
+        let gb = 0;
+        pb.reverse().forEach((bb => {
+          ((bb, wb, Mb) => {
+            wb.fields.forEach(((wb, Hb) => {
+              const pb = Mb + Hb;
+              if (void 0 !== wb.quantized) {
+                const Mb = wb.quantized;
+                nw.addField(bb, pb, wb.name, {
+                  quantized: Jw({
+                    min: Mb.min,
+                    max: Mb.max,
+                    bits: Mb.bits,
+                    mode: 1 === Mb.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== Od.referencedType) {
-                const md = Od.type,
-                  Fd = Wd.get(Od.referencedType) ?? Od.childPrimitive;
-                "ref" === md ? ZO.addField(dd, Rd, Od.name, Fd) : ZO.addField(dd, Rd, Od.name, {
-                  [md]: Fd
+              } else if (void 0 !== wb.referencedType) {
+                const Mb = wb.type,
+                  Hb = eb.get(wb.referencedType) ?? wb.childPrimitive;
+                "ref" === Mb ? nw.addField(bb, pb, wb.name, Hb) : nw.addField(bb, pb, wb.name, {
+                  [Mb]: Hb
                 })
-              } else ZO.addField(dd, Rd, Od.name, Od.type)
+              } else nw.addField(bb, pb, wb.name, wb.type)
             }))
-          })(Fd, dd, Kd), Kd += dd.fields.length
+          })(Hb, bb, gb), gb += bb.fields.length
         }))
       }));
-      const Fd = new(Wd.get(md.rootType || 0));
-      return new kW(Fd, Wd)
-    }, OF.makeEncodable = function(dd) {
-      const Od = dd[Symbol.metadata];
-      if (!Od) return dd;
-      const md = Od[xd];
-      if (void 0 === md) return dd;
-      for (let Wd = 0; Wd <= md; Wd++) {
-        const md = Od[Wd];
-        md && ZO.defineField(dd, Od, Wd, md.name, md.type)
+      const Hb = new(eb.get(Mb.rootType || 0));
+      return new ne(Hb, eb)
+    }, ke.makeEncodable = function(bb) {
+      const wb = bb[Symbol.metadata];
+      if (!wb) return bb;
+      const Mb = wb[rb];
+      if (void 0 === Mb) return bb;
+      for (let eb = 0; eb <= Mb; eb++) {
+        const Mb = wb[eb];
+        Mb && nw.defineField(bb, wb, eb, Mb.name, Mb.type)
       }
-      return Object.prototype.hasOwnProperty.call(dd, Jd) && delete dd[Jd], dd
+      return Object.prototype.hasOwnProperty.call(bb, jb) && delete bb[jb], bb
     };
-    class FF {
-      Ft;
+    class MH {
+      wO;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(dd) {
-        this.Ft = dd, this.Ft.hV = this.hV.bind(this)
+      constructor(bb) {
+        this.wO = bb, this.wO.iW = this.iW.bind(this)
       }
       get callbacks() {
-        return this.Ft.root.callbacks
+        return this.wO.root.callbacks
       }
       get state() {
-        return this.Ft.state
+        return this.wO.state
       }
-      addCallback(dd, Od, md) {
-        return this.Ft.root.addCallback(dd, Od, md)
+      addCallback(bb, wb, Mb) {
+        return this.wO.root.addCallback(bb, wb, Mb)
       }
-      addCallbackOrWaitCollectionAvailable(dd, Od, md, Wd) {
-        let Rd = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Xd = () => {};
-        const hd = () => Xd(),
-          vd = dd[Od];
-        if (vd && void 0 !== vd[Kd]) return Rd = Rd && !1 === this.isTriggering, md === Fd.ADD && Rd && vd.forEach(((dd, Od) => {
-          Wd(dd, Od)
-        })), this.addCallback(vd[Kd], md, Wd);
+      addCallbackOrWaitCollectionAvailable(bb, wb, Mb, eb) {
+        let pb = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          Vb = () => {};
+        const lb = () => Vb(),
+          Lb = bb[wb];
+        if (Lb && void 0 !== Lb[gb]) return pb = pb && !1 === this.isTriggering, Mb === Hb.ADD && pb && Lb.forEach(((bb, wb) => {
+          eb(bb, wb)
+        })), this.addCallback(Lb[gb], Mb, eb);
         {
-          let Fd;
-          return Fd = this.addCallback(dd[Kd], Od, ((dd, Od) => {
-            null !== dd && void 0 !== dd && (Fd(), Xd = this.addCallback(dd[Kd], md, Wd))
-          })), Xd = Fd, hd
+          let Hb;
+          return Hb = this.addCallback(bb[gb], wb, ((bb, wb) => {
+            null !== bb && void 0 !== bb && (Hb(), Vb = this.addCallback(bb[gb], Mb, eb))
+          })), Vb = Hb, lb
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(dd, Od, md) {
-        let Wd = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        Wd = Wd && !1 === this.isTriggering;
-        const Fd = dd[Od];
-        return Wd && null !== Fd && void 0 !== Fd && md(Fd, void 0), this.addCallback(dd[Kd], Od, md)
+      listenInstance(bb, wb, Mb) {
+        let eb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        eb = eb && !1 === this.isTriggering;
+        const Hb = bb[wb];
+        return eb && null !== Hb && void 0 !== Hb && Mb(Hb, void 0), this.addCallback(bb[gb], wb, Mb)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const dd = arguments.length <= 0 ? void 0 : arguments[0],
-            Od = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(dd[Kd], Fd.REPLACE, Od)
+          const bb = arguments.length <= 0 ? void 0 : arguments[0],
+            wb = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(bb[gb], Hb.REPLACE, wb)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Fd.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Fd.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Hb.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Hb.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      QE() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Fd.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Fd.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      bR() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Hb.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Hb.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      qS() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Fd.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Fd.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      FW() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Hb.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Hb.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(dd, Od, md) {
-        let Wd = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const Rd = dd.constructor[Symbol.metadata];
-        md || (md = Object.keys(Rd).filter((dd => !isNaN(Number(dd)))).map((dd => Rd[dd].name)));
-        const Xd = () => {
-          for (const Wd of md) {
-            const md = dd[Wd];
-            void 0 !== md && (Od[Wd] = md)
+      bindTo(bb, wb, Mb) {
+        let eb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const pb = bb.constructor[Symbol.metadata];
+        Mb || (Mb = Object.keys(pb).filter((bb => !isNaN(Number(bb)))).map((bb => pb[bb].name)));
+        const Vb = () => {
+          for (const eb of Mb) {
+            const Mb = bb[eb];
+            void 0 !== Mb && (wb[eb] = Mb)
           }
         };
-        return Wd && Xd(), this.addCallback(dd[Kd], Fd.REPLACE, Xd)
+        return eb && Vb(), this.addCallback(bb[gb], Hb.REPLACE, Vb)
       }
-      hV(dd) {
+      iW(bb) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let Od = 0, md = dd.length; Od < md; Od++) {
-          const md = dd[Od],
-            Wd = md.refId,
-            Rd = md.ref,
-            Xd = this.callbacks[Wd];
-          if (Xd) {
-            if ((md.op & Fd.DELETE) === Fd.DELETE && uW.isSchema(md.previousValue)) {
-              const dd = md.previousValue[Kd],
-                Od = this.callbacks[dd]?.[Fd.DELETE];
-              if (Od)
-                for (let md = Od.length - 1; md >= 0; md--) try {
-                  Od[md]()
-                } catch (hF) {
-                  console.error(hF)
+        for (let wb = 0, Mb = bb.length; wb < Mb; wb++) {
+          const Mb = bb[wb],
+            eb = Mb.refId,
+            pb = Mb.ref,
+            Vb = this.callbacks[eb];
+          if (Vb) {
+            if ((Mb.op & Hb.DELETE) === Hb.DELETE && ce.isSchema(Mb.previousValue)) {
+              const bb = Mb.previousValue[gb],
+                wb = this.callbacks[bb]?.[Hb.DELETE];
+              if (wb)
+                for (let Mb = wb.length - 1; Mb >= 0; Mb--) try {
+                  wb[Mb]()
+                } catch (VH) {
+                  console.error(VH)
                 }
             }
-            if (uW.isSchema(Rd)) {
-              if (!this.uniqueRefIds.has(Wd)) {
-                const dd = Xd[Fd.REPLACE];
-                if (dd)
-                  for (let Od = dd.length - 1; Od >= 0; Od--) try {
-                    dd[Od]()
-                  } catch (hF) {
-                    console.error(hF)
+            if (ce.isSchema(pb)) {
+              if (!this.uniqueRefIds.has(eb)) {
+                const bb = Vb[Hb.REPLACE];
+                if (bb)
+                  for (let wb = bb.length - 1; wb >= 0; wb--) try {
+                    bb[wb]()
+                  } catch (VH) {
+                    console.error(VH)
                   }
               }
-              const dd = Xd[md.field];
-              if (dd)
-                for (let Od = dd.length - 1; Od >= 0; Od--) try {
-                  dd[Od](md.value, md.previousValue)
-                } catch (hF) {
-                  console.error(hF)
+              const bb = Vb[Mb.field];
+              if (bb)
+                for (let wb = bb.length - 1; wb >= 0; wb--) try {
+                  bb[wb](Mb.value, Mb.previousValue)
+                } catch (VH) {
+                  console.error(VH)
                 }
             } else {
-              const dd = md.dynamicIndex ?? md.field;
-              if ((md.op & Fd.DELETE) === Fd.DELETE) {
-                if (void 0 !== md.previousValue) {
-                  const Od = Xd[Fd.DELETE];
-                  if (Od)
-                    for (let Wd = Od.length - 1; Wd >= 0; Wd--) try {
-                      Od[Wd](md.previousValue, dd)
-                    } catch (hF) {
-                      console.error(hF)
+              const bb = Mb.dynamicIndex ?? Mb.field;
+              if ((Mb.op & Hb.DELETE) === Hb.DELETE) {
+                if (void 0 !== Mb.previousValue) {
+                  const wb = Vb[Hb.DELETE];
+                  if (wb)
+                    for (let eb = wb.length - 1; eb >= 0; eb--) try {
+                      wb[eb](Mb.previousValue, bb)
+                    } catch (VH) {
+                      console.error(VH)
                     }
                 }
-                if ((md.op & Fd.ADD) === Fd.ADD) {
-                  const Od = Xd[Fd.ADD];
-                  if (Od)
-                    for (let Wd = Od.length - 1; Wd >= 0; Wd--) try {
-                      Od[Wd](md.value, dd)
-                    } catch (hF) {
-                      console.error(hF)
+                if ((Mb.op & Hb.ADD) === Hb.ADD) {
+                  const wb = Vb[Hb.ADD];
+                  if (wb)
+                    for (let eb = wb.length - 1; eb >= 0; eb--) try {
+                      wb[eb](Mb.value, bb)
+                    } catch (VH) {
+                      console.error(VH)
                     }
                 }
-              } else if ((md.op & Fd.ADD) === Fd.ADD && md.previousValue !== md.value) {
-                const Od = Xd[Fd.ADD];
-                if (Od)
-                  for (let Wd = Od.length - 1; Wd >= 0; Wd--) try {
-                    Od[Wd](md.value, dd)
-                  } catch (hF) {
-                    console.error(hF)
+              } else if ((Mb.op & Hb.ADD) === Hb.ADD && Mb.previousValue !== Mb.value) {
+                const wb = Vb[Hb.ADD];
+                if (wb)
+                  for (let eb = wb.length - 1; eb >= 0; eb--) try {
+                    wb[eb](Mb.value, bb)
+                  } catch (VH) {
+                    console.error(VH)
                   }
               }
-              if (md.value !== md.previousValue) {
-                const Od = Xd[Fd.REPLACE];
-                if (Od)
-                  for (let Wd = Od.length - 1; Wd >= 0; Wd--) try {
-                    Od[Wd](dd, md.value)
-                  } catch (hF) {
-                    console.error(hF)
+              if (Mb.value !== Mb.previousValue) {
+                const wb = Vb[Hb.REPLACE];
+                if (wb)
+                  for (let eb = wb.length - 1; eb >= 0; eb--) try {
+                    wb[eb](bb, Mb.value)
+                  } catch (VH) {
+                    console.error(VH)
                   }
               }
             }
-            this.uniqueRefIds.add(Wd)
+            this.uniqueRefIds.add(eb)
           }
         }
         this.isTriggering = !1
       }
     }
-    const RF = {
-      get(dd) {
-        if (dd instanceof kW) return new FF(dd);
-        if ("Ft" in dd.lT) return new FF(dd.lT.Ft);
+    const eH = {
+      get(bb) {
+        if (bb instanceof ne) return new MH(bb);
+        if ("wO" in bb.yB) return new MH(bb.yB.wO);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(dd) {
-        if (dd instanceof kW) return mF(dd);
-        if ("Ft" in dd.lT) return mF(dd.lT.Ft);
+      getLegacy(bb) {
+        if (bb instanceof ne) return bH(bb);
+        if ("wO" in bb.yB) return bH(bb.yB.wO);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (dd, Od) => WF(dd, Od)
+      getRawChanges: (bb, wb) => wH(bb, wb)
     };
-    class XF {
+    class HH {
       _free = [];
       _factory;
       _maxSize;
-      constructor(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = dd, this._maxSize = Od.maxSize ?? 1 / 0;
-        const md = Od.preallocate ?? 0;
-        for (let Wd = 0; Wd < md; Wd++) this._free.push(dd())
+      constructor(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = bb, this._maxSize = wb.maxSize ?? 1 / 0;
+        const Mb = wb.preallocate ?? 0;
+        for (let eb = 0; eb < Mb; eb++) this._free.push(bb())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(dd) {
-        uW.reset(dd), this._free.length < this._maxSize && this._free.push(dd)
+      release(bb) {
+        ce.reset(bb), this._free.length < this._maxSize && this._free.push(bb)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function KF(dd) {
-      return new XF((() => new dd), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function pH(bb) {
+      return new HH((() => new bb), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    EO("map", {
-      constructor: KW
-    }), EO("array", {
-      constructor: RW
-    }), EO("set", {
-      constructor: vW
-    }), EO("collection", {
-      constructor: hW
+    Xw("map", {
+      constructor: pe
+    }), Xw("array", {
+      constructor: ee
+    }), Xw("set", {
+      constructor: ge
+    }), Xw("collection", {
+      constructor: Ve
     })
   },
-  10311: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      __addDisposableResource: () => nd,
-      __assign: () => Rd,
-      __asyncDelegator: () => Ud,
-      __asyncGenerator: () => Jd,
-      __asyncValues: () => xd,
-      __await: () => Ed,
-      __awaiter: () => qd,
-      __classPrivateFieldGet: () => Ad,
-      __classPrivateFieldIn: () => Gd,
-      __classPrivateFieldSet: () => rd,
-      __createBinding: () => yd,
-      __decorate: () => Kd,
-      __disposeResources: () => Pd,
-      __esDecorate: () => vd,
-      __exportStar: () => bd,
-      __extends: () => Fd,
-      __generator: () => Hd,
-      __importDefault: () => Vd,
-      __importStar: () => ud,
-      __makeTemplateObject: () => Bd,
-      __metadata: () => Nd,
-      __param: () => hd,
-      __propKey: () => td,
-      __read: () => pd,
-      __rest: () => Xd,
-      __rewriteRelativeImportExtension: () => zd,
-      __runInitializers: () => Qd,
-      __setFunctionName: () => od,
-      __spread: () => Yd,
-      __spreadArray: () => wd,
-      __spreadArrays: () => gd,
-      __values: () => Td,
-      default: () => cd
+  10488: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      __addDisposableResource: () => Jb,
+      __assign: () => pb,
+      __asyncDelegator: () => Kb,
+      __asyncGenerator: () => jb,
+      __asyncValues: () => rb,
+      __await: () => xb,
+      __awaiter: () => Cb,
+      __classPrivateFieldGet: () => fb,
+      __classPrivateFieldIn: () => Wb,
+      __classPrivateFieldSet: () => Ab,
+      __createBinding: () => Fb,
+      __decorate: () => gb,
+      __disposeResources: () => Nb,
+      __esDecorate: () => Lb,
+      __exportStar: () => Bb,
+      __extends: () => Hb,
+      __generator: () => Eb,
+      __importDefault: () => Zb,
+      __importStar: () => Yb,
+      __makeTemplateObject: () => Rb,
+      __metadata: () => tb,
+      __param: () => lb,
+      __propKey: () => Ob,
+      __read: () => mb,
+      __rest: () => Vb,
+      __rewriteRelativeImportExtension: () => vb,
+      __runInitializers: () => Ib,
+      __setFunctionName: () => Ub,
+      __spread: () => hb,
+      __spreadArray: () => Xb,
+      __spreadArrays: () => zb,
+      __values: () => sb,
+      default: () => Qb
     });
-    var Wd = function(dd, Od) {
-      return Wd = Object.setPrototypeOf || {
+    var eb = function(bb, wb) {
+      return eb = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(dd, Od) {
-        dd.__proto__ = Od
-      } || function(dd, Od) {
-        for (var md in Od) Object.prototype.hasOwnProperty.call(Od, md) && (dd[md] = Od[md])
-      }, Wd(dd, Od)
+      instanceof Array && function(bb, wb) {
+        bb.__proto__ = wb
+      } || function(bb, wb) {
+        for (var Mb in wb) Object.prototype.hasOwnProperty.call(wb, Mb) && (bb[Mb] = wb[Mb])
+      }, eb(bb, wb)
     };
 
-    function Fd(dd, Od) {
-      if ("function" !== typeof Od && null !== Od) throw new TypeError("Class extends value " + String(Od) + " is not a constructor or null");
+    function Hb(bb, wb) {
+      if ("function" !== typeof wb && null !== wb) throw new TypeError("Class extends value " + String(wb) + " is not a constructor or null");
 
-      function md() {
-        this.constructor = dd
+      function Mb() {
+        this.constructor = bb
       }
-      Wd(dd, Od), dd.prototype = null === Od ? Object.create(Od) : (md.prototype = Od.prototype, new md)
+      eb(bb, wb), bb.prototype = null === wb ? Object.create(wb) : (Mb.prototype = wb.prototype, new Mb)
     }
-    var Rd = function() {
-      return Rd = Object.assign || function(dd) {
-        for (var Od, md = 1, Wd = arguments.length; md < Wd; md++)
-          for (var Fd in Od = arguments[md]) Object.prototype.hasOwnProperty.call(Od, Fd) && (dd[Fd] = Od[Fd]);
-        return dd
-      }, Rd.apply(this, arguments)
+    var pb = function() {
+      return pb = Object.assign || function(bb) {
+        for (var wb, Mb = 1, eb = arguments.length; Mb < eb; Mb++)
+          for (var Hb in wb = arguments[Mb]) Object.prototype.hasOwnProperty.call(wb, Hb) && (bb[Hb] = wb[Hb]);
+        return bb
+      }, pb.apply(this, arguments)
     };
 
-    function Xd(dd, Od) {
-      var md = {};
-      for (var Wd in dd) Object.prototype.hasOwnProperty.call(dd, Wd) && Od.indexOf(Wd) < 0 && (md[Wd] = dd[Wd]);
-      if (null != dd && "function" === typeof Object.getOwnPropertySymbols) {
-        var Fd = 0;
-        for (Wd = Object.getOwnPropertySymbols(dd); Fd < Wd.length; Fd++) Od.indexOf(Wd[Fd]) < 0 && Object.prototype.propertyIsEnumerable.call(dd, Wd[Fd]) && (md[Wd[Fd]] = dd[Wd[Fd]])
+    function Vb(bb, wb) {
+      var Mb = {};
+      for (var eb in bb) Object.prototype.hasOwnProperty.call(bb, eb) && wb.indexOf(eb) < 0 && (Mb[eb] = bb[eb]);
+      if (null != bb && "function" === typeof Object.getOwnPropertySymbols) {
+        var Hb = 0;
+        for (eb = Object.getOwnPropertySymbols(bb); Hb < eb.length; Hb++) wb.indexOf(eb[Hb]) < 0 && Object.prototype.propertyIsEnumerable.call(bb, eb[Hb]) && (Mb[eb[Hb]] = bb[eb[Hb]])
       }
-      return md
+      return Mb
     }
 
-    function Kd(dd, Od, md, Wd) {
-      var Fd, Rd = arguments.length,
-        Xd = Rd < 3 ? Od : null === Wd ? Wd = Object.getOwnPropertyDescriptor(Od, md) : Wd;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Xd = Reflect.decorate(dd, Od, md, Wd);
+    function gb(bb, wb, Mb, eb) {
+      var Hb, pb = arguments.length,
+        Vb = pb < 3 ? wb : null === eb ? eb = Object.getOwnPropertyDescriptor(wb, Mb) : eb;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Vb = Reflect.decorate(bb, wb, Mb, eb);
       else
-        for (var Kd = dd.length - 1; Kd >= 0; Kd--)(Fd = dd[Kd]) && (Xd = (Rd < 3 ? Fd(Xd) : Rd > 3 ? Fd(Od, md, Xd) : Fd(Od, md)) || Xd);
-      return Rd > 3 && Xd && Object.defineProperty(Od, md, Xd), Xd
+        for (var gb = bb.length - 1; gb >= 0; gb--)(Hb = bb[gb]) && (Vb = (pb < 3 ? Hb(Vb) : pb > 3 ? Hb(wb, Mb, Vb) : Hb(wb, Mb)) || Vb);
+      return pb > 3 && Vb && Object.defineProperty(wb, Mb, Vb), Vb
     }
 
-    function hd(dd, Od) {
-      return function(md, Wd) {
-        Od(md, Wd, dd)
+    function lb(bb, wb) {
+      return function(Mb, eb) {
+        wb(Mb, eb, bb)
       }
     }
 
-    function vd(dd, Od, md, Wd, Fd, Rd) {
-      function Xd(dd) {
-        if (void 0 !== dd && "function" !== typeof dd) throw new TypeError("Function expected");
-        return dd
+    function Lb(bb, wb, Mb, eb, Hb, pb) {
+      function Vb(bb) {
+        if (void 0 !== bb && "function" !== typeof bb) throw new TypeError("Function expected");
+        return bb
       }
-      for (var Kd, hd = Wd.kind, vd = "getter" === hd ? "get" : "setter" === hd ? "set" : "value", Qd = !Od && dd ? Wd.static ? dd : dd.prototype : null, td = Od || (Qd ? Object.getOwnPropertyDescriptor(Qd, Wd.name) : {}), od = !1, Nd = md.length - 1; Nd >= 0; Nd--) {
-        var qd = {};
-        for (var Hd in Wd) qd[Hd] = "access" === Hd ? {} : Wd[Hd];
-        for (var Hd in Wd.access) qd.access[Hd] = Wd.access[Hd];
-        qd.addInitializer = function(dd) {
-          if (od) throw new TypeError("Cannot add initializers after decoration has completed");
-          Rd.push(Xd(dd || null))
+      for (var gb, lb = eb.kind, Lb = "getter" === lb ? "get" : "setter" === lb ? "set" : "value", Ib = !wb && bb ? eb.static ? bb : bb.prototype : null, Ob = wb || (Ib ? Object.getOwnPropertyDescriptor(Ib, eb.name) : {}), Ub = !1, tb = Mb.length - 1; tb >= 0; tb--) {
+        var Cb = {};
+        for (var Eb in eb) Cb[Eb] = "access" === Eb ? {} : eb[Eb];
+        for (var Eb in eb.access) Cb.access[Eb] = eb.access[Eb];
+        Cb.addInitializer = function(bb) {
+          if (Ub) throw new TypeError("Cannot add initializers after decoration has completed");
+          pb.push(Vb(bb || null))
         };
-        var yd = (0, md[Nd])("accessor" === hd ? {
-          get: td.get,
-          set: td.set
-        } : td[vd], qd);
-        if ("accessor" === hd) {
-          if (void 0 === yd) continue;
-          if (null === yd || "object" !== typeof yd) throw new TypeError("Object expected");
-          (Kd = Xd(yd.get)) && (td.get = Kd), (Kd = Xd(yd.set)) && (td.set = Kd), (Kd = Xd(yd.init)) && Fd.unshift(Kd)
-        } else(Kd = Xd(yd)) && ("field" === hd ? Fd.unshift(Kd) : td[vd] = Kd)
+        var Fb = (0, Mb[tb])("accessor" === lb ? {
+          get: Ob.get,
+          set: Ob.set
+        } : Ob[Lb], Cb);
+        if ("accessor" === lb) {
+          if (void 0 === Fb) continue;
+          if (null === Fb || "object" !== typeof Fb) throw new TypeError("Object expected");
+          (gb = Vb(Fb.get)) && (Ob.get = gb), (gb = Vb(Fb.set)) && (Ob.set = gb), (gb = Vb(Fb.init)) && Hb.unshift(gb)
+        } else(gb = Vb(Fb)) && ("field" === lb ? Hb.unshift(gb) : Ob[Lb] = gb)
       }
-      Qd && Object.defineProperty(Qd, Wd.name, td), od = !0
+      Ib && Object.defineProperty(Ib, eb.name, Ob), Ub = !0
     }
 
-    function Qd(dd, Od, md) {
-      for (var Wd = arguments.length > 2, Fd = 0; Fd < Od.length; Fd++) md = Wd ? Od[Fd].call(dd, md) : Od[Fd].call(dd);
-      return Wd ? md : void 0
+    function Ib(bb, wb, Mb) {
+      for (var eb = arguments.length > 2, Hb = 0; Hb < wb.length; Hb++) Mb = eb ? wb[Hb].call(bb, Mb) : wb[Hb].call(bb);
+      return eb ? Mb : void 0
     }
 
-    function td(dd) {
-      return "symbol" === typeof dd ? dd : "".concat(dd)
+    function Ob(bb) {
+      return "symbol" === typeof bb ? bb : "".concat(bb)
     }
 
-    function od(dd, Od, md) {
-      return "symbol" === typeof Od && (Od = Od.description ? "[".concat(Od.description, "]") : ""), Object.defineProperty(dd, "name", {
+    function Ub(bb, wb, Mb) {
+      return "symbol" === typeof wb && (wb = wb.description ? "[".concat(wb.description, "]") : ""), Object.defineProperty(bb, "name", {
         configurable: !0,
-        value: md ? "".concat(md, " ", Od) : Od
+        value: Mb ? "".concat(Mb, " ", wb) : wb
       })
     }
 
-    function Nd(dd, Od) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(dd, Od)
+    function tb(bb, wb) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(bb, wb)
     }
 
-    function qd(dd, Od, md, Wd) {
-      return new(md || (md = Promise))((function(Fd, Rd) {
-        function Xd(dd) {
+    function Cb(bb, wb, Mb, eb) {
+      return new(Mb || (Mb = Promise))((function(Hb, pb) {
+        function Vb(bb) {
           try {
-            hd(Wd.next(dd))
-          } catch (Od) {
-            Rd(Od)
+            lb(eb.next(bb))
+          } catch (wb) {
+            pb(wb)
           }
         }
 
-        function Kd(dd) {
+        function gb(bb) {
           try {
-            hd(Wd.throw(dd))
-          } catch (Od) {
-            Rd(Od)
+            lb(eb.throw(bb))
+          } catch (wb) {
+            pb(wb)
           }
         }
 
-        function hd(dd) {
-          var Od;
-          dd.done ? Fd(dd.value) : (Od = dd.value, Od instanceof md ? Od : new md((function(dd) {
-            dd(Od)
-          }))).then(Xd, Kd)
+        function lb(bb) {
+          var wb;
+          bb.done ? Hb(bb.value) : (wb = bb.value, wb instanceof Mb ? wb : new Mb((function(bb) {
+            bb(wb)
+          }))).then(Vb, gb)
         }
-        hd((Wd = Wd.apply(dd, Od || [])).next())
+        lb((eb = eb.apply(bb, wb || [])).next())
       }))
     }
 
-    function Hd(dd, Od) {
-      var md, Wd, Fd, Rd = {
+    function Eb(bb, wb) {
+      var Mb, eb, Hb, pb = {
           label: 0,
           sent: function() {
-            if (1 & Fd[0]) throw Fd[1];
-            return Fd[1]
+            if (1 & Hb[0]) throw Hb[1];
+            return Hb[1]
           },
           trys: [],
           ops: []
         },
-        Xd = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return Xd.next = Kd(0), Xd.throw = Kd(1), Xd.return = Kd(2), "function" === typeof Symbol && (Xd[Symbol.iterator] = function() {
+        Vb = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return Vb.next = gb(0), Vb.throw = gb(1), Vb.return = gb(2), "function" === typeof Symbol && (Vb[Symbol.iterator] = function() {
         return this
-      }), Xd;
+      }), Vb;
 
-      function Kd(Kd) {
-        return function(hd) {
-          return function(Kd) {
-            if (md) throw new TypeError("Generator is already executing.");
-            for (; Xd && (Xd = 0, Kd[0] && (Rd = 0)), Rd;) try {
-              if (md = 1, Wd && (Fd = 2 & Kd[0] ? Wd.return : Kd[0] ? Wd.throw || ((Fd = Wd.return) && Fd.call(Wd), 0) : Wd.next) && !(Fd = Fd.call(Wd, Kd[1])).done) return Fd;
-              switch (Wd = 0, Fd && (Kd = [2 & Kd[0], Fd.value]), Kd[0]) {
+      function gb(gb) {
+        return function(lb) {
+          return function(gb) {
+            if (Mb) throw new TypeError("Generator is already executing.");
+            for (; Vb && (Vb = 0, gb[0] && (pb = 0)), pb;) try {
+              if (Mb = 1, eb && (Hb = 2 & gb[0] ? eb.return : gb[0] ? eb.throw || ((Hb = eb.return) && Hb.call(eb), 0) : eb.next) && !(Hb = Hb.call(eb, gb[1])).done) return Hb;
+              switch (eb = 0, Hb && (gb = [2 & gb[0], Hb.value]), gb[0]) {
                 case 0:
                 case 1:
-                  Fd = Kd;
+                  Hb = gb;
                   break;
                 case 4:
-                  return Rd.label++, {
-                    value: Kd[1],
+                  return pb.label++, {
+                    value: gb[1],
                     done: !1
                   };
                 case 5:
-                  Rd.label++, Wd = Kd[1], Kd = [0];
+                  pb.label++, eb = gb[1], gb = [0];
                   continue;
                 case 7:
-                  Kd = Rd.ops.pop(), Rd.trys.pop();
+                  gb = pb.ops.pop(), pb.trys.pop();
                   continue;
                 default:
-                  if (!(Fd = (Fd = Rd.trys).length > 0 && Fd[Fd.length - 1]) && (6 === Kd[0] || 2 === Kd[0])) {
-                    Rd = 0;
+                  if (!(Hb = (Hb = pb.trys).length > 0 && Hb[Hb.length - 1]) && (6 === gb[0] || 2 === gb[0])) {
+                    pb = 0;
                     continue
                   }
-                  if (3 === Kd[0] && (!Fd || Kd[1] > Fd[0] && Kd[1] < Fd[3])) {
-                    Rd.label = Kd[1];
+                  if (3 === gb[0] && (!Hb || gb[1] > Hb[0] && gb[1] < Hb[3])) {
+                    pb.label = gb[1];
                     break
                   }
-                  if (6 === Kd[0] && Rd.label < Fd[1]) {
-                    Rd.label = Fd[1], Fd = Kd;
+                  if (6 === gb[0] && pb.label < Hb[1]) {
+                    pb.label = Hb[1], Hb = gb;
                     break
                   }
-                  if (Fd && Rd.label < Fd[2]) {
-                    Rd.label = Fd[2], Rd.ops.push(Kd);
+                  if (Hb && pb.label < Hb[2]) {
+                    pb.label = Hb[2], pb.ops.push(gb);
                     break
                   }
-                  Fd[2] && Rd.ops.pop(), Rd.trys.pop();
+                  Hb[2] && pb.ops.pop(), pb.trys.pop();
                   continue
               }
-              Kd = Od.call(dd, Rd)
-            } catch (hd) {
-              Kd = [6, hd], Wd = 0
+              gb = wb.call(bb, pb)
+            } catch (lb) {
+              gb = [6, lb], eb = 0
             } finally {
-              md = Fd = 0
+              Mb = Hb = 0
             }
-            if (5 & Kd[0]) throw Kd[1];
+            if (5 & gb[0]) throw gb[1];
             return {
-              value: Kd[0] ? Kd[1] : void 0,
+              value: gb[0] ? gb[1] : void 0,
               done: !0
             }
-          }([Kd, hd])
+          }([gb, lb])
         }
       }
     }
-    var yd = Object.create ? function(dd, Od, md, Wd) {
-      void 0 === Wd && (Wd = md);
-      var Fd = Object.getOwnPropertyDescriptor(Od, md);
-      Fd && !("get" in Fd ? !Od.__esModule : Fd.writable || Fd.configurable) || (Fd = {
+    var Fb = Object.create ? function(bb, wb, Mb, eb) {
+      void 0 === eb && (eb = Mb);
+      var Hb = Object.getOwnPropertyDescriptor(wb, Mb);
+      Hb && !("get" in Hb ? !wb.__esModule : Hb.writable || Hb.configurable) || (Hb = {
         enumerable: !0,
         get: function() {
-          return Od[md]
+          return wb[Mb]
         }
-      }), Object.defineProperty(dd, Wd, Fd)
-    } : function(dd, Od, md, Wd) {
-      void 0 === Wd && (Wd = md), dd[Wd] = Od[md]
+      }), Object.defineProperty(bb, eb, Hb)
+    } : function(bb, wb, Mb, eb) {
+      void 0 === eb && (eb = Mb), bb[eb] = wb[Mb]
     };
 
-    function bd(dd, Od) {
-      for (var md in dd) "default" === md || Object.prototype.hasOwnProperty.call(Od, md) || yd(Od, dd, md)
+    function Bb(bb, wb) {
+      for (var Mb in bb) "default" === Mb || Object.prototype.hasOwnProperty.call(wb, Mb) || Fb(wb, bb, Mb)
     }
 
-    function Td(dd) {
-      var Od = "function" === typeof Symbol && Symbol.iterator,
-        md = Od && dd[Od],
-        Wd = 0;
-      if (md) return md.call(dd);
-      if (dd && "number" === typeof dd.length) return {
+    function sb(bb) {
+      var wb = "function" === typeof Symbol && Symbol.iterator,
+        Mb = wb && bb[wb],
+        eb = 0;
+      if (Mb) return Mb.call(bb);
+      if (bb && "number" === typeof bb.length) return {
         next: function() {
-          return dd && Wd >= dd.length && (dd = void 0), {
-            value: dd && dd[Wd++],
-            done: !dd
+          return bb && eb >= bb.length && (bb = void 0), {
+            value: bb && bb[eb++],
+            done: !bb
           }
         }
       };
-      throw new TypeError(Od ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(wb ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function pd(dd, Od) {
-      var md = "function" === typeof Symbol && dd[Symbol.iterator];
-      if (!md) return dd;
-      var Wd, Fd, Rd = md.call(dd),
-        Xd = [];
+    function mb(bb, wb) {
+      var Mb = "function" === typeof Symbol && bb[Symbol.iterator];
+      if (!Mb) return bb;
+      var eb, Hb, pb = Mb.call(bb),
+        Vb = [];
       try {
         for (;
-          (void 0 === Od || Od-- > 0) && !(Wd = Rd.next()).done;) Xd.push(Wd.value)
-      } catch (Kd) {
-        Fd = {
-          error: Kd
+          (void 0 === wb || wb-- > 0) && !(eb = pb.next()).done;) Vb.push(eb.value)
+      } catch (gb) {
+        Hb = {
+          error: gb
         }
       } finally {
         try {
-          Wd && !Wd.done && (md = Rd.return) && md.call(Rd)
+          eb && !eb.done && (Mb = pb.return) && Mb.call(pb)
         } finally {
-          if (Fd) throw Fd.error
+          if (Hb) throw Hb.error
         }
       }
-      return Xd
+      return Vb
     }
 
-    function Yd() {
-      for (var dd = [], Od = 0; Od < arguments.length; Od++) dd = dd.concat(pd(arguments[Od]));
-      return dd
+    function hb() {
+      for (var bb = [], wb = 0; wb < arguments.length; wb++) bb = bb.concat(mb(arguments[wb]));
+      return bb
     }
 
-    function gd() {
-      for (var dd = 0, Od = 0, md = arguments.length; Od < md; Od++) dd += arguments[Od].length;
-      var Wd = Array(dd),
-        Fd = 0;
-      for (Od = 0; Od < md; Od++)
-        for (var Rd = arguments[Od], Xd = 0, Kd = Rd.length; Xd < Kd; Xd++, Fd++) Wd[Fd] = Rd[Xd];
-      return Wd
+    function zb() {
+      for (var bb = 0, wb = 0, Mb = arguments.length; wb < Mb; wb++) bb += arguments[wb].length;
+      var eb = Array(bb),
+        Hb = 0;
+      for (wb = 0; wb < Mb; wb++)
+        for (var pb = arguments[wb], Vb = 0, gb = pb.length; Vb < gb; Vb++, Hb++) eb[Hb] = pb[Vb];
+      return eb
     }
 
-    function wd(dd, Od, md) {
-      if (md || 2 === arguments.length)
-        for (var Wd, Fd = 0, Rd = Od.length; Fd < Rd; Fd++) !Wd && Fd in Od || (Wd || (Wd = Array.prototype.slice.call(Od, 0, Fd)), Wd[Fd] = Od[Fd]);
-      return dd.concat(Wd || Array.prototype.slice.call(Od))
+    function Xb(bb, wb, Mb) {
+      if (Mb || 2 === arguments.length)
+        for (var eb, Hb = 0, pb = wb.length; Hb < pb; Hb++) !eb && Hb in wb || (eb || (eb = Array.prototype.slice.call(wb, 0, Hb)), eb[Hb] = wb[Hb]);
+      return bb.concat(eb || Array.prototype.slice.call(wb))
     }
 
-    function Ed(dd) {
-      return this instanceof Ed ? (this.v = dd, this) : new Ed(dd)
+    function xb(bb) {
+      return this instanceof xb ? (this.v = bb, this) : new xb(bb)
     }
 
-    function Jd(dd, Od, md) {
+    function jb(bb, wb, Mb) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Wd, Fd = md.apply(dd, Od || []),
-        Rd = [];
-      return Wd = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Xd("next"), Xd("throw"), Xd("return", (function(dd) {
-        return function(Od) {
-          return Promise.resolve(Od).then(dd, vd)
+      var eb, Hb = Mb.apply(bb, wb || []),
+        pb = [];
+      return eb = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Vb("next"), Vb("throw"), Vb("return", (function(bb) {
+        return function(wb) {
+          return Promise.resolve(wb).then(bb, Lb)
         }
-      })), Wd[Symbol.asyncIterator] = function() {
+      })), eb[Symbol.asyncIterator] = function() {
         return this
-      }, Wd;
+      }, eb;
 
-      function Xd(dd, Od) {
-        Fd[dd] && (Wd[dd] = function(Od) {
-          return new Promise((function(md, Wd) {
-            Rd.push([dd, Od, md, Wd]) > 1 || Kd(dd, Od)
+      function Vb(bb, wb) {
+        Hb[bb] && (eb[bb] = function(wb) {
+          return new Promise((function(Mb, eb) {
+            pb.push([bb, wb, Mb, eb]) > 1 || gb(bb, wb)
           }))
-        }, Od && (Wd[dd] = Od(Wd[dd])))
+        }, wb && (eb[bb] = wb(eb[bb])))
       }
 
-      function Kd(dd, Od) {
+      function gb(bb, wb) {
         try {
-          (md = Fd[dd](Od)).value instanceof Ed ? Promise.resolve(md.value.v).then(hd, vd) : Qd(Rd[0][2], md)
-        } catch (Wd) {
-          Qd(Rd[0][3], Wd)
+          (Mb = Hb[bb](wb)).value instanceof xb ? Promise.resolve(Mb.value.v).then(lb, Lb) : Ib(pb[0][2], Mb)
+        } catch (eb) {
+          Ib(pb[0][3], eb)
         }
-        var md
+        var Mb
       }
 
-      function hd(dd) {
-        Kd("next", dd)
+      function lb(bb) {
+        gb("next", bb)
       }
 
-      function vd(dd) {
-        Kd("throw", dd)
+      function Lb(bb) {
+        gb("throw", bb)
       }
 
-      function Qd(dd, Od) {
-        dd(Od), Rd.shift(), Rd.length && Kd(Rd[0][0], Rd[0][1])
+      function Ib(bb, wb) {
+        bb(wb), pb.shift(), pb.length && gb(pb[0][0], pb[0][1])
       }
     }
 
-    function Ud(dd) {
-      var Od, md;
-      return Od = {}, Wd("next"), Wd("throw", (function(dd) {
-        throw dd
-      })), Wd("return"), Od[Symbol.iterator] = function() {
+    function Kb(bb) {
+      var wb, Mb;
+      return wb = {}, eb("next"), eb("throw", (function(bb) {
+        throw bb
+      })), eb("return"), wb[Symbol.iterator] = function() {
         return this
-      }, Od;
+      }, wb;
 
-      function Wd(Wd, Fd) {
-        Od[Wd] = dd[Wd] ? function(Od) {
-          return (md = !md) ? {
-            value: Ed(dd[Wd](Od)),
+      function eb(eb, Hb) {
+        wb[eb] = bb[eb] ? function(wb) {
+          return (Mb = !Mb) ? {
+            value: xb(bb[eb](wb)),
             done: !1
-          } : Fd ? Fd(Od) : Od
-        } : Fd
+          } : Hb ? Hb(wb) : wb
+        } : Hb
       }
     }
 
-    function xd(dd) {
+    function rb(bb) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Od, md = dd[Symbol.asyncIterator];
-      return md ? md.call(dd) : (dd = Td(dd), Od = {}, Wd("next"), Wd("throw"), Wd("return"), Od[Symbol.asyncIterator] = function() {
+      var wb, Mb = bb[Symbol.asyncIterator];
+      return Mb ? Mb.call(bb) : (bb = sb(bb), wb = {}, eb("next"), eb("throw"), eb("return"), wb[Symbol.asyncIterator] = function() {
         return this
-      }, Od);
+      }, wb);
 
-      function Wd(md) {
-        Od[md] = dd[md] && function(Od) {
-          return new Promise((function(Wd, Fd) {
-            (function(dd, Od, md, Wd) {
-              Promise.resolve(Wd).then((function(Od) {
-                dd({
-                  value: Od,
-                  done: md
+      function eb(Mb) {
+        wb[Mb] = bb[Mb] && function(wb) {
+          return new Promise((function(eb, Hb) {
+            (function(bb, wb, Mb, eb) {
+              Promise.resolve(eb).then((function(wb) {
+                bb({
+                  value: wb,
+                  done: Mb
                 })
-              }), Od)
-            })(Wd, Fd, (Od = dd[md](Od)).done, Od.value)
+              }), wb)
+            })(eb, Hb, (wb = bb[Mb](wb)).done, wb.value)
           }))
         }
       }
     }
 
-    function Bd(dd, Od) {
-      return Object.defineProperty ? Object.defineProperty(dd, "raw", {
-        value: Od
-      }) : dd.raw = Od, dd
+    function Rb(bb, wb) {
+      return Object.defineProperty ? Object.defineProperty(bb, "raw", {
+        value: wb
+      }) : bb.raw = wb, bb
     }
-    var Sd = Object.create ? function(dd, Od) {
-        Object.defineProperty(dd, "default", {
+    var Db = Object.create ? function(bb, wb) {
+        Object.defineProperty(bb, "default", {
           enumerable: !0,
-          value: Od
+          value: wb
         })
-      } : function(dd, Od) {
-        dd.default = Od
+      } : function(bb, wb) {
+        bb.default = wb
       },
-      sd = function(dd) {
-        return sd = Object.getOwnPropertyNames || function(dd) {
-          var Od = [];
-          for (var md in dd) Object.prototype.hasOwnProperty.call(dd, md) && (Od[Od.length] = md);
-          return Od
-        }, sd(dd)
+      cb = function(bb) {
+        return cb = Object.getOwnPropertyNames || function(bb) {
+          var wb = [];
+          for (var Mb in bb) Object.prototype.hasOwnProperty.call(bb, Mb) && (wb[wb.length] = Mb);
+          return wb
+        }, cb(bb)
       };
 
-    function ud(dd) {
-      if (dd && dd.__esModule) return dd;
-      var Od = {};
-      if (null != dd)
-        for (var md = sd(dd), Wd = 0; Wd < md.length; Wd++) "default" !== md[Wd] && yd(Od, dd, md[Wd]);
-      return Sd(Od, dd), Od
+    function Yb(bb) {
+      if (bb && bb.__esModule) return bb;
+      var wb = {};
+      if (null != bb)
+        for (var Mb = cb(bb), eb = 0; eb < Mb.length; eb++) "default" !== Mb[eb] && Fb(wb, bb, Mb[eb]);
+      return Db(wb, bb), wb
     }
 
-    function Vd(dd) {
-      return dd && dd.__esModule ? dd : {
-        default: dd
+    function Zb(bb) {
+      return bb && bb.__esModule ? bb : {
+        default: bb
       }
     }
 
-    function Ad(dd, Od, md, Wd) {
-      if ("a" === md && !Wd) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof Od ? dd !== Od || !Wd : !Od.has(dd)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === md ? Wd : "a" === md ? Wd.call(dd) : Wd ? Wd.value : Od.get(dd)
+    function fb(bb, wb, Mb, eb) {
+      if ("a" === Mb && !eb) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof wb ? bb !== wb || !eb : !wb.has(bb)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === Mb ? eb : "a" === Mb ? eb.call(bb) : eb ? eb.value : wb.get(bb)
     }
 
-    function rd(dd, Od, md, Wd, Fd) {
-      if ("m" === Wd) throw new TypeError("Private method is not writable");
-      if ("a" === Wd && !Fd) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof Od ? dd !== Od || !Fd : !Od.has(dd)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === Wd ? Fd.call(dd, md) : Fd ? Fd.value = md : Od.set(dd, md), md
+    function Ab(bb, wb, Mb, eb, Hb) {
+      if ("m" === eb) throw new TypeError("Private method is not writable");
+      if ("a" === eb && !Hb) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof wb ? bb !== wb || !Hb : !wb.has(bb)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === eb ? Hb.call(bb, Mb) : Hb ? Hb.value = Mb : wb.set(bb, Mb), Mb
     }
 
-    function Gd(dd, Od) {
-      if (null === Od || "object" !== typeof Od && "function" !== typeof Od) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof dd ? Od === dd : dd.has(Od)
+    function Wb(bb, wb) {
+      if (null === wb || "object" !== typeof wb && "function" !== typeof wb) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof bb ? wb === bb : bb.has(wb)
     }
 
-    function nd(dd, Od, md) {
-      if (null !== Od && void 0 !== Od) {
-        if ("object" !== typeof Od && "function" !== typeof Od) throw new TypeError("Object expected.");
-        var Wd, Fd;
-        if (md) {
+    function Jb(bb, wb, Mb) {
+      if (null !== wb && void 0 !== wb) {
+        if ("object" !== typeof wb && "function" !== typeof wb) throw new TypeError("Object expected.");
+        var eb, Hb;
+        if (Mb) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          Wd = Od[Symbol.asyncDispose]
+          eb = wb[Symbol.asyncDispose]
         }
-        if (void 0 === Wd) {
+        if (void 0 === eb) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          Wd = Od[Symbol.dispose], md && (Fd = Wd)
+          eb = wb[Symbol.dispose], Mb && (Hb = eb)
         }
-        if ("function" !== typeof Wd) throw new TypeError("Object not disposable.");
-        Fd && (Wd = function() {
+        if ("function" !== typeof eb) throw new TypeError("Object not disposable.");
+        Hb && (eb = function() {
           try {
-            Fd.call(this)
-          } catch (dd) {
-            return Promise.reject(dd)
+            Hb.call(this)
+          } catch (bb) {
+            return Promise.reject(bb)
           }
-        }), dd.stack.push({
-          value: Od,
-          dispose: Wd,
-          async: md
+        }), bb.stack.push({
+          value: wb,
+          dispose: eb,
+          async: Mb
         })
-      } else md && dd.stack.push({
+      } else Mb && bb.stack.push({
         async: !0
       });
-      return Od
+      return wb
     }
-    var Ld = "function" === typeof SuppressedError ? SuppressedError : function(dd, Od, md) {
-      var Wd = new Error(md);
-      return Wd.name = "SuppressedError", Wd.error = dd, Wd.suppressed = Od, Wd
+    var Sb = "function" === typeof SuppressedError ? SuppressedError : function(bb, wb, Mb) {
+      var eb = new Error(Mb);
+      return eb.name = "SuppressedError", eb.error = bb, eb.suppressed = wb, eb
     };
 
-    function Pd(dd) {
-      function Od(Od) {
-        dd.error = dd.hasError ? new Ld(Od, dd.error, "An error was suppressed during disposal.") : Od, dd.hasError = !0
+    function Nb(bb) {
+      function wb(wb) {
+        bb.error = bb.hasError ? new Sb(wb, bb.error, "An error was suppressed during disposal.") : wb, bb.hasError = !0
       }
-      var md, Wd = 0;
-      return function Fd() {
-        for (; md = dd.stack.pop();) try {
-          if (!md.async && 1 === Wd) return Wd = 0, dd.stack.push(md), Promise.resolve().then(Fd);
-          if (md.dispose) {
-            var Rd = md.dispose.call(md.value);
-            if (md.async) return Wd |= 2, Promise.resolve(Rd).then(Fd, (function(dd) {
-              return Od(dd), Fd()
+      var Mb, eb = 0;
+      return function Hb() {
+        for (; Mb = bb.stack.pop();) try {
+          if (!Mb.async && 1 === eb) return eb = 0, bb.stack.push(Mb), Promise.resolve().then(Hb);
+          if (Mb.dispose) {
+            var pb = Mb.dispose.call(Mb.value);
+            if (Mb.async) return eb |= 2, Promise.resolve(pb).then(Hb, (function(bb) {
+              return wb(bb), Hb()
             }))
-          } else Wd |= 1
-        } catch (Xd) {
-          Od(Xd)
+          } else eb |= 1
+        } catch (Vb) {
+          wb(Vb)
         }
-        if (1 === Wd) return dd.hasError ? Promise.reject(dd.error) : Promise.resolve();
-        if (dd.hasError) throw dd.error
+        if (1 === eb) return bb.hasError ? Promise.reject(bb.error) : Promise.resolve();
+        if (bb.hasError) throw bb.error
       }()
     }
 
-    function zd(dd, Od) {
-      return "string" === typeof dd && /^\.\.?\//.test(dd) ? dd.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(dd, md, Wd, Fd, Rd) {
-        return md ? Od ? ".jsx" : ".js" : !Wd || Fd && Rd ? Wd + Fd + "." + Rd.toLowerCase() + "js" : dd
-      })) : dd
+    function vb(bb, wb) {
+      return "string" === typeof bb && /^\.\.?\//.test(bb) ? bb.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(bb, Mb, eb, Hb, pb) {
+        return Mb ? wb ? ".jsx" : ".js" : !eb || Hb && pb ? eb + Hb + "." + pb.toLowerCase() + "js" : bb
+      })) : bb
     }
-    const cd = {
-      __extends: Fd,
-      __assign: Rd,
-      __rest: Xd,
-      __decorate: Kd,
-      __param: hd,
-      __esDecorate: vd,
-      __runInitializers: Qd,
-      __propKey: td,
-      __setFunctionName: od,
-      __metadata: Nd,
-      __awaiter: qd,
-      __generator: Hd,
-      __createBinding: yd,
-      __exportStar: bd,
-      __values: Td,
-      __read: pd,
-      __spread: Yd,
-      __spreadArrays: gd,
-      __spreadArray: wd,
-      __await: Ed,
-      __asyncGenerator: Jd,
-      __asyncDelegator: Ud,
-      __asyncValues: xd,
-      __makeTemplateObject: Bd,
-      __importStar: ud,
-      __importDefault: Vd,
-      __classPrivateFieldGet: Ad,
-      __classPrivateFieldSet: rd,
-      __classPrivateFieldIn: Gd,
-      __addDisposableResource: nd,
-      __disposeResources: Pd,
-      __rewriteRelativeImportExtension: zd
+    const Qb = {
+      __extends: Hb,
+      __assign: pb,
+      __rest: Vb,
+      __decorate: gb,
+      __param: lb,
+      __esDecorate: Lb,
+      __runInitializers: Ib,
+      __propKey: Ob,
+      __setFunctionName: Ub,
+      __metadata: tb,
+      __awaiter: Cb,
+      __generator: Eb,
+      __createBinding: Fb,
+      __exportStar: Bb,
+      __values: sb,
+      __read: mb,
+      __spread: hb,
+      __spreadArrays: zb,
+      __spreadArray: Xb,
+      __await: xb,
+      __asyncGenerator: jb,
+      __asyncDelegator: Kb,
+      __asyncValues: rb,
+      __makeTemplateObject: Rb,
+      __importStar: Yb,
+      __importDefault: Zb,
+      __classPrivateFieldGet: fb,
+      __classPrivateFieldSet: Ab,
+      __classPrivateFieldIn: Wb,
+      __addDisposableResource: Jb,
+      __disposeResources: Nb,
+      __rewriteRelativeImportExtension: vb
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

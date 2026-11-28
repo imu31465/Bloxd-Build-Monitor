@@ -1,377 +1,377 @@
 export const id = 96;
 export const ids = [96];
 export const modules = {
-  5509: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Wd,
-      c: () => Xd,
-      e: () => yd,
-      h: () => Hd,
-      k: () => Kd,
-      l: () => Fd,
-      m: () => Rd,
-      q: () => qd,
-      r: () => Nd,
-      s: () => od
+  5629: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      A: () => tb,
+      E: () => Ub,
+      b: () => eb,
+      d: () => Vb,
+      g: () => Fb,
+      k: () => Eb,
+      n: () => gb,
+      q: () => Hb,
+      s: () => pb,
+      w: () => Cb
     });
-    const Wd = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const eb = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function Fd(dd) {
+    function Hb(bb) {
       try {
-        return decodeURIComponent(dd.slice(1))
+        return decodeURIComponent(bb.slice(1))
       } catch {
-        return dd.slice(1)
+        return bb.slice(1)
       }
     }
 
-    function Rd(dd) {
-      return dd.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function pb(bb) {
+      return bb.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const Xd = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Wd.source}`, "g");
+    const Vb = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${eb.source}`, "g");
 
-    function Kd(dd, Od) {
-      return 2 === dd.length ? Od.replace(/^ (.*) $/, "$1") : Od
-    }
-
-    function hd(dd) {
-      return "" === dd.trim()
+    function gb(bb, wb) {
+      return 2 === bb.length ? wb.replace(/^ (.*) $/, "$1") : wb
     }
 
-    function vd(dd) {
-      const Od = [];
-      for (const md of dd.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Od.length > 0 && Od[Od.length - 1].endsWith("\\") ? Od[Od.length - 1] += `|${md}` : Od.push(md);
-      return Od.map((dd => dd.trim().replaceAll("\\|", "|")))
+    function lb(bb) {
+      return "" === bb.trim()
     }
-    const Qd = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function td(dd) {
-      const Od = [],
-        md = [{
+    function Lb(bb) {
+      const wb = [];
+      for (const Mb of bb.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) wb.length > 0 && wb[wb.length - 1].endsWith("\\") ? wb[wb.length - 1] += `|${Mb}` : wb.push(Mb);
+      return wb.map((bb => bb.trim().replaceAll("\\|", "|")))
+    }
+    const Ib = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function Ob(bb) {
+      const wb = [],
+        Mb = [{
           indent: -1,
-          items: Od
+          items: wb
         }];
-      let Wd = null;
-      for (const Fd of dd) {
-        const dd = Fd.match(Qd);
-        if (!dd) {
-          Wd && (Wd.text += ` ${Fd.trim()}`);
+      let eb = null;
+      for (const Hb of bb) {
+        const bb = Hb.match(Ib);
+        if (!bb) {
+          eb && (eb.text += ` ${Hb.trim()}`);
           continue
         }
-        const Od = dd[1].replace(/\t/g, "  ").length;
-        for (; Od <= md[md.length - 1].indent;) md.pop();
-        Wd = {
-          text: dd[3].trim(),
+        const wb = bb[1].replace(/\t/g, "  ").length;
+        for (; wb <= Mb[Mb.length - 1].indent;) Mb.pop();
+        eb = {
+          text: bb[3].trim(),
           children: []
-        }, md[md.length - 1].items.push(Wd), md.push({
-          indent: Od,
-          items: Wd.children
+        }, Mb[Mb.length - 1].items.push(eb), Mb.push({
+          indent: wb,
+          items: eb.children
         })
       }
-      return Od
+      return wb
     }
 
-    function od(dd) {
-      const Od = dd.replace(/\r\n/g, "\n").split("\n"),
-        md = [];
-      let Wd = 0;
-      for (; Wd < Od.length;) {
-        const dd = Od[Wd];
-        if (hd(dd)) {
-          Wd++;
+    function Ub(bb) {
+      const wb = bb.replace(/\r\n/g, "\n").split("\n"),
+        Mb = [];
+      let eb = 0;
+      for (; eb < wb.length;) {
+        const bb = wb[eb];
+        if (lb(bb)) {
+          eb++;
           continue
         }
-        const Fd = dd.match(/^\s*```\s*(\w*)\s*$/);
-        if (Fd) {
-          const dd = [];
-          for (Wd++; Wd < Od.length && !/^\s*```\s*$/.test(Od[Wd]);) dd.push(Od[Wd]), Wd++;
-          Wd++, md.push({
+        const Hb = bb.match(/^\s*```\s*(\w*)\s*$/);
+        if (Hb) {
+          const bb = [];
+          for (eb++; eb < wb.length && !/^\s*```\s*$/.test(wb[eb]);) bb.push(wb[eb]), eb++;
+          eb++, Mb.push({
             kind: "code",
-            lang: Fd[1] || "text",
-            code: dd.join("\n").replace(/\s+$/, "")
+            lang: Hb[1] || "text",
+            code: bb.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const Xd = dd.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (Xd) {
-          const dd = Xd[2].trim();
-          md.push({
+        const Vb = bb.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (Vb) {
+          const bb = Vb[2].trim();
+          Mb.push({
             kind: "heading",
-            level: Xd[1].length,
-            text: dd,
-            anchor: Rd(dd)
-          }), Wd++;
+            level: Vb[1].length,
+            text: bb,
+            anchor: pb(bb)
+          }), eb++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(dd)) {
-          md.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(bb)) {
+          Mb.push({
             kind: "rule"
-          }), Wd++;
+          }), eb++;
           continue
         }
-        if (dd.trim().startsWith("|") && Wd + 1 < Od.length && /^\s*\|[\s:|-]+\|\s*$/.test(Od[Wd + 1])) {
-          const Fd = vd(dd),
-            Rd = [];
-          for (Wd += 2; Wd < Od.length && Od[Wd].trim().startsWith("|");) Rd.push(vd(Od[Wd])), Wd++;
-          md.push({
+        if (bb.trim().startsWith("|") && eb + 1 < wb.length && /^\s*\|[\s:|-]+\|\s*$/.test(wb[eb + 1])) {
+          const Hb = Lb(bb),
+            pb = [];
+          for (eb += 2; eb < wb.length && wb[eb].trim().startsWith("|");) pb.push(Lb(wb[eb])), eb++;
+          Mb.push({
             kind: "table",
-            header: Fd,
-            rows: Rd
+            header: Hb,
+            rows: pb
           });
           continue
         }
-        if (dd.startsWith(">")) {
-          const dd = [];
-          for (; Wd < Od.length && Od[Wd].startsWith(">");) dd.push(Od[Wd].replace(/^>\s?/, "")), Wd++;
-          md.push({
+        if (bb.startsWith(">")) {
+          const bb = [];
+          for (; eb < wb.length && wb[eb].startsWith(">");) bb.push(wb[eb].replace(/^>\s?/, "")), eb++;
+          Mb.push({
             kind: "quote",
-            blocks: od(dd.join("\n"))
+            blocks: Ub(bb.join("\n"))
           });
           continue
         }
-        if (Qd.test(dd)) {
-          const Fd = [],
-            Rd = /^\s*\d+\./.test(dd);
-          for (; Wd < Od.length && !hd(Od[Wd]) && (Qd.test(Od[Wd]) || /^\s+\S/.test(Od[Wd]));) Fd.push(Od[Wd]), Wd++;
-          md.push({
+        if (Ib.test(bb)) {
+          const Hb = [],
+            pb = /^\s*\d+\./.test(bb);
+          for (; eb < wb.length && !lb(wb[eb]) && (Ib.test(wb[eb]) || /^\s+\S/.test(wb[eb]));) Hb.push(wb[eb]), eb++;
+          Mb.push({
             kind: "list",
-            ordered: Rd,
-            items: td(Fd)
+            ordered: pb,
+            items: Ob(Hb)
           });
           continue
         }
-        const Kd = [];
-        for (; Wd < Od.length && !hd(Od[Wd]) && !/^\s*```/.test(Od[Wd]) && !/^#{1,6}\s/.test(Od[Wd]) && !Od[Wd].startsWith(">") && !Qd.test(Od[Wd]) && (!Od[Wd].trim().startsWith("|") || 0 !== Kd.length);) Kd.push(Od[Wd].trim()), Wd++;
-        0 === Kd.length && (Kd.push(Od[Wd].trim()), Wd++), md.push({
+        const gb = [];
+        for (; eb < wb.length && !lb(wb[eb]) && !/^\s*```/.test(wb[eb]) && !/^#{1,6}\s/.test(wb[eb]) && !wb[eb].startsWith(">") && !Ib.test(wb[eb]) && (!wb[eb].trim().startsWith("|") || 0 !== gb.length);) gb.push(wb[eb].trim()), eb++;
+        0 === gb.length && (gb.push(wb[eb].trim()), eb++), Mb.push({
           kind: "paragraph",
-          text: Kd.join(" ")
+          text: gb.join(" ")
         })
       }
-      return md
+      return Mb
     }
 
-    function Nd(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const md = od(dd);
-      let Wd = "";
-      const Fd = [],
-        Rd = [],
-        Xd = new Map;
-      for (const vd of md) {
-        if ("heading" === vd.kind) {
-          var Kd;
-          const dd = (null !== (Kd = Xd.get(vd.anchor)) && void 0 !== Kd ? Kd : 0) + 1;
-          Xd.set(vd.anchor, dd), dd > 1 && (vd.anchor = `${vd.anchor}-${dd}`)
+    function tb(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const Mb = Ub(bb);
+      let eb = "";
+      const Hb = [],
+        pb = [],
+        Vb = new Map;
+      for (const Lb of Mb) {
+        if ("heading" === Lb.kind) {
+          var gb;
+          const bb = (null !== (gb = Vb.get(Lb.anchor)) && void 0 !== gb ? gb : 0) + 1;
+          Vb.set(Lb.anchor, bb), bb > 1 && (Lb.anchor = `${Lb.anchor}-${bb}`)
         }
-        if ("heading" === vd.kind && 1 === vd.level && !Wd) {
-          Wd = vd.text;
+        if ("heading" === Lb.kind && 1 === Lb.level && !eb) {
+          eb = Lb.text;
           continue
         }
-        if ("heading" === vd.kind && vd.level <= Od) {
-          Rd.push({
-            heading: vd,
+        if ("heading" === Lb.kind && Lb.level <= wb) {
+          pb.push({
+            heading: Lb,
             blocks: []
           });
           continue
         }
-        const dd = Rd.at(-1);
-        dd ? dd.blocks.push(vd) : Fd.push(vd)
+        const bb = pb.at(-1);
+        bb ? bb.blocks.push(Lb) : Hb.push(Lb)
       }
-      const hd = dd => {
+      const lb = bb => {
         for (;
-          "rule" === (null === (Od = dd.at(-1)) || void 0 === Od ? void 0 : Od.kind);) {
-          var Od;
-          dd.pop()
+          "rule" === (null === (wb = bb.at(-1)) || void 0 === wb ? void 0 : wb.kind);) {
+          var wb;
+          bb.pop()
         }
       };
-      hd(Fd);
-      for (const vd of Rd) hd(vd.blocks);
+      lb(Hb);
+      for (const Lb of pb) lb(Lb.blocks);
       return {
-        title: Wd,
-        intro: Fd,
-        sections: Rd
+        title: eb,
+        intro: Hb,
+        sections: pb
       }
     }
 
-    function qd(dd) {
+    function Cb(bb) {
       return [{
         heading: null,
-        blocks: dd.intro
-      }, ...dd.sections.map((dd => ({
-        heading: dd.heading,
-        blocks: dd.blocks
+        blocks: bb.intro
+      }, ...bb.sections.map((bb => ({
+        heading: bb.heading,
+        blocks: bb.blocks
       })))]
     }
 
-    function Hd(dd) {
-      return dd.flatMap((dd => "code" === dd.kind ? [dd] : "quote" === dd.kind ? Hd(dd.blocks) : []))
+    function Eb(bb) {
+      return bb.flatMap((bb => "code" === bb.kind ? [bb] : "quote" === bb.kind ? Eb(bb.blocks) : []))
     }
 
-    function yd(dd) {
-      switch (dd.kind) {
+    function Fb(bb) {
+      switch (bb.kind) {
         case "heading":
         case "paragraph":
-          return dd.text;
+          return bb.text;
         case "code":
-          return dd.code;
+          return bb.code;
         case "table":
-          return [dd.header, ...dd.rows].map((dd => dd.join(" "))).join(" ");
+          return [bb.header, ...bb.rows].map((bb => bb.join(" "))).join(" ");
         case "list": {
-          const Od = dd => dd.map((dd => `${dd.text} ${Od(dd.children)}`)).join(" ");
-          return Od(dd.items)
+          const wb = bb => bb.map((bb => `${bb.text} ${wb(bb.children)}`)).join(" ");
+          return wb(bb.items)
         }
         case "quote":
-          return dd.blocks.map(yd).join(" ");
+          return bb.blocks.map(Fb).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  7435: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => td,
-      h: () => Xd,
-      j: () => Kd
+  7661: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Ob,
+      g: () => Vb,
+      j: () => gb
     });
-    md(7429);
-    var Wd = md(66),
-      Fd = md(5509),
-      Rd = md(1341);
-    const Xd = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    Mb(7653);
+    var eb = Mb(64),
+      Hb = Mb(5629),
+      pb = Mb(1364);
+    const Vb = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function Kd(dd, Od) {
-      return dd === Od ? dd : `${dd} (${Od})`
+    function gb(bb, wb) {
+      return bb === wb ? bb : `${bb} (${wb})`
     }
 
-    function hd(dd) {
-      const Od = [];
-      let md = 0;
-      for (const Wd of dd.matchAll(Xd)) {
-        Wd.index > md && Od.push(dd.slice(md, Wd.index));
-        const [, Fd, Xd, hd, vd, Qd, td] = Wd;
-        void 0 !== Fd ? Od.push(Kd(Fd, Xd)) : void 0 !== hd || void 0 !== vd ? Od.push((0, Rd.jsx)("strong", {
-          children: null !== hd && void 0 !== hd ? hd : vd
-        }, Wd.index)) : void 0 !== Qd ? Od.push((0, Rd.jsx)("em", {
-          children: Qd
-        }, Wd.index)) : Od.push((0, Rd.jsx)("code", {
-          children: td
-        }, Wd.index)), md = Wd.index + Wd[0].length
+    function lb(bb) {
+      const wb = [];
+      let Mb = 0;
+      for (const eb of bb.matchAll(Vb)) {
+        eb.index > Mb && wb.push(bb.slice(Mb, eb.index));
+        const [, Hb, Vb, lb, Lb, Ib, Ob] = eb;
+        void 0 !== Hb ? wb.push(gb(Hb, Vb)) : void 0 !== lb || void 0 !== Lb ? wb.push((0, pb.jsx)("strong", {
+          children: null !== lb && void 0 !== lb ? lb : Lb
+        }, eb.index)) : void 0 !== Ib ? wb.push((0, pb.jsx)("em", {
+          children: Ib
+        }, eb.index)) : wb.push((0, pb.jsx)("code", {
+          children: Ob
+        }, eb.index)), Mb = eb.index + eb[0].length
       }
-      return md < dd.length && Od.push(dd.slice(md)), Od
+      return Mb < bb.length && wb.push(bb.slice(Mb)), wb
     }
 
-    function vd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const Wd = dd.map(((dd, Od) => (0, Rd.jsxs)("li", {
-        children: [hd(dd.text), dd.children.length > 0 && vd(dd.children, !1)]
-      }, Od)));
-      return Od ? (0, Rd.jsx)("ol", {
-        start: md,
-        children: Wd
-      }) : (0, Rd.jsx)("ul", {
-        children: Wd
+    function Lb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const eb = bb.map(((bb, wb) => (0, pb.jsxs)("li", {
+        children: [lb(bb.text), bb.children.length > 0 && Lb(bb.children, !1)]
+      }, wb)));
+      return wb ? (0, pb.jsx)("ol", {
+        start: Mb,
+        children: eb
+      }) : (0, pb.jsx)("ul", {
+        children: eb
       })
     }
 
-    function Qd(dd, Od) {
-      switch (dd.kind) {
+    function Ib(bb, wb) {
+      switch (bb.kind) {
         case "heading":
-          return dd.level <= 2 ? (0, Rd.jsx)("h3", {
-            children: hd(dd.text)
-          }, Od) : (0, Rd.jsx)("h4", {
-            children: hd(dd.text)
-          }, Od);
+          return bb.level <= 2 ? (0, pb.jsx)("h3", {
+            children: lb(bb.text)
+          }, wb) : (0, pb.jsx)("h4", {
+            children: lb(bb.text)
+          }, wb);
         case "paragraph":
-          return (0, Rd.jsx)("p", {
-            children: hd(dd.text)
-          }, Od);
+          return (0, pb.jsx)("p", {
+            children: lb(bb.text)
+          }, wb);
         case "list":
-          return (0, Rd.jsx)(Wd.Fragment, {
-            children: vd(dd.items, dd.ordered)
-          }, Od);
+          return (0, pb.jsx)(eb.Fragment, {
+            children: Lb(bb.items, bb.ordered)
+          }, wb);
         case "quote":
-          return (0, Rd.jsx)("blockquote", {
-            children: dd.blocks.map(((dd, Od) => Qd(dd, Od)))
-          }, Od);
+          return (0, pb.jsx)("blockquote", {
+            children: bb.blocks.map(((bb, wb) => Ib(bb, wb)))
+          }, wb);
         case "code":
-          return (0, Rd.jsx)("pre", {
-            children: (0, Rd.jsx)("code", {
-              children: dd.code
+          return (0, pb.jsx)("pre", {
+            children: (0, pb.jsx)("code", {
+              children: bb.code
             })
-          }, Od);
+          }, wb);
         case "table":
-          return (0, Rd.jsxs)("table", {
-            children: [(0, Rd.jsx)("thead", {
-              children: (0, Rd.jsx)("tr", {
-                children: dd.header.map(((dd, Od) => (0, Rd.jsx)("th", {
-                  children: hd(dd)
-                }, Od)))
+          return (0, pb.jsxs)("table", {
+            children: [(0, pb.jsx)("thead", {
+              children: (0, pb.jsx)("tr", {
+                children: bb.header.map(((bb, wb) => (0, pb.jsx)("th", {
+                  children: lb(bb)
+                }, wb)))
               })
-            }), (0, Rd.jsx)("tbody", {
-              children: dd.rows.map(((dd, Od) => (0, Rd.jsx)("tr", {
-                children: dd.map(((dd, Od) => (0, Rd.jsx)("td", {
-                  children: hd(dd)
-                }, Od)))
-              }, Od)))
+            }), (0, pb.jsx)("tbody", {
+              children: bb.rows.map(((bb, wb) => (0, pb.jsx)("tr", {
+                children: bb.map(((bb, wb) => (0, pb.jsx)("td", {
+                  children: lb(bb)
+                }, wb)))
+              }, wb)))
             })]
-          }, Od);
+          }, wb);
         case "rule":
-          return (0, Rd.jsx)("hr", {}, Od)
+          return (0, pb.jsx)("hr", {}, wb)
       }
     }
 
-    function td(dd) {
+    function Ob(bb) {
       let {
-        markdown: Od
-      } = dd, md = 0;
-      return (0, Rd.jsx)("div", {
+        markdown: wb
+      } = bb, Mb = 0;
+      return (0, pb.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, Fd.s)(Od).map(((dd, Od) => {
-          if ("list" !== dd.kind || !dd.ordered) return md = 0, Qd(dd, Od);
-          const Fd = md + 1;
-          return md += dd.items.length, (0, Rd.jsx)(Wd.Fragment, {
-            children: vd(dd.items, !0, Fd)
-          }, Od)
+        children: (0, Hb.E)(wb).map(((bb, wb) => {
+          if ("list" !== bb.kind || !bb.ordered) return Mb = 0, Ib(bb, wb);
+          const Hb = Mb + 1;
+          return Mb += bb.items.length, (0, pb.jsx)(eb.Fragment, {
+            children: Lb(bb.items, !0, Hb)
+          }, wb)
         }))
       })
     }
   },
-  7420: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Td,
-      i: () => pd,
-      h: () => gd,
-      j: () => qd
+  7645: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => sb,
+      g: () => mb,
+      e: () => zb,
+      i: () => Cb
     });
-    var Wd = md(1268),
-      Fd = md(7374),
-      Rd = md(5656);
-    const Xd = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var eb = Mb(1280),
+      Hb = Mb(7613),
+      pb = Mb(5773);
+    const Vb = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function Kd(dd) {
-      return (0, Rd.g)(dd, Xd, (Od => !/^my/i.test(Od[0]) || !/follow $/i.test(dd.slice(0, Od.index)))).length > 0
+    function gb(bb) {
+      return (0, pb.d)(bb, Vb, (wb => !/^my/i.test(wb[0]) || !/follow $/i.test(bb.slice(0, wb.index)))).length > 0
     }
-    const hd = /\byou(?:r|'re|'ll)?\b/i,
-      vd = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      Qd = 2;
+    const lb = /\byou(?:r|'re|'ll)?\b/i,
+      Lb = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      Ib = 2;
 
-    function td(dd) {
-      return function(dd) {
-        const Od = [];
-        let md = !1;
-        for (const Wd of dd.split("\n")) {
-          if (/^\s*(```|~~~)/.test(Wd)) {
-            md = !md;
+    function Ob(bb) {
+      return function(bb) {
+        const wb = [];
+        let Mb = !1;
+        for (const eb of bb.split("\n")) {
+          if (/^\s*(```|~~~)/.test(eb)) {
+            Mb = !Mb;
             continue
           }
-          if (md || /^\s*>/.test(Wd)) continue;
-          const dd = Wd.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          Od.push(...(0, Fd.q)(dd))
+          if (Mb || /^\s*>/.test(eb)) continue;
+          const bb = eb.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          wb.push(...(0, Hb.r)(bb))
         }
-        return Od
-      }(dd).filter((dd => Kd(dd) || vd.test(dd) && !hd.test(dd)))
+        return wb
+      }(bb).filter((bb => gb(bb) || Lb.test(bb) && !lb.test(bb)))
     }
-    const od = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      Nd = [{
+    const Ub = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      tb = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function qd(dd) {
-      const Od = Nd.findIndex((Od => Od.name === dd));
-      return -1 === Od ? Nd.length : Od
+    function Cb(bb) {
+      const wb = tb.findIndex((wb => wb.name === bb));
+      return -1 === wb ? tb.length : wb
     }
-    const Hd = 2500,
-      yd = 12e4;
-    class bd extends Error {
-      constructor(dd) {
-        super(`Studio AI chat ${dd}`), this.reason = dd
+    const Eb = 2500,
+      Fb = 12e4;
+    class Bb extends Error {
+      constructor(bb) {
+        super(`Studio AI chat ${bb}`), this.reason = bb
       }
     }
 
-    function Td(dd, Od) {
-      const md = new AbortController,
-        Wd = () => {
-          md.abort()
+    function sb(bb, wb) {
+      const Mb = new AbortController,
+        eb = () => {
+          Mb.abort()
         },
-        Fd = setTimeout(Wd, dd);
-      return null !== Od && void 0 !== Od && Od.aborted && Wd(), null === Od || void 0 === Od || Od.addEventListener("abort", Wd, {
+        Hb = setTimeout(eb, bb);
+      return null !== wb && void 0 !== wb && wb.aborted && eb(), null === wb || void 0 === wb || wb.addEventListener("abort", eb, {
         once: !0
       }), {
-        signal: md.signal,
+        signal: Mb.signal,
         clear: () => {
-          clearTimeout(Fd), null === Od || void 0 === Od || Od.removeEventListener("abort", Wd)
+          clearTimeout(Hb), null === wb || void 0 === wb || wb.removeEventListener("abort", eb)
         }
       }
     }
 
-    function pd(dd, Od, md) {
-      return new Promise(((Fd, Rd) => {
-        const Xd = new AbortController,
-          Kd = () => {
-            Xd.abort(), Rd((0, Wd.e)(md))
+    function mb(bb, wb, Mb) {
+      return new Promise(((Hb, pb) => {
+        const Vb = new AbortController,
+          gb = () => {
+            Vb.abort(), pb((0, eb.h)(Mb))
           };
-        if (null !== md && void 0 !== md && md.aborted) return void Kd();
-        null === md || void 0 === md || md.addEventListener("abort", Kd, {
+        if (null !== Mb && void 0 !== Mb && Mb.aborted) return void gb();
+        null === Mb || void 0 === Mb || Mb.addEventListener("abort", gb, {
           once: !0
         });
-        const hd = Nd.map((() => !1));
-        let vd = null;
-        const Qd = Nd.map((() => !1)),
-          td = Nd.map((() => !1));
-        Nd.forEach(((Wd, od) => {
-          const qd = Td(yd, Xd.signal);
-          wd(Wd, [{
+        const lb = tb.map((() => !1));
+        let Lb = null;
+        const Ib = tb.map((() => !1)),
+          Ob = tb.map((() => !1));
+        tb.forEach(((eb, Ub) => {
+          const Cb = sb(Fb, Vb.signal);
+          Xb(eb, [{
             role: "user",
-            content: dd
-          }], qd.signal).then((dd => {
-            Xd.signal.aborted || ("busy" === dd || "failed" === dd ? (Qd[od] = "busy" === dd, td[od] = !0) : null !== dd && (null === vd || od < vd.rank) && (vd = {
-              rank: od,
+            content: bb
+          }], Cb.signal).then((bb => {
+            Vb.signal.aborted || ("busy" === bb || "failed" === bb ? (Ib[Ub] = "busy" === bb, Ob[Ub] = !0) : null !== bb && (null === Lb || Ub < Lb.rank) && (Lb = {
+              rank: Ub,
               answer: {
-                text: dd.text,
-                model: Wd.name
+                text: bb.text,
+                model: eb.name
               }
-            }, Od(vd.answer)))
-          }), (dd => {
-            Xd.signal.aborted || (td[od] = !0, console.warn(`Studio AI: ${Wd.name} couldn't be reached`, dd))
+            }, wb(Lb.answer)))
+          }), (bb => {
+            Vb.signal.aborted || (Ob[Ub] = !0, console.warn(`Studio AI: ${eb.name} couldn't be reached`, bb))
           })).finally((() => {
-            qd.clear(), hd[od] = !0, Xd.signal.aborted || (() => {
-              var dd, Od;
-              const Wd = null !== (dd = null === (Od = vd) || void 0 === Od ? void 0 : Od.rank) && void 0 !== dd ? dd : Nd.length;
-              hd.slice(0, Wd).includes(!1) || (null === md || void 0 === md || md.removeEventListener("abort", Kd), Xd.abort(), null !== vd ? Fd({
-                ...vd.answer,
-                isFinal: !td.slice(0, vd.rank).includes(!0)
-              }) : Rd(new bd(Qd.includes(!0) ? "busy" : "failed")))
+            Cb.clear(), lb[Ub] = !0, Vb.signal.aborted || (() => {
+              var bb, wb;
+              const eb = null !== (bb = null === (wb = Lb) || void 0 === wb ? void 0 : wb.rank) && void 0 !== bb ? bb : tb.length;
+              lb.slice(0, eb).includes(!1) || (null === Mb || void 0 === Mb || Mb.removeEventListener("abort", gb), Vb.abort(), null !== Lb ? Hb({
+                ...Lb.answer,
+                isFinal: !Ob.slice(0, Lb.rank).includes(!0)
+              }) : pb(new Bb(Ib.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((dd => {
-            console.error("Studio AI: showing an answer failed", dd)
+          })).catch((bb => {
+            console.error("Studio AI: showing an answer failed", bb)
           }))
         }))
       }))
     }
 
-    function Yd(dd) {
-      var Od, md;
-      return "length" === (null === dd || void 0 === dd || null === (Od = dd.choices) || void 0 === Od || null === (md = Od[0]) || void 0 === md ? void 0 : md.finish_reason)
+    function hb(bb) {
+      var wb, Mb;
+      return "length" === (null === bb || void 0 === bb || null === (wb = bb.choices) || void 0 === wb || null === (Mb = wb[0]) || void 0 === Mb ? void 0 : Mb.finish_reason)
     }
-    async function gd(dd, Od, md) {
-      const Wd = Nd.find((Od => Od.name === dd));
-      if (void 0 === Wd) return "failed";
-      const Fd = Td(yd, md);
+    async function zb(bb, wb, Mb) {
+      const eb = tb.find((wb => wb.name === bb));
+      if (void 0 === eb) return "failed";
+      const Hb = sb(Fb, Mb);
       try {
-        const dd = await wd(Wd, Od, Fd.signal);
-        return null !== dd && "object" === typeof dd ? dd.isCutOff ? (console.warn(`Studio AI: ${Wd.name}'s answer was cut off at the token limit`), null) : {
-          text: dd.text
-        } : dd
+        const bb = await Xb(eb, wb, Hb.signal);
+        return null !== bb && "object" === typeof bb ? bb.isCutOff ? (console.warn(`Studio AI: ${eb.name}'s answer was cut off at the token limit`), null) : {
+          text: bb.text
+        } : bb
       } finally {
-        Fd.clear()
+        Hb.clear()
       }
     }
-    async function wd(dd, Od, md) {
-      const Wd = await fetch(od, {
+    async function Xb(bb, wb, Mb) {
+      const eb = await fetch(Ub, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: dd.name,
-          messages: Od,
-          max_tokens: Hd,
-          temperature: dd.temperature,
-          reasoning_effort: dd.reasoningEffort
+          model: bb.name,
+          messages: wb,
+          max_tokens: Eb,
+          temperature: bb.temperature,
+          reasoning_effort: bb.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: md
+        signal: Mb
       });
-      if (429 === Wd.status) return "busy";
-      if (!Wd.ok) return console.warn(`Studio AI: ${dd.name} answered ${Wd.status}`), "failed";
-      const Fd = await Wd.json().catch((() => null)),
-        Rd = function(dd) {
-          var Od, md, Wd;
-          const Fd = null === dd || void 0 === dd || null === (Od = dd.choices) || void 0 === Od || null === (md = Od[0]) || void 0 === md || null === (Wd = md.message) || void 0 === Wd ? void 0 : Wd.content;
-          if ("string" !== typeof Fd) return null;
-          const Rd = Fd.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === Rd ? null : Rd
-        }(Fd);
-      return null !== Rd && function(dd) {
-        const Od = td(dd);
-        return Od.length >= Qd || Od.some((dd => Kd(dd)))
-      }(Rd) ? (console.warn(`Studio AI: ${dd.name} thought out loud instead of answering`), "failed") : null === Rd ? null : {
-        text: Rd,
-        isCutOff: Yd(Fd)
+      if (429 === eb.status) return "busy";
+      if (!eb.ok) return console.warn(`Studio AI: ${bb.name} answered ${eb.status}`), "failed";
+      const Hb = await eb.json().catch((() => null)),
+        pb = function(bb) {
+          var wb, Mb, eb;
+          const Hb = null === bb || void 0 === bb || null === (wb = bb.choices) || void 0 === wb || null === (Mb = wb[0]) || void 0 === Mb || null === (eb = Mb.message) || void 0 === eb ? void 0 : eb.content;
+          if ("string" !== typeof Hb) return null;
+          const pb = Hb.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === pb ? null : pb
+        }(Hb);
+      return null !== pb && function(bb) {
+        const wb = Ob(bb);
+        return wb.length >= Ib || wb.some((bb => gb(bb)))
+      }(pb) ? (console.warn(`Studio AI: ${bb.name} thought out loud instead of answering`), "failed") : null === pb ? null : {
+        text: pb,
+        isCutOff: hb(Hb)
       }
     }
   },
-  7374: (dd, Od, md) => {
-    md.d(Od, {
-      A: () => yd,
-      B: () => pd,
-      D: () => gd,
-      E: () => Td,
-      G: () => td,
-      J: () => vd,
-      K: () => Nd,
-      c: () => qd,
-      e: () => Kd,
-      i: () => Xd,
-      m: () => Hd,
-      o: () => od,
-      q: () => Qd,
-      r: () => Rd,
-      t: () => Fd,
-      v: () => Yd,
-      x: () => wd
+  7613: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      A: () => Fb,
+      D: () => mb,
+      E: () => zb,
+      I: () => sb,
+      M: () => Ob,
+      Q: () => Lb,
+      U: () => tb,
+      e: () => Cb,
+      g: () => gb,
+      j: () => Vb,
+      l: () => Eb,
+      o: () => Ub,
+      r: () => Ib,
+      u: () => pb,
+      w: () => Hb,
+      x: () => hb,
+      z: () => Xb
     });
-    var Wd = md(5656);
-    const Fd = 2e3,
-      Rd = 2e4;
+    var eb = Mb(5773);
+    const Hb = 2e3,
+      pb = 2e4;
 
-    function Xd(dd) {
-      return dd.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function Vb(bb) {
+      return bb.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function Kd(dd) {
-      return dd.replace(/\$/g, "\\$")
+    function gb(bb) {
+      return bb.replace(/\$/g, "\\$")
     }
-    const hd = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const lb = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function vd(dd, Od) {
-      hd.lastIndex = Od;
-      const md = hd.exec(dd);
-      return md.index + md[0].length
-    }
-
-    function Qd(dd) {
-      return (0, Wd.w)(dd, /\s+/g, (0, Wd.s)(".!?")).flatMap((dd => dd.split("\n")))
+    function Lb(bb, wb) {
+      lb.lastIndex = wb;
+      const Mb = lb.exec(bb);
+      return Mb.index + Mb[0].length
     }
 
-    function td(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Od;
-      const Wd = [...dd.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((dd => dd.index)),
-        Fd = Wd.filter((dd => dd < Od)),
-        Rd = Wd.find((dd => dd >= md));
-      return [0 === Fd.length ? 0 : Fd.at(-1) + 1, void 0 === Rd ? dd.length : Rd + 1]
+    function Ib(bb) {
+      return (0, eb.v)(bb, /\s+/g, (0, eb.q)(".!?")).flatMap((bb => bb.split("\n")))
     }
 
-    function od(dd, Od) {
-      const md = dd.charCodeAt(Od - 1);
-      return dd.slice(0, Od > 0 && Od < dd.length && md >= 55296 && md <= 56319 ? Od - 1 : Od)
+    function Ob(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wb;
+      const eb = [...bb.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((bb => bb.index)),
+        Hb = eb.filter((bb => bb < wb)),
+        pb = eb.find((bb => bb >= Mb));
+      return [0 === Hb.length ? 0 : Hb.at(-1) + 1, void 0 === pb ? bb.length : pb + 1]
     }
 
-    function Nd(dd, Od) {
-      return `${Od}${dd.replace(/\\/g,"\\\\").split(Od).join(`\\${Od}`)}${Od}`
+    function Ub(bb, wb) {
+      const Mb = bb.charCodeAt(wb - 1);
+      return bb.slice(0, wb > 0 && wb < bb.length && Mb >= 55296 && Mb <= 56319 ? wb - 1 : wb)
     }
 
-    function qd(dd) {
-      return dd.charAt(0).toUpperCase() + dd.slice(1)
+    function tb(bb, wb) {
+      return `${wb}${bb.replace(/\\/g,"\\\\").split(wb).join(`\\${wb}`)}${wb}`
     }
 
-    function Hd(dd) {
-      return Math.round(dd).toLocaleString("en-US")
+    function Cb(bb) {
+      return bb.charAt(0).toUpperCase() + bb.slice(1)
     }
 
-    function yd(dd) {
-      return dd.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((dd => "" !== dd))
-    }
-    const bd = 3;
-
-    function Td(dd, Od) {
-      return yd(dd).filter((dd => dd.length >= bd && !/\d/.test(dd))).map((dd => `${dd} ${Od}`))
+    function Eb(bb) {
+      return Math.round(bb).toLocaleString("en-US")
     }
 
-    function pd(dd) {
-      return dd.split(/[\s:_]+/).filter((dd => "" !== dd)).map(Xd).join("[`:_\\s]+")
+    function Fb(bb) {
+      return bb.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((bb => "" !== bb))
+    }
+    const Bb = 3;
+
+    function sb(bb, wb) {
+      return Fb(bb).filter((bb => bb.length >= Bb && !/\d/.test(bb))).map((bb => `${bb} ${wb}`))
     }
 
-    function Yd(dd) {
-      return yd(dd.split(".").pop())
+    function mb(bb) {
+      return bb.split(/[\s:_]+/).filter((bb => "" !== bb)).map(Vb).join("[`:_\\s]+")
     }
 
-    function gd(dd) {
-      return dd.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function hb(bb) {
+      return Fb(bb.split(".").pop())
     }
 
-    function wd(dd) {
-      let Od = null;
+    function zb(bb) {
+      return bb.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function Xb(bb) {
+      let wb = null;
       return () => {
-        const md = Od ??= dd();
-        return md.catch((() => {
-          Od === md && (Od = null)
-        })), md
+        const Mb = wb ??= bb();
+        return Mb.catch((() => {
+          wb === Mb && (wb = null)
+        })), Mb
       }
     }
   },
-  5656: (dd, Od, md) => {
-    function Wd(dd) {
+  5773: (bb, wb, Mb) => {
+    function eb(bb) {
       return {
-        notAfter: dd
+        notAfter: bb
       }
     }
-    md.d(Od, {
-      d: () => hd,
-      g: () => vd,
-      h: () => Kd,
-      l: () => Wd,
-      o: () => Fd,
-      q: () => Rd,
-      s: () => Xd,
-      v: () => Qd,
-      w: () => td
+    Mb.d(wb, {
+      c: () => lb,
+      d: () => Lb,
+      g: () => gb,
+      h: () => eb,
+      i: () => Hb,
+      m: () => pb,
+      q: () => Vb,
+      t: () => Ib,
+      v: () => Ob
     });
-    const Fd = Wd("\\w$."),
-      Rd = Wd("\\w.,");
+    const Hb = eb("\\w$."),
+      pb = eb("\\w.,");
 
-    function Xd(dd) {
-      return Od => hd(Od, dd)
+    function Vb(bb) {
+      return wb => lb(wb, bb)
     }
 
-    function Kd(dd) {
-      return Od => !dd.test(Od.input.slice(0, Od.index))
+    function gb(bb) {
+      return wb => !bb.test(wb.input.slice(0, wb.index))
     }
 
-    function hd(dd, Od) {
-      return dd.index > 0 && new RegExp(`[${Od}]`).test(dd.input[dd.index - 1])
+    function lb(bb, wb) {
+      return bb.index > 0 && new RegExp(`[${wb}]`).test(bb.input[bb.index - 1])
     }
 
-    function vd(dd, Od, md) {
-      return function(dd) {
-        return void 0 !== dd && "function" !== typeof dd
-      }(md) ? function(dd, Od, md) {
-        const Wd = Od.flags.replace(/[gy]/g, ""),
-          Fd = new RegExp(`[^${md}](?:${Od.source})`, `${Wd}g`),
-          Rd = [],
-          Xd = md => {
-            const Wd = md.index + md[0].length;
-            return ("" === md[0] ? od(dd, Od, Wd) : Wd) - 1
+    function Lb(bb, wb, Mb) {
+      return function(bb) {
+        return void 0 !== bb && "function" !== typeof bb
+      }(Mb) ? function(bb, wb, Mb) {
+        const eb = wb.flags.replace(/[gy]/g, ""),
+          Hb = new RegExp(`[^${Mb}](?:${wb.source})`, `${eb}g`),
+          pb = [],
+          Vb = Mb => {
+            const eb = Mb.index + Mb[0].length;
+            return ("" === Mb[0] ? Ub(bb, wb, eb) : eb) - 1
           },
-          Kd = new RegExp(`(?:${Od.source})`, `${Wd}y`).exec(dd);
-        if (Kd) {
-          if (Rd.push(Kd), !Od.global) return Rd;
-          Fd.lastIndex = Xd(Kd)
+          gb = new RegExp(`(?:${wb.source})`, `${eb}y`).exec(bb);
+        if (gb) {
+          if (pb.push(gb), !wb.global) return pb;
+          Hb.lastIndex = Vb(gb)
         }
-        for (let hd = Fd.exec(dd); hd; hd = Fd.exec(dd)) {
-          const md = od(dd, Od, hd.index) - hd.index;
-          if (hd[0] = hd[0].slice(md), hd.index += md, Rd.push(hd), !Od.global) break;
-          Fd.lastIndex = Xd(hd)
+        for (let lb = Hb.exec(bb); lb; lb = Hb.exec(bb)) {
+          const Mb = Ub(bb, wb, lb.index) - lb.index;
+          if (lb[0] = lb[0].slice(Mb), lb.index += Mb, pb.push(lb), !wb.global) break;
+          Hb.lastIndex = Vb(lb)
         }
-        return Rd
-      }(dd, Od, md.notAfter) : function(dd, Od, md) {
-        const Wd = new RegExp(Od.source, `${Od.flags.replace(/[gy]/g,"")}g`),
-          Fd = [];
-        for (let Rd = Wd.exec(dd); Rd; Rd = Wd.exec(dd))
-          if (!md || md(Rd)) {
-            if (Fd.push(Rd), !Od.global) break;
-            "" === Rd[0] && (Wd.lastIndex = od(dd, Od, Wd.lastIndex))
-          } else Wd.lastIndex = od(dd, Od, Rd.index);
-        return Fd
-      }(dd, Od, md)
+        return pb
+      }(bb, wb, Mb.notAfter) : function(bb, wb, Mb) {
+        const eb = new RegExp(wb.source, `${wb.flags.replace(/[gy]/g,"")}g`),
+          Hb = [];
+        for (let pb = eb.exec(bb); pb; pb = eb.exec(bb))
+          if (!Mb || Mb(pb)) {
+            if (Hb.push(pb), !wb.global) break;
+            "" === pb[0] && (eb.lastIndex = Ub(bb, wb, eb.lastIndex))
+          } else eb.lastIndex = Ub(bb, wb, pb.index);
+        return Hb
+      }(bb, wb, Mb)
     }
 
-    function Qd(dd, Od, md, Wd) {
-      let Fd = "",
-        Rd = 0;
-      for (const Xd of vd(dd, Od, md)) Fd += dd.slice(Rd, Xd.index) + Wd(Xd), Rd = Xd.index + Xd[0].length;
-      return Fd + dd.slice(Rd)
+    function Ib(bb, wb, Mb, eb) {
+      let Hb = "",
+        pb = 0;
+      for (const Vb of Lb(bb, wb, Mb)) Hb += bb.slice(pb, Vb.index) + eb(Vb), pb = Vb.index + Vb[0].length;
+      return Hb + bb.slice(pb)
     }
 
-    function td(dd, Od, md) {
-      const Wd = [];
-      let Fd = 0;
-      for (const Rd of vd(dd, Od, md)) Wd.push(dd.slice(Fd, Rd.index)), Fd = Rd.index + Rd[0].length;
-      return [...Wd, dd.slice(Fd)]
+    function Ob(bb, wb, Mb) {
+      const eb = [];
+      let Hb = 0;
+      for (const pb of Lb(bb, wb, Mb)) eb.push(bb.slice(Hb, pb.index)), Hb = pb.index + pb[0].length;
+      return [...eb, bb.slice(Hb)]
     }
 
-    function od(dd, Od, md) {
-      var Wd;
-      return md + (Od.unicode && (null !== (Wd = dd.codePointAt(md)) && void 0 !== Wd ? Wd : 0) > 65535 ? 2 : 1)
+    function Ub(bb, wb, Mb) {
+      var eb;
+      return Mb + (wb.unicode && (null !== (eb = bb.codePointAt(Mb)) && void 0 !== eb ? eb : 0) > 65535 ? 2 : 1)
     }
   },
-  7429: () => {}
+  7653: () => {}
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

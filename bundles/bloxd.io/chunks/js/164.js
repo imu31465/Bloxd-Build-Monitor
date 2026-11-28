@@ -1,16 +1,16 @@
 export const id = 164;
 export const ids = [164];
 export const modules = {
-  7620: (dd, Od, md) => {
-    md.d(Od, {
-      encodeBinaryMessageWithMetricsCookies: () => Fd
+  7872: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      encodeBinaryMessageWithMetricsCookies: () => Hb
     });
-    var Wd = md(2497);
+    var eb = Mb(2550);
 
-    function Fd(dd) {
-      return Wd.j.toBuffer(dd)
+    function Hb(bb) {
+      return eb.h.toBuffer(bb)
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

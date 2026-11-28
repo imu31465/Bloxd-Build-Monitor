@@ -1,44 +1,44 @@
-/*! For license information please see yteou.141.bf63c433.chunk.js.LICENSE.txt */
+/*! For license information please see welxxc.141.40ba6f3f.chunk.js.LICENSE.txt */
 export const id = 141;
 export const ids = [141];
 export const modules = {
-  7365: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      Graph: () => cd,
-      debug: () => Vm,
-      default: () => Am,
-      graphlib: () => Rd,
-      layout: () => ym,
-      util: () => im,
-      version: () => KO
+  7602: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      Graph: () => Qb,
+      debug: () => YM,
+      default: () => fM,
+      graphlib: () => pb,
+      layout: () => CM,
+      util: () => ZM,
+      version: () => pw
     });
-    var Wd = Object.defineProperty,
-      Fd = (dd, Od, md) => ((dd, Od, md) => Od in dd ? Wd(dd, Od, {
+    var eb = Object.defineProperty,
+      Hb = (bb, wb, Mb) => ((bb, wb, Mb) => wb in bb ? eb(bb, wb, {
         enumerable: !0,
         configurable: !0,
         writable: !0,
-        value: md
-      }) : dd[Od] = md)(dd, "symbol" != typeof Od ? Od + "" : Od, md),
-      Rd = {};
-    ((dd, Od) => {
-      for (var md in Od) Wd(dd, md, {
-        get: Od[md],
+        value: Mb
+      }) : bb[wb] = Mb)(bb, "symbol" != typeof wb ? wb + "" : wb, Mb),
+      pb = {};
+    ((bb, wb) => {
+      for (var Mb in wb) eb(bb, Mb, {
+        get: wb[Mb],
         enumerable: !0
       })
-    })(Rd, {
-      Graph: () => cd,
-      alg: () => bd
+    })(pb, {
+      Graph: () => Qb,
+      alg: () => Bb
     });
-    var Xd = Object.defineProperty,
-      Kd = (dd, Od) => {
-        for (var md in Od) Xd(dd, md, {
-          get: Od[md],
+    var Vb = Object.defineProperty,
+      gb = (bb, wb) => {
+        for (var Mb in wb) Vb(bb, Mb, {
+          get: wb[Mb],
           enumerable: !0
         })
       },
-      hd = class {
-        constructor(dd) {
-          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, dd && (this._isDirected = !("directed" in dd) || dd.directed, this._isMultigraph = "multigraph" in dd && dd.multigraph, this._isCompound = "compound" in dd && dd.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
+      lb = class {
+        constructor(bb) {
+          this._isDirected = !0, this._isMultigraph = !1, this._isCompound = !1, this._nodes = {}, this._in = {}, this._preds = {}, this._out = {}, this._sucs = {}, this._edgeObjs = {}, this._edgeLabels = {}, this._nodeCount = 0, this._edgeCount = 0, this._defaultNodeLabelFn = () => {}, this._defaultEdgeLabelFn = () => {}, bb && (this._isDirected = !("directed" in bb) || bb.directed, this._isMultigraph = "multigraph" in bb && bb.multigraph, this._isCompound = "compound" in bb && bb.compound), this._isCompound && (this._parent = {}, this._children = {}, this._children["\0"] = {})
         }
         isDirected() {
           return this._isDirected
@@ -49,14 +49,14 @@ export const modules = {
         isCompound() {
           return this._isCompound
         }
-        setGraph(dd) {
-          return this._label = dd, this
+        setGraph(bb) {
+          return this._label = bb, this
         }
         graph() {
           return this._label
         }
-        setDefaultNodeLabel(dd) {
-          return this._defaultNodeLabelFn = "function" != typeof dd ? () => dd : dd, this
+        setDefaultNodeLabel(bb) {
+          return this._defaultNodeLabelFn = "function" != typeof bb ? () => bb : bb, this
         }
         nodeCount() {
           return this._nodeCount
@@ -65,105 +65,105 @@ export const modules = {
           return Object.keys(this._nodes)
         }
         sources() {
-          return this.nodes().filter((dd => 0 === Object.keys(this._in[dd]).length))
+          return this.nodes().filter((bb => 0 === Object.keys(this._in[bb]).length))
         }
         sinks() {
-          return this.nodes().filter((dd => 0 === Object.keys(this._out[dd]).length))
+          return this.nodes().filter((bb => 0 === Object.keys(this._out[bb]).length))
         }
-        setNodes(dd, Od) {
-          return dd.forEach((dd => {
-            void 0 !== Od ? this.setNode(dd, Od) : this.setNode(dd)
+        setNodes(bb, wb) {
+          return bb.forEach((bb => {
+            void 0 !== wb ? this.setNode(bb, wb) : this.setNode(bb)
           })), this
         }
-        setNode(dd, Od) {
-          return dd in this._nodes ? (arguments.length > 1 && (this._nodes[dd] = Od), this) : (this._nodes[dd] = arguments.length > 1 ? Od : this._defaultNodeLabelFn(dd), this._isCompound && (this._parent[dd] = "\0", this._children[dd] = {}, this._children["\0"][dd] = !0), this._in[dd] = {}, this._preds[dd] = {}, this._out[dd] = {}, this._sucs[dd] = {}, ++this._nodeCount, this)
+        setNode(bb, wb) {
+          return bb in this._nodes ? (arguments.length > 1 && (this._nodes[bb] = wb), this) : (this._nodes[bb] = arguments.length > 1 ? wb : this._defaultNodeLabelFn(bb), this._isCompound && (this._parent[bb] = "\0", this._children[bb] = {}, this._children["\0"][bb] = !0), this._in[bb] = {}, this._preds[bb] = {}, this._out[bb] = {}, this._sucs[bb] = {}, ++this._nodeCount, this)
         }
-        node(dd) {
-          return this._nodes[dd]
+        node(bb) {
+          return this._nodes[bb]
         }
-        hasNode(dd) {
-          return dd in this._nodes
+        hasNode(bb) {
+          return bb in this._nodes
         }
-        removeNode(dd) {
-          if (dd in this._nodes) {
-            let Od = dd => this.removeEdge(this._edgeObjs[dd]);
-            delete this._nodes[dd], this._isCompound && (this._removeFromParentsChildList(dd), delete this._parent[dd], this.children(dd).forEach((dd => {
-              this.setParent(dd)
-            })), delete this._children[dd]), Object.keys(this._in[dd]).forEach(Od), delete this._in[dd], delete this._preds[dd], Object.keys(this._out[dd]).forEach(Od), delete this._out[dd], delete this._sucs[dd], --this._nodeCount
+        removeNode(bb) {
+          if (bb in this._nodes) {
+            let wb = bb => this.removeEdge(this._edgeObjs[bb]);
+            delete this._nodes[bb], this._isCompound && (this._removeFromParentsChildList(bb), delete this._parent[bb], this.children(bb).forEach((bb => {
+              this.setParent(bb)
+            })), delete this._children[bb]), Object.keys(this._in[bb]).forEach(wb), delete this._in[bb], delete this._preds[bb], Object.keys(this._out[bb]).forEach(wb), delete this._out[bb], delete this._sucs[bb], --this._nodeCount
           }
           return this
         }
-        setParent(dd, Od) {
+        setParent(bb, wb) {
           if (!this._isCompound) throw new Error("Cannot set parent in a non-compound graph");
-          if (void 0 === Od) Od = "\0";
+          if (void 0 === wb) wb = "\0";
           else {
-            for (let md = Od += ""; void 0 !== md; md = this.parent(md))
-              if (md === dd) throw new Error("Setting " + Od + " as parent of " + dd + " would create a cycle");
-            this.setNode(Od)
+            for (let Mb = wb += ""; void 0 !== Mb; Mb = this.parent(Mb))
+              if (Mb === bb) throw new Error("Setting " + wb + " as parent of " + bb + " would create a cycle");
+            this.setNode(wb)
           }
-          return this.setNode(dd), this._removeFromParentsChildList(dd), this._parent[dd] = Od, this._children[Od][dd] = !0, this
+          return this.setNode(bb), this._removeFromParentsChildList(bb), this._parent[bb] = wb, this._children[wb][bb] = !0, this
         }
-        parent(dd) {
+        parent(bb) {
           if (this._isCompound) {
-            let Od = this._parent[dd];
-            if ("\0" !== Od) return Od
+            let wb = this._parent[bb];
+            if ("\0" !== wb) return wb
           }
         }
         children() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
+          let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "\0";
           if (this._isCompound) {
-            let Od = this._children[dd];
-            if (Od) return Object.keys(Od)
+            let wb = this._children[bb];
+            if (wb) return Object.keys(wb)
           } else {
-            if ("\0" === dd) return this.nodes();
-            if (this.hasNode(dd)) return []
+            if ("\0" === bb) return this.nodes();
+            if (this.hasNode(bb)) return []
           }
           return []
         }
-        predecessors(dd) {
-          let Od = this._preds[dd];
-          if (Od) return Object.keys(Od)
+        predecessors(bb) {
+          let wb = this._preds[bb];
+          if (wb) return Object.keys(wb)
         }
-        successors(dd) {
-          let Od = this._sucs[dd];
-          if (Od) return Object.keys(Od)
+        successors(bb) {
+          let wb = this._sucs[bb];
+          if (wb) return Object.keys(wb)
         }
-        neighbors(dd) {
-          let Od = this.predecessors(dd);
-          if (Od) {
-            let md = new Set(Od),
-              Wd = this.successors(dd);
-            if (Wd)
-              for (let dd of Wd) md.add(dd);
-            return Array.from(md.values())
+        neighbors(bb) {
+          let wb = this.predecessors(bb);
+          if (wb) {
+            let Mb = new Set(wb),
+              eb = this.successors(bb);
+            if (eb)
+              for (let bb of eb) Mb.add(bb);
+            return Array.from(Mb.values())
           }
         }
-        isLeaf(dd) {
-          var Od;
-          let md;
-          return md = this.isDirected() ? this.successors(dd) : this.neighbors(dd), 0 === (null != (Od = null == md ? void 0 : md.length) ? Od : 0)
+        isLeaf(bb) {
+          var wb;
+          let Mb;
+          return Mb = this.isDirected() ? this.successors(bb) : this.neighbors(bb), 0 === (null != (wb = null == Mb ? void 0 : Mb.length) ? wb : 0)
         }
-        filterNodes(dd) {
-          let Od = new this.constructor({
+        filterNodes(bb) {
+          let wb = new this.constructor({
             directed: this._isDirected,
             multigraph: this._isMultigraph,
             compound: this._isCompound
           });
-          Od.setGraph(this.graph()), Object.entries(this._nodes).forEach((md => {
-            let [Wd, Fd] = md;
-            dd(Wd) && Od.setNode(Wd, Fd)
-          })), Object.values(this._edgeObjs).forEach((dd => {
-            Od.hasNode(dd.v) && Od.hasNode(dd.w) && Od.setEdge(dd, this.edge(dd))
+          wb.setGraph(this.graph()), Object.entries(this._nodes).forEach((Mb => {
+            let [eb, Hb] = Mb;
+            bb(eb) && wb.setNode(eb, Hb)
+          })), Object.values(this._edgeObjs).forEach((bb => {
+            wb.hasNode(bb.v) && wb.hasNode(bb.w) && wb.setEdge(bb, this.edge(bb))
           }));
-          let md = {},
-            Wd = dd => {
-              let Fd = this.parent(dd);
-              return !Fd || Od.hasNode(Fd) ? (md[dd] = Fd, Fd) : Fd in md ? md[Fd] : Wd(Fd)
+          let Mb = {},
+            eb = bb => {
+              let Hb = this.parent(bb);
+              return !Hb || wb.hasNode(Hb) ? (Mb[bb] = Hb, Hb) : Hb in Mb ? Mb[Hb] : eb(Hb)
             };
-          return this._isCompound && Od.nodes().forEach((dd => Od.setParent(dd, Wd(dd)))), Od
+          return this._isCompound && wb.nodes().forEach((bb => wb.setParent(bb, eb(bb)))), wb
         }
-        setDefaultEdgeLabel(dd) {
-          return this._defaultEdgeLabelFn = "function" != typeof dd ? () => dd : dd, this
+        setDefaultEdgeLabel(bb) {
+          return this._defaultEdgeLabelFn = "function" != typeof bb ? () => bb : bb, this
         }
         edgeCount() {
           return this._edgeCount
@@ -171,226 +171,226 @@ export const modules = {
         edges() {
           return Object.values(this._edgeObjs)
         }
-        setPath(dd, Od) {
-          return dd.reduce(((dd, md) => (void 0 !== Od ? this.setEdge(dd, md, Od) : this.setEdge(dd, md), md))), this
+        setPath(bb, wb) {
+          return bb.reduce(((bb, Mb) => (void 0 !== wb ? this.setEdge(bb, Mb, wb) : this.setEdge(bb, Mb), Mb))), this
         }
-        setEdge(dd, Od, md, Wd) {
-          let Fd, Rd, Xd, Kd, hd = !1;
-          "object" == typeof dd && null !== dd && "v" in dd ? (Fd = dd.v, Rd = dd.w, Xd = dd.name, 2 === arguments.length && (Kd = Od, hd = !0)) : (Fd = dd, Rd = Od, Xd = Wd, arguments.length > 2 && (Kd = md, hd = !0)), Fd = "" + Fd, Rd = "" + Rd, void 0 !== Xd && (Xd = "" + Xd);
-          let Qd = td(this._isDirected, Fd, Rd, Xd);
-          if (Qd in this._edgeLabels) return hd && (this._edgeLabels[Qd] = Kd), this;
-          if (void 0 !== Xd && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
-          this.setNode(Fd), this.setNode(Rd), this._edgeLabels[Qd] = hd ? Kd : this._defaultEdgeLabelFn(Fd, Rd, Xd);
-          let od = function(dd, Od, md, Wd) {
-            let Fd = "" + Od,
-              Rd = "" + md;
-            if (!dd && Fd > Rd) {
-              let dd = Fd;
-              Fd = Rd, Rd = dd
+        setEdge(bb, wb, Mb, eb) {
+          let Hb, pb, Vb, gb, lb = !1;
+          "object" == typeof bb && null !== bb && "v" in bb ? (Hb = bb.v, pb = bb.w, Vb = bb.name, 2 === arguments.length && (gb = wb, lb = !0)) : (Hb = bb, pb = wb, Vb = eb, arguments.length > 2 && (gb = Mb, lb = !0)), Hb = "" + Hb, pb = "" + pb, void 0 !== Vb && (Vb = "" + Vb);
+          let Ib = Ob(this._isDirected, Hb, pb, Vb);
+          if (Ib in this._edgeLabels) return lb && (this._edgeLabels[Ib] = gb), this;
+          if (void 0 !== Vb && !this._isMultigraph) throw new Error("Cannot set a named edge when isMultigraph = false");
+          this.setNode(Hb), this.setNode(pb), this._edgeLabels[Ib] = lb ? gb : this._defaultEdgeLabelFn(Hb, pb, Vb);
+          let Ub = function(bb, wb, Mb, eb) {
+            let Hb = "" + wb,
+              pb = "" + Mb;
+            if (!bb && Hb > pb) {
+              let bb = Hb;
+              Hb = pb, pb = bb
             }
-            let Xd = {
-              v: Fd,
-              w: Rd
+            let Vb = {
+              v: Hb,
+              w: pb
             };
-            return Wd && (Xd.name = Wd), Xd
-          }(this._isDirected, Fd, Rd, Xd);
-          return Fd = od.v, Rd = od.w, Object.freeze(od), this._edgeObjs[Qd] = od, vd(this._preds[Rd], Fd), vd(this._sucs[Fd], Rd), this._in[Rd][Qd] = od, this._out[Fd][Qd] = od, this._edgeCount++, this
+            return eb && (Vb.name = eb), Vb
+          }(this._isDirected, Hb, pb, Vb);
+          return Hb = Ub.v, pb = Ub.w, Object.freeze(Ub), this._edgeObjs[Ib] = Ub, Lb(this._preds[pb], Hb), Lb(this._sucs[Hb], pb), this._in[pb][Ib] = Ub, this._out[Hb][Ib] = Ub, this._edgeCount++, this
         }
-        edge(dd, Od, md) {
-          let Wd = 1 === arguments.length ? od(this._isDirected, dd) : td(this._isDirected, dd, Od, md);
-          return this._edgeLabels[Wd]
+        edge(bb, wb, Mb) {
+          let eb = 1 === arguments.length ? Ub(this._isDirected, bb) : Ob(this._isDirected, bb, wb, Mb);
+          return this._edgeLabels[eb]
         }
-        edgeAsObj(dd, Od, md) {
-          let Wd = 1 === arguments.length ? this.edge(dd) : this.edge(dd, Od, md);
-          return "object" != typeof Wd || null === Wd ? {
-            label: Wd
-          } : Wd
+        edgeAsObj(bb, wb, Mb) {
+          let eb = 1 === arguments.length ? this.edge(bb) : this.edge(bb, wb, Mb);
+          return "object" != typeof eb || null === eb ? {
+            label: eb
+          } : eb
         }
-        hasEdge(dd, Od, md) {
-          return (1 === arguments.length ? od(this._isDirected, dd) : td(this._isDirected, dd, Od, md)) in this._edgeLabels
+        hasEdge(bb, wb, Mb) {
+          return (1 === arguments.length ? Ub(this._isDirected, bb) : Ob(this._isDirected, bb, wb, Mb)) in this._edgeLabels
         }
-        removeEdge(dd, Od, md) {
-          let Wd = 1 === arguments.length ? od(this._isDirected, dd) : td(this._isDirected, dd, Od, md),
-            Fd = this._edgeObjs[Wd];
-          if (Fd) {
-            let dd = Fd.v,
-              Od = Fd.w;
-            delete this._edgeLabels[Wd], delete this._edgeObjs[Wd], Qd(this._preds[Od], dd), Qd(this._sucs[dd], Od), delete this._in[Od][Wd], delete this._out[dd][Wd], this._edgeCount--
+        removeEdge(bb, wb, Mb) {
+          let eb = 1 === arguments.length ? Ub(this._isDirected, bb) : Ob(this._isDirected, bb, wb, Mb),
+            Hb = this._edgeObjs[eb];
+          if (Hb) {
+            let bb = Hb.v,
+              wb = Hb.w;
+            delete this._edgeLabels[eb], delete this._edgeObjs[eb], Ib(this._preds[wb], bb), Ib(this._sucs[bb], wb), delete this._in[wb][eb], delete this._out[bb][eb], this._edgeCount--
           }
           return this
         }
-        inEdges(dd, Od) {
-          return this.isDirected() ? this.filterEdges(this._in[dd], dd, Od) : this.nodeEdges(dd, Od)
+        inEdges(bb, wb) {
+          return this.isDirected() ? this.filterEdges(this._in[bb], bb, wb) : this.nodeEdges(bb, wb)
         }
-        outEdges(dd, Od) {
-          return this.isDirected() ? this.filterEdges(this._out[dd], dd, Od) : this.nodeEdges(dd, Od)
+        outEdges(bb, wb) {
+          return this.isDirected() ? this.filterEdges(this._out[bb], bb, wb) : this.nodeEdges(bb, wb)
         }
-        nodeEdges(dd, Od) {
-          if (dd in this._nodes) return this.filterEdges({
-            ...this._in[dd],
-            ...this._out[dd]
-          }, dd, Od)
+        nodeEdges(bb, wb) {
+          if (bb in this._nodes) return this.filterEdges({
+            ...this._in[bb],
+            ...this._out[bb]
+          }, bb, wb)
         }
-        _removeFromParentsChildList(dd) {
-          delete this._children[this._parent[dd]][dd]
+        _removeFromParentsChildList(bb) {
+          delete this._children[this._parent[bb]][bb]
         }
-        filterEdges(dd, Od, md) {
-          if (!dd) return;
-          let Wd = Object.values(dd);
-          return md ? Wd.filter((dd => dd.v === Od && dd.w === md || dd.v === md && dd.w === Od)) : Wd
+        filterEdges(bb, wb, Mb) {
+          if (!bb) return;
+          let eb = Object.values(bb);
+          return Mb ? eb.filter((bb => bb.v === wb && bb.w === Mb || bb.v === Mb && bb.w === wb)) : eb
         }
       };
 
-    function vd(dd, Od) {
-      dd[Od] ? dd[Od]++ : dd[Od] = 1
+    function Lb(bb, wb) {
+      bb[wb] ? bb[wb]++ : bb[wb] = 1
     }
 
-    function Qd(dd, Od) {
-      void 0 !== dd[Od] && !--dd[Od] && delete dd[Od]
+    function Ib(bb, wb) {
+      void 0 !== bb[wb] && !--bb[wb] && delete bb[wb]
     }
 
-    function td(dd, Od, md, Wd) {
-      let Fd = "" + Od,
-        Rd = "" + md;
-      if (!dd && Fd > Rd) {
-        let dd = Fd;
-        Fd = Rd, Rd = dd
+    function Ob(bb, wb, Mb, eb) {
+      let Hb = "" + wb,
+        pb = "" + Mb;
+      if (!bb && Hb > pb) {
+        let bb = Hb;
+        Hb = pb, pb = bb
       }
-      return Fd + "\x01" + Rd + "\x01" + (void 0 === Wd ? "\0" : Wd)
+      return Hb + "\x01" + pb + "\x01" + (void 0 === eb ? "\0" : eb)
     }
 
-    function od(dd, Od) {
-      return td(dd, Od.v, Od.w, Od.name)
+    function Ub(bb, wb) {
+      return Ob(bb, wb.v, wb.w, wb.name)
     }
 
-    function Nd(dd) {
-      let Od = {
+    function tb(bb) {
+      let wb = {
           options: {
-            directed: dd.isDirected(),
-            multigraph: dd.isMultigraph(),
-            compound: dd.isCompound()
+            directed: bb.isDirected(),
+            multigraph: bb.isMultigraph(),
+            compound: bb.isCompound()
           },
-          nodes: qd(dd),
-          edges: Hd(dd)
+          nodes: Cb(bb),
+          edges: Eb(bb)
         },
-        md = dd.graph();
-      return void 0 !== md && (Od.value = structuredClone(md)), Od
+        Mb = bb.graph();
+      return void 0 !== Mb && (wb.value = structuredClone(Mb)), wb
     }
 
-    function qd(dd) {
-      return dd.nodes().map((Od => {
-        let md = dd.node(Od),
-          Wd = dd.parent(Od),
-          Fd = {
-            v: Od
+    function Cb(bb) {
+      return bb.nodes().map((wb => {
+        let Mb = bb.node(wb),
+          eb = bb.parent(wb),
+          Hb = {
+            v: wb
           };
-        return void 0 !== md && (Fd.value = md), void 0 !== Wd && (Fd.parent = Wd), Fd
+        return void 0 !== Mb && (Hb.value = Mb), void 0 !== eb && (Hb.parent = eb), Hb
       }))
     }
 
-    function Hd(dd) {
-      return dd.edges().map((Od => {
-        let md = dd.edge(Od),
-          Wd = {
-            v: Od.v,
-            w: Od.w
+    function Eb(bb) {
+      return bb.edges().map((wb => {
+        let Mb = bb.edge(wb),
+          eb = {
+            v: wb.v,
+            w: wb.w
           };
-        return void 0 !== Od.name && (Wd.name = Od.name), void 0 !== md && (Wd.value = md), Wd
+        return void 0 !== wb.name && (eb.name = wb.name), void 0 !== Mb && (eb.value = Mb), eb
       }))
     }
 
-    function yd(dd) {
-      let Od = new hd(dd.options);
-      return void 0 !== dd.value && Od.setGraph(dd.value), dd.nodes.forEach((dd => {
-        Od.setNode(dd.v, dd.value), dd.parent && Od.setParent(dd.v, dd.parent)
-      })), dd.edges.forEach((dd => {
-        Od.setEdge({
-          v: dd.v,
-          w: dd.w,
-          name: dd.name
-        }, dd.value)
-      })), Od
+    function Fb(bb) {
+      let wb = new lb(bb.options);
+      return void 0 !== bb.value && wb.setGraph(bb.value), bb.nodes.forEach((bb => {
+        wb.setNode(bb.v, bb.value), bb.parent && wb.setParent(bb.v, bb.parent)
+      })), bb.edges.forEach((bb => {
+        wb.setEdge({
+          v: bb.v,
+          w: bb.w,
+          name: bb.name
+        }, bb.value)
+      })), wb
     }
-    Kd({}, {
-      read: () => yd,
-      write: () => Nd
+    gb({}, {
+      read: () => Fb,
+      write: () => tb
     });
-    var bd = {};
-    Kd(bd, {
-      CycleException: () => sd,
-      bellmanFord: () => pd,
-      components: () => Yd,
-      dijkstra: () => Ed,
-      dijkstraAll: () => Jd,
-      findCycles: () => xd,
-      floydWarshall: () => Sd,
-      isAcyclic: () => Vd,
-      postorder: () => nd,
-      preorder: () => Ld,
-      prim: () => Pd,
-      shortestPaths: () => zd,
-      tarjan: () => Ud,
-      topsort: () => ud
+    var Bb = {};
+    gb(Bb, {
+      CycleException: () => cb,
+      bellmanFord: () => mb,
+      components: () => hb,
+      dijkstra: () => xb,
+      dijkstraAll: () => jb,
+      findCycles: () => rb,
+      floydWarshall: () => Db,
+      isAcyclic: () => Zb,
+      postorder: () => Jb,
+      preorder: () => Sb,
+      prim: () => Nb,
+      shortestPaths: () => vb,
+      tarjan: () => Kb,
+      topsort: () => Yb
     });
-    var Td = () => 1;
+    var sb = () => 1;
 
-    function pd(dd, Od, md, Wd) {
-      return function(dd, Od, md, Wd) {
-        let Fd, Rd = {},
-          Xd = 0,
-          Kd = dd.nodes(),
-          hd = function(dd) {
-            let Od = Rd[dd.v],
-              Wd = Rd[dd.w];
-            if (!Od || !Wd) return;
-            let Xd = md(dd);
-            Od.distance + Xd < Wd.distance && (Rd[dd.w] = {
-              distance: Od.distance + Xd,
-              predecessor: dd.v
-            }, Fd = !0)
+    function mb(bb, wb, Mb, eb) {
+      return function(bb, wb, Mb, eb) {
+        let Hb, pb = {},
+          Vb = 0,
+          gb = bb.nodes(),
+          lb = function(bb) {
+            let wb = pb[bb.v],
+              eb = pb[bb.w];
+            if (!wb || !eb) return;
+            let Vb = Mb(bb);
+            wb.distance + Vb < eb.distance && (pb[bb.w] = {
+              distance: wb.distance + Vb,
+              predecessor: bb.v
+            }, Hb = !0)
           },
-          vd = function() {
-            Kd.forEach((function(dd) {
-              Wd(dd).forEach((function(Od) {
-                let md = Od.v === dd ? Od.v : Od.w,
-                  Wd = md === Od.v ? Od.w : Od.v;
-                hd({
-                  v: md,
-                  w: Wd
+          Lb = function() {
+            gb.forEach((function(bb) {
+              eb(bb).forEach((function(wb) {
+                let Mb = wb.v === bb ? wb.v : wb.w,
+                  eb = Mb === wb.v ? wb.w : wb.v;
+                lb({
+                  v: Mb,
+                  w: eb
                 })
               }))
             }))
           };
-        Kd.forEach((function(dd) {
-          let md = dd === Od ? 0 : Number.POSITIVE_INFINITY;
-          Rd[dd] = {
-            distance: md,
+        gb.forEach((function(bb) {
+          let Mb = bb === wb ? 0 : Number.POSITIVE_INFINITY;
+          pb[bb] = {
+            distance: Mb,
             predecessor: ""
           }
         }));
-        let Qd = Kd.length;
-        for (let td = 1; td < Qd && (Fd = !1, Xd++, vd(), Fd); td++);
-        if (Xd === Qd - 1 && (Fd = !1, vd(), Fd)) throw new Error("The graph contains a negative weight cycle");
-        return Rd
-      }(dd, String(Od), md || Td, Wd || function(Od) {
-        var md;
-        return null != (md = dd.outEdges(Od)) ? md : []
+        let Ib = gb.length;
+        for (let Ob = 1; Ob < Ib && (Hb = !1, Vb++, Lb(), Hb); Ob++);
+        if (Vb === Ib - 1 && (Hb = !1, Lb(), Hb)) throw new Error("The graph contains a negative weight cycle");
+        return pb
+      }(bb, String(wb), Mb || sb, eb || function(wb) {
+        var Mb;
+        return null != (Mb = bb.outEdges(wb)) ? Mb : []
       })
     }
 
-    function Yd(dd) {
-      let Od, md = {},
-        Wd = [];
+    function hb(bb) {
+      let wb, Mb = {},
+        eb = [];
 
-      function Fd(Wd) {
-        var Rd, Xd;
-        Wd in md || (md[Wd] = !0, Od.push(Wd), null == (Rd = dd.successors(Wd)) || Rd.forEach(Fd), null == (Xd = dd.predecessors(Wd)) || Xd.forEach(Fd))
+      function Hb(eb) {
+        var pb, Vb;
+        eb in Mb || (Mb[eb] = !0, wb.push(eb), null == (pb = bb.successors(eb)) || pb.forEach(Hb), null == (Vb = bb.predecessors(eb)) || Vb.forEach(Hb))
       }
-      return dd.nodes().forEach((function(dd) {
-        Od = [], Fd(dd), Od.length && Wd.push(Od)
-      })), Wd
+      return bb.nodes().forEach((function(bb) {
+        wb = [], Hb(bb), wb.length && eb.push(wb)
+      })), eb
     }
-    var gd = class {
+    var zb = class {
         constructor() {
           this._arr = [], this._keyIndices = {}
         }
@@ -398,1915 +398,1915 @@ export const modules = {
           return this._arr.length
         }
         keys() {
-          return this._arr.map((dd => dd.key))
+          return this._arr.map((bb => bb.key))
         }
-        has(dd) {
-          return dd in this._keyIndices
+        has(bb) {
+          return bb in this._keyIndices
         }
-        priority(dd) {
-          let Od = this._keyIndices[dd];
-          if (void 0 !== Od) return this._arr[Od].priority
+        priority(bb) {
+          let wb = this._keyIndices[bb];
+          if (void 0 !== wb) return this._arr[wb].priority
         }
         min() {
           if (0 === this.size()) throw new Error("Queue underflow");
           return this._arr[0].key
         }
-        add(dd, Od) {
-          let md = this._keyIndices,
-            Wd = String(dd);
-          if (!(Wd in md)) {
-            let dd = this._arr,
-              Fd = dd.length;
-            return md[Wd] = Fd, dd.push({
-              key: Wd,
-              priority: Od
-            }), this._decrease(Fd), !0
+        add(bb, wb) {
+          let Mb = this._keyIndices,
+            eb = String(bb);
+          if (!(eb in Mb)) {
+            let bb = this._arr,
+              Hb = bb.length;
+            return Mb[eb] = Hb, bb.push({
+              key: eb,
+              priority: wb
+            }), this._decrease(Hb), !0
           }
           return !1
         }
         removeMin() {
           if (0 === this.size()) throw new Error("Queue underflow");
           this._swap(0, this._arr.length - 1);
-          let dd = this._arr.pop();
-          return delete this._keyIndices[dd.key], this._heapify(0), dd.key
+          let bb = this._arr.pop();
+          return delete this._keyIndices[bb.key], this._heapify(0), bb.key
         }
-        decrease(dd, Od) {
-          let md = this._keyIndices[dd];
-          if (void 0 === md) throw new Error(`Key not found: ${dd}`);
-          let Wd = this._arr[md].priority;
-          if (Od > Wd) throw new Error(`New priority is greater than current priority. Key: ${dd} Old: ${Wd} New: ${Od}`);
-          this._arr[md].priority = Od, this._decrease(md)
+        decrease(bb, wb) {
+          let Mb = this._keyIndices[bb];
+          if (void 0 === Mb) throw new Error(`Key not found: ${bb}`);
+          let eb = this._arr[Mb].priority;
+          if (wb > eb) throw new Error(`New priority is greater than current priority. Key: ${bb} Old: ${eb} New: ${wb}`);
+          this._arr[Mb].priority = wb, this._decrease(Mb)
         }
-        _heapify(dd) {
-          let Od = this._arr,
-            md = 2 * dd,
-            Wd = md + 1,
-            Fd = dd;
-          md < Od.length && (Fd = Od[md].priority < Od[Fd].priority ? md : Fd, Wd < Od.length && (Fd = Od[Wd].priority < Od[Fd].priority ? Wd : Fd), Fd !== dd && (this._swap(dd, Fd), this._heapify(Fd)))
+        _heapify(bb) {
+          let wb = this._arr,
+            Mb = 2 * bb,
+            eb = Mb + 1,
+            Hb = bb;
+          Mb < wb.length && (Hb = wb[Mb].priority < wb[Hb].priority ? Mb : Hb, eb < wb.length && (Hb = wb[eb].priority < wb[Hb].priority ? eb : Hb), Hb !== bb && (this._swap(bb, Hb), this._heapify(Hb)))
         }
-        _decrease(dd) {
-          let Od, md = this._arr,
-            Wd = md[dd].priority;
-          for (; 0 !== dd && (Od = dd >> 1, !(md[Od].priority < Wd));) this._swap(dd, Od), dd = Od
+        _decrease(bb) {
+          let wb, Mb = this._arr,
+            eb = Mb[bb].priority;
+          for (; 0 !== bb && (wb = bb >> 1, !(Mb[wb].priority < eb));) this._swap(bb, wb), bb = wb
         }
-        _swap(dd, Od) {
-          let md = this._arr,
-            Wd = this._keyIndices,
-            Fd = md[dd],
-            Rd = md[Od];
-          md[dd] = Rd, md[Od] = Fd, Wd[Rd.key] = dd, Wd[Fd.key] = Od
+        _swap(bb, wb) {
+          let Mb = this._arr,
+            eb = this._keyIndices,
+            Hb = Mb[bb],
+            pb = Mb[wb];
+          Mb[bb] = pb, Mb[wb] = Hb, eb[pb.key] = bb, eb[Hb.key] = wb
         }
       },
-      wd = () => 1;
+      Xb = () => 1;
 
-    function Ed(dd, Od, md, Wd) {
-      return function(dd, Od, md, Wd) {
-        let Fd, Rd, Xd = {},
-          Kd = new gd,
-          hd = function(dd) {
-            let Od = dd.v !== Fd ? dd.v : dd.w,
-              Wd = Xd[Od];
-            if (!Wd) return;
-            let hd = md(dd),
-              vd = Rd.distance + hd;
-            if (hd < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + dd + " Weight: " + hd);
-            vd < Wd.distance && (Wd.distance = vd, Wd.predecessor = Fd, Kd.decrease(Od, vd))
+    function xb(bb, wb, Mb, eb) {
+      return function(bb, wb, Mb, eb) {
+        let Hb, pb, Vb = {},
+          gb = new zb,
+          lb = function(bb) {
+            let wb = bb.v !== Hb ? bb.v : bb.w,
+              eb = Vb[wb];
+            if (!eb) return;
+            let lb = Mb(bb),
+              Lb = pb.distance + lb;
+            if (lb < 0) throw new Error("dijkstra does not allow negative edge weights. Bad edge: " + bb + " Weight: " + lb);
+            Lb < eb.distance && (eb.distance = Lb, eb.predecessor = Hb, gb.decrease(wb, Lb))
           };
-        for (dd.nodes().forEach((function(dd) {
-            let md = dd === Od ? 0 : Number.POSITIVE_INFINITY;
-            Xd[dd] = {
-              distance: md,
+        for (bb.nodes().forEach((function(bb) {
+            let Mb = bb === wb ? 0 : Number.POSITIVE_INFINITY;
+            Vb[bb] = {
+              distance: Mb,
               predecessor: ""
-            }, Kd.add(dd, md)
-          })); Kd.size() > 0;) {
-          Fd = Kd.removeMin();
-          let dd = Xd[Fd];
-          if (!dd || dd.distance === Number.POSITIVE_INFINITY) break;
-          Rd = dd, Wd(Fd).forEach(hd)
+            }, gb.add(bb, Mb)
+          })); gb.size() > 0;) {
+          Hb = gb.removeMin();
+          let bb = Vb[Hb];
+          if (!bb || bb.distance === Number.POSITIVE_INFINITY) break;
+          pb = bb, eb(Hb).forEach(lb)
         }
-        return Xd
-      }(dd, String(Od), md || wd, Wd || function(Od) {
-        var md;
-        return null != (md = dd.outEdges(Od)) ? md : []
+        return Vb
+      }(bb, String(wb), Mb || Xb, eb || function(wb) {
+        var Mb;
+        return null != (Mb = bb.outEdges(wb)) ? Mb : []
       })
     }
 
-    function Jd(dd, Od, md) {
-      return dd.nodes().reduce((function(Wd, Fd) {
-        return Wd[Fd] = Ed(dd, Fd, Od, md), Wd
+    function jb(bb, wb, Mb) {
+      return bb.nodes().reduce((function(eb, Hb) {
+        return eb[Hb] = xb(bb, Hb, wb, Mb), eb
       }), {})
     }
 
-    function Ud(dd) {
-      let Od = 0,
-        md = [],
-        Wd = {},
-        Fd = [];
+    function Kb(bb) {
+      let wb = 0,
+        Mb = [],
+        eb = {},
+        Hb = [];
 
-      function Rd(Xd) {
-        var Kd;
-        let hd = Wd[Xd] = {
+      function pb(Vb) {
+        var gb;
+        let lb = eb[Vb] = {
           onStack: !0,
-          lowlink: Od,
-          index: Od++
+          lowlink: wb,
+          index: wb++
         };
-        if (md.push(Xd), null == (Kd = dd.successors(Xd)) || Kd.forEach((function(dd) {
-            if (dd in Wd) {
-              let Od = Wd[dd];
-              null != Od && Od.onStack && (hd.lowlink = Math.min(hd.lowlink, Od.index))
+        if (Mb.push(Vb), null == (gb = bb.successors(Vb)) || gb.forEach((function(bb) {
+            if (bb in eb) {
+              let wb = eb[bb];
+              null != wb && wb.onStack && (lb.lowlink = Math.min(lb.lowlink, wb.index))
             } else {
-              Rd(dd);
-              let Od = Wd[dd];
-              Od && (hd.lowlink = Math.min(hd.lowlink, Od.lowlink))
+              pb(bb);
+              let wb = eb[bb];
+              wb && (lb.lowlink = Math.min(lb.lowlink, wb.lowlink))
             }
-          })), hd.lowlink === hd.index) {
-          let dd, Od = [];
+          })), lb.lowlink === lb.index) {
+          let bb, wb = [];
           do {
-            dd = md.pop();
-            let Fd = Wd[dd];
-            Fd && (Fd.onStack = !1), Od.push(dd)
-          } while (Xd !== dd);
-          Fd.push(Od)
+            bb = Mb.pop();
+            let Hb = eb[bb];
+            Hb && (Hb.onStack = !1), wb.push(bb)
+          } while (Vb !== bb);
+          Hb.push(wb)
         }
       }
-      return dd.nodes().forEach((function(dd) {
-        dd in Wd || Rd(dd)
-      })), Fd
+      return bb.nodes().forEach((function(bb) {
+        bb in eb || pb(bb)
+      })), Hb
     }
 
-    function xd(dd) {
-      return Ud(dd).filter((function(Od) {
-        var md;
-        let Wd = Od[0];
-        return !!Wd && (Od.length > 1 || 1 === Od.length && (null != (md = dd.outEdges(Wd, Wd)) ? md : []).length > 0)
+    function rb(bb) {
+      return Kb(bb).filter((function(wb) {
+        var Mb;
+        let eb = wb[0];
+        return !!eb && (wb.length > 1 || 1 === wb.length && (null != (Mb = bb.outEdges(eb, eb)) ? Mb : []).length > 0)
       }))
     }
-    var Bd = () => 1;
+    var Rb = () => 1;
 
-    function Sd(dd, Od, md) {
-      return function(dd, Od, md) {
-        let Wd = {},
-          Fd = dd.nodes();
-        return Fd.forEach((function(dd) {
-          let Rd = {};
-          Wd[dd] = Rd, Rd[dd] = {
+    function Db(bb, wb, Mb) {
+      return function(bb, wb, Mb) {
+        let eb = {},
+          Hb = bb.nodes();
+        return Hb.forEach((function(bb) {
+          let pb = {};
+          eb[bb] = pb, pb[bb] = {
             distance: 0,
             predecessor: ""
-          }, Fd.forEach((function(Od) {
-            dd !== Od && (Rd[Od] = {
+          }, Hb.forEach((function(wb) {
+            bb !== wb && (pb[wb] = {
               distance: Number.POSITIVE_INFINITY,
               predecessor: ""
             })
-          })), md(dd).forEach((function(md) {
-            let Wd = md.v === dd ? md.w : md.v,
-              Fd = Od(md);
-            Rd[Wd] = {
-              distance: Fd,
-              predecessor: dd
+          })), Mb(bb).forEach((function(Mb) {
+            let eb = Mb.v === bb ? Mb.w : Mb.v,
+              Hb = wb(Mb);
+            pb[eb] = {
+              distance: Hb,
+              predecessor: bb
             }
           }))
-        })), Fd.forEach((function(dd) {
-          let Od = Wd[dd];
-          Od && Fd.forEach((function(md) {
-            let Rd = Wd[md];
-            Rd && Fd.forEach((function(md) {
-              let Wd = Rd[dd],
-                Fd = Od[md],
-                Xd = Rd[md];
-              if (Wd && Fd && Xd) {
-                let dd = Wd.distance + Fd.distance;
-                dd < Xd.distance && (Xd.distance = dd, Xd.predecessor = Fd.predecessor)
+        })), Hb.forEach((function(bb) {
+          let wb = eb[bb];
+          wb && Hb.forEach((function(Mb) {
+            let pb = eb[Mb];
+            pb && Hb.forEach((function(Mb) {
+              let eb = pb[bb],
+                Hb = wb[Mb],
+                Vb = pb[Mb];
+              if (eb && Hb && Vb) {
+                let bb = eb.distance + Hb.distance;
+                bb < Vb.distance && (Vb.distance = bb, Vb.predecessor = Hb.predecessor)
               }
             }))
           }))
-        })), Wd
-      }(dd, Od || Bd, md || function(Od) {
-        var md;
-        return null != (md = dd.outEdges(Od)) ? md : []
+        })), eb
+      }(bb, wb || Rb, Mb || function(wb) {
+        var Mb;
+        return null != (Mb = bb.outEdges(wb)) ? Mb : []
       })
     }
-    var sd = class extends Error {
-      constructor(dd) {
-        super(dd), this.name = "CycleException"
+    var cb = class extends Error {
+      constructor(bb) {
+        super(bb), this.name = "CycleException"
       }
     };
 
-    function ud(dd) {
-      let Od = {},
-        md = {},
-        Wd = [];
-      if (dd.sinks().forEach((function Fd(Rd) {
-          var Xd;
-          if (Rd in md) throw new sd;
-          Rd in Od || (md[Rd] = !0, Od[Rd] = !0, null == (Xd = dd.predecessors(Rd)) || Xd.forEach(Fd), delete md[Rd], Wd.push(Rd))
-        })), Object.keys(Od).length !== dd.nodeCount()) throw new sd;
-      return Wd
+    function Yb(bb) {
+      let wb = {},
+        Mb = {},
+        eb = [];
+      if (bb.sinks().forEach((function Hb(pb) {
+          var Vb;
+          if (pb in Mb) throw new cb;
+          pb in wb || (Mb[pb] = !0, wb[pb] = !0, null == (Vb = bb.predecessors(pb)) || Vb.forEach(Hb), delete Mb[pb], eb.push(pb))
+        })), Object.keys(wb).length !== bb.nodeCount()) throw new cb;
+      return eb
     }
 
-    function Vd(dd) {
+    function Zb(bb) {
       try {
-        ud(dd)
-      } catch (Od) {
-        if (Od instanceof sd) return !1;
-        throw Od
+        Yb(bb)
+      } catch (wb) {
+        if (wb instanceof cb) return !1;
+        throw wb
       }
       return !0
     }
 
-    function Ad(dd, Od, md, Wd, Fd) {
-      Array.isArray(Od) || (Od = [Od]);
-      let Rd = Od => {
-          var md;
-          return null != (md = dd.isDirected() ? dd.successors(Od) : dd.neighbors(Od)) ? md : []
+    function fb(bb, wb, Mb, eb, Hb) {
+      Array.isArray(wb) || (wb = [wb]);
+      let pb = wb => {
+          var Mb;
+          return null != (Mb = bb.isDirected() ? bb.successors(wb) : bb.neighbors(wb)) ? Mb : []
         },
-        Xd = {};
-      return Od.forEach((function(Od) {
-        if (!dd.hasNode(Od)) throw new Error("Graph does not have node: " + Od);
-        Fd = rd(dd, Od, "post" === md, Xd, Rd, Wd, Fd)
-      })), Fd
+        Vb = {};
+      return wb.forEach((function(wb) {
+        if (!bb.hasNode(wb)) throw new Error("Graph does not have node: " + wb);
+        Hb = Ab(bb, wb, "post" === Mb, Vb, pb, eb, Hb)
+      })), Hb
     }
 
-    function rd(dd, Od, md, Wd, Fd, Rd, Xd) {
-      return Od in Wd || (Wd[Od] = !0, md || (Xd = Rd(Xd, Od)), Fd(Od).forEach((function(Od) {
-        Xd = rd(dd, Od, md, Wd, Fd, Rd, Xd)
-      })), md && (Xd = Rd(Xd, Od))), Xd
+    function Ab(bb, wb, Mb, eb, Hb, pb, Vb) {
+      return wb in eb || (eb[wb] = !0, Mb || (Vb = pb(Vb, wb)), Hb(wb).forEach((function(wb) {
+        Vb = Ab(bb, wb, Mb, eb, Hb, pb, Vb)
+      })), Mb && (Vb = pb(Vb, wb))), Vb
     }
 
-    function Gd(dd, Od, md) {
-      return Ad(dd, Od, md, (function(dd, Od) {
-        return dd.push(Od), dd
+    function Wb(bb, wb, Mb) {
+      return fb(bb, wb, Mb, (function(bb, wb) {
+        return bb.push(wb), bb
       }), [])
     }
 
-    function nd(dd, Od) {
-      return Gd(dd, Od, "post")
+    function Jb(bb, wb) {
+      return Wb(bb, wb, "post")
     }
 
-    function Ld(dd, Od) {
-      return Gd(dd, Od, "pre")
+    function Sb(bb, wb) {
+      return Wb(bb, wb, "pre")
     }
 
-    function Pd(dd, Od) {
-      var md;
-      let Wd, Fd = new hd,
-        Rd = {},
-        Xd = new gd;
+    function Nb(bb, wb) {
+      var Mb;
+      let eb, Hb = new lb,
+        pb = {},
+        Vb = new zb;
 
-      function Kd(dd) {
-        let md = dd.v === Wd ? dd.w : dd.v,
-          Fd = Xd.priority(md);
-        if (void 0 !== Fd) {
-          let Kd = Od(dd);
-          Kd < Fd && (Rd[md] = Wd, Xd.decrease(md, Kd))
+      function gb(bb) {
+        let Mb = bb.v === eb ? bb.w : bb.v,
+          Hb = Vb.priority(Mb);
+        if (void 0 !== Hb) {
+          let gb = wb(bb);
+          gb < Hb && (pb[Mb] = eb, Vb.decrease(Mb, gb))
         }
       }
-      if (0 === dd.nodeCount()) return Fd;
-      dd.nodes().forEach((function(dd) {
-        Xd.add(dd, Number.POSITIVE_INFINITY), Fd.setNode(dd)
+      if (0 === bb.nodeCount()) return Hb;
+      bb.nodes().forEach((function(bb) {
+        Vb.add(bb, Number.POSITIVE_INFINITY), Hb.setNode(bb)
       }));
-      let vd = dd.nodes()[0];
-      void 0 !== vd && Xd.decrease(vd, 0);
-      let Qd = !1;
-      for (; Xd.size() > 0;) {
-        if (Wd = Xd.removeMin(), Wd in Rd) Fd.setEdge(Wd, Rd[Wd]);
+      let Lb = bb.nodes()[0];
+      void 0 !== Lb && Vb.decrease(Lb, 0);
+      let Ib = !1;
+      for (; Vb.size() > 0;) {
+        if (eb = Vb.removeMin(), eb in pb) Hb.setEdge(eb, pb[eb]);
         else {
-          if (Qd) throw new Error("Input graph is not connected: " + dd);
-          Qd = !0
+          if (Ib) throw new Error("Input graph is not connected: " + bb);
+          Ib = !0
         }
-        null == (md = dd.nodeEdges(Wd)) || md.forEach(Kd)
+        null == (Mb = bb.nodeEdges(eb)) || Mb.forEach(gb)
       }
-      return Fd
+      return Hb
     }
 
-    function zd(dd, Od, md, Wd) {
-      return function(dd, Od, md, Wd) {
-        if (void 0 === md) return Ed(dd, Od, md, Wd);
-        let Fd = !1,
-          Rd = dd.nodes();
-        for (let Xd = 0; Xd < Rd.length; Xd++) {
-          let Kd = Rd[Xd];
-          if (void 0 === Kd) continue;
-          let hd = Wd(Kd);
-          for (let dd = 0; dd < hd.length; dd++) {
-            let Od = hd[dd];
-            if (!Od) continue;
-            let Wd = Od.v === Kd ? Od.v : Od.w;
-            md({
-              v: Wd,
-              w: Wd === Od.v ? Od.w : Od.v
-            }) < 0 && (Fd = !0)
+    function vb(bb, wb, Mb, eb) {
+      return function(bb, wb, Mb, eb) {
+        if (void 0 === Mb) return xb(bb, wb, Mb, eb);
+        let Hb = !1,
+          pb = bb.nodes();
+        for (let Vb = 0; Vb < pb.length; Vb++) {
+          let gb = pb[Vb];
+          if (void 0 === gb) continue;
+          let lb = eb(gb);
+          for (let bb = 0; bb < lb.length; bb++) {
+            let wb = lb[bb];
+            if (!wb) continue;
+            let eb = wb.v === gb ? wb.v : wb.w;
+            Mb({
+              v: eb,
+              w: eb === wb.v ? wb.w : wb.v
+            }) < 0 && (Hb = !0)
           }
-          if (Fd) return pd(dd, Od, md, Wd)
+          if (Hb) return mb(bb, wb, Mb, eb)
         }
-        return Ed(dd, Od, md, Wd)
-      }(dd, Od, md, null != Wd ? Wd : Od => {
-        var md;
-        return null != (md = dd.outEdges(Od)) ? md : []
+        return xb(bb, wb, Mb, eb)
+      }(bb, wb, Mb, null != eb ? eb : wb => {
+        var Mb;
+        return null != (Mb = bb.outEdges(wb)) ? Mb : []
       })
     }
-    var cd = hd;
+    var Qb = lb;
 
-    function jd(dd, Od, md, Wd) {
-      let Fd = Wd;
-      for (; dd.hasNode(Fd);) Fd = OO(Wd);
-      return md.dummy = Od, dd.setNode(Fd, md), Fd
+    function Gb(bb, wb, Mb, eb) {
+      let Hb = eb;
+      for (; bb.hasNode(Hb);) Hb = kb(eb);
+      return Mb.dummy = wb, bb.setNode(Hb, Mb), Hb
     }
 
-    function Dd(dd) {
-      let Od = new cd({
-        multigraph: dd.isMultigraph()
-      }).setGraph(dd.graph());
-      return dd.nodes().forEach((md => {
-        dd.children(md).length || Od.setNode(md, dd.node(md))
-      })), dd.edges().forEach((md => {
-        Od.setEdge(md, dd.edge(md))
-      })), Od
+    function qb(bb) {
+      let wb = new Qb({
+        multigraph: bb.isMultigraph()
+      }).setGraph(bb.graph());
+      return bb.nodes().forEach((Mb => {
+        bb.children(Mb).length || wb.setNode(Mb, bb.node(Mb))
+      })), bb.edges().forEach((Mb => {
+        wb.setEdge(Mb, bb.edge(Mb))
+      })), wb
     }
 
-    function ed(dd, Od) {
-      let md, Wd, Fd = dd.x,
-        Rd = dd.y,
-        Xd = Od.x - Fd,
-        Kd = Od.y - Rd,
-        hd = dd.width / 2,
-        vd = dd.height / 2;
-      if (!Xd && !Kd) throw new Error("Not possible to find intersection inside of the rectangle");
-      return Math.abs(Kd) * hd > Math.abs(Xd) * vd ? (Kd < 0 && (vd = -vd), md = vd * Xd / Kd, Wd = vd) : (Xd < 0 && (hd = -hd), md = hd, Wd = hd * Kd / Xd), {
-        x: Fd + md,
-        y: Rd + Wd
+    function ab(bb, wb) {
+      let Mb, eb, Hb = bb.x,
+        pb = bb.y,
+        Vb = wb.x - Hb,
+        gb = wb.y - pb,
+        lb = bb.width / 2,
+        Lb = bb.height / 2;
+      if (!Vb && !gb) throw new Error("Not possible to find intersection inside of the rectangle");
+      return Math.abs(gb) * lb > Math.abs(Vb) * Lb ? (gb < 0 && (Lb = -Lb), Mb = Lb * Vb / gb, eb = Lb) : (Vb < 0 && (lb = -lb), Mb = lb, eb = lb * gb / Vb), {
+        x: Hb + Mb,
+        y: pb + eb
       }
     }
 
-    function Id(dd) {
-      let Od = mO(kd(dd) + 1).map((() => []));
-      return dd.nodes().forEach((md => {
-        let Wd = dd.node(md),
-          Fd = Wd.rank;
-        void 0 !== Fd && (Od[Fd] || (Od[Fd] = []), Od[Fd][Wd.order] = md)
-      })), Od
+    function ib(bb) {
+      let wb = bw(nb(bb) + 1).map((() => []));
+      return bb.nodes().forEach((Mb => {
+        let eb = bb.node(Mb),
+          Hb = eb.rank;
+        void 0 !== Hb && (wb[Hb] || (wb[Hb] = []), wb[Hb][eb.order] = Mb)
+      })), wb
     }
 
-    function ld(dd, Od, md, Wd) {
-      let Fd = {
+    function ub(bb, wb, Mb, eb) {
+      let Hb = {
         width: 0,
         height: 0
       };
-      return arguments.length >= 4 && (Fd.rank = md, Fd.order = Wd), jd(dd, "border", Fd, Od)
+      return arguments.length >= 4 && (Hb.rank = Mb, Hb.order = eb), Gb(bb, "border", Hb, wb)
     }
-    var Cd = 65535;
+    var db = 65535;
 
-    function Zd(dd, Od) {
-      if (Od.length > Cd) {
-        let md = function(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Cd,
-            md = [];
-          for (let Wd = 0; Wd < dd.length; Wd += Od) {
-            let Fd = dd.slice(Wd, Wd + Od);
-            md.push(Fd)
+    function Pb(bb, wb) {
+      if (wb.length > db) {
+        let Mb = function(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : db,
+            Mb = [];
+          for (let eb = 0; eb < bb.length; eb += wb) {
+            let Hb = bb.slice(eb, eb + wb);
+            Mb.push(Hb)
           }
-          return md
-        }(Od);
-        return dd(...md.map((Od => dd(...Od))))
+          return Mb
+        }(wb);
+        return bb(...Mb.map((wb => bb(...wb))))
       }
-      return dd(...Od)
+      return bb(...wb)
     }
 
-    function kd(dd) {
-      let Od = dd.nodes().map((Od => {
-        let md = dd.node(Od).rank;
-        return void 0 === md ? Number.MIN_VALUE : md
+    function nb(bb) {
+      let wb = bb.nodes().map((wb => {
+        let Mb = bb.node(wb).rank;
+        return void 0 === Mb ? Number.MIN_VALUE : Mb
       }));
-      return Zd(Math.max, Od)
+      return Pb(Math.max, wb)
     }
 
-    function fd(dd, Od) {
-      let md = Date.now();
+    function yb(bb, wb) {
+      let Mb = Date.now();
       try {
-        return Od()
+        return wb()
       } finally {
-        console.log(dd + " time: " + (Date.now() - md) + "ms")
+        console.log(bb + " time: " + (Date.now() - Mb) + "ms")
       }
     }
 
-    function Md(dd, Od) {
-      return Od()
+    function ob(bb, wb) {
+      return wb()
     }
-    var dO = 0;
+    var Tb = 0;
 
-    function OO(dd) {
-      return dd + "" + ++dO
-    }
-
-    function mO(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      null == Od && (Od = dd, dd = 0);
-      let Wd = dd => dd < Od;
-      md < 0 && (Wd = dd => Od < dd);
-      let Fd = [];
-      for (let Rd = dd; Wd(Rd); Rd += md) Fd.push(Rd);
-      return Fd
+    function kb(bb) {
+      return bb + "" + ++Tb
     }
 
-    function WO(dd, Od) {
-      let md = {};
-      for (let Wd of Od) void 0 !== dd[Wd] && (md[Wd] = dd[Wd]);
-      return md
+    function bw(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      null == wb && (wb = bb, bb = 0);
+      let eb = bb => bb < wb;
+      Mb < 0 && (eb = bb => wb < bb);
+      let Hb = [];
+      for (let pb = bb; eb(pb); pb += Mb) Hb.push(pb);
+      return Hb
     }
 
-    function FO(dd, Od) {
-      let md;
-      return md = "string" == typeof Od ? dd => dd[Od] : Od, Object.entries(dd).reduce(((dd, Od) => {
-        let [Wd, Fd] = Od;
-        return dd[Wd] = md(Fd, Wd), dd
+    function ww(bb, wb) {
+      let Mb = {};
+      for (let eb of wb) void 0 !== bb[eb] && (Mb[eb] = bb[eb]);
+      return Mb
+    }
+
+    function Mw(bb, wb) {
+      let Mb;
+      return Mb = "string" == typeof wb ? bb => bb[wb] : wb, Object.entries(bb).reduce(((bb, wb) => {
+        let [eb, Hb] = wb;
+        return bb[eb] = Mb(Hb, eb), bb
       }), {})
     }
-    var RO = "\0";
+    var ew = "\0";
 
-    function XO(dd, Od, md) {
-      var Wd, Fd, Rd, Xd, Kd, hd;
-      if (!(dd && Od && md && "edge" === Od.dummy && "edge" === md.dummy && Od.edgeObj && md.edgeObj && dd[Od.edgeObj.v] && dd[md.edgeObj.v] && dd[Od.edgeObj.w] && dd[md.edgeObj.w])) return 0;
-      let vd = !0;
-      Od.edgeObj.w === md.edgeObj.w && (vd = !1);
-      let Qd = vd ? null != (Fd = null == (Wd = dd[Od.edgeObj.v]) ? void 0 : Wd.rank) ? Fd : NaN : null != (Xd = null == (Rd = dd[Od.edgeObj.w]) ? void 0 : Rd.rank) ? Xd : NaN,
-        td = Object.entries(dd).find((dd => {
-          var md, Wd;
-          return (null == (md = dd[1].edgeObj) ? void 0 : md.v) === Od.edgeObj.v && (null == (Wd = dd[1].edgeObj) ? void 0 : Wd.w) === Od.edgeObj.w && dd[1].rank === Qd
+    function Hw(bb, wb, Mb) {
+      var eb, Hb, pb, Vb, gb, lb;
+      if (!(bb && wb && Mb && "edge" === wb.dummy && "edge" === Mb.dummy && wb.edgeObj && Mb.edgeObj && bb[wb.edgeObj.v] && bb[Mb.edgeObj.v] && bb[wb.edgeObj.w] && bb[Mb.edgeObj.w])) return 0;
+      let Lb = !0;
+      wb.edgeObj.w === Mb.edgeObj.w && (Lb = !1);
+      let Ib = Lb ? null != (Hb = null == (eb = bb[wb.edgeObj.v]) ? void 0 : eb.rank) ? Hb : NaN : null != (Vb = null == (pb = bb[wb.edgeObj.w]) ? void 0 : pb.rank) ? Vb : NaN,
+        Ob = Object.entries(bb).find((bb => {
+          var Mb, eb;
+          return (null == (Mb = bb[1].edgeObj) ? void 0 : Mb.v) === wb.edgeObj.v && (null == (eb = bb[1].edgeObj) ? void 0 : eb.w) === wb.edgeObj.w && bb[1].rank === Ib
         })),
-        od = Object.entries(dd).find((dd => {
-          var Od, Wd;
-          return (null == (Od = dd[1].edgeObj) ? void 0 : Od.v) === md.edgeObj.v && (null == (Wd = dd[1].edgeObj) ? void 0 : Wd.w) === md.edgeObj.w && dd[1].rank === Qd
+        Ub = Object.entries(bb).find((bb => {
+          var wb, eb;
+          return (null == (wb = bb[1].edgeObj) ? void 0 : wb.v) === Mb.edgeObj.v && (null == (eb = bb[1].edgeObj) ? void 0 : eb.w) === Mb.edgeObj.w && bb[1].rank === Ib
         }));
-      if (!td || !od) return 0;
-      let Nd = null != (Kd = td[1].order) ? Kd : NaN,
-        qd = null != (hd = od[1].order) ? hd : NaN;
-      return isNaN(Nd - qd) ? 0 : Nd - qd
+      if (!Ob || !Ub) return 0;
+      let tb = null != (gb = Ob[1].order) ? gb : NaN,
+        Cb = null != (lb = Ub[1].order) ? lb : NaN;
+      return isNaN(tb - Cb) ? 0 : tb - Cb
     }
-    var KO = "3.1.1";
+    var pw = "3.1.1";
 
-    function hO(dd) {
-      dd._prev._next = dd._next, dd._next._prev = dd._prev, delete dd._next, delete dd._prev
+    function Vw(bb) {
+      bb._prev._next = bb._next, bb._next._prev = bb._prev, delete bb._next, delete bb._prev
     }
 
-    function vO(dd, Od) {
-      if ("_next" !== dd && "_prev" !== dd) return Od
+    function gw(bb, wb) {
+      if ("_next" !== bb && "_prev" !== bb) return wb
     }
-    var QO = class {
+    var lw = class {
         constructor() {
-          Fd(this, "_sentinel");
-          let dd = {};
-          dd._next = dd._prev = dd, this._sentinel = dd
+          Hb(this, "_sentinel");
+          let bb = {};
+          bb._next = bb._prev = bb, this._sentinel = bb
         }
         dequeue() {
-          let dd = this._sentinel,
-            Od = dd._prev;
-          if (Od !== dd) return hO(Od), Od
+          let bb = this._sentinel,
+            wb = bb._prev;
+          if (wb !== bb) return Vw(wb), wb
         }
-        enqueue(dd) {
-          let Od = this._sentinel;
-          dd._prev && dd._next && hO(dd), dd._next = Od._next, Od._next._prev = dd, Od._next = dd, dd._prev = Od
+        enqueue(bb) {
+          let wb = this._sentinel;
+          bb._prev && bb._next && Vw(bb), bb._next = wb._next, wb._next._prev = bb, wb._next = bb, bb._prev = wb
         }
         toString() {
-          let dd = [],
-            Od = this._sentinel,
-            md = Od._prev;
-          for (; md !== Od;) dd.push(JSON.stringify(md, vO)), md = md._prev;
-          return "[" + dd.join(", ") + "]"
+          let bb = [],
+            wb = this._sentinel,
+            Mb = wb._prev;
+          for (; Mb !== wb;) bb.push(JSON.stringify(Mb, gw)), Mb = Mb._prev;
+          return "[" + bb.join(", ") + "]"
         }
       },
-      tO = () => 1;
+      Lw = () => 1;
 
-    function oO(dd, Od) {
-      if (dd.nodeCount() <= 1) return [];
-      let md = function(dd, Od) {
-        let md = new cd,
-          Wd = 0,
-          Fd = 0;
-        dd.nodes().forEach((dd => {
-          md.setNode(dd, {
-            v: dd,
+    function Iw(bb, wb) {
+      if (bb.nodeCount() <= 1) return [];
+      let Mb = function(bb, wb) {
+        let Mb = new Qb,
+          eb = 0,
+          Hb = 0;
+        bb.nodes().forEach((bb => {
+          Mb.setNode(bb, {
+            v: bb,
             in: 0,
             out: 0
           })
-        })), dd.edges().forEach((dd => {
-          let Rd = md.edge(dd.v, dd.w) || 0,
-            Xd = Od(dd),
-            Kd = Rd + Xd;
-          md.setEdge(dd.v, dd.w, Kd);
-          let hd = md.node(dd.v),
-            vd = md.node(dd.w);
-          Fd = Math.max(Fd, hd.out += Xd), Wd = Math.max(Wd, vd.in += Xd)
+        })), bb.edges().forEach((bb => {
+          let pb = Mb.edge(bb.v, bb.w) || 0,
+            Vb = wb(bb),
+            gb = pb + Vb;
+          Mb.setEdge(bb.v, bb.w, gb);
+          let lb = Mb.node(bb.v),
+            Lb = Mb.node(bb.w);
+          Hb = Math.max(Hb, lb.out += Vb), eb = Math.max(eb, Lb.in += Vb)
         }));
-        let Rd = function(dd) {
-            let Od = [];
-            for (let md = 0; md < dd; md++) Od.push(md);
-            return Od
-          }(Fd + Wd + 3).map((() => new QO)),
-          Xd = Wd + 1;
-        return md.nodes().forEach((dd => {
-          qO(Rd, Xd, md.node(dd))
+        let pb = function(bb) {
+            let wb = [];
+            for (let Mb = 0; Mb < bb; Mb++) wb.push(Mb);
+            return wb
+          }(Hb + eb + 3).map((() => new lw)),
+          Vb = eb + 1;
+        return Mb.nodes().forEach((bb => {
+          Uw(pb, Vb, Mb.node(bb))
         })), {
-          graph: md,
-          buckets: Rd,
-          zeroIdx: Xd
+          graph: Mb,
+          buckets: pb,
+          zeroIdx: Vb
         }
-      }(dd, Od || tO);
-      return function(dd, Od, md) {
-        var Wd;
-        let Fd, Rd = [],
-          Xd = Od[Od.length - 1],
-          Kd = Od[0];
-        for (; dd.nodeCount();) {
-          for (; Fd = Kd.dequeue();) NO(dd, Od, md, Fd);
-          for (; Fd = Xd.dequeue();) NO(dd, Od, md, Fd);
-          if (dd.nodeCount())
-            for (let Xd = Od.length - 2; Xd > 0; --Xd)
-              if (Fd = null == (Wd = Od[Xd]) ? void 0 : Wd.dequeue(), Fd) {
-                Rd = Rd.concat(NO(dd, Od, md, Fd, !0) || []);
+      }(bb, wb || Lw);
+      return function(bb, wb, Mb) {
+        var eb;
+        let Hb, pb = [],
+          Vb = wb[wb.length - 1],
+          gb = wb[0];
+        for (; bb.nodeCount();) {
+          for (; Hb = gb.dequeue();) Ow(bb, wb, Mb, Hb);
+          for (; Hb = Vb.dequeue();) Ow(bb, wb, Mb, Hb);
+          if (bb.nodeCount())
+            for (let Vb = wb.length - 2; Vb > 0; --Vb)
+              if (Hb = null == (eb = wb[Vb]) ? void 0 : eb.dequeue(), Hb) {
+                pb = pb.concat(Ow(bb, wb, Mb, Hb, !0) || []);
                 break
               }
         }
-        return Rd
-      }(md.graph, md.buckets, md.zeroIdx).flatMap((Od => dd.outEdges(Od.v, Od.w) || []))
+        return pb
+      }(Mb.graph, Mb.buckets, Mb.zeroIdx).flatMap((wb => bb.outEdges(wb.v, wb.w) || []))
     }
 
-    function NO(dd, Od, md, Wd, Fd) {
-      let Rd = [],
-        Xd = Fd ? Rd : void 0;
-      return (dd.inEdges(Wd.v) || []).forEach((Wd => {
-        let Xd = dd.edge(Wd),
-          Kd = dd.node(Wd.v);
-        Fd && Rd.push({
-          v: Wd.v,
-          w: Wd.w
-        }), Kd.out -= Xd, qO(Od, md, Kd)
-      })), (dd.outEdges(Wd.v) || []).forEach((Wd => {
-        let Fd = dd.edge(Wd),
-          Rd = Wd.w,
-          Xd = dd.node(Rd);
-        Xd.in -= Fd, qO(Od, md, Xd)
-      })), dd.removeNode(Wd.v), Xd
+    function Ow(bb, wb, Mb, eb, Hb) {
+      let pb = [],
+        Vb = Hb ? pb : void 0;
+      return (bb.inEdges(eb.v) || []).forEach((eb => {
+        let Vb = bb.edge(eb),
+          gb = bb.node(eb.v);
+        Hb && pb.push({
+          v: eb.v,
+          w: eb.w
+        }), gb.out -= Vb, Uw(wb, Mb, gb)
+      })), (bb.outEdges(eb.v) || []).forEach((eb => {
+        let Hb = bb.edge(eb),
+          pb = eb.w,
+          Vb = bb.node(pb);
+        Vb.in -= Hb, Uw(wb, Mb, Vb)
+      })), bb.removeNode(eb.v), Vb
     }
 
-    function qO(dd, Od, md) {
-      var Wd, Fd, Rd;
-      md.out ? md.in ? null == (Rd = dd[md.out - md.in + Od]) || Rd.enqueue(md) : null == (Fd = dd[dd.length - 1]) || Fd.enqueue(md) : null == (Wd = dd[0]) || Wd.enqueue(md)
+    function Uw(bb, wb, Mb) {
+      var eb, Hb, pb;
+      Mb.out ? Mb.in ? null == (pb = bb[Mb.out - Mb.in + wb]) || pb.enqueue(Mb) : null == (Hb = bb[bb.length - 1]) || Hb.enqueue(Mb) : null == (eb = bb[0]) || eb.enqueue(Mb)
     }
 
-    function HO(dd, Od) {
-      var md;
-      ("greedy" === dd.graph().acyclicer ? oO(dd, (md = dd, dd => md.edge(dd).weight)) : function(dd, Od) {
-        let md = [],
-          Wd = {},
-          Fd = {};
+    function tw(bb, wb) {
+      var Mb;
+      ("greedy" === bb.graph().acyclicer ? Iw(bb, (Mb = bb, bb => Mb.edge(bb).weight)) : function(bb, wb) {
+        let Mb = [],
+          eb = {},
+          Hb = {};
 
-        function Rd(Od) {
-          Object.hasOwn(Fd, Od) || (Fd[Od] = !0, Wd[Od] = !0, dd.outEdges(Od).forEach((dd => {
-            Object.hasOwn(Wd, dd.w) ? md.push(dd) : Rd(dd.w)
-          })), delete Wd[Od])
+        function pb(wb) {
+          Object.hasOwn(Hb, wb) || (Hb[wb] = !0, eb[wb] = !0, bb.outEdges(wb).forEach((bb => {
+            Object.hasOwn(eb, bb.w) ? Mb.push(bb) : pb(bb.w)
+          })), delete eb[wb])
         }
 
-        function Xd(Rd) {
-          var Kd;
-          Object.hasOwn(Fd, Rd) || (Fd[Rd] = !0, Wd[Rd] = !0, null == (Kd = dd.outEdges(Rd)) || Kd.forEach((Fd => {
-            var Kd, hd;
-            Object.hasOwn(Wd, Fd.w) || (null == (Kd = Od.node(Rd)) ? void 0 : Kd.rank) > (null == (hd = Od.node(Fd.w)) ? void 0 : hd.rank) && function(dd, Od, md) {
-              let Wd = new Set;
+        function Vb(pb) {
+          var gb;
+          Object.hasOwn(Hb, pb) || (Hb[pb] = !0, eb[pb] = !0, null == (gb = bb.outEdges(pb)) || gb.forEach((Hb => {
+            var gb, lb;
+            Object.hasOwn(eb, Hb.w) || (null == (gb = wb.node(pb)) ? void 0 : gb.rank) > (null == (lb = wb.node(Hb.w)) ? void 0 : lb.rank) && function(bb, wb, Mb) {
+              let eb = new Set;
 
-              function Fd(Od) {
-                var Rd;
-                if (dd.sources().includes(Od)) return !0;
-                Wd.add(Od);
-                for (let Xd of null != (Rd = dd.inEdges(Od)) ? Rd : [])
-                  if ((Xd.v !== md.v || Xd.w !== md.w) && !Wd.has(Xd.v) && Fd(Xd.v)) return !0;
+              function Hb(wb) {
+                var pb;
+                if (bb.sources().includes(wb)) return !0;
+                eb.add(wb);
+                for (let Vb of null != (pb = bb.inEdges(wb)) ? pb : [])
+                  if ((Vb.v !== Mb.v || Vb.w !== Mb.w) && !eb.has(Vb.v) && Hb(Vb.v)) return !0;
                 return !1
               }
-              return Fd(Od)
-            }(dd, Fd.w, Fd) ? md.push(Fd) : Xd(Fd.w)
-          })), delete Wd[Rd])
+              return Hb(wb)
+            }(bb, Hb.w, Hb) ? Mb.push(Hb) : Vb(Hb.w)
+          })), delete eb[pb])
         }
-        let Kd = Rd;
-        return Od && "function" == typeof Od.node && (Kd = Xd), dd.sources().forEach(Kd), dd.nodes().forEach(Kd), md
-      }(dd, null != Od ? Od : null)).forEach((Od => {
-        let md = dd.edge(Od);
-        dd.removeEdge(Od), md.forwardName = Od.name, md.reversed = !0, dd.setEdge(Od.w, Od.v, md, OO("rev"))
+        let gb = pb;
+        return wb && "function" == typeof wb.node && (gb = Vb), bb.sources().forEach(gb), bb.nodes().forEach(gb), Mb
+      }(bb, null != wb ? wb : null)).forEach((wb => {
+        let Mb = bb.edge(wb);
+        bb.removeEdge(wb), Mb.forwardName = wb.name, Mb.reversed = !0, bb.setEdge(wb.w, wb.v, Mb, kb("rev"))
       }))
     }
 
-    function yO(dd) {
-      dd.graph().dummyChains = [], dd.edges().forEach((Od => function(dd, Od) {
-        let md, Wd, Fd, Rd = Od.v,
-          Xd = dd.node(Rd).rank,
-          Kd = Od.w,
-          hd = dd.node(Kd).rank,
-          vd = Od.name,
-          Qd = dd.edge(Od),
-          td = Qd.labelRank;
-        if (hd === Xd + 1) return;
-        for (dd.removeEdge(Od), Fd = 0, ++Xd; Xd < hd; ++Fd, ++Xd) Qd.points = [], Wd = {
+    function Cw(bb) {
+      bb.graph().dummyChains = [], bb.edges().forEach((wb => function(bb, wb) {
+        let Mb, eb, Hb, pb = wb.v,
+          Vb = bb.node(pb).rank,
+          gb = wb.w,
+          lb = bb.node(gb).rank,
+          Lb = wb.name,
+          Ib = bb.edge(wb),
+          Ob = Ib.labelRank;
+        if (lb === Vb + 1) return;
+        for (bb.removeEdge(wb), Hb = 0, ++Vb; Vb < lb; ++Hb, ++Vb) Ib.points = [], eb = {
           width: 0,
           height: 0,
-          edgeLabel: Qd,
-          edgeObj: Od,
-          rank: Xd
-        }, md = jd(dd, "edge", Wd, "_d"), Xd === td && (Wd.width = Qd.width, Wd.height = Qd.height, Wd.dummy = "edge-label", Wd.labelpos = Qd.labelpos), dd.setEdge(Rd, md, {
-          weight: Qd.weight
-        }, vd), 0 === Fd && dd.graph().dummyChains.push(md), Rd = md;
-        dd.setEdge(Rd, Kd, {
-          weight: Qd.weight
-        }, vd)
-      }(dd, Od)))
+          edgeLabel: Ib,
+          edgeObj: wb,
+          rank: Vb
+        }, Mb = Gb(bb, "edge", eb, "_d"), Vb === Ob && (eb.width = Ib.width, eb.height = Ib.height, eb.dummy = "edge-label", eb.labelpos = Ib.labelpos), bb.setEdge(pb, Mb, {
+          weight: Ib.weight
+        }, Lb), 0 === Hb && bb.graph().dummyChains.push(Mb), pb = Mb;
+        bb.setEdge(pb, gb, {
+          weight: Ib.weight
+        }, Lb)
+      }(bb, wb)))
     }
 
-    function bO(dd) {
-      let Od = {};
-      dd.sources().forEach((function md(Wd) {
-        let Fd = dd.node(Wd);
-        if (Object.hasOwn(Od, Wd)) return Fd.rank;
-        Od[Wd] = !0;
-        let Rd = dd.outEdges(Wd),
-          Xd = Rd ? Rd.map((Od => null == Od ? Number.POSITIVE_INFINITY : md(Od.w) - dd.edge(Od).minlen)) : [],
-          Kd = Zd(Math.min, Xd);
-        return Kd === Number.POSITIVE_INFINITY && (Kd = 0), Fd.rank = Kd
+    function Ew(bb) {
+      let wb = {};
+      bb.sources().forEach((function Mb(eb) {
+        let Hb = bb.node(eb);
+        if (Object.hasOwn(wb, eb)) return Hb.rank;
+        wb[eb] = !0;
+        let pb = bb.outEdges(eb),
+          Vb = pb ? pb.map((wb => null == wb ? Number.POSITIVE_INFINITY : Mb(wb.w) - bb.edge(wb).minlen)) : [],
+          gb = Pb(Math.min, Vb);
+        return gb === Number.POSITIVE_INFINITY && (gb = 0), Hb.rank = gb
       }))
     }
 
-    function TO(dd, Od) {
-      return dd.node(Od.w).rank - dd.node(Od.v).rank - dd.edge(Od).minlen
+    function Fw(bb, wb) {
+      return bb.node(wb.w).rank - bb.node(wb.v).rank - bb.edge(wb).minlen
     }
-    var pO = function(dd) {
-      let Od = new cd({
+    var Bw = function(bb) {
+      let wb = new Qb({
           directed: !1
         }),
-        md = dd.nodes();
-      if (0 === md.length) throw new Error("Graph must have at least one node");
-      let Wd, Fd, Rd = md[0],
-        Xd = dd.nodeCount();
-      for (Od.setNode(Rd, {}); YO(Od, dd) < Xd && (Wd = gO(Od, dd), Wd);) Fd = Od.hasNode(Wd.v) ? TO(dd, Wd) : -TO(dd, Wd), wO(Od, dd, Fd);
-      return Od
+        Mb = bb.nodes();
+      if (0 === Mb.length) throw new Error("Graph must have at least one node");
+      let eb, Hb, pb = Mb[0],
+        Vb = bb.nodeCount();
+      for (wb.setNode(pb, {}); sw(wb, bb) < Vb && (eb = mw(wb, bb), eb);) Hb = wb.hasNode(eb.v) ? Fw(bb, eb) : -Fw(bb, eb), hw(wb, bb, Hb);
+      return wb
     };
 
-    function YO(dd, Od) {
-      return dd.nodes().forEach((function md(Wd) {
-        let Fd = Od.nodeEdges(Wd);
-        Fd && Fd.forEach((Fd => {
-          let Rd = Fd.v,
-            Xd = Wd === Rd ? Fd.w : Rd;
-          !dd.hasNode(Xd) && !TO(Od, Fd) && (dd.setNode(Xd, {}), dd.setEdge(Wd, Xd, {}), md(Xd))
+    function sw(bb, wb) {
+      return bb.nodes().forEach((function Mb(eb) {
+        let Hb = wb.nodeEdges(eb);
+        Hb && Hb.forEach((Hb => {
+          let pb = Hb.v,
+            Vb = eb === pb ? Hb.w : pb;
+          !bb.hasNode(Vb) && !Fw(wb, Hb) && (bb.setNode(Vb, {}), bb.setEdge(eb, Vb, {}), Mb(Vb))
         }))
-      })), dd.nodeCount()
+      })), bb.nodeCount()
     }
 
-    function gO(dd, Od) {
-      return Od.edges().reduce(((md, Wd) => {
-        let Fd = Number.POSITIVE_INFINITY;
-        return dd.hasNode(Wd.v) !== dd.hasNode(Wd.w) && (Fd = TO(Od, Wd)), Fd < md[0] ? [Fd, Wd] : md
+    function mw(bb, wb) {
+      return wb.edges().reduce(((Mb, eb) => {
+        let Hb = Number.POSITIVE_INFINITY;
+        return bb.hasNode(eb.v) !== bb.hasNode(eb.w) && (Hb = Fw(wb, eb)), Hb < Mb[0] ? [Hb, eb] : Mb
       }), [Number.POSITIVE_INFINITY, null])[1]
     }
 
-    function wO(dd, Od, md) {
-      dd.nodes().forEach((dd => Od.node(dd).rank += md))
+    function hw(bb, wb, Mb) {
+      bb.nodes().forEach((bb => wb.node(bb).rank += Mb))
     }
     var {
-      preorder: aO,
-      postorder: EO
-    } = bd, JO = UO;
+      preorder: zw,
+      postorder: Xw
+    } = Bb, xw = jw;
 
-    function UO(dd) {
-      dd = function(dd) {
-        let Od = (new cd).setGraph(dd.graph());
-        return dd.nodes().forEach((md => Od.setNode(md, dd.node(md)))), dd.edges().forEach((md => {
-          let Wd = Od.edge(md.v, md.w) || {
+    function jw(bb) {
+      bb = function(bb) {
+        let wb = (new Qb).setGraph(bb.graph());
+        return bb.nodes().forEach((Mb => wb.setNode(Mb, bb.node(Mb)))), bb.edges().forEach((Mb => {
+          let eb = wb.edge(Mb.v, Mb.w) || {
               weight: 0,
               minlen: 1
             },
-            Fd = dd.edge(md);
-          Od.setEdge(md.v, md.w, {
-            weight: Wd.weight + Fd.weight,
-            minlen: Math.max(Wd.minlen, Fd.minlen)
+            Hb = bb.edge(Mb);
+          wb.setEdge(Mb.v, Mb.w, {
+            weight: eb.weight + Hb.weight,
+            minlen: Math.max(eb.minlen, Hb.minlen)
           })
-        })), Od
-      }(dd), bO(dd);
-      let Od, md, Wd = pO(dd);
-      for (SO(Wd), xO(Wd, dd); Od = uO(Wd);) md = VO(Wd, dd, Od), iO(Wd, dd, Od, md)
+        })), wb
+      }(bb), Ew(bb);
+      let wb, Mb, eb = Bw(bb);
+      for (Rw(eb), Kw(eb, bb); wb = Yw(eb);) Mb = Zw(eb, bb, wb), fw(eb, bb, wb, Mb)
     }
 
-    function xO(dd, Od) {
-      let md = EO(dd, dd.nodes());
-      md = md.slice(0, md.length - 1), md.forEach((md => function(dd, Od, md) {
-        let Wd = dd.node(md).parent,
-          Fd = dd.edge(md, Wd);
-        Fd.cutvalue = BO(dd, Od, md)
-      }(dd, Od, md)))
+    function Kw(bb, wb) {
+      let Mb = Xw(bb, bb.nodes());
+      Mb = Mb.slice(0, Mb.length - 1), Mb.forEach((Mb => function(bb, wb, Mb) {
+        let eb = bb.node(Mb).parent,
+          Hb = bb.edge(Mb, eb);
+        Hb.cutvalue = rw(bb, wb, Mb)
+      }(bb, wb, Mb)))
     }
 
-    function BO(dd, Od, md) {
-      let Wd = dd.node(md).parent,
-        Fd = !0,
-        Rd = Od.edge(md, Wd),
-        Xd = 0;
-      Rd || (Fd = !1, Rd = Od.edge(Wd, md)), Xd = Rd.weight;
-      let Kd = Od.nodeEdges(md);
-      return Kd && Kd.forEach((Rd => {
-        let Kd = Rd.v === md,
-          hd = Kd ? Rd.w : Rd.v;
-        if (hd !== Wd) {
-          let Wd = Kd === Fd,
-            vd = Od.edge(Rd).weight;
-          if (Xd += Wd ? vd : -vd, function(dd, Od, md) {
-              return dd.hasEdge(Od, md)
-            }(dd, md, hd)) {
-            let Od = dd.edge(md, hd).cutvalue;
-            Xd += Wd ? -Od : Od
+    function rw(bb, wb, Mb) {
+      let eb = bb.node(Mb).parent,
+        Hb = !0,
+        pb = wb.edge(Mb, eb),
+        Vb = 0;
+      pb || (Hb = !1, pb = wb.edge(eb, Mb)), Vb = pb.weight;
+      let gb = wb.nodeEdges(Mb);
+      return gb && gb.forEach((pb => {
+        let gb = pb.v === Mb,
+          lb = gb ? pb.w : pb.v;
+        if (lb !== eb) {
+          let eb = gb === Hb,
+            Lb = wb.edge(pb).weight;
+          if (Vb += eb ? Lb : -Lb, function(bb, wb, Mb) {
+              return bb.hasEdge(wb, Mb)
+            }(bb, Mb, lb)) {
+            let wb = bb.edge(Mb, lb).cutvalue;
+            Vb += eb ? -wb : wb
           }
         }
-      })), Xd
+      })), Vb
     }
 
-    function SO(dd, Od) {
-      arguments.length < 2 && (Od = dd.nodes()[0]), sO(dd, {}, 1, Od)
+    function Rw(bb, wb) {
+      arguments.length < 2 && (wb = bb.nodes()[0]), Dw(bb, {}, 1, wb)
     }
 
-    function sO(dd, Od, md, Wd, Fd) {
-      let Rd = md,
-        Xd = dd.node(Wd);
-      Od[Wd] = !0;
-      let Kd = dd.neighbors(Wd);
-      return Kd && Kd.forEach((Fd => {
-        Object.hasOwn(Od, Fd) || (md = sO(dd, Od, md, Fd, Wd))
-      })), Xd.low = Rd, Xd.lim = md++, Fd ? Xd.parent = Fd : delete Xd.parent, md
+    function Dw(bb, wb, Mb, eb, Hb) {
+      let pb = Mb,
+        Vb = bb.node(eb);
+      wb[eb] = !0;
+      let gb = bb.neighbors(eb);
+      return gb && gb.forEach((Hb => {
+        Object.hasOwn(wb, Hb) || (Mb = Dw(bb, wb, Mb, Hb, eb))
+      })), Vb.low = pb, Vb.lim = Mb++, Hb ? Vb.parent = Hb : delete Vb.parent, Mb
     }
 
-    function uO(dd) {
-      return dd.edges().find((Od => dd.edge(Od).cutvalue < 0))
+    function Yw(bb) {
+      return bb.edges().find((wb => bb.edge(wb).cutvalue < 0))
     }
 
-    function VO(dd, Od, md) {
-      let Wd = md.v,
-        Fd = md.w;
-      Od.hasEdge(Wd, Fd) || (Wd = md.w, Fd = md.v);
-      let Rd = dd.node(Wd),
-        Xd = dd.node(Fd),
-        Kd = Rd,
-        hd = !1;
-      return Rd.lim > Xd.lim && (Kd = Xd, hd = !0), Od.edges().filter((Od => hd === AO(dd, dd.node(Od.v), Kd) && hd !== AO(dd, dd.node(Od.w), Kd))).reduce(((dd, md) => TO(Od, md) < TO(Od, dd) ? md : dd))
+    function Zw(bb, wb, Mb) {
+      let eb = Mb.v,
+        Hb = Mb.w;
+      wb.hasEdge(eb, Hb) || (eb = Mb.w, Hb = Mb.v);
+      let pb = bb.node(eb),
+        Vb = bb.node(Hb),
+        gb = pb,
+        lb = !1;
+      return pb.lim > Vb.lim && (gb = Vb, lb = !0), wb.edges().filter((wb => lb === Aw(bb, bb.node(wb.v), gb) && lb !== Aw(bb, bb.node(wb.w), gb))).reduce(((bb, Mb) => Fw(wb, Mb) < Fw(wb, bb) ? Mb : bb))
     }
 
-    function iO(dd, Od, md, Wd) {
-      let Fd = md.v,
-        Rd = md.w;
-      dd.removeEdge(Fd, Rd), dd.setEdge(Wd.v, Wd.w, {}), SO(dd), xO(dd, Od),
-        function(dd, Od) {
-          let md = dd.nodes().find((Od => !dd.node(Od).parent));
-          if (!md) return;
-          let Wd = aO(dd, [md]);
-          Wd = Wd.slice(1), Wd.forEach((md => {
-            let Wd = dd.node(md).parent,
-              Fd = Od.edge(md, Wd),
-              Rd = !1;
-            Fd || (Fd = Od.edge(Wd, md), Rd = !0), Od.node(md).rank = Od.node(Wd).rank + (Rd ? Fd.minlen : -Fd.minlen)
+    function fw(bb, wb, Mb, eb) {
+      let Hb = Mb.v,
+        pb = Mb.w;
+      bb.removeEdge(Hb, pb), bb.setEdge(eb.v, eb.w, {}), Rw(bb), Kw(bb, wb),
+        function(bb, wb) {
+          let Mb = bb.nodes().find((wb => !bb.node(wb).parent));
+          if (!Mb) return;
+          let eb = zw(bb, [Mb]);
+          eb = eb.slice(1), eb.forEach((Mb => {
+            let eb = bb.node(Mb).parent,
+              Hb = wb.edge(Mb, eb),
+              pb = !1;
+            Hb || (Hb = wb.edge(eb, Mb), pb = !0), wb.node(Mb).rank = wb.node(eb).rank + (pb ? Hb.minlen : -Hb.minlen)
           }))
-        }(dd, Od)
+        }(bb, wb)
     }
 
-    function AO(dd, Od, md) {
-      return md.low <= Od.lim && Od.lim <= md.lim
+    function Aw(bb, wb, Mb) {
+      return Mb.low <= wb.lim && wb.lim <= Mb.lim
     }
-    UO.initLowLimValues = SO, UO.initCutValues = xO, UO.calcCutValue = BO, UO.leaveEdge = uO, UO.enterEdge = VO, UO.exchangeEdges = iO;
-    var rO = function(dd) {
-      let Od = dd.graph().ranker;
-      if ("function" == typeof Od) return Od(dd);
-      switch (Od) {
+    jw.initLowLimValues = Rw, jw.initCutValues = Kw, jw.calcCutValue = rw, jw.leaveEdge = Yw, jw.enterEdge = Zw, jw.exchangeEdges = fw;
+    var Ww = function(bb) {
+      let wb = bb.graph().ranker;
+      if ("function" == typeof wb) return wb(bb);
+      switch (wb) {
         case "network-simplex":
         default:
-          nO(dd);
+          Sw(bb);
           break;
         case "tight-tree":
-          ! function(dd) {
-            bO(dd), pO(dd)
-          }(dd);
+          ! function(bb) {
+            Ew(bb), Bw(bb)
+          }(bb);
           break;
         case "longest-path":
-          GO(dd);
+          Jw(bb);
         case "none":
       }
     };
-    var GO = bO;
+    var Jw = Ew;
 
-    function nO(dd) {
-      JO(dd)
+    function Sw(bb) {
+      xw(bb)
     }
-    var LO = function(dd) {
-      let Od = function(dd) {
-          let Od = {},
-            md = 0;
+    var Nw = function(bb) {
+      let wb = function(bb) {
+          let wb = {},
+            Mb = 0;
 
-          function Wd(Fd) {
-            let Rd = md;
-            dd.children(Fd).forEach(Wd), Od[Fd] = {
-              low: Rd,
-              lim: md++
+          function eb(Hb) {
+            let pb = Mb;
+            bb.children(Hb).forEach(eb), wb[Hb] = {
+              low: pb,
+              lim: Mb++
             }
           }
-          return dd.children(RO).forEach(Wd), Od
-        }(dd),
-        md = dd.graph();
-      if (!Array.isArray(md.dummyChains)) return;
-      md.dummyChains.forEach((md => {
-        let Wd = dd.node(md),
-          Fd = Wd.edgeObj,
-          Rd = function(dd, Od, md, Wd) {
-            let Fd, Rd = [],
-              Xd = [],
-              Kd = Math.min(Od[md].low, Od[Wd].low),
-              hd = Math.max(Od[md].lim, Od[Wd].lim);
-            Fd = md;
+          return bb.children(ew).forEach(eb), wb
+        }(bb),
+        Mb = bb.graph();
+      if (!Array.isArray(Mb.dummyChains)) return;
+      Mb.dummyChains.forEach((Mb => {
+        let eb = bb.node(Mb),
+          Hb = eb.edgeObj,
+          pb = function(bb, wb, Mb, eb) {
+            let Hb, pb = [],
+              Vb = [],
+              gb = Math.min(wb[Mb].low, wb[eb].low),
+              lb = Math.max(wb[Mb].lim, wb[eb].lim);
+            Hb = Mb;
             do {
-              Fd = dd.parent(Fd), Rd.push(Fd)
-            } while (Fd && (Od[Fd].low > Kd || hd > Od[Fd].lim));
-            let vd = Fd,
-              Qd = Wd;
+              Hb = bb.parent(Hb), pb.push(Hb)
+            } while (Hb && (wb[Hb].low > gb || lb > wb[Hb].lim));
+            let Lb = Hb,
+              Ib = eb;
             for (;
-              (Qd = dd.parent(Qd)) !== vd;) Xd.push(Qd);
+              (Ib = bb.parent(Ib)) !== Lb;) Vb.push(Ib);
             return {
-              path: Rd.concat(Xd.reverse()),
-              lca: vd
+              path: pb.concat(Vb.reverse()),
+              lca: Lb
             }
-          }(dd, Od, Fd.v, Fd.w),
-          Xd = Rd.path,
-          Kd = Rd.lca,
-          hd = 0,
-          vd = Xd[hd],
-          Qd = !0;
-        for (; md !== Fd.w;) {
-          if (Wd = dd.node(md), Qd) {
+          }(bb, wb, Hb.v, Hb.w),
+          Vb = pb.path,
+          gb = pb.lca,
+          lb = 0,
+          Lb = Vb[lb],
+          Ib = !0;
+        for (; Mb !== Hb.w;) {
+          if (eb = bb.node(Mb), Ib) {
             for (;
-              (vd = Xd[hd]) !== Kd && dd.node(vd).maxRank < Wd.rank;) hd++;
-            vd === Kd && (Qd = !1)
+              (Lb = Vb[lb]) !== gb && bb.node(Lb).maxRank < eb.rank;) lb++;
+            Lb === gb && (Ib = !1)
           }
-          if (!Qd) {
-            for (; hd < Xd.length - 1 && dd.node(Xd[hd + 1]).minRank <= Wd.rank;) hd++;
-            vd = Xd[hd]
+          if (!Ib) {
+            for (; lb < Vb.length - 1 && bb.node(Vb[lb + 1]).minRank <= eb.rank;) lb++;
+            Lb = Vb[lb]
           }
-          void 0 !== vd && dd.setParent(md, vd), md = dd.successors(md)[0]
+          void 0 !== Lb && bb.setParent(Mb, Lb), Mb = bb.successors(Mb)[0]
         }
       }))
     };
 
-    function PO(dd) {
-      let Od = jd(dd, "root", {}, "_root"),
-        md = function(dd) {
-          let Od = {};
+    function vw(bb) {
+      let wb = Gb(bb, "root", {}, "_root"),
+        Mb = function(bb) {
+          let wb = {};
 
-          function md(Wd, Fd) {
-            let Rd = dd.children(Wd);
-            Rd && Rd.length && Rd.forEach((dd => md(dd, Fd + 1))), Od[Wd] = Fd
+          function Mb(eb, Hb) {
+            let pb = bb.children(eb);
+            pb && pb.length && pb.forEach((bb => Mb(bb, Hb + 1))), wb[eb] = Hb
           }
-          return dd.children(RO).forEach((dd => md(dd, 1))), Od
-        }(dd),
-        Wd = Object.values(md),
-        Fd = Zd(Math.max, Wd) - 1,
-        Rd = 2 * Fd + 1;
-      dd.graph().nestingRoot = Od, dd.edges().forEach((Od => dd.edge(Od).minlen *= Rd));
-      let Xd = function(dd) {
-        return dd.edges().reduce(((Od, md) => Od + dd.edge(md).weight), 0)
-      }(dd) + 1;
-      dd.children(RO).forEach((Wd => {
-        zO(dd, Od, Rd, Xd, Fd, md, Wd)
-      })), dd.graph().nodeRankFactor = Rd
+          return bb.children(ew).forEach((bb => Mb(bb, 1))), wb
+        }(bb),
+        eb = Object.values(Mb),
+        Hb = Pb(Math.max, eb) - 1,
+        pb = 2 * Hb + 1;
+      bb.graph().nestingRoot = wb, bb.edges().forEach((wb => bb.edge(wb).minlen *= pb));
+      let Vb = function(bb) {
+        return bb.edges().reduce(((wb, Mb) => wb + bb.edge(Mb).weight), 0)
+      }(bb) + 1;
+      bb.children(ew).forEach((eb => {
+        Qw(bb, wb, pb, Vb, Hb, Mb, eb)
+      })), bb.graph().nodeRankFactor = pb
     }
 
-    function zO(dd, Od, md, Wd, Fd, Rd, Xd) {
-      var Kd;
-      let hd = dd.children(Xd);
-      if (!hd.length) return void(Xd !== Od && dd.setEdge(Od, Xd, {
+    function Qw(bb, wb, Mb, eb, Hb, pb, Vb) {
+      var gb;
+      let lb = bb.children(Vb);
+      if (!lb.length) return void(Vb !== wb && bb.setEdge(wb, Vb, {
         weight: 0,
-        minlen: md
+        minlen: Mb
       }));
-      let vd = ld(dd, "_bt"),
-        Qd = ld(dd, "_bb"),
-        td = dd.node(Xd);
-      dd.setParent(vd, Xd), td.borderTop = vd, dd.setParent(Qd, Xd), td.borderBottom = Qd, hd.forEach((Kd => {
-        var hd;
-        zO(dd, Od, md, Wd, Fd, Rd, Kd);
-        let td = dd.node(Kd),
-          od = td.borderTop ? td.borderTop : Kd,
-          Nd = td.borderBottom ? td.borderBottom : Kd,
-          qd = td.borderTop ? Wd : 2 * Wd,
-          Hd = od !== Nd ? 1 : Fd - (null != (hd = Rd[Xd]) ? hd : 0) + 1;
-        dd.setEdge(vd, od, {
-          weight: qd,
-          minlen: Hd,
+      let Lb = ub(bb, "_bt"),
+        Ib = ub(bb, "_bb"),
+        Ob = bb.node(Vb);
+      bb.setParent(Lb, Vb), Ob.borderTop = Lb, bb.setParent(Ib, Vb), Ob.borderBottom = Ib, lb.forEach((gb => {
+        var lb;
+        Qw(bb, wb, Mb, eb, Hb, pb, gb);
+        let Ob = bb.node(gb),
+          Ub = Ob.borderTop ? Ob.borderTop : gb,
+          tb = Ob.borderBottom ? Ob.borderBottom : gb,
+          Cb = Ob.borderTop ? eb : 2 * eb,
+          Eb = Ub !== tb ? 1 : Hb - (null != (lb = pb[Vb]) ? lb : 0) + 1;
+        bb.setEdge(Lb, Ub, {
+          weight: Cb,
+          minlen: Eb,
           nestingEdge: !0
-        }), dd.setEdge(Nd, Qd, {
-          weight: qd,
-          minlen: Hd,
+        }), bb.setEdge(tb, Ib, {
+          weight: Cb,
+          minlen: Eb,
           nestingEdge: !0
         })
-      })), dd.parent(Xd) || dd.setEdge(Od, vd, {
+      })), bb.parent(Vb) || bb.setEdge(wb, Lb, {
         weight: 0,
-        minlen: Fd + (null != (Kd = Rd[Xd]) ? Kd : 0)
+        minlen: Hb + (null != (gb = pb[Vb]) ? gb : 0)
       })
     }
-    var cO = function(dd) {
-      dd.children(RO).forEach((function Od(md) {
-        let Wd = dd.children(md),
-          Fd = dd.node(md);
-        if (Wd.length && Wd.forEach(Od), Fd && Object.hasOwn(Fd, "minRank")) {
-          Fd.borderLeft = [], Fd.borderRight = [];
-          for (let Od = Fd.minRank, Wd = Fd.maxRank + 1; Od < Wd; ++Od) jO(dd, "borderLeft", "_bl", md, Fd, Od), jO(dd, "borderRight", "_br", md, Fd, Od)
+    var Gw = function(bb) {
+      bb.children(ew).forEach((function wb(Mb) {
+        let eb = bb.children(Mb),
+          Hb = bb.node(Mb);
+        if (eb.length && eb.forEach(wb), Hb && Object.hasOwn(Hb, "minRank")) {
+          Hb.borderLeft = [], Hb.borderRight = [];
+          for (let wb = Hb.minRank, eb = Hb.maxRank + 1; wb < eb; ++wb) qw(bb, "borderLeft", "_bl", Mb, Hb, wb), qw(bb, "borderRight", "_br", Mb, Hb, wb)
         }
       }))
     };
 
-    function jO(dd, Od, md, Wd, Fd, Rd) {
-      let Xd = {
+    function qw(bb, wb, Mb, eb, Hb, pb) {
+      let Vb = {
           width: 0,
           height: 0,
-          rank: Rd,
-          borderType: Od
+          rank: pb,
+          borderType: wb
         },
-        Kd = Fd[Od][Rd - 1],
-        hd = jd(dd, "border", Xd, md);
-      Fd[Od][Rd] = hd, dd.setParent(hd, Wd), Kd && dd.setEdge(Kd, hd, {
+        gb = Hb[wb][pb - 1],
+        lb = Gb(bb, "border", Vb, Mb);
+      Hb[wb][pb] = lb, bb.setParent(lb, eb), gb && bb.setEdge(gb, lb, {
         weight: 1
       })
     }
 
-    function DO(dd) {
-      var Od;
-      let md = null == (Od = dd.graph().rankdir) ? void 0 : Od.toLowerCase();
-      ("bt" === md || "rl" === md) && function(dd) {
-        dd.nodes().forEach((Od => lO(dd.node(Od)))), dd.edges().forEach((Od => {
-          var md;
-          let Wd = dd.edge(Od);
-          null == (md = Wd.points) || md.forEach(lO), Object.hasOwn(Wd, "y") && lO(Wd)
+    function aw(bb) {
+      var wb;
+      let Mb = null == (wb = bb.graph().rankdir) ? void 0 : wb.toLowerCase();
+      ("bt" === Mb || "rl" === Mb) && function(bb) {
+        bb.nodes().forEach((wb => dw(bb.node(wb)))), bb.edges().forEach((wb => {
+          var Mb;
+          let eb = bb.edge(wb);
+          null == (Mb = eb.points) || Mb.forEach(dw), Object.hasOwn(eb, "y") && dw(eb)
         }))
-      }(dd), ("lr" === md || "rl" === md) && (function(dd) {
-        dd.nodes().forEach((Od => CO(dd.node(Od)))), dd.edges().forEach((Od => {
-          var md;
-          let Wd = dd.edge(Od);
-          null == (md = Wd.points) || md.forEach(CO), Object.hasOwn(Wd, "x") && CO(Wd)
+      }(bb), ("lr" === Mb || "rl" === Mb) && (function(bb) {
+        bb.nodes().forEach((wb => Pw(bb.node(wb)))), bb.edges().forEach((wb => {
+          var Mb;
+          let eb = bb.edge(wb);
+          null == (Mb = eb.points) || Mb.forEach(Pw), Object.hasOwn(eb, "x") && Pw(eb)
         }))
-      }(dd), eO(dd))
+      }(bb), iw(bb))
     }
 
-    function eO(dd) {
-      dd.nodes().forEach((Od => IO(dd.node(Od)))), dd.edges().forEach((Od => IO(dd.edge(Od))))
+    function iw(bb) {
+      bb.nodes().forEach((wb => uw(bb.node(wb)))), bb.edges().forEach((wb => uw(bb.edge(wb))))
     }
 
-    function IO(dd) {
-      let Od = dd.width;
-      dd.width = dd.height, dd.height = Od
+    function uw(bb) {
+      let wb = bb.width;
+      bb.width = bb.height, bb.height = wb
     }
 
-    function lO(dd) {
-      dd.y = -dd.y
+    function dw(bb) {
+      bb.y = -bb.y
     }
 
-    function CO(dd) {
-      let Od = dd.x;
-      dd.x = dd.y, dd.y = Od
+    function Pw(bb) {
+      let wb = bb.x;
+      bb.x = bb.y, bb.y = wb
     }
 
-    function ZO(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-        md = {},
-        Wd = dd.nodes().filter((Od => !dd.children(Od).length)),
-        Fd = Wd.map((Od => dd.node(Od).rank)),
-        Rd = mO(Zd(Math.max, Fd) + 1).map((() => []));
-      return Wd.sort(((Od, md) => dd.node(Od).rank - dd.node(md).rank)).forEach((function Wd(Fd) {
-        if (md[Fd]) return;
-        md[Fd] = !0;
-        let Xd = dd.node(Fd);
-        Rd[Xd.rank].push(Fd);
-        let Kd = dd.successors(Fd);
-        Kd && [...Kd].sort(((md, Wd) => function(md, Wd) {
-          let Fd = dd.node(md),
-            Rd = dd.node(Wd);
-          return XO(Od, Fd, Rd)
-        }(md, Wd))).forEach(Wd)
-      })), Rd
+    function nw(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        Mb = {},
+        eb = bb.nodes().filter((wb => !bb.children(wb).length)),
+        Hb = eb.map((wb => bb.node(wb).rank)),
+        pb = bw(Pb(Math.max, Hb) + 1).map((() => []));
+      return eb.sort(((wb, Mb) => bb.node(wb).rank - bb.node(Mb).rank)).forEach((function eb(Hb) {
+        if (Mb[Hb]) return;
+        Mb[Hb] = !0;
+        let Vb = bb.node(Hb);
+        pb[Vb.rank].push(Hb);
+        let gb = bb.successors(Hb);
+        gb && [...gb].sort(((Mb, eb) => function(Mb, eb) {
+          let Hb = bb.node(Mb),
+            pb = bb.node(eb);
+          return Hw(wb, Hb, pb)
+        }(Mb, eb))).forEach(eb)
+      })), pb
     }
 
-    function kO(dd, Od) {
-      let md = 0;
-      for (let Wd = 1; Wd < Od.length; ++Wd) md += fO(dd, Od[Wd - 1], Od[Wd]);
-      return md
+    function yw(bb, wb) {
+      let Mb = 0;
+      for (let eb = 1; eb < wb.length; ++eb) Mb += ow(bb, wb[eb - 1], wb[eb]);
+      return Mb
     }
 
-    function fO(dd, Od, md) {
-      let Wd = function(dd, Od) {
-          return dd.reduce(((dd, md, Wd) => (dd[md] = Od[Wd], dd)), {})
-        }(md, md.map(((dd, Od) => Od))),
-        Fd = Od.flatMap((Od => {
-          let md = dd.outEdges(Od);
-          return md ? md.map((Od => ({
-            pos: Wd[Od.w],
-            weight: dd.edge(Od).weight
-          }))).sort(((dd, Od) => dd.pos - Od.pos)) : []
+    function ow(bb, wb, Mb) {
+      let eb = function(bb, wb) {
+          return bb.reduce(((bb, Mb, eb) => (bb[Mb] = wb[eb], bb)), {})
+        }(Mb, Mb.map(((bb, wb) => wb))),
+        Hb = wb.flatMap((wb => {
+          let Mb = bb.outEdges(wb);
+          return Mb ? Mb.map((wb => ({
+            pos: eb[wb.w],
+            weight: bb.edge(wb).weight
+          }))).sort(((bb, wb) => bb.pos - wb.pos)) : []
         })),
-        Rd = 1;
-      for (; Rd < md.length;) Rd <<= 1;
-      let Xd = 2 * Rd - 1;
-      Rd -= 1;
-      let Kd = new Array(Xd).fill(0),
-        hd = 0;
-      return Fd.forEach((dd => {
-        let Od = dd.pos + Rd;
-        Kd[Od] += dd.weight;
-        let md = 0;
-        for (; Od > 0;) Od % 2 && (md += Kd[Od + 1]), Od = Od - 1 >> 1, Kd[Od] += dd.weight;
-        hd += dd.weight * md
-      })), hd
+        pb = 1;
+      for (; pb < Mb.length;) pb <<= 1;
+      let Vb = 2 * pb - 1;
+      pb -= 1;
+      let gb = new Array(Vb).fill(0),
+        lb = 0;
+      return Hb.forEach((bb => {
+        let wb = bb.pos + pb;
+        gb[wb] += bb.weight;
+        let Mb = 0;
+        for (; wb > 0;) wb % 2 && (Mb += gb[wb + 1]), wb = wb - 1 >> 1, gb[wb] += bb.weight;
+        lb += bb.weight * Mb
+      })), lb
     }
 
-    function MO(dd, Od) {
-      let md = {};
-      return dd.forEach(((dd, Od) => {
-          let Wd = {
+    function Tw(bb, wb) {
+      let Mb = {};
+      return bb.forEach(((bb, wb) => {
+          let eb = {
             indegree: 0,
             in: [],
             out: [],
-            vs: [dd.v],
-            i: Od
+            vs: [bb.v],
+            i: wb
           };
-          void 0 !== dd.barycenter && (Wd.barycenter = dd.barycenter, Wd.weight = dd.weight), md[dd.v] = Wd
-        })), Od.edges().forEach((dd => {
-          let Od = md[dd.v],
-            Wd = md[dd.w];
-          void 0 !== Od && void 0 !== Wd && (Wd.indegree++, Od.out.push(Wd))
+          void 0 !== bb.barycenter && (eb.barycenter = bb.barycenter, eb.weight = bb.weight), Mb[bb.v] = eb
+        })), wb.edges().forEach((bb => {
+          let wb = Mb[bb.v],
+            eb = Mb[bb.w];
+          void 0 !== wb && void 0 !== eb && (eb.indegree++, wb.out.push(eb))
         })),
-        function(dd) {
-          let Od = [];
+        function(bb) {
+          let wb = [];
 
-          function md(dd) {
-            return Od => {
-              Od.merged || (void 0 === Od.barycenter || void 0 === dd.barycenter || Od.barycenter >= dd.barycenter) && function(dd, Od) {
-                let md = 0,
-                  Wd = 0;
-                dd.weight && (md += dd.barycenter * dd.weight, Wd += dd.weight), Od.weight && (md += Od.barycenter * Od.weight, Wd += Od.weight), dd.vs = Od.vs.concat(dd.vs), dd.barycenter = md / Wd, dd.weight = Wd, dd.i = Math.min(Od.i, dd.i), Od.merged = !0
-              }(dd, Od)
+          function Mb(bb) {
+            return wb => {
+              wb.merged || (void 0 === wb.barycenter || void 0 === bb.barycenter || wb.barycenter >= bb.barycenter) && function(bb, wb) {
+                let Mb = 0,
+                  eb = 0;
+                bb.weight && (Mb += bb.barycenter * bb.weight, eb += bb.weight), wb.weight && (Mb += wb.barycenter * wb.weight, eb += wb.weight), bb.vs = wb.vs.concat(bb.vs), bb.barycenter = Mb / eb, bb.weight = eb, bb.i = Math.min(wb.i, bb.i), wb.merged = !0
+              }(bb, wb)
             }
           }
 
-          function Wd(Od) {
-            return md => {
-              md.in.push(Od), 0 === --md.indegree && dd.push(md)
+          function eb(wb) {
+            return Mb => {
+              Mb.in.push(wb), 0 === --Mb.indegree && bb.push(Mb)
             }
           }
-          for (; dd.length;) {
-            let Fd = dd.pop();
-            Od.push(Fd), Fd.in.reverse().forEach(md(Fd)), Fd.out.forEach(Wd(Fd))
+          for (; bb.length;) {
+            let Hb = bb.pop();
+            wb.push(Hb), Hb.in.reverse().forEach(Mb(Hb)), Hb.out.forEach(eb(Hb))
           }
-          return Od.filter((dd => !dd.merged)).map((dd => WO(dd, ["vs", "i", "barycenter", "weight"])))
-        }(Object.values(md).filter((dd => !dd.indegree)))
+          return wb.filter((bb => !bb.merged)).map((bb => ww(bb, ["vs", "i", "barycenter", "weight"])))
+        }(Object.values(Mb).filter((bb => !bb.indegree)))
     }
 
-    function dm(dd, Od, md, Wd, Fd) {
-      let Rd = {},
-        Xd = null,
-        Kd = null,
-        hd = Fd;
-      "boolean" == typeof Od ? (hd = Od, Rd = {}) : Od && (Rd = Od, Xd = null != md ? md : null, Kd = null != Wd ? Wd : null);
-      let vd = function(dd, Od) {
-          let md = {
+    function kw(bb, wb, Mb, eb, Hb) {
+      let pb = {},
+        Vb = null,
+        gb = null,
+        lb = Hb;
+      "boolean" == typeof wb ? (lb = wb, pb = {}) : wb && (pb = wb, Vb = null != Mb ? Mb : null, gb = null != eb ? eb : null);
+      let Lb = function(bb, wb) {
+          let Mb = {
             lhs: [],
             rhs: []
           };
-          return dd.forEach((dd => {
-            Od(dd) ? md.lhs.push(dd) : md.rhs.push(dd)
-          })), md
-        }(dd, (dd => Object.hasOwn(dd, "barycenter"))),
-        Qd = vd.lhs,
-        td = vd.rhs.sort(((dd, Od) => Od.i - dd.i)),
-        od = [],
-        Nd = 0,
-        qd = 0,
-        Hd = 0;
-      Qd.sort(function(dd, Od, md) {
-        return (Wd, Fd) => {
-          if (Wd.barycenter < Fd.barycenter) return -1;
-          if (Wd.barycenter > Fd.barycenter) return 1;
-          if (dd && ("string" == typeof Wd.vs[0] || "string" == typeof Fd.vs[0])) {
-            let md = dd.node(Wd.vs[0]),
-              Rd = dd.node(Fd.vs[0]),
-              Xd = XO(Od, md, Rd);
-            if (0 !== Xd) return Xd
+          return bb.forEach((bb => {
+            wb(bb) ? Mb.lhs.push(bb) : Mb.rhs.push(bb)
+          })), Mb
+        }(bb, (bb => Object.hasOwn(bb, "barycenter"))),
+        Ib = Lb.lhs,
+        Ob = Lb.rhs.sort(((bb, wb) => wb.i - bb.i)),
+        Ub = [],
+        tb = 0,
+        Cb = 0,
+        Eb = 0;
+      Ib.sort(function(bb, wb, Mb) {
+        return (eb, Hb) => {
+          if (eb.barycenter < Hb.barycenter) return -1;
+          if (eb.barycenter > Hb.barycenter) return 1;
+          if (bb && ("string" == typeof eb.vs[0] || "string" == typeof Hb.vs[0])) {
+            let Mb = bb.node(eb.vs[0]),
+              pb = bb.node(Hb.vs[0]),
+              Vb = Hw(wb, Mb, pb);
+            if (0 !== Vb) return Vb
           }
-          return md ? Fd.i - Wd.i : Wd.i - Fd.i
+          return Mb ? Hb.i - eb.i : eb.i - Hb.i
         }
-      }(Kd, Xd, !!hd));
-      for (let [bd, Td] of Object.entries(Rd)) {
-        let dd = Qd.findIndex((dd => dd.vs[0] === bd));
-        Qd.splice(dd + 1, 0, Td)
+      }(gb, Vb, !!lb));
+      for (let [Bb, sb] of Object.entries(pb)) {
+        let bb = Ib.findIndex((bb => bb.vs[0] === Bb));
+        Ib.splice(bb + 1, 0, sb)
       }
-      Hd = Om(od, td, Hd), Qd.forEach((dd => {
-        Hd += dd.vs.length, od.push(dd.vs), Nd += dd.barycenter * dd.weight, qd += dd.weight, Hd = Om(od, td, Hd)
+      Eb = bM(Ub, Ob, Eb), Ib.forEach((bb => {
+        Eb += bb.vs.length, Ub.push(bb.vs), tb += bb.barycenter * bb.weight, Cb += bb.weight, Eb = bM(Ub, Ob, Eb)
       }));
-      let yd = {
-        vs: od.flat(1)
+      let Fb = {
+        vs: Ub.flat(1)
       };
-      return qd && (yd.barycenter = Nd / qd, yd.weight = qd), yd
+      return Cb && (Fb.barycenter = tb / Cb, Fb.weight = Cb), Fb
     }
 
-    function Om(dd, Od, md) {
-      let Wd;
-      for (; Od.length && (Wd = Od[Od.length - 1]).i <= md;) Od.pop(), dd.push(Wd.vs), md++;
-      return md
+    function bM(bb, wb, Mb) {
+      let eb;
+      for (; wb.length && (eb = wb[wb.length - 1]).i <= Mb;) wb.pop(), bb.push(eb.vs), Mb++;
+      return Mb
     }
 
-    function mm(dd, Od, md, Wd, Fd) {
-      var Rd, Xd, Kd, hd, vd, Qd, td, od, Nd, qd, Hd;
-      let yd = null,
-        bd = Fd;
-      "boolean" == typeof Wd ? (bd = Wd, yd = null) : void 0 !== Wd && (yd = Wd);
-      let Td = dd.children(Od),
-        pd = dd.node(Od),
-        Yd = pd ? pd.borderLeft : void 0,
-        gd = pd ? pd.borderRight : void 0,
-        wd = {};
-      Yd && (Td = Td.filter((dd => dd !== Yd && dd !== gd)));
-      let Ed = function(dd) {
-        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((Od => {
-          let md = dd.inEdges(Od);
-          if (!md || !md.length) return {
-            v: Od
+    function wM(bb, wb, Mb, eb, Hb) {
+      var pb, Vb, gb, lb, Lb, Ib, Ob, Ub, tb, Cb, Eb;
+      let Fb = null,
+        Bb = Hb;
+      "boolean" == typeof eb ? (Bb = eb, Fb = null) : void 0 !== eb && (Fb = eb);
+      let sb = bb.children(wb),
+        mb = bb.node(wb),
+        hb = mb ? mb.borderLeft : void 0,
+        zb = mb ? mb.borderRight : void 0,
+        Xb = {};
+      hb && (sb = sb.filter((bb => bb !== hb && bb !== zb)));
+      let xb = function(bb) {
+        return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []).map((wb => {
+          let Mb = bb.inEdges(wb);
+          if (!Mb || !Mb.length) return {
+            v: wb
           };
           {
-            let Wd = md.reduce(((Od, md) => {
-              let Wd = dd.edge(md),
-                Fd = dd.node(md.v);
+            let eb = Mb.reduce(((wb, Mb) => {
+              let eb = bb.edge(Mb),
+                Hb = bb.node(Mb.v);
               return {
-                sum: Od.sum + Wd.weight * Fd.order,
-                weight: Od.weight + Wd.weight
+                sum: wb.sum + eb.weight * Hb.order,
+                weight: wb.weight + eb.weight
               }
             }), {
               sum: 0,
               weight: 0
             });
             return {
-              v: Od,
-              barycenter: Wd.sum / Wd.weight,
-              weight: Wd.weight
+              v: wb,
+              barycenter: eb.sum / eb.weight,
+              weight: eb.weight
             }
           }
         }))
-      }(dd, Td);
-      Ed.forEach((Od => {
-        if (dd.children(Od.v).length) {
+      }(bb, sb);
+      xb.forEach((wb => {
+        if (bb.children(wb.v).length) {
           let {
-            result: Wd
-          } = mm(dd, Od.v, md, yd, bd);
-          wd[Od.v] = Wd, Object.hasOwn(Wd, "barycenter") && function(dd, Od) {
-            void 0 !== dd.barycenter ? (dd.barycenter = (dd.barycenter * dd.weight + Od.barycenter * Od.weight) / (dd.weight + Od.weight), dd.weight += Od.weight) : (dd.barycenter = Od.barycenter, dd.weight = Od.weight)
-          }(Od, Wd)
+            result: eb
+          } = wM(bb, wb.v, Mb, Fb, Bb);
+          Xb[wb.v] = eb, Object.hasOwn(eb, "barycenter") && function(bb, wb) {
+            void 0 !== bb.barycenter ? (bb.barycenter = (bb.barycenter * bb.weight + wb.barycenter * wb.weight) / (bb.weight + wb.weight), bb.weight += wb.weight) : (bb.barycenter = wb.barycenter, bb.weight = wb.weight)
+          }(wb, eb)
         }
       }));
-      let Jd = MO(Ed, md);
-      ! function(dd, Od) {
-        dd.forEach((dd => {
-          dd.vs = dd.vs.flatMap((dd => Od[dd] ? Od[dd].vs : dd))
+      let jb = Tw(xb, Mb);
+      ! function(bb, wb) {
+        bb.forEach((bb => {
+          bb.vs = bb.vs.flatMap((bb => wb[bb] ? wb[bb].vs : bb))
         }))
-      }(Jd, wd);
-      let Ud = {},
-        xd = !1;
-      for (let Sd = 0; Sd < Jd.length; Sd++)
-        for (let Od = Sd + 1; Od < Jd.length; Od++)
-          if (Jd[Sd] && Jd[Od] && null != (Rd = Jd[Sd]) && Rd.barycenter && null != (Xd = Jd[Od]) && Xd.barycenter && (null == (Kd = Jd[Sd]) ? void 0 : Kd.barycenter) === Jd[Od].barycenter) {
-            let md = null != (vd = null == (hd = Jd[Sd]) ? void 0 : hd.vs[0]) ? vd : "",
-              Wd = null != (td = null == (Qd = Jd[Od]) ? void 0 : Qd.vs[0]) ? td : "",
-              Fd = dd.node(md),
-              Rd = dd.node(Wd);
-            if ("edge" === Fd.dummy && "edge" === Rd.dummy && (null == (od = Fd.edgeObj) ? void 0 : od.v) === (null == (Nd = Rd.edgeObj) ? void 0 : Nd.v) && (null == (qd = Fd.edgeObj) ? void 0 : qd.w) === (null == (Hd = Rd.edgeObj) ? void 0 : Hd.w)) {
-              if (Fd.edgeLabel.reversed) {
-                Ud[Wd] = Jd[Sd], Jd.splice(Sd, 1), Sd--;
+      }(jb, Xb);
+      let Kb = {},
+        rb = !1;
+      for (let Db = 0; Db < jb.length; Db++)
+        for (let wb = Db + 1; wb < jb.length; wb++)
+          if (jb[Db] && jb[wb] && null != (pb = jb[Db]) && pb.barycenter && null != (Vb = jb[wb]) && Vb.barycenter && (null == (gb = jb[Db]) ? void 0 : gb.barycenter) === jb[wb].barycenter) {
+            let Mb = null != (Lb = null == (lb = jb[Db]) ? void 0 : lb.vs[0]) ? Lb : "",
+              eb = null != (Ob = null == (Ib = jb[wb]) ? void 0 : Ib.vs[0]) ? Ob : "",
+              Hb = bb.node(Mb),
+              pb = bb.node(eb);
+            if ("edge" === Hb.dummy && "edge" === pb.dummy && (null == (Ub = Hb.edgeObj) ? void 0 : Ub.v) === (null == (tb = pb.edgeObj) ? void 0 : tb.v) && (null == (Cb = Hb.edgeObj) ? void 0 : Cb.w) === (null == (Eb = pb.edgeObj) ? void 0 : Eb.w)) {
+              if (Hb.edgeLabel.reversed) {
+                Kb[eb] = jb[Db], jb.splice(Db, 1), Db--;
                 break
               }
-              Ud[md] = Jd[Od], Jd.splice(Od, 1), Od--
-            } else xd = !0
-          } let Bd = dm(Jd, Ud, yd, dd, bd);
-      if (Yd && gd) {
-        Bd.vs = [Yd, Bd.vs, gd].flat(1);
-        let Od = dd.predecessors(Yd);
-        if (Od && Od.length) {
-          let md = dd.node(Od[0]),
-            Wd = dd.predecessors(gd),
-            Fd = dd.node(Wd[0]);
-          Object.hasOwn(Bd, "barycenter") || (Bd.barycenter = 0, Bd.weight = 0), Bd.barycenter = (Bd.barycenter * Bd.weight + md.order + Fd.order) / (Bd.weight + 2), Bd.weight += 2
+              Kb[Mb] = jb[wb], jb.splice(wb, 1), wb--
+            } else rb = !0
+          } let Rb = kw(jb, Kb, Fb, bb, Bb);
+      if (hb && zb) {
+        Rb.vs = [hb, Rb.vs, zb].flat(1);
+        let wb = bb.predecessors(hb);
+        if (wb && wb.length) {
+          let Mb = bb.node(wb[0]),
+            eb = bb.predecessors(zb),
+            Hb = bb.node(eb[0]);
+          Object.hasOwn(Rb, "barycenter") || (Rb.barycenter = 0, Rb.weight = 0), Rb.barycenter = (Rb.barycenter * Rb.weight + Mb.order + Hb.order) / (Rb.weight + 2), Rb.weight += 2
         }
       }
-      return Object.defineProperty(Bd, "result", {
-        value: Bd,
+      return Object.defineProperty(Rb, "result", {
+        value: Rb,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), Object.defineProperty(Bd, "usedBias", {
-        value: xd,
+      }), Object.defineProperty(Rb, "usedBias", {
+        value: rb,
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), Bd
+      }), Rb
     }
 
-    function Wm(dd, Od, md, Wd) {
-      Wd || (Wd = dd.nodes());
-      let Fd = function(dd) {
-          let Od;
-          for (; dd.hasNode(Od = OO("_root")););
-          return Od
-        }(dd),
-        Rd = new cd({
+    function MM(bb, wb, Mb, eb) {
+      eb || (eb = bb.nodes());
+      let Hb = function(bb) {
+          let wb;
+          for (; bb.hasNode(wb = kb("_root")););
+          return wb
+        }(bb),
+        pb = new Qb({
           compound: !0
         }).setGraph({
-          root: Fd
-        }).setDefaultNodeLabel((Od => dd.node(Od)));
-      return Wd.forEach((Wd => {
-        let Xd = dd.node(Wd),
-          Kd = dd.parent(Wd);
-        if (Xd.rank === Od || Xd.minRank <= Od && Od <= Xd.maxRank) {
-          Rd.setNode(Wd), Rd.setParent(Wd, Kd || Fd);
-          let hd = dd[md](Wd);
-          hd && hd.forEach((Od => {
-            let md = Od.v === Wd ? Od.w : Od.v,
-              Fd = Rd.edge(md, Wd),
-              Xd = void 0 !== Fd ? Fd.weight : 0;
-            Rd.setEdge(md, Wd, {
-              weight: dd.edge(Od).weight + Xd
+          root: Hb
+        }).setDefaultNodeLabel((wb => bb.node(wb)));
+      return eb.forEach((eb => {
+        let Vb = bb.node(eb),
+          gb = bb.parent(eb);
+        if (Vb.rank === wb || Vb.minRank <= wb && wb <= Vb.maxRank) {
+          pb.setNode(eb), pb.setParent(eb, gb || Hb);
+          let lb = bb[Mb](eb);
+          lb && lb.forEach((wb => {
+            let Mb = wb.v === eb ? wb.w : wb.v,
+              Hb = pb.edge(Mb, eb),
+              Vb = void 0 !== Hb ? Hb.weight : 0;
+            pb.setEdge(Mb, eb, {
+              weight: bb.edge(wb).weight + Vb
             })
-          })), Object.hasOwn(Xd, "minRank") && Rd.setNode(Wd, {
-            borderLeft: Xd.borderLeft[Od],
-            borderRight: Xd.borderRight[Od]
+          })), Object.hasOwn(Vb, "minRank") && pb.setNode(eb, {
+            borderLeft: Vb.borderLeft[wb],
+            borderRight: Vb.borderRight[wb]
           })
         }
-      })), Rd
+      })), pb
     }
 
-    function Fm(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      if ("function" == typeof Od.customOrder) return void Od.customOrder(dd, Fm);
-      let Wd = kd(dd),
-        Fd = Rm(dd, mO(1, Wd + 1), "inEdges"),
-        Rd = Rm(dd, mO(Wd - 1, -1, -1), "outEdges"),
-        Xd = ZO(dd, md);
-      if (Km(dd, Xd), Od.disableOptimalOrderHeuristic) return;
-      let Kd, hd = Number.POSITIVE_INFINITY,
-        vd = Od.constraints || [];
-      for (let Qd = 0, td = 0; td < 4; ++Qd, ++td) {
-        Xm(Qd % 2 ? Fd : Rd, Qd % 4 >= 2, vd, md), Xd = Id(dd);
-        let Od = kO(dd, Xd);
-        Od < hd ? (td = 0, Kd = Object.assign({}, Xd), hd = Od) : Od === hd && (Kd = structuredClone(Xd))
+    function eM(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      if ("function" == typeof wb.customOrder) return void wb.customOrder(bb, eM);
+      let eb = nb(bb),
+        Hb = HM(bb, bw(1, eb + 1), "inEdges"),
+        pb = HM(bb, bw(eb - 1, -1, -1), "outEdges"),
+        Vb = nw(bb, Mb);
+      if (VM(bb, Vb), wb.disableOptimalOrderHeuristic) return;
+      let gb, lb = Number.POSITIVE_INFINITY,
+        Lb = wb.constraints || [];
+      for (let Ib = 0, Ob = 0; Ob < 4; ++Ib, ++Ob) {
+        pM(Ib % 2 ? Hb : pb, Ib % 4 >= 2, Lb, Mb), Vb = ib(bb);
+        let wb = yw(bb, Vb);
+        wb < lb ? (Ob = 0, gb = Object.assign({}, Vb), lb = wb) : wb === lb && (gb = structuredClone(Vb))
       }
-      Km(dd, Kd)
+      VM(bb, gb)
     }
 
-    function Rm(dd, Od, md) {
-      let Wd = new Map,
-        Fd = (dd, Od) => {
-          Wd.has(dd) || Wd.set(dd, []), Wd.get(dd).push(Od)
+    function HM(bb, wb, Mb) {
+      let eb = new Map,
+        Hb = (bb, wb) => {
+          eb.has(bb) || eb.set(bb, []), eb.get(bb).push(wb)
         };
-      for (let Rd of dd.nodes()) {
-        let Od = dd.node(Rd);
-        if ("number" == typeof Od.rank && Fd(Od.rank, Rd), "number" == typeof Od.minRank && "number" == typeof Od.maxRank)
-          for (let dd = Od.minRank; dd <= Od.maxRank; dd++) dd !== Od.rank && Fd(dd, Rd)
+      for (let pb of bb.nodes()) {
+        let wb = bb.node(pb);
+        if ("number" == typeof wb.rank && Hb(wb.rank, pb), "number" == typeof wb.minRank && "number" == typeof wb.maxRank)
+          for (let bb = wb.minRank; bb <= wb.maxRank; bb++) bb !== wb.rank && Hb(bb, pb)
       }
-      return Od.map((function(Od) {
-        return Wm(dd, Od, md, Wd.get(Od) || [])
+      return wb.map((function(wb) {
+        return MM(bb, wb, Mb, eb.get(wb) || [])
       }))
     }
 
-    function Xm(dd, Od, md, Wd) {
-      let Fd = !0,
-        Rd = new cd;
-      dd.forEach((function(dd) {
-        md.forEach((dd => Rd.setEdge(dd.left, dd.right)));
-        let Xd = dd.graph().root,
+    function pM(bb, wb, Mb, eb) {
+      let Hb = !0,
+        pb = new Qb;
+      bb.forEach((function(bb) {
+        Mb.forEach((bb => pb.setEdge(bb.left, bb.right)));
+        let Vb = bb.graph().root,
           {
-            result: Kd,
-            usedBias: hd
-          } = mm(dd, Xd, Rd, Wd, Fd);
-        Od && hd && (Fd = !Fd), Kd.vs.forEach(((Od, md) => dd.node(Od).order = md)),
-          function(dd, Od, md) {
-            let Wd, Fd = {};
-            md.forEach((md => {
-              let Rd, Xd, Kd = dd.parent(md);
-              for (; Kd;) {
-                if (Rd = dd.parent(Kd), Rd ? (Xd = Fd[Rd], Fd[Rd] = Kd) : (Xd = Wd, Wd = Kd), Xd && Xd !== Kd) return void Od.setEdge(Xd, Kd);
-                Kd = Rd
+            result: gb,
+            usedBias: lb
+          } = wM(bb, Vb, pb, eb, Hb);
+        wb && lb && (Hb = !Hb), gb.vs.forEach(((wb, Mb) => bb.node(wb).order = Mb)),
+          function(bb, wb, Mb) {
+            let eb, Hb = {};
+            Mb.forEach((Mb => {
+              let pb, Vb, gb = bb.parent(Mb);
+              for (; gb;) {
+                if (pb = bb.parent(gb), pb ? (Vb = Hb[pb], Hb[pb] = gb) : (Vb = eb, eb = gb), Vb && Vb !== gb) return void wb.setEdge(Vb, gb);
+                gb = pb
               }
             }))
-          }(dd, Rd, Kd.vs)
+          }(bb, pb, gb.vs)
       }))
     }
 
-    function Km(dd, Od) {
-      Object.values(Od).forEach((Od => Od.forEach(((Od, md) => dd.node(Od).order = md))))
+    function VM(bb, wb) {
+      Object.values(wb).forEach((wb => wb.forEach(((wb, Mb) => bb.node(wb).order = Mb))))
     }
 
-    function hm(dd, Od, md) {
-      if (Od > md) {
-        let dd = Od;
-        Od = md, md = dd
+    function gM(bb, wb, Mb) {
+      if (wb > Mb) {
+        let bb = wb;
+        wb = Mb, Mb = bb
       }
-      let Wd = dd[Od];
-      Wd || (dd[Od] = Wd = {}), Wd[md] = !0
+      let eb = bb[wb];
+      eb || (bb[wb] = eb = {}), eb[Mb] = !0
     }
 
-    function Qm(dd, Od, md) {
-      if (Od > md) {
-        let dd = Od;
-        Od = md, md = dd
+    function lM(bb, wb, Mb) {
+      if (wb > Mb) {
+        let bb = wb;
+        wb = Mb, Mb = bb
       }
-      let Wd = dd[Od];
-      return void 0 !== Wd && Object.hasOwn(Wd, md)
+      let eb = bb[wb];
+      return void 0 !== eb && Object.hasOwn(eb, Mb)
     }
 
-    function tm(dd, Od, md, Wd) {
-      let Fd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        Rd = {},
-        Xd = function(dd, Od, md, Wd) {
-          let Fd = new cd,
-            Rd = dd.graph(),
-            Xd = function(dd, Od, md) {
-              return (Wd, Fd, Rd) => {
-                let Xd, Kd = Wd.node(Fd),
-                  hd = Wd.node(Rd),
-                  vd = 0;
-                if (vd += Kd.width / 2, Object.hasOwn(Kd, "labelpos")) switch (Kd.labelpos.toLowerCase()) {
+    function LM(bb, wb, Mb, eb) {
+      let Hb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        pb = {},
+        Vb = function(bb, wb, Mb, eb) {
+          let Hb = new Qb,
+            pb = bb.graph(),
+            Vb = function(bb, wb, Mb) {
+              return (eb, Hb, pb) => {
+                let Vb, gb = eb.node(Hb),
+                  lb = eb.node(pb),
+                  Lb = 0;
+                if (Lb += gb.width / 2, Object.hasOwn(gb, "labelpos")) switch (gb.labelpos.toLowerCase()) {
                   case "l":
-                    Xd = -Kd.width / 2;
+                    Vb = -gb.width / 2;
                     break;
                   case "r":
-                    Xd = Kd.width / 2
+                    Vb = gb.width / 2
                 }
-                if (Xd && (vd += md ? Xd : -Xd), Xd = void 0, vd += (Kd.dummy ? Od : dd) / 2, vd += (hd.dummy ? Od : dd) / 2, vd += hd.width / 2, Object.hasOwn(hd, "labelpos")) switch (hd.labelpos.toLowerCase()) {
+                if (Vb && (Lb += Mb ? Vb : -Vb), Vb = void 0, Lb += (gb.dummy ? wb : bb) / 2, Lb += (lb.dummy ? wb : bb) / 2, Lb += lb.width / 2, Object.hasOwn(lb, "labelpos")) switch (lb.labelpos.toLowerCase()) {
                   case "l":
-                    Xd = hd.width / 2;
+                    Vb = lb.width / 2;
                     break;
                   case "r":
-                    Xd = -hd.width / 2
+                    Vb = -lb.width / 2
                 }
-                return Xd && (vd += md ? Xd : -Xd), vd
+                return Vb && (Lb += Mb ? Vb : -Vb), Lb
               }
-            }(Rd.nodesep, Rd.edgesep, Wd);
-          return Od.forEach((Od => {
-            let Wd;
-            Od.forEach((Od => {
-              let Rd = md[Od];
-              if (void 0 !== Rd) {
-                if (Fd.setNode(Rd), void 0 !== Wd) {
-                  let Kd = md[Wd];
-                  if (void 0 !== Kd) {
-                    let md = Fd.edge(Kd, Rd);
-                    Fd.setEdge(Kd, Rd, Math.max(Xd(dd, Od, Wd), md || 0))
+            }(pb.nodesep, pb.edgesep, eb);
+          return wb.forEach((wb => {
+            let eb;
+            wb.forEach((wb => {
+              let pb = Mb[wb];
+              if (void 0 !== pb) {
+                if (Hb.setNode(pb), void 0 !== eb) {
+                  let gb = Mb[eb];
+                  if (void 0 !== gb) {
+                    let Mb = Hb.edge(gb, pb);
+                    Hb.setEdge(gb, pb, Math.max(Vb(bb, wb, eb), Mb || 0))
                   }
                 }
-                Wd = Od
+                eb = wb
               }
             }))
-          })), Fd
-        }(dd, Od, md, Fd),
-        Kd = Fd ? "borderLeft" : "borderRight";
+          })), Hb
+        }(bb, wb, Mb, Hb),
+        gb = Hb ? "borderLeft" : "borderRight";
 
-      function hd(dd, Od) {
-        let md = Xd.nodes().slice(),
-          Wd = {},
-          Fd = md.pop();
-        for (; Fd;) {
-          if (Wd[Fd]) dd(Fd);
+      function lb(bb, wb) {
+        let Mb = Vb.nodes().slice(),
+          eb = {},
+          Hb = Mb.pop();
+        for (; Hb;) {
+          if (eb[Hb]) bb(Hb);
           else {
-            Wd[Fd] = !0, md.push(Fd);
-            for (let dd of Od(Fd)) md.push(dd)
+            eb[Hb] = !0, Mb.push(Hb);
+            for (let bb of wb(Hb)) Mb.push(bb)
           }
-          Fd = md.pop()
+          Hb = Mb.pop()
         }
       }
-      return hd((function(dd) {
-        let Od = Xd.inEdges(dd);
-        Rd[dd] = Od ? Od.reduce(((dd, Od) => {
-          var md;
-          let Wd = null != (md = Rd[Od.v]) ? md : 0,
-            Fd = Xd.edge(Od);
-          return Math.max(dd, Wd + (void 0 !== Fd ? Fd : 0))
+      return lb((function(bb) {
+        let wb = Vb.inEdges(bb);
+        pb[bb] = wb ? wb.reduce(((bb, wb) => {
+          var Mb;
+          let eb = null != (Mb = pb[wb.v]) ? Mb : 0,
+            Hb = Vb.edge(wb);
+          return Math.max(bb, eb + (void 0 !== Hb ? Hb : 0))
         }), 0) : 0
-      }), (function(dd) {
-        return Xd.predecessors(dd) || []
-      })), hd((function(Od) {
-        let md = Xd.outEdges(Od),
-          Wd = Number.POSITIVE_INFINITY;
-        md && (Wd = md.reduce(((dd, Od) => {
-          let md = Rd[Od.w],
-            Wd = Xd.edge(Od);
-          return Math.min(dd, (void 0 !== md ? md : 0) - (void 0 !== Wd ? Wd : 0))
+      }), (function(bb) {
+        return Vb.predecessors(bb) || []
+      })), lb((function(wb) {
+        let Mb = Vb.outEdges(wb),
+          eb = Number.POSITIVE_INFINITY;
+        Mb && (eb = Mb.reduce(((bb, wb) => {
+          let Mb = pb[wb.w],
+            eb = Vb.edge(wb);
+          return Math.min(bb, (void 0 !== Mb ? Mb : 0) - (void 0 !== eb ? eb : 0))
         }), Number.POSITIVE_INFINITY));
-        let Fd = dd.node(Od);
-        Wd !== Number.POSITIVE_INFINITY && Fd.borderType !== Kd && (Rd[Od] = Math.max(void 0 !== Rd[Od] ? Rd[Od] : 0, Wd))
-      }), (function(dd) {
-        return Xd.successors(dd) || []
-      })), Object.keys(Wd).forEach((dd => {
-        var Od;
-        let Wd = md[dd];
-        void 0 !== Wd && (Rd[dd] = null != (Od = Rd[Wd]) ? Od : 0)
-      })), Rd
+        let Hb = bb.node(wb);
+        eb !== Number.POSITIVE_INFINITY && Hb.borderType !== gb && (pb[wb] = Math.max(void 0 !== pb[wb] ? pb[wb] : 0, eb))
+      }), (function(bb) {
+        return Vb.successors(bb) || []
+      })), Object.keys(eb).forEach((bb => {
+        var wb;
+        let eb = Mb[bb];
+        void 0 !== eb && (pb[bb] = null != (wb = pb[eb]) ? wb : 0)
+      })), pb
     }
 
-    function om(dd, Od) {
-      let md, Wd = Id(dd),
-        Fd = Object.assign(function(dd, Od) {
-          let md = {};
-          return Od.length && Od.reduce((function(Od, Wd) {
-            let Fd = 0,
-              Rd = 0,
-              Xd = Od.length,
-              Kd = Wd[Wd.length - 1];
-            return Wd.forEach(((Od, hd) => {
-              let vd = function(dd, Od) {
-                  if (dd.node(Od).dummy) {
-                    let md = dd.predecessors(Od);
-                    if (md) return md.find((Od => dd.node(Od).dummy))
+    function IM(bb, wb) {
+      let Mb, eb = ib(bb),
+        Hb = Object.assign(function(bb, wb) {
+          let Mb = {};
+          return wb.length && wb.reduce((function(wb, eb) {
+            let Hb = 0,
+              pb = 0,
+              Vb = wb.length,
+              gb = eb[eb.length - 1];
+            return eb.forEach(((wb, lb) => {
+              let Lb = function(bb, wb) {
+                  if (bb.node(wb).dummy) {
+                    let Mb = bb.predecessors(wb);
+                    if (Mb) return Mb.find((wb => bb.node(wb).dummy))
                   }
-                }(dd, Od),
-                Qd = vd ? dd.node(vd).order : Xd;
-              (vd || Od === Kd) && (Wd.slice(Rd, hd + 1).forEach((Od => {
-                let Wd = dd.predecessors(Od);
-                Wd && Wd.forEach((Wd => {
-                  let Rd = dd.node(Wd),
-                    Xd = Rd.order;
-                  (Xd < Fd || Qd < Xd) && (!Rd.dummy || !dd.node(Od).dummy) && hm(md, Wd, Od)
+                }(bb, wb),
+                Ib = Lb ? bb.node(Lb).order : Vb;
+              (Lb || wb === gb) && (eb.slice(pb, lb + 1).forEach((wb => {
+                let eb = bb.predecessors(wb);
+                eb && eb.forEach((eb => {
+                  let pb = bb.node(eb),
+                    Vb = pb.order;
+                  (Vb < Hb || Ib < Vb) && (!pb.dummy || !bb.node(wb).dummy) && gM(Mb, eb, wb)
                 }))
-              })), Rd = hd + 1, Fd = Qd)
-            })), Wd
-          })), md
-        }(dd, Wd), function(dd, Od) {
-          let md = {};
+              })), pb = lb + 1, Hb = Ib)
+            })), eb
+          })), Mb
+        }(bb, eb), function(bb, wb) {
+          let Mb = {};
 
-          function Wd(Od, Wd, Fd, Rd, Xd) {
-            mO(Wd, Fd).forEach((Wd => {
-              let Fd = Od[Wd];
-              if (void 0 !== Fd && dd.node(Fd).dummy) {
-                let Od = dd.predecessors(Fd);
-                Od && Od.forEach((Od => {
-                  if (void 0 === Od) return;
-                  let Wd = dd.node(Od);
-                  Wd.dummy && (Wd.order < Rd || Wd.order > Xd) && hm(md, Od, Fd)
+          function eb(wb, eb, Hb, pb, Vb) {
+            bw(eb, Hb).forEach((eb => {
+              let Hb = wb[eb];
+              if (void 0 !== Hb && bb.node(Hb).dummy) {
+                let wb = bb.predecessors(Hb);
+                wb && wb.forEach((wb => {
+                  if (void 0 === wb) return;
+                  let eb = bb.node(wb);
+                  eb.dummy && (eb.order < pb || eb.order > Vb) && gM(Mb, wb, Hb)
                 }))
               }
             }))
           }
-          return Od.length && Od.reduce((function(Od, md) {
-            let Fd = -1,
-              Rd = -1,
-              Xd = 0;
-            return md.forEach(((Kd, hd) => {
-              if ("border" === dd.node(Kd).dummy) {
-                let Od = dd.predecessors(Kd);
-                if (Od && Od.length) {
-                  let Kd = Od[0];
-                  if (void 0 === Kd) return;
-                  Rd = dd.node(Kd).order, Wd(md, Xd, hd, Fd, Rd), Xd = hd, Fd = Rd
+          return wb.length && wb.reduce((function(wb, Mb) {
+            let Hb = -1,
+              pb = -1,
+              Vb = 0;
+            return Mb.forEach(((gb, lb) => {
+              if ("border" === bb.node(gb).dummy) {
+                let wb = bb.predecessors(gb);
+                if (wb && wb.length) {
+                  let gb = wb[0];
+                  if (void 0 === gb) return;
+                  pb = bb.node(gb).order, eb(Mb, Vb, lb, Hb, pb), Vb = lb, Hb = pb
                 }
               }
-              Wd(md, Xd, md.length, Rd, Od.length)
-            })), md
-          })), md
-        }(dd, Wd)),
-        Rd = {};
-      ["u", "d"].forEach((Xd => {
-        md = "u" === Xd ? Wd : Object.values(Wd).reverse(), ["l", "r"].forEach((Wd => {
-          "r" === Wd && (md = md.map((dd => Object.values(dd).reverse())));
-          let Kd = function(dd, Od, md, Wd, Fd) {
-              let Rd = {},
-                Xd = {},
-                Kd = {};
-              return Od.forEach((dd => {
-                dd.forEach(((dd, Od) => {
-                  Rd[dd] = dd, Xd[dd] = dd, Kd[dd] = Od
+              eb(Mb, Vb, Mb.length, pb, wb.length)
+            })), Mb
+          })), Mb
+        }(bb, eb)),
+        pb = {};
+      ["u", "d"].forEach((Vb => {
+        Mb = "u" === Vb ? eb : Object.values(eb).reverse(), ["l", "r"].forEach((eb => {
+          "r" === eb && (Mb = Mb.map((bb => Object.values(bb).reverse())));
+          let gb = function(bb, wb, Mb, eb, Hb) {
+              let pb = {},
+                Vb = {},
+                gb = {};
+              return wb.forEach((bb => {
+                bb.forEach(((bb, wb) => {
+                  pb[bb] = bb, Vb[bb] = bb, gb[bb] = wb
                 }))
-              })), Od.forEach((Od => {
-                let hd = -1,
-                  vd = -1,
-                  Qd = !1,
-                  td = Od,
-                  od = Od.findIndex((Od => (null == Fd ? void 0 : Fd.includes(Od)) || Nm(Od, dd, Fd)));
-                od > 0 && (td = [Od[od], ...Od.slice(0, od), ...Od.slice(od + 1)], Qd = !0), td.forEach((Od => {
-                  var td;
-                  let od = Wd(Od);
-                  if (od && od.length) {
-                    null != Fd && Fd.includes(Od) && (od = od.filter((Od => Nm(Od, dd, Fd))));
-                    let Wd = od.sort(((dd, Od) => {
-                        let md = Kd[dd],
-                          Wd = Kd[Od];
-                        return (void 0 !== md ? md : 0) - (void 0 !== Wd ? Wd : 0)
+              })), wb.forEach((wb => {
+                let lb = -1,
+                  Lb = -1,
+                  Ib = !1,
+                  Ob = wb,
+                  Ub = wb.findIndex((wb => (null == Hb ? void 0 : Hb.includes(wb)) || OM(wb, bb, Hb)));
+                Ub > 0 && (Ob = [wb[Ub], ...wb.slice(0, Ub), ...wb.slice(Ub + 1)], Ib = !0), Ob.forEach((wb => {
+                  var Ob;
+                  let Ub = eb(wb);
+                  if (Ub && Ub.length) {
+                    null != Hb && Hb.includes(wb) && (Ub = Ub.filter((wb => OM(wb, bb, Hb))));
+                    let eb = Ub.sort(((bb, wb) => {
+                        let Mb = gb[bb],
+                          eb = gb[wb];
+                        return (void 0 !== Mb ? Mb : 0) - (void 0 !== eb ? eb : 0)
                       })),
-                      Nd = (Wd.length - 1) / 2;
-                    for (let dd = Math.floor(Nd), Fd = Math.ceil(Nd); dd <= Fd; ++dd) {
-                      let Fd = Wd[dd];
-                      if (void 0 === Fd) continue;
-                      let od = Kd[Fd];
-                      if (void 0 !== od && Xd[Od] === Od && hd < od && Kd[Fd] !== vd && !Qm(md, Od, Fd)) {
-                        let dd = Rd[Fd];
-                        void 0 !== dd && (Xd[Fd] = Od, Xd[Od] = Rd[Od] = dd, hd = od, Qd && (hd = -1, vd = null != (td = Kd[Fd]) ? td : -1, Qd = !1))
+                      tb = (eb.length - 1) / 2;
+                    for (let bb = Math.floor(tb), Hb = Math.ceil(tb); bb <= Hb; ++bb) {
+                      let Hb = eb[bb];
+                      if (void 0 === Hb) continue;
+                      let Ub = gb[Hb];
+                      if (void 0 !== Ub && Vb[wb] === wb && lb < Ub && gb[Hb] !== Lb && !lM(Mb, wb, Hb)) {
+                        let bb = pb[Hb];
+                        void 0 !== bb && (Vb[Hb] = wb, Vb[wb] = pb[wb] = bb, lb = Ub, Ib && (lb = -1, Lb = null != (Ob = gb[Hb]) ? Ob : -1, Ib = !1))
                       }
                     }
                   }
                 }))
               })), {
-                root: Rd,
-                align: Xd
+                root: pb,
+                align: Vb
               }
-            }(dd, md, Fd, (Od => ("u" === Xd ? dd.predecessors(Od) : dd.successors(Od)) || []), Od),
-            hd = tm(dd, md, Kd.root, Kd.align, "r" === Wd);
-          "r" === Wd && (hd = FO(hd, (dd => -dd))), Rd[Xd + Wd] = hd
+            }(bb, Mb, Hb, (wb => ("u" === Vb ? bb.predecessors(wb) : bb.successors(wb)) || []), wb),
+            lb = LM(bb, Mb, gb.root, gb.align, "r" === eb);
+          "r" === eb && (lb = Mw(lb, (bb => -bb))), pb[Vb + eb] = lb
         }))
       }));
-      let Xd = function(dd, Od) {
-        return Object.values(Od).reduce(((Od, md) => {
-          let Wd = Number.NEGATIVE_INFINITY,
-            Fd = Number.POSITIVE_INFINITY;
-          Object.entries(md).forEach((Od => {
-            let [md, Rd] = Od, Xd = function(dd, Od) {
-              return dd.node(Od).width
-            }(dd, md) / 2;
-            Wd = Math.max(Rd + Xd, Wd), Fd = Math.min(Rd - Xd, Fd)
+      let Vb = function(bb, wb) {
+        return Object.values(wb).reduce(((wb, Mb) => {
+          let eb = Number.NEGATIVE_INFINITY,
+            Hb = Number.POSITIVE_INFINITY;
+          Object.entries(Mb).forEach((wb => {
+            let [Mb, pb] = wb, Vb = function(bb, wb) {
+              return bb.node(wb).width
+            }(bb, Mb) / 2;
+            eb = Math.max(pb + Vb, eb), Hb = Math.min(pb - Vb, Hb)
           }));
-          let Rd = Wd - Fd;
-          return Rd < Od[0] && (Od = [Rd, md]), Od
+          let pb = eb - Hb;
+          return pb < wb[0] && (wb = [pb, Mb]), wb
         }), [Number.POSITIVE_INFINITY, null])[1]
-      }(dd, Rd);
-      return function(dd, Od) {
-          let md = Object.values(Od),
-            Wd = Zd(Math.min, md),
-            Fd = Zd(Math.max, md);
-          ["u", "d"].forEach((md => {
-            ["l", "r"].forEach((Rd => {
-              let Xd = md + Rd,
-                Kd = dd[Xd];
-              if (!Kd || Kd === Od) return;
-              let hd = Object.values(Kd),
-                vd = Wd - Zd(Math.min, hd);
-              "l" !== Rd && (vd = Fd - Zd(Math.max, hd)), vd && (dd[Xd] = FO(Kd, (dd => dd + vd)))
+      }(bb, pb);
+      return function(bb, wb) {
+          let Mb = Object.values(wb),
+            eb = Pb(Math.min, Mb),
+            Hb = Pb(Math.max, Mb);
+          ["u", "d"].forEach((Mb => {
+            ["l", "r"].forEach((pb => {
+              let Vb = Mb + pb,
+                gb = bb[Vb];
+              if (!gb || gb === wb) return;
+              let lb = Object.values(gb),
+                Lb = eb - Pb(Math.min, lb);
+              "l" !== pb && (Lb = Hb - Pb(Math.max, lb)), Lb && (bb[Vb] = Mw(gb, (bb => bb + Lb)))
             }))
           }))
-        }(Rd, Xd),
-        function(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-            md = dd.ul;
-          return md ? FO(md, ((md, Wd) => {
-            var Fd, Rd;
-            if (Od) {
-              let md = Od.toLowerCase(),
-                Fd = dd[md];
-              if (Fd && void 0 !== Fd[Wd]) return Fd[Wd]
+        }(pb, Vb),
+        function(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+            Mb = bb.ul;
+          return Mb ? Mw(Mb, ((Mb, eb) => {
+            var Hb, pb;
+            if (wb) {
+              let Mb = wb.toLowerCase(),
+                Hb = bb[Mb];
+              if (Hb && void 0 !== Hb[eb]) return Hb[eb]
             }
-            let Xd = Object.values(dd).map((dd => {
-              let Od = dd[Wd];
-              return void 0 !== Od ? Od : 0
-            })).sort(((dd, Od) => dd - Od));
-            return ((null != (Fd = Xd[1]) ? Fd : 0) + (null != (Rd = Xd[2]) ? Rd : 0)) / 2
+            let Vb = Object.values(bb).map((bb => {
+              let wb = bb[eb];
+              return void 0 !== wb ? wb : 0
+            })).sort(((bb, wb) => bb - wb));
+            return ((null != (Hb = Vb[1]) ? Hb : 0) + (null != (pb = Vb[2]) ? pb : 0)) / 2
           })) : {}
-        }(Rd, dd.graph().align)
+        }(pb, bb.graph().align)
     }
 
-    function Nm(dd, Od, md) {
-      var Wd;
-      if (!md) return !1;
-      let Fd = null == (Wd = Od.node(dd)) ? void 0 : Wd.edgeObj;
-      if (!Fd || Od.node(dd).edgeLabel.reversed) return !1;
-      let Rd = md.indexOf(null == Fd ? void 0 : Fd.v),
-        Xd = md.indexOf(null == Fd ? void 0 : Fd.w);
-      return -1 !== Rd && -1 !== Xd && Rd === (Xd + 1) % md.length || Rd === (Xd - 1) % md.length
+    function OM(bb, wb, Mb) {
+      var eb;
+      if (!Mb) return !1;
+      let Hb = null == (eb = wb.node(bb)) ? void 0 : eb.edgeObj;
+      if (!Hb || wb.node(bb).edgeLabel.reversed) return !1;
+      let pb = Mb.indexOf(null == Hb ? void 0 : Hb.v),
+        Vb = Mb.indexOf(null == Hb ? void 0 : Hb.w);
+      return -1 !== pb && -1 !== Vb && pb === (Vb + 1) % Mb.length || pb === (Vb - 1) % Mb.length
     }
 
-    function qm(dd, Od) {
-      (function(dd) {
-        let Od = Id(dd),
-          md = dd.graph(),
-          Wd = md.ranksep,
-          Fd = md.rankalign,
-          Rd = 0;
-        Od.forEach((Od => {
-          let md = Od.reduce(((Od, md) => {
-            var Wd;
-            let Fd = null != (Wd = dd.node(md).height) ? Wd : 0;
-            return Od > Fd ? Od : Fd
+    function UM(bb, wb) {
+      (function(bb) {
+        let wb = ib(bb),
+          Mb = bb.graph(),
+          eb = Mb.ranksep,
+          Hb = Mb.rankalign,
+          pb = 0;
+        wb.forEach((wb => {
+          let Mb = wb.reduce(((wb, Mb) => {
+            var eb;
+            let Hb = null != (eb = bb.node(Mb).height) ? eb : 0;
+            return wb > Hb ? wb : Hb
           }), 0);
-          Od.forEach((Od => {
-            let Wd = dd.node(Od);
-            Wd.y = "top" === Fd ? Rd + Wd.height / 2 : "bottom" === Fd ? Rd + md - Wd.height / 2 : Rd + md / 2
-          })), Rd += md + Wd
+          wb.forEach((wb => {
+            let eb = bb.node(wb);
+            eb.y = "top" === Hb ? pb + eb.height / 2 : "bottom" === Hb ? pb + Mb - eb.height / 2 : pb + Mb / 2
+          })), pb += Mb + eb
         }))
-      })(dd = Dd(dd)), Object.entries(om(dd, Od)).forEach((Od => {
-        let [md, Wd] = Od;
-        return dd.node(md).x = Wd
+      })(bb = qb(bb)), Object.entries(IM(bb, wb)).forEach((wb => {
+        let [Mb, eb] = wb;
+        return bb.node(Mb).x = eb
       }))
     }
-    var Hm = new WeakMap;
+    var tM = new WeakMap;
 
-    function ym(dd) {
-      return Tm(dd, Md, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), dd
+    function CM(bb) {
+      return FM(bb, ob, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}), bb
     }
 
-    function bm(dd, Od, md) {
-      let Wd = Od;
-      for (; void 0 !== Wd;) {
-        let Od = dd.parent(Wd);
-        if (Od === md) return Wd;
-        Wd = Od
+    function EM(bb, wb, Mb) {
+      let eb = wb;
+      for (; void 0 !== eb;) {
+        let wb = bb.parent(eb);
+        if (wb === Mb) return eb;
+        eb = wb
       }
     }
 
-    function Tm(dd, Od, md) {
-      var Wd;
-      let Fd = dd.nodes().filter((Od => dd.children(Od).length)),
-        Rd = {};
-      Fd.forEach((Wd => {
-        let Fd = dd.node(Wd);
-        if (Fd && Fd.rankdir) {
-          let Xd = new cd({
+    function FM(bb, wb, Mb) {
+      var eb;
+      let Hb = bb.nodes().filter((wb => bb.children(wb).length)),
+        pb = {};
+      Hb.forEach((eb => {
+        let Hb = bb.node(eb);
+        if (Hb && Hb.rankdir) {
+          let Vb = new Qb({
             multigraph: !0,
             compound: !0
           });
-          Xd.setGraph({
-            rankdir: Fd.rankdir
+          Vb.setGraph({
+            rankdir: Hb.rankdir
           });
-          let Kd = dd.children(Wd);
-          Kd.forEach((Od => {
-            let md = {
-              ...dd.node(Od)
+          let gb = bb.children(eb);
+          gb.forEach((wb => {
+            let Mb = {
+              ...bb.node(wb)
             };
-            Xd.setNode(Od, md);
-            let Fd = dd.parent(Od);
-            Fd && Fd !== Wd && Kd.includes(Fd) && Xd.setParent(Od, Fd)
+            Vb.setNode(wb, Mb);
+            let Hb = bb.parent(wb);
+            Hb && Hb !== eb && gb.includes(Hb) && Vb.setParent(wb, Hb)
           }));
-          let hd = new Set;
-          dd.edges().forEach((Od => {
-            let md = bm(dd, Od.v, Wd),
-              Fd = bm(dd, Od.w, Wd);
-            if (md && Fd && md !== Fd) {
-              let Wd = `${md}\0${Fd}`;
-              hd.has(Wd) || (hd.add(Wd), Xd.setEdge(md, Fd, {
-                ...dd.edge(Od)
+          let lb = new Set;
+          bb.edges().forEach((wb => {
+            let Mb = EM(bb, wb.v, eb),
+              Hb = EM(bb, wb.w, eb);
+            if (Mb && Hb && Mb !== Hb) {
+              let eb = `${Mb}\0${Hb}`;
+              lb.has(eb) || (lb.add(eb), Vb.setEdge(Mb, Hb, {
+                ...bb.edge(wb)
               }))
             }
-          })), Tm(Xd, Od, md);
-          let vd = Sm(Xd);
-          pm(vd, Od, md, null), Ym(Xd, vd);
-          let Qd = 1 / 0,
-            td = 1 / 0,
-            od = -1 / 0,
-            Nd = -1 / 0;
-          Xd.nodes().forEach((dd => {
-            if (dd === Wd) return;
-            let Od = Xd.node(dd);
-            Od && "number" == typeof Od.x && "number" == typeof Od.y && "number" == typeof Od.width && "number" == typeof Od.height && (Qd = Math.min(Qd, Od.x - Od.width / 2), od = Math.max(od, Od.x + Od.width / 2), td = Math.min(td, Od.y - Od.height / 2), Nd = Math.max(Nd, Od.y + Od.height / 2))
-          })), (!isFinite(Qd) || !isFinite(td) || !isFinite(od) || !isFinite(Nd)) && (Qd = td = 0, od = Nd = 0);
-          let qd = od - Qd,
-            Hd = Nd - td;
-          Rd[Wd] = {
-            minX: Qd,
-            yW: td,
-            maxX: od,
-            bW: Nd,
-            width: qd,
-            height: Hd,
-            offsetX: Qd,
-            offsetY: td
-          }, Fd._dagreClusterSubgraph = Xd
+          })), FM(Vb, wb, Mb);
+          let Lb = RM(Vb);
+          BM(Lb, wb, Mb, null), sM(Vb, Lb);
+          let Ib = 1 / 0,
+            Ob = 1 / 0,
+            Ub = -1 / 0,
+            tb = -1 / 0;
+          Vb.nodes().forEach((bb => {
+            if (bb === eb) return;
+            let wb = Vb.node(bb);
+            wb && "number" == typeof wb.x && "number" == typeof wb.y && "number" == typeof wb.width && "number" == typeof wb.height && (Ib = Math.min(Ib, wb.x - wb.width / 2), Ub = Math.max(Ub, wb.x + wb.width / 2), Ob = Math.min(Ob, wb.y - wb.height / 2), tb = Math.max(tb, wb.y + wb.height / 2))
+          })), (!isFinite(Ib) || !isFinite(Ob) || !isFinite(Ub) || !isFinite(tb)) && (Ib = Ob = 0, Ub = tb = 0);
+          let Cb = Ub - Ib,
+            Eb = tb - Ob;
+          pb[eb] = {
+            minX: Ib,
+            te: Ob,
+            maxX: Ub,
+            Ce: tb,
+            width: Cb,
+            height: Eb,
+            offsetX: Ib,
+            offsetY: Ob
+          }, Hb._dagreClusterSubgraph = Vb
         }
       }));
-      let Xd = [],
-        Kd = new Map;
-      Fd.forEach((Od => {
-        let md = dd.node(Od);
-        md && md.rankdir && Rd[Od] && Kd.set(Od, (dd.children(Od) || []).filter((dd => dd !== Od)))
+      let Vb = [],
+        gb = new Map;
+      Hb.forEach((wb => {
+        let Mb = bb.node(wb);
+        Mb && Mb.rankdir && pb[wb] && gb.set(wb, (bb.children(wb) || []).filter((bb => bb !== wb)))
       }));
-      let hd = new Set([...Kd.values()].flat()),
-        vd = new Map;
-      Kd.forEach(((Od, md) => {
-        hd.has(md) || vd.set(md, (Od => {
-          let md = [],
-            Wd = (dd.children(Od) || []).filter((dd => dd !== Od));
-          for (; Wd.length > 0;) {
-            let Od = Wd.shift();
-            md.push(Od), (dd.children(Od) || []).filter((dd => dd !== Od)).forEach((dd => Wd.push(dd)))
+      let lb = new Set([...gb.values()].flat()),
+        Lb = new Map;
+      gb.forEach(((wb, Mb) => {
+        lb.has(Mb) || Lb.set(Mb, (wb => {
+          let Mb = [],
+            eb = (bb.children(wb) || []).filter((bb => bb !== wb));
+          for (; eb.length > 0;) {
+            let wb = eb.shift();
+            Mb.push(wb), (bb.children(wb) || []).filter((bb => bb !== wb)).forEach((bb => eb.push(bb)))
           }
-          return md
-        })(md))
+          return Mb
+        })(Mb))
       }));
-      let Qd = new Set([...vd.values()].flat()),
-        td = dd => {
-          for (let [Od, md] of vd)
-            if (md.includes(dd)) return Od;
-          return dd
+      let Ib = new Set([...Lb.values()].flat()),
+        Ob = bb => {
+          for (let [wb, Mb] of Lb)
+            if (Mb.includes(bb)) return wb;
+          return bb
         },
-        od = [];
-      dd.edges().forEach((Od => {
-        (Qd.has(Od.v) || Qd.has(Od.w)) && od.push({
-          edge: Od,
-          label: dd.edge(Od)
+        Ub = [];
+      bb.edges().forEach((wb => {
+        (Ib.has(wb.v) || Ib.has(wb.w)) && Ub.push({
+          edge: wb,
+          label: bb.edge(wb)
         })
       }));
-      let Nd = new Map;
-      Qd.forEach((Od => {
-        let md = dd.parent(Od);
-        Nd.set(Od, "string" == typeof md ? md : void 0)
-      })), vd.forEach(((Od, md) => {
-        let Wd = dd.node(md),
-          Fd = [];
-        Od.forEach((Od => {
-          let md = dd.node(Od);
-          md && (Fd.push({
-            id: Od,
-            node: md,
-            parent: Nd.get(Od)
-          }), dd.removeNode(Od))
+      let tb = new Map;
+      Ib.forEach((wb => {
+        let Mb = bb.parent(wb);
+        tb.set(wb, "string" == typeof Mb ? Mb : void 0)
+      })), Lb.forEach(((wb, Mb) => {
+        let eb = bb.node(Mb),
+          Hb = [];
+        wb.forEach((wb => {
+          let Mb = bb.node(wb);
+          Mb && (Hb.push({
+            id: wb,
+            node: Mb,
+            parent: tb.get(wb)
+          }), bb.removeNode(wb))
         }));
-        let Kd = od.filter((dd => {
+        let gb = Ub.filter((bb => {
             let {
-              edge: md
-            } = dd;
-            return Od.includes(md.v) || Od.includes(md.w)
+              edge: Mb
+            } = bb;
+            return wb.includes(Mb.v) || wb.includes(Mb.w)
           })),
-          hd = Rd[md];
-        Wd && (Xd.push({
-          clusterId: md,
-          subgraph: Wd._dagreClusterSubgraph,
-          bounds: hd,
-          children: Od,
-          removedNodes: Fd,
-          removedEdges: Kd
-        }), Wd.width = hd.width, Wd.height = hd.height)
+          lb = pb[Mb];
+        eb && (Vb.push({
+          clusterId: Mb,
+          subgraph: eb._dagreClusterSubgraph,
+          bounds: lb,
+          children: wb,
+          removedNodes: Hb,
+          removedEdges: gb
+        }), eb.width = lb.width, eb.height = lb.height)
       }));
-      let qd = new Set;
-      od.forEach((Od => {
+      let Cb = new Set;
+      Ub.forEach((wb => {
         let {
-          edge: md,
-          label: Wd
-        } = Od, Fd = td(md.v), Rd = td(md.w);
-        if (Fd !== Rd && dd.hasNode(Fd) && dd.hasNode(Rd)) {
-          let Od = `${Fd}\0${Rd}`;
-          qd.has(Od) || (qd.add(Od), dd.setEdge(Fd, Rd, {
-            ...Wd,
+          edge: Mb,
+          label: eb
+        } = wb, Hb = Ob(Mb.v), pb = Ob(Mb.w);
+        if (Hb !== pb && bb.hasNode(Hb) && bb.hasNode(pb)) {
+          let wb = `${Hb}\0${pb}`;
+          Cb.has(wb) || (Cb.add(wb), bb.setEdge(Hb, pb, {
+            ...eb,
             width: 0,
             height: 0
           }))
         }
       }));
-      let Hd = Sm(dd),
-        yd = pm(Hd, Od, md, null != (Wd = Hm.get(dd)) ? Wd : null);
-      Hm.set(dd, yd), Ym(dd, Hd), qd.forEach((Od => {
-        let md = Od.indexOf("\0"),
-          Wd = Od.slice(0, md),
-          Fd = Od.slice(md + 1);
-        dd.hasEdge(Wd, Fd) && dd.removeEdge(Wd, Fd)
-      })), Xd.forEach((Od => {
+      let Eb = RM(bb),
+        Fb = BM(Eb, wb, Mb, null != (eb = tM.get(bb)) ? eb : null);
+      tM.set(bb, Fb), sM(bb, Eb), Cb.forEach((wb => {
+        let Mb = wb.indexOf("\0"),
+          eb = wb.slice(0, Mb),
+          Hb = wb.slice(Mb + 1);
+        bb.hasEdge(eb, Hb) && bb.removeEdge(eb, Hb)
+      })), Vb.forEach((wb => {
         let {
-          clusterId: md,
-          subgraph: Wd,
-          bounds: Fd,
-          removedNodes: Rd,
-          removedEdges: Xd
-        } = Od;
-        var Kd, hd;
-        let vd = dd.node(md),
-          Qd = null != (Kd = null == vd ? void 0 : vd.x) ? Kd : 0,
-          td = null != (hd = null == vd ? void 0 : vd.y) ? hd : 0,
-          od = (Fd.minX + Fd.maxX) / 2,
-          Nd = (Fd.yW + Fd.bW) / 2;
-        Rd.forEach((Od => {
+          clusterId: Mb,
+          subgraph: eb,
+          bounds: Hb,
+          removedNodes: pb,
+          removedEdges: Vb
+        } = wb;
+        var gb, lb;
+        let Lb = bb.node(Mb),
+          Ib = null != (gb = null == Lb ? void 0 : Lb.x) ? gb : 0,
+          Ob = null != (lb = null == Lb ? void 0 : Lb.y) ? lb : 0,
+          Ub = (Hb.minX + Hb.maxX) / 2,
+          tb = (Hb.te + Hb.Ce) / 2;
+        pb.forEach((wb => {
           let {
-            id: md,
-            node: Wd,
-            parent: Fd
-          } = Od;
-          dd.setNode(md, Wd), void 0 !== Fd && dd.setParent(md, Fd)
-        })), Xd.forEach((Od => {
+            id: Mb,
+            node: eb,
+            parent: Hb
+          } = wb;
+          bb.setNode(Mb, eb), void 0 !== Hb && bb.setParent(Mb, Hb)
+        })), Vb.forEach((wb => {
           let {
-            edge: md,
-            label: Wd
-          } = Od;
-          dd.setEdge(md, Wd)
-        })), Wd.nodes().forEach((Od => {
-          if (Od === md) return;
-          let Fd = Wd.node(Od),
-            Rd = dd.node(Od);
-          Rd && Fd && "number" == typeof Fd.x && "number" == typeof Fd.y && (Rd.x = Qd + (Fd.x - od), Rd.y = td + (Fd.y - Nd))
-        })), delete vd._dagreClusterSubgraph
-      })), Fd.forEach((Od => {
-        var md, Wd;
-        let Fd = dd.node(Od),
-          Xd = Rd[Od];
-        if (Fd && Fd.rankdir && Fd._dagreClusterSubgraph && Xd) {
-          let Rd = Fd._dagreClusterSubgraph,
-            Kd = null != (md = Fd.x) ? md : 0,
-            hd = null != (Wd = Fd.y) ? Wd : 0,
-            vd = (Xd.minX + Xd.maxX) / 2,
-            Qd = (Xd.yW + Xd.bW) / 2;
-          Rd.nodes().forEach((md => {
-            if (md === Od) return;
-            let Wd = Rd.node(md),
-              Fd = dd.node(md);
-            if (Fd && Wd && "number" == typeof Wd.x && "number" == typeof Wd.y) {
-              let dd = Wd.x - vd,
-                Od = Wd.y - Qd;
-              Fd.x = Kd + dd, Fd.y = hd + Od
+            edge: Mb,
+            label: eb
+          } = wb;
+          bb.setEdge(Mb, eb)
+        })), eb.nodes().forEach((wb => {
+          if (wb === Mb) return;
+          let Hb = eb.node(wb),
+            pb = bb.node(wb);
+          pb && Hb && "number" == typeof Hb.x && "number" == typeof Hb.y && (pb.x = Ib + (Hb.x - Ub), pb.y = Ob + (Hb.y - tb))
+        })), delete Lb._dagreClusterSubgraph
+      })), Hb.forEach((wb => {
+        var Mb, eb;
+        let Hb = bb.node(wb),
+          Vb = pb[wb];
+        if (Hb && Hb.rankdir && Hb._dagreClusterSubgraph && Vb) {
+          let pb = Hb._dagreClusterSubgraph,
+            gb = null != (Mb = Hb.x) ? Mb : 0,
+            lb = null != (eb = Hb.y) ? eb : 0,
+            Lb = (Vb.minX + Vb.maxX) / 2,
+            Ib = (Vb.te + Vb.Ce) / 2;
+          pb.nodes().forEach((Mb => {
+            if (Mb === wb) return;
+            let eb = pb.node(Mb),
+              Hb = bb.node(Mb);
+            if (Hb && eb && "number" == typeof eb.x && "number" == typeof eb.y) {
+              let bb = eb.x - Lb,
+                wb = eb.y - Ib;
+              Hb.x = gb + bb, Hb.y = lb + wb
             }
-          })), delete Fd._dagreClusterSubgraph
+          })), delete Hb._dagreClusterSubgraph
         }
       }))
     }
 
-    function pm(dd, Od, md) {
-      let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      var Fd, Rd;
-      let Xd = !1 !== (null == md ? void 0 : md.useDynamic),
-        Kd = Xd && null != (Fd = null == Wd ? void 0 : Wd.graph) ? Fd : null,
-        hd = Xd && null != (Rd = null == Wd ? void 0 : Wd.rawNodes) ? Rd : null;
-      Od("    makeSpaceForEdgeLabels", (() => function(dd) {
-        let Od = dd.graph();
-        Od.ranksep /= 2, dd.edges().forEach((md => {
-          var Wd;
-          let Fd = dd.edge(md);
-          Fd.minlen *= 2, "c" !== (null != (Wd = Fd.labelpos) ? Wd : "r").toLowerCase() && ("TB" === Od.rankdir || "BT" === Od.rankdir ? Fd.width += Fd.labeloffset : Fd.height += Fd.labeloffset)
+    function BM(bb, wb, Mb) {
+      let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      var Hb, pb;
+      let Vb = !1 !== (null == Mb ? void 0 : Mb.useDynamic),
+        gb = Vb && null != (Hb = null == eb ? void 0 : eb.graph) ? Hb : null,
+        lb = Vb && null != (pb = null == eb ? void 0 : eb.rawNodes) ? pb : null;
+      wb("    makeSpaceForEdgeLabels", (() => function(bb) {
+        let wb = bb.graph();
+        wb.ranksep /= 2, bb.edges().forEach((Mb => {
+          var eb;
+          let Hb = bb.edge(Mb);
+          Hb.minlen *= 2, "c" !== (null != (eb = Hb.labelpos) ? eb : "r").toLowerCase() && ("TB" === wb.rankdir || "BT" === wb.rankdir ? Hb.width += Hb.labeloffset : Hb.height += Hb.labeloffset)
         }))
-      }(dd))), Od("    removeSelfEdges", (() => function(dd) {
-        dd.edges().forEach((Od => {
-          if (Od.v === Od.w) {
-            let md = dd.node(Od.v);
-            md.selfEdges || (md.selfEdges = []), md.selfEdges.push({
-              e: Od,
-              label: dd.edge(Od)
-            }), dd.removeEdge(Od)
+      }(bb))), wb("    removeSelfEdges", (() => function(bb) {
+        bb.edges().forEach((wb => {
+          if (wb.v === wb.w) {
+            let Mb = bb.node(wb.v);
+            Mb.selfEdges || (Mb.selfEdges = []), Mb.selfEdges.push({
+              e: wb,
+              label: bb.edge(wb)
+            }), bb.removeEdge(wb)
           }
         }))
-      }(dd))), Od("    acyclic", (() => HO(dd, Kd))), Od("    nestingGraph.run", (() => PO(dd))), Od("    rank", (() => rO(Dd(dd)))), Od("    injectEdgeLabelProxies", (() => function(dd) {
-        dd.edges().forEach((Od => {
-          let md = dd.edge(Od);
-          if (md.width && md.height) {
-            let md = dd.node(Od.v),
-              Wd = {
-                rank: (dd.node(Od.w).rank - md.rank) / 2 + md.rank,
-                e: Od
+      }(bb))), wb("    acyclic", (() => tw(bb, gb))), wb("    nestingGraph.run", (() => vw(bb))), wb("    rank", (() => Ww(qb(bb)))), wb("    injectEdgeLabelProxies", (() => function(bb) {
+        bb.edges().forEach((wb => {
+          let Mb = bb.edge(wb);
+          if (Mb.width && Mb.height) {
+            let Mb = bb.node(wb.v),
+              eb = {
+                rank: (bb.node(wb.w).rank - Mb.rank) / 2 + Mb.rank,
+                e: wb
               };
-            jd(dd, "edge-proxy", Wd, "_ep")
+            Gb(bb, "edge-proxy", eb, "_ep")
           }
         }))
-      }(dd))), Od("    removeEmptyRanks", (() => function(dd) {
-        let Od = dd.nodes().map((Od => dd.node(Od).rank)).filter((dd => void 0 !== dd)),
-          md = Zd(Math.min, Od),
-          Wd = [];
-        dd.nodes().forEach((Od => {
-          let Fd = dd.node(Od).rank - md;
-          Wd[Fd] || (Wd[Fd] = []), Wd[Fd].push(Od)
+      }(bb))), wb("    removeEmptyRanks", (() => function(bb) {
+        let wb = bb.nodes().map((wb => bb.node(wb).rank)).filter((bb => void 0 !== bb)),
+          Mb = Pb(Math.min, wb),
+          eb = [];
+        bb.nodes().forEach((wb => {
+          let Hb = bb.node(wb).rank - Mb;
+          eb[Hb] || (eb[Hb] = []), eb[Hb].push(wb)
         }));
-        let Fd = 0,
-          Rd = dd.graph().nodeRankFactor;
-        Array.from(Wd).forEach(((Od, md) => {
-          void 0 === Od && md % Rd !== 0 ? --Fd : void 0 !== Od && Fd && Od.forEach((Od => dd.node(Od).rank += Fd))
+        let Hb = 0,
+          pb = bb.graph().nodeRankFactor;
+        Array.from(eb).forEach(((wb, Mb) => {
+          void 0 === wb && Mb % pb !== 0 ? --Hb : void 0 !== wb && Hb && wb.forEach((wb => bb.node(wb).rank += Hb))
         }))
-      }(dd))), Od("    nestingGraph.cleanup", (() => function(dd) {
-        let Od = dd.graph();
-        dd.removeNode(Od.nestingRoot), delete Od.nestingRoot, dd.edges().forEach((Od => {
-          dd.edge(Od).nestingEdge && dd.removeEdge(Od)
+      }(bb))), wb("    nestingGraph.cleanup", (() => function(bb) {
+        let wb = bb.graph();
+        bb.removeNode(wb.nestingRoot), delete wb.nestingRoot, bb.edges().forEach((wb => {
+          bb.edge(wb).nestingEdge && bb.removeEdge(wb)
         }))
-      }(dd))), Od("    normalizeRanks", (() => function(dd) {
-        let Od = dd.nodes().map((Od => {
-            let md = dd.node(Od).rank;
-            return void 0 === md ? Number.MAX_VALUE : md
+      }(bb))), wb("    normalizeRanks", (() => function(bb) {
+        let wb = bb.nodes().map((wb => {
+            let Mb = bb.node(wb).rank;
+            return void 0 === Mb ? Number.MAX_VALUE : Mb
           })),
-          md = Zd(Math.min, Od);
-        dd.nodes().forEach((Od => {
-          let Wd = dd.node(Od);
-          Object.hasOwn(Wd, "rank") && (Wd.rank -= md)
+          Mb = Pb(Math.min, wb);
+        bb.nodes().forEach((wb => {
+          let eb = bb.node(wb);
+          Object.hasOwn(eb, "rank") && (eb.rank -= Mb)
         }))
-      }(dd))), Od("    assignRankMinMax", (() => function(dd) {
-        let Od = 0;
-        dd.nodes().forEach((md => {
-          let Wd = dd.node(md);
-          Wd.borderTop && (Wd.minRank = dd.node(Wd.borderTop).rank, Wd.maxRank = dd.node(Wd.borderBottom).rank, Od = Math.max(Od, Wd.maxRank))
-        })), dd.graph().maxRank = Od
-      }(dd))), Od("    removeEdgeLabelProxies", (() => function(dd) {
-        dd.nodes().forEach((Od => {
-          let md = dd.node(Od);
-          if ("edge-proxy" === md.dummy) {
-            let Wd = md;
-            dd.edge(Wd.e).labelRank = md.rank, dd.removeNode(Od)
+      }(bb))), wb("    assignRankMinMax", (() => function(bb) {
+        let wb = 0;
+        bb.nodes().forEach((Mb => {
+          let eb = bb.node(Mb);
+          eb.borderTop && (eb.minRank = bb.node(eb.borderTop).rank, eb.maxRank = bb.node(eb.borderBottom).rank, wb = Math.max(wb, eb.maxRank))
+        })), bb.graph().maxRank = wb
+      }(bb))), wb("    removeEdgeLabelProxies", (() => function(bb) {
+        bb.nodes().forEach((wb => {
+          let Mb = bb.node(wb);
+          if ("edge-proxy" === Mb.dummy) {
+            let eb = Mb;
+            bb.edge(eb.e).labelRank = Mb.rank, bb.removeNode(wb)
           }
         }))
-      }(dd))), Od("    normalize.run", (() => yO(dd))), Od("    parentDummyChains", (() => LO(dd))), Od("    addBorderSegments", (() => cO(dd))), Od("    order", (() => Fm(dd, md, hd))), Od("    insertSelfEdges", (() => function(dd) {
-        Id(dd).forEach((Od => {
-          let md = 0;
-          Od.forEach(((Od, Wd) => {
-            let Fd = dd.node(Od);
-            "number" != typeof Fd.rank && (Fd.rank = 0), Fd.order = Wd + md, (Fd.selfEdges || []).forEach((Od => {
-              jd(dd, "selfedge", {
-                width: Od.label.width,
-                height: Od.label.height,
-                rank: Fd.rank,
-                order: Wd + ++md,
-                e: Od.e,
-                edgeLabel: Od.label
-              }, "_se"), (!Array.isArray(Od.label.points) || 7 !== Od.label.points.length) && (Od.label.points = [{
+      }(bb))), wb("    normalize.run", (() => Cw(bb))), wb("    parentDummyChains", (() => Nw(bb))), wb("    addBorderSegments", (() => Gw(bb))), wb("    order", (() => eM(bb, Mb, lb))), wb("    insertSelfEdges", (() => function(bb) {
+        ib(bb).forEach((wb => {
+          let Mb = 0;
+          wb.forEach(((wb, eb) => {
+            let Hb = bb.node(wb);
+            "number" != typeof Hb.rank && (Hb.rank = 0), Hb.order = eb + Mb, (Hb.selfEdges || []).forEach((wb => {
+              Gb(bb, "selfedge", {
+                width: wb.label.width,
+                height: wb.label.height,
+                rank: Hb.rank,
+                order: eb + ++Mb,
+                e: wb.e,
+                edgeLabel: wb.label
+              }, "_se"), (!Array.isArray(wb.label.points) || 7 !== wb.label.points.length) && (wb.label.points = [{
                 x: 0,
                 y: -10
               }, {
@@ -2328,199 +2328,199 @@ export const modules = {
                 x: 0,
                 y: 0
               }])
-            })), delete Fd.selfEdges
+            })), delete Hb.selfEdges
           }))
         }))
-      }(dd))), Od("    adjustCoordinateSystem", (() => function(dd) {
-        var Od;
-        let md = null == (Od = dd.graph().rankdir) ? void 0 : Od.toLowerCase();
-        ("lr" === md || "rl" === md) && eO(dd)
-      }(dd))), Od("    position", (() => qm(dd, md.corePath))), Od("    positionSelfEdges", (() => function(dd) {
-        dd.nodes().forEach((Od => {
-          let md = dd.node(Od),
-            Wd = dd => "number" == typeof dd && isFinite(dd);
-          if ("selfedge" === md.dummy) {
-            let Fd = md,
-              Rd = dd.node(Fd.e.v),
-              Xd = Wd(null == Rd ? void 0 : Rd.x) ? Rd.x : 0,
-              Kd = Wd(null == Rd ? void 0 : Rd.y) ? Rd.y : 0,
-              hd = Wd(null == Rd ? void 0 : Rd.width) ? Rd.width : 0,
-              vd = Wd(null == Rd ? void 0 : Rd.height) ? Rd.height : 0,
-              Qd = Wd(md.x) ? md.x : Xd,
-              td = Wd(md.y) ? md.y : Kd,
-              od = hd / 2,
-              Nd = vd / 2;
-            Fd.edgeLabel.points = [{
-              x: Qd + od,
-              y: td - Nd
+      }(bb))), wb("    adjustCoordinateSystem", (() => function(bb) {
+        var wb;
+        let Mb = null == (wb = bb.graph().rankdir) ? void 0 : wb.toLowerCase();
+        ("lr" === Mb || "rl" === Mb) && iw(bb)
+      }(bb))), wb("    position", (() => UM(bb, Mb.corePath))), wb("    positionSelfEdges", (() => function(bb) {
+        bb.nodes().forEach((wb => {
+          let Mb = bb.node(wb),
+            eb = bb => "number" == typeof bb && isFinite(bb);
+          if ("selfedge" === Mb.dummy) {
+            let Hb = Mb,
+              pb = bb.node(Hb.e.v),
+              Vb = eb(null == pb ? void 0 : pb.x) ? pb.x : 0,
+              gb = eb(null == pb ? void 0 : pb.y) ? pb.y : 0,
+              lb = eb(null == pb ? void 0 : pb.width) ? pb.width : 0,
+              Lb = eb(null == pb ? void 0 : pb.height) ? pb.height : 0,
+              Ib = eb(Mb.x) ? Mb.x : Vb,
+              Ob = eb(Mb.y) ? Mb.y : gb,
+              Ub = lb / 2,
+              tb = Lb / 2;
+            Hb.edgeLabel.points = [{
+              x: Ib + Ub,
+              y: Ob - tb
             }, {
-              x: Qd + od,
-              y: td - Nd
+              x: Ib + Ub,
+              y: Ob - tb
             }, {
-              x: Qd,
-              y: td
+              x: Ib,
+              y: Ob
             }, {
-              x: Qd - od,
-              y: td + Nd
+              x: Ib - Ub,
+              y: Ob + tb
             }, {
-              x: Qd - od,
-              y: td + Nd
+              x: Ib - Ub,
+              y: Ob + tb
             }, {
-              x: Qd,
-              y: td
+              x: Ib,
+              y: Ob
             }, {
-              x: Qd,
-              y: td
-            }], Fd.edgeLabel.x = Qd, Fd.edgeLabel.y = td, dd.setEdge(Fd.e, Fd.edgeLabel), dd.removeNode(Od)
-          } else md && Array.isArray(md.selfEdges) && md.selfEdges.forEach((dd => {
-            if (!Array.isArray(dd.label.points) || 7 !== dd.label.points.length) {
-              let Od = Wd(md.x) ? md.x : 0,
-                Fd = Wd(md.y) ? md.y : 0,
-                Rd = (Wd(md.width) ? md.width : 0) / 2,
-                Xd = (Wd(md.height) ? md.height : 0) / 2;
-              dd.label.points = [{
-                x: Od + Rd,
-                y: Fd - Xd
+              x: Ib,
+              y: Ob
+            }], Hb.edgeLabel.x = Ib, Hb.edgeLabel.y = Ob, bb.setEdge(Hb.e, Hb.edgeLabel), bb.removeNode(wb)
+          } else Mb && Array.isArray(Mb.selfEdges) && Mb.selfEdges.forEach((bb => {
+            if (!Array.isArray(bb.label.points) || 7 !== bb.label.points.length) {
+              let wb = eb(Mb.x) ? Mb.x : 0,
+                Hb = eb(Mb.y) ? Mb.y : 0,
+                pb = (eb(Mb.width) ? Mb.width : 0) / 2,
+                Vb = (eb(Mb.height) ? Mb.height : 0) / 2;
+              bb.label.points = [{
+                x: wb + pb,
+                y: Hb - Vb
               }, {
-                x: Od + Rd,
-                y: Fd - Xd
+                x: wb + pb,
+                y: Hb - Vb
               }, {
-                x: Od,
-                y: Fd
+                x: wb,
+                y: Hb
               }, {
-                x: Od - Rd,
-                y: Fd + Xd
+                x: wb - pb,
+                y: Hb + Vb
               }, {
-                x: Od - Rd,
-                y: Fd + Xd
+                x: wb - pb,
+                y: Hb + Vb
               }, {
-                x: Od,
-                y: Fd
+                x: wb,
+                y: Hb
               }, {
-                x: Od,
-                y: Fd
+                x: wb,
+                y: Hb
               }]
             }
           }))
         }))
-      }(dd)));
-      let vd = JSON.parse(JSON.stringify(dd._nodes));
-      return Od("    removeBorderNodes", (() => function(dd) {
-        dd.nodes().forEach((Od => {
-          if (dd.children(Od).length) {
-            let md = dd.node(Od),
-              Wd = dd.node(md.borderTop),
-              Fd = dd.node(md.borderBottom),
-              Rd = dd.node(md.borderLeft[md.borderLeft.length - 1]),
-              Xd = dd.node(md.borderRight[md.borderRight.length - 1]);
-            md.width = Math.abs(Xd.x - Rd.x), md.height = Math.abs(Fd.y - Wd.y), md.x = Rd.x + md.width / 2, md.y = Wd.y + md.height / 2
+      }(bb)));
+      let Lb = JSON.parse(JSON.stringify(bb._nodes));
+      return wb("    removeBorderNodes", (() => function(bb) {
+        bb.nodes().forEach((wb => {
+          if (bb.children(wb).length) {
+            let Mb = bb.node(wb),
+              eb = bb.node(Mb.borderTop),
+              Hb = bb.node(Mb.borderBottom),
+              pb = bb.node(Mb.borderLeft[Mb.borderLeft.length - 1]),
+              Vb = bb.node(Mb.borderRight[Mb.borderRight.length - 1]);
+            Mb.width = Math.abs(Vb.x - pb.x), Mb.height = Math.abs(Hb.y - eb.y), Mb.x = pb.x + Mb.width / 2, Mb.y = eb.y + Mb.height / 2
           }
-        })), dd.nodes().forEach((Od => {
-          "border" === dd.node(Od).dummy && dd.removeNode(Od)
+        })), bb.nodes().forEach((wb => {
+          "border" === bb.node(wb).dummy && bb.removeNode(wb)
         }))
-      }(dd))), Od("    normalize.undo", (() => function(dd) {
-        dd.graph().dummyChains.forEach((Od => {
-          let md, Wd = dd.node(Od),
-            Fd = Wd.edgeLabel;
-          for (dd.setEdge(Wd.edgeObj, Fd); Wd.dummy;) md = dd.successors(Od)[0], dd.removeNode(Od), Fd.points.push({
-            x: Wd.x,
-            y: Wd.y
-          }), "edge-label" === Wd.dummy && (Fd.x = Wd.x, Fd.y = Wd.y, Fd.width = Wd.width, Fd.height = Wd.height), Od = md, Wd = dd.node(Od)
+      }(bb))), wb("    normalize.undo", (() => function(bb) {
+        bb.graph().dummyChains.forEach((wb => {
+          let Mb, eb = bb.node(wb),
+            Hb = eb.edgeLabel;
+          for (bb.setEdge(eb.edgeObj, Hb); eb.dummy;) Mb = bb.successors(wb)[0], bb.removeNode(wb), Hb.points.push({
+            x: eb.x,
+            y: eb.y
+          }), "edge-label" === eb.dummy && (Hb.x = eb.x, Hb.y = eb.y, Hb.width = eb.width, Hb.height = eb.height), wb = Mb, eb = bb.node(wb)
         }))
-      }(dd))), Od("    fixupEdgeLabelCoords", (() => function(dd) {
-        dd.edges().forEach((Od => {
-          let md = dd.edge(Od);
-          if (Object.hasOwn(md, "x")) switch (("l" === md.labelpos || "r" === md.labelpos) && (md.width -= md.labeloffset), md.labelpos) {
+      }(bb))), wb("    fixupEdgeLabelCoords", (() => function(bb) {
+        bb.edges().forEach((wb => {
+          let Mb = bb.edge(wb);
+          if (Object.hasOwn(Mb, "x")) switch (("l" === Mb.labelpos || "r" === Mb.labelpos) && (Mb.width -= Mb.labeloffset), Mb.labelpos) {
             case "l":
-              md.x -= md.width / 2 + md.labeloffset;
+              Mb.x -= Mb.width / 2 + Mb.labeloffset;
               break;
             case "r":
-              md.x += md.width / 2 + md.labeloffset
+              Mb.x += Mb.width / 2 + Mb.labeloffset
           }
         }))
-      }(dd))), Od("    undoCoordinateSystem", (() => DO(dd))), Od("    translateGraph", (() => function(dd) {
-        let Od = Number.POSITIVE_INFINITY,
-          md = 0,
-          Wd = Number.POSITIVE_INFINITY,
-          Fd = 0,
-          Rd = dd.graph(),
-          Xd = Rd.marginx || 0,
-          Kd = Rd.marginy || 0;
+      }(bb))), wb("    undoCoordinateSystem", (() => aw(bb))), wb("    translateGraph", (() => function(bb) {
+        let wb = Number.POSITIVE_INFINITY,
+          Mb = 0,
+          eb = Number.POSITIVE_INFINITY,
+          Hb = 0,
+          pb = bb.graph(),
+          Vb = pb.marginx || 0,
+          gb = pb.marginy || 0;
 
-        function hd(dd) {
-          let Rd = dd.x,
-            Xd = dd.y,
-            Kd = dd.width,
-            hd = dd.height;
-          Od = Math.min(Od, Rd - Kd / 2), md = Math.max(md, Rd + Kd / 2), Wd = Math.min(Wd, Xd - hd / 2), Fd = Math.max(Fd, Xd + hd / 2)
+        function lb(bb) {
+          let pb = bb.x,
+            Vb = bb.y,
+            gb = bb.width,
+            lb = bb.height;
+          wb = Math.min(wb, pb - gb / 2), Mb = Math.max(Mb, pb + gb / 2), eb = Math.min(eb, Vb - lb / 2), Hb = Math.max(Hb, Vb + lb / 2)
         }
-        dd.nodes().forEach((Od => hd(dd.node(Od)))), dd.edges().forEach((Od => {
-          let md = dd.edge(Od);
-          Object.hasOwn(md, "x") && hd(md)
-        })), Od -= Xd, Wd -= Kd, dd.nodes().forEach((md => {
-          let Fd = dd.node(md);
-          Fd.x -= Od, Fd.y -= Wd
-        })), dd.edges().forEach((md => {
-          let Fd = dd.edge(md);
-          Fd.points.forEach((dd => {
-            dd.x -= Od, dd.y -= Wd
-          })), Object.hasOwn(Fd, "x") && (Fd.x -= Od), Object.hasOwn(Fd, "y") && (Fd.y -= Wd)
-        })), Rd.width = md - Od + Xd, Rd.height = Fd - Wd + Kd
-      }(dd))), Od("    assignNodeIntersects", (() => function(dd) {
-        dd.edges().forEach((Od => {
-          if (Od.v === Od.w) return;
-          let md, Wd, Fd = dd.edge(Od),
-            Rd = dd.node(Od.v),
-            Xd = dd.node(Od.w);
-          Fd.points ? (md = Fd.points[0], Wd = Fd.points[Fd.points.length - 1]) : (Fd.points = [], md = Xd, Wd = Rd), Fd.points.unshift(ed(Rd, md)), Fd.points.push(ed(Xd, Wd))
+        bb.nodes().forEach((wb => lb(bb.node(wb)))), bb.edges().forEach((wb => {
+          let Mb = bb.edge(wb);
+          Object.hasOwn(Mb, "x") && lb(Mb)
+        })), wb -= Vb, eb -= gb, bb.nodes().forEach((Mb => {
+          let Hb = bb.node(Mb);
+          Hb.x -= wb, Hb.y -= eb
+        })), bb.edges().forEach((Mb => {
+          let Hb = bb.edge(Mb);
+          Hb.points.forEach((bb => {
+            bb.x -= wb, bb.y -= eb
+          })), Object.hasOwn(Hb, "x") && (Hb.x -= wb), Object.hasOwn(Hb, "y") && (Hb.y -= eb)
+        })), pb.width = Mb - wb + Vb, pb.height = Hb - eb + gb
+      }(bb))), wb("    assignNodeIntersects", (() => function(bb) {
+        bb.edges().forEach((wb => {
+          if (wb.v === wb.w) return;
+          let Mb, eb, Hb = bb.edge(wb),
+            pb = bb.node(wb.v),
+            Vb = bb.node(wb.w);
+          Hb.points ? (Mb = Hb.points[0], eb = Hb.points[Hb.points.length - 1]) : (Hb.points = [], Mb = Vb, eb = pb), Hb.points.unshift(ab(pb, Mb)), Hb.points.push(ab(Vb, eb))
         }))
-      }(dd))), Od("    reversePoints", (() => function(dd) {
-        dd.edges().forEach((Od => {
-          let md = dd.edge(Od);
-          md.reversed && md.points.reverse()
+      }(bb))), wb("    reversePoints", (() => function(bb) {
+        bb.edges().forEach((wb => {
+          let Mb = bb.edge(wb);
+          Mb.reversed && Mb.points.reverse()
         }))
-      }(dd))), Od("    acyclic.undo", (() => function(dd) {
-        dd.edges().forEach((Od => {
-          let md = dd.edge(Od);
-          if (md.reversed) {
-            dd.removeEdge(Od);
-            let Wd = md.forwardName;
-            delete md.reversed, delete md.forwardName, dd.setEdge(Od.w, Od.v, md, Wd)
+      }(bb))), wb("    acyclic.undo", (() => function(bb) {
+        bb.edges().forEach((wb => {
+          let Mb = bb.edge(wb);
+          if (Mb.reversed) {
+            bb.removeEdge(wb);
+            let eb = Mb.forwardName;
+            delete Mb.reversed, delete Mb.forwardName, bb.setEdge(wb.w, wb.v, Mb, eb)
           }
         }))
-      }(dd))), {
-        graph: dd,
-        rawNodes: vd
+      }(bb))), {
+        graph: bb,
+        rawNodes: Lb
       }
     }
 
-    function Ym(dd, Od) {
-      dd.nodes().forEach((md => {
-        let Wd = dd.node(md),
-          Fd = Od.node(md);
-        Wd && (Wd.x = Fd.x, Wd.y = Fd.y, Wd.order = Fd.order, Wd.rank = Fd.rank, Od.children(md).length && (Wd.width = Fd.width, Wd.height = Fd.height))
-      })), dd.edges().forEach((md => {
-        let Wd = dd.edge(md),
-          Fd = Od.edge(md);
-        Wd.points = Fd.points, Object.hasOwn(Fd, "x") && (Wd.x = Fd.x, Wd.y = Fd.y)
-      })), dd.graph().width = Od.graph().width, dd.graph().height = Od.graph().height
+    function sM(bb, wb) {
+      bb.nodes().forEach((Mb => {
+        let eb = bb.node(Mb),
+          Hb = wb.node(Mb);
+        eb && (eb.x = Hb.x, eb.y = Hb.y, eb.order = Hb.order, eb.rank = Hb.rank, wb.children(Mb).length && (eb.width = Hb.width, eb.height = Hb.height))
+      })), bb.edges().forEach((Mb => {
+        let eb = bb.edge(Mb),
+          Hb = wb.edge(Mb);
+        eb.points = Hb.points, Object.hasOwn(Hb, "x") && (eb.x = Hb.x, eb.y = Hb.y)
+      })), bb.graph().width = wb.graph().width, bb.graph().height = wb.graph().height
     }
-    var gm = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
-      wm = {
+    var mM = ["nodesep", "edgesep", "ranksep", "marginx", "marginy"],
+      hM = {
         ranksep: 50,
         edgesep: 20,
         nodesep: 50,
         rankdir: "TB",
         rankalign: "center"
       },
-      am = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
-      Em = ["width", "height", "rank"],
-      Jm = {
+      zM = ["acyclicer", "ranker", "rankdir", "align", "rankalign"],
+      XM = ["width", "height", "rank"],
+      xM = {
         width: 0,
         height: 0
       },
-      Um = ["minlen", "weight", "width", "height", "labeloffset"],
-      xm = {
+      jM = ["minlen", "weight", "width", "height", "labeloffset"],
+      KM = {
         minlen: 1,
         weight: 1,
         width: 0,
@@ -2528,73 +2528,73 @@ export const modules = {
         labeloffset: 10,
         labelpos: "r"
       },
-      Bm = ["labelpos"];
+      rM = ["labelpos"];
 
-    function Sm(dd) {
-      let Od = new cd({
+    function RM(bb) {
+      let wb = new Qb({
           multigraph: !0,
           compound: !0
         }),
-        md = um(dd.graph());
-      return Od.setGraph(Object.assign({}, wm, sm(md, gm), WO(md, am))), dd.nodes().forEach((md => {
-        let Wd = sm(um(dd.node(md)), Em);
-        Object.keys(Jm).forEach((dd => {
-          void 0 === Wd[dd] && (Wd[dd] = Jm[dd])
-        })), Od.setNode(md, Wd);
-        let Fd = dd.parent(md);
-        void 0 !== Fd && Od.setParent(md, Fd)
-      })), dd.edges().forEach((md => {
-        let Wd = um(dd.edge(md));
-        Od.setEdge(md, Object.assign({}, xm, sm(Wd, Um), WO(Wd, Bm)))
-      })), Od
+        Mb = cM(bb.graph());
+      return wb.setGraph(Object.assign({}, hM, DM(Mb, mM), ww(Mb, zM))), bb.nodes().forEach((Mb => {
+        let eb = DM(cM(bb.node(Mb)), XM);
+        Object.keys(xM).forEach((bb => {
+          void 0 === eb[bb] && (eb[bb] = xM[bb])
+        })), wb.setNode(Mb, eb);
+        let Hb = bb.parent(Mb);
+        void 0 !== Hb && wb.setParent(Mb, Hb)
+      })), bb.edges().forEach((Mb => {
+        let eb = cM(bb.edge(Mb));
+        wb.setEdge(Mb, Object.assign({}, KM, DM(eb, jM), ww(eb, rM)))
+      })), wb
     }
 
-    function sm(dd, Od) {
-      return FO(WO(dd, Od), Number)
+    function DM(bb, wb) {
+      return Mw(ww(bb, wb), Number)
     }
 
-    function um(dd) {
-      let Od = {};
-      return dd && Object.entries(dd).forEach((dd => {
-        let [md, Wd] = dd;
-        "string" == typeof md && (md = md.toLowerCase()), Od[md] = Wd
-      })), Od
+    function cM(bb) {
+      let wb = {};
+      return bb && Object.entries(bb).forEach((bb => {
+        let [Mb, eb] = bb;
+        "string" == typeof Mb && (Mb = Mb.toLowerCase()), wb[Mb] = eb
+      })), wb
     }
 
-    function Vm(dd) {
-      let Od = Id(dd),
-        md = new cd({
+    function YM(bb) {
+      let wb = ib(bb),
+        Mb = new Qb({
           compound: !0,
           multigraph: !0
         }).setGraph({});
-      return dd.nodes().forEach((Od => {
-        md.setNode(Od, {
-          label: Od
-        }), md.setParent(Od, "layer" + dd.node(Od).rank)
-      })), dd.edges().forEach((dd => md.setEdge(dd.v, dd.w, {}, dd.name))), Od.forEach(((dd, Od) => {
-        let Wd = "layer" + Od;
-        md.setNode(Wd, {
+      return bb.nodes().forEach((wb => {
+        Mb.setNode(wb, {
+          label: wb
+        }), Mb.setParent(wb, "layer" + bb.node(wb).rank)
+      })), bb.edges().forEach((bb => Mb.setEdge(bb.v, bb.w, {}, bb.name))), wb.forEach(((bb, wb) => {
+        let eb = "layer" + wb;
+        Mb.setNode(eb, {
           rank: "same"
-        }), dd.reduce(((dd, Od) => (md.setEdge(dd, Od, {
+        }), bb.reduce(((bb, wb) => (Mb.setEdge(bb, wb, {
           style: "invis"
-        }), Od)))
-      })), md
+        }), wb)))
+      })), Mb
     }
-    var im = {
-        time: fd,
-        notime: Md
+    var ZM = {
+        time: yb,
+        notime: ob
       },
-      Am = {
-        graphlib: Rd,
-        version: KO,
-        layout: ym,
-        debug: Vm,
+      fM = {
+        graphlib: pb,
+        version: pw,
+        layout: CM,
+        debug: YM,
         util: {
-          time: fd,
-          notime: Md
+          time: yb,
+          notime: ob
         }
       }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,11 +1,11 @@
 export const id = 86;
 export const ids = [86];
 export const modules = {
-  35555: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd
+  35339: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => eb
     });
-    const Wd = {
+    const eb = {
       "AK-47": {
         gunType: "semi_automatic",
         scopeType: "none",
@@ -524,8 +524,8 @@ export const modules = {
         aimZoomFactor: 2.8
       }
     };
-    for (const Fd of Object.values(Wd)) Fd.msPerRound = 60 / Fd.fireRate * 1e3, Fd.msPerRoundTouchScreen = void 0 !== Fd.fireRateWithHeldTouch ? 60 / Fd.fireRateWithHeldTouch * 1e3 : Fd.msPerRound, Fd.cadenceMs ??= Fd.msPerRound, Fd.altYVelocityInaccuracy ??= Fd.yVelocityInaccuracy, Fd.altInaccuracyFromJump ??= Fd.inaccuracyFromJump
+    for (const Hb of Object.values(eb)) Hb.msPerRound = 60 / Hb.fireRate * 1e3, Hb.msPerRoundTouchScreen = void 0 !== Hb.fireRateWithHeldTouch ? 60 / Hb.fireRateWithHeldTouch * 1e3 : Hb.msPerRound, Hb.cadenceMs ??= Hb.msPerRound, Hb.altYVelocityInaccuracy ??= Hb.yVelocityInaccuracy, Hb.altInaccuracyFromJump ??= Hb.inaccuracyFromJump
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

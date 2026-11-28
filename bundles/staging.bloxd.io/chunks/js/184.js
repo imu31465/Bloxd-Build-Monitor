@@ -1,507 +1,507 @@
 export const id = 184;
 export const ids = [184];
 export const modules = {
-  9965: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Kd,
-      e: () => vd,
-      i: () => td,
-      m: () => Qd,
-      q: () => hd,
-      r: () => Nd
+  10155: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => gb,
+      e: () => Lb,
+      i: () => Ob,
+      j: () => Ib,
+      m: () => lb,
+      p: () => tb
     });
-    var Wd = md(32),
-      Fd = md(2152),
-      Rd = md(1518),
-      Xd = md(1498);
-    const Kd = dd => {
-        var Od, md;
-        return (0, Xd.m)() && null !== (Od = null === (md = (0, Rd.h)()) || void 0 === md ? void 0 : md.getGlyphForNoaAction(dd)) && void 0 !== Od ? Od : null
+    var eb = Mb(29),
+      Hb = Mb(2212),
+      pb = Mb(1567),
+      Vb = Mb(1549);
+    const gb = bb => {
+        var wb, Mb;
+        return (0, Vb.j)() && null !== (wb = null === (Mb = (0, pb.e)()) || void 0 === Mb ? void 0 : Mb.getGlyphForNoaAction(bb)) && void 0 !== wb ? wb : null
       },
-      hd = "controllerGlyph:",
-      vd = dd => {
-        var Od, md;
-        return null !== (Od = null === (md = (0, Rd.h)()) || void 0 === md ? void 0 : md.getPadGlyphIconName(dd)) && void 0 !== Od ? Od : `${hd}xbox/${dd}`
+      lb = "controllerGlyph:",
+      Lb = bb => {
+        var wb, Mb;
+        return null !== (wb = null === (Mb = (0, pb.e)()) || void 0 === Mb ? void 0 : Mb.getPadGlyphIconName(bb)) && void 0 !== wb ? wb : `${lb}xbox/${bb}`
       },
-      Qd = dd => dd.startsWith(hd),
-      td = dd => {
-        var Od, md;
-        return Qd(dd) && null !== (Od = null === (md = (0, Rd.h)()) || void 0 === md ? void 0 : md.getPadGlyphIconUrl(dd)) && void 0 !== Od ? Od : null
+      Ib = bb => bb.startsWith(lb),
+      Ob = bb => {
+        var wb, Mb;
+        return Ib(bb) && null !== (wb = null === (Mb = (0, pb.e)()) || void 0 === Mb ? void 0 : Mb.getPadGlyphIconUrl(bb)) && void 0 !== wb ? wb : null
       },
-      od = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", Xd.b, Fd.c, Fd.b],
-      Nd = dd => {
-        const Od = od.map((Od => Wd.j.subscribe(Od, dd)));
+      Ub = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", Vb.b, Hb.f, Hb.d],
+      tb = bb => {
+        const wb = Ub.map((wb => eb.k.subscribe(wb, bb)));
         return () => {
-          for (const dd of Od) Wd.j.unsubscribe(dd)
+          for (const bb of wb) eb.k.unsubscribe(bb)
         }
       }
   },
-  43148: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      openCharacterPreview: () => gO
+  42854: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      openCharacterPreview: () => mw
     });
-    var Wd = md(39645),
-      Fd = md(2402),
-      Rd = md(689),
-      Xd = md(38682),
-      Kd = md(3146),
-      hd = md(38673),
-      vd = md(41756),
-      Qd = md(42016),
-      td = md(43038),
-      od = md(38627),
-      Nd = md(42162),
-      qd = md(38736),
-      Hd = md(42179),
-      yd = md(43101),
-      bd = md(38623),
-      Td = md(43068),
-      pd = md(43061),
-      Yd = md(38794),
-      gd = md(40319),
-      wd = md(40721),
-      Ed = md(40760),
-      Jd = md(40756),
-      Ud = md(40729),
-      xd = md(4365),
-      Bd = md(39080);
-    const Sd = [0, 1, 0];
-    class sd {
-      constructor(dd) {
-        this.node = dd, this.nodesByName = new Map, this.rests = new Map, this.clips = new Map;
-        for (const Od of dd.getChildTransformNodes()) this.nodesByName.set(Od.name, Od), this.rests.set(Od.name, (0, Bd.j)(Od))
+    var eb = Mb(39330),
+      Hb = Mb(2451),
+      pb = Mb(644),
+      Vb = Mb(38356),
+      gb = Mb(3222),
+      lb = Mb(38343),
+      Lb = Mb(41496),
+      Ib = Mb(41759),
+      Ob = Mb(42757),
+      Ub = Mb(38281),
+      tb = Mb(41920),
+      Cb = Mb(38401),
+      Eb = Mb(41933),
+      Fb = Mb(42807),
+      Bb = Mb(38279),
+      sb = Mb(42790),
+      mb = Mb(42787),
+      hb = Mb(38468),
+      zb = Mb(40032),
+      Xb = Mb(40463),
+      xb = Mb(40510),
+      jb = Mb(40504),
+      Kb = Mb(40470),
+      rb = Mb(4522),
+      Rb = Mb(38761);
+    const Db = [0, 1, 0];
+    class cb {
+      constructor(bb) {
+        this.node = bb, this.nodesByName = new Map, this.rests = new Map, this.clips = new Map;
+        for (const wb of bb.getChildTransformNodes()) this.nodesByName.set(wb.name, wb), this.rests.set(wb.name, (0, Rb.i)(wb))
       }
-      play(dd, Od) {
-        const md = this.clip(dd);
-        md && (md.pose.pose(Od), (0, Bd.p)(md.pose, md.nodes))
+      play(bb, wb) {
+        const Mb = this.clip(bb);
+        Mb && (Mb.pose.pose(wb), (0, Rb.p)(Mb.pose, Mb.nodes))
       }
-      clip(dd) {
-        let Od = this.clips.get(dd);
-        if (void 0 === Od) {
-          const md = (0, Bd.k)(dd, (dd => {
-            var Od;
-            return null !== (Od = this.rests.get(dd)) && void 0 !== Od ? Od : null
+      clip(bb) {
+        let wb = this.clips.get(bb);
+        if (void 0 === wb) {
+          const Mb = (0, Rb.m)(bb, (bb => {
+            var wb;
+            return null !== (wb = this.rests.get(bb)) && void 0 !== wb ? wb : null
           }));
-          Od = md && {
-            pose: md,
-            nodes: md.boneNames.map((dd => this.nodesByName.get(dd)))
-          }, this.clips.set(dd, Od)
+          wb = Mb && {
+            pose: Mb,
+            nodes: Mb.boneNames.map((bb => this.nodesByName.get(bb)))
+          }, this.clips.set(bb, wb)
         }
-        return Od
+        return wb
       }
     }
 
-    function ud(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      return new od.Cq(dd[0] * Od, dd[1] * Od, dd[2] * Od)
+    function Yb(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      return new Ub.YC(bb[0] * wb, bb[1] * wb, bb[2] * wb)
     }
-    class Vd {
-      constructor(dd, Od) {
-        this.MH = dd, this.scale = Od, this.petNodes = new Map, this.particleTextures = new Map, this.petName = "pet_none", this.shownPet = null, this.petIsolated = !1, this.auraSeq = 0, this.aura = null, this.auraName = "aura_none", this.auraTuning = null, this.auraDrawn = Promise.resolve()
+    class Zb {
+      constructor(bb, wb) {
+        this.JE = bb, this.scale = wb, this.petNodes = new Map, this.particleTextures = new Map, this.petName = "pet_none", this.shownPet = null, this.petIsolated = !1, this.auraSeq = 0, this.aura = null, this.auraName = "aura_none", this.auraTuning = null, this.auraDrawn = Promise.resolve()
       }
-      async setPet(dd) {
-        var Od;
-        this.petName = dd, null === (Od = this.shownPet) || void 0 === Od || Od.node.rY(!1), this.shownPet = null;
-        const md = (0, wd.j)(dd);
-        if (!md) return;
-        let Wd;
+      async setPet(bb) {
+        var wb;
+        this.petName = bb, null === (wb = this.shownPet) || void 0 === wb || wb.node.Bx(!1), this.shownPet = null;
+        const Mb = (0, Xb.j)(bb);
+        if (!Mb) return;
+        let eb;
         try {
-          Wd = await this.petNode(md.model)
+          eb = await this.petNode(Mb.model)
         } catch {
           return
         }
-        this.petName === dd && (Wd.node.rY(!0), this.shownPet = Wd)
+        this.petName === bb && (eb.node.Bx(!0), this.shownPet = eb)
       }
-      setAura(dd) {
-        const Od = (0, wd.i)(dd);
-        return dd === this.auraName && Od === this.auraTuning || (this.auraName = dd, this.auraTuning = Od, this.auraDrawn = this.showAura(dd, Od)), this.auraDrawn
+      setAura(bb) {
+        const wb = (0, Xb.i)(bb);
+        return bb === this.auraName && wb === this.auraTuning || (this.auraName = bb, this.auraTuning = wb, this.auraDrawn = this.showAura(bb, wb)), this.auraDrawn
       }
-      async showAura(dd, Od) {
-        var md, Wd, Fd;
-        const Rd = ++this.auraSeq;
-        if (null === (md = this.aura) || void 0 === md || md.dispose(!1), this.aura = null, !Od) return;
-        const Xd = await (0, gd.l)().catch((Od => (console.error(`Couldn't load the preview's particles for ${dd}:`, Od), null)));
-        if (!Xd || Rd !== this.auraSeq) return;
+      async showAura(bb, wb) {
+        var Mb, eb, Hb;
+        const pb = ++this.auraSeq;
+        if (null === (Mb = this.aura) || void 0 === Mb || Mb.dispose(!1), this.aura = null, !wb) return;
+        const Vb = await (0, zb.g)().catch((wb => (console.error(`Couldn't load the preview's particles for ${bb}:`, wb), null)));
+        if (!Vb || pb !== this.auraSeq) return;
         const {
-          scale: Kd
+          scale: gb
         } = this, {
-          opts: hd,
-          half: vd
-        } = (0, Jd.d)(Od), Qd = Xd(this.MH, `aura|${dd}`, hd.Mt), td = this.particleTexture(Od.particles.texture);
-        Qd.texture = td, (0, Ud.e)(Qd, {
-          ...hd,
-          minSize: hd.minSize * Kd,
-          maxSize: hd.maxSize * Kd,
-          minEmitPower: hd.minEmitPower * Kd,
-          maxEmitPower: hd.maxEmitPower * Kd,
-          gravity: hd.gravity && [hd.gravity[0] * Kd, hd.gravity[1] * Kd, hd.gravity[2] * Kd]
-        }), Qd.emitRate = hd.emitRate, Qd.createBoxEmitter(ud(null !== (Wd = hd.dir1) && void 0 !== Wd ? Wd : Sd), ud(null !== (Fd = hd.dir2) && void 0 !== Fd ? Fd : Sd), ud(vd, -Kd), ud(vd, Kd));
-        const [Nd, qd, Hd] = Od.offset;
-        Qd.emitter = new od.Cq(Nd * Kd, (qd - 1) * Kd, Hd * Kd), Qd.start(), this.aura = Qd;
-        const yd = td.mirror;
-        yd.isReady() || yd.loadingError || await new Promise((Od => {
-          yd.onLoadObservable.addOnce((() => {
-            Od()
-          })), yd.getInternalTexture().onErrorObservable.addOnce((md => {
+          opts: lb,
+          half: Lb
+        } = (0, jb.d)(wb), Ib = Vb(this.JE, `aura|${bb}`, lb.qO), Ob = this.particleTexture(wb.particles.texture);
+        Ib.texture = Ob, (0, Kb.e)(Ib, {
+          ...lb,
+          minSize: lb.minSize * gb,
+          maxSize: lb.maxSize * gb,
+          minEmitPower: lb.minEmitPower * gb,
+          maxEmitPower: lb.maxEmitPower * gb,
+          gravity: lb.gravity && [lb.gravity[0] * gb, lb.gravity[1] * gb, lb.gravity[2] * gb]
+        }), Ib.emitRate = lb.emitRate, Ib.createBoxEmitter(Yb(null !== (eb = lb.dir1) && void 0 !== eb ? eb : Db), Yb(null !== (Hb = lb.dir2) && void 0 !== Hb ? Hb : Db), Yb(Lb, -gb), Yb(Lb, gb));
+        const [tb, Cb, Eb] = wb.offset;
+        Ib.emitter = new Ub.YC(tb * gb, (Cb - 1) * gb, Eb * gb), Ib.start(), this.aura = Ib;
+        const Fb = Ob.mirror;
+        Fb.isReady() || Fb.loadingError || await new Promise((wb => {
+          Fb.onLoadObservable.addOnce((() => {
+            wb()
+          })), Fb.getInternalTexture().onErrorObservable.addOnce((Mb => {
             let {
-              message: Wd
-            } = md;
-            console.error(`Preview aura ${dd}'s texture failed to load: ${Wd}`), Od()
+              message: eb
+            } = Mb;
+            console.error(`Preview aura ${bb}'s texture failed to load: ${eb}`), wb()
           }))
         }))
       }
-      writePose(dd) {
-        var Od;
+      writePose(bb) {
+        var wb;
         if (!this.shownPet) return;
-        const md = (0, wd.j)(this.petName),
+        const Mb = (0, Xb.j)(this.petName),
           {
-            scale: Wd
+            scale: eb
           } = this;
-        if (this.petIsolated) return void this.writeIsolatedPose(this.shownPet, md);
-        const [Fd, Rd, Xd] = md.followOffset, {
-          node: Kd
+        if (this.petIsolated) return void this.writeIsolatedPose(this.shownPet, Mb);
+        const [Hb, pb, Vb] = Mb.followOffset, {
+          node: gb
         } = this.shownPet;
-        Kd.position.set(Fd * Wd, (Rd + (0, Ed.d)(md, dd) - 1) * Wd, Xd * Wd), Kd.rotation.y = md.yawOffset, Kd.Tt.Bdd(md.scale * Wd), null !== (Od = md.clips) && void 0 !== Od && Od.fly && this.shownPet.play(md.clips.fly, dd)
+        gb.position.set(Hb * eb, (pb + (0, xb.d)(Mb, bb) - 1) * eb, Vb * eb), gb.rotation.y = Mb.yawOffset, gb.CO.Jbb(Mb.scale * eb), null !== (wb = Mb.clips) && void 0 !== wb && wb.fly && this.shownPet.play(Mb.clips.fly, bb)
       }
       isolatePet() {
         this.petIsolated = !0
       }
-      writeIsolatedPose(dd, Od) {
-        var md, Wd, Fd;
+      writeIsolatedPose(bb, wb) {
+        var Mb, eb, Hb;
         const {
-          node: Rd
-        } = dd;
-        Rd.position.Bdd(0), Rd.rotation.y = Od.yawOffset, Rd.Tt.Bdd(1);
-        const Xd = null !== (md = null === (Wd = Od.clips) || void 0 === Wd ? void 0 : Wd.perch) && void 0 !== md ? md : null === (Fd = Od.clips) || void 0 === Fd ? void 0 : Fd.fly;
-        Xd && dd.play(Xd, 0);
+          node: pb
+        } = bb;
+        pb.position.Jbb(0), pb.rotation.y = wb.yawOffset, pb.CO.Jbb(1);
+        const Vb = null !== (Mb = null === (eb = wb.clips) || void 0 === eb ? void 0 : eb.perch) && void 0 !== Mb ? Mb : null === (Hb = wb.clips) || void 0 === Hb ? void 0 : Hb.fly;
+        Vb && bb.play(Vb, 0);
         const {
-          min: Kd,
-          max: hd
-        } = Rd.getHierarchyBoundingVectors(!0), vd = 2 * this.scale / (hd.y - Kd.y);
-        Rd.Tt.Bdd(vd), Rd.position.set(-(Kd.x + hd.x) / 2 * vd, -(Kd.y + hd.y) / 2 * vd, -(Kd.z + hd.z) / 2 * vd)
+          min: gb,
+          max: lb
+        } = pb.getHierarchyBoundingVectors(!0), Lb = 2 * this.scale / (lb.y - gb.y);
+        pb.CO.Jbb(Lb), pb.position.set(-(gb.x + lb.x) / 2 * Lb, -(gb.y + lb.y) / 2 * Lb, -(gb.z + lb.z) / 2 * Lb)
       }
-      petNode(dd) {
-        let Od = this.petNodes.get(dd);
-        return Od || (Od = (0, Td.i)(this.MH, dd, void 0, {
+      petNode(bb) {
+        let wb = this.petNodes.get(bb);
+        return wb || (wb = (0, sb.h)(this.JE, bb, void 0, {
           keepTransforms: !0,
           backFaceCulling: !0
-        }).then((Od => {
-          const md = new pd.c(`pet|${dd}`, this.MH);
-          md.rY(!1);
-          for (const dd of Od.rootNodes) dd.parent = md, (0, Td.n)(dd, !0);
-          return new sd(md)
-        }), (Od => {
-          throw this.petNodes.delete(dd), console.error(`Failed to load preview pet ${dd}:`, Od), Od
-        })), this.petNodes.set(dd, Od)), Od
+        }).then((wb => {
+          const Mb = new mb.b(`pet|${bb}`, this.JE);
+          Mb.Bx(!1);
+          for (const bb of wb.rootNodes) bb.parent = Mb, (0, sb.o)(bb, !0);
+          return new cb(Mb)
+        }), (wb => {
+          throw this.petNodes.delete(bb), console.error(`Failed to load preview pet ${bb}:`, wb), wb
+        })), this.petNodes.set(bb, wb)), wb
       }
-      particleTexture(dd) {
-        let Od = this.particleTextures.get(dd);
-        return Od || (Od = (0, Yd.m)(this.MH, (0, xd.e)(dd)), this.particleTextures.set(dd, Od)), Od
+      particleTexture(bb) {
+        let wb = this.particleTextures.get(bb);
+        return wb || (wb = (0, hb.t)(this.JE, (0, rb.e)(bb)), this.particleTextures.set(bb, wb)), wb
       }
     }
-    var Ad = md(42330),
-      rd = md(42339),
-      Gd = md(42358);
+    var fb = Mb(42078),
+      Ab = Mb(42091),
+      Wb = Mb(42107);
 
-    function nd(dd) {
-      const Od = [],
-        md = [],
-        Wd = [],
-        Fd = [],
-        Rd = void 0 !== dd.width ? dd.width : void 0 !== dd.size ? dd.size : 1,
-        Xd = void 0 !== dd.height ? dd.height : void 0 !== dd.size ? dd.size : 1,
-        Kd = 0 === dd.sideOrientation ? 0 : dd.sideOrientation || rd.c.DEFAULTSIDE,
-        hd = Rd / 2,
-        vd = Xd / 2;
-      md.push(-hd, -vd, 0), Wd.push(0, 0, -1), Fd.push(0, Gd.e ? 1 : 0), md.push(hd, -vd, 0), Wd.push(0, 0, -1), Fd.push(1, Gd.e ? 1 : 0), md.push(hd, vd, 0), Wd.push(0, 0, -1), Fd.push(1, Gd.e ? 0 : 1), md.push(-hd, vd, 0), Wd.push(0, 0, -1), Fd.push(0, Gd.e ? 0 : 1), Od.push(0), Od.push(1), Od.push(2), Od.push(0), Od.push(2), Od.push(3), rd.c._ComputeSides(Kd, md, Od, Wd, Fd, dd.frontUVs, dd.backUVs);
-      const Qd = new rd.c;
-      return Qd.indices = Od, Qd.positions = md, Qd.normals = Wd, Qd.uvs = Fd, Qd
+    function Jb(bb) {
+      const wb = [],
+        Mb = [],
+        eb = [],
+        Hb = [],
+        pb = void 0 !== bb.width ? bb.width : void 0 !== bb.size ? bb.size : 1,
+        Vb = void 0 !== bb.height ? bb.height : void 0 !== bb.size ? bb.size : 1,
+        gb = 0 === bb.sideOrientation ? 0 : bb.sideOrientation || Ab.d.DEFAULTSIDE,
+        lb = pb / 2,
+        Lb = Vb / 2;
+      Mb.push(-lb, -Lb, 0), eb.push(0, 0, -1), Hb.push(0, Wb.d ? 1 : 0), Mb.push(lb, -Lb, 0), eb.push(0, 0, -1), Hb.push(1, Wb.d ? 1 : 0), Mb.push(lb, Lb, 0), eb.push(0, 0, -1), Hb.push(1, Wb.d ? 0 : 1), Mb.push(-lb, Lb, 0), eb.push(0, 0, -1), Hb.push(0, Wb.d ? 0 : 1), wb.push(0), wb.push(1), wb.push(2), wb.push(0), wb.push(2), wb.push(3), Ab.d._ComputeSides(gb, Mb, wb, eb, Hb, bb.frontUVs, bb.backUVs);
+      const Ib = new Ab.d;
+      return Ib.indices = wb, Ib.positions = Mb, Ib.normals = eb, Ib.uvs = Hb, Ib
     }
 
-    function Ld(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Wd = new Ad.d(dd, md);
-      Od.sideOrientation = Ad.d._GetDefaultSideOrientation(Od.sideOrientation), Wd._originalBuilderSideOrientation = Od.sideOrientation;
-      return nd(Od).applyToMesh(Wd, Od.updatable), Od.sourcePlane && (Wd.translate(Od.sourcePlane.normal, -Od.sourcePlane.d), Wd.setDirection(Od.sourcePlane.normal.scale(-1))), Wd
+    function Sb(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const eb = new fb.e(bb, Mb);
+      wb.sideOrientation = fb.e._GetDefaultSideOrientation(wb.sideOrientation), eb._originalBuilderSideOrientation = wb.sideOrientation;
+      return Jb(wb).applyToMesh(eb, wb.updatable), wb.sourcePlane && (eb.translate(wb.sourcePlane.normal, -wb.sourcePlane.d), eb.setDirection(wb.sourcePlane.normal.scale(-1))), eb
     }
-    let Pd = !1;
-    Pd || (Pd = !0, rd.c.CreatePlane = nd, Ad.d.CreatePlane = (dd, Od, md, Wd, Fd) => Ld(dd, {
-      size: Od,
-      width: Od,
-      height: Od,
-      sideOrientation: Fd,
-      updatable: Wd
-    }, md));
-    var zd = md(43143),
-      cd = md(43129),
-      jd = md(37729),
-      Dd = md(37746),
-      ed = md(37829),
-      Id = md(40431),
-      ld = md(40453),
-      Cd = md(40439);
-    class Zd {
-      constructor(dd, Od) {
-        this.scale = Od, this.plane = void 0, this.canvas = document.createElement("canvas"), this.texture = void 0, this.widthPx = 0, this.heightPx = 0, this.shown = null, this.stopRedrawing = null, this.texture = new zd.e("previewNametag", this.canvas, dd, !1, yd.b.BILINEAR_SAMPLINGMODE), this.texture.hasAlpha = !0;
-        const md = new Hd.StandardMaterial("previewNametag", dd);
-        md.diffuseTexture = this.texture, md.useAlphaFromDiffuseTexture = !0, md.emissiveColor = qd.Color3.White(), md.disableLighting = !0, this.plane = Ld("previewNametag", {
+    let Nb = !1;
+    Nb || (Nb = !0, Ab.d.CreatePlane = Jb, fb.e.CreatePlane = (bb, wb, Mb, eb, Hb) => Sb(bb, {
+      size: wb,
+      width: wb,
+      height: wb,
+      sideOrientation: Hb,
+      updatable: eb
+    }, Mb));
+    var vb = Mb(42847),
+      Qb = Mb(42839),
+      Gb = Mb(37455),
+      qb = Mb(37469),
+      ab = Mb(37528),
+      ib = Mb(40168),
+      ub = Mb(40182),
+      db = Mb(40170);
+    class Pb {
+      constructor(bb, wb) {
+        this.scale = wb, this.plane = void 0, this.canvas = document.createElement("canvas"), this.texture = void 0, this.widthPx = 0, this.heightPx = 0, this.shown = null, this.stopRedrawing = null, this.texture = new vb.e("previewNametag", this.canvas, bb, !1, Fb.c.BILINEAR_SAMPLINGMODE), this.texture.hasAlpha = !0;
+        const Mb = new Eb.StandardMaterial("previewNametag", bb);
+        Mb.diffuseTexture = this.texture, Mb.useAlphaFromDiffuseTexture = !0, Mb.emissiveColor = Cb.Color3.White(), Mb.disableLighting = !0, this.plane = Sb("previewNametag", {
           size: 1
-        }, dd), this.plane.material = md, this.plane.billboardMode = cd.d.BILLBOARDMODE_ALL, this.plane.renderingGroupId = Cd.b, this.plane.my = !1, this.plane.rY(!1)
+        }, bb), this.plane.material = Mb, this.plane.billboardMode = Qb.e.BILLBOARDMODE_ALL, this.plane.renderingGroupId = db.e, this.plane.NE = !1, this.plane.Bx(!1)
       }
-      set(dd) {
-        var Od;
-        if (dd !== this.shown) {
-          if (this.shown = dd, null === (Od = this.stopRedrawing) || void 0 === Od || Od.call(this), this.stopRedrawing = null, null === dd || void 0 === dd || !dd.name) return this.heightPx = 0, void this.plane.rY(!1);
-          ed.j.untilLoadedFor(dd.name).then((() => {
-            this.shown === dd && (this.draw(dd), this.stopRedrawing = (0, ed.i)((() => {
-              this.draw(dd)
+      set(bb) {
+        var wb;
+        if (bb !== this.shown) {
+          if (this.shown = bb, null === (wb = this.stopRedrawing) || void 0 === wb || wb.call(this), this.stopRedrawing = null, null === bb || void 0 === bb || !bb.name) return this.heightPx = 0, void this.plane.Bx(!1);
+          ab.k.untilLoadedFor(bb.name).then((() => {
+            this.shown === bb && (this.draw(bb), this.stopRedrawing = (0, ab.i)((() => {
+              this.draw(bb)
             })))
           }))
         }
       }
-      update(dd) {
+      update(bb) {
         if (0 === this.heightPx) return;
-        const Od = -this.scale,
-          md = ld.e * this.scale + Od,
-          Wd = dd.position,
-          Fd = Math.hypot(Wd.x, Wd.y - md, Wd.z) / this.scale,
-          Rd = 2 * Fd * Math.tan(dd.fov / 2) * dd.Iq().getAspectRatio(dd),
-          Xd = Math.min((0, ld.f)(Fd), .9 * Rd / (Id.h.TEXT_PLANE_RATIO * this.widthPx)),
-          Kd = Xd * Id.h.TEXT_PLANE_RATIO * this.heightPx;
-        this.plane.position.set(0, Od + (ld.e + .5 * Kd - .05) * this.scale, 0);
-        const hd = Xd * Id.h.TEXT_PLANE_RATIO * this.scale;
-        this.plane.Tt.set(hd * this.widthPx, hd * this.heightPx, 1)
+        const wb = -this.scale,
+          Mb = ub.b * this.scale + wb,
+          eb = bb.position,
+          Hb = Math.hypot(eb.x, eb.y - Mb, eb.z) / this.scale,
+          pb = 2 * Hb * Math.tan(bb.fov / 2) * bb.DC().getAspectRatio(bb),
+          Vb = Math.min((0, ub.f)(Hb), .9 * pb / (ib.f.TEXT_PLANE_RATIO * this.widthPx)),
+          gb = Vb * ib.f.TEXT_PLANE_RATIO * this.heightPx;
+        this.plane.position.set(0, wb + (ub.b + .5 * gb - .05) * this.scale, 0);
+        const lb = Vb * ib.f.TEXT_PLANE_RATIO * this.scale;
+        this.plane.CO.set(lb * this.widthPx, lb * this.heightPx, 1)
       }
-      draw(dd) {
-        const Od = (0, jd.e)(this.canvas),
-          md = (0, Dd.d)({
-            name: dd.name,
-            ranks: dd.ranks,
-            colour: dd.nameColour,
+      draw(bb) {
+        const wb = (0, Gb.d)(this.canvas),
+          Mb = (0, qb.d)({
+            name: bb.name,
+            ranks: bb.ranks,
+            colour: bb.nameColour,
             mesh: !0
-          }, Od, ed.o);
-        if (null === md) return this.heightPx = 0, void this.plane.rY(!1);
-        this.texture.scaleTo(Math.ceil(2 * md.width), Math.ceil(2 * md.height)), Od.scale(2, 2), md.draw(Od), this.texture.update(), this.widthPx = md.width, this.heightPx = md.height, this.plane.rY(!0)
+          }, wb, ab.t);
+        if (null === Mb) return this.heightPx = 0, void this.plane.Bx(!1);
+        this.texture.scaleTo(Math.ceil(2 * Mb.width), Math.ceil(2 * Mb.height)), wb.scale(2, 2), Mb.draw(wb), this.texture.update(), this.widthPx = Mb.width, this.heightPx = Mb.height, this.plane.Bx(!0)
       }
     }
-    var kd = md(38691),
-      fd = (md(43076), md(42420), md(43085), md(35587)),
-      Md = md(37713),
-      dO = md(43152);
-    let OO, mO, WO, FO, RO, XO, KO, hO, vO, QO, tO, oO;
-    const NO = document.createElement("canvas");
-    async function qO() {
-      await new Promise((dd => {
+    var nb = Mb(38366),
+      yb = (Mb(42792), Mb(42161), Mb(42795), Mb(35370)),
+      ob = Mb(37449),
+      Tb = Mb(42862);
+    let kb, bw, ww, Mw, ew, Hw, pw, Vw, gw, lw, Lw, Iw;
+    const Ow = document.createElement("canvas");
+    async function Uw() {
+      await new Promise((bb => {
         setTimeout((() => {
-          dd()
+          bb()
         }), 100)
       }))
     }
-    NO.classList.add("CharCustomisationPreviewCanvas");
-    const HO = {};
+    Ow.classList.add("CharCustomisationPreviewCanvas");
+    const tw = {};
 
-    function yO(dd, Od) {
-      if (!FO) return;
-      const Xd = (0, Fd.c)();
-      if (Xd.qB(!1), Wd.c.Player.meshApi.updatePlayerCosmetic(Xd.YV, KO, dd, Od, !0), "cape" === dd)
-        if (Od === Rd.e) RO.rY(!1);
+    function Cw(bb, wb) {
+      if (!Mw) return;
+      const Vb = (0, Hb.h)();
+      if (Vb.RZ(!1), eb.d.Player.meshApi.updatePlayerCosmetic(Vb.VJ, pw, bb, wb, !0), "cape" === bb)
+        if (wb === pb.e) ew.Bx(!1);
         else {
-          RO.rY(!0);
-          RO.material.diffuseTexture = new yd.b(md(40376)(`./cape_${Od}.png`), RO.zV(), {
+          ew.Bx(!0);
+          ew.material.diffuseTexture = new Fb.c(Mb(40110)(`./cape_${wb}.png`), ew.RJ(), {
             invertY: !1,
-            samplingMode: yd.b.NEAREST_NEAREST_MIPLINEAR
+            samplingMode: Fb.c.NEAREST_NEAREST_MIPLINEAR
           })
         }
-      "pet" === dd ? HO.pet = QO.setPet(Od) : "aura" === dd ? HO.aura = QO.setAura(Od) : HO[dd] = vO.update(dd, Od)
+      "pet" === bb ? tw.pet = lw.setPet(wb) : "aura" === bb ? tw.aura = lw.setAura(wb) : tw[bb] = gw.update(bb, wb)
     }
 
-    function bO(dd, Od) {
-      const [md, Wd] = (0, Md.c)(dd, Od, window.devicePixelRatio);
-      OO.setSize(Math.max(md, Math.floor(dd)), Math.max(Wd, Math.floor(Od)))
+    function Ew(bb, wb) {
+      const [Mb, eb] = (0, ob.b)(bb, wb, window.devicePixelRatio);
+      kb.setSize(Math.max(Mb, Math.floor(bb)), Math.max(eb, Math.floor(wb)))
     }
-    let TO = 0;
-    class pO {
-      constructor(dd, Od) {
-        var md;
-        this.framing = Od, this.ready = oO, this.dev = {
-          canvas: () => NO,
-          captureFrame: dd => (0, dO.b)((() => this.closed ? null : NO), (dd => {
-            const Od = WO.onAfterRenderObservable.addOnce(dd);
+    let Fw = 0;
+    class Bw {
+      constructor(bb, wb) {
+        var Mb;
+        this.framing = wb, this.ready = Iw, this.dev = {
+          canvas: () => Ow,
+          captureFrame: bb => (0, Tb.e)((() => this.closed ? null : Ow), (bb => {
+            const wb = ww.onAfterRenderObservable.addOnce(bb);
             return () => {
-              WO.onAfterRenderObservable.remove(Od)
+              ww.onAfterRenderObservable.remove(wb)
             }
-          }), dd),
-          isolateHead(dd) {
-            const Od = XO.getNodeNames(KO);
-            for (let md = 0; md < Od.length; md++) "HeadMesh" !== Od[md] && "__root__" !== Od[md] && "TorsoNode" !== Od[md] && XO.setNodeEnabled(KO, md, !1);
-            if (dd) {
-              const dd = XO.getNamedNode(KO, "HeadMesh");
-              XO.setNodeDisableColorWrite(KO, dd, !0, (dd => {
-                const Od = new Hd.StandardMaterial(`${dd.name}_depthOnly`, dd.zV());
-                return Od.disableColorWrite = !0, Od
+          }), bb),
+          isolateHead(bb) {
+            const wb = Hw.getNodeNames(pw);
+            for (let Mb = 0; Mb < wb.length; Mb++) "HeadMesh" !== wb[Mb] && "__root__" !== wb[Mb] && "TorsoNode" !== wb[Mb] && Hw.setNodeEnabled(pw, Mb, !1);
+            if (bb) {
+              const bb = Hw.getNamedNode(pw, "HeadMesh");
+              Hw.setNodeDisableColorWrite(pw, bb, !0, (bb => {
+                const wb = new Eb.StandardMaterial(`${bb.name}_depthOnly`, bb.RJ());
+                return wb.disableColorWrite = !0, wb
               }))
             }
-            XO.setPosition(KO, 0, -12, 0), tO.set(null), yO("pet", "pet_none"), yO("aura", "aura_none")
+            Hw.setPosition(pw, 0, -12, 0), Lw.set(null), Cw("pet", "pet_none"), Cw("aura", "aura_none")
           },
           isolatePet() {
-            const dd = XO.getNodeNames(KO).length;
-            for (let Od = 0; Od < dd; Od++) XO.setNodeEnabled(KO, Od, !1);
-            RO.rY(!1), yO("aura", "aura_none"), tO.set(null), QO.isolatePet()
+            const bb = Hw.getNodeNames(pw).length;
+            for (let wb = 0; wb < bb; wb++) Hw.setNodeEnabled(pw, wb, !1);
+            ew.Bx(!1), Cw("aura", "aura_none"), Lw.set(null), lw.isolatePet()
           }
-        }, this.closed = !1, this.resetCamera(), null === (md = tO) || void 0 === md || md.set(null);
-        const Wd = dd.getBoundingClientRect();
-        bO(Wd.width, Wd.height), TO++, OO.stopRenderLoop(), OO.runRenderLoop((() => {
-          var dd, Od, md, Wd;
-          null === (dd = hO) || void 0 === dd || dd.render(OO.getDeltaTime());
-          const Fd = performance.now() / 1e3;
-          null === (Od = vO) || void 0 === Od || Od.writePoses(Fd), null === (md = QO) || void 0 === md || md.writePose(Fd), null === (Wd = tO) || void 0 === Wd || Wd.update(mO), WO.render()
+        }, this.closed = !1, this.resetCamera(), null === (Mb = Lw) || void 0 === Mb || Mb.set(null);
+        const eb = bb.getBoundingClientRect();
+        Ew(eb.width, eb.height), Fw++, kb.stopRenderLoop(), kb.runRenderLoop((() => {
+          var bb, wb, Mb, eb;
+          null === (bb = Vw) || void 0 === bb || bb.render(kb.getDeltaTime());
+          const Hb = performance.now() / 1e3;
+          null === (wb = gw) || void 0 === wb || wb.writePoses(Hb), null === (Mb = lw) || void 0 === Mb || Mb.writePose(Hb), null === (eb = Lw) || void 0 === eb || eb.update(bw), ww.render()
         }))
       }
       isReady() {
-        return !!FO
+        return !!Mw
       }
-      setCosmetic(dd, Od) {
-        yO(dd, Od)
+      setCosmetic(bb, wb) {
+        Cw(bb, wb)
       }
-      setNametag(dd) {
-        var Od;
-        null === (Od = tO) || void 0 === Od || Od.set(dd)
+      setNametag(bb) {
+        var wb;
+        null === (wb = Lw) || void 0 === wb || wb.set(bb)
       }
-      playEmote(dd) {
-        if (!hO) return;
-        if (!dd) return void hO.stopAnimation(hd.c.Emote);
-        const Od = (0, Xd.h)((0, Kd.j)(dd).animation);
-        hO.startAnimation(Od, hd.c.Emote, 0, Kd.d)
+      playEmote(bb) {
+        if (!Vw) return;
+        if (!bb) return void Vw.stopAnimation(lb.e.Emote);
+        const wb = (0, Vb.h)((0, gb.h)(bb).animation);
+        Vw.startAnimation(wb, lb.e.Emote, 0, gb.b)
       }
-      async untilDrawn(dd) {
-        if (await qO(), "cape" === dd && RO) {
-          const dd = RO.material,
-            Od = null === dd || void 0 === dd ? void 0 : dd.diffuseTexture;
-          Od && !Od.isReady() && (await new Promise((dd => {
-            Od.onLoadObservable.addOnce((() => {
-              dd()
+      async untilDrawn(bb) {
+        if (await Uw(), "cape" === bb && ew) {
+          const bb = ew.material,
+            wb = null === bb || void 0 === bb ? void 0 : bb.diffuseTexture;
+          wb && !wb.isReady() && (await new Promise((bb => {
+            wb.onLoadObservable.addOnce((() => {
+              bb()
             }))
-          })), await qO())
+          })), await Uw())
         }
-        HO[dd] && (await HO[dd], await qO()), await WO.whenReadyAsync(), await new Promise((dd => {
-          WO.onAfterRenderObservable.addOnce((() => {
-            dd()
+        tw[bb] && (await tw[bb], await Uw()), await ww.whenReadyAsync(), await new Promise((bb => {
+          ww.onAfterRenderObservable.addOnce((() => {
+            bb()
           }))
         }))
       }
-      setOrbit(dd) {
-        YO(dd)
+      setOrbit(bb) {
+        sw(bb)
       }
       resetCamera() {
-        mO.inertialAlphaOffset = 0, mO.inertialBetaOffset = 0, mO.inertialRadiusOffset = 0, YO(fd.c[this.framing])
+        bw.inertialAlphaOffset = 0, bw.inertialBetaOffset = 0, bw.inertialRadiusOffset = 0, sw(yb.b[this.framing])
       }
-      resize(dd, Od) {
-        bO(dd, Od)
+      resize(bb, wb) {
+        Ew(bb, wb)
       }
       close() {
-        var dd;
-        this.closed || (this.closed = !0, TO--, 0 === TO && (OO.stopRenderLoop(), null === (dd = tO) || void 0 === dd || dd.set(null)))
+        var bb;
+        this.closed || (this.closed = !0, Fw--, 0 === Fw && (kb.stopRenderLoop(), null === (bb = Lw) || void 0 === bb || bb.set(null)))
       }
     }
 
-    function YO(dd) {
+    function sw(bb) {
       let {
-        yaw: Od,
-        pitch: md,
-        radius: Wd,
-        target: Fd
-      } = dd;
-      mO.alpha = Od, mO.beta = md, Wd && (mO.radius = Wd), Fd && mO.target.set(Fd[0], Fd[1], Fd[2])
+        yaw: wb,
+        pitch: Mb,
+        radius: eb,
+        target: Hb
+      } = bb;
+      bw.alpha = wb, bw.beta = Mb, eb && (bw.radius = eb), Hb && bw.target.set(Hb[0], Hb[1], Hb[2])
     }
 
-    function gO(dd, Od) {
-      return dd.appendChild(NO), OO || function() {
-        OO = new vd.d(NO, !0, {
+    function mw(bb, wb) {
+      return bb.appendChild(Ow), kb || function() {
+        kb = new Lb.e(Ow, !0, {
           preserveDrawingBuffer: !0
         });
-        const dd = (0, Fd.c)();
-        OO.JFd = dd.gt.engine.JFd, WO = new Qd.e(OO), WO.clearColor = new qd.b(0, 0, 0, 0), WO.ambientColor = new qd.Color3(1, 1, 1), mO = new td.e("Qb", 0, 0, 1, od.Cq.Zero(), WO), mO.attachControl(NO, !0), mO.panningSensibility = 0, oO = (0, Wd.x)("Player", WO, !0).then((Od => {
-          FO = Od.meshApi, RO = Od.capeMesh, XO = dd.gt.HA;
-          const md = 8.33;
-          KO = (0, Wd.m)("Player", md, !0, !0), XO.setPosition(KO, 0, -8.33, 0);
-          const Fd = XO.getNamedNode(KO, "BodyMesh");
-          XO.attachTransformNode(RO, KO, Fd), XO.set(KO, "aOpacity", 1), XO.rG(KO, "aOpacity", 1), vO = new Td.e(WO, XO, KO), QO = new Vd(WO, md), tO = new Zd(WO, md), hO = new bd.AnimatorState, hO.zo = dd, hO.thinInstMgr = XO, hO.JA = KO, hO.fWd = XO.QFd(KO, 0), hO.modelLifeformType = "Player", hO.nodeNameAliases = (0, kd.e)("Player").nodeNameAliases;
-          const Rd = RO.iG().boundingBox;
-          RO.position.y = ((24 - Rd.maximum.y + Rd.minimum.y) / 2 - 1 / 32) / md, RO.position.z = -1 / md, RO.rotationQuaternion = null;
-          const Xd = Math.PI / 18,
-            Kd = Rd.maximum.y / md;
-          RO.rotation.x = Xd;
-          const hd = Math.cos(Xd),
-            vd = Math.sin(Xd);
-          RO.position.y += Kd * (1 - hd) + 0 * vd, RO.position.z -= Kd * vd + 0 * (1 - hd);
-          const Qd = new Hd.StandardMaterial("capeMaterial", RO.zV());
-          RO.material = Qd;
-          const td = new qd.Color3(1, 1, 1);
-          Qd.diffuseColor = new qd.Color3, Qd.specularColor = new qd.Color3, Qd.emissiveColor = new qd.Color3, Qd.ambientColor = new qd.Color3, td.scaleToRef(.43, Qd.diffuseColor), td.scaleToRef(1.75, Qd.ambientColor), Qd.freeze();
-          const yd = new Nd.e("light", new od.Cq(-.1, 1, -.3), WO);
-          yd.diffuse = new qd.Color3(1, 1, 1), yd.specular = new qd.Color3(1, 1, 1), yd.groundColor = new qd.Color3(.5, .5, .5)
+        const bb = (0, Hb.h)();
+        kb.rHb = bb.FO.engine.rHb, ww = new Ib.b(kb), ww.clearColor = new Cb.c(0, 0, 0, 0), ww.ambientColor = new Cb.Color3(1, 1, 1), bw = new Ob.e("iF", 0, 0, 1, Ub.YC.Zero(), ww), bw.attachControl(Ow, !0), bw.panningSensibility = 0, Iw = (0, eb.q)("Player", ww, !0).then((wb => {
+          Mw = wb.meshApi, ew = wb.capeMesh, Hw = bb.FO.GJ;
+          const Mb = 8.33;
+          pw = (0, eb.l)("Player", Mb, !0, !0), Hw.setPosition(pw, 0, -8.33, 0);
+          const Hb = Hw.getNamedNode(pw, "BodyMesh");
+          Hw.attachTransformNode(ew, pw, Hb), Hw.set(pw, "aOpacity", 1), Hw.ZN(pw, "aOpacity", 1), gw = new sb.d(ww, Hw, pw), lw = new Zb(ww, Mb), Lw = new Pb(ww, Mb), Vw = new Bb.AnimatorState, Vw.hU = bb, Vw.thinInstMgr = Hw, Vw.qJ = pw, Vw.keb = Hw.OHb(pw, 0), Vw.modelLifeformType = "Player", Vw.nodeNameAliases = (0, nb.b)("Player").nodeNameAliases;
+          const pb = ew.XN().boundingBox;
+          ew.position.y = ((24 - pb.maximum.y + pb.minimum.y) / 2 - 1 / 32) / Mb, ew.position.z = -1 / Mb, ew.rotationQuaternion = null;
+          const Vb = Math.PI / 18,
+            gb = pb.maximum.y / Mb;
+          ew.rotation.x = Vb;
+          const lb = Math.cos(Vb),
+            Lb = Math.sin(Vb);
+          ew.position.y += gb * (1 - lb) + 0 * Lb, ew.position.z -= gb * Lb + 0 * (1 - lb);
+          const Ib = new Eb.StandardMaterial("capeMaterial", ew.RJ());
+          ew.material = Ib;
+          const Ob = new Cb.Color3(1, 1, 1);
+          Ib.diffuseColor = new Cb.Color3, Ib.specularColor = new Cb.Color3, Ib.emissiveColor = new Cb.Color3, Ib.ambientColor = new Cb.Color3, Ob.scaleToRef(.43, Ib.diffuseColor), Ob.scaleToRef(1.75, Ib.ambientColor), Ib.freeze();
+          const Fb = new tb.c("light", new Ub.YC(-.1, 1, -.3), ww);
+          Fb.diffuse = new Cb.Color3(1, 1, 1), Fb.specular = new Cb.Color3(1, 1, 1), Fb.groundColor = new Cb.Color3(.5, .5, .5)
         }))
-      }(), new pO(dd, Od)
+      }(), new Bw(bb, wb)
     }
   },
-  37846: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Kd,
-      e: () => Xd
+  37539: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => gb,
+      h: () => Vb
     });
-    var Wd = md(4515);
-    let Fd = null,
-      Rd = null;
+    var eb = Mb(4662);
+    let Hb = null,
+      pb = null;
 
-    function Xd() {
-      return Rd ??= md.e(242).then((() => md(37698))).then((dd => {
+    function Vb() {
+      return pb ??= Mb.e(242).then((() => Mb(37441))).then((bb => {
         let {
-          ITEM_SPRITES: Od,
-          ITEM_SPRITES_WITHOUT_FILE: md,
-          ITEM_FILES_WITHOUT_SPRITE: Rd
-        } = dd;
-        Fd = function(dd, Od, md) {
-          const Fd = new Set,
-            Rd = (0, Wd.C)(Od);
-          let Xd = 0;
-          for (const [Wd, Kd] of dd.entries()) Wd === Rd[Xd] ? Xd++ : Fd.add(Kd);
-          if ("" !== md)
-            for (const Kd of md.split(Wd.v)) Fd.add(Kd);
-          return Fd
-        }(Od.split(Wd.v), md, Rd)
-      }), (dd => {
-        throw Rd = null, dd
-      })), Rd
+          ITEM_SPRITES: wb,
+          ITEM_SPRITES_WITHOUT_FILE: Mb,
+          ITEM_FILES_WITHOUT_SPRITE: pb
+        } = bb;
+        Hb = function(bb, wb, Mb) {
+          const Hb = new Set,
+            pb = (0, eb.z)(wb);
+          let Vb = 0;
+          for (const [eb, gb] of bb.entries()) eb === pb[Vb] ? Vb++ : Hb.add(gb);
+          if ("" !== Mb)
+            for (const gb of Mb.split(eb.v)) Hb.add(gb);
+          return Hb
+        }(wb.split(eb.v), Mb, pb)
+      }), (bb => {
+        throw pb = null, bb
+      })), pb
     }
 
-    function Kd(dd) {
-      var Od, md;
-      return null !== (Od = null === (md = Fd) || void 0 === md ? void 0 : md.has(dd)) && void 0 !== Od && Od
+    function gb(bb) {
+      var wb, Mb;
+      return null !== (wb = null === (Mb = Hb) || void 0 === Mb ? void 0 : Mb.has(bb)) && void 0 !== wb && wb
     }
   },
-  35482: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Rd
+  35281: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb
     });
-    var Wd = md(1368);
+    var eb = Mb(1400);
 
-    function Fd() {
-      var dd, Od;
-      return null !== (dd = null === (Od = screen.orientation) || void 0 === Od ? void 0 : Od.type) && void 0 !== dd ? dd : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Hb() {
+      var bb, wb;
+      return null !== (bb = null === (wb = screen.orientation) || void 0 === wb ? void 0 : wb.type) && void 0 !== bb ? bb : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const Rd = new class {
+    const pb = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && Fd() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Hb() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = Fd(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, Wd.rH)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Hb(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, eb.mE)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -509,131 +509,131 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const dd of this.resizers) dd()
+            for (const bb of this.resizers) bb()
           }
         }), 1e3)
       }
-      heldSizer(dd) {
-        let Od = !1;
+      heldSizer(bb) {
+        let wb = !1;
         return () => {
-          if (Od && this.isHeld()) return null;
-          const md = dd();
-          return Od ||= null !== md, md
+          if (wb && this.isHeld()) return null;
+          const Mb = bb();
+          return wb ||= null !== Mb, Mb
         }
       }
-      onRelease(dd) {
-        return this.resizers.add(dd), () => {
-          this.resizers.delete(dd)
+      onRelease(bb) {
+        return this.resizers.add(bb), () => {
+          this.resizers.delete(bb)
         }
       }
     }
   },
-  37729: (dd, Od, md) => {
-    function Wd(dd, Od, md) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(dd, Od).getContext("2d", md);
-      const Wd = document.createElement("canvas");
-      return Wd.width = dd, Wd.height = Od, Wd.getContext("2d", md)
+  37455: (bb, wb, Mb) => {
+    function eb(bb, wb, Mb) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(bb, wb).getContext("2d", Mb);
+      const eb = document.createElement("canvas");
+      return eb.width = bb, eb.height = wb, eb.getContext("2d", Mb)
     }
 
-    function Fd(dd, Od) {
-      return dd.getContext("2d", Od)
+    function Hb(bb, wb) {
+      return bb.getContext("2d", wb)
     }
-    md.d(Od, {
-      e: () => Fd,
-      i: () => Wd
+    Mb.d(wb, {
+      d: () => Hb,
+      g: () => eb
     })
   },
-  43152: (dd, Od, md) => {
-    function Wd(dd, Od, md) {
-      return new Promise((Wd => {
-        const Fd = setTimeout((() => {
-            Rd(), Wd(null)
-          }), md),
-          Rd = Od((() => {
-            clearTimeout(Fd);
-            const Od = dd();
-            Wd(null === Od ? null : function(dd) {
-              if (0 === dd.width || 0 === dd.height) return null;
-              const Od = document.createElement("canvas");
-              Od.width = dd.width, Od.height = dd.height;
-              const md = Od.getContext("2d");
-              return md ? (md.drawImage(dd, 0, 0), Od) : null
-            }(Od))
+  42862: (bb, wb, Mb) => {
+    function eb(bb, wb, Mb) {
+      return new Promise((eb => {
+        const Hb = setTimeout((() => {
+            pb(), eb(null)
+          }), Mb),
+          pb = wb((() => {
+            clearTimeout(Hb);
+            const wb = bb();
+            eb(null === wb ? null : function(bb) {
+              if (0 === bb.width || 0 === bb.height) return null;
+              const wb = document.createElement("canvas");
+              wb.width = bb.width, wb.height = bb.height;
+              const Mb = wb.getContext("2d");
+              return Mb ? (Mb.drawImage(bb, 0, 0), wb) : null
+            }(wb))
           }))
       }))
     }
-    md.d(Od, {
-      b: () => Wd
+    Mb.d(wb, {
+      e: () => eb
     })
   },
-  37713: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd
+  37449: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => pb
     });
-    const Wd = 4e5,
-      Fd = 2;
+    const eb = 4e5,
+      Hb = 2;
 
-    function Rd(dd, Od, md) {
-      let [Rd, Xd] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [dd, Od], Kd = Math.min(Number.isFinite(md) && md > 0 ? md : 1, Fd);
-      const hd = Math.max(0, Rd, dd) * Math.max(0, Xd, Od) * Kd * Kd;
-      return hd > Wd && (Kd *= Math.sqrt(Wd / hd)), [Math.max(1, Math.floor(Math.max(0, dd) * Kd)), Math.max(1, Math.floor(Math.max(0, Od) * Kd))]
+    function pb(bb, wb, Mb) {
+      let [pb, Vb] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [bb, wb], gb = Math.min(Number.isFinite(Mb) && Mb > 0 ? Mb : 1, Hb);
+      const lb = Math.max(0, pb, bb) * Math.max(0, Vb, wb) * gb * gb;
+      return lb > eb && (gb *= Math.sqrt(eb / lb)), [Math.max(1, Math.floor(Math.max(0, bb) * gb)), Math.max(1, Math.floor(Math.max(0, wb) * gb))]
     }
   },
-  37755: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => wd,
-      e: () => Bd,
-      i: () => Sd,
-      m: () => sd
+  37471: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Xb,
+      e: () => Rb,
+      h: () => Db,
+      j: () => cb
     });
-    var Wd = md(37763),
-      Fd = md(7874),
-      Rd = md(7953),
-      Xd = md(37765),
-      Kd = md(37772),
-      hd = md(37775),
-      vd = md(8286),
-      Qd = md(8407),
-      td = md(37784),
-      od = md(8587),
-      Nd = md(7723),
-      qd = md(8838),
-      Hd = md(37787),
-      yd = md(37789),
-      bd = md(8874),
-      Td = md(37796),
-      pd = md(37801),
-      Yd = md(405);
-    const gd = {
-        redTeam: Rd.e,
-        blueTeam: yd.d,
-        greenTeam: pd.f,
-        yellowTeam: bd.c,
-        cyanTeam: hd.e,
-        whiteTeam: Nd.faPlus,
-        pinkTeam: Qd.e,
-        grayTeam: td.f,
-        blackTeam: Hd.d,
-        orangeTeam: Td.f,
-        lilacTeam: Xd.h,
-        purpleTeam: od.g,
-        magentaTeam: Kd.h,
-        brownTeam: Wd.g,
-        limeTeam: Fd.faBolt,
-        lightGrayTeam: vd.g,
-        lightBlueTeam: qd.e
+    var eb = Mb(37475),
+      Hb = Mb(8107),
+      pb = Mb(8175),
+      Vb = Mb(37478),
+      gb = Mb(37480),
+      lb = Mb(37486),
+      Lb = Mb(8465),
+      Ib = Mb(8583),
+      Ob = Mb(37490),
+      Ub = Mb(8793),
+      tb = Mb(7982),
+      Cb = Mb(9065),
+      Eb = Mb(37496),
+      Fb = Mb(37503),
+      Bb = Mb(9091),
+      sb = Mb(37507),
+      mb = Mb(37509),
+      hb = Mb(382);
+    const zb = {
+        redTeam: pb.c,
+        blueTeam: Fb.h,
+        greenTeam: mb.e,
+        yellowTeam: Bb.d,
+        cyanTeam: lb.g,
+        whiteTeam: tb.faPlus,
+        pinkTeam: Ib.g,
+        grayTeam: Ob.d,
+        blackTeam: Eb.e,
+        orangeTeam: sb.h,
+        lilacTeam: Vb.d,
+        purpleTeam: Ub.g,
+        magentaTeam: gb.f,
+        brownTeam: eb.f,
+        limeTeam: Hb.faBolt,
+        lightGrayTeam: Lb.e,
+        lightBlueTeam: Cb.d
       },
-      wd = Object.fromEntries(Object.values(gd).map((dd => [Ed(dd), dd])));
+      Xb = Object.fromEntries(Object.values(zb).map((bb => [xb(bb), bb])));
 
-    function Ed(dd) {
-      return `team-${dd.iconName}`
+    function xb(bb) {
+      return `team-${bb.iconName}`
     }
-    const Jd = new Map;
-    for (const [ud, Vd] of Object.entries(gd)) {
-      const dd = Ed(Vd),
-        Od = Yd.E[ud];
-      Od && Jd.set(Od.toLowerCase(), {
-        icon: dd,
+    const jb = new Map;
+    for (const [Yb, Zb] of Object.entries(zb)) {
+      const bb = xb(Zb),
+        wb = hb.O[Yb];
+      wb && jb.set(wb.toLowerCase(), {
+        icon: bb,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -643,94 +643,94 @@ export const modules = {
         visible: !0
       })
     }
-    let Ud = !1;
-    const xd = new Set;
+    let Kb = !1;
+    const rb = new Set;
 
-    function Bd(dd) {
-      if (dd !== Ud) {
-        Ud = dd;
-        for (const dd of xd) dd()
+    function Rb(bb) {
+      if (bb !== Kb) {
+        Kb = bb;
+        for (const bb of rb) bb()
       }
     }
 
-    function Sd(dd) {
-      var Od;
-      return "string" === typeof dd && Ud && null !== (Od = Jd.get(dd.toLowerCase())) && void 0 !== Od ? Od : null
+    function Db(bb) {
+      var wb;
+      return "string" === typeof bb && Kb && null !== (wb = jb.get(bb.toLowerCase())) && void 0 !== wb ? wb : null
     }
 
-    function sd(dd) {
-      return xd.add(dd), () => {
-        xd.delete(dd)
+    function cb(bb) {
+      return rb.add(bb), () => {
+        rb.delete(bb)
       }
     }
   },
-  37837: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Qd,
-      e: () => hd,
-      i: () => Kd,
-      j: () => vd
+  37530: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Ib,
+      f: () => lb,
+      h: () => gb,
+      l: () => Lb
     });
-    var Wd = md(2100);
-    let Fd = null,
-      Rd = 0;
-    const Xd = new Set;
+    var eb = Mb(2150);
+    let Hb = null,
+      pb = 0;
+    const Vb = new Set;
 
-    function Kd() {
-      return Fd
+    function gb() {
+      return Hb
     }
 
-    function hd() {
-      return Rd
+    function lb() {
+      return pb
     }
 
-    function vd(dd) {
-      Fd = dd, Rd++, (0, Wd.d)();
-      for (const Od of Xd) Od()
+    function Lb(bb) {
+      Hb = bb, pb++, (0, eb.d)();
+      for (const wb of Vb) wb()
     }
 
-    function Qd(dd) {
-      Xd.add(dd)
+    function Ib(bb) {
+      Vb.add(bb)
     }
   },
-  37839: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Xd,
-      d: () => Kd
+  37534: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Vb,
+      g: () => gb
     });
-    var Wd = md(37846);
-    let Fd = null,
-      Rd = null;
+    var eb = Mb(37539);
+    let Hb = null,
+      pb = null;
 
-    function Xd() {
-      return Fd ??= md.e(74).then((() => md(43159))).catch((dd => {
-        throw Fd = null, dd
-      })), Fd
+    function Vb() {
+      return Hb ??= Mb.e(74).then((() => Mb(42864))).catch((bb => {
+        throw Hb = null, bb
+      })), Hb
     }
 
-    function Kd() {
-      return Rd ??= Promise.all([Xd(), (0, Wd.e)()]).then((dd => {
-        let [Od] = dd;
-        return Od
-      }), (dd => {
-        throw Rd = null, dd
-      })), Rd
+    function gb() {
+      return pb ??= Promise.all([Vb(), (0, eb.h)()]).then((bb => {
+        let [wb] = bb;
+        return wb
+      }), (bb => {
+        throw pb = null, bb
+      })), pb
     }
   },
-  37746: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => wd
+  37469: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Xb
     });
-    var Wd = md(5134),
-      Fd = md(1322),
-      Rd = md(689),
-      Xd = md(2178),
-      Kd = md(37755),
-      hd = md(37740);
-    const vd = 10,
-      Qd = 3,
-      td = 3,
-      od = [{
+    var eb = Mb(5315),
+      Hb = Mb(1333),
+      pb = Mb(644),
+      Vb = Mb(2228),
+      gb = Mb(37471),
+      lb = Mb(37464);
+    const Lb = 10,
+      Ib = 3,
+      Ob = 3,
+      Ub = [{
         healthFraction: .25,
         colour: "#ff0000"
       }, {
@@ -740,10 +740,10 @@ export const modules = {
         healthFraction: 1,
         colour: "#00ff00"
       }],
-      Nd = 64,
-      qd = 69,
-      Hd = {
-        icon: Xd.e,
+      tb = 64,
+      Cb = 69,
+      Eb = {
+        icon: Vb.c,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -753,187 +753,187 @@ export const modules = {
         visible: !0
       };
 
-    function yd(dd) {
-      return "object" !== typeof dd || null === dd || Array.isArray(dd) ? void 0 : dd
+    function Fb(bb) {
+      return "object" !== typeof bb || null === bb || Array.isArray(bb) ? void 0 : bb
     }
-    const bd = new Set(Wd.e);
+    const Bb = new Set(eb.d);
 
-    function Td(dd, Od) {
-      return "string" === typeof dd ? (0, hd.s)(dd, Od) : Od
-    }
-
-    function pd(dd) {
-      return Td(dd.width, Qd)
+    function sb(bb, wb) {
+      return "string" === typeof bb ? (0, lb.p)(bb, wb) : wb
     }
 
-    function Yd(dd, Od) {
-      var md;
-      const Wd = null !== (md = dd.applyTo) && void 0 !== md ? md : "both";
-      return "both" === Wd || Wd === Od
+    function mb(bb) {
+      return sb(bb.width, Ib)
     }
 
-    function gd(dd) {
-      const Od = pd(dd);
-      return "glow" === dd.style ? Od * td : Math.ceil(Od / 2) + 1
+    function hb(bb, wb) {
+      var Mb;
+      const eb = null !== (Mb = bb.applyTo) && void 0 !== Mb ? Mb : "both";
+      return "both" === eb || eb === wb
     }
 
-    function wd(dd, Od, md) {
-      var Wd, Xd;
-      const Qd = null !== (Wd = yd(dd.info)) && void 0 !== Wd ? Wd : {},
-        wd = "string" === typeof dd.name ? dd.name : "",
-        Ed = Qd.subtitle;
-      if (Array.isArray(Qd.content) && 0 === Qd.content.length && !(Array.isArray(Ed) && Ed.length > 0)) return null;
-      const Jd = "number" === typeof dd.hideNameSeed ? dd.hideNameSeed : null,
-        Ud = "" === wd || !0 === dd.mesh ? wd : (0, Fd.b)(wd, !md.canSeeRealPlayerNames, Jd);
-      if (!Ud && !Qd.content) return null;
-      const xd = "string" === typeof dd.colour ? dd.colour : "default",
-        Bd = Object.hasOwn(Rd.q, xd) ? Rd.q[xd] : void 0,
-        Sd = Qd.content ? (0, hd.i)(Qd.content, hd.c.DEFAULT_FONT_SIZE, md, Bd) : [{
+    function zb(bb) {
+      const wb = mb(bb);
+      return "glow" === bb.style ? wb * Ob : Math.ceil(wb / 2) + 1
+    }
+
+    function Xb(bb, wb, Mb) {
+      var eb, Vb;
+      const Ib = null !== (eb = Fb(bb.info)) && void 0 !== eb ? eb : {},
+        Xb = "string" === typeof bb.name ? bb.name : "",
+        xb = Ib.subtitle;
+      if (Array.isArray(Ib.content) && 0 === Ib.content.length && !(Array.isArray(xb) && xb.length > 0)) return null;
+      const jb = "number" === typeof bb.hideNameSeed ? bb.hideNameSeed : null,
+        Kb = "" === Xb || !0 === bb.mesh ? Xb : (0, Hb.b)(Xb, !Mb.canSeeRealPlayerNames, jb);
+      if (!Kb && !Ib.content) return null;
+      const rb = "string" === typeof bb.colour ? bb.colour : "default",
+        Rb = Object.hasOwn(pb.v, rb) ? pb.v[rb] : void 0,
+        Db = Ib.content ? (0, lb.h)(Ib.content, lb.b.DEFAULT_FONT_SIZE, Mb, Rb) : [{
           kind: "text",
-          text: Ud,
-          size: hd.c.DEFAULT_FONT_SIZE,
-          colour: Bd
+          text: Kb,
+          size: lb.b.DEFAULT_FONT_SIZE,
+          colour: Rb
         }],
-        sd = [],
-        ud = "boolean" === typeof dd.player ? dd.player : Array.isArray(dd.ranks),
-        Vd = ud ? (0, Kd.i)(Qd.backgroundColor) : null;
-      Vd && sd.push({
+        cb = [],
+        Yb = "boolean" === typeof bb.player ? bb.player : Array.isArray(bb.ranks),
+        Zb = Yb ? (0, gb.h)(Ib.backgroundColor) : null;
+      Zb && cb.push({
         kind: "rank",
-        rank: Vd
+        rank: Zb
       });
-      for (const Fd of Array.isArray(dd.ranks) ? dd.ranks : []) {
-        const dd = (0, hd.t)(Fd);
-        null !== dd && void 0 !== dd && dd.nameTag && dd.visible && sd.push({
+      for (const Hb of Array.isArray(bb.ranks) ? bb.ranks : []) {
+        const bb = (0, lb.q)(Hb);
+        null !== bb && void 0 !== bb && bb.nameTag && bb.visible && cb.push({
           kind: "rank",
-          rank: dd
+          rank: bb
         })
       }
-      sd.push(...Sd), ud && "" !== wd && md.isFriend(wd) && sd.push({
+      cb.push(...Db), Yb && "" !== Xb && Mb.isFriend(Xb) && cb.push({
         kind: "rank",
-        rank: Hd
-      }), "number" === typeof dd.UX && sd.push({
+        rank: Eb
+      }), "number" === typeof bb.DV && cb.push({
         kind: "text",
-        text: ` ${dd.UX}m`,
-        size: hd.c.DEFAULT_FONT_SIZE,
+        text: ` ${bb.DV}m`,
+        size: lb.b.DEFAULT_FONT_SIZE,
         colour: "#cef3ff"
       });
-      const Ad = Ed ? (0, hd.i)(Ed, hd.c.DEFAULT_SUBTITLE_FONT_SIZE, md) : null,
-        rd = "string" === typeof Qd.backgroundColor ? Qd.backgroundColor : "#22283b",
-        Gd = "string" === typeof Qd.subtitleBackgroundColor ? Qd.subtitleBackgroundColor : "#1a1e2d",
-        nd = yd(Qd.healthbar),
-        Ld = yd(Qd.border),
-        Pd = Array.isArray(dd.effects) ? dd.effects.filter((dd => "string" === typeof dd && bd.has(dd))) : [],
-        zd = "number" === typeof dd.health ? Math.max(0, Math.min(1, dd.health)) : null,
-        cd = (0, hd.e)(sd, Od, md),
-        jd = (0, hd.e)(null !== Ad && void 0 !== Ad ? Ad : [], Od, md),
-        Dd = {
-          width: hd.c.EFFECT_ICON_SIZE * Pd.length,
-          height: Pd.length > 0 ? hd.c.EFFECT_ICON_SIZE : 0
+      const fb = xb ? (0, lb.h)(xb, lb.b.DEFAULT_SUBTITLE_FONT_SIZE, Mb) : null,
+        Ab = "string" === typeof Ib.backgroundColor ? Ib.backgroundColor : "#22283b",
+        Wb = "string" === typeof Ib.subtitleBackgroundColor ? Ib.subtitleBackgroundColor : "#1a1e2d",
+        Jb = Fb(Ib.healthbar),
+        Sb = Fb(Ib.border),
+        Nb = Array.isArray(bb.effects) ? bb.effects.filter((bb => "string" === typeof bb && Bb.has(bb))) : [],
+        vb = "number" === typeof bb.health ? Math.max(0, Math.min(1, bb.health)) : null,
+        Qb = (0, lb.d)(cb, wb, Mb),
+        Gb = (0, lb.d)(null !== fb && void 0 !== fb ? fb : [], wb, Mb),
+        qb = {
+          width: lb.b.EFFECT_ICON_SIZE * Nb.length,
+          height: Nb.length > 0 ? lb.b.EFFECT_ICON_SIZE : 0
         },
-        ed = Ld && Yd(Ld, "nametag") ? gd(Ld) : 0,
-        Id = Td(null === nd || void 0 === nd ? void 0 : nd.height, vd),
-        ld = Ld && Yd(Ld, "healthbar") ? gd(Ld) : 0,
-        Cd = "never" === (null !== (Xd = null === nd || void 0 === nd ? void 0 : nd.display) && void 0 !== Xd ? Xd : "onDamage") ? 0 : Id + ld,
-        Zd = Math.max(Dd.height, ed),
-        kd = Math.max(hd.c.VERTICAL_PADDING, Cd, ed);
-      let fd = Math.max(cd.width, jd.width, Dd.width);
-      if (Ld) {
-        const dd = gd(Ld) + hd.c.HORIZONTAL_PADDING / 2;
-        fd = Math.max(fd, Math.max(cd.width, jd.width) + hd.c.HORIZONTAL_PADDING + 2 * dd)
+        ab = Sb && hb(Sb, "nametag") ? zb(Sb) : 0,
+        ib = sb(null === Jb || void 0 === Jb ? void 0 : Jb.height, Lb),
+        ub = Sb && hb(Sb, "healthbar") ? zb(Sb) : 0,
+        db = "never" === (null !== (Vb = null === Jb || void 0 === Jb ? void 0 : Jb.display) && void 0 !== Vb ? Vb : "onDamage") ? 0 : ib + ub,
+        Pb = Math.max(qb.height, ab),
+        nb = Math.max(lb.b.VERTICAL_PADDING, db, ab);
+      let yb = Math.max(Qb.width, Gb.width, qb.width);
+      if (Sb) {
+        const bb = zb(Sb) + lb.b.HORIZONTAL_PADDING / 2;
+        yb = Math.max(yb, Math.max(Qb.width, Gb.width) + lb.b.HORIZONTAL_PADDING + 2 * bb)
       }
-      const Md = cd.height + jd.height + Zd + kd,
-        dO = cd.width + hd.c.HORIZONTAL_PADDING,
-        OO = jd.width + hd.c.HORIZONTAL_PADDING,
-        mO = Math.max(dO, OO),
-        WO = (fd - mO) / 2,
-        FO = Math.max(Dd.height, ed);
+      const ob = Qb.height + Gb.height + Pb + nb,
+        Tb = Qb.width + lb.b.HORIZONTAL_PADDING,
+        kb = Gb.width + lb.b.HORIZONTAL_PADDING,
+        bw = Math.max(Tb, kb),
+        ww = (yb - bw) / 2,
+        Mw = Math.max(qb.height, ab);
       return {
-        width: fd,
-        height: Md,
-        draw: dd => {
-          const Od = [];
-          if (dd.fillStyle = rd, dd.fillRect(WO, FO, mO, cd.height), (0, hd.p)(sd, (fd - dO) / 2 + hd.c.HORIZONTAL_PADDING / 2, FO, cd.height, dd, md, Od), Ad) {
-            const Wd = FO + cd.height;
-            dd.fillStyle = Gd, dd.fillRect(WO, Wd, mO, jd.height), (0, hd.p)(Ad, (fd - OO) / 2 + hd.c.HORIZONTAL_PADDING / 2, Wd, jd.height, dd, md, Od)
+        width: yb,
+        height: ob,
+        draw: bb => {
+          const wb = [];
+          if (bb.fillStyle = Ab, bb.fillRect(ww, Mw, bw, Qb.height), (0, lb.m)(cb, (yb - Tb) / 2 + lb.b.HORIZONTAL_PADDING / 2, Mw, Qb.height, bb, Mb, wb), fb) {
+            const eb = Mw + Qb.height;
+            bb.fillStyle = Wb, bb.fillRect(ww, eb, bw, Gb.height), (0, lb.m)(fb, (yb - kb) / 2 + lb.b.HORIZONTAL_PADDING / 2, eb, Gb.height, bb, Mb, wb)
           }
-          let Wd = null;
-          if (null !== zd) {
-            const Od = Md - Id - ld;
-            null !== nd && void 0 !== nd && nd.backgroundColour && (dd.fillStyle = nd.backgroundColour, dd.fillRect(WO, Od, mO, Id)), dd.fillStyle = function(dd, Od) {
-              const md = null === dd || void 0 === dd ? void 0 : dd.foregroundColour;
-              if ("string" === typeof md) return md;
-              const Wd = [...Array.isArray(md) && md.length > 0 ? md : od].sort(((dd, Od) => dd.healthFraction - Od.healthFraction)),
-                Fd = Wd.find((dd => Od <= dd.healthFraction));
-              return (null !== Fd && void 0 !== Fd ? Fd : Wd[Wd.length - 1]).colour
-            }(nd, zd), dd.fillRect(WO, Od, Math.round(mO * zd), Id), Wd = {
-              x: WO,
-              y: Od,
-              width: mO,
-              height: Id
+          let eb = null;
+          if (null !== vb) {
+            const wb = ob - ib - ub;
+            null !== Jb && void 0 !== Jb && Jb.backgroundColour && (bb.fillStyle = Jb.backgroundColour, bb.fillRect(ww, wb, bw, ib)), bb.fillStyle = function(bb, wb) {
+              const Mb = null === bb || void 0 === bb ? void 0 : bb.foregroundColour;
+              if ("string" === typeof Mb) return Mb;
+              const eb = [...Array.isArray(Mb) && Mb.length > 0 ? Mb : Ub].sort(((bb, wb) => bb.healthFraction - wb.healthFraction)),
+                Hb = eb.find((bb => wb <= bb.healthFraction));
+              return (null !== Hb && void 0 !== Hb ? Hb : eb[eb.length - 1]).colour
+            }(Jb, vb), bb.fillRect(ww, wb, Math.round(bw * vb), ib), eb = {
+              x: ww,
+              y: wb,
+              width: bw,
+              height: ib
             }
           }
-          if (Ld) {
-            const Od = [];
-            Yd(Ld, "nametag") && Od.push({
-              x: WO,
-              y: FO,
-              width: mO,
-              height: cd.height + (Ad ? jd.height : 0)
-            }), Wd && Yd(Ld, "healthbar") && Od.push(Wd), Od.length > 0 && function(dd, Od, md) {
-              const Wd = pd(Od),
-                Fd = Wd / 2,
-                Rd = dd => dd.width > 0 && dd.height > 0,
-                Xd = md.map((dd => ({
-                  x: dd.x + Fd,
-                  y: dd.y + Fd,
-                  width: dd.width - Wd,
-                  height: dd.height - Wd
-                }))).filter(Rd);
-              if (0 === Xd.length) return;
-              const Kd = Od => {
-                const md = Od.filter(Rd);
-                if (0 !== md.length) {
-                  dd.beginPath();
-                  for (const Od of md) dd.rect(Od.x, Od.y, Od.width, Od.height);
-                  dd.stroke()
+          if (Sb) {
+            const wb = [];
+            hb(Sb, "nametag") && wb.push({
+              x: ww,
+              y: Mw,
+              width: bw,
+              height: Qb.height + (fb ? Gb.height : 0)
+            }), eb && hb(Sb, "healthbar") && wb.push(eb), wb.length > 0 && function(bb, wb, Mb) {
+              const eb = mb(wb),
+                Hb = eb / 2,
+                pb = bb => bb.width > 0 && bb.height > 0,
+                Vb = Mb.map((bb => ({
+                  x: bb.x + Hb,
+                  y: bb.y + Hb,
+                  width: bb.width - eb,
+                  height: bb.height - eb
+                }))).filter(pb);
+              if (0 === Vb.length) return;
+              const gb = wb => {
+                const Mb = wb.filter(pb);
+                if (0 !== Mb.length) {
+                  bb.beginPath();
+                  for (const wb of Mb) bb.rect(wb.x, wb.y, wb.width, wb.height);
+                  bb.stroke()
                 }
               };
-              if (dd.save(), dd.strokeStyle = Od.colour, dd.lineWidth = Wd, dd.lineJoin = "round", "glow" === Od.style) dd.shadowColor = Od.colour, dd.shadowBlur = Wd * td, Kd(Xd), Kd(Xd);
-              else if ("double" === Od.style) {
-                Kd(Xd);
-                const dd = Wd + 2;
-                Kd(Xd.map((Od => ({
-                  x: Od.x + dd,
-                  y: Od.y + dd,
-                  width: Od.width - 2 * dd,
-                  height: Od.height - 2 * dd
+              if (bb.save(), bb.strokeStyle = wb.colour, bb.lineWidth = eb, bb.lineJoin = "round", "glow" === wb.style) bb.shadowColor = wb.colour, bb.shadowBlur = eb * Ob, gb(Vb), gb(Vb);
+              else if ("double" === wb.style) {
+                gb(Vb);
+                const bb = eb + 2;
+                gb(Vb.map((wb => ({
+                  x: wb.x + bb,
+                  y: wb.y + bb,
+                  width: wb.width - 2 * bb,
+                  height: wb.height - 2 * bb
                 }))))
-              } else Kd(Xd);
-              dd.restore()
-            }(dd, Ld, Od)
-          }(0, hd.k)(Od, dd);
-          for (let Fd = 0; Fd < Pd.length; Fd++) {
-            const Od = md.effectImage(Pd[Fd]);
-            Od && (dd.imageSmoothingEnabled = !1, dd.drawImage(Od, 5 + qd * Fd, 5, Nd, Nd))
+              } else gb(Vb);
+              bb.restore()
+            }(bb, Sb, wb)
+          }(0, lb.j)(wb, bb);
+          for (let Hb = 0; Hb < Nb.length; Hb++) {
+            const wb = Mb.effectImage(Nb[Hb]);
+            wb && (bb.imageSmoothingEnabled = !1, bb.drawImage(wb, 5 + Cb * Hb, 5, tb, tb))
           }
         }
       }
     }
   },
-  37740: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd,
-      e: () => Td,
-      i: () => Nd,
-      k: () => gd,
-      m: () => Yd,
-      p: () => pd,
-      s: () => vd,
-      t: () => td
+  37464: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => pb,
+      d: () => sb,
+      h: () => tb,
+      j: () => zb,
+      k: () => hb,
+      m: () => mb,
+      p: () => Lb,
+      q: () => Ob
     });
-    var Wd = md(689),
-      Fd = md(387);
-    const Rd = {
+    var eb = Mb(644),
+      Hb = Mb(366);
+    const pb = {
         DEFAULT_FONT_SIZE: 47,
         DEFAULT_SUBTITLE_FONT_SIZE: 30,
         HORIZONTAL_PADDING: 30,
@@ -942,496 +942,496 @@ export const modules = {
         LINE_SPACING: 8,
         EFFECT_ICON_SIZE: 70
       },
-      Xd = 41;
+      Vb = 41;
 
-    function Kd(dd) {
-      return `bolder ${dd}px 'Jetbrains Mono'`
+    function gb(bb) {
+      return `bolder ${bb}px 'Jetbrains Mono'`
     }
 
-    function hd(dd) {
-      return "object" === typeof dd && null !== dd
+    function lb(bb) {
+      return "object" === typeof bb && null !== bb
     }
 
-    function vd(dd, Od) {
-      const md = "number" === typeof dd ? dd : "string" === typeof dd ? Number(dd.replace("px", "")) : NaN;
-      return Number.isFinite(md) && md > 0 ? md : Od
+    function Lb(bb, wb) {
+      const Mb = "number" === typeof bb ? bb : "string" === typeof bb ? Number(bb.replace("px", "")) : NaN;
+      return Number.isFinite(Mb) && Mb > 0 ? Mb : wb
     }
 
-    function Qd(dd) {
-      return hd(dd) ? dd : void 0
+    function Ib(bb) {
+      return lb(bb) ? bb : void 0
     }
 
-    function td(dd) {
-      const Od = "number" === typeof dd ? Wd.r[dd] : dd;
-      return "string" === typeof Od && Object.hasOwn(Wd.l, Od) ? Wd.l[Od] : void 0
+    function Ob(bb) {
+      const wb = "number" === typeof bb ? eb.x[bb] : bb;
+      return "string" === typeof wb && Object.hasOwn(eb.l, wb) ? eb.l[wb] : void 0
     }
 
-    function od(dd, Od) {
-      return "string" === typeof dd ? dd : hd(dd) ? "string" === typeof dd.translationKey ? Od.translate(dd.translationKey, dd.params).map((dd => "string" === typeof dd ? dd : dd.icon)).join("") : "string" === typeof dd.entityName ? Od.shownPlayerName(dd.entityName) : "" : void 0 === dd || null === dd ? "" : String(dd)
+    function Ub(bb, wb) {
+      return "string" === typeof bb ? bb : lb(bb) ? "string" === typeof bb.translationKey ? wb.translate(bb.translationKey, bb.params).map((bb => "string" === typeof bb ? bb : bb.icon)).join("") : "string" === typeof bb.entityName ? wb.shownPlayerName(bb.entityName) : "" : void 0 === bb || null === bb ? "" : String(bb)
     }
 
-    function Nd(dd, Od, md, Wd) {
-      if (!Array.isArray(dd)) return [];
-      const Xd = [];
-      for (const qd of dd) {
-        var Kd, td;
-        if (hd(qd) && "chatTag" in qd) {
-          Xd.push({
+    function tb(bb, wb, Mb, eb) {
+      if (!Array.isArray(bb)) return [];
+      const Vb = [];
+      for (const Cb of bb) {
+        var gb, Ob;
+        if (lb(Cb) && "chatTag" in Cb) {
+          Vb.push({
             kind: "rank",
-            rank: qd
+            rank: Cb
           });
           continue
         }
-        if (hd(qd) && "icon" in qd && !("mainRGB" in qd)) {
-          var Nd;
-          Xd.push({
+        if (lb(Cb) && "icon" in Cb && !("mainRGB" in Cb)) {
+          var tb;
+          Vb.push({
             kind: "icon",
-            icon: String(qd.icon),
-            size: vd(null === (Nd = Qd(qd.style)) || void 0 === Nd ? void 0 : Nd.fontSize, Rd.DEFAULT_FONT_SIZE)
+            icon: String(Cb.icon),
+            size: Lb(null === (tb = Ib(Cb.style)) || void 0 === tb ? void 0 : tb.fontSize, pb.DEFAULT_FONT_SIZE)
           });
           continue
         }
-        if (hd(qd) && (0, Fd.wb)(qd)) {
-          Xd.push({
+        if (lb(Cb) && (0, Hb.xb)(Cb)) {
+          Vb.push({
             kind: "text",
             text: "",
-            size: Od,
-            colour: Wd
+            size: wb,
+            colour: eb
           });
           continue
         }
-        let dd, Hd;
-        hd(qd) && (0, Fd.sb)(qd) ? (dd = md.keyBindingText(String(qd.action)), Hd = Qd(qd.style)) : hd(qd) && "str" in qd ? (dd = qd.str, Hd = Qd(qd.style)) : dd = qd;
-        const yd = vd(null === (Kd = Hd) || void 0 === Kd ? void 0 : Kd.fontSize, Od),
-          bd = null !== (td = (0, Fd.Yb)(Hd)) && void 0 !== td ? td : Wd;
-        if (hd(dd) && "string" === typeof dd.translationKey) {
-          const Od = md.translate(dd.translationKey, dd.params);
-          if (Od.some((dd => "string" !== typeof dd))) {
-            for (const dd of Od) Xd.push("string" === typeof dd ? {
+        let bb, Eb;
+        lb(Cb) && (0, Hb.tb)(Cb) ? (bb = Mb.keyBindingText(String(Cb.action)), Eb = Ib(Cb.style)) : lb(Cb) && "str" in Cb ? (bb = Cb.str, Eb = Ib(Cb.style)) : bb = Cb;
+        const Fb = Lb(null === (gb = Eb) || void 0 === gb ? void 0 : gb.fontSize, wb),
+          Bb = null !== (Ob = (0, Hb._b)(Eb)) && void 0 !== Ob ? Ob : eb;
+        if (lb(bb) && "string" === typeof bb.translationKey) {
+          const wb = Mb.translate(bb.translationKey, bb.params);
+          if (wb.some((bb => "string" !== typeof bb))) {
+            for (const bb of wb) Vb.push("string" === typeof bb ? {
               kind: "text",
-              text: dd,
-              size: yd,
-              colour: bd
+              text: bb,
+              size: Fb,
+              colour: Bb
             } : {
               kind: "icon",
-              icon: dd.icon,
-              size: yd
+              icon: bb.icon,
+              size: Fb
             });
             continue
           }
         }
-        Xd.push({
+        Vb.push({
           kind: "text",
-          text: od(dd, md),
-          size: yd,
-          colour: bd
+          text: Ub(bb, Mb),
+          size: Fb,
+          colour: Bb
         })
       }
-      return Xd
+      return Vb
     }
 
-    function qd(dd) {
-      return void 0 !== dd && "rank" !== dd.kind
+    function Cb(bb) {
+      return void 0 !== bb && "rank" !== bb.kind
     }
 
-    function Hd(dd, Od) {
-      const md = qd(dd),
-        Wd = qd(Od);
-      return void 0 === dd && !Wd || !md && void 0 === Od ? 0 : md !== Wd ? .5 * Rd.HORIZONTAL_PADDING : 0
+    function Eb(bb, wb) {
+      const Mb = Cb(bb),
+        eb = Cb(wb);
+      return void 0 === bb && !eb || !Mb && void 0 === wb ? 0 : Mb !== eb ? .5 * pb.HORIZONTAL_PADDING : 0
     }
 
-    function yd(dd) {
-      return "rank" === dd.kind ? Rd.DEFAULT_FONT_SIZE : dd.size
+    function Fb(bb) {
+      return "rank" === bb.kind ? pb.DEFAULT_FONT_SIZE : bb.size
     }
 
-    function bd(dd, Od, md) {
-      return "icon" === dd.kind ? dd.size : "rank" === dd.kind ? function(dd, Od) {
-        const md = Od.rankIcon(dd.rank.icon);
-        return md ? Xd * (md.width / md.height) : Xd
-      }(dd, md) + Rd.HORIZONTAL_PADDING : (md.glyphsShown(dd.text), Od.font = Kd(dd.size), Od.measureText(dd.text).width)
+    function Bb(bb, wb, Mb) {
+      return "icon" === bb.kind ? bb.size : "rank" === bb.kind ? function(bb, wb) {
+        const Mb = wb.rankIcon(bb.rank.icon);
+        return Mb ? Vb * (Mb.width / Mb.height) : Vb
+      }(bb, Mb) + pb.HORIZONTAL_PADDING : (Mb.glyphsShown(bb.text), wb.font = gb(bb.size), wb.measureText(bb.text).width)
     }
 
-    function Td(dd, Od, md) {
-      if (0 === dd.length) return {
+    function sb(bb, wb, Mb) {
+      if (0 === bb.length) return {
         width: 0,
         height: 0,
         sizes: []
       };
-      let Wd = 0;
-      for (const Rd of dd) Wd = Math.max(Wd, yd(Rd));
-      const Fd = [];
-      let Xd = Hd(void 0, dd[0]);
-      for (let Rd = 0; Rd < dd.length; Rd++) {
-        const Wd = Xd;
-        Xd += bd(dd[Rd], Od, md), Xd += Hd(dd[Rd], dd[Rd + 1]), Fd.push({
-          x: Wd,
-          width: Xd - Wd
+      let eb = 0;
+      for (const pb of bb) eb = Math.max(eb, Fb(pb));
+      const Hb = [];
+      let Vb = Eb(void 0, bb[0]);
+      for (let pb = 0; pb < bb.length; pb++) {
+        const eb = Vb;
+        Vb += Bb(bb[pb], wb, Mb), Vb += Eb(bb[pb], bb[pb + 1]), Hb.push({
+          x: eb,
+          width: Vb - eb
         })
       }
       return {
-        width: Xd,
-        height: Wd + Rd.VERTICAL_PADDING,
-        sizes: Fd
+        width: Vb,
+        height: eb + pb.VERTICAL_PADDING,
+        sizes: Hb
       }
     }
 
-    function pd(dd, Od, md, Wd, Fd, Rd, Xd) {
-      Od += Hd(void 0, dd[0]);
-      for (let Kd = 0; Kd < dd.length; Kd++) {
-        const hd = Yd(dd[Kd], Od, md, Wd, Fd, Rd, Xd);
-        Od += 0 === hd ? 0 : hd + Hd(dd[Kd], dd[Kd + 1])
+    function mb(bb, wb, Mb, eb, Hb, pb, Vb) {
+      wb += Eb(void 0, bb[0]);
+      for (let gb = 0; gb < bb.length; gb++) {
+        const lb = hb(bb[gb], wb, Mb, eb, Hb, pb, Vb);
+        wb += 0 === lb ? 0 : lb + Eb(bb[gb], bb[gb + 1])
       }
     }
 
-    function Yd(dd, Od, md, Wd, Fd, hd, vd, Qd) {
-      var td;
-      if ("icon" === dd.kind) {
-        const Wd = hd.iconImage(dd.icon);
-        return Wd && vd.push({
-          image: Wd,
-          x: Od,
-          y: md + Rd.VERTICAL_PADDING / 2,
-          size: dd.size
-        }), dd.size
+    function hb(bb, wb, Mb, eb, Hb, lb, Lb, Ib) {
+      var Ob;
+      if ("icon" === bb.kind) {
+        const eb = lb.iconImage(bb.icon);
+        return eb && Lb.push({
+          image: eb,
+          x: wb,
+          y: Mb + pb.VERTICAL_PADDING / 2,
+          size: bb.size
+        }), bb.size
       }
-      if ("rank" === dd.kind) {
-        const Kd = null !== Qd && void 0 !== Qd ? Qd : bd(dd, Fd, hd);
-        return function(dd, Od, md, Wd, Fd, Kd, hd) {
-          var vd, Qd;
+      if ("rank" === bb.kind) {
+        const gb = null !== Ib && void 0 !== Ib ? Ib : Bb(bb, Hb, lb);
+        return function(bb, wb, Mb, eb, Hb, gb, lb) {
+          var Lb, Ib;
           const {
-            rank: td
-          } = dd;
-          Kd.fillStyle = td.mainRGB, Kd.fillRect(Od, md, Wd, Fd);
-          const od = hd.rankIcon(td.icon);
-          if (!od) return;
-          const Nd = Xd / od.height,
-            qd = Od + (Wd - od.width * Nd) / 2,
-            Hd = md + (Fd - Xd) / 2,
-            yd = new Path2D(od.path),
-            bd = Rd.TEXT_SHADOW_WIDTH,
-            Td = (null === (vd = td.nameTag) || void 0 === vd ? void 0 : vd.iconShadowRGB) || "black";
-          for (const Rd of [-1, 1])
-            for (const dd of [-1, 1]) wd(Kd, yd, qd + bd * Rd, Hd + bd * dd, Nd, Td);
-          wd(Kd, yd, qd, Hd, Nd, (null === (Qd = td.nameTag) || void 0 === Qd ? void 0 : Qd.iconRGB) || "white")
-        }(dd, Od, md, Kd, Wd, Fd, hd), Kd
+            rank: Ob
+          } = bb;
+          gb.fillStyle = Ob.mainRGB, gb.fillRect(wb, Mb, eb, Hb);
+          const Ub = lb.rankIcon(Ob.icon);
+          if (!Ub) return;
+          const tb = Vb / Ub.height,
+            Cb = wb + (eb - Ub.width * tb) / 2,
+            Eb = Mb + (Hb - Vb) / 2,
+            Fb = new Path2D(Ub.path),
+            Bb = pb.TEXT_SHADOW_WIDTH,
+            sb = (null === (Lb = Ob.nameTag) || void 0 === Lb ? void 0 : Lb.iconShadowRGB) || "black";
+          for (const pb of [-1, 1])
+            for (const bb of [-1, 1]) Xb(gb, Fb, Cb + Bb * pb, Eb + Bb * bb, tb, sb);
+          Xb(gb, Fb, Cb, Eb, tb, (null === (Ib = Ob.nameTag) || void 0 === Ib ? void 0 : Ib.iconRGB) || "white")
+        }(bb, wb, Mb, gb, eb, Hb, lb), gb
       }
-      if (0 === dd.text.length) return 0;
-      const od = Kd(dd.size);
-      Fd.font = od;
-      const Nd = null !== Qd && void 0 !== Qd ? Qd : Fd.measureText(dd.text).width;
-      return function(dd, Od, md, Wd, Fd, Xd) {
-        const Kd = Rd.TEXT_SHADOW_WIDTH;
-        Xd.font = Wd, Xd.fillStyle = "black";
-        for (const Rd of [-1, 1])
-          for (const Wd of [-1, 1]) Xd.fillText(dd, Od + Kd * Rd, md + Kd * Wd);
-        Xd.fillStyle = Fd, Xd.fillText(dd, Od, md)
-      }(dd.text, Od, md + Wd - Rd.VERTICAL_PADDING + 5, od, null !== (td = dd.colour) && void 0 !== td ? td : "white", Fd), Nd
+      if (0 === bb.text.length) return 0;
+      const Ub = gb(bb.size);
+      Hb.font = Ub;
+      const tb = null !== Ib && void 0 !== Ib ? Ib : Hb.measureText(bb.text).width;
+      return function(bb, wb, Mb, eb, Hb, Vb) {
+        const gb = pb.TEXT_SHADOW_WIDTH;
+        Vb.font = eb, Vb.fillStyle = "black";
+        for (const pb of [-1, 1])
+          for (const eb of [-1, 1]) Vb.fillText(bb, wb + gb * pb, Mb + gb * eb);
+        Vb.fillStyle = Hb, Vb.fillText(bb, wb, Mb)
+      }(bb.text, wb, Mb + eb - pb.VERTICAL_PADDING + 5, Ub, null !== (Ob = bb.colour) && void 0 !== Ob ? Ob : "white", Hb), tb
     }
 
-    function gd(dd, Od) {
+    function zb(bb, wb) {
       for (const {
-          image: md,
-          x: Wd,
-          y: Fd,
-          size: Rd
+          image: Mb,
+          x: eb,
+          y: Hb,
+          size: pb
         }
-        of dd) Od.imageSmoothingEnabled = !1, Od.drawImage(md, Wd, Fd, Rd, Rd)
+        of bb) wb.imageSmoothingEnabled = !1, wb.drawImage(Mb, eb, Hb, pb, pb)
     }
 
-    function wd(dd, Od, md, Wd, Fd, Rd) {
-      dd.save(), dd.translate(md, Wd), dd.scale(Fd, Fd), dd.fillStyle = Rd, dd.fill(Od), dd.restore()
+    function Xb(bb, wb, Mb, eb, Hb, pb) {
+      bb.save(), bb.translate(Mb, eb), bb.scale(Hb, Hb), bb.fillStyle = pb, bb.fill(wb), bb.restore()
     }
   },
-  37829: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => kd,
-      h: () => WO,
-      i: () => ed,
-      j: () => ld,
-      l: () => Cd,
-      n: () => Zd,
-      o: () => XO,
-      r: () => Id,
-      u: () => jd
+  37528: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => nb,
+      e: () => ww,
+      i: () => ab,
+      k: () => ub,
+      n: () => db,
+      r: () => Pb,
+      t: () => Hw,
+      x: () => ib,
+      B: () => Gb
     });
-    var Wd = md(5134),
-      Fd = md(5155),
-      Rd = md(35549),
-      Xd = md(4509),
-      Kd = md(4502),
-      hd = md(1455),
-      vd = md(37729),
-      Qd = md(107),
-      td = md(1315),
-      od = md(37755),
-      Nd = md(37837),
-      qd = md(37839),
-      Hd = md(9278),
-      yd = md(8672),
-      bd = md(8854),
-      Td = md(8980),
-      pd = md(9116),
-      Yd = md(9133);
-    const gd = {
-      youtube: Hd.g,
-      "person-military-pointing": yd.d,
-      sparkle: bd.c,
-      user: Td.i,
-      wrench: pd.h,
-      zap: Yd.f,
-      ...od.d
+    var eb = Mb(5315),
+      Hb = Mb(5331),
+      pb = Mb(35334),
+      Vb = Mb(4659),
+      gb = Mb(4653),
+      lb = Mb(1499),
+      Lb = Mb(37455),
+      Ib = Mb(110),
+      Ob = Mb(1329),
+      Ub = Mb(37471),
+      tb = Mb(37530),
+      Cb = Mb(37534),
+      Eb = Mb(9503),
+      Fb = Mb(8894),
+      Bb = Mb(9076),
+      sb = Mb(9190),
+      mb = Mb(9344),
+      hb = Mb(9364);
+    const zb = {
+      youtube: Eb.i,
+      "person-military-pointing": Fb.f,
+      sparkle: Bb.f,
+      user: sb.e,
+      wrench: mb.g,
+      zap: hb.d,
+      ...Ub.d
     };
 
-    function wd(dd) {
-      const [Od, md, , , Wd] = dd.icon;
+    function Xb(bb) {
+      const [wb, Mb, , , eb] = bb.icon;
       return {
-        width: Od,
-        height: md,
-        path: "string" === typeof Wd ? Wd : Wd.join(" ")
+        width: wb,
+        height: Mb,
+        path: "string" === typeof eb ? eb : eb.join(" ")
       }
     }
-    const Ed = new Map(Object.entries(gd).map((dd => {
-      let [Od, md] = dd;
-      return [Od, wd(md)]
+    const xb = new Map(Object.entries(zb).map((bb => {
+      let [wb, Mb] = bb;
+      return [wb, Xb(Mb)]
     })));
-    let Jd = !1;
-    const Ud = new Set;
-    var xd = md(37851);
-    const Bd = "Jetbrains Mono",
-      Sd = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
-      sd = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
+    let jb = !1;
+    const Kb = new Set;
+    var rb = Mb(37544);
+    const Rb = "Jetbrains Mono",
+      Db = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
+      cb = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
 
-    function ud(dd) {
-      return dd.split(",").map((dd => {
-        const [Od, md = Od] = dd.slice(2).split("-");
-        return [parseInt(Od, 16), parseInt(md, 16)]
+    function Yb(bb) {
+      return bb.split(",").map((bb => {
+        const [wb, Mb = wb] = bb.slice(2).split("-");
+        return [parseInt(wb, 16), parseInt(Mb, 16)]
       }))
     }
-    const Vd = {
-        latin: ud(Sd),
-        rest: ud(sd)
+    const Zb = {
+        latin: Yb(Db),
+        rest: Yb(cb)
       },
-      Ad = new RegExp(`[${Vd.rest.map((dd=>{let[Od,md]=dd;return`\\u{${Od.toString(16)}}-\\u{${md.toString(16)}}`})).join("")}]`, "u");
+      fb = new RegExp(`[${Zb.rest.map((bb=>{let[wb,Mb]=bb;return`\\u{${wb.toString(16)}}-\\u{${Mb.toString(16)}}`})).join("")}]`, "u");
 
-    function rd(dd) {
-      return Od => {
-        console.warn(`[bloxd-wasm-client] the text font's ${dd} file did not load`, Od)
+    function Ab(bb) {
+      return wb => {
+        console.warn(`[bloxd-wasm-client] the text font's ${bb} file did not load`, wb)
       }
     }
-    const Gd = 397,
-      nd = 1,
-      Ld = {
-        translate: dd => [dd],
-        keyBindingText: dd => dd,
+    const Wb = 397,
+      Jb = 1,
+      Sb = {
+        translate: bb => [bb],
+        keyBindingText: bb => bb,
         isFriend: () => !1,
         hiddenNames: {},
         loadsFontRest: !1
       };
-    let Pd = null,
-      zd = 0,
-      cd = "none";
+    let Nb = null,
+      vb = 0,
+      Qb = "none";
 
-    function jd() {
-      return zd
+    function Gb() {
+      return vb
     }
-    const Dd = new Set;
+    const qb = new Set;
 
-    function ed(dd) {
-      return Dd.add(dd), () => {
-        Dd.delete(dd)
+    function ab(bb) {
+      return qb.add(bb), () => {
+        qb.delete(bb)
       }
     }
 
-    function Id() {
-      zd++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? cd = "all" : "none" === cd && (cd = "notBoards");
-      for (const dd of Dd) dd()
-    }(0, od.m)((() => {
-      Id(!1)
-    })), (0, hd.n)((() => {
+    function ib() {
+      vb++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? Qb = "all" : "none" === Qb && (Qb = "notBoards");
+      for (const bb of qb) bb()
+    }(0, Ub.j)((() => {
+      ib(!1)
+    })), (0, lb.p)((() => {
       (function() {
-        const dd = Jd;
-        return Jd = !1, dd
-      })() && Id(!1)
+        const bb = jb;
+        return jb = !1, bb
+      })() && ib(!1)
     }));
-    const ld = new class {
-      constructor(dd) {
-        this.loaded = dd, this.latin = null, this.rest = null, this.restWanted = !1
+    const ub = new class {
+      constructor(bb) {
+        this.loaded = bb, this.latin = null, this.rest = null, this.restWanted = !1
       }
       load() {
         if (null === this.latin) {
-          this.latin = new FontFace(Bd, `url(${(0,xd.d)()}) format("woff2")`, {
-            unicodeRange: Sd
-          }).load().then((dd => {
-            document.fonts.add(dd), this.loaded()
-          }), rd("Latin"));
-          const dd = new FontFace(Bd, `url(${(0,xd.f)()}) format("woff2")`, {
-            unicodeRange: sd,
+          this.latin = new FontFace(Rb, `url(${(0,rb.e)()}) format("woff2")`, {
+            unicodeRange: Db
+          }).load().then((bb => {
+            document.fonts.add(bb), this.loaded()
+          }), Ab("Latin"));
+          const bb = new FontFace(Rb, `url(${(0,rb.f)()}) format("woff2")`, {
+            unicodeRange: cb,
             display: "swap"
           });
-          document.fonts.add(dd), dd.loaded.then((() => {
+          document.fonts.add(bb), bb.loaded.then((() => {
             this.loaded()
-          }), rd("rest")), this.rest = dd, this.restWanted && dd.load()
+          }), Ab("rest")), this.rest = bb, this.restWanted && bb.load()
         }
         return this.latin
       }
       loadRest() {
-        var dd;
-        this.restWanted || (this.restWanted = !0, null === (dd = this.rest) || void 0 === dd || dd.load())
+        var bb;
+        this.restWanted || (this.restWanted = !0, null === (bb = this.rest) || void 0 === bb || bb.load())
       }
-      async untilLoadedFor(dd) {
-        await this.load(), this.loadFor(dd), await document.fonts.load(`16px '${Bd}'`, dd).catch((Od => {
-          console.warn("[bloxd-wasm-client] the text font did not load for", dd, Od)
+      async untilLoadedFor(bb) {
+        await this.load(), this.loadFor(bb), await document.fonts.load(`16px '${Rb}'`, bb).catch((wb => {
+          console.warn("[bloxd-wasm-client] the text font did not load for", bb, wb)
         }))
       }
-      loadFor(dd) {
-        !this.restWanted && Ad.test(dd) && this.loadRest()
+      loadFor(bb) {
+        !this.restWanted && fb.test(bb) && this.loadRest()
       }
-    }(Id);
+    }(ib);
 
-    function Cd(dd) {
-      Object.assign(Ld, dd), Ld.loadsFontRest && ld.loadRest(), Id(!1)
+    function db(bb) {
+      Object.assign(Sb, bb), Sb.loadsFontRest && ub.loadRest(), ib(!1)
     }
 
-    function Zd(dd) {
-      dd !== Pd && (Pd = dd, Id())
+    function Pb(bb) {
+      bb !== Nb && (Nb = bb, ib())
     }
 
-    function kd(dd) {
-      if ("none" === cd || null === dd) return;
-      dd(Gd, "all" === cd ? 0 : nd, new Uint8Array(0)) && (cd = "none")
+    function nb(bb) {
+      if ("none" === Qb || null === bb) return;
+      bb(Wb, "all" === Qb ? 0 : Jb, new Uint8Array(0)) && (Qb = "none")
     }
-    const fd = new Map,
-      Md = new Map;
+    const yb = new Map,
+      ob = new Map;
 
-    function dO(dd, Od, md) {
-      var Wd;
-      const Fd = md ? `${dd}#${md.join(",")}` : dd,
-        Rd = fd.get(Fd);
-      if (Rd) return Rd.image;
-      const Xd = {
-        image: null !== (Wd = Md.get(Fd)) && void 0 !== Wd ? Wd : null
+    function Tb(bb, wb, Mb) {
+      var eb;
+      const Hb = Mb ? `${bb}#${Mb.join(",")}` : bb,
+        pb = yb.get(Hb);
+      if (pb) return pb.image;
+      const Vb = {
+        image: null !== (eb = ob.get(Hb)) && void 0 !== eb ? eb : null
       };
-      return fd.set(Fd, Xd), Od().then((async dd => {
-        if (null === dd) return null;
-        const Od = new Image;
-        Od.crossOrigin = "anonymous", Od.src = dd, await Od.decode();
-        const Wd = await createImageBitmap(Od);
-        if (!md) return Wd;
+      return yb.set(Hb, Vb), wb().then((async bb => {
+        if (null === bb) return null;
+        const wb = new Image;
+        wb.crossOrigin = "anonymous", wb.src = bb, await wb.decode();
+        const eb = await createImageBitmap(wb);
+        if (!Mb) return eb;
         try {
-          return function(dd, Od) {
-            let [md, Wd, Fd] = Od;
-            const Rd = (0, vd.i)(dd.width, dd.height),
+          return function(bb, wb) {
+            let [Mb, eb, Hb] = wb;
+            const pb = (0, Lb.g)(bb.width, bb.height),
               {
-                canvas: Xd
-              } = Rd;
-            return Rd.drawImage(dd, 0, 0), Rd.globalCompositeOperation = "multiply", Rd.fillStyle = `rgb(${md}, ${Wd}, ${Fd})`, Rd.fillRect(0, 0, Xd.width, Xd.height), Rd.globalCompositeOperation = "destination-in", Rd.drawImage(dd, 0, 0), Xd
-          }(Wd, md)
+                canvas: Vb
+              } = pb;
+            return pb.drawImage(bb, 0, 0), pb.globalCompositeOperation = "multiply", pb.fillStyle = `rgb(${Mb}, ${eb}, ${Hb})`, pb.fillRect(0, 0, Vb.width, Vb.height), pb.globalCompositeOperation = "destination-in", pb.drawImage(bb, 0, 0), Vb
+          }(eb, Mb)
         } finally {
-          Wd.close()
+          eb.close()
         }
-      })).then((dd => {
-        fd.get(Fd) === Xd && Md.delete(Fd), dd !== Xd.image && (Xd.image = dd, Id(!1))
-      }), (Od => {
-        console.warn(`[bloxd-wasm-client] text icon ${dd} did not load`, Od), fd.get(Fd) === Xd && (fd.delete(Fd), Md.delete(Fd), null !== Xd.image && Id(!1))
-      })), Xd.image
-    }(0, Nd.c)((() => {
-      Md.clear();
-      for (const [dd, {
-          image: Od
-        }] of fd) null !== Od && Md.set(dd, Od);
-      fd.clear(), Id(!1)
+      })).then((bb => {
+        yb.get(Hb) === Vb && ob.delete(Hb), bb !== Vb.image && (Vb.image = bb, ib(!1))
+      }), (wb => {
+        console.warn(`[bloxd-wasm-client] text icon ${bb} did not load`, wb), yb.get(Hb) === Vb && (yb.delete(Hb), ob.delete(Hb), null !== Vb.image && ib(!1))
+      })), Vb.image
+    }(0, tb.c)((() => {
+      ob.clear();
+      for (const [bb, {
+          image: wb
+        }] of yb) null !== wb && ob.set(bb, wb);
+      yb.clear(), ib(!1)
     }));
-    const OO = new Set(Wd.e),
-      mO = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
+    const kb = new Set(eb.d),
+      bw = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
 
-    function WO() {
-      (0, qd.d)().catch((() => {}))
+    function ww() {
+      (0, Cb.g)().catch((() => {}))
     }
 
-    function FO(dd) {
-      return OO.has(dd) ? dO(`icon:${dd}`, (async () => {
-        var Od, md;
-        return null !== (Od = null === (md = (0, Nd.i)()) || void 0 === md ? void 0 : md.textureUrl(dd)) && void 0 !== Od ? Od : (await (0, qd.b)()).ingameIconUrl(dd)
+    function Mw(bb) {
+      return kb.has(bb) ? Tb(`icon:${bb}`, (async () => {
+        var wb, Mb;
+        return null !== (wb = null === (Mb = (0, tb.h)()) || void 0 === Mb ? void 0 : Mb.textureUrl(bb)) && void 0 !== wb ? wb : (await (0, Cb.c)()).ingameIconUrl(bb)
       })) : null
     }
-    let RO = "unasked";
-    const XO = {
+    let ew = "unasked";
+    const Hw = {
       get canSeeRealPlayerNames() {
-        return Qd.featureFlags.canSeeRealPlayerNames
+        return Ib.featureFlags.canSeeRealPlayerNames
       },
       get canSeePlayerWrittenText() {
-        return Qd.featureFlags.canSeePlayerWrittenText
+        return Ib.featureFlags.canSeePlayerWrittenText
       },
       get localPlayerDbId() {
-        return Pd
+        return Nb
       },
-      shownPlayerName: dd => (0, td.e)(dd, Ld.hiddenNames),
-      translate: (dd, Od) => {
-        const md = "object" === typeof Od && null !== Od ? Od : void 0;
-        return Ld.translate(dd, (0, td.g)(md, Ld.hiddenNames))
+      shownPlayerName: bb => (0, Ob.c)(bb, Sb.hiddenNames),
+      translate: (bb, wb) => {
+        const Mb = "object" === typeof wb && null !== wb ? wb : void 0;
+        return Sb.translate(bb, (0, Ob.g)(Mb, Sb.hiddenNames))
       },
-      keyBindingText: dd => Ld.keyBindingText(dd),
-      isFriend: dd => Ld.isFriend(dd, Ld.hiddenNames),
-      iconImage: function(dd) {
-        if (OO.has(dd)) return FO(dd);
-        if ("unasked" === RO && (RO = "loading", (0, Kd.d)().then((() => {
-            RO = "in", Id(!1)
-          }), (dd => {
-            RO = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", dd)
-          }))), "in" !== RO) return null;
-        const Od = (0, Xd.d)(dd),
-          md = void 0 === Od ? void 0 : (0, Rd.itemTypeNameOf)(Od);
-        if ("Gun" === md) return null;
-        const Wd = (0, Kd.c)(dd),
-          hd = void 0 !== md && mO.has(md);
-        if (hd && void 0 === Wd) return null;
-        const vd = void 0 !== Od && "GrayscaleArmour" === (0, Rd.itemTypeOf)(Od) || Object.hasOwn(Fd.b, dd),
-          Qd = null !== Wd && void 0 !== Wd ? Wd : dd;
-        return dO(hd ? `block:${Qd}` : `item:${Qd}`, (async () => {
-          var dd, Od;
-          const md = (0, Nd.i)(),
-            Wd = await (0, qd.d)();
-          return null !== (dd = null !== (Od = null === md || void 0 === md ? void 0 : md.textureUrl(Qd)) && void 0 !== Od ? Od : Wd.itemSpriteUrl(Qd)) && void 0 !== dd ? dd : hd ? null : Wd.notFoundUrl()
-        }), vd ? (0, Fd.c)(dd) : void 0)
+      keyBindingText: bb => Sb.keyBindingText(bb),
+      isFriend: bb => Sb.isFriend(bb, Sb.hiddenNames),
+      iconImage: function(bb) {
+        if (kb.has(bb)) return Mw(bb);
+        if ("unasked" === ew && (ew = "loading", (0, gb.f)().then((() => {
+            ew = "in", ib(!1)
+          }), (bb => {
+            ew = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", bb)
+          }))), "in" !== ew) return null;
+        const wb = (0, Vb.c)(bb),
+          Mb = void 0 === wb ? void 0 : (0, pb.itemTypeNameOf)(wb);
+        if ("Gun" === Mb) return null;
+        const eb = (0, gb.e)(bb),
+          lb = void 0 !== Mb && bw.has(Mb);
+        if (lb && void 0 === eb) return null;
+        const Lb = void 0 !== wb && "GrayscaleArmour" === (0, pb.itemTypeOf)(wb) || Object.hasOwn(Hb.b, bb),
+          Ib = null !== eb && void 0 !== eb ? eb : bb;
+        return Tb(lb ? `block:${Ib}` : `item:${Ib}`, (async () => {
+          var bb, wb;
+          const Mb = (0, tb.h)(),
+            eb = await (0, Cb.g)();
+          return null !== (bb = null !== (wb = null === Mb || void 0 === Mb ? void 0 : Mb.textureUrl(Ib)) && void 0 !== wb ? wb : eb.itemSpriteUrl(Ib)) && void 0 !== bb ? bb : lb ? null : eb.notFoundUrl()
+        }), Lb ? (0, Hb.c)(bb) : void 0)
       },
-      effectImage: FO,
-      rankIcon: function(dd) {
-        const Od = Ed.get(dd);
-        if (Od) return Od;
-        const md = (0, hd.e)(dd, (0, hd.k)(dd));
-        if (!md) return (0, hd.h)("brands") && (0, hd.h)("solid") ? Ud.has(dd) || (Ud.add(dd), console.warn(`[bloxd-wasm-client] unknown rank icon "${dd}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : Jd = !0, null;
-        const Wd = wd(md);
-        return Ed.set(dd, Wd), Wd
+      effectImage: Mw,
+      rankIcon: function(bb) {
+        const wb = xb.get(bb);
+        if (wb) return wb;
+        const Mb = (0, lb.f)(bb, (0, lb.j)(bb));
+        if (!Mb) return (0, lb.i)("brands") && (0, lb.i)("solid") ? Kb.has(bb) || (Kb.add(bb), console.warn(`[bloxd-wasm-client] unknown rank icon "${bb}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : jb = !0, null;
+        const eb = Xb(Mb);
+        return xb.set(bb, eb), eb
       },
-      glyphsShown: dd => {
-        ld.loadFor(dd)
+      glyphsShown: bb => {
+        ub.loadFor(bb)
       }
     }
   },
-  37851: (dd, Od, md) => {
-    function Wd() {
-      return md(37857)
+  37544: (bb, wb, Mb) => {
+    function eb() {
+      return Mb(37546)
     }
 
-    function Fd() {
-      return md(37866)
+    function Hb() {
+      return Mb(37550)
     }
 
-    function Rd(dd) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(dd)
+    function pb(bb) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(bb)
     }
-    md.d(Od, {
-      b: () => Rd,
-      d: () => Wd,
-      f: () => Fd
+    Mb.d(wb, {
+      b: () => pb,
+      e: () => eb,
+      f: () => Hb
     })
   },
-  37857: (dd, Od, md) => {
-    dd.exports = md.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  37546: (bb, wb, Mb) => {
+    bb.exports = Mb.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  37866: (dd, Od, md) => {
-    dd.exports = md.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  37550: (bb, wb, Mb) => {
+    bb.exports = Mb.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

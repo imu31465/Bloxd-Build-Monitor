@@ -1,56 +1,56 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  38259: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Xd,
-      g: () => Fd,
-      h: () => Rd
+  37923: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Vb,
+      e: () => Hb,
+      i: () => pb
     });
-    var Wd = md(66);
+    var eb = Mb(64);
 
-    function Fd(dd) {
-      return Kd(dd, hd)
+    function Hb(bb) {
+      return gb(bb, lb)
     }
 
-    function Rd(dd) {
-      return Kd(dd, vd)
+    function pb(bb) {
+      return gb(bb, Lb)
     }
 
-    function Xd(dd) {
-      return `${Math.floor(dd/60)}:${String(dd%60).padStart(2,"0")}`
+    function Vb(bb) {
+      return `${Math.floor(bb/60)}:${String(bb%60).padStart(2,"0")}`
     }
 
-    function Kd(dd, Od) {
-      const [, md] = (0, Wd.useState)(null);
-      return (0, Wd.useEffect)((() => {
-        if (0 === dd) return;
-        const Wd = window.setInterval((() => {
-          const Wd = Od(dd);
-          md((Od => (null === Od || void 0 === Od ? void 0 : Od.endsAt) === dd && Od.value === Wd ? Od : {
-            endsAt: dd,
-            value: Wd
+    function gb(bb, wb) {
+      const [, Mb] = (0, eb.useState)(null);
+      return (0, eb.useEffect)((() => {
+        if (0 === bb) return;
+        const eb = window.setInterval((() => {
+          const eb = wb(bb);
+          Mb((wb => (null === wb || void 0 === wb ? void 0 : wb.endsAt) === bb && wb.value === eb ? wb : {
+            endsAt: bb,
+            value: eb
           }))
         }), 250);
         return () => {
-          window.clearInterval(Wd)
+          window.clearInterval(eb)
         }
-      }), [dd, Od]), Od(dd)
+      }), [bb, wb]), wb(bb)
     }
 
-    function hd(dd) {
-      return (dd - performance.now()) / 1e3
+    function lb(bb) {
+      return (bb - performance.now()) / 1e3
     }
 
-    function vd(dd) {
-      return Math.max(0, Math.ceil(hd(dd)))
+    function Lb(bb) {
+      return Math.max(0, Math.ceil(lb(bb)))
     }
   },
-  38298: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Fd
+  37952: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Hb
     });
-    const Wd = [{
+    const eb = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -67,79 +67,79 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function Fd(dd, Od, md) {
-      const Fd = Math.abs(dd - Od),
-        Rd = Date.now() - md;
-      for (const Xd of Wd)
-        if (dd < Xd.maxDist) return Fd >= Xd.hardUpdateDist || Rd > Xd.timeBetweenSoftChecks && Fd >= Xd.softUpdateDist;
+    function Hb(bb, wb, Mb) {
+      const Hb = Math.abs(bb - wb),
+        pb = Date.now() - Mb;
+      for (const Vb of eb)
+        if (bb < Vb.maxDist) return Hb >= Vb.hardUpdateDist || pb > Vb.timeBetweenSoftChecks && Hb >= Vb.softUpdateDist;
       return !1
     }
   },
-  40023: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Xd,
-      d: () => Kd
+  39714: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Vb,
+      f: () => gb
     });
-    var Wd = md(405),
-      Fd = md(35549),
-      Rd = md(4509);
+    var eb = Mb(382),
+      Hb = Mb(35334),
+      pb = Mb(4659);
 
-    function Xd(dd) {
-      const Od = (0, Rd.d)(dd);
-      return (0, Wd.Kb)(dd, void 0 === Od ? void 0 : (0, Fd.displayNameOf)(Od))
+    function Vb(bb) {
+      const wb = (0, pb.c)(bb);
+      return (0, eb._b)(bb, void 0 === wb ? void 0 : (0, Hb.displayNameOf)(wb))
     }
 
-    function Kd(dd, Od) {
-      return dd(Xd(Od))
+    function gb(bb, wb) {
+      return bb(Vb(wb))
     }
   },
-  40026: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      d: () => Kd,
-      g: () => Xd
+  39721: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => pb,
+      h: () => gb,
+      l: () => Vb
     });
-    var Wd = md(3505);
-    const Fd = "(max-height: 420px), (max-width: 650px)";
+    var eb = Mb(3639);
+    const Hb = "(max-height: 420px), (max-width: 650px)";
 
-    function Rd() {
-      return (0, Wd.d)(Fd)
+    function pb() {
+      return (0, eb.c)(Hb)
     }
 
-    function Xd(dd) {
-      return (0, Wd.j)(Fd, dd)
+    function Vb(bb) {
+      return (0, eb.g)(Hb, bb)
     }
 
-    function Kd() {
-      return (0, Wd.f)(Fd)
+    function gb() {
+      return (0, eb.e)(Hb)
     }
   },
-  40028: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Xd,
-      h: () => Rd
+  39723: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Vb,
+      f: () => pb
     });
-    const Wd = new WeakMap;
+    const eb = new WeakMap;
 
-    function Fd(dd) {
-      let Od = Wd.get(dd);
-      return Od || (Od = {
-        hidden: dd.hidden,
+    function Hb(bb) {
+      let wb = eb.get(bb);
+      return wb || (wb = {
+        hidden: bb.hidden,
         x: NaN,
         y: NaN
-      }, Wd.set(dd, Od)), Od
+      }, eb.set(bb, wb)), wb
     }
 
-    function Rd(dd, Od) {
-      const md = Fd(dd);
-      md.hidden !== Od && (md.hidden = Od, dd.hidden = Od)
+    function pb(bb, wb) {
+      const Mb = Hb(bb);
+      Mb.hidden !== wb && (Mb.hidden = wb, bb.hidden = wb)
     }
 
-    function Xd(dd, Od, md) {
-      const Wd = Fd(dd);
-      Wd.x === Od && Wd.y === md || (Wd.x = Od, Wd.y = md, dd.style.translate = `${Od}vw ${md}vh`)
+    function Vb(bb, wb, Mb) {
+      const eb = Hb(bb);
+      eb.x === wb && eb.y === Mb || (eb.x = wb, eb.y = Mb, bb.style.translate = `${wb}vw ${Mb}vh`)
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

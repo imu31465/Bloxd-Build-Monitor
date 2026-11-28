@@ -1,113 +1,113 @@
 export const id = 133;
 export const ids = [132, 133];
 export const modules = {
-  5889: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Fd
+  6039: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Hb
     });
-    var Wd = md(1253);
-    async function Fd(dd) {
-      const Od = await fetch(`${Wd.clientSideServerUrls.s3Url}/${dd}`, {
+    var eb = Mb(1271);
+    async function Hb(bb) {
+      const wb = await fetch(`${eb.clientSideServerUrls.s3Url}/${bb}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === Od.status || 403 === Od.status) return null;
-      if (!Od.ok) throw new Error(`Failed to download the texture pack (${Od.status})`);
-      return await Od.json()
+      if (404 === wb.status || 403 === wb.status) return null;
+      if (!wb.ok) throw new Error(`Failed to download the texture pack (${wb.status})`);
+      return await wb.json()
     }
   },
-  42999: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      gamePackSource: () => Rd
+  42721: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      gamePackSource: () => pb
     });
-    var Wd = md(5889),
-      Fd = md(1627);
+    var eb = Mb(6039),
+      Hb = Mb(1677);
 
-    function Rd(dd) {
+    function pb(bb) {
       return {
-        packKey: async Od => (await Fd.e.getGame(dd, Od, !0)).customTexturePackKey,
-        fetchPack: Wd.b
+        packKey: async wb => (await Hb.e.getGame(bb, wb, !0)).customTexturePackKey,
+        fetchPack: eb.e
       }
     }
   },
-  55071: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      fetchGuestContext: () => od,
-      guestJoinTarget: () => pd,
-      guestJoinWithPack: () => qd,
-      guestPackForGame: () => Nd,
-      invalidateGuestTrafficCode: () => Td
+  54873: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      fetchGuestContext: () => Ub,
+      guestJoinTarget: () => mb,
+      guestJoinWithPack: () => Cb,
+      guestPackForGame: () => tb,
+      invalidateGuestTrafficCode: () => sb
     });
-    var Wd = md(1253),
-      Fd = md(1627),
-      Rd = md(107),
-      Xd = md(38074),
-      Kd = md(1189),
-      hd = md(42709),
-      vd = md(42999),
-      Qd = md(42835);
+    var eb = Mb(1271),
+      Hb = Mb(1677),
+      pb = Mb(110),
+      Vb = Mb(37746),
+      gb = Mb(1186),
+      lb = Mb(42434),
+      Lb = Mb(42721),
+      Ib = Mb(42538);
 
-    function td() {
-      if (Rd.featureFlags.useTurnstile) throw new hd.TurnstilePageError
+    function Ob() {
+      if (pb.featureFlags.useTurnstile) throw new lb.TurnstilePageError
     }
 
-    function od() {
-      return (0, Kd.fetchAnonymousUserContext)(!0).catch((dd => (console.warn("the guest context didn't load", dd), null)))
+    function Ub() {
+      return (0, gb.fetchAnonymousUserContext)(!0).catch((bb => (console.warn("the guest context didn't load", bb), null)))
     }
-    async function Nd(dd, Od, md, Wd) {
+    async function tb(bb, wb, Mb, eb) {
       try {
-        const Fd = await md;
-        if (null === Fd) return void console.warn(`the texture pack step for ${dd} has no guest context: the pack in play stays`);
-        await Od.packForGame(dd, (0, vd.gamePackSource)(Fd), Wd)
-      } catch (Fd) {
-        console.warn(`the texture pack step for ${dd} failed: the pack in play stays`, Fd)
+        const Hb = await Mb;
+        if (null === Hb) return void console.warn(`the texture pack step for ${bb} has no guest context: the pack in play stays`);
+        await wb.packForGame(bb, (0, Lb.gamePackSource)(Hb), eb)
+      } catch (Hb) {
+        console.warn(`the texture pack step for ${bb} failed: the pack in play stays`, Hb)
       }
     }
-    async function qd(dd, Od, md, Wd) {
-      td();
-      const Fd = od();
-      return await md(((Od, md) => Nd(dd, Od, Fd, md))), pd(dd, Od, Wd(), await Fd)
+    async function Cb(bb, wb, Mb, eb) {
+      Ob();
+      const Hb = Ub();
+      return await Mb(((wb, Mb) => tb(bb, wb, Hb, Mb))), mb(bb, wb, eb(), await Hb)
     }
-    let Hd = null,
-      yd = null;
-    async function bd() {
-      if ((null === Hd || Hd.hasExpired()) && (yd ??= (0, Kd.fetchAnonymousUserContext)(!0).then((dd => {
-          Hd = dd
+    let Eb = null,
+      Fb = null;
+    async function Bb() {
+      if ((null === Eb || Eb.hasExpired()) && (Fb ??= (0, gb.fetchAnonymousUserContext)(!0).then((bb => {
+          Eb = bb
         })).finally((() => {
-          yd = null
-        })), await yd), null === Hd) throw new Error("no guest context to post as");
-      return Hd.getMetricsCookies()
+          Fb = null
+        })), await Fb), null === Eb) throw new Error("no guest context to post as");
+      return Eb.getMetricsCookies()
     }
-    async function Td() {
-      var dd;
-      await (null === (dd = Hd) || void 0 === dd ? void 0 : dd.invalidateTrafficCode())
+    async function sb() {
+      var bb;
+      await (null === (bb = Eb) || void 0 === bb ? void 0 : bb.invalidateTrafficCode())
     }
-    async function pd(dd, Od, md) {
-      let Rd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      td();
-      const hd = null !== Rd && void 0 !== Rd ? Rd : await (0, Kd.fetchAnonymousUserContext)(!0);
-      if (Hd = hd, hd.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const vd = await Fd.e.matchmakePlayer(hd, Od, dd, (0, Xd.d)()),
-        od = performance.now();
-      if (!("gameServerHost" in vd)) throw new Error(`matchmaking refused: ${vd.failReason}`);
-      const Nd = Wd.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(vd.gameServerHost);
-      if (Nd.isError()) throw new Error(`no socket URL for ${vd.gameServerHost}: ${Nd.asError().message}`);
-      const qd = {
-        endpoint: Nd.getValue(),
-        gameNameWithVariation: vd.gameNameWithVariation,
-        lobbyName: vd.lobbyName
+    async function mb(bb, wb, Mb) {
+      let pb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      Ob();
+      const lb = null !== pb && void 0 !== pb ? pb : await (0, gb.fetchAnonymousUserContext)(!0);
+      if (Eb = lb, lb.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const Lb = await Hb.e.matchmakePlayer(lb, wb, bb, (0, Vb.e)()),
+        Ub = performance.now();
+      if (!("gameServerHost" in Lb)) throw new Error(`matchmaking refused: ${Lb.failReason}`);
+      const tb = eb.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(Lb.gameServerHost);
+      if (tb.isError()) throw new Error(`no socket URL for ${Lb.gameServerHost}: ${tb.asError().message}`);
+      const Cb = {
+        endpoint: tb.getValue(),
+        gameNameWithVariation: Lb.gameNameWithVariation,
+        lobbyName: Lb.lobbyName
       };
       return {
         target: {
-          ...await (0, Qd.d)(hd, qd, md, !1),
-          postCookies: bd
+          ...await (0, Ib.g)(lb, Cb, Mb, !1),
+          postCookies: Bb
         },
-        matchedAt: od,
-        freshMs: Qd.c
+        matchedAt: Ub,
+        freshMs: Ib.c
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,17 +1,17 @@
 # WASM module: `bloxd_wasm_workers_bg`
 
-> environment **bloxd.io** · build `yteou.5361c997` · analyzed 2026-11-28T13:51:29+09:00
-> source: https://bloxd.io/static/media/bloxd_wasm_workers_bg.90b05c84385377d1ddee.wasm
-> 203,659 bytes (198.9 KB) · sha256 `fffff5148e36b0bb…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **bloxd.io** · build `welxxc.ffac0572` · analyzed 2026-11-28T21:24:40+09:00
+> source: https://bloxd.io/static/media/bloxd_wasm_workers_bg.8e9546dac9305a8173d9.wasm
+> 203,635 bytes (198.9 KB) · sha256 `68ec8fbb485ec5b7…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- size 203,635 → 203,659 bytes (+24)
-- data bytes 10,051 → 10,075
-- name-section module id `d3b6c0adfc28c88b.790` → `515df336a0eff72f.790` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 203,659 → 203,635 bytes (-24)
+- data bytes 10,075 → 10,051
+- name-section module id `515df336a0eff72f.790` → `c2d38ef465151336.790` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/33 names kept (identifier names are randomly assigned per build; compare signatures instead)
-- new embedded strings: `cannot modify the panic hook from a panicking thread`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
-- removed embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `cannot modify the panic hook from a panicking thread|`
+- new embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `cannot modify the panic hook from a panicking thread|`
+- removed embedded strings: `cannot modify the panic hook from a panicking thread`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
 
 ## Overview
 
@@ -22,10 +22,10 @@
 | Code bytes (function bodies) | 192,404 (187.9 KB) |
 | Total local variables | 1,531 |
 | Instructions (scanable bodies) | 95,959 |
-| Data segments / bytes | 9 / 10,075 |
+| Data segments / bytes | 9 / 10,051 |
 | Element segments / entries | 1 / 44 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `515df336a0eff72f.790` |
+| name-section module id | `c2d38ef465151336.790` |
 | Sections | 12 |
 
 ## Sections
@@ -42,7 +42,7 @@
 | 9 | element | 75 | 1 |
 | 12 | datacount | 1 | — |
 | 10 | code | 192,680 | 169 |
-| 11 | data | 10,156 | 9 |
+| 11 | data | 10,132 | 9 |
 | 0 | custom:name | 28 | — |
 
 ## Types
@@ -55,11 +55,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `Mq9P.CaFy` | func | `(i32) -> ()` |
-| 1 | `Mq9P.UC6H` | func | `(i32) -> ()` |
-| 2 | `Mq9P.AAUi` | func | `(i32 i32) -> ()` |
-| 3 | `Mq9P.EFJY` | func | `(i32 i32) -> (i32)` |
-| 4 | `Mq9P.o8zU` | func | `(i32 i32) -> ()` |
+| 0 | `Q9eN.E9Rz` | func | `(i32) -> ()` |
+| 1 | `Q9eN.PId4` | func | `(i32) -> ()` |
+| 2 | `Q9eN.BA8q` | func | `(i32 i32) -> ()` |
+| 3 | `Q9eN.yqeP` | func | `(i32 i32) -> (i32)` |
+| 4 | `Q9eN.GtDV` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -67,39 +67,39 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `aKMs` | func | 126 | `(i32) -> (i32)` |
-| `mLGV` | func | 51 | `() -> (i32)` |
-| `a9e5` | func | 142 | `() -> (i32 i32)` |
-| `y996` | global | 2 | `` |
-| `JdgQ` | func | 119 | `(f64) -> (i32)` |
-| `sCS4` | func | 147 | `() -> (i32)` |
-| `LAKk` | func | 138 | `() -> ()` |
-| `b7c0` | func | 58 | `(i32 i32) -> (i32)` |
-| `Nb5n` | func | 94 | `(i32 i32) -> ()` |
-| `KO2I` | func | 169 | `(i32) -> (i32)` |
-| `oWvf` | func | 131 | `(i32) -> (i32)` |
-| `Wamx` | func | 102 | `() -> (i32)` |
-| `AuoK` | func | 98 | `() -> (i32)` |
-| `eIwZ` | func | 141 | `(i32 i32 i32) -> (i32 i32)` |
-| `ZiLH` | func | 138 | `() -> ()` |
-| `k86Z` | func | 73 | `(i32 i32) -> ()` |
-| `rjqu` | func | 127 | `(i32) -> (i32)` |
-| `K7Fw` | func | 129 | `(i32) -> (i32)` |
-| `FoRz` | func | 139 | `(i32 i32) -> (i32)` |
-| `EdGT` | func | 5 | `(i32 i32) -> (i32)` |
-| `SOKz` | func | 172 | `() -> (i32)` |
-| `RW2S` | func | 16 | `(i32 i32 i32) -> ()` |
-| `bGHf` | func | 128 | `(i32) -> (i32)` |
-| `Zvrt` | func | 40 | `() -> (i32)` |
-| `v2L8` | func | 106 | `(i32 i32) -> (i32)` |
-| `ejIf` | func | 170 | `(i32) -> ()` |
-| `i1hr` | func | 117 | `(i32) -> ()` |
-| `SW6h` | func | 153 | `(i32 i32 i32) -> ()` |
+| `OVLv` | func | 147 | `() -> (i32)` |
+| `x80T` | func | 40 | `() -> (i32)` |
+| `ezFE` | global | 2 | `` |
+| `HDc1` | func | 153 | `(i32 i32 i32) -> ()` |
+| `acwc` | func | 51 | `() -> (i32)` |
+| `vZCM` | func | 102 | `() -> (i32)` |
+| `cWsi` | func | 138 | `() -> ()` |
+| `I5Xz` | func | 141 | `(i32 i32 i32) -> (i32 i32)` |
+| `Szzg` | func | 128 | `(i32) -> (i32)` |
+| `zAee` | func | 73 | `(i32 i32) -> ()` |
+| `WpDr` | func | 138 | `() -> ()` |
+| `SENR` | func | 119 | `(f64) -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `MDP0` | func | 140 | `(i32 i32 i32 i32) -> (i32)` |
-| `J2yV` | global | 1 | `` |
-| `nakn` | func | 114 | `(i32) -> (i32)` |
-| `Mx7o` | func | 130 | `(i32) -> (i32)` |
+| `MSX4` | func | 98 | `() -> (i32)` |
+| `LdM6` | func | 142 | `() -> (i32 i32)` |
+| `hacy` | func | 140 | `(i32 i32 i32 i32) -> (i32)` |
+| `yWUQ` | func | 94 | `(i32 i32) -> ()` |
+| `kmTM` | func | 58 | `(i32 i32) -> (i32)` |
+| `gWJe` | func | 106 | `(i32 i32) -> (i32)` |
+| `um5o` | func | 170 | `(i32) -> ()` |
+| `jelT` | func | 131 | `(i32) -> (i32)` |
+| `NYZn` | func | 126 | `(i32) -> (i32)` |
+| `ICbI` | func | 16 | `(i32 i32 i32) -> ()` |
+| `Giqe` | func | 114 | `(i32) -> (i32)` |
+| `eZxZ` | func | 129 | `(i32) -> (i32)` |
+| `cIkG` | global | 1 | `` |
+| `w7o8` | func | 130 | `(i32) -> (i32)` |
+| `W7QF` | func | 127 | `(i32) -> (i32)` |
+| `Htdu` | func | 169 | `(i32) -> (i32)` |
+| `O6OQ` | func | 139 | `(i32 i32) -> (i32)` |
+| `EyIi` | func | 117 | `(i32) -> ()` |
+| `ciwj` | func | 172 | `() -> (i32)` |
+| `JdlO` | func | 5 | `(i32 i32) -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -107,7 +107,7 @@
 
 - memory 0: min 17 pages · max ∞ · shared=False
 - table 0: funcref · min 45 · max 45
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1059304, `i32` = i32.const 1059520
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1059280, `i32` = i32.const 1059504
 
 ## Functions
 
@@ -172,7 +172,6 @@ Largest functions:
 light borders not of the chunk's sizeface layout direction or diagonal out of rangeruns it does not decodeno runs to decodenull pointer passed to rustrecursive use of an object detected which would le
 a reused light without the lightchunk sizeuniform lighthood runs startborder kindsky seed gridcentre lightcentre light kindkeep bitshood entrystore slotopen sky faceskeyed lightneighbour bitmask
 resumesteerdepenetrationRisechunkHashmeshLightchunkIngestblockEditsmovementTicknetReadnetSendcoreFramereplaySteplightComputebloxd-wasm debug trap
-h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs
 assertion failed: r.len() == att.len() && gb.len() == att.len() && queue.len().is_power_of_two()
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/shared/smallsort.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs
@@ -181,6 +180,7 @@ a formatting trait implementation returned an error when the underlying stream d
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/panicking.rs
 assertion failed: sky.len() == att.len() && queue.len().is_power_of_two() &&
 assertion failed: blk.len() == att.len() && queue.len().is_power_of_two() &&
+/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/string.rs
 assertion failed: l.len() == att.len() && queue.len().is_power_of_two() &&
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/fmt.rs
 {"a":"","b":""}malformed voxel-crunch runschunk size must be non-zero

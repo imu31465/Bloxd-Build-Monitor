@@ -1,29 +1,29 @@
 export const id = 310;
 export const ids = [310];
 export const modules = {
-  43012: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      blankPhotoCode: () => hd,
-      reportBlankPhoto: () => vd
+  42736: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      blankPhotoCode: () => lb,
+      reportBlankPhoto: () => Lb
     });
-    var Wd = md(1916),
-      Fd = md(1361),
-      Rd = md(107),
-      Xd = md(333),
-      Kd = md(5064);
+    var eb = Mb(1987),
+      Hb = Mb(1391),
+      pb = Mb(110),
+      Vb = Mb(330),
+      gb = Mb(5243);
 
-    function hd(dd, Od, md, Wd, Fd) {
-      return `${dd}-${Od}-${null===md?"noloss":md>=Wd?"loss_photo":`loss_${(0,Kd.e)(Wd-md)}`}-${Fd}`
+    function lb(bb, wb, Mb, eb, Hb) {
+      return `${bb}-${wb}-${null===Mb?"noloss":Mb>=eb?"loss_photo":`loss_${(0,gb.i)(eb-Mb)}`}-${Hb}`
     }
 
-    function vd(dd, Od, md, Kd) {
-      var vd, Qd;
-      const td = (0, Rd.getOperatingSystem)(),
-        od = "ios" === td ? `ios_${(0,Xd.d)()}` : td,
-        Nd = hd(null !== (vd = null === (Qd = (0, Fd.V)().gameRender()) || void 0 === Qd ? void 0 : Qd.renderer) && void 0 !== vd ? vd : "unknown", od, Kd, md, Od);
-      (0, Wd.reportClientError)("photo_blank", new Error(`Screenshot mode's photo came out blank ${dd} times on ${(0,Rd.getBrowserName)()}, then ${Od}`), Nd)
+    function Lb(bb, wb, Mb, gb) {
+      var Lb, Ib;
+      const Ob = (0, pb.getOperatingSystem)(),
+        Ub = "ios" === Ob ? `ios_${(0,Vb.c)()}` : Ob,
+        tb = lb(null !== (Lb = null === (Ib = (0, Hb.K)().gameRender()) || void 0 === Ib ? void 0 : Ib.renderer) && void 0 !== Lb ? Lb : "unknown", Ub, gb, Mb, wb);
+      (0, eb.reportClientError)("photo_blank", new Error(`Screenshot mode's photo came out blank ${bb} times on ${(0,pb.getBrowserName)()}, then ${wb}`), tb)
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

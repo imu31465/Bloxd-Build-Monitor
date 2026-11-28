@@ -1,167 +1,167 @@
 export const id = 308;
 export const ids = [308];
 export const modules = {
-  54026: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => yd,
-      h: () => Kd,
-      l: () => Xd,
-      p: () => vd
+  53794: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Fb,
+      f: () => gb,
+      i: () => Vb,
+      m: () => Lb
     });
-    var Wd = md(38736),
-      Fd = md(40298),
-      Rd = md(40293);
+    var eb = Mb(38401),
+      Hb = Mb(40004),
+      pb = Mb(39998);
 
-    function Xd(dd, Od, md, Wd) {
-      const Fd = Rd.s;
-      Od.fill(0), dd.gravity.toArray(Od, Fd.gravity), dd.colorDead.toArray(Od, Fd.colorDead), md[Fd.ramp] = dd.useRampGradients ? 1 : 0;
-      const Xd = dd.getColorGradients(),
-        Kd = od(dd, Xd, "colour", Wd);
-      md[Fd.colorCount] = Kd;
-      for (let Rd = 0; Rd < Kd; Rd++) {
-        var hd;
-        const dd = Xd[Nd(Xd, Rd)];
-        Od[Fd.colorPositions + Rd] = dd.gradient, dd.color1.toArray(Od, Fd.color1 + 4 * Rd), (null !== (hd = dd.color2) && void 0 !== hd ? hd : dd.color1).toArray(Od, Fd.color2 + 4 * Rd)
+    function Vb(bb, wb, Mb, eb) {
+      const Hb = pb.v;
+      wb.fill(0), bb.gravity.toArray(wb, Hb.gravity), bb.colorDead.toArray(wb, Hb.colorDead), Mb[Hb.ramp] = bb.useRampGradients ? 1 : 0;
+      const Vb = bb.getColorGradients(),
+        gb = Ub(bb, Vb, "colour", eb);
+      Mb[Hb.colorCount] = gb;
+      for (let pb = 0; pb < gb; pb++) {
+        var lb;
+        const bb = Vb[tb(Vb, pb)];
+        wb[Hb.colorPositions + pb] = bb.gradient, bb.color1.toArray(wb, Hb.color1 + 4 * pb), (null !== (lb = bb.color2) && void 0 !== lb ? lb : bb.color1).toArray(wb, Hb.color2 + 4 * pb)
       }
-      const vd = dd.getVelocityGradients(),
-        Qd = od(dd, vd, "Gy", Wd);
-      md[Fd.velocityCount] = Qd;
-      for (let Rd = 0; Rd < Qd; Rd++) Td(Od, Fd.Gy + 4 * Rd, vd[Nd(vd, Rd)]);
-      const td = dd.useRampGradients ? dd.getColorRemapGradients() : null,
-        qd = od(dd, td, "colour remap", Wd);
-      md[Fd.remapCount] = qd;
-      for (let Rd = 0; Rd < qd; Rd++) Td(Od, Fd.remap + 4 * Rd, td[Nd(td, Rd)])
+      const Lb = bb.getVelocityGradients(),
+        Ib = Ub(bb, Lb, "UF", eb);
+      Mb[Hb.velocityCount] = Ib;
+      for (let pb = 0; pb < Ib; pb++) sb(wb, Hb.UF + 4 * pb, Lb[tb(Lb, pb)]);
+      const Ob = bb.useRampGradients ? bb.getColorRemapGradients() : null,
+        Cb = Ub(bb, Ob, "colour remap", eb);
+      Mb[Hb.remapCount] = Cb;
+      for (let pb = 0; pb < Cb; pb++) sb(wb, Hb.remap + 4 * pb, Ob[tb(Ob, pb)])
     }
 
-    function Kd() {
+    function gb() {
       return {
         key: [],
-        texels: new Uint8Array(4 * Rd.k)
+        texels: new Uint8Array(4 * pb.k)
       }
     }
-    const hd = [];
+    const lb = [];
 
-    function vd(dd, Od) {
-      return Qd(dd, hd), !bd(hd, Od.key) && (Od.key.length = 0, Od.key.push(...hd), Od.key.length > 0 && function(dd, Od) {
-        for (let md = 0; md < Rd.k; md++) Fd.m.GetCurrentGradient(md / Rd.k, dd, ((dd, Od, md) => {
-          Wd.Color3.LerpToRef(dd.color, Od.color, md, td)
-        })), Od[4 * md] = 255 * td.r, Od[4 * md + 1] = 255 * td.g, Od[4 * md + 2] = 255 * td.b, Od[4 * md + 3] = 255
-      }(dd.getRampGradients(), Od.texels), !0)
+    function Lb(bb, wb) {
+      return Ib(bb, lb), !Bb(lb, wb.key) && (wb.key.length = 0, wb.key.push(...lb), wb.key.length > 0 && function(bb, wb) {
+        for (let Mb = 0; Mb < pb.k; Mb++) Hb.j.GetCurrentGradient(Mb / pb.k, bb, ((bb, wb, Mb) => {
+          eb.Color3.LerpToRef(bb.color, wb.color, Mb, Ob)
+        })), wb[4 * Mb] = 255 * Ob.r, wb[4 * Mb + 1] = 255 * Ob.g, wb[4 * Mb + 2] = 255 * Ob.b, wb[4 * Mb + 3] = 255
+      }(bb.getRampGradients(), wb.texels), !0)
     }
 
-    function Qd(dd, Od) {
-      Od.length = 0;
-      const md = dd.useRampGradients ? dd.getRampGradients() : null;
-      if (null !== md && void 0 !== md && md.length) {
-        Od.push(md.length);
-        for (const dd of md) Od.push(dd.gradient, dd.color.r, dd.color.g, dd.color.b)
+    function Ib(bb, wb) {
+      wb.length = 0;
+      const Mb = bb.useRampGradients ? bb.getRampGradients() : null;
+      if (null !== Mb && void 0 !== Mb && Mb.length) {
+        wb.push(Mb.length);
+        for (const bb of Mb) wb.push(bb.gradient, bb.color.r, bb.color.g, bb.color.b)
       }
     }
-    const td = new Wd.Color3;
+    const Ob = new eb.Color3;
 
-    function od(dd, Od, md, Wd) {
-      return Od ? Od.length > Rd.b ? (Wd(`particleStops:${md}`, `GPU particles use the first 2 and last ${Rd.b-2} of more than ${Rd.b} ${md} gradient stops (${dd.name})`), Rd.b) : Od.length : 0
+    function Ub(bb, wb, Mb, eb) {
+      return wb ? wb.length > pb.d ? (eb(`particleStops:${Mb}`, `GPU particles use the first 2 and last ${pb.d-2} of more than ${pb.d} ${Mb} gradient stops (${bb.name})`), pb.d) : wb.length : 0
     }
 
-    function Nd(dd, Od) {
-      return Od < 2 || dd.length <= Rd.b ? Od : dd.length - Rd.b + Od
+    function tb(bb, wb) {
+      return wb < 2 || bb.length <= pb.d ? wb : bb.length - pb.d + wb
     }
-    const qd = new Float32Array(Rd.m),
-      Hd = new Uint32Array(qd.buffer);
+    const Cb = new Float32Array(pb.r),
+      Eb = new Uint32Array(Cb.buffer);
 
-    function yd(dd, Od, md) {
-      return Xd(dd, qd, Hd, md), Od && bd(Hd, Od) ? null : Hd.slice()
+    function Fb(bb, wb, Mb) {
+      return Vb(bb, Cb, Eb, Mb), wb && Bb(Eb, wb) ? null : Eb.slice()
     }
 
-    function bd(dd, Od) {
-      if (dd.length !== Od.length) return !1;
-      for (let md = 0; md < dd.length; md++)
-        if (dd[md] !== Od[md]) return !1;
+    function Bb(bb, wb) {
+      if (bb.length !== wb.length) return !1;
+      for (let Mb = 0; Mb < bb.length; Mb++)
+        if (bb[Mb] !== wb[Mb]) return !1;
       return !0
     }
 
-    function Td(dd, Od, md) {
-      var Wd;
-      dd[Od] = md.gradient, dd[Od + 1] = md.factor1, dd[Od + 2] = null !== (Wd = md.factor2) && void 0 !== Wd ? Wd : md.factor1
+    function sb(bb, wb, Mb) {
+      var eb;
+      bb[wb] = Mb.gradient, bb[wb + 1] = Mb.factor1, bb[wb + 2] = null !== (eb = Mb.factor2) && void 0 !== eb ? eb : Mb.factor1
     }
   },
-  43115: (dd, Od, md) => {
-    function Wd(dd, Od, md) {
-      const Wd = Od * Od * 4,
-        Fd = dd[0].layers,
-        Rd = Fd * (dd.length - 1) + dd[dd.length - 1].layers,
-        Xd = new Uint8Array(Rd * Wd);
-      dd.forEach(((Od, md) => {
-        const Rd = md + 1 < dd.length ? Math.min(Od.layers, Fd) : Od.layers;
-        Xd.set(new Uint8Array(Od.pixels.buffer, Od.pixels.byteOffset, Rd * Wd), md * Fd * Wd)
+  42829: (bb, wb, Mb) => {
+    function eb(bb, wb, Mb) {
+      const eb = wb * wb * 4,
+        Hb = bb[0].layers,
+        pb = Hb * (bb.length - 1) + bb[bb.length - 1].layers,
+        Vb = new Uint8Array(pb * eb);
+      bb.forEach(((wb, Mb) => {
+        const pb = Mb + 1 < bb.length ? Math.min(wb.layers, Hb) : wb.layers;
+        Vb.set(new Uint8Array(wb.pixels.buffer, wb.pixels.byteOffset, pb * eb), Mb * Hb * eb)
       }));
-      const Kd = Math.max(1, Math.min(Rd, md || Rd));
-      if (Kd === Rd) return [{
-        pixels: Xd,
-        layers: Rd
+      const gb = Math.max(1, Math.min(pb, Mb || pb));
+      if (gb === pb) return [{
+        pixels: Vb,
+        layers: pb
       }];
-      const hd = [];
-      for (let vd = 0; vd < Rd; vd += Kd) {
-        const dd = Math.min(Rd, vd + Kd);
-        hd.push({
-          pixels: Xd.slice(vd * Wd, dd * Wd),
-          layers: dd - vd
+      const lb = [];
+      for (let Lb = 0; Lb < pb; Lb += gb) {
+        const bb = Math.min(pb, Lb + gb);
+        lb.push({
+          pixels: Vb.slice(Lb * eb, bb * eb),
+          layers: bb - Lb
         })
       }
-      return hd
+      return lb
     }
-    md.d(Od, {
-      d: () => Wd,
-      h: () => Rd
+    Mb.d(wb, {
+      b: () => eb,
+      e: () => pb
     });
-    const Fd = new WeakMap;
+    const Hb = new WeakMap;
 
-    function Rd(dd, Od, md) {
-      var Wd, Rd;
-      const Xd = null !== (Wd = Fd.get(dd)) && void 0 !== Wd ? Wd : new Map;
-      Fd.set(dd, Xd);
-      const Kd = null !== (Rd = Xd.get(Od[0])) && void 0 !== Rd ? Rd : [];
-      Xd.set(Od[0], Kd);
-      const hd = Kd.find((dd => dd.urls.length === Od.length && dd.urls.every(((dd, md) => dd === Od[md]))));
-      if (hd) return hd.built;
-      const vd = {
-        urls: [...Od],
-        built: md()
+    function pb(bb, wb, Mb) {
+      var eb, pb;
+      const Vb = null !== (eb = Hb.get(bb)) && void 0 !== eb ? eb : new Map;
+      Hb.set(bb, Vb);
+      const gb = null !== (pb = Vb.get(wb[0])) && void 0 !== pb ? pb : [];
+      Vb.set(wb[0], gb);
+      const lb = gb.find((bb => bb.urls.length === wb.length && bb.urls.every(((bb, Mb) => bb === wb[Mb]))));
+      if (lb) return lb.built;
+      const Lb = {
+        urls: [...wb],
+        built: Mb()
       };
-      return Kd.push(vd), vd.built.catch((() => {
-        Kd.splice(Kd.indexOf(vd), 1)
-      })), vd.built
+      return gb.push(Lb), Lb.built.catch((() => {
+        gb.splice(gb.indexOf(Lb), 1)
+      })), Lb.built
     }
   },
-  54022: (dd, Od, md) => {
-    function Wd() {
-      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const Od = new Set;
-      return (md, Wd) => {
-        Od.has(md) || (Od.add(md), console.warn(dd + Wd))
+  53790: (bb, wb, Mb) => {
+    function eb() {
+      let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const wb = new Set;
+      return (Mb, eb) => {
+        wb.has(Mb) || (wb.add(Mb), console.warn(bb + eb))
       }
     }
-    md.d(Od, {
-      b: () => Wd
+    Mb.d(wb, {
+      d: () => eb
     })
   },
-  54060: (dd, Od, md) => {
-    md.d(Od, {
-      createLiteRendererAsync: () => Lh,
-      liteBabylonBackend: () => zd,
-      setPipelineFailureHook: () => vO
+  53857: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      createLiteRendererAsync: () => Nl,
+      liteBabylonBackend: () => vb,
+      setPipelineFailureHook: () => gw
     });
-    var Wd = md(38736),
-      Fd = md(39065),
-      Rd = md(39459),
-      Xd = md(38788),
-      Kd = md(39466);
-    class hd extends Kd.d {
+    var eb = Mb(38401),
+      Hb = Mb(38743),
+      pb = Mb(39139),
+      Vb = Mb(38462),
+      gb = Mb(39153);
+    class lb extends gb.d {
       constructor() {
-        for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-        super(...Od), this.color = new Wd.Color3(1, 1, 1), this.alpha = 1, this.material = {
+        for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+        super(...wb), this.color = new eb.Color3(1, 1, 1), this.alpha = 1, this.material = {
           name: "colorShader",
-          uniqueId: Od[0].zV().getUniqueId(),
+          uniqueId: wb[0].RJ().getUniqueId(),
           shaderPath: "color",
           fillMode: 4,
           sideOrientation: null,
@@ -175,7 +175,7 @@ export const modules = {
           zOffsetUnits: 0,
           disableColorWrite: !1,
           getClassName: () => "ShaderMaterial",
-          needAlphaBlendingForMesh: dd => dd.visibility < 1 || dd.hasVertexAlpha,
+          needAlphaBlendingForMesh: bb => bb.visibility < 1 || bb.hasVertexAlpha,
           needAlphaTestingForMesh: () => !1,
           dispose: () => {}
         }
@@ -184,46 +184,46 @@ export const modules = {
         return "LinesMesh"
       }
     }
-    const vd = ["VERTEXCOLOR", "VERTEXALPHA", "INSTANCES", "THIN_INSTANCES", "INSTANCESCOLOR", "FOG", "LITE_FRONT_LAYER"],
-      Qd = dd => 1 << vd.indexOf(dd),
-      td = Qd("VERTEXCOLOR"),
-      od = Qd("INSTANCES"),
-      Nd = Qd("THIN_INSTANCES"),
-      qd = Qd("INSTANCESCOLOR"),
-      Hd = Qd("FOG"),
-      yd = Qd("LITE_FRONT_LAYER");
+    const Lb = ["VERTEXCOLOR", "VERTEXALPHA", "INSTANCES", "THIN_INSTANCES", "INSTANCESCOLOR", "FOG", "LITE_FRONT_LAYER"],
+      Ib = bb => 1 << Lb.indexOf(bb),
+      Ob = Ib("VERTEXCOLOR"),
+      Ub = Ib("INSTANCES"),
+      tb = Ib("THIN_INSTANCES"),
+      Cb = Ib("INSTANCESCOLOR"),
+      Eb = Ib("FOG"),
+      Fb = Ib("LITE_FRONT_LAYER");
 
-    function bd(dd, Od, md, Wd) {
-      let Fd = 0;
-      return dd.isVerticesDataPresent("color") && (Fd |= td), "none" !== Od && (Fd |= od), "thin" === Od && (Fd |= Nd, dd.isVerticesDataPresent("instanceColor") && (Fd |= qd)), Wd.fogEnabled && dd.applyFog && 0 !== Wd.fogMode && (Fd |= Hd), md >= 1 && (Fd |= yd), Fd
+    function Bb(bb, wb, Mb, eb) {
+      let Hb = 0;
+      return bb.isVerticesDataPresent("color") && (Hb |= Ob), "none" !== wb && (Hb |= Ub), "thin" === wb && (Hb |= tb, bb.isVerticesDataPresent("instanceColor") && (Hb |= Cb)), eb.fogEnabled && bb.applyFog && 0 !== eb.fogMode && (Hb |= Eb), Mb >= 1 && (Hb |= Fb), Hb
     }
 
-    function Td(dd, Od) {
-      dd.updateColor4("color", Od.color, Od.alpha)
+    function sb(bb, wb) {
+      bb.updateColor4("color", wb.color, wb.alpha)
     }
-    var pd = md(39391),
-      Yd = md(38877),
-      gd = md(38799),
-      wd = md(38752),
-      Ed = md(39371),
-      Jd = md(39384),
-      Ud = md(38779),
-      xd = md(38782),
-      Bd = md(38794);
-    const Sd = wd.e.GLSL;
-    class sd {
-      constructor(dd, Od) {
-        this.name = dd, this.MH = Od, this.uniqueId = void 0, this.checkReadyOnlyOnce = !1, this._blockDirtyMechanism = !1, this.disposers = [], this.cV = {
-          addOnce: dd => {
-            this.disposers.push(dd)
+    var mb = Mb(39072),
+      hb = Mb(38547),
+      zb = Mb(38473),
+      Xb = Mb(38419),
+      xb = Mb(39056),
+      jb = Mb(39068),
+      Kb = Mb(38449),
+      rb = Mb(38458),
+      Rb = Mb(38468);
+    const Db = Xb.b.GLSL;
+    class cb {
+      constructor(bb, wb) {
+        this.name = bb, this.JE = wb, this.uniqueId = void 0, this.checkReadyOnlyOnce = !1, this._blockDirtyMechanism = !1, this.disposers = [], this.vJ = {
+          addOnce: bb => {
+            this.disposers.push(bb)
           }
-        }, this.uniqueId = Od.getUniqueId()
+        }, this.uniqueId = wb.getUniqueId()
       }
       get isFrozen() {
         return this.checkReadyOnlyOnce
       }
-      zV() {
-        return this.MH
+      RJ() {
+        return this.JE
       }
       getClassName() {
         return "LiteMaterial"
@@ -238,89 +238,89 @@ export const modules = {
       get fillMode() {
         return this.model.fillMode
       }
-      needAlphaBlendingForMesh(dd) {
-        return (0, Ud.T)(this.model, dd.visibility, dd.hasVertexAlpha)
+      needAlphaBlendingForMesh(bb) {
+        return (0, Kb.O)(this.model, bb.visibility, bb.hasVertexAlpha)
       }
-      needAlphaTestingForMesh(dd) {
-        return (0, Ud.W)(this.model, dd.visibility, dd.hasVertexAlpha)
+      needAlphaTestingForMesh(bb) {
+        return (0, Kb.R)(this.model, bb.visibility, bb.hasVertexAlpha)
       }
       dispose() {
-        (0, Yd.j)(this);
-        for (const dd of this.disposers.splice(0)) dd()
+        (0, hb.j)(this);
+        for (const bb of this.disposers.splice(0)) bb()
       }
       get model() {
-        return (0, Ud.db)(this)
+        return (0, Kb.ab)(this)
       }
     }
-    const ud = new WeakSet;
+    const Yb = new WeakSet;
 
-    function Vd(dd) {
-      return ud.has(dd)
+    function Zb(bb) {
+      return Yb.has(bb)
     }
 
-    function Ad(dd) {
-      ud.add(dd)
+    function fb(bb) {
+      Yb.add(bb)
     }
-    const rd = {
-      create: (dd, Od) => ((0, gd.p)(dd, new sd(dd.name, Od)), xd.e.defines()),
+    const Ab = {
+      create: (bb, wb) => ((0, zb.o)(bb, new cb(bb.name, wb)), rb.e.defines()),
       write: () => {},
-      addFeature: (dd, Od) => {
-        const md = dd.mirror;
-        Od.feature === Jd.j && Od.state.dirLightCount > 0 && (dd.disableLighting = !0, (0, Ud.ab)(dd)), "BLOXD_LIGHTING" in Od.defines && (0, Yd.i)(md), Od.feature === Ed.h && ((0, pd.k)(Od.state, Sd), function(dd, Od) {
-          const md = dd.zV().Iq();
+      addFeature: (bb, wb) => {
+        const Mb = bb.mirror;
+        wb.feature === jb.g && wb.state.dirLightCount > 0 && (bb.disableLighting = !0, (0, Kb.Z)(bb)), "BLOXD_LIGHTING" in wb.defines && (0, hb.g)(Mb), wb.feature === xb.i && ((0, mb.g)(wb.state, Db), function(bb, wb) {
+          const Mb = bb.RJ().DC();
           setTimeout((() => {
-            md.atlasArrays(Od.sources).then((md => {
-              (0, pd.e)(dd, Od, md.map((dd => ({
-                atlas: dd,
-                layers: dd.layers
-              }))), md[0].layerWidth, Sd)
-            })).catch((dd => {
-              console.error("Failed to build the atlas's texture arrays", dd)
+            Mb.atlasArrays(wb.sources).then((Mb => {
+              (0, mb.b)(bb, wb, Mb.map((bb => ({
+                atlas: bb,
+                layers: bb.layers
+              }))), Mb[0].layerWidth, Db)
+            })).catch((bb => {
+              console.error("Failed to build the atlas's texture arrays", bb)
             }))
           }))
-        }(md, Od.state))
+        }(Mb, wb.state))
       },
-      texture: (dd, Od, md) => {
+      texture: (bb, wb, Mb) => {
         let {
-          data: Wd,
-          sets: Fd
-        } = md;
-        var Rd;
-        (Ad(dd), Wd) && (dd.uvSet = null !== (Rd = null === Fd || void 0 === Fd ? void 0 : Fd.coordinatesIndex) && void 0 !== Rd ? Rd : 0, (0, gd.$)(dd.matrix, null !== Fd && void 0 !== Fd ? Fd : {}))
+          data: eb,
+          sets: Hb
+        } = Mb;
+        var pb;
+        (fb(bb), eb) && (bb.uvSet = null !== (pb = null === Hb || void 0 === Hb ? void 0 : Hb.coordinatesIndex) && void 0 !== pb ? pb : 0, (0, zb.fb)(bb.matrix, null !== Hb && void 0 !== Hb ? Hb : {}))
       },
-      cube: Ad,
-      canvas: (dd, Od, md) => {
+      cube: fb,
+      canvas: (bb, wb, Mb) => {
         let {
-          width: Wd,
-          height: Fd,
-          mipmaps: Rd,
-          samplingMode: Xd = Bd.g.trilinear,
-          hasAlpha: Kd = !1,
-          wrap: hd = Bd.b.clamp
-        } = md;
-        const vd = dd.Iq().createCanvas(Wd, Fd),
-          Qd = new Bd.h("2d", {
+          width: eb,
+          height: Hb,
+          mipmaps: pb,
+          samplingMode: Vb = Rb.j.trilinear,
+          hasAlpha: gb = !1,
+          wrap: lb = Rb.c.clamp
+        } = Mb;
+        const Lb = bb.DC().createCanvas(eb, Hb),
+          Ib = new Rb.n("2d", {
             kind: "canvas",
-            width: Wd,
-            height: Fd,
-            canvas: vd
+            width: eb,
+            height: Hb,
+            canvas: Lb
           }, {
-            samplingMode: Xd,
-            wrapU: hd,
-            wrapV: hd,
-            noMipmap: !Rd,
+            samplingMode: Vb,
+            wrapU: lb,
+            wrapV: lb,
+            noMipmap: !pb,
             invertY: !0
           });
-        return Qd.hasAlpha = Kd, Ad(Qd), Qd
+        return Ib.hasAlpha = gb, fb(Ib), Ib
       }
     };
-    var Gd = md(38898),
-      nd = md(38660);
-    class Ld {
-      constructor(dd, Od, md) {
-        this.engine = dd, this.clearColor = Od, this.ambientColor = md, this.onBeforeRenderObservable = new nd.c, this.onBeforeCameraRenderObservable = new nd.c, this.onAfterRenderObservable = new nd.c, this.activeCamera = null, this.useRightHandedSystem = !1, this.iblIntensity = 1, this.particlesEnabled = !0, this.meshes = [], this.materials = [], this.textures = [], this.transformNodes = [], this.kE = [], this.frustumPlanes = void 0, this.draw = () => {}, this.frameId = 0, this.animationRatio = 1, this.lastId = 0, this.pending = []
+    var Wb = Mb(38563),
+      Jb = Mb(38318);
+    class Sb {
+      constructor(bb, wb, Mb) {
+        this.engine = bb, this.clearColor = wb, this.ambientColor = Mb, this.onBeforeRenderObservable = new Jb.b, this.onBeforeCameraRenderObservable = new Jb.b, this.onAfterRenderObservable = new Jb.b, this.activeCamera = null, this.useRightHandedSystem = !1, this.iblIntensity = 1, this.particlesEnabled = !0, this.meshes = [], this.materials = [], this.textures = [], this.transformNodes = [], this.kR = [], this.frustumPlanes = void 0, this.draw = () => {}, this.frameId = 0, this.animationRatio = 1, this.lastId = 0, this.pending = []
       }
-      Iq() {
+      DC() {
         return this.engine
       }
       getUniqueId() {
@@ -332,11 +332,11 @@ export const modules = {
       getAnimationRatio() {
         return this.animationRatio
       }
-      addPendingData(dd) {
-        this.pending.push(dd)
+      addPendingData(bb) {
+        this.pending.push(bb)
       }
-      removePendingData(dd) {
-        const Od = this.pending.indexOf(dd); - 1 !== Od && this.pending.splice(Od, 1)
+      removePendingData(bb) {
+        const wb = this.pending.indexOf(bb); - 1 !== wb && this.pending.splice(wb, 1)
       }
       getWaitingItemsCount() {
         return this.pending.length
@@ -352,208 +352,208 @@ export const modules = {
       }
     }
 
-    function Pd() {
+    function Nb() {
       throw new Error("Lite has no WebGL engine, Babylon particles or Babylon picks")
     }
-    const zd = {
-      eWd: Pd,
-      ARd: (dd, Od) => {
-        const md = new Ld(dd.engine, Wd.b.FromArray(Od.clearColor), Wd.Color3.FromArray(Od.ambientColor));
-        (0, Xd.d)(rd, md), dd.MH = md,
-          function(dd, Od) {
-            const md = Object.assign((0, Gd.h)(dd, "camera"), {
+    const vb = {
+      ueb: Nb,
+      Jpb: (bb, wb) => {
+        const Mb = new Sb(bb.engine, eb.c.FromArray(wb.clearColor), eb.Color3.FromArray(wb.ambientColor));
+        (0, Vb.b)(Ab, Mb), bb.JE = Mb,
+          function(bb, wb) {
+            const Mb = Object.assign((0, Wb.f)(bb, "camera"), {
               layerMask: 268435455
             });
-            dd.model.nodes.setWorldSource(md.row, dd.model.view.worldMatrix), dd.camera = Od.activeCamera = md
-          }(dd, md), (0, Fd.e)(dd, ((dd, Od, md) => (0, Rd.h)(dd, Od, md, Kd.d)))
+            bb.model.nodes.setWorldSource(Mb.row, bb.model.view.worldMatrix), bb.camera = wb.activeCamera = Mb
+          }(bb, Mb), (0, Hb.i)(bb, ((bb, wb, Mb) => (0, pb.k)(bb, wb, Mb, gb.d)))
       },
-      sRd: () => {},
+      Zpb: () => {},
       setBabylonFog: () => {},
-      GRd: Pd,
-      zRd: () => {},
-      linesFromArrays: (dd, Od, md) => (0, Rd.h)(dd, Od, md, hd),
-      Oy: () => {},
-      PRd: Pd
+      Npb: Nb,
+      qpb: () => {},
+      linesFromArrays: (bb, wb, Mb) => (0, pb.k)(bb, wb, Mb, lb),
+      SE: () => {},
+      Gpb: Nb
     };
-    var cd = md(54121),
-      jd = md(54134),
-      Dd = md(54144);
-    class ed {
-      constructor(dd) {
+    var Qb = Mb(53922),
+      Gb = Mb(53933),
+      qb = Mb(53941);
+    class ab {
+      constructor(bb) {
         this.deviceLost = void 0, this.lost = !1, this.refusedFrames = 0, this.refused = void 0;
-        const Od = new Promise((dd => {
-          this.refused = dd
+        const wb = new Promise((bb => {
+          this.refused = bb
         }));
-        this.deviceLost = Promise.race([dd, Od]), this.deviceLost.then((() => {
+        this.deviceLost = Promise.race([bb, wb]), this.deviceLost.then((() => {
           this.lost = !0
         }))
       }
       frameDrawn() {
         this.refusedFrames = 0
       }
-      frameFailed(dd) {
-        (function(dd) {
+      frameFailed(bb) {
+        (function(bb) {
           const {
-            name: Od,
-            message: md
-          } = null !== dd && void 0 !== dd ? dd : {};
-          return "InvalidStateError" === Od && "string" === typeof md && md.startsWith("GPUDevice.")
-        })(dd) && (this.refusedFrames++, 3 === this.refusedFrames && this.refused({
+            name: wb,
+            message: Mb
+          } = null !== bb && void 0 !== bb ? bb : {};
+          return "InvalidStateError" === wb && "string" === typeof Mb && Mb.startsWith("GPUDevice.")
+        })(bb) && (this.refusedFrames++, 3 === this.refusedFrames && this.refused({
           reason: "unknown",
-          message: dd.message,
+          message: bb.message,
           framesRefused: !0
         }))
       }
     }
-    var Id = md(43115),
-      ld = md(40307);
+    var ib = Mb(42829),
+      ub = Mb(40009);
 
-    function Cd(dd) {
-      return Math.max(4, 4 * Math.ceil(dd / 4))
+    function db(bb) {
+      return Math.max(4, 4 * Math.ceil(bb / 4))
     }
 
-    function Zd(dd, Od, md, Wd) {
-      const Fd = dd.createBuffer({
-        label: Wd,
-        size: Cd(Od.byteLength),
-        usage: md,
+    function Pb(bb, wb, Mb, eb) {
+      const Hb = bb.createBuffer({
+        label: eb,
+        size: db(wb.byteLength),
+        usage: Mb,
         mappedAtCreation: !0
       });
-      return new Uint8Array(Fd.getMappedRange(), 0, Od.byteLength).set(new Uint8Array(Od.buffer, Od.byteOffset, Od.byteLength)), Fd.unmap(), Fd
+      return new Uint8Array(Hb.getMappedRange(), 0, wb.byteLength).set(new Uint8Array(wb.buffer, wb.byteOffset, wb.byteLength)), Hb.unmap(), Hb
     }
 
-    function kd(dd, Od) {
-      return Math.floor(Math.log2(Math.max(dd, Od))) + 1
+    function nb(bb, wb) {
+      return Math.floor(Math.log2(Math.max(bb, wb))) + 1
     }
 
-    function fd(dd, Od, md, Wd, Fd, Rd) {
-      const Xd = dd.createTexture({
-          label: Rd,
+    function yb(bb, wb, Mb, eb, Hb, pb) {
+      const Vb = bb.createTexture({
+          label: pb,
           size: {
-            width: md,
-            height: Wd,
-            depthOrArrayLayers: Fd
+            width: Mb,
+            height: eb,
+            depthOrArrayLayers: Hb
           },
           format: "rgba8unorm",
-          mipLevelCount: kd(md, Wd),
+          mipLevelCount: nb(Mb, eb),
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         }),
-        Kd = (Od, md, Wd, Rd) => {
-          dd.queue.writeTexture({
-            texture: Xd,
-            mipLevel: md
-          }, Od, {
-            bytesPerRow: 4 * Wd,
-            rowsPerImage: Rd
+        gb = (wb, Mb, eb, pb) => {
+          bb.queue.writeTexture({
+            texture: Vb,
+            mipLevel: Mb
+          }, wb, {
+            bytesPerRow: 4 * eb,
+            rowsPerImage: pb
           }, {
-            width: Wd,
-            height: Rd,
-            depthOrArrayLayers: Fd
+            width: eb,
+            height: pb,
+            depthOrArrayLayers: Hb
           })
         };
-      Kd(Od, 0, md, Wd);
-      let hd = 1;
-      for (const vd of function*(dd, Od, md, Wd) {
-          let Fd = dd,
-            Rd = Od,
-            Xd = md;
-          for (; Rd > 1 || Xd > 1;) {
-            const dd = Math.max(1, Rd >> 1),
-              Od = Math.max(1, Xd >> 1),
-              md = new Uint8Array(dd * Od * Wd * 4),
-              Kd = 4 * Rd;
-            let hd = 0;
-            for (let vd = 0; vd < Wd; vd++) {
-              const Wd = vd * Kd * Xd;
-              for (let vd = 0; vd < Od; vd++) {
-                const Od = Wd + Math.min(2 * vd, Xd - 1) * Kd,
-                  Qd = Wd + Math.min(2 * vd + 1, Xd - 1) * Kd;
-                for (let Wd = 0; Wd < dd; Wd++) {
-                  const dd = 4 * Math.min(2 * Wd, Rd - 1),
-                    Xd = 4 * Math.min(2 * Wd + 1, Rd - 1);
-                  for (let Wd = 0; Wd < 4; Wd++) md[hd++] = Fd[Od + dd + Wd] + Fd[Od + Xd + Wd] + Fd[Qd + dd + Wd] + Fd[Qd + Xd + Wd] + 2 >> 2
+      gb(wb, 0, Mb, eb);
+      let lb = 1;
+      for (const Lb of function*(bb, wb, Mb, eb) {
+          let Hb = bb,
+            pb = wb,
+            Vb = Mb;
+          for (; pb > 1 || Vb > 1;) {
+            const bb = Math.max(1, pb >> 1),
+              wb = Math.max(1, Vb >> 1),
+              Mb = new Uint8Array(bb * wb * eb * 4),
+              gb = 4 * pb;
+            let lb = 0;
+            for (let Lb = 0; Lb < eb; Lb++) {
+              const eb = Lb * gb * Vb;
+              for (let Lb = 0; Lb < wb; Lb++) {
+                const wb = eb + Math.min(2 * Lb, Vb - 1) * gb,
+                  Ib = eb + Math.min(2 * Lb + 1, Vb - 1) * gb;
+                for (let eb = 0; eb < bb; eb++) {
+                  const bb = 4 * Math.min(2 * eb, pb - 1),
+                    Vb = 4 * Math.min(2 * eb + 1, pb - 1);
+                  for (let eb = 0; eb < 4; eb++) Mb[lb++] = Hb[wb + bb + eb] + Hb[wb + Vb + eb] + Hb[Ib + bb + eb] + Hb[Ib + Vb + eb] + 2 >> 2
                 }
               }
             }
             yield {
-              data: md,
-              width: dd,
-              height: Od
-            }, Fd = md, Rd = dd, Xd = Od
+              data: Mb,
+              width: bb,
+              height: wb
+            }, Hb = Mb, pb = bb, Vb = wb
           }
-        }(Od, md, Wd, Fd)) Kd(vd.data, hd++, vd.width, vd.height);
-      return Xd
+        }(wb, Mb, eb, Hb)) gb(Lb.data, lb++, Lb.width, Lb.height);
+      return Vb
     }
-    const Md = {
+    const ob = {
       premultiplyAlpha: "none",
       colorSpaceConversion: "none"
     };
 
-    function dO(dd) {
-      if (dd.startsWith("data:")) {
-        const Od = dd.search(/[;,]/);
-        return `data:${Od>5?dd.slice(5,Od):""} URL of ${dd.length} characters`
+    function Tb(bb) {
+      if (bb.startsWith("data:")) {
+        const wb = bb.search(/[;,]/);
+        return `data:${wb>5?bb.slice(5,wb):""} URL of ${bb.length} characters`
       }
-      return dd.length > 80 ? `${dd.slice(0,80)}...` : dd
+      return bb.length > 80 ? `${bb.slice(0,80)}...` : bb
     }
-    async function OO(dd) {
-      const Od = await fetch(dd);
-      if (!Od.ok) throw new Error(`${dO(dd)}: ${Od.status} ${Od.statusText}`);
-      return createImageBitmap(await Od.blob(), Md)
+    async function kb(bb) {
+      const wb = await fetch(bb);
+      if (!wb.ok) throw new Error(`${Tb(bb)}: ${wb.status} ${wb.statusText}`);
+      return createImageBitmap(await wb.blob(), ob)
     }
-    async function mO(dd) {
-      const Od = await OO(dd),
-        md = new OffscreenCanvas(Od.width, Od.height),
-        Wd = md.getContext("2d", {
+    async function bw(bb) {
+      const wb = await kb(bb),
+        Mb = new OffscreenCanvas(wb.width, wb.height),
+        eb = Mb.getContext("2d", {
           willReadFrequently: !0
         });
-      if (!Wd) throw new Error("No 2D context to decode an image");
-      Wd.drawImage(Od, 0, 0);
+      if (!eb) throw new Error("No 2D context to decode an image");
+      eb.drawImage(wb, 0, 0);
       const {
-        data: Fd
-      } = Wd.getImageData(0, 0, Od.width, Od.height);
-      return Od.close(), {
-        pixels: new Uint8Array(Fd.buffer, Fd.byteOffset, Fd.byteLength),
-        width: md.width,
-        height: md.height
+        data: Hb
+      } = eb.getImageData(0, 0, wb.width, wb.height);
+      return wb.close(), {
+        pixels: new Uint8Array(Hb.buffer, Hb.byteOffset, Hb.byteLength),
+        width: Mb.width,
+        height: Mb.height
       }
     }
 
-    function WO(dd, Od) {
-      return (0, Id.h)(dd, Od.urls, (async () => {
-        const md = await Promise.all(Od.urls.map((async (dd, md) => {
-            var Wd, Fd, Rd, Xd, Kd;
-            return null !== (Xd = null !== (Fd = null === (Rd = Od.pixels) || void 0 === Rd ? void 0 : Rd[md]) && void 0 !== Fd ? Fd : null, Kd = Od.layerWidth, Wd = null !== Xd && void 0 !== Xd && Xd.byteLength && Kd && Xd.byteLength % (Kd * Kd * 4) === 0 ? {
-              pixels: Xd,
-              layerWidth: Kd,
-              layers: Xd.byteLength / (Kd * Kd * 4)
-            } : null) && void 0 !== Wd ? Wd : await async function(dd) {
+    function ww(bb, wb) {
+      return (0, ib.e)(bb, wb.urls, (async () => {
+        const Mb = await Promise.all(wb.urls.map((async (bb, Mb) => {
+            var eb, Hb, pb, Vb, gb;
+            return null !== (Vb = null !== (Hb = null === (pb = wb.pixels) || void 0 === pb ? void 0 : pb[Mb]) && void 0 !== Hb ? Hb : null, gb = wb.layerWidth, eb = null !== Vb && void 0 !== Vb && Vb.byteLength && gb && Vb.byteLength % (gb * gb * 4) === 0 ? {
+              pixels: Vb,
+              layerWidth: gb,
+              layers: Vb.byteLength / (gb * gb * 4)
+            } : null) && void 0 !== eb ? eb : await async function(bb) {
               const {
-                pixels: Od,
-                width: md
-              } = await mO(dd);
+                pixels: wb,
+                width: Mb
+              } = await bw(bb);
               return {
-                pixels: Od,
-                layerWidth: md,
-                layers: Od.byteLength / (md * md * 4)
+                pixels: wb,
+                layerWidth: Mb,
+                layers: wb.byteLength / (Mb * Mb * 4)
               }
-            }(dd)
+            }(bb)
           }))),
-          Wd = md[0].layerWidth;
-        return (0, Id.d)(md, Wd, dd.limits.maxTextureArrayLayers).map(((md, Fd) => {
+          eb = Mb[0].layerWidth;
+        return (0, ib.b)(Mb, eb, bb.limits.maxTextureArrayLayers).map(((Mb, Hb) => {
           let {
-            pixels: Rd,
-            layers: Xd
-          } = md;
+            pixels: pb,
+            layers: Vb
+          } = Mb;
           return {
-            texture: fd(dd, Rd, Wd, Wd, Xd, `atlas-${Fd}-${dO(Od.urls[0])}`),
-            layerWidth: Wd,
-            layers: Xd
+            texture: yb(bb, pb, eb, eb, Vb, `atlas-${Hb}-${Tb(wb.urls[0])}`),
+            layerWidth: eb,
+            layers: Vb
           }
         }))
       }))
     }
-    const FO = new Map([
+    const Mw = new Map([
         [0, "zero"],
         [1, "one"],
         [768, "src"],
@@ -566,7 +566,7 @@ export const modules = {
         [775, "one-minus-dst"],
         [776, "src-alpha-saturated"]
       ]),
-      RO = new Map([
+      ew = new Map([
         [1, [770, 1, "add"]],
         [2, [770, 771, "add"]],
         [3, [0, 769, "add"]],
@@ -584,106 +584,106 @@ export const modules = {
         [19, [1, 1, "max"]]
       ]);
 
-    function XO(dd) {
-      for (const Od of (0, ld.i)(dd))
-        if (!RO.has((0, ld.e)(Od))) return !1;
+    function Hw(bb) {
+      for (const wb of (0, ub.l)(bb))
+        if (!ew.has((0, ub.i)(wb))) return !1;
       return !0
     }
 
-    function KO(dd) {
-      const Od = RO.get(dd);
-      if (!Od) return null;
-      const [md, Wd, Fd] = Od;
+    function pw(bb) {
+      const wb = ew.get(bb);
+      if (!wb) return null;
+      const [Mb, eb, Hb] = wb;
       return {
-        srcFactor: FO.get(md),
-        dstFactor: FO.get(Wd),
-        operation: Fd
+        srcFactor: Mw.get(Mb),
+        dstFactor: Mw.get(eb),
+        operation: Hb
       }
     }
-    let hO = null;
+    let Vw = null;
 
-    function vO(dd) {
-      hO = dd
+    function gw(bb) {
+      Vw = bb
     }
-    const QO = new WeakSet;
+    const lw = new WeakSet;
 
-    function tO(dd) {
-      return QO.has(dd)
+    function Lw(bb) {
+      return lw.has(bb)
     }
 
-    function oO(dd, Od, md, Wd) {
-      let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      var Rd;
-      tO(dd) || (null === (Rd = hO) || void 0 === Rd || Rd(Od, md, Wd, Fd))
+    function Iw(bb, wb, Mb, eb) {
+      let Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      var pb;
+      Lw(bb) || (null === (pb = Vw) || void 0 === pb || pb(wb, Mb, eb, Hb))
     }
-    class NO {
-      constructor(dd) {
-        this.resources = dd, this.matrixKey = {
-          Mt: 0
+    class Ow {
+      constructor(bb) {
+        this.resources = bb, this.matrixKey = {
+          qO: 0
         }, this.attributesKey = {
-          Mt: 0
+          qO: 0
         }, this.inputs = Object.create(null);
-        for (let Od = 0; Od < 4; Od++) this.inputs[`world${Od}`] = new yO(this.matrixKey, 16 * Od, 64, 4)
+        for (let wb = 0; wb < 4; wb++) this.inputs[`world${wb}`] = new Cw(this.matrixKey, 16 * wb, 64, 4)
       }
       release() {
         this.resources.liveUploads.delete(this), this.resources.bufferDeleted(this.matrixKey), this.resources.bufferDeleted(this.attributesKey)
       }
-      bind(dd, Od) {
-        this.resources.liveUploads.add(this), this.resources.vertexBufferCreated(this.matrixKey, dd, !0), Od && this.resources.vertexBufferCreated(this.attributesKey, Od, !0)
+      bind(bb, wb) {
+        this.resources.liveUploads.add(this), this.resources.vertexBufferCreated(this.matrixKey, bb, !0), wb && this.resources.vertexBufferCreated(this.attributesKey, wb, !0)
       }
     }
-    class qO extends NO {
-      constructor(dd, Od, md) {
-        super(dd), this.mesh = Od, this.rowStride = void 0, this.matrices = null, this.attributes = null;
-        const Wd = this.inputs;
-        let Fd = 0;
+    class Uw extends Ow {
+      constructor(bb, wb, Mb) {
+        super(bb), this.mesh = wb, this.rowStride = void 0, this.matrices = null, this.attributes = null;
+        const eb = this.inputs;
+        let Hb = 0;
         for (const {
-            size: Xd
+            size: Vb
           }
-          of md) Fd += Xd;
+          of Mb) Hb += Vb;
         for (const {
-            name: Xd,
-            offset: Kd,
-            size: hd,
-            type: vd
+            name: Vb,
+            offset: gb,
+            size: lb,
+            type: Lb
           }
-          of md) Wd[Xd] = new yO(this.attributesKey, 4 * Kd, 4 * Fd, hd, !0, vd);
-        this.rowStride = Fd, dd.vdd.set(Od, this);
-        const Rd = Od.isVerticesDataPresent;
-        Od.isVerticesDataPresent = (dd, md) => dd in Wd || Rd.call(Od, dd, md)
+          of Mb) eb[Vb] = new Cw(this.attributesKey, 4 * gb, 4 * Hb, lb, !0, Lb);
+        this.rowStride = Hb, bb.Cbb.set(wb, this);
+        const pb = wb.isVerticesDataPresent;
+        wb.isVerticesDataPresent = (bb, Mb) => bb in eb || pb.call(wb, bb, Mb)
       }
-      attach(dd, Od) {
-        this.matrices = dd, this.attributes = Od, this.bind(dd, Od), this.mirror(dd, dd.length, dd.length / 16)
+      attach(bb, wb) {
+        this.matrices = bb, this.attributes = wb, this.bind(bb, wb), this.mirror(bb, bb.length, bb.length / 16)
       }
       rebind() {
         this.bind(this.matrices, this.attributes)
       }
-      ldd(dd) {
-        this.matrices && this.resources.vertexBufferUpdated(this.matrixKey, this.matrices, 0, dd ? 64 * dd : void 0)
+      bwb(bb) {
+        this.matrices && this.resources.vertexBufferUpdated(this.matrixKey, this.matrices, 0, bb ? 64 * bb : void 0)
       }
-      Cdd() {
+      wwb() {
         this.attributes && this.resources.vertexBufferUpdated(this.attributesKey, this.attributes)
       }
-      matrixRows(dd, Od) {
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 16 * dd, 16 * Od)
+      matrixRows(bb, wb) {
+        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 16 * bb, 16 * wb)
       }
-      attributeRows(dd, Od) {
-        this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, dd * this.rowStride, Od * this.rowStride)
+      attributeRows(bb, wb) {
+        this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, bb * this.rowStride, wb * this.rowStride)
       }
       release() {
         super.release(), this.matrices = null, this.attributes = null, this.mirror(null, 512, 0)
       }
-      mirror(dd, Od, md) {
-        const Wd = this.mesh._thinInstanceDataStorage;
-        Wd.matrixData = dd, Wd.matrixBufferSize = Od, Wd.worldMatrices = null, Wd.instancesCount = md
+      mirror(bb, wb, Mb) {
+        const eb = this.mesh._thinInstanceDataStorage;
+        eb.matrixData = bb, eb.matrixBufferSize = wb, eb.worldMatrices = null, eb.instancesCount = Mb
       }
     }
-    class HO extends NO {
-      constructor(dd, Od, md) {
-        var Wd, Fd, Rd, Xd;
-        super(dd), this.layout = void 0, this.offsets = void 0, this.rowStride = void 0, this.matrices = new Float32Array(512), this.attributes = void 0, this.frame = -1, this.count = 0, this.packedSource = null, this.packedBatch = null, this.layout = null !== (Wd = null === md || void 0 === md ? void 0 : md.interleavedKinds) && void 0 !== Wd ? Wd : null, this.offsets = null !== (Fd = null === md || void 0 === md ? void 0 : md.interleavedOffsets) && void 0 !== Fd ? Fd : [], this.rowStride = null !== (Rd = null === md || void 0 === md ? void 0 : md.interleavedRowStride) && void 0 !== Rd ? Rd : 0, null === (Xd = this.layout) || void 0 === Xd || Xd.forEach(((dd, Od) => {
-          this.inputs[dd] = new yO(this.attributesKey, 4 * this.offsets[Od], 4 * this.rowStride, md.strides[dd])
-        })), this.attributes = this.rowStride > 0 ? new Float32Array(32 * this.rowStride) : null, this.bind(this.matrices, this.attributes), dd.batchUploads.set(Od, this), Od.cV.addOnce((() => {
+    class tw extends Ow {
+      constructor(bb, wb, Mb) {
+        var eb, Hb, pb, Vb;
+        super(bb), this.layout = void 0, this.offsets = void 0, this.rowStride = void 0, this.matrices = new Float32Array(512), this.attributes = void 0, this.frame = -1, this.count = 0, this.packedSource = null, this.packedBatch = null, this.layout = null !== (eb = null === Mb || void 0 === Mb ? void 0 : Mb.interleavedKinds) && void 0 !== eb ? eb : null, this.offsets = null !== (Hb = null === Mb || void 0 === Mb ? void 0 : Mb.interleavedOffsets) && void 0 !== Hb ? Hb : [], this.rowStride = null !== (pb = null === Mb || void 0 === Mb ? void 0 : Mb.interleavedRowStride) && void 0 !== pb ? pb : 0, null === (Vb = this.layout) || void 0 === Vb || Vb.forEach(((bb, wb) => {
+          this.inputs[bb] = new Cw(this.attributesKey, 4 * this.offsets[wb], 4 * this.rowStride, Mb.strides[bb])
+        })), this.attributes = this.rowStride > 0 ? new Float32Array(32 * this.rowStride) : null, this.bind(this.matrices, this.attributes), bb.batchUploads.set(wb, this), wb.vJ.addOnce((() => {
           this.release()
         }))
       }
@@ -693,49 +693,49 @@ export const modules = {
       get packedMatrices() {
         return this.matrices
       }
-      packedRowMesh(dd) {
-        const Od = this.packedBatch;
-        return Od.renderSelf ? 0 === dd ? this.packedSource : Od.instances[dd - 1] : Od.instances[dd]
+      packedRowMesh(bb) {
+        const wb = this.packedBatch;
+        return wb.renderSelf ? 0 === bb ? this.packedSource : wb.instances[bb - 1] : wb.instances[bb]
       }
       get packedAttributes() {
         return this.attributes
       }
-      pack(dd, Od, md, Wd) {
-        const Fd = (Od.renderSelf ? 1 : 0) + Od.rows.length;
-        if (this.frame = Wd, this.count = Fd, this.packedSource = dd, this.packedBatch = Od, 0 === Fd) return;
-        if (dd.getWorldMatrix(), 16 * Fd > this.matrices.length) {
-          let dd = this.matrices.length / 16;
-          for (; dd < Fd;) dd *= 2;
-          this.matrices = new Float32Array(16 * dd), this.attributes &&= new Float32Array(dd * this.rowStride), this.bind(this.matrices, this.attributes)
+      pack(bb, wb, Mb, eb) {
+        const Hb = (wb.renderSelf ? 1 : 0) + wb.rows.length;
+        if (this.frame = eb, this.count = Hb, this.packedSource = bb, this.packedBatch = wb, 0 === Hb) return;
+        if (bb.getWorldMatrix(), 16 * Hb > this.matrices.length) {
+          let bb = this.matrices.length / 16;
+          for (; bb < Hb;) bb *= 2;
+          this.matrices = new Float32Array(16 * bb), this.attributes &&= new Float32Array(bb * this.rowStride), this.bind(this.matrices, this.attributes)
         }
-        let Rd = 0;
-        Od.renderSelf && this.packRow(Rd++, dd, Od.row, md);
-        for (let Xd = 0; Xd < Od.rows.length; Xd++) this.packRow(Rd++, Od.instances[Xd], Od.rows[Xd], md);
-        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 0, 16 * Fd), this.attributes && this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, 0, Fd * this.rowStride)
+        let pb = 0;
+        wb.renderSelf && this.packRow(pb++, bb, wb.row, Mb);
+        for (let Vb = 0; Vb < wb.rows.length; Vb++) this.packRow(pb++, wb.instances[Vb], wb.rows[Vb], Mb);
+        this.resources.vertexBufferFloatsUpdated(this.matrixKey, this.matrices, 0, 16 * Hb), this.attributes && this.resources.vertexBufferFloatsUpdated(this.attributesKey, this.attributes, 0, Hb * this.rowStride)
       }
-      packRow(dd, Od, md, Wd) {
-        const Fd = this.matrices;
-        if (md < 0) Fd.set(Od.getWorldMatrix().m, 16 * dd);
+      packRow(bb, wb, Mb, eb) {
+        const Hb = this.matrices;
+        if (Mb < 0) Hb.set(wb.getWorldMatrix().m, 16 * bb);
         else
-          for (let vd = 0; vd < 16; vd++) Fd[16 * dd + vd] = Wd[16 * md + vd];
-        const Rd = this.attributes;
-        if (!Rd) return;
-        const Xd = Od.xG,
-          Kd = this.layout;
-        for (let vd = 0; vd < Kd.length; vd++) {
-          var hd;
-          const Od = null !== (hd = Xd[Kd[vd]]) && void 0 !== hd ? hd : 0,
-            md = dd * this.rowStride + this.offsets[vd];
-          Od.toArray ? Od.toArray(Rd, md) : Od.copyToArray ? Od.copyToArray(Rd, md) : Rd[md] = Od
+          for (let Lb = 0; Lb < 16; Lb++) Hb[16 * bb + Lb] = eb[16 * Mb + Lb];
+        const pb = this.attributes;
+        if (!pb) return;
+        const Vb = wb.hN,
+          gb = this.layout;
+        for (let Lb = 0; Lb < gb.length; Lb++) {
+          var lb;
+          const wb = null !== (lb = Vb[gb[Lb]]) && void 0 !== lb ? lb : 0,
+            Mb = bb * this.rowStride + this.offsets[Lb];
+          wb.toArray ? wb.toArray(pb, Mb) : wb.copyToArray ? wb.copyToArray(pb, Mb) : pb[Mb] = wb
         }
       }
     }
-    class yO {
-      constructor(dd, Od, md, Wd) {
-        let Fd = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Rd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5126,
-          Xd = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        this.key = dd, this.byteOffset = Od, this.byteStride = md, this.size = Wd, this.instanced = Fd, this.type = Rd, this.normalized = Xd
+    class Cw {
+      constructor(bb, wb, Mb, eb) {
+        let Hb = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          pb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5126,
+          Vb = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        this.key = bb, this.byteOffset = wb, this.byteStride = Mb, this.size = eb, this.instanced = Hb, this.type = pb, this.normalized = Vb
       }
       getBuffer() {
         return this.key
@@ -747,61 +747,61 @@ export const modules = {
         return this.instanced
       }
     }
-    const bO = "CANVAS_ALPHA_ONE",
-      TO = `override ${bO}: bool = false;`,
-      pO = {
+    const Ew = "CANVAS_ALPHA_ONE",
+      Fw = `override ${Ew}: bool = false;`,
+      Bw = {
         srcFactor: "zero",
         dstFactor: "one",
         operation: "add"
       };
 
-    function YO(dd, Od, md) {
-      var Wd;
-      let Fd = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const Rd = null !== (Wd = Od._colorFormat) && void 0 !== Wd ? Wd : "bgra8unorm",
-        Xd = Fd ? 15 : 0;
-      return md ? {
-        ...dd,
+    function sw(bb, wb, Mb) {
+      var eb;
+      let Hb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const pb = null !== (eb = wb._colorFormat) && void 0 !== eb ? eb : "bgra8unorm",
+        Vb = Hb ? 15 : 0;
+      return Mb ? {
+        ...bb,
         targets: [{
-          format: Rd,
+          format: pb,
           blend: {
-            color: md,
-            alpha: pO
+            color: Mb,
+            alpha: Bw
           },
-          writeMask: Xd
+          writeMask: Vb
         }]
       } : {
-        ...dd,
+        ...bb,
         constants: {
-          ...dd.constants,
-          [bO]: 1
+          ...bb.constants,
+          [Ew]: 1
         },
         targets: [{
-          format: Rd,
-          writeMask: Xd
+          format: pb,
+          writeMask: Vb
         }]
       }
     }
 
-    function gO(dd, Od) {
-      dd._renderables.push(Od)
+    function mw(bb, wb) {
+      bb._renderables.push(wb)
     }
 
-    function wO(dd) {
-      return dd._device
+    function hw(bb) {
+      return bb._device
     }
 
-    function aO(dd) {
-      var Od, md;
-      return null !== (Od = null === (md = dd._frameGraph) || void 0 === md ? void 0 : md._tasks) && void 0 !== Od ? Od : []
+    function zw(bb) {
+      var wb, Mb;
+      return null !== (wb = null === (Mb = bb._frameGraph) || void 0 === Mb ? void 0 : Mb._tasks) && void 0 !== wb ? wb : []
     }
 
-    function EO(dd) {
-      return dd._currentEncoder
+    function Xw(bb) {
+      return bb._currentEncoder
     }
 
-    function JO(dd) {
-      return dd.createBindGroupLayout({
+    function xw(bb) {
+      return bb.createBindGroupLayout({
         label: "lite-scene-equivalent",
         entries: [{
           binding: 0,
@@ -818,98 +818,98 @@ export const modules = {
         }]
       })
     }
-    const UO = "greater-equal",
-      xO = 2e5,
-      BO = 1e5,
-      SO = new WeakMap;
+    const jw = "greater-equal",
+      Kw = 2e5,
+      rw = 1e5,
+      Rw = new WeakMap;
 
-    function sO(dd, Od) {
-      let md = SO.get(dd);
-      if (!md) {
-        md = {
-          module: dd.createShaderModule({
+    function Dw(bb, wb) {
+      let Mb = Rw.get(bb);
+      if (!Mb) {
+        Mb = {
+          module: bb.createShaderModule({
             label: "placeholder",
             code: "@vertex fn v() -> @builtin(position) vec4f { return vec4f(0.0, 0.0, 0.0, 1.0); }\n@fragment fn f() -> @location(0) vec4f { return vec4f(0.0); }"
           }),
           pipelines: new Map
-        }, SO.set(dd, md)
+        }, Rw.set(bb, Mb)
       }
-      const Wd = `${Od._colorFormat}|${Od._depthStencilFormat}|${Od._sampleCount}`;
-      let Fd = md.pipelines.get(Wd);
-      if (!Fd) {
-        var Rd;
+      const eb = `${wb._colorFormat}|${wb._depthStencilFormat}|${wb._sampleCount}`;
+      let Hb = Mb.pipelines.get(eb);
+      if (!Hb) {
+        var pb;
         const {
-          module: Xd
-        } = md;
-        Fd = dd.createRenderPipeline({
-          label: `placeholder ${Wd}`,
-          layout: dd.createPipelineLayout({
+          module: Vb
+        } = Mb;
+        Hb = bb.createRenderPipeline({
+          label: `placeholder ${eb}`,
+          layout: bb.createPipelineLayout({
             bindGroupLayouts: []
           }),
           vertex: {
-            module: Xd,
+            module: Vb,
             entryPoint: "v"
           },
           fragment: {
-            module: Xd,
+            module: Vb,
             entryPoint: "f",
             targets: [{
-              format: null !== (Rd = Od._colorFormat) && void 0 !== Rd ? Rd : "bgra8unorm",
+              format: null !== (pb = wb._colorFormat) && void 0 !== pb ? pb : "bgra8unorm",
               writeMask: 0
             }]
           },
-          depthStencil: Od._depthStencilFormat ? {
-            format: Od._depthStencilFormat,
+          depthStencil: wb._depthStencilFormat ? {
+            format: wb._depthStencilFormat,
             depthCompare: "always",
             depthWriteEnabled: !1
           } : void 0,
           multisample: {
-            count: Od._sampleCount
+            count: wb._sampleCount
           }
-        }), md.pipelines.set(Wd, Fd)
+        }), Mb.pipelines.set(eb, Hb)
       }
-      return Fd
+      return Hb
     }
 
-    function uO(dd, Od, md) {
-      const Wd = Od.eye,
-        Fd = Od.viewMatrix;
-      dd[0] = Wd[0] + Fd[2] * md, dd[1] = Wd[1] + Fd[6] * md, dd[2] = Wd[2] + Fd[10] * md
+    function Yw(bb, wb, Mb) {
+      const eb = wb.eye,
+        Hb = wb.viewMatrix;
+      bb[0] = eb[0] + Hb[2] * Mb, bb[1] = eb[1] + Hb[6] * Mb, bb[2] = eb[2] + Hb[10] * Mb
     }
-    var VO = md(39516),
-      iO = md(54022),
-      AO = md(38758);
-    const rO = Math.PI,
-      GO = rO / 1.95,
-      nO = [5e-4 / 94, 125e-7, 5e-4 / 18],
-      LO = [
+    var Zw = Mb(39207),
+      fw = Mb(53790),
+      Aw = Mb(38432);
+    const Ww = Math.PI,
+      Jw = Ww / 1.95,
+      Sw = [5e-4 / 94, 125e-7, 5e-4 / 18],
+      Nw = [
         [68e-8, .686],
         [55e-8, .678],
         [45e-8, .666]
-      ].map((dd => {
-        let [Od, md] = dd;
-        return .434 * rO * Math.pow(2 * rO / Od, 2) * md
+      ].map((bb => {
+        let [wb, Mb] = bb;
+        return .434 * Ww * Math.pow(2 * Ww / wb, 2) * Mb
       }));
 
-    function PO(dd, Od, md) {
+    function vw(bb, wb, Mb) {
       const {
-        up: Wd,
-        mieDirectionalG: Fd
-      } = dd, Rd = 1 - jO(1 - Math.exp(Od[1] / 45e4), 0, 1), Xd = dd.rayleigh - (1 - Rd), Kd = Math.hypot(Od[0], Od[1], Od[2]), hd = Kd > 0 ? 1 / Kd : 0, vd = md.sunDir;
-      for (let Nd = 0; Nd < 3; Nd++) vd[Nd] = Od[Nd] * hd;
-      const Qd = vd[0] * Wd[0] + vd[1] * Wd[1] + vd[2] * Wd[2],
-        td = 1e3 * Math.max(0, 1 - Math.exp(-(GO - Math.acos(jO(Qd, -1, 1))) / 1.5));
-      md.sunE = td;
-      const od = .2 * dd.turbidity * 1e-17 * dd.mieCoefficient;
-      for (let Nd = 0; Nd < 3; Nd++) {
-        const dd = nO[Nd] * Xd,
-          Od = LO[Nd] * od,
-          Wd = td / (dd + Od);
-        md.inScatterR[Nd] = dd * Wd, md.inScatterM[Nd] = Od * Wd, md.extinctionBeta[Nd] = 8400 * dd + 1250 * Od
+        up: eb,
+        mieDirectionalG: Hb
+      } = bb, pb = 1 - qw(1 - Math.exp(wb[1] / 45e4), 0, 1), Vb = bb.rayleigh - (1 - pb), gb = Math.hypot(wb[0], wb[1], wb[2]), lb = gb > 0 ? 1 / gb : 0, Lb = Mb.sunDir;
+      for (let tb = 0; tb < 3; tb++) Lb[tb] = wb[tb] * lb;
+      const Ib = Lb[0] * eb[0] + Lb[1] * eb[1] + Lb[2] * eb[2],
+        Ob = 1e3 * Math.max(0, 1 - Math.exp(-(Jw - Math.acos(qw(Ib, -1, 1))) / 1.5));
+      Mb.sunE = Ob;
+      const Ub = .2 * bb.turbidity * 1e-17 * bb.mieCoefficient;
+      for (let tb = 0; tb < 3; tb++) {
+        const bb = Sw[tb] * Vb,
+          wb = Nw[tb] * Ub,
+          eb = Ob / (bb + wb);
+        Mb.inScatterR[tb] = bb * eb, Mb.inScatterM[tb] = wb * eb, Mb.extinctionBeta[tb] = 8400 * bb + 1250 * wb
       }
-      return md.sunsetMix = jO(Math.pow(1 - Qd, 5), 0, 1), md.sunDiscE = 19e3 * td, md.mieScale = (1 - Fd * Fd) / (4 * rO), md.mieBase = 1 + Fd * Fd, md.mieSlope = 2 * Fd, md
+      return Mb.sunsetMix = qw(Math.pow(1 - Ib, 5), 0, 1), Mb.sunDiscE = 19e3 * Ob, Mb.mieScale = (1 - Hb * Hb) / (4 * Ww), Mb.mieBase = 1 + Hb * Hb, Mb.mieSlope = 2 * Hb, Mb
     }
-    const zO = {
+    const Qw = {
       A: .15,
       B: .5,
       C: .1,
@@ -917,605 +917,605 @@ export const modules = {
       E: .02,
       F: .3
     };
-    const cO = 1 / function(dd) {
+    const Gw = 1 / function(bb) {
       const {
-        A: Od,
-        B: md,
-        C: Wd,
-        D: Fd,
-        E: Rd,
-        F: Xd
-      } = zO;
-      return (dd * (Od * dd + Wd * md) + Fd * Rd) / (dd * (Od * dd + md) + Fd * Xd) - Rd / Xd
+        A: wb,
+        B: Mb,
+        C: eb,
+        D: Hb,
+        E: pb,
+        F: Vb
+      } = Qw;
+      return (bb * (wb * bb + eb * Mb) + Hb * pb) / (bb * (wb * bb + Mb) + Hb * Vb) - pb / Vb
     }(1e3);
 
-    function jO(dd, Od, md) {
-      return Math.min(Math.max(dd, Od), md)
+    function qw(bb, wb, Mb) {
+      return Math.min(Math.max(bb, wb), Mb)
     }
-    const DO = /^\s*#(ifdef|ifndef|if|elif|else|endif|define|undef)\b(.*)$/;
+    const aw = /^\s*#(ifdef|ifndef|if|elif|else|endif|define|undef)\b(.*)$/;
 
-    function eO(dd, Od) {
-      const md = new Map(Od),
-        Wd = [],
-        Fd = [],
-        Rd = () => 0 === Fd.length || Fd[Fd.length - 1].active;
-      let Xd = null;
-      const Kd = () => {
-        const dd = [...md].filter((dd => {
-            let [, Od] = dd;
-            return !0 !== Od
+    function iw(bb, wb) {
+      const Mb = new Map(wb),
+        eb = [],
+        Hb = [],
+        pb = () => 0 === Hb.length || Hb[Hb.length - 1].active;
+      let Vb = null;
+      const gb = () => {
+        const bb = [...Mb].filter((bb => {
+            let [, wb] = bb;
+            return !0 !== wb
           })),
-          Od = dd.map((dd => {
-            let [Od] = dd;
-            return Od
+          wb = bb.map((bb => {
+            let [wb] = bb;
+            return wb
           })).join("|");
-        Xd = dd.length ? new RegExp(`\\b(${Od})\\b`, "g") : null
+        Vb = bb.length ? new RegExp(`\\b(${wb})\\b`, "g") : null
       };
-      Kd();
-      for (const hd of dd.split("\n")) {
-        const dd = DO.exec(hd);
-        if (!dd) {
-          Rd() && Wd.push(Xd ? IO(hd, Xd, md) : hd);
+      gb();
+      for (const lb of bb.split("\n")) {
+        const bb = aw.exec(lb);
+        if (!bb) {
+          pb() && eb.push(Vb ? uw(lb, Vb, Mb) : lb);
           continue
         }
-        const Od = dd[1],
-          vd = dd[2].trim();
-        if ("ifdef" === Od || "ifndef" === Od || "if" === Od) {
-          const dd = Rd(),
-            Wd = "if" === Od ? lO(vd, md) : md.has(vd) === ("ifdef" === Od);
-          Fd.push({
-            active: dd && Wd,
-            parentActive: dd,
-            taken: Wd
+        const wb = bb[1],
+          Lb = bb[2].trim();
+        if ("ifdef" === wb || "ifndef" === wb || "if" === wb) {
+          const bb = pb(),
+            eb = "if" === wb ? dw(Lb, Mb) : Mb.has(Lb) === ("ifdef" === wb);
+          Hb.push({
+            active: bb && eb,
+            parentActive: bb,
+            taken: eb
           })
-        } else if ("elif" === Od || "else" === Od) {
-          const dd = Fd[Fd.length - 1];
-          if (!dd) throw new Error(`#${Od} without #if`);
-          const Wd = !dd.taken && ("else" === Od || lO(vd, md));
-          dd.active = dd.parentActive && Wd, dd.taken = dd.taken || Wd
-        } else if ("endif" === Od) {
-          if (!Fd.pop()) throw new Error("#endif without #if")
-        } else if (Rd()) {
-          const [dd, ...Wd] = vd.split(/\s+/);
-          "undef" === Od ? md.delete(dd) : md.set(dd, !Wd.length || Wd.join(" ")), Kd()
+        } else if ("elif" === wb || "else" === wb) {
+          const bb = Hb[Hb.length - 1];
+          if (!bb) throw new Error(`#${wb} without #if`);
+          const eb = !bb.taken && ("else" === wb || dw(Lb, Mb));
+          bb.active = bb.parentActive && eb, bb.taken = bb.taken || eb
+        } else if ("endif" === wb) {
+          if (!Hb.pop()) throw new Error("#endif without #if")
+        } else if (pb()) {
+          const [bb, ...eb] = Lb.split(/\s+/);
+          "undef" === wb ? Mb.delete(bb) : Mb.set(bb, !eb.length || eb.join(" ")), gb()
         }
       }
-      if (Fd.length) throw new Error("Unterminated #if");
-      return Wd.join("\n")
+      if (Hb.length) throw new Error("Unterminated #if");
+      return eb.join("\n")
     }
 
-    function IO(dd, Od, md) {
-      return dd.replace(Od, (dd => {
-        const Od = md.get(dd);
-        return "string" === typeof Od ? Od : dd
+    function uw(bb, wb, Mb) {
+      return bb.replace(wb, (bb => {
+        const wb = Mb.get(bb);
+        return "string" === typeof wb ? wb : bb
       }))
     }
 
-    function lO(dd, Od) {
-      var md;
-      const Wd = null !== (md = dd.match(/defined|\d+(\.\d+)?|\w+|&&|\|\||==|!=|>=|<=|[()!<>]/g)) && void 0 !== md ? md : [];
-      let Fd = 0;
-      const Rd = () => Wd[Fd],
-        Xd = () => Wd[Fd++],
-        Kd = dd => {
-          const md = /^\d/.test(dd) ? dd : Od.get(dd);
-          return "string" === typeof md ? parseInt(md) : Number.NaN
+    function dw(bb, wb) {
+      var Mb;
+      const eb = null !== (Mb = bb.match(/defined|\d+(\.\d+)?|\w+|&&|\|\||==|!=|>=|<=|[()!<>]/g)) && void 0 !== Mb ? Mb : [];
+      let Hb = 0;
+      const pb = () => eb[Hb],
+        Vb = () => eb[Hb++],
+        gb = bb => {
+          const Mb = /^\d/.test(bb) ? bb : wb.get(bb);
+          return "string" === typeof Mb ? parseInt(Mb) : Number.NaN
         },
-        hd = () => {
-          const dd = Xd();
-          if ("!" === dd) return !hd();
-          if ("(" === dd) {
-            const dd = Qd();
-            return Xd(), dd
+        lb = () => {
+          const bb = Vb();
+          if ("!" === bb) return !lb();
+          if ("(" === bb) {
+            const bb = Ib();
+            return Vb(), bb
           }
-          if ("defined" === dd) {
-            const dd = "(" === Rd();
-            dd && Xd();
-            const md = Xd();
-            return dd && Xd(), Od.has(md)
+          if ("defined" === bb) {
+            const bb = "(" === pb();
+            bb && Vb();
+            const Mb = Vb();
+            return bb && Vb(), wb.has(Mb)
           }
-          const md = Rd();
-          if ("==" === md || "!=" === md || ">" === md || "<" === md || ">=" === md || "<=" === md) {
-            Xd();
-            const Od = Kd(dd),
-              Wd = Kd(Xd());
-            if (Number.isNaN(Od) || Number.isNaN(Wd)) return !1;
-            switch (md) {
+          const Mb = pb();
+          if ("==" === Mb || "!=" === Mb || ">" === Mb || "<" === Mb || ">=" === Mb || "<=" === Mb) {
+            Vb();
+            const wb = gb(bb),
+              eb = gb(Vb());
+            if (Number.isNaN(wb) || Number.isNaN(eb)) return !1;
+            switch (Mb) {
               case "==":
-                return Od === Wd;
+                return wb === eb;
               case "!=":
-                return Od !== Wd;
+                return wb !== eb;
               case ">":
-                return Od > Wd;
+                return wb > eb;
               case "<":
-                return Od < Wd;
+                return wb < eb;
               case ">=":
-                return Od >= Wd;
+                return wb >= eb;
               default:
-                return Od <= Wd
+                return wb <= eb
             }
           }
-          return Od.has(dd)
+          return wb.has(bb)
         },
-        vd = () => {
-          let dd = hd();
+        Lb = () => {
+          let bb = lb();
           for (;
-            "&&" === Rd();) {
-            Xd();
-            const Od = hd();
-            dd = dd && Od
+            "&&" === pb();) {
+            Vb();
+            const wb = lb();
+            bb = bb && wb
           }
-          return dd
+          return bb
         },
-        Qd = () => {
-          let dd = vd();
+        Ib = () => {
+          let bb = Lb();
           for (;
-            "||" === Rd();) {
-            Xd();
-            const Od = vd();
-            dd = dd || Od
+            "||" === pb();) {
+            Vb();
+            const wb = Lb();
+            bb = bb || wb
           }
-          return dd
+          return bb
         },
-        td = Qd();
-      if (Fd !== Wd.length) throw new Error(`Cannot evaluate #if ${dd}`);
-      return td
+        Ob = Ib();
+      if (Hb !== eb.length) throw new Error(`Cannot evaluate #if ${bb}`);
+      return Ob
     }
-    var CO = md(38856),
-      ZO = md(38964),
-      kO = md(38973),
-      fO = md(42770),
-      MO = md(40335);
-    const dm = 32,
-      Om = [10, 3, 10],
-      mm = [21, 7, 21],
-      Wm = mm[0] * mm[1] * mm[2],
-      Fm = 0,
-      Rm = 1,
-      Xm = 2,
-      Km = 3,
-      hm = 64,
-      Qm = 512,
-      tm = 4 * Wm,
-      om = 1536,
-      Nm = tm + Wm * om,
-      qm = 1073741824,
-      Hm = Nm + 1;
+    var Pw = Mb(38526),
+      nw = Mb(38637),
+      yw = Mb(38643),
+      ow = Mb(42488),
+      Tw = Mb(40056);
+    const kw = 32,
+      bM = [10, 3, 10],
+      wM = [21, 7, 21],
+      MM = wM[0] * wM[1] * wM[2],
+      eM = 0,
+      HM = 1,
+      pM = 2,
+      VM = 3,
+      gM = 64,
+      lM = 512,
+      LM = 4 * MM,
+      IM = 1536,
+      OM = LM + MM * IM,
+      UM = 1073741824,
+      tM = OM + 1;
 
-    function ym(dd, Od) {
-      const md = dd % Od;
-      return md < 0 ? md + Od : md
-    }
-
-    function bm(dd, Od, md) {
-      return Wd = ym(dd, mm[0]), Fd = ym(Od, mm[1]), Rd = ym(md, mm[2]), Wd + mm[0] * (Fd + mm[1] * Rd);
-      var Wd, Fd, Rd
+    function CM(bb, wb) {
+      const Mb = bb % wb;
+      return Mb < 0 ? Mb + wb : Mb
     }
 
-    function Tm(dd, Od, md) {
-      return dd + 8 * (Od + 8 * md)
+    function EM(bb, wb, Mb) {
+      return eb = CM(bb, wM[0]), Hb = CM(wb, wM[1]), pb = CM(Mb, wM[2]), eb + wM[0] * (Hb + wM[1] * pb);
+      var eb, Hb, pb
     }
 
-    function pm(dd, Od, md) {
-      return dd + 4 * (Od + 4 * md)
+    function FM(bb, wb, Mb) {
+      return bb + 8 * (wb + 8 * Mb)
     }
-    const Ym = 65535,
-      gm = 0,
-      wm = 1,
-      am = 2,
-      Em = 3;
 
-    function Jm(dd) {
-      return Math.ceil(dd * dd / 32)
+    function BM(bb, wb, Mb) {
+      return bb + 4 * (wb + 4 * Mb)
     }
-    const Um = 8192,
-      xm = 1 << 18,
-      Bm = 65536,
-      Sm = 294912,
-      sm = 128,
-      um = 4096,
-      Vm = 16,
-      im = 16385,
-      Am = 81921,
-      rm = 147457,
-      Gm = 4194304;
-    const nm = [0, 0, 0],
-      Lm = [0, 0, 0];
+    const sM = 65535,
+      mM = 0,
+      hM = 1,
+      zM = 2,
+      XM = 3;
 
-    function Pm(dd, Od, md, Wd) {
-      ! function(dd, Od, md) {
-        const [Wd, Fd, Rd] = [dd[0], dd[1], dd[2]];
-        let Xd, Kd, hd;
-        Math.abs(Fd) < .99 ? (Xd = Rd, Kd = 0, hd = -Wd) : (Xd = -Fd, Kd = Wd, hd = 0);
-        const vd = Math.hypot(Xd, Kd, hd);
-        Od[0] = Xd / vd, Od[1] = Kd / vd, Od[2] = hd / vd, md[0] = Fd * Od[2] - Rd * Od[1], md[1] = Rd * Od[0] - Wd * Od[2], md[2] = Wd * Od[1] - Fd * Od[0]
-      }(Wd, nm, Lm);
-      const Fd = 1 / 32;
-      for (const [Rd, Xd] of [
-          [0, nm],
-          [4, Lm]
+    function xM(bb) {
+      return Math.ceil(bb * bb / 32)
+    }
+    const jM = 8192,
+      KM = 1 << 18,
+      rM = 65536,
+      RM = 294912,
+      DM = 128,
+      cM = 4096,
+      YM = 16,
+      ZM = 16385,
+      fM = 81921,
+      AM = 147457,
+      WM = 4194304;
+    const JM = [0, 0, 0],
+      SM = [0, 0, 0];
+
+    function NM(bb, wb, Mb, eb) {
+      ! function(bb, wb, Mb) {
+        const [eb, Hb, pb] = [bb[0], bb[1], bb[2]];
+        let Vb, gb, lb;
+        Math.abs(Hb) < .99 ? (Vb = pb, gb = 0, lb = -eb) : (Vb = -Hb, gb = eb, lb = 0);
+        const Lb = Math.hypot(Vb, gb, lb);
+        wb[0] = Vb / Lb, wb[1] = gb / Lb, wb[2] = lb / Lb, Mb[0] = Hb * wb[2] - pb * wb[1], Mb[1] = pb * wb[0] - eb * wb[2], Mb[2] = eb * wb[1] - Hb * wb[0]
+      }(eb, JM, SM);
+      const Hb = 1 / 32;
+      for (const [pb, Vb] of [
+          [0, JM],
+          [4, SM]
         ]) {
-        for (let md = 0; md < 3; md++) dd[Od + Rd + md] = Xd[md] * Fd;
-        dd[Od + Rd + 3] = -(Xd[0] * md[0] + Xd[1] * md[1] + Xd[2] * md[2]) * Fd
+        for (let Mb = 0; Mb < 3; Mb++) bb[wb + pb + Mb] = Vb[Mb] * Hb;
+        bb[wb + pb + 3] = -(Vb[0] * Mb[0] + Vb[1] * Mb[1] + Vb[2] * Mb[2]) * Hb
       }
     }
-    class zm {
+    class vM {
       constructor() {
-        this.words = new Uint32Array(rm), this.parts = 0, this.refs = 0, this.floats = new Float32Array(this.words.buffer), this.rects = new Int32Array(16384), this.counts = new Uint32Array(16384), this.inverse = new Float64Array(16), this.view = new Float32Array(8), this.viewAt = 0, this.light = [0, 1, 0]
+        this.words = new Uint32Array(AM), this.parts = 0, this.refs = 0, this.floats = new Float32Array(this.words.buffer), this.rects = new Int32Array(16384), this.counts = new Uint32Array(16384), this.inverse = new Float64Array(16), this.view = new Float32Array(8), this.viewAt = 0, this.light = [0, 1, 0]
       }
-      ot(dd, Od) {
-        this.parts = 0, this.refs = 0, this.view = dd, this.viewAt = Od;
-        const md = dd[Od + 1] * dd[Od + 6] - dd[Od + 2] * dd[Od + 5],
-          Wd = dd[Od + 2] * dd[Od + 4] - dd[Od] * dd[Od + 6],
-          Fd = dd[Od] * dd[Od + 5] - dd[Od + 1] * dd[Od + 4],
-          Rd = Math.hypot(md, Wd, Fd) || 1;
-        this.light[0] = md / Rd, this.light[1] = Wd / Rd, this.light[2] = Fd / Rd
+      LO(bb, wb) {
+        this.parts = 0, this.refs = 0, this.view = bb, this.viewAt = wb;
+        const Mb = bb[wb + 1] * bb[wb + 6] - bb[wb + 2] * bb[wb + 5],
+          eb = bb[wb + 2] * bb[wb + 4] - bb[wb] * bb[wb + 6],
+          Hb = bb[wb] * bb[wb + 5] - bb[wb + 1] * bb[wb + 4],
+          pb = Math.hypot(Mb, eb, Hb) || 1;
+        this.light[0] = Mb / pb, this.light[1] = eb / pb, this.light[2] = Hb / pb
       }
-      add(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (this.parts >= um || ! function(dd, Od, md) {
-            const Wd = dd[Od],
-              Fd = dd[Od + 1],
-              Rd = dd[Od + 2],
-              Xd = dd[Od + 3],
-              Kd = dd[Od + 4],
-              hd = dd[Od + 5],
-              vd = dd[Od + 6],
-              Qd = dd[Od + 7],
-              td = dd[Od + 8],
-              od = dd[Od + 9],
-              Nd = dd[Od + 10],
-              qd = dd[Od + 11],
-              Hd = dd[Od + 12],
-              yd = dd[Od + 13],
-              bd = dd[Od + 14],
-              Td = dd[Od + 15],
-              pd = Wd * hd - Fd * Kd,
-              Yd = Wd * vd - Rd * Kd,
-              gd = Wd * Qd - Xd * Kd,
-              wd = Fd * vd - Rd * hd,
-              Ed = Fd * Qd - Xd * hd,
-              Jd = Rd * Qd - Xd * vd,
-              Ud = td * yd - od * Hd,
-              xd = td * bd - Nd * Hd,
-              Bd = td * Td - qd * Hd,
-              Sd = od * bd - Nd * yd,
-              sd = od * Td - qd * yd,
-              ud = Nd * Td - qd * bd,
-              Vd = pd * ud - Yd * sd + gd * Sd + wd * Bd - Ed * xd + Jd * Ud;
-            if (!(Math.abs(Vd) > 1e-12)) return !1;
-            const Ad = 1 / Vd;
-            return md[0] = (hd * ud - vd * sd + Qd * Sd) * Ad, md[1] = (Rd * sd - Fd * ud - Xd * Sd) * Ad, md[2] = (yd * Jd - bd * Ed + Td * wd) * Ad, md[3] = (Nd * Ed - od * Jd - qd * wd) * Ad, md[4] = (vd * Bd - Kd * ud - Qd * xd) * Ad, md[5] = (Wd * ud - Rd * Bd + Xd * xd) * Ad, md[6] = (bd * gd - Hd * Jd - Td * Yd) * Ad, md[7] = (td * Jd - Nd * gd + qd * Yd) * Ad, md[8] = (Kd * sd - hd * Bd + Qd * Ud) * Ad, md[9] = (Fd * Bd - Wd * sd - Xd * Ud) * Ad, md[10] = (Hd * Ed - yd * gd + Td * pd) * Ad, md[11] = (od * gd - td * Ed - qd * pd) * Ad, md[12] = (hd * xd - Kd * Sd - vd * Ud) * Ad, md[13] = (Wd * Sd - Fd * xd + Rd * Ud) * Ad, md[14] = (yd * Yd - Hd * wd - bd * pd) * Ad, md[15] = (td * wd - od * Yd + Nd * pd) * Ad, !0
-          }(Od, md, this.inverse)) return;
+      add(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (this.parts >= cM || ! function(bb, wb, Mb) {
+            const eb = bb[wb],
+              Hb = bb[wb + 1],
+              pb = bb[wb + 2],
+              Vb = bb[wb + 3],
+              gb = bb[wb + 4],
+              lb = bb[wb + 5],
+              Lb = bb[wb + 6],
+              Ib = bb[wb + 7],
+              Ob = bb[wb + 8],
+              Ub = bb[wb + 9],
+              tb = bb[wb + 10],
+              Cb = bb[wb + 11],
+              Eb = bb[wb + 12],
+              Fb = bb[wb + 13],
+              Bb = bb[wb + 14],
+              sb = bb[wb + 15],
+              mb = eb * lb - Hb * gb,
+              hb = eb * Lb - pb * gb,
+              zb = eb * Ib - Vb * gb,
+              Xb = Hb * Lb - pb * lb,
+              xb = Hb * Ib - Vb * lb,
+              jb = pb * Ib - Vb * Lb,
+              Kb = Ob * Fb - Ub * Eb,
+              rb = Ob * Bb - tb * Eb,
+              Rb = Ob * sb - Cb * Eb,
+              Db = Ub * Bb - tb * Fb,
+              cb = Ub * sb - Cb * Fb,
+              Yb = tb * sb - Cb * Bb,
+              Zb = mb * Yb - hb * cb + zb * Db + Xb * Rb - xb * rb + jb * Kb;
+            if (!(Math.abs(Zb) > 1e-12)) return !1;
+            const fb = 1 / Zb;
+            return Mb[0] = (lb * Yb - Lb * cb + Ib * Db) * fb, Mb[1] = (pb * cb - Hb * Yb - Vb * Db) * fb, Mb[2] = (Fb * jb - Bb * xb + sb * Xb) * fb, Mb[3] = (tb * xb - Ub * jb - Cb * Xb) * fb, Mb[4] = (Lb * Rb - gb * Yb - Ib * rb) * fb, Mb[5] = (eb * Yb - pb * Rb + Vb * rb) * fb, Mb[6] = (Bb * zb - Eb * jb - sb * hb) * fb, Mb[7] = (Ob * jb - tb * zb + Cb * hb) * fb, Mb[8] = (gb * cb - lb * Rb + Ib * Kb) * fb, Mb[9] = (Hb * Rb - eb * cb - Vb * Kb) * fb, Mb[10] = (Eb * xb - Fb * zb + sb * mb) * fb, Mb[11] = (Ub * zb - Ob * xb - Cb * mb) * fb, Mb[12] = (lb * rb - gb * Db - Lb * Kb) * fb, Mb[13] = (eb * Db - Hb * rb + pb * Kb) * fb, Mb[14] = (Fb * hb - Eb * Xb - Bb * mb) * fb, Mb[15] = (Ob * Xb - Ub * hb + tb * mb) * fb, !0
+          }(wb, Mb, this.inverse)) return;
         const {
-          view: Wd,
-          viewAt: Fd
-        } = this, Rd = md;
-        let Xd = 1 / 0,
-          Kd = 1 / 0,
-          hd = -1 / 0,
-          vd = -1 / 0,
-          Qd = -1 / 0;
-        const [td, od, Nd] = this.light;
-        for (let gd = 0; gd < 8; gd++) {
-          const md = 1 & gd ? dd.hi[0] : dd.lo[0],
-            qd = 2 & gd ? dd.hi[1] : dd.lo[1],
-            Hd = 4 & gd ? dd.hi[2] : dd.lo[2],
-            yd = md * Od[Rd] + qd * Od[Rd + 4] + Hd * Od[Rd + 8] + Od[Rd + 12],
-            bd = md * Od[Rd + 1] + qd * Od[Rd + 5] + Hd * Od[Rd + 9] + Od[Rd + 13],
-            Td = md * Od[Rd + 2] + qd * Od[Rd + 6] + Hd * Od[Rd + 10] + Od[Rd + 14],
-            pd = Wd[Fd] * yd + Wd[Fd + 1] * bd + Wd[Fd + 2] * Td + Wd[Fd + 3],
-            Yd = Wd[Fd + 4] * yd + Wd[Fd + 5] * bd + Wd[Fd + 6] * Td + Wd[Fd + 7];
-          Xd = Math.min(Xd, pd), Kd = Math.min(Kd, Yd), hd = Math.max(hd, pd), vd = Math.max(vd, Yd), Qd = Math.max(Qd, td * yd + od * bd + Nd * Td)
+          view: eb,
+          viewAt: Hb
+        } = this, pb = Mb;
+        let Vb = 1 / 0,
+          gb = 1 / 0,
+          lb = -1 / 0,
+          Lb = -1 / 0,
+          Ib = -1 / 0;
+        const [Ob, Ub, tb] = this.light;
+        for (let zb = 0; zb < 8; zb++) {
+          const Mb = 1 & zb ? bb.hi[0] : bb.lo[0],
+            Cb = 2 & zb ? bb.hi[1] : bb.lo[1],
+            Eb = 4 & zb ? bb.hi[2] : bb.lo[2],
+            Fb = Mb * wb[pb] + Cb * wb[pb + 4] + Eb * wb[pb + 8] + wb[pb + 12],
+            Bb = Mb * wb[pb + 1] + Cb * wb[pb + 5] + Eb * wb[pb + 9] + wb[pb + 13],
+            sb = Mb * wb[pb + 2] + Cb * wb[pb + 6] + Eb * wb[pb + 10] + wb[pb + 14],
+            mb = eb[Hb] * Fb + eb[Hb + 1] * Bb + eb[Hb + 2] * sb + eb[Hb + 3],
+            hb = eb[Hb + 4] * Fb + eb[Hb + 5] * Bb + eb[Hb + 6] * sb + eb[Hb + 7];
+          Vb = Math.min(Vb, mb), gb = Math.min(gb, hb), lb = Math.max(lb, mb), Lb = Math.max(Lb, hb), Ib = Math.max(Ib, Ob * Fb + Ub * Bb + tb * sb)
         }
-        if (hd < -1 || vd < -1 || Xd >= 1 || Kd >= 1) return;
-        const qd = this.parts++,
-          Hd = this.rects;
-        Hd[4 * qd] = cm(Xd), Hd[4 * qd + 1] = cm(Kd), Hd[4 * qd + 2] = cm(hd), Hd[4 * qd + 3] = cm(vd);
-        const yd = this.inverse,
+        if (lb < -1 || Lb < -1 || Vb >= 1 || gb >= 1) return;
+        const Cb = this.parts++,
+          Eb = this.rects;
+        Eb[4 * Cb] = QM(Vb), Eb[4 * Cb + 1] = QM(gb), Eb[4 * Cb + 2] = QM(lb), Eb[4 * Cb + 3] = QM(Lb);
+        const Fb = this.inverse,
           {
-            cell: bd,
-            dims: Td,
-            lo: pd
-          } = dd,
-          Yd = Am + qd * Vm;
-        for (let gd = 0; gd < 3; gd++) this.floats[Yd + 4 * gd] = yd[gd] / bd, this.floats[Yd + 4 * gd + 1] = yd[4 + gd] / bd, this.floats[Yd + 4 * gd + 2] = yd[8 + gd] / bd, this.floats[Yd + 4 * gd + 3] = (yd[12 + gd] - pd[gd]) / bd;
-        this.words[Yd + 12] = dd.at, this.floats[Yd + 13] = Qd + .001 * (1 + Math.abs(Qd)), this.words[Yd + 14] = Td[0] | Td[1] << 8 | Td[2] << 16
+            cell: Bb,
+            dims: sb,
+            lo: mb
+          } = bb,
+          hb = fM + Cb * YM;
+        for (let zb = 0; zb < 3; zb++) this.floats[hb + 4 * zb] = Fb[zb] / Bb, this.floats[hb + 4 * zb + 1] = Fb[4 + zb] / Bb, this.floats[hb + 4 * zb + 2] = Fb[8 + zb] / Bb, this.floats[hb + 4 * zb + 3] = (Fb[12 + zb] - mb[zb]) / Bb;
+        this.words[hb + 12] = bb.at, this.floats[hb + 13] = Ib + .001 * (1 + Math.abs(Ib)), this.words[hb + 14] = sb[0] | sb[1] << 8 | sb[2] << 16
       }
       finish() {
-        const dd = sm,
+        const bb = DM,
           {
-            counts: Od,
-            rects: md,
-            words: Wd
+            counts: wb,
+            rects: Mb,
+            words: eb
           } = this;
-        Od.fill(0);
-        let Fd = 0,
-          Rd = 0;
-        for (; Rd < this.parts; Rd++) {
-          const Wd = 4 * Rd,
-            Xd = (md[Wd + 2] - md[Wd] + 1) * (md[Wd + 3] - md[Wd + 1] + 1);
-          if (Fd + Xd > 65536) break;
-          Fd += Xd;
-          for (let Fd = md[Wd + 1]; Fd <= md[Wd + 3]; Fd++)
-            for (let Rd = md[Wd]; Rd <= md[Wd + 2]; Rd++) Od[Fd * dd + Rd]++
+        wb.fill(0);
+        let Hb = 0,
+          pb = 0;
+        for (; pb < this.parts; pb++) {
+          const eb = 4 * pb,
+            Vb = (Mb[eb + 2] - Mb[eb] + 1) * (Mb[eb + 3] - Mb[eb + 1] + 1);
+          if (Hb + Vb > 65536) break;
+          Hb += Vb;
+          for (let Hb = Mb[eb + 1]; Hb <= Mb[eb + 3]; Hb++)
+            for (let pb = Mb[eb]; pb <= Mb[eb + 2]; pb++) wb[Hb * bb + pb]++
         }
-        let Xd = 0;
-        for (let hd = 0; hd < 16384; hd++) Wd[hd] = Xd, Xd += Od[hd], Od[hd] = Wd[hd];
-        Wd[16384] = Xd;
-        for (let hd = 0; hd < Rd; hd++) {
-          const Fd = 4 * hd;
-          for (let Rd = md[Fd + 1]; Rd <= md[Fd + 3]; Rd++)
-            for (let Xd = md[Fd]; Xd <= md[Fd + 2]; Xd++) Wd[im + Od[Rd * dd + Xd]++] = hd
+        let Vb = 0;
+        for (let lb = 0; lb < 16384; lb++) eb[lb] = Vb, Vb += wb[lb], wb[lb] = eb[lb];
+        eb[16384] = Vb;
+        for (let lb = 0; lb < pb; lb++) {
+          const Hb = 4 * lb;
+          for (let pb = Mb[Hb + 1]; pb <= Mb[Hb + 3]; pb++)
+            for (let Vb = Mb[Hb]; Vb <= Mb[Hb + 2]; Vb++) eb[ZM + wb[pb * bb + Vb]++] = lb
         }
-        const Kd = this.floats;
-        for (let hd = 0; hd < 16384; hd++) {
-          const dd = im + Wd[hd],
-            Od = dd + Math.min(Wd[hd + 1] - Wd[hd], 64);
-          for (let md = dd + 1; md < Od; md++) {
-            const Od = Wd[md],
-              Fd = Kd[81934 + Od * Vm];
-            let Rd = md - 1;
-            for (; Rd >= dd && Kd[81934 + Wd[Rd] * Vm] < Fd; Rd--) Wd[Rd + 1] = Wd[Rd];
-            Wd[Rd + 1] = Od
+        const gb = this.floats;
+        for (let lb = 0; lb < 16384; lb++) {
+          const bb = ZM + eb[lb],
+            wb = bb + Math.min(eb[lb + 1] - eb[lb], 64);
+          for (let Mb = bb + 1; Mb < wb; Mb++) {
+            const wb = eb[Mb],
+              Hb = gb[81934 + wb * YM];
+            let pb = Mb - 1;
+            for (; pb >= bb && gb[81934 + eb[pb] * YM] < Hb; pb--) eb[pb + 1] = eb[pb];
+            eb[pb + 1] = wb
           }
         }
-        this.refs = Fd
+        this.refs = Hb
       }
     }
 
-    function cm(dd) {
-      return Math.min(127, Math.max(0, Math.floor((.5 * dd + .5) * sm)))
+    function QM(bb) {
+      return Math.min(127, Math.max(0, Math.floor((.5 * bb + .5) * DM)))
     }
 
-    function jm(dd, Od, md, Wd, Fd) {
-      for (let Rd = 0; Rd < 4; Rd++)
-        for (let Xd = 0; Xd < 4; Xd++) Fd[4 * Rd + Xd] = dd[Od + 4 * Rd] * md[Wd + Xd] + dd[Od + 4 * Rd + 1] * md[Wd + 4 + Xd] + dd[Od + 4 * Rd + 2] * md[Wd + 8 + Xd] + dd[Od + 4 * Rd + 3] * md[Wd + 12 + Xd]
+    function GM(bb, wb, Mb, eb, Hb) {
+      for (let pb = 0; pb < 4; pb++)
+        for (let Vb = 0; Vb < 4; Vb++) Hb[4 * pb + Vb] = bb[wb + 4 * pb] * Mb[eb + Vb] + bb[wb + 4 * pb + 1] * Mb[eb + 4 + Vb] + bb[wb + 4 * pb + 2] * Mb[eb + 8 + Vb] + bb[wb + 4 * pb + 3] * Mb[eb + 12 + Vb]
     }
 
-    function Dm(dd, Od, md, Wd, Fd) {
-      const Rd = dd[0] - Od,
-        Xd = dd[1] - md,
-        Kd = dd[2] - Wd,
-        hd = dd[3] - Od,
-        vd = dd[4] - md,
-        Qd = dd[5] - Wd,
-        td = dd[6] - Od,
-        od = dd[7] - md,
-        Nd = dd[8] - Wd;
-      if (Math.min(Rd, hd, td) > Fd || Math.max(Rd, hd, td) < -Fd) return !1;
-      if (Math.min(Xd, vd, od) > Fd || Math.max(Xd, vd, od) < -Fd) return !1;
-      if (Math.min(Kd, Qd, Nd) > Fd || Math.max(Kd, Qd, Nd) < -Fd) return !1;
-      const qd = hd - Rd,
-        Hd = vd - Xd,
-        yd = Qd - Kd,
-        bd = td - hd,
-        Td = od - vd,
-        pd = Nd - Qd,
-        Yd = Hd * pd - yd * Td,
-        gd = yd * bd - qd * pd,
-        wd = qd * Td - Hd * bd;
-      if (Math.abs(Yd * Rd + gd * Xd + wd * Kd) > Fd * (Math.abs(Yd) + Math.abs(gd) + Math.abs(wd))) return !1;
-      const Ed = [qd, Hd, yd, bd, Td, pd, Rd - td, Xd - od, Kd - Nd];
-      for (let Jd = 0; Jd < 3; Jd++) {
-        const dd = Ed[3 * Jd],
-          Od = Ed[3 * Jd + 1],
-          md = Ed[3 * Jd + 2];
-        for (let Wd = 0; Wd < 3; Wd++) {
-          const qd = 0 === Wd ? 0 : 1 === Wd ? md : -Od,
-            Hd = 0 === Wd ? -md : 1 === Wd ? 0 : dd,
-            yd = 0 === Wd ? Od : 1 === Wd ? -dd : 0,
-            bd = qd * Rd + Hd * Xd + yd * Kd,
-            Td = qd * hd + Hd * vd + yd * Qd,
-            pd = qd * td + Hd * od + yd * Nd,
-            Yd = Fd * (Math.abs(qd) + Math.abs(Hd) + Math.abs(yd));
-          if (Math.min(bd, Td, pd) > Yd || Math.max(bd, Td, pd) < -Yd) return !1
+    function qM(bb, wb, Mb, eb, Hb) {
+      const pb = bb[0] - wb,
+        Vb = bb[1] - Mb,
+        gb = bb[2] - eb,
+        lb = bb[3] - wb,
+        Lb = bb[4] - Mb,
+        Ib = bb[5] - eb,
+        Ob = bb[6] - wb,
+        Ub = bb[7] - Mb,
+        tb = bb[8] - eb;
+      if (Math.min(pb, lb, Ob) > Hb || Math.max(pb, lb, Ob) < -Hb) return !1;
+      if (Math.min(Vb, Lb, Ub) > Hb || Math.max(Vb, Lb, Ub) < -Hb) return !1;
+      if (Math.min(gb, Ib, tb) > Hb || Math.max(gb, Ib, tb) < -Hb) return !1;
+      const Cb = lb - pb,
+        Eb = Lb - Vb,
+        Fb = Ib - gb,
+        Bb = Ob - lb,
+        sb = Ub - Lb,
+        mb = tb - Ib,
+        hb = Eb * mb - Fb * sb,
+        zb = Fb * Bb - Cb * mb,
+        Xb = Cb * sb - Eb * Bb;
+      if (Math.abs(hb * pb + zb * Vb + Xb * gb) > Hb * (Math.abs(hb) + Math.abs(zb) + Math.abs(Xb))) return !1;
+      const xb = [Cb, Eb, Fb, Bb, sb, mb, pb - Ob, Vb - Ub, gb - tb];
+      for (let jb = 0; jb < 3; jb++) {
+        const bb = xb[3 * jb],
+          wb = xb[3 * jb + 1],
+          Mb = xb[3 * jb + 2];
+        for (let eb = 0; eb < 3; eb++) {
+          const Cb = 0 === eb ? 0 : 1 === eb ? Mb : -wb,
+            Eb = 0 === eb ? -Mb : 1 === eb ? 0 : bb,
+            Fb = 0 === eb ? wb : 1 === eb ? -bb : 0,
+            Bb = Cb * pb + Eb * Vb + Fb * gb,
+            sb = Cb * lb + Eb * Lb + Fb * Ib,
+            mb = Cb * Ob + Eb * Ub + Fb * tb,
+            hb = Hb * (Math.abs(Cb) + Math.abs(Eb) + Math.abs(Fb));
+          if (Math.min(Bb, sb, mb) > hb || Math.max(Bb, sb, mb) < -hb) return !1
         }
       }
       return !0
     }
-    const em = new Float32Array(1);
-    new Uint32Array(em.buffer);
-    var Im = md(40342);
+    const aM = new Float32Array(1);
+    new Uint32Array(aM.buffer);
+    var iM = Mb(40061);
 
-    function lm(dd) {
-      const [Od, md, Wd] = Im.o;
-      return `struct BloxdSpSunShadow {\n\teyeChunk: vec3i,\n\tstaleCount: u32,\n\tvolumeLo: vec3i,\n\tentityX: vec4f,\n\tentityY: vec4f,\n\tstale: array<vec4i, 4>,\n}\n@group(${dd.group}) @binding(${dd.uniform}) var<uniform> bloxdSpSunShadow: BloxdSpSunShadow;\nfn bloxdSpVolumeTexel(cell: vec3i) -> vec3i {\n\treturn cell & vec3i(${Od-1}, ${md-1}, ${Wd-1});\n}\n`
+    function uM(bb) {
+      const [wb, Mb, eb] = iM.p;
+      return `struct BloxdSpSunShadow {\n\teyeChunk: vec3i,\n\tstaleCount: u32,\n\tvolumeLo: vec3i,\n\tentityX: vec4f,\n\tentityY: vec4f,\n\tstale: array<vec4i, 4>,\n}\n@group(${bb.group}) @binding(${bb.uniform}) var<uniform> bloxdSpSunShadow: BloxdSpSunShadow;\nfn bloxdSpVolumeTexel(cell: vec3i) -> vec3i {\n\treturn cell & vec3i(${wb-1}, ${Mb-1}, ${eb-1});\n}\n`
     }
 
-    function Cm(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Wd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const [Fd, Rd, Xd] = mm, [Kd, hd, vd] = Om, Qd = Math.log2(dm), td = Wd ? "var<private> bloxdSpCrossed: bool;\n" : "", od = Wd ? "\t\t\tbloxdSpCrossed = true;\n" : "";
-      return `@group(${dd.group}) @binding(${dd.QN}) var<storage, read> bloxdSpShadowVoxels: array<u32>;\n@group(${dd.group}) @binding(${dd.special}) var<storage, read> bloxdSpShadowSpecial: array<u32>;\n${md?"var<private> bloxdSpPlaneTolerance: f32;\n":""}${td}struct BloxdSpBoxExit {\n\tt: f32,\n\taxis: i32,\n\tcell: vec3i,\n}\n// inv: 1 / d, 0 where d is, taken once per ray rather than divided per exit\nfn bloxdSpExitBox(o: vec3f, d: vec3f, inv: vec3f, lo: vec3i, offset: vec3i, size: i32) -> BloxdSpBoxExit {\n\tlet low = vec3f(lo - offset);\n\tlet far = select(low, low + f32(size), d > vec3f(0.0));\n\tlet ta = select(vec3f(1e30), (far - o) * inv, d != vec3f(0.0));\n\tvar axis = 0;\n\tvar t = ta.x;\n\tif (ta.y < t) {\n\t\tt = ta.y;\n\t\taxis = 1;\n\t}\n\tif (ta.z < t) {\n\t\tt = ta.z;\n\t\taxis = 2;\n\t}\n\tlet inside = clamp(vec3i(floor(o + t * d)) + offset, lo, lo + vec3i(size - 1));\n\tlet beyond = select(lo - vec3i(1), lo + vec3i(size), d > vec3f(0.0));\n\t// select, not cell[axis] = beyond[axis]: dynamic indexing spills the vector to memory on some drivers (~9% of the frame on Mali)\n\tlet cell = select(inside, beyond, vec3<bool>(axis == 0, axis == 1, axis == 2));\n\treturn BloxdSpBoxExit(t, axis, cell);\n}\nfn bloxdSpMaskBit(word: u32, bit: u32) -> bool {\n\treturn ((bloxdSpShadowSpecial[word + (bit >> 5u)] >> (bit & 31u)) & 1u) == 1u;\n}\nfn bloxdSpCasterBlocks(caster: u32, o: vec3f, d: vec3f, cell: vec3i, offset: vec3i, t0: f32, t1: f32, axis: i32) -> bool {\n\tlet base = 0u + caster * 4u;\n\tlet kind = bloxdSpShadowSpecial[base];\n\tlet data = bloxdSpShadowSpecial[base + 1u];\n\t// Every loop here has a fixed bound, whatever the buffers hold: a GPU stuck in one loses the device\n\tlet count = min(bloxdSpShadowSpecial[base + 2u], 4u);\n\tlet size = bloxdSpShadowSpecial[base + 3u];\n\tlet q = o - vec3f(cell - offset);\n\tif (kind == ${wm}u) {\n\t\tlet qs = q * 8.0;\n\t\tlet ds = d * 8.0;\n\t\tlet invs = select(vec3f(0.0), 1.0 / ds, ds != vec3f(0.0));\n\t\tvar sub = clamp(vec3i(floor(qs + t0 * ds)), vec3i(0), vec3i(7));\n\t\tfor (var step = 0; step < 24; step++) {\n\t\t\tif (bloxdSpMaskBit(data, u32(sub.x + 8 * (sub.y + 8 * sub.z)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t\tlet exit = bloxdSpExitBox(qs, ds, invs, sub, vec3i(0), 1);\n\t\t\t// Only the axis it left by can be out of the shape\n\t\t\tif (exit.t >= t1 || any(exit.cell < vec3i(0)) || any(exit.cell >= vec3i(8))) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tsub = exit.cell;\n\t\t}\n\t\treturn false;\n\t}\n\tlet fs = f32(size);\n\tif (kind == ${am}u) {\n\t\tfor (var p = 0u; p < count; p++) {\n\t\t\tlet plane = data + p * 4u;\n\t\t\tlet tx = bitcast<f32>(bloxdSpShadowSpecial[plane]);\n\t\t\tlet tz = bitcast<f32>(bloxdSpShadowSpecial[plane + 1u]);\n\t\t\tlet along = bitcast<f32>(bloxdSpShadowSpecial[plane + 2u]);\n\t\t\tlet dn = d.x * tz - d.z * tx;\n\t\t\tif (abs(dn) < 1e-6) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet t = (along - ((q.x - 0.5) * tz - (q.z - 0.5) * tx)) / dn;\n\t\t\t// Not a plane the trace starts on (SUN_SHADOW_PLANE_START), nor in its first cell one within depth's error of it\n\t\t\tif (t < select(t0, t0 + 0.0009765625, axis < 0) || t > t1${md?" || (axis < 0 && abs(t * dn) < bloxdSpPlaneTolerance)":""}) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet h = q + t * d;\n\t\t\tlet u = (h.x - 0.5) * tx + (h.z - 0.5) * tz + 0.5;\n\t\t\tlet v = 1.0 - h.y;\n\t\t\tif (u < 0.0 || u >= 1.0 || v < 0.0 || v >= 1.0) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tif (bloxdSpMaskBit(bloxdSpShadowSpecial[plane + 3u], u32(floor(u * fs)) + size * u32(floor(v * fs)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n\tif (kind == ${Em}u && axis >= 0) {\n\t\t// In through the +axis face going down the axis, else the -axis face; faces go +x, -x, +y, -y, +z, -z\n\t\tlet plusFace = d[axis] < 0.0;\n\t\tlet face = u32(2 * axis) + select(1u, 0u, plusFace);\n\t\tlet h = clamp(q + t0 * d, vec3f(0.0), vec3f(1.0));\n\t\t// As terrain samples faces (terrainShader.ts packedUv)\n\t\tvar uv = vec2f(select(h.x, 1.0 - h.x, plusFace), 1.0 - h.y);\n\t\tif (axis == 0) {\n\t\t\tuv = vec2f(select(1.0 - h.z, h.z, plusFace), 1.0 - h.y);\n\t\t} else if (axis == 1) {\n\t\t\tuv = vec2f(select(1.0 - h.x, h.x, plusFace), 1.0 - h.z);\n\t\t}\n\t\tlet texel = min(vec2u(floor(uv * fs)), vec2u(size - 1u));\n\t\treturn bloxdSpMaskBit(data + face * ((size * size + 31u) / 32u), texel.x + size * texel.y);\n\t}\n\treturn false;\n}\nfn bloxdSpWindowSlot(chunk: vec3i) -> u32 {\n\tlet window = vec3i(${Fd}, ${Rd}, ${Xd});\n\tlet r = chunk % window;\n\tlet s = select(r, r + window, r < vec3i(0));\n\treturn u32(s.x + ${Fd} * (s.y + ${Rd} * s.z));\n}\nfn bloxdSpWindowHas(chunk: vec3i) -> bool {\n\treturn all(abs(chunk - bloxdSpSunShadow.eyeChunk) <= vec3i(${Kd}, ${hd}, ${vd}));\n}\nfn bloxdSpCellFull(cell: vec3i) -> bool {\n\tlet chunk = cell >> vec3u(${Qd}u);\n\tif (!bloxdSpWindowHas(chunk)) {\n\t\treturn false;\n\t}\n\tlet slot = bloxdSpWindowSlot(chunk);\n\tlet record = slot * 4u;\n\tlet named = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\tlet state = bloxdSpShadowVoxels[record + 3u] & 255u;\n\tif (!named || state != ${Km}u) {\n\t\treturn named && state == ${Xm}u;\n\t}\n\tlet local = cell - chunk * 32;\n\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\tlet brickBase = ${tm}u + slot * 1536u + brick * 3u;\n\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\tif (((bloxdSpShadowVoxels[brickBase + (bit >> 5u)] >> (bit & 31u)) & 1u) == 0u) {\n\t\treturn false;\n\t}\n\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\tif (pool == 0u) {\n\t\treturn true;\n\t}\n\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\treturn ((entry >> ((bit & 1u) * 16u)) & 0xffffu) == 65535u;\n}\n// ownCell: whether the caster in the cell it starts in can block it (sunShadowTrace.ts traceSunShadow)\nfn bloxdSpShadowMarch(o: vec3f, d: vec3f, offset: vec3i, maxSteps: i32, ownCell: bool) -> vec4f {\n\tvar cell = vec3i(floor(o)) + offset;\n\tvar t = 0.0;\n\tvar axis = -1;\n\tlet inv = select(vec3f(0.0), 1.0 / d, d != vec3f(0.0));\n\t// The chunk the slot and record were read for: they change only with it\n\tvar cached = vec3i(-2147483647);\n\tvar slot = 0u;\n\tvar named = false;\n\tvar state = 0u;\n\t// Rising above the window's highest cell that may block, it crosses nothing more (0: never written)\n\tlet windowWord = bloxdSpShadowVoxels[${Nm}u];\n\tlet windowTop = select(2147483647, bitcast<i32>(windowWord) - 1073741824, d.y > 0.0 && windowWord != 0u);\n${Od?"\tlet exits = bloxdSpRayFresh(o, d, offset);\n":""}\tfor (var step = 0; step < maxSteps; step++) {\n${Od?`\t\tif (exits && step > 0 && step % ${fm} == 0 && bloxdSpVolumeOpenLit(o + t * d, offset)) {\n\t\t\treturn vec4f(o + t * d, -1.0);\n\t\t}\n`:""}\t\tif (cell.y > windowTop) {\n\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t}\n\t\tlet chunk = cell >> vec3u(${Qd}u);\n\t\tif (any(chunk != cached)) {\n\t\t\tif (!bloxdSpWindowHas(chunk)) {\n\t\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t\t}\n\t\t\tcached = chunk;\n\t\t\tslot = bloxdSpWindowSlot(chunk);\n\t\t\tlet record = slot * 4u;\n\t\t\tnamed = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\t\t\tstate = bloxdSpShadowVoxels[record + 3u];\n\t\t}\n\t\tlet chunkLo = chunk * 32;\n\t\tlet kind = state & 255u;\n\t\t// Rising above its highest cell that may block, it crosses nothing more in the chunk\n\t\tif (!named || kind == ${Fm}u || kind == ${Rm}u || (d.y > 0.0 && cell.y - chunkLo.y > i32(state >> 8u))) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo, offset, 32);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tif (kind == ${Xm}u) {\n\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t}\n\t\tlet local = cell - chunkLo;\n\t\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\t\tlet brickBase = ${tm}u + slot * 1536u + brick * 3u;\n\t\tlet low = bloxdSpShadowVoxels[brickBase];\n\t\tlet high = bloxdSpShadowVoxels[brickBase + 1u];\n\t\tif (low == 0u && high == 0u) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo + (local & vec3i(~3)), offset, 4);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\t\tlet exit = bloxdSpExitBox(o, d, inv, cell, offset, 1);\n\t\tif (((select(high, low, bit < 32u) >> (bit & 31u)) & 1u) == 1u) {\n\t\t\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\t\t\tif (pool == 0u) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n\t\t\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\t\t\tlet caster = (entry >> ((bit & 1u) * 16u)) & 0xffffu;\n\t\t\tif (caster == 65535u || ((ownCell || axis >= 0) && bloxdSpCasterBlocks(caster, o, d, cell, offset, t, exit.t, axis))) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n${od}\t\t}\n\t\tt = max(t, exit.t);\n\t\taxis = exit.axis;\n\t\tcell = exit.cell;\n\t}\n\treturn vec4f(o + t * d, -1.0);\n}\n`
+    function dM(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        Mb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        eb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const [Hb, pb, Vb] = wM, [gb, lb, Lb] = bM, Ib = Math.log2(kw), Ob = eb ? "var<private> bloxdSpCrossed: bool;\n" : "", Ub = eb ? "\t\t\tbloxdSpCrossed = true;\n" : "";
+      return `@group(${bb.group}) @binding(${bb.GU}) var<storage, read> bloxdSpShadowVoxels: array<u32>;\n@group(${bb.group}) @binding(${bb.special}) var<storage, read> bloxdSpShadowSpecial: array<u32>;\n${Mb?"var<private> bloxdSpPlaneTolerance: f32;\n":""}${Ob}struct BloxdSpBoxExit {\n\tt: f32,\n\taxis: i32,\n\tcell: vec3i,\n}\n// inv: 1 / d, 0 where d is, taken once per ray rather than divided per exit\nfn bloxdSpExitBox(o: vec3f, d: vec3f, inv: vec3f, lo: vec3i, offset: vec3i, size: i32) -> BloxdSpBoxExit {\n\tlet low = vec3f(lo - offset);\n\tlet far = select(low, low + f32(size), d > vec3f(0.0));\n\tlet ta = select(vec3f(1e30), (far - o) * inv, d != vec3f(0.0));\n\tvar axis = 0;\n\tvar t = ta.x;\n\tif (ta.y < t) {\n\t\tt = ta.y;\n\t\taxis = 1;\n\t}\n\tif (ta.z < t) {\n\t\tt = ta.z;\n\t\taxis = 2;\n\t}\n\tlet inside = clamp(vec3i(floor(o + t * d)) + offset, lo, lo + vec3i(size - 1));\n\tlet beyond = select(lo - vec3i(1), lo + vec3i(size), d > vec3f(0.0));\n\t// select, not cell[axis] = beyond[axis]: dynamic indexing spills the vector to memory on some drivers (~9% of the frame on Mali)\n\tlet cell = select(inside, beyond, vec3<bool>(axis == 0, axis == 1, axis == 2));\n\treturn BloxdSpBoxExit(t, axis, cell);\n}\nfn bloxdSpMaskBit(word: u32, bit: u32) -> bool {\n\treturn ((bloxdSpShadowSpecial[word + (bit >> 5u)] >> (bit & 31u)) & 1u) == 1u;\n}\nfn bloxdSpCasterBlocks(caster: u32, o: vec3f, d: vec3f, cell: vec3i, offset: vec3i, t0: f32, t1: f32, axis: i32) -> bool {\n\tlet base = 0u + caster * 4u;\n\tlet kind = bloxdSpShadowSpecial[base];\n\tlet data = bloxdSpShadowSpecial[base + 1u];\n\t// Every loop here has a fixed bound, whatever the buffers hold: a GPU stuck in one loses the device\n\tlet count = min(bloxdSpShadowSpecial[base + 2u], 4u);\n\tlet size = bloxdSpShadowSpecial[base + 3u];\n\tlet q = o - vec3f(cell - offset);\n\tif (kind == ${hM}u) {\n\t\tlet qs = q * 8.0;\n\t\tlet ds = d * 8.0;\n\t\tlet invs = select(vec3f(0.0), 1.0 / ds, ds != vec3f(0.0));\n\t\tvar sub = clamp(vec3i(floor(qs + t0 * ds)), vec3i(0), vec3i(7));\n\t\tfor (var step = 0; step < 24; step++) {\n\t\t\tif (bloxdSpMaskBit(data, u32(sub.x + 8 * (sub.y + 8 * sub.z)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t\tlet exit = bloxdSpExitBox(qs, ds, invs, sub, vec3i(0), 1);\n\t\t\t// Only the axis it left by can be out of the shape\n\t\t\tif (exit.t >= t1 || any(exit.cell < vec3i(0)) || any(exit.cell >= vec3i(8))) {\n\t\t\t\treturn false;\n\t\t\t}\n\t\t\tsub = exit.cell;\n\t\t}\n\t\treturn false;\n\t}\n\tlet fs = f32(size);\n\tif (kind == ${zM}u) {\n\t\tfor (var p = 0u; p < count; p++) {\n\t\t\tlet plane = data + p * 4u;\n\t\t\tlet tx = bitcast<f32>(bloxdSpShadowSpecial[plane]);\n\t\t\tlet tz = bitcast<f32>(bloxdSpShadowSpecial[plane + 1u]);\n\t\t\tlet along = bitcast<f32>(bloxdSpShadowSpecial[plane + 2u]);\n\t\t\tlet dn = d.x * tz - d.z * tx;\n\t\t\tif (abs(dn) < 1e-6) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet t = (along - ((q.x - 0.5) * tz - (q.z - 0.5) * tx)) / dn;\n\t\t\t// Not a plane the trace starts on (SUN_SHADOW_PLANE_START), nor in its first cell one within depth's error of it\n\t\t\tif (t < select(t0, t0 + 0.0009765625, axis < 0) || t > t1${Mb?" || (axis < 0 && abs(t * dn) < bloxdSpPlaneTolerance)":""}) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tlet h = q + t * d;\n\t\t\tlet u = (h.x - 0.5) * tx + (h.z - 0.5) * tz + 0.5;\n\t\t\tlet v = 1.0 - h.y;\n\t\t\tif (u < 0.0 || u >= 1.0 || v < 0.0 || v >= 1.0) {\n\t\t\t\tcontinue;\n\t\t\t}\n\t\t\tif (bloxdSpMaskBit(bloxdSpShadowSpecial[plane + 3u], u32(floor(u * fs)) + size * u32(floor(v * fs)))) {\n\t\t\t\treturn true;\n\t\t\t}\n\t\t}\n\t\treturn false;\n\t}\n\tif (kind == ${XM}u && axis >= 0) {\n\t\t// In through the +axis face going down the axis, else the -axis face; faces go +x, -x, +y, -y, +z, -z\n\t\tlet plusFace = d[axis] < 0.0;\n\t\tlet face = u32(2 * axis) + select(1u, 0u, plusFace);\n\t\tlet h = clamp(q + t0 * d, vec3f(0.0), vec3f(1.0));\n\t\t// As terrain samples faces (terrainShader.ts packedUv)\n\t\tvar uv = vec2f(select(h.x, 1.0 - h.x, plusFace), 1.0 - h.y);\n\t\tif (axis == 0) {\n\t\t\tuv = vec2f(select(1.0 - h.z, h.z, plusFace), 1.0 - h.y);\n\t\t} else if (axis == 1) {\n\t\t\tuv = vec2f(select(1.0 - h.x, h.x, plusFace), 1.0 - h.z);\n\t\t}\n\t\tlet texel = min(vec2u(floor(uv * fs)), vec2u(size - 1u));\n\t\treturn bloxdSpMaskBit(data + face * ((size * size + 31u) / 32u), texel.x + size * texel.y);\n\t}\n\treturn false;\n}\nfn bloxdSpWindowSlot(chunk: vec3i) -> u32 {\n\tlet window = vec3i(${Hb}, ${pb}, ${Vb});\n\tlet r = chunk % window;\n\tlet s = select(r, r + window, r < vec3i(0));\n\treturn u32(s.x + ${Hb} * (s.y + ${pb} * s.z));\n}\nfn bloxdSpWindowHas(chunk: vec3i) -> bool {\n\treturn all(abs(chunk - bloxdSpSunShadow.eyeChunk) <= vec3i(${gb}, ${lb}, ${Lb}));\n}\nfn bloxdSpCellFull(cell: vec3i) -> bool {\n\tlet chunk = cell >> vec3u(${Ib}u);\n\tif (!bloxdSpWindowHas(chunk)) {\n\t\treturn false;\n\t}\n\tlet slot = bloxdSpWindowSlot(chunk);\n\tlet record = slot * 4u;\n\tlet named = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\tlet state = bloxdSpShadowVoxels[record + 3u] & 255u;\n\tif (!named || state != ${VM}u) {\n\t\treturn named && state == ${pM}u;\n\t}\n\tlet local = cell - chunk * 32;\n\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\tlet brickBase = ${LM}u + slot * 1536u + brick * 3u;\n\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\tif (((bloxdSpShadowVoxels[brickBase + (bit >> 5u)] >> (bit & 31u)) & 1u) == 0u) {\n\t\treturn false;\n\t}\n\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\tif (pool == 0u) {\n\t\treturn true;\n\t}\n\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\treturn ((entry >> ((bit & 1u) * 16u)) & 0xffffu) == 65535u;\n}\n// ownCell: whether the caster in the cell it starts in can block it (sunShadowTrace.ts traceSunShadow)\nfn bloxdSpShadowMarch(o: vec3f, d: vec3f, offset: vec3i, maxSteps: i32, ownCell: bool) -> vec4f {\n\tvar cell = vec3i(floor(o)) + offset;\n\tvar t = 0.0;\n\tvar axis = -1;\n\tlet inv = select(vec3f(0.0), 1.0 / d, d != vec3f(0.0));\n\t// The chunk the slot and record were read for: they change only with it\n\tvar cached = vec3i(-2147483647);\n\tvar slot = 0u;\n\tvar named = false;\n\tvar state = 0u;\n\t// Rising above the window's highest cell that may block, it crosses nothing more (0: never written)\n\tlet windowWord = bloxdSpShadowVoxels[${OM}u];\n\tlet windowTop = select(2147483647, bitcast<i32>(windowWord) - 1073741824, d.y > 0.0 && windowWord != 0u);\n${wb?"\tlet exits = bloxdSpRayFresh(o, d, offset);\n":""}\tfor (var step = 0; step < maxSteps; step++) {\n${wb?`\t\tif (exits && step > 0 && step % ${yM} == 0 && bloxdSpVolumeOpenLit(o + t * d, offset)) {\n\t\t\treturn vec4f(o + t * d, -1.0);\n\t\t}\n`:""}\t\tif (cell.y > windowTop) {\n\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t}\n\t\tlet chunk = cell >> vec3u(${Ib}u);\n\t\tif (any(chunk != cached)) {\n\t\t\tif (!bloxdSpWindowHas(chunk)) {\n\t\t\t\treturn vec4f(o + t * d, 1.0);\n\t\t\t}\n\t\t\tcached = chunk;\n\t\t\tslot = bloxdSpWindowSlot(chunk);\n\t\t\tlet record = slot * 4u;\n\t\t\tnamed = all(bitcast<vec3i>(vec3u(bloxdSpShadowVoxels[record], bloxdSpShadowVoxels[record + 1u], bloxdSpShadowVoxels[record + 2u])) == chunk);\n\t\t\tstate = bloxdSpShadowVoxels[record + 3u];\n\t\t}\n\t\tlet chunkLo = chunk * 32;\n\t\tlet kind = state & 255u;\n\t\t// Rising above its highest cell that may block, it crosses nothing more in the chunk\n\t\tif (!named || kind == ${eM}u || kind == ${HM}u || (d.y > 0.0 && cell.y - chunkLo.y > i32(state >> 8u))) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo, offset, 32);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tif (kind == ${pM}u) {\n\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t}\n\t\tlet local = cell - chunkLo;\n\t\tlet brick = u32((local.x >> 2u) + 8 * ((local.y >> 2u) + 8 * (local.z >> 2u)));\n\t\tlet brickBase = ${LM}u + slot * 1536u + brick * 3u;\n\t\tlet low = bloxdSpShadowVoxels[brickBase];\n\t\tlet high = bloxdSpShadowVoxels[brickBase + 1u];\n\t\tif (low == 0u && high == 0u) {\n\t\t\tlet exit = bloxdSpExitBox(o, d, inv, chunkLo + (local & vec3i(~3)), offset, 4);\n\t\t\tt = max(t, exit.t);\n\t\t\taxis = exit.axis;\n\t\t\tcell = exit.cell;\n\t\t\tcontinue;\n\t\t}\n\t\tlet bit = u32((local.x & 3) + 4 * ((local.y & 3) + 4 * (local.z & 3)));\n\t\tlet exit = bloxdSpExitBox(o, d, inv, cell, offset, 1);\n\t\tif (((select(high, low, bit < 32u) >> (bit & 31u)) & 1u) == 1u) {\n\t\t\tlet pool = bloxdSpShadowVoxels[brickBase + 2u];\n\t\t\tif (pool == 0u) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n\t\t\tlet entry = bloxdSpShadowSpecial[294912u + (pool - 1u) * 32u + (bit >> 1u)];\n\t\t\tlet caster = (entry >> ((bit & 1u) * 16u)) & 0xffffu;\n\t\t\tif (caster == 65535u || ((ownCell || axis >= 0) && bloxdSpCasterBlocks(caster, o, d, cell, offset, t, exit.t, axis))) {\n\t\t\t\treturn vec4f(o + t * d, 0.0);\n\t\t\t}\n${Ub}\t\t}\n\t\tt = max(t, exit.t);\n\t\taxis = exit.axis;\n\t\tcell = exit.cell;\n\t}\n\treturn vec4f(o + t * d, -1.0);\n}\n`
     }
-    const Zm = {
+    const PM = {
       group: 0,
       uniform: 0,
-      QN: 1,
+      GU: 1,
       special: 2,
       work: 3,
       volume: 4
     };
 
-    function km() {
-      const dd = Zm;
-      return `${lm(dd)}${Cm(dd,!1,!1,!0)}struct BloxdSpVolumeBox {\n\tlo: vec3i,\n\tfirst: u32,\n\tsize: vec3u,\n}\nstruct BloxdSpVolumeWork {\n\tlight: vec3f,\n\tboxes: u32,\n\tbox: array<BloxdSpVolumeBox, ${Im.c}>,\n}\n@group(${dd.group}) @binding(${dd.work}) var<uniform> bloxdSpVolumeWork: BloxdSpVolumeWork;\n@group(${dd.group}) @binding(${dd.volume}) var bloxdSpVolumeOut: texture_storage_3d<rgba8unorm, write>;\n@compute @workgroup_size(${Im.i})\nfn main(@builtin(global_invocation_id) id: vec3u) {\n\tvar at = 0u;\n\tlet boxes = min(bloxdSpVolumeWork.boxes, ${Im.c}u);\n\tfor (var b = 1u; b < boxes; b++) {\n\t\tif (id.x >= bloxdSpVolumeWork.box[b].first) {\n\t\t\tat = b;\n\t\t}\n\t}\n\tlet box = bloxdSpVolumeWork.box[at];\n\tlet index = id.x - box.first;\n\tif (index >= box.size.x * box.size.y * box.size.z) {\n\t\treturn;\n\t}\n\tlet r = box.lo + vec3i(vec3u(index % box.size.x, (index / box.size.x) % box.size.y, index / (box.size.x * box.size.y)));\n\t// From the cell's centre, relative to the volume's corner: exact in f32\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet cell = lo + r;\n\tlet open = !bloxdSpCellFull(cell);\n\tvar lit = 0.0;\n\tbloxdSpCrossed = false;\n\tif (open) {\n\t\t// Past its own caster: a cell's light is what reaches it (sunShadowVolume.ts sunShadowVolumeCell)\n\t\tlet march = bloxdSpShadowMarch(vec3f(r) + vec3f(0.5), bloxdSpVolumeWork.light, lo, ${Im.d}, false);\n\t\tlit = select(march.w, 1.0, march.w < 0.0);\n\t}\n\ttextureStore(bloxdSpVolumeOut, bloxdSpVolumeTexel(cell), vec4f(lit, select(0.0, 1.0, open), select(0.0, 1.0, lit == 1.0 && !bloxdSpCrossed), 1.0));\n}\n`
+    function nM() {
+      const bb = PM;
+      return `${uM(bb)}${dM(bb,!1,!1,!0)}struct BloxdSpVolumeBox {\n\tlo: vec3i,\n\tfirst: u32,\n\tsize: vec3u,\n}\nstruct BloxdSpVolumeWork {\n\tlight: vec3f,\n\tboxes: u32,\n\tbox: array<BloxdSpVolumeBox, ${iM.b}>,\n}\n@group(${bb.group}) @binding(${bb.work}) var<uniform> bloxdSpVolumeWork: BloxdSpVolumeWork;\n@group(${bb.group}) @binding(${bb.volume}) var bloxdSpVolumeOut: texture_storage_3d<rgba8unorm, write>;\n@compute @workgroup_size(${iM.j})\nfn main(@builtin(global_invocation_id) id: vec3u) {\n\tvar at = 0u;\n\tlet boxes = min(bloxdSpVolumeWork.boxes, ${iM.b}u);\n\tfor (var b = 1u; b < boxes; b++) {\n\t\tif (id.x >= bloxdSpVolumeWork.box[b].first) {\n\t\t\tat = b;\n\t\t}\n\t}\n\tlet box = bloxdSpVolumeWork.box[at];\n\tlet index = id.x - box.first;\n\tif (index >= box.size.x * box.size.y * box.size.z) {\n\t\treturn;\n\t}\n\tlet r = box.lo + vec3i(vec3u(index % box.size.x, (index / box.size.x) % box.size.y, index / (box.size.x * box.size.y)));\n\t// From the cell's centre, relative to the volume's corner: exact in f32\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet cell = lo + r;\n\tlet open = !bloxdSpCellFull(cell);\n\tvar lit = 0.0;\n\tbloxdSpCrossed = false;\n\tif (open) {\n\t\t// Past its own caster: a cell's light is what reaches it (sunShadowVolume.ts sunShadowVolumeCell)\n\t\tlet march = bloxdSpShadowMarch(vec3f(r) + vec3f(0.5), bloxdSpVolumeWork.light, lo, ${iM.e}, false);\n\t\tlit = select(march.w, 1.0, march.w < 0.0);\n\t}\n\ttextureStore(bloxdSpVolumeOut, bloxdSpVolumeTexel(cell), vec4f(lit, select(0.0, 1.0, open), select(0.0, 1.0, lit == 1.0 && !bloxdSpCrossed), 1.0));\n}\n`
     }
-    const fm = 2;
-    const Mm = "fn bloxdSpNormalCode(n: vec3f) -> f32 {\n\tlet a = abs(n);\n\tif (a.x >= a.y && a.x >= a.z) {\n\t\treturn select(1.0, 0.0, n.x > 0.0);\n\t}\n\tif (a.y >= a.z) {\n\t\treturn select(3.0, 2.0, n.y > 0.0);\n\t}\n\treturn select(5.0, 4.0, n.z > 0.0);\n}\n";
+    const yM = 2;
+    const oM = "fn bloxdSpNormalCode(n: vec3f) -> f32 {\n\tlet a = abs(n);\n\tif (a.x >= a.y && a.x >= a.z) {\n\t\treturn select(1.0, 0.0, n.x > 0.0);\n\t}\n\tif (a.y >= a.z) {\n\t\treturn select(3.0, 2.0, n.y > 0.0);\n\t}\n\treturn select(5.0, 4.0, n.z > 0.0);\n}\n";
 
-    function dW(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      const Wd = `var<private> bloxdSpShadowPosition: vec3f;\nfn bloxdSpShadowLight() -> vec4f {\n\t// Towards the sun or moon, as the CPU works it out (sunShadowLight)\n\tlet bloxdSpLight = -${Od.shadowDirection};\n\treturn vec4f(bloxdSpLight, smoothstep(0.0, 0.1, bloxdSpLight.y));\n}\n`,
-        Fd = "trace" === md || "lit" === md,
-        Rd = "maskEdge" === md ? "bloxdSpMaskEdge()" : "textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0).r",
-        Xd = Fd ? `\tlet bloxdSpOrigin = bloxdSpShadowPosition + bloxdSpShadowNormal * 0.25;\n\tlet bloxdSpMarch = bloxdSpShadowMarch(bloxdSpOrigin, bloxdSpLight.xyz, ${Od.renderOffset}, 64, true);\n\tvar bloxdSpLit = bloxdSpMarch.w;\n\tif (bloxdSpLit < 0.0) {\n\t\t// Out of steps, or open and lit from here: on from the volume, from where it got to\n\t\tbloxdSpLit = bloxdSpVolumeAt(bloxdSpMarch.xyz, ${Od.renderOffset});\n\t}\n\tif (bloxdSpLit > 0.0 && !bloxdSpShadowFirstPerson) {\n\t\t// Lifeforms and items, but not on the first-person held item, which the body you're in would shade as you turn\n\t\tbloxdSpLit *= bloxdSpEntityLight(bloxdSpShadowPosition, bloxdSpLight.xyz, bloxdSpFacingDot);\n\t}\n\treturn ${"lit"===md?"bloxdSpLit":"bloxdSpLight.w * bloxdSpFacing * bloxdSpLit"};\n` : `\treturn bloxdSpLight.w * bloxdSpFacing * ${Rd};\n`;
-      return `${Wd}${dd.sunShadow?`var<private> bloxdSpShadowNormal: vec3f;\nvar<private> bloxdSpShadowEmissive: bool;\nvar<private> bloxdSpShadowFirstPerson: bool;\n${Fd?function(){const[dd,Od,md]=Im.o;return`fn bloxdSpRayFresh(o: vec3f, d: vec3f, offset: vec3i) -> bool {\n\tif (bloxdSpSunShadow.staleCount > 4u) {\n\t\treturn false;\n\t}\n\tlet inv = select(vec3f(1e30), 1.0 / d, d != vec3f(0.0));\n\tlet count = bloxdSpSunShadow.staleCount;\n\tfor (var b = 0u; b < count; b++) {\n\t\tlet lo = vec3f(bloxdSpSunShadow.stale[b].xyz - offset) - 1.0;\n\t\tlet a = (lo - o) * inv;\n\t\tlet z = (lo + 34.0 - o) * inv;\n\t\tlet near = max(max(min(a.x, z.x), min(a.y, z.y)), min(a.z, z.z));\n\t\tlet far = min(min(max(a.x, z.x), max(a.y, z.y)), max(a.z, z.z));\n\t\tif (far >= max(near, 0.0)) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\nfn bloxdSpVolumeOpenLit(p: vec3f, offset: vec3i) -> bool {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${dd}.0, ${Od}.0, ${md}.0);\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.5)) || any(r > size - vec3f(0.5))) {\n\t\treturn false;\n\t}\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, (r + vec3f(bloxdSpVolumeTexel(lo))) / size, 0.0);\n\treturn sample.b >= 0.999;\n}\n`}():""}fn bloxdShadow() -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\t// A face lit by its own light\n\tif (bloxdSpShadowEmissive) {\n\t\treturn 1.0;\n\t}\n\tlet bloxdSpFacingDot = dot(bloxdSpShadowNormal, bloxdSpLight.xyz);\n\tlet bloxdSpFacing = smoothstep(0.0, 0.5, bloxdSpFacingDot);\n\tif (bloxdSpLight.w <= 0.0 || bloxdSpFacing <= 0.0) {\n\t\treturn 0.0;\n\t}\n${Xd}}\n`:""}${dd.airShadow?`fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\tlet bloxdSpAt = mix(${Od.eyePosition}, bloxdSpShadowPosition, clamp(bloxdSpT, 0.0, 1.0));\n\treturn bloxdSpLight.w * bloxdSpVolumeAt(bloxdSpAt, ${Od.renderOffset});\n}\n`:""}`
+    function TM(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
+      const eb = `var<private> bloxdSpShadowPosition: vec3f;\nfn bloxdSpShadowLight() -> vec4f {\n\t// Towards the sun or moon, as the CPU works it out (sunShadowLight)\n\tlet bloxdSpLight = -${wb.shadowDirection};\n\treturn vec4f(bloxdSpLight, smoothstep(0.0, 0.1, bloxdSpLight.y));\n}\n`,
+        Hb = "trace" === Mb || "lit" === Mb,
+        pb = "maskEdge" === Mb ? "bloxdSpMaskEdge()" : "textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0).r",
+        Vb = Hb ? `\tlet bloxdSpOrigin = bloxdSpShadowPosition + bloxdSpShadowNormal * 0.25;\n\tlet bloxdSpMarch = bloxdSpShadowMarch(bloxdSpOrigin, bloxdSpLight.xyz, ${wb.renderOffset}, 64, true);\n\tvar bloxdSpLit = bloxdSpMarch.w;\n\tif (bloxdSpLit < 0.0) {\n\t\t// Out of steps, or open and lit from here: on from the volume, from where it got to\n\t\tbloxdSpLit = bloxdSpVolumeAt(bloxdSpMarch.xyz, ${wb.renderOffset});\n\t}\n\tif (bloxdSpLit > 0.0 && !bloxdSpShadowFirstPerson) {\n\t\t// Lifeforms and items, but not on the first-person held item, which the body you're in would shade as you turn\n\t\tbloxdSpLit *= bloxdSpEntityLight(bloxdSpShadowPosition, bloxdSpLight.xyz, bloxdSpFacingDot);\n\t}\n\treturn ${"lit"===Mb?"bloxdSpLit":"bloxdSpLight.w * bloxdSpFacing * bloxdSpLit"};\n` : `\treturn bloxdSpLight.w * bloxdSpFacing * ${pb};\n`;
+      return `${eb}${bb.sunShadow?`var<private> bloxdSpShadowNormal: vec3f;\nvar<private> bloxdSpShadowEmissive: bool;\nvar<private> bloxdSpShadowFirstPerson: bool;\n${Hb?function(){const[bb,wb,Mb]=iM.p;return`fn bloxdSpRayFresh(o: vec3f, d: vec3f, offset: vec3i) -> bool {\n\tif (bloxdSpSunShadow.staleCount > 4u) {\n\t\treturn false;\n\t}\n\tlet inv = select(vec3f(1e30), 1.0 / d, d != vec3f(0.0));\n\tlet count = bloxdSpSunShadow.staleCount;\n\tfor (var b = 0u; b < count; b++) {\n\t\tlet lo = vec3f(bloxdSpSunShadow.stale[b].xyz - offset) - 1.0;\n\t\tlet a = (lo - o) * inv;\n\t\tlet z = (lo + 34.0 - o) * inv;\n\t\tlet near = max(max(min(a.x, z.x), min(a.y, z.y)), min(a.z, z.z));\n\t\tlet far = min(min(max(a.x, z.x), max(a.y, z.y)), max(a.z, z.z));\n\t\tif (far >= max(near, 0.0)) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\nfn bloxdSpVolumeOpenLit(p: vec3f, offset: vec3i) -> bool {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${bb}.0, ${wb}.0, ${Mb}.0);\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.5)) || any(r > size - vec3f(0.5))) {\n\t\treturn false;\n\t}\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, (r + vec3f(bloxdSpVolumeTexel(lo))) / size, 0.0);\n\treturn sample.b >= 0.999;\n}\n`}():""}fn bloxdShadow() -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\t// A face lit by its own light\n\tif (bloxdSpShadowEmissive) {\n\t\treturn 1.0;\n\t}\n\tlet bloxdSpFacingDot = dot(bloxdSpShadowNormal, bloxdSpLight.xyz);\n\tlet bloxdSpFacing = smoothstep(0.0, 0.5, bloxdSpFacingDot);\n\tif (bloxdSpLight.w <= 0.0 || bloxdSpFacing <= 0.0) {\n\t\treturn 0.0;\n\t}\n${Vb}}\n`:""}${bb.airShadow?`fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\tlet bloxdSpLight = bloxdSpShadowLight();\n\tlet bloxdSpAt = mix(${wb.eyePosition}, bloxdSpShadowPosition, clamp(bloxdSpT, 0.0, 1.0));\n\treturn bloxdSpLight.w * bloxdSpVolumeAt(bloxdSpAt, ${wb.renderOffset});\n}\n`:""}`
     }
-    const OW = "bloxdSpOwnTexture";
+    const kM = "bloxdSpOwnTexture";
 
-    function mW(dd) {
-      return `u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(${dd.texture}) - 1u)))`
+    function be(bb) {
+      return `u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(${bb.texture}) - 1u)))`
     }
-    const WW = `fn bloxdSpFlags(bloxdSpWord: u32) -> BloxdFlags {\n\tvar bloxdSpOut: BloxdFlags;\n${VO.d.map((dd=>{let[Od,md]=dd;return`\tbloxdSpOut.${Od} = (bloxdSpWord & ${md}u) != 0u;\n`})).join("")}\treturn bloxdSpOut;\n}\n`;
+    const we = `fn bloxdSpFlags(bloxdSpWord: u32) -> BloxdFlags {\n\tvar bloxdSpOut: BloxdFlags;\n${Zw.i.map((bb=>{let[wb,Mb]=bb;return`\tbloxdSpOut.${wb} = (bloxdSpWord & ${Mb}u) != 0u;\n`})).join("")}\treturn bloxdSpOut;\n}\n`;
 
-    function FW(dd) {
-      return `bloxdSpFlags(${dd})`
+    function Me(bb) {
+      return `bloxdSpFlags(${bb})`
     }
-    const RW = `${fO.k}.eyePosition`;
+    const ee = `${ow.l}.eyePosition`;
 
-    function XW(dd, Od, md, Wd, Fd) {
-      const Rd = dd.indexOf(Od);
-      if (Rd < 0 || dd.indexOf(Od, Rd + 1) >= 0) throw new Error(`Lite's ${Fd} program changed at the shader pack ${Wd} hook: ${Rd<0?"no":"more than one"} anchor (lite/${Fd}ShaderPack.ts)`);
-      return dd.slice(0, Rd) + md + dd.slice(Rd + Od.length)
-    }
-
-    function KW(dd) {
-      return dd.sunShadow || dd.airShadow
+    function He(bb, wb, Mb, eb, Hb) {
+      const pb = bb.indexOf(wb);
+      if (pb < 0 || bb.indexOf(wb, pb + 1) >= 0) throw new Error(`Lite's ${Hb} program changed at the shader pack ${eb} hook: ${pb<0?"no":"more than one"} anchor (lite/${Hb}ShaderPack.ts)`);
+      return bb.slice(0, pb) + Mb + bb.slice(pb + wb.length)
     }
 
-    function hW(dd, Od) {
-      return Od && KW(dd)
+    function pe(bb) {
+      return bb.sunShadow || bb.airShadow
     }
-    const vW = {
-      group: fO.e,
-      ...fO.p
+
+    function Ve(bb, wb) {
+      return wb && pe(bb)
+    }
+    const ge = {
+      group: ow.g,
+      ...ow.u
     };
 
-    function QW(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
-      if (!KW(dd)) return "";
-      if (Od) {
-        const Od = vW,
-          Fd = "trace" === md || "lit" === md;
-        let Rd = "";
-        dd.sunShadow && (Rd = Fd ? `${Cm(Od,!0,"lit"===md)}${Wd=Od,`@group(${Wd.group}) @binding(${Wd.entities}) var<storage, read> bloxdSpShadowEntities: array<u32>;\n@group(${Wd.group}) @binding(${Wd.entityGrids}) var<storage, read> bloxdSpShadowEntityGrids: array<u32>;\nfn bloxdSpEntityRow(i: u32) -> vec4f {\n\treturn bitcast<vec4f>(vec4u(bloxdSpShadowEntities[i], bloxdSpShadowEntities[i + 1u], bloxdSpShadowEntities[i + 2u], bloxdSpShadowEntities[i + 3u]));\n}\nfn bloxdSpEntityLight(p: vec3f, light: vec3f, facing: f32) -> f32 {\n\tlet p4 = vec4f(p, 1.0);\n\tlet across = vec2f(dot(bloxdSpSunShadow.entityX, p4), dot(bloxdSpSunShadow.entityY, p4));\n\tif (any(abs(across) >= vec2f(1.0))) {\n\t\treturn 1.0;\n\t}\n\tlet bin = vec2u(clamp(vec2i(floor((across * 0.5 + 0.5) * 128.0)), vec2i(0), vec2i(127)));\n\tlet b = bin.y * 128u + bin.x;\n\tlet start = bloxdSpShadowEntities[b];\n\tlet count = min(bloxdSpShadowEntities[b + 1u] - start, 64u);\n\tlet along = dot(p, light);\n\tfor (var k = 0u; k < count; k++) {\n\t\tlet base = 81921u + bloxdSpShadowEntities[16385u + start + k] * 16u;\n\t\t// Ending before the fragment along the light, as do those after it: their rays can't meet them\n\t\tif (bitcast<f32>(bloxdSpShadowEntities[base + 13u]) < along) {\n\t\t\tbreak;\n\t\t}\n\t\tlet r0 = bloxdSpEntityRow(base);\n\t\tlet r1 = bloxdSpEntityRow(base + 4u);\n\t\tlet r2 = bloxdSpEntityRow(base + 8u);\n\t\tlet packed = bloxdSpShadowEntities[base + 14u];\n\t\tlet dims = vec3u(packed & 0xffu, (packed >> 8u) & 0xffu, packed >> 16u);\n\t\t// In cells from the grid's low corner, and per unit along the light\n\t\tlet q = vec3f(dot(r0, p4), dot(r1, p4), dot(r2, p4));\n\t\t// Its rows' least squared length: the square of 1 over its largest scale, in cells\n\t\tlet shortest = min(min(dot(r0.xyz, r0.xyz), dot(r1.xyz, r1.xyz)), dot(r2.xyz, r2.xyz));\n\t\tvar dq = vec3f(dot(r0.xyz, light), dot(r1.xyz, light), dot(r2.xyz, light));\n\t\tdq = select(dq, vec3f(1e-9), abs(dq) < vec3f(1e-9));\n\t\tlet inv = 1.0 / dq;\n\t\tlet size = vec3f(dims);\n\t\tlet ta = -q * inv;\n\t\tlet tb = (size - q) * inv;\n\t\tlet tlo = min(ta, tb);\n\t\tlet thi = max(ta, tb);\n\t\t// Off the face's plane, past the cells around its own surface: its largest cells, over how fast the light leaves the\n\t\t// plane (finite as the face turns away)\n\t\tlet t0 = max(max(tlo.x, tlo.y), max(tlo.z, 2.0 * inverseSqrt(shortest) / max(facing, 1e-3)));\n\t\tlet t1 = min(min(thi.x, thi.y), thi.z);\n\t\tif (t0 >= t1) {\n\t\t\tcontinue;\n\t\t}\n\t\tlet up = dq > vec3f(0.0);\n\t\tvar at = vec3i(clamp(floor(q + dq * t0), vec3f(0.0), size - 1.0));\n\t\tlet step = select(vec3i(-1), vec3i(1), up);\n\t\tlet delta = abs(inv);\n\t\tvar next = (vec3f(at) + select(vec3f(0.0), vec3f(1.0), up) - q) * inv;\n\t\tlet data = bloxdSpShadowEntities[base + 12u];\n\t\tfor (var s = 0; s < 198; s++) {\n\t\t\tlet index = u32(at.x) + dims.x * (u32(at.y) + dims.y * u32(at.z));\n\t\t\tif ((bloxdSpShadowEntityGrids[data + (index >> 5u)] & (1u << (index & 31u))) != 0u) {\n\t\t\t\treturn 0.0;\n\t\t\t}\n\t\t\tif (next.x <= next.y && next.x <= next.z) {\n\t\t\t\tat.x += step.x;\n\t\t\t\tnext.x += delta.x;\n\t\t\t} else if (next.y <= next.z) {\n\t\t\t\tat.y += step.y;\n\t\t\t\tnext.y += delta.y;\n\t\t\t} else {\n\t\t\t\tat.z += step.z;\n\t\t\t\tnext.z += delta.z;\n\t\t\t}\n\t\t\tif (any(at < vec3i(0)) || any(at >= vec3i(dims))) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn 1.0;\n}\n`}` : function(dd, Od, md) {
-          const Wd = `@group(${dd}) @binding(${Od}) var bloxdSpShadowMask: texture_2d<f32>;\nvar<private> bloxdSpShadowPixel: vec2i;\n`;
-          return md ? `${Wd}var<private> bloxdSpShadowZ: f32;\nvar<private> bloxdSpShadowDz: vec2f;\n${Mm}fn bloxdSpMaskEdge() -> f32 {\n\tlet code = bloxdSpNormalCode(bloxdSpShadowNormal);\n\tlet tolerance = abs(bloxdSpShadowDz.x) + abs(bloxdSpShadowDz.y) + 1e-7;\n\tlet m = textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0);\n\tlet mCode = floor(m.r * 0.5);\n\tlet mError = select(1e30, abs(m.g - bloxdSpShadowZ), mCode == code);\n\tif (mError <= tolerance) {\n\t\treturn m.r - mCode * 2.0;\n\t}\n\tlet last = vec2i(textureDimensions(bloxdSpShadowMask)) - 1;\n\tvar lit = m.r - mCode * 2.0;\n\tvar error = mError;\n${["-1, 0","1, 0","0, -1","0, 1"].map((dd=>`\t{\n\t\tlet o = vec2i(${dd});\n\t\tlet q = textureLoad(bloxdSpShadowMask, clamp(bloxdSpShadowPixel + o, vec2i(0), last), 0);\n\t\tlet qCode = floor(q.r * 0.5);\n\t\tlet e = abs(q.g - (bloxdSpShadowZ + dot(vec2f(o), bloxdSpShadowDz)));\n\t\tif (qCode == code && e < error) {\n\t\t\terror = e;\n\t\t\tlit = q.r - qCode * 2.0;\n\t\t}\n\t}\n`)).join("")}\treturn lit;\n}\n` : Wd
-        }(Od.group, fO.r, "maskEdge" === md));
-        const Xd = {
-          shadowDirection: `${fO.k}.shadowDirection`,
-          renderOffset: `${fO.k}.renderOffset`,
-          eyePosition: `${fO.k}.eyePosition`
+    function le(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "trace";
+      if (!pe(bb)) return "";
+      if (wb) {
+        const wb = ge,
+          Hb = "trace" === Mb || "lit" === Mb;
+        let pb = "";
+        bb.sunShadow && (pb = Hb ? `${dM(wb,!0,"lit"===Mb)}${eb=wb,`@group(${eb.group}) @binding(${eb.entities}) var<storage, read> bloxdSpShadowEntities: array<u32>;\n@group(${eb.group}) @binding(${eb.entityGrids}) var<storage, read> bloxdSpShadowEntityGrids: array<u32>;\nfn bloxdSpEntityRow(i: u32) -> vec4f {\n\treturn bitcast<vec4f>(vec4u(bloxdSpShadowEntities[i], bloxdSpShadowEntities[i + 1u], bloxdSpShadowEntities[i + 2u], bloxdSpShadowEntities[i + 3u]));\n}\nfn bloxdSpEntityLight(p: vec3f, light: vec3f, facing: f32) -> f32 {\n\tlet p4 = vec4f(p, 1.0);\n\tlet across = vec2f(dot(bloxdSpSunShadow.entityX, p4), dot(bloxdSpSunShadow.entityY, p4));\n\tif (any(abs(across) >= vec2f(1.0))) {\n\t\treturn 1.0;\n\t}\n\tlet bin = vec2u(clamp(vec2i(floor((across * 0.5 + 0.5) * 128.0)), vec2i(0), vec2i(127)));\n\tlet b = bin.y * 128u + bin.x;\n\tlet start = bloxdSpShadowEntities[b];\n\tlet count = min(bloxdSpShadowEntities[b + 1u] - start, 64u);\n\tlet along = dot(p, light);\n\tfor (var k = 0u; k < count; k++) {\n\t\tlet base = 81921u + bloxdSpShadowEntities[16385u + start + k] * 16u;\n\t\t// Ending before the fragment along the light, as do those after it: their rays can't meet them\n\t\tif (bitcast<f32>(bloxdSpShadowEntities[base + 13u]) < along) {\n\t\t\tbreak;\n\t\t}\n\t\tlet r0 = bloxdSpEntityRow(base);\n\t\tlet r1 = bloxdSpEntityRow(base + 4u);\n\t\tlet r2 = bloxdSpEntityRow(base + 8u);\n\t\tlet packed = bloxdSpShadowEntities[base + 14u];\n\t\tlet dims = vec3u(packed & 0xffu, (packed >> 8u) & 0xffu, packed >> 16u);\n\t\t// In cells from the grid's low corner, and per unit along the light\n\t\tlet q = vec3f(dot(r0, p4), dot(r1, p4), dot(r2, p4));\n\t\t// Its rows' least squared length: the square of 1 over its largest scale, in cells\n\t\tlet shortest = min(min(dot(r0.xyz, r0.xyz), dot(r1.xyz, r1.xyz)), dot(r2.xyz, r2.xyz));\n\t\tvar dq = vec3f(dot(r0.xyz, light), dot(r1.xyz, light), dot(r2.xyz, light));\n\t\tdq = select(dq, vec3f(1e-9), abs(dq) < vec3f(1e-9));\n\t\tlet inv = 1.0 / dq;\n\t\tlet size = vec3f(dims);\n\t\tlet ta = -q * inv;\n\t\tlet tb = (size - q) * inv;\n\t\tlet tlo = min(ta, tb);\n\t\tlet thi = max(ta, tb);\n\t\t// Off the face's plane, past the cells around its own surface: its largest cells, over how fast the light leaves the\n\t\t// plane (finite as the face turns away)\n\t\tlet t0 = max(max(tlo.x, tlo.y), max(tlo.z, 2.0 * inverseSqrt(shortest) / max(facing, 1e-3)));\n\t\tlet t1 = min(min(thi.x, thi.y), thi.z);\n\t\tif (t0 >= t1) {\n\t\t\tcontinue;\n\t\t}\n\t\tlet up = dq > vec3f(0.0);\n\t\tvar at = vec3i(clamp(floor(q + dq * t0), vec3f(0.0), size - 1.0));\n\t\tlet step = select(vec3i(-1), vec3i(1), up);\n\t\tlet delta = abs(inv);\n\t\tvar next = (vec3f(at) + select(vec3f(0.0), vec3f(1.0), up) - q) * inv;\n\t\tlet data = bloxdSpShadowEntities[base + 12u];\n\t\tfor (var s = 0; s < 198; s++) {\n\t\t\tlet index = u32(at.x) + dims.x * (u32(at.y) + dims.y * u32(at.z));\n\t\t\tif ((bloxdSpShadowEntityGrids[data + (index >> 5u)] & (1u << (index & 31u))) != 0u) {\n\t\t\t\treturn 0.0;\n\t\t\t}\n\t\t\tif (next.x <= next.y && next.x <= next.z) {\n\t\t\t\tat.x += step.x;\n\t\t\t\tnext.x += delta.x;\n\t\t\t} else if (next.y <= next.z) {\n\t\t\t\tat.y += step.y;\n\t\t\t\tnext.y += delta.y;\n\t\t\t} else {\n\t\t\t\tat.z += step.z;\n\t\t\t\tnext.z += delta.z;\n\t\t\t}\n\t\t\tif (any(at < vec3i(0)) || any(at >= vec3i(dims))) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn 1.0;\n}\n`}` : function(bb, wb, Mb) {
+          const eb = `@group(${bb}) @binding(${wb}) var bloxdSpShadowMask: texture_2d<f32>;\nvar<private> bloxdSpShadowPixel: vec2i;\n`;
+          return Mb ? `${eb}var<private> bloxdSpShadowZ: f32;\nvar<private> bloxdSpShadowDz: vec2f;\n${oM}fn bloxdSpMaskEdge() -> f32 {\n\tlet code = bloxdSpNormalCode(bloxdSpShadowNormal);\n\tlet tolerance = abs(bloxdSpShadowDz.x) + abs(bloxdSpShadowDz.y) + 1e-7;\n\tlet m = textureLoad(bloxdSpShadowMask, bloxdSpShadowPixel, 0);\n\tlet mCode = floor(m.r * 0.5);\n\tlet mError = select(1e30, abs(m.g - bloxdSpShadowZ), mCode == code);\n\tif (mError <= tolerance) {\n\t\treturn m.r - mCode * 2.0;\n\t}\n\tlet last = vec2i(textureDimensions(bloxdSpShadowMask)) - 1;\n\tvar lit = m.r - mCode * 2.0;\n\tvar error = mError;\n${["-1, 0","1, 0","0, -1","0, 1"].map((bb=>`\t{\n\t\tlet o = vec2i(${bb});\n\t\tlet q = textureLoad(bloxdSpShadowMask, clamp(bloxdSpShadowPixel + o, vec2i(0), last), 0);\n\t\tlet qCode = floor(q.r * 0.5);\n\t\tlet e = abs(q.g - (bloxdSpShadowZ + dot(vec2f(o), bloxdSpShadowDz)));\n\t\tif (qCode == code && e < error) {\n\t\t\terror = e;\n\t\t\tlit = q.r - qCode * 2.0;\n\t\t}\n\t}\n`)).join("")}\treturn lit;\n}\n` : eb
+        }(wb.group, ow.v, "maskEdge" === Mb));
+        const Vb = {
+          shadowDirection: `${ow.l}.shadowDirection`,
+          renderOffset: `${ow.l}.renderOffset`,
+          eyePosition: `${ow.l}.eyePosition`
         };
-        return `${lm(Od)}${Rd}${function(dd){const[Od,md,Wd]=Im.o;return`@group(${dd.group}) @binding(${dd.volume}) var bloxdSpShadowVolume: texture_3d<f32>;\n@group(${dd.group}) @binding(${dd.sampler}) var bloxdSpShadowVolumeSampler: sampler;\nfn bloxdSpVolumeAt(p: vec3f, offset: vec3i) -> f32 {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${Od}.0, ${md}.0, ${Wd}.0);\n\t// From the volume's low corner, in whole blocks either side, so f32 keeps it exact\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.0)) || any(r > size)) {\n\t\treturn 1.0;\n\t}\n\t// Clear of the edges, where filtering would wrap onto the far side\n\tlet uvw = (clamp(r, vec3f(0.5), size - vec3f(0.5)) + vec3f(bloxdSpVolumeTexel(lo))) / size;\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, uvw, 0.0);\n\tif (sample.g < 0.03125) {\n\t\treturn 1.0;\n\t}\n\treturn min(sample.r / sample.g, 1.0);\n}\n`}(Od)}${dW(dd,Xd,md)}`
+        return `${uM(wb)}${pb}${function(bb){const[wb,Mb,eb]=iM.p;return`@group(${bb.group}) @binding(${bb.volume}) var bloxdSpShadowVolume: texture_3d<f32>;\n@group(${bb.group}) @binding(${bb.sampler}) var bloxdSpShadowVolumeSampler: sampler;\nfn bloxdSpVolumeAt(p: vec3f, offset: vec3i) -> f32 {\n\tlet lo = bloxdSpSunShadow.volumeLo;\n\tlet size = vec3f(${wb}.0, ${Mb}.0, ${eb}.0);\n\t// From the volume's low corner, in whole blocks either side, so f32 keeps it exact\n\tlet r = p - vec3f(lo - offset);\n\tif (any(r < vec3f(0.0)) || any(r > size)) {\n\t\treturn 1.0;\n\t}\n\t// Clear of the edges, where filtering would wrap onto the far side\n\tlet uvw = (clamp(r, vec3f(0.5), size - vec3f(0.5)) + vec3f(bloxdSpVolumeTexel(lo))) / size;\n\tlet sample = textureSampleLevel(bloxdSpShadowVolume, bloxdSpShadowVolumeSampler, uvw, 0.0);\n\tif (sample.g < 0.03125) {\n\t\treturn 1.0;\n\t}\n\treturn min(sample.r / sample.g, 1.0);\n}\n`}(wb)}${TM(bb,Vb,Mb)}`
       }
-      var Wd;
-      return `${dd.sunShadow?"fn bloxdShadow() -> f32 {\n\treturn 1.0;\n}\n":""}${dd.airShadow?"fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\treturn 1.0;\n}\n":""}`
+      var eb;
+      return `${bb.sunShadow?"fn bloxdShadow() -> f32 {\n\treturn 1.0;\n}\n":""}${bb.airShadow?"fn bloxdAirShadow(bloxdSpT: f32) -> f32 {\n\treturn 1.0;\n}\n":""}`
     }
 
-    function tW(dd, Od, md, Wd) {
-      let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "trace";
-      if (!Od) return "";
-      const Rd = (Xd = "fragmentInputs.vPositionW", Kd = dd.sunShadow ? {
-        normal: md,
-        flags: Wd
-      } : null, `\n\tbloxdSpShadowPosition = ${Xd};\n${Kd?`\tbloxdSpShadowNormal = normalize(${Kd.normal});\n\tbloxdSpShadowEmissive = (${Kd.flags} & ${VO.c.emissive}u) != 0u;\n\tbloxdSpShadowFirstPerson = (${Kd.flags} & ${VO.g}u) != 0u;\n`:""}`);
-      var Xd, Kd;
-      return dd.sunShadow && ("mask" === Fd || "maskEdge" === Fd) ? `${Rd}${hd="fragmentInputs.position",vd="maskEdge"===Fd,`\n\tbloxdSpShadowPixel = vec2i(${hd}.xy);\n${vd?`\tbloxdSpShadowZ = ${hd}.z;\n\tbloxdSpShadowDz = vec2f(dpdx(${hd}.z), dpdy(${hd}.z));\n`:""}`}` : Rd;
-      var hd, vd
+    function Le(bb, wb, Mb, eb) {
+      let Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "trace";
+      if (!wb) return "";
+      const pb = (Vb = "fragmentInputs.vPositionW", gb = bb.sunShadow ? {
+        normal: Mb,
+        flags: eb
+      } : null, `\n\tbloxdSpShadowPosition = ${Vb};\n${gb?`\tbloxdSpShadowNormal = normalize(${gb.normal});\n\tbloxdSpShadowEmissive = (${gb.flags} & ${Zw.e.emissive}u) != 0u;\n\tbloxdSpShadowFirstPerson = (${gb.flags} & ${Zw.l}u) != 0u;\n`:""}`);
+      var Vb, gb;
+      return bb.sunShadow && ("mask" === Hb || "maskEdge" === Hb) ? `${pb}${lb="fragmentInputs.position",Lb="maskEdge"===Hb,`\n\tbloxdSpShadowPixel = vec2i(${lb}.xy);\n${Lb?`\tbloxdSpShadowZ = ${lb}.z;\n\tbloxdSpShadowDz = vec2f(dpdx(${lb}.z), dpdy(${lb}.z));\n`:""}`}` : pb;
+      var lb, Lb
     }
-    const oW = "bloxdSpTextureRotation",
-      NW = "bloxdSpTextureLayers",
-      qW = `@group(${fO.e}) @binding(${fO.s}) var<storage, read> ${NW}: array<u32>;\n`;
+    const Ie = "bloxdSpTextureRotation",
+      Oe = "bloxdSpTextureLayers",
+      Ue = `@group(${ow.g}) @binding(${ow.x}) var<storage, read> ${Oe}: array<u32>;\n`;
 
-    function HW(dd) {
-      return `\tvertexOutputs.vPackTexture = ${NW}[min(u32(${dd}), arrayLength(&${NW}) - 1u)];\n`
-    }
-
-    function yW(dd) {
-      return void 0 !== dd.uv
+    function te(bb) {
+      return `\tvertexOutputs.vPackTexture = ${Oe}[min(u32(${bb}), arrayLength(&${Oe}) - 1u)];\n`
     }
 
-    function bW(dd) {
-      if (!dd) return "fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn vec2u(1u);\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\treturn vec4f(1.0);\n}\n";
-      if (yW(dd)) return function(dd) {
+    function Ce(bb) {
+      return void 0 !== bb.uv
+    }
+
+    function Ee(bb) {
+      if (!bb) return "fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn vec2u(1u);\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\treturn vec4f(1.0);\n}\n";
+      if (Ce(bb)) return function(bb) {
         const {
-          texture: Od,
-          cells: md,
-          layers: Wd
-        } = dd, Fd = `textureDimensions(${Od}, bloxdSpLevel)`, Rd = md ? `max(vec2u(vec2f(${Fd}) / ${md}), vec2u(1u))` : Fd, Xd = md ? `fn bloxdSpOwnTexel(bloxdSpCellIndex: f32, bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${Rd};\n\tlet bloxdSpIndex = u32(round(bloxdSpCellIndex));\n\tlet bloxdSpAcross = max(u32(round(${md}.x)), 1u);\n\tlet bloxdSpDown = max(u32(round(${md}.y)), 1u);\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\tlet bloxdSpCellAt = vec2u(bloxdSpIndex % bloxdSpAcross, bloxdSpIndex / bloxdSpAcross % bloxdSpDown);\n\treturn textureLoad(${Od}, min(bloxdSpCellAt * bloxdSpSize + bloxdSpAt, ${Fd} - 1u), bloxdSpLevel);\n}\n` : `fn bloxdSpOwnTexel(bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${Rd};\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\treturn textureLoad(${Od}, bloxdSpAt, bloxdSpLevel);\n}\n`;
-        let Kd;
-        if (md)
-          if (1 === Wd.length) Kd = `\treturn bloxdSpOwnTexel(${Wd[0]}, bloxdSpUv, bloxdSpLevel);\n`;
+          texture: wb,
+          cells: Mb,
+          layers: eb
+        } = bb, Hb = `textureDimensions(${wb}, bloxdSpLevel)`, pb = Mb ? `max(vec2u(vec2f(${Hb}) / ${Mb}), vec2u(1u))` : Hb, Vb = Mb ? `fn bloxdSpOwnTexel(bloxdSpCellIndex: f32, bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${pb};\n\tlet bloxdSpIndex = u32(round(bloxdSpCellIndex));\n\tlet bloxdSpAcross = max(u32(round(${Mb}.x)), 1u);\n\tlet bloxdSpDown = max(u32(round(${Mb}.y)), 1u);\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\tlet bloxdSpCellAt = vec2u(bloxdSpIndex % bloxdSpAcross, bloxdSpIndex / bloxdSpAcross % bloxdSpDown);\n\treturn textureLoad(${wb}, min(bloxdSpCellAt * bloxdSpSize + bloxdSpAt, ${Hb} - 1u), bloxdSpLevel);\n}\n` : `fn bloxdSpOwnTexel(bloxdSpUv: vec2f, bloxdSpLevel: u32) -> vec4f {\n\tlet bloxdSpSize = ${pb};\n\tlet bloxdSpAt = min(vec2u(fract(bloxdSpUv) * vec2f(bloxdSpSize)), bloxdSpSize - 1u);\n\treturn textureLoad(${wb}, bloxdSpAt, bloxdSpLevel);\n}\n`;
+        let gb;
+        if (Mb)
+          if (1 === eb.length) gb = `\treturn bloxdSpOwnTexel(${eb[0]}, bloxdSpUv, bloxdSpLevel);\n`;
           else {
-            const dd = Wd.length - 1;
-            Kd = `\tvar bloxdSpColour = bloxdSpOwnTexel(${Wd[dd]}, bloxdSpUv, bloxdSpLevel);\n\tbloxdSpColour = vec4f(bloxdSpColour.rgb * bloxdSpColour.a, bloxdSpColour.a);\n`;
-            for (let Od = dd - 1; Od >= 0; Od--) Kd += `\t{\n\t\tlet bloxdSpLayer = bloxdSpOwnTexel(${Wd[Od]}, bloxdSpUv, bloxdSpLevel);\n\t\tbloxdSpColour = vec4f(mix(bloxdSpColour.rgb, bloxdSpLayer.rgb, bloxdSpLayer.a), bloxdSpLayer.a + bloxdSpColour.a * (1.0 - bloxdSpLayer.a));\n\t}\n`;
-            Kd += "\treturn vec4f(bloxdSpColour.rgb / max(bloxdSpColour.a, 0.001), bloxdSpColour.a);\n"
+            const bb = eb.length - 1;
+            gb = `\tvar bloxdSpColour = bloxdSpOwnTexel(${eb[bb]}, bloxdSpUv, bloxdSpLevel);\n\tbloxdSpColour = vec4f(bloxdSpColour.rgb * bloxdSpColour.a, bloxdSpColour.a);\n`;
+            for (let wb = bb - 1; wb >= 0; wb--) gb += `\t{\n\t\tlet bloxdSpLayer = bloxdSpOwnTexel(${eb[wb]}, bloxdSpUv, bloxdSpLevel);\n\t\tbloxdSpColour = vec4f(mix(bloxdSpColour.rgb, bloxdSpLayer.rgb, bloxdSpLayer.a), bloxdSpLayer.a + bloxdSpColour.a * (1.0 - bloxdSpLayer.a));\n\t}\n`;
+            gb += "\treturn vec4f(bloxdSpColour.rgb / max(bloxdSpColour.a, 0.001), bloxdSpColour.a);\n"
           }
-        else Kd = "\treturn bloxdSpOwnTexel(bloxdSpUv, bloxdSpLevel);\n";
-        return `${dd.id?`var<private> ${OW}: u32;\n`:""}${Xd}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\tlet bloxdSpLevel = ${mW(dd)};\n\treturn ${Rd};\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId != ${dd.id?OW:"0u"}) {\n\t\treturn vec4f(1.0);\n\t}\n\tlet bloxdSpLevel = ${mW(dd)};\n${Kd}}\n`
-      }(dd);
-      const Od = dd,
-        md = dd => {
-          const md = dd > 0 ? `bloxdSpLayer - ${Od.layers*dd}u` : "bloxdSpLayer";
-          return `return textureSampleLevel(textureAtlas${dd}, ${Od.sampler}, bloxdSpTurned, ${md}, round(bloxdSpMipLevel));`
+        else gb = "\treturn bloxdSpOwnTexel(bloxdSpUv, bloxdSpLevel);\n";
+        return `${bb.id?`var<private> ${kM}: u32;\n`:""}${Vb}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\tlet bloxdSpLevel = ${be(bb)};\n\treturn ${pb};\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId != ${bb.id?kM:"0u"}) {\n\t\treturn vec4f(1.0);\n\t}\n\tlet bloxdSpLevel = ${be(bb)};\n${gb}}\n`
+      }(bb);
+      const wb = bb,
+        Mb = bb => {
+          const Mb = bb > 0 ? `bloxdSpLayer - ${wb.layers*bb}u` : "bloxdSpLayer";
+          return `return textureSampleLevel(textureAtlas${bb}, ${wb.sampler}, bloxdSpTurned, ${Mb}, round(bloxdSpMipLevel));`
         };
-      let Wd = "";
-      for (let Rd = 0; Rd < Od.count - 1; Rd++) Wd += `\tif (bloxdSpLayer < ${Od.layers*(Rd+1)}u) {\n\t\t${md(Rd)}\n\t}\n`;
-      const Fd = Od.frame ? `${Od.frame("f32(bloxdSpTextureId - 1u)","let bloxdSpFrame = ")}\tlet bloxdSpLayer = u32(round(bloxdSpFrame));\n` : "\tlet bloxdSpLayer = bloxdSpTextureId - 1u;\n";
-      return `var<private> ${oW}: u32;\n${qW}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn textureDimensions(textureAtlas0, u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(textureAtlas0) - 1u))));\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId == 0u) {\n\t\treturn vec4f(1.0);\n\t}\n\t// Each quarter turn clockwise the face shows its texture at reads the unturned texture at (v, 1 - u)\n\tvar bloxdSpTurned = bloxdSpUv;\n\tif (${oW} == 1u) {\n\t\tbloxdSpTurned = vec2f(bloxdSpUv.y, 1.0 - bloxdSpUv.x);\n\t} else if (${oW} == 2u) {\n\t\tbloxdSpTurned = 1.0 - bloxdSpUv;\n\t} else if (${oW} == 3u) {\n\t\tbloxdSpTurned = vec2f(1.0 - bloxdSpUv.y, bloxdSpUv.x);\n\t}\n${Fd}${Wd}\t${md(Od.count-1)}\n}\n`
+      let eb = "";
+      for (let pb = 0; pb < wb.count - 1; pb++) eb += `\tif (bloxdSpLayer < ${wb.layers*(pb+1)}u) {\n\t\t${Mb(pb)}\n\t}\n`;
+      const Hb = wb.frame ? `${wb.frame("f32(bloxdSpTextureId - 1u)","let bloxdSpFrame = ")}\tlet bloxdSpLayer = u32(round(bloxdSpFrame));\n` : "\tlet bloxdSpLayer = bloxdSpTextureId - 1u;\n";
+      return `var<private> ${Ie}: u32;\n${Ue}fn bloxdTextureSize(bloxdSpMipLevel: f32) -> vec2u {\n\treturn textureDimensions(textureAtlas0, u32(clamp(round(bloxdSpMipLevel), 0.0, f32(textureNumLevels(textureAtlas0) - 1u))));\n}\nfn bloxdTexel(bloxdSpTextureId: u32, bloxdSpUv: vec2f, bloxdSpMipLevel: f32) -> vec4f {\n\tif (bloxdSpTextureId == 0u) {\n\t\treturn vec4f(1.0);\n\t}\n\t// Each quarter turn clockwise the face shows its texture at reads the unturned texture at (v, 1 - u)\n\tvar bloxdSpTurned = bloxdSpUv;\n\tif (${Ie} == 1u) {\n\t\tbloxdSpTurned = vec2f(bloxdSpUv.y, 1.0 - bloxdSpUv.x);\n\t} else if (${Ie} == 2u) {\n\t\tbloxdSpTurned = 1.0 - bloxdSpUv;\n\t} else if (${Ie} == 3u) {\n\t\tbloxdSpTurned = vec2f(1.0 - bloxdSpUv.y, bloxdSpUv.x);\n\t}\n${Hb}${eb}\t${Mb(wb.count-1)}\n}\n`
     }
 
-    function TW(dd, Od, md) {
-      return !!dd.surface && "bloxdDefaultSurface" !== dd.surface && function(dd, Od) {
-        return "liquid" === Od || !dd
-      }(Od, md)
+    function Fe(bb, wb, Mb) {
+      return !!bb.surface && "bloxdDefaultSurface" !== bb.surface && function(bb, wb) {
+        return "liquid" === wb || !bb
+      }(wb, Mb)
     }
 
-    function pW(dd, Od) {
-      return dd.vertex ? `\n\t{\n\t\tlet bloxdSpVertexIn = BloxdVertexIn(worldPos.xyz, vertexOutputs.vNormalW, ${Od.vertexLocalPosition}, ${FW(Od.vertexFlags)});\n\t\tlet bloxdSpVertex = ${dd.vertex}(bloxdSpVertexIn);\n\t\tworldPos = vec4f(bloxdSpVertex.position, worldPos.w);\n\t}\n` : ""
+    function Be(bb, wb) {
+      return bb.vertex ? `\n\t{\n\t\tlet bloxdSpVertexIn = BloxdVertexIn(worldPos.xyz, vertexOutputs.vNormalW, ${wb.vertexLocalPosition}, ${Me(wb.vertexFlags)});\n\t\tlet bloxdSpVertex = ${bb.vertex}(bloxdSpVertexIn);\n\t\tworldPos = vec4f(bloxdSpVertex.position, worldPos.w);\n\t}\n` : ""
     }
 
-    function YW(dd, Od, md, Wd, Fd) {
-      if (!dd.surface) return "";
-      const Rd = (dd, Od) => `\n\tlet bloxdSpTexelUV = ${dd};\n\tlet bloxdSpDdx = dpdx(bloxdSpTexelUV);\n\tlet bloxdSpDdy = dpdy(bloxdSpTexelUV);\n\tlet bloxdSpLod = 0.5 * log2(max(max(dot(bloxdSpDdx, bloxdSpDdx), dot(bloxdSpDdy, bloxdSpDdy)), 1e-10));\n\tlet bloxdSpMipLevel = clamp(bloxdSpLod, 0.0, f32(textureNumLevels(${Od}) - 1u));`;
-      let Xd = "",
-        Kd = "0u, 0u, vec2f(0.0), 0.0";
-      const hd = Wd && yW(Wd) ? Wd : null,
-        vd = Wd && !yW(Wd) ? Wd : null;
-      if (hd) {
-        Xd = `${hd.id?`\n\tlet bloxdSpTexture = ${hd.id};\n\t${OW} = bloxdSpTexture & 0xffffu;`:""}\n\tlet bloxdSpUv = ${hd.uv};${Rd(function(dd,Od){var md;return`${null!==(md=dd.levelUv)&&void 0!==md?md:dd.cells?`${Od} / ${dd.cells}`:Od} * vec2f(textureDimensions(${dd.texture}))`}(hd,"bloxdSpUv"),hd.texture)}`, Kd = (hd.id ? `${OW}, bloxdSpTexture >> 16u` : "0u, 0u") + ", bloxdSpUv, bloxdSpMipLevel"
-      } else vd && (Xd = `\n\tlet bloxdSpTexture = fragmentInputs.vPackTexture;\n\t${oW} = bloxdSpTexture >> 16u;${Rd(`fragmentInputs.vMainUV1 * ${(0,CO.cb)(vd.width)}`,"textureAtlas0")}`, Kd = `bloxdSpTexture & 0xffffu, ${oW}, fragmentInputs.vMainUV1, bloxdSpMipLevel`);
-      const Qd = Fd.overlayColour,
-        td = Qd ? "mix(bloxdSpSurface.colour, bloxdSpSurface.overlayColour.rgb, bloxdSpSurface.overlayColour.a)" : "bloxdSpSurface.colour",
-        od = "bloxdDefaultSurface" !== dd.surface || Qd ? `\n\tbaseColor = vec4f(${td}, baseColor.a);` : "",
-        Nd = TW(dd, Od, md) ? `\n\t${Fd.alphaOut} = bloxdSpSurface.alpha;` : "";
-      return `${Xd}\n\tlet bloxdSpSurfaceIn = BloxdSurfaceIn(baseColor.rgb, ${Fd.alpha}, ${Fd.enchantTier}, ${Fd.enchantColour}, ${Fd.enchantSpeed}, ${null!==Qd&&void 0!==Qd?Qd:"vec4f(0.0)"}, fragmentInputs.vPositionW, ${Fd.normal}, ${Fd.localPosition}, ${FW(Fd.flags)}, ${Kd});\n\tlet bloxdSpSurface = ${dd.surface}(bloxdSpSurfaceIn);${od}${Nd}\n`
+    function se(bb, wb, Mb, eb, Hb) {
+      if (!bb.surface) return "";
+      const pb = (bb, wb) => `\n\tlet bloxdSpTexelUV = ${bb};\n\tlet bloxdSpDdx = dpdx(bloxdSpTexelUV);\n\tlet bloxdSpDdy = dpdy(bloxdSpTexelUV);\n\tlet bloxdSpLod = 0.5 * log2(max(max(dot(bloxdSpDdx, bloxdSpDdx), dot(bloxdSpDdy, bloxdSpDdy)), 1e-10));\n\tlet bloxdSpMipLevel = clamp(bloxdSpLod, 0.0, f32(textureNumLevels(${wb}) - 1u));`;
+      let Vb = "",
+        gb = "0u, 0u, vec2f(0.0), 0.0";
+      const lb = eb && Ce(eb) ? eb : null,
+        Lb = eb && !Ce(eb) ? eb : null;
+      if (lb) {
+        Vb = `${lb.id?`\n\tlet bloxdSpTexture = ${lb.id};\n\t${kM} = bloxdSpTexture & 0xffffu;`:""}\n\tlet bloxdSpUv = ${lb.uv};${pb(function(bb,wb){var Mb;return`${null!==(Mb=bb.levelUv)&&void 0!==Mb?Mb:bb.cells?`${wb} / ${bb.cells}`:wb} * vec2f(textureDimensions(${bb.texture}))`}(lb,"bloxdSpUv"),lb.texture)}`, gb = (lb.id ? `${kM}, bloxdSpTexture >> 16u` : "0u, 0u") + ", bloxdSpUv, bloxdSpMipLevel"
+      } else Lb && (Vb = `\n\tlet bloxdSpTexture = fragmentInputs.vPackTexture;\n\t${Ie} = bloxdSpTexture >> 16u;${pb(`fragmentInputs.vMainUV1 * ${(0,Pw.mb)(Lb.width)}`,"textureAtlas0")}`, gb = `bloxdSpTexture & 0xffffu, ${Ie}, fragmentInputs.vMainUV1, bloxdSpMipLevel`);
+      const Ib = Hb.overlayColour,
+        Ob = Ib ? "mix(bloxdSpSurface.colour, bloxdSpSurface.overlayColour.rgb, bloxdSpSurface.overlayColour.a)" : "bloxdSpSurface.colour",
+        Ub = "bloxdDefaultSurface" !== bb.surface || Ib ? `\n\tbaseColor = vec4f(${Ob}, baseColor.a);` : "",
+        tb = Fe(bb, wb, Mb) ? `\n\t${Hb.alphaOut} = bloxdSpSurface.alpha;` : "";
+      return `${Vb}\n\tlet bloxdSpSurfaceIn = BloxdSurfaceIn(baseColor.rgb, ${Hb.alpha}, ${Hb.enchantTier}, ${Hb.enchantColour}, ${Hb.enchantSpeed}, ${null!==Ib&&void 0!==Ib?Ib:"vec4f(0.0)"}, fragmentInputs.vPositionW, ${Hb.normal}, ${Hb.localPosition}, ${Me(Hb.flags)}, ${gb});\n\tlet bloxdSpSurface = ${bb.surface}(bloxdSpSurfaceIn);${Ub}${tb}\n`
     }
-    const gW = "bloxdSpLightIn";
+    const me = "bloxdSpLightIn";
 
-    function wW(dd, Od, md, Wd) {
-      if (!dd.light) return "";
+    function he(bb, wb, Mb, eb) {
+      if (!bb.light) return "";
       const {
-        lambert: Fd,
-        diffuse: Rd,
-        emissive: Xd,
-        ambient: Kd,
-        fogColour: hd,
-        fogAlpha: vd,
-        normal: Qd,
-        glow: td
-      } = Wd, od = [`${CO.k}.rgb`, `${CO.k}.w`, "uniforms.uAmbientLightColour", "uniforms.uSkyLightColour", CO.j], Nd = ["vec3f(0.0)", "1.0", "vec3f(1.0)", "vec3f(1.0)", "vec3f(0.0)"];
+        lambert: Hb,
+        diffuse: pb,
+        emissive: Vb,
+        ambient: gb,
+        fogColour: lb,
+        fogAlpha: Lb,
+        normal: Ib,
+        glow: Ob
+      } = eb, Ub = [`${Pw.m}.rgb`, `${Pw.m}.w`, "uniforms.uAmbientLightColour", "uniforms.uSkyLightColour", Pw.j], tb = ["vec3f(0.0)", "1.0", "vec3f(1.0)", "vec3f(1.0)", "vec3f(0.0)"];
 
-      function qd(dd, Od) {
-        return null === td ? dd : `mix(${dd}, ${Od}, ${td})`
+      function Cb(bb, wb) {
+        return null === Ob ? bb : `mix(${bb}, ${wb}, ${Ob})`
       }
-      const Hd = (Od ? od.map(((dd, Od) => qd(dd, Nd[Od]))) : Nd).join(", "),
-        yd = md ? qd(Fd, "0.0") : "0.0";
-      return `\tvar ${gW} = BloxdLightIn(vec3f(0.0), ${yd}, ${Rd}, ${qd(Xd,"vec3f(1.0)")}, ${Kd}, ${Hd}, ${hd}, ${vd}, fragmentInputs.vPositionW, ${Qd}, bloxdSpSurfaceIn.localPosition, bloxdSpSurfaceIn.flags, bloxdSpSurfaceIn.textureId, bloxdSpSurfaceIn.textureRotation, bloxdSpSurfaceIn.uv, bloxdSpSurfaceIn.mipLevel);\n\t${gW}.litColour = bloxdLitColour(bloxdSpSurface, ${gW});\n`
+      const Eb = (wb ? Ub.map(((bb, wb) => Cb(bb, tb[wb]))) : tb).join(", "),
+        Fb = Mb ? Cb(Hb, "0.0") : "0.0";
+      return `\tvar ${me} = BloxdLightIn(vec3f(0.0), ${Fb}, ${pb}, ${Cb(Vb,"vec3f(1.0)")}, ${gb}, ${Eb}, ${lb}, ${Lb}, fragmentInputs.vPositionW, ${Ib}, bloxdSpSurfaceIn.localPosition, bloxdSpSurfaceIn.flags, bloxdSpSurfaceIn.textureId, bloxdSpSurfaceIn.textureRotation, bloxdSpSurfaceIn.uv, bloxdSpSurfaceIn.mipLevel);\n\t${me}.litColour = bloxdLitColour(bloxdSpSurface, ${me});\n`
     }
 
-    function aW(dd) {
-      return dd.light ? `\n\t{\n\t\tlet bloxdSpLight = ${dd.light}(bloxdSpSurface, ${gW});\n\t\tcolor = vec4f(bloxdSpLight.colour, color.a);\n\t}\n` : ""
+    function ze(bb) {
+      return bb.light ? `\n\t{\n\t\tlet bloxdSpLight = ${bb.light}(bloxdSpSurface, ${me});\n\t\tcolor = vec4f(bloxdSpLight.colour, color.a);\n\t}\n` : ""
     }
-    const EW = "\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n",
-      JW = "\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n",
-      UW = "\treturn color;\n}",
-      xW = {
+    const Xe = "\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n",
+      xe = "\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n",
+      je = "\treturn color;\n}",
+      Ke = {
         vertexFlags: "vertexOutputs.vBlockFlags",
         vertexLocalPosition: "vec3f(0.0)",
         flags: "fragmentInputs.vBlockFlags",
@@ -1535,57 +1535,57 @@ export const modules = {
         overlayColour: null,
         glow: null
       };
-    const BW = Object.freeze({});
+    const re = Object.freeze({});
 
-    function SW(dd) {
-      var Od;
-      return !(null === (Od = (0, MO.g)(dd)) || void 0 === Od || !Od.sceneDepth)
+    function Re(bb) {
+      var wb;
+      return !(null === (wb = (0, Tw.i)(bb)) || void 0 === wb || !wb.sceneDepth)
     }
 
-    function sW(dd) {
-      const Od = (0, MO.g)(dd);
-      return !!Od && TW(Od.hooks, Od.strict, Od.program)
+    function De(bb) {
+      const wb = (0, Tw.i)(bb);
+      return !!wb && Fe(wb.hooks, wb.strict, wb.program)
     }
 
-    function uW(dd, Od, md, Wd) {
-      return XW(dd, Od, md, Wd, "terrain")
+    function ce(bb, wb, Mb, eb) {
+      return He(bb, wb, Mb, eb, "terrain")
     }
 
-    function VW(dd, Od, md) {
-      let Wd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "none";
-      const Rd = function(dd) {
-          return (0, MO.c)(dd.packVariant, dd.liquid ? "liquid" : "terrain")
-        }(dd),
+    function Ye(bb, wb, Mb) {
+      let eb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "none";
+      const pb = function(bb) {
+          return (0, Tw.e)(bb.packVariant, bb.liquid ? "liquid" : "terrain")
+        }(bb),
         {
-          hooks: Xd
-        } = Rd,
-        Kd = hW(Rd, Wd),
-        hd = "edge" === Fd ? "maskEdge" : "plain" === Fd ? "mask" : "trace",
-        vd = pW(Xd, xW);
-      vd && (Od = uW(Od, "\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n", `\tvar worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);${vd}\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n`, "vertex"));
-      const Qd = "atlas" === dd.texture ? {
-          count: dd.atlasCount,
-          layers: dd.atlasLayers,
-          width: dd.O4,
+          hooks: Vb
+        } = pb,
+        gb = Ve(pb, eb),
+        lb = "edge" === Hb ? "maskEdge" : "plain" === Hb ? "mask" : "trace",
+        Lb = Be(Vb, Ke);
+      Lb && (wb = ce(wb, "\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n", `\tvar worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);${Lb}\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n`, "vertex"));
+      const Ib = "atlas" === bb.texture ? {
+          count: bb.atlasCount,
+          layers: bb.atlasLayers,
+          width: bb.W4,
           sampler: "atlasSampler",
-          frame: dd.animated ? md : null
+          frame: bb.animated ? Mb : null
         } : null,
-        td = `${Rd.sceneDepth?"\n\tbloxdSpPixel = vec2i(fragmentInputs.position.xy);\n\tbloxdSpPositionW = fragmentInputs.vPositionW;\n":""}${tW(Rd,Kd,xW.normal,xW.flags,hd)}${YW(Xd,Rd.strict,Rd.program,Qd,xW)}`;
-      td && (Od = uW(Od, EW, `${EW.slice(0,-1)}${td}`, "surface"));
-      const od = aW(Xd);
-      return od && (Od = uW(Od, JW, `${wW(Xd,dd.lighting,dd.dirLightCount>0,xW)}${JW}`, "light input"), Od = uW(Od, UW, `${od.slice(1)}${UW}`, "light")), `${(0,fO.z)()}${Rd.sceneDepth?`@group(${fO.e}) @binding(${fO.n}) var bloxdSpSceneDepth: texture_2d<f32>;\nvar<private> bloxdSpPixel: vec2i;\nvar<private> bloxdSpPositionW: vec3f;\nfn bloxdOpaqueBehind() -> BloxdOpaqueBehind {\n\tlet bloxdSpZ = textureLoad(bloxdSpSceneDepth, bloxdSpPixel, 0).r;\n\tif (bloxdSpZ <= 0.0) {\n\t\treturn BloxdOpaqueBehind(false, vec3f(0.0), 0.0);\n\t}\n\tlet bloxdSpEye = ${RW};\n\tlet bloxdSpScale = max(bloxdSpZ / (scene.view * vec4f(bloxdSpPositionW, 1.0)).z, 1.0);\n\tlet bloxdSpBehind = bloxdSpEye + (bloxdSpPositionW - bloxdSpEye) * bloxdSpScale;\n\treturn BloxdOpaqueBehind(true, bloxdSpBehind, distance(bloxdSpBehind, bloxdSpEye));\n}\n`:""}${QW(Rd,Kd,hd)}${bW(Qd)}${WW}fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * 0.5)) + bloxdRenderOffset();\n}\n${Rd.code}${Od}`
+        Ob = `${pb.sceneDepth?"\n\tbloxdSpPixel = vec2i(fragmentInputs.position.xy);\n\tbloxdSpPositionW = fragmentInputs.vPositionW;\n":""}${Le(pb,gb,Ke.normal,Ke.flags,lb)}${se(Vb,pb.strict,pb.program,Ib,Ke)}`;
+      Ob && (wb = ce(wb, Xe, `${Xe.slice(0,-1)}${Ob}`, "surface"));
+      const Ub = ze(Vb);
+      return Ub && (wb = ce(wb, xe, `${he(Vb,bb.lighting,bb.dirLightCount>0,Ke)}${xe}`, "light input"), wb = ce(wb, je, `${Ub.slice(1)}${je}`, "light")), `${(0,ow.C)()}${pb.sceneDepth?`@group(${ow.g}) @binding(${ow.r}) var bloxdSpSceneDepth: texture_2d<f32>;\nvar<private> bloxdSpPixel: vec2i;\nvar<private> bloxdSpPositionW: vec3f;\nfn bloxdOpaqueBehind() -> BloxdOpaqueBehind {\n\tlet bloxdSpZ = textureLoad(bloxdSpSceneDepth, bloxdSpPixel, 0).r;\n\tif (bloxdSpZ <= 0.0) {\n\t\treturn BloxdOpaqueBehind(false, vec3f(0.0), 0.0);\n\t}\n\tlet bloxdSpEye = ${ee};\n\tlet bloxdSpScale = max(bloxdSpZ / (scene.view * vec4f(bloxdSpPositionW, 1.0)).z, 1.0);\n\tlet bloxdSpBehind = bloxdSpEye + (bloxdSpPositionW - bloxdSpEye) * bloxdSpScale;\n\treturn BloxdOpaqueBehind(true, bloxdSpBehind, distance(bloxdSpBehind, bloxdSpEye));\n}\n`:""}${le(pb,gb,lb)}${Ee(Ib)}${we}fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * 0.5)) + bloxdRenderOffset();\n}\n${pb.code}${wb}`
     }
-    const iW = wd.e.WGSL;
+    const Ze = Xb.b.WGSL;
 
-    function AW(dd) {
-      return void 0 !== dd.packVariant
+    function fe(bb) {
+      return void 0 !== bb.packVariant
     }
-    const rW = {
-        DRd: 0,
-        eRd: 4,
-        IRd: 8,
-        lRd: 12,
+    const Ae = {
+        upb: 0,
+        dpb: 4,
+        Ppb: 8,
+        npb: 12,
         fogInfos: 16,
         fogColour: 20,
         outputHeight: 23,
@@ -1593,19 +1593,19 @@ export const modules = {
         dirLights: 28,
         aoLevels: 44
       },
-      GW = rW.aoLevels + 4,
-      nW = {
+      We = Ae.aoLevels + 4,
+      Je = {
         diffuse: 0,
         ambientAndCutoff: 4,
         emissiveAndLevel: 8,
         anim: 12
       },
-      LW = "\nstruct TerrainFrameUniforms {\n\tuHeldLightColour: vec4f,\n\tuHeldLightPos: vec4f,\n\tuSkyLightColour: vec3f,\n\tuAmbientLightColour: vec3f,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tsceneAmbient: vec3f,\n\tuDirLights: array<vec4f, 4>,\n\taoLevels: vec4f,\n}\n",
-      PW = "\nstruct TerrainMaterialUniforms {\n\tvDiffuseColor: vec4f,\n\tambientAndCutoff: vec4f,\n\temissiveAndLevel: vec4f,\n\tanim: vec4f,\n}\n",
-      zW = "\nstruct LiteSceneUniforms {\n\tviewProjection: mat4x4f,\n\tview: mat4x4f,\n\tvEyePosition: vec4f,\n}\n@group(0) @binding(0) var<uniform> scene: LiteSceneUniforms;\nfn liteWorldLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, clip.z * 0.5, clip.w);\n}\nfn liteFrontLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, (clip.z + clip.w) * 0.5, clip.w);\n}\n",
-      cW = "\n\tlet fading = fragmentInputs.vVisibility < 255.0 / 256.0;\n\tif (fading && fragmentInputs.vVisibility < bayerDither(vec2f(fragmentInputs.position.x, uniforms.outputHeight - fragmentInputs.position.y))) {\n\t\tdiscard;\n\t}\n",
-      jW = "\nfn calcFogFactor(fogDistance: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = uniforms.vFogInfos.y;\n\tlet fogEnd = uniforms.vFogInfos.z;\n\tlet fogDensity = uniforms.vFogInfos.w;\n\tlet dist = length(fogDistance);\n\tif (uniforms.vFogInfos.x == 3.0) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (uniforms.vFogInfos.x == 1.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (uniforms.vFogInfos.x == 2.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n",
-      DW = {
+      Se = "\nstruct TerrainFrameUniforms {\n\tuHeldLightColour: vec4f,\n\tuHeldLightPos: vec4f,\n\tuSkyLightColour: vec3f,\n\tuAmbientLightColour: vec3f,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tsceneAmbient: vec3f,\n\tuDirLights: array<vec4f, 4>,\n\taoLevels: vec4f,\n}\n",
+      Ne = "\nstruct TerrainMaterialUniforms {\n\tvDiffuseColor: vec4f,\n\tambientAndCutoff: vec4f,\n\temissiveAndLevel: vec4f,\n\tanim: vec4f,\n}\n",
+      ve = "\nstruct LiteSceneUniforms {\n\tviewProjection: mat4x4f,\n\tview: mat4x4f,\n\tvEyePosition: vec4f,\n}\n@group(0) @binding(0) var<uniform> scene: LiteSceneUniforms;\nfn liteWorldLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, clip.z * 0.5, clip.w);\n}\nfn liteFrontLayer(clip: vec4f) -> vec4f {\n\treturn vec4f(clip.xy, (clip.z + clip.w) * 0.5, clip.w);\n}\n",
+      Qe = "\n\tlet fading = fragmentInputs.vVisibility < 255.0 / 256.0;\n\tif (fading && fragmentInputs.vVisibility < bayerDither(vec2f(fragmentInputs.position.x, uniforms.outputHeight - fragmentInputs.position.y))) {\n\t\tdiscard;\n\t}\n",
+      Ge = "\nfn calcFogFactor(fogDistance: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = uniforms.vFogInfos.y;\n\tlet fogEnd = uniforms.vFogInfos.z;\n\tlet fogDensity = uniforms.vFogInfos.w;\n\tlet dist = length(fogDistance);\n\tif (uniforms.vFogInfos.x == 3.0) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (uniforms.vFogInfos.x == 1.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (uniforms.vFogInfos.x == 2.0) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n",
+      qe = {
         position: 0,
         normal: 1,
         color: 2,
@@ -1613,84 +1613,84 @@ export const modules = {
         packedLight: 5,
         blockFlagWords: 7
       },
-      eW = 0,
-      IW = 3,
-      lW = 4,
-      CW = 5,
-      ZW = `\nfn packedNormal(dir: u32) -> vec4f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\treturn vec4f(select(0.0, s, axis == 0u), select(0.0, s, axis == 1u), select(0.0, s, axis == 2u), 0.0);\n}\nfn packedUv(p: vec3f, dir: u32, corner: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet du = select(-${ZO.e}, ${ZO.e}, corner == 0u || corner == 3u);\n\tlet dv = select(-${ZO.e}, ${ZO.e}, corner < 2u);\n\tif (axis == 0u) {\n\t\treturn vec2f(s * (p.z + du), -(p.y + dv));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(s * (p.x + dv), -(p.z + du));\n\t}\n\treturn vec2f(-s * (p.x + du), -(p.y + dv));\n}\n`,
-      kW = `\n@group(1) @binding(2) var<storage, read> quads: array<u32>;\n// A quad's light: its four slots' packed values as u16, two a word, the lower slot in the low half (liteTerrainArena.ts)\n@group(1) @binding(3) var<storage, read> quadLight: array<u32>;\nfn quadSlotLight(quad: u32, slot: u32) -> f32 {\n\tlet pair = quadLight[quad * 2u + (slot >> 1u)];\n\treturn f32(select(pair, pair >> 16u, (slot & 1u) == 1u) & 0xffffu);\n}\nfn slotCorner(dir: u32, diagonal: u32, slot: u32) -> u32 {\n\tlet reversed = any(vec3u(dir) == vec3u(${[0,1,2,3,4,5].filter((dd=>kO.d>>dd&1)).join("u, ")}u));\n\treturn (diagonal + select(slot, 4u - slot, reversed)) & 3u;\n}\nfn quadCorner(r0: u32, axis: u32, corner: u32) -> vec3f {\n\tlet w = f32(((r0 >> 18u) & 63u) + 1u) * select(0.0, 1.0, corner == 1u || corner == 2u);\n\tlet h = f32(((r0 >> 24u) & 63u) + 1u) * select(0.0, 1.0, corner >= 2u);\n\tlet du = select(vec3f(0.0, 0.0, w), vec3f(w, 0.0, 0.0), axis == 2u);\n\tlet dv = select(vec3f(0.0, h, 0.0), vec3f(h, 0.0, 0.0), axis == 1u);\n\treturn vec3f(f32(r0 & 63u), f32((r0 >> 6u) & 63u), f32((r0 >> 12u) & 63u)) + du + dv;\n}\n`;
-    const fW = {
-      Et: "material.anim.x",
+      ae = 0,
+      ie = 3,
+      ue = 4,
+      de = 5,
+      Pe = `\nfn packedNormal(dir: u32) -> vec4f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\treturn vec4f(select(0.0, s, axis == 0u), select(0.0, s, axis == 1u), select(0.0, s, axis == 2u), 0.0);\n}\nfn packedUv(p: vec3f, dir: u32, corner: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet du = select(-${nw.e}, ${nw.e}, corner == 0u || corner == 3u);\n\tlet dv = select(-${nw.e}, ${nw.e}, corner < 2u);\n\tif (axis == 0u) {\n\t\treturn vec2f(s * (p.z + du), -(p.y + dv));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(s * (p.x + dv), -(p.z + du));\n\t}\n\treturn vec2f(-s * (p.x + du), -(p.y + dv));\n}\n`,
+      ne = `\n@group(1) @binding(2) var<storage, read> quads: array<u32>;\n// A quad's light: its four slots' packed values as u16, two a word, the lower slot in the low half (liteTerrainArena.ts)\n@group(1) @binding(3) var<storage, read> quadLight: array<u32>;\nfn quadSlotLight(quad: u32, slot: u32) -> f32 {\n\tlet pair = quadLight[quad * 2u + (slot >> 1u)];\n\treturn f32(select(pair, pair >> 16u, (slot & 1u) == 1u) & 0xffffu);\n}\nfn slotCorner(dir: u32, diagonal: u32, slot: u32) -> u32 {\n\tlet reversed = any(vec3u(dir) == vec3u(${[0,1,2,3,4,5].filter((bb=>yw.c>>bb&1)).join("u, ")}u));\n\treturn (diagonal + select(slot, 4u - slot, reversed)) & 3u;\n}\nfn quadCorner(r0: u32, axis: u32, corner: u32) -> vec3f {\n\tlet w = f32(((r0 >> 18u) & 63u) + 1u) * select(0.0, 1.0, corner == 1u || corner == 2u);\n\tlet h = f32(((r0 >> 24u) & 63u) + 1u) * select(0.0, 1.0, corner >= 2u);\n\tlet du = select(vec3f(0.0, 0.0, w), vec3f(w, 0.0, 0.0), axis == 2u);\n\tlet dv = select(vec3f(0.0, h, 0.0), vec3f(h, 0.0, 0.0), axis == 1u);\n\treturn vec3f(f32(r0 & 63u), f32((r0 >> 6u) & 63u), f32((r0 >> 12u) & 63u)) + du + dv;\n}\n`;
+    const ye = {
+      sO: "material.anim.x",
       stride: "material.anim.y",
       count: "material.anim.z",
-      perTexture: dd => `animDataPerTex[${dd}]`
+      perTexture: bb => `animDataPerTex[${bb}]`
     };
 
-    function MW(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : fW;
-      return `\n\tlet atlasIdxIn = ${dd};\n\tlet animTick = ${md.Et};\n\tlet animTickStride = ${md.stride};\n\tlet numAnimTextures = ${md.count};\n\t${(0,Ed.g)(wd.e.WGSL,md.perTexture)}\n\t${Od}animLayer;\n`
+    function oe(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ye;
+      return `\n\tlet atlasIdxIn = ${bb};\n\tlet animTick = ${Mb.sO};\n\tlet animTickStride = ${Mb.stride};\n\tlet numAnimTextures = ${Mb.count};\n\t${(0,xb.g)(Xb.b.WGSL,Mb.perTexture)}\n\t${wb}animLayer;\n`
     }
 
-    function dF(dd) {
-      const Od = (Od, md) => {
-        const Wd = Od > 0 ? `fragmentInputs.texAtlasIndex - ${dd.atlasLayers.toFixed(1)} * ${Od.toFixed(1)}` : "fragmentInputs.texAtlasIndex";
-        return `${md?"textureSampleLevel":"textureSample"}(textureAtlas${Od}, atlasSampler, fragmentInputs.vMainUV1, i32(round(${Wd}))${md?", atlasLod":""})`
+    function Te(bb) {
+      const wb = (wb, Mb) => {
+        const eb = wb > 0 ? `fragmentInputs.texAtlasIndex - ${bb.atlasLayers.toFixed(1)} * ${wb.toFixed(1)}` : "fragmentInputs.texAtlasIndex";
+        return `${Mb?"textureSampleLevel":"textureSample"}(textureAtlas${wb}, atlasSampler, fragmentInputs.vMainUV1, i32(round(${eb}))${Mb?", atlasLod":""})`
       };
-      if (1 === dd.atlasCount) return `baseColor = ${Od(0,!1)};`;
-      let md = `\n\tlet atlasTexelUV = fragmentInputs.vMainUV1 * ${(0,CO.cb)(dd.O4)};\n\tlet atlasDdx = dpdx(atlasTexelUV);\n\tlet atlasDdy = dpdy(atlasTexelUV);\n\tlet atlasLod = 0.5 * log2(max(max(dot(atlasDdx, atlasDdx), dot(atlasDdy, atlasDdy)), 1e-10));\n`;
-      for (let Wd = 0; Wd < dd.atlasCount; Wd++) {
-        const Fd = dd.atlasLayers * (Wd + 1) - .5;
-        md += `${Wd>0?" else ":"\n\t"}if (fragmentInputs.texAtlasIndex < ${(0,CO.cb)(Fd)}) {\n\t\tbaseColor = ${Od(Wd,!0)};\n\t}`
+      if (1 === bb.atlasCount) return `baseColor = ${wb(0,!1)};`;
+      let Mb = `\n\tlet atlasTexelUV = fragmentInputs.vMainUV1 * ${(0,Pw.mb)(bb.W4)};\n\tlet atlasDdx = dpdx(atlasTexelUV);\n\tlet atlasDdy = dpdy(atlasTexelUV);\n\tlet atlasLod = 0.5 * log2(max(max(dot(atlasDdx, atlasDdx), dot(atlasDdy, atlasDdy)), 1e-10));\n`;
+      for (let eb = 0; eb < bb.atlasCount; eb++) {
+        const Hb = bb.atlasLayers * (eb + 1) - .5;
+        Mb += `${eb>0?" else ":"\n\t"}if (fragmentInputs.texAtlasIndex < ${(0,Pw.mb)(Hb)}) {\n\t\tbaseColor = ${wb(eb,!0)};\n\t}`
       }
-      return md
+      return Mb
     }
 
-    function OF(dd) {
-      return `terrain-${dd.texture}${"atlas"===dd.texture?dd.atlasCount:""}${dd.animated?"-anim":""}${dd.alphaTest?"-test":""}${dd.lighting?"-lit":""}-dir${dd.dirLightCount}${dd.packed?"-packed":""}${AW(dd)?`-sp${dd.packVariant}`:""}${dd.liquid?"-liquid":""}${dd.resting?"-rest":""}`
+    function ke(bb) {
+      return `terrain-${bb.texture}${"atlas"===bb.texture?bb.atlasCount:""}${bb.animated?"-anim":""}${bb.alphaTest?"-test":""}${bb.lighting?"-lit":""}-dir${bb.dirLightCount}${bb.packed?"-packed":""}${fe(bb)?`-sp${bb.packVariant}`:""}${bb.liquid?"-liquid":""}${bb.resting?"-rest":""}`
     }
 
-    function mF(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
-      const Wd = function(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "none";
-        const md = "none" !== dd.texture,
-          Wd = "atlas" === dd.texture,
-          Fd = dd.dirLightCount > 0,
-          Rd = AW(dd);
-        if (dd.dirLightCount > 4) throw new Error(`Terrain supports 4 directional lights, not ${dd.dirLightCount}`);
-        let Xd = 1,
-          Kd = "@group(2) @binding(0) var<uniform> material: TerrainMaterialUniforms;\n";
-        if (Wd) {
-          dd.animated && (Kd += `@group(2) @binding(${Xd++}) var<storage, read> animDataPerTex: array<f32>;\n`), Kd += `@group(2) @binding(${Xd++}) var atlasSampler: sampler;\n`;
-          for (let Od = 0; Od < dd.atlasCount; Od++) Kd += `@group(2) @binding(${Xd++}) var textureAtlas${Od}: texture_2d_array<f32>;\n`
-        } else "single" === dd.texture && (Kd += `@group(2) @binding(${Xd++}) var diffuseSamplerSampler: sampler;\n`, Kd += `@group(2) @binding(${Xd++}) var diffuseSampler: texture_2d<f32>;\n`);
-        const hd = function(dd) {
-            const Od = DW,
-              md = "none" !== dd.texture,
-              Wd = "atlas" === dd.texture,
-              Fd = AW(dd);
-            return dd.packed ? {
-              declarations: `\nstruct PackedVertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@builtin(vertex_index) vertexIndex: u32,\n}\nstruct VertexInputs {\n\tchunkSlot: u32,\n\tposition: vec3f,\n\tnormal: vec4f,\n\tcolor: vec4f,\n\t${md?"uv: vec2f,":""}\n\t${Wd?"texAtlasIndices: f32,":""}\n\t${dd.lighting?"aPackedLightLevels: f32,":""}\n\t${Fd?"blockFlagWords: vec2u,":""}\n}\n${ZW}\n${kW}\n${"single"===dd.texture?"\nfn packedFaceUvOffset(r0: u32, dir: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet x = f32(r0 & 63u);\n\tlet y = f32((r0 >> 6u) & 63u);\n\tlet z = f32((r0 >> 12u) & 63u);\n\tif (axis == 0u) {\n\t\treturn vec2f(-s * z, y + f32(((r0 >> 24u) & 63u) + 1u));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(-s * x, z + f32(((r0 >> 18u) & 63u) + 1u));\n\t}\n\treturn vec2f(s * x, y + f32(((r0 >> 24u) & 63u) + 1u));\n}\n":""}\n`,
+    function bH(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
+      const eb = function(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "none";
+        const Mb = "none" !== bb.texture,
+          eb = "atlas" === bb.texture,
+          Hb = bb.dirLightCount > 0,
+          pb = fe(bb);
+        if (bb.dirLightCount > 4) throw new Error(`Terrain supports 4 directional lights, not ${bb.dirLightCount}`);
+        let Vb = 1,
+          gb = "@group(2) @binding(0) var<uniform> material: TerrainMaterialUniforms;\n";
+        if (eb) {
+          bb.animated && (gb += `@group(2) @binding(${Vb++}) var<storage, read> animDataPerTex: array<f32>;\n`), gb += `@group(2) @binding(${Vb++}) var atlasSampler: sampler;\n`;
+          for (let wb = 0; wb < bb.atlasCount; wb++) gb += `@group(2) @binding(${Vb++}) var textureAtlas${wb}: texture_2d_array<f32>;\n`
+        } else "single" === bb.texture && (gb += `@group(2) @binding(${Vb++}) var diffuseSamplerSampler: sampler;\n`, gb += `@group(2) @binding(${Vb++}) var diffuseSampler: texture_2d<f32>;\n`);
+        const lb = function(bb) {
+            const wb = qe,
+              Mb = "none" !== bb.texture,
+              eb = "atlas" === bb.texture,
+              Hb = fe(bb);
+            return bb.packed ? {
+              declarations: `\nstruct PackedVertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@builtin(vertex_index) vertexIndex: u32,\n}\nstruct VertexInputs {\n\tchunkSlot: u32,\n\tposition: vec3f,\n\tnormal: vec4f,\n\tcolor: vec4f,\n\t${Mb?"uv: vec2f,":""}\n\t${eb?"texAtlasIndices: f32,":""}\n\t${bb.lighting?"aPackedLightLevels: f32,":""}\n\t${Hb?"blockFlagWords: vec2u,":""}\n}\n${Pe}\n${ne}\n${"single"===bb.texture?"\nfn packedFaceUvOffset(r0: u32, dir: u32) -> vec2f {\n\tlet axis = dir >> 1u;\n\tlet s = 1.0 - 2.0 * f32(dir & 1u);\n\tlet x = f32(r0 & 63u);\n\tlet y = f32((r0 >> 6u) & 63u);\n\tlet z = f32((r0 >> 12u) & 63u);\n\tif (axis == 0u) {\n\t\treturn vec2f(-s * z, y + f32(((r0 >> 24u) & 63u) + 1u));\n\t}\n\tif (axis == 1u) {\n\t\treturn vec2f(-s * x, z + f32(((r0 >> 18u) & 63u) + 1u));\n\t}\n\treturn vec2f(s * x, y + f32(((r0 >> 24u) & 63u) + 1u));\n}\n":""}\n`,
               parameter: "packedInputs: PackedVertexInputs",
-              decode: `\n\tvar vertexInputs: VertexInputs;\n\tlet part = chunks[packedInputs.chunkSlot];\n\tlet drawn = packedInputs.vertexIndex >> 2u;\n\tlet quad = select(drawn, drawn - part.faceCount, drawn >= part.faceEnd);\n\tlet slot = packedInputs.vertexIndex & 3u;\n\tlet r2 = quads[quad * 3u + 2u];\n\tlet dir = r2 & 7u;\n\tlet corner = slotCorner(dir, (r2 >> 11u) & 1u, slot);\n\tlet position = quadCorner(quads[quad * 3u], dir >> 1u, corner);\n\tlet face = quads[quad * 3u + 1u];\n\t// A constant shift a slot, as render-shaders' terrain.wgsl decodes it\n\tlet aoBits = r2 >> 3u;\n\tlet ao = select(select(aoBits, aoBits >> 2u, slot == 1u), select(aoBits >> 4u, aoBits >> 6u, slot == 3u), slot >= 2u) & 3u;\n\tvertexInputs.chunkSlot = packedInputs.chunkSlot;\n\tvertexInputs.position = position;\n\tvertexInputs.normal = packedNormal(dir);\n\t// Packed parts are untinted, so the colour is the AO level's, as unorm8 decodes it; its alpha no program reads\n\tvertexInputs.color = vec4f(vec3f(uniforms.aoLevels[ao]), 1.0);\n\t${md?"vertexInputs.uv = packedUv(position, dir, corner);":""}\n\t${"single"===dd.texture?"vertexInputs.uv += packedFaceUvOffset(quads[quad * 3u], dir);":""}\n\t${Wd?"vertexInputs.texAtlasIndices = f32(face & 0xffffu);":""}\n\t${dd.lighting?"vertexInputs.aPackedLightLevels = quadSlotLight(quad, slot);":""}\n\t${Fd?"vertexInputs.blockFlagWords = vec2u(face, face << 8u);":""}\n`
+              decode: `\n\tvar vertexInputs: VertexInputs;\n\tlet part = chunks[packedInputs.chunkSlot];\n\tlet drawn = packedInputs.vertexIndex >> 2u;\n\tlet quad = select(drawn, drawn - part.faceCount, drawn >= part.faceEnd);\n\tlet slot = packedInputs.vertexIndex & 3u;\n\tlet r2 = quads[quad * 3u + 2u];\n\tlet dir = r2 & 7u;\n\tlet corner = slotCorner(dir, (r2 >> 11u) & 1u, slot);\n\tlet position = quadCorner(quads[quad * 3u], dir >> 1u, corner);\n\tlet face = quads[quad * 3u + 1u];\n\t// A constant shift a slot, as render-shaders' terrain.wgsl decodes it\n\tlet aoBits = r2 >> 3u;\n\tlet ao = select(select(aoBits, aoBits >> 2u, slot == 1u), select(aoBits >> 4u, aoBits >> 6u, slot == 3u), slot >= 2u) & 3u;\n\tvertexInputs.chunkSlot = packedInputs.chunkSlot;\n\tvertexInputs.position = position;\n\tvertexInputs.normal = packedNormal(dir);\n\t// Packed parts are untinted, so the colour is the AO level's, as unorm8 decodes it; its alpha no program reads\n\tvertexInputs.color = vec4f(vec3f(uniforms.aoLevels[ao]), 1.0);\n\t${Mb?"vertexInputs.uv = packedUv(position, dir, corner);":""}\n\t${"single"===bb.texture?"vertexInputs.uv += packedFaceUvOffset(quads[quad * 3u], dir);":""}\n\t${eb?"vertexInputs.texAtlasIndices = f32(face & 0xffffu);":""}\n\t${bb.lighting?"vertexInputs.aPackedLightLevels = quadSlotLight(quad, slot);":""}\n\t${Hb?"vertexInputs.blockFlagWords = vec2u(face, face << 8u);":""}\n`
             } : {
-              declarations: `\nstruct VertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@location(${Od.position}) position: vec3f,\n\t@location(${Od.normal}) normal: vec4f,\n\t@location(${Od.color}) color: vec4f,\n\t${md?`@location(${Od.uv}) uv: vec2f,`:""}\n\t${dd.lighting?`@location(${Od.packedLight}) aPackedLightLevels: f32,`:""}\n\t${Fd?`@location(${Od.blockFlagWords}) blockFlagWords: vec2u,`:""}\n}\n`,
+              declarations: `\nstruct VertexInputs {\n\t@builtin(instance_index) chunkSlot: u32,\n\t@location(${wb.position}) position: vec3f,\n\t@location(${wb.normal}) normal: vec4f,\n\t@location(${wb.color}) color: vec4f,\n\t${Mb?`@location(${wb.uv}) uv: vec2f,`:""}\n\t${bb.lighting?`@location(${wb.packedLight}) aPackedLightLevels: f32,`:""}\n\t${Hb?`@location(${wb.blockFlagWords}) blockFlagWords: vec2u,`:""}\n}\n`,
               parameter: "vertexInputs: VertexInputs",
               decode: ""
             }
-          }(dd),
-          vd = `\n${zW}\n${LW}\n${PW}\n@group(1) @binding(0) var<uniform> uniforms: TerrainFrameUniforms;\n/** Per chunk part, indexed by the draw's first instance (TERRAIN_CHUNK_SLOT_WORDS words). */\nstruct TerrainChunk {\n\t/** Into the render frame. */\n\ttranslation: vec3f,\n\t/** The fade-in. */\n\tvisibility: f32,\n\t/** Quad records only: where the part's faces end in its page, in records, and how many it has. */\n\tfaceEnd: u32,\n\tfaceCount: u32,\n}\n@group(1) @binding(1) var<storage, read> chunks: array<TerrainChunk>;\n${Kd}\n${TO}\n${hd.declarations}\nstruct Varyings {\n\t${"none"===Od?"":"// Invariant: at 1x the scene's pass draws over the pre-pass's depth with an equal test\n\t@invariant "}@builtin(position) position: vec4f,\n\t// Centroid, as an edge pixel's centre can lie past its face and packs floor this to find the block\n\t@location(0) @interpolate(perspective, centroid) vPositionW: vec3f,\n\t@location(1) vNormalW: vec3f,\n\t@location(2) vColor: vec3f,\n\t@location(3) vFogDistance: vec3f,\n\t${dd.resting?"":"@location(4) @interpolate(flat) vVisibility: f32,"}\n\t${Fd?"@location(5) vTerrainLambert: f32,":""}\n\t${md?"@location(6) @interpolate(perspective, centroid) vMainUV1: vec2f,":""}\n\t${Wd?"@location(7) texAtlasIndex: f32,":""}\n\t${dd.lighting?"@location(8) vLightLevels: vec4f,":""}\n\t${Rd?"@location(9) @interpolate(flat) vBlockFlags: u32,":""}\n\t${Rd&&Wd?"@location(10) @interpolate(flat) vPackTexture: u32,":""}\n}\n\n${dd.resting?"":(0,CO.r)(iW)}\n${jW}\n\n@vertex\nfn mainVertex(${hd.parameter}) -> Varyings {\n\t${hd.decode}\n\tvar vertexOutputs: Varyings;\n\tlet chunk = chunks[vertexInputs.chunkSlot];\n\t${Rd?`vertexOutputs.vBlockFlags = ((vertexInputs.blockFlagWords.x >> 24u) << 8u) | (vertexInputs.blockFlagWords.y >> 24u) | ${VO.c.placed}u;`:""}\n\t${Rd&&Wd?HW("vertexInputs.texAtlasIndices").trim():""}\n\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n\tvertexOutputs.vColor = vertexInputs.color.rgb;\n\tvertexOutputs.vFogDistance = (scene.view * worldPos).xyz;\n\t${dd.resting?"":"vertexOutputs.vVisibility = chunk.visibility;"}\n\t${md?"vertexOutputs.vMainUV1 = vertexInputs.uv;":""}\n\t${Wd?function(dd){return dd?MW("vertexInputs.texAtlasIndices","vertexOutputs.texAtlasIndex = "):"vertexOutputs.texAtlasIndex = vertexInputs.texAtlasIndices;"}(dd.animated):""}\n\t${"single"===dd.texture&&dd.animated?"\n\tlet frameTick = floor(material.anim.x / material.anim.z);\n\tlet animTexIndex = frameTick - material.anim.y * floor(frameTick / material.anim.y);\n\tvertexOutputs.vMainUV1.y = (vertexOutputs.vMainUV1.y + animTexIndex) / material.anim.y;\n":""}\n\t${(0,CO.V)(iW)}\n\t${(0,CO.G)(iW,dd.dirLightCount)}\n\treturn vertexOutputs;\n}\n\n@fragment\nfn mainFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${dd.resting?"":cW}\n\tvar baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${Wd?dF(dd):""}\n\t${"single"===dd.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${md?"alpha *= baseColor.a;\n\tbaseColor = vec4f(baseColor.rgb * material.emissiveAndLevel.w, baseColor.a);":""}\n\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n\t${dd.alphaTest?"if (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}\n\talpha = 1.0;":""}\n\tvar diffuseBase = vec3f(0.0);\n\t${Fd?"diffuseBase += vec3f(fragmentInputs.vTerrainLambert);":""}\n\tlet ambient = material.ambientAndCutoff.xyz * uniforms.sceneAmbient;\n\tlet finalDiffuse = clamp(diffuseBase * material.vDiffuseColor.rgb + material.emissiveAndLevel.xyz + ambient, vec3f(0.0), vec3f(1.0)) * baseColor.rgb;\n\t// Nothing past here changes alpha: light, fog and a pack's light hook keep it\n\tvar color = vec4f(finalDiffuse, select(alpha, 1.0, ${bO}));\n\t${AW(dd)?(0,CO.$)(wd.e.WGSL):(0,CO.M)(iW)}\n\tcolor = vec4f(max(color.rgb, vec3f(0.0)), color.a);\n\tlet fog = calcFogFactor(fragmentInputs.vFogDistance);\n\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n\treturn color;\n}\n`,
-          Qd = new Set;
-        dd.lighting && Qd.add("BLOXD_LIGHTING");
-        Fd && Qd.add("BLOXD_TERRAIN_DIRECTIONAL");
-        return eO(vd, new Map([...Qd].map((dd => [dd, !0]))))
-      }(dd, md);
-      if (!AW(dd)) return Wd;
-      const Fd = VW(dd, Wd, MW, Od, md);
-      return "none" === md ? Fd : `${Fd}${function(dd){const Od="none"!==dd.texture&&dd.alphaTest;return`\n@fragment\nfn prepassFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${dd.resting?"":cW}\n\t${dd.alphaTest?`var baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${Od&&"atlas"===dd.texture?dF(dd):""}\n\t${Od&&"single"===dd.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${Od?"alpha *= baseColor.a;":""}\n\tif (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}`:""}\n\tlet emissive = (fragmentInputs.vBlockFlags & ${VO.c.emissive}u) != 0u;\n\treturn vec4f(normalize(fragmentInputs.vNormalW) * 0.5 + 0.5, select(0.0, 1.0, emissive));\n}\n`}(dd)}`
+          }(bb),
+          Lb = `\n${ve}\n${Se}\n${Ne}\n@group(1) @binding(0) var<uniform> uniforms: TerrainFrameUniforms;\n/** Per chunk part, indexed by the draw's first instance (TERRAIN_CHUNK_SLOT_WORDS words). */\nstruct TerrainChunk {\n\t/** Into the render frame. */\n\ttranslation: vec3f,\n\t/** The fade-in. */\n\tvisibility: f32,\n\t/** Quad records only: where the part's faces end in its page, in records, and how many it has. */\n\tfaceEnd: u32,\n\tfaceCount: u32,\n}\n@group(1) @binding(1) var<storage, read> chunks: array<TerrainChunk>;\n${gb}\n${Fw}\n${lb.declarations}\nstruct Varyings {\n\t${"none"===wb?"":"// Invariant: at 1x the scene's pass draws over the pre-pass's depth with an equal test\n\t@invariant "}@builtin(position) position: vec4f,\n\t// Centroid, as an edge pixel's centre can lie past its face and packs floor this to find the block\n\t@location(0) @interpolate(perspective, centroid) vPositionW: vec3f,\n\t@location(1) vNormalW: vec3f,\n\t@location(2) vColor: vec3f,\n\t@location(3) vFogDistance: vec3f,\n\t${bb.resting?"":"@location(4) @interpolate(flat) vVisibility: f32,"}\n\t${Hb?"@location(5) vTerrainLambert: f32,":""}\n\t${Mb?"@location(6) @interpolate(perspective, centroid) vMainUV1: vec2f,":""}\n\t${eb?"@location(7) texAtlasIndex: f32,":""}\n\t${bb.lighting?"@location(8) vLightLevels: vec4f,":""}\n\t${pb?"@location(9) @interpolate(flat) vBlockFlags: u32,":""}\n\t${pb&&eb?"@location(10) @interpolate(flat) vPackTexture: u32,":""}\n}\n\n${bb.resting?"":(0,Pw.s)(Ze)}\n${Ge}\n\n@vertex\nfn mainVertex(${lb.parameter}) -> Varyings {\n\t${lb.decode}\n\tvar vertexOutputs: Varyings;\n\tlet chunk = chunks[vertexInputs.chunkSlot];\n\t${pb?`vertexOutputs.vBlockFlags = ((vertexInputs.blockFlagWords.x >> 24u) << 8u) | (vertexInputs.blockFlagWords.y >> 24u) | ${Zw.e.placed}u;`:""}\n\t${pb&&eb?te("vertexInputs.texAtlasIndices").trim():""}\n\tlet worldPos = vec4f(vertexInputs.position + chunk.translation, 1.0);\n\tvertexOutputs.position = liteWorldLayer(scene.viewProjection * worldPos);\n\tvertexOutputs.vPositionW = worldPos.xyz;\n\tvertexOutputs.vNormalW = normalize(vertexInputs.normal.xyz);\n\tvertexOutputs.vColor = vertexInputs.color.rgb;\n\tvertexOutputs.vFogDistance = (scene.view * worldPos).xyz;\n\t${bb.resting?"":"vertexOutputs.vVisibility = chunk.visibility;"}\n\t${Mb?"vertexOutputs.vMainUV1 = vertexInputs.uv;":""}\n\t${eb?function(bb){return bb?oe("vertexInputs.texAtlasIndices","vertexOutputs.texAtlasIndex = "):"vertexOutputs.texAtlasIndex = vertexInputs.texAtlasIndices;"}(bb.animated):""}\n\t${"single"===bb.texture&&bb.animated?"\n\tlet frameTick = floor(material.anim.x / material.anim.z);\n\tlet animTexIndex = frameTick - material.anim.y * floor(frameTick / material.anim.y);\n\tvertexOutputs.vMainUV1.y = (vertexOutputs.vMainUV1.y + animTexIndex) / material.anim.y;\n":""}\n\t${(0,Pw._)(Ze)}\n\t${(0,Pw.E)(Ze,bb.dirLightCount)}\n\treturn vertexOutputs;\n}\n\n@fragment\nfn mainFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${bb.resting?"":Qe}\n\tvar baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${eb?Te(bb):""}\n\t${"single"===bb.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${Mb?"alpha *= baseColor.a;\n\tbaseColor = vec4f(baseColor.rgb * material.emissiveAndLevel.w, baseColor.a);":""}\n\tbaseColor = vec4f(baseColor.rgb * fragmentInputs.vColor, baseColor.a);\n\t${bb.alphaTest?"if (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}\n\talpha = 1.0;":""}\n\tvar diffuseBase = vec3f(0.0);\n\t${Hb?"diffuseBase += vec3f(fragmentInputs.vTerrainLambert);":""}\n\tlet ambient = material.ambientAndCutoff.xyz * uniforms.sceneAmbient;\n\tlet finalDiffuse = clamp(diffuseBase * material.vDiffuseColor.rgb + material.emissiveAndLevel.xyz + ambient, vec3f(0.0), vec3f(1.0)) * baseColor.rgb;\n\t// Nothing past here changes alpha: light, fog and a pack's light hook keep it\n\tvar color = vec4f(finalDiffuse, select(alpha, 1.0, ${Ew}));\n\t${fe(bb)?(0,Pw.eb)(Xb.b.WGSL):(0,Pw.Q)(Ze)}\n\tcolor = vec4f(max(color.rgb, vec3f(0.0)), color.a);\n\tlet fog = calcFogFactor(fragmentInputs.vFogDistance);\n\tcolor = vec4f(mix(uniforms.vFogColor, color.rgb, fog), color.a);\n\treturn color;\n}\n`,
+          Ib = new Set;
+        bb.lighting && Ib.add("BLOXD_LIGHTING");
+        Hb && Ib.add("BLOXD_TERRAIN_DIRECTIONAL");
+        return iw(Lb, new Map([...Ib].map((bb => [bb, !0]))))
+      }(bb, Mb);
+      if (!fe(bb)) return eb;
+      const Hb = Ye(bb, eb, oe, wb, Mb);
+      return "none" === Mb ? Hb : `${Hb}${function(bb){const wb="none"!==bb.texture&&bb.alphaTest;return`\n@fragment\nfn prepassFragment(fragmentInputs: Varyings) -> @location(0) vec4f {\n\t${bb.resting?"":Qe}\n\t${bb.alphaTest?`var baseColor = vec4f(1.0);\n\tvar alpha = material.vDiffuseColor.a;\n\t${wb&&"atlas"===bb.texture?Te(bb):""}\n\t${wb&&"single"===bb.texture?"baseColor = textureSample(diffuseSampler, diffuseSamplerSampler, fragmentInputs.vMainUV1);":""}\n\t${wb?"alpha *= baseColor.a;":""}\n\tif (alpha < material.ambientAndCutoff.w) {\n\t\tdiscard;\n\t}`:""}\n\tlet emissive = (fragmentInputs.vBlockFlags & ${Zw.e.emissive}u) != 0u;\n\treturn vec4f(normalize(fragmentInputs.vNormalW) * 0.5 + 0.5, select(0.0, 1.0, emissive));\n}\n`}(bb)}`
     }
-    const WF = new Map([
+    const wH = new Map([
       ["float", {
         wgsl: "f32",
         align: 1,
@@ -1718,40 +1718,40 @@ export const modules = {
       }]
     ]);
 
-    function FF(dd, Od) {
-      const md = new Map;
-      let Wd = 0;
-      const Fd = [],
-        Rd = [],
-        Xd = [];
-      for (const vd of Od) {
-        var Kd, hd;
-        const Od = null !== (Kd = vd.type.trim().split(/\s+/).pop()) && void 0 !== Kd ? Kd : vd.type,
-          Qd = WF.get(Od);
-        if (!Qd) throw new Error(`Lite: no uniform layout for ${vd.name}: ${vd.type}`);
-        const td = null !== (hd = vd.arraySize) && void 0 !== hd ? hd : 0,
-          od = td ? 4 : Qd.align;
-        Wd = Math.ceil(Wd / od) * od;
-        const Nd = td ? 4 * Math.ceil(Qd.floats / 4) : Qd.floats;
-        if (md.set(vd.name, {
-            offset: Wd,
-            floats: Qd.floats,
-            arraySize: td,
-            stride: Nd
-          }), td && Qd.floats <= 2) {
-          const Od = `${dd}_${Xd.length}_strided`;
-          Rd.push(`struct ${Od} {\n\t@size(16) el: ${Qd.wgsl},\n}`), Xd.push(vd.name), Fd.push(`\t@align(16) ${vd.name}: array<${Od}, ${td}>,`)
-        } else td ? Fd.push(`\t@align(16) ${vd.name}: array<${Qd.wgsl}, ${td}>,`) : Fd.push(`\t${vd.name}: ${Qd.wgsl},`);
-        Wd += td ? Nd * td : Qd.floats
+    function MH(bb, wb) {
+      const Mb = new Map;
+      let eb = 0;
+      const Hb = [],
+        pb = [],
+        Vb = [];
+      for (const Lb of wb) {
+        var gb, lb;
+        const wb = null !== (gb = Lb.type.trim().split(/\s+/).pop()) && void 0 !== gb ? gb : Lb.type,
+          Ib = wH.get(wb);
+        if (!Ib) throw new Error(`Lite: no uniform layout for ${Lb.name}: ${Lb.type}`);
+        const Ob = null !== (lb = Lb.arraySize) && void 0 !== lb ? lb : 0,
+          Ub = Ob ? 4 : Ib.align;
+        eb = Math.ceil(eb / Ub) * Ub;
+        const tb = Ob ? 4 * Math.ceil(Ib.floats / 4) : Ib.floats;
+        if (Mb.set(Lb.name, {
+            offset: eb,
+            floats: Ib.floats,
+            arraySize: Ob,
+            stride: tb
+          }), Ob && Ib.floats <= 2) {
+          const wb = `${bb}_${Vb.length}_strided`;
+          pb.push(`struct ${wb} {\n\t@size(16) el: ${Ib.wgsl},\n}`), Vb.push(Lb.name), Hb.push(`\t@align(16) ${Lb.name}: array<${wb}, ${Ob}>,`)
+        } else Ob ? Hb.push(`\t@align(16) ${Lb.name}: array<${Ib.wgsl}, ${Ob}>,`) : Hb.push(`\t${Lb.name}: ${Ib.wgsl},`);
+        eb += Ob ? tb * Ob : Ib.floats
       }
       return {
-        slots: md,
-        floats: Math.max(4, 4 * Math.ceil(Wd / 4)),
-        wgsl: `${Rd.join("\n")}\nstruct ${dd} {\n${Fd.join("\n")}\n}\n`,
-        stridedArrays: Xd
+        slots: Mb,
+        floats: Math.max(4, 4 * Math.ceil(eb / 4)),
+        wgsl: `${pb.join("\n")}\nstruct ${bb} {\n${Hb.join("\n")}\n}\n`,
+        stridedArrays: Vb
       }
     }
-    const RF = [{
+    const eH = [{
         name: "vDiffuseColor",
         type: "vec4"
       }, {
@@ -1779,14 +1779,14 @@ export const modules = {
         name: "reflectionMatrix",
         type: "mat4"
       }],
-      XF = [{
+      HH = [{
         name: "vOpacityInfos",
         type: "vec2"
       }, {
         name: "opacityMatrix",
         type: "mat4"
       }],
-      KF = [{
+      pH = [{
         name: "vEmissiveInfos",
         type: "vec2"
       }, {
@@ -1794,18 +1794,18 @@ export const modules = {
         type: "mat4"
       }];
 
-    function hF(dd, Od) {
-      return `#if defined(${dd}) && ${dd}DIRECTUV == 0\nvarying v${Od}UV: vec2f;\n#endif`
+    function VH(bb, wb) {
+      return `#if defined(${bb}) && ${bb}DIRECTUV == 0\nvarying v${wb}UV: vec2f;\n#endif`
     }
 
-    function vF(dd, Od, md) {
-      return `#if defined(${dd}) && ${dd}DIRECTUV == 0\nif (uniforms.v${Od}Infos.x==0.)\n{vertexOutputs.v${Od}UV= (uniforms.${md}Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.v${Od}UV= (uniforms.${md}Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif`
+    function gH(bb, wb, Mb) {
+      return `#if defined(${bb}) && ${bb}DIRECTUV == 0\nif (uniforms.v${wb}Infos.x==0.)\n{vertexOutputs.v${wb}UV= (uniforms.${Mb}Matrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.v${wb}UV= (uniforms.${Mb}Matrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif`
     }
 
-    function QF(dd, Od, md) {
-      return `#ifdef ${dd}\n#if ${dd}DIRECTUV == 1\n#define v${Od}UV vMainUV1\n#elif ${dd}DIRECTUV == 2\n#define v${Od}UV vMainUV2\n#else\nvarying v${Od}UV: vec2f;\n#endif\nvar ${md}SamplerSampler: sampler;\nvar ${md}Sampler: texture_2d<f32>;\n#endif`
+    function lH(bb, wb, Mb) {
+      return `#ifdef ${bb}\n#if ${bb}DIRECTUV == 1\n#define v${wb}UV vMainUV1\n#elif ${bb}DIRECTUV == 2\n#define v${wb}UV vMainUV2\n#else\nvarying v${wb}UV: vec2f;\n#endif\nvar ${Mb}SamplerSampler: sampler;\nvar ${Mb}Sampler: texture_2d<f32>;\n#endif`
     }
-    const tF = {
+    const LH = {
         lights: 0,
         lightStride: 12,
         fogInfos: 96,
@@ -1814,90 +1814,90 @@ export const modules = {
         animTick: 104,
         timeMs: 105
       },
-      oF = 256,
-      NF = "\nstruct LiteLight {\n\tvLightData: vec4f,\n\tvLightDiffuse: vec4f,\n\tvLightSpecular: vec4f,\n}\nstruct LiteFrameUniforms {\n\tlights: array<LiteLight, 8>,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tanimTick: f32,\n\ttimeMs: f32,\n}\n@group(1) @binding(0) var<uniform> frame: LiteFrameUniforms;\nstruct Mesh {\n\tworld: mat4x4f,\n\tvisibility: f32,\n}\n@group(1) @binding(1) var<uniform> mesh: Mesh;\nstruct Internals {\n\tyFactor_: f32,\n\ttextureOutputHeight_: f32,\n}\nconst internals = Internals(1.0, 0.0);\n",
-      qF = "#ifdef INSTANCES\nattribute world0: vec4f;\nattribute world1: vec4f;\nattribute world2: vec4f;\nattribute world3: vec4f;\n#ifdef INSTANCESCOLOR\nattribute instanceColor: vec4f;\n#endif\n#endif",
-      HF = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#ifdef THIN_INSTANCES\nfinalWorld=mesh.world*finalWorld;\n#endif\n#else\nvar finalWorld=mesh.world;\n#endif",
-      yF = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif",
-      bF = "#ifdef LITE_FRONT_LAYER\nvertexOutputs.position=liteFrontLayer(vertexOutputs.position);\n#else\nvertexOutputs.position=liteWorldLayer(vertexOutputs.position);\n#endif\nreturn vertexOutputs;",
-      TF = "#ifdef FOG\nfn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;\nvar fogStart: f32=frame.vFogInfos.y;\nvar fogEnd: f32=frame.vFogInfos.z;\nvar fogDensity: f32=frame.vFogInfos.w;\nvar fogDistance: f32=length(fragmentInputs.vFogDistance);\nif (3.==frame.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);\n}\nelse if (1.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDensity);\n}\nelse if (2.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDistance*fogDensity*fogDensity);\n}\nreturn clamp(fogCoeff,0.0,1.0);\n}\n#endif",
-      pF = "const LinearEncodePowerApprox: f32=2.2;\nconst GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\nfn toLinearSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(LinearEncodePowerApprox));}\nfn toGammaSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(GammaEncodePowerApprox));}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}",
-      YF = `\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${qF}\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nvarying vDiffuseUV: vec2f;\n#endif\n${hF("OPACITY","Opacity")}\n${hF("EMISSIVE","Emissive")}\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n${pF}\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n${HF}\nvar worldPos: vec4f=finalWorld*vec4f(positionUpdated,1.0);\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transpose(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\nvertexOutputs.position=scene.viewProjection*worldPos;\nvertexOutputs.vPositionW= worldPos.xyz;\n#ifndef UV1\nvar uvUpdated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nif (uniforms.vDiffuseInfos.x==0.)\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n${vF("OPACITY","Opacity","opacity")}\n${vF("EMISSIVE","Emissive","emissive")}\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${yF}\n#define CUSTOM_VERTEX_MAIN_END\n${bF}\n}\n`;
-    const gF = `\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef DIFFUSE\n#if DIFFUSEDIRECTUV == 1\n#define vDiffuseUV vMainUV1\n#elif DIFFUSEDIRECTUV == 2\n#define vDiffuseUV vMainUV2\n#else\nvarying vDiffuseUV: vec2f;\n#endif\nvar diffuseSamplerSampler: sampler;\nvar diffuseSampler: texture_2d<f32>;\n#endif\n${QF("OPACITY","Opacity","opacity")}\n${QF("EMISSIVE","Emissive","emissive")}\nstruct lightingInfo\n{diffuse: vec3f,\n};\nfn computeLighting(viewDirectionW: vec3f,vNormal: vec3f,lightData: vec4f,diffuseColor: vec3f,specularColor: vec3f,range: f32,glossiness: f32)->lightingInfo {var result: lightingInfo;\nvar lightVectorW: vec3f;\nvar attenuation: f32=1.0;\nif (lightData.w==0.)\n{var direction: vec3f=lightData.xyz-fragmentInputs.vPositionW;\nattenuation=max(0.,1.0-length(direction)/range);\nlightVectorW=normalize(direction);\n}\nelse\n{lightVectorW=normalize(-lightData.xyz);\n}\nvar ndl: f32=max(0.,dot(vNormal,lightVectorW));\nresult.diffuse=ndl*diffuseColor*attenuation;\nreturn result;\n}\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);\n}\n#ifdef REFLECTION\nvar reflectionCubeSamplerSampler: sampler;var reflectionCubeSampler: texture_cube<f32>;\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#else\nreturn vec3f(0.);\n#endif\n}\n#endif\n${pF}\n${TF}\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-fragmentInputs.vPositionW);var baseColor: vec4f= vec4f(1.,1.,1.,1.);var diffuseColor: vec3f=uniforms.vDiffuseColor.rgb;var alpha: f32=uniforms.vDiffuseColor.a;\n#ifdef NORMAL\nvar normalW: vec3f=normalize(fragmentInputs.vNormalW);\n#else\nvar normalW: vec3f=normalize(cross(dpdx(fragmentInputs.vPositionW),dpdy(fragmentInputs.vPositionW)));\nnormalW=select(-normalW,normalW,dot(normalW,viewDirectionW)>=0.0);\n#endif\n#ifdef TWOSIDEDLIGHTING\nnormalW=select(-normalW,normalW,fragmentInputs.frontFacing);\n#endif\nvar uvOffset: vec2f= vec2f(0.0,0.0);\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,diffuseSamplerSampler,fragmentInputs.vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<uniforms.alphaCutOff) {discard;}\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor=vec4f(baseColor.rgb*uniforms.vDiffuseInfos.y,baseColor.a);\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor=vec4f(baseColor.rgb*fragmentInputs.vColor.rgb,baseColor.a);\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvar baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nvar glossiness: f32=uniforms.vSpecularColor.a;var specularColor: vec3f=uniforms.vSpecularColor.rgb;\nvar diffuseBase: vec3f= vec3f(0.,0.,0.);var info: lightingInfo;\nvar shadow: f32=1.;var aggShadow: f32=0.;var numLights: f32=0.;\n${Array.from({length:4},((dd,Od)=>function(dd){const Od=`
+      IH = 256,
+      OH = "\nstruct LiteLight {\n\tvLightData: vec4f,\n\tvLightDiffuse: vec4f,\n\tvLightSpecular: vec4f,\n}\nstruct LiteFrameUniforms {\n\tlights: array<LiteLight, 8>,\n\tvFogInfos: vec4f,\n\tvFogColor: vec3f,\n\toutputHeight: f32,\n\tanimTick: f32,\n\ttimeMs: f32,\n}\n@group(1) @binding(0) var<uniform> frame: LiteFrameUniforms;\nstruct Mesh {\n\tworld: mat4x4f,\n\tvisibility: f32,\n}\n@group(1) @binding(1) var<uniform> mesh: Mesh;\nstruct Internals {\n\tyFactor_: f32,\n\ttextureOutputHeight_: f32,\n}\nconst internals = Internals(1.0, 0.0);\n",
+      UH = "#ifdef INSTANCES\nattribute world0: vec4f;\nattribute world1: vec4f;\nattribute world2: vec4f;\nattribute world3: vec4f;\n#ifdef INSTANCESCOLOR\nattribute instanceColor: vec4f;\n#endif\n#endif",
+      tH = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#ifdef THIN_INSTANCES\nfinalWorld=mesh.world*finalWorld;\n#endif\n#else\nvar finalWorld=mesh.world;\n#endif",
+      CH = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvertexOutputs.vColor=vec4f(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvertexOutputs.vColor*=colorUpdated;\n#else\nvertexOutputs.vColor=vec4f(vertexOutputs.vColor.rgb*colorUpdated.rgb,vertexOutputs.vColor.a);\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvertexOutputs.vColor*=vertexInputs.instanceColor;\n#endif\n#endif",
+      EH = "#ifdef LITE_FRONT_LAYER\nvertexOutputs.position=liteFrontLayer(vertexOutputs.position);\n#else\nvertexOutputs.position=liteWorldLayer(vertexOutputs.position);\n#endif\nreturn vertexOutputs;",
+      FH = "#ifdef FOG\nfn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;\nvar fogStart: f32=frame.vFogInfos.y;\nvar fogEnd: f32=frame.vFogInfos.z;\nvar fogDensity: f32=frame.vFogInfos.w;\nvar fogDistance: f32=length(fragmentInputs.vFogDistance);\nif (3.==frame.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);\n}\nelse if (1.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDensity);\n}\nelse if (2.==frame.vFogInfos.x)\n{fogCoeff=1.0/pow(2.71828,fogDistance*fogDistance*fogDensity*fogDensity);\n}\nreturn clamp(fogCoeff,0.0,1.0);\n}\n#endif",
+      BH = "const LinearEncodePowerApprox: f32=2.2;\nconst GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\nfn toLinearSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(LinearEncodePowerApprox));}\nfn toGammaSpaceVec3(color: vec3f)->vec3f {return pow(color,vec3f(GammaEncodePowerApprox));}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}",
+      sH = `\nattribute position: vec3f;\n#ifdef NORMAL\nattribute normal: vec3f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${UH}\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nvarying vDiffuseUV: vec2f;\n#endif\n${VH("OPACITY","Opacity")}\n${VH("EMISSIVE","Emissive")}\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\n${BH}\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvar positionUpdated: vec3f=vertexInputs.position;\n#ifdef NORMAL\nvar normalUpdated: vec3f=vertexInputs.normal;\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n#ifdef REFLECTIONMAP_SKYBOX\nvertexOutputs.vPositionUVW=positionUpdated;\n#endif\n#define CUSTOM_VERTEX_UPDATE_POSITION\n#define CUSTOM_VERTEX_UPDATE_NORMAL\n${tH}\nvar worldPos: vec4f=finalWorld*vec4f(positionUpdated,1.0);\n#ifdef NORMAL\nvar normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);\n#if defined(INSTANCES) && defined(THIN_INSTANCES)\nvertexOutputs.vNormalW=normalUpdated/ vec3f(dot(normalWorld[0],normalWorld[0]),dot(normalWorld[1],normalWorld[1]),dot(normalWorld[2],normalWorld[2]));vertexOutputs.vNormalW=normalize(normalWorld*vertexOutputs.vNormalW);\n#else\n#ifdef NONUNIFORMSCALING\nnormalWorld=transpose(inverseMat3(normalWorld));\n#endif\nvertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#endif\n#endif\n#define CUSTOM_VERTEX_UPDATE_WORLDPOS\nvertexOutputs.position=scene.viewProjection*worldPos;\nvertexOutputs.vPositionW= worldPos.xyz;\n#ifndef UV1\nvar uvUpdated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV1\nvertexOutputs.vMainUV1=uvUpdated;\n#endif\n#ifndef UV2\nvar uv2Updated: vec2f=vec2f(0.,0.);\n#endif\n#ifdef MAINUV2\nvertexOutputs.vMainUV2=uv2Updated;\n#endif\n#if defined(DIFFUSE) && DIFFUSEDIRECTUV == 0\nif (uniforms.vDiffuseInfos.x==0.)\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;}\nelse\n{vertexOutputs.vDiffuseUV= (uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;}\n#endif\n${gH("OPACITY","Opacity","opacity")}\n${gH("EMISSIVE","Emissive","emissive")}\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${CH}\n#define CUSTOM_VERTEX_MAIN_END\n${EH}\n}\n`;
+    const mH = `\n#ifdef MAINUV1\nvarying vMainUV1: vec2f;\n#endif\n#ifdef MAINUV2\nvarying vMainUV2: vec2f;\n#endif\nvarying vPositionW: vec3f;\n#ifdef NORMAL\nvarying vNormalW: vec3f;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n#ifdef DIFFUSE\n#if DIFFUSEDIRECTUV == 1\n#define vDiffuseUV vMainUV1\n#elif DIFFUSEDIRECTUV == 2\n#define vDiffuseUV vMainUV2\n#else\nvarying vDiffuseUV: vec2f;\n#endif\nvar diffuseSamplerSampler: sampler;\nvar diffuseSampler: texture_2d<f32>;\n#endif\n${lH("OPACITY","Opacity","opacity")}\n${lH("EMISSIVE","Emissive","emissive")}\nstruct lightingInfo\n{diffuse: vec3f,\n};\nfn computeLighting(viewDirectionW: vec3f,vNormal: vec3f,lightData: vec4f,diffuseColor: vec3f,specularColor: vec3f,range: f32,glossiness: f32)->lightingInfo {var result: lightingInfo;\nvar lightVectorW: vec3f;\nvar attenuation: f32=1.0;\nif (lightData.w==0.)\n{var direction: vec3f=lightData.xyz-fragmentInputs.vPositionW;\nattenuation=max(0.,1.0-length(direction)/range);\nlightVectorW=normalize(direction);\n}\nelse\n{lightVectorW=normalize(-lightData.xyz);\n}\nvar ndl: f32=max(0.,dot(vNormal,lightVectorW));\nresult.diffuse=ndl*diffuseColor*attenuation;\nreturn result;\n}\nfn TEXRD(t: texture_2d<f32>,ts: sampler,uv: vec2f)->vec4f {return textureSample(t,ts,uv);\n}\n#ifdef REFLECTION\nvar reflectionCubeSamplerSampler: sampler;var reflectionCubeSampler: texture_cube<f32>;\n#ifdef REFLECTIONMAP_SKYBOX\nvarying vPositionUVW: vec3f;\n#endif\nfn computeSkyBoxCoords(positionW: vec3f,reflectionMatrix: mat4x4f)->vec3f\n{return (reflectionMatrix* vec4f(positionW,1.)).xyz;}\nfn computeReflectionCoords(worldPos: vec4f,worldNormal: vec3f)->vec3f\n{\n#ifdef REFLECTIONMAP_SKYBOX\nreturn computeSkyBoxCoords(fragmentInputs.vPositionUVW,uniforms.reflectionMatrix);\n#else\nreturn vec3f(0.);\n#endif\n}\n#endif\n${BH}\n${FH}\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nvar viewDirectionW: vec3f=normalize(scene.vEyePosition.xyz-fragmentInputs.vPositionW);var baseColor: vec4f= vec4f(1.,1.,1.,1.);var diffuseColor: vec3f=uniforms.vDiffuseColor.rgb;var alpha: f32=uniforms.vDiffuseColor.a;\n#ifdef NORMAL\nvar normalW: vec3f=normalize(fragmentInputs.vNormalW);\n#else\nvar normalW: vec3f=normalize(cross(dpdx(fragmentInputs.vPositionW),dpdy(fragmentInputs.vPositionW)));\nnormalW=select(-normalW,normalW,dot(normalW,viewDirectionW)>=0.0);\n#endif\n#ifdef TWOSIDEDLIGHTING\nnormalW=select(-normalW,normalW,fragmentInputs.frontFacing);\n#endif\nvar uvOffset: vec2f= vec2f(0.0,0.0);\n#ifdef DIFFUSE\nbaseColor=TEXRD(diffuseSampler,diffuseSamplerSampler,fragmentInputs.vDiffuseUV+uvOffset);\n#if defined(ALPHATEST) && !defined(ALPHATEST_AFTERALLALPHACOMPUTATIONS)\nif (baseColor.a<uniforms.alphaCutOff) {discard;}\n#endif\n#ifdef ALPHAFROMDIFFUSE\nalpha*=baseColor.a;\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_ALPHA\nbaseColor=vec4f(baseColor.rgb*uniforms.vDiffuseInfos.y,baseColor.a);\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nbaseColor=vec4f(baseColor.rgb*fragmentInputs.vColor.rgb,baseColor.a);\n#endif\n#define CUSTOM_FRAGMENT_UPDATE_DIFFUSE\nvar baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n#define CUSTOM_FRAGMENT_BEFORE_LIGHTS\nvar glossiness: f32=uniforms.vSpecularColor.a;var specularColor: vec3f=uniforms.vSpecularColor.rgb;\nvar diffuseBase: vec3f= vec3f(0.,0.,0.);var info: lightingInfo;\nvar shadow: f32=1.;var aggShadow: f32=0.;var numLights: f32=0.;\n${Array.from({length:4},((bb,wb)=>function(bb){const wb=`
     frame.lights[LITE_LIGHT$ {
-        dd
+        bb
       }
       _SLOT] `;return`
     #ifdef LIGHT$ {
-      dd
+      bb
     }\
     nvar diffuse$ {
-      dd
+      bb
     }: vec4f = $ {
-      Od
+      wb
     }.vLightDiffuse;\
     n #define CUSTOM_LIGHT$ {
-      dd
+      bb
     }
     _COLOR\ ninfo = computeLighting(viewDirectionW, normalW, $ {
-      Od
+      wb
     }.vLightData, diffuse$ {
-      dd
+      bb
     }.rgb, $ {
-      Od
+      wb
     }.vLightSpecular.rgb, diffuse$ {
-      dd
+      bb
     }.a, glossiness);\
     nshadow = 1.;\
     naggShadow += shadow;\
     nnumLights += 1.0;\
     ndiffuseBase += info.diffuse * shadow;\
-    n #endif`}(Od))).join("\n")}\naggShadow=aggShadow/numLights;var refractionColor: vec4f= vec4f(0.,0.,0.,1.);\nvar reflectionColor: vec4f= vec4f(0.,0.,0.,1.);\n#ifdef REFLECTION\nvar vReflectionUVW: vec3f=computeReflectionCoords( vec4f(fragmentInputs.vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW=vec3f(vReflectionUVW.x,vReflectionUVW.y,vReflectionUVW.z*-1.0);\n#endif\n#ifdef ROUGHNESS\nvar bias: f32=uniforms.vReflectionInfos.y;\nreflectionColor=textureSampleLevel(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureSample(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW);\n#endif\n#ifdef LITE_REFLECTION_LUMINANCE\nreflectionColor=vec4f(reflectionColor.rrr,1.0);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor=vec4f(fromRGBD(reflectionColor),reflectionColor.a);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor=vec4f(toGammaSpaceVec3(reflectionColor.rgb),reflectionColor.a);\n#endif\nreflectionColor=vec4f(reflectionColor.rgb*uniforms.vReflectionInfos.x,reflectionColor.a);\n#endif\n#ifdef OPACITY\nvar opacityMap: vec4f=TEXRD(opacitySampler,opacitySamplerSampler,fragmentInputs.vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap=vec4f(opacityMap.rgb* vec3f(0.3,0.59,0.11),opacityMap.a);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* uniforms.vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*uniforms.vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=fragmentInputs.vColor.a;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<uniforms.alphaCutOff) {discard;}\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\nvar emissiveColor: vec3f=uniforms.vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,emissiveSamplerSampler,fragmentInputs.vEmissiveUV+uvOffset).rgb*uniforms.vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvar finalDiffuse: vec3f=clamp((diffuseBase+emissiveColor)*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+emissiveColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#endif\n#endif\nvar finalSpecular: vec3f= vec3f(0.0);\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb, vec3f(0.3,0.59,0.11)),0.0,1.0);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar color: vec4f= vec4f(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,vec3f(0.0),vec3f(1.0)),alpha);\n#else\nvar color: vec4f= vec4f(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor=vec4f(max(color.rgb,vec3f(0.)),color.a);\n#ifdef FOG\nvar fog: f32=CalcFogFactor();\ncolor= vec4f(mix(frame.vFogColor,color.rgb,fog),color.a);\n#endif\ncolor=vec4f(color.rgb,color.a*mesh.visibility);\n#ifdef PREMULTIPLYALPHA\ncolor=vec4f(color.rgb*color.a, color.a);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\nfragmentOutputs.color=color;\n#define CUSTOM_FRAGMENT_MAIN_END\nreturn fragmentOutputs;\n}\n`, wF = /^([gimus]+)!/, aF = new Set;
+    n #endif`}(wb))).join("\n")}\naggShadow=aggShadow/numLights;var refractionColor: vec4f= vec4f(0.,0.,0.,1.);\nvar reflectionColor: vec4f= vec4f(0.,0.,0.,1.);\n#ifdef REFLECTION\nvar vReflectionUVW: vec3f=computeReflectionCoords( vec4f(fragmentInputs.vPositionW,1.0),normalW);\n#ifdef REFLECTIONMAP_OPPOSITEZ\nvReflectionUVW=vec3f(vReflectionUVW.x,vReflectionUVW.y,vReflectionUVW.z*-1.0);\n#endif\n#ifdef ROUGHNESS\nvar bias: f32=uniforms.vReflectionInfos.y;\nreflectionColor=textureSampleLevel(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW,bias);\n#else\nreflectionColor=textureSample(reflectionCubeSampler,reflectionCubeSamplerSampler,vReflectionUVW);\n#endif\n#ifdef LITE_REFLECTION_LUMINANCE\nreflectionColor=vec4f(reflectionColor.rrr,1.0);\n#endif\n#ifdef RGBDREFLECTION\nreflectionColor=vec4f(fromRGBD(reflectionColor),reflectionColor.a);\n#endif\n#ifdef IS_REFLECTION_LINEAR\nreflectionColor=vec4f(toGammaSpaceVec3(reflectionColor.rgb),reflectionColor.a);\n#endif\nreflectionColor=vec4f(reflectionColor.rgb*uniforms.vReflectionInfos.x,reflectionColor.a);\n#endif\n#ifdef OPACITY\nvar opacityMap: vec4f=TEXRD(opacitySampler,opacitySamplerSampler,fragmentInputs.vOpacityUV+uvOffset);\n#ifdef OPACITYRGB\nopacityMap=vec4f(opacityMap.rgb* vec3f(0.3,0.59,0.11),opacityMap.a);alpha*=(opacityMap.x+opacityMap.y+opacityMap.z)* uniforms.vOpacityInfos.y;\n#else\nalpha*=opacityMap.a*uniforms.vOpacityInfos.y;\n#endif\n#endif\n#if defined(VERTEXALPHA) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nalpha*=fragmentInputs.vColor.a;\n#endif\n#ifdef ALPHATEST\n#ifdef ALPHATEST_AFTERALLALPHACOMPUTATIONS\nif (alpha<uniforms.alphaCutOff) {discard;}\n#endif\n#ifndef ALPHABLEND\nalpha=1.0;\n#endif\n#endif\nvar emissiveColor: vec3f=uniforms.vEmissiveColor;\n#ifdef EMISSIVE\nemissiveColor+=TEXRD(emissiveSampler,emissiveSamplerSampler,fragmentInputs.vEmissiveUV+uvOffset).rgb*uniforms.vEmissiveInfos.y;\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\n#ifdef LINKEMISSIVEWITHDIFFUSE\nvar finalDiffuse: vec3f=clamp((diffuseBase+emissiveColor)*diffuseColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#else\nvar finalDiffuse: vec3f=clamp(diffuseBase*diffuseColor+emissiveColor+uniforms.vAmbientColor,vec3f(0.0),vec3f(1.0))*baseColor.rgb;\n#endif\n#endif\nvar finalSpecular: vec3f= vec3f(0.0);\n#ifdef REFLECTIONOVERALPHA\nalpha=clamp(alpha+dot(reflectionColor.rgb, vec3f(0.3,0.59,0.11)),0.0,1.0);\n#endif\n#ifdef EMISSIVEASILLUMINATION\nvar color: vec4f= vec4f(clamp(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+emissiveColor+refractionColor.rgb,vec3f(0.0),vec3f(1.0)),alpha);\n#else\nvar color: vec4f= vec4f(finalDiffuse*baseAmbientColor+finalSpecular+reflectionColor.rgb+refractionColor.rgb,alpha);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FOG\ncolor=vec4f(max(color.rgb,vec3f(0.)),color.a);\n#ifdef FOG\nvar fog: f32=CalcFogFactor();\ncolor= vec4f(mix(frame.vFogColor,color.rgb,fog),color.a);\n#endif\ncolor=vec4f(color.rgb,color.a*mesh.visibility);\n#ifdef PREMULTIPLYALPHA\ncolor=vec4f(color.rgb*color.a, color.a);\n#endif\n#define CUSTOM_FRAGMENT_BEFORE_FRAGCOLOR\nfragmentOutputs.color=color;\n#define CUSTOM_FRAGMENT_MAIN_END\nreturn fragmentOutputs;\n}\n`, hH = /^([gimus]+)!/, zH = new Set;
 
-    function EF(dd) {
-      aF.has(dd) || (aF.add(dd), console.warn(`Lite: no place for plugin code at ${dd} in the standard shader: it is left out`))
+    function XH(bb) {
+      zH.has(bb) || (zH.add(bb), console.warn(`Lite: no place for plugin code at ${bb} in the standard shader: it is left out`))
     }
 
-    function JF(dd, Od) {
-      let md = dd;
-      const Wd = new Map;
-      for (const [Rd, Xd] of Od) {
-        var Fd;
-        Wd.set(Rd, `${null!==(Fd=Wd.get(Rd))&&void 0!==Fd?Fd:""}${Xd}\n`)
+    function xH(bb, wb) {
+      let Mb = bb;
+      const eb = new Map;
+      for (const [pb, Vb] of wb) {
+        var Hb;
+        eb.set(pb, `${null!==(Hb=eb.get(pb))&&void 0!==Hb?Hb:""}${Vb}\n`)
       }
-      for (const [Rd, Xd] of Wd) {
-        if (!Rd.startsWith("!")) {
-          const dd = `#define ${Rd}`;
-          if (!md.includes(dd)) {
-            EF(Rd);
+      for (const [pb, Vb] of eb) {
+        if (!pb.startsWith("!")) {
+          const bb = `#define ${pb}`;
+          if (!Mb.includes(bb)) {
+            XH(pb);
             continue
           }
-          md = md.replace(dd, (() => `\n${Xd}\n${dd}`));
+          Mb = Mb.replace(bb, (() => `\n${Vb}\n${bb}`));
           continue
         }
-        let dd = Rd.substring(1),
-          Od = "g";
-        if (dd.startsWith("!")) Od = "", dd = dd.substring(1);
+        let bb = pb.substring(1),
+          wb = "g";
+        if (bb.startsWith("!")) wb = "", bb = bb.substring(1);
         else {
-          const md = wF.exec(dd);
-          md && (Od = md[1], dd = dd.substring(Od.length + 1))
+          const Mb = hH.exec(bb);
+          Mb && (wb = Mb[1], bb = bb.substring(wb.length + 1))
         }
-        const Wd = new RegExp(dd, Od.includes("g") ? Od : `${Od}g`);
-        let Fd = Wd.exec(md);
-        for (Fd || EF(Rd); Fd;) {
-          const dd = Fd,
-            Od = Xd.replace(/\$(\d+)/g, ((Od, md) => Number(md) < dd.length ? dd[Number(md)] : ""));
-          md = md.substring(0, dd.index) + Od + md.substring(dd.index + dd[0].length), Wd.lastIndex = dd.index + Od.length, Fd = Wd.exec(md)
+        const eb = new RegExp(bb, wb.includes("g") ? wb : `${wb}g`);
+        let Hb = eb.exec(Mb);
+        for (Hb || XH(pb); Hb;) {
+          const bb = Hb,
+            wb = Vb.replace(/\$(\d+)/g, ((wb, Mb) => Number(Mb) < bb.length ? bb[Number(Mb)] : ""));
+          Mb = Mb.substring(0, bb.index) + wb + Mb.substring(bb.index + bb[0].length), eb.lastIndex = bb.index + wb.length, Hb = eb.exec(Mb)
         }
       }
-      return md
+      return Mb
     }
-    const UF = /\b(?:(attribute|uniform)|(?:(flat|linear|perspective)\s+)?(?:(center|centroid|sample)\s+)?varying)\s+(\w+)\s*:\s*([\w<>, ]+?)\s*;/g,
-      xF = /\bvar\s+(\w+)\s*:\s*sampler\s*;/g,
-      BF = /\bvar\s+(\w+)\s*:\s*(texture_\w+(?:<\s*f32\s*>)?)\s*;/g;
+    const jH = /\b(?:(attribute|uniform)|(?:(flat|linear|perspective)\s+)?(?:(center|centroid|sample)\s+)?varying)\s+(\w+)\s*:\s*([\w<>, ]+?)\s*;/g,
+      KH = /\bvar\s+(\w+)\s*:\s*sampler\s*;/g,
+      rH = /\bvar\s+(\w+)\s*:\s*(texture_\w+(?:<\s*f32\s*>)?)\s*;/g;
 
-    function SF(dd) {
-      const Od = {
+    function RH(bb) {
+      const wb = {
         attributes: [],
         varyings: [],
         uniforms: [],
@@ -1905,421 +1905,421 @@ export const modules = {
         samplers: new Set,
         body: ""
       };
-      let md = dd.replace(UF, ((dd, md, Wd, Fd, Rd, Xd) => ("attribute" === md ? Od.attributes.push({
-        name: Rd,
-        type: Xd
-      }) : void 0 === md ? Od.varyings.push({
-        name: Rd,
-        type: Xd,
-        interpolation: uF(Xd, Wd, Fd)
-      }) : Od.uniforms.push({
-        name: Rd,
-        type: sF(Xd)
+      let Mb = bb.replace(jH, ((bb, Mb, eb, Hb, pb, Vb) => ("attribute" === Mb ? wb.attributes.push({
+        name: pb,
+        type: Vb
+      }) : void 0 === Mb ? wb.varyings.push({
+        name: pb,
+        type: Vb,
+        interpolation: cH(Vb, eb, Hb)
+      }) : wb.uniforms.push({
+        name: pb,
+        type: DH(Vb)
       }), "")));
-      return md = md.replace(xF, ((dd, md) => (Od.samplers.add(md), ""))), md = md.replace(BF, ((dd, md, Wd) => (Od.textures.push({
-        name: md,
-        type: Wd
-      }), ""))), Od.body = md, Od
+      return Mb = Mb.replace(KH, ((bb, Mb) => (wb.samplers.add(Mb), ""))), Mb = Mb.replace(rH, ((bb, Mb, eb) => (wb.textures.push({
+        name: Mb,
+        type: eb
+      }), ""))), wb.body = Mb, wb
     }
 
-    function sF(dd) {
-      const Od = dd.replace(/\s+/g, "").replace("vec2<f32>", "vec2f").replace("vec3<f32>", "vec3f").replace("vec4<f32>", "vec4f").replace("mat4x4<f32>", "mat4x4f"),
-        md = new Map([
+    function DH(bb) {
+      const wb = bb.replace(/\s+/g, "").replace("vec2<f32>", "vec2f").replace("vec3<f32>", "vec3f").replace("vec4<f32>", "vec4f").replace("mat4x4<f32>", "mat4x4f"),
+        Mb = new Map([
           ["f32", "float"],
           ["vec2f", "vec2"],
           ["vec3f", "vec3"],
           ["vec4f", "vec4"],
           ["mat4x4f", "mat4"]
-        ]).get(Od);
-      if (!md) throw new Error(`Lite: unsupported uniform type ${dd}`);
-      return md
+        ]).get(wb);
+      if (!Mb) throw new Error(`Lite: unsupported uniform type ${bb}`);
+      return Mb
     }
 
-    function uF(dd, Od, md) {
-      return void 0 === Od && void 0 === md ? /^(u32|i32|vec\du|vec\di|vec\d<[ui]32>)$/.test(dd.replace(/\s+/g, "")) ? "@interpolate(flat) " : "" : "flat" === Od ? "@interpolate(flat) " : `@interpolate(${null!==Od&&void 0!==Od?Od:"perspective"}, ${null!==md&&void 0!==md?md:"center"}) `
+    function cH(bb, wb, Mb) {
+      return void 0 === wb && void 0 === Mb ? /^(u32|i32|vec\du|vec\di|vec\d<[ui]32>)$/.test(bb.replace(/\s+/g, "")) ? "@interpolate(flat) " : "" : "flat" === wb ? "@interpolate(flat) " : `@interpolate(${null!==wb&&void 0!==wb?wb:"perspective"}, ${null!==Mb&&void 0!==Mb?Mb:"center"}) `
     }
 
-    function VF(dd) {
-      return GF({
-        defines: dd.defines,
-        vertex: JF(YF, dd.vertexCode),
-        fragment: JF(gF, dd.fragmentCode),
-        members: [...RF, ...dd.defines.has("OPACITY") ? XF : [], ...dd.defines.has("EMISSIVE") ? KF : [], ...dd.pluginUniforms],
+    function YH(bb) {
+      return WH({
+        defines: bb.defines,
+        vertex: xH(sH, bb.vertexCode),
+        fragment: xH(mH, bb.fragmentCode),
+        members: [...eH, ...bb.defines.has("OPACITY") ? HH : [], ...bb.defines.has("EMISSIVE") ? pH : [], ...bb.pluginUniforms],
         structName: "StandardUniforms"
       })
     }
 
-    function iF(dd) {
-      const Od = dd.replace(/\breturn\s+fragmentOutputs\s*;/g, "return canvasOutputs();");
-      if (Od === dd) throw new Error("Lite: fragment main has no return");
-      return Od
+    function ZH(bb) {
+      const wb = bb.replace(/\breturn\s+fragmentOutputs\s*;/g, "return canvasOutputs();");
+      if (wb === bb) throw new Error("Lite: fragment main has no return");
+      return wb
     }
-    const AF = `\nattribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${qF}\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n${HF}\nvar worldPos: vec4f=finalWorld*vec4f(vertexInputs.position,1.0);\nvertexOutputs.position=scene.viewProjection*worldPos;\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${yF}\n${bF}\n}\n`,
-      rF = `\nuniform color: vec4f;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n${TF}\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvar color: vec4f=fragmentInputs.vColor;\n#else\nvar color: vec4f=uniforms.color;\n#endif\n#ifdef FOG\ncolor=vec4f(mix(frame.vFogColor,color.rgb,CalcFogFactor()),color.a);\n#endif\nfragmentOutputs.color=color;\nreturn fragmentOutputs;\n}\n`;
+    const fH = `\nattribute position: vec3f;\n#ifdef VERTEXCOLOR\nattribute color: vec4f;\n#endif\n${UH}\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\nvertexInputs = input;\n#ifdef VERTEXCOLOR\nvar colorUpdated: vec4f=vertexInputs.color;\n#endif\n${tH}\nvar worldPos: vec4f=finalWorld*vec4f(vertexInputs.position,1.0);\nvertexOutputs.position=scene.viewProjection*worldPos;\n#ifdef FOG\nvertexOutputs.vFogDistance=(scene.view*worldPos).xyz;\n#endif\n${CH}\n${EH}\n}\n`,
+      AH = `\nuniform color: vec4f;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vColor: vec4f;\n#endif\n#ifdef FOG\nvarying vFogDistance: vec3f;\n#endif\n${FH}\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\nfragmentInputs = input;\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvar color: vec4f=fragmentInputs.vColor;\n#else\nvar color: vec4f=uniforms.color;\n#endif\n#ifdef FOG\ncolor=vec4f(mix(frame.vFogColor,color.rgb,CalcFogFactor()),color.a);\n#endif\nfragmentOutputs.color=color;\nreturn fragmentOutputs;\n}\n`;
 
-    function GF(dd) {
-      const Od = dd.defines,
-        md = SF(eO(dd.vertex, Od)),
-        Wd = SF(eO(dd.fragment, Od)),
-        Fd = new Map;
-      for (const pd of [...md.varyings, ...Wd.varyings]) Fd.has(pd.name) || Fd.set(pd.name, pd);
-      const Rd = [...Fd.values()].map(((dd, Od) => `\t@location(${Od}) ${dd.interpolation}${dd.name}: ${dd.type},`)),
-        Xd = [...dd.members];
-      for (const pd of [...md.uniforms, ...Wd.uniforms]) Xd.some((dd => dd.name === pd.name)) || Xd.push(pd);
-      const Kd = FF(dd.structName, Xd),
-        hd = [],
-        vd = [];
-      let Qd = 1;
-      const td = new Set;
-      for (const pd of [...md.textures, ...Wd.textures]) {
-        if (td.has(pd.name)) continue;
-        td.add(pd.name);
-        const dd = `${pd.name}Sampler`,
-          Od = Qd++,
-          md = Qd++,
-          Wd = pd.type.startsWith("texture_2d_array") ? "2d-array" : pd.type.startsWith("texture_cube") ? "cube" : "2d";
-        hd.push({
-          name: pd.name,
-          binding: Od,
-          samplerBinding: md,
-          dimension: Wd
-        }), vd.push(`@group(2) @binding(${Od}) var ${pd.name}: ${pd.type};`), vd.push(`@group(2) @binding(${md}) var ${dd}: sampler;`)
+    function WH(bb) {
+      const wb = bb.defines,
+        Mb = RH(iw(bb.vertex, wb)),
+        eb = RH(iw(bb.fragment, wb)),
+        Hb = new Map;
+      for (const mb of [...Mb.varyings, ...eb.varyings]) Hb.has(mb.name) || Hb.set(mb.name, mb);
+      const pb = [...Hb.values()].map(((bb, wb) => `\t@location(${wb}) ${bb.interpolation}${bb.name}: ${bb.type},`)),
+        Vb = [...bb.members];
+      for (const mb of [...Mb.uniforms, ...eb.uniforms]) Vb.some((bb => bb.name === mb.name)) || Vb.push(mb);
+      const gb = MH(bb.structName, Vb),
+        lb = [],
+        Lb = [];
+      let Ib = 1;
+      const Ob = new Set;
+      for (const mb of [...Mb.textures, ...eb.textures]) {
+        if (Ob.has(mb.name)) continue;
+        Ob.add(mb.name);
+        const bb = `${mb.name}Sampler`,
+          wb = Ib++,
+          Mb = Ib++,
+          eb = mb.type.startsWith("texture_2d_array") ? "2d-array" : mb.type.startsWith("texture_cube") ? "cube" : "2d";
+        lb.push({
+          name: mb.name,
+          binding: wb,
+          samplerBinding: Mb,
+          dimension: eb
+        }), Lb.push(`@group(2) @binding(${wb}) var ${mb.name}: ${mb.type};`), Lb.push(`@group(2) @binding(${Mb}) var ${bb}: sampler;`)
       }
-      for (const pd of [...md.samplers, ...Wd.samplers])
-        if (!td.has(pd.replace(/Sampler$/, ""))) throw new Error(`Lite: sampler ${pd} has no texture`);
-      const od = [zW, NF, Kd.wgsl, `@group(2) @binding(0) var<uniform> uniforms: ${dd.structName};`, ...vd].join("\n"),
-        Nd = md.attributes,
-        qd = ["struct VertexInputs {", "\t@builtin(vertex_index) vertexIndex: u32,", "\t@builtin(instance_index) instanceIndex: u32,", ...md.attributes.map(((dd, Od) => `\t@location(${Od}) ${dd.name}: ${dd.type},`)), "}", "var<private> vertexInputs: VertexInputs;"].join("\n"),
-        Hd = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...Rd, "}", "var<private> vertexOutputs: FragmentInputs;"].join("\n"),
-        yd = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...Wd.body.includes("fragmentInputs.frontFacing") ? ["\t@builtin(front_facing) frontFacing: bool,"] : [], ...Rd, "}", "var<private> fragmentInputs: FragmentInputs;", "struct FragmentOutputs {", "\t@location(0) color: vec4f,", "}", "var<private> fragmentOutputs: FragmentOutputs;", TO, "fn canvasOutputs() -> FragmentOutputs {", `\tif (${bO}) {`, "\t\tfragmentOutputs.color.a = 1.0;", "\t}", "\treturn fragmentOutputs;", "}"].join("\n"),
-        bd = dd => {
-          for (const Od of Kd.stridedArrays) dd = dd.replace(new RegExp(`\\b${Od}\\s*\\[(.*?)\\]`, "g"), `${Od}[$1].el`);
-          return dd
+      for (const mb of [...Mb.samplers, ...eb.samplers])
+        if (!Ob.has(mb.replace(/Sampler$/, ""))) throw new Error(`Lite: sampler ${mb} has no texture`);
+      const Ub = [ve, OH, gb.wgsl, `@group(2) @binding(0) var<uniform> uniforms: ${bb.structName};`, ...Lb].join("\n"),
+        tb = Mb.attributes,
+        Cb = ["struct VertexInputs {", "\t@builtin(vertex_index) vertexIndex: u32,", "\t@builtin(instance_index) instanceIndex: u32,", ...Mb.attributes.map(((bb, wb) => `\t@location(${wb}) ${bb.name}: ${bb.type},`)), "}", "var<private> vertexInputs: VertexInputs;"].join("\n"),
+        Eb = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...pb, "}", "var<private> vertexOutputs: FragmentInputs;"].join("\n"),
+        Fb = ["struct FragmentInputs {", "\t@builtin(position) position: vec4f,", ...eb.body.includes("fragmentInputs.frontFacing") ? ["\t@builtin(front_facing) frontFacing: bool,"] : [], ...pb, "}", "var<private> fragmentInputs: FragmentInputs;", "struct FragmentOutputs {", "\t@location(0) color: vec4f,", "}", "var<private> fragmentOutputs: FragmentOutputs;", Fw, "fn canvasOutputs() -> FragmentOutputs {", `\tif (${Ew}) {`, "\t\tfragmentOutputs.color.a = 1.0;", "\t}", "\treturn fragmentOutputs;", "}"].join("\n"),
+        Bb = bb => {
+          for (const wb of gb.stridedArrays) bb = bb.replace(new RegExp(`\\b${wb}\\s*\\[(.*?)\\]`, "g"), `${wb}[$1].el`);
+          return bb
         };
       return {
-        vertex: `${od}\n${qd}\n${Hd}\n${bd(md.body)}`,
-        fragment: `diagnostic(off, derivative_uniformity);\n${od}\n${yd}\n${iF((Td=bd(Wd.body),Td.includes("fragmentInputs.position")?Td.replace("fragmentInputs = input;","fragmentInputs = input;\nfragmentInputs.position.y = frame.outputHeight - fragmentInputs.position.y;"):Td))}`,
-        attributes: Nd,
-        material: Kd,
-        textures: hd
+        vertex: `${Ub}\n${Cb}\n${Eb}\n${Bb(Mb.body)}`,
+        fragment: `diagnostic(off, derivative_uniformity);\n${Ub}\n${Fb}\n${ZH((sb=Bb(eb.body),sb.includes("fragmentInputs.position")?sb.replace("fragmentInputs = input;","fragmentInputs = input;\nfragmentInputs.position.y = frame.outputHeight - fragmentInputs.position.y;"):sb))}`,
+        attributes: tb,
+        material: gb,
+        textures: lb
       };
-      var Td
+      var sb
     }
-    const nF = [6, 4, 5, 7, 6, 5, 0, 2, 3, 1, 0, 3, 5, 1, 3, 7, 5, 3, 0, 4, 6, 2, 0, 6, 3, 2, 6, 7, 3, 6, 0, 1, 5, 4, 0, 5],
-      LF = dd => ({
-        name: dd,
+    const JH = [6, 4, 5, 7, 6, 5, 0, 2, 3, 1, 0, 3, 5, 1, 3, 7, 5, 3, 0, 4, 6, 2, 0, 6, 3, 2, 6, 7, 3, 6, 0, 1, 5, 4, 0, 5],
+      SH = bb => ({
+        name: bb,
         type: "vec3"
       }),
-      PF = dd => ({
-        name: dd,
+      NH = bb => ({
+        name: bb,
         type: "float"
       }),
-      zF = FF("EarthSkyUniforms", [LF("viewFrom"), PF("exposureScale"), LF("zenithOffset"), PF("fogOn"), LF("up"), PF("ditherOn"), LF("sun"), PF("turbidity"), LF("tint"), PF("rayleigh"), LF("sunDir"), PF("mieStrength"), LF("inScatterR"), PF("mieFocus"), LF("inScatterM"), PF("sunE"), LF("extinctionBeta"), PF("sunsetMix"), PF("mieScale"), PF("mieBase"), PF("mieSlope"), PF("sunDiscE"), PF("exposure")]),
-      cF = `${zW}\n${NF}\n${zF.wgsl}\n@group(2) @binding(0) var<uniform> sky: EarthSkyUniforms;\nstruct EarthSkyVarying {\n\t@builtin(position) position: vec4f,\n\t@location(0) worldPosition: vec3f,\n\t@location(1) fogDistance: vec3f,\n\t@location(2) tint: vec3f,\n}\n`,
-      jF = `\n@vertex\nfn main(@builtin(vertex_index) index: u32) -> EarthSkyVarying {\n\tlet corners = array<u32, 36>(${nF.join(", ")});\n\tlet corner = corners[index];\n\tlet position = vec3f(f32(corner & 1u), f32((corner >> 1u) & 1u), f32(corner >> 2u)) - 0.5;\n\tvar out: EarthSkyVarying;\n\tout.position = liteWorldLayer(scene.viewProjection * mesh.world * vec4f(position, 1.0));\n\tlet worldPosition = mesh.world * vec4f(position, 1.0);\n\tout.worldPosition = worldPosition.xyz;\n\tout.fogDistance = (scene.view * worldPosition).xyz;\n\tout.tint = sky.tint;\n\treturn out;\n}\n`,
-      DF = `\n${TO}\nconst PI: f32 = 3.141592653589793238462643383279502884197169;\nconst SUN_DISC_COS: f32 = 0.999956676946448443553574619906976478926848692873900859324;\n${Object.entries(zO).map((dd=>{let[Od,md]=dd;return`const TONE_${Od}: f32 = ${md};`})).join(" ")}\n\n// The rest of main's prelude, as it was, for sky pack overrides that use it; the default calls none of it\nconst WAVELENGTHS: vec3f = vec3f(680E-9, 550E-9, 450E-9);\nconst MIE_K: vec3f = vec3f(0.686, 0.678, 0.666);\nconst MIE_V: f32 = 4.0;\nconst RAYLEIGH_ZENITH_LENGTH: f32 = 8.4E3;\nconst MIE_ZENITH_LENGTH: f32 = 1.25E3;\nconst SUN_INTENSITY: f32 = 1000.0;\nconst SUN_CUTOFF: f32 = PI / 1.95;\nconst SUN_STEEPNESS: f32 = 1.5;\nconst TONE_WHITE: f32 = 1000.0;\n\nfn rayleighBeta() -> vec3f { return vec3f(0.0005) / vec3f(94, 40, 18); }\n\nfn rayleighPhase(cosTheta: f32) -> f32 { return (3.0 / (16.0 * PI)) * (1.0 + pow(cosTheta, 2.0)); }\n\nfn mieBeta(wavelengths: vec3f, k: vec3f, turbidity: f32) -> vec3f {\n\tvar c: f32 = (0.2 * turbidity) * 10E-18;\n\treturn 0.434 * c * PI * pow((2.0 * PI) / wavelengths, vec3f(MIE_V - 2.0)) * k;\n}\n\nfn henyeyGreenstein(cosTheta: f32, g: f32) -> f32 {\n\treturn (1.0 / (4.0 * PI)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0 * g * cosTheta + pow(g, 2.0), 1.5));\n}\n\nfn sunIntensity(zenithAngleCos: f32) -> f32 {\n\treturn SUN_INTENSITY * max(0.0, 1.0 - exp((-(SUN_CUTOFF - acos(zenithAngleCos)) / SUN_STEEPNESS)));\n}\n\n// A sky shader pack can replace earthSkyRadiance (the scattering, over EarthSkyInput) or earthSkyColour (the tonemap) by\n// name. The prelude, EarthSkyInput and both signatures are main's, so a pack written against main compiles unchanged.\nstruct EarthSkyInput {\n\tview: vec3f, zenithView: vec3f, sun: vec3f, up: vec3f,\n\tturbidity: f32, rayleigh: f32, mieStrength: f32, mieFocus: f32,\n}\n\nfn filmic(x: vec3f) -> vec3f {\n\treturn ((x * (TONE_A * x + TONE_C * TONE_B) + TONE_D * TONE_E) / (x * (TONE_A * x + TONE_B) + TONE_D * TONE_F)) - TONE_E / TONE_F;\n}\n\n// The default reads input's view, zenithView and up, and the terms the CPU precomputes from the frame's uniforms\n// (earthSkyDerived.ts) straight from sky: they already include input's sun, turbidity, rayleigh, mieStrength and mieFocus.\nfn earthSkyRadiance(input: EarthSkyInput) -> vec3f {\n\t// cos(acos(x)) is x: the Rayleigh and Mie optical lengths share this denominator\n\tlet cosZenith = max(0.0, dot(input.up, input.zenithView));\n\tlet zenithAngle = acos(cosZenith);\n\tlet opticalLength = 1.0 / (cosZenith + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / PI), -1.253));\n\tlet extinction = exp(-sky.extinctionBeta * opticalLength);\n\tlet cosTheta = dot(input.view, sky.sunDir);\n\tlet rCos = cosTheta * 0.5 + 0.5;\n\tlet rPhase = (3.0 / (16.0 * PI)) * (1.0 + rCos * rCos);\n\tlet mBase = sky.mieBase - sky.mieSlope * cosTheta;\n\tlet mPhase = sky.mieScale * inverseSqrt(mBase) / mBase;\n\tlet scattered = sky.inScatterR * rPhase + sky.inScatterM * mPhase;\n\tlet lit = scattered * (1.0 - extinction);\n\tlet inScattered = lit * sqrt(lit) * mix(vec3f(1.0), sqrt(scattered * extinction), vec3f(sky.sunsetMix));\n\tlet sunDisc = smoothstep(SUN_DISC_COS, SUN_DISC_COS + 0.00002, cosTheta);\n\tlet night = (0.1 + sky.sunDiscE * sunDisc) * extinction;\n\treturn (inScattered + night) * 0.04 + vec3f(0.0, 0.001, 0.0025) * 0.3;\n}\n\n// The contract for overrides: exposure is SkyMaterial's luminance (main passes sky.exposure), as Babylon's tonemap reads it.\n// The default tonemaps with the frame's precomputed sky.exposureScale, its log2(2 / exposure^4), written together with it.\nfn earthSkyColour(radiance: vec3f, exposure: f32) -> vec3f {\n\treturn filmic(sky.exposureScale * radiance) * ${cO};\n}\n\nfn ditherOffset(seed: vec2f, variance: f32) -> f32 {\n\tlet rand: f32 = fract(sin(dot(seed.xy, vec2f(12.9898, 78.233))) * 43758.5453);\n\tlet normVariance: f32 = variance / 255.0;\n\treturn mix(-normVariance, normVariance, rand);\n}\n\nfn fogFactor(fromEye: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = frame.vFogInfos.y;\n\tlet fogEnd = frame.vFogInfos.z;\n\tlet fogDensity = frame.vFogInfos.w;\n\tlet dist = length(fromEye);\n\tif (3.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (1.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (2.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n\n@fragment\nfn main(input: EarthSkyVarying) -> @location(0) vec4f {\n\tlet toSky = input.worldPosition - sky.viewFrom;\n\tlet radiance = earthSkyRadiance(EarthSkyInput(normalize(toSky), normalize(toSky + sky.zenithOffset), sky.sun, sky.up, sky.turbidity, sky.rayleigh, sky.mieStrength, sky.mieFocus));\n\t// Parity: off, the dither and fog branches are skipped, as Babylon leaves them out with its defines; the dither reads the WebGL frag coord, as in Babylon\n\tvar dither = 0.0;\n\tif (sky.ditherOn != 0.0) { dither = ditherOffset(vec2f(input.position.x, frame.outputHeight - input.position.y), 0.5); }\n\tvar colour = clamp(vec4f(earthSkyColour(radiance, sky.exposure) * input.tint + dither, 1.0), vec4f(0.0), vec4f(1.0));\n\tif (sky.fogOn != 0.0) { colour = vec4f(mix(frame.vFogColor, colour.rgb, fogFactor(input.fogDistance)), colour.a); }\n\t// The canvas's alpha on the unblended pipeline it draws in (canvasFragment)\n\tif (${bO}) { colour.a = 1.0; }\n\treturn colour;\n}\n`;
-    var eF = md(38627);
-    const IF = new eF.Cq,
-      lF = new eF.Cq,
-      CF = new eF.Quaternion,
-      ZF = new Float64Array(3),
-      kF = new class {
+      vH = MH("EarthSkyUniforms", [SH("viewFrom"), NH("exposureScale"), SH("zenithOffset"), NH("fogOn"), SH("up"), NH("ditherOn"), SH("sun"), NH("turbidity"), SH("tint"), NH("rayleigh"), SH("sunDir"), NH("mieStrength"), SH("inScatterR"), NH("mieFocus"), SH("inScatterM"), NH("sunE"), SH("extinctionBeta"), NH("sunsetMix"), NH("mieScale"), NH("mieBase"), NH("mieSlope"), NH("sunDiscE"), NH("exposure")]),
+      QH = `${ve}\n${OH}\n${vH.wgsl}\n@group(2) @binding(0) var<uniform> sky: EarthSkyUniforms;\nstruct EarthSkyVarying {\n\t@builtin(position) position: vec4f,\n\t@location(0) worldPosition: vec3f,\n\t@location(1) fogDistance: vec3f,\n\t@location(2) tint: vec3f,\n}\n`,
+      GH = `\n@vertex\nfn main(@builtin(vertex_index) index: u32) -> EarthSkyVarying {\n\tlet corners = array<u32, 36>(${JH.join(", ")});\n\tlet corner = corners[index];\n\tlet position = vec3f(f32(corner & 1u), f32((corner >> 1u) & 1u), f32(corner >> 2u)) - 0.5;\n\tvar out: EarthSkyVarying;\n\tout.position = liteWorldLayer(scene.viewProjection * mesh.world * vec4f(position, 1.0));\n\tlet worldPosition = mesh.world * vec4f(position, 1.0);\n\tout.worldPosition = worldPosition.xyz;\n\tout.fogDistance = (scene.view * worldPosition).xyz;\n\tout.tint = sky.tint;\n\treturn out;\n}\n`,
+      qH = `\n${Fw}\nconst PI: f32 = 3.141592653589793238462643383279502884197169;\nconst SUN_DISC_COS: f32 = 0.999956676946448443553574619906976478926848692873900859324;\n${Object.entries(Qw).map((bb=>{let[wb,Mb]=bb;return`const TONE_${wb}: f32 = ${Mb};`})).join(" ")}\n\n// The rest of main's prelude, as it was, for sky pack overrides that use it; the default calls none of it\nconst WAVELENGTHS: vec3f = vec3f(680E-9, 550E-9, 450E-9);\nconst MIE_K: vec3f = vec3f(0.686, 0.678, 0.666);\nconst MIE_V: f32 = 4.0;\nconst RAYLEIGH_ZENITH_LENGTH: f32 = 8.4E3;\nconst MIE_ZENITH_LENGTH: f32 = 1.25E3;\nconst SUN_INTENSITY: f32 = 1000.0;\nconst SUN_CUTOFF: f32 = PI / 1.95;\nconst SUN_STEEPNESS: f32 = 1.5;\nconst TONE_WHITE: f32 = 1000.0;\n\nfn rayleighBeta() -> vec3f { return vec3f(0.0005) / vec3f(94, 40, 18); }\n\nfn rayleighPhase(cosTheta: f32) -> f32 { return (3.0 / (16.0 * PI)) * (1.0 + pow(cosTheta, 2.0)); }\n\nfn mieBeta(wavelengths: vec3f, k: vec3f, turbidity: f32) -> vec3f {\n\tvar c: f32 = (0.2 * turbidity) * 10E-18;\n\treturn 0.434 * c * PI * pow((2.0 * PI) / wavelengths, vec3f(MIE_V - 2.0)) * k;\n}\n\nfn henyeyGreenstein(cosTheta: f32, g: f32) -> f32 {\n\treturn (1.0 / (4.0 * PI)) * ((1.0 - pow(g, 2.0)) / pow(1.0 - 2.0 * g * cosTheta + pow(g, 2.0), 1.5));\n}\n\nfn sunIntensity(zenithAngleCos: f32) -> f32 {\n\treturn SUN_INTENSITY * max(0.0, 1.0 - exp((-(SUN_CUTOFF - acos(zenithAngleCos)) / SUN_STEEPNESS)));\n}\n\n// A sky shader pack can replace earthSkyRadiance (the scattering, over EarthSkyInput) or earthSkyColour (the tonemap) by\n// name. The prelude, EarthSkyInput and both signatures are main's, so a pack written against main compiles unchanged.\nstruct EarthSkyInput {\n\tview: vec3f, zenithView: vec3f, sun: vec3f, up: vec3f,\n\tturbidity: f32, rayleigh: f32, mieStrength: f32, mieFocus: f32,\n}\n\nfn filmic(x: vec3f) -> vec3f {\n\treturn ((x * (TONE_A * x + TONE_C * TONE_B) + TONE_D * TONE_E) / (x * (TONE_A * x + TONE_B) + TONE_D * TONE_F)) - TONE_E / TONE_F;\n}\n\n// The default reads input's view, zenithView and up, and the terms the CPU precomputes from the frame's uniforms\n// (earthSkyDerived.ts) straight from sky: they already include input's sun, turbidity, rayleigh, mieStrength and mieFocus.\nfn earthSkyRadiance(input: EarthSkyInput) -> vec3f {\n\t// cos(acos(x)) is x: the Rayleigh and Mie optical lengths share this denominator\n\tlet cosZenith = max(0.0, dot(input.up, input.zenithView));\n\tlet zenithAngle = acos(cosZenith);\n\tlet opticalLength = 1.0 / (cosZenith + 0.15 * pow(93.885 - ((zenithAngle * 180.0) / PI), -1.253));\n\tlet extinction = exp(-sky.extinctionBeta * opticalLength);\n\tlet cosTheta = dot(input.view, sky.sunDir);\n\tlet rCos = cosTheta * 0.5 + 0.5;\n\tlet rPhase = (3.0 / (16.0 * PI)) * (1.0 + rCos * rCos);\n\tlet mBase = sky.mieBase - sky.mieSlope * cosTheta;\n\tlet mPhase = sky.mieScale * inverseSqrt(mBase) / mBase;\n\tlet scattered = sky.inScatterR * rPhase + sky.inScatterM * mPhase;\n\tlet lit = scattered * (1.0 - extinction);\n\tlet inScattered = lit * sqrt(lit) * mix(vec3f(1.0), sqrt(scattered * extinction), vec3f(sky.sunsetMix));\n\tlet sunDisc = smoothstep(SUN_DISC_COS, SUN_DISC_COS + 0.00002, cosTheta);\n\tlet night = (0.1 + sky.sunDiscE * sunDisc) * extinction;\n\treturn (inScattered + night) * 0.04 + vec3f(0.0, 0.001, 0.0025) * 0.3;\n}\n\n// The contract for overrides: exposure is SkyMaterial's luminance (main passes sky.exposure), as Babylon's tonemap reads it.\n// The default tonemaps with the frame's precomputed sky.exposureScale, its log2(2 / exposure^4), written together with it.\nfn earthSkyColour(radiance: vec3f, exposure: f32) -> vec3f {\n\treturn filmic(sky.exposureScale * radiance) * ${Gw};\n}\n\nfn ditherOffset(seed: vec2f, variance: f32) -> f32 {\n\tlet rand: f32 = fract(sin(dot(seed.xy, vec2f(12.9898, 78.233))) * 43758.5453);\n\tlet normVariance: f32 = variance / 255.0;\n\treturn mix(-normVariance, normVariance, rand);\n}\n\nfn fogFactor(fromEye: vec3f) -> f32 {\n\tvar fogCoeff: f32 = 1.0;\n\tlet fogStart = frame.vFogInfos.y;\n\tlet fogEnd = frame.vFogInfos.z;\n\tlet fogDensity = frame.vFogInfos.w;\n\tlet dist = length(fromEye);\n\tif (3.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = (fogEnd - dist) / (fogEnd - fogStart);\n\t} else if (1.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * fogDensity);\n\t} else if (2.0 == frame.vFogInfos.x) {\n\t\tfogCoeff = 1.0 / pow(2.71828, dist * dist * fogDensity * fogDensity);\n\t}\n\treturn clamp(fogCoeff, 0.0, 1.0);\n}\n\n@fragment\nfn main(input: EarthSkyVarying) -> @location(0) vec4f {\n\tlet toSky = input.worldPosition - sky.viewFrom;\n\tlet radiance = earthSkyRadiance(EarthSkyInput(normalize(toSky), normalize(toSky + sky.zenithOffset), sky.sun, sky.up, sky.turbidity, sky.rayleigh, sky.mieStrength, sky.mieFocus));\n\t// Parity: off, the dither and fog branches are skipped, as Babylon leaves them out with its defines; the dither reads the WebGL frag coord, as in Babylon\n\tvar dither = 0.0;\n\tif (sky.ditherOn != 0.0) { dither = ditherOffset(vec2f(input.position.x, frame.outputHeight - input.position.y), 0.5); }\n\tvar colour = clamp(vec4f(earthSkyColour(radiance, sky.exposure) * input.tint + dither, 1.0), vec4f(0.0), vec4f(1.0));\n\tif (sky.fogOn != 0.0) { colour = vec4f(mix(frame.vFogColor, colour.rgb, fogFactor(input.fogDistance)), colour.a); }\n\t// The canvas's alpha on the unblended pipeline it draws in (canvasFragment)\n\tif (${Ew}) { colour.a = 1.0; }\n\treturn colour;\n}\n`;
+    var aH = Mb(38281);
+    const iH = new aH.YC,
+      uH = new aH.YC,
+      dH = new aH.Quaternion,
+      PH = new Float64Array(3),
+      nH = new class {
         constructor() {
           this.sunDir = new Float64Array(3), this.sunE = 0, this.inScatterR = new Float64Array(3), this.inScatterM = new Float64Array(3), this.extinctionBeta = new Float64Array(3), this.sunsetMix = 0, this.sunDiscE = 0, this.mieScale = 0, this.mieBase = 0, this.mieSlope = 0
         }
       },
-      fF = new Float64Array(16);
+      yH = new Float64Array(16);
 
-    function MF(dd, Od, md) {
-      const Wd = md.worldMatrix;
-      var Fd;
-      dd.updateFloat3("viewFrom", Wd[12], Wd[13], Wd[14]), dd.updateFloatsFrom("zenithOffset", Od.cameraOffset, 0, 3), dd.updateFloatsFrom("up", Od.up, 0, 3), Od.luminance > 0 && (dd.updateFloat("exposure", Od.luminance), dd.updateFloat("exposureScale", (Fd = Od.luminance, Math.log2(2 / Math.pow(Fd, 4))))), dd.updateFloat("turbidity", Od.turbidity), dd.updateFloat("rayleigh", Od.rayleigh), dd.updateFloat("mieStrength", Od.mieCoefficient), dd.updateFloat("mieFocus", Od.mieDirectionalG), dd.updateFloatsFrom("tint", Od.tint, 0, 3), dd.updateFloat("fogOn", Od.fog && md.fogEnabled && 0 !== md.fogMode ? 1 : 0), dd.updateFloat("ditherOn", Od.dithering ? 1 : 0);
-      const Rd = Od.sunPosition;
-      if (IF.set(Rd[0], Rd[1], Rd[2]), !Od.useSunPosition) {
-        const dd = Math.PI * (Od.inclination - .5),
-          md = 2 * Math.PI * (Od.azimuth - .5);
-        IF.set(Od.distance * Math.cos(md) * Math.cos(dd), Od.distance * Math.sin(-dd), Od.distance * Math.sin(md) * Math.cos(dd)), eF.Quaternion.FromUnitVectorsToRef(eF.Cq.UpReadOnly, lF.set(Od.up[0], Od.up[1], Od.up[2]), CF), IF.rotateByQuaternionToRef(CF, IF)
+    function oH(bb, wb, Mb) {
+      const eb = Mb.worldMatrix;
+      var Hb;
+      bb.updateFloat3("viewFrom", eb[12], eb[13], eb[14]), bb.updateFloatsFrom("zenithOffset", wb.cameraOffset, 0, 3), bb.updateFloatsFrom("up", wb.up, 0, 3), wb.luminance > 0 && (bb.updateFloat("exposure", wb.luminance), bb.updateFloat("exposureScale", (Hb = wb.luminance, Math.log2(2 / Math.pow(Hb, 4))))), bb.updateFloat("turbidity", wb.turbidity), bb.updateFloat("rayleigh", wb.rayleigh), bb.updateFloat("mieStrength", wb.mieCoefficient), bb.updateFloat("mieFocus", wb.mieDirectionalG), bb.updateFloatsFrom("tint", wb.tint, 0, 3), bb.updateFloat("fogOn", wb.fog && Mb.fogEnabled && 0 !== Mb.fogMode ? 1 : 0), bb.updateFloat("ditherOn", wb.dithering ? 1 : 0);
+      const pb = wb.sunPosition;
+      if (iH.set(pb[0], pb[1], pb[2]), !wb.useSunPosition) {
+        const bb = Math.PI * (wb.inclination - .5),
+          Mb = 2 * Math.PI * (wb.azimuth - .5);
+        iH.set(wb.distance * Math.cos(Mb) * Math.cos(bb), wb.distance * Math.sin(-bb), wb.distance * Math.sin(Mb) * Math.cos(bb)), aH.Quaternion.FromUnitVectorsToRef(aH.YC.UpReadOnly, uH.set(wb.up[0], wb.up[1], wb.up[2]), dH), iH.rotateByQuaternionToRef(dH, iH)
       }
-      dd.updateVector3("sun", IF), ZF[0] = IF.x, ZF[1] = IF.y, ZF[2] = IF.z;
-      const Xd = PO(Od, ZF, kF);
-      dd.updateFloatsFrom("sunDir", Xd.sunDir, 0, 3), dd.updateFloat("sunE", Xd.sunE), dd.updateFloatsFrom("inScatterR", Xd.inScatterR, 0, 3), dd.updateFloatsFrom("inScatterM", Xd.inScatterM, 0, 3), dd.updateFloatsFrom("extinctionBeta", Xd.extinctionBeta, 0, 3), dd.updateFloat("sunsetMix", Xd.sunsetMix), dd.updateFloat("sunDiscE", Xd.sunDiscE), dd.updateFloat("mieScale", Xd.mieScale), dd.updateFloat("mieBase", Xd.mieBase), dd.updateFloat("mieSlope", Xd.mieSlope)
+      bb.updateVector3("sun", iH), PH[0] = iH.x, PH[1] = iH.y, PH[2] = iH.z;
+      const Vb = vw(wb, PH, nH);
+      bb.updateFloatsFrom("sunDir", Vb.sunDir, 0, 3), bb.updateFloat("sunE", Vb.sunE), bb.updateFloatsFrom("inScatterR", Vb.inScatterR, 0, 3), bb.updateFloatsFrom("inScatterM", Vb.inScatterM, 0, 3), bb.updateFloatsFrom("extinctionBeta", Vb.extinctionBeta, 0, 3), bb.updateFloat("sunsetMix", Vb.sunsetMix), bb.updateFloat("sunDiscE", Vb.sunDiscE), bb.updateFloat("mieScale", Vb.mieScale), bb.updateFloat("mieBase", Vb.mieBase), bb.updateFloat("mieSlope", Vb.mieSlope)
     }
 
-    function dR(dd, Od) {
-      const md = fF;
-      md[0] = Od.far, md[5] = Od.far, md[10] = Od.far, md[15] = 1;
-      const Wd = dd.infiniteDistance;
-      for (let Fd = 0; Fd < 3; Fd++) md[12 + Fd] = dd.position[Fd] + (Wd ? Od.worldMatrix[12 + Fd] : 0);
-      return fF
+    function TH(bb, wb) {
+      const Mb = yH;
+      Mb[0] = wb.far, Mb[5] = wb.far, Mb[10] = wb.far, Mb[15] = 1;
+      const eb = bb.infiniteDistance;
+      for (let Hb = 0; Hb < 3; Hb++) Mb[12 + Hb] = bb.position[Hb] + (eb ? wb.worldMatrix[12 + Hb] : 0);
+      return yH
     }
-    class OR {
+    class kH {
       constructor() {
         this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers = [], this.vertexOffsets = [], this.indexBuffer = null
       }
       reset() {
         this.pipeline = null, this.materialGroup = null, this.packGroup = null, this.vertexBuffers.length = 0, this.vertexOffsets.length = 0, this.indexBuffer = null
       }
-      bind(dd, Od, md, Wd, Fd) {
-        md !== this.pipeline && (dd.setPipeline(md), this.pipeline = md), dd.setBindGroup(1, Wd, [Fd]);
-        const Rd = Od.material.bindGroup;
-        Rd !== this.materialGroup && (dd.setBindGroup(2, Rd), this.materialGroup = Rd);
-        const Xd = Od.program.packGroup;
-        Xd && Xd !== this.packGroup && (dd.setBindGroup(fO.e, Xd), this.packGroup = Xd);
+      bind(bb, wb, Mb, eb, Hb) {
+        Mb !== this.pipeline && (bb.setPipeline(Mb), this.pipeline = Mb), bb.setBindGroup(1, eb, [Hb]);
+        const pb = wb.material.bindGroup;
+        pb !== this.materialGroup && (bb.setBindGroup(2, pb), this.materialGroup = pb);
+        const Vb = wb.program.packGroup;
+        Vb && Vb !== this.packGroup && (bb.setBindGroup(ow.g, Vb), this.packGroup = Vb);
         const {
-          vertexBuffers: Kd,
-          vertexOffsets: hd
+          vertexBuffers: gb,
+          vertexOffsets: lb
         } = this;
-        for (let vd = 0; vd < Od.vertexBuffers.length; vd++) Kd[vd] === Od.vertexBuffers[vd] && hd[vd] === Od.vertexOffsets[vd] || (dd.setVertexBuffer(vd, Od.vertexBuffers[vd], Od.vertexOffsets[vd]), Kd[vd] = Od.vertexBuffers[vd], hd[vd] = Od.vertexOffsets[vd]);
-        Od.indexBuffer && Od.indexBuffer !== this.indexBuffer && (dd.setIndexBuffer(Od.indexBuffer, Od.indexFormat), this.indexBuffer = Od.indexBuffer)
+        for (let Lb = 0; Lb < wb.vertexBuffers.length; Lb++) gb[Lb] === wb.vertexBuffers[Lb] && lb[Lb] === wb.vertexOffsets[Lb] || (bb.setVertexBuffer(Lb, wb.vertexBuffers[Lb], wb.vertexOffsets[Lb]), gb[Lb] = wb.vertexBuffers[Lb], lb[Lb] = wb.vertexOffsets[Lb]);
+        wb.indexBuffer && wb.indexBuffer !== this.indexBuffer && (bb.setIndexBuffer(wb.indexBuffer, wb.indexFormat), this.indexBuffer = wb.indexBuffer)
       }
     }
-    class mR {
-      constructor(dd, Od, md, Wd) {
-        this.modelMeshes = dd, this.Sdd = Od, this.maker = md, this.warnOnce = Wd, this.skyDraws = [], this.opaqueDraws = [], this.transparentDraws = [], this.frontDraws = [], this.warnIfNotDrawn = (dd, Od) => {
-          (Od < -1 || Od > 1) && this.warnOnce(`group:${Od}`, `rendering group ${Od} is not drawn`)
+    class bp {
+      constructor(bb, wb, Mb, eb) {
+        this.modelMeshes = bb, this.Sbb = wb, this.maker = Mb, this.warnOnce = eb, this.skyDraws = [], this.opaqueDraws = [], this.transparentDraws = [], this.frontDraws = [], this.warnIfNotDrawn = (bb, wb) => {
+          (wb < -1 || wb > 1) && this.warnOnce(`group:${wb}`, `rendering group ${wb} is not drawn`)
         }
       }
       clear() {
         this.skyDraws.length = 0, this.opaqueDraws.length = 0, this.transparentDraws.length = 0, this.frontDraws.length = 0
       }
-      collect(dd) {
-        this.collectGroup(dd, -1, this.skyDraws, this.skyDraws, !0), this.collectGroup(dd, 0, this.opaqueDraws, this.transparentDraws, !1), this.collectGroup(dd, 1, this.frontDraws, this.frontDraws, !0), this.modelMeshes.forEachGroup(this.warnIfNotDrawn), this.Sdd.forEachGroup(this.warnIfNotDrawn), this.opaqueDraws.sort(WR), this.transparentDraws.sort(FR)
+      collect(bb) {
+        this.collectGroup(bb, -1, this.skyDraws, this.skyDraws, !0), this.collectGroup(bb, 0, this.opaqueDraws, this.transparentDraws, !1), this.collectGroup(bb, 1, this.frontDraws, this.frontDraws, !0), this.modelMeshes.forEachGroup(this.warnIfNotDrawn), this.Sbb.forEachGroup(this.warnIfNotDrawn), this.opaqueDraws.sort(wp), this.transparentDraws.sort(Mp)
       }
-      collectGroup(dd, Od, md, Wd, Fd) {
-        const Rd = this.modelMeshes.group(Od),
-          Xd = this.Sdd.group(Od),
-          Kd = 0 === Od ? null === Xd || void 0 === Xd ? void 0 : Xd.opaque : void 0;
-        this.collectList(dd, null === Rd || void 0 === Rd ? void 0 : Rd.opaque, Kd || null === Xd || void 0 === Xd ? void 0 : Xd.opaque, Od, !1, md, Fd), Kd && (this.Sdd.drawn += this.maker.bundleDraws(dd, Kd, Od)), this.collectList(dd, null === Rd || void 0 === Rd ? void 0 : Rd.alphaTest, void 0, Od, !1, md, Fd), this.collectList(dd, null === Rd || void 0 === Rd ? void 0 : Rd.transparent, null === Xd || void 0 === Xd ? void 0 : Xd.transparent, Od, !0, Wd, Fd)
+      collectGroup(bb, wb, Mb, eb, Hb) {
+        const pb = this.modelMeshes.group(wb),
+          Vb = this.Sbb.group(wb),
+          gb = 0 === wb ? null === Vb || void 0 === Vb ? void 0 : Vb.opaque : void 0;
+        this.collectList(bb, null === pb || void 0 === pb ? void 0 : pb.opaque, gb || null === Vb || void 0 === Vb ? void 0 : Vb.opaque, wb, !1, Mb, Hb), gb && (this.Sbb.drawn += this.maker.bundleDraws(bb, gb, wb)), this.collectList(bb, null === pb || void 0 === pb ? void 0 : pb.alphaTest, void 0, wb, !1, Mb, Hb), this.collectList(bb, null === pb || void 0 === pb ? void 0 : pb.transparent, null === Vb || void 0 === Vb ? void 0 : Vb.transparent, wb, !0, eb, Hb)
       }
-      collectList(dd, Od, md, Wd, Fd, Rd, Xd) {
-        var Kd;
-        const hd = Rd.length;
-        Od && this.maker.pushDraws(dd, Od.units, Od.units.length, Wd, Fd, Rd, Od.rows), md && (this.Sdd.drawn += this.maker.pushDraws(dd, md, md.length, Wd, Fd, Rd));
-        const vd = Fd ? null === (Kd = this.modelMeshes.group(Wd)) || void 0 === Kd ? void 0 : Kd.text : void 0;
-        vd && this.maker.pushDraws(dd, vd.units, vd.units.length, Wd, !0, Rd, vd.rows), Xd && RR(Rd, hd)
-      }
-    }
-
-    function WR(dd, Od) {
-      return dd.program.id - Od.program.id || dd.material.owner.uniqueId - Od.material.owner.uniqueId
-    }
-
-    function FR(dd, Od) {
-      return dd.material.owner.uniqueId - Od.material.owner.uniqueId
-    }
-
-    function RR(dd, Od) {
-      for (let md = Od + 1; md < dd.length; md++) {
-        const Wd = dd[md];
-        let Fd = md - 1;
-        for (; Fd >= Od && FR(dd[Fd], Wd) > 0; Fd--) dd[Fd + 1] = dd[Fd];
-        dd[Fd + 1] = Wd
+      collectList(bb, wb, Mb, eb, Hb, pb, Vb) {
+        var gb;
+        const lb = pb.length;
+        wb && this.maker.pushDraws(bb, wb.units, wb.units.length, eb, Hb, pb, wb.rows), Mb && (this.Sbb.drawn += this.maker.pushDraws(bb, Mb, Mb.length, eb, Hb, pb));
+        const Lb = Hb ? null === (gb = this.modelMeshes.group(eb)) || void 0 === gb ? void 0 : gb.text : void 0;
+        Lb && this.maker.pushDraws(bb, Lb.units, Lb.units.length, eb, !0, pb, Lb.rows), Vb && ep(pb, lb)
       }
     }
-    const XR = {};
 
-    function KR(dd) {
-      return dd.hasThinInstances ? "thin" : dd.CRd || dd._userInstancedBuffersStorage ? "instanced" : "none"
+    function wp(bb, wb) {
+      return bb.program.id - wb.program.id || bb.material.owner.uniqueId - wb.material.owner.uniqueId
     }
 
-    function hR(dd, Od, md) {
-      return dd ? (md._needUVs = !0, dd.optimizeUVAllocation && (0, Bd.C)(dd.matrix) ? (md[`${Od}DIRECTUV`] = dd.uvSet + 1, md[`MAINUV${dd.uvSet+1}`] = !0) : md[`${Od}DIRECTUV`] = 0, !0) : (md[`${Od}DIRECTUV`] = 0, !1)
+    function Mp(bb, wb) {
+      return bb.material.owner.uniqueId - wb.material.owner.uniqueId
     }
 
-    function vR(dd) {
-      const Od = new Map;
-      for (const md in dd) {
-        if (95 === md.charCodeAt(0)) continue;
-        const Wd = dd[md],
-          Fd = typeof Wd;
-        "number" === Fd || "string" === Fd ? Od.set(md, String(Wd)) : Wd && "function" !== Fd && Od.set(md, !0)
+    function ep(bb, wb) {
+      for (let Mb = wb + 1; Mb < bb.length; Mb++) {
+        const eb = bb[Mb];
+        let Hb = Mb - 1;
+        for (; Hb >= wb && Mp(bb[Hb], eb) > 0; Hb--) bb[Hb + 1] = bb[Hb];
+        bb[Hb + 1] = eb
       }
-      return Od
+    }
+    const Hp = {};
+
+    function pp(bb) {
+      return bb.hasThinInstances ? "thin" : bb.ypb || bb._userInstancedBuffersStorage ? "instanced" : "none"
     }
 
-    function QR(dd) {
-      const Od = {
+    function Vp(bb, wb, Mb) {
+      return bb ? (Mb._needUVs = !0, bb.optimizeUVAllocation && (0, Rb.D)(bb.matrix) ? (Mb[`${wb}DIRECTUV`] = bb.uvSet + 1, Mb[`MAINUV${bb.uvSet+1}`] = !0) : Mb[`${wb}DIRECTUV`] = 0, !0) : (Mb[`${wb}DIRECTUV`] = 0, !1)
+    }
+
+    function gp(bb) {
+      const wb = new Map;
+      for (const Mb in bb) {
+        if (95 === Mb.charCodeAt(0)) continue;
+        const eb = bb[Mb],
+          Hb = typeof eb;
+        "number" === Hb || "string" === Hb ? wb.set(Mb, String(eb)) : eb && "function" !== Hb && wb.set(Mb, !0)
+      }
+      return wb
+    }
+
+    function lp(bb) {
+      const wb = {
         markAllAsDirty: () => {}
       };
       for (const {
-          defines: md
+          defines: Mb
         }
-        of dd.features)
-        for (const dd in md) Od[dd] = md[dd];
-      return Od
+        of bb.features)
+        for (const bb in Mb) wb[bb] = Mb[bb];
+      return wb
     }
 
-    function tR(dd) {
-      const Od = dd.parts.geometry;
-      return null !== Od && void 0 !== Od && Od.live ? Od : null
+    function Lp(bb) {
+      const wb = bb.parts.geometry;
+      return null !== wb && void 0 !== wb && wb.live ? wb : null
     }
 
-    function oR(dd) {
-      var Od;
-      return null !== (Od = tR(dd)) && void 0 !== Od ? Od : XR
+    function Ip(bb) {
+      var wb;
+      return null !== (wb = Lp(bb)) && void 0 !== wb ? wb : Hp
     }
-    class NR {
-      constructor(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-        this.resources = dd, this.warnOnce = Od, this.programWithModel = md, this.packFailed = Wd, this.drawStates = new WeakMap, this.view = void 0, this.modelPackVariant = 0
+    class Op {
+      constructor(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+        this.resources = bb, this.warnOnce = wb, this.programWithModel = Mb, this.packFailed = eb, this.drawStates = new WeakMap, this.view = void 0, this.modelPackVariant = 0
       }
-      programFor(dd, Od, md, Wd, Fd) {
-        const Rd = Od.owner;
-        let Xd = this.drawStates.get(Od);
-        if (!Xd) {
-          const dd = Od.parts.materials[Od.range];
-          if (!dd) return this.warnOnce("model", `${md.name} on ${Rd.name} is not a model material, so it is not drawn on WebGPU (adoptModelMaterial); further ones are not reported`), null;
-          Xd = {
-            defines: QR(dd),
-            model: dd,
+      programFor(bb, wb, Mb, eb, Hb) {
+        const pb = wb.owner;
+        let Vb = this.drawStates.get(wb);
+        if (!Vb) {
+          const bb = wb.parts.materials[wb.range];
+          if (!bb) return this.warnOnce("model", `${Mb.name} on ${pb.name} is not a model material, so it is not drawn on WebGPU (adoptModelMaterial); further ones are not reported`), null;
+          Vb = {
+            defines: lp(bb),
+            model: bb,
             modelVersion: -1,
             definesKey: "",
             program: null,
-            instancing: Fd,
-            groupId: Wd,
+            instancing: Hb,
+            groupId: eb,
             geometry: null,
             instanceLayout: null,
             definesBits: 0,
             packVariant: 0
-          }, this.drawStates.set(Od, Xd)
+          }, this.drawStates.set(wb, Vb)
         }
-        if (this.programCurrent(Xd, Od, Fd, Wd)) return Xd.program;
+        if (this.programCurrent(Vb, wb, Hb, eb)) return Vb.program;
         const {
-          model: Kd
-        } = Xd, hd = oR(Od), vd = this.instanceLayout(Rd, Fd), Qd = this.definesBits(Rd);
-        if (!this.prepareModelDefines(dd, Rd, Kd, Xd.defines, Wd, Fd)) return null;
-        Xd.instancing = Fd, Xd.groupId = Wd, Xd.modelVersion = Kd.version, Xd.geometry = hd, Xd.instanceLayout = vd, Xd.definesBits = Qd;
-        const td = function(dd) {
-          let Od = "";
-          for (const [md, Wd] of dd) Od += !0 === Wd ? `${md};` : `${md}=${Wd};`;
-          return Od
-        }(vR(Xd.defines));
-        return td === Xd.definesKey && Xd.packVariant === this.modelPackVariant && Xd.program && !this.packFailed(Xd.program) || (Xd.definesKey = td, Xd.packVariant = this.modelPackVariant, Xd.program = this.programWithModel(Kd, Xd.defines, td)), Xd.program
+          model: gb
+        } = Vb, lb = Ip(wb), Lb = this.instanceLayout(pb, Hb), Ib = this.definesBits(pb);
+        if (!this.prepareModelDefines(bb, pb, gb, Vb.defines, eb, Hb)) return null;
+        Vb.instancing = Hb, Vb.groupId = eb, Vb.modelVersion = gb.version, Vb.geometry = lb, Vb.instanceLayout = Lb, Vb.definesBits = Ib;
+        const Ob = function(bb) {
+          let wb = "";
+          for (const [Mb, eb] of bb) wb += !0 === eb ? `${Mb};` : `${Mb}=${eb};`;
+          return wb
+        }(gp(Vb.defines));
+        return Ob === Vb.definesKey && Vb.packVariant === this.modelPackVariant && Vb.program && !this.packFailed(Vb.program) || (Vb.definesKey = Ob, Vb.packVariant = this.modelPackVariant, Vb.program = this.programWithModel(gb, Vb.defines, Ob)), Vb.program
       }
-      programCurrent(dd, Od, md, Wd) {
-        return null !== dd.program && !this.packFailed(dd.program) && dd.instancing === md && dd.groupId === Wd && this.definesHold(dd, Od, md)
+      programCurrent(bb, wb, Mb, eb) {
+        return null !== bb.program && !this.packFailed(bb.program) && bb.instancing === Mb && bb.groupId === eb && this.definesHold(bb, wb, Mb)
       }
-      definesHold(dd, Od, md) {
-        return dd.modelVersion === dd.model.version && dd.geometry === oR(Od) && dd.instanceLayout === this.instanceLayout(Od.owner, md) && dd.definesBits === this.definesBits(Od.owner) && dd.packVariant === this.modelPackVariant
+      definesHold(bb, wb, Mb) {
+        return bb.modelVersion === bb.model.version && bb.geometry === Ip(wb) && bb.instanceLayout === this.instanceLayout(wb.owner, Mb) && bb.definesBits === this.definesBits(wb.owner) && bb.packVariant === this.modelPackVariant
       }
-      modelPackKind(dd) {
-        var Od;
-        return 0 === this.modelPackVariant ? null : null !== (Od = (0, Ud.B)(dd, Jd.j.name)) && void 0 !== Od && Od.active ? "placed" : dd.item ? "item" : dd.lifeform ? "lifeform" : dd.box ? "box" : null
+      modelPackKind(bb) {
+        var wb;
+        return 0 === this.modelPackVariant ? null : null !== (wb = (0, Kb.w)(bb, jb.g.name)) && void 0 !== wb && wb.active ? "placed" : bb.item ? "item" : bb.lifeform ? "lifeform" : bb.box ? "box" : null
       }
-      instanceLayout(dd, Od) {
-        var md, Wd, Fd;
-        return "thin" === Od ? null !== (Fd = this.resources.vdd.get(dd)) && void 0 !== Fd ? Fd : null : "instanced" === Od && null !== (md = null === (Wd = dd._userInstancedBuffersStorage) || void 0 === Wd ? void 0 : Wd.interleavedKinds) && void 0 !== md ? md : null
+      instanceLayout(bb, wb) {
+        var Mb, eb, Hb;
+        return "thin" === wb ? null !== (Hb = this.resources.Cbb.get(bb)) && void 0 !== Hb ? Hb : null : "instanced" === wb && null !== (Mb = null === (eb = bb._userInstancedBuffersStorage) || void 0 === eb ? void 0 : eb.interleavedKinds) && void 0 !== Mb ? Mb : null
       }
-      definesBits(dd) {
-        const Od = this.view;
-        return (dd.visibility < 1 ? 1 : 0) | (dd.hasVertexAlpha ? 2 : 0) | (dd.applyFog ? 4 : 0) | (dd.useVertexColors ? 8 : 0) | (dd.nonUniformScaling ? 16 : 0) | (Od.fogEnabled && 0 !== Od.fogMode ? 32 : 0) | (Od.lightsEnabled ? 64 : 0) | Od.lightCount << 7
+      definesBits(bb) {
+        const wb = this.view;
+        return (bb.visibility < 1 ? 1 : 0) | (bb.hasVertexAlpha ? 2 : 0) | (bb.applyFog ? 4 : 0) | (bb.useVertexColors ? 8 : 0) | (bb.nonUniformScaling ? 16 : 0) | (wb.fogEnabled && 0 !== wb.fogMode ? 32 : 0) | (wb.lightsEnabled ? 64 : 0) | wb.lightCount << 7
       }
-      prepareLightDefines(dd, Od, md) {
-        let Wd = 0;
-        if (this.view.lightsEnabled && !Od) {
-          const Od = Math.min(md, 4);
-          for (; Wd < this.view.lightCount && (dd[`LIGHT${Wd}`] = !0, dd[`LITE_LIGHT${Wd}_SLOT`] = Wd, Wd++, dd._needNormals = !0, Wd !== Od););
+      prepareLightDefines(bb, wb, Mb) {
+        let eb = 0;
+        if (this.view.lightsEnabled && !wb) {
+          const wb = Math.min(Mb, 4);
+          for (; eb < this.view.lightCount && (bb[`LIGHT${eb}`] = !0, bb[`LITE_LIGHT${eb}_SLOT`] = eb, eb++, bb._needNormals = !0, eb !== wb););
         }
-        for (let Fd = Wd; Fd < 4; Fd++) dd[`LIGHT${Fd}`] = !1, dd[`LITE_LIGHT${Fd}_SLOT`] = void 0
+        for (let Hb = eb; Hb < 4; Hb++) bb[`LIGHT${Hb}`] = !1, bb[`LITE_LIGHT${Hb}_SLOT`] = void 0
       }
-      prepareModelDefines(dd, Od, md, Wd, Fd, Rd) {
+      prepareModelDefines(bb, wb, Mb, eb, Hb, pb) {
         const {
-          features: Xd
-        } = md;
-        Wd._needNormals = !1, Wd._needUVs = !1;
-        const Kd = this.view;
-        this.prepareLightDefines(Wd, md.disableLighting, md.maxSimultaneousLights), Wd.MAINUV1 = !1, Wd.MAINUV2 = !1;
-        const hd = md.diffuseTexture;
-        hd ? (Wd._needUVs = !0, Wd.DIFFUSE = !0, hd.optimizeUVAllocation && (0, Bd.C)(hd.matrix) ? (Wd.DIFFUSEDIRECTUV = hd.uvSet + 1, Wd[`MAINUV${hd.uvSet+1}`] = !0) : Wd.DIFFUSEDIRECTUV = 0, hd.uvSet > 1 && this.warnOnce(`uvset:${md.name}`, `${md.name} samples UV set ${hd.uvSet+1}, which is not supported`)) : (Wd.DIFFUSE = !1, Wd.DIFFUSEDIRECTUV = 0);
-        const vd = md.opacityTexture,
-          Qd = md.emissiveTexture;
-        Wd.OPACITY = hR(vd, "OPACITY", Wd), Wd.OPACITYRGB = null !== vd && vd.getAlphaFromRGB, Wd.EMISSIVE = hR(Qd, "EMISSIVE", Wd), (vd && vd.uvSet > 1 || Qd && Qd.uvSet > 1) && this.warnOnce(`uvset:${md.name}`, `${md.name} samples a UV set past 2, which is not supported`);
-        const td = md.reflectionTexture,
-          od = null !== td;
-        if (od) {
-          if (!this.resources.boundTexture(td)) return !1;
-          Wd._needNormals = !0
+          features: Vb
+        } = Mb;
+        eb._needNormals = !1, eb._needUVs = !1;
+        const gb = this.view;
+        this.prepareLightDefines(eb, Mb.disableLighting, Mb.maxSimultaneousLights), eb.MAINUV1 = !1, eb.MAINUV2 = !1;
+        const lb = Mb.diffuseTexture;
+        lb ? (eb._needUVs = !0, eb.DIFFUSE = !0, lb.optimizeUVAllocation && (0, Rb.D)(lb.matrix) ? (eb.DIFFUSEDIRECTUV = lb.uvSet + 1, eb[`MAINUV${lb.uvSet+1}`] = !0) : eb.DIFFUSEDIRECTUV = 0, lb.uvSet > 1 && this.warnOnce(`uvset:${Mb.name}`, `${Mb.name} samples UV set ${lb.uvSet+1}, which is not supported`)) : (eb.DIFFUSE = !1, eb.DIFFUSEDIRECTUV = 0);
+        const Lb = Mb.opacityTexture,
+          Ib = Mb.emissiveTexture;
+        eb.OPACITY = Vp(Lb, "OPACITY", eb), eb.OPACITYRGB = null !== Lb && Lb.getAlphaFromRGB, eb.EMISSIVE = Vp(Ib, "EMISSIVE", eb), (Lb && Lb.uvSet > 1 || Ib && Ib.uvSet > 1) && this.warnOnce(`uvset:${Mb.name}`, `${Mb.name} samples a UV set past 2, which is not supported`);
+        const Ob = Mb.reflectionTexture,
+          Ub = null !== Ob;
+        if (Ub) {
+          if (!this.resources.boundTexture(Ob)) return !1;
+          eb._needNormals = !0
         }
-        Wd.REFLECTION = od, Wd.REFLECTIONMAP_3D = od, Wd.REFLECTIONMAP_SKYBOX = od, Wd.REFLECTIONMAP_OPPOSITEZ = od && (dd.useRightHandedSystem ? !td.invertZ : td.invertZ), Wd.ROUGHNESS = od && md.roughness > 0, Wd.REFLECTIONOVERALPHA = od && md.useReflectionOverAlpha, Wd.LITE_REFLECTION_LUMINANCE = od && "cube" === td.source.kind && td.source.luminance, (Od.skeleton || Od.morphTargetManager) && this.warnOnce(`skin:${Od.name}`, `${Od.name} has bones or morph targets, which are not supported`), Wd.FOG = md.fogEnabled && Od.applyFog && Kd.fogEnabled && 0 !== Kd.fogMode, Wd.NONUNIFORMSCALING = Od.nonUniformScaling;
+        eb.REFLECTION = Ub, eb.REFLECTIONMAP_3D = Ub, eb.REFLECTIONMAP_SKYBOX = Ub, eb.REFLECTIONMAP_OPPOSITEZ = Ub && (bb.useRightHandedSystem ? !Ob.invertZ : Ob.invertZ), eb.ROUGHNESS = Ub && Mb.roughness > 0, eb.REFLECTIONOVERALPHA = Ub && Mb.useReflectionOverAlpha, eb.LITE_REFLECTION_LUMINANCE = Ub && "cube" === Ob.source.kind && Ob.source.luminance, (wb.skeleton || wb.morphTargetManager) && this.warnOnce(`skin:${wb.name}`, `${wb.name} has bones or morph targets, which are not supported`), eb.FOG = Mb.fogEnabled && wb.applyFog && gb.fogEnabled && 0 !== gb.fogMode, eb.NONUNIFORMSCALING = wb.nonUniformScaling;
         const {
-          visibility: Nd,
-          hasVertexAlpha: qd
-        } = Od;
-        Wd.ALPHATEST = (0, Ud.W)(md, Nd, qd), Wd.ALPHAFROMDIFFUSE = (0, Ud.nb)(md), Wd.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== md.transparencyMode, Wd.ALPHABLEND = null === md.transparencyMode || (0, Ud.T)(md, Nd, qd), Wd.PREMULTIPLYALPHA = 7 === md.alphaMode || 8 === md.alphaMode, Wd.EMISSIVEASILLUMINATION = md.useEmissiveAsIllumination, Wd.LINKEMISSIVEWITHDIFFUSE = md.linkEmissiveWithDiffuse, Wd.TWOSIDEDLIGHTING = !md.backFaceCulling && md.twoSidedLighting, Wd.INSTANCES = "none" !== Rd, Wd.THIN_INSTANCES = "thin" === Rd, Wd.LITE_FRONT_LAYER = Fd >= 1;
+          visibility: tb,
+          hasVertexAlpha: Cb
+        } = wb;
+        eb.ALPHATEST = (0, Kb.R)(Mb, tb, Cb), eb.ALPHAFROMDIFFUSE = (0, Kb.gb)(Mb), eb.ALPHATEST_AFTERALLALPHACOMPUTATIONS = null !== Mb.transparencyMode, eb.ALPHABLEND = null === Mb.transparencyMode || (0, Kb.O)(Mb, tb, Cb), eb.PREMULTIPLYALPHA = 7 === Mb.alphaMode || 8 === Mb.alphaMode, eb.EMISSIVEASILLUMINATION = Mb.useEmissiveAsIllumination, eb.LINKEMISSIVEWITHDIFFUSE = Mb.linkEmissiveWithDiffuse, eb.TWOSIDEDLIGHTING = !Mb.backFaceCulling && Mb.twoSidedLighting, eb.INSTANCES = "none" !== pb, eb.THIN_INSTANCES = "thin" === pb, eb.LITE_FRONT_LAYER = Hb >= 1;
         for (const {
-            feature: Ed,
-            state: Jd,
-            active: Ud
+            feature: xb,
+            state: jb,
+            active: Kb
           }
-          of Xd) {
-          var Hd, yd;
-          if (Ud) null === (Hd = (yd = (0, AO.i)(Ed)).prepareDefinesBeforeAttributes) || void 0 === Hd || Hd.call(yd, Jd, Wd, dd, Od)
+          of Vb) {
+          var Eb, Fb;
+          if (Kb) null === (Eb = (Fb = (0, Aw.e)(xb)).prepareDefinesBeforeAttributes) || void 0 === Eb || Eb.call(Fb, jb, eb, bb, wb)
         }
-        this.modelPackKind(md) && (Wd._needNormals = !0), Wd.NORMAL = Wd._needNormals && Od.isVerticesDataPresent("normal"), Wd.UV1 = Wd._needUVs && Od.isVerticesDataPresent("uv"), Wd.UV2 = Wd._needUVs && Od.isVerticesDataPresent("uv2");
-        const bd = Od.useVertexColors && Od.isVerticesDataPresent("color");
-        Wd.VERTEXCOLOR = bd, Wd.VERTEXALPHA = Od.hasVertexAlpha && bd, Wd.INSTANCESCOLOR = "none" !== Rd && Od.isVerticesDataPresent("instanceColor");
+        this.modelPackKind(Mb) && (eb._needNormals = !0), eb.NORMAL = eb._needNormals && wb.isVerticesDataPresent("normal"), eb.UV1 = eb._needUVs && wb.isVerticesDataPresent("uv"), eb.UV2 = eb._needUVs && wb.isVerticesDataPresent("uv2");
+        const Bb = wb.useVertexColors && wb.isVerticesDataPresent("color");
+        eb.VERTEXCOLOR = Bb, eb.VERTEXALPHA = wb.hasVertexAlpha && Bb, eb.INSTANCESCOLOR = "none" !== pb && wb.isVerticesDataPresent("instanceColor");
         for (const {
-            feature: Ed,
-            state: Jd,
-            active: Ud
+            feature: xb,
+            state: jb,
+            active: Kb
           }
-          of Xd) {
-          var Td, pd;
-          if (Ud) null === (Td = (pd = (0, AO.i)(Ed)).prepareDefines) || void 0 === Td || Td.call(pd, Jd, Wd, dd, Od, md)
+          of Vb) {
+          var sb, mb;
+          if (Kb) null === (sb = (mb = (0, Aw.e)(xb)).prepareDefines) || void 0 === sb || sb.call(mb, jb, eb, bb, wb, Mb)
         }
-        const Yd = dd.Iq();
+        const hb = bb.DC();
         for (const {
-            feature: Ed,
-            state: Jd,
-            active: Ud
+            feature: xb,
+            state: jb,
+            active: Kb
           }
-          of Xd) {
-          var gd, wd;
-          if (Ud && !1 === (null === (gd = (wd = (0, AO.i)(Ed)).isReadyForSubMesh) || void 0 === gd ? void 0 : gd.call(wd, Jd, Wd, dd, Yd))) return !1
+          of Vb) {
+          var zb, Xb;
+          if (Kb && !1 === (null === (zb = (Xb = (0, Aw.e)(xb)).isReadyForSubMesh) || void 0 === zb ? void 0 : zb.call(Xb, jb, eb, bb, hb))) return !1
         }
         return !0
       }
     }
 
-    function qR(dd, Od, md) {
-      return dd.codeVersion !== Od.version && function(dd, Od) {
-        const md = [],
-          Wd = [];
+    function Up(bb, wb, Mb) {
+      return bb.codeVersion !== wb.version && function(bb, wb) {
+        const Mb = [],
+          eb = [];
         for (const {
-            feature: od,
-            state: Nd,
-            active: qd
+            feature: Ub,
+            state: tb,
+            active: Cb
           }
-          of Od.features) {
-          var Fd, Rd, Xd, Kd;
-          if (qd) HR(null === (Fd = (Rd = (0, AO.i)(od)).getCustomCode) || void 0 === Fd ? void 0 : Fd.call(Rd, Nd, "vertex", wd.e.WGSL), md), HR(null === (Xd = (Kd = (0, AO.i)(od)).getCustomCode) || void 0 === Xd ? void 0 : Xd.call(Kd, Nd, "fragment", wd.e.WGSL), Wd)
+          of wb.features) {
+          var Hb, pb, Vb, gb;
+          if (Cb) tp(null === (Hb = (pb = (0, Aw.e)(Ub)).getCustomCode) || void 0 === Hb ? void 0 : Hb.call(pb, tb, "vertex", Xb.b.WGSL), Mb), tp(null === (Vb = (gb = (0, Aw.e)(Ub)).getCustomCode) || void 0 === Vb ? void 0 : Vb.call(gb, tb, "fragment", Xb.b.WGSL), eb)
         }
-        const hd = [];
+        const lb = [];
         for (const {
-            feature: od,
-            state: Nd
+            feature: Ub,
+            state: tb
           }
-          of Od.features) {
-          var vd, Qd;
-          const dd = null === (vd = (Qd = (0, AO.i)(od)).getUniforms) || void 0 === vd ? void 0 : vd.call(Qd, Nd, wd.e.WGSL);
-          for (const Od of null !== (td = null === dd || void 0 === dd ? void 0 : dd.ubo) && void 0 !== td ? td : []) {
-            var td;
-            Od.size && Od.type && hd.push({
-              name: Od.name,
-              type: Od.type,
-              arraySize: Od.arraySize
+          of wb.features) {
+          var Lb, Ib;
+          const bb = null === (Lb = (Ib = (0, Aw.e)(Ub)).getUniforms) || void 0 === Lb ? void 0 : Lb.call(Ib, tb, Xb.b.WGSL);
+          for (const wb of null !== (Ob = null === bb || void 0 === bb ? void 0 : bb.ubo) && void 0 !== Ob ? Ob : []) {
+            var Ob;
+            wb.size && wb.type && lb.push({
+              name: wb.name,
+              type: wb.type,
+              arraySize: wb.arraySize
             })
           }
         }
-        dd.vertexCode = md, dd.fragmentCode = Wd, dd.pluginUniforms = hd, dd.codeKey = JSON.stringify([md, Wd, hd]), dd.codeVersion = Od.version
-      }(dd, Od), `${md}#${dd.codeKey}`
+        bb.vertexCode = Mb, bb.fragmentCode = eb, bb.pluginUniforms = lb, bb.codeKey = JSON.stringify([Mb, eb, lb]), bb.codeVersion = wb.version
+      }(bb, wb), `${Mb}#${bb.codeKey}`
     }
 
-    function HR(dd, Od) {
-      if (dd)
-        for (const md in dd) dd[md] && Od.push([md, dd[md]])
+    function tp(bb, wb) {
+      if (bb)
+        for (const Mb in bb) bb[Mb] && wb.push([Mb, bb[Mb]])
     }
-    const yR = new Map([
+    const Cp = new Map([
       [512, "never"],
       [513, "greater"],
       [514, "equal"],
@@ -2329,326 +2329,326 @@ export const modules = {
       [518, "less-equal"],
       [519, "always"]
     ]);
-    class bR {
-      constructor(dd) {
-        this.warnOnce = dd, this.states = new Map
+    class Ep {
+      constructor(bb) {
+        this.warnOnce = bb, this.states = new Map
       }
-      renderState(dd, Od, md, Wd) {
-        var Fd;
-        let Rd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "triangle-list",
-          Xd = null !== (Fd = dd.sideOrientation) && void 0 !== Fd ? Fd : Od.sideOrientation;
-        Od._getWorldMatrixDeterminant() < 0 && (Xd = 0 === Xd ? 1 : 0);
-        const Kd = "triangle-list" === Rd,
-          hd = md ? dd.alphaMode : 0,
-          vd = (!md || (0 === hd || dd.forceDepthWrite)) && !dd.disableDepthWrite,
-          Qd = Kd && dd.backFaceCulling ? dd.cullBackFaces ? "back" : "front" : "none",
-          td = Kd && 0 !== Xd ? "ccw" : "cw",
-          od = dd.depthFunction,
-          Nd = Kd ? dd.zOffset : 0,
-          qd = Kd ? dd.zOffsetUnits : 0,
-          Hd = !dd.disableColorWrite;
-        return Wd && Wd.alphaMode === hd && Wd.depthWrite === vd && Wd.depthFunction === od && Wd.cullMode === Qd && Wd.frontFace === td && Wd.zOffset === Nd && Wd.zOffsetUnits === qd && Wd.colourWrite === Hd && Wd.topology === Rd ? Wd : this.stateFor(hd, vd, od, Qd, td, Nd, qd, Hd, Rd)
+      renderState(bb, wb, Mb, eb) {
+        var Hb;
+        let pb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "triangle-list",
+          Vb = null !== (Hb = bb.sideOrientation) && void 0 !== Hb ? Hb : wb.sideOrientation;
+        wb._getWorldMatrixDeterminant() < 0 && (Vb = 0 === Vb ? 1 : 0);
+        const gb = "triangle-list" === pb,
+          lb = Mb ? bb.alphaMode : 0,
+          Lb = (!Mb || (0 === lb || bb.forceDepthWrite)) && !bb.disableDepthWrite,
+          Ib = gb && bb.backFaceCulling ? bb.cullBackFaces ? "back" : "front" : "none",
+          Ob = gb && 0 !== Vb ? "ccw" : "cw",
+          Ub = bb.depthFunction,
+          tb = gb ? bb.zOffset : 0,
+          Cb = gb ? bb.zOffsetUnits : 0,
+          Eb = !bb.disableColorWrite;
+        return eb && eb.alphaMode === lb && eb.depthWrite === Lb && eb.depthFunction === Ub && eb.cullMode === Ib && eb.frontFace === Ob && eb.zOffset === tb && eb.zOffsetUnits === Cb && eb.colourWrite === Eb && eb.topology === pb ? eb : this.stateFor(lb, Lb, Ub, Ib, Ob, tb, Cb, Eb, pb)
       }
-      stateFor(dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd) {
-        const vd = `${dd}|${Od}|${md}|${Wd}|${Fd}|${Rd}|${Xd}|${Kd}|${hd}`;
-        let Qd = this.states.get(vd);
-        if (!Qd) {
-          var td;
-          const od = dd ? KO(dd) : null;
-          dd && !od && this.warnOnce(`alpha:${dd}`, `alpha mode ${dd} is not supported`), Qd = {
-            key: vd,
-            alphaMode: dd,
-            depthFunction: md,
-            zOffset: Rd,
-            zOffsetUnits: Xd,
-            topology: hd,
-            blend: od,
-            depthWrite: Od,
-            depthCompare: md && null !== (td = yR.get(md)) && void 0 !== td ? td : null,
-            cullMode: Wd,
-            frontFace: Fd,
-            depthBias: -Xd,
-            depthBiasSlopeScale: -Rd,
-            colourWrite: Kd
-          }, this.states.set(vd, Qd)
+      stateFor(bb, wb, Mb, eb, Hb, pb, Vb, gb, lb) {
+        const Lb = `${bb}|${wb}|${Mb}|${eb}|${Hb}|${pb}|${Vb}|${gb}|${lb}`;
+        let Ib = this.states.get(Lb);
+        if (!Ib) {
+          var Ob;
+          const Ub = bb ? pw(bb) : null;
+          bb && !Ub && this.warnOnce(`alpha:${bb}`, `alpha mode ${bb} is not supported`), Ib = {
+            key: Lb,
+            alphaMode: bb,
+            depthFunction: Mb,
+            zOffset: pb,
+            zOffsetUnits: Vb,
+            topology: lb,
+            blend: Ub,
+            depthWrite: wb,
+            depthCompare: Mb && null !== (Ob = Cp.get(Mb)) && void 0 !== Ob ? Ob : null,
+            cullMode: eb,
+            frontFace: Hb,
+            depthBias: -Vb,
+            depthBiasSlopeScale: -pb,
+            colourWrite: gb
+          }, this.states.set(Lb, Ib)
         }
-        return Qd
+        return Ib
       }
     }
-    var TR = md(38891);
+    var Fp = Mb(38560);
 
-    function pR(dd) {
-      if (!dd.frozen) return -1;
-      let Od = dd.version;
+    function Bp(bb) {
+      if (!bb.frozen) return -1;
+      let wb = bb.version;
       for (const {
-          feature: md,
-          state: Wd,
-          active: Fd
+          feature: Mb,
+          state: eb,
+          active: Hb
         }
-        of dd.features) {
-        if (!Fd || !md.bind) continue;
-        const dd = (0, AO.i)(md).uniformsVersion;
-        if (!dd) return -1;
-        Od += dd(Wd)
+        of bb.features) {
+        if (!Hb || !Mb.bind) continue;
+        const bb = (0, Aw.e)(Mb).uniformsVersion;
+        if (!bb) return -1;
+        wb += bb(eb)
       }
-      return Od
+      return wb
     }
-    class YR {
-      constructor(dd, Od, md) {
-        this.slots = dd, this.data = Od, this.textures = md, this.useUbo = !0, this.currentEffect = null, this.expected = new Set
+    class sp {
+      constructor(bb, wb, Mb) {
+        this.slots = bb, this.data = wb, this.textures = Mb, this.useUbo = !0, this.currentEffect = null, this.expected = new Set
       }
-      updateFloat(dd, Od) {
-        this.write4(dd, Od, 0, 0, 0, 1)
+      updateFloat(bb, wb) {
+        this.write4(bb, wb, 0, 0, 0, 1)
       }
-      updateFloat2(dd, Od, md) {
-        this.write4(dd, Od, md, 0, 0, 2)
+      updateFloat2(bb, wb, Mb) {
+        this.write4(bb, wb, Mb, 0, 0, 2)
       }
-      updateFloat3(dd, Od, md, Wd) {
-        this.write4(dd, Od, md, Wd, 0, 3)
+      updateFloat3(bb, wb, Mb, eb) {
+        this.write4(bb, wb, Mb, eb, 0, 3)
       }
-      updateFloat4(dd, Od, md, Wd, Fd) {
-        this.write4(dd, Od, md, Wd, Fd, 4)
+      updateFloat4(bb, wb, Mb, eb, Hb) {
+        this.write4(bb, wb, Mb, eb, Hb, 4)
       }
-      updateVector3(dd, Od) {
-        this.write4(dd, Od.x, Od.y, Od.z, 0, 3)
+      updateVector3(bb, wb) {
+        this.write4(bb, wb.x, wb.y, wb.z, 0, 3)
       }
-      updateVector4(dd, Od) {
-        this.write4(dd, Od.x, Od.y, Od.z, Od.w, 4)
+      updateVector4(bb, wb) {
+        this.write4(bb, wb.x, wb.y, wb.z, wb.w, 4)
       }
-      updateColor3(dd, Od) {
-        this.write4(dd, Od.r, Od.g, Od.b, 0, 3)
+      updateColor3(bb, wb) {
+        this.write4(bb, wb.r, wb.g, wb.b, 0, 3)
       }
-      updateColor4(dd, Od, md) {
-        this.write4(dd, Od.r, Od.g, Od.b, md, 4)
+      updateColor4(bb, wb, Mb) {
+        this.write4(bb, wb.r, wb.g, wb.b, Mb, 4)
       }
-      updateFloatsFrom(dd, Od, md, Wd) {
-        const Fd = this.slots.get(dd);
-        if (!Fd) return;
-        const Rd = this.data,
-          Xd = Fd.offset;
-        for (let Kd = 0; Kd < Wd; Kd++) Rd[Xd + Kd] = Od[md + Kd]
+      updateFloatsFrom(bb, wb, Mb, eb) {
+        const Hb = this.slots.get(bb);
+        if (!Hb) return;
+        const pb = this.data,
+          Vb = Hb.offset;
+        for (let gb = 0; gb < eb; gb++) pb[Vb + gb] = wb[Mb + gb]
       }
-      updateFloat3TimesFloats(dd, Od, md, Wd) {
-        const Fd = this.slots.get(dd);
-        if (!Fd) return;
-        const Rd = this.data,
-          Xd = Fd.offset;
-        Rd[Xd] = Od[md] * Wd[0], Rd[Xd + 1] = Od[md + 1] * Wd[1], Rd[Xd + 2] = Od[md + 2] * Wd[2]
+      updateFloat3TimesFloats(bb, wb, Mb, eb) {
+        const Hb = this.slots.get(bb);
+        if (!Hb) return;
+        const pb = this.data,
+          Vb = Hb.offset;
+        pb[Vb] = wb[Mb] * eb[0], pb[Vb + 1] = wb[Mb + 1] * eb[1], pb[Vb + 2] = wb[Mb + 2] * eb[2]
       }
-      Idd(dd, Od) {
-        const md = this.slots.get(dd);
-        md && this.data.set(Od.m, md.offset)
+      kbb(bb, wb) {
+        const Mb = this.slots.get(bb);
+        Mb && this.data.set(wb.m, Mb.offset)
       }
-      updateMatrixFloats(dd, Od) {
-        const md = this.slots.get(dd);
-        md && this.data.set(Od, md.offset)
+      updateMatrixFloats(bb, wb) {
+        const Mb = this.slots.get(bb);
+        Mb && this.data.set(wb, Mb.offset)
       }
-      updateFloatArray(dd, Od) {
-        const md = this.slots.get(dd);
-        if (!md) return;
-        if (!md.arraySize || md.stride === md.floats) return void this.data.set(Od, md.offset);
-        const Wd = Math.min(Od.length, md.floats * md.arraySize);
-        for (let Fd = 0; Fd < Wd; Fd++) this.data[md.offset + Math.floor(Fd / md.floats) * md.stride + Fd % md.floats] = Od[Fd]
+      updateFloatArray(bb, wb) {
+        const Mb = this.slots.get(bb);
+        if (!Mb) return;
+        if (!Mb.arraySize || Mb.stride === Mb.floats) return void this.data.set(wb, Mb.offset);
+        const eb = Math.min(wb.length, Mb.floats * Mb.arraySize);
+        for (let Hb = 0; Hb < eb; Hb++) this.data[Mb.offset + Math.floor(Hb / Mb.floats) * Mb.stride + Hb % Mb.floats] = wb[Hb]
       }
-      updateArray(dd, Od) {
-        this.updateFloatArray(dd, Od)
+      updateArray(bb, wb) {
+        this.updateFloatArray(bb, wb)
       }
-      setTexture(dd, Od) {
-        this.textures.set(dd, Od), this.expected.delete(dd)
+      setTexture(bb, wb) {
+        this.textures.set(bb, wb), this.expected.delete(bb)
       }
-      expectTexture(dd) {
-        this.textures.set(dd, null), this.expected.add(dd)
+      expectTexture(bb) {
+        this.textures.set(bb, null), this.expected.add(bb)
       }
-      write4(dd, Od, md, Wd, Fd, Rd) {
-        const Xd = this.slots.get(dd);
-        if (!Xd) return;
-        const Kd = this.data,
-          hd = Xd.offset;
-        Kd[hd] = Od, Rd > 1 && (Kd[hd + 1] = md), Rd > 2 && (Kd[hd + 2] = Wd), Rd > 3 && (Kd[hd + 3] = Fd)
+      write4(bb, wb, Mb, eb, Hb, pb) {
+        const Vb = this.slots.get(bb);
+        if (!Vb) return;
+        const gb = this.data,
+          lb = Vb.offset;
+        gb[lb] = wb, pb > 1 && (gb[lb + 1] = Mb), pb > 2 && (gb[lb + 2] = eb), pb > 3 && (gb[lb + 3] = Hb)
       }
     }
 
-    function gR(dd, Od) {
-      const md = tF,
-        Wd = TR.j,
-        Fd = dd.lights,
-        Rd = Math.min(dd.lightCount, 8);
-      for (let Xd = 0; Xd < Rd; Xd++) {
-        const dd = md.lights + Xd * md.lightStride,
-          Rd = Xd * TR.e;
-        Od[dd] = Fd[Rd + Wd.vector], Od[dd + 1] = Fd[Rd + Wd.vector + 1], Od[dd + 2] = Fd[Rd + Wd.vector + 2], Od[dd + 3] = Fd[Rd + Wd.kind] === TR.h.directional ? 1 : 0, Od[dd + 4] = Fd[Rd + Wd.diffuse], Od[dd + 5] = Fd[Rd + Wd.diffuse + 1], Od[dd + 6] = Fd[Rd + Wd.diffuse + 2], Od[dd + 7] = Fd[Rd + Wd.range], Od[dd + 8] = Fd[Rd + Wd.specular], Od[dd + 9] = Fd[Rd + Wd.specular + 1], Od[dd + 10] = Fd[Rd + Wd.specular + 2], Od[dd + 11] = Fd[Rd + Wd.range]
+    function mp(bb, wb) {
+      const Mb = LH,
+        eb = Fp.h,
+        Hb = bb.lights,
+        pb = Math.min(bb.lightCount, 8);
+      for (let Vb = 0; Vb < pb; Vb++) {
+        const bb = Mb.lights + Vb * Mb.lightStride,
+          pb = Vb * Fp.c;
+        wb[bb] = Hb[pb + eb.vector], wb[bb + 1] = Hb[pb + eb.vector + 1], wb[bb + 2] = Hb[pb + eb.vector + 2], wb[bb + 3] = Hb[pb + eb.kind] === Fp.f.directional ? 1 : 0, wb[bb + 4] = Hb[pb + eb.diffuse], wb[bb + 5] = Hb[pb + eb.diffuse + 1], wb[bb + 6] = Hb[pb + eb.diffuse + 2], wb[bb + 7] = Hb[pb + eb.range], wb[bb + 8] = Hb[pb + eb.specular], wb[bb + 9] = Hb[pb + eb.specular + 1], wb[bb + 10] = Hb[pb + eb.specular + 2], wb[bb + 11] = Hb[pb + eb.range]
       }
-      Od[md.fogInfos] = dd.fogMode, Od[md.fogInfos + 1] = dd.fogStart, Od[md.fogInfos + 2] = dd.fogEnd, Od[md.fogInfos + 3] = dd.fogDensity, Od[md.fogColour] = dd.fogColour[0], Od[md.fogColour + 1] = dd.fogColour[1], Od[md.fogColour + 2] = dd.fogColour[2], Od[md.outputHeight] = dd.renderHeight, Od[md.animTick] = dd.animTick, Od[md.timeMs] = dd.timeMs
+      wb[Mb.fogInfos] = bb.fogMode, wb[Mb.fogInfos + 1] = bb.fogStart, wb[Mb.fogInfos + 2] = bb.fogEnd, wb[Mb.fogInfos + 3] = bb.fogDensity, wb[Mb.fogColour] = bb.fogColour[0], wb[Mb.fogColour + 1] = bb.fogColour[1], wb[Mb.fogColour + 2] = bb.fogColour[2], wb[Mb.outputHeight] = bb.renderHeight, wb[Mb.animTick] = bb.animTick, wb[Mb.timeMs] = bb.timeMs
     }
-    class wR {
-      constructor(dd) {
-        this.instancesOf = dd
+    class hp {
+      constructor(bb) {
+        this.instancesOf = bb
       }
-      refreshModelUniforms(dd, Od, md, Wd) {
-        const Fd = pR(md);
-        if (Fd >= 0 && Fd === Od.heldVersion && Od.textures.get("diffuseSampler") === md.diffuseTexture && Od.textures.get("reflectionCubeSampler") === md.reflectionTexture && Od.textures.get("opacitySampler") === md.opacityTexture && Od.textures.get("emissiveSampler") === md.emissiveTexture) return !0;
-        if (Fd < 0)
-          for (const Rd of this.instancesOf(md)) Rd.heldVersion = -1;
-        return this.writeModelUniforms(dd, Od, md, Wd), Od.heldVersion = Fd, !1
+      refreshModelUniforms(bb, wb, Mb, eb) {
+        const Hb = Bp(Mb);
+        if (Hb >= 0 && Hb === wb.heldVersion && wb.textures.get("diffuseSampler") === Mb.diffuseTexture && wb.textures.get("reflectionCubeSampler") === Mb.reflectionTexture && wb.textures.get("opacitySampler") === Mb.opacityTexture && wb.textures.get("emissiveSampler") === Mb.emissiveTexture) return !0;
+        if (Hb < 0)
+          for (const pb of this.instancesOf(Mb)) pb.heldVersion = -1;
+        return this.writeModelUniforms(bb, wb, Mb, eb), wb.heldVersion = Hb, !1
       }
-      writeModelUniforms(dd, Od, md, Wd) {
+      writeModelUniforms(bb, wb, Mb, eb) {
         const {
-          ubo: Fd
-        } = Od, Rd = md.diffuseTexture, Xd = md.diffuseColor;
-        Fd.updateFloat4("vDiffuseColor", Xd[0], Xd[1], Xd[2], md.alpha), Rd && (Fd.updateFloat2("vDiffuseInfos", Rd.uvSet, Rd.level), Fd.updateMatrixFloats("diffuseMatrix", Rd.matrix)), Fd.updateFloat("alphaCutOff", md.alphaCutOff), Fd.updateFloatsFrom("vEmissiveColor", md.emissiveColor, 0, 3), Fd.updateFloat3TimesFloats("vAmbientColor", Wd.ambientColour, 0, md.ambientColor);
-        const Kd = md.specularColor;
-        Fd.updateFloat4("vSpecularColor", Kd[0], Kd[1], Kd[2], md.specularPower), Fd.setTexture("diffuseSampler", Rd);
-        const hd = md.opacityTexture;
-        hd && (Fd.updateFloat2("vOpacityInfos", hd.uvSet, hd.level), Fd.updateMatrixFloats("opacityMatrix", hd.matrix)), Fd.setTexture("opacitySampler", hd);
-        const vd = md.emissiveTexture;
-        vd && (Fd.updateFloat2("vEmissiveInfos", vd.uvSet, vd.level), Fd.updateMatrixFloats("emissiveMatrix", vd.matrix)), Fd.setTexture("emissiveSampler", vd);
-        const Qd = md.reflectionTexture;
-        Qd && Fd.updateMatrixFloats("reflectionMatrix", Qd.matrix), Fd.updateFloat2("vReflectionInfos", Qd ? Qd.level * dd.iblIntensity : 0, md.roughness), Fd.setTexture("reflectionCubeSampler", Qd);
-        const td = dd.Iq();
+          ubo: Hb
+        } = wb, pb = Mb.diffuseTexture, Vb = Mb.diffuseColor;
+        Hb.updateFloat4("vDiffuseColor", Vb[0], Vb[1], Vb[2], Mb.alpha), pb && (Hb.updateFloat2("vDiffuseInfos", pb.uvSet, pb.level), Hb.updateMatrixFloats("diffuseMatrix", pb.matrix)), Hb.updateFloat("alphaCutOff", Mb.alphaCutOff), Hb.updateFloatsFrom("vEmissiveColor", Mb.emissiveColor, 0, 3), Hb.updateFloat3TimesFloats("vAmbientColor", eb.ambientColour, 0, Mb.ambientColor);
+        const gb = Mb.specularColor;
+        Hb.updateFloat4("vSpecularColor", gb[0], gb[1], gb[2], Mb.specularPower), Hb.setTexture("diffuseSampler", pb);
+        const lb = Mb.opacityTexture;
+        lb && (Hb.updateFloat2("vOpacityInfos", lb.uvSet, lb.level), Hb.updateMatrixFloats("opacityMatrix", lb.matrix)), Hb.setTexture("opacitySampler", lb);
+        const Lb = Mb.emissiveTexture;
+        Lb && (Hb.updateFloat2("vEmissiveInfos", Lb.uvSet, Lb.level), Hb.updateMatrixFloats("emissiveMatrix", Lb.matrix)), Hb.setTexture("emissiveSampler", Lb);
+        const Ib = Mb.reflectionTexture;
+        Ib && Hb.updateMatrixFloats("reflectionMatrix", Ib.matrix), Hb.updateFloat2("vReflectionInfos", Ib ? Ib.level * bb.iblIntensity : 0, Mb.roughness), Hb.setTexture("reflectionCubeSampler", Ib);
+        const Ob = bb.DC();
         for (const {
-            feature: qd,
-            state: Hd,
-            active: yd
+            feature: Cb,
+            state: Eb,
+            active: Fb
           }
-          of md.features) {
-          var od, Nd;
-          if (yd) null === (od = (Nd = (0, AO.i)(qd)).bind) || void 0 === od || od.call(Nd, Hd, Fd, dd, td)
+          of Mb.features) {
+          var Ub, tb;
+          if (Fb) null === (Ub = (tb = (0, Aw.e)(Cb)).bind) || void 0 === Ub || Ub.call(tb, Eb, Hb, bb, Ob)
         }
       }
     }
 
-    function aR(dd) {
-      const Od = dd.replace(/\s+/g, "");
-      return /u32|^vec\du$/.test(Od) ? "u32" : /i32|^vec\di$/.test(Od) ? "i32" : "f32"
+    function zp(bb) {
+      const wb = bb.replace(/\s+/g, "");
+      return /u32|^vec\du$/.test(wb) ? "u32" : /i32|^vec\di$/.test(wb) ? "i32" : "f32"
     }
 
-    function ER(dd, Od) {
-      const md = dd.getSize(),
-        Wd = aR(Od),
-        Fd = dd => 4 === md ? `${dd}x4` : 2 === md ? `${dd}x2` : null;
-      if ("f32" === Wd) {
-        if (5126 === dd.type) return 1 === md ? "float32" : md >= 2 && md <= 4 ? `float32x${md}` : null;
-        if (!dd.normalized) return null;
-        switch (dd.type) {
+    function Xp(bb, wb) {
+      const Mb = bb.getSize(),
+        eb = zp(wb),
+        Hb = bb => 4 === Mb ? `${bb}x4` : 2 === Mb ? `${bb}x2` : null;
+      if ("f32" === eb) {
+        if (5126 === bb.type) return 1 === Mb ? "float32" : Mb >= 2 && Mb <= 4 ? `float32x${Mb}` : null;
+        if (!bb.normalized) return null;
+        switch (bb.type) {
           case 5121:
-            return Fd("unorm8");
+            return Hb("unorm8");
           case 5120:
-            return Fd("snorm8");
+            return Hb("snorm8");
           case 5123:
-            return Fd("unorm16");
+            return Hb("unorm16");
           case 5122:
-            return Fd("snorm16")
+            return Hb("snorm16")
         }
         return null
       }
-      const Rd = "u32" === Wd ? "uint" : "sint";
-      switch (dd.type) {
+      const pb = "u32" === eb ? "uint" : "sint";
+      switch (bb.type) {
         case 5125:
         case 5124:
-          return 1 === md ? `${Rd}32` : md <= 4 ? `${Rd}32x${md}` : null;
+          return 1 === Mb ? `${pb}32` : Mb <= 4 ? `${pb}32x${Mb}` : null;
         case 5121:
         case 5120:
-          return Fd(`${Rd}8`);
+          return Hb(`${pb}8`);
         case 5123:
         case 5122:
-          return Fd(`${Rd}16`)
+          return Hb(`${pb}16`)
       }
       return null
     }
 
-    function JR(dd) {
-      var Od;
-      const md = /(8|16|32)(?:x(\d))?$/.exec(dd);
-      return md ? Number(md[1]) / 8 * Number(null !== (Od = md[2]) && void 0 !== Od ? Od : 1) : 4
+    function xp(bb) {
+      var wb;
+      const Mb = /(8|16|32)(?:x(\d))?$/.exec(bb);
+      return Mb ? Number(Mb[1]) / 8 * Number(null !== (wb = Mb[2]) && void 0 !== wb ? wb : 1) : 4
     }
-    class UR {
-      constructor(dd, Od, md) {
-        this.resources = dd, this.limits = Od, this.warnOnce = md, this.layouts = new Map
+    class jp {
+      constructor(bb, wb, Mb) {
+        this.resources = bb, this.limits = wb, this.warnOnce = Mb, this.layouts = new Map
       }
-      resolveInputs(dd, Od, md, Wd) {
-        const Fd = [],
-          Rd = md.program.attributes,
-          Xd = [];
-        for (let Qd = 0; Qd < Rd.length; Qd++) {
-          const md = Rd[Qd],
-            Kd = md.optional ? null : this.resources.vertexInput(dd, md.name, Wd);
-          if (!Kd) {
-            const dd = aR(md.type),
-              Od = "u32" === dd ? "uint32x4" : "i32" === dd ? "sint32x4" : "float32x4";
-            Xd.push(null);
-            const Wd = Fd.find((dd => null === dd.data));
-            Wd ? Wd.attributes.push({
-              shaderLocation: Qd,
+      resolveInputs(bb, wb, Mb, eb) {
+        const Hb = [],
+          pb = Mb.program.attributes,
+          Vb = [];
+        for (let Ib = 0; Ib < pb.length; Ib++) {
+          const Mb = pb[Ib],
+            gb = Mb.optional ? null : this.resources.vertexInput(bb, Mb.name, eb);
+          if (!gb) {
+            const bb = zp(Mb.type),
+              wb = "u32" === bb ? "uint32x4" : "i32" === bb ? "sint32x4" : "float32x4";
+            Vb.push(null);
+            const eb = Hb.find((bb => null === bb.data));
+            eb ? eb.attributes.push({
+              shaderLocation: Ib,
               offset: 0,
-              format: Od
-            }) : Fd.push({
+              format: wb
+            }) : Hb.push({
               data: null,
               base: 0,
               stride: 0,
               step: "vertex",
               attributes: [{
-                shaderLocation: Qd,
+                shaderLocation: Ib,
                 offset: 0,
-                format: Od
+                format: wb
               }]
             });
             continue
           }
-          const hd = Kd.getBuffer();
-          Xd.push(Kd);
-          const vd = ER(Kd, md.type);
-          if (!vd) return this.warnOnce(`format:${Od}:${md.name}`, `${Od}'s ${md.name} (type ${Kd.type}, size ${Kd.getSize()}) has no WebGPU vertex format`), null;
-          const td = Kd.getIsInstanced() ? "instance" : "vertex",
-            od = Kd.byteStride,
-            Nd = JR(vd),
-            qd = Fd.find((dd => dd.data === hd && dd.stride === od && dd.step === td && Kd.byteOffset >= dd.base && Kd.byteOffset - dd.base + Nd <= od));
-          qd ? qd.attributes.push({
-            shaderLocation: Qd,
-            offset: Kd.byteOffset - qd.base,
-            format: vd
-          }) : Fd.push({
-            data: hd,
-            base: Kd.byteOffset,
-            stride: od,
-            step: td,
+          const lb = gb.getBuffer();
+          Vb.push(gb);
+          const Lb = Xp(gb, Mb.type);
+          if (!Lb) return this.warnOnce(`format:${wb}:${Mb.name}`, `${wb}'s ${Mb.name} (type ${gb.type}, size ${gb.getSize()}) has no WebGPU vertex format`), null;
+          const Ob = gb.getIsInstanced() ? "instance" : "vertex",
+            Ub = gb.byteStride,
+            tb = xp(Lb),
+            Cb = Hb.find((bb => bb.data === lb && bb.stride === Ub && bb.step === Ob && gb.byteOffset >= bb.base && gb.byteOffset - bb.base + tb <= Ub));
+          Cb ? Cb.attributes.push({
+            shaderLocation: Ib,
+            offset: gb.byteOffset - Cb.base,
+            format: Lb
+          }) : Hb.push({
+            data: lb,
+            base: gb.byteOffset,
+            stride: Ub,
+            step: Ob,
             attributes: [{
-              shaderLocation: Qd,
+              shaderLocation: Ib,
               offset: 0,
-              format: vd
+              format: Lb
             }]
           })
         }
-        if (Fd.length > this.limits.maxVertexBuffers) return this.warnOnce(`slots:${Od}`, `${Od} needs ${Fd.length} vertex buffers`), null;
-        let Kd = "";
-        for (const Qd of Fd) {
-          Kd += `${Qd.stride}${"instance"===Qd.step?"i":"v"}`;
-          for (const dd of Qd.attributes) Kd += `,${dd.shaderLocation}:${dd.offset}:${dd.format}`;
-          Kd += ";"
+        if (Hb.length > this.limits.maxVertexBuffers) return this.warnOnce(`slots:${wb}`, `${wb} needs ${Hb.length} vertex buffers`), null;
+        let gb = "";
+        for (const Ib of Hb) {
+          gb += `${Ib.stride}${"instance"===Ib.step?"i":"v"}`;
+          for (const bb of Ib.attributes) gb += `,${bb.shaderLocation}:${bb.offset}:${bb.format}`;
+          gb += ";"
         }
-        let hd = this.layouts.get(Kd);
-        hd || (hd = {
-          key: Kd,
-          buffers: Fd.map((dd => ({
-            arrayStride: dd.stride,
-            stepMode: dd.step,
-            attributes: dd.attributes
+        let lb = this.layouts.get(gb);
+        lb || (lb = {
+          key: gb,
+          buffers: Hb.map((bb => ({
+            arrayStride: bb.stride,
+            stepMode: bb.step,
+            attributes: bb.attributes
           }))),
-          instanceEnds: Fd.map((dd => {
-            let Od = -1;
-            if ("instance" === dd.step)
-              for (const md of dd.attributes) Od = Math.max(Od, md.offset + JR(md.format));
-            return Od
+          instanceEnds: Hb.map((bb => {
+            let wb = -1;
+            if ("instance" === bb.step)
+              for (const Mb of bb.attributes) wb = Math.max(wb, Mb.offset + xp(Mb.format));
+            return wb
           }))
-        }, this.layouts.set(Kd, hd));
-        const vd = Fd.map((dd => dd.base));
+        }, this.layouts.set(gb, lb));
+        const Lb = Hb.map((bb => bb.base));
         return {
-          program: md,
-          sources: Xd,
-          layout: hd,
-          slotData: Fd.map((dd => dd.data)),
-          idd: vd,
+          program: Mb,
+          sources: Vb,
+          layout: lb,
+          slotData: Hb.map((bb => bb.data)),
+          Qbb: Lb,
           buffers: [],
-          offsets: vd,
+          offsets: Lb,
           ends: [],
           state: null,
           pipelineKey: "",
@@ -2664,39 +2664,39 @@ export const modules = {
       }
     }
 
-    function xR(dd, Od, md, Wd) {
-      const Fd = Od.program.program.attributes;
-      for (let Rd = 0; Rd < Fd.length; Rd++) {
-        if ((Fd[Rd].optional ? null : md.vertexInput(dd, Fd[Rd].name, Wd)) !== Od.sources[Rd]) return !1
+    function Kp(bb, wb, Mb, eb) {
+      const Hb = wb.program.program.attributes;
+      for (let pb = 0; pb < Hb.length; pb++) {
+        if ((Hb[pb].optional ? null : Mb.vertexInput(bb, Hb[pb].name, eb)) !== wb.sources[pb]) return !1
       }
       return !0
     }
-    const BR = 64;
-    class SR {
-      constructor(dd, Od, md, Wd) {
-        this.device = dd, this.layout = Od, this.frameBuffer = md, this.label = Wd, this.data = new Float32Array(4096), this.buffer = void 0, this.bindGroup = void 0, this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup()
+    const rp = 64;
+    class Rp {
+      constructor(bb, wb, Mb, eb) {
+        this.device = bb, this.layout = wb, this.frameBuffer = Mb, this.label = eb, this.data = new Float32Array(4096), this.buffer = void 0, this.bindGroup = void 0, this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup()
       }
-      ensure(dd) {
-        if (dd * BR <= this.data.length) return !1;
-        let Od = 2 * this.data.length;
-        for (; dd * BR > Od;) Od *= 2;
-        const md = new Float32Array(Od);
-        return md.set(this.data), this.data = md, this.buffer.destroy(), this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup(), !0
+      ensure(bb) {
+        if (bb * rp <= this.data.length) return !1;
+        let wb = 2 * this.data.length;
+        for (; bb * rp > wb;) wb *= 2;
+        const Mb = new Float32Array(wb);
+        return Mb.set(this.data), this.data = Mb, this.buffer.destroy(), this.buffer = this.createBuffer(), this.bindGroup = this.createBindGroup(), !0
       }
-      write(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        const Fd = this.data,
-          Rd = dd * BR;
-        let Xd = Fd[Rd + 16] !== md;
-        for (let Kd = 0; Kd < 16 && !Xd; Kd++) Xd = Fd[Rd + Kd] !== Od[Wd + Kd];
-        if (Xd) {
-          for (let dd = 0; dd < 16; dd++) Fd[Rd + dd] = Od[Wd + dd];
-          Fd[Rd + 16] = md
+      write(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        const Hb = this.data,
+          pb = bb * rp;
+        let Vb = Hb[pb + 16] !== Mb;
+        for (let gb = 0; gb < 16 && !Vb; gb++) Vb = Hb[pb + gb] !== wb[eb + gb];
+        if (Vb) {
+          for (let bb = 0; bb < 16; bb++) Hb[pb + bb] = wb[eb + bb];
+          Hb[pb + 16] = Mb
         }
-        return Xd
+        return Vb
       }
-      upload(dd, Od) {
-        this.device.queue.writeBuffer(this.buffer, dd * oF, this.data, dd * BR, (Od - dd) * BR)
+      upload(bb, wb) {
+        this.device.queue.writeBuffer(this.buffer, bb * IH, this.data, bb * rp, (wb - bb) * rp)
       }
       createBuffer() {
         return this.device.createBuffer({
@@ -2725,124 +2725,124 @@ export const modules = {
       }
     }
 
-    function sR(dd) {
-      return dd.gpu[Bd.c.lite] ??= dd.materials.map(((Od, md) => ({
-        parts: dd,
-        range: md,
-        owner: dd.owner
+    function Dp(bb) {
+      return bb.gpu[Rb.g.lite] ??= bb.materials.map(((wb, Mb) => ({
+        parts: bb,
+        range: Mb,
+        owner: bb.owner
       })))
     }
 
-    function uR(dd) {
-      var Od, md, Wd;
-      return null !== (Od = null !== (md = null === (Wd = dd.parts.materials[dd.range]) || void 0 === Wd ? void 0 : Wd.mirror) && void 0 !== md ? md : dd.owner.material) && void 0 !== Od ? Od : null
+    function cp(bb) {
+      var wb, Mb, eb;
+      return null !== (wb = null !== (Mb = null === (eb = bb.parts.materials[bb.range]) || void 0 === eb ? void 0 : eb.mirror) && void 0 !== Mb ? Mb : bb.owner.material) && void 0 !== wb ? wb : null
     }
-    const VR = ["opaque", "alphaTest", "transparent", "text"];
+    const Yp = ["opaque", "alphaTest", "transparent", "text"];
 
-    function iR(dd) {
-      for (const Od of VR) dd[Od].units.length = 0, dd[Od].rows.length = 0
+    function Zp(bb) {
+      for (const wb of Yp) bb[wb].units.length = 0, bb[wb].rows.length = 0
     }
-    class AR {
+    class fp {
       constructor() {
-        this.selectedCount = 0, this.model = null, this.mirror = null, this.groups = new Map, this.batches = new WeakMap, this.rows = new Int32Array(0), this.frame = 0, this.warnOnce = (0, iO.b)("Lite: ")
+        this.selectedCount = 0, this.model = null, this.mirror = null, this.groups = new Map, this.batches = new WeakMap, this.rows = new Int32Array(0), this.frame = 0, this.warnOnce = (0, fw.d)("Lite: ")
       }
-      attach(dd, Od) {
-        this.model = dd, this.mirror = Od
+      attach(bb, wb) {
+        this.model = bb, this.mirror = wb
       }
       get worlds() {
-        return this.model.nodes.Bt
+        return this.model.nodes.XO
       }
       get visibility() {
         return this.model.meshes.visibility
       }
-      group(dd) {
-        return this.groups.get(dd)
+      group(bb) {
+        return this.groups.get(bb)
       }
-      forEachGroup(dd) {
-        this.groups.forEach(dd)
+      forEachGroup(bb) {
+        this.groups.forEach(bb)
       }
-      forEachSelected(dd) {
-        for (const [Od, md] of this.groups)
-          for (const Wd of VR)
-            for (const Fd of md[Wd].units) dd(Fd.owner, "text" === Wd ? "transparent" : Wd, Od)
+      forEachSelected(bb) {
+        for (const [wb, Mb] of this.groups)
+          for (const eb of Yp)
+            for (const Hb of Mb[eb].units) bb(Hb.owner, "text" === eb ? "transparent" : eb, wb)
       }
-      select(dd, Od) {
-        this.frame++, this.selectedCount = 0, this.groups.forEach(iR);
+      select(bb, wb) {
+        this.frame++, this.selectedCount = 0, this.groups.forEach(Zp);
         const {
-          model: md,
-          mirror: Wd
+          model: Mb,
+          mirror: eb
         } = this;
-        if (!md || !Wd || !dd) return;
-        this.rows.length < md.nodes.Mt && (this.rows = new Int32Array(md.nodes.Mt));
-        const Fd = this.rows,
-          Rd = md.meshes;
-        for (let Kd = 0; Kd < Rd.looseCount; Kd++) {
-          const dd = Rd.loose[Kd],
-            md = Wd.nodes[dd];
-          md && !md.isBlocked && md.isEnabled() && !md.Tt.hasAZeroComponent && Rd.selects(dd, Od.frustum) && (this.activate(md, dd), this.selectedCount++)
+        if (!Mb || !eb || !bb) return;
+        this.rows.length < Mb.nodes.qO && (this.rows = new Int32Array(Mb.nodes.qO));
+        const Hb = this.rows,
+          pb = Mb.meshes;
+        for (let gb = 0; gb < pb.looseCount; gb++) {
+          const bb = pb.loose[gb],
+            Mb = eb.nodes[bb];
+          Mb && !Mb.isBlocked && Mb.isEnabled() && !Mb.CO.hasAZeroComponent && pb.selects(bb, wb.frustum) && (this.activate(Mb, bb), this.selectedCount++)
         }
-        const Xd = Rd.selectTextPlanes(Od.frustum, Fd);
-        for (let Kd = 0; Kd < Xd; Kd++) {
-          const Od = Fd[Kd],
-            Rd = Wd.nodes[Od],
-            Xd = md.meshes.parts[Od];
-          if (!Rd.isVisible || !(Rd.visibility > 0) || 0 === (Rd.layerMask & dd.layerMask) || !Xd) continue;
-          const hd = this.groupOf(md.meshes.layer[Od]).text;
-          for (const dd of sR(Xd)) hd.units.push(dd), hd.rows.push(Od);
+        const Vb = pb.selectTextPlanes(wb.frustum, Hb);
+        for (let gb = 0; gb < Vb; gb++) {
+          const wb = Hb[gb],
+            pb = eb.nodes[wb],
+            Vb = Mb.meshes.parts[wb];
+          if (!pb.isVisible || !(pb.visibility > 0) || 0 === (pb.layerMask & bb.layerMask) || !Vb) continue;
+          const lb = this.groupOf(Mb.meshes.layer[wb]).text;
+          for (const bb of Dp(Vb)) lb.units.push(bb), lb.rows.push(wb);
           this.selectedCount++
         }
       }
-      instanceBatch(dd) {
-        const Od = this.batchOf(dd);
-        return Od.dispatched || (Od.dispatched = Od.renderSelf = !0, Od.row = this.rowOf(dd)), Od
+      instanceBatch(bb) {
+        const wb = this.batchOf(bb);
+        return wb.dispatched || (wb.dispatched = wb.renderSelf = !0, wb.row = this.rowOf(bb)), wb
       }
-      rowOf(dd) {
-        return dd.row
+      rowOf(bb) {
+        return bb.row
       }
-      activate(dd, Od) {
-        if (!dd.lV) {
-          const md = dd;
-          if (md.CRd) {
-            const dd = this.batchOf(md);
-            dd.dispatched = !0, dd.renderSelf = !0, dd.row = Od
+      activate(bb, wb) {
+        if (!bb.QJ) {
+          const Mb = bb;
+          if (Mb.ypb) {
+            const bb = this.batchOf(Mb);
+            bb.dispatched = !0, bb.renderSelf = !0, bb.row = wb
           }
-          return void this.dispatch(md, Od, Od)
+          return void this.dispatch(Mb, wb, wb)
         }
-        const md = dd,
-          Wd = md.ZRd;
-        if (Wd._getWorldMatrixDeterminant() >= 0 !== md._getWorldMatrixDeterminant() >= 0) return void this.warnOnce(`mirrored:${Wd.name}`, `A mirrored InstancedMesh of ${Wd.name} is not drawn yet`);
-        const Fd = this.batchOf(Wd);
-        Fd.instances.push(md), Fd.rows.push(Od), Fd.dispatched || (Fd.dispatched = !0, this.dispatch(Wd, Od, this.rowOf(Wd)))
+        const Mb = bb,
+          eb = Mb.opb;
+        if (eb._getWorldMatrixDeterminant() >= 0 !== Mb._getWorldMatrixDeterminant() >= 0) return void this.warnOnce(`mirrored:${eb.name}`, `A mirrored InstancedMesh of ${eb.name} is not drawn yet`);
+        const Hb = this.batchOf(eb);
+        Hb.instances.push(Mb), Hb.rows.push(wb), Hb.dispatched || (Hb.dispatched = !0, this.dispatch(eb, wb, this.rowOf(eb)))
       }
-      batchOf(dd) {
-        let Od = this.batches.get(dd);
-        return Od || (Od = {
+      batchOf(bb) {
+        let wb = this.batches.get(bb);
+        return wb || (wb = {
           frame: 0,
           dispatched: !1,
           renderSelf: !1,
           row: -1,
           instances: [],
           rows: []
-        }, this.batches.set(dd, Od)), Od.frame !== this.frame && (Od.frame = this.frame, Od.dispatched = !1, Od.renderSelf = !1, Od.instances.length = 0, Od.rows.length = 0), Od
+        }, this.batches.set(bb, wb)), wb.frame !== this.frame && (wb.frame = this.frame, wb.dispatched = !1, wb.renderSelf = !1, wb.instances.length = 0, wb.rows.length = 0), wb
       }
-      dispatch(dd, Od, md) {
+      dispatch(bb, wb, Mb) {
         const {
-          layer: Wd,
-          parts: Fd
+          layer: eb,
+          parts: Hb
         } = this.model.meshes;
-        if (!Fd[Od]) return;
-        const Rd = this.groupOf(Wd[Od]),
-          Xd = dd;
-        for (const Kd of sR(Fd[Od])) {
-          const dd = uR(Kd);
-          if (!dd) continue;
-          const Od = dd.needAlphaBlendingForMesh(Xd) ? Rd.transparent : dd.needAlphaTestingForMesh(Xd) ? Rd.alphaTest : Rd.opaque;
-          Od.units.push(Kd), Od.rows.push(md)
+        if (!Hb[wb]) return;
+        const pb = this.groupOf(eb[wb]),
+          Vb = bb;
+        for (const gb of Dp(Hb[wb])) {
+          const bb = cp(gb);
+          if (!bb) continue;
+          const wb = bb.needAlphaBlendingForMesh(Vb) ? pb.transparent : bb.needAlphaTestingForMesh(Vb) ? pb.alphaTest : pb.opaque;
+          wb.units.push(gb), wb.rows.push(Mb)
         }
       }
-      groupOf(dd) {
-        let Od = this.groups.get(dd);
-        return Od || (Od = {
+      groupOf(bb) {
+        let wb = this.groups.get(bb);
+        return wb || (wb = {
           opaque: {
             units: [],
             rows: []
@@ -2859,225 +2859,225 @@ export const modules = {
             units: [],
             rows: []
           }
-        }, this.groups.set(dd, Od)), Od
+        }, this.groups.set(bb, wb)), wb
       }
     }
 
-    function rR(dd) {
-      dd.opaque.length = 0, dd.transparent.length = 0
+    function Ap(bb) {
+      bb.opaque.length = 0, bb.transparent.length = 0
     }
-    class GR {
+    class Wp {
       constructor() {
-        this.jK = new Map, this.enabled = [], this.groups = new Map, this.kQ = [], this.warned = new Set, this.selected = 0, this.drawn = 0
+        this.dg = new Map, this.enabled = [], this.groups = new Map, this.nI = [], this.warned = new Set, this.selected = 0, this.drawn = 0
       }
-      add(dd) {
-        if (this.jK.has(dd)) return;
-        const Od = {
-          mesh: dd,
-          observer: dd.onEffectiveEnabledStateChangedObservable.add((dd => {
-            this.rY(Od, dd)
+      add(bb) {
+        if (this.dg.has(bb)) return;
+        const wb = {
+          mesh: bb,
+          observer: bb.onEffectiveEnabledStateChangedObservable.add((bb => {
+            this.Bx(wb, bb)
           })),
           index: -1,
           steady: null
         };
-        this.jK.set(dd, Od), this.rY(Od, dd.isEnabled())
+        this.dg.set(bb, wb), this.Bx(wb, bb.isEnabled())
       }
-      remove(dd) {
-        const Od = this.jK.get(dd);
-        Od && (Od.observer.remove(!0), this.rY(Od, !1), this.jK.delete(dd))
+      remove(bb) {
+        const wb = this.dg.get(bb);
+        wb && (wb.observer.remove(!0), this.Bx(wb, !1), this.dg.delete(bb))
       }
       dropSteady() {
-        for (const dd of this.jK.values()) dd.steady = null
+        for (const bb of this.dg.values()) bb.steady = null
       }
-      base(dd) {
-        return this.jK.get(dd)
+      base(bb) {
+        return this.dg.get(bb)
       }
       drawStats() {
         return {
           drawn: this.drawn,
           selected: this.selected,
-          jK: this.jK.size
+          dg: this.dg.size
         }
       }
-      forEachSelected(dd) {
-        for (const [Od, md] of this.groups) {
-          for (const Wd of md.opaque) dd(Wd.owner, "opaque", Od);
-          for (const Wd of md.transparent) dd(Wd.owner, "transparent", Od)
+      forEachSelected(bb) {
+        for (const [wb, Mb] of this.groups) {
+          for (const eb of Mb.opaque) bb(eb.owner, "opaque", wb);
+          for (const eb of Mb.transparent) bb(eb.owner, "transparent", wb)
         }
-        for (const Od of this.kQ) dd(Od.mesh, "opaque", 0)
+        for (const wb of this.nI) bb(wb.mesh, "opaque", 0)
       }
-      group(dd) {
-        return this.groups.get(dd)
+      group(bb) {
+        return this.groups.get(bb)
       }
-      forEachGroup(dd) {
-        this.groups.forEach(dd)
+      forEachGroup(bb) {
+        this.groups.forEach(bb)
       }
-      select(dd, Od) {
-        if (this.drawn = 0, this.selected = 0, this.kQ.length = 0, this.groups.forEach(rR), !dd) return;
-        const md = this.enabled;
-        for (let Wd = 0; Wd < md.length; Wd++) {
-          const Fd = md[Wd];
-          if (Fd.steady && Od(Fd, dd)) {
-            this.selected++, this.kQ.push(Fd);
+      select(bb, wb) {
+        if (this.drawn = 0, this.selected = 0, this.nI.length = 0, this.groups.forEach(Ap), !bb) return;
+        const Mb = this.enabled;
+        for (let eb = 0; eb < Mb.length; eb++) {
+          const Hb = Mb[eb];
+          if (Hb.steady && wb(Hb, bb)) {
+            this.selected++, this.nI.push(Hb);
             continue
           }
-          const Rd = Fd.mesh;
-          if (Rd.isBlocked || Rd.Tt.hasAZeroComponent) continue;
-          if (!Rd.isVisible || Rd.visibility <= 0 || 0 === (Rd.layerMask & dd.layerMask)) continue;
-          if (Rd.CRd) {
-            this.warned.has(Rd.name) || (this.warned.add(Rd.name), console.warn(`Lite: thin instance base ${Rd.name} has InstancedMeshes and is not drawn`));
+          const pb = Hb.mesh;
+          if (pb.isBlocked || pb.CO.hasAZeroComponent) continue;
+          if (!pb.isVisible || pb.visibility <= 0 || 0 === (pb.layerMask & bb.layerMask)) continue;
+          if (pb.ypb) {
+            this.warned.has(pb.name) || (this.warned.add(pb.name), console.warn(`Lite: thin instance base ${pb.name} has InstancedMeshes and is not drawn`));
             continue
           }
           const {
-            parts: Xd
-          } = Rd;
-          if (!Xd) continue;
-          Rd.computeWorldMatrix(), this.selected++;
-          const Kd = this.listsFor(Rd.renderingGroupId);
-          for (const dd of sR(Xd)) {
-            const Od = uR(dd);
-            Od && (Od.needAlphaBlendingForMesh(Rd) ? Kd.transparent.push(dd) : Kd.opaque.push(dd))
+            parts: Vb
+          } = pb;
+          if (!Vb) continue;
+          pb.computeWorldMatrix(), this.selected++;
+          const gb = this.listsFor(pb.renderingGroupId);
+          for (const bb of Dp(Vb)) {
+            const wb = cp(bb);
+            wb && (wb.needAlphaBlendingForMesh(pb) ? gb.transparent.push(bb) : gb.opaque.push(bb))
           }
         }
       }
-      rY(dd, Od) {
-        if (Od === dd.index >= 0) return;
-        dd.steady = null;
-        const md = this.enabled;
-        if (Od) dd.index = md.length, md.push(dd);
+      Bx(bb, wb) {
+        if (wb === bb.index >= 0) return;
+        bb.steady = null;
+        const Mb = this.enabled;
+        if (wb) bb.index = Mb.length, Mb.push(bb);
         else {
-          const Od = md.pop();
-          Od !== dd && (md[dd.index] = Od, Od.index = dd.index), dd.index = -1
+          const wb = Mb.pop();
+          wb !== bb && (Mb[bb.index] = wb, wb.index = bb.index), bb.index = -1
         }
       }
-      listsFor(dd) {
-        let Od = this.groups.get(dd);
-        return Od || (Od = {
+      listsFor(bb) {
+        let wb = this.groups.get(bb);
+        return wb || (wb = {
           opaque: [],
           transparent: []
-        }, this.groups.set(dd, Od)), Od
+        }, this.groups.set(bb, wb)), wb
       }
     }
-    var nR = md(41288);
-    class LR {
+    var Jp = Mb(41057);
+    class Sp {
       constructor() {
-        this.bundle = null, this.stale = !0, this.jK = new Set
+        this.bundle = null, this.stale = !0, this.dg = new Set
       }
     }
-    class PR {
-      constructor(dd, Od, md) {
-        this.device = dd, this.slots = Od, this.host = md, this.records = new Map, this.freeSlots = [], this.slotCount = 0, this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1, this.args = new Uint32Array(320), this.argsBuffer = void 0, this.argsDirty = !1, this.main = new LR, this.bS = new LR, this.rangedEpoch = -1, this.bundles = [], this.recordedTarget = "", this.recordedSceneGroup = null, this.binder = new OR, this.frame = 0, this.drawn = 0, this.direct = void 0, this.directThisFrame = !1, this.endRecordFrame = dd => {
-          dd.seen !== this.frame && (dd.draw && (dd.draw = null, this.args[5 * dd.slot + 1] = 0, this.argsDirty = !0, this.bS.stale ||= dd.bS), this.frame - dd.seen > 120 && (this.records.delete(dd.unit), this.freeSlots.push(dd.slot), dd.recorded && (this.bundleOf(dd).stale = !0)))
-        }, this.argsBuffer = this.createArgsBuffer(), this.direct = function(dd) {
-          var Od, md;
-          let Wd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (Od = null === (md = globalThis.navigator) || void 0 === md ? void 0 : md.userAgent) && void 0 !== Od ? Od : "";
-          const Fd = dd.adapterInfo;
-          return "intel" === (null === Fd || void 0 === Fd ? void 0 : Fd.vendor) && "gen-12lp" === Fd.architecture && Wd.includes("Windows")
-        }(dd), (0, nR.G)(this.direct)
+    class Np {
+      constructor(bb, wb, Mb) {
+        this.device = bb, this.slots = wb, this.host = Mb, this.records = new Map, this.freeSlots = [], this.slotCount = 0, this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1, this.args = new Uint32Array(320), this.argsBuffer = void 0, this.argsDirty = !1, this.main = new Sp, this.zW = new Sp, this.rangedEpoch = -1, this.bundles = [], this.recordedTarget = "", this.recordedSceneGroup = null, this.binder = new kH, this.frame = 0, this.drawn = 0, this.direct = void 0, this.directThisFrame = !1, this.endRecordFrame = bb => {
+          bb.seen !== this.frame && (bb.draw && (bb.draw = null, this.args[5 * bb.slot + 1] = 0, this.argsDirty = !0, this.zW.stale ||= bb.zW), this.frame - bb.seen > 120 && (this.records.delete(bb.unit), this.freeSlots.push(bb.slot), bb.recorded && (this.bundleOf(bb).stale = !0)))
+        }, this.argsBuffer = this.createArgsBuffer(), this.direct = function(bb) {
+          var wb, Mb;
+          let eb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null !== (wb = null === (Mb = globalThis.navigator) || void 0 === Mb ? void 0 : Mb.userAgent) && void 0 !== wb ? wb : "";
+          const Hb = bb.adapterInfo;
+          return "intel" === (null === Hb || void 0 === Hb ? void 0 : Hb.vendor) && "gen-12lp" === Hb.architecture && eb.includes("Windows")
+        }(bb), (0, Jp.N)(this.direct)
       }
-      pE() {
-        this.frame++, this.drawn = 0, this.directThisFrame = this.direct, (0, nR.G)(this.directThisFrame)
+      jR() {
+        this.frame++, this.drawn = 0, this.directThisFrame = this.direct, (0, Jp.N)(this.directThisFrame)
       }
-      add(dd, Od, md, Wd) {
-        let Fd = this.records.get(dd);
-        return Fd || (Fd = this.createRecord(dd), this.records.set(dd, Fd)), Fd.recorded && cR(Fd, Od) || (this.bundleOf(Fd).stale = !0), this.place(Fd, Od, md, Wd), Fd
+      add(bb, wb, Mb, eb) {
+        let Hb = this.records.get(bb);
+        return Hb || (Hb = this.createRecord(bb), this.records.set(bb, Hb)), Hb.recorded && Qp(Hb, wb) || (this.bundleOf(Hb).stale = !0), this.place(Hb, wb, Mb, eb), Hb
       }
-      bundleOf(dd) {
-        return dd.bS ? this.bS : this.main
+      bundleOf(bb) {
+        return bb.zW ? this.zW : this.main
       }
-      addAgain(dd, Od, md, Wd) {
-        dd.recorded || (this.bundleOf(dd).stale = !0), this.place(dd, Od, md, Wd)
+      addAgain(bb, wb, Mb, eb) {
+        bb.recorded || (this.bundleOf(bb).stale = !0), this.place(bb, wb, Mb, eb)
       }
-      place(dd, Od, md, Wd) {
-        dd.seen = this.frame, dd.bS && null === dd.draw && (this.bS.stale = !0), dd.draw = Od, this.drawn++, md && this.slots.write(dd.slot, md, Wd) && (this.slotsFrom = Math.min(this.slotsFrom, dd.slot), this.slotsTo = Math.max(this.slotsTo, dd.slot));
-        const Fd = this.args,
-          Rd = 5 * dd.slot;
-        Fd[Rd] === Od.count && Fd[Rd + 1] === Od.instances && Fd[Rd + 2] === Od.first || (Fd[Rd] = Od.count, Fd[Rd + 1] = Od.instances, Fd[Rd + 2] = Od.first, this.argsDirty = !0, this.bS.stale ||= dd.bS)
+      place(bb, wb, Mb, eb) {
+        bb.seen = this.frame, bb.zW && null === bb.draw && (this.zW.stale = !0), bb.draw = wb, this.drawn++, Mb && this.slots.write(bb.slot, Mb, eb) && (this.slotsFrom = Math.min(this.slotsFrom, bb.slot), this.slotsTo = Math.max(this.slotsTo, bb.slot));
+        const Hb = this.args,
+          pb = 5 * bb.slot;
+        Hb[pb] === wb.count && Hb[pb + 1] === wb.instances && Hb[pb + 2] === wb.first || (Hb[pb] = wb.count, Hb[pb + 1] = wb.instances, Hb[pb + 2] = wb.first, this.argsDirty = !0, this.zW.stale ||= bb.zW)
       }
-      bt() {
+      tO() {
         this.records.forEach(this.endRecordFrame), this.argsDirty && !this.directThisFrame && (this.device.queue.writeBuffer(this.argsBuffer, 0, this.args, 0, 5 * this.slotCount), this.argsDirty = !1), this.slotsTo >= 0 && (this.slots.upload(this.slotsFrom, this.slotsTo + 1), this.slotsFrom = Number.POSITIVE_INFINITY, this.slotsTo = -1)
       }
-      forEachDrawn(dd) {
-        for (const Od of this.records.values()) Od.draw && Od.seen === this.frame && !Od.bS && dd(Od.draw, this.slots.data, Od.slot * oF / 4)
+      forEachDrawn(bb) {
+        for (const wb of this.records.values()) wb.draw && wb.seen === this.frame && !wb.zW && bb(wb.draw, this.slots.data, wb.slot * IH / 4)
       }
-      resourceDestroyed(dd) {
-        this.main.stale ||= this.main.jK.has(dd), this.bS.stale ||= this.bS.jK.has(dd)
+      resourceDestroyed(bb) {
+        this.main.stale ||= this.main.dg.has(bb), this.zW.stale ||= this.zW.dg.has(bb)
       }
-      execute(dd, Od, md) {
+      execute(bb, wb, Mb) {
         if (0 === this.drawn) return 0;
-        if (this.directThisFrame) return this.encode(dd, Od, md, "direct"), this.drawn;
-        const Wd = this.host.sceneGroup(Od);
-        if (!Wd) return this.main.bundle = null, this.bS.bundle = null, this.recordedSceneGroup = null, this.encode(dd, Od, md, "direct"), this.drawn;
-        this.recordedTarget === md && this.recordedSceneGroup === Wd || (this.recordedTarget = md, this.recordedSceneGroup = Wd, this.main.stale = !0, this.bS.stale = !0);
-        const Fd = this.main,
-          Rd = this.bS;
-        let Xd = !1;
-        !Fd.stale && Fd.bundle || (Fd.bundle = this.record(Od, md, Wd, "indirect"), Xd = !0);
-        const Kd = (0, nR.k)();
-        return (Rd.stale || this.rangedEpoch !== Kd) && (this.rangedEpoch = Kd, Rd.bundle = this.drawsRanged() ? this.record(Od, md, Wd, "bS") : this.noRangedBundle(), Xd = !0), Xd && (this.bundles = Rd.bundle ? [Fd.bundle, Rd.bundle] : [Fd.bundle]), dd.executeBundles(this.bundles), dd.setBindGroup(0, Wd), this.drawn
+        if (this.directThisFrame) return this.encode(bb, wb, Mb, "direct"), this.drawn;
+        const eb = this.host.sceneGroup(wb);
+        if (!eb) return this.main.bundle = null, this.zW.bundle = null, this.recordedSceneGroup = null, this.encode(bb, wb, Mb, "direct"), this.drawn;
+        this.recordedTarget === Mb && this.recordedSceneGroup === eb || (this.recordedTarget = Mb, this.recordedSceneGroup = eb, this.main.stale = !0, this.zW.stale = !0);
+        const Hb = this.main,
+          pb = this.zW;
+        let Vb = !1;
+        !Hb.stale && Hb.bundle || (Hb.bundle = this.record(wb, Mb, eb, "indirect"), Vb = !0);
+        const gb = (0, Jp.m)();
+        return (pb.stale || this.rangedEpoch !== gb) && (this.rangedEpoch = gb, pb.bundle = this.drawsRanged() ? this.record(wb, Mb, eb, "zW") : this.noRangedBundle(), Vb = !0), Vb && (this.bundles = pb.bundle ? [Hb.bundle, pb.bundle] : [Hb.bundle]), bb.executeBundles(this.bundles), bb.setBindGroup(0, eb), this.drawn
       }
-      record(dd, Od, md, Wd) {
-        const Fd = this.device.createRenderBundleEncoder({
-          label: "bS" === Wd ? "thin-bases-ranged" : "thin-bases",
-          colorFormats: dd._colorFormat ? [dd._colorFormat] : [],
-          depthStencilFormat: dd._depthStencilFormat,
-          sampleCount: dd._sampleCount
+      record(bb, wb, Mb, eb) {
+        const Hb = this.device.createRenderBundleEncoder({
+          label: "zW" === eb ? "thin-bases-ranged" : "thin-bases",
+          colorFormats: bb._colorFormat ? [bb._colorFormat] : [],
+          depthStencilFormat: bb._depthStencilFormat,
+          sampleCount: bb._sampleCount
         });
-        return Fd.setBindGroup(0, md), this.encode(Fd, dd, Od, Wd), Fd.finish()
+        return Hb.setBindGroup(0, Mb), this.encode(Hb, bb, wb, eb), Hb.finish()
       }
       noRangedBundle() {
-        for (const dd of this.records.values()) dd.bS && (dd.recorded = !1);
-        return this.bS.jK.clear(), this.bS.stale = !1, null
+        for (const bb of this.records.values()) bb.zW && (bb.recorded = !1);
+        return this.zW.dg.clear(), this.zW.stale = !1, null
       }
       drawsRanged() {
-        for (const dd of this.records.values())
-          if (dd.bS && dd.draw) return !0;
+        for (const bb of this.records.values())
+          if (bb.zW && bb.draw) return !0;
         return !1
       }
-      encode(dd, Od, md, Wd) {
-        const Fd = [];
-        for (const hd of this.records.values()) "direct" !== Wd && hd.bS !== ("bS" === Wd) || (hd.recorded = !1, hd.draw && Fd.push(hd));
-        Fd.sort(jR);
-        const Rd = "direct" === Wd ? null : "bS" === Wd ? this.bS : this.main;
-        null === Rd || void 0 === Rd || Rd.jK.clear(), this.binder.reset();
-        let Xd = !1;
-        for (const hd of Fd) {
-          var Kd;
-          const Fd = hd.draw,
-            vd = this.host.pipelineFor(Fd, Od, md);
-          if (!vd) {
-            this.host.pipelineCompiling(Fd, md) ? Xd = !0 : Rd && this.keep(hd, Fd, Rd.jK);
+      encode(bb, wb, Mb, eb) {
+        const Hb = [];
+        for (const lb of this.records.values()) "direct" !== eb && lb.zW !== ("zW" === eb) || (lb.recorded = !1, lb.draw && Hb.push(lb));
+        Hb.sort(Gp);
+        const pb = "direct" === eb ? null : "zW" === eb ? this.zW : this.main;
+        null === pb || void 0 === pb || pb.dg.clear(), this.binder.reset();
+        let Vb = !1;
+        for (const lb of Hb) {
+          var gb;
+          const Hb = lb.draw,
+            Lb = this.host.pipelineFor(Hb, wb, Mb);
+          if (!Lb) {
+            this.host.pipelineCompiling(Hb, Mb) ? Vb = !0 : pb && this.keep(lb, Hb, pb.dg);
             continue
           }
-          let Qd;
-          if (hd.bS && "indirect" !== Wd) {
-            const dd = hd.unit.owner;
-            Qd = "direct" === Wd && (0, nR.u)(dd) || (0, nR.n)(dd) || void 0
+          let Ib;
+          if (lb.zW && "indirect" !== eb) {
+            const bb = lb.unit.owner;
+            Ib = "direct" === eb && (0, Jp.y)(bb) || (0, Jp.p)(bb) || void 0
           }
-          if (Rd && this.keep(hd, Fd, Rd.jK), 0 === (null === (Kd = Qd) || void 0 === Kd ? void 0 : Kd.count)) continue;
-          this.binder.bind(dd, Fd, vd, this.slots.bindGroup, hd.slot * oF);
-          const td = 5 * hd.slot;
-          if ("indirect" === Wd) {
-            Fd.indexBuffer ? dd.drawIndexedIndirect(this.argsBuffer, 4 * td) : dd.drawIndirect(this.argsBuffer, 4 * td);
+          if (pb && this.keep(lb, Hb, pb.dg), 0 === (null === (gb = Ib) || void 0 === gb ? void 0 : gb.count)) continue;
+          this.binder.bind(bb, Hb, Lb, this.slots.bindGroup, lb.slot * IH);
+          const Ob = 5 * lb.slot;
+          if ("indirect" === eb) {
+            Hb.indexBuffer ? bb.drawIndexedIndirect(this.argsBuffer, 4 * Ob) : bb.drawIndirect(this.argsBuffer, 4 * Ob);
             continue
           }
-          const od = this.args;
-          Qd ? zR(dd, null !== Fd.indexBuffer, od, td, Qd) : Fd.indexBuffer ? dd.drawIndexed(od[td], od[td + 1], od[td + 2], 0, 0) : dd.draw(od[td], od[td + 1], od[td + 2], 0)
+          const Ub = this.args;
+          Ib ? vp(bb, null !== Hb.indexBuffer, Ub, Ob, Ib) : Hb.indexBuffer ? bb.drawIndexed(Ub[Ob], Ub[Ob + 1], Ub[Ob + 2], 0, 0) : bb.draw(Ub[Ob], Ub[Ob + 1], Ub[Ob + 2], 0)
         }
-        Rd && (Rd.stale = Xd)
+        pb && (pb.stale = Vb)
       }
-      keep(dd, Od, md) {
-        dd.recorded = !0, dd.pipelineKey = Od.pipelineKey, dd.materialGroup = Od.material.bindGroup, dd.vertexBuffers.length = 0, dd.vertexBuffers.push(...Od.vertexBuffers), dd.vertexOffsets = Od.vertexOffsets, dd.indexBuffer = Od.indexBuffer, dd.indexFormat = Od.indexFormat;
-        for (const Wd of Od.vertexBuffers) md.add(Wd);
-        Od.indexBuffer && md.add(Od.indexBuffer), md.add(Od.material.buffer);
-        for (const Wd of Od.material.bound) Wd && md.add(Wd)
+      keep(bb, wb, Mb) {
+        bb.recorded = !0, bb.pipelineKey = wb.pipelineKey, bb.materialGroup = wb.material.bindGroup, bb.vertexBuffers.length = 0, bb.vertexBuffers.push(...wb.vertexBuffers), bb.vertexOffsets = wb.vertexOffsets, bb.indexBuffer = wb.indexBuffer, bb.indexFormat = wb.indexFormat;
+        for (const eb of wb.vertexBuffers) Mb.add(eb);
+        wb.indexBuffer && Mb.add(wb.indexBuffer), Mb.add(wb.material.buffer);
+        for (const eb of wb.material.bound) eb && Mb.add(eb)
       }
-      createRecord(dd) {
-        let Od = this.freeSlots.pop();
-        return void 0 === Od && (Od = this.slotCount++, this.grow()), {
-          unit: dd,
-          slot: Od,
-          bS: void 0 !== (0, nR.n)(dd.owner),
+      createRecord(bb) {
+        let wb = this.freeSlots.pop();
+        return void 0 === wb && (wb = this.slotCount++, this.grow()), {
+          unit: bb,
+          slot: wb,
+          zW: void 0 !== (0, Jp.p)(bb.owner),
           seen: -1,
           draw: null,
           recorded: !1,
@@ -3090,9 +3090,9 @@ export const modules = {
         }
       }
       grow() {
-        if (this.slots.ensure(this.slotCount) && (this.slotsFrom = 0, this.slotsTo = this.slotCount - 1, this.main.stale = !0, this.bS.stale = !0), 5 * this.slotCount > this.args.length) {
-          const dd = new Uint32Array(2 * this.args.length);
-          dd.set(this.args), this.args = dd, this.argsBuffer.destroy(), this.argsBuffer = this.createArgsBuffer(), this.argsDirty = !0, this.main.stale = !0
+        if (this.slots.ensure(this.slotCount) && (this.slotsFrom = 0, this.slotsTo = this.slotCount - 1, this.main.stale = !0, this.zW.stale = !0), 5 * this.slotCount > this.args.length) {
+          const bb = new Uint32Array(2 * this.args.length);
+          bb.set(this.args), this.args = bb, this.argsBuffer.destroy(), this.argsBuffer = this.createArgsBuffer(), this.argsDirty = !0, this.main.stale = !0
         }
       }
       createArgsBuffer() {
@@ -3104,564 +3104,564 @@ export const modules = {
       }
     }
 
-    function zR(dd, Od, md, Wd, Fd) {
-      const Rd = md[Wd + 1],
-        Xd = Fd.data;
-      for (let Kd = 0; Kd < Fd.count; Kd++) {
-        const Fd = Math.min(Xd[2 * Kd], Rd),
-          hd = Math.min(Xd[2 * Kd + 1], Rd - Fd);
-        0 !== hd && (Od ? dd.drawIndexed(md[Wd], hd, md[Wd + 2], 0, Fd) : dd.draw(md[Wd], hd, md[Wd + 2], Fd))
+    function vp(bb, wb, Mb, eb, Hb) {
+      const pb = Mb[eb + 1],
+        Vb = Hb.data;
+      for (let gb = 0; gb < Hb.count; gb++) {
+        const Hb = Math.min(Vb[2 * gb], pb),
+          lb = Math.min(Vb[2 * gb + 1], pb - Hb);
+        0 !== lb && (wb ? bb.drawIndexed(Mb[eb], lb, Mb[eb + 2], 0, Hb) : bb.draw(Mb[eb], lb, Mb[eb + 2], Hb))
       }
     }
 
-    function cR(dd, Od) {
-      if (dd.pipelineKey !== Od.pipelineKey || dd.materialGroup !== Od.material.bindGroup || dd.indexBuffer !== Od.indexBuffer || dd.indexFormat !== Od.indexFormat || dd.vertexOffsets !== Od.vertexOffsets || dd.vertexBuffers.length !== Od.vertexBuffers.length) return !1;
-      for (let md = 0; md < dd.vertexBuffers.length; md++)
-        if (dd.vertexBuffers[md] !== Od.vertexBuffers[md]) return !1;
+    function Qp(bb, wb) {
+      if (bb.pipelineKey !== wb.pipelineKey || bb.materialGroup !== wb.material.bindGroup || bb.indexBuffer !== wb.indexBuffer || bb.indexFormat !== wb.indexFormat || bb.vertexOffsets !== wb.vertexOffsets || bb.vertexBuffers.length !== wb.vertexBuffers.length) return !1;
+      for (let Mb = 0; Mb < bb.vertexBuffers.length; Mb++)
+        if (bb.vertexBuffers[Mb] !== wb.vertexBuffers[Mb]) return !1;
       return !0
     }
 
-    function jR(dd, Od) {
-      return WR(dd.draw, Od.draw)
+    function Gp(bb, wb) {
+      return wp(bb.draw, wb.draw)
     }
-    const DR = new WeakMap,
-      eR = {
+    const qp = new WeakMap,
+      ap = {
         depth: !1,
         sunShadow: !1
       };
 
-    function IR(dd, Od) {
-      let md = DR.get(dd);
-      md || (md = new Map, DR.set(dd, md));
-      const Wd = `${Od.depth?"-depth":""}${Od.sunShadow?"-shadow":""}${Od.shadowMask?"-mask":""}`;
-      let Fd = md.get(Wd);
-      if (!Fd) {
-        const Rd = [{
-          binding: fO.c,
+    function ip(bb, wb) {
+      let Mb = qp.get(bb);
+      Mb || (Mb = new Map, qp.set(bb, Mb));
+      const eb = `${wb.depth?"-depth":""}${wb.sunShadow?"-shadow":""}${wb.shadowMask?"-mask":""}`;
+      let Hb = Mb.get(eb);
+      if (!Hb) {
+        const pb = [{
+          binding: ow.c,
           visibility: GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
           buffer: {
             type: "uniform",
-            minBindingSize: fO.i
+            minBindingSize: ow.j
           }
         }, {
-          binding: fO.s,
+          binding: ow.x,
           visibility: GPUShaderStage.VERTEX,
           buffer: {
             type: "read-only-storage"
           }
         }];
-        Od.depth && Rd.push({
-          binding: fO.n,
+        wb.depth && pb.push({
+          binding: ow.r,
           visibility: GPUShaderStage.FRAGMENT,
           texture: {
             sampleType: "unfilterable-float"
           }
-        }), Od.sunShadow && Rd.push(... function() {
-          const dd = GPUShaderStage.FRAGMENT,
-            Od = fO.p;
+        }), wb.sunShadow && pb.push(... function() {
+          const bb = GPUShaderStage.FRAGMENT,
+            wb = ow.u;
           return [{
-            binding: Od.uniform,
-            visibility: dd,
+            binding: wb.uniform,
+            visibility: bb,
             buffer: {
               type: "uniform"
             }
           }, {
-            binding: Od.QN,
-            visibility: dd,
+            binding: wb.GU,
+            visibility: bb,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: Od.special,
-            visibility: dd,
+            binding: wb.special,
+            visibility: bb,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: Od.volume,
-            visibility: dd,
+            binding: wb.volume,
+            visibility: bb,
             texture: {
               sampleType: "float",
               viewDimension: "3d"
             }
           }, {
-            binding: Od.sampler,
-            visibility: dd,
+            binding: wb.sampler,
+            visibility: bb,
             sampler: {
               type: "filtering"
             }
           }, {
-            binding: Od.entities,
-            visibility: dd,
+            binding: wb.entities,
+            visibility: bb,
             buffer: {
               type: "read-only-storage"
             }
           }, {
-            binding: Od.entityGrids,
-            visibility: dd,
+            binding: wb.entityGrids,
+            visibility: bb,
             buffer: {
               type: "read-only-storage"
             }
           }]
-        }()), Od.shadowMask && Rd.push({
-          binding: fO.r,
+        }()), wb.shadowMask && pb.push({
+          binding: ow.v,
           visibility: GPUShaderStage.FRAGMENT,
           texture: {
             sampleType: "unfilterable-float"
           }
-        }), Fd = dd.createBindGroupLayout({
-          label: `${Od.depth?"terrain-":""}shader-pack-inputs${Wd}`,
-          entries: Rd
-        }), md.set(Wd, Fd)
+        }), Hb = bb.createBindGroupLayout({
+          label: `${wb.depth?"terrain-":""}shader-pack-inputs${eb}`,
+          entries: pb
+        }), Mb.set(eb, Hb)
       }
-      return Fd
+      return Hb
     }
 
-    function lR(dd) {
-      return IR(dd, eR)
+    function dp(bb) {
+      return ip(bb, ap)
     }
 
-    function CR(dd, Od) {
-      if (!Od) return !1;
-      const md = (0, MO.g)(dd);
-      return !!md && hW(md, Od)
+    function Pp(bb, wb) {
+      if (!wb) return !1;
+      const Mb = (0, Tw.i)(bb);
+      return !!Mb && Ve(Mb, wb)
     }
 
-    function ZR(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Wd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (!AW(Od)) return [];
-      return [IR(dd, {
-        depth: SW(Od.packVariant),
-        sunShadow: CR(Od.packVariant, md),
-        shadowMask: Wd
+    function np(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        eb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (!fe(wb)) return [];
+      return [ip(bb, {
+        depth: Re(wb.packVariant),
+        sunShadow: Pp(wb.packVariant, Mb),
+        shadowMask: eb
       })]
     }
-    class kR {
-      constructor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.device = dd, this.sunShadow = md, this.bindGroup = void 0, this.buffer = void 0, this.textures = void 0, this.data = new ArrayBuffer(fO.i), this.groups = new Map, this.depthView = null, this.maskView = null, this.buffer = dd.createBuffer({
+    class yp {
+      constructor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.device = bb, this.sunShadow = Mb, this.bindGroup = void 0, this.buffer = void 0, this.textures = void 0, this.data = new ArrayBuffer(ow.j), this.groups = new Map, this.depthView = null, this.maskView = null, this.buffer = bb.createBuffer({
           label: "shader-pack-inputs",
-          size: fO.i,
+          size: ow.j,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         });
-        const Wd = (0, fO.w)(Od);
-        this.textures = dd.createBuffer({
+        const eb = (0, ow.B)(wb);
+        this.textures = bb.createBuffer({
           label: "shader-pack-textures",
-          size: Wd.byteLength,
+          size: eb.byteLength,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), dd.queue.writeBuffer(this.textures, 0, Wd), this.bindGroup = dd.createBindGroup({
+        }), bb.queue.writeBuffer(this.textures, 0, eb), this.bindGroup = bb.createBindGroup({
           label: "shader-pack-inputs",
-          layout: lR(dd),
+          layout: dp(bb),
           entries: this.entries()
         })
       }
       entries() {
         return [{
-          binding: fO.c,
+          binding: ow.c,
           resource: {
             buffer: this.buffer
           }
         }, {
-          binding: fO.s,
+          binding: ow.x,
           resource: {
             buffer: this.textures
           }
         }]
       }
-      write(dd, Od, md) {
-        (0, fO.D)(this.data, {
-          seconds: dd.seconds(),
-          lit: md,
-          renderOffset: dd.renderOffset(),
-          TOd: dd.TOd(),
-          eyePosition: Od,
-          shadowDirection: dd.shadowDirection()
+      write(bb, wb, Mb) {
+        (0, ow.E)(this.data, {
+          seconds: bb.seconds(),
+          lit: Mb,
+          renderOffset: bb.renderOffset(),
+          jwb: bb.jwb(),
+          eyePosition: wb,
+          shadowDirection: bb.shadowDirection()
         }), this.device.queue.writeBuffer(this.buffer, 0, this.data)
       }
-      bindGroupFor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const Wd = Od ? this.sunShadow : null;
-        if ((Od || md) && !Wd) throw new Error("A shader pack program binds sun shadows on a page without them");
-        if (!dd && !Wd) return this.bindGroup;
-        (dd && dd !== this.depthView || md && md !== this.maskView) && (this.depthView = null !== dd && void 0 !== dd ? dd : this.depthView, this.maskView = null !== md && void 0 !== md ? md : this.maskView, this.groups.clear());
-        const Fd = (dd ? 1 : 0) | (Wd ? 2 : 0) | (md ? 4 : 0);
-        let Rd = this.groups.get(Fd);
-        if (!Rd) {
-          const Od = this.entries();
-          dd && Od.push({
-            binding: fO.n,
-            resource: dd
-          }), Wd && Od.push(...Wd.entries()), md && Od.push({
-            binding: fO.r,
-            resource: md
-          }), Rd = this.device.createBindGroup({
-            label: `${dd||md?"terrain-":""}shader-pack-inputs${dd?"-depth":""}${Wd?"-shadow":""}${md?"-mask":""}`,
-            layout: IR(this.device, {
-              depth: !!dd,
-              sunShadow: !!Wd,
-              shadowMask: !!md
+      bindGroupFor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const eb = wb ? this.sunShadow : null;
+        if ((wb || Mb) && !eb) throw new Error("A shader pack program binds sun shadows on a page without them");
+        if (!bb && !eb) return this.bindGroup;
+        (bb && bb !== this.depthView || Mb && Mb !== this.maskView) && (this.depthView = null !== bb && void 0 !== bb ? bb : this.depthView, this.maskView = null !== Mb && void 0 !== Mb ? Mb : this.maskView, this.groups.clear());
+        const Hb = (bb ? 1 : 0) | (eb ? 2 : 0) | (Mb ? 4 : 0);
+        let pb = this.groups.get(Hb);
+        if (!pb) {
+          const wb = this.entries();
+          bb && wb.push({
+            binding: ow.r,
+            resource: bb
+          }), eb && wb.push(...eb.entries()), Mb && wb.push({
+            binding: ow.v,
+            resource: Mb
+          }), pb = this.device.createBindGroup({
+            label: `${bb||Mb?"terrain-":""}shader-pack-inputs${bb?"-depth":""}${eb?"-shadow":""}${Mb?"-mask":""}`,
+            layout: ip(this.device, {
+              depth: !!bb,
+              sunShadow: !!eb,
+              shadowMask: !!Mb
             }),
-            entries: Od
-          }), this.groups.set(Fd, Rd)
+            entries: wb
+          }), this.groups.set(Hb, pb)
         }
-        return Rd
+        return pb
       }
-      bind(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        dd.setBindGroup(fO.e, this.bindGroupFor(Od, md, Wd))
+      bind(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        bb.setBindGroup(ow.g, this.bindGroupFor(wb, Mb, eb))
       }
     }
 
-    function fR(dd, Od, md) {
-      if (dd.gpuVersion === Od.gpuBuffersVersion) return !0;
-      let Wd;
+    function op(bb, wb, Mb) {
+      if (bb.gpuVersion === wb.gpuBuffersVersion) return !0;
+      let eb;
       do {
-        if (Wd = Od.gpuBuffersVersion, !MR(dd, Od, md)) return !1
-      } while (Od.gpuBuffersVersion !== Wd);
-      return dd.gpuVersion = Wd, dd.fitInstances = 0, !0
+        if (eb = wb.gpuBuffersVersion, !Tp(bb, wb, Mb)) return !1
+      } while (wb.gpuBuffersVersion !== eb);
+      return bb.gpuVersion = eb, bb.fitInstances = 0, !0
     }
 
-    function MR(dd, Od, md) {
-      let Wd = null;
-      for (let Rd = 0; Rd < dd.slotData.length; Rd++) {
-        var Fd;
-        const Xd = dd.slotData[Rd],
-          Kd = Xd ? Od.gpuBuffer(Xd) : md;
-        if (!Kd) return !1;
-        Xd && dd.layout.instanceEnds[Rd] < 0 && Od.cover(Xd, Number.POSITIVE_INFINITY), dd.buffers[Rd] = Kd;
-        const hd = dd.idd[Rd] + (Xd ? Od.gpuOffset(Xd) : 0);
-        hd !== (null !== (Fd = Wd) && void 0 !== Fd ? Fd : dd.offsets)[Rd] && (Wd ??= dd.offsets.slice(), Wd[Rd] = hd), dd.ends[Rd] = Xd ? Od.gpuEnd(Xd) : Kd.size
+    function Tp(bb, wb, Mb) {
+      let eb = null;
+      for (let pb = 0; pb < bb.slotData.length; pb++) {
+        var Hb;
+        const Vb = bb.slotData[pb],
+          gb = Vb ? wb.gpuBuffer(Vb) : Mb;
+        if (!gb) return !1;
+        Vb && bb.layout.instanceEnds[pb] < 0 && wb.cover(Vb, Number.POSITIVE_INFINITY), bb.buffers[pb] = gb;
+        const lb = bb.Qbb[pb] + (Vb ? wb.gpuOffset(Vb) : 0);
+        lb !== (null !== (Hb = eb) && void 0 !== Hb ? Hb : bb.offsets)[pb] && (eb ??= bb.offsets.slice(), eb[pb] = lb), bb.ends[pb] = Vb ? wb.gpuEnd(Vb) : gb.size
       }
-      return Wd && (dd.offsets = Wd), !0
+      return eb && (bb.offsets = eb), !0
     }
 
-    function dX(dd, Od, md, Wd) {
-      if (Od <= dd.fitInstances) return null;
+    function kp(bb, wb, Mb, eb) {
+      if (wb <= bb.fitInstances) return null;
       const {
-        layout: Fd,
-        ends: Rd,
-        offsets: Xd,
-        slotData: Kd,
-        idd: hd
-      } = dd;
-      let vd = !1;
-      for (let Qd = 0; Qd < Fd.buffers.length; Qd++) {
-        const dd = Fd.instanceEnds[Qd];
-        if (dd < 0) continue;
-        const Wd = (Od - 1) * Fd.buffers[Qd].arrayStride + dd;
-        if (Rd[Qd] - Xd[Qd] < Wd) return {
-          index: Qd,
-          needed: Wd
+        layout: Hb,
+        ends: pb,
+        offsets: Vb,
+        slotData: gb,
+        Qbb: lb
+      } = bb;
+      let Lb = !1;
+      for (let Ib = 0; Ib < Hb.buffers.length; Ib++) {
+        const bb = Hb.instanceEnds[Ib];
+        if (bb < 0) continue;
+        const eb = (wb - 1) * Hb.buffers[Ib].arrayStride + bb;
+        if (pb[Ib] - Vb[Ib] < eb) return {
+          index: Ib,
+          needed: eb
         };
-        const td = Kd[Qd];
-        td && md.cover(td, hd[Qd] + Wd) && (vd = !0)
+        const Ob = gb[Ib];
+        Ob && Mb.cover(Ob, lb[Ib] + eb) && (Lb = !0)
       }
-      return vd && fR(dd, md, Wd), dd.fitInstances = Od, null
+      return Lb && op(bb, Mb, eb), bb.fitInstances = wb, null
     }
-    var OX = md(39368),
-      mX = md(39395);
-    const WX = "vertexOutputs.position=scene.viewProjection*worldPos;\n",
-      FX = "var baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n",
-      RX = "color=vec4f(color.rgb,color.a*mesh.visibility);\n",
-      XX = `((vertexInputs.aPackedLightLevels >> 16u) | ${VO.c.placed}u)`,
-      KX = "u32(vertexInputs.aShaderPackItem.x)",
-      hX = `${VO.c.lifeform}u`;
+    var bV = Mb(39054),
+      wV = Mb(39079);
+    const MV = "vertexOutputs.position=scene.viewProjection*worldPos;\n",
+      eV = "var baseAmbientColor: vec3f= vec3f(1.,1.,1.);\n",
+      HV = "color=vec4f(color.rgb,color.a*mesh.visibility);\n",
+      pV = `((vertexInputs.aPackedLightLevels >> 16u) | ${Zw.e.placed}u)`,
+      VV = "u32(vertexInputs.aShaderPackItem.x)",
+      gV = `${Zw.e.lifeform}u`;
 
-    function vX(dd) {
-      return "item" === dd.kind ? "bloxdSpItemLocalPosition(positionUpdated, vertexInputs.aShaderPackItem)" : "positionUpdated"
+    function lV(bb) {
+      return "item" === bb.kind ? "bloxdSpItemLocalPosition(positionUpdated, vertexInputs.aShaderPackItem)" : "positionUpdated"
     }
-    const QX = "bloxdSpEnchant",
-      tX = "floor(finalWorld[3].xyz)";
+    const LV = "bloxdSpEnchant",
+      IV = "floor(finalWorld[3].xyz)";
 
-    function oX(dd, Od, md) {
-      return "placed" === Od.kind && dd.reads[md].includes("bloxdFragmentBlockPosition")
-    }
-
-    function NX(dd, Od) {
-      let [md, Wd] = dd;
-      return md === Od.point && Wd === Od.code
+    function OV(bb, wb, Mb) {
+      return "placed" === wb.kind && bb.reads[Mb].includes("bloxdFragmentBlockPosition")
     }
 
-    function qX(dd, Od) {
-      var md;
-      return null === (md = dd.find((dd => dd[Od]))) || void 0 === md ? void 0 : md[Od]
+    function UV(bb, wb) {
+      let [Mb, eb] = bb;
+      return Mb === wb.point && eb === wb.code
     }
 
-    function HX(dd, Od) {
-      const md = qX(dd, "texture"),
-        Wd = qX(dd, "enchantTier"),
-        Fd = qX(dd, "glow"),
-        Rd = qX(dd, "overlay"),
-        Xd = Rd ? Od.filter((dd => NX(dd, Rd))).length : 0;
-      return Rd && 1 === Xd ? {
-        texture: md,
-        overlay: Rd,
-        enchantTier: Wd,
-        glow: Fd
+    function tV(bb, wb) {
+      var Mb;
+      return null === (Mb = bb.find((bb => bb[wb]))) || void 0 === Mb ? void 0 : Mb[wb]
+    }
+
+    function CV(bb, wb) {
+      const Mb = tV(bb, "texture"),
+        eb = tV(bb, "enchantTier"),
+        Hb = tV(bb, "glow"),
+        pb = tV(bb, "overlay"),
+        Vb = pb ? wb.filter((bb => UV(bb, pb))).length : 0;
+      return pb && 1 === Vb ? {
+        texture: Mb,
+        overlay: pb,
+        enchantTier: eb,
+        glow: Hb
       } : {
-        texture: md,
-        enchantTier: Wd,
-        glow: Fd
+        texture: Mb,
+        enchantTier: eb,
+        glow: Hb
       }
     }
 
-    function yX(dd) {
-      if ("item" === dd.kind) {
+    function EV(bb) {
+      if ("item" === bb.kind) {
         return {
-          vertexFlags: `(${KX} & 0xffffu)`,
+          vertexFlags: `(${VV} & 0xffffu)`,
           varying: "vPackItem",
-          value: KX,
+          value: VV,
           flags: "(fragmentInputs.vPackItem & 0xffffu)",
           enchantTier: "(fragmentInputs.vPackItem >> 16u)"
         }
       }
-      return dd.defines.BLOXD_LIGHT_WORD ? {
-        vertexFlags: XX,
+      return bb.defines.BLOXD_LIGHT_WORD ? {
+        vertexFlags: pV,
         varying: "vPackFlags",
-        value: XX,
+        value: pV,
         flags: "fragmentInputs.vPackFlags",
         enchantTier: "0u"
       } : null
     }
 
-    function bX(dd) {
-      return "lifeform" === dd.kind ? hX : "0u"
+    function FV(bb) {
+      return "lifeform" === bb.kind ? gV : "0u"
     }
 
-    function TX(dd) {
-      return !!dd.BLOXD_PLUGIN_ENCHANTMENT
+    function BV(bb) {
+      return !!bb.BLOXD_PLUGIN_ENCHANTMENT
     }
 
-    function pX(dd, Od) {
+    function sV(bb, wb) {
       const {
-        enchantTier: md
-      } = Od;
-      return md && TX(Od.defines) && "lifeform" === Od.kind && JX(dd, "enchantTier") ? md : null
+        enchantTier: Mb
+      } = wb;
+      return Mb && BV(wb.defines) && "lifeform" === wb.kind && jV(bb, "enchantTier") ? Mb : null
     }
 
-    function YX(dd, Od) {
-      return TX(Od.defines) && JX(dd, "enchantSpeed")
+    function mV(bb, wb) {
+      return BV(wb.defines) && jV(bb, "enchantSpeed")
     }
 
-    function gX(dd) {
+    function hV(bb) {
       const {
-        overlay: Od,
-        defines: md
-      } = dd;
-      if (!Od || !md.DIFFUSE) return null;
-      const Wd = md.VERTEXCOLOR || md.INSTANCESCOLOR && md.INSTANCES;
-      return `vec4f(${Od.colour}.rgb * uniforms.vDiffuseInfos.y${Wd?" * fragmentInputs.vColor.rgb":""}, ${Od.colour}.a)`
+        overlay: wb,
+        defines: Mb
+      } = bb;
+      if (!wb || !Mb.DIFFUSE) return null;
+      const eb = Mb.VERTEXCOLOR || Mb.INSTANCESCOLOR && Mb.INSTANCES;
+      return `vec4f(${wb.colour}.rgb * uniforms.vDiffuseInfos.y${eb?" * fragmentInputs.vColor.rgb":""}, ${wb.colour}.a)`
     }
-    const wX = "fragmentInputs.vPackTexture";
+    const zV = "fragmentInputs.vPackTexture";
 
-    function aX(dd) {
+    function XV(bb) {
       const {
-        atlas: Od,
-        defines: md,
-        texture: Wd
-      } = dd;
-      if (Od || !md.DIFFUSE) return null;
-      if (Wd) return {
+        atlas: wb,
+        defines: Mb,
+        texture: eb
+      } = bb;
+      if (wb || !Mb.DIFFUSE) return null;
+      if (eb) return {
         texture: "diffuseSampler",
-        ...Wd
+        ...eb
       };
-      const Fd = {
+      const Hb = {
         texture: "diffuseSampler",
         cells: null,
         layers: [],
-        uv: `fragmentInputs.${1===md.DIFFUSEDIRECTUV?"vMainUV1":2===md.DIFFUSEDIRECTUV?"vMainUV2":"vDiffuseUV"}`
+        uv: `fragmentInputs.${1===Mb.DIFFUSEDIRECTUV?"vMainUV1":2===Mb.DIFFUSEDIRECTUV?"vMainUV2":"vDiffuseUV"}`
       };
-      if ("box" !== dd.kind) return Fd;
-      if (!md.BLOXD_PLUGIN_ANIMATED) return {
-        ...Fd,
-        id: wX
+      if ("box" !== bb.kind) return Hb;
+      if (!Mb.BLOXD_PLUGIN_ANIMATED) return {
+        ...Hb,
+        id: zV
       };
-      const Rd = wd.e.WGSL,
-        Xd = (0, wd.ob)(Rd, "uAnimStatesNum"),
-        Kd = (0, wd.Z)(Rd, (0, OX.g)(Rd), Xd),
-        hd = "fragmentInputs.vMainUV1";
+      const pb = Xb.b.WGSL,
+        Vb = (0, Xb.sb)(pb, "uAnimStatesNum"),
+        gb = (0, Xb._)(pb, (0, bV.g)(pb), Vb),
+        lb = "fragmentInputs.vMainUV1";
       return {
         texture: "diffuseSampler",
-        cells: `vec2f(1.0, ${Xd})`,
-        layers: [Kd],
-        uv: `vec2f(${hd}.x, ${hd}.y * ${Xd} - ${Kd})`,
-        levelUv: hd,
-        id: wX
+        cells: `vec2f(1.0, ${Vb})`,
+        layers: [gb],
+        uv: `vec2f(${lb}.x, ${lb}.y * ${Vb} - ${gb})`,
+        levelUv: lb,
+        id: zV
       }
     }
 
-    function EX(dd, Od) {
-      return "box" === Od.kind && !!dd.hooks.surface && null !== aX(Od)
+    function xV(bb, wb) {
+      return "box" === wb.kind && !!bb.hooks.surface && null !== XV(wb)
     }
 
-    function JX(dd, Od) {
-      return dd.reads.fragment.includes(Od)
+    function jV(bb, wb) {
+      return bb.reads.fragment.includes(wb)
     }
 
-    function UX(dd) {
-      return !!dd.BLOXD_LIGHTING && !dd.BLOXD_UNLIT
+    function KV(bb) {
+      return !!bb.BLOXD_LIGHTING && !bb.BLOXD_UNLIT
     }
 
-    function xX(dd, Od, md, Wd) {
-      const Fd = dd.filter((dd => {
-        let [md, Wd] = dd;
-        return "CUSTOM_FRAGMENT_BEFORE_FOG" === md && Wd === Od
+    function rV(bb, wb, Mb, eb) {
+      const Hb = bb.filter((bb => {
+        let [Mb, eb] = bb;
+        return "CUSTOM_FRAGMENT_BEFORE_FOG" === Mb && eb === wb
       }));
-      if (1 !== Fd.length) throw new Error(`A model program for shader packs has ${0===Fd.length?"no":"more than one"} ${Wd} code before fog (lite/modelShaderPack.ts)`);
-      return dd.map((dd => dd === Fd[0] ? [dd[0], md] : dd))
+      if (1 !== Hb.length) throw new Error(`A model program for shader packs has ${0===Hb.length?"no":"more than one"} ${eb} code before fog (lite/modelShaderPack.ts)`);
+      return bb.map((bb => bb === Hb[0] ? [bb[0], Mb] : bb))
     }
 
-    function BX(dd, Od, md, Wd) {
+    function RV(bb, wb, Mb, eb) {
       const {
-        hooks: Fd
-      } = dd, {
-        kind: Rd,
-        defines: Xd
-      } = Od, Kd = [...md];
-      var hd;
-      Od.atlas && Fd.surface && Kd.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", HW("atlasIdxIn")]), "item" === Rd && Kd.push(["CUSTOM_VERTEX_DEFINITIONS", (0, wd.f)(wd.e.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "\nfn bloxdSpQuarterTurns(v: vec2f, quarters: u32) -> vec2f {\n    let c = select(select(0.0, -1.0, quarters == 2u), 1.0, quarters == 0u);\n    let s = select(select(0.0, -1.0, quarters == 3u), 1.0, quarters == 1u);\n    return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);\n}\nfn bloxdSpItemLocalPosition(position: vec3f, item: vec4f) -> vec3f {\n    let p = position * item.y + vec3f(0.0, item.z, 0.0);\n    let turn = u32(item.w);\n    let yz = bloxdSpQuarterTurns(p.yz, turn >> 2u);\n    let zx = bloxdSpQuarterTurns(vec2f(yz.y, p.x), turn & 3u);\n    return vec3f(zx.y, yz.x, zx.x);\n}\n"]), EX(dd, Od) && Kd.push(["CUSTOM_VERTEX_DEFINITIONS", (0, wd.f)(wd.e.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", (hd = "vertexInputs.aShaderPackItem.x", `\tvertexOutputs.vPackTexture = select(0u, ${NW}[min(u32(${hd}) - 1u, arrayLength(&${NW}) - 1u)], ${hd} > 0.5);\n`)]);
-      const vd = yX(Od);
-      vd && (Fd.surface || Fd.light) && Kd.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${vd.varying}: u32;`], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.${vd.varying} = ${vd.value};`]);
-      let Qd = Wd;
-      if (oX(dd, Od, "fragment") && (Kd.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackCell: vec3i;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackCell = vec3i(${tX});`]), Qd = [...Qd, ["CUSTOM_FRAGMENT_MAIN_BEGIN", "bloxdSpCell = vec3f(fragmentInputs.vPackCell);"]]), JX(dd, "localPosition") && Kd.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackLocalPosition: vec3f;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackLocalPosition = ${vX(Od)};`]), TX(Xd) && Fd.surface) {
-        YX(dd, Od) && Kd.push(["CUSTOM_VERTEX_DEFINITIONS", "flat varying vPackEnchantSpeed: f32;"], ["CUSTOM_VERTEX_MAIN_END", "vertexOutputs.vPackEnchantSpeed = vertexInputs.aEnchantmentSpeed;"]);
-        const md = pX(dd, Od);
-        md && Kd.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackEnchantTier: u32;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackEnchantTier = u32(${md});`]);
-        const Wd = (0, wd.eb)(wd.e.WGSL, "color", "mix(color.xyz, bloxdSpSurface.enchantColour.rgb, bloxdSpSurface.enchantColour.a)");
-        Qd = [...xX(Qd, (0, mX.h)(wd.e.WGSL), Wd, "enchantment"), ["CUSTOM_FRAGMENT_DEFINITIONS", (0, mX.b)(QX)]]
+        hooks: Hb
+      } = bb, {
+        kind: pb,
+        defines: Vb
+      } = wb, gb = [...Mb];
+      var lb;
+      wb.atlas && Hb.surface && gb.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", te("atlasIdxIn")]), "item" === pb && gb.push(["CUSTOM_VERTEX_DEFINITIONS", (0, Xb.d)(Xb.b.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "\nfn bloxdSpQuarterTurns(v: vec2f, quarters: u32) -> vec2f {\n    let c = select(select(0.0, -1.0, quarters == 2u), 1.0, quarters == 0u);\n    let s = select(select(0.0, -1.0, quarters == 3u), 1.0, quarters == 1u);\n    return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);\n}\nfn bloxdSpItemLocalPosition(position: vec3f, item: vec4f) -> vec3f {\n    let p = position * item.y + vec3f(0.0, item.z, 0.0);\n    let turn = u32(item.w);\n    let yz = bloxdSpQuarterTurns(p.yz, turn >> 2u);\n    let zx = bloxdSpQuarterTurns(vec2f(yz.y, p.x), turn & 3u);\n    return vec3f(zx.y, yz.x, zx.x);\n}\n"]), xV(bb, wb) && gb.push(["CUSTOM_VERTEX_DEFINITIONS", (0, Xb.d)(Xb.b.WGSL, "aShaderPackItem", "vec4")], ["CUSTOM_VERTEX_DEFINITIONS", "varying vPackTexture: u32;"], ["CUSTOM_VERTEX_MAIN_END", (lb = "vertexInputs.aShaderPackItem.x", `\tvertexOutputs.vPackTexture = select(0u, ${Oe}[min(u32(${lb}) - 1u, arrayLength(&${Oe}) - 1u)], ${lb} > 0.5);\n`)]);
+      const Lb = EV(wb);
+      Lb && (Hb.surface || Hb.light) && gb.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${Lb.varying}: u32;`], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.${Lb.varying} = ${Lb.value};`]);
+      let Ib = eb;
+      if (OV(bb, wb, "fragment") && (gb.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackCell: vec3i;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackCell = vec3i(${IV});`]), Ib = [...Ib, ["CUSTOM_FRAGMENT_MAIN_BEGIN", "bloxdSpCell = vec3f(fragmentInputs.vPackCell);"]]), jV(bb, "localPosition") && gb.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackLocalPosition: vec3f;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackLocalPosition = ${lV(wb)};`]), BV(Vb) && Hb.surface) {
+        mV(bb, wb) && gb.push(["CUSTOM_VERTEX_DEFINITIONS", "flat varying vPackEnchantSpeed: f32;"], ["CUSTOM_VERTEX_MAIN_END", "vertexOutputs.vPackEnchantSpeed = vertexInputs.aEnchantmentSpeed;"]);
+        const Mb = sV(bb, wb);
+        Mb && gb.push(["CUSTOM_VERTEX_DEFINITIONS", "varying vPackEnchantTier: u32;"], ["CUSTOM_VERTEX_MAIN_END", `vertexOutputs.vPackEnchantTier = u32(${Mb});`]);
+        const eb = (0, Xb.gb)(Xb.b.WGSL, "color", "mix(color.xyz, bloxdSpSurface.enchantColour.rgb, bloxdSpSurface.enchantColour.a)");
+        Ib = [...rV(Ib, (0, wV.i)(Xb.b.WGSL), eb, "enchantment"), ["CUSTOM_FRAGMENT_DEFINITIONS", (0, wV.d)(LV)]]
       }
       const {
-        overlay: td
-      } = Od;
-      td && gX(Od) && Fd.surface && (Qd = Qd.filter((dd => !NX(dd, td))));
-      const od = Fd.light ? function(dd) {
-        return "placed" === dd.kind ? {
+        overlay: Ob
+      } = wb;
+      Ob && hV(wb) && Hb.surface && (Ib = Ib.filter((bb => !UV(bb, Ob))));
+      const Ub = Hb.light ? function(bb) {
+        return "placed" === bb.kind ? {
           name: "terrain",
-          engine: (0, CO.M)(wd.e.WGSL),
-          pack: (0, CO.$)(wd.e.WGSL)
-        } : dd.defines.BLOXD_PLUGIN_ENTITY_LIGHT ? {
+          engine: (0, Pw.Q)(Xb.b.WGSL),
+          pack: (0, Pw.eb)(Xb.b.WGSL)
+        } : bb.defines.BLOXD_PLUGIN_ENTITY_LIGHT ? {
           name: "entity",
-          engine: (0, CO.I)(wd.e.WGSL),
-          pack: (0, CO.Z)(wd.e.WGSL)
+          engine: (0, Pw.I)(Xb.b.WGSL),
+          pack: (0, Pw.bb)(Xb.b.WGSL)
         } : null
-      }(Od) : null;
-      if (od && (Qd = xX(Qd, od.engine, od.pack, `${od.name} light`), "placed" !== Rd && UX(Xd))) {
-        const dd = Xd.BLOXD_UNIFORM_ENTITY_LIGHT ? (0, wd.ob)(wd.e.WGSL, "uEntityLightLevels") : (0, wd.wb)(wd.e.WGSL, "aLightLevels");
-        Kd.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${CO.e}: vec4f;`], ["CUSTOM_VERTEX_MAIN_END", (0, CO._)(wd.e.WGSL, dd)])
+      }(wb) : null;
+      if (Ub && (Ib = rV(Ib, Ub.engine, Ub.pack, `${Ub.name} light`), "placed" !== pb && KV(Vb))) {
+        const bb = Vb.BLOXD_UNIFORM_ENTITY_LIGHT ? (0, Xb.sb)(Xb.b.WGSL, "uEntityLightLevels") : (0, Xb.zb)(Xb.b.WGSL, "aLightLevels");
+        gb.push(["CUSTOM_VERTEX_DEFINITIONS", `varying ${Pw.d}: vec4f;`], ["CUSTOM_VERTEX_MAIN_END", (0, Pw.cb)(Xb.b.WGSL, bb)])
       }
       return {
-        vertexCode: Kd,
-        fragmentCode: Qd
+        vertexCode: gb,
+        fragmentCode: Ib
       }
     }
 
-    function SX(dd, Od, md, Wd) {
-      return XW(dd, Od, md, Wd, "model")
+    function DV(bb, wb, Mb, eb) {
+      return He(bb, wb, Mb, eb, "model")
     }
-    const sX = "\t@builtin(position) position: vec4f,\n";
+    const cV = "\t@builtin(position) position: vec4f,\n";
 
-    function uX(dd, Od) {
-      const md = /^(?:(?:diagnostic|enable|requires)\b[^;]*;\n)*/.exec(dd)[0];
-      return `${md}${Od}${dd.slice(md.length)}`
+    function YV(bb, wb) {
+      const Mb = /^(?:(?:diagnostic|enable|requires)\b[^;]*;\n)*/.exec(bb)[0];
+      return `${Mb}${wb}${bb.slice(Mb.length)}`
     }
 
-    function VX(dd, Od, md) {
-      let Wd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function ZV(bb, wb, Mb) {
+      let eb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       const {
-        hooks: Fd
-      } = Od, Rd = hW(Od, Wd), {
-        kind: Xd,
-        defines: Kd
-      } = md, hd = function(dd, Od) {
-        var md, Wd, Fd, Rd;
+        hooks: Hb
+      } = wb, pb = Ve(wb, eb), {
+        kind: Vb,
+        defines: gb
+      } = Mb, lb = function(bb, wb) {
+        var Mb, eb, Hb, pb;
         const {
-          defines: Xd
-        } = Od, Kd = yX(Od), hd = !!Xd.FOG, vd = TX(Xd), Qd = null !== (md = null === Kd || void 0 === Kd ? void 0 : Kd.enchantTier) && void 0 !== md ? md : pX(dd, Od) ? "fragmentInputs.vPackEnchantTier" : "0u", td = "lifeform" === Od.kind && !Xd.ALPHAFROMDIFFUSE;
+          defines: Vb
+        } = wb, gb = EV(wb), lb = !!Vb.FOG, Lb = BV(Vb), Ib = null !== (Mb = null === gb || void 0 === gb ? void 0 : gb.enchantTier) && void 0 !== Mb ? Mb : sV(bb, wb) ? "fragmentInputs.vPackEnchantTier" : "0u", Ob = "lifeform" === wb.kind && !Vb.ALPHAFROMDIFFUSE;
         return {
-          vertexFlags: null !== (Wd = null === Kd || void 0 === Kd ? void 0 : Kd.vertexFlags) && void 0 !== Wd ? Wd : bX(Od),
-          vertexLocalPosition: vX(Od),
-          flags: null !== (Fd = null === Kd || void 0 === Kd ? void 0 : Kd.flags) && void 0 !== Fd ? Fd : bX(Od),
+          vertexFlags: null !== (eb = null === gb || void 0 === gb ? void 0 : gb.vertexFlags) && void 0 !== eb ? eb : FV(wb),
+          vertexLocalPosition: lV(wb),
+          flags: null !== (Hb = null === gb || void 0 === gb ? void 0 : gb.flags) && void 0 !== Hb ? Hb : FV(wb),
           normal: "normalW",
-          alpha: td ? "alpha * baseColor.a" : "alpha",
-          alphaOut: td ? "baseColor.a" : "alpha",
+          alpha: Ob ? "alpha * baseColor.a" : "alpha",
+          alphaOut: Ob ? "baseColor.a" : "alpha",
           lambert: "diffuseBase.r",
           diffuse: "diffuseColor",
           emissive: "emissiveColor",
           ambient: "uniforms.vAmbientColor",
-          fogColour: hd ? "frame.vFogColor" : "vec3f(0.0)",
-          fogAlpha: hd ? "1.0 - fog" : "0.0",
-          enchantTier: Qd,
-          enchantColour: vd ? `${QX}(fragmentInputs.vEnchantRgbAndRotY, fragmentInputs.vPositionAndAnimTick, baseColor.rgb)` : "vec4f(0.0)",
-          enchantSpeed: YX(dd, Od) ? "fragmentInputs.vPackEnchantSpeed" : "0.0",
-          localPosition: JX(dd, "localPosition") ? "fragmentInputs.vPackLocalPosition" : "vec3f(0.0)",
-          overlayColour: gX(Od),
-          glow: null !== (Rd = Od.glow) && void 0 !== Rd ? Rd : null
+          fogColour: lb ? "frame.vFogColor" : "vec3f(0.0)",
+          fogAlpha: lb ? "1.0 - fog" : "0.0",
+          enchantTier: Ib,
+          enchantColour: Lb ? `${LV}(fragmentInputs.vEnchantRgbAndRotY, fragmentInputs.vPositionAndAnimTick, baseColor.rgb)` : "vec4f(0.0)",
+          enchantSpeed: mV(bb, wb) ? "fragmentInputs.vPackEnchantSpeed" : "0.0",
+          localPosition: jV(bb, "localPosition") ? "fragmentInputs.vPackLocalPosition" : "vec3f(0.0)",
+          overlayColour: hV(wb),
+          glow: null !== (pb = wb.glow) && void 0 !== pb ? pb : null
         }
-      }(Od, md), vd = dd.textures.filter((dd => /^textureAtlas\d+$/.test(dd.name))).length, Qd = md.atlas && vd > 0 ? {
-        count: vd,
-        layers: md.atlas.layers,
-        width: md.atlas.width,
+      }(wb, Mb), Lb = bb.textures.filter((bb => /^textureAtlas\d+$/.test(bb.name))).length, Ib = Mb.atlas && Lb > 0 ? {
+        count: Lb,
+        layers: Mb.atlas.layers,
+        width: Mb.atlas.width,
         sampler: "textureAtlas0Sampler",
-        frame: dd.material.slots.has("uAnimDataPerTex") ? (Od, md) => MW(Od, md, function(dd) {
-          const Od = dd.material.stridedArrays.includes("uAnimDataPerTex") ? ".el" : "";
+        frame: bb.material.slots.has("uAnimDataPerTex") ? (wb, Mb) => oe(wb, Mb, function(bb) {
+          const wb = bb.material.stridedArrays.includes("uAnimDataPerTex") ? ".el" : "";
           return {
-            Et: "frame.animTick",
+            sO: "frame.animTick",
             stride: "uniforms.uAnimData.y",
             count: "uniforms.uAnimData.z",
-            perTexture: dd => `uniforms.uAnimDataPerTex[${dd}]${Od}`
+            perTexture: bb => `uniforms.uAnimDataPerTex[${bb}]${wb}`
           }
-        }(dd)) : null
-      } : null, td = "placed" === Xd ? "var<private> bloxdSpCell: vec3f;\nfn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\tlet bloxdSpBehind = bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0);\n\tlet bloxdSpInside = all(abs(bloxdSpBehind - bloxdSpCell - 0.5) <= vec3f(0.5 + 1.0 / 256.0));\n\treturn select(vec3i(floor(bloxdSpBehind)), vec3i(bloxdSpCell), bloxdSpInside) + bloxdRenderOffset();\n}\n" : "fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0))) + bloxdRenderOffset();\n}\n", od = null !== Qd && void 0 !== Qd ? Qd : aX(md), Nd = function(dd, md) {
-        let Wd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-        return `${(0,fO.z)()}${QW(Od,md)}${Wd}${bW(dd)}${WW}${td}${Od.code}`
+        }(bb)) : null
+      } : null, Ob = "placed" === Vb ? "var<private> bloxdSpCell: vec3f;\nfn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\tlet bloxdSpBehind = bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0);\n\tlet bloxdSpInside = all(abs(bloxdSpBehind - bloxdSpCell - 0.5) <= vec3f(0.5 + 1.0 / 256.0));\n\treturn select(vec3i(floor(bloxdSpBehind)), vec3i(bloxdSpCell), bloxdSpInside) + bloxdRenderOffset();\n}\n" : "fn bloxdFragmentBlockPosition(bloxdSpPosition: vec3f, bloxdSpNormal: vec3f) -> vec3i {\n\treturn vec3i(floor(bloxdSpPosition - bloxdSpNormal * (1.0 / 64.0))) + bloxdRenderOffset();\n}\n", Ub = null !== Ib && void 0 !== Ib ? Ib : XV(Mb), tb = function(bb, Mb) {
+        let eb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+        return `${(0,ow.C)()}${le(wb,Mb)}${eb}${Ee(bb)}${we}${Ob}${wb.code}`
       };
       let {
-        vertex: qd,
-        fragment: Hd
-      } = dd;
-      const yd = pW(Fd, hd);
-      if (yd) {
-        const dd = oX(Od, md, "vertex") ? `\tbloxdSpCell = ${tX};\n` : "";
-        qd = SX(qd, WX, `${dd}${yd.slice(1)}${WX}`, "vertex")
+        vertex: Cb,
+        fragment: Eb
+      } = bb;
+      const Fb = Be(Hb, lb);
+      if (Fb) {
+        const bb = OV(wb, Mb, "vertex") ? `\tbloxdSpCell = ${IV};\n` : "";
+        Cb = DV(Cb, MV, `${bb}${Fb.slice(1)}${MV}`, "vertex")
       }
-      const bd = `${tW(Od,Rd,function(dd,Od){return Od.TWOSIDEDLIGHTING?dd:`select(-(${dd}), ${dd}, fragmentInputs.frontFacing)`}(hd.normal,Kd),hd.flags)}${YW(Fd,Od.strict,Od.program,od,hd)}`;
-      bd && (Hd = SX(Hd, FX, `${bd.slice(1)}${FX}`, "surface")), Rd && Od.sunShadow && !Kd.TWOSIDEDLIGHTING && (Hd = SX(Hd, sX, `${sX}\t@builtin(front_facing) frontFacing: bool,\n`, "front facing"));
-      const Td = aW(Fd);
-      if (Td) {
-        const dd = wW(Fd, UX(Kd), !0, hd);
-        Hd = SX(Hd, RX, `${dd}${Td.slice(1)}${RX}`, "light")
+      const Bb = `${Le(wb,pb,function(bb,wb){return wb.TWOSIDEDLIGHTING?bb:`select(-(${bb}), ${bb}, fragmentInputs.frontFacing)`}(lb.normal,gb),lb.flags)}${se(Hb,wb.strict,wb.program,Ub,lb)}`;
+      Bb && (Eb = DV(Eb, eV, `${Bb.slice(1)}${eV}`, "surface")), pb && wb.sunShadow && !gb.TWOSIDEDLIGHTING && (Eb = DV(Eb, cV, `${cV}\t@builtin(front_facing) frontFacing: bool,\n`, "front facing"));
+      const sb = ze(Hb);
+      if (sb) {
+        const bb = he(Hb, KV(gb), !0, lb);
+        Eb = DV(Eb, HV, `${bb}${sb.slice(1)}${HV}`, "light")
       }
-      const pd = EX(Od, md) ? qW : "";
+      const mb = xV(wb, Mb) ? Ue : "";
       return {
-        ...dd,
-        vertex: uX(qd, Nd(Qd, !1, pd)),
-        fragment: uX(Hd, Nd(od, Rd))
+        ...bb,
+        vertex: YV(Cb, tb(Ib, !1, mb)),
+        fragment: YV(Eb, tb(Ub, pb))
       }
     }
-    const iX = {
+    const fV = {
       name: "earthSky",
       uniqueId: -1
     };
-    class AX {
-      constructor(dd, Od) {
-        this.resources = dd, this.epoch = Od, this.instances = new Map, this.vertexCode = [], this.fragmentCode = [], this.pluginUniforms = [], this.codeKey = "", this.codeVersion = -1
+    class AV {
+      constructor(bb, wb) {
+        this.resources = bb, this.epoch = wb, this.instances = new Map, this.vertexCode = [], this.fragmentCode = [], this.pluginUniforms = [], this.codeKey = "", this.codeVersion = -1
       }
       release() {
-        for (const dd of this.instances.values()) dd.released = !0, this.resources.destroyBuffer(dd.buffer);
+        for (const bb of this.instances.values()) bb.released = !0, this.resources.destroyBuffer(bb.buffer);
         this.instances.clear()
       }
     }
 
-    function rX(dd) {
-      return dd.failed && null !== dd.packGroup
+    function WV(bb) {
+      return bb.failed && null !== bb.packGroup
     }
-    class GX {
-      constructor(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new GR,
-          Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new AR;
-        this.device = dd, this.resources = Od, this.skyLastRenderable = void 0, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.frontRenderable = void 0, this.Sdd = void 0, this.modelMeshes = void 0, this.thinBundle = void 0, this.binder = new OR, this.sceneLayout = void 0, this.frameLayout = void 0, this.frameUniforms = new Float32Array(108), this.frameBuffer = void 0, this.meshSlots = void 0, this.zeroBuffer = void 0, this.programs = new Map, this.earthSkyProgram = null, this.earthSkyUniforms = null, this.earthSkyFrom = null, this.drawDefines = void 0, this.modelUniforms = new wR((dd => this.modelSlot(dd).instances.values())), this.vertexLayouts = void 0, this.inputs = new WeakMap, this.unbuildable = new Set, this.linePrograms = new Map, this.materials = new WeakMap, this.pipelines = new Map, this.compiling = 0, this.warnOnce = (0, iO.b)("Lite: "), this.renderStates = new bR(this.warnOnce), this.nextProgramId = 0, this.frame = 0, this.packInputs = null, this.sunShadow = null, this.caster = {}, this.casterWorlds = new Float32Array(0), this.view = void 0, this.steadyPhase = 0, this.keepSteadyBase = (dd, Od) => this.keepSteady(dd, Od), this.lists = void 0, this.slotCount = 0, this.Sdd = Wd, this.modelMeshes = Fd, this.lists = new mR(Fd, Wd, this, this.warnOnce), this.drawDefines = new NR(Od, this.warnOnce, ((dd, Od, md) => this.programWithModel(dd, Od, md)), rX), this.vertexLayouts = new UR(Od, dd.limits, this.warnOnce), this.sceneLayout = JO(dd), this.frameLayout = dd.createBindGroupLayout({
+    class JV {
+      constructor(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Wp,
+          Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new fp;
+        this.device = bb, this.resources = wb, this.skyLastRenderable = void 0, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.frontRenderable = void 0, this.Sbb = void 0, this.modelMeshes = void 0, this.thinBundle = void 0, this.binder = new kH, this.sceneLayout = void 0, this.frameLayout = void 0, this.frameUniforms = new Float32Array(108), this.frameBuffer = void 0, this.meshSlots = void 0, this.zeroBuffer = void 0, this.programs = new Map, this.earthSkyProgram = null, this.earthSkyUniforms = null, this.earthSkyFrom = null, this.drawDefines = void 0, this.modelUniforms = new hp((bb => this.modelSlot(bb).instances.values())), this.vertexLayouts = void 0, this.inputs = new WeakMap, this.unbuildable = new Set, this.linePrograms = new Map, this.materials = new WeakMap, this.pipelines = new Map, this.compiling = 0, this.warnOnce = (0, fw.d)("Lite: "), this.renderStates = new Ep(this.warnOnce), this.nextProgramId = 0, this.frame = 0, this.packInputs = null, this.sunShadow = null, this.caster = {}, this.casterWorlds = new Float32Array(0), this.view = void 0, this.steadyPhase = 0, this.keepSteadyBase = (bb, wb) => this.keepSteady(bb, wb), this.lists = void 0, this.slotCount = 0, this.Sbb = eb, this.modelMeshes = Hb, this.lists = new bp(Hb, eb, this, this.warnOnce), this.drawDefines = new Op(wb, this.warnOnce, ((bb, wb, Mb) => this.programWithModel(bb, wb, Mb)), WV), this.vertexLayouts = new jp(wb, bb.limits, this.warnOnce), this.sceneLayout = xw(bb), this.frameLayout = bb.createBindGroupLayout({
           label: "meshes-frame",
           entries: [{
             binding: 0,
@@ -3678,91 +3678,91 @@ export const modules = {
               minBindingSize: 80
             }
           }]
-        }), this.frameBuffer = dd.createBuffer({
+        }), this.frameBuffer = bb.createBuffer({
           label: "meshes-frame",
           size: this.frameUniforms.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.meshSlots = new SR(dd, this.frameLayout, this.frameBuffer, "meshes-per-draw"), this.zeroBuffer = dd.createBuffer({
+        }), this.meshSlots = new Rp(bb, this.frameLayout, this.frameBuffer, "meshes-per-draw"), this.zeroBuffer = bb.createBuffer({
           label: "meshes-zero-attribute",
           size: 16,
           usage: GPUBufferUsage.VERTEX
-        }), this.thinBundle = new PR(dd, new SR(dd, this.frameLayout, this.frameBuffer, "thin-bases-slots"), {
-          pipelineFor: (dd, Od, md) => this.pipelineFor(dd, Od, md),
-          pipelineCompiling: (dd, Od) => !dd.program.failed && !1 !== this.pipelines.get(`${dd.pipelineKey}|${Od}`),
-          sceneGroup: dd => {
-            const Od = md(dd);
-            return Od || this.warnOnce("scene-group", "no render task draws to this target: thin bases are drawn without a bundle"), Od
+        }), this.thinBundle = new Np(bb, new Rp(bb, this.frameLayout, this.frameBuffer, "thin-bases-slots"), {
+          pipelineFor: (bb, wb, Mb) => this.pipelineFor(bb, wb, Mb),
+          pipelineCompiling: (bb, wb) => !bb.program.failed && !1 !== this.pipelines.get(`${bb.pipelineKey}|${wb}`),
+          sceneGroup: bb => {
+            const wb = Mb(bb);
+            return wb || this.warnOnce("scene-group", "no render task draws to this target: thin bases are drawn without a bundle"), wb
           }
-        }), Od.onDestroy = dd => {
-          this.thinBundle.resourceDestroyed(dd)
+        }), wb.onDestroy = bb => {
+          this.thinBundle.resourceDestroyed(bb)
         }, this.skyLastRenderable = this.renderable(1e3, !1, this.lists.skyDraws), this.opaqueRenderable = this.renderable(150, !1, this.lists.opaqueDraws, this.thinBundle), this.transparentRenderable = this.renderable(300, !0, this.lists.transparentDraws), this.frontRenderable = this.renderable(400, !0, this.lists.frontDraws)
       }
-      renderable(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const Fd = {
-          order: dd,
-          isTransparent: Od,
-          _direct: !Od,
-          bind: (dd, Od) => this.createBinding(Fd, Od, md, Wd)
+      renderable(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const Hb = {
+          order: bb,
+          isTransparent: wb,
+          _direct: !wb,
+          bind: (bb, wb) => this.createBinding(Hb, wb, Mb, eb)
         };
-        return Fd
+        return Hb
       }
       get pipelinesCompiling() {
         return this.compiling
       }
-      prepare(dd, Od, md) {
-        var Wd;
-        let Fd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        this.frame++, this.view = Od, this.drawDefines.view = Od, this.thinBundle.pE(), this.writeFrameUniforms();
-        const Rd = null !== (Wd = null === Fd || void 0 === Fd ? void 0 : Fd.defineFor("model")) && void 0 !== Wd ? Wd : 0;
-        this.drawDefines.modelPackVariant = Rd, Fd && 0 !== Rd && (this.packInputs ??= new kR(this.device, Fd.textureLayers(), this.sunShadow), this.packInputs.write(Fd, Od.eye, Fd.lH())), this.lists.clear(), this.slotCount = 0;
-        const Xd = dd.activeCamera;
-        this.Sdd.select(Xd, this.keepSteadyBase), this.modelMeshes.select(Xd, Od), md && this.pushEarthSky(md), this.lists.collect(dd), this.thinBundle.bt(), this.uploadMeshSlots()
+      prepare(bb, wb, Mb) {
+        var eb;
+        let Hb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        this.frame++, this.view = wb, this.drawDefines.view = wb, this.thinBundle.jR(), this.writeFrameUniforms();
+        const pb = null !== (eb = null === Hb || void 0 === Hb ? void 0 : Hb.defineFor("model")) && void 0 !== eb ? eb : 0;
+        this.drawDefines.modelPackVariant = pb, Hb && 0 !== pb && (this.packInputs ??= new yp(this.device, Hb.textureLayers(), this.sunShadow), this.packInputs.write(Hb, wb.eye, Hb.YE())), this.lists.clear(), this.slotCount = 0;
+        const Vb = bb.activeCamera;
+        this.Sbb.select(Vb, this.keepSteadyBase), this.modelMeshes.select(Vb, wb), Mb && this.pushEarthSky(Mb), this.lists.collect(bb), this.thinBundle.tO(), this.uploadMeshSlots()
       }
-      pushDraws(dd, Od, md, Wd, Fd, Rd) {
-        let Xd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        const Kd = Rd.length;
-        for (let hd = 0; hd < md; hd++) {
-          const md = Od[hd];
-          let Kd = this.retainedDraw(dd, md, Wd, Fd);
-          if (void 0 === Kd && (Kd = this.drawFor(dd, md, Wd, Fd), this.retain(md, Kd)), Kd) {
-            const dd = md.owner,
-              Od = Xd ? Xd[hd] : -1;
-            Kd.slotOffset = Od < 0 ? this.writeMeshSlot(dd.getWorldMatrix().m, dd.visibility) : this.writeMeshSlot(this.modelMeshes.worlds, this.modelMeshes.visibility[Od], 16 * Od), Rd.push(Kd)
+      pushDraws(bb, wb, Mb, eb, Hb, pb) {
+        let Vb = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
+        const gb = pb.length;
+        for (let lb = 0; lb < Mb; lb++) {
+          const Mb = wb[lb];
+          let gb = this.retainedDraw(bb, Mb, eb, Hb);
+          if (void 0 === gb && (gb = this.drawFor(bb, Mb, eb, Hb), this.retain(Mb, gb)), gb) {
+            const bb = Mb.owner,
+              wb = Vb ? Vb[lb] : -1;
+            gb.slotOffset = wb < 0 ? this.writeMeshSlot(bb.getWorldMatrix().m, bb.visibility) : this.writeMeshSlot(this.modelMeshes.worlds, this.modelMeshes.visibility[wb], 16 * wb), pb.push(gb)
           }
         }
-        return Rd.length - Kd
+        return pb.length - gb
       }
-      bundleDraws(dd, Od, md) {
-        let Wd = 0;
-        for (const Fd of Od) {
-          let Od = this.retainedDraw(dd, Fd, md, !1);
-          const Rd = void 0 !== Od;
-          if (void 0 === Od && (Od = this.drawFor(dd, Fd, md, !1), this.retain(Fd, Od)), Od) {
-            const dd = Fd.owner,
-              md = this.thinBundle.add(Fd, Od, dd.getWorldMatrix().m, dd.visibility);
-            Rd && this.steadyFrom(Fd, Od, md), Wd++
+      bundleDraws(bb, wb, Mb) {
+        let eb = 0;
+        for (const Hb of wb) {
+          let wb = this.retainedDraw(bb, Hb, Mb, !1);
+          const pb = void 0 !== wb;
+          if (void 0 === wb && (wb = this.drawFor(bb, Hb, Mb, !1), this.retain(Hb, wb)), wb) {
+            const bb = Hb.owner,
+              Mb = this.thinBundle.add(Hb, wb, bb.getWorldMatrix().m, bb.visibility);
+            pb && this.steadyFrom(Hb, wb, Mb), eb++
           }
         }
-        return Wd
+        return eb
       }
-      steadyFrom(dd, Od, md) {
-        const Wd = dd.owner,
-          Fd = this.Sdd.base(Wd),
-          Rd = Wd.material,
+      steadyFrom(bb, wb, Mb) {
+        const eb = bb.owner,
+          Hb = this.Sbb.base(eb),
+          pb = eb.material,
           {
-            drawState: Xd,
-            instance: Kd
-          } = Od.inputs.retained;
-        if (!Fd || !Rd || 1 !== dd.parts.materials.length || uR(dd) !== Rd) return;
-        const hd = Fd.steady ??= {
-          unit: dd,
-          material: Rd,
+            drawState: Vb,
+            instance: gb
+          } = wb.inputs.retained;
+        if (!Hb || !pb || 1 !== bb.parts.materials.length || cp(bb) !== pb) return;
+        const lb = Hb.steady ??= {
+          unit: bb,
+          material: pb,
           visibility: 1,
-          draw: Od,
-          record: md,
-          drawState: Xd,
-          instance: Kd,
+          draw: wb,
+          record: Mb,
+          drawState: Vb,
+          instance: gb,
           bindGroup: null,
           gpuVersion: -1,
           fitInstances: 0,
@@ -3770,1307 +3770,1307 @@ export const modules = {
           handedFrame: -1,
           phase: this.steadyPhase++ % 8
         };
-        hd.unit = dd, hd.material = Rd, hd.visibility = Wd.visibility, hd.draw = Od, hd.record = md, hd.drawState = Xd, hd.instance = Kd, hd.bindGroup = Kd.bindGroup, hd.gpuVersion = this.resources.gpuBuffersVersion, hd.fitInstances = Od.inputs.fitInstances, hd.worldFlag = Wd.getWorldMatrix().updateFlag, hd.handedFrame = this.frame
+        lb.unit = bb, lb.material = pb, lb.visibility = eb.visibility, lb.draw = wb, lb.record = Mb, lb.drawState = Vb, lb.instance = gb, lb.bindGroup = gb.bindGroup, lb.gpuVersion = this.resources.gpuBuffersVersion, lb.fitInstances = wb.inputs.fitInstances, lb.worldFlag = eb.getWorldMatrix().updateFlag, lb.handedFrame = this.frame
       }
-      keepSteady(dd, Od) {
-        const md = dd.steady;
-        if (md.handedFrame !== this.frame - 1 || (this.frame + md.phase) % 8 === 0) return !1;
-        const Wd = dd.mesh,
+      keepSteady(bb, wb) {
+        const Mb = bb.steady;
+        if (Mb.handedFrame !== this.frame - 1 || (this.frame + Mb.phase) % 8 === 0) return !1;
+        const eb = bb.mesh,
           {
-            unit: Fd,
-            draw: Rd,
-            instance: Xd,
-            drawState: Kd
-          } = md,
-          hd = Wd.forcedInstanceCount || Wd.ndd;
-        if (!Wd.isVisible || Wd.CRd || Wd.visibility !== md.visibility || 0 === (Wd.layerMask & Od.layerMask) || Wd.material !== md.material || 0 !== Wd.renderingGroupId || Wd.hasVertexAlpha || !this.drawDefines.definesHold(Kd, Fd, Kd.instancing) || md.gpuVersion !== this.resources.gpuBuffersVersion || !this.inputsStamped(Rd.inputs, Fd, Kd.instancing, Rd.program) || Rd.program.failed || Xd.released || hd <= 0 || hd > md.fitInstances) return !1;
-        if (Xd.frame !== this.frame && this.bindMaterial(Xd, this.modelUniforms.refreshModelUniforms(Wd.zV(), Xd, Xd.model, this.view)), !Xd.bindable || Xd.bindGroup !== md.bindGroup) return !1;
-        const vd = Wd.computeWorldMatrix(),
-          Qd = vd.updateFlag !== md.worldFlag;
-        return md.worldFlag = vd.updateFlag, Rd.instances = hd, this.thinBundle.addAgain(md.record, Rd, Qd ? vd.m : null, md.visibility), md.handedFrame = this.frame, this.Sdd.drawn++, !0
+            unit: Hb,
+            draw: pb,
+            instance: Vb,
+            drawState: gb
+          } = Mb,
+          lb = eb.forcedInstanceCount || eb.ibb;
+        if (!eb.isVisible || eb.ypb || eb.visibility !== Mb.visibility || 0 === (eb.layerMask & wb.layerMask) || eb.material !== Mb.material || 0 !== eb.renderingGroupId || eb.hasVertexAlpha || !this.drawDefines.definesHold(gb, Hb, gb.instancing) || Mb.gpuVersion !== this.resources.gpuBuffersVersion || !this.inputsStamped(pb.inputs, Hb, gb.instancing, pb.program) || pb.program.failed || Vb.released || lb <= 0 || lb > Mb.fitInstances) return !1;
+        if (Vb.frame !== this.frame && this.bindMaterial(Vb, this.modelUniforms.refreshModelUniforms(eb.RJ(), Vb, Vb.model, this.view)), !Vb.bindable || Vb.bindGroup !== Mb.bindGroup) return !1;
+        const Lb = eb.computeWorldMatrix(),
+          Ib = Lb.updateFlag !== Mb.worldFlag;
+        return Mb.worldFlag = Lb.updateFlag, pb.instances = lb, this.thinBundle.addAgain(Mb.record, pb, Ib ? Lb.m : null, Mb.visibility), Mb.handedFrame = this.frame, this.Sbb.drawn++, !0
       }
-      retainedDraw(dd, Od, md, Wd) {
-        const Fd = this.inputs.get(Od),
-          Rd = null === Fd || void 0 === Fd ? void 0 : Fd.retained;
-        if (!Fd || !Rd) return;
+      retainedDraw(bb, wb, Mb, eb) {
+        const Hb = this.inputs.get(wb),
+          pb = null === Hb || void 0 === Hb ? void 0 : Hb.retained;
+        if (!Hb || !pb) return;
         const {
-          drawState: Xd,
-          program: Kd,
-          instance: hd,
-          instancing: vd
-        } = Rd, Qd = Od.owner;
-        if (KR(Qd) !== vd) return;
-        const td = this.instanceCount(Qd, vd);
-        if (td <= 0) return null;
-        if (hd.released || Kd.failed || Xd.program !== Kd || !this.drawDefines.programCurrent(Xd, Od, vd, md) || !this.inputsStamped(Fd, Od, vd, Kd) || Qd.isUnIndexed !== Rd.unIndexed || this.indexKey(Od) !== Rd.indexData) return;
-        if (Rd.indexBuffer && Rd.gpuVersion !== this.resources.gpuBuffersVersion) {
-          const dd = this.resources.gpuBuffer(Rd.indexData);
-          if (!dd) return;
-          Rd.indexBuffer = dd, Rd.gpuVersion = this.resources.gpuBuffersVersion
+          drawState: Vb,
+          program: gb,
+          instance: lb,
+          instancing: Lb
+        } = pb, Ib = wb.owner;
+        if (pp(Ib) !== Lb) return;
+        const Ob = this.instanceCount(Ib, Lb);
+        if (Ob <= 0) return null;
+        if (lb.released || gb.failed || Vb.program !== gb || !this.drawDefines.programCurrent(Vb, wb, Lb, Mb) || !this.inputsStamped(Hb, wb, Lb, gb) || Ib.isUnIndexed !== pb.unIndexed || this.indexKey(wb) !== pb.indexData) return;
+        if (pb.indexBuffer && pb.gpuVersion !== this.resources.gpuBuffersVersion) {
+          const bb = this.resources.gpuBuffer(pb.indexData);
+          if (!bb) return;
+          pb.indexBuffer = bb, pb.gpuVersion = this.resources.gpuBuffersVersion
         }
-        let od = !1;
-        if (hd.frame !== this.frame && (od = this.modelUniforms.refreshModelUniforms(dd, hd, hd.model, this.view)), !this.bindMaterial(hd, od) || !this.withGpuBuffers(Fd) || !this.instanceBuffersFit(Qd.name, Fd, td)) return null;
-        const Nd = this.makeDraw(Kd, Fd, this.renderStates.renderState(Xd.model, Qd, Wd, Fd.state), hd, td);
-        return this.setRange(Nd, Od, Rd.indexBuffer, Rd.indexData), Nd
+        let Ub = !1;
+        if (lb.frame !== this.frame && (Ub = this.modelUniforms.refreshModelUniforms(bb, lb, lb.model, this.view)), !this.bindMaterial(lb, Ub) || !this.withGpuBuffers(Hb) || !this.instanceBuffersFit(Ib.name, Hb, Ob)) return null;
+        const tb = this.makeDraw(gb, Hb, this.renderStates.renderState(Vb.model, Ib, eb, Hb.state), lb, Ob);
+        return this.setRange(tb, wb, pb.indexBuffer, pb.indexData), tb
       }
-      retain(dd, Od) {
-        const md = this.drawDefines.drawStates.get(dd);
-        if (!Od || !md || md.program !== Od.program) {
-          const Od = this.inputs.get(dd);
-          return void(Od && (Od.retained = null))
+      retain(bb, wb) {
+        const Mb = this.drawDefines.drawStates.get(bb);
+        if (!wb || !Mb || Mb.program !== wb.program) {
+          const wb = this.inputs.get(bb);
+          return void(wb && (wb.retained = null))
         }
-        const Wd = dd.owner,
-          Fd = md.instancing,
-          Rd = this.indexKey(dd),
-          Xd = Od.inputs.retained;
-        Xd ? (Xd.drawState = md, Xd.instancing = Fd, Xd.program = Od.program, Xd.instance = Od.material, Xd.indexData = Rd, Xd.unIndexed = Wd.isUnIndexed, Xd.indexBuffer = Od.indexBuffer, Xd.gpuVersion = this.resources.gpuBuffersVersion) : Od.inputs.retained = {
-          drawState: md,
-          instancing: Fd,
-          program: Od.program,
-          instance: Od.material,
-          indexData: Rd,
-          unIndexed: Wd.isUnIndexed,
-          indexBuffer: Od.indexBuffer,
+        const eb = bb.owner,
+          Hb = Mb.instancing,
+          pb = this.indexKey(bb),
+          Vb = wb.inputs.retained;
+        Vb ? (Vb.drawState = Mb, Vb.instancing = Hb, Vb.program = wb.program, Vb.instance = wb.material, Vb.indexData = pb, Vb.unIndexed = eb.isUnIndexed, Vb.indexBuffer = wb.indexBuffer, Vb.gpuVersion = this.resources.gpuBuffersVersion) : wb.inputs.retained = {
+          drawState: Mb,
+          instancing: Hb,
+          program: wb.program,
+          instance: wb.material,
+          indexData: pb,
+          unIndexed: eb.isUnIndexed,
+          indexBuffer: wb.indexBuffer,
           gpuVersion: this.resources.gpuBuffersVersion
         }
       }
-      drawFor(dd, Od, md, Wd) {
-        const Fd = Od.owner,
-          Rd = uR(Od);
-        if (!Rd) return null;
-        const Xd = Rd.getClassName();
-        let Kd = null;
-        if (function(dd) {
-            return "LinesMesh" === dd.getClassName()
-          }(Fd)) {
-          if (! function(dd) {
-              return "ShaderMaterial" === dd.getClassName() && "color" === dd.shaderPath
-            }(Rd)) return this.warnOnce(`lines:${Xd}`, `A LinesMesh with a ${Xd} is not drawn yet (${Rd.name})`), null;
-          Kd = Fd
-        } else if ("StandardMaterial" !== Xd && "LiteMaterial" !== Xd) return this.warnOnce(`class:${Xd}`, `${Xd} is not drawn yet (${Rd.name})`), null;
-        const hd = KR(Fd),
-          vd = this.instanceCount(Fd, hd);
-        if (vd <= 0) return null;
-        const Qd = Kd ? this.lineProgramFor(Fd, md, hd) : this.drawDefines.programFor(dd, Od, Rd, md, hd);
-        if (!Qd || Qd.failed) return null;
-        const td = Kd ? null : this.drawDefines.drawStates.get(Od).model,
-          od = td ? this.modelInstance(td, Qd) : this.materialInstance(Fd, Qd);
-        let Nd = !1;
-        if (od.frame !== this.frame && (Kd ? Td(od.ubo, Kd) : Nd = this.modelUniforms.refreshModelUniforms(dd, od, od.model, this.view)), !this.bindMaterial(od, Nd)) return null;
-        const qd = this.meshInputs(Od, Qd, hd);
-        if (!qd || !this.instanceBuffersFit(Fd.name, qd, vd)) return null;
-        const Hd = this.indexKey(Od);
-        let yd = null;
-        if (Hd && !Fd.isUnIndexed && (yd = this.resources.gpuBuffer(Hd), !yd)) return null;
-        const bd = this.renderStates.renderState(null !== td && void 0 !== td ? td : Rd, Fd, Wd, qd.state, Kd ? "line-list" : "triangle-list"),
-          pd = this.makeDraw(Qd, qd, bd, od, vd);
-        return this.setRange(pd, Od, yd, Hd), pd
+      drawFor(bb, wb, Mb, eb) {
+        const Hb = wb.owner,
+          pb = cp(wb);
+        if (!pb) return null;
+        const Vb = pb.getClassName();
+        let gb = null;
+        if (function(bb) {
+            return "LinesMesh" === bb.getClassName()
+          }(Hb)) {
+          if (! function(bb) {
+              return "ShaderMaterial" === bb.getClassName() && "color" === bb.shaderPath
+            }(pb)) return this.warnOnce(`lines:${Vb}`, `A LinesMesh with a ${Vb} is not drawn yet (${pb.name})`), null;
+          gb = Hb
+        } else if ("StandardMaterial" !== Vb && "LiteMaterial" !== Vb) return this.warnOnce(`class:${Vb}`, `${Vb} is not drawn yet (${pb.name})`), null;
+        const lb = pp(Hb),
+          Lb = this.instanceCount(Hb, lb);
+        if (Lb <= 0) return null;
+        const Ib = gb ? this.lineProgramFor(Hb, Mb, lb) : this.drawDefines.programFor(bb, wb, pb, Mb, lb);
+        if (!Ib || Ib.failed) return null;
+        const Ob = gb ? null : this.drawDefines.drawStates.get(wb).model,
+          Ub = Ob ? this.modelInstance(Ob, Ib) : this.materialInstance(Hb, Ib);
+        let tb = !1;
+        if (Ub.frame !== this.frame && (gb ? sb(Ub.ubo, gb) : tb = this.modelUniforms.refreshModelUniforms(bb, Ub, Ub.model, this.view)), !this.bindMaterial(Ub, tb)) return null;
+        const Cb = this.meshInputs(wb, Ib, lb);
+        if (!Cb || !this.instanceBuffersFit(Hb.name, Cb, Lb)) return null;
+        const Eb = this.indexKey(wb);
+        let Fb = null;
+        if (Eb && !Hb.isUnIndexed && (Fb = this.resources.gpuBuffer(Eb), !Fb)) return null;
+        const Bb = this.renderStates.renderState(null !== Ob && void 0 !== Ob ? Ob : pb, Hb, eb, Cb.state, gb ? "line-list" : "triangle-list"),
+          mb = this.makeDraw(Ib, Cb, Bb, Ub, Lb);
+        return this.setRange(mb, wb, Fb, Eb), mb
       }
-      indexKey(dd) {
-        const Od = tR(dd);
-        return Od ? this.resources.modelIndex(Od) : null
+      indexKey(bb) {
+        const wb = Lp(bb);
+        return wb ? this.resources.modelIndex(wb) : null
       }
-      setRange(dd, Od, md, Wd) {
-        md && (dd.indexBuffer = md, dd.indexFormat = this.resources.indexFormat(Wd));
-        const Fd = 4 * Od.range + (md ? 0 : 2);
-        dd.unit = Od, dd.first = Od.parts.By[Fd], dd.count = Od.parts.By[Fd + 1]
+      setRange(bb, wb, Mb, eb) {
+        Mb && (bb.indexBuffer = Mb, bb.indexFormat = this.resources.indexFormat(eb));
+        const Hb = 4 * wb.range + (Mb ? 0 : 2);
+        bb.unit = wb, bb.first = wb.parts.gF[Hb], bb.count = wb.parts.gF[Hb + 1]
       }
-      makeDraw(dd, Od, md, Wd, Fd) {
-        Od.state !== md && (Od.state = md, Od.pipelineKey = `${dd.id}|${Od.layout.key}|${md.key}`, Od.pipeline = null);
-        const Rd = Od.draw ??= {
-          program: dd,
-          inputs: Od,
+      makeDraw(bb, wb, Mb, eb, Hb) {
+        wb.state !== Mb && (wb.state = Mb, wb.pipelineKey = `${bb.id}|${wb.layout.key}|${Mb.key}`, wb.pipeline = null);
+        const pb = wb.draw ??= {
+          program: bb,
+          inputs: wb,
           pipelineKey: "",
-          layout: Od.layout,
-          state: md,
-          material: Wd,
+          layout: wb.layout,
+          state: Mb,
+          material: eb,
           slotOffset: 0,
-          vertexBuffers: Od.buffers,
-          vertexOffsets: Od.offsets,
+          vertexBuffers: wb.buffers,
+          vertexOffsets: wb.offsets,
           indexBuffer: null,
           indexFormat: "uint16",
           first: 0,
           count: 0,
-          instances: Fd,
+          instances: Hb,
           unit: null
         };
-        return Rd.program = dd, Rd.pipelineKey = Od.pipelineKey, Rd.state = md, Rd.material = Wd, Rd.vertexOffsets = Od.offsets, Rd.indexBuffer = null, Rd.instances = Fd, Rd
+        return pb.program = bb, pb.pipelineKey = wb.pipelineKey, pb.state = Mb, pb.material = eb, pb.vertexOffsets = wb.offsets, pb.indexBuffer = null, pb.instances = Hb, pb
       }
-      instanceCount(dd, Od) {
-        switch (Od) {
+      instanceCount(bb, wb) {
+        switch (wb) {
           case "thin":
-            return dd.forcedInstanceCount || dd.ndd;
+            return bb.forcedInstanceCount || bb.ibb;
           case "instanced":
-            return this.prepareInstances(dd);
+            return this.prepareInstances(bb);
           case "none":
             return 1
         }
       }
-      prepareInstances(dd) {
-        const Od = function(dd, Od) {
-          const md = Od._userInstancedBuffersStorage,
-            Wd = dd.batchUploads.get(Od);
-          if (Wd) {
-            var Fd;
-            if (Wd.layout === (null !== (Fd = null === md || void 0 === md ? void 0 : md.interleavedKinds) && void 0 !== Fd ? Fd : null)) return Wd;
-            Wd.release()
+      prepareInstances(bb) {
+        const wb = function(bb, wb) {
+          const Mb = wb._userInstancedBuffersStorage,
+            eb = bb.batchUploads.get(wb);
+          if (eb) {
+            var Hb;
+            if (eb.layout === (null !== (Hb = null === Mb || void 0 === Mb ? void 0 : Mb.interleavedKinds) && void 0 !== Hb ? Hb : null)) return eb;
+            eb.release()
           }
-          return new HO(dd, Od, md)
-        }(this.resources, dd);
-        return Od.frame !== this.frame && Od.pack(dd, this.modelMeshes.instanceBatch(dd), this.modelMeshes.worlds, this.frame), Od.count
+          return new tw(bb, wb, Mb)
+        }(this.resources, bb);
+        return wb.frame !== this.frame && wb.pack(bb, this.modelMeshes.instanceBatch(bb), this.modelMeshes.worlds, this.frame), wb.count
       }
-      programWithModel(dd, Od, md) {
-        const Wd = this.modelSlot(dd),
-          Fd = qR(Wd, dd, md),
-          Rd = this.drawDefines.modelPackKind(dd),
-          Xd = Rd ? function(dd, Od, md, Wd) {
-            const Fd = (0, Ud.B)(dd, Ed.h.name),
-              Rd = [];
+      programWithModel(bb, wb, Mb) {
+        const eb = this.modelSlot(bb),
+          Hb = Up(eb, bb, Mb),
+          pb = this.drawDefines.modelPackKind(bb),
+          Vb = pb ? function(bb, wb, Mb, eb) {
+            const Hb = (0, Kb.w)(bb, xb.i.name),
+              pb = [];
             for (const {
-                feature: hd,
-                state: vd,
-                active: Qd
+                feature: lb,
+                state: Lb,
+                active: Ib
               }
-              of dd.features) {
-              var Xd, Kd;
-              const dd = Qd ? null === (Xd = (Kd = (0, AO.i)(hd)).Jq) || void 0 === Xd ? void 0 : Xd.call(Kd, vd) : void 0;
-              dd && Rd.push(dd)
+              of bb.features) {
+              var Vb, gb;
+              const bb = Ib ? null === (Vb = (gb = (0, Aw.e)(lb)).LC) || void 0 === Vb ? void 0 : Vb.call(gb, Lb) : void 0;
+              bb && pb.push(bb)
             }
             return {
-              kind: Od,
-              atlas: null !== Fd && void 0 !== Fd && Fd.active ? (0, Ed.e)(Fd.state) : null,
-              defines: md,
-              ...HX(Rd, Wd)
+              kind: wb,
+              atlas: null !== Hb && void 0 !== Hb && Hb.active ? (0, xb.c)(Hb.state) : null,
+              defines: Mb,
+              ...CV(pb, eb)
             }
-          }(dd, Rd, Od, Wd.fragmentCode) : null;
-        if (Xd && function(dd) {
-            const Od = dd.defines;
-            return (null === dd.atlas || !!Od.DIFFUSE && 1 === Od.DIFFUSEDIRECTUV) && !!Od.NORMAL && !Od.REFLECTION && !Od.EMISSIVEASILLUMINATION && !Od.LINKEMISSIVEWITHDIFFUSE
-          }(Xd)) {
-          const md = this.modelPackProgram(dd, Od, `${Fd}#${Rd}#sp${this.drawDefines.modelPackVariant}`, Wd, Xd);
-          if (md && !md.failed) return md
+          }(bb, pb, wb, eb.fragmentCode) : null;
+        if (Vb && function(bb) {
+            const wb = bb.defines;
+            return (null === bb.atlas || !!wb.DIFFUSE && 1 === wb.DIFFUSEDIRECTUV) && !!wb.NORMAL && !wb.REFLECTION && !wb.EMISSIVEASILLUMINATION && !wb.LINKEMISSIVEWITHDIFFUSE
+          }(Vb)) {
+          const Mb = this.modelPackProgram(bb, wb, `${Hb}#${pb}#sp${this.drawDefines.modelPackVariant}`, eb, Vb);
+          if (Mb && !Mb.failed) return Mb
         }
-        const Kd = this.programs.get(Fd);
-        if (Kd || this.unbuildable.has(Fd)) return null !== Kd && void 0 !== Kd ? Kd : null;
-        let hd;
+        const gb = this.programs.get(Hb);
+        if (gb || this.unbuildable.has(Hb)) return null !== gb && void 0 !== gb ? gb : null;
+        let lb;
         try {
-          hd = VF({
-            defines: vR(Od),
-            vertexCode: Wd.vertexCode,
-            fragmentCode: Wd.fragmentCode,
-            pluginUniforms: Wd.pluginUniforms
+          lb = YH({
+            defines: gp(wb),
+            vertexCode: eb.vertexCode,
+            fragmentCode: eb.fragmentCode,
+            pluginUniforms: eb.pluginUniforms
           })
-        } catch (vd) {
-          return this.unbuildable.add(Fd), this.warnOnce(`build:${Fd}`, `could not build a program for ${dd.name}: ${String(vd)}`), null
+        } catch (Lb) {
+          return this.unbuildable.add(Hb), this.warnOnce(`build:${Hb}`, `could not build a program for ${bb.name}: ${String(Lb)}`), null
         }
-        return this.createProgram(Fd, hd, "standard")
+        return this.createProgram(Hb, lb, "standard")
       }
-      modelPackProgram(dd, Od, md, Wd, Fd) {
-        const Rd = this.programs.get(md);
-        if (Rd || this.unbuildable.has(md)) return null !== Rd && void 0 !== Rd ? Rd : null;
-        const Xd = this.drawDefines.modelPackVariant;
-        let Kd;
+      modelPackProgram(bb, wb, Mb, eb, Hb) {
+        const pb = this.programs.get(Mb);
+        if (pb || this.unbuildable.has(Mb)) return null !== pb && void 0 !== pb ? pb : null;
+        const Vb = this.drawDefines.modelPackVariant;
+        let gb;
         try {
-          const dd = function(dd) {
-              return (0, MO.c)(dd, "model")
-            }(Xd),
-            md = BX(dd, Fd, Wd.vertexCode, Wd.fragmentCode);
-          Kd = VX(VF({
-            defines: vR(Od),
-            ...md,
-            pluginUniforms: Wd.pluginUniforms
-          }), dd, Fd, !!this.sunShadow)
-        } catch (Qd) {
-          return this.unbuildable.add(md), this.warnOnce(`build:${md}`, `could not build a shader pack program for ${dd.name}, which draws without the pack: ${String(Qd)}`), null
+          const bb = function(bb) {
+              return (0, Tw.e)(bb, "model")
+            }(Vb),
+            Mb = RV(bb, Hb, eb.vertexCode, eb.fragmentCode);
+          gb = ZV(YH({
+            defines: gp(wb),
+            ...Mb,
+            pluginUniforms: eb.pluginUniforms
+          }), bb, Hb, !!this.sunShadow)
+        } catch (Ib) {
+          return this.unbuildable.add(Mb), this.warnOnce(`build:${Mb}`, `could not build a shader pack program for ${bb.name}, which draws without the pack: ${String(Ib)}`), null
         }
-        const hd = CR(Xd, !!this.sunShadow),
-          vd = {
-            group: this.packInputs.bindGroupFor(null, hd),
-            layout: IR(this.device, {
+        const lb = Pp(Vb, !!this.sunShadow),
+          Lb = {
+            group: this.packInputs.bindGroupFor(null, lb),
+            layout: ip(this.device, {
               depth: !1,
-              sunShadow: hd
+              sunShadow: lb
             })
           };
-        return this.createProgram(md, Kd, function(dd) {
-          return `standard-sp${dd}`
-        }(Xd), vd)
+        return this.createProgram(Mb, gb, function(bb) {
+          return `standard-sp${bb}`
+        }(Vb), Lb)
       }
-      lineProgramFor(dd, Od, md) {
-        const Wd = bd(dd, md, Od, this.view);
-        let Fd = this.linePrograms.get(Wd);
-        var Rd;
-        return Fd || (Fd = this.createProgram(`lines#${Wd}`, (Rd = function(dd) {
-          const Od = new Map;
-          for (let md = 0; md < vd.length; md++) dd & 1 << md && Od.set(vd[md], !0);
-          return Od
-        }(Wd), GF({
-          defines: Rd,
-          vertex: AF,
-          fragment: rF,
+      lineProgramFor(bb, wb, Mb) {
+        const eb = Bb(bb, Mb, wb, this.view);
+        let Hb = this.linePrograms.get(eb);
+        var pb;
+        return Hb || (Hb = this.createProgram(`lines#${eb}`, (pb = function(bb) {
+          const wb = new Map;
+          for (let Mb = 0; Mb < Lb.length; Mb++) bb & 1 << Mb && wb.set(Lb[Mb], !0);
+          return wb
+        }(eb), WH({
+          defines: pb,
+          vertex: fH,
+          fragment: AH,
           members: [],
           structName: "MaterialUniforms"
-        })), "color"), this.linePrograms.set(Wd, Fd)), Fd
+        })), "color"), this.linePrograms.set(eb, Hb)), Hb
       }
-      createProgram(dd, Od, md) {
-        var Wd;
-        let Fd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        const Rd = this.nextProgramId++,
-          Xd = `${md}-${Rd}`,
-          Kd = GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
-          hd = [{
+      createProgram(bb, wb, Mb) {
+        var eb;
+        let Hb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        const pb = this.nextProgramId++,
+          Vb = `${Mb}-${pb}`,
+          gb = GPUShaderStage.VERTEX | GPUShaderStage.FRAGMENT,
+          lb = [{
             binding: 0,
-            visibility: Kd,
+            visibility: gb,
             buffer: {
               type: "uniform"
             }
           }];
-        for (const td of Od.textures) hd.push({
-          binding: td.binding,
-          visibility: Kd,
+        for (const Ob of wb.textures) lb.push({
+          binding: Ob.binding,
+          visibility: gb,
           texture: {
-            viewDimension: td.dimension
+            viewDimension: Ob.dimension
           }
-        }), hd.push({
-          binding: td.samplerBinding,
-          visibility: Kd,
+        }), lb.push({
+          binding: Ob.samplerBinding,
+          visibility: gb,
           sampler: {}
         });
-        const vd = this.device.createBindGroupLayout({
-            label: Xd,
-            entries: hd
+        const Lb = this.device.createBindGroupLayout({
+            label: Vb,
+            entries: lb
           }),
-          Qd = {
-            key: dd,
-            id: Rd,
-            kind: md,
-            program: Od,
+          Ib = {
+            key: bb,
+            id: pb,
+            kind: Mb,
+            program: wb,
             vertex: this.device.createShaderModule({
-              label: `${Xd}-vertex`,
-              code: Od.vertex
+              label: `${Vb}-vertex`,
+              code: wb.vertex
             }),
             fragment: this.device.createShaderModule({
-              label: `${Xd}-fragment`,
-              code: Od.fragment
+              label: `${Vb}-fragment`,
+              code: wb.fragment
             }),
-            materialLayout: vd,
+            materialLayout: Lb,
             pipelineLayout: this.device.createPipelineLayout({
-              label: Xd,
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, vd, ...Fd ? [Fd.layout] : []]
+              label: Vb,
+              bindGroupLayouts: [this.sceneLayout, this.frameLayout, Lb, ...Hb ? [Hb.layout] : []]
             }),
-            packGroup: null !== (Wd = null === Fd || void 0 === Fd ? void 0 : Fd.group) && void 0 !== Wd ? Wd : null,
+            packGroup: null !== (eb = null === Hb || void 0 === Hb ? void 0 : Hb.group) && void 0 !== eb ? eb : null,
             failed: !1
           };
-        return this.programs.set(dd, Qd), Qd
+        return this.programs.set(bb, Ib), Ib
       }
       writeFrameUniforms() {
-        const dd = this.frameUniforms;
-        gR(this.view, dd), this.device.queue.writeBuffer(this.frameBuffer, 0, dd)
+        const bb = this.frameUniforms;
+        mp(this.view, bb), this.device.queue.writeBuffer(this.frameBuffer, 0, bb)
       }
-      materialInstance(dd, Od) {
-        let md = this.materials.get(dd);
-        if (!md) {
-          const Od = new Map;
-          this.materials.set(dd, Od);
+      materialInstance(bb, wb) {
+        let Mb = this.materials.get(bb);
+        if (!Mb) {
+          const wb = new Map;
+          this.materials.set(bb, wb);
           const {
-            resources: Wd,
-            materials: Fd
+            resources: eb,
+            materials: Hb
           } = this;
-          dd.cV.addOnce((() => {
-            for (const dd of Od.values()) dd.released = !0, Wd.destroyBuffer(dd.buffer);
-            Fd.delete(dd)
-          })), md = Od
+          bb.vJ.addOnce((() => {
+            for (const bb of wb.values()) bb.released = !0, eb.destroyBuffer(bb.buffer);
+            Hb.delete(bb)
+          })), Mb = wb
         }
-        let Wd = md.get(Od.key);
-        return Wd || (Wd = this.newMaterialInstance(dd, null, Od), md.set(Od.key, Wd)), Wd
+        let eb = Mb.get(wb.key);
+        return eb || (eb = this.newMaterialInstance(bb, null, wb), Mb.set(wb.key, eb)), eb
       }
-      modelInstance(dd, Od) {
-        const md = this.modelSlot(dd);
-        let Wd = md.instances.get(Od.key);
-        return Wd || (Wd = this.newMaterialInstance(dd, dd, Od), md.instances.set(Od.key, Wd)), Wd
+      modelInstance(bb, wb) {
+        const Mb = this.modelSlot(bb);
+        let eb = Mb.instances.get(wb.key);
+        return eb || (eb = this.newMaterialInstance(bb, bb, wb), Mb.instances.set(wb.key, eb)), eb
       }
-      modelSlot(dd) {
-        var Od;
-        let md = dd.gpu[Bd.c.lite];
-        return (null === (Od = md) || void 0 === Od ? void 0 : Od.epoch) !== this.resources.epoch && (md = new AX(this.resources, this.resources.epoch), dd.gpu[Bd.c.lite] = md), md
+      modelSlot(bb) {
+        var wb;
+        let Mb = bb.gpu[Rb.g.lite];
+        return (null === (wb = Mb) || void 0 === wb ? void 0 : wb.epoch) !== this.resources.epoch && (Mb = new AV(this.resources, this.resources.epoch), bb.gpu[Rb.g.lite] = Mb), Mb
       }
-      newMaterialInstance(dd, Od, md) {
-        const Wd = md.program.material.floats,
-          Fd = new Float32Array(Wd),
-          Rd = new Map;
+      newMaterialInstance(bb, wb, Mb) {
+        const eb = Mb.program.material.floats,
+          Hb = new Float32Array(eb),
+          pb = new Map;
         return {
-          owner: dd,
-          model: Od,
-          program: md,
-          data: Fd,
-          uploaded: new Float32Array(Wd).fill(Number.NaN),
+          owner: bb,
+          model: wb,
+          program: Mb,
+          data: Hb,
+          uploaded: new Float32Array(eb).fill(Number.NaN),
           buffer: this.device.createBuffer({
-            label: `${dd.name}-uniforms`,
-            size: Math.max(16, 4 * Wd),
+            label: `${bb.name}-uniforms`,
+            size: Math.max(16, 4 * eb),
             usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
           }),
-          textures: Rd,
-          ubo: new YR(md.program.material.slots, Fd, Rd),
+          textures: pb,
+          ubo: new sp(Mb.program.material.slots, Hb, pb),
           bindGroup: null,
-          bound: new Array(2 * md.program.textures.length).fill(null),
+          bound: new Array(2 * Mb.program.textures.length).fill(null),
           frame: -1,
           bindable: !1,
           released: !1,
           heldVersion: -1
         }
       }
-      pushEarthSky(dd) {
-        var Od;
-        const md = this.earthSkyProgram ??= this.createProgram("earthSky", {
-            vertex: cF + jF,
-            fragment: cF + DF,
+      pushEarthSky(bb) {
+        var wb;
+        const Mb = this.earthSkyProgram ??= this.createProgram("earthSky", {
+            vertex: QH + GH,
+            fragment: QH + qH,
             attributes: [],
-            material: zF,
+            material: vH,
             textures: []
           }, "earthSky"),
-          Wd = this.earthSkyUniforms ??= this.newMaterialInstance(iX, null, md);
-        this.earthSkyFrom !== dd && (this.earthSkyFrom = dd, Wd.data.fill(0)), MF(Wd.ubo, dd, this.view);
-        const Fd = this.vertexInputs(md, iX, "earthSky", md, null);
-        if (md.failed || !Fd || !this.bindMaterial(Wd, !1)) return;
-        const Rd = null !== (Od = Fd.state) && void 0 !== Od ? Od : this.renderStates.stateFor(0, !1, 0, "none", "cw", 0, 0, !0, "triangle-list"),
-          Xd = this.makeDraw(md, Fd, Rd, Wd, 1);
-        Xd.count = nF.length;
-        const Kd = dR(dd, this.view);
-        Xd.slotOffset = this.writeMeshSlot(Kd, 1), this.lists.skyDraws.push(Xd)
+          eb = this.earthSkyUniforms ??= this.newMaterialInstance(fV, null, Mb);
+        this.earthSkyFrom !== bb && (this.earthSkyFrom = bb, eb.data.fill(0)), oH(eb.ubo, bb, this.view);
+        const Hb = this.vertexInputs(Mb, fV, "earthSky", Mb, null);
+        if (Mb.failed || !Hb || !this.bindMaterial(eb, !1)) return;
+        const pb = null !== (wb = Hb.state) && void 0 !== wb ? wb : this.renderStates.stateFor(0, !1, 0, "none", "cw", 0, 0, !0, "triangle-list"),
+          Vb = this.makeDraw(Mb, Hb, pb, eb, 1);
+        Vb.count = JH.length;
+        const gb = TH(bb, this.view);
+        Vb.slotOffset = this.writeMeshSlot(gb, 1), this.lists.skyDraws.push(Vb)
       }
-      uploadIfChanged(dd) {
+      uploadIfChanged(bb) {
         const {
-          data: Od,
-          uploaded: md
-        } = dd;
-        for (let Wd = 0; Wd < Od.length; Wd++)
-          if (Od[Wd] !== md[Wd]) return md.set(Od), void this.device.queue.writeBuffer(dd.buffer, 0, Od)
+          data: wb,
+          uploaded: Mb
+        } = bb;
+        for (let eb = 0; eb < wb.length; eb++)
+          if (wb[eb] !== Mb[eb]) return Mb.set(wb), void this.device.queue.writeBuffer(bb.buffer, 0, wb)
       }
-      bindMaterial(dd, Od) {
-        return dd.frame !== this.frame && (dd.frame = this.frame, Od || this.uploadIfChanged(dd), dd.bindable = this.bindTextures(dd)), dd.bindable
+      bindMaterial(bb, wb) {
+        return bb.frame !== this.frame && (bb.frame = this.frame, wb || this.uploadIfChanged(bb), bb.bindable = this.bindTextures(bb)), bb.bindable
       }
-      bindTextures(dd) {
+      bindTextures(bb) {
         const {
-          program: Od,
-          bound: md
-        } = dd, Wd = Od.program.textures;
-        let Fd = !dd.bindGroup,
-          Rd = !0;
-        for (let Xd = 0; Xd < Wd.length; Xd++) {
-          const Od = dd.textures.get(Wd[Xd].name),
-            Kd = Od ? this.resources.boundTexture(Od) : null;
-          Kd ? md[2 * Xd] === Kd.view && md[2 * Xd + 1] === Kd.sampler || (md[2 * Xd] = Kd.view, md[2 * Xd + 1] = Kd.sampler, Fd = !0) : (Od || dd.ubo.expected.has(Wd[Xd].name) || this.warnOnce(`texture:${dd.owner.name}:${Wd[Xd].name}`, `${dd.owner.name} has no ${Wd[Xd].name}`), Rd = !1)
+          program: wb,
+          bound: Mb
+        } = bb, eb = wb.program.textures;
+        let Hb = !bb.bindGroup,
+          pb = !0;
+        for (let Vb = 0; Vb < eb.length; Vb++) {
+          const wb = bb.textures.get(eb[Vb].name),
+            gb = wb ? this.resources.boundTexture(wb) : null;
+          gb ? Mb[2 * Vb] === gb.view && Mb[2 * Vb + 1] === gb.sampler || (Mb[2 * Vb] = gb.view, Mb[2 * Vb + 1] = gb.sampler, Hb = !0) : (wb || bb.ubo.expected.has(eb[Vb].name) || this.warnOnce(`texture:${bb.owner.name}:${eb[Vb].name}`, `${bb.owner.name} has no ${eb[Vb].name}`), pb = !1)
         }
-        if (!Rd) return Fd && (dd.bindGroup = null), !1;
-        if (Fd) {
-          const Fd = [{
+        if (!pb) return Hb && (bb.bindGroup = null), !1;
+        if (Hb) {
+          const Hb = [{
             binding: 0,
             resource: {
-              buffer: dd.buffer
+              buffer: bb.buffer
             }
           }];
-          for (let dd = 0; dd < Wd.length; dd++) Fd.push({
-            binding: Wd[dd].binding,
-            resource: md[2 * dd]
-          }), Fd.push({
-            binding: Wd[dd].samplerBinding,
-            resource: md[2 * dd + 1]
+          for (let bb = 0; bb < eb.length; bb++) Hb.push({
+            binding: eb[bb].binding,
+            resource: Mb[2 * bb]
+          }), Hb.push({
+            binding: eb[bb].samplerBinding,
+            resource: Mb[2 * bb + 1]
           });
-          dd.bindGroup = this.device.createBindGroup({
-            label: `${dd.owner.name}-material`,
-            layout: Od.materialLayout,
-            entries: Fd
+          bb.bindGroup = this.device.createBindGroup({
+            label: `${bb.owner.name}-material`,
+            layout: wb.materialLayout,
+            entries: Hb
           })
         }
         return !0
       }
-      writeMeshSlot(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return this.meshSlots.ensure(this.slotCount + 1), this.meshSlots.write(this.slotCount, dd, Od, md), this.slotCount++ * oF
+      writeMeshSlot(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return this.meshSlots.ensure(this.slotCount + 1), this.meshSlots.write(this.slotCount, bb, wb, Mb), this.slotCount++ * IH
       }
       uploadMeshSlots() {
         this.slotCount > 0 && this.meshSlots.upload(0, this.slotCount)
       }
-      vertexInputs(dd, Od, md, Wd, Fd) {
-        let Rd = this.inputs.get(dd);
-        if (!Rd || Rd.program !== Wd || !xR(Od, Rd, this.resources, Fd)) {
-          var Xd;
-          if (Rd = null !== (Xd = this.vertexLayouts.resolveInputs(Od, md, Wd, Fd)) && void 0 !== Xd ? Xd : void 0, !Rd) return null;
-          this.inputs.set(dd, Rd)
+      vertexInputs(bb, wb, Mb, eb, Hb) {
+        let pb = this.inputs.get(bb);
+        if (!pb || pb.program !== eb || !Kp(wb, pb, this.resources, Hb)) {
+          var Vb;
+          if (pb = null !== (Vb = this.vertexLayouts.resolveInputs(wb, Mb, eb, Hb)) && void 0 !== Vb ? Vb : void 0, !pb) return null;
+          this.inputs.set(bb, pb)
         }
-        return this.withGpuBuffers(Rd)
+        return this.withGpuBuffers(pb)
       }
-      meshInputs(dd, Od, md) {
-        const Wd = this.inputs.get(dd);
-        if (Wd && this.inputsStamped(Wd, dd, md, Od)) return this.withGpuBuffers(Wd);
-        const Fd = dd.owner,
-          Rd = tR(dd),
-          Xd = this.vertexInputs(dd, Fd, Fd.name, Od, Rd);
-        return Xd && (Xd.geometry = oR(dd), Xd.instanceLayout = this.drawDefines.instanceLayout(Fd, md)), Xd
+      meshInputs(bb, wb, Mb) {
+        const eb = this.inputs.get(bb);
+        if (eb && this.inputsStamped(eb, bb, Mb, wb)) return this.withGpuBuffers(eb);
+        const Hb = bb.owner,
+          pb = Lp(bb),
+          Vb = this.vertexInputs(bb, Hb, Hb.name, wb, pb);
+        return Vb && (Vb.geometry = Ip(bb), Vb.instanceLayout = this.drawDefines.instanceLayout(Hb, Mb)), Vb
       }
-      inputsStamped(dd, Od, md, Wd) {
-        return function(dd, Od, md, Wd) {
-          return dd.program === md && dd.geometry === oR(Od) && dd.instanceLayout === Wd
-        }(dd, Od, Wd, this.drawDefines.instanceLayout(Od.owner, md))
+      inputsStamped(bb, wb, Mb, eb) {
+        return function(bb, wb, Mb, eb) {
+          return bb.program === Mb && bb.geometry === Ip(wb) && bb.instanceLayout === eb
+        }(bb, wb, eb, this.drawDefines.instanceLayout(wb.owner, Mb))
       }
-      withGpuBuffers(dd) {
-        return fR(dd, this.resources, this.zeroBuffer) ? dd : null
+      withGpuBuffers(bb) {
+        return op(bb, this.resources, this.zeroBuffer) ? bb : null
       }
-      instanceBuffersFit(dd, Od, md) {
-        const Wd = dX(Od, md, this.resources, this.zeroBuffer);
-        if (Wd) {
-          const Fd = Od.ends[Wd.index] - Od.offsets[Wd.index] + Od.idd[Wd.index];
-          return this.warnOnce(`overrun:${dd}`, `${dd} draws ${md} instances from a ${Fd}-byte buffer (${Wd.needed} needed)`), !1
+      instanceBuffersFit(bb, wb, Mb) {
+        const eb = kp(wb, Mb, this.resources, this.zeroBuffer);
+        if (eb) {
+          const Hb = wb.ends[eb.index] - wb.offsets[eb.index] + wb.Qbb[eb.index];
+          return this.warnOnce(`overrun:${bb}`, `${bb} draws ${Mb} instances from a ${Hb}-byte buffer (${eb.needed} needed)`), !1
         }
         return !0
       }
-      createBinding(dd, Od, md, Wd) {
-        const Fd = `${Od._colorFormat}|${Od._depthStencilFormat}|${Od._depthCompare}|${Od._sampleCount}`,
-          Rd = sO(this.device, Od);
-        if (dd === this.skyLastRenderable) {
-          let md = null;
+      createBinding(bb, wb, Mb, eb) {
+        const Hb = `${wb._colorFormat}|${wb._depthStencilFormat}|${wb._depthCompare}|${wb._sampleCount}`,
+          pb = Dw(this.device, wb);
+        if (bb === this.skyLastRenderable) {
+          let Mb = null;
           return {
-            renderable: dd,
-            pipeline: Rd,
-            draw: dd => md ? this.drawSky(dd, Od, Fd, md) : 0,
-            update: dd => {
-              md = dd
+            renderable: bb,
+            pipeline: pb,
+            draw: bb => Mb ? this.drawSky(bb, wb, Hb, Mb) : 0,
+            update: bb => {
+              Mb = bb
             }
           }
         }
         return {
-          renderable: dd,
-          pipeline: Rd,
-          draw: dd => (Wd ? Wd.execute(dd, Od, Fd) : 0) + this.drawList(dd, Od, Fd, md)
+          renderable: bb,
+          pipeline: pb,
+          draw: bb => (eb ? eb.execute(bb, wb, Hb) : 0) + this.drawList(bb, wb, Hb, Mb)
         }
       }
-      drawSky(dd, Od, md, Wd) {
-        const Fd = this.lists.skyDraws,
-          Rd = Fd.length > 0;
-        if (Rd) {
-          var Xd;
-          const md = (null !== (Xd = Od._depthCompare) && void 0 !== Xd ? Xd : UO).startsWith("greater") ? 0 : 1;
-          dd.setViewport(0, 0, Wd.targetWidth, Wd.targetHeight, md, md)
+      drawSky(bb, wb, Mb, eb) {
+        const Hb = this.lists.skyDraws,
+          pb = Hb.length > 0;
+        if (pb) {
+          var Vb;
+          const Mb = (null !== (Vb = wb._depthCompare) && void 0 !== Vb ? Vb : jw).startsWith("greater") ? 0 : 1;
+          bb.setViewport(0, 0, eb.targetWidth, eb.targetHeight, Mb, Mb)
         }
-        const Kd = this.drawList(dd, Od, md, Fd);
-        return Rd && dd.setViewport(0, 0, Wd.targetWidth, Wd.targetHeight, 0, 1), Kd
+        const gb = this.drawList(bb, wb, Mb, Hb);
+        return pb && bb.setViewport(0, 0, eb.targetWidth, eb.targetHeight, 0, 1), gb
       }
-      drawList(dd, Od, md, Wd) {
-        let Fd = 0;
-        const Rd = this.binder;
-        Rd.reset();
-        for (const Xd of Wd) {
-          const Wd = this.pipelineFor(Xd, Od, md);
-          Wd && (Rd.bind(dd, Xd, Wd, this.meshSlots.bindGroup, Xd.slotOffset), Xd.indexBuffer ? dd.drawIndexed(Xd.count, Xd.instances, Xd.first, 0, 0) : dd.draw(Xd.count, Xd.instances, Xd.first, 0), Fd++)
+      drawList(bb, wb, Mb, eb) {
+        let Hb = 0;
+        const pb = this.binder;
+        pb.reset();
+        for (const Vb of eb) {
+          const eb = this.pipelineFor(Vb, wb, Mb);
+          eb && (pb.bind(bb, Vb, eb, this.meshSlots.bindGroup, Vb.slotOffset), Vb.indexBuffer ? bb.drawIndexed(Vb.count, Vb.instances, Vb.first, 0, 0) : bb.draw(Vb.count, Vb.instances, Vb.first, 0), Hb++)
         }
-        return Fd
+        return Hb
       }
-      pipelineFor(dd, Od, md) {
-        var Wd, Fd;
-        if (dd.program.failed) return null;
-        const Rd = dd.inputs;
-        if (Rd.pipeline && Rd.pipelineTarget === md) return Rd.pipeline;
-        const Xd = `${dd.pipelineKey}|${md}`,
-          Kd = this.pipelines.get(Xd);
-        if (void 0 !== Kd) return Kd && (Rd.pipeline = Kd, Rd.pipelineTarget = md), Kd || null;
-        this.pipelines.set(Xd, null);
+      pipelineFor(bb, wb, Mb) {
+        var eb, Hb;
+        if (bb.program.failed) return null;
+        const pb = bb.inputs;
+        if (pb.pipeline && pb.pipelineTarget === Mb) return pb.pipeline;
+        const Vb = `${bb.pipelineKey}|${Mb}`,
+          gb = this.pipelines.get(Vb);
+        if (void 0 !== gb) return gb && (pb.pipeline = gb, pb.pipelineTarget = Mb), gb || null;
+        this.pipelines.set(Vb, null);
         const {
-          program: hd,
-          layout: vd,
-          state: Qd
-        } = dd, td = {
-          label: `standard-${hd.id}`,
-          layout: hd.pipelineLayout,
+          program: lb,
+          layout: Lb,
+          state: Ib
+        } = bb, Ob = {
+          label: `standard-${lb.id}`,
+          layout: lb.pipelineLayout,
           vertex: {
-            module: hd.vertex,
+            module: lb.vertex,
             entryPoint: "main",
-            buffers: vd.buffers
+            buffers: Lb.buffers
           },
-          fragment: YO({
-            module: hd.fragment,
+          fragment: sw({
+            module: lb.fragment,
             entryPoint: "main"
-          }, Od, Qd.blend, Qd.colourWrite),
-          depthStencil: Od._depthStencilFormat ? {
-            format: Od._depthStencilFormat,
-            depthCompare: null !== (Wd = null !== (Fd = Qd.depthCompare) && void 0 !== Fd ? Fd : Od._depthCompare) && void 0 !== Wd ? Wd : UO,
-            depthWriteEnabled: Qd.depthWrite,
-            depthBias: Qd.depthBias,
-            depthBiasSlopeScale: Qd.depthBiasSlopeScale
+          }, wb, Ib.blend, Ib.colourWrite),
+          depthStencil: wb._depthStencilFormat ? {
+            format: wb._depthStencilFormat,
+            depthCompare: null !== (eb = null !== (Hb = Ib.depthCompare) && void 0 !== Hb ? Hb : wb._depthCompare) && void 0 !== eb ? eb : jw,
+            depthWriteEnabled: Ib.depthWrite,
+            depthBias: Ib.depthBias,
+            depthBiasSlopeScale: Ib.depthBiasSlopeScale
           } : void 0,
           multisample: {
-            count: Od._sampleCount
+            count: wb._sampleCount
           },
           primitive: {
-            topology: Qd.topology,
-            frontFace: Qd.frontFace,
-            cullMode: Qd.cullMode
+            topology: Ib.topology,
+            frontFace: Ib.frontFace,
+            cullMode: Ib.cullMode
           }
         };
-        return this.compiling++, this.device.createRenderPipelineAsync(td).then((dd => {
-          this.compiling--, this.pipelines.set(Xd, dd)
-        }), (dd => {
-          this.compiling--, this.reportFailure(hd, Xd, dd)
+        return this.compiling++, this.device.createRenderPipelineAsync(Ob).then((bb => {
+          this.compiling--, this.pipelines.set(Vb, bb)
+        }), (bb => {
+          this.compiling--, this.reportFailure(lb, Vb, bb)
         })), null
       }
-      forEachSunShadowCaster(dd) {
-        const Od = this.caster,
-          md = (md, Wd, Fd) => {
-            const Rd = md.unit && function(dd) {
-              const Od = dd.material.model;
-              return null !== Od && (Od.lifeform || Od.item) && Od.castsSunShadow && "triangle-list" === dd.state.topology
-            }(md) ? tR(md.unit) : null;
-            if (!Rd) return;
-            const Xd = md.unit.owner;
-            switch (Od.geometry = Rd, Od.skip = Xd.noSunShadowVertices, Od.indexed = null !== md.indexBuffer, Od.first = md.first, Od.count = md.count, Od.Bt = Wd, Od.worldAt = Fd, Od.instances = null, Od.instanceCount = 1, Od.thin = !1, KR(Xd)) {
+      forEachSunShadowCaster(bb) {
+        const wb = this.caster,
+          Mb = (Mb, eb, Hb) => {
+            const pb = Mb.unit && function(bb) {
+              const wb = bb.material.model;
+              return null !== wb && (wb.lifeform || wb.item) && wb.castsSunShadow && "triangle-list" === bb.state.topology
+            }(Mb) ? Lp(Mb.unit) : null;
+            if (!pb) return;
+            const Vb = Mb.unit.owner;
+            switch (wb.geometry = pb, wb.skip = Vb.noSunShadowVertices, wb.indexed = null !== Mb.indexBuffer, wb.first = Mb.first, wb.count = Mb.count, wb.XO = eb, wb.worldAt = Hb, wb.instances = null, wb.instanceCount = 1, wb.thin = !1, pp(Vb)) {
               case "thin": {
-                const dd = Xd._thinInstanceDataStorage.matrixData;
-                if (!dd) return;
-                Od.instances = dd, Od.instanceCount = Math.min(md.instances, dd.length / 16), Od.thin = !0;
+                const bb = Vb._thinInstanceDataStorage.matrixData;
+                if (!bb) return;
+                wb.instances = bb, wb.instanceCount = Math.min(Mb.instances, bb.length / 16), wb.thin = !0;
                 break
               }
               case "instanced": {
-                const dd = this.resources.batchUploads.get(Xd);
-                if (!dd || dd.frame !== this.frame || !this.writeBatchCasters(dd)) return;
+                const bb = this.resources.batchUploads.get(Vb);
+                if (!bb || bb.frame !== this.frame || !this.writeBatchCasters(bb)) return;
                 break
               }
             }
-            dd(Od)
+            bb(wb)
           };
-        for (const Wd of this.lists.opaqueDraws) md(Wd, this.meshSlots.data, Wd.slotOffset / 4);
-        this.thinBundle.forEachDrawn(md)
+        for (const eb of this.lists.opaqueDraws) Mb(eb, this.meshSlots.data, eb.slotOffset / 4);
+        this.thinBundle.forEachDrawn(Mb)
       }
-      writeBatchCasters(dd) {
+      writeBatchCasters(bb) {
         const {
-          caster: Od
-        } = this, md = dd.packedMatrices, Wd = dd.count;
-        Od.instances = md, Od.instanceCount = Wd;
-        let Fd = -1;
-        for (let Rd = 0; Rd < Wd; Rd++) {
-          const Od = nX(dd.packedRowMesh(Rd));
-          Od && Fd < 0 ? (this.casterWorlds.length < 16 * Wd && (this.casterWorlds = new Float32Array(md.length)), this.casterWorlds.set(md.subarray(0, 16 * Rd)), Fd = Rd) : !Od && Fd >= 0 && (this.casterWorlds.set(md.subarray(16 * Rd, 16 * Rd + 16), 16 * Fd), Fd++)
+          caster: wb
+        } = this, Mb = bb.packedMatrices, eb = bb.count;
+        wb.instances = Mb, wb.instanceCount = eb;
+        let Hb = -1;
+        for (let pb = 0; pb < eb; pb++) {
+          const wb = SV(bb.packedRowMesh(pb));
+          wb && Hb < 0 ? (this.casterWorlds.length < 16 * eb && (this.casterWorlds = new Float32Array(Mb.length)), this.casterWorlds.set(Mb.subarray(0, 16 * pb)), Hb = pb) : !wb && Hb >= 0 && (this.casterWorlds.set(Mb.subarray(16 * pb, 16 * pb + 16), 16 * Hb), Hb++)
         }
-        return Fd >= 0 && (Od.instances = this.casterWorlds, Od.instanceCount = Fd), Od.instanceCount > 0
+        return Hb >= 0 && (wb.instances = this.casterWorlds, wb.instanceCount = Hb), wb.instanceCount > 0
       }
-      async reportFailure(dd, Od, md) {
-        const Wd = [];
-        let Fd = !0;
-        for (const [Rd, Xd] of [
-            ["vertex", dd.vertex],
-            ["fragment", dd.fragment]
+      async reportFailure(bb, wb, Mb) {
+        const eb = [];
+        let Hb = !0;
+        for (const [pb, Vb] of [
+            ["vertex", bb.vertex],
+            ["fragment", bb.fragment]
           ]) {
-          const dd = await Xd.getCompilationInfo();
-          for (const Od of dd.messages) Fd &&= "error" !== Od.type, Wd.push(`${Rd}:${Od.lineNum}:${Od.linePos} ${Od.type}: ${Od.message}`)
+          const bb = await Vb.getCompilationInfo();
+          for (const wb of bb.messages) Hb &&= "error" !== wb.type, eb.push(`${pb}:${wb.lineNum}:${wb.linePos} ${wb.type}: ${wb.message}`)
         }
-        if (Fd && !dd.packGroup) return this.pipelines.set(Od, !1), console.error(`Lite: pipeline ${Od} failed`, md), void oO(this.device, "mesh", dd.kind, md);
-        dd.failed || (dd.failed = !0, console.error(`Lite: program ${dd.id} failed`, md, Wd.join("\n"), {
-          program: dd.program,
-          key: dd.key
-        }), oO(this.device, "mesh", dd.kind, md, Fd ? null : Wd[0]))
+        if (Hb && !bb.packGroup) return this.pipelines.set(wb, !1), console.error(`Lite: pipeline ${wb} failed`, Mb), void Iw(this.device, "mesh", bb.kind, Mb);
+        bb.failed || (bb.failed = !0, console.error(`Lite: program ${bb.id} failed`, Mb, eb.join("\n"), {
+          program: bb.program,
+          key: bb.key
+        }), Iw(this.device, "mesh", bb.kind, Mb, Hb ? null : eb[0]))
       }
     }
 
-    function nX(dd) {
-      var Od, md;
-      const Wd = null === (Od = dd.xG) || void 0 === Od || null === (md = Od.aShaderPackItem) || void 0 === md ? void 0 : md.x;
-      return void 0 !== Wd && 0 !== (Wd & VO.g)
+    function SV(bb) {
+      var wb, Mb;
+      const eb = null === (wb = bb.hN) || void 0 === wb || null === (Mb = wb.aShaderPackItem) || void 0 === Mb ? void 0 : Mb.x;
+      return void 0 !== eb && 0 !== (eb & Zw.l)
     }
-    var LX = md(54100),
-      PX = md(54105),
-      zX = md(54114),
-      cX = md(54063);
-    const jX = [0, 3, 1, 4, 2, 5];
+    var NV = Mb(53900),
+      vV = Mb(53909),
+      QV = Mb(53913),
+      GV = Mb(53865);
+    const qV = [0, 3, 1, 4, 2, 5];
 
-    function DX(dd, Od, md, Wd, Fd) {
-      const Rd = md[0].width;
+    function aV(bb, wb, Mb, eb, Hb) {
+      const pb = Mb[0].width;
       try {
-        return Fd ? function(dd, Od, md) {
-          const Wd = (0, cX.c)(dd, md, md, 6);
-          for (let Fd = 0; Fd < 6; Fd++)(0, cX.e)(dd, Wd, Fd, Od[jX[Fd]], {
+        return Hb ? function(bb, wb, Mb) {
+          const eb = (0, GV.d)(bb, Mb, Mb, 6);
+          for (let Hb = 0; Hb < 6; Hb++)(0, GV.h)(bb, eb, Hb, wb[qV[Hb]], {
             invertY: !1
           });
-          return Wd.texture
-        }(dd, md, Rd) : function(dd, Od, md, Wd) {
-          const Fd = dd.createTexture({
+          return eb.texture
+        }(bb, Mb, pb) : function(bb, wb, Mb, eb) {
+          const Hb = bb.createTexture({
             label: "sink-cube",
             size: {
-              width: md,
-              height: md,
+              width: Mb,
+              height: Mb,
               depthOrArrayLayers: 6
             },
-            format: Wd,
+            format: eb,
             usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST | GPUTextureUsage.RENDER_ATTACHMENT
           });
-          for (let Rd = 0; Rd < 6; Rd++) dd.queue.copyExternalImageToTexture({
-            source: Od[jX[Rd]]
+          for (let pb = 0; pb < 6; pb++) bb.queue.copyExternalImageToTexture({
+            source: wb[qV[pb]]
           }, {
-            texture: Fd,
+            texture: Hb,
             origin: {
               x: 0,
               y: 0,
-              z: Rd
+              z: pb
             }
           }, {
-            width: md,
-            height: md
+            width: Mb,
+            height: Mb
           });
-          return Fd
-        }(Od, md, Rd, 1 === Wd ? "r8unorm" : "rgba8unorm")
+          return Hb
+        }(wb, Mb, pb, 1 === eb ? "r8unorm" : "rgba8unorm")
       } finally {
-        eX(md)
+        iV(Mb)
       }
     }
 
-    function eX(dd) {
-      for (const Od of null !== dd && void 0 !== dd ? dd : []) null === Od || void 0 === Od || Od.close()
+    function iV(bb) {
+      for (const wb of null !== bb && void 0 !== bb ? bb : []) null === wb || void 0 === wb || wb.close()
     }
-    async function IX(dd) {
-      const Od = [],
-        md = [];
-      if (await Promise.all(dd.map(((dd, Wd) => (Od[Wd] = null, dd.then((dd => {
-          Od[Wd] = dd
-        }), (dd => {
-          md.push(dd)
-        })))))), md.length > 0) throw eX(Od), md[0];
-      return Od
+    async function uV(bb) {
+      const wb = [],
+        Mb = [];
+      if (await Promise.all(bb.map(((bb, eb) => (wb[eb] = null, bb.then((bb => {
+          wb[eb] = bb
+        }), (bb => {
+          Mb.push(bb)
+        })))))), Mb.length > 0) throw iV(wb), Mb[0];
+      return wb
     }
-    class lX {
-      constructor(dd) {
-        this.Mt = dd, this.starts = [], this.lengths = [], this.used = 0, dd > 0 && (this.starts.push(0), this.lengths.push(dd))
+    class dV {
+      constructor(bb) {
+        this.qO = bb, this.starts = [], this.lengths = [], this.used = 0, bb > 0 && (this.starts.push(0), this.lengths.push(bb))
       }
-      allocate(dd) {
+      allocate(bb) {
         const {
-          starts: Od,
-          lengths: md
+          starts: wb,
+          lengths: Mb
         } = this;
-        for (let Wd = 0; Wd < Od.length; Wd++) {
-          if (md[Wd] < dd) continue;
-          const Fd = Od[Wd];
-          return md[Wd] === dd ? (Od.splice(Wd, 1), md.splice(Wd, 1)) : (Od[Wd] += dd, md[Wd] -= dd), this.used += dd, Fd
+        for (let eb = 0; eb < wb.length; eb++) {
+          if (Mb[eb] < bb) continue;
+          const Hb = wb[eb];
+          return Mb[eb] === bb ? (wb.splice(eb, 1), Mb.splice(eb, 1)) : (wb[eb] += bb, Mb[eb] -= bb), this.used += bb, Hb
         }
         return -1
       }
-      free(dd, Od) {
-        this.used -= Od;
-        const md = Math.min(dd + Od, this.Mt);
-        md > dd && this.release(dd, md - dd)
+      free(bb, wb) {
+        this.used -= wb;
+        const Mb = Math.min(bb + wb, this.qO);
+        Mb > bb && this.release(bb, Mb - bb)
       }
-      grow(dd) {
-        const Od = this.Mt;
-        this.Mt = dd, this.release(Od, dd - Od)
+      grow(bb) {
+        const wb = this.qO;
+        this.qO = bb, this.release(wb, bb - wb)
       }
-      truncate(dd) {
+      truncate(bb) {
         const {
-          starts: Od,
-          lengths: md
+          starts: wb,
+          lengths: Mb
         } = this;
-        for (let Wd = Od.length - 1; Wd >= 0 && Od[Wd] + md[Wd] > dd; Wd--) Od[Wd] >= dd ? (Od.splice(Wd, 1), md.splice(Wd, 1)) : md[Wd] = dd - Od[Wd];
-        this.Mt = dd
+        for (let eb = wb.length - 1; eb >= 0 && wb[eb] + Mb[eb] > bb; eb--) wb[eb] >= bb ? (wb.splice(eb, 1), Mb.splice(eb, 1)) : Mb[eb] = bb - wb[eb];
+        this.qO = bb
       }
-      release(dd, Od) {
+      release(bb, wb) {
         const {
-          starts: md,
-          lengths: Wd
+          starts: Mb,
+          lengths: eb
         } = this;
-        let Fd = 0,
-          Rd = md.length;
-        for (; Fd < Rd;) {
-          const Od = Fd + Rd >> 1;
-          md[Od] < dd ? Fd = Od + 1 : Rd = Od
+        let Hb = 0,
+          pb = Mb.length;
+        for (; Hb < pb;) {
+          const wb = Hb + pb >> 1;
+          Mb[wb] < bb ? Hb = wb + 1 : pb = wb
         }
-        const Xd = Fd,
-          Kd = Xd > 0 && md[Xd - 1] + Wd[Xd - 1] === dd,
-          hd = Xd < md.length && dd + Od === md[Xd];
-        Kd && hd ? (Wd[Xd - 1] += Od + Wd[Xd], md.splice(Xd, 1), Wd.splice(Xd, 1)) : Kd ? Wd[Xd - 1] += Od : hd ? (md[Xd] = dd, Wd[Xd] += Od) : (md.splice(Xd, 0, dd), Wd.splice(Xd, 0, Od))
+        const Vb = Hb,
+          gb = Vb > 0 && Mb[Vb - 1] + eb[Vb - 1] === bb,
+          lb = Vb < Mb.length && bb + wb === Mb[Vb];
+        gb && lb ? (eb[Vb - 1] += wb + eb[Vb], Mb.splice(Vb, 1), eb.splice(Vb, 1)) : gb ? eb[Vb - 1] += wb : lb ? (Mb[Vb] = bb, eb[Vb] += wb) : (Mb.splice(Vb, 0, bb), eb.splice(Vb, 0, wb))
       }
     }
-    const CX = 256;
-    class ZX {
-      constructor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16384,
-          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1048576;
-        this.device = dd, this.onReplaced = Od, this.mergeGap = md, this.gpu = null, this.bytes = void 0, this.words = void 0, this.sourceWords = new WeakMap, this.By = void 0, this.dirtyStarts = [], this.dirtyEnds = [], this.order = [], this.replaced = [], this.retired = [], this.freed = [], this.holding = !0;
-        const Fd = Math.max(CX, Math.ceil(Wd / CX) * CX);
-        this.bytes = new Uint8Array(Fd), this.words = new Uint32Array(this.bytes.buffer), this.By = new lX(Fd / CX)
+    const PV = 256;
+    class nV {
+      constructor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 16384,
+          eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1048576;
+        this.device = bb, this.onReplaced = wb, this.mergeGap = Mb, this.gpu = null, this.bytes = void 0, this.words = void 0, this.sourceWords = new WeakMap, this.gF = void 0, this.dirtyStarts = [], this.dirtyEnds = [], this.order = [], this.replaced = [], this.retired = [], this.freed = [], this.holding = !0;
+        const Hb = Math.max(PV, Math.ceil(eb / PV) * PV);
+        this.bytes = new Uint8Array(Hb), this.words = new Uint32Array(this.bytes.buffer), this.gF = new dV(Hb / PV)
       }
       get buffer() {
         return this.gpu ??= this.createGpu(this.bytes.byteLength)
       }
-      static slotBytes(dd) {
-        return Math.max(1, Math.ceil(dd / CX)) * CX
+      static slotBytes(bb) {
+        return Math.max(1, Math.ceil(bb / PV)) * PV
       }
-      allocate(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : dd;
-        const Wd = ZX.slotBytes(dd),
-          Fd = Wd / CX;
-        let Rd = this.By.allocate(Fd);
-        Rd < 0 && (this.grow(this.By.Mt + Fd), Rd = this.By.allocate(Fd));
-        const Xd = Rd * CX;
-        return this.growTo(Xd + Math.max(md, Wd)), this.gpu ??= this.createGpu(this.bytes.byteLength), this.bytes.fill(0, Xd, Xd + Wd), Od && this.bytes.set(new Uint8Array(Od.buffer, Od.byteOffset, Math.min(Od.byteLength, Wd)), Xd), this.markDirty(Xd, Xd + Wd), Xd
+      allocate(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb;
+        const eb = nV.slotBytes(bb),
+          Hb = eb / PV;
+        let pb = this.gF.allocate(Hb);
+        pb < 0 && (this.grow(this.gF.qO + Hb), pb = this.gF.allocate(Hb));
+        const Vb = pb * PV;
+        return this.growTo(Vb + Math.max(Mb, eb)), this.gpu ??= this.createGpu(this.bytes.byteLength), this.bytes.fill(0, Vb, Vb + eb), wb && this.bytes.set(new Uint8Array(wb.buffer, wb.byteOffset, Math.min(wb.byteLength, eb)), Vb), this.markDirty(Vb, Vb + eb), Vb
       }
-      growTo(dd) {
-        const Od = Math.ceil(dd / CX);
-        Od > this.By.Mt && this.grow(Od)
+      growTo(bb) {
+        const wb = Math.ceil(bb / PV);
+        wb > this.gF.qO && this.grow(wb)
       }
-      free(dd, Od) {
-        this.freed.push(dd, Od)
+      free(bb, wb) {
+        this.freed.push(bb, wb)
       }
-      write(dd, Od, md, Wd) {
-        let Fd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (Wd <= 0) return;
-        Wd <= 1024 && 0 === (3 & (dd | md | Wd)) ? this.copyWords(dd >> 2, Od.buffer, md >> 2, Wd >> 2) : this.bytes.set(new Uint8Array(Od.buffer, md, Wd), dd);
-        let Rd = dd + Wd;
-        if (Fd) {
-          const Od = dd + 4 * Math.ceil(Wd / 4);
-          this.bytes.fill(0, Rd, Od), Rd = Od
+      write(bb, wb, Mb, eb) {
+        let Hb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (eb <= 0) return;
+        eb <= 1024 && 0 === (3 & (bb | Mb | eb)) ? this.copyWords(bb >> 2, wb.buffer, Mb >> 2, eb >> 2) : this.bytes.set(new Uint8Array(wb.buffer, Mb, eb), bb);
+        let pb = bb + eb;
+        if (Hb) {
+          const wb = bb + 4 * Math.ceil(eb / 4);
+          this.bytes.fill(0, pb, wb), pb = wb
         }
-        this.markDirty(dd, Rd)
+        this.markDirty(bb, pb)
       }
-      copyWords(dd, Od, md, Wd) {
-        let Fd = this.sourceWords.get(Od);
-        Fd || (Fd = new Uint32Array(Od, 0, Od.byteLength >> 2), this.sourceWords.set(Od, Fd));
-        const Rd = this.words;
-        for (let Xd = 0; Xd < Wd; Xd++) Rd[dd + Xd] = Fd[md + Xd]
+      copyWords(bb, wb, Mb, eb) {
+        let Hb = this.sourceWords.get(wb);
+        Hb || (Hb = new Uint32Array(wb, 0, wb.byteLength >> 2), this.sourceWords.set(wb, Hb));
+        const pb = this.words;
+        for (let Vb = 0; Vb < eb; Vb++) pb[bb + Vb] = Hb[Mb + Vb]
       }
-      move(dd, Od, md) {
-        this.bytes.copyWithin(Od, dd, dd + md), this.markDirty(Od, Od + md)
+      move(bb, wb, Mb) {
+        this.bytes.copyWithin(wb, bb, bb + Mb), this.markDirty(wb, wb + Mb)
       }
       flush() {
-        for (const Od of this.retired) this.onReplaced(Od), Od.destroy();
+        for (const wb of this.retired) this.onReplaced(wb), wb.destroy();
         this.retired.length = 0;
-        const dd = this.dirtyStarts.length;
-        if (dd > 0) {
+        const bb = this.dirtyStarts.length;
+        if (bb > 0) {
           const {
-            dirtyStarts: Od,
-            dirtyEnds: md,
-            order: Wd
+            dirtyStarts: wb,
+            dirtyEnds: Mb,
+            order: eb
           } = this;
-          Wd.length = dd;
-          for (let Kd = 0; Kd < dd; Kd++) Wd[Kd] = Kd;
-          dd > 1 && Wd.sort(((dd, md) => Od[dd] - Od[md]));
-          const Fd = this.mergeGap;
-          let Rd = Od[Wd[0]],
-            Xd = md[Wd[0]];
-          for (let Kd = 1; Kd < dd; Kd++) {
-            const dd = Wd[Kd];
-            Od[dd] - Xd <= Fd ? Xd = Math.max(Xd, md[dd]) : (this.send(Rd, Xd), Rd = Od[dd], Xd = md[dd])
+          eb.length = bb;
+          for (let gb = 0; gb < bb; gb++) eb[gb] = gb;
+          bb > 1 && eb.sort(((bb, Mb) => wb[bb] - wb[Mb]));
+          const Hb = this.mergeGap;
+          let pb = wb[eb[0]],
+            Vb = Mb[eb[0]];
+          for (let gb = 1; gb < bb; gb++) {
+            const bb = eb[gb];
+            wb[bb] - Vb <= Hb ? Vb = Math.max(Vb, Mb[bb]) : (this.send(pb, Vb), pb = wb[bb], Vb = Mb[bb])
           }
-          this.send(Rd, Xd), Od.length = 0, md.length = 0
+          this.send(pb, Vb), wb.length = 0, Mb.length = 0
         }
         this.holding = !1
       }
-      bt() {
+      tO() {
         this.holding = !0, this.retired.push(...this.replaced), this.replaced.length = 0;
-        const dd = this.freed;
-        for (let Od = 0; Od < dd.length; Od += 2) this.By.free(dd[Od] / CX, dd[Od + 1] / CX);
-        dd.length = 0
+        const bb = this.freed;
+        for (let wb = 0; wb < bb.length; wb += 2) this.gF.free(bb[wb] / PV, bb[wb + 1] / PV);
+        bb.length = 0
       }
-      send(dd, Od) {
-        this.device.queue.writeBuffer(this.gpu, dd, this.bytes.buffer, dd, Od - dd);
-        for (const md of this.replaced) {
-          const Wd = Math.min(Od, md.size);
-          Wd > dd && this.device.queue.writeBuffer(md, dd, this.bytes.buffer, dd, Wd - dd)
+      send(bb, wb) {
+        this.device.queue.writeBuffer(this.gpu, bb, this.bytes.buffer, bb, wb - bb);
+        for (const Mb of this.replaced) {
+          const eb = Math.min(wb, Mb.size);
+          eb > bb && this.device.queue.writeBuffer(Mb, bb, this.bytes.buffer, bb, eb - bb)
         }
       }
-      markDirty(dd, Od) {
-        dd &= -4, Od = Od + 3 & -4, this.holding ? (this.dirtyStarts.push(dd), this.dirtyEnds.push(Od)) : this.send(dd, Od)
+      markDirty(bb, wb) {
+        bb &= -4, wb = wb + 3 & -4, this.holding ? (this.dirtyStarts.push(bb), this.dirtyEnds.push(wb)) : this.send(bb, wb)
       }
-      grow(dd) {
-        const Od = this.By.Mt,
-          md = Math.max(2 * Od, dd),
-          Wd = new Uint8Array(md * CX);
-        Wd.set(this.bytes);
-        const Fd = this.gpu;
-        this.gpu = this.createGpu(Wd.byteLength), this.bytes = Wd, this.words = new Uint32Array(Wd.buffer), this.By.grow(md), Fd && (this.replaced.push(Fd), this.onReplaced(Fd)), this.dirtyStarts.length = 0, this.dirtyEnds.length = 0, this.markDirty(0, Od * CX)
+      grow(bb) {
+        const wb = this.gF.qO,
+          Mb = Math.max(2 * wb, bb),
+          eb = new Uint8Array(Mb * PV);
+        eb.set(this.bytes);
+        const Hb = this.gpu;
+        this.gpu = this.createGpu(eb.byteLength), this.bytes = eb, this.words = new Uint32Array(eb.buffer), this.gF.grow(Mb), Hb && (this.replaced.push(Hb), this.onReplaced(Hb)), this.dirtyStarts.length = 0, this.dirtyEnds.length = 0, this.markDirty(0, wb * PV)
       }
-      createGpu(dd) {
+      createGpu(bb) {
         return this.device.createBuffer({
           label: "sink-dynamic-arena",
-          size: dd,
+          size: bb,
           usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST
         })
       }
     }
 
-    function kX(dd) {
-      return Array.isArray(dd) ? new Float32Array(dd) : dd
+    function yV(bb) {
+      return Array.isArray(bb) ? new Float32Array(bb) : bb
     }
 
-    function fX(dd, Od, md, Wd, Fd) {
-      const Rd = Cd(Fd),
-        Xd = Math.min(Fd, Wd.byteLength);
-      if (Rd === Xd && Wd.byteOffset % 4 === 0) return void dd.queue.writeBuffer(Od, md, Wd.buffer, Wd.byteOffset, Rd);
-      const Kd = new Uint8Array(Rd);
-      Kd.set(new Uint8Array(Wd.buffer, Wd.byteOffset, Xd)), dd.queue.writeBuffer(Od, md, Kd)
+    function oV(bb, wb, Mb, eb, Hb) {
+      const pb = db(Hb),
+        Vb = Math.min(Hb, eb.byteLength);
+      if (pb === Vb && eb.byteOffset % 4 === 0) return void bb.queue.writeBuffer(wb, Mb, eb.buffer, eb.byteOffset, pb);
+      const gb = new Uint8Array(pb);
+      gb.set(new Uint8Array(eb.buffer, eb.byteOffset, Vb)), bb.queue.writeBuffer(wb, Mb, gb)
     }
 
-    function MX(dd, Od, md) {
-      const Wd = "linear",
-        Fd = "nearest";
-      let Rd = Fd,
-        Xd = Fd,
-        Kd = "nearest",
-        hd = !Od;
-      switch (dd) {
+    function TV(bb, wb, Mb) {
+      const eb = "linear",
+        Hb = "nearest";
+      let pb = Hb,
+        Vb = Hb,
+        gb = "nearest",
+        lb = !wb;
+      switch (bb) {
         case 11:
-          Rd = Wd, Xd = Wd;
+          pb = eb, Vb = eb;
           break;
         case 3:
-          Rd = Wd, Xd = Wd, Kd = Od ? "linear" : "nearest";
+          pb = eb, Vb = eb, gb = wb ? "linear" : "nearest";
           break;
         case 8:
-          Kd = Od ? "linear" : "nearest";
+          gb = wb ? "linear" : "nearest";
           break;
         case 4:
           break;
         case 5:
-          Xd = Wd;
+          Vb = eb;
           break;
         case 6:
-          Xd = Wd, Kd = Od ? "linear" : "nearest";
+          Vb = eb, gb = wb ? "linear" : "nearest";
           break;
         case 7:
-          Xd = Wd, hd = !0;
+          Vb = eb, lb = !0;
           break;
         case 9:
-          Rd = Wd;
+          pb = eb;
           break;
         case 10:
-          Rd = Wd, Kd = Od ? "linear" : "nearest";
+          pb = eb, gb = wb ? "linear" : "nearest";
           break;
         case 2:
-          Rd = Wd, Xd = Wd, md > 1 ? (Kd = "linear", hd = !1) : hd = !0;
+          pb = eb, Vb = eb, Mb > 1 ? (gb = "linear", lb = !1) : lb = !0;
           break;
         case 12:
-          Rd = Wd, hd = !0;
+          pb = eb, lb = !0;
           break;
         default:
-          hd = !0
+          lb = !0
       }
-      return md > 1 && !hd ? {
-        magFilter: Wd,
-        minFilter: Wd,
+      return Mb > 1 && !lb ? {
+        magFilter: eb,
+        minFilter: eb,
         mipmapFilter: "linear",
-        maxAnisotropy: md
+        maxAnisotropy: Mb
       } : {
-        magFilter: Rd,
-        minFilter: Xd,
-        mipmapFilter: Kd,
-        ...hd ? {
+        magFilter: pb,
+        minFilter: Vb,
+        mipmapFilter: gb,
+        ...lb ? {
           lodMinClamp: 0,
           lodMaxClamp: 0
         } : {}
       }
     }
 
-    function dK(dd) {
-      return 0 === dd ? "clamp-to-edge" : 2 === dd ? "mirror-repeat" : "repeat"
+    function kV(bb) {
+      return 0 === bb ? "clamp-to-edge" : 2 === bb ? "mirror-repeat" : "repeat"
     }
-    class OK {
-      constructor(dd, Od) {
+    class bg {
+      constructor(bb, wb) {
         let {
-          vertexArena: md = !0
+          vertexArena: Mb = !0
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.engine = dd, this.device = Od, this.buffers = new WeakMap, this.vdd = new WeakMap, this.batchUploads = new WeakMap, this.textures = new Map, this.samplers = new Map, this.atlasBindings = new WeakMap, this.atlasSources = new WeakMap, this.atlasRebuilds = new WeakSet, this.rebindWaiters = [], this.epoch = 0, this.liveUploads = new Set, this.gpuBuffersVersion = 0, this.onDestroy = null, this.pending = 0, this.firstBindDecodes = 0, this.arena = void 0, this.arena = md ? this.createArena() : null
+        this.engine = bb, this.device = wb, this.buffers = new WeakMap, this.Cbb = new WeakMap, this.batchUploads = new WeakMap, this.textures = new Map, this.samplers = new Map, this.atlasBindings = new WeakMap, this.atlasSources = new WeakMap, this.atlasRebuilds = new WeakSet, this.rebindWaiters = [], this.epoch = 0, this.liveUploads = new Set, this.gpuBuffersVersion = 0, this.onDestroy = null, this.pending = 0, this.firstBindDecodes = 0, this.arena = void 0, this.arena = Mb ? this.createArena() : null
       }
       createArena() {
-        return new ZX(this.device, (dd => {
-          var Od;
-          null === (Od = this.onDestroy) || void 0 === Od || Od.call(this, dd), this.gpuBuffersVersion++
+        return new nV(this.device, (bb => {
+          var wb;
+          null === (wb = this.onDestroy) || void 0 === wb || wb.call(this, bb), this.gpuBuffersVersion++
         }))
       }
-      rebind(dd, Od) {
-        this.engine = dd, this.device = Od, this.epoch++, this.buffers = new WeakMap, this.textures.clear(), this.samplers.clear(), this.atlasBindings = new WeakMap, this.atlasRebuilds = new WeakSet, this.arena &&= this.createArena(), this.pending = 0, this.gpuBuffersVersion++;
-        for (const md of this.liveUploads) md.rebind();
-        for (const md of this.rebindWaiters.splice(0)) md()
+      rebind(bb, wb) {
+        this.engine = bb, this.device = wb, this.epoch++, this.buffers = new WeakMap, this.textures.clear(), this.samplers.clear(), this.atlasBindings = new WeakMap, this.atlasRebuilds = new WeakSet, this.arena &&= this.createArena(), this.pending = 0, this.gpuBuffersVersion++;
+        for (const Mb of this.liveUploads) Mb.rebind();
+        for (const Mb of this.rebindWaiters.splice(0)) Mb()
       }
       flushUploads() {
-        var dd;
-        null === (dd = this.arena) || void 0 === dd || dd.flush()
+        var bb;
+        null === (bb = this.arena) || void 0 === bb || bb.flush()
       }
       endUploadFrame() {
-        var dd;
-        null === (dd = this.arena) || void 0 === dd || dd.bt()
+        var bb;
+        null === (bb = this.arena) || void 0 === bb || bb.tO()
       }
-      vertexBufferCreated(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : md ? "sink-dynamic-vertices" : "sink-vertices";
-        this.bufferDeleted(dd);
-        const Fd = kX(Od);
-        dd.Mt = Fd.byteLength, this.buffers.set(dd, {
+      vertexBufferCreated(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Mb ? "sink-dynamic-vertices" : "sink-vertices";
+        this.bufferDeleted(bb);
+        const Hb = yV(wb);
+        bb.qO = Hb.byteLength, this.buffers.set(bb, {
           gpu: null,
           slot: -1,
           slotBytes: 0,
           size: 0,
-          arena: md && null !== this.arena,
-          pending: Fd,
+          arena: Mb && null !== this.arena,
+          pending: Hb,
           ownsPending: !1,
           usage: GPUBufferUsage.VERTEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: Wd
+          label: eb
         })
       }
-      vertexBufferUpdated(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Wd = arguments.length > 3 ? arguments[3] : void 0;
-        const Fd = this.buffers.get(dd);
-        if (!Fd) return;
-        const Rd = kX(Od),
-          Xd = void 0 === Wd ? Rd.byteLength : Math.min(Wd, Rd.byteLength);
-        this.update(Fd, Rd, md, Xd)
+      vertexBufferUpdated(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          eb = arguments.length > 3 ? arguments[3] : void 0;
+        const Hb = this.buffers.get(bb);
+        if (!Hb) return;
+        const pb = yV(wb),
+          Vb = void 0 === eb ? pb.byteLength : Math.min(eb, pb.byteLength);
+        this.update(Hb, pb, Mb, Vb)
       }
-      vertexBufferFloatsUpdated(dd, Od, md, Wd) {
-        const Fd = this.buffers.get(dd);
-        if (!Fd) return;
-        const Rd = md * Float32Array.BYTES_PER_ELEMENT,
-          Xd = (Wd - md) * Float32Array.BYTES_PER_ELEMENT;
-        Fd.slot >= 0 && Xd > 0 && Rd + Xd <= Fd.size ? this.writeSlot(Fd, Rd, Od, Od.byteOffset + Rd, Xd, !1) : Fd.gpu && Xd > 0 && Rd + Xd <= Fd.gpu.size ? this.device.queue.writeBuffer(Fd.gpu, Rd, Od.buffer, Od.byteOffset + Rd, Xd) : this.update(Fd, Od.subarray(md, Wd), Rd, Xd)
+      vertexBufferFloatsUpdated(bb, wb, Mb, eb) {
+        const Hb = this.buffers.get(bb);
+        if (!Hb) return;
+        const pb = Mb * Float32Array.BYTES_PER_ELEMENT,
+          Vb = (eb - Mb) * Float32Array.BYTES_PER_ELEMENT;
+        Hb.slot >= 0 && Vb > 0 && pb + Vb <= Hb.size ? this.writeSlot(Hb, pb, wb, wb.byteOffset + pb, Vb, !1) : Hb.gpu && Vb > 0 && pb + Vb <= Hb.gpu.size ? this.device.queue.writeBuffer(Hb.gpu, pb, wb.buffer, wb.byteOffset + pb, Vb) : this.update(Hb, wb.subarray(Mb, eb), pb, Vb)
       }
-      indexBufferCreated(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "sink-indices";
-        this.bufferDeleted(dd);
-        const Wd = function(dd) {
-          if (dd instanceof Uint16Array || dd instanceof Uint32Array) return dd;
-          for (let Od = 0; Od < dd.length; Od++)
-            if (dd[Od] >= 65535) return new Uint32Array(dd);
-          return new Uint16Array(dd)
-        }(Od);
-        dd.is32Bits = 4 === Wd.BYTES_PER_ELEMENT, dd.Mt = Wd.byteLength, this.buffers.set(dd, {
+      indexBufferCreated(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "sink-indices";
+        this.bufferDeleted(bb);
+        const eb = function(bb) {
+          if (bb instanceof Uint16Array || bb instanceof Uint32Array) return bb;
+          for (let wb = 0; wb < bb.length; wb++)
+            if (bb[wb] >= 65535) return new Uint32Array(bb);
+          return new Uint16Array(bb)
+        }(wb);
+        bb.is32Bits = 4 === eb.BYTES_PER_ELEMENT, bb.qO = eb.byteLength, this.buffers.set(bb, {
           gpu: null,
           slot: -1,
           slotBytes: 0,
           size: 0,
           arena: !1,
-          pending: Wd,
-          ownsPending: Wd !== Od,
+          pending: eb,
+          ownsPending: eb !== wb,
           usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC,
-          label: md
+          label: Mb
         })
       }
-      bufferDeleted(dd) {
-        const Od = this.buffers.get(dd);
-        null !== Od && void 0 !== Od && Od.gpu ? (this.destroyBuffer(Od.gpu), this.gpuBuffersVersion++) : Od && Od.slot >= 0 && (this.arena.free(Od.slot, Od.slotBytes), this.gpuBuffersVersion++), this.buffers.delete(dd)
+      bufferDeleted(bb) {
+        const wb = this.buffers.get(bb);
+        null !== wb && void 0 !== wb && wb.gpu ? (this.destroyBuffer(wb.gpu), this.gpuBuffersVersion++) : wb && wb.slot >= 0 && (this.arena.free(wb.slot, wb.slotBytes), this.gpuBuffersVersion++), this.buffers.delete(bb)
       }
-      update(dd, Od, md, Wd) {
-        if (dd.slot >= 0) this.updateSlot(dd, Od, md, Wd);
-        else if (dd.gpu) {
-          if (md + Cd(Wd) > dd.gpu.size) {
-            const Od = this.device.createBuffer({
-                label: dd.label,
-                size: Cd(Math.max(2 * dd.gpu.size, md + Wd)),
-                usage: dd.usage | GPUBufferUsage.COPY_SRC
+      update(bb, wb, Mb, eb) {
+        if (bb.slot >= 0) this.updateSlot(bb, wb, Mb, eb);
+        else if (bb.gpu) {
+          if (Mb + db(eb) > bb.gpu.size) {
+            const wb = this.device.createBuffer({
+                label: bb.label,
+                size: db(Math.max(2 * bb.gpu.size, Mb + eb)),
+                usage: bb.usage | GPUBufferUsage.COPY_SRC
               }),
-              Fd = this.device.createCommandEncoder();
-            Fd.copyBufferToBuffer(dd.gpu, 0, Od, 0, dd.gpu.size), this.device.queue.submit([Fd.finish()]), this.destroyBuffer(dd.gpu), this.gpuBuffersVersion++, dd.gpu = Od
+              Hb = this.device.createCommandEncoder();
+            Hb.copyBufferToBuffer(bb.gpu, 0, wb, 0, bb.gpu.size), this.device.queue.submit([Hb.finish()]), this.destroyBuffer(bb.gpu), this.gpuBuffersVersion++, bb.gpu = wb
           }
-          fX(this.device, dd.gpu, md, Od, Wd)
+          oV(this.device, bb.gpu, Mb, wb, eb)
         } else {
-          const Rd = new Uint8Array(Od.buffer, Od.byteOffset, Wd),
-            Xd = dd.pending;
-          if (Xd && dd.ownsPending && md + Wd <= Xd.byteLength) new Uint8Array(Xd.buffer, Xd.byteOffset, Xd.byteLength).set(Rd, md);
-          else if (Xd && 0 === md && Wd === Xd.byteLength && Od.byteLength === Wd) dd.pending = Od, dd.ownsPending = !1;
+          const pb = new Uint8Array(wb.buffer, wb.byteOffset, eb),
+            Vb = bb.pending;
+          if (Vb && bb.ownsPending && Mb + eb <= Vb.byteLength) new Uint8Array(Vb.buffer, Vb.byteOffset, Vb.byteLength).set(pb, Mb);
+          else if (Vb && 0 === Mb && eb === Vb.byteLength && wb.byteLength === eb) bb.pending = wb, bb.ownsPending = !1;
           else {
-            var Fd;
-            const Od = new Uint8Array(Math.max(null !== (Fd = null === Xd || void 0 === Xd ? void 0 : Xd.byteLength) && void 0 !== Fd ? Fd : 0, md + Wd));
-            Xd && Od.set(new Uint8Array(Xd.buffer, Xd.byteOffset, Xd.byteLength)), Od.set(Rd, md), dd.pending = Od, dd.ownsPending = !0
+            var Hb;
+            const wb = new Uint8Array(Math.max(null !== (Hb = null === Vb || void 0 === Vb ? void 0 : Vb.byteLength) && void 0 !== Hb ? Hb : 0, Mb + eb));
+            Vb && wb.set(new Uint8Array(Vb.buffer, Vb.byteOffset, Vb.byteLength)), wb.set(pb, Mb), bb.pending = wb, bb.ownsPending = !0
           }
         }
       }
-      updateSlot(dd, Od, md, Wd) {
-        const Fd = this.arena;
-        md + Cd(Wd) > dd.size && (dd.size = Cd(Math.max(2 * dd.size, md + Wd)), Fd.growTo(dd.slot + dd.size), this.gpuBuffersVersion++), 0 === Wd ? this.writeSlot(dd, md, WK, 0, 4, !1) : this.writeSlot(dd, md, Od, Od.byteOffset, Wd, !0)
+      updateSlot(bb, wb, Mb, eb) {
+        const Hb = this.arena;
+        Mb + db(eb) > bb.size && (bb.size = db(Math.max(2 * bb.size, Mb + eb)), Hb.growTo(bb.slot + bb.size), this.gpuBuffersVersion++), 0 === eb ? this.writeSlot(bb, Mb, Mg, 0, 4, !1) : this.writeSlot(bb, Mb, wb, wb.byteOffset, eb, !0)
       }
-      writeSlot(dd, Od, md, Wd, Fd, Rd) {
-        const Xd = Od + (Rd ? Cd(Fd) : Fd);
-        Xd > dd.slotBytes && this.moveSlot(dd, Xd), this.arena.write(dd.slot + Od, md, Wd, Fd, Rd)
+      writeSlot(bb, wb, Mb, eb, Hb, pb) {
+        const Vb = wb + (pb ? db(Hb) : Hb);
+        Vb > bb.slotBytes && this.moveSlot(bb, Vb), this.arena.write(bb.slot + wb, Mb, eb, Hb, pb)
       }
-      moveSlot(dd, Od) {
-        const md = this.arena,
-          Wd = ZX.slotBytes(Math.max(Od, Math.min(2 * dd.slotBytes, dd.size))),
-          Fd = md.allocate(Wd, null, dd.size);
-        md.move(dd.slot, Fd, dd.slotBytes), md.free(dd.slot, dd.slotBytes), dd.slot = Fd, dd.slotBytes = Wd, this.gpuBuffersVersion++
+      moveSlot(bb, wb) {
+        const Mb = this.arena,
+          eb = nV.slotBytes(Math.max(wb, Math.min(2 * bb.slotBytes, bb.size))),
+          Hb = Mb.allocate(eb, null, bb.size);
+        Mb.move(bb.slot, Hb, bb.slotBytes), Mb.free(bb.slot, bb.slotBytes), bb.slot = Hb, bb.slotBytes = eb, this.gpuBuffersVersion++
       }
-      cover(dd, Od) {
-        const md = this.buffers.get(dd);
-        if (!md || md.slot < 0) return !1;
-        const Wd = Math.min(Od, md.size);
-        return !(Wd <= md.slotBytes) && (this.moveSlot(md, Wd), !0)
+      cover(bb, wb) {
+        const Mb = this.buffers.get(bb);
+        if (!Mb || Mb.slot < 0) return !1;
+        const eb = Math.min(wb, Mb.size);
+        return !(eb <= Mb.slotBytes) && (this.moveSlot(Mb, eb), !0)
       }
-      destroyBuffer(dd) {
-        var Od;
-        null === (Od = this.onDestroy) || void 0 === Od || Od.call(this, dd), dd.destroy()
+      destroyBuffer(bb) {
+        var wb;
+        null === (wb = this.onDestroy) || void 0 === wb || wb.call(this, bb), bb.destroy()
       }
-      gpuBuffer(dd) {
-        const Od = this.buffers.get(dd);
-        if (!Od) return null;
-        if (Od.slot >= 0) return this.arena.buffer;
-        if (Od.arena && Od.pending) {
-          const dd = Od.pending,
-            md = this.arena;
-          return Od.size = Cd(dd.byteLength), Od.slotBytes = ZX.slotBytes(function(dd) {
-            const Od = new Uint8Array(dd.buffer, dd.byteOffset, dd.byteLength);
-            let md = Od.length;
-            if (dd.byteOffset % 4 === 0) {
-              for (; md % 4 !== 0 && 0 === Od[md - 1];) md--;
-              if (md % 4 === 0) {
-                const Od = new Uint32Array(dd.buffer, dd.byteOffset, md / 4);
-                let Wd = Od.length;
-                for (; Wd > 0 && 0 === Od[Wd - 1];) Wd--;
-                md = 4 * Wd
+      gpuBuffer(bb) {
+        const wb = this.buffers.get(bb);
+        if (!wb) return null;
+        if (wb.slot >= 0) return this.arena.buffer;
+        if (wb.arena && wb.pending) {
+          const bb = wb.pending,
+            Mb = this.arena;
+          return wb.size = db(bb.byteLength), wb.slotBytes = nV.slotBytes(function(bb) {
+            const wb = new Uint8Array(bb.buffer, bb.byteOffset, bb.byteLength);
+            let Mb = wb.length;
+            if (bb.byteOffset % 4 === 0) {
+              for (; Mb % 4 !== 0 && 0 === wb[Mb - 1];) Mb--;
+              if (Mb % 4 === 0) {
+                const wb = new Uint32Array(bb.buffer, bb.byteOffset, Mb / 4);
+                let eb = wb.length;
+                for (; eb > 0 && 0 === wb[eb - 1];) eb--;
+                Mb = 4 * eb
               }
             }
-            for (; md > 0 && 0 === Od[md - 1];) md--;
-            return md
-          }(dd)), Od.slot = md.allocate(Od.slotBytes, dd, Od.size), Od.pending = null, md.buffer
+            for (; Mb > 0 && 0 === wb[Mb - 1];) Mb--;
+            return Mb
+          }(bb)), wb.slot = Mb.allocate(wb.slotBytes, bb, wb.size), wb.pending = null, Mb.buffer
         }
-        if (!Od.gpu && Od.pending) {
-          const dd = Od.pending;
-          Od.gpu = this.device.createBuffer({
-            label: Od.label,
-            size: Cd(dd.byteLength),
-            usage: Od.usage
-          }), fX(this.device, Od.gpu, 0, dd, dd.byteLength), Od.pending = null
+        if (!wb.gpu && wb.pending) {
+          const bb = wb.pending;
+          wb.gpu = this.device.createBuffer({
+            label: wb.label,
+            size: db(bb.byteLength),
+            usage: wb.usage
+          }), oV(this.device, wb.gpu, 0, bb, bb.byteLength), wb.pending = null
         }
-        return Od.gpu
+        return wb.gpu
       }
-      gpuOffset(dd) {
-        var Od, md;
-        const Wd = null !== (Od = null === (md = this.buffers.get(dd)) || void 0 === md ? void 0 : md.slot) && void 0 !== Od ? Od : -1;
-        return Wd < 0 ? 0 : Wd
+      gpuOffset(bb) {
+        var wb, Mb;
+        const eb = null !== (wb = null === (Mb = this.buffers.get(bb)) || void 0 === Mb ? void 0 : Mb.slot) && void 0 !== wb ? wb : -1;
+        return eb < 0 ? 0 : eb
       }
-      gpuEnd(dd) {
-        var Od, md;
-        const Wd = this.buffers.get(dd);
-        return Wd ? Wd.slot >= 0 ? Wd.slot + Wd.size : null !== (Od = null === (md = Wd.gpu) || void 0 === md ? void 0 : md.size) && void 0 !== Od ? Od : 0 : 0
+      gpuEnd(bb) {
+        var wb, Mb;
+        const eb = this.buffers.get(bb);
+        return eb ? eb.slot >= 0 ? eb.slot + eb.size : null !== (wb = null === (Mb = eb.gpu) || void 0 === Mb ? void 0 : Mb.size) && void 0 !== wb ? wb : 0 : 0
       }
-      vertexInput(dd, Od, md) {
-        var Wd, Fd, Rd, Xd;
-        return null !== (Wd = null !== (Fd = md && this.modelInput(md, Od)) && void 0 !== Fd ? Fd : null === (Rd = null !== (Xd = this.vdd.get(dd)) && void 0 !== Xd ? Xd : this.batchUploads.get(dd)) || void 0 === Rd ? void 0 : Rd.inputs[Od]) && void 0 !== Wd ? Wd : null
+      vertexInput(bb, wb, Mb) {
+        var eb, Hb, pb, Vb;
+        return null !== (eb = null !== (Hb = Mb && this.modelInput(Mb, wb)) && void 0 !== Hb ? Hb : null === (pb = null !== (Vb = this.Cbb.get(bb)) && void 0 !== Vb ? Vb : this.batchUploads.get(bb)) || void 0 === pb ? void 0 : pb.inputs[wb]) && void 0 !== eb ? eb : null
       }
-      modelInput(dd, Od) {
-        const md = this.geometrySlot(dd);
-        let Wd = md.inputs.get(Od);
-        if (void 0 === Wd) {
-          const Fd = dd.vertexAttributes.find((dd => dd.kind === Od));
-          Wd = Fd ? new yO(this.modelKey(md, Fd.data, !1), Fd.offset, Fd.stride, Fd.components, !1, Fd.glType, Fd.isNormalized) : null, md.inputs.set(Od, Wd)
+      modelInput(bb, wb) {
+        const Mb = this.geometrySlot(bb);
+        let eb = Mb.inputs.get(wb);
+        if (void 0 === eb) {
+          const Hb = bb.vertexAttributes.find((bb => bb.kind === wb));
+          eb = Hb ? new Cw(this.modelKey(Mb, Hb.data, !1), Hb.offset, Hb.stride, Hb.components, !1, Hb.glType, Hb.isNormalized) : null, Mb.inputs.set(wb, eb)
         }
-        return Wd
+        return eb
       }
-      modelIndex(dd) {
-        return dd.indexData && this.modelKey(this.geometrySlot(dd), dd.indexData, !0)
+      modelIndex(bb) {
+        return bb.indexData && this.modelKey(this.geometrySlot(bb), bb.indexData, !0)
       }
-      geometrySlot(dd) {
-        var Od;
-        let md = dd.gpu[Bd.c.lite];
-        if ((null === (Od = md) || void 0 === Od ? void 0 : Od.epoch) !== this.epoch) {
-          const Od = new Map,
-            Wd = () => {
-              for (const dd of Od.values()) this.bufferDeleted(dd)
+      geometrySlot(bb) {
+        var wb;
+        let Mb = bb.gpu[Rb.g.lite];
+        if ((null === (wb = Mb) || void 0 === wb ? void 0 : wb.epoch) !== this.epoch) {
+          const wb = new Map,
+            eb = () => {
+              for (const bb of wb.values()) this.bufferDeleted(bb)
             },
-            Fd = dd => {
-              const md = Od.get(dd);
-              md && this.vertexBufferUpdated(md, dd)
+            Hb = bb => {
+              const Mb = wb.get(bb);
+              Mb && this.vertexBufferUpdated(Mb, bb)
             };
-          md = {
-            keys: Od,
+          Mb = {
+            keys: wb,
             inputs: new Map,
-            release: Wd,
-            updated: Fd,
+            release: eb,
+            updated: Hb,
             epoch: this.epoch
-          }, dd.gpu[Bd.c.lite] = md
+          }, bb.gpu[Rb.g.lite] = Mb
         }
-        return md
+        return Mb
       }
-      modelKey(dd, Od, md) {
-        let Wd = dd.keys.get(Od);
-        if (!Wd) {
-          if (md) {
-            const dd = {
-              Mt: 0,
+      modelKey(bb, wb, Mb) {
+        let eb = bb.keys.get(wb);
+        if (!eb) {
+          if (Mb) {
+            const bb = {
+              qO: 0,
               is32Bits: !1
             };
-            this.indexBufferCreated(dd, Od, "model-indices"), Wd = dd
-          } else Wd = {
-            Mt: 0
-          }, this.vertexBufferCreated(Wd, Od, !1, "model-vertices");
-          dd.keys.set(Od, Wd)
+            this.indexBufferCreated(bb, wb, "model-indices"), eb = bb
+          } else eb = {
+            qO: 0
+          }, this.vertexBufferCreated(eb, wb, !1, "model-vertices");
+          bb.keys.set(wb, eb)
         }
-        return Wd
+        return eb
       }
-      indexFormat(dd) {
-        return dd.is32Bits ? "uint32" : "uint16"
+      indexFormat(bb) {
+        return bb.is32Bits ? "uint32" : "uint16"
       }
       get texturesLoading() {
         return this.pending
       }
-      releaseSlot(dd, Od) {
-        --dd.refs > 0 || (this.releaseTexture(dd), eX(dd.images), null !== Od && this.textures.delete(Od))
+      releaseSlot(bb, wb) {
+        --bb.refs > 0 || (this.releaseTexture(bb), iV(bb.images), null !== wb && this.textures.delete(wb))
       }
-      load(dd, Od) {
+      load(bb, wb) {
         const {
-          epoch: md
-        } = this, Wd = Od.decoded = async function(dd) {
-          if ("cube" === dd.kind) return async function(dd) {
-            if (6 !== dd.length) throw new Error(`${dd.length} files where six faces were expected`);
-            const Od = await IX(dd.map((dd => OO(dd)))),
-              md = Od[0].width;
-            return IX(Od.map((async dd => {
-              if (dd.width === md && dd.height === md) return dd;
+          epoch: Mb
+        } = this, eb = wb.decoded = async function(bb) {
+          if ("cube" === bb.kind) return async function(bb) {
+            if (6 !== bb.length) throw new Error(`${bb.length} files where six faces were expected`);
+            const wb = await uV(bb.map((bb => kb(bb)))),
+              Mb = wb[0].width;
+            return uV(wb.map((async bb => {
+              if (bb.width === Mb && bb.height === Mb) return bb;
               try {
-                return await createImageBitmap(dd, {
-                  ...Md,
-                  resizeWidth: md,
-                  resizeHeight: md
+                return await createImageBitmap(bb, {
+                  ...ob,
+                  resizeWidth: Mb,
+                  resizeHeight: Mb
                 })
               } finally {
-                dd.close()
+                bb.close()
               }
             })))
-          }(dd.files);
-          if ("data" === dd.kind && dd.data) return [await createImageBitmap(new Blob([dd.data]), Md)];
-          return [await OO(mK(dd))]
-        }(dd.source).then((dd => {
-          0 === Od.refs || md !== this.epoch ? eX(dd) : Od.images = dd
+          }(bb.files);
+          if ("data" === bb.kind && bb.data) return [await createImageBitmap(new Blob([bb.data]), ob)];
+          return [await kb(wg(bb))]
+        }(bb.source).then((bb => {
+          0 === wb.refs || Mb !== this.epoch ? iV(bb) : wb.images = bb
         }));
-        this.track(Od, mK(dd.source), Wd, (() => {
-          Od.wanted && !Od.failed && Od.refs > 0 && this.upload(dd, Od)
+        this.track(wb, wg(bb.source), eb, (() => {
+          wb.wanted && !wb.failed && wb.refs > 0 && this.upload(bb, wb)
         }))
       }
-      canvasUpdated(dd, Od, md) {
+      canvasUpdated(bb, wb, Mb) {
         const {
-          state: Wd
-        } = this.textureSlot(dd);
-        Wd.dynamicSource = {
-          invertY: Od,
-          premultiplied: md
-        }, Wd.dynamic && this.pushDynamic(dd.source, Wd)
+          state: eb
+        } = this.textureSlot(bb);
+        eb.dynamicSource = {
+          invertY: wb,
+          premultiplied: Mb
+        }, eb.dynamic && this.pushDynamic(bb.source, eb)
       }
-      async atlasArrays(dd) {
+      async atlasArrays(bb) {
         const {
-          device: Od,
-          epoch: md
+          device: wb,
+          epoch: Mb
         } = this;
-        let Wd;
+        let eb;
         try {
-          Wd = await WO(Od, dd)
-        } catch (Rd) {
-          if (md === this.epoch) {
-            if (!tO(Od)) throw Rd;
-            await new Promise((dd => {
-              this.rebindWaiters.push(dd)
+          eb = await ww(wb, bb)
+        } catch (pb) {
+          if (Mb === this.epoch) {
+            if (!Lw(wb)) throw pb;
+            await new Promise((bb => {
+              this.rebindWaiters.push(bb)
             }))
           }
-          return this.atlasArrays(dd)
+          return this.atlasArrays(bb)
         }
-        if (Wd.forEach(((Od, md) => {
-            this.atlasSources.has(Od) || this.atlasSources.set(Od, {
-              sources: dd,
-              index: md,
-              stride: Wd[0].layers
+        if (eb.forEach(((wb, Mb) => {
+            this.atlasSources.has(wb) || this.atlasSources.set(wb, {
+              sources: bb,
+              index: Mb,
+              stride: eb[0].layers
             })
-          })), md !== this.epoch) return Wd;
-        const Fd = (0, LX.e)(this.engine, {
+          })), Mb !== this.epoch) return eb;
+        const Hb = (0, NV.c)(this.engine, {
           magFilter: "nearest",
           minFilter: "nearest",
           mipmapFilter: "linear",
           addressModeU: "repeat",
           addressModeV: "repeat"
         });
-        for (const Xd of Wd) this.atlasBindings.has(Xd) || this.atlasBindings.set(Xd, {
-          view: Xd.texture.createView({
+        for (const Vb of eb) this.atlasBindings.has(Vb) || this.atlasBindings.set(Vb, {
+          view: Vb.texture.createView({
             dimension: "2d-array"
           }),
-          sampler: Fd
+          sampler: Hb
         });
-        return Wd
+        return eb
       }
-      boundTexture(dd) {
-        const Od = this.atlasBindings.get(dd);
-        if (Od) return Od;
-        const md = this.atlasSources.get(dd);
-        if (md) return this.rebuildAtlas(dd, md), null;
-        const Wd = dd;
-        if (Wd.released) return null;
-        const Fd = this.textureSlot(Wd, !0),
+      boundTexture(bb) {
+        const wb = this.atlasBindings.get(bb);
+        if (wb) return wb;
+        const Mb = this.atlasSources.get(bb);
+        if (Mb) return this.rebuildAtlas(bb, Mb), null;
+        const eb = bb;
+        if (eb.released) return null;
+        const Hb = this.textureSlot(eb, !0),
           {
-            state: Rd
-          } = Fd;
-        if (!Rd.view && (Rd.wanted = !0, Rd.loading || Rd.failed || this.upload(Wd, Rd), !Rd.view)) return null;
-        const Xd = this.chosenSampler(Wd, Fd),
-          Kd = Fd.bound;
-        return Kd && Kd.view === Rd.view && Kd.sampler === Xd ? Kd : (Fd.bound = {
-          view: Rd.view,
-          sampler: Xd
-        }, Fd.bound)
+            state: pb
+          } = Hb;
+        if (!pb.view && (pb.wanted = !0, pb.loading || pb.failed || this.upload(eb, pb), !pb.view)) return null;
+        const Vb = this.chosenSampler(eb, Hb),
+          gb = Hb.bound;
+        return gb && gb.view === pb.view && gb.sampler === Vb ? gb : (Hb.bound = {
+          view: pb.view,
+          sampler: Vb
+        }, Hb.bound)
       }
-      rebuildAtlas(dd, Od) {
+      rebuildAtlas(bb, wb) {
         let {
-          sources: md,
-          index: Wd,
-          stride: Fd
-        } = Od;
-        if (this.atlasRebuilds.has(dd)) return;
-        this.atlasRebuilds.add(dd);
+          sources: Mb,
+          index: eb,
+          stride: Hb
+        } = wb;
+        if (this.atlasRebuilds.has(bb)) return;
+        this.atlasRebuilds.add(bb);
         const {
-          epoch: Rd
+          epoch: pb
         } = this;
-        this.atlasArrays(md).then((Od => {
-          Od[0].layers === Fd && Od[Wd] ? Rd === this.epoch && this.atlasBindings.set(dd, this.atlasBindings.get(Od[Wd])) : console.error(`Lite: the new device splits the atlas ${dO(md.urls[0])} into other arrays than its materials read`)
-        }), (dd => {
-          console.error(`Lite: could not build the atlas ${dO(md.urls[0])} again on a new device`, dd)
+        this.atlasArrays(Mb).then((wb => {
+          wb[0].layers === Hb && wb[eb] ? pb === this.epoch && this.atlasBindings.set(bb, this.atlasBindings.get(wb[eb])) : console.error(`Lite: the new device splits the atlas ${Tb(Mb.urls[0])} into other arrays than its materials read`)
+        }), (bb => {
+          console.error(`Lite: could not build the atlas ${Tb(Mb.urls[0])} again on a new device`, bb)
         }))
       }
-      textureLoaded(dd) {
-        var Od, md;
-        return null !== (Od = null === (md = this.heldSlot(dd)) || void 0 === md ? void 0 : md.state.decoded) && void 0 !== Od ? Od : null
+      textureLoaded(bb) {
+        var wb, Mb;
+        return null !== (wb = null === (Mb = this.heldSlot(bb)) || void 0 === Mb ? void 0 : Mb.state.decoded) && void 0 !== wb ? wb : null
       }
-      textureFailed(dd) {
-        var Od;
-        return !0 === (null === (Od = this.heldSlot(dd)) || void 0 === Od ? void 0 : Od.state.failed)
+      textureFailed(bb) {
+        var wb;
+        return !0 === (null === (wb = this.heldSlot(bb)) || void 0 === wb ? void 0 : wb.state.failed)
       }
-      heldSlot(dd) {
-        const Od = dd.gpu[Bd.c.lite];
-        return (null === Od || void 0 === Od ? void 0 : Od.epoch) === this.epoch ? Od : void 0
+      heldSlot(bb) {
+        const wb = bb.gpu[Rb.g.lite];
+        return (null === wb || void 0 === wb ? void 0 : wb.epoch) === this.epoch ? wb : void 0
       }
-      chosenSampler(dd, Od) {
+      chosenSampler(bb, wb) {
         const {
-          samplingMode: md,
-          wrapU: Wd,
-          wrapV: Fd
-        } = dd.sampler, Rd = Od.state.hasMips, Xd = function(dd, Od) {
+          samplingMode: Mb,
+          wrapU: eb,
+          wrapV: Hb
+        } = bb.sampler, pb = wb.state.hasMips, Vb = function(bb, wb) {
           const {
-            bilinear: md,
-            trilinear: Wd
-          } = Bd.g;
-          return !Od && dd !== md || 11 !== dd && dd !== Wd && dd !== md ? 1 : 4
-        }(md, Rd), Kd = Od.sampler;
-        if (Kd && Kd.samplingMode === md && Kd.hasMips === Rd && Kd.anisotropy === Xd && Kd.wrapU === Wd && Kd.wrapV === Fd) return Kd.sampler;
-        const hd = this.samplerFor(md, Rd, Xd, Wd, Fd);
-        return Od.sampler = {
-          samplingMode: md,
-          hasMips: Rd,
-          anisotropy: Xd,
-          wrapU: Wd,
-          wrapV: Fd,
-          sampler: hd
-        }, hd
+            bilinear: Mb,
+            trilinear: eb
+          } = Rb.j;
+          return !wb && bb !== Mb || 11 !== bb && bb !== eb && bb !== Mb ? 1 : 4
+        }(Mb, pb), gb = wb.sampler;
+        if (gb && gb.samplingMode === Mb && gb.hasMips === pb && gb.anisotropy === Vb && gb.wrapU === eb && gb.wrapV === Hb) return gb.sampler;
+        const lb = this.samplerFor(Mb, pb, Vb, eb, Hb);
+        return wb.sampler = {
+          samplingMode: Mb,
+          hasMips: pb,
+          anisotropy: Vb,
+          wrapU: eb,
+          wrapV: Hb,
+          sampler: lb
+        }, lb
       }
-      releaseTexture(dd) {
-        var Od, md;
-        dd.view && (null === (md = this.onDestroy) || void 0 === md || md.call(this, dd.view));
-        null === (Od = dd.destroy) || void 0 === Od || Od.call(dd)
+      releaseTexture(bb) {
+        var wb, Mb;
+        bb.view && (null === (Mb = this.onDestroy) || void 0 === Mb || Mb.call(this, bb.view));
+        null === (wb = bb.destroy) || void 0 === wb || wb.call(bb)
       }
-      textureSlot(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const md = dd.gpu[Bd.c.lite];
-        if ((null === md || void 0 === md ? void 0 : md.epoch) === this.epoch) return md;
-        const Wd = function(dd) {
+      textureSlot(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Mb = bb.gpu[Rb.g.lite];
+        if ((null === Mb || void 0 === Mb ? void 0 : Mb.epoch) === this.epoch) return Mb;
+        const eb = function(bb) {
           let {
-            source: Od,
-            sampler: md
-          } = dd;
-          return "canvas" === Od.kind ? null : `${Od.kind}|${mK(Od)}|${md.noMipmap}|${md.samplingMode}|${md.invertY}`
-        }(dd);
-        let Fd = null === Wd ? void 0 : this.textures.get(Wd);
-        var Rd;
-        Fd || (Fd = {
+            source: wb,
+            sampler: Mb
+          } = bb;
+          return "canvas" === wb.kind ? null : `${wb.kind}|${wg(wb)}|${Mb.noMipmap}|${Mb.samplingMode}|${Mb.invertY}`
+        }(bb);
+        let Hb = null === eb ? void 0 : this.textures.get(eb);
+        var pb;
+        Hb || (Hb = {
           refs: 0,
           view: null,
           destroy: null,
@@ -5081,212 +5081,212 @@ export const modules = {
           hasMips: !1,
           images: null,
           dynamic: null,
-          dynamicSource: null !== (Rd = null === md || void 0 === md ? void 0 : md.state.dynamicSource) && void 0 !== Rd ? Rd : null
-        }, null !== Wd && (this.textures.set(Wd, Fd), this.load(dd, Fd), Od && !md && this.firstBindDecodes++));
-        Fd.refs++;
-        const Xd = Fd,
+          dynamicSource: null !== (pb = null === Mb || void 0 === Mb ? void 0 : Mb.state.dynamicSource) && void 0 !== pb ? pb : null
+        }, null !== eb && (this.textures.set(eb, Hb), this.load(bb, Hb), wb && !Mb && this.firstBindDecodes++));
+        Hb.refs++;
+        const Vb = Hb,
           {
-            epoch: Kd
+            epoch: gb
           } = this,
-          hd = {
-            state: Fd,
+          lb = {
+            state: Hb,
             bound: null,
             sampler: null,
             release: () => {
-              Kd === this.epoch && this.releaseSlot(Xd, Wd)
+              gb === this.epoch && this.releaseSlot(Vb, eb)
             },
-            epoch: Kd
+            epoch: gb
           };
-        return dd.gpu[Bd.c.lite] = hd, hd
+        return bb.gpu[Rb.g.lite] = lb, lb
       }
-      samplerFor(dd, Od, md, Wd, Fd) {
-        const Rd = `${dd}|${Od}|${md}|${Wd}|${Fd}`;
-        let Xd = this.samplers.get(Rd);
-        if (!Xd) {
-          const Kd = {
-            ...MX(dd, Od, md),
-            addressModeU: dK(Wd),
-            addressModeV: dK(Fd)
+      samplerFor(bb, wb, Mb, eb, Hb) {
+        const pb = `${bb}|${wb}|${Mb}|${eb}|${Hb}`;
+        let Vb = this.samplers.get(pb);
+        if (!Vb) {
+          const gb = {
+            ...TV(bb, wb, Mb),
+            addressModeU: kV(eb),
+            addressModeV: kV(Hb)
           };
-          Xd = (0, LX.e)(this.engine, Kd), this.samplers.set(Rd, Xd)
+          Vb = (0, NV.c)(this.engine, gb), this.samplers.set(pb, Vb)
         }
-        return Xd
+        return Vb
       }
-      upload(dd, Od) {
+      upload(bb, wb) {
         const {
-          source: md,
-          sampler: Wd
-        } = dd;
-        Od.hasMips = !Wd.noMipmap, "canvas" === md.kind ? this.createDynamic(md, Od) : "cube" === md.kind ? this.uploadCube(Od, md.luminance) : this.uploadImage(Od, !0 === Wd.invertY, md.url)
+          source: Mb,
+          sampler: eb
+        } = bb;
+        wb.hasMips = !eb.noMipmap, "canvas" === Mb.kind ? this.createDynamic(Mb, wb) : "cube" === Mb.kind ? this.uploadCube(wb, Mb.luminance) : this.uploadImage(wb, !0 === eb.invertY, Mb.url)
       }
-      uploadImage(dd, Od, md) {
-        const [Wd] = dd.images;
-        dd.images = null;
+      uploadImage(bb, wb, Mb) {
+        const [eb] = bb.images;
+        bb.images = null;
         const {
-          epoch: Fd
-        } = this, Rd = (0, PX.b)(this.engine, Wd, {
-          mipMaps: dd.hasMips,
-          invertY: Od,
+          epoch: Hb
+        } = this, pb = (0, vV.b)(this.engine, eb, {
+          mipMaps: bb.hasMips,
+          invertY: wb,
           srgb: !1
-        }).then((Od => {
-          Wd.close(), 0 !== dd.refs && Fd === this.epoch ? (dd.view = Od.view, dd.destroy = Od.texture.destroy.bind(Od.texture)) : Od.texture.destroy()
+        }).then((wb => {
+          eb.close(), 0 !== bb.refs && Hb === this.epoch ? (bb.view = wb.view, bb.destroy = wb.texture.destroy.bind(wb.texture)) : wb.texture.destroy()
         }));
-        this.track(dd, md, Rd)
+        this.track(bb, Mb, pb)
       }
-      track(dd, Od, md, Wd) {
+      track(bb, wb, Mb, eb) {
         const {
-          epoch: Fd
+          epoch: Hb
         } = this;
-        dd.loading = !0, this.pending++, md.catch((md => {
-          Fd === this.epoch && (dd.failed = !0, console.warn(`Lite: could not load texture ${dO(Od)}`, md))
+        bb.loading = !0, this.pending++, Mb.catch((Mb => {
+          Hb === this.epoch && (bb.failed = !0, console.warn(`Lite: could not load texture ${Tb(wb)}`, Mb))
         })).finally((() => {
-          Fd === this.epoch && (dd.loading = !1, this.pending--, null === Wd || void 0 === Wd || Wd())
+          Hb === this.epoch && (bb.loading = !1, this.pending--, null === eb || void 0 === eb || eb())
         }))
       }
-      uploadCube(dd, Od) {
-        const md = dd.images;
-        dd.images = null;
-        const Wd = DX(this.engine, this.device, md, (0, Bd.r)(Od), dd.hasMips);
-        dd.view = Wd.createView({
+      uploadCube(bb, wb) {
+        const Mb = bb.images;
+        bb.images = null;
+        const eb = aV(this.engine, this.device, Mb, (0, Rb.w)(wb), bb.hasMips);
+        bb.view = eb.createView({
           dimension: "cube"
-        }), dd.destroy = () => {
-          Wd.destroy()
+        }), bb.destroy = () => {
+          eb.destroy()
         }
       }
-      createDynamic(dd, Od) {
+      createDynamic(bb, wb) {
         const {
-          canvas: md
-        } = dd, Wd = (0, zX.b)(this.engine, Math.max(1, md.width), Math.max(1, md.height), {
-          mipMaps: Od.hasMips,
+          canvas: Mb
+        } = bb, eb = (0, QV.b)(this.engine, Math.max(1, Mb.width), Math.max(1, Mb.height), {
+          mipMaps: wb.hasMips,
           srgb: !1
         });
-        Od.dynamic = Wd, Od.view = Wd.view, Od.destroy = () => {
-          Wd.texture.destroy()
-        }, this.pushDynamic(dd, Od)
+        wb.dynamic = eb, wb.view = eb.view, wb.destroy = () => {
+          eb.texture.destroy()
+        }, this.pushDynamic(bb, wb)
       }
-      pushDynamic(dd, Od) {
-        const md = Od.dynamicSource,
-          Wd = Od.dynamic,
+      pushDynamic(bb, wb) {
+        const Mb = wb.dynamicSource,
+          eb = wb.dynamic,
           {
-            canvas: Fd
-          } = dd;
-        if (md && Wd && 0 !== Fd.width && 0 !== Fd.height) return Fd.width !== Wd.width || Fd.height !== Wd.height ? (this.releaseTexture(Od), Od.dynamic = null, Od.view = null, void this.createDynamic(dd, Od)) : void(0, zX.e)(this.engine, Wd, Fd, {
-          invertY: md.invertY,
-          premultiplyAlpha: md.premultiplied
+            canvas: Hb
+          } = bb;
+        if (Mb && eb && 0 !== Hb.width && 0 !== Hb.height) return Hb.width !== eb.width || Hb.height !== eb.height ? (this.releaseTexture(wb), wb.dynamic = null, wb.view = null, void this.createDynamic(bb, wb)) : void(0, QV.e)(this.engine, eb, Hb, {
+          invertY: Mb.invertY,
+          premultiplyAlpha: Mb.premultiplied
         })
       }
     }
 
-    function mK(dd) {
-      return "cube" === dd.kind ? dd.rootUrl : "canvas" === dd.kind ? "canvas" : dd.url
+    function wg(bb) {
+      return "cube" === bb.kind ? bb.rootUrl : "canvas" === bb.kind ? "canvas" : bb.url
     }
-    const WK = new Uint8Array(4);
-    var FK = md(40327);
+    const Mg = new Uint8Array(4);
+    var eg = Mb(40052);
 
-    function RK(dd) {
-      const Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "store" : "discard";
-      dd._colorAttachment.storeOp = dd._targetSignature._sampleCount > 1 ? Od : "store";
-      const md = dd._renderPassDescriptor.depthStencilAttachment;
-      md && (md.depthStoreOp = Od, md.stencilStoreOp && (md.stencilStoreOp = Od))
+    function Hg(bb) {
+      const wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? "store" : "discard";
+      bb._colorAttachment.storeOp = bb._targetSignature._sampleCount > 1 ? wb : "store";
+      const Mb = bb._renderPassDescriptor.depthStencilAttachment;
+      Mb && (Mb.depthStoreOp = wb, Mb.stencilStoreOp && (Mb.stencilStoreOp = wb))
     }
-    var XK = md(39306),
-      KK = md(38837),
-      hK = md(38922),
-      vK = md(41292);
-    const QK = new Float64Array([1, 1, 1]),
-      tK = new Float64Array([0, 1, 0]),
-      oK = new Float64Array(4),
-      NK = new Float32Array(16),
-      qK = new Float64Array(3),
-      HK = new Float64Array(4);
+    var pg = Mb(39001),
+      Vg = Mb(38514),
+      gg = Mb(38584),
+      lg = Mb(41065);
+    const Lg = new Float64Array([1, 1, 1]),
+      Ig = new Float64Array([0, 1, 0]),
+      Og = new Float64Array(4),
+      Ug = new Float32Array(16),
+      tg = new Float64Array(3),
+      Cg = new Float64Array(4);
 
-    function yK(dd, Od, md) {
-      dd.fov = Od.fov, dd.near = Od.near, dd.far = Od.far, dd.renderWidth = md.renderWidth, dd.renderHeight = md.renderHeight, (0, hK.u)(Od.holderRotation, 0, oK, 0), (0, hK.e)(QK, 0, oK, 0, Od.holderPosition, 0, NK);
-      const Wd = Od.k_;
-      qK[0] = Wd[0], qK[1] = Wd[1], qK[2] = Wd[2] + 1;
-      const Fd = dd.viewMatrix;
-      (0, hK.m)(Wd, qK, tK, Fd), (0, hK.i)(Fd, 0, Fd), (0, hK.q)(Fd, NK, 0, Fd), (0, hK.i)(Fd, 0, Fd);
-      const Rd = dd.worldMatrix;
-      (0, hK.i)(Fd, 0, Rd), dd.eye[0] = Rd[12], dd.eye[1] = Rd[13], dd.eye[2] = Rd[14], HK[0] = dd.fov, HK[1] = dd.renderWidth / dd.renderHeight, HK[2] = dd.near, HK[3] = dd.far, (0, hK.s)(HK, dd.projectionMatrix), (0, hK.q)(Fd, dd.projectionMatrix, 0, dd.viewProjectionMatrix), (0, vK.f)(dd.viewProjectionMatrix, dd.frustum)
+    function Eg(bb, wb, Mb) {
+      bb.fov = wb.fov, bb.near = wb.near, bb.far = wb.far, bb.renderWidth = Mb.renderWidth, bb.renderHeight = Mb.renderHeight, (0, gg.z)(wb.holderRotation, 0, Og, 0), (0, gg.e)(Lg, 0, Og, 0, wb.holderPosition, 0, Ug);
+      const eb = wb.k_;
+      tg[0] = eb[0], tg[1] = eb[1], tg[2] = eb[2] + 1;
+      const Hb = bb.viewMatrix;
+      (0, gg.p)(eb, tg, Ig, Hb), (0, gg.l)(Hb, 0, Hb), (0, gg.t)(Hb, Ug, 0, Hb), (0, gg.l)(Hb, 0, Hb);
+      const pb = bb.worldMatrix;
+      (0, gg.l)(Hb, 0, pb), bb.eye[0] = pb[12], bb.eye[1] = pb[13], bb.eye[2] = pb[14], Cg[0] = bb.fov, Cg[1] = bb.renderWidth / bb.renderHeight, Cg[2] = bb.near, Cg[3] = bb.far, (0, gg.w)(Cg, bb.projectionMatrix), (0, gg.t)(Hb, bb.projectionMatrix, 0, bb.viewProjectionMatrix), (0, lg.f)(bb.viewProjectionMatrix, bb.frustum)
     }
 
-    function bK(dd, Od) {
-      let md = dd.frustumPlanes;
-      md || (md = dd.frustumPlanes = Array.from({
+    function Fg(bb, wb) {
+      let Mb = bb.frustumPlanes;
+      Mb || (Mb = bb.frustumPlanes = Array.from({
         length: 6
-      }, (() => new XK.d(0, 0, 0, 0))));
-      for (let Wd = 0; Wd < 6; Wd++) {
-        const dd = md[Wd].normal;
-        dd._x = Od[4 * Wd], dd._y = Od[4 * Wd + 1], dd._z = Od[4 * Wd + 2], dd._isDirty = !0, md[Wd].d = Od[4 * Wd + 3]
+      }, (() => new pg.d(0, 0, 0, 0))));
+      for (let eb = 0; eb < 6; eb++) {
+        const bb = Mb[eb].normal;
+        bb._x = wb[4 * eb], bb._y = wb[4 * eb + 1], bb._z = wb[4 * eb + 2], bb._isDirty = !0, Mb[eb].d = wb[4 * eb + 3]
       }
     }
 
-    function TK(dd, Od) {
-      const md = Od.clearColor;
-      dd.clearColour[0] = md.r, dd.clearColour[1] = md.g, dd.clearColour[2] = md.b, dd.clearColour[3] = md.a;
-      const Wd = Od.ambientColor;
-      dd.ambientColour[0] = Wd.r, dd.ambientColour[1] = Wd.g, dd.ambientColour[2] = Wd.b, dd.animationRatio = Od.animationRatio, dd.frameId = Od.frameId, dd.version++
+    function Bg(bb, wb) {
+      const Mb = wb.clearColor;
+      bb.clearColour[0] = Mb.r, bb.clearColour[1] = Mb.g, bb.clearColour[2] = Mb.b, bb.clearColour[3] = Mb.a;
+      const eb = wb.ambientColor;
+      bb.ambientColour[0] = eb.r, bb.ambientColour[1] = eb.g, bb.ambientColour[2] = eb.b, bb.animationRatio = wb.animationRatio, bb.frameId = wb.frameId, bb.version++
     }
 
-    function pK(dd) {
-      const Od = dd.model.view;
-      return Od.animTick = (0, KK.g)(), Od.timeMs = performance.now(), TK(Od, dd.MH), dd.model.update(Od.frameId), Od
+    function sg(bb) {
+      const wb = bb.model.view;
+      return wb.animTick = (0, Vg.f)(), wb.timeMs = performance.now(), Bg(wb, bb.JE), bb.model.update(wb.frameId), wb
     }
 
-    function YK(dd) {
-      const Od = dd.MH,
+    function mg(bb) {
+      const wb = bb.JE,
         {
-          view: md,
-          l_: Wd
-        } = dd.model;
-      return yK(md, Wd, Od.Iq()), Od.onBeforeRenderObservable.notifyObservers(Od), bK(Od, md.frustum), Od.onBeforeCameraRenderObservable.notifyObservers(Od.activeCamera), pK(dd)
+          view: Mb,
+          T_: eb
+        } = bb.model;
+      return Eg(Mb, eb, wb.DC()), wb.onBeforeRenderObservable.notifyObservers(wb), Fg(wb, Mb.frustum), wb.onBeforeCameraRenderObservable.notifyObservers(wb.activeCamera), sg(bb)
     }
-    var gK = md(38884),
-      wK = md(38985),
-      aK = md(39363);
+    var hg = Mb(38552),
+      zg = Mb(38663),
+      Xg = Mb(39052);
 
-    function EK(dd) {
-      var Od, md;
-      const Wd = (0, Ud.db)(dd);
-      if (!Wd || Wd.diffuseTexture && (0, aK.j)(dd)) return null;
-      const Fd = null === (Od = (0, Ud.B)(Wd, Ed.h.name)) || void 0 === Od ? void 0 : Od.state,
-        Rd = null === (md = (0, Ud.B)(Wd, OX.e.name)) || void 0 === md ? void 0 : md.state,
-        Xd = new Float32Array(16);
-      return function(dd, Od, md, Wd) {
-        var Fd, Rd;
-        const Xd = nW;
-        Wd.set(dd.diffuseColor, Xd.diffuse), Wd[Xd.diffuse + 3] = dd.alpha, Wd.set(dd.ambientColor, Xd.ambientAndCutoff), Wd[Xd.ambientAndCutoff + 3] = dd.alphaCutOff, Wd.set(dd.emissiveColor, Xd.emissiveAndLevel), Wd[Xd.emissiveAndLevel + 3] = null !== (Fd = null === (Rd = dd.diffuseTexture) || void 0 === Rd ? void 0 : Rd.level) && void 0 !== Fd ? Fd : 1, null !== Od && void 0 !== Od && Od.animDataPerTex ? (Wd[Xd.anim + 1] = KK.d, Wd[Xd.anim + 2] = Od.animDataPerTex.length / 3 - 1) : md && (Wd[Xd.anim + 1] = md.numAnimStates, Wd[Xd.anim + 2] = md.ticksPerAnimState)
-      }(Wd, Fd, Rd, Xd), {
-        model: Wd,
-        atlas: Fd,
-        texture: Fd ? "atlas" : Wd.diffuseTexture ? "single" : "none",
-        animated: Fd ? !!Fd.animDataPerTex : !!Rd,
-        liquid: (0, aK.l)(dd),
-        customRenderMat: (0, aK.j)(dd),
-        uniformData: Xd
+    function xg(bb) {
+      var wb, Mb;
+      const eb = (0, Kb.ab)(bb);
+      if (!eb || eb.diffuseTexture && (0, Xg.g)(bb)) return null;
+      const Hb = null === (wb = (0, Kb.w)(eb, xb.i.name)) || void 0 === wb ? void 0 : wb.state,
+        pb = null === (Mb = (0, Kb.w)(eb, bV.c.name)) || void 0 === Mb ? void 0 : Mb.state,
+        Vb = new Float32Array(16);
+      return function(bb, wb, Mb, eb) {
+        var Hb, pb;
+        const Vb = Je;
+        eb.set(bb.diffuseColor, Vb.diffuse), eb[Vb.diffuse + 3] = bb.alpha, eb.set(bb.ambientColor, Vb.ambientAndCutoff), eb[Vb.ambientAndCutoff + 3] = bb.alphaCutOff, eb.set(bb.emissiveColor, Vb.emissiveAndLevel), eb[Vb.emissiveAndLevel + 3] = null !== (Hb = null === (pb = bb.diffuseTexture) || void 0 === pb ? void 0 : pb.level) && void 0 !== Hb ? Hb : 1, null !== wb && void 0 !== wb && wb.animDataPerTex ? (eb[Vb.anim + 1] = Vg.b, eb[Vb.anim + 2] = wb.animDataPerTex.length / 3 - 1) : Mb && (eb[Vb.anim + 1] = Mb.numAnimStates, eb[Vb.anim + 2] = Mb.ticksPerAnimState)
+      }(eb, Hb, pb, Vb), {
+        model: eb,
+        atlas: Hb,
+        texture: Hb ? "atlas" : eb.diffuseTexture ? "single" : "none",
+        animated: Hb ? !!Hb.animDataPerTex : !!pb,
+        liquid: (0, Xg.h)(bb),
+        customRenderMat: (0, Xg.g)(bb),
+        uniformData: Vb
       }
     }
-    var JK = md(3953);
-    class UK {
-      constructor(dd) {
-        this.units = dd, this.buffer = void 0, this.twin = null, this.bufferReady = !1, this.twinReady = !1
+    var jg = Mb(4120);
+    class Kg {
+      constructor(bb) {
+        this.units = bb, this.buffer = void 0, this.twin = null, this.bufferReady = !1, this.twinReady = !1
       }
       get ready() {
         return this.bufferReady && (!this.twin || this.twinReady)
       }
       destroy() {
-        var dd;
-        this.buffer.destroy(), null === (dd = this.twin) || void 0 === dd || dd.destroy()
+        var bb;
+        this.buffer.destroy(), null === (bb = this.twin) || void 0 === bb || bb.destroy()
       }
     }
-    class xK {
-      constructor(dd, Od) {
-        this.arena = dd, this.By = void 0, this.buffer = void 0, this.twin = null, this.usable = 0, this.backings = [], this.growable = !0, this.dropped = !1, this.By = new lX(Od);
-        const md = new UK(Od);
-        md.buffer = this.createBuffer(md, !1), this.backings.push(md), this.refresh()
+    class rg {
+      constructor(bb, wb) {
+        this.arena = bb, this.gF = void 0, this.buffer = void 0, this.twin = null, this.usable = 0, this.backings = [], this.growable = !0, this.dropped = !1, this.gF = new dV(wb);
+        const Mb = new Kg(wb);
+        Mb.buffer = this.createBuffer(Mb, !1), this.backings.push(Mb), this.refresh()
       }
-      get Mt() {
-        return this.By.Mt
+      get qO() {
+        return this.gF.qO
       }
       get canGrow() {
         return this.growable && !this.dropped
@@ -5298,51 +5298,51 @@ export const modules = {
         return null !== this.backings[this.backings.length - 1].twin
       }
       get allocatedBytes() {
-        let dd = 0;
-        for (const Od of this.backings) dd += Od.units * (this.arena.unitBytes + (Od.twin ? this.arena.twinUnitBytes : 0));
-        return dd
+        let bb = 0;
+        for (const wb of this.backings) bb += wb.units * (this.arena.unitBytes + (wb.twin ? this.arena.twinUnitBytes : 0));
+        return bb
       }
-      holds(dd) {
-        return dd.start + dd.length <= this.usable
+      holds(bb) {
+        return bb.start + bb.length <= this.usable
       }
-      lost(dd) {
-        return this.dropped || dd.start + dd.length > this.Mt
+      lost(bb) {
+        return this.dropped || bb.start + bb.length > this.qO
       }
-      write(dd, Od) {
+      write(bb, wb) {
         const {
-          device: md,
-          unitBytes: Wd
+          device: Mb,
+          unitBytes: eb
         } = this.arena;
-        for (const Fd of this.backings) {
-          const Rd = (Fd.units - dd.start) * Wd;
-          Rd > 0 && md.queue.writeBuffer(Fd.buffer, dd.start * Wd, Od, 0, Math.min(Od.byteLength, Rd))
+        for (const Hb of this.backings) {
+          const pb = (Hb.units - bb.start) * eb;
+          pb > 0 && Mb.queue.writeBuffer(Hb.buffer, bb.start * eb, wb, 0, Math.min(wb.byteLength, pb))
         }
       }
-      writeLight(dd, Od) {
+      writeLight(bb, wb) {
         const {
-          device: md,
-          twinUnitBytes: Wd,
-          verticesPerUnit: Fd
+          device: Mb,
+          twinUnitBytes: eb,
+          verticesPerUnit: Hb
         } = this.arena, {
-          light: Rd,
-          count: Xd
-        } = this.arena.twinLight(Od, Math.min(Od.length, dd.length * Fd));
-        for (const Kd of this.backings) {
-          Kd.twin || (Kd.twin = this.createBuffer(Kd, !0));
-          const Od = (Kd.units - dd.start) * Fd;
-          Od > 0 && md.queue.writeBuffer(Kd.twin, dd.start * Wd, Rd, 0, Math.min(Xd, Od))
+          light: pb,
+          count: Vb
+        } = this.arena.twinLight(wb, Math.min(wb.length, bb.length * Hb));
+        for (const gb of this.backings) {
+          gb.twin || (gb.twin = this.createBuffer(gb, !0));
+          const wb = (gb.units - bb.start) * Hb;
+          wb > 0 && Mb.queue.writeBuffer(gb.twin, bb.start * eb, pb, 0, Math.min(Vb, wb))
         }
       }
-      grow(dd) {
+      grow(bb) {
         this.arena.assertNotDrawing();
         const {
-          device: Od,
-          unitBytes: md,
-          label: Wd
-        } = this.arena, Fd = this.backings[this.backings.length - 1], Rd = new UK(dd), Xd = Od.createCommandEncoder({
-          label: `${Wd}-grow`
+          device: wb,
+          unitBytes: Mb,
+          label: eb
+        } = this.arena, Hb = this.backings[this.backings.length - 1], pb = new Kg(bb), Vb = wb.createCommandEncoder({
+          label: `${eb}-grow`
         });
-        Rd.buffer = this.createBuffer(Rd, !1), Xd.copyBufferToBuffer(Fd.buffer, 0, Rd.buffer, 0, Fd.units * md), Fd.twin && (Rd.twin = this.createBuffer(Rd, !0), Xd.copyBufferToBuffer(Fd.twin, 0, Rd.twin, 0, Fd.units * this.arena.twinUnitBytes)), Od.queue.submit([Xd.finish()]), this.backings.push(Rd), this.By.grow(dd)
+        pb.buffer = this.createBuffer(pb, !1), Vb.copyBufferToBuffer(Hb.buffer, 0, pb.buffer, 0, Hb.units * Mb), Hb.twin && (pb.twin = this.createBuffer(pb, !0), Vb.copyBufferToBuffer(Hb.twin, 0, pb.twin, 0, Hb.units * this.arena.twinUnitBytes)), wb.queue.submit([Vb.finish()]), this.backings.push(pb), this.gF.grow(bb)
       }
       retire() {
         this.dropped = !0, this.refresh()
@@ -5350,243 +5350,243 @@ export const modules = {
       drop() {
         if (!this.dropped) {
           this.dropped = !0;
-          for (const dd of this.backings) dd.destroy();
+          for (const bb of this.backings) bb.destroy();
           this.refresh(), this.arena.remove(this)
         }
       }
-      createBuffer(dd, Od) {
+      createBuffer(bb, wb) {
         const {
-          device: md,
-          unitBytes: Wd,
-          twinUnitBytes: Fd,
-          usage: Rd,
-          label: Xd
+          device: Mb,
+          unitBytes: eb,
+          twinUnitBytes: Hb,
+          usage: pb,
+          label: Vb
         } = this.arena;
-        md.pushErrorScope("out-of-memory");
-        const Kd = md.createBuffer({
-          label: Od ? `${Xd}-light` : Xd,
-          size: dd.units * (Od ? Fd : Wd),
-          usage: (Od ? this.arena.twinUsage : Rd) | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
+        Mb.pushErrorScope("out-of-memory");
+        const gb = Mb.createBuffer({
+          label: wb ? `${Vb}-light` : Vb,
+          size: bb.units * (wb ? Hb : eb),
+          usage: (wb ? this.arena.twinUsage : pb) | GPUBufferUsage.COPY_DST | GPUBufferUsage.COPY_SRC
         });
-        return this.arena.awaitingVerdict++, md.popErrorScope().then((md => {
-          this.arena.awaitingVerdict--, this.settle(dd, Od, !md, !0)
-        }), (md => {
-          this.arena.awaitingVerdict--, this.arena.warnOnce("noVerdict", `no out-of-memory verdict for a ${Xd} buffer, taken as failed: ${String(md)}`), this.settle(dd, Od, !1, !1)
-        })), Kd
+        return this.arena.awaitingVerdict++, Mb.popErrorScope().then((Mb => {
+          this.arena.awaitingVerdict--, this.settle(bb, wb, !Mb, !0)
+        }), (Mb => {
+          this.arena.awaitingVerdict--, this.arena.warnOnce("noVerdict", `no out-of-memory verdict for a ${Vb} buffer, taken as failed: ${String(Mb)}`), this.settle(bb, wb, !1, !1)
+        })), gb
       }
-      settle(dd, Od, md, Wd) {
-        const Fd = this.backings.indexOf(dd);
-        if (!(this.dropped || Fd < 0)) {
-          if (!md) {
-            if (Wd && this.arena.ranOutOfMemory(dd.units, dd.units * (Od ? this.arena.twinUnitBytes : this.arena.unitBytes)), 0 === Fd) return void this.drop();
-            for (const dd of this.backings.splice(Fd)) dd.destroy();
-            return this.By.truncate(this.backings[Fd - 1].units), this.growable = !1, void this.promote()
+      settle(bb, wb, Mb, eb) {
+        const Hb = this.backings.indexOf(bb);
+        if (!(this.dropped || Hb < 0)) {
+          if (!Mb) {
+            if (eb && this.arena.ranOutOfMemory(bb.units, bb.units * (wb ? this.arena.twinUnitBytes : this.arena.unitBytes)), 0 === Hb) return void this.drop();
+            for (const bb of this.backings.splice(Hb)) bb.destroy();
+            return this.gF.truncate(this.backings[Hb - 1].units), this.growable = !1, void this.promote()
           }
-          Od ? dd.twinReady = !0 : (dd.bufferReady = !0, this.arena.allocatedBuffer(dd.units)), this.promote()
+          wb ? bb.twinReady = !0 : (bb.bufferReady = !0, this.arena.allocatedBuffer(bb.units)), this.promote()
         }
       }
       promote() {
         const {
-          backings: dd
+          backings: bb
         } = this;
-        let Od = 0;
-        for (; Od + 1 < dd.length && dd[Od].ready && dd[Od + 1].ready;) Od++;
-        for (const md of dd.splice(0, Od)) md.destroy();
+        let wb = 0;
+        for (; wb + 1 < bb.length && bb[wb].ready && bb[wb + 1].ready;) wb++;
+        for (const Mb of bb.splice(0, wb)) Mb.destroy();
         this.refresh()
       }
       refresh() {
-        const dd = this.backings[0];
-        this.buffer = dd.buffer, this.twin = dd.twinReady ? dd.twin : null, this.usable = !this.dropped && dd.bufferReady ? dd.units : 0
+        const bb = this.backings[0];
+        this.buffer = bb.buffer, this.twin = bb.twinReady ? bb.twin : null, this.usable = !this.dropped && bb.bufferReady ? bb.units : 0
       }
     }
-    class BK {
-      constructor(dd, Od, md, Wd) {
+    class Rg {
+      constructor(bb, wb, Mb, eb) {
         let {
-          verticesPerUnit: Fd = 1,
-          twinUsage: Rd = GPUBufferUsage.VERTEX
+          verticesPerUnit: Hb = 1,
+          twinUsage: pb = GPUBufferUsage.VERTEX
         } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-        if (this.device = dd, this.unitBytes = Od, this.usage = md, this.label = Wd, this.pages = [], this.yt = !1, this.awaitingVerdict = 0, this.verticesPerUnit = void 0, this.twinUsage = void 0, this.twinValueBytes = void 0, this.twinUnitBytes = void 0, this.limit = -1, this.ceiling = -1, this.failed = 1 / 0, this.shortages = 0, this.forgetFailedAt = 0, this.shortageUntil = -1 / 0, this.warnOnce = (0, iO.b)("Lite terrain: "), this.padded = new Uint16Array(0), this.widened = new Float32Array(0), Od % 4 !== 0) throw new Error(`${Wd}: ${Od}-byte units cannot keep every range four-byte aligned`);
-        this.verticesPerUnit = Fd, this.twinUsage = Rd, this.twinValueBytes = Fd > 1 ? 2 : 4, this.twinUnitBytes = this.twinValueBytes * Fd
+        if (this.device = bb, this.unitBytes = wb, this.usage = Mb, this.label = eb, this.pages = [], this.UO = !1, this.awaitingVerdict = 0, this.verticesPerUnit = void 0, this.twinUsage = void 0, this.twinValueBytes = void 0, this.twinUnitBytes = void 0, this.limit = -1, this.ceiling = -1, this.failed = 1 / 0, this.shortages = 0, this.forgetFailedAt = 0, this.shortageUntil = -1 / 0, this.warnOnce = (0, fw.d)("Lite terrain: "), this.padded = new Uint16Array(0), this.widened = new Float32Array(0), wb % 4 !== 0) throw new Error(`${eb}: ${wb}-byte units cannot keep every range four-byte aligned`);
+        this.verticesPerUnit = Hb, this.twinUsage = pb, this.twinValueBytes = Hb > 1 ? 2 : 4, this.twinUnitBytes = this.twinValueBytes * Hb
       }
-      twinLight(dd, Od) {
-        if (4 === this.twinValueBytes) return this.widened.length < Od && (this.widened = new Float32Array(Math.max(Od, 2 * this.widened.length))), this.widened.set(dd.subarray(0, Od)), {
+      twinLight(bb, wb) {
+        if (4 === this.twinValueBytes) return this.widened.length < wb && (this.widened = new Float32Array(Math.max(wb, 2 * this.widened.length))), this.widened.set(bb.subarray(0, wb)), {
           light: this.widened,
-          count: Od
+          count: wb
         };
-        const md = Od % this.verticesPerUnit;
-        if (0 === md) return {
-          light: dd,
-          count: Od
+        const Mb = wb % this.verticesPerUnit;
+        if (0 === Mb) return {
+          light: bb,
+          count: wb
         };
-        const Wd = Od - md + this.verticesPerUnit;
-        return this.padded.length < Wd && (this.padded = new Uint16Array(Math.max(Wd, 2 * this.padded.length))), this.padded.set(dd.subarray(0, Od)), this.padded.fill(0, Od, Wd), {
+        const eb = wb - Mb + this.verticesPerUnit;
+        return this.padded.length < eb && (this.padded = new Uint16Array(Math.max(eb, 2 * this.padded.length))), this.padded.set(bb.subarray(0, wb)), this.padded.fill(0, wb, eb), {
           light: this.padded,
-          count: Wd
+          count: eb
         }
       }
-      allocate(dd) {
-        if (this.assertNotDrawing(), this.limit < 0 && (this.limit = this.ceiling = this.pageLimit()), dd > this.limit) return null;
+      allocate(bb) {
+        if (this.assertNotDrawing(), this.limit < 0 && (this.limit = this.ceiling = this.pageLimit()), bb > this.limit) return null;
         this.failed !== 1 / 0 && performance.now() >= this.forgetFailedAt && (this.failed = 1 / 0, this.ceiling = this.limit);
-        for (const Fd of this.pages) {
-          const Od = Fd.By.allocate(dd);
-          if (Od >= 0) return {
-            page: Fd,
-            start: Od,
-            length: dd
+        for (const Hb of this.pages) {
+          const wb = Hb.gF.allocate(bb);
+          if (wb >= 0) return {
+            page: Hb,
+            start: wb,
+            length: bb
           }
         }
-        const Od = this.pages[this.pages.length - 1];
-        if (null !== Od && void 0 !== Od && Od.canGrow) {
-          const md = Math.min(this.ceiling, Math.max(2 * Od.Mt, Od.Mt + dd));
-          if (md - Od.Mt >= dd) return Od.grow(md), {
-            page: Od,
-            start: Od.By.allocate(dd),
-            length: dd
+        const wb = this.pages[this.pages.length - 1];
+        if (null !== wb && void 0 !== wb && wb.canGrow) {
+          const Mb = Math.min(this.ceiling, Math.max(2 * wb.qO, wb.qO + bb));
+          if (Mb - wb.qO >= bb) return wb.grow(Mb), {
+            page: wb,
+            start: wb.gF.allocate(bb),
+            length: bb
           }
         }
-        Od && Od !== this.pages[0] && 0 === Od.By.used && Od.drop();
-        const md = Math.floor(1048576 / this.unitBytes),
-          Wd = new xK(this, Math.max(dd, Math.min(this.ceiling, md)));
-        return this.pages.push(Wd), {
-          page: Wd,
-          start: Wd.By.allocate(dd),
-          length: dd
+        wb && wb !== this.pages[0] && 0 === wb.gF.used && wb.drop();
+        const Mb = Math.floor(1048576 / this.unitBytes),
+          eb = new rg(this, Math.max(bb, Math.min(this.ceiling, Mb)));
+        return this.pages.push(eb), {
+          page: eb,
+          start: eb.gF.allocate(bb),
+          length: bb
         }
       }
-      free(dd) {
+      free(bb) {
         this.assertNotDrawing();
         const {
-          page: Od
-        } = dd;
-        Od.By.free(dd.start, dd.length), 0 === Od.By.used && Od !== this.pages[0] && Od !== this.pages[this.pages.length - 1] && Od.drop()
+          page: wb
+        } = bb;
+        wb.gF.free(bb.start, bb.length), 0 === wb.gF.used && wb !== this.pages[0] && wb !== this.pages[this.pages.length - 1] && wb.drop()
       }
       retire() {
-        for (const dd of this.pages) dd.retire()
+        for (const bb of this.pages) bb.retire()
       }
-      remove(dd) {
-        const Od = this.pages.indexOf(dd);
-        Od >= 0 && this.pages.splice(Od, 1)
+      remove(bb) {
+        const wb = this.pages.indexOf(bb);
+        wb >= 0 && this.pages.splice(wb, 1)
       }
-      ranOutOfMemory(dd, Od) {
-        this.warnOnce("outOfMemory", `out of GPU memory for a ${Od}-byte ${this.label} buffer; its chunks are meshed again`), this.failed = Math.min(this.failed, dd), this.ceiling = Math.max(1, Math.floor(Math.min(this.ceiling, dd) / 2));
-        const md = performance.now();
-        md >= this.shortageUntil && (this.forgetFailedAt = md + Math.min(6e5, 3e4 * 2 ** this.shortages++), this.shortageUntil = md + 1e3)
+      ranOutOfMemory(bb, wb) {
+        this.warnOnce("outOfMemory", `out of GPU memory for a ${wb}-byte ${this.label} buffer; its chunks are meshed again`), this.failed = Math.min(this.failed, bb), this.ceiling = Math.max(1, Math.floor(Math.min(this.ceiling, bb) / 2));
+        const Mb = performance.now();
+        Mb >= this.shortageUntil && (this.forgetFailedAt = Mb + Math.min(6e5, 3e4 * 2 ** this.shortages++), this.shortageUntil = Mb + 1e3)
       }
-      allocatedBuffer(dd) {
-        dd >= this.failed && (this.failed = 1 / 0);
-        const Od = Math.min(2 * dd, Math.floor((dd + this.failed) / 2));
-        this.ceiling = Math.min(this.limit, Math.max(this.ceiling, Od))
+      allocatedBuffer(bb) {
+        bb >= this.failed && (this.failed = 1 / 0);
+        const wb = Math.min(2 * bb, Math.floor((bb + this.failed) / 2));
+        this.ceiling = Math.min(this.limit, Math.max(this.ceiling, wb))
       }
       stats() {
-        let dd = 0,
-          Od = 0,
-          md = 0,
-          Wd = 0;
-        for (const Fd of this.pages) dd += Fd.Mt, Od += Fd.By.used, md += Fd.hasTwin ? Fd.Mt * this.twinUnitBytes : 0, Wd += Fd.allocatedBytes;
+        let bb = 0,
+          wb = 0,
+          Mb = 0,
+          eb = 0;
+        for (const Hb of this.pages) bb += Hb.qO, wb += Hb.gF.used, Mb += Hb.hasTwin ? Hb.qO * this.twinUnitBytes : 0, eb += Hb.allocatedBytes;
         return {
           pages: this.pages.length,
-          capacityBytes: dd * this.unitBytes,
-          usedBytes: Od * this.unitBytes,
-          twinBytes: md,
-          allocatedBytes: Wd
+          capacityBytes: bb * this.unitBytes,
+          usedBytes: wb * this.unitBytes,
+          twinBytes: Mb,
+          allocatedBytes: eb
         }
       }
       assertNotDrawing() {}
       pageLimit() {
         const {
-          maxBufferSize: dd,
-          maxStorageBufferBindingSize: Od
+          maxBufferSize: bb,
+          maxStorageBufferBindingSize: wb
         } = this.device.limits;
-        let md = Math.floor(Math.min(67108864, dd) / this.unitBytes);
-        return this.usage & GPUBufferUsage.STORAGE && (md = Math.min(md, Math.floor(Od / this.unitBytes))), this.twinUsage & GPUBufferUsage.STORAGE && (md = Math.min(md, Math.floor(Od / this.twinUnitBytes))), md
+        let Mb = Math.floor(Math.min(67108864, bb) / this.unitBytes);
+        return this.usage & GPUBufferUsage.STORAGE && (Mb = Math.min(Mb, Math.floor(wb / this.unitBytes))), this.twinUsage & GPUBufferUsage.STORAGE && (Mb = Math.min(Mb, Math.floor(wb / this.twinUnitBytes))), Mb
       }
     }
-    const SK = 16383;
+    const Dg = 16383;
 
-    function sK(dd, Od, md, Wd, Fd) {
-      let Rd = 0;
-      for (let Xd = md; Xd < Wd; Xd += SK) dd.drawIndexed(6 * Math.min(SK, Wd - Xd), 1, 0, Od + 4 * Xd, Fd), Rd++;
-      return Rd
+    function cg(bb, wb, Mb, eb, Hb) {
+      let pb = 0;
+      for (let Vb = Mb; Vb < eb; Vb += Dg) bb.drawIndexed(6 * Math.min(Dg, eb - Vb), 1, 0, wb + 4 * Vb, Hb), pb++;
+      return pb
     }
-    class uK {
-      constructor(dd, Od) {
-        this.recordsGroup = Od, this.vertexArena = void 0, this.quadArena = void 0, this.quadPattern = void 0, this.fullSky = new Uint16Array(0), this.boundVertices = null, this.boundLight = null, this.boundRecords = null, this.boundRecordsLight = null, this.boundPattern = !1;
-        const md = ZO.h.strideWithoutAtlas;
-        this.vertexArena = new BK(dd, md, GPUBufferUsage.VERTEX, `terrain-vertices-${md}`), this.quadArena = new BK(dd, wK.e, GPUBufferUsage.STORAGE, "terrain-quads", {
+    class Yg {
+      constructor(bb, wb) {
+        this.recordsGroup = wb, this.vertexArena = void 0, this.quadArena = void 0, this.quadPattern = void 0, this.fullSky = new Uint16Array(0), this.boundVertices = null, this.boundLight = null, this.boundRecords = null, this.boundRecordsLight = null, this.boundPattern = !1;
+        const Mb = nw.f.strideWithoutAtlas;
+        this.vertexArena = new Rg(bb, Mb, GPUBufferUsage.VERTEX, `terrain-vertices-${Mb}`), this.quadArena = new Rg(bb, zg.d, GPUBufferUsage.STORAGE, "terrain-quads", {
           verticesPerUnit: 4,
           twinUsage: GPUBufferUsage.STORAGE
         });
-        const Wd = (0, kO.h)(new Uint16Array(98298), SK);
-        this.quadPattern = dd.createBuffer({
+        const eb = (0, yw.e)(new Uint16Array(98298), Dg);
+        this.quadPattern = bb.createBuffer({
           label: "terrain-quad-pattern",
-          size: Wd.byteLength,
+          size: eb.byteLength,
           usage: GPUBufferUsage.INDEX | GPUBufferUsage.COPY_DST
-        }), dd.queue.writeBuffer(this.quadPattern, 0, Wd)
+        }), bb.queue.writeBuffer(this.quadPattern, 0, eb)
       }
       retire() {
         this.vertexArena.retire(), this.quadArena.retire()
       }
-      set(dd, Od) {
-        const md = Od.packedVertices,
-          Wd = md ? this.quadArena.allocate(dd.faceCount) : this.vertexArena.allocate(dd.vertexCount);
-        if (!Wd) return !1;
-        dd.vertices = Wd;
-        const Fd = md ? new Uint8Array(md.buffer, md.byteOffset, md.byteLength) : new Uint8Array(Od.vertices);
-        return Wd.page.write(Wd, Fd), !0
+      set(bb, wb) {
+        const Mb = wb.packedVertices,
+          eb = Mb ? this.quadArena.allocate(bb.faceCount) : this.vertexArena.allocate(bb.vertexCount);
+        if (!eb) return !1;
+        bb.vertices = eb;
+        const Hb = Mb ? new Uint8Array(Mb.buffer, Mb.byteOffset, Mb.byteLength) : new Uint8Array(wb.vertices);
+        return eb.page.write(eb, Hb), !0
       }
-      setLight(dd, Od) {
+      setLight(bb, wb) {
         const {
-          vertices: md
-        } = dd;
-        md && 0 !== Od.length && md.page.live && (Od.length < dd.vertexCount ? md.page.arena.warnOnce("shortLight", `a part's ${Od.length} light values are fewer than its ${dd.vertexCount} vertices, so its light is left as it was`) : (md.page.writeLight(md, Od), dd.lit = !0))
+          vertices: Mb
+        } = bb;
+        Mb && 0 !== wb.length && Mb.page.live && (wb.length < bb.vertexCount ? Mb.page.arena.warnOnce("shortLight", `a part's ${wb.length} light values are fewer than its ${bb.vertexCount} vertices, so its light is left as it was`) : (Mb.page.writeLight(Mb, wb), bb.lit = !0))
       }
-      lightFullSky(dd, Od) {
-        this.fullSky.length < Od && (this.fullSky = new Uint16Array(Math.max(Od, 4096)).fill(JK.e));
-        for (const md of dd) {
-          const dd = md.vertices;
-          dd.page.live && (dd.page.writeLight(dd, this.fullSky), md.lit = !0)
+      lightFullSky(bb, wb) {
+        this.fullSky.length < wb && (this.fullSky = new Uint16Array(Math.max(wb, 4096)).fill(jg.j));
+        for (const Mb of bb) {
+          const bb = Mb.vertices;
+          bb.page.live && (bb.page.writeLight(bb, this.fullSky), Mb.lit = !0)
         }
       }
-      backed(dd) {
+      backed(bb) {
         const {
-          vertices: Od
-        } = dd;
-        return !!Od && Od.page.holds(Od)
+          vertices: wb
+        } = bb;
+        return !!wb && wb.page.holds(wb)
       }
-      lost(dd) {
+      lost(bb) {
         const {
-          vertices: Od
-        } = dd;
-        return !!Od && Od.page.lost(Od)
+          vertices: wb
+        } = bb;
+        return !!wb && wb.page.lost(wb)
       }
-      release(dd) {
-        dd.vertices && dd.vertices.page.arena.free(dd.vertices), dd.vertices = null, dd.lit = !1
+      release(bb) {
+        bb.vertices && bb.vertices.page.arena.free(bb.vertices), bb.vertices = null, bb.lit = !1
       }
-      setDrawing(dd) {
+      setDrawing(bb) {
         this.forgetBound()
       }
-      draw(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Od.faceCount;
-        const Rd = Od.vertices,
-          Xd = Rd.page,
-          Kd = md ? Xd.twin : null;
-        if (!Xd.holds(Rd) || md && !Kd) return 0;
+      draw(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : wb.faceCount;
+        const pb = wb.vertices,
+          Vb = pb.page,
+          gb = Mb ? Vb.twin : null;
+        if (!Vb.holds(pb) || Mb && !gb) return 0;
         const {
-          verticesPerUnit: hd
-        } = Xd.arena;
-        let vd = Rd.start * hd;
-        this.boundPattern || (dd.setIndexBuffer(this.quadPattern, "uint16"), this.boundPattern = !0);
-        const Qd = Wd + Fd;
-        if (hd > 1) return Xd.buffer === this.boundRecords && Kd === this.boundRecordsLight || (dd.setBindGroup(1, this.recordsGroup(Xd.buffer, Kd)), this.boundRecords = Xd.buffer, this.boundRecordsLight = Kd), sK(dd, vd, Wd, Qd, Od.slot);
-        Xd.buffer !== this.boundVertices && (dd.setVertexBuffer(0, Xd.buffer), this.boundVertices = Xd.buffer), Kd && Kd !== this.boundLight && (dd.setVertexBuffer(1, Kd), this.boundLight = Kd);
-        const td = Od.faceCount;
-        return Qd <= td ? sK(dd, vd, Wd, Qd, Od.slot) : sK(dd, vd, Wd, td, Od.slot) + sK(dd, vd, Math.max(Wd, td) - td, Qd - td, Od.slot)
+          verticesPerUnit: lb
+        } = Vb.arena;
+        let Lb = pb.start * lb;
+        this.boundPattern || (bb.setIndexBuffer(this.quadPattern, "uint16"), this.boundPattern = !0);
+        const Ib = eb + Hb;
+        if (lb > 1) return Vb.buffer === this.boundRecords && gb === this.boundRecordsLight || (bb.setBindGroup(1, this.recordsGroup(Vb.buffer, gb)), this.boundRecords = Vb.buffer, this.boundRecordsLight = gb), cg(bb, Lb, eb, Ib, wb.slot);
+        Vb.buffer !== this.boundVertices && (bb.setVertexBuffer(0, Vb.buffer), this.boundVertices = Vb.buffer), gb && gb !== this.boundLight && (bb.setVertexBuffer(1, gb), this.boundLight = gb);
+        const Ob = wb.faceCount;
+        return Ib <= Ob ? cg(bb, Lb, eb, Ib, wb.slot) : cg(bb, Lb, eb, Ob, wb.slot) + cg(bb, Lb, Math.max(eb, Ob) - Ob, Ib - Ob, wb.slot)
       }
       get buffersAwaitingVerdict() {
-        let dd = 0;
-        for (const Od of this.arenas()) dd += Od.awaitingVerdict;
-        return dd
+        let bb = 0;
+        for (const wb of this.arenas()) bb += wb.awaitingVerdict;
+        return bb
       }* arenas() {
         yield this.vertexArena, yield this.quadArena
       }
@@ -5594,117 +5594,117 @@ export const modules = {
         this.boundVertices = this.boundLight = this.boundRecords = this.boundRecordsLight = null, this.boundPattern = !1
       }
     }
-    class VK {
-      constructor(dd, Od, md, Wd) {
-        this.device = dd, this.splitBefore = Od, this.wanted = !1, this.pipeline = null, this.building = !0, this.unprojectBuffer = void 0, this.unproject = new Float32Array(2), this.near = 0, this.far = 0, this.copy = null, this.retired = null, this.unprojectBuffer = dd.createBuffer({
+    class Zg {
+      constructor(bb, wb, Mb, eb) {
+        this.device = bb, this.splitBefore = wb, this.wanted = !1, this.pipeline = null, this.building = !0, this.unprojectBuffer = void 0, this.unproject = new Float32Array(2), this.near = 0, this.far = 0, this.copy = null, this.retired = null, this.unprojectBuffer = bb.createBuffer({
           label: "scene-depth-unproject",
           size: 8,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         });
-        const Fd = dd.createShaderModule({
+        const Hb = bb.createShaderModule({
           label: "scene-depth-copy",
-          code: (Rd = md._targetSignature._sampleCount > 1, `\n@group(0) @binding(0) var depth: ${Rd?"texture_depth_multisampled_2d":"texture_depth_2d"};\n@group(0) @binding(1) var<uniform> unproject: vec2f;\n\n@vertex\nfn copyVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn copyFragment(@builtin(position) pixel: vec4f) -> @location(0) f32 {\n\tlet d = textureLoad(depth, vec2i(pixel.xy), 0);\n\tif (d <= 0.0) {\n\t\treturn 0.0;\n\t}\n\treturn unproject.y / (2.0 * d + unproject.x);\n}\n`)
+          code: (pb = Mb._targetSignature._sampleCount > 1, `\n@group(0) @binding(0) var depth: ${pb?"texture_depth_multisampled_2d":"texture_depth_2d"};\n@group(0) @binding(1) var<uniform> unproject: vec2f;\n\n@vertex\nfn copyVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn copyFragment(@builtin(position) pixel: vec4f) -> @location(0) f32 {\n\tlet d = textureLoad(depth, vec2i(pixel.xy), 0);\n\tif (d <= 0.0) {\n\t\treturn 0.0;\n\t}\n\treturn unproject.y / (2.0 * d + unproject.x);\n}\n`)
         });
-        var Rd;
-        dd.createRenderPipelineAsync({
+        var pb;
+        bb.createRenderPipelineAsync({
           label: "scene-depth-copy",
           layout: "auto",
           vertex: {
-            module: Fd,
+            module: Hb,
             entryPoint: "copyVertex"
           },
           fragment: {
-            module: Fd,
+            module: Hb,
             entryPoint: "copyFragment",
             targets: [{
               format: "r32float"
             }]
           }
-        }).then((dd => {
-          this.pipeline = dd, this.building = !1
-        }), (dd => {
-          this.building = !1, console.error("Lite: the scene depth copy failed to build, so liquids find nothing behind them", dd)
-        })), md._executeWithTransmission = () => this.execute(md, Wd)
+        }).then((bb => {
+          this.pipeline = bb, this.building = !1
+        }), (bb => {
+          this.building = !1, console.error("Lite: the scene depth copy failed to build, so liquids find nothing behind them", bb)
+        })), Mb._executeWithTransmission = () => this.execute(Mb, eb)
       }
       get compiling() {
         return this.building
       }
-      setWanted(dd) {
-        this.wanted = dd
+      setWanted(bb) {
+        this.wanted = bb
       }
-      setPlanes(dd, Od) {
-        dd === this.near && Od === this.far || (this.near = dd, this.far = Od, this.unproject[0] = dd / (Od - dd), this.unproject[1] = Od * dd / (Od - dd), this.device.queue.writeBuffer(this.unprojectBuffer, 0, this.unproject))
+      setPlanes(bb, wb) {
+        bb === this.near && wb === this.far || (this.near = bb, this.far = wb, this.unproject[0] = bb / (wb - bb), this.unproject[1] = wb * bb / (wb - bb), this.device.queue.writeBuffer(this.unprojectBuffer, 0, this.unproject))
       }
       get view() {
-        var dd, Od;
-        return null !== (dd = null === (Od = this.copy) || void 0 === Od ? void 0 : Od.view) && void 0 !== dd ? dd : null
+        var bb, wb;
+        return null !== (bb = null === (wb = this.copy) || void 0 === wb ? void 0 : wb.view) && void 0 !== bb ? bb : null
       }
-      execute(dd, Od) {
-        var md;
-        null === (md = this.retired) || void 0 === md || md.destroy(), this.retired = null;
-        const Wd = EO(Od),
-          Fd = dd._transparentBindings,
-          Rd = this.wanted && this.pipeline ? this.splitIndex(Fd) : -1,
-          Xd = dd._colorAttachment,
-          Kd = Xd.resolveTarget;
-        Rd >= 0 && (Xd.resolveTarget = void 0, RK(dd, !0));
-        let hd = Wd.beginRenderPass(dd._renderPassDescriptor);
-        hd.setBindGroup(0, dd._sceneBG);
-        let vd = this.drawList(hd, Od, dd._opaqueBindings, 0, dd._opaqueBindings.length);
-        if (vd += this.drawList(hd, Od, dd._directBindings, 0, dd._directBindings.length), vd += this.drawList(hd, Od, Fd, 0, Rd >= 0 ? Rd : Fd.length), hd.end(), Rd < 0) return vd;
-        RK(dd);
-        const Qd = dd._renderPassDescriptor.depthStencilAttachment,
+      execute(bb, wb) {
+        var Mb;
+        null === (Mb = this.retired) || void 0 === Mb || Mb.destroy(), this.retired = null;
+        const eb = Xw(wb),
+          Hb = bb._transparentBindings,
+          pb = this.wanted && this.pipeline ? this.splitIndex(Hb) : -1,
+          Vb = bb._colorAttachment,
+          gb = Vb.resolveTarget;
+        pb >= 0 && (Vb.resolveTarget = void 0, Hg(bb, !0));
+        let lb = eb.beginRenderPass(bb._renderPassDescriptor);
+        lb.setBindGroup(0, bb._sceneBG);
+        let Lb = this.drawList(lb, wb, bb._opaqueBindings, 0, bb._opaqueBindings.length);
+        if (Lb += this.drawList(lb, wb, bb._directBindings, 0, bb._directBindings.length), Lb += this.drawList(lb, wb, Hb, 0, pb >= 0 ? pb : Hb.length), lb.end(), pb < 0) return Lb;
+        Hg(bb);
+        const Ib = bb._renderPassDescriptor.depthStencilAttachment,
           {
-            depthLoadOp: td,
-            stencilLoadOp: od
-          } = Qd,
-          Nd = Xd.loadOp;
-        Xd.resolveTarget = Kd;
+            depthLoadOp: Ob,
+            stencilLoadOp: Ub
+          } = Ib,
+          tb = Vb.loadOp;
+        Vb.resolveTarget = gb;
         try {
-          this.copyDepth(Wd, dd), Xd.loadOp = "load", Qd.depthLoadOp = "load", od && (Qd.stencilLoadOp = "load"), hd = Wd.beginRenderPass(dd._renderPassDescriptor), hd.setBindGroup(0, dd._sceneBG), vd += this.drawList(hd, Od, Fd, Rd, Fd.length), hd.end()
+          this.copyDepth(eb, bb), Vb.loadOp = "load", Ib.depthLoadOp = "load", Ub && (Ib.stencilLoadOp = "load"), lb = eb.beginRenderPass(bb._renderPassDescriptor), lb.setBindGroup(0, bb._sceneBG), Lb += this.drawList(lb, wb, Hb, pb, Hb.length), lb.end()
         } finally {
-          Xd.loadOp = Nd, Qd.depthLoadOp = td, Qd.stencilLoadOp = od
+          Vb.loadOp = tb, Ib.depthLoadOp = Ob, Ib.stencilLoadOp = Ub
         }
-        return vd
+        return Lb
       }
-      splitIndex(dd) {
-        for (let Od = 0; Od < dd.length; Od++)
-          if (dd[Od].renderable === this.splitBefore) return Od;
+      splitIndex(bb) {
+        for (let wb = 0; wb < bb.length; wb++)
+          if (bb[wb].renderable === this.splitBefore) return wb;
         return -1
       }
-      drawList(dd, Od, md, Wd, Fd) {
-        let Rd = null,
-          Xd = 0;
-        for (let Kd = Wd; Kd < Fd; Kd++) {
-          const Wd = md[Kd],
-            Fd = Wd.renderable.mesh;
-          Fd && !1 === Fd.visible || (Wd.pipeline !== Rd && (dd.setPipeline(Wd.pipeline), Rd = Wd.pipeline), Xd += Wd.draw(dd, Od))
+      drawList(bb, wb, Mb, eb, Hb) {
+        let pb = null,
+          Vb = 0;
+        for (let gb = eb; gb < Hb; gb++) {
+          const eb = Mb[gb],
+            Hb = eb.renderable.mesh;
+          Hb && !1 === Hb.visible || (eb.pipeline !== pb && (bb.setPipeline(eb.pipeline), pb = eb.pipeline), Vb += eb.draw(bb, wb))
         }
-        return Xd
+        return Vb
       }
-      copyDepth(dd, Od) {
-        var md, Wd;
-        const Fd = (null !== (md = Od._config.depth) && void 0 !== md ? md : Od._config.rt)._depthTexture,
-          Rd = (null === (Wd = this.copy) || void 0 === Wd ? void 0 : Wd.source) === Fd ? this.copy : this.remakeCopy(Fd),
-          Xd = dd.beginRenderPass(Rd.pass);
-        Xd.setPipeline(this.pipeline), Xd.setBindGroup(0, Rd.bindGroup), Xd.draw(3), Xd.end()
+      copyDepth(bb, wb) {
+        var Mb, eb;
+        const Hb = (null !== (Mb = wb._config.depth) && void 0 !== Mb ? Mb : wb._config.rt)._depthTexture,
+          pb = (null === (eb = this.copy) || void 0 === eb ? void 0 : eb.source) === Hb ? this.copy : this.remakeCopy(Hb),
+          Vb = bb.beginRenderPass(pb.pass);
+        Vb.setPipeline(this.pipeline), Vb.setBindGroup(0, pb.bindGroup), Vb.draw(3), Vb.end()
       }
-      remakeCopy(dd) {
-        var Od, md;
-        this.retired = null !== (Od = null === (md = this.copy) || void 0 === md ? void 0 : md.texture) && void 0 !== Od ? Od : null;
-        const Wd = this.device.createTexture({
+      remakeCopy(bb) {
+        var wb, Mb;
+        this.retired = null !== (wb = null === (Mb = this.copy) || void 0 === Mb ? void 0 : Mb.texture) && void 0 !== wb ? wb : null;
+        const eb = this.device.createTexture({
             label: "scene-depth",
-            size: [dd.width, dd.height],
+            size: [bb.width, bb.height],
             format: "r32float",
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          Fd = Wd.createView(),
-          Rd = this.device.createBindGroup({
+          Hb = eb.createView(),
+          pb = this.device.createBindGroup({
             label: "scene-depth-copy",
             layout: this.pipeline.getBindGroupLayout(0),
             entries: [{
               binding: 0,
-              resource: dd.createView({
+              resource: bb.createView({
                 aspect: "depth-only"
               })
             }, {
@@ -5714,36 +5714,36 @@ export const modules = {
               }
             }]
           }),
-          Xd = {
+          Vb = {
             label: "scene-depth-copy",
             colorAttachments: [{
-              view: Fd,
+              view: Hb,
               loadOp: "clear",
               storeOp: "store",
               clearValue: [0, 0, 0, 0]
             }]
           };
         return this.copy = {
-          source: dd,
-          texture: Wd,
-          view: Fd,
-          bindGroup: Rd,
-          pass: Xd
+          source: bb,
+          texture: eb,
+          view: Hb,
+          bindGroup: pb,
+          pass: Vb
         }, this.copy
       }
     }
-    const iK = "rgba8unorm";
+    const fg = "rgba8unorm";
 
-    function AK(dd) {
-      return dd ? 15 : 1
+    function Ag(bb) {
+      return bb ? 15 : 1
     }
-    class rK {
-      constructor(dd, Od, md, Wd) {
-        this.device = dd, this.terrain = Wd, this.pipeline = null, this.building = !0, this.edge = void 0, this.layout = void 0, this.empty = void 0, this.cameraBuffer = void 0, this.camera = new Float32Array(16), this.targets = null, this.retired = null, this.edge = Od._targetSignature._sampleCount > 1, this.cameraBuffer = dd.createBuffer({
+    class Wg {
+      constructor(bb, wb, Mb, eb) {
+        this.device = bb, this.terrain = eb, this.pipeline = null, this.building = !0, this.edge = void 0, this.layout = void 0, this.empty = void 0, this.cameraBuffer = void 0, this.camera = new Float32Array(16), this.targets = null, this.retired = null, this.edge = wb._targetSignature._sampleCount > 1, this.cameraBuffer = bb.createBuffer({
           label: "sun-shadow-mask-camera",
           size: 64,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.layout = dd.createBindGroupLayout({
+        }), this.layout = bb.createBindGroupLayout({
           label: "sun-shadow-mask",
           entries: [{
             binding: 0,
@@ -5765,158 +5765,158 @@ export const modules = {
             }
           }]
         });
-        const Fd = dd.createBindGroupLayout({
+        const Hb = bb.createBindGroupLayout({
           label: "sun-shadow-mask-empty",
           entries: []
         });
-        this.empty = dd.createBindGroup({
+        this.empty = bb.createBindGroup({
           label: "sun-shadow-mask-empty",
-          layout: Fd,
+          layout: Hb,
           entries: []
         });
-        const Rd = dd.createShaderModule({
+        const pb = bb.createShaderModule({
           label: "sun-shadow-mask",
-          code: (Xd = this.edge, `${(0,fO.z)()}${QW({sunShadow:!0,airShadow:!1},!0,"lit")}\n@group(0) @binding(0) var bloxdSmDepth: texture_2d<f32>;\nstruct BloxdSmCamera {\n\teye: vec3f,\n\ttolerance: f32,\n\tright: vec3f,\n\tdepthScale: f32,\n\tup: vec3f,\n\tdepthBias: f32,\n\tforward: vec3f,\n}\n@group(0) @binding(1) var<uniform> bloxdSmCamera: BloxdSmCamera;\n@group(0) @binding(2) var bloxdSmNormal: texture_2d<f32>;\n${Xd?Mm:""}\n@vertex\nfn maskVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn maskFragment(@builtin(position) pixel: vec4f) -> @location(0) vec4f {\n\tlet at = vec2i(pixel.xy);\n\tlet d = textureLoad(bloxdSmDepth, at, 0).x;\n\tif (d <= 0.0) {\n\t\treturn vec4f(${AK(Xd)}.0, 0.0, 0.0, 0.0);\n\t}\n\t// View z from the depth as it is, then along the pixel's ray: an inverse view-projection would round d against 1\n\tlet size = vec2f(textureDimensions(bloxdSmDepth));\n\tlet ndc = vec2f(pixel.x / size.x * 2.0 - 1.0, 1.0 - pixel.y / size.y * 2.0);\n\tlet z = bloxdSmCamera.depthScale / (2.0 * d + bloxdSmCamera.depthBias);\n\tlet packed = textureLoad(bloxdSmNormal, at, 0);\n\tbloxdSpShadowPosition = bloxdSmCamera.eye + z * (bloxdSmCamera.forward + ndc.x * bloxdSmCamera.right + ndc.y * bloxdSmCamera.up);\n\t// Capped well inside the quarter block origins start off their face: past it, a few pixels\n\tbloxdSpPlaneTolerance = min(z * z * bloxdSmCamera.tolerance, 0.125);\n\tbloxdSpShadowNormal = normalize(packed.xyz * 2.0 - 1.0);\n\tbloxdSpShadowEmissive = packed.w > 0.5;\n\treturn ${Xd?"vec4f(bloxdSpNormalCode(bloxdSpShadowNormal) * 2.0 + bloxdShadow(), d, 0.0, 0.0)":"vec4f(bloxdShadow())"};\n}\n`)
+          code: (Vb = this.edge, `${(0,ow.C)()}${le({sunShadow:!0,airShadow:!1},!0,"lit")}\n@group(0) @binding(0) var bloxdSmDepth: texture_2d<f32>;\nstruct BloxdSmCamera {\n\teye: vec3f,\n\ttolerance: f32,\n\tright: vec3f,\n\tdepthScale: f32,\n\tup: vec3f,\n\tdepthBias: f32,\n\tforward: vec3f,\n}\n@group(0) @binding(1) var<uniform> bloxdSmCamera: BloxdSmCamera;\n@group(0) @binding(2) var bloxdSmNormal: texture_2d<f32>;\n${Vb?oM:""}\n@vertex\nfn maskVertex(@builtin(vertex_index) i: u32) -> @builtin(position) vec4f {\n\tlet corner = array<vec2f, 3>(vec2f(-1.0, -1.0), vec2f(3.0, -1.0), vec2f(-1.0, 3.0))[i];\n\treturn vec4f(corner, 0.0, 1.0);\n}\n\n@fragment\nfn maskFragment(@builtin(position) pixel: vec4f) -> @location(0) vec4f {\n\tlet at = vec2i(pixel.xy);\n\tlet d = textureLoad(bloxdSmDepth, at, 0).x;\n\tif (d <= 0.0) {\n\t\treturn vec4f(${Ag(Vb)}.0, 0.0, 0.0, 0.0);\n\t}\n\t// View z from the depth as it is, then along the pixel's ray: an inverse view-projection would round d against 1\n\tlet size = vec2f(textureDimensions(bloxdSmDepth));\n\tlet ndc = vec2f(pixel.x / size.x * 2.0 - 1.0, 1.0 - pixel.y / size.y * 2.0);\n\tlet z = bloxdSmCamera.depthScale / (2.0 * d + bloxdSmCamera.depthBias);\n\tlet packed = textureLoad(bloxdSmNormal, at, 0);\n\tbloxdSpShadowPosition = bloxdSmCamera.eye + z * (bloxdSmCamera.forward + ndc.x * bloxdSmCamera.right + ndc.y * bloxdSmCamera.up);\n\t// Capped well inside the quarter block origins start off their face: past it, a few pixels\n\tbloxdSpPlaneTolerance = min(z * z * bloxdSmCamera.tolerance, 0.125);\n\tbloxdSpShadowNormal = normalize(packed.xyz * 2.0 - 1.0);\n\tbloxdSpShadowEmissive = packed.w > 0.5;\n\treturn ${Vb?"vec4f(bloxdSpNormalCode(bloxdSpShadowNormal) * 2.0 + bloxdShadow(), d, 0.0, 0.0)":"vec4f(bloxdShadow())"};\n}\n`)
         });
-        var Xd;
-        dd.createRenderPipelineAsync({
+        var Vb;
+        bb.createRenderPipelineAsync({
           label: "sun-shadow-mask",
-          layout: dd.createPipelineLayout({
-            bindGroupLayouts: [this.layout, Fd, Fd, IR(dd, {
+          layout: bb.createPipelineLayout({
+            bindGroupLayouts: [this.layout, Hb, Hb, ip(bb, {
               depth: !1,
               sunShadow: !0
             })]
           }),
           vertex: {
-            module: Rd,
+            module: pb,
             entryPoint: "maskVertex"
           },
           fragment: {
-            module: Rd,
+            module: pb,
             entryPoint: "maskFragment",
             targets: [{
               format: this.maskFormat
             }]
           }
-        }).then((dd => {
-          this.pipeline = dd, this.building = !1
-        }), (dd => {
-          this.building = !1, console.error("Lite: the sun shadow mask's trace failed to build, so terrain reading it is lit", dd)
+        }).then((bb => {
+          this.pipeline = bb, this.building = !1
+        }), (bb => {
+          this.building = !1, console.error("Lite: the sun shadow mask's trace failed to build, so terrain reading it is lit", bb)
         }));
-        const Kd = Od._executeWithTransmission;
-        Od._executeWithTransmission = dd => this.execute(Od, md, (() => Kd ? Kd(dd) : function(dd, Od) {
-          const md = EO(Od).beginRenderPass(dd._renderPassDescriptor);
-          md.setBindGroup(0, dd._sceneBG);
-          let Wd = GK(md, Od, dd._opaqueBindings);
-          return Wd += GK(md, Od, dd._directBindings), Wd += GK(md, Od, dd._transparentBindings), md.end(), Wd
-        }(Od, md)))
+        const gb = wb._executeWithTransmission;
+        wb._executeWithTransmission = bb => this.execute(wb, Mb, (() => gb ? gb(bb) : function(bb, wb) {
+          const Mb = Xw(wb).beginRenderPass(bb._renderPassDescriptor);
+          Mb.setBindGroup(0, bb._sceneBG);
+          let eb = Jg(Mb, wb, bb._opaqueBindings);
+          return eb += Jg(Mb, wb, bb._directBindings), eb += Jg(Mb, wb, bb._transparentBindings), Mb.end(), eb
+        }(wb, Mb)))
       }
       get compiling() {
         return this.building
       }
       get view() {
-        var dd, Od;
-        return null !== (dd = null === (Od = this.targets) || void 0 === Od ? void 0 : Od.maskView) && void 0 !== dd ? dd : null
+        var bb, wb;
+        return null !== (bb = null === (wb = this.targets) || void 0 === wb ? void 0 : wb.maskView) && void 0 !== bb ? bb : null
       }
       get maskFormat() {
         return this.edge ? "rg32float" : "r8unorm"
       }
-      prepare(dd) {
-        ! function(dd, Od) {
-          const md = dd.worldMatrix,
-            Wd = dd.projectionMatrix,
-            Fd = 1 / Wd[0],
-            Rd = 1 / Wd[5],
-            Xd = dd.far * dd.near / (dd.far - dd.near);
-          Od[0] = dd.eye[0], Od[1] = dd.eye[1], Od[2] = dd.eye[2], Od[3] = 2 ** -23 / Xd, Od[4] = md[0] * Fd, Od[5] = md[1] * Fd, Od[6] = md[2] * Fd, Od[7] = Xd, Od[8] = md[4] * Rd, Od[9] = md[5] * Rd, Od[10] = md[6] * Rd, Od[11] = dd.near / (dd.far - dd.near), Od[12] = md[8], Od[13] = md[9], Od[14] = md[10], Od[15] = 0
-        }(dd, this.camera), this.device.queue.writeBuffer(this.cameraBuffer, 0, this.camera)
+      prepare(bb) {
+        ! function(bb, wb) {
+          const Mb = bb.worldMatrix,
+            eb = bb.projectionMatrix,
+            Hb = 1 / eb[0],
+            pb = 1 / eb[5],
+            Vb = bb.far * bb.near / (bb.far - bb.near);
+          wb[0] = bb.eye[0], wb[1] = bb.eye[1], wb[2] = bb.eye[2], wb[3] = 2 ** -23 / Vb, wb[4] = Mb[0] * Hb, wb[5] = Mb[1] * Hb, wb[6] = Mb[2] * Hb, wb[7] = Vb, wb[8] = Mb[4] * pb, wb[9] = Mb[5] * pb, wb[10] = Mb[6] * pb, wb[11] = bb.near / (bb.far - bb.near), wb[12] = Mb[8], wb[13] = Mb[9], wb[14] = Mb[10], wb[15] = 0
+        }(bb, this.camera), this.device.queue.writeBuffer(this.cameraBuffer, 0, this.camera)
       }
-      execute(dd, Od, md) {
-        if (this.retire(), !this.terrain.readsMask) return md();
-        const Wd = this.targetsFor(dd),
-          Fd = EO(Od),
-          Rd = dd._renderPassDescriptor.depthStencilAttachment;
-        this.edge || (Wd.prepass.depthStencilAttachment.view = Rd.view);
-        const Xd = this.terrain.drawPrepass(Fd, Wd.prepass, dd._sceneBG);
-        if (0 === Xd) return md();
-        if (this.trace(Fd, Wd), this.edge) return Xd + 1 + md();
+      execute(bb, wb, Mb) {
+        if (this.retire(), !this.terrain.readsMask) return Mb();
+        const eb = this.targetsFor(bb),
+          Hb = Xw(wb),
+          pb = bb._renderPassDescriptor.depthStencilAttachment;
+        this.edge || (eb.prepass.depthStencilAttachment.view = pb.view);
+        const Vb = this.terrain.drawPrepass(Hb, eb.prepass, bb._sceneBG);
+        if (0 === Vb) return Mb();
+        if (this.trace(Hb, eb), this.edge) return Vb + 1 + Mb();
         const {
-          depthLoadOp: Kd,
-          stencilLoadOp: hd
-        } = Rd;
-        Rd.depthLoadOp = "load", hd && (Rd.stencilLoadOp = "load");
+          depthLoadOp: gb,
+          stencilLoadOp: lb
+        } = pb;
+        pb.depthLoadOp = "load", lb && (pb.stencilLoadOp = "load");
         try {
-          return Xd + 1 + md()
+          return Vb + 1 + Mb()
         } finally {
-          Rd.depthLoadOp = Kd, Rd.stencilLoadOp = hd
+          pb.depthLoadOp = gb, pb.stencilLoadOp = lb
         }
       }
-      trace(dd, Od) {
-        const md = this.terrain.sunShadowGroup(),
-          Wd = dd.beginRenderPass(Od.trace);
-        this.pipeline && md && (Wd.setPipeline(this.pipeline), Wd.setBindGroup(0, Od.bindGroup), Wd.setBindGroup(1, this.empty), Wd.setBindGroup(2, this.empty), Wd.setBindGroup(3, md), Wd.draw(3)), Wd.end()
+      trace(bb, wb) {
+        const Mb = this.terrain.sunShadowGroup(),
+          eb = bb.beginRenderPass(wb.trace);
+        this.pipeline && Mb && (eb.setPipeline(this.pipeline), eb.setBindGroup(0, wb.bindGroup), eb.setBindGroup(1, this.empty), eb.setBindGroup(2, this.empty), eb.setBindGroup(3, Mb), eb.draw(3)), eb.end()
       }
       retire() {
-        const dd = this.retired;
-        var Od;
-        dd && (dd.mask.destroy(), dd.normals.destroy(), null === (Od = dd.depth) || void 0 === Od || Od.destroy(), this.retired = null)
+        const bb = this.retired;
+        var wb;
+        bb && (bb.mask.destroy(), bb.normals.destroy(), null === (wb = bb.depth) || void 0 === wb || wb.destroy(), this.retired = null)
       }
-      targetsFor(dd) {
-        var Od, md;
-        const Wd = (null !== (Od = dd._config.depth) && void 0 !== Od ? Od : dd._config.rt)._depthTexture;
-        return (null === (md = this.targets) || void 0 === md ? void 0 : md.source) === Wd ? this.targets : this.remake(dd, Wd)
+      targetsFor(bb) {
+        var wb, Mb;
+        const eb = (null !== (wb = bb._config.depth) && void 0 !== wb ? wb : bb._config.rt)._depthTexture;
+        return (null === (Mb = this.targets) || void 0 === Mb ? void 0 : Mb.source) === eb ? this.targets : this.remake(bb, eb)
       }
-      remake(dd, Od) {
-        var md;
+      remake(bb, wb) {
+        var Mb;
         this.retired = this.targets;
-        const Wd = [Od.width, Od.height],
-          Fd = this.device.createTexture({
+        const eb = [wb.width, wb.height],
+          Hb = this.device.createTexture({
             label: "sun-shadow-mask",
-            size: Wd,
+            size: eb,
             format: this.maskFormat,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          Rd = this.device.createTexture({
+          pb = this.device.createTexture({
             label: "sun-shadow-prepass-normals",
-            size: Wd,
-            format: iK,
+            size: eb,
+            format: fg,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }),
-          Xd = null !== (md = dd._targetSignature._depthStencilFormat) && void 0 !== md ? md : Od.format,
-          Kd = this.edge ? this.device.createTexture({
+          Vb = null !== (Mb = bb._targetSignature._depthStencilFormat) && void 0 !== Mb ? Mb : wb.format,
+          gb = this.edge ? this.device.createTexture({
             label: "sun-shadow-prepass-depth",
-            size: Wd,
-            format: Xd,
+            size: eb,
+            format: Vb,
             usage: GPUTextureUsage.RENDER_ATTACHMENT | GPUTextureUsage.TEXTURE_BINDING
           }) : null,
-          hd = dd._renderPassDescriptor.depthStencilAttachment,
-          vd = Xd.includes("stencil"),
-          Qd = {
+          lb = bb._renderPassDescriptor.depthStencilAttachment,
+          Lb = Vb.includes("stencil"),
+          Ib = {
             label: "sun-shadow-prepass",
             colorAttachments: [{
-              view: Rd.createView(),
+              view: pb.createView(),
               loadOp: "clear",
               storeOp: "store",
               clearValue: [.5, 1, .5, 0]
             }],
             depthStencilAttachment: {
-              view: Kd ? Kd.createView() : hd.view,
-              depthClearValue: hd.depthClearValue,
+              view: gb ? gb.createView() : lb.view,
+              depthClearValue: lb.depthClearValue,
               depthLoadOp: "clear",
               depthStoreOp: "store",
-              ...vd ? {
-                stencilClearValue: hd.stencilClearValue,
+              ...Lb ? {
+                stencilClearValue: lb.stencilClearValue,
                 stencilLoadOp: "clear",
                 stencilStoreOp: "store"
               } : {}
             }
           },
-          td = this.device.createBindGroup({
+          Ob = this.device.createBindGroup({
             label: "sun-shadow-mask",
             layout: this.layout,
             entries: [{
               binding: 0,
-              resource: (null !== Kd && void 0 !== Kd ? Kd : Od).createView({
+              resource: (null !== gb && void 0 !== gb ? gb : wb).createView({
                 aspect: "depth-only"
               })
             }, {
@@ -5926,213 +5926,213 @@ export const modules = {
               }
             }, {
               binding: 2,
-              resource: Rd.createView()
+              resource: pb.createView()
             }]
           }),
-          od = {
+          Ub = {
             label: "sun-shadow-mask",
             colorAttachments: [{
-              view: Fd.createView(),
+              view: Hb.createView(),
               loadOp: "clear",
               storeOp: "store",
-              clearValue: [AK(this.edge), 0, 0, 0]
+              clearValue: [Ag(this.edge), 0, 0, 0]
             }]
           };
         return this.targets = {
-          source: Od,
-          mask: Fd,
-          maskView: Fd.createView(),
-          normals: Rd,
-          depth: Kd,
-          bindGroup: td,
-          prepass: Qd,
-          trace: od
+          source: wb,
+          mask: Hb,
+          maskView: Hb.createView(),
+          normals: pb,
+          depth: gb,
+          bindGroup: Ob,
+          prepass: Ib,
+          trace: Ub
         }, this.targets
       }
     }
 
-    function GK(dd, Od, md) {
-      let Wd = null,
-        Fd = 0;
-      for (const Rd of md) {
-        const md = Rd.renderable.mesh;
-        md && !1 === md.visible || (Rd.pipeline !== Wd && (dd.setPipeline(Rd.pipeline), Wd = Rd.pipeline), Fd += Rd.draw(dd, Od))
+    function Jg(bb, wb, Mb) {
+      let eb = null,
+        Hb = 0;
+      for (const pb of Mb) {
+        const Mb = pb.renderable.mesh;
+        Mb && !1 === Mb.visible || (pb.pipeline !== eb && (bb.setPipeline(pb.pipeline), eb = pb.pipeline), Hb += pb.draw(bb, wb))
       }
-      return Fd
+      return Hb
     }
-    const nK = 6e4,
-      LK = {
+    const Sg = 6e4,
+      Ng = {
         status: "ok"
       },
-      PK = {
+      vg = {
         status: "skipped"
       };
-    async function zK(dd, Od) {
+    async function Qg(bb, wb) {
       const {
-        isCancelled: md
-      } = dd;
-      if (md()) return {
-        status: "Ad"
+        isCancelled: Mb
+      } = bb;
+      if (Mb()) return {
+        status: "Yb"
       };
       const {
-        target: Wd
-      } = Od;
-      if (!Wd) return console.warn("Shader pack: skipped the compile check, as Lite hasn't bound terrain yet"), {
+        target: eb
+      } = wb;
+      if (!eb) return console.warn("Shader pack: skipped the compile check, as Lite hasn't bound terrain yet"), {
         status: "skipped"
       };
-      const Fd = [],
-        Rd = Promise.all(Array.from(new Set(dd.materials), (async md => {
-          Fd.push(await async function(dd, Od, md, Wd) {
-            const Fd = {
-              lighting: dd.lighting,
-              dirLightCount: Math.min(dd.dirLightCount, 4),
-              Jq: dd.runtime
+      const Hb = [],
+        pb = Promise.all(Array.from(new Set(bb.materials), (async Mb => {
+          Hb.push(await async function(bb, wb, Mb, eb) {
+            const Hb = {
+              lighting: bb.lighting,
+              dirLightCount: Math.min(bb.dirLightCount, 4),
+              LC: bb.runtime
             };
             try {
-              const Rd = Od.material(Wd);
-              return Rd && AW(Od.programKey(Rd, !1, Fd)) ? (await Rd.ready, dd.isCancelled() ? LK : Rd.bindGroupLayout ? await async function(dd, Od, md, Wd) {
+              const pb = wb.material(eb);
+              return pb && fe(wb.programKey(pb, !1, Hb)) ? (await pb.ready, bb.isCancelled() ? Ng : pb.bindGroupLayout ? await async function(bb, wb, Mb, eb) {
                 const {
-                  device: Fd
-                } = dd;
-                let Rd, Xd;
-                Fd.pushErrorScope("validation");
+                  device: Hb
+                } = bb;
+                let pb, Vb;
+                Hb.pushErrorScope("validation");
                 try {
-                  Rd = dd.pipelineBuild(Od, md, Wd)
+                  pb = bb.pipelineBuild(wb, Mb, eb)
                 } finally {
-                  Xd = Fd.popErrorScope().catch((() => null))
+                  Vb = Hb.popErrorScope().catch((() => null))
                 }
-                const [Kd, hd] = await Promise.all([Xd, Rd.built.then((() => null), (dd => null !== dd && void 0 !== dd ? dd : new Error("pipeline failed")))]);
-                if (!Kd && !hd) return LK;
-                const vd = await cK(Rd.module),
-                  Qd = vd.length > 0 ? vd.map((dd => `${Rd.name} ${dd.lineNum}:${dd.linePos}: ${dd.message}`)).join("\n") : `${Rd.name}: ${jK(null!==hd&&void 0!==hd?hd:Kd)}`;
+                const [gb, lb] = await Promise.all([Vb, pb.built.then((() => null), (bb => null !== bb && void 0 !== bb ? bb : new Error("pipeline failed")))]);
+                if (!gb && !lb) return Ng;
+                const Lb = await Gg(pb.module),
+                  Ib = Lb.length > 0 ? Lb.map((bb => `${pb.name} ${bb.lineNum}:${bb.linePos}: ${bb.message}`)).join("\n") : `${pb.name}: ${qg(null!==lb&&void 0!==lb?lb:gb)}`;
                 return {
                   status: "failed",
-                  material: Od.model.name,
-                  message: Qd
+                  material: wb.model.name,
+                  message: Ib
                 }
-              }(Od, Rd, Od.programKey(Rd, "none" !== Rd.texture, Fd), md): (console.warn(`Shader pack: skipped the compile check for "${Wd.name}", whose textures failed to load`), PK)) : LK
-            } catch (Rd) {
+              }(wb, pb, wb.programKey(pb, "none" !== pb.texture, Hb), Mb): (console.warn(`Shader pack: skipped the compile check for "${eb.name}", whose textures failed to load`), vg)) : Ng
+            } catch (pb) {
               return {
                 status: "failed",
-                material: Wd.name,
-                message: jK(Rd)
+                material: eb.name,
+                message: qg(pb)
               }
             }
-          }(dd, Od, Wd, md))
+          }(bb, wb, eb, Mb))
         }))),
-        Xd = function(dd, Od) {
-          let md, Wd, Fd = !1;
-          const Rd = new Promise((Rd => {
-            var Xd;
-            md = setTimeout((() => {
-              Rd("timeout")
-            }), null !== (Xd = Od.timeoutMs) && void 0 !== Xd ? Xd : nK), Wd = setInterval((() => {
-              Od.isCancelled() && Rd("Ad")
-            }), 50), dd.lost.then((() => {
-              Fd = !0, Rd("lost")
+        Vb = function(bb, wb) {
+          let Mb, eb, Hb = !1;
+          const pb = new Promise((pb => {
+            var Vb;
+            Mb = setTimeout((() => {
+              pb("timeout")
+            }), null !== (Vb = wb.timeoutMs) && void 0 !== Vb ? Vb : Sg), eb = setInterval((() => {
+              wb.isCancelled() && pb("Yb")
+            }), 50), bb.lost.then((() => {
+              Hb = !0, pb("lost")
             }))
           }));
           return {
-            signal: Rd,
-            lost: () => Fd,
+            signal: pb,
+            lost: () => Hb,
             dispose: () => {
-              clearTimeout(md), clearInterval(Wd)
+              clearTimeout(Mb), clearInterval(eb)
             }
           }
-        }(Od.device, dd);
-      let Kd;
+        }(wb.device, bb);
+      let gb;
       try {
-        Kd = await Promise.race([Rd.then((() => "done")), Xd.signal])
+        gb = await Promise.race([pb.then((() => "done")), Vb.signal])
       } finally {
-        Xd.dispose()
+        Vb.dispose()
       }
-      if ("Ad" === Kd || md()) return {
-        status: "Ad"
+      if ("Yb" === gb || Mb()) return {
+        status: "Yb"
       };
-      const hd = Fd.find((dd => "failed" === dd.status));
-      return hd && "lost" !== Kd && !Xd.lost() && await new Promise((dd => {
-        setTimeout(dd, 0)
-      })), "lost" === Kd || Xd.lost() ? (console.warn("Shader pack: skipped the compile check, as the GPU device was lost"), {
+      const lb = Hb.find((bb => "failed" === bb.status));
+      return lb && "lost" !== gb && !Vb.lost() && await new Promise((bb => {
+        setTimeout(bb, 0)
+      })), "lost" === gb || Vb.lost() ? (console.warn("Shader pack: skipped the compile check, as the GPU device was lost"), {
         status: "skipped"
-      }) : hd ? {
+      }) : lb ? {
         status: "failed",
         failure: {
-          material: hd.material,
-          message: hd.message
+          material: lb.material,
+          message: lb.message
         }
-      } : "timeout" === Kd ? (console.warn(`Shader pack: skipped the compile check, which didn't finish in ${(null!==(vd=dd.timeoutMs)&&void 0!==vd?vd:nK)/1e3} s`), {
+      } : "timeout" === gb ? (console.warn(`Shader pack: skipped the compile check, which didn't finish in ${(null!==(Lb=bb.timeoutMs)&&void 0!==Lb?Lb:Sg)/1e3} s`), {
         status: "skipped"
-      }) : Fd.some((dd => "skipped" === dd.status)) ? {
+      }) : Hb.some((bb => "skipped" === bb.status)) ? {
         status: "skipped"
       } : {
         status: "ok"
       };
-      var vd
+      var Lb
     }
-    async function cK(dd) {
-      if (!dd) return [];
+    async function Gg(bb) {
+      if (!bb) return [];
       try {
-        return (await dd.getCompilationInfo()).messages.filter((dd => "error" === dd.type))
+        return (await bb.getCompilationInfo()).messages.filter((bb => "error" === bb.type))
       } catch {
         return []
       }
     }
 
-    function jK(dd) {
-      var Od;
-      return null !== (Od = null === dd || void 0 === dd ? void 0 : dd.message) && void 0 !== Od ? Od : String(dd)
+    function qg(bb) {
+      var wb;
+      return null !== (wb = null === bb || void 0 === bb ? void 0 : bb.message) && void 0 !== wb ? wb : String(bb)
     }
 
-    function DK(dd, Od, md, Wd, Fd) {
-      AW(Od) ? cK(Wd).then((Od => {
-        const [Wd] = Od;
-        oO(dd, "terrain", md, Fd, Wd ? `${Wd.lineNum}:${Wd.linePos} error: ${Wd.message}` : null)
-      })) : oO(dd, "terrain", md, Fd)
+    function ag(bb, wb, Mb, eb, Hb) {
+      fe(wb) ? Gg(eb).then((wb => {
+        const [eb] = wb;
+        Iw(bb, "terrain", Mb, Hb, eb ? `${eb.lineNum}:${eb.linePos} error: ${eb.message}` : null)
+      })) : Iw(bb, "terrain", Mb, Hb)
     }
-    var eK = md(38987),
-      IK = md(39002),
-      lK = md(39013),
-      CK = md(3942);
+    var ig = Mb(38668),
+      ug = Mb(38678),
+      dg = Mb(38690),
+      Pg = Mb(4111);
 
-    function ZK(dd, Od, md, Wd, Fd) {
-      const Rd = Math.hypot(md[0], md[1], md[2]);
-      if (!(Rd > 0)) return;
-      const Xd = [md[0] / Rd, md[1] / Rd, md[2] / Rd],
-        Kd = [Math.floor(Od[0]), Math.floor(Od[1]), Math.floor(Od[2])],
-        hd = [0, 0, 0],
-        vd = [1 / 0, 1 / 0, 1 / 0],
-        Qd = [1 / 0, 1 / 0, 1 / 0];
-      for (let Nd = 0; Nd < 3; Nd++) Xd[Nd] > 0 ? (hd[Nd] = 1, vd[Nd] = (Kd[Nd] + 1 - Od[Nd]) / Xd[Nd], Qd[Nd] = 1 / Xd[Nd]) : Xd[Nd] < 0 && (hd[Nd] = -1, vd[Nd] = (Kd[Nd] - Od[Nd]) / Xd[Nd], Qd[Nd] = -1 / Xd[Nd]);
+    function ng(bb, wb, Mb, eb, Hb) {
+      const pb = Math.hypot(Mb[0], Mb[1], Mb[2]);
+      if (!(pb > 0)) return;
+      const Vb = [Mb[0] / pb, Mb[1] / pb, Mb[2] / pb],
+        gb = [Math.floor(wb[0]), Math.floor(wb[1]), Math.floor(wb[2])],
+        lb = [0, 0, 0],
+        Lb = [1 / 0, 1 / 0, 1 / 0],
+        Ib = [1 / 0, 1 / 0, 1 / 0];
+      for (let tb = 0; tb < 3; tb++) Vb[tb] > 0 ? (lb[tb] = 1, Lb[tb] = (gb[tb] + 1 - wb[tb]) / Vb[tb], Ib[tb] = 1 / Vb[tb]) : Vb[tb] < 0 && (lb[tb] = -1, Lb[tb] = (gb[tb] - wb[tb]) / Vb[tb], Ib[tb] = -1 / Vb[tb]);
       const {
-        Qt: td
-      } = dd;
-      let od = dd.eZ(Kd[0], Kd[1], Kd[2]);
+        gO: Ob
+      } = bb;
+      let Ub = bb.Vk(gb[0], gb[1], gb[2]);
       for (;;) {
-        const Od = vd[0] < vd[1] ? vd[0] < vd[2] ? 0 : 2 : vd[1] < vd[2] ? 1 : 2;
-        if (vd[Od] > Wd) return;
-        const md = hd[Od] > 0 ? Kd[Od] + 1 : Kd[Od];
-        Kd[Od] += hd[Od], vd[Od] += Qd[Od];
-        const Rd = dd.eZ(Kd[0], Kd[1], Kd[2]),
-          Xd = Rd !== od && !(dd.opaque[od] && dd.opaque[Rd]);
-        if (Xd) {
-          const Wd = [Kd[0], Kd[1], Kd[2]];
-          Wd[Od] = md;
-          const Rd = Math.floor(Wd[0] / td),
-            Xd = Math.floor(Wd[1] / td),
-            hd = Math.floor(Wd[2] / td);
-          !dd.isDrawn(Rd, Xd, hd) && dd.hasParts(Rd, Xd, hd) && Fd.add(`${Rd},${Xd},${hd}`)
+        const wb = Lb[0] < Lb[1] ? Lb[0] < Lb[2] ? 0 : 2 : Lb[1] < Lb[2] ? 1 : 2;
+        if (Lb[wb] > eb) return;
+        const Mb = lb[wb] > 0 ? gb[wb] + 1 : gb[wb];
+        gb[wb] += lb[wb], Lb[wb] += Ib[wb];
+        const pb = bb.Vk(gb[0], gb[1], gb[2]),
+          Vb = pb !== Ub && !(bb.opaque[Ub] && bb.opaque[pb]);
+        if (Vb) {
+          const eb = [gb[0], gb[1], gb[2]];
+          eb[wb] = Mb;
+          const pb = Math.floor(eb[0] / Ob),
+            Vb = Math.floor(eb[1] / Ob),
+            lb = Math.floor(eb[2] / Ob);
+          !bb.isDrawn(pb, Vb, lb) && bb.hasParts(pb, Vb, lb) && Hb.add(`${pb},${Vb},${lb}`)
         }
-        if (Xd && dd.occluders[Rd]) return;
-        od = Rd
+        if (Vb && bb.occluders[pb]) return;
+        Ub = pb
       }
     }
 
-    function kK(dd, Od) {
-      return dd.group - Od.group || dd.nearest - Od.nearest
+    function yg(bb, wb) {
+      return bb.group - wb.group || bb.nearest - wb.nearest
     }
-    class fK {
-      constructor(dd, Od) {
-        this.device = dd, this.Ip = Od, this.data = new Float32Array(2048), this.words = new Uint32Array(this.data.buffer), this.buffer = void 0, this.free = [], this.next = 0, this.dirtyMin = 1 / 0, this.dirtyMax = -1, this.buffer = this.createBuffer()
+    class og {
+      constructor(bb, wb) {
+        this.device = bb, this.Rm = wb, this.data = new Float32Array(2048), this.words = new Uint32Array(this.data.buffer), this.buffer = void 0, this.free = [], this.next = 0, this.dirtyMin = 1 / 0, this.dirtyMax = -1, this.buffer = this.createBuffer()
       }
       createBuffer() {
         return this.device.createBuffer({
@@ -6142,57 +6142,57 @@ export const modules = {
         })
       }
       allocate() {
-        var dd;
-        const Od = null !== (dd = this.free.pop()) && void 0 !== dd ? dd : this.next++;
-        if (8 * Od >= this.data.length) {
-          const dd = new Float32Array(2 * this.data.length);
-          dd.set(this.data), this.data = dd, this.words = new Uint32Array(dd.buffer), this.buffer.destroy(), this.buffer = this.createBuffer(), this.markDirty(0, this.next - 1), this.Ip()
+        var bb;
+        const wb = null !== (bb = this.free.pop()) && void 0 !== bb ? bb : this.next++;
+        if (8 * wb >= this.data.length) {
+          const bb = new Float32Array(2 * this.data.length);
+          bb.set(this.data), this.data = bb, this.words = new Uint32Array(bb.buffer), this.buffer.destroy(), this.buffer = this.createBuffer(), this.markDirty(0, this.next - 1), this.Rm()
         }
-        return Od
+        return wb
       }
-      release(dd) {
-        this.free.push(dd)
+      release(bb) {
+        this.free.push(bb)
       }
-      set(dd, Od, md, Wd, Fd) {
-        const Rd = 8 * dd + eW;
-        this.data[Rd] = Od, this.data[Rd + 1] = md, this.data[Rd + 2] = Wd, this.setVisibility(dd, Fd)
+      set(bb, wb, Mb, eb, Hb) {
+        const pb = 8 * bb + ae;
+        this.data[pb] = wb, this.data[pb + 1] = Mb, this.data[pb + 2] = eb, this.setVisibility(bb, Hb)
       }
-      setVisibility(dd, Od) {
-        this.data[8 * dd + IW] = Od, this.markDirty(dd, dd)
+      setVisibility(bb, wb) {
+        this.data[8 * bb + ie] = wb, this.markDirty(bb, bb)
       }
-      setFaces(dd, Od, md) {
-        const Wd = 8 * dd;
-        this.words[Wd + lW] = Od, this.words[Wd + CW] = md, this.markDirty(dd, dd)
+      setFaces(bb, wb, Mb) {
+        const eb = 8 * bb;
+        this.words[eb + ue] = wb, this.words[eb + de] = Mb, this.markDirty(bb, bb)
       }
-      markDirty(dd, Od) {
-        this.dirtyMin = Math.min(this.dirtyMin, dd), this.dirtyMax = Math.max(this.dirtyMax, Od)
+      markDirty(bb, wb) {
+        this.dirtyMin = Math.min(this.dirtyMin, bb), this.dirtyMax = Math.max(this.dirtyMax, wb)
       }
       flush() {
         if (this.dirtyMax < this.dirtyMin) return;
         this.device.queue.writeBuffer(this.buffer, 8 * this.dirtyMin * 4, this.data, 8 * this.dirtyMin, 8 * (this.dirtyMax - this.dirtyMin + 1)), this.dirtyMin = 1 / 0, this.dirtyMax = -1
       }
     }
-    const MK = DW,
-      dh = !0;
-    const Oh = {
+    const Tg = qe,
+      kg = !0;
+    const bl = {
         arrayStride: 4,
         stepMode: "vertex",
         attributes: [{
-          shaderLocation: MK.packedLight,
+          shaderLocation: Tg.packedLight,
           offset: 0,
           format: "float32"
         }]
       },
-      mh = {
+      wl = {
         srcFactor: "src-alpha",
         dstFactor: "one-minus-src-alpha",
         operation: "add"
       };
-    class Wh {
-      constructor(dd) {
-        this.device = dd, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.sceneDepth = null, this.sunShadow = null, this.shadowMask = null, this.chunks = new Map, this.materials = new Map, this.slots = void 0, this.sceneLayout = void 0, this.frameLayout = void 0, this.materialLayouts = new Map, this.frameUniforms = new Float32Array(GW), this.dirLightUniforms = this.frameUniforms.subarray(rW.dirLights, rW.aoLevels), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.recordsGroups = new WeakMap, this.modules = new Map, this.pipelines = new Map, this.prepassOf = new WeakMap, this.maskPipelines = 0, this.builds = new Map, this.target = null, this.compiling = 0, this.sampler = void 0, this.geometry = void 0, this.warnOnce = (0, iO.b)(), this.faceGroups = !0, this.visibilityGraph = dh, this.visCull = dh, this.visCheck = !1, this.visCullMinDistance = lK.d, this.visCheckFrame = 0, this.visCandidates = [], this.visCandidateBatches = [], this.visPassable = new Set, this.visBatchDraws = new Map, this.visDrawsMaterial = null, this.visDrawsBits = 0, this.visCulledParts = 0, this.visCulledTriangles = 0, this.visViolations = 0, this.visSweeps = 0, this.submittedTriangles = 0, this.chunkSorter = new Kh, this.opaqueBatches = [], this.transparent = [], this.unlit = [], this.lighting = !1, this.dirLightCount = 0, this.aoLevelsWritten = !1, this.originOffset = [0, 0, 0], this.eye = [0, 0, 0], this.faceRanges = new Int32Array(4), this.faceEpoch = 0, this.faceEye = [NaN, NaN, NaN], this.faceFocalPx = NaN, this.Jq = null, this.shaderPackInputs = null, this.depthStandIn = null, this.geometry = new uK(dd, ((dd, Od) => this.recordsGroup(dd, Od))), this.slots = new fK(dd, (() => {
+    class Ml {
+      constructor(bb) {
+        this.device = bb, this.opaqueRenderable = void 0, this.transparentRenderable = void 0, this.sceneDepth = null, this.sunShadow = null, this.shadowMask = null, this.chunks = new Map, this.materials = new Map, this.slots = void 0, this.sceneLayout = void 0, this.frameLayout = void 0, this.materialLayouts = new Map, this.frameUniforms = new Float32Array(We), this.dirLightUniforms = this.frameUniforms.subarray(Ae.dirLights, Ae.aoLevels), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.recordsGroups = new WeakMap, this.modules = new Map, this.pipelines = new Map, this.prepassOf = new WeakMap, this.maskPipelines = 0, this.builds = new Map, this.target = null, this.compiling = 0, this.sampler = void 0, this.geometry = void 0, this.warnOnce = (0, fw.d)(), this.faceGroups = !0, this.visibilityGraph = kg, this.visCull = kg, this.visCheck = !1, this.visCullMinDistance = dg.e, this.visCheckFrame = 0, this.visCandidates = [], this.visCandidateBatches = [], this.visPassable = new Set, this.visBatchDraws = new Map, this.visDrawsMaterial = null, this.visDrawsBits = 0, this.visCulledParts = 0, this.visCulledTriangles = 0, this.visViolations = 0, this.visSweeps = 0, this.submittedTriangles = 0, this.chunkSorter = new Vl, this.opaqueBatches = [], this.transparent = [], this.unlit = [], this.lighting = !1, this.dirLightCount = 0, this.aoLevelsWritten = !1, this.originOffset = [0, 0, 0], this.eye = [0, 0, 0], this.faceRanges = new Int32Array(4), this.faceEpoch = 0, this.faceEye = [NaN, NaN, NaN], this.faceFocalPx = NaN, this.LC = null, this.shaderPackInputs = null, this.depthStandIn = null, this.geometry = new Yg(bb, ((bb, wb) => this.recordsGroup(bb, wb))), this.slots = new og(bb, (() => {
           this.frameBindGroup = this.createFrameBindGroup(), this.recordsGroups = new WeakMap
-        })), this.sceneLayout = JO(dd), this.frameLayout = dd.createBindGroupLayout({
+        })), this.sceneLayout = xw(bb), this.frameLayout = bb.createBindGroupLayout({
           label: "terrain-frame",
           entries: [{
             binding: 0,
@@ -6219,11 +6219,11 @@ export const modules = {
               type: "read-only-storage"
             }
           }]
-        }), this.frameBuffer = dd.createBuffer({
+        }), this.frameBuffer = bb.createBuffer({
           label: "terrain-frame",
           size: this.frameUniforms.byteLength,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.frameBindGroup = this.createFrameBindGroup(), this.sampler = dd.createSampler({
+        }), this.frameBindGroup = this.createFrameBindGroup(), this.sampler = bb.createSampler({
           label: "terrain",
           magFilter: "nearest",
           minFilter: "nearest",
@@ -6234,23 +6234,23 @@ export const modules = {
           order: 100,
           isTransparent: !1,
           _direct: !0,
-          bind: (dd, Od) => this.createBinding(this.opaqueRenderable, Od, !1)
+          bind: (bb, wb) => this.createBinding(this.opaqueRenderable, wb, !1)
         }, this.transparentRenderable = {
           order: 200,
           isTransparent: !0,
           _worldCenter: [0, 0, 0],
-          bind: (dd, Od) => this.createBinding(this.transparentRenderable, Od, !0)
+          bind: (bb, wb) => this.createBinding(this.transparentRenderable, wb, !0)
         }
       }
       retire() {
         this.geometry.retire()
       }
-      installSceneDepth(dd, Od) {
-        this.sceneDepth = new VK(this.device, this.transparentRenderable, dd, Od)
+      installSceneDepth(bb, wb) {
+        this.sceneDepth = new Zg(this.device, this.transparentRenderable, bb, wb)
       }
       createFrameBindGroup() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         return this.device.createBindGroup({
           label: "terrain-frame",
           layout: this.frameLayout,
@@ -6267,28 +6267,28 @@ export const modules = {
           }, {
             binding: 2,
             resource: {
-              buffer: null !== dd && void 0 !== dd ? dd : this.slots.buffer
+              buffer: null !== bb && void 0 !== bb ? bb : this.slots.buffer
             }
           }, {
             binding: 3,
             resource: {
-              buffer: null !== Od && void 0 !== Od ? Od : this.slots.buffer
+              buffer: null !== wb && void 0 !== wb ? wb : this.slots.buffer
             }
           }]
         })
       }
-      recordsGroup(dd, Od) {
-        const md = null !== Od && void 0 !== Od ? Od : dd;
-        let Wd = this.recordsGroups.get(md);
-        return Wd || (Wd = this.createFrameBindGroup(dd, Od), this.recordsGroups.set(md, Wd)), Wd
+      recordsGroup(bb, wb) {
+        const Mb = null !== wb && void 0 !== wb ? wb : bb;
+        let eb = this.recordsGroups.get(Mb);
+        return eb || (eb = this.createFrameBindGroup(bb, wb), this.recordsGroups.set(Mb, eb)), eb
       }
-      setChunkMesh(dd, Od, md) {
-        var Wd;
-        let Fd = this.chunks.get(dd);
-        Fd ? this.geometry.release(Fd) : (Fd = {
-          mesh: dd,
+      setChunkMesh(bb, wb, Mb) {
+        var eb;
+        let Hb = this.chunks.get(bb);
+        Hb ? this.geometry.release(Hb) : (Hb = {
+          mesh: bb,
           slot: this.slots.allocate(),
-          origin: [md[0], md[1], md[2]],
+          origin: [Mb[0], Mb[1], Mb[2]],
           material: null,
           vertices: null,
           lit: !1,
@@ -6297,7 +6297,7 @@ export const modules = {
           packed: !1,
           lostRemeshes: 0,
           lostRetryAt: 0,
-          visibility: dd.visibility,
+          visibility: bb.visibility,
           distance: 0,
           faceGroups: null,
           planePX: 0,
@@ -6317,23 +6317,23 @@ export const modules = {
           cj: NaN,
           ck: NaN,
           key: NaN
-        }, this.chunks.set(dd, Fd), this.writeSlot(Fd)), Fd.material = dd.material ? this.materialFor(dd.material) : null, Fd.packed = !!Od.packedVertices, Fd.vertexCount = (0, wK.h)(Od), Fd.faceCount = Fd.vertexCount / 4;
-        const Rd = null !== (Wd = Od.faceGroups) && void 0 !== Wd ? Wd : null;
-        if (Fd.faceGroups = Rd, Rd) {
-          const dd = eK.n;
-          Fd.planePX = Rd[dd], Fd.planeNX = Rd[dd + 1], Fd.planePY = Rd[dd + 2], Fd.planeNY = Rd[dd + 3], Fd.planePZ = Rd[dd + 4], Fd.planeNZ = Rd[dd + 5]
+        }, this.chunks.set(bb, Hb), this.writeSlot(Hb)), Hb.material = bb.material ? this.materialFor(bb.material) : null, Hb.packed = !!wb.packedVertices, Hb.vertexCount = (0, zg.h)(wb), Hb.faceCount = Hb.vertexCount / 4;
+        const pb = null !== (eb = wb.faceGroups) && void 0 !== eb ? eb : null;
+        if (Hb.faceGroups = pb, pb) {
+          const bb = ig.l;
+          Hb.planePX = pb[bb], Hb.planeNX = pb[bb + 1], Hb.planePY = pb[bb + 2], Hb.planeNY = pb[bb + 3], Hb.planePZ = pb[bb + 4], Hb.planeNZ = pb[bb + 5]
         }
-        this.drawWhole(Fd), 0 !== Fd.faceCount && (this.geometry.set(Fd, Od) ? (Fd.packed && this.slots.setFaces(Fd.slot, Fd.vertices.start + Fd.faceCount, Fd.faceCount), Od.Bq && this.setChunkMeshLight(dd, Od.Bq)) : this.warnOnce("tooBig", `Lite terrain: a chunk of ${Fd.vertexCount} vertices is more than a buffer may hold, and is left out.`))
+        this.drawWhole(Hb), 0 !== Hb.faceCount && (this.geometry.set(Hb, wb) ? (Hb.packed && this.slots.setFaces(Hb.slot, Hb.vertices.start + Hb.faceCount, Hb.faceCount), wb.UC && this.setChunkMeshLight(bb, wb.UC)) : this.warnOnce("tooBig", `Lite terrain: a chunk of ${Hb.vertexCount} vertices is more than a buffer may hold, and is left out.`))
       }
-      setChunkMeshLight(dd, Od) {
-        const md = this.chunks.get(dd);
-        md && this.geometry.setLight(md, Od)
+      setChunkMeshLight(bb, wb) {
+        const Mb = this.chunks.get(bb);
+        Mb && this.geometry.setLight(Mb, wb)
       }
       drawStats() {
-        let dd = this.transparent.length;
-        for (const Od of this.opaqueBatches) dd += Od.meshes.length;
+        let bb = this.transparent.length;
+        for (const wb of this.opaqueBatches) bb += wb.meshes.length;
         return {
-          drawn: dd,
+          drawn: bb,
           loaded: this.chunks.size,
           triangles: this.submittedTriangles,
           visCulled: this.visCulledParts,
@@ -6349,559 +6349,559 @@ export const modules = {
       get buffersAwaitingVerdict() {
         return this.geometry.buffersAwaitingVerdict
       }
-      removeChunkMesh(dd) {
-        const Od = this.chunks.get(dd);
-        Od && (this.geometry.release(Od), this.slots.release(Od.slot), this.chunks.delete(dd))
+      removeChunkMesh(bb) {
+        const wb = this.chunks.get(bb);
+        wb && (this.geometry.release(wb), this.slots.release(wb.slot), this.chunks.delete(bb))
       }
-      remeshLost(dd, Od) {
-        this.geometry.release(Od), Od.lostRetryAt = performance.now() + Math.min(6e4, 1e3 * 2 ** Od.lostRemeshes++);
-        const md = dd.Bt,
-          [Wd, Fd, Rd] = md.bFd(Od.origin[0], Od.origin[1], Od.origin[2]),
-          Xd = md.sH.uH(Wd, Fd, Rd);
-        Xd && (Xd.BH = !0, Xd.iH = !0, md.SH(Xd, !1))
+      remeshLost(bb, wb) {
+        this.geometry.release(wb), wb.lostRetryAt = performance.now() + Math.min(6e4, 1e3 * 2 ** wb.lostRemeshes++);
+        const Mb = bb.XO,
+          [eb, Hb, pb] = Mb.sHb(wb.origin[0], wb.origin[1], wb.origin[2]),
+          Vb = Mb.CE.EE(eb, Hb, pb);
+        Vb && (Vb.UE = !0, Vb.BE = !0, Mb.tE(Vb, !1))
       }
-      chooseFaceRanges(dd, Od, md) {
-        const Wd = this.faceRanges;
-        dd.faceMask = md, dd.rangeCount = (0, IK.n)(Od, md, Wd), dd.first0 = Wd[0], dd.count0 = Wd[1], dd.first1 = Wd[2], dd.count1 = Wd[3]
+      chooseFaceRanges(bb, wb, Mb) {
+        const eb = this.faceRanges;
+        bb.faceMask = Mb, bb.rangeCount = (0, ug.m)(wb, Mb, eb), bb.first0 = eb[0], bb.count0 = eb[1], bb.first1 = eb[2], bb.count1 = eb[3]
       }
-      drawWhole(dd) {
-        dd.faceMask = -1, dd.faceEpoch = -1, dd.rangeCount = 1, dd.first0 = 0, dd.count0 = dd.faceCount
+      drawWhole(bb) {
+        bb.faceMask = -1, bb.faceEpoch = -1, bb.rangeCount = 1, bb.first0 = 0, bb.count0 = bb.faceCount
       }
-      writeSlot(dd) {
-        const [Od, md, Wd] = this.originOffset;
-        this.slots.set(dd.slot, dd.origin[0] - Od, dd.origin[1] - md, dd.origin[2] - Wd, dd.visibility)
+      writeSlot(bb) {
+        const [wb, Mb, eb] = this.originOffset;
+        this.slots.set(bb.slot, bb.origin[0] - wb, bb.origin[1] - Mb, bb.origin[2] - eb, bb.visibility)
       }
-      materialFor(dd) {
-        const Od = this.materials.get(dd);
-        if (Od) return Od;
-        const md = EK(dd);
-        if (!md) return this.warnOnce(`material:${dd.name}`, `Lite terrain cannot draw material "${dd.name}"; its chunks are skipped.`), null;
+      materialFor(bb) {
+        const wb = this.materials.get(bb);
+        if (wb) return wb;
+        const Mb = xg(bb);
+        if (!Mb) return this.warnOnce(`material:${bb.name}`, `Lite terrain cannot draw material "${bb.name}"; its chunks are skipped.`), null;
         const {
-          model: Wd,
-          atlas: Fd,
-          texture: Rd,
-          animated: Xd,
-          uniformData: Kd
-        } = md, hd = {
+          model: eb,
+          atlas: Hb,
+          texture: pb,
+          animated: Vb,
+          uniformData: gb
+        } = Mb, lb = {
           id: this.materials.size,
-          model: Wd,
-          texture: Rd,
-          animated: Xd,
-          uniformData: Kd,
+          model: eb,
+          texture: pb,
+          animated: Vb,
+          uniformData: gb,
           uniformBuffer: this.device.createBuffer({
-            label: `terrain-material-${dd.name}`,
-            size: Kd.byteLength,
+            label: `terrain-material-${bb.name}`,
+            size: gb.byteLength,
             usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
           }),
-          liquid: md.liquid,
-          customRenderMat: md.customRenderMat,
+          liquid: Mb.liquid,
+          customRenderMat: Mb.customRenderMat,
           atlasCount: 0,
-          O4: 0,
+          W4: 0,
           atlasLayers: 0,
           bindGroup: null,
           bindGroupLayout: null,
           ready: Promise.resolve(),
           pipelineIds: [null, null, null, null]
         };
-        return this.materials.set(dd, hd), this.device.queue.writeBuffer(hd.uniformBuffer, 0, Kd), hd.ready = this.createMaterialBindGroup(hd, Fd).catch((Od => {
-          console.error(`Lite terrain failed to load the textures of material "${dd.name}"`, Od)
-        })), hd
+        return this.materials.set(bb, lb), this.device.queue.writeBuffer(lb.uniformBuffer, 0, gb), lb.ready = this.createMaterialBindGroup(lb, Hb).catch((wb => {
+          console.error(`Lite terrain failed to load the textures of material "${bb.name}"`, wb)
+        })), lb
       }
-      materialLayout(dd) {
-        const Od = function(dd) {
-            const Od = ["uniforms"];
-            if ("atlas" === dd.texture) {
-              dd.animated && Od.push("animData"), Od.push("sampler");
-              for (let md = 0; md < dd.atlasCount; md++) Od.push("textureArray")
-            } else "single" === dd.texture && Od.push("sampler", "texture");
-            return Od
-          }(dd),
-          md = Od.join(",");
-        let Wd = this.materialLayouts.get(md);
-        if (!Wd) {
-          const dd = GPUShaderStage.FRAGMENT;
-          Wd = this.device.createBindGroupLayout({
-            label: `terrain-material-${md}`,
-            entries: Od.map(((Od, md) => {
-              switch (Od) {
+      materialLayout(bb) {
+        const wb = function(bb) {
+            const wb = ["uniforms"];
+            if ("atlas" === bb.texture) {
+              bb.animated && wb.push("animData"), wb.push("sampler");
+              for (let Mb = 0; Mb < bb.atlasCount; Mb++) wb.push("textureArray")
+            } else "single" === bb.texture && wb.push("sampler", "texture");
+            return wb
+          }(bb),
+          Mb = wb.join(",");
+        let eb = this.materialLayouts.get(Mb);
+        if (!eb) {
+          const bb = GPUShaderStage.FRAGMENT;
+          eb = this.device.createBindGroupLayout({
+            label: `terrain-material-${Mb}`,
+            entries: wb.map(((wb, Mb) => {
+              switch (wb) {
                 case "uniforms":
                   return {
-                    binding: md, visibility: GPUShaderStage.VERTEX | dd, buffer: {
+                    binding: Mb, visibility: GPUShaderStage.VERTEX | bb, buffer: {
                       type: "uniform"
                     }
                   };
                 case "animData":
                   return {
-                    binding: md, visibility: GPUShaderStage.VERTEX | dd, buffer: {
+                    binding: Mb, visibility: GPUShaderStage.VERTEX | bb, buffer: {
                       type: "read-only-storage"
                     }
                   };
                 case "sampler":
                   return {
-                    binding: md, visibility: dd, sampler: {
+                    binding: Mb, visibility: bb, sampler: {
                       type: "filtering"
                     }
                   };
                 case "texture":
                   return {
-                    binding: md, visibility: dd, texture: {
+                    binding: Mb, visibility: bb, texture: {
                       sampleType: "float",
                       viewDimension: "2d"
                     }
                   };
                 case "textureArray":
                   return {
-                    binding: md, visibility: dd, texture: {
+                    binding: Mb, visibility: bb, texture: {
                       sampleType: "float",
                       viewDimension: "2d-array"
                     }
                   }
               }
             }))
-          }), this.materialLayouts.set(md, Wd)
+          }), this.materialLayouts.set(Mb, eb)
         }
-        return Wd
+        return eb
       }
-      async createMaterialBindGroup(dd, Od) {
-        const md = [{
-          buffer: dd.uniformBuffer
+      async createMaterialBindGroup(bb, wb) {
+        const Mb = [{
+          buffer: bb.uniformBuffer
         }];
-        if (Od) {
-          const Wd = await WO(this.device, Od.sources);
-          dd.atlasCount = Wd.length, dd.O4 = Wd[0].layerWidth, dd.atlasLayers = Wd[0].layers, Od.animDataPerTex && md.push({
-            buffer: Zd(this.device, Float32Array.from(Od.animDataPerTex), GPUBufferUsage.STORAGE, "terrain-anim")
-          }), md.push(this.sampler);
-          for (const dd of Wd) md.push(dd.texture.createView({
+        if (wb) {
+          const eb = await ww(this.device, wb.sources);
+          bb.atlasCount = eb.length, bb.W4 = eb[0].layerWidth, bb.atlasLayers = eb[0].layers, wb.animDataPerTex && Mb.push({
+            buffer: Pb(this.device, Float32Array.from(wb.animDataPerTex), GPUBufferUsage.STORAGE, "terrain-anim")
+          }), Mb.push(this.sampler);
+          for (const bb of eb) Mb.push(bb.texture.createView({
             dimension: "2d-array"
           }))
-        } else if ("single" === dd.texture) {
+        } else if ("single" === bb.texture) {
           const {
-            url: Od
-          } = dd.model.diffuseTexture.source, {
-            pixels: Wd,
-            width: Fd,
-            height: Rd
-          } = await mO(Od);
-          md.push(this.sampler), md.push(fd(this.device, Wd, Fd, Rd, 1, `terrain-${Od}`).createView({
+            url: wb
+          } = bb.model.diffuseTexture.source, {
+            pixels: eb,
+            width: Hb,
+            height: pb
+          } = await bw(wb);
+          Mb.push(this.sampler), Mb.push(yb(this.device, eb, Hb, pb, 1, `terrain-${wb}`).createView({
             dimension: "2d"
           }))
         }
-        const Wd = this.materialLayout(this.programKey(dd, !1));
-        dd.bindGroupLayout = Wd, dd.bindGroup = this.device.createBindGroup({
-          label: `terrain-material-${dd.model.name}`,
-          layout: Wd,
-          entries: md.map(((dd, Od) => ({
-            binding: Od,
-            resource: dd
+        const eb = this.materialLayout(this.programKey(bb, !1));
+        bb.bindGroupLayout = eb, bb.bindGroup = this.device.createBindGroup({
+          label: `terrain-material-${bb.model.name}`,
+          layout: eb,
+          entries: Mb.map(((bb, wb) => ({
+            binding: wb,
+            resource: bb
           })))
         })
       }
-      programKey(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const Wd = md ? md.lighting : this.lighting,
-          Fd = md ? md.Jq : this.Jq,
-          Rd = {
-            texture: dd.texture,
-            atlasCount: dd.atlasCount,
-            O4: dd.O4,
-            atlasLayers: dd.atlasLayers,
-            animated: dd.animated,
-            alphaTest: dd.model.transparencyMode === Ud.r.alphaTest,
-            lighting: Wd,
-            dirLightCount: md ? md.dirLightCount : this.dirLightCount,
-            packed: Od
+      programKey(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        const eb = Mb ? Mb.lighting : this.lighting,
+          Hb = Mb ? Mb.LC : this.LC,
+          pb = {
+            texture: bb.texture,
+            atlasCount: bb.atlasCount,
+            W4: bb.W4,
+            atlasLayers: bb.atlasLayers,
+            animated: bb.animated,
+            alphaTest: bb.model.transparencyMode === Kb.s.alphaTest,
+            lighting: eb,
+            dirLightCount: Mb ? Mb.dirLightCount : this.dirLightCount,
+            packed: wb
           };
-        if (!Fd) return Rd;
-        const Xd = this.shaderPackFields(dd, Fd),
-          Kd = "atlas" === dd.texture && dd.model.transparencyMode === Ud.r.opaque && sW(Xd.packVariant);
+        if (!Hb) return pb;
+        const Vb = this.shaderPackFields(bb, Hb),
+          gb = "atlas" === bb.texture && bb.model.transparencyMode === Kb.s.opaque && De(Vb.packVariant);
         return {
-          ...Rd,
-          ...Xd,
-          alphaTest: Rd.alphaTest || Kd
+          ...pb,
+          ...Vb,
+          alphaTest: pb.alphaTest || gb
         }
       }
-      shaderPackFields(dd, Od) {
-        const md = this.packVariant(dd, Od);
-        return void 0 === md ? BW : {
-          packVariant: md,
-          liquid: dd.liquid
+      shaderPackFields(bb, wb) {
+        const Mb = this.packVariant(bb, wb);
+        return void 0 === Mb ? re : {
+          packVariant: Mb,
+          liquid: bb.liquid
         }
       }
-      packVariant(dd, Od) {
-        return dd.customRenderMat ? void 0 : function(dd, Od) {
-          const md = dd ? dd.defineFor(Od ? "liquid" : "terrain") : 0;
-          return 0 === md ? void 0 : md
-        }(Od, dd.liquid)
+      packVariant(bb, wb) {
+        return bb.customRenderMat ? void 0 : function(bb, wb) {
+          const Mb = bb ? bb.defineFor(wb ? "liquid" : "terrain") : 0;
+          return 0 === Mb ? void 0 : Mb
+        }(wb, bb.liquid)
       }
-      isBlended(dd) {
-        return dd.model.transparencyMode === Ud.r.alphaBlend
+      isBlended(bb) {
+        return bb.model.transparencyMode === Kb.s.alphaBlend
       }
-      shaderModule(dd, Od) {
-        let md = this.modules.get(dd);
-        return md || (md = this.device.createShaderModule({
-          label: Od,
-          code: dd
-        }), this.modules.set(dd, md)), md
+      shaderModule(bb, wb) {
+        let Mb = this.modules.get(bb);
+        return Mb || (Mb = this.device.createShaderModule({
+          label: wb,
+          code: bb
+        }), this.modules.set(bb, Mb)), Mb
       }
-      pipelineFor(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (!dd.bindGroupLayout) return null;
-        if (!Wd) return this.pipelineOf(dd, Od, md);
-        const Fd = this.pipelineIdNow(dd, Od, !0, md),
-          Rd = this.pipelines.get(Fd);
-        if (Rd) return Rd;
-        const Xd = this.pipelineOf(dd, Od, md);
-        return Xd && void 0 === Rd && this.startPipeline(Fd, dd, {
-          ...this.programKey(dd, Od),
-          resting: Wd
-        }, md), Xd
+      pipelineFor(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (!bb.bindGroupLayout) return null;
+        if (!eb) return this.pipelineOf(bb, wb, Mb);
+        const Hb = this.pipelineIdNow(bb, wb, !0, Mb),
+          pb = this.pipelines.get(Hb);
+        if (pb) return pb;
+        const Vb = this.pipelineOf(bb, wb, Mb);
+        return Vb && void 0 === pb && this.startPipeline(Hb, bb, {
+          ...this.programKey(bb, wb),
+          resting: eb
+        }, Mb), Vb
       }
-      pipelineOf(dd, Od, md) {
-        const Wd = this.pipelineIdNow(dd, Od, !1, md),
-          Fd = this.pipelines.get(Wd);
-        return void 0 !== Fd ? Fd : (this.startPipeline(Wd, dd, this.programKey(dd, Od), md), null)
+      pipelineOf(bb, wb, Mb) {
+        const eb = this.pipelineIdNow(bb, wb, !1, Mb),
+          Hb = this.pipelines.get(eb);
+        return void 0 !== Hb ? Hb : (this.startPipeline(eb, bb, this.programKey(bb, wb), Mb), null)
       }
-      pipelineIdNow(dd, Od, md, Wd) {
+      pipelineIdNow(bb, wb, Mb, eb) {
         const {
-          lighting: Fd,
-          dirLightCount: Rd
+          lighting: Hb,
+          dirLightCount: pb
         } = this, {
-          transparencyMode: Xd,
-          backFaceCulling: Kd
-        } = dd.model, hd = this.packVariant(dd, this.Jq), vd = (Od ? 2 : 0) + (md ? 1 : 0), Qd = dd.pipelineIds[vd];
-        if (null !== Qd && Qd.lighting === Fd && Qd.dirLightCount === Rd && Qd.packVariant === hd && Qd.transparencyMode === Xd && Qd.cull === Kd && Qd.atlasCount === dd.atlasCount && Qd.O4 === dd.O4 && Qd.atlasLayers === dd.atlasLayers && Qd.colorFormat === Wd._colorFormat && Qd.depthStencilFormat === Wd._depthStencilFormat && Qd.sampleCount === Wd._sampleCount) return Qd.id;
-        const td = this.programKey(dd, Od),
-          od = this.pipelineId(dd, md ? {
-            ...td,
-            resting: md
-          } : td, Wd);
-        return dd.pipelineIds[vd] = {
-          id: od,
-          lighting: Fd,
-          dirLightCount: Rd,
-          packVariant: hd,
-          transparencyMode: Xd,
-          cull: Kd,
-          atlasCount: dd.atlasCount,
-          O4: dd.O4,
-          atlasLayers: dd.atlasLayers,
-          colorFormat: Wd._colorFormat,
-          depthStencilFormat: Wd._depthStencilFormat,
-          sampleCount: Wd._sampleCount
-        }, od
+          transparencyMode: Vb,
+          backFaceCulling: gb
+        } = bb.model, lb = this.packVariant(bb, this.LC), Lb = (wb ? 2 : 0) + (Mb ? 1 : 0), Ib = bb.pipelineIds[Lb];
+        if (null !== Ib && Ib.lighting === Hb && Ib.dirLightCount === pb && Ib.packVariant === lb && Ib.transparencyMode === Vb && Ib.cull === gb && Ib.atlasCount === bb.atlasCount && Ib.W4 === bb.W4 && Ib.atlasLayers === bb.atlasLayers && Ib.colorFormat === eb._colorFormat && Ib.depthStencilFormat === eb._depthStencilFormat && Ib.sampleCount === eb._sampleCount) return Ib.id;
+        const Ob = this.programKey(bb, wb),
+          Ub = this.pipelineId(bb, Mb ? {
+            ...Ob,
+            resting: Mb
+          } : Ob, eb);
+        return bb.pipelineIds[Lb] = {
+          id: Ub,
+          lighting: Hb,
+          dirLightCount: pb,
+          packVariant: lb,
+          transparencyMode: Vb,
+          cull: gb,
+          atlasCount: bb.atlasCount,
+          W4: bb.W4,
+          atlasLayers: bb.atlasLayers,
+          colorFormat: eb._colorFormat,
+          depthStencilFormat: eb._depthStencilFormat,
+          sampleCount: eb._sampleCount
+        }, Ub
       }
-      pipelineId(dd, Od, md) {
-        return Fh(Od, this.isBlended(dd), dd.model.backFaceCulling, md)
+      pipelineId(bb, wb, Mb) {
+        return el(wb, this.isBlended(bb), bb.model.backFaceCulling, Mb)
       }
-      pipelineBuild(dd, Od, md) {
-        var Wd;
-        const Fd = this.pipelineId(dd, Od, md);
-        return null !== (Wd = this.builds.get(Fd)) && void 0 !== Wd ? Wd : this.startPipeline(Fd, dd, Od, md)
+      pipelineBuild(bb, wb, Mb) {
+        var eb;
+        const Hb = this.pipelineId(bb, wb, Mb);
+        return null !== (eb = this.builds.get(Hb)) && void 0 !== eb ? eb : this.startPipeline(Hb, bb, wb, Mb)
       }
-      startPipeline(dd, Od, md, Wd) {
-        var Fd;
-        this.pipelines.set(dd, null);
-        const Rd = OF(md),
-          Xd = this.isBlended(Od),
-          Kd = this.shadowMask && Wd._depthStencilFormat ? function(dd, Od, md, Wd) {
-            if (void 0 === dd.packVariant || dd.liquid || Od) return "none";
-            const Fd = (0, MO.g)(dd.packVariant);
-            return null === Fd || void 0 === Fd || !Fd.sunShadow || !hW(Fd, md) || Fd.discards || dd.alphaTest && sW(dd.packVariant) ? "none" : Wd ? "edge" : "plain"
-          }(md, Xd, !!this.sunShadow, Wd._sampleCount > 1) : "none";
-        let hd;
+      startPipeline(bb, wb, Mb, eb) {
+        var Hb;
+        this.pipelines.set(bb, null);
+        const pb = ke(Mb),
+          Vb = this.isBlended(wb),
+          gb = this.shadowMask && eb._depthStencilFormat ? function(bb, wb, Mb, eb) {
+            if (void 0 === bb.packVariant || bb.liquid || wb) return "none";
+            const Hb = (0, Tw.i)(bb.packVariant);
+            return null === Hb || void 0 === Hb || !Hb.sunShadow || !Ve(Hb, Mb) || Hb.discards || bb.alphaTest && De(bb.packVariant) ? "none" : eb ? "edge" : "plain"
+          }(Mb, Vb, !!this.sunShadow, eb._sampleCount > 1) : "none";
+        let lb;
         try {
-          hd = mF(md, !!this.sunShadow, Kd)
-        } catch (yd) {
-          if (!AW(md)) throw yd;
-          return this.failedPackBuild(dd, md, Rd, yd)
+          lb = bH(Mb, !!this.sunShadow, gb)
+        } catch (Fb) {
+          if (!fe(Mb)) throw Fb;
+          return this.failedPackBuild(bb, Mb, pb, Fb)
         }
-        const vd = this.shaderModule(hd, Rd),
-          Qd = [];
-        md.packed || (Qd.push(function(dd, Od) {
-          const md = [{
-            shaderLocation: MK.position,
-            offset: ZO.h.RF,
+        const Lb = this.shaderModule(lb, pb),
+          Ib = [];
+        Mb.packed || (Ib.push(function(bb, wb) {
+          const Mb = [{
+            shaderLocation: Tg.position,
+            offset: nw.f.pH,
             format: "float32x3"
           }, {
-            shaderLocation: MK.normal,
-            offset: ZO.h.normalOffset,
+            shaderLocation: Tg.normal,
+            offset: nw.f.normalOffset,
             format: "snorm8x4"
           }, {
-            shaderLocation: MK.color,
-            offset: ZO.h.colorOffset,
+            shaderLocation: Tg.color,
+            offset: nw.f.colorOffset,
             format: "unorm8x4"
           }];
-          return dd && md.push({
-            shaderLocation: MK.uv,
-            offset: ZO.h.uvOffset,
+          return bb && Mb.push({
+            shaderLocation: Tg.uv,
+            offset: nw.f.uvOffset,
             format: "float32x2"
-          }), Od && md.push({
-            shaderLocation: MK.blockFlagWords,
-            offset: ZO.h.normalOffset,
+          }), wb && Mb.push({
+            shaderLocation: Tg.blockFlagWords,
+            offset: nw.f.normalOffset,
             format: "uint32x2"
           }), {
-            arrayStride: ZO.h.strideWithoutAtlas,
+            arrayStride: nw.f.strideWithoutAtlas,
             stepMode: "vertex",
-            attributes: md
+            attributes: Mb
           }
-        }("none" !== md.texture, AW(md))), md.lighting && Qd.push(Oh));
-        const td = Od.model.backFaceCulling,
-          od = {
-            label: Rd,
+        }("none" !== Mb.texture, fe(Mb))), Mb.lighting && Ib.push(bl));
+        const Ob = wb.model.backFaceCulling,
+          Ub = {
+            label: pb,
             layout: this.device.createPipelineLayout({
-              bindGroupLayouts: [this.sceneLayout, this.frameLayout, Od.bindGroupLayout, ...ZR(this.device, md, !!this.sunShadow, "none" !== Kd)]
+              bindGroupLayouts: [this.sceneLayout, this.frameLayout, wb.bindGroupLayout, ...np(this.device, Mb, !!this.sunShadow, "none" !== gb)]
             }),
             vertex: {
-              module: vd,
+              module: Lb,
               entryPoint: "mainVertex",
-              buffers: Qd
+              buffers: Ib
             },
-            fragment: YO({
-              module: vd,
+            fragment: sw({
+              module: Lb,
               entryPoint: "mainFragment"
-            }, Wd, Xd ? mh : null),
-            depthStencil: Wd._depthStencilFormat ? {
-              format: Wd._depthStencilFormat,
-              depthCompare: null !== (Fd = Wd._depthCompare) && void 0 !== Fd ? Fd : UO,
+            }, eb, Vb ? wl : null),
+            depthStencil: eb._depthStencilFormat ? {
+              format: eb._depthStencilFormat,
+              depthCompare: null !== (Hb = eb._depthCompare) && void 0 !== Hb ? Hb : jw,
               depthWriteEnabled: !0
             } : void 0,
             multisample: {
-              count: Wd._sampleCount
+              count: eb._sampleCount
             },
             primitive: {
               topology: "triangle-list",
               frontFace: "ccw",
-              cullMode: td ? "back" : "none"
+              cullMode: Ob ? "back" : "none"
             }
           },
-          Nd = md.resting ? 0 : 1;
-        this.compiling += Nd;
-        const qd = "none" === Kd ? this.device.createRenderPipelineAsync(od) : this.startMaskPipelines(vd, od, "edge" === Kd);
-        qd.then((Od => {
-          this.compiling -= Nd, this.pipelines.set(dd, Od)
-        }), (dd => {
-          this.compiling -= Nd, console.error(`Lite terrain pipeline ${Rd} failed`, dd), DK(this.device, md, Rd, vd, dd)
+          tb = Mb.resting ? 0 : 1;
+        this.compiling += tb;
+        const Cb = "none" === gb ? this.device.createRenderPipelineAsync(Ub) : this.startMaskPipelines(Lb, Ub, "edge" === gb);
+        Cb.then((wb => {
+          this.compiling -= tb, this.pipelines.set(bb, wb)
+        }), (bb => {
+          this.compiling -= tb, console.error(`Lite terrain pipeline ${pb} failed`, bb), ag(this.device, Mb, pb, Lb, bb)
         }));
-        const Hd = {
-          name: Rd,
-          module: vd,
-          built: qd
+        const Eb = {
+          name: pb,
+          module: Lb,
+          built: Cb
         };
-        return this.builds.set(dd, Hd), Hd
+        return this.builds.set(bb, Eb), Eb
       }
-      startMaskPipelines(dd, Od, md) {
-        const Wd = Od.depthStencil,
-          Fd = this.device.createRenderPipelineAsync(md ? Od : {
-            ...Od,
+      startMaskPipelines(bb, wb, Mb) {
+        const eb = wb.depthStencil,
+          Hb = this.device.createRenderPipelineAsync(Mb ? wb : {
+            ...wb,
             depthStencil: {
-              ...Wd,
+              ...eb,
               depthCompare: "equal",
               depthWriteEnabled: !1
             }
           }),
-          Rd = this.device.createRenderPipelineAsync({
-            ...Od,
-            label: `${Od.label}-prepass`,
+          pb = this.device.createRenderPipelineAsync({
+            ...wb,
+            label: `${wb.label}-prepass`,
             fragment: {
-              module: dd,
+              module: bb,
               entryPoint: "prepassFragment",
               targets: [{
-                format: iK
+                format: fg
               }]
             },
             multisample: {
               count: 1
             }
           });
-        return Promise.all([Fd, Rd]).then((dd => {
-          let [Od, md] = dd;
-          return this.prepassOf.set(Od, md), this.maskPipelines++, Od
+        return Promise.all([Hb, pb]).then((bb => {
+          let [wb, Mb] = bb;
+          return this.prepassOf.set(wb, Mb), this.maskPipelines++, wb
         }))
       }
-      failedPackBuild(dd, Od, md, Wd) {
-        console.error(`Lite terrain pipeline ${md} failed`, Wd), DK(this.device, Od, md, null, Wd);
-        const Fd = Promise.reject(Wd);
-        Fd.catch((() => {}));
-        const Rd = {
-          name: md,
+      failedPackBuild(bb, wb, Mb, eb) {
+        console.error(`Lite terrain pipeline ${Mb} failed`, eb), ag(this.device, wb, Mb, null, eb);
+        const Hb = Promise.reject(eb);
+        Hb.catch((() => {}));
+        const pb = {
+          name: Mb,
           module: null,
-          built: Fd
+          built: Hb
         };
-        return this.builds.set(dd, Rd), Rd
+        return this.builds.set(bb, pb), pb
       }
-      checkShaderPack(dd) {
-        return zK(dd, {
+      checkShaderPack(bb) {
+        return Qg(bb, {
           device: this.device,
           target: this.target,
-          material: dd => this.materialFor(dd),
-          programKey: (dd, Od, md) => this.programKey(dd, Od, md),
-          pipelineBuild: (dd, Od, md) => this.pipelineBuild(dd, Od, md)
+          material: bb => this.materialFor(bb),
+          programKey: (bb, wb, Mb) => this.programKey(bb, wb, Mb),
+          pipelineBuild: (bb, wb, Mb) => this.pipelineBuild(bb, wb, Mb)
         })
       }
-      createBinding(dd, Od, md) {
-        return this.target = Od, {
-          renderable: dd,
-          pipeline: sO(this.device, Od),
-          draw: dd => {
+      createBinding(bb, wb, Mb) {
+        return this.target = wb, {
+          renderable: bb,
+          pipeline: Dw(this.device, wb),
+          draw: bb => {
             this.geometry.setDrawing(!0);
             try {
-              return md ? this.drawTransparent(dd, Od) : this.drawOpaque(dd, Od)
+              return Mb ? this.drawTransparent(bb, wb) : this.drawOpaque(bb, wb)
             } finally {
               this.geometry.setDrawing(!1)
             }
           }
         }
       }
-      prepare(dd, Od) {
-        var md, Wd, Fd, Rd;
+      prepare(bb, wb) {
+        var Mb, eb, Hb, pb;
         const {
-          zo: Xd
-        } = dd;
-        this.lighting = dd.lH;
-        const Kd = (0, gK.z)(Od);
-        this.dirLightCount = Math.min(Kd, 4), this.Jq = null !== (md = Xd.Jq) && void 0 !== md ? md : null, Kd > 4 && this.warnOnce("dirLights", "Lite terrain lights with the first 4 directional lights only."), this.writeFrameUniforms(dd, Od), this.animateMaterials(Od.animTick);
-        const hd = Xd.XN,
-          vd = hd[0] !== this.originOffset[0] || hd[1] !== this.originOffset[1] || hd[2] !== this.originOffset[2];
-        vd && (this.originOffset[0] = hd[0], this.originOffset[1] = hd[1], this.originOffset[2] = hd[2]);
-        const Qd = Od.eye;
-        this.eye[0] = Qd[0], this.eye[1] = Qd[1], this.eye[2] = Qd[2], this.writeShaderPackInputs();
-        const td = Od.projectionMatrix,
-          od = 0 === td[15];
-        let Nd = 0;
-        (vd || this.eye[0] !== this.faceEye[0] || this.eye[1] !== this.faceEye[1] || this.eye[2] !== this.faceEye[2]) && (this.faceEpoch++, this.faceEye[0] = this.eye[0], this.faceEye[1] = this.eye[1], this.faceEye[2] = this.eye[2]);
+          hU: Vb
+        } = bb;
+        this.lighting = bb.YE;
+        const gb = (0, hg.u)(wb);
+        this.dirLightCount = Math.min(gb, 4), this.LC = null !== (Mb = Vb.LC) && void 0 !== Mb ? Mb : null, gb > 4 && this.warnOnce("dirLights", "Lite terrain lights with the first 4 directional lights only."), this.writeFrameUniforms(bb, wb), this.animateMaterials(wb.animTick);
+        const lb = Vb.SU,
+          Lb = lb[0] !== this.originOffset[0] || lb[1] !== this.originOffset[1] || lb[2] !== this.originOffset[2];
+        Lb && (this.originOffset[0] = lb[0], this.originOffset[1] = lb[1], this.originOffset[2] = lb[2]);
+        const Ib = wb.eye;
+        this.eye[0] = Ib[0], this.eye[1] = Ib[1], this.eye[2] = Ib[2], this.writeShaderPackInputs();
+        const Ob = wb.projectionMatrix,
+          Ub = 0 === Ob[15];
+        let tb = 0;
+        (Lb || this.eye[0] !== this.faceEye[0] || this.eye[1] !== this.faceEye[1] || this.eye[2] !== this.faceEye[2]) && (this.faceEpoch++, this.faceEye[0] = this.eye[0], this.faceEye[1] = this.eye[1], this.faceEye[2] = this.eye[2]);
         let {
-          faceEpoch: qd
+          faceEpoch: Cb
         } = this;
-        uO(this.transparentRenderable._worldCenter, Od, BO), this.resetBatches(od), this.transparent.length = 0, this.unlit.length = 0;
-        const Hd = Xd.Bt.tt,
-          yd = Hd / 2 * Math.sqrt(3);
-        let bd = 0;
-        const Td = !!this.Jq && SW(this.Jq.defineFor("liquid"));
-        let pd = !1;
-        const Yd = null !== (Wd = null === (Fd = Xd.aE) || void 0 === Fd ? void 0 : Fd.visibility) && void 0 !== Wd ? Wd : null,
-          gd = this.visCull && od && 0 === this.compiling && null !== Yd && Xd.Bt.vRd[0] >= this.visCullMinDistance ? this.target : null,
-          wd = this.visPassable,
-          Ed = this.visCandidates,
-          Jd = this.visCandidateBatches;
-        wd.clear(), this.visBatchDraws.clear(), this.visDrawsMaterial = null;
-        let Ud = 0;
+        Yw(this.transparentRenderable._worldCenter, wb, rw), this.resetBatches(Ub), this.transparent.length = 0, this.unlit.length = 0;
+        const Eb = Vb.XO.lO,
+          Fb = Eb / 2 * Math.sqrt(3);
+        let Bb = 0;
+        const sb = !!this.LC && Re(this.LC.defineFor("liquid"));
+        let mb = !1;
+        const hb = null !== (eb = null === (Hb = Vb.fR) || void 0 === Hb ? void 0 : Hb.visibility) && void 0 !== eb ? eb : null,
+          zb = this.visCull && Ub && 0 === this.compiling && null !== hb && Vb.XO.Lpb[0] >= this.visCullMinDistance ? this.target : null,
+          Xb = this.visPassable,
+          xb = this.visCandidates,
+          jb = this.visCandidateBatches;
+        Xb.clear(), this.visBatchDraws.clear(), this.visDrawsMaterial = null;
+        let Kb = 0;
         this.visCulledParts = 0, this.visCulledTriangles = 0;
-        let xd = 0;
-        const Bd = (dd, md) => {
-          if (!md) return this.transparent.push(dd), void(xd += 2 * dd.faceCount);
-          if (null !== dd.faceGroups && md.faceCull) {
-            if (0 === Nd && (Nd = (0, IK.e)(td, Od.renderWidth, Od.renderHeight), Nd !== this.faceFocalPx && (this.faceFocalPx = Nd, qd = ++this.faceEpoch)), dd.faceEpoch !== qd) {
-              dd.faceEpoch = qd;
-              const Od = Math.sqrt(dd.distance) + yd,
-                md = (0, IK.k)(dd.planePX, dd.planeNX, dd.planePY, dd.planeNY, dd.planePZ, dd.planeNZ, this.eye[0] - (dd.origin[0] - this.originOffset[0]), this.eye[1] - (dd.origin[1] - this.originOffset[1]), this.eye[2] - (dd.origin[2] - this.originOffset[2]), (0, IK.h)(Od, Nd));
-              md !== dd.faceMask && this.chooseFaceRanges(dd, dd.faceGroups, md)
+        let rb = 0;
+        const Rb = (bb, Mb) => {
+          if (!Mb) return this.transparent.push(bb), void(rb += 2 * bb.faceCount);
+          if (null !== bb.faceGroups && Mb.faceCull) {
+            if (0 === tb && (tb = (0, ug.c)(Ob, wb.renderWidth, wb.renderHeight), tb !== this.faceFocalPx && (this.faceFocalPx = tb, Cb = ++this.faceEpoch)), bb.faceEpoch !== Cb) {
+              bb.faceEpoch = Cb;
+              const wb = Math.sqrt(bb.distance) + Fb,
+                Mb = (0, ug.j)(bb.planePX, bb.planeNX, bb.planePY, bb.planeNY, bb.planePZ, bb.planeNZ, this.eye[0] - (bb.origin[0] - this.originOffset[0]), this.eye[1] - (bb.origin[1] - this.originOffset[1]), this.eye[2] - (bb.origin[2] - this.originOffset[2]), (0, ug.g)(wb, tb));
+              Mb !== bb.faceMask && this.chooseFaceRanges(bb, bb.faceGroups, Mb)
             }
-            if (0 === dd.rangeCount) return
-          } else - 1 !== dd.faceMask && this.drawWhole(dd);
-          md.meshes.push(dd), xd += 2 * ((dd.rangeCount > 0 ? dd.count0 : 0) + (dd.rangeCount > 1 ? dd.count1 : 0))
+            if (0 === bb.rangeCount) return
+          } else - 1 !== bb.faceMask && this.drawWhole(bb);
+          Mb.meshes.push(bb), rb += 2 * ((bb.rangeCount > 0 ? bb.count0 : 0) + (bb.rangeCount > 1 ? bb.count1 : 0))
         };
-        for (const sd of this.chunks.values()) {
-          vd && this.writeSlot(sd);
-          const dd = sd.mesh.visibility;
-          dd !== sd.visibility && (sd.visibility = dd, this.slots.setVisibility(sd.slot, dd));
+        for (const cb of this.chunks.values()) {
+          Lb && this.writeSlot(cb);
+          const bb = cb.mesh.visibility;
+          bb !== cb.visibility && (cb.visibility = bb, this.slots.setVisibility(cb.slot, bb));
           const {
-            material: md
-          } = sd;
-          this.geometry.lost(sd) && performance.now() >= sd.lostRetryAt && this.remeshLost(Xd, sd);
-          const Wd = !(null === md || void 0 === md || !md.bindGroup) && this.geometry.backed(sd),
-            Fd = Wd && this.lighting && !sd.vertices.page.twin;
-          if (gd && (Number.isNaN(sd.key) && (sd.ci = Math.floor(sd.origin[0] / Hd), sd.cj = Math.floor(sd.origin[1] / Hd), sd.ck = Math.floor(sd.origin[2] / Hd), sd.key = (0, CK.g)(sd.ci, sd.cj, sd.ck)), (!Wd || dd < 1 || Fd || !this.batchDraws(md, sd.packed, gd)) && this.visSeeThrough(sd, gd) && wd.add(sd.key)), !Wd) continue;
-          Fd || (sd.lostRemeshes = 0);
-          const Rd = sd.origin[0] - this.originOffset[0],
-            Kd = sd.origin[1] - this.originOffset[1],
-            hd = sd.origin[2] - this.originOffset[2];
-          if (!(0, vK.d)(Od.frustum, Rd, Kd, hd, Hd)) continue;
-          const Qd = Rd + Hd / 2 - this.eye[0],
-            td = Kd + Hd / 2 - this.eye[1],
-            Nd = hd + Hd / 2 - this.eye[2];
-          if (sd.distance = Qd * Qd + td * td + Nd * Nd, this.lighting && !sd.lit && (bd = Math.max(bd, sd.vertexCount), this.unlit.push(sd)), Fd) continue;
-          const qd = this.isBlended(md) ? null : this.batchFor(md, sd.packed, sd.vertices.page, 1 === dd, od);
-          gd ? (Ed[Ud] = sd, Jd[Ud++] = qd) : Bd(sd, qd)
+            material: Mb
+          } = cb;
+          this.geometry.lost(cb) && performance.now() >= cb.lostRetryAt && this.remeshLost(Vb, cb);
+          const eb = !(null === Mb || void 0 === Mb || !Mb.bindGroup) && this.geometry.backed(cb),
+            Hb = eb && this.lighting && !cb.vertices.page.twin;
+          if (zb && (Number.isNaN(cb.key) && (cb.ci = Math.floor(cb.origin[0] / Eb), cb.cj = Math.floor(cb.origin[1] / Eb), cb.ck = Math.floor(cb.origin[2] / Eb), cb.key = (0, Pg.g)(cb.ci, cb.cj, cb.ck)), (!eb || bb < 1 || Hb || !this.batchDraws(Mb, cb.packed, zb)) && this.visSeeThrough(cb, zb) && Xb.add(cb.key)), !eb) continue;
+          Hb || (cb.lostRemeshes = 0);
+          const pb = cb.origin[0] - this.originOffset[0],
+            gb = cb.origin[1] - this.originOffset[1],
+            lb = cb.origin[2] - this.originOffset[2];
+          if (!(0, lg.e)(wb.frustum, pb, gb, lb, Eb)) continue;
+          const Ib = pb + Eb / 2 - this.eye[0],
+            Ob = gb + Eb / 2 - this.eye[1],
+            tb = lb + Eb / 2 - this.eye[2];
+          if (cb.distance = Ib * Ib + Ob * Ob + tb * tb, this.lighting && !cb.lit && (Bb = Math.max(Bb, cb.vertexCount), this.unlit.push(cb)), Hb) continue;
+          const Cb = this.isBlended(Mb) ? null : this.batchFor(Mb, cb.packed, cb.vertices.page, 1 === bb, Ub);
+          zb ? (xb[Kb] = cb, jb[Kb++] = Cb) : Rb(cb, Cb)
         }
-        const Sd = gd ? this.sweepVisibility(dd, Od, Yd) : null;
-        null === (Rd = (0, nR.v)(Xd)) || void 0 === Rd || Rd.update(Od.frustum, this.originOffset, Hd, Sd);
-        for (let sd = 0; sd < Ud; sd++) {
-          const dd = Ed[sd];
-          !Sd || Sd.isDrawn(dd.ci, dd.cj, dd.ck) ? Bd(dd, Jd[sd]) : (this.visCulledParts++, this.visCulledTriangles += 2 * dd.faceCount)
+        const Db = zb ? this.sweepVisibility(bb, wb, hb) : null;
+        null === (pb = (0, Jp.C)(Vb)) || void 0 === pb || pb.update(wb.frustum, this.originOffset, Eb, Db);
+        for (let cb = 0; cb < Kb; cb++) {
+          const bb = xb[cb];
+          !Db || Db.isDrawn(bb.ci, bb.cj, bb.ck) ? Rb(bb, jb[cb]) : (this.visCulledParts++, this.visCulledTriangles += 2 * bb.faceCount)
         }
-        for (const sd of this.transparent) pd ||= Td && sd.material.liquid && !sd.material.customRenderMat;
-        this.submittedTriangles = xd, Sd && this.visCheck && ++this.visCheckFrame >= 60 && (this.visCheckFrame = 0, this.runVisCheck(dd, Od, Sd)), this.slots.flush(), this.sceneDepth ? this.sceneDepth.setWanted(pd) : pd && this.warnOnce("sceneDepth", "Lite: a shader pack reads scene depth on a page that didn't turn it on, so liquids find nothing behind them"), this.lighting && bd > 0 && this.geometry.lightFullSky(this.unlit, bd);
-        for (const sd of this.opaqueBatches) this.chunkSorter.sort(sd.meshes, 1) || sd.meshes.sort(Rh);
-        this.orderBatches(), this.chunkSorter.sort(this.transparent, -1) || this.transparent.sort(Xh)
+        for (const cb of this.transparent) mb ||= sb && cb.material.liquid && !cb.material.customRenderMat;
+        this.submittedTriangles = rb, Db && this.visCheck && ++this.visCheckFrame >= 60 && (this.visCheckFrame = 0, this.runVisCheck(bb, wb, Db)), this.slots.flush(), this.sceneDepth ? this.sceneDepth.setWanted(mb) : mb && this.warnOnce("sceneDepth", "Lite: a shader pack reads scene depth on a page that didn't turn it on, so liquids find nothing behind them"), this.lighting && Bb > 0 && this.geometry.lightFullSky(this.unlit, Bb);
+        for (const cb of this.opaqueBatches) this.chunkSorter.sort(cb.meshes, 1) || cb.meshes.sort(Hl);
+        this.orderBatches(), this.chunkSorter.sort(this.transparent, -1) || this.transparent.sort(pl)
       }
-      sweepVisibility(dd, Od, md) {
+      sweepVisibility(bb, wb, Mb) {
         const {
-          Bt: Wd
-        } = dd.zo, Fd = Wd.tt, Rd = this.visPassable, Xd = this.eye[0] + this.originOffset[0], Kd = this.eye[1] + this.originOffset[1], hd = this.eye[2] + this.originOffset[2];
-        if (!md.eyeClear(Xd, Kd, hd, Od.near, Od.projectionMatrix, Wd)) return null;
-        const [vd, Qd] = Wd.vRd, td = md.update(Xd, Kd, hd, Fd, vd, Qd, Rd);
-        return this.visSweeps = md.sweeps, td ? md : null
+          XO: eb
+        } = bb.hU, Hb = eb.lO, pb = this.visPassable, Vb = this.eye[0] + this.originOffset[0], gb = this.eye[1] + this.originOffset[1], lb = this.eye[2] + this.originOffset[2];
+        if (!Mb.eyeClear(Vb, gb, lb, wb.near, wb.projectionMatrix, eb)) return null;
+        const [Lb, Ib] = eb.Lpb, Ob = Mb.update(Vb, gb, lb, Hb, Lb, Ib, pb);
+        return this.visSweeps = Mb.sweeps, Ob ? Mb : null
       }
-      visSeeThrough(dd, Od) {
+      visSeeThrough(bb, wb) {
         const {
-          material: md
-        } = dd;
-        return (!md || !this.isBlended(md)) && (dd.mesh.visibility < 1 || !(null !== md && void 0 !== md && md.bindGroup) || dd.faceCount > 0 && (!this.geometry.backed(dd) || this.lighting && !dd.vertices.page.twin) || !this.batchDraws(md, dd.packed, Od))
+          material: Mb
+        } = bb;
+        return (!Mb || !this.isBlended(Mb)) && (bb.mesh.visibility < 1 || !(null !== Mb && void 0 !== Mb && Mb.bindGroup) || bb.faceCount > 0 && (!this.geometry.backed(bb) || this.lighting && !bb.vertices.page.twin) || !this.batchDraws(Mb, bb.packed, wb))
       }
-      batchDraws(dd, Od, md) {
-        var Wd;
-        const Fd = Od ? 2 : 0;
-        if (dd === this.visDrawsMaterial && function(dd, Od) {
-            return 0 !== (dd & 1 << Od)
-          }(this.visDrawsBits, Fd)) return 0 !== (this.visDrawsBits & 2 << Fd);
-        let Rd = null !== (Wd = this.visBatchDraws.get(dd)) && void 0 !== Wd ? Wd : 0;
-        if (!(Rd & 1 << Fd)) {
-          Rd |= 1 << Fd | (!!dd.bindGroupLayout && this.canDraw(dd, Od) && !!this.pipelines.get(this.pipelineIdNow(dd, Od, !1, md)) ? 2 << Fd : 0), this.visBatchDraws.set(dd, Rd)
+      batchDraws(bb, wb, Mb) {
+        var eb;
+        const Hb = wb ? 2 : 0;
+        if (bb === this.visDrawsMaterial && function(bb, wb) {
+            return 0 !== (bb & 1 << wb)
+          }(this.visDrawsBits, Hb)) return 0 !== (this.visDrawsBits & 2 << Hb);
+        let pb = null !== (eb = this.visBatchDraws.get(bb)) && void 0 !== eb ? eb : 0;
+        if (!(pb & 1 << Hb)) {
+          pb |= 1 << Hb | (!!bb.bindGroupLayout && this.canDraw(bb, wb) && !!this.pipelines.get(this.pipelineIdNow(bb, wb, !1, Mb)) ? 2 << Hb : 0), this.visBatchDraws.set(bb, pb)
         }
-        return this.visDrawsMaterial = dd, this.visDrawsBits = Rd, 0 !== (Rd & 2 << Fd)
+        return this.visDrawsMaterial = bb, this.visDrawsBits = pb, 0 !== (pb & 2 << Hb)
       }
-      runVisCheck(dd, Od, md) {
+      runVisCheck(bb, wb, Mb) {
         const {
-          zo: Wd
-        } = dd, {
-          Bt: Fd
-        } = Wd, Rd = Fd.tt, Xd = new Set;
-        for (const Nd of this.chunks.values()) Xd.add(Nd.key);
-        const Kd = eF.Matrix.FromArray(Od.viewProjectionMatrix).invert(),
-          [hd, vd, Qd] = this.originOffset,
-          td = new eF.Cq,
-          od = function(dd, Od, md, Wd) {
-            const Fd = new Set;
-            for (let Rd = 0; Rd < 27; Rd++)
-              for (let Xd = 0; Xd < 48; Xd++) {
-                const Kd = md((Xd + .5) / 48 * 2 - 1, (Rd + .5) / 27 * 2 - 1);
-                ZK(dd, Od, [Kd[0] - Od[0], Kd[1] - Od[1], Kd[2] - Od[2]], Wd, Fd)
+          hU: eb
+        } = bb, {
+          XO: Hb
+        } = eb, pb = Hb.lO, Vb = new Set;
+        for (const tb of this.chunks.values()) Vb.add(tb.key);
+        const gb = aH.Matrix.FromArray(wb.viewProjectionMatrix).invert(),
+          [lb, Lb, Ib] = this.originOffset,
+          Ob = new aH.YC,
+          Ub = function(bb, wb, Mb, eb) {
+            const Hb = new Set;
+            for (let pb = 0; pb < 27; pb++)
+              for (let Vb = 0; Vb < 48; Vb++) {
+                const gb = Mb((Vb + .5) / 48 * 2 - 1, (pb + .5) / 27 * 2 - 1);
+                ng(bb, wb, [gb[0] - wb[0], gb[1] - wb[1], gb[2] - wb[2]], eb, Hb)
               }
-            return Fd
+            return Hb
           }({
-            eZ: (dd, Od, md) => Fd.eZ(dd, Od, md),
-            occluders: md.occluders,
-            opaque: md.opaque,
-            Qt: Rd,
-            isDrawn: (dd, Od, Wd) => md.isDrawn(dd, Od, Wd),
-            hasParts: (dd, Od, md) => Xd.has((0, CK.g)(dd, Od, md))
-          }, [this.eye[0] + hd, this.eye[1] + vd, this.eye[2] + Qd], ((dd, Od) => (eF.Cq.TransformCoordinatesFromFloatsToRef(dd, Od, .5, Kd, td), [td.x + hd, td.y + vd, td.z + Qd])), (Fd.vRd[0] + 1) * Rd);
-        this.visViolations = od.size;
-        for (const Nd of od) this.warnOnce(`vis:${Nd}`, `Lite terrain cave culling skipped chunk ${Nd}, which a ray from the eye reaches.`)
+            Vk: (bb, wb, Mb) => Hb.Vk(bb, wb, Mb),
+            occluders: Mb.occluders,
+            opaque: Mb.opaque,
+            gO: pb,
+            isDrawn: (bb, wb, eb) => Mb.isDrawn(bb, wb, eb),
+            hasParts: (bb, wb, Mb) => Vb.has((0, Pg.g)(bb, wb, Mb))
+          }, [this.eye[0] + lb, this.eye[1] + Lb, this.eye[2] + Ib], ((bb, wb) => (aH.YC.TransformCoordinatesFromFloatsToRef(bb, wb, .5, gb, Ob), [Ob.x + lb, Ob.y + Lb, Ob.z + Ib])), (Hb.Lpb[0] + 1) * pb);
+        this.visViolations = Ub.size;
+        for (const tb of Ub) this.warnOnce(`vis:${tb}`, `Lite terrain cave culling skipped chunk ${tb}, which a ray from the eye reaches.`)
       }
       writeShaderPackInputs() {
-        var dd;
-        null !== (dd = this.Jq) && void 0 !== dd && dd.isRunning() && (this.shaderPackInputs ??= new kR(this.device, this.Jq.textureLayers(), this.sunShadow), this.shaderPackInputs.write(this.Jq, this.eye, this.lighting))
+        var bb;
+        null !== (bb = this.LC) && void 0 !== bb && bb.isRunning() && (this.shaderPackInputs ??= new yp(this.device, this.LC.textureLayers(), this.sunShadow), this.shaderPackInputs.write(this.LC, this.eye, this.lighting))
       }
-      bindShaderPackInputs(dd, Od, md) {
-        var Wd, Fd, Rd, Xd;
-        let Kd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const hd = this.packVariant(Od, md);
-        if (void 0 === hd) return;
-        this.shaderPackInputs || (this.shaderPackInputs = new kR(this.device, md.textureLayers(), this.sunShadow), this.shaderPackInputs.write(md, this.eye, this.lighting));
-        const vd = SW(hd) ? null !== (Wd = null === (Fd = this.sceneDepth) || void 0 === Fd ? void 0 : Fd.view) && void 0 !== Wd ? Wd : this.standIn() : null,
-          Qd = Kd ? null !== (Rd = null === (Xd = this.shadowMask) || void 0 === Xd ? void 0 : Xd.view) && void 0 !== Rd ? Rd : this.standIn() : null;
-        this.shaderPackInputs.bind(dd, vd, CR(hd, !!this.sunShadow), Qd)
+      bindShaderPackInputs(bb, wb, Mb) {
+        var eb, Hb, pb, Vb;
+        let gb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const lb = this.packVariant(wb, Mb);
+        if (void 0 === lb) return;
+        this.shaderPackInputs || (this.shaderPackInputs = new yp(this.device, Mb.textureLayers(), this.sunShadow), this.shaderPackInputs.write(Mb, this.eye, this.lighting));
+        const Lb = Re(lb) ? null !== (eb = null === (Hb = this.sceneDepth) || void 0 === Hb ? void 0 : Hb.view) && void 0 !== eb ? eb : this.standIn() : null,
+          Ib = gb ? null !== (pb = null === (Vb = this.shadowMask) || void 0 === Vb ? void 0 : Vb.view) && void 0 !== pb ? pb : this.standIn() : null;
+        this.shaderPackInputs.bind(bb, Lb, Pp(lb, !!this.sunShadow), Ib)
       }
       standIn() {
         return this.depthStandIn ??= this.device.createTexture({
@@ -6912,954 +6912,954 @@ export const modules = {
         }).createView()
       }
       sunShadowGroup() {
-        var dd, Od;
-        return null !== (dd = null === (Od = this.shaderPackInputs) || void 0 === Od ? void 0 : Od.bindGroupFor(null, !0)) && void 0 !== dd ? dd : null
+        var bb, wb;
+        return null !== (bb = null === (wb = this.shaderPackInputs) || void 0 === wb ? void 0 : wb.bindGroupFor(null, !0)) && void 0 !== bb ? bb : null
       }
-      resetBatches(dd) {
-        const Od = this.opaqueBatches;
-        let md = 0;
-        for (const Wd of Od) Wd.meshes.length > 0 && (Wd.meshes.length = 0, Wd.faceCull = this.batchFaceCull(Wd.material, dd), Od[md++] = Wd);
-        Od.length = md
+      resetBatches(bb) {
+        const wb = this.opaqueBatches;
+        let Mb = 0;
+        for (const eb of wb) eb.meshes.length > 0 && (eb.meshes.length = 0, eb.faceCull = this.batchFaceCull(eb.material, bb), wb[Mb++] = eb);
+        wb.length = Mb
       }
       orderBatches() {
-        const dd = this.opaqueBatches;
-        for (let Od = 0; Od < dd.length; Od++) {
-          const md = dd[Od];
-          md.group = Od;
-          for (let Wd = 0; Wd < Od; Wd++) {
-            const Od = dd[Wd];
-            if (Od.material === md.material && Od.packed === md.packed) {
-              md.group = Od.group;
+        const bb = this.opaqueBatches;
+        for (let wb = 0; wb < bb.length; wb++) {
+          const Mb = bb[wb];
+          Mb.group = wb;
+          for (let eb = 0; eb < wb; eb++) {
+            const wb = bb[eb];
+            if (wb.material === Mb.material && wb.packed === Mb.packed) {
+              Mb.group = wb.group;
               break
             }
           }
-          md.nearest = md.meshes.length > 0 ? md.meshes[0].distance : 1 / 0
+          Mb.nearest = Mb.meshes.length > 0 ? Mb.meshes[0].distance : 1 / 0
         }
-        dd.sort(kK)
+        bb.sort(yg)
       }
-      batchFor(dd, Od, md, Wd, Fd) {
-        for (const Xd of this.opaqueBatches)
-          if (Xd.material === dd && Xd.packed === Od && Xd.page === md && Xd.resting === Wd) return Xd;
-        const Rd = {
-          material: dd,
-          packed: Od,
-          page: md,
-          resting: Wd,
+      batchFor(bb, wb, Mb, eb, Hb) {
+        for (const Vb of this.opaqueBatches)
+          if (Vb.material === bb && Vb.packed === wb && Vb.page === Mb && Vb.resting === eb) return Vb;
+        const pb = {
+          material: bb,
+          packed: wb,
+          page: Mb,
+          resting: eb,
           meshes: [],
           group: 0,
           nearest: 0,
-          faceCull: this.batchFaceCull(dd, Fd)
+          faceCull: this.batchFaceCull(bb, Hb)
         };
-        return this.opaqueBatches.push(Rd), Rd
+        return this.opaqueBatches.push(pb), pb
       }
-      batchFaceCull(dd, Od) {
-        return !(!Od || !(0, eK.r)(dd.model)) && (!this.Jq || ! function(dd) {
-          var Od;
-          return !(null === (Od = (0, MO.g)(dd)) || void 0 === Od || !Od.movesVertices)
-        }(this.packVariant(dd, this.Jq)))
+      batchFaceCull(bb, wb) {
+        return !(!wb || !(0, ig.o)(bb.model)) && (!this.LC || ! function(bb) {
+          var wb;
+          return !(null === (wb = (0, Tw.i)(bb)) || void 0 === wb || !wb.movesVertices)
+        }(this.packVariant(bb, this.LC)))
       }
-      writeFrameUniforms(dd, Od) {
-        const md = this.frameUniforms,
-          Wd = rW;
-        if ((0, gK.D)(dd, md), md[Wd.fogInfos] = Od.fogEnabled ? Od.fogMode : 0, md[Wd.fogInfos + 1] = Od.fogStart, md[Wd.fogInfos + 2] = Od.fogEnd, md[Wd.fogInfos + 3] = Od.fogDensity, md.set(Od.fogColour, Wd.fogColour), md[Wd.outputHeight] = Od.renderHeight, md.set(Od.ambientColour, Wd.sceneAmbient), (0, gK.v)(Od, this.dirLightCount, this.dirLightUniforms), !this.aoLevelsWritten) {
-          const Od = (0, wK.i)(dd.qH, dd.cq, dd.jq);
-          for (let dd = 0; dd < 4; dd++) md[Wd.aoLevels + dd] = Od[dd] / 255;
+      writeFrameUniforms(bb, wb) {
+        const Mb = this.frameUniforms,
+          eb = Ae;
+        if ((0, hg.y)(bb, Mb), Mb[eb.fogInfos] = wb.fogEnabled ? wb.fogMode : 0, Mb[eb.fogInfos + 1] = wb.fogStart, Mb[eb.fogInfos + 2] = wb.fogEnd, Mb[eb.fogInfos + 3] = wb.fogDensity, Mb.set(wb.fogColour, eb.fogColour), Mb[eb.outputHeight] = wb.renderHeight, Mb.set(wb.ambientColour, eb.sceneAmbient), (0, hg.t)(wb, this.dirLightCount, this.dirLightUniforms), !this.aoLevelsWritten) {
+          const wb = (0, zg.i)(bb.TC, bb.jC, bb.KC);
+          for (let bb = 0; bb < 4; bb++) Mb[eb.aoLevels + bb] = wb[bb] / 255;
           this.aoLevelsWritten = !0
         }
-        this.device.queue.writeBuffer(this.frameBuffer, 0, md)
+        this.device.queue.writeBuffer(this.frameBuffer, 0, Mb)
       }
-      animateMaterials(dd) {
-        const Od = nW.anim;
-        for (const md of this.materials.values()) md.animated && (md.uniformData[Od] = dd, this.device.queue.writeBuffer(md.uniformBuffer, 4 * Od, md.uniformData, Od, 1))
+      animateMaterials(bb) {
+        const wb = Je.anim;
+        for (const Mb of this.materials.values()) Mb.animated && (Mb.uniformData[wb] = bb, this.device.queue.writeBuffer(Mb.uniformBuffer, 4 * wb, Mb.uniformData, wb, 1))
       }
-      canDraw(dd, Od) {
-        return !("atlas" === dd.texture && !Od) || (this.warnOnce(`stride:${dd.id}`, `Lite terrain: material "${dd.model.name}" samples the atlas but its mesh has no quad records, which hold its atlas indices.`), !1)
+      canDraw(bb, wb) {
+        return !("atlas" === bb.texture && !wb) || (this.warnOnce(`stride:${bb.id}`, `Lite terrain: material "${bb.model.name}" samples the atlas but its mesh has no quad records, which hold its atlas indices.`), !1)
       }
-      drawOpaque(dd, Od) {
-        let md = 0;
-        dd.setBindGroup(1, this.frameBindGroup);
-        for (const Wd of this.opaqueBatches) {
-          if (!Wd.meshes.length || !this.canDraw(Wd.material, Wd.packed)) continue;
-          const Fd = this.pipelineFor(Wd.material, Wd.packed, Od, Wd.resting);
-          Fd && (dd.setPipeline(Fd), dd.setBindGroup(2, Wd.material.bindGroup), this.Jq && this.bindShaderPackInputs(dd, Wd.material, this.Jq, this.prepassOf.has(Fd)), md += this.drawBatch(dd, Wd))
+      drawOpaque(bb, wb) {
+        let Mb = 0;
+        bb.setBindGroup(1, this.frameBindGroup);
+        for (const eb of this.opaqueBatches) {
+          if (!eb.meshes.length || !this.canDraw(eb.material, eb.packed)) continue;
+          const Hb = this.pipelineFor(eb.material, eb.packed, wb, eb.resting);
+          Hb && (bb.setPipeline(Hb), bb.setBindGroup(2, eb.material.bindGroup), this.LC && this.bindShaderPackInputs(bb, eb.material, this.LC, this.prepassOf.has(Hb)), Mb += this.drawBatch(bb, eb))
         }
-        return md
+        return Mb
       }
       get readsMask() {
         return this.maskPipelines > 0
       }
-      drawPrepass(dd, Od, md) {
-        const Wd = this.target,
-          Fd = this.Jq;
-        if (!Wd || !Fd || 0 === this.maskPipelines) return 0;
-        let Rd = 0,
-          Xd = null;
+      drawPrepass(bb, wb, Mb) {
+        const eb = this.target,
+          Hb = this.LC;
+        if (!eb || !Hb || 0 === this.maskPipelines) return 0;
+        let pb = 0,
+          Vb = null;
         this.geometry.setDrawing(!0);
         try {
-          for (const Kd of this.opaqueBatches) {
-            if (!Kd.meshes.length || !this.canDraw(Kd.material, Kd.packed)) continue;
-            const hd = this.pipelineFor(Kd.material, Kd.packed, Wd, Kd.resting),
-              vd = hd && this.prepassOf.get(hd);
-            vd && (Xd || (Xd = dd.beginRenderPass(Od), Xd.setBindGroup(0, md), Xd.setBindGroup(1, this.frameBindGroup)), Xd.setPipeline(vd), Xd.setBindGroup(2, Kd.material.bindGroup), this.bindShaderPackInputs(Xd, Kd.material, Fd, !0), Rd += this.drawBatch(Xd, Kd))
+          for (const gb of this.opaqueBatches) {
+            if (!gb.meshes.length || !this.canDraw(gb.material, gb.packed)) continue;
+            const lb = this.pipelineFor(gb.material, gb.packed, eb, gb.resting),
+              Lb = lb && this.prepassOf.get(lb);
+            Lb && (Vb || (Vb = bb.beginRenderPass(wb), Vb.setBindGroup(0, Mb), Vb.setBindGroup(1, this.frameBindGroup)), Vb.setPipeline(Lb), Vb.setBindGroup(2, gb.material.bindGroup), this.bindShaderPackInputs(Vb, gb.material, Hb, !0), pb += this.drawBatch(Vb, gb))
           }
         } finally {
-          var Kd;
-          null === (Kd = Xd) || void 0 === Kd || Kd.end(), this.geometry.setDrawing(!1)
+          var gb;
+          null === (gb = Vb) || void 0 === gb || gb.end(), this.geometry.setDrawing(!1)
         }
-        return Rd
+        return pb
       }
-      drawBatch(dd, Od) {
-        let md = 0;
-        for (const Wd of Od.meshes) {
+      drawBatch(bb, wb) {
+        let Mb = 0;
+        for (const eb of wb.meshes) {
           const {
-            rangeCount: Od
-          } = Wd;
-          Od > 0 && (md += this.geometry.draw(dd, Wd, this.lighting, Wd.first0, Wd.count0), Od > 1 && (md += this.geometry.draw(dd, Wd, this.lighting, Wd.first1, Wd.count1)))
+            rangeCount: wb
+          } = eb;
+          wb > 0 && (Mb += this.geometry.draw(bb, eb, this.lighting, eb.first0, eb.count0), wb > 1 && (Mb += this.geometry.draw(bb, eb, this.lighting, eb.first1, eb.count1)))
         }
-        return md
+        return Mb
       }
-      drawTransparent(dd, Od) {
-        let md = 0,
-          Wd = null,
-          Fd = null;
-        dd.setBindGroup(1, this.frameBindGroup);
-        for (const Rd of this.transparent) {
-          const Xd = Rd.material;
-          if (!this.canDraw(Xd, Rd.packed)) continue;
-          const Kd = this.pipelineFor(Xd, Rd.packed, Od);
-          Kd && (Kd !== Wd && (dd.setPipeline(Kd), Wd = Kd, this.Jq && this.bindShaderPackInputs(dd, Xd, this.Jq)), Xd !== Fd && (dd.setBindGroup(2, Xd.bindGroup), Fd = Xd), md += this.geometry.draw(dd, Rd, this.lighting))
+      drawTransparent(bb, wb) {
+        let Mb = 0,
+          eb = null,
+          Hb = null;
+        bb.setBindGroup(1, this.frameBindGroup);
+        for (const pb of this.transparent) {
+          const Vb = pb.material;
+          if (!this.canDraw(Vb, pb.packed)) continue;
+          const gb = this.pipelineFor(Vb, pb.packed, wb);
+          gb && (gb !== eb && (bb.setPipeline(gb), eb = gb, this.LC && this.bindShaderPackInputs(bb, Vb, this.LC)), Vb !== Hb && (bb.setBindGroup(2, Vb.bindGroup), Hb = Vb), Mb += this.geometry.draw(bb, pb, this.lighting))
         }
-        return md
+        return Mb
       }
     }
 
-    function Fh(dd, Od, md, Wd) {
-      return `${OF(dd)}|${dd.atlasLayers}|${dd.O4}|${Od}|${md}|${Wd._colorFormat}|${Wd._depthStencilFormat}|${Wd._sampleCount}`
+    function el(bb, wb, Mb, eb) {
+      return `${ke(bb)}|${bb.atlasLayers}|${bb.W4}|${wb}|${Mb}|${eb._colorFormat}|${eb._depthStencilFormat}|${eb._sampleCount}`
     }
 
-    function Rh(dd, Od) {
-      return dd.distance - Od.distance
+    function Hl(bb, wb) {
+      return bb.distance - wb.distance
     }
 
-    function Xh(dd, Od) {
-      return Od.distance - dd.distance
+    function pl(bb, wb) {
+      return wb.distance - bb.distance
     }
-    class Kh {
+    class Vl {
       constructor() {
         this.left = []
       }
-      sort(dd, Od) {
-        for (let md = 0; md < dd.length; md++) {
-          const Od = dd[md].distance;
-          if (Od - Od !== 0) return !1
+      sort(bb, wb) {
+        for (let Mb = 0; Mb < bb.length; Mb++) {
+          const wb = bb[Mb].distance;
+          if (wb - wb !== 0) return !1
         }
-        return this.sortRange(dd, 0, dd.length, Od), !0
+        return this.sortRange(bb, 0, bb.length, wb), !0
       }
-      sortRange(dd, Od, md, Wd) {
-        if (md - Od <= 16) {
-          for (let Fd = Od + 1; Fd < md; Fd++) {
-            const md = dd[Fd],
-              Rd = Wd * md.distance;
-            let Xd = Fd - 1;
-            for (; Xd >= Od && Wd * dd[Xd].distance > Rd; Xd--) dd[Xd + 1] = dd[Xd];
-            dd[Xd + 1] = md
+      sortRange(bb, wb, Mb, eb) {
+        if (Mb - wb <= 16) {
+          for (let Hb = wb + 1; Hb < Mb; Hb++) {
+            const Mb = bb[Hb],
+              pb = eb * Mb.distance;
+            let Vb = Hb - 1;
+            for (; Vb >= wb && eb * bb[Vb].distance > pb; Vb--) bb[Vb + 1] = bb[Vb];
+            bb[Vb + 1] = Mb
           }
           return
         }
-        const Fd = Od + md >>> 1;
-        if (this.sortRange(dd, Od, Fd, Wd), this.sortRange(dd, Fd, md, Wd), Wd * dd[Fd - 1].distance <= Wd * dd[Fd].distance) return;
+        const Hb = wb + Mb >>> 1;
+        if (this.sortRange(bb, wb, Hb, eb), this.sortRange(bb, Hb, Mb, eb), eb * bb[Hb - 1].distance <= eb * bb[Hb].distance) return;
         const {
-          left: Rd
-        } = this, Xd = Fd - Od;
-        for (let Qd = 0; Qd < Xd; Qd++) Rd[Qd] = dd[Od + Qd];
-        let Kd = 0,
-          hd = Fd,
-          vd = Od;
-        for (; Kd < Xd && hd < md;) dd[vd++] = Wd * dd[hd].distance < Wd * Rd[Kd].distance ? dd[hd++] : Rd[Kd++];
-        for (; Kd < Xd;) dd[vd++] = Rd[Kd++]
+          left: pb
+        } = this, Vb = Hb - wb;
+        for (let Ib = 0; Ib < Vb; Ib++) pb[Ib] = bb[wb + Ib];
+        let gb = 0,
+          lb = Hb,
+          Lb = wb;
+        for (; gb < Vb && lb < Mb;) bb[Lb++] = eb * bb[lb].distance < eb * pb[gb].distance ? bb[lb++] : pb[gb++];
+        for (; gb < Vb;) bb[Lb++] = pb[gb++]
       }
     }
-    const hh = Math.ceil(102);
+    const gl = Math.ceil(102);
 
-    function vh(dd, Od, md, Wd) {
-      let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Od;
-      const Rd = Math.min(Od, md),
-        Xd = new Uint32Array(Jm(Wd));
-      for (let Kd = 0; Kd < Wd; Kd++) {
-        const Od = Math.floor(Kd * Rd / Wd),
-          md = Math.max(Od + 1, Math.floor((Kd + 1) * Rd / Wd));
-        for (let hd = 0; hd < Wd; hd++) {
-          const vd = Math.floor(hd * Rd / Wd),
-            Qd = Math.max(vd + 1, Math.floor((hd + 1) * Rd / Wd));
-          let td = 0;
-          for (let Wd = Od; Wd < md; Wd++)
-            for (let Od = vd; Od < Qd; Od++) dd[Wd * Fd + Od] >= hh && td++;
-          if (2 * td >= (md - Od) * (Qd - vd)) {
-            const dd = hd + Wd * Kd;
-            Xd[dd >>> 5] |= 1 << (31 & dd)
+    function ll(bb, wb, Mb, eb) {
+      let Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : wb;
+      const pb = Math.min(wb, Mb),
+        Vb = new Uint32Array(xM(eb));
+      for (let gb = 0; gb < eb; gb++) {
+        const wb = Math.floor(gb * pb / eb),
+          Mb = Math.max(wb + 1, Math.floor((gb + 1) * pb / eb));
+        for (let lb = 0; lb < eb; lb++) {
+          const Lb = Math.floor(lb * pb / eb),
+            Ib = Math.max(Lb + 1, Math.floor((lb + 1) * pb / eb));
+          let Ob = 0;
+          for (let eb = wb; eb < Mb; eb++)
+            for (let wb = Lb; wb < Ib; wb++) bb[eb * Hb + wb] >= gl && Ob++;
+          if (2 * Ob >= (Mb - wb) * (Ib - Lb)) {
+            const bb = lb + eb * gb;
+            Vb[bb >>> 5] |= 1 << (31 & bb)
           }
         }
       }
-      return Xd
+      return Vb
     }
 
-    function Qh(dd) {
-      return Math.max(1, Math.min(16, dd))
+    function Ll(bb) {
+      return Math.max(1, Math.min(16, bb))
     }
-    class th {
-      constructor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : console.warn;
-        this.sink = dd, this.loadTexture = Od, this.warn = md, this.blockCaster = new Uint16Array(1), this.builtVersion = -1, this.byKey = new Map, this.nextCaster = 1, this.nextMaskWord = 0, this.warned = new Set, this.textures = new Map, this.loads = [], this.pending = Promise.resolve(), this.planesLoading = 0
+    class Il {
+      constructor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : console.warn;
+        this.sink = bb, this.loadTexture = wb, this.warn = Mb, this.blockCaster = new Uint16Array(1), this.builtVersion = -1, this.byKey = new Map, this.nextCaster = 1, this.nextMaskWord = 0, this.warned = new Set, this.textures = new Map, this.loads = [], this.pending = Promise.resolve(), this.planesLoading = 0
       }
-      update(dd, Od) {
-        return (dd.JI !== this.builtVersion || this.blockCaster.length !== Od) && (this.build(dd, Od), !0)
+      update(bb, wb) {
+        return (bb.hq !== this.builtVersion || this.blockCaster.length !== wb) && (this.build(bb, wb), !0)
       }
-      build(dd, Od) {
-        this.builtVersion = dd.JI;
-        const md = new Uint16Array(Od),
-          Wd = new Map;
-        for (let Fd = 1; Fd < Od; Fd++) {
-          const Od = this.classify(dd, Fd, Wd);
-          if (null === Od || Od === Ym) {
-            md[Fd] = null === Od ? 0 : Ym;
+      build(bb, wb) {
+        this.builtVersion = bb.hq;
+        const Mb = new Uint16Array(wb),
+          eb = new Map;
+        for (let Hb = 1; Hb < wb; Hb++) {
+          const wb = this.classify(bb, Hb, eb);
+          if (null === wb || wb === sM) {
+            Mb[Hb] = null === wb ? 0 : sM;
             continue
           }
-          let Rd = this.byKey.get(Od.key);
-          void 0 === Rd && (Rd = this.allocate(Od), this.byKey.set(Od.key, Rd)), md[Fd] = Rd
+          let pb = this.byKey.get(wb.key);
+          void 0 === pb && (pb = this.allocate(wb), this.byKey.set(wb.key, pb)), Mb[Hb] = pb
         }
-        this.blockCaster = md, this.pending = Promise.all(this.loads).then((() => {}))
+        this.blockCaster = Mb, this.pending = Promise.all(this.loads).then((() => {}))
       }
-      option(dd, Od) {
-        const md = dd.Z8[Od];
-        if ("function" !== typeof md) return md;
+      option(bb, wb) {
+        const Mb = bb.gbb[wb];
+        if ("function" !== typeof Mb) return Mb;
         try {
-          return md()
-        } catch (Wd) {
-          return this.warnOnce(`Sun shadows: no caster option for block ${Od}: ${Wd instanceof Error?Wd.message:String(Wd)}`), null
+          return Mb()
+        } catch (eb) {
+          return this.warnOnce(`Sun shadows: no caster option for block ${wb}: ${eb instanceof Error?eb.message:String(eb)}`), null
         }
       }
-      classify(dd, Od, md) {
-        const Wd = this.option(dd, Od);
-        if ("none" === Wd) return null;
-        if (Wd && Wd.planes.length > 0) {
-          const dd = Wd.planes.slice(0, 4);
+      classify(bb, wb, Mb) {
+        const eb = this.option(bb, wb);
+        if ("none" === eb) return null;
+        if (eb && eb.planes.length > 0) {
+          const bb = eb.planes.slice(0, 4);
           return {
             kind: "planes",
-            key: `planes:${JSON.stringify(dd)}`,
-            planes: dd
+            key: `planes:${JSON.stringify(bb)}`,
+            planes: bb
           }
         }
-        if (dd.nN[Od]) return null;
-        const Fd = dd.PN[Od] ? dd.mC(Od) : null;
-        if (Fd && Fd.length >= 6) {
-          const dd = function(dd) {
-            const Od = new Uint32Array(16);
-            for (let md = 0; md + 6 <= dd.length; md += 6) {
-              const Wd = [0, 1, 2].map((Od => Math.max(0, Math.ceil(8 * dd[md + Od] - .5)))),
-                Fd = [0, 1, 2].map((Od => Math.min(7, Math.floor(8 * dd[md + Od + 3] - .5))));
-              for (let dd = Wd[2]; dd <= Fd[2]; dd++)
-                for (let md = Wd[1]; md <= Fd[1]; md++)
-                  for (let Rd = Wd[0]; Rd <= Fd[0]; Rd++) {
-                    const Wd = Rd + 8 * (md + 8 * dd);
-                    Od[Wd >>> 5] |= 1 << (31 & Wd)
+        if (bb.Bt[wb]) return null;
+        const Hb = bb.zt[wb] ? bb.Aq(wb) : null;
+        if (Hb && Hb.length >= 6) {
+          const bb = function(bb) {
+            const wb = new Uint32Array(16);
+            for (let Mb = 0; Mb + 6 <= bb.length; Mb += 6) {
+              const eb = [0, 1, 2].map((wb => Math.max(0, Math.ceil(8 * bb[Mb + wb] - .5)))),
+                Hb = [0, 1, 2].map((wb => Math.min(7, Math.floor(8 * bb[Mb + wb + 3] - .5))));
+              for (let bb = eb[2]; bb <= Hb[2]; bb++)
+                for (let Mb = eb[1]; Mb <= Hb[1]; Mb++)
+                  for (let pb = eb[0]; pb <= Hb[0]; pb++) {
+                    const eb = pb + 8 * (Mb + 8 * bb);
+                    wb[eb >>> 5] |= 1 << (31 & eb)
                   }
             }
-            return Od
-          }(Fd);
-          return function(dd) {
-            return dd.every((dd => 4294967295 === dd))
-          }(dd) ? Ym : dd.every((dd => 0 === dd)) ? null : {
+            return wb
+          }(Hb);
+          return function(bb) {
+            return bb.every((bb => 4294967295 === bb))
+          }(bb) ? sM : bb.every((bb => 0 === bb)) ? null : {
             kind: "shape",
-            key: `shape:${dd.join(",")}`,
-            mask: dd
+            key: `shape:${bb.join(",")}`,
+            mask: bb
           }
         }
-        if (dd.PJ[Od] || !dd.HH[Od]) return null;
-        const Rd = [0, 1, 2, 3, 4, 5].map((Wd => {
-          const Fd = dd.yH[6 * Od + Wd];
-          let Rd = md.get(Fd);
-          return void 0 === Rd && (Rd = function(dd) {
-            if (!dd || dd.UH) return null;
+        if (bb.VY[wb] || !bb.kC[wb]) return null;
+        const pb = [0, 1, 2, 3, 4, 5].map((eb => {
+          const Hb = bb.bE[6 * wb + eb];
+          let pb = Mb.get(Hb);
+          return void 0 === pb && (pb = function(bb) {
+            if (!bb || bb.IE) return null;
             const {
-              Z2: Od,
-              O4: md,
-              I9: Wd
-            } = dd;
-            if (!Od || !md || !(md > 0) || void 0 === Wd || !(Wd >= 0)) return null;
-            const Fd = Od[0],
-              Rd = md * md * 4;
-            if (!Fd || Fd.byteLength < Rd) return null;
-            const Xd = Math.floor(Fd.byteLength / Rd),
-              Kd = Od[Math.floor(Wd / Xd)];
-            if (!Kd) return null;
-            const hd = new Uint8Array(Kd.buffer, Kd.byteOffset, Kd.byteLength),
-              vd = Wd % Xd * Rd;
-            if (vd + Rd > hd.length) return null;
-            const Qd = new Uint8Array(md * md);
-            let td = !1;
-            for (let od = 0; od < Qd.length; od++) Qd[od] = hd[vd + 4 * od + 3], td ||= Qd[od] < hh;
-            return td ? {
-              alpha: Qd,
-              width: md
+              A4: wb,
+              W4: Mb,
+              f4: eb
+            } = bb;
+            if (!wb || !Mb || !(Mb > 0) || void 0 === eb || !(eb >= 0)) return null;
+            const Hb = wb[0],
+              pb = Mb * Mb * 4;
+            if (!Hb || Hb.byteLength < pb) return null;
+            const Vb = Math.floor(Hb.byteLength / pb),
+              gb = wb[Math.floor(eb / Vb)];
+            if (!gb) return null;
+            const lb = new Uint8Array(gb.buffer, gb.byteOffset, gb.byteLength),
+              Lb = eb % Vb * pb;
+            if (Lb + pb > lb.length) return null;
+            const Ib = new Uint8Array(Mb * Mb);
+            let Ob = !1;
+            for (let Ub = 0; Ub < Ib.length; Ub++) Ib[Ub] = lb[Lb + 4 * Ub + 3], Ob ||= Ib[Ub] < gl;
+            return Ob ? {
+              alpha: Ib,
+              width: Mb
             } : null
-          }(dd.JH(Fd)), md.set(Fd, Rd)), Rd
+          }(bb.LE(Hb)), Mb.set(Hb, pb)), pb
         }));
-        if (Rd.every((dd => null === dd))) return Ym;
-        const Xd = Qh(Math.max(...Rd.map((dd => {
-            var Od;
-            return null !== (Od = null === dd || void 0 === dd ? void 0 : dd.width) && void 0 !== Od ? Od : 1
+        if (pb.every((bb => null === bb))) return sM;
+        const Vb = Ll(Math.max(...pb.map((bb => {
+            var wb;
+            return null !== (wb = null === bb || void 0 === bb ? void 0 : bb.width) && void 0 !== wb ? wb : 1
           })))),
-          Kd = new Uint32Array(Jm(Xd)).fill(4294967295),
-          hd = Rd.map((dd => null === dd ? Kd : vh(dd.alpha, dd.width, dd.width, Xd)));
+          gb = new Uint32Array(xM(Vb)).fill(4294967295),
+          lb = pb.map((bb => null === bb ? gb : ll(bb.alpha, bb.width, bb.width, Vb)));
         return {
           kind: "cutout",
-          key: `cutout:${Xd}:${hd.map((dd=>dd.join(","))).join("|")}`,
-          size: Xd,
-          faces: hd
+          key: `cutout:${Vb}:${lb.map((bb=>bb.join(","))).join("|")}`,
+          size: Vb,
+          faces: lb
         }
       }
-      allocate(dd) {
-        if (this.nextCaster >= Um) return this.warnOnce("Sun shadows: more than 8191 casters; the rest cast nothing."), 0;
-        const Od = this.nextCaster++;
-        if (this.writeCaster(Od, gm, 0, 0, 0), "shape" === dd.kind) {
-          const md = this.allocateMask(dd.mask.length);
-          md >= 0 && (this.sink(md, dd.mask), this.writeCaster(Od, wm, md, 0, 8))
-        } else if ("cutout" === dd.kind) {
-          const md = Jm(dd.size),
-            Wd = this.allocateMask(6 * md);
-          if (Wd >= 0) {
-            const Fd = new Uint32Array(6 * md);
-            dd.faces.forEach(((dd, Od) => {
-              Fd.set(dd, Od * md)
-            })), this.sink(Wd, Fd), this.writeCaster(Od, Em, Wd, 0, dd.size)
+      allocate(bb) {
+        if (this.nextCaster >= jM) return this.warnOnce("Sun shadows: more than 8191 casters; the rest cast nothing."), 0;
+        const wb = this.nextCaster++;
+        if (this.writeCaster(wb, mM, 0, 0, 0), "shape" === bb.kind) {
+          const Mb = this.allocateMask(bb.mask.length);
+          Mb >= 0 && (this.sink(Mb, bb.mask), this.writeCaster(wb, hM, Mb, 0, 8))
+        } else if ("cutout" === bb.kind) {
+          const Mb = xM(bb.size),
+            eb = this.allocateMask(6 * Mb);
+          if (eb >= 0) {
+            const Hb = new Uint32Array(6 * Mb);
+            bb.faces.forEach(((bb, wb) => {
+              Hb.set(bb, wb * Mb)
+            })), this.sink(eb, Hb), this.writeCaster(wb, XM, eb, 0, bb.size)
           }
-        } else this.planesLoading++, this.loads.push(this.loadPlanes(Od, dd.planes).finally((() => {
+        } else this.planesLoading++, this.loads.push(this.loadPlanes(wb, bb.planes).finally((() => {
           this.planesLoading--
         })));
-        return Od
+        return wb
       }
-      async loadPlanes(dd, Od) {
-        const md = await Promise.all(Od.map((dd => this.texture(dd.texture))));
-        if (md.some((dd => null === dd))) return;
-        const Wd = md,
-          Fd = Qh(Math.max(...Wd.map((dd => Math.min(dd.width, dd.height))))),
-          Rd = Jm(Fd),
-          Xd = this.allocateMask(Od.length * (4 + Rd));
-        if (Xd < 0) return;
-        const Kd = new Uint32Array(Od.length * (4 + Rd)),
-          hd = 4 * Od.length;
-        Od.forEach(((dd, Od) => {
-          const md = Xd + hd + Od * Rd;
-          Kd.set(function(dd, Od) {
-            const [md, Wd] = dd.tangent, Fd = Math.hypot(md, Wd) || 1, Rd = md / Fd, Xd = Wd / Fd, Kd = dd.centre[0] * Xd - dd.centre[1] * Rd, hd = new Uint32Array(4);
-            return new Float32Array(hd.buffer, 0, 3).set([Rd, Xd, Kd]), hd[3] = Od, hd
-          }(dd, md), 4 * Od), Kd.set(vh(Wd[Od].alpha, Wd[Od].width, Wd[Od].height, Fd), hd + Od * Rd)
-        })), this.sink(Xd, Kd), this.writeCaster(dd, am, Xd, Od.length, Fd)
+      async loadPlanes(bb, wb) {
+        const Mb = await Promise.all(wb.map((bb => this.texture(bb.texture))));
+        if (Mb.some((bb => null === bb))) return;
+        const eb = Mb,
+          Hb = Ll(Math.max(...eb.map((bb => Math.min(bb.width, bb.height))))),
+          pb = xM(Hb),
+          Vb = this.allocateMask(wb.length * (4 + pb));
+        if (Vb < 0) return;
+        const gb = new Uint32Array(wb.length * (4 + pb)),
+          lb = 4 * wb.length;
+        wb.forEach(((bb, wb) => {
+          const Mb = Vb + lb + wb * pb;
+          gb.set(function(bb, wb) {
+            const [Mb, eb] = bb.tangent, Hb = Math.hypot(Mb, eb) || 1, pb = Mb / Hb, Vb = eb / Hb, gb = bb.centre[0] * Vb - bb.centre[1] * pb, lb = new Uint32Array(4);
+            return new Float32Array(lb.buffer, 0, 3).set([pb, Vb, gb]), lb[3] = wb, lb
+          }(bb, Mb), 4 * wb), gb.set(ll(eb[wb].alpha, eb[wb].width, eb[wb].height, Hb), lb + wb * pb)
+        })), this.sink(Vb, gb), this.writeCaster(bb, zM, Vb, wb.length, Hb)
       }
-      texture(dd) {
-        let Od = this.textures.get(dd);
-        return Od || (Od = this.loadTexture(dd).catch((Od => (this.warn(`Sun shadows: no mask for ${dd}: ${Od instanceof Error?Od.message:String(Od)}`), null))), this.textures.set(dd, Od)), Od
+      texture(bb) {
+        let wb = this.textures.get(bb);
+        return wb || (wb = this.loadTexture(bb).catch((wb => (this.warn(`Sun shadows: no mask for ${bb}: ${wb instanceof Error?wb.message:String(wb)}`), null))), this.textures.set(bb, wb)), wb
       }
-      allocateMask(dd) {
-        if (this.nextMaskWord + dd > xm) return this.warnOnce("Sun shadows: casters' masks are over 262144 words; the rest cast nothing."), -1;
-        const Od = 32768 + this.nextMaskWord;
-        return this.nextMaskWord += dd, Od
+      allocateMask(bb) {
+        if (this.nextMaskWord + bb > KM) return this.warnOnce("Sun shadows: casters' masks are over 262144 words; the rest cast nothing."), -1;
+        const wb = 32768 + this.nextMaskWord;
+        return this.nextMaskWord += bb, wb
       }
-      writeCaster(dd, Od, md, Wd, Fd) {
-        this.sink(0 + 4 * dd, Uint32Array.of(Od, md, Wd, Fd))
+      writeCaster(bb, wb, Mb, eb, Hb) {
+        this.sink(0 + 4 * bb, Uint32Array.of(wb, Mb, eb, Hb))
       }
-      warnOnce(dd) {
-        this.warned.has(dd) || (this.warned.add(dd), this.warn(dd))
+      warnOnce(bb) {
+        this.warned.has(bb) || (this.warned.add(bb), this.warn(bb))
       }
     }
-    var oh = md(3922);
+    var Ol = Mb(4081);
 
-    function Nh(dd) {
-      return !dd.BH && !dd.bJ && !dd.XH
+    function Ul(bb) {
+      return !bb.UE && !bb.ZD && !bb.aC
     }
 
-    function qh() {
+    function tl() {
       return {
-        bricks: new Uint32Array(om),
+        bricks: new Uint32Array(IM),
         cells: new Uint16Array(32768),
-        special: new Uint8Array(Qm)
+        special: new Uint8Array(lM)
       }
     }
-    class Hh {
-      constructor(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : console.warn;
-        this.casters = dd, this.writeVoxels = Od, this.writePool = md, this.warn = Wd, this.eyeChunk = null, this.slotChunk = new Array(Wm).fill(null), this.slotVersion = new Float64Array(Wm).fill(-1), this.slotPool = new Array(Wm).fill(null), this.starved = new Uint8Array(Wm), this.queue = [], this.queued = new Uint8Array(Wm), this.queueSorted = !0, this.freePool = new Uint32Array(Bm), this.freeCount = Bm, this.casterTable = null, this.warnedPool = !1, this.scratch = qh(), this.victimScratch = qh(), this.record = new Uint32Array(4), this.entry = new Uint32Array(32), this.records = new Int32Array(4 * Wm), this.windowTopStale = !0, this.windowTop = new Uint32Array(1), this.encoded = null;
-        for (let Fd = 0; Fd < Bm; Fd++) this.freePool[Fd] = 65535 - Fd
+    class Cl {
+      constructor(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : console.warn;
+        this.casters = bb, this.writeVoxels = wb, this.writePool = Mb, this.warn = eb, this.eyeChunk = null, this.slotChunk = new Array(MM).fill(null), this.slotVersion = new Float64Array(MM).fill(-1), this.slotPool = new Array(MM).fill(null), this.starved = new Uint8Array(MM), this.queue = [], this.queued = new Uint8Array(MM), this.queueSorted = !0, this.freePool = new Uint32Array(rM), this.freeCount = rM, this.casterTable = null, this.warnedPool = !1, this.scratch = tl(), this.victimScratch = tl(), this.record = new Uint32Array(4), this.entry = new Uint32Array(32), this.records = new Int32Array(4 * MM), this.windowTopStale = !0, this.windowTop = new Uint32Array(1), this.encoded = null;
+        for (let Hb = 0; Hb < rM; Hb++) this.freePool[Hb] = 65535 - Hb
       }
       get queuedCount() {
         return this.queue.length
       }
       get poolInUse() {
-        return Bm - this.freeCount
+        return rM - this.freeCount
       }
-      chunkAdded(dd) {
-        if (null === this.eyeChunk || !this.inRadius(dd.i, dd.j, dd.k)) return;
-        const Od = bm(dd.i, dd.j, dd.k);
-        this.slotChunk[Od] = dd, this.slotVersion[Od] = -1, this.enqueue(Od)
+      chunkAdded(bb) {
+        if (null === this.eyeChunk || !this.inRadius(bb.i, bb.j, bb.k)) return;
+        const wb = EM(bb.i, bb.j, bb.k);
+        this.slotChunk[wb] = bb, this.slotVersion[wb] = -1, this.enqueue(wb)
       }
-      update(dd, Od, md) {
-        const Wd = this.casters.blockCaster;
-        if (Wd !== this.casterTable) {
-          this.casterTable = Wd;
-          for (let dd = 0; dd < Wm; dd++) this.slotVersion[dd] = -1, this.slotChunk[dd] && this.enqueue(dd)
+      update(bb, wb, Mb) {
+        const eb = this.casters.blockCaster;
+        if (eb !== this.casterTable) {
+          this.casterTable = eb;
+          for (let bb = 0; bb < MM; bb++) this.slotVersion[bb] = -1, this.slotChunk[bb] && this.enqueue(bb)
         }
-        const Fd = Math.floor(dd[0] / 32),
-          Rd = Math.floor(dd[1] / 32),
-          Xd = Math.floor(dd[2] / 32);
-        (null === this.eyeChunk || this.eyeChunk[0] !== Fd || this.eyeChunk[1] !== Rd || this.eyeChunk[2] !== Xd) && (this.eyeChunk = [Fd, Rd, Xd], this.follow(Od), this.queueSorted = !1, this.requeueStarved(), this.windowTopStale = !0);
-        for (let Kd = 0; Kd < Wm; Kd++) {
-          const dd = this.slotChunk[Kd];
-          dd && (dd.yJ || dd.vH !== this.slotVersion[Kd]) && this.enqueue(Kd)
+        const Hb = Math.floor(bb[0] / 32),
+          pb = Math.floor(bb[1] / 32),
+          Vb = Math.floor(bb[2] / 32);
+        (null === this.eyeChunk || this.eyeChunk[0] !== Hb || this.eyeChunk[1] !== pb || this.eyeChunk[2] !== Vb) && (this.eyeChunk = [Hb, pb, Vb], this.follow(wb), this.queueSorted = !1, this.requeueStarved(), this.windowTopStale = !0);
+        for (let gb = 0; gb < MM; gb++) {
+          const bb = this.slotChunk[gb];
+          bb && (bb.RD || bb.dC !== this.slotVersion[gb]) && this.enqueue(gb)
         }
-        this.drain(md), this.windowTopStale && this.writeWindowTop()
+        this.drain(Mb), this.windowTopStale && this.writeWindowTop()
       }
-      writeRecord(dd, Od) {
-        this.records.set(Od, 4 * dd), this.windowTopStale = !0, this.writeVoxels(4 * dd, Od)
+      writeRecord(bb, wb) {
+        this.records.set(wb, 4 * bb), this.windowTopStale = !0, this.writeVoxels(4 * bb, wb)
       }
       writeWindowTop() {
         this.windowTopStale = !1;
-        const dd = this.records;
-        let Od = -1 / 0;
-        for (let Wd = 0; Wd < dd.length; Wd += 4) {
-          const md = 255 & dd[Wd + 3];
-          md !== Xm && md !== Km || !this.inRadius(dd[Wd], dd[Wd + 1], dd[Wd + 2]) || (Od = Math.max(Od, dd[Wd + 1] * dm + (dd[Wd + 3] >>> 8)))
+        const bb = this.records;
+        let wb = -1 / 0;
+        for (let eb = 0; eb < bb.length; eb += 4) {
+          const Mb = 255 & bb[eb + 3];
+          Mb !== pM && Mb !== VM || !this.inRadius(bb[eb], bb[eb + 1], bb[eb + 2]) || (wb = Math.max(wb, bb[eb + 1] * kw + (bb[eb + 3] >>> 8)))
         }
-        const md = Od === -1 / 0 ? 1 : Od + qm;
-        md !== this.windowTop[0] && (this.windowTop[0] = md, this.writeVoxels(Nm, this.windowTop))
+        const Mb = wb === -1 / 0 ? 1 : wb + UM;
+        Mb !== this.windowTop[0] && (this.windowTop[0] = Mb, this.writeVoxels(OM, this.windowTop))
       }
-      follow(dd) {
-        const Od = this.eyeChunk,
-          [md, Wd, Fd] = Om;
-        for (let Xd = -Fd; Xd <= Fd; Xd++)
-          for (let Fd = -Wd; Fd <= Wd; Fd++)
-            for (let Wd = -md; Wd <= md; Wd++) {
-              var Rd;
-              const md = Od[0] + Wd,
-                Kd = Od[1] + Fd,
-                hd = Od[2] + Xd,
-                vd = bm(md, Kd, hd),
-                Qd = this.slotChunk[vd];
-              if (Qd && !Qd.yJ && Qd.i === md && Qd.j === Kd && Qd.k === hd) continue;
-              const td = null !== (Rd = dd(md, Kd, hd)) && void 0 !== Rd ? Rd : null;
-              Qd && (Qd.i !== md || Qd.j !== Kd || Qd.k !== hd) && this.slotPool[vd] && (this.release(vd), this.record.fill(0), this.writeRecord(vd, this.record)), this.slotChunk[vd] = td, this.slotVersion[vd] = -1, (td || Qd) && this.enqueue(vd)
+      follow(bb) {
+        const wb = this.eyeChunk,
+          [Mb, eb, Hb] = bM;
+        for (let Vb = -Hb; Vb <= Hb; Vb++)
+          for (let Hb = -eb; Hb <= eb; Hb++)
+            for (let eb = -Mb; eb <= Mb; eb++) {
+              var pb;
+              const Mb = wb[0] + eb,
+                gb = wb[1] + Hb,
+                lb = wb[2] + Vb,
+                Lb = EM(Mb, gb, lb),
+                Ib = this.slotChunk[Lb];
+              if (Ib && !Ib.RD && Ib.i === Mb && Ib.j === gb && Ib.k === lb) continue;
+              const Ob = null !== (pb = bb(Mb, gb, lb)) && void 0 !== pb ? pb : null;
+              Ib && (Ib.i !== Mb || Ib.j !== gb || Ib.k !== lb) && this.slotPool[Lb] && (this.release(Lb), this.record.fill(0), this.writeRecord(Lb, this.record)), this.slotChunk[Lb] = Ob, this.slotVersion[Lb] = -1, (Ob || Ib) && this.enqueue(Lb)
             }
       }
       requeueStarved() {
-        for (let dd = 0; dd < Wm; dd++) this.starved[dd] && this.slotChunk[dd] && this.enqueue(dd)
+        for (let bb = 0; bb < MM; bb++) this.starved[bb] && this.slotChunk[bb] && this.enqueue(bb)
       }
-      enqueue(dd) {
-        this.queued[dd] || (this.queued[dd] = 1, this.queue.push(dd), this.queueSorted = !1)
+      enqueue(bb) {
+        this.queued[bb] || (this.queued[bb] = 1, this.queue.push(bb), this.queueSorted = !1)
       }
-      drain(dd) {
+      drain(bb) {
         if (0 === this.queue.length) return;
         if (!this.queueSorted) {
-          const dd = new Map;
-          for (const Od of this.queue) dd.set(Od, this.slotDistance(Od));
-          this.queue.sort(((Od, md) => dd.get(md) - dd.get(Od))), this.queueSorted = !0
+          const bb = new Map;
+          for (const wb of this.queue) bb.set(wb, this.slotDistance(wb));
+          this.queue.sort(((wb, Mb) => bb.get(Mb) - bb.get(wb))), this.queueSorted = !0
         }
-        const Od = performance.now();
-        let md = 0;
-        const Wd = [];
-        for (; this.queue.length > 0 && (0 === md || performance.now() - Od < dd);) {
-          const dd = this.queue.pop(),
-            Od = this.slotChunk[dd];
-          !Od || Od.yJ || Nh(Od) ? (this.queued[dd] = 0, this.encodeSlot(dd), md++) : Wd.push(dd)
+        const wb = performance.now();
+        let Mb = 0;
+        const eb = [];
+        for (; this.queue.length > 0 && (0 === Mb || performance.now() - wb < bb);) {
+          const bb = this.queue.pop(),
+            wb = this.slotChunk[bb];
+          !wb || wb.RD || Ul(wb) ? (this.queued[bb] = 0, this.encodeSlot(bb), Mb++) : eb.push(bb)
         }
-        for (let Fd = Wd.length - 1; Fd >= 0; Fd--) this.queue.push(Wd[Fd])
+        for (let Hb = eb.length - 1; Hb >= 0; Hb--) this.queue.push(eb[Hb])
       }
-      slotDistance(dd) {
-        const Od = this.slotChunk[dd],
-          md = this.eyeChunk;
-        return Od ? Math.max(Math.abs(Od.i - md[0]), Math.abs(Od.j - md[1]), Math.abs(Od.k - md[2])) : 0
+      slotDistance(bb) {
+        const wb = this.slotChunk[bb],
+          Mb = this.eyeChunk;
+        return wb ? Math.max(Math.abs(wb.i - Mb[0]), Math.abs(wb.j - Mb[1]), Math.abs(wb.k - Mb[2])) : 0
       }
-      inRadius(dd, Od, md) {
-        const Wd = this.eyeChunk,
-          [Fd, Rd, Xd] = Om;
-        return Math.abs(dd - Wd[0]) <= Fd && Math.abs(Od - Wd[1]) <= Rd && Math.abs(md - Wd[2]) <= Xd
+      inRadius(bb, wb, Mb) {
+        const eb = this.eyeChunk,
+          [Hb, pb, Vb] = bM;
+        return Math.abs(bb - eb[0]) <= Hb && Math.abs(wb - eb[1]) <= pb && Math.abs(Mb - eb[2]) <= Vb
       }
-      release(dd) {
-        const Od = this.slotPool[dd];
-        if (Od) {
-          for (let dd = Od.length - 1; dd >= 0; dd--) this.freePool[this.freeCount++] = Od[dd];
-          this.slotPool[dd] = null
+      release(bb) {
+        const wb = this.slotPool[bb];
+        if (wb) {
+          for (let bb = wb.length - 1; bb >= 0; bb--) this.freePool[this.freeCount++] = wb[bb];
+          this.slotPool[bb] = null
         }
       }
-      encodeSlot(dd) {
-        var Od, md, Wd, Fd, Rd;
-        let Xd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.scratch,
-          Kd = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        const hd = null !== (Od = null === (md = this.slotPool[dd]) || void 0 === md ? void 0 : md.length) && void 0 !== Od ? Od : 0;
-        this.release(dd), this.starved[dd] = 0;
-        const vd = this.slotChunk[dd],
-          Qd = this.record;
-        if (!vd || vd.yJ || !vd.QN) return this.slotChunk[dd] = null, this.slotVersion[dd] = -1, Qd.fill(0), this.writeRecord(dd, Qd), void(hd > 0 && this.requeueStarved());
-        this.slotVersion[dd] = vd.vH;
-        const td = this.encodeBricks(vd, dd, Xd, Kd);
-        Qd[0] = vd.i, Qd[1] = vd.j, Qd[2] = vd.k, Qd[3] = td, this.writeRecord(dd, Qd), null === (Wd = this.encoded) || void 0 === Wd || Wd.call(this, vd), Kd && (null !== (Fd = null === (Rd = this.slotPool[dd]) || void 0 === Rd ? void 0 : Rd.length) && void 0 !== Fd ? Fd : 0) < hd && this.requeueStarved()
+      encodeSlot(bb) {
+        var wb, Mb, eb, Hb, pb;
+        let Vb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.scratch,
+          gb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        const lb = null !== (wb = null === (Mb = this.slotPool[bb]) || void 0 === Mb ? void 0 : Mb.length) && void 0 !== wb ? wb : 0;
+        this.release(bb), this.starved[bb] = 0;
+        const Lb = this.slotChunk[bb],
+          Ib = this.record;
+        if (!Lb || Lb.RD || !Lb.GU) return this.slotChunk[bb] = null, this.slotVersion[bb] = -1, Ib.fill(0), this.writeRecord(bb, Ib), void(lb > 0 && this.requeueStarved());
+        this.slotVersion[bb] = Lb.dC;
+        const Ob = this.encodeBricks(Lb, bb, Vb, gb);
+        Ib[0] = Lb.i, Ib[1] = Lb.j, Ib[2] = Lb.k, Ib[3] = Ob, this.writeRecord(bb, Ib), null === (eb = this.encoded) || void 0 === eb || eb.call(this, Lb), gb && (null !== (Hb = null === (pb = this.slotPool[bb]) || void 0 === pb ? void 0 : pb.length) && void 0 !== Hb ? Hb : 0) < lb && this.requeueStarved()
       }
-      encodeBricks(dd, Od, md, Wd) {
-        if (dd.uq) return Rm;
-        const Fd = this.casters.blockCaster,
+      encodeBricks(bb, wb, Mb, eb) {
+        if (bb.CC) return HM;
+        const Hb = this.casters.blockCaster,
           {
-            data: Rd,
-            stride: Xd,
-            offset: Kd
-          } = dd.QN,
-          [hd, vd, Qd] = Xd,
-          td = dm,
+            data: pb,
+            stride: Vb,
+            offset: gb
+          } = bb.GU,
+          [lb, Lb, Ib] = Vb,
+          Ob = kw,
           {
-            bricks: od,
-            cells: Nd,
-            special: qd
-          } = md;
-        od.fill(0), qd.fill(0);
-        let Hd = 0,
-          yd = 0,
-          bd = 0;
-        for (let Td = 0; Td < td; Td++) {
-          const Od = Td >> 2,
-            md = 3 & Td,
-            Wd = dd.Wq[Td],
-            Xd = Wd === oh.d ? -1 : Wd < Fd.length ? Fd[Wd] : 0;
-          if (0 !== Xd)
-            for (let dd = 0; dd < td; dd++) {
-              const Wd = dd >> 2,
-                pd = 3 & dd;
-              let Yd = Kd + dd * hd + Td * vd;
-              for (let dd = 0; dd < td; dd++, Yd += Qd) {
-                let Kd = Xd;
-                if (Kd < 0) {
-                  const dd = Rd[Yd];
-                  if (Kd = dd < Fd.length ? Fd[dd] : 0, 0 === Kd) continue
+            bricks: Ub,
+            cells: tb,
+            special: Cb
+          } = Mb;
+        Ub.fill(0), Cb.fill(0);
+        let Eb = 0,
+          Fb = 0,
+          Bb = 0;
+        for (let sb = 0; sb < Ob; sb++) {
+          const wb = sb >> 2,
+            Mb = 3 & sb,
+            eb = bb.vt[sb],
+            Vb = eb === Ol.g ? -1 : eb < Hb.length ? Hb[eb] : 0;
+          if (0 !== Vb)
+            for (let bb = 0; bb < Ob; bb++) {
+              const eb = bb >> 2,
+                mb = 3 & bb;
+              let hb = gb + bb * lb + sb * Lb;
+              for (let bb = 0; bb < Ob; bb++, hb += Ib) {
+                let gb = Vb;
+                if (gb < 0) {
+                  const bb = pb[hb];
+                  if (gb = bb < Hb.length ? Hb[bb] : 0, 0 === gb) continue
                 }
-                const hd = Tm(Wd, Od, dd >> 2),
-                  vd = pm(pd, md, 3 & dd);
-                od[3 * hd + (vd >>> 5)] |= 1 << (31 & vd), Nd[hd * hm + vd] = Kd, Hd++, bd = Td, Kd === Ym ? yd++ : qd[hd] = 1
+                const lb = FM(eb, wb, bb >> 2),
+                  Lb = BM(mb, Mb, 3 & bb);
+                Ub[3 * lb + (Lb >>> 5)] |= 1 << (31 & Lb), tb[lb * gM + Lb] = gb, Eb++, Bb = sb, gb === sM ? Fb++ : Cb[lb] = 1
               }
             }
         }
-        return 0 === Hd ? Rm : 32768 === yd ? Xm | bd << 8 : (this.writePoolEntries(Od, md, Wd), this.writeVoxels(tm + Od * om, od), Km | bd << 8)
+        return 0 === Eb ? HM : 32768 === Fb ? pM | Bb << 8 : (this.writePoolEntries(wb, Mb, eb), this.writeVoxels(LM + wb * IM, Ub), VM | Bb << 8)
       }
-      writePoolEntries(dd, Od, md) {
+      writePoolEntries(bb, wb, Mb) {
         const {
-          bricks: Wd,
-          cells: Fd,
-          special: Rd
-        } = Od, Xd = this.entry;
-        let Kd = 0;
-        for (let Qd = 0; Qd < Qm; Qd++) Kd += Rd[Qd];
-        if (0 === Kd) return;
-        md && this.freeCount < Kd && this.evictBeyond(dd, Kd);
-        const hd = new Uint32Array(md ? Math.min(Kd, this.freeCount) : 0);
-        let vd = 0;
-        for (let Qd = 0; Qd < Qm; Qd++) {
-          if (!Rd[Qd]) continue;
-          const md = 3 * Qd;
-          if (vd === hd.length) {
-            this.dropSpecials(Od, Qd), this.starved[dd] = 1;
+          bricks: eb,
+          cells: Hb,
+          special: pb
+        } = wb, Vb = this.entry;
+        let gb = 0;
+        for (let Ib = 0; Ib < lM; Ib++) gb += pb[Ib];
+        if (0 === gb) return;
+        Mb && this.freeCount < gb && this.evictBeyond(bb, gb);
+        const lb = new Uint32Array(Mb ? Math.min(gb, this.freeCount) : 0);
+        let Lb = 0;
+        for (let Ib = 0; Ib < lM; Ib++) {
+          if (!pb[Ib]) continue;
+          const Mb = 3 * Ib;
+          if (Lb === lb.length) {
+            this.dropSpecials(wb, Ib), this.starved[bb] = 1;
             continue
           }
-          const Kd = this.freePool[--this.freeCount];
-          hd[vd++] = Kd;
-          for (let dd = 0; dd < hm; dd++) {
-            const Od = Wd[md + (dd >>> 5)] >>> (31 & dd) & 1 ? Fd[Qd * hm + dd] : 0;
-            1 & dd ? Xd[dd >> 1] |= Od << 16 : Xd[dd >> 1] = Od
+          const gb = this.freePool[--this.freeCount];
+          lb[Lb++] = gb;
+          for (let bb = 0; bb < gM; bb++) {
+            const wb = eb[Mb + (bb >>> 5)] >>> (31 & bb) & 1 ? Hb[Ib * gM + bb] : 0;
+            1 & bb ? Vb[bb >> 1] |= wb << 16 : Vb[bb >> 1] = wb
           }
-          Wd[md + 2] = Kd + 1, this.writePool(Sm + 32 * Kd, Xd)
+          eb[Mb + 2] = gb + 1, this.writePool(RM + 32 * gb, Vb)
         }
-        hd.length > 0 && (this.slotPool[dd] = hd)
+        lb.length > 0 && (this.slotPool[bb] = lb)
       }
-      evictBeyond(dd, Od) {
-        const md = this.slotDistance(dd),
-          Wd = [];
-        for (let Fd = 0; Fd < Wm; Fd++) Fd !== dd && this.slotPool[Fd] && this.slotDistance(Fd) > md && Wd.push(Fd);
-        Wd.sort(((dd, Od) => this.slotDistance(Od) - this.slotDistance(dd)));
-        for (const Fd of Wd) {
-          if (this.freeCount >= Od) return;
-          const dd = this.slotChunk[Fd];
-          dd && !dd.yJ && dd.QN && (dd.vH === this.slotVersion[Fd] || Nh(dd)) && this.encodeSlot(Fd, this.victimScratch, !1)
+      evictBeyond(bb, wb) {
+        const Mb = this.slotDistance(bb),
+          eb = [];
+        for (let Hb = 0; Hb < MM; Hb++) Hb !== bb && this.slotPool[Hb] && this.slotDistance(Hb) > Mb && eb.push(Hb);
+        eb.sort(((bb, wb) => this.slotDistance(wb) - this.slotDistance(bb)));
+        for (const Hb of eb) {
+          if (this.freeCount >= wb) return;
+          const bb = this.slotChunk[Hb];
+          bb && !bb.RD && bb.GU && (bb.dC === this.slotVersion[Hb] || Ul(bb)) && this.encodeSlot(Hb, this.victimScratch, !1)
         }
       }
-      dropSpecials(dd, Od) {
+      dropSpecials(bb, wb) {
         this.warnedPool || (this.warnedPool = !0, this.warn("Sun shadows: the special pool's 65536 entries are in use; plants and shapes in the furthest chunks cast nothing."));
-        const md = 3 * Od;
-        for (let Wd = 0; Wd < hm; Wd++) dd.cells[Od * hm + Wd] !== Ym && (dd.bricks[md + (Wd >>> 5)] &= ~(1 << (31 & Wd)))
+        const Mb = 3 * wb;
+        for (let eb = 0; eb < gM; eb++) bb.cells[wb * gM + eb] !== sM && (bb.bricks[Mb + (eb >>> 5)] &= ~(1 << (31 & eb)))
       }
     }
-    var yh = md(38929);
-    class bh {
-      constructor(dd) {
-        this.device = dd, this.frameBuffer = void 0, this.gridBuffer = void 0, this.frame = new zm, this.grids = new WeakMap, this.gridTop = 0, this.gridsFull = !1, this.uploadedEmpty = !1, this.Bt = new Float64Array(16), this.bakeDeadline = 0, this.frameBuffer = dd.createBuffer({
+    var El = Mb(38599);
+    class Fl {
+      constructor(bb) {
+        this.device = bb, this.frameBuffer = void 0, this.gridBuffer = void 0, this.frame = new vM, this.grids = new WeakMap, this.gridTop = 0, this.gridsFull = !1, this.uploadedEmpty = !1, this.XO = new Float64Array(16), this.bakeDeadline = 0, this.frameBuffer = bb.createBuffer({
           label: "sun-shadow-entities",
           size: 589828,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.gridBuffer = dd.createBuffer({
+        }), this.gridBuffer = bb.createBuffer({
           label: "sun-shadow-entity-grids",
           size: 16777216,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
         })
       }
-      update(dd, Od, md) {
+      update(bb, wb, Mb) {
         this.gridsFull && (this.gridsFull = !1, this.grids = new WeakMap, this.gridTop = 0), this.bakeDeadline = -1;
         const {
-          frame: Wd
+          frame: eb
         } = this;
-        Wd.ot(dd, Od), md.forEachSunShadowCaster((dd => {
-          this.add(dd)
-        })), Wd.finish();
-        const Fd = 0 === Wd.parts;
-        if (Fd && this.uploadedEmpty) return;
-        this.uploadedEmpty = Fd;
+        eb.LO(bb, wb), Mb.forEachSunShadowCaster((bb => {
+          this.add(bb)
+        })), eb.finish();
+        const Hb = 0 === eb.parts;
+        if (Hb && this.uploadedEmpty) return;
+        this.uploadedEmpty = Hb;
         const {
-          queue: Rd
+          queue: pb
         } = this.device, {
-          words: Xd
-        } = Wd;
-        Rd.writeBuffer(this.frameBuffer, 0, Xd, 0, 16385), Wd.refs > 0 && Rd.writeBuffer(this.frameBuffer, 65540, Xd, im, Wd.refs), Fd || Rd.writeBuffer(this.frameBuffer, 327684, Xd, Am, Wd.parts * Vm)
+          words: Vb
+        } = eb;
+        pb.writeBuffer(this.frameBuffer, 0, Vb, 0, 16385), eb.refs > 0 && pb.writeBuffer(this.frameBuffer, 65540, Vb, ZM, eb.refs), Hb || pb.writeBuffer(this.frameBuffer, 327684, Vb, fM, eb.parts * YM)
       }
-      add(dd) {
-        const Od = this.gridFor(dd);
-        if (!Od) return;
+      add(bb) {
+        const wb = this.gridFor(bb);
+        if (!wb) return;
         const {
-          frame: md
+          frame: Mb
         } = this, {
-          Bt: Wd,
-          worldAt: Fd,
-          instances: Rd,
-          instanceCount: Xd,
-          thin: Kd
-        } = dd;
-        if (Rd)
-          for (let hd = 0; hd < Xd; hd++) Kd ? (jm(Rd, 16 * hd, Wd, Fd, this.Bt), md.add(Od, this.Bt)) : md.add(Od, Rd, 16 * hd);
-        else md.add(Od, Wd, Fd)
+          XO: eb,
+          worldAt: Hb,
+          instances: pb,
+          instanceCount: Vb,
+          thin: gb
+        } = bb;
+        if (pb)
+          for (let lb = 0; lb < Vb; lb++) gb ? (GM(pb, 16 * lb, eb, Hb, this.XO), Mb.add(wb, this.XO)) : Mb.add(wb, pb, 16 * lb);
+        else Mb.add(wb, eb, Hb)
       }
-      gridFor(dd) {
+      gridFor(bb) {
         let {
-          geometry: Od,
-          indexed: md,
-          first: Wd,
-          count: Fd,
-          skip: Rd
-        } = dd, Xd = this.grids.get(Od);
-        Xd || (Xd = new Map, this.grids.set(Od, Xd));
-        const Kd = `${md?Wd:-1-Wd}:${Fd}:${null!==Rd&&void 0!==Rd?Rd:""}`;
-        let hd = Xd.get(Kd);
-        if (void 0 !== hd || this.gridsFull) return hd;
-        const vd = performance.now();
-        if (this.bakeDeadline < 0) this.bakeDeadline = vd + 2;
-        else if (vd > this.bakeDeadline) return;
-        return hd = this.bake(Od, md, Wd, Fd, Rd), void 0 !== hd && Xd.set(Kd, hd), hd
+          geometry: wb,
+          indexed: Mb,
+          first: eb,
+          count: Hb,
+          skip: pb
+        } = bb, Vb = this.grids.get(wb);
+        Vb || (Vb = new Map, this.grids.set(wb, Vb));
+        const gb = `${Mb?eb:-1-eb}:${Hb}:${null!==pb&&void 0!==pb?pb:""}`;
+        let lb = Vb.get(gb);
+        if (void 0 !== lb || this.gridsFull) return lb;
+        const Lb = performance.now();
+        if (this.bakeDeadline < 0) this.bakeDeadline = Lb + 2;
+        else if (Lb > this.bakeDeadline) return;
+        return lb = this.bake(wb, Mb, eb, Hb, pb), void 0 !== lb && Vb.set(gb, lb), lb
       }
-      bake(dd, Od, md, Wd, Fd) {
-        const Rd = dd.vertexAttributes.find((dd => "position" === dd.kind)),
-          Xd = Rd ? function(dd, Od, md, Wd) {
-            let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-            const Rd = dd => Od ? Od[md + dd] : md + dd,
-              Xd = dd => null !== Fd && [0, 1, 2].some((Od => {
-                const md = Rd(dd + Od);
-                return md >= Fd[0] && md < Fd[1]
+      bake(bb, wb, Mb, eb, Hb) {
+        const pb = bb.vertexAttributes.find((bb => "position" === bb.kind)),
+          Vb = pb ? function(bb, wb, Mb, eb) {
+            let Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+            const pb = bb => wb ? wb[Mb + bb] : Mb + bb,
+              Vb = bb => null !== Hb && [0, 1, 2].some((wb => {
+                const Mb = pb(bb + wb);
+                return Mb >= Hb[0] && Mb < Hb[1]
               })),
-              Kd = [1 / 0, 1 / 0, 1 / 0],
-              hd = [-1 / 0, -1 / 0, -1 / 0];
-            for (let Td = 0; Td + 2 < Wd; Td += 3)
-              if (!Xd(Td))
-                for (let Od = 0; Od < 3; Od++) {
-                  const md = Rd(Td + Od);
-                  for (let Od = 0; Od < 3; Od++) Kd[Od] = Math.min(Kd[Od], dd[3 * md + Od]), hd[Od] = Math.max(hd[Od], dd[3 * md + Od])
+              gb = [1 / 0, 1 / 0, 1 / 0],
+              lb = [-1 / 0, -1 / 0, -1 / 0];
+            for (let sb = 0; sb + 2 < eb; sb += 3)
+              if (!Vb(sb))
+                for (let wb = 0; wb < 3; wb++) {
+                  const Mb = pb(sb + wb);
+                  for (let wb = 0; wb < 3; wb++) gb[wb] = Math.min(gb[wb], bb[3 * Mb + wb]), lb[wb] = Math.max(lb[wb], bb[3 * Mb + wb])
                 }
-            const vd = Math.max(hd[0] - Kd[0], hd[1] - Kd[1], hd[2] - Kd[2]);
-            if (!(vd > 0)) return null;
-            const Qd = vd / 64,
-              td = [0, 0, 0],
-              od = [0, 0, 0],
-              Nd = [0, 0, 0];
-            for (let Td = 0; Td < 3; Td++) td[Td] = Math.min(65, Math.ceil((hd[Td] - Kd[Td]) / Qd) + 1), od[Td] = Kd[Td] - Qd / 2, Nd[Td] = od[Td] + td[Td] * Qd;
-            const qd = new Uint32Array(Math.ceil(td[0] * td[1] * td[2] / 32)),
-              Hd = new Float64Array(9),
-              yd = [0, 0, 0],
-              bd = [0, 0, 0];
-            for (let Td = 0; Td + 2 < Wd; Td += 3)
-              if (!Xd(Td)) {
-                for (let Od = 0; Od < 3; Od++) {
-                  const md = Rd(Td + Od);
-                  for (let Wd = 0; Wd < 3; Wd++) Hd[3 * Od + Wd] = dd[3 * md + Wd]
+            const Lb = Math.max(lb[0] - gb[0], lb[1] - gb[1], lb[2] - gb[2]);
+            if (!(Lb > 0)) return null;
+            const Ib = Lb / 64,
+              Ob = [0, 0, 0],
+              Ub = [0, 0, 0],
+              tb = [0, 0, 0];
+            for (let sb = 0; sb < 3; sb++) Ob[sb] = Math.min(65, Math.ceil((lb[sb] - gb[sb]) / Ib) + 1), Ub[sb] = gb[sb] - Ib / 2, tb[sb] = Ub[sb] + Ob[sb] * Ib;
+            const Cb = new Uint32Array(Math.ceil(Ob[0] * Ob[1] * Ob[2] / 32)),
+              Eb = new Float64Array(9),
+              Fb = [0, 0, 0],
+              Bb = [0, 0, 0];
+            for (let sb = 0; sb + 2 < eb; sb += 3)
+              if (!Vb(sb)) {
+                for (let wb = 0; wb < 3; wb++) {
+                  const Mb = pb(sb + wb);
+                  for (let eb = 0; eb < 3; eb++) Eb[3 * wb + eb] = bb[3 * Mb + eb]
                 }
-                for (let dd = 0; dd < 3; dd++) {
-                  const Od = Math.min(Hd[dd], Hd[3 + dd], Hd[6 + dd]),
-                    md = Math.max(Hd[dd], Hd[3 + dd], Hd[6 + dd]);
-                  yd[dd] = Math.max(0, Math.floor((Od - od[dd]) / Qd - 1e-6)), bd[dd] = Math.min(td[dd] - 1, Math.floor((md - od[dd]) / Qd + 1e-6))
+                for (let bb = 0; bb < 3; bb++) {
+                  const wb = Math.min(Eb[bb], Eb[3 + bb], Eb[6 + bb]),
+                    Mb = Math.max(Eb[bb], Eb[3 + bb], Eb[6 + bb]);
+                  Fb[bb] = Math.max(0, Math.floor((wb - Ub[bb]) / Ib - 1e-6)), Bb[bb] = Math.min(Ob[bb] - 1, Math.floor((Mb - Ub[bb]) / Ib + 1e-6))
                 }
-                for (let dd = yd[2]; dd <= bd[2]; dd++)
-                  for (let Od = yd[1]; Od <= bd[1]; Od++)
-                    for (let md = yd[0]; md <= bd[0]; md++)
-                      if (Dm(Hd, od[0] + (md + .5) * Qd, od[1] + (Od + .5) * Qd, od[2] + (dd + .5) * Qd, Qd / 2)) {
-                        const Wd = md + td[0] * (Od + td[1] * dd);
-                        qd[Wd >>> 5] |= 1 << (31 & Wd)
+                for (let bb = Fb[2]; bb <= Bb[2]; bb++)
+                  for (let wb = Fb[1]; wb <= Bb[1]; wb++)
+                    for (let Mb = Fb[0]; Mb <= Bb[0]; Mb++)
+                      if (qM(Eb, Ub[0] + (Mb + .5) * Ib, Ub[1] + (wb + .5) * Ib, Ub[2] + (bb + .5) * Ib, Ib / 2)) {
+                        const eb = Mb + Ob[0] * (wb + Ob[1] * bb);
+                        Cb[eb >>> 5] |= 1 << (31 & eb)
                       }
               } return {
-              words: qd,
-              lo: od,
-              hi: Nd,
-              cell: Qd,
-              dims: td
+              words: Cb,
+              lo: Ub,
+              hi: tb,
+              cell: Ib,
+              dims: Ob
             }
-          }((0, yh.j)(Rd, dd.vertexCount), Od ? dd.indexData : null, md, Wd, Fd) : null;
-        if (!Xd) return null;
+          }((0, El.g)(pb, bb.vertexCount), wb ? bb.indexData : null, Mb, eb, Hb) : null;
+        if (!Vb) return null;
         const {
-          words: Kd,
-          ...hd
-        } = Xd;
-        if (this.gridTop + Kd.length > Gm) return void(this.gridsFull = !0);
-        const vd = this.gridTop;
-        return this.gridTop += Kd.length, this.device.queue.writeBuffer(this.gridBuffer, 4 * vd, Kd), {
-          ...hd,
-          at: vd
+          words: gb,
+          ...lb
+        } = Vb;
+        if (this.gridTop + gb.length > WM) return void(this.gridsFull = !0);
+        const Lb = this.gridTop;
+        return this.gridTop += gb.length, this.device.queue.writeBuffer(this.gridBuffer, 4 * Lb, gb), {
+          ...lb,
+          at: Lb
         }
       }
     }
-    const Th = Math.cos(1 * Math.PI / 180);
+    const Bl = Math.cos(1 * Math.PI / 180);
 
-    function ph(dd, Od) {
-      return dd[0] * Od[0] + dd[1] * Od[1] + dd[2] * Od[2] < Th
+    function sl(bb, wb) {
+      return bb[0] * wb[0] + bb[1] * wb[1] + bb[2] * wb[2] < Bl
     }
-    async function Yh(dd) {
+    async function ml(bb) {
       const {
-        pixels: Od,
-        width: md,
-        height: Wd
-      } = await mO(dd), Fd = new Uint8Array(md * Wd);
-      for (let Rd = 0; Rd < Fd.length; Rd++) Fd[Rd] = Od[4 * Rd + 3];
+        pixels: wb,
+        width: Mb,
+        height: eb
+      } = await bw(bb), Hb = new Uint8Array(Mb * eb);
+      for (let pb = 0; pb < Hb.length; pb++) Hb[pb] = wb[4 * pb + 3];
       return {
-        width: md,
-        height: Wd,
-        alpha: Fd
+        width: Mb,
+        height: eb,
+        alpha: Hb
       }
     }
-    class gh {
-      constructor(dd, Od) {
-        this.device = dd, this.uniform = void 0, this.voxelBuffer = void 0, this.special = void 0, this.volume = void 0, this.volumeView = void 0, this.volumeSampler = void 0, this.work = void 0, this.workData = new ArrayBuffer(Im.m), this.entities = void 0, this.entityStandIn = void 0, this.entitiesThisFrame = !1, this.window = null, this.stopWindow = null, this.casters = null, this.uniformData = new ArrayBuffer(128), this.uniformInts = new Int32Array(this.uniformData), this.uniformFloats = new Float32Array(this.uniformData), this.uniformWritten = null, this.eye = [0, 0, 0], this.warned = !1, this.volumePass = null, this.volumePassStarted = !1, this.volumePassFailed = !1, this.volumeHolds = null, this.slice = 0, this.sweepLeft = 0, this.written = !1, this.sweptChunk = [0, 0, 0], this.sweptLight = [0, 0, 0], this.stale = [], this.staleAll = !1, this.staleAllSwept = 0, this.castersWritten = !1, this.swept = 0, this.fastLeft = 0, this.paced = 0, this.staleNear = [0, 0, 0], this.uniform = dd.createBuffer({
+    class hl {
+      constructor(bb, wb) {
+        this.device = bb, this.uniform = void 0, this.voxelBuffer = void 0, this.special = void 0, this.volume = void 0, this.volumeView = void 0, this.volumeSampler = void 0, this.work = void 0, this.workData = new ArrayBuffer(iM.n), this.entities = void 0, this.entityStandIn = void 0, this.entitiesThisFrame = !1, this.window = null, this.stopWindow = null, this.casters = null, this.uniformData = new ArrayBuffer(128), this.uniformInts = new Int32Array(this.uniformData), this.uniformFloats = new Float32Array(this.uniformData), this.uniformWritten = null, this.eye = [0, 0, 0], this.warned = !1, this.volumePass = null, this.volumePassStarted = !1, this.volumePassFailed = !1, this.volumeHolds = null, this.slice = 0, this.sweepLeft = 0, this.written = !1, this.sweptChunk = [0, 0, 0], this.sweptLight = [0, 0, 0], this.stale = [], this.staleAll = !1, this.staleAllSwept = 0, this.castersWritten = !1, this.swept = 0, this.fastLeft = 0, this.paced = 0, this.staleNear = [0, 0, 0], this.uniform = bb.createBuffer({
           label: "sun-shadow",
           size: 128,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.voxelBuffer = dd.createBuffer({
+        }), this.voxelBuffer = bb.createBuffer({
           label: "sun-shadow-voxels",
-          size: 4 * Hm,
+          size: 4 * tM,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.special = dd.createBuffer({
+        }), this.special = bb.createBuffer({
           label: "sun-shadow-special",
           size: 9568256,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
         });
-        const [md, Wd, Fd] = Im.o;
-        this.volume = dd.createTexture({
+        const [Mb, eb, Hb] = iM.p;
+        this.volume = bb.createTexture({
           label: "sun-shadow-volume",
           size: {
-            width: md,
-            height: Wd,
-            depthOrArrayLayers: Fd
+            width: Mb,
+            height: eb,
+            depthOrArrayLayers: Hb
           },
           dimension: "3d",
           format: "rgba8unorm",
           usage: GPUTextureUsage.STORAGE_BINDING | GPUTextureUsage.TEXTURE_BINDING
         }), this.volumeView = this.volume.createView({
           label: "sun-shadow-volume"
-        }), this.volumeSampler = dd.createSampler({
+        }), this.volumeSampler = bb.createSampler({
           label: "sun-shadow-volume",
           magFilter: "linear",
           minFilter: "linear",
           addressModeU: "repeat",
           addressModeV: "repeat",
           addressModeW: "repeat"
-        }), this.work = dd.createBuffer({
+        }), this.work = bb.createBuffer({
           label: "sun-shadow-volume-work",
-          size: Im.m,
+          size: iM.n,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
-        }), this.entities = Od ? new bh(dd) : null, this.entityStandIn = Od ? null : dd.createBuffer({
+        }), this.entities = wb ? new Fl(bb) : null, this.entityStandIn = wb ? null : bb.createBuffer({
           label: "sun-shadow-entities-stand-in",
           size: 16,
           usage: GPUBufferUsage.STORAGE
         })
       }
       dispose() {
-        var dd;
-        null === (dd = this.stopWindow) || void 0 === dd || dd.call(this)
+        var bb;
+        null === (bb = this.stopWindow) || void 0 === bb || bb.call(this)
       }
       get tracesEntities() {
         return null !== this.entities
       }
       describePendingWork() {
-        var dd, Od;
-        const md = [];
-        !this.volumePassStarted || this.volumePass || this.volumePassFailed || md.push("Lite sun shadow volume pipeline compiling");
-        const Wd = null !== (dd = null === (Od = this.casters) || void 0 === Od ? void 0 : Od.planesLoading) && void 0 !== dd ? dd : 0;
-        return Wd > 0 && md.push(`${Wd} Lite sun shadow plane casters loading their textures`), md
+        var bb, wb;
+        const Mb = [];
+        !this.volumePassStarted || this.volumePass || this.volumePassFailed || Mb.push("Lite sun shadow volume pipeline compiling");
+        const eb = null !== (bb = null === (wb = this.casters) || void 0 === wb ? void 0 : wb.planesLoading) && void 0 !== bb ? bb : 0;
+        return eb > 0 && Mb.push(`${eb} Lite sun shadow plane casters loading their textures`), Mb
       }
       entries() {
-        var dd, Od, md, Wd;
-        const Fd = fO.p;
+        var bb, wb, Mb, eb;
+        const Hb = ow.u;
         return [{
-          binding: Fd.uniform,
+          binding: Hb.uniform,
           resource: {
             buffer: this.uniform
           }
         }, {
-          binding: Fd.QN,
+          binding: Hb.GU,
           resource: {
             buffer: this.voxelBuffer
           }
         }, {
-          binding: Fd.special,
+          binding: Hb.special,
           resource: {
             buffer: this.special
           }
         }, {
-          binding: Fd.volume,
+          binding: Hb.volume,
           resource: this.volumeView
         }, {
-          binding: Fd.sampler,
+          binding: Hb.sampler,
           resource: this.volumeSampler
         }, {
-          binding: Fd.entities,
+          binding: Hb.entities,
           resource: {
-            buffer: null !== (dd = null === (Od = this.entities) || void 0 === Od ? void 0 : Od.frameBuffer) && void 0 !== dd ? dd : this.entityStandIn
+            buffer: null !== (bb = null === (wb = this.entities) || void 0 === wb ? void 0 : wb.frameBuffer) && void 0 !== bb ? bb : this.entityStandIn
           }
         }, {
-          binding: Fd.entityGrids,
+          binding: Hb.entityGrids,
           resource: {
-            buffer: null !== (md = null === (Wd = this.entities) || void 0 === Wd ? void 0 : Wd.gridBuffer) && void 0 !== md ? md : this.entityStandIn
+            buffer: null !== (Mb = null === (eb = this.entities) || void 0 === eb ? void 0 : eb.gridBuffer) && void 0 !== Mb ? Mb : this.entityStandIn
           }
         }]
       }
-      prepare(dd, Od, md) {
-        var Wd;
+      prepare(bb, wb, Mb) {
+        var eb;
         this.entitiesThisFrame = !1;
-        const Fd = null !== (Wd = null === md || void 0 === md ? void 0 : md.sunShadowReach()) && void 0 !== Wd ? Wd : {
+        const Hb = null !== (eb = null === Mb || void 0 === Mb ? void 0 : Mb.sunShadowReach()) && void 0 !== eb ? eb : {
           sunShadow: !1,
           airShadow: !1
         };
-        if (!md || !Fd.sunShadow && !Fd.airShadow) return void(this.volumeHolds = null);
-        if (dd.Bt.tt !== dm) return void(this.warned || (this.warned = !0, console.warn(`Lite: sun shadows need chunks of 32 blocks, not ${dd.Bt.tt}; everything is lit.`)));
-        const Rd = this.start(dd);
-        this.casters.update(dd.Rt, dd.Rt.PN.length);
-        const Xd = dd.XN;
-        for (let od = 0; od < 3; od++) this.eye[od] = Od[od] + Xd[od];
-        const Kd = (0, Im.t)(this.eye);
-        this.staleNear = Kd;
-        const hd = dd.Bt.sH;
-        Rd.update(this.eye, ((dd, Od, md) => hd.uH(dd, Od, md)), 1);
-        const vd = (0, Im.p)(md.TOd()),
-          Qd = Rd.eyeChunk,
-          td = this.uniformInts;
-        for (let od = 0; od < 3; od++) td[od] = Qd[od], td[4 + od] = Kd[od];
-        this.entitiesThisFrame = null !== this.entities && Fd.sunShadow, this.entitiesThisFrame && Pm(this.uniformFloats, 8, Od, vd), null !== this.volumeHolds && (this.castersWritten || ph(vd, this.sweptLight)) && (this.staleAll = !0, this.staleAllSwept = this.swept), this.castersWritten = !1, this.writeStale(), this.writeUniform(), this.computeVolume(Kd, vd, Qd)
+        if (!Mb || !Hb.sunShadow && !Hb.airShadow) return void(this.volumeHolds = null);
+        if (bb.XO.lO !== kw) return void(this.warned || (this.warned = !0, console.warn(`Lite: sun shadows need chunks of 32 blocks, not ${bb.XO.lO}; everything is lit.`)));
+        const pb = this.start(bb);
+        this.casters.update(bb.MO, bb.MO.zt.length);
+        const Vb = bb.SU;
+        for (let Ub = 0; Ub < 3; Ub++) this.eye[Ub] = wb[Ub] + Vb[Ub];
+        const gb = (0, iM.w)(this.eye);
+        this.staleNear = gb;
+        const lb = bb.XO.CE;
+        pb.update(this.eye, ((bb, wb, Mb) => lb.EE(bb, wb, Mb)), 1);
+        const Lb = (0, iM.s)(Mb.jwb()),
+          Ib = pb.eyeChunk,
+          Ob = this.uniformInts;
+        for (let Ub = 0; Ub < 3; Ub++) Ob[Ub] = Ib[Ub], Ob[4 + Ub] = gb[Ub];
+        this.entitiesThisFrame = null !== this.entities && Hb.sunShadow, this.entitiesThisFrame && NM(this.uniformFloats, 8, wb, Lb), null !== this.volumeHolds && (this.castersWritten || sl(Lb, this.sweptLight)) && (this.staleAll = !0, this.staleAllSwept = this.swept), this.castersWritten = !1, this.writeStale(), this.writeUniform(), this.computeVolume(gb, Lb, Ib)
       }
-      markStale(dd) {
-        const Od = this.staleNear,
-          md = dm,
-          Wd = [dd.i * md, dd.j * md, dd.k * md];
-        for (let Rd = 0; Rd < 3; Rd++)
-          if (Wd[Rd] + md <= Od[Rd] - md || Wd[Rd] >= Od[Rd] + Im.o[Rd] + md) return;
+      markStale(bb) {
+        const wb = this.staleNear,
+          Mb = kw,
+          eb = [bb.i * Mb, bb.j * Mb, bb.k * Mb];
+        for (let pb = 0; pb < 3; pb++)
+          if (eb[pb] + Mb <= wb[pb] - Mb || eb[pb] >= wb[pb] + iM.p[pb] + Mb) return;
         if (this.staleAll) return void(this.staleAllSwept = this.swept);
-        const Fd = this.stale;
-        for (let Rd = 0; Rd < Fd.length; Rd += 4)
-          if (Fd[Rd] === dd.i && Fd[Rd + 1] === dd.j && Fd[Rd + 2] === dd.k) return void(Fd[Rd + 3] = this.swept);
-        if (16 === Fd.length) return this.staleAll = !0, void(this.staleAllSwept = this.swept);
-        Fd.push(dd.i, dd.j, dd.k, this.swept)
+        const Hb = this.stale;
+        for (let pb = 0; pb < Hb.length; pb += 4)
+          if (Hb[pb] === bb.i && Hb[pb + 1] === bb.j && Hb[pb + 2] === bb.k) return void(Hb[pb + 3] = this.swept);
+        if (16 === Hb.length) return this.staleAll = !0, void(this.staleAllSwept = this.swept);
+        Hb.push(bb.i, bb.j, bb.k, this.swept)
       }
       writeStale() {
-        const dd = this.swept,
-          Od = this.stale;
-        this.staleAll && dd - this.staleAllSwept >= Im.e && (this.staleAll = !1, Od.length = 0);
-        let md = 0;
-        for (let Fd = 0; Fd < Od.length; Fd += 4)
-          if (dd - Od[Fd + 3] < Im.e) {
-            for (let dd = 0; dd < 4; dd++) Od[md + dd] = Od[Fd + dd];
-            md += 4
-          } Od.length = md;
-        const Wd = this.uniformInts;
-        Wd[3] = this.staleAll ? 5 : md / 4;
-        for (let Fd = 0; Fd < 4; Fd++)
-          for (let dd = 0; dd < 3; dd++) Wd[16 + 4 * Fd + dd] = 4 * Fd < md ? Od[4 * Fd + dd] * dm : 0
+        const bb = this.swept,
+          wb = this.stale;
+        this.staleAll && bb - this.staleAllSwept >= iM.f && (this.staleAll = !1, wb.length = 0);
+        let Mb = 0;
+        for (let Hb = 0; Hb < wb.length; Hb += 4)
+          if (bb - wb[Hb + 3] < iM.f) {
+            for (let bb = 0; bb < 4; bb++) wb[Mb + bb] = wb[Hb + bb];
+            Mb += 4
+          } wb.length = Mb;
+        const eb = this.uniformInts;
+        eb[3] = this.staleAll ? 5 : Mb / 4;
+        for (let Hb = 0; Hb < 4; Hb++)
+          for (let bb = 0; bb < 3; bb++) eb[16 + 4 * Hb + bb] = 4 * Hb < Mb ? wb[4 * Hb + bb] * kw : 0
       }
       writeUniform() {
-        const dd = this.uniformInts;
-        let Od = this.uniformWritten;
-        if (Od) {
-          let md = !0;
-          for (let Wd = 0; Wd < dd.length && md; Wd++) md = dd[Wd] === Od[Wd];
-          if (md) return
+        const bb = this.uniformInts;
+        let wb = this.uniformWritten;
+        if (wb) {
+          let Mb = !0;
+          for (let eb = 0; eb < bb.length && Mb; eb++) Mb = bb[eb] === wb[eb];
+          if (Mb) return
         }
-        Od ??= this.uniformWritten = new Int32Array(dd.length), Od.set(dd), this.device.queue.writeBuffer(this.uniform, 0, this.uniformData)
+        wb ??= this.uniformWritten = new Int32Array(bb.length), wb.set(bb), this.device.queue.writeBuffer(this.uniform, 0, this.uniformData)
       }
-      traceEntities(dd) {
-        this.entitiesThisFrame && this.entities.update(this.uniformFloats, 8, dd)
+      traceEntities(bb) {
+        this.entitiesThisFrame && this.entities.update(this.uniformFloats, 8, bb)
       }
-      computeVolume(dd, Od, md) {
-        const Wd = this.buildVolumePass();
-        if (!Wd) return void(this.volumeHolds = null);
-        const Fd = (0, Im.q)(this.volumeHolds, dd);
-        this.volumeHolds = dd;
-        const Rd = 1 === Fd.length && Fd[0].size.every(((dd, Od) => dd === Im.o[Od])),
-          Xd = this.sweptChunk,
-          Kd = this.sweptLight,
-          hd = Od[0] !== Kd[0] || Od[1] !== Kd[1] || Od[2] !== Kd[2],
-          vd = md[0] !== Xd[0] || md[1] !== Xd[1] || md[2] !== Xd[2],
-          Qd = hd && ph(Od, Kd);
-        if ((Rd || this.written || vd || Qd) && (this.fastLeft = Im.e), Rd || this.written || hd || vd) {
+      computeVolume(bb, wb, Mb) {
+        const eb = this.buildVolumePass();
+        if (!eb) return void(this.volumeHolds = null);
+        const Hb = (0, iM.v)(this.volumeHolds, bb);
+        this.volumeHolds = bb;
+        const pb = 1 === Hb.length && Hb[0].size.every(((bb, wb) => bb === iM.p[wb])),
+          Vb = this.sweptChunk,
+          gb = this.sweptLight,
+          lb = wb[0] !== gb[0] || wb[1] !== gb[1] || wb[2] !== gb[2],
+          Lb = Mb[0] !== Vb[0] || Mb[1] !== Vb[1] || Mb[2] !== Vb[2],
+          Ib = lb && sl(wb, gb);
+        if ((pb || this.written || Lb || Ib) && (this.fastLeft = iM.f), pb || this.written || lb || Lb) {
           this.written = !1;
-          for (let dd = 0; dd < 3; dd++) Xd[dd] = md[dd], Kd[dd] = Od[dd];
-          this.sweepLeft = Rd ? 0 : Im.e
+          for (let bb = 0; bb < 3; bb++) Vb[bb] = Mb[bb], gb[bb] = wb[bb];
+          this.sweepLeft = pb ? 0 : iM.f
         }
-        if (Rd ? this.swept += Im.e : this.sweepLeft > 0 && (this.fastLeft > 0 || ++this.paced % 2 === 0) && (this.fastLeft = Math.max(this.fastLeft - 1, 0), this.sweepLeft--, Fd.push(...(0, Im.v)(dd, this.slice)), this.slice = (this.slice + 1) % Im.e, this.swept++), 0 === Fd.length) return;
-        const td = (0, Im.y)(this.workData, Od, Fd);
+        if (pb ? this.swept += iM.f : this.sweepLeft > 0 && (this.fastLeft > 0 || ++this.paced % 2 === 0) && (this.fastLeft = Math.max(this.fastLeft - 1, 0), this.sweepLeft--, Hb.push(...(0, iM.y)(bb, this.slice)), this.slice = (this.slice + 1) % iM.f, this.swept++), 0 === Hb.length) return;
+        const Ob = (0, iM.C)(this.workData, wb, Hb);
         this.device.queue.writeBuffer(this.work, 0, this.workData);
-        const od = this.device.createCommandEncoder({
+        const Ub = this.device.createCommandEncoder({
             label: "sun-shadow-volume"
           }),
-          Nd = od.beginComputePass({
+          tb = Ub.beginComputePass({
             label: "sun-shadow-volume"
           });
-        Nd.setPipeline(Wd.pipeline), Nd.setBindGroup(Zm.group, Wd.bindGroup), Nd.dispatchWorkgroups(Math.ceil(td / Im.i)), Nd.end(), this.device.queue.submit([od.finish()])
+        tb.setPipeline(eb.pipeline), tb.setBindGroup(PM.group, eb.bindGroup), tb.dispatchWorkgroups(Math.ceil(Ob / iM.j)), tb.end(), this.device.queue.submit([Ub.finish()])
       }
       buildVolumePass() {
         if (this.volumePass || this.volumePassStarted) return this.volumePass;
         this.volumePassStarted = !0;
-        const dd = Zm,
-          Od = GPUShaderStage.COMPUTE,
-          md = this.device.createBindGroupLayout({
+        const bb = PM,
+          wb = GPUShaderStage.COMPUTE,
+          Mb = this.device.createBindGroupLayout({
             label: "sun-shadow-volume",
             entries: [{
-              binding: dd.uniform,
-              visibility: Od,
+              binding: bb.uniform,
+              visibility: wb,
               buffer: {
                 type: "uniform"
               }
             }, {
-              binding: dd.QN,
-              visibility: Od,
+              binding: bb.GU,
+              visibility: wb,
               buffer: {
                 type: "read-only-storage"
               }
             }, {
-              binding: dd.special,
-              visibility: Od,
+              binding: bb.special,
+              visibility: wb,
               buffer: {
                 type: "read-only-storage"
               }
             }, {
-              binding: dd.work,
-              visibility: Od,
+              binding: bb.work,
+              visibility: wb,
               buffer: {
                 type: "uniform"
               }
             }, {
-              binding: dd.volume,
-              visibility: Od,
+              binding: bb.volume,
+              visibility: wb,
               storageTexture: {
                 access: "write-only",
                 format: "rgba8unorm",
@@ -7867,31 +7867,31 @@ export const modules = {
               }
             }]
           }),
-          Wd = this.device.createBindGroup({
+          eb = this.device.createBindGroup({
             label: "sun-shadow-volume",
-            layout: md,
+            layout: Mb,
             entries: [{
-              binding: dd.uniform,
+              binding: bb.uniform,
               resource: {
                 buffer: this.uniform
               }
             }, {
-              binding: dd.QN,
+              binding: bb.GU,
               resource: {
                 buffer: this.voxelBuffer
               }
             }, {
-              binding: dd.special,
+              binding: bb.special,
               resource: {
                 buffer: this.special
               }
             }, {
-              binding: dd.work,
+              binding: bb.work,
               resource: {
                 buffer: this.work
               }
             }, {
-              binding: dd.volume,
+              binding: bb.volume,
               resource: this.volumeView
             }]
           });
@@ -7899,97 +7899,97 @@ export const modules = {
           label: "sun-shadow-volume",
           layout: this.device.createPipelineLayout({
             label: "sun-shadow-volume",
-            bindGroupLayouts: [md]
+            bindGroupLayouts: [Mb]
           }),
           compute: {
             module: this.device.createShaderModule({
               label: "sun-shadow-volume",
-              code: km()
+              code: nM()
             }),
             entryPoint: "main"
           }
-        }).then((dd => {
+        }).then((bb => {
           this.volumePass = {
-            pipeline: dd,
-            bindGroup: Wd
+            pipeline: bb,
+            bindGroup: eb
           }
-        }), (dd => {
-          this.volumePassFailed = !0, console.warn(`Lite: sun shadows' visibility volume didn't build, so air shadows and far traces are lit: ${String(dd)}`)
+        }), (bb => {
+          this.volumePassFailed = !0, console.warn(`Lite: sun shadows' visibility volume didn't build, so air shadows and far traces are lit: ${String(bb)}`)
         })), null
       }
-      start(dd) {
+      start(bb) {
         if (this.window) return this.window;
-        const Od = (dd, Od) => {
-          this.written = !0, this.device.queue.writeBuffer(this.special, 4 * dd, Od)
+        const wb = (bb, wb) => {
+          this.written = !0, this.device.queue.writeBuffer(this.special, 4 * bb, wb)
         };
-        this.casters = new th(((dd, md) => {
-          this.castersWritten = !0, Od(dd, md)
-        }), Yh);
-        const md = new Hh(this.casters, ((dd, Od) => {
-          this.written = !0, this.device.queue.writeBuffer(this.voxelBuffer, 4 * dd, Od)
-        }), Od);
-        md.encoded = dd => {
-          this.markStale(dd)
+        this.casters = new Il(((bb, Mb) => {
+          this.castersWritten = !0, wb(bb, Mb)
+        }), ml);
+        const Mb = new Cl(this.casters, ((bb, wb) => {
+          this.written = !0, this.device.queue.writeBuffer(this.voxelBuffer, 4 * bb, wb)
+        }), wb);
+        Mb.encoded = bb => {
+          this.markStale(bb)
         };
-        const Wd = dd => {
-          md.chunkAdded(dd)
+        const eb = bb => {
+          Mb.chunkAdded(bb)
         };
-        return dd.Bt.on("chunkAdded", Wd), this.stopWindow = () => {
-          dd.Bt.removeListener("chunkAdded", Wd)
-        }, this.window = md, md
+        return bb.XO.on("chunkAdded", eb), this.stopWindow = () => {
+          bb.XO.removeListener("chunkAdded", eb)
+        }, this.window = Mb, Mb
       }
     }
-    var wh = md(40289),
-      ah = md(40293);
-    const Eh = 0,
-      Jh = 3,
-      Uh = 4,
-      xh = 5;
+    var zl = Mb(39992),
+      Xl = Mb(39998);
+    const xl = 0,
+      jl = 3,
+      Kl = 4,
+      rl = 5;
 
-    function Bh(dd, Od, md, Wd) {
-      dd.drawOffset(Od, Wd + Eh), Od[Wd + Jh] = dd.drawTime(), md[Wd + Uh] = dd.ring.drawStart(), md[Wd + xh] = dd.ring.drawCount()
+    function Rl(bb, wb, Mb, eb) {
+      bb.drawOffset(wb, eb + xl), wb[eb + jl] = bb.drawTime(), Mb[eb + Kl] = bb.ring.drawStart(), Mb[eb + rl] = bb.ring.drawCount()
     }
-    const Sh = `\n${zW}\n\nconst MAX_STOPS = ${ah.b}u;\n\nstruct SystemUniforms {\n\tgravity: vec3f,\n\tcolorCount: u32,\n\tcolorDead: vec4f,\n\tvelocityCount: u32,\n\tremapCount: u32,\n\tramp: u32,\n\tcolorPositions: array<vec4f, ${ah.b/4}>,\n\tcolor1: array<vec4f, ${ah.b}>,\n\tcolor2: array<vec4f, ${ah.b}>,\n\t// Position, factor and factor2 per stop.\n\tvelocity: array<vec4f, ${ah.b}>,\n\t// Position, min and max per stop.\n\tremap: array<vec4f, ${ah.b}>,\n}\n\n// A particle as spawned: position relative to the frame offset and spawn time; direction times emit power and\n// lifetime; size, random seed and colour.\nstruct Particle {\n\tspawn: vec4f,\n\tvelocity: vec4f,\n\tsize: f32,\n\tseed: u32,\n\tcolour: vec4f,\n}\n\nstruct SystemFrame {\n\toffset: vec3f,\n\tnow: f32,\n\t// The slot drawn first (the oldest), and the slots in use.\n\tstart: u32,\n\tcount: u32,\n}\n\n@group(1) @binding(0) var<uniform> system: SystemUniforms;\n@group(1) @binding(1) var<storage, read> particles: array<Particle>;\n@group(1) @binding(2) var diffuseSampler: sampler;\n@group(1) @binding(3) var diffuseTexture: texture_2d<f32>;\n@group(1) @binding(4) var rampSampler: sampler;\n@group(1) @binding(5) var rampTexture: texture_2d<f32>;\n@group(2) @binding(0) var<uniform> frame: SystemFrame;\n\n// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\noverride MULTIPLY_PASS: bool = false;\n\nstruct VertexOutput {\n\t@builtin(position) position: vec4f,\n\t@location(0) uv: vec2f,\n\t@location(1) colour: vec4f,\n\t@location(2) remap: vec4f,\n}\n\nfn hash(v: u32) -> u32 {\n\tlet state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tlet top = state >> 28u;\n\tlet bits0 = state >> 4u;\n\tlet bits1 = select(bits0, bits0 >> 1u, (top & 1u) != 0u);\n\tlet bits2 = select(bits1, bits1 >> 2u, (top & 2u) != 0u);\n\tlet bits3 = select(bits2, bits2 >> 4u, (top & 4u) != 0u);\n\tlet word = (select(bits3, bits3 >> 8u, (top & 8u) != 0u) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfn random(seed: u32, stop: u32) -> f32 {\n\treturn f32(hash(seed ^ (stop * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfn colourPosition(i: u32) -> f32 {\n\treturn system.colorPositions[i / 4u][i % 4u];\n}\n\nfn stopColour(i: u32, seed: u32) -> vec4f {\n\treturn mix(system.color1[i], system.color2[i], random(seed, i));\n}\n\nfn velocityFactor(i: u32, seed: u32) -> f32 {\n\tlet stop = system.velocity[i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\n// _ProcessColorGradients / _ProcessColor at the particle's age. Babylon's GetCurrentGradient picks stop 0's pair\n// below the first stop, where a particle keeps the colour it was given for the next stop (stop 1's pick); the first\n// segment containing the ratio; or else the last stop.\nfn colourAt(p: Particle, age: f32, ratio: f32, seed: u32) -> vec4f {\n\tlet n = system.colorCount;\n\tvar colour: vec4f;\n\tif (n == 0u) {\n\t\tcolour = mix(p.colour, system.colorDead, ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0u, seed);\n\t} else if (ratio < colourPosition(0u)) {\n\t\tcolour = stopColour(min(1u, n - 1u), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1u, seed);\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = colourPosition(i);\n\t\t\tlet b = colourPosition(i + 1u);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tlet scale = select(0.0, (ratio - a) / (b - a), b > a);\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1u, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\n// The integral of (alpha + beta s)(d + g s) over s0..s1: the distance travelled while the velocity factor is\n// alpha + beta s at age s and the direction d + g s.\nfn travel(alpha: f32, beta: f32, d: vec3f, g: vec3f, s0: f32, s1: f32) -> vec3f {\n\tlet ds = s1 - s0;\n\tlet ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tlet ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\n// Where the particle has moved by its age: each frame Babylon moves it by its direction times the step and the\n// velocity factor, then adds gravity times the step to the direction. The factor is piecewise linear in the age,\n// picked as colourAt picks colours.\nfn displacement(d: vec3f, age: f32, life: f32, seed: u32) -> vec3f {\n\tlet g = system.gravity;\n\tlet n = system.velocityCount;\n\tif (n == 0u) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvar total = vec3f(0.0);\n\tlet first = system.velocity[0u].x * life;\n\tlet beforeFirst = min(age, first);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1u, n - 1u), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (var i = 0u; i + 1u < n; i++) {\n\t\tlet a = system.velocity[i].x * life;\n\t\tlet b = system.velocity[i + 1u].x * life;\n\t\tlet lo = max(a, 0.0);\n\t\tlet hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tlet fa = velocityFactor(i, seed);\n\t\t\tlet beta = (velocityFactor(i + 1u, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tlet afterLast = max(system.velocity[n - 1u].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1u, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\n// _ProcessRemapGradients: the colour remap's min and range at the ratio; a new particle has (0, 1, 0, 1).\nfn remapAt(age: f32, ratio: f32) -> vec4f {\n\tlet n = system.remapCount;\n\tif (n == 0u || age == 0.0) {\n\t\treturn vec4f(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvar stop = system.remap[n - 1u].yz;\n\tif (ratio < system.remap[0u].x) {\n\t\tstop = system.remap[0u].yz;\n\t} else {\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = system.remap[i];\n\t\t\tlet b = system.remap[i + 1u];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, select(0.0, (ratio - a.x) / (b.x - a.x), b.x > a.x));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4f(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\n@vertex\nfn mainVertex(@builtin(vertex_index) vertexIndex: u32, @builtin(instance_index) instanceIndex: u32) -> VertexOutput {\n\tvar out: VertexOutput;\n\t// One wrap, not %, as glParticleShader.ts picks the slot, since start < count and a draw's instances are count\n\t// (gpuParticleRing.ts)\n\tlet count = frame.count;\n\tlet unwrapped = frame.start + instanceIndex;\n\tlet p = particles[select(unwrapped, unwrapped - count, unwrapped >= count)];\n\tlet age = frame.now - p.spawn.w;\n\tlet life = p.velocity.w;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tout.position = vec4f(0.0, 0.0, 2.0, 1.0);\n\t\treturn out;\n\t}\n\tlet ratio = age / life;\n\tlet seed = p.seed;\n\tlet centre = frame.offset + p.spawn.xyz + displacement(p.velocity.xyz, age, life, seed);\n\t// ThinParticleSystem's billboard: the corner offset in view space, here along the camera's right and up.\n\tlet corner = vec2f(f32(vertexIndex & 1u), f32(vertexIndex >> 1u));\n\tlet offset = (corner - 0.5) * p.size;\n\tlet right = vec3f(scene.view[0][0], scene.view[1][0], scene.view[2][0]);\n\tlet up = vec3f(scene.view[0][1], scene.view[1][1], scene.view[2][1]);\n\tout.position = liteWorldLayer(scene.viewProjection * vec4f(centre + right * offset.x + up * offset.y, 1.0));\n\tout.uv = corner;\n\tout.colour = colourAt(p, age, ratio, seed);\n\tout.remap = remapAt(age, ratio);\n\treturn out;\n}\n\n// Babylon's particles.fragment with the default texture mask, without fog or image processing.\n@fragment\nfn mainFragment(in: VertexOutput) -> @location(0) vec4f {\n\tlet textureColour = textureSample(diffuseTexture, diffuseSampler, in.uv);\n\tvar colour = textureColour * in.colour;\n\tif (system.ramp != 0u) {\n\t\tlet index = clamp((colour.a - in.remap.x) / in.remap.y, 0.0, 1.0);\n\t\tlet rampColour = textureSample(rampTexture, rampSampler, vec2f(1.0 - index, 0.0));\n\t\tcolour = vec4f(colour.rgb * rampColour.rgb, clamp((colour.a * rampColour.a - in.remap.z) / in.remap.w, 0.0, 1.0));\n\t}\n\tif (MULTIPLY_PASS) {\n\t\tlet sourceAlpha = in.colour.a * textureColour.a;\n\t\tcolour = vec4f(colour.rgb * sourceAlpha + vec3f(1.0 - sourceAlpha), colour.a);\n\t}\n\treturn colour;\n}\n`;
-    var sh = md(54026);
-    class uh {
-      constructor(dd, Od, md, Wd) {
-        this.device = dd, this.system = Od, this.frameIndex = md, this.bindings = Wd, this.ring = void 0, this.uniforms = void 0, this.uniformBits = null, this.rampTexels = (0, sh.h)(), this.ramp = null, this.rampView = null, this.bindGroup = null, this.boundView = null, this.boundSampler = null, this.boundRamp = null, this.texture = null, this.pipelines = [], this.count = 0, this.upload = (dd, Od) => {
-          this.device.queue.writeBuffer(this.ring, dd * ah.e * 4, this.system.ring.records, dd * ah.e, (Od - dd) * ah.e)
+    const Dl = `\n${ve}\n\nconst MAX_STOPS = ${Xl.d}u;\n\nstruct SystemUniforms {\n\tgravity: vec3f,\n\tcolorCount: u32,\n\tcolorDead: vec4f,\n\tvelocityCount: u32,\n\tremapCount: u32,\n\tramp: u32,\n\tcolorPositions: array<vec4f, ${Xl.d/4}>,\n\tcolor1: array<vec4f, ${Xl.d}>,\n\tcolor2: array<vec4f, ${Xl.d}>,\n\t// Position, factor and factor2 per stop.\n\tvelocity: array<vec4f, ${Xl.d}>,\n\t// Position, min and max per stop.\n\tremap: array<vec4f, ${Xl.d}>,\n}\n\n// A particle as spawned: position relative to the frame offset and spawn time; direction times emit power and\n// lifetime; size, random seed and colour.\nstruct Particle {\n\tspawn: vec4f,\n\tvelocity: vec4f,\n\tsize: f32,\n\tseed: u32,\n\tcolour: vec4f,\n}\n\nstruct SystemFrame {\n\toffset: vec3f,\n\tnow: f32,\n\t// The slot drawn first (the oldest), and the slots in use.\n\tstart: u32,\n\tcount: u32,\n}\n\n@group(1) @binding(0) var<uniform> system: SystemUniforms;\n@group(1) @binding(1) var<storage, read> particles: array<Particle>;\n@group(1) @binding(2) var diffuseSampler: sampler;\n@group(1) @binding(3) var diffuseTexture: texture_2d<f32>;\n@group(1) @binding(4) var rampSampler: sampler;\n@group(1) @binding(5) var rampTexture: texture_2d<f32>;\n@group(2) @binding(0) var<uniform> frame: SystemFrame;\n\n// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\noverride MULTIPLY_PASS: bool = false;\n\nstruct VertexOutput {\n\t@builtin(position) position: vec4f,\n\t@location(0) uv: vec2f,\n\t@location(1) colour: vec4f,\n\t@location(2) remap: vec4f,\n}\n\nfn hash(v: u32) -> u32 {\n\tlet state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tlet top = state >> 28u;\n\tlet bits0 = state >> 4u;\n\tlet bits1 = select(bits0, bits0 >> 1u, (top & 1u) != 0u);\n\tlet bits2 = select(bits1, bits1 >> 2u, (top & 2u) != 0u);\n\tlet bits3 = select(bits2, bits2 >> 4u, (top & 4u) != 0u);\n\tlet word = (select(bits3, bits3 >> 8u, (top & 8u) != 0u) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfn random(seed: u32, stop: u32) -> f32 {\n\treturn f32(hash(seed ^ (stop * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfn colourPosition(i: u32) -> f32 {\n\treturn system.colorPositions[i / 4u][i % 4u];\n}\n\nfn stopColour(i: u32, seed: u32) -> vec4f {\n\treturn mix(system.color1[i], system.color2[i], random(seed, i));\n}\n\nfn velocityFactor(i: u32, seed: u32) -> f32 {\n\tlet stop = system.velocity[i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\n// _ProcessColorGradients / _ProcessColor at the particle's age. Babylon's GetCurrentGradient picks stop 0's pair\n// below the first stop, where a particle keeps the colour it was given for the next stop (stop 1's pick); the first\n// segment containing the ratio; or else the last stop.\nfn colourAt(p: Particle, age: f32, ratio: f32, seed: u32) -> vec4f {\n\tlet n = system.colorCount;\n\tvar colour: vec4f;\n\tif (n == 0u) {\n\t\tcolour = mix(p.colour, system.colorDead, ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0u, seed);\n\t} else if (ratio < colourPosition(0u)) {\n\t\tcolour = stopColour(min(1u, n - 1u), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1u, seed);\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = colourPosition(i);\n\t\t\tlet b = colourPosition(i + 1u);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tlet scale = select(0.0, (ratio - a) / (b - a), b > a);\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1u, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\n// The integral of (alpha + beta s)(d + g s) over s0..s1: the distance travelled while the velocity factor is\n// alpha + beta s at age s and the direction d + g s.\nfn travel(alpha: f32, beta: f32, d: vec3f, g: vec3f, s0: f32, s1: f32) -> vec3f {\n\tlet ds = s1 - s0;\n\tlet ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tlet ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\n// Where the particle has moved by its age: each frame Babylon moves it by its direction times the step and the\n// velocity factor, then adds gravity times the step to the direction. The factor is piecewise linear in the age,\n// picked as colourAt picks colours.\nfn displacement(d: vec3f, age: f32, life: f32, seed: u32) -> vec3f {\n\tlet g = system.gravity;\n\tlet n = system.velocityCount;\n\tif (n == 0u) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvar total = vec3f(0.0);\n\tlet first = system.velocity[0u].x * life;\n\tlet beforeFirst = min(age, first);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1u, n - 1u), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (var i = 0u; i + 1u < n; i++) {\n\t\tlet a = system.velocity[i].x * life;\n\t\tlet b = system.velocity[i + 1u].x * life;\n\t\tlet lo = max(a, 0.0);\n\t\tlet hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tlet fa = velocityFactor(i, seed);\n\t\t\tlet beta = (velocityFactor(i + 1u, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tlet afterLast = max(system.velocity[n - 1u].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1u, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\n// _ProcessRemapGradients: the colour remap's min and range at the ratio; a new particle has (0, 1, 0, 1).\nfn remapAt(age: f32, ratio: f32) -> vec4f {\n\tlet n = system.remapCount;\n\tif (n == 0u || age == 0.0) {\n\t\treturn vec4f(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvar stop = system.remap[n - 1u].yz;\n\tif (ratio < system.remap[0u].x) {\n\t\tstop = system.remap[0u].yz;\n\t} else {\n\t\tfor (var i = 0u; i + 1u < n; i++) {\n\t\t\tlet a = system.remap[i];\n\t\t\tlet b = system.remap[i + 1u];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, select(0.0, (ratio - a.x) / (b.x - a.x), b.x > a.x));\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4f(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\n@vertex\nfn mainVertex(@builtin(vertex_index) vertexIndex: u32, @builtin(instance_index) instanceIndex: u32) -> VertexOutput {\n\tvar out: VertexOutput;\n\t// One wrap, not %, as glParticleShader.ts picks the slot, since start < count and a draw's instances are count\n\t// (gpuParticleRing.ts)\n\tlet count = frame.count;\n\tlet unwrapped = frame.start + instanceIndex;\n\tlet p = particles[select(unwrapped, unwrapped - count, unwrapped >= count)];\n\tlet age = frame.now - p.spawn.w;\n\tlet life = p.velocity.w;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tout.position = vec4f(0.0, 0.0, 2.0, 1.0);\n\t\treturn out;\n\t}\n\tlet ratio = age / life;\n\tlet seed = p.seed;\n\tlet centre = frame.offset + p.spawn.xyz + displacement(p.velocity.xyz, age, life, seed);\n\t// ThinParticleSystem's billboard: the corner offset in view space, here along the camera's right and up.\n\tlet corner = vec2f(f32(vertexIndex & 1u), f32(vertexIndex >> 1u));\n\tlet offset = (corner - 0.5) * p.size;\n\tlet right = vec3f(scene.view[0][0], scene.view[1][0], scene.view[2][0]);\n\tlet up = vec3f(scene.view[0][1], scene.view[1][1], scene.view[2][1]);\n\tout.position = liteWorldLayer(scene.viewProjection * vec4f(centre + right * offset.x + up * offset.y, 1.0));\n\tout.uv = corner;\n\tout.colour = colourAt(p, age, ratio, seed);\n\tout.remap = remapAt(age, ratio);\n\treturn out;\n}\n\n// Babylon's particles.fragment with the default texture mask, without fog or image processing.\n@fragment\nfn mainFragment(in: VertexOutput) -> @location(0) vec4f {\n\tlet textureColour = textureSample(diffuseTexture, diffuseSampler, in.uv);\n\tvar colour = textureColour * in.colour;\n\tif (system.ramp != 0u) {\n\t\tlet index = clamp((colour.a - in.remap.x) / in.remap.y, 0.0, 1.0);\n\t\tlet rampColour = textureSample(rampTexture, rampSampler, vec2f(1.0 - index, 0.0));\n\t\tcolour = vec4f(colour.rgb * rampColour.rgb, clamp((colour.a * rampColour.a - in.remap.z) / in.remap.w, 0.0, 1.0));\n\t}\n\tif (MULTIPLY_PASS) {\n\t\tlet sourceAlpha = in.colour.a * textureColour.a;\n\t\tcolour = vec4f(colour.rgb * sourceAlpha + vec3f(1.0 - sourceAlpha), colour.a);\n\t}\n\treturn colour;\n}\n`;
+    var cl = Mb(53794);
+    class Yl {
+      constructor(bb, wb, Mb, eb) {
+        this.device = bb, this.system = wb, this.frameIndex = Mb, this.bindings = eb, this.ring = void 0, this.uniforms = void 0, this.uniformBits = null, this.rampTexels = (0, cl.f)(), this.ramp = null, this.rampView = null, this.bindGroup = null, this.boundView = null, this.boundSampler = null, this.boundRamp = null, this.texture = null, this.pipelines = [], this.count = 0, this.upload = (bb, wb) => {
+          this.device.queue.writeBuffer(this.ring, bb * Xl.g * 4, this.system.ring.records, bb * Xl.g, (wb - bb) * Xl.g)
         };
         const {
-          name: Fd
-        } = Od;
-        this.ring = dd.createBuffer({
-          label: `particles-${Fd}`,
-          size: Od.ring.records.byteLength,
+          name: Hb
+        } = wb;
+        this.ring = bb.createBuffer({
+          label: `particles-${Hb}`,
+          size: wb.ring.records.byteLength,
           usage: GPUBufferUsage.STORAGE | GPUBufferUsage.COPY_DST
-        }), this.uniforms = dd.createBuffer({
-          label: `particles-uniforms-${Fd}`,
-          size: 4 * ah.m,
+        }), this.uniforms = bb.createBuffer({
+          label: `particles-uniforms-${Hb}`,
+          size: 4 * Xl.r,
           usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST
         })
       }
-      writeUniforms(dd) {
-        const Od = (0, sh.e)(this.system, this.uniformBits, dd);
-        Od && (this.uniformBits = Od, this.device.queue.writeBuffer(this.uniforms, 0, Od))
+      writeUniforms(bb) {
+        const wb = (0, cl.b)(this.system, this.uniformBits, bb);
+        wb && (this.uniformBits = wb, this.device.queue.writeBuffer(this.uniforms, 0, wb))
       }
       bind() {
         const {
-          system: dd
-        } = this, Od = this.texture;
-        (0, sh.p)(dd, this.rampTexels) && this.rampTexels.key.length > 0 && (this.ramp || (this.ramp = this.device.createTexture({
-          label: `particles-ramp-${dd.name}`,
-          size: [ah.k, 1],
+          system: bb
+        } = this, wb = this.texture;
+        (0, cl.m)(bb, this.rampTexels) && this.rampTexels.key.length > 0 && (this.ramp || (this.ramp = this.device.createTexture({
+          label: `particles-ramp-${bb.name}`,
+          size: [Xl.k, 1],
           format: "rgba8unorm",
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         }), this.rampView = this.ramp.createView()), this.device.queue.writeTexture({
           texture: this.ramp
         }, this.rampTexels.texels, {
-          bytesPerRow: 4 * ah.k
-        }, [ah.k, 1]));
-        const md = this.rampTexels.key.length > 0 && this.rampView ? this.rampView : this.bindings.whiteRamp;
-        this.bindGroup && this.boundView === Od.view && this.boundSampler === Od.sampler && this.boundRamp === md || (this.boundView = Od.view, this.boundSampler = Od.sampler, this.boundRamp = md, this.bindGroup = this.device.createBindGroup({
-          label: `particles-${dd.name}`,
+          bytesPerRow: 4 * Xl.k
+        }, [Xl.k, 1]));
+        const Mb = this.rampTexels.key.length > 0 && this.rampView ? this.rampView : this.bindings.whiteRamp;
+        this.bindGroup && this.boundView === wb.view && this.boundSampler === wb.sampler && this.boundRamp === Mb || (this.boundView = wb.view, this.boundSampler = wb.sampler, this.boundRamp = Mb, this.bindGroup = this.device.createBindGroup({
+          label: `particles-${bb.name}`,
           layout: this.bindings.layout,
           entries: [{
             binding: 0,
@@ -8003,49 +8003,49 @@ export const modules = {
             }
           }, {
             binding: 2,
-            resource: Od.sampler
+            resource: wb.sampler
           }, {
             binding: 3,
-            resource: Od.view
+            resource: wb.view
           }, {
             binding: 4,
             resource: this.bindings.rampSampler
           }, {
             binding: 5,
-            resource: md
+            resource: Mb
           }]
         }))
       }
       destroy() {
-        var dd;
-        this.ring.destroy(), this.uniforms.destroy(), null === (dd = this.ramp) || void 0 === dd || dd.destroy()
+        var bb;
+        this.ring.destroy(), this.uniforms.destroy(), null === (bb = this.ramp) || void 0 === bb || bb.destroy()
       }
     }
-    class Vh {
-      constructor(dd, Od) {
-        this.device = dd, this.resources = Od, this.renderable = void 0, this.systems = new Map, this.draws = [], this.bindings = void 0, this.frameLayout = void 0, this.pipelineLayout = void 0, this.module = void 0, this.pipelines = new Map, this.frameData = new Float32Array(4096), this.frameBits = new Uint32Array(this.frameData.buffer), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.freeFrameIndices = [], this.nextFrameIndex = 0, this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.warnOnce = (0, iO.b)(), this.build(), this.renderable = {
+    class Zl {
+      constructor(bb, wb) {
+        this.device = bb, this.resources = wb, this.renderable = void 0, this.systems = new Map, this.draws = [], this.bindings = void 0, this.frameLayout = void 0, this.pipelineLayout = void 0, this.module = void 0, this.pipelines = new Map, this.frameData = new Float32Array(4096), this.frameBits = new Uint32Array(this.frameData.buffer), this.frameBuffer = void 0, this.frameBindGroup = void 0, this.freeFrameIndices = [], this.nextFrameIndex = 0, this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.warnOnce = (0, fw.d)(), this.build(), this.renderable = {
           order: 251,
           isTransparent: !0,
           _worldCenter: [0, 0, 0],
-          bind: (dd, Od) => (this.bindTarget(Od), {
+          bind: (bb, wb) => (this.bindTarget(wb), {
             renderable: this.renderable,
-            pipeline: sO(this.device, Od),
-            draw: dd => Od === this.preparedTarget ? this.draw(dd) : 0
+            pipeline: Dw(this.device, wb),
+            draw: bb => wb === this.preparedTarget ? this.draw(bb) : 0
           })
         }
       }
-      rebind(dd) {
-        this.device = dd, this.build(), this.pipelines.clear(), this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.draws.length = 0;
-        for (const [Od, md] of this.systems) {
-          const Wd = new uh(dd, Od, md.frameIndex, this.bindings),
-            Fd = Od.ring.drawCount();
-          Fd > 0 && Wd.upload(0, Fd), this.systems.set(Od, Wd)
+      rebind(bb) {
+        this.device = bb, this.build(), this.pipelines.clear(), this.target = null, this.targetPipelines = null, this.preparedTarget = null, this.draws.length = 0;
+        for (const [wb, Mb] of this.systems) {
+          const eb = new Yl(bb, wb, Mb.frameIndex, this.bindings),
+            Hb = wb.ring.drawCount();
+          Hb > 0 && eb.upload(0, Hb), this.systems.set(wb, eb)
         }
       }
       build() {
         const {
-          device: dd
-        } = this, Od = dd.createBindGroupLayout({
+          device: bb
+        } = this, wb = bb.createBindGroupLayout({
           label: "particles-system",
           entries: [{
             binding: 0,
@@ -8085,7 +8085,7 @@ export const modules = {
             }
           }]
         });
-        this.frameLayout = dd.createBindGroupLayout({
+        this.frameLayout = bb.createBindGroupLayout({
           label: "particles-frame",
           entries: [{
             binding: 0,
@@ -8095,152 +8095,152 @@ export const modules = {
               hasDynamicOffset: !0
             }
           }]
-        }), this.pipelineLayout = dd.createPipelineLayout({
-          bindGroupLayouts: [JO(dd), Od, this.frameLayout]
-        }), this.module = dd.createShaderModule({
+        }), this.pipelineLayout = bb.createPipelineLayout({
+          bindGroupLayouts: [xw(bb), wb, this.frameLayout]
+        }), this.module = bb.createShaderModule({
           label: "particles",
-          code: Sh
+          code: Dl
         });
-        const md = dd.createTexture({
+        const Mb = bb.createTexture({
           label: "particles-no-ramp",
           size: [1, 1],
           format: "rgba8unorm",
           usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST
         });
-        dd.queue.writeTexture({
-          texture: md
+        bb.queue.writeTexture({
+          texture: Mb
         }, new Uint8Array([255, 255, 255, 255]), {
           bytesPerRow: 4
         }, [1, 1]), this.bindings = {
-          layout: Od,
-          rampSampler: dd.createSampler({
+          layout: wb,
+          rampSampler: bb.createSampler({
             label: "particles-ramp",
             magFilter: "nearest",
             minFilter: "nearest",
             addressModeU: "repeat",
             addressModeV: "repeat"
           }),
-          whiteRamp: md.createView()
+          whiteRamp: Mb.createView()
         }, this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
       }
-      get fRd() {
+      get kpb() {
         return this.systems.size
       }
       reset() {
-        for (const dd of this.systems.keys()) dd.reset()
+        for (const bb of this.systems.keys()) bb.reset()
       }
       describePendingWork() {
-        return (0, wh.f)(this.systems.keys(), "Lite")
+        return (0, zl.g)(this.systems.keys(), "Lite")
       }
-      wG(dd, Od) {
-        const md = new wh.b(dd, Od, this);
-        return this.systems.set(md, new uh(this.device, md, this.allocateFrameIndex(), this.bindings)), md
+      lN(bb, wb) {
+        const Mb = new zl.e(bb, wb, this);
+        return this.systems.set(Mb, new Yl(this.device, Mb, this.allocateFrameIndex(), this.bindings)), Mb
       }
-      XOd(dd, Od) {
-        for (const md of this.systems.keys()) md.XOd(dd, Od)
+      Uwb(bb, wb) {
+        for (const Mb of this.systems.keys()) Mb.Uwb(bb, wb)
       }
-      canDraw(dd) {
-        const Od = this.systems.get(dd),
-          md = dd.texture ? this.resources.boundTexture(dd.texture) : null;
-        if (!Od || !md || !this.targetPipelines) return !1;
-        if (Od.texture = md, Od.pipelines.length = 0, !XO(dd.blendMode)) return this.warnOnce(`blend:${dd.blendMode}`, `particle blend mode ${dd.blendMode} is not drawn (${dd.name})`), !0;
-        const Wd = (0, ld.i)(dd.blendMode);
-        for (const Fd of Wd) {
-          const dd = this.pipelineFor(Fd);
-          if (!1 === dd) return Od.pipelines.length = 0, !0;
-          dd && Od.pipelines.push(dd)
+      canDraw(bb) {
+        const wb = this.systems.get(bb),
+          Mb = bb.texture ? this.resources.boundTexture(bb.texture) : null;
+        if (!wb || !Mb || !this.targetPipelines) return !1;
+        if (wb.texture = Mb, wb.pipelines.length = 0, !Hw(bb.blendMode)) return this.warnOnce(`blend:${bb.blendMode}`, `particle blend mode ${bb.blendMode} is not drawn (${bb.name})`), !0;
+        const eb = (0, ub.l)(bb.blendMode);
+        for (const Hb of eb) {
+          const bb = this.pipelineFor(Hb);
+          if (!1 === bb) return wb.pipelines.length = 0, !0;
+          bb && wb.pipelines.push(bb)
         }
-        return Od.pipelines.length === Wd.length
+        return wb.pipelines.length === eb.length
       }
-      disposeStopped(dd) {
-        dd.dispose()
+      disposeStopped(bb) {
+        bb.dispose()
       }
-      remove(dd) {
-        const Od = this.systems.get(dd);
-        Od && (this.systems.delete(dd), Od.destroy(), this.freeFrameIndices.push(Od.frameIndex))
+      remove(bb) {
+        const wb = this.systems.get(bb);
+        wb && (this.systems.delete(bb), wb.destroy(), this.freeFrameIndices.push(wb.frameIndex))
       }
-      prepare(dd) {
-        const Od = dd.animationRatio || 1;
-        uO(this.renderable._worldCenter, dd, xO), this.preparedTarget = this.target, this.draws.length = 0;
-        let md = 0;
-        for (const Wd of this.systems.values()) {
-          const dd = Wd.system;
-          if (!dd.animateIfActive(Od)) continue;
-          if (dd.ring.takeUploads(Wd.upload), !dd.hasLiveParticles() || 0 === Wd.pipelines.length) continue;
-          Wd.writeUniforms(this.warnOnce), Wd.bind();
-          const Fd = 64 * Wd.frameIndex;
-          Wd.count = dd.ring.drawCount(), Bh(dd, this.frameData, this.frameBits, Fd), md = Math.max(md, Fd + 64), this.draws.push(Wd)
+      prepare(bb) {
+        const wb = bb.animationRatio || 1;
+        Yw(this.renderable._worldCenter, bb, Kw), this.preparedTarget = this.target, this.draws.length = 0;
+        let Mb = 0;
+        for (const eb of this.systems.values()) {
+          const bb = eb.system;
+          if (!bb.animateIfActive(wb)) continue;
+          if (bb.ring.takeUploads(eb.upload), !bb.hasLiveParticles() || 0 === eb.pipelines.length) continue;
+          eb.writeUniforms(this.warnOnce), eb.bind();
+          const Hb = 64 * eb.frameIndex;
+          eb.count = bb.ring.drawCount(), Rl(bb, this.frameData, this.frameBits, Hb), Mb = Math.max(Mb, Hb + 64), this.draws.push(eb)
         }
-        md > 0 && this.device.queue.writeBuffer(this.frameBuffer, 0, this.frameData, 0, md)
+        Mb > 0 && this.device.queue.writeBuffer(this.frameBuffer, 0, this.frameData, 0, Mb)
       }
-      draw(dd) {
-        let Od = 0,
-          md = null;
-        for (const Wd of this.draws) {
-          dd.setBindGroup(1, Wd.bindGroup), dd.setBindGroup(2, this.frameBindGroup, [256 * Wd.frameIndex]);
-          for (const Fd of Wd.pipelines) Fd !== md && (dd.setPipeline(Fd), md = Fd), dd.draw(4, Wd.count), Od++
+      draw(bb) {
+        let wb = 0,
+          Mb = null;
+        for (const eb of this.draws) {
+          bb.setBindGroup(1, eb.bindGroup), bb.setBindGroup(2, this.frameBindGroup, [256 * eb.frameIndex]);
+          for (const Hb of eb.pipelines) Hb !== Mb && (bb.setPipeline(Hb), Mb = Hb), bb.draw(4, eb.count), wb++
         }
-        return Od
+        return wb
       }
-      bindTarget(dd) {
-        this.target = dd;
-        const Od = `${dd._colorFormat}|${dd._depthStencilFormat}|${dd._depthCompare}|${dd._sampleCount}`;
-        let md = this.pipelines.get(Od);
-        md || (md = new Map, this.pipelines.set(Od, md)), this.targetPipelines = md
+      bindTarget(bb) {
+        this.target = bb;
+        const wb = `${bb._colorFormat}|${bb._depthStencilFormat}|${bb._depthCompare}|${bb._sampleCount}`;
+        let Mb = this.pipelines.get(wb);
+        Mb || (Mb = new Map, this.pipelines.set(wb, Mb)), this.targetPipelines = Mb
       }
-      pipelineFor(dd) {
-        var Od;
-        const md = this.targetPipelines,
-          Wd = md.get(dd);
-        if (void 0 !== Wd) return Wd;
-        md.set(dd, null);
-        const Fd = this.target,
-          Rd = dd === ld.b,
-          Xd = null !== (Od = Fd._depthCompare) && void 0 !== Od ? Od : UO,
+      pipelineFor(bb) {
+        var wb;
+        const Mb = this.targetPipelines,
+          eb = Mb.get(bb);
+        if (void 0 !== eb) return eb;
+        Mb.set(bb, null);
+        const Hb = this.target,
+          pb = bb === ub.b,
+          Vb = null !== (wb = Hb._depthCompare) && void 0 !== wb ? wb : jw,
           {
-            device: Kd
+            device: gb
           } = this;
-        return Kd.createRenderPipelineAsync({
-          label: `particles-${dd}`,
+        return gb.createRenderPipelineAsync({
+          label: `particles-${bb}`,
           layout: this.pipelineLayout,
           vertex: {
             module: this.module,
             entryPoint: "mainVertex"
           },
-          fragment: YO({
+          fragment: sw({
             module: this.module,
             entryPoint: "mainFragment",
             constants: {
-              MULTIPLY_PASS: Rd ? 1 : 0
+              MULTIPLY_PASS: pb ? 1 : 0
             }
-          }, Fd, KO((0, ld.e)(dd))),
+          }, Hb, pw((0, ub.i)(bb))),
           primitive: {
             topology: "triangle-strip",
             cullMode: "none"
           },
-          depthStencil: Fd._depthStencilFormat ? {
-            format: Fd._depthStencilFormat,
-            depthCompare: Xd,
+          depthStencil: Hb._depthStencilFormat ? {
+            format: Hb._depthStencilFormat,
+            depthCompare: Vb,
             depthWriteEnabled: !1
           } : void 0,
           multisample: {
-            count: Fd._sampleCount
+            count: Hb._sampleCount
           }
-        }).then((Od => {
-          md.set(dd, Od)
-        }), (Od => {
-          md.set(dd, !1), console.error("Lite particle pipeline failed", Od), oO(Kd, "particles", `blend-${dd}`, Od)
+        }).then((wb => {
+          Mb.set(bb, wb)
+        }), (wb => {
+          Mb.set(bb, !1), console.error("Lite particle pipeline failed", wb), Iw(gb, "particles", `blend-${bb}`, wb)
         })), null
       }
       allocateFrameIndex() {
-        const dd = this.freeFrameIndices.pop();
-        if (void 0 !== dd) return dd;
-        const Od = this.nextFrameIndex++;
-        if (64 * (Od + 1) > this.frameData.length) {
-          const dd = new Float32Array(2 * this.frameData.length);
-          dd.set(this.frameData), this.frameData = dd, this.frameBits = new Uint32Array(dd.buffer), this.frameBuffer.destroy(), this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
+        const bb = this.freeFrameIndices.pop();
+        if (void 0 !== bb) return bb;
+        const wb = this.nextFrameIndex++;
+        if (64 * (wb + 1) > this.frameData.length) {
+          const bb = new Float32Array(2 * this.frameData.length);
+          bb.set(this.frameData), this.frameData = bb, this.frameBits = new Uint32Array(bb.buffer), this.frameBuffer.destroy(), this.frameBuffer = this.createFrameBuffer(), this.frameBindGroup = this.createFrameBindGroup()
         }
-        return Od
+        return wb
       }
       createFrameBuffer() {
         return this.device.createBuffer({
@@ -8263,15 +8263,15 @@ export const modules = {
         })
       }
     }
-    class ih {
-      constructor(dd, Od, md, Wd, Fd) {
-        this.lite = dd, this.canvas = Od, this.info = md, this.resources = Fd, this.JFd = !1, this.needPOTTextures = !1, this.Rdd = !0, this.renderWidth = void 0, this.renderHeight = void 0, this.performanceMonitor = {
+    class fl {
+      constructor(bb, wb, Mb, eb, Hb) {
+        this.lite = bb, this.canvas = wb, this.info = Mb, this.resources = Hb, this.rHb = !1, this.needPOTTextures = !1, this.Obb = !0, this.renderWidth = void 0, this.renderHeight = void 0, this.performanceMonitor = {
           reset: () => {
             this.lastFrameTime = null
           }
-        }, this.caps = void 0, this.deltaTime = 0, this.lastFrameTime = null, this.renderWidth = Od.width, this.renderHeight = Od.height, this.caps = {
-          maxTextureSize: Wd.maxTextureDimension2D,
-          texture2DArrayMaxLayerCount: Wd.maxTextureArrayLayers
+        }, this.caps = void 0, this.deltaTime = 0, this.lastFrameTime = null, this.renderWidth = wb.width, this.renderHeight = wb.height, this.caps = {
+          maxTextureSize: eb.maxTextureDimension2D,
+          texture2DArrayMaxLayerCount: eb.maxTextureArrayLayers
         }
       }
       getCaps() {
@@ -8280,8 +8280,8 @@ export const modules = {
       detach() {
         this.lite = null
       }
-      rebind(dd) {
-        this.lite = dd, (0, cd.l)(dd, this.renderWidth, this.renderHeight)
+      rebind(bb) {
+        this.lite = bb, (0, Qb.q)(bb, this.renderWidth, this.renderHeight)
       }
       getRenderWidth() {
         return this.renderWidth
@@ -8292,26 +8292,26 @@ export const modules = {
       getHardwareScalingLevel() {
         return 1
       }
-      setSize(dd, Od) {
-        if (this.renderWidth === dd && this.renderHeight === Od) return !1;
-        const md = this.renderWidth,
-          Wd = this.renderHeight;
-        this.renderWidth = dd, this.renderHeight = Od;
-        const Fd = this.lite;
-        if (null === Fd) return !0;
+      setSize(bb, wb) {
+        if (this.renderWidth === bb && this.renderHeight === wb) return !1;
+        const Mb = this.renderWidth,
+          eb = this.renderHeight;
+        this.renderWidth = bb, this.renderHeight = wb;
+        const Hb = this.lite;
+        if (null === Hb) return !0;
         try {
-          (0, cd.l)(Fd, dd, Od)
-        } catch (Rd) {
-          if (Rd instanceof DOMException && "InvalidStateError" === Rd.name) {
-            this.renderWidth = md, this.renderHeight = Wd;
+          (0, Qb.q)(Hb, bb, wb)
+        } catch (pb) {
+          if (pb instanceof DOMException && "InvalidStateError" === pb.name) {
+            this.renderWidth = Mb, this.renderHeight = eb;
             try {
-              (0, cd.l)(Fd, md, Wd)
+              (0, Qb.q)(Hb, Mb, eb)
             } catch {
-              this.canvas.width = md, this.canvas.height = Wd
+              this.canvas.width = Mb, this.canvas.height = eb
             }
-            return console.warn("WebGPU could not allocate render targets for resize", dd, Od, Rd.message), !1
+            return console.warn("WebGPU could not allocate render targets for resize", bb, wb, pb.message), !1
           }
-          throw Rd
+          throw pb
         }
         return !0
       }
@@ -8322,52 +8322,52 @@ export const modules = {
       getInfo() {
         return this.info
       }
-      pE() {
-        const dd = performance.now();
-        this.deltaTime = null === this.lastFrameTime ? 0 : dd - this.lastFrameTime, this.lastFrameTime = dd
+      jR() {
+        const bb = performance.now();
+        this.deltaTime = null === this.lastFrameTime ? 0 : bb - this.lastFrameTime, this.lastFrameTime = bb
       }
       getDeltaTime() {
         return this.deltaTime
       }
-      createCanvas(dd, Od) {
-        const md = document.createElement("canvas");
-        return md.width = dd, md.height = Od, md
+      createCanvas(bb, wb) {
+        const Mb = document.createElement("canvas");
+        return Mb.width = bb, Mb.height = wb, Mb
       }
-      vdd(dd, Od) {
-        var md;
-        return null !== (md = this.resources.vdd.get(dd)) && void 0 !== md ? md : new qO(this.resources, dd, Od)
+      Cbb(bb, wb) {
+        var Mb;
+        return null !== (Mb = this.resources.Cbb.get(bb)) && void 0 !== Mb ? Mb : new Uw(this.resources, bb, wb)
       }
-      atlasArrays(dd) {
-        return this.resources.atlasArrays(dd)
+      atlasArrays(bb) {
+        return this.resources.atlasArrays(bb)
       }
     }
-    class Ah {
+    class Al {
       constructor() {
         this.fov = .8, this.nearPlane = 1, this.farPlane = 1e3, this.children = [], this.worldMatrix = new Float32Array(16), this.worldMatrixVersion = 0, this._viewCache = new Float32Array(16), this._projCache = new Float32Array(16), this._vpCache = new Float32Array(16)
       }
-      copyFromView(dd) {
-        this.fov = dd.fov, this.nearPlane = dd.near, this.farPlane = dd.far;
-        const Od = dd.worldMatrix;
-        for (let md = 0; md < 16; md++)
-          if (this.worldMatrix[md] !== Od[md]) return this.worldMatrix.set(Od), void this.worldMatrixVersion++
+      copyFromView(bb) {
+        this.fov = bb.fov, this.nearPlane = bb.near, this.farPlane = bb.far;
+        const wb = bb.worldMatrix;
+        for (let Mb = 0; Mb < 16; Mb++)
+          if (this.worldMatrix[Mb] !== wb[Mb]) return this.worldMatrix.set(wb), void this.worldMatrixVersion++
       }
     }
-    class rh {
-      constructor(dd, Od, md, Wd) {
-        this.canvas = Od, this.options = md, this.vWd = void 0, this.backendName = "WebGPU (Lite)", this.Sdd = void 0, this.modelMeshes = void 0, this.particles = void 0, this.resources = void 0, this.camera = new Ah, this.lastFrameTime = 0, this.engine = void 0, this.MH = void 0, this.sceneTask = void 0, this.device = void 0, this.liteTerrain = void 0, this.meshes = void 0, this.sunShadow = void 0, this.refusals = void 0, this.halted = !1, this.gt = null, this.firstTerrain = null, this.trialFrames = 0, this.install(dd);
+    class Wl {
+      constructor(bb, wb, Mb, eb) {
+        this.canvas = wb, this.options = Mb, this.peb = void 0, this.backendName = "WebGPU (Lite)", this.Sbb = void 0, this.modelMeshes = void 0, this.particles = void 0, this.resources = void 0, this.camera = new Al, this.lastFrameTime = 0, this.engine = void 0, this.JE = void 0, this.sceneTask = void 0, this.device = void 0, this.liteTerrain = void 0, this.meshes = void 0, this.sunShadow = void 0, this.refusals = void 0, this.halted = !1, this.FO = null, this.firstTerrain = null, this.trialFrames = 0, this.install(bb);
         const {
-          resources: Fd,
-          meshes: Rd
-        } = dd;
-        this.resources = Fd, this.particles = dd.particles, this.vWd = new ih(dd.engine, Od, Wd, dd.device.limits, Fd), (0, Bd.B)({
-          jK: dd => {
-            Vd(dd) && Fd.textureSlot(dd)
+          resources: Hb,
+          meshes: pb
+        } = bb;
+        this.resources = Hb, this.particles = bb.particles, this.peb = new fl(bb.engine, wb, eb, bb.device.limits, Hb), (0, Rb.C)({
+          dg: bb => {
+            Zb(bb) && Hb.textureSlot(bb)
           },
-          loaded: dd => Vd(dd) ? Fd.textureLoaded(dd) : null,
-          canvasUpdated: (dd, Od, md) => {
-            Vd(dd) && Fd.canvasUpdated(dd, Od, md)
+          loaded: bb => Zb(bb) ? Hb.textureLoaded(bb) : null,
+          canvasUpdated: (bb, wb, Mb) => {
+            Zb(bb) && Hb.canvasUpdated(bb, wb, Mb)
           }
-        }), this.Sdd = Rd.Sdd, this.modelMeshes = Rd.modelMeshes
+        }), this.Sbb = pb.Sbb, this.modelMeshes = pb.modelMeshes
       }
       get gpuDevice() {
         return this.device
@@ -8378,85 +8378,85 @@ export const modules = {
       get terrain() {
         return this.liteTerrain
       }
-      install(dd) {
-        this.engine = dd.engine, this.MH = dd.MH, this.sceneTask = dd.sceneTask, this.device = dd.device, this.liteTerrain = dd.terrain, this.meshes = dd.meshes, this.sunShadow = dd.sunShadow;
-        const Od = new ed(dd.device.lost);
-        this.refusals = Od, Od.deviceLost.then((() => {
-          var Od;
-          Od = dd.device, QO.add(Od)
-        })), dd.MH.camera = this.camera
+      install(bb) {
+        this.engine = bb.engine, this.JE = bb.JE, this.sceneTask = bb.sceneTask, this.device = bb.device, this.liteTerrain = bb.terrain, this.meshes = bb.meshes, this.sunShadow = bb.sunShadow;
+        const wb = new ab(bb.device.lost);
+        this.refusals = wb, wb.deviceLost.then((() => {
+          var wb;
+          wb = bb.device, lw.add(wb)
+        })), bb.JE.camera = this.camera
       }
       async rebuild() {
-        var dd, Od, md, Wd, Fd;
-        const Rd = await Ph();
-        this.halted = !0, this.liteTerrain.retire(), null === (dd = this.sunShadow) || void 0 === dd || dd.dispose(), this.vWd.detach();
+        var bb, wb, Mb, eb, Hb;
+        const pb = await vl();
+        this.halted = !0, this.liteTerrain.retire(), null === (bb = this.sunShadow) || void 0 === bb || bb.dispose(), this.peb.detach();
         try {
-          (0, jd.d)(this.engine)
-        } catch (Qd) {
-          console.warn("Lite: disposing the lost device's engine threw", Qd)
+          (0, Gb.e)(this.engine)
+        } catch (Ib) {
+          console.warn("Lite: disposing the lost device's engine threw", Ib)
         }
-        const Xd = {
-            width: this.vWd.renderWidth,
-            height: this.vWd.renderHeight
+        const Vb = {
+            width: this.peb.renderWidth,
+            height: this.peb.renderHeight
           },
-          Kd = await zh(this.canvas, this.options, Xd, Rd),
-          hd = wO(Kd),
-          vd = ch(hd);
+          gb = await Ql(this.canvas, this.options, Vb, pb),
+          lb = hw(gb),
+          Lb = Gl(lb);
         try {
-          this.resources.rebind(Kd, hd), this.particles.rebind(hd), this.Sdd.dropSteady();
-          const dd = {
+          this.resources.rebind(gb, lb), this.particles.rebind(lb), this.Sbb.dropSteady();
+          const bb = {
               resources: this.resources,
               particles: this.particles,
-              Sdd: this.Sdd,
+              Sbb: this.Sbb,
               modelMeshes: this.modelMeshes
             },
-            Od = await jh(Kd, hd, this.options, dd),
-            md = vd();
-          if (null !== md) throw new Error(`WebGPU device lost while Lite was rebuilding (${md.reason}): ${md.message}`);
+            wb = await ql(gb, lb, this.options, bb),
+            Mb = Lb();
+          if (null !== Mb) throw new Error(`WebGPU device lost while Lite was rebuilding (${Mb.reason}): ${Mb.message}`);
           const {
-            r: Wd,
-            g: Fd,
-            b: Rd
-          } = this.MH.clearColor;
-          this.install(Od), this.setClearColour(Wd, Fd, Rd), this.vWd.rebind(Kd)
-        } catch (Qd) {
-          throw hd.destroy(), Qd
+            r: eb,
+            g: Hb,
+            b: pb
+          } = this.JE.clearColor;
+          this.install(wb), this.setClearColour(eb, Hb, pb), this.peb.rebind(gb)
+        } catch (Ib) {
+          throw lb.destroy(), Ib
         }
-        return this.lastFrameTime = 0, this.halted = !1, this.trialFrames = 30, null === (Od = this.gt) || void 0 === Od || Od.resize(), null === (md = this.gt) || void 0 === md || null === (Wd = md.zo) || void 0 === Wd || null === (Fd = Wd.aE) || void 0 === Fd || Fd.remeshForRendererRebuild(), {
+        return this.lastFrameTime = 0, this.halted = !1, this.trialFrames = 30, null === (wb = this.FO) || void 0 === wb || wb.resize(), null === (Mb = this.FO) || void 0 === Mb || null === (eb = Mb.hU) || void 0 === eb || null === (Hb = eb.fR) || void 0 === Hb || Hb.remeshForRendererRebuild(), {
           terrainDrawn: this.whenTerrainDrawn()
         }
       }
       whenTerrainDrawn() {
-        return new Promise(((dd, Od) => {
+        return new Promise(((bb, wb) => {
           this.firstTerrain = {
-            drawn: dd,
-            failed: Od
+            drawn: bb,
+            failed: wb
           }
         }))
       }
       get castsEntitySunShadows() {
-        var dd, Od;
-        return null !== (dd = null === (Od = this.sunShadow) || void 0 === Od ? void 0 : Od.tracesEntities) && void 0 !== dd && dd
+        var bb, wb;
+        return null !== (bb = null === (wb = this.sunShadow) || void 0 === wb ? void 0 : wb.tracesEntities) && void 0 !== bb && bb
       }
       get sampleCount() {
         return this.engine.msaaSamples
       }
-      attach(dd) {
-        this.gt = dd, this.modelMeshes.attach(dd.model, dd.sceneMirror);
-        const Od = dd.MH;
-        this.setClearColour(Od.clearColor.r, Od.clearColor.g, Od.clearColor.b), Od.draw = () => {
-          this.drawFrame(dd, Od)
+      attach(bb) {
+        this.FO = bb, this.modelMeshes.attach(bb.model, bb.sceneMirror);
+        const wb = bb.JE;
+        this.setClearColour(wb.clearColor.r, wb.clearColor.g, wb.clearColor.b), wb.draw = () => {
+          this.drawFrame(bb, wb)
         }
       }
-      get yt() {
+      get UO() {
         return !this.refusals.lost && !this.halted
       }
-      render(dd) {
-        if (this.yt) {
+      render(bb) {
+        if (this.UO) {
           try {
-            this.vWd.pE(), dd.MH.render()
-          } catch (Od) {
-            throw this.refusals.frameFailed(Od), this.firstTerrain && this.trialFrames > 0 && (this.halted = !0, this.firstTerrain.failed(Od), this.firstTerrain = null), Od
+            this.peb.jR(), bb.JE.render()
+          } catch (wb) {
+            throw this.refusals.frameFailed(wb), this.firstTerrain && this.trialFrames > 0 && (this.halted = !0, this.firstTerrain.failed(wb), this.firstTerrain = null), wb
           }
           this.refusals.frameDrawn(), this.trialFrames > 0 && this.trialFrames--
         }
@@ -8465,175 +8465,175 @@ export const modules = {
         return this.engine.drawCallCount
       }
       describePendingWork() {
-        var dd, Od, md, Wd;
-        const Fd = [...this.particles.describePendingWork(), ...null !== (dd = null === (Od = this.sunShadow) || void 0 === Od ? void 0 : Od.describePendingWork()) && void 0 !== dd ? dd : []],
-          Rd = this.meshes.pipelinesCompiling + this.terrain.pipelinesCompiling + (null !== (md = this.terrain.sceneDepth) && void 0 !== md && md.compiling ? 1 : 0) + (null !== (Wd = this.terrain.shadowMask) && void 0 !== Wd && Wd.compiling ? 1 : 0);
-        Rd > 0 && Fd.push(`${Rd} Lite pipelines compiling`);
-        const Xd = this.terrain.buffersAwaitingVerdict;
-        Xd > 0 && Fd.push(`${Xd} Lite terrain buffers awaiting their out-of-memory verdict`);
-        const Kd = this.resources.texturesLoading;
-        return Kd > 0 && Fd.push(`${Kd} Lite textures loading`), Fd
+        var bb, wb, Mb, eb;
+        const Hb = [...this.particles.describePendingWork(), ...null !== (bb = null === (wb = this.sunShadow) || void 0 === wb ? void 0 : wb.describePendingWork()) && void 0 !== bb ? bb : []],
+          pb = this.meshes.pipelinesCompiling + this.terrain.pipelinesCompiling + (null !== (Mb = this.terrain.sceneDepth) && void 0 !== Mb && Mb.compiling ? 1 : 0) + (null !== (eb = this.terrain.shadowMask) && void 0 !== eb && eb.compiling ? 1 : 0);
+        pb > 0 && Hb.push(`${pb} Lite pipelines compiling`);
+        const Vb = this.terrain.buffersAwaitingVerdict;
+        Vb > 0 && Hb.push(`${Vb} Lite terrain buffers awaiting their out-of-memory verdict`);
+        const gb = this.resources.texturesLoading;
+        return gb > 0 && Hb.push(`${gb} Lite textures loading`), Hb
       }
-      prepareTexture(dd) {
-        return null !== this.resources.boundTexture(dd) || this.resources.textureFailed(dd)
+      prepareTexture(bb) {
+        return null !== this.resources.boundTexture(bb) || this.resources.textureFailed(bb)
       }
-      drawFrame(dd, Od) {
-        var md, Wd, Fd, Rd, Xd, Kd;
-        const hd = YK(dd);
-        this.camera.copyFromView(hd), this.setClearColour(hd.clearColour[0], hd.clearColour[1], hd.clearColour[2]), null === (md = this.sunShadow) || void 0 === md || md.prepare(dd.zo, hd.eye, null !== (Wd = dd.zo.Jq) && void 0 !== Wd ? Wd : null), this.terrain.prepare(dd, hd), null === (Fd = this.terrain.sceneDepth) || void 0 === Fd || Fd.setPlanes(hd.near, hd.far), null === (Rd = this.terrain.shadowMask) || void 0 === Rd || Rd.prepare(hd), RK(this.sceneTask), this.meshes.prepare(Od, hd, dd.model.earthSky, null !== (Xd = dd.zo.Jq) && void 0 !== Xd ? Xd : null), this.particles.prepare(hd);
-        const vd = performance.now();
-        this.resources.flushUploads(), null === (Kd = this.sunShadow) || void 0 === Kd || Kd.traceEntities(this.meshes);
+      drawFrame(bb, wb) {
+        var Mb, eb, Hb, pb, Vb, gb;
+        const lb = mg(bb);
+        this.camera.copyFromView(lb), this.setClearColour(lb.clearColour[0], lb.clearColour[1], lb.clearColour[2]), null === (Mb = this.sunShadow) || void 0 === Mb || Mb.prepare(bb.hU, lb.eye, null !== (eb = bb.hU.LC) && void 0 !== eb ? eb : null), this.terrain.prepare(bb, lb), null === (Hb = this.terrain.sceneDepth) || void 0 === Hb || Hb.setPlanes(lb.near, lb.far), null === (pb = this.terrain.shadowMask) || void 0 === pb || pb.prepare(lb), Hg(this.sceneTask), this.meshes.prepare(wb, lb, bb.model.earthSky, null !== (Vb = bb.hU.LC) && void 0 !== Vb ? Vb : null), this.particles.prepare(lb);
+        const Lb = performance.now();
+        this.resources.flushUploads(), null === (gb = this.sunShadow) || void 0 === gb || gb.traceEntities(this.meshes);
         try {
-          (0, cd.j)(this.engine, this.lastFrameTime > 0 ? vd - this.lastFrameTime : 0)
+          (0, Qb.m)(this.engine, this.lastFrameTime > 0 ? Lb - this.lastFrameTime : 0)
         } finally {
           this.resources.endUploadFrame()
         }
-        this.lastFrameTime = vd, this.firstTerrain && this.liteTerrain.drawStats().drawn > 0 && (this.firstTerrain.drawn(vd), this.firstTerrain = null)
+        this.lastFrameTime = Lb, this.firstTerrain && this.liteTerrain.drawStats().drawn > 0 && (this.firstTerrain.drawn(Lb), this.firstTerrain = null)
       }
-      setClearColour(dd, Od, md) {
-        const Wd = this.MH.clearColor;
-        Wd.r = dd, Wd.g = Od, Wd.b = md, Wd.a = 1
+      setClearColour(bb, wb, Mb) {
+        const eb = this.JE.clearColor;
+        eb.r = bb, eb.g = wb, eb.b = Mb, eb.a = 1
       }
     }
 
-    function Gh(dd) {
-      const Od = {};
-      for (const md in dd.limits) {
-        const Wd = dd.limits[md];
-        "number" === typeof Wd && (Od[md] = Wd)
+    function Jl(bb) {
+      const wb = {};
+      for (const Mb in bb.limits) {
+        const eb = bb.limits[Mb];
+        "number" === typeof eb && (wb[Mb] = eb)
       }
-      return Od
+      return wb
     }
-    const nh = "WebGPU device lost while Lite was starting";
-    async function Lh(dd, Od) {
-      const md = await Ph(),
-        Wd = md.info,
-        Fd = {
-          vendor: (null === Wd || void 0 === Wd ? void 0 : Wd.vendor) || "unknown vendor",
-          renderer: (null === Wd || void 0 === Wd ? void 0 : Wd.architecture) || "unknown renderer",
-          version: (null === Wd || void 0 === Wd ? void 0 : Wd.description) || "unknown version"
+    const Sl = "WebGPU device lost while Lite was starting";
+    async function Nl(bb, wb) {
+      const Mb = await vl(),
+        eb = Mb.info,
+        Hb = {
+          vendor: (null === eb || void 0 === eb ? void 0 : eb.vendor) || "unknown vendor",
+          renderer: (null === eb || void 0 === eb ? void 0 : eb.architecture) || "unknown renderer",
+          version: (null === eb || void 0 === eb ? void 0 : eb.description) || "unknown version"
         };
-      dd.style.background = "black";
-      const Rd = await zh(dd, Od, Od.bufferSize, md),
-        Xd = wO(Rd),
-        Kd = ch(Xd);
+      bb.style.background = "black";
+      const pb = await Ql(bb, wb, wb.bufferSize, Mb),
+        Vb = hw(pb),
+        gb = Gl(Vb);
       try {
-        const md = new rh(await jh(Rd, Xd, Od, null), dd, Od, Fd),
-          Wd = Kd();
-        if (null !== Wd) {
+        const Mb = new Wl(await ql(pb, Vb, wb, null), bb, wb, Hb),
+          eb = gb();
+        if (null !== eb) {
           const {
-            reason: dd,
-            message: Od
-          } = Wd;
-          throw Object.assign(new Error(`${nh} (${dd}): ${Od}`), {
-            fallbackReason: nh
+            reason: bb,
+            message: wb
+          } = eb;
+          throw Object.assign(new Error(`${Sl} (${bb}): ${wb}`), {
+            fallbackReason: Sl
           })
         }
-        return md
-      } catch (hd) {
-        throw Xd.destroy(), null === Kd() ? hd : (0, FK.c)(hd, "device")
+        return Mb
+      } catch (lb) {
+        throw Vb.destroy(), null === gb() ? lb : (0, eg.f)(lb, "device")
       }
     }
-    async function Ph() {
-      const dd = await navigator.gpu.requestAdapter({
+    async function vl() {
+      const bb = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance"
       });
-      if (!dd) throw (0, FK.c)(new Error("No WebGPU adapter"), "no_adapter");
-      return dd
+      if (!bb) throw (0, eg.f)(new Error("No WebGPU adapter"), "no_adapter");
+      return bb
     }
-    async function zh(dd, Od, md, Wd) {
-      let Fd;
+    async function Ql(bb, wb, Mb, eb) {
+      let Hb;
       try {
-        Fd = await (0, cd.e)(dd, {
-          msaaSamples: Od.zWd ? 4 : 1,
-          requiredLimits: Gh(Wd),
+        Hb = await (0, Qb.g)(bb, {
+          msaaSamples: wb.Geb ? 4 : 1,
+          requiredLimits: Jl(eb),
           alphaMode: "premultiplied"
         })
-      } catch (Xd) {
-        throw (0, FK.c)(Xd, "#47" === (null === (Rd = Xd) || void 0 === Rd ? void 0 : Rd.message) ? "no_adapter" : "device")
+      } catch (Vb) {
+        throw (0, eg.f)(Vb, "#47" === (null === (pb = Vb) || void 0 === pb ? void 0 : pb.message) ? "no_adapter" : "device")
       }
-      var Rd;
-      return null !== md && (0, cd.l)(Fd, md.width, md.height), Fd
+      var pb;
+      return null !== Mb && (0, Qb.q)(Hb, Mb.width, Mb.height), Hb
     }
 
-    function ch(dd) {
-      let Od = null;
-      return dd.lost.then((dd => {
-        Od = dd, console.error(`WebGPU device lost (${dd.reason}): ${dd.message}`)
-      })), () => Od
+    function Gl(bb) {
+      let wb = null;
+      return bb.lost.then((bb => {
+        wb = bb, console.error(`WebGPU device lost (${bb.reason}): ${bb.message}`)
+      })), () => wb
     }
-    async function jh(dd, Od, md, Wd) {
-      var Fd, Rd;
+    async function ql(bb, wb, Mb, eb) {
+      var Hb, pb;
       let {
-        sceneDepth: Xd,
-        sunShadow: Kd
-      } = md;
-      const hd = (0, Dd.d)(dd),
-        vd = null !== (Fd = null === Wd || void 0 === Wd ? void 0 : Wd.resources) && void 0 !== Fd ? Fd : new OK(dd, Od),
-        Qd = new Wh(Od),
-        td = new GX(Od, vd, (dd => function(dd, Od) {
-          for (const Wd of aO(dd)) {
-            var md;
-            if (Wd._targetSignature === Od) return null !== (md = Wd._sceneBG) && void 0 !== md ? md : null
+        sceneDepth: Vb,
+        sunShadow: gb
+      } = Mb;
+      const lb = (0, qb.c)(bb),
+        Lb = null !== (Hb = null === eb || void 0 === eb ? void 0 : eb.resources) && void 0 !== Hb ? Hb : new bg(bb, wb),
+        Ib = new Ml(wb),
+        Ob = new JV(wb, Lb, (bb => function(bb, wb) {
+          for (const eb of zw(bb)) {
+            var Mb;
+            if (eb._targetSignature === wb) return null !== (Mb = eb._sceneBG) && void 0 !== Mb ? Mb : null
           }
           return null
-        }(hd, dd)), null === Wd || void 0 === Wd ? void 0 : Wd.Sdd, null === Wd || void 0 === Wd ? void 0 : Wd.modelMeshes),
-        od = null !== (Rd = null === Wd || void 0 === Wd ? void 0 : Wd.particles) && void 0 !== Rd ? Rd : new Vh(Od, vd);
-      for (const Hd of function(dd, Od, md) {
-          return [Od.opaqueRenderable, dd.opaqueRenderable, dd.skyLastRenderable, md.renderable, Od.transparentRenderable, dd.transparentRenderable, dd.frontRenderable]
-        }(td, Qd, od)) gO(hd, Hd);
-      const Nd = function(dd) {
-        for (const Od of aO(dd))
-          if ("MH" === Od.name) return Od;
+        }(lb, bb)), null === eb || void 0 === eb ? void 0 : eb.Sbb, null === eb || void 0 === eb ? void 0 : eb.modelMeshes),
+        Ub = null !== (pb = null === eb || void 0 === eb ? void 0 : eb.particles) && void 0 !== pb ? pb : new Zl(wb, Lb);
+      for (const Eb of function(bb, wb, Mb) {
+          return [wb.opaqueRenderable, bb.opaqueRenderable, bb.skyLastRenderable, Mb.renderable, wb.transparentRenderable, bb.transparentRenderable, bb.frontRenderable]
+        }(Ob, Ib, Ub)) mw(lb, Eb);
+      const tb = function(bb) {
+        for (const wb of zw(bb))
+          if ("JE" === wb.name) return wb;
         throw new Error("Lite: the scene has no render task named scene")
-      }(hd);
-      Xd && Qd.installSceneDepth(Nd, dd);
-      const qd = Kd ? new gh(Od, Kd.entities) : null;
-      return Qd.sunShadow = qd, qd && null !== Kd && void 0 !== Kd && Kd.entities && (Qd.shadowMask = new rK(Od, Nd, dd, Qd)), td.sunShadow = qd, await (0, Dd.e)(hd), {
-        engine: dd,
-        MH: hd,
-        sceneTask: Nd,
-        device: Od,
-        terrain: Qd,
-        meshes: td,
-        sunShadow: qd,
-        resources: vd,
-        particles: od
+      }(lb);
+      Vb && Ib.installSceneDepth(tb, bb);
+      const Cb = gb ? new hl(wb, gb.entities) : null;
+      return Ib.sunShadow = Cb, Cb && null !== gb && void 0 !== gb && gb.entities && (Ib.shadowMask = new Wg(wb, tb, bb, Ib)), Ob.sunShadow = Cb, await (0, qb.f)(lb), {
+        engine: bb,
+        JE: lb,
+        sceneTask: tb,
+        device: wb,
+        terrain: Ib,
+        meshes: Ob,
+        sunShadow: Cb,
+        resources: Lb,
+        particles: Ub
       }
     }
   },
-  42770: (dd, Od, md) => {
-    md.d(Od, {
-      D: () => qd,
-      c: () => Fd,
-      e: () => Wd,
-      i: () => od,
-      k: () => Qd,
-      l: () => yd,
-      n: () => Rd,
-      p: () => Kd,
-      r: () => hd,
-      s: () => Xd,
-      w: () => Hd,
-      z: () => Nd
+  42488: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      B: () => Eb,
+      C: () => tb,
+      E: () => Cb,
+      c: () => Hb,
+      g: () => eb,
+      j: () => Ub,
+      l: () => Ib,
+      p: () => Fb,
+      r: () => pb,
+      u: () => gb,
+      v: () => lb,
+      x: () => Vb
     });
-    const Wd = 3,
-      Fd = 0,
-      Rd = 1,
-      Xd = 2,
-      Kd = {
+    const eb = 3,
+      Hb = 0,
+      pb = 1,
+      Vb = 2,
+      gb = {
         uniform: 3,
-        QN: 4,
+        GU: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      hd = 10,
-      vd = "BloxdPackInputs",
-      Qd = "bloxdPackInputs",
-      td = [{
+      lb = 10,
+      Lb = "BloxdPackInputs",
+      Ib = "bloxdPackInputs",
+      Ob = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -8658,37 +8658,37 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      od = 80;
+      Ub = 80;
 
-    function Nd() {
-      const dd = td.map((dd => {
+    function tb() {
+      const bb = Ob.map((bb => {
         let {
-          name: Od,
-          type: md
-        } = dd;
-        return `    ${Od}: ${md},\n`
+          name: wb,
+          type: Mb
+        } = bb;
+        return `    ${wb}: ${Mb},\n`
       })).join("");
-      return `struct ${vd} {\n${dd}}\n@group(${Wd}) @binding(${Fd}) var<uniform> ${Qd}: ${vd};\n`
+      return `struct ${Lb} {\n${bb}}\n@group(${eb}) @binding(${Hb}) var<uniform> ${Ib}: ${Lb};\n`
     }
 
-    function qd(dd, Od) {
-      const md = new DataView(dd, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, od),
-        [Wd, Fd, Rd, Xd, Kd, hd] = td;
-      md.setFloat32(Wd.offset, Od.seconds, !0), md.setUint32(Fd.offset, Od.lit ? 1 : 0, !0);
-      for (let vd = 0; vd < 3; vd++) md.setInt32(Rd.offset + 4 * vd, Od.renderOffset[vd], !0), md.setFloat32(Xd.offset + 4 * vd, Od.TOd[vd], !0), md.setFloat32(Kd.offset + 4 * vd, Od.eyePosition[vd], !0), md.setFloat32(hd.offset + 4 * vd, Od.shadowDirection[vd], !0)
+    function Cb(bb, wb) {
+      const Mb = new DataView(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Ub),
+        [eb, Hb, pb, Vb, gb, lb] = Ob;
+      Mb.setFloat32(eb.offset, wb.seconds, !0), Mb.setUint32(Hb.offset, wb.lit ? 1 : 0, !0);
+      for (let Lb = 0; Lb < 3; Lb++) Mb.setInt32(pb.offset + 4 * Lb, wb.renderOffset[Lb], !0), Mb.setFloat32(Vb.offset + 4 * Lb, wb.jwb[Lb], !0), Mb.setFloat32(gb.offset + 4 * Lb, wb.eyePosition[Lb], !0), Mb.setFloat32(lb.offset + 4 * Lb, wb.shadowDirection[Lb], !0)
     }
 
-    function Hd(dd) {
-      const Od = new Uint32Array(Math.max(1, dd.length));
-      return dd.forEach(((dd, md) => {
+    function Eb(bb) {
+      const wb = new Uint32Array(Math.max(1, bb.length));
+      return bb.forEach(((bb, Mb) => {
         let {
-          id: Wd,
-          rotation: Fd
-        } = dd;
-        Od[md] = 65535 & Wd | (3 & Fd) << 16
-      })), Od
+          id: eb,
+          rotation: Hb
+        } = bb;
+        wb[Mb] = 65535 & eb | (3 & Hb) << 16
+      })), wb
     }
-    const yd = {
+    const Fb = {
       off: 0,
       strict: 1,
       allow: 2
@@ -8696,4 +8696,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

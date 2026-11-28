@@ -1,509 +1,509 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  5426: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => jO,
-      e: () => qm,
-      g: () => MO,
-      i: () => Wm,
-      m: () => ZO,
-      n: () => dm,
-      o: () => LO,
-      s: () => IO,
-      t: () => sO,
-      v: () => Nm,
-      z: () => om,
-      D: () => lO,
-      F: () => nO
+  5587: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => qw,
+      g: () => UM,
+      j: () => Tw,
+      m: () => MM,
+      n: () => nw,
+      r: () => kw,
+      u: () => Nw,
+      w: () => uw,
+      A: () => Dw,
+      B: () => OM,
+      E: () => IM,
+      H: () => dw,
+      J: () => Sw
     });
-    var Wd = md(2421);
-    const Fd = Function.prototype.toString,
-      Rd = RegExp.prototype.exec,
-      Xd = Reflect.apply,
-      Kd = Function.prototype.call,
-      hd = Function.prototype.apply,
-      vd = Function.prototype.bind,
-      Qd = Object.defineProperty,
-      td = Uint8Array;
-    let od, Nd;
+    var eb = Mb(2463);
+    const Hb = Function.prototype.toString,
+      pb = RegExp.prototype.exec,
+      Vb = Reflect.apply,
+      gb = Function.prototype.call,
+      lb = Function.prototype.apply,
+      Lb = Function.prototype.bind,
+      Ib = Object.defineProperty,
+      Ob = Uint8Array;
+    let Ub, tb;
     try {
-      od = globalThis.crypto, Nd = void 0 === od || null === od ? void 0 : od.getRandomValues
+      Ub = globalThis.crypto, tb = void 0 === Ub || null === Ub ? void 0 : Ub.getRandomValues
     } catch {}
-    const qd = "bloxdBindApply";
-    let Hd;
+    const Cb = "bloxdBindApply";
+    let Eb;
     try {
-      const dd = Kd;
-      Qd(dd, qd, {
+      const bb = gb;
+      Ib(bb, Cb, {
         __proto__: null,
-        value: vd,
+        value: Lb,
         configurable: !0
       });
       try {
-        Hd = dd[qd](hd)
+        Eb = bb[Cb](lb)
       } finally {
-        delete dd[qd]
+        delete bb[Cb]
       }
     } catch {}
-    const yd = 16,
-      bd = 256,
-      Td = 0,
-      pd = 1,
-      Yd = 2,
-      gd = 3;
-    let wd, Ed = Td,
-      Jd = Xd,
-      Ud = 0;
+    const Fb = 16,
+      Bb = 256,
+      sb = 0,
+      mb = 1,
+      hb = 2,
+      zb = 3;
+    let Xb, xb = sb,
+      jb = Vb,
+      Kb = 0;
 
-    function xd(dd, Od) {
-      return dd === `function ${Od}() { [native code] }` || dd === `function ${Od}() {\n    [native code]\n}`
+    function rb(bb, wb) {
+      return bb === `function ${wb}() { [native code] }` || bb === `function ${wb}() {\n    [native code]\n}`
     }
-    const Bd = 0,
-      Sd = 1,
-      sd = 2;
-    let ud = Bd;
+    const Rb = 0,
+      Db = 1,
+      cb = 2;
+    let Yb = Rb;
 
-    function Vd(dd, Od, md) {
-      if (ud === sd && Ed === pd && ! function() {
-          const dd = wd;
-          return Ud >= bd && (Jd(Nd, od, [dd]), Ud = 0), dd[Ud++] < 256 / yd
-        }()) return function(dd, Od, md) {
-        return Jd(dd, Od, md ?? 0)
+    function Zb(bb, wb, Mb) {
+      if (Yb === cb && xb === mb && ! function() {
+          const bb = Xb;
+          return Kb >= Bb && (jb(tb, Ub, [bb]), Kb = 0), bb[Kb++] < 256 / Fb
+        }()) return function(bb, wb, Mb) {
+        return jb(bb, wb, Mb ?? 0)
       }(...arguments);
-      if (ud === Bd || Ed === Yd) return Xd(dd, Od, md);
-      let Wd;
-      ud = Bd;
+      if (Yb === Rb || xb === hb) return Vb(bb, wb, Mb);
+      let eb;
+      Yb = Rb;
       try {
-        Ed === Td && (Ed = gd, Ed = function() {
-          const dd = Xd(Fd, Xd, []);
-          if (xd(dd, "apply")) return Yd;
-          if (null === Xd(Rd, /\(\.\.\.arguments\)/, [dd]) && null === Xd(Rd, /^function\s*\(\.\.\.[\w$]+\)/, [dd])) return Yd;
-          if ("function" !== typeof Hd || "function" !== typeof Kd || "function" !== typeof hd || "function" !== typeof vd || "function" !== typeof Qd || "function" !== typeof Nd || "function" !== typeof td || !xd(Xd(Fd, Kd, []), "call") || !xd(Xd(Fd, hd, []), "apply") || !xd(Xd(Fd, vd, []), "bind") || !xd(Xd(Fd, Qd, []), "defineProperty") || !xd(Xd(Fd, Nd, []), "getRandomValues") || !xd(Xd(Fd, td, []), "Uint8Array")) return Yd;
-          const Od = Hd,
-            md = {},
-            Wd = function(dd) {
-              return this === md && dd === md
+        xb === sb && (xb = zb, xb = function() {
+          const bb = Vb(Hb, Vb, []);
+          if (rb(bb, "apply")) return hb;
+          if (null === Vb(pb, /\(\.\.\.arguments\)/, [bb]) && null === Vb(pb, /^function\s*\(\.\.\.[\w$]+\)/, [bb])) return hb;
+          if ("function" !== typeof Eb || "function" !== typeof gb || "function" !== typeof lb || "function" !== typeof Lb || "function" !== typeof Ib || "function" !== typeof tb || "function" !== typeof Ob || !rb(Vb(Hb, gb, []), "call") || !rb(Vb(Hb, lb, []), "apply") || !rb(Vb(Hb, Lb, []), "bind") || !rb(Vb(Hb, Ib, []), "defineProperty") || !rb(Vb(Hb, tb, []), "getRandomValues") || !rb(Vb(Hb, Ob, []), "Uint8Array")) return hb;
+          const wb = Eb,
+            Mb = {},
+            eb = function(bb) {
+              return this === Mb && bb === Mb
             };
           try {
-            if (!0 !== Od(Wd, md, [md])) return Yd;
-            const dd = new td(bd);
-            Od(Nd, od, [dd]), wd = dd
+            if (!0 !== wb(eb, Mb, [Mb])) return hb;
+            const bb = new Ob(Bb);
+            wb(tb, Ub, [bb]), Xb = bb
           } catch {
-            return Yd
+            return hb
           }
-          return Jd = Od, pd
-        }()), Wd = Xd(dd, Od, md)
-      } catch (qd) {
-        throw Ed = Yd, qd
+          return jb = wb, mb
+        }()), eb = Vb(bb, wb, Mb)
+      } catch (Cb) {
+        throw xb = hb, Cb
       }
-      return ud = sd, Wd
+      return Yb = cb, eb
     }
-    let Ad = Xd;
+    let fb = Vb;
 
-    function rd() {
-      return (Ad === Xd ? 0 : 3) + ud
-    }
-
-    function Gd() {
-      const dd = rd();
-      return Ad = Xd, dd
+    function Ab() {
+      return (fb === Vb ? 0 : 3) + Yb
     }
 
-    function nd(dd) {
-      Ad = dd >= 3 ? Vd : Xd, ud = dd % 3
-    }
-    const Ld = Function.prototype.toString,
-      Pd = Object.getOwnPropertyDescriptor,
-      zd = Object.prototype.hasOwnProperty,
-      cd = RegExp.prototype.exec,
-      jd = TextEncoder.prototype.encodeInto,
-      Dd = String.prototype.startsWith,
-      ed = Number.prototype.toString,
-      Id = WeakMap.prototype.get,
-      ld = WeakMap.prototype.set,
-      Cd = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      Zd = new TextEncoder,
-      kd = new Uint8Array(1024),
-      fd = 9999999,
-      Md = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      dO = new WeakMap;
-
-    function OO(dd) {
-      if ("function" !== typeof dd) return "#a0.0";
-      const Od = Ad(Id, dO, [dd]);
-      if (void 0 !== Od) return Od;
-      const md = Ad(Ld, dd, []),
-        Wd = md.length > fd ? fd : md.length,
-        Fd = `#${function(dd,Od){const md=Ad(cd,Cd,[Od]);if(null===md)return"s";const Wd=md[1];if("ProxyObject"===Wd)return"p";if(""!==Wd)return Ad(Dd,Wd,["bound "])?"b":"n";try{const Od=Pd(dd,"name"),md=void 0!==Od&&Ad(zd,Od,["value"])?Od.value:void 0;return"string"===typeof md&&Ad(Dd,md,["bound "])?"b":"p"}catch{return"p"}}(dd,md)}${Wd}.${function(dd){const{written:Od}=Ad(jd,Zd,[dd,kd]);let md=2166136261;for(let Wd=0;Wd<Od;Wd++)md=(md^kd[Wd])>>>0,md=md+(md<<1)+(md<<4)+(md<<7)+(md<<8)+(md<<24)>>>0;return Ad(ed,md,[36])}(md)}`;
-      return Ad(ld, dO, [dd, Fd]), Fd
+    function Wb() {
+      const bb = Ab();
+      return fb = Vb, bb
     }
 
-    function mO(dd) {
-      const Od = Ad(cd, Md, [dd]);
-      return null === Od ? dd : Od[1]
+    function Jb(bb) {
+      fb = bb >= 3 ? Zb : Vb, Yb = bb % 3
     }
-    var WO = md(2433);
-    const FO = Function.prototype.toString,
-      RO = Object.getOwnPropertyDescriptor,
-      XO = RegExp.prototype.exec,
-      KO = Object.prototype.hasOwnProperty,
-      hO = Set.prototype.has,
-      vO = WeakMap.prototype.get,
-      QO = WeakMap.prototype.set,
-      tO = Reflect.get,
-      oO = Object.getPrototypeOf,
-      NO = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const Sb = Function.prototype.toString,
+      Nb = Object.getOwnPropertyDescriptor,
+      vb = Object.prototype.hasOwnProperty,
+      Qb = RegExp.prototype.exec,
+      Gb = TextEncoder.prototype.encodeInto,
+      qb = String.prototype.startsWith,
+      ab = Number.prototype.toString,
+      ib = WeakMap.prototype.get,
+      ub = WeakMap.prototype.set,
+      db = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      Pb = new TextEncoder,
+      nb = new Uint8Array(1024),
+      yb = 9999999,
+      ob = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      Tb = new WeakMap;
 
-    function qO(dd, Od, md) {
+    function kb(bb) {
+      if ("function" !== typeof bb) return "#a0.0";
+      const wb = fb(ib, Tb, [bb]);
+      if (void 0 !== wb) return wb;
+      const Mb = fb(Sb, bb, []),
+        eb = Mb.length > yb ? yb : Mb.length,
+        Hb = `#${function(bb,wb){const Mb=fb(Qb,db,[wb]);if(null===Mb)return"s";const eb=Mb[1];if("ProxyObject"===eb)return"p";if(""!==eb)return fb(qb,eb,["bound "])?"b":"n";try{const wb=Nb(bb,"name"),Mb=void 0!==wb&&fb(vb,wb,["value"])?wb.value:void 0;return"string"===typeof Mb&&fb(qb,Mb,["bound "])?"b":"p"}catch{return"p"}}(bb,Mb)}${eb}.${function(bb){const{written:wb}=fb(Gb,Pb,[bb,nb]);let Mb=2166136261;for(let eb=0;eb<wb;eb++)Mb=(Mb^nb[eb])>>>0,Mb=Mb+(Mb<<1)+(Mb<<4)+(Mb<<7)+(Mb<<8)+(Mb<<24)>>>0;return fb(ab,Mb,[36])}(Mb)}`;
+      return fb(ub, Tb, [bb, Hb]), Hb
+    }
+
+    function bw(bb) {
+      const wb = fb(Qb, ob, [bb]);
+      return null === wb ? bb : wb[1]
+    }
+    var ww = Mb(2478);
+    const Mw = Function.prototype.toString,
+      ew = Object.getOwnPropertyDescriptor,
+      Hw = RegExp.prototype.exec,
+      pw = Object.prototype.hasOwnProperty,
+      Vw = Set.prototype.has,
+      gw = WeakMap.prototype.get,
+      lw = WeakMap.prototype.set,
+      Lw = Reflect.get,
+      Iw = Object.getPrototypeOf,
+      Ow = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function Uw(bb, wb, Mb) {
       return {
-        code: dd,
-        holder: Od,
-        key: md,
+        code: bb,
+        holder: wb,
+        key: Mb,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${md}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${Mb}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function HO() {
-      return NO
+    function tw() {
+      return Ow
     }
-    const yO = NO?.Instance.prototype,
-      bO = NO?.Memory.prototype;
+    const Cw = Ow?.Instance.prototype,
+      Ew = Ow?.Memory.prototype;
 
-    function TO() {
-      return bO
+    function Fw() {
+      return Ew
     }
-    let pO, YO;
+    let Bw, sw;
     try {
-      const dd = globalThis.crypto,
-        Od = dd?.subtle;
-      pO = dd ? oO(dd) : void 0, YO = Od ? oO(Od) : void 0
+      const bb = globalThis.crypto,
+        wb = bb?.subtle;
+      Bw = bb ? Iw(bb) : void 0, sw = wb ? Iw(wb) : void 0
     } catch {}
 
-    function gO(dd, Od) {
-      for (let md = dd; void 0 !== md && null !== md; md = oO(md)) {
-        const dd = RO(md, Od);
-        if (dd) return dd
+    function mw(bb, wb) {
+      for (let Mb = bb; void 0 !== Mb && null !== Mb; Mb = Iw(Mb)) {
+        const bb = ew(Mb, wb);
+        if (bb) return bb
       }
     }
-    const wO = [qO("in", HO, "instantiate", {
+    const hw = [Uw("in", tw, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), qO("is", HO, "instantiateStreaming", {
+    }), Uw("is", tw, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), qO("co", HO, "compile", {
+    }), Uw("co", tw, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), qO("cs", HO, "compileStreaming", {
+    }), Uw("cs", tw, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), qO("mo", HO, "Module", {
+    }), Uw("mo", tw, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), qO("it", HO, "Instance", {
+    }), Uw("it", tw, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), qO("me", HO, "Memory", {
+    }), Uw("me", tw, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), qO("ex", (function() {
-      return yO
+    }), Uw("ex", (function() {
+      return Cw
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), qO("bu", TO, "buffer", {
+    }), Uw("bu", Fw, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), qO("gr", TO, "grow", {
+    }), Uw("gr", Fw, "grow", {
       tier: "punished"
-    }), qO("rc", (function() {
+    }), Uw("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), qO("cr", (function() {
+    }), "clone"), Uw("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), qO("su", (function() {
-      return pO
+    }), Uw("su", (function() {
+      return Bw
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), qO("dg", (function() {
-      return YO
+    }), Uw("dg", (function() {
+      return sw
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function aO(dd) {
-      let Od;
+    function zw(bb) {
+      let wb;
       try {
-        const md = tO(globalThis, dd);
-        Od = "function" === typeof md ? md.prototype : void 0
+        const Mb = Lw(globalThis, bb);
+        wb = "function" === typeof Mb ? Mb.prototype : void 0
       } catch {}
-      return () => Od
+      return () => wb
     }
 
-    function EO(dd, Od, md) {
-      return md.map((md => qO(dd, Od, md)))
+    function Xw(bb, wb, Mb) {
+      return Mb.map((Mb => Uw(bb, wb, Mb)))
     }
-    const JO = qO("rx", aO("HTMLCanvasElement"), "getContext"),
-      UO = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      xO = {
-        webgpu: [...EO("gd", aO("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...EO("gq", aO("GPUQueue"), ["submit", "writeBuffer"]), ...EO("ge", aO("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...EO("gp", aO("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), JO],
-        webgl: [...EO("g2", aO("WebGL2RenderingContext"), [...UO, "drawArraysInstanced", "drawElementsInstanced"]), JO],
-        webgl1: [...EO("g1", aO("WebGLRenderingContext"), UO), JO]
+    const xw = Uw("rx", zw("HTMLCanvasElement"), "getContext"),
+      jw = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      Kw = {
+        webgpu: [...Xw("gd", zw("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...Xw("gq", zw("GPUQueue"), ["submit", "writeBuffer"]), ...Xw("ge", zw("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...Xw("gp", zw("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), xw],
+        webgl: [...Xw("g2", zw("WebGL2RenderingContext"), [...jw, "drawArraysInstanced", "drawElementsInstanced"]), xw],
+        webgl1: [...Xw("g1", zw("WebGLRenderingContext"), jw), xw]
       };
-    let BO = [];
-    const SO = new WeakMap;
+    let rw = [];
+    const Rw = new WeakMap;
 
-    function sO(dd, Od) {
-      const md = Gd();
+    function Dw(bb, wb) {
+      const Mb = Wb();
       try {
-        Ad(QO, SO, [dd, Od])
+        fb(lw, Rw, [bb, wb])
       } finally {
-        nd(md)
+        Jb(Mb)
       }
     }
 
-    function uO(dd) {
+    function Yw(bb) {
       try {
-        const Od = Qm(dd),
-          md = Ad(vO, SO, [Od]);
-        return mm(md, dd) ? VO(dd, !0) : `${VO(dd,!1)}${OO(md??Od)}`
+        const wb = lM(bb),
+          Mb = fb(gw, Rw, [wb]);
+        return wM(Mb, bb) ? Zw(bb, !0) : `${Zw(bb,!1)}${kb(Mb??wb)}`
       } catch {
-        return `${VO(dd,!1)}${OO(void 0)}`
+        return `${Zw(bb,!1)}${kb(void 0)}`
       }
     }
 
-    function VO(dd, Od) {
+    function Zw(bb, wb) {
       let {
-        code: md,
-        key: Wd
-      } = dd;
-      return `wh:${md}${Od?"-dbg":""}:${Wd}`
+        code: Mb,
+        key: eb
+      } = bb;
+      return `wh:${Mb}${wb?"-dbg":""}:${eb}`
     }
 
-    function iO(dd) {
-      return Object.values(xO).flatMap((Od => Od.map((Od => VO(Od, dd)))))
+    function fw(bb) {
+      return Object.values(Kw).flatMap((wb => wb.map((wb => Zw(wb, bb)))))
     }
-    const AO = new Set(iO(!0)),
-      rO = new Set([...iO(!1), ...AO]),
-      GO = VO(JO, !1);
+    const Aw = new Set(fw(!0)),
+      Ww = new Set([...fw(!1), ...Aw]),
+      Jw = Zw(xw, !1);
 
-    function nO(dd) {
-      BO = xO[dd]
+    function Sw(bb) {
+      rw = Kw[bb]
     }
 
-    function LO(dd) {
-      const Od = Gd();
+    function Nw(bb) {
+      const wb = Wb();
       try {
-        return PO(dd) || PO(mO(dd))
+        return vw(bb) || vw(bw(bb))
       } finally {
-        nd(Od)
+        Jb(wb)
       }
     }
 
-    function PO(dd) {
-      return Ad(hO, rO, [dd])
+    function vw(bb) {
+      return fb(Vw, Ww, [bb])
     }
 
-    function zO(dd) {
-      return new Set(wO.filter((Od => Od.tier === dd)).map((dd => `wh:${dd.code}`)))
+    function Qw(bb) {
+      return new Set(hw.filter((wb => wb.tier === bb)).map((bb => `wh:${bb.code}`)))
     }
-    const cO = zO("punished"),
-      jO = !1,
-      DO = new Set(WO.e),
-      eO = zO("weighted");
+    const Gw = Qw("punished"),
+      qw = !1,
+      aw = new Set(ww.c),
+      iw = Qw("weighted");
 
-    function IO(dd) {
-      const Od = Gd();
+    function uw(bb) {
+      const wb = Wb();
       try {
-        return CO(mO(dd))
+        return Pw(bw(bb))
       } finally {
-        nd(Od)
+        Jb(wb)
       }
     }
 
-    function lO(dd) {
-      const Od = Gd();
+    function dw(bb) {
+      const wb = Wb();
       try {
-        return mO(dd)
+        return bw(bb)
       } finally {
-        nd(Od)
+        Jb(wb)
       }
     }
 
-    function CO(dd) {
-      return Ad(hO, eO, [dd])
+    function Pw(bb) {
+      return fb(Vw, iw, [bb])
     }
 
-    function ZO(dd) {
-      const Od = Gd();
+    function nw(bb) {
+      const wb = Wb();
       try {
-        return kO(dd)
+        return yw(bb)
       } finally {
-        nd(Od)
+        Jb(wb)
       }
     }
 
-    function kO(dd) {
-      return Ad(hO, DO, [dd])
+    function yw(bb) {
+      return fb(Vw, aw, [bb])
     }
 
-    function fO(dd) {
-      return "wb" === dd || Ad(hO, cO, [dd])
+    function ow(bb) {
+      return "wb" === bb || fb(Vw, Gw, [bb])
     }
 
-    function MO(dd) {
-      const Od = Gd();
+    function Tw(bb) {
+      const wb = Wb();
       try {
-        return fO(dd) || kO(dd)
+        return ow(bb) || yw(bb)
       } finally {
-        nd(Od)
+        Jb(wb)
       }
     }
 
-    function dm(dd) {
-      const Od = Gd();
+    function kw(bb) {
+      const wb = Wb();
       try {
-        return "wb" === dd || jO && fO(dd)
+        return "wb" === bb || qw && ow(bb)
       } finally {
-        nd(Od)
+        Jb(wb)
       }
     }
 
-    function Om(dd, Od) {
+    function bM(bb, wb) {
       let {
-        isGetter: md
-      } = Od;
-      const Wd = RO(dd, md ? "get" : "value");
-      return void 0 === Wd ? void 0 : Wd.value
+        isGetter: Mb
+      } = wb;
+      const eb = ew(bb, Mb ? "get" : "value");
+      return void 0 === eb ? void 0 : eb.value
     }
 
-    function mm(dd, Od) {
+    function wM(bb, wb) {
       let {
-        isConstructor: md,
-        native: Wd
-      } = Od;
-      return "function" === typeof dd && (!(!md && Ad(KO, dd, ["prototype"])) && null !== Ad(XO, Wd, [Ad(FO, dd, [])]))
+        isConstructor: Mb,
+        native: eb
+      } = wb;
+      return "function" === typeof bb && (!(!Mb && fb(pw, bb, ["prototype"])) && null !== fb(Hw, eb, [fb(Mw, bb, [])]))
     }
 
-    function Wm(dd, Od) {
-      return mm(dd, qO("", (() => {}), Od, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function MM(bb, wb) {
+      return wM(bb, Uw("", (() => {}), wb, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let Fm = null,
-      Rm = !1;
+    let eM = null,
+      HM = !1;
 
-    function Xm() {
+    function pM() {
       try {
-        return globalThis.WebAssembly === NO
+        return globalThis.WebAssembly === Ow
       } catch {
         return !1
       }
     }
 
-    function Km(dd) {
+    function VM(bb) {
       try {
-        return function(dd) {
+        return function(bb) {
           const {
-            holder: Od,
-            key: md,
-            onNamespace: Wd,
-            inSecureContext: Fd
-          } = dd, Rd = Od(), Xd = gO(Rd, md);
-          if (!Xd) return !(Fd && !0 === globalThis.isSecureContext);
-          const Kd = Om(Xd, dd);
-          if (!mm(Kd, dd)) return !1;
-          if (Wd) {
-            const Od = globalThis.WebAssembly;
-            if (Od !== Rd && null !== Od && ("object" === typeof Od || "function" === typeof Od)) {
-              const Wd = tO(Od, md);
-              return Wd === Kd || void 0 === Wd || mm(Wd, dd)
+            holder: wb,
+            key: Mb,
+            onNamespace: eb,
+            inSecureContext: Hb
+          } = bb, pb = wb(), Vb = mw(pb, Mb);
+          if (!Vb) return !(Hb && !0 === globalThis.isSecureContext);
+          const gb = bM(Vb, bb);
+          if (!wM(gb, bb)) return !1;
+          if (eb) {
+            const wb = globalThis.WebAssembly;
+            if (wb !== pb && null !== wb && ("object" === typeof wb || "function" === typeof wb)) {
+              const eb = Lw(wb, Mb);
+              return eb === gb || void 0 === eb || wM(eb, bb)
             }
           }
           return !0
-        }(dd)
+        }(bb)
       } catch {
         return !1
       }
     }
 
-    function hm(dd) {
-      const Od = `wh:${dd.code}`;
-      if ("punished" === dd.tier) return Od;
+    function gM(bb) {
+      const wb = `wh:${bb.code}`;
+      if ("punished" === bb.tier) return wb;
       try {
-        return `${Od}${OO(Qm(dd))}`
+        return `${wb}${kb(lM(bb))}`
       } catch {
-        return `${Od}${OO(void 0)}`
+        return `${wb}${kb(void 0)}`
       }
     }
 
-    function Qm(dd) {
-      const Od = gO(dd.holder(), dd.key),
-        md = void 0 === Od ? void 0 : Om(Od, dd);
-      return dd.onNamespace && !Xm() && mm(md, dd) ? tO(globalThis.WebAssembly, dd.key) : md
+    function lM(bb) {
+      const wb = mw(bb.holder(), bb.key),
+        Mb = void 0 === wb ? void 0 : bM(wb, bb);
+      return bb.onNamespace && !pM() && wM(Mb, bb) ? Lw(globalThis.WebAssembly, bb.key) : Mb
     }
 
-    function tm(dd) {
-      if (fO(dd)) return 5;
-      const Od = mO(dd);
-      return CO(Od) ? 4 : kO(dd) ? 3 : PO(Od) ? function(dd) {
-        return Ad(hO, AO, [dd])
-      }(Od) ? -1 : Od === GO ? 0 : 1 : 2
+    function LM(bb) {
+      if (ow(bb)) return 5;
+      const wb = bw(bb);
+      return Pw(wb) ? 4 : yw(bb) ? 3 : vw(wb) ? function(bb) {
+        return fb(Vw, Aw, [bb])
+      }(wb) ? -1 : wb === Jw ? 0 : 1 : 2
     }
 
-    function om() {
-      const dd = function() {
-        const dd = rd();
-        return Ed === Td || Ed === pd ? (Ad = Vd, ud = Sd) : Ad = Xd, dd
+    function IM() {
+      const bb = function() {
+        const bb = Ab();
+        return xb === sb || xb === mb ? (fb = Zb, Yb = Db) : fb = Vb, bb
       }();
       try {
-        if (null === Fm || !fO(Fm)) {
-          const dd = function() {
-            if (void 0 === NO) return null;
-            let dd = Xm() ? null : "wh:wa";
-            const Od = Od => {
-              null !== Od && (null === dd || tm(Od) > tm(dd)) && (dd = Od)
+        if (null === eM || !ow(eM)) {
+          const bb = function() {
+            if (void 0 === Ow) return null;
+            let bb = pM() ? null : "wh:wa";
+            const wb = wb => {
+              null !== wb && (null === bb || LM(wb) > LM(bb)) && (bb = wb)
             };
-            for (let md = 0; md < wO.length; md++) {
-              const dd = wO[md];
-              void 0 === dd || Km(dd) || Od(hm(dd))
+            for (let Mb = 0; Mb < hw.length; Mb++) {
+              const bb = hw[Mb];
+              void 0 === bb || VM(bb) || wb(gM(bb))
             }
-            Od((0, WO.r)());
-            for (let md = 0; md < BO.length; md++) {
-              const dd = BO[md];
-              void 0 === dd || Km(dd) || Od(uO(dd))
+            wb((0, ww.j)());
+            for (let Mb = 0; Mb < rw.length; Mb++) {
+              const bb = rw[Mb];
+              void 0 === bb || VM(bb) || wb(Yw(bb))
             }
-            return dd
+            return bb
           }();
-          (null === Fm || null !== dd && tm(dd) > tm(Fm)) && (Fm = dd)
+          (null === eM || null !== bb && LM(bb) > LM(eM)) && (eM = bb)
         }
       } finally {
-        nd(dd)
+        Jb(bb)
       }
     }
 
-    function Nm() {
-      Rm = !0
+    function OM() {
+      HM = !0
     }
 
-    function qm() {
-      if (Rm) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && om(), null !== Fm) return Fm;
-      if (void 0 === NO) return "wn:unsupported";
-      const dd = (0, Wd.m)();
-      return null === dd ? null : `wn:${dd}`
+    function UM() {
+      if (HM) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && IM(), null !== eM) return eM;
+      if (void 0 === Ow) return "wn:unsupported";
+      const bb = (0, eb.q)();
+      return null === bb ? null : `wn:${bb}`
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

@@ -1,276 +1,276 @@
 export const id = 63;
 export const ids = [63];
 export const modules = {
-  41452: () => {
+  41223: () => {
     ! function() {
-      function dd(Od) {
-        return (dd = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(dd) {
-          return typeof dd
-        } : function(dd) {
-          return dd && "function" == typeof Symbol && dd.constructor === Symbol && dd !== Symbol.prototype ? "symbol" : typeof dd
-        })(Od)
+      function bb(wb) {
+        return (bb = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
+          return typeof bb
+        } : function(bb) {
+          return bb && "function" == typeof Symbol && bb.constructor === Symbol && bb !== Symbol.prototype ? "symbol" : typeof bb
+        })(wb)
       }
 
-      function Od(Od, md, Wd) {
-        return (md = function(Od) {
-          var md = function(Od) {
-            if ("object" != dd(Od) || !Od) return Od;
-            var md = Od[Symbol.toPrimitive];
-            if (void 0 !== md) {
-              var Wd = md.call(Od, "string");
-              if ("object" != dd(Wd)) return Wd;
+      function wb(wb, Mb, eb) {
+        return (Mb = function(wb) {
+          var Mb = function(wb) {
+            if ("object" != bb(wb) || !wb) return wb;
+            var Mb = wb[Symbol.toPrimitive];
+            if (void 0 !== Mb) {
+              var eb = Mb.call(wb, "string");
+              if ("object" != bb(eb)) return eb;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(Od)
-          }(Od);
-          return "symbol" == dd(md) ? md : md + ""
-        }(md)) in Od ? Object.defineProperty(Od, md, {
-          value: Wd,
+            return String(wb)
+          }(wb);
+          return "symbol" == bb(Mb) ? Mb : Mb + ""
+        }(Mb)) in wb ? Object.defineProperty(wb, Mb, {
+          value: eb,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : Od[md] = Wd, Od
+        }) : wb[Mb] = eb, wb
       }
 
-      function md(dd, Od) {
-        var md = Object.keys(dd);
+      function Mb(bb, wb) {
+        var Mb = Object.keys(bb);
         if (Object.getOwnPropertySymbols) {
-          var Wd = Object.getOwnPropertySymbols(dd);
-          Od && (Wd = Wd.filter((function(Od) {
-            return Object.getOwnPropertyDescriptor(dd, Od).enumerable
-          }))), md.push.apply(md, Wd)
+          var eb = Object.getOwnPropertySymbols(bb);
+          wb && (eb = eb.filter((function(wb) {
+            return Object.getOwnPropertyDescriptor(bb, wb).enumerable
+          }))), Mb.push.apply(Mb, eb)
         }
-        return md
+        return Mb
       }
 
-      function Wd(dd) {
-        for (var Wd = 1; arguments.length > Wd; Wd++) {
-          var Fd = null != arguments[Wd] ? arguments[Wd] : {};
-          Wd % 2 ? md(Object(Fd), !0).forEach((function(md) {
-            Od(dd, md, Fd[md])
-          })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(dd, Object.getOwnPropertyDescriptors(Fd)) : md(Object(Fd)).forEach((function(Od) {
-            Object.defineProperty(dd, Od, Object.getOwnPropertyDescriptor(Fd, Od))
+      function eb(bb) {
+        for (var eb = 1; arguments.length > eb; eb++) {
+          var Hb = null != arguments[eb] ? arguments[eb] : {};
+          eb % 2 ? Mb(Object(Hb), !0).forEach((function(Mb) {
+            wb(bb, Mb, Hb[Mb])
+          })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(bb, Object.getOwnPropertyDescriptors(Hb)) : Mb(Object(Hb)).forEach((function(wb) {
+            Object.defineProperty(bb, wb, Object.getOwnPropertyDescriptor(Hb, wb))
           }))
         }
-        return dd
+        return bb
       }
 
-      function Fd(dd, Od, md, Wd, Fd, Rd, Xd) {
+      function Hb(bb, wb, Mb, eb, Hb, pb, Vb) {
         try {
-          var Kd = dd[Rd](Xd),
-            hd = Kd.value
-        } catch (dd) {
-          return void md(dd)
+          var gb = bb[pb](Vb),
+            lb = gb.value
+        } catch (bb) {
+          return void Mb(bb)
         }
-        Kd.done ? Od(hd) : Promise.resolve(hd).then(Wd, Fd)
+        gb.done ? wb(lb) : Promise.resolve(lb).then(eb, Hb)
       }
 
-      function Rd(dd) {
+      function pb(bb) {
         return function() {
-          var Od = this,
-            md = arguments;
-          return new Promise((function(Wd, Rd) {
-            var Xd = dd.apply(Od, md);
+          var wb = this,
+            Mb = arguments;
+          return new Promise((function(eb, pb) {
+            var Vb = bb.apply(wb, Mb);
 
-            function Kd(dd) {
-              Fd(Xd, Wd, Rd, Kd, hd, "next", dd)
+            function gb(bb) {
+              Hb(Vb, eb, pb, gb, lb, "next", bb)
             }
 
-            function hd(dd) {
-              Fd(Xd, Wd, Rd, Kd, hd, "throw", dd)
+            function lb(bb) {
+              Hb(Vb, eb, pb, gb, lb, "throw", bb)
             }
-            Kd(void 0)
+            gb(void 0)
           }))
         }
       }
-      const Xd = ["type"];
-      var Kd = function(dd) {
-          return dd[dd.DomContentLoaded = 0] = "DomContentLoaded", dd[dd.Load = 1] = "Load", dd[dd.FullSnapshot = 2] = "FullSnapshot", dd[dd.IncrementalSnapshot = 3] = "IncrementalSnapshot", dd[dd.Meta = 4] = "Meta", dd[dd.Custom = 5] = "Custom", dd[dd.Plugin = 6] = "Plugin", dd
+      const Vb = ["type"];
+      var gb = function(bb) {
+          return bb[bb.DomContentLoaded = 0] = "DomContentLoaded", bb[bb.Load = 1] = "Load", bb[bb.FullSnapshot = 2] = "FullSnapshot", bb[bb.IncrementalSnapshot = 3] = "IncrementalSnapshot", bb[bb.Meta = 4] = "Meta", bb[bb.Custom = 5] = "Custom", bb[bb.Plugin = 6] = "Plugin", bb
         }({}),
-        hd = function(dd) {
-          return dd[dd.Mutation = 0] = "Mutation", dd[dd.MouseMove = 1] = "MouseMove", dd[dd.MouseInteraction = 2] = "MouseInteraction", dd[dd.Scroll = 3] = "Scroll", dd[dd.ViewportResize = 4] = "ViewportResize", dd[dd.Input = 5] = "Input", dd[dd.TouchMove = 6] = "TouchMove", dd[dd.MediaInteraction = 7] = "MediaInteraction", dd[dd.StyleSheetRule = 8] = "StyleSheetRule", dd[dd.CanvasMutation = 9] = "CanvasMutation", dd[dd.Font = 10] = "Font", dd[dd.Log = 11] = "Log", dd[dd.Drag = 12] = "Drag", dd[dd.StyleDeclaration = 13] = "StyleDeclaration", dd[dd.Selection = 14] = "Selection", dd[dd.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", dd[dd.CustomElement = 16] = "CustomElement", dd
+        lb = function(bb) {
+          return bb[bb.Mutation = 0] = "Mutation", bb[bb.MouseMove = 1] = "MouseMove", bb[bb.MouseInteraction = 2] = "MouseInteraction", bb[bb.Scroll = 3] = "Scroll", bb[bb.ViewportResize = 4] = "ViewportResize", bb[bb.Input = 5] = "Input", bb[bb.TouchMove = 6] = "TouchMove", bb[bb.MediaInteraction = 7] = "MediaInteraction", bb[bb.StyleSheetRule = 8] = "StyleSheetRule", bb[bb.CanvasMutation = 9] = "CanvasMutation", bb[bb.Font = 10] = "Font", bb[bb.Log = 11] = "Log", bb[bb.Drag = 12] = "Drag", bb[bb.StyleDeclaration = 13] = "StyleDeclaration", bb[bb.Selection = 14] = "Selection", bb[bb.AdoptedStyleSheet = 15] = "AdoptedStyleSheet", bb[bb.CustomElement = 16] = "CustomElement", bb
         }({}),
-        vd = function(dd) {
-          return dd[dd.MouseUp = 0] = "MouseUp", dd[dd.MouseDown = 1] = "MouseDown", dd[dd.Click = 2] = "Click", dd[dd.ContextMenu = 3] = "ContextMenu", dd[dd.DblClick = 4] = "DblClick", dd[dd.Focus = 5] = "Focus", dd[dd.Blur = 6] = "Blur", dd[dd.TouchStart = 7] = "TouchStart", dd[dd.TouchMove_Departed = 8] = "TouchMove_Departed", dd[dd.TouchEnd = 9] = "TouchEnd", dd[dd.TouchCancel = 10] = "TouchCancel", dd
+        Lb = function(bb) {
+          return bb[bb.MouseUp = 0] = "MouseUp", bb[bb.MouseDown = 1] = "MouseDown", bb[bb.Click = 2] = "Click", bb[bb.ContextMenu = 3] = "ContextMenu", bb[bb.DblClick = 4] = "DblClick", bb[bb.Focus = 5] = "Focus", bb[bb.Blur = 6] = "Blur", bb[bb.TouchStart = 7] = "TouchStart", bb[bb.TouchMove_Departed = 8] = "TouchMove_Departed", bb[bb.TouchEnd = 9] = "TouchEnd", bb[bb.TouchCancel = 10] = "TouchCancel", bb
         }({}),
-        Qd = function(dd) {
-          return dd[dd.Mouse = 0] = "Mouse", dd[dd.Pen = 1] = "Pen", dd[dd.Touch = 2] = "Touch", dd
+        Ib = function(bb) {
+          return bb[bb.Mouse = 0] = "Mouse", bb[bb.Pen = 1] = "Pen", bb[bb.Touch = 2] = "Touch", bb
         }({}),
-        td = function(dd) {
-          return dd[dd["2D"] = 0] = "2D", dd[dd.WebGL = 1] = "WebGL", dd[dd.WebGL2 = 2] = "WebGL2", dd
+        Ob = function(bb) {
+          return bb[bb["2D"] = 0] = "2D", bb[bb.WebGL = 1] = "WebGL", bb[bb.WebGL2 = 2] = "WebGL2", bb
         }({}),
-        od = function(dd) {
-          return dd[dd.Play = 0] = "Play", dd[dd.Pause = 1] = "Pause", dd[dd.Seeked = 2] = "Seeked", dd[dd.VolumeChange = 3] = "VolumeChange", dd[dd.RateChange = 4] = "RateChange", dd
+        Ub = function(bb) {
+          return bb[bb.Play = 0] = "Play", bb[bb.Pause = 1] = "Pause", bb[bb.Seeked = 2] = "Seeked", bb[bb.VolumeChange = 3] = "VolumeChange", bb[bb.RateChange = 4] = "RateChange", bb
         }({}),
-        Nd = function(dd) {
-          return dd[dd.Document = 0] = "Document", dd[dd.DocumentType = 1] = "DocumentType", dd[dd.Element = 2] = "Element", dd[dd.Text = 3] = "Text", dd[dd.CDATA = 4] = "CDATA", dd[dd.Comment = 5] = "Comment", dd
+        tb = function(bb) {
+          return bb[bb.Document = 0] = "Document", bb[bb.DocumentType = 1] = "DocumentType", bb[bb.Element = 2] = "Element", bb[bb.Text = 3] = "Text", bb[bb.CDATA = 4] = "CDATA", bb[bb.Comment = 5] = "Comment", bb
         }({});
 
-      function qd(dd, Od) {
-        return -1 !== dd.indexOf(Od)
+      function Cb(bb, wb) {
+        return -1 !== bb.indexOf(wb)
       }
       "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
-      var Hd = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
-      new RegExp(`^${Hd.source}`, "i"), new RegExp(Hd.source, "gi"), "0".repeat(32), "0".repeat(16);
-      var yd = {
+      var Eb = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
+      new RegExp(`^${Eb.source}`, "i"), new RegExp(Eb.source, "gi"), "0".repeat(32), "0".repeat(16);
+      var Fb = {
           Node: ["childNodes", "parentNode", "parentElement", "textContent"],
           ShadowRoot: ["host", "styleSheets"],
           Element: ["shadowRoot"],
           MutationObserver: []
         },
-        bd = {
+        Bb = {
           Node: ["contains", "getRootNode"],
           ShadowRoot: ["getSelection"],
           Element: ["querySelector", "querySelectorAll"],
           MutationObserver: ["constructor"]
         },
-        Td = {};
+        sb = {};
 
-      function pd(dd) {
-        if (Td[dd]) return Td[dd];
-        const Od = function(dd) {
-            var Od, md;
-            const Wd = null === (Od = globalThis) || void 0 === Od || null === (Od = Od.Zone) || void 0 === Od || null === (md = Od.__symbol__) || void 0 === md ? void 0 : md.call(Od, dd);
-            return Wd && globalThis[Wd] ? globalThis[Wd] : void 0
-          }(dd) || globalThis[dd],
-          md = Od.prototype,
-          Wd = dd in yd ? yd[dd] : void 0,
-          Fd = Boolean(Wd && Wd.every((dd => {
-            var Od;
-            return Boolean(null === (Od = Object.getOwnPropertyDescriptor(md, dd)) || void 0 === Od || null === (Od = Od.get) || void 0 === Od ? void 0 : Od.toString().includes("[native code]"))
+      function mb(bb) {
+        if (sb[bb]) return sb[bb];
+        const wb = function(bb) {
+            var wb, Mb;
+            const eb = null === (wb = globalThis) || void 0 === wb || null === (wb = wb.Zone) || void 0 === wb || null === (Mb = wb.__symbol__) || void 0 === Mb ? void 0 : Mb.call(wb, bb);
+            return eb && globalThis[eb] ? globalThis[eb] : void 0
+          }(bb) || globalThis[bb],
+          Mb = wb.prototype,
+          eb = bb in Fb ? Fb[bb] : void 0,
+          Hb = Boolean(eb && eb.every((bb => {
+            var wb;
+            return Boolean(null === (wb = Object.getOwnPropertyDescriptor(Mb, bb)) || void 0 === wb || null === (wb = wb.get) || void 0 === wb ? void 0 : wb.toString().includes("[native code]"))
           }))),
-          Rd = dd in bd ? bd[dd] : void 0,
-          Xd = Boolean(Rd && Rd.every((dd => {
-            var Od;
-            return "function" == typeof md[dd] && (null === (Od = md[dd]) || void 0 === Od ? void 0 : Od.toString().includes("[native code]"))
+          pb = bb in Bb ? Bb[bb] : void 0,
+          Vb = Boolean(pb && pb.every((bb => {
+            var wb;
+            return "function" == typeof Mb[bb] && (null === (wb = Mb[bb]) || void 0 === wb ? void 0 : wb.toString().includes("[native code]"))
           })));
-        if (Fd && Xd) return Td[dd] = Od.prototype, Od.prototype;
-        const Kd = document.createElement("iframe");
-        Kd.style.display = "none";
-        let hd = !1;
+        if (Hb && Vb) return sb[bb] = wb.prototype, wb.prototype;
+        const gb = document.createElement("iframe");
+        gb.style.display = "none";
+        let lb = !1;
         try {
-          document.body.appendChild(Kd);
-          const Wd = Kd.contentWindow;
-          if (!Wd) return Od.prototype;
-          const Fd = Wd[dd].prototype;
-          return Fd ? (qd(vd = navigator.userAgent, "AppleWebKit") && !qd(vd, "Chrome") && (Kd.classList.add("rr-block", "ph-no-capture"), Kd.setAttribute("__rrwebUntaintedPrototype", dd), hd = !0), Td[dd] = Fd) : md
-        } catch (dd) {
-          return md
+          document.body.appendChild(gb);
+          const eb = gb.contentWindow;
+          if (!eb) return wb.prototype;
+          const Hb = eb[bb].prototype;
+          return Hb ? (Cb(Lb = navigator.userAgent, "AppleWebKit") && !Cb(Lb, "Chrome") && (gb.classList.add("rr-block", "ph-no-capture"), gb.setAttribute("__rrwebUntaintedPrototype", bb), lb = !0), sb[bb] = Hb) : Mb
+        } catch (bb) {
+          return Mb
         } finally {
-          !hd && Kd.parentNode && document.body.removeChild(Kd)
+          !lb && gb.parentNode && document.body.removeChild(gb)
         }
-        var vd
+        var Lb
       }
-      var Yd = Object.create(null);
+      var hb = Object.create(null);
 
-      function gd(dd, Od, md) {
-        var Wd;
-        const Fd = Yd[dd],
-          Rd = Fd[md];
-        if (Rd) return Rd.call(Od);
-        const Xd = pd(dd),
-          Kd = null === (Wd = Object.getOwnPropertyDescriptor(Xd, md)) || void 0 === Wd ? void 0 : Wd.get;
-        return Kd ? (Fd[md] = Kd, Kd.call(Od)) : Od[md]
+      function zb(bb, wb, Mb) {
+        var eb;
+        const Hb = hb[bb],
+          pb = Hb[Mb];
+        if (pb) return pb.call(wb);
+        const Vb = mb(bb),
+          gb = null === (eb = Object.getOwnPropertyDescriptor(Vb, Mb)) || void 0 === eb ? void 0 : eb.get;
+        return gb ? (Hb[Mb] = gb, gb.call(wb)) : wb[Mb]
       }
-      Yd.Node = Object.create(null), Yd.ShadowRoot = Object.create(null), Yd.MutationObserver = Object.create(null), Yd.Element = Object.create(null);
-      var wd, Ed = {};
+      hb.Node = Object.create(null), hb.ShadowRoot = Object.create(null), hb.MutationObserver = Object.create(null), hb.Element = Object.create(null);
+      var Xb, xb = {};
 
-      function Jd(dd, Od, md) {
-        const Wd = `${dd}.${String(md)}`;
-        if (Ed[Wd]) return Ed[Wd].bind(Od);
-        const Fd = pd(dd)[md];
-        return "function" != typeof Fd ? Od[md] : (Ed[Wd] = Fd, Fd.bind(Od))
-      }
-
-      function Ud() {
-        return pd("MutationObserver").constructor
+      function jb(bb, wb, Mb) {
+        const eb = `${bb}.${String(Mb)}`;
+        if (xb[eb]) return xb[eb].bind(wb);
+        const Hb = mb(bb)[Mb];
+        return "function" != typeof Hb ? wb[Mb] : (xb[eb] = Hb, Hb.bind(wb))
       }
 
-      function xd(dd, Od, md) {
+      function Kb() {
+        return mb("MutationObserver").constructor
+      }
+
+      function rb(bb, wb, Mb) {
         try {
-          if (!(Od in dd)) return () => {};
-          const Wd = dd[Od],
-            Fd = {
-              next: Wd
+          if (!(wb in bb)) return () => {};
+          const eb = bb[wb],
+            Hb = {
+              next: eb
             },
-            Rd = md((function() {
-              for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-              return Fd.next.apply(this, Od)
+            pb = Mb((function() {
+              for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+              return Hb.next.apply(this, wb)
             }));
-          return "function" == typeof Rd && (Rd.prototype = Rd.prototype || {}, Object.defineProperties(Rd, {
+          return "function" == typeof pb && (pb.prototype = pb.prototype || {}, Object.defineProperties(pb, {
             __rrweb_original__: {
               enumerable: !1,
-              value: Wd
+              value: eb
             },
             __rrweb_layer__: {
               enumerable: !1,
-              value: Fd
+              value: Hb
             }
-          })), dd[Od] = Rd, () => {
-            if (dd[Od] === Rd) return void(dd[Od] = Fd.next);
-            const md = dd => {
-              var Od;
-              return "function" == typeof dd ? null !== (Od = dd.__rrweb_layer__) && void 0 !== Od ? Od : dd.__posthog_layer__ : void 0
+          })), bb[wb] = pb, () => {
+            if (bb[wb] === pb) return void(bb[wb] = Hb.next);
+            const Mb = bb => {
+              var wb;
+              return "function" == typeof bb ? null !== (wb = bb.__rrweb_layer__) && void 0 !== wb ? wb : bb.__posthog_layer__ : void 0
             };
-            let Wd = dd[Od],
-              Xd = md(Wd);
-            for (; Xd;) {
-              if (Xd.next === Rd) return void(Xd.next = Fd.next);
-              Wd = Xd.next, Xd = md(Wd)
+            let eb = bb[wb],
+              Vb = Mb(eb);
+            for (; Vb;) {
+              if (Vb.next === pb) return void(Vb.next = Hb.next);
+              eb = Vb.next, Vb = Mb(eb)
             }
           }
-        } catch (dd) {
+        } catch (bb) {
           return () => {}
         }
       }
-      var Bd = {
-        childNodes: dd => gd("Node", dd, "childNodes"),
-        parentNode: dd => gd("Node", dd, "parentNode"),
-        parentElement: dd => gd("Node", dd, "parentElement"),
-        textContent: dd => gd("Node", dd, "textContent"),
-        isConnected(dd) {
-          if (void 0 === wd) {
-            var Od;
-            const dd = null === (Od = Object.getOwnPropertyDescriptor(pd("Node"), "isConnected")) || void 0 === Od ? void 0 : Od.get;
-            wd = (null == dd ? void 0 : dd.toString().includes("[native code]")) ? dd : null
+      var Rb = {
+        childNodes: bb => zb("Node", bb, "childNodes"),
+        parentNode: bb => zb("Node", bb, "parentNode"),
+        parentElement: bb => zb("Node", bb, "parentElement"),
+        textContent: bb => zb("Node", bb, "textContent"),
+        isConnected(bb) {
+          if (void 0 === Xb) {
+            var wb;
+            const bb = null === (wb = Object.getOwnPropertyDescriptor(mb("Node"), "isConnected")) || void 0 === wb ? void 0 : wb.get;
+            Xb = (null == bb ? void 0 : bb.toString().includes("[native code]")) ? bb : null
           }
-          return null == wd ? void 0 : wd.call(dd)
+          return null == Xb ? void 0 : Xb.call(bb)
         },
-        contains: (dd, Od) => Jd("Node", dd, "contains")(Od),
-        getRootNode: dd => Jd("Node", dd, "getRootNode")(),
-        host: dd => dd && "host" in dd ? gd("ShadowRoot", dd, "host") : null,
-        styleSheets: dd => dd.styleSheets,
-        shadowRoot: dd => dd && "shadowRoot" in dd ? gd("Element", dd, "shadowRoot") : null,
-        querySelector: (dd, Od) => Jd("Element", dd, "querySelector")(Od),
-        querySelectorAll: (dd, Od) => Jd("Element", dd, "querySelectorAll")(Od),
-        mutationObserver: Ud,
-        patch: xd
+        contains: (bb, wb) => jb("Node", bb, "contains")(wb),
+        getRootNode: bb => jb("Node", bb, "getRootNode")(),
+        host: bb => bb && "host" in bb ? zb("ShadowRoot", bb, "host") : null,
+        styleSheets: bb => bb.styleSheets,
+        shadowRoot: bb => bb && "shadowRoot" in bb ? zb("Element", bb, "shadowRoot") : null,
+        querySelector: (bb, wb) => jb("Element", bb, "querySelector")(wb),
+        querySelectorAll: (bb, wb) => jb("Element", bb, "querySelectorAll")(wb),
+        mutationObserver: Kb,
+        patch: rb
       };
 
-      function Sd() {
+      function Db() {
         try {
           if ("undefined" != typeof performance && performance.now) return performance.now()
-        } catch (dd) {}
+        } catch (bb) {}
         return Date.now()
       }
-      var sd = 0,
-        ud = 0;
+      var cb = 0,
+        Yb = 0;
 
-      function Vd() {
-        sd += 1
+      function Zb() {
+        cb += 1
       }
 
-      function Ad() {
-        return sd
+      function fb() {
+        return cb
       }
 
-      function rd(dd, Od) {
-        return (Od !== sd || dd > 6e4) && (ud += 1, !0)
+      function Ab(bb, wb) {
+        return (wb !== cb || bb > 6e4) && (Yb += 1, !0)
       }
-      var Gd = 0,
-        nd = 0,
-        Ld = 0,
-        Pd = {
+      var Wb = 0,
+        Jb = 0,
+        Sb = 0,
+        Nb = {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
@@ -278,15 +278,15 @@ export const modules = {
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
         },
-        zd = null,
-        cd = null,
-        jd = [],
-        Dd = 0,
-        ed = 0,
-        Id = {
+        vb = null,
+        Qb = null,
+        Gb = [],
+        qb = 0,
+        ab = 0,
+        ib = {
           slowestBatchMs: 0
         },
-        ld = {
+        ub = {
           deferredCount: 0,
           failedCount: 0,
           abandonedCount: 0,
@@ -294,1040 +294,1040 @@ export const modules = {
           slowestSliceMs: 0
         };
 
-      function Cd(dd) {
-        var Od;
-        (Gd += 1) > 1 || (Pd = {
+      function db(bb) {
+        var wb;
+        (Wb += 1) > 1 || (Nb = {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
           cssRuleCount: 0,
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
-        }, jd = [], Dd = 0, cd = (Od = dd) && Od > 0 ? Od : null, nd = Sd(), Ld = sd)
+        }, Gb = [], qb = 0, Qb = (wb = bb) && wb > 0 ? wb : null, Jb = Db(), Sb = cb)
       }
 
-      function Zd() {
-        return 0 === Gd ? zd || {
+      function Pb() {
+        return 0 === Wb ? vb || {
           durationMs: 0,
           stylesheetMs: 0,
           nodeCount: 0,
           cssRuleCount: 0,
           nonDeferrableCssRuleCount: 0,
           deferredStylesheetCount: 0
-        } : (Gd -= 1) > 0 ? Pd : (Pd.durationMs = Sd() - nd, Pd.deferredStylesheetCount = Dd, ld.deferredCount += Dd, cd = null, rd(Pd.durationMs, Ld) ? Pd : zd = Pd)
+        } : (Wb -= 1) > 0 ? Nb : (Nb.durationMs = Db() - Jb, Nb.deferredStylesheetCount = qb, ub.deferredCount += qb, Qb = null, Ab(Nb.durationMs, Sb) ? Nb : vb = Nb)
       }
 
-      function kd(dd, Od, md) {
-        let Wd = dd.length;
-        if (md >= 32) return Wd;
-        for (let Fd = 0; dd.length > Fd; Fd++) {
-          const Rd = dd[Fd];
+      function nb(bb, wb, Mb) {
+        let eb = bb.length;
+        if (Mb >= 32) return eb;
+        for (let Hb = 0; bb.length > Hb; Hb++) {
+          const pb = bb[Hb];
           try {
-            const dd = Rd.cssRules;
-            if (dd && dd.length) Wd += kd(dd, Od, md + 1);
-            else if (Od && Rd.styleSheet) {
-              const dd = Rd.styleSheet;
-              if (!Od.has(dd)) {
-                Od.add(dd);
-                const Fd = dd.rules || dd.cssRules;
-                Fd && (Wd += kd(Fd, Od, md + 1))
+            const bb = pb.cssRules;
+            if (bb && bb.length) eb += nb(bb, wb, Mb + 1);
+            else if (wb && pb.styleSheet) {
+              const bb = pb.styleSheet;
+              if (!wb.has(bb)) {
+                wb.add(bb);
+                const Hb = bb.rules || bb.cssRules;
+                Hb && (eb += nb(Hb, wb, Mb + 1))
               }
             }
-          } catch (dd) {}
+          } catch (bb) {}
         }
-        return Wd
+        return eb
       }
 
-      function fd(dd) {
-        if (0 === Gd) return;
-        const Od = kd(dd, null, 0);
-        Pd.cssRuleCount += Od, ed > 0 && (Pd.nonDeferrableCssRuleCount += Od)
+      function yb(bb) {
+        if (0 === Wb) return;
+        const wb = nb(bb, null, 0);
+        Nb.cssRuleCount += wb, ab > 0 && (Nb.nonDeferrableCssRuleCount += wb)
       }
 
-      function Md(dd) {
-        ed += 1;
+      function ob(bb) {
+        ab += 1;
         try {
-          return dd()
+          return bb()
         } finally {
-          ed -= 1
+          ab -= 1
         }
       }
 
-      function dO(dd) {
-        Gd > 0 && (Pd.stylesheetMs += dd)
+      function Tb(bb) {
+        Wb > 0 && (Nb.stylesheetMs += bb)
       }
 
-      function OO(dd) {
-        if (0 === Gd || null === cd) return !1;
-        const Od = Pd.cssRuleCount - Pd.nonDeferrableCssRuleCount;
-        return Od >= cd || Od + function(dd) {
+      function kb(bb) {
+        if (0 === Wb || null === Qb) return !1;
+        const wb = Nb.cssRuleCount - Nb.nonDeferrableCssRuleCount;
+        return wb >= Qb || wb + function(bb) {
           try {
-            const Od = dd && (dd.rules || dd.cssRules);
-            if (!Od) return 0;
-            const md = new WeakSet;
-            return md.add(dd), kd(Od, md, 0)
-          } catch (dd) {
+            const wb = bb && (bb.rules || bb.cssRules);
+            if (!wb) return 0;
+            const Mb = new WeakSet;
+            return Mb.add(bb), nb(wb, Mb, 0)
+          } catch (bb) {
             return 0
           }
-        }(dd) > cd
+        }(bb) > Qb
       }
 
-      function mO() {
-        const dd = jd;
-        return jd = [], dd
+      function bw() {
+        const bb = Gb;
+        return Gb = [], bb
       }
 
-      function WO() {
-        ld.failedCount += 1
+      function ww() {
+        ub.failedCount += 1
       }
 
-      function FO(dd) {
-        dd > 0 && (ld.abandonedCount += dd)
+      function Mw(bb) {
+        bb > 0 && (ub.abandonedCount += bb)
       }
 
-      function RO(dd) {
-        return RO = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(dd) {
-          return typeof dd
-        } : function(dd) {
-          return dd && "function" == typeof Symbol && dd.constructor === Symbol && dd !== Symbol.prototype ? "symbol" : typeof dd
-        }, RO(dd)
+      function ew(bb) {
+        return ew = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
+          return typeof bb
+        } : function(bb) {
+          return bb && "function" == typeof Symbol && bb.constructor === Symbol && bb !== Symbol.prototype ? "symbol" : typeof bb
+        }, ew(bb)
       }
 
-      function XO(dd, Od, md) {
-        return (Od = function(dd) {
-          var Od = function(dd) {
-            if ("object" != RO(dd) || !dd) return dd;
-            var Od = dd[Symbol.toPrimitive];
-            if (void 0 !== Od) {
-              var md = Od.call(dd, "string");
-              if ("object" != RO(md)) return md;
+      function Hw(bb, wb, Mb) {
+        return (wb = function(bb) {
+          var wb = function(bb) {
+            if ("object" != ew(bb) || !bb) return bb;
+            var wb = bb[Symbol.toPrimitive];
+            if (void 0 !== wb) {
+              var Mb = wb.call(bb, "string");
+              if ("object" != ew(Mb)) return Mb;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(dd)
-          }(dd);
-          return "symbol" == RO(Od) ? Od : Od + ""
-        }(Od)) in dd ? Object.defineProperty(dd, Od, {
-          value: md,
+            return String(bb)
+          }(bb);
+          return "symbol" == ew(wb) ? wb : wb + ""
+        }(wb)) in bb ? Object.defineProperty(bb, wb, {
+          value: Mb,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : dd[Od] = md, dd
+        }) : bb[wb] = Mb, bb
       }
 
-      function KO(dd) {
-        return dd.nodeType === dd.ELEMENT_NODE
+      function pw(bb) {
+        return bb.nodeType === bb.ELEMENT_NODE
       }
 
-      function hO(dd) {
-        const Od = dd && "host" in dd && "mode" in dd && Bd.host(dd) || null;
-        return Boolean(Od && "shadowRoot" in Od && Bd.shadowRoot(Od) === dd)
+      function Vw(bb) {
+        const wb = bb && "host" in bb && "mode" in bb && Rb.host(bb) || null;
+        return Boolean(wb && "shadowRoot" in wb && Rb.shadowRoot(wb) === bb)
       }
 
-      function vO(dd) {
-        return "[object ShadowRoot]" === {}.toString.call(dd)
+      function gw(bb) {
+        return "[object ShadowRoot]" === {}.toString.call(bb)
       }
 
-      function QO(dd) {
-        return dd.includes(" background-clip: text;") && !dd.includes(" -webkit-background-clip: text;") && (dd = dd.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), dd
+      function lw(bb) {
+        return bb.includes(" background-clip: text;") && !bb.includes(" -webkit-background-clip: text;") && (bb = bb.replace(/\sbackground-clip:\s*text;/g, " -webkit-background-clip: text; background-clip: text;")), bb
       }
 
-      function tO(dd) {
+      function Lw(bb) {
         const {
-          cssText: Od
-        } = dd;
-        if (3 > Od.split('"').length) return Od;
-        const md = ["@import", `url(${JSON.stringify(dd.href)})`];
-        return "" === dd.layerName ? md.push("layer") : dd.layerName && md.push(`layer(${dd.layerName})`), dd.supportsText && md.push(`supports(${dd.supportsText})`), dd.media.length && md.push(dd.media.mediaText), md.join(" ") + ";"
+          cssText: wb
+        } = bb;
+        if (3 > wb.split('"').length) return wb;
+        const Mb = ["@import", `url(${JSON.stringify(bb.href)})`];
+        return "" === bb.layerName ? Mb.push("layer") : bb.layerName && Mb.push(`layer(${bb.layerName})`), bb.supportsText && Mb.push(`supports(${bb.supportsText})`), bb.media.length && Mb.push(bb.media.mediaText), Mb.join(" ") + ";"
       }
-      var oO = 0;
+      var Iw = 0;
 
-      function NO(dd) {
-        const Od = 0 === oO,
-          md = Od ? Sd() : 0;
-        oO += 1;
+      function Ow(bb) {
+        const wb = 0 === Iw,
+          Mb = wb ? Db() : 0;
+        Iw += 1;
         try {
-          const Od = dd.rules || dd.cssRules;
-          if (!Od) return null;
-          fd(Od);
-          let md = dd.href;
-          return !md && dd.ownerNode && (md = dd.ownerNode.baseURI), QO(Array.from(Od, (dd => qO(dd, md))).join(""))
-        } catch (dd) {
+          const wb = bb.rules || bb.cssRules;
+          if (!wb) return null;
+          yb(wb);
+          let Mb = bb.href;
+          return !Mb && bb.ownerNode && (Mb = bb.ownerNode.baseURI), lw(Array.from(wb, (bb => Uw(bb, Mb))).join(""))
+        } catch (bb) {
           return null
         } finally {
-          oO -= 1, Od && dO(Sd() - md)
+          Iw -= 1, wb && Tb(Db() - Mb)
         }
       }
 
-      function qO(dd, Od) {
-        if (yO(dd)) {
-          let Od;
+      function Uw(bb, wb) {
+        if (Cw(bb)) {
+          let wb;
           try {
-            Od = NO(dd.styleSheet) || tO(dd)
-          } catch (md) {
-            Od = dd.cssText
+            wb = Ow(bb.styleSheet) || Lw(bb)
+          } catch (Mb) {
+            wb = bb.cssText
           }
           try {
-            var md;
-            if (Od && (null === (md = dd.styleSheet) || void 0 === md ? void 0 : md.href)) return uO(Od, dd.styleSheet.href)
-          } catch (dd) {}
-          return Od
+            var Mb;
+            if (wb && (null === (Mb = bb.styleSheet) || void 0 === Mb ? void 0 : Mb.href)) return Yw(wb, bb.styleSheet.href)
+          } catch (bb) {}
+          return wb
         } {
-          let md = dd.cssText;
-          return bO(dd) && dd.selectorText.includes(":") && (md = HO(md)), Od ? uO(md, Od) : md
+          let Mb = bb.cssText;
+          return Ew(bb) && bb.selectorText.includes(":") && (Mb = tw(Mb)), wb ? Yw(Mb, wb) : Mb
         }
       }
 
-      function HO(dd) {
-        return dd.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2")
+      function tw(bb) {
+        return bb.replace(/(\[(?:[\w-]+)[^\\])(:(?:[\w-]+)\])/gm, "$1\\$2")
       }
 
-      function yO(dd) {
-        return "styleSheet" in dd
+      function Cw(bb) {
+        return "styleSheet" in bb
       }
 
-      function bO(dd) {
-        return "selectorText" in dd
+      function Ew(bb) {
+        return "selectorText" in bb
       }
-      var TO = /^-?[A-Za-z_][\w-]*$/,
-        pO = /^-?[A-Za-z_][\w-]*(\.-?[A-Za-z_][\w-]*)*$/;
-      var YO = class {
+      var Fw = /^-?[A-Za-z_][\w-]*$/,
+        Bw = /^-?[A-Za-z_][\w-]*(\.-?[A-Za-z_][\w-]*)*$/;
+      var sw = class {
         constructor() {
-          XO(this, "idNodeMap", new Map), XO(this, "nodeMetaMap", new WeakMap)
+          Hw(this, "idNodeMap", new Map), Hw(this, "nodeMetaMap", new WeakMap)
         }
-        getId(dd) {
-          var Od, md;
-          return dd && null !== (Od = null === (md = this.getMeta(dd)) || void 0 === md ? void 0 : md.id) && void 0 !== Od ? Od : -1
+        getId(bb) {
+          var wb, Mb;
+          return bb && null !== (wb = null === (Mb = this.getMeta(bb)) || void 0 === Mb ? void 0 : Mb.id) && void 0 !== wb ? wb : -1
         }
-        QFd(dd) {
-          return this.idNodeMap.get(dd) || null
+        OHb(bb) {
+          return this.idNodeMap.get(bb) || null
         }
         getIds() {
           return Array.from(this.idNodeMap.keys())
         }
-        getMeta(dd) {
-          return this.nodeMetaMap.get(dd) || null
+        getMeta(bb) {
+          return this.nodeMetaMap.get(bb) || null
         }
-        removeNodeFromMap(dd) {
-          const Od = this.getId(dd);
-          if (this.idNodeMap.delete(Od), dd.childNodes && dd.childNodes.forEach((dd => this.removeNodeFromMap(dd))), KO(dd)) {
-            const Od = Bd.shadowRoot(dd);
-            Od && this.removeNodeFromMap(Od), "IFRAME" === dd.nodeName && dd.contentDocument && this.removeNodeFromMap(dd.contentDocument)
+        removeNodeFromMap(bb) {
+          const wb = this.getId(bb);
+          if (this.idNodeMap.delete(wb), bb.childNodes && bb.childNodes.forEach((bb => this.removeNodeFromMap(bb))), pw(bb)) {
+            const wb = Rb.shadowRoot(bb);
+            wb && this.removeNodeFromMap(wb), "IFRAME" === bb.nodeName && bb.contentDocument && this.removeNodeFromMap(bb.contentDocument)
           }
         }
-        has(dd) {
-          return this.idNodeMap.has(dd)
+        has(bb) {
+          return this.idNodeMap.has(bb)
         }
-        hasNode(dd) {
-          return this.nodeMetaMap.has(dd)
+        hasNode(bb) {
+          return this.nodeMetaMap.has(bb)
         }
-        add(dd, Od) {
-          this.idNodeMap.set(Od.id, dd), this.nodeMetaMap.set(dd, Od)
+        add(bb, wb) {
+          this.idNodeMap.set(wb.id, bb), this.nodeMetaMap.set(bb, wb)
         }
-        replace(dd, Od) {
-          const md = this.QFd(dd);
-          if (md) {
-            const dd = this.nodeMetaMap.get(md);
-            dd && this.nodeMetaMap.set(Od, dd)
+        replace(bb, wb) {
+          const Mb = this.OHb(bb);
+          if (Mb) {
+            const bb = this.nodeMetaMap.get(Mb);
+            bb && this.nodeMetaMap.set(wb, bb)
           }
-          this.idNodeMap.set(dd, Od)
+          this.idNodeMap.set(bb, wb)
         }
         reset() {
           this.idNodeMap = new Map, this.nodeMetaMap = new WeakMap
         }
       };
 
-      function gO(dd) {
+      function mw(bb) {
         let {
-          element: Od,
-          maskInputOptions: md,
-          tagName: Wd,
-          type: Fd,
-          value: Rd,
-          maskInputFn: Xd
-        } = dd, Kd = Rd || "";
-        const hd = Fd && wO(Fd);
-        return (md[Wd.toLowerCase()] || hd && md[hd]) && (Kd = Xd ? Xd(Kd, Od) : "*".repeat(Kd.length)), Kd
+          element: wb,
+          maskInputOptions: Mb,
+          tagName: eb,
+          type: Hb,
+          value: pb,
+          maskInputFn: Vb
+        } = bb, gb = pb || "";
+        const lb = Hb && hw(Hb);
+        return (Mb[eb.toLowerCase()] || lb && Mb[lb]) && (gb = Vb ? Vb(gb, wb) : "*".repeat(gb.length)), gb
       }
 
-      function wO(dd) {
-        return dd.toLowerCase()
+      function hw(bb) {
+        return bb.toLowerCase()
       }
-      var aO = new Set(["rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]);
+      var zw = new Set(["rr_width", "rr_height", "rr_left", "rr_top", "rr_position", "rr_transform", "rr_display", "rr_scrollleft", "rr_scrolltop", "rr_mediastate", "rr_open_mode"]);
 
-      function EO(dd) {
+      function Xw(bb) {
         let {
-          element: Od,
-          name: md,
-          value: Wd,
-          maskAllElementAttributes: Fd,
-          maskAttributeFn: Rd,
-          isGenerated: Xd = !1
-        } = dd;
-        return Wd ? Fd ? Xd && aO.has(wO(md)) ? Wd : "*".repeat(Wd.length) : Rd ? Rd(md, Wd, Od) : Wd : Wd
+          element: wb,
+          name: Mb,
+          value: eb,
+          maskAllElementAttributes: Hb,
+          maskAttributeFn: pb,
+          isGenerated: Vb = !1
+        } = bb;
+        return eb ? Hb ? Vb && zw.has(hw(Mb)) ? eb : "*".repeat(eb.length) : pb ? pb(Mb, eb, wb) : eb : eb
       }
-      var JO = "__rrweb_original__";
+      var xw = "__rrweb_original__";
 
-      function UO(dd) {
+      function jw(bb) {
         try {
-          const Od = dd.type;
-          return dd.hasAttribute("data-rr-is-password") ? "password" : Od ? wO(Od) : null
-        } catch (dd) {
+          const wb = bb.type;
+          return bb.hasAttribute("data-rr-is-password") ? "password" : wb ? hw(wb) : null
+        } catch (bb) {
           return null
         }
       }
-      var xO = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
-        BO = /^(?:[a-z+]+:)?\/\//i,
-        SO = /^www\..*/i,
-        sO = /^(data:)([^,]*),(.*)/i;
+      var Kw = /url\((?:(')([^']*)'|(")(.*?)"|([^)]*))\)/gm,
+        rw = /^(?:[a-z+]+:)?\/\//i,
+        Rw = /^www\..*/i,
+        Dw = /^(data:)([^,]*),(.*)/i;
 
-      function uO(dd, Od) {
-        return (dd || "").replace(xO, ((dd, md, Wd, Fd, Rd, Xd) => {
-          const Kd = Wd || Rd || Xd,
-            hd = md || Fd || "";
-          if (!Kd) return dd;
-          if (BO.test(Kd) || SO.test(Kd)) return `url(${hd}${Kd}${hd})`;
-          if (sO.test(Kd)) return `url(${hd}${Kd}${hd})`;
-          if ("/" === Kd[0]) return `url(${hd}${function(dd){let Od="";return Od=dd.indexOf("//")>-1?dd.split("/").slice(0,3).join("/"):dd.split("/")[0],Od=Od.split("?")[0],Od}(Od)+Kd}${hd})`;
-          const vd = Od.split("/"),
-            Qd = Kd.split("/");
-          vd.pop();
-          for (const Od of Qd) "." !== Od && (".." === Od ? vd.pop() : vd.push(Od));
-          return `url(${hd}${vd.join("/")}${hd})`
+      function Yw(bb, wb) {
+        return (bb || "").replace(Kw, ((bb, Mb, eb, Hb, pb, Vb) => {
+          const gb = eb || pb || Vb,
+            lb = Mb || Hb || "";
+          if (!gb) return bb;
+          if (rw.test(gb) || Rw.test(gb)) return `url(${lb}${gb}${lb})`;
+          if (Dw.test(gb)) return `url(${lb}${gb}${lb})`;
+          if ("/" === gb[0]) return `url(${lb}${function(bb){let wb="";return wb=bb.indexOf("//")>-1?bb.split("/").slice(0,3).join("/"):bb.split("/")[0],wb=wb.split("?")[0],wb}(wb)+gb}${lb})`;
+          const Lb = wb.split("/"),
+            Ib = gb.split("/");
+          Lb.pop();
+          for (const wb of Ib) "." !== wb && (".." === wb ? Lb.pop() : Lb.push(wb));
+          return `url(${lb}${Lb.join("/")}${lb})`
         }))
       }
-      var VO, iO, AO = new Map,
-        rO = 1,
-        GO = new RegExp("[^a-z0-9-_:]");
+      var Zw, fw, Aw = new Map,
+        Ww = 1,
+        Jw = new RegExp("[^a-z0-9-_:]");
 
-      function nO() {
-        return rO++
+      function Sw() {
+        return Ww++
       }
-      var LO = !1,
-        PO = /^[^ \t\n\r\u000c]+/,
-        zO = /^[, \t\n\r\u000c]+/,
-        cO = new WeakMap;
+      var Nw = !1,
+        vw = /^[^ \t\n\r\u000c]+/,
+        Qw = /^[, \t\n\r\u000c]+/,
+        Gw = new WeakMap;
 
-      function jO(dd, Od) {
-        return Od && "" !== Od.trim() ? DO(dd, Od) : Od
-      }
-
-      function DO(dd, Od) {
-        let md = cO.get(dd);
-        if (md || (md = dd.createElement("a"), cO.set(dd, md)), Od) {
-          if (Od.startsWith("blob:") || Od.startsWith("data:")) return Od
-        } else Od = "";
-        return md.setAttribute("href", Od), md.href
+      function qw(bb, wb) {
+        return wb && "" !== wb.trim() ? aw(bb, wb) : wb
       }
 
-      function eO(dd, Od) {
-        return (null == Od ? void 0 : Od.maxBase64ImageLength) ? function(dd, Od) {
-          return Od && dd.length > Od ? "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9InN0cmlwZXMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CiAgICAgIDxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iYmxhY2siLz4KICAgICAgPHBhdGggZD0iTTggMEgxNkwwIDE2VjhMOCAwWiIgZmlsbD0iIzJEMkQyRCIvPgogICAgICA8cGF0aCBkPSJNMTYgOFYxNkg4TDE2IDhaIiBmaWxsPSIjMkQyRDJEIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjc3RyaXBlcykiLz4KPC9zdmc+Cg==" : dd
-        }(dd, Od.maxBase64ImageLength) : dd
+      function aw(bb, wb) {
+        let Mb = Gw.get(bb);
+        if (Mb || (Mb = bb.createElement("a"), Gw.set(bb, Mb)), wb) {
+          if (wb.startsWith("blob:") || wb.startsWith("data:")) return wb
+        } else wb = "";
+        return Mb.setAttribute("href", wb), Mb.href
       }
 
-      function IO(dd, Od, md, Wd, Fd, Rd) {
-        if (!Wd) return Wd;
-        if ("src" === md || "href" === md && ("use" !== Od || "#" !== Wd[0])) {
-          if ("link" === Od && Fd) {
-            var Xd;
-            const dd = null === (Xd = Fd.sheet) || void 0 === Xd ? void 0 : Xd.href;
-            if (dd) return dd
+      function iw(bb, wb) {
+        return (null == wb ? void 0 : wb.maxBase64ImageLength) ? function(bb, wb) {
+          return wb && bb.length > wb ? "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxkZWZzPgogICAgPHBhdHRlcm4gaWQ9InN0cmlwZXMiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiI+CiAgICAgIDxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iYmxhY2siLz4KICAgICAgPHBhdGggZD0iTTggMEgxNkwwIDE2VjhMOCAwWiIgZmlsbD0iIzJEMkQyRCIvPgogICAgICA8cGF0aCBkPSJNMTYgOFYxNkg4TDE2IDhaIiBmaWxsPSIjMkQyRDJEIi8+CiAgICA8L3BhdHRlcm4+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjc3RyaXBlcykiLz4KPC9zdmc+Cg==" : bb
+        }(bb, wb.maxBase64ImageLength) : bb
+      }
+
+      function uw(bb, wb, Mb, eb, Hb, pb) {
+        if (!eb) return eb;
+        if ("src" === Mb || "href" === Mb && ("use" !== wb || "#" !== eb[0])) {
+          if ("link" === wb && Hb) {
+            var Vb;
+            const bb = null === (Vb = Hb.sheet) || void 0 === Vb ? void 0 : Vb.href;
+            if (bb) return bb
           }
-          const md = jO(dd, Wd);
-          if (md.startsWith("data:")) {
-            if ("img" === Od && Fd) {
-              let dd = md;
-              return ((null == Rd ? void 0 : Rd.type) || void 0 !== (null == Rd ? void 0 : Rd.quality)) && (dd = function(dd, Od, md, Wd) {
-                if (1e5 > Od.length) return Od;
-                if (!dd.complete || 0 === dd.naturalWidth) return Od;
-                if (dd.naturalWidth > 4096 || dd.naturalHeight > 4096) return Od;
-                const Fd = AO.get(Od);
-                if (Fd && Fd.type === md && Fd.quality === Wd) return Fd.result;
+          const Mb = qw(bb, eb);
+          if (Mb.startsWith("data:")) {
+            if ("img" === wb && Hb) {
+              let bb = Mb;
+              return ((null == pb ? void 0 : pb.type) || void 0 !== (null == pb ? void 0 : pb.quality)) && (bb = function(bb, wb, Mb, eb) {
+                if (1e5 > wb.length) return wb;
+                if (!bb.complete || 0 === bb.naturalWidth) return wb;
+                if (bb.naturalWidth > 4096 || bb.naturalHeight > 4096) return wb;
+                const Hb = Aw.get(wb);
+                if (Hb && Hb.type === Mb && Hb.quality === eb) return Hb.result;
                 try {
-                  const Fd = document.createElement("canvas");
-                  Fd.width = dd.naturalWidth, Fd.height = dd.naturalHeight;
-                  const Rd = Fd.getContext("2d");
-                  if (!Rd) return Od;
-                  Rd.drawImage(dd, 0, 0);
-                  const Xd = Fd.toDataURL(md || "image/webp", null != Wd ? Wd : .4),
-                    Kd = Od.length > Xd.length ? Xd : Od;
-                  if (AO.size >= 10) {
-                    const dd = AO.keys().next().value;
-                    void 0 !== dd && AO.delete(dd)
+                  const Hb = document.createElement("canvas");
+                  Hb.width = bb.naturalWidth, Hb.height = bb.naturalHeight;
+                  const pb = Hb.getContext("2d");
+                  if (!pb) return wb;
+                  pb.drawImage(bb, 0, 0);
+                  const Vb = Hb.toDataURL(Mb || "image/webp", null != eb ? eb : .4),
+                    gb = wb.length > Vb.length ? Vb : wb;
+                  if (Aw.size >= 10) {
+                    const bb = Aw.keys().next().value;
+                    void 0 !== bb && Aw.delete(bb)
                   }
-                  return AO.set(Od, {
-                    type: md,
-                    quality: Wd,
-                    result: Kd
-                  }), Kd
-                } catch (dd) {
-                  return Od
+                  return Aw.set(wb, {
+                    type: Mb,
+                    quality: eb,
+                    result: gb
+                  }), gb
+                } catch (bb) {
+                  return wb
                 }
-              }(Fd, md, Rd.type, Rd.quality)), eO(dd, Rd)
+              }(Hb, Mb, pb.type, pb.quality)), iw(bb, pb)
             }
-            if ("image" === Od) return eO(md, Rd)
+            if ("image" === wb) return iw(Mb, pb)
           }
-          return md
+          return Mb
         }
-        if ("xlink:href" === md && "#" !== Wd[0]) {
-          const md = jO(dd, Wd);
-          return "image" === Od && md.startsWith("data:") ? eO(md, Rd) : md
+        if ("xlink:href" === Mb && "#" !== eb[0]) {
+          const Mb = qw(bb, eb);
+          return "image" === wb && Mb.startsWith("data:") ? iw(Mb, pb) : Mb
         }
-        return "background" !== md || "table" !== Od && "td" !== Od && "th" !== Od ? "srcset" === md ? function(dd, Od) {
-          if ("" === Od.trim()) return Od;
-          let md = 0;
+        return "background" !== Mb || "table" !== wb && "td" !== wb && "th" !== wb ? "srcset" === Mb ? function(bb, wb) {
+          if ("" === wb.trim()) return wb;
+          let Mb = 0;
 
-          function Wd(dd) {
-            let Wd;
-            const Fd = dd.exec(Od.substring(md));
-            return Fd ? (Wd = Fd[0], md += Wd.length, Wd) : ""
+          function eb(bb) {
+            let eb;
+            const Hb = bb.exec(wb.substring(Mb));
+            return Hb ? (eb = Hb[0], Mb += eb.length, eb) : ""
           }
-          const Fd = [];
-          for (; Wd(zO), Od.length > md;) {
-            let Rd = Wd(PO);
-            if ("," === Rd.slice(-1)) Rd = jO(dd, Rd.substring(0, Rd.length - 1)), Fd.push(Rd);
+          const Hb = [];
+          for (; eb(Qw), wb.length > Mb;) {
+            let pb = eb(vw);
+            if ("," === pb.slice(-1)) pb = qw(bb, pb.substring(0, pb.length - 1)), Hb.push(pb);
             else {
-              let Wd = "";
-              Rd = jO(dd, Rd);
-              let Xd = !1;
+              let eb = "";
+              pb = qw(bb, pb);
+              let Vb = !1;
               for (;;) {
-                const dd = Od.charAt(md);
-                if ("" === dd) {
-                  Fd.push((Rd + Wd).trim());
+                const bb = wb.charAt(Mb);
+                if ("" === bb) {
+                  Hb.push((pb + eb).trim());
                   break
                 }
-                if (Xd) ")" === dd && (Xd = !1);
+                if (Vb) ")" === bb && (Vb = !1);
                 else {
-                  if ("," === dd) {
-                    md += 1, Fd.push((Rd + Wd).trim());
+                  if ("," === bb) {
+                    Mb += 1, Hb.push((pb + eb).trim());
                     break
                   }
-                  "(" === dd && (Xd = !0)
+                  "(" === bb && (Vb = !0)
                 }
-                Wd += dd, md += 1
+                eb += bb, Mb += 1
               }
             }
           }
-          return Fd.join(", ")
-        }(dd, Wd) : "style" === md ? uO(Wd, DO(dd)) : "object" === Od && "data" === md ? jO(dd, Wd) : Wd : jO(dd, Wd)
+          return Hb.join(", ")
+        }(bb, eb) : "style" === Mb ? Yw(eb, aw(bb)) : "object" === wb && "data" === Mb ? qw(bb, eb) : eb : qw(bb, eb)
       }
 
-      function lO(dd, Od, md) {
-        return ("video" === dd || "audio" === dd) && "autoplay" === wO(Od)
+      function dw(bb, wb, Mb) {
+        return ("video" === bb || "audio" === bb) && "autoplay" === hw(wb)
       }
 
-      function CO(dd) {
-        return "string" == typeof dd && wO(dd).split(/\s+/).includes("stylesheet")
+      function Pw(bb) {
+        return "string" == typeof bb && hw(bb).split(/\s+/).includes("stylesheet")
       }
 
-      function ZO(dd, Od, md) {
-        if (!dd) return !1;
-        if (dd.nodeType !== dd.ELEMENT_NODE) return !!md && ZO(Bd.parentNode(dd), Od, md);
-        for (let Wd = dd.classList.length; Wd--;)
-          if (Od.test(dd.classList[Wd])) return !0;
-        return !!md && ZO(Bd.parentNode(dd), Od, md)
+      function nw(bb, wb, Mb) {
+        if (!bb) return !1;
+        if (bb.nodeType !== bb.ELEMENT_NODE) return !!Mb && nw(Rb.parentNode(bb), wb, Mb);
+        for (let eb = bb.classList.length; eb--;)
+          if (wb.test(bb.classList[eb])) return !0;
+        return !!Mb && nw(Rb.parentNode(bb), wb, Mb)
       }
 
-      function kO(dd, Od, md, Wd) {
-        let Fd;
-        if (KO(dd)) {
-          if (Fd = dd, !Bd.childNodes(Fd).length) return !1
+      function yw(bb, wb, Mb, eb) {
+        let Hb;
+        if (pw(bb)) {
+          if (Hb = bb, !Rb.childNodes(Hb).length) return !1
         } else {
-          if (null === Bd.parentElement(dd)) return !1;
-          Fd = Bd.parentElement(dd)
+          if (null === Rb.parentElement(bb)) return !1;
+          Hb = Rb.parentElement(bb)
         }
         try {
-          if ("string" == typeof Od) {
-            if (Wd) {
-              if (Fd.closest(`.${Od}`)) return !0
-            } else if (Fd.classList.contains(Od)) return !0
-          } else if (ZO(Fd, Od, Wd)) return !0;
-          if (md)
-            if (Wd) {
-              if (Fd.closest(md)) return !0
-            } else if (Fd.matches(md)) return !0
-        } catch (dd) {}
+          if ("string" == typeof wb) {
+            if (eb) {
+              if (Hb.closest(`.${wb}`)) return !0
+            } else if (Hb.classList.contains(wb)) return !0
+          } else if (nw(Hb, wb, eb)) return !0;
+          if (Mb)
+            if (eb) {
+              if (Hb.closest(Mb)) return !0
+            } else if (Hb.matches(Mb)) return !0
+        } catch (bb) {}
         return !1
       }
 
-      function fO(dd, Od, md) {
-        const Wd = dd.removeEventListener;
-        "function" == typeof Wd && Wd.call(dd, Od, md)
+      function ow(bb, wb, Mb) {
+        const eb = bb.removeEventListener;
+        "function" == typeof eb && eb.call(bb, wb, Mb)
       }
-      var MO = new Map;
+      var Tw = new Map;
 
-      function dm(dd, Od) {
-        return Array.from(dd.styleSheets).find((dd => dd.href === Od))
+      function kw(bb, wb) {
+        return Array.from(bb.styleSheets).find((bb => bb.href === wb))
       }
 
-      function Om(dd) {
-        return null == dd ? "" : dd.toLowerCase()
+      function bM(bb) {
+        return null == bb ? "" : bb.toLowerCase()
       }
-      var mm = !1,
-        Wm = !1;
+      var wM = !1,
+        MM = !1;
 
-      function Fm(dd, Od) {
+      function eM(bb, wb) {
         const {
-          doc: md,
-          mirror: Wd,
-          blockClass: Fd,
-          blockSelector: Rd,
-          maskTextClass: Xd,
-          maskTextSelector: Kd,
-          skipChild: hd = !1,
-          inlineStylesheet: vd = !0,
-          maskInputOptions: Qd = {},
-          maskTextFn: td,
-          maskInputFn: od,
-          maskAllElementAttributes: qd = !1,
-          maskAttributeFn: Hd,
-          slimDOMOptions: yd,
-          dataURLOptions: bd = {},
-          inlineImages: Td = !1,
-          recordCanvas: pd = !1,
-          canvasMaskingConfigured: Yd,
-          onSerialize: gd,
-          onIframeLoad: wd,
-          iframeLoadTimeout: Ed = 5e3,
-          onIframeListenerRegistered: Jd,
-          onStylesheetLoad: Ud,
-          stylesheetLoadTimeout: xd = 5e3,
-          keepIframeSrcFn: Sd = () => !1,
-          newlyAddedElement: sd = !1,
-          depth: ud = 0,
-          maxDepth: Vd = 50
-        } = Od;
+          doc: Mb,
+          mirror: eb,
+          blockClass: Hb,
+          blockSelector: pb,
+          maskTextClass: Vb,
+          maskTextSelector: gb,
+          skipChild: lb = !1,
+          inlineStylesheet: Lb = !0,
+          maskInputOptions: Ib = {},
+          maskTextFn: Ob,
+          maskInputFn: Ub,
+          maskAllElementAttributes: Cb = !1,
+          maskAttributeFn: Eb,
+          slimDOMOptions: Fb,
+          dataURLOptions: Bb = {},
+          inlineImages: sb = !1,
+          recordCanvas: mb = !1,
+          canvasMaskingConfigured: hb,
+          onSerialize: zb,
+          onIframeLoad: Xb,
+          iframeLoadTimeout: xb = 5e3,
+          onIframeListenerRegistered: jb,
+          onStylesheetLoad: Kb,
+          stylesheetLoadTimeout: rb = 5e3,
+          keepIframeSrcFn: Db = () => !1,
+          newlyAddedElement: cb = !1,
+          depth: Yb = 0,
+          maxDepth: Zb = 50
+        } = wb;
         let {
-          needsMask: Ad
-        } = Od, {
-          preserveWhiteSpace: rd = !0
-        } = Od;
-        if (ud >= Vd) return Wm = !0, mm || (mm = !0, console.warn(`[rrweb-snapshot] DOM tree depth exceeded max depth of ${Vd}. Children beyond this depth will not be recorded. This may indicate deeply nested DOM structures.`)), null;
-        Ad || (Ad = kO(dd, Xd, Kd, void 0 === Ad)), Gd > 0 && (Pd.nodeCount += 1);
-        const nd = function(dd, Od) {
+          needsMask: fb
+        } = wb, {
+          preserveWhiteSpace: Ab = !0
+        } = wb;
+        if (Yb >= Zb) return MM = !0, wM || (wM = !0, console.warn(`[rrweb-snapshot] DOM tree depth exceeded max depth of ${Zb}. Children beyond this depth will not be recorded. This may indicate deeply nested DOM structures.`)), null;
+        fb || (fb = yw(bb, Vb, gb, void 0 === fb)), Wb > 0 && (Nb.nodeCount += 1);
+        const Jb = function(bb, wb) {
           const {
-            doc: md,
-            mirror: Wd,
-            blockClass: Fd,
-            blockSelector: Rd,
-            needsMask: Xd,
-            inlineStylesheet: Kd,
-            maskInputOptions: hd = {},
-            maskTextFn: vd,
-            maskInputFn: Qd,
-            maskAllElementAttributes: td = !1,
-            maskAttributeFn: od,
-            dataURLOptions: qd = {},
-            inlineImages: Hd,
-            recordCanvas: yd,
-            canvasMaskingConfigured: bd,
-            keepIframeSrcFn: Td,
-            newlyAddedElement: pd = !1
-          } = Od, Yd = function(dd, Od) {
-            if (!Od.hasNode(dd)) return;
-            const md = Od.getId(dd);
-            return 1 === md ? void 0 : md
-          }(md, Wd);
-          switch (dd.nodeType) {
-            case dd.DOCUMENT_NODE:
-              return "CSS1Compat" !== dd.compatMode ? {
-                type: Nd.Document,
+            doc: Mb,
+            mirror: eb,
+            blockClass: Hb,
+            blockSelector: pb,
+            needsMask: Vb,
+            inlineStylesheet: gb,
+            maskInputOptions: lb = {},
+            maskTextFn: Lb,
+            maskInputFn: Ib,
+            maskAllElementAttributes: Ob = !1,
+            maskAttributeFn: Ub,
+            dataURLOptions: Cb = {},
+            inlineImages: Eb,
+            recordCanvas: Fb,
+            canvasMaskingConfigured: Bb,
+            keepIframeSrcFn: sb,
+            newlyAddedElement: mb = !1
+          } = wb, hb = function(bb, wb) {
+            if (!wb.hasNode(bb)) return;
+            const Mb = wb.getId(bb);
+            return 1 === Mb ? void 0 : Mb
+          }(Mb, eb);
+          switch (bb.nodeType) {
+            case bb.DOCUMENT_NODE:
+              return "CSS1Compat" !== bb.compatMode ? {
+                type: tb.Document,
                 childNodes: [],
-                compatMode: dd.compatMode
+                compatMode: bb.compatMode
               } : {
-                type: Nd.Document,
+                type: tb.Document,
                 childNodes: []
               };
-            case dd.DOCUMENT_TYPE_NODE:
+            case bb.DOCUMENT_TYPE_NODE:
               return {
-                type: Nd.DocumentType, name: dd.name, publicId: dd.publicId, systemId: dd.systemId, rootId: Yd
+                type: tb.DocumentType, name: bb.name, publicId: bb.publicId, systemId: bb.systemId, rootId: hb
               };
-            case dd.ELEMENT_NODE:
-              return function(dd, Od) {
+            case bb.ELEMENT_NODE:
+              return function(bb, wb) {
                 const {
-                  doc: md,
-                  blockClass: Wd,
-                  blockSelector: Fd,
-                  inlineStylesheet: Rd,
-                  maskInputOptions: Xd = {},
-                  maskInputFn: Kd,
-                  maskAllElementAttributes: hd = !1,
-                  maskAttributeFn: vd,
-                  dataURLOptions: Qd = {},
-                  inlineImages: td,
-                  recordCanvas: od,
-                  canvasMaskingConfigured: qd,
-                  keepIframeSrcFn: Hd,
-                  newlyAddedElement: yd = !1,
-                  rootId: bd
-                } = Od, Td = function(dd, Od, md) {
+                  doc: Mb,
+                  blockClass: eb,
+                  blockSelector: Hb,
+                  inlineStylesheet: pb,
+                  maskInputOptions: Vb = {},
+                  maskInputFn: gb,
+                  maskAllElementAttributes: lb = !1,
+                  maskAttributeFn: Lb,
+                  dataURLOptions: Ib = {},
+                  inlineImages: Ob,
+                  recordCanvas: Ub,
+                  canvasMaskingConfigured: Cb,
+                  keepIframeSrcFn: Eb,
+                  newlyAddedElement: Fb = !1,
+                  rootId: Bb
+                } = wb, sb = function(bb, wb, Mb) {
                   try {
-                    if ("string" == typeof Od) {
-                      if (dd.classList.contains(Od)) return !0
+                    if ("string" == typeof wb) {
+                      if (bb.classList.contains(wb)) return !0
                     } else
-                      for (let md = dd.classList.length; md--;)
-                        if (Od.test(dd.classList[md])) return !0;
-                    if (md) return dd.matches(md)
-                  } catch (dd) {}
+                      for (let Mb = bb.classList.length; Mb--;)
+                        if (wb.test(bb.classList[Mb])) return !0;
+                    if (Mb) return bb.matches(Mb)
+                  } catch (bb) {}
                   return !1
-                }(dd, Wd, Fd), pd = function(dd) {
-                  if (dd instanceof HTMLFormElement) return "form";
-                  const Od = wO(dd.tagName);
-                  return GO.test(Od) ? "div" : Od
-                }(dd), Yd = new Set;
-                let gd = {};
-                const wd = dd.attributes.length;
-                for (let Nd = 0; wd > Nd; Nd++) {
-                  const Od = dd.attributes[Nd];
-                  lO(pd, Od.name) || (gd[Od.name] = IO(md, pd, wO(Od.name), Od.value, dd, Qd))
+                }(bb, eb, Hb), mb = function(bb) {
+                  if (bb instanceof HTMLFormElement) return "form";
+                  const wb = hw(bb.tagName);
+                  return Jw.test(wb) ? "div" : wb
+                }(bb), hb = new Set;
+                let zb = {};
+                const Xb = bb.attributes.length;
+                for (let tb = 0; Xb > tb; tb++) {
+                  const wb = bb.attributes[tb];
+                  dw(mb, wb.name) || (zb[wb.name] = uw(Mb, mb, hw(wb.name), wb.value, bb, Ib))
                 }
-                if ("link" === pd && Rd && !Td && CO(gd.rel)) {
-                  let Od = dd.sheet;
-                  if (!Od) {
-                    const Wd = function(dd) {
-                      return dd.href
-                    }(dd);
-                    Wd && (Od = dm(md, Wd), !Od && Wd.includes(".css")) && (Od = dm(md, window.location.origin + "/" + Wd.replace(window.location.href, "")))
+                if ("link" === mb && pb && !sb && Pw(zb.rel)) {
+                  let wb = bb.sheet;
+                  if (!wb) {
+                    const eb = function(bb) {
+                      return bb.href
+                    }(bb);
+                    eb && (wb = kw(Mb, eb), !wb && eb.includes(".css")) && (wb = kw(Mb, window.location.origin + "/" + eb.replace(window.location.href, "")))
                   }
-                  let Wd = null;
-                  Od && (OO(Od) ? Gd > 0 && (jd.push(dd), Dd += 1) : Wd = NO(Od)), Wd && (delete gd.rel, delete gd.href, gd._cssText = Wd)
+                  let eb = null;
+                  wb && (kb(wb) ? Wb > 0 && (Gb.push(bb), qb += 1) : eb = Ow(wb)), eb && (delete zb.rel, delete zb.href, zb._cssText = eb)
                 }
-                var Ed;
-                if ("style" === pd && dd.sheet && !(dd.innerText || Bd.textContent(dd) || "").trim().length) {
-                  const Od = Md((() => NO(dd.sheet)));
-                  Od && (gd._cssText = Od)
+                var xb;
+                if ("style" === mb && bb.sheet && !(bb.innerText || Rb.textContent(bb) || "").trim().length) {
+                  const wb = ob((() => Ow(bb.sheet)));
+                  wb && (zb._cssText = wb)
                 }
-                if ("input" === pd || "textarea" === pd || "select" === pd) {
-                  const Od = dd.value,
-                    md = dd.checked;
-                  "radio" !== gd.type && "checkbox" !== gd.type && "submit" !== gd.type && "button" !== gd.type && Od ? gd.value = gO({
-                    element: dd,
-                    type: UO(dd),
-                    tagName: pd,
-                    value: Od,
-                    maskInputOptions: Xd,
-                    maskInputFn: Kd
-                  }) : md && (gd.checked = md)
+                if ("input" === mb || "textarea" === mb || "select" === mb) {
+                  const wb = bb.value,
+                    Mb = bb.checked;
+                  "radio" !== zb.type && "checkbox" !== zb.type && "submit" !== zb.type && "button" !== zb.type && wb ? zb.value = mw({
+                    element: bb,
+                    type: jw(bb),
+                    tagName: mb,
+                    value: wb,
+                    maskInputOptions: Vb,
+                    maskInputFn: gb
+                  }) : Mb && (zb.checked = Mb)
                 }
-                if ("option" === pd && (dd.selected && !Xd.select ? gd.selected = !0 : delete gd.selected), "dialog" === pd && dd.open) {
+                if ("option" === mb && (bb.selected && !Vb.select ? zb.selected = !0 : delete zb.selected), "dialog" === mb && bb.open) {
                   try {
-                    gd.rr_open_mode = dd.matches("dialog:modal") ? "modal" : "non-modal"
-                  } catch (dd) {
-                    gd.rr_open_mode = "modal", gd.ph_rr_could_not_detect_modal = !0
+                    zb.rr_open_mode = bb.matches("dialog:modal") ? "modal" : "non-modal"
+                  } catch (bb) {
+                    zb.rr_open_mode = "modal", zb.ph_rr_could_not_detect_modal = !0
                   }
-                  Yd.add("rr_open_mode")
+                  hb.add("rr_open_mode")
                 }
-                if ("canvas" === pd && od && !(null == qd ? void 0 : qd())) try {
-                  if ("2d" === dd.__context)(function(dd) {
-                    const Od = dd.getContext("2d");
-                    if (!Od) return !0;
-                    for (let md = 0; dd.width > md; md += 50)
-                      for (let Wd = 0; dd.height > Wd; Wd += 50) {
-                        const Fd = Od.getImageData,
-                          Rd = JO in Fd ? Fd[JO] : Fd;
-                        let Xd;
+                if ("canvas" === mb && Ub && !(null == Cb ? void 0 : Cb())) try {
+                  if ("2d" === bb.__context)(function(bb) {
+                    const wb = bb.getContext("2d");
+                    if (!wb) return !0;
+                    for (let Mb = 0; bb.width > Mb; Mb += 50)
+                      for (let eb = 0; bb.height > eb; eb += 50) {
+                        const Hb = wb.getImageData,
+                          pb = xw in Hb ? Hb[xw] : Hb;
+                        let Vb;
                         try {
-                          Xd = Rd.call(Od, md, Wd, Math.min(50, dd.width - md), Math.min(50, dd.height - Wd))
-                        } catch (dd) {
+                          Vb = pb.call(wb, Mb, eb, Math.min(50, bb.width - Mb), Math.min(50, bb.height - eb))
+                        } catch (bb) {
                           return !1
                         }
-                        if (new Uint32Array(Xd.data.buffer).some((dd => 0 !== dd))) return !1
+                        if (new Uint32Array(Vb.data.buffer).some((bb => 0 !== bb))) return !1
                       }
                     return !0
-                  })(dd) || (gd.rr_dataURL = dd.toDataURL(Qd.type, Qd.quality));
-                  else if (!("__context" in dd)) {
-                    const Od = dd.toDataURL(Qd.type, Qd.quality),
-                      Wd = md.createElement("canvas");
-                    Wd.width = dd.width, Wd.height = dd.height, Od !== Wd.toDataURL(Qd.type, Qd.quality) && (gd.rr_dataURL = Od)
+                  })(bb) || (zb.rr_dataURL = bb.toDataURL(Ib.type, Ib.quality));
+                  else if (!("__context" in bb)) {
+                    const wb = bb.toDataURL(Ib.type, Ib.quality),
+                      eb = Mb.createElement("canvas");
+                    eb.width = bb.width, eb.height = bb.height, wb !== eb.toDataURL(Ib.type, Ib.quality) && (zb.rr_dataURL = wb)
                   }
-                } catch (dd) {
-                  "SecurityError" === (null == (Ed = dd) ? void 0 : Ed.name) ? LO || (LO = !0, console.warn("Cannot read canvas pixels, so this canvas is left out of the recording. A cross-origin image or video drawn into it taints it.", Ed)): console.warn("Cannot read canvas pixels, so this canvas is left out of the recording.", Ed)
+                } catch (bb) {
+                  "SecurityError" === (null == (xb = bb) ? void 0 : xb.name) ? Nw || (Nw = !0, console.warn("Cannot read canvas pixels, so this canvas is left out of the recording. A cross-origin image or video drawn into it taints it.", xb)): console.warn("Cannot read canvas pixels, so this canvas is left out of the recording.", xb)
                 }
-                let Jd, Ud = !1;
-                if ("img" === pd && td) {
-                  VO || (VO = md.createElement("canvas"), iO = VO.getContext("2d"));
-                  const Od = dd,
-                    Wd = Od.currentSrc || Od.getAttribute("src") || "<unknown-src>",
-                    Fd = Od.crossOrigin,
-                    Rd = (Od, md) => Ud ? EO({
-                      element: dd,
-                      name: Od,
-                      value: md,
-                      maskAllElementAttributes: hd,
-                      maskAttributeFn: vd
-                    }) : md,
-                    Xd = () => {
-                      fO(Od, "load", Xd);
+                let jb, Kb = !1;
+                if ("img" === mb && Ob) {
+                  Zw || (Zw = Mb.createElement("canvas"), fw = Zw.getContext("2d"));
+                  const wb = bb,
+                    eb = wb.currentSrc || wb.getAttribute("src") || "<unknown-src>",
+                    Hb = wb.crossOrigin,
+                    pb = (wb, Mb) => Kb ? Xw({
+                      element: bb,
+                      name: wb,
+                      value: Mb,
+                      maskAllElementAttributes: lb,
+                      maskAttributeFn: Lb
+                    }) : Mb,
+                    Vb = () => {
+                      ow(wb, "load", Vb);
                       try {
-                        VO.width = Od.naturalWidth, VO.height = Od.naturalHeight, iO.drawImage(Od, 0, 0);
-                        const dd = VO.toDataURL(Qd.type, Qd.quality);
-                        gd.rr_dataURL = Rd("rr_dataURL", dd)
-                      } catch (dd) {
-                        if ("anonymous" !== Od.crossOrigin) return Od.crossOrigin = "anonymous", void(Od.complete && 0 !== Od.naturalWidth ? Xd() : Od.addEventListener("load", Xd));
-                        console.warn(`Cannot inline img src=${Wd}! Error: ${dd}`)
+                        Zw.width = wb.naturalWidth, Zw.height = wb.naturalHeight, fw.drawImage(wb, 0, 0);
+                        const bb = Zw.toDataURL(Ib.type, Ib.quality);
+                        zb.rr_dataURL = pb("rr_dataURL", bb)
+                      } catch (bb) {
+                        if ("anonymous" !== wb.crossOrigin) return wb.crossOrigin = "anonymous", void(wb.complete && 0 !== wb.naturalWidth ? Vb() : wb.addEventListener("load", Vb));
+                        console.warn(`Cannot inline img src=${eb}! Error: ${bb}`)
                       }
-                      "anonymous" === Od.crossOrigin && (Fd ? gd.crossOrigin = Rd("crossOrigin", Fd) : Od.removeAttribute("crossorigin"))
+                      "anonymous" === wb.crossOrigin && (Hb ? zb.crossOrigin = pb("crossOrigin", Hb) : wb.removeAttribute("crossorigin"))
                     };
-                  Od.complete && 0 !== Od.naturalWidth ? Xd() : Od.addEventListener("load", Xd)
+                  wb.complete && 0 !== wb.naturalWidth ? Vb() : wb.addEventListener("load", Vb)
                 }
-                if ("audio" === pd || "video" === pd) {
-                  const Od = gd;
-                  Od.rr_mediaState = dd.paused ? "paused" : "played", Yd.add("rr_mediaState"), Od.rr_mediaCurrentTime = dd.currentTime, Od.rr_mediaPlaybackRate = dd.playbackRate, Od.rr_mediaMuted = dd.muted, Od.rr_mediaLoop = dd.loop, Od.rr_mediaVolume = dd.volume
+                if ("audio" === mb || "video" === mb) {
+                  const wb = zb;
+                  wb.rr_mediaState = bb.paused ? "paused" : "played", hb.add("rr_mediaState"), wb.rr_mediaCurrentTime = bb.currentTime, wb.rr_mediaPlaybackRate = bb.playbackRate, wb.rr_mediaMuted = bb.muted, wb.rr_mediaLoop = bb.loop, wb.rr_mediaVolume = bb.volume
                 }
-                if (yd || (dd.scrollLeft && (gd.rr_scrollLeft = dd.scrollLeft), dd.scrollTop && (gd.rr_scrollTop = dd.scrollTop)), Td) {
-                  var xd, Sd, sd;
+                if (Fb || (bb.scrollLeft && (zb.rr_scrollLeft = bb.scrollLeft), bb.scrollTop && (zb.rr_scrollTop = bb.scrollTop)), sb) {
+                  var rb, Db, cb;
                   const {
-                    width: Od,
-                    height: Wd,
-                    left: Fd,
-                    top: Rd
-                  } = dd.getBoundingClientRect(), Xd = null === (xd = md.defaultView) || void 0 === xd ? void 0 : xd.getComputedStyle(dd);
-                  gd = {
-                    class: gd.class,
-                    rr_width: `${Od}px`,
-                    rr_height: `${Wd}px`,
-                    rr_left: `${Math.floor(Fd+((null===(Sd=md.defaultView)||void 0===Sd?void 0:Sd.scrollX)||0))}px`,
-                    rr_top: `${Math.floor(Rd+((null===(sd=md.defaultView)||void 0===sd?void 0:sd.scrollY)||0))}px`
-                  }, Yd.add("rr_width"), Yd.add("rr_height"), Yd.add("rr_left"), Yd.add("rr_top"), Xd && (gd.rr_position = Xd.position || "static", Yd.add("rr_position"), Xd.transform && "none" !== Xd.transform && (gd.rr_transform = Xd.transform, Yd.add("rr_transform")), Xd.display && Xd.display.startsWith("inline") && (gd.rr_display = Xd.display, Yd.add("rr_display")))
+                    width: wb,
+                    height: eb,
+                    left: Hb,
+                    top: pb
+                  } = bb.getBoundingClientRect(), Vb = null === (rb = Mb.defaultView) || void 0 === rb ? void 0 : rb.getComputedStyle(bb);
+                  zb = {
+                    class: zb.class,
+                    rr_width: `${wb}px`,
+                    rr_height: `${eb}px`,
+                    rr_left: `${Math.floor(Hb+((null===(Db=Mb.defaultView)||void 0===Db?void 0:Db.scrollX)||0))}px`,
+                    rr_top: `${Math.floor(pb+((null===(cb=Mb.defaultView)||void 0===cb?void 0:cb.scrollY)||0))}px`
+                  }, hb.add("rr_width"), hb.add("rr_height"), hb.add("rr_left"), hb.add("rr_top"), Vb && (zb.rr_position = Vb.position || "static", hb.add("rr_position"), Vb.transform && "none" !== Vb.transform && (zb.rr_transform = Vb.transform, hb.add("rr_transform")), Vb.display && Vb.display.startsWith("inline") && (zb.rr_display = Vb.display, hb.add("rr_display")))
                 }
-                if ("iframe" !== pd || Hd(gd.src) || (dd.contentDocument || (gd.rr_src = gd.src), delete gd.src), hd || vd)
-                  for (const [Nd, Bd] of Object.entries(gd)) "string" != typeof Bd && null !== Bd || (gd[Nd] = EO({
-                    element: dd,
-                    name: Nd,
-                    value: Bd,
-                    maskAllElementAttributes: hd,
-                    maskAttributeFn: vd,
-                    isGenerated: Yd.has(Nd)
+                if ("iframe" !== mb || Eb(zb.src) || (bb.contentDocument || (zb.rr_src = zb.src), delete zb.src), lb || Lb)
+                  for (const [tb, Rb] of Object.entries(zb)) "string" != typeof Rb && null !== Rb || (zb[tb] = Xw({
+                    element: bb,
+                    name: tb,
+                    value: Rb,
+                    maskAllElementAttributes: lb,
+                    maskAttributeFn: Lb,
+                    isGenerated: hb.has(tb)
                   }));
-                Ud = !0;
+                Kb = !0;
                 try {
-                  customElements.get(pd) && (Jd = !0)
-                } catch (dd) {}
+                  customElements.get(mb) && (jb = !0)
+                } catch (bb) {}
                 return {
-                  type: Nd.Element,
-                  tagName: pd,
-                  attributes: gd,
+                  type: tb.Element,
+                  tagName: mb,
+                  attributes: zb,
                   childNodes: [],
-                  isSVG: (ud = dd, Boolean("svg" === ud.tagName || ud.ownerSVGElement) || void 0),
-                  needBlock: Td,
-                  rootId: bd,
-                  isCustom: Jd
+                  isSVG: (Yb = bb, Boolean("svg" === Yb.tagName || Yb.ownerSVGElement) || void 0),
+                  needBlock: sb,
+                  rootId: Bb,
+                  isCustom: jb
                 };
-                var ud
-              }(dd, {
-                doc: md,
-                blockClass: Fd,
-                blockSelector: Rd,
-                inlineStylesheet: Kd,
-                maskInputOptions: hd,
-                maskInputFn: Qd,
-                maskAllElementAttributes: td,
-                maskAttributeFn: od,
-                dataURLOptions: qd,
-                inlineImages: Hd,
-                recordCanvas: yd,
-                canvasMaskingConfigured: bd,
-                keepIframeSrcFn: Td,
-                newlyAddedElement: pd,
-                rootId: Yd
+                var Yb
+              }(bb, {
+                doc: Mb,
+                blockClass: Hb,
+                blockSelector: pb,
+                inlineStylesheet: gb,
+                maskInputOptions: lb,
+                maskInputFn: Ib,
+                maskAllElementAttributes: Ob,
+                maskAttributeFn: Ub,
+                dataURLOptions: Cb,
+                inlineImages: Eb,
+                recordCanvas: Fb,
+                canvasMaskingConfigured: Bb,
+                keepIframeSrcFn: sb,
+                newlyAddedElement: mb,
+                rootId: hb
               });
-            case dd.TEXT_NODE:
-              return function(dd, Od) {
+            case bb.TEXT_NODE:
+              return function(bb, wb) {
                 const {
-                  needsMask: md,
-                  maskTextFn: Wd,
-                  rootId: Fd
-                } = Od, Rd = Bd.parentNode(dd), Xd = Rd && Rd.tagName;
-                let Kd = Bd.textContent(dd);
-                const hd = "STYLE" === Xd || void 0,
-                  vd = "SCRIPT" === Xd || void 0;
-                if (hd && Kd) {
+                  needsMask: Mb,
+                  maskTextFn: eb,
+                  rootId: Hb
+                } = wb, pb = Rb.parentNode(bb), Vb = pb && pb.tagName;
+                let gb = Rb.textContent(bb);
+                const lb = "STYLE" === Vb || void 0,
+                  Lb = "SCRIPT" === Vb || void 0;
+                if (lb && gb) {
                   try {
-                    var Qd;
-                    if (dd.nextSibling || dd.previousSibling);
-                    else if (OO(Rd.sheet));
-                    else if (null === (Qd = Rd.sheet) || void 0 === Qd ? void 0 : Qd.cssRules) {
-                      const dd = NO(Rd.sheet);
-                      dd && !/(?:^|[\s;{}])-?[a-zA-Z][\w-]*\s*:\s*;/.test(dd) && (Kd = dd)
+                    var Ib;
+                    if (bb.nextSibling || bb.previousSibling);
+                    else if (kb(pb.sheet));
+                    else if (null === (Ib = pb.sheet) || void 0 === Ib ? void 0 : Ib.cssRules) {
+                      const bb = Ow(pb.sheet);
+                      bb && !/(?:^|[\s;{}])-?[a-zA-Z][\w-]*\s*:\s*;/.test(bb) && (gb = bb)
                     }
-                  } catch (Od) {
-                    console.warn(`Cannot get CSS styles from text's parentNode. Error: ${Od}`, dd)
+                  } catch (wb) {
+                    console.warn(`Cannot get CSS styles from text's parentNode. Error: ${wb}`, bb)
                   }
-                  Kd = uO(Kd, DO(Od.doc))
+                  gb = Yw(gb, aw(wb.doc))
                 }
-                return vd && (Kd = "SCRIPT_PLACEHOLDER"), !hd && !vd && Kd && md && (Kd = Wd ? Wd(Kd, Bd.parentElement(dd)) : Kd.replace(/[\S]/g, "*")), {
-                  type: Nd.Text,
-                  textContent: Kd || "",
-                  isStyle: hd,
-                  rootId: Fd
+                return Lb && (gb = "SCRIPT_PLACEHOLDER"), !lb && !Lb && gb && Mb && (gb = eb ? eb(gb, Rb.parentElement(bb)) : gb.replace(/[\S]/g, "*")), {
+                  type: tb.Text,
+                  textContent: gb || "",
+                  isStyle: lb,
+                  rootId: Hb
                 }
-              }(dd, {
-                doc: md,
-                needsMask: Xd,
-                maskTextFn: vd,
-                rootId: Yd
+              }(bb, {
+                doc: Mb,
+                needsMask: Vb,
+                maskTextFn: Lb,
+                rootId: hb
               });
-            case dd.CDATA_SECTION_NODE:
+            case bb.CDATA_SECTION_NODE:
               return {
-                type: Nd.CDATA, textContent: "", rootId: Yd
+                type: tb.CDATA, textContent: "", rootId: hb
               };
-            case dd.COMMENT_NODE:
+            case bb.COMMENT_NODE:
               return {
-                type: Nd.Comment, textContent: Bd.textContent(dd) || "", rootId: Yd
+                type: tb.Comment, textContent: Rb.textContent(bb) || "", rootId: hb
               };
             default:
               return !1
           }
-        }(dd, {
-          doc: md,
-          mirror: Wd,
-          blockClass: Fd,
-          blockSelector: Rd,
-          needsMask: Ad,
-          inlineStylesheet: vd,
-          maskInputOptions: Qd,
-          maskTextFn: td,
-          maskInputFn: od,
-          maskAllElementAttributes: qd,
-          maskAttributeFn: Hd,
-          dataURLOptions: bd,
-          inlineImages: Td,
-          recordCanvas: pd,
-          canvasMaskingConfigured: Yd,
-          keepIframeSrcFn: Sd,
-          newlyAddedElement: sd
+        }(bb, {
+          doc: Mb,
+          mirror: eb,
+          blockClass: Hb,
+          blockSelector: pb,
+          needsMask: fb,
+          inlineStylesheet: Lb,
+          maskInputOptions: Ib,
+          maskTextFn: Ob,
+          maskInputFn: Ub,
+          maskAllElementAttributes: Cb,
+          maskAttributeFn: Eb,
+          dataURLOptions: Bb,
+          inlineImages: sb,
+          recordCanvas: mb,
+          canvasMaskingConfigured: hb,
+          keepIframeSrcFn: Db,
+          newlyAddedElement: cb
         });
-        if (!nd) return console.warn(dd, "not serialized"), null;
-        let Ld;
-        Ld = Wd.hasNode(dd) ? Wd.getId(dd) : function(dd, Od) {
-          if (Od.comment && dd.type === Nd.Comment) return !0;
-          if (dd.type === Nd.Element) {
-            if (Od.script && ("script" === dd.tagName || "link" === dd.tagName && ("preload" === dd.attributes.rel && "script" === dd.attributes.as || "modulepreload" === dd.attributes.rel) || "link" === dd.tagName && "prefetch" === dd.attributes.rel && "string" == typeof dd.attributes.href && "js" === function(dd) {
-                var Od;
-                let md;
+        if (!Jb) return console.warn(bb, "not serialized"), null;
+        let Sb;
+        Sb = eb.hasNode(bb) ? eb.getId(bb) : function(bb, wb) {
+          if (wb.comment && bb.type === tb.Comment) return !0;
+          if (bb.type === tb.Element) {
+            if (wb.script && ("script" === bb.tagName || "link" === bb.tagName && ("preload" === bb.attributes.rel && "script" === bb.attributes.as || "modulepreload" === bb.attributes.rel) || "link" === bb.tagName && "prefetch" === bb.attributes.rel && "string" == typeof bb.attributes.href && "js" === function(bb) {
+                var wb;
+                let Mb;
                 try {
-                  md = new URL(dd, window.location.href)
-                } catch (dd) {
+                  Mb = new URL(bb, window.location.href)
+                } catch (bb) {
                   return null
                 }
-                const Wd = md.pathname.match(/\.([0-9a-z]+)(?:$)/i);
-                return null !== (Od = null == Wd ? void 0 : Wd[1]) && void 0 !== Od ? Od : null
-              }(dd.attributes.href))) return !0;
-            if (Od.headFavicon && ("link" === dd.tagName && "shortcut icon" === dd.attributes.rel || "meta" === dd.tagName && (Om(dd.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === Om(dd.attributes.name) || ["icon", "apple-touch-icon", "shortcut icon"].includes(Om(dd.attributes.rel))))) return !0;
-            if ("meta" === dd.tagName) {
-              if (Od.headMetaDescKeywords && Om(dd.attributes.name).match(/^description|keywords$/)) return !0;
-              if (Od.headMetaSocial && (Om(dd.attributes.property).match(/^(og|twitter|fb):/) || Om(dd.attributes.name).match(/^(og|twitter):/) || "pinterest" === Om(dd.attributes.name))) return !0;
-              if (Od.headMetaRobots && ["robots", "googlebot", "bingbot"].includes(Om(dd.attributes.name))) return !0;
-              if (Od.headMetaHttpEquiv && void 0 !== dd.attributes["http-equiv"]) return !0;
-              if (Od.headMetaAuthorship && (["author", "generator", "framework", "publisher", "progid"].includes(Om(dd.attributes.name)) || Om(dd.attributes.property).match(/^article:/) || Om(dd.attributes.property).match(/^product:/))) return !0;
-              if (Od.headMetaVerification && ["google-site-verification", "yandex-verification", "csrf-token", "p:domain_verify", "verify-v1", "verification", "shopify-checkout-api-token"].includes(Om(dd.attributes.name))) return !0
+                const eb = Mb.pathname.match(/\.([0-9a-z]+)(?:$)/i);
+                return null !== (wb = null == eb ? void 0 : eb[1]) && void 0 !== wb ? wb : null
+              }(bb.attributes.href))) return !0;
+            if (wb.headFavicon && ("link" === bb.tagName && "shortcut icon" === bb.attributes.rel || "meta" === bb.tagName && (bM(bb.attributes.name).match(/^msapplication-tile(image|color)$/) || "application-name" === bM(bb.attributes.name) || ["icon", "apple-touch-icon", "shortcut icon"].includes(bM(bb.attributes.rel))))) return !0;
+            if ("meta" === bb.tagName) {
+              if (wb.headMetaDescKeywords && bM(bb.attributes.name).match(/^description|keywords$/)) return !0;
+              if (wb.headMetaSocial && (bM(bb.attributes.property).match(/^(og|twitter|fb):/) || bM(bb.attributes.name).match(/^(og|twitter):/) || "pinterest" === bM(bb.attributes.name))) return !0;
+              if (wb.headMetaRobots && ["robots", "googlebot", "bingbot"].includes(bM(bb.attributes.name))) return !0;
+              if (wb.headMetaHttpEquiv && void 0 !== bb.attributes["http-equiv"]) return !0;
+              if (wb.headMetaAuthorship && (["author", "generator", "framework", "publisher", "progid"].includes(bM(bb.attributes.name)) || bM(bb.attributes.property).match(/^article:/) || bM(bb.attributes.property).match(/^product:/))) return !0;
+              if (wb.headMetaVerification && ["google-site-verification", "yandex-verification", "csrf-token", "p:domain_verify", "verify-v1", "verification", "shopify-checkout-api-token"].includes(bM(bb.attributes.name))) return !0
             }
           }
           return !1
-        }(nd, yd) || !rd && nd.type === Nd.Text && !nd.isStyle && !nd.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : nO();
-        const zd = Object.assign(nd, {
-          id: Ld
+        }(Jb, Fb) || !Ab && Jb.type === tb.Text && !Jb.isStyle && !Jb.textContent.replace(/^\s+|\s+$/gm, "").length ? -2 : Sw();
+        const vb = Object.assign(Jb, {
+          id: Sb
         });
-        if (Wd.add(dd, zd), -2 === Ld) return null;
-        gd && gd(dd);
-        let cd = !hd;
-        if (zd.type === Nd.Element) {
-          cd = cd && !zd.needBlock, delete zd.needBlock;
-          const Od = Bd.shadowRoot(dd);
-          Od && vO(Od) && (zd.isShadowHost = !0)
+        if (eb.add(bb, vb), -2 === Sb) return null;
+        zb && zb(bb);
+        let Qb = !lb;
+        if (vb.type === tb.Element) {
+          Qb = Qb && !vb.needBlock, delete vb.needBlock;
+          const wb = Rb.shadowRoot(bb);
+          wb && gw(wb) && (vb.isShadowHost = !0)
         }
-        if ((zd.type === Nd.Document || zd.type === Nd.Element) && cd) {
-          yd.headWhitespace && zd.type === Nd.Element && "head" === zd.tagName && (rd = !1);
-          const Od = {
-            doc: md,
-            mirror: Wd,
-            blockClass: Fd,
-            blockSelector: Rd,
-            needsMask: Ad,
-            maskTextClass: Xd,
-            maskTextSelector: Kd,
-            skipChild: hd,
-            inlineStylesheet: vd,
-            maskInputOptions: Qd,
-            maskTextFn: td,
-            maskInputFn: od,
-            maskAllElementAttributes: qd,
-            maskAttributeFn: Hd,
-            slimDOMOptions: yd,
-            dataURLOptions: bd,
-            inlineImages: Td,
-            recordCanvas: pd,
-            canvasMaskingConfigured: Yd,
-            preserveWhiteSpace: rd,
-            onSerialize: gd,
-            onIframeLoad: wd,
-            iframeLoadTimeout: Ed,
-            onIframeListenerRegistered: Jd,
-            onStylesheetLoad: Ud,
-            stylesheetLoadTimeout: xd,
-            keepIframeSrcFn: Sd,
-            depth: ud + 1,
-            maxDepth: Vd
+        if ((vb.type === tb.Document || vb.type === tb.Element) && Qb) {
+          Fb.headWhitespace && vb.type === tb.Element && "head" === vb.tagName && (Ab = !1);
+          const wb = {
+            doc: Mb,
+            mirror: eb,
+            blockClass: Hb,
+            blockSelector: pb,
+            needsMask: fb,
+            maskTextClass: Vb,
+            maskTextSelector: gb,
+            skipChild: lb,
+            inlineStylesheet: Lb,
+            maskInputOptions: Ib,
+            maskTextFn: Ob,
+            maskInputFn: Ub,
+            maskAllElementAttributes: Cb,
+            maskAttributeFn: Eb,
+            slimDOMOptions: Fb,
+            dataURLOptions: Bb,
+            inlineImages: sb,
+            recordCanvas: mb,
+            canvasMaskingConfigured: hb,
+            preserveWhiteSpace: Ab,
+            onSerialize: zb,
+            onIframeLoad: Xb,
+            iframeLoadTimeout: xb,
+            onIframeListenerRegistered: jb,
+            onStylesheetLoad: Kb,
+            stylesheetLoadTimeout: rb,
+            keepIframeSrcFn: Db,
+            depth: Yb + 1,
+            maxDepth: Zb
           };
-          if (zd.type === Nd.Element && "textarea" === zd.tagName && void 0 !== zd.attributes.value);
+          if (vb.type === tb.Element && "textarea" === vb.tagName && void 0 !== vb.attributes.value);
           else
-            for (const md of Array.from(Bd.childNodes(dd))) {
-              const dd = Fm(md, Od);
-              dd && zd.childNodes.push(dd)
+            for (const Mb of Array.from(Rb.childNodes(bb))) {
+              const bb = eM(Mb, wb);
+              bb && vb.childNodes.push(bb)
             }
-          let sd = null;
-          if (KO(dd) && (sd = Bd.shadowRoot(dd)))
-            for (const dd of Array.from(Bd.childNodes(sd))) {
-              const md = Fm(dd, Od);
-              md && (vO(sd) && (md.isShadow = !0), zd.childNodes.push(md))
+          let cb = null;
+          if (pw(bb) && (cb = Rb.shadowRoot(bb)))
+            for (const bb of Array.from(Rb.childNodes(cb))) {
+              const Mb = eM(bb, wb);
+              Mb && (gw(cb) && (Mb.isShadow = !0), vb.childNodes.push(Mb))
             }
         }
-        const ed = Bd.parentNode(dd);
-        if (ed && hO(ed) && vO(ed) && (zd.isShadow = !0), zd.type === Nd.Element && "iframe" === zd.tagName) {
-          const Od = function(dd, Od, md) {
-            const Wd = () => {},
-              Fd = dd.contentWindow;
-            if (!Fd) return Wd;
-            let Rd;
+        const ab = Rb.parentNode(bb);
+        if (ab && Vw(ab) && gw(ab) && (vb.isShadow = !0), vb.type === tb.Element && "iframe" === vb.tagName) {
+          const wb = function(bb, wb, Mb) {
+            const eb = () => {},
+              Hb = bb.contentWindow;
+            if (!Hb) return eb;
+            let pb;
             try {
-              Rd = Fd.document.readyState
-            } catch (dd) {
-              return Wd
+              pb = Hb.document.readyState
+            } catch (bb) {
+              return eb
             }
-            const Xd = () => Od();
-            if ("complete" !== Rd) {
-              let Wd = !1,
-                Fd = null;
-              const Rd = () => {
-                  Wd || (Wd = !0, null !== Fd && (clearTimeout(Fd), Fd = null), fO(dd, "load", Kd), dd.addEventListener("load", Xd), Od())
+            const Vb = () => wb();
+            if ("complete" !== pb) {
+              let eb = !1,
+                Hb = null;
+              const pb = () => {
+                  eb || (eb = !0, null !== Hb && (clearTimeout(Hb), Hb = null), ow(bb, "load", gb), bb.addEventListener("load", Vb), wb())
                 },
-                Kd = () => Rd();
-              return Fd = setTimeout(Rd, md), dd.addEventListener("load", Kd), () => {
-                null !== Fd && (clearTimeout(Fd), Fd = null), Wd ? fO(dd, "load", Xd) : (Wd = !0, fO(dd, "load", Kd))
+                gb = () => pb();
+              return Hb = setTimeout(pb, Mb), bb.addEventListener("load", gb), () => {
+                null !== Hb && (clearTimeout(Hb), Hb = null), eb ? ow(bb, "load", Vb) : (eb = !0, ow(bb, "load", gb))
               }
             }
-            const Kd = "about:blank";
-            let hd;
+            const gb = "about:blank";
+            let lb;
             try {
-              hd = Fd.location.href
-            } catch (dd) {
-              return Wd
+              lb = Hb.location.href
+            } catch (bb) {
+              return eb
             }
-            if (hd !== Kd || dd.src === Kd || "" === dd.src) {
-              const md = setTimeout(Od, 0);
-              return dd.addEventListener("load", Xd), () => {
-                clearTimeout(md), fO(dd, "load", Xd)
+            if (lb !== gb || bb.src === gb || "" === bb.src) {
+              const Mb = setTimeout(wb, 0);
+              return bb.addEventListener("load", Vb), () => {
+                clearTimeout(Mb), ow(bb, "load", Vb)
               }
             }
-            return dd.addEventListener("load", Xd), () => {
-              fO(dd, "load", Xd)
+            return bb.addEventListener("load", Vb), () => {
+              ow(bb, "load", Vb)
             }
-          }(dd, (() => {
-            const Od = dd.contentDocument;
-            if (Od && wd) {
-              const md = Fm(Od, {
-                doc: Od,
-                mirror: Wd,
-                blockClass: Fd,
-                blockSelector: Rd,
-                needsMask: Ad,
-                maskTextClass: Xd,
-                maskTextSelector: Kd,
+          }(bb, (() => {
+            const wb = bb.contentDocument;
+            if (wb && Xb) {
+              const Mb = eM(wb, {
+                doc: wb,
+                mirror: eb,
+                blockClass: Hb,
+                blockSelector: pb,
+                needsMask: fb,
+                maskTextClass: Vb,
+                maskTextSelector: gb,
                 skipChild: !1,
-                inlineStylesheet: vd,
-                maskInputOptions: Qd,
-                maskTextFn: td,
-                maskInputFn: od,
-                maskAllElementAttributes: qd,
-                maskAttributeFn: Hd,
-                slimDOMOptions: yd,
-                dataURLOptions: bd,
-                inlineImages: Td,
-                recordCanvas: pd,
-                canvasMaskingConfigured: Yd,
-                preserveWhiteSpace: rd,
-                onSerialize: gd,
-                onIframeLoad: wd,
-                iframeLoadTimeout: Ed,
-                onIframeListenerRegistered: Jd,
-                onStylesheetLoad: Ud,
-                stylesheetLoadTimeout: xd,
-                keepIframeSrcFn: Sd,
-                depth: ud + 1,
-                maxDepth: Vd
+                inlineStylesheet: Lb,
+                maskInputOptions: Ib,
+                maskTextFn: Ob,
+                maskInputFn: Ub,
+                maskAllElementAttributes: Cb,
+                maskAttributeFn: Eb,
+                slimDOMOptions: Fb,
+                dataURLOptions: Bb,
+                inlineImages: sb,
+                recordCanvas: mb,
+                canvasMaskingConfigured: hb,
+                preserveWhiteSpace: Ab,
+                onSerialize: zb,
+                onIframeLoad: Xb,
+                iframeLoadTimeout: xb,
+                onIframeListenerRegistered: jb,
+                onStylesheetLoad: Kb,
+                stylesheetLoadTimeout: rb,
+                keepIframeSrcFn: Db,
+                depth: Yb + 1,
+                maxDepth: Zb
               });
-              md && wd(dd, md)
+              Mb && Xb(bb, Mb)
             }
-          }), Ed);
-          null == Jd || Jd(dd, Od)
+          }), xb);
+          null == jb || jb(bb, wb)
         }
-        return zd.type === Nd.Element && "link" === zd.tagName && CO(zd.attributes.rel) && function(Od, hd, Nd) {
-          if (MO.has(Od)) return;
-          let Jd;
+        return vb.type === tb.Element && "link" === vb.tagName && Pw(vb.attributes.rel) && function(wb, lb, tb) {
+          if (Tw.has(wb)) return;
+          let jb;
           try {
-            Jd = Od.sheet
-          } catch (dd) {
+            jb = wb.sheet
+          } catch (bb) {
             return
           }
-          if (Jd) return;
-          const Bd = new AbortController;
-          let sd = !1;
-          const Gd = () => {
-              if (!sd) {
-                sd = !0;
+          if (jb) return;
+          const Rb = new AbortController;
+          let cb = !1;
+          const Wb = () => {
+              if (!cb) {
+                cb = !0;
                 try {
                   (() => {
-                    if (Ud) {
-                      const Od = Fm(dd, {
-                        doc: md,
-                        mirror: Wd,
-                        blockClass: Fd,
-                        blockSelector: Rd,
-                        needsMask: Ad,
-                        maskTextClass: Xd,
-                        maskTextSelector: Kd,
+                    if (Kb) {
+                      const wb = eM(bb, {
+                        doc: Mb,
+                        mirror: eb,
+                        blockClass: Hb,
+                        blockSelector: pb,
+                        needsMask: fb,
+                        maskTextClass: Vb,
+                        maskTextSelector: gb,
                         skipChild: !1,
-                        inlineStylesheet: vd,
-                        maskInputOptions: Qd,
-                        maskTextFn: td,
-                        maskInputFn: od,
-                        maskAllElementAttributes: qd,
-                        maskAttributeFn: Hd,
-                        slimDOMOptions: yd,
-                        dataURLOptions: bd,
-                        inlineImages: Td,
-                        recordCanvas: pd,
-                        canvasMaskingConfigured: Yd,
-                        preserveWhiteSpace: rd,
-                        onSerialize: gd,
-                        onIframeLoad: wd,
-                        iframeLoadTimeout: Ed,
-                        onStylesheetLoad: Ud,
-                        stylesheetLoadTimeout: xd,
-                        keepIframeSrcFn: Sd,
-                        depth: ud,
-                        maxDepth: Vd
+                        inlineStylesheet: Lb,
+                        maskInputOptions: Ib,
+                        maskTextFn: Ob,
+                        maskInputFn: Ub,
+                        maskAllElementAttributes: Cb,
+                        maskAttributeFn: Eb,
+                        slimDOMOptions: Fb,
+                        dataURLOptions: Bb,
+                        inlineImages: sb,
+                        recordCanvas: mb,
+                        canvasMaskingConfigured: hb,
+                        preserveWhiteSpace: Ab,
+                        onSerialize: zb,
+                        onIframeLoad: Xb,
+                        iframeLoadTimeout: xb,
+                        onStylesheetLoad: Kb,
+                        stylesheetLoadTimeout: rb,
+                        keepIframeSrcFn: Db,
+                        depth: Yb,
+                        maxDepth: Zb
                       });
-                      Od && Ud(dd, Od)
+                      wb && Kb(bb, wb)
                     }
                   })()
                 } finally {
-                  MO.delete(Od), Bd.abort()
+                  Tw.delete(wb), Rb.abort()
                 }
               }
             },
-            nd = setTimeout(Gd, Nd);
-          Bd.signal.addEventListener("abort", (() => clearTimeout(nd)), {
+            Jb = setTimeout(Wb, tb);
+          Rb.signal.addEventListener("abort", (() => clearTimeout(Jb)), {
             once: !0
-          }), Od.addEventListener("load", Gd, {
-            signal: Bd.signal,
+          }), wb.addEventListener("load", Wb, {
+            signal: Rb.signal,
             once: !0
-          }), MO.set(Od, Bd)
-        }(dd, 0, xd), zd
+          }), Tw.set(wb, Rb)
+        }(bb, 0, rb), vb
       }
 
-      function Rm(dd) {
-        return !0 === dd || "all" === dd ? {
+      function HM(bb) {
+        return !0 === bb || "all" === bb ? {
           script: !0,
           comment: !0,
           headFavicon: !0,
@@ -1336,38 +1336,38 @@ export const modules = {
           headMetaRobots: !0,
           headMetaHttpEquiv: !0,
           headMetaVerification: !0,
-          headMetaAuthorship: "all" === dd,
-          headMetaDescKeywords: "all" === dd,
-          headTitleMutations: "all" === dd
-        } : !1 === dd ? {} : dd
+          headMetaAuthorship: "all" === bb,
+          headMetaDescKeywords: "all" === bb,
+          headTitleMutations: "all" === bb
+        } : !1 === bb ? {} : bb
       }
-      var Xm = class dd {
+      var pM = class bb {
         constructor() {
-          XO(this, "parentElement", null), XO(this, "parentNode", null), XO(this, "ownerDocument", void 0), XO(this, "firstChild", null), XO(this, "lastChild", null), XO(this, "previousSibling", null), XO(this, "nextSibling", null), XO(this, "ELEMENT_NODE", 1), XO(this, "TEXT_NODE", 3), XO(this, "nodeType", void 0), XO(this, "nodeName", void 0), XO(this, "RRNodeType", void 0)
+          Hw(this, "parentElement", null), Hw(this, "parentNode", null), Hw(this, "ownerDocument", void 0), Hw(this, "firstChild", null), Hw(this, "lastChild", null), Hw(this, "previousSibling", null), Hw(this, "nextSibling", null), Hw(this, "ELEMENT_NODE", 1), Hw(this, "TEXT_NODE", 3), Hw(this, "nodeType", void 0), Hw(this, "nodeName", void 0), Hw(this, "RRNodeType", void 0)
         }
         get childNodes() {
-          const dd = [];
-          let Od = this.firstChild;
-          for (; Od;) dd.push(Od), Od = Od.nextSibling;
-          return dd
+          const bb = [];
+          let wb = this.firstChild;
+          for (; wb;) bb.push(wb), wb = wb.nextSibling;
+          return bb
         }
-        contains(Od) {
-          if (!(Od instanceof dd)) return !1;
-          if (Od.ownerDocument !== this.ownerDocument) return !1;
-          if (Od === this) return !0;
-          for (; Od.parentNode;) {
-            if (Od.parentNode === this) return !0;
-            Od = Od.parentNode
+        contains(wb) {
+          if (!(wb instanceof bb)) return !1;
+          if (wb.ownerDocument !== this.ownerDocument) return !1;
+          if (wb === this) return !0;
+          for (; wb.parentNode;) {
+            if (wb.parentNode === this) return !0;
+            wb = wb.parentNode
           }
           return !1
         }
-        appendChild(dd) {
+        appendChild(bb) {
           throw new Error("RRDomException: Failed to execute 'appendChild' on 'RRNode': This RRNode type does not support this method.")
         }
-        insertBefore(dd, Od) {
+        insertBefore(bb, wb) {
           throw new Error("RRDomException: Failed to execute 'insertBefore' on 'RRNode': This RRNode type does not support this method.")
         }
-        removeChild(dd) {
+        removeChild(bb) {
           throw new Error("RRDomException: Failed to execute 'removeChild' on 'RRNode': This RRNode type does not support this method.")
         }
         toString() {
@@ -1375,194 +1375,194 @@ export const modules = {
         }
       };
 
-      function Km(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
-        const Wd = {
+      function VM(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : document;
+        const eb = {
           capture: !0,
           passive: !0
         };
-        return md.addEventListener(dd, Od, Wd), () => hm(md, dd, Od, Wd)
+        return Mb.addEventListener(bb, wb, eb), () => gM(Mb, bb, wb, eb)
       }
 
-      function hm(dd, Od, md, Wd) {
-        Qm((() => {
-          const Fd = dd.removeEventListener;
-          "function" == typeof Fd && (void 0 !== Wd ? Fd.call(dd, Od, md, Wd) : Fd.call(dd, Od, md))
+      function gM(bb, wb, Mb, eb) {
+        lM((() => {
+          const Hb = bb.removeEventListener;
+          "function" == typeof Hb && (void 0 !== eb ? Hb.call(bb, wb, Mb, eb) : Hb.call(bb, wb, Mb))
         }))
       }
 
-      function Qm(dd) {
+      function lM(bb) {
         try {
-          dd()
-        } catch (dd) {
-          if (!(dd instanceof DOMException && "SecurityError" === dd.name)) throw dd
+          bb()
+        } catch (bb) {
+          if (!(bb instanceof DOMException && "SecurityError" === bb.name)) throw bb
         }
       }
 
-      function tm(dd) {
-        dd.forEach((dd => {
-          if ("function" == typeof dd) try {
-            dd()
-          } catch (dd) {}
+      function LM(bb) {
+        bb.forEach((bb => {
+          if ("function" == typeof bb) try {
+            bb()
+          } catch (bb) {}
         }))
       }
-      var om = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
-        Nm = {
+      var IM = "Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.",
+        OM = {
           map: {},
-          getId: () => (console.warn(om), -1),
-          QFd: () => (console.warn(om), null),
+          getId: () => (console.warn(IM), -1),
+          OHb: () => (console.warn(IM), null),
           removeNodeFromMap() {
-            console.warn(om)
+            console.warn(IM)
           },
-          has: () => (console.warn(om), !1),
+          has: () => (console.warn(IM), !1),
           reset() {
-            console.warn(om)
+            console.warn(IM)
           }
         };
 
-      function qm(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-          Wd = null,
-          Fd = 0;
+      function UM(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+          eb = null,
+          Hb = 0;
         return function() {
-          for (var Rd = arguments.length, Xd = new Array(Rd), Kd = 0; Kd < Rd; Kd++) Xd[Kd] = arguments[Kd];
-          const hd = Date.now();
-          Fd || !1 !== md.leading || (Fd = hd);
-          const vd = Od - (hd - Fd),
-            Qd = this;
-          0 >= vd || vd > Od ? (Wd && (clearTimeout(Wd), Wd = null), Fd = hd, dd.apply(Qd, Xd)) : Wd || !1 === md.trailing || (Wd = setTimeout((() => {
-            Fd = !1 === md.leading ? 0 : Date.now(), Wd = null, dd.apply(Qd, Xd)
-          }), vd))
+          for (var pb = arguments.length, Vb = new Array(pb), gb = 0; gb < pb; gb++) Vb[gb] = arguments[gb];
+          const lb = Date.now();
+          Hb || !1 !== Mb.leading || (Hb = lb);
+          const Lb = wb - (lb - Hb),
+            Ib = this;
+          0 >= Lb || Lb > wb ? (eb && (clearTimeout(eb), eb = null), Hb = lb, bb.apply(Ib, Vb)) : eb || !1 === Mb.trailing || (eb = setTimeout((() => {
+            Hb = !1 === Mb.leading ? 0 : Date.now(), eb = null, bb.apply(Ib, Vb)
+          }), Lb))
         }
       }
 
-      function Hm(dd, Od, md, Wd) {
-        let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
-        const Rd = Fd.Object.getOwnPropertyDescriptor(dd, Od),
-          Xd = () => Hm(dd, Od, Rd || {}, !0);
-        if (Wd) return Fd.Object.defineProperty(dd, Od, md), Xd;
-        const Kd = function(dd) {
-          let Od = "function" == typeof dd.setTimeout ? dd.setTimeout : void 0;
+      function tM(bb, wb, Mb, eb) {
+        let Hb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : window;
+        const pb = Hb.Object.getOwnPropertyDescriptor(bb, wb),
+          Vb = () => tM(bb, wb, pb || {}, !0);
+        if (eb) return Hb.Object.defineProperty(bb, wb, Mb), Vb;
+        const gb = function(bb) {
+          let wb = "function" == typeof bb.setTimeout ? bb.setTimeout : void 0;
           try {
-            var md, Wd;
-            const Fd = null === (md = dd.Zone) || void 0 === md || null === (Wd = md.__symbol__) || void 0 === Wd ? void 0 : Wd.call(md, "setTimeout"),
-              Rd = Fd ? dd[Fd] : void 0;
-            "function" == typeof Rd && (Od = Rd)
-          } catch (dd) {}
-          if (!Od) return () => {};
-          const Fd = Od;
-          return Od => {
+            var Mb, eb;
+            const Hb = null === (Mb = bb.Zone) || void 0 === Mb || null === (eb = Mb.__symbol__) || void 0 === eb ? void 0 : eb.call(Mb, "setTimeout"),
+              pb = Hb ? bb[Hb] : void 0;
+            "function" == typeof pb && (wb = pb)
+          } catch (bb) {}
+          if (!wb) return () => {};
+          const Hb = wb;
+          return wb => {
             try {
-              Fd.call(dd, Od, 0)
-            } catch (dd) {}
+              Hb.call(bb, wb, 0)
+            } catch (bb) {}
           }
-        }(Fd);
-        return Fd.Object.defineProperty(dd, Od, {
-          set(dd) {
-            if (Kd((() => {
+        }(Hb);
+        return Hb.Object.defineProperty(bb, wb, {
+          set(bb) {
+            if (gb((() => {
                 try {
-                  md.set.call(this, dd)
-                } catch (dd) {}
-              })), Rd && Rd.set) {
-              if (Rd.get) try {
-                Rd.get.call(this)
-              } catch (dd) {
+                  Mb.set.call(this, bb)
+                } catch (bb) {}
+              })), pb && pb.set) {
+              if (pb.get) try {
+                pb.get.call(this)
+              } catch (bb) {
                 return
               }
-              Rd.set.call(this, dd)
+              pb.set.call(this, bb)
             }
           }
-        }), Xd
+        }), Vb
       }
-      "undefined" != typeof window && window.Proxy && window.Reflect && (Nm = new Proxy(Nm, {
-        get: (dd, Od, md) => ("map" === Od && console.warn(om), Reflect.get(dd, Od, md))
+      "undefined" != typeof window && window.Proxy && window.Reflect && (OM = new Proxy(OM, {
+        get: (bb, wb, Mb) => ("map" === wb && console.warn(IM), Reflect.get(bb, wb, Mb))
       }));
-      var ym = Date.now;
+      var CM = Date.now;
 
-      function bm(dd) {
-        var Od, md, Wd, Fd;
-        const Rd = dd.document;
+      function EM(bb) {
+        var wb, Mb, eb, Hb;
+        const pb = bb.document;
         return {
-          left: Rd.scrollingElement ? Rd.scrollingElement.scrollLeft : void 0 !== dd.pageXOffset ? dd.pageXOffset : Rd.documentElement.scrollLeft || (null == Rd ? void 0 : Rd.body) && (null === (Od = Bd.parentElement(Rd.body)) || void 0 === Od ? void 0 : Od.scrollLeft) || (null == Rd || null === (md = Rd.body) || void 0 === md ? void 0 : md.scrollLeft) || 0,
-          top: Rd.scrollingElement ? Rd.scrollingElement.scrollTop : void 0 !== dd.pageYOffset ? dd.pageYOffset : (null == Rd ? void 0 : Rd.documentElement.scrollTop) || (null == Rd ? void 0 : Rd.body) && (null === (Wd = Bd.parentElement(Rd.body)) || void 0 === Wd ? void 0 : Wd.scrollTop) || (null == Rd || null === (Fd = Rd.body) || void 0 === Fd ? void 0 : Fd.scrollTop) || 0
+          left: pb.scrollingElement ? pb.scrollingElement.scrollLeft : void 0 !== bb.pageXOffset ? bb.pageXOffset : pb.documentElement.scrollLeft || (null == pb ? void 0 : pb.body) && (null === (wb = Rb.parentElement(pb.body)) || void 0 === wb ? void 0 : wb.scrollLeft) || (null == pb || null === (Mb = pb.body) || void 0 === Mb ? void 0 : Mb.scrollLeft) || 0,
+          top: pb.scrollingElement ? pb.scrollingElement.scrollTop : void 0 !== bb.pageYOffset ? bb.pageYOffset : (null == pb ? void 0 : pb.documentElement.scrollTop) || (null == pb ? void 0 : pb.body) && (null === (eb = Rb.parentElement(pb.body)) || void 0 === eb ? void 0 : eb.scrollTop) || (null == pb || null === (Hb = pb.body) || void 0 === Hb ? void 0 : Hb.scrollTop) || 0
         }
       }
 
-      function Tm() {
+      function FM() {
         return window.innerHeight || document.documentElement && document.documentElement.clientHeight || document.body && document.body.clientHeight
       }
 
-      function pm() {
+      function BM() {
         return window.innerWidth || document.documentElement && document.documentElement.clientWidth || document.body && document.body.clientWidth
       }
 
-      function Ym(dd) {
-        return dd ? dd.nodeType === dd.ELEMENT_NODE ? dd : Bd.parentElement(dd) : null
+      function sM(bb) {
+        return bb ? bb.nodeType === bb.ELEMENT_NODE ? bb : Rb.parentElement(bb) : null
       }
 
-      function gm(dd, Od, md, Wd) {
-        if (!dd) return !1;
-        const Fd = Ym(dd);
-        if (!Fd) return !1;
+      function mM(bb, wb, Mb, eb) {
+        if (!bb) return !1;
+        const Hb = sM(bb);
+        if (!Hb) return !1;
         try {
-          if ("string" == typeof Od) {
-            if (Fd.classList.contains(Od)) return !0;
-            if (Wd && null !== Fd.closest("." + Od)) return !0
-          } else if (ZO(Fd, Od, Wd)) return !0
-        } catch (dd) {}
-        if (md) {
-          if (Fd.matches(md)) return !0;
-          if (Wd && null !== Fd.closest(md)) return !0
+          if ("string" == typeof wb) {
+            if (Hb.classList.contains(wb)) return !0;
+            if (eb && null !== Hb.closest("." + wb)) return !0
+          } else if (nw(Hb, wb, eb)) return !0
+        } catch (bb) {}
+        if (Mb) {
+          if (Hb.matches(Mb)) return !0;
+          if (eb && null !== Hb.closest(Mb)) return !0
         }
         return !1
       }
 
-      function wm(dd, Od, md) {
-        return !("TITLE" !== dd.tagName || !md.headTitleMutations) || -2 === Od.getId(dd)
+      function hM(bb, wb, Mb) {
+        return !("TITLE" !== bb.tagName || !Mb.headTitleMutations) || -2 === wb.getId(bb)
       }
 
-      function am(dd, Od) {
-        if (hO(dd)) return !1;
-        const md = Od.getId(dd);
-        if (!Od.has(md)) return !0;
-        const Wd = Bd.parentNode(dd);
-        return (!Wd || Wd.nodeType !== dd.DOCUMENT_NODE) && (!Wd || am(Wd, Od))
+      function zM(bb, wb) {
+        if (Vw(bb)) return !1;
+        const Mb = wb.getId(bb);
+        if (!wb.has(Mb)) return !0;
+        const eb = Rb.parentNode(bb);
+        return (!eb || eb.nodeType !== bb.DOCUMENT_NODE) && (!eb || zM(eb, wb))
       }
 
-      function Em(dd) {
-        return Boolean(dd.changedTouches)
+      function XM(bb) {
+        return Boolean(bb.changedTouches)
       }
 
-      function Jm(dd, Od) {
-        return Boolean("IFRAME" === dd.nodeName && Od.getMeta(dd))
+      function xM(bb, wb) {
+        return Boolean("IFRAME" === bb.nodeName && wb.getMeta(bb))
       }
 
-      function Um(dd, Od) {
-        return Boolean("LINK" === dd.nodeName && dd.nodeType === dd.ELEMENT_NODE && dd.getAttribute && "stylesheet" === dd.getAttribute("rel") && Od.getMeta(dd))
+      function jM(bb, wb) {
+        return Boolean("LINK" === bb.nodeName && bb.nodeType === bb.ELEMENT_NODE && bb.getAttribute && "stylesheet" === bb.getAttribute("rel") && wb.getMeta(bb))
       }
 
-      function xm(dd) {
-        return !!dd && (dd instanceof Xm && "shadowRoot" in dd ? Boolean(dd.shadowRoot) : Boolean(Bd.shadowRoot(dd)))
+      function KM(bb) {
+        return !!bb && (bb instanceof pM && "shadowRoot" in bb ? Boolean(bb.shadowRoot) : Boolean(Rb.shadowRoot(bb)))
       }
-      /[1-9][0-9]{12}/.test(Date.now().toString()) || (ym = () => (new Date).getTime());
-      var Bm = class {
+      /[1-9][0-9]{12}/.test(Date.now().toString()) || (CM = () => (new Date).getTime());
+      var rM = class {
         constructor() {
-          XO(this, "id", 1), XO(this, "styleIDMap", new WeakMap), XO(this, "idStyleMap", new Map)
+          Hw(this, "id", 1), Hw(this, "styleIDMap", new WeakMap), Hw(this, "idStyleMap", new Map)
         }
-        getId(dd) {
-          var Od;
-          return null !== (Od = this.styleIDMap.get(dd)) && void 0 !== Od ? Od : -1
+        getId(bb) {
+          var wb;
+          return null !== (wb = this.styleIDMap.get(bb)) && void 0 !== wb ? wb : -1
         }
-        has(dd) {
-          return this.styleIDMap.has(dd)
+        has(bb) {
+          return this.styleIDMap.has(bb)
         }
-        add(dd, Od) {
-          if (this.has(dd)) return this.getId(dd);
-          let md;
-          return md = void 0 === Od ? this.id++ : Od, this.styleIDMap.set(dd, md), this.idStyleMap.set(md, dd), md
+        add(bb, wb) {
+          if (this.has(bb)) return this.getId(bb);
+          let Mb;
+          return Mb = void 0 === wb ? this.id++ : wb, this.styleIDMap.set(bb, Mb), this.idStyleMap.set(Mb, bb), Mb
         }
-        getStyle(dd) {
-          return this.idStyleMap.get(dd) || null
+        getStyle(bb) {
+          return this.idStyleMap.get(bb) || null
         }
         reset() {
           this.styleIDMap = new WeakMap, this.idStyleMap = new Map, this.id = 1
@@ -1572,97 +1572,97 @@ export const modules = {
         }
       };
 
-      function Sm(dd) {
-        var Od;
-        let md = null;
-        return "getRootNode" in dd && (null === (Od = Bd.getRootNode(dd)) || void 0 === Od ? void 0 : Od.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && Bd.host(Bd.getRootNode(dd)) && (md = Bd.host(Bd.getRootNode(dd))), md
+      function RM(bb) {
+        var wb;
+        let Mb = null;
+        return "getRootNode" in bb && (null === (wb = Rb.getRootNode(bb)) || void 0 === wb ? void 0 : wb.nodeType) === Node.DOCUMENT_FRAGMENT_NODE && Rb.host(Rb.getRootNode(bb)) && (Mb = Rb.host(Rb.getRootNode(bb))), Mb
       }
 
-      function sm(dd) {
-        const Od = dd.ownerDocument;
-        if (!Od) return !1;
-        if (Bd.contains(Od, dd)) return !0;
-        const md = Bd.isConnected(dd);
-        return "boolean" == typeof md ? md : function(dd) {
-          const Od = dd.ownerDocument;
-          if (!Od) return !1;
-          const md = function(dd) {
-            let Od, md = dd;
-            for (; Od = Sm(md);) md = Od;
-            return md
-          }(dd);
-          return Bd.contains(Od, md)
-        }(dd)
+      function DM(bb) {
+        const wb = bb.ownerDocument;
+        if (!wb) return !1;
+        if (Rb.contains(wb, bb)) return !0;
+        const Mb = Rb.isConnected(bb);
+        return "boolean" == typeof Mb ? Mb : function(bb) {
+          const wb = bb.ownerDocument;
+          if (!wb) return !1;
+          const Mb = function(bb) {
+            let wb, Mb = bb;
+            for (; wb = RM(Mb);) Mb = wb;
+            return Mb
+          }(bb);
+          return Rb.contains(wb, Mb)
+        }(bb)
       }
 
-      function um(dd) {
-        return "__ln" in dd
+      function cM(bb) {
+        return "__ln" in bb
       }
-      var Vm, im = class {
+      var YM, ZM = class {
           constructor() {
-            XO(this, "length", 0), XO(this, "head", null), XO(this, "tail", null)
+            Hw(this, "length", 0), Hw(this, "head", null), Hw(this, "tail", null)
           }
-          get(dd) {
-            if (dd >= this.length) throw new Error("Position outside of list range");
-            let Od = this.head;
-            for (let md = 0; dd > md; md++) Od = (null == Od ? void 0 : Od.next) || null;
-            return Od
+          get(bb) {
+            if (bb >= this.length) throw new Error("Position outside of list range");
+            let wb = this.head;
+            for (let Mb = 0; bb > Mb; Mb++) wb = (null == wb ? void 0 : wb.next) || null;
+            return wb
           }
-          addNode(dd) {
-            const Od = {
-              value: dd,
+          addNode(bb) {
+            const wb = {
+              value: bb,
               previous: null,
               next: null
             };
-            if (dd.__ln = Od, dd.previousSibling && um(dd.previousSibling)) {
-              const md = dd.previousSibling.__ln.next;
-              Od.next = md, Od.previous = dd.previousSibling.__ln, dd.previousSibling.__ln.next = Od, md && (md.previous = Od)
-            } else if (dd.nextSibling && um(dd.nextSibling) && dd.nextSibling.__ln.previous) {
-              const md = dd.nextSibling.__ln.previous;
-              Od.previous = md, Od.next = dd.nextSibling.__ln, dd.nextSibling.__ln.previous = Od, md && (md.next = Od)
-            } else this.head && (this.head.previous = Od), Od.next = this.head, this.head = Od;
-            null === Od.next && (this.tail = Od), this.length++
+            if (bb.__ln = wb, bb.previousSibling && cM(bb.previousSibling)) {
+              const Mb = bb.previousSibling.__ln.next;
+              wb.next = Mb, wb.previous = bb.previousSibling.__ln, bb.previousSibling.__ln.next = wb, Mb && (Mb.previous = wb)
+            } else if (bb.nextSibling && cM(bb.nextSibling) && bb.nextSibling.__ln.previous) {
+              const Mb = bb.nextSibling.__ln.previous;
+              wb.previous = Mb, wb.next = bb.nextSibling.__ln, bb.nextSibling.__ln.previous = wb, Mb && (Mb.next = wb)
+            } else this.head && (this.head.previous = wb), wb.next = this.head, this.head = wb;
+            null === wb.next && (this.tail = wb), this.length++
           }
-          removeNode(dd) {
-            const Od = dd.__ln;
-            this.head && (Od.previous ? (Od.previous.next = Od.next, Od.next ? Od.next.previous = Od.previous : this.tail = Od.previous) : (this.head = Od.next, this.head ? this.head.previous = null : this.tail = null), dd.__ln && delete dd.__ln, this.length--)
+          removeNode(bb) {
+            const wb = bb.__ln;
+            this.head && (wb.previous ? (wb.previous.next = wb.next, wb.next ? wb.next.previous = wb.previous : this.tail = wb.previous) : (this.head = wb.next, this.head ? this.head.previous = null : this.tail = null), bb.__ln && delete bb.__ln, this.length--)
           }
         },
-        Am = (dd, Od) => `${dd}@${Od}`,
-        rm = class {
+        fM = (bb, wb) => `${bb}@${wb}`,
+        AM = class {
           constructor() {
-            XO(this, "frozen", !1), XO(this, "locked", !1), XO(this, "texts", []), XO(this, "attributes", []), XO(this, "attributeMap", new WeakMap), XO(this, "generatedAttributes", new WeakMap), XO(this, "removes", []), XO(this, "mapRemoves", new Set), XO(this, "movedMap", {}), XO(this, "addedSet", new Set), XO(this, "movedSet", new Set), XO(this, "droppedSet", new Set), XO(this, "removesSubTreeCache", new Set), XO(this, "mutationCb", void 0), XO(this, "blockClass", void 0), XO(this, "blockSelector", void 0), XO(this, "maskTextClass", void 0), XO(this, "maskTextSelector", void 0), XO(this, "inlineStylesheet", void 0), XO(this, "maskInputOptions", void 0), XO(this, "maskTextFn", void 0), XO(this, "maskInputFn", void 0), XO(this, "maskAllElementAttributes", void 0), XO(this, "maskAttributeFn", void 0), XO(this, "keepIframeSrcFn", void 0), XO(this, "recordCanvas", void 0), XO(this, "canvasMaskingConfigured", void 0), XO(this, "inlineImages", void 0), XO(this, "slimDOMOptions", void 0), XO(this, "dataURLOptions", void 0), XO(this, "doc", void 0), XO(this, "mirror", void 0), XO(this, "iframeManager", void 0), XO(this, "stylesheetManager", void 0), XO(this, "shadowDomManager", void 0), XO(this, "canvasManager", void 0), XO(this, "processedNodeManager", void 0), XO(this, "unattachedDoc", void 0), XO(this, "canvasManagerReleased", !1), XO(this, "processMutations", (dd => {
-              dd.forEach(this.processMutation), this.emit()
-            })), XO(this, "emit", (() => {
+            Hw(this, "frozen", !1), Hw(this, "locked", !1), Hw(this, "texts", []), Hw(this, "attributes", []), Hw(this, "attributeMap", new WeakMap), Hw(this, "generatedAttributes", new WeakMap), Hw(this, "removes", []), Hw(this, "mapRemoves", new Set), Hw(this, "movedMap", {}), Hw(this, "addedSet", new Set), Hw(this, "movedSet", new Set), Hw(this, "droppedSet", new Set), Hw(this, "removesSubTreeCache", new Set), Hw(this, "mutationCb", void 0), Hw(this, "blockClass", void 0), Hw(this, "blockSelector", void 0), Hw(this, "maskTextClass", void 0), Hw(this, "maskTextSelector", void 0), Hw(this, "inlineStylesheet", void 0), Hw(this, "maskInputOptions", void 0), Hw(this, "maskTextFn", void 0), Hw(this, "maskInputFn", void 0), Hw(this, "maskAllElementAttributes", void 0), Hw(this, "maskAttributeFn", void 0), Hw(this, "keepIframeSrcFn", void 0), Hw(this, "recordCanvas", void 0), Hw(this, "canvasMaskingConfigured", void 0), Hw(this, "inlineImages", void 0), Hw(this, "slimDOMOptions", void 0), Hw(this, "dataURLOptions", void 0), Hw(this, "doc", void 0), Hw(this, "mirror", void 0), Hw(this, "iframeManager", void 0), Hw(this, "stylesheetManager", void 0), Hw(this, "shadowDomManager", void 0), Hw(this, "canvasManager", void 0), Hw(this, "processedNodeManager", void 0), Hw(this, "unattachedDoc", void 0), Hw(this, "canvasManagerReleased", !1), Hw(this, "processMutations", (bb => {
+              bb.forEach(this.processMutation), this.emit()
+            })), Hw(this, "emit", (() => {
               if (this.frozen || this.locked) return;
-              const dd = Sd(),
-                Od = Ad();
+              const bb = Db(),
+                wb = fb();
               try {
                 this.processBufferedMutations()
               } finally {
-                md = Sd() - dd, Wd = Od, Gd > 0 || rd(md, null != Wd ? Wd : sd) || md > Id.slowestBatchMs && (Id.slowestBatchMs = md)
+                Mb = Db() - bb, eb = wb, Wb > 0 || Ab(Mb, null != eb ? eb : cb) || Mb > ib.slowestBatchMs && (ib.slowestBatchMs = Mb)
               }
-              var md, Wd
-            })), XO(this, "processBufferedMutations", (() => {
-              const dd = [],
-                Od = new Set,
-                md = new im,
-                Wd = dd => {
-                  let Od = dd,
-                    md = -2;
-                  for (; - 2 === md;) Od = Od && Od.nextSibling, md = Od && this.mirror.getId(Od);
-                  return md
+              var Mb, eb
+            })), Hw(this, "processBufferedMutations", (() => {
+              const bb = [],
+                wb = new Set,
+                Mb = new ZM,
+                eb = bb => {
+                  let wb = bb,
+                    Mb = -2;
+                  for (; - 2 === Mb;) wb = wb && wb.nextSibling, Mb = wb && this.mirror.getId(wb);
+                  return Mb
                 };
-              let Fd;
-              const Rd = Rd => {
-                var Xd;
-                const Kd = Bd.parentNode(Rd);
-                if (!Kd || !sm(Rd) || "TEXTAREA" === Kd.tagName) return;
-                if (this.isBlockedAtEmission(Kd)) return;
-                const hd = hO(Kd) ? this.mirror.getId(Sm(Rd)) : this.mirror.getId(Kd),
-                  vd = Wd(Rd);
-                if (-1 === hd || -1 === vd) return md.addNode(Rd);
-                null !== (Xd = Fd) && void 0 !== Xd || (Fd = {
+              let Hb;
+              const pb = pb => {
+                var Vb;
+                const gb = Rb.parentNode(pb);
+                if (!gb || !DM(pb) || "TEXTAREA" === gb.tagName) return;
+                if (this.isBlockedAtEmission(gb)) return;
+                const lb = Vw(gb) ? this.mirror.getId(RM(pb)) : this.mirror.getId(gb),
+                  Lb = eb(pb);
+                if (-1 === lb || -1 === Lb) return Mb.addNode(pb);
+                null !== (Vb = Hb) && void 0 !== Vb || (Hb = {
                   doc: this.doc,
                   mirror: this.mirror,
                   blockClass: this.blockClass,
@@ -1682,52 +1682,52 @@ export const modules = {
                   recordCanvas: this.recordCanvas,
                   canvasMaskingConfigured: this.canvasMaskingConfigured,
                   inlineImages: this.inlineImages,
-                  onSerialize: dd => {
-                    Jm(dd, this.mirror) && this.iframeManager.addIframe(dd), Um(dd, this.mirror) && this.stylesheetManager.trackLinkElement(dd), xm(dd) && !gm(dd, this.blockClass, this.blockSelector, !0) && this.shadowDomManager.addShadowRoot(Bd.shadowRoot(dd), this.doc)
+                  onSerialize: bb => {
+                    xM(bb, this.mirror) && this.iframeManager.addIframe(bb), jM(bb, this.mirror) && this.stylesheetManager.trackLinkElement(bb), KM(bb) && !mM(bb, this.blockClass, this.blockSelector, !0) && this.shadowDomManager.addShadowRoot(Rb.shadowRoot(bb), this.doc)
                   },
-                  onIframeLoad: (dd, Od) => {
-                    this.iframeManager.attachIframe(dd, Od), this.shadowDomManager.observeAttachShadow(dd)
+                  onIframeLoad: (bb, wb) => {
+                    this.iframeManager.attachIframe(bb, wb), this.shadowDomManager.observeAttachShadow(bb)
                   },
-                  onIframeListenerRegistered: (dd, Od) => {
-                    this.iframeManager.registerLoadListenerDisposer(dd, Od)
+                  onIframeListenerRegistered: (bb, wb) => {
+                    this.iframeManager.registerLoadListenerDisposer(bb, wb)
                   },
-                  onStylesheetLoad: (dd, Od) => {
-                    this.stylesheetManager.attachLinkElement(dd, Od)
+                  onStylesheetLoad: (bb, wb) => {
+                    this.stylesheetManager.attachLinkElement(bb, wb)
                   }
                 });
-                const Qd = Fm(Rd, Fd);
-                Qd && (dd.push({
-                  parentId: hd,
-                  nextId: vd,
-                  node: Qd
-                }), Od.add(Qd.id))
+                const Ib = eM(pb, Hb);
+                Ib && (bb.push({
+                  parentId: lb,
+                  nextId: Lb,
+                  node: Ib
+                }), wb.add(Ib.id))
               };
-              for (const hd of this.mapRemoves) this.mapRemoves.delete(hd), this.mirror.removeNodeFromMap(hd);
-              for (const hd of this.movedSet) nm(this.removesSubTreeCache, hd) && !this.movedSet.has(Bd.parentNode(hd)) || Rd(hd);
-              for (const hd of this.addedSet) Lm(this.droppedSet, hd) || nm(this.removesSubTreeCache, hd) ? Lm(this.movedSet, hd) ? Rd(hd) : this.droppedSet.add(hd) : Rd(hd);
-              let Xd = null;
-              for (; md.length;) {
-                let dd = null;
-                if (Xd) {
-                  const Od = this.mirror.getId(Bd.parentNode(Xd.value)),
-                    md = Wd(Xd.value); - 1 !== Od && -1 !== md && (dd = Xd)
+              for (const lb of this.mapRemoves) this.mapRemoves.delete(lb), this.mirror.removeNodeFromMap(lb);
+              for (const lb of this.movedSet) JM(this.removesSubTreeCache, lb) && !this.movedSet.has(Rb.parentNode(lb)) || pb(lb);
+              for (const lb of this.addedSet) SM(this.droppedSet, lb) || JM(this.removesSubTreeCache, lb) ? SM(this.movedSet, lb) ? pb(lb) : this.droppedSet.add(lb) : pb(lb);
+              let Vb = null;
+              for (; Mb.length;) {
+                let bb = null;
+                if (Vb) {
+                  const wb = this.mirror.getId(Rb.parentNode(Vb.value)),
+                    Mb = eb(Vb.value); - 1 !== wb && -1 !== Mb && (bb = Vb)
                 }
-                if (!dd) {
-                  let Od = md.tail;
-                  for (; Od;) {
-                    const md = Od;
-                    if (Od = Od.previous, md) {
-                      const Od = this.mirror.getId(Bd.parentNode(md.value));
-                      if (-1 === Wd(md.value)) continue;
-                      if (-1 !== Od) {
-                        dd = md;
+                if (!bb) {
+                  let wb = Mb.tail;
+                  for (; wb;) {
+                    const Mb = wb;
+                    if (wb = wb.previous, Mb) {
+                      const wb = this.mirror.getId(Rb.parentNode(Mb.value));
+                      if (-1 === eb(Mb.value)) continue;
+                      if (-1 !== wb) {
+                        bb = Mb;
                         break
                       } {
-                        const Od = Bd.parentNode(md.value);
-                        if (Od && Od.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
-                          const Wd = Bd.host(Od);
-                          if (-1 !== this.mirror.getId(Wd)) {
-                            dd = md;
+                        const wb = Rb.parentNode(Mb.value);
+                        if (wb && wb.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+                          const eb = Rb.host(wb);
+                          if (-1 !== this.mirror.getId(eb)) {
+                            bb = Mb;
                             break
                           }
                         }
@@ -1735,186 +1735,186 @@ export const modules = {
                     }
                   }
                 }
-                if (!dd) {
-                  for (; md.head;) md.removeNode(md.head.value);
+                if (!bb) {
+                  for (; Mb.head;) Mb.removeNode(Mb.head.value);
                   break
                 }
-                Xd = dd.previous, md.removeNode(dd.value), Rd(dd.value)
+                Vb = bb.previous, Mb.removeNode(bb.value), pb(bb.value)
               }
-              const Kd = {
-                texts: this.texts.filter((dd => !this.isBlockedAtEmission(dd.node))).map((dd => {
-                  const Od = dd.node,
-                    md = Bd.parentNode(Od);
-                  return md && "TEXTAREA" === md.tagName && this.genTextAreaValueMutation(md), {
-                    id: this.mirror.getId(Od),
-                    value: dd.value
+              const gb = {
+                texts: this.texts.filter((bb => !this.isBlockedAtEmission(bb.node))).map((bb => {
+                  const wb = bb.node,
+                    Mb = Rb.parentNode(wb);
+                  return Mb && "TEXTAREA" === Mb.tagName && this.genTextAreaValueMutation(Mb), {
+                    id: this.mirror.getId(wb),
+                    value: bb.value
                   }
-                })).filter((dd => !Od.has(dd.id))).filter((dd => this.mirror.has(dd.id))),
-                attributes: this.attributes.filter((dd => !this.isBlockedAtEmission(dd.node))).map((dd => {
+                })).filter((bb => !wb.has(bb.id))).filter((bb => this.mirror.has(bb.id))),
+                attributes: this.attributes.filter((bb => !this.isBlockedAtEmission(bb.node))).map((bb => {
                   const {
-                    attributes: Od
-                  } = dd;
-                  if (!this.maskAllElementAttributes && !this.maskAttributeFn && "string" == typeof Od.style) {
-                    const md = JSON.stringify(dd.styleDiff),
-                      Wd = JSON.stringify(dd._unchangedStyles);
-                    Od.style.length > md.length && (md + Wd).split("var(").length === Od.style.split("var(").length && (Od.style = dd.styleDiff)
+                    attributes: wb
+                  } = bb;
+                  if (!this.maskAllElementAttributes && !this.maskAttributeFn && "string" == typeof wb.style) {
+                    const Mb = JSON.stringify(bb.styleDiff),
+                      eb = JSON.stringify(bb._unchangedStyles);
+                    wb.style.length > Mb.length && (Mb + eb).split("var(").length === wb.style.split("var(").length && (wb.style = bb.styleDiff)
                   }
                   if (this.maskAllElementAttributes || this.maskAttributeFn)
-                    for (const [Wd, Fd] of Object.entries(Od))
-                      if ("string" == typeof Fd || null === Fd) {
-                        var md;
-                        Od[Wd] = EO({
-                          element: dd.node,
-                          name: Wd,
-                          value: Fd,
+                    for (const [eb, Hb] of Object.entries(wb))
+                      if ("string" == typeof Hb || null === Hb) {
+                        var Mb;
+                        wb[eb] = Xw({
+                          element: bb.node,
+                          name: eb,
+                          value: Hb,
                           maskAllElementAttributes: this.maskAllElementAttributes,
                           maskAttributeFn: this.maskAttributeFn,
-                          isGenerated: null === (md = this.generatedAttributes.get(dd.node)) || void 0 === md ? void 0 : md.has(Wd)
+                          isGenerated: null === (Mb = this.generatedAttributes.get(bb.node)) || void 0 === Mb ? void 0 : Mb.has(eb)
                         })
                       } return {
-                    id: this.mirror.getId(dd.node),
-                    attributes: Od
+                    id: this.mirror.getId(bb.node),
+                    attributes: wb
                   }
-                })).filter((dd => !Od.has(dd.id))).filter((dd => this.mirror.has(dd.id))),
+                })).filter((bb => !wb.has(bb.id))).filter((bb => this.mirror.has(bb.id))),
                 removes: this.removes,
-                adds: dd
+                adds: bb
               };
-              this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.generatedAttributes = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, (Kd.texts.length || Kd.attributes.length || Kd.removes.length || Kd.adds.length) && this.mutationCb(Kd)
-            })), XO(this, "bufferBelongsToIframe", (dd => this.doc === dd.contentDocument)), XO(this, "genTextAreaValueMutation", (dd => {
-              let Od = this.attributeMap.get(dd);
-              Od || (Od = {
-                node: dd,
+              this.texts = [], this.attributes = [], this.attributeMap = new WeakMap, this.generatedAttributes = new WeakMap, this.removes = [], this.addedSet = new Set, this.movedSet = new Set, this.droppedSet = new Set, this.removesSubTreeCache = new Set, this.movedMap = {}, (gb.texts.length || gb.attributes.length || gb.removes.length || gb.adds.length) && this.mutationCb(gb)
+            })), Hw(this, "bufferBelongsToIframe", (bb => this.doc === bb.contentDocument)), Hw(this, "genTextAreaValueMutation", (bb => {
+              let wb = this.attributeMap.get(bb);
+              wb || (wb = {
+                node: bb,
                 attributes: {},
                 styleDiff: {},
                 _unchangedStyles: {}
-              }, this.attributes.push(Od), this.attributeMap.set(dd, Od));
-              const md = Array.from(Bd.childNodes(dd), (dd => Bd.textContent(dd) || "")).join("");
-              Od.attributes.value = gO({
-                element: dd,
+              }, this.attributes.push(wb), this.attributeMap.set(bb, wb));
+              const Mb = Array.from(Rb.childNodes(bb), (bb => Rb.textContent(bb) || "")).join("");
+              wb.attributes.value = mw({
+                element: bb,
                 maskInputOptions: this.maskInputOptions,
-                tagName: dd.tagName,
-                type: UO(dd),
-                value: md,
+                tagName: bb.tagName,
+                type: jw(bb),
+                value: Mb,
                 maskInputFn: this.maskInputFn
               })
-            })), XO(this, "processMutation", (dd => {
-              if (!wm(dd.target, this.mirror, this.slimDOMOptions)) switch (dd.type) {
+            })), Hw(this, "processMutation", (bb => {
+              if (!hM(bb.target, this.mirror, this.slimDOMOptions)) switch (bb.type) {
                 case "characterData": {
-                  const Od = Bd.textContent(dd.target);
-                  gm(dd.target, this.blockClass, this.blockSelector, !1) || Od === dd.oldValue || this.texts.push({
-                    value: kO(dd.target, this.maskTextClass, this.maskTextSelector, !0) && Od ? this.maskTextFn ? this.maskTextFn(Od, Ym(dd.target)) : Od.replace(/[\S]/g, "*") : Od,
-                    node: dd.target
+                  const wb = Rb.textContent(bb.target);
+                  mM(bb.target, this.blockClass, this.blockSelector, !1) || wb === bb.oldValue || this.texts.push({
+                    value: yw(bb.target, this.maskTextClass, this.maskTextSelector, !0) && wb ? this.maskTextFn ? this.maskTextFn(wb, sM(bb.target)) : wb.replace(/[\S]/g, "*") : wb,
+                    node: bb.target
                   });
                   break
                 }
                 case "attributes": {
-                  var Od;
-                  const Wd = dd.target,
-                    Fd = wO(Wd.tagName),
-                    Rd = dd.attributeName,
-                    Xd = null !== (Od = dd.attributeNamespace) && void 0 !== Od ? Od : null;
-                  let Kd = function(dd, Od, md) {
-                      if (!md) return Od;
-                      const Wd = dd.getAttributeNodeNS(md, Od);
-                      if (Wd) return Wd.name;
-                      if ("http://www.w3.org/1999/xlink" === md) return `xlink:${Od}`;
-                      if ("http://www.w3.org/XML/1998/namespace" === md) return `xml:${Od}`;
-                      if ("http://www.w3.org/2000/xmlns/" === md) return "xmlns" === Od ? Od : `xmlns:${Od}`;
-                      const Fd = dd.lookupPrefix(md);
-                      return Fd ? `${Fd}:${Od}` : Od
-                    }(Wd, Rd, Xd),
-                    hd = Xd ? Wd.getAttributeNS(Xd, Rd) : dd.target.getAttribute(Rd);
-                  if ("value" === Kd) {
-                    const dd = Wd,
-                      Od = UO(dd);
-                    hd = gO({
-                      element: dd,
+                  var wb;
+                  const eb = bb.target,
+                    Hb = hw(eb.tagName),
+                    pb = bb.attributeName,
+                    Vb = null !== (wb = bb.attributeNamespace) && void 0 !== wb ? wb : null;
+                  let gb = function(bb, wb, Mb) {
+                      if (!Mb) return wb;
+                      const eb = bb.getAttributeNodeNS(Mb, wb);
+                      if (eb) return eb.name;
+                      if ("http://www.w3.org/1999/xlink" === Mb) return `xlink:${wb}`;
+                      if ("http://www.w3.org/XML/1998/namespace" === Mb) return `xml:${wb}`;
+                      if ("http://www.w3.org/2000/xmlns/" === Mb) return "xmlns" === wb ? wb : `xmlns:${wb}`;
+                      const Hb = bb.lookupPrefix(Mb);
+                      return Hb ? `${Hb}:${wb}` : wb
+                    }(eb, pb, Vb),
+                    lb = Vb ? eb.getAttributeNS(Vb, pb) : bb.target.getAttribute(pb);
+                  if ("value" === gb) {
+                    const bb = eb,
+                      wb = jw(bb);
+                    lb = mw({
+                      element: bb,
                       maskInputOptions: this.maskInputOptions,
-                      tagName: Wd.tagName,
-                      type: Od,
-                      value: hd,
+                      tagName: eb.tagName,
+                      type: wb,
+                      value: lb,
                       maskInputFn: this.maskInputFn
                     })
                   }
-                  if (gm(dd.target, this.blockClass, this.blockSelector, !1) || hd === dd.oldValue) return;
-                  let vd = this.attributeMap.get(dd.target);
-                  const Qd = "iframe" === Fd && "src" === Kd;
-                  if (Qd && !this.keepIframeSrcFn(hd) && Wd.contentDocument) return;
-                  if ("type" === Kd && "input" === Fd && "password" === (dd.oldValue || "").toLowerCase() && Wd.setAttribute("data-rr-is-password", "true"), !lO(Fd, Kd)) {
-                    var md;
-                    vd || (vd = {
-                      node: dd.target,
+                  if (mM(bb.target, this.blockClass, this.blockSelector, !1) || lb === bb.oldValue) return;
+                  let Lb = this.attributeMap.get(bb.target);
+                  const Ib = "iframe" === Hb && "src" === gb;
+                  if (Ib && !this.keepIframeSrcFn(lb) && eb.contentDocument) return;
+                  if ("type" === gb && "input" === Hb && "password" === (bb.oldValue || "").toLowerCase() && eb.setAttribute("data-rr-is-password", "true"), !dw(Hb, gb)) {
+                    var Mb;
+                    Lb || (Lb = {
+                      node: bb.target,
                       attributes: {},
                       styleDiff: {},
                       _unchangedStyles: {}
-                    }, this.attributes.push(vd), this.attributeMap.set(dd.target, vd));
-                    const Od = IO(this.doc, Fd, wO(Kd), hd, Wd, this.dataURLOptions);
-                    if (Qd && !this.keepIframeSrcFn(hd) && (Kd = "rr_src"), vd.attributes[Kd] = Od, null === (md = this.generatedAttributes.get(dd.target)) || void 0 === md || md.delete(Kd), "style" === Kd) {
+                    }, this.attributes.push(Lb), this.attributeMap.set(bb.target, Lb));
+                    const wb = uw(this.doc, Hb, hw(gb), lb, eb, this.dataURLOptions);
+                    if (Ib && !this.keepIframeSrcFn(lb) && (gb = "rr_src"), Lb.attributes[gb] = wb, null === (Mb = this.generatedAttributes.get(bb.target)) || void 0 === Mb || Mb.delete(gb), "style" === gb) {
                       if (!this.unattachedDoc) try {
                         this.unattachedDoc = document.implementation.createHTMLDocument()
-                      } catch (dd) {
+                      } catch (bb) {
                         this.unattachedDoc = this.doc
                       }
-                      const Od = this.unattachedDoc.createElement("span"),
-                        md = Wd.style;
-                      dd.oldValue && (Od.style.cssText = dd.oldValue);
-                      for (const dd of Array.from(md)) {
-                        const Wd = md.getPropertyValue(dd),
-                          Fd = md.getPropertyPriority(dd);
-                        Wd !== Od.style.getPropertyValue(dd) || Fd !== Od.style.getPropertyPriority(dd) ? vd.styleDiff[dd] = "" === Fd ? Wd : [Wd, Fd] : vd._unchangedStyles[dd] = [Wd, Fd]
+                      const wb = this.unattachedDoc.createElement("span"),
+                        Mb = eb.style;
+                      bb.oldValue && (wb.style.cssText = bb.oldValue);
+                      for (const bb of Array.from(Mb)) {
+                        const eb = Mb.getPropertyValue(bb),
+                          Hb = Mb.getPropertyPriority(bb);
+                        eb !== wb.style.getPropertyValue(bb) || Hb !== wb.style.getPropertyPriority(bb) ? Lb.styleDiff[bb] = "" === Hb ? eb : [eb, Hb] : Lb._unchangedStyles[bb] = [eb, Hb]
                       }
-                      for (const dd of Array.from(Od.style)) "" === md.getPropertyValue(dd) && (vd.styleDiff[dd] = !1)
-                    } else if ("open" === Kd && "dialog" === Fd) {
-                      vd.attributes.rr_open_mode = Wd.matches("dialog:modal") ? "modal" : "non-modal";
-                      let Od = this.generatedAttributes.get(dd.target);
-                      Od || (Od = new Set, this.generatedAttributes.set(dd.target, Od)), Od.add("rr_open_mode")
+                      for (const bb of Array.from(wb.style)) "" === Mb.getPropertyValue(bb) && (Lb.styleDiff[bb] = !1)
+                    } else if ("open" === gb && "dialog" === Hb) {
+                      Lb.attributes.rr_open_mode = eb.matches("dialog:modal") ? "modal" : "non-modal";
+                      let wb = this.generatedAttributes.get(bb.target);
+                      wb || (wb = new Set, this.generatedAttributes.set(bb.target, wb)), wb.add("rr_open_mode")
                     }
                   }
                   break
                 }
                 case "childList":
-                  if (gm(dd.target, this.blockClass, this.blockSelector, !0)) return;
-                  if ("TEXTAREA" === dd.target.tagName) return void this.genTextAreaValueMutation(dd.target);
-                  dd.addedNodes.forEach((Od => this.genAdds(Od, dd.target))), dd.removedNodes.forEach((Od => {
-                    const md = this.mirror.getId(Od),
-                      Wd = hO(dd.target) ? this.mirror.getId(Bd.host(dd.target)) : this.mirror.getId(dd.target);
-                    gm(dd.target, this.blockClass, this.blockSelector, !1) || wm(Od, this.mirror, this.slimDOMOptions) || ! function(dd, Od) {
-                      return -1 !== Od.getId(dd)
-                    }(Od, this.mirror) || (this.addedSet.has(Od) ? (Gm(this.addedSet, Od), this.droppedSet.add(Od)) : this.addedSet.has(dd.target) && -1 === md || am(dd.target, this.mirror) || (this.movedSet.has(Od) && this.movedMap[Am(md, Wd)] ? Gm(this.movedSet, Od) : (this.removes.push({
-                      parentId: Wd,
-                      id: md,
-                      isShadow: !(!hO(dd.target) || !vO(dd.target)) || void 0
-                    }), function(dd, Od) {
-                      const md = [dd];
-                      for (; md.length;) {
-                        const dd = md.pop();
-                        Od.has(dd) || (Od.add(dd), Bd.childNodes(dd).forEach((dd => md.push(dd))))
+                  if (mM(bb.target, this.blockClass, this.blockSelector, !0)) return;
+                  if ("TEXTAREA" === bb.target.tagName) return void this.genTextAreaValueMutation(bb.target);
+                  bb.addedNodes.forEach((wb => this.genAdds(wb, bb.target))), bb.removedNodes.forEach((wb => {
+                    const Mb = this.mirror.getId(wb),
+                      eb = Vw(bb.target) ? this.mirror.getId(Rb.host(bb.target)) : this.mirror.getId(bb.target);
+                    mM(bb.target, this.blockClass, this.blockSelector, !1) || hM(wb, this.mirror, this.slimDOMOptions) || ! function(bb, wb) {
+                      return -1 !== wb.getId(bb)
+                    }(wb, this.mirror) || (this.addedSet.has(wb) ? (WM(this.addedSet, wb), this.droppedSet.add(wb)) : this.addedSet.has(bb.target) && -1 === Mb || zM(bb.target, this.mirror) || (this.movedSet.has(wb) && this.movedMap[fM(Mb, eb)] ? WM(this.movedSet, wb) : (this.removes.push({
+                      parentId: eb,
+                      id: Mb,
+                      isShadow: !(!Vw(bb.target) || !gw(bb.target)) || void 0
+                    }), function(bb, wb) {
+                      const Mb = [bb];
+                      for (; Mb.length;) {
+                        const bb = Mb.pop();
+                        wb.has(bb) || (wb.add(bb), Rb.childNodes(bb).forEach((bb => Mb.push(bb))))
                       }
-                    }(Od, this.removesSubTreeCache))), this.mapRemoves.add(Od))
+                    }(wb, this.removesSubTreeCache))), this.mapRemoves.add(wb))
                   }))
               }
-            })), XO(this, "genAdds", ((dd, Od) => {
-              if (!this.processedNodeManager.inOtherBuffer(dd, this)) {
-                if (this.addedSet.has(dd)) return this.addedSet.delete(dd), void this.addedSet.add(dd);
-                if (!this.movedSet.has(dd)) {
-                  if (this.mirror.hasNode(dd)) {
-                    if (wm(dd, this.mirror, this.slimDOMOptions)) return;
-                    this.movedSet.add(dd);
-                    let md = null;
-                    Od && this.mirror.hasNode(Od) && (md = this.mirror.getId(Od)), md && -1 !== md && (this.movedMap[Am(this.mirror.getId(dd), md)] = !0)
-                  } else this.addedSet.add(dd), this.droppedSet.delete(dd);
-                  if (!gm(dd, this.blockClass, this.blockSelector, !1)) {
-                    if (dd.nodeType === dd.TEXT_NODE) return;
-                    const Od = Bd.childNodes(dd);
-                    for (let dd = 0, md = Od.length; md > dd; dd++) {
-                      const md = Od[dd];
-                      md && this.genAdds(md)
+            })), Hw(this, "genAdds", ((bb, wb) => {
+              if (!this.processedNodeManager.inOtherBuffer(bb, this)) {
+                if (this.addedSet.has(bb)) return this.addedSet.delete(bb), void this.addedSet.add(bb);
+                if (!this.movedSet.has(bb)) {
+                  if (this.mirror.hasNode(bb)) {
+                    if (hM(bb, this.mirror, this.slimDOMOptions)) return;
+                    this.movedSet.add(bb);
+                    let Mb = null;
+                    wb && this.mirror.hasNode(wb) && (Mb = this.mirror.getId(wb)), Mb && -1 !== Mb && (this.movedMap[fM(this.mirror.getId(bb), Mb)] = !0)
+                  } else this.addedSet.add(bb), this.droppedSet.delete(bb);
+                  if (!mM(bb, this.blockClass, this.blockSelector, !1)) {
+                    if (bb.nodeType === bb.TEXT_NODE) return;
+                    const wb = Rb.childNodes(bb);
+                    for (let bb = 0, Mb = wb.length; Mb > bb; bb++) {
+                      const Mb = wb[bb];
+                      Mb && this.genAdds(Mb)
                     }
-                    if (xm(dd)) {
-                      const Od = Bd.childNodes(Bd.shadowRoot(dd));
-                      for (let md = 0, Wd = Od.length; Wd > md; md++) {
-                        const Wd = Od[md];
-                        Wd && (this.processedNodeManager.add(Wd, this), this.genAdds(Wd, dd))
+                    if (KM(bb)) {
+                      const wb = Rb.childNodes(Rb.shadowRoot(bb));
+                      for (let Mb = 0, eb = wb.length; eb > Mb; Mb++) {
+                        const eb = wb[Mb];
+                        eb && (this.processedNodeManager.add(eb, this), this.genAdds(eb, bb))
                       }
                     }
                   }
@@ -1922,9 +1922,9 @@ export const modules = {
               }
             }))
           }
-          init(dd) {
-            ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "maskAllElementAttributes", "maskAttributeFn", "keepIframeSrcFn", "recordCanvas", "canvasMaskingConfigured", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((Od => {
-              this[Od] = dd[Od]
+          init(bb) {
+            ["mutationCb", "blockClass", "blockSelector", "maskTextClass", "maskTextSelector", "inlineStylesheet", "maskInputOptions", "maskTextFn", "maskInputFn", "maskAllElementAttributes", "maskAttributeFn", "keepIframeSrcFn", "recordCanvas", "canvasMaskingConfigured", "inlineImages", "slimDOMOptions", "dataURLOptions", "doc", "mirror", "iframeManager", "stylesheetManager", "shadowDomManager", "canvasManager", "processedNodeManager"].forEach((wb => {
+              this[wb] = bb[wb]
             })), this.canvasManager.acquire()
           }
           freeze() {
@@ -1952,79 +1952,79 @@ export const modules = {
             return this.doc
           }
           destroy() {
-            for (const dd of this.mapRemoves) this.mapRemoves.delete(dd), this.mirror.removeNodeFromMap(dd)
+            for (const bb of this.mapRemoves) this.mapRemoves.delete(bb), this.mirror.removeNodeFromMap(bb)
           }
-          isBlockedAtEmission(dd) {
-            const Od = this.blockClass,
-              md = Od && "string" != typeof Od && (Od.global || Od.sticky) ? new RegExp(Od) : null;
-            for (; dd;) {
-              if (md && (md.lastIndex = 0), gm(dd, md || Od, this.blockSelector, !0)) return !0;
-              const Wd = "getRootNode" in dd ? Bd.getRootNode(dd) : null;
-              dd = (null == Wd ? void 0 : Wd.nodeType) === Node.DOCUMENT_FRAGMENT_NODE ? Bd.host(Wd) : null
+          isBlockedAtEmission(bb) {
+            const wb = this.blockClass,
+              Mb = wb && "string" != typeof wb && (wb.global || wb.sticky) ? new RegExp(wb) : null;
+            for (; bb;) {
+              if (Mb && (Mb.lastIndex = 0), mM(bb, Mb || wb, this.blockSelector, !0)) return !0;
+              const eb = "getRootNode" in bb ? Rb.getRootNode(bb) : null;
+              bb = (null == eb ? void 0 : eb.nodeType) === Node.DOCUMENT_FRAGMENT_NODE ? Rb.host(eb) : null
             }
             return !1
           }
         };
 
-      function Gm(dd, Od) {
-        const md = [Od];
-        for (; md.length;) {
-          const Od = md.pop();
-          if (dd.delete(Od), Od.nodeType === Od.TEXT_NODE) continue;
-          const Wd = Bd.childNodes(Od);
-          for (let dd = 0, Fd = Wd.length; Fd > dd; dd++) {
-            const Od = Wd[dd];
-            Od && md.push(Od)
+      function WM(bb, wb) {
+        const Mb = [wb];
+        for (; Mb.length;) {
+          const wb = Mb.pop();
+          if (bb.delete(wb), wb.nodeType === wb.TEXT_NODE) continue;
+          const eb = Rb.childNodes(wb);
+          for (let bb = 0, Hb = eb.length; Hb > bb; bb++) {
+            const wb = eb[bb];
+            wb && Mb.push(wb)
           }
         }
       }
 
-      function nm(dd, Od, md) {
-        return 0 !== dd.size && function(dd, Od) {
-          const md = Bd.parentNode(Od);
-          return !!md && dd.has(md)
-        }(dd, Od)
+      function JM(bb, wb, Mb) {
+        return 0 !== bb.size && function(bb, wb) {
+          const Mb = Rb.parentNode(wb);
+          return !!Mb && bb.has(Mb)
+        }(bb, wb)
       }
 
-      function Lm(dd, Od) {
-        if (0 === dd.size) return !1;
-        let md = Bd.parentNode(Od);
-        for (; md;) {
-          if (dd.has(md)) return !0;
-          md = Bd.parentNode(md)
+      function SM(bb, wb) {
+        if (0 === bb.size) return !1;
+        let Mb = Rb.parentNode(wb);
+        for (; Mb;) {
+          if (bb.has(Mb)) return !0;
+          Mb = Rb.parentNode(Mb)
         }
         return !1
       }
-      var Pm = function(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "rrweb";
-          return Vm ? function() {
+      var NM = function(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "rrweb";
+          return YM ? function() {
             try {
-              return dd(...arguments)
-            } catch (dd) {
-              if (Vm && !0 === Vm(dd, Od)) return;
-              throw dd
+              return bb(...arguments)
+            } catch (bb) {
+              if (YM && !0 === YM(bb, wb)) return;
+              throw bb
             }
-          } : dd
+          } : bb
         },
-        zm = [];
+        vM = [];
 
-      function cm(dd) {
+      function QM(bb) {
         try {
-          if ("composedPath" in dd) {
-            const Od = dd.composedPath();
-            if (Od.length) return Od[0]
-          } else if ("path" in dd && dd.path.length) return dd.path[0]
-        } catch (dd) {}
-        return dd && dd.target
+          if ("composedPath" in bb) {
+            const wb = bb.composedPath();
+            if (wb.length) return wb[0]
+          } else if ("path" in bb && bb.path.length) return bb.path[0]
+        } catch (bb) {}
+        return bb && bb.target
       }
 
-      function jm(dd, Od) {
-        const md = new rm;
-        let Wd;
-        md.init(dd);
+      function GM(bb, wb) {
+        const Mb = new AM;
+        let eb;
+        Mb.init(bb);
         try {
-          Wd = new(Ud())(Pm(md.processMutations.bind(md)));
-          const Fd = {
+          eb = new(Kb())(NM(Mb.processMutations.bind(Mb)));
+          const Hb = {
             attributes: !0,
             attributeOldValue: !0,
             characterData: !0,
@@ -2032,979 +2032,979 @@ export const modules = {
             childList: !0,
             subtree: !0
           };
-          return dd.attributeFilter && dd.attributeFilter.length > 0 && (Fd.attributeFilter = dd.attributeFilter), Wd.observe(Od, Fd), zm.push(md), {
-            observer: Wd,
-            buffer: md
+          return bb.attributeFilter && bb.attributeFilter.length > 0 && (Hb.attributeFilter = bb.attributeFilter), eb.observe(wb, Hb), vM.push(Mb), {
+            observer: eb,
+            buffer: Mb
           }
-        } catch (dd) {
+        } catch (bb) {
           try {
-            null == Wd || Wd.disconnect(), md.destroy(), md.reset()
-          } catch (dd) {}
-          throw dd
+            null == eb || eb.disconnect(), Mb.destroy(), Mb.reset()
+          } catch (bb) {}
+          throw bb
         }
       }
 
-      function Dm(dd) {
+      function qM(bb) {
         let {
-          scrollCb: Od,
-          doc: md,
-          mirror: Wd,
-          blockClass: Fd,
-          blockSelector: Rd,
-          sampling: Xd
-        } = dd;
-        const Kd = new Map,
-          hd = dd => {
-            const Xd = cm(dd);
-            if (!Xd || gm(Xd, Fd, Rd, !0)) return;
-            const hd = Wd.getId(Xd);
-            let vd, Qd;
-            if (Xd === md && md.defaultView) {
-              const dd = bm(md.defaultView);
-              vd = dd.left, Qd = dd.top
-            } else vd = Xd.scrollLeft, Qd = Xd.scrollTop;
-            const td = `${vd},${Qd}`;
-            Kd.get(hd) !== td && (Kd.set(hd, td), Od({
-              id: hd,
-              x: vd,
-              y: Qd
+          scrollCb: wb,
+          doc: Mb,
+          mirror: eb,
+          blockClass: Hb,
+          blockSelector: pb,
+          sampling: Vb
+        } = bb;
+        const gb = new Map,
+          lb = bb => {
+            const Vb = QM(bb);
+            if (!Vb || mM(Vb, Hb, pb, !0)) return;
+            const lb = eb.getId(Vb);
+            let Lb, Ib;
+            if (Vb === Mb && Mb.defaultView) {
+              const bb = EM(Mb.defaultView);
+              Lb = bb.left, Ib = bb.top
+            } else Lb = Vb.scrollLeft, Ib = Vb.scrollTop;
+            const Ob = `${Lb},${Ib}`;
+            gb.get(lb) !== Ob && (gb.set(lb, Ob), wb({
+              id: lb,
+              x: Lb,
+              y: Ib
             }))
           },
-          vd = [Km("scroll", Pm(qm(Pm((dd => hd(dd))), Xd.scroll || 100)), md)];
-        return "onscrollend" in md && vd.push(Km("scrollend", Pm(hd), md)), () => vd.forEach((dd => dd()))
+          Lb = [VM("scroll", NM(UM(NM((bb => lb(bb))), Vb.scroll || 100)), Mb)];
+        return "onscrollend" in Mb && Lb.push(VM("scrollend", NM(lb), Mb)), () => Lb.forEach((bb => bb()))
       }
 
-      function em(dd, Od) {
-        for (let md = zm.length - 1; md >= 0; md--) {
-          const Wd = zm[md];
-          if (!Wd) continue;
-          let Fd = Wd.bufferBelongsToIframe(dd);
-          !Fd && Od && Od.has(Wd.bufferDoc()) && (Fd = !0), Fd && (Wd.reset(), zm.splice(md, 1))
+      function aM(bb, wb) {
+        for (let Mb = vM.length - 1; Mb >= 0; Mb--) {
+          const eb = vM[Mb];
+          if (!eb) continue;
+          let Hb = eb.bufferBelongsToIframe(bb);
+          !Hb && wb && wb.has(eb.bufferDoc()) && (Hb = !0), Hb && (eb.reset(), vM.splice(Mb, 1))
         }
       }
-      var Im = ["INPUT", "TEXTAREA", "SELECT"],
-        lm = new WeakMap;
+      var iM = ["INPUT", "TEXTAREA", "SELECT"],
+        uM = new WeakMap;
 
-      function Cm(dd) {
-        return function dd(Od, md) {
-          if (dW("CSSGroupingRule") && Od.parentRule instanceof CSSGroupingRule || dW("CSSMediaRule") && Od.parentRule instanceof CSSMediaRule || dW("CSSSupportsRule") && Od.parentRule instanceof CSSSupportsRule || dW("CSSConditionRule") && Od.parentRule instanceof CSSConditionRule) {
-            const Wd = Array.from(Od.parentRule.cssRules).indexOf(Od);
-            return md.unshift(Wd), dd(Od.parentRule, md)
+      function dM(bb) {
+        return function bb(wb, Mb) {
+          if (TM("CSSGroupingRule") && wb.parentRule instanceof CSSGroupingRule || TM("CSSMediaRule") && wb.parentRule instanceof CSSMediaRule || TM("CSSSupportsRule") && wb.parentRule instanceof CSSSupportsRule || TM("CSSConditionRule") && wb.parentRule instanceof CSSConditionRule) {
+            const eb = Array.from(wb.parentRule.cssRules).indexOf(wb);
+            return Mb.unshift(eb), bb(wb.parentRule, Mb)
           }
-          if (Od.parentStyleSheet) {
-            const dd = Array.from(Od.parentStyleSheet.cssRules).indexOf(Od);
-            md.unshift(dd)
+          if (wb.parentStyleSheet) {
+            const bb = Array.from(wb.parentStyleSheet.cssRules).indexOf(wb);
+            Mb.unshift(bb)
           }
-          return md
-        }(dd, [])
+          return Mb
+        }(bb, [])
       }
 
-      function Zm(dd, Od, md) {
-        let Wd, Fd;
-        return dd ? (dd.ownerNode ? Wd = Od.getId(dd.ownerNode) : Fd = md.getId(dd), {
-          styleId: Fd,
-          id: Wd
+      function PM(bb, wb, Mb) {
+        let eb, Hb;
+        return bb ? (bb.ownerNode ? eb = wb.getId(bb.ownerNode) : Hb = Mb.getId(bb), {
+          styleId: Hb,
+          id: eb
         }) : {}
       }
 
-      function km(dd, Od) {
+      function nM(bb, wb) {
         let {
-          mirror: md,
-          stylesheetManager: Wd
-        } = dd;
-        var Fd, Rd;
-        let Xd = null;
-        Xd = md.getId("#document" === Od.nodeName ? Od : Bd.host(Od));
-        const Kd = "#document" === Od.nodeName ? null === (Fd = Od.defaultView) || void 0 === Fd ? void 0 : Fd.Document : null === (Rd = Od.ownerDocument) || void 0 === Rd || null === (Rd = Rd.defaultView) || void 0 === Rd ? void 0 : Rd.ShadowRoot,
-          hd = (null == Kd ? void 0 : Kd.prototype) ? Object.getOwnPropertyDescriptor(null == Kd ? void 0 : Kd.prototype, "adoptedStyleSheets") : void 0;
-        return null !== Xd && -1 !== Xd && Kd && hd ? (Object.defineProperty(Od, "adoptedStyleSheets", {
-          configurable: hd.configurable,
-          enumerable: hd.enumerable,
+          mirror: Mb,
+          stylesheetManager: eb
+        } = bb;
+        var Hb, pb;
+        let Vb = null;
+        Vb = Mb.getId("#document" === wb.nodeName ? wb : Rb.host(wb));
+        const gb = "#document" === wb.nodeName ? null === (Hb = wb.defaultView) || void 0 === Hb ? void 0 : Hb.Document : null === (pb = wb.ownerDocument) || void 0 === pb || null === (pb = pb.defaultView) || void 0 === pb ? void 0 : pb.ShadowRoot,
+          lb = (null == gb ? void 0 : gb.prototype) ? Object.getOwnPropertyDescriptor(null == gb ? void 0 : gb.prototype, "adoptedStyleSheets") : void 0;
+        return null !== Vb && -1 !== Vb && gb && lb ? (Object.defineProperty(wb, "adoptedStyleSheets", {
+          configurable: lb.configurable,
+          enumerable: lb.enumerable,
           get() {
-            var dd;
-            return null === (dd = hd.get) || void 0 === dd ? void 0 : dd.call(this)
+            var bb;
+            return null === (bb = lb.get) || void 0 === bb ? void 0 : bb.call(this)
           },
-          set(dd) {
-            let Od;
+          set(bb) {
+            let wb;
             try {
-              var md;
-              Od = null === (md = hd.set) || void 0 === md ? void 0 : md.call(this, dd)
-            } catch (dd) {
-              if (dd && "object" == typeof dd && "NotAllowedError" === dd.name) return;
-              throw dd
+              var Mb;
+              wb = null === (Mb = lb.set) || void 0 === Mb ? void 0 : Mb.call(this, bb)
+            } catch (bb) {
+              if (bb && "object" == typeof bb && "NotAllowedError" === bb.name) return;
+              throw bb
             }
-            if (null !== Xd && -1 !== Xd) try {
-              Wd.adoptStyleSheets(dd, Xd)
-            } catch (dd) {}
-            return Od
+            if (null !== Vb && -1 !== Vb) try {
+              eb.adoptStyleSheets(bb, Vb)
+            } catch (bb) {}
+            return wb
           }
-        }), Pm((() => {
-          Object.defineProperty(Od, "adoptedStyleSheets", {
-            configurable: hd.configurable,
-            enumerable: hd.enumerable,
-            get: hd.get,
-            set: hd.set
+        }), NM((() => {
+          Object.defineProperty(wb, "adoptedStyleSheets", {
+            configurable: lb.configurable,
+            enumerable: lb.enumerable,
+            get: lb.get,
+            set: lb.set
           })
         }))) : () => {}
       }
-      var fm = new Set;
+      var yM = new Set;
 
-      function Mm(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const md = dd.doc.defaultView;
-        if (!md) return () => {};
-        let Fd, Rd;
-        ! function(dd, Od) {
+      function oM(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Mb = bb.doc.defaultView;
+        if (!Mb) return () => {};
+        let Hb, pb;
+        ! function(bb, wb) {
           const {
-            mutationCb: md,
-            mousemoveCb: Wd,
-            mouseInteractionCb: Fd,
-            scrollCb: Rd,
-            viewportResizeCb: Xd,
-            inputCb: Kd,
-            mediaInteractionCb: hd,
-            styleSheetRuleCb: vd,
-            styleDeclarationCb: Qd,
-            canvasMutationCb: td,
-            fontCb: od,
-            selectionCb: Nd,
-            customElementCb: qd
-          } = dd;
-          dd.mutationCb = function() {
-            Od.mutation && Od.mutation(...arguments), md(...arguments)
-          }, dd.mousemoveCb = function() {
-            Od.mousemove && Od.mousemove(...arguments), Wd(...arguments)
-          }, dd.mouseInteractionCb = function() {
-            Od.mouseInteraction && Od.mouseInteraction(...arguments), Fd(...arguments)
-          }, dd.scrollCb = function() {
-            Od.scroll && Od.scroll(...arguments), Rd(...arguments)
-          }, dd.viewportResizeCb = function() {
-            Od.viewportResize && Od.viewportResize(...arguments), Xd(...arguments)
-          }, dd.inputCb = function() {
-            Od.input && Od.input(...arguments), Kd(...arguments)
-          }, dd.mediaInteractionCb = function() {
-            Od.mediaInteaction && Od.mediaInteaction(...arguments), hd(...arguments)
-          }, dd.styleSheetRuleCb = function() {
-            Od.styleSheetRule && Od.styleSheetRule(...arguments), vd(...arguments)
-          }, dd.styleDeclarationCb = function() {
-            Od.styleDeclaration && Od.styleDeclaration(...arguments), Qd(...arguments)
-          }, dd.canvasMutationCb = function() {
-            Od.canvasMutation && Od.canvasMutation(...arguments), td(...arguments)
-          }, dd.fontCb = function() {
-            Od.font && Od.font(...arguments), od(...arguments)
-          }, dd.selectionCb = function() {
-            Od.selection && Od.selection(...arguments), Nd(...arguments)
-          }, dd.customElementCb = function() {
-            Od.customElement && Od.customElement(...arguments), qd(...arguments)
+            mutationCb: Mb,
+            mousemoveCb: eb,
+            mouseInteractionCb: Hb,
+            scrollCb: pb,
+            viewportResizeCb: Vb,
+            inputCb: gb,
+            mediaInteractionCb: lb,
+            styleSheetRuleCb: Lb,
+            styleDeclarationCb: Ib,
+            canvasMutationCb: Ob,
+            fontCb: Ub,
+            selectionCb: tb,
+            customElementCb: Cb
+          } = bb;
+          bb.mutationCb = function() {
+            wb.mutation && wb.mutation(...arguments), Mb(...arguments)
+          }, bb.mousemoveCb = function() {
+            wb.mousemove && wb.mousemove(...arguments), eb(...arguments)
+          }, bb.mouseInteractionCb = function() {
+            wb.mouseInteraction && wb.mouseInteraction(...arguments), Hb(...arguments)
+          }, bb.scrollCb = function() {
+            wb.scroll && wb.scroll(...arguments), pb(...arguments)
+          }, bb.viewportResizeCb = function() {
+            wb.viewportResize && wb.viewportResize(...arguments), Vb(...arguments)
+          }, bb.inputCb = function() {
+            wb.input && wb.input(...arguments), gb(...arguments)
+          }, bb.mediaInteractionCb = function() {
+            wb.mediaInteaction && wb.mediaInteaction(...arguments), lb(...arguments)
+          }, bb.styleSheetRuleCb = function() {
+            wb.styleSheetRule && wb.styleSheetRule(...arguments), Lb(...arguments)
+          }, bb.styleDeclarationCb = function() {
+            wb.styleDeclaration && wb.styleDeclaration(...arguments), Ib(...arguments)
+          }, bb.canvasMutationCb = function() {
+            wb.canvasMutation && wb.canvasMutation(...arguments), Ob(...arguments)
+          }, bb.fontCb = function() {
+            wb.font && wb.font(...arguments), Ub(...arguments)
+          }, bb.selectionCb = function() {
+            wb.selection && wb.selection(...arguments), tb(...arguments)
+          }, bb.customElementCb = function() {
+            wb.customElement && wb.customElement(...arguments), Cb(...arguments)
           }
-        }(dd, Od);
-        const Xd = [],
-          Kd = Pm((() => {
+        }(bb, wb);
+        const Vb = [],
+          gb = NM((() => {
             try {
-              if (Rd) try {
-                Rd.destroy(), Rd.reset()
+              if (pb) try {
+                pb.destroy(), pb.reset()
               } finally {
-                const dd = zm.indexOf(Rd); - 1 !== dd && zm.splice(dd, 1)
+                const bb = vM.indexOf(pb); - 1 !== bb && vM.splice(bb, 1)
               }
-              dd.shadowDomManager.resetForDoc(dd.doc), null == Fd || Fd.disconnect()
+              bb.shadowDomManager.resetForDoc(bb.doc), null == Hb || Hb.disconnect()
             } finally {
-              tm(Xd)
+              LM(Vb)
             }
           })),
-          td = (dd, Od) => {
-            const md = Pm((() => {
+          Ob = (bb, wb) => {
+            const Mb = NM((() => {
               try {
-                return Od()
-              } catch (Od) {
-                throw fm.add(dd), Od
+                return wb()
+              } catch (wb) {
+                throw yM.add(bb), wb
               }
             }))();
-            "function" == typeof md && Xd.push(md)
+            "function" == typeof Mb && Vb.push(Mb)
           };
         try {
-          if (dd.recordDOM && td("mutation", (() => {
-              const Od = jm(dd, dd.doc);
-              Fd = Od.observer, Rd = Od.buffer
-            })), td("move", (() => function(dd) {
+          if (bb.recordDOM && Ob("mutation", (() => {
+              const wb = GM(bb, bb.doc);
+              Hb = wb.observer, pb = wb.buffer
+            })), Ob("move", (() => function(bb) {
               let {
-                mousemoveCb: Od,
-                sampling: md,
-                doc: Wd,
-                mirror: Fd
-              } = dd;
-              if (!1 === md.mousemove) return () => {};
-              const Rd = "number" == typeof md.mousemove ? md.mousemove : 50,
-                Xd = "number" == typeof md.mousemoveCallback ? md.mousemoveCallback : 500;
-              let Kd, vd = [];
-              const Qd = qm(Pm((dd => {
-                  const md = Date.now() - Kd;
-                  Od(vd.map((dd => (dd.timeOffset -= md, dd))), dd), vd = [], Kd = null
-                })), Xd),
-                td = Pm(qm(Pm((dd => {
-                  const Od = cm(dd),
+                mousemoveCb: wb,
+                sampling: Mb,
+                doc: eb,
+                mirror: Hb
+              } = bb;
+              if (!1 === Mb.mousemove) return () => {};
+              const pb = "number" == typeof Mb.mousemove ? Mb.mousemove : 50,
+                Vb = "number" == typeof Mb.mousemoveCallback ? Mb.mousemoveCallback : 500;
+              let gb, Lb = [];
+              const Ib = UM(NM((bb => {
+                  const Mb = Date.now() - gb;
+                  wb(Lb.map((bb => (bb.timeOffset -= Mb, bb))), bb), Lb = [], gb = null
+                })), Vb),
+                Ob = NM(UM(NM((bb => {
+                  const wb = QM(bb),
                     {
-                      clientX: md,
-                      clientY: Wd
-                    } = Em(dd) ? dd.changedTouches[0] : dd;
-                  Kd || (Kd = ym()), vd.push({
-                    x: md,
-                    y: Wd,
-                    id: Fd.getId(Od),
-                    timeOffset: ym() - Kd
-                  }), Qd("undefined" != typeof DragEvent && dd instanceof DragEvent ? hd.Drag : dd instanceof MouseEvent ? hd.MouseMove : hd.TouchMove)
-                })), Rd, {
+                      clientX: Mb,
+                      clientY: eb
+                    } = XM(bb) ? bb.changedTouches[0] : bb;
+                  gb || (gb = CM()), Lb.push({
+                    x: Mb,
+                    y: eb,
+                    id: Hb.getId(wb),
+                    timeOffset: CM() - gb
+                  }), Ib("undefined" != typeof DragEvent && bb instanceof DragEvent ? lb.Drag : bb instanceof MouseEvent ? lb.MouseMove : lb.TouchMove)
+                })), pb, {
                   trailing: !1
                 })),
-                od = [Km("mousemove", td, Wd), Km("touchmove", td, Wd), Km("drag", td, Wd)];
-              return Pm((() => {
-                od.forEach((dd => dd()))
+                Ub = [VM("mousemove", Ob, eb), VM("touchmove", Ob, eb), VM("drag", Ob, eb)];
+              return NM((() => {
+                Ub.forEach((bb => bb()))
               }))
-            }(dd))), td("mouseInteraction", (() => function(dd) {
+            }(bb))), Ob("mouseInteraction", (() => function(bb) {
               let {
-                mouseInteractionCb: Od,
-                doc: md,
-                mirror: Fd,
-                blockClass: Rd,
-                blockSelector: Xd,
-                sampling: Kd
-              } = dd;
-              if (!1 === Kd.mouseInteraction) return () => {};
-              const hd = !0 === Kd.mouseInteraction || void 0 === Kd.mouseInteraction ? {} : Kd.mouseInteraction,
-                td = [];
-              let od = null;
-              return Object.keys(vd).filter((dd => Number.isNaN(Number(dd)) && !dd.endsWith("_Departed") && !1 !== hd[dd])).forEach((dd => {
-                let Kd = wO(dd);
-                const hd = (dd => md => {
-                  const Kd = cm(md);
-                  if (gm(Kd, Rd, Xd, !0)) return;
-                  let hd = null,
-                    td = dd;
-                  if ("pointerType" in md) {
-                    switch (md.pointerType) {
+                mouseInteractionCb: wb,
+                doc: Mb,
+                mirror: Hb,
+                blockClass: pb,
+                blockSelector: Vb,
+                sampling: gb
+              } = bb;
+              if (!1 === gb.mouseInteraction) return () => {};
+              const lb = !0 === gb.mouseInteraction || void 0 === gb.mouseInteraction ? {} : gb.mouseInteraction,
+                Ob = [];
+              let Ub = null;
+              return Object.keys(Lb).filter((bb => Number.isNaN(Number(bb)) && !bb.endsWith("_Departed") && !1 !== lb[bb])).forEach((bb => {
+                let gb = hw(bb);
+                const lb = (bb => Mb => {
+                  const gb = QM(Mb);
+                  if (mM(gb, pb, Vb, !0)) return;
+                  let lb = null,
+                    Ob = bb;
+                  if ("pointerType" in Mb) {
+                    switch (Mb.pointerType) {
                       case "mouse":
-                        hd = Qd.Mouse;
+                        lb = Ib.Mouse;
                         break;
                       case "touch":
-                        hd = Qd.Touch;
+                        lb = Ib.Touch;
                         break;
                       case "pen":
-                        hd = Qd.Pen
+                        lb = Ib.Pen
                     }
-                    hd === Qd.Touch && (vd[dd] === vd.MouseDown ? td = "TouchStart" : vd[dd] === vd.MouseUp && (td = "TouchEnd"))
-                  } else Em(md) && (hd = Qd.Touch);
-                  null !== hd ? (od = hd, (td.startsWith("Touch") && hd === Qd.Touch || td.startsWith("Mouse") && hd === Qd.Mouse) && (hd = null)) : vd[dd] === vd.Click && (hd = od, od = null);
-                  const Nd = Em(md) ? md.changedTouches[0] : md;
-                  if (!Nd) return;
-                  const qd = Fd.getId(Kd),
+                    lb === Ib.Touch && (Lb[bb] === Lb.MouseDown ? Ob = "TouchStart" : Lb[bb] === Lb.MouseUp && (Ob = "TouchEnd"))
+                  } else XM(Mb) && (lb = Ib.Touch);
+                  null !== lb ? (Ub = lb, (Ob.startsWith("Touch") && lb === Ib.Touch || Ob.startsWith("Mouse") && lb === Ib.Mouse) && (lb = null)) : Lb[bb] === Lb.Click && (lb = Ub, Ub = null);
+                  const tb = XM(Mb) ? Mb.changedTouches[0] : Mb;
+                  if (!tb) return;
+                  const Cb = Hb.getId(gb),
                     {
-                      clientX: Hd,
-                      clientY: yd
-                    } = Nd;
-                  Pm(Od)(Wd({
-                    type: vd[td],
-                    id: qd,
-                    x: Hd,
-                    y: yd
-                  }, null !== hd && {
-                    pointerType: hd
+                      clientX: Eb,
+                      clientY: Fb
+                    } = tb;
+                  NM(wb)(eb({
+                    type: Lb[Ob],
+                    id: Cb,
+                    x: Eb,
+                    y: Fb
+                  }, null !== lb && {
+                    pointerType: lb
                   }))
-                })(dd);
-                if (window.PointerEvent) switch (vd[dd]) {
-                  case vd.MouseDown:
-                  case vd.MouseUp:
-                    Kd = Kd.replace("mouse", "pointer");
+                })(bb);
+                if (window.PointerEvent) switch (Lb[bb]) {
+                  case Lb.MouseDown:
+                  case Lb.MouseUp:
+                    gb = gb.replace("mouse", "pointer");
                     break;
-                  case vd.TouchStart:
-                  case vd.TouchEnd:
+                  case Lb.TouchStart:
+                  case Lb.TouchEnd:
                     return
                 }
-                td.push(Km(Kd, hd, md))
-              })), Pm((() => {
-                td.forEach((dd => dd()))
+                Ob.push(VM(gb, lb, Mb))
+              })), NM((() => {
+                Ob.forEach((bb => bb()))
               }))
-            }(dd))), td("scroll", (() => Dm(dd))), td("viewportResize", (() => function(dd, Od) {
+            }(bb))), Ob("scroll", (() => qM(bb))), Ob("viewportResize", (() => function(bb, wb) {
               let {
-                viewportResizeCb: md
-              } = dd, {
-                win: Wd
-              } = Od, Fd = -1, Rd = -1;
-              return Km("resize", Pm(qm(Pm((() => {
-                const dd = Tm(),
-                  Od = pm();
-                Fd === dd && Rd === Od || (md({
-                  width: Number(Od),
-                  height: Number(dd)
-                }), Fd = dd, Rd = Od)
-              })), 200)), Wd)
-            }(dd, {
-              win: md
-            }))), td("input", (() => function(dd) {
+                viewportResizeCb: Mb
+              } = bb, {
+                win: eb
+              } = wb, Hb = -1, pb = -1;
+              return VM("resize", NM(UM(NM((() => {
+                const bb = FM(),
+                  wb = BM();
+                Hb === bb && pb === wb || (Mb({
+                  width: Number(wb),
+                  height: Number(bb)
+                }), Hb = bb, pb = wb)
+              })), 200)), eb)
+            }(bb, {
+              win: Mb
+            }))), Ob("input", (() => function(bb) {
               let {
-                inputCb: Od,
-                doc: md,
-                mirror: Fd,
-                blockClass: Rd,
-                blockSelector: Xd,
-                ignoreClass: Kd,
-                ignoreSelector: hd,
-                maskInputOptions: vd,
-                maskInputFn: Qd,
-                sampling: td,
-                userTriggeredOnInput: od
-              } = dd;
+                inputCb: wb,
+                doc: Mb,
+                mirror: Hb,
+                blockClass: pb,
+                blockSelector: Vb,
+                ignoreClass: gb,
+                ignoreSelector: lb,
+                maskInputOptions: Lb,
+                maskInputFn: Ib,
+                sampling: Ob,
+                userTriggeredOnInput: Ub
+              } = bb;
 
-              function Nd(dd) {
-                let Od = cm(dd);
-                const Wd = dd.isTrusted,
-                  Fd = md.defaultView;
-                if (Od && Fd && !(Od instanceof Fd.HTMLElement)) return;
-                const td = Od && Od.tagName;
-                if (Od && "OPTION" === td && (Od = Bd.parentElement(Od)), !Od || !td || 0 > Im.indexOf(td) || gm(Od, Rd, Xd, !0)) return;
-                if (Od.classList.contains(Kd) || hd && Od.matches(hd)) return;
-                let Nd = Od.value,
-                  Hd = !1;
-                const yd = UO(Od) || "";
-                "radio" === yd || "checkbox" === yd ? Hd = Od.checked : (vd[td.toLowerCase()] || vd[yd]) && (Nd = gO({
-                  element: Od,
-                  maskInputOptions: vd,
-                  tagName: td,
-                  type: yd,
-                  value: Nd,
-                  maskInputFn: Qd
-                })), qd(Od, od ? {
-                  text: Nd,
-                  isChecked: Hd,
-                  userTriggered: Wd
+              function tb(bb) {
+                let wb = QM(bb);
+                const eb = bb.isTrusted,
+                  Hb = Mb.defaultView;
+                if (wb && Hb && !(wb instanceof Hb.HTMLElement)) return;
+                const Ob = wb && wb.tagName;
+                if (wb && "OPTION" === Ob && (wb = Rb.parentElement(wb)), !wb || !Ob || 0 > iM.indexOf(Ob) || mM(wb, pb, Vb, !0)) return;
+                if (wb.classList.contains(gb) || lb && wb.matches(lb)) return;
+                let tb = wb.value,
+                  Eb = !1;
+                const Fb = jw(wb) || "";
+                "radio" === Fb || "checkbox" === Fb ? Eb = wb.checked : (Lb[Ob.toLowerCase()] || Lb[Fb]) && (tb = mw({
+                  element: wb,
+                  maskInputOptions: Lb,
+                  tagName: Ob,
+                  type: Fb,
+                  value: tb,
+                  maskInputFn: Ib
+                })), Cb(wb, Ub ? {
+                  text: tb,
+                  isChecked: Eb,
+                  userTriggered: eb
                 } : {
-                  text: Nd,
-                  isChecked: Hd
+                  text: tb,
+                  isChecked: Eb
                 });
-                const bd = Od.name;
-                "radio" === yd && bd && Hd && md.querySelectorAll(`input[type="radio"][name="${bd}"]`).forEach((dd => {
-                  if (dd !== Od) {
-                    const Od = dd.value;
-                    qd(dd, od ? {
-                      text: Od,
-                      isChecked: !Hd,
+                const Bb = wb.name;
+                "radio" === Fb && Bb && Eb && Mb.querySelectorAll(`input[type="radio"][name="${Bb}"]`).forEach((bb => {
+                  if (bb !== wb) {
+                    const wb = bb.value;
+                    Cb(bb, Ub ? {
+                      text: wb,
+                      isChecked: !Eb,
                       userTriggered: !1
                     } : {
-                      text: Od,
-                      isChecked: !Hd
+                      text: wb,
+                      isChecked: !Eb
                     })
                   }
                 }))
               }
 
-              function qd(dd, md) {
-                const Rd = lm.get(dd);
-                if (!Rd || Rd.text !== md.text || Rd.isChecked !== md.isChecked) {
-                  lm.set(dd, md);
-                  const Rd = Fd.getId(dd);
-                  Pm(Od)(Wd(Wd({}, md), {}, {
-                    id: Rd
+              function Cb(bb, Mb) {
+                const pb = uM.get(bb);
+                if (!pb || pb.text !== Mb.text || pb.isChecked !== Mb.isChecked) {
+                  uM.set(bb, Mb);
+                  const pb = Hb.getId(bb);
+                  NM(wb)(eb(eb({}, Mb), {}, {
+                    id: pb
                   }))
                 }
               }
-              const Hd = ("last" === td.input ? ["change"] : ["input", "change"]).map((dd => Km(dd, Pm(Nd), md))),
-                yd = md.defaultView;
-              if (!yd) return () => {
-                Hd.forEach((dd => dd()))
+              const Eb = ("last" === Ob.input ? ["change"] : ["input", "change"]).map((bb => VM(bb, NM(tb), Mb))),
+                Fb = Mb.defaultView;
+              if (!Fb) return () => {
+                Eb.forEach((bb => bb()))
               };
-              const bd = yd.Object.getOwnPropertyDescriptor(yd.HTMLInputElement.prototype, "value");
-              return bd && bd.set && Hd.push(...[
-                [yd.HTMLInputElement.prototype, "value"],
-                [yd.HTMLInputElement.prototype, "checked"],
-                [yd.HTMLSelectElement.prototype, "value"],
-                [yd.HTMLTextAreaElement.prototype, "value"],
-                [yd.HTMLSelectElement.prototype, "selectedIndex"],
-                [yd.HTMLOptionElement.prototype, "selected"]
-              ].map((dd => Hm(dd[0], dd[1], {
+              const Bb = Fb.Object.getOwnPropertyDescriptor(Fb.HTMLInputElement.prototype, "value");
+              return Bb && Bb.set && Eb.push(...[
+                [Fb.HTMLInputElement.prototype, "value"],
+                [Fb.HTMLInputElement.prototype, "checked"],
+                [Fb.HTMLSelectElement.prototype, "value"],
+                [Fb.HTMLTextAreaElement.prototype, "value"],
+                [Fb.HTMLSelectElement.prototype, "selectedIndex"],
+                [Fb.HTMLOptionElement.prototype, "selected"]
+              ].map((bb => tM(bb[0], bb[1], {
                 set() {
-                  Pm(Nd)({
+                  NM(tb)({
                     target: this,
                     isTrusted: !1
                   })
                 }
-              }, !1, yd)))), Pm((() => {
-                tm(Hd)
+              }, !1, Fb)))), NM((() => {
+                LM(Eb)
               }))
-            }(dd))), td("mediaInteraction", (() => function(dd) {
+            }(bb))), Ob("mediaInteraction", (() => function(bb) {
               let {
-                mediaInteractionCb: Od,
-                blockClass: md,
-                blockSelector: Wd,
-                mirror: Fd,
-                sampling: Rd,
-                doc: Xd
-              } = dd;
-              const Kd = Pm((dd => qm(Pm((Rd => {
-                  const Xd = cm(Rd);
-                  if (!Xd || gm(Xd, md, Wd, !0)) return;
+                mediaInteractionCb: wb,
+                blockClass: Mb,
+                blockSelector: eb,
+                mirror: Hb,
+                sampling: pb,
+                doc: Vb
+              } = bb;
+              const gb = NM((bb => UM(NM((pb => {
+                  const Vb = QM(pb);
+                  if (!Vb || mM(Vb, Mb, eb, !0)) return;
                   const {
-                    currentTime: Kd,
-                    volume: hd,
-                    muted: vd,
-                    playbackRate: Qd,
-                    loop: td
-                  } = Xd;
-                  Od({
-                    type: dd,
-                    id: Fd.getId(Xd),
-                    currentTime: Kd,
-                    volume: hd,
-                    muted: vd,
-                    playbackRate: Qd,
-                    loop: td
+                    currentTime: gb,
+                    volume: lb,
+                    muted: Lb,
+                    playbackRate: Ib,
+                    loop: Ob
+                  } = Vb;
+                  wb({
+                    type: bb,
+                    id: Hb.getId(Vb),
+                    currentTime: gb,
+                    volume: lb,
+                    muted: Lb,
+                    playbackRate: Ib,
+                    loop: Ob
                   })
-                })), Rd.media || 500))),
-                hd = [Km("play", Kd(od.Play), Xd), Km("pause", Kd(od.Pause), Xd), Km("seeked", Kd(od.Seeked), Xd), Km("volumechange", Kd(od.VolumeChange), Xd), Km("ratechange", Kd(od.RateChange), Xd)];
-              return Pm((() => {
-                hd.forEach((dd => dd()))
+                })), pb.media || 500))),
+                lb = [VM("play", gb(Ub.Play), Vb), VM("pause", gb(Ub.Pause), Vb), VM("seeked", gb(Ub.Seeked), Vb), VM("volumechange", gb(Ub.VolumeChange), Vb), VM("ratechange", gb(Ub.RateChange), Vb)];
+              return NM((() => {
+                lb.forEach((bb => bb()))
               }))
-            }(dd))), dd.recordDOM) {
-            const Od = function(dd) {
-              const Od = new Map,
-                md = new Set;
-              let Wd = !0;
-              const Fd = dd => {
-                  if (Wd) try {
-                    dd()
-                  } catch (dd) {}
+            }(bb))), bb.recordDOM) {
+            const wb = function(bb) {
+              const wb = new Map,
+                Mb = new Set;
+              let eb = !0;
+              const Hb = bb => {
+                  if (eb) try {
+                    bb()
+                  } catch (bb) {}
                 },
-                Rd = dd => {
-                  var md;
-                  const Wd = Od.get(dd);
-                  if (Wd) {
-                    for (; null === (md = Wd[0]) || void 0 === md ? void 0 : md.ready;) {
-                      const dd = Wd.shift();
-                      (null == dd ? void 0 : dd.emit) && Fd(dd.emit)
+                pb = bb => {
+                  var Mb;
+                  const eb = wb.get(bb);
+                  if (eb) {
+                    for (; null === (Mb = eb[0]) || void 0 === Mb ? void 0 : Mb.ready;) {
+                      const bb = eb.shift();
+                      (null == bb ? void 0 : bb.emit) && Hb(bb.emit)
                     }
-                    0 === Wd.length && Od.delete(dd)
+                    0 === eb.length && wb.delete(bb)
                   }
                 };
               return {
-                queueMutation(dd, md) {
-                  if (!dd) return void Fd(md);
-                  const Wd = Od.get(dd);
-                  Wd ? (Wd.push({
-                    emit: md,
+                queueMutation(bb, Mb) {
+                  if (!bb) return void Hb(Mb);
+                  const eb = wb.get(bb);
+                  eb ? (eb.push({
+                    emit: Mb,
                     ready: !0
-                  }), Rd(dd)) : Fd(md)
+                  }), pb(bb)) : Hb(Mb)
                 },
-                queuePendingMutation(Xd, Kd, hd) {
-                  if (!Wd) return () => {};
-                  let vd = Od.get(Xd);
-                  vd || (vd = [], Od.set(Xd, vd));
-                  const Qd = {
-                    emit: Kd,
+                queuePendingMutation(Vb, gb, lb) {
+                  if (!eb) return () => {};
+                  let Lb = wb.get(Vb);
+                  Lb || (Lb = [], wb.set(Vb, Lb));
+                  const Ib = {
+                    emit: gb,
                     ready: !1
                   };
-                  vd.push(Qd);
-                  let td, od = !1,
-                    Nd = !1;
-                  const qd = () => {
-                    od || Nd || (od = !0, void 0 !== td && md.delete(td), Qd.ready = !0, Qd.emit = void 0, Rd(Xd))
+                  Lb.push(Ib);
+                  let Ob, Ub = !1,
+                    tb = !1;
+                  const Cb = () => {
+                    Ub || tb || (Ub = !0, void 0 !== Ob && Mb.delete(Ob), Ib.ready = !0, Ib.emit = void 0, pb(Vb))
                   };
                   try {
-                    td = dd.setTimeout(qd, 5e3), od || Nd ? dd.clearTimeout(td) : md.add(td)
-                  } catch (dd) {
-                    qd()
+                    Ob = bb.setTimeout(Cb, 5e3), Ub || tb ? bb.clearTimeout(Ob) : Mb.add(Ob)
+                  } catch (bb) {
+                    Cb()
                   }
-                  return Od => {
-                    !Nd && Wd && (Nd = !0, void 0 !== td && (dd.clearTimeout(td), md.delete(td)), od ? Od && Fd(hd) : (Qd.ready = !0, Od || (Qd.emit = void 0), Rd(Xd)))
+                  return wb => {
+                    !tb && eb && (tb = !0, void 0 !== Ob && (bb.clearTimeout(Ob), Mb.delete(Ob)), Ub ? wb && Hb(lb) : (Ib.ready = !0, wb || (Ib.emit = void 0), pb(Vb)))
                   }
                 },
                 reset() {
-                  Wd = !1, md.forEach((Od => dd.clearTimeout(Od))), md.clear(), Od.clear()
+                  eb = !1, Mb.forEach((wb => bb.clearTimeout(wb))), Mb.clear(), wb.clear()
                 }
               }
-            }(md);
-            Xd.push(Od.reset), td("styleSheet", (() => function(dd, Od) {
+            }(Mb);
+            Vb.push(wb.reset), Ob("styleSheet", (() => function(bb, wb) {
               let {
-                styleSheetRuleCb: md,
-                mirror: Wd,
-                stylesheetManager: Fd
-              } = dd, {
-                win: Rd,
-                mutationQueue: Xd
-              } = Od;
-              if (!Rd.CSSStyleSheet || !Rd.CSSStyleSheet.prototype) return () => {};
-              const Kd = Rd.CSSStyleSheet.prototype.insertRule;
-              Rd.CSSStyleSheet.prototype.insertRule = new Proxy(Kd, {
-                apply: Pm(((dd, Od, Rd) => {
-                  const [Kd] = Rd, hd = dd.apply(Od, Rd);
-                  Fd.onCssomSheetMutation(Od);
+                styleSheetRuleCb: Mb,
+                mirror: eb,
+                stylesheetManager: Hb
+              } = bb, {
+                win: pb,
+                mutationQueue: Vb
+              } = wb;
+              if (!pb.CSSStyleSheet || !pb.CSSStyleSheet.prototype) return () => {};
+              const gb = pb.CSSStyleSheet.prototype.insertRule;
+              pb.CSSStyleSheet.prototype.insertRule = new Proxy(gb, {
+                apply: NM(((bb, wb, pb) => {
+                  const [gb] = pb, lb = bb.apply(wb, pb);
+                  Hb.onCssomSheetMutation(wb);
                   const {
-                    id: vd,
-                    styleId: Qd
-                  } = Zm(Od, Wd, Fd.styleMirror);
-                  return (vd && -1 !== vd || Qd && -1 !== Qd) && Xd.queueMutation(Od, (() => md({
-                    id: vd,
-                    styleId: Qd,
+                    id: Lb,
+                    styleId: Ib
+                  } = PM(wb, eb, Hb.styleMirror);
+                  return (Lb && -1 !== Lb || Ib && -1 !== Ib) && Vb.queueMutation(wb, (() => Mb({
+                    id: Lb,
+                    styleId: Ib,
                     adds: [{
-                      rule: Kd,
-                      index: hd
+                      rule: gb,
+                      index: lb
                     }]
-                  }))), hd
+                  }))), lb
                 }), "host")
-              }), Rd.CSSStyleSheet.prototype.addRule = function(dd, Od) {
-                let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
-                return Rd.CSSStyleSheet.prototype.insertRule.apply(this, [`${dd} { ${Od} }`, md])
+              }), pb.CSSStyleSheet.prototype.addRule = function(bb, wb) {
+                let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.cssRules.length;
+                return pb.CSSStyleSheet.prototype.insertRule.apply(this, [`${bb} { ${wb} }`, Mb])
               };
-              const hd = Rd.CSSStyleSheet.prototype.deleteRule;
-              let vd, Qd;
-              Rd.CSSStyleSheet.prototype.deleteRule = new Proxy(hd, {
-                apply: Pm(((dd, Od, Rd) => {
-                  const [Kd] = Rd, hd = dd.apply(Od, Rd);
-                  Fd.onCssomSheetMutation(Od);
+              const lb = pb.CSSStyleSheet.prototype.deleteRule;
+              let Lb, Ib;
+              pb.CSSStyleSheet.prototype.deleteRule = new Proxy(lb, {
+                apply: NM(((bb, wb, pb) => {
+                  const [gb] = pb, lb = bb.apply(wb, pb);
+                  Hb.onCssomSheetMutation(wb);
                   const {
-                    id: vd,
-                    styleId: Qd
-                  } = Zm(Od, Wd, Fd.styleMirror);
-                  return (vd && -1 !== vd || Qd && -1 !== Qd) && Xd.queueMutation(Od, (() => md({
-                    id: vd,
-                    styleId: Qd,
+                    id: Lb,
+                    styleId: Ib
+                  } = PM(wb, eb, Hb.styleMirror);
+                  return (Lb && -1 !== Lb || Ib && -1 !== Ib) && Vb.queueMutation(wb, (() => Mb({
+                    id: Lb,
+                    styleId: Ib,
                     removes: [{
-                      index: Kd
+                      index: gb
                     }]
-                  }))), hd
+                  }))), lb
                 }), "host")
-              }), Rd.CSSStyleSheet.prototype.removeRule = function(dd) {
-                return Rd.CSSStyleSheet.prototype.deleteRule.apply(this, [dd])
-              }, Rd.CSSStyleSheet.prototype.replace && (vd = Rd.CSSStyleSheet.prototype.replace, Rd.CSSStyleSheet.prototype.replace = new Proxy(vd, {
-                apply: Pm(((dd, Od, Rd) => {
-                  const [Kd] = Rd, hd = dd.apply(Od, Rd);
+              }), pb.CSSStyleSheet.prototype.removeRule = function(bb) {
+                return pb.CSSStyleSheet.prototype.deleteRule.apply(this, [bb])
+              }, pb.CSSStyleSheet.prototype.replace && (Lb = pb.CSSStyleSheet.prototype.replace, pb.CSSStyleSheet.prototype.replace = new Proxy(Lb, {
+                apply: NM(((bb, wb, pb) => {
+                  const [gb] = pb, lb = bb.apply(wb, pb);
                   try {
-                    const dd = null == hd ? void 0 : hd.then;
-                    if (Od.ownerNode || !hd || "function" != typeof dd) return hd;
-                    Fd.onCssomSheetMutation(Od);
+                    const bb = null == lb ? void 0 : lb.then;
+                    if (wb.ownerNode || !lb || "function" != typeof bb) return lb;
+                    Hb.onCssomSheetMutation(wb);
                     const {
-                      id: Rd,
-                      styleId: vd
-                    } = Zm(Od, Wd, Fd.styleMirror);
-                    if (!(Rd && -1 !== Rd || vd && -1 !== vd)) return hd;
-                    const Qd = Xd.queuePendingMutation(Od, (() => md({
-                      id: Rd,
-                      styleId: vd,
-                      replace: Kd
+                      id: pb,
+                      styleId: Lb
+                    } = PM(wb, eb, Hb.styleMirror);
+                    if (!(pb && -1 !== pb || Lb && -1 !== Lb)) return lb;
+                    const Ib = Vb.queuePendingMutation(wb, (() => Mb({
+                      id: pb,
+                      styleId: Lb,
+                      replace: gb
                     })), (() => {
-                      const dd = NO(Od);
-                      null !== dd && md({
-                        id: Rd,
-                        styleId: vd,
-                        replace: dd
+                      const bb = Ow(wb);
+                      null !== bb && Mb({
+                        id: pb,
+                        styleId: Lb,
+                        replace: bb
                       })
                     }));
                     try {
-                      dd.call(hd, (() => Qd(!0)), (() => Qd(!1)))
-                    } catch (md) {
-                      Qd(!1)
+                      bb.call(lb, (() => Ib(!0)), (() => Ib(!1)))
+                    } catch (Mb) {
+                      Ib(!1)
                     }
-                  } catch (md) {}
-                  return hd
+                  } catch (Mb) {}
+                  return lb
                 }), "host")
-              })), Rd.CSSStyleSheet.prototype.replaceSync && (Qd = Rd.CSSStyleSheet.prototype.replaceSync, Rd.CSSStyleSheet.prototype.replaceSync = new Proxy(Qd, {
-                apply: Pm(((dd, Od, Rd) => {
-                  const [Kd] = Rd, hd = dd.apply(Od, Rd);
-                  Fd.onCssomSheetMutation(Od);
+              })), pb.CSSStyleSheet.prototype.replaceSync && (Ib = pb.CSSStyleSheet.prototype.replaceSync, pb.CSSStyleSheet.prototype.replaceSync = new Proxy(Ib, {
+                apply: NM(((bb, wb, pb) => {
+                  const [gb] = pb, lb = bb.apply(wb, pb);
+                  Hb.onCssomSheetMutation(wb);
                   const {
-                    id: vd,
-                    styleId: Qd
-                  } = Zm(Od, Wd, Fd.styleMirror);
-                  return (vd && -1 !== vd || Qd && -1 !== Qd) && Xd.queueMutation(Od, (() => md({
-                    id: vd,
-                    styleId: Qd,
-                    replaceSync: Kd
-                  }))), hd
+                    id: Lb,
+                    styleId: Ib
+                  } = PM(wb, eb, Hb.styleMirror);
+                  return (Lb && -1 !== Lb || Ib && -1 !== Ib) && Vb.queueMutation(wb, (() => Mb({
+                    id: Lb,
+                    styleId: Ib,
+                    replaceSync: gb
+                  }))), lb
                 }), "host")
               }));
-              const td = {};
-              OW("CSSGroupingRule") ? td.CSSGroupingRule = Rd.CSSGroupingRule : (OW("CSSMediaRule") && (td.CSSMediaRule = Rd.CSSMediaRule), OW("CSSConditionRule") && (td.CSSConditionRule = Rd.CSSConditionRule), OW("CSSSupportsRule") && (td.CSSSupportsRule = Rd.CSSSupportsRule));
-              const od = {};
-              return Object.entries(td).forEach((dd => {
-                let [Od, Rd] = dd;
-                od[Od] = {
-                  insertRule: Rd.prototype.insertRule,
-                  deleteRule: Rd.prototype.deleteRule
-                }, Rd.prototype.insertRule = new Proxy(od[Od].insertRule, {
-                  apply: Pm(((dd, Od, Rd) => {
-                    const [Kd] = Rd, hd = dd.apply(Od, Rd);
-                    Fd.onCssomSheetMutation(Od.parentStyleSheet);
+              const Ob = {};
+              kM("CSSGroupingRule") ? Ob.CSSGroupingRule = pb.CSSGroupingRule : (kM("CSSMediaRule") && (Ob.CSSMediaRule = pb.CSSMediaRule), kM("CSSConditionRule") && (Ob.CSSConditionRule = pb.CSSConditionRule), kM("CSSSupportsRule") && (Ob.CSSSupportsRule = pb.CSSSupportsRule));
+              const Ub = {};
+              return Object.entries(Ob).forEach((bb => {
+                let [wb, pb] = bb;
+                Ub[wb] = {
+                  insertRule: pb.prototype.insertRule,
+                  deleteRule: pb.prototype.deleteRule
+                }, pb.prototype.insertRule = new Proxy(Ub[wb].insertRule, {
+                  apply: NM(((bb, wb, pb) => {
+                    const [gb] = pb, lb = bb.apply(wb, pb);
+                    Hb.onCssomSheetMutation(wb.parentStyleSheet);
                     const {
-                      id: vd,
-                      styleId: Qd
-                    } = Zm(Od.parentStyleSheet, Wd, Fd.styleMirror);
-                    if (Od.parentStyleSheet && (vd && -1 !== vd || Qd && -1 !== Qd)) {
-                      const dd = [...Cm(Od), hd];
-                      Xd.queueMutation(Od.parentStyleSheet, (() => md({
-                        id: vd,
-                        styleId: Qd,
+                      id: Lb,
+                      styleId: Ib
+                    } = PM(wb.parentStyleSheet, eb, Hb.styleMirror);
+                    if (wb.parentStyleSheet && (Lb && -1 !== Lb || Ib && -1 !== Ib)) {
+                      const bb = [...dM(wb), lb];
+                      Vb.queueMutation(wb.parentStyleSheet, (() => Mb({
+                        id: Lb,
+                        styleId: Ib,
                         adds: [{
-                          rule: Kd,
-                          index: dd
+                          rule: gb,
+                          index: bb
                         }]
                       })))
                     }
-                    return hd
+                    return lb
                   }), "host")
-                }), Rd.prototype.deleteRule = new Proxy(od[Od].deleteRule, {
-                  apply: Pm(((dd, Od, Rd) => {
-                    const [Kd] = Rd, hd = dd.apply(Od, Rd);
-                    Fd.onCssomSheetMutation(Od.parentStyleSheet);
+                }), pb.prototype.deleteRule = new Proxy(Ub[wb].deleteRule, {
+                  apply: NM(((bb, wb, pb) => {
+                    const [gb] = pb, lb = bb.apply(wb, pb);
+                    Hb.onCssomSheetMutation(wb.parentStyleSheet);
                     const {
-                      id: vd,
-                      styleId: Qd
-                    } = Zm(Od.parentStyleSheet, Wd, Fd.styleMirror);
-                    if (Od.parentStyleSheet && (vd && -1 !== vd || Qd && -1 !== Qd)) {
-                      const dd = [...Cm(Od), Kd];
-                      Xd.queueMutation(Od.parentStyleSheet, (() => md({
-                        id: vd,
-                        styleId: Qd,
+                      id: Lb,
+                      styleId: Ib
+                    } = PM(wb.parentStyleSheet, eb, Hb.styleMirror);
+                    if (wb.parentStyleSheet && (Lb && -1 !== Lb || Ib && -1 !== Ib)) {
+                      const bb = [...dM(wb), gb];
+                      Vb.queueMutation(wb.parentStyleSheet, (() => Mb({
+                        id: Lb,
+                        styleId: Ib,
                         removes: [{
-                          index: dd
+                          index: bb
                         }]
                       })))
                     }
-                    return hd
+                    return lb
                   }), "host")
                 })
-              })), Pm((() => {
-                Rd.CSSStyleSheet.prototype.insertRule = Kd, Rd.CSSStyleSheet.prototype.deleteRule = hd, vd && (Rd.CSSStyleSheet.prototype.replace = vd), Qd && (Rd.CSSStyleSheet.prototype.replaceSync = Qd), Object.entries(td).forEach((dd => {
-                  let [Od, md] = dd;
-                  md.prototype.insertRule = od[Od].insertRule, md.prototype.deleteRule = od[Od].deleteRule
+              })), NM((() => {
+                pb.CSSStyleSheet.prototype.insertRule = gb, pb.CSSStyleSheet.prototype.deleteRule = lb, Lb && (pb.CSSStyleSheet.prototype.replace = Lb), Ib && (pb.CSSStyleSheet.prototype.replaceSync = Ib), Object.entries(Ob).forEach((bb => {
+                  let [wb, Mb] = bb;
+                  Mb.prototype.insertRule = Ub[wb].insertRule, Mb.prototype.deleteRule = Ub[wb].deleteRule
                 }))
               }))
-            }(dd, {
-              win: md,
-              mutationQueue: Od
-            }))), td("adoptedStyleSheet", (() => km(dd, dd.doc))), td("styleDeclaration", (() => function(dd, Od) {
+            }(bb, {
+              win: Mb,
+              mutationQueue: wb
+            }))), Ob("adoptedStyleSheet", (() => nM(bb, bb.doc))), Ob("styleDeclaration", (() => function(bb, wb) {
               let {
-                styleDeclarationCb: md,
-                mirror: Wd,
-                ignoreCSSAttributes: Fd,
-                stylesheetManager: Rd
-              } = dd, {
-                win: Xd,
-                mutationQueue: Kd
-              } = Od;
-              const hd = Xd.CSSStyleDeclaration.prototype.setProperty;
-              Xd.CSSStyleDeclaration.prototype.setProperty = new Proxy(hd, {
-                apply: Pm(((dd, Od, Xd) => {
-                  var hd;
-                  const [vd, Qd, td] = Xd, od = dd.apply(Od, Xd);
-                  if (Fd.has(vd)) return od;
-                  const Nd = null === (hd = Od.parentRule) || void 0 === hd ? void 0 : hd.parentStyleSheet;
-                  Rd.onCssomSheetMutation(Nd);
+                styleDeclarationCb: Mb,
+                mirror: eb,
+                ignoreCSSAttributes: Hb,
+                stylesheetManager: pb
+              } = bb, {
+                win: Vb,
+                mutationQueue: gb
+              } = wb;
+              const lb = Vb.CSSStyleDeclaration.prototype.setProperty;
+              Vb.CSSStyleDeclaration.prototype.setProperty = new Proxy(lb, {
+                apply: NM(((bb, wb, Vb) => {
+                  var lb;
+                  const [Lb, Ib, Ob] = Vb, Ub = bb.apply(wb, Vb);
+                  if (Hb.has(Lb)) return Ub;
+                  const tb = null === (lb = wb.parentRule) || void 0 === lb ? void 0 : lb.parentStyleSheet;
+                  pb.onCssomSheetMutation(tb);
                   const {
-                    id: qd,
-                    styleId: Hd
-                  } = Zm(Nd, Wd, Rd.styleMirror);
-                  if (qd && -1 !== qd || Hd && -1 !== Hd) {
-                    const dd = Cm(Od.parentRule);
-                    Kd.queueMutation(Nd, (() => md({
-                      id: qd,
-                      styleId: Hd,
+                    id: Cb,
+                    styleId: Eb
+                  } = PM(tb, eb, pb.styleMirror);
+                  if (Cb && -1 !== Cb || Eb && -1 !== Eb) {
+                    const bb = dM(wb.parentRule);
+                    gb.queueMutation(tb, (() => Mb({
+                      id: Cb,
+                      styleId: Eb,
                       set: {
-                        property: vd,
-                        value: Qd,
-                        priority: td
+                        property: Lb,
+                        value: Ib,
+                        priority: Ob
                       },
-                      index: dd
+                      index: bb
                     })))
                   }
-                  return od
+                  return Ub
                 }), "host")
               });
-              const vd = Xd.CSSStyleDeclaration.prototype.removeProperty;
-              return Xd.CSSStyleDeclaration.prototype.removeProperty = new Proxy(vd, {
-                apply: Pm(((dd, Od, Xd) => {
-                  var hd;
-                  const [vd] = Xd, Qd = dd.apply(Od, Xd);
-                  if (Fd.has(vd)) return Qd;
-                  const td = null === (hd = Od.parentRule) || void 0 === hd ? void 0 : hd.parentStyleSheet;
-                  Rd.onCssomSheetMutation(td);
+              const Lb = Vb.CSSStyleDeclaration.prototype.removeProperty;
+              return Vb.CSSStyleDeclaration.prototype.removeProperty = new Proxy(Lb, {
+                apply: NM(((bb, wb, Vb) => {
+                  var lb;
+                  const [Lb] = Vb, Ib = bb.apply(wb, Vb);
+                  if (Hb.has(Lb)) return Ib;
+                  const Ob = null === (lb = wb.parentRule) || void 0 === lb ? void 0 : lb.parentStyleSheet;
+                  pb.onCssomSheetMutation(Ob);
                   const {
-                    id: od,
-                    styleId: Nd
-                  } = Zm(td, Wd, Rd.styleMirror);
-                  if (od && -1 !== od || Nd && -1 !== Nd) {
-                    const dd = Cm(Od.parentRule);
-                    Kd.queueMutation(td, (() => md({
-                      id: od,
-                      styleId: Nd,
+                    id: Ub,
+                    styleId: tb
+                  } = PM(Ob, eb, pb.styleMirror);
+                  if (Ub && -1 !== Ub || tb && -1 !== tb) {
+                    const bb = dM(wb.parentRule);
+                    gb.queueMutation(Ob, (() => Mb({
+                      id: Ub,
+                      styleId: tb,
                       remove: {
-                        property: vd
+                        property: Lb
                       },
-                      index: dd
+                      index: bb
                     })))
                   }
-                  return Qd
+                  return Ib
                 }), "host")
-              }), Pm((() => {
-                Xd.CSSStyleDeclaration.prototype.setProperty = hd, Xd.CSSStyleDeclaration.prototype.removeProperty = vd
+              }), NM((() => {
+                Vb.CSSStyleDeclaration.prototype.setProperty = lb, Vb.CSSStyleDeclaration.prototype.removeProperty = Lb
               }))
-            }(dd, {
-              win: md,
-              mutationQueue: Od
-            }))), dd.collectFonts && td("font", (() => function(dd) {
+            }(bb, {
+              win: Mb,
+              mutationQueue: wb
+            }))), bb.collectFonts && Ob("font", (() => function(bb) {
               let {
-                fontCb: Od,
-                doc: md
-              } = dd;
-              const Wd = md.defaultView;
-              if (!Wd) return () => {};
-              const Fd = [],
-                Rd = new WeakMap,
-                Xd = Wd.FontFace;
-              Wd.FontFace = function(dd, Od, md) {
-                const Wd = new Xd(dd, Od, md);
-                return Rd.set(Wd, {
-                  family: dd,
-                  buffer: "string" != typeof Od,
-                  descriptors: md,
-                  fontSource: "string" == typeof Od ? Od : JSON.stringify(Array.from(new Uint8Array(Od)))
-                }), Wd
+                fontCb: wb,
+                doc: Mb
+              } = bb;
+              const eb = Mb.defaultView;
+              if (!eb) return () => {};
+              const Hb = [],
+                pb = new WeakMap,
+                Vb = eb.FontFace;
+              eb.FontFace = function(bb, wb, Mb) {
+                const eb = new Vb(bb, wb, Mb);
+                return pb.set(eb, {
+                  family: bb,
+                  buffer: "string" != typeof wb,
+                  descriptors: Mb,
+                  fontSource: "string" == typeof wb ? wb : JSON.stringify(Array.from(new Uint8Array(wb)))
+                }), eb
               };
-              const Kd = xd(md.fonts, "add", (function(dd) {
-                return function(md) {
-                  return setTimeout(Pm((() => {
-                    const dd = Rd.get(md);
-                    dd && (Od(dd), Rd.delete(md))
-                  })), 0), dd.apply(this, [md])
+              const gb = rb(Mb.fonts, "add", (function(bb) {
+                return function(Mb) {
+                  return setTimeout(NM((() => {
+                    const bb = pb.get(Mb);
+                    bb && (wb(bb), pb.delete(Mb))
+                  })), 0), bb.apply(this, [Mb])
                 }
               }));
-              return Fd.push((() => {
-                Wd.FontFace = Xd
-              })), Fd.push(Kd), Pm((() => {
-                Fd.forEach((dd => dd()))
+              return Hb.push((() => {
+                eb.FontFace = Vb
+              })), Hb.push(gb), NM((() => {
+                Hb.forEach((bb => bb()))
               }))
-            }(dd)))
+            }(bb)))
           }
-          td("selection", (() => function(dd) {
+          Ob("selection", (() => function(bb) {
             const {
-              doc: Od,
-              mirror: md,
-              blockClass: Wd,
-              blockSelector: Fd,
-              selectionCb: Rd
-            } = dd;
-            let Xd = !0;
-            const Kd = Pm((() => {
-              const dd = Od.getSelection();
-              if (!dd || Xd && (null == dd ? void 0 : dd.isCollapsed)) return;
-              Xd = dd.isCollapsed || !1;
-              const Kd = [],
-                hd = dd.rangeCount || 0;
-              for (let Od = 0; hd > Od; Od++) {
+              doc: wb,
+              mirror: Mb,
+              blockClass: eb,
+              blockSelector: Hb,
+              selectionCb: pb
+            } = bb;
+            let Vb = !0;
+            const gb = NM((() => {
+              const bb = wb.getSelection();
+              if (!bb || Vb && (null == bb ? void 0 : bb.isCollapsed)) return;
+              Vb = bb.isCollapsed || !1;
+              const gb = [],
+                lb = bb.rangeCount || 0;
+              for (let wb = 0; lb > wb; wb++) {
                 const {
-                  startContainer: Rd,
-                  startOffset: Xd,
-                  endContainer: hd,
-                  endOffset: vd
-                } = dd.getRangeAt(Od);
-                gm(Rd, Wd, Fd, !0) || gm(hd, Wd, Fd, !0) || Kd.push({
-                  start: md.getId(Rd),
-                  startOffset: Xd,
-                  end: md.getId(hd),
-                  endOffset: vd
+                  startContainer: pb,
+                  startOffset: Vb,
+                  endContainer: lb,
+                  endOffset: Lb
+                } = bb.getRangeAt(wb);
+                mM(pb, eb, Hb, !0) || mM(lb, eb, Hb, !0) || gb.push({
+                  start: Mb.getId(pb),
+                  startOffset: Vb,
+                  end: Mb.getId(lb),
+                  endOffset: Lb
                 })
               }
-              Rd({
-                By: Kd
+              pb({
+                gF: gb
               })
             }));
-            return Kd(), Km("selectionchange", Kd)
-          }(dd))), td("customElement", (() => function(dd) {
+            return gb(), VM("selectionchange", gb)
+          }(bb))), Ob("customElement", (() => function(bb) {
             let {
-              doc: Od,
-              customElementCb: md
-            } = dd;
-            const Wd = Od.defaultView;
-            return Wd && Wd.customElements ? xd(Wd.customElements, "define", (function(dd) {
-              return function(Od, Wd, Fd) {
+              doc: wb,
+              customElementCb: Mb
+            } = bb;
+            const eb = wb.defaultView;
+            return eb && eb.customElements ? rb(eb.customElements, "define", (function(bb) {
+              return function(wb, eb, Hb) {
                 try {
-                  md({
+                  Mb({
                     define: {
-                      name: Od
+                      name: wb
                     }
                   })
-                } catch (dd) {
-                  console.warn(`Custom element callback failed for ${Od}`)
+                } catch (bb) {
+                  console.warn(`Custom element callback failed for ${wb}`)
                 }
-                return dd.apply(this, [Od, Wd, Fd])
+                return bb.apply(this, [wb, eb, Hb])
               }
             })) : () => {}
-          }(dd)));
-          for (const Od of dd.plugins) td(`plugin:${Od.name}`, (() => Od.observer(Od.callback, md, Od.options)))
-        } catch (dd) {
+          }(bb)));
+          for (const wb of bb.plugins) Ob(`plugin:${wb.name}`, (() => wb.observer(wb.callback, Mb, wb.options)))
+        } catch (bb) {
           try {
-            Kd()
-          } catch (dd) {}
-          throw dd
+            gb()
+          } catch (bb) {}
+          throw bb
         }
-        return Kd
+        return gb
       }
 
-      function dW(dd) {
-        return void 0 !== window[dd]
+      function TM(bb) {
+        return void 0 !== window[bb]
       }
 
-      function OW(dd) {
-        return Boolean(void 0 !== window[dd] && window[dd].prototype && "insertRule" in window[dd].prototype && "deleteRule" in window[dd].prototype)
+      function kM(bb) {
+        return Boolean(void 0 !== window[bb] && window[bb].prototype && "insertRule" in window[bb].prototype && "deleteRule" in window[bb].prototype)
       }
-      var mW = class {
-          constructor(dd) {
-            XO(this, "generateIdFn", void 0), XO(this, "iframeRemoteIdToLocalIdMap", new WeakMap), XO(this, "iframeLocalIdToRemoteIdMap", new WeakMap), this.generateIdFn = dd
+      var be = class {
+          constructor(bb) {
+            Hw(this, "generateIdFn", void 0), Hw(this, "iframeRemoteIdToLocalIdMap", new WeakMap), Hw(this, "iframeLocalIdToRemoteIdMap", new WeakMap), this.generateIdFn = bb
           }
-          getId(dd, Od, md, Wd) {
-            if (0 > Od) return Od;
-            const Fd = md || this.getRemoteIdToLocalIdMap(dd),
-              Rd = Wd || this.getLocalIdToRemoteIdMap(dd);
-            let Xd = Fd.get(Od);
-            return void 0 === Xd && (Xd = this.generateIdFn(), Fd.set(Od, Xd), Rd.set(Xd, Od)), Xd
+          getId(bb, wb, Mb, eb) {
+            if (0 > wb) return wb;
+            const Hb = Mb || this.getRemoteIdToLocalIdMap(bb),
+              pb = eb || this.getLocalIdToRemoteIdMap(bb);
+            let Vb = Hb.get(wb);
+            return void 0 === Vb && (Vb = this.generateIdFn(), Hb.set(wb, Vb), pb.set(Vb, wb)), Vb
           }
-          getIds(dd, Od) {
-            const md = this.getRemoteIdToLocalIdMap(dd),
-              Wd = this.getLocalIdToRemoteIdMap(dd);
-            return Od.map((Od => this.getId(dd, Od, md, Wd)))
+          getIds(bb, wb) {
+            const Mb = this.getRemoteIdToLocalIdMap(bb),
+              eb = this.getLocalIdToRemoteIdMap(bb);
+            return wb.map((wb => this.getId(bb, wb, Mb, eb)))
           }
-          getRemoteId(dd, Od, md) {
-            var Wd;
-            return "number" != typeof Od || 0 > Od ? Od : null !== (Wd = (md || this.getLocalIdToRemoteIdMap(dd)).get(Od)) && void 0 !== Wd ? Wd : -1
+          getRemoteId(bb, wb, Mb) {
+            var eb;
+            return "number" != typeof wb || 0 > wb ? wb : null !== (eb = (Mb || this.getLocalIdToRemoteIdMap(bb)).get(wb)) && void 0 !== eb ? eb : -1
           }
-          getRemoteIds(dd, Od) {
-            const md = this.getLocalIdToRemoteIdMap(dd);
-            return Od.map((Od => this.getRemoteId(dd, Od, md)))
+          getRemoteIds(bb, wb) {
+            const Mb = this.getLocalIdToRemoteIdMap(bb);
+            return wb.map((wb => this.getRemoteId(bb, wb, Mb)))
           }
-          reset(dd) {
-            if (!dd) return this.iframeRemoteIdToLocalIdMap = new WeakMap, void(this.iframeLocalIdToRemoteIdMap = new WeakMap);
-            this.iframeRemoteIdToLocalIdMap.delete(dd), this.iframeLocalIdToRemoteIdMap.delete(dd)
+          reset(bb) {
+            if (!bb) return this.iframeRemoteIdToLocalIdMap = new WeakMap, void(this.iframeLocalIdToRemoteIdMap = new WeakMap);
+            this.iframeRemoteIdToLocalIdMap.delete(bb), this.iframeLocalIdToRemoteIdMap.delete(bb)
           }
-          getRemoteIdToLocalIdMap(dd) {
-            let Od = this.iframeRemoteIdToLocalIdMap.get(dd);
-            return Od || (Od = new Map, this.iframeRemoteIdToLocalIdMap.set(dd, Od)), Od
+          getRemoteIdToLocalIdMap(bb) {
+            let wb = this.iframeRemoteIdToLocalIdMap.get(bb);
+            return wb || (wb = new Map, this.iframeRemoteIdToLocalIdMap.set(bb, wb)), wb
           }
-          getLocalIdToRemoteIdMap(dd) {
-            let Od = this.iframeLocalIdToRemoteIdMap.get(dd);
-            return Od || (Od = new Map, this.iframeLocalIdToRemoteIdMap.set(dd, Od)), Od
+          getLocalIdToRemoteIdMap(bb) {
+            let wb = this.iframeLocalIdToRemoteIdMap.get(bb);
+            return wb || (wb = new Map, this.iframeLocalIdToRemoteIdMap.set(bb, wb)), wb
           }
         },
-        WW = class {
-          constructor(dd) {
-            XO(this, "iframes", new WeakMap), XO(this, "crossOriginIframeMap", new WeakMap), XO(this, "crossOriginIframeMirror", new mW(nO)), XO(this, "crossOriginIframeStyleMirror", void 0), XO(this, "crossOriginIframeRootIdMap", new WeakMap), XO(this, "mirror", void 0), XO(this, "mutationCb", void 0), XO(this, "wrappedEmit", void 0), XO(this, "loadListener", void 0), XO(this, "pageHideListener", void 0), XO(this, "stylesheetManager", void 0), XO(this, "recordCrossOriginIframes", void 0), XO(this, "messageHandler", void 0), XO(this, "nestedIframeListeners", new Map), XO(this, "attachedWindows", new WeakMap), XO(this, "attachedDocuments", new WeakMap), XO(this, "attachedIframes", new Map), XO(this, "loadListenerDisposers", new WeakMap), XO(this, "iframeElementsById", new Map), XO(this, "pageHideHandlers", new WeakMap), this.mutationCb = dd.mutationCb, this.wrappedEmit = dd.wrappedEmit, this.stylesheetManager = dd.stylesheetManager, this.recordCrossOriginIframes = dd.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new mW(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = dd.mirror, this.messageHandler = this.handleMessage.bind(this), this.recordCrossOriginIframes && window.addEventListener("message", this.messageHandler)
+        we = class {
+          constructor(bb) {
+            Hw(this, "iframes", new WeakMap), Hw(this, "crossOriginIframeMap", new WeakMap), Hw(this, "crossOriginIframeMirror", new be(Sw)), Hw(this, "crossOriginIframeStyleMirror", void 0), Hw(this, "crossOriginIframeRootIdMap", new WeakMap), Hw(this, "mirror", void 0), Hw(this, "mutationCb", void 0), Hw(this, "wrappedEmit", void 0), Hw(this, "loadListener", void 0), Hw(this, "pageHideListener", void 0), Hw(this, "stylesheetManager", void 0), Hw(this, "recordCrossOriginIframes", void 0), Hw(this, "messageHandler", void 0), Hw(this, "nestedIframeListeners", new Map), Hw(this, "attachedWindows", new WeakMap), Hw(this, "attachedDocuments", new WeakMap), Hw(this, "attachedIframes", new Map), Hw(this, "loadListenerDisposers", new WeakMap), Hw(this, "iframeElementsById", new Map), Hw(this, "pageHideHandlers", new WeakMap), this.mutationCb = bb.mutationCb, this.wrappedEmit = bb.wrappedEmit, this.stylesheetManager = bb.stylesheetManager, this.recordCrossOriginIframes = bb.recordCrossOriginIframes, this.crossOriginIframeStyleMirror = new be(this.stylesheetManager.styleMirror.generateId.bind(this.stylesheetManager.styleMirror)), this.mirror = bb.mirror, this.messageHandler = this.handleMessage.bind(this), this.recordCrossOriginIframes && window.addEventListener("message", this.messageHandler)
           }
-          addIframe(dd) {
-            this.iframes.set(dd, !0), dd.contentWindow && this.crossOriginIframeMap.set(dd.contentWindow, dd)
+          addIframe(bb) {
+            this.iframes.set(bb, !0), bb.contentWindow && this.crossOriginIframeMap.set(bb.contentWindow, bb)
           }
-          registerLoadListenerDisposer(dd, Od) {
-            let md = this.loadListenerDisposers.get(dd);
-            md || (md = new Set, this.loadListenerDisposers.set(dd, md)), md.add(Od);
-            const Wd = this.mirror.getId(dd); - 1 !== Wd && this.iframeElementsById.set(Wd, dd)
+          registerLoadListenerDisposer(bb, wb) {
+            let Mb = this.loadListenerDisposers.get(bb);
+            Mb || (Mb = new Set, this.loadListenerDisposers.set(bb, Mb)), Mb.add(wb);
+            const eb = this.mirror.getId(bb); - 1 !== eb && this.iframeElementsById.set(eb, bb)
           }
-          getIframeElementById(dd) {
-            var Od, md, Wd;
-            return null !== (Od = null !== (md = null === (Wd = this.attachedIframes.get(dd)) || void 0 === Wd ? void 0 : Wd.element) && void 0 !== md ? md : this.iframeElementsById.get(dd)) && void 0 !== Od ? Od : null
+          getIframeElementById(bb) {
+            var wb, Mb, eb;
+            return null !== (wb = null !== (Mb = null === (eb = this.attachedIframes.get(bb)) || void 0 === eb ? void 0 : eb.element) && void 0 !== Mb ? Mb : this.iframeElementsById.get(bb)) && void 0 !== wb ? wb : null
           }
-          forgetIframeId(dd) {
-            this.attachedIframes.delete(dd), this.iframeElementsById.delete(dd)
+          forgetIframeId(bb) {
+            this.attachedIframes.delete(bb), this.iframeElementsById.delete(bb)
           }
-          disposeLoadListeners(dd) {
-            const Od = this.loadListenerDisposers.get(dd);
-            Od && (Od.forEach((dd => Qm(dd))), this.loadListenerDisposers.delete(dd))
+          disposeLoadListeners(bb) {
+            const wb = this.loadListenerDisposers.get(bb);
+            wb && (wb.forEach((bb => lM(bb))), this.loadListenerDisposers.delete(bb))
           }
-          removePageHideListener(dd) {
-            const Od = this.pageHideHandlers.get(dd);
-            Od && (Od.forEach((dd => {
+          removePageHideListener(bb) {
+            const wb = this.pageHideHandlers.get(bb);
+            wb && (wb.forEach((bb => {
               let {
-                win: Od,
-                handler: md
-              } = dd;
-              hm(Od, "pagehide", md)
-            })), this.pageHideHandlers.delete(dd))
+                win: wb,
+                handler: Mb
+              } = bb;
+              gM(wb, "pagehide", Mb)
+            })), this.pageHideHandlers.delete(bb))
           }
-          addLoadListener(dd) {
-            this.loadListener = dd
+          addLoadListener(bb) {
+            this.loadListener = bb
           }
-          addPageHideListener(dd) {
-            this.pageHideListener = dd
+          addPageHideListener(bb) {
+            this.pageHideListener = bb
           }
           removeLoadListener() {
             this.loadListener = void 0
           }
-          trackIframeContent(dd, Od) {
-            const md = this.mirror.getId(dd);
-            return this.attachedIframes.set(md, {
-              element: dd,
-              content: Od
-            }), md
+          trackIframeContent(bb, wb) {
+            const Mb = this.mirror.getId(bb);
+            return this.attachedIframes.set(Mb, {
+              element: bb,
+              content: wb
+            }), Mb
           }
-          attachIframe(dd, Od) {
-            var md;
-            const Wd = this.trackIframeContent(dd, Od);
-            if (dd.contentDocument) {
-              let Od = this.attachedDocuments.get(dd);
-              Od || (Od = new Set, this.attachedDocuments.set(dd, Od)), Od.add(dd.contentDocument)
+          attachIframe(bb, wb) {
+            var Mb;
+            const eb = this.trackIframeContent(bb, wb);
+            if (bb.contentDocument) {
+              let wb = this.attachedDocuments.get(bb);
+              wb || (wb = new Set, this.attachedDocuments.set(bb, wb)), wb.add(bb.contentDocument)
             }
             this.mutationCb({
               adds: [{
-                parentId: Wd,
+                parentId: eb,
                 nextId: null,
-                node: Od
+                node: wb
               }],
               removes: [],
               texts: [],
               attributes: [],
               isAttachIframe: !0
             });
-            const Fd = dd.contentWindow;
-            if (this.recordCrossOriginIframes && Fd && !this.nestedIframeListeners.has(Fd)) {
-              const Od = this.handleMessage.bind(this);
-              Qm((() => {
-                Fd.addEventListener("message", Od), this.nestedIframeListeners.set(Fd, Od);
-                let md = this.attachedWindows.get(dd);
-                md || (md = new Set, this.attachedWindows.set(dd, md)), md.add(Fd)
+            const Hb = bb.contentWindow;
+            if (this.recordCrossOriginIframes && Hb && !this.nestedIframeListeners.has(Hb)) {
+              const wb = this.handleMessage.bind(this);
+              lM((() => {
+                Hb.addEventListener("message", wb), this.nestedIframeListeners.set(Hb, wb);
+                let Mb = this.attachedWindows.get(bb);
+                Mb || (Mb = new Set, this.attachedWindows.set(bb, Mb)), Mb.add(Hb)
               }))
             }
-            Qm((() => {
-              const Od = dd.contentWindow;
-              if (!Od) return;
-              let md = this.pageHideHandlers.get(dd);
-              if (md)
-                for (const dd of md)
-                  if (dd.win === Od) return;
-              const Wd = () => {
-                var Od;
-                null === (Od = this.pageHideListener) || void 0 === Od || Od.call(this, dd), dd.contentDocument && this.mirror.removeNodeFromMap(dd.contentDocument)
+            lM((() => {
+              const wb = bb.contentWindow;
+              if (!wb) return;
+              let Mb = this.pageHideHandlers.get(bb);
+              if (Mb)
+                for (const bb of Mb)
+                  if (bb.win === wb) return;
+              const eb = () => {
+                var wb;
+                null === (wb = this.pageHideListener) || void 0 === wb || wb.call(this, bb), bb.contentDocument && this.mirror.removeNodeFromMap(bb.contentDocument)
               };
-              Od.addEventListener("pagehide", Wd), md || (md = new Set, this.pageHideHandlers.set(dd, md)), md.add({
-                win: Od,
-                handler: Wd
+              wb.addEventListener("pagehide", eb), Mb || (Mb = new Set, this.pageHideHandlers.set(bb, Mb)), Mb.add({
+                win: wb,
+                handler: eb
               })
-            })), null === (md = this.loadListener) || void 0 === md || md.call(this, dd), dd.contentDocument && dd.contentDocument.adoptedStyleSheets && dd.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(dd.contentDocument.adoptedStyleSheets, this.mirror.getId(dd.contentDocument))
+            })), null === (Mb = this.loadListener) || void 0 === Mb || Mb.call(this, bb), bb.contentDocument && bb.contentDocument.adoptedStyleSheets && bb.contentDocument.adoptedStyleSheets.length > 0 && this.stylesheetManager.adoptStyleSheets(bb.contentDocument.adoptedStyleSheets, this.mirror.getId(bb.contentDocument))
           }
-          handleMessage(dd) {
-            const Od = dd;
-            if ("rrweb" !== Od.data.type || Od.origin !== Od.data.origin) return;
-            if (!dd.source) return;
-            const md = this.crossOriginIframeMap.get(dd.source);
-            if (!md) return;
-            const Wd = this.transformCrossOriginEvent(md, Od.data.event);
-            Wd && this.wrappedEmit(Wd, Od.data.isCheckout)
+          handleMessage(bb) {
+            const wb = bb;
+            if ("rrweb" !== wb.data.type || wb.origin !== wb.data.origin) return;
+            if (!bb.source) return;
+            const Mb = this.crossOriginIframeMap.get(bb.source);
+            if (!Mb) return;
+            const eb = this.transformCrossOriginEvent(Mb, wb.data.event);
+            eb && this.wrappedEmit(eb, wb.data.isCheckout)
           }
-          transformCrossOriginEvent(dd, Od) {
-            switch (Od.type) {
-              case Kd.FullSnapshot: {
-                this.crossOriginIframeMirror.reset(dd), this.crossOriginIframeStyleMirror.reset(dd), this.replaceIdOnNode(Od.data.node, dd);
-                const md = Od.data.node.id;
-                return this.crossOriginIframeRootIdMap.set(dd, md), this.patchRootIdOnNode(Od.data.node, md), this.trackIframeContent(dd, Od.data.node), {
-                  timestamp: Od.timestamp,
-                  type: Kd.IncrementalSnapshot,
+          transformCrossOriginEvent(bb, wb) {
+            switch (wb.type) {
+              case gb.FullSnapshot: {
+                this.crossOriginIframeMirror.reset(bb), this.crossOriginIframeStyleMirror.reset(bb), this.replaceIdOnNode(wb.data.node, bb);
+                const Mb = wb.data.node.id;
+                return this.crossOriginIframeRootIdMap.set(bb, Mb), this.patchRootIdOnNode(wb.data.node, Mb), this.trackIframeContent(bb, wb.data.node), {
+                  timestamp: wb.timestamp,
+                  type: gb.IncrementalSnapshot,
                   data: {
-                    source: hd.Mutation,
+                    source: lb.Mutation,
                     adds: [{
-                      parentId: this.mirror.getId(dd),
+                      parentId: this.mirror.getId(bb),
                       nextId: null,
-                      node: Od.data.node
+                      node: wb.data.node
                     }],
                     removes: [],
                     texts: [],
@@ -3013,436 +3013,436 @@ export const modules = {
                   }
                 }
               }
-              case Kd.Meta:
-              case Kd.Load:
-              case Kd.DomContentLoaded:
+              case gb.Meta:
+              case gb.Load:
+              case gb.DomContentLoaded:
                 return !1;
-              case Kd.Plugin:
-                return Od;
-              case Kd.Custom:
-                return this.replaceIds(Od.data.payload, dd, ["id", "parentId", "previousId", "nextId"]), Od;
-              case Kd.IncrementalSnapshot:
-                switch (Od.data.source) {
-                  case hd.Mutation:
-                    return Od.data.adds.forEach((Od => {
-                      this.replaceIds(Od, dd, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(Od.node, dd);
-                      const md = this.crossOriginIframeRootIdMap.get(dd);
-                      md && this.patchRootIdOnNode(Od.node, md)
-                    })), Od.data.removes.forEach((Od => {
-                      this.replaceIds(Od, dd, ["parentId", "id"])
-                    })), Od.data.attributes.forEach((Od => {
-                      this.replaceIds(Od, dd, ["id"])
-                    })), Od.data.texts.forEach((Od => {
-                      this.replaceIds(Od, dd, ["id"])
-                    })), Od;
-                  case hd.Drag:
-                  case hd.TouchMove:
-                  case hd.MouseMove:
-                    return Od.data.positions.forEach((Od => {
-                      this.replaceIds(Od, dd, ["id"])
-                    })), Od;
-                  case hd.ViewportResize:
+              case gb.Plugin:
+                return wb;
+              case gb.Custom:
+                return this.replaceIds(wb.data.payload, bb, ["id", "parentId", "previousId", "nextId"]), wb;
+              case gb.IncrementalSnapshot:
+                switch (wb.data.source) {
+                  case lb.Mutation:
+                    return wb.data.adds.forEach((wb => {
+                      this.replaceIds(wb, bb, ["parentId", "nextId", "previousId"]), this.replaceIdOnNode(wb.node, bb);
+                      const Mb = this.crossOriginIframeRootIdMap.get(bb);
+                      Mb && this.patchRootIdOnNode(wb.node, Mb)
+                    })), wb.data.removes.forEach((wb => {
+                      this.replaceIds(wb, bb, ["parentId", "id"])
+                    })), wb.data.attributes.forEach((wb => {
+                      this.replaceIds(wb, bb, ["id"])
+                    })), wb.data.texts.forEach((wb => {
+                      this.replaceIds(wb, bb, ["id"])
+                    })), wb;
+                  case lb.Drag:
+                  case lb.TouchMove:
+                  case lb.MouseMove:
+                    return wb.data.positions.forEach((wb => {
+                      this.replaceIds(wb, bb, ["id"])
+                    })), wb;
+                  case lb.ViewportResize:
                     return !1;
-                  case hd.MediaInteraction:
-                  case hd.MouseInteraction:
-                  case hd.Scroll:
-                  case hd.CanvasMutation:
-                  case hd.Input:
-                    return this.replaceIds(Od.data, dd, ["id"]), Od;
-                  case hd.StyleSheetRule:
-                  case hd.StyleDeclaration:
-                    return this.replaceIds(Od.data, dd, ["id"]), this.replaceStyleIds(Od.data, dd, ["styleId"]), Od;
-                  case hd.Font:
-                    return Od;
-                  case hd.Selection:
-                    return Od.data.By.forEach((Od => {
-                      this.replaceIds(Od, dd, ["start", "end"])
-                    })), Od;
-                  case hd.AdoptedStyleSheet:
-                    var md;
-                    return this.replaceIds(Od.data, dd, ["id"]), this.replaceStyleIds(Od.data, dd, ["styleIds"]), null === (md = Od.data.styles) || void 0 === md || md.forEach((Od => {
-                      this.replaceStyleIds(Od, dd, ["styleId"])
-                    })), Od
+                  case lb.MediaInteraction:
+                  case lb.MouseInteraction:
+                  case lb.Scroll:
+                  case lb.CanvasMutation:
+                  case lb.Input:
+                    return this.replaceIds(wb.data, bb, ["id"]), wb;
+                  case lb.StyleSheetRule:
+                  case lb.StyleDeclaration:
+                    return this.replaceIds(wb.data, bb, ["id"]), this.replaceStyleIds(wb.data, bb, ["styleId"]), wb;
+                  case lb.Font:
+                    return wb;
+                  case lb.Selection:
+                    return wb.data.gF.forEach((wb => {
+                      this.replaceIds(wb, bb, ["start", "end"])
+                    })), wb;
+                  case lb.AdoptedStyleSheet:
+                    var Mb;
+                    return this.replaceIds(wb.data, bb, ["id"]), this.replaceStyleIds(wb.data, bb, ["styleIds"]), null === (Mb = wb.data.styles) || void 0 === Mb || Mb.forEach((wb => {
+                      this.replaceStyleIds(wb, bb, ["styleId"])
+                    })), wb
                 }
             }
             return !1
           }
-          replace(dd, Od, md, Wd) {
-            for (const Fd of Wd)(Array.isArray(Od[Fd]) || "number" == typeof Od[Fd]) && (Od[Fd] = Array.isArray(Od[Fd]) ? dd.getIds(md, Od[Fd]) : dd.getId(md, Od[Fd]));
-            return Od
+          replace(bb, wb, Mb, eb) {
+            for (const Hb of eb)(Array.isArray(wb[Hb]) || "number" == typeof wb[Hb]) && (wb[Hb] = Array.isArray(wb[Hb]) ? bb.getIds(Mb, wb[Hb]) : bb.getId(Mb, wb[Hb]));
+            return wb
           }
-          replaceIds(dd, Od, md) {
-            return this.replace(this.crossOriginIframeMirror, dd, Od, md)
+          replaceIds(bb, wb, Mb) {
+            return this.replace(this.crossOriginIframeMirror, bb, wb, Mb)
           }
-          replaceStyleIds(dd, Od, md) {
-            return this.replace(this.crossOriginIframeStyleMirror, dd, Od, md)
+          replaceStyleIds(bb, wb, Mb) {
+            return this.replace(this.crossOriginIframeStyleMirror, bb, wb, Mb)
           }
-          replaceIdOnNode(dd, Od) {
-            this.replaceIds(dd, Od, ["id", "rootId"]), "childNodes" in dd && dd.childNodes.forEach((dd => {
-              this.replaceIdOnNode(dd, Od)
+          replaceIdOnNode(bb, wb) {
+            this.replaceIds(bb, wb, ["id", "rootId"]), "childNodes" in bb && bb.childNodes.forEach((bb => {
+              this.replaceIdOnNode(bb, wb)
             }))
           }
-          patchRootIdOnNode(dd, Od) {
-            dd.type === Nd.Document || dd.rootId || (dd.rootId = Od), "childNodes" in dd && dd.childNodes.forEach((dd => {
-              this.patchRootIdOnNode(dd, Od)
+          patchRootIdOnNode(bb, wb) {
+            bb.type === tb.Document || bb.rootId || (bb.rootId = wb), "childNodes" in bb && bb.childNodes.forEach((bb => {
+              this.patchRootIdOnNode(bb, wb)
             }))
           }
-          removeIframeById(dd) {
-            const Od = this.attachedIframes.get(dd),
-              md = (null == Od ? void 0 : Od.element) || this.iframeElementsById.get(dd) || this.mirror.QFd(dd);
-            if (this.iframeElementsById.delete(dd), md) {
-              const dd = md.contentWindow,
-                Od = this.attachedWindows.get(md);
-              Od && (Od.forEach((dd => {
-                const Od = this.nestedIframeListeners.get(dd);
-                Od && (hm(dd, "message", Od), this.nestedIframeListeners.delete(dd)), this.crossOriginIframeMap.delete(dd)
-              })), this.attachedWindows.delete(md)), dd && this.nestedIframeListeners.has(dd) && (hm(dd, "message", this.nestedIframeListeners.get(dd)), this.nestedIframeListeners.delete(dd)), dd && this.crossOriginIframeMap.delete(dd), this.iframes.delete(md), this.disposeLoadListeners(md), this.removePageHideListener(md);
-              const Wd = this.attachedDocuments.get(md);
-              Wd && (Wd.forEach((dd => {
-                Qm((() => this.mirror.removeNodeFromMap(dd)))
-              })), Qm((() => em(md, Wd))), this.attachedDocuments.delete(md))
+          removeIframeById(bb) {
+            const wb = this.attachedIframes.get(bb),
+              Mb = (null == wb ? void 0 : wb.element) || this.iframeElementsById.get(bb) || this.mirror.OHb(bb);
+            if (this.iframeElementsById.delete(bb), Mb) {
+              const bb = Mb.contentWindow,
+                wb = this.attachedWindows.get(Mb);
+              wb && (wb.forEach((bb => {
+                const wb = this.nestedIframeListeners.get(bb);
+                wb && (gM(bb, "message", wb), this.nestedIframeListeners.delete(bb)), this.crossOriginIframeMap.delete(bb)
+              })), this.attachedWindows.delete(Mb)), bb && this.nestedIframeListeners.has(bb) && (gM(bb, "message", this.nestedIframeListeners.get(bb)), this.nestedIframeListeners.delete(bb)), bb && this.crossOriginIframeMap.delete(bb), this.iframes.delete(Mb), this.disposeLoadListeners(Mb), this.removePageHideListener(Mb);
+              const eb = this.attachedDocuments.get(Mb);
+              eb && (eb.forEach((bb => {
+                lM((() => this.mirror.removeNodeFromMap(bb)))
+              })), lM((() => aM(Mb, eb))), this.attachedDocuments.delete(Mb))
             }
-            Od && this.attachedIframes.delete(dd)
+            wb && this.attachedIframes.delete(bb)
           }
           cleanupDetachedIframes() {
             if (0 === this.attachedIframes.size) return;
-            const dd = [];
-            this.attachedIframes.forEach(((Od, md) => {
-              this.mirror.has(md) || dd.push(md)
-            })), dd.forEach((dd => this.removeIframeById(dd)))
+            const bb = [];
+            this.attachedIframes.forEach(((wb, Mb) => {
+              this.mirror.has(Mb) || bb.push(Mb)
+            })), bb.forEach((bb => this.removeIframeById(bb)))
           }
           reattachIframes() {
-            this.attachedIframes.forEach(((dd, Od) => {
+            this.attachedIframes.forEach(((bb, wb) => {
               let {
-                content: md
-              } = dd;
-              this.mirror.has(Od) ? this.mutationCb({
+                content: Mb
+              } = bb;
+              this.mirror.has(wb) ? this.mutationCb({
                 adds: [{
-                  parentId: Od,
+                  parentId: wb,
                   nextId: null,
-                  node: md
+                  node: Mb
                 }],
                 removes: [],
                 texts: [],
                 attributes: [],
                 isAttachIframe: !0
-              }) : this.attachedIframes.delete(Od)
+              }) : this.attachedIframes.delete(wb)
             }))
           }
           destroy() {
-            this.recordCrossOriginIframes && hm(window, "message", this.messageHandler), this.nestedIframeListeners.forEach(((dd, Od) => {
-              hm(Od, "message", dd)
+            this.recordCrossOriginIframes && gM(window, "message", this.messageHandler), this.nestedIframeListeners.forEach(((bb, wb) => {
+              gM(wb, "message", bb)
             })), this.nestedIframeListeners.clear();
-            const dd = new Set;
-            this.iframeElementsById.forEach((Od => dd.add(Od))), this.attachedIframes.forEach((Od => {
+            const bb = new Set;
+            this.iframeElementsById.forEach((wb => bb.add(wb))), this.attachedIframes.forEach((wb => {
               let {
-                element: md
-              } = Od;
-              return dd.add(md)
-            })), dd.forEach((dd => {
-              this.disposeLoadListeners(dd), this.removePageHideListener(dd)
+                element: Mb
+              } = wb;
+              return bb.add(Mb)
+            })), bb.forEach((bb => {
+              this.disposeLoadListeners(bb), this.removePageHideListener(bb)
             })), this.crossOriginIframeMirror.reset(), this.crossOriginIframeStyleMirror.reset(), this.attachedIframes.clear(), this.crossOriginIframeMap = new WeakMap, this.iframes = new WeakMap, this.crossOriginIframeRootIdMap = new WeakMap, this.loadListenerDisposers = new WeakMap, this.pageHideHandlers = new WeakMap, this.attachedDocuments = new WeakMap, this.attachedWindows = new WeakMap, this.iframeElementsById = new Map
           }
         },
-        FW = class {
-          constructor(dd) {
-            XO(this, "shadowDoms", new WeakSet), XO(this, "mutationCb", void 0), XO(this, "scrollCb", void 0), XO(this, "bypassOptions", void 0), XO(this, "mirror", void 0), XO(this, "restoreHandlers", []), this.mutationCb = dd.mutationCb, this.scrollCb = dd.scrollCb, this.bypassOptions = dd.bypassOptions, this.mirror = dd.mirror, this.init()
+        Me = class {
+          constructor(bb) {
+            Hw(this, "shadowDoms", new WeakSet), Hw(this, "mutationCb", void 0), Hw(this, "scrollCb", void 0), Hw(this, "bypassOptions", void 0), Hw(this, "mirror", void 0), Hw(this, "restoreHandlers", []), this.mutationCb = bb.mutationCb, this.scrollCb = bb.scrollCb, this.bypassOptions = bb.bypassOptions, this.mirror = bb.mirror, this.init()
           }
           init() {
             this.reset(), this.patchAttachShadow(Element, document)
           }
-          addShadowRoot(dd, Od) {
-            var md, Fd;
-            if (!vO(dd)) return;
-            if (this.shadowDoms.has(dd)) return;
-            this.shadowDoms.add(dd);
-            const Rd = null !== (md = null === (Fd = Bd.host(dd)) || void 0 === Fd ? void 0 : Fd.ownerDocument) && void 0 !== md ? md : Od,
+          addShadowRoot(bb, wb) {
+            var Mb, Hb;
+            if (!gw(bb)) return;
+            if (this.shadowDoms.has(bb)) return;
+            this.shadowDoms.add(bb);
+            const pb = null !== (Mb = null === (Hb = Rb.host(bb)) || void 0 === Hb ? void 0 : Hb.ownerDocument) && void 0 !== Mb ? Mb : wb,
               {
-                observer: Xd,
-                buffer: Kd
-              } = jm(Wd(Wd({}, this.bypassOptions), {}, {
-                doc: Rd,
+                observer: Vb,
+                buffer: gb
+              } = GM(eb(eb({}, this.bypassOptions), {}, {
+                doc: pb,
                 mutationCb: this.mutationCb,
                 mirror: this.mirror,
                 shadowDomManager: this
-              }), dd);
+              }), bb);
             this.restoreHandlers.push({
-              doc: Rd,
+              doc: pb,
               handler() {
-                Xd.disconnect(), Kd.destroy(), Kd.releaseCanvasManager();
-                const dd = zm.indexOf(Kd); - 1 !== dd && zm.splice(dd, 1)
+                Vb.disconnect(), gb.destroy(), gb.releaseCanvasManager();
+                const bb = vM.indexOf(gb); - 1 !== bb && vM.splice(bb, 1)
               }
             }), this.restoreHandlers.push({
-              doc: Rd,
-              handler: Dm(Wd(Wd({}, this.bypassOptions), {}, {
+              doc: pb,
+              handler: qM(eb(eb({}, this.bypassOptions), {}, {
                 scrollCb: this.scrollCb,
-                doc: dd,
+                doc: bb,
                 mirror: this.mirror
               }))
             }), setTimeout((() => {
-              dd.adoptedStyleSheets && dd.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(dd.adoptedStyleSheets, this.mirror.getId(Bd.host(dd))), this.restoreHandlers.push({
-                doc: Rd,
-                handler: km({
+              bb.adoptedStyleSheets && bb.adoptedStyleSheets.length > 0 && this.bypassOptions.stylesheetManager.adoptStyleSheets(bb.adoptedStyleSheets, this.mirror.getId(Rb.host(bb))), this.restoreHandlers.push({
+                doc: pb,
+                handler: nM({
                   mirror: this.mirror,
                   stylesheetManager: this.bypassOptions.stylesheetManager
-                }, dd)
+                }, bb)
               })
             }), 0)
           }
-          observeAttachShadow(dd) {
-            Qm((() => {
-              const Od = dd.contentWindow,
-                md = dd.contentDocument;
-              Od && md && this.patchAttachShadow(Od.Element, md)
+          observeAttachShadow(bb) {
+            lM((() => {
+              const wb = bb.contentWindow,
+                Mb = bb.contentDocument;
+              wb && Mb && this.patchAttachShadow(wb.Element, Mb)
             }))
           }
-          patchAttachShadow(dd, Od) {
-            const md = this;
+          patchAttachShadow(bb, wb) {
+            const Mb = this;
             this.restoreHandlers.push({
-              doc: Od,
-              handler: xd(dd.prototype, "attachShadow", (function(dd) {
-                return function(Wd) {
-                  const Fd = dd.call(this, Wd),
-                    Rd = Bd.shadowRoot(this);
-                  return Rd && sm(this) && md.addShadowRoot(Rd, Od), Fd
+              doc: wb,
+              handler: rb(bb.prototype, "attachShadow", (function(bb) {
+                return function(eb) {
+                  const Hb = bb.call(this, eb),
+                    pb = Rb.shadowRoot(this);
+                  return pb && DM(this) && Mb.addShadowRoot(pb, wb), Hb
                 }
               }))
             })
           }
           reset() {
-            this.restoreHandlers.forEach((dd => {
+            this.restoreHandlers.forEach((bb => {
               let {
-                handler: Od
-              } = dd;
+                handler: wb
+              } = bb;
               try {
-                Od()
-              } catch (Od) {}
+                wb()
+              } catch (wb) {}
             })), this.restoreHandlers = [], this.shadowDoms = new WeakSet
           }
-          resetForDoc(dd) {
-            const Od = [];
-            for (const md of this.restoreHandlers)
-              if (md.doc === dd) try {
-                md.handler()
-              } catch (dd) {} else Od.push(md);
-            this.restoreHandlers = Od
+          resetForDoc(bb) {
+            const wb = [];
+            for (const Mb of this.restoreHandlers)
+              if (Mb.doc === bb) try {
+                Mb.handler()
+              } catch (bb) {} else wb.push(Mb);
+            this.restoreHandlers = wb
           }
         },
-        RW = "skip-frame";
+        ee = "skip-frame";
 
-      function XW(dd) {
-        if ("object" != typeof dd || null === dd) return !1;
+      function He(bb) {
+        if ("object" != typeof bb || null === bb) return !1;
         const {
-          x: Od,
-          y: md,
-          width: Wd,
-          height: Fd
-        } = dd;
-        return Number.isFinite(Od) && Number.isFinite(md) && Number.isFinite(Wd) && Number.isFinite(Fd) && Wd >= 0 && Fd >= 0
+          x: wb,
+          y: Mb,
+          width: eb,
+          height: Hb
+        } = bb;
+        return Number.isFinite(wb) && Number.isFinite(Mb) && Number.isFinite(eb) && Number.isFinite(Hb) && eb >= 0 && Hb >= 0
       }
-      for (var KW = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", hW = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256), vW = 0; 64 > vW; vW++) hW[KW.charCodeAt(vW)] = vW;
-      var QW = function(dd) {
-          var Od, md = new Uint8Array(dd),
-            Wd = md.length,
-            Fd = "";
-          for (Od = 0; Wd > Od; Od += 3) Fd += KW[md[Od] >> 2], Fd += KW[(3 & md[Od]) << 4 | md[Od + 1] >> 4], Fd += KW[(15 & md[Od + 1]) << 2 | md[Od + 2] >> 6], Fd += KW[63 & md[Od + 2]];
-          return Wd % 3 == 2 ? Fd = Fd.substring(0, Fd.length - 1) + "=" : Wd % 3 == 1 && (Fd = Fd.substring(0, Fd.length - 2) + "=="), Fd
+      for (var pe = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", Ve = "undefined" == typeof Uint8Array ? [] : new Uint8Array(256), ge = 0; 64 > ge; ge++) Ve[pe.charCodeAt(ge)] = ge;
+      var le = function(bb) {
+          var wb, Mb = new Uint8Array(bb),
+            eb = Mb.length,
+            Hb = "";
+          for (wb = 0; eb > wb; wb += 3) Hb += pe[Mb[wb] >> 2], Hb += pe[(3 & Mb[wb]) << 4 | Mb[wb + 1] >> 4], Hb += pe[(15 & Mb[wb + 1]) << 2 | Mb[wb + 2] >> 6], Hb += pe[63 & Mb[wb + 2]];
+          return eb % 3 == 2 ? Hb = Hb.substring(0, Hb.length - 1) + "=" : eb % 3 == 1 && (Hb = Hb.substring(0, Hb.length - 2) + "=="), Hb
         },
-        tW = !1,
-        oW = new Map,
-        NW = (dd, Od, md) => {
-          if (!dd || !yW(dd, Od) && "object" != typeof dd) return;
-          const Wd = function(dd, Od) {
-            let md = oW.get(dd);
-            return md || (md = new Map, oW.set(dd, md)), md.has(Od) || md.set(Od, []), md.get(Od)
-          }(md, dd.constructor.name);
-          let Fd = Wd.indexOf(dd);
-          return -1 === Fd && (Fd = Wd.length, Wd.push(dd)), Fd
+        Le = !1,
+        Ie = new Map,
+        Oe = (bb, wb, Mb) => {
+          if (!bb || !Ce(bb, wb) && "object" != typeof bb) return;
+          const eb = function(bb, wb) {
+            let Mb = Ie.get(bb);
+            return Mb || (Mb = new Map, Ie.set(bb, Mb)), Mb.has(wb) || Mb.set(wb, []), Mb.get(wb)
+          }(Mb, bb.constructor.name);
+          let Hb = eb.indexOf(bb);
+          return -1 === Hb && (Hb = eb.length, eb.push(bb)), Hb
         };
 
-      function qW(dd, Od, md, Wd) {
-        if (dd instanceof Array) return dd.map((dd => qW(dd, Od, md, Wd)));
-        if (null === dd) return dd;
-        if (dd instanceof Float32Array || dd instanceof Float64Array || dd instanceof Int32Array || dd instanceof Uint32Array || dd instanceof Uint8Array || dd instanceof Uint16Array || dd instanceof Int16Array || dd instanceof Int8Array || dd instanceof Uint8ClampedArray) return {
-          rr_type: dd.constructor.name,
-          args: [Object.values(dd)]
+      function Ue(bb, wb, Mb, eb) {
+        if (bb instanceof Array) return bb.map((bb => Ue(bb, wb, Mb, eb)));
+        if (null === bb) return bb;
+        if (bb instanceof Float32Array || bb instanceof Float64Array || bb instanceof Int32Array || bb instanceof Uint32Array || bb instanceof Uint8Array || bb instanceof Uint16Array || bb instanceof Int16Array || bb instanceof Int8Array || bb instanceof Uint8ClampedArray) return {
+          rr_type: bb.constructor.name,
+          args: [Object.values(bb)]
         };
-        if (dd instanceof ArrayBuffer) return {
-          rr_type: dd.constructor.name,
-          base64: QW(dd)
+        if (bb instanceof ArrayBuffer) return {
+          rr_type: bb.constructor.name,
+          base64: le(bb)
         };
-        if (dd instanceof DataView) return {
-          rr_type: dd.constructor.name,
-          args: [qW(dd.buffer, Od, md, Wd), dd.byteOffset, dd.byteLength]
+        if (bb instanceof DataView) return {
+          rr_type: bb.constructor.name,
+          args: [Ue(bb.buffer, wb, Mb, eb), bb.byteOffset, bb.byteLength]
         };
-        if (dd instanceof HTMLImageElement) {
-          const Od = dd.constructor.name,
+        if (bb instanceof HTMLImageElement) {
+          const wb = bb.constructor.name,
             {
-              src: md
-            } = dd;
+              src: Mb
+            } = bb;
           return {
-            rr_type: Od,
-            src: md
+            rr_type: wb,
+            src: Mb
           }
         }
-        if (dd instanceof HTMLCanvasElement) {
-          const Od = "HTMLImageElement";
-          let md;
+        if (bb instanceof HTMLCanvasElement) {
+          const wb = "HTMLImageElement";
+          let Mb;
           try {
-            md = dd.toDataURL(Wd.type, Wd.quality)
-          } catch (dd) {
-            throw function(dd) {
-              "SecurityError" === (null == dd ? void 0 : dd.name) ? tW || (tW = !0, console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read. A cross-origin image or video drawn into it taints it.", dd)): console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read.", dd)
-            }(dd), dd
+            Mb = bb.toDataURL(eb.type, eb.quality)
+          } catch (bb) {
+            throw function(bb) {
+              "SecurityError" === (null == bb ? void 0 : bb.name) ? Le || (Le = !0, console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read. A cross-origin image or video drawn into it taints it.", bb)): console.warn("[replay] canvas capture: skipping a canvas draw because its pixels cannot be read.", bb)
+            }(bb), bb
           }
           return {
-            rr_type: Od,
-            src: md
+            rr_type: wb,
+            src: Mb
           }
         }
-        return dd instanceof ImageData ? {
-          rr_type: dd.constructor.name,
-          args: [qW(dd.data, Od, md, Wd), dd.width, dd.height]
-        } : yW(dd, Od) || "object" == typeof dd ? {
-          rr_type: dd.constructor.name,
-          index: NW(dd, Od, md)
-        } : dd
+        return bb instanceof ImageData ? {
+          rr_type: bb.constructor.name,
+          args: [Ue(bb.data, wb, Mb, eb), bb.width, bb.height]
+        } : Ce(bb, wb) || "object" == typeof bb ? {
+          rr_type: bb.constructor.name,
+          index: Oe(bb, wb, Mb)
+        } : bb
       }
-      var HW = (dd, Od, md, Wd) => dd.map((dd => qW(dd, Od, md, Wd))),
-        yW = (dd, Od) => {
-          const md = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((dd => "function" == typeof Od[dd]));
-          return Boolean(md.find((md => dd instanceof Od[md])))
+      var te = (bb, wb, Mb, eb) => bb.map((bb => Ue(bb, wb, Mb, eb))),
+        Ce = (bb, wb) => {
+          const Mb = ["WebGLActiveInfo", "WebGLBuffer", "WebGLFramebuffer", "WebGLProgram", "WebGLRenderbuffer", "WebGLShader", "WebGLShaderPrecisionFormat", "WebGLTexture", "WebGLUniformLocation", "WebGLVertexArrayObject", "WebGLVertexArrayObjectOES"].filter((bb => "function" == typeof wb[bb]));
+          return Boolean(Mb.find((Mb => bb instanceof wb[Mb])))
         },
-        bW = ["webgl", "webgl2"];
+        Ee = ["webgl", "webgl2"];
 
-      function TW(dd) {
-        return "nodeType" in dd
+      function Fe(bb) {
+        return "nodeType" in bb
       }
 
-      function pW(dd, Od, md, Fd) {
-        const Rd = [];
+      function Be(bb, wb, Mb, Hb) {
+        const pb = [];
         try {
-          if (Fd) {
-            const Fd = function(dd, Od, md) {
-              const Fd = dd.GPUCanvasContext;
-              if ((null == Fd ? void 0 : Fd.prototype) && "function" == typeof Fd.prototype.configure) return xd(Fd.prototype, "configure", (function(Fd) {
-                return function(Rd) {
-                  const Xd = function(dd) {
+          if (Hb) {
+            const Hb = function(bb, wb, Mb) {
+              const Hb = bb.GPUCanvasContext;
+              if ((null == Hb ? void 0 : Hb.prototype) && "function" == typeof Hb.prototype.configure) return rb(Hb.prototype, "configure", (function(Hb) {
+                return function(pb) {
+                  const Vb = function(bb) {
                     const {
-                      canvas: Od
-                    } = dd;
-                    return Od && "object" == typeof Od ? Od : null
+                      canvas: wb
+                    } = bb;
+                    return wb && "object" == typeof wb ? wb : null
                   }(this);
-                  if (!Xd || TW(Xd) && gm(Xd, Od, md, !0)) return Fd.call(this, Rd);
-                  TW(Xd) && !("__context" in Xd) && (Xd.__context = "webgpu");
-                  const Kd = function(dd) {
-                    const Od = dd.GPUTextureUsage;
-                    return Od ? Od.COPY_SRC | Od.RENDER_ATTACHMENT : null
-                  }(dd);
-                  return Fd.call(this, null !== Kd && Rd ? Wd(Wd({}, Rd), {}, {
-                    usage: "number" == typeof Rd.usage ? Rd.usage | Kd : Kd
-                  }) : Rd)
+                  if (!Vb || Fe(Vb) && mM(Vb, wb, Mb, !0)) return Hb.call(this, pb);
+                  Fe(Vb) && !("__context" in Vb) && (Vb.__context = "webgpu");
+                  const gb = function(bb) {
+                    const wb = bb.GPUTextureUsage;
+                    return wb ? wb.COPY_SRC | wb.RENDER_ATTACHMENT : null
+                  }(bb);
+                  return Hb.call(this, null !== gb && pb ? eb(eb({}, pb), {}, {
+                    usage: "number" == typeof pb.usage ? pb.usage | gb : gb
+                  }) : pb)
                 }
               }))
-            }(dd, Od, md);
-            Fd && Rd.push(Fd)
+            }(bb, wb, Mb);
+            Hb && pb.push(Hb)
           }
-          const Xd = xd(dd.HTMLCanvasElement.prototype, "getContext", (function(dd) {
-            return function(Wd) {
-              const Rd = function(dd) {
-                return "experimental-webgl" === dd ? "webgl" : dd
-              }(Wd);
-              for (var Xd = arguments.length, Kd = new Array(Xd > 1 ? Xd - 1 : 0), hd = 1; hd < Xd; hd++) Kd[hd - 1] = arguments[hd];
-              if (!gm(this, Od, md, !0) && ("__context" in this || (this.__context = Rd), Fd && bW.includes(Rd)))
-                if (Kd[0] && "object" == typeof Kd[0]) {
-                  const dd = Kd[0];
-                  dd.preserveDrawingBuffer || (dd.preserveDrawingBuffer = !0)
-                } else Kd.splice(0, 1, {
+          const Vb = rb(bb.HTMLCanvasElement.prototype, "getContext", (function(bb) {
+            return function(eb) {
+              const pb = function(bb) {
+                return "experimental-webgl" === bb ? "webgl" : bb
+              }(eb);
+              for (var Vb = arguments.length, gb = new Array(Vb > 1 ? Vb - 1 : 0), lb = 1; lb < Vb; lb++) gb[lb - 1] = arguments[lb];
+              if (!mM(this, wb, Mb, !0) && ("__context" in this || (this.__context = pb), Hb && Ee.includes(pb)))
+                if (gb[0] && "object" == typeof gb[0]) {
+                  const bb = gb[0];
+                  bb.preserveDrawingBuffer || (bb.preserveDrawingBuffer = !0)
+                } else gb.splice(0, 1, {
                   preserveDrawingBuffer: !0
                 });
-              return dd.apply(this, [Wd, ...Kd])
+              return bb.apply(this, [eb, ...gb])
             }
           }));
-          Rd.push(Xd)
-        } catch (dd) {
+          pb.push(Vb)
+        } catch (bb) {
           console.warn("failed to patch HTMLCanvasElement.prototype.getContext")
         }
         return () => {
-          Rd.forEach((dd => dd()))
+          pb.forEach((bb => bb()))
         }
       }
 
-      function YW(dd, Od, md, Wd, Fd, Rd, Xd) {
-        const Kd = [],
-          hd = Object.getOwnPropertyNames(dd);
-        for (const vd of hd)
-          if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(vd)) try {
-            if ("function" != typeof dd[vd]) continue;
-            const hd = xd(dd, vd, (function(dd) {
+      function se(bb, wb, Mb, eb, Hb, pb, Vb) {
+        const gb = [],
+          lb = Object.getOwnPropertyNames(bb);
+        for (const Lb of lb)
+          if (!["isContextLost", "canvas", "drawingBufferWidth", "drawingBufferHeight"].includes(Lb)) try {
+            if ("function" != typeof bb[Lb]) continue;
+            const lb = rb(bb, Lb, (function(bb) {
               return function() {
-                for (var Kd = arguments.length, hd = new Array(Kd), Qd = 0; Qd < Kd; Qd++) hd[Qd] = arguments[Qd];
-                const td = dd.apply(this, hd);
-                if (NW(td, Rd, this), this.canvas && "tagName" in this.canvas && !gm(this.canvas, Wd, Fd, !0)) {
-                  let Wd;
+                for (var gb = arguments.length, lb = new Array(gb), Ib = 0; Ib < gb; Ib++) lb[Ib] = arguments[Ib];
+                const Ob = bb.apply(this, lb);
+                if (Oe(Ob, pb, this), this.canvas && "tagName" in this.canvas && !mM(this.canvas, eb, Hb, !0)) {
+                  let eb;
                   try {
-                    Wd = HW(hd, Rd, this, Xd)
-                  } catch (dd) {}
-                  Wd && md(this.canvas, {
-                    type: Od,
-                    property: vd,
-                    args: Wd
+                    eb = te(lb, pb, this, Vb)
+                  } catch (bb) {}
+                  eb && Mb(this.canvas, {
+                    type: wb,
+                    property: Lb,
+                    args: eb
                   })
                 }
-                return td
+                return Ob
               }
             }));
-            Kd.push(hd)
-          } catch (Rd) {
-            const Xd = Hm(dd, vd, {
-              set(dd) {
-                this.canvas && "tagName" in this.canvas && !gm(this.canvas, Wd, Fd, !0) && md(this.canvas, {
-                  type: Od,
-                  property: vd,
-                  args: [dd],
+            gb.push(lb)
+          } catch (pb) {
+            const Vb = tM(bb, Lb, {
+              set(bb) {
+                this.canvas && "tagName" in this.canvas && !mM(this.canvas, eb, Hb, !0) && Mb(this.canvas, {
+                  type: wb,
+                  property: Lb,
+                  args: [bb],
                   setter: !0
                 })
               }
             });
-            Kd.push(Xd)
+            gb.push(Vb)
           }
-        return Kd
+        return gb
       }
-      var gW = '(function() {\n\t//#region ../../../../../../setup-pnpm/node_modules/.bin/store/v11/links/@/base64-arraybuffer/1.0.2/f63fa6b5c318cf1c9f6bdd1d4292ad2f15f76f2ec78475025a2d44070e896fe9/node_modules/base64-arraybuffer/dist/base64-arraybuffer.es5.js\n\tvar chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n\tvar lookup = typeof Uint8Array === "undefined" ? [] : /* @__PURE__ */ new Uint8Array(256);\n\tfor (var i = 0; i < chars.length; i++) lookup[chars.charCodeAt(i)] = i;\n\tvar encode = function(arraybuffer) {\n\t\tvar bytes = new Uint8Array(arraybuffer), i, len = bytes.length, base64 = "";\n\t\tfor (i = 0; i < len; i += 3) {\n\t\t\tbase64 += chars[bytes[i] >> 2];\n\t\t\tbase64 += chars[(bytes[i] & 3) << 4 | bytes[i + 1] >> 4];\n\t\t\tbase64 += chars[(bytes[i + 1] & 15) << 2 | bytes[i + 2] >> 6];\n\t\t\tbase64 += chars[bytes[i + 2] & 63];\n\t\t}\n\t\tif (len % 3 === 2) base64 = base64.substring(0, base64.length - 1) + "=";\n\t\telse if (len % 3 === 1) base64 = base64.substring(0, base64.length - 2) + "==";\n\t\treturn base64;\n\t};\n\t//#endregion\n\t//#region ../rrweb/src/record/workers/image-bitmap-data-url-worker.ts\n\tconst lastFingerprintMap = /* @__PURE__ */ new Map();\n\tconst transparentFingerprintMap = /* @__PURE__ */ new Map();\n\tconst lastSentAtMap = /* @__PURE__ */ new Map();\n\tconst PROVIDER_KEYFRAME_INTERVAL_MS = 3e4;\n\tfunction hashPixels(data) {\n\t\tconst view = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >>> 2);\n\t\tlet primaryHash = 2166136261;\n\t\tlet secondaryHash = 2654435769;\n\t\tfor (let i = 0; i < view.length; i++) {\n\t\t\tprimaryHash ^= view[i];\n\t\t\tprimaryHash = Math.imul(primaryHash, 16777619);\n\t\t\tsecondaryHash ^= view[i];\n\t\t\tsecondaryHash = Math.imul(secondaryHash, 2246822507);\n\t\t}\n\t\treturn `${(primaryHash >>> 0).toString(16)}:${(secondaryHash >>> 0).toString(16)}`;\n\t}\n\tfunction frameFingerprint(width, height, data) {\n\t\treturn `${width}x${height}:${hashPixels(data)}`;\n\t}\n\tfunction transparentFingerprint(width, height) {\n\t\tconst pixelCount = width * height;\n\t\tlet hash = transparentFingerprintMap.get(pixelCount);\n\t\tif (hash === void 0) {\n\t\t\thash = hashPixels(new Uint8ClampedArray(pixelCount * 4));\n\t\t\ttransparentFingerprintMap.set(pixelCount, hash);\n\t\t}\n\t\treturn `${width}x${height}:${hash}`;\n\t}\n\tconst worker = self;\n\tlet reusableCanvas = null;\n\tlet reusableCtx = null;\n\tworker.onmessage = async function(e) {\n\t\tif ("resetFrameDedup" in e.data) {\n\t\t\tlastFingerprintMap.clear();\n\t\t\treturn;\n\t\t}\n\t\tif ("OffscreenCanvas" in globalThis) {\n\t\t\tconst { id, bitmap, width, height, displayWidth, displayHeight, dataURLOptions, maskRegions } = e.data;\n\t\t\ttry {\n\t\t\t\tif (!reusableCanvas || reusableCanvas.width !== width || reusableCanvas.height !== height) {\n\t\t\t\t\treusableCanvas = new OffscreenCanvas(width, height);\n\t\t\t\t\treusableCtx = reusableCanvas.getContext("2d", { willReadFrequently: true });\n\t\t\t\t}\n\t\t\t\tconst ctx = reusableCtx;\n\t\t\t\tctx.clearRect(0, 0, width, height);\n\t\t\t\tctx.drawImage(bitmap, 0, 0);\n\t\t\t\tbitmap.close();\n\t\t\t\tif (maskRegions) {\n\t\t\t\t\tctx.fillStyle = "black";\n\t\t\t\t\tfor (const region of maskRegions) ctx.fillRect(region.x, region.y, region.width, region.height);\n\t\t\t\t}\n\t\t\t\tconst fingerprint = frameFingerprint(width, height, ctx.getImageData(0, 0, width, height).data);\n\t\t\t\tif (fingerprint === (lastFingerprintMap.get(id) ?? transparentFingerprint(width, height))) {\n\t\t\t\t\tconst lastSentAt = lastSentAtMap.get(id);\n\t\t\t\t\tif (!(maskRegions !== void 0 && lastSentAt !== void 0 && Date.now() - lastSentAt >= PROVIDER_KEYFRAME_INTERVAL_MS)) return worker.postMessage({ id });\n\t\t\t\t}\n\t\t\t\tconst blob = await reusableCanvas.convertToBlob(dataURLOptions);\n\t\t\t\tconst arrayBuffer = await blob.arrayBuffer();\n\t\t\t\tworker.postMessage({\n\t\t\t\t\tid,\n\t\t\t\t\ttype: blob.type,\n\t\t\t\t\tbase64: encode(arrayBuffer),\n\t\t\t\t\tdisplayWidth,\n\t\t\t\t\tdisplayHeight\n\t\t\t\t});\n\t\t\t\tlastFingerprintMap.set(id, fingerprint);\n\t\t\t\tlastSentAtMap.set(id, Date.now());\n\t\t\t} catch {\n\t\t\t\tworker.postMessage({ id });\n\t\t\t}\n\t\t} else {\n\t\t\te.data.bitmap.close();\n\t\t\treturn worker.postMessage({ id: e.data.id });\n\t\t}\n\t};\n\t//#endregion\n})();\n',
-        wW = "undefined" != typeof self && self.Blob && new Blob(["(self.URL || self.webkitURL).revokeObjectURL(self.location.href);", gW], {
+      var me = '(function() {\n\t//#region ../../../../../../setup-pnpm/node_modules/.bin/store/v11/links/@/base64-arraybuffer/1.0.2/f63fa6b5c318cf1c9f6bdd1d4292ad2f15f76f2ec78475025a2d44070e896fe9/node_modules/base64-arraybuffer/dist/base64-arraybuffer.es5.js\n\tvar chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";\n\tvar lookup = typeof Uint8Array === "undefined" ? [] : /* @__PURE__ */ new Uint8Array(256);\n\tfor (var i = 0; i < chars.length; i++) lookup[chars.charCodeAt(i)] = i;\n\tvar encode = function(arraybuffer) {\n\t\tvar bytes = new Uint8Array(arraybuffer), i, len = bytes.length, base64 = "";\n\t\tfor (i = 0; i < len; i += 3) {\n\t\t\tbase64 += chars[bytes[i] >> 2];\n\t\t\tbase64 += chars[(bytes[i] & 3) << 4 | bytes[i + 1] >> 4];\n\t\t\tbase64 += chars[(bytes[i + 1] & 15) << 2 | bytes[i + 2] >> 6];\n\t\t\tbase64 += chars[bytes[i + 2] & 63];\n\t\t}\n\t\tif (len % 3 === 2) base64 = base64.substring(0, base64.length - 1) + "=";\n\t\telse if (len % 3 === 1) base64 = base64.substring(0, base64.length - 2) + "==";\n\t\treturn base64;\n\t};\n\t//#endregion\n\t//#region ../rrweb/src/record/workers/image-bitmap-data-url-worker.ts\n\tconst lastFingerprintMap = /* @__PURE__ */ new Map();\n\tconst transparentFingerprintMap = /* @__PURE__ */ new Map();\n\tconst lastSentAtMap = /* @__PURE__ */ new Map();\n\tconst PROVIDER_KEYFRAME_INTERVAL_MS = 3e4;\n\tfunction hashPixels(data) {\n\t\tconst view = new Uint32Array(data.buffer, data.byteOffset, data.byteLength >>> 2);\n\t\tlet primaryHash = 2166136261;\n\t\tlet secondaryHash = 2654435769;\n\t\tfor (let i = 0; i < view.length; i++) {\n\t\t\tprimaryHash ^= view[i];\n\t\t\tprimaryHash = Math.imul(primaryHash, 16777619);\n\t\t\tsecondaryHash ^= view[i];\n\t\t\tsecondaryHash = Math.imul(secondaryHash, 2246822507);\n\t\t}\n\t\treturn `${(primaryHash >>> 0).toString(16)}:${(secondaryHash >>> 0).toString(16)}`;\n\t}\n\tfunction frameFingerprint(width, height, data) {\n\t\treturn `${width}x${height}:${hashPixels(data)}`;\n\t}\n\tfunction transparentFingerprint(width, height) {\n\t\tconst pixelCount = width * height;\n\t\tlet hash = transparentFingerprintMap.get(pixelCount);\n\t\tif (hash === void 0) {\n\t\t\thash = hashPixels(new Uint8ClampedArray(pixelCount * 4));\n\t\t\ttransparentFingerprintMap.set(pixelCount, hash);\n\t\t}\n\t\treturn `${width}x${height}:${hash}`;\n\t}\n\tconst worker = self;\n\tlet reusableCanvas = null;\n\tlet reusableCtx = null;\n\tworker.onmessage = async function(e) {\n\t\tif ("resetFrameDedup" in e.data) {\n\t\t\tlastFingerprintMap.clear();\n\t\t\treturn;\n\t\t}\n\t\tif ("OffscreenCanvas" in globalThis) {\n\t\t\tconst { id, bitmap, width, height, displayWidth, displayHeight, dataURLOptions, maskRegions } = e.data;\n\t\t\ttry {\n\t\t\t\tif (!reusableCanvas || reusableCanvas.width !== width || reusableCanvas.height !== height) {\n\t\t\t\t\treusableCanvas = new OffscreenCanvas(width, height);\n\t\t\t\t\treusableCtx = reusableCanvas.getContext("2d", { willReadFrequently: true });\n\t\t\t\t}\n\t\t\t\tconst ctx = reusableCtx;\n\t\t\t\tctx.clearRect(0, 0, width, height);\n\t\t\t\tctx.drawImage(bitmap, 0, 0);\n\t\t\t\tbitmap.close();\n\t\t\t\tif (maskRegions) {\n\t\t\t\t\tctx.fillStyle = "black";\n\t\t\t\t\tfor (const region of maskRegions) ctx.fillRect(region.x, region.y, region.width, region.height);\n\t\t\t\t}\n\t\t\t\tconst fingerprint = frameFingerprint(width, height, ctx.getImageData(0, 0, width, height).data);\n\t\t\t\tif (fingerprint === (lastFingerprintMap.get(id) ?? transparentFingerprint(width, height))) {\n\t\t\t\t\tconst lastSentAt = lastSentAtMap.get(id);\n\t\t\t\t\tif (!(maskRegions !== void 0 && lastSentAt !== void 0 && Date.now() - lastSentAt >= PROVIDER_KEYFRAME_INTERVAL_MS)) return worker.postMessage({ id });\n\t\t\t\t}\n\t\t\t\tconst blob = await reusableCanvas.convertToBlob(dataURLOptions);\n\t\t\t\tconst arrayBuffer = await blob.arrayBuffer();\n\t\t\t\tworker.postMessage({\n\t\t\t\t\tid,\n\t\t\t\t\ttype: blob.type,\n\t\t\t\t\tbase64: encode(arrayBuffer),\n\t\t\t\t\tdisplayWidth,\n\t\t\t\t\tdisplayHeight\n\t\t\t\t});\n\t\t\t\tlastFingerprintMap.set(id, fingerprint);\n\t\t\t\tlastSentAtMap.set(id, Date.now());\n\t\t\t} catch {\n\t\t\t\tworker.postMessage({ id });\n\t\t\t}\n\t\t} else {\n\t\t\te.data.bitmap.close();\n\t\t\treturn worker.postMessage({ id: e.data.id });\n\t\t}\n\t};\n\t//#endregion\n})();\n',
+        he = "undefined" != typeof self && self.Blob && new Blob(["(self.URL || self.webkitURL).revokeObjectURL(self.location.href);", me], {
           type: "text/javascript;charset=utf-8"
         });
 
-      function aW(dd) {
-        let Od;
+      function ze(bb) {
+        let wb;
         try {
-          if (Od = wW && (self.URL || self.webkitURL).createObjectURL(wW), !Od) throw "";
-          const md = new Worker(Od, {
-            name: null == dd ? void 0 : dd.name
+          if (wb = he && (self.URL || self.webkitURL).createObjectURL(he), !wb) throw "";
+          const Mb = new Worker(wb, {
+            name: null == bb ? void 0 : bb.name
           });
-          return md.addEventListener("error", (() => {
-            (self.URL || self.webkitURL).revokeObjectURL(Od)
-          })), md
-        } catch (Od) {
-          return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(gW), {
-            name: null == dd ? void 0 : dd.name
+          return Mb.addEventListener("error", (() => {
+            (self.URL || self.webkitURL).revokeObjectURL(wb)
+          })), Mb
+        } catch (wb) {
+          return new Worker("data:text/javascript;charset=utf-8," + encodeURIComponent(me), {
+            name: null == bb ? void 0 : bb.name
           })
         }
       }
-      var EW = "A page CSP that omits blob: from worker-src or script-src blocks it";
+      var Xe = "A page CSP that omits blob: from worker-src or script-src blocks it";
 
-      function JW(dd) {
-        for (var Od = arguments.length, md = new Array(Od > 1 ? Od - 1 : 0), Wd = 1; Wd < Od; Wd++) md[Wd - 1] = arguments[Wd];
-        console.warn(`[replay] canvas capture: ${dd}`, ...md)
+      function xe(bb) {
+        for (var wb = arguments.length, Mb = new Array(wb > 1 ? wb - 1 : 0), eb = 1; eb < wb; eb++) Mb[eb - 1] = arguments[eb];
+        console.warn(`[replay] canvas capture: ${bb}`, ...Mb)
       }
-      var UW, xW, BW, SW = class {
+      var je, Ke, re, Re = class {
           onFullSnapshot() {
-            var dd;
-            null === (dd = this.resetFrameDedup) || void 0 === dd || dd.call(this)
+            var bb;
+            null === (bb = this.resetFrameDedup) || void 0 === bb || bb.call(this)
           }
           acquire() {
             this.refCount += 1
@@ -3465,66 +3465,66 @@ export const modules = {
           unlock() {
             this.locked = !1
           }
-          constructor(dd) {
-            XO(this, "pendingCanvasMutations", new Map), XO(this, "rafStamps", {
+          constructor(bb) {
+            Hw(this, "pendingCanvasMutations", new Map), Hw(this, "rafStamps", {
               latestId: 0,
               invokeId: null
-            }), XO(this, "mirror", void 0), XO(this, "mutationCb", void 0), XO(this, "resetObservers", void 0), XO(this, "frozen", !1), XO(this, "locked", !1), XO(this, "rafIdTimestamp", null), XO(this, "rafIdFlush", null), XO(this, "refCount", 0), XO(this, "torndown", !1), XO(this, "resetFrameDedup", null), XO(this, "processMutation", ((dd, Od) => {
-              (this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(dd) || this.pendingCanvasMutations.set(dd, []), this.pendingCanvasMutations.get(dd).push(Od)
+            }), Hw(this, "mirror", void 0), Hw(this, "mutationCb", void 0), Hw(this, "resetObservers", void 0), Hw(this, "frozen", !1), Hw(this, "locked", !1), Hw(this, "rafIdTimestamp", null), Hw(this, "rafIdFlush", null), Hw(this, "refCount", 0), Hw(this, "torndown", !1), Hw(this, "resetFrameDedup", null), Hw(this, "processMutation", ((bb, wb) => {
+              (this.rafStamps.invokeId && this.rafStamps.latestId !== this.rafStamps.invokeId || !this.rafStamps.invokeId) && (this.rafStamps.invokeId = this.rafStamps.latestId), this.pendingCanvasMutations.has(bb) || this.pendingCanvasMutations.set(bb, []), this.pendingCanvasMutations.get(bb).push(wb)
             }));
             const {
-              sampling: Od = "all",
-              win: md,
-              blockClass: Wd,
-              blockSelector: Fd,
-              recordCanvas: Rd,
-              dataURLOptions: Xd,
-              resolutionScale: Kd,
-              canvasMasking: hd
-            } = dd;
-            this.mutationCb = dd.mutationCb, this.mirror = dd.mirror, Rd && "all" === Od && this.initCanvasMutationObserver(md, Wd, Fd, Xd), Rd && "number" == typeof Od && this.initCanvasFPSObserver(Od, md, Wd, Fd, {
-              dataURLOptions: Xd,
-              resolutionScale: Kd,
-              canvasMasking: hd
+              sampling: wb = "all",
+              win: Mb,
+              blockClass: eb,
+              blockSelector: Hb,
+              recordCanvas: pb,
+              dataURLOptions: Vb,
+              resolutionScale: gb,
+              canvasMasking: lb
+            } = bb;
+            this.mutationCb = bb.mutationCb, this.mirror = bb.mirror, pb && "all" === wb && this.initCanvasMutationObserver(Mb, eb, Hb, Vb), pb && "number" == typeof wb && this.initCanvasFPSObserver(wb, Mb, eb, Hb, {
+              dataURLOptions: Vb,
+              resolutionScale: gb,
+              canvasMasking: lb
             })
           }
-          initCanvasFPSObserver(dd, Od, md, Wd, Fd) {
-            var Xd = this;
-            if (!("OffscreenCanvas" in Od)) return void JW("disabled because this browser does not support OffscreenCanvas");
-            const Kd = "number" == typeof Fd.resolutionScale && Number.isFinite(Fd.resolutionScale) ? Math.min(1, Math.max(.1, Fd.resolutionScale)) : 1,
-              hd = pW(Od, md, Wd, !0),
-              vd = new Map;
-            let Qd;
+          initCanvasFPSObserver(bb, wb, Mb, eb, Hb) {
+            var Vb = this;
+            if (!("OffscreenCanvas" in wb)) return void xe("disabled because this browser does not support OffscreenCanvas");
+            const gb = "number" == typeof Hb.resolutionScale && Number.isFinite(Hb.resolutionScale) ? Math.min(1, Math.max(.1, Hb.resolutionScale)) : 1,
+              lb = Be(wb, Mb, eb, !0),
+              Lb = new Map;
+            let Ib;
             try {
-              Qd = new aW
-            } catch (dd) {
-              return JW(`disabled because the encode worker did not start. ${EW}`, dd), void hd()
+              Ib = new ze
+            } catch (bb) {
+              return xe(`disabled because the encode worker did not start. ${Xe}`, bb), void lb()
             }
-            let od = !1;
-            Qd.onerror = dd => {
-              var Od;
-              od = !0, JW(`stopped because the encode worker failed. ${EW}`, dd), cancelAnimationFrame(yd), null === (Od = Qd.terminate) || void 0 === Od || Od.call(Qd), this.resetFrameDedup = null
+            let Ub = !1;
+            Ib.onerror = bb => {
+              var wb;
+              Ub = !0, xe(`stopped because the encode worker failed. ${Xe}`, bb), cancelAnimationFrame(Fb), null === (wb = Ib.terminate) || void 0 === wb || wb.call(Ib), this.resetFrameDedup = null
             }, this.resetFrameDedup = () => {
-              Qd.postMessage({
+              Ib.postMessage({
                 resetFrameDedup: !0
               })
-            }, Qd.onmessage = dd => {
+            }, Ib.onmessage = bb => {
               const {
-                id: Od
-              } = dd.data;
-              if (vd.set(Od, !1), !("base64" in dd.data)) return;
+                id: wb
+              } = bb.data;
+              if (Lb.set(wb, !1), !("base64" in bb.data)) return;
               const {
-                base64: md,
-                type: Wd,
-                displayWidth: Fd,
-                displayHeight: Rd
-              } = dd.data;
+                base64: Mb,
+                type: eb,
+                displayWidth: Hb,
+                displayHeight: pb
+              } = bb.data;
               this.mutationCb({
-                id: Od,
-                type: td["2D"],
+                id: wb,
+                type: Ob["2D"],
                 commands: [{
                   property: "clearRect",
-                  args: [0, 0, Fd, Rd]
+                  args: [0, 0, Hb, pb]
                 }, {
                   property: "drawImage",
                   args: [{
@@ -3533,481 +3533,481 @@ export const modules = {
                       rr_type: "Blob",
                       data: [{
                         rr_type: "ArrayBuffer",
-                        base64: md
+                        base64: Mb
                       }],
-                      type: Wd
+                      type: eb
                     }]
-                  }, 0, 0, Fd, Rd]
+                  }, 0, 0, Hb, pb]
                 }],
-                displayWidth: Fd,
-                displayHeight: Rd
+                displayWidth: Hb,
+                displayHeight: pb
               })
             };
-            let Nd = !1,
-              qd = !1;
-            const Hd = 1e3 / dd;
-            let yd, bd = 0;
-            const Td = dd => {
-              var hd;
-              od || (bd && Hd > dd - bd || (bd = dd, (() => {
-                const dd = [],
-                  Fd = Od => {
+            let tb = !1,
+              Cb = !1;
+            const Eb = 1e3 / bb;
+            let Fb, Bb = 0;
+            const sb = bb => {
+              var lb;
+              Ub || (Bb && Eb > bb - Bb || (Bb = bb, (() => {
+                const bb = [],
+                  Hb = wb => {
                     try {
-                      Od.querySelectorAll("canvas").forEach((Od => {
-                        gm(Od, md, Wd, !0) || dd.push(Od)
-                      })), Od.querySelectorAll("*").forEach((dd => {
-                        dd.shadowRoot && Fd(dd.shadowRoot)
+                      wb.querySelectorAll("canvas").forEach((wb => {
+                        mM(wb, Mb, eb, !0) || bb.push(wb)
+                      })), wb.querySelectorAll("*").forEach((bb => {
+                        bb.shadowRoot && Hb(bb.shadowRoot)
                       }))
-                    } catch (dd) {}
+                    } catch (bb) {}
                   };
-                return Fd(Od.document), dd
-              })().forEach((hd = Rd((function*(dd) {
-                const Od = Xd.mirror.getId(dd);
-                if (-1 !== Od && !vd.get(Od) && 0 !== dd.width && 0 !== dd.height) {
-                  vd.set(Od, !0);
+                return Hb(wb.document), bb
+              })().forEach((lb = pb((function*(bb) {
+                const wb = Vb.mirror.getId(bb);
+                if (-1 !== wb && !Lb.get(wb) && 0 !== bb.width && 0 !== bb.height) {
+                  Lb.set(wb, !0);
                   try {
-                    if (["webgl", "webgl2"].includes(dd.__context)) {
-                      var md, Wd;
-                      const Fd = dd.getContext(dd.__context);
-                      if (null == Fd || null === (md = Fd.isContextLost) || void 0 === md ? void 0 : md.call(Fd)) return void vd.set(Od, !1);
-                      !1 === (null == Fd || null === (Wd = Fd.getContextAttributes()) || void 0 === Wd ? void 0 : Wd.preserveDrawingBuffer) && Fd.clear(Fd.COLOR_BUFFER_BIT)
+                    if (["webgl", "webgl2"].includes(bb.__context)) {
+                      var Mb, eb;
+                      const Hb = bb.getContext(bb.__context);
+                      if (null == Hb || null === (Mb = Hb.isContextLost) || void 0 === Mb ? void 0 : Mb.call(Hb)) return void Lb.set(wb, !1);
+                      !1 === (null == Hb || null === (eb = Hb.getContextAttributes()) || void 0 === eb ? void 0 : eb.preserveDrawingBuffer) && Hb.clear(Hb.COLOR_BUFFER_BIT)
                     }
-                    const Rd = dd.clientWidth || dd.width,
-                      Xd = dd.clientHeight || dd.height,
-                      hd = Math.max(1, Math.round(Rd * Kd)),
-                      td = Math.max(1, Math.round(Xd * Kd)),
-                      od = function(dd, Od, md, Wd, Fd, Rd) {
-                        if (!dd || "function" != typeof dd.regionsFn) return;
-                        let Xd;
+                    const pb = bb.clientWidth || bb.width,
+                      Vb = bb.clientHeight || bb.height,
+                      lb = Math.max(1, Math.round(pb * gb)),
+                      Ob = Math.max(1, Math.round(Vb * gb)),
+                      Ub = function(bb, wb, Mb, eb, Hb, pb) {
+                        if (!bb || "function" != typeof bb.regionsFn) return;
+                        let Vb;
                         try {
-                          Xd = dd.regionsFn(Od)
-                        } catch (dd) {
-                          return RW
+                          Vb = bb.regionsFn(wb)
+                        } catch (bb) {
+                          return ee
                         }
-                        if (void 0 === Xd) return;
-                        if (!Array.isArray(Xd) || !Xd.every(XW)) return RW;
-                        const Kd = md / Fd,
-                          hd = Wd / Rd;
-                        return Xd.filter((dd => dd.width > 0 && dd.height > 0)).map((dd => {
-                          const Od = Math.floor(dd.x * Kd),
-                            md = Math.floor(dd.y * hd);
+                        if (void 0 === Vb) return;
+                        if (!Array.isArray(Vb) || !Vb.every(He)) return ee;
+                        const gb = Mb / Hb,
+                          lb = eb / pb;
+                        return Vb.filter((bb => bb.width > 0 && bb.height > 0)).map((bb => {
+                          const wb = Math.floor(bb.x * gb),
+                            Mb = Math.floor(bb.y * lb);
                           return {
-                            x: Od,
-                            y: md,
-                            width: Math.ceil((dd.x + dd.width) * Kd) - Od,
-                            height: Math.ceil((dd.y + dd.height) * hd) - md
+                            x: wb,
+                            y: Mb,
+                            width: Math.ceil((bb.x + bb.width) * gb) - wb,
+                            height: Math.ceil((bb.y + bb.height) * lb) - Mb
                           }
                         }))
-                      }(Fd.canvasMasking, dd, hd, td, Rd, Xd);
-                    if ("skip-frame" === od) return Nd || (Nd = !0, JW("dropped a frame because the mask provider did not return valid regions. A provider that always fails records no canvas frames at all")), void vd.set(Od, !1);
-                    const qd = yield createImageBitmap(dd, 1 > Kd ? {
-                      resizeWidth: hd,
-                      resizeHeight: td,
+                      }(Hb.canvasMasking, bb, lb, Ob, pb, Vb);
+                    if ("skip-frame" === Ub) return tb || (tb = !0, xe("dropped a frame because the mask provider did not return valid regions. A provider that always fails records no canvas frames at all")), void Lb.set(wb, !1);
+                    const Cb = yield createImageBitmap(bb, 1 > gb ? {
+                      resizeWidth: lb,
+                      resizeHeight: Ob,
                       resizeQuality: "medium"
                     } : {
-                      resizeWidth: hd,
-                      resizeHeight: td
+                      resizeWidth: lb,
+                      resizeHeight: Ob
                     });
-                    Qd.postMessage({
-                      id: Od,
-                      bitmap: qd,
-                      width: hd,
-                      height: td,
-                      displayWidth: Rd,
-                      displayHeight: Xd,
-                      dataURLOptions: Fd.dataURLOptions,
-                      maskRegions: od
-                    }, [qd])
-                  } catch (dd) {
-                    qd || (qd = !0, JW("dropped a frame because the snapshot failed. A canvas that fails every frame records no canvas frames at all", dd)), vd.set(Od, !1)
+                    Ib.postMessage({
+                      id: wb,
+                      bitmap: Cb,
+                      width: lb,
+                      height: Ob,
+                      displayWidth: pb,
+                      displayHeight: Vb,
+                      dataURLOptions: Hb.dataURLOptions,
+                      maskRegions: Ub
+                    }, [Cb])
+                  } catch (bb) {
+                    Cb || (Cb = !0, xe("dropped a frame because the snapshot failed. A canvas that fails every frame records no canvas frames at all", bb)), Lb.set(wb, !1)
                   }
                 }
-              })), function(dd) {
-                return hd.apply(this, arguments)
-              }))), yd = requestAnimationFrame(Td))
+              })), function(bb) {
+                return lb.apply(this, arguments)
+              }))), Fb = requestAnimationFrame(sb))
             };
-            yd = requestAnimationFrame(Td), this.resetObservers = () => {
-              var dd;
-              hd(), cancelAnimationFrame(yd), null === (dd = Qd.terminate) || void 0 === dd || dd.call(Qd), this.resetFrameDedup = null
+            Fb = requestAnimationFrame(sb), this.resetObservers = () => {
+              var bb;
+              lb(), cancelAnimationFrame(Fb), null === (bb = Ib.terminate) || void 0 === bb || bb.call(Ib), this.resetFrameDedup = null
             }
           }
-          initCanvasMutationObserver(dd, Od, md, Wd) {
+          initCanvasMutationObserver(bb, wb, Mb, eb) {
             this.startRAFTimestamping(), this.startPendingCanvasMutationFlusher();
-            const Fd = pW(dd, Od, md, !1),
-              Rd = function(dd, Od, md, Wd, Fd) {
-                const Rd = [],
-                  Xd = Object.getOwnPropertyNames(Od.CanvasRenderingContext2D.prototype);
-                for (const Kd of Xd) try {
-                  if ("function" != typeof Od.CanvasRenderingContext2D.prototype[Kd]) continue;
-                  const Xd = xd(Od.CanvasRenderingContext2D.prototype, Kd, (function(Rd) {
+            const Hb = Be(bb, wb, Mb, !1),
+              pb = function(bb, wb, Mb, eb, Hb) {
+                const pb = [],
+                  Vb = Object.getOwnPropertyNames(wb.CanvasRenderingContext2D.prototype);
+                for (const gb of Vb) try {
+                  if ("function" != typeof wb.CanvasRenderingContext2D.prototype[gb]) continue;
+                  const Vb = rb(wb.CanvasRenderingContext2D.prototype, gb, (function(pb) {
                     return function() {
-                      for (var Xd = arguments.length, hd = new Array(Xd), vd = 0; vd < Xd; vd++) hd[vd] = arguments[vd];
-                      return gm(this.canvas, md, Wd, !0) || setTimeout((() => {
-                        let md;
+                      for (var Vb = arguments.length, lb = new Array(Vb), Lb = 0; Lb < Vb; Lb++) lb[Lb] = arguments[Lb];
+                      return mM(this.canvas, Mb, eb, !0) || setTimeout((() => {
+                        let Mb;
                         try {
-                          md = HW(hd, Od, this, Fd)
-                        } catch (dd) {
+                          Mb = te(lb, wb, this, Hb)
+                        } catch (bb) {
                           return
                         }
-                        dd(this.canvas, {
-                          type: td["2D"],
-                          property: Kd,
-                          args: md
+                        bb(this.canvas, {
+                          type: Ob["2D"],
+                          property: gb,
+                          args: Mb
                         })
-                      }), 0), Rd.apply(this, hd)
+                      }), 0), pb.apply(this, lb)
                     }
                   }));
-                  Rd.push(Xd)
-                } catch (Fd) {
-                  const Xd = Hm(Od.CanvasRenderingContext2D.prototype, Kd, {
-                    set(Od) {
-                      gm(this.canvas, md, Wd, !0) || dd(this.canvas, {
-                        type: td["2D"],
-                        property: Kd,
-                        args: [Od],
+                  pb.push(Vb)
+                } catch (Hb) {
+                  const Vb = tM(wb.CanvasRenderingContext2D.prototype, gb, {
+                    set(wb) {
+                      mM(this.canvas, Mb, eb, !0) || bb(this.canvas, {
+                        type: Ob["2D"],
+                        property: gb,
+                        args: [wb],
                         setter: !0
                       })
                     }
                   });
-                  Rd.push(Xd)
+                  pb.push(Vb)
                 }
                 return () => {
-                  Rd.forEach((dd => dd()))
+                  pb.forEach((bb => bb()))
                 }
-              }(this.processMutation.bind(this), dd, Od, md, Wd),
-              Xd = function(dd, Od, md, Wd, Fd) {
-                const Rd = [];
-                return void 0 !== Od.WebGLRenderingContext && Rd.push(...YW(Od.WebGLRenderingContext.prototype, td.WebGL, dd, md, Wd, Od, Fd)), void 0 !== Od.WebGL2RenderingContext && Rd.push(...YW(Od.WebGL2RenderingContext.prototype, td.WebGL2, dd, md, Wd, Od, Fd)), () => {
-                  Rd.forEach((dd => dd()))
+              }(this.processMutation.bind(this), bb, wb, Mb, eb),
+              Vb = function(bb, wb, Mb, eb, Hb) {
+                const pb = [];
+                return void 0 !== wb.WebGLRenderingContext && pb.push(...se(wb.WebGLRenderingContext.prototype, Ob.WebGL, bb, Mb, eb, wb, Hb)), void 0 !== wb.WebGL2RenderingContext && pb.push(...se(wb.WebGL2RenderingContext.prototype, Ob.WebGL2, bb, Mb, eb, wb, Hb)), () => {
+                  pb.forEach((bb => bb()))
                 }
-              }(this.processMutation.bind(this), dd, Od, md, Wd);
+              }(this.processMutation.bind(this), bb, wb, Mb, eb);
             this.resetObservers = () => {
-              Fd(), Rd(), Xd()
+              Hb(), pb(), Vb()
             }
           }
           startPendingCanvasMutationFlusher() {
             this.rafIdFlush = requestAnimationFrame((() => this.flushPendingCanvasMutations()))
           }
           startRAFTimestamping() {
-            const dd = Od => {
-              this.rafStamps.latestId = Od, this.rafIdTimestamp = requestAnimationFrame(dd)
+            const bb = wb => {
+              this.rafStamps.latestId = wb, this.rafIdTimestamp = requestAnimationFrame(bb)
             };
-            this.rafIdTimestamp = requestAnimationFrame(dd)
+            this.rafIdTimestamp = requestAnimationFrame(bb)
           }
           flushPendingCanvasMutations() {
-            this.pendingCanvasMutations.forEach(((dd, Od) => {
-              const md = this.mirror.getId(Od);
-              this.flushPendingCanvasMutationFor(Od, md)
+            this.pendingCanvasMutations.forEach(((bb, wb) => {
+              const Mb = this.mirror.getId(wb);
+              this.flushPendingCanvasMutationFor(wb, Mb)
             })), this.rafIdFlush = requestAnimationFrame((() => this.flushPendingCanvasMutations()))
           }
-          flushPendingCanvasMutationFor(dd, Od) {
+          flushPendingCanvasMutationFor(bb, wb) {
             if (this.frozen || this.locked) return;
-            const md = this.pendingCanvasMutations.get(dd);
-            if (!md || -1 === Od) return;
-            const Wd = md.map((dd => function(dd, Od) {
-                if (null == dd) return {};
-                var md, Wd, Fd = function(dd, Od) {
-                  if (null == dd) return {};
-                  var md = {};
-                  for (var Wd in dd)
-                    if ({}.hasOwnProperty.call(dd, Wd)) {
-                      if (Od.includes(Wd)) continue;
-                      md[Wd] = dd[Wd]
-                    } return md
-                }(dd, Od);
+            const Mb = this.pendingCanvasMutations.get(bb);
+            if (!Mb || -1 === wb) return;
+            const eb = Mb.map((bb => function(bb, wb) {
+                if (null == bb) return {};
+                var Mb, eb, Hb = function(bb, wb) {
+                  if (null == bb) return {};
+                  var Mb = {};
+                  for (var eb in bb)
+                    if ({}.hasOwnProperty.call(bb, eb)) {
+                      if (wb.includes(eb)) continue;
+                      Mb[eb] = bb[eb]
+                    } return Mb
+                }(bb, wb);
                 if (Object.getOwnPropertySymbols) {
-                  var Rd = Object.getOwnPropertySymbols(dd);
-                  for (Wd = 0; Rd.length > Wd; Wd++) Od.includes(md = Rd[Wd]) || {}.propertyIsEnumerable.call(dd, md) && (Fd[md] = dd[md])
+                  var pb = Object.getOwnPropertySymbols(bb);
+                  for (eb = 0; pb.length > eb; eb++) wb.includes(Mb = pb[eb]) || {}.propertyIsEnumerable.call(bb, Mb) && (Hb[Mb] = bb[Mb])
                 }
-                return Fd
-              }(dd, Xd))),
+                return Hb
+              }(bb, Vb))),
               {
-                type: Fd
-              } = md[0];
+                type: Hb
+              } = Mb[0];
             this.mutationCb({
-              id: Od,
-              type: Fd,
-              commands: Wd
-            }), this.pendingCanvasMutations.delete(dd)
+              id: wb,
+              type: Hb,
+              commands: eb
+            }), this.pendingCanvasMutations.delete(bb)
           }
         },
-        sW = class {
-          constructor(dd) {
-            var Od;
-            XO(this, "trackedLinkElements", new WeakSet), XO(this, "pendingDeferredSheets", new Set), XO(this, "mutationCb", void 0), XO(this, "adoptedStyleSheetCb", void 0), XO(this, "maskAllElementAttributes", void 0), XO(this, "maskAttributeFn", void 0), XO(this, "styleMirror", new Bm), this.mutationCb = dd.mutationCb, this.adoptedStyleSheetCb = dd.adoptedStyleSheetCb, this.maskAllElementAttributes = null !== (Od = dd.maskAllElementAttributes) && void 0 !== Od && Od, this.maskAttributeFn = dd.maskAttributeFn
+        De = class {
+          constructor(bb) {
+            var wb;
+            Hw(this, "trackedLinkElements", new WeakSet), Hw(this, "pendingDeferredSheets", new Set), Hw(this, "mutationCb", void 0), Hw(this, "adoptedStyleSheetCb", void 0), Hw(this, "maskAllElementAttributes", void 0), Hw(this, "maskAttributeFn", void 0), Hw(this, "styleMirror", new rM), this.mutationCb = bb.mutationCb, this.adoptedStyleSheetCb = bb.adoptedStyleSheetCb, this.maskAllElementAttributes = null !== (wb = bb.maskAllElementAttributes) && void 0 !== wb && wb, this.maskAttributeFn = bb.maskAttributeFn
           }
-          attachLinkElement(dd, Od) {
-            "_cssText" in Od.attributes && this.mutationCb({
+          attachLinkElement(bb, wb) {
+            "_cssText" in wb.attributes && this.mutationCb({
               adds: [],
               removes: [],
               texts: [],
               attributes: [{
-                id: Od.id,
-                attributes: Od.attributes
+                id: wb.id,
+                attributes: wb.attributes
               }]
-            }), this.trackLinkElement(dd)
+            }), this.trackLinkElement(bb)
           }
-          beginDeferredLinkInlining(dd, Od) {
-            if (-1 === Od || !dd.isConnected) return null;
-            let md = null,
-              Wd = null;
+          beginDeferredLinkInlining(bb, wb) {
+            if (-1 === wb || !bb.isConnected) return null;
+            let Mb = null,
+              eb = null;
             try {
-              Wd = dd.sheet, Wd && (md = function(dd) {
-                const Od = [];
-                let md = !1,
-                  Wd = null;
-                const Fd = new Map;
+              eb = bb.sheet, eb && (Mb = function(bb) {
+                const wb = [];
+                let Mb = !1,
+                  eb = null;
+                const Hb = new Map;
 
-                function Rd(dd) {
-                  const Fd = Od.pop();
-                  if ("group" === Fd.kind) {
-                    if (null === dd) {
-                      for (; Od.length > 0 && "group" === Od[Od.length - 1].kind;) Od.pop();
-                      return void Rd(null)
+                function pb(bb) {
+                  const Hb = wb.pop();
+                  if ("group" === Hb.kind) {
+                    if (null === bb) {
+                      for (; wb.length > 0 && "group" === wb[wb.length - 1].kind;) wb.pop();
+                      return void pb(null)
                     }
-                    const md = Od[Od.length - 1];
-                    return md.parts.push(dd), void(md.index += 1)
+                    const Mb = wb[wb.length - 1];
+                    return Mb.parts.push(bb), void(Mb.index += 1)
                   }
-                  if (!Fd.importRule) return md = !0, void(Wd = dd);
-                  Xd(Od[Od.length - 1], Fd.importRule, dd)
+                  if (!Hb.importRule) return Mb = !0, void(eb = bb);
+                  Vb(wb[wb.length - 1], Hb.importRule, bb)
                 }
 
-                function Xd(dd, Od, md) {
+                function Vb(bb, wb, Mb) {
                   try {
-                    let Fd;
+                    let Hb;
                     try {
-                      Fd = md || tO(Od)
-                    } catch (dd) {
-                      Fd = Od.cssText
+                      Hb = Mb || Lw(wb)
+                    } catch (bb) {
+                      Hb = wb.cssText
                     }
                     try {
-                      var Wd;
-                      Fd && (null === (Wd = Od.styleSheet) || void 0 === Wd ? void 0 : Wd.href) && (Fd = uO(Fd, Od.styleSheet.href))
-                    } catch (dd) {}
-                    Fd && dd.parts.push(Fd), dd.index += 1
-                  } catch (dd) {
-                    Rd(null)
+                      var eb;
+                      Hb && (null === (eb = wb.styleSheet) || void 0 === eb ? void 0 : eb.href) && (Hb = Yw(Hb, wb.styleSheet.href))
+                    } catch (bb) {}
+                    Hb && bb.parts.push(Hb), bb.index += 1
+                  } catch (bb) {
+                    pb(null)
                   }
                 }
 
-                function Kd(dd) {
-                  const md = dd.rules[dd.index];
-                  if ("sheet" === dd.kind && yO(md)) {
-                    const Wd = Fd.get(md);
-                    return null === Wd ? (dd.parts.push(md.cssText), void(dd.index += 1)) : Wd ? void Od.push({
+                function gb(bb) {
+                  const Mb = bb.rules[bb.index];
+                  if ("sheet" === bb.kind && Cw(Mb)) {
+                    const eb = Hb.get(Mb);
+                    return null === eb ? (bb.parts.push(Mb.cssText), void(bb.index += 1)) : eb ? void wb.push({
                       kind: "sheet",
-                      sheet: Wd.sheet,
-                      rules: Wd.rules,
-                      sheetHref: Wd.sheetHref,
+                      sheet: eb.sheet,
+                      rules: eb.rules,
+                      sheetHref: eb.sheetHref,
                       index: 0,
                       parts: [],
-                      importRule: md
-                    }) : void Xd(dd, md, null)
+                      importRule: Mb
+                    }) : void Vb(bb, Mb, null)
                   }
-                  if (function(dd, md) {
+                  if (function(bb, Mb) {
                       try {
-                        const Wd = function(dd) {
-                          const Od = dd;
-                          if (!Od.cssRules || 0 === Od.cssRules.length) return null;
-                          if (Od.media && "string" == typeof Od.media.mediaText) return `@media ${Od.media.mediaText} {`;
-                          if (bO(dd)) {
-                            if ("number" == typeof Od.type && 1 !== Od.type) return null;
-                            const md = Od.style ? Od.style.cssText : "";
-                            return `${dd.selectorText} {${md?" "+md:""}`
+                        const eb = function(bb) {
+                          const wb = bb;
+                          if (!wb.cssRules || 0 === wb.cssRules.length) return null;
+                          if (wb.media && "string" == typeof wb.media.mediaText) return `@media ${wb.media.mediaText} {`;
+                          if (Ew(bb)) {
+                            if ("number" == typeof wb.type && 1 !== wb.type) return null;
+                            const Mb = wb.style ? wb.style.cssText : "";
+                            return `${bb.selectorText} {${Mb?" "+Mb:""}`
                           }
-                          if ("containerName" in Od) return "string" != typeof Od.containerQuery || Od.containerName && !TO.test(Od.containerName) ? null : `@container ${Od.containerName?`${Od.containerName} `:""}${Od.containerQuery} {`;
-                          if ("string" == typeof Od.conditionText) {
-                            let Wd = "";
+                          if ("containerName" in wb) return "string" != typeof wb.containerQuery || wb.containerName && !Fw.test(wb.containerName) ? null : `@container ${wb.containerName?`${wb.containerName} `:""}${wb.containerQuery} {`;
+                          if ("string" == typeof wb.conditionText) {
+                            let eb = "";
                             try {
-                              var md;
-                              Wd = (null === (md = dd.constructor) || void 0 === md ? void 0 : md.name) || ""
-                            } catch (dd) {
+                              var Mb;
+                              eb = (null === (Mb = bb.constructor) || void 0 === Mb ? void 0 : Mb.name) || ""
+                            } catch (bb) {
                               return null
                             }
-                            return "" === Wd || "Object" === Wd || "CSSSupportsRule" === Wd ? `@supports ${Od.conditionText} {` : null
+                            return "" === eb || "Object" === eb || "CSSSupportsRule" === eb ? `@supports ${wb.conditionText} {` : null
                           }
-                          return "string" == typeof Od.name ? "keyText" in Od.cssRules[0] ? TO.test(Od.name) ? `@keyframes ${Od.name} {` : null : "" === Od.name ? "@layer {" : pO.test(Od.name) ? `@layer ${Od.name} {` : null : null
-                        }(dd);
-                        if (null === Wd) return !1;
-                        const Fd = md.sheetHref;
-                        return Od.push({
+                          return "string" == typeof wb.name ? "keyText" in wb.cssRules[0] ? Fw.test(wb.name) ? `@keyframes ${wb.name} {` : null : "" === wb.name ? "@layer {" : Bw.test(wb.name) ? `@layer ${wb.name} {` : null : null
+                        }(bb);
+                        if (null === eb) return !1;
+                        const Hb = Mb.sheetHref;
+                        return wb.push({
                           kind: "group",
-                          rules: Array.from(dd.cssRules),
-                          sheetHref: Fd,
+                          rules: Array.from(bb.cssRules),
+                          sheetHref: Hb,
                           index: 0,
                           parts: [],
-                          prelude: Fd ? uO(Wd, Fd) : Wd,
-                          fixColons: "sheet" === md.kind && bO(dd) && dd.selectorText.includes(":")
+                          prelude: Hb ? Yw(eb, Hb) : eb,
+                          fixColons: "sheet" === Mb.kind && Ew(bb) && bb.selectorText.includes(":")
                         }), !0
-                      } catch (dd) {
+                      } catch (bb) {
                         return !1
                       }
-                    }(md, dd)) return;
-                  let Wd = md.cssText;
-                  "sheet" === dd.kind && bO(md) && md.selectorText.includes(":") && (Wd = HO(Wd)), dd.parts.push(dd.sheetHref ? uO(Wd, dd.sheetHref) : Wd), dd.index += 1
+                    }(Mb, bb)) return;
+                  let eb = Mb.cssText;
+                  "sheet" === bb.kind && Ew(Mb) && Mb.selectorText.includes(":") && (eb = tw(eb)), bb.parts.push(bb.sheetHref ? Yw(eb, bb.sheetHref) : eb), bb.index += 1
                 }
-                return function(dd) {
+                return function(bb) {
                   try {
-                    const md = dd.rules || dd.cssRules;
-                    if (!md) return !1;
-                    fd(md);
-                    let Wd = dd.href;
-                    !Wd && dd.ownerNode && (Wd = dd.ownerNode.baseURI);
-                    const Rd = Array.from(md);
-                    return Od.push({
+                    const Mb = bb.rules || bb.cssRules;
+                    if (!Mb) return !1;
+                    yb(Mb);
+                    let eb = bb.href;
+                    !eb && bb.ownerNode && (eb = bb.ownerNode.baseURI);
+                    const pb = Array.from(Mb);
+                    return wb.push({
                         kind: "sheet",
-                        sheet: dd,
-                        rules: Rd,
-                        sheetHref: Wd,
+                        sheet: bb,
+                        rules: pb,
+                        sheetHref: eb,
                         index: 0,
                         parts: [],
                         importRule: null
                       }),
-                      function(dd, Od) {
-                        const md = [{
-                          sheet: Od,
-                          rules: dd,
+                      function(bb, wb) {
+                        const Mb = [{
+                          sheet: wb,
+                          rules: bb,
                           index: 0
                         }];
-                        for (; md.length > 0;) {
-                          const Od = md[md.length - 1];
-                          if (Od.index >= Od.rules.length) {
-                            md.pop();
+                        for (; Mb.length > 0;) {
+                          const wb = Mb[Mb.length - 1];
+                          if (wb.index >= wb.rules.length) {
+                            Mb.pop();
                             continue
                           }
-                          const Wd = Od.rules[Od.index];
-                          if (Od.index += 1, !yO(Wd) || Fd.has(Wd)) continue;
-                          let Rd = null;
+                          const eb = wb.rules[wb.index];
+                          if (wb.index += 1, !Cw(eb) || Hb.has(eb)) continue;
+                          let pb = null;
                           try {
-                            Rd = Wd.styleSheet
-                          } catch (dd) {
-                            Fd.set(Wd, null);
+                            pb = eb.styleSheet
+                          } catch (bb) {
+                            Hb.set(eb, null);
                             continue
                           }
-                          if (Rd && !md.some((dd => dd.sheet === Rd))) try {
-                            const dd = Rd.rules || Rd.cssRules;
-                            if (!dd) continue;
-                            fd(dd);
-                            let Od = Rd.href;
-                            !Od && Rd.ownerNode && (Od = Rd.ownerNode.baseURI);
-                            const Xd = Array.from(dd);
-                            Fd.set(Wd, {
-                              sheet: Rd,
-                              rules: Xd,
-                              sheetHref: Od
-                            }), md.push({
-                              sheet: Rd,
-                              rules: Xd,
+                          if (pb && !Mb.some((bb => bb.sheet === pb))) try {
+                            const bb = pb.rules || pb.cssRules;
+                            if (!bb) continue;
+                            yb(bb);
+                            let wb = pb.href;
+                            !wb && pb.ownerNode && (wb = pb.ownerNode.baseURI);
+                            const Vb = Array.from(bb);
+                            Hb.set(eb, {
+                              sheet: pb,
+                              rules: Vb,
+                              sheetHref: wb
+                            }), Mb.push({
+                              sheet: pb,
+                              rules: Vb,
                               index: 0
                             })
-                          } catch (dd) {}
+                          } catch (bb) {}
                         }
-                      }(Rd, dd), !0
-                  } catch (dd) {
+                      }(pb, bb), !0
+                  } catch (bb) {
                     return !1
                   }
-                }(dd) || (md = !0), {
-                  advance(dd) {
-                    if (md) return !0;
-                    const Fd = Sd();
-                    let Xd = dd > 0 ? dd : 1;
+                }(bb) || (Mb = !0), {
+                  advance(bb) {
+                    if (Mb) return !0;
+                    const Hb = Db();
+                    let Vb = bb > 0 ? bb : 1;
                     try {
-                      for (; !md && Xd > 0;) {
-                        const md = Od[Od.length - 1];
-                        if (md.index >= md.rules.length) {
-                          let Od = null;
+                      for (; !Mb && Vb > 0;) {
+                        const Mb = wb[wb.length - 1];
+                        if (Mb.index >= Mb.rules.length) {
+                          let wb = null;
                           try {
-                            if ("group" === md.kind) {
-                              const dd = md.prelude + md.parts.join("") + "}";
-                              Od = md.fixColons ? HO(dd) : dd
-                            } else Od = QO(md.parts.join(""))
-                          } catch (dd) {}
-                          Rd(Od)
+                            if ("group" === Mb.kind) {
+                              const bb = Mb.prelude + Mb.parts.join("") + "}";
+                              wb = Mb.fixColons ? tw(bb) : bb
+                            } else wb = lw(Mb.parts.join(""))
+                          } catch (bb) {}
+                          pb(wb)
                         } else {
-                          Xd -= 1;
+                          Vb -= 1;
                           try {
-                            Kd(md)
-                          } catch (dd) {
-                            Rd(null)
+                            gb(Mb)
+                          } catch (bb) {
+                            pb(null)
                           }
                         }
                       }
-                    } catch (dd) {
-                      md = !0, Wd = null
+                    } catch (bb) {
+                      Mb = !0, eb = null
                     } finally {
-                      dO(Sd() - Fd)
+                      Tb(Db() - Hb)
                     }
-                    return md
+                    return Mb
                   },
-                  text: () => md ? Wd : null,
+                  text: () => Mb ? eb : null,
                   remainingRules() {
-                    if (md) return 0;
-                    let dd = 0;
-                    for (const md of Od) dd += md.rules.length - md.index;
-                    return dd
+                    if (Mb) return 0;
+                    let bb = 0;
+                    for (const Mb of wb) bb += Mb.rules.length - Mb.index;
+                    return bb
                   }
                 }
-              }(Wd))
-            } catch (dd) {}
-            if (!md || !Wd) return WO(), null;
-            const Fd = md;
-            let Rd = !1;
-            const Xd = {
-              sheet: Wd,
+              }(eb))
+            } catch (bb) {}
+            if (!Mb || !eb) return ww(), null;
+            const Hb = Mb;
+            let pb = !1;
+            const Vb = {
+              sheet: eb,
               invalidate() {
-                Rd = !0
+                pb = !0
               }
             };
-            this.pendingDeferredSheets.add(Xd);
-            let Kd = !1;
+            this.pendingDeferredSheets.add(Vb);
+            let gb = !1;
             return {
-              advance: md => {
-                if (Kd) return !0;
-                const hd = Sd(),
-                  vd = Ad();
-                let Qd = !0;
+              advance: Mb => {
+                if (gb) return !0;
+                const lb = Db(),
+                  Lb = fb();
+                let Ib = !0;
                 try {
-                  if (Rd) return Kd = !0, WO(), !0;
-                  if (!Fd.advance(md)) return Qd = !1, !1;
-                  Kd = !0;
-                  const Xd = Fd.text();
-                  if (!dd.isConnected) return !0;
-                  let hd = null;
+                  if (pb) return gb = !0, ww(), !0;
+                  if (!Hb.advance(Mb)) return Ib = !1, !1;
+                  gb = !0;
+                  const Vb = Hb.text();
+                  if (!bb.isConnected) return !0;
+                  let lb = null;
                   try {
-                    hd = dd.sheet
-                  } catch (dd) {}
-                  return hd !== Wd ? (WO(), !0) : Xd ? (this.emitCssTextMutation(dd, Od, Xd), !0) : (WO(), !0)
+                    lb = bb.sheet
+                  } catch (bb) {}
+                  return lb !== eb ? (ww(), !0) : Vb ? (this.emitCssTextMutation(bb, wb, Vb), !0) : (ww(), !0)
                 } finally {
-                  Qd && this.pendingDeferredSheets.delete(Xd), rd(td = Sd() - hd, null != (od = vd) ? od : sd) || (ld.totalMs += td, td > ld.slowestSliceMs && (ld.slowestSliceMs = td))
+                  Ib && this.pendingDeferredSheets.delete(Vb), Ab(Ob = Db() - lb, null != (Ub = Lb) ? Ub : cb) || (ub.totalMs += Ob, Ob > ub.slowestSliceMs && (ub.slowestSliceMs = Ob))
                 }
-                var td, od
+                var Ob, Ub
               },
-              remainingRules: () => Fd.remainingRules(),
+              remainingRules: () => Hb.remainingRules(),
               discard: () => {
-                this.pendingDeferredSheets.delete(Xd)
+                this.pendingDeferredSheets.delete(Vb)
               }
             }
           }
-          onCssomSheetMutation(dd) {
-            if (dd && 0 !== this.pendingDeferredSheets.size)
-              for (const Od of this.pendingDeferredSheets) Od.sheet === dd && (this.pendingDeferredSheets.delete(Od), Od.invalidate())
+          onCssomSheetMutation(bb) {
+            if (bb && 0 !== this.pendingDeferredSheets.size)
+              for (const wb of this.pendingDeferredSheets) wb.sheet === bb && (this.pendingDeferredSheets.delete(wb), wb.invalidate())
           }
-          inlineDeferredLinkElement(dd, Od) {
-            var md;
-            null === (md = this.beginDeferredLinkInlining(dd, Od)) || void 0 === md || md.advance(1 / 0)
+          inlineDeferredLinkElement(bb, wb) {
+            var Mb;
+            null === (Mb = this.beginDeferredLinkInlining(bb, wb)) || void 0 === Mb || Mb.advance(1 / 0)
           }
-          emitCssTextMutation(dd, Od, md) {
+          emitCssTextMutation(bb, wb, Mb) {
             this.mutationCb({
               adds: [],
               removes: [],
               texts: [],
               attributes: [{
-                id: Od,
+                id: wb,
                 attributes: {
-                  _cssText: EO({
-                    element: dd,
+                  _cssText: Xw({
+                    element: bb,
                     name: "_cssText",
-                    value: md,
+                    value: Mb,
                     maskAllElementAttributes: this.maskAllElementAttributes,
                     maskAttributeFn: this.maskAttributeFn
                   })
@@ -4015,159 +4015,159 @@ export const modules = {
               }]
             })
           }
-          trackLinkElement(dd) {
-            this.trackedLinkElements.has(dd) || (this.trackedLinkElements.add(dd), this.trackStylesheetInLinkElement(dd))
+          trackLinkElement(bb) {
+            this.trackedLinkElements.has(bb) || (this.trackedLinkElements.add(bb), this.trackStylesheetInLinkElement(bb))
           }
-          adoptStyleSheets(dd, Od) {
-            if (0 === dd.length) return;
-            const md = {
-                id: Od,
+          adoptStyleSheets(bb, wb) {
+            if (0 === bb.length) return;
+            const Mb = {
+                id: wb,
                 styleIds: []
               },
-              Wd = [];
-            for (const Fd of dd) {
-              let dd;
-              if (this.styleMirror.has(Fd)) dd = this.styleMirror.getId(Fd);
+              eb = [];
+            for (const Hb of bb) {
+              let bb;
+              if (this.styleMirror.has(Hb)) bb = this.styleMirror.getId(Hb);
               else {
-                const Od = this.styleMirror.add(Fd);
-                dd = Od;
-                const md = Sd();
+                const wb = this.styleMirror.add(Hb);
+                bb = wb;
+                const Mb = Db();
                 try {
-                  Md((() => {
+                  ob((() => {
                     try {
-                      const dd = Fd.rules || Fd.cssRules;
-                      dd && fd(dd)
-                    } catch (dd) {}
-                    Wd.push({
-                      styleId: Od,
-                      rules: Array.from(Fd.rules || CSSRule, ((dd, Od) => ({
-                        rule: qO(dd, Fd.href),
-                        index: Od
+                      const bb = Hb.rules || Hb.cssRules;
+                      bb && yb(bb)
+                    } catch (bb) {}
+                    eb.push({
+                      styleId: wb,
+                      rules: Array.from(Hb.rules || CSSRule, ((bb, wb) => ({
+                        rule: Uw(bb, Hb.href),
+                        index: wb
                       })))
                     })
                   }))
                 } finally {
-                  dO(Sd() - md)
+                  Tb(Db() - Mb)
                 }
               }
-              md.styleIds.push(dd)
+              Mb.styleIds.push(bb)
             }
-            Wd.length > 0 && (md.styles = Wd), this.adoptedStyleSheetCb(md)
+            eb.length > 0 && (Mb.styles = eb), this.adoptedStyleSheetCb(Mb)
           }
           reset() {
-            this.styleMirror.reset(), this.trackedLinkElements = new WeakSet, this.pendingDeferredSheets.clear(), MO.forEach((dd => dd.abort())), MO.clear()
+            this.styleMirror.reset(), this.trackedLinkElements = new WeakSet, this.pendingDeferredSheets.clear(), Tw.forEach((bb => bb.abort())), Tw.clear()
           }
-          trackStylesheetInLinkElement(dd) {}
+          trackStylesheetInLinkElement(bb) {}
         },
-        uW = class {
+        ce = class {
           constructor() {
-            XO(this, "nodeMap", new WeakMap), XO(this, "active", !1)
+            Hw(this, "nodeMap", new WeakMap), Hw(this, "active", !1)
           }
-          inOtherBuffer(dd, Od) {
-            const md = this.nodeMap.get(dd);
-            return md && Array.from(md).some((dd => dd !== Od))
+          inOtherBuffer(bb, wb) {
+            const Mb = this.nodeMap.get(bb);
+            return Mb && Array.from(Mb).some((bb => bb !== wb))
           }
-          add(dd, Od) {
+          add(bb, wb) {
             this.active || (this.active = !0, requestAnimationFrame((() => {
               this.nodeMap = new WeakMap, this.active = !1
-            }))), this.nodeMap.set(dd, (this.nodeMap.get(dd) || new Set).add(Od))
+            }))), this.nodeMap.set(bb, (this.nodeMap.get(bb) || new Set).add(wb))
           }
           destroy() {}
         },
-        VW = !1;
+        Ye = !1;
       try {
-        if (2 !== Array.from([1], (dd => 2 * dd))[0]) {
-          var iW;
-          const dd = document.createElement("iframe");
-          document.body.appendChild(dd), Array.from = (null === (iW = dd.contentWindow) || void 0 === iW ? void 0 : iW.Array.from) || Array.from, document.body.removeChild(dd)
+        if (2 !== Array.from([1], (bb => 2 * bb))[0]) {
+          var Ze;
+          const bb = document.createElement("iframe");
+          document.body.appendChild(bb), Array.from = (null === (Ze = bb.contentWindow) || void 0 === Ze ? void 0 : Ze.Array.from) || Array.from, document.body.removeChild(bb)
         }
-      } catch (dd) {
-        console.debug("Unable to override Array.from", dd)
+      } catch (bb) {
+        console.debug("Unable to override Array.from", bb)
       }
-      var AW = new YO,
-        rW = new Set([hd.Mutation, hd.MediaInteraction, hd.StyleSheetRule, hd.CanvasMutation, hd.Font, hd.Log, hd.StyleDeclaration, hd.AdoptedStyleSheet]);
+      var fe = new sw,
+        Ae = new Set([lb.Mutation, lb.MediaInteraction, lb.StyleSheetRule, lb.CanvasMutation, lb.Font, lb.Log, lb.StyleDeclaration, lb.AdoptedStyleSheet]);
 
-      function GW(dd) {
-        const Od = window;
-        if ("function" == typeof Od.requestIdleCallback) {
-          const md = Od.requestIdleCallback(dd, {
+      function We(bb) {
+        const wb = window;
+        if ("function" == typeof wb.requestIdleCallback) {
+          const Mb = wb.requestIdleCallback(bb, {
             timeout: 2e3
           });
           return {
             cancel() {
-              var dd;
-              return null === (dd = Od.cancelIdleCallback) || void 0 === dd ? void 0 : dd.call(Od, md)
+              var bb;
+              return null === (bb = wb.cancelIdleCallback) || void 0 === bb ? void 0 : bb.call(wb, Mb)
             }
           }
         }
-        const md = setTimeout(dd, 250);
+        const Mb = setTimeout(bb, 250);
         return {
-          cancel: () => clearTimeout(md)
+          cancel: () => clearTimeout(Mb)
         }
       }
 
-      function nW() {
-        let dd, Od = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          md = !1,
-          Fd = !1;
+      function Je() {
+        let bb, wb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          Mb = !1,
+          Hb = !1;
         const {
-          emit: Rd,
-          checkoutEveryNms: Xd,
-          checkoutEveryNth: vd,
-          blockClass: Qd = "rr-block",
-          blockSelector: td = null,
-          ignoreClass: od = "rr-ignore",
-          ignoreSelector: Nd = null,
-          maskTextClass: qd = "rr-mask",
-          maskTextSelector: Hd = null,
-          inlineStylesheet: yd = !0,
-          inlineStylesheetBudgetRules: bd,
-          maskAllInputs: Td,
-          maskInputOptions: pd,
-          slimDOMOptions: Yd,
-          maskInputFn: gd,
-          maskTextFn: wd,
-          maskAllElementAttributes: Ed = !1,
-          maskAttributeFn: Jd,
-          hooks: Ud,
-          packFn: xd,
-          sampling: Sd = {},
-          dataURLOptions: sd = {},
-          canvasResolutionScale: ud,
-          canvasMasking: Ad,
-          mousemoveWait: rd,
-          recordDOM: Gd = !0,
-          recordCanvas: nd = !1,
-          recordCrossOriginIframes: Ld = !1,
-          recordAfter: Pd = ("DOMContentLoaded" === Od.recordAfter ? Od.recordAfter : "load"),
-          userTriggeredOnInput: zd = !1,
-          collectFonts: cd = !1,
-          inlineImages: jd = !1,
-          plugins: Dd,
-          keepIframeSrcFn: ed = () => !1,
-          ignoreCSSAttributes: Id = new Set([]),
-          attributeFilter: ld,
-          errorHandler: kd
-        } = Od;
-        ! function(dd) {
-          Vm = dd
-        }(kd);
-        const fd = Wd({
+          emit: pb,
+          checkoutEveryNms: Vb,
+          checkoutEveryNth: Lb,
+          blockClass: Ib = "rr-block",
+          blockSelector: Ob = null,
+          ignoreClass: Ub = "rr-ignore",
+          ignoreSelector: tb = null,
+          maskTextClass: Cb = "rr-mask",
+          maskTextSelector: Eb = null,
+          inlineStylesheet: Fb = !0,
+          inlineStylesheetBudgetRules: Bb,
+          maskAllInputs: sb,
+          maskInputOptions: mb,
+          slimDOMOptions: hb,
+          maskInputFn: zb,
+          maskTextFn: Xb,
+          maskAllElementAttributes: xb = !1,
+          maskAttributeFn: jb,
+          hooks: Kb,
+          packFn: rb,
+          sampling: Db = {},
+          dataURLOptions: cb = {},
+          canvasResolutionScale: Yb,
+          canvasMasking: fb,
+          mousemoveWait: Ab,
+          recordDOM: Wb = !0,
+          recordCanvas: Jb = !1,
+          recordCrossOriginIframes: Sb = !1,
+          recordAfter: Nb = ("DOMContentLoaded" === wb.recordAfter ? wb.recordAfter : "load"),
+          userTriggeredOnInput: vb = !1,
+          collectFonts: Qb = !1,
+          inlineImages: Gb = !1,
+          plugins: qb,
+          keepIframeSrcFn: ab = () => !1,
+          ignoreCSSAttributes: ib = new Set([]),
+          attributeFilter: ub,
+          errorHandler: nb
+        } = wb;
+        ! function(bb) {
+          YM = bb
+        }(nb);
+        const yb = eb({
             type: "image/webp",
             quality: .4,
             maxBase64ImageLength: 1048576
-          }, sd),
-          Md = !Ld || window.parent === window;
-        let dO = !1;
-        if (!Md) try {
-          window.parent.document && (dO = !1)
-        } catch (Od) {
-          dO = !0
+          }, cb),
+          ob = !Sb || window.parent === window;
+        let Tb = !1;
+        if (!ob) try {
+          window.parent.document && (Tb = !1)
+        } catch (wb) {
+          Tb = !0
         }
-        if (Md && !Rd) throw new Error("emit function is required");
-        if (!Md && !dO) return () => {};
-        void 0 !== rd && void 0 === Sd.mousemove && (Sd.mousemove = rd), AW.reset();
-        const OO = !0 === Td ? {
+        if (ob && !pb) throw new Error("emit function is required");
+        if (!ob && !Tb) return () => {};
+        void 0 !== Ab && void 0 === Db.mousemove && (Db.mousemove = Ab), fe.reset();
+        const kb = !0 === sb ? {
             color: !0,
             date: !0,
             "datetime-local": !0,
@@ -4184,190 +4184,190 @@ export const modules = {
             textarea: !0,
             select: !0,
             password: !0
-          } : void 0 !== pd ? pd : {
+          } : void 0 !== mb ? mb : {
             password: !0
           },
-          WO = Rm(void 0 !== Yd && Yd);
-        let RO;
+          ww = HM(void 0 !== hb && hb);
+        let ew;
         ! function() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
-          "NodeList" in dd && !dd.NodeList.prototype.forEach && (dd.NodeList.prototype.forEach = [].forEach), "DOMTokenList" in dd && !dd.DOMTokenList.prototype.forEach && (dd.DOMTokenList.prototype.forEach = [].forEach)
+          let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window;
+          "NodeList" in bb && !bb.NodeList.prototype.forEach && (bb.NodeList.prototype.forEach = [].forEach), "DOMTokenList" in bb && !bb.DOMTokenList.prototype.forEach && (bb.DOMTokenList.prototype.forEach = [].forEach)
         }();
-        let XO = 0;
-        const KO = new Map;
-        let hO, vO;
-        const QO = dd => {
-          for (const Od of Dd || []) Od.eventProcessor && (dd = Od.eventProcessor(dd));
-          return xd && !dO && (dd = xd(dd)), dd
+        let Hw = 0;
+        const pw = new Map;
+        let Vw, gw;
+        const lw = bb => {
+          for (const wb of qb || []) wb.eventProcessor && (bb = wb.eventProcessor(bb));
+          return rb && !Tb && (bb = rb(bb)), bb
         };
-        UW = (dd, Od) => {
-          var md;
-          const Wd = dd;
-          if (Wd.timestamp = ym(), !(null === (md = zm[0]) || void 0 === md ? void 0 : md.isFrozen()) || Wd.type === Kd.FullSnapshot || Wd.type === Kd.IncrementalSnapshot && rW.has(Wd.data.source) || zm.forEach((dd => dd.unfreeze())), Md) null == Rd || Rd(QO(Wd), Od);
-          else if (dO) {
-            const dd = {
+        je = (bb, wb) => {
+          var Mb;
+          const eb = bb;
+          if (eb.timestamp = CM(), !(null === (Mb = vM[0]) || void 0 === Mb ? void 0 : Mb.isFrozen()) || eb.type === gb.FullSnapshot || eb.type === gb.IncrementalSnapshot && Ae.has(eb.data.source) || vM.forEach((bb => bb.unfreeze())), ob) null == pb || pb(lw(eb), wb);
+          else if (Tb) {
+            const bb = {
               type: "rrweb",
-              event: QO(Wd),
+              event: lw(eb),
               origin: window.location.origin,
-              isCheckout: Od
+              isCheckout: wb
             };
-            window.parent.postMessage(dd, "*")
+            window.parent.postMessage(bb, "*")
           }
-          if (Wd.type === Kd.FullSnapshot) RO = Wd, XO = 0;
-          else if (Wd.type === Kd.IncrementalSnapshot) {
-            if (Wd.data.source === hd.Mutation && Wd.data.isAttachIframe) return;
-            XO++, (vd && XO >= vd || Xd && Wd.timestamp - RO.timestamp > Xd) && xW(!0)
+          if (eb.type === gb.FullSnapshot) ew = eb, Hw = 0;
+          else if (eb.type === gb.IncrementalSnapshot) {
+            if (eb.data.source === lb.Mutation && eb.data.isAttachIframe) return;
+            Hw++, (Lb && Hw >= Lb || Vb && eb.timestamp - ew.timestamp > Vb) && Ke(!0)
           }
         };
-        const tO = dd => {
-            if (dd.removes && dd.removes.length > 0) {
-              const Od = dd.adds.length > 0 ? new Set(dd.adds.map((dd => dd.node.id))) : null,
-                md = new Set;
-              if (dd.adds.length > 0)
-                for (const Wd of dd.adds) {
-                  const dd = AW.QFd(Wd.node.id);
-                  dd && "IFRAME" === dd.nodeName && md.add(dd)
+        const Lw = bb => {
+            if (bb.removes && bb.removes.length > 0) {
+              const wb = bb.adds.length > 0 ? new Set(bb.adds.map((bb => bb.node.id))) : null,
+                Mb = new Set;
+              if (bb.adds.length > 0)
+                for (const eb of bb.adds) {
+                  const bb = fe.OHb(eb.node.id);
+                  bb && "IFRAME" === bb.nodeName && Mb.add(bb)
                 }
-              dd.removes.forEach((dd => {
+              bb.removes.forEach((bb => {
                 let {
-                  id: Wd
-                } = dd;
-                if (Od && Od.has(Wd)) return;
-                const Fd = HO.getIframeElementById(Wd);
-                Fd && md.has(Fd) ? HO.forgetIframeId(Wd) : (null == hO || hO(Wd), HO.removeIframeById(Wd))
-              })), null == vO || vO(), HO.cleanupDetachedIframes()
+                  id: eb
+                } = bb;
+                if (wb && wb.has(eb)) return;
+                const Hb = tw.getIframeElementById(eb);
+                Hb && Mb.has(Hb) ? tw.forgetIframeId(eb) : (null == Vw || Vw(eb), tw.removeIframeById(eb))
+              })), null == gw || gw(), tw.cleanupDetachedIframes()
             }
-            UW({
-              type: Kd.IncrementalSnapshot,
-              data: Wd({
-                source: hd.Mutation
-              }, dd)
+            je({
+              type: gb.IncrementalSnapshot,
+              data: eb({
+                source: lb.Mutation
+              }, bb)
             })
           },
-          oO = dd => UW({
-            type: Kd.IncrementalSnapshot,
-            data: Wd({
-              source: hd.Scroll
-            }, dd)
+          Iw = bb => je({
+            type: gb.IncrementalSnapshot,
+            data: eb({
+              source: lb.Scroll
+            }, bb)
           }),
-          NO = dd => UW({
-            type: Kd.IncrementalSnapshot,
-            data: Wd({
-              source: hd.CanvasMutation
-            }, dd)
+          Ow = bb => je({
+            type: gb.IncrementalSnapshot,
+            data: eb({
+              source: lb.CanvasMutation
+            }, bb)
           }),
-          qO = new sW({
-            mutationCb: tO,
-            adoptedStyleSheetCb: dd => UW({
-              type: Kd.IncrementalSnapshot,
-              data: Wd({
-                source: hd.AdoptedStyleSheet
-              }, dd)
+          Uw = new De({
+            mutationCb: Lw,
+            adoptedStyleSheetCb: bb => je({
+              type: gb.IncrementalSnapshot,
+              data: eb({
+                source: lb.AdoptedStyleSheet
+              }, bb)
             }),
-            maskAllElementAttributes: Ed,
-            maskAttributeFn: Jd
+            maskAllElementAttributes: xb,
+            maskAttributeFn: jb
           }),
-          HO = new WW({
-            mirror: AW,
-            mutationCb: tO,
-            stylesheetManager: qO,
-            recordCrossOriginIframes: Ld,
-            wrappedEmit: UW
+          tw = new we({
+            mirror: fe,
+            mutationCb: Lw,
+            stylesheetManager: Uw,
+            recordCrossOriginIframes: Sb,
+            wrappedEmit: je
           });
-        for (const Wd of Dd || []) Wd.getMirror && Wd.getMirror({
-          nodeMirror: AW,
-          crossOriginIframeMirror: HO.crossOriginIframeMirror,
-          crossOriginIframeStyleMirror: HO.crossOriginIframeStyleMirror
+        for (const eb of qb || []) eb.getMirror && eb.getMirror({
+          nodeMirror: fe,
+          crossOriginIframeMirror: tw.crossOriginIframeMirror,
+          crossOriginIframeStyleMirror: tw.crossOriginIframeStyleMirror
         });
-        const yO = new uW,
-          bO = null == Ad ? void 0 : Ad.configured;
-        BW = new SW({
-          recordCanvas: nd,
-          mutationCb: NO,
+        const Cw = new ce,
+          Ew = null == fb ? void 0 : fb.configured;
+        re = new Re({
+          recordCanvas: Jb,
+          mutationCb: Ow,
           win: window,
-          blockClass: Qd,
-          blockSelector: td,
-          mirror: AW,
-          sampling: Sd.canvas,
-          dataURLOptions: fd,
-          resolutionScale: ud,
-          canvasMasking: Ad
+          blockClass: Ib,
+          blockSelector: Ob,
+          mirror: fe,
+          sampling: Db.canvas,
+          dataURLOptions: yb,
+          resolutionScale: Yb,
+          canvasMasking: fb
         });
-        const TO = new FW({
-          mutationCb: tO,
-          scrollCb: oO,
+        const Fw = new Me({
+          mutationCb: Lw,
+          scrollCb: Iw,
           bypassOptions: {
-            blockClass: Qd,
-            blockSelector: td,
-            maskTextClass: qd,
-            maskTextSelector: Hd,
-            inlineStylesheet: yd,
-            maskInputOptions: OO,
-            dataURLOptions: fd,
-            maskTextFn: wd,
-            maskInputFn: gd,
-            maskAllElementAttributes: Ed,
-            maskAttributeFn: Jd,
-            recordCanvas: nd,
-            canvasMaskingConfigured: bO,
-            inlineImages: jd,
-            sampling: Sd,
-            slimDOMOptions: WO,
-            iframeManager: HO,
-            stylesheetManager: qO,
-            canvasManager: BW,
-            keepIframeSrcFn: ed,
-            processedNodeManager: yO,
-            attributeFilter: ld
+            blockClass: Ib,
+            blockSelector: Ob,
+            maskTextClass: Cb,
+            maskTextSelector: Eb,
+            inlineStylesheet: Fb,
+            maskInputOptions: kb,
+            dataURLOptions: yb,
+            maskTextFn: Xb,
+            maskInputFn: zb,
+            maskAllElementAttributes: xb,
+            maskAttributeFn: jb,
+            recordCanvas: Jb,
+            canvasMaskingConfigured: Ew,
+            inlineImages: Gb,
+            sampling: Db,
+            slimDOMOptions: ww,
+            iframeManager: tw,
+            stylesheetManager: Uw,
+            canvasManager: re,
+            keepIframeSrcFn: ab,
+            processedNodeManager: Cw,
+            attributeFilter: ub
           },
-          mirror: AW
+          mirror: fe
         });
-        xW = function() {
-          let Od = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          if (Gd) {
-            Cd(bd);
+        Ke = function() {
+          let wb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (Wb) {
+            db(Bb);
             try {
-              if (UW({
-                  type: Kd.Meta,
+              if (je({
+                  type: gb.Meta,
                   data: {
                     href: window.location.href,
-                    width: pm(),
-                    height: Tm()
+                    width: BM(),
+                    height: FM()
                   }
-                }, Od), md) return;
-              null == dd || dd.cancel(), dd = void 0, qO.reset(), TO.init(), zm.forEach((dd => dd.lock()));
-              let Wd = null,
-                Fd = [];
+                }, wb), Mb) return;
+              null == bb || bb.cancel(), bb = void 0, Uw.reset(), Fw.init(), vM.forEach((bb => bb.lock()));
+              let eb = null,
+                Hb = [];
               try {
-                Wd = function(dd, Od) {
+                eb = function(bb, wb) {
                   const {
-                    mirror: md = new YO,
-                    blockClass: Wd = "rr-block",
-                    blockSelector: Fd = null,
-                    maskTextClass: Rd = "rr-mask",
-                    maskTextSelector: Xd = null,
-                    inlineStylesheet: Kd = !0,
-                    inlineImages: hd = !1,
-                    recordCanvas: vd = !1,
-                    canvasMaskingConfigured: Qd,
-                    maskAllInputs: td = !1,
-                    maskTextFn: od,
-                    maskInputFn: Nd,
-                    maskAllElementAttributes: qd = !1,
-                    maskAttributeFn: Hd,
-                    slimDOM: yd = !1,
-                    dataURLOptions: bd,
-                    preserveWhiteSpace: Td,
-                    onSerialize: pd,
-                    onIframeLoad: Yd,
-                    iframeLoadTimeout: gd,
-                    onIframeListenerRegistered: wd,
-                    onStylesheetLoad: Ed,
-                    stylesheetLoadTimeout: Jd,
-                    keepIframeSrcFn: Ud = () => !1,
-                    maxDepth: xd,
-                    inlineStylesheetBudgetRules: Bd
-                  } = Od || {}, Sd = !0 === td ? {
+                    mirror: Mb = new sw,
+                    blockClass: eb = "rr-block",
+                    blockSelector: Hb = null,
+                    maskTextClass: pb = "rr-mask",
+                    maskTextSelector: Vb = null,
+                    inlineStylesheet: gb = !0,
+                    inlineImages: lb = !1,
+                    recordCanvas: Lb = !1,
+                    canvasMaskingConfigured: Ib,
+                    maskAllInputs: Ob = !1,
+                    maskTextFn: Ub,
+                    maskInputFn: tb,
+                    maskAllElementAttributes: Cb = !1,
+                    maskAttributeFn: Eb,
+                    slimDOM: Fb = !1,
+                    dataURLOptions: Bb,
+                    preserveWhiteSpace: sb,
+                    onSerialize: mb,
+                    onIframeLoad: hb,
+                    iframeLoadTimeout: zb,
+                    onIframeListenerRegistered: Xb,
+                    onStylesheetLoad: xb,
+                    stylesheetLoadTimeout: jb,
+                    keepIframeSrcFn: Kb = () => !1,
+                    maxDepth: rb,
+                    inlineStylesheetBudgetRules: Rb
+                  } = wb || {}, Db = !0 === Ob ? {
                     color: !0,
                     date: !0,
                     "datetime-local": !0,
@@ -4384,1403 +4384,1403 @@ export const modules = {
                     textarea: !0,
                     select: !0,
                     password: !0
-                  } : !1 === td ? {
+                  } : !1 === Ob ? {
                     password: !0
-                  } : td, sd = Rm(yd);
-                  Cd(Bd);
+                  } : Ob, cb = HM(Fb);
+                  db(Rb);
                   try {
-                    return Fm(dd, {
-                      doc: dd,
-                      mirror: md,
-                      blockClass: Wd,
-                      blockSelector: Fd,
-                      maskTextClass: Rd,
-                      maskTextSelector: Xd,
+                    return eM(bb, {
+                      doc: bb,
+                      mirror: Mb,
+                      blockClass: eb,
+                      blockSelector: Hb,
+                      maskTextClass: pb,
+                      maskTextSelector: Vb,
                       skipChild: !1,
-                      inlineStylesheet: Kd,
-                      maskInputOptions: Sd,
-                      maskTextFn: od,
-                      maskInputFn: Nd,
-                      maskAllElementAttributes: qd,
-                      maskAttributeFn: Hd,
-                      slimDOMOptions: sd,
-                      dataURLOptions: bd,
-                      inlineImages: hd,
-                      recordCanvas: vd,
-                      canvasMaskingConfigured: Qd,
-                      preserveWhiteSpace: Td,
-                      onSerialize: pd,
-                      onIframeLoad: Yd,
-                      iframeLoadTimeout: gd,
-                      onIframeListenerRegistered: wd,
-                      onStylesheetLoad: Ed,
-                      stylesheetLoadTimeout: Jd,
-                      keepIframeSrcFn: Ud,
+                      inlineStylesheet: gb,
+                      maskInputOptions: Db,
+                      maskTextFn: Ub,
+                      maskInputFn: tb,
+                      maskAllElementAttributes: Cb,
+                      maskAttributeFn: Eb,
+                      slimDOMOptions: cb,
+                      dataURLOptions: Bb,
+                      inlineImages: lb,
+                      recordCanvas: Lb,
+                      canvasMaskingConfigured: Ib,
+                      preserveWhiteSpace: sb,
+                      onSerialize: mb,
+                      onIframeLoad: hb,
+                      iframeLoadTimeout: zb,
+                      onIframeListenerRegistered: Xb,
+                      onStylesheetLoad: xb,
+                      stylesheetLoadTimeout: jb,
+                      keepIframeSrcFn: Kb,
                       newlyAddedElement: !1,
-                      maxDepth: xd
+                      maxDepth: rb
                     })
                   } finally {
-                    Zd()
+                    Pb()
                   }
                 }(document, {
-                  mirror: AW,
-                  blockClass: Qd,
-                  blockSelector: td,
-                  maskTextClass: qd,
-                  maskTextSelector: Hd,
-                  inlineStylesheet: yd,
-                  maskAllInputs: OO,
-                  inlineStylesheetBudgetRules: bd,
-                  maskTextFn: wd,
-                  maskInputFn: gd,
-                  maskAllElementAttributes: Ed,
-                  maskAttributeFn: Jd,
-                  slimDOM: WO,
-                  dataURLOptions: fd,
-                  recordCanvas: nd,
-                  canvasMaskingConfigured: bO,
-                  inlineImages: jd,
-                  onSerialize(dd) {
-                    Jm(dd, AW) && HO.addIframe(dd), Um(dd, AW) && qO.trackLinkElement(dd), xm(dd) && TO.addShadowRoot(Bd.shadowRoot(dd), document)
+                  mirror: fe,
+                  blockClass: Ib,
+                  blockSelector: Ob,
+                  maskTextClass: Cb,
+                  maskTextSelector: Eb,
+                  inlineStylesheet: Fb,
+                  maskAllInputs: kb,
+                  inlineStylesheetBudgetRules: Bb,
+                  maskTextFn: Xb,
+                  maskInputFn: zb,
+                  maskAllElementAttributes: xb,
+                  maskAttributeFn: jb,
+                  slimDOM: ww,
+                  dataURLOptions: yb,
+                  recordCanvas: Jb,
+                  canvasMaskingConfigured: Ew,
+                  inlineImages: Gb,
+                  onSerialize(bb) {
+                    xM(bb, fe) && tw.addIframe(bb), jM(bb, fe) && Uw.trackLinkElement(bb), KM(bb) && Fw.addShadowRoot(Rb.shadowRoot(bb), document)
                   },
-                  onIframeLoad(dd, Od) {
-                    HO.attachIframe(dd, Od), TO.observeAttachShadow(dd)
+                  onIframeLoad(bb, wb) {
+                    tw.attachIframe(bb, wb), Fw.observeAttachShadow(bb)
                   },
-                  onIframeListenerRegistered(dd, Od) {
-                    HO.registerLoadListenerDisposer(dd, Od)
+                  onIframeListenerRegistered(bb, wb) {
+                    tw.registerLoadListenerDisposer(bb, wb)
                   },
-                  onStylesheetLoad(dd, Od) {
-                    qO.attachLinkElement(dd, Od)
+                  onStylesheetLoad(bb, wb) {
+                    Uw.attachLinkElement(bb, wb)
                   },
-                  keepIframeSrcFn: ed
+                  keepIframeSrcFn: ab
                 })
               } finally {
-                Fd = mO()
+                Hb = bw()
               }
-              if (md) return;
-              if (!Wd) return console.warn("Failed to snapshot the document");
-              if (UW({
-                  type: Kd.FullSnapshot,
+              if (Mb) return;
+              if (!eb) return console.warn("Failed to snapshot the document");
+              if (je({
+                  type: gb.FullSnapshot,
                   data: {
-                    node: Wd,
-                    initialOffset: bm(window)
+                    node: eb,
+                    initialOffset: EM(window)
                   }
-                }, Od), md) return;
-              if (zm.forEach((dd => dd.unlock())), BW.onFullSnapshot(), Fd.length) {
-                const Od = function(dd, Od, md) {
-                  let Wd = !1,
-                    Fd = null,
-                    Rd = 0,
-                    Xd = null;
-                  const Kd = () => null !== Xd || dd.length > Rd,
-                    hd = () => {
-                      const md = dd[Rd];
-                      dd[Rd] = null, Rd += 1, md && Qm((() => {
-                        Xd = Od.beginDeferredLinkInlining(md, AW.getId(md))
+                }, wb), Mb) return;
+              if (vM.forEach((bb => bb.unlock())), re.onFullSnapshot(), Hb.length) {
+                const wb = function(bb, wb, Mb) {
+                  let eb = !1,
+                    Hb = null,
+                    pb = 0,
+                    Vb = null;
+                  const gb = () => null !== Vb || bb.length > pb,
+                    lb = () => {
+                      const Mb = bb[pb];
+                      bb[pb] = null, pb += 1, Mb && lM((() => {
+                        Vb = wb.beginDeferredLinkInlining(Mb, fe.getId(Mb))
                       }))
                     },
-                    vd = () => {
-                      if (!Xd) return;
-                      const dd = Xd;
-                      let Od = !0;
-                      Qm((() => {
-                        Od = dd.advance(200)
-                      })), Od && (Xd = null)
+                    Lb = () => {
+                      if (!Vb) return;
+                      const bb = Vb;
+                      let wb = !0;
+                      lM((() => {
+                        wb = bb.advance(200)
+                      })), wb && (Vb = null)
                     },
-                    Qd = dd => {
-                      if (Fd = null, Wd) return;
-                      let Od = 0;
+                    Ib = bb => {
+                      if (Hb = null, eb) return;
+                      let wb = 0;
                       do {
                         try {
-                          Xd || hd(), vd()
-                        } catch (dd) {
-                          null == Xd || Xd.discard(), Xd = null, FO(1)
+                          Vb || lb(), Lb()
+                        } catch (bb) {
+                          null == Vb || Vb.discard(), Vb = null, Mw(1)
                         }
-                        Od += 1
-                      } while (!Wd && Kd() && (dd ? !dd.didTimeout && dd.timeRemaining() > 5 : 10 > Od));
-                      Wd || (Kd() ? Fd = GW(Qd) : md())
+                        wb += 1
+                      } while (!eb && gb() && (bb ? !bb.didTimeout && bb.timeRemaining() > 5 : 10 > wb));
+                      eb || (gb() ? Hb = We(Ib) : Mb())
                     };
-                  return Fd = GW(Qd), {
+                  return Hb = We(Ib), {
                     cancel() {
-                      Wd = !0, null == Xd || Xd.discard(), Xd = null, null == Fd || Fd.cancel(), Fd = null
+                      eb = !0, null == Vb || Vb.discard(), Vb = null, null == Hb || Hb.cancel(), Hb = null
                     },
                     flush() {
-                      if (Wd) return;
-                      Wd = !0, null == Fd || Fd.cancel(), Fd = null;
-                      let Od = 0,
-                        Qd = 0;
-                      for (; Kd() && 50 > Od;) {
-                        Xd || hd();
-                        const md = Xd;
-                        if (md)
-                          if (Math.floor(md.remainingRules() / 200) + 1 > 50 - Od) md.discard(), Xd = null, Qd += 1;
+                      if (eb) return;
+                      eb = !0, null == Hb || Hb.cancel(), Hb = null;
+                      let wb = 0,
+                        Ib = 0;
+                      for (; gb() && 50 > wb;) {
+                        Vb || lb();
+                        const Mb = Vb;
+                        if (Mb)
+                          if (Math.floor(Mb.remainingRules() / 200) + 1 > 50 - wb) Mb.discard(), Vb = null, Ib += 1;
                           else {
                             try {
-                              vd()
-                            } catch (dd) {
-                              null == Xd || Xd.discard(), Xd = null, Qd += 1
+                              Lb()
+                            } catch (bb) {
+                              null == Vb || Vb.discard(), Vb = null, Ib += 1
                             }
-                            Od += 1
+                            wb += 1
                           }
                       }
-                      if (Kd() || Qd > 0) {
-                        let Od = Qd + (null !== Xd ? 1 : 0);
-                        for (let md = Rd; dd.length > md; md++) null !== dd[md] && (Od += 1);
-                        FO(Od), null == Xd || Xd.discard(), Xd = null
+                      if (gb() || Ib > 0) {
+                        let wb = Ib + (null !== Vb ? 1 : 0);
+                        for (let Mb = pb; bb.length > Mb; Mb++) null !== bb[Mb] && (wb += 1);
+                        Mw(wb), null == Vb || Vb.discard(), Vb = null
                       }
-                      md()
+                      Mb()
                     }
                   }
-                }(Fd, qO, (() => {
-                  dd === Od && (dd = void 0)
+                }(Hb, Uw, (() => {
+                  bb === wb && (bb = void 0)
                 }));
-                dd = Od
+                bb = wb
               }
-              Ld && HO.reattachIframes(), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && qO.adoptStyleSheets(document.adoptedStyleSheets, AW.getId(document))
+              Sb && tw.reattachIframes(), document.adoptedStyleSheets && document.adoptedStyleSheets.length > 0 && Uw.adoptStyleSheets(document.adoptedStyleSheets, fe.getId(document))
             } finally {
-              Zd()
+              Pb()
             }
           }
         };
         try {
-          const Od = [];
-          Od.push(Km("pagehide", (() => {
+          const wb = [];
+          wb.push(VM("pagehide", (() => {
             try {
-              null == dd || dd.flush()
-            } catch (Od) {}
-            dd = void 0
+              null == bb || bb.flush()
+            } catch (wb) {}
+            bb = void 0
           }), window));
-          for (const dd of ["visibilitychange", "freeze", "resume"]) Od.push(Km(dd, Vd, document));
-          hO = dd => {
-            const md = KO.get(dd);
-            md && (md.forEach((dd => {
-              Qm(dd);
-              const md = Od.indexOf(dd); - 1 !== md && Od.splice(md, 1)
-            })), KO.delete(dd))
-          }, vO = () => {
-            for (const [Od] of KO) {
-              const md = AW.QFd(Od);
-              if (md) try {
-                md.contentDocument && md.contentDocument.defaultView || null == hO || hO(Od)
-              } catch (dd) {
-                null == hO || hO(Od)
-              } else null == hO || hO(Od)
+          for (const bb of ["visibilitychange", "freeze", "resume"]) wb.push(VM(bb, Zb, document));
+          Vw = bb => {
+            const Mb = pw.get(bb);
+            Mb && (Mb.forEach((bb => {
+              lM(bb);
+              const Mb = wb.indexOf(bb); - 1 !== Mb && wb.splice(Mb, 1)
+            })), pw.delete(bb))
+          }, gw = () => {
+            for (const [wb] of pw) {
+              const Mb = fe.OHb(wb);
+              if (Mb) try {
+                Mb.contentDocument && Mb.contentDocument.defaultView || null == Vw || Vw(wb)
+              } catch (bb) {
+                null == Vw || Vw(wb)
+              } else null == Vw || Vw(wb)
             }
           };
-          const Rd = dd => {
-            var Od;
-            return Pm(Mm)({
-              mutationCb: tO,
-              mousemoveCb: (dd, Od) => UW({
-                type: Kd.IncrementalSnapshot,
+          const pb = bb => {
+            var wb;
+            return NM(oM)({
+              mutationCb: Lw,
+              mousemoveCb: (bb, wb) => je({
+                type: gb.IncrementalSnapshot,
                 data: {
-                  source: Od,
-                  positions: dd
+                  source: wb,
+                  positions: bb
                 }
               }),
-              mouseInteractionCb: dd => UW({
-                type: Kd.IncrementalSnapshot,
-                data: Wd({
-                  source: hd.MouseInteraction
-                }, dd)
+              mouseInteractionCb: bb => je({
+                type: gb.IncrementalSnapshot,
+                data: eb({
+                  source: lb.MouseInteraction
+                }, bb)
               }),
-              scrollCb: oO,
-              viewportResizeCb: dd => UW({
-                type: Kd.IncrementalSnapshot,
-                data: Wd({
-                  source: hd.ViewportResize
-                }, dd)
+              scrollCb: Iw,
+              viewportResizeCb: bb => je({
+                type: gb.IncrementalSnapshot,
+                data: eb({
+                  source: lb.ViewportResize
+                }, bb)
               }),
-              inputCb: dd => UW({
-                type: Kd.IncrementalSnapshot,
-                data: Wd({
-                  source: hd.Input
-                }, dd)
+              inputCb: bb => je({
+                type: gb.IncrementalSnapshot,
+                data: eb({
+                  source: lb.Input
+                }, bb)
               }),
-              mediaInteractionCb: dd => UW({
-                type: Kd.IncrementalSnapshot,
-                data: Wd({
-                  source: hd.MediaInteraction
-                }, dd)
+              mediaInteractionCb: bb => je({
+                type: gb.IncrementalSnapshot,
+                data: eb({
+                  source: lb.MediaInteraction
+                }, bb)
               }),
-              styleSheetRuleCb: dd => UW({
-                type: Kd.IncrementalSnapshot,
-                data: Wd({
-                  source: hd.StyleSheetRule
-                }, dd)
+              styleSheetRuleCb: bb => je({
+                type: gb.IncrementalSnapshot,
+                data: eb({
+                  source: lb.StyleSheetRule
+                }, bb)
               }),
-              styleDeclarationCb: dd => UW({
-                type: Kd.IncrementalSnapshot,
-                data: Wd({
-                  source: hd.StyleDeclaration
-                }, dd)
+              styleDeclarationCb: bb => je({
+                type: gb.IncrementalSnapshot,
+                data: eb({
+                  source: lb.StyleDeclaration
+                }, bb)
               }),
-              canvasMutationCb: NO,
-              fontCb: dd => UW({
-                type: Kd.IncrementalSnapshot,
-                data: Wd({
-                  source: hd.Font
-                }, dd)
+              canvasMutationCb: Ow,
+              fontCb: bb => je({
+                type: gb.IncrementalSnapshot,
+                data: eb({
+                  source: lb.Font
+                }, bb)
               }),
-              selectionCb(dd) {
-                UW({
-                  type: Kd.IncrementalSnapshot,
-                  data: Wd({
-                    source: hd.Selection
-                  }, dd)
+              selectionCb(bb) {
+                je({
+                  type: gb.IncrementalSnapshot,
+                  data: eb({
+                    source: lb.Selection
+                  }, bb)
                 })
               },
-              customElementCb(dd) {
-                UW({
-                  type: Kd.IncrementalSnapshot,
-                  data: Wd({
-                    source: hd.CustomElement
-                  }, dd)
+              customElementCb(bb) {
+                je({
+                  type: gb.IncrementalSnapshot,
+                  data: eb({
+                    source: lb.CustomElement
+                  }, bb)
                 })
               },
-              blockClass: Qd,
-              ignoreClass: od,
-              ignoreSelector: Nd,
-              maskTextClass: qd,
-              maskTextSelector: Hd,
-              maskInputOptions: OO,
-              inlineStylesheet: yd,
-              sampling: Sd,
-              recordDOM: Gd,
-              recordCanvas: nd,
-              canvasMaskingConfigured: bO,
-              inlineImages: jd,
-              userTriggeredOnInput: zd,
-              collectFonts: cd,
-              doc: dd,
-              maskInputFn: gd,
-              maskTextFn: wd,
-              maskAllElementAttributes: Ed,
-              maskAttributeFn: Jd,
-              keepIframeSrcFn: ed,
-              blockSelector: td,
-              slimDOMOptions: WO,
-              dataURLOptions: fd,
-              mirror: AW,
-              iframeManager: HO,
-              stylesheetManager: qO,
-              shadowDomManager: TO,
-              processedNodeManager: yO,
-              canvasManager: BW,
-              ignoreCSSAttributes: Id,
-              attributeFilter: ld,
-              plugins: (null == Dd || null === (Od = Dd.filter((dd => dd.observer))) || void 0 === Od ? void 0 : Od.map((dd => ({
-                name: dd.name,
-                observer: dd.observer,
-                options: dd.options,
-                callback: Od => UW({
-                  type: Kd.Plugin,
+              blockClass: Ib,
+              ignoreClass: Ub,
+              ignoreSelector: tb,
+              maskTextClass: Cb,
+              maskTextSelector: Eb,
+              maskInputOptions: kb,
+              inlineStylesheet: Fb,
+              sampling: Db,
+              recordDOM: Wb,
+              recordCanvas: Jb,
+              canvasMaskingConfigured: Ew,
+              inlineImages: Gb,
+              userTriggeredOnInput: vb,
+              collectFonts: Qb,
+              doc: bb,
+              maskInputFn: zb,
+              maskTextFn: Xb,
+              maskAllElementAttributes: xb,
+              maskAttributeFn: jb,
+              keepIframeSrcFn: ab,
+              blockSelector: Ob,
+              slimDOMOptions: ww,
+              dataURLOptions: yb,
+              mirror: fe,
+              iframeManager: tw,
+              stylesheetManager: Uw,
+              shadowDomManager: Fw,
+              processedNodeManager: Cw,
+              canvasManager: re,
+              ignoreCSSAttributes: ib,
+              attributeFilter: ub,
+              plugins: (null == qb || null === (wb = qb.filter((bb => bb.observer))) || void 0 === wb ? void 0 : wb.map((bb => ({
+                name: bb.name,
+                observer: bb.observer,
+                options: bb.options,
+                callback: wb => je({
+                  type: gb.Plugin,
                   data: {
-                    plugin: dd.name,
-                    payload: Od
+                    plugin: bb.name,
+                    payload: wb
                   }
                 })
               })))) || []
-            }, Ud)
+            }, Kb)
           };
-          HO.addLoadListener((dd => {
+          tw.addLoadListener((bb => {
             try {
-              const md = AW.getId(dd),
-                Wd = Rd(dd.contentDocument);
-              if ("function" == typeof Wd && (Od.push(Wd), -1 !== md)) {
-                let dd = KO.get(md);
-                dd || (dd = new Set, KO.set(md, dd)), dd.add(Wd)
+              const Mb = fe.getId(bb),
+                eb = pb(bb.contentDocument);
+              if ("function" == typeof eb && (wb.push(eb), -1 !== Mb)) {
+                let bb = pw.get(Mb);
+                bb || (bb = new Set, pw.set(Mb, bb)), bb.add(eb)
               }
-            } catch (Od) {
-              console.warn(Od)
+            } catch (wb) {
+              console.warn(wb)
             }
-          })), HO.addPageHideListener((dd => {
-            const Od = AW.getId(dd);
-            null == hO || hO(Od), em(dd)
+          })), tw.addPageHideListener((bb => {
+            const wb = fe.getId(bb);
+            null == Vw || Vw(wb), aM(bb)
           }));
-          let Xd = -1;
-          const vd = dd => UW({
-              type: Kd.Custom,
+          let Vb = -1;
+          const Lb = bb => je({
+              type: gb.Custom,
               data: {
                 tag: "rrweb/fullscreen",
-                payload: dd
+                payload: bb
               }
             }),
-            bd = () => {
-              var dd, Od, md, Wd;
-              const Fd = document,
-                Rd = null !== (dd = null !== (Od = null !== (md = null !== (Wd = Fd.fullscreenElement) && void 0 !== Wd ? Wd : Fd.webkitFullscreenElement) && void 0 !== md ? md : Fd.mozFullScreenElement) && void 0 !== Od ? Od : Fd.msFullscreenElement) && void 0 !== dd ? dd : null,
-                Kd = Rd ? AW.getId(Rd) : -1;
-              Kd !== Xd && (-1 !== Xd && vd({
-                id: Xd,
+            Bb = () => {
+              var bb, wb, Mb, eb;
+              const Hb = document,
+                pb = null !== (bb = null !== (wb = null !== (Mb = null !== (eb = Hb.fullscreenElement) && void 0 !== eb ? eb : Hb.webkitFullscreenElement) && void 0 !== Mb ? Mb : Hb.mozFullScreenElement) && void 0 !== wb ? wb : Hb.msFullscreenElement) && void 0 !== bb ? bb : null,
+                gb = pb ? fe.getId(pb) : -1;
+              gb !== Vb && (-1 !== Vb && Lb({
+                id: Vb,
                 enter: !1
-              }), Xd = Kd, -1 !== Kd && vd({
-                id: Kd,
+              }), Vb = gb, -1 !== gb && Lb({
+                id: gb,
                 enter: !0
               }))
             },
-            Td = () => {
-              if (md || Fd) return;
-              if (Fd = !0, xW(), md) return;
-              const dd = Rd(document);
-              md ? "function" == typeof dd && tm([dd]) : ("function" == typeof dd && Od.push(dd), Od.push(Km("fullscreenchange", bd)), Od.push(Km("webkitfullscreenchange", bd)), Od.push(Km("mozfullscreenchange", bd)), Od.push(Km("MSFullscreenChange", bd)), VW = !0)
+            sb = () => {
+              if (Mb || Hb) return;
+              if (Hb = !0, Ke(), Mb) return;
+              const bb = pb(document);
+              Mb ? "function" == typeof bb && LM([bb]) : ("function" == typeof bb && wb.push(bb), wb.push(VM("fullscreenchange", Bb)), wb.push(VM("webkitfullscreenchange", Bb)), wb.push(VM("mozfullscreenchange", Bb)), wb.push(VM("MSFullscreenChange", Bb)), Ye = !0)
             };
-          return ["interactive", "complete"].includes(document.readyState) ? Td() : (Od.push(Km("DOMContentLoaded", (() => {
-            UW({
-              type: Kd.DomContentLoaded,
+          return ["interactive", "complete"].includes(document.readyState) ? sb() : (wb.push(VM("DOMContentLoaded", (() => {
+            je({
+              type: gb.DomContentLoaded,
               data: {}
-            }), "DOMContentLoaded" === Pd && setTimeout(Td, 0)
-          }))), Od.push(Km("load", (() => {
-            UW({
-              type: Kd.Load,
+            }), "DOMContentLoaded" === Nb && setTimeout(sb, 0)
+          }))), wb.push(VM("load", (() => {
+            je({
+              type: gb.Load,
               data: {}
-            }), "load" === Pd && Td()
+            }), "load" === Nb && sb()
           }), window))), () => {
-            md = !0;
+            Mb = !0;
             try {
-              null == dd || dd.flush()
-            } catch (Od) {}
-            dd = void 0, tm(Od), yO.destroy(), HO.removeLoadListener(), HO.destroy(), KO.clear(), TO.reset(), AW.reset(), VW = !1, Vm = void 0
+              null == bb || bb.flush()
+            } catch (wb) {}
+            bb = void 0, LM(wb), Cw.destroy(), tw.removeLoadListener(), tw.destroy(), pw.clear(), Fw.reset(), fe.reset(), Ye = !1, YM = void 0
           }
-        } catch (Od) {
-          console.warn(Od)
+        } catch (wb) {
+          console.warn(wb)
         }
       }
-      nW.addCustomEvent = (dd, Od) => {
-        if (!VW) throw new Error("please add custom event after start recording");
-        UW({
-          type: Kd.Custom,
+      Je.addCustomEvent = (bb, wb) => {
+        if (!Ye) throw new Error("please add custom event after start recording");
+        je({
+          type: gb.Custom,
           data: {
-            tag: dd,
-            payload: Od
+            tag: bb,
+            payload: wb
           }
         })
-      }, nW.freezePage = () => {
-        zm.forEach((dd => dd.freeze()))
-      }, nW.takeFullSnapshot = dd => {
-        if (!VW) throw new Error("please take full snapshot after start recording");
-        xW(dd)
-      }, nW.isRecording = () => VW, nW.mirror = AW, "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
-      var LW = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
-      new RegExp(`^${LW.source}`, "i"), new RegExp(LW.source, "gi"), "0".repeat(32), "0".repeat(16);
-      var PW = Object.create(null);
+      }, Je.freezePage = () => {
+        vM.forEach((bb => bb.freeze()))
+      }, Je.takeFullSnapshot = bb => {
+        if (!Ye) throw new Error("please take full snapshot after start recording");
+        Ke(bb)
+      }, Je.isRecording = () => Ye, Je.mirror = fe, "Mobile".toLowerCase(), "Tablet".toLowerCase(), new RegExp("Xbox", "i"), new RegExp("Nintendo", "i"), new RegExp("PlayStation", "i"), new RegExp("Windows", "i"), Date, Date, new RegExp(/[a-z][a-z0-9+.-]{0,63}:[^\s<>"]+/gi.source, "i");
+      var Se = /[a-z][a-z0-9+.-]{0,63}:\/\//i;
+      new RegExp(`^${Se.source}`, "i"), new RegExp(Se.source, "gi"), "0".repeat(32), "0".repeat(16);
+      var Ne = Object.create(null);
 
-      function zW(dd) {
-        return zW = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(dd) {
-          return typeof dd
-        } : function(dd) {
-          return dd && "function" == typeof Symbol && dd.constructor === Symbol && dd !== Symbol.prototype ? "symbol" : typeof dd
-        }, zW(dd)
+      function ve(bb) {
+        return ve = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
+          return typeof bb
+        } : function(bb) {
+          return bb && "function" == typeof Symbol && bb.constructor === Symbol && bb !== Symbol.prototype ? "symbol" : typeof bb
+        }, ve(bb)
       }
 
-      function cW(dd, Od, md) {
-        return (Od = function(dd) {
-          var Od = function(dd) {
-            if ("object" != zW(dd) || !dd) return dd;
-            var Od = dd[Symbol.toPrimitive];
-            if (void 0 !== Od) {
-              var md = Od.call(dd, "string");
-              if ("object" != zW(md)) return md;
+      function Qe(bb, wb, Mb) {
+        return (wb = function(bb) {
+          var wb = function(bb) {
+            if ("object" != ve(bb) || !bb) return bb;
+            var wb = bb[Symbol.toPrimitive];
+            if (void 0 !== wb) {
+              var Mb = wb.call(bb, "string");
+              if ("object" != ve(Mb)) return Mb;
               throw new TypeError("@@toPrimitive must return a primitive value.")
             }
-            return String(dd)
-          }(dd);
-          return "symbol" == zW(Od) ? Od : Od + ""
-        }(Od)) in dd ? Object.defineProperty(dd, Od, {
-          value: md,
+            return String(bb)
+          }(bb);
+          return "symbol" == ve(wb) ? wb : wb + ""
+        }(wb)) in bb ? Object.defineProperty(bb, wb, {
+          value: Mb,
           enumerable: !0,
           configurable: !0,
           writable: !0
-        }) : dd[Od] = md, dd
+        }) : bb[wb] = Mb, bb
       }
-      PW.Node = Object.create(null), PW.ShadowRoot = Object.create(null), PW.MutationObserver = Object.create(null), PW.Element = Object.create(null);
-      var jW = class {
-          constructor(dd) {
-            cW(this, "fileName", void 0), cW(this, "functionName", void 0), cW(this, "lineNumber", void 0), cW(this, "columnNumber", void 0), this.fileName = dd.fileName || "", this.functionName = dd.functionName || "", this.lineNumber = dd.lineNumber, this.columnNumber = dd.columnNumber
+      Ne.Node = Object.create(null), Ne.ShadowRoot = Object.create(null), Ne.MutationObserver = Object.create(null), Ne.Element = Object.create(null);
+      var Ge = class {
+          constructor(bb) {
+            Qe(this, "fileName", void 0), Qe(this, "functionName", void 0), Qe(this, "lineNumber", void 0), Qe(this, "columnNumber", void 0), this.fileName = bb.fileName || "", this.functionName = bb.functionName || "", this.lineNumber = bb.lineNumber, this.columnNumber = bb.columnNumber
           }
           toString() {
-            const dd = this.lineNumber || "",
-              Od = this.columnNumber || "";
-            return this.functionName ? `${this.functionName} (${this.fileName}:${dd}:${Od})` : `${this.fileName}:${dd}:${Od}`
+            const bb = this.lineNumber || "",
+              wb = this.columnNumber || "";
+            return this.functionName ? `${this.functionName} (${this.fileName}:${bb}:${wb})` : `${this.fileName}:${bb}:${wb}`
           }
         },
-        DW = /(^|@)\S+:\d+/,
-        eW = /^\s*at .*(\S+:\d+|\(native\))/m,
-        IW = /^(eval@)?(\[native code])?$/,
-        lW = {
-          parse(dd) {
-            return dd ? void 0 !== dd.stacktrace || void 0 !== dd["opera#sourceloc"] ? this.parseOpera(dd) : dd.stack && dd.stack.match(eW) ? this.parseV8OrIE(dd) : dd.stack ? this.parseFFOrSafari(dd) : [] : []
+        qe = /(^|@)\S+:\d+/,
+        ae = /^\s*at .*(\S+:\d+|\(native\))/m,
+        ie = /^(eval@)?(\[native code])?$/,
+        ue = {
+          parse(bb) {
+            return bb ? void 0 !== bb.stacktrace || void 0 !== bb["opera#sourceloc"] ? this.parseOpera(bb) : bb.stack && bb.stack.match(ae) ? this.parseV8OrIE(bb) : bb.stack ? this.parseFFOrSafari(bb) : [] : []
           },
-          extractLocation(dd) {
-            if (-1 === dd.indexOf(":")) return [dd];
-            const Od = /(.+?)(?::(\d+))?(?::(\d+))?$/.exec(dd.replace(/[()]/g, ""));
-            if (!Od) throw new Error(`Cannot parse given url: ${dd}`);
-            return [Od[1], Od[2] || void 0, Od[3] || void 0]
+          extractLocation(bb) {
+            if (-1 === bb.indexOf(":")) return [bb];
+            const wb = /(.+?)(?::(\d+))?(?::(\d+))?$/.exec(bb.replace(/[()]/g, ""));
+            if (!wb) throw new Error(`Cannot parse given url: ${bb}`);
+            return [wb[1], wb[2] || void 0, wb[3] || void 0]
           },
-          parseV8OrIE(dd) {
-            return dd.stack.split("\n").filter((function(dd) {
-              return !!dd.match(eW)
-            }), this).map((function(dd) {
-              dd.indexOf("(eval ") > -1 && (dd = dd.replace(/eval code/g, "eval").replace(/(\(eval at [^()]*)|(\),.*$)/g, ""));
-              let Od = dd.replace(/^\s+/, "").replace(/\(eval code/g, "(");
-              const md = Od.match(/ (\((.+):(\d+):(\d+)\)$)/);
-              Od = md ? Od.replace(md[0], "") : Od;
-              const Wd = Od.split(/\s+/).slice(1),
-                Fd = this.extractLocation(md ? md[1] : Wd.pop());
-              return new jW({
-                functionName: Wd.join(" ") || void 0,
-                fileName: ["eval", "<anonymous>"].indexOf(Fd[0]) > -1 ? void 0 : Fd[0],
-                lineNumber: Fd[1],
-                columnNumber: Fd[2]
+          parseV8OrIE(bb) {
+            return bb.stack.split("\n").filter((function(bb) {
+              return !!bb.match(ae)
+            }), this).map((function(bb) {
+              bb.indexOf("(eval ") > -1 && (bb = bb.replace(/eval code/g, "eval").replace(/(\(eval at [^()]*)|(\),.*$)/g, ""));
+              let wb = bb.replace(/^\s+/, "").replace(/\(eval code/g, "(");
+              const Mb = wb.match(/ (\((.+):(\d+):(\d+)\)$)/);
+              wb = Mb ? wb.replace(Mb[0], "") : wb;
+              const eb = wb.split(/\s+/).slice(1),
+                Hb = this.extractLocation(Mb ? Mb[1] : eb.pop());
+              return new Ge({
+                functionName: eb.join(" ") || void 0,
+                fileName: ["eval", "<anonymous>"].indexOf(Hb[0]) > -1 ? void 0 : Hb[0],
+                lineNumber: Hb[1],
+                columnNumber: Hb[2]
               })
             }), this)
           },
-          parseFFOrSafari(dd) {
-            return dd.stack.split("\n").filter((function(dd) {
-              return !dd.match(IW)
-            }), this).map((function(dd) {
-              if (dd.indexOf(" > eval") > -1 && (dd = dd.replace(/ line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g, ":$1")), -1 === dd.indexOf("@") && -1 === dd.indexOf(":")) return new jW({
-                functionName: dd
+          parseFFOrSafari(bb) {
+            return bb.stack.split("\n").filter((function(bb) {
+              return !bb.match(ie)
+            }), this).map((function(bb) {
+              if (bb.indexOf(" > eval") > -1 && (bb = bb.replace(/ line (\d+)(?: > eval line \d+)* > eval:\d+:\d+/g, ":$1")), -1 === bb.indexOf("@") && -1 === bb.indexOf(":")) return new Ge({
+                functionName: bb
               });
               {
-                const Od = /((.*".+"[^@]*)?[^@]*)(?:@)/,
-                  md = dd.match(Od),
-                  Wd = md && md[1] ? md[1] : void 0,
-                  Fd = this.extractLocation(dd.replace(Od, ""));
-                return new jW({
-                  functionName: Wd,
-                  fileName: Fd[0],
-                  lineNumber: Fd[1],
-                  columnNumber: Fd[2]
+                const wb = /((.*".+"[^@]*)?[^@]*)(?:@)/,
+                  Mb = bb.match(wb),
+                  eb = Mb && Mb[1] ? Mb[1] : void 0,
+                  Hb = this.extractLocation(bb.replace(wb, ""));
+                return new Ge({
+                  functionName: eb,
+                  fileName: Hb[0],
+                  lineNumber: Hb[1],
+                  columnNumber: Hb[2]
                 })
               }
             }), this)
           },
-          parseOpera(dd) {
-            return !dd.stacktrace || dd.message.indexOf("\n") > -1 && dd.message.split("\n").length > dd.stacktrace.split("\n").length ? this.parseOpera9(dd) : dd.stack ? this.parseOpera11(dd) : this.parseOpera10(dd)
+          parseOpera(bb) {
+            return !bb.stacktrace || bb.message.indexOf("\n") > -1 && bb.message.split("\n").length > bb.stacktrace.split("\n").length ? this.parseOpera9(bb) : bb.stack ? this.parseOpera11(bb) : this.parseOpera10(bb)
           },
-          parseOpera9(dd) {
-            const Od = /Line (\d+).*script (?:in )?(\S+)/i,
-              md = dd.message.split("\n"),
-              Wd = [];
-            for (let Fd = 2, Rd = md.length; Rd > Fd; Fd += 2) {
-              const dd = Od.exec(md[Fd]);
-              dd && Wd.push(new jW({
-                fileName: dd[2],
-                lineNumber: parseFloat(dd[1])
+          parseOpera9(bb) {
+            const wb = /Line (\d+).*script (?:in )?(\S+)/i,
+              Mb = bb.message.split("\n"),
+              eb = [];
+            for (let Hb = 2, pb = Mb.length; pb > Hb; Hb += 2) {
+              const bb = wb.exec(Mb[Hb]);
+              bb && eb.push(new Ge({
+                fileName: bb[2],
+                lineNumber: parseFloat(bb[1])
               }))
             }
-            return Wd
+            return eb
           },
-          parseOpera10(dd) {
-            const Od = /Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i,
-              md = dd.stacktrace.split("\n"),
-              Wd = [];
-            for (let Fd = 0, Rd = md.length; Rd > Fd; Fd += 2) {
-              const dd = Od.exec(md[Fd]);
-              dd && Wd.push(new jW({
-                functionName: dd[3] || void 0,
-                fileName: dd[2],
-                lineNumber: parseFloat(dd[1])
+          parseOpera10(bb) {
+            const wb = /Line (\d+).*script (?:in )?(\S+)(?:: In function (\S+))?$/i,
+              Mb = bb.stacktrace.split("\n"),
+              eb = [];
+            for (let Hb = 0, pb = Mb.length; pb > Hb; Hb += 2) {
+              const bb = wb.exec(Mb[Hb]);
+              bb && eb.push(new Ge({
+                functionName: bb[3] || void 0,
+                fileName: bb[2],
+                lineNumber: parseFloat(bb[1])
               }))
             }
-            return Wd
+            return eb
           },
-          parseOpera11(dd) {
-            return dd.stack.split("\n").filter((function(dd) {
-              return !!dd.match(DW) && !dd.match(/^Error created at/)
-            }), this).map((function(dd) {
-              const Od = dd.split("@"),
-                md = this.extractLocation(Od.pop());
-              return new jW({
-                functionName: (Od.shift() || "").replace(/<anonymous function(: (\w+))?>/, "$2").replace(/\([^)]*\)/g, "") || void 0,
-                fileName: md[0],
-                lineNumber: md[1],
-                columnNumber: md[2]
+          parseOpera11(bb) {
+            return bb.stack.split("\n").filter((function(bb) {
+              return !!bb.match(qe) && !bb.match(/^Error created at/)
+            }), this).map((function(bb) {
+              const wb = bb.split("@"),
+                Mb = this.extractLocation(wb.pop());
+              return new Ge({
+                functionName: (wb.shift() || "").replace(/<anonymous function(: (\w+))?>/, "$2").replace(/\([^)]*\)/g, "") || void 0,
+                fileName: Mb[0],
+                lineNumber: Mb[1],
+                columnNumber: Mb[2]
               })
             }), this)
           }
         };
 
-      function CW(dd) {
-        if (!dd || !dd.outerHTML) return "";
-        let Od = "";
-        for (; dd.parentElement;) {
-          let md = dd.localName;
-          if (!md) break;
-          md = md.toLowerCase();
-          const Wd = dd.parentElement,
-            Fd = [];
-          if (Wd.children && Wd.children.length > 0)
-            for (let dd = 0; Wd.children.length > dd; dd++) {
-              const Od = Wd.children[dd];
-              Od.localName && Od.localName.toLowerCase && Od.localName.toLowerCase() === md && Fd.push(Od)
+      function de(bb) {
+        if (!bb || !bb.outerHTML) return "";
+        let wb = "";
+        for (; bb.parentElement;) {
+          let Mb = bb.localName;
+          if (!Mb) break;
+          Mb = Mb.toLowerCase();
+          const eb = bb.parentElement,
+            Hb = [];
+          if (eb.children && eb.children.length > 0)
+            for (let bb = 0; eb.children.length > bb; bb++) {
+              const wb = eb.children[bb];
+              wb.localName && wb.localName.toLowerCase && wb.localName.toLowerCase() === Mb && Hb.push(wb)
             }
-          Fd.length > 1 && (md += `:eq(${Fd.indexOf(dd)})`), Od = md + (Od ? ">" + Od : ""), dd = Wd
+          Hb.length > 1 && (Mb += `:eq(${Hb.indexOf(bb)})`), wb = Mb + (wb ? ">" + wb : ""), bb = eb
         }
-        return Od
+        return wb
       }
 
-      function ZW(dd) {
-        return Array.isArray(dd)
+      function Pe(bb) {
+        return Array.isArray(bb)
       }
 
-      function kW(dd) {
-        return "object" == typeof dd && null !== dd && !ZW(dd)
+      function ne(bb) {
+        return "object" == typeof bb && null !== bb && !Pe(bb)
       }
 
-      function fW(dd, Od) {
-        if (0 === Od) return !0;
-        const md = Object.keys(dd);
-        for (const Wd of md)
-          if (kW(dd[Wd]) && fW(dd[Wd], Od - 1)) return !0;
+      function ye(bb, wb) {
+        if (0 === wb) return !0;
+        const Mb = Object.keys(bb);
+        for (const eb of Mb)
+          if (ne(bb[eb]) && ye(bb[eb], wb - 1)) return !0;
         return !1
       }
 
-      function MW(dd, Od) {
-        const md = {
+      function oe(bb, wb) {
+        const Mb = {
           numOfKeysLimit: 50,
           depthOfLimit: 4
         };
-        Object.assign(md, Od);
-        const Wd = [],
-          Fd = [];
-        return JSON.stringify(dd, (function(dd, Od) {
-          if (Wd.length > 0) {
-            const md = Wd.indexOf(this);
-            ~md ? Wd.splice(md + 1) : Wd.push(this), ~md ? Fd.splice(md, 1 / 0, dd) : Fd.push(dd), ~Wd.indexOf(Od) && (Od = Wd[0] === Od ? "[Circular ~]" : "[Circular ~." + Fd.slice(0, Wd.indexOf(Od)).join(".") + "]")
-          } else Wd.push(Od);
-          if (null === Od) return Od;
-          if (void 0 === Od) return "undefined";
-          if (kW(Rd = Od) && Object.keys(Rd).length > md.numOfKeysLimit || "function" == typeof Rd || kW(Rd) && fW(Rd, md.depthOfLimit)) return function(dd) {
-            let Od = dd.toString();
-            return md.stringLengthLimit && Od.length > md.stringLengthLimit && (Od = `${Od.slice(0,md.stringLengthLimit)}...`), Od
-          }(Od);
-          var Rd;
-          if ("bigint" == typeof Od) return Od.toString() + "n";
-          if (Od instanceof Event) {
-            const dd = {};
-            for (const md in Od) {
-              const Wd = Od[md];
-              dd[md] = ZW(Wd) ? CW(Wd.length ? Wd[0] : null) : Wd
+        Object.assign(Mb, wb);
+        const eb = [],
+          Hb = [];
+        return JSON.stringify(bb, (function(bb, wb) {
+          if (eb.length > 0) {
+            const Mb = eb.indexOf(this);
+            ~Mb ? eb.splice(Mb + 1) : eb.push(this), ~Mb ? Hb.splice(Mb, 1 / 0, bb) : Hb.push(bb), ~eb.indexOf(wb) && (wb = eb[0] === wb ? "[Circular ~]" : "[Circular ~." + Hb.slice(0, eb.indexOf(wb)).join(".") + "]")
+          } else eb.push(wb);
+          if (null === wb) return wb;
+          if (void 0 === wb) return "undefined";
+          if (ne(pb = wb) && Object.keys(pb).length > Mb.numOfKeysLimit || "function" == typeof pb || ne(pb) && ye(pb, Mb.depthOfLimit)) return function(bb) {
+            let wb = bb.toString();
+            return Mb.stringLengthLimit && wb.length > Mb.stringLengthLimit && (wb = `${wb.slice(0,Mb.stringLengthLimit)}...`), wb
+          }(wb);
+          var pb;
+          if ("bigint" == typeof wb) return wb.toString() + "n";
+          if (wb instanceof Event) {
+            const bb = {};
+            for (const Mb in wb) {
+              const eb = wb[Mb];
+              bb[Mb] = Pe(eb) ? de(eb.length ? eb[0] : null) : eb
             }
-            return dd
+            return bb
           }
-          return Od instanceof Node ? Od instanceof HTMLElement ? Od ? Od.outerHTML : "" : Od.nodeName : Od instanceof Error ? Od.stack ? Od.stack + "\nEnd of stack for Error object" : Od.name + ": " + Od.message : Od
+          return wb instanceof Node ? wb instanceof HTMLElement ? wb ? wb.outerHTML : "" : wb.nodeName : wb instanceof Error ? wb.stack ? wb.stack + "\nEnd of stack for Error object" : wb.name + ": " + wb.message : wb
         }))
       }
-      var dF = {
+      var Te = {
         level: ["assert", "clear", "count", "countReset", "debug", "dir", "dirxml", "error", "group", "groupCollapsed", "groupEnd", "info", "log", "table", "time", "timeEnd", "timeLog", "trace", "warn"],
         lengthThreshold: 1e3,
         logger: "console"
       };
 
-      function OF(dd, Od, md) {
-        const Wd = md ? Object.assign({}, dF, md) : dF,
-          Fd = Wd.logger;
-        if (!Fd) return () => {};
-        let Rd;
-        Rd = "string" == typeof Fd ? Od[Fd] : Fd;
-        let Xd = 0,
-          Kd = !1,
-          hd = !0;
-        const vd = [];
-        if (Wd.level.includes("error")) {
-          const md = Od => {
-            const md = Od.message;
-            dd({
+      function ke(bb, wb, Mb) {
+        const eb = Mb ? Object.assign({}, Te, Mb) : Te,
+          Hb = eb.logger;
+        if (!Hb) return () => {};
+        let pb;
+        pb = "string" == typeof Hb ? wb[Hb] : Hb;
+        let Vb = 0,
+          gb = !1,
+          lb = !0;
+        const Lb = [];
+        if (eb.level.includes("error")) {
+          const Mb = wb => {
+            const Mb = wb.message;
+            bb({
               level: "error",
-              trace: lW.parse(Od.error).map((dd => dd.toString())),
-              payload: [MW(md, Wd.stringifyOptions)]
+              trace: ue.parse(wb.error).map((bb => bb.toString())),
+              payload: [oe(Mb, eb.stringifyOptions)]
             })
           };
-          Od.addEventListener("error", md), vd.push((() => {
-            Od.removeEventListener("error", md)
+          wb.addEventListener("error", Mb), Lb.push((() => {
+            wb.removeEventListener("error", Mb)
           }));
-          const Fd = Od => {
-            let md, Fd;
-            Od.reason instanceof Error ? (md = Od.reason, Fd = [MW(`Uncaught (in promise) ${md.name}: ${md.message}`, Wd.stringifyOptions)]) : (md = new Error, Fd = [MW("Uncaught (in promise)", Wd.stringifyOptions), MW(Od.reason, Wd.stringifyOptions)]), dd({
+          const Hb = wb => {
+            let Mb, Hb;
+            wb.reason instanceof Error ? (Mb = wb.reason, Hb = [oe(`Uncaught (in promise) ${Mb.name}: ${Mb.message}`, eb.stringifyOptions)]) : (Mb = new Error, Hb = [oe("Uncaught (in promise)", eb.stringifyOptions), oe(wb.reason, eb.stringifyOptions)]), bb({
               level: "error",
-              trace: lW.parse(md).map((dd => dd.toString())),
-              payload: Fd
+              trace: ue.parse(Mb).map((bb => bb.toString())),
+              payload: Hb
             })
           };
-          Od.addEventListener("unhandledrejection", Fd), vd.push((() => {
-            Od.removeEventListener("unhandledrejection", Fd)
+          wb.addEventListener("unhandledrejection", Hb), Lb.push((() => {
+            wb.removeEventListener("unhandledrejection", Hb)
           }))
         }
-        for (const td of Wd.level) vd.push(Qd(Rd, td));
+        for (const Ob of eb.level) Lb.push(Ib(pb, Ob));
         return () => {
-          hd = !1, vd.forEach((dd => dd()))
+          lb = !1, Lb.forEach((bb => bb()))
         };
 
-        function Qd(Od, md) {
-          return Od[md] ? function(Fd, Rd) {
+        function Ib(wb, Mb) {
+          return wb[Mb] ? function(Hb, pb) {
             try {
-              if (!(Rd in Fd)) return () => {};
-              const vd = Fd[Rd],
-                Qd = {
-                  next: vd
+              if (!(pb in Hb)) return () => {};
+              const Lb = Hb[pb],
+                Ib = {
+                  next: Lb
                 },
-                td = (Fd => function() {
-                  for (var Rd = arguments.length, vd = new Array(Rd), Qd = 0; Qd < Rd; Qd++) vd[Qd] = arguments[Qd];
-                  if (Fd.apply(Od, vd), hd && !("assert" === md && vd[0] || Kd)) {
-                    Kd = !0;
+                Ob = (Hb => function() {
+                  for (var pb = arguments.length, Lb = new Array(pb), Ib = 0; Ib < pb; Ib++) Lb[Ib] = arguments[Ib];
+                  if (Hb.apply(wb, Lb), lb && !("assert" === Mb && Lb[0] || gb)) {
+                    gb = !0;
                     try {
-                      const Od = lW.parse(new Error).map((dd => dd.toString())).splice(1),
-                        Fd = ("assert" === md ? vd.slice(1) : vd).map((dd => MW(dd, Wd.stringifyOptions)));
-                      Xd++, Wd.lengthThreshold > Xd ? dd({
-                        level: md,
-                        trace: Od,
-                        payload: Fd
-                      }) : Xd === Wd.lengthThreshold && dd({
+                      const wb = ue.parse(new Error).map((bb => bb.toString())).splice(1),
+                        Hb = ("assert" === Mb ? Lb.slice(1) : Lb).map((bb => oe(bb, eb.stringifyOptions)));
+                      Vb++, eb.lengthThreshold > Vb ? bb({
+                        level: Mb,
+                        trace: wb,
+                        payload: Hb
+                      }) : Vb === eb.lengthThreshold && bb({
                         level: "warn",
                         trace: [],
-                        payload: [MW("The number of log records reached the threshold.")]
+                        payload: [oe("The number of log records reached the threshold.")]
                       })
-                    } catch (dd) {
-                      Fd.apply(Od, ["rrweb logger error:", dd, ...vd])
+                    } catch (bb) {
+                      Hb.apply(wb, ["rrweb logger error:", bb, ...Lb])
                     } finally {
-                      Kd = !1
+                      gb = !1
                     }
                   }
                 })((function() {
-                  for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-                  return Qd.next.apply(this, Od)
+                  for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+                  return Ib.next.apply(this, wb)
                 }));
-              return "function" == typeof td && (td.prototype = td.prototype || {}, Object.defineProperties(td, {
+              return "function" == typeof Ob && (Ob.prototype = Ob.prototype || {}, Object.defineProperties(Ob, {
                 __rrweb_original__: {
                   enumerable: !1,
-                  value: vd
+                  value: Lb
                 },
                 __rrweb_layer__: {
                   enumerable: !1,
-                  value: Qd
+                  value: Ib
                 }
-              })), Fd[Rd] = td, () => {
-                if (Fd[Rd] === td) return void(Fd[Rd] = Qd.next);
-                const dd = dd => {
-                  var Od;
-                  return "function" == typeof dd ? null !== (Od = dd.__rrweb_layer__) && void 0 !== Od ? Od : dd.__posthog_layer__ : void 0
+              })), Hb[pb] = Ob, () => {
+                if (Hb[pb] === Ob) return void(Hb[pb] = Ib.next);
+                const bb = bb => {
+                  var wb;
+                  return "function" == typeof bb ? null !== (wb = bb.__rrweb_layer__) && void 0 !== wb ? wb : bb.__posthog_layer__ : void 0
                 };
-                let Od = Fd[Rd],
-                  md = dd(Od);
-                for (; md;) {
-                  if (md.next === td) return void(md.next = Qd.next);
-                  Od = md.next, md = dd(Od)
+                let wb = Hb[pb],
+                  Mb = bb(wb);
+                for (; Mb;) {
+                  if (Mb.next === Ob) return void(Mb.next = Ib.next);
+                  wb = Mb.next, Mb = bb(wb)
                 }
               }
-            } catch (dd) {
+            } catch (bb) {
               return () => {}
             }
-          }(Od, md) : () => {}
+          }(wb, Mb) : () => {}
         }
       }
-      const mF = "u" > typeof window ? window : void 0,
-        WF = "u" > typeof globalThis ? globalThis : mF,
-        FF = null == WF ? void 0 : WF.document,
-        RF = null == WF ? void 0 : WF.location;
-      null != WF && WF.XMLHttpRequest && new WF.XMLHttpRequest;
-      const XF = "undefined" != typeof globalThis ? globalThis : mF;
-      XF && "undefined" == typeof self && (XF.self = XF), XF && "undefined" == typeof File && (XF.File = function() {});
-      const KF = null != mF ? mF : {},
-        hF = Object.prototype,
-        vF = hF.hasOwnProperty,
-        QF = hF.toString,
-        tF = Array.isArray || function(dd) {
-          return "[object Array]" === QF.call(dd)
+      const bH = "u" > typeof window ? window : void 0,
+        wH = "u" > typeof globalThis ? globalThis : bH,
+        MH = null == wH ? void 0 : wH.document,
+        eH = null == wH ? void 0 : wH.location;
+      null != wH && wH.XMLHttpRequest && new wH.XMLHttpRequest;
+      const HH = "undefined" != typeof globalThis ? globalThis : bH;
+      HH && "undefined" == typeof self && (HH.self = HH), HH && "undefined" == typeof File && (HH.File = function() {});
+      const pH = null != bH ? bH : {},
+        VH = Object.prototype,
+        gH = VH.hasOwnProperty,
+        lH = VH.toString,
+        LH = Array.isArray || function(bb) {
+          return "[object Array]" === lH.call(bb)
         },
-        oF = dd => "function" == typeof dd,
-        NF = dd => dd === Object(dd) && !tF(dd),
-        qF = dd => void 0 === dd,
-        HF = dd => "[object String]" == QF.call(dd),
-        yF = dd => null === dd,
-        bF = dd => qF(dd) || yF(dd),
-        TF = dd => "[object Number]" == QF.call(dd) && dd == dd,
-        pF = dd => "[object Boolean]" === QF.call(dd),
-        YF = dd => dd instanceof FormData;
+        IH = bb => "function" == typeof bb,
+        OH = bb => bb === Object(bb) && !LH(bb),
+        UH = bb => void 0 === bb,
+        tH = bb => "[object String]" == lH.call(bb),
+        CH = bb => null === bb,
+        EH = bb => UH(bb) || CH(bb),
+        FH = bb => "[object Number]" == lH.call(bb) && bb == bb,
+        BH = bb => "[object Boolean]" === lH.call(bb),
+        sH = bb => bb instanceof FormData;
 
-      function gF(dd, Od, md, Wd, Fd) {
-        return Od > md && (Wd.warn("min cannot be greater than max."), Od = md), TF(dd) ? dd > md ? (Wd.warn(" cannot be  greater than max: " + md + ". Using max value instead."), md) : Od > dd ? (Wd.warn(" cannot be less than min: " + Od + ". Using min value instead."), Od) : dd : (Wd.warn(" must be a number. using max or fallback. max: " + md + ", fallback: " + Fd), gF(null != Fd ? Fd : md, Od, md, Wd))
+      function mH(bb, wb, Mb, eb, Hb) {
+        return wb > Mb && (eb.warn("min cannot be greater than max."), wb = Mb), FH(bb) ? bb > Mb ? (eb.warn(" cannot be  greater than max: " + Mb + ". Using max value instead."), Mb) : wb > bb ? (eb.warn(" cannot be less than min: " + wb + ". Using min value instead."), wb) : bb : (eb.warn(" must be a number. using max or fallback. max: " + Mb + ", fallback: " + Hb), mH(null != Hb ? Hb : Mb, wb, Mb, eb))
       }
-      var wF = class {
-        constructor(dd) {
-          this.C = {}, this.I = dd.I, this.R = gF(dd.bucketSize, 0, 100, dd.A), this.$ = gF(dd.refillRate, 0, this.R, dd.A), this.O = gF(dd.refillInterval, 0, 864e5, dd.A)
+      var hH = class {
+        constructor(bb) {
+          this.C = {}, this.I = bb.I, this.R = mH(bb.bucketSize, 0, 100, bb.A), this.$ = mH(bb.refillRate, 0, this.R, bb.A), this.O = mH(bb.refillInterval, 0, 864e5, bb.A)
         }
-        F(dd, Od) {
-          const md = Math.floor((Od - dd.lastAccess) / this.O);
-          md > 0 && (dd.tokens = Math.min(dd.tokens + md * this.$, this.R), dd.lastAccess = dd.lastAccess + md * this.O)
+        F(bb, wb) {
+          const Mb = Math.floor((wb - bb.lastAccess) / this.O);
+          Mb > 0 && (bb.tokens = Math.min(bb.tokens + Mb * this.$, this.R), bb.lastAccess = bb.lastAccess + Mb * this.O)
         }
-        consumeRateLimit(dd) {
-          var Od;
-          const md = Date.now(),
-            Wd = String(dd);
-          let Fd = this.C[Wd];
-          return Fd ? this.F(Fd, md) : (Fd = {
+        consumeRateLimit(bb) {
+          var wb;
+          const Mb = Date.now(),
+            eb = String(bb);
+          let Hb = this.C[eb];
+          return Hb ? this.F(Hb, Mb) : (Hb = {
             tokens: this.R,
-            lastAccess: md
-          }, this.C[Wd] = Fd), 0 === Fd.tokens || (Fd.tokens--, 0 === Fd.tokens && (null === (Od = this.I) || void 0 === Od || Od.call(this, dd)), 0 === Fd.tokens)
+            lastAccess: Mb
+          }, this.C[eb] = Hb), 0 === Hb.tokens || (Hb.tokens--, 0 === Hb.tokens && (null === (wb = this.I) || void 0 === wb || wb.call(this, bb)), 0 === Hb.tokens)
         }
         stop() {
           this.C = {}
         }
       };
 
-      function aF(dd) {
-        return dd ? dd.split("#")[0] : dd
+      function zH(bb) {
+        return bb ? bb.split("#")[0] : bb
       }
-      const EF = "NativeGzipValidationError";
-      let JF;
-      const UF = dd => {
-          throw function(dd, Od) {
-            const md = new Error(Od);
+      const XH = "NativeGzipValidationError";
+      let xH;
+      const jH = bb => {
+          throw function(bb, wb) {
+            const Mb = new Error(wb);
             try {
-              Object.defineProperty(md, "name", {
-                value: dd,
+              Object.defineProperty(Mb, "name", {
+                value: bb,
                 writable: !0,
                 enumerable: !0,
                 configurable: !0
               })
-            } catch (dd) {}
-            return md
-          }(EF, `Native gzip produced invalid output: ${dd}`)
+            } catch (bb) {}
+            return Mb
+          }(XH, `Native gzip produced invalid output: ${bb}`)
         },
-        xF = (BF = Rd((function*(dd, Od) {
-          18 > dd.size && UF("too-short");
-          const md = new Uint8Array(yield dd.slice(0, 10).arrayBuffer());
-          var Wd;
-          (2 > (Wd = md).length || 31 !== Wd[0] || 139 !== Wd[1] || 8 !== md[2]) && UF("invalid-header");
-          const Fd = new DataView(yield dd.slice(dd.size - 8).arrayBuffer());
-          Fd.getUint32(0, !0) !== (dd => {
-            const Od = (() => {
-              if (JF) return JF;
-              JF = [];
-              for (let dd = 0; 256 > dd; dd++) {
-                let Od = dd;
-                for (let dd = 0; 8 > dd; dd++) Od = 1 & Od ? 3988292384 ^ Od >>> 1 : Od >>> 1;
-                JF[dd] = Od >>> 0
+        KH = (rH = pb((function*(bb, wb) {
+          18 > bb.size && jH("too-short");
+          const Mb = new Uint8Array(yield bb.slice(0, 10).arrayBuffer());
+          var eb;
+          (2 > (eb = Mb).length || 31 !== eb[0] || 139 !== eb[1] || 8 !== Mb[2]) && jH("invalid-header");
+          const Hb = new DataView(yield bb.slice(bb.size - 8).arrayBuffer());
+          Hb.getUint32(0, !0) !== (bb => {
+            const wb = (() => {
+              if (xH) return xH;
+              xH = [];
+              for (let bb = 0; 256 > bb; bb++) {
+                let wb = bb;
+                for (let bb = 0; 8 > bb; bb++) wb = 1 & wb ? 3988292384 ^ wb >>> 1 : wb >>> 1;
+                xH[bb] = wb >>> 0
               }
-              return JF
+              return xH
             })();
-            let md = 4294967295;
-            for (let Wd = 0; dd.length > Wd; Wd++) md = Od[255 & (md ^ dd[Wd])] ^ md >>> 8;
-            return (4294967295 ^ md) >>> 0
-          })(Od) && UF("invalid-crc");
-          const Rd = Od.length >>> 0;
-          Fd.getUint32(4, !0) !== Rd && UF("invalid-size")
-        })), function(dd, Od) {
-          return BF.apply(this, arguments)
+            let Mb = 4294967295;
+            for (let eb = 0; bb.length > eb; eb++) Mb = wb[255 & (Mb ^ bb[eb])] ^ Mb >>> 8;
+            return (4294967295 ^ Mb) >>> 0
+          })(wb) && jH("invalid-crc");
+          const pb = wb.length >>> 0;
+          Hb.getUint32(4, !0) !== pb && jH("invalid-size")
+        })), function(bb, wb) {
+          return rH.apply(this, arguments)
         });
-      var BF;
+      var rH;
 
-      function SF() {
-        return SF = Rd((function*(dd) {
-          let Od = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-            md = arguments.length > 2 ? arguments[2] : void 0;
+      function RH() {
+        return RH = pb((function*(bb) {
+          let wb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+            Mb = arguments.length > 2 ? arguments[2] : void 0;
           try {
-            const Od = (new TextEncoder).encode(dd),
-              md = new globalThis.CompressionStream("gzip"),
-              Fd = md.writable.getWriter(),
-              Xd = Fd.write(Od).then((() => Fd.close())).catch((Wd = Rd((function*(dd) {
+            const wb = (new TextEncoder).encode(bb),
+              Mb = new globalThis.CompressionStream("gzip"),
+              Hb = Mb.writable.getWriter(),
+              Vb = Hb.write(wb).then((() => Hb.close())).catch((eb = pb((function*(bb) {
                 try {
-                  yield Fd.abort(dd)
-                } catch (dd) {}
-                throw dd
-              })), function(dd) {
-                return Wd.apply(this, arguments)
+                  yield Hb.abort(bb)
+                } catch (bb) {}
+                throw bb
+              })), function(bb) {
+                return eb.apply(this, arguments)
               })),
-              Kd = new Response(md.readable).blob(),
-              [hd] = yield Promise.all([Kd, Xd]);
-            return yield xF(hd, Od), hd
-          } catch (dd) {
-            if (null == md ? void 0 : md.rethrow) throw dd;
-            return Od && console.error("Failed to gzip compress data", dd), null
+              gb = new Response(Mb.readable).blob(),
+              [lb] = yield Promise.all([gb, Vb]);
+            return yield KH(lb, wb), lb
+          } catch (bb) {
+            if (null == Mb ? void 0 : Mb.rethrow) throw bb;
+            return wb && console.error("Failed to gzip compress data", bb), null
           }
-          var Wd
-        })), SF.apply(this, arguments)
+          var eb
+        })), RH.apply(this, arguments)
       }
-      const sF = "0.9.4",
-        uF = {
+      const DH = "0.9.4",
+        cH = {
           DEBUG: !1,
-          LIB_VERSION: sF,
+          LIB_VERSION: DH,
           LIB_NAME: "browser-common",
-          JS_SDK_VERSION: sF
+          JS_SDK_VERSION: DH
         },
-        VF = function(dd) {
+        YH = function(bb) {
           let {
-            debugEnabled: Od
+            debugEnabled: wb
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          const md = {
-            N(md) {
-              let Wd;
+          const Mb = {
+            N(Mb) {
+              let eb;
               try {
-                Wd = typeof window > "u" ? void 0 : window
-              } catch (dd) {
+                eb = typeof window > "u" ? void 0 : window
+              } catch (bb) {
                 return
               }
-              for (var Fd = arguments.length, Rd = new Array(Fd > 1 ? Fd - 1 : 0), Xd = 1; Xd < Fd; Xd++) Rd[Xd - 1] = arguments[Xd];
-              Wd && (uF.DEBUG || Wd.POSTHOG_DEBUG || Od) && !qF(Wd.console) && Wd.console && ("__rrweb_original__" in Wd.console[md] ? Wd.console[md].__rrweb_original__ : Wd.console[md])(dd, ...Rd)
+              for (var Hb = arguments.length, pb = new Array(Hb > 1 ? Hb - 1 : 0), Vb = 1; Vb < Hb; Vb++) pb[Vb - 1] = arguments[Vb];
+              eb && (cH.DEBUG || eb.POSTHOG_DEBUG || wb) && !UH(eb.console) && eb.console && ("__rrweb_original__" in eb.console[Mb] ? eb.console[Mb].__rrweb_original__ : eb.console[Mb])(bb, ...pb)
             },
             debug() {
-              for (var dd = arguments.length, Od = new Array(dd), Wd = 0; Wd < dd; Wd++) Od[Wd] = arguments[Wd];
-              md.N("debug", ...Od)
+              for (var bb = arguments.length, wb = new Array(bb), eb = 0; eb < bb; eb++) wb[eb] = arguments[eb];
+              Mb.N("debug", ...wb)
             },
             info() {
-              for (var dd = arguments.length, Od = new Array(dd), Wd = 0; Wd < dd; Wd++) Od[Wd] = arguments[Wd];
-              md.N("log", ...Od)
+              for (var bb = arguments.length, wb = new Array(bb), eb = 0; eb < bb; eb++) wb[eb] = arguments[eb];
+              Mb.N("log", ...wb)
             },
             warn() {
-              for (var dd = arguments.length, Od = new Array(dd), Wd = 0; Wd < dd; Wd++) Od[Wd] = arguments[Wd];
-              md.N("warn", ...Od)
+              for (var bb = arguments.length, wb = new Array(bb), eb = 0; eb < bb; eb++) wb[eb] = arguments[eb];
+              Mb.N("warn", ...wb)
             },
             error() {
-              for (var dd = arguments.length, Od = new Array(dd), Wd = 0; Wd < dd; Wd++) Od[Wd] = arguments[Wd];
-              md.N("error", ...Od)
+              for (var bb = arguments.length, wb = new Array(bb), eb = 0; eb < bb; eb++) wb[eb] = arguments[eb];
+              Mb.N("error", ...wb)
             },
             critical() {
-              for (var Od = arguments.length, md = new Array(Od), Wd = 0; Wd < Od; Wd++) md[Wd] = arguments[Wd];
-              console.error(dd, ...md)
+              for (var wb = arguments.length, Mb = new Array(wb), eb = 0; eb < wb; eb++) Mb[eb] = arguments[eb];
+              console.error(bb, ...Mb)
             },
-            uninitializedWarning(dd) {
-              md.error(`You must initialize PostHog before calling ${dd}`)
+            uninitializedWarning(bb) {
+              Mb.error(`You must initialize PostHog before calling ${bb}`)
             },
-            createLogger: (Od, md) => VF(`${dd} ${Od}`, md)
+            createLogger: (wb, Mb) => YH(`${bb} ${wb}`, Mb)
           };
-          return md
+          return Mb
         },
-        iF = VF("[PostHog.js]"),
-        AF = iF.createLogger;
+        ZH = YH("[PostHog.js]"),
+        fH = ZH.createLogger;
 
-      function rF(dd, Od) {
-        if (!bF(dd))
-          if (tF(dd)) dd.forEach(Od);
-          else if (YF(dd)) dd.forEach(((dd, md) => Od(dd, md)));
+      function AH(bb, wb) {
+        if (!EH(bb))
+          if (LH(bb)) bb.forEach(wb);
+          else if (sH(bb)) bb.forEach(((bb, Mb) => wb(bb, Mb)));
         else
-          for (const md in dd) vF.call(dd, md) && Od(dd[md], md)
+          for (const Mb in bb) gH.call(bb, Mb) && wb(bb[Mb], Mb)
       }
 
-      function GF(dd, Od, md, Wd) {
+      function WH(bb, wb, Mb, eb) {
         const {
-          capture: Fd = !1,
-          passive: Rd = !0
-        } = null != Wd ? Wd : {};
-        null == dd || dd.addEventListener(Od, md, {
-          capture: Fd,
-          passive: Rd
+          capture: Hb = !1,
+          passive: pb = !0
+        } = null != eb ? eb : {};
+        null == bb || bb.addEventListener(wb, Mb, {
+          capture: Hb,
+          passive: pb
         })
       }
-      const nF = ["localhost", "127.0.0.1"],
-        LF = dd => {
-          const Od = null == FF ? void 0 : FF.createElement("a");
-          return qF(Od) ? null : (Od.href = dd, Od)
+      const JH = ["localhost", "127.0.0.1"],
+        SH = bb => {
+          const wb = null == MH ? void 0 : MH.createElement("a");
+          return UH(wb) ? null : (wb.href = bb, wb)
         },
-        PF = () => {},
-        zF = dd => {
-          var Od;
-          if (oF(dd)) return null !== (Od = dd.__posthog_layer__) && void 0 !== Od ? Od : dd.__rrweb_layer__
+        NH = () => {},
+        vH = bb => {
+          var wb;
+          if (IH(bb)) return null !== (wb = bb.__posthog_layer__) && void 0 !== wb ? wb : bb.__rrweb_layer__
         };
 
-      function cF(dd, Od, md) {
+      function QH(bb, wb, Mb) {
         try {
-          if (!(Od in dd)) return PF;
-          const Wd = {
-              next: dd[Od]
+          if (!(wb in bb)) return NH;
+          const eb = {
+              next: bb[wb]
             },
-            Fd = md((function() {
-              for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-              return Wd.next.apply(this, Od)
+            Hb = Mb((function() {
+              for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+              return eb.next.apply(this, wb)
             }));
-          return oF(Fd) && (Fd.prototype = Fd.prototype || {}, Object.defineProperties(Fd, {
+          return IH(Hb) && (Hb.prototype = Hb.prototype || {}, Object.defineProperties(Hb, {
             __posthog_wrapped__: {
               enumerable: !1,
               value: !0
             },
             __posthog_layer__: {
               enumerable: !1,
-              value: Wd
+              value: eb
             }
-          })), dd[Od] = Fd, () => {
-            if (dd[Od] === Fd) return void(dd[Od] = Wd.next);
-            let md = dd[Od],
-              Rd = zF(md);
-            for (; Rd;) {
-              if (Rd.next === Fd) return void(Rd.next = Wd.next);
-              md = Rd.next, Rd = zF(md)
+          })), bb[wb] = Hb, () => {
+            if (bb[wb] === Hb) return void(bb[wb] = eb.next);
+            let Mb = bb[wb],
+              pb = vH(Mb);
+            for (; pb;) {
+              if (pb.next === Hb) return void(pb.next = eb.next);
+              Mb = pb.next, pb = vH(Mb)
             }
           }
-        } catch (dd) {
-          return PF
+        } catch (bb) {
+          return NH
         }
       }
 
-      function jF(dd, Od) {
-        var md;
-        const Wd = function(dd) {
+      function GH(bb, wb) {
+        var Mb;
+        const eb = function(bb) {
             try {
-              return "string" == typeof dd ? new URL(dd).hostname : "url" in dd ? new URL(dd.url).hostname : dd.hostname
-            } catch (dd) {
+              return "string" == typeof bb ? new URL(bb).hostname : "url" in bb ? new URL(bb.url).hostname : bb.hostname
+            } catch (bb) {
               return null
             }
-          }(dd),
-          Fd = {
-            hostname: Wd,
+          }(bb),
+          Hb = {
+            hostname: eb,
             isHostDenied: !1
           };
-        if (!(null === (md = Od.payloadHostDenyList) || void 0 === md ? void 0 : md.length) || !(null == Wd ? void 0 : Wd.trim().length)) return Fd;
-        for (const Rd of Od.payloadHostDenyList)
-          if (Wd.endsWith(Rd)) return {
-            hostname: Wd,
+        if (!(null === (Mb = wb.payloadHostDenyList) || void 0 === Mb ? void 0 : Mb.length) || !(null == eb ? void 0 : eb.trim().length)) return Hb;
+        for (const pb of wb.payloadHostDenyList)
+          if (eb.endsWith(pb)) return {
+            hostname: eb,
             isHostDenied: !0
           };
-        return Fd
+        return Hb
       }
 
-      function DF(dd) {
-        var Od;
-        const md = null == mF || null === (Od = mF.location) || void 0 === Od ? void 0 : Od.href;
-        return qF(md) ? void 0 : function(dd, Od) {
-          var md;
-          const Wd = null == dd || null === (md = dd.config) || void 0 === md ? void 0 : md.get_current_url;
-          if (!oF(Wd)) return Od;
+      function qH(bb) {
+        var wb;
+        const Mb = null == bH || null === (wb = bH.location) || void 0 === wb ? void 0 : wb.href;
+        return UH(Mb) ? void 0 : function(bb, wb) {
+          var Mb;
+          const eb = null == bb || null === (Mb = bb.config) || void 0 === Mb ? void 0 : Mb.get_current_url;
+          if (!IH(eb)) return wb;
           try {
-            const dd = Wd(Od);
-            return HF(dd) && dd ? dd : Od
-          } catch (dd) {
-            return iF.error("Error in get_current_url, falling back to window.location.href", dd), Od
+            const bb = eb(wb);
+            return tH(bb) && bb ? bb : wb
+          } catch (bb) {
+            return ZH.error("Error in get_current_url, falling back to window.location.href", bb), wb
           }
-        }(dd, md)
+        }(bb, Mb)
       }
-      const eF = "$stored_person_properties",
-        IF = new RegExp("^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$"),
-        lF = /(^|[^0-9A-Za-z_])([0-9][0-9 -]*[0-9])(?=$|[^0-9A-Za-z_])/g,
-        CF = [16, 15, 14, 13],
-        ZF = new RegExp("^(\\d{3}-?\\d{2}-?\\d{4})$"),
-        kF = new RegExp("(^|[^0-9])((?!000|666)[0-9]{3}-?(?!00)[0-9]{2}-?(?!0000)[0-9]{4})(?=$|([^0-9]))", "g"),
-        fF = /[0-9A-Za-z_]/;
+      const aH = "$stored_person_properties",
+        iH = new RegExp("^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$"),
+        uH = /(^|[^0-9A-Za-z_])([0-9][0-9 -]*[0-9])(?=$|[^0-9A-Za-z_])/g,
+        dH = [16, 15, 14, 13],
+        PH = new RegExp("^(\\d{3}-?\\d{2}-?\\d{4})$"),
+        nH = new RegExp("(^|[^0-9])((?!000|666)[0-9]{3}-?(?!00)[0-9]{2}-?(?!0000)[0-9]{4})(?=$|([^0-9]))", "g"),
+        yH = /[0-9A-Za-z_]/;
 
-      function MF(dd) {
-        let Od = 0,
-          md = !1;
-        for (let Wd = dd.length - 1; Wd >= 0; Wd--) {
-          let Fd = dd.charCodeAt(Wd) - 48;
-          md && (Fd *= 2, Fd > 9 && (Fd -= 9)), Od += Fd, md = !md
+      function oH(bb) {
+        let wb = 0,
+          Mb = !1;
+        for (let eb = bb.length - 1; eb >= 0; eb--) {
+          let Hb = bb.charCodeAt(eb) - 48;
+          Mb && (Hb *= 2, Hb > 9 && (Hb -= 9)), wb += Hb, Mb = !Mb
         }
-        return Od % 10 == 0
+        return wb % 10 == 0
       }
-      const dR = 1e6;
+      const TH = 1e6;
 
-      function OR(dd) {
-        var Od;
-        return Math.min(dR, null !== (Od = dd.payloadSizeLimitBytes) && void 0 !== Od ? Od : dR)
+      function kH(bb) {
+        var wb;
+        return Math.min(TH, null !== (wb = bb.payloadSizeLimitBytes) && void 0 !== wb ? wb : TH)
       }
-      const mR = {
+      const bp = {
           initiatorTypes: ["audio", "beacon", "body", "css", "early-hint", "embed", "fetch", "frame", "iframe", "icon", "image", "img", "input", "link", "navigation", "object", "ping", "script", "track", "video", "xmlhttprequest"],
-          maskRequestFn: dd => dd,
+          maskRequestFn: bb => bb,
           recordHeaders: !1,
           recordBody: !1,
           recordInitialRequests: !1,
           recordPerformance: !1,
           performanceEntryTypeToObserve: ["first-input", "navigation", "paint", "resource"],
-          payloadSizeLimitBytes: dR,
+          payloadSizeLimitBytes: TH,
           payloadHostDenyList: [".lr-ingest.io", ".ingest.sentry.io", ".clarity.ms", "google-analytics.com", "analytics.google.com", "nr-data.net", "datadoghq.com", "datadoghq.eu", "ddog-gov.com", "segment.io", "rudderstack.com", "amplitude.com", "mixpanel.com", "hotjar.com", "hotjar.io", "fullstory.com"],
           streamNetworkBody: !1
         },
-        WR = ["authorization", "x-forwarded-for", "authorization", "cookie", "set-cookie", "x-api-key", "x-real-ip", "remote-addr", "forwarded", "proxy-authorization", "x-csrf-token", "x-csrftoken", "x-xsrf-token"],
-        FR = ["password", "secret", "passwd", "api_key", "apikey", "auth", "credentials", "mysql_pwd", "privatekey", "private_key", "token"],
-        RR = ["auth", "token", "secret", "session", "api-key", "apikey", "api_key", "credential", "password", "passwd", "cookie", "csrf", "xsrf"],
-        XR = dd => {
-          bF(dd) || rF(Object.keys(dd), (Od => {
-            (dd => {
-              const Od = dd.toLowerCase();
-              return WR.includes(Od) || RR.some((dd => Od.includes(dd)))
-            })(Od) && (dd[Od] = "redacted")
+        wp = ["authorization", "x-forwarded-for", "authorization", "cookie", "set-cookie", "x-api-key", "x-real-ip", "remote-addr", "forwarded", "proxy-authorization", "x-csrf-token", "x-csrftoken", "x-xsrf-token"],
+        Mp = ["password", "secret", "passwd", "api_key", "apikey", "auth", "credentials", "mysql_pwd", "privatekey", "private_key", "token"],
+        ep = ["auth", "token", "secret", "session", "api-key", "apikey", "api_key", "credential", "password", "passwd", "cookie", "csrf", "xsrf"],
+        Hp = bb => {
+          EH(bb) || AH(Object.keys(bb), (wb => {
+            (bb => {
+              const wb = bb.toLowerCase();
+              return wp.includes(wb) || ep.some((bb => wb.includes(bb)))
+            })(wb) && (bb[wb] = "redacted")
           }))
         },
-        KR = ["/s/", "/e/", "/i/"];
+        pp = ["/s/", "/e/", "/i/"];
 
-      function hR(dd, Od, md, Wd) {
-        if (bF(dd)) return dd;
-        let Fd = (null == Od ? void 0 : Od["content-length"]) || function(dd) {
-          return new Blob([dd]).size
-        }(dd);
-        return HF(Fd) && (Fd = parseInt(Fd)), Fd > md ? `[SessionRecording] ${Wd} body too large to record (${Fd} bytes)` : dd
+      function Vp(bb, wb, Mb, eb) {
+        if (EH(bb)) return bb;
+        let Hb = (null == wb ? void 0 : wb["content-length"]) || function(bb) {
+          return new Blob([bb]).size
+        }(bb);
+        return tH(Hb) && (Hb = parseInt(Hb)), Hb > Mb ? `[SessionRecording] ${eb} body too large to record (${Hb} bytes)` : bb
       }
 
-      function vR(dd, Od) {
-        if (bF(dd)) return dd;
-        let md = dd;
-        return function(dd) {
-          let Od = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          if (bF(dd)) return !1;
-          if (HF(dd)) {
-            if (dd = dd.trim(), Od ? IF.test((dd || "").replace(/[- ]/g, "")) : function(dd) {
-                let Od;
-                for (lF.lastIndex = 0; Od = lF.exec(dd);) {
-                  const dd = Od[2];
-                  if (!dd) continue;
-                  const md = dd.replace(/[- ]/g, "");
-                  for (let Od = 0; md.length > Od; Od++)
-                    for (const dd of CF) {
-                      const Wd = Od + dd;
-                      if (md.length >= Wd) {
-                        const dd = md.slice(Od, Wd);
-                        if (IF.test(dd) && MF(dd)) return !0
+      function gp(bb, wb) {
+        if (EH(bb)) return bb;
+        let Mb = bb;
+        return function(bb) {
+          let wb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          if (EH(bb)) return !1;
+          if (tH(bb)) {
+            if (bb = bb.trim(), wb ? iH.test((bb || "").replace(/[- ]/g, "")) : function(bb) {
+                let wb;
+                for (uH.lastIndex = 0; wb = uH.exec(bb);) {
+                  const bb = wb[2];
+                  if (!bb) continue;
+                  const Mb = bb.replace(/[- ]/g, "");
+                  for (let wb = 0; Mb.length > wb; wb++)
+                    for (const bb of dH) {
+                      const eb = wb + bb;
+                      if (Mb.length >= eb) {
+                        const bb = Mb.slice(wb, eb);
+                        if (iH.test(bb) && oH(bb)) return !0
                       }
                     }
                 }
                 return !1
-              }(dd)) return !1;
-            if (Od ? ZF.test(dd) : function(dd) {
-                let Od;
-                for (kF.lastIndex = 0; Od = kF.exec(dd);) {
-                  const dd = Od[1],
-                    md = Od[3];
-                  if (!(dd && md && fF.test(dd) && fF.test(md))) return !0
+              }(bb)) return !1;
+            if (wb ? PH.test(bb) : function(bb) {
+                let wb;
+                for (nH.lastIndex = 0; wb = nH.exec(bb);) {
+                  const bb = wb[1],
+                    Mb = wb[3];
+                  if (!(bb && Mb && yH.test(bb) && yH.test(Mb))) return !0
                 }
                 return !1
-              }(dd)) return !1
+              }(bb)) return !1
           }
           return !0
-        }(md, !1) || (md = "[SessionRecording] " + Od + " body redacted"), rF(FR, (dd => {
-          (null == md ? void 0 : md.length) && -1 !== (null == md ? void 0 : md.indexOf(dd)) && (md = "[SessionRecording] " + Od + " body redacted as might contain: " + dd)
-        })), md
+        }(Mb, !1) || (Mb = "[SessionRecording] " + wb + " body redacted"), AH(Mp, (bb => {
+          (null == Mb ? void 0 : Mb.length) && -1 !== (null == Mb ? void 0 : Mb.indexOf(bb)) && (Mb = "[SessionRecording] " + wb + " body redacted as might contain: " + bb)
+        })), Mb
       }
-      const QR = new WeakSet,
-        tR = AF("[Recorder]"),
-        oR = dd => "navigation" === dd.entryType,
-        NR = dd => "resource" === dd.entryType,
-        qR = () => {};
+      const lp = new WeakSet,
+        Lp = fH("[Recorder]"),
+        Ip = bb => "navigation" === bb.entryType,
+        Op = bb => "resource" === bb.entryType,
+        Up = () => {};
 
-      function HR(dd, Od) {
-        var md;
-        return oR(Od) && "complete" === (null === (md = dd.document) || void 0 === md ? void 0 : md.readyState) && Od.loadEventEnd > 0
-      }
-
-      function yR(dd, Od) {
-        return Od.recordInitialRequests ? dd.performance.getEntries().filter((md => HR(dd, md) || NR(md) && Od.initiatorTypes.includes(md.initiatorType))) : Od.performanceEntryTypeToObserve.includes("navigation") ? function(dd) {
-          var Od;
-          return "complete" !== (null === (Od = dd.document) || void 0 === Od ? void 0 : Od.readyState) ? [] : dd.performance.getEntriesByType("navigation").filter((Od => HR(dd, Od)))
-        }(dd) : []
+      function tp(bb, wb) {
+        var Mb;
+        return Ip(wb) && "complete" === (null === (Mb = bb.document) || void 0 === Mb ? void 0 : Mb.readyState) && wb.loadEventEnd > 0
       }
 
-      function bR(dd, Od) {
-        return !!Od && (pF(Od) || Od[dd])
+      function Cp(bb, wb) {
+        return wb.recordInitialRequests ? bb.performance.getEntries().filter((Mb => tp(bb, Mb) || Op(Mb) && wb.initiatorTypes.includes(Mb.initiatorType))) : wb.performanceEntryTypeToObserve.includes("navigation") ? function(bb) {
+          var wb;
+          return "complete" !== (null === (wb = bb.document) || void 0 === wb ? void 0 : wb.readyState) ? [] : bb.performance.getEntriesByType("navigation").filter((wb => tp(bb, wb)))
+        }(bb) : []
       }
 
-      function TR(dd) {
+      function Ep(bb, wb) {
+        return !!wb && (BH(wb) || wb[bb])
+      }
+
+      function Fp(bb) {
         if ("undefined" == typeof Request) return !1;
-        if (dd instanceof Request) return !0;
+        if (bb instanceof Request) return !0;
         try {
-          return "[object Request]" === {}.toString.call(dd)
-        } catch (dd) {
+          return "[object Request]" === {}.toString.call(bb)
+        } catch (bb) {
           return !1
         }
       }
-      const pR = ["image/", "video/", "audio/", "font/", "application/octet-stream", "application/pdf", "application/zip", "application/wasm"];
+      const Bp = ["image/", "video/", "audio/", "font/", "application/octet-stream", "application/pdf", "application/zip", "application/wasm"];
 
-      function YR(dd) {
+      function sp(bb) {
         let {
-          type: Od,
-          recordBody: md,
-          headers: Wd,
-          url: Fd
-        } = dd;
+          type: wb,
+          recordBody: Mb,
+          headers: eb,
+          url: Hb
+        } = bb;
 
-        function Rd(dd) {
-          const Od = Object.keys(Wd).find((dd => "content-type" === dd.toLowerCase())),
-            md = Od && Wd[Od];
-          return dd.some((dd => null == md ? void 0 : md.toLowerCase().includes(dd)))
+        function pb(bb) {
+          const wb = Object.keys(eb).find((bb => "content-type" === bb.toLowerCase())),
+            Mb = wb && eb[wb];
+          return bb.some((bb => null == Mb ? void 0 : Mb.toLowerCase().includes(bb)))
         }
-        if (!md) return !1;
-        if (function dd(Od) {
+        if (!Mb) return !1;
+        if (function bb(wb) {
             try {
-              return "string" == typeof Od ? Od.startsWith("blob:") : Od instanceof URL ? "blob:" === Od.protocol : !!TR(Od) && dd(Od.url)
-            } catch (dd) {
+              return "string" == typeof wb ? wb.startsWith("blob:") : wb instanceof URL ? "blob:" === wb.protocol : !!Fp(wb) && bb(wb.url)
+            } catch (bb) {
               return !1
             }
-          }(Fd)) return !1;
-        if (Rd(pR)) return !1;
-        if (pF(md)) return !0;
-        if (tF(md)) return Rd(md);
-        const Xd = md[Od];
-        return pF(Xd) ? Xd : Rd(Xd)
+          }(Hb)) return !1;
+        if (pb(Bp)) return !1;
+        if (BH(Mb)) return !0;
+        if (LH(Mb)) return pb(Mb);
+        const Vb = Mb[wb];
+        return BH(Vb) ? Vb : pb(Vb)
       }
 
-      function gR(dd, Od, md, Wd, Fd) {
-        return wR.apply(this, arguments)
+      function mp(bb, wb, Mb, eb, Hb) {
+        return hp.apply(this, arguments)
       }
 
-      function wR() {
-        return wR = Rd((function*(dd, Od, md, Wd, Fd) {
-          let Rd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-          if (Rd > 10) return tR.warn("Failed to get performance entry for request", {
-            url: md,
-            initiatorType: Od
+      function hp() {
+        return hp = pb((function*(bb, wb, Mb, eb, Hb) {
+          let pb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+          if (pb > 10) return Lp.warn("Failed to get performance entry for request", {
+            url: Mb,
+            initiatorType: wb
           }), null;
-          const Xd = function(dd, Od) {
-            for (let md = dd.length - 1; md >= 0; md -= 1)
-              if (Od(dd[md])) return dd[md]
-          }(dd.performance.getEntriesByName(md), (dd => NR(dd) && dd.initiatorType === Od && (qF(Wd) || dd.startTime >= Wd) && (qF(Fd) || Fd >= dd.startTime)));
-          return Xd || (yield new Promise((dd => setTimeout(dd, 50 * Rd))), gR(dd, Od, md, Wd, Fd, Rd + 1))
-        })), wR.apply(this, arguments)
+          const Vb = function(bb, wb) {
+            for (let Mb = bb.length - 1; Mb >= 0; Mb -= 1)
+              if (wb(bb[Mb])) return bb[Mb]
+          }(bb.performance.getEntriesByName(Mb), (bb => Op(bb) && bb.initiatorType === wb && (UH(eb) || bb.startTime >= eb) && (UH(Hb) || Hb >= bb.startTime)));
+          return Vb || (yield new Promise((bb => setTimeout(bb, 50 * pb))), mp(bb, wb, Mb, eb, Hb, pb + 1))
+        })), hp.apply(this, arguments)
       }
 
-      function aR(dd) {
+      function zp(bb) {
         let {
-          body: Od,
-          options: md,
-          url: Wd
-        } = dd;
-        if (bF(Od)) return null;
+          body: wb,
+          options: Mb,
+          url: eb
+        } = bb;
+        if (EH(wb)) return null;
         const {
-          hostname: Fd,
-          isHostDenied: Rd
-        } = jF(Wd, md);
-        if (Rd) return Fd + " is in deny list";
-        if (HF(Od)) return Od;
-        if ((dd => "u" > typeof Document && dd instanceof Document)(Od)) return Od.textContent;
-        if (YF(Od)) return function(dd) {
-          let Od, md, Wd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "&";
-          const Fd = [];
-          return rF(dd, (function(dd, Wd) {
-            qF(dd) || qF(Wd) || "undefined" === Wd || (Od = encodeURIComponent((dd => dd instanceof File)(dd) ? dd.name : dd.toString()), md = encodeURIComponent(Wd), Fd[Fd.length] = md + "=" + Od)
-          })), Fd.join(Wd)
-        }(Od);
-        if (NF(Od)) try {
-          return JSON.stringify(Od)
-        } catch (Od) {
+          hostname: Hb,
+          isHostDenied: pb
+        } = GH(eb, Mb);
+        if (pb) return Hb + " is in deny list";
+        if (tH(wb)) return wb;
+        if ((bb => "u" > typeof Document && bb instanceof Document)(wb)) return wb.textContent;
+        if (sH(wb)) return function(bb) {
+          let wb, Mb, eb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "&";
+          const Hb = [];
+          return AH(bb, (function(bb, eb) {
+            UH(bb) || UH(eb) || "undefined" === eb || (wb = encodeURIComponent((bb => bb instanceof File)(bb) ? bb.name : bb.toString()), Mb = encodeURIComponent(eb), Hb[Hb.length] = Mb + "=" + wb)
+          })), Hb.join(eb)
+        }(wb);
+        if (OH(wb)) try {
+          return JSON.stringify(wb)
+        } catch (wb) {
           return "[SessionReplay] Failed to stringify response object"
         }
-        return "[SessionReplay] Cannot read body of type " + toString.call(Od)
+        return "[SessionReplay] Cannot read body of type " + toString.call(wb)
       }
 
-      function ER(dd, Od) {
+      function Xp(bb, wb) {
         let {
-          entry: md,
-          method: Fd,
-          status: Rd,
-          networkRequest: Xd,
-          isInitial: Kd,
-          start: hd,
-          end: vd,
-          url: Qd,
-          initiatorType: td
-        } = Od;
-        hd = md ? md.startTime : hd, vd = md ? md.responseEnd : vd;
-        const od = Math.floor(Date.now() - dd.performance.now()),
-          Nd = Math.floor(od + (hd || 0)),
-          qd = [Wd(Wd({}, md ? JSON.parse(JSON.stringify(md.toJSON())) : {
-            name: Qd
+          entry: Mb,
+          method: Hb,
+          status: pb,
+          networkRequest: Vb,
+          isInitial: gb,
+          start: lb,
+          end: Lb,
+          url: Ib,
+          initiatorType: Ob
+        } = wb;
+        lb = Mb ? Mb.startTime : lb, Lb = Mb ? Mb.responseEnd : Lb;
+        const Ub = Math.floor(Date.now() - bb.performance.now()),
+          tb = Math.floor(Ub + (lb || 0)),
+          Cb = [eb(eb({}, Mb ? JSON.parse(JSON.stringify(Mb.toJSON())) : {
+            name: Ib
           }), {}, {
-            startTime: qF(hd) ? void 0 : Math.round(hd),
-            endTime: qF(vd) ? void 0 : Math.round(vd),
-            timeOrigin: od,
-            timestamp: Nd,
-            method: Fd,
-            initiatorType: td || (md ? md.initiatorType : void 0),
-            status: Rd,
-            requestHeaders: Xd.requestHeaders,
-            requestBody: Xd.requestBody,
-            responseHeaders: Xd.responseHeaders,
-            responseBody: Xd.responseBody,
-            isInitial: Kd
+            startTime: UH(lb) ? void 0 : Math.round(lb),
+            endTime: UH(Lb) ? void 0 : Math.round(Lb),
+            timeOrigin: Ub,
+            timestamp: tb,
+            method: Hb,
+            initiatorType: Ob || (Mb ? Mb.initiatorType : void 0),
+            status: pb,
+            requestHeaders: Vb.requestHeaders,
+            requestBody: Vb.requestBody,
+            responseHeaders: Vb.responseHeaders,
+            responseBody: Vb.responseBody,
+            isInitial: gb
           })];
-        if ((dd => !yF(dd) && ("navigation" === dd.entryType || "resource" === dd.entryType))(md))
-          for (const Wd of md.serverTiming || []) qd.push({
-            timeOrigin: od,
-            timestamp: Nd,
-            startTime: Math.round(md.startTime),
-            name: Wd.name,
-            duration: Wd.duration,
+        if ((bb => !CH(bb) && ("navigation" === bb.entryType || "resource" === bb.entryType))(Mb))
+          for (const eb of Mb.serverTiming || []) Cb.push({
+            timeOrigin: Ub,
+            timestamp: tb,
+            startTime: Math.round(Mb.startTime),
+            name: eb.name,
+            duration: eb.duration,
             entryType: "serverTiming"
           });
-        return qd
+        return Cb
       }
-      const JR = ["video/", "audio/"];
+      const xp = ["video/", "audio/"];
 
-      function UR(dd) {
-        return NF(dd) && oF(dd.getReader) && oF(dd.tee)
+      function jp(bb) {
+        return OH(bb) && IH(bb.getReader) && IH(bb.tee)
       }
-      const xR = "[SessionReplay] Timeout while trying to read body",
-        BR = "[SessionReplay] Failed to read body";
+      const Kp = "[SessionReplay] Timeout while trying to read body",
+        rp = "[SessionReplay] Failed to read body";
 
-      function SR(dd) {
-        return `${BR}: ${dd}`
-      }
-
-      function sR(dd) {
-        return `[SessionReplay] Body too large to record (> ${dd} bytes)`
+      function Rp(bb) {
+        return `${rp}: ${bb}`
       }
 
-      function uR(dd, Od) {
-        if (!Od.streamNetworkBody) return function(dd) {
-          return new Promise((Od => {
-            const md = setTimeout((() => Od(xR)), 500);
+      function Dp(bb) {
+        return `[SessionReplay] Body too large to record (> ${bb} bytes)`
+      }
+
+      function cp(bb, wb) {
+        if (!wb.streamNetworkBody) return function(bb) {
+          return new Promise((wb => {
+            const Mb = setTimeout((() => wb(Kp)), 500);
             try {
-              dd.clone().text().then((dd => Od(dd)), (dd => Od(SR(dd)))).finally((() => clearTimeout(md)))
-            } catch (dd) {
-              clearTimeout(md), Od(BR)
+              bb.clone().text().then((bb => wb(bb)), (bb => wb(Rp(bb)))).finally((() => clearTimeout(Mb)))
+            } catch (bb) {
+              clearTimeout(Mb), wb(rp)
             }
           }))
-        }(dd);
-        const md = OR(Od);
-        return function(dd, Od) {
+        }(bb);
+        const Mb = kH(wb);
+        return function(bb, wb) {
           try {
-            var md, Wd;
-            const Fd = null === (md = dd.headers) || void 0 === md || null === (Wd = md.get) || void 0 === Wd ? void 0 : Wd.call(md, "content-length");
-            if (!Fd) return !1;
-            const Rd = parseInt(Fd, 10);
-            return Number.isFinite(Rd) && Rd > Od
-          } catch (dd) {
+            var Mb, eb;
+            const Hb = null === (Mb = bb.headers) || void 0 === Mb || null === (eb = Mb.get) || void 0 === eb ? void 0 : eb.call(Mb, "content-length");
+            if (!Hb) return !1;
+            const pb = parseInt(Hb, 10);
+            return Number.isFinite(pb) && pb > wb
+          } catch (bb) {
             return !1
           }
-        }(dd, md) ? Promise.resolve(sR(md)) : function(dd, Od) {
-          return new Promise((md => {
-            let Wd, Fd = !1;
+        }(bb, Mb) ? Promise.resolve(Dp(Mb)) : function(bb, wb) {
+          return new Promise((Mb => {
+            let eb, Hb = !1;
 
-            function Rd() {
+            function pb() {
               try {
-                null == Wd || Wd.cancel().catch((() => {}))
-              } catch (dd) {}
+                null == eb || eb.cancel().catch((() => {}))
+              } catch (bb) {}
             }
 
-            function Xd(dd) {
-              Fd || (Fd = !0, clearTimeout(Kd), Rd(), md(dd))
+            function Vb(bb) {
+              Hb || (Hb = !0, clearTimeout(gb), pb(), Mb(bb))
             }
-            const Kd = setTimeout((() => Xd(xR)), 500);
-            let hd;
+            const gb = setTimeout((() => Vb(Kp)), 500);
+            let lb;
             try {
-              hd = dd.clone()
-            } catch (dd) {
-              return void Xd(BR)
+              lb = bb.clone()
+            } catch (bb) {
+              return void Vb(rp)
             }
-            const vd = hd.body;
-            if (!UR(vd) || "undefined" == typeof TextDecoder) {
+            const Lb = lb.body;
+            if (!jp(Lb) || "undefined" == typeof TextDecoder) {
               try {
-                hd.text().then((dd => Xd(dd)), (dd => Xd(SR(dd))))
-              } catch (dd) {
-                Xd(BR)
+                lb.text().then((bb => Vb(bb)), (bb => Vb(Rp(bb))))
+              } catch (bb) {
+                Vb(rp)
               }
               return
             }
             try {
-              Wd = vd.getReader()
-            } catch (dd) {
-              return void Xd(BR)
+              eb = Lb.getReader()
+            } catch (bb) {
+              return void Vb(rp)
             }
-            const Qd = [];
-            let td = 0;
-            ! function dd() {
-              Wd.read().then((md => {
+            const Ib = [];
+            let Ob = 0;
+            ! function bb() {
+              eb.read().then((Mb => {
                 let {
-                  done: Wd,
-                  value: Kd
-                } = md;
-                if (Fd) Rd();
-                else if (Wd) Xd((new TextDecoder).decode(function(dd, Od) {
-                  const md = new Uint8Array(Od);
-                  let Wd = 0;
-                  for (const Fd of dd) md.set(Fd, Wd), Wd += Fd.byteLength;
-                  return md
-                }(Qd, td)));
+                  done: eb,
+                  value: gb
+                } = Mb;
+                if (Hb) pb();
+                else if (eb) Vb((new TextDecoder).decode(function(bb, wb) {
+                  const Mb = new Uint8Array(wb);
+                  let eb = 0;
+                  for (const Hb of bb) Mb.set(Hb, eb), eb += Hb.byteLength;
+                  return Mb
+                }(Ib, Ob)));
                 else {
-                  if (Kd) {
-                    if (td + Kd.byteLength > Od) return void Xd(sR(Od));
-                    td += Kd.byteLength, Qd.push(Kd)
+                  if (gb) {
+                    if (Ob + gb.byteLength > wb) return void Vb(Dp(wb));
+                    Ob += gb.byteLength, Ib.push(gb)
                   }
-                  dd()
+                  bb()
                 }
-              }), (dd => Xd(SR(dd))))
+              }), (bb => Vb(Rp(bb))))
             }()
           }))
-        }(dd, md)
+        }(bb, Mb)
       }
 
-      function VR(dd) {
-        return iR.apply(this, arguments)
+      function Yp(bb) {
+        return Zp.apply(this, arguments)
       }
 
-      function iR() {
-        return (iR = Rd((function*(dd) {
+      function Zp() {
+        return (Zp = pb((function*(bb) {
           let {
-            r: Od,
-            options: md,
-            url: Wd
-          } = dd;
+            r: wb,
+            options: Mb,
+            url: eb
+          } = bb;
           const {
-            hostname: Fd,
-            isHostDenied: Rd
-          } = jF(Wd, md);
-          return Rd ? Promise.resolve(Fd + " is in deny list") : uR(Od, md)
+            hostname: Hb,
+            isHostDenied: pb
+          } = GH(eb, Mb);
+          return pb ? Promise.resolve(Hb + " is in deny list") : cp(wb, Mb)
         }))).apply(this, arguments)
       }
 
-      function AR(dd) {
-        return rR.apply(this, arguments)
+      function fp(bb) {
+        return Ap.apply(this, arguments)
       }
 
-      function rR() {
-        return (rR = Rd((function*(dd) {
+      function Ap() {
+        return (Ap = pb((function*(bb) {
           let {
-            r: Od,
-            options: md,
-            url: Wd
-          } = dd;
-          const Fd = function(dd) {
+            r: wb,
+            options: Mb,
+            url: eb
+          } = bb;
+          const Hb = function(bb) {
             let {
-              r: Od,
-              options: md,
-              url: Wd
-            } = dd;
-            var Fd;
-            if ("chunked" === Od.headers.get("Transfer-Encoding")) return "Chunked Transfer-Encoding is not supported";
-            const Rd = null === (Fd = Od.headers.get("Content-Type")) || void 0 === Fd ? void 0 : Fd.toLowerCase(),
-              Xd = JR.some((dd => null == Rd ? void 0 : Rd.startsWith(dd)));
-            if (Rd && Xd) return `Content-Type ${Rd} is not supported`;
+              r: wb,
+              options: Mb,
+              url: eb
+            } = bb;
+            var Hb;
+            if ("chunked" === wb.headers.get("Transfer-Encoding")) return "Chunked Transfer-Encoding is not supported";
+            const pb = null === (Hb = wb.headers.get("Content-Type")) || void 0 === Hb ? void 0 : Hb.toLowerCase(),
+              Vb = xp.some((bb => null == pb ? void 0 : pb.startsWith(bb)));
+            if (pb && Vb) return `Content-Type ${pb} is not supported`;
             const {
-              hostname: Kd,
-              isHostDenied: hd
-            } = jF(Wd, md);
-            return hd ? Kd + " is in deny list" : null
+              hostname: gb,
+              isHostDenied: lb
+            } = GH(eb, Mb);
+            return lb ? gb + " is in deny list" : null
           }({
-            r: Od,
-            options: md,
-            url: Wd
+            r: wb,
+            options: Mb,
+            url: eb
           });
-          return yF(Fd) ? uR(Od, md) : Promise.resolve(Fd)
+          return CH(Hb) ? cp(wb, Mb) : Promise.resolve(Hb)
         }))).apply(this, arguments)
       }
-      let GR = null;
+      let Wp = null;
 
-      function nR(dd, Od, md) {
-        if (!("performance" in Od)) return () => {};
-        if (GR) return tR.warn("Network observer already initialised, doing nothing"), () => {};
-        const Fd = md ? Object.assign({}, mR, md) : mR;
-        let Xd = !0,
-          Kd = !1;
-        const hd = Od => {
-            if (!Xd) return;
-            const md = [];
-            let Rd = !1;
-            Od.requests.forEach((dd => {
-              const Od = "serverTiming" === dd.entryType;
-              if (Od && Rd) return;
-              let Wd;
+      function Jp(bb, wb, Mb) {
+        if (!("performance" in wb)) return () => {};
+        if (Wp) return Lp.warn("Network observer already initialised, doing nothing"), () => {};
+        const Hb = Mb ? Object.assign({}, bp, Mb) : bp;
+        let Vb = !0,
+          gb = !1;
+        const lb = wb => {
+            if (!Vb) return;
+            const Mb = [];
+            let pb = !1;
+            wb.requests.forEach((bb => {
+              const wb = "serverTiming" === bb.entryType;
+              if (wb && pb) return;
+              let eb;
               try {
-                Wd = Fd.maskRequestFn(dd)
-              } catch (dd) {
-                return Kd || (Kd = !0, tR.warn("Network capture masking callback failed; dropping the record. Further masking failures will not be logged for this observer.")), void(Od || (Rd = !0))
+                eb = Hb.maskRequestFn(bb)
+              } catch (bb) {
+                return gb || (gb = !0, Lp.warn("Network capture masking callback failed; dropping the record. Further masking failures will not be logged for this observer.")), void(wb || (pb = !0))
               }
-              Od || (Rd = !Wd || (dd => !!dd && QR.has(dd))(Wd)), Wd && md.push(Wd)
-            })), md.length > 0 && dd(Wd(Wd({}, Od), {}, {
-              requests: md
+              wb || (pb = !eb || (bb => !!bb && lp.has(bb))(eb)), eb && Mb.push(eb)
+            })), Mb.length > 0 && bb(eb(eb({}, wb), {}, {
+              requests: Mb
             }))
           },
-          vd = function(dd, Od, md) {
+          Lb = function(bb, wb, Mb) {
             try {
-              dd({
-                requests: yR(Od, md).flatMap((dd => ER(Od, {
-                  entry: dd,
+              bb({
+                requests: Cp(wb, Mb).flatMap((bb => Xp(wb, {
+                  entry: bb,
                   method: void 0,
                   status: void 0,
                   networkRequest: {},
@@ -5788,582 +5788,582 @@ export const modules = {
                 }))),
                 isInitial: !0
               })
-            } catch (dd) {
-              tR.error("Failed to capture initial performance entries for network capture", dd)
+            } catch (bb) {
+              Lp.error("Failed to capture initial performance entries for network capture", bb)
             }
-            const Wd = Od.PerformanceObserver,
-              Fd = null == Wd ? void 0 : Wd.supportedEntryTypes;
-            if (!Wd || !tF(Fd)) return;
-            const Rd = Fd.filter((dd => md.performanceEntryTypeToObserve.includes(dd)));
-            if (!Rd.length) return;
-            const Xd = new Wd((Wd => {
-              dd({
-                requests: Wd.getEntries().filter((dd => oR(dd) || NR(dd) && md.initiatorTypes.includes(dd.initiatorType) && (dd => !md.recordBody && !md.recordHeaders || "xmlhttprequest" !== dd.initiatorType && "fetch" !== dd.initiatorType)(dd))).flatMap((dd => ER(Od, {
-                  entry: dd,
+            const eb = wb.PerformanceObserver,
+              Hb = null == eb ? void 0 : eb.supportedEntryTypes;
+            if (!eb || !LH(Hb)) return;
+            const pb = Hb.filter((bb => Mb.performanceEntryTypeToObserve.includes(bb)));
+            if (!pb.length) return;
+            const Vb = new eb((eb => {
+              bb({
+                requests: eb.getEntries().filter((bb => Ip(bb) || Op(bb) && Mb.initiatorTypes.includes(bb.initiatorType) && (bb => !Mb.recordBody && !Mb.recordHeaders || "xmlhttprequest" !== bb.initiatorType && "fetch" !== bb.initiatorType)(bb))).flatMap((bb => Xp(wb, {
+                  entry: bb,
                   method: void 0,
                   status: void 0,
                   networkRequest: {}
                 })))
               })
             }));
-            return Xd.observe({
-              entryTypes: Rd
+            return Vb.observe({
+              entryTypes: pb
             }), () => {
-              Xd.disconnect()
+              Vb.disconnect()
             }
-          }(hd, Od, Fd),
-          Qd = Fd.recordHeaders || Fd.recordBody;
-        if (!vd && !Qd) return Xd = !1, qR;
-        let td = () => {},
-          od = () => {};
-        return Qd && (td = function(dd, Od, md) {
-          if (!md.initiatorTypes.includes("xmlhttprequest")) return () => {};
-          const Wd = bR("request", md.recordHeaders),
-            Fd = bR("response", md.recordHeaders),
-            Rd = cF(Od.XMLHttpRequest.prototype, "open", (Rd => function(Xd, Kd) {
-              let hd = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-                vd = arguments.length > 3 ? arguments[3] : void 0,
-                Qd = arguments.length > 4 ? arguments[4] : void 0;
-              const td = this;
+          }(lb, wb, Hb),
+          Ib = Hb.recordHeaders || Hb.recordBody;
+        if (!Lb && !Ib) return Vb = !1, Up;
+        let Ob = () => {},
+          Ub = () => {};
+        return Ib && (Ob = function(bb, wb, Mb) {
+          if (!Mb.initiatorTypes.includes("xmlhttprequest")) return () => {};
+          const eb = Ep("request", Mb.recordHeaders),
+            Hb = Ep("response", Mb.recordHeaders),
+            pb = QH(wb.XMLHttpRequest.prototype, "open", (pb => function(Vb, gb) {
+              let lb = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
+                Lb = arguments.length > 3 ? arguments[3] : void 0,
+                Ib = arguments.length > 4 ? arguments[4] : void 0;
+              const Ob = this;
               try {
-                const Rd = new Request(Kd),
-                  hd = {};
-                let vd, Qd;
-                const od = {},
-                  Nd = td.setRequestHeader.bind(td);
-                td.setRequestHeader = (dd, Od) => (od[dd] = Od, Nd(dd, Od)), Wd && (hd.requestHeaders = od);
-                const qd = td.send.bind(td);
-                td.send = dd => (YR({
+                const pb = new Request(gb),
+                  lb = {};
+                let Lb, Ib;
+                const Ub = {},
+                  tb = Ob.setRequestHeader.bind(Ob);
+                Ob.setRequestHeader = (bb, wb) => (Ub[bb] = wb, tb(bb, wb)), eb && (lb.requestHeaders = Ub);
+                const Cb = Ob.send.bind(Ob);
+                Ob.send = bb => (sp({
                   type: "request",
-                  headers: od,
-                  url: Kd,
-                  recordBody: md.recordBody
-                }) && (hd.requestBody = aR({
-                  body: dd,
-                  options: md,
-                  url: Kd
-                })), vd = Od.performance.now(), qd(dd));
-                const Hd = () => {
-                    td.removeEventListener("readystatechange", yd), td.removeEventListener("error", Hd), td.removeEventListener("abort", Hd), td.removeEventListener("timeout", Hd)
+                  headers: Ub,
+                  url: gb,
+                  recordBody: Mb.recordBody
+                }) && (lb.requestBody = zp({
+                  body: bb,
+                  options: Mb,
+                  url: gb
+                })), Lb = wb.performance.now(), Cb(bb));
+                const Eb = () => {
+                    Ob.removeEventListener("readystatechange", Fb), Ob.removeEventListener("error", Eb), Ob.removeEventListener("abort", Eb), Ob.removeEventListener("timeout", Eb)
                   },
-                  yd = () => {
-                    if (td.readyState !== td.DONE) return;
-                    Hd(), Qd = Od.performance.now();
-                    const Wd = {};
-                    td.getAllResponseHeaders().trim().split(/[\r\n]+/).forEach((dd => {
-                      const Od = dd.split(": "),
-                        md = Od.shift(),
-                        Fd = Od.join(": ");
-                      md && (Wd[md] = Fd)
-                    })), Fd && (hd.responseHeaders = Wd), YR({
+                  Fb = () => {
+                    if (Ob.readyState !== Ob.DONE) return;
+                    Eb(), Ib = wb.performance.now();
+                    const eb = {};
+                    Ob.getAllResponseHeaders().trim().split(/[\r\n]+/).forEach((bb => {
+                      const wb = bb.split(": "),
+                        Mb = wb.shift(),
+                        Hb = wb.join(": ");
+                      Mb && (eb[Mb] = Hb)
+                    })), Hb && (lb.responseHeaders = eb), sp({
                       type: "response",
-                      headers: Wd,
-                      url: Kd,
-                      recordBody: md.recordBody
-                    }) && (hd.responseBody = aR({
-                      body: td.response,
-                      options: md,
-                      url: Kd
-                    })), gR(Od, "xmlhttprequest", Rd.url, vd, Qd).then((md => {
-                      dd({
-                        requests: ER(Od, {
-                          entry: md,
-                          method: Xd,
-                          status: null == td ? void 0 : td.status,
-                          networkRequest: hd,
-                          start: vd,
-                          end: Qd,
-                          url: Kd.toString(),
+                      headers: eb,
+                      url: gb,
+                      recordBody: Mb.recordBody
+                    }) && (lb.responseBody = zp({
+                      body: Ob.response,
+                      options: Mb,
+                      url: gb
+                    })), mp(wb, "xmlhttprequest", pb.url, Lb, Ib).then((Mb => {
+                      bb({
+                        requests: Xp(wb, {
+                          entry: Mb,
+                          method: Vb,
+                          status: null == Ob ? void 0 : Ob.status,
+                          networkRequest: lb,
+                          start: Lb,
+                          end: Ib,
+                          url: gb.toString(),
                           initiatorType: "xmlhttprequest"
                         })
                       })
                     })).catch((() => {}))
                   };
-                td.addEventListener("readystatechange", yd), td.addEventListener("error", Hd), td.addEventListener("abort", Hd), td.addEventListener("timeout", Hd)
-              } catch (dd) {
-                tR.error("Failed to instrument XHR for network capture", dd)
+                Ob.addEventListener("readystatechange", Fb), Ob.addEventListener("error", Eb), Ob.addEventListener("abort", Eb), Ob.addEventListener("timeout", Eb)
+              } catch (bb) {
+                Lp.error("Failed to instrument XHR for network capture", bb)
               }
-              Rd.call(td, Xd, Kd.toString(), hd, vd, Qd)
+              pb.call(Ob, Vb, gb.toString(), lb, Lb, Ib)
             }));
           return () => {
-            Rd()
+            pb()
           }
-        }(hd, Od, Fd), od = !0 === Fd.captureFetchSynchronously ? function(dd, Od, md) {
-          if (!md.initiatorTypes.includes("fetch")) return () => {};
-          const Wd = bR("request", md.recordHeaders),
-            Fd = bR("response", md.recordHeaders),
-            Xd = cF(Od, "fetch", (Xd => function(Kd, hd) {
-              let vd;
+        }(lb, wb, Hb), Ub = !0 === Hb.captureFetchSynchronously ? function(bb, wb, Mb) {
+          if (!Mb.initiatorTypes.includes("fetch")) return () => {};
+          const eb = Ep("request", Mb.recordHeaders),
+            Hb = Ep("response", Mb.recordHeaders),
+            Vb = QH(wb, "fetch", (Vb => function(gb, lb) {
+              let Lb;
               try {
-                vd = new Request(Kd, hd)
-              } catch (dd) {
-                tR.error("Failed to instrument fetch for network capture", dd);
+                Lb = new Request(gb, lb)
+              } catch (bb) {
+                Lp.error("Failed to instrument fetch for network capture", bb);
                 try {
-                  return Promise.resolve(Xd(Kd, hd))
-                } catch (dd) {
-                  return new Promise(((md, Wd) => Wd(dd)))
+                  return Promise.resolve(Vb(gb, lb))
+                } catch (bb) {
+                  return new Promise(((Mb, eb) => eb(bb)))
                 }
               }
-              const Qd = {};
-              let td, od;
-              const Nd = Rd((function*() {
+              const Ib = {};
+              let Ob, Ub;
+              const tb = pb((function*() {
                   try {
-                    const dd = {};
-                    vd.headers.forEach(((Od, md) => {
-                      dd[md] = Od
-                    })), Wd && (Qd.requestHeaders = dd), !UR(null == hd ? void 0 : hd.body) && YR({
+                    const bb = {};
+                    Lb.headers.forEach(((wb, Mb) => {
+                      bb[Mb] = wb
+                    })), eb && (Ib.requestHeaders = bb), !jp(null == lb ? void 0 : lb.body) && sp({
                       type: "request",
-                      headers: dd,
-                      url: Kd,
-                      recordBody: md.recordBody
-                    }) && (Qd.requestBody = yield VR({
-                      r: vd,
-                      options: md,
-                      url: Kd
+                      headers: bb,
+                      url: gb,
+                      recordBody: Mb.recordBody
+                    }) && (Ib.requestBody = yield Yp({
+                      r: Lb,
+                      options: Mb,
+                      url: gb
                     }))
-                  } catch (dd) {
-                    tR.error("Failed to record fetch request for network capture", dd)
+                  } catch (bb) {
+                    Lp.error("Failed to record fetch request for network capture", bb)
                   }
                 }))(),
-                qd = (Hd = Rd((function*(dd) {
+                Cb = (Eb = pb((function*(bb) {
                   try {
-                    const Od = {};
-                    dd.headers.forEach(((dd, md) => {
-                      Od[md] = dd
-                    })), Fd && (Qd.responseHeaders = Od), YR({
+                    const wb = {};
+                    bb.headers.forEach(((bb, Mb) => {
+                      wb[Mb] = bb
+                    })), Hb && (Ib.responseHeaders = wb), sp({
                       type: "response",
-                      headers: Od,
-                      url: Kd,
-                      recordBody: md.recordBody
-                    }) && (Qd.responseBody = yield AR({
-                      r: dd,
-                      options: md,
-                      url: Kd
+                      headers: wb,
+                      url: gb,
+                      recordBody: Mb.recordBody
+                    }) && (Ib.responseBody = yield fp({
+                      r: bb,
+                      options: Mb,
+                      url: gb
                     }))
-                  } catch (dd) {
-                    tR.error("Failed to record fetch response for network capture", dd)
+                  } catch (bb) {
+                    Lp.error("Failed to record fetch response for network capture", bb)
                   }
-                })), function(dd) {
-                  return Hd.apply(this, arguments)
+                })), function(bb) {
+                  return Eb.apply(this, arguments)
                 });
-              var Hd;
+              var Eb;
               try {
-                td = Od.performance.now()
-              } catch (dd) {}
-              let yd;
+                Ob = wb.performance.now()
+              } catch (bb) {}
+              let Fb;
               try {
-                yd = TR(Kd) ? Xd(vd) : Xd(Kd, hd)
-              } catch (dd) {
-                yd = new Promise(((md, Wd) => Wd(dd)))
+                Fb = Fp(gb) ? Vb(Lb) : Vb(gb, lb)
+              } catch (bb) {
+                Fb = new Promise(((Mb, eb) => eb(bb)))
               }
-              const bd = Promise.resolve(yd).then((dd => {
+              const Bb = Promise.resolve(Fb).then((bb => {
                 try {
-                  od = Od.performance.now()
-                } catch (dd) {}
+                  Ub = wb.performance.now()
+                } catch (bb) {}
                 return {
                   status: "fulfilled",
-                  response: dd
+                  response: bb
                 }
-              }), (dd => ({
+              }), (bb => ({
                 status: "rejected",
-                error: dd
+                error: bb
               })));
-              return Rd((function*() {
-                let md;
+              return pb((function*() {
+                let Mb;
                 try {
-                  yield Nd;
-                  const dd = yield bd;
-                  if ("rejected" === dd.status) throw dd.error;
-                  return md = dd.response, yield qd(md), md
+                  yield tb;
+                  const bb = yield Bb;
+                  if ("rejected" === bb.status) throw bb.error;
+                  return Mb = bb.response, yield Cb(Mb), Mb
                 } finally {
-                  (Wd = md, gR(Od, "fetch", vd.url, td, od).then((md => {
-                    dd({
-                      requests: ER(Od, {
-                        entry: md,
-                        method: vd.method,
-                        status: null == Wd ? void 0 : Wd.status,
-                        networkRequest: Qd,
-                        start: td,
-                        end: od,
-                        url: vd.url,
+                  (eb = Mb, mp(wb, "fetch", Lb.url, Ob, Ub).then((Mb => {
+                    bb({
+                      requests: Xp(wb, {
+                        entry: Mb,
+                        method: Lb.method,
+                        status: null == eb ? void 0 : eb.status,
+                        networkRequest: Ib,
+                        start: Ob,
+                        end: Ub,
+                        url: Lb.url,
                         initiatorType: "fetch"
                       })
                     })
                   }))).catch((() => {}))
                 }
-                var Wd
+                var eb
               }))()
             }));
           return () => {
-            Xd()
+            Vb()
           }
-        }(hd, Od, Fd) : function(dd, Od, md) {
-          if (!md.initiatorTypes.includes("fetch")) return () => {};
-          const Wd = bR("request", md.recordHeaders),
-            Fd = bR("response", md.recordHeaders),
-            Xd = cF(Od, "fetch", (Xd => function() {
-              var Kd = Rd((function*(Rd, Kd) {
-                let hd, vd;
+        }(lb, wb, Hb) : function(bb, wb, Mb) {
+          if (!Mb.initiatorTypes.includes("fetch")) return () => {};
+          const eb = Ep("request", Mb.recordHeaders),
+            Hb = Ep("response", Mb.recordHeaders),
+            Vb = QH(wb, "fetch", (Vb => function() {
+              var gb = pb((function*(pb, gb) {
+                let lb, Lb;
                 try {
-                  hd = new Request(Rd, Kd)
-                } catch (dd) {
-                  return tR.error("Failed to instrument fetch for network capture", dd), Xd(Rd, Kd)
+                  lb = new Request(pb, gb)
+                } catch (bb) {
+                  return Lp.error("Failed to instrument fetch for network capture", bb), Vb(pb, gb)
                 }
-                const Qd = {};
-                let td, od;
+                const Ib = {};
+                let Ob, Ub;
                 try {
                   try {
-                    const dd = {};
-                    hd.headers.forEach(((Od, md) => {
-                      dd[md] = Od
-                    })), Wd && (Qd.requestHeaders = dd), !UR(null == Kd ? void 0 : Kd.body) && YR({
+                    const bb = {};
+                    lb.headers.forEach(((wb, Mb) => {
+                      bb[Mb] = wb
+                    })), eb && (Ib.requestHeaders = bb), !jp(null == gb ? void 0 : gb.body) && sp({
                       type: "request",
-                      headers: dd,
-                      url: Rd,
-                      recordBody: md.recordBody
-                    }) && (Qd.requestBody = yield VR({
-                      r: hd,
-                      options: md,
-                      url: Rd
+                      headers: bb,
+                      url: pb,
+                      recordBody: Mb.recordBody
+                    }) && (Ib.requestBody = yield Yp({
+                      r: lb,
+                      options: Mb,
+                      url: pb
                     }))
-                  } catch (dd) {
-                    tR.error("Failed to record fetch request for network capture", dd)
+                  } catch (bb) {
+                    Lp.error("Failed to record fetch request for network capture", bb)
                   }
-                  td = Od.performance.now(), vd = TR(Rd) ? yield Xd(hd): yield Xd(Rd, Kd), od = Od.performance.now();
+                  Ob = wb.performance.now(), Lb = Fp(pb) ? yield Vb(lb): yield Vb(pb, gb), Ub = wb.performance.now();
                   try {
-                    const dd = {};
-                    vd.headers.forEach(((Od, md) => {
-                      dd[md] = Od
-                    })), Fd && (Qd.responseHeaders = dd), YR({
+                    const bb = {};
+                    Lb.headers.forEach(((wb, Mb) => {
+                      bb[Mb] = wb
+                    })), Hb && (Ib.responseHeaders = bb), sp({
                       type: "response",
-                      headers: dd,
-                      url: Rd,
-                      recordBody: md.recordBody
-                    }) && (Qd.responseBody = yield AR({
-                      r: vd,
-                      options: md,
-                      url: Rd
+                      headers: bb,
+                      url: pb,
+                      recordBody: Mb.recordBody
+                    }) && (Ib.responseBody = yield fp({
+                      r: Lb,
+                      options: Mb,
+                      url: pb
                     }))
-                  } catch (dd) {
-                    tR.error("Failed to record fetch response for network capture", dd)
+                  } catch (bb) {
+                    Lp.error("Failed to record fetch response for network capture", bb)
                   }
-                  return vd
+                  return Lb
                 } finally {
-                  gR(Od, "fetch", hd.url, td, od).then((md => {
-                    dd({
-                      requests: ER(Od, {
-                        entry: md,
-                        method: hd.method,
-                        status: null == vd ? void 0 : vd.status,
-                        networkRequest: Qd,
-                        start: td,
-                        end: od,
-                        url: hd.url,
+                  mp(wb, "fetch", lb.url, Ob, Ub).then((Mb => {
+                    bb({
+                      requests: Xp(wb, {
+                        entry: Mb,
+                        method: lb.method,
+                        status: null == Lb ? void 0 : Lb.status,
+                        networkRequest: Ib,
+                        start: Ob,
+                        end: Ub,
+                        url: lb.url,
                         initiatorType: "fetch"
                       })
                     })
                   })).catch((() => {}))
                 }
               }));
-              return function(dd, Od) {
-                return Kd.apply(this, arguments)
+              return function(bb, wb) {
+                return gb.apply(this, arguments)
               }
             }()));
           return () => {
-            Xd()
+            Vb()
           }
-        }(hd, Od, Fd)), GR = () => {
-          Xd = !1, null == vd || vd(), td(), od(), GR = null
-        }, GR
+        }(lb, wb, Hb)), Wp = () => {
+          Vb = !1, null == Lb || Lb(), Ob(), Ub(), Wp = null
+        }, Wp
       }
-      const LR = "$replay_override_sampling",
-        PR = "$replay_override_linked_flag",
-        zR = "$replay_override_url_trigger",
-        cR = "$replay_override_event_trigger",
-        jR = "$session_is_sampled",
-        DR = "$session_recording_url_trigger_activated_session",
-        eR = "$session_recording_event_trigger_activated_session",
-        IR = "$posthog_sr_group_event_trigger_",
-        lR = "$posthog_sr_group_url_trigger_",
-        CR = "$sess_rec_flush_size",
-        ZR = "$sdk_debug_replay_event_trigger_status",
-        kR = "$sdk_debug_replay_linked_flag_trigger_status",
-        fR = "$sdk_debug_replay_matched_recording_trigger_groups",
-        MR = "$sdk_debug_replay_pending_trigger_conditions",
-        dX = "$sdk_debug_replay_remote_trigger_matching_config",
-        OX = "$sdk_debug_replay_trigger_groups_count",
-        mX = "$sdk_debug_replay_url_trigger_status",
-        WX = "$sdk_debug_rrweb_attached",
-        FX = "$sdk_debug_rrweb_start_attempted",
-        RX = "$session_recording_start_reason",
-        XX = "disabled",
-        KX = "sampled",
-        hX = "active",
-        vX = "buffering",
-        QX = "paused",
-        tX = "rrweb_error",
-        oX = "trigger_activated",
-        NX = "trigger_pending",
-        qX = "trigger_disabled";
+      const Sp = "$replay_override_sampling",
+        Np = "$replay_override_linked_flag",
+        vp = "$replay_override_url_trigger",
+        Qp = "$replay_override_event_trigger",
+        Gp = "$session_is_sampled",
+        qp = "$session_recording_url_trigger_activated_session",
+        ap = "$session_recording_event_trigger_activated_session",
+        ip = "$posthog_sr_group_event_trigger_",
+        dp = "$posthog_sr_group_url_trigger_",
+        Pp = "$sess_rec_flush_size",
+        np = "$sdk_debug_replay_event_trigger_status",
+        yp = "$sdk_debug_replay_linked_flag_trigger_status",
+        op = "$sdk_debug_replay_matched_recording_trigger_groups",
+        Tp = "$sdk_debug_replay_pending_trigger_conditions",
+        kp = "$sdk_debug_replay_remote_trigger_matching_config",
+        bV = "$sdk_debug_replay_trigger_groups_count",
+        wV = "$sdk_debug_replay_url_trigger_status",
+        MV = "$sdk_debug_rrweb_attached",
+        eV = "$sdk_debug_rrweb_start_attempted",
+        HV = "$session_recording_start_reason",
+        pV = "disabled",
+        VV = "sampled",
+        gV = "active",
+        lV = "buffering",
+        LV = "paused",
+        IV = "rrweb_error",
+        OV = "trigger_activated",
+        UV = "trigger_pending",
+        tV = "trigger_disabled";
 
-      function HX(dd, Od, md, Wd, Fd, Rd) {
-        return 0 === Od ? qX : (null == dd ? void 0 : dd.get_property(md ? Wd + md : Fd)) === Rd ? oX : NX
+      function CV(bb, wb, Mb, eb, Hb, pb) {
+        return 0 === wb ? tV : (null == bb ? void 0 : bb.get_property(Mb ? eb + Mb : Hb)) === pb ? OV : UV
       }
 
-      function yX(dd, Od, md) {
-        return Od.some((Od => {
-          var Wd;
-          return "regex" === Od.matching && (null !== (Wd = null == md ? void 0 : md.get(Od.url)) && void 0 !== Wd ? Wd : new RegExp(Od.url)).test(dd)
+      function EV(bb, wb, Mb) {
+        return wb.some((wb => {
+          var eb;
+          return "regex" === wb.matching && (null !== (eb = null == Mb ? void 0 : Mb.get(wb.url)) && void 0 !== eb ? eb : new RegExp(wb.url)).test(bb)
         }))
       }
 
-      function bX(dd) {
-        return dd.includes("trigger_activated") ? oX : dd.includes("trigger_pending") ? NX : qX
+      function FV(bb) {
+        return bb.includes("trigger_activated") ? OV : bb.includes("trigger_pending") ? UV : tV
       }
 
-      function TX(dd) {
-        const Od = new Set(dd);
-        switch (Od.delete(qX), Od.size) {
+      function BV(bb) {
+        const wb = new Set(bb);
+        switch (wb.delete(tV), wb.size) {
           case 0:
-            return qX;
+            return tV;
           case 1:
-            return Array.from(Od)[0];
+            return Array.from(wb)[0];
           default:
-            return NX
+            return UV
         }
       }
-      var pX = class {
-          constructor(dd) {
-            this.q = dd
+      var sV = class {
+          constructor(bb) {
+            this.q = bb
           }
-          triggerStatus(dd) {
-            return bX(this.q.map((Od => Od.triggerStatus(dd))))
+          triggerStatus(bb) {
+            return FV(this.q.map((wb => wb.triggerStatus(bb))))
           }
-          triggerStatusNoSideEffects(dd) {
-            return bX(this.q.map((Od => Od.triggerStatusNoSideEffects(dd))))
-          }
-          stop() {
-            this.q.forEach((dd => dd.stop()))
-          }
-        },
-        YX = class {
-          constructor(dd) {
-            this.q = dd
-          }
-          triggerStatus(dd) {
-            return TX(this.q.map((Od => Od.triggerStatus(dd))))
-          }
-          triggerStatusNoSideEffects(dd) {
-            return TX(this.q.map((Od => Od.triggerStatusNoSideEffects(dd))))
+          triggerStatusNoSideEffects(bb) {
+            return FV(this.q.map((wb => wb.triggerStatusNoSideEffects(bb))))
           }
           stop() {
-            this.q.forEach((dd => dd.stop()))
+            this.q.forEach((bb => bb.stop()))
           }
         },
-        gX = class {
+        mV = class {
+          constructor(bb) {
+            this.q = bb
+          }
+          triggerStatus(bb) {
+            return BV(this.q.map((wb => wb.triggerStatus(bb))))
+          }
+          triggerStatusNoSideEffects(bb) {
+            return BV(this.q.map((wb => wb.triggerStatusNoSideEffects(bb))))
+          }
+          stop() {
+            this.q.forEach((bb => bb.stop()))
+          }
+        },
+        hV = class {
           triggerStatus() {
             return this.triggerStatusNoSideEffects()
           }
           triggerStatusNoSideEffects() {
-            return oX
+            return OV
           }
           stop() {}
         };
-      const wX = dd => "sessionRecording" in dd;
-      var aX = class {
-          constructor(dd, Od) {
-            this._instance = dd, this.j = [], this.B = [], this.H = new Map, this.U = new Map, this.W = "", this.urlBlocked = !1, this.V = Od
+      const zV = bb => "sessionRecording" in bb;
+      var XV = class {
+          constructor(bb, wb) {
+            this._instance = bb, this.j = [], this.B = [], this.H = new Map, this.U = new Map, this.W = "", this.urlBlocked = !1, this.V = wb
           }
-          onConfig(dd) {
-            var Od, md;
-            this.j = (wX(dd) ? NF(dd.sessionRecording) ? null === (Od = dd.sessionRecording) || void 0 === Od ? void 0 : Od.urlTriggers : [] : null == dd ? void 0 : dd.urlTriggers) || [], this.B = (wX(dd) ? NF(dd.sessionRecording) ? null === (md = dd.sessionRecording) || void 0 === md ? void 0 : md.urlBlocklist : [] : null == dd ? void 0 : dd.urlBlocklist) || [], this.G()
+          onConfig(bb) {
+            var wb, Mb;
+            this.j = (zV(bb) ? OH(bb.sessionRecording) ? null === (wb = bb.sessionRecording) || void 0 === wb ? void 0 : wb.urlTriggers : [] : null == bb ? void 0 : bb.urlTriggers) || [], this.B = (zV(bb) ? OH(bb.sessionRecording) ? null === (Mb = bb.sessionRecording) || void 0 === Mb ? void 0 : Mb.urlBlocklist : [] : null == bb ? void 0 : bb.urlBlocklist) || [], this.G()
           }
           G() {
             this.H.clear(), this.U.clear();
-            for (const dd of this.j)
-              if ("regex" === dd.matching && !this.H.has(dd.url)) try {
-                this.H.set(dd.url, new RegExp(dd.url))
-              } catch (Od) {
-                iF.error("Invalid URL trigger regex pattern:", dd.url, Od)
+            for (const bb of this.j)
+              if ("regex" === bb.matching && !this.H.has(bb.url)) try {
+                this.H.set(bb.url, new RegExp(bb.url))
+              } catch (wb) {
+                ZH.error("Invalid URL trigger regex pattern:", bb.url, wb)
               }
-            for (const dd of this.B)
-              if ("regex" === dd.matching && !this.U.has(dd.url)) try {
-                this.U.set(dd.url, new RegExp(dd.url))
-              } catch (Od) {
-                iF.error("Invalid URL blocklist regex pattern:", dd.url, Od)
+            for (const bb of this.B)
+              if ("regex" === bb.matching && !this.U.has(bb.url)) try {
+                this.U.set(bb.url, new RegExp(bb.url))
+              } catch (wb) {
+                ZH.error("Invalid URL blocklist regex pattern:", bb.url, wb)
               }
           }
-          onRemoteConfig(dd) {
-            this.onConfig(dd)
+          onRemoteConfig(bb) {
+            this.onConfig(bb)
           }
-          Z(dd) {
-            return HX(this._instance, this.j.length, this.V, lR, DR, dd)
+          Z(bb) {
+            return CV(this._instance, this.j.length, this.V, dp, qp, bb)
           }
-          triggerStatus(dd) {
-            const Od = this.triggerStatusNoSideEffects(dd);
+          triggerStatus(bb) {
+            const wb = this.triggerStatusNoSideEffects(bb);
             return this._instance.register_for_session({
-              [mX]: Od
-            }), Od
+              [wV]: wb
+            }), wb
           }
-          triggerStatusNoSideEffects(dd) {
-            return this.Z(dd)
+          triggerStatusNoSideEffects(bb) {
+            return this.Z(bb)
           }
           isCurrentUrlBlocked() {
-            const dd = DF(this._instance);
-            if (!dd) return !1;
+            const bb = qH(this._instance);
+            if (!bb) return !1;
             try {
-              return yX(dd, this.B, this.U)
-            } catch (dd) {
+              return EV(bb, this.B, this.U)
+            } catch (bb) {
               return !0
             }
           }
-          checkUrlBlocklist(dd, Od) {
-            const md = DF(this._instance);
-            if (!md) return;
-            if (md === this.W) return;
-            this.W = md;
-            const Wd = this.urlBlocked,
-              Fd = yX(md, this.B, this.U);
-            Wd && Fd || (Fd && !Wd ? dd() : !Fd && Wd && Od())
+          checkUrlBlocklist(bb, wb) {
+            const Mb = qH(this._instance);
+            if (!Mb) return;
+            if (Mb === this.W) return;
+            this.W = Mb;
+            const eb = this.urlBlocked,
+              Hb = EV(Mb, this.B, this.U);
+            eb && Hb || (Hb && !eb ? bb() : !Hb && eb && wb())
           }
-          checkUrlTriggerConditions(dd, Od, md, Wd) {
-            const Fd = DF(this._instance);
-            if (!Fd) return;
-            if (Fd === this.W) return;
-            this.W = Fd;
-            const Rd = this.urlBlocked,
-              Xd = yX(Fd, this.B, this.U);
-            Xd && !Rd ? dd() : !Xd && Rd && Od();
-            const Kd = this.Z(Wd) === oX,
-              hd = yX(Fd, this.j, this.H);
-            !Kd && hd && md("url", Fd)
+          checkUrlTriggerConditions(bb, wb, Mb, eb) {
+            const Hb = qH(this._instance);
+            if (!Hb) return;
+            if (Hb === this.W) return;
+            this.W = Hb;
+            const pb = this.urlBlocked,
+              Vb = EV(Hb, this.B, this.U);
+            Vb && !pb ? bb() : !Vb && pb && wb();
+            const gb = this.Z(eb) === OV,
+              lb = EV(Hb, this.j, this.H);
+            !gb && lb && Mb("url", Hb)
           }
           stop() {
             this.W = ""
           }
         },
-        EX = class {
-          constructor(dd) {
-            this._instance = dd, this.linkedFlag = null, this.linkedFlagSeen = !1, this.J = () => {}
+        xV = class {
+          constructor(bb) {
+            this._instance = bb, this.linkedFlag = null, this.linkedFlagSeen = !1, this.J = () => {}
           }
           triggerStatus() {
-            const dd = this.triggerStatusNoSideEffects();
+            const bb = this.triggerStatusNoSideEffects();
             return this._instance.register_for_session({
-              [kR]: dd
-            }), dd
+              [yp]: bb
+            }), bb
           }
           triggerStatusNoSideEffects() {
-            let dd = NX;
-            return bF(this.linkedFlag) && (dd = qX), this.linkedFlagSeen && (dd = oX), dd
+            let bb = UV;
+            return EH(this.linkedFlag) && (bb = tV), this.linkedFlagSeen && (bb = OV), bb
           }
-          onConfig(dd, Od) {
-            var md;
-            if (this.linkedFlag = (wX(dd) ? NF(dd.sessionRecording) ? null === (md = dd.sessionRecording) || void 0 === md ? void 0 : md.linkedFlag : null : null == dd ? void 0 : dd.linkedFlag) || null, !bF(this.linkedFlag) && !this.linkedFlagSeen) {
-              const dd = HF(this.linkedFlag) ? this.linkedFlag : this.linkedFlag.flag,
-                md = HF(this.linkedFlag) ? null : this.linkedFlag.variant;
-              this.J = this._instance.onFeatureFlags(((Wd, Fd) => {
-                let Rd = !1;
-                if (NF(Fd) && dd in Fd) {
-                  const Od = Fd[dd];
-                  Rd = pF(Od) ? !0 === Od : md ? Od === md : !!Od
+          onConfig(bb, wb) {
+            var Mb;
+            if (this.linkedFlag = (zV(bb) ? OH(bb.sessionRecording) ? null === (Mb = bb.sessionRecording) || void 0 === Mb ? void 0 : Mb.linkedFlag : null : null == bb ? void 0 : bb.linkedFlag) || null, !EH(this.linkedFlag) && !this.linkedFlagSeen) {
+              const bb = tH(this.linkedFlag) ? this.linkedFlag : this.linkedFlag.flag,
+                Mb = tH(this.linkedFlag) ? null : this.linkedFlag.variant;
+              this.J = this._instance.onFeatureFlags(((eb, Hb) => {
+                let pb = !1;
+                if (OH(Hb) && bb in Hb) {
+                  const wb = Hb[bb];
+                  pb = BH(wb) ? !0 === wb : Mb ? wb === Mb : !!wb
                 }
-                const Xd = Rd && !this.linkedFlagSeen;
-                this.linkedFlagSeen = Rd, Xd && Od(dd, md)
+                const Vb = pb && !this.linkedFlagSeen;
+                this.linkedFlagSeen = pb, Vb && wb(bb, Mb)
               }))
             }
           }
-          onRemoteConfig(dd, Od) {
-            this.onConfig(dd, Od)
+          onRemoteConfig(bb, wb) {
+            this.onConfig(bb, wb)
           }
           stop() {
             this.J()
           }
         },
-        JX = class {
-          constructor(dd, Od) {
-            this._instance = dd, this.K = [], this.V = Od
+        jV = class {
+          constructor(bb, wb) {
+            this._instance = bb, this.K = [], this.V = wb
           }
-          onConfig(dd) {
-            var Od;
-            this.K = (wX(dd) ? NF(dd.sessionRecording) ? null === (Od = dd.sessionRecording) || void 0 === Od ? void 0 : Od.eventTriggers : [] : null == dd ? void 0 : dd.eventTriggers) || []
+          onConfig(bb) {
+            var wb;
+            this.K = (zV(bb) ? OH(bb.sessionRecording) ? null === (wb = bb.sessionRecording) || void 0 === wb ? void 0 : wb.eventTriggers : [] : null == bb ? void 0 : bb.eventTriggers) || []
           }
-          onRemoteConfig(dd) {
-            this.onConfig(dd)
+          onRemoteConfig(bb) {
+            this.onConfig(bb)
           }
-          X(dd) {
-            return HX(this._instance, this.K.length, this.V, IR, eR, dd)
+          X(bb) {
+            return CV(this._instance, this.K.length, this.V, ip, ap, bb)
           }
-          triggerStatus(dd) {
-            const Od = this.triggerStatusNoSideEffects(dd);
+          triggerStatus(bb) {
+            const wb = this.triggerStatusNoSideEffects(bb);
             return this._instance.register_for_session({
-              [ZR]: Od
-            }), Od
+              [np]: wb
+            }), wb
           }
-          triggerStatusNoSideEffects(dd) {
-            return this.X(dd)
+          triggerStatusNoSideEffects(bb) {
+            return this.X(bb)
           }
-          checkEventTriggerConditions(dd, Od, md) {
+          checkEventTriggerConditions(bb, wb, Mb) {
             if (0 === this.K.length) return;
-            const Wd = this.X(md) === oX,
-              Fd = this.K.includes(dd);
-            !Wd && Fd && Od("event", dd)
+            const eb = this.X(Mb) === OV,
+              Hb = this.K.includes(bb);
+            !eb && Hb && wb("event", bb)
           }
           stop() {}
         },
-        UX = class {
-          constructor(dd, Od, md) {
-            if (this._instance = dd, this.group = Od, this.Y = new aX(dd, Od.id), this.tt = new JX(dd, Od.id), this.et = new EX(dd), Od.conditions.events && Od.conditions.events.length > 0 || Od.conditions.urls && Od.conditions.urls.length > 0 || Od.conditions.flag) {
-              const dd = (Od.conditions.events || []).map((dd => dd.name)),
-                Wd = {
-                  urlTriggers: Od.conditions.urls || [],
-                  eventTriggers: dd,
-                  linkedFlag: Od.conditions.flag || null,
+        KV = class {
+          constructor(bb, wb, Mb) {
+            if (this._instance = bb, this.group = wb, this.Y = new XV(bb, wb.id), this.tt = new jV(bb, wb.id), this.et = new xV(bb), wb.conditions.events && wb.conditions.events.length > 0 || wb.conditions.urls && wb.conditions.urls.length > 0 || wb.conditions.flag) {
+              const bb = (wb.conditions.events || []).map((bb => bb.name)),
+                eb = {
+                  urlTriggers: wb.conditions.urls || [],
+                  eventTriggers: bb,
+                  linkedFlag: wb.conditions.flag || null,
                   urlBlocklist: []
                 };
-              this.Y.onConfig(Wd), this.tt.onConfig(Wd), this.et.onConfig(Wd, md);
-              const Fd = [this.tt, this.Y, this.et];
-              this.nt = "any" === Od.conditions.matchType ? new pX(Fd) : new YX(Fd)
-            } else this.nt = new gX
+              this.Y.onConfig(eb), this.tt.onConfig(eb), this.et.onConfig(eb, Mb);
+              const Hb = [this.tt, this.Y, this.et];
+              this.nt = "any" === wb.conditions.matchType ? new sV(Hb) : new mV(Hb)
+            } else this.nt = new hV
           }
-          triggerStatus(dd) {
-            return this.nt.triggerStatus(dd)
+          triggerStatus(bb) {
+            return this.nt.triggerStatus(bb)
           }
-          triggerStatusNoSideEffects(dd) {
-            return this.nt.triggerStatusNoSideEffects(dd)
+          triggerStatusNoSideEffects(bb) {
+            return this.nt.triggerStatusNoSideEffects(bb)
           }
-          getPendingTriggerConditions(dd) {
-            return "trigger_pending" !== this.triggerStatusNoSideEffects(dd) ? [] : [{
+          getPendingTriggerConditions(bb) {
+            return "trigger_pending" !== this.triggerStatusNoSideEffects(bb) ? [] : [{
               label: "URL condition not matched",
-              status: this.Y.triggerStatusNoSideEffects(dd)
+              status: this.Y.triggerStatusNoSideEffects(bb)
             }, {
               label: "event condition not matched",
-              status: this.tt.triggerStatusNoSideEffects(dd)
+              status: this.tt.triggerStatusNoSideEffects(bb)
             }, {
               label: "linked flag condition not matched",
               status: this.et.triggerStatusNoSideEffects()
-            }].filter((dd => {
+            }].filter((bb => {
               let {
-                status: Od
-              } = dd;
-              return Od === NX
-            })).map((dd => {
+                status: wb
+              } = bb;
+              return wb === UV
+            })).map((bb => {
               let {
-                label: Od
-              } = dd;
-              return Od
+                label: wb
+              } = bb;
+              return wb
             }))
           }
-          checkEventTriggerConditions(dd, Od, md) {
-            this.tt.checkEventTriggerConditions(dd, Od, md)
+          checkEventTriggerConditions(bb, wb, Mb) {
+            this.tt.checkEventTriggerConditions(bb, wb, Mb)
           }
-          checkUrlTriggerConditions(dd, Od, md, Wd) {
-            this.Y.checkUrlTriggerConditions(dd, Od, md, Wd)
+          checkUrlTriggerConditions(bb, wb, Mb, eb) {
+            this.Y.checkUrlTriggerConditions(bb, wb, Mb, eb)
           }
-          activateTrigger(dd, Od) {
-            var md;
-            const Wd = "url" === dd ? lR + this.group.id : IR + this.group.id;
-            null === (md = this._instance.persistence) || void 0 === md || md.register({
-              [Wd]: Od
+          activateTrigger(bb, wb) {
+            var Mb;
+            const eb = "url" === bb ? dp + this.group.id : ip + this.group.id;
+            null === (Mb = this._instance.persistence) || void 0 === Mb || Mb.register({
+              [eb]: wb
             })
           }
           stop() {
@@ -6371,368 +6371,368 @@ export const modules = {
           }
         };
 
-      function xX(dd) {
-        if (dd.rrwebError) return tX;
-        if (!dd.receivedFlags) return vX;
-        if (!dd.isRecordingEnabled) return XX;
-        if (dd.urlTriggerMatching.urlBlocked) return QX;
-        const Od = !0 === dd.isSampled,
-          md = new pX([dd.eventTriggerMatching, dd.urlTriggerMatching, dd.linkedFlagMatching]).triggerStatus(dd.sessionId);
-        return Od ? KX : "trigger_activated" === md ? hX : "trigger_pending" === md ? vX : !1 === dd.isSampled ? XX : hX
+      function rV(bb) {
+        if (bb.rrwebError) return IV;
+        if (!bb.receivedFlags) return lV;
+        if (!bb.isRecordingEnabled) return pV;
+        if (bb.urlTriggerMatching.urlBlocked) return LV;
+        const wb = !0 === bb.isSampled,
+          Mb = new sV([bb.eventTriggerMatching, bb.urlTriggerMatching, bb.linkedFlagMatching]).triggerStatus(bb.sessionId);
+        return wb ? VV : "trigger_activated" === Mb ? gV : "trigger_pending" === Mb ? lV : !1 === bb.isSampled ? pV : gV
       }
 
-      function BX(dd) {
-        if (dd.rrwebError) return tX;
-        if (!dd.receivedFlags) return vX;
-        if (!dd.isRecordingEnabled) return XX;
-        if (dd.urlTriggerMatching.urlBlocked) return QX;
-        const Od = new YX([dd.eventTriggerMatching, dd.urlTriggerMatching, dd.linkedFlagMatching]).triggerStatus(dd.sessionId),
-          md = Od !== qX,
-          Wd = pF(dd.isSampled);
-        return md && "trigger_pending" === Od ? vX : md && "trigger_disabled" === Od || Wd && !dd.isSampled ? XX : !0 === dd.isSampled ? KX : hX
+      function RV(bb) {
+        if (bb.rrwebError) return IV;
+        if (!bb.receivedFlags) return lV;
+        if (!bb.isRecordingEnabled) return pV;
+        if (bb.urlTriggerMatching.urlBlocked) return LV;
+        const wb = new mV([bb.eventTriggerMatching, bb.urlTriggerMatching, bb.linkedFlagMatching]).triggerStatus(bb.sessionId),
+          Mb = wb !== tV,
+          eb = BH(bb.isSampled);
+        return Mb && "trigger_pending" === wb ? lV : Mb && "trigger_disabled" === wb || eb && !bb.isSampled ? pV : !0 === bb.isSampled ? VV : gV
       }
 
-      function SX() {
-        const dd = [];
-        return function(Od, md) {
-          if (NF(md) || tF(md)) {
-            for (; dd.length > 0 && dd[dd.length - 1] !== this;) dd.pop();
-            return dd.includes(md) ? "[Circular]" : (dd.push(md), md)
+      function DV() {
+        const bb = [];
+        return function(wb, Mb) {
+          if (OH(Mb) || LH(Mb)) {
+            for (; bb.length > 0 && bb[bb.length - 1] !== this;) bb.pop();
+            return bb.includes(Mb) ? "[Circular]" : (bb.push(Mb), Mb)
           }
-          return md
+          return Mb
         }
       }
 
-      function sX(dd) {
+      function cV(bb) {
         try {
-          const Od = JSON.stringify(dd, SX());
-          return Od ? new Blob([Od]).size : 0
-        } catch (dd) {
+          const wb = JSON.stringify(bb, DV());
+          return wb ? new Blob([wb]).size : 0
+        } catch (bb) {
           return -1
         }
       }
 
-      function uX(dd) {
-        if (yF(dd)) return 4;
-        if (qF(dd)) return 0;
-        switch (typeof dd) {
+      function YV(bb) {
+        if (CH(bb)) return 4;
+        if (UH(bb)) return 0;
+        switch (typeof bb) {
           case "string":
-            return dd.length + 2;
+            return bb.length + 2;
           case "number":
-            return String(dd).length;
+            return String(bb).length;
           case "boolean":
-            return dd ? 4 : 5;
+            return bb ? 4 : 5;
           case "object": {
-            if (tF(dd)) {
-              let Od = 2;
-              for (let md = 0; dd.length > md; md++) {
-                md > 0 && (Od += 1);
-                const Wd = dd[md];
-                Od += qF(Wd) || yF(Wd) ? 4 : uX(Wd)
+            if (LH(bb)) {
+              let wb = 2;
+              for (let Mb = 0; bb.length > Mb; Mb++) {
+                Mb > 0 && (wb += 1);
+                const eb = bb[Mb];
+                wb += UH(eb) || CH(eb) ? 4 : YV(eb)
               }
-              return Od
+              return wb
             }
-            const Od = dd;
-            let md = 2,
-              Wd = !0;
-            for (const dd in Od) {
-              if (!{}.hasOwnProperty.call(Od, dd)) continue;
-              const Fd = Od[dd];
-              qF(Fd) || (Wd || (md += 1), Wd = !1, md += dd.length + 3 + uX(Fd))
+            const wb = bb;
+            let Mb = 2,
+              eb = !0;
+            for (const bb in wb) {
+              if (!{}.hasOwnProperty.call(wb, bb)) continue;
+              const Hb = wb[bb];
+              UH(Hb) || (eb || (Mb += 1), eb = !1, Mb += bb.length + 3 + YV(Hb))
             }
-            return md
+            return Mb
           }
           default:
             return 0
         }
       }
 
-      function VX(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6606028.8;
-        if (dd.size >= Od && dd.data.length > 1) {
-          const Od = Math.floor(dd.data.length / 2),
-            md = dd.sizes.slice(0, Od),
-            Wd = dd.sizes.slice(Od);
-          return [VX({
-            size: md.reduce(((dd, Od) => dd + Od), 0),
-            data: dd.data.slice(0, Od),
-            sizes: md,
-            sessionId: dd.sessionId,
-            windowId: dd.windowId
-          }), VX({
-            size: Wd.reduce(((dd, Od) => dd + Od), 0),
-            data: dd.data.slice(Od),
-            sizes: Wd,
-            sessionId: dd.sessionId,
-            windowId: dd.windowId
-          })].flatMap((dd => dd))
+      function ZV(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6606028.8;
+        if (bb.size >= wb && bb.data.length > 1) {
+          const wb = Math.floor(bb.data.length / 2),
+            Mb = bb.sizes.slice(0, wb),
+            eb = bb.sizes.slice(wb);
+          return [ZV({
+            size: Mb.reduce(((bb, wb) => bb + wb), 0),
+            data: bb.data.slice(0, wb),
+            sizes: Mb,
+            sessionId: bb.sessionId,
+            windowId: bb.windowId
+          }), ZV({
+            size: eb.reduce(((bb, wb) => bb + wb), 0),
+            data: bb.data.slice(wb),
+            sizes: eb,
+            sessionId: bb.sessionId,
+            windowId: bb.windowId
+          })].flatMap((bb => bb))
         }
-        return [dd]
+        return [bb]
       }
-      var iX = Uint8Array,
-        AX = Uint16Array,
-        rX = Uint32Array,
-        GX = new iX([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]),
-        nX = new iX([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]),
-        LX = new iX([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]),
-        PX = function(dd, Od) {
-          for (var md = new AX(31), Wd = 0; 31 > Wd; ++Wd) md[Wd] = Od += 1 << dd[Wd - 1];
-          var Fd = new rX(md[30]);
-          for (Wd = 1; 30 > Wd; ++Wd)
-            for (var Rd = md[Wd]; md[Wd + 1] > Rd; ++Rd) Fd[Rd] = Rd - md[Wd] << 5 | Wd;
-          return [md, Fd]
+      var fV = Uint8Array,
+        AV = Uint16Array,
+        WV = Uint32Array,
+        JV = new fV([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0, 0, 0, 0]),
+        SV = new fV([0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 0, 0]),
+        NV = new fV([16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]),
+        vV = function(bb, wb) {
+          for (var Mb = new AV(31), eb = 0; 31 > eb; ++eb) Mb[eb] = wb += 1 << bb[eb - 1];
+          var Hb = new WV(Mb[30]);
+          for (eb = 1; 30 > eb; ++eb)
+            for (var pb = Mb[eb]; Mb[eb + 1] > pb; ++pb) Hb[pb] = pb - Mb[eb] << 5 | eb;
+          return [Mb, Hb]
         },
-        zX = PX(GX, 2),
-        cX = zX[1];
-      zX[0][28] = 258, cX[258] = 28;
-      for (var jX = PX(nX, 0)[1], DX = new AX(32768), eX = 0; 32768 > eX; ++eX) {
-        var IX = (43690 & eX) >>> 1 | (21845 & eX) << 1;
-        DX[eX] = ((65280 & (IX = (61680 & (IX = (52428 & IX) >>> 2 | (13107 & IX) << 2)) >>> 4 | (3855 & IX) << 4)) >>> 8 | (255 & IX) << 8) >>> 1
+        QV = vV(JV, 2),
+        GV = QV[1];
+      QV[0][28] = 258, GV[258] = 28;
+      for (var qV = vV(SV, 0)[1], aV = new AV(32768), iV = 0; 32768 > iV; ++iV) {
+        var uV = (43690 & iV) >>> 1 | (21845 & iV) << 1;
+        aV[iV] = ((65280 & (uV = (61680 & (uV = (52428 & uV) >>> 2 | (13107 & uV) << 2)) >>> 4 | (3855 & uV) << 4)) >>> 8 | (255 & uV) << 8) >>> 1
       }
-      var lX = function(dd, Od, md) {
-          for (var Wd = dd.length, Fd = 0, Rd = new AX(Od); Wd > Fd; ++Fd) ++Rd[dd[Fd] - 1];
-          var Xd, Kd = new AX(Od);
-          for (Fd = 0; Od > Fd; ++Fd) Kd[Fd] = Kd[Fd - 1] + Rd[Fd - 1] << 1;
-          if (md) {
-            Xd = new AX(1 << Od);
-            var hd = 15 - Od;
-            for (Fd = 0; Wd > Fd; ++Fd)
-              if (dd[Fd])
-                for (var vd = Fd << 4 | dd[Fd], Qd = Od - dd[Fd], td = Kd[dd[Fd] - 1]++ << Qd, od = td | (1 << Qd) - 1; od >= td; ++td) Xd[DX[td] >>> hd] = vd
+      var dV = function(bb, wb, Mb) {
+          for (var eb = bb.length, Hb = 0, pb = new AV(wb); eb > Hb; ++Hb) ++pb[bb[Hb] - 1];
+          var Vb, gb = new AV(wb);
+          for (Hb = 0; wb > Hb; ++Hb) gb[Hb] = gb[Hb - 1] + pb[Hb - 1] << 1;
+          if (Mb) {
+            Vb = new AV(1 << wb);
+            var lb = 15 - wb;
+            for (Hb = 0; eb > Hb; ++Hb)
+              if (bb[Hb])
+                for (var Lb = Hb << 4 | bb[Hb], Ib = wb - bb[Hb], Ob = gb[bb[Hb] - 1]++ << Ib, Ub = Ob | (1 << Ib) - 1; Ub >= Ob; ++Ob) Vb[aV[Ob] >>> lb] = Lb
           } else
-            for (Xd = new AX(Wd), Fd = 0; Wd > Fd; ++Fd) Xd[Fd] = DX[Kd[dd[Fd] - 1]++] >>> 15 - dd[Fd];
-          return Xd
+            for (Vb = new AV(eb), Hb = 0; eb > Hb; ++Hb) Vb[Hb] = aV[gb[bb[Hb] - 1]++] >>> 15 - bb[Hb];
+          return Vb
         },
-        CX = new iX(288);
-      for (eX = 0; 144 > eX; ++eX) CX[eX] = 8;
-      for (eX = 144; 256 > eX; ++eX) CX[eX] = 9;
-      for (eX = 256; 280 > eX; ++eX) CX[eX] = 7;
-      for (eX = 280; 288 > eX; ++eX) CX[eX] = 8;
-      var ZX = new iX(32);
-      for (eX = 0; 32 > eX; ++eX) ZX[eX] = 5;
-      var kX = lX(CX, 9, 0),
-        fX = lX(ZX, 5, 0),
-        MX = function(dd) {
-          return (dd / 8 | 0) + (7 & dd && 1)
+        PV = new fV(288);
+      for (iV = 0; 144 > iV; ++iV) PV[iV] = 8;
+      for (iV = 144; 256 > iV; ++iV) PV[iV] = 9;
+      for (iV = 256; 280 > iV; ++iV) PV[iV] = 7;
+      for (iV = 280; 288 > iV; ++iV) PV[iV] = 8;
+      var nV = new fV(32);
+      for (iV = 0; 32 > iV; ++iV) nV[iV] = 5;
+      var yV = dV(PV, 9, 0),
+        oV = dV(nV, 5, 0),
+        TV = function(bb) {
+          return (bb / 8 | 0) + (7 & bb && 1)
         },
-        dK = function(dd, Od, md) {
-          (null == Od || 0 > Od) && (Od = 0), (null == md || md > dd.length) && (md = dd.length);
-          var Wd = new(dd instanceof AX ? AX : dd instanceof rX ? rX : iX)(md - Od);
-          return Wd.set(dd.subarray(Od, md)), Wd
+        kV = function(bb, wb, Mb) {
+          (null == wb || 0 > wb) && (wb = 0), (null == Mb || Mb > bb.length) && (Mb = bb.length);
+          var eb = new(bb instanceof AV ? AV : bb instanceof WV ? WV : fV)(Mb - wb);
+          return eb.set(bb.subarray(wb, Mb)), eb
         },
-        OK = function(dd, Od, md) {
-          var Wd = Od / 8 | 0;
-          dd[Wd] |= md <<= 7 & Od, dd[Wd + 1] |= md >>> 8
+        bg = function(bb, wb, Mb) {
+          var eb = wb / 8 | 0;
+          bb[eb] |= Mb <<= 7 & wb, bb[eb + 1] |= Mb >>> 8
         },
-        mK = function(dd, Od, md) {
-          var Wd = Od / 8 | 0;
-          dd[Wd] |= md <<= 7 & Od, dd[Wd + 1] |= md >>> 8, dd[Wd + 2] |= md >>> 16
+        wg = function(bb, wb, Mb) {
+          var eb = wb / 8 | 0;
+          bb[eb] |= Mb <<= 7 & wb, bb[eb + 1] |= Mb >>> 8, bb[eb + 2] |= Mb >>> 16
         },
-        WK = function(dd, Od) {
-          for (var md = [], Wd = 0; dd.length > Wd; ++Wd) dd[Wd] && md.push({
-            s: Wd,
-            f: dd[Wd]
+        Mg = function(bb, wb) {
+          for (var Mb = [], eb = 0; bb.length > eb; ++eb) bb[eb] && Mb.push({
+            s: eb,
+            f: bb[eb]
           });
-          var Fd = md.length,
-            Rd = md.slice();
-          if (!Fd) return [new iX(0), 0];
-          if (1 == Fd) {
-            var Xd = new iX(md[0].s + 1);
-            return Xd[md[0].s] = 1, [Xd, 1]
+          var Hb = Mb.length,
+            pb = Mb.slice();
+          if (!Hb) return [new fV(0), 0];
+          if (1 == Hb) {
+            var Vb = new fV(Mb[0].s + 1);
+            return Vb[Mb[0].s] = 1, [Vb, 1]
           }
-          md.sort((function(dd, Od) {
-            return dd.f - Od.f
-          })), md.push({
+          Mb.sort((function(bb, wb) {
+            return bb.f - wb.f
+          })), Mb.push({
             s: -1,
             f: 25001
           });
-          var Kd = md[0],
-            hd = md[1],
-            vd = 0,
-            Qd = 1,
-            td = 2;
-          for (md[0] = {
+          var gb = Mb[0],
+            lb = Mb[1],
+            Lb = 0,
+            Ib = 1,
+            Ob = 2;
+          for (Mb[0] = {
               s: -1,
-              f: Kd.f + hd.f,
-              l: Kd,
-              r: hd
-            }; Qd != Fd - 1;) Kd = md[md[td].f > md[vd].f ? vd++ : td++], hd = md[vd != Qd && md[td].f > md[vd].f ? vd++ : td++], md[Qd++] = {
+              f: gb.f + lb.f,
+              l: gb,
+              r: lb
+            }; Ib != Hb - 1;) gb = Mb[Mb[Ob].f > Mb[Lb].f ? Lb++ : Ob++], lb = Mb[Lb != Ib && Mb[Ob].f > Mb[Lb].f ? Lb++ : Ob++], Mb[Ib++] = {
             s: -1,
-            f: Kd.f + hd.f,
-            l: Kd,
-            r: hd
+            f: gb.f + lb.f,
+            l: gb,
+            r: lb
           };
-          var od = Rd[0].s;
-          for (Wd = 1; Fd > Wd; ++Wd) Rd[Wd].s > od && (od = Rd[Wd].s);
-          var Nd = new AX(od + 1),
-            qd = FK(md[Qd - 1], Nd, 0);
-          if (qd > Od) {
-            Wd = 0;
-            var Hd = 0,
-              yd = qd - Od,
-              bd = 1 << yd;
-            for (Rd.sort((function(dd, Od) {
-                return Nd[Od.s] - Nd[dd.s] || dd.f - Od.f
-              })); Fd > Wd; ++Wd) {
-              var Td = Rd[Wd].s;
-              if (Od >= Nd[Td]) break;
-              Hd += bd - (1 << qd - Nd[Td]), Nd[Td] = Od
+          var Ub = pb[0].s;
+          for (eb = 1; Hb > eb; ++eb) pb[eb].s > Ub && (Ub = pb[eb].s);
+          var tb = new AV(Ub + 1),
+            Cb = eg(Mb[Ib - 1], tb, 0);
+          if (Cb > wb) {
+            eb = 0;
+            var Eb = 0,
+              Fb = Cb - wb,
+              Bb = 1 << Fb;
+            for (pb.sort((function(bb, wb) {
+                return tb[wb.s] - tb[bb.s] || bb.f - wb.f
+              })); Hb > eb; ++eb) {
+              var sb = pb[eb].s;
+              if (wb >= tb[sb]) break;
+              Eb += Bb - (1 << Cb - tb[sb]), tb[sb] = wb
             }
-            for (Hd >>>= yd; Hd > 0;) {
-              var pd = Rd[Wd].s;
-              Od > Nd[pd] ? Hd -= 1 << Od - Nd[pd]++ - 1 : ++Wd
+            for (Eb >>>= Fb; Eb > 0;) {
+              var mb = pb[eb].s;
+              wb > tb[mb] ? Eb -= 1 << wb - tb[mb]++ - 1 : ++eb
             }
-            for (; Wd >= 0 && Hd; --Wd) {
-              var Yd = Rd[Wd].s;
-              Nd[Yd] == Od && (--Nd[Yd], ++Hd)
+            for (; eb >= 0 && Eb; --eb) {
+              var hb = pb[eb].s;
+              tb[hb] == wb && (--tb[hb], ++Eb)
             }
-            qd = Od
+            Cb = wb
           }
-          return [new iX(Nd), qd]
+          return [new fV(tb), Cb]
         },
-        FK = function(dd, Od, md) {
-          return -1 == dd.s ? Math.max(FK(dd.l, Od, md + 1), FK(dd.r, Od, md + 1)) : Od[dd.s] = md
+        eg = function(bb, wb, Mb) {
+          return -1 == bb.s ? Math.max(eg(bb.l, wb, Mb + 1), eg(bb.r, wb, Mb + 1)) : wb[bb.s] = Mb
         },
-        RK = function(dd) {
-          for (var Od = dd.length; Od && !dd[--Od];);
-          for (var md = new AX(++Od), Wd = 0, Fd = dd[0], Rd = 1, Xd = function(dd) {
-              md[Wd++] = dd
-            }, Kd = 1; Od >= Kd; ++Kd)
-            if (dd[Kd] == Fd && Kd != Od) ++Rd;
+        Hg = function(bb) {
+          for (var wb = bb.length; wb && !bb[--wb];);
+          for (var Mb = new AV(++wb), eb = 0, Hb = bb[0], pb = 1, Vb = function(bb) {
+              Mb[eb++] = bb
+            }, gb = 1; wb >= gb; ++gb)
+            if (bb[gb] == Hb && gb != wb) ++pb;
             else {
-              if (!Fd && Rd > 2) {
-                for (; Rd > 138; Rd -= 138) Xd(32754);
-                Rd > 2 && (Xd(Rd > 10 ? Rd - 11 << 5 | 28690 : Rd - 3 << 5 | 12305), Rd = 0)
-              } else if (Rd > 3) {
-                for (Xd(Fd), --Rd; Rd > 6; Rd -= 6) Xd(8304);
-                Rd > 2 && (Xd(Rd - 3 << 5 | 8208), Rd = 0)
+              if (!Hb && pb > 2) {
+                for (; pb > 138; pb -= 138) Vb(32754);
+                pb > 2 && (Vb(pb > 10 ? pb - 11 << 5 | 28690 : pb - 3 << 5 | 12305), pb = 0)
+              } else if (pb > 3) {
+                for (Vb(Hb), --pb; pb > 6; pb -= 6) Vb(8304);
+                pb > 2 && (Vb(pb - 3 << 5 | 8208), pb = 0)
               }
-              for (; Rd--;) Xd(Fd);
-              Rd = 1, Fd = dd[Kd]
-            } return [md.subarray(0, Wd), Od]
+              for (; pb--;) Vb(Hb);
+              pb = 1, Hb = bb[gb]
+            } return [Mb.subarray(0, eb), wb]
         },
-        XK = function(dd, Od) {
-          for (var md = 0, Wd = 0; Od.length > Wd; ++Wd) md += dd[Wd] * Od[Wd];
-          return md
+        pg = function(bb, wb) {
+          for (var Mb = 0, eb = 0; wb.length > eb; ++eb) Mb += bb[eb] * wb[eb];
+          return Mb
         },
-        KK = function(dd, Od, md) {
-          var Wd = md.length,
-            Fd = MX(Od + 2);
-          dd[Fd] = 255 & Wd, dd[Fd + 1] = Wd >>> 8, dd[Fd + 2] = 255 ^ dd[Fd], dd[Fd + 3] = 255 ^ dd[Fd + 1];
-          for (var Rd = 0; Wd > Rd; ++Rd) dd[Fd + Rd + 4] = md[Rd];
-          return 8 * (Fd + 4 + Wd)
+        Vg = function(bb, wb, Mb) {
+          var eb = Mb.length,
+            Hb = TV(wb + 2);
+          bb[Hb] = 255 & eb, bb[Hb + 1] = eb >>> 8, bb[Hb + 2] = 255 ^ bb[Hb], bb[Hb + 3] = 255 ^ bb[Hb + 1];
+          for (var pb = 0; eb > pb; ++pb) bb[Hb + pb + 4] = Mb[pb];
+          return 8 * (Hb + 4 + eb)
         },
-        hK = function(dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd, vd, Qd) {
-          OK(Od, Qd++, md), ++Fd[256];
-          for (var td = WK(Fd, 15), od = td[0], Nd = td[1], qd = WK(Rd, 15), Hd = qd[0], yd = qd[1], bd = RK(od), Td = bd[0], pd = bd[1], Yd = RK(Hd), gd = Yd[0], wd = Yd[1], Ed = new AX(19), Jd = 0; Td.length > Jd; ++Jd) Ed[31 & Td[Jd]]++;
-          for (Jd = 0; gd.length > Jd; ++Jd) Ed[31 & gd[Jd]]++;
-          for (var Ud = WK(Ed, 7), xd = Ud[0], Bd = Ud[1], Sd = 19; Sd > 4 && !xd[LX[Sd - 1]]; --Sd);
-          var sd, ud, Vd, Ad, rd = vd + 5 << 3,
-            Gd = XK(Fd, CX) + XK(Rd, ZX) + Xd,
-            nd = XK(Fd, od) + XK(Rd, Hd) + Xd + 14 + 3 * Sd + XK(Ed, xd) + (2 * Ed[16] + 3 * Ed[17] + 7 * Ed[18]);
-          if (Gd >= rd && nd >= rd) return KK(Od, Qd, dd.subarray(hd, hd + vd));
-          if (OK(Od, Qd, 1 + (Gd > nd)), Qd += 2, Gd > nd) {
-            sd = lX(od, Nd, 0), ud = od, Vd = lX(Hd, yd, 0), Ad = Hd;
-            var Ld = lX(xd, Bd, 0);
-            for (OK(Od, Qd, pd - 257), OK(Od, Qd + 5, wd - 1), OK(Od, Qd + 10, Sd - 4), Qd += 14, Jd = 0; Sd > Jd; ++Jd) OK(Od, Qd + 3 * Jd, xd[LX[Jd]]);
-            Qd += 3 * Sd;
-            for (var Pd = [Td, gd], zd = 0; 2 > zd; ++zd) {
-              var cd = Pd[zd];
-              for (Jd = 0; cd.length > Jd; ++Jd) OK(Od, Qd, Ld[jd = 31 & cd[Jd]]), Qd += xd[jd], jd > 15 && (OK(Od, Qd, cd[Jd] >>> 5 & 127), Qd += cd[Jd] >>> 12)
+        gg = function(bb, wb, Mb, eb, Hb, pb, Vb, gb, lb, Lb, Ib) {
+          bg(wb, Ib++, Mb), ++Hb[256];
+          for (var Ob = Mg(Hb, 15), Ub = Ob[0], tb = Ob[1], Cb = Mg(pb, 15), Eb = Cb[0], Fb = Cb[1], Bb = Hg(Ub), sb = Bb[0], mb = Bb[1], hb = Hg(Eb), zb = hb[0], Xb = hb[1], xb = new AV(19), jb = 0; sb.length > jb; ++jb) xb[31 & sb[jb]]++;
+          for (jb = 0; zb.length > jb; ++jb) xb[31 & zb[jb]]++;
+          for (var Kb = Mg(xb, 7), rb = Kb[0], Rb = Kb[1], Db = 19; Db > 4 && !rb[NV[Db - 1]]; --Db);
+          var cb, Yb, Zb, fb, Ab = Lb + 5 << 3,
+            Wb = pg(Hb, PV) + pg(pb, nV) + Vb,
+            Jb = pg(Hb, Ub) + pg(pb, Eb) + Vb + 14 + 3 * Db + pg(xb, rb) + (2 * xb[16] + 3 * xb[17] + 7 * xb[18]);
+          if (Wb >= Ab && Jb >= Ab) return Vg(wb, Ib, bb.subarray(lb, lb + Lb));
+          if (bg(wb, Ib, 1 + (Wb > Jb)), Ib += 2, Wb > Jb) {
+            cb = dV(Ub, tb, 0), Yb = Ub, Zb = dV(Eb, Fb, 0), fb = Eb;
+            var Sb = dV(rb, Rb, 0);
+            for (bg(wb, Ib, mb - 257), bg(wb, Ib + 5, Xb - 1), bg(wb, Ib + 10, Db - 4), Ib += 14, jb = 0; Db > jb; ++jb) bg(wb, Ib + 3 * jb, rb[NV[jb]]);
+            Ib += 3 * Db;
+            for (var Nb = [sb, zb], vb = 0; 2 > vb; ++vb) {
+              var Qb = Nb[vb];
+              for (jb = 0; Qb.length > jb; ++jb) bg(wb, Ib, Sb[Gb = 31 & Qb[jb]]), Ib += rb[Gb], Gb > 15 && (bg(wb, Ib, Qb[jb] >>> 5 & 127), Ib += Qb[jb] >>> 12)
             }
-          } else sd = kX, ud = CX, Vd = fX, Ad = ZX;
-          for (Jd = 0; Kd > Jd; ++Jd)
-            if (Wd[Jd] > 255) {
-              var jd;
-              mK(Od, Qd, sd[257 + (jd = Wd[Jd] >>> 18 & 31)]), Qd += ud[jd + 257], jd > 7 && (OK(Od, Qd, Wd[Jd] >>> 23 & 31), Qd += GX[jd]);
-              var Dd = 31 & Wd[Jd];
-              mK(Od, Qd, Vd[Dd]), Qd += Ad[Dd], Dd > 3 && (mK(Od, Qd, Wd[Jd] >>> 5 & 8191), Qd += nX[Dd])
-            } else mK(Od, Qd, sd[Wd[Jd]]), Qd += ud[Wd[Jd]];
-          return mK(Od, Qd, sd[256]), Qd + ud[256]
+          } else cb = yV, Yb = PV, Zb = oV, fb = nV;
+          for (jb = 0; gb > jb; ++jb)
+            if (eb[jb] > 255) {
+              var Gb;
+              wg(wb, Ib, cb[257 + (Gb = eb[jb] >>> 18 & 31)]), Ib += Yb[Gb + 257], Gb > 7 && (bg(wb, Ib, eb[jb] >>> 23 & 31), Ib += JV[Gb]);
+              var qb = 31 & eb[jb];
+              wg(wb, Ib, Zb[qb]), Ib += fb[qb], qb > 3 && (wg(wb, Ib, eb[jb] >>> 5 & 8191), Ib += SV[qb])
+            } else wg(wb, Ib, cb[eb[jb]]), Ib += Yb[eb[jb]];
+          return wg(wb, Ib, cb[256]), Ib + Yb[256]
         },
-        vK = new rX([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]),
-        QK = (new iX(0), function() {
-          for (var dd = new rX(256), Od = 0; 256 > Od; ++Od) {
-            for (var md = Od, Wd = 9; --Wd;) md = (1 & md && 3988292384) ^ md >>> 1;
-            dd[Od] = md
+        lg = new WV([65540, 131080, 131088, 131104, 262176, 1048704, 1048832, 2114560, 2117632]),
+        Lg = (new fV(0), function() {
+          for (var bb = new WV(256), wb = 0; 256 > wb; ++wb) {
+            for (var Mb = wb, eb = 9; --eb;) Mb = (1 & Mb && 3988292384) ^ Mb >>> 1;
+            bb[wb] = Mb
           }
-          return dd
+          return bb
         }()),
-        tK = function(dd, Od, md) {
-          for (; md; ++Od) dd[Od] = md, md >>>= 8
+        Ig = function(bb, wb, Mb) {
+          for (; Mb; ++wb) bb[wb] = Mb, Mb >>>= 8
         };
 
-      function oK(dd, Od) {
-        var md = "";
-        if (!Od && "undefined" != typeof TextDecoder) return (new TextDecoder).decode(dd);
-        for (var Wd = 0; dd.length > Wd;) {
-          var Fd = dd[Wd++];
-          128 > Fd || Od ? md += String.fromCharCode(Fd) : 224 > Fd ? md += String.fromCharCode((31 & Fd) << 6 | 63 & dd[Wd++]) : 240 > Fd ? md += String.fromCharCode((15 & Fd) << 12 | (63 & dd[Wd++]) << 6 | 63 & dd[Wd++]) : (Fd = ((15 & Fd) << 18 | (63 & dd[Wd++]) << 12 | (63 & dd[Wd++]) << 6 | 63 & dd[Wd++]) - 65536, md += String.fromCharCode(55296 | Fd >> 10, 56320 | 1023 & Fd))
+      function Og(bb, wb) {
+        var Mb = "";
+        if (!wb && "undefined" != typeof TextDecoder) return (new TextDecoder).decode(bb);
+        for (var eb = 0; bb.length > eb;) {
+          var Hb = bb[eb++];
+          128 > Hb || wb ? Mb += String.fromCharCode(Hb) : 224 > Hb ? Mb += String.fromCharCode((31 & Hb) << 6 | 63 & bb[eb++]) : 240 > Hb ? Mb += String.fromCharCode((15 & Hb) << 12 | (63 & bb[eb++]) << 6 | 63 & bb[eb++]) : (Hb = ((15 & Hb) << 18 | (63 & bb[eb++]) << 12 | (63 & bb[eb++]) << 6 | 63 & bb[eb++]) - 65536, Mb += String.fromCharCode(55296 | Hb >> 10, 56320 | 1023 & Hb))
         }
-        return md
+        return Mb
       }
-      var NK = class {
-        constructor(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          var md, Wd, Fd, Rd;
-          this._rrweb = dd, this.it = Od, this.rt = {}, this.ot = Date.now(), this.st = -1 / 0, this.ut = () => {
-            const dd = Date.now(),
-              Od = dd - this.ot;
-            Od > 0 ? (this.ct = Math.min(this.dt, this.ct + Od / 1e3 * this.ht), this.ot = dd) : this.ot = dd
-          }, this.ft = dd => {
-            if (!this.rt[dd]) {
-              var Od, md;
-              this.rt[dd] = !0;
-              const Wd = this.vt(dd);
-              null === (Od = (md = this.it).onBlockedNode) || void 0 === Od || Od.call(md, dd, Wd)
+      var Ug = class {
+        constructor(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          var Mb, eb, Hb, pb;
+          this._rrweb = bb, this.it = wb, this.rt = {}, this.ot = Date.now(), this.st = -1 / 0, this.ut = () => {
+            const bb = Date.now(),
+              wb = bb - this.ot;
+            wb > 0 ? (this.ct = Math.min(this.dt, this.ct + wb / 1e3 * this.ht), this.ot = bb) : this.ot = bb
+          }, this.ft = bb => {
+            if (!this.rt[bb]) {
+              var wb, Mb;
+              this.rt[bb] = !0;
+              const eb = this.vt(bb);
+              null === (wb = (Mb = this.it).onBlockedNode) || void 0 === wb || wb.call(Mb, bb, eb)
             }
-          }, this.yt = dd => {
-            const Od = this.vt(dd);
-            if ("svg" !== (null == Od ? void 0 : Od.nodeName) && Od instanceof Element) {
-              const dd = Od.closest("svg");
-              if (dd) return [this._rrweb.mirror.getId(dd), dd]
+          }, this.yt = bb => {
+            const wb = this.vt(bb);
+            if ("svg" !== (null == wb ? void 0 : wb.nodeName) && wb instanceof Element) {
+              const bb = wb.closest("svg");
+              if (bb) return [this._rrweb.mirror.getId(bb), bb]
             }
-            return [dd, Od]
-          }, this.vt = dd => this._rrweb.mirror.QFd(dd), this.bt = dd => {
-            var Od, md, Wd, Fd, Rd, Xd, Kd, hd;
-            return (null !== (Od = null === (md = dd.removes) || void 0 === md ? void 0 : md.length) && void 0 !== Od ? Od : 0) + (null !== (Wd = null === (Fd = dd.attributes) || void 0 === Fd ? void 0 : Fd.length) && void 0 !== Wd ? Wd : 0) + (null !== (Rd = null === (Xd = dd.texts) || void 0 === Xd ? void 0 : Xd.length) && void 0 !== Rd ? Rd : 0) + (null !== (Kd = null === (hd = dd.adds) || void 0 === hd ? void 0 : hd.length) && void 0 !== Kd ? Kd : 0)
-          }, this.throttleMutations = dd => {
-            if (3 !== dd.type || 0 !== dd.data.source) return dd;
-            const Od = dd.data,
-              md = this.bt(Od);
-            if (Od.attributes) {
-              const dd = Od.attributes.length;
-              Od.attributes = Od.attributes.filter((dd => {
-                const [Od] = this.yt(dd.id);
-                return !this.wt.consumeRateLimit(Od) && dd
+            return [bb, wb]
+          }, this.vt = bb => this._rrweb.mirror.OHb(bb), this.bt = bb => {
+            var wb, Mb, eb, Hb, pb, Vb, gb, lb;
+            return (null !== (wb = null === (Mb = bb.removes) || void 0 === Mb ? void 0 : Mb.length) && void 0 !== wb ? wb : 0) + (null !== (eb = null === (Hb = bb.attributes) || void 0 === Hb ? void 0 : Hb.length) && void 0 !== eb ? eb : 0) + (null !== (pb = null === (Vb = bb.texts) || void 0 === Vb ? void 0 : Vb.length) && void 0 !== pb ? pb : 0) + (null !== (gb = null === (lb = bb.adds) || void 0 === lb ? void 0 : lb.length) && void 0 !== gb ? gb : 0)
+          }, this.throttleMutations = bb => {
+            if (3 !== bb.type || 0 !== bb.data.source) return bb;
+            const wb = bb.data,
+              Mb = this.bt(wb);
+            if (wb.attributes) {
+              const bb = wb.attributes.length;
+              wb.attributes = wb.attributes.filter((bb => {
+                const [wb] = this.yt(bb.id);
+                return !this.wt.consumeRateLimit(wb) && bb
               }));
-              const md = dd - Od.attributes.length;
-              var Wd, Fd;
-              md > 0 && (null === (Wd = (Fd = this.it).onDroppedAttributeMutations) || void 0 === Wd || Wd.call(Fd, md))
+              const Mb = bb - wb.attributes.length;
+              var eb, Hb;
+              Mb > 0 && (null === (eb = (Hb = this.it).onDroppedAttributeMutations) || void 0 === eb || eb.call(Hb, Mb))
             }
-            const Rd = this.bt(Od);
-            if (0 === Rd && md !== Rd) return;
-            if (this.kt) return dd;
+            const pb = this.bt(wb);
+            if (0 === pb && Mb !== pb) return;
+            if (this.kt) return bb;
             this.ut();
-            const Xd = uX(dd);
-            var Kd, hd;
-            return Xd > this.ct ? (null === (Kd = (hd = this.it).onDroppedOversizedMutation) || void 0 === Kd || Kd.call(hd, Xd), void this._t()) : (this.ct -= Xd, dd)
+            const Vb = YV(bb);
+            var gb, lb;
+            return Vb > this.ct ? (null === (gb = (lb = this.it).onDroppedOversizedMutation) || void 0 === gb || gb.call(lb, Vb), void this._t()) : (this.ct -= Vb, bb)
           }, this._t = () => {
             if (this.St) return;
-            const dd = Math.max(0, this.xt - (Date.now() - this.st));
+            const bb = Math.max(0, this.xt - (Date.now() - this.st));
             this.St = setTimeout((() => {
-              var dd, Od;
-              this.St = void 0, this.st = Date.now(), null === (dd = (Od = this.it).requestFullSnapshot) || void 0 === dd || dd.call(Od)
-            }), dd)
-          }, this.wt = new wF({
-            bucketSize: null !== (md = this.it.bucketSize) && void 0 !== md ? md : 100,
-            refillRate: null !== (Wd = this.it.refillRate) && void 0 !== Wd ? Wd : 10,
+              var bb, wb;
+              this.St = void 0, this.st = Date.now(), null === (bb = (wb = this.it).requestFullSnapshot) || void 0 === bb || bb.call(wb)
+            }), bb)
+          }, this.wt = new hH({
+            bucketSize: null !== (Mb = this.it.bucketSize) && void 0 !== Mb ? Mb : 100,
+            refillRate: null !== (eb = this.it.refillRate) && void 0 !== eb ? eb : 10,
             refillInterval: 1e3,
             I: this.ft,
-            A: iF
-          }), this.dt = null !== (Fd = this.it.bytesBucketSize) && void 0 !== Fd ? Fd : 0, this.ht = null !== (Rd = this.it.bytesRefillRate) && void 0 !== Rd ? Rd : 25600, this.kt = !Number.isFinite(this.dt) || 0 >= this.dt, this.ct = this.dt;
-          const Xd = this.it.resyncIntervalMs;
-          this.xt = TF(Xd) && Number.isFinite(Xd) && Xd > 0 ? Xd : 3e5
+            A: ZH
+          }), this.dt = null !== (Hb = this.it.bytesBucketSize) && void 0 !== Hb ? Hb : 0, this.ht = null !== (pb = this.it.bytesRefillRate) && void 0 !== pb ? pb : 25600, this.kt = !Number.isFinite(this.dt) || 0 >= this.dt, this.ct = this.dt;
+          const Vb = this.it.resyncIntervalMs;
+          this.xt = FH(Vb) && Number.isFinite(Vb) && Vb > 0 ? Vb : 3e5
         }
         reset() {
           this.rt = {}, this.St && (clearTimeout(this.St), this.St = void 0), this.st = Date.now()
@@ -6741,422 +6741,422 @@ export const modules = {
           this.wt.stop(), this.reset(), this.ct = this.dt, this.ot = Date.now(), this.st = -1 / 0
         }
       };
-      Math.trunc || (Math.trunc = function(dd) {
-        return 0 > dd ? Math.ceil(dd) : Math.floor(dd)
-      }), Number.isInteger || (Number.isInteger = function(dd) {
-        return TF(dd) && isFinite(dd) && Math.floor(dd) === dd
-      }), mF && !qF(mF.crypto) && crypto;
-      let qK = null;
-      const HK = {
+      Math.trunc || (Math.trunc = function(bb) {
+        return 0 > bb ? Math.ceil(bb) : Math.floor(bb)
+      }), Number.isInteger || (Number.isInteger = function(bb) {
+        return FH(bb) && isFinite(bb) && Math.floor(bb) === bb
+      }), bH && !UH(bH.crypto) && crypto;
+      let tg = null;
+      const Cg = {
         At() {
-          if (!yF(qK)) return qK;
-          if (qK = !0, qF(mF)) qK = !1;
+          if (!CH(tg)) return tg;
+          if (tg = !0, UH(bH)) tg = !1;
           else try {
-            const dd = "__support__";
-            HK.$t(dd, "xyz"), '"xyz"' !== HK.Ot(dd) && (qK = !1), HK.Pt(dd)
-          } catch (dd) {
-            qK = !1
+            const bb = "__support__";
+            Cg.$t(bb, "xyz"), '"xyz"' !== Cg.Ot(bb) && (tg = !1), Cg.Pt(bb)
+          } catch (bb) {
+            tg = !1
           }
-          return qK
+          return tg
         },
-        Lt(dd) {
-          iF.error("sessionStorage error: ", dd)
+        Lt(bb) {
+          ZH.error("sessionStorage error: ", bb)
         },
-        Ot(dd) {
+        Ot(bb) {
           try {
-            return null == mF ? void 0 : mF.sessionStorage.getItem(dd)
-          } catch (dd) {
-            HK.Lt(dd)
+            return null == bH ? void 0 : bH.sessionStorage.getItem(bb)
+          } catch (bb) {
+            Cg.Lt(bb)
           }
           return null
         },
-        Dt(dd) {
+        Dt(bb) {
           try {
-            return JSON.parse(HK.Ot(dd)) || null
-          } catch (dd) {}
+            return JSON.parse(Cg.Ot(bb)) || null
+          } catch (bb) {}
           return null
         },
-        $t(dd, Od) {
+        $t(bb, wb) {
           try {
-            return null == mF || mF.sessionStorage.setItem(dd, JSON.stringify(Od)), !0
-          } catch (dd) {
-            HK.Lt(dd)
+            return null == bH || bH.sessionStorage.setItem(bb, JSON.stringify(wb)), !0
+          } catch (bb) {
+            Cg.Lt(bb)
           }
           return !1
         },
-        Pt(dd) {
+        Pt(bb) {
           try {
-            null == mF || mF.sessionStorage.removeItem(dd)
-          } catch (dd) {
-            HK.Lt(dd)
+            null == bH || bH.sessionStorage.removeItem(bb)
+          } catch (bb) {
+            Cg.Lt(bb)
           }
         }
       };
-      uF.DEBUG = !1, uF.LIB_VERSION = "1.438.7", uF.LIB_NAME = "web";
-      var yK = uF,
-        bK = class {
-          constructor(dd) {
-            if (!dd.persistence) throw new Error("it is not valid to not have persistence and be this far into setting up the application");
-            this.Ft = dd.get_property.bind(dd), this.Nt = dd.persistence.set_property.bind(dd.persistence)
+      cH.DEBUG = !1, cH.LIB_VERSION = "1.438.7", cH.LIB_NAME = "web";
+      var Eg = cH,
+        Fg = class {
+          constructor(bb) {
+            if (!bb.persistence) throw new Error("it is not valid to not have persistence and be this far into setting up the application");
+            this.Ft = bb.get_property.bind(bb), this.Nt = bb.persistence.set_property.bind(bb.persistence)
           }
-          trackSize(dd, Od) {
-            this.Nt(CR, {
-              sessionId: dd,
-              size: this.currentTrackedSize(dd) + Od
+          trackSize(bb, wb) {
+            this.Nt(Pp, {
+              sessionId: bb,
+              size: this.currentTrackedSize(bb) + wb
             })
           }
-          currentTrackedSize(dd) {
-            const Od = this.Ft(CR);
-            return NF(md = Od) && HF(md.sessionId) && TF(md.size) && Od.sessionId === dd ? Od.size : 0;
-            var md
+          currentTrackedSize(bb) {
+            const wb = this.Ft(Pp);
+            return OH(Mb = wb) && tH(Mb.sessionId) && FH(Mb.size) && wb.sessionId === bb ? wb.size : 0;
+            var Mb
           }
         };
 
-      function TK(dd, Od) {
-        return function(dd) {
-          let Od = 0;
-          for (let md = 0; dd.length > md; md++) Od = (Od << 5) - Od + dd.charCodeAt(md), Od |= 0;
-          return Math.abs(Od)
-        }(dd) % 100 < gF(100 * Od, 0, 100, iF)
+      function Bg(bb, wb) {
+        return function(bb) {
+          let wb = 0;
+          for (let Mb = 0; bb.length > Mb; Mb++) wb = (wb << 5) - wb + bb.charCodeAt(Mb), wb |= 0;
+          return Math.abs(wb)
+        }(bb) % 100 < mH(100 * wb, 0, 100, ZH)
       }
-      const pK = (dd, Od) => {
-          if (!(dd => {
+      const sg = (bb, wb) => {
+          if (!(bb => {
               try {
-                new RegExp(dd)
-              } catch (dd) {
+                new RegExp(bb)
+              } catch (bb) {
                 return !1
               }
               return !0
-            })(Od)) return !1;
+            })(wb)) return !1;
           try {
-            return new RegExp(Od).test(dd)
-          } catch (dd) {
+            return new RegExp(wb).test(bb)
+          } catch (bb) {
             return !1
           }
         },
-        YK = dd => dd.toLowerCase(),
-        gK = {
-          exact: (dd, Od) => Od.some((Od => dd.some((dd => Od === dd)))),
-          is_not: (dd, Od) => Od.every((Od => dd.every((dd => Od !== dd)))),
-          regex: (dd, Od) => Od.some((Od => dd.some((dd => pK(Od, dd))))),
-          not_regex: (dd, Od) => Od.every((Od => dd.every((dd => !pK(Od, dd))))),
-          icontains: (dd, Od) => Od.map(YK).some((Od => dd.map(YK).some((dd => Od.includes(dd))))),
-          not_icontains: (dd, Od) => Od.map(YK).every((Od => dd.map(YK).every((dd => !Od.includes(dd))))),
-          gt: (dd, Od) => Od.some((Od => {
-            const md = parseFloat(Od);
-            return !isNaN(md) && dd.some((dd => md > parseFloat(dd)))
+        mg = bb => bb.toLowerCase(),
+        hg = {
+          exact: (bb, wb) => wb.some((wb => bb.some((bb => wb === bb)))),
+          is_not: (bb, wb) => wb.every((wb => bb.every((bb => wb !== bb)))),
+          regex: (bb, wb) => wb.some((wb => bb.some((bb => sg(wb, bb))))),
+          not_regex: (bb, wb) => wb.every((wb => bb.every((bb => !sg(wb, bb))))),
+          icontains: (bb, wb) => wb.map(mg).some((wb => bb.map(mg).some((bb => wb.includes(bb))))),
+          not_icontains: (bb, wb) => wb.map(mg).every((wb => bb.map(mg).every((bb => !wb.includes(bb))))),
+          gt: (bb, wb) => wb.some((wb => {
+            const Mb = parseFloat(wb);
+            return !isNaN(Mb) && bb.some((bb => Mb > parseFloat(bb)))
           })),
-          lt: (dd, Od) => Od.some((Od => {
-            const md = parseFloat(Od);
-            return !isNaN(md) && dd.some((dd => md < parseFloat(dd)))
+          lt: (bb, wb) => wb.some((wb => {
+            const Mb = parseFloat(wb);
+            return !isNaN(Mb) && bb.some((bb => Mb < parseFloat(bb)))
           }))
         },
-        wK = new Set(["is_not", "not_icontains", "not_regex"]);
+        zg = new Set(["is_not", "not_icontains", "not_regex"]);
 
-      function aK(dd, Od, md) {
-        return !dd || 0 === dd.length || dd.every((dd => {
-          const Wd = "person" === dd.type ? md : Od,
-            Fd = null == Wd ? void 0 : Wd[dd.key],
-            Rd = dd.operator || "exact";
-          if (qF(Fd) || yF(Fd)) return wK.has(Rd);
-          const Xd = gK[Rd];
-          return !!Xd && !qF(dd.value) && !yF(dd.value) && Xd(tF(dd.value) ? dd.value.map(String) : [String(dd.value)], tF(Fd) ? Fd.map(String) : [String(Fd)])
+      function Xg(bb, wb, Mb) {
+        return !bb || 0 === bb.length || bb.every((bb => {
+          const eb = "person" === bb.type ? Mb : wb,
+            Hb = null == eb ? void 0 : eb[bb.key],
+            pb = bb.operator || "exact";
+          if (UH(Hb) || CH(Hb)) return zg.has(pb);
+          const Vb = hg[pb];
+          return !!Vb && !UH(bb.value) && !CH(bb.value) && Vb(LH(bb.value) ? bb.value.map(String) : [String(bb.value)], LH(Hb) ? Hb.map(String) : [String(Hb)])
         }))
       }
-      const EK = AF("[SessionRecording]");
+      const xg = fH("[SessionRecording]");
 
-      function JK(dd, Od) {
-        return Od ? dd : "!" + dd
+      function jg(bb, wb) {
+        return wb ? bb : "!" + bb
       }
 
-      function UK(dd, Od) {
-        return dd === Od || dd !== "!" + Od && null
+      function Kg(bb, wb) {
+        return bb === wb || bb !== "!" + wb && null
       }
-      var xK = class {
-          constructor(dd, Od, md, Wd, Fd, Rd, Xd) {
-            this._instance = dd, this.Y = Od, this.tt = md, this.et = Wd, this.qt = Fd, this.jt = Rd, this.Bt = Xd, this.zt = null, this.Ht = BX
+      var rg = class {
+          constructor(bb, wb, Mb, eb, Hb, pb, Vb) {
+            this._instance = bb, this.Y = wb, this.tt = Mb, this.et = eb, this.qt = Hb, this.jt = pb, this.Bt = Vb, this.zt = null, this.Ht = RV
           }
-          onRemoteConfig(dd) {
-            this.zt = TF(dd.sampleRate) ? dd.sampleRate : null, "any" === dd.triggerMatchType ? (this.Ut = new pX([this.tt, this.Y]), this.Ht = xX) : (this.Ut = new YX([this.tt, this.Y]), this.Ht = BX), this._instance.register_for_session({
-              [dX]: dd.triggerMatchType
-            }), this.Y.onConfig(dd), this.tt.onConfig(dd), this.et.onConfig(dd, ((dd, Od) => {
+          onRemoteConfig(bb) {
+            this.zt = FH(bb.sampleRate) ? bb.sampleRate : null, "any" === bb.triggerMatchType ? (this.Ut = new sV([this.tt, this.Y]), this.Ht = rV) : (this.Ut = new mV([this.tt, this.Y]), this.Ht = RV), this._instance.register_for_session({
+              [kp]: bb.triggerMatchType
+            }), this.Y.onConfig(bb), this.tt.onConfig(bb), this.et.onConfig(bb, ((bb, wb) => {
               this.qt("linked_flag_matched", {
-                flag: dd,
-                variant: Od
+                flag: bb,
+                variant: wb
               }), this.Bt()
             }))
           }
-          getStatus(dd) {
+          getStatus(bb) {
             return this.Ht({
               receivedFlags: !0,
               isRecordingEnabled: !0,
-              isSampled: dd.isSampled,
-              rrwebError: dd.rrwebError,
-              urlTriggerMatching: dd.urlTriggerMatching,
-              eventTriggerMatching: dd.eventTriggerMatching,
-              linkedFlagMatching: dd.linkedFlagMatching,
-              sessionId: dd.sessionId
+              isSampled: bb.isSampled,
+              rrwebError: bb.rrwebError,
+              urlTriggerMatching: bb.urlTriggerMatching,
+              eventTriggerMatching: bb.eventTriggerMatching,
+              linkedFlagMatching: bb.linkedFlagMatching,
+              sessionId: bb.sessionId
             })
           }
-          getMinimumDuration(dd) {
-            const Od = this._instance.get_property("$session_recording_remote_config"),
-              md = null == Od ? void 0 : Od.minimumDurationMilliseconds;
-            return TF(md) ? md : null
+          getMinimumDuration(bb) {
+            const wb = this._instance.get_property("$session_recording_remote_config"),
+              Mb = null == wb ? void 0 : wb.minimumDurationMilliseconds;
+            return FH(Mb) ? Mb : null
           }
-          checkUrlTriggers(dd, Od, md, Wd) {
-            this.Y.checkUrlTriggerConditions(Od, md, Wd, dd)
+          checkUrlTriggers(bb, wb, Mb, eb) {
+            this.Y.checkUrlTriggerConditions(wb, Mb, eb, bb)
           }
-          setupEventTriggerListeners(dd, Od, md) {
-            if (0 !== this.tt.K.length && bF(this.Wt)) return this.Wt = dd((dd => {
+          setupEventTriggerListeners(bb, wb, Mb) {
+            if (0 !== this.tt.K.length && EH(this.Wt)) return this.Wt = bb((bb => {
               try {
-                this.tt.checkEventTriggerConditions(dd.event, md, Od)
-              } catch (dd) {
-                EK.error("Could not activate event trigger", dd)
+                this.tt.checkEventTriggerConditions(bb.event, Mb, wb)
+              } catch (bb) {
+                xg.error("Could not activate event trigger", bb)
               }
             })), this.Wt
           }
-          makeSamplingDecisions(dd) {
-            var Od;
-            const md = this.zt;
-            var Wd, Fd;
-            if (!TF(md)) return null === (Wd = this._instance.persistence) || void 0 === Wd || Wd.unregister("$session_is_sampled"), void(null === (Fd = this._instance.persistence) || void 0 === Fd || Fd.unregister("$replay_sample_rate"));
-            const Rd = this._instance.get_property(jR),
-              Xd = this._instance.get_property("$replay_sample_rate"),
-              Kd = UK(Rd, dd),
-              hd = TF(Xd) && Xd !== md,
-              vd = qF(Xd) && Rd === dd,
-              Qd = hd || vd || !pF(Kd),
-              td = Qd ? TK(dd, md) : Kd;
-            Qd && (td ? this.qt("sampled") : EK.warn(`Sample rate (${md}) has determined that this sessionId (${dd}) will not be sent to the server.`)), null === (Od = this._instance.persistence) || void 0 === Od || Od.register({
-              $session_is_sampled: JK(dd, td),
-              $replay_sample_rate: yF(Xd) && Rd === dd ? null : md
+          makeSamplingDecisions(bb) {
+            var wb;
+            const Mb = this.zt;
+            var eb, Hb;
+            if (!FH(Mb)) return null === (eb = this._instance.persistence) || void 0 === eb || eb.unregister("$session_is_sampled"), void(null === (Hb = this._instance.persistence) || void 0 === Hb || Hb.unregister("$replay_sample_rate"));
+            const pb = this._instance.get_property(Gp),
+              Vb = this._instance.get_property("$replay_sample_rate"),
+              gb = Kg(pb, bb),
+              lb = FH(Vb) && Vb !== Mb,
+              Lb = UH(Vb) && pb === bb,
+              Ib = lb || Lb || !BH(gb),
+              Ob = Ib ? Bg(bb, Mb) : gb;
+            Ib && (Ob ? this.qt("sampled") : xg.warn(`Sample rate (${Mb}) has determined that this sessionId (${bb}) will not be sent to the server.`)), null === (wb = this._instance.persistence) || void 0 === wb || wb.register({
+              $session_is_sampled: jg(bb, Ob),
+              $replay_sample_rate: CH(Vb) && pb === bb ? null : Mb
             })
           }
-          ensureSamplingDecision(dd) {
-            if (!TF(this.zt)) return;
-            const Od = this._instance.get_property(jR);
-            pF(UK(Od, dd)) || this.makeSamplingDecisions(dd)
+          ensureSamplingDecision(bb) {
+            if (!FH(this.zt)) return;
+            const wb = this._instance.get_property(Gp);
+            BH(Kg(wb, bb)) || this.makeSamplingDecisions(bb)
           }
           onFlushComplete() {}
           clearConditionalRecordingPersistence() {
-            var dd, Od, md, Wd, Fd;
-            null === (dd = this._instance.persistence) || void 0 === dd || dd.unregister("$session_recording_event_trigger_activated_session"), null === (Od = this._instance.persistence) || void 0 === Od || Od.unregister("$session_recording_url_trigger_activated_session"), null === (md = this._instance.persistence) || void 0 === md || md.unregister("$session_is_sampled"), null === (Wd = this._instance.persistence) || void 0 === Wd || Wd.unregister("$replay_sample_rate"), null === (Fd = this._instance.persistence) || void 0 === Fd || Fd.unregister("$session_past_minimum_duration")
+            var bb, wb, Mb, eb, Hb;
+            null === (bb = this._instance.persistence) || void 0 === bb || bb.unregister("$session_recording_event_trigger_activated_session"), null === (wb = this._instance.persistence) || void 0 === wb || wb.unregister("$session_recording_url_trigger_activated_session"), null === (Mb = this._instance.persistence) || void 0 === Mb || Mb.unregister("$session_is_sampled"), null === (eb = this._instance.persistence) || void 0 === eb || eb.unregister("$replay_sample_rate"), null === (Hb = this._instance.persistence) || void 0 === Hb || Hb.unregister("$session_past_minimum_duration")
           }
-          updateActiveTriggers(dd) {}
-          hasPendingTriggers(dd) {
-            var Od;
-            return (null === (Od = this.Ut) || void 0 === Od ? void 0 : Od.triggerStatus(dd)) === NX
+          updateActiveTriggers(bb) {}
+          hasPendingTriggers(bb) {
+            var wb;
+            return (null === (wb = this.Ut) || void 0 === wb ? void 0 : wb.triggerStatus(bb)) === UV
           }
-          getPendingTriggerConditions(dd) {
+          getPendingTriggerConditions(bb) {
             return [{
               label: "URL condition not matched",
-              status: this.Y.triggerStatusNoSideEffects(dd)
+              status: this.Y.triggerStatusNoSideEffects(bb)
             }, {
               label: "event condition not matched",
-              status: this.tt.triggerStatusNoSideEffects(dd)
+              status: this.tt.triggerStatusNoSideEffects(bb)
             }, {
               label: "linked flag condition not matched",
               status: this.et.triggerStatusNoSideEffects()
-            }].filter((dd => {
+            }].filter((bb => {
               let {
-                status: Od
-              } = dd;
-              return Od === NX
-            })).map((dd => {
+                status: wb
+              } = bb;
+              return wb === UV
+            })).map((bb => {
               let {
-                label: Od
-              } = dd;
-              return Od
+                label: wb
+              } = bb;
+              return wb
             }))
           }
           stop() {
-            var dd;
-            null === (dd = this.Wt) || void 0 === dd || dd.call(this), this.Wt = void 0, this.tt.stop(), this.Y.stop(), this.et.stop()
+            var bb;
+            null === (bb = this.Wt) || void 0 === bb || bb.call(this), this.Wt = void 0, this.tt.stop(), this.Y.stop(), this.et.stop()
           }
         },
-        BK = class {
-          constructor(dd, Od, md, Wd, Fd) {
-            this._instance = dd, this.Y = Od, this.qt = md, this.Vt = Wd, this.Bt = Fd, this.Gt = [], this.Qt = new Map, this.Zt = !1
+        Rg = class {
+          constructor(bb, wb, Mb, eb, Hb) {
+            this._instance = bb, this.Y = wb, this.qt = Mb, this.Vt = eb, this.Bt = Hb, this.Gt = [], this.Qt = new Map, this.Zt = !1
           }
-          onRemoteConfig(dd) {
-            dd.triggerGroups && 0 !== dd.triggerGroups.length ? (this.Jt(dd.triggerGroups), this._instance.register_for_session({
-              [dX]: "v2_trigger_groups",
-              [OX]: dd.triggerGroups.length
-            }), this.Y.onConfig(dd)) : EK.warn("[V2Strategy] No trigger groups configured")
+          onRemoteConfig(bb) {
+            bb.triggerGroups && 0 !== bb.triggerGroups.length ? (this.Jt(bb.triggerGroups), this._instance.register_for_session({
+              [kp]: "v2_trigger_groups",
+              [bV]: bb.triggerGroups.length
+            }), this.Y.onConfig(bb)) : xg.warn("[V2Strategy] No trigger groups configured")
           }
-          getStatus(dd) {
-            return function(dd) {
-              if (dd.rrwebError) return tX;
-              if (!dd.receivedFlags) return vX;
-              if (!dd.isRecordingEnabled) return XX;
-              if (dd.urlTriggerMatching.urlBlocked) return QX;
-              const Od = dd.triggerGroupMatchers,
-                md = dd.triggerGroupSamplingResults;
-              if (0 === Od.length) return XX;
-              let Wd = !1,
-                Fd = !1;
-              for (const Rd of Od) {
-                const Od = Rd.triggerStatus(dd.sessionId);
-                if ("trigger_activated" === Od) {
-                  const dd = Rd.group.id,
-                    Od = md.get(dd);
-                  qF(Od) ? iF.warn("[V2 Triggers] Group activated but no sampling decision found", {
-                    groupId: dd
-                  }) : !0 === Od && (Fd = !0)
-                } else "trigger_pending" === Od && (Wd = !0)
+          getStatus(bb) {
+            return function(bb) {
+              if (bb.rrwebError) return IV;
+              if (!bb.receivedFlags) return lV;
+              if (!bb.isRecordingEnabled) return pV;
+              if (bb.urlTriggerMatching.urlBlocked) return LV;
+              const wb = bb.triggerGroupMatchers,
+                Mb = bb.triggerGroupSamplingResults;
+              if (0 === wb.length) return pV;
+              let eb = !1,
+                Hb = !1;
+              for (const pb of wb) {
+                const wb = pb.triggerStatus(bb.sessionId);
+                if ("trigger_activated" === wb) {
+                  const bb = pb.group.id,
+                    wb = Mb.get(bb);
+                  UH(wb) ? ZH.warn("[V2 Triggers] Group activated but no sampling decision found", {
+                    groupId: bb
+                  }) : !0 === wb && (Hb = !0)
+                } else "trigger_pending" === wb && (eb = !0)
               }
-              return Fd ? KX : Wd ? vX : XX
+              return Hb ? VV : eb ? lV : pV
             }({
               receivedFlags: !0,
               isRecordingEnabled: !0,
-              isSampled: dd.isSampled,
-              rrwebError: dd.rrwebError,
-              urlTriggerMatching: dd.urlTriggerMatching,
-              eventTriggerMatching: dd.eventTriggerMatching,
-              linkedFlagMatching: dd.linkedFlagMatching,
-              sessionId: dd.sessionId,
+              isSampled: bb.isSampled,
+              rrwebError: bb.rrwebError,
+              urlTriggerMatching: bb.urlTriggerMatching,
+              eventTriggerMatching: bb.eventTriggerMatching,
+              linkedFlagMatching: bb.linkedFlagMatching,
+              sessionId: bb.sessionId,
               triggerGroupMatchers: this.Gt,
               triggerGroupSamplingResults: this.Qt,
-              minimumDuration: this.getMinimumDuration(dd.sessionId)
+              minimumDuration: this.getMinimumDuration(bb.sessionId)
             })
           }
-          getMinimumDuration(dd) {
-            let Od = null;
-            for (const md of this.Gt)
-              if ("trigger_activated" === md.triggerStatus(dd)) {
-                const dd = md.group.minDurationMs;
-                TF(dd) && (yF(Od) || Od > dd) && (Od = dd)
-              } return Od
+          getMinimumDuration(bb) {
+            let wb = null;
+            for (const Mb of this.Gt)
+              if ("trigger_activated" === Mb.triggerStatus(bb)) {
+                const bb = Mb.group.minDurationMs;
+                FH(bb) && (CH(wb) || wb > bb) && (wb = bb)
+              } return wb
           }
-          checkUrlTriggers(dd, Od, md, Wd) {
-            this.Y.checkUrlBlocklist(Od, md);
-            for (const Fd of this.Gt) Fd.checkUrlTriggerConditions(Od, md, (Od => {
-              this.Kt(Fd, void 0) && (Fd.activateTrigger(Od, dd), this.updateActiveTriggers(dd), this.Bt(Od))
-            }), dd)
+          checkUrlTriggers(bb, wb, Mb, eb) {
+            this.Y.checkUrlBlocklist(wb, Mb);
+            for (const Hb of this.Gt) Hb.checkUrlTriggerConditions(wb, Mb, (wb => {
+              this.Kt(Hb, void 0) && (Hb.activateTrigger(wb, bb), this.updateActiveTriggers(bb), this.Bt(wb))
+            }), bb)
           }
-          setupEventTriggerListeners(dd, Od, md) {
-            return this.Wt = dd((dd => {
-              var md;
-              if (this.Zt) return EK.info("[SessionRecorder] Stopping trigger checks - initial buffer flushed"), null === (md = this.Wt) || void 0 === md || md.call(this), void(this.Wt = void 0);
+          setupEventTriggerListeners(bb, wb, Mb) {
+            return this.Wt = bb((bb => {
+              var Mb;
+              if (this.Zt) return xg.info("[SessionRecorder] Stopping trigger checks - initial buffer flushed"), null === (Mb = this.Wt) || void 0 === Mb || Mb.call(this), void(this.Wt = void 0);
               try {
-                for (const md of this.Gt) md.checkEventTriggerConditions(dd.event, (Wd => {
-                  if (!this.Kt(md, dd.properties)) return;
-                  const Fd = (md.group.conditions.events || []).filter((Od => Od.name === dd.event)),
-                    Rd = this._instance.get_property(eF);
-                  Fd.some((Od => !Od.properties || 0 === Od.properties.length || aK(Od.properties, dd.properties, Rd))) && (md.activateTrigger(Wd, Od), this.updateActiveTriggers(Od), this.Bt(Wd))
-                }), Od)
-              } catch (dd) {
-                EK.error("Could not activate event trigger for trigger groups", dd)
+                for (const Mb of this.Gt) Mb.checkEventTriggerConditions(bb.event, (eb => {
+                  if (!this.Kt(Mb, bb.properties)) return;
+                  const Hb = (Mb.group.conditions.events || []).filter((wb => wb.name === bb.event)),
+                    pb = this._instance.get_property(aH);
+                  Hb.some((wb => !wb.properties || 0 === wb.properties.length || Xg(wb.properties, bb.properties, pb))) && (Mb.activateTrigger(eb, wb), this.updateActiveTriggers(wb), this.Bt(eb))
+                }), wb)
+              } catch (bb) {
+                xg.error("Could not activate event trigger for trigger groups", bb)
               }
             })), this.Wt
           }
-          makeSamplingDecisions(dd) {
-            for (const md of this.Gt) {
-              var Od;
-              const Wd = md.group,
-                Fd = Wd.id,
-                Rd = Wd.sampleRate,
-                Xd = "$posthog_sr_group_sampling_" + Fd,
-                Kd = this._instance.get_property(Xd);
-              let hd = null,
-                vd = !1,
-                Qd = !1,
-                td = !1;
-              if (NF(Kd)) {
-                const Od = Kd.sessionId,
-                  md = Kd.sampleRate,
-                  Wd = Kd.sampled;
-                vd = "string" == typeof Od && Od !== dd, Qd = TF(md) && md !== Rd, hd = Od === dd && TF(md) && md === Rd && pF(Wd) ? Wd : null
-              } else hd = Kd === dd || null, vd = "string" == typeof Kd && Kd !== dd, td = Kd === dd;
-              const od = vd || Qd || td || !pF(hd),
-                Nd = od ? TK(dd + Fd, Rd) : hd;
-              od && this.Vt("triggerGroupSamplingDecisionMade", {
-                group_id: Fd,
-                group_name: Wd.name,
-                sampleRate: Rd,
-                isSampled: Nd
-              }), this.Qt.set(Fd, Nd), null === (Od = this._instance.persistence) || void 0 === Od || Od.register({
-                [Xd]: {
-                  sessionId: dd,
-                  sampleRate: Rd,
-                  sampled: Nd
+          makeSamplingDecisions(bb) {
+            for (const Mb of this.Gt) {
+              var wb;
+              const eb = Mb.group,
+                Hb = eb.id,
+                pb = eb.sampleRate,
+                Vb = "$posthog_sr_group_sampling_" + Hb,
+                gb = this._instance.get_property(Vb);
+              let lb = null,
+                Lb = !1,
+                Ib = !1,
+                Ob = !1;
+              if (OH(gb)) {
+                const wb = gb.sessionId,
+                  Mb = gb.sampleRate,
+                  eb = gb.sampled;
+                Lb = "string" == typeof wb && wb !== bb, Ib = FH(Mb) && Mb !== pb, lb = wb === bb && FH(Mb) && Mb === pb && BH(eb) ? eb : null
+              } else lb = gb === bb || null, Lb = "string" == typeof gb && gb !== bb, Ob = gb === bb;
+              const Ub = Lb || Ib || Ob || !BH(lb),
+                tb = Ub ? Bg(bb + Hb, pb) : lb;
+              Ub && this.Vt("triggerGroupSamplingDecisionMade", {
+                group_id: Hb,
+                group_name: eb.name,
+                sampleRate: pb,
+                isSampled: tb
+              }), this.Qt.set(Hb, tb), null === (wb = this._instance.persistence) || void 0 === wb || wb.register({
+                [Vb]: {
+                  sessionId: bb,
+                  sampleRate: pb,
+                  sampled: tb
                 }
               })
             }
-            this.updateActiveTriggers(dd)
+            this.updateActiveTriggers(bb)
           }
-          ensureSamplingDecision(dd) {}
+          ensureSamplingDecision(bb) {}
           onFlushComplete() {
             this.Zt = !0
           }
           clearConditionalRecordingPersistence() {
-            var dd, Od, md;
-            null === (dd = this._instance.persistence) || void 0 === dd || dd.unregister("$session_is_sampled"), null === (Od = this._instance.persistence) || void 0 === Od || Od.unregister("$replay_sample_rate"), null === (md = this._instance.persistence) || void 0 === md || md.unregister("$session_past_minimum_duration");
-            for (const Xd of this.Gt) {
-              var Wd, Fd, Rd;
-              const dd = Xd.group.id;
-              null === (Wd = this._instance.persistence) || void 0 === Wd || Wd.unregister("$posthog_sr_group_event_trigger_" + dd), null === (Fd = this._instance.persistence) || void 0 === Fd || Fd.unregister("$posthog_sr_group_url_trigger_" + dd), null === (Rd = this._instance.persistence) || void 0 === Rd || Rd.unregister("$posthog_sr_group_sampling_" + dd)
+            var bb, wb, Mb;
+            null === (bb = this._instance.persistence) || void 0 === bb || bb.unregister("$session_is_sampled"), null === (wb = this._instance.persistence) || void 0 === wb || wb.unregister("$replay_sample_rate"), null === (Mb = this._instance.persistence) || void 0 === Mb || Mb.unregister("$session_past_minimum_duration");
+            for (const Vb of this.Gt) {
+              var eb, Hb, pb;
+              const bb = Vb.group.id;
+              null === (eb = this._instance.persistence) || void 0 === eb || eb.unregister("$posthog_sr_group_event_trigger_" + bb), null === (Hb = this._instance.persistence) || void 0 === Hb || Hb.unregister("$posthog_sr_group_url_trigger_" + bb), null === (pb = this._instance.persistence) || void 0 === pb || pb.unregister("$posthog_sr_group_sampling_" + bb)
             }
           }
-          updateActiveTriggers(dd) {
-            const Od = [];
-            for (const md of this.Gt) {
-              const Wd = md.group,
-                Fd = Wd.id,
-                Rd = "trigger_activated" === md.triggerStatus(dd),
-                Xd = !0 === this.Qt.get(Fd);
-              Rd && Od.push({
-                id: Fd,
-                name: Wd.name,
+          updateActiveTriggers(bb) {
+            const wb = [];
+            for (const Mb of this.Gt) {
+              const eb = Mb.group,
+                Hb = eb.id,
+                pb = "trigger_activated" === Mb.triggerStatus(bb),
+                Vb = !0 === this.Qt.get(Hb);
+              pb && wb.push({
+                id: Hb,
+                name: eb.name,
                 matched: !0,
-                sampled: Xd
+                sampled: Vb
               })
             }
             this._instance.register_for_session({
-              [fR]: Od
+              [op]: wb
             })
           }
-          hasPendingTriggers(dd) {
-            for (const Od of this.Gt)
-              if ("trigger_pending" === Od.triggerStatus(dd)) return !0;
+          hasPendingTriggers(bb) {
+            for (const wb of this.Gt)
+              if ("trigger_pending" === wb.triggerStatus(bb)) return !0;
             return !1
           }
-          getPendingTriggerConditions(dd) {
-            return this.Gt.flatMap((Od => "trigger_pending" !== Od.triggerStatusNoSideEffects(dd) ? [] : Od.getPendingTriggerConditions(dd).map((dd => `trigger group "${Od.group.name}": ${dd}`))))
+          getPendingTriggerConditions(bb) {
+            return this.Gt.flatMap((wb => "trigger_pending" !== wb.triggerStatusNoSideEffects(bb) ? [] : wb.getPendingTriggerConditions(bb).map((bb => `trigger group "${wb.group.name}": ${bb}`))))
           }
           stop() {
-            var dd;
-            null === (dd = this.Wt) || void 0 === dd || dd.call(this), this.Wt = void 0, this.Gt.forEach((dd => dd.stop())), this.Gt = [], this.Qt.clear(), this.Y.stop()
+            var bb;
+            null === (bb = this.Wt) || void 0 === bb || bb.call(this), this.Wt = void 0, this.Gt.forEach((bb => bb.stop())), this.Gt = [], this.Qt.clear(), this.Y.stop()
           }
-          Kt(dd, Od) {
-            const md = dd.group.conditions.properties;
-            return !md || 0 === md.length || aK(md, Od, this._instance.get_property(eF))
+          Kt(bb, wb) {
+            const Mb = bb.group.conditions.properties;
+            return !Mb || 0 === Mb.length || Xg(Mb, wb, this._instance.get_property(aH))
           }
-          Jt(dd) {
-            this.Gt.forEach((dd => dd.stop())), this.Gt = [], this.Qt.clear();
-            for (const Od of dd) {
-              const dd = new UX(this._instance, Od, ((dd, md) => {
+          Jt(bb) {
+            this.Gt.forEach((bb => bb.stop())), this.Gt = [], this.Qt.clear();
+            for (const wb of bb) {
+              const bb = new KV(this._instance, wb, ((bb, Mb) => {
                 this.qt("linked_flag_matched", {
-                  flag: dd,
-                  variant: md,
-                  group_id: Od.id,
-                  group_name: Od.name
+                  flag: bb,
+                  variant: Mb,
+                  group_id: wb.id,
+                  group_name: wb.name
                 }), this.Bt()
               }));
-              this.Gt.push(dd)
+              this.Gt.push(bb)
             }
           }
         };
-      const SK = ["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "irclid", "_kx"],
-        sK = 1e5,
-        uK = /^[A-Za-z0-9]*[A-Za-z][A-Za-z0-9]*$/,
-        VK = [],
-        iK = () => !1,
-        AK = "@type @id actionStatus availability bestRating contentRating encodingFormat eventAttendanceMode eventStatus highPrice inLanguage isAccessibleForFree isFamilyFriendly itemCondition itemListOrder lowPrice maximumAttendeeCapacity nonprofitStatus numberOfItems offerCount position price priceCurrency priceValidUntil publicAccess ratingCount ratingValue reviewCount smokingAllowed worstRating".split(" "),
-        rK = "Action BorrowAction ReadAction SearchAction SeekToAction SolveMathAction WatchAction".split(" "),
-        GK = "AutoDealer Bakery BarOrPub CafeOrCoffeeShop CollegeOrUniversity Corporation DaySpa Dentist EducationalOrganization Electrician FoodEstablishment GovernmentOrganization HealthClub Hotel LegalService Library LibrarySystem LocalBusiness Locksmith LodgingBusiness MedicalBusiness NGO OnlineStore Organization PerformingGroup Pharmacy Physician Plumber RealEstateAgent Restaurant School SportsOrganization Store".split(" "),
-        nK = "Accommodation AdministrativeArea Country Place State".split(" "),
-        LK = {
+      const Dg = ["gclid", "gclsrc", "dclid", "gbraid", "wbraid", "fbclid", "msclkid", "twclid", "li_fat_id", "igshid", "ttclid", "rdt_cid", "epik", "qclid", "sccid", "oppref", "irclid", "_kx"],
+        cg = 1e5,
+        Yg = /^[A-Za-z0-9]*[A-Za-z][A-Za-z0-9]*$/,
+        Zg = [],
+        fg = () => !1,
+        Ag = "@type @id actionStatus availability bestRating contentRating encodingFormat eventAttendanceMode eventStatus highPrice inLanguage isAccessibleForFree isFamilyFriendly itemCondition itemListOrder lowPrice maximumAttendeeCapacity nonprofitStatus numberOfItems offerCount position price priceCurrency priceValidUntil publicAccess ratingCount ratingValue reviewCount smokingAllowed worstRating".split(" "),
+        Wg = "Action BorrowAction ReadAction SearchAction SeekToAction SolveMathAction WatchAction".split(" "),
+        Jg = "AutoDealer Bakery BarOrPub CafeOrCoffeeShop CollegeOrUniversity Corporation DaySpa Dentist EducationalOrganization Electrician FoodEstablishment GovernmentOrganization HealthClub Hotel LegalService Library LibrarySystem LocalBusiness Locksmith LodgingBusiness MedicalBusiness NGO OnlineStore Organization PerformingGroup Pharmacy Physician Plumber RealEstateAgent Restaurant School SportsOrganization Store".split(" "),
+        Sg = "Accommodation AdministrativeArea Country Place State".split(" "),
+        Ng = {
           AggregateOffer: {
             offers: ["Offer"]
           },
@@ -7177,8 +7177,8 @@ export const modules = {
             educationalUse: !0,
             interactivityType: !0,
             aggregateRating: ["AggregateRating"],
-            potentialAction: rK,
-            publisher: GK
+            potentialAction: Wg,
+            publisher: Jg
           },
           Event: {
             startDate: !0,
@@ -7191,10 +7191,10 @@ export const modules = {
             itemListElement: ["ListItem"]
           },
           ListItem: {
-            item: VK
+            item: Zg
           },
           Offer: {
-            seller: GK
+            seller: Jg
           },
           Organization: {
             name: !0,
@@ -7228,7 +7228,7 @@ export const modules = {
             productionDate: !0,
             releaseDate: !0,
             brand: ["Brand", "Organization"],
-            manufacturer: GK,
+            manufacturer: Jg,
             offers: ["Offer", "AggregateOffer"],
             aggregateRating: ["AggregateRating"]
           },
@@ -7236,416 +7236,416 @@ export const modules = {
             name: !0,
             serviceType: !0,
             category: !0,
-            provider: GK,
-            areaServed: nK,
+            provider: Jg,
+            areaServed: Sg,
             offers: ["AggregateOffer", "Offer"],
             aggregateRating: ["AggregateRating"]
           },
           OfferCatalog: {
             name: !0,
-            itemListElement: VK
+            itemListElement: Zg
           }
         },
-        PK = [
-          ["3DModel AboutPage Answer Article AudioObject Blog BlogPosting Book Clip CollectionPage Comment ContactPage Course CreativeWorkSeason CreativeWorkSeries DataCatalog DataDownload DataFeed Dataset DiscussionForumPosting Episode FAQPage Game HowTo HowToDirection HowToSection HowToStep HowToTip ImageObject LearningResource MediaObject Message MobileApplication Movie MusicPlaylist MusicRecording NewsArticle Photograph PodcastEpisode PodcastSeries ProfilePage QAPage Question Quiz Recipe Review ScholarlyArticle SearchResultsPage SiteNavigationElement SocialMediaPosting SoftwareApplication TVEpisode TVSeries TechArticle VacationRental VideoGame VideoObject WebApplication WebPage WebPageElement WebSite".split(" "), LK.CreativeWork],
-          ["BroadcastEvent BusinessEvent EducationEvent Festival MusicEvent SportsEvent TheaterEvent".split(" "), LK.Event],
-          [GK, LK.Organization],
-          [nK, LK.Place],
-          ["Car IndividualProduct ProductGroup ProductModel".split(" "), LK.Product]
+        vg = [
+          ["3DModel AboutPage Answer Article AudioObject Blog BlogPosting Book Clip CollectionPage Comment ContactPage Course CreativeWorkSeason CreativeWorkSeries DataCatalog DataDownload DataFeed Dataset DiscussionForumPosting Episode FAQPage Game HowTo HowToDirection HowToSection HowToStep HowToTip ImageObject LearningResource MediaObject Message MobileApplication Movie MusicPlaylist MusicRecording NewsArticle Photograph PodcastEpisode PodcastSeries ProfilePage QAPage Question Quiz Recipe Review ScholarlyArticle SearchResultsPage SiteNavigationElement SocialMediaPosting SoftwareApplication TVEpisode TVSeries TechArticle VacationRental VideoGame VideoObject WebApplication WebPage WebPageElement WebSite".split(" "), Ng.CreativeWork],
+          ["BroadcastEvent BusinessEvent EducationEvent Festival MusicEvent SportsEvent TheaterEvent".split(" "), Ng.Event],
+          [Jg, Ng.Organization],
+          [Sg, Ng.Place],
+          ["Car IndividualProduct ProductGroup ProductModel".split(" "), Ng.Product]
         ];
 
-      function zK(dd, Od) {
-        return vF.call(dd, Od) ? dd[Od] : void 0
+      function Qg(bb, wb) {
+        return gH.call(bb, wb) ? bb[wb] : void 0
       }
 
-      function cK(dd) {
-        const Od = typeof dd;
-        return yF(dd) || "string" === Od || "number" === Od || "boolean" === Od
+      function Gg(bb) {
+        const wb = typeof bb;
+        return CH(bb) || "string" === wb || "number" === wb || "boolean" === wb
       }
 
-      function jK(dd, Od) {
-        return Od && function(dd) {
-          return HF(dd) && /^(https?:\/\/|\/|\.\.?\/)/i.test(dd.trim())
-        }(dd) ? Od(dd.trim()) || void 0 : dd
+      function qg(bb, wb) {
+        return wb && function(bb) {
+          return tH(bb) && /^(https?:\/\/|\/|\.\.?\/)/i.test(bb.trim())
+        }(bb) ? wb(bb.trim()) || void 0 : bb
       }
 
-      function DK(dd, Od) {
-        return tF(dd) && dd.every(cK) ? dd.map((dd => jK(dd, Od))).filter((dd => !qF(dd))) : cK(dd) ? jK(dd, Od) : void 0
+      function ag(bb, wb) {
+        return LH(bb) && bb.every(Gg) ? bb.map((bb => qg(bb, wb))).filter((bb => !UH(bb))) : Gg(bb) ? qg(bb, wb) : void 0
       }
 
-      function eK(dd, Od) {
-        if ("string" != typeof dd) return;
-        const md = dd.trim(),
-          Wd = md.indexOf("#"),
-          Fd = 0 > Wd ? md : md.slice(Wd + 1);
-        if (Fd && !(0 > Wd && (/^[a-z][a-z\d+.-]*:/i.test(md) || md.includes("/") || md.includes("?")))) try {
-          return Od(Fd) ? Fd : void 0
-        } catch (dd) {
+      function ig(bb, wb) {
+        if ("string" != typeof bb) return;
+        const Mb = bb.trim(),
+          eb = Mb.indexOf("#"),
+          Hb = 0 > eb ? Mb : Mb.slice(eb + 1);
+        if (Hb && !(0 > eb && (/^[a-z][a-z\d+.-]*:/i.test(Mb) || Mb.includes("/") || Mb.includes("?")))) try {
+          return wb(Hb) ? Hb : void 0
+        } catch (bb) {
           return
         }
       }
 
-      function IK(dd) {
-        if (vF.call(LK, dd)) return LK[dd];
-        for (const [Od, md] of PK)
-          if (Od.includes(dd)) return md
+      function ug(bb) {
+        if (gH.call(Ng, bb)) return Ng[bb];
+        for (const [wb, Mb] of vg)
+          if (wb.includes(bb)) return Mb
       }
 
-      function lK(dd, Od, md) {
-        Object.defineProperty(dd, Od, {
+      function dg(bb, wb, Mb) {
+        Object.defineProperty(bb, wb, {
           configurable: !0,
           enumerable: !0,
-          value: md,
+          value: Mb,
           writable: !0
         })
       }
 
-      function CK(dd, Od, md, Wd) {
-        if (tF(dd)) {
-          const Fd = dd.map((dd => CK(dd, Od, md, Wd))).filter((dd => !qF(dd)));
-          return Fd.length ? Fd : void 0
+      function Pg(bb, wb, Mb, eb) {
+        if (LH(bb)) {
+          const Hb = bb.map((bb => Pg(bb, wb, Mb, eb))).filter((bb => !UH(bb)));
+          return Hb.length ? Hb : void 0
         }
-        return ZK(dd, Od, md, Wd) || void 0
+        return ng(bb, wb, Mb, eb) || void 0
       }
 
-      function ZK(dd, Od, md, Wd) {
-        if (!NF(dd) || ! function(dd) {
-            return dd.remainingNodes ? (dd.remainingNodes--, !0) : (dd.exceeded = !0, !1)
-          }(md)) return null;
-        const Fd = zK(dd, "@type"),
-          Rd = function(dd) {
-            const Od = new Set,
-              md = "string" == typeof dd ? [dd] : tF(dd) ? dd : [],
-              Wd = [];
-            for (const Fd of md) {
-              if ("string" != typeof Fd) continue;
-              const dd = Fd.replace(/^https?:\/\/schema\.org\//, "");
-              if (100 >= dd.length && uK.test(dd) && !Od.has(dd) && (Od.add(dd), Wd.push(dd), 20 === Wd.length)) break
+      function ng(bb, wb, Mb, eb) {
+        if (!OH(bb) || ! function(bb) {
+            return bb.remainingNodes ? (bb.remainingNodes--, !0) : (bb.exceeded = !0, !1)
+          }(Mb)) return null;
+        const Hb = Qg(bb, "@type"),
+          pb = function(bb) {
+            const wb = new Set,
+              Mb = "string" == typeof bb ? [bb] : LH(bb) ? bb : [],
+              eb = [];
+            for (const Hb of Mb) {
+              if ("string" != typeof Hb) continue;
+              const bb = Hb.replace(/^https?:\/\/schema\.org\//, "");
+              if (100 >= bb.length && Yg.test(bb) && !wb.has(bb) && (wb.add(bb), eb.push(bb), 20 === eb.length)) break
             }
-            return Wd
-          }(Fd),
-          Xd = Rd.filter((dd => !!IK(dd) && (!Wd || !Wd.length || Wd.includes(dd)))),
-          Kd = {};
-        for (const vd of AK) {
-          const Wd = "@type" === vd ? Rd.length ? "string" == typeof Fd ? Rd[0] : Rd : void 0 : "@id" === vd ? eK(zK(dd, vd), Od) : DK(zK(dd, vd), md.maskUrl);
-          qF(Wd) || lK(Kd, vd, Wd)
+            return eb
+          }(Hb),
+          Vb = pb.filter((bb => !!ug(bb) && (!eb || !eb.length || eb.includes(bb)))),
+          gb = {};
+        for (const Lb of Ag) {
+          const eb = "@type" === Lb ? pb.length ? "string" == typeof Hb ? pb[0] : pb : void 0 : "@id" === Lb ? ig(Qg(bb, Lb), wb) : ag(Qg(bb, Lb), Mb.maskUrl);
+          UH(eb) || dg(gb, Lb, eb)
         }
-        for (const vd of Xd) {
-          const Wd = IK(vd);
-          for (const Fd of Object.keys(Wd)) {
-            const Rd = zK(dd, Fd),
-              Xd = Wd[Fd];
-            if (!0 === Xd) {
-              const dd = DK(Rd, md.maskUrl);
-              qF(dd) || lK(Kd, Fd, dd)
+        for (const Lb of Vb) {
+          const eb = ug(Lb);
+          for (const Hb of Object.keys(eb)) {
+            const pb = Qg(bb, Hb),
+              Vb = eb[Hb];
+            if (!0 === Vb) {
+              const bb = ag(pb, Mb.maskUrl);
+              UH(bb) || dg(gb, Hb, bb)
             } else {
-              const dd = CK(Rd, Od, md, Xd);
-              qF(dd) || lK(Kd, Fd, dd)
+              const bb = Pg(pb, wb, Mb, Vb);
+              UH(bb) || dg(gb, Hb, bb)
             }
           }
         }
-        const hd = CK(zK(dd, "@graph"), Od, md);
-        return qF(hd) || lK(Kd, "@graph", hd), Object.keys(Kd).length ? Kd : null
+        const lb = Pg(Qg(bb, "@graph"), wb, Mb);
+        return UH(lb) || dg(gb, "@graph", lb), Object.keys(gb).length ? gb : null
       }
 
-      function kK(dd, Od, md) {
-        if (!NF(dd)) return null;
-        const Fd = zK(dd, "@context");
-        if ("string" != typeof Fd || !/^https?:\/\/schema\.org\/?$/.test(Fd)) return null;
-        const Rd = ZK(dd, Od, md);
-        return Rd ? Wd({
+      function yg(bb, wb, Mb) {
+        if (!OH(bb)) return null;
+        const Hb = Qg(bb, "@context");
+        if ("string" != typeof Hb || !/^https?:\/\/schema\.org\/?$/.test(Hb)) return null;
+        const pb = ng(bb, wb, Mb);
+        return pb ? eb({
           "@context": "https://schema.org"
-        }, Rd) : null
+        }, pb) : null
       }
 
-      function fK(dd) {
-        var Od;
-        return "SCRIPT" === dd.nodeName && "application/ld+json" === (null === (Od = dd.getAttribute("type")) || void 0 === Od ? void 0 : Od.trim().toLowerCase())
+      function og(bb) {
+        var wb;
+        return "SCRIPT" === bb.nodeName && "application/ld+json" === (null === (wb = bb.getAttribute("type")) || void 0 === wb ? void 0 : wb.trim().toLowerCase())
       }
 
-      function MK(dd, Od, md) {
-        if ("string" == typeof Od ? dd.classList.contains(Od) : Od && Array.from(dd.classList).some((dd => (Od.lastIndex = 0, Od.test(dd))))) return !0;
+      function Tg(bb, wb, Mb) {
+        if ("string" == typeof wb ? bb.classList.contains(wb) : wb && Array.from(bb.classList).some((bb => (wb.lastIndex = 0, wb.test(bb))))) return !0;
         try {
-          return !!md && dd.matches(md)
-        } catch (dd) {
+          return !!Mb && bb.matches(Mb)
+        } catch (bb) {
           return !1
         }
       }
 
-      function dh(dd, Od, md) {
-        for (let Wd = dd; Wd;) {
-          if (MK(Wd, Od, md)) return !0;
-          const dd = Wd.parentNode;
-          Wd = Wd.parentElement || (dd && dd.nodeType === dd.DOCUMENT_FRAGMENT_NODE ? dd.host : null)
+      function kg(bb, wb, Mb) {
+        for (let eb = bb; eb;) {
+          if (Tg(eb, wb, Mb)) return !0;
+          const bb = eb.parentNode;
+          eb = eb.parentElement || (bb && bb.nodeType === bb.DOCUMENT_FRAGMENT_NODE ? bb.host : null)
         }
         return !1
       }
 
-      function Oh(dd) {
-        return fK(dd) ? [dd] : dd.nodeType !== dd.ELEMENT_NODE ? [] : Array.from(dd.querySelectorAll("script")).filter(fK)
+      function bl(bb) {
+        return og(bb) ? [bb] : bb.nodeType !== bb.ELEMENT_NODE ? [] : Array.from(bb.querySelectorAll("script")).filter(og)
       }
 
-      function mh(dd) {
-        return NF(dd) ? dd.network_timing : dd
+      function wl(bb) {
+        return OH(bb) ? bb.network_timing : bb
       }
-      const Wh = AF("[SessionRecording]"),
-        Fh = [1, 2, 3, 4, 5, 6, 7, 12],
-        Rh = dd => ({
-          rrwebMethod: dd,
+      const Ml = fH("[SessionRecording]"),
+        el = [1, 2, 3, 4, 5, 6, 7, 12],
+        Hl = bb => ({
+          rrwebMethod: bb,
           enqueuedAt: Date.now(),
           attempt: 1
         });
 
-      function Xh() {
-        var dd;
-        return null == KF || null === (dd = KF.__PosthogExtensions__) || void 0 === dd ? void 0 : dd.rrweb
+      function pl() {
+        var bb;
+        return null == pH || null === (bb = pH.__PosthogExtensions__) || void 0 === bb ? void 0 : bb.rrweb
       }
 
-      function Kh() {
-        var dd;
-        return null === (dd = Xh()) || void 0 === dd ? void 0 : dd.record
+      function Vl() {
+        var bb;
+        return null === (bb = pl()) || void 0 === bb ? void 0 : bb.record
       }
 
-      function hh(dd) {
+      function gl(bb) {
         try {
-          return JSON.stringify(dd)
-        } catch (Od) {
-          if (Od instanceof RangeError) throw Od;
-          return JSON.stringify(dd, SX())
+          return JSON.stringify(bb)
+        } catch (wb) {
+          if (wb instanceof RangeError) throw wb;
+          return JSON.stringify(bb, DV())
         }
       }
 
-      function vh(dd) {
-        return oK(function(dd, Od) {
-          void 0 === Od && (Od = {});
-          var md = function() {
-              var dd = 4294967295;
+      function ll(bb) {
+        return Og(function(bb, wb) {
+          void 0 === wb && (wb = {});
+          var Mb = function() {
+              var bb = 4294967295;
               return {
-                p(Od) {
-                  for (var md = dd, Wd = 0; Od.length > Wd; ++Wd) md = QK[255 & md ^ Od[Wd]] ^ md >>> 8;
-                  dd = md
+                p(wb) {
+                  for (var Mb = bb, eb = 0; wb.length > eb; ++eb) Mb = Lg[255 & Mb ^ wb[eb]] ^ Mb >>> 8;
+                  bb = Mb
                 },
-                d: () => 4294967295 ^ dd
+                d: () => 4294967295 ^ bb
               }
             }(),
-            Wd = dd.length;
-          md.p(dd);
-          var Fd, Rd, Xd, Kd, hd = (Kd = 10 + ((Fd = Od).filename && Fd.filename.length + 1 || 0), function(dd, Od, md, Wd, Fd, Rd) {
-              var Xd = dd.length,
-                Kd = new iX(Wd + Xd + 5 * (1 + Math.floor(Xd / 7e3)) + 8),
-                hd = Kd.subarray(Wd, Kd.length - 8),
-                vd = 0;
-              if (!Od || 8 > Xd)
-                for (var Qd = 0; Xd >= Qd; Qd += 65535) {
-                  var td = Qd + 65535;
-                  Xd > td ? vd = KK(hd, vd, dd.subarray(Qd, td)) : (hd[Qd] = Rd, vd = KK(hd, vd, dd.subarray(Qd, Xd)))
+            eb = bb.length;
+          Mb.p(bb);
+          var Hb, pb, Vb, gb, lb = (gb = 10 + ((Hb = wb).filename && Hb.filename.length + 1 || 0), function(bb, wb, Mb, eb, Hb, pb) {
+              var Vb = bb.length,
+                gb = new fV(eb + Vb + 5 * (1 + Math.floor(Vb / 7e3)) + 8),
+                lb = gb.subarray(eb, gb.length - 8),
+                Lb = 0;
+              if (!wb || 8 > Vb)
+                for (var Ib = 0; Vb >= Ib; Ib += 65535) {
+                  var Ob = Ib + 65535;
+                  Vb > Ob ? Lb = Vg(lb, Lb, bb.subarray(Ib, Ob)) : (lb[Ib] = pb, Lb = Vg(lb, Lb, bb.subarray(Ib, Vb)))
                 } else {
-                  for (var od = vK[Od - 1], Nd = od >>> 13, qd = 8191 & od, Hd = (1 << md) - 1, yd = new AX(32768), bd = new AX(Hd + 1), Td = Math.ceil(md / 3), pd = 2 * Td, Yd = function(Od) {
-                      return (dd[Od] ^ dd[Od + 1] << Td ^ dd[Od + 2] << pd) & Hd
-                    }, gd = new rX(25e3), wd = new AX(288), Ed = new AX(32), Jd = 0, Ud = 0, xd = (Qd = 0, 0), Bd = 0, Sd = 0; Xd > Qd; ++Qd) {
-                    var sd = Yd(Qd),
-                      ud = 32767 & Qd,
-                      Vd = bd[sd];
-                    if (yd[ud] = Vd, bd[sd] = ud, Qd >= Bd) {
-                      var Ad = Xd - Qd;
-                      if ((Jd > 7e3 || xd > 24576) && Ad > 423) {
-                        vd = hK(dd, hd, 0, gd, wd, Ed, Ud, xd, Sd, Qd - Sd, vd), xd = Jd = Ud = 0, Sd = Qd;
-                        for (var rd = 0; 286 > rd; ++rd) wd[rd] = 0;
-                        for (rd = 0; 30 > rd; ++rd) Ed[rd] = 0
+                  for (var Ub = lg[wb - 1], tb = Ub >>> 13, Cb = 8191 & Ub, Eb = (1 << Mb) - 1, Fb = new AV(32768), Bb = new AV(Eb + 1), sb = Math.ceil(Mb / 3), mb = 2 * sb, hb = function(wb) {
+                      return (bb[wb] ^ bb[wb + 1] << sb ^ bb[wb + 2] << mb) & Eb
+                    }, zb = new WV(25e3), Xb = new AV(288), xb = new AV(32), jb = 0, Kb = 0, rb = (Ib = 0, 0), Rb = 0, Db = 0; Vb > Ib; ++Ib) {
+                    var cb = hb(Ib),
+                      Yb = 32767 & Ib,
+                      Zb = Bb[cb];
+                    if (Fb[Yb] = Zb, Bb[cb] = Yb, Ib >= Rb) {
+                      var fb = Vb - Ib;
+                      if ((jb > 7e3 || rb > 24576) && fb > 423) {
+                        Lb = gg(bb, lb, 0, zb, Xb, xb, Kb, rb, Db, Ib - Db, Lb), rb = jb = Kb = 0, Db = Ib;
+                        for (var Ab = 0; 286 > Ab; ++Ab) Xb[Ab] = 0;
+                        for (Ab = 0; 30 > Ab; ++Ab) xb[Ab] = 0
                       }
-                      var Gd = 2,
-                        nd = 0,
-                        Ld = qd,
-                        Pd = ud - Vd & 32767;
-                      if (Ad > 2 && sd == Yd(Qd - Pd))
-                        for (var zd = Math.min(Nd, Ad) - 1, cd = Math.min(32767, Qd), jd = Math.min(258, Ad); cd >= Pd && --Ld && ud != Vd;) {
-                          if (dd[Qd + Gd] == dd[Qd + Gd - Pd]) {
-                            for (var Dd = 0; jd > Dd && dd[Qd + Dd] == dd[Qd + Dd - Pd]; ++Dd);
-                            if (Dd > Gd) {
-                              if (Gd = Dd, nd = Pd, Dd > zd) break;
-                              var ed = Math.min(Pd, Dd - 2),
-                                Id = 0;
-                              for (rd = 0; ed > rd; ++rd) {
-                                var ld = Qd - Pd + rd + 32768 & 32767,
-                                  Cd = ld - yd[ld] + 32768 & 32767;
-                                Cd > Id && (Id = Cd, Vd = ld)
+                      var Wb = 2,
+                        Jb = 0,
+                        Sb = Cb,
+                        Nb = Yb - Zb & 32767;
+                      if (fb > 2 && cb == hb(Ib - Nb))
+                        for (var vb = Math.min(tb, fb) - 1, Qb = Math.min(32767, Ib), Gb = Math.min(258, fb); Qb >= Nb && --Sb && Yb != Zb;) {
+                          if (bb[Ib + Wb] == bb[Ib + Wb - Nb]) {
+                            for (var qb = 0; Gb > qb && bb[Ib + qb] == bb[Ib + qb - Nb]; ++qb);
+                            if (qb > Wb) {
+                              if (Wb = qb, Jb = Nb, qb > vb) break;
+                              var ab = Math.min(Nb, qb - 2),
+                                ib = 0;
+                              for (Ab = 0; ab > Ab; ++Ab) {
+                                var ub = Ib - Nb + Ab + 32768 & 32767,
+                                  db = ub - Fb[ub] + 32768 & 32767;
+                                db > ib && (ib = db, Zb = ub)
                               }
                             }
                           }
-                          Pd += (ud = Vd) - (Vd = yd[ud]) + 32768 & 32767
+                          Nb += (Yb = Zb) - (Zb = Fb[Yb]) + 32768 & 32767
                         }
-                      if (nd) {
-                        gd[xd++] = 268435456 | cX[Gd] << 18 | jX[nd];
-                        var Zd = 31 & cX[Gd],
-                          kd = 31 & jX[nd];
-                        Ud += GX[Zd] + nX[kd], ++wd[257 + Zd], ++Ed[kd], Bd = Qd + Gd, ++Jd
-                      } else gd[xd++] = dd[Qd], ++wd[dd[Qd]]
+                      if (Jb) {
+                        zb[rb++] = 268435456 | GV[Wb] << 18 | qV[Jb];
+                        var Pb = 31 & GV[Wb],
+                          nb = 31 & qV[Jb];
+                        Kb += JV[Pb] + SV[nb], ++Xb[257 + Pb], ++xb[nb], Rb = Ib + Wb, ++jb
+                      } else zb[rb++] = bb[Ib], ++Xb[bb[Ib]]
                     }
                   }
-                  vd = hK(dd, hd, Rd, gd, wd, Ed, Ud, xd, Sd, Qd - Sd, vd)
+                  Lb = gg(bb, lb, pb, zb, Xb, xb, Kb, rb, Db, Ib - Db, Lb)
                 }
-              return dK(Kd, 0, Wd + MX(vd) + 8)
-            }(Rd = dd, null == (Xd = Od).level ? 6 : Xd.level, null == Xd.mem ? Math.ceil(1.5 * Math.max(8, Math.min(13, Math.log(Rd.length)))) : 12 + Xd.mem, Kd, 0, !0)),
-            vd = hd.length;
-          return function(dd, Od) {
-            var md = Od.filename;
-            if (dd[0] = 31, dd[1] = 139, dd[2] = 8, dd[8] = 2 > Od.level ? 4 : 9 == Od.level ? 2 : 0, dd[9] = 3, 0 != Od.mtime && tK(dd, 4, Math.floor(new Date(Od.mtime || Date.now()) / 1e3)), md) {
-              dd[3] = 8;
-              for (var Wd = 0; md.length >= Wd; ++Wd) dd[Wd + 10] = md.charCodeAt(Wd)
+              return kV(gb, 0, eb + TV(Lb) + 8)
+            }(pb = bb, null == (Vb = wb).level ? 6 : Vb.level, null == Vb.mem ? Math.ceil(1.5 * Math.max(8, Math.min(13, Math.log(pb.length)))) : 12 + Vb.mem, gb, 0, !0)),
+            Lb = lb.length;
+          return function(bb, wb) {
+            var Mb = wb.filename;
+            if (bb[0] = 31, bb[1] = 139, bb[2] = 8, bb[8] = 2 > wb.level ? 4 : 9 == wb.level ? 2 : 0, bb[9] = 3, 0 != wb.mtime && Ig(bb, 4, Math.floor(new Date(wb.mtime || Date.now()) / 1e3)), Mb) {
+              bb[3] = 8;
+              for (var eb = 0; Mb.length >= eb; ++eb) bb[eb + 10] = Mb.charCodeAt(eb)
             }
-          }(hd, Od), tK(hd, vd - 8, md.d()), tK(hd, vd - 4, Wd), hd
-        }(function(dd) {
-          var Od = dd.length;
-          if ("undefined" != typeof TextEncoder) return (new TextEncoder).encode(dd);
-          for (var md = new iX(dd.length + (dd.length >>> 1)), Wd = 0, Fd = function(dd) {
-              md[Wd++] = dd
-            }, Rd = 0; Od > Rd; ++Rd) {
-            if (Wd + 5 > md.length) {
-              var Xd = new iX(Wd + 8 + (Od - Rd << 1));
-              Xd.set(md), md = Xd
+          }(lb, wb), Ig(lb, Lb - 8, Mb.d()), Ig(lb, Lb - 4, eb), lb
+        }(function(bb) {
+          var wb = bb.length;
+          if ("undefined" != typeof TextEncoder) return (new TextEncoder).encode(bb);
+          for (var Mb = new fV(bb.length + (bb.length >>> 1)), eb = 0, Hb = function(bb) {
+              Mb[eb++] = bb
+            }, pb = 0; wb > pb; ++pb) {
+            if (eb + 5 > Mb.length) {
+              var Vb = new fV(eb + 8 + (wb - pb << 1));
+              Vb.set(Mb), Mb = Vb
             }
-            var Kd = dd.charCodeAt(Rd);
-            128 > Kd ? Fd(Kd) : 2048 > Kd ? (Fd(192 | Kd >>> 6), Fd(128 | 63 & Kd)) : Kd > 55295 && 57344 > Kd ? (Fd(240 | (Kd = 65536 + (1047552 & Kd) | 1023 & dd.charCodeAt(++Rd)) >>> 18), Fd(128 | Kd >>> 12 & 63), Fd(128 | Kd >>> 6 & 63), Fd(128 | 63 & Kd)) : (Fd(224 | Kd >>> 12), Fd(128 | Kd >>> 6 & 63), Fd(128 | 63 & Kd))
+            var gb = bb.charCodeAt(pb);
+            128 > gb ? Hb(gb) : 2048 > gb ? (Hb(192 | gb >>> 6), Hb(128 | 63 & gb)) : gb > 55295 && 57344 > gb ? (Hb(240 | (gb = 65536 + (1047552 & gb) | 1023 & bb.charCodeAt(++pb)) >>> 18), Hb(128 | gb >>> 12 & 63), Hb(128 | gb >>> 6 & 63), Hb(128 | 63 & gb)) : (Hb(224 | gb >>> 12), Hb(128 | gb >>> 6 & 63), Hb(128 | 63 & gb))
           }
-          return dK(md, 0, Wd)
-        }(hh(dd))), !0)
+          return kV(Mb, 0, eb)
+        }(gl(bb))), !0)
       }
 
-      function Qh(dd) {
-        return th.apply(this, arguments)
+      function Ll(bb) {
+        return Il.apply(this, arguments)
       }
 
-      function th() {
-        return th = Rd((function*(dd) {
-          const Od = yield function(dd) {
-            return SF.apply(this, arguments)
-          }(hh(dd), yK.DEBUG, {
+      function Il() {
+        return Il = pb((function*(bb) {
+          const wb = yield function(bb) {
+            return RH.apply(this, arguments)
+          }(gl(bb), Eg.DEBUG, {
             rethrow: !0
           });
-          return oK(new Uint8Array(yield Od.arrayBuffer()), !0)
-        })), th.apply(this, arguments)
+          return Og(new Uint8Array(yield wb.arrayBuffer()), !0)
+        })), Il.apply(this, arguments)
       }
-      let oh, Nh;
-      const qh = "undefined" != typeof globalThis && "CompressionStream" in globalThis && "TextEncoder" in globalThis && "Response" in globalThis && "function" == typeof Response.prototype.blob;
-      let Hh = !1;
+      let Ol, Ul;
+      const tl = "undefined" != typeof globalThis && "CompressionStream" in globalThis && "TextEncoder" in globalThis && "Response" in globalThis && "function" == typeof Response.prototype.blob;
+      let Cl = !1;
 
-      function yh(dd) {
-        var Od;
-        return tF(dd) && 0 === dd.length ? (oh = null !== (Od = oh) && void 0 !== Od ? Od : vh([]), oh) : vh(dd)
-      }
-
-      function bh(dd) {
-        return Th.apply(this, arguments)
+      function El(bb) {
+        var wb;
+        return LH(bb) && 0 === bb.length ? (Ol = null !== (wb = Ol) && void 0 !== wb ? wb : ll([]), Ol) : ll(bb)
       }
 
-      function Th() {
-        return (Th = Rd((function*(dd) {
-          var Od;
-          return tF(dd) && 0 === dd.length ? oh || (Nh = null !== (Od = Nh) && void 0 !== Od ? Od : Qh([]).then((dd => (oh = dd, dd))).catch((dd => {
-            throw oh = void 0, Nh = void 0, dd
-          })), Nh) : Qh(dd)
+      function Fl(bb) {
+        return Bl.apply(this, arguments)
+      }
+
+      function Bl() {
+        return (Bl = pb((function*(bb) {
+          var wb;
+          return LH(bb) && 0 === bb.length ? Ol || (Ul = null !== (wb = Ul) && void 0 !== wb ? wb : Ll([]).then((bb => (Ol = bb, bb))).catch((bb => {
+            throw Ol = void 0, Ul = void 0, bb
+          })), Ul) : Ll(bb)
         }))).apply(this, arguments)
       }
 
-      function ph(dd) {
-        return qh && !Hh && function(dd) {
-          return 2 === dd.type || 3 === dd.type && (0 === dd.data.source || 8 === dd.data.source)
-        }(dd)
+      function sl(bb) {
+        return tl && !Cl && function(bb) {
+          return 2 === bb.type || 3 === bb.type && (0 === bb.data.source || 8 === bb.data.source)
+        }(bb)
       }
 
-      function Yh(dd) {
+      function ml(bb) {
         return {
-          event: dd,
-          size: uX(dd)
+          event: bb,
+          size: YV(bb)
         }
       }
 
-      function gh(dd, Od) {
-        return Wd(Wd({}, dd), {}, {
-          data: Od,
+      function hl(bb, wb) {
+        return eb(eb({}, bb), {}, {
+          data: wb,
           cv: "2024-10"
         })
       }
 
-      function wh(dd, Od) {
-        return Wd(Wd({}, dd), {}, {
+      function zl(bb, wb) {
+        return eb(eb({}, bb), {}, {
           cv: "2024-10",
-          data: Wd(Wd({}, dd.data), Od)
+          data: eb(eb({}, bb.data), wb)
         })
       }
 
-      function ah(dd) {
+      function Xl(bb) {
         try {
-          if (2 === dd.type) return Yh(gh(dd, vh(dd.data)));
-          if (3 === dd.type && 0 === dd.data.source) return Yh(wh(dd, {
-            texts: yh(dd.data.texts),
-            attributes: yh(dd.data.attributes),
-            removes: yh(dd.data.removes),
-            adds: yh(dd.data.adds)
+          if (2 === bb.type) return ml(hl(bb, ll(bb.data)));
+          if (3 === bb.type && 0 === bb.data.source) return ml(zl(bb, {
+            texts: El(bb.data.texts),
+            attributes: El(bb.data.attributes),
+            removes: El(bb.data.removes),
+            adds: El(bb.data.adds)
           }));
-          if (3 === dd.type && 8 === dd.data.source) return Yh(wh(dd, {
-            adds: dd.data.adds ? vh(dd.data.adds) : void 0,
-            removes: dd.data.removes ? vh(dd.data.removes) : void 0
+          if (3 === bb.type && 8 === bb.data.source) return ml(zl(bb, {
+            adds: bb.data.adds ? ll(bb.data.adds) : void 0,
+            removes: bb.data.removes ? ll(bb.data.removes) : void 0
           }))
-        } catch (dd) {
-          Wh.warn("could not compress event - will use uncompressed event", dd)
+        } catch (bb) {
+          Ml.warn("could not compress event - will use uncompressed event", bb)
         }
         return {
-          event: dd,
-          size: sX(dd)
+          event: bb,
+          size: cV(bb)
         }
       }
 
-      function Eh() {
-        return (Eh = Rd((function*(dd) {
+      function xl() {
+        return (xl = pb((function*(bb) {
           try {
-            if (2 === dd.type) return Yh(gh(dd, yield Qh(dd.data)));
-            if (3 === dd.type && 0 === dd.data.source) {
-              const [Od, md, Wd, Fd] = yield Promise.all([bh(dd.data.texts), bh(dd.data.attributes), bh(dd.data.removes), bh(dd.data.adds)]);
-              return Yh(wh(dd, {
-                texts: Od,
-                attributes: md,
-                removes: Wd,
-                adds: Fd
+            if (2 === bb.type) return ml(hl(bb, yield Ll(bb.data)));
+            if (3 === bb.type && 0 === bb.data.source) {
+              const [wb, Mb, eb, Hb] = yield Promise.all([Fl(bb.data.texts), Fl(bb.data.attributes), Fl(bb.data.removes), Fl(bb.data.adds)]);
+              return ml(zl(bb, {
+                texts: wb,
+                attributes: Mb,
+                removes: eb,
+                adds: Hb
               }))
             }
-            if (3 === dd.type && 8 === dd.data.source) {
-              const [Od, md] = yield Promise.all([dd.data.adds ? Qh(dd.data.adds) : void 0, dd.data.removes ? Qh(dd.data.removes) : void 0]);
-              return Yh(wh(dd, {
-                adds: Od,
-                removes: md
+            if (3 === bb.type && 8 === bb.data.source) {
+              const [wb, Mb] = yield Promise.all([bb.data.adds ? Ll(bb.data.adds) : void 0, bb.data.removes ? Ll(bb.data.removes) : void 0]);
+              return ml(zl(bb, {
+                adds: wb,
+                removes: Mb
               }))
             }
-          } catch (Od) {
-            return (dd => {
-              if (!dd || "object" != typeof dd) return !1;
-              const Od = "name" in dd ? String(dd.name) : "";
-              return (dd => !(!dd || "object" != typeof dd) && "NotReadableError" === ("name" in dd ? String(dd.name) : ""))(dd) || Od === EF
-            })(Od) && (Hh = !0), Wh.warn("could not compress event asynchronously - trying synchronous compression", Od), ah(dd)
+          } catch (wb) {
+            return (bb => {
+              if (!bb || "object" != typeof bb) return !1;
+              const wb = "name" in bb ? String(bb.name) : "";
+              return (bb => !(!bb || "object" != typeof bb) && "NotReadableError" === ("name" in bb ? String(bb.name) : ""))(bb) || wb === XH
+            })(wb) && (Cl = !0), Ml.warn("could not compress event asynchronously - trying synchronous compression", wb), Xl(bb)
           }
           return {
-            event: dd,
-            size: sX(dd)
+            event: bb,
+            size: cV(bb)
           }
         }))).apply(this, arguments)
       }
 
-      function Jh(dd, Od) {
-        return 5 === dd.type && dd.data.tag === Od
+      function jl(bb, wb) {
+        return 5 === bb.type && bb.data.tag === wb
       }
 
-      function Uh(dd) {
-        return Jh(dd, "sessionIdle")
+      function Kl(bb) {
+        return jl(bb, "sessionIdle")
       }
 
-      function xh(dd) {
-        return Jh(dd, "$session_ending")
+      function rl(bb) {
+        return jl(bb, "$session_ending")
       }
 
-      function Bh(dd) {
-        return Jh(dd, "$session_starting")
+      function Rl(bb) {
+        return jl(bb, "$session_starting")
       }
-      var Sh = class {
+      var Dl = class {
         get sessionId() {
           return this.Xt
         }
@@ -7657,73 +7657,73 @@ export const modules = {
           return this._instance.config.session_recording.session_idle_threshold_ms || 3e5
         }
         get ee() {
-          return UK(this._instance.get_property(jR), this.sessionId)
+          return Kg(this._instance.get_property(Gp), this.sessionId)
         }
         get zt() {
-          var dd;
-          const Od = null === (dd = this.ne) || void 0 === dd ? void 0 : dd.sampleRate;
-          return TF(Od) ? Od : null
+          var bb;
+          const wb = null === (bb = this.ne) || void 0 === bb ? void 0 : bb.sampleRate;
+          return FH(wb) ? wb : null
         }
         get ie() {
-          var dd, Od;
-          return null !== (dd = null === (Od = this.re) || void 0 === Od ? void 0 : Od.getMinimumDuration(this.sessionId)) && void 0 !== dd ? dd : null
+          var bb, wb;
+          return null !== (bb = null === (wb = this.re) || void 0 === wb ? void 0 : wb.getMinimumDuration(this.sessionId)) && void 0 !== bb ? bb : null
         }
-        constructor(dd, Od) {
-          this._instance = dd, this.oe = "/s/", this._forceAllowLocalhostNetworkCapture = !1, this.se = void 0, this.ae = !1, this.le = Date.now(), this.ue = !1, this.ce = [], this.de = "unknown", this.he = 0, this.fe = 0, this.ve = 0, this.pe = 0, this.me = 0, this.ge = !1, this.ye = !1, this.be = !1, this.we = !1, this.ke = !1, this._e = !1, this.Se = !1, this.xe = !1, this.Ce = !1, this.Ie = !1, this.Me = !1, this.Te = void 0, this.Re = void 0, this.Ee = !1, this.Ae = [], this.$e = 0, this.Oe = 0, this.Pe = !1, this.Le = void 0, this.Wt = void 0, this.De = void 0, this.Fe = void 0, this.Ne = void 0, this.qe = (dd, Od, md) => {
-            var Wd, Fd, Rd, Xd;
-            if (!md) return;
-            if (dd === this.Xt && Od === this.je) return;
-            const Kd = !md.noSessionId && (md.activityTimeout || md.sessionPastMaximumLength),
-              hd = this.Xt,
-              vd = this.je;
-            var Qd;
-            if (Kd && this.Vt("$session_ending", {
-                currentSessionId: hd,
-                currentWindowId: vd,
-                nextSessionId: dd,
-                nextWindowId: Od,
-                changeReason: md,
+        constructor(bb, wb) {
+          this._instance = bb, this.oe = "/s/", this._forceAllowLocalhostNetworkCapture = !1, this.se = void 0, this.ae = !1, this.le = Date.now(), this.ue = !1, this.ce = [], this.de = "unknown", this.he = 0, this.fe = 0, this.ve = 0, this.pe = 0, this.me = 0, this.ge = !1, this.ye = !1, this.be = !1, this.we = !1, this.ke = !1, this._e = !1, this.Se = !1, this.xe = !1, this.Ce = !1, this.Ie = !1, this.Me = !1, this.Te = void 0, this.Re = void 0, this.Ee = !1, this.Ae = [], this.$e = 0, this.Oe = 0, this.Pe = !1, this.Le = void 0, this.Wt = void 0, this.De = void 0, this.Fe = void 0, this.Ne = void 0, this.qe = (bb, wb, Mb) => {
+            var eb, Hb, pb, Vb;
+            if (!Mb) return;
+            if (bb === this.Xt && wb === this.je) return;
+            const gb = !Mb.noSessionId && (Mb.activityTimeout || Mb.sessionPastMaximumLength),
+              lb = this.Xt,
+              Lb = this.je;
+            var Ib;
+            if (gb && this.Vt("$session_ending", {
+                currentSessionId: lb,
+                currentWindowId: Lb,
+                nextSessionId: bb,
+                nextWindowId: wb,
+                changeReason: Mb,
                 lastActivityTimestamp: this.le,
-                flushed_size: null === (Qd = this.Be) || void 0 === Qd ? void 0 : Qd.currentTrackedSize(hd)
-              }), null === (Wd = this._instance.persistence) || void 0 === Wd || Wd.unregister("$debug_first_full_snapshot_timestamp"), null === (Fd = Xh()) || void 0 === Fd || null === (Rd = Fd.resetMaxDepthState) || void 0 === Rd || Rd.call(Fd), this.Vt("$session_id_change", {
-                sessionId: dd,
-                windowId: Od,
-                changeReason: md
-              }), this.ze(), !(!1 === this.de && this.isStarted || this.Xt === dd && this.je === Od)) {
-              const Od = this.Xt !== dd && !1 !== this.de;
-              this.de = "unknown", this.He(Od)
+                flushed_size: null === (Ib = this.Be) || void 0 === Ib ? void 0 : Ib.currentTrackedSize(lb)
+              }), null === (eb = this._instance.persistence) || void 0 === eb || eb.unregister("$debug_first_full_snapshot_timestamp"), null === (Hb = pl()) || void 0 === Hb || null === (pb = Hb.resetMaxDepthState) || void 0 === pb || pb.call(Hb), this.Vt("$session_id_change", {
+                sessionId: bb,
+                windowId: wb,
+                changeReason: Mb
+              }), this.ze(), !(!1 === this.de && this.isStarted || this.Xt === bb && this.je === wb)) {
+              const wb = this.Xt !== bb && !1 !== this.de;
+              this.de = "unknown", this.He(wb)
             }
-            Kd && this.Vt("$session_starting", {
-              previousSessionId: hd,
-              previousWindowId: vd,
-              nextSessionId: dd,
-              nextWindowId: Od,
-              changeReason: md,
+            gb && this.Vt("$session_starting", {
+              previousSessionId: lb,
+              previousWindowId: Lb,
+              nextSessionId: bb,
+              nextWindowId: wb,
+              changeReason: Mb,
               lastActivityTimestamp: this.le
-            }), null === (Xd = this.re) || void 0 === Xd || Xd.makeSamplingDecisions(dd)
+            }), null === (Vb = this.re) || void 0 === Vb || Vb.makeSamplingDecisions(bb)
           }, this.Ue = !1, this.We = () => {
-            var dd;
-            return (null === (dd = this._instance.persistence) || void 0 === dd ? void 0 : dd.props.$session_past_minimum_duration) === this.Xt
+            var bb;
+            return (null === (bb = this._instance.persistence) || void 0 === bb ? void 0 : bb.props.$session_past_minimum_duration) === this.Xt
           }, this.Ve = () => {
-            var dd, Od;
+            var bb, wb;
             if (0 === this.Rt.data.length) return null;
-            const md = null === (dd = this.Rt.data[0]) || void 0 === dd ? void 0 : dd.timestamp,
-              Wd = null === (Od = this.Rt.data[this.Rt.data.length - 1]) || void 0 === Od ? void 0 : Od.timestamp;
-            return TF(md) && TF(Wd) ? Wd - md : null
+            const Mb = null === (bb = this.Rt.data[0]) || void 0 === bb ? void 0 : bb.timestamp,
+              eb = null === (wb = this.Rt.data[this.Rt.data.length - 1]) || void 0 === wb ? void 0 : wb.timestamp;
+            return FH(Mb) && FH(eb) ? eb - Mb : null
           }, this.Ge = () => {
-            var dd, Od;
-            const md = this.ie;
-            if (!TF(md)) return !1;
-            if (null === (dd = null === (Od = this._instance.config.session_recording) || void 0 === Od ? void 0 : Od.strictMinimumDuration) || void 0 === dd || !dd) {
-              const dd = this.Qe;
-              return TF(dd) && dd >= 0 && md > dd
+            var bb, wb;
+            const Mb = this.ie;
+            if (!FH(Mb)) return !1;
+            if (null === (bb = null === (wb = this._instance.config.session_recording) || void 0 === wb ? void 0 : wb.strictMinimumDuration) || void 0 === bb || !bb) {
+              const bb = this.Qe;
+              return FH(bb) && bb >= 0 && Mb > bb
             }
             if (this.We()) return !1;
-            const Wd = this.Ve();
-            return !!yF(Wd) || md > Wd || (null === (Fd = this._instance.persistence) || void 0 === Fd || Fd.register({
+            const eb = this.Ve();
+            return !!CH(eb) || Mb > eb || (null === (Hb = this._instance.persistence) || void 0 === Hb || Hb.register({
               $session_past_minimum_duration: this.Xt
             }), !1);
-            var Fd
+            var Hb
           }, this.Ze = () => {
             "buffering" !== this.status ? (this.ge && this.ye && this.Je && (this.Ke(void 0), this.be && (this.be = !1, this.jt())), this.Xe(), this.Ye(!0)) : this.tn()
           }, this.en = () => {
@@ -7733,314 +7733,314 @@ export const modules = {
           }, this.rn = () => {
             this.Vt("browser online", {})
           }, this.sn = () => {
-            (null == FF ? void 0 : FF.visibilityState) && ("visible" === FF.visibilityState && (this.Je = !0), this.Vt("window " + FF.visibilityState, {}))
-          }, this.Je = null == Od || Od;
+            (null == MH ? void 0 : MH.visibilityState) && ("visible" === MH.visibilityState && (this.Je = !0), this.Vt("window " + MH.visibilityState, {}))
+          }, this.Je = null == wb || wb;
           const {
-            sessionId: md,
-            windowId: Wd,
-            sessionStartTimestamp: Fd
+            sessionId: Mb,
+            windowId: eb,
+            sessionStartTimestamp: Hb
           } = this.Yt.checkAndGetSessionAndWindowId();
-          this.Xt = md, this.je = Wd, this._sessionStartTimestamp = Fd, this.et = new EX(this._instance), this.Y = new aX(this._instance), this.tt = new JX(this._instance), this.Rt = this.tn(), this.an = "ph_replay_pending_buffer_" + JSON.stringify([this._instance.config.persistence_name || this._instance.config.token, this._instance.config.token]), this.Yt.sessionTimeoutMs > this.te || Wh.warn(`session_idle_threshold_ms (${this.te}) is greater than the session timeout (${this.Yt.sessionTimeoutMs}). Session will never be detected as idle`), this.Be = new bK(this._instance)
+          this.Xt = Mb, this.je = eb, this._sessionStartTimestamp = Hb, this.et = new xV(this._instance), this.Y = new XV(this._instance), this.tt = new jV(this._instance), this.Rt = this.tn(), this.an = "ph_replay_pending_buffer_" + JSON.stringify([this._instance.config.persistence_name || this._instance.config.token, this._instance.config.token]), this.Yt.sessionTimeoutMs > this.te || Ml.warn(`session_idle_threshold_ms (${this.te}) is greater than the session timeout (${this.Yt.sessionTimeoutMs}). Session will never be detected as idle`), this.Be = new Fg(this._instance)
         }
-        setDocumentWasEverVisible(dd) {
-          dd && (this.Je = !0)
+        setDocumentWasEverVisible(bb) {
+          bb && (this.Je = !0)
         }
         get ln() {
-          var dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd;
-          const vd = null === (dd = this.ne) || void 0 === dd ? void 0 : dd.masking,
-            Qd = {
-              maskAllInputs: null === (Od = this._instance.config.session_recording) || void 0 === Od ? void 0 : Od.maskAllInputs,
-              maskTextSelector: null === (md = this._instance.config.session_recording) || void 0 === md ? void 0 : md.maskTextSelector,
-              blockSelector: null === (Wd = this._instance.config.session_recording) || void 0 === Wd ? void 0 : Wd.blockSelector,
-              maskAllElementAttributes: null === (Fd = this._instance.config.session_recording) || void 0 === Fd ? void 0 : Fd.maskAllElementAttributes
+          var bb, wb, Mb, eb, Hb, pb, Vb, gb, lb;
+          const Lb = null === (bb = this.ne) || void 0 === bb ? void 0 : bb.masking,
+            Ib = {
+              maskAllInputs: null === (wb = this._instance.config.session_recording) || void 0 === wb ? void 0 : wb.maskAllInputs,
+              maskTextSelector: null === (Mb = this._instance.config.session_recording) || void 0 === Mb ? void 0 : Mb.maskTextSelector,
+              blockSelector: null === (eb = this._instance.config.session_recording) || void 0 === eb ? void 0 : eb.blockSelector,
+              maskAllElementAttributes: null === (Hb = this._instance.config.session_recording) || void 0 === Hb ? void 0 : Hb.maskAllElementAttributes
             },
-            td = null !== (Rd = null == Qd ? void 0 : Qd.maskAllInputs) && void 0 !== Rd ? Rd : null == vd ? void 0 : vd.maskAllInputs,
-            od = null !== (Xd = null == Qd ? void 0 : Qd.maskTextSelector) && void 0 !== Xd ? Xd : null == vd ? void 0 : vd.maskTextSelector,
-            Nd = null !== (Kd = null == Qd ? void 0 : Qd.blockSelector) && void 0 !== Kd ? Kd : null == vd ? void 0 : vd.blockSelector,
-            qd = null !== (hd = null == Qd ? void 0 : Qd.maskAllElementAttributes) && void 0 !== hd ? hd : null == vd ? void 0 : vd.maskAllElementAttributes;
-          return qF(td) && qF(od) && qF(Nd) && qF(qd) ? void 0 : {
-            maskAllInputs: null == td || td,
-            maskTextSelector: od,
-            blockSelector: Nd,
-            maskAllElementAttributes: qd
+            Ob = null !== (pb = null == Ib ? void 0 : Ib.maskAllInputs) && void 0 !== pb ? pb : null == Lb ? void 0 : Lb.maskAllInputs,
+            Ub = null !== (Vb = null == Ib ? void 0 : Ib.maskTextSelector) && void 0 !== Vb ? Vb : null == Lb ? void 0 : Lb.maskTextSelector,
+            tb = null !== (gb = null == Ib ? void 0 : Ib.blockSelector) && void 0 !== gb ? gb : null == Lb ? void 0 : Lb.blockSelector,
+            Cb = null !== (lb = null == Ib ? void 0 : Ib.maskAllElementAttributes) && void 0 !== lb ? lb : null == Lb ? void 0 : Lb.maskAllElementAttributes;
+          return UH(Ob) && UH(Ub) && UH(tb) && UH(Cb) ? void 0 : {
+            maskAllInputs: null == Ob || Ob,
+            maskTextSelector: Ub,
+            blockSelector: tb,
+            maskAllElementAttributes: Cb
           }
         }
         un() {
-          var dd;
+          var bb;
           if (this.xe) return;
-          const Od = null === (dd = this.ne) || void 0 === dd ? void 0 : dd.masking;
-          if (bF(Od)) return;
-          const md = this._instance.config.session_recording,
-            Wd = ["maskAllInputs", "maskTextSelector", "blockSelector", "maskAllElementAttributes"].filter((dd => {
-              const Wd = null == md ? void 0 : md[dd],
-                Fd = Od[dd];
-              return !qF(Wd) && Wd !== Fd
+          const wb = null === (bb = this.ne) || void 0 === bb ? void 0 : bb.masking;
+          if (EH(wb)) return;
+          const Mb = this._instance.config.session_recording,
+            eb = ["maskAllInputs", "maskTextSelector", "blockSelector", "maskAllElementAttributes"].filter((bb => {
+              const eb = null == Mb ? void 0 : Mb[bb],
+                Hb = wb[bb];
+              return !UH(eb) && eb !== Hb
             }));
-          0 !== Wd.length && (this.xe = !0, Wh.warn('Session recording masking is configured both in `posthog.init` and in your project settings, and they differ. The `session_recording` options in `posthog.init` take precedence, so the project ("Privacy and masking") setting is ignored for: ' + Wd.join(", ") + ". Remove these masking options from `posthog.init` to use the project setting instead. See https://posthog.com/docs/session-replay/privacy", {
+          0 !== eb.length && (this.xe = !0, Ml.warn('Session recording masking is configured both in `posthog.init` and in your project settings, and they differ. The `session_recording` options in `posthog.init` take precedence, so the project ("Privacy and masking") setting is ignored for: ' + eb.join(", ") + ". Remove these masking options from `posthog.init` to use the project setting instead. See https://posthog.com/docs/session-replay/privacy", {
             client: {
-              maskAllInputs: null == md ? void 0 : md.maskAllInputs,
-              maskTextSelector: null == md ? void 0 : md.maskTextSelector,
-              blockSelector: null == md ? void 0 : md.blockSelector,
-              maskAllElementAttributes: null == md ? void 0 : md.maskAllElementAttributes
+              maskAllInputs: null == Mb ? void 0 : Mb.maskAllInputs,
+              maskTextSelector: null == Mb ? void 0 : Mb.maskTextSelector,
+              blockSelector: null == Mb ? void 0 : Mb.blockSelector,
+              maskAllElementAttributes: null == Mb ? void 0 : Mb.maskAllElementAttributes
             },
-            project: Od
+            project: wb
           }))
         }
         get cn() {
-          var dd;
-          return gF(null === (dd = this._instance.config.session_recording.canvasCapture) || void 0 === dd ? void 0 : dd.resolutionScale, .1, 1, AF("canvas recording resolution scale"), 1)
+          var bb;
+          return mH(null === (bb = this._instance.config.session_recording.canvasCapture) || void 0 === bb ? void 0 : bb.resolutionScale, .1, 1, fH("canvas recording resolution scale"), 1)
         }
         get dn() {
-          var dd, Od, md, Wd, Fd, Rd, Xd;
-          const Kd = this._instance.config.session_recording.captureCanvas,
-            hd = null === (dd = this.ne) || void 0 === dd ? void 0 : dd.canvasRecording,
-            vd = null !== (Od = null !== (md = null == Kd ? void 0 : Kd.recordCanvas) && void 0 !== md ? md : null == hd ? void 0 : hd.enabled) && void 0 !== Od && Od,
-            Qd = null !== (Wd = null !== (Fd = null == Kd ? void 0 : Kd.canvasFps) && void 0 !== Fd ? Fd : null == hd ? void 0 : hd.fps) && void 0 !== Wd ? Wd : 4;
-          let td = null !== (Rd = null !== (Xd = null == Kd ? void 0 : Kd.canvasQuality) && void 0 !== Xd ? Xd : null == hd ? void 0 : hd.quality) && void 0 !== Rd ? Rd : .4;
-          if ("string" == typeof td) {
-            const dd = parseFloat(td);
-            td = isNaN(dd) ? .4 : dd
+          var bb, wb, Mb, eb, Hb, pb, Vb;
+          const gb = this._instance.config.session_recording.captureCanvas,
+            lb = null === (bb = this.ne) || void 0 === bb ? void 0 : bb.canvasRecording,
+            Lb = null !== (wb = null !== (Mb = null == gb ? void 0 : gb.recordCanvas) && void 0 !== Mb ? Mb : null == lb ? void 0 : lb.enabled) && void 0 !== wb && wb,
+            Ib = null !== (eb = null !== (Hb = null == gb ? void 0 : gb.canvasFps) && void 0 !== Hb ? Hb : null == lb ? void 0 : lb.fps) && void 0 !== eb ? eb : 4;
+          let Ob = null !== (pb = null !== (Vb = null == gb ? void 0 : gb.canvasQuality) && void 0 !== Vb ? Vb : null == lb ? void 0 : lb.quality) && void 0 !== pb ? pb : .4;
+          if ("string" == typeof Ob) {
+            const bb = parseFloat(Ob);
+            Ob = isNaN(bb) ? .4 : bb
           }
           return {
-            enabled: vd,
-            fps: gF(Qd, 0, 12, AF("canvas recording fps"), 4),
-            quality: gF(td, 0, 1, AF("canvas recording quality"), .4)
+            enabled: Lb,
+            fps: mH(Ib, 0, 12, fH("canvas recording fps"), 4),
+            quality: mH(Ob, 0, 1, fH("canvas recording quality"), .4)
           }
         }
         get hn() {
-          var dd;
-          const Od = !!(null === (dd = this.ne) || void 0 === dd ? void 0 : dd.consoleLogRecordingEnabled),
-            md = this._instance.config.enable_recording_console_log;
-          return null != md ? md : Od
+          var bb;
+          const wb = !!(null === (bb = this.ne) || void 0 === bb ? void 0 : bb.consoleLogRecordingEnabled),
+            Mb = this._instance.config.enable_recording_console_log;
+          return null != Mb ? Mb : wb
         }
-        get Ot() {
-          var dd, Od, md;
-          const Wd = null === (dd = this.ne) || void 0 === dd ? void 0 : dd.networkPayloadCapture,
-            Fd = {
-              recordHeaders: null === (Od = this._instance.config.session_recording) || void 0 === Od ? void 0 : Od.recordHeaders,
-              recordBody: null === (md = this._instance.config.session_recording) || void 0 === md ? void 0 : md.recordBody
+        get kI() {
+          var bb, wb, Mb;
+          const eb = null === (bb = this.ne) || void 0 === bb ? void 0 : bb.networkPayloadCapture,
+            Hb = {
+              recordHeaders: null === (wb = this._instance.config.session_recording) || void 0 === wb ? void 0 : wb.recordHeaders,
+              recordBody: null === (Mb = this._instance.config.session_recording) || void 0 === Mb ? void 0 : Mb.recordBody
             },
-            Rd = (null == Fd ? void 0 : Fd.recordHeaders) || (null == Wd ? void 0 : Wd.recordHeaders),
-            Xd = (null == Fd ? void 0 : Fd.recordBody) || (null == Wd ? void 0 : Wd.recordBody),
-            Kd = mh(this._instance.config.capture_performance),
-            hd = mh(null == Wd ? void 0 : Wd.capturePerformance),
-            vd = !!(pF(Kd) ? Kd : hd);
-          return Rd || Xd || vd ? {
-            recordHeaders: Rd,
-            recordBody: Xd,
-            recordPerformance: vd
+            pb = (null == Hb ? void 0 : Hb.recordHeaders) || (null == eb ? void 0 : eb.recordHeaders),
+            Vb = (null == Hb ? void 0 : Hb.recordBody) || (null == eb ? void 0 : eb.recordBody),
+            gb = wl(this._instance.config.capture_performance),
+            lb = wl(null == eb ? void 0 : eb.capturePerformance),
+            Lb = !!(BH(gb) ? gb : lb);
+          return pb || Vb || Lb ? {
+            recordHeaders: pb,
+            recordBody: Vb,
+            recordPerformance: Lb
           } : void 0
         }
         vn() {
-          var dd, Od;
-          const md = [],
-            Fd = null === (dd = KF.__PosthogExtensions__) || void 0 === dd || null === (dd = dd.rrwebPlugins) || void 0 === dd ? void 0 : dd.getRecordConsolePlugin;
-          Fd && this.hn && md.push(Fd());
-          const Rd = null === (Od = KF.__PosthogExtensions__) || void 0 === Od || null === (Od = Od.rrwebPlugins) || void 0 === Od ? void 0 : Od.getRecordNetworkPlugin;
-          if (this.Ot && oF(Rd))
-            if (!nF.includes(RF.hostname) || this._forceAllowLocalhostNetworkCapture) {
-              const dd = oF(this._instance.requestRouter.isIngestionEndpoint) ? this._instance.requestRouter.isIngestionEndpoint.bind(this._instance.requestRouter) : void 0;
-              md.push(Rd(Wd(Wd({}, ((dd, Od, md) => {
-                const Fd = {
-                    payloadSizeLimitBytes: mR.payloadSizeLimitBytes,
-                    performanceEntryTypeToObserve: [...mR.performanceEntryTypeToObserve],
-                    payloadHostDenyList: [...Od.payloadHostDenyList || [], ...mR.payloadHostDenyList]
+          var bb, wb;
+          const Mb = [],
+            Hb = null === (bb = pH.__PosthogExtensions__) || void 0 === bb || null === (bb = bb.rrwebPlugins) || void 0 === bb ? void 0 : bb.getRecordConsolePlugin;
+          Hb && this.hn && Mb.push(Hb());
+          const pb = null === (wb = pH.__PosthogExtensions__) || void 0 === wb || null === (wb = wb.rrwebPlugins) || void 0 === wb ? void 0 : wb.getRecordNetworkPlugin;
+          if (this.kI && IH(pb))
+            if (!JH.includes(eH.hostname) || this._forceAllowLocalhostNetworkCapture) {
+              const bb = IH(this._instance.requestRouter.isIngestionEndpoint) ? this._instance.requestRouter.isIngestionEndpoint.bind(this._instance.requestRouter) : void 0;
+              Mb.push(pb(eb(eb({}, ((bb, wb, Mb) => {
+                const Hb = {
+                    payloadSizeLimitBytes: bp.payloadSizeLimitBytes,
+                    performanceEntryTypeToObserve: [...bp.performanceEntryTypeToObserve],
+                    payloadHostDenyList: [...wb.payloadHostDenyList || [], ...bp.payloadHostDenyList]
                   },
-                  Rd = !1 !== dd.session_recording.recordHeaders && Od.recordHeaders,
-                  Xd = !1 !== dd.session_recording.recordBody && Od.recordBody,
-                  Kd = !1 !== dd.capture_performance && Od.recordPerformance,
-                  hd = (dd => {
-                    const Od = OR(dd);
-                    return dd => ((null == dd ? void 0 : dd.requestBody) && (dd.requestBody = hR(dd.requestBody, dd.requestHeaders, Od, "Request")), (null == dd ? void 0 : dd.responseBody) && (dd.responseBody = hR(dd.responseBody, dd.responseHeaders, Od, "Response")), dd)
-                  })(Fd),
-                  vd = Od => {
-                    return hd(((dd, Od, md) => {
-                      var Wd;
-                      if (null == md ? void 0 : md(dd.name)) return;
-                      const Fd = LF(dd.name);
-                      let Rd = 0 === Od.indexOf("http") ? null === (Wd = LF(Od)) || void 0 === Wd ? void 0 : Wd.pathname : Od;
-                      "/" === Rd && (Rd = "");
-                      const Xd = null == Fd ? void 0 : Fd.pathname.replace(Rd || "", "");
-                      return Fd && Xd && KR.some((dd => 0 === Xd.indexOf(dd))) ? void 0 : dd
-                    })((XR((Wd = Od).requestHeaders), XR(Wd.responseHeaders), Wd), dd.api_host, md));
-                    var Wd
+                  pb = !1 !== bb.session_recording.recordHeaders && wb.recordHeaders,
+                  Vb = !1 !== bb.session_recording.recordBody && wb.recordBody,
+                  gb = !1 !== bb.capture_performance && wb.recordPerformance,
+                  lb = (bb => {
+                    const wb = kH(bb);
+                    return bb => ((null == bb ? void 0 : bb.requestBody) && (bb.requestBody = Vp(bb.requestBody, bb.requestHeaders, wb, "Request")), (null == bb ? void 0 : bb.responseBody) && (bb.responseBody = Vp(bb.responseBody, bb.responseHeaders, wb, "Response")), bb)
+                  })(Hb),
+                  Lb = wb => {
+                    return lb(((bb, wb, Mb) => {
+                      var eb;
+                      if (null == Mb ? void 0 : Mb(bb.name)) return;
+                      const Hb = SH(bb.name);
+                      let pb = 0 === wb.indexOf("http") ? null === (eb = SH(wb)) || void 0 === eb ? void 0 : eb.pathname : wb;
+                      "/" === pb && (pb = "");
+                      const Vb = null == Hb ? void 0 : Hb.pathname.replace(pb || "", "");
+                      return Hb && Vb && pp.some((bb => 0 === Vb.indexOf(bb))) ? void 0 : bb
+                    })((Hp((eb = wb).requestHeaders), Hp(eb.responseHeaders), eb), bb.api_host, Mb));
+                    var eb
                   },
-                  Qd = oF(dd.session_recording.maskNetworkRequestFn);
-                return Qd && oF(dd.session_recording.maskCapturedNetworkRequestFn) ? iF.warn("Both `maskNetworkRequestFn` and `maskCapturedNetworkRequestFn` are defined. `maskNetworkRequestFn` will be ignored.") : Qd && (dd.session_recording.maskCapturedNetworkRequestFn = Od => {
-                  const md = dd.session_recording.maskNetworkRequestFn({
-                    url: Od.name
+                  Ib = IH(bb.session_recording.maskNetworkRequestFn);
+                return Ib && IH(bb.session_recording.maskCapturedNetworkRequestFn) ? ZH.warn("Both `maskNetworkRequestFn` and `maskCapturedNetworkRequestFn` are defined. `maskNetworkRequestFn` will be ignored.") : Ib && (bb.session_recording.maskCapturedNetworkRequestFn = wb => {
+                  const Mb = bb.session_recording.maskNetworkRequestFn({
+                    url: wb.name
                   });
-                  return !md && Od.isInitial ? md : Wd(Wd({}, Od), {}, {
-                    name: null == md ? void 0 : md.url
+                  return !Mb && wb.isInitial ? Mb : eb(eb({}, wb), {}, {
+                    name: null == Mb ? void 0 : Mb.url
                   })
-                }), Fd.maskRequestFn = oF(dd.session_recording.maskCapturedNetworkRequestFn) ? Od => {
-                  var md, Wd;
-                  const Fd = vd(Od);
-                  if (!Fd) return;
-                  const Rd = Fd.isInitial ? {
+                }), Hb.maskRequestFn = IH(bb.session_recording.maskCapturedNetworkRequestFn) ? wb => {
+                  var Mb, eb;
+                  const Hb = Lb(wb);
+                  if (!Hb) return;
+                  const pb = Hb.isInitial ? {
                       name: "",
-                      entryType: Fd.entryType,
-                      startTime: Fd.startTime,
-                      duration: Fd.duration,
-                      endTime: Fd.endTime,
-                      timeOrigin: Fd.timeOrigin,
-                      timestamp: Fd.timestamp,
+                      entryType: Hb.entryType,
+                      startTime: Hb.startTime,
+                      duration: Hb.duration,
+                      endTime: Hb.endTime,
+                      timeOrigin: Hb.timeOrigin,
+                      timestamp: Hb.timestamp,
                       isInitial: !0
                     } : void 0,
-                    Xd = null === (md = (Wd = dd.session_recording).maskCapturedNetworkRequestFn) || void 0 === md ? void 0 : md.call(Wd, Fd);
-                  return bF(Xd) && Rd ? (QR.add(Rd), Rd) : null != Xd ? Xd : void 0
-                } : dd => function(dd) {
-                  if (!qF(dd)) return dd.requestBody = vR(dd.requestBody, "Request"), dd.responseBody = vR(dd.responseBody, "Response"), dd
-                }(vd(dd)), Wd(Wd(Wd({}, mR), Fd), {}, {
-                  recordHeaders: Rd,
-                  recordBody: Xd,
-                  recordPerformance: Kd,
-                  recordInitialRequests: Kd,
-                  streamNetworkBody: !0 === dd.session_recording.streamNetworkBody
+                    Vb = null === (Mb = (eb = bb.session_recording).maskCapturedNetworkRequestFn) || void 0 === Mb ? void 0 : Mb.call(eb, Hb);
+                  return EH(Vb) && pb ? (lp.add(pb), pb) : null != Vb ? Vb : void 0
+                } : bb => function(bb) {
+                  if (!UH(bb)) return bb.requestBody = gp(bb.requestBody, "Request"), bb.responseBody = gp(bb.responseBody, "Response"), bb
+                }(Lb(bb)), eb(eb(eb({}, bp), Hb), {}, {
+                  recordHeaders: pb,
+                  recordBody: Vb,
+                  recordPerformance: gb,
+                  recordInitialRequests: gb,
+                  streamNetworkBody: !0 === bb.session_recording.streamNetworkBody
                 })
-              })(this._instance.config, this.Ot, dd)), {}, {
+              })(this._instance.config, this.kI, bb)), {}, {
                 captureFetchSynchronously: !0 === this._instance.config.__preview_replay_sync_fetch
               })))
-            } else Wh.info("NetworkCapture not started because we are on localhost.");
-          return md
+            } else Ml.info("NetworkCapture not started because we are on localhost.");
+          return Mb
         }
-        pn(dd) {
-          return this._instance.config.disable_capture_url_hashes ? aF(dd) : dd
+        pn(bb) {
+          return this._instance.config.disable_capture_url_hashes ? zH(bb) : bb
         }
-        mn(dd) {
-          const Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? aF(dd) : this.pn(dd),
-            md = this._instance.config.mask_personal_data_properties ? [...SK, ...this._instance.config.custom_personal_data_properties || []] : [];
-          return this.gn(function(dd, Od) {
-            if (!dd || !Od || !Od.length) return dd;
-            const md = dd.split("#"),
-              Wd = md[1],
-              Fd = (md[0] || "").split("?"),
-              Rd = Fd[1],
-              Xd = Fd[0],
-              Kd = (Rd || "").split("&"),
-              hd = [];
-            for (let Qd = 0; Kd.length > Qd; Qd++) {
-              const dd = Kd[Qd].split("=");
-              tF(dd) && (Od.includes(dd[0]) ? hd.push(dd[0] + "=<masked>") : hd.push(Kd[Qd]))
+        mn(bb) {
+          const wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? zH(bb) : this.pn(bb),
+            Mb = this._instance.config.mask_personal_data_properties ? [...Dg, ...this._instance.config.custom_personal_data_properties || []] : [];
+          return this.gn(function(bb, wb) {
+            if (!bb || !wb || !wb.length) return bb;
+            const Mb = bb.split("#"),
+              eb = Mb[1],
+              Hb = (Mb[0] || "").split("?"),
+              pb = Hb[1],
+              Vb = Hb[0],
+              gb = (pb || "").split("&"),
+              lb = [];
+            for (let Ib = 0; gb.length > Ib; Ib++) {
+              const bb = gb[Ib].split("=");
+              LH(bb) && (wb.includes(bb[0]) ? lb.push(bb[0] + "=<masked>") : lb.push(gb[Ib]))
             }
-            let vd = Xd;
-            return null != Rd && (vd += "?" + hd.join("&")), null != Wd && (vd += "#" + Wd), vd
-          }(Od, md))
+            let Lb = Vb;
+            return null != pb && (Lb += "?" + lb.join("&")), null != eb && (Lb += "#" + eb), Lb
+          }(wb, Mb))
         }
-        gn(dd) {
-          const Od = this._instance.config.session_recording;
-          if (Od.maskCapturedNetworkRequestFn) {
-            var md;
-            const Wd = Od.maskCapturedNetworkRequestFn({
-              name: dd
+        gn(bb) {
+          const wb = this._instance.config.session_recording;
+          if (wb.maskCapturedNetworkRequestFn) {
+            var Mb;
+            const eb = wb.maskCapturedNetworkRequestFn({
+              name: bb
             });
-            return null !== (md = null == Wd ? void 0 : Wd.name) && void 0 !== md ? md : null == Wd ? void 0 : Wd.url
+            return null !== (Mb = null == eb ? void 0 : eb.name) && void 0 !== Mb ? Mb : null == eb ? void 0 : eb.url
           }
-          if (Od.maskNetworkRequestFn) {
-            const md = Od.maskNetworkRequestFn({
-              url: dd
+          if (wb.maskNetworkRequestFn) {
+            const Mb = wb.maskNetworkRequestFn({
+              url: bb
             });
-            return null == md ? void 0 : md.url
+            return null == Mb ? void 0 : Mb.url
           }
-          return dd
+          return bb
         }
-        yn(dd) {
+        yn(bb) {
           try {
-            return dd.rrwebMethod(), !0
-          } catch (Od) {
+            return bb.rrwebMethod(), !0
+          } catch (wb) {
             return 10 > this.ce.length ? this.ce.push({
-              enqueuedAt: dd.enqueuedAt || Date.now(),
-              attempt: dd.attempt + 1,
-              rrwebMethod: dd.rrwebMethod
-            }) : Wh.warn("could not emit queued rrweb event.", Od, dd), !1
+              enqueuedAt: bb.enqueuedAt || Date.now(),
+              attempt: bb.attempt + 1,
+              rrwebMethod: bb.rrwebMethod
+            }) : Ml.warn("could not emit queued rrweb event.", wb, bb), !1
           }
         }
-        Vt(dd, Od) {
-          return this.yn(Rh((() => Kh().addCustomEvent(dd, Od))))
+        Vt(bb, wb) {
+          return this.yn(Hl((() => Vl().addCustomEvent(bb, wb))))
         }
         bn() {
-          var dd;
-          return this.ae && !0 === (null === (dd = this._instance.config.session_recording) || void 0 === dd ? void 0 : dd.captureJsonLd) && !this.Y.urlBlocked && !0 !== this.de
+          var bb;
+          return this.ae && !0 === (null === (bb = this._instance.config.session_recording) || void 0 === bb ? void 0 : bb.captureJsonLd) && !this.Y.urlBlocked && !0 !== this.de
         }
-        wn(dd) {
+        wn(bb) {
           if (!this.bn()) return !1;
           try {
-            const Od = Kh();
-            return !!Od && (Od.addCustomEvent("$json_ld", dd), this.bn())
-          } catch (dd) {
+            const wb = Vl();
+            return !!wb && (wb.addCustomEvent("$json_ld", bb), this.bn())
+          } catch (bb) {
             return !1
           }
         }
         kn() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
           Promise.resolve().then((() => {
-            var Od;
-            return null === (Od = this._n) || void 0 === Od ? void 0 : Od.scan(dd)
+            var wb;
+            return null === (wb = this._n) || void 0 === wb ? void 0 : wb.scan(bb)
           }))
         }
         Sn() {
           try {
-            if (this._instance.config.capture_pageview || !mF) return;
-            const dd = new URL(mF.location.href),
-              Od = this.mn(dd.origin + dd.pathname + dd.search);
-            this.xn !== Od && (this.xn = Od, this.Vt("$url_changed", {
-              href: Od
+            if (this._instance.config.capture_pageview || !bH) return;
+            const bb = new URL(bH.location.href),
+              wb = this.mn(bb.origin + bb.pathname + bb.search);
+            this.xn !== wb && (this.xn = wb, this.Vt("$url_changed", {
+              href: wb
             }))
-          } catch (dd) {}
+          } catch (bb) {}
         }
         Cn() {
           if (this.ce.length) {
-            const dd = [...this.ce];
-            this.ce = [], dd.forEach((dd => {
-              Date.now() - dd.enqueuedAt > 2e3 || this.yn(dd)
+            const bb = [...this.ce];
+            this.ce = [], bb.forEach((bb => {
+              Date.now() - bb.enqueuedAt > 2e3 || this.yn(bb)
             }))
           }
         }
         jt() {
-          return this.yn(Rh((() => Kh().takeFullSnapshot())))
+          return this.yn(Hl((() => Vl().takeFullSnapshot())))
         }
         get In() {
-          var dd, Od, md;
-          if ((null === (dd = this.re) || void 0 === dd ? void 0 : dd.hasPendingTriggers(this.sessionId)) && !["sampled", "active"].includes(this.status)) {
-            var Wd;
-            const dd = null === (Wd = this._instance.config.session_recording) || void 0 === Wd ? void 0 : Wd.trigger_pending_buffer_interval_millis;
-            return TF(dd) && Number.isFinite(dd) && dd >= 1e3 && 36e5 >= dd ? dd : 6e4
+          var bb, wb, Mb;
+          if ((null === (bb = this.re) || void 0 === bb ? void 0 : bb.hasPendingTriggers(this.sessionId)) && !["sampled", "active"].includes(this.status)) {
+            var eb;
+            const bb = null === (eb = this._instance.config.session_recording) || void 0 === eb ? void 0 : eb.trigger_pending_buffer_interval_millis;
+            return FH(bb) && Number.isFinite(bb) && bb >= 1e3 && 36e5 >= bb ? bb : 6e4
           }
-          return null !== (Od = null === (md = this._instance.config.session_recording) || void 0 === md ? void 0 : md.full_snapshot_interval_millis) && void 0 !== Od ? Od : 3e5
+          return null !== (wb = null === (Mb = this._instance.config.session_recording) || void 0 === Mb ? void 0 : Mb.full_snapshot_interval_millis) && void 0 !== wb ? wb : 3e5
         }
         Mn() {
           if (this.Tn && clearInterval(this.Tn), !0 === this.de) return;
-          const dd = this.In;
-          dd && (this.Tn = setInterval((() => {
+          const bb = this.In;
+          bb && (this.Tn = setInterval((() => {
             this.jt()
-          }), dd))
+          }), bb))
         }
-        Bt(dd) {
-          "event" === dd && this.Rn(), !this.Y.urlBlocked && ["sampled", "active"].includes(this.status) && this.Mn()
+        Bt(bb) {
+          "event" === bb && this.Rn(), !this.Y.urlBlocked && ["sampled", "active"].includes(this.status) && this.Mn()
         }
         En() {
-          var dd;
-          this.Y.urlBlocked || (this.Y.urlBlocked = !0, null === (dd = this._n) || void 0 === dd || dd.scan(), clearInterval(this.Tn), Wh.info("recording paused due to URL blocker"), this.Vt("recording paused", {
+          var bb;
+          this.Y.urlBlocked || (this.Y.urlBlocked = !0, null === (bb = this._n) || void 0 === bb || bb.scan(), clearInterval(this.Tn), Ml.info("recording paused due to URL blocker"), this.Vt("recording paused", {
             reason: "url blocker"
           }))
         }
         An() {
-          var dd;
-          this.Y.urlBlocked && (null === (dd = this._n) || void 0 === dd || dd.scan(), this.Y.urlBlocked = !1, this.jt(), this.kn(), this.Mn(), this.Vt("recording resumed", {
+          var bb;
+          this.Y.urlBlocked && (null === (bb = this._n) || void 0 === bb || bb.scan(), this.Y.urlBlocked = !1, this.jt(), this.kn(), this.Mn(), this.Vt("recording resumed", {
             reason: "left blocked url"
-          }), Wh.info("recording resumed"))
+          }), Ml.info("recording resumed"))
         }
-        $n(dd, Od) {
-          var md;
-          if ("event" === dd && this.Rn(), !this.ue && (null === (md = this.re) || void 0 === md ? void 0 : md.hasPendingTriggers(this.sessionId))) {
+        $n(bb, wb) {
+          var Mb;
+          if ("event" === bb && this.Rn(), !this.ue && (null === (Mb = this.re) || void 0 === Mb ? void 0 : Mb.hasPendingTriggers(this.sessionId))) {
             this.ue = !0;
             try {
-              var Wd, Fd;
-              const md = "url" === dd ? DR : eR;
-              null === (Wd = this._instance.persistence) || void 0 === Wd || Wd.register({
-                [md]: this.sessionId
-              }), null === (Fd = this.re) || void 0 === Fd || Fd.updateActiveTriggers(this.sessionId), this.Bt(), this.Ye(), this.qt(dd + "_trigger_matched", {
-                ["url" === dd ? "matchedUrl" : "matchedEvent"]: Od
+              var eb, Hb;
+              const Mb = "url" === bb ? qp : ap;
+              null === (eb = this._instance.persistence) || void 0 === eb || eb.register({
+                [Mb]: this.sessionId
+              }), null === (Hb = this.re) || void 0 === Hb || Hb.updateActiveTriggers(this.sessionId), this.Bt(), this.Ye(), this.qt(bb + "_trigger_matched", {
+                ["url" === bb ? "matchedUrl" : "matchedEvent"]: wb
               })
             } finally {
               this.ue = !1
@@ -8051,95 +8051,95 @@ export const modules = {
           return !!this.se
         }
         get ne() {
-          const dd = this._instance.get_property("$session_recording_remote_config");
-          if (!dd) return;
-          let Od;
+          const bb = this._instance.get_property("$session_recording_remote_config");
+          if (!bb) return;
+          let wb;
           try {
-            Od = NF(dd) ? dd : JSON.parse(dd)
-          } catch (dd) {
-            return void Wh.warn("persisted remote config for session recording is invalid and will be ignored", dd)
+            wb = OH(bb) ? bb : JSON.parse(bb)
+          } catch (bb) {
+            return void Ml.warn("persisted remote config for session recording is invalid and will be ignored", bb)
           }
           if (!this.isStarted && !this.Ue) {
-            var md;
-            const Wd = null !== (md = Od.cache_timestamp) && void 0 !== md ? md : Date.now();
-            if (Date.now() - Wd > 36e5) return void Wh.info("persisted remote config for session recording is stale and will be ignored", {
-              cacheTimestamp: Wd,
-              persistedConfig: dd
+            var Mb;
+            const eb = null !== (Mb = wb.cache_timestamp) && void 0 !== Mb ? Mb : Date.now();
+            if (Date.now() - eb > 36e5) return void Ml.info("persisted remote config for session recording is stale and will be ignored", {
+              cacheTimestamp: eb,
+              persistedConfig: bb
             })
           }
-          return Od
+          return wb
         }
-        On(dd, Od, md) {
-          this._instance.get_property(dd) && (Od(), md())
+        On(bb, wb, Mb) {
+          this._instance.get_property(bb) && (wb(), Mb())
         }
-        start(dd) {
-          var Od, md;
-          const Wd = this.ne;
-          if (!Wd) return void Wh.info("remote config must be stored in persistence before recording can start");
+        start(bb) {
+          var wb, Mb;
+          const eb = this.ne;
+          if (!eb) return void Ml.info("remote config must be stored in persistence before recording can start");
           if (!this.isStarted) {
-            const dd = !1 !== this.de && !this.we;
-            this.Ke(dd ? "no_interaction_since_recording_started" : void 0), this.we = !1, this.ye = dd, this.be = !1
+            const bb = !1 !== this.de && !this.we;
+            this.Ke(bb ? "no_interaction_since_recording_started" : void 0), this.we = !1, this.ye = bb, this.be = !1
           }
           this.Pe && (this.Pn(), this.tn());
           const {
-            sessionId: Fd,
-            windowId: Rd,
-            sessionStartTimestamp: Xd
+            sessionId: Hb,
+            windowId: pb,
+            sessionStartTimestamp: Vb
           } = this.Yt.checkAndGetSessionAndWindowId();
-          this.Xt = Fd, this.je = Rd, this._sessionStartTimestamp = Xd, this.Ln(), null === (Od = this._instance.persistence) || void 0 === Od || Od.unregister("$debug_first_full_snapshot_timestamp"), (null == Wd ? void 0 : Wd.endpoint) && (this.oe = null == Wd ? void 0 : Wd.endpoint), this.re = 2 === (null == Wd ? void 0 : Wd.version) && (null == Wd ? void 0 : Wd.triggerGroups) && Wd.triggerGroups.length > 0 ? new BK(this._instance, this.Y, this.qt.bind(this), this.Vt.bind(this), this.Bt.bind(this)) : new xK(this._instance, this.Y, this.tt, this.et, this.qt.bind(this), this.jt.bind(this), this.Bt.bind(this)), this.re.onRemoteConfig(Wd), null === (md = this.Wt) || void 0 === md || md.call(this), this.Wt = this.re.setupEventTriggerListeners(this._instance.on.bind(this._instance, "eventCaptured"), this.sessionId, ((dd, Od) => this.$n(dd, Od))), this.On(LR, (() => {
+          this.Xt = Hb, this.je = pb, this._sessionStartTimestamp = Vb, this.Ln(), null === (wb = this._instance.persistence) || void 0 === wb || wb.unregister("$debug_first_full_snapshot_timestamp"), (null == eb ? void 0 : eb.endpoint) && (this.oe = null == eb ? void 0 : eb.endpoint), this.re = 2 === (null == eb ? void 0 : eb.version) && (null == eb ? void 0 : eb.triggerGroups) && eb.triggerGroups.length > 0 ? new Rg(this._instance, this.Y, this.qt.bind(this), this.Vt.bind(this), this.Bt.bind(this)) : new rg(this._instance, this.Y, this.tt, this.et, this.qt.bind(this), this.jt.bind(this), this.Bt.bind(this)), this.re.onRemoteConfig(eb), null === (Mb = this.Wt) || void 0 === Mb || Mb.call(this), this.Wt = this.re.setupEventTriggerListeners(this._instance.on.bind(this._instance, "eventCaptured"), this.sessionId, ((bb, wb) => this.$n(bb, wb))), this.On(Sp, (() => {
             this.overrideSampling()
           }), (() => {
-            var dd;
-            return null === (dd = this._instance.persistence) || void 0 === dd ? void 0 : dd.unregister(LR)
-          })), this.On(PR, (() => {
+            var bb;
+            return null === (bb = this._instance.persistence) || void 0 === bb ? void 0 : bb.unregister(Sp)
+          })), this.On(Np, (() => {
             this.overrideLinkedFlag()
           }), (() => {
-            var dd;
-            return null === (dd = this._instance.persistence) || void 0 === dd ? void 0 : dd.unregister(PR)
-          })), this.On(cR, (() => {
+            var bb;
+            return null === (bb = this._instance.persistence) || void 0 === bb ? void 0 : bb.unregister(Np)
+          })), this.On(Qp, (() => {
             this.overrideTrigger("event")
           }), (() => {
-            var dd;
-            return null === (dd = this._instance.persistence) || void 0 === dd ? void 0 : dd.unregister(cR)
-          })), this.On(zR, (() => {
+            var bb;
+            return null === (bb = this._instance.persistence) || void 0 === bb ? void 0 : bb.unregister(Qp)
+          })), this.On(vp, (() => {
             this.overrideTrigger("url")
           }), (() => {
-            var dd;
-            return null === (dd = this._instance.persistence) || void 0 === dd ? void 0 : dd.unregister(zR)
-          })), this.re.makeSamplingDecisions(this.sessionId), this.Dn(), this.ke || (GF(mF, "beforeunload", this.Ze), GF(mF, "pagehide", this.en), GF(mF, "offline", this.nn), GF(mF, "online", this.rn), GF(FF, "visibilitychange", this.sn), !this.De && oF(this.Yt.onSessionId) && (this.De = this.Yt.onSessionId(this.qe)), !this.Fe && oF(this.Yt.on) ? this.Fe = this.Yt.on("forcedIdleReset", (() => {
-            this.ze(), this.de = "unknown", this.stop(), this.Ne = this.Yt.onSessionId(((dd, Od, md) => {
-              var Wd;
-              null === (Wd = this.Ne) || void 0 === Wd || Wd.call(this), this.Ne = void 0, this.qe(dd, Od, md)
+            var bb;
+            return null === (bb = this._instance.persistence) || void 0 === bb ? void 0 : bb.unregister(vp)
+          })), this.re.makeSamplingDecisions(this.sessionId), this.Dn(), this.ke || (WH(bH, "beforeunload", this.Ze), WH(bH, "pagehide", this.en), WH(bH, "offline", this.nn), WH(bH, "online", this.rn), WH(MH, "visibilitychange", this.sn), !this.De && IH(this.Yt.onSessionId) && (this.De = this.Yt.onSessionId(this.qe)), !this.Fe && IH(this.Yt.on) ? this.Fe = this.Yt.on("forcedIdleReset", (() => {
+            this.ze(), this.de = "unknown", this.stop(), this.Ne = this.Yt.onSessionId(((bb, wb, Mb) => {
+              var eb;
+              null === (eb = this.Ne) || void 0 === eb || eb.call(this), this.Ne = void 0, this.qe(bb, wb, Mb)
             }))
-          })) : oF(this.Yt.on) || Wh.warn("bundled core has no SessionIdManager.on (requires posthog-js >= 1.268.6); recording will start but skip forced-idle-reset handling"), bF(this.Le) && (this.Le = this._instance.on("eventCaptured", (dd => {
+          })) : IH(this.Yt.on) || Ml.warn("bundled core has no SessionIdManager.on (requires posthog-js >= 1.268.6); recording will start but skip forced-idle-reset handling"), EH(this.Le) && (this.Le = this._instance.on("eventCaptured", (bb => {
             try {
-              if ("$pageview" === dd.event) {
-                const Od = (null == dd ? void 0 : dd.properties.$current_url) ? this.mn(dd.properties.$current_url) : "";
-                if (!Od) return;
+              if ("$pageview" === bb.event) {
+                const wb = (null == bb ? void 0 : bb.properties.$current_url) ? this.mn(bb.properties.$current_url) : "";
+                if (!wb) return;
                 this.Vt("$pageview", {
-                  href: Od
+                  href: wb
                 })
               }
-            } catch (dd) {
-              Wh.error("Could not add $pageview to rrweb session", dd)
+            } catch (bb) {
+              Ml.error("Could not add $pageview to rrweb session", bb)
             }
-          }))), "active" === this.status && this.qt(dd || "recording_initialized"))
+          }))), "active" === this.status && this.qt(bb || "recording_initialized"))
         }
         Fn() {
-          var dd, Od, md, Wd, Fd, Rd;
-          null == mF || mF.removeEventListener("beforeunload", this.Ze), null == mF || mF.removeEventListener("pagehide", this.en), null == mF || mF.removeEventListener("offline", this.nn), null == mF || mF.removeEventListener("online", this.rn), null == FF || FF.removeEventListener("visibilitychange", this.sn), clearInterval(this.Tn), this.Nn(), null === (dd = this.Le) || void 0 === dd || dd.call(this), this.Le = void 0, null === (Od = this.Wt) || void 0 === Od || Od.call(this), this.Wt = void 0, null === (md = this.De) || void 0 === md || md.call(this), this.De = void 0, null === (Wd = this.Fe) || void 0 === Wd || Wd.call(this), this.Fe = void 0, null === (Fd = this.Ne) || void 0 === Fd || Fd.call(this), this.Ne = void 0, null === (Rd = this.re) || void 0 === Rd || Rd.stop(), this.qn(), this.Pn()
+          var bb, wb, Mb, eb, Hb, pb;
+          null == bH || bH.removeEventListener("beforeunload", this.Ze), null == bH || bH.removeEventListener("pagehide", this.en), null == bH || bH.removeEventListener("offline", this.nn), null == bH || bH.removeEventListener("online", this.rn), null == MH || MH.removeEventListener("visibilitychange", this.sn), clearInterval(this.Tn), this.Nn(), null === (bb = this.Le) || void 0 === bb || bb.call(this), this.Le = void 0, null === (wb = this.Wt) || void 0 === wb || wb.call(this), this.Wt = void 0, null === (Mb = this.De) || void 0 === Mb || Mb.call(this), this.De = void 0, null === (eb = this.Fe) || void 0 === eb || eb.call(this), this.Fe = void 0, null === (Hb = this.Ne) || void 0 === Hb || Hb.call(this), this.Ne = void 0, null === (pb = this.re) || void 0 === pb || pb.stop(), this.qn(), this.Pn()
         }
         Pn() {
           this.Oe += 1, this.Ae = [], this.$e = 0, this.jn = void 0, this.Pe = !1
         }
         qn() {
-          var dd, Od;
-          null === (dd = this.Bn) || void 0 === dd || dd.stop(), this.ce = [], null === (Od = this._n) || void 0 === Od || Od.stop(), this._n = void 0, this.ae = !1;
+          var bb, wb;
+          null === (bb = this.Bn) || void 0 === bb || bb.stop(), this.ce = [], null === (wb = this._n) || void 0 === wb || wb.stop(), this._n = void 0, this.ae = !1;
           try {
-            var md;
-            null === (md = this.se) || void 0 === md || md.call(this)
-          } catch (dd) {
-            Wh.warn("could not stop rrweb", dd)
+            var Mb;
+            null === (Mb = this.se) || void 0 === Mb || Mb.call(this)
+          } catch (bb) {
+            Ml.warn("could not stop rrweb", bb)
           }
           this.se = void 0
         }
@@ -8147,17 +8147,17 @@ export const modules = {
           if (!this.jn || 0 === this.$e) return !1;
           if (this.Pe) return !0;
           this.Pe = !0, this.Hn = void 0;
-          const dd = this.Oe;
+          const bb = this.Oe;
           return this.Nn(), this.qn(), this.jn.catch((() => {})).then((() => {
-            dd === this.Oe && (this.Pe = !1, this.Ye(), this.tn(), this.Un(), this.Fn(), Wh.info("stopped"))
+            bb === this.Oe && (this.Pe = !1, this.Ye(), this.tn(), this.Un(), this.Fn(), Ml.info("stopped"))
           })).catch((() => {
-            this.Pe = !1, this.Un(), this.Fn(), Wh.info("stopped")
+            this.Pe = !1, this.Un(), this.Fn(), Ml.info("stopped")
           })), !0
         }
         stop() {
           if (this.qn(), this.Ue) this.Xe();
           else if (this.zn()) return;
-          this.Ye(), this.tn(), this.Un(), this.Fn(), Wh.info("stopped")
+          this.Ye(), this.tn(), this.Un(), this.Fn(), Ml.info("stopped")
         }
         Un() {
           this.Ke(void 0, {
@@ -8167,205 +8167,205 @@ export const modules = {
         flushBeforeIdentityReset() {
           (this.isStarted || this.Pe) && (this.Xe(), this.Ye())
         }
-        He(dd) {
+        He(bb) {
           this.Ue = !0, this.le = Date.now();
           try {
-            var Od, md;
-            this.stop(), this.Wn = void 0, this.me = 0, this.fe = 0, this.ve = 0, this.pe = 0, null === (Od = Xh()) || void 0 === Od || null === (md = Od.resetSnapshotCostState) || void 0 === md || md.call(Od), this.start("session_id_changed")
+            var wb, Mb;
+            this.stop(), this.Wn = void 0, this.me = 0, this.fe = 0, this.ve = 0, this.pe = 0, null === (wb = pl()) || void 0 === wb || null === (Mb = wb.resetSnapshotCostState) || void 0 === Mb || Mb.call(wb), this.start("session_id_changed")
           } finally {
             this.Ue = !1
           }
-          this.Ke(dd ? "no_interaction_since_session_rotated" : void 0), this.ye = !1
+          this.Ke(bb ? "no_interaction_since_session_rotated" : void 0), this.ye = !1
         }
-        Ke(dd) {
+        Ke(bb) {
           let {
-            preserveLogDedup: Od = !1
+            preserveLogDedup: wb = !1
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (this.ge = !qF(dd), this.Hn = dd, qF(dd)) return void(Od || (this.Vn = void 0));
+          if (this.ge = !UH(bb), this.Hn = bb, UH(bb)) return void(wb || (this.Vn = void 0));
           if (this.Ue) return;
-          const md = `${this.sessionId}:${dd}`;
-          md !== this.Vn && (this.Vn = md, Wh.info(`holding buffer: ${dd}. nothing is uploaded until the user interacts with the page`))
+          const Mb = `${this.sessionId}:${bb}`;
+          Mb !== this.Vn && (this.Vn = Mb, Ml.info(`holding buffer: ${bb}. nothing is uploaded until the user interacts with the page`))
         }
         Rn() {
           this.isStarted || (this.we = !0), this.ge && (this.Ke(void 0), this.ye = !1, this.be && (this.be = !1, this.jt()), this.Gn())
         }
         discard() {
           let {
-            discardProducerEvents: dd = !1
+            discardProducerEvents: bb = !1
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          this.ge = !0, dd && (this.tn(), this.qn()), this.tn(), this.Fn(), this.tn(), this.Un(), Wh.info("discarded")
+          this.ge = !0, bb && (this.tn(), this.qn()), this.tn(), this.Fn(), this.tn(), this.Un(), Ml.info("discarded")
         }
-        Qn(dd, Od, md, Wd, Fd) {
-          if (-1 === md) return this.me += 1, void Wh.warn("could not stringify event - dropping it to keep the rest of the recording");
-          const Rd = {
-            $snapshot_bytes: md,
-            $snapshot_data: Od,
-            $session_id: Wd,
-            $window_id: Fd
+        Qn(bb, wb, Mb, eb, Hb) {
+          if (-1 === Mb) return this.me += 1, void Ml.warn("could not stringify event - dropping it to keep the rest of the recording");
+          const pb = {
+            $snapshot_bytes: Mb,
+            $snapshot_data: wb,
+            $session_id: eb,
+            $window_id: Hb
           };
-          "disabled" !== this.status ? (this.Zn(dd, Wd), this.Jn(Rd)) : this.tn()
+          "disabled" !== this.status ? (this.Zn(bb, eb), this.Jn(pb)) : this.tn()
         }
         Kn() {
           try {
             this.Xn()
-          } catch (dd) {
-            this.Se || (this.Se = !0, Wh.error("could not track full snapshot cost", dd))
+          } catch (bb) {
+            this.Se || (this.Se = !0, Ml.error("could not track full snapshot cost", bb))
           }
         }
         Xn() {
-          var dd, Od;
-          const md = null === (dd = Xh()) || void 0 === dd || null === (Od = dd.getLastSnapshotCost) || void 0 === Od ? void 0 : Od.call(dd);
-          md && md !== this.Wn && (this.Wn = md, 500 > md.durationMs || Wh.warn("full snapshot was slow, the page may have been unresponsive while it ran", {
-            durationMs: Math.round(md.durationMs),
-            stylesheetMs: Math.round(md.stylesheetMs),
-            nodeCount: md.nodeCount,
-            cssRuleCount: md.cssRuleCount,
-            nonDeferrableCssRuleCount: md.nonDeferrableCssRuleCount,
-            deferredStylesheetCount: md.deferredStylesheetCount
+          var bb, wb;
+          const Mb = null === (bb = pl()) || void 0 === bb || null === (wb = bb.getLastSnapshotCost) || void 0 === wb ? void 0 : wb.call(bb);
+          Mb && Mb !== this.Wn && (this.Wn = Mb, 500 > Mb.durationMs || Ml.warn("full snapshot was slow, the page may have been unresponsive while it ran", {
+            durationMs: Math.round(Mb.durationMs),
+            stylesheetMs: Math.round(Mb.stylesheetMs),
+            nodeCount: Mb.nodeCount,
+            cssRuleCount: Mb.cssRuleCount,
+            nonDeferrableCssRuleCount: Mb.nonDeferrableCssRuleCount,
+            deferredStylesheetCount: Mb.deferredStylesheetCount
           }))
         }
-        Zn(dd, Od) {
-          2 !== dd.type ? 3 === dd.type && (qF(this.Te) || this.Te === Od || this.Re === Od || (this.Re = Od, Wh.info("incremental snapshot for a session with no full snapshot - requesting one", {
-            sessionId: Od
-          }), this.jt())) : this.Te = Od
+        Zn(bb, wb) {
+          2 !== bb.type ? 3 === bb.type && (UH(this.Te) || this.Te === wb || this.Re === wb || (this.Re = wb, Ml.info("incremental snapshot for a session with no full snapshot - requesting one", {
+            sessionId: wb
+          }), this.jt())) : this.Te = wb
         }
-        Yn(dd) {
-          dd.counted && dd.generation === this.Oe && (this.$e = Math.max(0, this.$e - 1)), dd.counted = !1, this.Ae = this.Ae.filter((Od => Od !== dd))
+        Yn(bb) {
+          bb.counted && bb.generation === this.Oe && (this.$e = Math.max(0, this.$e - 1)), bb.counted = !1, this.Ae = this.Ae.filter((wb => wb !== bb))
         }
-        ti(dd, Od, md) {
-          dd.processed || dd.generation !== this.Oe || (dd.processed = !0, this.Qn(dd.event, Od, md, dd.targetSessionId, dd.targetWindowId))
+        ti(bb, wb, Mb) {
+          bb.processed || bb.generation !== this.Oe || (bb.processed = !0, this.Qn(bb.event, wb, Mb, bb.targetSessionId, bb.targetWindowId))
         }
-        ei(dd) {
+        ei(bb) {
           try {
-            let Od, md = dd.event;
-            if (dd.compressionEnabled) try {
+            let wb, Mb = bb.event;
+            if (bb.compressionEnabled) try {
               ({
-                event: md,
-                size: Od
-              } = ah(dd.event))
-            } catch (dd) {
-              Wh.warn("could not process queued compression event - will use uncompressed event", dd)
+                event: Mb,
+                size: wb
+              } = Xl(bb.event))
+            } catch (bb) {
+              Ml.warn("could not process queued compression event - will use uncompressed event", bb)
             }
-            qF(Od) && (Od = sX(dd.event));
+            UH(wb) && (wb = cV(bb.event));
             try {
-              this.ti(dd, md, Od)
-            } catch (dd) {
-              Wh.warn("could not capture queued compression event", dd)
+              this.ti(bb, Mb, wb)
+            } catch (bb) {
+              Ml.warn("could not capture queued compression event", bb)
             }
           } finally {
-            this.Yn(dd)
+            this.Yn(bb)
           }
         }
         Xe() {
-          [...this.Ae].forEach((dd => {
+          [...this.Ae].forEach((bb => {
             try {
-              this.ei(dd)
-            } catch (dd) {
-              Wh.warn("could not drain queued compression event", dd)
+              this.ei(bb)
+            } catch (bb) {
+              Ml.warn("could not drain queued compression event", bb)
             }
           }))
         }
-        ni(dd, Od, md, Wd) {
-          var Fd = this;
-          const Xd = {
-            event: dd,
-            compressionEnabled: Od,
-            targetSessionId: md,
-            targetWindowId: Wd,
+        ni(bb, wb, Mb, eb) {
+          var Hb = this;
+          const Vb = {
+            event: bb,
+            compressionEnabled: wb,
+            targetSessionId: Mb,
+            targetWindowId: eb,
             generation: this.Oe,
             processed: !1,
             counted: !0
           };
-          this.Ae.push(Xd), this.$e += 1;
-          const Kd = (hd = Rd((function*() {
+          this.Ae.push(Vb), this.$e += 1;
+          const gb = (lb = pb((function*() {
             try {
-              if (Xd.processed) return;
-              let md, Wd;
+              if (Vb.processed) return;
+              let Mb, eb;
               try {
-                const Fd = Od ? ph(dd) ? yield function(dd) {
-                  return Eh.apply(this, arguments)
-                }(dd): ah(dd): {
-                  event: dd,
-                  size: sX(dd)
+                const Hb = wb ? sl(bb) ? yield function(bb) {
+                  return xl.apply(this, arguments)
+                }(bb): Xl(bb): {
+                  event: bb,
+                  size: cV(bb)
                 };
-                md = Fd.event, Wd = Fd.size
-              } catch (Od) {
-                Wh.warn("could not process queued compression event - will use uncompressed event", Od), md = dd, Wd = sX(dd)
+                Mb = Hb.event, eb = Hb.size
+              } catch (wb) {
+                Ml.warn("could not process queued compression event - will use uncompressed event", wb), Mb = bb, eb = cV(bb)
               }
-              Fd.ti(Xd, md, Wd)
+              Hb.ti(Vb, Mb, eb)
             } finally {
-              Fd.Yn(Xd)
+              Hb.Yn(Vb)
             }
           })), function() {
-            return hd.apply(this, arguments)
+            return lb.apply(this, arguments)
           });
-          var hd;
-          this.jn = this.jn ? this.jn.catch((() => {})).then(Kd) : Kd()
+          var lb;
+          this.jn = this.jn ? this.jn.catch((() => {})).then(gb) : gb()
         }
-        onRRwebEmit(dd) {
-          var Od, md, Wd, Fd, Rd, Xd, Kd, hd, vd, Qd, td, od;
+        onRRwebEmit(bb) {
+          var wb, Mb, eb, Hb, pb, Vb, gb, lb, Lb, Ib, Ob, Ub;
           if (!this._instance.sessionManager) return;
-          if (this.Cn(), !dd || !NF(dd)) return;
-          if (4 === dd.type) {
-            const Od = this.mn(dd.data.href);
-            if (this.xn = Od, !Od) return;
-            dd.data.href = Od
+          if (this.Cn(), !bb || !OH(bb)) return;
+          if (4 === bb.type) {
+            const wb = this.mn(bb.data.href);
+            if (this.xn = wb, !wb) return;
+            bb.data.href = wb
           } else this.Sn();
-          if (null === (Od = this.re) || void 0 === Od || Od.checkUrlTriggers(this.sessionId, (() => this.En()), (() => this.An()), ((dd, Od) => this.$n(dd, Od))), this.Y.urlBlocked && (5 !== (Qd = dd).type || "recording paused" !== Qd.data.tag)) return;
-          2 === dd.type && (this.Kn(), Promise.resolve().then((() => this.Kn())), this.Mn(), null === (td = this.Bn) || void 0 === td || td.reset(), null === (od = this._instance.persistence) || void 0 === od || od.register_once({
-            $debug_first_full_snapshot_timestamp: dd.timestamp
+          if (null === (wb = this.re) || void 0 === wb || wb.checkUrlTriggers(this.sessionId, (() => this.En()), (() => this.An()), ((bb, wb) => this.$n(bb, wb))), this.Y.urlBlocked && (5 !== (Ib = bb).type || "recording paused" !== Ib.data.tag)) return;
+          2 === bb.type && (this.Kn(), Promise.resolve().then((() => this.Kn())), this.Mn(), null === (Ob = this.Bn) || void 0 === Ob || Ob.reset(), null === (Ub = this._instance.persistence) || void 0 === Ub || Ub.register_once({
+            $debug_first_full_snapshot_timestamp: bb.timestamp
           }, void 0));
-          const Nd = 2 === dd.type && (null === (md = this.re) || void 0 === md ? void 0 : md.hasPendingTriggers(this.sessionId));
-          Nd && this.ii();
-          const qd = this.Bn ? this.Bn.throttleMutations(dd) : dd;
-          if (!qd) return void(!0 === this.de && this.he++);
-          const Hd = function(dd) {
-              const Od = dd;
-              if (Od && NF(Od) && 6 === Od.type && NF(Od.data) && "rrweb/console@1" === Od.data.plugin) {
-                Od.data.payload.payload.length > 10 && (Od.data.payload.payload = Od.data.payload.payload.slice(0, 10), Od.data.payload.payload.push("...[truncated]"));
-                const md = [];
-                for (let dd = 0; Od.data.payload.payload.length > dd; dd++) md.push(Od.data.payload.payload[dd] && Od.data.payload.payload[dd].length > 2e3 ? Od.data.payload.payload[dd].slice(0, 2e3) + "...[truncated]" : Od.data.payload.payload[dd]);
-                return Od.data.payload.payload = md, dd
+          const tb = 2 === bb.type && (null === (Mb = this.re) || void 0 === Mb ? void 0 : Mb.hasPendingTriggers(this.sessionId));
+          tb && this.ii();
+          const Cb = this.Bn ? this.Bn.throttleMutations(bb) : bb;
+          if (!Cb) return void(!0 === this.de && this.he++);
+          const Eb = function(bb) {
+              const wb = bb;
+              if (wb && OH(wb) && 6 === wb.type && OH(wb.data) && "rrweb/console@1" === wb.data.plugin) {
+                wb.data.payload.payload.length > 10 && (wb.data.payload.payload = wb.data.payload.payload.slice(0, 10), wb.data.payload.payload.push("...[truncated]"));
+                const Mb = [];
+                for (let bb = 0; wb.data.payload.payload.length > bb; bb++) Mb.push(wb.data.payload.payload[bb] && wb.data.payload.payload[bb].length > 2e3 ? wb.data.payload.payload[bb].slice(0, 2e3) + "...[truncated]" : wb.data.payload.payload[bb]);
+                return wb.data.payload.payload = Mb, bb
               }
-              return dd
-            }(qd),
-            yd = function(dd) {
-              return xh(dd) ? dd.data.payload : null
-            }(Hd),
-            bd = function(dd) {
-              return Bh(dd) ? dd.data.payload : null
-            }(Hd),
-            Td = function(dd) {
-              return Uh(dd) ? dd.data.payload : null
-            }(Hd);
-          yd || bd ? (null == yd ? void 0 : yd.lastActivityTimestamp) && (Hd.timestamp = yd.lastActivityTimestamp) : (null == Td ? void 0 : Td.sessionId) || this.ri(Hd);
-          const pd = null !== (Wd = null !== (Fd = null !== (Rd = null == yd ? void 0 : yd.currentSessionId) && void 0 !== Rd ? Rd : null == bd ? void 0 : bd.nextSessionId) && void 0 !== Fd ? Fd : null == Td ? void 0 : Td.sessionId) && void 0 !== Wd ? Wd : this.Xt,
-            Yd = null !== (Xd = null !== (Kd = null !== (hd = null == yd ? void 0 : yd.currentWindowId) && void 0 !== hd ? hd : null == bd ? void 0 : bd.nextWindowId) && void 0 !== Kd ? Kd : null == Td ? void 0 : Td.windowId) && void 0 !== Xd ? Xd : this.je;
-          if (!0 === this.de && ! function(dd) {
-              return Uh(dd) || xh(dd) || Bh(dd)
-            }(Hd)) return void(function(dd) {
-            return 2 === dd.type || 4 === dd.type || 3 === dd.type && 9 !== dd.data.source
-          }(Hd) && this.he++);
-          2 === Hd.type && (this.he = 0), Td && (Hd.timestamp = Td.lastActivityTimestamp + Td.threshold);
-          const gd = this.ae;
-          this.ae = !0, Nd ? this.kn(!0) : gd || this.kn();
-          const wd = null === (vd = this._instance.config.session_recording.compress_events) || void 0 === vd || vd;
-          if (5 === Hd.type && "$json_ld" === Hd.data.tag) {
-            let Od;
+              return bb
+            }(Cb),
+            Fb = function(bb) {
+              return rl(bb) ? bb.data.payload : null
+            }(Eb),
+            Bb = function(bb) {
+              return Rl(bb) ? bb.data.payload : null
+            }(Eb),
+            sb = function(bb) {
+              return Kl(bb) ? bb.data.payload : null
+            }(Eb);
+          Fb || Bb ? (null == Fb ? void 0 : Fb.lastActivityTimestamp) && (Eb.timestamp = Fb.lastActivityTimestamp) : (null == sb ? void 0 : sb.sessionId) || this.ri(Eb);
+          const mb = null !== (eb = null !== (Hb = null !== (pb = null == Fb ? void 0 : Fb.currentSessionId) && void 0 !== pb ? pb : null == Bb ? void 0 : Bb.nextSessionId) && void 0 !== Hb ? Hb : null == sb ? void 0 : sb.sessionId) && void 0 !== eb ? eb : this.Xt,
+            hb = null !== (Vb = null !== (gb = null !== (lb = null == Fb ? void 0 : Fb.currentWindowId) && void 0 !== lb ? lb : null == Bb ? void 0 : Bb.nextWindowId) && void 0 !== gb ? gb : null == sb ? void 0 : sb.windowId) && void 0 !== Vb ? Vb : this.je;
+          if (!0 === this.de && ! function(bb) {
+              return Kl(bb) || rl(bb) || Rl(bb)
+            }(Eb)) return void(function(bb) {
+            return 2 === bb.type || 4 === bb.type || 3 === bb.type && 9 !== bb.data.source
+          }(Eb) && this.he++);
+          2 === Eb.type && (this.he = 0), sb && (Eb.timestamp = sb.lastActivityTimestamp + sb.threshold);
+          const zb = this.ae;
+          this.ae = !0, tb ? this.kn(!0) : zb || this.kn();
+          const Xb = null === (Lb = this._instance.config.session_recording.compress_events) || void 0 === Lb || Lb;
+          if (5 === Eb.type && "$json_ld" === Eb.data.tag) {
+            let wb;
             try {
-              Od = mF ? this.mn(mF.location.href) : void 0
-            } catch (dd) {}
-            Hd.data.href = Od
+              wb = bH ? this.mn(bH.location.href) : void 0
+            } catch (bb) {}
+            Eb.data.href = wb
           }
-          if (this.$e > 0 || wd && ph(Hd)) return void this.ni(Hd, wd, pd, Yd);
+          if (this.$e > 0 || Xb && sl(Eb)) return void this.ni(Eb, Xb, mb, hb);
           const {
-            event: Ed,
-            size: Jd
-          } = wd ? ah(Hd) : {
-            event: Hd,
-            size: sX(Hd)
+            event: xb,
+            size: jb
+          } = Xb ? Xl(Eb) : {
+            event: Eb,
+            size: cV(Eb)
           };
-          this.Qn(Hd, Ed, Jd, pd, Yd)
+          this.Qn(Eb, xb, jb, mb, hb)
         }
         get status() {
           return this.re ? this.re.getStatus({
@@ -8377,19 +8377,19 @@ export const modules = {
             eventTriggerMatching: this.tt,
             linkedFlagMatching: this.et,
             remoteConfig: this.ne
-          }) : XX
+          }) : pV
         }
-        log(dd) {
-          let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "log";
-          var md;
-          null === (md = this._instance.sessionRecording) || void 0 === md || md.onRRwebEmit({
+        log(bb) {
+          let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "log";
+          var Mb;
+          null === (Mb = this._instance.sessionRecording) || void 0 === Mb || Mb.onRRwebEmit({
             type: 6,
             data: {
               plugin: "rrweb/console@1",
               payload: {
-                level: Od,
+                level: wb,
                 trace: [],
-                payload: [JSON.stringify(dd)]
+                payload: [JSON.stringify(bb)]
               }
             },
             timestamp: Date.now()
@@ -8399,24 +8399,24 @@ export const modules = {
           this.et.linkedFlagSeen = !0, this.jt(), this.Rn(), this.qt("linked_flag_overridden")
         }
         overrideSampling() {
-          var dd;
-          null === (dd = this._instance.persistence) || void 0 === dd || dd.register({
+          var bb;
+          null === (bb = this._instance.persistence) || void 0 === bb || bb.register({
             $session_is_sampled: this.sessionId,
             $replay_sample_rate: null
           }), this.jt(), this.Rn(), this.qt("sampling_overridden")
         }
-        overrideTrigger(dd) {
-          this.$n(dd), this.Rn()
+        overrideTrigger(bb) {
+          this.$n(bb), this.Rn()
         }
         oi() {
           try {
-            var dd;
-            const Od = null == mF || null === (dd = mF.location) || void 0 === dd ? void 0 : dd.href;
-            if (!Od) return;
-            const md = this.mn(Od);
-            if (!md) return;
-            return new URL(md).hostname || void 0
-          } catch (dd) {
+            var bb;
+            const wb = null == bH || null === (bb = bH.location) || void 0 === bb ? void 0 : bb.href;
+            if (!wb) return;
+            const Mb = this.mn(wb);
+            if (!Mb) return;
+            return new URL(Mb).hostname || void 0
+          } catch (bb) {
             return
           }
         }
@@ -8429,64 +8429,64 @@ export const modules = {
           }), 2e3))
         }
         ai() {
-          return this.Te !== this.Rt.sessionId && 0 !== this.Rt.data.length && this.Rt.data.every((dd => 5 === (null == dd ? void 0 : dd.type) && !xh(dd) && !Bh(dd)))
+          return this.Te !== this.Rt.sessionId && 0 !== this.Rt.data.length && this.Rt.data.every((bb => 5 === (null == bb ? void 0 : bb.type) && !rl(bb) && !Rl(bb)))
         }
         li() {
-          var dd, Od;
-          return null !== (dd = null === (Od = this.re) || void 0 === Od ? void 0 : Od.getPendingTriggerConditions(this.sessionId)) && void 0 !== dd ? dd : []
+          var bb, wb;
+          return null !== (bb = null === (wb = this.re) || void 0 === wb ? void 0 : wb.getPendingTriggerConditions(this.sessionId)) && void 0 !== bb ? bb : []
         }
-        ui(dd) {
-          if ("buffering" !== dd) return qF(this.ci) || this._instance.register_for_session({
-            [MR]: []
+        ui(bb) {
+          if ("buffering" !== bb) return UH(this.ci) || this._instance.register_for_session({
+            [Tp]: []
           }), void(this.ci = void 0);
-          const Od = this.li();
-          if (0 === Od.length) return qF(this.ci) || this._instance.register_for_session({
-            [MR]: []
+          const wb = this.li();
+          if (0 === wb.length) return UH(this.ci) || this._instance.register_for_session({
+            [Tp]: []
           }), void(this.ci = void 0);
-          const md = Od.join(", "),
-            Wd = `${this.sessionId}:${md}`;
-          Wd !== this.ci && (this.ci = Wd, this._instance.register_for_session({
-            [MR]: Od
-          }), Wh.info(`buffering: ${md}`))
+          const Mb = wb.join(", "),
+            eb = `${this.sessionId}:${Mb}`;
+          eb !== this.ci && (this.ci = eb, this._instance.register_for_session({
+            [Tp]: wb
+          }), Ml.info(`buffering: ${Mb}`))
         }
         di() {
-          var dd;
-          return "memory" !== this._instance.config.persistence && !0 !== (null === (dd = this._instance.persistence) || void 0 === dd ? void 0 : dd.hi) && HK.At()
+          var bb;
+          return "memory" !== this._instance.config.persistence && !0 !== (null === (bb = this._instance.persistence) || void 0 === bb ? void 0 : bb.hi) && Cg.At()
         }
         fi() {
-          0 !== this.Rt.data.length && this.Rt.size !== this.pi && 943718.4 >= this.Rt.size && this.di() && (this.pi = this.Rt.size, HK.$t(this.an, this.Rt))
+          0 !== this.Rt.data.length && this.Rt.size !== this.pi && 943718.4 >= this.Rt.size && this.di() && (this.pi = this.Rt.size, Cg.$t(this.an, this.Rt))
         }
         Ln() {
           if (this.Ee || !this.di()) return;
           this.Ee = !0;
-          const dd = HK.Dt(this.an);
-          HK.Pt(this.an), NF(dd) && tF(dd.data) && 0 !== dd.data.length && tF(dd.sizes) && dd.sizes.length === dd.data.length && TF(dd.size) && dd.sessionId === this.Xt && dd.windowId === this.je && (this.Rt.data.length > 0 || (this.Rt = dd))
+          const bb = Cg.Dt(this.an);
+          Cg.Pt(this.an), OH(bb) && LH(bb.data) && 0 !== bb.data.length && LH(bb.sizes) && bb.sizes.length === bb.data.length && FH(bb.size) && bb.sessionId === this.Xt && bb.windowId === this.je && (this.Rt.data.length > 0 || (this.Rt = bb))
         }
         Ye() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          var Od;
+          let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          var wb;
           if (this.Nn(), this.ge) return this.Rt;
-          if (this.ai()) return this.Rt.size > 943718.4 ? this.tn() : (dd && this.fi(), this.Rt);
-          const md = this.Rt;
-          null === (Od = this.re) || void 0 === Od || Od.ensureSamplingDecision(this.sessionId);
-          const Fd = this.Ge(),
-            Rd = this.status;
-          if (this.ui(Rd), "buffering" === Rd || "paused" === Rd || "disabled" === Rd || Fd) return !dd || "active" !== Rd && "sampled" !== Rd || this.fi(), this.Gn(), this.Rt;
-          if (this.Rt !== md) return this.Rt;
-          if (md.data.length > 0) {
-            var Xd;
-            const dd = this.oi();
-            VX(md).forEach((Od => {
+          if (this.ai()) return this.Rt.size > 943718.4 ? this.tn() : (bb && this.fi(), this.Rt);
+          const Mb = this.Rt;
+          null === (wb = this.re) || void 0 === wb || wb.ensureSamplingDecision(this.sessionId);
+          const Hb = this.Ge(),
+            pb = this.status;
+          if (this.ui(pb), "buffering" === pb || "paused" === pb || "disabled" === pb || Hb) return !bb || "active" !== pb && "sampled" !== pb || this.fi(), this.Gn(), this.Rt;
+          if (this.Rt !== Mb) return this.Rt;
+          if (Mb.data.length > 0) {
+            var Vb;
+            const bb = this.oi();
+            ZV(Mb).forEach((wb => {
               try {
-                var md;
-                null === (md = this.Be) || void 0 === md || md.trackSize(Od.sessionId, Od.size), this.mi(Wd(Wd(Wd(Wd({
-                  $snapshot_bytes: Od.size,
-                  $snapshot_data: Od.data,
-                  $session_id: Od.sessionId,
-                  $window_id: Od.windowId,
-                  $lib: yK.LIB_NAME,
-                  $lib_version: yK.LIB_VERSION,
-                  $snapshot_host: dd
+                var Mb;
+                null === (Mb = this.Be) || void 0 === Mb || Mb.trackSize(wb.sessionId, wb.size), this.mi(eb(eb(eb(eb({
+                  $snapshot_bytes: wb.size,
+                  $snapshot_data: wb.data,
+                  $session_id: wb.sessionId,
+                  $window_id: wb.windowId,
+                  $lib: Eg.LIB_NAME,
+                  $lib_version: Eg.LIB_VERSION,
+                  $snapshot_host: bb
                 }, this.fe > 0 ? {
                   $sdk_debug_replay_throttled_mutations_dropped: this.fe
                 } : {}), this.ve > 0 ? {
@@ -8496,27 +8496,27 @@ export const modules = {
                 } : {}), this.me > 0 ? {
                   $sdk_debug_replay_unstringifiable_events_dropped: this.me
                 } : {}))
-              } catch (dd) {
-                Wh.warn("could not capture snapshot chunk - skipping it", dd)
+              } catch (bb) {
+                Ml.warn("could not capture snapshot chunk - skipping it", bb)
               }
-            })), qF(this.pi) || (HK.Pt(this.an), this.pi = void 0), null === (Xd = this.re) || void 0 === Xd || Xd.onFlushComplete()
+            })), UH(this.pi) || (Cg.Pt(this.an), this.pi = void 0), null === (Vb = this.re) || void 0 === Vb || Vb.onFlushComplete()
           }
           return this.tn()
         }
-        Jn(dd) {
-          var Od;
-          const md = 2 + ((null === (Od = this.Rt) || void 0 === Od ? void 0 : Od.data.length) || 0),
-            Wd = dd.$session_id,
-            Fd = this.Rt.sessionId !== Wd;
-          if (Fd || !0 !== this.de && !this.ge && this.Rt.size + dd.$snapshot_bytes + md > 943718.4) {
-            const Od = this.Xt;
-            if (this.Rt = this.Ye(), this.Xt !== Od) return;
-            Fd && this.Rt.data.length > 0 && (this.Rt = this.tn()), this.Rt.sessionId = Wd, this.Rt.windowId = dd.$window_id
+        Jn(bb) {
+          var wb;
+          const Mb = 2 + ((null === (wb = this.Rt) || void 0 === wb ? void 0 : wb.data.length) || 0),
+            eb = bb.$session_id,
+            Hb = this.Rt.sessionId !== eb;
+          if (Hb || !0 !== this.de && !this.ge && this.Rt.size + bb.$snapshot_bytes + Mb > 943718.4) {
+            const wb = this.Xt;
+            if (this.Rt = this.Ye(), this.Xt !== wb) return;
+            Hb && this.Rt.data.length > 0 && (this.Rt = this.tn()), this.Rt.sessionId = eb, this.Rt.windowId = bb.$window_id
           }
-          this.ge && (this.be || this.Rt.size + dd.$snapshot_bytes + md > 943718.4) ? this.be = !0 : (this.Rt.size += dd.$snapshot_bytes, this.Rt.data.push(dd.$snapshot_data), this.Rt.sizes.push(dd.$snapshot_bytes), !0 === this.de || this.ge || this.Gn())
+          this.ge && (this.be || this.Rt.size + bb.$snapshot_bytes + Mb > 943718.4) ? this.be = !0 : (this.Rt.size += bb.$snapshot_bytes, this.Rt.data.push(bb.$snapshot_data), this.Rt.sizes.push(bb.$snapshot_bytes), !0 === this.de || this.ge || this.Gn())
         }
-        mi(dd) {
-          this._instance.capture("$snapshot", dd, {
+        mi(bb) {
+          this._instance.capture("$snapshot", bb, {
             _url: this._instance.requestRouter.endpointFor("api", this.oe),
             _noTruncate: !0,
             _batchKey: "recordings",
@@ -8524,18 +8524,18 @@ export const modules = {
           })
         }
         get Qe() {
-          var dd, Od;
-          const md = null === (dd = this.Rt) || void 0 === dd ? void 0 : dd.data[(null === (Od = this.Rt) || void 0 === Od ? void 0 : Od.data.length) - 1];
-          return md ? md.timestamp - this._sessionStartTimestamp : null
+          var bb, wb;
+          const Mb = null === (bb = this.Rt) || void 0 === bb ? void 0 : bb.data[(null === (wb = this.Rt) || void 0 === wb ? void 0 : wb.data.length) - 1];
+          return Mb ? Mb.timestamp - this._sessionStartTimestamp : null
         }
         ii() {
           if (!this.Rt || 0 === this.Rt.data.length) return this.tn();
-          let dd = -1;
-          for (let Od = this.Rt.data.length - 1; Od >= 0; Od--)
-            if (4 === this.Rt.data[Od].type) {
-              dd = Od;
+          let bb = -1;
+          for (let wb = this.Rt.data.length - 1; wb >= 0; wb--)
+            if (4 === this.Rt.data[wb].type) {
+              bb = wb;
               break
-            } return 0 > dd ? this.tn() : (this.Rt.data = this.Rt.data.slice(dd), this.Rt.sizes = this.Rt.sizes.slice(dd), this.Rt.size = this.Rt.sizes.reduce(((dd, Od) => dd + Od), 0), this.Rt)
+            } return 0 > bb ? this.tn() : (this.Rt.data = this.Rt.data.slice(bb), this.Rt.sizes = this.Rt.sizes.slice(bb), this.Rt.size = this.Rt.sizes.reduce(((bb, wb) => bb + wb), 0), this.Rt)
         }
         tn() {
           return this.Rt = {
@@ -8546,21 +8546,21 @@ export const modules = {
             windowId: this.je
           }, this.Rt
         }
-        qt(dd, Od) {
+        qt(bb, wb) {
           this._instance.register_for_session({
-            [RX]: dd
-          }), Wh.info(dd.replace("_", " "), Od), "session_id_changed" !== dd && this.Vt("$recording_started", Wd({
-            reason: dd
-          }, Od))
+            [HV]: bb
+          }), Ml.info(bb.replace("_", " "), wb), "session_id_changed" !== bb && this.Vt("$recording_started", eb({
+            reason: bb
+          }, wb))
         }
-        gi(dd) {
-          var Od;
-          return 3 === dd.type && -1 !== Fh.indexOf(null === (Od = dd.data) || void 0 === Od ? void 0 : Od.source)
+        gi(bb) {
+          var wb;
+          return 3 === bb.type && -1 !== el.indexOf(null === (wb = bb.data) || void 0 === wb ? void 0 : wb.source)
         }
-        ri(dd) {
-          const Od = this.gi(dd);
-          Od || !0 === this.de || dd.timestamp - this.le > this.te && (this.de = !0, clearInterval(this.Tn), this.Vt("sessionIdle", {
-            eventTimestamp: dd.timestamp,
+        ri(bb) {
+          const wb = this.gi(bb);
+          wb || !0 === this.de || bb.timestamp - this.le > this.te && (this.de = !0, clearInterval(this.Tn), this.Vt("sessionIdle", {
+            eventTimestamp: bb.timestamp,
             lastActivityTimestamp: this.le,
             threshold: this.te,
             bufferLength: this.Rt.data.length,
@@ -8569,55 +8569,55 @@ export const modules = {
             windowId: this.je
           }), this.Ye());
           const {
-            windowId: md,
-            sessionId: Wd
-          } = this.Yt.checkAndGetSessionAndWindowId(!Od, dd.timestamp);
-          let Fd = !1;
-          if (Od && (this.le = dd.timestamp, this.de)) {
-            const Od = "unknown" === this.de;
-            this.de = !1, Od || (this.Vt("sessionNoLongerIdle", {
+            windowId: Mb,
+            sessionId: eb
+          } = this.Yt.checkAndGetSessionAndWindowId(!wb, bb.timestamp);
+          let Hb = !1;
+          if (wb && (this.le = bb.timestamp, this.de)) {
+            const wb = "unknown" === this.de;
+            this.de = !1, wb || (this.Vt("sessionNoLongerIdle", {
               reason: "user activity",
-              type: dd.type
-            }), Fd = !0)
+              type: bb.type
+            }), Hb = !0)
           }
-          const Rd = this.Xt !== Wd,
-            Xd = this.je !== md;
-          if (this.je = md, this.Xt = Wd, Rd || Xd) {
-            const dd = Rd && !1 !== this.de;
-            dd && (this.de = "unknown"), this.He(dd)
-          } else if (Od && this.Rn(), Fd) {
-            var Kd;
-            const dd = ["sampled", "active"].includes(this.status) || (null === (Kd = this.re) || void 0 === Kd ? void 0 : Kd.hasPendingTriggers(this.sessionId));
-            this.he > 0 && dd && this.jt(), this.kn(), this.Mn()
+          const pb = this.Xt !== eb,
+            Vb = this.je !== Mb;
+          if (this.je = Mb, this.Xt = eb, pb || Vb) {
+            const bb = pb && !1 !== this.de;
+            bb && (this.de = "unknown"), this.He(bb)
+          } else if (wb && this.Rn(), Hb) {
+            var gb;
+            const bb = ["sampled", "active"].includes(this.status) || (null === (gb = this.re) || void 0 === gb ? void 0 : gb.hasPendingTriggers(this.sessionId));
+            this.he > 0 && bb && this.jt(), this.kn(), this.Mn()
           }
         }
         ze() {
-          var dd;
-          null === (dd = this.re) || void 0 === dd || dd.clearConditionalRecordingPersistence()
+          var bb;
+          null === (bb = this.re) || void 0 === bb || bb.clearConditionalRecordingPersistence()
         }
         get sdkDebugProperties() {
-          var dd;
+          var bb;
           return {
             $recording_status: this.status,
             $sdk_debug_replay_flush_hold_reason: this.Hn,
             $sdk_debug_replay_internal_buffer_length: this.Rt.data.length,
             $sdk_debug_replay_internal_buffer_size: this.Rt.size,
             $sdk_debug_session_start: this._sessionStartTimestamp,
-            $sdk_debug_replay_flushed_size: null === (dd = this.Be) || void 0 === dd ? void 0 : dd.currentTrackedSize(this.sessionId),
+            $sdk_debug_replay_flushed_size: null === (bb = this.Be) || void 0 === bb ? void 0 : bb.currentTrackedSize(this.sessionId),
             $sdk_debug_replay_rrweb_error: this.ke,
-            [WX]: this.yi,
-            [FX]: this._e
+            [MV]: this.yi,
+            [eV]: this._e
           }
         }
         get yi() {
-          var dd, Od, md;
-          return !!this.se && (null === (dd = null === (Od = Kh()) || void 0 === Od || null === (md = Od.isRecording) || void 0 === md ? void 0 : md.call(Od)) || void 0 === dd || dd)
+          var bb, wb, Mb;
+          return !!this.se && (null === (bb = null === (wb = Vl()) || void 0 === wb || null === (Mb = wb.isRecording) || void 0 === Mb ? void 0 : Mb.call(wb)) || void 0 === bb || bb)
         }
         Dn() {
-          var dd;
+          var bb;
           if (this.se) return;
           this._e = !0;
-          const Od = {
+          const wb = {
               blockClass: "ph-no-capture",
               blockSelector: void 0,
               ignoreClass: "ph-ignore-input",
@@ -8639,136 +8639,136 @@ export const modules = {
               sampling: void 0,
               attributeFilter: void 0
             },
-            md = this._instance.config.session_recording;
-          for (const [Qd, td] of Object.entries(md || {}))
-            if (Qd in Od)
-              if ("maskInputOptions" === Qd) Od.maskInputOptions = Wd({
+            Mb = this._instance.config.session_recording;
+          for (const [Ib, Ob] of Object.entries(Mb || {}))
+            if (Ib in wb)
+              if ("maskInputOptions" === Ib) wb.maskInputOptions = eb({
                 password: !0
-              }, td);
-              else if ("sampling" === Qd) {
-            const dd = null != td ? td : {},
-              md = {};
-            qF(dd.mousemove) || (md.mousemove = dd.mousemove), qF(dd.mouseInteraction) || (md.mouseInteraction = dd.mouseInteraction), Od.sampling = md
-          } else Od[Qd] = td;
-          var Fd, Rd, Xd, Kd;
-          !0 === (null == md ? void 0 : md.captureJsonLd) && !0 !== Od.slimDOMOptions && "all" !== Od.slimDOMOptions && (Od.slimDOMOptions = Wd(Wd({}, Od.slimDOMOptions), {}, {
+              }, Ob);
+              else if ("sampling" === Ib) {
+            const bb = null != Ob ? Ob : {},
+              Mb = {};
+            UH(bb.mousemove) || (Mb.mousemove = bb.mousemove), UH(bb.mouseInteraction) || (Mb.mouseInteraction = bb.mouseInteraction), wb.sampling = Mb
+          } else wb[Ib] = Ob;
+          var Hb, pb, Vb, gb;
+          !0 === (null == Mb ? void 0 : Mb.captureJsonLd) && !0 !== wb.slimDOMOptions && "all" !== wb.slimDOMOptions && (wb.slimDOMOptions = eb(eb({}, wb.slimDOMOptions), {}, {
             script: !0
-          })), this.dn && this.dn.enabled && (Od.recordCanvas = !0, Od.sampling = Wd(Wd({}, Od.sampling), {}, {
+          })), this.dn && this.dn.enabled && (wb.recordCanvas = !0, wb.sampling = eb(eb({}, wb.sampling), {}, {
             canvas: this.dn.fps
-          }), Od.dataURLOptions = {
+          }), wb.dataURLOptions = {
             type: "image/webp",
             quality: this.dn.quality
-          }, Od.canvasResolutionScale = this.cn, Od.canvasMasking = {
+          }, wb.canvasResolutionScale = this.cn, wb.canvasMasking = {
             configured: () => {
-              var dd;
-              return oF(null === (dd = this._instance.config.session_recording) || void 0 === dd || null === (dd = dd.canvasCapture) || void 0 === dd ? void 0 : dd.maskRegionsFn)
+              var bb;
+              return IH(null === (bb = this._instance.config.session_recording) || void 0 === bb || null === (bb = bb.canvasCapture) || void 0 === bb ? void 0 : bb.maskRegionsFn)
             },
-            regionsFn: dd => {
-              var Od;
-              const md = null === (Od = this._instance.config.session_recording) || void 0 === Od || null === (Od = Od.canvasCapture) || void 0 === Od ? void 0 : Od.maskRegionsFn;
-              if (oF(md)) try {
-                var Wd;
-                return null !== (Wd = md(dd)) && void 0 !== Wd ? Wd : null
-              } catch (dd) {
-                return this.Ie || (this.Ie = !0, Wh.warn("canvasCapture.maskRegionsFn threw, canvas frames will be skipped", dd)), null
+            regionsFn: bb => {
+              var wb;
+              const Mb = null === (wb = this._instance.config.session_recording) || void 0 === wb || null === (wb = wb.canvasCapture) || void 0 === wb ? void 0 : wb.maskRegionsFn;
+              if (IH(Mb)) try {
+                var eb;
+                return null !== (eb = Mb(bb)) && void 0 !== eb ? eb : null
+              } catch (bb) {
+                return this.Ie || (this.Ie = !0, Ml.warn("canvasCapture.maskRegionsFn threw, canvas frames will be skipped", bb)), null
               }
             }
-          }), this.ln && (Od.maskAllInputs = null === (Fd = this.ln.maskAllInputs) || void 0 === Fd || Fd, Od.maskTextSelector = null !== (Rd = this.ln.maskTextSelector) && void 0 !== Rd ? Rd : void 0, Od.blockSelector = null !== (Xd = this.ln.blockSelector) && void 0 !== Xd ? Xd : void 0, Od.maskAllElementAttributes = null !== (Kd = this.ln.maskAllElementAttributes) && void 0 !== Kd && Kd), Od.maskAllElementAttributes && Od.maskAttributeFn && (Od.maskAttributeFn = void 0, this.Ce || (this.Ce = !0, Wh.warn('`maskAllElementAttributes` and `maskAttributeFn` are mutually exclusive, and `maskAttributeFn` is being ignored. Remove one of the two. Note that `maskAllElementAttributes` can also come from your project\'s "Privacy and masking" settings. See https://posthog.com/docs/session-replay/privacy'))), this.un();
-          const hd = Kh();
-          if (!hd) return void Wh.error("_startRecorder was called but rrwebRecord is not available. This indicates something has gone wrong.");
-          this.Bn = null !== (dd = this.Bn) && void 0 !== dd ? dd : new NK(hd, {
+          }), this.ln && (wb.maskAllInputs = null === (Hb = this.ln.maskAllInputs) || void 0 === Hb || Hb, wb.maskTextSelector = null !== (pb = this.ln.maskTextSelector) && void 0 !== pb ? pb : void 0, wb.blockSelector = null !== (Vb = this.ln.blockSelector) && void 0 !== Vb ? Vb : void 0, wb.maskAllElementAttributes = null !== (gb = this.ln.maskAllElementAttributes) && void 0 !== gb && gb), wb.maskAllElementAttributes && wb.maskAttributeFn && (wb.maskAttributeFn = void 0, this.Ce || (this.Ce = !0, Ml.warn('`maskAllElementAttributes` and `maskAttributeFn` are mutually exclusive, and `maskAttributeFn` is being ignored. Remove one of the two. Note that `maskAllElementAttributes` can also come from your project\'s "Privacy and masking" settings. See https://posthog.com/docs/session-replay/privacy'))), this.un();
+          const lb = Vl();
+          if (!lb) return void Ml.error("_startRecorder was called but rrwebRecord is not available. This indicates something has gone wrong.");
+          this.Bn = null !== (bb = this.Bn) && void 0 !== bb ? bb : new Ug(lb, {
             refillRate: this._instance.config.session_recording.__mutationThrottlerRefillRate,
             bucketSize: this._instance.config.session_recording.__mutationThrottlerBucketSize,
-            onBlockedNode: (dd, Od) => {
-              const md = `Too many mutations on node '${dd}'. Rate limiting. This could be due to SVG animations or something similar`;
-              Wh.info(md, {
-                node: Od
-              }), this.log("[SessionRecording] " + md, "warn")
+            onBlockedNode: (bb, wb) => {
+              const Mb = `Too many mutations on node '${bb}'. Rate limiting. This could be due to SVG animations or something similar`;
+              Ml.info(Mb, {
+                node: wb
+              }), this.log("[SessionRecording] " + Mb, "warn")
             },
-            onDroppedAttributeMutations: dd => this.fe += dd,
+            onDroppedAttributeMutations: bb => this.fe += bb,
             bytesRefillRate: this._instance.config.session_recording.__mutationBytesRefillRate,
             bytesBucketSize: this._instance.config.session_recording.__mutationBytesBucketSize,
             resyncIntervalMs: this.In,
-            onDroppedOversizedMutation: dd => {
-              0 === this.ve && this.log("[SessionRecording] Dropped an oversized DOM mutation to keep the recording playable. The recording will resync with a full snapshot.", "warn"), this.ve += 1, this.pe += dd
+            onDroppedOversizedMutation: bb => {
+              0 === this.ve && this.log("[SessionRecording] Dropped an oversized DOM mutation to keep the recording playable. The recording will resync with a full snapshot.", "warn"), this.ve += 1, this.pe += bb
             },
             requestFullSnapshot: () => this.jt()
           });
-          const vd = this.vn();
-          if (this.se = hd(Wd(Wd({
-              emit: dd => {
-                this.onRRwebEmit(dd)
+          const Lb = this.vn();
+          if (this.se = lb(eb(eb({
+              emit: bb => {
+                this.onRRwebEmit(bb)
               },
-              plugins: vd,
-              errorHandler: (dd, Od) => "rrweb" === Od && (this.Me || (this.Me = !0, Wh.error("rrweb internal error - recording will continue but may be incomplete", dd)), !0)
-            }, Od), {}, {
+              plugins: Lb,
+              errorHandler: (bb, wb) => "rrweb" === wb && (this.Me || (this.Me = !0, Ml.error("rrweb internal error - recording will continue but may be incomplete", bb)), !0)
+            }, wb), {}, {
               recordAfter: "DOMContentLoaded"
-            })), !this.se) return this.ke = !0, void Wh.error("rrweb failed to start - Loss of recording data is possible. Check the browser console for rrweb errors.");
-          this.ke = !1, !0 === (null == md ? void 0 : md.captureJsonLd) && FF && (null == mF ? void 0 : mF.MutationObserver) && !this._n && (this._n = function(dd, Od, md) {
-            const Wd = new WeakMap,
-              Fd = md.getCaptureState || (() => !0);
-            let Rd = sK;
-            const Xd = function(dd, Od) {
-                const md = Od.attributeFilter;
-                return Od.maskAllElementAttributes || Od.maskAttributeFn || (null == md ? void 0 : md.length) && !md.includes("id") ? iK : md => {
-                  const Wd = dd.getElementById(md);
-                  return !!Wd && "SCRIPT" !== Wd.nodeName && (!Od.isRecordedElement || Od.isRecordedElement(Wd)) && !dh(Wd, Od.blockClass, Od.blockSelector)
+            })), !this.se) return this.ke = !0, void Ml.error("rrweb failed to start - Loss of recording data is possible. Check the browser console for rrweb errors.");
+          this.ke = !1, !0 === (null == Mb ? void 0 : Mb.captureJsonLd) && MH && (null == bH ? void 0 : bH.MutationObserver) && !this._n && (this._n = function(bb, wb, Mb) {
+            const eb = new WeakMap,
+              Hb = Mb.getCaptureState || (() => !0);
+            let pb = cg;
+            const Vb = function(bb, wb) {
+                const Mb = wb.attributeFilter;
+                return wb.maskAllElementAttributes || wb.maskAttributeFn || (null == Mb ? void 0 : Mb.length) && !Mb.includes("id") ? fg : Mb => {
+                  const eb = bb.getElementById(Mb);
+                  return !!eb && "SCRIPT" !== eb.nodeName && (!wb.isRecordedElement || wb.isRecordedElement(eb)) && !kg(eb, wb.blockClass, wb.blockSelector)
                 }
-              }(dd, md),
-              Kd = Od => {
+              }(bb, Mb),
+              gb = wb => {
                 try {
-                  const Kd = Fd();
-                  if (!Rd || !1 === Kd || !Od.isConnected || Od.ownerDocument !== dd || function(dd, Od) {
-                      return dh(dd, Od.blockClass, Od.blockSelector) || dh(dd, Od.maskTextClass, Od.maskTextSelector)
-                    }(Od, md)) return;
-                  const hd = function(dd) {
-                    let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : iK,
-                      md = arguments.length > 2 ? arguments[2] : void 0;
-                    if (!dd || dd.length > sK) return null;
+                  const gb = Hb();
+                  if (!pb || !1 === gb || !wb.isConnected || wb.ownerDocument !== bb || function(bb, wb) {
+                      return kg(bb, wb.blockClass, wb.blockSelector) || kg(bb, wb.maskTextClass, wb.maskTextSelector)
+                    }(wb, Mb)) return;
+                  const lb = function(bb) {
+                    let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fg,
+                      Mb = arguments.length > 2 ? arguments[2] : void 0;
+                    if (!bb || bb.length > cg) return null;
                     try {
-                      const Wd = JSON.parse(dd),
-                        Fd = {
-                          maskUrl: md,
+                      const eb = JSON.parse(bb),
+                        Hb = {
+                          maskUrl: Mb,
                           remainingNodes: 2048,
                           exceeded: !1
                         },
-                        Rd = tF(Wd) ? Wd.map((dd => kK(dd, Od, Fd))) : kK(Wd, Od, Fd);
-                      if (Fd.exceeded || yF(Rd) || tF(Rd) && (!Rd.length || Rd.some(yF))) return null;
-                      const Xd = JSON.stringify(Rd);
-                      return Xd.length > 2e4 ? null : [Rd, Xd]
-                    } catch (dd) {
+                        pb = LH(eb) ? eb.map((bb => yg(bb, wb, Hb))) : yg(eb, wb, Hb);
+                      if (Hb.exceeded || CH(pb) || LH(pb) && (!pb.length || pb.some(CH))) return null;
+                      const Vb = JSON.stringify(pb);
+                      return Vb.length > 2e4 ? null : [pb, Vb]
+                    } catch (bb) {
                       return null
                     }
-                  }(Od.text, Xd, md.maskUrl);
-                  if (!hd) return void Wd.delete(Od);
-                  const [vd, Qd] = hd;
-                  if (yF(Kd)) return void Wd.set(Od, Qd);
-                  if (Wd.get(Od) !== Qd) {
-                    if (Qd.length > Rd) return void(Rd = 0);
-                    md.emit(vd) && (Wd.set(Od, Qd), Rd -= Qd.length)
+                  }(wb.text, Vb, Mb.maskUrl);
+                  if (!lb) return void eb.delete(wb);
+                  const [Lb, Ib] = lb;
+                  if (CH(gb)) return void eb.set(wb, Ib);
+                  if (eb.get(wb) !== Ib) {
+                    if (Ib.length > pb) return void(pb = 0);
+                    Mb.emit(Lb) && (eb.set(wb, Ib), pb -= Ib.length)
                   }
-                } catch (dd) {
+                } catch (bb) {
                   return
                 }
               };
             try {
-              const md = new Od((dd => {
+              const Mb = new wb((bb => {
                 try {
-                  if (!Rd || !1 === Fd()) return;
-                  const Od = dd => {
-                    for (const Od of Oh(dd)) Kd(Od)
+                  if (!pb || !1 === Hb()) return;
+                  const wb = bb => {
+                    for (const wb of bl(bb)) gb(wb)
                   };
-                  for (const md of dd)
-                    if ("childList" === md.type) fK(md.target) && Kd(md.target), md.addedNodes.forEach(Od);
-                    else if ("characterData" === md.type) {
-                    const dd = md.target.parentNode;
-                    dd && fK(dd) && Kd(dd)
-                  } else "attributes" === md.type && fK(md.target) && Kd(md.target)
-                } catch (dd) {
+                  for (const Mb of bb)
+                    if ("childList" === Mb.type) og(Mb.target) && gb(Mb.target), Mb.addedNodes.forEach(wb);
+                    else if ("characterData" === Mb.type) {
+                    const bb = Mb.target.parentNode;
+                    bb && og(bb) && gb(bb)
+                  } else "attributes" === Mb.type && og(Mb.target) && gb(Mb.target)
+                } catch (bb) {
                   return
                 }
               }));
-              return md.observe(dd, {
+              return Mb.observe(bb, {
                 attributes: !0,
                 attributeFilter: ["type"],
                 characterData: !0,
@@ -8776,79 +8776,79 @@ export const modules = {
                 subtree: !0
               }), {
                 scan() {
-                  let Od = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                  Rd && !1 !== Fd() && Oh(dd.documentElement).forEach((dd => {
-                    Od && Wd.delete(dd), Kd(dd)
+                  let wb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                  pb && !1 !== Hb() && bl(bb.documentElement).forEach((bb => {
+                    wb && eb.delete(bb), gb(bb)
                   }))
                 },
-                stop: () => md.disconnect()
+                stop: () => Mb.disconnect()
               }
-            } catch (dd) {
+            } catch (bb) {
               return {
                 scan() {},
                 stop() {}
               }
             }
-          }(FF, mF.MutationObserver, {
-            maskUrl: dd => this.mn(dd),
-            attributeFilter: Od.attributeFilter,
-            blockClass: Od.blockClass,
-            blockSelector: Od.blockSelector,
-            isRecordedElement: dd => hd.mirror.getId(dd) > 0,
-            maskAllElementAttributes: Od.maskAllElementAttributes,
-            maskAttributeFn: Od.maskAttributeFn,
-            maskTextClass: Od.maskTextClass,
-            maskTextSelector: Od.maskTextSelector,
+          }(MH, bH.MutationObserver, {
+            maskUrl: bb => this.mn(bb),
+            attributeFilter: wb.attributeFilter,
+            blockClass: wb.blockClass,
+            blockSelector: wb.blockSelector,
+            isRecordedElement: bb => lb.mirror.getId(bb) > 0,
+            maskAllElementAttributes: wb.maskAllElementAttributes,
+            maskAttributeFn: wb.maskAttributeFn,
+            maskTextClass: wb.maskTextClass,
+            maskTextSelector: wb.maskTextSelector,
             getCaptureState: () => {
-              var dd;
-              return !0 !== (null === (dd = this._instance.config.session_recording) || void 0 === dd ? void 0 : dd.captureJsonLd) || this.Y.urlBlocked || this.Y.isCurrentUrlBlocked() ? null : this.bn()
+              var bb;
+              return !0 !== (null === (bb = this._instance.config.session_recording) || void 0 === bb ? void 0 : bb.captureJsonLd) || this.Y.urlBlocked || this.Y.isCurrentUrlBlocked() ? null : this.bn()
             },
-            emit: dd => this.wn(dd)
-          }), this.Y.isCurrentUrlBlocked() && this._n.scan()), this.le = Date.now(), this.de = pF(this.de) ? this.de : "unknown", this.tryAddCustomEvent("$remote_config_received", this.ne), this.Vt("$session_options", {
-            sessionRecordingOptions: Od,
-            activePlugins: vd.map((dd => null == dd ? void 0 : dd.name))
+            emit: bb => this.wn(bb)
+          }), this.Y.isCurrentUrlBlocked() && this._n.scan()), this.le = Date.now(), this.de = BH(this.de) ? this.de : "unknown", this.tryAddCustomEvent("$remote_config_received", this.ne), this.Vt("$session_options", {
+            sessionRecordingOptions: wb,
+            activePlugins: Lb.map((bb => null == bb ? void 0 : bb.name))
           }), this.Vt("$posthog_config", {
             config: this._instance.config
           })
         }
-        tryAddCustomEvent(dd, Od) {
-          return this.Vt(dd, Od)
+        tryAddCustomEvent(bb, wb) {
+          return this.Vt(bb, wb)
         }
       };
-      KF.__PosthogExtensions__ = KF.__PosthogExtensions__ || {}, KF.__PosthogExtensions__.rrwebPlugins = {
-        getRecordConsolePlugin: dd => ({
+      pH.__PosthogExtensions__ = pH.__PosthogExtensions__ || {}, pH.__PosthogExtensions__.rrwebPlugins = {
+        getRecordConsolePlugin: bb => ({
           name: "rrweb/console@1",
-          observer: OF,
-          options: dd
+          observer: ke,
+          options: bb
         }),
-        getRecordNetworkPlugin: dd => ({
+        getRecordNetworkPlugin: bb => ({
           name: "rrweb/network@1",
-          observer: nR,
-          options: dd
+          observer: Jp,
+          options: bb
         })
-      }, KF.__PosthogExtensions__.rrweb = {
-        record: nW,
+      }, pH.__PosthogExtensions__.rrweb = {
+        record: Je,
         version: "v2",
-        wasMaxDepthReached: () => Wm,
+        wasMaxDepthReached: () => MM,
         resetMaxDepthState() {
-          Wm = !1, mm = !1
+          MM = !1, wM = !1
         },
-        getLastSnapshotCost: () => zd,
-        getMutationCost: () => Wd({}, Id),
-        getDeferredStylesheetStats: () => Wd({}, ld),
-        getDiscardedDurationSamples: () => ud,
-        getObserverInitFailures: () => fm.size ? Array.from(fm) : void 0,
+        getLastSnapshotCost: () => vb,
+        getMutationCost: () => eb({}, ib),
+        getDeferredStylesheetStats: () => eb({}, ub),
+        getDiscardedDurationSamples: () => Yb,
+        getObserverInitFailures: () => yM.size ? Array.from(yM) : void 0,
         resetSnapshotCostState() {
-          Gd = 0, nd = 0, Ld = 0, sd = 0, ud = 0, Pd = {
+          Wb = 0, Jb = 0, Sb = 0, cb = 0, Yb = 0, Nb = {
             durationMs: 0,
             stylesheetMs: 0,
             nodeCount: 0,
             cssRuleCount: 0,
             nonDeferrableCssRuleCount: 0,
             deferredStylesheetCount: 0
-          }, zd = null, cd = null, jd = [], Dd = 0, ed = 0, Id = {
+          }, vb = null, Qb = null, Gb = [], qb = 0, ab = 0, ib = {
             slowestBatchMs: 0
-          }, ld = {
+          }, ub = {
             deferredCount: 0,
             failedCount: 0,
             abandonedCount: 0,
@@ -8856,9 +8856,9 @@ export const modules = {
             slowestSliceMs: 0
           }
         }
-      }, KF.__PosthogExtensions__.initSessionRecording = (dd, Od) => new Sh(dd, Od)
+      }, pH.__PosthogExtensions__.initSessionRecording = (bb, wb) => new Dl(bb, wb)
     }()
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

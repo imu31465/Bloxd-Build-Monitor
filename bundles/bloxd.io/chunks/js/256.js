@@ -1,24 +1,24 @@
 export const id = 256;
 export const ids = [256];
 export const modules = {
-  38397: (dd, Od, md) => {
-    function Wd(dd) {
-      return "fetch" === dd || "timeout" === dd || "integrity" === dd ? "download" : "browser"
+  38062: (bb, wb, Mb) => {
+    function eb(bb) {
+      return "fetch" === bb || "timeout" === bb || "integrity" === bb ? "download" : "browser"
     }
-    md.d(Od, {
-      d: () => Fd,
-      f: () => hd,
-      i: () => Qd,
-      l: () => Kd,
-      o: () => Xd,
-      q: () => vd,
-      u: () => Wd,
-      v: () => Rd
+    Mb.d(wb, {
+      b: () => Hb,
+      d: () => lb,
+      g: () => Ib,
+      k: () => gb,
+      l: () => Vb,
+      m: () => Lb,
+      p: () => eb,
+      q: () => pb
     });
-    const Fd = "https://discord.gg/playbloxd";
+    const Hb = "https://discord.gg/playbloxd";
 
-    function Rd(dd, Od) {
-      return "download" === dd ? {
+    function pb(bb, wb) {
+      return "download" === bb ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -26,18 +26,18 @@ export const modules = {
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
-      } : "memory" === dd || "noContext" === dd || "graphicsLost" === dd ? {
+      } : "memory" === bb || "noContext" === bb || "graphicsLost" === bb ? {
         icon: "face-dizzy",
-        title: `wasmUnsupported:${dd}Title`,
-        help: `wasmUnsupported:${dd}Help${Od?"App":""}`,
+        title: `wasmUnsupported:${bb}Title`,
+        help: `wasmUnsupported:${bb}Help${wb?"App":""}`,
         helpValues: {},
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
       } : {
         icon: "face-dizzy",
-        title: Od ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
-        help: Od ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === dd ? "noWebAssemblyHelp" : "help"),
+        title: wb ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
+        help: wb ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === bb ? "noWebAssemblyHelp" : "help"),
         helpValues: {},
         discordLink: !1,
         confirm: "general:ok",
@@ -45,17 +45,17 @@ export const modules = {
       }
     }
 
-    function Xd(dd, Od) {
+    function Vb(bb, wb) {
       return {
-        ...Rd(dd, Od),
-        help: Od ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${dd}StillHelp`
+        ...pb(bb, wb),
+        help: wb ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${bb}StillHelp`
       }
     }
 
-    function Kd(dd) {
+    function gb(bb) {
       return {
         icon: "face-dizzy",
-        title: `wasmUnsupported:${dd}Title`,
+        title: `wasmUnsupported:${bb}Title`,
         help: "wasmScreens:noContextHelp",
         helpValues: {},
         discordLink: !1,
@@ -64,21 +64,21 @@ export const modules = {
       }
     }
 
-    function hd(dd, Od) {
+    function lb(bb, wb) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: Od ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: wb ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: dd.code
+          code: bb.code
         },
-        discordLink: Od,
+        discordLink: wb,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function vd() {
+    function Lb() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -90,20 +90,20 @@ export const modules = {
       }
     }
 
-    function Qd(dd, Od, md) {
+    function Ib(bb, wb, Mb) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: md ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: Mb ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: dd.reason
+          reason: bb.reason
         },
-        discordLink: null === dd.name,
-        confirm: Od ? "general:reconnect" : dd.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === bb.name,
+        confirm: wb ? "general:reconnect" : bb.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

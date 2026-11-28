@@ -1,44 +1,44 @@
 export const id = 283;
 export const ids = [283];
 export const modules = {
-  41441: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => vd
+  41213: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Lb
     });
-    var Wd = md(5375);
-    const Fd = ["recordings", "videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"];
+    var eb = Mb(5541);
+    const Hb = ["recordings", "videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"];
 
-    function Rd(dd) {
-      return new Promise(((Od, md) => {
-        dd.onsuccess = () => {
-          Od(dd.result)
-        }, dd.onerror = () => {
-          md(dd.error)
+    function pb(bb) {
+      return new Promise(((wb, Mb) => {
+        bb.onsuccess = () => {
+          wb(bb.result)
+        }, bb.onerror = () => {
+          Mb(bb.error)
         }
       }))
     }
 
-    function Xd(dd) {
-      return new Promise(((Od, md) => {
-        dd.oncomplete = () => {
-          Od()
-        }, dd.onerror = () => {
-          md(dd.error)
-        }, dd.onabort = () => {
-          var Od;
-          md(null !== (Od = dd.error) && void 0 !== Od ? Od : new Error("IndexedDB transaction aborted"))
+    function Vb(bb) {
+      return new Promise(((wb, Mb) => {
+        bb.oncomplete = () => {
+          wb()
+        }, bb.onerror = () => {
+          Mb(bb.error)
+        }, bb.onabort = () => {
+          var wb;
+          Mb(null !== (wb = bb.error) && void 0 !== wb ? wb : new Error("IndexedDB transaction aborted"))
         }
       }))
     }
 
-    function Kd(dd) {
-      return IDBKeyRange.bound([dd], [dd, []])
+    function gb(bb) {
+      return IDBKeyRange.bound([bb], [bb, []])
     }
 
-    function hd(dd, Od) {
-      return IDBKeyRange.bound([dd, Od], [dd, Od, []])
+    function lb(bb, wb) {
+      return IDBKeyRange.bound([bb, wb], [bb, wb, []])
     }
-    class vd {
+    class Lb {
       constructor() {
         this.db = null, this.opening = null, this.failed = !1, this.tailRecordings = new Set
       }
@@ -52,404 +52,404 @@ export const modules = {
           return !1
         }
       }
-      putRecording(dd) {
-        this.write(["recordings"], (Od => {
-          Od.objectStore("recordings").put(dd)
+      putRecording(bb) {
+        this.write(["recordings"], (wb => {
+          wb.objectStore("recordings").put(bb)
         }))
       }
-      putVideoSequence(dd, Od, md) {
-        this.write(["recordings", "videoSequences"], (Wd => {
-          Wd.objectStore("recordings").put(dd), Wd.objectStore("videoSequences").put({
-            recordingId: dd.recordingId,
-            segmentId: Od,
-            sequence: md
+      putVideoSequence(bb, wb, Mb) {
+        this.write(["recordings", "videoSequences"], (eb => {
+          eb.objectStore("recordings").put(bb), eb.objectStore("videoSequences").put({
+            recordingId: bb.recordingId,
+            segmentId: wb,
+            sequence: Mb
           })
         }))
       }
-      appendVideo(dd, Od) {
-        this.write(["videoHeaders", "videoChunks"], (md => {
-          md.objectStore("videoHeaders").put(dd);
-          const Wd = md.objectStore("videoChunks");
-          for (const dd of Od) Wd.put(dd)
+      appendVideo(bb, wb) {
+        this.write(["videoHeaders", "videoChunks"], (Mb => {
+          Mb.objectStore("videoHeaders").put(bb);
+          const eb = Mb.objectStore("videoChunks");
+          for (const bb of wb) eb.put(bb)
         }))
       }
-      putVideoProgress(dd, Od) {
-        this.write(["videoProgress", "videoChunks"], (md => {
-          if (md.objectStore("videoProgress").put(dd), Od > 0) {
+      putVideoProgress(bb, wb) {
+        this.write(["videoProgress", "videoChunks"], (Mb => {
+          if (Mb.objectStore("videoProgress").put(bb), wb > 0) {
             const {
-              recordingId: Wd,
-              segmentId: Fd
-            } = dd;
-            md.objectStore("videoChunks").delete(IDBKeyRange.bound([Wd, Fd, 0], [Wd, Fd, Od], !1, !0))
+              recordingId: eb,
+              segmentId: Hb
+            } = bb;
+            Mb.objectStore("videoChunks").delete(IDBKeyRange.bound([eb, Hb, 0], [eb, Hb, wb], !1, !0))
           }
         }))
       }
-      removeVideoChunks(dd, Od) {
-        this.write(["videoChunks"], (md => {
-          md.objectStore("videoChunks").delete(hd(dd, Od))
+      removeVideoChunks(bb, wb) {
+        this.write(["videoChunks"], (Mb => {
+          Mb.objectStore("videoChunks").delete(lb(bb, wb))
         }))
       }
-      removeVideo(dd, Od) {
-        this.write(["videoHeaders", "videoChunks", "videoSequences", "videoProgress"], (md => {
-          md.objectStore("videoHeaders").delete([dd, Od]), md.objectStore("videoChunks").delete(hd(dd, Od)), md.objectStore("videoSequences").delete([dd, Od]), md.objectStore("videoProgress").delete([dd, Od])
+      removeVideo(bb, wb) {
+        this.write(["videoHeaders", "videoChunks", "videoSequences", "videoProgress"], (Mb => {
+          Mb.objectStore("videoHeaders").delete([bb, wb]), Mb.objectStore("videoChunks").delete(lb(bb, wb)), Mb.objectStore("videoSequences").delete([bb, wb]), Mb.objectStore("videoProgress").delete([bb, wb])
         }))
       }
-      putTelemetry(dd) {
-        this.write(["telemetry"], (Od => {
-          Od.objectStore("telemetry").put(dd)
+      putTelemetry(bb) {
+        this.write(["telemetry"], (wb => {
+          wb.objectStore("telemetry").put(bb)
         }))
       }
-      removeTelemetry(dd, Od) {
-        this.write(["telemetry"], (md => {
-          md.objectStore("telemetry").delete([dd, Od])
+      removeTelemetry(bb, wb) {
+        this.write(["telemetry"], (Mb => {
+          Mb.objectStore("telemetry").delete([bb, wb])
         }))
       }
-      putDom(dd) {
-        this.write(["dom"], (Od => {
-          Od.objectStore("dom").put(dd)
+      putDom(bb) {
+        this.write(["dom"], (wb => {
+          wb.objectStore("dom").put(bb)
         }))
       }
-      queueDom(dd, Od, md) {
-        this.write(["recordings", "dom", "domTail"], (Wd => {
-          Wd.objectStore("recordings").put(dd), Wd.objectStore("dom").put(Od), Wd.objectStore("domTail").delete(hd(Od.recordingId, md))
-        }), (Wd => {
-          console.warn(`Session replay couldn't journal page recording chunk ${Od.sequence}; a closing tab may lose it.`, Wd), this.write(["recordings", "domTail"], (Wd => {
-            Wd.objectStore("recordings").put(dd), Wd.objectStore("domTail").delete(hd(Od.recordingId, md))
+      queueDom(bb, wb, Mb) {
+        this.write(["recordings", "dom", "domTail"], (eb => {
+          eb.objectStore("recordings").put(bb), eb.objectStore("dom").put(wb), eb.objectStore("domTail").delete(lb(wb.recordingId, Mb))
+        }), (eb => {
+          console.warn(`Session replay couldn't journal page recording chunk ${wb.sequence}; a closing tab may lose it.`, eb), this.write(["recordings", "domTail"], (eb => {
+            eb.objectStore("recordings").put(bb), eb.objectStore("domTail").delete(lb(wb.recordingId, Mb))
           }))
         }))
       }
-      putDomTail(dd) {
-        this.tailRecordings.add(dd.recordingId), this.write(["domTail"], (Od => {
-          Od.objectStore("domTail").put(dd)
+      putDomTail(bb) {
+        this.tailRecordings.add(bb.recordingId), this.write(["domTail"], (wb => {
+          wb.objectStore("domTail").put(bb)
         }))
       }
-      removeDomTail(dd, Od) {
-        this.write(["domTail"], (md => {
-          md.objectStore("domTail").delete(hd(dd, Od))
+      removeDomTail(bb, wb) {
+        this.write(["domTail"], (Mb => {
+          Mb.objectStore("domTail").delete(lb(bb, wb))
         }))
       }
-      removeDom(dd, Od) {
-        this.write(["dom"], (md => {
-          md.objectStore("dom").delete([dd, Od])
+      removeDom(bb, wb) {
+        this.write(["dom"], (Mb => {
+          Mb.objectStore("dom").delete([bb, wb])
         }))
       }
       async listRecordings() {
-        const dd = await this.open();
-        return await Rd(dd.transaction("recordings", "readonly").objectStore("recordings").getAll())
+        const bb = await this.open();
+        return await pb(bb.transaction("recordings", "readonly").objectStore("recordings").getAll())
       }
-      async read(dd) {
-        const Od = (await this.open()).transaction(["videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"], "readonly"),
-          md = Kd(dd.recordingId),
-          Wd = dd => Rd(Od.objectStore(dd).getAll(md)),
-          [Fd, Xd, hd, vd, Qd, td, od] = await Promise.all([Wd("videoHeaders"), Wd("videoChunks"), Wd("videoSequences"), Wd("videoProgress"), Wd("telemetry"), Wd("dom"), Wd("domTail")]);
+      async read(bb) {
+        const wb = (await this.open()).transaction(["videoHeaders", "videoChunks", "videoSequences", "videoProgress", "telemetry", "dom", "domTail"], "readonly"),
+          Mb = gb(bb.recordingId),
+          eb = bb => pb(wb.objectStore(bb).getAll(Mb)),
+          [Hb, Vb, lb, Lb, Ib, Ob, Ub] = await Promise.all([eb("videoHeaders"), eb("videoChunks"), eb("videoSequences"), eb("videoProgress"), eb("telemetry"), eb("dom"), eb("domTail")]);
         return {
-          recording: dd,
-          telemetry: Qd,
-          dom: td,
-          domTails: od,
-          video: Fd.map((dd => {
-            var Od, md, Wd;
+          recording: bb,
+          telemetry: Ib,
+          dom: Ob,
+          domTails: Ub,
+          video: Hb.map((bb => {
+            var wb, Mb, eb;
             return {
-              header: dd,
-              sequence: null !== (Od = null === (md = hd.find((Od => Od.segmentId === dd.segmentId))) || void 0 === md ? void 0 : md.sequence) && void 0 !== Od ? Od : null,
-              progress: null !== (Wd = vd.find((Od => Od.segmentId === dd.segmentId))) && void 0 !== Wd ? Wd : null,
-              chunks: Xd.filter((Od => Od.segmentId === dd.segmentId))
+              header: bb,
+              sequence: null !== (wb = null === (Mb = lb.find((wb => wb.segmentId === bb.segmentId))) || void 0 === Mb ? void 0 : Mb.sequence) && void 0 !== wb ? wb : null,
+              progress: null !== (eb = Lb.find((wb => wb.segmentId === bb.segmentId))) && void 0 !== eb ? eb : null,
+              chunks: Vb.filter((wb => wb.segmentId === bb.segmentId))
             }
           }))
         }
       }
-      async deleteRecording(dd) {
-        const Od = (await this.open()).transaction([...Fd], "readwrite");
-        Od.objectStore("recordings").delete(dd);
-        for (const md of Fd.slice(1)) Od.objectStore(md).delete(Kd(dd));
-        await Xd(Od)
+      async deleteRecording(bb) {
+        const wb = (await this.open()).transaction([...Hb], "readwrite");
+        wb.objectStore("recordings").delete(bb);
+        for (const Mb of Hb.slice(1)) wb.objectStore(Mb).delete(gb(bb));
+        await Vb(wb)
       }
-      async forgetSent(dd, Od) {
-        const md = (await this.open()).transaction([...Fd], "readwrite"),
+      async forgetSent(bb, wb) {
+        const Mb = (await this.open()).transaction([...Hb], "readwrite"),
           {
-            recordingId: Wd
-          } = dd;
-        md.objectStore("recordings").put(dd);
-        for (const Fd of Od.videoSegmentIds) md.objectStore("videoHeaders").delete([Wd, Fd]), md.objectStore("videoChunks").delete(hd(Wd, Fd)), md.objectStore("videoSequences").delete([Wd, Fd]), md.objectStore("videoProgress").delete([Wd, Fd]);
-        for (const Fd of Od.telemetrySequences) md.objectStore("telemetry").delete([Wd, Fd]);
-        for (const Fd of Od.domSequences) md.objectStore("dom").delete([Wd, Fd]);
-        for (const Fd of Od.domTailChunks) md.objectStore("domTail").delete(hd(Wd, Fd));
-        await Xd(md)
+            recordingId: eb
+          } = bb;
+        Mb.objectStore("recordings").put(bb);
+        for (const Hb of wb.videoSegmentIds) Mb.objectStore("videoHeaders").delete([eb, Hb]), Mb.objectStore("videoChunks").delete(lb(eb, Hb)), Mb.objectStore("videoSequences").delete([eb, Hb]), Mb.objectStore("videoProgress").delete([eb, Hb]);
+        for (const Hb of wb.telemetrySequences) Mb.objectStore("telemetry").delete([eb, Hb]);
+        for (const Hb of wb.domSequences) Mb.objectStore("dom").delete([eb, Hb]);
+        for (const Hb of wb.domTailChunks) Mb.objectStore("domTail").delete(lb(eb, Hb));
+        await Vb(Mb)
       }
-      write(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : dd => {
-          this.fail(dd)
+      write(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bb => {
+          this.fail(bb)
         };
         if (this.failed) return;
-        const Wd = Wd => {
+        const eb = eb => {
           try {
-            var Fd;
-            const Rd = Wd.transaction(dd, "readwrite");
-            Od(Rd), null === (Fd = Rd.commit) || void 0 === Fd || Fd.call(Rd), Xd(Rd).catch(md)
-          } catch (Rd) {
-            md(Rd)
+            var Hb;
+            const pb = eb.transaction(bb, "readwrite");
+            wb(pb), null === (Hb = pb.commit) || void 0 === Hb || Hb.call(pb), Vb(pb).catch(Mb)
+          } catch (pb) {
+            Mb(pb)
           }
         };
-        null === this.db ? this.open().then(Wd, (dd => {
-          this.fail(dd)
-        })) : Wd(this.db)
+        null === this.db ? this.open().then(eb, (bb => {
+          this.fail(bb)
+        })) : eb(this.db)
       }
-      fail(dd) {
-        this.failed || (this.failed = !0, console.warn("Session replay can't keep its upload journal; what a closing tab leaves unsent will be lost.", dd), this.dropTails())
+      fail(bb) {
+        this.failed || (this.failed = !0, console.warn("Session replay can't keep its upload journal; what a closing tab leaves unsent will be lost.", bb), this.dropTails())
       }
       dropTails() {
         if (null === this.db || 0 === this.tailRecordings.size) return;
-        const dd = dd => {
-          console.warn("Session replay couldn't drop its page recording tails from its upload journal.", dd)
+        const bb = bb => {
+          console.warn("Session replay couldn't drop its page recording tails from its upload journal.", bb)
         };
         try {
-          const Od = this.db.transaction(["domTail"], "readwrite");
-          for (const dd of this.tailRecordings) Od.objectStore("domTail").delete(Kd(dd));
-          Xd(Od).catch(dd)
-        } catch (Od) {
-          dd(Od)
+          const wb = this.db.transaction(["domTail"], "readwrite");
+          for (const bb of this.tailRecordings) wb.objectStore("domTail").delete(gb(bb));
+          Vb(wb).catch(bb)
+        } catch (wb) {
+          bb(wb)
         }
       }
       open() {
-        return this.opening ??= new Promise(((dd, Od) => {
-          const md = indexedDB.open(Wd.j, 4);
-          md.onupgradeneeded = dd => {
-            const Od = md.result;
-            dd.oldVersion < 1 && (Od.createObjectStore("recordings", {
+        return this.opening ??= new Promise(((bb, wb) => {
+          const Mb = indexedDB.open(eb.i, 4);
+          Mb.onupgradeneeded = bb => {
+            const wb = Mb.result;
+            bb.oldVersion < 1 && (wb.createObjectStore("recordings", {
               keyPath: "recordingId"
-            }), Od.createObjectStore("videoHeaders", {
+            }), wb.createObjectStore("videoHeaders", {
               keyPath: ["recordingId", "segmentId"]
-            }), Od.createObjectStore("videoChunks", {
+            }), wb.createObjectStore("videoChunks", {
               keyPath: ["recordingId", "segmentId", "index"]
-            }), Od.createObjectStore("videoSequences", {
+            }), wb.createObjectStore("videoSequences", {
               keyPath: ["recordingId", "segmentId"]
-            }), Od.createObjectStore("telemetry", {
+            }), wb.createObjectStore("telemetry", {
               keyPath: ["recordingId", "sequence"]
-            })), dd.oldVersion < 2 && Od.createObjectStore("videoProgress", {
+            })), bb.oldVersion < 2 && wb.createObjectStore("videoProgress", {
               keyPath: ["recordingId", "segmentId"]
-            }), dd.oldVersion < 3 && Od.createObjectStore("dom", {
+            }), bb.oldVersion < 3 && wb.createObjectStore("dom", {
               keyPath: ["recordingId", "sequence"]
-            }), Od.createObjectStore("domTail", {
+            }), wb.createObjectStore("domTail", {
               keyPath: ["recordingId", "chunkIndex", "fromChar"]
             })
           };
-          let Fd = !1;
-          md.onblocked = () => {
-            Fd = !0, Od(new Error("An older tab holds the upload journal at an earlier version"))
-          }, md.onsuccess = () => {
-            Fd ? md.result.close() : (this.db = md.result, this.db.onversionchange = () => {
-              var dd;
-              this.dropTails(), null === (dd = this.db) || void 0 === dd || dd.close(), this.db = null, this.opening = null
-            }, dd(md.result))
-          }, md.onerror = () => {
-            Od(md.error)
+          let Hb = !1;
+          Mb.onblocked = () => {
+            Hb = !0, wb(new Error("An older tab holds the upload journal at an earlier version"))
+          }, Mb.onsuccess = () => {
+            Hb ? Mb.result.close() : (this.db = Mb.result, this.db.onversionchange = () => {
+              var bb;
+              this.dropTails(), null === (bb = this.db) || void 0 === bb || bb.close(), this.db = null, this.opening = null
+            }, bb(Mb.result))
+          }, Mb.onerror = () => {
+            wb(Mb.error)
           }
         })), this.opening
       }
     }
   },
-  41390: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => hd,
-      f: () => Rd,
-      g: () => Kd
+  41169: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => lb,
+      f: () => pb,
+      i: () => gb
     });
-    var Wd = md(41387);
-    const Fd = new TextEncoder;
+    var eb = Mb(41161);
+    const Hb = new TextEncoder;
 
-    function Rd(dd, Od) {
-      return new Blob([Fd.encode(`${JSON.stringify(dd)}\n`), Od], {
+    function pb(bb, wb) {
+      return new Blob([Hb.encode(`${JSON.stringify(bb)}\n`), wb], {
         type: "text/plain"
       })
     }
-    class Xd {
-      constructor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
-        this.token = dd, this.relay = Od, this.nowMs = md, this.refused = !1, this.skipUntilMs = 0
+    class Vb {
+      constructor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now;
+        this.token = bb, this.relay = wb, this.nowMs = Mb, this.refused = !1, this.skipUntilMs = 0
       }
-      async send(dd, Od, md, Fd, Xd) {
-        if (this.goesDirect(Od, md)) return null;
-        const Kd = Rd({
+      async send(bb, wb, Mb, Hb, Vb) {
+        if (this.goesDirect(wb, Mb)) return null;
+        const gb = pb({
             token: this.token,
-            contentType: md,
-            target: dd
-          }, Od),
-          hd = {
+            contentType: Mb,
+            target: bb
+          }, wb),
+          lb = {
             method: "POST",
             headers: {
               "Content-Type": "text/plain"
             },
-            body: Kd,
-            signal: Fd
+            body: gb,
+            signal: Hb
           };
-        let vd;
+        let Lb;
         try {
-          const dd = Od.byteLength <= Wd.b ? await Wd.c.fetch(this.relay.url, hd, Kd.size, md) : await fetch(this.relay.url, hd);
-          if (!dd.ok) throw new Error(`HTTP ${dd.status}`);
-          if (vd = await dd.json(), "refused" !== vd.outcome && ("forwarded" !== vd.outcome || !Number.isInteger(vd.status))) throw new Error(`Unexpected relay answer ${JSON.stringify(vd)}`)
-        } catch (Qd) {
-          if (!0 === (null === Xd || void 0 === Xd ? void 0 : Xd.aborted)) throw Qd;
-          return console.warn("Session replay couldn't relay an upload through the part joiner; uploading straight to storage.", Qd), this.skipUntilMs = this.nowMs() + 12e4, null
+          const bb = wb.byteLength <= eb.b ? await eb.c.fetch(this.relay.url, lb, gb.size, Mb) : await fetch(this.relay.url, lb);
+          if (!bb.ok) throw new Error(`HTTP ${bb.status}`);
+          if (Lb = await bb.json(), "refused" !== Lb.outcome && ("forwarded" !== Lb.outcome || !Number.isInteger(Lb.status))) throw new Error(`Unexpected relay answer ${JSON.stringify(Lb)}`)
+        } catch (Ib) {
+          if (!0 === (null === Vb || void 0 === Vb ? void 0 : Vb.aborted)) throw Ib;
+          return console.warn("Session replay couldn't relay an upload through the part joiner; uploading straight to storage.", Ib), this.skipUntilMs = this.nowMs() + 12e4, null
         }
-        return "refused" === vd.outcome ? (console.info(`Session replay's part joiner refused to relay (${vd.reason}); uploading straight to storage.`), this.refused = !0, null) : vd.status
+        return "refused" === Lb.outcome ? (console.info(`Session replay's part joiner refused to relay (${Lb.reason}); uploading straight to storage.`), this.refused = !0, null) : Lb.status
       }
-      beacon(dd, Od, md, Wd) {
-        if (this.goesDirect(Od, md)) return null;
-        const Fd = Rd({
+      beacon(bb, wb, Mb, eb) {
+        if (this.goesDirect(wb, Mb)) return null;
+        const Hb = pb({
           token: this.token,
-          contentType: md,
-          target: dd
-        }, Od);
-        return Wd.sendUploadBeacon(this.relay.url, Fd, Fd.size)
+          contentType: Mb,
+          target: bb
+        }, wb);
+        return eb.sendUploadBeacon(this.relay.url, Hb, Hb.size)
       }
-      goesDirect(dd, Od) {
-        return this.refused || this.nowMs() < this.skipUntilMs || dd.byteLength > this.relay.maxBytes || "video/mp4" === Od
+      goesDirect(bb, wb) {
+        return this.refused || this.nowMs() < this.skipUntilMs || bb.byteLength > this.relay.maxBytes || "video/mp4" === wb
       }
     }
 
-    function Kd(dd) {
-      return void 0 === (null === dd || void 0 === dd ? void 0 : dd.relay) ? null : new Xd(dd.token, dd.relay)
+    function gb(bb) {
+      return void 0 === (null === bb || void 0 === bb ? void 0 : bb.relay) ? null : new Vb(bb.token, bb.relay)
     }
-    class hd {
+    class lb {
       constructor() {
         this.relays = new Map
       }
-      for (dd) {
-        let Od = this.relays.get(dd.recordingId);
-        return void 0 === Od && (Od = Kd(dd.partJoiner), this.relays.set(dd.recordingId, Od)), Od
+      for (bb) {
+        let wb = this.relays.get(bb.recordingId);
+        return void 0 === wb && (wb = gb(bb.partJoiner), this.relays.set(bb.recordingId, wb)), wb
       }
     }
   },
-  41419: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => qd,
-      e: () => Nd,
-      f: () => hd
+  41197: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Cb,
+      f: () => tb,
+      g: () => lb
     });
-    var Wd = md(41387),
-      Fd = md(1268),
-      Rd = md(41397);
-    const Xd = 1024;
+    var eb = Mb(41161),
+      Hb = Mb(1280),
+      pb = Mb(41172);
+    const Vb = 1024;
 
-    function Kd(dd) {
-      return 6e4 + Math.ceil(dd / 16384 * 1e3)
+    function gb(bb) {
+      return 6e4 + Math.ceil(bb / 16384 * 1e3)
     }
 
-    function hd(dd, Od, md) {
-      const Fd = new FormData;
-      let Rd = Od.byteLength + Xd;
-      for (const [Xd, Kd] of Object.entries(dd.fields)) Fd.append(Xd, Kd), Rd += (0, Wd.e)(Xd) + (0, Wd.e)(Kd);
-      return Fd.append("file", new Blob([Od], {
-        type: md
+    function lb(bb, wb, Mb) {
+      const Hb = new FormData;
+      let pb = wb.byteLength + Vb;
+      for (const [Vb, gb] of Object.entries(bb.fields)) Hb.append(Vb, gb), pb += (0, eb.g)(Vb) + (0, eb.g)(gb);
+      return Hb.append("file", new Blob([wb], {
+        type: Mb
       })), {
-        form: Fd,
-        byteLength: Rd
+        form: Hb,
+        byteLength: pb
       }
     }
 
-    function vd(dd, Od, md) {
-      return new Rd.b(`Segment ${dd} failed with ${Od}${null===md?"":` (${md})`}`, Od, md)
+    function Lb(bb, wb, Mb) {
+      return new pb.e(`Segment ${bb} failed with ${wb}${null===Mb?"":` (${Mb})`}`, wb, Mb)
     }
 
-    function Qd(dd) {
-      if (dd < 200 || dd > 299) throw vd("POST", dd, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null)
+    function Ib(bb) {
+      if (bb < 200 || bb > 299) throw Lb("POST", bb, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null)
     }
 
-    function td(dd, Od) {
-      if ((dd < 200 || dd > 299) && (!Od || 412 !== dd)) throw vd("PUT", dd, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
+    function Ob(bb, wb) {
+      if ((bb < 200 || bb > 299) && (!wb || 412 !== bb)) throw Lb("PUT", bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     }
-    async function od(dd) {
-      var Od, md;
-      if (dd.ok) return null;
-      let Wd;
+    async function Ub(bb) {
+      var wb, Mb;
+      if (bb.ok) return null;
+      let eb;
       try {
-        Wd = await dd.text()
-      } catch (Fd) {
-        return console.warn("Session replay couldn't read storage's error answer", Fd), null
+        eb = await bb.text()
+      } catch (Hb) {
+        return console.warn("Session replay couldn't read storage's error answer", Hb), null
       }
-      return null !== (Od = null === (md = /<Code>([^<]+)<\/Code>/.exec(Wd)) || void 0 === md ? void 0 : md[1]) && void 0 !== Od ? Od : null
+      return null !== (wb = null === (Mb = /<Code>([^<]+)<\/Code>/.exec(eb)) || void 0 === Mb ? void 0 : Mb[1]) && void 0 !== wb ? wb : null
     }
-    class Nd {
-      constructor(dd) {
-        var Od;
-        let md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.segmentUploadUrl = dd, this.deadline = void 0, this.relay = void 0, this.deadline = md.deadline, this.relay = null !== (Od = md.relay) && void 0 !== Od ? Od : null
+    class tb {
+      constructor(bb) {
+        var wb;
+        let Mb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.segmentUploadUrl = bb, this.deadline = void 0, this.relay = void 0, this.deadline = Mb.deadline, this.relay = null !== (wb = Mb.relay) && void 0 !== wb ? wb : null
       }
-      requestPutUrl(dd) {
-        return this.presign(dd)
+      requestPutUrl(bb) {
+        return this.presign(bb)
       }
-      requestPostTargets(dd) {
-        return this.presign(dd)
+      requestPostTargets(bb) {
+        return this.presign(bb)
       }
-      async presign(dd) {
-        const Od = await fetch(this.segmentUploadUrl, {
+      async presign(bb) {
+        const wb = await fetch(this.segmentUploadUrl, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(dd),
+          body: JSON.stringify(bb),
           signal: this.signal(6e4)
         });
-        if (!Od.ok) throw new Rd.b(`Segment presign failed with ${Od.status}`, Od.status);
-        return await Od.json()
+        if (!wb.ok) throw new pb.e(`Segment presign failed with ${wb.status}`, wb.status);
+        return await wb.json()
       }
-      async put(dd, Od, md, Fd) {
-        const Rd = await this.sendThroughRelay({
+      async put(bb, wb, Mb, Hb) {
+        const pb = await this.sendThroughRelay({
           method: "PUT",
-          url: dd,
-          ifNoneMatch: Fd
-        }, Od, md);
-        if (null !== Rd) return void td(Rd, Fd);
-        const Xd = {
+          url: bb,
+          ifNoneMatch: Hb
+        }, wb, Mb);
+        if (null !== pb) return void Ob(pb, Hb);
+        const Vb = {
             method: "PUT",
             headers: {
-              "Content-Type": md,
-              ...Fd ? {
+              "Content-Type": Mb,
+              ...Hb ? {
                 "If-None-Match": "*"
               } : {}
             },
-            body: Od,
-            signal: this.signal(Kd(Od.byteLength))
+            body: wb,
+            signal: this.signal(gb(wb.byteLength))
           },
-          hd = Od.byteLength <= Wd.b ? await Wd.c.fetch(dd, Xd, Od.byteLength, md) : await fetch(dd, Xd);
-        td(hd.status, Fd, await od(hd))
+          lb = wb.byteLength <= eb.b ? await eb.c.fetch(bb, Vb, wb.byteLength, Mb) : await fetch(bb, Vb);
+        Ob(lb.status, Hb, await Ub(lb))
       }
-      async post(dd, Od, md) {
-        const Fd = await this.sendThroughRelay({
+      async post(bb, wb, Mb) {
+        const Hb = await this.sendThroughRelay({
           method: "POST",
-          url: dd.url,
-          fields: dd.fields
-        }, Od, md);
-        if (null !== Fd) return void Qd(Fd);
+          url: bb.url,
+          fields: bb.fields
+        }, wb, Mb);
+        if (null !== Hb) return void Ib(Hb);
         const {
-          form: Rd,
-          byteLength: Xd
-        } = hd(dd, Od, md), vd = {
+          form: pb,
+          byteLength: Vb
+        } = lb(bb, wb, Mb), Lb = {
           method: "POST",
-          body: Rd,
-          signal: this.signal(Kd(Xd))
-        }, td = Xd <= Wd.b ? await Wd.c.fetch(dd.url, vd, Xd, md) : await fetch(dd.url, vd);
-        Qd(td.status, await od(td))
+          body: pb,
+          signal: this.signal(gb(Vb))
+        }, Ob = Vb <= eb.b ? await eb.c.fetch(bb.url, Lb, Vb, Mb) : await fetch(bb.url, Lb);
+        Ib(Ob.status, await Ub(Ob))
       }
-      async sendThroughRelay(dd, Od, md) {
-        return null === this.relay ? null : await this.relay.send(dd, Od, md, this.signal(Kd(Od.byteLength)), this.deadline)
+      async sendThroughRelay(bb, wb, Mb) {
+        return null === this.relay ? null : await this.relay.send(bb, wb, Mb, this.signal(gb(wb.byteLength)), this.deadline)
       }
-      signal(dd) {
-        const Od = (0, Fd.s)(dd);
-        return void 0 === this.deadline ? Od : (0, Fd.j)([this.deadline, Od])
+      signal(bb) {
+        const wb = (0, Hb.t)(bb);
+        return void 0 === this.deadline ? wb : (0, Hb.m)([this.deadline, wb])
       }
     }
-    class qd {
-      async requestPutUrl(dd) {
+    class Cb {
+      async requestPutUrl(bb) {
         return {
           uploadUrl: "",
           ifNoneMatch: !1
         }
       }
-      async requestPostTargets(dd) {
+      async requestPostTargets(bb) {
         return {
           targets: Array.from({
-            length: dd.parts.count
+            length: bb.parts.count
           }, (() => ({
             url: "",
             fields: {}
@@ -465,36 +465,36 @@ export const modules = {
       }
     }
   },
-  41370: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Xd
+  41152: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Vb
     });
-    var Wd = md(37635),
-      Fd = md.n(Wd);
+    var eb = Mb(37394),
+      Hb = Mb.n(eb);
 
-    function Rd() {
-      return Fd()('(()=>{var dd={5:(dd,Od,md)=>{function Wd(){return"object"===typeof process&&"object"===typeof process.versions&&"undefined"!==typeof process.versions.node}function Fd(dd){return dd instanceof Uint8Array&&(!Wd()||!Buffer.isBuffer(dd))}function Rd(dd){return dd instanceof ArrayBuffer}function Xd(dd){return!!Wd()&&Buffer.isBuffer(dd)}var Kd=md(12).c,hd=md(20).b,vd="Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";Od.c=function(dd){if(!Fd(dd)&&!Rd(dd)&&!Xd(dd))throw new TypeError(vd);var Od=!1,md=!1;Fd(dd)?Od=!0:Rd(dd)&&(md=!0,dd=new Uint8Array(dd));var Wd,Kd,Qd,td=new hd(dd),od=td.maxCompressedLength();if(Od?(Wd=new Uint8Array(od),Qd=td.compressToBuffer(Wd)):md?(Wd=new ArrayBuffer(od),Kd=new Uint8Array(Wd),Qd=td.compressToBuffer(Kd)):(Wd=Buffer.alloc(od),Qd=td.compressToBuffer(Wd)),!Wd.slice){var Nd=new Uint8Array(Array.prototype.slice.call(Wd,0,Qd));if(Od)return Nd;if(md)return Nd.buffer;throw new Error("Not implemented")}return Wd.slice(0,Qd)}},20:(dd,Od)=>{var md=new Array(15);function Wd(dd,Od){return 506832829*dd>>>Od}function Fd(dd,Od){return dd[Od]+(dd[Od+1]<<8)+(dd[Od+2]<<16)+(dd[Od+3]<<24)}function Rd(dd,Od,md){return dd[Od]===dd[md]&&dd[Od+1]===dd[md+1]&&dd[Od+2]===dd[md+2]&&dd[Od+3]===dd[md+3]}function Xd(dd,Od,md,Wd,Fd){return md<=60?(Wd[Fd]=md-1<<2,Fd+=1):md<256?(Wd[Fd]=240,Wd[Fd+1]=md-1,Fd+=2):(Wd[Fd]=244,Wd[Fd+1]=md-1&255,Wd[Fd+2]=md-1>>>8,Fd+=3),function(dd,Od,md,Wd,Fd){var Rd;for(Rd=0;Rd<Fd;Rd++)md[Wd+Rd]=dd[Od+Rd]}(dd,Od,Wd,Fd,md),Fd+md}function Kd(dd,Od,md,Wd){return Wd<12&&md<2048?(dd[Od]=1+(Wd-4<<2)+(md>>>8<<5),dd[Od+1]=255&md,Od+2):(dd[Od]=2+(Wd-1<<2),dd[Od+1]=255&md,dd[Od+2]=md>>>8,Od+3)}function hd(dd,Od,md,Wd){for(;Wd>=68;)Od=Kd(dd,Od,md,64),Wd-=64;return Wd>64&&(Od=Kd(dd,Od,md,60),Wd-=60),Kd(dd,Od,md,Wd)}function vd(dd,Od,Kd,vd,Qd){for(var td=1;1<<td<=Kd&&td<=14;)td+=1;var od=32-(td-=1);"undefined"===typeof md[td]&&(md[td]=new Uint16Array(1<<td));var Nd,qd=md[td];for(Nd=0;Nd<qd.length;Nd++)qd[Nd]=0;var Hd,yd,bd,Td,pd,Yd,gd,wd,Ed,Jd,Ud=Od+Kd,xd=Od,Bd=Od,Sd=!0;if(Kd>=15)for(Hd=Ud-15,bd=Wd(Fd(dd,Od+=1),od);Sd;){Yd=32,Td=Od;do{if(yd=bd,gd=Yd>>>5,Yd+=1,Td=(Od=Td)+gd,Od>Hd){Sd=!1;break}bd=Wd(Fd(dd,Td),od),pd=xd+qd[yd],qd[yd]=Od-xd}while(!Rd(dd,Od,pd));if(!Sd)break;Qd=Xd(dd,Bd,Od-Bd,vd,Qd);do{for(wd=Od,Ed=4;Od+Ed<Ud&&dd[Od+Ed]===dd[pd+Ed];)Ed+=1;if(Od+=Ed,Qd=hd(vd,Qd,wd-pd,Ed),Bd=Od,Od>=Hd){Sd=!1;break}qd[Wd(Fd(dd,Od-1),od)]=Od-1-xd,pd=xd+qd[Jd=Wd(Fd(dd,Od),od)],qd[Jd]=Od-xd}while(Rd(dd,Od,pd));if(!Sd)break;bd=Wd(Fd(dd,Od+=1),od)}return Bd<Ud&&(Qd=Xd(dd,Bd,Ud-Bd,vd,Qd)),Qd}function Qd(dd){this.array=dd}Qd.prototype.maxCompressedLength=function(){var dd=this.array.length;return 32+dd+Math.floor(dd/6)},Qd.prototype.compressToBuffer=function(dd){var Od,md=this.array,Wd=md.length,Fd=0,Rd=0;for(Rd=function(dd,Od,md){do{Od[md]=127&dd,(dd>>>=7)>0&&(Od[md]+=128),md+=1}while(dd>0);return md}(Wd,dd,Rd);Fd<Wd;)Rd=vd(md,Fd,Od=Math.min(Wd-Fd,65536),dd,Rd),Fd+=Od;return Rd},Od.b=Qd},12:(dd,Od)=>{var md=[0,255,65535,16777215,4294967295];function Wd(dd,Od,md,Wd,Fd){var Rd;for(Rd=0;Rd<Fd;Rd++)md[Wd+Rd]=dd[Od+Rd]}function Fd(dd,Od,md,Wd){var Fd;for(Fd=0;Fd<Wd;Fd++)dd[Od+Fd]=dd[Od-md+Fd]}function Rd(dd){this.array=dd,this.pos=0}Rd.prototype.readUncompressedLength=function(){for(var dd,Od,md=0,Wd=0;Wd<32&&this.pos<this.array.length;){if(dd=this.array[this.pos],this.pos+=1,(Od=127&dd)<<Wd>>>Wd!==Od)return-1;if(md|=Od<<Wd,dd<128)return md;Wd+=7}return-1},Rd.prototype.uncompressToBuffer=function(dd){for(var Od,Rd,Xd,Kd,hd=this.array,vd=hd.length,Qd=this.pos,td=0;Qd<hd.length;)if(Od=hd[Qd],Qd+=1,0===(3&Od)){if((Rd=1+(Od>>>2))>60){if(Qd+3>=vd)return!1;Xd=Rd-60,Rd=1+((Rd=hd[Qd]+(hd[Qd+1]<<8)+(hd[Qd+2]<<16)+(hd[Qd+3]<<24))&md[Xd]),Qd+=Xd}if(Qd+Rd>vd)return!1;Wd(hd,Qd,dd,td,Rd),Qd+=Rd,td+=Rd}else{switch(3&Od){case 1:Rd=4+(Od>>>2&7),Kd=hd[Qd]+(Od>>>5<<8),Qd+=1;break;case 2:if(Qd+1>=vd)return!1;Rd=1+(Od>>>2),Kd=hd[Qd]+(hd[Qd+1]<<8),Qd+=2;break;case 3:if(Qd+3>=vd)return!1;Rd=1+(Od>>>2),Kd=hd[Qd]+(hd[Qd+1]<<8)+(hd[Qd+2]<<16)+(hd[Qd+3]<<24),Qd+=4}if(0===Kd||Kd>td)return!1;Fd(dd,td,Kd,Rd),td+=Rd}return!0},Od.c=Rd}},Od={};var md=function md(Wd){var Fd=Od[Wd];if(void 0!==Fd)return Fd.exports;var Rd=Od[Wd]={exports:{}};return dd[Wd](Rd,Rd.exports,md),Rd.exports}(5);function Wd(dd){const Od=(new TextEncoder).encode(dd);return{bytes:(0,md.c)(Od),inflatedBytes:Od.byteLength}}const Fd=self;self.onmessage=dd=>{const{id:Od,text:md}=dd.data,Rd={id:Od,...Wd(md)};Fd.postMessage(Rd,[Rd.bytes.buffer])}})();', "Worker", void 0, md.p + "replayDomChunk.worker.d10a7af2.worker.js")
+    function pb() {
+      return Hb()('(()=>{var bb={10:(bb,wb,Mb)=>{function eb(){return"object"===typeof process&&"object"===typeof process.versions&&"undefined"!==typeof process.versions.node}function Hb(bb){return bb instanceof Uint8Array&&(!eb()||!Buffer.isBuffer(bb))}function pb(bb){return bb instanceof ArrayBuffer}function Vb(bb){return!!eb()&&Buffer.isBuffer(bb)}var gb=Mb(16).b,lb=Mb(20).e,Lb="Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";wb.c=function(bb){if(!Hb(bb)&&!pb(bb)&&!Vb(bb))throw new TypeError(Lb);var wb=!1,Mb=!1;Hb(bb)?wb=!0:pb(bb)&&(Mb=!0,bb=new Uint8Array(bb));var eb,gb,Ib,Ob=new lb(bb),Ub=Ob.maxCompressedLength();if(wb?(eb=new Uint8Array(Ub),Ib=Ob.compressToBuffer(eb)):Mb?(eb=new ArrayBuffer(Ub),gb=new Uint8Array(eb),Ib=Ob.compressToBuffer(gb)):(eb=Buffer.alloc(Ub),Ib=Ob.compressToBuffer(eb)),!eb.slice){var tb=new Uint8Array(Array.prototype.slice.call(eb,0,Ib));if(wb)return tb;if(Mb)return tb.buffer;throw new Error("Not implemented")}return eb.slice(0,Ib)}},20:(bb,wb)=>{var Mb=new Array(15);function eb(bb,wb){return 506832829*bb>>>wb}function Hb(bb,wb){return bb[wb]+(bb[wb+1]<<8)+(bb[wb+2]<<16)+(bb[wb+3]<<24)}function pb(bb,wb,Mb){return bb[wb]===bb[Mb]&&bb[wb+1]===bb[Mb+1]&&bb[wb+2]===bb[Mb+2]&&bb[wb+3]===bb[Mb+3]}function Vb(bb,wb,Mb,eb,Hb){return Mb<=60?(eb[Hb]=Mb-1<<2,Hb+=1):Mb<256?(eb[Hb]=240,eb[Hb+1]=Mb-1,Hb+=2):(eb[Hb]=244,eb[Hb+1]=Mb-1&255,eb[Hb+2]=Mb-1>>>8,Hb+=3),function(bb,wb,Mb,eb,Hb){var pb;for(pb=0;pb<Hb;pb++)Mb[eb+pb]=bb[wb+pb]}(bb,wb,eb,Hb,Mb),Hb+Mb}function gb(bb,wb,Mb,eb){return eb<12&&Mb<2048?(bb[wb]=1+(eb-4<<2)+(Mb>>>8<<5),bb[wb+1]=255&Mb,wb+2):(bb[wb]=2+(eb-1<<2),bb[wb+1]=255&Mb,bb[wb+2]=Mb>>>8,wb+3)}function lb(bb,wb,Mb,eb){for(;eb>=68;)wb=gb(bb,wb,Mb,64),eb-=64;return eb>64&&(wb=gb(bb,wb,Mb,60),eb-=60),gb(bb,wb,Mb,eb)}function Lb(bb,wb,gb,Lb,Ib){for(var Ob=1;1<<Ob<=gb&&Ob<=14;)Ob+=1;var Ub=32-(Ob-=1);"undefined"===typeof Mb[Ob]&&(Mb[Ob]=new Uint16Array(1<<Ob));var tb,Cb=Mb[Ob];for(tb=0;tb<Cb.length;tb++)Cb[tb]=0;var Eb,Fb,Bb,sb,mb,hb,zb,Xb,xb,jb,Kb=wb+gb,rb=wb,Rb=wb,Db=!0;if(gb>=15)for(Eb=Kb-15,Bb=eb(Hb(bb,wb+=1),Ub);Db;){hb=32,sb=wb;do{if(Fb=Bb,zb=hb>>>5,hb+=1,sb=(wb=sb)+zb,wb>Eb){Db=!1;break}Bb=eb(Hb(bb,sb),Ub),mb=rb+Cb[Fb],Cb[Fb]=wb-rb}while(!pb(bb,wb,mb));if(!Db)break;Ib=Vb(bb,Rb,wb-Rb,Lb,Ib);do{for(Xb=wb,xb=4;wb+xb<Kb&&bb[wb+xb]===bb[mb+xb];)xb+=1;if(wb+=xb,Ib=lb(Lb,Ib,Xb-mb,xb),Rb=wb,wb>=Eb){Db=!1;break}Cb[eb(Hb(bb,wb-1),Ub)]=wb-1-rb,mb=rb+Cb[jb=eb(Hb(bb,wb),Ub)],Cb[jb]=wb-rb}while(pb(bb,wb,mb));if(!Db)break;Bb=eb(Hb(bb,wb+=1),Ub)}return Rb<Kb&&(Ib=Vb(bb,Rb,Kb-Rb,Lb,Ib)),Ib}function Ib(bb){this.array=bb}Ib.prototype.maxCompressedLength=function(){var bb=this.array.length;return 32+bb+Math.floor(bb/6)},Ib.prototype.compressToBuffer=function(bb){var wb,Mb=this.array,eb=Mb.length,Hb=0,pb=0;for(pb=function(bb,wb,Mb){do{wb[Mb]=127&bb,(bb>>>=7)>0&&(wb[Mb]+=128),Mb+=1}while(bb>0);return Mb}(eb,bb,pb);Hb<eb;)pb=Lb(Mb,Hb,wb=Math.min(eb-Hb,65536),bb,pb),Hb+=wb;return pb},wb.e=Ib},16:(bb,wb)=>{var Mb=[0,255,65535,16777215,4294967295];function eb(bb,wb,Mb,eb,Hb){var pb;for(pb=0;pb<Hb;pb++)Mb[eb+pb]=bb[wb+pb]}function Hb(bb,wb,Mb,eb){var Hb;for(Hb=0;Hb<eb;Hb++)bb[wb+Hb]=bb[wb-Mb+Hb]}function pb(bb){this.array=bb,this.pos=0}pb.prototype.readUncompressedLength=function(){for(var bb,wb,Mb=0,eb=0;eb<32&&this.pos<this.array.length;){if(bb=this.array[this.pos],this.pos+=1,(wb=127&bb)<<eb>>>eb!==wb)return-1;if(Mb|=wb<<eb,bb<128)return Mb;eb+=7}return-1},pb.prototype.uncompressToBuffer=function(bb){for(var wb,pb,Vb,gb,lb=this.array,Lb=lb.length,Ib=this.pos,Ob=0;Ib<lb.length;)if(wb=lb[Ib],Ib+=1,0===(3&wb)){if((pb=1+(wb>>>2))>60){if(Ib+3>=Lb)return!1;Vb=pb-60,pb=1+((pb=lb[Ib]+(lb[Ib+1]<<8)+(lb[Ib+2]<<16)+(lb[Ib+3]<<24))&Mb[Vb]),Ib+=Vb}if(Ib+pb>Lb)return!1;eb(lb,Ib,bb,Ob,pb),Ib+=pb,Ob+=pb}else{switch(3&wb){case 1:pb=4+(wb>>>2&7),gb=lb[Ib]+(wb>>>5<<8),Ib+=1;break;case 2:if(Ib+1>=Lb)return!1;pb=1+(wb>>>2),gb=lb[Ib]+(lb[Ib+1]<<8),Ib+=2;break;case 3:if(Ib+3>=Lb)return!1;pb=1+(wb>>>2),gb=lb[Ib]+(lb[Ib+1]<<8)+(lb[Ib+2]<<16)+(lb[Ib+3]<<24),Ib+=4}if(0===gb||gb>Ob)return!1;Hb(bb,Ob,gb,pb),Ob+=pb}return!0},wb.b=pb}},wb={};var Mb=function Mb(eb){var Hb=wb[eb];if(void 0!==Hb)return Hb.exports;var pb=wb[eb]={exports:{}};return bb[eb](pb,pb.exports,Mb),pb.exports}(10);function eb(bb){const wb=(new TextEncoder).encode(bb);return{bytes:(0,Mb.c)(wb),inflatedBytes:wb.byteLength}}const Hb=self;self.onmessage=bb=>{const{id:wb,text:Mb}=bb.data,pb={id:wb,...eb(Mb)};Hb.postMessage(pb,[pb.bytes.buffer])}})();', "Worker", void 0, Mb.p + "replayDomChunk.worker.8f4a41c3.worker.js")
     }
-    class Xd {
+    class Vb {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1e4;
-        this.quietMs = dd, this.worker = null, this.failure = null, this.nextId = 0, this.waiting = new Map, this.watchdog = null, this.rearmed = !1
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1e4;
+        this.quietMs = bb, this.worker = null, this.failure = null, this.nextId = 0, this.waiting = new Map, this.watchdog = null, this.rearmed = !1
       }
-      pack(dd) {
-        return new Promise(((Od, md) => {
-          var Wd;
-          const Fd = null !== (Wd = this.worker) && void 0 !== Wd ? Wd : this.start();
-          if (null === Fd) return void md(this.failure);
-          const Rd = this.nextId++;
-          this.waiting.set(Rd, {
-            resolve: Od,
-            reject: md
+      pack(bb) {
+        return new Promise(((wb, Mb) => {
+          var eb;
+          const Hb = null !== (eb = this.worker) && void 0 !== eb ? eb : this.start();
+          if (null === Hb) return void Mb(this.failure);
+          const pb = this.nextId++;
+          this.waiting.set(pb, {
+            resolve: wb,
+            reject: Mb
           });
-          const Xd = {
-            id: Rd,
-            text: dd
+          const Vb = {
+            id: pb,
+            text: bb
           };
-          Fd.postMessage(Xd), this.watchdog ??= this.startWatchdog()
+          Hb.postMessage(Vb), this.watchdog ??= this.startWatchdog()
         }))
       }
       forgetWaiting() {
@@ -506,282 +506,282 @@ export const modules = {
       start() {
         if (null !== this.failure) return null;
         try {
-          this.worker = new Rd
-        } catch (dd) {
-          return this.broke(`didn't start: ${String(dd)}`), null
+          this.worker = new pb
+        } catch (bb) {
+          return this.broke(`didn't start: ${String(bb)}`), null
         }
-        return this.worker.onmessage = dd => {
+        return this.worker.onmessage = bb => {
           const {
-            id: Od,
-            bytes: md,
-            inflatedBytes: Wd
-          } = dd.data, Fd = this.waiting.get(Od);
-          this.waiting.delete(Od), this.stopWatchdog(), this.waiting.size > 0 && (this.watchdog = this.startWatchdog()), null === Fd || void 0 === Fd || Fd.resolve({
-            bytes: md,
-            inflatedBytes: Wd
+            id: wb,
+            bytes: Mb,
+            inflatedBytes: eb
+          } = bb.data, Hb = this.waiting.get(wb);
+          this.waiting.delete(wb), this.stopWatchdog(), this.waiting.size > 0 && (this.watchdog = this.startWatchdog()), null === Hb || void 0 === Hb || Hb.resolve({
+            bytes: Mb,
+            inflatedBytes: eb
           })
-        }, this.worker.onerror = dd => {
-          this.broke(dd.message || "it didn't load")
+        }, this.worker.onerror = bb => {
+          this.broke(bb.message || "it didn't load")
         }, this.worker.onmessageerror = () => {
           this.broke("a reply couldn't be read")
         }, this.worker
       }
       startWatchdog() {
-        const dd = performance.now();
+        const bb = performance.now();
         return setTimeout((() => {
-          if (!this.rearmed && performance.now() - dd > this.quietMs + 2e3) return this.rearmed = !0, void(this.watchdog = this.startWatchdog());
+          if (!this.rearmed && performance.now() - bb > this.quietMs + 2e3) return this.rearmed = !0, void(this.watchdog = this.startWatchdog());
           this.watchdog = null, this.broke(`no reply in ${this.quietMs} ms`)
         }), this.quietMs)
       }
       stopWatchdog() {
         this.rearmed = !1, null !== this.watchdog && (clearTimeout(this.watchdog), this.watchdog = null)
       }
-      broke(dd) {
-        console.warn(`Session replay: page recording worker failed, packing on the main thread: ${dd}`), this.fail(new Error(`page recording worker failed: ${dd}`))
+      broke(bb) {
+        console.warn(`Session replay: page recording worker failed, packing on the main thread: ${bb}`), this.fail(new Error(`page recording worker failed: ${bb}`))
       }
-      fail(dd) {
-        var Od;
-        this.failure ??= dd, this.stopWatchdog(), null === (Od = this.worker) || void 0 === Od || Od.terminate(), this.worker = null;
+      fail(bb) {
+        var wb;
+        this.failure ??= bb, this.stopWatchdog(), null === (wb = this.worker) || void 0 === wb || wb.terminate(), this.worker = null;
         for (const {
-            reject: md
+            reject: Mb
           }
-          of this.waiting.values()) md(dd);
+          of this.waiting.values()) Mb(bb);
         this.waiting.clear()
       }
     }
   },
-  41354: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Fd
+  41129: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Hb
     });
-    var Wd = md(41357);
+    var eb = Mb(41138);
 
-    function Fd(dd) {
-      const Od = (new TextEncoder).encode(dd);
+    function Hb(bb) {
+      const wb = (new TextEncoder).encode(bb);
       return {
-        bytes: (0, Wd.d)(Od),
-        inflatedBytes: Od.byteLength
+        bytes: (0, eb.d)(wb),
+        inflatedBytes: wb.byteLength
       }
     }
   },
-  41405: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd
+  41179: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb
     });
-    const Wd = 20;
-    let Fd = Date.now() - performance.now();
+    const eb = 20;
+    let Hb = Date.now() - performance.now();
 
-    function Rd() {
-      const dd = performance.now(),
-        Od = Date.now();
-      return Math.abs(Od - (dd + Fd)) > Wd && (Fd = Od - dd), dd + Fd
+    function pb() {
+      const bb = performance.now(),
+        wb = Date.now();
+      return Math.abs(wb - (bb + Hb)) > eb && (Hb = wb - bb), bb + Hb
     }
   },
-  41372: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd
+  41155: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb
     });
-    var Wd = md(41381),
-      Fd = md(1253);
+    var eb = Mb(41157),
+      Hb = Mb(1271);
 
-    function Rd() {
+    function pb() {
       return {
-        segmentUploadUrl: `${Fd.clientSideServerUrls.indexUrl}${Wd.n}`,
-        manifestUrl: `${Fd.clientSideServerUrls.indexUrl}${Wd.f}`
+        segmentUploadUrl: `${Hb.clientSideServerUrls.indexUrl}${eb.p}`,
+        manifestUrl: `${Hb.clientSideServerUrls.indexUrl}${eb.h}`
       }
     }
   },
-  41387: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Wd,
-      c: () => Rd,
-      e: () => Fd
+  41161: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => eb,
+      c: () => pb,
+      g: () => Hb
     });
-    const Wd = 32768;
+    const eb = 32768;
 
-    function Fd(dd) {
-      return (new TextEncoder).encode(dd).byteLength
+    function Hb(bb) {
+      return (new TextEncoder).encode(bb).byteLength
     }
-    const Rd = new class {
+    const pb = new class {
       constructor() {
         this.inFlightBytes = 0, this.inFlightLabels = new Map
       }
-      async fetch(dd, Od, md, Wd) {
-        if (this.inFlightBytes + md > 49152) return await fetch(dd, Od);
-        this.inFlightBytes += md, this.countLabel(Wd, 1);
-        const Fd = () => {
-          this.inFlightBytes -= md, this.countLabel(Wd, -1)
+      async fetch(bb, wb, Mb, eb) {
+        if (this.inFlightBytes + Mb > 49152) return await fetch(bb, wb);
+        this.inFlightBytes += Mb, this.countLabel(eb, 1);
+        const Hb = () => {
+          this.inFlightBytes -= Mb, this.countLabel(eb, -1)
         };
-        let Rd;
+        let pb;
         try {
-          Rd = await fetch(dd, {
-            ...Od,
+          pb = await fetch(bb, {
+            ...wb,
             keepalive: !0
           })
-        } catch (Kd) {
-          var Xd;
-          if (Fd(), null !== (Xd = Od.signal) && void 0 !== Xd && Xd.aborted) throw Kd;
-          return console.info("Session replay keepalive request failed; retrying without keepalive.", Kd), await fetch(dd, Od)
+        } catch (gb) {
+          var Vb;
+          if (Hb(), null !== (Vb = wb.signal) && void 0 !== Vb && Vb.aborted) throw gb;
+          return console.info("Session replay keepalive request failed; retrying without keepalive.", gb), await fetch(bb, wb)
         }
-        return Fd(), Rd
+        return Hb(), pb
       }
-      isInFlight(dd) {
-        var Od;
-        return (null !== (Od = this.inFlightLabels.get(dd)) && void 0 !== Od ? Od : 0) > 0
+      isInFlight(bb) {
+        var wb;
+        return (null !== (wb = this.inFlightLabels.get(bb)) && void 0 !== wb ? wb : 0) > 0
       }
-      sendBeacon(dd, Od) {
-        const md = Fd(Od);
-        return !(this.inFlightBytes + md > 57344) && this.beaconSent(navigator.sendBeacon(dd, new Blob([Od], {
+      sendBeacon(bb, wb) {
+        const Mb = Hb(wb);
+        return !(this.inFlightBytes + Mb > 57344) && this.beaconSent(navigator.sendBeacon(bb, new Blob([wb], {
           type: "text/plain"
-        })), md)
+        })), Mb)
       }
-      sendUploadBeacon(dd, Od, md) {
-        return !(this.inFlightBytes + md > 40960) && this.beaconSent(navigator.sendBeacon(dd, Od), md)
+      sendUploadBeacon(bb, wb, Mb) {
+        return !(this.inFlightBytes + Mb > 40960) && this.beaconSent(navigator.sendBeacon(bb, wb), Mb)
       }
-      countLabel(dd, Od) {
-        var md;
-        void 0 !== dd && this.inFlightLabels.set(dd, (null !== (md = this.inFlightLabels.get(dd)) && void 0 !== md ? md : 0) + Od)
+      countLabel(bb, wb) {
+        var Mb;
+        void 0 !== bb && this.inFlightLabels.set(bb, (null !== (Mb = this.inFlightLabels.get(bb)) && void 0 !== Mb ? Mb : 0) + wb)
       }
-      beaconSent(dd, Od) {
-        return dd && (this.inFlightBytes += Od, setTimeout((() => {
-          this.inFlightBytes -= Od
-        }), 1e4)), dd
+      beaconSent(bb, wb) {
+        return bb && (this.inFlightBytes += wb, setTimeout((() => {
+          this.inFlightBytes -= wb
+        }), 1e4)), bb
       }
     }
   },
-  41407: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Xd
+  41181: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Vb
     });
-    var Wd = md(41387),
-      Fd = md(1268);
-    const Rd = 6e4;
-    async function Xd(dd, Od) {
-      const md = JSON.stringify(Od);
+    var eb = Mb(41161),
+      Hb = Mb(1280);
+    const pb = 6e4;
+    async function Vb(bb, wb) {
+      const Mb = JSON.stringify(wb);
       try {
-        const Od = await Wd.c.fetch(dd, {
+        const wb = await eb.c.fetch(bb, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          body: md,
-          signal: (0, Fd.s)(Rd)
-        }, (0, Wd.e)(md));
-        return await async function(dd) {
-          if (!dd.ok) return 413 === dd.status ? "refused" : "retryLater";
-          const Od = await dd.json();
-          return "rejected" in Od ? (console.warn(`Session replay manifest refused: ${Od.reason}`), Od.retryable ? "retryLater" : "refused") : "uploaded"
-        }(Od)
-      } catch (Xd) {
-        return console.warn("Session replay manifest upload failed.", Xd), "retryLater"
+          body: Mb,
+          signal: (0, Hb.t)(pb)
+        }, (0, eb.g)(Mb));
+        return await async function(bb) {
+          if (!bb.ok) return 413 === bb.status ? "refused" : "retryLater";
+          const wb = await bb.json();
+          return "rejected" in wb ? (console.warn(`Session replay manifest refused: ${wb.reason}`), wb.retryable ? "retryLater" : "refused") : "uploaded"
+        }(wb)
+      } catch (Vb) {
+        return console.warn("Session replay manifest upload failed.", Vb), "retryLater"
       }
     }
   },
-  41416: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Kd,
-      e: () => hd
+  41189: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => gb,
+      f: () => lb
     });
-    var Wd = md(41387);
-    const Fd = 16384,
-      Rd = 100,
-      Xd = (0, Wd.e)(',"domSegments":[]');
+    var eb = Mb(41161);
+    const Hb = 16384,
+      pb = 100,
+      Vb = (0, eb.g)(',"domSegments":[]');
 
-    function Kd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Fd;
+    function gb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Hb;
       const {
-        domSegments: Kd,
-        ...hd
-      } = dd.manifest, vd = () => ({
-        ...dd,
+        domSegments: gb,
+        ...lb
+      } = bb.manifest, Lb = () => ({
+        ...bb,
         manifest: {
-          ...hd,
+          ...lb,
           videoSegments: [],
           telemetrySegments: [],
           games: []
         },
         creatorGrants: []
-      }), Qd = (0, Wd.e)(JSON.stringify(vd())), td = [];
-      let od = {
-          request: vd(),
+      }), Ib = (0, eb.g)(JSON.stringify(Lb())), Ob = [];
+      let Ub = {
+          request: Lb(),
           items: []
         },
-        Nd = Qd;
-      const qd = (dd, Od) => {
-          var md;
-          return "domSegments" === Od ? null !== (md = dd.manifest.domSegments) && void 0 !== md ? md : [] : "creatorGrants" === Od ? dd.creatorGrants : dd.manifest[Od]
+        tb = Ib;
+      const Cb = (bb, wb) => {
+          var Mb;
+          return "domSegments" === wb ? null !== (Mb = bb.manifest.domSegments) && void 0 !== Mb ? Mb : [] : "creatorGrants" === wb ? bb.creatorGrants : bb.manifest[wb]
         },
-        Hd = (dd, Od, md) => md + (dd.length > 0 ? 1 : "domSegments" === Od.list ? Xd : 0);
-      for (const Fd of Od) {
-        const dd = (0, Wd.e)(JSON.stringify(Fd.value));
-        let Od = qd(od.request, Fd.list);
-        od.items.length > 0 && (Nd + Hd(Od, Fd, dd) > md || Od.length >= Rd) && (td.push(od), od = {
-          request: vd(),
+        Eb = (bb, wb, Mb) => Mb + (bb.length > 0 ? 1 : "domSegments" === wb.list ? Vb : 0);
+      for (const Hb of wb) {
+        const bb = (0, eb.g)(JSON.stringify(Hb.value));
+        let wb = Cb(Ub.request, Hb.list);
+        Ub.items.length > 0 && (tb + Eb(wb, Hb, bb) > Mb || wb.length >= pb) && (Ob.push(Ub), Ub = {
+          request: Lb(),
           items: []
-        }, Nd = Qd, Od = qd(od.request, Fd.list)), Nd += Hd(Od, Fd, dd), "domSegments" === Fd.list && (od.request.manifest.domSegments = Od), Od.push(Fd.value), od.items.push(Fd)
+        }, tb = Ib, wb = Cb(Ub.request, Hb.list)), tb += Eb(wb, Hb, bb), "domSegments" === Hb.list && (Ub.request.manifest.domSegments = wb), wb.push(Hb.value), Ub.items.push(Hb)
       }
-      return td.push(od), td
+      return Ob.push(Ub), Ob
     }
 
-    function hd(dd) {
-      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fd;
-      return Kd(dd, function(dd) {
-        var Od;
-        return [...dd.creatorGrants.map((dd => ({
+    function lb(bb) {
+      let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hb;
+      return gb(bb, function(bb) {
+        var wb;
+        return [...bb.creatorGrants.map((bb => ({
           list: "creatorGrants",
-          value: dd
-        }))), ...dd.manifest.games.map((dd => ({
+          value: bb
+        }))), ...bb.manifest.games.map((bb => ({
           list: "games",
-          value: dd
-        }))), ...dd.manifest.videoSegments.map((dd => ({
+          value: bb
+        }))), ...bb.manifest.videoSegments.map((bb => ({
           list: "videoSegments",
-          value: dd
-        }))), ...dd.manifest.telemetrySegments.map((dd => ({
+          value: bb
+        }))), ...bb.manifest.telemetrySegments.map((bb => ({
           list: "telemetrySegments",
-          value: dd
-        }))), ...(null !== (Od = dd.manifest.domSegments) && void 0 !== Od ? Od : []).map((dd => ({
+          value: bb
+        }))), ...(null !== (wb = bb.manifest.domSegments) && void 0 !== wb ? wb : []).map((bb => ({
           list: "domSegments",
-          value: dd
+          value: bb
         })))]
-      }(dd), Od).map((dd => {
+      }(bb), wb).map((bb => {
         let {
-          request: Od
-        } = dd;
-        return Od
+          request: wb
+        } = bb;
+        return wb
       }))
     }
   },
-  41397: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Wd
+  41172: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => eb
     });
-    class Wd extends Error {
-      constructor(dd, Od) {
-        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        super(dd), this.status = Od, this.storageCode = md
+    class eb extends Error {
+      constructor(bb, wb) {
+        let Mb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        super(bb), this.status = wb, this.storageCode = Mb
       }
     }
   },
-  41381: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Kd,
-      f: () => Fd,
-      j: () => Rd,
-      n: () => Wd,
-      o: () => Xd
+  41157: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => gb,
+      h: () => Hb,
+      l: () => pb,
+      p: () => eb,
+      s: () => Vb
     });
-    const Wd = "/index/replay/segment-upload-url",
-      Fd = "/index/replay/manifest";
-    const Rd = 65536;
+    const eb = "/index/replay/segment-upload-url",
+      Hb = "/index/replay/manifest";
+    const pb = 65536;
 
-    function Xd(dd) {
+    function Vb(bb) {
       return {
-        count: Math.ceil(dd.segmentDurationMs / dd.partDurationMs) + 1,
-        maxBytes: Math.ceil(1.5 * dd.bitrate / 8 * (dd.partDurationMs / 1e3)) + 32768
+        count: Math.ceil(bb.segmentDurationMs / bb.partDurationMs) + 1,
+        maxBytes: Math.ceil(1.5 * bb.bitrate / 8 * (bb.partDurationMs / 1e3)) + 32768
       }
     }
-    const Kd = 432e5
+    const gb = 432e5
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

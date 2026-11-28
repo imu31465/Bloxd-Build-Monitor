@@ -1,17 +1,17 @@
 # WASM module: `bloxd_wasm_models_bg`
 
-> environment **staging.bloxd.io** · build `yteou.5361c997` · analyzed 2026-11-28T13:51:33+09:00
-> source: https://staging.bloxd.io/static/media/bloxd_wasm_models_bg.bcb5a039647a5110be86.wasm
-> 478,723 bytes (467.5 KB) · sha256 `fea8372a66374bbf…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **staging.bloxd.io** · build `welxxc.ffac0572` · analyzed 2026-11-28T21:24:47+09:00
+> source: https://staging.bloxd.io/static/media/bloxd_wasm_models_bg.fd4d14f832799978af36.wasm
+> 478,484 bytes (467.3 KB) · sha256 `6bd85ee20b75ed8b…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- size 478,484 → 478,723 bytes (+239)
-- data bytes 76,035 → 76,274
-- name-section module id `bc92b5a516610a37.893` → `32d7472f8b7c4c24.893` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 478,723 → 478,484 bytes (-239)
+- data bytes 76,274 → 76,035
+- name-section module id `32d7472f8b7c4c24.893` → `bd99babec4e0c543.893` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/22 names kept (identifier names are randomly assigned per build; compare signatures instead)
-- new embedded strings: `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
-- removed embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `d/index.crates.io-1949cf8c6b5b557f/draco-core-2.5.0/src/pred`
+- new embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `d/index.crates.io-1949cf8c6b5b557f/draco-core-2.5.0/src/pred`
+- removed embedded strings: `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
 
 ## Overview
 
@@ -22,10 +22,10 @@
 | Code bytes (function bodies) | 399,466 (390.1 KB) |
 | Total local variables | 2,166 |
 | Instructions (scanable bodies) | 189,066 |
-| Data segments / bytes | 195 / 76,274 |
+| Data segments / bytes | 195 / 76,035 |
 | Element segments / entries | 1 / 46 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `32d7472f8b7c4c24.893` |
+| name-section module id | `bd99babec4e0c543.893` |
 | Sections | 12 |
 
 ## Sections
@@ -42,7 +42,7 @@
 | 9 | element | 90 | 1 |
 | 12 | datacount | 2 | — |
 | 10 | code | 399,934 | 290 |
-| 11 | data | 77,862 | 195 |
+| 11 | data | 77,623 | 195 |
 | 0 | custom:name | 28 | — |
 
 ## Types
@@ -55,11 +55,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `TvJG.ynv9` | func | `(i32) -> ()` |
-| 1 | `TvJG.CO4n` | func | `(i32) -> ()` |
-| 2 | `TvJG.CWVr` | func | `(i32 i32) -> ()` |
-| 3 | `TvJG.WWlF` | func | `(i32 i32) -> (i32)` |
-| 4 | `TvJG.Rfzd` | func | `(i32 i32) -> ()` |
+| 0 | `izHN.uxZD` | func | `(i32) -> ()` |
+| 1 | `izHN.jlRZ` | func | `(i32) -> ()` |
+| 2 | `izHN.Fpmp` | func | `(i32 i32) -> ()` |
+| 3 | `izHN.gxzz` | func | `(i32 i32) -> (i32)` |
+| 4 | `izHN.ArVW` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -68,27 +68,27 @@
 | name | kind | index | type |
 |---|---|---:|---|
 | `memory` | memory | 0 | `` |
-| `bFzk` | func | 74 | `() -> (i32)` |
-| `iqEg` | func | 213 | `(i32) -> (i32)` |
-| `BAKe` | global | 1 | `` |
-| `EdBL` | func | 245 | `() -> ()` |
-| `tV38` | func | 258 | `() -> (i32 i32)` |
-| `KpPW` | func | 291 | `(i32) -> ()` |
-| `YLXk` | func | 246 | `(i32 i32) -> (i32)` |
-| `tkjW` | global | 2 | `` |
-| `hzE3` | func | 252 | `(i32 i32 i32 i32) -> (i32 i32)` |
-| `L4cf` | func | 290 | `(i32) -> (i32)` |
-| `Ku5b` | func | 137 | `(i32 i32) -> ()` |
-| `LYN6` | func | 93 | `() -> (i32)` |
-| `Hhzy` | func | 245 | `() -> ()` |
-| `dX8f` | func | 49 | `() -> (i32)` |
-| `V0A3` | func | 273 | `(i32 i32 i32) -> ()` |
-| `dcya` | func | 293 | `() -> (i32)` |
-| `IZre` | func | 267 | `() -> (i32)` |
-| `GC8a` | func | 220 | `(i32) -> ()` |
-| `uMx6` | func | 152 | `() -> (i32)` |
-| `ASWi` | func | 256 | `(i32 i32 i32) -> (i32 i32)` |
-| `qnf6` | func | 248 | `(i32 i32 i32 i32) -> (i32)` |
+| `Lpv7` | func | 267 | `() -> (i32)` |
+| `jE3t` | func | 93 | `() -> (i32)` |
+| `Mgji` | func | 220 | `(i32) -> ()` |
+| `eEAZ` | func | 256 | `(i32 i32 i32) -> (i32 i32)` |
+| `j0RC` | func | 152 | `() -> (i32)` |
+| `VA8K` | func | 273 | `(i32 i32 i32) -> ()` |
+| `lGAY` | func | 213 | `(i32) -> (i32)` |
+| `KP0t` | func | 252 | `(i32 i32 i32 i32) -> (i32 i32)` |
+| `D4h2` | func | 245 | `() -> ()` |
+| `BeiQ` | global | 1 | `` |
+| `bUZW` | func | 290 | `(i32) -> (i32)` |
+| `Z1Mm` | func | 258 | `() -> (i32 i32)` |
+| `n1o3` | func | 49 | `() -> (i32)` |
+| `sruK` | func | 74 | `() -> (i32)` |
+| `ALJB` | func | 248 | `(i32 i32 i32 i32) -> (i32)` |
+| `HfMx` | global | 2 | `` |
+| `ytK4` | func | 293 | `() -> (i32)` |
+| `t8Vg` | func | 245 | `() -> ()` |
+| `qHpc` | func | 137 | `(i32 i32) -> ()` |
+| `PN2X` | func | 246 | `(i32 i32) -> (i32)` |
+| `dzx8` | func | 291 | `(i32) -> ()` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -96,7 +96,7 @@
 
 - memory 0: min 18 pages · max ∞ · shared=False
 - table 0: funcref · min 47 · max 47
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1130720, `i32` = i32.const 1130940
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1130480, `i32` = i32.const 1130700
 
 ## Functions
 

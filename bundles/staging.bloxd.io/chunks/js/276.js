@@ -1,209 +1,209 @@
 export const id = 276;
 export const ids = [276];
 export const modules = {
-  53732: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      PostMatchPodium: () => Td
+  53477: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      PostMatchPodium: () => sb
     });
-    var Wd = md(66),
-      Fd = md(1155),
-      Rd = md.n(Fd),
-      Xd = md(35582),
-      Kd = md(53737),
-      hd = md(53739),
-      vd = md(2125),
-      Qd = md(2060),
-      td = md(1238),
-      od = md(38247),
-      Nd = md(1341);
-    const qd = [1, 0, 2],
-      Hd = [.26, .17, .1],
-      yd = [.78, .7, .7];
+    var eb = Mb(64),
+      Hb = Mb(1159),
+      pb = Mb.n(Hb),
+      Vb = Mb(35366),
+      gb = Mb(53482),
+      lb = Mb(53490),
+      Lb = Mb(2183),
+      Ib = Mb(2116),
+      Ob = Mb(1259),
+      Ub = Mb(37907),
+      tb = Mb(1364);
+    const Cb = [1, 0, 2],
+      Eb = [.26, .17, .1],
+      Fb = [.78, .7, .7];
 
-    function bd(dd) {
-      return Xd.i.openMobLineup(dd)
+    function Bb(bb) {
+      return Vb.i.openMobLineup(bb)
     }
-    const Td = (0, Wd.memo)((function(dd) {
+    const sb = (0, eb.memo)((function(bb) {
       let {
-        view: Od
-      } = dd;
-      const md = (0, vd.h)("players"),
-        Fd = (0, Wd.useRef)(null),
-        Rd = qd.filter((dd => dd < Od.podium.length)),
-        Xd = (0, Wd.useMemo)((() => Rd.map((dd => {
-          const Wd = Od.podium[dd];
+        view: wb
+      } = bb;
+      const Mb = (0, Lb.h)("players"),
+        Hb = (0, eb.useRef)(null),
+        pb = Cb.filter((bb => bb < wb.podium.length)),
+        Vb = (0, eb.useMemo)((() => pb.map((bb => {
+          const eb = wb.podium[bb];
           return {
-            cosmetics: (0, od.y)(Wd, md.byId),
-            size: yd[dd],
-            WE: null,
-            animation: Kd.j,
-            lift: Hd[dd]
+            cosmetics: (0, Ub.m)(eb, Mb.byId),
+            size: Fb[bb],
+            NK: null,
+            animation: gb.h,
+            lift: Eb[bb]
           }
-        }))), [Od.Wt]),
-        Qd = (0, Wd.useMemo)((() => ({
-          figures: Xd,
-          shown: Xd.map((() => !0))
-        })), [Xd]);
-      return (0, hd.c)(Fd, bd, Qd), (0, Nd.jsxs)("div", {
+        }))), [wb.bO]),
+        Ib = (0, eb.useMemo)((() => ({
+          figures: Vb,
+          shown: Vb.map((() => !0))
+        })), [Vb]);
+      return (0, lb.b)(Hb, Bb, Ib), (0, tb.jsxs)("div", {
         className: "PostMatchPodium",
         style: {
-          "--columns": Rd.length
+          "--columns": pb.length
         },
-        children: [(0, Nd.jsx)("div", {
+        children: [(0, tb.jsx)("div", {
           className: "PostMatchPodiumFigures MobPreview",
-          ref: Fd
-        }), (0, Nd.jsx)("div", {
+          ref: Hb
+        }), (0, tb.jsx)("div", {
           className: "PostMatchPodiumSteps",
-          children: Rd.map((dd => (0, Nd.jsx)(pd, {
-            view: Od,
-            row: Od.podium[dd],
-            place: dd
-          }, dd)))
+          children: pb.map((bb => (0, tb.jsx)(mb, {
+            view: wb,
+            row: wb.podium[bb],
+            place: bb
+          }, bb)))
         })]
       })
     }));
 
-    function pd(dd) {
-      var Od;
+    function mb(bb) {
+      var wb;
       let {
-        view: md,
-        row: Wd,
-        place: Fd
-      } = dd;
+        view: Mb,
+        row: eb,
+        place: Hb
+      } = bb;
       const {
-        t: Xd
-      } = (0, td.G)(), Kd = (0, od.r)(md, Wd);
-      return (0, Nd.jsx)("div", {
-        className: Rd()("PostMatchPodiumStep", `Place-${Fd+1}`, {
-          IsLocal: Wd.isLocal
+        t: Vb
+      } = (0, Ob.C)(), gb = (0, Ub.k)(Mb, eb);
+      return (0, tb.jsx)("div", {
+        className: pb()("PostMatchPodiumStep", `Place-${Hb+1}`, {
+          IsLocal: eb.isLocal
         }),
         style: {
-          "--stepHeight": .151 + Hd[Fd],
-          "--teamColour": null !== (Od = Wd.colour) && void 0 !== Od ? Od : void 0
+          "--stepHeight": .151 + Eb[Hb],
+          "--teamColour": null !== (wb = eb.colour) && void 0 !== wb ? wb : void 0
         },
-        children: (0, Nd.jsxs)("div", {
+        children: (0, tb.jsxs)("div", {
           className: "PostMatchPodiumBlock",
-          children: [(0, Nd.jsx)("span", {
+          children: [(0, tb.jsx)("span", {
             className: "PostMatchPodiumPlace FullyFancyText",
-            children: Fd + 1
-          }), (0, Nd.jsx)("span", {
+            children: Hb + 1
+          }), (0, tb.jsx)("span", {
             className: "PostMatchPodiumName SmallTextBold",
-            children: Wd.name
-          }), (Wd.isMvp || Wd.isSvp) && (0, Nd.jsx)("span", {
-            className: Rd()("PostMatchTag", Wd.isMvp ? "Tag-mvp" : "Tag-svp"),
-            children: Xd(Wd.isMvp ? "postMatch:mvp" : "postMatch:svp")
-          }), null !== Kd && (0, Nd.jsxs)("span", {
+            children: eb.name
+          }), (eb.isMvp || eb.isSvp) && (0, tb.jsx)("span", {
+            className: pb()("PostMatchTag", eb.isMvp ? "Tag-mvp" : "Tag-svp"),
+            children: Vb(eb.isMvp ? "postMatch:mvp" : "postMatch:svp")
+          }), null !== gb && (0, tb.jsxs)("span", {
             className: "PostMatchPodiumStat SmallTextBold",
-            children: [(0, Nd.jsx)("b", {
-              children: Kd.value
-            }), " ", (0, Nd.jsx)(Qd.d, {
-              text: Kd.label
+            children: [(0, tb.jsx)("b", {
+              children: gb.value
+            }), " ", (0, tb.jsx)(Ib.d, {
+              text: gb.label
             })]
           })]
         })
       })
     }
   },
-  53739: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd
+  53490: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => pb
     });
-    var Wd = md(66),
-      Fd = md(3851);
+    var eb = Mb(64),
+      Hb = Mb(4005);
 
-    function Rd(dd, Od, md) {
-      const Rd = (0, Wd.useRef)(null),
+    function pb(bb, wb, Mb) {
+      const pb = (0, eb.useRef)(null),
         {
-          width: Xd,
-          height: Kd
-        } = (0, Fd.b)(dd);
-      (0, Wd.useEffect)((() => {
-        const md = Od(dd.current);
-        return Rd.current = md, () => {
-          md.close(), Rd.current = null
+          width: Vb,
+          height: gb
+        } = (0, Hb.b)(bb);
+      (0, eb.useEffect)((() => {
+        const Mb = wb(bb.current);
+        return pb.current = Mb, () => {
+          Mb.close(), pb.current = null
         }
-      }), [dd, Od]), (0, Wd.useEffect)((() => {
-        Xd <= 0 || Kd <= 0 || Rd.current.resize(Xd, Kd)
-      }), [Xd, Kd]), (0, Wd.useEffect)((() => {
-        Rd.current.show(md)
-      }), [md])
+      }), [bb, wb]), (0, eb.useEffect)((() => {
+        Vb <= 0 || gb <= 0 || pb.current.resize(Vb, gb)
+      }), [Vb, gb]), (0, eb.useEffect)((() => {
+        pb.current.show(Mb)
+      }), [Mb])
     }
   },
-  53737: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => od,
-      h: () => td,
-      j: () => hd
+  53482: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Ub,
+      e: () => Ob,
+      h: () => lb
     });
-    var Wd = md(38682),
-      Fd = md(40230);
+    var eb = Mb(38356),
+      Hb = Mb(39927);
 
-    function Rd(dd, Od) {
-      let [md, Wd, Fd] = dd;
-      return [0, .5, 1].map((dd => ({
-        timeFraction: dd,
+    function pb(bb, wb) {
+      let [Mb, eb, Hb] = bb;
+      return [0, .5, 1].map((bb => ({
+        timeFraction: bb,
         rotation: {
-          Um: "catmull-rom-spline",
-          point: [md, Wd, Fd + (.5 === dd ? Od : 0)]
+          XM: "catmull-rom-spline",
+          point: [Mb, eb, Hb + (.5 === bb ? wb : 0)]
         }
       })))
     }
 
-    function Xd(dd, Od, md) {
+    function Vb(bb, wb, Mb) {
       return {
-        gm: 3200,
+        BM: 3200,
         loop: !0,
-        am: {
+        mM: {
           Root: {
-            timeline: [0, .5, 1].map((dd => ({
-              timeFraction: dd,
+            timeline: [0, .5, 1].map((bb => ({
+              timeFraction: bb,
               position: {
-                Um: "catmull-rom-spline",
-                point: [0, .5 === dd ? .18 : 0, 0]
+                XM: "catmull-rom-spline",
+                point: [0, .5 === bb ? .18 : 0, 0]
               }
             })))
           },
           HeadMesh: {
-            timeline: [0, .25, .75, 1].map((dd => ({
-              timeFraction: dd,
+            timeline: [0, .25, .75, 1].map((bb => ({
+              timeFraction: bb,
               rotation: {
-                Um: "catmull-rom-spline",
-                point: [0, .25 === dd ? .12 : .75 === dd ? -.12 : 0, 0]
+                XM: "catmull-rom-spline",
+                point: [0, .25 === bb ? .12 : .75 === bb ? -.12 : 0, 0]
               }
             })))
           },
           ArmLeftMesh: {
-            timeline: Rd(dd, md)
+            timeline: pb(bb, Mb)
           },
           ArmRightMesh: {
-            timeline: Rd(Od, -md)
+            timeline: pb(wb, -Mb)
           }
         }
       }
     }
-    const Kd = Xd([0, 0, 0], [0, 0, 0], .07),
-      hd = (0, Fd.d)((0, Wd.h)(Kd), "mobIdle"),
-      vd = Xd([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      Qd = Xd([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      td = (0, Fd.d)((0, Wd.h)(vd), "gunReady"),
-      od = (0, Fd.d)((0, Wd.h)(Qd), "gunAimed")
+    const gb = Vb([0, 0, 0], [0, 0, 0], .07),
+      lb = (0, Hb.c)((0, eb.h)(gb), "mobIdle"),
+      Lb = Vb([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      Ib = Vb([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      Ob = (0, Hb.c)((0, eb.h)(Lb), "gunReady"),
+      Ub = (0, Hb.c)((0, eb.h)(Ib), "gunAimed")
   },
-  40230: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Fd,
-      h: () => Rd
+  39927: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Hb,
+      d: () => pb
     });
-    const Wd = new WeakMap;
+    const eb = new WeakMap;
 
-    function Fd(dd, Od) {
-      return Wd.set(dd, Od), dd
+    function Hb(bb, wb) {
+      return eb.set(bb, wb), bb
     }
 
-    function Rd(dd) {
-      var Od;
-      return null !== (Od = Wd.get(dd)) && void 0 !== Od ? Od : null
+    function pb(bb) {
+      var wb;
+      return null !== (wb = eb.get(bb)) && void 0 !== wb ? wb : null
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

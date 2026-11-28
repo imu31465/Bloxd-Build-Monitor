@@ -1,92 +1,92 @@
 export const id = 142;
 export const ids = [142];
 export const modules = {
-  38273: (dd, Od, md) => {
-    function Wd(dd, Od, md, Wd) {
-      return !(md && !dd.aimable) && (!Od || dd.gun && "head" !== Wd)
+  37933: (bb, wb, Mb) => {
+    function eb(bb, wb, Mb, eb) {
+      return !(Mb && !bb.aimable) && (!wb || bb.gun && "head" !== eb)
     }
 
-    function Fd(dd) {
-      return Math.max(.1 * dd, 1)
+    function Hb(bb) {
+      return Math.max(.1 * bb, 1)
     }
 
-    function Rd(dd, Od) {
-      return !dd && Od
+    function pb(bb, wb) {
+      return !bb && wb
     }
-    md.d(Od, {
-      c: () => Rd,
-      g: () => Fd,
-      j: () => Wd
+    Mb.d(wb, {
+      b: () => pb,
+      f: () => Hb,
+      i: () => eb
     })
   },
-  38280: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Kd,
-      h: () => Xd
+  37936: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => gb,
+      e: () => Vb
     });
-    let Wd = null;
-    const Fd = {
+    let eb = null;
+    const Hb = {
         crosshairAccuracy: [],
         turnDamageIndicators: [],
         turnSoundCues: []
       },
-      Rd = {
-        crosshairAccuracy: dd => {
-          const Od = Fd.crosshairAccuracy.at(-1);
-          Od ? Od.hook(dd) : Wd = dd
+      pb = {
+        crosshairAccuracy: bb => {
+          const wb = Hb.crosshairAccuracy.at(-1);
+          wb ? wb.hook(bb) : eb = bb
         },
-        turnDamageIndicators: dd => {
-          var Od;
-          null === (Od = Fd.turnDamageIndicators.at(-1)) || void 0 === Od || Od.hook(dd)
+        turnDamageIndicators: bb => {
+          var wb;
+          null === (wb = Hb.turnDamageIndicators.at(-1)) || void 0 === wb || wb.hook(bb)
         },
-        turnSoundCues: dd => {
-          var Od;
-          null === (Od = Fd.turnSoundCues.at(-1)) || void 0 === Od || Od.hook(dd)
+        turnSoundCues: bb => {
+          var wb;
+          null === (wb = Hb.turnSoundCues.at(-1)) || void 0 === wb || wb.hook(bb)
         }
       };
 
-    function Xd(dd, Od) {
-      const md = {
-          hook: Od
+    function Vb(bb, wb) {
+      const Mb = {
+          hook: wb
         },
-        Xd = Fd[dd];
-      if (Xd.push(md), "crosshairAccuracy" === dd && null !== Wd) {
-        const dd = Wd;
-        Wd = null, Rd.crosshairAccuracy(dd)
+        Vb = Hb[bb];
+      if (Vb.push(Mb), "crosshairAccuracy" === bb && null !== eb) {
+        const bb = eb;
+        eb = null, pb.crosshairAccuracy(bb)
       }
       return () => {
-        const dd = Xd.indexOf(md); - 1 !== dd && Xd.splice(dd, 1)
+        const bb = Vb.indexOf(Mb); - 1 !== bb && Vb.splice(bb, 1)
       }
     }
 
-    function Kd() {
-      return Rd
+    function gb() {
+      return pb
     }
   },
-  35499: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      f: () => Fd
+  35289: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb,
+      i: () => Hb
     });
-    var Wd = md(29);
+    var eb = Mb(26);
 
-    function Fd(dd, Od) {
-      return dd && !Od
+    function Hb(bb, wb) {
+      return bb && !wb
     }
 
-    function Rd() {
-      return Fd(Wd.e.get("isTouchScreen"), Wd.e.get("clientEscMenuOptions").touchActionButtons)
+    function pb() {
+      return Hb(eb.c.get("isTouchScreen"), eb.c.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  39354: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => td,
-      g: () => Xd
+  39047: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Ob,
+      h: () => Vb
     });
-    var Wd = md(5752),
-      Fd = md(5733),
-      Rd = md(405);
-    const Xd = {
+    var eb = Mb(5890),
+      Hb = Mb(5868),
+      pb = Mb(382);
+    const Vb = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -3025,52 +3025,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...Kd("White"),
-      ...Kd("Orange"),
-      ...Kd("Magenta"),
-      ...Kd("Light Blue"),
-      ...Kd("Yellow"),
-      ...Kd("Lime"),
-      ...Kd("Pink"),
-      ...Kd("Gray"),
-      ...Kd("Light Gray"),
-      ...Kd("Cyan"),
-      ...Kd("Purple"),
-      ...Kd("Blue"),
-      ...Kd("Brown"),
-      ...Kd("Green"),
-      ...Kd("Red"),
-      ...Kd("Black"),
-      ...Kd("Draugr"),
-      ...Kd("Skull"),
-      ...Kd("Rainbow"),
-      ...hd("Sheep"),
-      ...hd("Cow"),
-      ...hd("Pig"),
-      ...hd("Horse"),
-      ...hd("Camel"),
-      ...hd("Wolf"),
-      ...hd("Deer"),
-      ...hd("Wildcat"),
-      ...vd("Radar"),
-      ...vd("Inactive Radar"),
-      ...vd("Active Radar"),
-      ...Qd("Magenta"),
-      ...Qd("Light Gray"),
-      ...Qd("Red"),
-      ...Qd("White"),
-      ...Qd("Orange"),
-      ...Qd("Light Blue"),
-      ...Qd("Yellow"),
-      ...Qd("Lime"),
-      ...Qd("Pink"),
-      ...Qd("Gray"),
-      ...Qd("Cyan"),
-      ...Qd("Purple"),
-      ...Qd("Blue"),
-      ...Qd("Brown"),
-      ...Qd("Green"),
-      ...Qd("Black"),
+      ...gb("White"),
+      ...gb("Orange"),
+      ...gb("Magenta"),
+      ...gb("Light Blue"),
+      ...gb("Yellow"),
+      ...gb("Lime"),
+      ...gb("Pink"),
+      ...gb("Gray"),
+      ...gb("Light Gray"),
+      ...gb("Cyan"),
+      ...gb("Purple"),
+      ...gb("Blue"),
+      ...gb("Brown"),
+      ...gb("Green"),
+      ...gb("Red"),
+      ...gb("Black"),
+      ...gb("Draugr"),
+      ...gb("Skull"),
+      ...gb("Rainbow"),
+      ...lb("Sheep"),
+      ...lb("Cow"),
+      ...lb("Pig"),
+      ...lb("Horse"),
+      ...lb("Camel"),
+      ...lb("Wolf"),
+      ...lb("Deer"),
+      ...lb("Wildcat"),
+      ...Lb("Radar"),
+      ...Lb("Inactive Radar"),
+      ...Lb("Active Radar"),
+      ...Ib("Magenta"),
+      ...Ib("Light Gray"),
+      ...Ib("Red"),
+      ...Ib("White"),
+      ...Ib("Orange"),
+      ...Ib("Light Blue"),
+      ...Ib("Yellow"),
+      ...Ib("Lime"),
+      ...Ib("Pink"),
+      ...Ib("Gray"),
+      ...Ib("Cyan"),
+      ...Ib("Purple"),
+      ...Ib("Blue"),
+      ...Ib("Brown"),
+      ...Ib("Green"),
+      ...Ib("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3184,11 +3184,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const dd = "Lunite Auto Miner";
+        const bb = "Lunite Auto Miner";
         return {
-          [dd]: {
+          [bb]: {
             positions: [{
-              block: dd,
+              block: bb,
               x: 0,
               y: 0,
               z: 0
@@ -3214,9 +3214,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${dd}|meta|rot2`]: {
+          [`${bb}|meta|rot2`]: {
             positions: [{
-              block: `${dd}|meta|rot2`,
+              block: `${bb}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3242,9 +3242,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${dd}|meta|rot3`]: {
+          [`${bb}|meta|rot3`]: {
             positions: [{
-              block: `${dd}|meta|rot3`,
+              block: `${bb}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3270,9 +3270,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${dd}|meta|rot4`]: {
+          [`${bb}|meta|rot4`]: {
             positions: [{
-              block: `${dd}|meta|rot4`,
+              block: `${bb}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3301,74 +3301,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const dd = {
-            1: dd => ({
+        const bb = {
+            1: bb => ({
               x: 0,
-              z: dd
+              z: bb
             }),
-            2: dd => ({
-              x: dd,
+            2: bb => ({
+              x: bb,
               z: 0
             }),
-            3: dd => ({
+            3: bb => ({
               x: 0,
-              z: -dd
+              z: -bb
             }),
-            4: dd => ({
-              x: -dd,
+            4: bb => ({
+              x: -bb,
               z: 0
             })
           },
-          Od = {};
-        for (let md = 1; md <= 4; md++) {
-          const Fd = 1 === md ? "" : `|meta|rot${md}`;
-          Od[`${Wd.b[0].block}${Fd}`] = {
-            positions: Wd.b.map((Od => {
+          wb = {};
+        for (let Mb = 1; Mb <= 4; Mb++) {
+          const Hb = 1 === Mb ? "" : `|meta|rot${Mb}`;
+          wb[`${eb.e[0].block}${Hb}`] = {
+            positions: eb.e.map((wb => {
               let {
-                block: Wd,
-                y: Rd,
-                z: Xd
-              } = Od;
+                block: eb,
+                y: pb,
+                z: Vb
+              } = wb;
               return {
-                block: `${Wd}${Fd}`,
-                y: Rd,
-                ...dd[md](Xd)
+                block: `${eb}${Hb}`,
+                y: pb,
+                ...bb[Mb](Vb)
               }
             }))
           }
         }
-        return Od
+        return wb
       }(),
       ... function() {
-        const dd = {};
-        for (let Od = 1; Od <= Wd.i; Od++) {
-          const md = (0, Wd.dc)(Od),
-            Fd = Wd.m[Od - 1],
-            Rd = [{
-              block: md,
+        const bb = {};
+        for (let wb = 1; wb <= eb.n; wb++) {
+          const Mb = (0, eb.hc)(wb),
+            Hb = eb.o[wb - 1],
+            pb = [{
+              block: Mb,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const dd of Wd.d)
-            for (let Od = 1; Od <= Fd; Od++) {
-              if ("southwest" === dd && 1 === Od) continue;
+          for (const bb of eb.i)
+            for (let wb = 1; wb <= Hb; wb++) {
+              if ("southwest" === bb && 1 === wb) continue;
               const {
-                x: md,
-                z: Fd
-              } = Wd.g[dd];
-              Rd.push({
-                block: (0, Wd.cc)(dd, Od),
-                x: md,
-                y: Od - 1,
-                z: Fd
+                x: Mb,
+                z: Hb
+              } = eb.k[bb];
+              pb.push({
+                block: (0, eb.dc)(bb, wb),
+                x: Mb,
+                y: wb - 1,
+                z: Hb
               })
             }
-          dd[md] = {
-            positions: Rd
+          bb[Mb] = {
+            positions: pb
           }
         }
-        return dd
+        return bb
       }(),
       "Solar Panel": {
         positions: [{
@@ -3482,159 +3482,159 @@ export const modules = {
       }
     };
 
-    function Kd(dd) {
+    function gb(bb) {
       return {
-        [`${dd} Banner`]: {
+        [`${bb} Banner`]: {
           positions: [{
-            block: `${dd} Banner`,
+            block: `${bb} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot1|bot`,
+            block: `_${bb} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot2|bot`]: {
+        [`${bb} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot2|bot`,
+            block: `${bb} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot2|bot`,
+            block: `_${bb} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot3|bot`]: {
+        [`${bb} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot3|bot`,
+            block: `${bb} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot3|bot`,
+            block: `_${bb} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot4|bot`]: {
+        [`${bb} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot4|bot`,
+            block: `${bb} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot4|bot`,
+            block: `_${bb} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot1|side`]: {
+        [`${bb} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot1|side`,
+            block: `${bb} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot1|side`,
+            block: `_${bb} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot2|side`]: {
+        [`${bb} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot2|side`,
+            block: `${bb} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot2|side`,
+            block: `_${bb} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot3|side`]: {
+        [`${bb} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot3|side`,
+            block: `${bb} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot3|side`,
+            block: `_${bb} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot4|side`]: {
+        [`${bb} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot4|side`,
+            block: `${bb} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot4|side`,
+            block: `_${bb} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot1|top`]: {
+        [`${bb} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot1|top`,
+            block: `${bb} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag`,
+            block: `_${bb} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot2|top`]: {
+        [`${bb} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot2|top`,
+            block: `${bb} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot2|top`,
+            block: `_${bb} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot3|top`]: {
+        [`${bb} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot3|top`,
+            block: `${bb} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot3|top`,
+            block: `_${bb} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${dd} Banner|meta|rot4|top`]: {
+        [`${bb} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${dd} Banner|meta|rot4|top`,
+            block: `${bb} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${dd} Banner Flag|meta|rot4|top`,
+            block: `_${bb} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3643,96 +3643,96 @@ export const modules = {
       }
     }
 
-    function hd(dd) {
-      const Od = (0, Rd.Ob)(dd);
+    function lb(bb) {
+      const wb = (0, pb.$b)(bb);
       return {
-        [Od]: {
+        [wb]: {
           positions: [{
-            block: Od,
+            block: wb,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Od} Top Left`,
+            block: `_${wb} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Od} Top Right`,
+            block: `_${wb} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${Od} Bottom Right`,
+            block: `_${wb} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${Od}|meta|rot2`]: {
+        [`${wb}|meta|rot2`]: {
           positions: [{
-            block: `${Od}|meta|rot2`,
+            block: `${wb}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Od} Top Left|meta|rot2`,
+            block: `_${wb} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Od} Top Right|meta|rot2`,
+            block: `_${wb} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${Od} Bottom Right|meta|rot2`,
+            block: `_${wb} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${Od}|meta|rot3`]: {
+        [`${wb}|meta|rot3`]: {
           positions: [{
-            block: `${Od}|meta|rot3`,
+            block: `${wb}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Od} Top Left|meta|rot3`,
+            block: `_${wb} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Od} Top Right|meta|rot3`,
+            block: `_${wb} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${Od} Bottom Right|meta|rot3`,
+            block: `_${wb} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${Od}|meta|rot4`]: {
+        [`${wb}|meta|rot4`]: {
           positions: [{
-            block: `${Od}|meta|rot4`,
+            block: `${wb}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Od} Top Left|meta|rot4`,
+            block: `_${wb} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Od} Top Right|meta|rot4`,
+            block: `_${wb} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${Od} Bottom Right|meta|rot4`,
+            block: `_${wb} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3741,77 +3741,77 @@ export const modules = {
       }
     }
 
-    function vd(dd) {
-      const Od = `_${dd} Back`,
-        md = `_${dd} Dish`;
+    function Lb(bb) {
+      const wb = `_${bb} Back`,
+        Mb = `_${bb} Dish`;
       return {
-        [dd]: {
+        [bb]: {
           positions: [{
-            block: dd,
+            block: bb,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: Od,
+            block: wb,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: md,
+            block: Mb,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${dd}|meta|rot2`]: {
+        [`${bb}|meta|rot2`]: {
           positions: [{
-            block: `${dd}|meta|rot2`,
+            block: `${bb}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Od}|meta|rot2`,
+            block: `${wb}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${md}|meta|rot2`,
+            block: `${Mb}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${dd}|meta|rot3`]: {
+        [`${bb}|meta|rot3`]: {
           positions: [{
-            block: `${dd}|meta|rot3`,
+            block: `${bb}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Od}|meta|rot3`,
+            block: `${wb}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${md}|meta|rot3`,
+            block: `${Mb}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${dd}|meta|rot4`]: {
+        [`${bb}|meta|rot4`]: {
           positions: [{
-            block: `${dd}|meta|rot4`,
+            block: `${bb}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Od}|meta|rot4`,
+            block: `${wb}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${md}|meta|rot4`,
+            block: `${Mb}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3820,22 +3820,22 @@ export const modules = {
       }
     }
 
-    function Qd(dd) {
-      const Od = `Small ${dd} Pod`;
+    function Ib(bb) {
+      const wb = `Small ${bb} Pod`;
       return {
-        [Od]: {
+        [wb]: {
           positions: [{
-            block: Od,
+            block: wb,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${dd} Pod Mid`,
+            block: `_Small ${bb} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${dd} Pod Top`,
+            block: `_Small ${bb} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -3843,286 +3843,286 @@ export const modules = {
         }
       }
     }
-    for (const od in Xd) {
-      for (const dd of Xd[od].positions)
-        if (dd.id = Fd.i[dd.block].id, od === dd.block && (0 !== dd.x || 0 !== dd.y || 0 !== dd.z)) throw new Error(`Multiblock "${od}" has main block "${dd.block}" at non-origin position (${dd.x}, ${dd.y}, ${dd.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      Xd[Fd.i[od].id] = Xd[od]
+    for (const Ub in Vb) {
+      for (const bb of Vb[Ub].positions)
+        if (bb.id = Hb.g[bb.block].id, Ub === bb.block && (0 !== bb.x || 0 !== bb.y || 0 !== bb.z)) throw new Error(`Multiblock "${Ub}" has main block "${bb.block}" at non-origin position (${bb.x}, ${bb.y}, ${bb.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      Vb[Hb.g[Ub].id] = Vb[Ub]
     }
-    const td = {};
-    for (const od in Xd)
+    const Ob = {};
+    for (const Ub in Vb)
       for (const {
-          block: dd,
-          x: Od,
-          y: md,
-          z: Wd
+          block: bb,
+          x: wb,
+          y: Mb,
+          z: eb
         }
-        of Xd[od].positions) {
-        const Rd = {
-          mainMultiblock: od,
-          compX: Od,
-          compY: md,
-          compZ: Wd
+        of Vb[Ub].positions) {
+        const pb = {
+          mainMultiblock: Ub,
+          compX: wb,
+          compY: Mb,
+          compZ: eb
         };
-        td[dd] = Rd, td[Fd.i[dd].id] = Rd
+        Ob[bb] = pb, Ob[Hb.g[bb].id] = pb
       }
   },
-  39756: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => hd,
-      h: () => Kd
+  39455: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => lb,
+      i: () => gb
     });
-    var Wd = md(5733),
-      Fd = md(5774),
-      Rd = md(5778);
-    const Xd = Fd.x.map((dd => {
+    var eb = Mb(5868),
+      Hb = Mb(5923),
+      pb = Mb(5930);
+    const Vb = Hb.p.map((bb => {
       let {
-        dx: Od,
-        dz: md
-      } = dd;
-      return [Od, 0, md]
+        dx: wb,
+        dz: Mb
+      } = bb;
+      return [wb, 0, Mb]
     }));
 
-    function Kd(dd) {
-      const Od = Wd.i[dd];
-      return !!Od && dd !== Wd.d && !Od.model && !Od.LN && !1 !== Od.solid && !Od.Sy
+    function gb(bb) {
+      const wb = eb.g[bb];
+      return !!wb && bb !== eb.e && !wb.model && !wb.ht && !1 !== wb.solid && !wb.lF
     }
-    class hd {
-      constructor(dd) {
-        this.model = dd, this.reshapeOffsets = [...Xd, [0, -1, 0]]
+    class lb {
+      constructor(bb) {
+        this.model = bb, this.reshapeOffsets = [...Vb, [0, -1, 0]]
       }
-      handles(dd) {
-        const Od = Wd.i[dd];
-        return (null === Od || void 0 === Od ? void 0 : Od.model) === this.model && void 0 !== Od.attachedTop
+      handles(bb) {
+        const wb = eb.g[bb];
+        return (null === wb || void 0 === wb ? void 0 : wb.model) === this.model && void 0 !== wb.attachedTop
       }
-      affects(dd) {
-        return this.handles(dd) || Kd(dd) || (0, Rd.s)(Wd.i[dd])
+      affects(bb) {
+        return this.handles(bb) || gb(bb) || (0, pb.z)(eb.g[bb])
       }
-      shape(dd, Od, md, Xd, hd) {
-        let vd = this.handles(dd(Od, md + 1, Xd)) ? Fd.k : 0;
-        return Fd.x.forEach(((hd, Qd) => {
+      shape(bb, wb, Mb, Vb, lb) {
+        let Lb = this.handles(bb(wb, Mb + 1, Vb)) ? Hb.h : 0;
+        return Hb.p.forEach(((lb, Ib) => {
           let {
-            dx: td,
-            dz: od
-          } = hd;
-          const Nd = dd(Od + td, md, Xd + od);
-          (this.handles(Nd) || Kd(Nd) || function(dd, Od) {
-            const md = Wd.i[dd];
-            return (0, Rd.s)(md) && (0, Rd.p)(md.meta.rot) === (0 !== Fd.x[Od].dx)
-          }(Nd, Qd)) && (vd |= 1 << Qd)
-        })), (0, Wd.j)((0, Fd.m)(Wd.i[hd].meta.rootName, vd))
+            dx: Ob,
+            dz: Ub
+          } = lb;
+          const tb = bb(wb + Ob, Mb, Vb + Ub);
+          (this.handles(tb) || gb(tb) || function(bb, wb) {
+            const Mb = eb.g[bb];
+            return (0, pb.z)(Mb) && (0, pb.v)(Mb.meta.rot) === (0 !== Hb.p[wb].dx)
+          }(tb, Ib)) && (Lb |= 1 << Ib)
+        })), (0, eb.i)((0, Hb.j)(eb.g[lb].meta.rootName, Lb))
       }
     }
   },
-  39557: (dd, Od, md) => {
-    function Wd(dd, Od) {
-      var md;
-      Od || (Od = {});
-      const Wd = null !== (md = Od.customAttributes) && void 0 !== md ? md : {};
-      var Fd, Rd, Xd;
-      "Gun" === (null === dd || void 0 === dd ? void 0 : dd.type) && (Wd.shotsLeft = null !== (Fd = null !== (Rd = Wd.shotsLeft) && void 0 !== Rd ? Rd : null === (Xd = Wd.gunStats) || void 0 === Xd ? void 0 : Xd.clipSize) && void 0 !== Fd ? Fd : dd.clipSize);
-      if (Wd.enchantmentTier && (Wd.enchantmentTier = Wd.enchantmentTier.toString()), Wd.enchantments)
-        for (const td in Wd.enchantments) {
-          const dd = Wd.enchantments[td];
-          if ("number" !== typeof dd) {
-            const Od = parseInt(dd);
-            isNaN(Od) || Od < 0 ? Wd.enchantments[td] = void 0 : Wd.enchantments[td] = Od > 1e9 ? 1e9 : Od
+  39239: (bb, wb, Mb) => {
+    function eb(bb, wb) {
+      var Mb;
+      wb || (wb = {});
+      const eb = null !== (Mb = wb.customAttributes) && void 0 !== Mb ? Mb : {};
+      var Hb, pb, Vb;
+      "Gun" === (null === bb || void 0 === bb ? void 0 : bb.type) && (eb.shotsLeft = null !== (Hb = null !== (pb = eb.shotsLeft) && void 0 !== pb ? pb : null === (Vb = eb.gunStats) || void 0 === Vb ? void 0 : Vb.clipSize) && void 0 !== Hb ? Hb : bb.clipSize);
+      if (eb.enchantmentTier && (eb.enchantmentTier = eb.enchantmentTier.toString()), eb.enchantments)
+        for (const Ob in eb.enchantments) {
+          const bb = eb.enchantments[Ob];
+          if ("number" !== typeof bb) {
+            const wb = parseInt(bb);
+            isNaN(wb) || wb < 0 ? eb.enchantments[Ob] = void 0 : eb.enchantments[Ob] = wb > 1e9 ? 1e9 : wb
           }
         }
-      if (Wd.enchantmentData)
-        for (const td in Wd.enchantmentData) {
-          const dd = Wd.enchantmentData[td];
-          if (!dd) continue;
-          if ("object" !== typeof dd) {
-            Wd.enchantmentData[td] = void 0;
+      if (eb.enchantmentData)
+        for (const Ob in eb.enchantmentData) {
+          const bb = eb.enchantmentData[Ob];
+          if (!bb) continue;
+          if ("object" !== typeof bb) {
+            eb.enchantmentData[Ob] = void 0;
             continue
           }
-          const Od = dd.icon,
-            md = dd.description;
-          var Kd, hd, vd, Qd;
-          if ("string" !== typeof Od) Wd.enchantmentData[td].icon = null !== (Kd = null === Od || void 0 === Od || null === (hd = Od.toString) || void 0 === hd ? void 0 : hd.call(Od)) && void 0 !== Kd ? Kd : void 0;
-          if ("string" !== typeof md) Wd.enchantmentData[td].description = null !== (vd = null === md || void 0 === md || null === (Qd = md.toString) || void 0 === Qd ? void 0 : Qd.call(md)) && void 0 !== vd ? vd : void 0
+          const wb = bb.icon,
+            Mb = bb.description;
+          var gb, lb, Lb, Ib;
+          if ("string" !== typeof wb) eb.enchantmentData[Ob].icon = null !== (gb = null === wb || void 0 === wb || null === (lb = wb.toString) || void 0 === lb ? void 0 : lb.call(wb)) && void 0 !== gb ? gb : void 0;
+          if ("string" !== typeof Mb) eb.enchantmentData[Ob].description = null !== (Lb = null === Mb || void 0 === Mb || null === (Ib = Mb.toString) || void 0 === Ib ? void 0 : Ib.call(Mb)) && void 0 !== Lb ? Lb : void 0
         }
-      return Od.customAttributes = Wd, Od
+      return wb.customAttributes = eb, wb
     }
-    md.d(Od, {
-      c: () => Wd
+    Mb.d(wb, {
+      c: () => eb
     })
   },
-  39750: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Ed,
-      g: () => bd,
-      k: () => hd,
-      n: () => td,
-      o: () => Jd
+  39448: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => xb,
+      f: () => Bb,
+      j: () => lb,
+      n: () => Ob,
+      p: () => jb
     });
-    var Wd = md(5733),
-      Fd = md(5759),
-      Rd = md(39756);
-    const Xd = (0, Wd.j)("Noticeboard"),
-      Kd = (0, Wd.j)("Standing Noticeboard|meta|rot4|lrud");
+    var eb = Mb(5868),
+      Hb = Mb(5901),
+      pb = Mb(39455);
+    const Vb = (0, eb.i)("Noticeboard"),
+      gb = (0, eb.i)("Standing Noticeboard|meta|rot4|lrud");
 
-    function hd(dd) {
-      return Xd <= dd && dd <= Kd
+    function lb(bb) {
+      return Vb <= bb && bb <= gb
     }
-    const vd = new Uint8Array(Kd - Xd + 1);
-    for (let Ud = Xd; Ud <= Kd; Ud++) vd[Ud - Xd] = (0, Fd.t)(Wd.i[Ud].meta.metaStr);
-    const Qd = 64,
-      td = Qd * Qd,
-      [od, Nd, qd, Hd] = [0, 1, 2, 3];
+    const Lb = new Uint8Array(gb - Vb + 1);
+    for (let Kb = Vb; Kb <= gb; Kb++) Lb[Kb - Vb] = (0, Hb.o)(eb.g[Kb].meta.metaStr);
+    const Ib = 64,
+      Ob = Ib * Ib,
+      [Ub, tb, Cb, Eb] = [0, 1, 2, 3];
 
-    function yd(dd) {
-      var Od, md;
-      return "string" === typeof(null === dd || void 0 === dd || null === (Od = dd.persisted) || void 0 === Od || null === (md = Od.shared) || void 0 === md ? void 0 : md.text)
-    }
-
-    function bd(dd) {
-      return yd(dd) && "" !== dd.persisted.shared.text.trim()
+    function Fb(bb) {
+      var wb, Mb;
+      return "string" === typeof(null === bb || void 0 === bb || null === (wb = bb.persisted) || void 0 === wb || null === (Mb = wb.shared) || void 0 === Mb ? void 0 : Mb.text)
     }
 
-    function Td(dd, Od) {
-      let [md, , Wd] = Od;
-      const [Rd, , Xd] = Fd.A[dd][Nd];
-      return md * Rd + Wd * Xd
+    function Bb(bb) {
+      return Fb(bb) && "" !== bb.persisted.shared.text.trim()
     }
 
-    function pd(dd, Od, md) {
-      return md[1] - Od[1] || Td(dd, Od) - Td(dd, md)
+    function sb(bb, wb) {
+      let [Mb, , eb] = wb;
+      const [pb, , Vb] = Hb.s[bb][tb];
+      return Mb * pb + eb * Vb
     }
 
-    function Yd(dd, Od, md, Rd, Kd) {
-      var hd;
-      let Qd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : dd(Od[0], Od[1], Od[2]);
-      if (!(vd[Qd - Xd] & 1 << md)) return null;
-      const [td, od, Nd] = Fd.A[Kd][md], qd = [Od[0] + td, Od[1] + od, Od[2] + Nd], Hd = dd(qd[0], qd[1], qd[2]), yd = null === (hd = Wd.i[Hd]) || void 0 === hd ? void 0 : hd.meta;
-      return (null === yd || void 0 === yd ? void 0 : yd.rootId) === Rd && yd.rot === Kd && vd[Hd - Xd] & 1 << (1 ^ md) ? qd : null
+    function mb(bb, wb, Mb) {
+      return Mb[1] - wb[1] || sb(bb, wb) - sb(bb, Mb)
     }
 
-    function gd(dd, Od, md, Rd) {
-      const Xd = dd(Od, md, Rd);
-      if (!hd(Xd)) return null;
+    function hb(bb, wb, Mb, pb, gb) {
+      var lb;
+      let Ib = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bb(wb[0], wb[1], wb[2]);
+      if (!(Lb[Ib - Vb] & 1 << Mb)) return null;
+      const [Ob, Ub, tb] = Hb.s[gb][Mb], Cb = [wb[0] + Ob, wb[1] + Ub, wb[2] + tb], Eb = bb(Cb[0], Cb[1], Cb[2]), Fb = null === (lb = eb.g[Eb]) || void 0 === lb ? void 0 : lb.meta;
+      return (null === Fb || void 0 === Fb ? void 0 : Fb.rootId) === pb && Fb.rot === gb && Lb[Eb - Vb] & 1 << (1 ^ Mb) ? Cb : null
+    }
+
+    function zb(bb, wb, Mb, pb) {
+      const Vb = bb(wb, Mb, pb);
+      if (!lb(Vb)) return null;
       const {
-        rootId: Kd,
-        rot: vd
-      } = Wd.i[Xd].meta, td = (Od, md) => {
-        let Wd = Od,
-          Fd = 1;
-        for (let Rd = Yd(dd, Wd, md, Kd, vd); Rd && Fd < Qd; Rd = Yd(dd, Wd, md, Kd, vd)) Wd = Rd, Fd++;
+        rootId: gb,
+        rot: Lb
+      } = eb.g[Vb].meta, Ob = (wb, Mb) => {
+        let eb = wb,
+          Hb = 1;
+        for (let pb = hb(bb, eb, Mb, gb, Lb); pb && Hb < Ib; pb = hb(bb, eb, Mb, gb, Lb)) eb = pb, Hb++;
         return {
-          end: Wd,
-          cells: Fd
+          end: eb,
+          cells: Hb
         }
-      }, yd = td(td([Od, md, Rd], od).end, qd).end, bd = td(yd, Nd).cells, [Td, , pd] = Fd.A[vd][Nd];
-      let gd = 1;
-      dd: for (; gd < Qd; gd++)
-        for (let Od = 0; Od < bd; Od++)
-          if (!Yd(dd, [yd[0] + Td * Od, yd[1] - gd + 1, yd[2] + pd * Od], Hd, Kd, vd)) break dd;
+      }, Fb = Ob(Ob([wb, Mb, pb], Ub).end, Cb).end, Bb = Ob(Fb, tb).cells, [sb, , mb] = Hb.s[Lb][tb];
+      let zb = 1;
+      bb: for (; zb < Ib; zb++)
+        for (let wb = 0; wb < Bb; wb++)
+          if (!hb(bb, [Fb[0] + sb * wb, Fb[1] - zb + 1, Fb[2] + mb * wb], Eb, gb, Lb)) break bb;
       return {
-        anchor: yd,
-        rootId: Kd,
-        rot: vd,
-        width: bd,
-        height: gd
+        anchor: Fb,
+        rootId: gb,
+        rot: Lb,
+        width: Bb,
+        height: zb
       }
     }
 
-    function wd(dd, Od) {
-      for (const md of function(dd) {
+    function Xb(bb, wb) {
+      for (const Mb of function(bb) {
           let {
-            anchor: Od,
-            rot: md,
-            width: Wd,
-            height: Rd
-          } = dd;
-          const [Xd, , Kd] = Fd.A[md][Nd], hd = [];
-          for (let Fd = 0; Fd < Rd; Fd++)
-            for (let dd = 0; dd < Wd; dd++) hd.push([Od[0] + Xd * dd, Od[1] - Fd, Od[2] + Kd * dd]);
-          return hd
-        }(dd))
-        if (yd(Od(md[0], md[1], md[2]))) return md;
+            anchor: wb,
+            rot: Mb,
+            width: eb,
+            height: pb
+          } = bb;
+          const [Vb, , gb] = Hb.s[Mb][tb], lb = [];
+          for (let Hb = 0; Hb < pb; Hb++)
+            for (let bb = 0; bb < eb; bb++) lb.push([wb[0] + Vb * bb, wb[1] - Hb, wb[2] + gb * bb]);
+          return lb
+        }(bb))
+        if (Fb(wb(Mb[0], Mb[1], Mb[2]))) return Mb;
       return null
     }
 
-    function Ed(dd, Od, md, Fd, Rd) {
-      const Xd = dd(md, Fd, Rd);
-      if (!hd(Xd)) return null;
+    function xb(bb, wb, Mb, Hb, pb) {
+      const Vb = bb(Mb, Hb, pb);
+      if (!lb(Vb)) return null;
       const {
-        rootId: Kd,
-        rot: vd
-      } = Wd.i[Xd].meta, Qd = [
-        [md, Fd, Rd]
-      ], od = new Set([Qd[0].join()]);
-      let Nd = Qd[0],
-        qd = null;
-      for (let Wd = 0; Wd < Qd.length; Wd++) {
-        const md = Qd[Wd];
-        if (pd(vd, md, Nd) < 0 && (Nd = md), yd(Od(md[0], md[1], md[2]))) {
-          const Od = gd(dd, md[0], md[1], md[2]);
-          (!qd || pd(vd, Od.anchor, qd.anchor) < 0) && (qd = Od)
+        rootId: gb,
+        rot: Lb
+      } = eb.g[Vb].meta, Ib = [
+        [Mb, Hb, pb]
+      ], Ub = new Set([Ib[0].join()]);
+      let tb = Ib[0],
+        Cb = null;
+      for (let eb = 0; eb < Ib.length; eb++) {
+        const Mb = Ib[eb];
+        if (mb(Lb, Mb, tb) < 0 && (tb = Mb), Fb(wb(Mb[0], Mb[1], Mb[2]))) {
+          const wb = zb(bb, Mb[0], Mb[1], Mb[2]);
+          (!Cb || mb(Lb, wb.anchor, Cb.anchor) < 0) && (Cb = wb)
         }
-        for (let Od = 0; Od < 4 && Qd.length < td; Od++) {
-          const Wd = Yd(dd, md, Od, Kd, vd);
-          Wd && !od.has(Wd.join()) && (od.add(Wd.join()), Qd.push(Wd))
+        for (let wb = 0; wb < 4 && Ib.length < Ob; wb++) {
+          const eb = hb(bb, Mb, wb, gb, Lb);
+          eb && !Ub.has(eb.join()) && (Ub.add(eb.join()), Ib.push(eb))
         }
       }
-      return qd ??= gd(dd, Nd[0], Nd[1], Nd[2]), {
-        cells: Qd,
-        topLeft: Nd,
-        rect: qd,
-        textCell: wd(qd, Od)
+      return Cb ??= zb(bb, tb[0], tb[1], tb[2]), {
+        cells: Ib,
+        topLeft: tb,
+        rect: Cb,
+        textCell: Xb(Cb, wb)
       }
     }
 
-    function Jd(dd, Od, md, Xd, Kd) {
-      if (null !== md && hd(md)) {
+    function jb(bb, wb, Mb, Vb, gb) {
+      if (null !== Mb && lb(Mb)) {
         const {
-          rootName: dd,
-          rot: Od
-        } = Wd.i[md].meta;
-        if (Fd.A[Od].some((dd => {
-            let [Od, md, Wd] = dd;
-            return Od === Xd[0] && md === Xd[1] && Wd === Xd[2]
+          rootName: bb,
+          rot: wb
+        } = eb.g[Mb].meta;
+        if (Hb.s[wb].some((bb => {
+            let [wb, Mb, eb] = bb;
+            return wb === Vb[0] && Mb === Vb[1] && eb === Vb[2]
           }))) return {
-          root: dd,
-          rot: Od
+          root: bb,
+          rot: wb
         }
       }
-      const [vd, Qd] = Fd.o[Kd], td = dd(Od[0] - vd, Od[1], Od[2] - Qd);
+      const [Lb, Ib] = Hb.k[gb], Ob = bb(wb[0] - Lb, wb[1], wb[2] - Ib);
       return {
-        root: (0, Rd.h)(td) ? Fd.E : Fd.B,
-        rot: Kd
+        root: (0, pb.i)(Ob) ? Hb.x : Hb.v,
+        rot: gb
       }
     }
   },
-  39744: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => bd,
-      i: () => Yd,
-      j: () => Ed,
-      k: () => Jd,
-      o: () => qd,
-      p: () => td,
-      q: () => Nd,
-      u: () => Ud,
-      v: () => xd,
-      x: () => od
+  39443: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Bb,
+      e: () => hb,
+      h: () => xb,
+      k: () => jb,
+      o: () => Cb,
+      p: () => Ob,
+      t: () => tb,
+      u: () => Kb,
+      v: () => rb,
+      x: () => Ub
     });
-    var Wd = md(7410),
-      Fd = md(38594),
-      Rd = md(5733);
-    const Xd = (0, Rd.j)("Water"),
-      Kd = (0, Rd.j)("Lava"),
-      hd = (0, Rd.j)("Air"),
-      vd = {
+    var eb = Mb(7634),
+      Hb = Mb(38244),
+      pb = Mb(5868);
+    const Vb = (0, pb.i)("Water"),
+      gb = (0, pb.i)("Lava"),
+      lb = (0, pb.i)("Air"),
+      Lb = {
         physicsState: {
-          type: Wd.q.CAR,
-          tier: Wd.g.KART
+          type: eb.r.CAR,
+          tier: eb.j.KART
         },
         validBlockIds: "solidBlocks",
         meshSize: 4,
         placeSound: null
       },
-      Qd = {
+      Ib = {
         validBlockIds: "solidBlocks",
         meshSize: 4,
         placeSound: null,
@@ -4131,41 +4131,41 @@ export const modules = {
           localOffset: [0, .75, -.35]
         }]
       },
-      td = {
+      Ob = {
         Boat: {
           meshItemName: "INTERNAL_MESH_Boat",
           physicsState: {
-            type: Wd.q.BOAT,
-            tier: Wd.f.WOOD
+            type: eb.r.BOAT,
+            tier: eb.h.WOOD
           },
-          validBlockIds: [Xd, Kd],
+          validBlockIds: [Vb, gb],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         "Obsidian Boat": {
           meshItemName: "INTERNAL_MESH_Obsidian Boat",
           physicsState: {
-            type: Wd.q.BOAT,
-            tier: Wd.f.OBSIDIAN
+            type: eb.r.BOAT,
+            tier: eb.h.OBSIDIAN
           },
-          validBlockIds: [Xd, Kd],
+          validBlockIds: [Vb, gb],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         Speedboat: {
           meshItemName: "INTERNAL_MESH_Speedboat",
           physicsState: {
-            type: Wd.q.BOAT,
-            tier: Wd.f.SPEED
+            type: eb.r.BOAT,
+            tier: eb.h.SPEED
           },
-          validBlockIds: [Xd],
+          validBlockIds: [Vb],
           meshSize: 1.2,
           placeSound: "splash1"
         },
         Hovercraft: {
           meshItemName: "INTERNAL_MESH_Hovercraft",
           physicsState: {
-            type: Wd.q.HOVERCRAFT,
+            type: eb.r.HOVERCRAFT,
             tier: null
           },
           validBlockIds: "solidBlocksOrFluid",
@@ -4173,74 +4173,74 @@ export const modules = {
           placeSound: null
         },
         "Yellow Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Yellow Kart"
         },
         "White Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_White Kart"
         },
         "Red Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Red Kart"
         },
         "Purple Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Purple Kart"
         },
         "Pink Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Pink Kart"
         },
         "Orange Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Orange Kart"
         },
         "Magenta Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Magenta Kart"
         },
         "Lime Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Lime Kart"
         },
         "Light Gray Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Light Gray Kart"
         },
         "Light Blue Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Light Blue Kart"
         },
         "Green Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Green Kart"
         },
         "Gray Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Gray Kart"
         },
         "Cyan Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Cyan Kart"
         },
         "Brown Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Brown Kart"
         },
         "Blue Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Blue Kart"
         },
         "Black Kart": {
-          ...vd,
+          ...Lb,
           meshItemName: "INTERNAL_MESH_Black Kart"
         },
         "Off Roader": {
           meshItemName: "INTERNAL_MESH_Off Roader",
           physicsState: {
-            type: Wd.q.CAR,
-            tier: Wd.g.OFF_ROADER
+            type: eb.r.CAR,
+            tier: eb.j.OFF_ROADER
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
@@ -4254,42 +4254,42 @@ export const modules = {
           }]
         },
         "Gold Mining Drill": {
-          ...Qd,
+          ...Ib,
           meshItemName: "INTERNAL_MESH_Gold Mining Drill",
           physicsState: {
-            type: Wd.q.CAR,
-            tier: Wd.g.GOLD_MINING_DRILL
+            type: eb.r.CAR,
+            tier: eb.j.GOLD_MINING_DRILL
           }
         },
         "Iron Mining Drill": {
-          ...Qd,
+          ...Ib,
           meshItemName: "INTERNAL_MESH_Iron Mining Drill",
           physicsState: {
-            type: Wd.q.CAR,
-            tier: Wd.g.IRON_MINING_DRILL
+            type: eb.r.CAR,
+            tier: eb.j.IRON_MINING_DRILL
           }
         },
         "Diamond Mining Drill": {
-          ...Qd,
+          ...Ib,
           meshItemName: "INTERNAL_MESH_Diamond Mining Drill",
           physicsState: {
-            type: Wd.q.CAR,
-            tier: Wd.g.DIAMOND_MINING_DRILL
+            type: eb.r.CAR,
+            tier: eb.j.DIAMOND_MINING_DRILL
           }
         },
         "Moonstone Mining Drill": {
-          ...Qd,
+          ...Ib,
           meshItemName: "INTERNAL_MESH_Moonstone Mining Drill",
           physicsState: {
-            type: Wd.q.CAR,
-            tier: Wd.g.MOONSTONE_MINING_DRILL
+            type: eb.r.CAR,
+            tier: eb.j.MOONSTONE_MINING_DRILL
           }
         },
         "Armored Car": {
           meshItemName: "INTERNAL_MESH_Armored Car",
           physicsState: {
-            type: Wd.q.CAR,
-            tier: Wd.g.ARMORED_CAR
+            type: eb.r.CAR,
+            tier: eb.j.ARMORED_CAR
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
@@ -4305,275 +4305,275 @@ export const modules = {
         "Light Blue Car": {
           meshItemName: "INTERNAL_MESH_Car",
           physicsState: {
-            type: Wd.q.CAR,
-            tier: Wd.g.CAR
+            type: eb.r.CAR,
+            tier: eb.j.CAR
           },
           validBlockIds: "solidBlocks",
           meshSize: 4,
           placeSound: null
         }
       },
-      od = Object.values(td).map((dd => dd.meshItemName));
+      Ub = Object.values(Ob).map((bb => bb.meshItemName));
 
-    function Nd(dd) {
-      for (const Od of Fd.e)
-        if (td[Od].meshItemName === dd) return Od;
+    function tb(bb) {
+      for (const wb of Hb.e)
+        if (Ob[wb].meshItemName === bb) return wb;
       return null
     }
 
-    function qd(dd, Od) {
-      const md = dd.validBlockIds;
-      if (Array.isArray(md)) return md.includes(Od);
-      if (Od === hd) return !1;
-      if ("solidBlocks" === md) return !0 !== Rd.i[Od].LN;
-      if ("solidBlocksOrFluid" === md) return !0;
-      throw new Error(`Unsupported validBlockIds for ${Od}: ${JSON.stringify(md)}`)
+    function Cb(bb, wb) {
+      const Mb = bb.validBlockIds;
+      if (Array.isArray(Mb)) return Mb.includes(wb);
+      if (wb === lb) return !1;
+      if ("solidBlocks" === Mb) return !0 !== pb.g[wb].ht;
+      if ("solidBlocksOrFluid" === Mb) return !0;
+      throw new Error(`Unsupported validBlockIds for ${wb}: ${JSON.stringify(Mb)}`)
     }
-    const Hd = {
+    const Eb = {
         meshAttachment: {
           size: .12,
           offset: [0, 1.8, -.24],
           rotation: [0, 0, 0]
         }
       },
-      yd = {
+      Fb = {
         "Yellow Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.YELLOW
+            type: eb.r.BALLOON,
+            tier: eb.e.YELLOW
           }
         },
         "White Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.WHITE
+            type: eb.r.BALLOON,
+            tier: eb.e.WHITE
           }
         },
         "Red Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.RED
+            type: eb.r.BALLOON,
+            tier: eb.e.RED
           }
         },
         "Purple Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.PURPLE
+            type: eb.r.BALLOON,
+            tier: eb.e.PURPLE
           }
         },
         "Pink Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.PINK
+            type: eb.r.BALLOON,
+            tier: eb.e.PINK
           }
         },
         "Orange Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.ORANGE
+            type: eb.r.BALLOON,
+            tier: eb.e.ORANGE
           }
         },
         "Magenta Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.MAGENTA
+            type: eb.r.BALLOON,
+            tier: eb.e.MAGENTA
           }
         },
         "Lime Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.LIME
+            type: eb.r.BALLOON,
+            tier: eb.e.LIME
           }
         },
         "Light Gray Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.LIGHT_GRAY
+            type: eb.r.BALLOON,
+            tier: eb.e.LIGHT_GRAY
           }
         },
         "Light Blue Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.LIGHT_BLUE
+            type: eb.r.BALLOON,
+            tier: eb.e.LIGHT_BLUE
           }
         },
         "Green Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.GREEN
+            type: eb.r.BALLOON,
+            tier: eb.e.GREEN
           }
         },
         "Gray Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.GRAY
+            type: eb.r.BALLOON,
+            tier: eb.e.GRAY
           }
         },
         "Cyan Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.CYAN
+            type: eb.r.BALLOON,
+            tier: eb.e.CYAN
           }
         },
         "Brown Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.BROWN
+            type: eb.r.BALLOON,
+            tier: eb.e.BROWN
           }
         },
         "Blue Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.BLUE
+            type: eb.r.BALLOON,
+            tier: eb.e.BLUE
           }
         },
         "Black Balloon": {
-          ...Hd,
+          ...Eb,
           physicsState: {
-            type: Wd.q.BALLOON,
-            tier: Wd.c.BLACK
+            type: eb.r.BALLOON,
+            tier: eb.e.BLACK
           }
         }
       };
 
-    function bd(dd) {
-      var Od;
-      return null === dd || void 0 === dd ? null : null !== (Od = yd[dd]) && void 0 !== Od ? Od : null
+    function Bb(bb) {
+      var wb;
+      return null === bb || void 0 === bb ? null : null !== (wb = Fb[bb]) && void 0 !== wb ? wb : null
     }
-    const Td = {
+    const sb = {
         meshAttachment: {
           size: 3,
           offset: [0, .72, .3],
           rotation: [-Math.PI / 2, Math.PI, Math.PI]
         }
       },
-      pd = {
+      mb = {
         "Wood Hang Glider": {
-          ...Td,
+          ...sb,
           physicsState: {
-            type: Wd.q.GLIDER,
-            tier: Wd.k.WOOD
+            type: eb.r.GLIDER,
+            tier: eb.n.WOOD
           }
         },
         "Iron Hang Glider": {
-          ...Td,
+          ...sb,
           physicsState: {
-            type: Wd.q.GLIDER,
-            tier: Wd.k.IRON
+            type: eb.r.GLIDER,
+            tier: eb.n.IRON
           }
         },
         "Gold Hang Glider": {
-          ...Td,
+          ...sb,
           physicsState: {
-            type: Wd.q.GLIDER,
-            tier: Wd.k.GOLD
+            type: eb.r.GLIDER,
+            tier: eb.n.GOLD
           }
         },
         "Diamond Hang Glider": {
-          ...Td,
+          ...sb,
           physicsState: {
-            type: Wd.q.GLIDER,
-            tier: Wd.k.DIAMOND
+            type: eb.r.GLIDER,
+            tier: eb.n.DIAMOND
           }
         }
       };
 
-    function Yd(dd) {
-      var Od;
-      return null === dd || void 0 === dd ? null : null !== (Od = pd[dd]) && void 0 !== Od ? Od : null
+    function hb(bb) {
+      var wb;
+      return null === bb || void 0 === bb ? null : null !== (wb = mb[bb]) && void 0 !== wb ? wb : null
     }
-    const gd = new Set(Object.values(yd).map((dd => dd.physicsState.type))),
-      wd = new Set(Object.values(pd).map((dd => dd.physicsState.type)));
+    const zb = new Set(Object.values(Fb).map((bb => bb.physicsState.type))),
+      Xb = new Set(Object.values(mb).map((bb => bb.physicsState.type)));
 
-    function Ed(dd) {
-      return gd.has(dd)
-    }
-
-    function Jd(dd) {
-      return wd.has(dd)
+    function xb(bb) {
+      return zb.has(bb)
     }
 
-    function Ud(dd) {
-      return dd === Wd.q.DEFAULT || function(dd) {
-        return gd.has(dd) || wd.has(dd)
-      }(dd)
+    function jb(bb) {
+      return Xb.has(bb)
     }
 
-    function xd(dd) {
-      return !Ud(dd) && dd !== Wd.q.SLEEPING
+    function Kb(bb) {
+      return bb === eb.r.DEFAULT || function(bb) {
+        return zb.has(bb) || Xb.has(bb)
+      }(bb)
+    }
+
+    function rb(bb) {
+      return !Kb(bb) && bb !== eb.r.SLEEPING
     }
   },
-  7410: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Xd,
-      f: () => Fd,
-      g: () => hd,
-      k: () => Rd,
-      n: () => vd,
-      q: () => Wd,
-      t: () => Kd
+  7634: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Vb,
+      h: () => Hb,
+      j: () => lb,
+      n: () => pb,
+      p: () => Lb,
+      r: () => eb,
+      t: () => gb
     });
-    let Wd = function(dd) {
-        return dd[dd.DEFAULT = 0] = "DEFAULT", dd[dd.BOAT = 1] = "BOAT", dd[dd.GLIDER = 2] = "GLIDER", dd[dd.BALLOON = 3] = "BALLOON", dd[dd.SLEEPING = 4] = "SLEEPING", dd[dd.RIDING_MOB = 5] = "RIDING_MOB", dd[dd.CAR = 6] = "CAR", dd[dd.HOVERCRAFT = 7] = "HOVERCRAFT", dd
+    let eb = function(bb) {
+        return bb[bb.DEFAULT = 0] = "DEFAULT", bb[bb.BOAT = 1] = "BOAT", bb[bb.GLIDER = 2] = "GLIDER", bb[bb.BALLOON = 3] = "BALLOON", bb[bb.SLEEPING = 4] = "SLEEPING", bb[bb.RIDING_MOB = 5] = "RIDING_MOB", bb[bb.CAR = 6] = "CAR", bb[bb.HOVERCRAFT = 7] = "HOVERCRAFT", bb
       }({}),
-      Fd = function(dd) {
-        return dd[dd.WOOD = 0] = "WOOD", dd[dd.OBSIDIAN = 1] = "OBSIDIAN", dd[dd.SPEED = 2] = "SPEED", dd
+      Hb = function(bb) {
+        return bb[bb.WOOD = 0] = "WOOD", bb[bb.OBSIDIAN = 1] = "OBSIDIAN", bb[bb.SPEED = 2] = "SPEED", bb
       }({}),
-      Rd = function(dd) {
-        return dd[dd.WOOD = 0] = "WOOD", dd[dd.IRON = 1] = "IRON", dd[dd.GOLD = 2] = "GOLD", dd[dd.DIAMOND = 3] = "DIAMOND", dd
+      pb = function(bb) {
+        return bb[bb.WOOD = 0] = "WOOD", bb[bb.IRON = 1] = "IRON", bb[bb.GOLD = 2] = "GOLD", bb[bb.DIAMOND = 3] = "DIAMOND", bb
       }({}),
-      Xd = function(dd) {
-        return dd[dd.YELLOW = 0] = "YELLOW", dd[dd.WHITE = 1] = "WHITE", dd[dd.RED = 2] = "RED", dd[dd.PURPLE = 3] = "PURPLE", dd[dd.PINK = 4] = "PINK", dd[dd.ORANGE = 5] = "ORANGE", dd[dd.MAGENTA = 6] = "MAGENTA", dd[dd.LIME = 7] = "LIME", dd[dd.LIGHT_GRAY = 8] = "LIGHT_GRAY", dd[dd.LIGHT_BLUE = 9] = "LIGHT_BLUE", dd[dd.GREEN = 10] = "GREEN", dd[dd.GRAY = 11] = "GRAY", dd[dd.CYAN = 12] = "CYAN", dd[dd.BROWN = 13] = "BROWN", dd[dd.BLUE = 14] = "BLUE", dd[dd.BLACK = 15] = "BLACK", dd
+      Vb = function(bb) {
+        return bb[bb.YELLOW = 0] = "YELLOW", bb[bb.WHITE = 1] = "WHITE", bb[bb.RED = 2] = "RED", bb[bb.PURPLE = 3] = "PURPLE", bb[bb.PINK = 4] = "PINK", bb[bb.ORANGE = 5] = "ORANGE", bb[bb.MAGENTA = 6] = "MAGENTA", bb[bb.LIME = 7] = "LIME", bb[bb.LIGHT_GRAY = 8] = "LIGHT_GRAY", bb[bb.LIGHT_BLUE = 9] = "LIGHT_BLUE", bb[bb.GREEN = 10] = "GREEN", bb[bb.GRAY = 11] = "GRAY", bb[bb.CYAN = 12] = "CYAN", bb[bb.BROWN = 13] = "BROWN", bb[bb.BLUE = 14] = "BLUE", bb[bb.BLACK = 15] = "BLACK", bb
       }({}),
-      Kd = function(dd) {
-        return dd[dd.ROTATION_1 = 0] = "ROTATION_1", dd[dd.ROTATION_2 = 1] = "ROTATION_2", dd[dd.ROTATION_3 = 2] = "ROTATION_3", dd[dd.ROTATION_4 = 3] = "ROTATION_4", dd
+      gb = function(bb) {
+        return bb[bb.ROTATION_1 = 0] = "ROTATION_1", bb[bb.ROTATION_2 = 1] = "ROTATION_2", bb[bb.ROTATION_3 = 2] = "ROTATION_3", bb[bb.ROTATION_4 = 3] = "ROTATION_4", bb
       }({}),
-      hd = function(dd) {
-        return dd[dd.KART = 0] = "KART", dd[dd.OFF_ROADER = 1] = "OFF_ROADER", dd[dd.CAR = 2] = "CAR", dd[dd.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", dd[dd.ARMORED_CAR = 4] = "ARMORED_CAR", dd[dd.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", dd[dd.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", dd[dd.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", dd
+      lb = function(bb) {
+        return bb[bb.KART = 0] = "KART", bb[bb.OFF_ROADER = 1] = "OFF_ROADER", bb[bb.CAR = 2] = "CAR", bb[bb.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", bb[bb.ARMORED_CAR = 4] = "ARMORED_CAR", bb[bb.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", bb[bb.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", bb[bb.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", bb
       }({});
-    Wd.DEFAULT, Wd.BOAT, Fd.SPEED, Wd.GLIDER, Rd.DIAMOND, Wd.BALLOON, Xd.BLACK, Wd.SLEEPING, Kd.ROTATION_4, Wd.RIDING_MOB, Wd.CAR, hd.MOONSTONE_MINING_DRILL, Wd.HOVERCRAFT;
-    let vd = function(dd) {
-      return dd[dd.NORMAL = 0] = "NORMAL", dd[dd.GLIDING = 1] = "GLIDING", dd[dd.FLOATING = 2] = "FLOATING", dd
+    eb.DEFAULT, eb.BOAT, Hb.SPEED, eb.GLIDER, pb.DIAMOND, eb.BALLOON, Vb.BLACK, eb.SLEEPING, gb.ROTATION_4, eb.RIDING_MOB, eb.CAR, lb.MOONSTONE_MINING_DRILL, eb.HOVERCRAFT;
+    let Lb = function(bb) {
+      return bb[bb.NORMAL = 0] = "NORMAL", bb[bb.GLIDING = 1] = "GLIDING", bb[bb.FLOATING = 2] = "FLOATING", bb
     }({})
   },
-  39760: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      d: () => Xd,
-      g: () => Fd,
-      i: () => Kd
+  39463: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb,
+      g: () => Vb,
+      k: () => Hb,
+      n: () => gb
     });
-    var Wd = md(408);
-    const Fd = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...md(699).B.map((dd => `${dd} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...Wd.l, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      Rd = ["Obby RPG"];
+    var eb = Mb(389);
+    const Hb = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...Mb(655).w.map((bb => `${bb} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...eb.i, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      pb = ["Obby RPG"];
 
-    function Xd(dd) {
-      const Od = dd.indexOf("|");
-      return -1 === Od ? {
-        item: dd,
+    function Vb(bb) {
+      const wb = bb.indexOf("|");
+      return -1 === wb ? {
+        item: bb,
         clientPredictedThrower: null
       } : {
-        item: dd.slice(0, Od),
-        clientPredictedThrower: dd.slice(Od + 1)
+        item: bb.slice(0, wb),
+        clientPredictedThrower: bb.slice(wb + 1)
       }
     }
-    const Kd = [...Fd, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const gb = [...Hb, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

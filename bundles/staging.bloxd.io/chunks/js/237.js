@@ -1,585 +1,585 @@
-/*! For license information please see yteou.237.77ddedfb.chunk.js.LICENSE.txt */
+/*! For license information please see welxxc.237.f5b4587c.chunk.js.LICENSE.txt */
 export const id = 237;
 export const ids = [237];
 export const modules = {
-  41357: (dd, Od, md) => {
-    function Wd() {
+  41138: (bb, wb, Mb) => {
+    function eb() {
       return "object" === typeof process && "object" === typeof process.versions && "undefined" !== typeof process.versions.node
     }
 
-    function Fd(dd) {
-      return dd instanceof Uint8Array && (!Wd() || !Buffer.isBuffer(dd))
+    function Hb(bb) {
+      return bb instanceof Uint8Array && (!eb() || !Buffer.isBuffer(bb))
     }
 
-    function Rd(dd) {
-      return dd instanceof ArrayBuffer
+    function pb(bb) {
+      return bb instanceof ArrayBuffer
     }
 
-    function Xd(dd) {
-      return !!Wd() && Buffer.isBuffer(dd)
+    function Vb(bb) {
+      return !!eb() && Buffer.isBuffer(bb)
     }
-    var Kd = md(41365).c,
-      hd = md(41368).e,
-      vd = "Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";
-    Od.d = function(dd) {
-      if (!Fd(dd) && !Rd(dd) && !Xd(dd)) throw new TypeError(vd);
-      var Od = !1,
-        md = !1;
-      Fd(dd) ? Od = !0 : Rd(dd) && (md = !0, dd = new Uint8Array(dd));
-      var Wd, Kd, Qd, td = new hd(dd),
-        od = td.maxCompressedLength();
-      if (Od ? (Wd = new Uint8Array(od), Qd = td.compressToBuffer(Wd)) : md ? (Wd = new ArrayBuffer(od), Kd = new Uint8Array(Wd), Qd = td.compressToBuffer(Kd)) : (Wd = Buffer.alloc(od), Qd = td.compressToBuffer(Wd)), !Wd.slice) {
-        var Nd = new Uint8Array(Array.prototype.slice.call(Wd, 0, Qd));
-        if (Od) return Nd;
-        if (md) return Nd.buffer;
+    var gb = Mb(41147).b,
+      lb = Mb(41149).d,
+      Lb = "Argument compressed must be type of ArrayBuffer, Buffer, or Uint8Array";
+    wb.d = function(bb) {
+      if (!Hb(bb) && !pb(bb) && !Vb(bb)) throw new TypeError(Lb);
+      var wb = !1,
+        Mb = !1;
+      Hb(bb) ? wb = !0 : pb(bb) && (Mb = !0, bb = new Uint8Array(bb));
+      var eb, gb, Ib, Ob = new lb(bb),
+        Ub = Ob.maxCompressedLength();
+      if (wb ? (eb = new Uint8Array(Ub), Ib = Ob.compressToBuffer(eb)) : Mb ? (eb = new ArrayBuffer(Ub), gb = new Uint8Array(eb), Ib = Ob.compressToBuffer(gb)) : (eb = Buffer.alloc(Ub), Ib = Ob.compressToBuffer(eb)), !eb.slice) {
+        var tb = new Uint8Array(Array.prototype.slice.call(eb, 0, Ib));
+        if (wb) return tb;
+        if (Mb) return tb.buffer;
         throw new Error("Not implemented")
       }
-      return Wd.slice(0, Qd)
+      return eb.slice(0, Ib)
     }
   },
-  41368: (dd, Od) => {
-    var md = new Array(15);
+  41149: (bb, wb) => {
+    var Mb = new Array(15);
 
-    function Wd(dd, Od) {
-      return 506832829 * dd >>> Od
+    function eb(bb, wb) {
+      return 506832829 * bb >>> wb
     }
 
-    function Fd(dd, Od) {
-      return dd[Od] + (dd[Od + 1] << 8) + (dd[Od + 2] << 16) + (dd[Od + 3] << 24)
+    function Hb(bb, wb) {
+      return bb[wb] + (bb[wb + 1] << 8) + (bb[wb + 2] << 16) + (bb[wb + 3] << 24)
     }
 
-    function Rd(dd, Od, md) {
-      return dd[Od] === dd[md] && dd[Od + 1] === dd[md + 1] && dd[Od + 2] === dd[md + 2] && dd[Od + 3] === dd[md + 3]
+    function pb(bb, wb, Mb) {
+      return bb[wb] === bb[Mb] && bb[wb + 1] === bb[Mb + 1] && bb[wb + 2] === bb[Mb + 2] && bb[wb + 3] === bb[Mb + 3]
     }
 
-    function Xd(dd, Od, md, Wd, Fd) {
-      return md <= 60 ? (Wd[Fd] = md - 1 << 2, Fd += 1) : md < 256 ? (Wd[Fd] = 240, Wd[Fd + 1] = md - 1, Fd += 2) : (Wd[Fd] = 244, Wd[Fd + 1] = md - 1 & 255, Wd[Fd + 2] = md - 1 >>> 8, Fd += 3),
-        function(dd, Od, md, Wd, Fd) {
-          var Rd;
-          for (Rd = 0; Rd < Fd; Rd++) md[Wd + Rd] = dd[Od + Rd]
-        }(dd, Od, Wd, Fd, md), Fd + md
+    function Vb(bb, wb, Mb, eb, Hb) {
+      return Mb <= 60 ? (eb[Hb] = Mb - 1 << 2, Hb += 1) : Mb < 256 ? (eb[Hb] = 240, eb[Hb + 1] = Mb - 1, Hb += 2) : (eb[Hb] = 244, eb[Hb + 1] = Mb - 1 & 255, eb[Hb + 2] = Mb - 1 >>> 8, Hb += 3),
+        function(bb, wb, Mb, eb, Hb) {
+          var pb;
+          for (pb = 0; pb < Hb; pb++) Mb[eb + pb] = bb[wb + pb]
+        }(bb, wb, eb, Hb, Mb), Hb + Mb
     }
 
-    function Kd(dd, Od, md, Wd) {
-      return Wd < 12 && md < 2048 ? (dd[Od] = 1 + (Wd - 4 << 2) + (md >>> 8 << 5), dd[Od + 1] = 255 & md, Od + 2) : (dd[Od] = 2 + (Wd - 1 << 2), dd[Od + 1] = 255 & md, dd[Od + 2] = md >>> 8, Od + 3)
+    function gb(bb, wb, Mb, eb) {
+      return eb < 12 && Mb < 2048 ? (bb[wb] = 1 + (eb - 4 << 2) + (Mb >>> 8 << 5), bb[wb + 1] = 255 & Mb, wb + 2) : (bb[wb] = 2 + (eb - 1 << 2), bb[wb + 1] = 255 & Mb, bb[wb + 2] = Mb >>> 8, wb + 3)
     }
 
-    function hd(dd, Od, md, Wd) {
-      for (; Wd >= 68;) Od = Kd(dd, Od, md, 64), Wd -= 64;
-      return Wd > 64 && (Od = Kd(dd, Od, md, 60), Wd -= 60), Kd(dd, Od, md, Wd)
+    function lb(bb, wb, Mb, eb) {
+      for (; eb >= 68;) wb = gb(bb, wb, Mb, 64), eb -= 64;
+      return eb > 64 && (wb = gb(bb, wb, Mb, 60), eb -= 60), gb(bb, wb, Mb, eb)
     }
 
-    function vd(dd, Od, Kd, vd, Qd) {
-      for (var td = 1; 1 << td <= Kd && td <= 14;) td += 1;
-      var od = 32 - (td -= 1);
-      "undefined" === typeof md[td] && (md[td] = new Uint16Array(1 << td));
-      var Nd, qd = md[td];
-      for (Nd = 0; Nd < qd.length; Nd++) qd[Nd] = 0;
-      var Hd, yd, bd, Td, pd, Yd, gd, wd, Ed, Jd, Ud = Od + Kd,
-        xd = Od,
-        Bd = Od,
-        Sd = !0;
-      if (Kd >= 15)
-        for (Hd = Ud - 15, bd = Wd(Fd(dd, Od += 1), od); Sd;) {
-          Yd = 32, Td = Od;
+    function Lb(bb, wb, gb, Lb, Ib) {
+      for (var Ob = 1; 1 << Ob <= gb && Ob <= 14;) Ob += 1;
+      var Ub = 32 - (Ob -= 1);
+      "undefined" === typeof Mb[Ob] && (Mb[Ob] = new Uint16Array(1 << Ob));
+      var tb, Cb = Mb[Ob];
+      for (tb = 0; tb < Cb.length; tb++) Cb[tb] = 0;
+      var Eb, Fb, Bb, sb, mb, hb, zb, Xb, xb, jb, Kb = wb + gb,
+        rb = wb,
+        Rb = wb,
+        Db = !0;
+      if (gb >= 15)
+        for (Eb = Kb - 15, Bb = eb(Hb(bb, wb += 1), Ub); Db;) {
+          hb = 32, sb = wb;
           do {
-            if (yd = bd, gd = Yd >>> 5, Yd += 1, Td = (Od = Td) + gd, Od > Hd) {
-              Sd = !1;
+            if (Fb = Bb, zb = hb >>> 5, hb += 1, sb = (wb = sb) + zb, wb > Eb) {
+              Db = !1;
               break
             }
-            bd = Wd(Fd(dd, Td), od), pd = xd + qd[yd], qd[yd] = Od - xd
-          } while (!Rd(dd, Od, pd));
-          if (!Sd) break;
-          Qd = Xd(dd, Bd, Od - Bd, vd, Qd);
+            Bb = eb(Hb(bb, sb), Ub), mb = rb + Cb[Fb], Cb[Fb] = wb - rb
+          } while (!pb(bb, wb, mb));
+          if (!Db) break;
+          Ib = Vb(bb, Rb, wb - Rb, Lb, Ib);
           do {
-            for (wd = Od, Ed = 4; Od + Ed < Ud && dd[Od + Ed] === dd[pd + Ed];) Ed += 1;
-            if (Od += Ed, Qd = hd(vd, Qd, wd - pd, Ed), Bd = Od, Od >= Hd) {
-              Sd = !1;
+            for (Xb = wb, xb = 4; wb + xb < Kb && bb[wb + xb] === bb[mb + xb];) xb += 1;
+            if (wb += xb, Ib = lb(Lb, Ib, Xb - mb, xb), Rb = wb, wb >= Eb) {
+              Db = !1;
               break
             }
-            qd[Wd(Fd(dd, Od - 1), od)] = Od - 1 - xd, pd = xd + qd[Jd = Wd(Fd(dd, Od), od)], qd[Jd] = Od - xd
-          } while (Rd(dd, Od, pd));
-          if (!Sd) break;
-          bd = Wd(Fd(dd, Od += 1), od)
+            Cb[eb(Hb(bb, wb - 1), Ub)] = wb - 1 - rb, mb = rb + Cb[jb = eb(Hb(bb, wb), Ub)], Cb[jb] = wb - rb
+          } while (pb(bb, wb, mb));
+          if (!Db) break;
+          Bb = eb(Hb(bb, wb += 1), Ub)
         }
-      return Bd < Ud && (Qd = Xd(dd, Bd, Ud - Bd, vd, Qd)), Qd
+      return Rb < Kb && (Ib = Vb(bb, Rb, Kb - Rb, Lb, Ib)), Ib
     }
 
-    function Qd(dd) {
-      this.array = dd
+    function Ib(bb) {
+      this.array = bb
     }
-    Qd.prototype.maxCompressedLength = function() {
-      var dd = this.array.length;
-      return 32 + dd + Math.floor(dd / 6)
-    }, Qd.prototype.compressToBuffer = function(dd) {
-      var Od, md = this.array,
-        Wd = md.length,
-        Fd = 0,
-        Rd = 0;
-      for (Rd = function(dd, Od, md) {
+    Ib.prototype.maxCompressedLength = function() {
+      var bb = this.array.length;
+      return 32 + bb + Math.floor(bb / 6)
+    }, Ib.prototype.compressToBuffer = function(bb) {
+      var wb, Mb = this.array,
+        eb = Mb.length,
+        Hb = 0,
+        pb = 0;
+      for (pb = function(bb, wb, Mb) {
           do {
-            Od[md] = 127 & dd, (dd >>>= 7) > 0 && (Od[md] += 128), md += 1
-          } while (dd > 0);
-          return md
-        }(Wd, dd, Rd); Fd < Wd;) Rd = vd(md, Fd, Od = Math.min(Wd - Fd, 65536), dd, Rd), Fd += Od;
-      return Rd
-    }, Od.e = Qd
+            wb[Mb] = 127 & bb, (bb >>>= 7) > 0 && (wb[Mb] += 128), Mb += 1
+          } while (bb > 0);
+          return Mb
+        }(eb, bb, pb); Hb < eb;) pb = Lb(Mb, Hb, wb = Math.min(eb - Hb, 65536), bb, pb), Hb += wb;
+      return pb
+    }, wb.d = Ib
   },
-  41365: (dd, Od) => {
-    var md = [0, 255, 65535, 16777215, 4294967295];
+  41147: (bb, wb) => {
+    var Mb = [0, 255, 65535, 16777215, 4294967295];
 
-    function Wd(dd, Od, md, Wd, Fd) {
-      var Rd;
-      for (Rd = 0; Rd < Fd; Rd++) md[Wd + Rd] = dd[Od + Rd]
+    function eb(bb, wb, Mb, eb, Hb) {
+      var pb;
+      for (pb = 0; pb < Hb; pb++) Mb[eb + pb] = bb[wb + pb]
     }
 
-    function Fd(dd, Od, md, Wd) {
-      var Fd;
-      for (Fd = 0; Fd < Wd; Fd++) dd[Od + Fd] = dd[Od - md + Fd]
+    function Hb(bb, wb, Mb, eb) {
+      var Hb;
+      for (Hb = 0; Hb < eb; Hb++) bb[wb + Hb] = bb[wb - Mb + Hb]
     }
 
-    function Rd(dd) {
-      this.array = dd, this.pos = 0
+    function pb(bb) {
+      this.array = bb, this.pos = 0
     }
-    Rd.prototype.readUncompressedLength = function() {
-      for (var dd, Od, md = 0, Wd = 0; Wd < 32 && this.pos < this.array.length;) {
-        if (dd = this.array[this.pos], this.pos += 1, (Od = 127 & dd) << Wd >>> Wd !== Od) return -1;
-        if (md |= Od << Wd, dd < 128) return md;
-        Wd += 7
+    pb.prototype.readUncompressedLength = function() {
+      for (var bb, wb, Mb = 0, eb = 0; eb < 32 && this.pos < this.array.length;) {
+        if (bb = this.array[this.pos], this.pos += 1, (wb = 127 & bb) << eb >>> eb !== wb) return -1;
+        if (Mb |= wb << eb, bb < 128) return Mb;
+        eb += 7
       }
       return -1
-    }, Rd.prototype.uncompressToBuffer = function(dd) {
-      for (var Od, Rd, Xd, Kd, hd = this.array, vd = hd.length, Qd = this.pos, td = 0; Qd < hd.length;)
-        if (Od = hd[Qd], Qd += 1, 0 === (3 & Od)) {
-          if ((Rd = 1 + (Od >>> 2)) > 60) {
-            if (Qd + 3 >= vd) return !1;
-            Xd = Rd - 60, Rd = 1 + ((Rd = hd[Qd] + (hd[Qd + 1] << 8) + (hd[Qd + 2] << 16) + (hd[Qd + 3] << 24)) & md[Xd]), Qd += Xd
+    }, pb.prototype.uncompressToBuffer = function(bb) {
+      for (var wb, pb, Vb, gb, lb = this.array, Lb = lb.length, Ib = this.pos, Ob = 0; Ib < lb.length;)
+        if (wb = lb[Ib], Ib += 1, 0 === (3 & wb)) {
+          if ((pb = 1 + (wb >>> 2)) > 60) {
+            if (Ib + 3 >= Lb) return !1;
+            Vb = pb - 60, pb = 1 + ((pb = lb[Ib] + (lb[Ib + 1] << 8) + (lb[Ib + 2] << 16) + (lb[Ib + 3] << 24)) & Mb[Vb]), Ib += Vb
           }
-          if (Qd + Rd > vd) return !1;
-          Wd(hd, Qd, dd, td, Rd), Qd += Rd, td += Rd
+          if (Ib + pb > Lb) return !1;
+          eb(lb, Ib, bb, Ob, pb), Ib += pb, Ob += pb
         } else {
-          switch (3 & Od) {
+          switch (3 & wb) {
             case 1:
-              Rd = 4 + (Od >>> 2 & 7), Kd = hd[Qd] + (Od >>> 5 << 8), Qd += 1;
+              pb = 4 + (wb >>> 2 & 7), gb = lb[Ib] + (wb >>> 5 << 8), Ib += 1;
               break;
             case 2:
-              if (Qd + 1 >= vd) return !1;
-              Rd = 1 + (Od >>> 2), Kd = hd[Qd] + (hd[Qd + 1] << 8), Qd += 2;
+              if (Ib + 1 >= Lb) return !1;
+              pb = 1 + (wb >>> 2), gb = lb[Ib] + (lb[Ib + 1] << 8), Ib += 2;
               break;
             case 3:
-              if (Qd + 3 >= vd) return !1;
-              Rd = 1 + (Od >>> 2), Kd = hd[Qd] + (hd[Qd + 1] << 8) + (hd[Qd + 2] << 16) + (hd[Qd + 3] << 24), Qd += 4
+              if (Ib + 3 >= Lb) return !1;
+              pb = 1 + (wb >>> 2), gb = lb[Ib] + (lb[Ib + 1] << 8) + (lb[Ib + 2] << 16) + (lb[Ib + 3] << 24), Ib += 4
           }
-          if (0 === Kd || Kd > td) return !1;
-          Fd(dd, td, Kd, Rd), td += Rd
+          if (0 === gb || gb > Ob) return !1;
+          Hb(bb, Ob, gb, pb), Ob += pb
         } return !0
-    }, Od.c = Rd
+    }, wb.b = pb
   },
-  37635: dd => {
-    dd.exports = function(dd, Od, md, Wd) {
-      var Fd = self || window;
+  37394: bb => {
+    bb.exports = function(bb, wb, Mb, eb) {
+      var Hb = self || window;
       try {
         try {
-          var Rd;
+          var pb;
           try {
-            Rd = new Fd.Blob([dd])
-          } catch (vd) {
-            (Rd = new(Fd.BlobBuilder || Fd.WebKitBlobBuilder || Fd.MozBlobBuilder || Fd.MSBlobBuilder)).append(dd), Rd = Rd.getBlob()
+            pb = new Hb.Blob([bb])
+          } catch (Lb) {
+            (pb = new(Hb.BlobBuilder || Hb.WebKitBlobBuilder || Hb.MozBlobBuilder || Hb.MSBlobBuilder)).append(bb), pb = pb.getBlob()
           }
-          var Xd = Fd.URL || Fd.webkitURL,
-            Kd = Xd.createObjectURL(Rd),
-            hd = new Fd[Od](Kd, md);
-          return Xd.revokeObjectURL(Kd), hd
-        } catch (vd) {
-          return new Fd[Od]("data:application/javascript,".concat(encodeURIComponent(dd)), md)
+          var Vb = Hb.URL || Hb.webkitURL,
+            gb = Vb.createObjectURL(pb),
+            lb = new Hb[wb](gb, Mb);
+          return Vb.revokeObjectURL(gb), lb
+        } catch (Lb) {
+          return new Hb[wb]("data:application/javascript,".concat(encodeURIComponent(bb)), Mb)
         }
-      } catch (vd) {
-        if (!Wd) throw Error("Inline worker is not supported");
-        return new Fd[Od](Wd, md)
+      } catch (Lb) {
+        if (!eb) throw Error("Inline worker is not supported");
+        return new Hb[wb](eb, Mb)
       }
     }
   },
-  41503: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd,
-      g: () => Fd,
-      k: () => vd,
-      o: () => Nd,
-      p: () => Xd,
-      s: () => qd
+  41264: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb,
+      g: () => Hb,
+      h: () => Lb,
+      l: () => tb,
+      o: () => Vb,
+      s: () => Cb
     });
-    var Wd = md(41506);
-    const Fd = [96e3, 88200, 64e3, 48e3, 44100, 32e3, 24e3, 22050, 16e3, 12e3, 11025, 8e3, 7350],
-      Rd = [-1, 1, 2, 3, 4, 5, 6, 8],
-      Xd = dd => {
-        if (!dd || dd.byteLength < 2) throw new TypeError("AAC description must be at least 2 bytes long.");
-        const Od = new Wd.c(dd),
-          md = Kd(Od),
+    var eb = Mb(41273);
+    const Hb = [96e3, 88200, 64e3, 48e3, 44100, 32e3, 24e3, 22050, 16e3, 12e3, 11025, 8e3, 7350],
+      pb = [-1, 1, 2, 3, 4, 5, 6, 8],
+      Vb = bb => {
+        if (!bb || bb.byteLength < 2) throw new TypeError("AAC description must be at least 2 bytes long.");
+        const wb = new eb.e(bb),
+          Mb = gb(wb),
           {
-            frequencyIndex: Fd,
-            sampleRate: Xd
-          } = hd(Od),
-          vd = Od.readBits(4);
-        let Qd = null;
-        vd >= 1 && vd <= 7 && (Qd = Rd[vd]);
-        let td = md,
-          od = !1,
-          Nd = Xd;
-        if (5 === md || 29 === md) od = 29 === md, Nd = hd(Od).sampleRate, td = Kd(Od), 22 === td && Od.skipBits(4);
+            frequencyIndex: Hb,
+            sampleRate: Vb
+          } = lb(wb),
+          Lb = wb.readBits(4);
+        let Ib = null;
+        Lb >= 1 && Lb <= 7 && (Ib = pb[Lb]);
+        let Ob = Mb,
+          Ub = !1,
+          tb = Vb;
+        if (5 === Mb || 29 === Mb) Ub = 29 === Mb, tb = lb(wb).sampleRate, Ob = gb(wb), 22 === Ob && wb.skipBits(4);
         else
-          for (; Od.getBitsLeft() > 15;) {
-            const dd = Od.pos;
-            if (695 === Od.readBits(11)) {
-              5 === Kd(Od) && Od.readBits(1) && (Nd = hd(Od).sampleRate, Od.getBitsLeft() > 11 && 1352 === Od.readBits(11) && (od = !!Od.readBits(1)));
+          for (; wb.getBitsLeft() > 15;) {
+            const bb = wb.pos;
+            if (695 === wb.readBits(11)) {
+              5 === gb(wb) && wb.readBits(1) && (tb = lb(wb).sampleRate, wb.getBitsLeft() > 11 && 1352 === wb.readBits(11) && (Ub = !!wb.readBits(1)));
               break
             }
-            Od.pos = dd + 1
+            wb.pos = bb + 1
           }
-        return null !== Qd && Qd > 1 && (od = !1), {
-          objectType: md,
-          coreObjectType: td,
-          frequencyIndex: Fd,
-          channelConfiguration: vd,
-          outputSampleRate: Nd,
-          outputNumberOfChannels: od && 1 === Qd ? 2 : Qd
+        return null !== Ib && Ib > 1 && (Ub = !1), {
+          objectType: Mb,
+          coreObjectType: Ob,
+          frequencyIndex: Hb,
+          channelConfiguration: Lb,
+          outputSampleRate: tb,
+          outputNumberOfChannels: Ub && 1 === Ib ? 2 : Ib
         }
       },
-      Kd = dd => {
-        const Od = dd.readBits(5);
-        return 31 === Od ? 32 + dd.readBits(6) : Od
+      gb = bb => {
+        const wb = bb.readBits(5);
+        return 31 === wb ? 32 + bb.readBits(6) : wb
       },
-      hd = dd => {
-        const Od = dd.readBits(4);
-        return 15 === Od ? {
-          frequencyIndex: Od,
-          sampleRate: dd.readBits(24)
+      lb = bb => {
+        const wb = bb.readBits(4);
+        return 15 === wb ? {
+          frequencyIndex: wb,
+          sampleRate: bb.readBits(24)
         } : {
-          frequencyIndex: Od,
-          sampleRate: Od < Fd.length ? Fd[Od] : null
+          frequencyIndex: wb,
+          sampleRate: wb < Hb.length ? Hb[wb] : null
         }
       },
-      vd = dd => {
-        const Od = 5 === dd.objectType || 29 === dd.objectType,
-          md = 29 === dd.objectType,
-          Fd = Od ? dd.outputSampleRate / 2 : dd.outputSampleRate,
-          Xd = md ? 1 : dd.outputNumberOfChannels,
-          Kd = Rd.indexOf(Xd);
-        if (-1 === Kd) throw new TypeError(`Unsupported number of channels: ${dd.outputNumberOfChannels}`);
-        let hd = 16;
-        dd.objectType >= 32 && (hd += 6), 15 === od(Fd) && (hd += 24), Od && (hd += 9, 15 === od(dd.outputSampleRate) && (hd += 24));
-        const vd = Math.ceil(hd / 8),
-          Nd = new Uint8Array(vd),
-          qd = new Wd.c(Nd);
-        return Qd(qd, dd.objectType), td(qd, Fd), qd.writeBits(4, Kd), Od && (td(qd, dd.outputSampleRate), Qd(qd, 2)), qd.writeBits(3, 0), Nd
+      Lb = bb => {
+        const wb = 5 === bb.objectType || 29 === bb.objectType,
+          Mb = 29 === bb.objectType,
+          Hb = wb ? bb.outputSampleRate / 2 : bb.outputSampleRate,
+          Vb = Mb ? 1 : bb.outputNumberOfChannels,
+          gb = pb.indexOf(Vb);
+        if (-1 === gb) throw new TypeError(`Unsupported number of channels: ${bb.outputNumberOfChannels}`);
+        let lb = 16;
+        bb.objectType >= 32 && (lb += 6), 15 === Ub(Hb) && (lb += 24), wb && (lb += 9, 15 === Ub(bb.outputSampleRate) && (lb += 24));
+        const Lb = Math.ceil(lb / 8),
+          tb = new Uint8Array(Lb),
+          Cb = new eb.e(tb);
+        return Ib(Cb, bb.objectType), Ob(Cb, Hb), Cb.writeBits(4, gb), wb && (Ob(Cb, bb.outputSampleRate), Ib(Cb, 2)), Cb.writeBits(3, 0), tb
       },
-      Qd = (dd, Od) => {
-        Od < 32 ? dd.writeBits(5, Od) : (dd.writeBits(5, 31), dd.writeBits(6, Od - 32))
+      Ib = (bb, wb) => {
+        wb < 32 ? bb.writeBits(5, wb) : (bb.writeBits(5, 31), bb.writeBits(6, wb - 32))
       },
-      td = (dd, Od) => {
-        const md = od(Od);
-        dd.writeBits(4, md), 15 === md && dd.writeBits(24, Od)
+      Ob = (bb, wb) => {
+        const Mb = Ub(wb);
+        bb.writeBits(4, Mb), 15 === Mb && bb.writeBits(24, wb)
       },
-      od = dd => {
-        const Od = Fd.indexOf(dd);
-        return -1 === Od ? 15 : Od
+      Ub = bb => {
+        const wb = Hb.indexOf(bb);
+        return -1 === wb ? 15 : wb
       },
-      Nd = dd => {
-        const Od = new Uint8Array(7),
-          md = new Wd.c(Od),
+      tb = bb => {
+        const wb = new Uint8Array(7),
+          Mb = new eb.e(wb),
           {
-            coreObjectType: Fd,
-            frequencyIndex: Rd,
-            channelConfiguration: Xd
-          } = dd,
-          Kd = Fd - 1;
-        return md.writeBits(12, 4095), md.writeBits(1, 0), md.writeBits(2, 0), md.writeBits(1, 1), md.writeBits(2, Kd), md.writeBits(4, Rd), md.writeBits(1, 0), md.writeBits(3, Xd), md.writeBits(1, 0), md.writeBits(1, 0), md.writeBits(1, 0), md.writeBits(1, 0), md.skipBits(13), md.writeBits(11, 2047), md.writeBits(2, 0), {
-          header: Od,
-          bitstream: md
+            coreObjectType: Hb,
+            frequencyIndex: pb,
+            channelConfiguration: Vb
+          } = bb,
+          gb = Hb - 1;
+        return Mb.writeBits(12, 4095), Mb.writeBits(1, 0), Mb.writeBits(2, 0), Mb.writeBits(1, 1), Mb.writeBits(2, gb), Mb.writeBits(4, pb), Mb.writeBits(1, 0), Mb.writeBits(3, Vb), Mb.writeBits(1, 0), Mb.writeBits(1, 0), Mb.writeBits(1, 0), Mb.writeBits(1, 0), Mb.skipBits(13), Mb.writeBits(11, 2047), Mb.writeBits(2, 0), {
+          header: wb,
+          bitstream: Mb
         }
       },
-      qd = (dd, Od) => {
-        dd.pos = 30, dd.writeBits(13, Od)
+      Cb = (bb, wb) => {
+        bb.pos = 30, bb.writeBits(13, wb)
       }
   },
-  41506: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd
+  41273: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => eb
     });
-    class Wd {
-      constructor(dd) {
-        this.bytes = dd, this.pos = 0
+    class eb {
+      constructor(bb) {
+        this.bytes = bb, this.pos = 0
       }
-      seekToByte(dd) {
-        this.pos = 8 * dd
+      seekToByte(bb) {
+        this.pos = 8 * bb
       }
       readBit() {
-        const dd = Math.floor(this.pos / 8),
-          Od = this.bytes[dd] ?? 0,
-          md = 7 - (7 & this.pos),
-          Wd = (Od & 1 << md) >> md;
-        return this.pos++, Wd
+        const bb = Math.floor(this.pos / 8),
+          wb = this.bytes[bb] ?? 0,
+          Mb = 7 - (7 & this.pos),
+          eb = (wb & 1 << Mb) >> Mb;
+        return this.pos++, eb
       }
-      readBits(dd) {
-        if (1 === dd) return this.readBit();
-        let Od = 0;
-        for (let md = 0; md < dd; md++) Od <<= 1, Od |= this.readBit();
-        return Od
+      readBits(bb) {
+        if (1 === bb) return this.readBit();
+        let wb = 0;
+        for (let Mb = 0; Mb < bb; Mb++) wb <<= 1, wb |= this.readBit();
+        return wb
       }
-      writeBits(dd, Od) {
-        const md = this.pos + dd;
-        for (let Wd = this.pos; Wd < md; Wd++) {
-          const dd = Math.floor(Wd / 8);
-          let Fd = this.bytes[dd];
-          const Rd = 7 - (7 & Wd);
-          Fd &= ~(1 << Rd), Fd |= (Od & 1 << md - Wd - 1) >> md - Wd - 1 << Rd, this.bytes[dd] = Fd
+      writeBits(bb, wb) {
+        const Mb = this.pos + bb;
+        for (let eb = this.pos; eb < Mb; eb++) {
+          const bb = Math.floor(eb / 8);
+          let Hb = this.bytes[bb];
+          const pb = 7 - (7 & eb);
+          Hb &= ~(1 << pb), Hb |= (wb & 1 << Mb - eb - 1) >> Mb - eb - 1 << pb, this.bytes[bb] = Hb
         }
-        this.pos = md
+        this.pos = Mb
       }
-      copyBits(dd, Od) {
-        let md = 0;
-        for (; md < dd - 7; md += 8) this.writeBits(8, Od.readBits(8));
-        const Wd = dd - md;
-        Wd > 0 && this.writeBits(Wd, Od.readBits(Wd))
+      copyBits(bb, wb) {
+        let Mb = 0;
+        for (; Mb < bb - 7; Mb += 8) this.writeBits(8, wb.readBits(8));
+        const eb = bb - Mb;
+        eb > 0 && this.writeBits(eb, wb.readBits(eb))
       }
       readAlignedByte() {
         if (this.pos % 8 !== 0) throw new Error("Bitstream is not byte-aligned.");
-        const dd = this.pos / 8,
-          Od = this.bytes[dd] ?? 0;
-        return this.pos += 8, Od
+        const bb = this.pos / 8,
+          wb = this.bytes[bb] ?? 0;
+        return this.pos += 8, wb
       }
-      skipBits(dd) {
-        this.pos += dd
+      skipBits(bb) {
+        this.pos += bb
       }
       getBitsLeft() {
         return 8 * this.bytes.length - this.pos
       }
       clone() {
-        const dd = new Wd(this.bytes);
-        return dd.pos = this.pos, dd
+        const bb = new eb(this.bytes);
+        return bb.pos = this.pos, bb
       }
     }
   },
-  41522: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => OO,
-      d: () => hd,
-      h: () => mO,
-      k: () => fd,
-      n: () => vd,
-      p: () => ed,
-      q: () => yO,
-      r: () => bd,
-      v: () => Td,
-      z: () => Md,
-      A: () => gd,
-      B: () => Ld,
-      D: () => kd,
-      J: () => Dd,
-      H: () => pd,
-      L: () => Bd,
-      N: () => qd,
-      O: () => xd,
-      P: () => cd,
-      S: () => od,
-      V: () => Nd,
-      Z: () => dO,
-      _: () => NO,
-      cb: () => FO,
-      eb: () => Zd,
-      hb: () => Id,
-      ib: () => Cd,
-      kb: () => Yd,
-      mb: () => nd
+  41284: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => kb,
+      h: () => lb,
+      j: () => bw,
+      m: () => yb,
+      n: () => Lb,
+      p: () => ab,
+      s: () => Cw,
+      w: () => Bb,
+      x: () => sb,
+      A: () => ob,
+      D: () => zb,
+      H: () => Sb,
+      I: () => nb,
+      Q: () => qb,
+      M: () => mb,
+      S: () => Rb,
+      V: () => Cb,
+      W: () => rb,
+      _: () => Qb,
+      bb: () => Ub,
+      eb: () => tb,
+      gb: () => Tb,
+      jb: () => Ow,
+      nb: () => Mw,
+      pb: () => Pb,
+      sb: () => ib,
+      tb: () => db,
+      xb: () => hb,
+      yb: () => Jb
     });
-    var Wd = md(41513),
-      Fd = md(41487),
-      Rd = md(41526);
-    const Xd = [48e3, 44100, 32e3],
-      Kd = [24e3, 22050, 16e3];
-    var hd, vd, Qd = md(41506),
-      td = md(41534);
-    ! function(dd) {
-      dd[dd.NON_IDR_SLICE = 1] = "NON_IDR_SLICE", dd[dd.SLICE_DPA = 2] = "SLICE_DPA", dd[dd.SLICE_DPB = 3] = "SLICE_DPB", dd[dd.SLICE_DPC = 4] = "SLICE_DPC", dd[dd.IDR = 5] = "IDR", dd[dd.SEI = 6] = "SEI", dd[dd.SPS = 7] = "SPS", dd[dd.PPS = 8] = "PPS", dd[dd.AUD = 9] = "AUD", dd[dd.SPS_EXT = 13] = "SPS_EXT"
-    }(hd || (hd = {})),
-    function(dd) {
-      dd[dd.RASL_N = 8] = "RASL_N", dd[dd.RASL_R = 9] = "RASL_R", dd[dd.BLA_W_LP = 16] = "BLA_W_LP", dd[dd.RSV_IRAP_VCL23 = 23] = "RSV_IRAP_VCL23", dd[dd.VPS_NUT = 32] = "VPS_NUT", dd[dd.SPS_NUT = 33] = "SPS_NUT", dd[dd.PPS_NUT = 34] = "PPS_NUT", dd[dd.AUD_NUT = 35] = "AUD_NUT", dd[dd.PREFIX_SEI_NUT = 39] = "PREFIX_SEI_NUT", dd[dd.SUFFIX_SEI_NUT = 40] = "SUFFIX_SEI_NUT"
-    }(vd || (vd = {}));
-    const od = function*(dd) {
-        let Od = 0,
-          md = -1;
-        for (; Od < dd.length - 2;) {
-          const Wd = dd.indexOf(0, Od);
-          if (-1 === Wd || Wd >= dd.length - 2) break;
-          Od = Wd;
-          let Fd = 0;
-          Od + 3 < dd.length && 0 === dd[Od + 1] && 0 === dd[Od + 2] && 1 === dd[Od + 3] ? Fd = 4 : 0 === dd[Od + 1] && 1 === dd[Od + 2] && (Fd = 3), 0 !== Fd ? (-1 !== md && Od > md && (yield {
-            offset: md,
-            length: Od - md
-          }), md = Od + Fd, Od = md) : Od++
-        } - 1 !== md && md < dd.length && (yield {
-          offset: md,
-          length: dd.length - md
+    var eb = Mb(41281),
+      Hb = Mb(41244),
+      pb = Mb(41287);
+    const Vb = [48e3, 44100, 32e3],
+      gb = [24e3, 22050, 16e3];
+    var lb, Lb, Ib = Mb(41273),
+      Ob = Mb(41296);
+    ! function(bb) {
+      bb[bb.NON_IDR_SLICE = 1] = "NON_IDR_SLICE", bb[bb.SLICE_DPA = 2] = "SLICE_DPA", bb[bb.SLICE_DPB = 3] = "SLICE_DPB", bb[bb.SLICE_DPC = 4] = "SLICE_DPC", bb[bb.IDR = 5] = "IDR", bb[bb.SEI = 6] = "SEI", bb[bb.SPS = 7] = "SPS", bb[bb.PPS = 8] = "PPS", bb[bb.AUD = 9] = "AUD", bb[bb.SPS_EXT = 13] = "SPS_EXT"
+    }(lb || (lb = {})),
+    function(bb) {
+      bb[bb.RASL_N = 8] = "RASL_N", bb[bb.RASL_R = 9] = "RASL_R", bb[bb.BLA_W_LP = 16] = "BLA_W_LP", bb[bb.RSV_IRAP_VCL23 = 23] = "RSV_IRAP_VCL23", bb[bb.VPS_NUT = 32] = "VPS_NUT", bb[bb.SPS_NUT = 33] = "SPS_NUT", bb[bb.PPS_NUT = 34] = "PPS_NUT", bb[bb.AUD_NUT = 35] = "AUD_NUT", bb[bb.PREFIX_SEI_NUT = 39] = "PREFIX_SEI_NUT", bb[bb.SUFFIX_SEI_NUT = 40] = "SUFFIX_SEI_NUT"
+    }(Lb || (Lb = {}));
+    const Ub = function*(bb) {
+        let wb = 0,
+          Mb = -1;
+        for (; wb < bb.length - 2;) {
+          const eb = bb.indexOf(0, wb);
+          if (-1 === eb || eb >= bb.length - 2) break;
+          wb = eb;
+          let Hb = 0;
+          wb + 3 < bb.length && 0 === bb[wb + 1] && 0 === bb[wb + 2] && 1 === bb[wb + 3] ? Hb = 4 : 0 === bb[wb + 1] && 1 === bb[wb + 2] && (Hb = 3), 0 !== Hb ? (-1 !== Mb && wb > Mb && (yield {
+            offset: Mb,
+            length: wb - Mb
+          }), Mb = wb + Hb, wb = Mb) : wb++
+        } - 1 !== Mb && Mb < bb.length && (yield {
+          offset: Mb,
+          length: bb.length - Mb
         })
       },
-      Nd = function*(dd, Od) {
-        let md = 0;
-        const Wd = new DataView(dd.buffer, dd.byteOffset, dd.byteLength);
-        for (; md + Od <= dd.length;) {
-          let dd;
-          1 === Od ? dd = Wd.getUint8(md) : 2 === Od ? dd = Wd.getUint16(md, !1) : 3 === Od ? dd = (0, Fd.qb)(Wd, md, !1) : ((0, Fd.M)(4 === Od), dd = Wd.getUint32(md, !1)), md += Od, yield {
-            offset: md,
-            length: dd
-          }, md += dd
+      tb = function*(bb, wb) {
+        let Mb = 0;
+        const eb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength);
+        for (; Mb + wb <= bb.length;) {
+          let bb;
+          1 === wb ? bb = eb.getUint8(Mb) : 2 === wb ? bb = eb.getUint16(Mb, !1) : 3 === wb ? bb = (0, Hb.pb)(eb, Mb, !1) : ((0, Hb.L)(4 === wb), bb = eb.getUint32(Mb, !1)), Mb += wb, yield {
+            offset: Mb,
+            length: bb
+          }, Mb += bb
         }
       },
-      qd = dd => 31 & dd,
-      Hd = dd => {
-        const Od = [],
-          md = dd.length;
-        for (let Wd = 0; Wd < md; Wd++) Wd + 2 < md && 0 === dd[Wd] && 0 === dd[Wd + 1] && 3 === dd[Wd + 2] ? (Od.push(0, 0), Wd += 2) : Od.push(dd[Wd]);
-        return new Uint8Array(Od)
+      Cb = bb => 31 & bb,
+      Eb = bb => {
+        const wb = [],
+          Mb = bb.length;
+        for (let eb = 0; eb < Mb; eb++) eb + 2 < Mb && 0 === bb[eb] && 0 === bb[eb + 1] && 3 === bb[eb + 2] ? (wb.push(0, 0), eb += 2) : wb.push(bb[eb]);
+        return new Uint8Array(wb)
       },
-      yd = new Uint8Array([0, 0, 0, 1]),
-      bd = dd => {
-        const Od = dd.reduce(((dd, Od) => dd + yd.byteLength + Od.byteLength), 0),
-          md = new Uint8Array(Od);
-        let Wd = 0;
-        for (const Fd of dd) md.set(yd, Wd), Wd += yd.byteLength, md.set(Fd, Wd), Wd += Fd.byteLength;
-        return md
+      Fb = new Uint8Array([0, 0, 0, 1]),
+      Bb = bb => {
+        const wb = bb.reduce(((bb, wb) => bb + Fb.byteLength + wb.byteLength), 0),
+          Mb = new Uint8Array(wb);
+        let eb = 0;
+        for (const Hb of bb) Mb.set(Fb, eb), eb += Fb.byteLength, Mb.set(Hb, eb), eb += Hb.byteLength;
+        return Mb
       },
-      Td = (dd, Od) => {
-        const md = dd.reduce(((dd, md) => dd + Od + md.byteLength), 0),
-          Wd = new Uint8Array(md);
-        let Rd = 0;
-        for (const Xd of dd) {
-          const dd = new DataView(Wd.buffer, Wd.byteOffset, Wd.byteLength);
-          switch (Od) {
+      sb = (bb, wb) => {
+        const Mb = bb.reduce(((bb, Mb) => bb + wb + Mb.byteLength), 0),
+          eb = new Uint8Array(Mb);
+        let pb = 0;
+        for (const Vb of bb) {
+          const bb = new DataView(eb.buffer, eb.byteOffset, eb.byteLength);
+          switch (wb) {
             case 1:
-              dd.setUint8(Rd, Xd.byteLength);
+              bb.setUint8(pb, Vb.byteLength);
               break;
             case 2:
-              dd.setUint16(Rd, Xd.byteLength, !1);
+              bb.setUint16(pb, Vb.byteLength, !1);
               break;
             case 3:
-              (0, Fd.ed)(dd, Rd, Xd.byteLength, !1);
+              (0, Hb.dd)(bb, pb, Vb.byteLength, !1);
               break;
             case 4:
-              dd.setUint32(Rd, Xd.byteLength, !1)
+              bb.setUint32(pb, Vb.byteLength, !1)
           }
-          Rd += Od, Wd.set(Xd, Rd), Rd += Xd.byteLength
+          pb += wb, eb.set(Vb, pb), pb += Vb.byteLength
         }
-        return Wd
+        return eb
       },
-      pd = dd => {
+      mb = bb => {
         try {
-          const Od = [],
-            md = [],
-            Wd = [];
-          for (const Fd of od(dd)) {
-            const Rd = dd.subarray(Fd.offset, Fd.offset + Fd.length),
-              Xd = qd(Rd[0]);
-            Xd === hd.SPS ? Od.push(Rd) : Xd === hd.PPS ? md.push(Rd) : Xd === hd.SPS_EXT && Wd.push(Rd)
+          const wb = [],
+            Mb = [],
+            eb = [];
+          for (const Hb of Ub(bb)) {
+            const pb = bb.subarray(Hb.offset, Hb.offset + Hb.length),
+              Vb = Cb(pb[0]);
+            Vb === lb.SPS ? wb.push(pb) : Vb === lb.PPS ? Mb.push(pb) : Vb === lb.SPS_EXT && eb.push(pb)
           }
-          if (0 === Od.length) return null;
-          if (0 === md.length) return null;
-          const Rd = Od[0],
-            Xd = Ed(Rd);
-          (0, Fd.M)(null !== Xd);
-          const Kd = 100 === Xd.profileIdc || 110 === Xd.profileIdc || 122 === Xd.profileIdc || 144 === Xd.profileIdc;
+          if (0 === wb.length) return null;
+          if (0 === Mb.length) return null;
+          const pb = wb[0],
+            Vb = xb(pb);
+          (0, Hb.L)(null !== Vb);
+          const gb = 100 === Vb.profileIdc || 110 === Vb.profileIdc || 122 === Vb.profileIdc || 144 === Vb.profileIdc;
           return {
             configurationVersion: 1,
-            avcProfileIndication: Xd.profileIdc,
-            profileCompatibility: Xd.constraintFlags,
-            avcLevelIndication: Xd.levelIdc,
+            avcProfileIndication: Vb.profileIdc,
+            profileCompatibility: Vb.constraintFlags,
+            avcLevelIndication: Vb.levelIdc,
             lengthSizeMinusOne: 3,
-            sequenceParameterSets: Od,
-            pictureParameterSets: md,
-            chromaFormat: Kd ? Xd.chromaFormatIdc : null,
-            bitDepthLumaMinus8: Kd ? Xd.bitDepthLumaMinus8 : null,
-            bitDepthChromaMinus8: Kd ? Xd.bitDepthChromaMinus8 : null,
-            sequenceParameterSetExt: Kd ? Wd : null
+            sequenceParameterSets: wb,
+            pictureParameterSets: Mb,
+            chromaFormat: gb ? Vb.chromaFormatIdc : null,
+            bitDepthLumaMinus8: gb ? Vb.bitDepthLumaMinus8 : null,
+            bitDepthChromaMinus8: gb ? Vb.bitDepthChromaMinus8 : null,
+            sequenceParameterSetExt: gb ? eb : null
           }
-        } catch (Od) {
-          return Rd.e._error("Error building AVC Decoder Configuration Record:", Od), null
+        } catch (wb) {
+          return pb.e._error("Error building AVC Decoder Configuration Record:", wb), null
         }
       },
-      Yd = dd => {
-        const Od = [];
-        Od.push(dd.configurationVersion), Od.push(dd.avcProfileIndication), Od.push(dd.profileCompatibility), Od.push(dd.avcLevelIndication), Od.push(252 | 3 & dd.lengthSizeMinusOne), Od.push(224 | 31 & dd.sequenceParameterSets.length);
-        for (const md of dd.sequenceParameterSets) {
-          const dd = md.byteLength;
-          Od.push(dd >> 8), Od.push(255 & dd);
-          for (let Wd = 0; Wd < dd; Wd++) Od.push(md[Wd])
+      hb = bb => {
+        const wb = [];
+        wb.push(bb.configurationVersion), wb.push(bb.avcProfileIndication), wb.push(bb.profileCompatibility), wb.push(bb.avcLevelIndication), wb.push(252 | 3 & bb.lengthSizeMinusOne), wb.push(224 | 31 & bb.sequenceParameterSets.length);
+        for (const Mb of bb.sequenceParameterSets) {
+          const bb = Mb.byteLength;
+          wb.push(bb >> 8), wb.push(255 & bb);
+          for (let eb = 0; eb < bb; eb++) wb.push(Mb[eb])
         }
-        Od.push(dd.pictureParameterSets.length);
-        for (const md of dd.pictureParameterSets) {
-          const dd = md.byteLength;
-          Od.push(dd >> 8), Od.push(255 & dd);
-          for (let Wd = 0; Wd < dd; Wd++) Od.push(md[Wd])
+        wb.push(bb.pictureParameterSets.length);
+        for (const Mb of bb.pictureParameterSets) {
+          const bb = Mb.byteLength;
+          wb.push(bb >> 8), wb.push(255 & bb);
+          for (let eb = 0; eb < bb; eb++) wb.push(Mb[eb])
         }
-        if ((100 === dd.avcProfileIndication || 110 === dd.avcProfileIndication || 122 === dd.avcProfileIndication || 144 === dd.avcProfileIndication) && null !== dd.chromaFormat) {
-          (0, Fd.M)(null !== dd.bitDepthLumaMinus8), (0, Fd.M)(null !== dd.bitDepthChromaMinus8), (0, Fd.M)(null !== dd.sequenceParameterSetExt), Od.push(252 | 3 & dd.chromaFormat), Od.push(248 | 7 & dd.bitDepthLumaMinus8), Od.push(248 | 7 & dd.bitDepthChromaMinus8), Od.push(dd.sequenceParameterSetExt.length);
-          for (const md of dd.sequenceParameterSetExt) {
-            const dd = md.byteLength;
-            Od.push(dd >> 8), Od.push(255 & dd);
-            for (let Wd = 0; Wd < dd; Wd++) Od.push(md[Wd])
+        if ((100 === bb.avcProfileIndication || 110 === bb.avcProfileIndication || 122 === bb.avcProfileIndication || 144 === bb.avcProfileIndication) && null !== bb.chromaFormat) {
+          (0, Hb.L)(null !== bb.bitDepthLumaMinus8), (0, Hb.L)(null !== bb.bitDepthChromaMinus8), (0, Hb.L)(null !== bb.sequenceParameterSetExt), wb.push(252 | 3 & bb.chromaFormat), wb.push(248 | 7 & bb.bitDepthLumaMinus8), wb.push(248 | 7 & bb.bitDepthChromaMinus8), wb.push(bb.sequenceParameterSetExt.length);
+          for (const Mb of bb.sequenceParameterSetExt) {
+            const bb = Mb.byteLength;
+            wb.push(bb >> 8), wb.push(255 & bb);
+            for (let eb = 0; eb < bb; eb++) wb.push(Mb[eb])
           }
         }
-        return new Uint8Array(Od)
+        return new Uint8Array(wb)
       },
-      gd = dd => {
+      zb = bb => {
         try {
-          const Od = (0, Fd.sd)(dd);
-          let md = 0;
-          const Wd = Od.getUint8(md++),
-            Rd = Od.getUint8(md++),
-            Xd = Od.getUint8(md++),
-            Kd = Od.getUint8(md++),
-            hd = 3 & Od.getUint8(md++),
-            vd = 31 & Od.getUint8(md++),
-            Qd = [];
-          for (let Fd = 0; Fd < vd; Fd++) {
-            const Wd = Od.getUint16(md, !1);
-            md += 2, Qd.push(dd.subarray(md, md + Wd)), md += Wd
+          const wb = (0, Hb.kd)(bb);
+          let Mb = 0;
+          const eb = wb.getUint8(Mb++),
+            pb = wb.getUint8(Mb++),
+            Vb = wb.getUint8(Mb++),
+            gb = wb.getUint8(Mb++),
+            lb = 3 & wb.getUint8(Mb++),
+            Lb = 31 & wb.getUint8(Mb++),
+            Ib = [];
+          for (let Hb = 0; Hb < Lb; Hb++) {
+            const eb = wb.getUint16(Mb, !1);
+            Mb += 2, Ib.push(bb.subarray(Mb, Mb + eb)), Mb += eb
           }
-          const td = Od.getUint8(md++),
-            od = [];
-          for (let Fd = 0; Fd < td; Fd++) {
-            const Wd = Od.getUint16(md, !1);
-            md += 2, od.push(dd.subarray(md, md + Wd)), md += Wd
+          const Ob = wb.getUint8(Mb++),
+            Ub = [];
+          for (let Hb = 0; Hb < Ob; Hb++) {
+            const eb = wb.getUint16(Mb, !1);
+            Mb += 2, Ub.push(bb.subarray(Mb, Mb + eb)), Mb += eb
           }
-          const Nd = {
-            configurationVersion: Wd,
-            avcProfileIndication: Rd,
-            profileCompatibility: Xd,
-            avcLevelIndication: Kd,
-            lengthSizeMinusOne: hd,
-            sequenceParameterSets: Qd,
-            pictureParameterSets: od,
+          const tb = {
+            configurationVersion: eb,
+            avcProfileIndication: pb,
+            profileCompatibility: Vb,
+            avcLevelIndication: gb,
+            lengthSizeMinusOne: lb,
+            sequenceParameterSets: Ib,
+            pictureParameterSets: Ub,
             chromaFormat: null,
             bitDepthLumaMinus8: null,
             bitDepthChromaMinus8: null,
             sequenceParameterSetExt: null
           };
-          if ((100 === Rd || 110 === Rd || 122 === Rd || 144 === Rd) && md + 4 <= dd.length) {
-            const Wd = 3 & Od.getUint8(md++),
-              Fd = 7 & Od.getUint8(md++),
-              Rd = 7 & Od.getUint8(md++),
-              Xd = Od.getUint8(md++);
-            Nd.chromaFormat = Wd, Nd.bitDepthLumaMinus8 = Fd, Nd.bitDepthChromaMinus8 = Rd;
-            const Kd = [];
-            for (let hd = 0; hd < Xd; hd++) {
-              const Wd = Od.getUint16(md, !1);
-              md += 2, Kd.push(dd.subarray(md, md + Wd)), md += Wd
+          if ((100 === pb || 110 === pb || 122 === pb || 144 === pb) && Mb + 4 <= bb.length) {
+            const eb = 3 & wb.getUint8(Mb++),
+              Hb = 7 & wb.getUint8(Mb++),
+              pb = 7 & wb.getUint8(Mb++),
+              Vb = wb.getUint8(Mb++);
+            tb.chromaFormat = eb, tb.bitDepthLumaMinus8 = Hb, tb.bitDepthChromaMinus8 = pb;
+            const gb = [];
+            for (let lb = 0; lb < Vb; lb++) {
+              const eb = wb.getUint16(Mb, !1);
+              Mb += 2, gb.push(bb.subarray(Mb, Mb + eb)), Mb += eb
             }
-            Nd.sequenceParameterSetExt = Kd
+            tb.sequenceParameterSetExt = gb
           }
-          return Nd
-        } catch (Od) {
-          return Rd.e._error("Error deserializing AVC Decoder Configuration Record:", Od), null
+          return tb
+        } catch (wb) {
+          return pb.e._error("Error deserializing AVC Decoder Configuration Record:", wb), null
         }
       },
-      wd = {
+      Xb = {
         1: {
           num: 1,
           den: 1
@@ -645,497 +645,497 @@ export const modules = {
           den: 1
         }
       },
-      Ed = dd => {
+      xb = bb => {
         try {
-          const Od = Hd(dd),
-            md = new Qd.c(Od);
-          md.skipBits(1), md.skipBits(2);
-          if (7 !== md.readBits(5)) return null;
-          const Rd = md.readAlignedByte(),
-            Xd = md.readAlignedByte(),
-            Kd = md.readAlignedByte();
-          (0, Fd.Dc)(md);
-          let hd = 1,
-            vd = 0,
-            td = 0,
-            od = 0;
-          if (100 === Rd || 110 === Rd || 122 === Rd || 244 === Rd || 44 === Rd || 83 === Rd || 86 === Rd || 118 === Rd || 128 === Rd) {
-            hd = (0, Fd.Dc)(md), 3 === hd && (od = md.readBits(1)), vd = (0, Fd.Dc)(md), td = (0, Fd.Dc)(md), md.skipBits(1);
-            if (md.readBits(1))
-              for (let dd = 0; dd < (3 !== hd ? 8 : 12); dd++) {
-                if (md.readBits(1)) {
-                  const Od = dd < 6 ? 16 : 64;
-                  let Wd = 8,
-                    Rd = 8;
-                  for (let dd = 0; dd < Od; dd++) {
-                    if (0 !== Rd) {
-                      Rd = (Wd + (0, Fd.Ec)(md) + 256) % 256
+          const wb = Eb(bb),
+            Mb = new Ib.e(wb);
+          Mb.skipBits(1), Mb.skipBits(2);
+          if (7 !== Mb.readBits(5)) return null;
+          const pb = Mb.readAlignedByte(),
+            Vb = Mb.readAlignedByte(),
+            gb = Mb.readAlignedByte();
+          (0, Hb.yc)(Mb);
+          let lb = 1,
+            Lb = 0,
+            Ob = 0,
+            Ub = 0;
+          if (100 === pb || 110 === pb || 122 === pb || 244 === pb || 44 === pb || 83 === pb || 86 === pb || 118 === pb || 128 === pb) {
+            lb = (0, Hb.yc)(Mb), 3 === lb && (Ub = Mb.readBits(1)), Lb = (0, Hb.yc)(Mb), Ob = (0, Hb.yc)(Mb), Mb.skipBits(1);
+            if (Mb.readBits(1))
+              for (let bb = 0; bb < (3 !== lb ? 8 : 12); bb++) {
+                if (Mb.readBits(1)) {
+                  const wb = bb < 6 ? 16 : 64;
+                  let eb = 8,
+                    pb = 8;
+                  for (let bb = 0; bb < wb; bb++) {
+                    if (0 !== pb) {
+                      pb = (eb + (0, Hb.Cc)(Mb) + 256) % 256
                     }
-                    Wd = 0 === Rd ? Wd : Rd
+                    eb = 0 === pb ? eb : pb
                   }
                 }
               }
-          }(0, Fd.Dc)(md);
-          const Nd = (0, Fd.Dc)(md);
-          if (0 === Nd)(0, Fd.Dc)(md);
-          else if (1 === Nd) {
-            md.skipBits(1), (0, Fd.Ec)(md), (0, Fd.Ec)(md);
-            const dd = (0, Fd.Dc)(md);
-            for (let Od = 0; Od < dd; Od++)(0, Fd.Ec)(md)
-          }(0, Fd.Dc)(md), md.skipBits(1);
-          const qd = (0, Fd.Dc)(md),
-            yd = (0, Fd.Dc)(md),
-            bd = 16 * (qd + 1),
-            Td = 16 * (yd + 1);
-          let pd = bd,
-            Yd = Td;
-          const gd = md.readBits(1);
-          gd || md.skipBits(1), md.skipBits(1);
-          if (md.readBits(1)) {
-            const dd = (0, Fd.Dc)(md),
-              Od = (0, Fd.Dc)(md),
-              Wd = (0, Fd.Dc)(md),
-              Rd = (0, Fd.Dc)(md);
-            let Xd, Kd;
-            if (0 === (0 === od ? hd : 0)) Xd = 1, Kd = 2 - gd;
+          }(0, Hb.yc)(Mb);
+          const tb = (0, Hb.yc)(Mb);
+          if (0 === tb)(0, Hb.yc)(Mb);
+          else if (1 === tb) {
+            Mb.skipBits(1), (0, Hb.Cc)(Mb), (0, Hb.Cc)(Mb);
+            const bb = (0, Hb.yc)(Mb);
+            for (let wb = 0; wb < bb; wb++)(0, Hb.Cc)(Mb)
+          }(0, Hb.yc)(Mb), Mb.skipBits(1);
+          const Cb = (0, Hb.yc)(Mb),
+            Fb = (0, Hb.yc)(Mb),
+            Bb = 16 * (Cb + 1),
+            sb = 16 * (Fb + 1);
+          let mb = Bb,
+            hb = sb;
+          const zb = Mb.readBits(1);
+          zb || Mb.skipBits(1), Mb.skipBits(1);
+          if (Mb.readBits(1)) {
+            const bb = (0, Hb.yc)(Mb),
+              wb = (0, Hb.yc)(Mb),
+              eb = (0, Hb.yc)(Mb),
+              pb = (0, Hb.yc)(Mb);
+            let Vb, gb;
+            if (0 === (0 === Ub ? lb : 0)) Vb = 1, gb = 2 - zb;
             else {
-              Xd = 3 === hd ? 1 : 2, Kd = (1 === hd ? 2 : 1) * (2 - gd)
+              Vb = 3 === lb ? 1 : 2, gb = (1 === lb ? 2 : 1) * (2 - zb)
             }
-            pd -= Xd * (dd + Od), Yd -= Kd * (Wd + Rd)
+            mb -= Vb * (bb + wb), hb -= gb * (eb + pb)
           }
-          let Ed = 2,
-            Ud = 2,
-            xd = 2,
-            Bd = 0,
-            Sd = {
+          let xb = 2,
+            Kb = 2,
+            rb = 2,
+            Rb = 0,
+            Db = {
               num: 1,
               den: 1
             },
-            sd = null,
-            ud = null,
-            Vd = null,
-            Ad = null;
-          const rd = md.pos;
-          if (md.readBits(1)) {
-            if (md.readBits(1)) {
-              const dd = md.readBits(8);
-              if (255 === dd) Sd = {
-                num: md.readBits(16),
-                den: md.readBits(16)
+            cb = null,
+            Yb = null,
+            Zb = null,
+            fb = null;
+          const Ab = Mb.pos;
+          if (Mb.readBits(1)) {
+            if (Mb.readBits(1)) {
+              const bb = Mb.readBits(8);
+              if (255 === bb) Db = {
+                num: Mb.readBits(16),
+                den: Mb.readBits(16)
               };
               else {
-                const Od = wd[dd];
-                Od && (Sd = Od)
+                const wb = Xb[bb];
+                wb && (Db = wb)
               }
             }
-            md.readBits(1) && md.skipBits(1);
-            if (md.readBits(1)) {
-              md.skipBits(3), Bd = md.readBits(1);
-              md.readBits(1) && (Ed = md.readBits(8), Ud = md.readBits(8), xd = md.readBits(8))
+            Mb.readBits(1) && Mb.skipBits(1);
+            if (Mb.readBits(1)) {
+              Mb.skipBits(3), Rb = Mb.readBits(1);
+              Mb.readBits(1) && (xb = Mb.readBits(8), Kb = Mb.readBits(8), rb = Mb.readBits(8))
             }
-            md.readBits(1) && ((0, Fd.Dc)(md), (0, Fd.Dc)(md));
-            md.readBits(1) && (md.skipBits(32), md.skipBits(32), md.skipBits(1));
-            const dd = md.readBits(1);
-            dd && Jd(md);
-            const Od = md.readBits(1);
-            Od && Jd(md), (dd || Od) && md.skipBits(1), md.skipBits(1), Vd = md.pos, Ad = md.readBits(1), Ad && (md.skipBits(1), (0, Fd.Dc)(md), (0, Fd.Dc)(md), (0, Fd.Dc)(md), (0, Fd.Dc)(md), sd = (0, Fd.Dc)(md), ud = (0, Fd.Dc)(md))
+            Mb.readBits(1) && ((0, Hb.yc)(Mb), (0, Hb.yc)(Mb));
+            Mb.readBits(1) && (Mb.skipBits(32), Mb.skipBits(32), Mb.skipBits(1));
+            const bb = Mb.readBits(1);
+            bb && jb(Mb);
+            const wb = Mb.readBits(1);
+            wb && jb(Mb), (bb || wb) && Mb.skipBits(1), Mb.skipBits(1), Zb = Mb.pos, fb = Mb.readBits(1), fb && (Mb.skipBits(1), (0, Hb.yc)(Mb), (0, Hb.yc)(Mb), (0, Hb.yc)(Mb), (0, Hb.yc)(Mb), cb = (0, Hb.yc)(Mb), Yb = (0, Hb.yc)(Mb))
           }
-          if (null === sd) {
-            (0, Fd.M)(null === ud);
-            if (44 !== Rd && 86 !== Rd && 100 !== Rd && 110 !== Rd && 122 !== Rd && 244 !== Rd || !(16 & Xd)) {
-              const dd = qd + 1,
-                Od = (2 - gd) * (yd + 1),
-                md = Wd.f.find((dd => dd.level >= Kd)) ?? (0, Fd.jc)(Wd.f),
-                Rd = Math.min(Math.floor(md.maxDpbMbs / (dd * Od)), 16);
-              sd = Rd, ud = Rd
-            } else sd = 0, ud = 0
+          if (null === cb) {
+            (0, Hb.L)(null === Yb);
+            if (44 !== pb && 86 !== pb && 100 !== pb && 110 !== pb && 122 !== pb && 244 !== pb || !(16 & Vb)) {
+              const bb = Cb + 1,
+                wb = (2 - zb) * (Fb + 1),
+                Mb = eb.e.find((bb => bb.level >= gb)) ?? (0, Hb.ac)(eb.e),
+                pb = Math.min(Math.floor(Mb.maxDpbMbs / (bb * wb)), 16);
+              cb = pb, Yb = pb
+            } else cb = 0, Yb = 0
           }
-          return (0, Fd.M)(null !== ud), {
-            emulationUnpreventedBytes: Od,
-            profileIdc: Rd,
-            constraintFlags: Xd,
-            levelIdc: Kd,
-            frameMbsOnlyFlag: gd,
-            chromaFormatIdc: hd,
-            bitDepthLumaMinus8: vd,
-            bitDepthChromaMinus8: td,
-            codedWidth: bd,
-            codedHeight: Td,
-            displayWidth: pd,
-            displayHeight: Yd,
-            pixelAspectRatio: Sd,
-            colourPrimaries: Ed,
-            matrixCoefficients: xd,
-            transferCharacteristics: Ud,
-            fullRangeFlag: Bd,
-            numReorderFrames: sd,
-            maxDecFrameBuffering: ud,
-            vuiParametersFlagBitOffset: rd,
-            bitstreamRestrictionFlagBitOffset: Vd,
-            bitstreamRestrictionFlag: Ad
+          return (0, Hb.L)(null !== Yb), {
+            emulationUnpreventedBytes: wb,
+            profileIdc: pb,
+            constraintFlags: Vb,
+            levelIdc: gb,
+            frameMbsOnlyFlag: zb,
+            chromaFormatIdc: lb,
+            bitDepthLumaMinus8: Lb,
+            bitDepthChromaMinus8: Ob,
+            codedWidth: Bb,
+            codedHeight: sb,
+            displayWidth: mb,
+            displayHeight: hb,
+            pixelAspectRatio: Db,
+            colourPrimaries: xb,
+            matrixCoefficients: rb,
+            transferCharacteristics: Kb,
+            fullRangeFlag: Rb,
+            numReorderFrames: cb,
+            maxDecFrameBuffering: Yb,
+            vuiParametersFlagBitOffset: Ab,
+            bitstreamRestrictionFlagBitOffset: Zb,
+            bitstreamRestrictionFlag: fb
           }
-        } catch (Od) {
-          return Rd.e._error("Error parsing AVC SPS:", Od), null
+        } catch (wb) {
+          return pb.e._error("Error parsing AVC SPS:", wb), null
         }
       },
-      Jd = dd => {
-        const Od = (0, Fd.Dc)(dd);
-        dd.skipBits(4), dd.skipBits(4);
-        for (let md = 0; md <= Od; md++)(0, Fd.Dc)(dd), (0, Fd.Dc)(dd), dd.skipBits(1);
-        dd.skipBits(5), dd.skipBits(5), dd.skipBits(5), dd.skipBits(5)
+      jb = bb => {
+        const wb = (0, Hb.yc)(bb);
+        bb.skipBits(4), bb.skipBits(4);
+        for (let Mb = 0; Mb <= wb; Mb++)(0, Hb.yc)(bb), (0, Hb.yc)(bb), bb.skipBits(1);
+        bb.skipBits(5), bb.skipBits(5), bb.skipBits(5), bb.skipBits(5)
       },
-      Ud = (dd, Od) => {
-        if (Od.description) {
-          const md = 3 & (0, Fd.vd)(Od.description)[21];
-          return Nd(dd, md + 1)
+      Kb = (bb, wb) => {
+        if (wb.description) {
+          const Mb = 3 & (0, Hb.od)(wb.description)[21];
+          return tb(bb, Mb + 1)
         }
-        return od(dd)
+        return Ub(bb)
       },
-      xd = dd => dd >> 1 & 63,
-      Bd = dd => {
+      rb = bb => bb >> 1 & 63,
+      Rb = bb => {
         try {
-          const Od = [],
-            md = [],
-            Wd = [],
-            Xd = [];
-          for (const Fd of od(dd)) {
-            const Rd = dd.subarray(Fd.offset, Fd.offset + Fd.length),
-              Kd = xd(Rd[0]);
-            Kd === vd.VPS_NUT ? Od.push(Rd) : Kd === vd.SPS_NUT ? md.push(Rd) : Kd === vd.PPS_NUT ? Wd.push(Rd) : Kd !== vd.PREFIX_SEI_NUT && Kd !== vd.SUFFIX_SEI_NUT || Xd.push(Rd)
+          const wb = [],
+            Mb = [],
+            eb = [],
+            Vb = [];
+          for (const Hb of Ub(bb)) {
+            const pb = bb.subarray(Hb.offset, Hb.offset + Hb.length),
+              gb = rb(pb[0]);
+            gb === Lb.VPS_NUT ? wb.push(pb) : gb === Lb.SPS_NUT ? Mb.push(pb) : gb === Lb.PPS_NUT ? eb.push(pb) : gb !== Lb.PREFIX_SEI_NUT && gb !== Lb.SUFFIX_SEI_NUT || Vb.push(pb)
           }
-          if (0 === md.length || 0 === Wd.length) return null;
-          const Kd = (dd => {
+          if (0 === Mb.length || 0 === eb.length) return null;
+          const gb = (bb => {
             try {
-              const Od = new Qd.c(Hd(dd));
-              Od.skipBits(16), Od.readBits(4);
-              const md = Od.readBits(3),
-                Wd = Od.readBits(1),
+              const wb = new Ib.e(Eb(bb));
+              wb.skipBits(16), wb.readBits(4);
+              const Mb = wb.readBits(3),
+                eb = wb.readBits(1),
                 {
-                  general_profile_space: Rd,
-                  general_tier_flag: Xd,
-                  general_profile_idc: Kd,
-                  general_profile_compatibility_flags: hd,
-                  general_constraint_indicator_flags: vd,
-                  general_level_idc: td
-                } = Sd(Od, md);
-              (0, Fd.Dc)(Od);
-              const od = (0, Fd.Dc)(Od);
-              let Nd = 0;
-              3 === od && (Nd = Od.readBits(1));
-              const qd = (0, Fd.Dc)(Od),
-                yd = (0, Fd.Dc)(Od);
-              let bd = qd,
-                Td = yd;
-              if (Od.readBits(1)) {
-                const dd = (0, Fd.Dc)(Od),
-                  md = (0, Fd.Dc)(Od),
-                  Wd = (0, Fd.Dc)(Od),
-                  Rd = (0, Fd.Dc)(Od);
-                let Xd = 1,
-                  Kd = 1;
-                const hd = 0 === Nd ? od : 0;
-                1 === hd ? (Xd = 2, Kd = 2) : 2 === hd && (Xd = 2, Kd = 1), bd -= (dd + md) * Xd, Td -= (Wd + Rd) * Kd
+                  general_profile_space: pb,
+                  general_tier_flag: Vb,
+                  general_profile_idc: gb,
+                  general_profile_compatibility_flags: lb,
+                  general_constraint_indicator_flags: Lb,
+                  general_level_idc: Ob
+                } = Db(wb, Mb);
+              (0, Hb.yc)(wb);
+              const Ub = (0, Hb.yc)(wb);
+              let tb = 0;
+              3 === Ub && (tb = wb.readBits(1));
+              const Cb = (0, Hb.yc)(wb),
+                Fb = (0, Hb.yc)(wb);
+              let Bb = Cb,
+                sb = Fb;
+              if (wb.readBits(1)) {
+                const bb = (0, Hb.yc)(wb),
+                  Mb = (0, Hb.yc)(wb),
+                  eb = (0, Hb.yc)(wb),
+                  pb = (0, Hb.yc)(wb);
+                let Vb = 1,
+                  gb = 1;
+                const lb = 0 === tb ? Ub : 0;
+                1 === lb ? (Vb = 2, gb = 2) : 2 === lb && (Vb = 2, gb = 1), Bb -= (bb + Mb) * Vb, sb -= (eb + pb) * gb
               }
-              const pd = (0, Fd.Dc)(Od),
-                Yd = (0, Fd.Dc)(Od);
-              (0, Fd.Dc)(Od);
-              const gd = Od.readBits(1);
-              let wd = 0;
-              for (let dd = gd ? 0 : md; dd <= md; dd++)(0, Fd.Dc)(Od), wd = (0, Fd.Dc)(Od), (0, Fd.Dc)(Od);
-              (0, Fd.Dc)(Od), (0, Fd.Dc)(Od), (0, Fd.Dc)(Od), (0, Fd.Dc)(Od), (0, Fd.Dc)(Od), (0, Fd.Dc)(Od), Od.readBits(1) && Od.readBits(1) && sd(Od), Od.skipBits(1), Od.skipBits(1), Od.readBits(1) && (Od.skipBits(4), Od.skipBits(4), (0, Fd.Dc)(Od), (0, Fd.Dc)(Od), Od.skipBits(1));
-              const Ed = (0, Fd.Dc)(Od);
-              if (ud(Od, Ed), Od.readBits(1)) {
-                const dd = (0, Fd.Dc)(Od);
-                for (let md = 0; md < dd; md++)(0, Fd.Dc)(Od), Od.skipBits(1)
+              const mb = (0, Hb.yc)(wb),
+                hb = (0, Hb.yc)(wb);
+              (0, Hb.yc)(wb);
+              const zb = wb.readBits(1);
+              let Xb = 0;
+              for (let bb = zb ? 0 : Mb; bb <= Mb; bb++)(0, Hb.yc)(wb), Xb = (0, Hb.yc)(wb), (0, Hb.yc)(wb);
+              (0, Hb.yc)(wb), (0, Hb.yc)(wb), (0, Hb.yc)(wb), (0, Hb.yc)(wb), (0, Hb.yc)(wb), (0, Hb.yc)(wb), wb.readBits(1) && wb.readBits(1) && cb(wb), wb.skipBits(1), wb.skipBits(1), wb.readBits(1) && (wb.skipBits(4), wb.skipBits(4), (0, Hb.yc)(wb), (0, Hb.yc)(wb), wb.skipBits(1));
+              const xb = (0, Hb.yc)(wb);
+              if (Yb(wb, xb), wb.readBits(1)) {
+                const bb = (0, Hb.yc)(wb);
+                for (let Mb = 0; Mb < bb; Mb++)(0, Hb.yc)(wb), wb.skipBits(1)
               }
-              Od.skipBits(1), Od.skipBits(1);
-              let Jd = 2,
-                Ud = 2,
-                xd = 2,
-                Bd = 0,
-                Vd = 0,
-                rd = {
+              wb.skipBits(1), wb.skipBits(1);
+              let jb = 2,
+                Kb = 2,
+                rb = 2,
+                Rb = 0,
+                Zb = 0,
+                Ab = {
                   num: 1,
                   den: 1
                 };
-              if (Od.readBits(1)) {
-                const dd = Ad(Od, md);
-                rd = dd.pixelAspectRatio, Jd = dd.colourPrimaries, Ud = dd.transferCharacteristics, xd = dd.matrixCoefficients, Bd = dd.fullRangeFlag, Vd = dd.minSpatialSegmentationIdc
+              if (wb.readBits(1)) {
+                const bb = fb(wb, Mb);
+                Ab = bb.pixelAspectRatio, jb = bb.colourPrimaries, Kb = bb.transferCharacteristics, rb = bb.matrixCoefficients, Rb = bb.fullRangeFlag, Zb = bb.minSpatialSegmentationIdc
               }
               return {
-                displayWidth: bd,
-                displayHeight: Td,
-                pixelAspectRatio: rd,
-                colourPrimaries: Jd,
-                transferCharacteristics: Ud,
-                matrixCoefficients: xd,
-                fullRangeFlag: Bd,
-                maxDecFrameBuffering: wd + 1,
-                spsMaxSubLayersMinus1: md,
-                spsTemporalIdNestingFlag: Wd,
-                generalProfileSpace: Rd,
-                generalTierFlag: Xd,
-                generalProfileIdc: Kd,
-                generalProfileCompatibilityFlags: hd,
-                generalConstraintIndicatorFlags: vd,
-                generalLevelIdc: td,
-                chromaFormatIdc: od,
-                bitDepthLumaMinus8: pd,
-                bitDepthChromaMinus8: Yd,
-                minSpatialSegmentationIdc: Vd
+                displayWidth: Bb,
+                displayHeight: sb,
+                pixelAspectRatio: Ab,
+                colourPrimaries: jb,
+                transferCharacteristics: Kb,
+                matrixCoefficients: rb,
+                fullRangeFlag: Rb,
+                maxDecFrameBuffering: Xb + 1,
+                spsMaxSubLayersMinus1: Mb,
+                spsTemporalIdNestingFlag: eb,
+                generalProfileSpace: pb,
+                generalTierFlag: Vb,
+                generalProfileIdc: gb,
+                generalProfileCompatibilityFlags: lb,
+                generalConstraintIndicatorFlags: Lb,
+                generalLevelIdc: Ob,
+                chromaFormatIdc: Ub,
+                bitDepthLumaMinus8: mb,
+                bitDepthChromaMinus8: hb,
+                minSpatialSegmentationIdc: Zb
               }
-            } catch (Od) {
-              return Rd.e._error("Error parsing HEVC SPS:", Od), null
+            } catch (wb) {
+              return pb.e._error("Error parsing HEVC SPS:", wb), null
             }
-          })(md[0]);
-          if (!Kd) return null;
-          let hd = 0;
-          if (Wd.length > 0) {
-            const dd = Wd[0],
-              Od = new Qd.c(Hd(dd));
-            Od.skipBits(16), (0, Fd.Dc)(Od), (0, Fd.Dc)(Od), Od.skipBits(1), Od.skipBits(1), Od.skipBits(3), Od.skipBits(1), Od.skipBits(1), (0, Fd.Dc)(Od), (0, Fd.Dc)(Od), (0, Fd.Ec)(Od), Od.skipBits(1), Od.skipBits(1), Od.readBits(1) && (0, Fd.Dc)(Od), (0, Fd.Ec)(Od), (0, Fd.Ec)(Od), Od.skipBits(1), Od.skipBits(1), Od.skipBits(1), Od.skipBits(1);
-            const md = Od.readBits(1),
-              Rd = Od.readBits(1);
-            hd = md || Rd ? md && !Rd ? 2 : !md && Rd ? 3 : 0 : 0
+          })(Mb[0]);
+          if (!gb) return null;
+          let lb = 0;
+          if (eb.length > 0) {
+            const bb = eb[0],
+              wb = new Ib.e(Eb(bb));
+            wb.skipBits(16), (0, Hb.yc)(wb), (0, Hb.yc)(wb), wb.skipBits(1), wb.skipBits(1), wb.skipBits(3), wb.skipBits(1), wb.skipBits(1), (0, Hb.yc)(wb), (0, Hb.yc)(wb), (0, Hb.Cc)(wb), wb.skipBits(1), wb.skipBits(1), wb.readBits(1) && (0, Hb.yc)(wb), (0, Hb.Cc)(wb), (0, Hb.Cc)(wb), wb.skipBits(1), wb.skipBits(1), wb.skipBits(1), wb.skipBits(1);
+            const Mb = wb.readBits(1),
+              pb = wb.readBits(1);
+            lb = Mb || pb ? Mb && !pb ? 2 : !Mb && pb ? 3 : 0 : 0
           }
-          const td = [...Od.length ? [{
+          const Ob = [...wb.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: vd.VPS_NUT,
-            nalUnits: Od
-          }] : [], ...md.length ? [{
+            nalUnitType: Lb.VPS_NUT,
+            nalUnits: wb
+          }] : [], ...Mb.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: vd.SPS_NUT,
-            nalUnits: md
-          }] : [], ...Wd.length ? [{
+            nalUnitType: Lb.SPS_NUT,
+            nalUnits: Mb
+          }] : [], ...eb.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: vd.PPS_NUT,
-            nalUnits: Wd
-          }] : [], ...Xd.length ? [{
+            nalUnitType: Lb.PPS_NUT,
+            nalUnits: eb
+          }] : [], ...Vb.length ? [{
             arrayCompleteness: 1,
-            nalUnitType: xd(Xd[0][0]),
-            nalUnits: Xd
+            nalUnitType: rb(Vb[0][0]),
+            nalUnits: Vb
           }] : []];
           return {
             configurationVersion: 1,
-            generalProfileSpace: Kd.generalProfileSpace,
-            generalTierFlag: Kd.generalTierFlag,
-            generalProfileIdc: Kd.generalProfileIdc,
-            generalProfileCompatibilityFlags: Kd.generalProfileCompatibilityFlags,
-            generalConstraintIndicatorFlags: Kd.generalConstraintIndicatorFlags,
-            generalLevelIdc: Kd.generalLevelIdc,
-            minSpatialSegmentationIdc: Kd.minSpatialSegmentationIdc,
-            parallelismType: hd,
-            chromaFormatIdc: Kd.chromaFormatIdc,
-            bitDepthLumaMinus8: Kd.bitDepthLumaMinus8,
-            bitDepthChromaMinus8: Kd.bitDepthChromaMinus8,
+            generalProfileSpace: gb.generalProfileSpace,
+            generalTierFlag: gb.generalTierFlag,
+            generalProfileIdc: gb.generalProfileIdc,
+            generalProfileCompatibilityFlags: gb.generalProfileCompatibilityFlags,
+            generalConstraintIndicatorFlags: gb.generalConstraintIndicatorFlags,
+            generalLevelIdc: gb.generalLevelIdc,
+            minSpatialSegmentationIdc: gb.minSpatialSegmentationIdc,
+            parallelismType: lb,
+            chromaFormatIdc: gb.chromaFormatIdc,
+            bitDepthLumaMinus8: gb.bitDepthLumaMinus8,
+            bitDepthChromaMinus8: gb.bitDepthChromaMinus8,
             avgFrameRate: 0,
             constantFrameRate: 0,
-            numTemporalLayers: Kd.spsMaxSubLayersMinus1 + 1,
-            temporalIdNested: Kd.spsTemporalIdNestingFlag,
+            numTemporalLayers: gb.spsMaxSubLayersMinus1 + 1,
+            temporalIdNested: gb.spsTemporalIdNestingFlag,
             lengthSizeMinusOne: 3,
-            arrays: td
+            arrays: Ob
           }
-        } catch (Od) {
-          return Rd.e._error("Error building HEVC Decoder Configuration Record:", Od), null
+        } catch (wb) {
+          return pb.e._error("Error building HEVC Decoder Configuration Record:", wb), null
         }
       },
-      Sd = (dd, Od) => {
-        const md = dd.readBits(2),
-          Wd = dd.readBits(1),
-          Fd = dd.readBits(5);
-        let Rd = 0;
-        for (let Qd = 0; Qd < 32; Qd++) Rd = Rd << 1 | dd.readBits(1);
-        const Xd = new Uint8Array(6);
-        for (let Qd = 0; Qd < 6; Qd++) Xd[Qd] = dd.readBits(8);
-        const Kd = dd.readBits(8),
-          hd = [],
-          vd = [];
-        for (let Qd = 0; Qd < Od; Qd++) hd.push(dd.readBits(1)), vd.push(dd.readBits(1));
-        if (Od > 0)
-          for (let Qd = Od; Qd < 8; Qd++) dd.skipBits(2);
-        for (let Qd = 0; Qd < Od; Qd++) hd[Qd] && dd.skipBits(88), vd[Qd] && dd.skipBits(8);
+      Db = (bb, wb) => {
+        const Mb = bb.readBits(2),
+          eb = bb.readBits(1),
+          Hb = bb.readBits(5);
+        let pb = 0;
+        for (let Ib = 0; Ib < 32; Ib++) pb = pb << 1 | bb.readBits(1);
+        const Vb = new Uint8Array(6);
+        for (let Ib = 0; Ib < 6; Ib++) Vb[Ib] = bb.readBits(8);
+        const gb = bb.readBits(8),
+          lb = [],
+          Lb = [];
+        for (let Ib = 0; Ib < wb; Ib++) lb.push(bb.readBits(1)), Lb.push(bb.readBits(1));
+        if (wb > 0)
+          for (let Ib = wb; Ib < 8; Ib++) bb.skipBits(2);
+        for (let Ib = 0; Ib < wb; Ib++) lb[Ib] && bb.skipBits(88), Lb[Ib] && bb.skipBits(8);
         return {
-          general_profile_space: md,
-          general_tier_flag: Wd,
-          general_profile_idc: Fd,
-          general_profile_compatibility_flags: Rd,
-          general_constraint_indicator_flags: Xd,
-          general_level_idc: Kd
+          general_profile_space: Mb,
+          general_tier_flag: eb,
+          general_profile_idc: Hb,
+          general_profile_compatibility_flags: pb,
+          general_constraint_indicator_flags: Vb,
+          general_level_idc: gb
         }
       },
-      sd = dd => {
-        for (let Od = 0; Od < 4; Od++)
-          for (let md = 0; md < (3 === Od ? 2 : 6); md++) {
-            if (dd.readBits(1)) {
-              const md = Math.min(64, 1 << 4 + (Od << 1));
-              Od > 1 && (0, Fd.Ec)(dd);
-              for (let Od = 0; Od < md; Od++)(0, Fd.Ec)(dd)
-            } else(0, Fd.Dc)(dd)
+      cb = bb => {
+        for (let wb = 0; wb < 4; wb++)
+          for (let Mb = 0; Mb < (3 === wb ? 2 : 6); Mb++) {
+            if (bb.readBits(1)) {
+              const Mb = Math.min(64, 1 << 4 + (wb << 1));
+              wb > 1 && (0, Hb.Cc)(bb);
+              for (let wb = 0; wb < Mb; wb++)(0, Hb.Cc)(bb)
+            } else(0, Hb.yc)(bb)
           }
       },
-      ud = (dd, Od) => {
-        const md = [];
-        for (let Wd = 0; Wd < Od; Wd++) md[Wd] = Vd(dd, Wd, Od, md)
+      Yb = (bb, wb) => {
+        const Mb = [];
+        for (let eb = 0; eb < wb; eb++) Mb[eb] = Zb(bb, eb, wb, Mb)
       },
-      Vd = (dd, Od, md, Wd) => {
-        let Rd = 0,
-          Xd = 0,
-          Kd = 0;
-        if (0 !== Od && (Xd = dd.readBits(1)), Xd) {
-          if (Od === md) {
-            Kd = Od - ((0, Fd.Dc)(dd) + 1)
-          } else Kd = Od - 1;
-          dd.readBits(1), (0, Fd.Dc)(dd);
-          const Xd = Wd[Kd] ?? 0;
-          for (let Od = 0; Od <= Xd; Od++) {
-            dd.readBits(1) || dd.readBits(1)
+      Zb = (bb, wb, Mb, eb) => {
+        let pb = 0,
+          Vb = 0,
+          gb = 0;
+        if (0 !== wb && (Vb = bb.readBits(1)), Vb) {
+          if (wb === Mb) {
+            gb = wb - ((0, Hb.yc)(bb) + 1)
+          } else gb = wb - 1;
+          bb.readBits(1), (0, Hb.yc)(bb);
+          const Vb = eb[gb] ?? 0;
+          for (let wb = 0; wb <= Vb; wb++) {
+            bb.readBits(1) || bb.readBits(1)
           }
-          Rd = Wd[Kd]
+          pb = eb[gb]
         } else {
-          const Od = (0, Fd.Dc)(dd),
-            md = (0, Fd.Dc)(dd);
-          for (let Wd = 0; Wd < Od; Wd++)(0, Fd.Dc)(dd), dd.readBits(1);
-          for (let Wd = 0; Wd < md; Wd++)(0, Fd.Dc)(dd), dd.readBits(1);
-          Rd = Od + md
+          const wb = (0, Hb.yc)(bb),
+            Mb = (0, Hb.yc)(bb);
+          for (let eb = 0; eb < wb; eb++)(0, Hb.yc)(bb), bb.readBits(1);
+          for (let eb = 0; eb < Mb; eb++)(0, Hb.yc)(bb), bb.readBits(1);
+          pb = wb + Mb
         }
-        return Rd
+        return pb
       },
-      Ad = (dd, Od) => {
-        let md = 2,
-          Wd = 2,
-          Rd = 2,
-          Xd = 0,
-          Kd = 0,
-          hd = {
+      fb = (bb, wb) => {
+        let Mb = 2,
+          eb = 2,
+          pb = 2,
+          Vb = 0,
+          gb = 0,
+          lb = {
             num: 1,
             den: 1
           };
-        if (dd.readBits(1)) {
-          const Od = dd.readBits(8);
-          if (255 === Od) hd = {
-            num: dd.readBits(16),
-            den: dd.readBits(16)
+        if (bb.readBits(1)) {
+          const wb = bb.readBits(8);
+          if (255 === wb) lb = {
+            num: bb.readBits(16),
+            den: bb.readBits(16)
           };
           else {
-            const dd = wd[Od];
-            dd && (hd = dd)
+            const bb = Xb[wb];
+            bb && (lb = bb)
           }
         }
-        return dd.readBits(1) && dd.readBits(1), dd.readBits(1) && (dd.readBits(3), Xd = dd.readBits(1), dd.readBits(1) && (md = dd.readBits(8), Wd = dd.readBits(8), Rd = dd.readBits(8))), dd.readBits(1) && ((0, Fd.Dc)(dd), (0, Fd.Dc)(dd)), dd.readBits(1), dd.readBits(1), dd.readBits(1), dd.readBits(1) && ((0, Fd.Dc)(dd), (0, Fd.Dc)(dd), (0, Fd.Dc)(dd), (0, Fd.Dc)(dd)), dd.readBits(1) && (dd.readBits(32), dd.readBits(32), dd.readBits(1) && (0, Fd.Dc)(dd), dd.readBits(1) && rd(dd, !0, Od)), dd.readBits(1) && (dd.readBits(1), dd.readBits(1), dd.readBits(1), Kd = (0, Fd.Dc)(dd), (0, Fd.Dc)(dd), (0, Fd.Dc)(dd), (0, Fd.Dc)(dd), (0, Fd.Dc)(dd)), {
-          pixelAspectRatio: hd,
-          colourPrimaries: md,
-          transferCharacteristics: Wd,
-          matrixCoefficients: Rd,
-          fullRangeFlag: Xd,
-          minSpatialSegmentationIdc: Kd
+        return bb.readBits(1) && bb.readBits(1), bb.readBits(1) && (bb.readBits(3), Vb = bb.readBits(1), bb.readBits(1) && (Mb = bb.readBits(8), eb = bb.readBits(8), pb = bb.readBits(8))), bb.readBits(1) && ((0, Hb.yc)(bb), (0, Hb.yc)(bb)), bb.readBits(1), bb.readBits(1), bb.readBits(1), bb.readBits(1) && ((0, Hb.yc)(bb), (0, Hb.yc)(bb), (0, Hb.yc)(bb), (0, Hb.yc)(bb)), bb.readBits(1) && (bb.readBits(32), bb.readBits(32), bb.readBits(1) && (0, Hb.yc)(bb), bb.readBits(1) && Ab(bb, !0, wb)), bb.readBits(1) && (bb.readBits(1), bb.readBits(1), bb.readBits(1), gb = (0, Hb.yc)(bb), (0, Hb.yc)(bb), (0, Hb.yc)(bb), (0, Hb.yc)(bb), (0, Hb.yc)(bb)), {
+          pixelAspectRatio: lb,
+          colourPrimaries: Mb,
+          transferCharacteristics: eb,
+          matrixCoefficients: pb,
+          fullRangeFlag: Vb,
+          minSpatialSegmentationIdc: gb
         }
       },
-      rd = (dd, Od, md) => {
-        let Wd = !1,
-          Rd = !1,
-          Xd = !1;
-        Od && (Wd = 1 === dd.readBits(1), Rd = 1 === dd.readBits(1), (Wd || Rd) && (Xd = 1 === dd.readBits(1), Xd && (dd.readBits(8), dd.readBits(5), dd.readBits(1), dd.readBits(5)), dd.readBits(4), dd.readBits(4), Xd && dd.readBits(4), dd.readBits(5), dd.readBits(5), dd.readBits(5)));
-        for (let Kd = 0; Kd <= md; Kd++) {
-          let Od = !0;
-          1 === dd.readBits(1) || (Od = 1 === dd.readBits(1));
-          let md = !1;
-          Od ? (0, Fd.Dc)(dd) : md = 1 === dd.readBits(1);
-          let Kd = 1;
-          if (!md) {
-            Kd = (0, Fd.Dc)(dd) + 1
+      Ab = (bb, wb, Mb) => {
+        let eb = !1,
+          pb = !1,
+          Vb = !1;
+        wb && (eb = 1 === bb.readBits(1), pb = 1 === bb.readBits(1), (eb || pb) && (Vb = 1 === bb.readBits(1), Vb && (bb.readBits(8), bb.readBits(5), bb.readBits(1), bb.readBits(5)), bb.readBits(4), bb.readBits(4), Vb && bb.readBits(4), bb.readBits(5), bb.readBits(5), bb.readBits(5)));
+        for (let gb = 0; gb <= Mb; gb++) {
+          let wb = !0;
+          1 === bb.readBits(1) || (wb = 1 === bb.readBits(1));
+          let Mb = !1;
+          wb ? (0, Hb.yc)(bb) : Mb = 1 === bb.readBits(1);
+          let gb = 1;
+          if (!Mb) {
+            gb = (0, Hb.yc)(bb) + 1
           }
-          Wd && Gd(dd, Kd, Xd), Rd && Gd(dd, Kd, Xd)
+          eb && Wb(bb, gb, Vb), pb && Wb(bb, gb, Vb)
         }
       },
-      Gd = (dd, Od, md) => {
-        for (let Wd = 0; Wd < Od; Wd++)(0, Fd.Dc)(dd), (0, Fd.Dc)(dd), md && ((0, Fd.Dc)(dd), (0, Fd.Dc)(dd)), dd.readBits(1)
+      Wb = (bb, wb, Mb) => {
+        for (let eb = 0; eb < wb; eb++)(0, Hb.yc)(bb), (0, Hb.yc)(bb), Mb && ((0, Hb.yc)(bb), (0, Hb.yc)(bb)), bb.readBits(1)
       },
-      nd = dd => {
-        const Od = [];
-        Od.push(dd.configurationVersion), Od.push((3 & dd.generalProfileSpace) << 6 | (1 & dd.generalTierFlag) << 5 | 31 & dd.generalProfileIdc), Od.push(dd.generalProfileCompatibilityFlags >>> 24 & 255), Od.push(dd.generalProfileCompatibilityFlags >>> 16 & 255), Od.push(dd.generalProfileCompatibilityFlags >>> 8 & 255), Od.push(255 & dd.generalProfileCompatibilityFlags), Od.push(...dd.generalConstraintIndicatorFlags), Od.push(255 & dd.generalLevelIdc), Od.push(240 | dd.minSpatialSegmentationIdc >> 8 & 15), Od.push(255 & dd.minSpatialSegmentationIdc), Od.push(252 | 3 & dd.parallelismType), Od.push(252 | 3 & dd.chromaFormatIdc), Od.push(248 | 7 & dd.bitDepthLumaMinus8), Od.push(248 | 7 & dd.bitDepthChromaMinus8), Od.push(dd.avgFrameRate >> 8 & 255), Od.push(255 & dd.avgFrameRate), Od.push((3 & dd.constantFrameRate) << 6 | (7 & dd.numTemporalLayers) << 3 | (1 & dd.temporalIdNested) << 2 | 3 & dd.lengthSizeMinusOne), Od.push(255 & dd.arrays.length);
-        for (const md of dd.arrays) {
-          Od.push((1 & md.arrayCompleteness) << 7 | 63 & md.nalUnitType), Od.push(md.nalUnits.length >> 8 & 255), Od.push(255 & md.nalUnits.length);
-          for (const dd of md.nalUnits) {
-            Od.push(dd.length >> 8 & 255), Od.push(255 & dd.length);
-            for (let md = 0; md < dd.length; md++) Od.push(dd[md])
+      Jb = bb => {
+        const wb = [];
+        wb.push(bb.configurationVersion), wb.push((3 & bb.generalProfileSpace) << 6 | (1 & bb.generalTierFlag) << 5 | 31 & bb.generalProfileIdc), wb.push(bb.generalProfileCompatibilityFlags >>> 24 & 255), wb.push(bb.generalProfileCompatibilityFlags >>> 16 & 255), wb.push(bb.generalProfileCompatibilityFlags >>> 8 & 255), wb.push(255 & bb.generalProfileCompatibilityFlags), wb.push(...bb.generalConstraintIndicatorFlags), wb.push(255 & bb.generalLevelIdc), wb.push(240 | bb.minSpatialSegmentationIdc >> 8 & 15), wb.push(255 & bb.minSpatialSegmentationIdc), wb.push(252 | 3 & bb.parallelismType), wb.push(252 | 3 & bb.chromaFormatIdc), wb.push(248 | 7 & bb.bitDepthLumaMinus8), wb.push(248 | 7 & bb.bitDepthChromaMinus8), wb.push(bb.avgFrameRate >> 8 & 255), wb.push(255 & bb.avgFrameRate), wb.push((3 & bb.constantFrameRate) << 6 | (7 & bb.numTemporalLayers) << 3 | (1 & bb.temporalIdNested) << 2 | 3 & bb.lengthSizeMinusOne), wb.push(255 & bb.arrays.length);
+        for (const Mb of bb.arrays) {
+          wb.push((1 & Mb.arrayCompleteness) << 7 | 63 & Mb.nalUnitType), wb.push(Mb.nalUnits.length >> 8 & 255), wb.push(255 & Mb.nalUnits.length);
+          for (const bb of Mb.nalUnits) {
+            wb.push(bb.length >> 8 & 255), wb.push(255 & bb.length);
+            for (let Mb = 0; Mb < bb.length; Mb++) wb.push(bb[Mb])
           }
         }
-        return new Uint8Array(Od)
+        return new Uint8Array(wb)
       },
-      Ld = dd => {
+      Sb = bb => {
         try {
-          const Od = (0, Fd.sd)(dd);
-          let md = 0;
-          const Wd = Od.getUint8(md++),
-            Rd = Od.getUint8(md++),
-            Xd = Rd >> 6 & 3,
-            Kd = Rd >> 5 & 1,
-            hd = 31 & Rd,
-            vd = Od.getUint32(md, !1);
-          md += 4;
-          const Qd = dd.subarray(md, md + 6);
-          md += 6;
-          const td = Od.getUint8(md++),
-            od = (15 & Od.getUint8(md++)) << 8 | Od.getUint8(md++),
-            Nd = 3 & Od.getUint8(md++),
-            qd = 3 & Od.getUint8(md++),
-            Hd = 7 & Od.getUint8(md++),
-            yd = 7 & Od.getUint8(md++),
-            bd = Od.getUint16(md, !1);
-          md += 2;
-          const Td = Od.getUint8(md++),
-            pd = Td >> 6 & 3,
-            Yd = Td >> 3 & 7,
-            gd = Td >> 2 & 1,
-            wd = 3 & Td,
-            Ed = Od.getUint8(md++),
-            Jd = [];
-          for (let Fd = 0; Fd < Ed; Fd++) {
-            const Wd = Od.getUint8(md++),
-              Fd = Wd >> 7 & 1,
-              Rd = 63 & Wd,
-              Xd = Od.getUint16(md, !1);
-            md += 2;
-            const Kd = [];
-            for (let hd = 0; hd < Xd; hd++) {
-              const Wd = Od.getUint16(md, !1);
-              md += 2, Kd.push(dd.subarray(md, md + Wd)), md += Wd
+          const wb = (0, Hb.kd)(bb);
+          let Mb = 0;
+          const eb = wb.getUint8(Mb++),
+            pb = wb.getUint8(Mb++),
+            Vb = pb >> 6 & 3,
+            gb = pb >> 5 & 1,
+            lb = 31 & pb,
+            Lb = wb.getUint32(Mb, !1);
+          Mb += 4;
+          const Ib = bb.subarray(Mb, Mb + 6);
+          Mb += 6;
+          const Ob = wb.getUint8(Mb++),
+            Ub = (15 & wb.getUint8(Mb++)) << 8 | wb.getUint8(Mb++),
+            tb = 3 & wb.getUint8(Mb++),
+            Cb = 3 & wb.getUint8(Mb++),
+            Eb = 7 & wb.getUint8(Mb++),
+            Fb = 7 & wb.getUint8(Mb++),
+            Bb = wb.getUint16(Mb, !1);
+          Mb += 2;
+          const sb = wb.getUint8(Mb++),
+            mb = sb >> 6 & 3,
+            hb = sb >> 3 & 7,
+            zb = sb >> 2 & 1,
+            Xb = 3 & sb,
+            xb = wb.getUint8(Mb++),
+            jb = [];
+          for (let Hb = 0; Hb < xb; Hb++) {
+            const eb = wb.getUint8(Mb++),
+              Hb = eb >> 7 & 1,
+              pb = 63 & eb,
+              Vb = wb.getUint16(Mb, !1);
+            Mb += 2;
+            const gb = [];
+            for (let lb = 0; lb < Vb; lb++) {
+              const eb = wb.getUint16(Mb, !1);
+              Mb += 2, gb.push(bb.subarray(Mb, Mb + eb)), Mb += eb
             }
-            Jd.push({
-              arrayCompleteness: Fd,
-              nalUnitType: Rd,
-              nalUnits: Kd
+            jb.push({
+              arrayCompleteness: Hb,
+              nalUnitType: pb,
+              nalUnits: gb
             })
           }
           return {
-            configurationVersion: Wd,
-            generalProfileSpace: Xd,
-            generalTierFlag: Kd,
-            generalProfileIdc: hd,
-            generalProfileCompatibilityFlags: vd,
-            generalConstraintIndicatorFlags: Qd,
-            generalLevelIdc: td,
-            minSpatialSegmentationIdc: od,
-            parallelismType: Nd,
-            chromaFormatIdc: qd,
-            bitDepthLumaMinus8: Hd,
-            bitDepthChromaMinus8: yd,
-            avgFrameRate: bd,
-            constantFrameRate: pd,
-            numTemporalLayers: Yd,
-            temporalIdNested: gd,
-            lengthSizeMinusOne: wd,
-            arrays: Jd
+            configurationVersion: eb,
+            generalProfileSpace: Vb,
+            generalTierFlag: gb,
+            generalProfileIdc: lb,
+            generalProfileCompatibilityFlags: Lb,
+            generalConstraintIndicatorFlags: Ib,
+            generalLevelIdc: Ob,
+            minSpatialSegmentationIdc: Ub,
+            parallelismType: tb,
+            chromaFormatIdc: Cb,
+            bitDepthLumaMinus8: Eb,
+            bitDepthChromaMinus8: Fb,
+            avgFrameRate: Bb,
+            constantFrameRate: mb,
+            numTemporalLayers: hb,
+            temporalIdNested: zb,
+            lengthSizeMinusOne: Xb,
+            arrays: jb
           }
-        } catch (Od) {
-          return Rd.e._error("Error deserializing HEVC Decoder Configuration Record:", Od), null
+        } catch (wb) {
+          return pb.e._error("Error deserializing HEVC Decoder Configuration Record:", wb), null
         }
       };
-    var Pd;
-    ! function(dd) {
-      dd[dd.audAllowed = 0] = "audAllowed", dd[dd.beforeFirstVcl = 1] = "beforeFirstVcl", dd[dd.afterFirstVcl = 2] = "afterFirstVcl", dd[dd.eoBitstreamAllowed = 3] = "eoBitstreamAllowed", dd[dd.noMoreDataAllowed = 4] = "noMoreDataAllowed"
-    }(Pd || (Pd = {}));
-    const zd = {
+    var Nb;
+    ! function(bb) {
+      bb[bb.audAllowed = 0] = "audAllowed", bb[bb.beforeFirstVcl = 1] = "beforeFirstVcl", bb[bb.afterFirstVcl = 2] = "afterFirstVcl", bb[bb.eoBitstreamAllowed = 3] = "eoBitstreamAllowed", bb[bb.noMoreDataAllowed = 4] = "noMoreDataAllowed"
+    }(Nb || (Nb = {}));
+    const vb = {
         1: {
           colourPrimaries: 5,
           transferCharacteristics: 6,
@@ -1167,648 +1167,648 @@ export const modules = {
           matrixCoefficients: 0
         }
       },
-      cd = dd => {
-        const Od = new Qd.c(dd);
-        if (2 !== Od.readBits(2)) return null;
-        const md = Od.readBits(1),
-          Rd = (Od.readBits(1) << 1) + md;
-        3 === Rd && Od.skipBits(1);
-        if (1 === Od.readBits(1)) return null;
-        if (0 !== Od.readBits(1)) return null;
-        Od.skipBits(2);
-        if (4817730 !== Od.readBits(24)) return null;
-        let Xd = 8;
-        if (Rd >= 2) {
-          Xd = Od.readBits(1) ? 12 : 10
+      Qb = bb => {
+        const wb = new Ib.e(bb);
+        if (2 !== wb.readBits(2)) return null;
+        const Mb = wb.readBits(1),
+          pb = (wb.readBits(1) << 1) + Mb;
+        3 === pb && wb.skipBits(1);
+        if (1 === wb.readBits(1)) return null;
+        if (0 !== wb.readBits(1)) return null;
+        wb.skipBits(2);
+        if (4817730 !== wb.readBits(24)) return null;
+        let Vb = 8;
+        if (pb >= 2) {
+          Vb = wb.readBits(1) ? 12 : 10
         }
-        const Kd = Od.readBits(3);
-        let hd = 0,
-          vd = 0;
-        if (7 !== Kd) {
-          if (vd = Od.readBits(1), 1 === Rd || 3 === Rd) {
-            const dd = Od.readBits(1),
-              md = Od.readBits(1);
-            hd = dd || md ? dd && !md ? 2 : 1 : 3, Od.skipBits(1)
-          } else hd = 1
-        } else hd = 3, vd = 1;
-        const td = (Od.readBits(16) + 1) * (Od.readBits(16) + 1);
-        let od = (0, Fd.jc)(Wd.s).level;
-        for (const Fd of Wd.s)
-          if (td <= Fd.maxPictureSize) {
-            od = Fd.level;
+        const gb = wb.readBits(3);
+        let lb = 0,
+          Lb = 0;
+        if (7 !== gb) {
+          if (Lb = wb.readBits(1), 1 === pb || 3 === pb) {
+            const bb = wb.readBits(1),
+              Mb = wb.readBits(1);
+            lb = bb || Mb ? bb && !Mb ? 2 : 1 : 3, wb.skipBits(1)
+          } else lb = 1
+        } else lb = 3, Lb = 1;
+        const Ob = (wb.readBits(16) + 1) * (wb.readBits(16) + 1);
+        let Ub = (0, Hb.ac)(eb.q).level;
+        for (const Hb of eb.q)
+          if (Ob <= Hb.maxPictureSize) {
+            Ub = Hb.level;
             break
-          } const Nd = zd[Kd];
+          } const tb = vb[gb];
         return {
-          profile: Rd,
-          level: od,
-          bitDepth: Xd,
-          chromaSubsampling: hd,
-          videoFullRangeFlag: vd,
-          colourPrimaries: Nd?.colourPrimaries ?? 2,
-          transferCharacteristics: Nd?.transferCharacteristics ?? 2,
-          matrixCoefficients: Nd?.matrixCoefficients ?? 2
+          profile: pb,
+          level: Ub,
+          bitDepth: Vb,
+          chromaSubsampling: lb,
+          videoFullRangeFlag: Lb,
+          colourPrimaries: tb?.colourPrimaries ?? 2,
+          transferCharacteristics: tb?.transferCharacteristics ?? 2,
+          matrixCoefficients: tb?.matrixCoefficients ?? 2
         }
       },
-      jd = function*(dd) {
-        const Od = new Qd.c(dd),
-          md = () => {
-            let dd = 0;
-            for (let md = 0; md < 8; md++) {
-              const Wd = Od.readAlignedByte();
-              if (dd += (127 & Wd) * 2 ** (7 * md), !(128 & Wd)) break;
-              if (7 === md && 128 & Wd) return null
+      Gb = function*(bb) {
+        const wb = new Ib.e(bb),
+          Mb = () => {
+            let bb = 0;
+            for (let Mb = 0; Mb < 8; Mb++) {
+              const eb = wb.readAlignedByte();
+              if (bb += (127 & eb) * 2 ** (7 * Mb), !(128 & eb)) break;
+              if (7 === Mb && 128 & eb) return null
             }
-            return dd > 2 ** 32 - 1 ? null : dd
+            return bb > 2 ** 32 - 1 ? null : bb
           };
-        for (; Od.getBitsLeft() >= 8;) {
-          Od.skipBits(1);
-          const Wd = Od.readBits(4),
-            Rd = Od.readBits(1),
-            Xd = Od.readBits(1);
-          let Kd;
-          if (Od.skipBits(1), Rd && Od.skipBits(8), Xd) {
-            const dd = md();
-            if (null === dd) return;
-            Kd = dd
-          } else Kd = Math.floor(Od.getBitsLeft() / 8);
-          (0, Fd.M)(Od.pos % 8 === 0), yield {
-            type: Wd,
-            data: dd.subarray(Od.pos / 8, Od.pos / 8 + Kd)
-          }, Od.skipBits(8 * Kd)
+        for (; wb.getBitsLeft() >= 8;) {
+          wb.skipBits(1);
+          const eb = wb.readBits(4),
+            pb = wb.readBits(1),
+            Vb = wb.readBits(1);
+          let gb;
+          if (wb.skipBits(1), pb && wb.skipBits(8), Vb) {
+            const bb = Mb();
+            if (null === bb) return;
+            gb = bb
+          } else gb = Math.floor(wb.getBitsLeft() / 8);
+          (0, Hb.L)(wb.pos % 8 === 0), yield {
+            type: eb,
+            data: bb.subarray(wb.pos / 8, wb.pos / 8 + gb)
+          }, wb.skipBits(8 * gb)
         }
       },
-      Dd = dd => {
+      qb = bb => {
         for (const {
-            type: Od,
-            data: md
+            type: wb,
+            data: Mb
           }
-          of jd(dd)) {
-          if (1 !== Od) continue;
-          const dd = new Qd.c(md),
-            Wd = dd.readBits(3),
-            Fd = (dd.readBits(1), dd.readBits(1));
-          let Rd = 0,
-            Xd = 0,
-            Kd = 0;
-          if (Fd) Rd = dd.readBits(5);
+          of Gb(bb)) {
+          if (1 !== wb) continue;
+          const bb = new Ib.e(Mb),
+            eb = bb.readBits(3),
+            Hb = (bb.readBits(1), bb.readBits(1));
+          let pb = 0,
+            Vb = 0,
+            gb = 0;
+          if (Hb) pb = bb.readBits(5);
           else {
-            let Od = 0;
-            if (dd.readBits(1)) {
-              dd.skipBits(32), dd.skipBits(32);
-              if (dd.readBits(1)) {
-                let Od = 0;
-                for (; Od < 32 && !dd.readBits(1);) Od++;
-                Od < 32 && dd.skipBits(Od)
+            let wb = 0;
+            if (bb.readBits(1)) {
+              bb.skipBits(32), bb.skipBits(32);
+              if (bb.readBits(1)) {
+                let wb = 0;
+                for (; wb < 32 && !bb.readBits(1);) wb++;
+                wb < 32 && bb.skipBits(wb)
               }
-              Od = dd.readBits(1), Od && (Kd = dd.readBits(5), dd.skipBits(32), dd.skipBits(5), dd.skipBits(5))
+              wb = bb.readBits(1), wb && (gb = bb.readBits(5), bb.skipBits(32), bb.skipBits(5), bb.skipBits(5))
             }
-            const md = dd.readBits(1),
-              Wd = dd.readBits(5);
-            for (let Fd = 0; Fd <= Wd; Fd++) {
-              dd.skipBits(12);
-              const Wd = dd.readBits(5);
-              if (0 === Fd && (Rd = Wd), Wd > 7) {
-                const Od = dd.readBits(1);
-                0 === Fd && (Xd = Od)
+            const Mb = bb.readBits(1),
+              eb = bb.readBits(5);
+            for (let Hb = 0; Hb <= eb; Hb++) {
+              bb.skipBits(12);
+              const eb = bb.readBits(5);
+              if (0 === Hb && (pb = eb), eb > 7) {
+                const wb = bb.readBits(1);
+                0 === Hb && (Vb = wb)
               }
-              if (Od) {
-                if (dd.readBits(1)) {
-                  const Od = Kd + 1;
-                  dd.skipBits(Od), dd.skipBits(Od), dd.skipBits(1)
+              if (wb) {
+                if (bb.readBits(1)) {
+                  const wb = gb + 1;
+                  bb.skipBits(wb), bb.skipBits(wb), bb.skipBits(1)
                 }
               }
-              if (md) {
-                dd.readBits(1) && dd.skipBits(4)
+              if (Mb) {
+                bb.readBits(1) && bb.skipBits(4)
               }
             }
           }
-          const hd = dd.readBits(4),
-            vd = dd.readBits(4),
-            td = hd + 1;
-          dd.skipBits(td);
-          const od = vd + 1;
-          dd.skipBits(od);
-          let Nd = 0;
-          if (Nd = Fd ? 0 : dd.readBits(1), Nd && (dd.skipBits(4), dd.skipBits(3)), dd.skipBits(1), dd.skipBits(1), dd.skipBits(1), !Fd) {
-            dd.skipBits(1), dd.skipBits(1), dd.skipBits(1), dd.skipBits(1);
-            const Od = dd.readBits(1);
-            Od && (dd.skipBits(1), dd.skipBits(1));
-            let md = 0;
-            if (md = dd.readBits(1) ? 2 : dd.readBits(1), md > 0) {
-              dd.readBits(1) || dd.skipBits(1)
+          const lb = bb.readBits(4),
+            Lb = bb.readBits(4),
+            Ob = lb + 1;
+          bb.skipBits(Ob);
+          const Ub = Lb + 1;
+          bb.skipBits(Ub);
+          let tb = 0;
+          if (tb = Hb ? 0 : bb.readBits(1), tb && (bb.skipBits(4), bb.skipBits(3)), bb.skipBits(1), bb.skipBits(1), bb.skipBits(1), !Hb) {
+            bb.skipBits(1), bb.skipBits(1), bb.skipBits(1), bb.skipBits(1);
+            const wb = bb.readBits(1);
+            wb && (bb.skipBits(1), bb.skipBits(1));
+            let Mb = 0;
+            if (Mb = bb.readBits(1) ? 2 : bb.readBits(1), Mb > 0) {
+              bb.readBits(1) || bb.skipBits(1)
             }
-            Od && dd.skipBits(3)
+            wb && bb.skipBits(3)
           }
-          dd.skipBits(1), dd.skipBits(1), dd.skipBits(1);
-          const qd = dd.readBits(1);
-          let Hd = 8;
-          if (2 === Wd && qd) {
-            Hd = dd.readBits(1) ? 12 : 10
-          } else Wd <= 2 && (Hd = qd ? 10 : 8);
-          let yd = 0;
-          1 !== Wd && (yd = dd.readBits(1));
-          let bd = 2,
-            Td = 2,
-            pd = 2;
-          dd.readBits(1) && (bd = dd.readBits(8), Td = dd.readBits(8), pd = dd.readBits(8));
-          let Yd = 0,
-            gd = 1,
-            wd = 1,
-            Ed = 0;
-          return yd ? Yd = dd.readBits(1) : 1 === bd && 13 === Td && 0 === pd ? (Yd = 1, gd = 0, wd = 0) : (Yd = dd.readBits(1), 0 === Wd ? (gd = 1, wd = 1) : 1 === Wd ? (gd = 0, wd = 0) : 12 === Hd ? (gd = dd.readBits(1), wd = gd ? dd.readBits(1) : 0) : (gd = 1, wd = 0), gd && wd && (Ed = dd.readBits(2))), {
-            profile: Wd,
-            level: Rd,
-            tier: Xd,
-            bitDepth: Hd,
-            monochrome: yd,
-            chromaSubsamplingX: gd,
-            chromaSubsamplingY: wd,
-            chromaSamplePosition: Ed,
-            videoFullRangeFlag: Yd,
-            colourPrimaries: bd,
-            transferCharacteristics: Td,
-            matrixCoefficients: pd
+          bb.skipBits(1), bb.skipBits(1), bb.skipBits(1);
+          const Cb = bb.readBits(1);
+          let Eb = 8;
+          if (2 === eb && Cb) {
+            Eb = bb.readBits(1) ? 12 : 10
+          } else eb <= 2 && (Eb = Cb ? 10 : 8);
+          let Fb = 0;
+          1 !== eb && (Fb = bb.readBits(1));
+          let Bb = 2,
+            sb = 2,
+            mb = 2;
+          bb.readBits(1) && (Bb = bb.readBits(8), sb = bb.readBits(8), mb = bb.readBits(8));
+          let hb = 0,
+            zb = 1,
+            Xb = 1,
+            xb = 0;
+          return Fb ? hb = bb.readBits(1) : 1 === Bb && 13 === sb && 0 === mb ? (hb = 1, zb = 0, Xb = 0) : (hb = bb.readBits(1), 0 === eb ? (zb = 1, Xb = 1) : 1 === eb ? (zb = 0, Xb = 0) : 12 === Eb ? (zb = bb.readBits(1), Xb = zb ? bb.readBits(1) : 0) : (zb = 1, Xb = 0), zb && Xb && (xb = bb.readBits(2))), {
+            profile: eb,
+            level: pb,
+            tier: Vb,
+            bitDepth: Eb,
+            monochrome: Fb,
+            chromaSubsamplingX: zb,
+            chromaSubsamplingY: Xb,
+            chromaSamplePosition: xb,
+            videoFullRangeFlag: hb,
+            colourPrimaries: Bb,
+            transferCharacteristics: sb,
+            matrixCoefficients: mb
           }
         }
         return null
       },
-      ed = dd => 2 !== dd.colourPrimaries || 2 !== dd.transferCharacteristics || 2 !== dd.matrixCoefficients,
-      Id = dd => {
-        const Od = (0, Fd.sd)(dd),
-          md = Od.getUint8(9),
-          Wd = Od.getUint16(10, !0),
-          Rd = Od.getUint32(12, !0),
-          Xd = Od.getInt16(16, !0),
-          Kd = Od.getUint8(18);
-        let hd = null;
-        return Kd && (hd = dd.subarray(19, 21 + md)), {
-          outputChannelCount: md,
-          preSkip: Wd,
-          inputSampleRate: Rd,
-          outputGain: Xd,
-          channelMappingFamily: Kd,
-          channelMappingTable: hd
+      ab = bb => 2 !== bb.colourPrimaries || 2 !== bb.transferCharacteristics || 2 !== bb.matrixCoefficients,
+      ib = bb => {
+        const wb = (0, Hb.kd)(bb),
+          Mb = wb.getUint8(9),
+          eb = wb.getUint16(10, !0),
+          pb = wb.getUint32(12, !0),
+          Vb = wb.getInt16(16, !0),
+          gb = wb.getUint8(18);
+        let lb = null;
+        return gb && (lb = bb.subarray(19, 21 + Mb)), {
+          outputChannelCount: Mb,
+          preSkip: eb,
+          inputSampleRate: pb,
+          outputGain: Vb,
+          channelMappingFamily: gb,
+          channelMappingTable: lb
         }
       },
-      ld = [480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960],
-      Cd = dd => {
-        const Od = dd[0] >> 3,
-          md = 3 & dd[0];
-        let Wd;
-        return Wd = 0 === md ? 1 : 1 === md || 2 === md ? 2 : 63 & dd[1], {
-          durationInSamples: ld[Od] * Wd
+      ub = [480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 1920, 2880, 480, 960, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960, 120, 240, 480, 960],
+      db = bb => {
+        const wb = bb[0] >> 3,
+          Mb = 3 & bb[0];
+        let eb;
+        return eb = 0 === Mb ? 1 : 1 === Mb || 2 === Mb ? 2 : 63 & bb[1], {
+          durationInSamples: ub[wb] * eb
         }
       },
-      Zd = dd => {
-        if (dd.length < 7) throw new Error("Setup header is too short.");
-        if (5 !== dd[0]) throw new Error("Wrong packet type in Setup header.");
-        if ("vorbis" !== String.fromCharCode(...dd.slice(1, 7))) throw new Error("Invalid packet signature in Setup header.");
-        const Od = dd.length,
-          md = new Uint8Array(Od);
-        for (let Qd = 0; Qd < Od; Qd++) md[Qd] = dd[Od - 1 - Qd];
-        const Wd = new Qd.c(md);
-        let Fd = 0;
-        for (; Wd.getBitsLeft() > 97;)
-          if (1 === Wd.readBits(1)) {
-            Fd = Wd.pos;
+      Pb = bb => {
+        if (bb.length < 7) throw new Error("Setup header is too short.");
+        if (5 !== bb[0]) throw new Error("Wrong packet type in Setup header.");
+        if ("vorbis" !== String.fromCharCode(...bb.slice(1, 7))) throw new Error("Invalid packet signature in Setup header.");
+        const wb = bb.length,
+          Mb = new Uint8Array(wb);
+        for (let Ib = 0; Ib < wb; Ib++) Mb[Ib] = bb[wb - 1 - Ib];
+        const eb = new Ib.e(Mb);
+        let Hb = 0;
+        for (; eb.getBitsLeft() > 97;)
+          if (1 === eb.readBits(1)) {
+            Hb = eb.pos;
             break
-          } if (0 === Fd) throw new Error("Invalid Setup header: framing bit not found.");
-        let Rd = 0,
-          Xd = !1,
-          Kd = 0;
-        for (; Wd.getBitsLeft() >= 97;) {
-          const dd = Wd.pos,
-            Od = Wd.readBits(8),
-            md = Wd.readBits(16),
-            Fd = Wd.readBits(16);
-          if (Od > 63 || 0 !== md || 0 !== Fd) {
-            Wd.pos = dd;
+          } if (0 === Hb) throw new Error("Invalid Setup header: framing bit not found.");
+        let pb = 0,
+          Vb = !1,
+          gb = 0;
+        for (; eb.getBitsLeft() >= 97;) {
+          const bb = eb.pos,
+            wb = eb.readBits(8),
+            Mb = eb.readBits(16),
+            Hb = eb.readBits(16);
+          if (wb > 63 || 0 !== Mb || 0 !== Hb) {
+            eb.pos = bb;
             break
           }
-          if (Wd.skipBits(1), Rd++, Rd > 64) break;
-          Wd.clone().readBits(6) + 1 === Rd && (Xd = !0, Kd = Rd)
+          if (eb.skipBits(1), pb++, pb > 64) break;
+          eb.clone().readBits(6) + 1 === pb && (Vb = !0, gb = pb)
         }
-        if (!Xd) throw new Error("Invalid Setup header: mode header not found.");
-        if (Kd > 63) throw new Error(`Unsupported mode count: ${Kd}.`);
-        const hd = Kd;
-        Wd.pos = 0, Wd.skipBits(Fd);
-        const vd = Array(hd).fill(0);
-        for (let Qd = hd - 1; Qd >= 0; Qd--) Wd.skipBits(40), vd[Qd] = Wd.readBits(1);
+        if (!Vb) throw new Error("Invalid Setup header: mode header not found.");
+        if (gb > 63) throw new Error(`Unsupported mode count: ${gb}.`);
+        const lb = gb;
+        eb.pos = 0, eb.skipBits(Hb);
+        const Lb = Array(lb).fill(0);
+        for (let Ib = lb - 1; Ib >= 0; Ib--) eb.skipBits(40), Lb[Ib] = eb.readBits(1);
         return {
-          modeBlockflags: vd
+          modeBlockflags: Lb
         }
       },
-      kd = (dd, Od, md) => {
-        switch (dd) {
+      nb = (bb, wb, Mb) => {
+        switch (bb) {
           case "avc":
-            for (const dd of ((dd, Od) => {
-                if (Od.description) {
-                  const md = 3 & (0, Fd.vd)(Od.description)[4];
-                  return Nd(dd, md + 1)
+            for (const bb of ((bb, wb) => {
+                if (wb.description) {
+                  const Mb = 3 & (0, Hb.od)(wb.description)[4];
+                  return tb(bb, Mb + 1)
                 }
-                return od(dd)
-              })(md, Od)) {
-              const Od = md[dd.offset],
-                Wd = qd(Od);
-              if (Wd >= hd.NON_IDR_SLICE && Wd <= hd.SLICE_DPC) return "delta";
-              if (Wd === hd.IDR) return "key";
-              if (Wd === hd.SEI && !(0, Fd.Bb)()) {
-                const Od = md.subarray(dd.offset, dd.offset + dd.length),
-                  Wd = Hd(Od);
-                let Rd = 1;
+                return Ub(bb)
+              })(Mb, wb)) {
+              const wb = Mb[bb.offset],
+                eb = Cb(wb);
+              if (eb >= lb.NON_IDR_SLICE && eb <= lb.SLICE_DPC) return "delta";
+              if (eb === lb.IDR) return "key";
+              if (eb === lb.SEI && !(0, Hb.wb)()) {
+                const wb = Mb.subarray(bb.offset, bb.offset + bb.length),
+                  eb = Eb(wb);
+                let pb = 1;
                 do {
-                  let dd = 0;
+                  let bb = 0;
                   for (;;) {
-                    const Od = Wd[Rd++];
-                    if (void 0 === Od) break;
-                    if (dd += Od, Od < 255) break
+                    const wb = eb[pb++];
+                    if (void 0 === wb) break;
+                    if (bb += wb, wb < 255) break
                   }
-                  let Od = 0;
+                  let wb = 0;
                   for (;;) {
-                    const dd = Wd[Rd++];
-                    if (void 0 === dd) break;
-                    if (Od += dd, dd < 255) break
+                    const bb = eb[pb++];
+                    if (void 0 === bb) break;
+                    if (wb += bb, bb < 255) break
                   }
-                  if (dd === 6) {
-                    const dd = new Qd.c(Wd);
-                    dd.pos = 8 * Rd;
-                    const Od = (0, Fd.Dc)(dd),
-                      md = dd.readBits(1);
-                    if (0 === Od && 1 === md) return "key"
+                  if (bb === 6) {
+                    const bb = new Ib.e(eb);
+                    bb.pos = 8 * pb;
+                    const wb = (0, Hb.yc)(bb),
+                      Mb = bb.readBits(1);
+                    if (0 === wb && 1 === Mb) return "key"
                   }
-                  Rd += Od
-                } while (Rd < Wd.length - 1)
+                  pb += wb
+                } while (pb < eb.length - 1)
               }
             }
             return "delta";
           case "hevc":
-            for (const dd of Ud(md, Od)) {
-              const Od = xd(md[dd.offset]);
-              if (Od < vd.BLA_W_LP) return "delta";
-              if (Od <= vd.RSV_IRAP_VCL23) return "key"
+            for (const bb of Kb(Mb, wb)) {
+              const wb = rb(Mb[bb.offset]);
+              if (wb < Lb.BLA_W_LP) return "delta";
+              if (wb <= Lb.RSV_IRAP_VCL23) return "key"
             }
             return "delta";
           case "vp8":
-            return 0 === (1 & md[0]) ? "key" : "delta";
+            return 0 === (1 & Mb[0]) ? "key" : "delta";
           case "vp9": {
-            const dd = new Qd.c(md);
-            if (2 !== dd.readBits(2)) return null;
-            const Od = dd.readBits(1);
-            3 === (dd.readBits(1) << 1) + Od && dd.skipBits(1);
-            if (dd.readBits(1)) return null;
-            return 0 === dd.readBits(1) ? "key" : "delta"
+            const bb = new Ib.e(Mb);
+            if (2 !== bb.readBits(2)) return null;
+            const wb = bb.readBits(1);
+            3 === (bb.readBits(1) << 1) + wb && bb.skipBits(1);
+            if (bb.readBits(1)) return null;
+            return 0 === bb.readBits(1) ? "key" : "delta"
           }
           case "av1": {
-            let dd = !1;
+            let bb = !1;
             for (const {
-                type: Od,
-                data: Wd
+                type: wb,
+                data: eb
               }
-              of jd(md))
-              if (1 === Od) {
-                const Od = new Qd.c(Wd);
-                Od.skipBits(4), dd = !!Od.readBits(1)
-              } else if (3 === Od || 6 === Od || 7 === Od) {
-              if (dd) return "key";
-              const Od = new Qd.c(Wd);
-              if (Od.readBits(1)) return null;
-              return 0 === Od.readBits(2) ? "key" : "delta"
+              of Gb(Mb))
+              if (1 === wb) {
+                const wb = new Ib.e(eb);
+                wb.skipBits(4), bb = !!wb.readBits(1)
+              } else if (3 === wb || 6 === wb || 7 === wb) {
+              if (bb) return "key";
+              const wb = new Ib.e(eb);
+              if (wb.readBits(1)) return null;
+              return 0 === wb.readBits(2) ? "key" : "delta"
             }
             return null
           }
           case "prores":
             return "key";
           default:
-            (0, Fd.J)(dd), (0, Fd.M)(!1)
+            (0, Hb.H)(bb), (0, Hb.L)(!1)
         }
       };
-    var fd;
-    ! function(dd) {
-      dd[dd.STREAMINFO = 0] = "STREAMINFO", dd[dd.VORBIS_COMMENT = 4] = "VORBIS_COMMENT", dd[dd.PICTURE = 6] = "PICTURE"
-    }(fd || (fd = {}));
-    const Md = (dd, Od, md) => {
-        const Wd = [dd],
-          Rd = Fd.od.encode(td.c);
-        let Xd = new Uint8Array(4 + Rd.length),
-          Kd = new DataView(Xd.buffer);
-        Kd.setUint32(0, Rd.length, !0), Xd.set(Rd, 4), Wd.push(Xd);
-        const hd = [],
-          vd = (dd, Od) => {
-            const md = `${dd}=${Od}`,
-              Rd = Fd.od.encode(md);
-            Xd = new Uint8Array(4 + Rd.length), Kd = new DataView(Xd.buffer), Kd.setUint32(0, Rd.length, !0), Xd.set(Rd, 4), Wd.push(Xd), hd.push(dd)
+    var yb;
+    ! function(bb) {
+      bb[bb.STREAMINFO = 0] = "STREAMINFO", bb[bb.VORBIS_COMMENT = 4] = "VORBIS_COMMENT", bb[bb.PICTURE = 6] = "PICTURE"
+    }(yb || (yb = {}));
+    const ob = (bb, wb, Mb) => {
+        const eb = [bb],
+          pb = Hb.id.encode(Ob.b);
+        let Vb = new Uint8Array(4 + pb.length),
+          gb = new DataView(Vb.buffer);
+        gb.setUint32(0, pb.length, !0), Vb.set(pb, 4), eb.push(Vb);
+        const lb = [],
+          Lb = (bb, wb) => {
+            const Mb = `${bb}=${wb}`,
+              pb = Hb.id.encode(Mb);
+            Vb = new Uint8Array(4 + pb.length), gb = new DataView(Vb.buffer), gb.setUint32(0, pb.length, !0), Vb.set(pb, 4), eb.push(Vb), lb.push(bb)
           };
         for (const {
-            key: td,
-            value: Hd
+            key: Ob,
+            value: Eb
           }
-          of(0, Fd.fc)(Od)) switch (td) {
+          of(0, Hb._b)(wb)) switch (Ob) {
           case "title":
-            vd("TITLE", Hd);
+            Lb("TITLE", Eb);
             break;
           case "description":
-            vd("DESCRIPTION", Hd);
+            Lb("DESCRIPTION", Eb);
             break;
           case "artist":
-            vd("ARTIST", Hd);
+            Lb("ARTIST", Eb);
             break;
           case "album":
-            vd("ALBUM", Hd);
+            Lb("ALBUM", Eb);
             break;
           case "albumArtist":
-            vd("ALBUMARTIST", Hd);
+            Lb("ALBUMARTIST", Eb);
             break;
           case "genre":
-            vd("GENRE", Hd);
+            Lb("GENRE", Eb);
             break;
           case "date":
-            vd("DATE", Hd.toISOString().slice(0, 10));
+            Lb("DATE", Eb.toISOString().slice(0, 10));
             break;
           case "comment":
-            vd("COMMENT", Hd);
+            Lb("COMMENT", Eb);
             break;
           case "lyrics":
-            vd("LYRICS", Hd);
+            Lb("LYRICS", Eb);
             break;
           case "trackNumber":
-            vd("TRACKNUMBER", Hd.toString());
+            Lb("TRACKNUMBER", Eb.toString());
             break;
           case "tracksTotal":
-            vd("TRACKTOTAL", Hd.toString());
+            Lb("TRACKTOTAL", Eb.toString());
             break;
           case "discNumber":
-            vd("DISCNUMBER", Hd.toString());
+            Lb("DISCNUMBER", Eb.toString());
             break;
           case "discsTotal":
-            vd("DISCTOTAL", Hd.toString());
+            Lb("DISCTOTAL", Eb.toString());
             break;
           case "beatsPerMinute":
-            vd("BPM", Hd.toString());
+            Lb("BPM", Eb.toString());
             break;
           case "images":
-            if (!md) break;
-            for (const dd of Hd) {
-              const Od = "coverFront" === dd.kind ? 3 : "coverBack" === dd.kind ? 4 : 0,
-                md = new Uint8Array(dd.mimeType.length);
-              for (let Fd = 0; Fd < dd.mimeType.length; Fd++) md[Fd] = dd.mimeType.charCodeAt(Fd);
-              const Wd = Fd.od.encode(dd.description ?? ""),
-                Rd = new Uint8Array(8 + md.length + 4 + Wd.length + 16 + 4 + dd.data.length),
-                Xd = (0, Fd.sd)(Rd);
-              Xd.setUint32(0, Od, !1), Xd.setUint32(4, md.length, !1), Rd.set(md, 8), Xd.setUint32(8 + md.length, Wd.length, !1), Rd.set(Wd, 12 + md.length), Xd.setUint32(28 + md.length + Wd.length, dd.data.length, !1), Rd.set(dd.data, 32 + md.length + Wd.length);
-              vd("METADATA_BLOCK_PICTURE", (0, Fd.T)(Rd))
+            if (!Mb) break;
+            for (const bb of Eb) {
+              const wb = "coverFront" === bb.kind ? 3 : "coverBack" === bb.kind ? 4 : 0,
+                Mb = new Uint8Array(bb.mimeType.length);
+              for (let Hb = 0; Hb < bb.mimeType.length; Hb++) Mb[Hb] = bb.mimeType.charCodeAt(Hb);
+              const eb = Hb.id.encode(bb.description ?? ""),
+                pb = new Uint8Array(8 + Mb.length + 4 + eb.length + 16 + 4 + bb.data.length),
+                Vb = (0, Hb.kd)(pb);
+              Vb.setUint32(0, wb, !1), Vb.setUint32(4, Mb.length, !1), pb.set(Mb, 8), Vb.setUint32(8 + Mb.length, eb.length, !1), pb.set(eb, 12 + Mb.length), Vb.setUint32(28 + Mb.length + eb.length, bb.data.length, !1), pb.set(bb.data, 32 + Mb.length + eb.length);
+              Lb("METADATA_BLOCK_PICTURE", (0, Hb.R)(pb))
             }
             break;
           case "raw":
             break;
           default:
-            (0, Fd.J)(td)
+            (0, Hb.H)(Ob)
         }
-        if (Od.raw)
-          for (const Fd in Od.raw) {
-            const dd = Od.raw[Fd] ?? Od.raw[Fd.toLowerCase()];
-            if ("vendor" !== Fd && null != dd && !hd.includes(Fd))
-              if ("string" === typeof dd) vd(Fd, dd);
-              else if (Array.isArray(dd)) {
-              if (dd.every((dd => "string" === typeof dd)))
-                for (const Od of dd) vd(Fd, Od)
+        if (wb.raw)
+          for (const Hb in wb.raw) {
+            const bb = wb.raw[Hb] ?? wb.raw[Hb.toLowerCase()];
+            if ("vendor" !== Hb && null != bb && !lb.includes(Hb))
+              if ("string" === typeof bb) Lb(Hb, bb);
+              else if (Array.isArray(bb)) {
+              if (bb.every((bb => "string" === typeof bb)))
+                for (const wb of bb) Lb(Hb, wb)
             }
           }
-        const Qd = new Uint8Array(4);
-        (0, Fd.sd)(Qd).setUint32(0, hd.length, !0), Wd.splice(2, 0, Qd);
-        const od = Wd.reduce(((dd, Od) => dd + Od.length), 0),
-          Nd = new Uint8Array(od);
-        let qd = 0;
-        for (const Fd of Wd) Nd.set(Fd, qd), qd += Fd.length;
-        return Nd
+        const Ib = new Uint8Array(4);
+        (0, Hb.kd)(Ib).setUint32(0, lb.length, !0), eb.splice(2, 0, Ib);
+        const Ub = eb.reduce(((bb, wb) => bb + wb.length), 0),
+          tb = new Uint8Array(Ub);
+        let Cb = 0;
+        for (const Hb of eb) tb.set(Hb, Cb), Cb += Hb.length;
+        return tb
       },
-      dO = dd => {
-        if (dd.length < 7) return null;
-        if (11 !== dd[0] || 119 !== dd[1]) return null;
-        const Od = new Qd.c(dd);
-        Od.skipBits(16), Od.skipBits(16);
-        const md = Od.readBits(2);
-        if (3 === md) return null;
-        const Wd = Od.readBits(6),
-          Fd = Od.readBits(5);
-        if (Fd > 8) return null;
-        const Rd = Od.readBits(3),
-          Xd = Od.readBits(3);
-        0 !== (1 & Xd) && 1 !== Xd && Od.skipBits(2), 0 !== (4 & Xd) && Od.skipBits(2), 2 === Xd && Od.skipBits(2);
+      Tb = bb => {
+        if (bb.length < 7) return null;
+        if (11 !== bb[0] || 119 !== bb[1]) return null;
+        const wb = new Ib.e(bb);
+        wb.skipBits(16), wb.skipBits(16);
+        const Mb = wb.readBits(2);
+        if (3 === Mb) return null;
+        const eb = wb.readBits(6),
+          Hb = wb.readBits(5);
+        if (Hb > 8) return null;
+        const pb = wb.readBits(3),
+          Vb = wb.readBits(3);
+        0 !== (1 & Vb) && 1 !== Vb && wb.skipBits(2), 0 !== (4 & Vb) && wb.skipBits(2), 2 === Vb && wb.skipBits(2);
         return {
-          fscod: md,
-          bsid: Fd,
-          bsmod: Rd,
-          acmod: Xd,
-          lfeon: Od.readBits(1),
-          bitRateCode: Math.floor(Wd / 2)
+          fscod: Mb,
+          bsid: Hb,
+          bsmod: pb,
+          acmod: Vb,
+          lfeon: wb.readBits(1),
+          bitRateCode: Math.floor(eb / 2)
         }
       },
-      OO = new Uint8Array([5, 4, 65, 67, 45, 51]),
-      mO = new Uint8Array([5, 4, 69, 65, 67, 51]),
-      WO = [1, 2, 3, 6],
-      FO = dd => {
-        if (dd.length < 6) return null;
-        if (11 !== dd[0] || 119 !== dd[1]) return null;
-        const Od = new Qd.c(dd);
-        Od.skipBits(16);
-        const md = Od.readBits(2);
-        if (Od.skipBits(3), 0 !== md && 2 !== md) return null;
-        const Wd = Od.readBits(11),
-          Fd = Od.readBits(2);
-        let Rd, hd = 0;
-        3 === Fd ? (hd = Od.readBits(2), Rd = 3) : Rd = Od.readBits(2);
-        const vd = Od.readBits(3),
-          td = Od.readBits(1),
-          od = Od.readBits(5);
-        if (od < 11 || od > 16) return null;
-        const Nd = WO[Rd];
-        let qd;
-        qd = Fd < 3 ? Xd[Fd] / 1e3 : Kd[hd] / 1e3;
+      kb = new Uint8Array([5, 4, 65, 67, 45, 51]),
+      bw = new Uint8Array([5, 4, 69, 65, 67, 51]),
+      ww = [1, 2, 3, 6],
+      Mw = bb => {
+        if (bb.length < 6) return null;
+        if (11 !== bb[0] || 119 !== bb[1]) return null;
+        const wb = new Ib.e(bb);
+        wb.skipBits(16);
+        const Mb = wb.readBits(2);
+        if (wb.skipBits(3), 0 !== Mb && 2 !== Mb) return null;
+        const eb = wb.readBits(11),
+          Hb = wb.readBits(2);
+        let pb, lb = 0;
+        3 === Hb ? (lb = wb.readBits(2), pb = 3) : pb = wb.readBits(2);
+        const Lb = wb.readBits(3),
+          Ob = wb.readBits(1),
+          Ub = wb.readBits(5);
+        if (Ub < 11 || Ub > 16) return null;
+        const tb = ww[pb];
+        let Cb;
+        Cb = Hb < 3 ? Vb[Hb] / 1e3 : gb[lb] / 1e3;
         return {
-          dataRate: Math.round((Wd + 1) * qd / (16 * Nd)),
+          dataRate: Math.round((eb + 1) * Cb / (16 * tb)),
           substreams: [{
-            fscod: Fd,
-            fscod2: hd,
-            bsid: od,
+            fscod: Hb,
+            fscod2: lb,
+            bsid: Ub,
             bsmod: 0,
-            acmod: vd,
-            lfeon: td,
+            acmod: Lb,
+            lfeon: Ob,
             numDepSub: 0,
             chanLoc: 0
           }]
         }
       },
-      RO = [0, 8e3, 16e3, 32e3, 0, 0, 11025, 22050, 44100, 0, 0, 12e3, 24e3, 48e3, 96e3, 192e3],
-      XO = [32e3, 56e3, 64e3, 96e3, 112e3, 128e3, 192e3, 224e3, 256e3, 32e4, 384e3, 448e3, 512e3, 576e3, 64e4, 768e3, 96e4, 1024e3, 1152e3, 128e4, 1344e3, 1408e3, 1411200, 1472e3, 1536e3, 192e4, 2048e3, 3072e3, 384e4, 0, 0, 0],
-      KO = [16, 16, 20, 20, 0, 24, 24, 0],
-      hO = [1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 6, 6, 6, 7, 8, 8],
-      vO = [1, 2, 2, 2, 2, 3, 18, 19, 6, 7, 518, 323, 83, 519, 582, 535],
-      QO = [32e3, 44100, 48e3, 0],
-      tO = [8e3, 16e3, 32e3, 64e3, 128e3, 22050, 44100, 88200, 176400, 352800, 12e3, 24e3, 48e3, 96e3, 192e3, 384e3],
-      oO = [512, 1024, 2048, 4096],
-      NO = dd => {
-        const Od = qO(dd),
-          md = (0, Fd.sd)(dd);
-        let Wd = Od ? 4 * Math.ceil(Od.frameSize / 4) : 0,
-          Rd = null;
-        for (; Wd + 4 <= dd.length && 1683496997 === md.getUint32(Wd);) {
-          const Od = HO(dd.subarray(Wd));
-          if (!Od) break;
-          Rd ??= Od, Wd += Od.frameSize
+      ew = [0, 8e3, 16e3, 32e3, 0, 0, 11025, 22050, 44100, 0, 0, 12e3, 24e3, 48e3, 96e3, 192e3],
+      Hw = [32e3, 56e3, 64e3, 96e3, 112e3, 128e3, 192e3, 224e3, 256e3, 32e4, 384e3, 448e3, 512e3, 576e3, 64e4, 768e3, 96e4, 1024e3, 1152e3, 128e4, 1344e3, 1408e3, 1411200, 1472e3, 1536e3, 192e4, 2048e3, 3072e3, 384e4, 0, 0, 0],
+      pw = [16, 16, 20, 20, 0, 24, 24, 0],
+      Vw = [1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 6, 6, 6, 7, 8, 8],
+      gw = [1, 2, 2, 2, 2, 3, 18, 19, 6, 7, 518, 323, 83, 519, 582, 535],
+      lw = [32e3, 44100, 48e3, 0],
+      Lw = [8e3, 16e3, 32e3, 64e3, 128e3, 22050, 44100, 88200, 176400, 352800, 12e3, 24e3, 48e3, 96e3, 192e3, 384e3],
+      Iw = [512, 1024, 2048, 4096],
+      Ow = bb => {
+        const wb = Uw(bb),
+          Mb = (0, Hb.kd)(bb);
+        let eb = wb ? 4 * Math.ceil(wb.frameSize / 4) : 0,
+          pb = null;
+        for (; eb + 4 <= bb.length && 1683496997 === Mb.getUint32(eb);) {
+          const wb = tw(bb.subarray(eb));
+          if (!wb) break;
+          pb ??= wb, eb += wb.frameSize
         }
-        if (Od) return {
-          frameSize: Rd ? Wd : Od.frameSize,
-          sampleRate: Od.sampleRate,
-          numberOfChannels: Od.numberOfChannels,
-          sampleCount: Od.sampleCount,
-          channelLayout: Od.channelLayout,
-          pcmResolution: Od.pcmResolution,
-          bitRate: Od.bitRate,
-          core: Od,
-          hasExtensions: null !== Rd
+        if (wb) return {
+          frameSize: pb ? eb : wb.frameSize,
+          sampleRate: wb.sampleRate,
+          numberOfChannels: wb.numberOfChannels,
+          sampleCount: wb.sampleCount,
+          channelLayout: wb.channelLayout,
+          pcmResolution: wb.pcmResolution,
+          bitRate: wb.bitRate,
+          core: wb,
+          hasExtensions: null !== pb
         };
-        if (!Rd?.asset) return null;
+        if (!pb?.asset) return null;
         const {
-          asset: Xd
-        } = Rd;
+          asset: Vb
+        } = pb;
         return {
-          frameSize: Wd,
-          sampleRate: Xd.sampleRate,
-          numberOfChannels: Xd.numberOfChannels,
-          sampleCount: Xd.sampleCount,
-          channelLayout: Xd.channelLayout,
-          pcmResolution: Xd.pcmResolution,
+          frameSize: eb,
+          sampleRate: Vb.sampleRate,
+          numberOfChannels: Vb.numberOfChannels,
+          sampleCount: Vb.sampleCount,
+          channelLayout: Vb.channelLayout,
+          pcmResolution: Vb.pcmResolution,
           bitRate: 0,
           core: null,
           hasExtensions: !0
         }
       },
-      qO = dd => {
-        if (dd.length < 18) return null;
-        if (127 !== dd[0] || 254 !== dd[1] || 128 !== dd[2] || 1 !== dd[3]) return null;
-        const Od = new Qd.c(dd);
-        if (Od.skipBits(32), Od.skipBits(1), 31 !== Od.readBits(5)) return null;
-        const md = Od.readBits(1),
-          Wd = Od.readBits(7) + 1;
-        if (Wd % 8 !== 0) return null;
-        const Fd = Od.readBits(14) + 1;
-        if (Fd < 96) return null;
-        const Rd = Od.readBits(6);
-        if (Rd >= hO.length) return null;
-        const Xd = RO[Od.readBits(4)];
-        if (0 === Xd) return null;
-        const Kd = XO[Od.readBits(5)];
-        if (0 !== Od.readBits(1)) return null;
-        Od.skipBits(4), Od.skipBits(5);
-        const hd = Od.readBits(2);
-        if (3 === hd) return null;
-        Od.skipBits(1), md && Od.skipBits(16), Od.skipBits(7);
-        const vd = KO[Od.readBits(3)];
-        if (0 === vd) return null;
-        const td = 0 !== hd;
+      Uw = bb => {
+        if (bb.length < 18) return null;
+        if (127 !== bb[0] || 254 !== bb[1] || 128 !== bb[2] || 1 !== bb[3]) return null;
+        const wb = new Ib.e(bb);
+        if (wb.skipBits(32), wb.skipBits(1), 31 !== wb.readBits(5)) return null;
+        const Mb = wb.readBits(1),
+          eb = wb.readBits(7) + 1;
+        if (eb % 8 !== 0) return null;
+        const Hb = wb.readBits(14) + 1;
+        if (Hb < 96) return null;
+        const pb = wb.readBits(6);
+        if (pb >= Vw.length) return null;
+        const Vb = ew[wb.readBits(4)];
+        if (0 === Vb) return null;
+        const gb = Hw[wb.readBits(5)];
+        if (0 !== wb.readBits(1)) return null;
+        wb.skipBits(4), wb.skipBits(5);
+        const lb = wb.readBits(2);
+        if (3 === lb) return null;
+        wb.skipBits(1), Mb && wb.skipBits(16), wb.skipBits(7);
+        const Lb = pw[wb.readBits(3)];
+        if (0 === Lb) return null;
+        const Ob = 0 !== lb;
         return {
-          frameSize: Fd,
-          sampleRate: Xd,
-          numberOfChannels: hO[Rd] + (td ? 1 : 0),
-          sampleCount: 32 * Wd,
-          channelLayout: vO[Rd] | (td ? 8 : 0),
-          amode: Rd,
-          lfePresent: td,
-          bitRate: Kd,
-          pcmResolution: vd
+          frameSize: Hb,
+          sampleRate: Vb,
+          numberOfChannels: Vw[pb] + (Ob ? 1 : 0),
+          sampleCount: 32 * eb,
+          channelLayout: gw[pb] | (Ob ? 8 : 0),
+          amode: pb,
+          lfePresent: Ob,
+          bitRate: gb,
+          pcmResolution: Lb
         }
       },
-      HO = dd => {
-        if (dd.length < 10) return null;
-        if (100 !== dd[0] || 88 !== dd[1] || 32 !== dd[2] || 37 !== dd[3]) return null;
-        const Od = new Qd.c(dd);
-        Od.skipBits(32), Od.skipBits(8);
-        const md = Od.readBits(2),
-          Wd = Od.readBits(1),
-          Rd = 8 + 4 * Wd,
-          Xd = 16 + 4 * Wd;
-        Od.skipBits(Rd);
-        const Kd = Od.readBits(Xd) + 1,
-          hd = {
-            frameSize: Kd,
+      tw = bb => {
+        if (bb.length < 10) return null;
+        if (100 !== bb[0] || 88 !== bb[1] || 32 !== bb[2] || 37 !== bb[3]) return null;
+        const wb = new Ib.e(bb);
+        wb.skipBits(32), wb.skipBits(8);
+        const Mb = wb.readBits(2),
+          eb = wb.readBits(1),
+          pb = 8 + 4 * eb,
+          Vb = 16 + 4 * eb;
+        wb.skipBits(pb);
+        const gb = wb.readBits(Vb) + 1,
+          lb = {
+            frameSize: gb,
             asset: null
           };
-        if (!Od.readBits(1)) return hd;
-        const vd = QO[Od.readBits(2)],
-          td = 512 * (Od.readBits(3) + 1);
-        Od.readBits(1) && Od.skipBits(36);
-        const od = Od.readBits(3) + 1,
-          Nd = Od.readBits(3) + 1,
-          qd = [];
-        for (let Fd = 0; Fd < od; Fd++) qd.push(Od.readBits(md + 1));
-        for (const Qd of qd) Od.skipBits(8 * (0, Fd.xc)(Qd));
-        if (Od.readBits(1)) {
-          Od.skipBits(2);
-          const dd = Od.readBits(2) + 1 << 2,
-            md = Od.readBits(2) + 1;
-          Od.skipBits(md * dd)
+        if (!wb.readBits(1)) return lb;
+        const Lb = lw[wb.readBits(2)],
+          Ob = 512 * (wb.readBits(3) + 1);
+        wb.readBits(1) && wb.skipBits(36);
+        const Ub = wb.readBits(3) + 1,
+          tb = wb.readBits(3) + 1,
+          Cb = [];
+        for (let Hb = 0; Hb < Ub; Hb++) Cb.push(wb.readBits(Mb + 1));
+        for (const Ib of Cb) wb.skipBits(8 * (0, Hb.uc)(Ib));
+        if (wb.readBits(1)) {
+          wb.skipBits(2);
+          const bb = wb.readBits(2) + 1 << 2,
+            Mb = wb.readBits(2) + 1;
+          wb.skipBits(Mb * bb)
         }
-        for (let Fd = 0; Fd < Nd; Fd++) Od.skipBits(Xd);
-        Od.skipBits(9), Od.skipBits(3), Od.readBits(1) && Od.skipBits(4), Od.readBits(1) && Od.skipBits(24), Od.readBits(1) && Od.skipBits(8 * (Od.readBits(10) + 1));
-        const Hd = Od.readBits(5) + 1,
-          yd = tO[Od.readBits(4)],
-          bd = Od.readBits(8) + 1;
-        let Td = 0;
-        if (Od.readBits(1) && (bd > 2 && Od.skipBits(1), bd > 6 && Od.skipBits(1), Od.readBits(1))) {
-          const dd = Od.readBits(2) + 1 << 2;
-          Td = Od.readBits(dd)
+        for (let Hb = 0; Hb < tb; Hb++) wb.skipBits(Vb);
+        wb.skipBits(9), wb.skipBits(3), wb.readBits(1) && wb.skipBits(4), wb.readBits(1) && wb.skipBits(24), wb.readBits(1) && wb.skipBits(8 * (wb.readBits(10) + 1));
+        const Eb = wb.readBits(5) + 1,
+          Fb = Lw[wb.readBits(4)],
+          Bb = wb.readBits(8) + 1;
+        let sb = 0;
+        if (wb.readBits(1) && (Bb > 2 && wb.skipBits(1), Bb > 6 && wb.skipBits(1), wb.readBits(1))) {
+          const bb = wb.readBits(2) + 1 << 2;
+          sb = wb.readBits(bb)
         }
-        return 0 === vd || Od.getBitsLeft() < 0 ? hd : {
-          frameSize: Kd,
+        return 0 === Lb || wb.getBitsLeft() < 0 ? lb : {
+          frameSize: gb,
           asset: {
-            sampleRate: yd,
-            numberOfChannels: bd,
-            sampleCount: Math.round(td * yd / vd),
-            channelLayout: Td,
-            pcmResolution: Hd
+            sampleRate: Fb,
+            numberOfChannels: Bb,
+            sampleCount: Math.round(Ob * Fb / Lb),
+            channelLayout: sb,
+            pcmResolution: Eb
           }
         }
       },
-      yO = dd => {
-        const Od = new Uint8Array(20),
-          md = (0, Fd.sd)(Od);
-        md.setUint32(0, dd.sampleRate), md.setUint32(4, dd.bitRate), md.setUint32(8, dd.bitRate), Od[12] = dd.pcmResolution;
-        const Wd = dd.core && !dd.hasExtensions ? 1 : 0,
-          Rd = new Qd.c(Od);
-        return Rd.seekToByte(13), Rd.writeBits(2, Math.max(oO.indexOf(dd.sampleCount), 0)), Rd.writeBits(5, Wd), Rd.writeBits(1, dd.core?.lfePresent ? 1 : 0), Rd.writeBits(6, dd.core?.amode ?? 0), Rd.writeBits(14, dd.core ? dd.core.frameSize - 1 : 0), Rd.writeBits(1, 0), Rd.writeBits(3, 0), Rd.writeBits(16, dd.channelLayout), Rd.writeBits(1, 0), Rd.writeBits(1, 0), Rd.writeBits(1, 0), Rd.writeBits(5, 0), Od
+      Cw = bb => {
+        const wb = new Uint8Array(20),
+          Mb = (0, Hb.kd)(wb);
+        Mb.setUint32(0, bb.sampleRate), Mb.setUint32(4, bb.bitRate), Mb.setUint32(8, bb.bitRate), wb[12] = bb.pcmResolution;
+        const eb = bb.core && !bb.hasExtensions ? 1 : 0,
+          pb = new Ib.e(wb);
+        return pb.seekToByte(13), pb.writeBits(2, Math.max(Iw.indexOf(bb.sampleCount), 0)), pb.writeBits(5, eb), pb.writeBits(1, bb.core?.lfePresent ? 1 : 0), pb.writeBits(6, bb.core?.amode ?? 0), pb.writeBits(14, bb.core ? bb.core.frameSize - 1 : 0), pb.writeBits(1, 0), pb.writeBits(3, 0), pb.writeBits(16, bb.channelLayout), pb.writeBits(1, 0), pb.writeBits(1, 0), pb.writeBits(1, 0), pb.writeBits(5, 0), wb
       }
   },
-  41513: (dd, Od, md) => {
-    md.d(Od, {
-      A: () => wd,
-      E: () => gd,
-      H: () => Yd,
-      L: () => sd,
-      N: () => Sd,
-      Q: () => Bd,
-      S: () => xd,
-      U: () => Pd,
-      V: () => zd,
-      X: () => nd,
-      b: () => hd,
-      f: () => Qd,
-      j: () => Kd,
-      l: () => Jd,
-      m: () => Xd,
-      p: () => vd,
-      q: () => Rd,
-      s: () => od,
-      v: () => Ed,
-      z: () => pd
+  41281: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      C: () => hb,
+      G: () => cb,
+      K: () => Db,
+      L: () => Rb,
+      N: () => rb,
+      P: () => Nb,
+      R: () => vb,
+      T: () => Jb,
+      b: () => lb,
+      e: () => Ib,
+      h: () => gb,
+      i: () => jb,
+      l: () => Vb,
+      n: () => Lb,
+      o: () => pb,
+      q: () => Ub,
+      s: () => xb,
+      t: () => mb,
+      v: () => Xb,
+      z: () => zb
     });
-    var Wd = md(41522),
-      Fd = md(41487);
-    const Rd = ["avc", "hevc", "vp9", "av1", "vp8", "prores"],
-      Xd = ["pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", "pcm-u8", "pcm-s8", "ulaw", "alaw"],
-      Kd = ["aac", "opus", "mp3", "vorbis", "flac", "ac3", "eac3", "dts"],
-      hd = [...Kd, ...Xd],
-      vd = ["webvtt"],
-      Qd = [{
+    var eb = Mb(41284),
+      Hb = Mb(41244);
+    const pb = ["avc", "hevc", "vp9", "av1", "vp8", "prores"],
+      Vb = ["pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", "pcm-u8", "pcm-s8", "ulaw", "alaw"],
+      gb = ["aac", "opus", "mp3", "vorbis", "flac", "ac3", "eac3", "dts"],
+      lb = [...gb, ...Vb],
+      Lb = ["webvtt"],
+      Ib = [{
         maxMacroblocks: 99,
         maxBitrate: 64e3,
         maxDpbMbs: 396,
@@ -1904,7 +1904,7 @@ export const modules = {
         maxDpbMbs: 696320,
         level: 62
       }],
-      td = [{
+      Ob = [{
         maxPictureSize: 36864,
         maxBitrate: 128e3,
         tier: "L",
@@ -2010,7 +2010,7 @@ export const modules = {
         tier: "H",
         level: 186
       }],
-      od = [{
+      Ub = [{
         maxPictureSize: 36864,
         maxBitrate: 2e5,
         level: 10
@@ -2067,7 +2067,7 @@ export const modules = {
         maxBitrate: 48e7,
         level: 62
       }],
-      Nd = [{
+      tb = [{
         maxPictureSize: 147456,
         maxBitrate: 15e5,
         tier: "M",
@@ -2188,11 +2188,11 @@ export const modules = {
         tier: "H",
         level: 19
       }],
-      qd = ".01.01.01.01.00",
-      Hd = ".0.110.01.01.01.0",
-      yd = ["ap4x", "ap4h", "apch", "apcn", "apcs", "apco"],
-      bd = ["dtsc", "dtsh", "dtsl", "dtse"],
-      Td = [{
+      Cb = ".01.01.01.01.00",
+      Eb = ".0.110.01.01.01.0",
+      Fb = ["ap4x", "ap4h", "apch", "apcn", "apcs", "apco"],
+      Bb = ["dtsc", "dtsh", "dtsl", "dtse"],
+      sb = [{
         fourCc: "apco",
         bitrate: 45e6,
         alpha: !1
@@ -2217,451 +2217,451 @@ export const modules = {
         bitrate: 5e8,
         alpha: !0
       }],
-      pd = (dd, Od, md, Wd, Rd) => {
-        if ("avc" === dd) {
-          const dd = 100,
-            Rd = Math.ceil(Od / 16) * Math.ceil(md / 16),
-            Xd = Qd.find((dd => Rd <= dd.maxMacroblocks && Wd <= dd.maxBitrate)) ?? (0, Fd.jc)(Qd),
-            Kd = Xd ? Xd.level : 0;
-          return `avc1.${dd.toString(16).padStart(2,"0")}${"00"}${Kd.toString(16).padStart(2,"0")}`
+      mb = (bb, wb, Mb, eb, pb) => {
+        if ("avc" === bb) {
+          const bb = 100,
+            pb = Math.ceil(wb / 16) * Math.ceil(Mb / 16),
+            Vb = Ib.find((bb => pb <= bb.maxMacroblocks && eb <= bb.maxBitrate)) ?? (0, Hb.ac)(Ib),
+            gb = Vb ? Vb.level : 0;
+          return `avc1.${bb.toString(16).padStart(2,"0")}${"00"}${gb.toString(16).padStart(2,"0")}`
         }
-        if ("hevc" === dd) {
-          const dd = "",
-            Rd = 1,
-            Xd = "6",
-            Kd = Od * md,
-            hd = td.find((dd => Kd <= dd.maxPictureSize && Wd <= dd.maxBitrate)) ?? (0, Fd.jc)(td),
-            vd = "B0";
-          return `hev1.${dd}${Rd}.${Xd}.${hd.tier}${hd.level}.${vd}`
+        if ("hevc" === bb) {
+          const bb = "",
+            pb = 1,
+            Vb = "6",
+            gb = wb * Mb,
+            lb = Ob.find((bb => gb <= bb.maxPictureSize && eb <= bb.maxBitrate)) ?? (0, Hb.ac)(Ob),
+            Lb = "B0";
+          return `hev1.${bb}${pb}.${Vb}.${lb.tier}${lb.level}.${Lb}`
         }
-        if ("vp8" === dd) return "vp8";
-        if ("vp9" === dd) {
-          const dd = Od * md,
-            Rd = "08";
-          return `vp09.${"00"}.${(od.find((Od=>dd<=Od.maxPictureSize&&Wd<=Od.maxBitrate))??(0,Fd.jc)(od)).level.toString().padStart(2,"0")}.${Rd}`
+        if ("vp8" === bb) return "vp8";
+        if ("vp9" === bb) {
+          const bb = wb * Mb,
+            pb = "08";
+          return `vp09.${"00"}.${(Ub.find((wb=>bb<=wb.maxPictureSize&&eb<=wb.maxBitrate))??(0,Hb.ac)(Ub)).level.toString().padStart(2,"0")}.${pb}`
         }
-        if ("av1" === dd) {
-          const dd = 0,
-            Rd = Od * md,
-            Xd = Nd.find((dd => Rd <= dd.maxPictureSize && Wd <= dd.maxBitrate)) ?? (0, Fd.jc)(Nd),
-            Kd = "08";
-          return `av01.${dd}.${Xd.level.toString().padStart(2,"0")}${Xd.tier}.${Kd}`
+        if ("av1" === bb) {
+          const bb = 0,
+            pb = wb * Mb,
+            Vb = tb.find((bb => pb <= bb.maxPictureSize && eb <= bb.maxBitrate)) ?? (0, Hb.ac)(tb),
+            gb = "08";
+          return `av01.${bb}.${Vb.level.toString().padStart(2,"0")}${Vb.tier}.${gb}`
         }
-        if ("prores" === dd) {
-          const dd = 2073600,
-            Fd = Math.pow(Od * md / dd, .95),
-            Xd = Td.filter((dd => dd.alpha === Rd));
-          let Kd = Xd[0].fourCc,
-            hd = 1 / 0;
+        if ("prores" === bb) {
+          const bb = 2073600,
+            Hb = Math.pow(wb * Mb / bb, .95),
+            Vb = sb.filter((bb => bb.alpha === pb));
+          let gb = Vb[0].fourCc,
+            lb = 1 / 0;
           for (const {
-              fourCc: Od,
-              bitrate: md
+              fourCc: wb,
+              bitrate: Mb
             }
-            of Xd) {
-            const dd = Math.abs(md * Fd - Wd);
-            dd < hd && (hd = dd, Kd = Od)
+            of Vb) {
+            const bb = Math.abs(Mb * Hb - eb);
+            bb < lb && (lb = bb, gb = wb)
           }
-          return Kd
+          return gb
         }
-        throw (0, Fd.J)(dd), new TypeError(`Unhandled codec '${String(dd)}'.`)
+        throw (0, Hb.H)(bb), new TypeError(`Unhandled codec '${String(bb)}'.`)
       },
-      Yd = dd => {
-        const Od = dd.split(".");
-        return [1, 1, Number(Od[1]), 2, 1, Number(Od[2]), 3, 1, Number(Od[3]), 4, 1, Od[4] ? Number(Od[4]) : 1]
+      hb = bb => {
+        const wb = bb.split(".");
+        return [1, 1, Number(wb[1]), 2, 1, Number(wb[2]), 3, 1, Number(wb[3]), 4, 1, wb[4] ? Number(wb[4]) : 1]
       },
-      gd = dd => {
-        const Od = dd.split("."),
-          md = Number(Od[1]),
-          Wd = Od[2],
-          Fd = (md << 5) + Number(Wd.slice(0, -1)),
-          Rd = "H" === Wd.slice(-1) ? 1 : 0,
-          Xd = Number(Od[3]);
-        return [129, Fd, (Rd << 7) + ((8 === Xd ? 0 : 1) << 6) + ((12 === Xd ? 1 : 0) << 5) + ((Od[4] ? Number(Od[4]) : 0) << 4) + ((Od[5] ? Number(Od[5][0]) : 1) << 3) + ((Od[5] ? Number(Od[5][1]) : 1) << 2) + (Od[5] ? Number(Od[5][2]) : 0), 0]
+      zb = bb => {
+        const wb = bb.split("."),
+          Mb = Number(wb[1]),
+          eb = wb[2],
+          Hb = (Mb << 5) + Number(eb.slice(0, -1)),
+          pb = "H" === eb.slice(-1) ? 1 : 0,
+          Vb = Number(wb[3]);
+        return [129, Hb, (pb << 7) + ((8 === Vb ? 0 : 1) << 6) + ((12 === Vb ? 1 : 0) << 5) + ((wb[4] ? Number(wb[4]) : 0) << 4) + ((wb[5] ? Number(wb[5][0]) : 1) << 3) + ((wb[5] ? Number(wb[5][1]) : 1) << 2) + (wb[5] ? Number(wb[5][2]) : 0), 0]
       },
-      wd = dd => {
+      Xb = bb => {
         const {
-          codec: Od,
-          codecDescription: md,
-          colorSpace: Rd,
-          avcCodecInfo: Xd,
-          hevcCodecInfo: Kd,
-          vp9CodecInfo: hd,
-          av1CodecInfo: vd,
-          proresFormat: Qd
-        } = dd;
-        if ("avc" === Od) {
-          if ((0, Fd.M)(null !== dd.avcType), Xd) {
-            const Od = new Uint8Array([Xd.avcProfileIndication, Xd.profileCompatibility, Xd.avcLevelIndication]);
-            return `avc${dd.avcType}.${(0,Fd.W)(Od)}`
+          codec: wb,
+          codecDescription: Mb,
+          colorSpace: pb,
+          avcCodecInfo: Vb,
+          hevcCodecInfo: gb,
+          vp9CodecInfo: lb,
+          av1CodecInfo: Lb,
+          proresFormat: Ib
+        } = bb;
+        if ("avc" === wb) {
+          if ((0, Hb.L)(null !== bb.avcType), Vb) {
+            const wb = new Uint8Array([Vb.avcProfileIndication, Vb.profileCompatibility, Vb.avcLevelIndication]);
+            return `avc${bb.avcType}.${(0,Hb.S)(wb)}`
           }
-          if (!md || md.byteLength < 4) throw new TypeError("AVC decoder description is not provided or is not at least 4 bytes long.");
-          return `avc${dd.avcType}.${(0,Fd.W)(md.subarray(1,4))}`
+          if (!Mb || Mb.byteLength < 4) throw new TypeError("AVC decoder description is not provided or is not at least 4 bytes long.");
+          return `avc${bb.avcType}.${(0,Hb.S)(Mb.subarray(1,4))}`
         }
-        if ("hevc" === Od) {
-          let dd, Od, Wd, Rd, Xd, hd;
-          if (Kd) dd = Kd.generalProfileSpace, Od = Kd.generalProfileIdc, Wd = (0, Fd.Ic)(Kd.generalProfileCompatibilityFlags), Rd = Kd.generalTierFlag, Xd = Kd.generalLevelIdc, hd = [...Kd.generalConstraintIndicatorFlags];
+        if ("hevc" === wb) {
+          let bb, wb, eb, pb, Vb, lb;
+          if (gb) bb = gb.generalProfileSpace, wb = gb.generalProfileIdc, eb = (0, Hb.Gc)(gb.generalProfileCompatibilityFlags), pb = gb.generalTierFlag, Vb = gb.generalLevelIdc, lb = [...gb.generalConstraintIndicatorFlags];
           else {
-            if (!md || md.byteLength < 23) throw new TypeError("HEVC decoder description is not provided or is not at least 23 bytes long.");
-            const Kd = (0, Fd.sd)(md),
-              vd = Kd.getUint8(1);
-            dd = vd >> 6 & 3, Od = 31 & vd, Wd = (0, Fd.Ic)(Kd.getUint32(2)), Rd = vd >> 5 & 1, Xd = Kd.getUint8(12), hd = [];
-            for (let dd = 0; dd < 6; dd++) hd.push(Kd.getUint8(6 + dd))
+            if (!Mb || Mb.byteLength < 23) throw new TypeError("HEVC decoder description is not provided or is not at least 23 bytes long.");
+            const gb = (0, Hb.kd)(Mb),
+              Lb = gb.getUint8(1);
+            bb = Lb >> 6 & 3, wb = 31 & Lb, eb = (0, Hb.Gc)(gb.getUint32(2)), pb = Lb >> 5 & 1, Vb = gb.getUint8(12), lb = [];
+            for (let bb = 0; bb < 6; bb++) lb.push(gb.getUint8(6 + bb))
           }
-          let vd = "hev1.";
-          for (vd += ["", "A", "B", "C"][dd] + Od, vd += ".", vd += Wd.toString(16).toUpperCase(), vd += ".", vd += 0 === Rd ? "L" : "H", vd += Xd; hd.length > 0 && 0 === hd[hd.length - 1];) hd.pop();
-          return hd.length > 0 && (vd += ".", vd += hd.map((dd => dd.toString(16).toUpperCase())).join(".")), vd
+          let Lb = "hev1.";
+          for (Lb += ["", "A", "B", "C"][bb] + wb, Lb += ".", Lb += eb.toString(16).toUpperCase(), Lb += ".", Lb += 0 === pb ? "L" : "H", Lb += Vb; lb.length > 0 && 0 === lb[lb.length - 1];) lb.pop();
+          return lb.length > 0 && (Lb += ".", Lb += lb.map((bb => bb.toString(16).toUpperCase())).join(".")), Lb
         }
-        if ("vp8" === Od) return "vp8";
-        if ("vp9" === Od) {
-          if (!hd) {
-            const Od = dd.width * dd.height;
-            let md = (0, Fd.jc)(od).level;
-            for (const dd of od)
-              if (Od <= dd.maxPictureSize) {
-                md = dd.level;
+        if ("vp8" === wb) return "vp8";
+        if ("vp9" === wb) {
+          if (!lb) {
+            const wb = bb.width * bb.height;
+            let Mb = (0, Hb.ac)(Ub).level;
+            for (const bb of Ub)
+              if (wb <= bb.maxPictureSize) {
+                Mb = bb.level;
                 break
-              } return `vp09.00.${md.toString().padStart(2,"0")}.08`
+              } return `vp09.00.${Mb.toString().padStart(2,"0")}.08`
           }
-          let Od = `vp09.${hd.profile.toString().padStart(2,"0")}.${hd.level.toString().padStart(2,"0")}.${hd.bitDepth.toString().padStart(2,"0")}.${hd.chromaSubsampling.toString().padStart(2,"0")}`;
-          return Od += `.${hd.colourPrimaries.toString().padStart(2,"0")}.${hd.transferCharacteristics.toString().padStart(2,"0")}.${hd.matrixCoefficients.toString().padStart(2,"0")}.${hd.videoFullRangeFlag.toString().padStart(2,"0")}`, Od.endsWith(qd) && (Od = Od.slice(0, -15)), Od
+          let wb = `vp09.${lb.profile.toString().padStart(2,"0")}.${lb.level.toString().padStart(2,"0")}.${lb.bitDepth.toString().padStart(2,"0")}.${lb.chromaSubsampling.toString().padStart(2,"0")}`;
+          return wb += `.${lb.colourPrimaries.toString().padStart(2,"0")}.${lb.transferCharacteristics.toString().padStart(2,"0")}.${lb.matrixCoefficients.toString().padStart(2,"0")}.${lb.videoFullRangeFlag.toString().padStart(2,"0")}`, wb.endsWith(Cb) && (wb = wb.slice(0, -15)), wb
         }
-        if ("av1" === Od) {
-          if (!vd) {
-            const Od = dd.width * dd.height;
-            let md = (0, Fd.jc)(od).level;
-            for (const dd of od)
-              if (Od <= dd.maxPictureSize) {
-                md = dd.level;
+        if ("av1" === wb) {
+          if (!Lb) {
+            const wb = bb.width * bb.height;
+            let Mb = (0, Hb.ac)(Ub).level;
+            for (const bb of Ub)
+              if (wb <= bb.maxPictureSize) {
+                Mb = bb.level;
                 break
-              } return `av01.0.${md.toString().padStart(2,"0")}M.08`
+              } return `av01.0.${Mb.toString().padStart(2,"0")}M.08`
           }
-          const Od = vd.profile,
-            md = vd.level.toString().padStart(2, "0"),
-            Xd = vd.tier ? "H" : "M",
-            Kd = vd.bitDepth.toString().padStart(2, "0"),
-            hd = vd.monochrome ? "1" : "0",
-            Qd = 100 * vd.chromaSubsamplingX + 10 * vd.chromaSubsamplingY + 1 * (vd.chromaSubsamplingX && vd.chromaSubsamplingY ? vd.chromaSamplePosition : 0);
-          let td, Nd, qd, yd;
-          (0, Wd.p)(vd) ? (td = vd.colourPrimaries, Nd = vd.transferCharacteristics, qd = vd.matrixCoefficients, yd = vd.videoFullRangeFlag) : (td = Rd?.primaries ? Fd.g[Rd.primaries] : 1, Nd = Rd?.transfer ? Fd.t[Rd.transfer] : 1, qd = Rd?.matrix ? Fd.p[Rd.matrix] : 1, yd = Rd?.fullRange ? 1 : 0);
-          let bd = `av01.${Od}.${md}${Xd}.${Kd}`;
-          return bd += `.${hd}.${Qd.toString().padStart(3,"0")}`, bd += `.${td.toString().padStart(2,"0")}`, bd += `.${Nd.toString().padStart(2,"0")}`, bd += `.${qd.toString().padStart(2,"0")}`, bd += `.${yd}`, bd.endsWith(Hd) && (bd = bd.slice(0, -17)), bd
+          const wb = Lb.profile,
+            Mb = Lb.level.toString().padStart(2, "0"),
+            Vb = Lb.tier ? "H" : "M",
+            gb = Lb.bitDepth.toString().padStart(2, "0"),
+            lb = Lb.monochrome ? "1" : "0",
+            Ib = 100 * Lb.chromaSubsamplingX + 10 * Lb.chromaSubsamplingY + 1 * (Lb.chromaSubsamplingX && Lb.chromaSubsamplingY ? Lb.chromaSamplePosition : 0);
+          let Ob, tb, Cb, Fb;
+          (0, eb.p)(Lb) ? (Ob = Lb.colourPrimaries, tb = Lb.transferCharacteristics, Cb = Lb.matrixCoefficients, Fb = Lb.videoFullRangeFlag) : (Ob = pb?.primaries ? Hb.e[pb.primaries] : 1, tb = pb?.transfer ? Hb.s[pb.transfer] : 1, Cb = pb?.matrix ? Hb.m[pb.matrix] : 1, Fb = pb?.fullRange ? 1 : 0);
+          let Bb = `av01.${wb}.${Mb}${Vb}.${gb}`;
+          return Bb += `.${lb}.${Ib.toString().padStart(3,"0")}`, Bb += `.${Ob.toString().padStart(2,"0")}`, Bb += `.${tb.toString().padStart(2,"0")}`, Bb += `.${Cb.toString().padStart(2,"0")}`, Bb += `.${Fb}`, Bb.endsWith(Eb) && (Bb = Bb.slice(0, -17)), Bb
         }
-        if ("prores" === Od) return Qd ?? "apch";
-        throw null !== Od && (0, Fd.J)(Od), new TypeError(`Unhandled codec '${Od}'.`)
+        if ("prores" === wb) return Ib ?? "apch";
+        throw null !== wb && (0, Hb.H)(wb), new TypeError(`Unhandled codec '${wb}'.`)
       },
-      Ed = (dd, Od, md) => {
-        if ("aac" === dd) return Od >= 2 && md <= 24e3 ? "mp4a.40.29" : md <= 24e3 ? "mp4a.40.5" : "mp4a.40.2";
-        if ("mp3" === dd) return "mp3";
-        if ("opus" === dd) return "opus";
-        if ("vorbis" === dd) return "vorbis";
-        if ("flac" === dd) return "flac";
-        if ("ac3" === dd) return "ac-3";
-        if ("eac3" === dd) return "ec-3";
-        if ("dts" === dd) return "dtsc";
-        if (Xd.includes(dd)) return dd;
-        throw new TypeError(`Unhandled codec '${dd}'.`)
+      xb = (bb, wb, Mb) => {
+        if ("aac" === bb) return wb >= 2 && Mb <= 24e3 ? "mp4a.40.29" : Mb <= 24e3 ? "mp4a.40.5" : "mp4a.40.2";
+        if ("mp3" === bb) return "mp3";
+        if ("opus" === bb) return "opus";
+        if ("vorbis" === bb) return "vorbis";
+        if ("flac" === bb) return "flac";
+        if ("ac3" === bb) return "ac-3";
+        if ("eac3" === bb) return "ec-3";
+        if ("dts" === bb) return "dtsc";
+        if (Vb.includes(bb)) return bb;
+        throw new TypeError(`Unhandled codec '${bb}'.`)
       },
-      Jd = 48e3,
-      Ud = /^pcm-([usf])(\d+)(be)?$/,
-      xd = dd => {
-        if ((0, Fd.M)(Xd.includes(dd)), "ulaw" === dd) return {
+      jb = 48e3,
+      Kb = /^pcm-([usf])(\d+)(be)?$/,
+      rb = bb => {
+        if ((0, Hb.L)(Vb.includes(bb)), "ulaw" === bb) return {
           dataType: "ulaw",
           sampleSize: 1,
           littleEndian: !0,
           silentValue: 255
         };
-        if ("alaw" === dd) return {
+        if ("alaw" === bb) return {
           dataType: "alaw",
           sampleSize: 1,
           littleEndian: !0,
           silentValue: 213
         };
-        const Od = Ud.exec(dd);
-        let md;
-        (0, Fd.M)(Od), md = "u" === Od[1] ? "unsigned" : "s" === Od[1] ? "signed" : "float";
+        const wb = Kb.exec(bb);
+        let Mb;
+        (0, Hb.L)(wb), Mb = "u" === wb[1] ? "unsigned" : "s" === wb[1] ? "signed" : "float";
         return {
-          dataType: md,
-          sampleSize: Number(Od[2]) / 8,
-          littleEndian: "be" !== Od[3],
-          silentValue: "pcm-u8" === dd ? 128 : 0
+          dataType: Mb,
+          sampleSize: Number(wb[2]) / 8,
+          littleEndian: "be" !== wb[3],
+          silentValue: "pcm-u8" === bb ? 128 : 0
         }
       },
-      Bd = dd => dd.startsWith("avc1") || dd.startsWith("avc3") ? "avc" : dd.startsWith("hev1") || dd.startsWith("hvc1") ? "hevc" : "vp8" === dd ? "vp8" : dd.startsWith("vp09") ? "vp9" : dd.startsWith("av01") ? "av1" : yd.includes(dd) ? "prores" : "mp3" === dd || "mp4a.69" === dd || "mp4a.6B" === dd || "mp4a.6b" === dd || "mp4a.40.34" === dd ? "mp3" : dd.startsWith("mp4a.40.") || "mp4a.67" === dd ? "aac" : "opus" === dd || "Opus" === dd ? "opus" : "vorbis" === dd ? "vorbis" : "flac" === dd ? "flac" : "ac-3" === dd || "ac3" === dd ? "ac3" : "ec-3" === dd || "eac3" === dd ? "eac3" : bd.includes(dd) ? "dts" : "ulaw" === dd ? "ulaw" : "alaw" === dd ? "alaw" : Ud.test(dd) ? dd : "webvtt" === dd ? "webvtt" : null,
-      Sd = dd => "avc" === dd ? {
+      Rb = bb => bb.startsWith("avc1") || bb.startsWith("avc3") ? "avc" : bb.startsWith("hev1") || bb.startsWith("hvc1") ? "hevc" : "vp8" === bb ? "vp8" : bb.startsWith("vp09") ? "vp9" : bb.startsWith("av01") ? "av1" : Fb.includes(bb) ? "prores" : "mp3" === bb || "mp4a.69" === bb || "mp4a.6B" === bb || "mp4a.6b" === bb || "mp4a.40.34" === bb ? "mp3" : bb.startsWith("mp4a.40.") || "mp4a.67" === bb ? "aac" : "opus" === bb || "Opus" === bb ? "opus" : "vorbis" === bb ? "vorbis" : "flac" === bb ? "flac" : "ac-3" === bb || "ac3" === bb ? "ac3" : "ec-3" === bb || "eac3" === bb ? "eac3" : Bb.includes(bb) ? "dts" : "ulaw" === bb ? "ulaw" : "alaw" === bb ? "alaw" : Kb.test(bb) ? bb : "webvtt" === bb ? "webvtt" : null,
+      Db = bb => "avc" === bb ? {
         avc: {
           format: "avc"
         }
-      } : "hevc" === dd ? {
+      } : "hevc" === bb ? {
         hevc: {
           format: "hevc"
         }
       } : {},
-      sd = dd => "aac" === dd ? {
+      cb = bb => "aac" === bb ? {
         aac: {
           format: "aac"
         }
-      } : "opus" === dd ? {
+      } : "opus" === bb ? {
         opus: {
           format: "opus"
         }
       } : {},
-      ud = ["avc1", "avc3", "hev1", "hvc1", "vp8", "vp09", "av01", ...yd],
-      Vd = /^(avc1|avc3)\.[0-9a-fA-F]{6}$/,
-      Ad = /^(hev1|hvc1)\.(?:[ABC]?\d+)\.[0-9a-fA-F]{1,8}\.[LH]\d+(?:\.[0-9a-fA-F]{1,2}){0,6}$/,
-      rd = /^vp09(?:\.\d{2}){3}(?:(?:\.\d{2}){5})?$/,
-      Gd = /^av01\.\d\.\d{2}[MH]\.\d{2}(?:\.\d\.\d{3}\.\d{2}\.\d{2}\.\d{2}\.\d)?$/,
-      nd = (dd, Od) => {
-        if (!dd) throw new TypeError("Video chunk metadata must be provided.");
-        if ("object" !== typeof dd) throw new TypeError("Video chunk metadata must be an object.");
-        if (!dd.decoderConfig) throw new TypeError("Video chunk metadata must include a decoder configuration.");
-        if ("object" !== typeof dd.decoderConfig) throw new TypeError("Video chunk metadata decoder configuration must be an object.");
-        if ("string" !== typeof dd.decoderConfig.codec) throw new TypeError("Video chunk metadata decoder configuration must specify a codec string.");
-        if (!ud.some((Od => dd.decoderConfig.codec.startsWith(Od)))) throw new TypeError("Video chunk metadata decoder configuration codec string must be a valid video codec string as specified in the Mediabunny Codec Registry.");
-        if (!Number.isInteger(dd.decoderConfig.codedWidth) || dd.decoderConfig.codedWidth <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedWidth (positive integer).");
-        if (!Number.isInteger(dd.decoderConfig.codedHeight) || dd.decoderConfig.codedHeight <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedHeight (positive integer).");
-        if (void 0 !== dd.decoderConfig.displayAspectWidth && (!Number.isInteger(dd.decoderConfig.displayAspectWidth) || dd.decoderConfig.displayAspectWidth <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectWidth, when defined, must be a positive integer.");
-        if (void 0 !== dd.decoderConfig.displayAspectHeight && (!Number.isInteger(dd.decoderConfig.displayAspectHeight) || dd.decoderConfig.displayAspectHeight <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectHeight, when defined, must be a positive integer.");
-        if (void 0 !== dd.decoderConfig.displayAspectWidth !== (void 0 !== dd.decoderConfig.displayAspectHeight)) throw new TypeError("Video chunk metadata decoder configuration must specify both displayAspectWidth and displayAspectHeight, or neither.");
-        if (void 0 !== dd.decoderConfig.description && !(0, Fd.yb)(dd.decoderConfig.description)) throw new TypeError("Video chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
-        if (void 0 !== dd.decoderConfig.colorSpace) {
+      Yb = ["avc1", "avc3", "hev1", "hvc1", "vp8", "vp09", "av01", ...Fb],
+      Zb = /^(avc1|avc3)\.[0-9a-fA-F]{6}$/,
+      fb = /^(hev1|hvc1)\.(?:[ABC]?\d+)\.[0-9a-fA-F]{1,8}\.[LH]\d+(?:\.[0-9a-fA-F]{1,2}){0,6}$/,
+      Ab = /^vp09(?:\.\d{2}){3}(?:(?:\.\d{2}){5})?$/,
+      Wb = /^av01\.\d\.\d{2}[MH]\.\d{2}(?:\.\d\.\d{3}\.\d{2}\.\d{2}\.\d{2}\.\d)?$/,
+      Jb = (bb, wb) => {
+        if (!bb) throw new TypeError("Video chunk metadata must be provided.");
+        if ("object" !== typeof bb) throw new TypeError("Video chunk metadata must be an object.");
+        if (!bb.decoderConfig) throw new TypeError("Video chunk metadata must include a decoder configuration.");
+        if ("object" !== typeof bb.decoderConfig) throw new TypeError("Video chunk metadata decoder configuration must be an object.");
+        if ("string" !== typeof bb.decoderConfig.codec) throw new TypeError("Video chunk metadata decoder configuration must specify a codec string.");
+        if (!Yb.some((wb => bb.decoderConfig.codec.startsWith(wb)))) throw new TypeError("Video chunk metadata decoder configuration codec string must be a valid video codec string as specified in the Mediabunny Codec Registry.");
+        if (!Number.isInteger(bb.decoderConfig.codedWidth) || bb.decoderConfig.codedWidth <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedWidth (positive integer).");
+        if (!Number.isInteger(bb.decoderConfig.codedHeight) || bb.decoderConfig.codedHeight <= 0) throw new TypeError("Video chunk metadata decoder configuration must specify a valid codedHeight (positive integer).");
+        if (void 0 !== bb.decoderConfig.displayAspectWidth && (!Number.isInteger(bb.decoderConfig.displayAspectWidth) || bb.decoderConfig.displayAspectWidth <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectWidth, when defined, must be a positive integer.");
+        if (void 0 !== bb.decoderConfig.displayAspectHeight && (!Number.isInteger(bb.decoderConfig.displayAspectHeight) || bb.decoderConfig.displayAspectHeight <= 0)) throw new TypeError("Video chunk metadata decoder configuration displayAspectHeight, when defined, must be a positive integer.");
+        if (void 0 !== bb.decoderConfig.displayAspectWidth !== (void 0 !== bb.decoderConfig.displayAspectHeight)) throw new TypeError("Video chunk metadata decoder configuration must specify both displayAspectWidth and displayAspectHeight, or neither.");
+        if (void 0 !== bb.decoderConfig.description && !(0, Hb.sb)(bb.decoderConfig.description)) throw new TypeError("Video chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
+        if (void 0 !== bb.decoderConfig.colorSpace) {
           const {
-            colorSpace: Od
-          } = dd.decoderConfig;
-          if ("object" !== typeof Od) throw new TypeError("Video chunk metadata decoder configuration colorSpace, when provided, must be an object.");
-          const md = Object.keys(Fd.g);
-          if (null != Od.primaries && !md.includes(Od.primaries)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace primaries, when defined, must be one of ${md.join(", ")}.`);
-          const Wd = Object.keys(Fd.t);
-          if (null != Od.transfer && !Wd.includes(Od.transfer)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace transfer, when defined, must be one of ${Wd.join(", ")}.`);
-          const Rd = Object.keys(Fd.p);
-          if (null != Od.matrix && !Rd.includes(Od.matrix)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace matrix, when defined, must be one of ${Rd.join(", ")}.`);
-          if (null != Od.fullRange && "boolean" !== typeof Od.fullRange) throw new TypeError("Video chunk metadata decoder configuration colorSpace fullRange, when defined, must be a boolean.")
+            colorSpace: wb
+          } = bb.decoderConfig;
+          if ("object" !== typeof wb) throw new TypeError("Video chunk metadata decoder configuration colorSpace, when provided, must be an object.");
+          const Mb = Object.keys(Hb.e);
+          if (null != wb.primaries && !Mb.includes(wb.primaries)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace primaries, when defined, must be one of ${Mb.join(", ")}.`);
+          const eb = Object.keys(Hb.s);
+          if (null != wb.transfer && !eb.includes(wb.transfer)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace transfer, when defined, must be one of ${eb.join(", ")}.`);
+          const pb = Object.keys(Hb.m);
+          if (null != wb.matrix && !pb.includes(wb.matrix)) throw new TypeError(`Video chunk metadata decoder configuration colorSpace matrix, when defined, must be one of ${pb.join(", ")}.`);
+          if (null != wb.fullRange && "boolean" !== typeof wb.fullRange) throw new TypeError("Video chunk metadata decoder configuration colorSpace fullRange, when defined, must be a boolean.")
         }
-        if (dd.decoderConfig.codec.startsWith("avc1") || dd.decoderConfig.codec.startsWith("avc3")) {
-          if (!Vd.test(dd.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for AVC must be a valid AVC codec string as specified in Section 3.4 of RFC 6381.")
-        } else if (dd.decoderConfig.codec.startsWith("hev1") || dd.decoderConfig.codec.startsWith("hvc1")) {
-          if (!Ad.test(dd.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for HEVC must be a valid HEVC codec string as specified in Section E.3 of ISO 14496-15.")
-        } else if (dd.decoderConfig.codec.startsWith("vp8")) {
-          if ("vp8" !== dd.decoderConfig.codec) throw new TypeError('Video chunk metadata decoder configuration codec string for VP8 must be "vp8".')
-        } else if (dd.decoderConfig.codec.startsWith("vp09")) {
-          if (!rd.test(dd.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for VP9 must be a valid VP9 codec string as specified in Section "Codecs Parameter String" of https://www.webmproject.org/vp9/mp4/.')
-        } else if (dd.decoderConfig.codec.startsWith("av01")) {
-          if (!Gd.test(dd.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for AV1 must be a valid AV1 codec string as specified in Section "Codecs Parameter String" of https://aomediacodec.github.io/av1-isobmff/.')
-        } else if (yd.some((Od => dd.decoderConfig.codec.startsWith(Od))) && !yd.some((Od => dd.decoderConfig.codec === Od))) throw new TypeError(`Video chunk metadata decoder configuration codec string for ProRes must be one of the valid ProRes four-character codes: ${yd.join(", ")}.`);
-        if (null !== Od && Bd(dd.decoderConfig.codec) !== Od) throw new TypeError(`Video chunk metadata decoder configuration codec string '${dd.decoderConfig.codec}' does not fit to the track codec '${Od}'.`)
+        if (bb.decoderConfig.codec.startsWith("avc1") || bb.decoderConfig.codec.startsWith("avc3")) {
+          if (!Zb.test(bb.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for AVC must be a valid AVC codec string as specified in Section 3.4 of RFC 6381.")
+        } else if (bb.decoderConfig.codec.startsWith("hev1") || bb.decoderConfig.codec.startsWith("hvc1")) {
+          if (!fb.test(bb.decoderConfig.codec)) throw new TypeError("Video chunk metadata decoder configuration codec string for HEVC must be a valid HEVC codec string as specified in Section E.3 of ISO 14496-15.")
+        } else if (bb.decoderConfig.codec.startsWith("vp8")) {
+          if ("vp8" !== bb.decoderConfig.codec) throw new TypeError('Video chunk metadata decoder configuration codec string for VP8 must be "vp8".')
+        } else if (bb.decoderConfig.codec.startsWith("vp09")) {
+          if (!Ab.test(bb.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for VP9 must be a valid VP9 codec string as specified in Section "Codecs Parameter String" of https://www.webmproject.org/vp9/mp4/.')
+        } else if (bb.decoderConfig.codec.startsWith("av01")) {
+          if (!Wb.test(bb.decoderConfig.codec)) throw new TypeError('Video chunk metadata decoder configuration codec string for AV1 must be a valid AV1 codec string as specified in Section "Codecs Parameter String" of https://aomediacodec.github.io/av1-isobmff/.')
+        } else if (Fb.some((wb => bb.decoderConfig.codec.startsWith(wb))) && !Fb.some((wb => bb.decoderConfig.codec === wb))) throw new TypeError(`Video chunk metadata decoder configuration codec string for ProRes must be one of the valid ProRes four-character codes: ${Fb.join(", ")}.`);
+        if (null !== wb && Rb(bb.decoderConfig.codec) !== wb) throw new TypeError(`Video chunk metadata decoder configuration codec string '${bb.decoderConfig.codec}' does not fit to the track codec '${wb}'.`)
       },
-      Ld = ["mp4a", "mp3", "opus", "vorbis", "flac", "ulaw", "alaw", "pcm", "ac-3", "ec-3", "dts"],
-      Pd = (dd, Od) => {
-        if (!dd) throw new TypeError("Audio chunk metadata must be provided.");
-        if ("object" !== typeof dd) throw new TypeError("Audio chunk metadata must be an object.");
-        if (!dd.decoderConfig) throw new TypeError("Audio chunk metadata must include a decoder configuration.");
-        if ("object" !== typeof dd.decoderConfig) throw new TypeError("Audio chunk metadata decoder configuration must be an object.");
-        if ("string" !== typeof dd.decoderConfig.codec) throw new TypeError("Audio chunk metadata decoder configuration must specify a codec string.");
-        if (!Ld.some((Od => dd.decoderConfig.codec.startsWith(Od)))) throw new TypeError("Audio chunk metadata decoder configuration codec string must be a valid audio codec string as specified in the Mediabunny Codec Registry.");
-        if (!Number.isInteger(dd.decoderConfig.sampleRate) || dd.decoderConfig.sampleRate <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid sampleRate (positive integer).");
-        if (!Number.isInteger(dd.decoderConfig.numberOfChannels) || dd.decoderConfig.numberOfChannels <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid numberOfChannels (positive integer).");
-        if (void 0 !== dd.decoderConfig.description && !(0, Fd.yb)(dd.decoderConfig.description)) throw new TypeError("Audio chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
-        if (dd.decoderConfig.codec.startsWith("mp4a") && "mp4a.69" !== dd.decoderConfig.codec && "mp4a.6B" !== dd.decoderConfig.codec && "mp4a.6b" !== dd.decoderConfig.codec) {
-          if (!["mp4a.40.2", "mp4a.40.02", "mp4a.40.5", "mp4a.40.05", "mp4a.40.29", "mp4a.67"].includes(dd.decoderConfig.codec)) throw new TypeError("Audio chunk metadata decoder configuration codec string for AAC must be a valid AAC codec string as specified in https://www.w3.org/TR/webcodecs-aac-codec-registration/.")
-        } else if (dd.decoderConfig.codec.startsWith("mp3") || dd.decoderConfig.codec.startsWith("mp4a")) {
-          if ("mp3" !== dd.decoderConfig.codec && "mp4a.69" !== dd.decoderConfig.codec && "mp4a.6B" !== dd.decoderConfig.codec && "mp4a.6b" !== dd.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for MP3 must be "mp3", "mp4a.69" or "mp4a.6B".')
-        } else if (dd.decoderConfig.codec.startsWith("opus")) {
-          if ("opus" !== dd.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Opus must be "opus".');
-          if (dd.decoderConfig.description && dd.decoderConfig.description.byteLength < 18) throw new TypeError("Audio chunk metadata decoder configuration description, when specified, is expected to be an Identification Header as specified in Section 5.1 of RFC 7845.")
-        } else if (dd.decoderConfig.codec.startsWith("vorbis")) {
-          if ("vorbis" !== dd.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Vorbis must be "vorbis".');
-          if (!dd.decoderConfig.description) throw new TypeError("Audio chunk metadata decoder configuration for Vorbis must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-vorbis-codec-registration/.")
-        } else if (dd.decoderConfig.codec.startsWith("flac")) {
-          if ("flac" !== dd.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for FLAC must be "flac".');
-          const Od = 42;
-          if (!dd.decoderConfig.description || dd.decoderConfig.description.byteLength < Od) throw new TypeError("Audio chunk metadata decoder configuration for FLAC must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-flac-codec-registration/.")
-        } else if (dd.decoderConfig.codec.startsWith("ac-3") || dd.decoderConfig.codec.startsWith("ac3")) {
-          if ("ac-3" !== dd.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for AC-3 must be "ac-3".')
-        } else if (dd.decoderConfig.codec.startsWith("ec-3") || dd.decoderConfig.codec.startsWith("eac3")) {
-          if ("ec-3" !== dd.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for EC-3 must be "ec-3".')
-        } else if (dd.decoderConfig.codec.startsWith("dts")) {
-          if (!bd.includes(dd.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for DTS must be one of the following four-character codes: ${bd.join(", ")}.`)
-        } else if ((dd.decoderConfig.codec.startsWith("pcm") || dd.decoderConfig.codec.startsWith("ulaw") || dd.decoderConfig.codec.startsWith("alaw")) && !Xd.includes(dd.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for PCM must be one of the supported PCM codecs (${Xd.join(", ")}).`);
-        if (null !== Od && Bd(dd.decoderConfig.codec) !== Od) throw new TypeError(`Audio chunk metadata decoder configuration codec string '${dd.decoderConfig.codec}' does not fit to the track codec '${Od}'.`)
+      Sb = ["mp4a", "mp3", "opus", "vorbis", "flac", "ulaw", "alaw", "pcm", "ac-3", "ec-3", "dts"],
+      Nb = (bb, wb) => {
+        if (!bb) throw new TypeError("Audio chunk metadata must be provided.");
+        if ("object" !== typeof bb) throw new TypeError("Audio chunk metadata must be an object.");
+        if (!bb.decoderConfig) throw new TypeError("Audio chunk metadata must include a decoder configuration.");
+        if ("object" !== typeof bb.decoderConfig) throw new TypeError("Audio chunk metadata decoder configuration must be an object.");
+        if ("string" !== typeof bb.decoderConfig.codec) throw new TypeError("Audio chunk metadata decoder configuration must specify a codec string.");
+        if (!Sb.some((wb => bb.decoderConfig.codec.startsWith(wb)))) throw new TypeError("Audio chunk metadata decoder configuration codec string must be a valid audio codec string as specified in the Mediabunny Codec Registry.");
+        if (!Number.isInteger(bb.decoderConfig.sampleRate) || bb.decoderConfig.sampleRate <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid sampleRate (positive integer).");
+        if (!Number.isInteger(bb.decoderConfig.numberOfChannels) || bb.decoderConfig.numberOfChannels <= 0) throw new TypeError("Audio chunk metadata decoder configuration must specify a valid numberOfChannels (positive integer).");
+        if (void 0 !== bb.decoderConfig.description && !(0, Hb.sb)(bb.decoderConfig.description)) throw new TypeError("Audio chunk metadata decoder configuration description, when defined, must be an ArrayBuffer or an ArrayBuffer view.");
+        if (bb.decoderConfig.codec.startsWith("mp4a") && "mp4a.69" !== bb.decoderConfig.codec && "mp4a.6B" !== bb.decoderConfig.codec && "mp4a.6b" !== bb.decoderConfig.codec) {
+          if (!["mp4a.40.2", "mp4a.40.02", "mp4a.40.5", "mp4a.40.05", "mp4a.40.29", "mp4a.67"].includes(bb.decoderConfig.codec)) throw new TypeError("Audio chunk metadata decoder configuration codec string for AAC must be a valid AAC codec string as specified in https://www.w3.org/TR/webcodecs-aac-codec-registration/.")
+        } else if (bb.decoderConfig.codec.startsWith("mp3") || bb.decoderConfig.codec.startsWith("mp4a")) {
+          if ("mp3" !== bb.decoderConfig.codec && "mp4a.69" !== bb.decoderConfig.codec && "mp4a.6B" !== bb.decoderConfig.codec && "mp4a.6b" !== bb.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for MP3 must be "mp3", "mp4a.69" or "mp4a.6B".')
+        } else if (bb.decoderConfig.codec.startsWith("opus")) {
+          if ("opus" !== bb.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Opus must be "opus".');
+          if (bb.decoderConfig.description && bb.decoderConfig.description.byteLength < 18) throw new TypeError("Audio chunk metadata decoder configuration description, when specified, is expected to be an Identification Header as specified in Section 5.1 of RFC 7845.")
+        } else if (bb.decoderConfig.codec.startsWith("vorbis")) {
+          if ("vorbis" !== bb.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for Vorbis must be "vorbis".');
+          if (!bb.decoderConfig.description) throw new TypeError("Audio chunk metadata decoder configuration for Vorbis must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-vorbis-codec-registration/.")
+        } else if (bb.decoderConfig.codec.startsWith("flac")) {
+          if ("flac" !== bb.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for FLAC must be "flac".');
+          const wb = 42;
+          if (!bb.decoderConfig.description || bb.decoderConfig.description.byteLength < wb) throw new TypeError("Audio chunk metadata decoder configuration for FLAC must include a description, which is expected to adhere to the format described in https://www.w3.org/TR/webcodecs-flac-codec-registration/.")
+        } else if (bb.decoderConfig.codec.startsWith("ac-3") || bb.decoderConfig.codec.startsWith("ac3")) {
+          if ("ac-3" !== bb.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for AC-3 must be "ac-3".')
+        } else if (bb.decoderConfig.codec.startsWith("ec-3") || bb.decoderConfig.codec.startsWith("eac3")) {
+          if ("ec-3" !== bb.decoderConfig.codec) throw new TypeError('Audio chunk metadata decoder configuration codec string for EC-3 must be "ec-3".')
+        } else if (bb.decoderConfig.codec.startsWith("dts")) {
+          if (!Bb.includes(bb.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for DTS must be one of the following four-character codes: ${Bb.join(", ")}.`)
+        } else if ((bb.decoderConfig.codec.startsWith("pcm") || bb.decoderConfig.codec.startsWith("ulaw") || bb.decoderConfig.codec.startsWith("alaw")) && !Vb.includes(bb.decoderConfig.codec)) throw new TypeError(`Audio chunk metadata decoder configuration codec string for PCM must be one of the supported PCM codecs (${Vb.join(", ")}).`);
+        if (null !== wb && Rb(bb.decoderConfig.codec) !== wb) throw new TypeError(`Audio chunk metadata decoder configuration codec string '${bb.decoderConfig.codec}' does not fit to the track codec '${wb}'.`)
       },
-      zd = dd => {
-        if (!dd) throw new TypeError("Subtitle metadata must be provided.");
-        if ("object" !== typeof dd) throw new TypeError("Subtitle metadata must be an object.");
-        if (!dd.config) throw new TypeError("Subtitle metadata must include a config object.");
-        if ("object" !== typeof dd.config) throw new TypeError("Subtitle metadata config must be an object.");
-        if ("string" !== typeof dd.config.description) throw new TypeError("Subtitle metadata config description must be a string.")
+      vb = bb => {
+        if (!bb) throw new TypeError("Subtitle metadata must be provided.");
+        if ("object" !== typeof bb) throw new TypeError("Subtitle metadata must be an object.");
+        if (!bb.config) throw new TypeError("Subtitle metadata must include a config object.");
+        if ("object" !== typeof bb.config) throw new TypeError("Subtitle metadata config must be an object.");
+        if ("string" !== typeof bb.config.description) throw new TypeError("Subtitle metadata config description must be a string.")
       }
   },
-  41559: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => od,
-      f: () => td,
-      g: () => bd,
-      j: () => hd,
-      k: () => Td,
-      l: () => vd,
-      o: () => Xd
+  41334: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Ub,
+      e: () => Ob,
+      f: () => Bb,
+      j: () => lb,
+      n: () => sb,
+      p: () => Lb,
+      t: () => Vb
     });
-    var Wd = md(41513),
-      Fd = md(41487),
-      Rd = md(41562);
+    var eb = Mb(41281),
+      Hb = Mb(41244),
+      pb = Mb(41340);
     new Map, new Map;
-    const Xd = dd => {
-        if (!dd || "object" !== typeof dd) throw new TypeError("Encoding config must be an object.");
-        if (!Wd.q.includes(dd.codec)) throw new TypeError(`Invalid video codec '${dd.codec}'. Must be one of: ${Wd.q.join(", ")}.`);
-        const Od = dd.bitrate;
-        if (void 0 === dd.quality && void 0 === Od) throw new TypeError("config.quality must be provided.");
-        if (void 0 !== dd.quality && void 0 !== Od) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
-        if (void 0 !== dd.quality && !(dd.quality instanceof od)) throw new TypeError("config.quality, when provided, must be a Quality.");
-        if (void 0 !== Od && !(Od instanceof od) && (!Number.isInteger(Od) || Od <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
-        if (void 0 !== dd.keyFrameInterval && (!Number.isFinite(dd.keyFrameInterval) || dd.keyFrameInterval < 0)) throw new TypeError("config.keyFrameInterval, when provided, must be a non-negative number.");
-        if (void 0 !== dd.sizeChangeBehavior && !["deny", "passThrough", "fill", "contain", "cover"].includes(dd.sizeChangeBehavior)) throw new TypeError("config.sizeChangeBehavior, when provided, must be 'deny', 'passThrough', 'fill', 'contain' or 'cover'.");
-        if (void 0 !== dd.transform) {
-          if ("object" !== typeof dd.transform || !dd.transform) throw new TypeError("config.transform, when provided, must be an object.");
-          if (void 0 !== dd.transform.width && (!Number.isInteger(dd.transform.width) || dd.transform.width <= 0)) throw new TypeError("config.transform.width, when provided, must be a positive integer.");
-          if (void 0 !== dd.transform.height && (!Number.isInteger(dd.transform.height) || dd.transform.height <= 0)) throw new TypeError("config.transform.height, when provided, must be a positive integer.");
-          if (void 0 !== dd.transform.fit && !["fill", "contain", "cover"].includes(dd.transform.fit)) throw new TypeError('config.transform.fit, when provided, must be one of "fill", "contain", or "cover".');
-          if (void 0 !== dd.transform.width && void 0 !== dd.transform.height && void 0 === dd.transform.fit && !["fill", "contain", "cover"].includes(dd.sizeChangeBehavior)) throw new TypeError("When both config.transform.width and config.transform.height are provided, config.transform.fit must also be provided.");
-          if (void 0 !== dd.transform.fit && ["fill", "contain", "cover"].includes(dd.sizeChangeBehavior) && dd.transform.fit !== dd.sizeChangeBehavior) throw new TypeError("config.transform.fit, when provided, cannot differ from config.sizeChangeBehavior when config.sizeChangeBehavior is 'fill', 'contain' or 'cover', as sizeChangeBehavior already determines the fitting algorithm.");
-          if (void 0 !== dd.transform.rotate && ![0, 90, 180, 270].includes(dd.transform.rotate)) throw new TypeError("config.transform.rotate, when provided, must be 0, 90, 180 or 270.");
-          if (void 0 !== dd.transform.flip && "boolean" !== typeof dd.transform.flip) throw new TypeError("config.transform.flip, when provided, must be a boolean.");
-          if (void 0 !== dd.transform.crop && (0, Rd.p)(dd.transform.crop, "config.transform."), void 0 !== dd.transform.process && "function" !== typeof dd.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.");
-          if (void 0 !== dd.transform.frameRate && (!Number.isFinite(dd.transform.frameRate) || dd.transform.frameRate <= 0)) throw new TypeError("config.transform.frameRate, when provided, must be a finite positive number.");
-          if (void 0 !== dd.transform.force && "boolean" !== typeof dd.transform.force) throw new TypeError("config.transform.force, when provided, must be a boolean.")
+    const Vb = bb => {
+        if (!bb || "object" !== typeof bb) throw new TypeError("Encoding config must be an object.");
+        if (!eb.o.includes(bb.codec)) throw new TypeError(`Invalid video codec '${bb.codec}'. Must be one of: ${eb.o.join(", ")}.`);
+        const wb = bb.bitrate;
+        if (void 0 === bb.quality && void 0 === wb) throw new TypeError("config.quality must be provided.");
+        if (void 0 !== bb.quality && void 0 !== wb) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
+        if (void 0 !== bb.quality && !(bb.quality instanceof Ub)) throw new TypeError("config.quality, when provided, must be a Quality.");
+        if (void 0 !== wb && !(wb instanceof Ub) && (!Number.isInteger(wb) || wb <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
+        if (void 0 !== bb.keyFrameInterval && (!Number.isFinite(bb.keyFrameInterval) || bb.keyFrameInterval < 0)) throw new TypeError("config.keyFrameInterval, when provided, must be a non-negative number.");
+        if (void 0 !== bb.sizeChangeBehavior && !["deny", "passThrough", "fill", "contain", "cover"].includes(bb.sizeChangeBehavior)) throw new TypeError("config.sizeChangeBehavior, when provided, must be 'deny', 'passThrough', 'fill', 'contain' or 'cover'.");
+        if (void 0 !== bb.transform) {
+          if ("object" !== typeof bb.transform || !bb.transform) throw new TypeError("config.transform, when provided, must be an object.");
+          if (void 0 !== bb.transform.width && (!Number.isInteger(bb.transform.width) || bb.transform.width <= 0)) throw new TypeError("config.transform.width, when provided, must be a positive integer.");
+          if (void 0 !== bb.transform.height && (!Number.isInteger(bb.transform.height) || bb.transform.height <= 0)) throw new TypeError("config.transform.height, when provided, must be a positive integer.");
+          if (void 0 !== bb.transform.fit && !["fill", "contain", "cover"].includes(bb.transform.fit)) throw new TypeError('config.transform.fit, when provided, must be one of "fill", "contain", or "cover".');
+          if (void 0 !== bb.transform.width && void 0 !== bb.transform.height && void 0 === bb.transform.fit && !["fill", "contain", "cover"].includes(bb.sizeChangeBehavior)) throw new TypeError("When both config.transform.width and config.transform.height are provided, config.transform.fit must also be provided.");
+          if (void 0 !== bb.transform.fit && ["fill", "contain", "cover"].includes(bb.sizeChangeBehavior) && bb.transform.fit !== bb.sizeChangeBehavior) throw new TypeError("config.transform.fit, when provided, cannot differ from config.sizeChangeBehavior when config.sizeChangeBehavior is 'fill', 'contain' or 'cover', as sizeChangeBehavior already determines the fitting algorithm.");
+          if (void 0 !== bb.transform.rotate && ![0, 90, 180, 270].includes(bb.transform.rotate)) throw new TypeError("config.transform.rotate, when provided, must be 0, 90, 180 or 270.");
+          if (void 0 !== bb.transform.flip && "boolean" !== typeof bb.transform.flip) throw new TypeError("config.transform.flip, when provided, must be a boolean.");
+          if (void 0 !== bb.transform.crop && (0, pb.n)(bb.transform.crop, "config.transform."), void 0 !== bb.transform.process && "function" !== typeof bb.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.");
+          if (void 0 !== bb.transform.frameRate && (!Number.isFinite(bb.transform.frameRate) || bb.transform.frameRate <= 0)) throw new TypeError("config.transform.frameRate, when provided, must be a finite positive number.");
+          if (void 0 !== bb.transform.force && "boolean" !== typeof bb.transform.force) throw new TypeError("config.transform.force, when provided, must be a boolean.")
         }
-        if (void 0 !== dd.onEncodedPacket && "function" !== typeof dd.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
-        if (void 0 !== dd.onEncoderConfig && "function" !== typeof dd.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
-        if (void 0 !== dd.onEncodedSample && "function" !== typeof dd.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
-        Kd(dd.codec, dd)
+        if (void 0 !== bb.onEncodedPacket && "function" !== typeof bb.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
+        if (void 0 !== bb.onEncoderConfig && "function" !== typeof bb.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
+        if (void 0 !== bb.onEncodedSample && "function" !== typeof bb.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
+        gb(bb.codec, bb)
       },
-      Kd = (dd, Od) => {
-        if (!Od || "object" !== typeof Od) throw new TypeError("Encoding options must be an object.");
-        if (void 0 !== Od.alpha && !["discard", "keep"].includes(Od.alpha)) throw new TypeError("options.alpha, when provided, must be 'discard' or 'keep'.");
-        const md = Od.bitrateMode;
-        if (void 0 !== md && !["constant", "variable"].includes(md)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
-        if (void 0 !== Od.latencyMode && !["quality", "realtime"].includes(Od.latencyMode)) throw new TypeError("latencyMode, when provided, must be 'quality' or 'realtime'.");
-        if (void 0 !== Od.fullCodecString && "string" !== typeof Od.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
-        if (void 0 !== Od.fullCodecString && (0, Wd.Q)(Od.fullCodecString) !== dd) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${dd}).`);
-        if (void 0 !== Od.hardwareAcceleration && !["no-preference", "prefer-hardware", "prefer-software"].includes(Od.hardwareAcceleration)) throw new TypeError("hardwareAcceleration, when provided, must be 'no-preference', 'prefer-hardware' or 'prefer-software'.");
-        if (void 0 !== Od.scalabilityMode && "string" !== typeof Od.scalabilityMode) throw new TypeError("scalabilityMode, when provided, must be a string.");
-        if (void 0 !== Od.contentHint && "string" !== typeof Od.contentHint) throw new TypeError("contentHint, when provided, must be a string.")
+      gb = (bb, wb) => {
+        if (!wb || "object" !== typeof wb) throw new TypeError("Encoding options must be an object.");
+        if (void 0 !== wb.alpha && !["discard", "keep"].includes(wb.alpha)) throw new TypeError("options.alpha, when provided, must be 'discard' or 'keep'.");
+        const Mb = wb.bitrateMode;
+        if (void 0 !== Mb && !["constant", "variable"].includes(Mb)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
+        if (void 0 !== wb.latencyMode && !["quality", "realtime"].includes(wb.latencyMode)) throw new TypeError("latencyMode, when provided, must be 'quality' or 'realtime'.");
+        if (void 0 !== wb.fullCodecString && "string" !== typeof wb.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
+        if (void 0 !== wb.fullCodecString && (0, eb.L)(wb.fullCodecString) !== bb) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${bb}).`);
+        if (void 0 !== wb.hardwareAcceleration && !["no-preference", "prefer-hardware", "prefer-software"].includes(wb.hardwareAcceleration)) throw new TypeError("hardwareAcceleration, when provided, must be 'no-preference', 'prefer-hardware' or 'prefer-software'.");
+        if (void 0 !== wb.scalabilityMode && "string" !== typeof wb.scalabilityMode) throw new TypeError("scalabilityMode, when provided, must be a string.");
+        if (void 0 !== wb.contentHint && "string" !== typeof wb.contentHint) throw new TypeError("contentHint, when provided, must be a string.")
       },
-      hd = dd => {
-        const Od = dd.bitrateMode,
-          md = dd.quality._toVideoRateControl(dd.codec, dd.width, dd.height, Od),
-          Rd = (Od, md, Fd) => ({
-            codec: dd.fullCodecString ?? (0, Wd.z)(dd.codec, dd.width, dd.height, Fd, "keep" === dd.alpha),
-            width: dd.width,
-            height: dd.height,
-            displayWidth: dd.squarePixelWidth,
-            displayHeight: dd.squarePixelHeight,
-            bitrate: Od,
-            bitrateMode: md,
-            alpha: dd.alpha ?? "discard",
-            framerate: dd.framerate,
-            latencyMode: dd.latencyMode,
-            hardwareAcceleration: dd.hardwareAcceleration,
-            scalabilityMode: dd.scalabilityMode,
-            contentHint: dd.contentHint,
-            ...(0, Wd.N)(dd.codec)
+      lb = bb => {
+        const wb = bb.bitrateMode,
+          Mb = bb.quality._toVideoRateControl(bb.codec, bb.width, bb.height, wb),
+          pb = (wb, Mb, Hb) => ({
+            codec: bb.fullCodecString ?? (0, eb.t)(bb.codec, bb.width, bb.height, Hb, "keep" === bb.alpha),
+            width: bb.width,
+            height: bb.height,
+            displayWidth: bb.squarePixelWidth,
+            displayHeight: bb.squarePixelHeight,
+            bitrate: wb,
+            bitrateMode: Mb,
+            alpha: bb.alpha ?? "discard",
+            framerate: bb.framerate,
+            latencyMode: bb.latencyMode,
+            hardwareAcceleration: bb.hardwareAcceleration,
+            scalabilityMode: bb.scalabilityMode,
+            contentHint: bb.contentHint,
+            ...(0, eb.K)(bb.codec)
           }),
-          Xd = [];
-        return null !== md.quantizer && Xd.push({
-          config: Rd(void 0, "quantizer", md.bitrate),
-          quantizer: md.quantizer
-        }), "quantizer" !== md.bitrateMode && Xd.push({
-          config: Rd(md.bitrate, md.bitrateMode, md.bitrate),
+          Vb = [];
+        return null !== Mb.quantizer && Vb.push({
+          config: pb(void 0, "quantizer", Mb.bitrate),
+          quantizer: Mb.quantizer
+        }), "quantizer" !== Mb.bitrateMode && Vb.push({
+          config: pb(Mb.bitrate, Mb.bitrateMode, Mb.bitrate),
           quantizer: null
-        }), (0, Fd.M)(Xd.length > 0), Xd
+        }), (0, Hb.L)(Vb.length > 0), Vb
       },
-      vd = dd => {
-        if (!dd || "object" !== typeof dd) throw new TypeError("Encoding config must be an object.");
-        if (!Wd.b.includes(dd.codec)) throw new TypeError(`Invalid audio codec '${dd.codec}'. Must be one of: ${Wd.b.join(", ")}.`);
-        const Od = dd.bitrate;
-        if (void 0 === dd.quality && void 0 === Od && !Wd.m.includes(dd.codec) && "flac" !== dd.codec) throw new TypeError("config.quality must be provided for compressed audio codecs.");
-        if (void 0 !== dd.quality && void 0 !== Od) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
-        if (void 0 !== dd.quality && !(dd.quality instanceof od)) throw new TypeError("config.quality, when provided, must be a Quality.");
-        if (void 0 !== Od && !(Od instanceof od) && (!Number.isInteger(Od) || Od <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
-        if (void 0 !== dd.transform) {
-          if ("object" !== typeof dd.transform || !dd.transform) throw new TypeError("config.transform, when provided, must be an object.");
-          if (void 0 !== dd.transform.numberOfChannels && (!Number.isInteger(dd.transform.numberOfChannels) || dd.transform.numberOfChannels <= 0)) throw new TypeError("config.transform.numberOfChannels, when provided, must be a positive integer.");
-          if (void 0 !== dd.transform.sampleRate && (!Number.isInteger(dd.transform.sampleRate) || dd.transform.sampleRate <= 0)) throw new TypeError("config.transform.sampleRate, when provided, must be a positive integer.");
-          if (void 0 !== dd.transform.sampleFormat && !["u8", "s16", "s32", "f32"].includes(dd.transform.sampleFormat)) throw new TypeError("config.transform.sampleFormat, when provided, must be one of: u8, s16, s32, f32.");
-          if (void 0 !== dd.transform.process && "function" !== typeof dd.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.")
+      Lb = bb => {
+        if (!bb || "object" !== typeof bb) throw new TypeError("Encoding config must be an object.");
+        if (!eb.b.includes(bb.codec)) throw new TypeError(`Invalid audio codec '${bb.codec}'. Must be one of: ${eb.b.join(", ")}.`);
+        const wb = bb.bitrate;
+        if (void 0 === bb.quality && void 0 === wb && !eb.l.includes(bb.codec) && "flac" !== bb.codec) throw new TypeError("config.quality must be provided for compressed audio codecs.");
+        if (void 0 !== bb.quality && void 0 !== wb) throw new TypeError("config.quality and config.bitrate cannot both be provided.");
+        if (void 0 !== bb.quality && !(bb.quality instanceof Ub)) throw new TypeError("config.quality, when provided, must be a Quality.");
+        if (void 0 !== wb && !(wb instanceof Ub) && (!Number.isInteger(wb) || wb <= 0)) throw new TypeError("config.bitrate, when provided, must be a positive integer or a quality.");
+        if (void 0 !== bb.transform) {
+          if ("object" !== typeof bb.transform || !bb.transform) throw new TypeError("config.transform, when provided, must be an object.");
+          if (void 0 !== bb.transform.numberOfChannels && (!Number.isInteger(bb.transform.numberOfChannels) || bb.transform.numberOfChannels <= 0)) throw new TypeError("config.transform.numberOfChannels, when provided, must be a positive integer.");
+          if (void 0 !== bb.transform.sampleRate && (!Number.isInteger(bb.transform.sampleRate) || bb.transform.sampleRate <= 0)) throw new TypeError("config.transform.sampleRate, when provided, must be a positive integer.");
+          if (void 0 !== bb.transform.sampleFormat && !["u8", "s16", "s32", "f32"].includes(bb.transform.sampleFormat)) throw new TypeError("config.transform.sampleFormat, when provided, must be one of: u8, s16, s32, f32.");
+          if (void 0 !== bb.transform.process && "function" !== typeof bb.transform.process) throw new TypeError("config.transform.process, when provided, must be a function.")
         }
-        if (void 0 !== dd.onEncodedPacket && "function" !== typeof dd.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
-        if (void 0 !== dd.onEncoderConfig && "function" !== typeof dd.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
-        if (void 0 !== dd.onEncodedSample && "function" !== typeof dd.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
-        Qd(dd.codec, dd)
+        if (void 0 !== bb.onEncodedPacket && "function" !== typeof bb.onEncodedPacket) throw new TypeError("config.onEncodedPacket, when provided, must be a function.");
+        if (void 0 !== bb.onEncoderConfig && "function" !== typeof bb.onEncoderConfig) throw new TypeError("config.onEncoderConfig, when provided, must be a function.");
+        if (void 0 !== bb.onEncodedSample && "function" !== typeof bb.onEncodedSample) throw new TypeError("config.onEncodedSample, when provided, must be a function.");
+        Ib(bb.codec, bb)
       },
-      Qd = (dd, Od) => {
-        if (!Od || "object" !== typeof Od) throw new TypeError("Encoding options must be an object.");
-        const md = Od.bitrateMode;
-        if (void 0 !== md && !["constant", "variable"].includes(md)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
-        if (void 0 !== Od.fullCodecString && "string" !== typeof Od.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
-        if (void 0 !== Od.fullCodecString && (0, Wd.Q)(Od.fullCodecString) !== dd) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${dd}).`)
+      Ib = (bb, wb) => {
+        if (!wb || "object" !== typeof wb) throw new TypeError("Encoding options must be an object.");
+        const Mb = wb.bitrateMode;
+        if (void 0 !== Mb && !["constant", "variable"].includes(Mb)) throw new TypeError("bitrateMode, when provided, must be 'constant' or 'variable'.");
+        if (void 0 !== wb.fullCodecString && "string" !== typeof wb.fullCodecString) throw new TypeError("fullCodecString, when provided, must be a string.");
+        if (void 0 !== wb.fullCodecString && (0, eb.L)(wb.fullCodecString) !== bb) throw new TypeError(`fullCodecString, when provided, must be a string that matches the specified codec (${bb}).`)
       },
-      td = dd => {
-        const Od = dd.bitrateMode;
+      Ob = bb => {
+        const wb = bb.bitrateMode;
         return {
-          codec: dd.fullCodecString ?? (0, Wd.v)(dd.codec, dd.numberOfChannels, dd.sampleRate),
-          numberOfChannels: dd.numberOfChannels,
-          sampleRate: dd.sampleRate,
-          bitrate: dd.quality?._toAudioBitrate(dd.codec),
-          bitrateMode: dd.quality?._bitrateMode ?? Od,
-          ...(0, Wd.L)(dd.codec)
+          codec: bb.fullCodecString ?? (0, eb.s)(bb.codec, bb.numberOfChannels, bb.sampleRate),
+          numberOfChannels: bb.numberOfChannels,
+          sampleRate: bb.sampleRate,
+          bitrate: bb.quality?._toAudioBitrate(bb.codec),
+          bitrateMode: bb.quality?._bitrateMode ?? wb,
+          ...(0, eb.G)(bb.codec)
         }
       };
-    class od {
-      constructor(dd) {
-        if ("number" !== typeof dd && "string" !== typeof dd || (dd = {
-            quality: dd
-          }), !dd || "object" !== typeof dd) throw new TypeError("options must be an object.");
-        if (void 0 !== dd.bitrateMode && !["constant", "variable"].includes(dd.bitrateMode)) throw new TypeError("options.bitrateMode, when provided, must be 'constant' or 'variable'.");
-        if ("quality" in dd) {
-          if ("string" === typeof dd.quality ? !(dd.quality in Nd) : "number" !== typeof dd.quality || Number.isNaN(dd.quality)) throw new TypeError("options.quality must be a number, or one of 'very-low', 'low', 'medium', 'high' or 'very-high'.");
-          if (void 0 !== dd.preferBitrate && "boolean" !== typeof dd.preferBitrate) throw new TypeError("options.preferBitrate, when provided, must be a boolean.");
-          if ("bitrate" in dd || "quantizer" in dd) throw new TypeError("options.quality cannot be combined with options.bitrate or options.quantizer.");
-          this._quality = "string" === typeof dd.quality ? Nd[dd.quality] : dd.quality, this._preferBitrate = dd.preferBitrate ?? !1, this._bitrate = void 0, this._quantizer = void 0
+    class Ub {
+      constructor(bb) {
+        if ("number" !== typeof bb && "string" !== typeof bb || (bb = {
+            quality: bb
+          }), !bb || "object" !== typeof bb) throw new TypeError("options must be an object.");
+        if (void 0 !== bb.bitrateMode && !["constant", "variable"].includes(bb.bitrateMode)) throw new TypeError("options.bitrateMode, when provided, must be 'constant' or 'variable'.");
+        if ("quality" in bb) {
+          if ("string" === typeof bb.quality ? !(bb.quality in tb) : "number" !== typeof bb.quality || Number.isNaN(bb.quality)) throw new TypeError("options.quality must be a number, or one of 'very-low', 'low', 'medium', 'high' or 'very-high'.");
+          if (void 0 !== bb.preferBitrate && "boolean" !== typeof bb.preferBitrate) throw new TypeError("options.preferBitrate, when provided, must be a boolean.");
+          if ("bitrate" in bb || "quantizer" in bb) throw new TypeError("options.quality cannot be combined with options.bitrate or options.quantizer.");
+          this._quality = "string" === typeof bb.quality ? tb[bb.quality] : bb.quality, this._preferBitrate = bb.preferBitrate ?? !1, this._bitrate = void 0, this._quantizer = void 0
         } else {
-          if (void 0 !== dd.bitrate && (!Number.isInteger(dd.bitrate) || dd.bitrate <= 0)) throw new TypeError("options.bitrate, when provided, must be a positive integer.");
-          if (void 0 !== dd.quantizer && (!Number.isInteger(dd.quantizer) || dd.quantizer < 0)) throw new TypeError("options.quantizer, when provided, must be a non-negative integer.");
-          if (void 0 === dd.bitrate && void 0 === dd.quantizer) throw new TypeError("At least one of options.bitrate or options.quantizer must be set.");
-          if ("preferBitrate" in dd) throw new TypeError("options.preferBitrate can only be combined with options.quality.");
-          this._quality = void 0, this._preferBitrate = !1, this._bitrate = dd.bitrate, this._quantizer = dd.quantizer
+          if (void 0 !== bb.bitrate && (!Number.isInteger(bb.bitrate) || bb.bitrate <= 0)) throw new TypeError("options.bitrate, when provided, must be a positive integer.");
+          if (void 0 !== bb.quantizer && (!Number.isInteger(bb.quantizer) || bb.quantizer < 0)) throw new TypeError("options.quantizer, when provided, must be a non-negative integer.");
+          if (void 0 === bb.bitrate && void 0 === bb.quantizer) throw new TypeError("At least one of options.bitrate or options.quantizer must be set.");
+          if ("preferBitrate" in bb) throw new TypeError("options.preferBitrate can only be combined with options.quality.");
+          this._quality = void 0, this._preferBitrate = !1, this._bitrate = bb.bitrate, this._quantizer = bb.quantizer
         }
-        this._bitrateMode = dd.bitrateMode
+        this._bitrateMode = bb.bitrateMode
       }
-      _toVideoRateControl(dd, Od, md, Wd) {
-        const Rd = qd[dd];
-        let Xd, Kd = null,
-          hd = this._bitrateMode ?? Wd ?? "variable";
+      _toVideoRateControl(bb, wb, Mb, eb) {
+        const pb = Cb[bb];
+        let Vb, gb = null,
+          lb = this._bitrateMode ?? eb ?? "variable";
         if (void 0 !== this._quantizer) {
-          if (Rd)
-            if (this._quantizer < Rd.min || this._quantizer > Rd.max) {
-              if (void 0 === this._bitrate) throw new Error(`Quantizer ${this._quantizer} is out of range for codec '${dd}'; must be between ${Rd.min} and ${Rd.max}.`)
-            } else Kd = this._quantizer, void 0 === this._bitrate && (hd = "quantizer");
-          else if (void 0 === this._bitrate) throw new Error(`Codec '${dd}' does not support quantizer-based encoding. Provide a bitrate in the Quality to define a fallback.`)
-        } else void 0 === this._bitrate && Rd && !this._preferBitrate && ((0, Fd.M)(void 0 !== this._quality), Kd = (0, Fd.$)(Math.round((0, Fd.kc)(Rd.worst, Rd.best, this._quality)), Rd.min, Rd.max));
-        if (void 0 !== this._bitrate) Xd = this._bitrate;
+          if (pb)
+            if (this._quantizer < pb.min || this._quantizer > pb.max) {
+              if (void 0 === this._bitrate) throw new Error(`Quantizer ${this._quantizer} is out of range for codec '${bb}'; must be between ${pb.min} and ${pb.max}.`)
+            } else gb = this._quantizer, void 0 === this._bitrate && (lb = "quantizer");
+          else if (void 0 === this._bitrate) throw new Error(`Codec '${bb}' does not support quantizer-based encoding. Provide a bitrate in the Quality to define a fallback.`)
+        } else void 0 === this._bitrate && pb && !this._preferBitrate && ((0, Hb.L)(void 0 !== this._quality), gb = (0, Hb.Z)(Math.round((0, Hb.dc)(pb.worst, pb.best, this._quality)), pb.min, pb.max));
+        if (void 0 !== this._bitrate) Vb = this._bitrate;
         else {
-          let Wd = this._quality;
-          void 0 === Wd && ((0, Fd.M)(null !== Kd && Rd), Wd = (0, Fd.$)((Kd - Rd.worst) / (Rd.best - Rd.worst), 0, 1)), Xd = yd(dd, Od, md, Hd(Wd))
+          let eb = this._quality;
+          void 0 === eb && ((0, Hb.L)(null !== gb && pb), eb = (0, Hb.Z)((gb - pb.worst) / (pb.best - pb.worst), 0, 1)), Vb = Fb(bb, wb, Mb, Eb(eb))
         }
         return {
-          quantizer: Kd,
-          bitrate: Xd,
-          bitrateMode: hd
+          quantizer: gb,
+          bitrate: Vb,
+          bitrateMode: lb
         }
       }
-      _toVideoBitrate(dd, Od, md) {
-        return void 0 !== this._bitrate ? this._bitrate : ((0, Fd.M)(void 0 !== this._quality), yd(dd, Od, md, Hd(this._quality)))
+      _toVideoBitrate(bb, wb, Mb) {
+        return void 0 !== this._bitrate ? this._bitrate : ((0, Hb.L)(void 0 !== this._quality), Fb(bb, wb, Mb, Eb(this._quality)))
       }
-      _toAudioBitrate(dd) {
-        if (Wd.m.includes(dd) || "flac" === dd) return;
+      _toAudioBitrate(bb) {
+        if (eb.l.includes(bb) || "flac" === bb) return;
         if (void 0 !== this._bitrate) return this._bitrate;
         if (void 0 === this._quality) throw new Error("This Quality defines neither a quality level nor a bitrate and therefore cannot be used for audio encoding.");
-        const Od = Hd(this._quality),
-          md = {
+        const wb = Eb(this._quality),
+          Mb = {
             aac: 128e3,
             opus: 64e3,
             mp3: 16e4,
@@ -2669,26 +2669,26 @@ export const modules = {
             ac3: 384e3,
             eac3: 192e3,
             dts: 768e3
-          } [dd];
-        if (!md) throw new Error(`Unhandled codec: ${dd}`);
-        let Fd = md * Od;
-        if ("aac" === dd) {
-          Fd = [96e3, 128e3, 16e4, 192e3].reduce(((dd, Od) => Math.abs(Od - Fd) < Math.abs(dd - Fd) ? Od : dd))
-        } else if ("opus" === dd || "vorbis" === dd) Fd = Math.max(6e3, Fd);
-        else if ("mp3" === dd) {
-          Fd = [8e3, 16e3, 24e3, 32e3, 4e4, 48e3, 64e3, 8e4, 96e3, 112e3, 128e3, 16e4, 192e3, 224e3, 256e3, 32e4].reduce(((dd, Od) => Math.abs(Od - Fd) < Math.abs(dd - Fd) ? Od : dd))
+          } [bb];
+        if (!Mb) throw new Error(`Unhandled codec: ${bb}`);
+        let Hb = Mb * wb;
+        if ("aac" === bb) {
+          Hb = [96e3, 128e3, 16e4, 192e3].reduce(((bb, wb) => Math.abs(wb - Hb) < Math.abs(bb - Hb) ? wb : bb))
+        } else if ("opus" === bb || "vorbis" === bb) Hb = Math.max(6e3, Hb);
+        else if ("mp3" === bb) {
+          Hb = [8e3, 16e3, 24e3, 32e3, 4e4, 48e3, 64e3, 8e4, 96e3, 112e3, 128e3, 16e4, 192e3, 224e3, 256e3, 32e4].reduce(((bb, wb) => Math.abs(wb - Hb) < Math.abs(bb - Hb) ? wb : bb))
         }
-        return 1e3 * Math.round(Fd / 1e3)
+        return 1e3 * Math.round(Hb / 1e3)
       }
     }
-    const Nd = {
+    const tb = {
         "very-low": 0,
         low: .25,
         medium: .5,
         high: .75,
         "very-high": 1
       },
-      qd = {
+      Cb = {
         avc: {
           min: 0,
           max: 51,
@@ -2714,94 +2714,94 @@ export const modules = {
           best: 80
         }
       },
-      Hd = dd => .3 * Math.exp(2.5538 * dd),
-      yd = (dd, Od, md, Wd) => {
-        const Fd = Od * md,
-          Rd = 3e6,
-          Xd = Rd * Math.pow(Fd / 2073600, .95) * {
+      Eb = bb => .3 * Math.exp(2.5538 * bb),
+      Fb = (bb, wb, Mb, eb) => {
+        const Hb = wb * Mb,
+          pb = 3e6,
+          Vb = pb * Math.pow(Hb / 2073600, .95) * {
             avc: 1,
             hevc: .6,
             vp9: .6,
             av1: .4,
             vp8: 1.2,
             prores: 73.33333333333333
-          } [dd] * Wd;
-        return 1e3 * Math.ceil(Xd / 1e3)
+          } [bb] * eb;
+        return 1e3 * Math.ceil(Vb / 1e3)
       },
-      bd = (dd, Od) => "avc" === dd ? {
+      Bb = (bb, wb) => "avc" === bb ? {
         avc: {
-          quantizer: Od
+          quantizer: wb
         }
-      } : "hevc" === dd ? {
+      } : "hevc" === bb ? {
         hevc: {
-          quantizer: Od
+          quantizer: wb
         }
-      } : "vp9" === dd ? {
+      } : "vp9" === bb ? {
         vp9: {
-          quantizer: Od
+          quantizer: wb
         }
-      } : "av1" === dd ? {
+      } : "av1" === bb ? {
         av1: {
-          quantizer: Od
+          quantizer: wb
         }
-      } : void(0, Fd.M)(!1),
-      Td = (dd, Od) => void 0 !== dd ? dd : void 0 !== Od ? Od instanceof od ? Od : new od({
-        bitrate: Od
+      } : void(0, Hb.L)(!1),
+      sb = (bb, wb) => void 0 !== bb ? bb : void 0 !== wb ? wb instanceof Ub ? wb : new Ub({
+        bitrate: wb
       }) : void 0
   },
-  41526: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Rd
+  41287: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb
     });
-    var Wd, Fd = md(41487);
-    ! function(dd) {
-      dd[dd.Silent = 0] = "Silent", dd[dd.Errors = 1] = "Errors", dd[dd.Warnings = 2] = "Warnings", dd[dd.Info = 3] = "Info"
-    }(Wd || (Wd = {}));
-    class Rd {
+    var eb, Hb = Mb(41244);
+    ! function(bb) {
+      bb[bb.Silent = 0] = "Silent", bb[bb.Errors = 1] = "Errors", bb[bb.Warnings = 2] = "Warnings", bb[bb.Info = 3] = "Info"
+    }(eb || (eb = {}));
+    class pb {
       constructor() {}
       static get level() {
-        return Rd._level
+        return pb._level
       }
-      static set level(dd) {
-        if (dd !== Wd.Silent && dd !== Wd.Errors && dd !== Wd.Warnings && dd !== Wd.Info) throw new TypeError("Invalid log level. Use one of the values of the LogLevel enum.");
-        Rd._level = dd
+      static set level(bb) {
+        if (bb !== eb.Silent && bb !== eb.Errors && bb !== eb.Warnings && bb !== eb.Info) throw new TypeError("Invalid log level. Use one of the values of the LogLevel enum.");
+        pb._level = bb
       }
       static get _emitter() {
-        return Rd._emitterInstance ??= new Fd.k
+        return pb._emitterInstance ??= new Hb.h
       }
-      static on(dd, Od, md) {
-        return Rd._emitter.on(dd, Od, md)
+      static on(bb, wb, Mb) {
+        return pb._emitter.on(bb, wb, Mb)
       }
       static _error() {
-        for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-        Rd._emitter._emit("error", Od), Rd._level >= Wd.Errors && console.error(...Od)
+        for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+        pb._emitter._emit("error", wb), pb._level >= eb.Errors && console.error(...wb)
       }
       static _warn() {
-        for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-        Rd._emitter._emit("warn", Od), Rd._level >= Wd.Warnings && console.warn(...Od)
+        for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+        pb._emitter._emit("warn", wb), pb._level >= eb.Warnings && console.warn(...wb)
       }
       static _info() {
-        for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-        Rd._emitter._emit("info", Od), Rd._level >= Wd.Info && console.info(...Od)
+        for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+        pb._emitter._emit("info", wb), pb._level >= eb.Info && console.info(...wb)
       }
     }
-    Rd._level = Wd.Info, Rd._emitterInstance = null
+    pb._level = eb.Info, pb._emitterInstance = null
   },
-  41569: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => vd,
-      g: () => Qd,
-      k: () => hd,
-      n: () => td,
-      p: () => Xd
+  41348: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Lb,
+      g: () => Ib,
+      i: () => lb,
+      l: () => Ob,
+      n: () => Vb
     });
-    md(41503);
-    var Wd = md(41513);
-    md(41487), md(41537);
-    var Fd = md(41555);
-    md(41562), md(41559);
-    md(41522), md(41526), "function" === typeof SuppressedError && SuppressedError;
-    class Rd {
+    Mb(41264);
+    var eb = Mb(41281);
+    Mb(41244), Mb(41303);
+    var Hb = Mb(41327);
+    Mb(41340), Mb(41334);
+    Mb(41284), Mb(41287), "function" === typeof SuppressedError && SuppressedError;
+    class pb {
       constructor() {
         this._connectedTrack = null, this._closingPromise = null, this._closed = !1, this._nominalBitrate = null
       }
@@ -2813,123 +2813,123 @@ export const modules = {
         if (this._closed) throw new Error("Source is closed.")
       }
       async _start() {}
-      async _flushAndClose(dd) {}
+      async _flushAndClose(bb) {}
       close() {
         if (this._closingPromise) return;
-        const dd = this._connectedTrack;
-        if (!dd) throw new Error("Cannot call close without connecting the source to an output track.");
-        if ("pending" === dd.output.state) throw new Error("Cannot call close before output has been started.");
+        const bb = this._connectedTrack;
+        if (!bb) throw new Error("Cannot call close without connecting the source to an output track.");
+        if ("pending" === bb.output.state) throw new Error("Cannot call close before output has been started.");
         this._closingPromise = (async () => {
-          await this._flushAndClose(!1), this._closed = !0, "finalizing" !== dd.output.state && "finalized" !== dd.output.state && dd.output._muxer.onTrackClose(dd)
+          await this._flushAndClose(!1), this._closed = !0, "finalizing" !== bb.output.state && "finalized" !== bb.output.state && bb.output._muxer.onTrackClose(bb)
         })()
       }
-      async _flushOrWaitForOngoingClose(dd) {
+      async _flushOrWaitForOngoingClose(bb) {
         return this._closingPromise ??= (async () => {
-          await this._flushAndClose(dd), this._closed = !0
+          await this._flushAndClose(bb), this._closed = !0
         })()
       }
     }
-    class Xd extends Rd {
-      constructor(dd) {
-        if (super(), !Wd.q.includes(dd)) throw new TypeError(`Invalid video codec '${dd}'. Must be one of: ${Wd.q.join(", ")}.`);
-        this._codec = dd
+    class Vb extends pb {
+      constructor(bb) {
+        if (super(), !eb.o.includes(bb)) throw new TypeError(`Invalid video codec '${bb}'. Must be one of: ${eb.o.join(", ")}.`);
+        this._codec = bb
       }
     }
-    const Kd = (dd, Od) => {
-      if (dd.metadata.hasOnlyKeyPackets && "key" !== Od.type) throw new Error("Cannot add non-key packets to a hasOnlyKeyPackets video track.")
+    const gb = (bb, wb) => {
+      if (bb.metadata.hasOnlyKeyPackets && "key" !== wb.type) throw new Error("Cannot add non-key packets to a hasOnlyKeyPackets video track.")
     };
-    class hd extends Xd {
-      constructor(dd) {
-        super(dd)
+    class lb extends Vb {
+      constructor(bb) {
+        super(bb)
       }
-      add(dd, Od) {
-        if (!(dd instanceof Fd.e)) throw new TypeError("packet must be an EncodedPacket.");
-        if (dd.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
-        if (void 0 !== Od && (!Od || "object" !== typeof Od)) throw new TypeError("meta, when provided, must be an object.");
-        return this._ensureValidAdd(), Kd(this._connectedTrack, dd), this._connectedTrack.output._muxer.addEncodedVideoPacket(this._connectedTrack, dd, Od)
-      }
-    }
-    class vd extends Rd {
-      constructor(dd) {
-        if (super(), !Wd.b.includes(dd)) throw new TypeError(`Invalid audio codec '${dd}'. Must be one of: ${Wd.b.join(", ")}.`);
-        this._codec = dd
+      add(bb, wb) {
+        if (!(bb instanceof Hb.e)) throw new TypeError("packet must be an EncodedPacket.");
+        if (bb.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
+        if (void 0 !== wb && (!wb || "object" !== typeof wb)) throw new TypeError("meta, when provided, must be an object.");
+        return this._ensureValidAdd(), gb(this._connectedTrack, bb), this._connectedTrack.output._muxer.addEncodedVideoPacket(this._connectedTrack, bb, wb)
       }
     }
-    class Qd extends vd {
-      constructor(dd) {
-        super(dd)
-      }
-      add(dd, Od) {
-        if (!(dd instanceof Fd.e)) throw new TypeError("packet must be an EncodedPacket.");
-        if (dd.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
-        if (void 0 !== Od && (!Od || "object" !== typeof Od)) throw new TypeError("meta, when provided, must be an object.");
-        return this._ensureValidAdd(), this._connectedTrack.output._muxer.addEncodedAudioPacket(this._connectedTrack, dd, Od)
+    class Lb extends pb {
+      constructor(bb) {
+        if (super(), !eb.b.includes(bb)) throw new TypeError(`Invalid audio codec '${bb}'. Must be one of: ${eb.b.join(", ")}.`);
+        this._codec = bb
       }
     }
-    class td extends Rd {
-      constructor(dd) {
-        if (super(), !Wd.p.includes(dd)) throw new TypeError(`Invalid subtitle codec '${dd}'. Must be one of: ${Wd.p.join(", ")}.`);
-        this._codec = dd
+    class Ib extends Lb {
+      constructor(bb) {
+        super(bb)
+      }
+      add(bb, wb) {
+        if (!(bb instanceof Hb.e)) throw new TypeError("packet must be an EncodedPacket.");
+        if (bb.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be added.");
+        if (void 0 !== wb && (!wb || "object" !== typeof wb)) throw new TypeError("meta, when provided, must be an object.");
+        return this._ensureValidAdd(), this._connectedTrack.output._muxer.addEncodedAudioPacket(this._connectedTrack, bb, wb)
+      }
+    }
+    class Ob extends pb {
+      constructor(bb) {
+        if (super(), !eb.n.includes(bb)) throw new TypeError(`Invalid subtitle codec '${bb}'. Must be one of: ${eb.n.join(", ")}.`);
+        this._codec = bb
       }
     }
   },
-  41491: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Rd,
-      f: () => hd,
-      h: () => Fd,
-      j: () => Kd,
-      m: () => Xd,
-      n: () => vd
+  41252: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => pb,
+      d: () => lb,
+      f: () => Hb,
+      j: () => gb,
+      k: () => Vb,
+      o: () => Lb
     });
-    var Wd = md(41487);
-    class Fd {
-      constructor(dd, Od) {
-        if (this.data = dd, this.mimeType = Od, !(dd instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
-        if ("string" !== typeof Od) throw new TypeError("mimeType must be a string.")
+    var eb = Mb(41244);
+    class Hb {
+      constructor(bb, wb) {
+        if (this.data = bb, this.mimeType = wb, !(bb instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
+        if ("string" !== typeof wb) throw new TypeError("mimeType must be a string.")
       }
     }
-    class Rd {
-      constructor(dd, Od, md, Wd) {
-        if (this.data = dd, this.mimeType = Od, this.name = md, this.description = Wd, !(dd instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
-        if (void 0 !== Od && "string" !== typeof Od) throw new TypeError("mimeType, when provided, must be a string.");
-        if (void 0 !== md && "string" !== typeof md) throw new TypeError("name, when provided, must be a string.");
-        if (void 0 !== Wd && "string" !== typeof Wd) throw new TypeError("description, when provided, must be a string.")
+    class pb {
+      constructor(bb, wb, Mb, eb) {
+        if (this.data = bb, this.mimeType = wb, this.name = Mb, this.description = eb, !(bb instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
+        if (void 0 !== wb && "string" !== typeof wb) throw new TypeError("mimeType, when provided, must be a string.");
+        if (void 0 !== Mb && "string" !== typeof Mb) throw new TypeError("name, when provided, must be a string.");
+        if (void 0 !== eb && "string" !== typeof eb) throw new TypeError("description, when provided, must be a string.")
       }
     }
-    const Xd = dd => {
-        if (!dd || "object" !== typeof dd) throw new TypeError("tags must be an object.");
-        if (void 0 !== dd.title && "string" !== typeof dd.title) throw new TypeError("tags.title, when provided, must be a string.");
-        if (void 0 !== dd.description && "string" !== typeof dd.description) throw new TypeError("tags.description, when provided, must be a string.");
-        if (void 0 !== dd.artist && "string" !== typeof dd.artist) throw new TypeError("tags.artist, when provided, must be a string.");
-        if (void 0 !== dd.album && "string" !== typeof dd.album) throw new TypeError("tags.album, when provided, must be a string.");
-        if (void 0 !== dd.albumArtist && "string" !== typeof dd.albumArtist) throw new TypeError("tags.albumArtist, when provided, must be a string.");
-        if (void 0 !== dd.trackNumber && (!Number.isInteger(dd.trackNumber) || dd.trackNumber <= 0)) throw new TypeError("tags.trackNumber, when provided, must be a positive integer.");
-        if (void 0 !== dd.tracksTotal && (!Number.isInteger(dd.tracksTotal) || dd.tracksTotal <= 0)) throw new TypeError("tags.tracksTotal, when provided, must be a positive integer.");
-        if (void 0 !== dd.discNumber && (!Number.isInteger(dd.discNumber) || dd.discNumber <= 0)) throw new TypeError("tags.discNumber, when provided, must be a positive integer.");
-        if (void 0 !== dd.discsTotal && (!Number.isInteger(dd.discsTotal) || dd.discsTotal <= 0)) throw new TypeError("tags.discsTotal, when provided, must be a positive integer.");
-        if (void 0 !== dd.genre && "string" !== typeof dd.genre) throw new TypeError("tags.genre, when provided, must be a string.");
-        if (void 0 !== dd.date && (!(dd.date instanceof Date) || Number.isNaN(dd.date.getTime()))) throw new TypeError("tags.date, when provided, must be a valid Date.");
-        if (void 0 !== dd.beatsPerMinute && (!Number.isInteger(dd.beatsPerMinute) || dd.beatsPerMinute <= 0)) throw new TypeError("tags.beatsPerMinute, when provided, must be a positive integer.");
-        if (void 0 !== dd.lyrics && "string" !== typeof dd.lyrics) throw new TypeError("tags.lyrics, when provided, must be a string.");
-        if (void 0 !== dd.images) {
-          if (!Array.isArray(dd.images)) throw new TypeError("tags.images, when provided, must be an array.");
-          for (const Od of dd.images) {
-            if (!Od || "object" !== typeof Od) throw new TypeError("Each image in tags.images must be an object.");
-            if (!(Od.data instanceof Uint8Array)) throw new TypeError("Each image.data must be a Uint8Array.");
-            if ("string" !== typeof Od.mimeType) throw new TypeError("Each image.mimeType must be a string.");
-            if (!["coverFront", "coverBack", "unknown"].includes(Od.kind)) throw new TypeError("Each image.kind must be 'coverFront', 'coverBack', or 'unknown'.")
+    const Vb = bb => {
+        if (!bb || "object" !== typeof bb) throw new TypeError("tags must be an object.");
+        if (void 0 !== bb.title && "string" !== typeof bb.title) throw new TypeError("tags.title, when provided, must be a string.");
+        if (void 0 !== bb.description && "string" !== typeof bb.description) throw new TypeError("tags.description, when provided, must be a string.");
+        if (void 0 !== bb.artist && "string" !== typeof bb.artist) throw new TypeError("tags.artist, when provided, must be a string.");
+        if (void 0 !== bb.album && "string" !== typeof bb.album) throw new TypeError("tags.album, when provided, must be a string.");
+        if (void 0 !== bb.albumArtist && "string" !== typeof bb.albumArtist) throw new TypeError("tags.albumArtist, when provided, must be a string.");
+        if (void 0 !== bb.trackNumber && (!Number.isInteger(bb.trackNumber) || bb.trackNumber <= 0)) throw new TypeError("tags.trackNumber, when provided, must be a positive integer.");
+        if (void 0 !== bb.tracksTotal && (!Number.isInteger(bb.tracksTotal) || bb.tracksTotal <= 0)) throw new TypeError("tags.tracksTotal, when provided, must be a positive integer.");
+        if (void 0 !== bb.discNumber && (!Number.isInteger(bb.discNumber) || bb.discNumber <= 0)) throw new TypeError("tags.discNumber, when provided, must be a positive integer.");
+        if (void 0 !== bb.discsTotal && (!Number.isInteger(bb.discsTotal) || bb.discsTotal <= 0)) throw new TypeError("tags.discsTotal, when provided, must be a positive integer.");
+        if (void 0 !== bb.genre && "string" !== typeof bb.genre) throw new TypeError("tags.genre, when provided, must be a string.");
+        if (void 0 !== bb.date && (!(bb.date instanceof Date) || Number.isNaN(bb.date.getTime()))) throw new TypeError("tags.date, when provided, must be a valid Date.");
+        if (void 0 !== bb.beatsPerMinute && (!Number.isInteger(bb.beatsPerMinute) || bb.beatsPerMinute <= 0)) throw new TypeError("tags.beatsPerMinute, when provided, must be a positive integer.");
+        if (void 0 !== bb.lyrics && "string" !== typeof bb.lyrics) throw new TypeError("tags.lyrics, when provided, must be a string.");
+        if (void 0 !== bb.images) {
+          if (!Array.isArray(bb.images)) throw new TypeError("tags.images, when provided, must be an array.");
+          for (const wb of bb.images) {
+            if (!wb || "object" !== typeof wb) throw new TypeError("Each image in tags.images must be an object.");
+            if (!(wb.data instanceof Uint8Array)) throw new TypeError("Each image.data must be a Uint8Array.");
+            if ("string" !== typeof wb.mimeType) throw new TypeError("Each image.mimeType must be a string.");
+            if (!["coverFront", "coverBack", "unknown"].includes(wb.kind)) throw new TypeError("Each image.kind must be 'coverFront', 'coverBack', or 'unknown'.")
           }
         }
-        if (void 0 !== dd.comment && "string" !== typeof dd.comment) throw new TypeError("tags.comment, when provided, must be a string.");
-        if (void 0 !== dd.raw) {
-          if (!dd.raw || "object" !== typeof dd.raw) throw new TypeError("tags.raw, when provided, must be an object.");
-          for (const Od of Object.values(dd.raw))
-            if (null !== Od && "string" !== typeof Od && (!Array.isArray(Od) || !Od.every((dd => "string" === typeof dd))) && !(Od instanceof Uint8Array) && !(Od instanceof Fd) && !(Od instanceof Rd) && !(0, Wd.Vb)(Od)) throw new TypeError("Each value in tags.raw must be a string, string array, Uint8Array, RichImageData, AttachedFile, Record<string, string>, or null.")
+        if (void 0 !== bb.comment && "string" !== typeof bb.comment) throw new TypeError("tags.comment, when provided, must be a string.");
+        if (void 0 !== bb.raw) {
+          if (!bb.raw || "object" !== typeof bb.raw) throw new TypeError("tags.raw, when provided, must be an object.");
+          for (const wb of Object.values(bb.raw))
+            if (null !== wb && "string" !== typeof wb && (!Array.isArray(wb) || !wb.every((bb => "string" === typeof bb))) && !(wb instanceof Uint8Array) && !(wb instanceof Hb) && !(wb instanceof pb) && !(0, eb.Qb)(wb)) throw new TypeError("Each value in tags.raw must be a string, string array, Uint8Array, RichImageData, AttachedFile, Record<string, string>, or null.")
         }
       },
-      Kd = dd => void 0 === dd.title && void 0 === dd.description && void 0 === dd.artist && void 0 === dd.album && void 0 === dd.albumArtist && void 0 === dd.trackNumber && void 0 === dd.tracksTotal && void 0 === dd.discNumber && void 0 === dd.discsTotal && void 0 === dd.genre && void 0 === dd.beatsPerMinute && void 0 === dd.date && void 0 === dd.lyrics && (!dd.images || 0 === dd.images.length) && void 0 === dd.comment && (void 0 === dd.raw || 0 === Object.keys(dd.raw).length),
-      hd = {
+      gb = bb => void 0 === bb.title && void 0 === bb.description && void 0 === bb.artist && void 0 === bb.album && void 0 === bb.albumArtist && void 0 === bb.trackNumber && void 0 === bb.tracksTotal && void 0 === bb.discNumber && void 0 === bb.discsTotal && void 0 === bb.genre && void 0 === bb.beatsPerMinute && void 0 === bb.date && void 0 === bb.lyrics && (!bb.images || 0 === bb.images.length) && void 0 === bb.comment && (void 0 === bb.raw || 0 === Object.keys(bb.raw).length),
+      lb = {
         default: !0,
         primary: !0,
         forced: !1,
@@ -2938,257 +2938,257 @@ export const modules = {
         hearingImpaired: !1,
         visuallyImpaired: !1
       },
-      vd = dd => {
-        if (!dd || "object" !== typeof dd) throw new TypeError("disposition must be an object.");
-        if (void 0 !== dd.default && "boolean" !== typeof dd.default) throw new TypeError("disposition.default must be a boolean.");
-        if (void 0 !== dd.primary && "boolean" !== typeof dd.primary) throw new TypeError("disposition.primary must be a boolean.");
-        if (void 0 !== dd.forced && "boolean" !== typeof dd.forced) throw new TypeError("disposition.forced must be a boolean.");
-        if (void 0 !== dd.original && "boolean" !== typeof dd.original) throw new TypeError("disposition.original must be a boolean.");
-        if (void 0 !== dd.commentary && "boolean" !== typeof dd.commentary) throw new TypeError("disposition.commentary must be a boolean.");
-        if (void 0 !== dd.hearingImpaired && "boolean" !== typeof dd.hearingImpaired) throw new TypeError("disposition.hearingImpaired must be a boolean.");
-        if (void 0 !== dd.visuallyImpaired && "boolean" !== typeof dd.visuallyImpaired) throw new TypeError("disposition.visuallyImpaired must be a boolean.")
+      Lb = bb => {
+        if (!bb || "object" !== typeof bb) throw new TypeError("disposition must be an object.");
+        if (void 0 !== bb.default && "boolean" !== typeof bb.default) throw new TypeError("disposition.default must be a boolean.");
+        if (void 0 !== bb.primary && "boolean" !== typeof bb.primary) throw new TypeError("disposition.primary must be a boolean.");
+        if (void 0 !== bb.forced && "boolean" !== typeof bb.forced) throw new TypeError("disposition.forced must be a boolean.");
+        if (void 0 !== bb.original && "boolean" !== typeof bb.original) throw new TypeError("disposition.original must be a boolean.");
+        if (void 0 !== bb.commentary && "boolean" !== typeof bb.commentary) throw new TypeError("disposition.commentary must be a boolean.");
+        if (void 0 !== bb.hearingImpaired && "boolean" !== typeof bb.hearingImpaired) throw new TypeError("disposition.hearingImpaired must be a boolean.");
+        if (void 0 !== bb.visuallyImpaired && "boolean" !== typeof bb.visuallyImpaired) throw new TypeError("disposition.visuallyImpaired must be a boolean.")
       }
   },
-  41487: (dd, Od, md) => {
-    function Wd(dd) {
-      if (!dd) throw new Error("Assertion failed.")
+  41244: (bb, wb, Mb) => {
+    function eb(bb) {
+      if (!bb) throw new Error("Assertion failed.")
     }
-    md.d(Od, {
-      $: () => Cd,
-      Ac: () => zd,
-      B: () => BO,
-      Bb: () => qO,
-      Bd: () => sO,
-      Dc: () => pd,
-      Dd: () => zO,
-      Eb: () => yO,
-      Ec: () => Yd,
-      Ed: () => gd,
-      F: () => xO,
-      Fb: () => oO,
-      Ic: () => Ld,
-      J: () => jd,
-      Jb: () => RO,
-      M: () => Wd,
-      Mb: () => Sd,
-      Mc: () => td,
-      P: () => Pd,
-      Pc: () => dO,
-      Qb: () => Td,
-      Qc: () => Md,
-      T: () => wO,
-      Tb: () => JO,
-      Tc: () => Nd,
-      Uc: () => LO,
-      Vb: () => DO,
-      W: () => nd,
-      Xb: () => TO,
-      Yc: () => Id,
-      _: () => hd,
-      _b: () => bd,
-      ab: () => PO,
-      ad: () => ld,
-      c: () => Gd,
-      cc: () => QO,
-      dc: () => UO,
-      eb: () => pO,
-      ed: () => ed,
-      fc: () => YO,
-      g: () => sd,
-      i: () => hO,
-      ib: () => Ad,
-      id: () => SO,
-      jb: () => Hd,
-      jc: () => yd,
-      k: () => jO,
-      kc: () => Zd,
-      lb: () => KO,
-      lc: () => HO,
-      m: () => Kd,
-      md: () => xd,
-      nb: () => vd,
-      ob: () => cd,
-      oc: () => kd,
-      od: () => Bd,
-      p: () => Vd,
-      pb: () => OO,
-      pd: () => cO,
-      q: () => Rd,
-      qb: () => Dd,
-      rc: () => qd,
-      s: () => XO,
-      sc: () => Xd,
-      sd: () => Ed,
-      t: () => ud,
-      tb: () => mO,
-      v: () => Ud,
-      vd: () => wd,
-      wb: () => gO,
-      wc: () => EO,
-      xc: () => WO,
-      yb: () => rd,
-      yd: () => aO,
-      z: () => fd
+    Mb.d(wb, {
+      $c: () => ub,
+      B: () => rw,
+      Cb: () => Iw,
+      Cc: () => hb,
+      D: () => Kw,
+      Gb: () => ew,
+      Gc: () => Sb,
+      H: () => Gb,
+      Kb: () => Db,
+      Kc: () => Ob,
+      L: () => eb,
+      Mc: () => Tb,
+      Nb: () => sb,
+      Ob: () => xw,
+      P: () => Nb,
+      Pc: () => ob,
+      Qb: () => aw,
+      R: () => hw,
+      S: () => Jb,
+      Tc: () => tb,
+      Ub: () => Fw,
+      Vc: () => Nw,
+      W: () => lb,
+      Wb: () => Bb,
+      Xc: () => ib,
+      Yb: () => lw,
+      Z: () => db,
+      Zb: () => jw,
+      _b: () => sw,
+      ac: () => Fb,
+      bb: () => vw,
+      d: () => Wb,
+      dc: () => Pb,
+      dd: () => ab,
+      e: () => cb,
+      eb: () => Bw,
+      f: () => Vw,
+      fb: () => fb,
+      fc: () => tw,
+      fd: () => Rw,
+      gd: () => rb,
+      h: () => qw,
+      hb: () => Eb,
+      hc: () => nb,
+      ib: () => pw,
+      id: () => Rb,
+      jd: () => Gw,
+      kb: () => Lb,
+      kd: () => xb,
+      l: () => gb,
+      lc: () => Cb,
+      m: () => Zb,
+      nb: () => Qb,
+      nc: () => Vb,
+      ob: () => kb,
+      od: () => Xb,
+      pb: () => qb,
+      q: () => pb,
+      qb: () => bw,
+      qc: () => Xw,
+      r: () => Hw,
+      rb: () => mw,
+      rd: () => zw,
+      s: () => Yb,
+      sb: () => Ab,
+      sd: () => Dw,
+      uc: () => ww,
+      v: () => Kb,
+      vc: () => vb,
+      vd: () => Qw,
+      wb: () => Uw,
+      yb: () => Cw,
+      yc: () => mb,
+      z: () => yb,
+      zd: () => zb
     });
-    const Fd = Math.PI / 180,
-      Rd = 180 / Math.PI,
-      Xd = dd => {
-        const Od = (dd % 360 + 360) % 360;
-        if (0 === Od || 90 === Od || 180 === Od || 270 === Od) return Od;
-        throw new Error(`Invalid rotation ${dd}.`)
+    const Hb = Math.PI / 180,
+      pb = 180 / Math.PI,
+      Vb = bb => {
+        const wb = (bb % 360 + 360) % 360;
+        if (0 === wb || 90 === wb || 180 === wb || 270 === wb) return wb;
+        throw new Error(`Invalid rotation ${bb}.`)
       },
-      Kd = [1, 0, 0, 0, 1, 0, 0, 0, 1],
-      hd = (dd, Od, md) => {
-        const [Wd, Fd, , Rd, Xd] = dd, Kd = Math.abs(Wd) * Od + Math.abs(Rd) * md, hd = Math.abs(Fd) * Od + Math.abs(Xd) * md;
-        return qd(qd(od(-Od / 2, -md / 2), dd), od(Kd / 2, hd / 2))
+      gb = [1, 0, 0, 0, 1, 0, 0, 0, 1],
+      lb = (bb, wb, Mb) => {
+        const [eb, Hb, , pb, Vb] = bb, gb = Math.abs(eb) * wb + Math.abs(pb) * Mb, lb = Math.abs(Hb) * wb + Math.abs(Vb) * Mb;
+        return Cb(Cb(Ub(-wb / 2, -Mb / 2), bb), Ub(gb / 2, lb / 2))
       },
-      vd = dd => {
-        const [Od, md] = dd, Wd = Math.atan2(md, Qd(dd) ? -Od : Od);
-        return Xd(Md(Wd * Rd, 90))
+      Lb = bb => {
+        const [wb, Mb] = bb, eb = Math.atan2(Mb, Ib(bb) ? -wb : wb);
+        return Vb(ob(eb * pb, 90))
       },
-      Qd = dd => {
-        const [Od, md, , Wd, Fd] = dd;
-        return Od * Fd - md * Wd < 0
+      Ib = bb => {
+        const [wb, Mb, , eb, Hb] = bb;
+        return wb * Hb - Mb * eb < 0
       },
-      td = dd => {
-        const Od = dd * Fd,
-          md = Math.round(Math.cos(Od)),
-          Wd = Math.round(Math.sin(Od));
-        return [md, Wd, 0, -Wd, md, 0, 0, 0, 1]
+      Ob = bb => {
+        const wb = bb * Hb,
+          Mb = Math.round(Math.cos(wb)),
+          eb = Math.round(Math.sin(wb));
+        return [Mb, eb, 0, -eb, Mb, 0, 0, 0, 1]
       },
-      od = (dd, Od) => [1, 0, 0, 0, 1, 0, dd, Od, 1],
-      Nd = (dd, Od) => [dd, 0, 0, 0, Od, 0, 0, 0, 1],
-      qd = (dd, Od) => {
-        const md = new Array(9);
-        for (let Wd = 0; Wd < 3; Wd++)
-          for (let Fd = 0; Fd < 3; Fd++) md[3 * Wd + Fd] = dd[3 * Wd] * Od[Fd] + dd[3 * Wd + 1] * Od[3 + Fd] + dd[3 * Wd + 2] * Od[6 + Fd];
-        return md
+      Ub = (bb, wb) => [1, 0, 0, 0, 1, 0, bb, wb, 1],
+      tb = (bb, wb) => [bb, 0, 0, 0, wb, 0, 0, 0, 1],
+      Cb = (bb, wb) => {
+        const Mb = new Array(9);
+        for (let eb = 0; eb < 3; eb++)
+          for (let Hb = 0; Hb < 3; Hb++) Mb[3 * eb + Hb] = bb[3 * eb] * wb[Hb] + bb[3 * eb + 1] * wb[3 + Hb] + bb[3 * eb + 2] * wb[6 + Hb];
+        return Mb
       },
-      Hd = (dd, Od, md, Wd) => ({
-        rotation: Xd(dd + (Od ? -md : md)),
-        flip: Od !== Wd
+      Eb = (bb, wb, Mb, eb) => ({
+        rotation: Vb(bb + (wb ? -Mb : Mb)),
+        flip: wb !== eb
       }),
-      yd = dd => dd && dd[dd.length - 1],
-      bd = dd => dd >= 0 && dd < 2 ** 32,
-      Td = dd => dd >= -(2 ** 31) && dd < 2 ** 31,
-      pd = dd => {
-        let Od = 0;
-        for (; 0 === dd.readBits(1) && Od < 32;) Od++;
-        if (Od >= 32) throw new Error("Invalid exponential-Golomb code.");
-        return (1 << Od) - 1 + dd.readBits(Od)
+      Fb = bb => bb && bb[bb.length - 1],
+      Bb = bb => bb >= 0 && bb < 2 ** 32,
+      sb = bb => bb >= -(2 ** 31) && bb < 2 ** 31,
+      mb = bb => {
+        let wb = 0;
+        for (; 0 === bb.readBits(1) && wb < 32;) wb++;
+        if (wb >= 32) throw new Error("Invalid exponential-Golomb code.");
+        return (1 << wb) - 1 + bb.readBits(wb)
       },
-      Yd = dd => {
-        const Od = pd(dd);
-        return 0 === (1 & Od) ? -(Od >> 1) : Od + 1 >> 1
+      hb = bb => {
+        const wb = mb(bb);
+        return 0 === (1 & wb) ? -(wb >> 1) : wb + 1 >> 1
       },
-      gd = (dd, Od, md, Wd) => {
-        for (let Fd = Od; Fd < md; Fd++) {
-          const Od = Math.floor(Fd / 8);
-          let Rd = dd[Od];
-          const Xd = 7 - (7 & Fd);
-          Rd &= ~(1 << Xd), Rd |= (Wd & 1 << md - Fd - 1) >> md - Fd - 1 << Xd, dd[Od] = Rd
+      zb = (bb, wb, Mb, eb) => {
+        for (let Hb = wb; Hb < Mb; Hb++) {
+          const wb = Math.floor(Hb / 8);
+          let pb = bb[wb];
+          const Vb = 7 - (7 & Hb);
+          pb &= ~(1 << Vb), pb |= (eb & 1 << Mb - Hb - 1) >> Mb - Hb - 1 << Vb, bb[wb] = pb
         }
       },
-      wd = dd => dd.constructor === Uint8Array ? dd : ArrayBuffer.isView(dd) ? new Uint8Array(dd.buffer, dd.byteOffset, dd.byteLength) : new Uint8Array(dd),
-      Ed = dd => dd.constructor === DataView ? dd : ArrayBuffer.isView(dd) ? new DataView(dd.buffer, dd.byteOffset, dd.byteLength) : new DataView(dd),
-      Jd = "undefined" !== typeof globalThis.TextEncoder ? globalThis.TextEncoder : class {
+      Xb = bb => bb.constructor === Uint8Array ? bb : ArrayBuffer.isView(bb) ? new Uint8Array(bb.buffer, bb.byteOffset, bb.byteLength) : new Uint8Array(bb),
+      xb = bb => bb.constructor === DataView ? bb : ArrayBuffer.isView(bb) ? new DataView(bb.buffer, bb.byteOffset, bb.byteLength) : new DataView(bb),
+      jb = "undefined" !== typeof globalThis.TextEncoder ? globalThis.TextEncoder : class {
         constructor() {
           this.encoding = "utf-8"
         }
         encode() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-          const Od = new Uint8Array(3 * dd.length);
-          let md = 0;
-          for (let Wd = 0; Wd < dd.length; Wd++) {
-            let Fd = dd.charCodeAt(Wd);
-            if (Fd < 128) Od[md++] = Fd;
-            else if (Fd < 2048) Od[md++] = 192 | Fd >> 6, Od[md++] = 128 | 63 & Fd;
-            else if (Fd < 55296 || Fd > 57343) Od[md++] = 224 | Fd >> 12, Od[md++] = 128 | Fd >> 6 & 63, Od[md++] = 128 | 63 & Fd;
+          let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+          const wb = new Uint8Array(3 * bb.length);
+          let Mb = 0;
+          for (let eb = 0; eb < bb.length; eb++) {
+            let Hb = bb.charCodeAt(eb);
+            if (Hb < 128) wb[Mb++] = Hb;
+            else if (Hb < 2048) wb[Mb++] = 192 | Hb >> 6, wb[Mb++] = 128 | 63 & Hb;
+            else if (Hb < 55296 || Hb > 57343) wb[Mb++] = 224 | Hb >> 12, wb[Mb++] = 128 | Hb >> 6 & 63, wb[Mb++] = 128 | 63 & Hb;
             else {
-              const Rd = Wd + 1 < dd.length ? dd.charCodeAt(Wd + 1) : 0;
-              Fd < 56320 && Rd >= 56320 && Rd <= 57343 ? (Fd = 65536 + (Fd - 55296 << 10) + (Rd - 56320), Wd++, Od[md++] = 240 | Fd >> 18, Od[md++] = 128 | Fd >> 12 & 63, Od[md++] = 128 | Fd >> 6 & 63, Od[md++] = 128 | 63 & Fd) : (Od[md++] = 239, Od[md++] = 191, Od[md++] = 189)
+              const pb = eb + 1 < bb.length ? bb.charCodeAt(eb + 1) : 0;
+              Hb < 56320 && pb >= 56320 && pb <= 57343 ? (Hb = 65536 + (Hb - 55296 << 10) + (pb - 56320), eb++, wb[Mb++] = 240 | Hb >> 18, wb[Mb++] = 128 | Hb >> 12 & 63, wb[Mb++] = 128 | Hb >> 6 & 63, wb[Mb++] = 128 | 63 & Hb) : (wb[Mb++] = 239, wb[Mb++] = 191, wb[Mb++] = 189)
             }
           }
-          return Od.slice(0, md)
+          return wb.slice(0, Mb)
         }
       },
-      Ud = "undefined" !== typeof globalThis.TextDecoder ? globalThis.TextDecoder : class {
+      Kb = "undefined" !== typeof globalThis.TextDecoder ? globalThis.TextDecoder : class {
         constructor() {
-          let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "utf-8";
-          const Od = dd.trim().toLowerCase();
-          if ("utf-8" === Od || "utf8" === Od || "unicode-1-1-utf-8" === Od) this.encoding = "utf-8";
-          else if ("utf-16le" === Od || "utf-16" === Od) this.encoding = "utf-16le";
+          let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "utf-8";
+          const wb = bb.trim().toLowerCase();
+          if ("utf-8" === wb || "utf8" === wb || "unicode-1-1-utf-8" === wb) this.encoding = "utf-8";
+          else if ("utf-16le" === wb || "utf-16" === wb) this.encoding = "utf-16le";
           else {
-            if ("utf-16be" !== Od) throw new RangeError(`The encoding label provided ('${dd}') is invalid.`);
+            if ("utf-16be" !== wb) throw new RangeError(`The encoding label provided ('${bb}') is invalid.`);
             this.encoding = "utf-16be"
           }
         }
-        decode(dd) {
-          const Od = dd ? wd(dd) : new Uint8Array(0),
-            md = [];
+        decode(bb) {
+          const wb = bb ? Xb(bb) : new Uint8Array(0),
+            Mb = [];
           if ("utf-8" === this.encoding) {
-            let dd = Od.length >= 3 && 239 === Od[0] && 187 === Od[1] && 191 === Od[2] ? 3 : 0;
-            for (; dd < Od.length;) {
-              const Wd = Od[dd];
-              if (Wd < 128) {
-                md.push(Wd), dd++;
+            let bb = wb.length >= 3 && 239 === wb[0] && 187 === wb[1] && 191 === wb[2] ? 3 : 0;
+            for (; bb < wb.length;) {
+              const eb = wb[bb];
+              if (eb < 128) {
+                Mb.push(eb), bb++;
                 continue
               }
-              let Fd, Rd;
-              if (Wd >= 194 && Wd < 224) Fd = 1, Rd = 31 & Wd;
-              else if (Wd >= 224 && Wd < 240) Fd = 2, Rd = 15 & Wd;
+              let Hb, pb;
+              if (eb >= 194 && eb < 224) Hb = 1, pb = 31 & eb;
+              else if (eb >= 224 && eb < 240) Hb = 2, pb = 15 & eb;
               else {
-                if (!(Wd >= 240 && Wd < 245)) {
-                  md.push(65533), dd++;
+                if (!(eb >= 240 && eb < 245)) {
+                  Mb.push(65533), bb++;
                   continue
                 }
-                Fd = 3, Rd = 7 & Wd
+                Hb = 3, pb = 7 & eb
               }
-              let Xd = 224 === Wd ? 160 : 240 === Wd ? 144 : 128,
-                Kd = 237 === Wd ? 159 : 244 === Wd ? 143 : 191,
-                hd = 1;
-              for (; hd <= Fd; hd++) {
-                const md = dd + hd < Od.length ? Od[dd + hd] : 0;
-                if (md < Xd || md > Kd) break;
-                Rd = Rd << 6 | 63 & md, Xd = 128, Kd = 191
+              let Vb = 224 === eb ? 160 : 240 === eb ? 144 : 128,
+                gb = 237 === eb ? 159 : 244 === eb ? 143 : 191,
+                lb = 1;
+              for (; lb <= Hb; lb++) {
+                const Mb = bb + lb < wb.length ? wb[bb + lb] : 0;
+                if (Mb < Vb || Mb > gb) break;
+                pb = pb << 6 | 63 & Mb, Vb = 128, gb = 191
               }
-              dd += hd, hd <= Fd ? md.push(65533) : Rd >= 65536 ? (Rd -= 65536, md.push(55296 | Rd >> 10, 56320 | 1023 & Rd)) : md.push(Rd)
+              bb += lb, lb <= Hb ? Mb.push(65533) : pb >= 65536 ? (pb -= 65536, Mb.push(55296 | pb >> 10, 56320 | 1023 & pb)) : Mb.push(pb)
             }
           } else {
-            const dd = "utf-16le" === this.encoding,
-              Wd = dd ? 255 : 254,
-              Fd = dd ? 254 : 255;
-            let Rd = Od.length >= 2 && Od[0] === Wd && Od[1] === Fd ? 2 : 0;
-            for (; Rd + 1 < Od.length;) {
-              const Wd = dd ? Od[Rd] | Od[Rd + 1] << 8 : Od[Rd] << 8 | Od[Rd + 1];
-              if (Rd += 2, Wd >= 55296 && Wd <= 56319) {
-                const Fd = Rd + 1 < Od.length ? dd ? Od[Rd] | Od[Rd + 1] << 8 : Od[Rd] << 8 | Od[Rd + 1] : -1;
-                Fd >= 56320 && Fd <= 57343 ? (md.push(Wd, Fd), Rd += 2) : md.push(65533)
-              } else Wd >= 56320 && Wd <= 57343 ? md.push(65533) : md.push(Wd)
+            const bb = "utf-16le" === this.encoding,
+              eb = bb ? 255 : 254,
+              Hb = bb ? 254 : 255;
+            let pb = wb.length >= 2 && wb[0] === eb && wb[1] === Hb ? 2 : 0;
+            for (; pb + 1 < wb.length;) {
+              const eb = bb ? wb[pb] | wb[pb + 1] << 8 : wb[pb] << 8 | wb[pb + 1];
+              if (pb += 2, eb >= 55296 && eb <= 56319) {
+                const Hb = pb + 1 < wb.length ? bb ? wb[pb] | wb[pb + 1] << 8 : wb[pb] << 8 | wb[pb + 1] : -1;
+                Hb >= 56320 && Hb <= 57343 ? (Mb.push(eb, Hb), pb += 2) : Mb.push(65533)
+              } else eb >= 56320 && eb <= 57343 ? Mb.push(65533) : Mb.push(eb)
             }
-            Rd < Od.length && md.push(65533)
+            pb < wb.length && Mb.push(65533)
           }
-          let Wd = "";
-          for (let Fd = 0; Fd < md.length; Fd += 8192) Wd += String.fromCharCode(...md.slice(Fd, Fd + 8192));
-          return Wd
+          let eb = "";
+          for (let Hb = 0; Hb < Mb.length; Hb += 8192) eb += String.fromCharCode(...Mb.slice(Hb, Hb + 8192));
+          return eb
         }
       },
-      xd = new Ud,
-      Bd = new Jd,
-      Sd = dd => {
-        for (let Od = 0; Od < dd.length; Od++) {
-          if (dd.charCodeAt(Od) > 255) return !1
+      rb = new Kb,
+      Rb = new jb,
+      Db = bb => {
+        for (let wb = 0; wb < bb.length; wb++) {
+          if (bb.charCodeAt(wb) > 255) return !1
         }
         return !0
       },
-      sd = {
+      cb = {
         bt709: 1,
         bt470bg: 5,
         smpte170m: 6,
         bt2020: 9,
         smpte432: 12
       },
-      ud = {
+      Yb = {
         bt709: 1,
         smpte170m: 6,
         linear: 8,
@@ -3196,148 +3196,148 @@ export const modules = {
         pq: 16,
         hlg: 18
       },
-      Vd = {
+      Zb = {
         rgb: 0,
         bt709: 1,
         bt470bg: 5,
         smpte170m: 6,
         "bt2020-ncl": 9
       },
-      Ad = dd => !dd || null == dd.primaries && null == dd.transfer && null == dd.matrix && null == dd.fullRange,
-      rd = dd => dd instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && dd instanceof SharedArrayBuffer || ArrayBuffer.isView(dd);
-    class Gd {
+      fb = bb => !bb || null == bb.primaries && null == bb.transfer && null == bb.matrix && null == bb.fullRange,
+      Ab = bb => bb instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && bb instanceof SharedArrayBuffer || ArrayBuffer.isView(bb);
+    class Wb {
       constructor() {
         this.currentPromise = Promise.resolve(), this.pending = 0
       }
       async acquire() {
-        let dd;
-        const Od = new Promise((Od => {
-            let md = !1;
-            dd = () => {
-              md || (Od(), this.pending--, md = !0)
+        let bb;
+        const wb = new Promise((wb => {
+            let Mb = !1;
+            bb = () => {
+              Mb || (wb(), this.pending--, Mb = !0)
             }
           })),
-          md = this.currentPromise;
-        return this.currentPromise = Od, this.pending++, await md, dd
+          Mb = this.currentPromise;
+        return this.currentPromise = wb, this.pending++, await Mb, bb
       }
     }
-    const nd = dd => [...dd].map((dd => dd.toString(16).padStart(2, "0"))).join(""),
-      Ld = dd => (dd = (dd = (dd = (dd = (dd = dd >> 1 & 1431655765 | (1431655765 & dd) << 1) >> 2 & 858993459 | (858993459 & dd) << 2) >> 4 & 252645135 | (252645135 & dd) << 4) >> 8 & 16711935 | (16711935 & dd) << 8) >> 16 & 65535 | (65535 & dd) << 16) >>> 0,
-      Pd = (dd, Od, md) => {
-        let Wd = 0,
-          Fd = dd.length - 1,
-          Rd = -1;
-        for (; Wd <= Fd;) {
-          const Xd = Wd + (Fd - Wd + 1) / 2 | 0;
-          md(dd[Xd]) <= Od ? (Rd = Xd, Wd = Xd + 1) : Fd = Xd - 1
+    const Jb = bb => [...bb].map((bb => bb.toString(16).padStart(2, "0"))).join(""),
+      Sb = bb => (bb = (bb = (bb = (bb = (bb = bb >> 1 & 1431655765 | (1431655765 & bb) << 1) >> 2 & 858993459 | (858993459 & bb) << 2) >> 4 & 252645135 | (252645135 & bb) << 4) >> 8 & 16711935 | (16711935 & bb) << 8) >> 16 & 65535 | (65535 & bb) << 16) >>> 0,
+      Nb = (bb, wb, Mb) => {
+        let eb = 0,
+          Hb = bb.length - 1,
+          pb = -1;
+        for (; eb <= Hb;) {
+          const Vb = eb + (Hb - eb + 1) / 2 | 0;
+          Mb(bb[Vb]) <= wb ? (pb = Vb, eb = Vb + 1) : Hb = Vb - 1
         }
-        return Rd
+        return pb
       },
-      zd = () => {
-        let dd, Od;
+      vb = () => {
+        let bb, wb;
         return {
-          promise: new Promise(((md, Wd) => {
-            dd = md, Od = Wd
+          promise: new Promise(((Mb, eb) => {
+            bb = Mb, wb = eb
           })),
-          resolve: dd,
-          reject: Od
+          resolve: bb,
+          reject: wb
         }
       },
-      cd = (dd, Od) => {
-        for (let md = dd.length - 1; md >= 0; md--)
-          if (Od(dd[md])) return md;
+      Qb = (bb, wb) => {
+        for (let Mb = bb.length - 1; Mb >= 0; Mb--)
+          if (wb(bb[Mb])) return Mb;
         return -1
       },
-      jd = dd => {
-        throw new Error(`Unexpected value: ${dd}`)
+      Gb = bb => {
+        throw new Error(`Unexpected value: ${bb}`)
       },
-      Dd = (dd, Od, md) => {
-        const Wd = dd.getUint8(Od),
-          Fd = dd.getUint8(Od + 1),
-          Rd = dd.getUint8(Od + 2);
-        return md ? Wd | Fd << 8 | Rd << 16 : Wd << 16 | Fd << 8 | Rd
+      qb = (bb, wb, Mb) => {
+        const eb = bb.getUint8(wb),
+          Hb = bb.getUint8(wb + 1),
+          pb = bb.getUint8(wb + 2);
+        return Mb ? eb | Hb << 8 | pb << 16 : eb << 16 | Hb << 8 | pb
       },
-      ed = (dd, Od, md, Wd) => {
-        md >>>= 0, md &= 16777215, Wd ? (dd.setUint8(Od, 255 & md), dd.setUint8(Od + 1, md >>> 8 & 255), dd.setUint8(Od + 2, md >>> 16 & 255)) : (dd.setUint8(Od, md >>> 16 & 255), dd.setUint8(Od + 1, md >>> 8 & 255), dd.setUint8(Od + 2, 255 & md))
+      ab = (bb, wb, Mb, eb) => {
+        Mb >>>= 0, Mb &= 16777215, eb ? (bb.setUint8(wb, 255 & Mb), bb.setUint8(wb + 1, Mb >>> 8 & 255), bb.setUint8(wb + 2, Mb >>> 16 & 255)) : (bb.setUint8(wb, Mb >>> 16 & 255), bb.setUint8(wb + 1, Mb >>> 8 & 255), bb.setUint8(wb + 2, 255 & Mb))
       },
-      Id = (dd, Od, md, Wd) => {
-        (md = Cd(md, -8388608, 8388607)) < 0 && (md = md + 16777216 & 16777215), ed(dd, Od, md, Wd)
+      ib = (bb, wb, Mb, eb) => {
+        (Mb = db(Mb, -8388608, 8388607)) < 0 && (Mb = Mb + 16777216 & 16777215), ab(bb, wb, Mb, eb)
       },
-      ld = (dd, Od, md, Wd) => {
-        Wd ? (dd.setUint32(Od + 0, md, !0), dd.setInt32(Od + 4, Math.floor(md / 2 ** 32), !0)) : (dd.setInt32(Od + 0, Math.floor(md / 2 ** 32), !0), dd.setUint32(Od + 4, md, !0))
+      ub = (bb, wb, Mb, eb) => {
+        eb ? (bb.setUint32(wb + 0, Mb, !0), bb.setInt32(wb + 4, Math.floor(Mb / 2 ** 32), !0)) : (bb.setInt32(wb + 0, Math.floor(Mb / 2 ** 32), !0), bb.setUint32(wb + 4, Mb, !0))
       },
-      Cd = (dd, Od, md) => Math.max(Od, Math.min(md, dd)),
-      Zd = (dd, Od, md) => dd + (Od - dd) * md,
-      kd = (dd, Od) => dd - Math.floor(dd / Od) * Od,
-      fd = "und",
-      Md = (dd, Od) => Math.round(dd / Od) * Od,
-      dO = (dd, Od) => Math.round(dd * Od) / Od,
-      OO = (dd, Od) => Math.floor(dd * Od) / Od,
-      mO = dd => {
-        let Od = 0;
-        for (; dd;) Od++, dd >>= 1;
-        return Od
+      db = (bb, wb, Mb) => Math.max(wb, Math.min(Mb, bb)),
+      Pb = (bb, wb, Mb) => bb + (wb - bb) * Mb,
+      nb = (bb, wb) => bb - Math.floor(bb / wb) * wb,
+      yb = "und",
+      ob = (bb, wb) => Math.round(bb / wb) * wb,
+      Tb = (bb, wb) => Math.round(bb * wb) / wb,
+      kb = (bb, wb) => Math.floor(bb * wb) / wb,
+      bw = bb => {
+        let wb = 0;
+        for (; bb;) wb++, bb >>= 1;
+        return wb
       },
-      WO = dd => {
-        let Od = 0;
-        for (; 0 !== dd;) dd &= dd - 1, Od++;
-        return Od
+      ww = bb => {
+        let wb = 0;
+        for (; 0 !== bb;) bb &= bb - 1, wb++;
+        return wb
       },
-      FO = /^[a-z]{3}$/,
-      RO = dd => FO.test(dd),
-      XO = 1e6 * (1 + Number.EPSILON),
-      KO = (dd, Od) => {
-        const md = dd < 0 ? -1 : 1;
-        let Wd = 0,
-          Fd = 1,
-          Rd = 1,
-          Xd = 0,
-          Kd = dd = Math.abs(dd);
+      Mw = /^[a-z]{3}$/,
+      ew = bb => Mw.test(bb),
+      Hw = 1e6 * (1 + Number.EPSILON),
+      pw = (bb, wb) => {
+        const Mb = bb < 0 ? -1 : 1;
+        let eb = 0,
+          Hb = 1,
+          pb = 1,
+          Vb = 0,
+          gb = bb = Math.abs(bb);
         for (;;) {
-          const dd = Math.floor(Kd),
-            hd = dd * Rd + Wd,
-            vd = dd * Xd + Fd;
-          if (vd > Od) return {
-            num: md * Rd,
-            den: Xd
+          const bb = Math.floor(gb),
+            lb = bb * pb + eb,
+            Lb = bb * Vb + Hb;
+          if (Lb > wb) return {
+            num: Mb * pb,
+            den: Vb
           };
-          if (Wd = Rd, Fd = Xd, Rd = hd, Xd = vd, Kd = 1 / (Kd - dd), !isFinite(Kd)) break
+          if (eb = pb, Hb = Vb, pb = lb, Vb = Lb, gb = 1 / (gb - bb), !isFinite(gb)) break
         }
         return {
-          num: md * Rd,
-          den: Xd
+          num: Mb * pb,
+          den: Vb
         }
       };
-    class hO {
+    class Vw {
       constructor() {
         this.currentPromise = Promise.resolve()
       }
-      call(dd) {
-        return this.currentPromise = this.currentPromise.then(dd)
+      call(bb) {
+        return this.currentPromise = this.currentPromise.then(bb)
       }
     }
-    let vO = null;
-    const QO = () => null !== vO ? vO : vO = !("undefined" === typeof navigator || !(navigator.vendor?.match(/apple/i) || /AppleWebKit/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent) || /\b(iPad|iPhone|iPod)\b/.test(navigator.userAgent)));
-    let tO = null;
-    const oO = () => null !== tO ? tO : tO = "undefined" !== typeof navigator && navigator.userAgent?.includes("Firefox");
-    let NO = null;
-    const qO = () => null !== NO ? NO : NO = !("undefined" === typeof navigator || !navigator.vendor?.includes("Google Inc") && !/Chrome/.test(navigator.userAgent));
-    const HO = dd => "undefined" === typeof globalThis.isSecureContext || globalThis.isSecureContext ? `${dd} is not available in this environment.` : `${dd} is not available in this environment; this may be because this page is running in an insecure context. Try serving your page over HTTPS or use localhost.`,
-      yO = dd => dd instanceof DOMException && "QuotaExceededError" === dd.name && /reclaimed/i.test(dd.message),
-      bO = (async () => {})().constructor,
-      TO = dd => dd instanceof bO || dd instanceof Promise || "function" === typeof dd?.then,
-      pO = (dd, Od) => -1 !== dd ? dd : Od,
-      YO = function*(dd) {
-        for (const Od in dd) {
-          const md = dd[Od];
-          void 0 !== md && (yield {
-            key: Od,
-            value: md
+    let gw = null;
+    const lw = () => null !== gw ? gw : gw = !("undefined" === typeof navigator || !(navigator.vendor?.match(/apple/i) || /AppleWebKit/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent) || /\b(iPad|iPhone|iPod)\b/.test(navigator.userAgent)));
+    let Lw = null;
+    const Iw = () => null !== Lw ? Lw : Lw = "undefined" !== typeof navigator && navigator.userAgent?.includes("Firefox");
+    let Ow = null;
+    const Uw = () => null !== Ow ? Ow : Ow = !("undefined" === typeof navigator || !navigator.vendor?.includes("Google Inc") && !/Chrome/.test(navigator.userAgent));
+    const tw = bb => "undefined" === typeof globalThis.isSecureContext || globalThis.isSecureContext ? `${bb} is not available in this environment.` : `${bb} is not available in this environment; this may be because this page is running in an insecure context. Try serving your page over HTTPS or use localhost.`,
+      Cw = bb => bb instanceof DOMException && "QuotaExceededError" === bb.name && /reclaimed/i.test(bb.message),
+      Ew = (async () => {})().constructor,
+      Fw = bb => bb instanceof Ew || bb instanceof Promise || "function" === typeof bb?.then,
+      Bw = (bb, wb) => -1 !== bb ? bb : wb,
+      sw = function*(bb) {
+        for (const wb in bb) {
+          const Mb = bb[wb];
+          void 0 !== Mb && (yield {
+            key: wb,
+            value: Mb
           })
         }
       },
-      gO = dd => {
-        switch (dd.toLowerCase()) {
+      mw = bb => {
+        switch (bb.toLowerCase()) {
           case "image/jpeg":
           case "image/jpg":
             return ".jpg";
@@ -3362,218 +3362,218 @@ export const modules = {
             return null
         }
       },
-      wO = dd => {
-        let Od = "";
-        for (let md = 0; md < dd.length; md++) Od += String.fromCharCode(dd[md]);
-        return btoa(Od)
+      hw = bb => {
+        let wb = "";
+        for (let Mb = 0; Mb < bb.length; Mb++) wb += String.fromCharCode(bb[Mb]);
+        return btoa(wb)
       },
-      aO = (dd, Od) => {
-        if (dd.length !== Od.length) return !1;
-        for (let md = 0; md < dd.length; md++)
-          if (dd[md] !== Od[md]) return !1;
+      zw = (bb, wb) => {
+        if (bb.length !== wb.length) return !1;
+        for (let Mb = 0; Mb < bb.length; Mb++)
+          if (bb[Mb] !== wb[Mb]) return !1;
         return !0
       },
-      EO = () => {
+      Xw = () => {
         Symbol.dispose ??= Symbol("Symbol.dispose")
       },
-      JO = dd => "number" === typeof dd && !Number.isNaN(dd),
-      UO = (dd, Od) => {
-        if (Od.includes("://")) return Od;
-        if (dd.includes("://")) {
-          const Od = dd.indexOf("?"); - 1 !== Od && (dd = dd.slice(0, Od))
+      xw = bb => "number" === typeof bb && !Number.isNaN(bb),
+      jw = (bb, wb) => {
+        if (wb.includes("://")) return wb;
+        if (bb.includes("://")) {
+          const wb = bb.indexOf("?"); - 1 !== wb && (bb = bb.slice(0, wb))
         }
-        let md;
-        if (Od.startsWith("/")) {
-          const Wd = dd.indexOf("://");
-          if (-1 === Wd) md = Od;
+        let Mb;
+        if (wb.startsWith("/")) {
+          const eb = bb.indexOf("://");
+          if (-1 === eb) Mb = wb;
           else {
-            const Fd = dd.indexOf("/", Wd + 3);
-            md = -1 === Fd ? dd + Od : dd.slice(0, Fd) + Od
+            const Hb = bb.indexOf("/", eb + 3);
+            Mb = -1 === Hb ? bb + wb : bb.slice(0, Hb) + wb
           }
         } else {
-          const Wd = dd.lastIndexOf("/");
-          md = -1 === Wd ? Od : dd.slice(0, Wd + 1) + Od
+          const eb = bb.lastIndexOf("/");
+          Mb = -1 === eb ? wb : bb.slice(0, eb + 1) + wb
         }
-        let Wd = "";
-        const Fd = md.indexOf("://");
-        if (-1 !== Fd) {
-          const dd = md.indexOf("/", Fd + 3); - 1 !== dd && (Wd = md.slice(0, dd), md = md.slice(dd))
+        let eb = "";
+        const Hb = Mb.indexOf("://");
+        if (-1 !== Hb) {
+          const bb = Mb.indexOf("/", Hb + 3); - 1 !== bb && (eb = Mb.slice(0, bb), Mb = Mb.slice(bb))
         }
-        const Rd = md.split("/"),
-          Xd = [];
-        for (const Kd of Rd) ".." === Kd ? Xd.pop() : "." !== Kd && Xd.push(Kd);
-        return Wd + Xd.join("/")
+        const pb = Mb.split("/"),
+          Vb = [];
+        for (const gb of pb) ".." === gb ? Vb.pop() : "." !== gb && Vb.push(gb);
+        return eb + Vb.join("/")
       },
-      xO = (dd, Od) => {
-        let md = -1,
-          Wd = 1 / 0;
-        for (let Fd = 0; Fd < dd.length; Fd++) {
-          const Rd = Od(dd[Fd]);
-          Rd < Wd && (Wd = Rd, md = Fd)
+      Kw = (bb, wb) => {
+        let Mb = -1,
+          eb = 1 / 0;
+        for (let Hb = 0; Hb < bb.length; Hb++) {
+          const pb = wb(bb[Hb]);
+          pb < eb && (eb = pb, Mb = Hb)
         }
-        return md
+        return Mb
       },
-      BO = (dd, Od) => {
-        let md = -1,
-          Wd = -1 / 0;
-        for (let Fd = 0; Fd < dd.length; Fd++) {
-          const Rd = Od(dd[Fd]);
-          Rd > Wd && (Wd = Rd, md = Fd)
+      rw = (bb, wb) => {
+        let Mb = -1,
+          eb = -1 / 0;
+        for (let Hb = 0; Hb < bb.length; Hb++) {
+          const pb = wb(bb[Hb]);
+          pb > eb && (eb = pb, Mb = Hb)
         }
-        return md
+        return Mb
       },
-      SO = dd => {
-        Wd(Number.isInteger(dd.num)), Wd(Number.isInteger(dd.den)), Wd(0 !== dd.den);
-        let Od = Math.abs(dd.num),
-          md = Math.abs(dd.den);
-        for (; 0 !== md;) {
-          const dd = Od % md;
-          Od = md, md = dd
+      Rw = bb => {
+        eb(Number.isInteger(bb.num)), eb(Number.isInteger(bb.den)), eb(0 !== bb.den);
+        let wb = Math.abs(bb.num),
+          Mb = Math.abs(bb.den);
+        for (; 0 !== Mb;) {
+          const bb = wb % Mb;
+          wb = Mb, Mb = bb
         }
-        const Fd = Od || 1;
+        const Hb = wb || 1;
         return {
-          num: dd.num / Fd,
-          den: dd.den / Fd
+          num: bb.num / Hb,
+          den: bb.den / Hb
         }
       },
-      sO = (dd, Od) => {
-        if ("object" !== typeof dd || !dd) throw new TypeError(`${Od} must be an object.`);
-        if (!Number.isInteger(dd.left) || dd.left < 0) throw new TypeError(`${Od}.left must be a non-negative integer.`);
-        if (!Number.isInteger(dd.top) || dd.top < 0) throw new TypeError(`${Od}.top must be a non-negative integer.`);
-        if (!Number.isInteger(dd.width) || dd.width < 0) throw new TypeError(`${Od}.width must be a non-negative integer.`);
-        if (!Number.isInteger(dd.height) || dd.height < 0) throw new TypeError(`${Od}.height must be a non-negative integer.`)
+      Dw = (bb, wb) => {
+        if ("object" !== typeof bb || !bb) throw new TypeError(`${wb} must be an object.`);
+        if (!Number.isInteger(bb.left) || bb.left < 0) throw new TypeError(`${wb}.left must be a non-negative integer.`);
+        if (!Number.isInteger(bb.top) || bb.top < 0) throw new TypeError(`${wb}.top must be a non-negative integer.`);
+        if (!Number.isInteger(bb.width) || bb.width < 0) throw new TypeError(`${wb}.width must be a non-negative integer.`);
+        if (!Number.isInteger(bb.height) || bb.height < 0) throw new TypeError(`${wb}.height must be a non-negative integer.`)
       };
-    let uO, VO = 1;
-    const iO = new Map,
-      AO = new Map,
-      rO = () => "undefined" === typeof window,
-      GO = () => {
-        const dd = new Map,
-          Od = new Map;
-        self.onmessage = md => {
-          const Wd = md.data;
-          switch (Wd.type) {
+    let Yw, Zw = 1;
+    const fw = new Map,
+      Aw = new Map,
+      Ww = () => "undefined" === typeof window,
+      Jw = () => {
+        const bb = new Map,
+          wb = new Map;
+        self.onmessage = Mb => {
+          const eb = Mb.data;
+          switch (eb.type) {
             case "set-timeout": {
-              const Od = setTimeout((() => {
-                dd.delete(Wd.timerId), self.postMessage({
+              const wb = setTimeout((() => {
+                bb.delete(eb.timerId), self.postMessage({
                   type: "fire",
-                  timerId: Wd.timerId
+                  timerId: eb.timerId
                 })
-              }), Wd.delay);
-              dd.set(Wd.timerId, Od)
+              }), eb.delay);
+              bb.set(eb.timerId, wb)
             }
             break;
             case "set-interval": {
-              const dd = setInterval((() => {
+              const bb = setInterval((() => {
                 self.postMessage({
                   type: "fire",
-                  timerId: Wd.timerId
+                  timerId: eb.timerId
                 })
-              }), Wd.delay);
-              Od.set(Wd.timerId, dd)
+              }), eb.delay);
+              wb.set(eb.timerId, bb)
             }
             break;
             case "clear-timeout": {
-              const Od = dd.get(Wd.timerId);
-              void 0 !== Od && (clearTimeout(Od), dd.delete(Wd.timerId))
+              const wb = bb.get(eb.timerId);
+              void 0 !== wb && (clearTimeout(wb), bb.delete(eb.timerId))
             }
             break;
             case "clear-interval": {
-              const dd = Od.get(Wd.timerId);
-              void 0 !== dd && (clearInterval(dd), Od.delete(Wd.timerId))
+              const bb = wb.get(eb.timerId);
+              void 0 !== bb && (clearInterval(bb), wb.delete(eb.timerId))
             }
           }
         }
       },
-      nO = () => {
-        if (uO) return uO;
-        const dd = `(${GO.toString()})();`,
-          Od = URL.createObjectURL(new Blob([dd], {
+      Sw = () => {
+        if (Yw) return Yw;
+        const bb = `(${Jw.toString()})();`,
+          wb = URL.createObjectURL(new Blob([bb], {
             type: "text/javascript"
           }));
-        return uO = new Worker(Od), URL.revokeObjectURL(Od), uO.onmessage = dd => {
-          const Od = dd.data,
-            md = iO.get(Od.timerId);
-          if (md) return iO.delete(Od.timerId), void md();
-          const Wd = AO.get(Od.timerId);
-          Wd && Wd()
-        }, uO
+        return Yw = new Worker(wb), URL.revokeObjectURL(wb), Yw.onmessage = bb => {
+          const wb = bb.data,
+            Mb = fw.get(wb.timerId);
+          if (Mb) return fw.delete(wb.timerId), void Mb();
+          const eb = Aw.get(wb.timerId);
+          eb && eb()
+        }, Yw
       },
-      LO = (dd, Od) => {
-        if (rO()) return {
-          id: setInterval(dd, Od)
+      Nw = (bb, wb) => {
+        if (Ww()) return {
+          id: setInterval(bb, wb)
         };
-        const md = VO++;
-        return AO.set(md, (() => {
-          dd()
-        })), nO().postMessage({
+        const Mb = Zw++;
+        return Aw.set(Mb, (() => {
+          bb()
+        })), Sw().postMessage({
           type: "set-interval",
-          timerId: md,
-          delay: Od
+          timerId: Mb,
+          delay: wb
         }), {
-          id: md
+          id: Mb
         }
       },
-      PO = dd => {
-        rO() ? clearInterval(dd.id) : (Wd("number" === typeof dd.id), AO.delete(dd.id), nO().postMessage({
+      vw = bb => {
+        Ww() ? clearInterval(bb.id) : (eb("number" === typeof bb.id), Aw.delete(bb.id), Sw().postMessage({
           type: "clear-interval",
-          timerId: dd.id
+          timerId: bb.id
         }))
       },
-      zO = dd => new Promise((Od => setTimeout(Od, dd))),
-      cO = dd => Array.isArray(dd) ? dd : [dd];
-    class jO {
+      Qw = bb => new Promise((wb => setTimeout(wb, bb))),
+      Gw = bb => Array.isArray(bb) ? bb : [bb];
+    class qw {
       constructor() {
         this._listeners = new Map
       }
-      on(dd, Od, md) {
-        this._listeners.has(dd) || this._listeners.set(dd, new Set);
-        const Wd = {
-          Ot: Od,
-          once: md?.once ?? !1
+      on(bb, wb, Mb) {
+        this._listeners.has(bb) || this._listeners.set(bb, new Set);
+        const eb = {
+          kI: wb,
+          once: Mb?.once ?? !1
         };
-        return this._listeners.get(dd).add(Wd), () => {
-          this._listeners.get(dd)?.delete(Wd)
+        return this._listeners.get(bb).add(eb), () => {
+          this._listeners.get(bb)?.delete(eb)
         }
       }
       _emit() {
-        for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
-        const [Wd, Fd] = Od, Rd = this._listeners.get(Wd);
-        if (Rd)
-          for (const Kd of Rd) {
+        for (var bb = arguments.length, wb = new Array(bb), Mb = 0; Mb < bb; Mb++) wb[Mb] = arguments[Mb];
+        const [eb, Hb] = wb, pb = this._listeners.get(eb);
+        if (pb)
+          for (const gb of pb) {
             try {
-              Kd.Ot(Fd)
-            } catch (Xd) {
-              console.error(Xd)
+              gb.kI(Hb)
+            } catch (Vb) {
+              console.error(Vb)
             }
-            Kd.once && Rd.delete(Kd)
+            gb.once && pb.delete(gb)
           }
       }
     }
-    const DO = dd => null !== dd && "object" === typeof dd && Object.getPrototypeOf(dd) === Object.prototype && Object.values(dd).every((dd => "string" === typeof dd))
+    const aw = bb => null !== bb && "object" === typeof bb && Object.getPrototypeOf(bb) === Object.prototype && Object.values(bb).every((bb => "string" === typeof bb))
   },
-  41498: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Lm,
-      d: () => Pm,
-      h: () => nm,
-      l: () => rm,
-      n: () => cm
+  41258: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => SM,
+      f: () => NM,
+      g: () => JM,
+      i: () => AM,
+      m: () => QM
     });
-    var Wd = md(41503),
-      Fd = md(41513);
-    var Rd;
-    ! function(dd) {
-      dd[dd.FrameCount = 1] = "FrameCount", dd[dd.FileSize = 2] = "FileSize", dd[dd.Toc = 4] = "Toc"
-    }(Rd || (Rd = {}));
-    var Xd = md(41526),
-      Kd = md(41487);
-    class hd {
-      constructor(dd, Od, md, Wd, Fd) {
-        this.bytes = dd, this.view = Od, this.offset = md, this.start = Wd, this.end = Fd, this.bufferPos = Wd - md
+    var eb = Mb(41264),
+      Hb = Mb(41281);
+    var pb;
+    ! function(bb) {
+      bb[bb.FrameCount = 1] = "FrameCount", bb[bb.FileSize = 2] = "FileSize", bb[bb.Toc = 4] = "Toc"
+    }(pb || (pb = {}));
+    var Vb = Mb(41287),
+      gb = Mb(41244);
+    class lb {
+      constructor(bb, wb, Mb, eb, Hb) {
+        this.bytes = bb, this.view = wb, this.offset = Mb, this.start = eb, this.end = Hb, this.bufferPos = eb - Mb
       }
-      static tempFromBytes(dd) {
-        return new hd(dd, (0, Kd.sd)(dd), 0, 0, dd.length)
+      static tempFromBytes(bb) {
+        return new lb(bb, (0, gb.kd)(bb), 0, 0, bb.length)
       }
       get length() {
         return this.end - this.start
@@ -3581,501 +3581,501 @@ export const modules = {
       get filePos() {
         return this.offset + this.bufferPos
       }
-      set filePos(dd) {
-        this.bufferPos = dd - this.offset
+      set filePos(bb) {
+        this.bufferPos = bb - this.offset
       }
       get remainingLength() {
         return Math.max(this.end - this.filePos, 0)
       }
-      skip(dd) {
-        this.bufferPos += dd
+      skip(bb) {
+        this.bufferPos += bb
       }
-      slice(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.end - dd;
-        if (dd < this.start || dd + Od > this.end) throw new RangeError("Slicing outside of original slice.");
-        return new hd(this.bytes, this.view, this.offset, dd, dd + Od)
+      slice(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.end - bb;
+        if (bb < this.start || bb + wb > this.end) throw new RangeError("Slicing outside of original slice.");
+        return new lb(this.bytes, this.view, this.offset, bb, bb + wb)
       }
     }
-    const vd = (dd, Od) => {
-        if (dd.filePos < dd.start || dd.filePos + Od > dd.end) throw new RangeError(`Tried reading [${dd.filePos}, ${dd.filePos+Od}), but slice is [${dd.start}, ${dd.end}). This is likely an internal error, please report it alongside the file that caused it.`)
+    const Lb = (bb, wb) => {
+        if (bb.filePos < bb.start || bb.filePos + wb > bb.end) throw new RangeError(`Tried reading [${bb.filePos}, ${bb.filePos+wb}), but slice is [${bb.start}, ${bb.end}). This is likely an internal error, please report it alongside the file that caused it.`)
       },
-      Qd = (dd, Od) => {
-        vd(dd, Od);
-        const md = dd.bytes.subarray(dd.bufferPos, dd.bufferPos + Od);
-        return dd.bufferPos += Od, md
+      Ib = (bb, wb) => {
+        Lb(bb, wb);
+        const Mb = bb.bytes.subarray(bb.bufferPos, bb.bufferPos + wb);
+        return bb.bufferPos += wb, Mb
       };
-    var td, od;
-    ! function(dd) {
-      dd[dd.Unsynchronisation = 128] = "Unsynchronisation", dd[dd.ExtendedHeader = 64] = "ExtendedHeader", dd[dd.ExperimentalIndicator = 32] = "ExperimentalIndicator", dd[dd.Footer = 16] = "Footer"
-    }(td || (td = {})),
-    function(dd) {
-      dd[dd.ISO_8859_1 = 0] = "ISO_8859_1", dd[dd.UTF_16_WITH_BOM = 1] = "UTF_16_WITH_BOM", dd[dd.UTF_16_BE_NO_BOM = 2] = "UTF_16_BE_NO_BOM", dd[dd.UTF_8 = 3] = "UTF_8"
-    }(od || (od = {}));
-    var Nd = md(41491);
-    class qd {
-      constructor(dd) {
-        this.mutex = new Kd.c, this.trackTimestampInfo = new WeakMap, this.output = dd
+    var Ob, Ub;
+    ! function(bb) {
+      bb[bb.Unsynchronisation = 128] = "Unsynchronisation", bb[bb.ExtendedHeader = 64] = "ExtendedHeader", bb[bb.ExperimentalIndicator = 32] = "ExperimentalIndicator", bb[bb.Footer = 16] = "Footer"
+    }(Ob || (Ob = {})),
+    function(bb) {
+      bb[bb.ISO_8859_1 = 0] = "ISO_8859_1", bb[bb.UTF_16_WITH_BOM = 1] = "UTF_16_WITH_BOM", bb[bb.UTF_16_BE_NO_BOM = 2] = "UTF_16_BE_NO_BOM", bb[bb.UTF_8 = 3] = "UTF_8"
+    }(Ub || (Ub = {}));
+    var tb = Mb(41252);
+    class Cb {
+      constructor(bb) {
+        this.mutex = new gb.d, this.trackTimestampInfo = new WeakMap, this.output = bb
       }
-      onTrackClose(dd) {}
-      validateTimestamp(dd, Od, md) {
-        let Wd = this.trackTimestampInfo.get(dd);
-        if (Wd) {
-          if (md && (Wd.maxTimestampBeforeLastKeyPacket = Wd.maxTimestamp), null !== Wd.maxTimestampBeforeLastKeyPacket && Od < Wd.maxTimestampBeforeLastKeyPacket) throw new Error(`Timestamps cannot be smaller than the largest timestamp of the previous GOP (a GOP begins with a key packet and ends right before the next key packet). Got ${Od}s, but largest timestamp is ${Wd.maxTimestampBeforeLastKeyPacket}s.`);
-          Wd.maxTimestamp = Math.max(Wd.maxTimestamp, Od)
+      onTrackClose(bb) {}
+      validateTimestamp(bb, wb, Mb) {
+        let eb = this.trackTimestampInfo.get(bb);
+        if (eb) {
+          if (Mb && (eb.maxTimestampBeforeLastKeyPacket = eb.maxTimestamp), null !== eb.maxTimestampBeforeLastKeyPacket && wb < eb.maxTimestampBeforeLastKeyPacket) throw new Error(`Timestamps cannot be smaller than the largest timestamp of the previous GOP (a GOP begins with a key packet and ends right before the next key packet). Got ${wb}s, but largest timestamp is ${eb.maxTimestampBeforeLastKeyPacket}s.`);
+          eb.maxTimestamp = Math.max(eb.maxTimestamp, wb)
         } else {
-          if (!md) throw new Error("First packet must be a key packet.");
-          Wd = {
-            maxTimestamp: Od,
+          if (!Mb) throw new Error("First packet must be a key packet.");
+          eb = {
+            maxTimestamp: wb,
             maxTimestampBeforeLastKeyPacket: null
-          }, this.trackTimestampInfo.set(dd, Wd)
+          }, this.trackTimestampInfo.set(bb, eb)
         }
       }
     }
-    var Hd = md(41522),
-      yd = md(41506);
-    var bd = md(41537),
-      Td = md(41534);
-    class pd {
-      constructor(dd) {
-        this.writer = dd, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap
+    var Eb = Mb(41284),
+      Fb = Mb(41273);
+    var Bb = Mb(41303),
+      sb = Mb(41296);
+    class mb {
+      constructor(bb) {
+        this.writer = bb, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap
       }
-      writeU32(dd) {
-        this.helperView.setUint32(0, dd, !1), this.writer.write(this.helper.subarray(0, 4))
+      writeU32(bb) {
+        this.helperView.setUint32(0, bb, !1), this.writer.write(this.helper.subarray(0, 4))
       }
-      writeU64(dd) {
-        this.helperView.setUint32(0, Math.floor(dd / 2 ** 32), !1), this.helperView.setUint32(4, dd, !1), this.writer.write(this.helper.subarray(0, 8))
+      writeU64(bb) {
+        this.helperView.setUint32(0, Math.floor(bb / 2 ** 32), !1), this.helperView.setUint32(4, bb, !1), this.writer.write(this.helper.subarray(0, 8))
       }
-      writeAscii(dd) {
-        for (let Od = 0; Od < dd.length; Od++) this.helperView.setUint8(Od % 8, dd.charCodeAt(Od)), Od % 8 === 7 && this.writer.write(this.helper);
-        dd.length % 8 !== 0 && this.writer.write(this.helper.subarray(0, dd.length % 8))
+      writeAscii(bb) {
+        for (let wb = 0; wb < bb.length; wb++) this.helperView.setUint8(wb % 8, bb.charCodeAt(wb)), wb % 8 === 7 && this.writer.write(this.helper);
+        bb.length % 8 !== 0 && this.writer.write(this.helper.subarray(0, bb.length % 8))
       }
-      writeBox(dd) {
-        if (this.offsets.set(dd, this.writer.getPos()), dd.contents && !dd.children) this.writeBoxHeader(dd, dd.size ?? dd.contents.byteLength + 8), this.writer.write(dd.contents);
+      writeBox(bb) {
+        if (this.offsets.set(bb, this.writer.getPos()), bb.contents && !bb.children) this.writeBoxHeader(bb, bb.size ?? bb.contents.byteLength + 8), this.writer.write(bb.contents);
         else {
-          const Od = this.writer.getPos();
-          if (this.writeBoxHeader(dd, 0), dd.contents && this.writer.write(dd.contents), dd.children)
-            for (const Fd of dd.children) Fd && this.writeBox(Fd);
-          const md = this.writer.getPos(),
-            Wd = dd.size ?? md - Od;
-          this.writer.seek(Od), this.writeBoxHeader(dd, Wd), this.writer.seek(md)
+          const wb = this.writer.getPos();
+          if (this.writeBoxHeader(bb, 0), bb.contents && this.writer.write(bb.contents), bb.children)
+            for (const Hb of bb.children) Hb && this.writeBox(Hb);
+          const Mb = this.writer.getPos(),
+            eb = bb.size ?? Mb - wb;
+          this.writer.seek(wb), this.writeBoxHeader(bb, eb), this.writer.seek(Mb)
         }
       }
-      writeBoxHeader(dd, Od) {
-        this.writeU32(dd.largeSize ? 1 : Od), this.writeAscii(dd.type), dd.largeSize && this.writeU64(Od)
+      writeBoxHeader(bb, wb) {
+        this.writeU32(bb.largeSize ? 1 : wb), this.writeAscii(bb.type), bb.largeSize && this.writeU64(wb)
       }
-      measureBoxHeader(dd) {
-        return 8 + (dd.largeSize ? 8 : 0)
+      measureBoxHeader(bb) {
+        return 8 + (bb.largeSize ? 8 : 0)
       }
-      patchBox(dd) {
-        const Od = this.offsets.get(dd);
-        (0, Kd.M)(void 0 !== Od);
-        const md = this.writer.getPos();
-        this.writer.seek(Od), this.writeBox(dd), this.writer.seek(md)
+      patchBox(bb) {
+        const wb = this.offsets.get(bb);
+        (0, gb.L)(void 0 !== wb);
+        const Mb = this.writer.getPos();
+        this.writer.seek(wb), this.writeBox(bb), this.writer.seek(Mb)
       }
-      measureBox(dd) {
-        if (dd.contents && !dd.children) {
-          return this.measureBoxHeader(dd) + dd.contents.byteLength
+      measureBox(bb) {
+        if (bb.contents && !bb.children) {
+          return this.measureBoxHeader(bb) + bb.contents.byteLength
         } {
-          let Od = this.measureBoxHeader(dd);
-          if (dd.contents && (Od += dd.contents.byteLength), dd.children)
-            for (const md of dd.children) md && (Od += this.measureBox(md));
-          return Od
+          let wb = this.measureBoxHeader(bb);
+          if (bb.contents && (wb += bb.contents.byteLength), bb.children)
+            for (const Mb of bb.children) Mb && (wb += this.measureBox(Mb));
+          return wb
         }
       }
     }
-    const Yd = new Uint8Array(8),
-      gd = new DataView(Yd.buffer),
-      wd = dd => [(dd % 256 + 256) % 256],
-      Ed = dd => (gd.setUint16(0, dd, !1), [Yd[0], Yd[1]]),
-      Jd = dd => (gd.setInt16(0, dd, !1), [Yd[0], Yd[1]]),
-      Ud = dd => (gd.setUint32(0, dd, !1), [Yd[1], Yd[2], Yd[3]]),
-      xd = dd => (gd.setUint32(0, dd, !1), [Yd[0], Yd[1], Yd[2], Yd[3]]),
-      Bd = dd => (gd.setInt32(0, dd, !1), [Yd[0], Yd[1], Yd[2], Yd[3]]),
-      Sd = dd => (gd.setUint32(0, Math.floor(dd / 2 ** 32), !1), gd.setUint32(4, dd, !1), [Yd[0], Yd[1], Yd[2], Yd[3], Yd[4], Yd[5], Yd[6], Yd[7]]),
-      sd = dd => (gd.setInt32(0, Math.floor(dd / 2 ** 32), !1), gd.setUint32(4, dd, !1), [Yd[0], Yd[1], Yd[2], Yd[3], Yd[4], Yd[5], Yd[6], Yd[7]]),
-      ud = dd => (gd.setInt16(0, 256 * dd, !1), [Yd[0], Yd[1]]),
-      Vd = dd => (gd.setInt32(0, 65536 * dd, !1), [Yd[0], Yd[1], Yd[2], Yd[3]]),
-      Ad = dd => (gd.setInt32(0, 2 ** 30 * dd, !1), [Yd[0], Yd[1], Yd[2], Yd[3]]),
-      rd = (dd, Od) => {
-        const md = [];
-        let Wd = dd;
+    const hb = new Uint8Array(8),
+      zb = new DataView(hb.buffer),
+      Xb = bb => [(bb % 256 + 256) % 256],
+      xb = bb => (zb.setUint16(0, bb, !1), [hb[0], hb[1]]),
+      jb = bb => (zb.setInt16(0, bb, !1), [hb[0], hb[1]]),
+      Kb = bb => (zb.setUint32(0, bb, !1), [hb[1], hb[2], hb[3]]),
+      rb = bb => (zb.setUint32(0, bb, !1), [hb[0], hb[1], hb[2], hb[3]]),
+      Rb = bb => (zb.setInt32(0, bb, !1), [hb[0], hb[1], hb[2], hb[3]]),
+      Db = bb => (zb.setUint32(0, Math.floor(bb / 2 ** 32), !1), zb.setUint32(4, bb, !1), [hb[0], hb[1], hb[2], hb[3], hb[4], hb[5], hb[6], hb[7]]),
+      cb = bb => (zb.setInt32(0, Math.floor(bb / 2 ** 32), !1), zb.setUint32(4, bb, !1), [hb[0], hb[1], hb[2], hb[3], hb[4], hb[5], hb[6], hb[7]]),
+      Yb = bb => (zb.setInt16(0, 256 * bb, !1), [hb[0], hb[1]]),
+      Zb = bb => (zb.setInt32(0, 65536 * bb, !1), [hb[0], hb[1], hb[2], hb[3]]),
+      fb = bb => (zb.setInt32(0, 2 ** 30 * bb, !1), [hb[0], hb[1], hb[2], hb[3]]),
+      Ab = (bb, wb) => {
+        const Mb = [];
+        let eb = bb;
         do {
-          let dd = 127 & Wd;
-          Wd >>= 7, md.length > 0 && (dd |= 128), md.push(dd), void 0 !== Od && Od--
-        } while (Wd > 0 || Od);
-        return md.reverse()
+          let bb = 127 & eb;
+          eb >>= 7, Mb.length > 0 && (bb |= 128), Mb.push(bb), void 0 !== wb && wb--
+        } while (eb > 0 || wb);
+        return Mb.reverse()
       },
-      Gd = function(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const md = Array(dd.length).fill(null).map(((Od, md) => dd.charCodeAt(md)));
-        return Od && md.push(0), md
+      Wb = function(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Mb = Array(bb.length).fill(null).map(((wb, Mb) => bb.charCodeAt(Mb)));
+        return wb && Mb.push(0), Mb
       },
-      nd = dd => [Vd(dd[0]), Vd(dd[1]), Ad(dd[2]), Vd(dd[3]), Vd(dd[4]), Ad(dd[5]), Vd(dd[6]), Vd(dd[7]), Ad(dd[8])],
-      Ld = (dd, Od, md) => ({
-        type: dd,
-        contents: Od && new Uint8Array(Od.flat(10)),
-        children: md
+      Jb = bb => [Zb(bb[0]), Zb(bb[1]), fb(bb[2]), Zb(bb[3]), Zb(bb[4]), fb(bb[5]), Zb(bb[6]), Zb(bb[7]), fb(bb[8])],
+      Sb = (bb, wb, Mb) => ({
+        type: bb,
+        contents: wb && new Uint8Array(wb.flat(10)),
+        children: Mb
       }),
-      Pd = (dd, Od, md, Wd, Fd) => Ld(dd, [wd(Od), Ud(md), Wd ?? []], Fd),
-      zd = () => Ld("styp", [Gd("iso5"), xd(0), Gd("iso5"), Gd("iso6"), Gd("mp41"), Gd("cmfc"), Gd("dash")]),
-      cd = (dd, Od) => {
-        const md = Math.max(0, dd.minWrittenTimestamp);
-        let Wd = Math.max(0, dd.maxWrittenEndTimestamp - md);
-        return Number.isFinite(Wd) || (Wd = 0), Pd("sidx", 1, 0, [xd(1), xd(Nm), Sd(Hm(md, Nm)), Sd(0), Ed(0), Ed(1), xd(2147483647 & Od), xd(Hm(Wd, Nm)), xd(0)])
+      Nb = (bb, wb, Mb, eb, Hb) => Sb(bb, [Xb(wb), Kb(Mb), eb ?? []], Hb),
+      vb = () => Sb("styp", [Wb("iso5"), rb(0), Wb("iso5"), Wb("iso6"), Wb("mp41"), Wb("cmfc"), Wb("dash")]),
+      Qb = (bb, wb) => {
+        const Mb = Math.max(0, bb.minWrittenTimestamp);
+        let eb = Math.max(0, bb.maxWrittenEndTimestamp - Mb);
+        return Number.isFinite(eb) || (eb = 0), Nb("sidx", 1, 0, [rb(1), rb(OM), Db(tM(Mb, OM)), Db(0), xb(0), xb(1), rb(2147483647 & wb), rb(tM(eb, OM)), rb(0)])
       },
-      jd = dd => ({
+      Gb = bb => ({
         type: "mdat",
-        largeSize: dd
+        largeSize: bb
       }),
-      Dd = dd => Ld("moov", void 0, [ed(dd.creationTime, dd.trackDatas), ...dd.trackDatas.map((Od => Id(Od, dd.creationTime))), dd.isFragmented ? VO(dd.trackDatas) : null, lO(dd)]),
-      ed = (dd, Od) => {
-        const md = Math.max(0, ...Od.map((dd => Math.max(0, Hm(ym(dd), Nm) + Hm(dd.startTimestampOffset ?? 0, Nm))))),
-          Wd = Math.max(0, ...Od.map((dd => dd.track.id))) + 1,
-          Fd = !(0, Kd._b)(dd) || !(0, Kd._b)(md),
-          Rd = Fd ? Sd : xd;
-        return Pd("mvhd", +Fd, 0, [Rd(dd), Rd(dd), xd(Nm), Rd(md), Vd(1), ud(1), Array(10).fill(0), nd(Kd.m), Array(24).fill(0), xd(Wd)])
+      qb = bb => Sb("moov", void 0, [ab(bb.creationTime, bb.trackDatas), ...bb.trackDatas.map((wb => ib(wb, bb.creationTime))), bb.isFragmented ? Zw(bb.trackDatas) : null, dw(bb)]),
+      ab = (bb, wb) => {
+        const Mb = Math.max(0, ...wb.map((bb => Math.max(0, tM(CM(bb), OM) + tM(bb.startTimestampOffset ?? 0, OM))))),
+          eb = Math.max(0, ...wb.map((bb => bb.track.id))) + 1,
+          Hb = !(0, gb.Wb)(bb) || !(0, gb.Wb)(Mb),
+          pb = Hb ? Db : rb;
+        return Nb("mvhd", +Hb, 0, [pb(bb), pb(bb), rb(OM), pb(Mb), Zb(1), Yb(1), Array(10).fill(0), Jb(gb.l), Array(24).fill(0), rb(eb)])
       },
-      Id = (dd, Od) => {
-        const md = qm(dd),
-          Wd = null !== dd.startTimestampOffset && 0 !== dd.startTimestampOffset;
-        return Ld("trak", void 0, [ld(dd, Od), Wd ? Cd(dd) : null, Zd(dd, Od), void 0 !== md.name ? Ld("udta", void 0, [Ld("name", [...Kd.od.encode(md.name)])]) : null])
+      ib = (bb, wb) => {
+        const Mb = UM(bb),
+          eb = null !== bb.startTimestampOffset && 0 !== bb.startTimestampOffset;
+        return Sb("trak", void 0, [ub(bb, wb), eb ? db(bb) : null, Pb(bb, wb), void 0 !== Mb.name ? Sb("udta", void 0, [Sb("name", [...gb.id.encode(Mb.name)])]) : null])
       },
-      ld = (dd, Od) => {
-        const md = Math.max(0, Hm(ym(dd), Nm) + Hm(dd.startTimestampOffset ?? 0, Nm)),
-          Wd = !(0, Kd._b)(Od) || !(0, Kd._b)(md),
-          Fd = Wd ? Sd : xd;
-        let Rd;
-        if ("video" === dd.type && dd.track.metadata.transformationMatrix) Rd = dd.track.metadata.transformationMatrix;
-        else if ("video" === dd.type) {
+      ub = (bb, wb) => {
+        const Mb = Math.max(0, tM(CM(bb), OM) + tM(bb.startTimestampOffset ?? 0, OM)),
+          eb = !(0, gb.Wb)(wb) || !(0, gb.Wb)(Mb),
+          Hb = eb ? Db : rb;
+        let pb;
+        if ("video" === bb.type && bb.track.metadata.transformationMatrix) pb = bb.track.metadata.transformationMatrix;
+        else if ("video" === bb.type) {
           const {
-            rotation: Od,
-            flip: md
-          } = dd.track.metadata, Wd = (0, Kd.rc)((0, Kd.Mc)(Od ?? 0), (0, Kd.Tc)(md ? -1 : 1, 1));
-          Rd = (0, Kd._)(Wd, dd.info.width, dd.info.height)
-        } else Rd = Kd.m;
-        let Xd = 2;
-        !1 !== dd.track.metadata.disposition?.default && (Xd |= 1);
-        const hd = "video" === dd.type ? 0 : "audio" === dd.type ? 1 : "subtitle" === dd.type ? 2 : (0, Kd.J)(dd);
-        return Pd("tkhd", +Wd, Xd, [Fd(Od), Fd(Od), xd(dd.track.id), xd(0), Fd(md), Array(8).fill(0), Ed(0), Ed(hd), ud("audio" === dd.type ? 1 : 0), Ed(0), nd(Rd), Vd("video" === dd.type ? dd.info.width : 0), Vd("video" === dd.type ? dd.info.height : 0)])
+            rotation: wb,
+            flip: Mb
+          } = bb.track.metadata, eb = (0, gb.lc)((0, gb.Kc)(wb ?? 0), (0, gb.Tc)(Mb ? -1 : 1, 1));
+          pb = (0, gb.W)(eb, bb.info.width, bb.info.height)
+        } else pb = gb.l;
+        let Vb = 2;
+        !1 !== bb.track.metadata.disposition?.default && (Vb |= 1);
+        const lb = "video" === bb.type ? 0 : "audio" === bb.type ? 1 : "subtitle" === bb.type ? 2 : (0, gb.H)(bb);
+        return Nb("tkhd", +eb, Vb, [Hb(wb), Hb(wb), rb(bb.track.id), rb(0), Hb(Mb), Array(8).fill(0), xb(0), xb(lb), Yb("audio" === bb.type ? 1 : 0), xb(0), Jb(pb), Zb("video" === bb.type ? bb.info.width : 0), Zb("video" === bb.type ? bb.info.height : 0)])
       },
-      Cd = dd => {
-        const Od = dd.startTimestampOffset;
-        if ((0, Kd.M)(null !== Od), Od > 0) {
-          const md = Hm(Od, Nm),
-            Wd = Hm(ym(dd), Nm),
-            Fd = !(0, Kd._b)(md) || !(0, Kd._b)(Wd),
-            Rd = Fd ? Sd : xd,
-            Xd = Fd ? sd : Bd;
-          return Ld("edts", void 0, [Pd("elst", Fd ? 1 : 0, 0, [xd(2), Rd(md), Xd(-1), Vd(1), Rd(Wd), Xd(0), Vd(1)])])
+      db = bb => {
+        const wb = bb.startTimestampOffset;
+        if ((0, gb.L)(null !== wb), wb > 0) {
+          const Mb = tM(wb, OM),
+            eb = tM(CM(bb), OM),
+            Hb = !(0, gb.Wb)(Mb) || !(0, gb.Wb)(eb),
+            pb = Hb ? Db : rb,
+            Vb = Hb ? cb : Rb;
+          return Sb("edts", void 0, [Nb("elst", Hb ? 1 : 0, 0, [rb(2), pb(Mb), Vb(-1), Zb(1), pb(eb), Vb(0), Zb(1)])])
         } {
-          const md = Hm(-Od, dd.timescale),
-            Wd = Math.max(0, Hm(ym(dd), Nm) + Hm(Od, Nm)),
-            Fd = !(0, Kd.Qb)(md) || !(0, Kd._b)(Wd),
-            Rd = Fd ? Sd : xd,
-            Xd = Fd ? sd : Bd;
-          return Ld("edts", void 0, [Pd("elst", Fd ? 1 : 0, 0, [xd(1), Rd(Wd), Xd(md), Vd(1)])])
+          const Mb = tM(-wb, bb.timescale),
+            eb = Math.max(0, tM(CM(bb), OM) + tM(wb, OM)),
+            Hb = !(0, gb.Nb)(Mb) || !(0, gb.Wb)(eb),
+            pb = Hb ? Db : rb,
+            Vb = Hb ? cb : Rb;
+          return Sb("edts", void 0, [Nb("elst", Hb ? 1 : 0, 0, [rb(1), pb(eb), Vb(Mb), Zb(1)])])
         }
       },
-      Zd = (dd, Od) => Ld("mdia", void 0, [kd(dd, Od), dO(!0, fd[dd.type], Md[dd.type]), OO(dd)]),
-      kd = (dd, Od) => {
-        const md = Hm(ym(dd), dd.timescale),
-          Wd = !(0, Kd._b)(Od) || !(0, Kd._b)(md),
-          Fd = Wd ? Sd : xd;
-        return Pd("mdhd", +Wd, 0, [Fd(Od), Fd(Od), xd(dd.timescale), Fd(md), Ed(hm(dd.track.metadata.languageCode ?? Kd.z)), Ed(0)])
+      Pb = (bb, wb) => Sb("mdia", void 0, [nb(bb, wb), Tb(!0, yb[bb.type], ob[bb.type]), kb(bb)]),
+      nb = (bb, wb) => {
+        const Mb = tM(CM(bb), bb.timescale),
+          eb = !(0, gb.Wb)(wb) || !(0, gb.Wb)(Mb),
+          Hb = eb ? Db : rb;
+        return Nb("mdhd", +eb, 0, [Hb(wb), Hb(wb), rb(bb.timescale), Hb(Mb), xb(gM(bb.track.metadata.languageCode ?? gb.z)), xb(0)])
       },
-      fd = {
+      yb = {
         video: "vide",
         audio: "soun",
         subtitle: "text"
       },
-      Md = {
+      ob = {
         video: "MediabunnyVideoHandler",
         audio: "MediabunnySoundHandler",
         subtitle: "MediabunnyTextHandler"
       },
-      dO = function(dd, Od, md) {
-        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "\0\0\0\0";
-        return Pd("hdlr", 0, 0, [dd ? Gd("mhlr") : xd(0), Gd(Od), Gd(Wd), xd(0), xd(0), Gd(md, !0)])
+      Tb = function(bb, wb, Mb) {
+        let eb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "\0\0\0\0";
+        return Nb("hdlr", 0, 0, [bb ? Wb("mhlr") : rb(0), Wb(wb), Wb(eb), rb(0), rb(0), Wb(Mb, !0)])
       },
-      OO = dd => Ld("minf", void 0, [mO[dd.type](), WO(), XO(dd)]),
-      mO = {
-        video: () => Pd("vmhd", 0, 1, [Ed(0), Ed(0), Ed(0), Ed(0)]),
-        audio: () => Pd("smhd", 0, 0, [Ed(0), Ed(0)]),
-        subtitle: () => Pd("nmhd", 0, 0)
+      kb = bb => Sb("minf", void 0, [bw[bb.type](), ww(), Hw(bb)]),
+      bw = {
+        video: () => Nb("vmhd", 0, 1, [xb(0), xb(0), xb(0), xb(0)]),
+        audio: () => Nb("smhd", 0, 0, [xb(0), xb(0)]),
+        subtitle: () => Nb("nmhd", 0, 0)
       },
-      WO = () => Ld("dinf", void 0, [FO()]),
-      FO = () => Pd("dref", 0, 0, [xd(1)], [RO()]),
-      RO = () => Pd("url ", 0, 1),
-      XO = dd => {
-        const Od = dd.compositionTimeOffsetTable.length > 1 || dd.compositionTimeOffsetTable.some((dd => 0 !== dd.sampleCompositionTimeOffset));
-        return Ld("stbl", void 0, [KO(dd), JO(dd), Od ? sO(dd) : null, Od ? uO(dd) : null, xO(dd), BO(dd), SO(dd), UO(dd)])
+      ww = () => Sb("dinf", void 0, [Mw()]),
+      Mw = () => Nb("dref", 0, 0, [rb(1)], [ew()]),
+      ew = () => Nb("url ", 0, 1),
+      Hw = bb => {
+        const wb = bb.compositionTimeOffsetTable.length > 1 || bb.compositionTimeOffsetTable.some((bb => 0 !== bb.sampleCompositionTimeOffset));
+        return Sb("stbl", void 0, [pw(bb), xw(bb), wb ? Dw(bb) : null, wb ? Yw(bb) : null, Kw(bb), rw(bb), Rw(bb), jw(bb)])
       },
-      KO = dd => {
-        let Od;
-        if ("video" === dd.type) Od = hO(mm(dd.track.source._codec, dd.info.decoderConfig.codec), dd);
-        else if ("audio" === dd.type) {
-          const md = Fm(dd.track.source._codec, dd.info.decoderConfig.codec, dd.muxer.isQuickTime);
-          (0, Kd.M)(md), Od = NO(md, dd)
-        } else "subtitle" === dd.type && (Od = EO(Xm[dd.track.source._codec], dd));
-        return (0, Kd.M)(Od), Pd("stsd", 0, 0, [xd(1)], [Od])
+      pw = bb => {
+        let wb;
+        if ("video" === bb.type) wb = Vw(wM(bb.track.source._codec, bb.info.decoderConfig.codec), bb);
+        else if ("audio" === bb.type) {
+          const Mb = eM(bb.track.source._codec, bb.info.decoderConfig.codec, bb.muxer.isQuickTime);
+          (0, gb.L)(Mb), wb = Ow(Mb, bb)
+        } else "subtitle" === bb.type && (wb = Xw(pM[bb.track.source._codec], bb));
+        return (0, gb.L)(wb), Nb("stsd", 0, 0, [rb(1)], [wb])
       },
-      hO = (dd, Od) => Ld(dd, [Array(6).fill(0), Ed(1), Ed(0), Ed(0), Array(12).fill(0), Ed(Od.info.width), Ed(Od.info.height), xd(4718592), xd(4718592), xd(0), Ed(1), wd(Td.c.length), Gd(Td.c), Array(31 - Td.c.length).fill(0), Ed(Od.info.hasAlphaChannel ? 32 : 24), Jd(65535)], [Wm[Od.track.source._codec]?.(Od) ?? null, QO(Od), (0, Kd.ib)(Od.info.decoderConfig.colorSpace) ? null : tO(Od), vO(Od)]),
-      vO = dd => 0 === dd.avgBitrate && 0 === dd.maxBitrate ? null : Ld("btrt", [xd(0), xd(dd.maxBitrate), xd(dd.avgBitrate)]),
-      QO = dd => dd.info.pixelAspectRatio.num === dd.info.pixelAspectRatio.den ? null : Ld("pasp", [xd(dd.info.pixelAspectRatio.num), xd(dd.info.pixelAspectRatio.den)]),
-      tO = dd => {
-        const Od = dd.info.decoderConfig.colorSpace;
-        return Ld("colr", [Gd(dd.muxer.isQuickTime ? "nclc" : "nclx"), Ed(null != Od?.primaries ? Kd.g[Od.primaries] : 2), Ed(null != Od?.transfer ? Kd.t[Od.transfer] : 2), Ed(null != Od?.matrix ? Kd.p[Od.matrix] : 2), dd.muxer.isQuickTime ? [] : wd((Od?.fullRange ? 1 : 0) << 7)])
+      Vw = (bb, wb) => Sb(bb, [Array(6).fill(0), xb(1), xb(0), xb(0), Array(12).fill(0), xb(wb.info.width), xb(wb.info.height), rb(4718592), rb(4718592), rb(0), xb(1), Xb(sb.b.length), Wb(sb.b), Array(31 - sb.b.length).fill(0), xb(wb.info.hasAlphaChannel ? 32 : 24), jb(65535)], [MM[wb.track.source._codec]?.(wb) ?? null, lw(wb), (0, gb.fb)(wb.info.decoderConfig.colorSpace) ? null : Lw(wb), gw(wb)]),
+      gw = bb => 0 === bb.avgBitrate && 0 === bb.maxBitrate ? null : Sb("btrt", [rb(0), rb(bb.maxBitrate), rb(bb.avgBitrate)]),
+      lw = bb => bb.info.pixelAspectRatio.num === bb.info.pixelAspectRatio.den ? null : Sb("pasp", [rb(bb.info.pixelAspectRatio.num), rb(bb.info.pixelAspectRatio.den)]),
+      Lw = bb => {
+        const wb = bb.info.decoderConfig.colorSpace;
+        return Sb("colr", [Wb(bb.muxer.isQuickTime ? "nclc" : "nclx"), xb(null != wb?.primaries ? gb.e[wb.primaries] : 2), xb(null != wb?.transfer ? gb.s[wb.transfer] : 2), xb(null != wb?.matrix ? gb.m[wb.matrix] : 2), bb.muxer.isQuickTime ? [] : Xb((wb?.fullRange ? 1 : 0) << 7)])
       },
-      oO = dd => {
-        if (!dd.info.decoderConfig) return null;
-        const Od = dd.info.decoderConfig,
-          md = Od.codec.split("."),
-          Wd = Number(md[1]),
-          Fd = Number(md[2]),
-          Rd = (Number(md[3]) << 4) + ((md[4] ? Number(md[4]) : 1) << 1) + (md[8] ? Number(md[8]) : Number(Od.colorSpace?.fullRange ?? 0)),
-          Xd = md[5] ? Number(md[5]) : Od.colorSpace?.primaries ? Kd.g[Od.colorSpace.primaries] : 1,
-          hd = md[6] ? Number(md[6]) : Od.colorSpace?.transfer ? Kd.t[Od.colorSpace.transfer] : 1,
-          vd = md[7] ? Number(md[7]) : Od.colorSpace?.matrix ? Kd.p[Od.colorSpace.matrix] : 1;
-        return Pd("vpcC", 1, 0, [wd(Wd), wd(Fd), wd(Rd), wd(Xd), wd(hd), wd(vd), Ed(0)])
+      Iw = bb => {
+        if (!bb.info.decoderConfig) return null;
+        const wb = bb.info.decoderConfig,
+          Mb = wb.codec.split("."),
+          eb = Number(Mb[1]),
+          Hb = Number(Mb[2]),
+          pb = (Number(Mb[3]) << 4) + ((Mb[4] ? Number(Mb[4]) : 1) << 1) + (Mb[8] ? Number(Mb[8]) : Number(wb.colorSpace?.fullRange ?? 0)),
+          Vb = Mb[5] ? Number(Mb[5]) : wb.colorSpace?.primaries ? gb.e[wb.colorSpace.primaries] : 1,
+          lb = Mb[6] ? Number(Mb[6]) : wb.colorSpace?.transfer ? gb.s[wb.colorSpace.transfer] : 1,
+          Lb = Mb[7] ? Number(Mb[7]) : wb.colorSpace?.matrix ? gb.m[wb.colorSpace.matrix] : 1;
+        return Nb("vpcC", 1, 0, [Xb(eb), Xb(Hb), Xb(pb), Xb(Vb), Xb(lb), Xb(Lb), xb(0)])
       },
-      NO = (dd, Od) => {
-        let md, Wd = 0,
-          Rd = 16;
-        const Xd = Fd.m.includes(Od.track.source._codec);
-        if (Xd) {
-          const dd = Od.track.source._codec,
+      Ow = (bb, wb) => {
+        let Mb, eb = 0,
+          pb = 16;
+        const Vb = Hb.l.includes(wb.track.source._codec);
+        if (Vb) {
+          const bb = wb.track.source._codec,
             {
-              sampleSize: md
-            } = (0, Fd.S)(dd);
-          Rd = 8 * md, Rd > 16 && (Wd = 1)
+              sampleSize: Mb
+            } = (0, Hb.N)(bb);
+          pb = 8 * Mb, pb > 16 && (eb = 1)
         }
-        if (Od.muxer.isQuickTime && (Wd = 1), 0 === Wd) md = [Array(6).fill(0), Ed(1), Ed(Wd), Ed(0), xd(0), Ed(Od.info.numberOfChannels), Ed(Rd), Ed(0), Ed(0), Ed(Od.info.sampleRate < 65536 ? Od.info.sampleRate : 0), Ed(0)];
+        if (wb.muxer.isQuickTime && (eb = 1), 0 === eb) Mb = [Array(6).fill(0), xb(1), xb(eb), xb(0), rb(0), xb(wb.info.numberOfChannels), xb(pb), xb(0), xb(0), xb(wb.info.sampleRate < 65536 ? wb.info.sampleRate : 0), xb(0)];
         else {
-          const dd = Xd ? 0 : -2;
-          md = [Array(6).fill(0), Ed(1), Ed(Wd), Ed(0), xd(0), Ed(Od.info.numberOfChannels), Ed(Math.min(Rd, 16)), Jd(dd), Ed(0), Ed(Od.info.sampleRate < 65536 ? Od.info.sampleRate : 0), Ed(0), Xd ? [xd(1), xd(Rd / 8), xd(Od.info.numberOfChannels * Rd / 8)] : [xd(0), xd(0), xd(0)], xd(2)]
+          const bb = Vb ? 0 : -2;
+          Mb = [Array(6).fill(0), xb(1), xb(eb), xb(0), rb(0), xb(wb.info.numberOfChannels), xb(Math.min(pb, 16)), jb(bb), xb(0), xb(wb.info.sampleRate < 65536 ? wb.info.sampleRate : 0), xb(0), Vb ? [rb(1), rb(pb / 8), rb(wb.info.numberOfChannels * pb / 8)] : [rb(0), rb(0), rb(0)], rb(2)]
         }
-        return Ld(dd, md, [Rm(Od.track.source._codec, Od.muxer.isQuickTime)?.(Od) ?? null, vO(Od)])
+        return Sb(bb, Mb, [HM(wb.track.source._codec, wb.muxer.isQuickTime)?.(wb) ?? null, gw(wb)])
       },
-      qO = dd => {
-        let Od;
-        switch (dd.track.source._codec) {
+      Uw = bb => {
+        let wb;
+        switch (bb.track.source._codec) {
           case "aac":
-            Od = 64;
+            wb = 64;
             break;
           case "mp3":
-            Od = 107;
+            wb = 107;
             break;
           case "vorbis":
-            Od = 221;
+            wb = 221;
             break;
           default:
-            throw new Error(`Unhandled audio codec: ${dd.track.source._codec}`)
+            throw new Error(`Unhandled audio codec: ${bb.track.source._codec}`)
         }
-        let md = [...wd(Od), ...wd(21), ...Ud(0), ...xd(dd.maxBitrate), ...xd(dd.avgBitrate)];
-        if (dd.info.decoderConfig.description) {
-          const Od = (0, Kd.vd)(dd.info.decoderConfig.description);
-          md = [...md, ...wd(5), ...rd(Od.byteLength), ...Od]
+        let Mb = [...Xb(wb), ...Xb(21), ...Kb(0), ...rb(bb.maxBitrate), ...rb(bb.avgBitrate)];
+        if (bb.info.decoderConfig.description) {
+          const wb = (0, gb.od)(bb.info.decoderConfig.description);
+          Mb = [...Mb, ...Xb(5), ...Ab(wb.byteLength), ...wb]
         }
-        return md = [...Ed(1), ...wd(0), ...wd(4), ...rd(md.length), ...md, ...wd(6), ...wd(1), ...wd(2)], md = [...wd(3), ...rd(md.length), ...md], Pd("esds", 0, 0, md)
+        return Mb = [...xb(1), ...Xb(0), ...Xb(4), ...Ab(Mb.length), ...Mb, ...Xb(6), ...Xb(1), ...Xb(2)], Mb = [...Xb(3), ...Ab(Mb.length), ...Mb], Nb("esds", 0, 0, Mb)
       },
-      HO = dd => Ld("wave", void 0, [yO(dd), bO(dd), Ld("\0\0\0\0")]),
-      yO = dd => Ld("frma", [Gd(Fm(dd.track.source._codec, dd.info.decoderConfig.codec, dd.muxer.isQuickTime))]),
-      bO = dd => {
+      tw = bb => Sb("wave", void 0, [Cw(bb), Ew(bb), Sb("\0\0\0\0")]),
+      Cw = bb => Sb("frma", [Wb(eM(bb.track.source._codec, bb.info.decoderConfig.codec, bb.muxer.isQuickTime))]),
+      Ew = bb => {
         const {
-          littleEndian: Od
-        } = (0, Fd.S)(dd.track.source._codec);
-        return Ld("enda", [Ed(+Od)])
+          littleEndian: wb
+        } = (0, Hb.N)(bb.track.source._codec);
+        return Sb("enda", [xb(+wb)])
       },
-      TO = dd => {
-        let Od = dd.info.numberOfChannels,
-          md = 3840,
-          Wd = dd.info.sampleRate,
-          Fd = 0,
-          Rd = 0,
-          Xd = new Uint8Array(0);
-        const hd = dd.info.decoderConfig?.description;
-        if (hd) {
-          (0, Kd.M)(hd.byteLength >= 18);
-          const dd = (0, Kd.vd)(hd),
-            vd = (0, Hd.hb)(dd);
-          Od = vd.outputChannelCount, md = vd.preSkip, Wd = vd.inputSampleRate, Fd = vd.outputGain, Rd = vd.channelMappingFamily, vd.channelMappingTable && (Xd = vd.channelMappingTable)
+      Fw = bb => {
+        let wb = bb.info.numberOfChannels,
+          Mb = 3840,
+          eb = bb.info.sampleRate,
+          Hb = 0,
+          pb = 0,
+          Vb = new Uint8Array(0);
+        const lb = bb.info.decoderConfig?.description;
+        if (lb) {
+          (0, gb.L)(lb.byteLength >= 18);
+          const bb = (0, gb.od)(lb),
+            Lb = (0, Eb.sb)(bb);
+          wb = Lb.outputChannelCount, Mb = Lb.preSkip, eb = Lb.inputSampleRate, Hb = Lb.outputGain, pb = Lb.channelMappingFamily, Lb.channelMappingTable && (Vb = Lb.channelMappingTable)
         }
-        return Ld("dOps", [wd(0), wd(Od), Ed(md), xd(Wd), Jd(Fd), wd(Rd), ...Xd])
+        return Sb("dOps", [Xb(0), Xb(wb), xb(Mb), rb(eb), jb(Hb), Xb(pb), ...Vb])
       },
-      pO = dd => {
-        const Od = dd.info.decoderConfig?.description;
-        (0, Kd.M)(Od);
-        const md = (0, Kd.vd)(Od);
-        return Pd("dfLa", 0, 0, [...md.subarray(4)])
+      Bw = bb => {
+        const wb = bb.info.decoderConfig?.description;
+        (0, gb.L)(wb);
+        const Mb = (0, gb.od)(wb);
+        return Nb("dfLa", 0, 0, [...Mb.subarray(4)])
       },
-      YO = dd => {
+      sw = bb => {
         const {
-          littleEndian: Od,
-          sampleSize: md
-        } = (0, Fd.S)(dd.track.source._codec);
-        return Pd("pcmC", 0, 0, [wd(+Od), wd(8 * md)])
+          littleEndian: wb,
+          sampleSize: Mb
+        } = (0, Hb.N)(bb.track.source._codec);
+        return Nb("pcmC", 0, 0, [Xb(+wb), Xb(8 * Mb)])
       },
-      gO = dd => {
-        (0, Kd.M)(dd.info.primingPacket);
-        const Od = (0, Hd.Z)(dd.info.primingPacket.data);
-        if (!Od) throw new Error("Couldn't extract AC-3 frame info from the audio packet. Ensure the packets contain valid AC-3 sync frames (as specified in ETSI TS 102 366).");
-        const md = new Uint8Array(3),
-          Wd = new yd.c(md);
-        return Wd.writeBits(2, Od.fscod), Wd.writeBits(5, Od.bsid), Wd.writeBits(3, Od.bsmod), Wd.writeBits(3, Od.acmod), Wd.writeBits(1, Od.lfeon), Wd.writeBits(5, Od.bitRateCode), Wd.writeBits(5, 0), Ld("dac3", [...md])
+      mw = bb => {
+        (0, gb.L)(bb.info.primingPacket);
+        const wb = (0, Eb.gb)(bb.info.primingPacket.data);
+        if (!wb) throw new Error("Couldn't extract AC-3 frame info from the audio packet. Ensure the packets contain valid AC-3 sync frames (as specified in ETSI TS 102 366).");
+        const Mb = new Uint8Array(3),
+          eb = new Fb.e(Mb);
+        return eb.writeBits(2, wb.fscod), eb.writeBits(5, wb.bsid), eb.writeBits(3, wb.bsmod), eb.writeBits(3, wb.acmod), eb.writeBits(1, wb.lfeon), eb.writeBits(5, wb.bitRateCode), eb.writeBits(5, 0), Sb("dac3", [...Mb])
       },
-      wO = dd => {
-        (0, Kd.M)(dd.info.primingPacket);
-        const Od = (0, Hd.cb)(dd.info.primingPacket.data);
-        if (!Od) throw new Error("Couldn't extract E-AC-3 frame info from the audio packet. Ensure the packets contain valid E-AC-3 sync frames (as specified in ETSI TS 102 366).");
-        let md = 16;
-        for (const Xd of Od.substreams) md += 23, Xd.numDepSub > 0 ? md += 9 : md += 1;
-        const Wd = Math.ceil(md / 8),
-          Fd = new Uint8Array(Wd),
-          Rd = new yd.c(Fd);
-        Rd.writeBits(13, Od.dataRate), Rd.writeBits(3, Od.substreams.length - 1);
-        for (const Xd of Od.substreams) Rd.writeBits(2, Xd.fscod), Rd.writeBits(5, Xd.bsid), Rd.writeBits(1, 0), Rd.writeBits(1, 0), Rd.writeBits(3, Xd.bsmod), Rd.writeBits(3, Xd.acmod), Rd.writeBits(1, Xd.lfeon), Rd.writeBits(3, 0), Rd.writeBits(4, Xd.numDepSub), Xd.numDepSub > 0 ? Rd.writeBits(9, Xd.chanLoc) : Rd.writeBits(1, 0);
-        return Ld("dec3", [...Fd])
+      hw = bb => {
+        (0, gb.L)(bb.info.primingPacket);
+        const wb = (0, Eb.nb)(bb.info.primingPacket.data);
+        if (!wb) throw new Error("Couldn't extract E-AC-3 frame info from the audio packet. Ensure the packets contain valid E-AC-3 sync frames (as specified in ETSI TS 102 366).");
+        let Mb = 16;
+        for (const Vb of wb.substreams) Mb += 23, Vb.numDepSub > 0 ? Mb += 9 : Mb += 1;
+        const eb = Math.ceil(Mb / 8),
+          Hb = new Uint8Array(eb),
+          pb = new Fb.e(Hb);
+        pb.writeBits(13, wb.dataRate), pb.writeBits(3, wb.substreams.length - 1);
+        for (const Vb of wb.substreams) pb.writeBits(2, Vb.fscod), pb.writeBits(5, Vb.bsid), pb.writeBits(1, 0), pb.writeBits(1, 0), pb.writeBits(3, Vb.bsmod), pb.writeBits(3, Vb.acmod), pb.writeBits(1, Vb.lfeon), pb.writeBits(3, 0), pb.writeBits(4, Vb.numDepSub), Vb.numDepSub > 0 ? pb.writeBits(9, Vb.chanLoc) : pb.writeBits(1, 0);
+        return Sb("dec3", [...Hb])
       },
-      aO = dd => {
-        (0, Kd.M)(dd.info.primingPacket);
-        const Od = (0, Hd._)(dd.info.primingPacket.data);
-        if (!Od) throw new Error("Couldn't extract DTS frame info from the audio packet. Ensure the packets contain valid DTS frames as specified in ETSI TS 102 114.");
-        return Ld("ddts", [...(0, Hd.q)(Od)])
+      zw = bb => {
+        (0, gb.L)(bb.info.primingPacket);
+        const wb = (0, Eb.jb)(bb.info.primingPacket.data);
+        if (!wb) throw new Error("Couldn't extract DTS frame info from the audio packet. Ensure the packets contain valid DTS frames as specified in ETSI TS 102 114.");
+        return Sb("ddts", [...(0, Eb.s)(wb)])
       },
-      EO = (dd, Od) => Ld(dd, [Array(6).fill(0), Ed(1)], [Km[Od.track.source._codec](Od), vO(Od)]),
-      JO = dd => Pd("stts", 0, 0, [xd(dd.timeToSampleTable.length), dd.timeToSampleTable.map((dd => [xd(dd.sampleCount), xd(dd.sampleDelta)]))]),
-      UO = dd => {
-        if (dd.samples.every((dd => "key" === dd.type))) return null;
-        const Od = [...dd.samples.entries()].filter((dd => {
-          let [, Od] = dd;
-          return "key" === Od.type
+      Xw = (bb, wb) => Sb(bb, [Array(6).fill(0), xb(1)], [VM[wb.track.source._codec](wb), gw(wb)]),
+      xw = bb => Nb("stts", 0, 0, [rb(bb.timeToSampleTable.length), bb.timeToSampleTable.map((bb => [rb(bb.sampleCount), rb(bb.sampleDelta)]))]),
+      jw = bb => {
+        if (bb.samples.every((bb => "key" === bb.type))) return null;
+        const wb = [...bb.samples.entries()].filter((bb => {
+          let [, wb] = bb;
+          return "key" === wb.type
         }));
-        return Pd("stss", 0, 0, [xd(Od.length), Od.map((dd => {
-          let [Od] = dd;
-          return xd(Od + 1)
+        return Nb("stss", 0, 0, [rb(wb.length), wb.map((bb => {
+          let [wb] = bb;
+          return rb(wb + 1)
         }))])
       },
-      xO = dd => Pd("stsc", 0, 0, [xd(dd.compactlyCodedChunkTable.length), dd.compactlyCodedChunkTable.map((dd => [xd(dd.firstChunk), xd(dd.samplesPerChunk), xd(1)]))]),
-      BO = dd => {
-        if ("audio" === dd.type && dd.info.requiresPcmTransformation) {
+      Kw = bb => Nb("stsc", 0, 0, [rb(bb.compactlyCodedChunkTable.length), bb.compactlyCodedChunkTable.map((bb => [rb(bb.firstChunk), rb(bb.samplesPerChunk), rb(1)]))]),
+      rw = bb => {
+        if ("audio" === bb.type && bb.info.requiresPcmTransformation) {
           const {
-            sampleSize: Od
-          } = (0, Fd.S)(dd.track.source._codec);
-          return Pd("stsz", 0, 0, [xd(Od * dd.info.numberOfChannels), xd(dd.samples.reduce(((Od, md) => Od + Hm(md.duration, dd.timescale)), 0))])
+            sampleSize: wb
+          } = (0, Hb.N)(bb.track.source._codec);
+          return Nb("stsz", 0, 0, [rb(wb * bb.info.numberOfChannels), rb(bb.samples.reduce(((wb, Mb) => wb + tM(Mb.duration, bb.timescale)), 0))])
         }
-        return Pd("stsz", 0, 0, [xd(0), xd(dd.samples.length), dd.samples.map((dd => xd(dd.size)))])
+        return Nb("stsz", 0, 0, [rb(0), rb(bb.samples.length), bb.samples.map((bb => rb(bb.size)))])
       },
-      SO = dd => dd.finalizedChunks.length > 0 && (0, Kd.jc)(dd.finalizedChunks).offset >= 2 ** 32 ? Pd("co64", 0, 0, [xd(dd.finalizedChunks.length), dd.finalizedChunks.map((dd => Sd(dd.offset)))]) : Pd("stco", 0, 0, [xd(dd.finalizedChunks.length), dd.finalizedChunks.map((dd => xd(dd.offset)))]),
-      sO = dd => Pd("ctts", 1, 0, [xd(dd.compositionTimeOffsetTable.length), dd.compositionTimeOffsetTable.map((dd => [xd(dd.sampleCount), Bd(dd.sampleCompositionTimeOffset)]))]),
-      uO = dd => {
-        let Od = 1 / 0,
-          md = -1 / 0,
-          Wd = 1 / 0,
-          Fd = -1 / 0;
-        (0, Kd.M)(dd.compositionTimeOffsetTable.length > 0), (0, Kd.M)(dd.samples.length > 0);
-        for (let Xd = 0; Xd < dd.compositionTimeOffsetTable.length; Xd++) {
-          const Wd = dd.compositionTimeOffsetTable[Xd];
-          Od = Math.min(Od, Wd.sampleCompositionTimeOffset), md = Math.max(md, Wd.sampleCompositionTimeOffset)
+      Rw = bb => bb.finalizedChunks.length > 0 && (0, gb.ac)(bb.finalizedChunks).offset >= 2 ** 32 ? Nb("co64", 0, 0, [rb(bb.finalizedChunks.length), bb.finalizedChunks.map((bb => Db(bb.offset)))]) : Nb("stco", 0, 0, [rb(bb.finalizedChunks.length), bb.finalizedChunks.map((bb => rb(bb.offset)))]),
+      Dw = bb => Nb("ctts", 1, 0, [rb(bb.compositionTimeOffsetTable.length), bb.compositionTimeOffsetTable.map((bb => [rb(bb.sampleCount), Rb(bb.sampleCompositionTimeOffset)]))]),
+      Yw = bb => {
+        let wb = 1 / 0,
+          Mb = -1 / 0,
+          eb = 1 / 0,
+          Hb = -1 / 0;
+        (0, gb.L)(bb.compositionTimeOffsetTable.length > 0), (0, gb.L)(bb.samples.length > 0);
+        for (let Vb = 0; Vb < bb.compositionTimeOffsetTable.length; Vb++) {
+          const eb = bb.compositionTimeOffsetTable[Vb];
+          wb = Math.min(wb, eb.sampleCompositionTimeOffset), Mb = Math.max(Mb, eb.sampleCompositionTimeOffset)
         }
-        for (let Xd = 0; Xd < dd.samples.length; Xd++) {
-          const Od = dd.samples[Xd];
-          Wd = Math.min(Wd, Hm(Od.timestamp, dd.timescale)), Fd = Math.max(Fd, Hm(Od.timestamp + Od.duration, dd.timescale))
+        for (let Vb = 0; Vb < bb.samples.length; Vb++) {
+          const wb = bb.samples[Vb];
+          eb = Math.min(eb, tM(wb.timestamp, bb.timescale)), Hb = Math.max(Hb, tM(wb.timestamp + wb.duration, bb.timescale))
         }
-        const Rd = Math.max(-Od, 0);
-        return Fd >= 2 ** 31 ? null : Pd("cslg", 0, 0, [Bd(Rd), Bd(Od), Bd(md), Bd(Wd), Bd(Fd)])
+        const pb = Math.max(-wb, 0);
+        return Hb >= 2 ** 31 ? null : Nb("cslg", 0, 0, [Rb(pb), Rb(wb), Rb(Mb), Rb(eb), Rb(Hb)])
       },
-      VO = dd => Ld("mvex", void 0, dd.map(iO)),
-      iO = dd => Pd("trex", 0, 0, [xd(dd.track.id), xd(1), xd(0), xd(0), xd(0)]),
-      AO = (dd, Od) => Ld("moof", void 0, [rO(dd), ...Od.map(nO)]),
-      rO = dd => Pd("mfhd", 0, 0, [xd(dd)]),
-      GO = dd => {
-        let Od = 0,
-          md = 0;
-        const Wd = "delta" === dd.type;
-        return md |= +Wd, Od |= Wd ? 1 : 2, Od << 24 | md << 16
+      Zw = bb => Sb("mvex", void 0, bb.map(fw)),
+      fw = bb => Nb("trex", 0, 0, [rb(bb.track.id), rb(1), rb(0), rb(0), rb(0)]),
+      Aw = (bb, wb) => Sb("moof", void 0, [Ww(bb), ...wb.map(Sw)]),
+      Ww = bb => Nb("mfhd", 0, 0, [rb(bb)]),
+      Jw = bb => {
+        let wb = 0,
+          Mb = 0;
+        const eb = "delta" === bb.type;
+        return Mb |= +eb, wb |= eb ? 1 : 2, wb << 24 | Mb << 16
       },
-      nO = dd => Ld("traf", void 0, [LO(dd), PO(dd), zO(dd)]),
-      LO = dd => {
-        (0, Kd.M)(dd.currentChunk);
-        let Od = 0;
-        Od |= 8, Od |= 16, Od |= 32, Od |= 131072;
-        const md = dd.currentChunk.samples[1] ?? dd.currentChunk.samples[0],
-          Wd = {
-            duration: md.timescaleUnitsToNextSample,
-            size: md.size,
-            flags: GO(md)
+      Sw = bb => Sb("traf", void 0, [Nw(bb), vw(bb), Qw(bb)]),
+      Nw = bb => {
+        (0, gb.L)(bb.currentChunk);
+        let wb = 0;
+        wb |= 8, wb |= 16, wb |= 32, wb |= 131072;
+        const Mb = bb.currentChunk.samples[1] ?? bb.currentChunk.samples[0],
+          eb = {
+            duration: Mb.timescaleUnitsToNextSample,
+            size: Mb.size,
+            flags: Jw(Mb)
           };
-        return Pd("tfhd", 0, 131128, [xd(dd.track.id), xd(Wd.duration), xd(Wd.size), xd(Wd.flags)])
+        return Nb("tfhd", 0, 131128, [rb(bb.track.id), rb(eb.duration), rb(eb.size), rb(eb.flags)])
       },
-      PO = dd => ((0, Kd.M)(dd.currentChunk), Pd("tfdt", 1, 0, [Sd(Hm(dd.currentChunk.startTimestamp, dd.timescale))])),
-      zO = dd => {
-        (0, Kd.M)(dd.currentChunk);
-        const Od = dd.currentChunk.samples.map((dd => dd.timescaleUnitsToNextSample)),
-          md = dd.currentChunk.samples.map((dd => dd.size)),
-          Wd = dd.currentChunk.samples.map(GO),
-          Fd = dd.currentChunk.samples.map((Od => Hm(Od.timestamp - Od.decodeTimestamp, dd.timescale))),
-          Rd = new Set(Od),
-          Xd = new Set(md),
-          hd = new Set(Wd),
-          vd = new Set(Fd),
-          Qd = 2 === hd.size && Wd[0] !== Wd[1],
-          td = Rd.size > 1,
-          od = Xd.size > 1,
-          Nd = !Qd && hd.size > 1,
-          qd = vd.size > 1 || [...vd].some((dd => 0 !== dd));
-        let Hd = 0;
-        return Hd |= 1, Hd |= 4 * +Qd, Hd |= 256 * +td, Hd |= 512 * +od, Hd |= 1024 * +Nd, Hd |= 2048 * +qd, Pd("trun", 1, Hd, [xd(dd.currentChunk.samples.length), xd(dd.currentChunk.offset - dd.currentChunk.moofOffset || 0), Qd ? xd(Wd[0]) : [], dd.currentChunk.samples.map(((dd, Rd) => [td ? xd(Od[Rd]) : [], od ? xd(md[Rd]) : [], Nd ? xd(Wd[Rd]) : [], qd ? Bd(Fd[Rd]) : []]))])
+      vw = bb => ((0, gb.L)(bb.currentChunk), Nb("tfdt", 1, 0, [Db(tM(bb.currentChunk.startTimestamp, bb.timescale))])),
+      Qw = bb => {
+        (0, gb.L)(bb.currentChunk);
+        const wb = bb.currentChunk.samples.map((bb => bb.timescaleUnitsToNextSample)),
+          Mb = bb.currentChunk.samples.map((bb => bb.size)),
+          eb = bb.currentChunk.samples.map(Jw),
+          Hb = bb.currentChunk.samples.map((wb => tM(wb.timestamp - wb.decodeTimestamp, bb.timescale))),
+          pb = new Set(wb),
+          Vb = new Set(Mb),
+          lb = new Set(eb),
+          Lb = new Set(Hb),
+          Ib = 2 === lb.size && eb[0] !== eb[1],
+          Ob = pb.size > 1,
+          Ub = Vb.size > 1,
+          tb = !Ib && lb.size > 1,
+          Cb = Lb.size > 1 || [...Lb].some((bb => 0 !== bb));
+        let Eb = 0;
+        return Eb |= 1, Eb |= 4 * +Ib, Eb |= 256 * +Ob, Eb |= 512 * +Ub, Eb |= 1024 * +tb, Eb |= 2048 * +Cb, Nb("trun", 1, Eb, [rb(bb.currentChunk.samples.length), rb(bb.currentChunk.offset - bb.currentChunk.moofOffset || 0), Ib ? rb(eb[0]) : [], bb.currentChunk.samples.map(((bb, pb) => [Ob ? rb(wb[pb]) : [], Ub ? rb(Mb[pb]) : [], tb ? rb(eb[pb]) : [], Cb ? Rb(Hb[pb]) : []]))])
       },
-      cO = dd => Pd("tfra", 1, 0, [xd(dd.track.id), xd(63), xd(dd.finalizedChunks.length), dd.finalizedChunks.map((Od => [Sd(Hm(Od.samples[0].timestamp, dd.timescale)), Sd(Od.moofOffset), xd(Od.trafIndex + 1), xd(1), xd(1)]))]),
-      jO = () => Pd("mfro", 0, 0, [xd(0)]),
-      DO = () => Ld("vtte"),
-      eO = (dd, Od, md, Wd, Fd) => Ld("vttc", void 0, [null !== Fd ? Ld("vsid", [Bd(Fd)]) : null, null !== md ? Ld("iden", [...Kd.od.encode(md)]) : null, null !== Od ? Ld("ctim", [...Kd.od.encode((0, bd.e)(Od))]) : null, null !== Wd ? Ld("sttg", [...Kd.od.encode(Wd)]) : null, Ld("payl", [...Kd.od.encode(dd)])]),
-      IO = dd => Ld("vtta", [...Kd.od.encode(dd)]),
-      lO = dd => {
-        const Od = [],
-          md = dd.format._options.metadataFormat ?? "auto",
-          Wd = dd.output._metadataTags;
-        if ("mdir" === md || "auto" === md && !dd.isQuickTime) {
-          const dd = MO(Wd);
-          dd && Od.push(dd)
-        } else if ("mdta" === md) {
-          const dd = dm(Wd);
-          dd && Od.push(dd)
-        } else("udta" === md || "auto" === md && dd.isQuickTime) && CO(Od, dd.output._metadataTags);
-        return 0 === Od.length ? null : Ld("udta", void 0, Od)
+      Gw = bb => Nb("tfra", 1, 0, [rb(bb.track.id), rb(63), rb(bb.finalizedChunks.length), bb.finalizedChunks.map((wb => [Db(tM(wb.samples[0].timestamp, bb.timescale)), Db(wb.moofOffset), rb(wb.trafIndex + 1), rb(1), rb(1)]))]),
+      qw = () => Nb("mfro", 0, 0, [rb(0)]),
+      aw = () => Sb("vtte"),
+      iw = (bb, wb, Mb, eb, Hb) => Sb("vttc", void 0, [null !== Hb ? Sb("vsid", [Rb(Hb)]) : null, null !== Mb ? Sb("iden", [...gb.id.encode(Mb)]) : null, null !== wb ? Sb("ctim", [...gb.id.encode((0, Bb.h)(wb))]) : null, null !== eb ? Sb("sttg", [...gb.id.encode(eb)]) : null, Sb("payl", [...gb.id.encode(bb)])]),
+      uw = bb => Sb("vtta", [...gb.id.encode(bb)]),
+      dw = bb => {
+        const wb = [],
+          Mb = bb.format._options.metadataFormat ?? "auto",
+          eb = bb.output._metadataTags;
+        if ("mdir" === Mb || "auto" === Mb && !bb.isQuickTime) {
+          const bb = Tw(eb);
+          bb && wb.push(bb)
+        } else if ("mdta" === Mb) {
+          const bb = kw(eb);
+          bb && wb.push(bb)
+        } else("udta" === Mb || "auto" === Mb && bb.isQuickTime) && Pw(wb, bb.output._metadataTags);
+        return 0 === wb.length ? null : Sb("udta", void 0, wb)
       },
-      CO = (dd, Od) => {
+      Pw = (bb, wb) => {
         for (const {
-            key: md,
-            value: Wd
+            key: Mb,
+            value: eb
           }
-          of(0, Kd.fc)(Od)) switch (md) {
+          of(0, gb._b)(wb)) switch (Mb) {
           case "title":
-            dd.push(ZO("\xa9nam", Wd));
+            bb.push(nw("\xa9nam", eb));
             break;
           case "description":
-            dd.push(ZO("\xa9des", Wd));
+            bb.push(nw("\xa9des", eb));
             break;
           case "artist":
-            dd.push(ZO("\xa9ART", Wd));
+            bb.push(nw("\xa9ART", eb));
             break;
           case "album":
-            dd.push(ZO("\xa9alb", Wd));
+            bb.push(nw("\xa9alb", eb));
             break;
           case "albumArtist":
-            dd.push(ZO("albr", Wd));
+            bb.push(nw("albr", eb));
             break;
           case "genre":
-            dd.push(ZO("\xa9gen", Wd));
+            bb.push(nw("\xa9gen", eb));
             break;
           case "date":
-            dd.push(ZO("\xa9day", Wd.toISOString().slice(0, 10)));
+            bb.push(nw("\xa9day", eb.toISOString().slice(0, 10)));
             break;
           case "comment":
-            dd.push(ZO("\xa9cmt", Wd));
+            bb.push(nw("\xa9cmt", eb));
             break;
           case "lyrics":
-            dd.push(ZO("\xa9lyr", Wd));
+            bb.push(nw("\xa9lyr", eb));
             break;
           case "raw":
           case "discNumber":
@@ -4086,112 +4086,112 @@ export const modules = {
           case "images":
             break;
           default:
-            (0, Kd.J)(md)
+            (0, gb.H)(Mb)
         }
-        if (Od.raw)
-          for (const md in Od.raw) {
-            const Wd = Od.raw[md];
-            null == Wd || 4 !== md.length || dd.some((dd => dd.type === md)) || ("string" === typeof Wd ? dd.push(ZO(md, Wd)) : Wd instanceof Uint8Array && dd.push(Ld(md, Array.from(Wd))))
+        if (wb.raw)
+          for (const Mb in wb.raw) {
+            const eb = wb.raw[Mb];
+            null == eb || 4 !== Mb.length || bb.some((bb => bb.type === Mb)) || ("string" === typeof eb ? bb.push(nw(Mb, eb)) : eb instanceof Uint8Array && bb.push(Sb(Mb, Array.from(eb))))
           }
       },
-      ZO = (dd, Od) => {
-        const md = Kd.od.encode(Od);
-        return Ld(dd, [Ed(md.length), Ed(hm("und")), Array.from(md)])
+      nw = (bb, wb) => {
+        const Mb = gb.id.encode(wb);
+        return Sb(bb, [xb(Mb.length), xb(gM("und")), Array.from(Mb)])
       },
-      kO = {
+      yw = {
         "image/jpeg": 13,
         "image/png": 14,
         "image/bmp": 27
       },
-      fO = (dd, Od) => {
-        const md = [];
+      ow = (bb, wb) => {
+        const Mb = [];
         for (const {
-            key: Wd,
-            value: Fd
+            key: eb,
+            value: Hb
           }
-          of(0, Kd.fc)(dd)) switch (Wd) {
+          of(0, gb._b)(bb)) switch (eb) {
           case "title":
-            md.push({
-              key: Od ? "title" : "\xa9nam",
-              value: Om(Fd)
+            Mb.push({
+              key: wb ? "title" : "\xa9nam",
+              value: bM(Hb)
             });
             break;
           case "description":
-            md.push({
-              key: Od ? "description" : "\xa9des",
-              value: Om(Fd)
+            Mb.push({
+              key: wb ? "description" : "\xa9des",
+              value: bM(Hb)
             });
             break;
           case "artist":
-            md.push({
-              key: Od ? "artist" : "\xa9ART",
-              value: Om(Fd)
+            Mb.push({
+              key: wb ? "artist" : "\xa9ART",
+              value: bM(Hb)
             });
             break;
           case "album":
-            md.push({
-              key: Od ? "album" : "\xa9alb",
-              value: Om(Fd)
+            Mb.push({
+              key: wb ? "album" : "\xa9alb",
+              value: bM(Hb)
             });
             break;
           case "albumArtist":
-            md.push({
-              key: Od ? "album_artist" : "aART",
-              value: Om(Fd)
+            Mb.push({
+              key: wb ? "album_artist" : "aART",
+              value: bM(Hb)
             });
             break;
           case "comment":
-            md.push({
-              key: Od ? "comment" : "\xa9cmt",
-              value: Om(Fd)
+            Mb.push({
+              key: wb ? "comment" : "\xa9cmt",
+              value: bM(Hb)
             });
             break;
           case "genre":
-            md.push({
-              key: Od ? "genre" : "\xa9gen",
-              value: Om(Fd)
+            Mb.push({
+              key: wb ? "genre" : "\xa9gen",
+              value: bM(Hb)
             });
             break;
           case "beatsPerMinute":
-            Od || md.push({
+            wb || Mb.push({
               key: "tmpo",
-              value: Ld("data", [xd(21), xd(0), Ed(Fd)])
+              value: Sb("data", [rb(21), rb(0), xb(Hb)])
             });
             break;
           case "lyrics":
-            md.push({
-              key: Od ? "lyrics" : "\xa9lyr",
-              value: Om(Fd)
+            Mb.push({
+              key: wb ? "lyrics" : "\xa9lyr",
+              value: bM(Hb)
             });
             break;
           case "date":
-            md.push({
-              key: Od ? "date" : "\xa9day",
-              value: Om(Fd.toISOString().slice(0, 10))
+            Mb.push({
+              key: wb ? "date" : "\xa9day",
+              value: bM(Hb.toISOString().slice(0, 10))
             });
             break;
           case "images":
-            for (const dd of Fd) "coverFront" === dd.kind && md.push({
+            for (const bb of Hb) "coverFront" === bb.kind && Mb.push({
               key: "covr",
-              value: Ld("data", [xd(kO[dd.mimeType] ?? 0), xd(0), Array.from(dd.data)])
+              value: Sb("data", [rb(yw[bb.mimeType] ?? 0), rb(0), Array.from(bb.data)])
             });
             break;
           case "trackNumber":
-            if (Od) {
-              const Od = void 0 !== dd.tracksTotal ? `${Fd}/${dd.tracksTotal}` : Fd.toString();
-              md.push({
+            if (wb) {
+              const wb = void 0 !== bb.tracksTotal ? `${Hb}/${bb.tracksTotal}` : Hb.toString();
+              Mb.push({
                 key: "track",
-                value: Om(Od)
+                value: bM(wb)
               })
-            } else md.push({
+            } else Mb.push({
               key: "trkn",
-              value: Ld("data", [xd(0), xd(0), Ed(0), Ed(Fd), Ed(dd.tracksTotal ?? 0), Ed(0)])
+              value: Sb("data", [rb(0), rb(0), xb(0), xb(Hb), xb(bb.tracksTotal ?? 0), xb(0)])
             });
             break;
           case "discNumber":
-            Od || md.push({
+            wb || Mb.push({
               key: "disc",
-              value: Ld("data", [xd(0), xd(0), Ed(0), Ed(Fd), Ed(dd.discsTotal ?? 0), Ed(0)])
+              value: Sb("data", [rb(0), rb(0), xb(0), xb(Hb), xb(bb.discsTotal ?? 0), xb(0)])
             });
             break;
           case "tracksTotal":
@@ -4199,40 +4199,40 @@ export const modules = {
           case "raw":
             break;
           default:
-            (0, Kd.J)(Wd)
+            (0, gb.H)(eb)
         }
-        if (dd.raw)
-          for (const Wd in dd.raw) {
-            const Fd = dd.raw[Wd];
-            null == Fd || !Od && 4 !== Wd.length || md.some((dd => dd.key === Wd)) || ("string" === typeof Fd ? md.push({
-              key: Wd,
-              value: Om(Fd)
-            }) : Fd instanceof Uint8Array ? md.push({
-              key: Wd,
-              value: Ld("data", [xd(0), xd(0), Array.from(Fd)])
-            }) : Fd instanceof Nd.h && md.push({
-              key: Wd,
-              value: Ld("data", [xd(kO[Fd.mimeType] ?? 0), xd(0), Array.from(Fd.data)])
+        if (bb.raw)
+          for (const eb in bb.raw) {
+            const Hb = bb.raw[eb];
+            null == Hb || !wb && 4 !== eb.length || Mb.some((bb => bb.key === eb)) || ("string" === typeof Hb ? Mb.push({
+              key: eb,
+              value: bM(Hb)
+            }) : Hb instanceof Uint8Array ? Mb.push({
+              key: eb,
+              value: Sb("data", [rb(0), rb(0), Array.from(Hb)])
+            }) : Hb instanceof tb.f && Mb.push({
+              key: eb,
+              value: Sb("data", [rb(yw[Hb.mimeType] ?? 0), rb(0), Array.from(Hb.data)])
             }))
           }
-        return md
+        return Mb
       },
-      MO = dd => {
-        const Od = fO(dd, !1);
-        return 0 === Od.length ? null : Pd("meta", 0, 0, void 0, [dO(!1, "mdir", "", "appl"), Ld("ilst", void 0, Od.map((dd => Ld(dd.key, void 0, [dd.value]))))])
+      Tw = bb => {
+        const wb = ow(bb, !1);
+        return 0 === wb.length ? null : Nb("meta", 0, 0, void 0, [Tb(!1, "mdir", "", "appl"), Sb("ilst", void 0, wb.map((bb => Sb(bb.key, void 0, [bb.value]))))])
       },
-      dm = dd => {
-        const Od = fO(dd, !0);
-        return 0 === Od.length ? null : Ld("meta", void 0, [dO(!1, "mdta", ""), Pd("keys", 0, 0, [xd(Od.length)], Od.map((dd => Ld("mdta", [...Kd.od.encode(dd.key)])))), Ld("ilst", void 0, Od.map(((dd, Od) => {
-          const md = String.fromCharCode(...xd(Od + 1));
-          return Ld(md, void 0, [dd.value])
+      kw = bb => {
+        const wb = ow(bb, !0);
+        return 0 === wb.length ? null : Sb("meta", void 0, [Tb(!1, "mdta", ""), Nb("keys", 0, 0, [rb(wb.length)], wb.map((bb => Sb("mdta", [...gb.id.encode(bb.key)])))), Sb("ilst", void 0, wb.map(((bb, wb) => {
+          const Mb = String.fromCharCode(...rb(wb + 1));
+          return Sb(Mb, void 0, [bb.value])
         })))])
       },
-      Om = dd => Ld("data", [xd(1), xd(0), ...Kd.od.encode(dd)]),
-      mm = (dd, Od) => {
-        switch (dd) {
+      bM = bb => Sb("data", [rb(1), rb(0), ...gb.id.encode(bb)]),
+      wM = (bb, wb) => {
+        switch (bb) {
           case "avc":
-            return Od.startsWith("avc3") ? "avc3" : "avc1";
+            return wb.startsWith("avc3") ? "avc3" : "avc1";
           case "hevc":
             return "hvc1";
           case "vp8":
@@ -4242,19 +4242,19 @@ export const modules = {
           case "av1":
             return "av01";
           case "prores":
-            return Od
+            return wb
         }
       },
-      Wm = {
-        avc: dd => dd.info.decoderConfig && Ld("avcC", [...(0, Kd.vd)(dd.info.decoderConfig.description)]),
-        hevc: dd => dd.info.decoderConfig && Ld("hvcC", [...(0, Kd.vd)(dd.info.decoderConfig.description)]),
-        vp8: oO,
-        vp9: oO,
-        av1: dd => Ld("av1C", (0, Fd.E)(dd.info.decoderConfig.codec)),
+      MM = {
+        avc: bb => bb.info.decoderConfig && Sb("avcC", [...(0, gb.od)(bb.info.decoderConfig.description)]),
+        hevc: bb => bb.info.decoderConfig && Sb("hvcC", [...(0, gb.od)(bb.info.decoderConfig.description)]),
+        vp8: Iw,
+        vp9: Iw,
+        av1: bb => Sb("av1C", (0, Hb.z)(bb.info.decoderConfig.codec)),
         prores: null
       },
-      Fm = (dd, Od, md) => {
-        switch (dd) {
+      eM = (bb, wb, Mb) => {
+        switch (bb) {
           case "aac":
           case "mp3":
           case "vorbis":
@@ -4276,9 +4276,9 @@ export const modules = {
           case "eac3":
             return "ec-3";
           case "dts":
-            return Od
+            return wb
         }
-        if (md) switch (dd) {
+        if (Mb) switch (bb) {
           case "pcm-s16":
             return "sowt";
           case "pcm-s16be":
@@ -4295,7 +4295,7 @@ export const modules = {
           case "pcm-f64":
           case "pcm-f64be":
             return "fl64"
-        } else switch (dd) {
+        } else switch (bb) {
           case "pcm-s16":
           case "pcm-s16be":
           case "pcm-s24":
@@ -4310,24 +4310,24 @@ export const modules = {
             return "fpcm"
         }
       },
-      Rm = (dd, Od) => {
-        switch (dd) {
+      HM = (bb, wb) => {
+        switch (bb) {
           case "aac":
           case "mp3":
           case "vorbis":
-            return qO;
+            return Uw;
           case "opus":
-            return TO;
+            return Fw;
           case "flac":
-            return pO;
+            return Bw;
           case "ac3":
-            return gO;
+            return mw;
           case "eac3":
-            return wO;
+            return hw;
           case "dts":
-            return aO
+            return zw
         }
-        if (Od) switch (dd) {
+        if (wb) switch (bb) {
           case "pcm-s24":
           case "pcm-s24be":
           case "pcm-s32":
@@ -4336,8 +4336,8 @@ export const modules = {
           case "pcm-f32be":
           case "pcm-f64":
           case "pcm-f64be":
-            return HO
-        } else switch (dd) {
+            return tw
+        } else switch (bb) {
           case "pcm-s16":
           case "pcm-s16be":
           case "pcm-s24":
@@ -4348,192 +4348,192 @@ export const modules = {
           case "pcm-f32be":
           case "pcm-f64":
           case "pcm-f64be":
-            return YO
+            return sw
         }
         return null
       },
-      Xm = {
+      pM = {
         webvtt: "wvtt"
       },
-      Km = {
-        webvtt: dd => Ld("vttC", [...Kd.od.encode(dd.info.config.description)])
+      VM = {
+        webvtt: bb => Sb("vttC", [...gb.id.encode(bb.info.config.description)])
       },
-      hm = dd => {
-        (0, Kd.M)(3 === dd.length);
-        let Od = 0;
-        for (let md = 0; md < 3; md++) Od <<= 5, Od += dd.charCodeAt(md) - 96;
-        return Od
+      gM = bb => {
+        (0, gb.L)(3 === bb.length);
+        let wb = 0;
+        for (let Mb = 0; Mb < 3; Mb++) wb <<= 5, wb += bb.charCodeAt(Mb) - 96;
+        return wb
       };
-    var Qm = md(41540),
-      tm = md(41544);
-    const om = dd => {
-        const Od = dd.filePos,
-          md = Qd(dd, 9),
-          Wd = new yd.c(md);
-        if (4095 !== Wd.readBits(12)) return null;
-        Wd.skipBits(1);
-        if (0 !== Wd.readBits(2)) return null;
-        const Fd = Wd.readBits(1),
-          Rd = Wd.readBits(2) + 1,
-          Xd = Wd.readBits(4);
-        if (15 === Xd) return null;
-        Wd.skipBits(1);
-        const Kd = Wd.readBits(3);
-        if (0 === Kd) throw new Error("ADTS frames with channel configuration 0 are not supported.");
-        Wd.skipBits(1), Wd.skipBits(1), Wd.skipBits(1), Wd.skipBits(1);
-        const hd = Wd.readBits(13);
-        Wd.skipBits(11);
-        const vd = Wd.readBits(2) + 1;
-        if (1 !== vd) throw new Error("ADTS frames with more than one AAC frame are not supported.");
-        let td = null;
-        return 1 === Fd ? dd.filePos -= 2 : td = Wd.readBits(16), {
-          objectType: Rd,
-          samplingFrequencyIndex: Xd,
-          channelConfiguration: Kd,
-          frameLength: hd,
-          numberOfAacFrames: vd,
-          crcCheck: td,
-          startPos: Od
+    var lM = Mb(41312),
+      LM = Mb(41316);
+    const IM = bb => {
+        const wb = bb.filePos,
+          Mb = Ib(bb, 9),
+          eb = new Fb.e(Mb);
+        if (4095 !== eb.readBits(12)) return null;
+        eb.skipBits(1);
+        if (0 !== eb.readBits(2)) return null;
+        const Hb = eb.readBits(1),
+          pb = eb.readBits(2) + 1,
+          Vb = eb.readBits(4);
+        if (15 === Vb) return null;
+        eb.skipBits(1);
+        const gb = eb.readBits(3);
+        if (0 === gb) throw new Error("ADTS frames with channel configuration 0 are not supported.");
+        eb.skipBits(1), eb.skipBits(1), eb.skipBits(1), eb.skipBits(1);
+        const lb = eb.readBits(13);
+        eb.skipBits(11);
+        const Lb = eb.readBits(2) + 1;
+        if (1 !== Lb) throw new Error("ADTS frames with more than one AAC frame are not supported.");
+        let Ob = null;
+        return 1 === Hb ? bb.filePos -= 2 : Ob = eb.readBits(16), {
+          objectType: pb,
+          samplingFrequencyIndex: Vb,
+          channelConfiguration: gb,
+          frameLength: lb,
+          numberOfAacFrames: Lb,
+          crcCheck: Ob,
+          startPos: wb
         }
       },
-      Nm = 57600,
-      qm = dd => {
-        const Od = {},
-          md = dd.track;
-        return void 0 !== md.metadata.name && (Od.name = md.metadata.name), Od
+      OM = 57600,
+      UM = bb => {
+        const wb = {},
+          Mb = bb.track;
+        return void 0 !== Mb.metadata.name && (wb.name = Mb.metadata.name), wb
       },
-      Hm = function(dd, Od) {
-        const md = dd * Od;
-        return !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Math.round(md) : md
+      tM = function(bb, wb) {
+        const Mb = bb * wb;
+        return !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Math.round(Mb) : Mb
       },
-      ym = dd => {
-        if (0 === dd.samples.length) return 0;
-        let Od = 1 / 0,
-          md = -1 / 0;
-        for (let Wd = 0; Wd < dd.samples.length; Wd++) {
-          const Fd = dd.samples[Wd];
-          Fd.timestamp < Od && (Od = Fd.timestamp), Fd.timestamp + Fd.duration > md && (md = Fd.timestamp + Fd.duration)
+      CM = bb => {
+        if (0 === bb.samples.length) return 0;
+        let wb = 1 / 0,
+          Mb = -1 / 0;
+        for (let eb = 0; eb < bb.samples.length; eb++) {
+          const Hb = bb.samples[eb];
+          Hb.timestamp < wb && (wb = Hb.timestamp), Hb.timestamp + Hb.duration > Mb && (Mb = Hb.timestamp + Hb.duration)
         }
-        return Od === 1 / 0 ? 0 : md - Od
+        return wb === 1 / 0 ? 0 : Mb - wb
       };
-    class bm extends qd {
-      constructor(dd, Od) {
-        super(dd), this.writer = null, this.boxWriter = null, this.initWriter = null, this.initBoxWriter = null, this.auxTarget = new tm.c, this.auxWriter = new Qm.d(this.auxTarget, !1), this.auxBoxWriter = new pd(this.auxWriter), this.mdat = null, this.ftypSize = null, this.trackDatas = [], this.allTracksKnown = (0, Kd.Ac)(), this.creationTime = Math.floor(Date.now() / 1e3) + 2082844800, this.finalizedChunks = [], this.wroteFragmentedHeader = !1, this.nextFragmentNumber = 1, this.maxWrittenTimestamp = -1 / 0, this.minWrittenTimestamp = 1 / 0, this.maxWrittenEndTimestamp = -1 / 0, this.segmentHeaderSize = null, this.format = Od, this.formatOptions = {
-          ...Od._options
-        }, this.isQuickTime = Od instanceof Pm, this.isCmaf = Od instanceof Lm, this.minimumFragmentDuration = this.formatOptions.minimumFragmentDuration ?? (Od instanceof Lm ? 1 / 0 : 1), this.auxWriter.start()
+    class EM extends Cb {
+      constructor(bb, wb) {
+        super(bb), this.writer = null, this.boxWriter = null, this.initWriter = null, this.initBoxWriter = null, this.auxTarget = new LM.b, this.auxWriter = new lM.b(this.auxTarget, !1), this.auxBoxWriter = new mb(this.auxWriter), this.mdat = null, this.ftypSize = null, this.trackDatas = [], this.allTracksKnown = (0, gb.vc)(), this.creationTime = Math.floor(Date.now() / 1e3) + 2082844800, this.finalizedChunks = [], this.wroteFragmentedHeader = !1, this.nextFragmentNumber = 1, this.maxWrittenTimestamp = -1 / 0, this.minWrittenTimestamp = 1 / 0, this.maxWrittenEndTimestamp = -1 / 0, this.segmentHeaderSize = null, this.format = wb, this.formatOptions = {
+          ...wb._options
+        }, this.isQuickTime = wb instanceof NM, this.isCmaf = wb instanceof SM, this.minimumFragmentDuration = this.formatOptions.minimumFragmentDuration ?? (wb instanceof SM ? 1 / 0 : 1), this.auxWriter.start()
       }
       async start() {
-        const dd = await this.mutex.acquire();
-        if (this.isCmaf ? (this.fastStart = "fragmented", this.isFragmented = !0) : (this.writer = await this.output._getRootWriter((dd => void 0 !== this.formatOptions.fastStart ? "fragmented" === this.formatOptions.fastStart : dd instanceof tm.c)), this.boxWriter = new pd(this.writer), this.fastStart = this.formatOptions.fastStart ?? (this.writer.target instanceof tm.c && "in-memory"), this.isFragmented = "fragmented" === this.fastStart), this.isCmaf) {
+        const bb = await this.mutex.acquire();
+        if (this.isCmaf ? (this.fastStart = "fragmented", this.isFragmented = !0) : (this.writer = await this.output._getRootWriter((bb => void 0 !== this.formatOptions.fastStart ? "fragmented" === this.formatOptions.fastStart : bb instanceof LM.b)), this.boxWriter = new mb(this.writer), this.fastStart = this.formatOptions.fastStart ?? (this.writer.target instanceof LM.b && "in-memory"), this.isFragmented = "fragmented" === this.fastStart), this.isCmaf) {
           if (!this.output._hasInitTarget()) throw new Error("CMAF outputs require the initTarget field in OutputOptions to be set; the init segment will be written to it.");
-          const dd = await this.output._getInitTarget(),
-            Od = new Qm.d(dd, !0);
-          Od.start(), this.initWriter = Od, this.initBoxWriter = new pd(Od)
+          const bb = await this.output._getInitTarget(),
+            wb = new lM.b(bb, !0);
+          wb.start(), this.initWriter = wb, this.initBoxWriter = new mb(wb)
         }
-        const Od = this.output.tracks.some((dd => dd.isVideoTrack() && "avc" === dd.source._codec));
+        const wb = this.output.tracks.some((bb => bb.isVideoTrack() && "avc" === bb.source._codec));
         {
-          const dd = this.initBoxWriter ?? this.boxWriter;
-          if ((0, Kd.M)(dd), this.formatOptions.onFtyp && dd.writer.startTrackingWrites(), dd.writeBox((dd => {
-              const Od = 512;
-              return dd.isQuickTime ? Ld("ftyp", [Gd("qt  "), xd(Od), Gd("qt  ")]) : dd.fragmented ? dd.cmaf ? Ld("ftyp", [Gd("iso5"), xd(Od), Gd("iso5"), Gd("iso6"), Gd("mp41"), Gd("cmfc"), Gd("dash")]) : Ld("ftyp", [Gd("iso5"), xd(Od), Gd("iso5"), Gd("iso6"), Gd("mp41")]) : Ld("ftyp", [Gd("isom"), xd(Od), Gd("isom"), dd.holdsAvc ? Gd("avc1") : [], Gd("mp41")])
+          const bb = this.initBoxWriter ?? this.boxWriter;
+          if ((0, gb.L)(bb), this.formatOptions.onFtyp && bb.writer.startTrackingWrites(), bb.writeBox((bb => {
+              const wb = 512;
+              return bb.isQuickTime ? Sb("ftyp", [Wb("qt  "), rb(wb), Wb("qt  ")]) : bb.fragmented ? bb.cmaf ? Sb("ftyp", [Wb("iso5"), rb(wb), Wb("iso5"), Wb("iso6"), Wb("mp41"), Wb("cmfc"), Wb("dash")]) : Sb("ftyp", [Wb("iso5"), rb(wb), Wb("iso5"), Wb("iso6"), Wb("mp41")]) : Sb("ftyp", [Wb("isom"), rb(wb), Wb("isom"), bb.holdsAvc ? Wb("avc1") : [], Wb("mp41")])
             })({
               isQuickTime: this.isQuickTime,
-              holdsAvc: Od,
+              holdsAvc: wb,
               fragmented: this.isFragmented,
               cmaf: this.isCmaf
             })), this.formatOptions.onFtyp) {
             const {
-              data: Od,
-              start: md
-            } = dd.writer.stopTrackingWrites();
-            this.formatOptions.onFtyp(Od, md)
+              data: wb,
+              start: Mb
+            } = bb.writer.stopTrackingWrites();
+            this.formatOptions.onFtyp(wb, Mb)
           }
-          this.ftypSize = dd.writer.getPos(), this.isCmaf && await this.initWriter.flush()
+          this.ftypSize = bb.writer.getPos(), this.isCmaf && await this.initWriter.flush()
         }
         if ("in-memory" === this.fastStart);
         else if ("reserve" === this.fastStart) {
-          for (const md of this.output.tracks)
-            if (void 0 === md.metadata.maximumPacketCount) throw new Error("All tracks must specify maximumPacketCount in their metadata when using fastStart: 'reserve'.")
-        } else this.isFragmented || ((0, Kd.M)(this.writer), (0, Kd.M)(this.boxWriter), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = jd(!0), this.boxWriter.writeBox(this.mdat));
+          for (const Mb of this.output.tracks)
+            if (void 0 === Mb.metadata.maximumPacketCount) throw new Error("All tracks must specify maximumPacketCount in their metadata when using fastStart: 'reserve'.")
+        } else this.isFragmented || ((0, gb.L)(this.writer), (0, gb.L)(this.boxWriter), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = Gb(!0), this.boxWriter.writeBox(this.mdat));
         await (this.writer?.flush());
-        for (const md of this.output.tracks) md.isVideoTrack() && md.metadata.decoderConfig ? this.getVideoTrackData(md, md.metadata.primingPacket ?? null, {
-          decoderConfig: md.metadata.decoderConfig
-        }) : md.isAudioTrack() && md.metadata.decoderConfig && this.getAudioTrackData(md, md.metadata.primingPacket ?? null, {
-          decoderConfig: md.metadata.decoderConfig
+        for (const Mb of this.output.tracks) Mb.isVideoTrack() && Mb.metadata.decoderConfig ? this.getVideoTrackData(Mb, Mb.metadata.primingPacket ?? null, {
+          decoderConfig: Mb.metadata.decoderConfig
+        }) : Mb.isAudioTrack() && Mb.metadata.decoderConfig && this.getAudioTrackData(Mb, Mb.metadata.primingPacket ?? null, {
+          decoderConfig: Mb.metadata.decoderConfig
         });
-        dd()
+        bb()
       }
       allTracksAreKnown() {
-        for (const dd of this.output.tracks)
-          if (!dd.source._closed && !this.trackDatas.some((Od => Od.track === dd))) return !1;
+        for (const bb of this.output.tracks)
+          if (!bb.source._closed && !this.trackDatas.some((wb => wb.track === bb))) return !1;
         return !0
       }
       async getMimeType() {
         await this.allTracksKnown.promise;
-        const dd = this.trackDatas.map((dd => {
-          if ("video" === dd.type) return dd.info.decoderConfig.codec;
-          if ("audio" === dd.type) return dd.info.decoderConfig.codec;
+        const bb = this.trackDatas.map((bb => {
+          if ("video" === bb.type) return bb.info.decoderConfig.codec;
+          if ("audio" === bb.type) return bb.info.decoderConfig.codec;
           return {
             webvtt: "wvtt"
-          } [dd.track.source._codec]
+          } [bb.track.source._codec]
         }));
-        return (dd => {
-          let Od = (dd.hasVideo ? "video/" : dd.hasAudio ? "audio/" : "application/") + (dd.isQuickTime ? "quicktime" : "mp4");
-          dd.codecStrings.length > 0 && (Od += `; codecs="${[...new Set(dd.codecStrings)].join(", ")}"`);
-          return Od
+        return (bb => {
+          let wb = (bb.hasVideo ? "video/" : bb.hasAudio ? "audio/" : "application/") + (bb.isQuickTime ? "quicktime" : "mp4");
+          bb.codecStrings.length > 0 && (wb += `; codecs="${[...new Set(bb.codecStrings)].join(", ")}"`);
+          return wb
         })({
           isQuickTime: this.isQuickTime,
-          hasVideo: this.trackDatas.some((dd => "video" === dd.type)),
-          hasAudio: this.trackDatas.some((dd => "audio" === dd.type)),
-          codecStrings: dd
+          hasVideo: this.trackDatas.some((bb => "video" === bb.type)),
+          hasAudio: this.trackDatas.some((bb => "audio" === bb.type)),
+          codecStrings: bb
         })
       }
-      getVideoTrackData(dd, Od, md) {
-        const Wd = this.trackDatas.find((Od => Od.track === dd));
-        if (Wd) return Wd;
-        (0, Fd.X)(md, dd.source._codec), (0, Kd.M)(md), (0, Kd.M)(md.decoderConfig);
-        const Rd = {
-          ...md.decoderConfig
+      getVideoTrackData(bb, wb, Mb) {
+        const eb = this.trackDatas.find((wb => wb.track === bb));
+        if (eb) return eb;
+        (0, Hb.T)(Mb, bb.source._codec), (0, gb.L)(Mb), (0, gb.L)(Mb.decoderConfig);
+        const pb = {
+          ...Mb.decoderConfig
         };
-        (0, Kd.M)(void 0 !== Rd.codedWidth), (0, Kd.M)(void 0 !== Rd.codedHeight);
-        let Xd = !1;
-        if ("avc" !== dd.source._codec || Rd.description) {
-          if ("hevc" === dd.source._codec && !Rd.description) {
-            if (!Od) throw new Error("No HEVC description provided; you must therefore provide a priming packet.");
-            const dd = (0, Hd.L)(Od.data);
-            if (!dd) throw new Error("Couldn't extract an HEVCDecoderConfigurationRecord from the HEVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.265) when not providing a description, or provide a description (must be an HEVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in HEVC format.");
-            Rd.description = (0, Hd.mb)(dd), Xd = !0
+        (0, gb.L)(void 0 !== pb.codedWidth), (0, gb.L)(void 0 !== pb.codedHeight);
+        let Vb = !1;
+        if ("avc" !== bb.source._codec || pb.description) {
+          if ("hevc" === bb.source._codec && !pb.description) {
+            if (!wb) throw new Error("No HEVC description provided; you must therefore provide a priming packet.");
+            const bb = (0, Eb.S)(wb.data);
+            if (!bb) throw new Error("Couldn't extract an HEVCDecoderConfigurationRecord from the HEVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.265) when not providing a description, or provide a description (must be an HEVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in HEVC format.");
+            pb.description = (0, Eb.yb)(bb), Vb = !0
           }
         } else {
-          if (!Od) throw new Error("No AVC description provided; you must therefore provide a priming packet.");
-          const dd = (0, Hd.H)(Od.data);
-          if (!dd) throw new Error("Couldn't extract an AVCDecoderConfigurationRecord from the AVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.264) when not providing a description, or provide a description (must be an AVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in AVCC format.");
-          Rd.description = (0, Hd.kb)(dd), Xd = !0
+          if (!wb) throw new Error("No AVC description provided; you must therefore provide a priming packet.");
+          const bb = (0, Eb.M)(wb.data);
+          if (!bb) throw new Error("Couldn't extract an AVCDecoderConfigurationRecord from the AVC packet. Make sure the packets are in Annex B format (as specified in ITU-T-REC-H.264) when not providing a description, or provide a description (must be an AVCDecoderConfigurationRecord as specified in ISO 14496-15) and ensure the packets are in AVCC format.");
+          pb.description = (0, Eb.xb)(bb), Vb = !0
         }
-        const hd = (0, Kd.lb)(1 / (dd.metadata.frameRate ?? Nm), 1e6).den,
-          vd = Rd.displayAspectWidth,
-          Qd = Rd.displayAspectHeight,
-          td = void 0 === vd || void 0 === Qd ? {
+        const lb = (0, gb.ib)(1 / (bb.metadata.frameRate ?? OM), 1e6).den,
+          Lb = pb.displayAspectWidth,
+          Ib = pb.displayAspectHeight,
+          Ob = void 0 === Lb || void 0 === Ib ? {
             num: 1,
             den: 1
-          } : (0, Kd.id)({
-            num: vd * Rd.codedHeight,
-            den: Qd * Rd.codedWidth
+          } : (0, gb.fd)({
+            num: Lb * pb.codedHeight,
+            den: Ib * pb.codedWidth
           }),
-          od = "ap4h" === Rd.codec || "ap4x" === Rd.codec,
-          Nd = {
+          Ub = "ap4h" === pb.codec || "ap4x" === pb.codec,
+          tb = {
             muxer: this,
-            track: dd,
+            track: bb,
             type: "video",
             info: {
-              width: Rd.codedWidth,
-              height: Rd.codedHeight,
-              pixelAspectRatio: td,
-              decoderConfig: Rd,
-              requiresAnnexBTransformation: Xd,
-              hasAlphaChannel: od
+              width: pb.codedWidth,
+              height: pb.codedHeight,
+              pixelAspectRatio: Ob,
+              decoderConfig: pb,
+              requiresAnnexBTransformation: Vb,
+              hasAlphaChannel: Ub
             },
-            timescale: hd,
+            timescale: lb,
             samples: [],
             sampleQueue: [],
             timestampProcessingQueue: [],
@@ -4546,50 +4546,50 @@ export const modules = {
             currentChunk: null,
             compactlyCodedChunkTable: [],
             closed: !1,
-            avgBitrate: dd.source._nominalBitrate ?? dd.metadata.averageBitrate ?? 0,
-            maxBitrate: dd.source._nominalBitrate ?? dd.metadata.bitrate ?? 0
+            avgBitrate: bb.source._nominalBitrate ?? bb.metadata.averageBitrate ?? 0,
+            maxBitrate: bb.source._nominalBitrate ?? bb.metadata.bitrate ?? 0
           };
-        return this.trackDatas.push(Nd), this.trackDatas.sort(((dd, Od) => dd.track.id - Od.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), Nd
+        return this.trackDatas.push(tb), this.trackDatas.sort(((bb, wb) => bb.track.id - wb.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), tb
       }
-      getAudioTrackData(dd, Od, md) {
-        const Rd = this.trackDatas.find((Od => Od.track === dd));
-        if (Rd) return Rd;
-        (0, Fd.U)(md, dd.source._codec), (0, Kd.M)(md), (0, Kd.M)(md.decoderConfig);
-        const Xd = {
-          ...md.decoderConfig
+      getAudioTrackData(bb, wb, Mb) {
+        const pb = this.trackDatas.find((wb => wb.track === bb));
+        if (pb) return pb;
+        (0, Hb.P)(Mb, bb.source._codec), (0, gb.L)(Mb), (0, gb.L)(Mb.decoderConfig);
+        const Vb = {
+          ...Mb.decoderConfig
         };
-        let vd = !1;
-        if ("aac" === dd.source._codec && !Xd.description) {
-          if (!Od) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
-          const dd = om(hd.tempFromBytes(Od.data));
-          if (!dd) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
-          const md = Wd.g[dd.samplingFrequencyIndex],
-            Fd = Wd.c[dd.channelConfiguration];
-          if (void 0 === md || void 0 === Fd) throw new Error("Invalid ADTS frame header.");
-          Xd.description = (0, Wd.k)({
-            objectType: dd.objectType,
-            outputSampleRate: md,
-            outputNumberOfChannels: Fd
-          }), vd = !0
+        let Lb = !1;
+        if ("aac" === bb.source._codec && !Vb.description) {
+          if (!wb) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
+          const bb = IM(lb.tempFromBytes(wb.data));
+          if (!bb) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
+          const Mb = eb.g[bb.samplingFrequencyIndex],
+            Hb = eb.e[bb.channelConfiguration];
+          if (void 0 === Mb || void 0 === Hb) throw new Error("Invalid ADTS frame header.");
+          Vb.description = (0, eb.h)({
+            objectType: bb.objectType,
+            outputSampleRate: Mb,
+            outputNumberOfChannels: Hb
+          }), Lb = !0
         }
-        if (!Od) {
-          if ("ac3" === dd.source._codec || "eac3" === dd.source._codec) throw new Error("AC-3/E-AC-3 require a priming packet.");
-          if ("dts" === dd.source._codec) throw new Error("DTS requires a priming packet.")
+        if (!wb) {
+          if ("ac3" === bb.source._codec || "eac3" === bb.source._codec) throw new Error("AC-3/E-AC-3 require a priming packet.");
+          if ("dts" === bb.source._codec) throw new Error("DTS requires a priming packet.")
         }
-        const Qd = {
+        const Ib = {
           muxer: this,
-          track: dd,
+          track: bb,
           type: "audio",
           info: {
-            numberOfChannels: md.decoderConfig.numberOfChannels,
-            sampleRate: md.decoderConfig.sampleRate,
-            decoderConfig: Xd,
-            requiresPcmTransformation: !this.isFragmented && Fd.m.includes(dd.source._codec),
+            numberOfChannels: Mb.decoderConfig.numberOfChannels,
+            sampleRate: Mb.decoderConfig.sampleRate,
+            decoderConfig: Vb,
+            requiresPcmTransformation: !this.isFragmented && Hb.l.includes(bb.source._codec),
             expectedNextPcmPacketTimestamp: null,
-            requiresAdtsStripping: vd,
-            primingPacket: Od
+            requiresAdtsStripping: Lb,
+            primingPacket: wb
           },
-          timescale: Xd.sampleRate,
+          timescale: Vb.sampleRate,
           samples: [],
           sampleQueue: [],
           timestampProcessingQueue: [],
@@ -4602,21 +4602,21 @@ export const modules = {
           currentChunk: null,
           compactlyCodedChunkTable: [],
           closed: !1,
-          avgBitrate: dd.source._nominalBitrate ?? dd.metadata.averageBitrate ?? 0,
-          maxBitrate: dd.source._nominalBitrate ?? dd.metadata.bitrate ?? 0
+          avgBitrate: bb.source._nominalBitrate ?? bb.metadata.averageBitrate ?? 0,
+          maxBitrate: bb.source._nominalBitrate ?? bb.metadata.bitrate ?? 0
         };
-        return this.trackDatas.push(Qd), this.trackDatas.sort(((dd, Od) => dd.track.id - Od.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), Qd
+        return this.trackDatas.push(Ib), this.trackDatas.sort(((bb, wb) => bb.track.id - wb.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), Ib
       }
-      getSubtitleTrackData(dd, Od) {
-        const md = this.trackDatas.find((Od => Od.track === dd));
-        if (md) return md;
-        (0, Fd.V)(Od), (0, Kd.M)(Od), (0, Kd.M)(Od.config);
-        const Wd = {
+      getSubtitleTrackData(bb, wb) {
+        const Mb = this.trackDatas.find((wb => wb.track === bb));
+        if (Mb) return Mb;
+        (0, Hb.R)(wb), (0, gb.L)(wb), (0, gb.L)(wb.config);
+        const eb = {
           muxer: this,
-          track: dd,
+          track: bb,
           type: "subtitle",
           info: {
-            config: Od.config
+            config: wb.config
           },
           timescale: 1e3,
           samples: [],
@@ -4631,618 +4631,618 @@ export const modules = {
           currentChunk: null,
           compactlyCodedChunkTable: [],
           closed: !1,
-          avgBitrate: dd.source._nominalBitrate ?? dd.metadata.averageBitrate ?? 0,
-          maxBitrate: dd.source._nominalBitrate ?? dd.metadata.bitrate ?? 0,
+          avgBitrate: bb.source._nominalBitrate ?? bb.metadata.averageBitrate ?? 0,
+          maxBitrate: bb.source._nominalBitrate ?? bb.metadata.bitrate ?? 0,
           lastCueEndTimestamp: null,
           cueQueue: [],
           nextSourceId: 0,
           cueToSourceId: new WeakMap
         };
-        return this.trackDatas.push(Wd), this.trackDatas.sort(((dd, Od) => dd.track.id - Od.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), Wd
+        return this.trackDatas.push(eb), this.trackDatas.sort(((bb, wb) => bb.track.id - wb.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), eb
       }
-      async addEncodedVideoPacket(dd, Od, md) {
-        const Wd = await this.mutex.acquire();
+      async addEncodedVideoPacket(bb, wb, Mb) {
+        const eb = await this.mutex.acquire();
         try {
-          const Wd = this.getVideoTrackData(dd, Od, md);
-          let Fd = Od.data;
-          if (Wd.info.requiresAnnexBTransformation) {
-            const dd = [...(0, Hd.S)(Fd)].map((dd => Fd.subarray(dd.offset, dd.offset + dd.length)));
-            if (0 === dd.length) throw new Error("Failed to transform packet data. Make sure all packets are provided in Annex B format, as specified in ITU-T-REC-H.264 and ITU-T-REC-H.265.");
-            Fd = (0, Hd.v)(dd, 4)
+          const eb = this.getVideoTrackData(bb, wb, Mb);
+          let Hb = wb.data;
+          if (eb.info.requiresAnnexBTransformation) {
+            const bb = [...(0, Eb.bb)(Hb)].map((bb => Hb.subarray(bb.offset, bb.offset + bb.length)));
+            if (0 === bb.length) throw new Error("Failed to transform packet data. Make sure all packets are provided in Annex B format, as specified in ITU-T-REC-H.264 and ITU-T-REC-H.265.");
+            Hb = (0, Eb.x)(bb, 4)
           }
-          this.validateTimestamp(Wd.track, Od.timestamp, "key" === Od.type);
-          const Rd = this.createSampleForTrack(Wd, Fd, Od.timestamp, Od.duration, Od.type);
-          await this.registerSample(Wd, Rd)
+          this.validateTimestamp(eb.track, wb.timestamp, "key" === wb.type);
+          const pb = this.createSampleForTrack(eb, Hb, wb.timestamp, wb.duration, wb.type);
+          await this.registerSample(eb, pb)
         } finally {
-          Wd()
+          eb()
         }
       }
-      async addEncodedAudioPacket(dd, Od, md) {
-        const Wd = await this.mutex.acquire();
+      async addEncodedAudioPacket(bb, wb, Mb) {
+        const eb = await this.mutex.acquire();
         try {
-          const Wd = this.getAudioTrackData(dd, Od, md);
-          let Rd = Od.data;
-          if (Wd.info.requiresAdtsStripping) {
-            const dd = om(hd.tempFromBytes(Rd));
-            if (!dd) throw new Error("Expected ADTS frame, didn't get one.");
-            const Od = null === dd.crcCheck ? 7 : 9;
-            Rd = Rd.subarray(Od)
+          const eb = this.getAudioTrackData(bb, wb, Mb);
+          let pb = wb.data;
+          if (eb.info.requiresAdtsStripping) {
+            const bb = IM(lb.tempFromBytes(pb));
+            if (!bb) throw new Error("Expected ADTS frame, didn't get one.");
+            const wb = null === bb.crcCheck ? 7 : 9;
+            pb = pb.subarray(wb)
           }
-          this.validateTimestamp(Wd.track, Od.timestamp, "key" === Od.type);
-          let Xd = Od.timestamp,
-            Kd = Od.duration;
-          if (Wd.info.requiresPcmTransformation) {
-            const dd = (0, Fd.S)(Wd.info.decoderConfig.codec).sampleSize * Wd.info.numberOfChannels;
-            if (Kd = Rd.byteLength / dd / Wd.info.sampleRate, null !== Wd.info.expectedNextPcmPacketTimestamp) {
-              const dd = Xd - Wd.info.expectedNextPcmPacketTimestamp;
-              if (dd < .01) Xd = Wd.info.expectedNextPcmPacketTimestamp;
+          this.validateTimestamp(eb.track, wb.timestamp, "key" === wb.type);
+          let Vb = wb.timestamp,
+            gb = wb.duration;
+          if (eb.info.requiresPcmTransformation) {
+            const bb = (0, Hb.N)(eb.info.decoderConfig.codec).sampleSize * eb.info.numberOfChannels;
+            if (gb = pb.byteLength / bb / eb.info.sampleRate, null !== eb.info.expectedNextPcmPacketTimestamp) {
+              const bb = Vb - eb.info.expectedNextPcmPacketTimestamp;
+              if (bb < .01) Vb = eb.info.expectedNextPcmPacketTimestamp;
               else {
-                const Od = await this.padWithSilence(Wd, Wd.info.expectedNextPcmPacketTimestamp, dd);
-                Xd = Wd.info.expectedNextPcmPacketTimestamp + Od
+                const wb = await this.padWithSilence(eb, eb.info.expectedNextPcmPacketTimestamp, bb);
+                Vb = eb.info.expectedNextPcmPacketTimestamp + wb
               }
             }
-            Wd.info.expectedNextPcmPacketTimestamp = Xd + Kd
+            eb.info.expectedNextPcmPacketTimestamp = Vb + gb
           }
-          const vd = this.createSampleForTrack(Wd, Rd, Xd, Kd, Od.type);
-          await this.registerSample(Wd, vd)
+          const Lb = this.createSampleForTrack(eb, pb, Vb, gb, wb.type);
+          await this.registerSample(eb, Lb)
         } finally {
-          Wd()
+          eb()
         }
       }
-      async padWithSilence(dd, Od, md) {
-        const Wd = Hm(md, dd.timescale);
-        if (md = Wd / dd.timescale, Wd > 0) {
+      async padWithSilence(bb, wb, Mb) {
+        const eb = tM(Mb, bb.timescale);
+        if (Mb = eb / bb.timescale, eb > 0) {
           const {
-            sampleSize: Rd,
-            silentValue: Xd
-          } = (0, Fd.S)(dd.info.decoderConfig.codec), Kd = Wd * dd.info.numberOfChannels, hd = new Uint8Array(Rd * Kd).fill(Xd), vd = this.createSampleForTrack(dd, new Uint8Array(hd.buffer), Od, md, "key");
-          await this.registerSample(dd, vd)
+            sampleSize: pb,
+            silentValue: Vb
+          } = (0, Hb.N)(bb.info.decoderConfig.codec), gb = eb * bb.info.numberOfChannels, lb = new Uint8Array(pb * gb).fill(Vb), Lb = this.createSampleForTrack(bb, new Uint8Array(lb.buffer), wb, Mb, "key");
+          await this.registerSample(bb, Lb)
         }
-        return md
+        return Mb
       }
-      async addSubtitleCue(dd, Od, md) {
-        const Wd = await this.mutex.acquire();
+      async addSubtitleCue(bb, wb, Mb) {
+        const eb = await this.mutex.acquire();
         try {
-          const Wd = this.getSubtitleTrackData(dd, md);
-          this.validateTimestamp(Wd.track, Od.timestamp, !0), "webvtt" === dd.source._codec && (Wd.cueQueue.push(Od), await this.processWebVTTCues(Wd, Od.timestamp))
+          const eb = this.getSubtitleTrackData(bb, Mb);
+          this.validateTimestamp(eb.track, wb.timestamp, !0), "webvtt" === bb.source._codec && (eb.cueQueue.push(wb), await this.processWebVTTCues(eb, wb.timestamp))
         } finally {
-          Wd()
+          eb()
         }
       }
-      async processWebVTTCues(dd, Od) {
-        for (; dd.cueQueue.length > 0;) {
-          dd.lastCueEndTimestamp ??= Math.min(0, dd.cueQueue[0].timestamp);
-          const md = new Set([]);
-          for (const vd of dd.cueQueue)(0, Kd.M)(vd.timestamp <= Od), (0, Kd.M)(dd.lastCueEndTimestamp <= vd.timestamp + vd.duration), md.add(Math.max(vd.timestamp, dd.lastCueEndTimestamp)), md.add(vd.timestamp + vd.duration);
-          const Wd = [...md].sort(((dd, Od) => dd - Od)),
-            Fd = Wd[0],
-            Rd = Wd[1] ?? Fd;
-          if (Od < Rd) break;
-          if (dd.lastCueEndTimestamp < Fd) {
+      async processWebVTTCues(bb, wb) {
+        for (; bb.cueQueue.length > 0;) {
+          bb.lastCueEndTimestamp ??= Math.min(0, bb.cueQueue[0].timestamp);
+          const Mb = new Set([]);
+          for (const Lb of bb.cueQueue)(0, gb.L)(Lb.timestamp <= wb), (0, gb.L)(bb.lastCueEndTimestamp <= Lb.timestamp + Lb.duration), Mb.add(Math.max(Lb.timestamp, bb.lastCueEndTimestamp)), Mb.add(Lb.timestamp + Lb.duration);
+          const eb = [...Mb].sort(((bb, wb) => bb - wb)),
+            Hb = eb[0],
+            pb = eb[1] ?? Hb;
+          if (wb < pb) break;
+          if (bb.lastCueEndTimestamp < Hb) {
             this.auxWriter.seek(0);
-            const Od = DO();
-            this.auxBoxWriter.writeBox(Od);
-            const md = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
-              Wd = this.createSampleForTrack(dd, md, dd.lastCueEndTimestamp, Fd - dd.lastCueEndTimestamp, "key");
-            await this.registerSample(dd, Wd), dd.lastCueEndTimestamp = Fd
+            const wb = aw();
+            this.auxBoxWriter.writeBox(wb);
+            const Mb = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
+              eb = this.createSampleForTrack(bb, Mb, bb.lastCueEndTimestamp, Hb - bb.lastCueEndTimestamp, "key");
+            await this.registerSample(bb, eb), bb.lastCueEndTimestamp = Hb
           }
           this.auxWriter.seek(0);
-          for (let Od = 0; Od < dd.cueQueue.length; Od++) {
-            const md = dd.cueQueue[Od];
-            if (md.timestamp >= Rd) break;
-            bd.h.lastIndex = 0;
-            const Wd = bd.h.test(md.text),
-              Xd = md.timestamp + md.duration;
-            let Kd = dd.cueToSourceId.get(md);
-            if (void 0 === Kd && Rd < Xd && (Kd = dd.nextSourceId++, dd.cueToSourceId.set(md, Kd)), md.notes) {
-              const dd = IO(md.notes);
-              this.auxBoxWriter.writeBox(dd)
+          for (let wb = 0; wb < bb.cueQueue.length; wb++) {
+            const Mb = bb.cueQueue[wb];
+            if (Mb.timestamp >= pb) break;
+            Bb.i.lastIndex = 0;
+            const eb = Bb.i.test(Mb.text),
+              Vb = Mb.timestamp + Mb.duration;
+            let gb = bb.cueToSourceId.get(Mb);
+            if (void 0 === gb && pb < Vb && (gb = bb.nextSourceId++, bb.cueToSourceId.set(Mb, gb)), Mb.notes) {
+              const bb = uw(Mb.notes);
+              this.auxBoxWriter.writeBox(bb)
             }
-            const hd = eO(md.text, Wd ? Fd : null, md.identifier ?? null, md.settings ?? null, Kd ?? null);
-            this.auxBoxWriter.writeBox(hd), Xd === Rd && dd.cueQueue.splice(Od--, 1)
+            const lb = iw(Mb.text, eb ? Hb : null, Mb.identifier ?? null, Mb.settings ?? null, gb ?? null);
+            this.auxBoxWriter.writeBox(lb), Vb === pb && bb.cueQueue.splice(wb--, 1)
           }
-          const Xd = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
-            hd = this.createSampleForTrack(dd, Xd, Fd, Rd - Fd, "key");
-          await this.registerSample(dd, hd), dd.lastCueEndTimestamp = Rd
+          const Vb = this.auxTarget._getSlice(0, this.auxWriter.getPos()),
+            lb = this.createSampleForTrack(bb, Vb, Hb, pb - Hb, "key");
+          await this.registerSample(bb, lb), bb.lastCueEndTimestamp = pb
         }
       }
-      createSampleForTrack(dd, Od, md, Wd, Fd) {
+      createSampleForTrack(bb, wb, Mb, eb, Hb) {
         return {
-          timestamp: md,
-          decodeTimestamp: md,
-          duration: Wd,
-          data: Od,
-          size: Od.byteLength,
-          type: Fd,
-          timescaleUnitsToNextSample: Hm(Wd, dd.timescale)
+          timestamp: Mb,
+          decodeTimestamp: Mb,
+          duration: eb,
+          data: wb,
+          size: wb.byteLength,
+          type: Hb,
+          timescaleUnitsToNextSample: tM(eb, bb.timescale)
         }
       }
-      processTimestamps(dd, Od) {
-        if (0 === dd.timestampProcessingQueue.length) return;
-        if ("audio" === dd.type && dd.info.requiresPcmTransformation) {
-          (0, Kd.M)(!this.isFragmented), dd.startTimestampOffset ??= dd.timestampProcessingQueue[0].timestamp;
-          let Od = 0;
-          for (let md = 0; md < dd.timestampProcessingQueue.length; md++) {
-            const Wd = dd.timestampProcessingQueue[md];
-            Od += Hm(Wd.duration, dd.timescale)
+      processTimestamps(bb, wb) {
+        if (0 === bb.timestampProcessingQueue.length) return;
+        if ("audio" === bb.type && bb.info.requiresPcmTransformation) {
+          (0, gb.L)(!this.isFragmented), bb.startTimestampOffset ??= bb.timestampProcessingQueue[0].timestamp;
+          let wb = 0;
+          for (let Mb = 0; Mb < bb.timestampProcessingQueue.length; Mb++) {
+            const eb = bb.timestampProcessingQueue[Mb];
+            wb += tM(eb.duration, bb.timescale)
           }
-          if (0 === dd.timeToSampleTable.length) dd.timeToSampleTable.push({
-            sampleCount: Od,
+          if (0 === bb.timeToSampleTable.length) bb.timeToSampleTable.push({
+            sampleCount: wb,
             sampleDelta: 1
           });
           else {
-            (0, Kd.jc)(dd.timeToSampleTable).sampleCount += Od
+            (0, gb.ac)(bb.timeToSampleTable).sampleCount += wb
           }
-          return void(dd.timestampProcessingQueue.length = 0)
+          return void(bb.timestampProcessingQueue.length = 0)
         }
-        const md = dd.timestampProcessingQueue.map((dd => dd.timestamp)).sort(((dd, Od) => dd - Od));
-        this.isFragmented ? dd.startTimestampOffset ??= Math.min(md[0], 0) : dd.startTimestampOffset ??= md[0];
-        for (let Wd = 0; Wd < dd.timestampProcessingQueue.length; Wd++) {
-          const Od = dd.timestampProcessingQueue[Wd];
-          Od.decodeTimestamp = md[Wd];
-          const Fd = Hm(Od.timestamp - Od.decodeTimestamp, dd.timescale),
-            Rd = Hm(Od.duration, dd.timescale);
-          if (null !== dd.lastTimescaleUnits) {
-            (0, Kd.M)(dd.lastSample);
-            const md = Hm(Od.decodeTimestamp, dd.timescale, !1),
-              Wd = Math.round(md - dd.lastTimescaleUnits);
-            if ((0, Kd.M)(Wd >= 0), dd.lastTimescaleUnits += Wd, dd.lastSample.timescaleUnitsToNextSample = Wd, !this.isFragmented) {
-              let Od = (0, Kd.jc)(dd.timeToSampleTable);
-              if ((0, Kd.M)(Od), 1 === Od.sampleCount) {
-                Od.sampleDelta = Wd;
-                const md = dd.timeToSampleTable[dd.timeToSampleTable.length - 2];
-                md && md.sampleDelta === Wd && (md.sampleCount++, dd.timeToSampleTable.pop(), Od = md)
-              } else Od.sampleDelta !== Wd && (Od.sampleCount--, dd.timeToSampleTable.push(Od = {
+        const Mb = bb.timestampProcessingQueue.map((bb => bb.timestamp)).sort(((bb, wb) => bb - wb));
+        this.isFragmented ? bb.startTimestampOffset ??= Math.min(Mb[0], 0) : bb.startTimestampOffset ??= Mb[0];
+        for (let eb = 0; eb < bb.timestampProcessingQueue.length; eb++) {
+          const wb = bb.timestampProcessingQueue[eb];
+          wb.decodeTimestamp = Mb[eb];
+          const Hb = tM(wb.timestamp - wb.decodeTimestamp, bb.timescale),
+            pb = tM(wb.duration, bb.timescale);
+          if (null !== bb.lastTimescaleUnits) {
+            (0, gb.L)(bb.lastSample);
+            const Mb = tM(wb.decodeTimestamp, bb.timescale, !1),
+              eb = Math.round(Mb - bb.lastTimescaleUnits);
+            if ((0, gb.L)(eb >= 0), bb.lastTimescaleUnits += eb, bb.lastSample.timescaleUnitsToNextSample = eb, !this.isFragmented) {
+              let wb = (0, gb.ac)(bb.timeToSampleTable);
+              if ((0, gb.L)(wb), 1 === wb.sampleCount) {
+                wb.sampleDelta = eb;
+                const Mb = bb.timeToSampleTable[bb.timeToSampleTable.length - 2];
+                Mb && Mb.sampleDelta === eb && (Mb.sampleCount++, bb.timeToSampleTable.pop(), wb = Mb)
+              } else wb.sampleDelta !== eb && (wb.sampleCount--, bb.timeToSampleTable.push(wb = {
                 sampleCount: 1,
-                sampleDelta: Wd
+                sampleDelta: eb
               }));
-              Od.sampleDelta === Rd ? Od.sampleCount++ : dd.timeToSampleTable.push({
+              wb.sampleDelta === pb ? wb.sampleCount++ : bb.timeToSampleTable.push({
                 sampleCount: 1,
-                sampleDelta: Rd
+                sampleDelta: pb
               });
-              const md = (0, Kd.jc)(dd.compositionTimeOffsetTable);
-              (0, Kd.M)(md), md.sampleCompositionTimeOffset === Fd ? md.sampleCount++ : dd.compositionTimeOffsetTable.push({
+              const Mb = (0, gb.ac)(bb.compositionTimeOffsetTable);
+              (0, gb.L)(Mb), Mb.sampleCompositionTimeOffset === Hb ? Mb.sampleCount++ : bb.compositionTimeOffsetTable.push({
                 sampleCount: 1,
-                sampleCompositionTimeOffset: Fd
+                sampleCompositionTimeOffset: Hb
               })
             }
-          } else dd.lastTimescaleUnits = Hm(Od.decodeTimestamp, dd.timescale, !1), this.isFragmented || (dd.timeToSampleTable.push({
+          } else bb.lastTimescaleUnits = tM(wb.decodeTimestamp, bb.timescale, !1), this.isFragmented || (bb.timeToSampleTable.push({
             sampleCount: 1,
-            sampleDelta: Rd
-          }), dd.compositionTimeOffsetTable.push({
+            sampleDelta: pb
+          }), bb.compositionTimeOffsetTable.push({
             sampleCount: 1,
-            sampleCompositionTimeOffset: Fd
+            sampleCompositionTimeOffset: Hb
           }));
-          dd.lastSample = Od
+          bb.lastSample = wb
         }
-        if (dd.timestampProcessingQueue.length = 0, (0, Kd.M)(dd.lastSample), (0, Kd.M)(null !== dd.lastTimescaleUnits), void 0 !== Od && 0 === dd.lastSample.timescaleUnitsToNextSample) {
-          (0, Kd.M)("key" === Od.type);
-          const md = Hm(Od.timestamp, dd.timescale, !1),
-            Wd = Math.round(md - dd.lastTimescaleUnits);
-          dd.lastSample.timescaleUnitsToNextSample = Wd
+        if (bb.timestampProcessingQueue.length = 0, (0, gb.L)(bb.lastSample), (0, gb.L)(null !== bb.lastTimescaleUnits), void 0 !== wb && 0 === bb.lastSample.timescaleUnitsToNextSample) {
+          (0, gb.L)("key" === wb.type);
+          const Mb = tM(wb.timestamp, bb.timescale, !1),
+            eb = Math.round(Mb - bb.lastTimescaleUnits);
+          bb.lastSample.timescaleUnitsToNextSample = eb
         }
       }
-      async registerSample(dd, Od) {
-        "key" === Od.type && this.processTimestamps(dd, Od), dd.timestampProcessingQueue.push(Od), this.isFragmented ? (dd.sampleQueue.push(Od), await this.interleaveSamples()) : "reserve" === this.fastStart ? await this.registerSampleFastStartReserve(dd, Od) : await this.addSampleToTrack(dd, Od)
+      async registerSample(bb, wb) {
+        "key" === wb.type && this.processTimestamps(bb, wb), bb.timestampProcessingQueue.push(wb), this.isFragmented ? (bb.sampleQueue.push(wb), await this.interleaveSamples()) : "reserve" === this.fastStart ? await this.registerSampleFastStartReserve(bb, wb) : await this.addSampleToTrack(bb, wb)
       }
-      async addSampleToTrack(dd, Od) {
-        if (!this.isFragmented && (dd.samples.push(Od), "reserve" === this.fastStart)) {
-          const Od = dd.track.metadata.maximumPacketCount;
-          if ((0, Kd.M)(void 0 !== Od), dd.samples.length > Od) throw new Error(`Track #${dd.track.id} has already reached the maximum packet count (${Od}). Either add less packets or increase the maximum packet count.`)
+      async addSampleToTrack(bb, wb) {
+        if (!this.isFragmented && (bb.samples.push(wb), "reserve" === this.fastStart)) {
+          const wb = bb.track.metadata.maximumPacketCount;
+          if ((0, gb.L)(void 0 !== wb), bb.samples.length > wb) throw new Error(`Track #${bb.track.id} has already reached the maximum packet count (${wb}). Either add less packets or increase the maximum packet count.`)
         }
-        let md = !1;
-        if (dd.currentChunk) {
-          dd.currentChunk.startTimestamp = Math.min(dd.currentChunk.startTimestamp, Od.timestamp);
-          const Wd = Od.timestamp - dd.currentChunk.startTimestamp;
+        let Mb = !1;
+        if (bb.currentChunk) {
+          bb.currentChunk.startTimestamp = Math.min(bb.currentChunk.startTimestamp, wb.timestamp);
+          const eb = wb.timestamp - bb.currentChunk.startTimestamp;
           if (this.isFragmented) {
-            const Fd = this.trackDatas.every((md => {
-              if (dd === md) return "key" === Od.type;
-              const Wd = md.sampleQueue[0];
-              return Wd ? "key" === Wd.type : md.closed
+            const Hb = this.trackDatas.every((Mb => {
+              if (bb === Mb) return "key" === wb.type;
+              const eb = Mb.sampleQueue[0];
+              return eb ? "key" === eb.type : Mb.closed
             }));
-            Wd >= this.minimumFragmentDuration && Fd && Od.timestamp > this.maxWrittenTimestamp && (md = !0, await this.finalizeFragment())
-          } else md = Wd >= .5
-        } else md = !0;
-        md && (dd.currentChunk && await this.finalizeCurrentChunk(dd), dd.currentChunk = {
-          startTimestamp: Od.timestamp,
+            eb >= this.minimumFragmentDuration && Hb && wb.timestamp > this.maxWrittenTimestamp && (Mb = !0, await this.finalizeFragment())
+          } else Mb = eb >= .5
+        } else Mb = !0;
+        Mb && (bb.currentChunk && await this.finalizeCurrentChunk(bb), bb.currentChunk = {
+          startTimestamp: wb.timestamp,
           samples: [],
           offset: null,
           moofOffset: null,
           trafIndex: null
-        }), (0, Kd.M)(dd.currentChunk), dd.currentChunk.samples.push(Od), this.isFragmented && (this.maxWrittenTimestamp = Math.max(this.maxWrittenTimestamp, Od.timestamp), this.maxWrittenEndTimestamp = Math.max(this.maxWrittenEndTimestamp, Od.timestamp + Od.duration), this.minWrittenTimestamp = Math.min(this.minWrittenTimestamp, Od.timestamp))
+        }), (0, gb.L)(bb.currentChunk), bb.currentChunk.samples.push(wb), this.isFragmented && (this.maxWrittenTimestamp = Math.max(this.maxWrittenTimestamp, wb.timestamp), this.maxWrittenEndTimestamp = Math.max(this.maxWrittenEndTimestamp, wb.timestamp + wb.duration), this.minWrittenTimestamp = Math.min(this.minWrittenTimestamp, wb.timestamp))
       }
-      async finalizeCurrentChunk(dd) {
-        if ((0, Kd.M)(!this.isFragmented), (0, Kd.M)(this.writer), !dd.currentChunk) return;
-        dd.finalizedChunks.push(dd.currentChunk), this.finalizedChunks.push(dd.currentChunk);
-        let Od = dd.currentChunk.samples.length;
-        if ("audio" === dd.type && dd.info.requiresPcmTransformation && (Od = dd.currentChunk.samples.reduce(((Od, md) => Od + Hm(md.duration, dd.timescale)), 0)), 0 !== dd.compactlyCodedChunkTable.length && (0, Kd.jc)(dd.compactlyCodedChunkTable).samplesPerChunk === Od || dd.compactlyCodedChunkTable.push({
-            firstChunk: dd.finalizedChunks.length,
-            samplesPerChunk: Od
+      async finalizeCurrentChunk(bb) {
+        if ((0, gb.L)(!this.isFragmented), (0, gb.L)(this.writer), !bb.currentChunk) return;
+        bb.finalizedChunks.push(bb.currentChunk), this.finalizedChunks.push(bb.currentChunk);
+        let wb = bb.currentChunk.samples.length;
+        if ("audio" === bb.type && bb.info.requiresPcmTransformation && (wb = bb.currentChunk.samples.reduce(((wb, Mb) => wb + tM(Mb.duration, bb.timescale)), 0)), 0 !== bb.compactlyCodedChunkTable.length && (0, gb.ac)(bb.compactlyCodedChunkTable).samplesPerChunk === wb || bb.compactlyCodedChunkTable.push({
+            firstChunk: bb.finalizedChunks.length,
+            samplesPerChunk: wb
           }), "in-memory" !== this.fastStart) {
-          dd.currentChunk.offset = this.writer.getPos();
-          for (const Od of dd.currentChunk.samples)(0, Kd.M)(Od.data), this.writer.write(Od.data), Od.data = null;
+          bb.currentChunk.offset = this.writer.getPos();
+          for (const wb of bb.currentChunk.samples)(0, gb.L)(wb.data), this.writer.write(wb.data), wb.data = null;
           await this.writer.flush()
-        } else dd.currentChunk.offset = 0
+        } else bb.currentChunk.offset = 0
       }
       async interleaveSamples() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if ((0, Kd.M)(this.isFragmented), dd || this.allTracksAreKnown()) dd: for (;;) {
-          let Od = null,
-            md = 1 / 0;
-          for (const Fd of this.trackDatas) {
-            if (!dd && 0 === Fd.sampleQueue.length && !Fd.closed) break dd;
-            Fd.sampleQueue.length > 0 && Fd.sampleQueue[0].timestamp < md && (Od = Fd, md = Fd.sampleQueue[0].timestamp)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if ((0, gb.L)(this.isFragmented), bb || this.allTracksAreKnown()) bb: for (;;) {
+          let wb = null,
+            Mb = 1 / 0;
+          for (const Hb of this.trackDatas) {
+            if (!bb && 0 === Hb.sampleQueue.length && !Hb.closed) break bb;
+            Hb.sampleQueue.length > 0 && Hb.sampleQueue[0].timestamp < Mb && (wb = Hb, Mb = Hb.sampleQueue[0].timestamp)
           }
-          if (!Od) break;
-          const Wd = Od.sampleQueue.shift();
-          await this.addSampleToTrack(Od, Wd)
+          if (!wb) break;
+          const eb = wb.sampleQueue.shift();
+          await this.addSampleToTrack(wb, eb)
         }
       }
       async finalizeFragment() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : !this.isCmaf;
-        if ((0, Kd.M)(this.isFragmented), !this.wroteFragmentedHeader) {
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : !this.isCmaf;
+        if ((0, gb.L)(this.isFragmented), !this.wroteFragmentedHeader) {
           this.wroteFragmentedHeader = !0;
-          const dd = this.initBoxWriter ?? this.boxWriter;
-          (0, Kd.M)(dd), this.formatOptions.onMoov && dd.writer.startTrackingWrites(), this.ensureOneEnabledTrack();
-          const Od = Dd(this);
-          if (dd.writeBox(Od), this.formatOptions.onMoov) {
+          const bb = this.initBoxWriter ?? this.boxWriter;
+          (0, gb.L)(bb), this.formatOptions.onMoov && bb.writer.startTrackingWrites(), this.ensureOneEnabledTrack();
+          const wb = qb(this);
+          if (bb.writeBox(wb), this.formatOptions.onMoov) {
             const {
-              data: Od,
-              start: md
-            } = dd.writer.stopTrackingWrites();
-            this.formatOptions.onMoov(Od, md)
+              data: wb,
+              start: Mb
+            } = bb.writer.stopTrackingWrites();
+            this.formatOptions.onMoov(wb, Mb)
           }
           if (this.isCmaf) {
-            (0, Kd.M)(this.initWriter), await this.initWriter.flush(), await this.initWriter.finalize(), this.writer = await this.output._getRootWriter(!0), this.boxWriter = new pd(this.writer);
-            const dd = this.boxWriter.measureBox(zd()),
-              Od = this.boxWriter.measureBox(cd(this, 0));
-            this.segmentHeaderSize = dd + Od, this.writer.seek(this.segmentHeaderSize)
+            (0, gb.L)(this.initWriter), await this.initWriter.flush(), await this.initWriter.finalize(), this.writer = await this.output._getRootWriter(!0), this.boxWriter = new mb(this.writer);
+            const bb = this.boxWriter.measureBox(vb()),
+              wb = this.boxWriter.measureBox(Qb(this, 0));
+            this.segmentHeaderSize = bb + wb, this.writer.seek(this.segmentHeaderSize)
           }
-        }(0, Kd.M)(this.writer), (0, Kd.M)(this.boxWriter);
-        const Od = this.trackDatas.filter((dd => dd.currentChunk));
-        if (0 === Od.length) return void(dd && await this.writer.flush());
-        const md = this.nextFragmentNumber++,
-          Wd = AO(md, Od),
-          Fd = this.writer.getPos(),
-          Rd = Fd + this.boxWriter.measureBox(Wd);
-        let Xd = Rd + 8,
-          hd = 1 / 0;
-        for (let Nd = 0; Nd < Od.length; Nd++) {
-          const dd = Od[Nd];
-          (0, Kd.M)(dd.currentChunk), (0, Kd.M)(null !== dd.startTimestampOffset), dd.currentChunk.offset = Xd, dd.currentChunk.moofOffset = Fd, dd.currentChunk.trafIndex = Nd, dd.currentChunk.startTimestamp -= dd.startTimestampOffset;
-          for (const Od of dd.currentChunk.samples) Xd += Od.size, Od.timestamp -= dd.startTimestampOffset, Od.decodeTimestamp -= dd.startTimestampOffset;
-          hd = Math.min(hd, dd.currentChunk.startTimestamp)
+        }(0, gb.L)(this.writer), (0, gb.L)(this.boxWriter);
+        const wb = this.trackDatas.filter((bb => bb.currentChunk));
+        if (0 === wb.length) return void(bb && await this.writer.flush());
+        const Mb = this.nextFragmentNumber++,
+          eb = Aw(Mb, wb),
+          Hb = this.writer.getPos(),
+          pb = Hb + this.boxWriter.measureBox(eb);
+        let Vb = pb + 8,
+          lb = 1 / 0;
+        for (let tb = 0; tb < wb.length; tb++) {
+          const bb = wb[tb];
+          (0, gb.L)(bb.currentChunk), (0, gb.L)(null !== bb.startTimestampOffset), bb.currentChunk.offset = Vb, bb.currentChunk.moofOffset = Hb, bb.currentChunk.trafIndex = tb, bb.currentChunk.startTimestamp -= bb.startTimestampOffset;
+          for (const wb of bb.currentChunk.samples) Vb += wb.size, wb.timestamp -= bb.startTimestampOffset, wb.decodeTimestamp -= bb.startTimestampOffset;
+          lb = Math.min(lb, bb.currentChunk.startTimestamp)
         }
-        const vd = Xd - Rd,
-          Qd = vd >= 2 ** 32;
-        if (Qd)
-          for (const Kd of Od) Kd.currentChunk.offset += 8;
+        const Lb = Vb - pb,
+          Ib = Lb >= 2 ** 32;
+        if (Ib)
+          for (const gb of wb) gb.currentChunk.offset += 8;
         this.formatOptions.onMoof && this.writer.startTrackingWrites();
-        const td = AO(md, Od);
-        if (this.boxWriter.writeBox(td), this.formatOptions.onMoof) {
+        const Ob = Aw(Mb, wb);
+        if (this.boxWriter.writeBox(Ob), this.formatOptions.onMoof) {
           const {
-            data: dd,
-            start: Od
+            data: bb,
+            start: wb
           } = this.writer.stopTrackingWrites();
-          this.formatOptions.onMoof(dd, Od, hd)
-        }(0, Kd.M)(this.writer.getPos() === Rd), this.formatOptions.onMdat && this.writer.startTrackingWrites();
-        const od = jd(Qd);
-        od.size = vd, this.boxWriter.writeBox(od), this.writer.seek(Rd + (Qd ? 16 : 8));
-        for (const Kd of Od)
-          for (const dd of Kd.currentChunk.samples) this.writer.write(dd.data), dd.data = null;
+          this.formatOptions.onMoof(bb, wb, lb)
+        }(0, gb.L)(this.writer.getPos() === pb), this.formatOptions.onMdat && this.writer.startTrackingWrites();
+        const Ub = Gb(Ib);
+        Ub.size = Lb, this.boxWriter.writeBox(Ub), this.writer.seek(pb + (Ib ? 16 : 8));
+        for (const gb of wb)
+          for (const bb of gb.currentChunk.samples) this.writer.write(bb.data), bb.data = null;
         if (this.formatOptions.onMdat) {
           const {
-            data: dd,
-            start: Od
+            data: bb,
+            start: wb
           } = this.writer.stopTrackingWrites();
-          this.formatOptions.onMdat(dd, Od)
+          this.formatOptions.onMdat(bb, wb)
         }
-        for (const Kd of Od) Kd.finalizedChunks.push(Kd.currentChunk), this.finalizedChunks.push(Kd.currentChunk), Kd.currentChunk = null;
-        dd && await this.writer.flush()
+        for (const gb of wb) gb.finalizedChunks.push(gb.currentChunk), this.finalizedChunks.push(gb.currentChunk), gb.currentChunk = null;
+        bb && await this.writer.flush()
       }
-      async registerSampleFastStartReserve(dd, Od) {
-        this.allTracksAreKnown() ? (this.mdat || await this.createFastStartReserveMdat(), await this.addSampleToTrack(dd, Od)) : dd.sampleQueue.push(Od)
+      async registerSampleFastStartReserve(bb, wb) {
+        this.allTracksAreKnown() ? (this.mdat || await this.createFastStartReserveMdat(), await this.addSampleToTrack(bb, wb)) : bb.sampleQueue.push(wb)
       }
       async createFastStartReserveMdat() {
-        (0, Kd.M)(this.writer), (0, Kd.M)(this.boxWriter), this.ensureOneEnabledTrack();
-        const dd = Dd(this),
-          Od = this.boxWriter.measureBox(dd) + this.computeSampleTableSizeUpperBound() + 4096;
-        (0, Kd.M)(null !== this.ftypSize), this.writer.seek(this.ftypSize + Od), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = jd(!0), this.boxWriter.writeBox(this.mdat);
-        for (const md of this.trackDatas) {
-          for (const dd of md.sampleQueue) await this.addSampleToTrack(md, dd);
-          md.sampleQueue.length = 0
+        (0, gb.L)(this.writer), (0, gb.L)(this.boxWriter), this.ensureOneEnabledTrack();
+        const bb = qb(this),
+          wb = this.boxWriter.measureBox(bb) + this.computeSampleTableSizeUpperBound() + 4096;
+        (0, gb.L)(null !== this.ftypSize), this.writer.seek(this.ftypSize + wb), this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat = Gb(!0), this.boxWriter.writeBox(this.mdat);
+        for (const Mb of this.trackDatas) {
+          for (const bb of Mb.sampleQueue) await this.addSampleToTrack(Mb, bb);
+          Mb.sampleQueue.length = 0
         }
       }
       computeSampleTableSizeUpperBound() {
-        (0, Kd.M)("reserve" === this.fastStart);
-        let dd = 0;
-        for (const Od of this.trackDatas) {
-          const md = Od.track.metadata.maximumPacketCount;
-          (0, Kd.M)(void 0 !== md), dd += 8 * Math.ceil(2 / 3 * md), dd += 4 * md, dd += 8 * Math.ceil(2 / 3 * md), dd += 12 * Math.ceil(2 / 3 * md), dd += 4 * md, dd += 8 * md
+        (0, gb.L)("reserve" === this.fastStart);
+        let bb = 0;
+        for (const wb of this.trackDatas) {
+          const Mb = wb.track.metadata.maximumPacketCount;
+          (0, gb.L)(void 0 !== Mb), bb += 8 * Math.ceil(2 / 3 * Mb), bb += 4 * Mb, bb += 8 * Math.ceil(2 / 3 * Mb), bb += 12 * Math.ceil(2 / 3 * Mb), bb += 4 * Mb, bb += 8 * Mb
         }
-        return dd
+        return bb
       }
-      async onTrackClose(dd) {
-        const Od = await this.mutex.acquire(),
-          md = this.trackDatas.find((Od => Od.track === dd));
-        md && (md.closed = !0, "subtitle" === md.type && "webvtt" === dd.source._codec && await this.processWebVTTCues(md, 1 / 0), this.processTimestamps(md)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), this.isFragmented && await this.interleaveSamples(), Od()
+      async onTrackClose(bb) {
+        const wb = await this.mutex.acquire(),
+          Mb = this.trackDatas.find((wb => wb.track === bb));
+        Mb && (Mb.closed = !0, "subtitle" === Mb.type && "webvtt" === bb.source._codec && await this.processWebVTTCues(Mb, 1 / 0), this.processTimestamps(Mb)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), this.isFragmented && await this.interleaveSamples(), wb()
       }
       ensureOneEnabledTrack() {
-        for (const dd of ["video", "audio", "subtitle"]) {
-          const Od = this.trackDatas.filter((Od => Od.type === dd));
-          if (0 === Od.length) continue;
-          if (!Od.some((dd => !1 !== dd.track.metadata.disposition?.default))) {
-            const dd = Od[0];
-            dd.track.metadata.disposition = {
-              ...dd.track.metadata.disposition,
+        for (const bb of ["video", "audio", "subtitle"]) {
+          const wb = this.trackDatas.filter((wb => wb.type === bb));
+          if (0 === wb.length) continue;
+          if (!wb.some((bb => !1 !== bb.track.metadata.disposition?.default))) {
+            const bb = wb[0];
+            bb.track.metadata.disposition = {
+              ...bb.track.metadata.disposition,
               default: !0
             }
           }
         }
       }
       async forceFragmentFinalization() {
-        (0, Kd.M)(this.isFragmented);
-        const dd = await this.mutex.acquire();
+        (0, gb.L)(this.isFragmented);
+        const bb = await this.mutex.acquire();
         try {
-          for (const dd of this.trackDatas) "subtitle" === dd.type && "webvtt" === dd.track.source._codec && await this.processWebVTTCues(dd, 1 / 0), this.processTimestamps(dd);
+          for (const bb of this.trackDatas) "subtitle" === bb.type && "webvtt" === bb.track.source._codec && await this.processWebVTTCues(bb, 1 / 0), this.processTimestamps(bb);
           await this.interleaveSamples(!0), await this.finalizeFragment()
         } finally {
-          dd()
+          bb()
         }
       }
       async finalize() {
-        const dd = await this.mutex.acquire();
+        const bb = await this.mutex.acquire();
         this.allTracksKnown.resolve(), this.ensureOneEnabledTrack(), this.mdat || "reserve" !== this.fastStart || await this.createFastStartReserveMdat();
-        for (const md of this.trackDatas) md.closed = !0, "subtitle" === md.type && "webvtt" === md.track.source._codec && await this.processWebVTTCues(md, 1 / 0), this.processTimestamps(md);
+        for (const Mb of this.trackDatas) Mb.closed = !0, "subtitle" === Mb.type && "webvtt" === Mb.track.source._codec && await this.processWebVTTCues(Mb, 1 / 0), this.processTimestamps(Mb);
         if (this.isFragmented) await this.interleaveSamples(!0), await this.finalizeFragment(!1);
         else
-          for (const md of this.trackDatas) {
-            await this.finalizeCurrentChunk(md);
-            const dd = ym(md);
-            if (dd > 0) {
-              let Od = 0;
-              for (const dd of md.samples) Od += dd.size;
-              md.avgBitrate = Math.round(8 * Od / dd)
-            } else md.avgBitrate = 0;
-            let Od = 0,
-              Wd = 0,
-              Fd = 0;
-            for (let Rd = 0; Rd < md.samples.length; Rd++) {
-              const dd = md.samples[Rd];
-              for (Wd += dd.size; dd.decodeTimestamp - md.samples[Od].decodeTimestamp >= 1;) Wd -= md.samples[Od].size, Od++;
-              Fd = Math.max(Fd, Wd)
+          for (const Mb of this.trackDatas) {
+            await this.finalizeCurrentChunk(Mb);
+            const bb = CM(Mb);
+            if (bb > 0) {
+              let wb = 0;
+              for (const bb of Mb.samples) wb += bb.size;
+              Mb.avgBitrate = Math.round(8 * wb / bb)
+            } else Mb.avgBitrate = 0;
+            let wb = 0,
+              eb = 0,
+              Hb = 0;
+            for (let pb = 0; pb < Mb.samples.length; pb++) {
+              const bb = Mb.samples[pb];
+              for (eb += bb.size; bb.decodeTimestamp - Mb.samples[wb].decodeTimestamp >= 1;) eb -= Mb.samples[wb].size, wb++;
+              Hb = Math.max(Hb, eb)
             }
-            if (md.maxBitrate = 8 * Fd, null !== md.startTimestampOffset)
-              for (let Rd = 0; Rd < md.samples.length; Rd++) {
-                const dd = md.samples[Rd];
-                dd.timestamp -= md.startTimestampOffset, dd.decodeTimestamp -= md.startTimestampOffset
+            if (Mb.maxBitrate = 8 * Hb, null !== Mb.startTimestampOffset)
+              for (let pb = 0; pb < Mb.samples.length; pb++) {
+                const bb = Mb.samples[pb];
+                bb.timestamp -= Mb.startTimestampOffset, bb.decodeTimestamp -= Mb.startTimestampOffset
               }
           }
-        if ((0, Kd.M)(this.writer), (0, Kd.M)(this.boxWriter), "in-memory" === this.fastStart) {
-          let dd;
-          this.mdat = jd(!1);
-          for (let md = 0; md < 2; md++) {
-            const Od = Dd(this),
-              md = this.boxWriter.measureBox(Od);
-            dd = this.boxWriter.measureBox(this.mdat);
-            let Wd = this.writer.getPos() + md + dd;
-            for (const Fd of this.finalizedChunks) {
-              Fd.offset = Wd;
+        if ((0, gb.L)(this.writer), (0, gb.L)(this.boxWriter), "in-memory" === this.fastStart) {
+          let bb;
+          this.mdat = Gb(!1);
+          for (let Mb = 0; Mb < 2; Mb++) {
+            const wb = qb(this),
+              Mb = this.boxWriter.measureBox(wb);
+            bb = this.boxWriter.measureBox(this.mdat);
+            let eb = this.writer.getPos() + Mb + bb;
+            for (const Hb of this.finalizedChunks) {
+              Hb.offset = eb;
               for (const {
-                  data: Od
+                  data: wb
                 }
-                of Fd.samples)(0, Kd.M)(Od), Wd += Od.byteLength, dd += Od.byteLength
+                of Hb.samples)(0, gb.L)(wb), eb += wb.byteLength, bb += wb.byteLength
             }
-            if (Wd < 2 ** 32) break;
-            dd >= 2 ** 32 && (this.mdat.largeSize = !0)
+            if (eb < 2 ** 32) break;
+            bb >= 2 ** 32 && (this.mdat.largeSize = !0)
           }
           this.formatOptions.onMoov && this.writer.startTrackingWrites();
-          const Od = Dd(this);
-          if (this.boxWriter.writeBox(Od), this.formatOptions.onMoov) {
+          const wb = qb(this);
+          if (this.boxWriter.writeBox(wb), this.formatOptions.onMoov) {
             const {
-              data: dd,
-              start: Od
+              data: bb,
+              start: wb
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMoov(dd, Od)
+            this.formatOptions.onMoov(bb, wb)
           }
-          this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat.size = dd, this.boxWriter.writeBox(this.mdat);
-          for (const md of this.finalizedChunks)
-            for (const dd of md.samples)(0, Kd.M)(dd.data), this.writer.write(dd.data), dd.data = null;
+          this.formatOptions.onMdat && this.writer.startTrackingWrites(), this.mdat.size = bb, this.boxWriter.writeBox(this.mdat);
+          for (const Mb of this.finalizedChunks)
+            for (const bb of Mb.samples)(0, gb.L)(bb.data), this.writer.write(bb.data), bb.data = null;
           if (this.formatOptions.onMdat) {
             const {
-              data: dd,
-              start: Od
+              data: bb,
+              start: wb
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMdat(dd, Od)
+            this.formatOptions.onMdat(bb, wb)
           }
         } else if (this.isFragmented)
           if (this.isCmaf) {
-            const dd = null !== this.segmentHeaderSize ? this.writer.getPos() - this.segmentHeaderSize : 0;
-            this.writer.seek(0), this.boxWriter.writeBox(zd()), this.boxWriter.writeBox(cd(this, dd))
+            const bb = null !== this.segmentHeaderSize ? this.writer.getPos() - this.segmentHeaderSize : 0;
+            this.writer.seek(0), this.boxWriter.writeBox(vb()), this.boxWriter.writeBox(Qb(this, bb))
           } else {
-            const dd = this.writer.getPos(),
-              md = (Od = this.trackDatas, Ld("mfra", void 0, [...Od.map(cO), jO()]));
-            this.boxWriter.writeBox(md);
-            const Wd = this.writer.getPos() - dd;
-            this.writer.seek(this.writer.getPos() - 4), this.boxWriter.writeU32(Wd)
+            const bb = this.writer.getPos(),
+              Mb = (wb = this.trackDatas, Sb("mfra", void 0, [...wb.map(Gw), qw()]));
+            this.boxWriter.writeBox(Mb);
+            const eb = this.writer.getPos() - bb;
+            this.writer.seek(this.writer.getPos() - 4), this.boxWriter.writeU32(eb)
           }
         else {
-          (0, Kd.M)(this.mdat);
-          const dd = this.boxWriter.offsets.get(this.mdat);
-          (0, Kd.M)(void 0 !== dd);
-          const Od = this.writer.getPos() - dd;
-          if (this.mdat.size = Od, this.mdat.largeSize = Od >= 2 ** 32, this.boxWriter.patchBox(this.mdat), this.formatOptions.onMdat) {
+          (0, gb.L)(this.mdat);
+          const bb = this.boxWriter.offsets.get(this.mdat);
+          (0, gb.L)(void 0 !== bb);
+          const wb = this.writer.getPos() - bb;
+          if (this.mdat.size = wb, this.mdat.largeSize = wb >= 2 ** 32, this.boxWriter.patchBox(this.mdat), this.formatOptions.onMdat) {
             const {
-              data: dd,
-              start: Od
+              data: bb,
+              start: wb
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMdat(dd, Od)
+            this.formatOptions.onMdat(bb, wb)
           }
-          const md = Dd(this);
+          const Mb = qb(this);
           if ("reserve" === this.fastStart) {
-            (0, Kd.M)(null !== this.ftypSize), this.writer.seek(this.ftypSize), this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(md);
-            const dd = this.boxWriter.offsets.get(this.mdat) - this.writer.getPos();
+            (0, gb.L)(null !== this.ftypSize), this.writer.seek(this.ftypSize), this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(Mb);
+            const bb = this.boxWriter.offsets.get(this.mdat) - this.writer.getPos();
             this.boxWriter.writeBox({
               type: "free",
-              size: dd
+              size: bb
             })
-          } else this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(md);
+          } else this.formatOptions.onMoov && this.writer.startTrackingWrites(), this.boxWriter.writeBox(Mb);
           if (this.formatOptions.onMoov) {
             const {
-              data: dd,
-              start: Od
+              data: bb,
+              start: wb
             } = this.writer.stopTrackingWrites();
-            this.formatOptions.onMoov(dd, Od)
+            this.formatOptions.onMoov(bb, wb)
           }
         }
-        var Od;
-        dd()
+        var wb;
+        bb()
       }
     }
-    class Tm {
-      constructor(dd) {
-        this.value = dd
+    class FM {
+      constructor(bb) {
+        this.value = bb
       }
     }
-    class pm {
-      constructor(dd) {
-        this.value = dd
+    class BM {
+      constructor(bb) {
+        this.value = bb
       }
     }
-    class Ym {
-      constructor(dd) {
-        this.value = dd
+    class sM {
+      constructor(bb) {
+        this.value = bb
       }
     }
-    class gm {
-      constructor(dd) {
-        this.value = dd
+    class mM {
+      constructor(bb) {
+        this.value = bb
       }
     }
-    var wm;
-    ! function(dd) {
-      dd[dd.EBML = 440786851] = "EBML", dd[dd.EBMLVersion = 17030] = "EBMLVersion", dd[dd.EBMLReadVersion = 17143] = "EBMLReadVersion", dd[dd.EBMLMaxIDLength = 17138] = "EBMLMaxIDLength", dd[dd.EBMLMaxSizeLength = 17139] = "EBMLMaxSizeLength", dd[dd.DocType = 17026] = "DocType", dd[dd.DocTypeVersion = 17031] = "DocTypeVersion", dd[dd.DocTypeReadVersion = 17029] = "DocTypeReadVersion", dd[dd.Void = 236] = "Void", dd[dd.Segment = 408125543] = "Segment", dd[dd.SeekHead = 290298740] = "SeekHead", dd[dd.Seek = 19899] = "Seek", dd[dd.SeekID = 21419] = "SeekID", dd[dd.SeekPosition = 21420] = "SeekPosition", dd[dd.Duration = 17545] = "Duration", dd[dd.Info = 357149030] = "Info", dd[dd.TimestampScale = 2807729] = "TimestampScale", dd[dd.MuxingApp = 19840] = "MuxingApp", dd[dd.WritingApp = 22337] = "WritingApp", dd[dd.Tracks = 374648427] = "Tracks", dd[dd.TrackEntry = 174] = "TrackEntry", dd[dd.TrackNumber = 215] = "TrackNumber", dd[dd.TrackUID = 29637] = "TrackUID", dd[dd.TrackType = 131] = "TrackType", dd[dd.FlagEnabled = 185] = "FlagEnabled", dd[dd.FlagDefault = 136] = "FlagDefault", dd[dd.FlagForced = 21930] = "FlagForced", dd[dd.FlagOriginal = 21934] = "FlagOriginal", dd[dd.FlagHearingImpaired = 21931] = "FlagHearingImpaired", dd[dd.FlagVisualImpaired = 21932] = "FlagVisualImpaired", dd[dd.FlagCommentary = 21935] = "FlagCommentary", dd[dd.FlagLacing = 156] = "FlagLacing", dd[dd.Name = 21358] = "Name", dd[dd.Language = 2274716] = "Language", dd[dd.LanguageBCP47 = 2274717] = "LanguageBCP47", dd[dd.CodecID = 134] = "CodecID", dd[dd.CodecPrivate = 25506] = "CodecPrivate", dd[dd.CodecDelay = 22186] = "CodecDelay", dd[dd.SeekPreRoll = 22203] = "SeekPreRoll", dd[dd.DefaultDuration = 2352003] = "DefaultDuration", dd[dd.Video = 224] = "Video", dd[dd.PixelWidth = 176] = "PixelWidth", dd[dd.PixelHeight = 186] = "PixelHeight", dd[dd.DisplayWidth = 21680] = "DisplayWidth", dd[dd.DisplayHeight = 21690] = "DisplayHeight", dd[dd.DisplayUnit = 21682] = "DisplayUnit", dd[dd.AlphaMode = 21440] = "AlphaMode", dd[dd.Audio = 225] = "Audio", dd[dd.SamplingFrequency = 181] = "SamplingFrequency", dd[dd.Channels = 159] = "Channels", dd[dd.BitDepth = 25188] = "BitDepth", dd[dd.SimpleBlock = 163] = "SimpleBlock", dd[dd.BlockGroup = 160] = "BlockGroup", dd[dd.Block = 161] = "Block", dd[dd.BlockAdditions = 30113] = "BlockAdditions", dd[dd.BlockMore = 166] = "BlockMore", dd[dd.BlockAdditional = 165] = "BlockAdditional", dd[dd.BlockAddID = 238] = "BlockAddID", dd[dd.BlockDuration = 155] = "BlockDuration", dd[dd.ReferenceBlock = 251] = "ReferenceBlock", dd[dd.Cluster = 524531317] = "Cluster", dd[dd.Timestamp = 231] = "Timestamp", dd[dd.Cues = 475249515] = "Cues", dd[dd.CuePoint = 187] = "CuePoint", dd[dd.CueTime = 179] = "CueTime", dd[dd.CueTrackPositions = 183] = "CueTrackPositions", dd[dd.CueTrack = 247] = "CueTrack", dd[dd.CueClusterPosition = 241] = "CueClusterPosition", dd[dd.Colour = 21936] = "Colour", dd[dd.MatrixCoefficients = 21937] = "MatrixCoefficients", dd[dd.TransferCharacteristics = 21946] = "TransferCharacteristics", dd[dd.Primaries = 21947] = "Primaries", dd[dd.Range = 21945] = "Range", dd[dd.Projection = 30320] = "Projection", dd[dd.ProjectionType = 30321] = "ProjectionType", dd[dd.ProjectionPoseYaw = 30323] = "ProjectionPoseYaw", dd[dd.ProjectionPosePitch = 30324] = "ProjectionPosePitch", dd[dd.ProjectionPoseRoll = 30325] = "ProjectionPoseRoll", dd[dd.Attachments = 423732329] = "Attachments", dd[dd.AttachedFile = 24999] = "AttachedFile", dd[dd.FileDescription = 18046] = "FileDescription", dd[dd.FileName = 18030] = "FileName", dd[dd.FileMediaType = 18016] = "FileMediaType", dd[dd.FileData = 18012] = "FileData", dd[dd.FileUID = 18094] = "FileUID", dd[dd.Chapters = 272869232] = "Chapters", dd[dd.Tags = 307544935] = "Tags", dd[dd.Tag = 29555] = "Tag", dd[dd.Targets = 25536] = "Targets", dd[dd.TargetTypeValue = 26826] = "TargetTypeValue", dd[dd.TargetType = 25546] = "TargetType", dd[dd.TagTrackUID = 25541] = "TagTrackUID", dd[dd.TagEditionUID = 25545] = "TagEditionUID", dd[dd.TagChapterUID = 25540] = "TagChapterUID", dd[dd.TagAttachmentUID = 25542] = "TagAttachmentUID", dd[dd.SimpleTag = 26568] = "SimpleTag", dd[dd.TagName = 17827] = "TagName", dd[dd.TagLanguage = 17530] = "TagLanguage", dd[dd.TagString = 17543] = "TagString", dd[dd.TagBinary = 17541] = "TagBinary", dd[dd.ContentEncodings = 28032] = "ContentEncodings", dd[dd.ContentEncoding = 25152] = "ContentEncoding", dd[dd.ContentEncodingOrder = 20529] = "ContentEncodingOrder", dd[dd.ContentEncodingScope = 20530] = "ContentEncodingScope", dd[dd.ContentCompression = 20532] = "ContentCompression", dd[dd.ContentCompAlgo = 16980] = "ContentCompAlgo", dd[dd.ContentCompSettings = 16981] = "ContentCompSettings", dd[dd.ContentEncryption = 20533] = "ContentEncryption"
-    }(wm || (wm = {}));
-    wm.EBML, wm.Segment, wm.SeekHead, wm.Info, wm.Cluster, wm.Tracks, wm.Cues, wm.Attachments, wm.Chapters, wm.Tags;
-    const am = dd => dd < 256 ? 1 : dd < 65536 ? 2 : dd < 1 << 24 ? 3 : dd < 2 ** 32 ? 4 : dd < 2 ** 40 ? 5 : 6,
-      Em = dd => dd < 256n ? 1 : dd < 65536n ? 2 : dd < 1n << 24n ? 3 : dd < 1n << 32n ? 4 : dd < 1n << 40n ? 5 : dd < 1n << 48n ? 6 : dd < 1n << 56n ? 7 : 8,
-      Jm = dd => dd >= -64 && dd < 64 ? 1 : dd >= -8192 && dd < 8192 ? 2 : dd >= -1048576 && dd < 1 << 20 ? 3 : dd >= -(1 << 27) && dd < 1 << 27 ? 4 : dd >= -(2 ** 34) && dd < 2 ** 34 ? 5 : 6;
-    class Um {
-      constructor(dd) {
-        this.writer = dd, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap, this.dataOffsets = new WeakMap
+    var hM;
+    ! function(bb) {
+      bb[bb.EBML = 440786851] = "EBML", bb[bb.EBMLVersion = 17030] = "EBMLVersion", bb[bb.EBMLReadVersion = 17143] = "EBMLReadVersion", bb[bb.EBMLMaxIDLength = 17138] = "EBMLMaxIDLength", bb[bb.EBMLMaxSizeLength = 17139] = "EBMLMaxSizeLength", bb[bb.DocType = 17026] = "DocType", bb[bb.DocTypeVersion = 17031] = "DocTypeVersion", bb[bb.DocTypeReadVersion = 17029] = "DocTypeReadVersion", bb[bb.Void = 236] = "Void", bb[bb.Segment = 408125543] = "Segment", bb[bb.SeekHead = 290298740] = "SeekHead", bb[bb.Seek = 19899] = "Seek", bb[bb.SeekID = 21419] = "SeekID", bb[bb.SeekPosition = 21420] = "SeekPosition", bb[bb.Duration = 17545] = "Duration", bb[bb.Info = 357149030] = "Info", bb[bb.TimestampScale = 2807729] = "TimestampScale", bb[bb.MuxingApp = 19840] = "MuxingApp", bb[bb.WritingApp = 22337] = "WritingApp", bb[bb.Tracks = 374648427] = "Tracks", bb[bb.TrackEntry = 174] = "TrackEntry", bb[bb.TrackNumber = 215] = "TrackNumber", bb[bb.TrackUID = 29637] = "TrackUID", bb[bb.TrackType = 131] = "TrackType", bb[bb.FlagEnabled = 185] = "FlagEnabled", bb[bb.FlagDefault = 136] = "FlagDefault", bb[bb.FlagForced = 21930] = "FlagForced", bb[bb.FlagOriginal = 21934] = "FlagOriginal", bb[bb.FlagHearingImpaired = 21931] = "FlagHearingImpaired", bb[bb.FlagVisualImpaired = 21932] = "FlagVisualImpaired", bb[bb.FlagCommentary = 21935] = "FlagCommentary", bb[bb.FlagLacing = 156] = "FlagLacing", bb[bb.Name = 21358] = "Name", bb[bb.Language = 2274716] = "Language", bb[bb.LanguageBCP47 = 2274717] = "LanguageBCP47", bb[bb.CodecID = 134] = "CodecID", bb[bb.CodecPrivate = 25506] = "CodecPrivate", bb[bb.CodecDelay = 22186] = "CodecDelay", bb[bb.SeekPreRoll = 22203] = "SeekPreRoll", bb[bb.DefaultDuration = 2352003] = "DefaultDuration", bb[bb.Video = 224] = "Video", bb[bb.PixelWidth = 176] = "PixelWidth", bb[bb.PixelHeight = 186] = "PixelHeight", bb[bb.DisplayWidth = 21680] = "DisplayWidth", bb[bb.DisplayHeight = 21690] = "DisplayHeight", bb[bb.DisplayUnit = 21682] = "DisplayUnit", bb[bb.AlphaMode = 21440] = "AlphaMode", bb[bb.Audio = 225] = "Audio", bb[bb.SamplingFrequency = 181] = "SamplingFrequency", bb[bb.Channels = 159] = "Channels", bb[bb.BitDepth = 25188] = "BitDepth", bb[bb.SimpleBlock = 163] = "SimpleBlock", bb[bb.BlockGroup = 160] = "BlockGroup", bb[bb.Block = 161] = "Block", bb[bb.BlockAdditions = 30113] = "BlockAdditions", bb[bb.BlockMore = 166] = "BlockMore", bb[bb.BlockAdditional = 165] = "BlockAdditional", bb[bb.BlockAddID = 238] = "BlockAddID", bb[bb.BlockDuration = 155] = "BlockDuration", bb[bb.ReferenceBlock = 251] = "ReferenceBlock", bb[bb.Cluster = 524531317] = "Cluster", bb[bb.Timestamp = 231] = "Timestamp", bb[bb.Cues = 475249515] = "Cues", bb[bb.CuePoint = 187] = "CuePoint", bb[bb.CueTime = 179] = "CueTime", bb[bb.CueTrackPositions = 183] = "CueTrackPositions", bb[bb.CueTrack = 247] = "CueTrack", bb[bb.CueClusterPosition = 241] = "CueClusterPosition", bb[bb.Colour = 21936] = "Colour", bb[bb.MatrixCoefficients = 21937] = "MatrixCoefficients", bb[bb.TransferCharacteristics = 21946] = "TransferCharacteristics", bb[bb.Primaries = 21947] = "Primaries", bb[bb.Range = 21945] = "Range", bb[bb.Projection = 30320] = "Projection", bb[bb.ProjectionType = 30321] = "ProjectionType", bb[bb.ProjectionPoseYaw = 30323] = "ProjectionPoseYaw", bb[bb.ProjectionPosePitch = 30324] = "ProjectionPosePitch", bb[bb.ProjectionPoseRoll = 30325] = "ProjectionPoseRoll", bb[bb.Attachments = 423732329] = "Attachments", bb[bb.AttachedFile = 24999] = "AttachedFile", bb[bb.FileDescription = 18046] = "FileDescription", bb[bb.FileName = 18030] = "FileName", bb[bb.FileMediaType = 18016] = "FileMediaType", bb[bb.FileData = 18012] = "FileData", bb[bb.FileUID = 18094] = "FileUID", bb[bb.Chapters = 272869232] = "Chapters", bb[bb.Tags = 307544935] = "Tags", bb[bb.Tag = 29555] = "Tag", bb[bb.Targets = 25536] = "Targets", bb[bb.TargetTypeValue = 26826] = "TargetTypeValue", bb[bb.TargetType = 25546] = "TargetType", bb[bb.TagTrackUID = 25541] = "TagTrackUID", bb[bb.TagEditionUID = 25545] = "TagEditionUID", bb[bb.TagChapterUID = 25540] = "TagChapterUID", bb[bb.TagAttachmentUID = 25542] = "TagAttachmentUID", bb[bb.SimpleTag = 26568] = "SimpleTag", bb[bb.TagName = 17827] = "TagName", bb[bb.TagLanguage = 17530] = "TagLanguage", bb[bb.TagString = 17543] = "TagString", bb[bb.TagBinary = 17541] = "TagBinary", bb[bb.ContentEncodings = 28032] = "ContentEncodings", bb[bb.ContentEncoding = 25152] = "ContentEncoding", bb[bb.ContentEncodingOrder = 20529] = "ContentEncodingOrder", bb[bb.ContentEncodingScope = 20530] = "ContentEncodingScope", bb[bb.ContentCompression = 20532] = "ContentCompression", bb[bb.ContentCompAlgo = 16980] = "ContentCompAlgo", bb[bb.ContentCompSettings = 16981] = "ContentCompSettings", bb[bb.ContentEncryption = 20533] = "ContentEncryption"
+    }(hM || (hM = {}));
+    hM.EBML, hM.Segment, hM.SeekHead, hM.Info, hM.Cluster, hM.Tracks, hM.Cues, hM.Attachments, hM.Chapters, hM.Tags;
+    const zM = bb => bb < 256 ? 1 : bb < 65536 ? 2 : bb < 1 << 24 ? 3 : bb < 2 ** 32 ? 4 : bb < 2 ** 40 ? 5 : 6,
+      XM = bb => bb < 256n ? 1 : bb < 65536n ? 2 : bb < 1n << 24n ? 3 : bb < 1n << 32n ? 4 : bb < 1n << 40n ? 5 : bb < 1n << 48n ? 6 : bb < 1n << 56n ? 7 : 8,
+      xM = bb => bb >= -64 && bb < 64 ? 1 : bb >= -8192 && bb < 8192 ? 2 : bb >= -1048576 && bb < 1 << 20 ? 3 : bb >= -(1 << 27) && bb < 1 << 27 ? 4 : bb >= -(2 ** 34) && bb < 2 ** 34 ? 5 : 6;
+    class jM {
+      constructor(bb) {
+        this.writer = bb, this.helper = new Uint8Array(8), this.helperView = new DataView(this.helper.buffer), this.offsets = new WeakMap, this.dataOffsets = new WeakMap
       }
-      writeByte(dd) {
-        this.helperView.setUint8(0, dd), this.writer.write(this.helper.subarray(0, 1))
+      writeByte(bb) {
+        this.helperView.setUint8(0, bb), this.writer.write(this.helper.subarray(0, 1))
       }
-      writeFloat32(dd) {
-        this.helperView.setFloat32(0, dd, !1), this.writer.write(this.helper.subarray(0, 4))
+      writeFloat32(bb) {
+        this.helperView.setFloat32(0, bb, !1), this.writer.write(this.helper.subarray(0, 4))
       }
-      writeFloat64(dd) {
-        this.helperView.setFloat64(0, dd, !1), this.writer.write(this.helper)
+      writeFloat64(bb) {
+        this.helperView.setFloat64(0, bb, !1), this.writer.write(this.helper)
       }
-      writeUnsignedInt(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : am(dd),
-          md = 0;
-        switch (Od) {
+      writeUnsignedInt(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zM(bb),
+          Mb = 0;
+        switch (wb) {
           case 6:
-            this.helperView.setUint8(md++, dd / 2 ** 40 | 0);
+            this.helperView.setUint8(Mb++, bb / 2 ** 40 | 0);
           case 5:
-            this.helperView.setUint8(md++, dd / 2 ** 32 | 0);
+            this.helperView.setUint8(Mb++, bb / 2 ** 32 | 0);
           case 4:
-            this.helperView.setUint8(md++, dd >> 24);
+            this.helperView.setUint8(Mb++, bb >> 24);
           case 3:
-            this.helperView.setUint8(md++, dd >> 16);
+            this.helperView.setUint8(Mb++, bb >> 16);
           case 2:
-            this.helperView.setUint8(md++, dd >> 8);
+            this.helperView.setUint8(Mb++, bb >> 8);
           case 1:
-            this.helperView.setUint8(md++, dd);
+            this.helperView.setUint8(Mb++, bb);
             break;
           default:
-            throw new Error("Bad unsigned int size " + Od)
+            throw new Error("Bad unsigned int size " + wb)
         }
-        this.writer.write(this.helper.subarray(0, md))
+        this.writer.write(this.helper.subarray(0, Mb))
       }
-      writeUnsignedBigInt(dd) {
-        let Od = 0;
-        for (let md = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Em(dd)) - 1; md >= 0; md--) this.helperView.setUint8(Od++, Number(dd >> BigInt(8 * md) & 0xffn));
-        this.writer.write(this.helper.subarray(0, Od))
+      writeUnsignedBigInt(bb) {
+        let wb = 0;
+        for (let Mb = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : XM(bb)) - 1; Mb >= 0; Mb--) this.helperView.setUint8(wb++, Number(bb >> BigInt(8 * Mb) & 0xffn));
+        this.writer.write(this.helper.subarray(0, wb))
       }
-      writeSignedInt(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Jm(dd);
-        dd < 0 && (dd += 2 ** (8 * Od)), this.writeUnsignedInt(dd, Od)
+      writeSignedInt(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xM(bb);
+        bb < 0 && (bb += 2 ** (8 * wb)), this.writeUnsignedInt(bb, wb)
       }
-      writeVarInt(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (dd => {
-            if (dd < 127) return 1;
-            if (dd < 16383) return 2;
-            if (dd < 2097151) return 3;
-            if (dd < 268435455) return 4;
-            if (dd < 2 ** 35 - 1) return 5;
-            if (dd < 2 ** 42 - 1) return 6;
-            throw new Error("EBML varint size not supported " + dd)
-          })(dd),
-          md = 0;
-        switch (Od) {
+      writeVarInt(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : (bb => {
+            if (bb < 127) return 1;
+            if (bb < 16383) return 2;
+            if (bb < 2097151) return 3;
+            if (bb < 268435455) return 4;
+            if (bb < 2 ** 35 - 1) return 5;
+            if (bb < 2 ** 42 - 1) return 6;
+            throw new Error("EBML varint size not supported " + bb)
+          })(bb),
+          Mb = 0;
+        switch (wb) {
           case 1:
-            this.helperView.setUint8(md++, 128 | dd);
+            this.helperView.setUint8(Mb++, 128 | bb);
             break;
           case 2:
-            this.helperView.setUint8(md++, 64 | dd >> 8), this.helperView.setUint8(md++, dd);
+            this.helperView.setUint8(Mb++, 64 | bb >> 8), this.helperView.setUint8(Mb++, bb);
             break;
           case 3:
-            this.helperView.setUint8(md++, 32 | dd >> 16), this.helperView.setUint8(md++, dd >> 8), this.helperView.setUint8(md++, dd);
+            this.helperView.setUint8(Mb++, 32 | bb >> 16), this.helperView.setUint8(Mb++, bb >> 8), this.helperView.setUint8(Mb++, bb);
             break;
           case 4:
-            this.helperView.setUint8(md++, 16 | dd >> 24), this.helperView.setUint8(md++, dd >> 16), this.helperView.setUint8(md++, dd >> 8), this.helperView.setUint8(md++, dd);
+            this.helperView.setUint8(Mb++, 16 | bb >> 24), this.helperView.setUint8(Mb++, bb >> 16), this.helperView.setUint8(Mb++, bb >> 8), this.helperView.setUint8(Mb++, bb);
             break;
           case 5:
-            this.helperView.setUint8(md++, 8 | dd / 2 ** 32 & 7), this.helperView.setUint8(md++, dd >> 24), this.helperView.setUint8(md++, dd >> 16), this.helperView.setUint8(md++, dd >> 8), this.helperView.setUint8(md++, dd);
+            this.helperView.setUint8(Mb++, 8 | bb / 2 ** 32 & 7), this.helperView.setUint8(Mb++, bb >> 24), this.helperView.setUint8(Mb++, bb >> 16), this.helperView.setUint8(Mb++, bb >> 8), this.helperView.setUint8(Mb++, bb);
             break;
           case 6:
-            this.helperView.setUint8(md++, 4 | dd / 2 ** 40 & 3), this.helperView.setUint8(md++, dd / 2 ** 32 | 0), this.helperView.setUint8(md++, dd >> 24), this.helperView.setUint8(md++, dd >> 16), this.helperView.setUint8(md++, dd >> 8), this.helperView.setUint8(md++, dd);
+            this.helperView.setUint8(Mb++, 4 | bb / 2 ** 40 & 3), this.helperView.setUint8(Mb++, bb / 2 ** 32 | 0), this.helperView.setUint8(Mb++, bb >> 24), this.helperView.setUint8(Mb++, bb >> 16), this.helperView.setUint8(Mb++, bb >> 8), this.helperView.setUint8(Mb++, bb);
             break;
           default:
-            throw new Error("Bad EBML varint size " + Od)
+            throw new Error("Bad EBML varint size " + wb)
         }
-        this.writer.write(this.helper.subarray(0, md))
+        this.writer.write(this.helper.subarray(0, Mb))
       }
-      writeAsciiString(dd) {
-        this.writer.write(new Uint8Array(dd.split("").map((dd => dd.charCodeAt(0)))))
+      writeAsciiString(bb) {
+        this.writer.write(new Uint8Array(bb.split("").map((bb => bb.charCodeAt(0)))))
       }
-      writeEBML(dd) {
-        if (null !== dd)
-          if (dd instanceof Uint8Array) this.writer.write(dd);
-          else if (Array.isArray(dd))
-          for (const Od of dd) this.writeEBML(Od);
-        else if (this.offsets.set(dd, this.writer.getPos()), this.writeUnsignedInt(dd.id), Array.isArray(dd.data)) {
-          const Od = this.writer.getPos(),
-            md = -1 === dd.size ? 1 : dd.size ?? 4; - 1 === dd.size ? this.writeByte(255) : this.writer.seek(this.writer.getPos() + md);
-          const Wd = this.writer.getPos();
-          if (this.dataOffsets.set(dd, Wd), this.writeEBML(dd.data), -1 !== dd.size) {
-            const dd = this.writer.getPos() - Wd,
-              Fd = this.writer.getPos();
-            this.writer.seek(Od), this.writeVarInt(dd, md), this.writer.seek(Fd)
+      writeEBML(bb) {
+        if (null !== bb)
+          if (bb instanceof Uint8Array) this.writer.write(bb);
+          else if (Array.isArray(bb))
+          for (const wb of bb) this.writeEBML(wb);
+        else if (this.offsets.set(bb, this.writer.getPos()), this.writeUnsignedInt(bb.id), Array.isArray(bb.data)) {
+          const wb = this.writer.getPos(),
+            Mb = -1 === bb.size ? 1 : bb.size ?? 4; - 1 === bb.size ? this.writeByte(255) : this.writer.seek(this.writer.getPos() + Mb);
+          const eb = this.writer.getPos();
+          if (this.dataOffsets.set(bb, eb), this.writeEBML(bb.data), -1 !== bb.size) {
+            const bb = this.writer.getPos() - eb,
+              Hb = this.writer.getPos();
+            this.writer.seek(wb), this.writeVarInt(bb, Mb), this.writer.seek(Hb)
           }
-        } else if ("number" === typeof dd.data) {
-          const Od = dd.size ?? am(dd.data);
-          this.writeVarInt(Od), this.writeUnsignedInt(dd.data, Od)
-        } else if ("bigint" === typeof dd.data) {
-          const Od = dd.size ?? Em(dd.data);
-          this.writeVarInt(Od), this.writeUnsignedBigInt(dd.data, Od)
-        } else if ("string" === typeof dd.data) this.writeVarInt(dd.data.length), this.writeAsciiString(dd.data);
-        else if (dd.data instanceof Uint8Array) this.writeVarInt(dd.data.byteLength, dd.size), this.writer.write(dd.data);
-        else if (dd.data instanceof Tm) this.writeVarInt(4), this.writeFloat32(dd.data.value);
-        else if (dd.data instanceof pm) this.writeVarInt(8), this.writeFloat64(dd.data.value);
-        else if (dd.data instanceof Ym) {
-          const Od = dd.size ?? Jm(dd.data.value);
-          this.writeVarInt(Od), this.writeSignedInt(dd.data.value, Od)
-        } else if (dd.data instanceof gm) {
-          const Od = Kd.od.encode(dd.data.value);
-          this.writeVarInt(Od.length), this.writer.write(Od)
-        } else(0, Kd.J)(dd.data)
+        } else if ("number" === typeof bb.data) {
+          const wb = bb.size ?? zM(bb.data);
+          this.writeVarInt(wb), this.writeUnsignedInt(bb.data, wb)
+        } else if ("bigint" === typeof bb.data) {
+          const wb = bb.size ?? XM(bb.data);
+          this.writeVarInt(wb), this.writeUnsignedBigInt(bb.data, wb)
+        } else if ("string" === typeof bb.data) this.writeVarInt(bb.data.length), this.writeAsciiString(bb.data);
+        else if (bb.data instanceof Uint8Array) this.writeVarInt(bb.data.byteLength, bb.size), this.writer.write(bb.data);
+        else if (bb.data instanceof FM) this.writeVarInt(4), this.writeFloat32(bb.data.value);
+        else if (bb.data instanceof BM) this.writeVarInt(8), this.writeFloat64(bb.data.value);
+        else if (bb.data instanceof sM) {
+          const wb = bb.size ?? xM(bb.data.value);
+          this.writeVarInt(wb), this.writeSignedInt(bb.data.value, wb)
+        } else if (bb.data instanceof mM) {
+          const wb = gb.id.encode(bb.data.value);
+          this.writeVarInt(wb.length), this.writer.write(wb)
+        } else(0, gb.H)(bb.data)
       }
     }
-    const xm = {
+    const KM = {
       avc: "V_MPEG4/ISO/AVC",
       hevc: "V_MPEGH/ISO/HEVC",
       vp8: "V_VP8",
@@ -5268,365 +5268,365 @@ export const modules = {
       "pcm-f64": "A_PCM/FLOAT/IEEE",
       webvtt: "S_TEXT/WEBVTT"
     };
-    const Bm = {
+    const rM = {
       video: 1,
       audio: 2,
       subtitle: 17
     };
-    class Sm extends qd {
-      constructor(dd, Od) {
-        super(dd), this.trackDatas = [], this.allTracksKnown = (0, Kd.Ac)(), this.segment = null, this.segmentInfo = null, this.seekHead = null, this.tracksElement = null, this.tagsElement = null, this.attachmentsElement = null, this.segmentDuration = null, this.cues = null, this.currentCluster = null, this.currentClusterStartMsTimestamp = null, this.currentClusterMaxMsTimestamp = null, this.trackDatasInCurrentCluster = new Map, this.startTimestamp = 1 / 0, this.endTimestamp = -1 / 0, this.warnedAboutTooNegativeTimestamp = !1, this.format = Od
+    class RM extends Cb {
+      constructor(bb, wb) {
+        super(bb), this.trackDatas = [], this.allTracksKnown = (0, gb.vc)(), this.segment = null, this.segmentInfo = null, this.seekHead = null, this.tracksElement = null, this.tagsElement = null, this.attachmentsElement = null, this.segmentDuration = null, this.cues = null, this.currentCluster = null, this.currentClusterStartMsTimestamp = null, this.currentClusterMaxMsTimestamp = null, this.trackDatasInCurrentCluster = new Map, this.startTimestamp = 1 / 0, this.endTimestamp = -1 / 0, this.warnedAboutTooNegativeTimestamp = !1, this.format = wb
       }
       async start() {
-        const dd = await this.mutex.acquire();
-        this.writer = await this.output._getRootWriter(!!this.format._options.appendOnly), this.ebmlWriter = new Um(this.writer), this.writeEBMLHeader(), this.createSegmentInfo(), this.createCues(), await this.writer.flush();
-        for (const Od of this.output.tracks) Od.isVideoTrack() && Od.metadata.decoderConfig ? this.getVideoTrackData(Od, Od.metadata.primingPacket ?? null, {
-          decoderConfig: Od.metadata.decoderConfig
-        }) : Od.isAudioTrack() && Od.metadata.decoderConfig && this.getAudioTrackData(Od, Od.metadata.primingPacket ?? null, {
-          decoderConfig: Od.metadata.decoderConfig
+        const bb = await this.mutex.acquire();
+        this.writer = await this.output._getRootWriter(!!this.format._options.appendOnly), this.ebmlWriter = new jM(this.writer), this.writeEBMLHeader(), this.createSegmentInfo(), this.createCues(), await this.writer.flush();
+        for (const wb of this.output.tracks) wb.isVideoTrack() && wb.metadata.decoderConfig ? this.getVideoTrackData(wb, wb.metadata.primingPacket ?? null, {
+          decoderConfig: wb.metadata.decoderConfig
+        }) : wb.isAudioTrack() && wb.metadata.decoderConfig && this.getAudioTrackData(wb, wb.metadata.primingPacket ?? null, {
+          decoderConfig: wb.metadata.decoderConfig
         });
-        dd()
+        bb()
       }
       writeEBMLHeader() {
         this.format._options.onEbmlHeader && this.writer.startTrackingWrites();
-        const dd = {
-          id: wm.EBML,
+        const bb = {
+          id: hM.EBML,
           data: [{
-            id: wm.EBMLVersion,
+            id: hM.EBMLVersion,
             data: 1
           }, {
-            id: wm.EBMLReadVersion,
+            id: hM.EBMLReadVersion,
             data: 1
           }, {
-            id: wm.EBMLMaxIDLength,
+            id: hM.EBMLMaxIDLength,
             data: 4
           }, {
-            id: wm.EBMLMaxSizeLength,
+            id: hM.EBMLMaxSizeLength,
             data: 8
           }, {
-            id: wm.DocType,
-            data: this.format instanceof cm ? "webm" : "matroska"
+            id: hM.DocType,
+            data: this.format instanceof QM ? "webm" : "matroska"
           }, {
-            id: wm.DocTypeVersion,
+            id: hM.DocTypeVersion,
             data: 4
           }, {
-            id: wm.DocTypeReadVersion,
+            id: hM.DocTypeReadVersion,
             data: 2
           }]
         };
-        if (this.ebmlWriter.writeEBML(dd), this.format._options.onEbmlHeader) {
+        if (this.ebmlWriter.writeEBML(bb), this.format._options.onEbmlHeader) {
           const {
-            data: dd,
-            start: Od
+            data: bb,
+            start: wb
           } = this.writer.stopTrackingWrites();
-          this.format._options.onEbmlHeader(dd, Od)
+          this.format._options.onEbmlHeader(bb, wb)
         }
       }
-      maybeCreateSeekHead(dd) {
+      maybeCreateSeekHead(bb) {
         if (this.format._options.appendOnly) return;
-        const Od = new Uint8Array([28, 83, 187, 107]),
-          md = new Uint8Array([21, 73, 169, 102]),
-          Wd = new Uint8Array([22, 84, 174, 107]),
-          Fd = new Uint8Array([25, 65, 164, 105]),
-          Rd = new Uint8Array([18, 84, 195, 103]),
-          Xd = {
-            id: wm.SeekHead,
+        const wb = new Uint8Array([28, 83, 187, 107]),
+          Mb = new Uint8Array([21, 73, 169, 102]),
+          eb = new Uint8Array([22, 84, 174, 107]),
+          Hb = new Uint8Array([25, 65, 164, 105]),
+          pb = new Uint8Array([18, 84, 195, 103]),
+          Vb = {
+            id: hM.SeekHead,
             data: [{
-              id: wm.Seek,
+              id: hM.Seek,
               data: [{
-                id: wm.SeekID,
-                data: md
+                id: hM.SeekID,
+                data: Mb
               }, {
-                id: wm.SeekPosition,
+                id: hM.SeekPosition,
                 size: 5,
-                data: dd ? this.ebmlWriter.offsets.get(this.segmentInfo) - this.segmentDataOffset : 0
+                data: bb ? this.ebmlWriter.offsets.get(this.segmentInfo) - this.segmentDataOffset : 0
               }]
             }, {
-              id: wm.Seek,
+              id: hM.Seek,
               data: [{
-                id: wm.SeekID,
-                data: Wd
+                id: hM.SeekID,
+                data: eb
               }, {
-                id: wm.SeekPosition,
+                id: hM.SeekPosition,
                 size: 5,
-                data: dd ? this.ebmlWriter.offsets.get(this.tracksElement) - this.segmentDataOffset : 0
+                data: bb ? this.ebmlWriter.offsets.get(this.tracksElement) - this.segmentDataOffset : 0
               }]
             }, this.attachmentsElement ? {
-              id: wm.Seek,
+              id: hM.Seek,
               data: [{
-                id: wm.SeekID,
-                data: Fd
+                id: hM.SeekID,
+                data: Hb
               }, {
-                id: wm.SeekPosition,
+                id: hM.SeekPosition,
                 size: 5,
-                data: dd ? this.ebmlWriter.offsets.get(this.attachmentsElement) - this.segmentDataOffset : 0
+                data: bb ? this.ebmlWriter.offsets.get(this.attachmentsElement) - this.segmentDataOffset : 0
               }]
             } : null, this.tagsElement ? {
-              id: wm.Seek,
+              id: hM.Seek,
               data: [{
-                id: wm.SeekID,
-                data: Rd
+                id: hM.SeekID,
+                data: pb
               }, {
-                id: wm.SeekPosition,
+                id: hM.SeekPosition,
                 size: 5,
-                data: dd ? this.ebmlWriter.offsets.get(this.tagsElement) - this.segmentDataOffset : 0
+                data: bb ? this.ebmlWriter.offsets.get(this.tagsElement) - this.segmentDataOffset : 0
               }]
             } : null, {
-              id: wm.Seek,
+              id: hM.Seek,
               data: [{
-                id: wm.SeekID,
-                data: Od
+                id: hM.SeekID,
+                data: wb
               }, {
-                id: wm.SeekPosition,
+                id: hM.SeekPosition,
                 size: 5,
-                data: dd ? this.ebmlWriter.offsets.get(this.cues) - this.segmentDataOffset : 0
+                data: bb ? this.ebmlWriter.offsets.get(this.cues) - this.segmentDataOffset : 0
               }]
             }]
           };
-        this.seekHead = Xd
+        this.seekHead = Vb
       }
       createSegmentInfo() {
-        const dd = {
-          id: wm.Duration,
-          data: new pm(0)
+        const bb = {
+          id: hM.Duration,
+          data: new BM(0)
         };
-        this.segmentDuration = dd;
-        const Od = {
-          id: wm.Info,
+        this.segmentDuration = bb;
+        const wb = {
+          id: hM.Info,
           data: [{
-            id: wm.TimestampScale,
+            id: hM.TimestampScale,
             data: 1e6
           }, {
-            id: wm.MuxingApp,
-            data: Td.c
+            id: hM.MuxingApp,
+            data: sb.b
           }, {
-            id: wm.WritingApp,
-            data: Td.c
-          }, this.format._options.appendOnly ? null : dd]
+            id: hM.WritingApp,
+            data: sb.b
+          }, this.format._options.appendOnly ? null : bb]
         };
-        this.segmentInfo = Od
+        this.segmentInfo = wb
       }
       createTracks() {
-        const dd = {
-          id: wm.Tracks,
+        const bb = {
+          id: hM.Tracks,
           data: []
         };
-        this.tracksElement = dd;
-        for (const Od of this.trackDatas) {
-          let md = xm[Od.track.source._codec];
-          (0, Kd.M)(md), "audio" === Od.type && "dts" === Od.track.source._codec && ("dtse" === Od.info.decoderConfig.codec ? md = "A_DTS/EXPRESS" : "dtsl" === Od.info.decoderConfig.codec && (md = "A_DTS/LOSSLESS"));
-          let Wd = 0;
-          if ("audio" === Od.type && "opus" === Od.track.source._codec) {
-            Wd = 8e7;
-            const dd = Od.info.decoderConfig.description;
-            if (dd) {
-              const Od = (0, Kd.vd)(dd),
-                md = (0, Hd.hb)(Od);
-              Wd = Math.round(md.preSkip / Fd.l * 1e9)
+        this.tracksElement = bb;
+        for (const wb of this.trackDatas) {
+          let Mb = KM[wb.track.source._codec];
+          (0, gb.L)(Mb), "audio" === wb.type && "dts" === wb.track.source._codec && ("dtse" === wb.info.decoderConfig.codec ? Mb = "A_DTS/EXPRESS" : "dtsl" === wb.info.decoderConfig.codec && (Mb = "A_DTS/LOSSLESS"));
+          let eb = 0;
+          if ("audio" === wb.type && "opus" === wb.track.source._codec) {
+            eb = 8e7;
+            const bb = wb.info.decoderConfig.description;
+            if (bb) {
+              const wb = (0, gb.od)(bb),
+                Mb = (0, Eb.sb)(wb);
+              eb = Math.round(Mb.preSkip / Hb.i * 1e9)
             }
           }
-          dd.data.push({
-            id: wm.TrackEntry,
+          bb.data.push({
+            id: hM.TrackEntry,
             data: [{
-              id: wm.TrackNumber,
-              data: Od.track.id
+              id: hM.TrackNumber,
+              data: wb.track.id
             }, {
-              id: wm.TrackUID,
-              data: Od.track.id
+              id: hM.TrackUID,
+              data: wb.track.id
             }, {
-              id: wm.TrackType,
-              data: Bm[Od.type]
-            }, !1 === Od.track.metadata.disposition?.default ? {
-              id: wm.FlagDefault,
+              id: hM.TrackType,
+              data: rM[wb.type]
+            }, !1 === wb.track.metadata.disposition?.default ? {
+              id: hM.FlagDefault,
               data: 0
-            } : null, Od.track.metadata.disposition?.forced ? {
-              id: wm.FlagForced,
+            } : null, wb.track.metadata.disposition?.forced ? {
+              id: hM.FlagForced,
               data: 1
-            } : null, Od.track.metadata.disposition?.hearingImpaired ? {
-              id: wm.FlagHearingImpaired,
+            } : null, wb.track.metadata.disposition?.hearingImpaired ? {
+              id: hM.FlagHearingImpaired,
               data: 1
-            } : null, Od.track.metadata.disposition?.visuallyImpaired ? {
-              id: wm.FlagVisualImpaired,
+            } : null, wb.track.metadata.disposition?.visuallyImpaired ? {
+              id: hM.FlagVisualImpaired,
               data: 1
-            } : null, Od.track.metadata.disposition?.original ? {
-              id: wm.FlagOriginal,
+            } : null, wb.track.metadata.disposition?.original ? {
+              id: hM.FlagOriginal,
               data: 1
-            } : null, Od.track.metadata.disposition?.commentary ? {
-              id: wm.FlagCommentary,
+            } : null, wb.track.metadata.disposition?.commentary ? {
+              id: hM.FlagCommentary,
               data: 1
             } : null, {
-              id: wm.FlagLacing,
+              id: hM.FlagLacing,
               data: 0
             }, {
-              id: wm.Language,
-              data: Od.track.metadata.languageCode ?? Kd.z
+              id: hM.Language,
+              data: wb.track.metadata.languageCode ?? gb.z
             }, {
-              id: wm.CodecID,
-              data: md
-            }, Od.codecPrivate ? {
-              id: wm.CodecPrivate,
-              data: (0, Kd.vd)(Od.codecPrivate)
-            } : null, Wd > 0 ? {
-              id: wm.SeekPreRoll,
-              data: Wd
-            } : null, void 0 !== Od.track.metadata.name ? {
-              id: wm.Name,
-              data: new gm(Od.track.metadata.name)
-            } : null, "video" === Od.type ? this.videoSpecificTrackInfo(Od) : null, "audio" === Od.type ? this.audioSpecificTrackInfo(Od) : null, "subtitle" === Od.type ? this.subtitleSpecificTrackInfo(Od) : null]
+              id: hM.CodecID,
+              data: Mb
+            }, wb.codecPrivate ? {
+              id: hM.CodecPrivate,
+              data: (0, gb.od)(wb.codecPrivate)
+            } : null, eb > 0 ? {
+              id: hM.SeekPreRoll,
+              data: eb
+            } : null, void 0 !== wb.track.metadata.name ? {
+              id: hM.Name,
+              data: new mM(wb.track.metadata.name)
+            } : null, "video" === wb.type ? this.videoSpecificTrackInfo(wb) : null, "audio" === wb.type ? this.audioSpecificTrackInfo(wb) : null, "subtitle" === wb.type ? this.subtitleSpecificTrackInfo(wb) : null]
           })
         }
       }
-      videoSpecificTrackInfo(dd) {
+      videoSpecificTrackInfo(bb) {
         const {
-          frameRate: Od,
-          transformationMatrix: md
-        } = dd.track.metadata, Wd = [Od ? {
-          id: wm.DefaultDuration,
-          data: 1e9 / Od
+          frameRate: wb,
+          transformationMatrix: Mb
+        } = bb.track.metadata, eb = [wb ? {
+          id: hM.DefaultDuration,
+          data: 1e9 / wb
         } : null];
-        let Fd, Rd, Xd;
-        if (md) {
-          Fd = (0, Kd.nb)(md);
-          const dd = (0, Kd.rc)((0, Kd.Mc)(-Fd), md);
-          Rd = Math.sign(dd[0]), Xd = Math.sign(dd[4]), -1 === Xd && (Xd = 1, Rd = -Rd, Fd = (0, Kd.sc)(Fd + 180))
-        } else Fd = dd.track.metadata.rotation ?? 0, Rd = dd.track.metadata.flip ? -1 : 1, Xd = 1;
-        const hd = Fd ? (0, Kd.sc)(-1 === Rd ? Fd : -Fd) : 0,
-          vd = Math.round(Math.acos(Rd) * Kd.q),
-          Qd = Math.round(Math.acos(Xd) * Kd.q),
-          td = !!dd.info.aspectRatio && dd.info.aspectRatio.num * dd.info.height !== dd.info.aspectRatio.den * dd.info.width,
-          od = dd.info.decoderConfig.colorSpace,
-          Nd = {
-            id: wm.Video,
+        let Hb, pb, Vb;
+        if (Mb) {
+          Hb = (0, gb.kb)(Mb);
+          const bb = (0, gb.lc)((0, gb.Kc)(-Hb), Mb);
+          pb = Math.sign(bb[0]), Vb = Math.sign(bb[4]), -1 === Vb && (Vb = 1, pb = -pb, Hb = (0, gb.nc)(Hb + 180))
+        } else Hb = bb.track.metadata.rotation ?? 0, pb = bb.track.metadata.flip ? -1 : 1, Vb = 1;
+        const lb = Hb ? (0, gb.nc)(-1 === pb ? Hb : -Hb) : 0,
+          Lb = Math.round(Math.acos(pb) * gb.q),
+          Ib = Math.round(Math.acos(Vb) * gb.q),
+          Ob = !!bb.info.aspectRatio && bb.info.aspectRatio.num * bb.info.height !== bb.info.aspectRatio.den * bb.info.width,
+          Ub = bb.info.decoderConfig.colorSpace,
+          tb = {
+            id: hM.Video,
             data: [{
-              id: wm.PixelWidth,
-              data: dd.info.width
+              id: hM.PixelWidth,
+              data: bb.info.width
             }, {
-              id: wm.PixelHeight,
-              data: dd.info.height
-            }, td ? {
-              id: wm.DisplayWidth,
-              data: dd.info.aspectRatio.num
-            } : null, td ? {
-              id: wm.DisplayHeight,
-              data: dd.info.aspectRatio.den
-            } : null, td ? {
-              id: wm.DisplayUnit,
+              id: hM.PixelHeight,
+              data: bb.info.height
+            }, Ob ? {
+              id: hM.DisplayWidth,
+              data: bb.info.aspectRatio.num
+            } : null, Ob ? {
+              id: hM.DisplayHeight,
+              data: bb.info.aspectRatio.den
+            } : null, Ob ? {
+              id: hM.DisplayUnit,
               data: 3
-            } : null, dd.info.alphaMode ? {
-              id: wm.AlphaMode,
+            } : null, bb.info.alphaMode ? {
+              id: hM.AlphaMode,
               data: 1
-            } : null, (0, Kd.ib)(od) ? null : {
-              id: wm.Colour,
+            } : null, (0, gb.fb)(Ub) ? null : {
+              id: hM.Colour,
               data: [{
-                id: wm.MatrixCoefficients,
-                data: null != od?.matrix ? Kd.p[od.matrix] : 2
+                id: hM.MatrixCoefficients,
+                data: null != Ub?.matrix ? gb.m[Ub.matrix] : 2
               }, {
-                id: wm.TransferCharacteristics,
-                data: null != od?.transfer ? Kd.t[od.transfer] : 2
+                id: hM.TransferCharacteristics,
+                data: null != Ub?.transfer ? gb.s[Ub.transfer] : 2
               }, {
-                id: wm.Primaries,
-                data: null != od?.primaries ? Kd.g[od.primaries] : 2
+                id: hM.Primaries,
+                data: null != Ub?.primaries ? gb.e[Ub.primaries] : 2
               }, {
-                id: wm.Range,
-                data: null != od?.fullRange ? od.fullRange ? 2 : 1 : 0
+                id: hM.Range,
+                data: null != Ub?.fullRange ? Ub.fullRange ? 2 : 1 : 0
               }]
-            }, hd || vd || Qd ? {
-              id: wm.Projection,
+            }, lb || Lb || Ib ? {
+              id: hM.Projection,
               data: [{
-                id: wm.ProjectionType,
+                id: hM.ProjectionType,
                 data: 0
-              }, vd ? {
-                id: wm.ProjectionPoseYaw,
-                data: new Tm(vd)
-              } : null, Qd ? {
-                id: wm.ProjectionPosePitch,
-                data: new Tm(Qd)
-              } : null, hd ? {
-                id: wm.ProjectionPoseRoll,
-                data: new Tm((hd + 180) % 360 - 180)
+              }, Lb ? {
+                id: hM.ProjectionPoseYaw,
+                data: new FM(Lb)
+              } : null, Ib ? {
+                id: hM.ProjectionPosePitch,
+                data: new FM(Ib)
+              } : null, lb ? {
+                id: hM.ProjectionPoseRoll,
+                data: new FM((lb + 180) % 360 - 180)
               } : null]
             } : null]
           };
-        return Wd.push(Nd), Wd
+        return eb.push(tb), eb
       }
-      audioSpecificTrackInfo(dd) {
-        const Od = Fd.m.includes(dd.track.source._codec) ? (0, Fd.S)(dd.track.source._codec) : null;
+      audioSpecificTrackInfo(bb) {
+        const wb = Hb.l.includes(bb.track.source._codec) ? (0, Hb.N)(bb.track.source._codec) : null;
         return [{
-          id: wm.Audio,
+          id: hM.Audio,
           data: [{
-            id: wm.SamplingFrequency,
-            data: new Tm(dd.info.sampleRate)
+            id: hM.SamplingFrequency,
+            data: new FM(bb.info.sampleRate)
           }, {
-            id: wm.Channels,
-            data: dd.info.numberOfChannels
-          }, Od ? {
-            id: wm.BitDepth,
-            data: 8 * Od.sampleSize
+            id: hM.Channels,
+            data: bb.info.numberOfChannels
+          }, wb ? {
+            id: hM.BitDepth,
+            data: 8 * wb.sampleSize
           } : null]
         }]
       }
-      subtitleSpecificTrackInfo(dd) {
+      subtitleSpecificTrackInfo(bb) {
         return []
       }
       maybeCreateTags() {
-        const dd = [],
-          Od = (Od, md) => {
-            dd.push({
-              id: wm.SimpleTag,
+        const bb = [],
+          wb = (wb, Mb) => {
+            bb.push({
+              id: hM.SimpleTag,
               data: [{
-                id: wm.TagName,
-                data: new gm(Od)
-              }, "string" === typeof md ? {
-                id: wm.TagString,
-                data: new gm(md)
+                id: hM.TagName,
+                data: new mM(wb)
+              }, "string" === typeof Mb ? {
+                id: hM.TagString,
+                data: new mM(Mb)
               } : {
-                id: wm.TagBinary,
-                data: md
+                id: hM.TagBinary,
+                data: Mb
               }]
             })
           },
-          md = this.output._metadataTags,
-          Wd = new Set;
+          Mb = this.output._metadataTags,
+          eb = new Set;
         for (const {
-            key: Fd,
-            value: Rd
+            key: Hb,
+            value: pb
           }
-          of(0, Kd.fc)(md)) switch (Fd) {
+          of(0, gb._b)(Mb)) switch (Hb) {
           case "title":
-            Od("TITLE", Rd), Wd.add("TITLE");
+            wb("TITLE", pb), eb.add("TITLE");
             break;
           case "description":
-            Od("DESCRIPTION", Rd), Wd.add("DESCRIPTION");
+            wb("DESCRIPTION", pb), eb.add("DESCRIPTION");
             break;
           case "artist":
-            Od("ARTIST", Rd), Wd.add("ARTIST");
+            wb("ARTIST", pb), eb.add("ARTIST");
             break;
           case "album":
-            Od("ALBUM", Rd), Wd.add("ALBUM");
+            wb("ALBUM", pb), eb.add("ALBUM");
             break;
           case "albumArtist":
-            Od("ALBUM_ARTIST", Rd), Wd.add("ALBUM_ARTIST");
+            wb("ALBUM_ARTIST", pb), eb.add("ALBUM_ARTIST");
             break;
           case "genre":
-            Od("GENRE", Rd), Wd.add("GENRE");
+            wb("GENRE", pb), eb.add("GENRE");
             break;
           case "beatsPerMinute":
-            Od("BPM", Rd.toString()), Wd.add("BPM");
+            wb("BPM", pb.toString()), eb.add("BPM");
             break;
           case "comment":
-            Od("COMMENT", Rd), Wd.add("COMMENT");
+            wb("COMMENT", pb), eb.add("COMMENT");
             break;
           case "lyrics":
-            Od("LYRICS", Rd), Wd.add("LYRICS");
+            wb("LYRICS", pb), eb.add("LYRICS");
             break;
           case "date":
-            Od("DATE", Rd.toISOString().slice(0, 10)), Wd.add("DATE");
+            wb("DATE", pb.toISOString().slice(0, 10)), eb.add("DATE");
             break;
           case "trackNumber":
-            Od("PART_NUMBER", void 0 !== md.tracksTotal ? `${Rd}/${md.tracksTotal}` : Rd.toString()), Wd.add("PART_NUMBER");
+            wb("PART_NUMBER", void 0 !== Mb.tracksTotal ? `${pb}/${Mb.tracksTotal}` : pb.toString()), eb.add("PART_NUMBER");
             break;
           case "discNumber":
-            Od("DISC", void 0 !== md.discsTotal ? `${Rd}/${md.discsTotal}` : Rd.toString()), Wd.add("DISC");
+            wb("DISC", void 0 !== Mb.discsTotal ? `${pb}/${Mb.discsTotal}` : pb.toString()), eb.add("DISC");
             break;
           case "tracksTotal":
           case "discsTotal":
@@ -5634,543 +5634,543 @@ export const modules = {
           case "raw":
             break;
           default:
-            (0, Kd.J)(Fd)
+            (0, gb.H)(Hb)
         }
-        if (md.raw)
-          for (const Fd in md.raw) {
-            const dd = md.raw[Fd];
-            null == dd || Wd.has(Fd) || ("string" === typeof dd || dd instanceof Uint8Array) && Od(Fd, dd)
+        if (Mb.raw)
+          for (const Hb in Mb.raw) {
+            const bb = Mb.raw[Hb];
+            null == bb || eb.has(Hb) || ("string" === typeof bb || bb instanceof Uint8Array) && wb(Hb, bb)
           }
-        0 !== dd.length && (this.tagsElement = {
-          id: wm.Tags,
+        0 !== bb.length && (this.tagsElement = {
+          id: hM.Tags,
           data: [{
-            id: wm.Tag,
+            id: hM.Tag,
             data: [{
-              id: wm.Targets,
+              id: hM.Targets,
               data: [{
-                id: wm.TargetTypeValue,
+                id: hM.TargetTypeValue,
                 data: 50
               }, {
-                id: wm.TargetType,
+                id: hM.TargetType,
                 data: "MOVIE"
               }]
-            }, ...dd]
+            }, ...bb]
           }]
         })
       }
       maybeCreateAttachments() {
-        const dd = this.output._metadataTags,
-          Od = [],
-          md = new Set,
-          Wd = dd.images ?? [];
-        for (const Fd of Wd) {
-          let dd, Wd = Fd.name;
-          if (void 0 === Wd) {
-            Wd = ("coverFront" === Fd.kind ? "cover" : "coverBack" === Fd.kind ? "back" : "image") + ((0, Kd.wb)(Fd.mimeType) ?? "")
+        const bb = this.output._metadataTags,
+          wb = [],
+          Mb = new Set,
+          eb = bb.images ?? [];
+        for (const Hb of eb) {
+          let bb, eb = Hb.name;
+          if (void 0 === eb) {
+            eb = ("coverFront" === Hb.kind ? "cover" : "coverBack" === Hb.kind ? "back" : "image") + ((0, gb.rb)(Hb.mimeType) ?? "")
           }
           for (;;) {
-            dd = 0n;
-            for (let Od = 0; Od < 8; Od++) dd <<= 8n, dd |= BigInt(Math.floor(256 * Math.random()));
-            if (0n !== dd && !md.has(dd)) break
+            bb = 0n;
+            for (let wb = 0; wb < 8; wb++) bb <<= 8n, bb |= BigInt(Math.floor(256 * Math.random()));
+            if (0n !== bb && !Mb.has(bb)) break
           }
-          md.add(dd), Od.push({
-            id: wm.AttachedFile,
-            data: [void 0 !== Fd.description ? {
-              id: wm.FileDescription,
-              data: new gm(Fd.description)
+          Mb.add(bb), wb.push({
+            id: hM.AttachedFile,
+            data: [void 0 !== Hb.description ? {
+              id: hM.FileDescription,
+              data: new mM(Hb.description)
             } : null, {
-              id: wm.FileName,
-              data: new gm(Wd)
+              id: hM.FileName,
+              data: new mM(eb)
             }, {
-              id: wm.FileMediaType,
-              data: Fd.mimeType
+              id: hM.FileMediaType,
+              data: Hb.mimeType
             }, {
-              id: wm.FileData,
-              data: Fd.data
+              id: hM.FileData,
+              data: Hb.data
             }, {
-              id: wm.FileUID,
-              data: dd
+              id: hM.FileUID,
+              data: bb
             }]
           })
         }
-        for (const [Fd, Rd] of Object.entries(dd.raw ?? {})) {
-          if (!(Rd instanceof Nd.e)) continue;
-          /^\d+$/.test(Fd) && (Wd.find((dd => dd.mimeType === Rd.mimeType && (0, Kd.yd)(dd.data, Rd.data))) || Od.push({
-            id: wm.AttachedFile,
-            data: [void 0 !== Rd.description ? {
-              id: wm.FileDescription,
-              data: new gm(Rd.description)
+        for (const [Hb, pb] of Object.entries(bb.raw ?? {})) {
+          if (!(pb instanceof tb.c)) continue;
+          /^\d+$/.test(Hb) && (eb.find((bb => bb.mimeType === pb.mimeType && (0, gb.rd)(bb.data, pb.data))) || wb.push({
+            id: hM.AttachedFile,
+            data: [void 0 !== pb.description ? {
+              id: hM.FileDescription,
+              data: new mM(pb.description)
             } : null, {
-              id: wm.FileName,
-              data: new gm(Rd.name ?? "")
+              id: hM.FileName,
+              data: new mM(pb.name ?? "")
             }, {
-              id: wm.FileMediaType,
-              data: Rd.mimeType ?? ""
+              id: hM.FileMediaType,
+              data: pb.mimeType ?? ""
             }, {
-              id: wm.FileData,
-              data: Rd.data
+              id: hM.FileData,
+              data: pb.data
             }, {
-              id: wm.FileUID,
-              data: BigInt(Fd)
+              id: hM.FileUID,
+              data: BigInt(Hb)
             }]
           }))
         }
-        0 !== Od.length && (this.attachmentsElement = {
-          id: wm.Attachments,
-          data: Od
+        0 !== wb.length && (this.attachmentsElement = {
+          id: hM.Attachments,
+          data: wb
         })
       }
       createSegment() {
         this.createTracks(), this.maybeCreateTags(), this.maybeCreateAttachments(), this.maybeCreateSeekHead(!1);
-        const dd = {
-          id: wm.Segment,
+        const bb = {
+          id: hM.Segment,
           size: this.format._options.appendOnly ? -1 : 6,
           data: [this.seekHead, this.segmentInfo, this.tracksElement, this.attachmentsElement, this.tagsElement]
         };
-        if (this.segment = dd, this.format._options.onSegmentHeader && this.writer.startTrackingWrites(), this.ebmlWriter.writeEBML(dd), this.format._options.onSegmentHeader) {
+        if (this.segment = bb, this.format._options.onSegmentHeader && this.writer.startTrackingWrites(), this.ebmlWriter.writeEBML(bb), this.format._options.onSegmentHeader) {
           const {
-            data: dd,
-            start: Od
+            data: bb,
+            start: wb
           } = this.writer.stopTrackingWrites();
-          this.format._options.onSegmentHeader(dd, Od)
+          this.format._options.onSegmentHeader(bb, wb)
         }
       }
       createCues() {
         this.cues = {
-          id: wm.Cues,
+          id: hM.Cues,
           data: []
         }
       }
       get segmentDataOffset() {
-        return (0, Kd.M)(this.segment), this.ebmlWriter.dataOffsets.get(this.segment)
+        return (0, gb.L)(this.segment), this.ebmlWriter.dataOffsets.get(this.segment)
       }
       allTracksAreKnown() {
-        for (const dd of this.output.tracks)
-          if (!dd.source._closed && !this.trackDatas.some((Od => Od.track === dd))) return !1;
+        for (const bb of this.output.tracks)
+          if (!bb.source._closed && !this.trackDatas.some((wb => wb.track === bb))) return !1;
         return !0
       }
       async getMimeType() {
         await this.allTracksKnown.promise;
-        const dd = this.trackDatas.map((dd => {
-          if ("video" === dd.type) return dd.info.decoderConfig.codec;
-          if ("audio" === dd.type) return dd.info.decoderConfig.codec;
+        const bb = this.trackDatas.map((bb => {
+          if ("video" === bb.type) return bb.info.decoderConfig.codec;
+          if ("audio" === bb.type) return bb.info.decoderConfig.codec;
           return {
             webvtt: "wvtt"
-          } [dd.track.source._codec]
+          } [bb.track.source._codec]
         }));
-        return (dd => {
-          let Od = (dd.hasVideo ? "video/" : dd.hasAudio ? "audio/" : "application/") + (dd.isWebM ? "webm" : "x-matroska");
-          dd.codecStrings.length > 0 && (Od += `; codecs="${[...new Set(dd.codecStrings.filter(Boolean))].join(", ")}"`);
-          return Od
+        return (bb => {
+          let wb = (bb.hasVideo ? "video/" : bb.hasAudio ? "audio/" : "application/") + (bb.isWebM ? "webm" : "x-matroska");
+          bb.codecStrings.length > 0 && (wb += `; codecs="${[...new Set(bb.codecStrings.filter(Boolean))].join(", ")}"`);
+          return wb
         })({
-          isWebM: this.format instanceof cm,
-          hasVideo: this.trackDatas.some((dd => "video" === dd.type)),
-          hasAudio: this.trackDatas.some((dd => "audio" === dd.type)),
-          codecStrings: dd
+          isWebM: this.format instanceof QM,
+          hasVideo: this.trackDatas.some((bb => "video" === bb.type)),
+          hasAudio: this.trackDatas.some((bb => "audio" === bb.type)),
+          codecStrings: bb
         })
       }
-      getVideoTrackData(dd, Od, md) {
-        const Wd = this.trackDatas.find((Od => Od.track === dd));
-        if (Wd) return Wd;
-        (0, Fd.X)(md, dd.source._codec), (0, Kd.M)(md), (0, Kd.M)(md.decoderConfig), (0, Kd.M)(void 0 !== md.decoderConfig.codedWidth), (0, Kd.M)(void 0 !== md.decoderConfig.codedHeight);
-        const Rd = md.decoderConfig.displayAspectWidth,
-          Xd = md.decoderConfig.displayAspectHeight,
-          hd = void 0 === Rd || void 0 === Xd ? null : (0, Kd.id)({
-            num: Rd,
-            den: Xd
+      getVideoTrackData(bb, wb, Mb) {
+        const eb = this.trackDatas.find((wb => wb.track === bb));
+        if (eb) return eb;
+        (0, Hb.T)(Mb, bb.source._codec), (0, gb.L)(Mb), (0, gb.L)(Mb.decoderConfig), (0, gb.L)(void 0 !== Mb.decoderConfig.codedWidth), (0, gb.L)(void 0 !== Mb.decoderConfig.codedHeight);
+        const pb = Mb.decoderConfig.displayAspectWidth,
+          Vb = Mb.decoderConfig.displayAspectHeight,
+          lb = void 0 === pb || void 0 === Vb ? null : (0, gb.fd)({
+            num: pb,
+            den: Vb
           }),
-          vd = {
-            track: dd,
+          Lb = {
+            track: bb,
             type: "video",
             info: {
-              width: md.decoderConfig.codedWidth,
-              height: md.decoderConfig.codedHeight,
-              aspectRatio: hd,
-              decoderConfig: md.decoderConfig,
-              alphaMode: dd.metadata.canBeTransparent || (Od ? !!Od.sideData.alpha : null)
+              width: Mb.decoderConfig.codedWidth,
+              height: Mb.decoderConfig.codedHeight,
+              aspectRatio: lb,
+              decoderConfig: Mb.decoderConfig,
+              alphaMode: bb.metadata.canBeTransparent || (wb ? !!wb.sideData.alpha : null)
             },
             chunkQueue: [],
             lastWrittenMsTimestamp: null,
-            codecPrivate: md.decoderConfig.description ?? null,
+            codecPrivate: Mb.decoderConfig.description ?? null,
             closed: !1
           };
-        return "vp9" === dd.source._codec ? vd.codecPrivate = new Uint8Array((0, Fd.H)(vd.info.decoderConfig.codec)) : "av1" === dd.source._codec ? vd.codecPrivate = new Uint8Array((0, Fd.E)(vd.info.decoderConfig.codec)) : "prores" === dd.source._codec && (vd.codecPrivate = Kd.od.encode(md.decoderConfig.codec)), this.trackDatas.push(vd), this.trackDatas.sort(((dd, Od) => dd.track.id - Od.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), vd
+        return "vp9" === bb.source._codec ? Lb.codecPrivate = new Uint8Array((0, Hb.C)(Lb.info.decoderConfig.codec)) : "av1" === bb.source._codec ? Lb.codecPrivate = new Uint8Array((0, Hb.z)(Lb.info.decoderConfig.codec)) : "prores" === bb.source._codec && (Lb.codecPrivate = gb.id.encode(Mb.decoderConfig.codec)), this.trackDatas.push(Lb), this.trackDatas.sort(((bb, wb) => bb.track.id - wb.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), Lb
       }
-      getAudioTrackData(dd, Od, md) {
-        const Rd = this.trackDatas.find((Od => Od.track === dd));
-        if (Rd) return Rd;
-        (0, Fd.U)(md, dd.source._codec), (0, Kd.M)(md), (0, Kd.M)(md.decoderConfig);
-        const Xd = {
-          ...md.decoderConfig
+      getAudioTrackData(bb, wb, Mb) {
+        const pb = this.trackDatas.find((wb => wb.track === bb));
+        if (pb) return pb;
+        (0, Hb.P)(Mb, bb.source._codec), (0, gb.L)(Mb), (0, gb.L)(Mb.decoderConfig);
+        const Vb = {
+          ...Mb.decoderConfig
         };
-        let vd = !1;
-        if ("aac" === dd.source._codec && !Xd.description) {
-          if (!Od) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
-          const dd = om(hd.tempFromBytes(Od.data));
-          if (!dd) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
-          const md = Wd.g[dd.samplingFrequencyIndex],
-            Fd = Wd.c[dd.channelConfiguration];
-          if (void 0 === md || void 0 === Fd) throw new Error("Invalid ADTS frame header.");
-          Xd.description = (0, Wd.k)({
-            objectType: dd.objectType,
-            outputSampleRate: md,
-            outputNumberOfChannels: Fd
-          }), vd = !0
+        let Lb = !1;
+        if ("aac" === bb.source._codec && !Vb.description) {
+          if (!wb) throw new Error("No AAC description provided; you must therefore provide a priming packet.");
+          const bb = IM(lb.tempFromBytes(wb.data));
+          if (!bb) throw new Error("Couldn't parse ADTS header from the AAC packet. Make sure the packets are in ADTS format (as specified in ISO 13818-7) when not providing a description, or provide a description (must be an AudioSpecificConfig as specified in ISO 14496-3) and ensure the packets are raw AAC data.");
+          const Mb = eb.g[bb.samplingFrequencyIndex],
+            Hb = eb.e[bb.channelConfiguration];
+          if (void 0 === Mb || void 0 === Hb) throw new Error("Invalid ADTS frame header.");
+          Vb.description = (0, eb.h)({
+            objectType: bb.objectType,
+            outputSampleRate: Mb,
+            outputNumberOfChannels: Hb
+          }), Lb = !0
         }
-        const Qd = {
-          track: dd,
+        const Ib = {
+          track: bb,
           type: "audio",
           info: {
-            numberOfChannels: md.decoderConfig.numberOfChannels,
-            sampleRate: md.decoderConfig.sampleRate,
-            decoderConfig: Xd,
-            requiresAdtsStripping: vd
+            numberOfChannels: Mb.decoderConfig.numberOfChannels,
+            sampleRate: Mb.decoderConfig.sampleRate,
+            decoderConfig: Vb,
+            requiresAdtsStripping: Lb
           },
           chunkQueue: [],
           lastWrittenMsTimestamp: null,
-          codecPrivate: Xd.description ?? null,
+          codecPrivate: Vb.description ?? null,
           closed: !1
         };
-        return this.trackDatas.push(Qd), this.trackDatas.sort(((dd, Od) => dd.track.id - Od.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), Qd
+        return this.trackDatas.push(Ib), this.trackDatas.sort(((bb, wb) => bb.track.id - wb.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), Ib
       }
-      getSubtitleTrackData(dd, Od) {
-        const md = this.trackDatas.find((Od => Od.track === dd));
-        if (md) return md;
-        (0, Fd.V)(Od), (0, Kd.M)(Od), (0, Kd.M)(Od.config);
-        const Wd = {
-          track: dd,
+      getSubtitleTrackData(bb, wb) {
+        const Mb = this.trackDatas.find((wb => wb.track === bb));
+        if (Mb) return Mb;
+        (0, Hb.R)(wb), (0, gb.L)(wb), (0, gb.L)(wb.config);
+        const eb = {
+          track: bb,
           type: "subtitle",
           info: {
-            config: Od.config
+            config: wb.config
           },
           chunkQueue: [],
           lastWrittenMsTimestamp: null,
-          codecPrivate: Kd.od.encode(Od.config.description),
+          codecPrivate: gb.id.encode(wb.config.description),
           closed: !1
         };
-        return this.trackDatas.push(Wd), this.trackDatas.sort(((dd, Od) => dd.track.id - Od.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), Wd
+        return this.trackDatas.push(eb), this.trackDatas.sort(((bb, wb) => bb.track.id - wb.track.id)), this.allTracksAreKnown() && this.allTracksKnown.resolve(), eb
       }
-      async addEncodedVideoPacket(dd, Od, md) {
-        const Wd = await this.mutex.acquire();
+      async addEncodedVideoPacket(bb, wb, Mb) {
+        const eb = await this.mutex.acquire();
         try {
-          const Wd = this.getVideoTrackData(dd, Od, md);
-          Wd.info.alphaMode ??= !!Od.sideData.alpha;
-          let Fd = Od.data;
-          if ("prores" === dd.source._codec) {
-            if (Fd.byteLength < 8) throw new Error("ProRes packet too small, expected at least 8 bytes.");
-            Fd = Fd.subarray(8)
+          const eb = this.getVideoTrackData(bb, wb, Mb);
+          eb.info.alphaMode ??= !!wb.sideData.alpha;
+          let Hb = wb.data;
+          if ("prores" === bb.source._codec) {
+            if (Hb.byteLength < 8) throw new Error("ProRes packet too small, expected at least 8 bytes.");
+            Hb = Hb.subarray(8)
           }
-          const Rd = "key" === Od.type;
-          this.validateTimestamp(Wd.track, Od.timestamp, Rd);
-          let Xd = Od.timestamp,
-            hd = Od.duration;
-          void 0 !== dd.metadata.frameRate && (Xd = (0, Kd.Pc)(Xd, dd.metadata.frameRate), hd = (0, Kd.Pc)(hd, dd.metadata.frameRate));
-          const vd = Wd.info.alphaMode ? Od.sideData.alpha ?? null : null,
-            Qd = this.createInternalChunk(Fd, Xd, hd, Od.type, vd);
-          "vp9" === dd.source._codec && this.fixVP9ColorSpace(Wd, Qd), Wd.chunkQueue.push(Qd), await this.interleaveChunks()
+          const pb = "key" === wb.type;
+          this.validateTimestamp(eb.track, wb.timestamp, pb);
+          let Vb = wb.timestamp,
+            lb = wb.duration;
+          void 0 !== bb.metadata.frameRate && (Vb = (0, gb.Mc)(Vb, bb.metadata.frameRate), lb = (0, gb.Mc)(lb, bb.metadata.frameRate));
+          const Lb = eb.info.alphaMode ? wb.sideData.alpha ?? null : null,
+            Ib = this.createInternalChunk(Hb, Vb, lb, wb.type, Lb);
+          "vp9" === bb.source._codec && this.fixVP9ColorSpace(eb, Ib), eb.chunkQueue.push(Ib), await this.interleaveChunks()
         } finally {
-          Wd()
+          eb()
         }
       }
-      async addEncodedAudioPacket(dd, Od, md) {
-        const Wd = await this.mutex.acquire();
+      async addEncodedAudioPacket(bb, wb, Mb) {
+        const eb = await this.mutex.acquire();
         try {
-          const Wd = this.getAudioTrackData(dd, Od, md);
-          let Fd = Od.data;
-          if (Wd.info.requiresAdtsStripping) {
-            const dd = om(hd.tempFromBytes(Fd));
-            if (!dd) throw new Error("Expected ADTS frame, didn't get one.");
-            const Od = null === dd.crcCheck ? 7 : 9;
-            Fd = Fd.subarray(Od)
+          const eb = this.getAudioTrackData(bb, wb, Mb);
+          let Hb = wb.data;
+          if (eb.info.requiresAdtsStripping) {
+            const bb = IM(lb.tempFromBytes(Hb));
+            if (!bb) throw new Error("Expected ADTS frame, didn't get one.");
+            const wb = null === bb.crcCheck ? 7 : 9;
+            Hb = Hb.subarray(wb)
           }
-          const Rd = "key" === Od.type;
-          this.validateTimestamp(Wd.track, Od.timestamp, Rd);
-          const Xd = this.createInternalChunk(Fd, Od.timestamp, Od.duration, Od.type);
-          Wd.chunkQueue.push(Xd), await this.interleaveChunks()
+          const pb = "key" === wb.type;
+          this.validateTimestamp(eb.track, wb.timestamp, pb);
+          const Vb = this.createInternalChunk(Hb, wb.timestamp, wb.duration, wb.type);
+          eb.chunkQueue.push(Vb), await this.interleaveChunks()
         } finally {
-          Wd()
+          eb()
         }
       }
-      async addSubtitleCue(dd, Od, md) {
-        const Wd = await this.mutex.acquire();
+      async addSubtitleCue(bb, wb, Mb) {
+        const eb = await this.mutex.acquire();
         try {
-          const Wd = this.getSubtitleTrackData(dd, md);
-          this.validateTimestamp(Wd.track, Od.timestamp, !0);
-          let Fd = Od.text;
-          const Rd = Math.round(1e3 * Od.timestamp);
-          bd.h.lastIndex = 0, Fd = Fd.replace(bd.h, (dd => {
-            const Od = (0, bd.k)(dd.slice(1, -1)) - Rd;
-            return `<${(0,bd.e)(Od)}>`
+          const eb = this.getSubtitleTrackData(bb, Mb);
+          this.validateTimestamp(eb.track, wb.timestamp, !0);
+          let Hb = wb.text;
+          const pb = Math.round(1e3 * wb.timestamp);
+          Bb.i.lastIndex = 0, Hb = Hb.replace(Bb.i, (bb => {
+            const wb = (0, Bb.l)(bb.slice(1, -1)) - pb;
+            return `<${(0,Bb.h)(wb)}>`
           }));
-          const Xd = Kd.od.encode(Fd),
-            hd = `${Od.settings??""}\n${Od.identifier??""}\n${Od.notes??""}`,
-            vd = this.createInternalChunk(Xd, Od.timestamp, Od.duration, "key", hd.trim() ? Kd.od.encode(hd) : null);
-          Wd.chunkQueue.push(vd), await this.interleaveChunks()
+          const Vb = gb.id.encode(Hb),
+            lb = `${wb.settings??""}\n${wb.identifier??""}\n${wb.notes??""}`,
+            Lb = this.createInternalChunk(Vb, wb.timestamp, wb.duration, "key", lb.trim() ? gb.id.encode(lb) : null);
+          eb.chunkQueue.push(Lb), await this.interleaveChunks()
         } finally {
-          Wd()
+          eb()
         }
       }
       async interleaveChunks() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (dd || this.allTracksAreKnown()) {
-          dd: for (;;) {
-            let Od = null,
-              md = 1 / 0;
-            for (const Fd of this.trackDatas) {
-              if (!dd && 0 === Fd.chunkQueue.length && !Fd.closed) break dd;
-              Fd.chunkQueue.length > 0 && Fd.chunkQueue[0].timestamp < md && (Od = Fd, md = Fd.chunkQueue[0].timestamp)
+        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (bb || this.allTracksAreKnown()) {
+          bb: for (;;) {
+            let wb = null,
+              Mb = 1 / 0;
+            for (const Hb of this.trackDatas) {
+              if (!bb && 0 === Hb.chunkQueue.length && !Hb.closed) break bb;
+              Hb.chunkQueue.length > 0 && Hb.chunkQueue[0].timestamp < Mb && (wb = Hb, Mb = Hb.chunkQueue[0].timestamp)
             }
-            if (!Od) break;
-            const Wd = Od.chunkQueue.shift();
-            this.writeBlock(Od, Wd)
+            if (!wb) break;
+            const eb = wb.chunkQueue.shift();
+            this.writeBlock(wb, eb)
           }
-          dd || await this.writer.flush()
+          bb || await this.writer.flush()
         }
       }
-      fixVP9ColorSpace(dd, Od) {
-        if ("key" !== Od.type) return;
-        if (!dd.info.decoderConfig.colorSpace || !dd.info.decoderConfig.colorSpace.matrix) return;
-        const md = new yd.c(Od.data);
-        md.skipBits(2);
-        const Wd = md.readBits(1),
-          Fd = (md.readBits(1) << 1) + Wd;
-        3 === Fd && md.skipBits(1);
-        if (md.readBits(1)) return;
-        if (0 !== md.readBits(1)) return;
-        md.skipBits(2);
-        if (4817730 !== md.readBits(24)) return;
-        Fd >= 2 && md.skipBits(1);
-        const Rd = {
+      fixVP9ColorSpace(bb, wb) {
+        if ("key" !== wb.type) return;
+        if (!bb.info.decoderConfig.colorSpace || !bb.info.decoderConfig.colorSpace.matrix) return;
+        const Mb = new Fb.e(wb.data);
+        Mb.skipBits(2);
+        const eb = Mb.readBits(1),
+          Hb = (Mb.readBits(1) << 1) + eb;
+        3 === Hb && Mb.skipBits(1);
+        if (Mb.readBits(1)) return;
+        if (0 !== Mb.readBits(1)) return;
+        Mb.skipBits(2);
+        if (4817730 !== Mb.readBits(24)) return;
+        Hb >= 2 && Mb.skipBits(1);
+        const pb = {
           rgb: 7,
           bt709: 2,
           bt470bg: 1,
           smpte170m: 3
-        } [dd.info.decoderConfig.colorSpace.matrix];
-        (0, Kd.Ed)(Od.data, md.pos, md.pos + 3, Rd)
+        } [bb.info.decoderConfig.colorSpace.matrix];
+        (0, gb.zd)(wb.data, Mb.pos, Mb.pos + 3, pb)
       }
-      createInternalChunk(dd, Od, md, Wd) {
+      createInternalChunk(bb, wb, Mb, eb) {
         return {
-          data: dd,
-          type: Wd,
-          timestamp: Od,
-          duration: md,
+          data: bb,
+          type: eb,
+          timestamp: wb,
+          duration: Mb,
           additions: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
         }
       }
-      writeBlock(dd, Od) {
+      writeBlock(bb, wb) {
         this.segment || this.createSegment();
-        const md = Math.round(1e3 * Od.timestamp),
-          Wd = this.trackDatas.every((md => {
-            if (dd === md) return "key" === Od.type;
-            const Wd = md.chunkQueue[0];
-            return Wd ? "key" === Wd.type : md.closed
+        const Mb = Math.round(1e3 * wb.timestamp),
+          eb = this.trackDatas.every((Mb => {
+            if (bb === Mb) return "key" === wb.type;
+            const eb = Mb.chunkQueue[0];
+            return eb ? "key" === eb.type : Mb.closed
           }));
-        let Fd = !1;
+        let Hb = !1;
         if (this.currentCluster) {
-          (0, Kd.M)(null !== this.currentClusterStartMsTimestamp), (0, Kd.M)(null !== this.currentClusterMaxMsTimestamp);
-          const dd = md - this.currentClusterStartMsTimestamp;
-          Fd = Wd && md > this.currentClusterMaxMsTimestamp && dd >= 1e3 * (this.format._options.minimumClusterDuration ?? 1) || dd > 32767
-        } else Fd = !0;
-        Fd && this.createNewCluster(md);
-        const Rd = md - this.currentClusterStartMsTimestamp;
-        if (Rd < -32768) {
+          (0, gb.L)(null !== this.currentClusterStartMsTimestamp), (0, gb.L)(null !== this.currentClusterMaxMsTimestamp);
+          const bb = Mb - this.currentClusterStartMsTimestamp;
+          Hb = eb && Mb > this.currentClusterMaxMsTimestamp && bb >= 1e3 * (this.format._options.minimumClusterDuration ?? 1) || bb > 32767
+        } else Hb = !0;
+        Hb && this.createNewCluster(Mb);
+        const pb = Mb - this.currentClusterStartMsTimestamp;
+        if (pb < -32768) {
           if (!this.warnedAboutTooNegativeTimestamp) {
-            const dd = this.format instanceof cm ? "WebM" : "Matroska";
-            Xd.e._warn(`Packets had to be discarded because their timestamp is too negative to represent in ${dd}.`), this.warnedAboutTooNegativeTimestamp = !0
+            const bb = this.format instanceof QM ? "WebM" : "Matroska";
+            Vb.e._warn(`Packets had to be discarded because their timestamp is too negative to represent in ${bb}.`), this.warnedAboutTooNegativeTimestamp = !0
           }
           return
         }
-        const hd = new Uint8Array(4),
-          vd = new DataView(hd.buffer);
-        vd.setUint8(0, 128 | dd.track.id), vd.setInt16(1, Rd, !1);
-        const Qd = Math.round(1e3 * Od.duration);
-        if (!!Od.additions || "subtitle" === dd.type) {
-          const Wd = {
-            id: wm.BlockGroup,
+        const lb = new Uint8Array(4),
+          Lb = new DataView(lb.buffer);
+        Lb.setUint8(0, 128 | bb.track.id), Lb.setInt16(1, pb, !1);
+        const Ib = Math.round(1e3 * wb.duration);
+        if (!!wb.additions || "subtitle" === bb.type) {
+          const eb = {
+            id: hM.BlockGroup,
             data: [{
-              id: wm.Block,
-              data: [hd, Od.data]
-            }, "delta" === Od.type ? {
-              id: wm.ReferenceBlock,
-              data: new Ym(dd.lastWrittenMsTimestamp - md)
-            } : null, Od.additions ? {
-              id: wm.BlockAdditions,
+              id: hM.Block,
+              data: [lb, wb.data]
+            }, "delta" === wb.type ? {
+              id: hM.ReferenceBlock,
+              data: new sM(bb.lastWrittenMsTimestamp - Mb)
+            } : null, wb.additions ? {
+              id: hM.BlockAdditions,
               data: [{
-                id: wm.BlockMore,
+                id: hM.BlockMore,
                 data: [{
-                  id: wm.BlockAddID,
+                  id: hM.BlockAddID,
                   data: 1
                 }, {
-                  id: wm.BlockAdditional,
-                  data: Od.additions
+                  id: hM.BlockAdditional,
+                  data: wb.additions
                 }]
               }]
-            } : null, Qd > 0 ? {
-              id: wm.BlockDuration,
-              data: Qd
+            } : null, Ib > 0 ? {
+              id: hM.BlockDuration,
+              data: Ib
             } : null]
           };
-          this.ebmlWriter.writeEBML(Wd)
+          this.ebmlWriter.writeEBML(eb)
         } else {
-          vd.setUint8(3, Number("key" === Od.type) << 7);
-          const dd = {
-            id: wm.SimpleBlock,
-            data: [hd, Od.data]
+          Lb.setUint8(3, Number("key" === wb.type) << 7);
+          const bb = {
+            id: hM.SimpleBlock,
+            data: [lb, wb.data]
           };
-          this.ebmlWriter.writeEBML(dd)
+          this.ebmlWriter.writeEBML(bb)
         }
-        this.startTimestamp = Math.min(this.startTimestamp, md), this.endTimestamp = Math.max(this.endTimestamp, md + Qd), dd.lastWrittenMsTimestamp = md, this.trackDatasInCurrentCluster.has(dd) || this.trackDatasInCurrentCluster.set(dd, {
-          firstMsTimestamp: md
-        }), this.currentClusterMaxMsTimestamp = Math.max(this.currentClusterMaxMsTimestamp, md)
+        this.startTimestamp = Math.min(this.startTimestamp, Mb), this.endTimestamp = Math.max(this.endTimestamp, Mb + Ib), bb.lastWrittenMsTimestamp = Mb, this.trackDatasInCurrentCluster.has(bb) || this.trackDatasInCurrentCluster.set(bb, {
+          firstMsTimestamp: Mb
+        }), this.currentClusterMaxMsTimestamp = Math.max(this.currentClusterMaxMsTimestamp, Mb)
       }
-      createNewCluster(dd) {
-        dd = Math.max(0, dd), this.currentCluster && this.finalizeCurrentCluster(), this.format._options.onCluster && this.writer.startTrackingWrites(), this.currentCluster = {
-          id: wm.Cluster,
+      createNewCluster(bb) {
+        bb = Math.max(0, bb), this.currentCluster && this.finalizeCurrentCluster(), this.format._options.onCluster && this.writer.startTrackingWrites(), this.currentCluster = {
+          id: hM.Cluster,
           size: this.format._options.appendOnly ? -1 : 5,
           data: [{
-            id: wm.Timestamp,
-            data: dd
+            id: hM.Timestamp,
+            data: bb
           }]
-        }, this.ebmlWriter.writeEBML(this.currentCluster), this.currentClusterStartMsTimestamp = dd, this.currentClusterMaxMsTimestamp = dd, this.trackDatasInCurrentCluster.clear()
+        }, this.ebmlWriter.writeEBML(this.currentCluster), this.currentClusterStartMsTimestamp = bb, this.currentClusterMaxMsTimestamp = bb, this.trackDatasInCurrentCluster.clear()
       }
       finalizeCurrentCluster() {
-        if ((0, Kd.M)(this.currentCluster), !this.format._options.appendOnly) {
-          const dd = this.writer.getPos() - this.ebmlWriter.dataOffsets.get(this.currentCluster),
-            Od = this.writer.getPos();
-          this.writer.seek(this.ebmlWriter.offsets.get(this.currentCluster) + 4), this.ebmlWriter.writeVarInt(dd, 5), this.writer.seek(Od)
+        if ((0, gb.L)(this.currentCluster), !this.format._options.appendOnly) {
+          const bb = this.writer.getPos() - this.ebmlWriter.dataOffsets.get(this.currentCluster),
+            wb = this.writer.getPos();
+          this.writer.seek(this.ebmlWriter.offsets.get(this.currentCluster) + 4), this.ebmlWriter.writeVarInt(bb, 5), this.writer.seek(wb)
         }
         if (this.format._options.onCluster) {
-          (0, Kd.M)(null !== this.currentClusterStartMsTimestamp);
+          (0, gb.L)(null !== this.currentClusterStartMsTimestamp);
           const {
-            data: dd,
-            start: Od
+            data: bb,
+            start: wb
           } = this.writer.stopTrackingWrites();
-          this.format._options.onCluster(dd, Od, this.currentClusterStartMsTimestamp / 1e3)
+          this.format._options.onCluster(bb, wb, this.currentClusterStartMsTimestamp / 1e3)
         }
-        const dd = this.ebmlWriter.offsets.get(this.currentCluster) - this.segmentDataOffset,
-          Od = new Map;
-        for (const [Wd, {
-            firstMsTimestamp: Fd
-          }] of this.trackDatasInCurrentCluster) Od.has(Fd) || Od.set(Fd, []), Od.get(Fd).push(Wd);
-        const md = [...Od.entries()].sort(((dd, Od) => dd[0] - Od[0]));
-        for (const [Wd, Fd] of md)(0, Kd.M)(this.cues), this.cues.data.push({
-          id: wm.CuePoint,
+        const bb = this.ebmlWriter.offsets.get(this.currentCluster) - this.segmentDataOffset,
+          wb = new Map;
+        for (const [eb, {
+            firstMsTimestamp: Hb
+          }] of this.trackDatasInCurrentCluster) wb.has(Hb) || wb.set(Hb, []), wb.get(Hb).push(eb);
+        const Mb = [...wb.entries()].sort(((bb, wb) => bb[0] - wb[0]));
+        for (const [eb, Hb] of Mb)(0, gb.L)(this.cues), this.cues.data.push({
+          id: hM.CuePoint,
           data: [{
-            id: wm.CueTime,
-            data: Math.max(0, Wd)
-          }, ...Fd.map((Od => ({
-            id: wm.CueTrackPositions,
+            id: hM.CueTime,
+            data: Math.max(0, eb)
+          }, ...Hb.map((wb => ({
+            id: hM.CueTrackPositions,
             data: [{
-              id: wm.CueTrack,
-              data: Od.track.id
+              id: hM.CueTrack,
+              data: wb.track.id
             }, {
-              id: wm.CueClusterPosition,
-              data: dd
+              id: hM.CueClusterPosition,
+              data: bb
             }]
           })))]
         })
       }
-      async onTrackClose(dd) {
-        const Od = await this.mutex.acquire(),
-          md = this.trackDatas.find((Od => Od.track === dd));
-        md && (md.closed = !0), this.allTracksAreKnown() && this.allTracksKnown.resolve(), await this.interleaveChunks(), Od()
+      async onTrackClose(bb) {
+        const wb = await this.mutex.acquire(),
+          Mb = this.trackDatas.find((wb => wb.track === bb));
+        Mb && (Mb.closed = !0), this.allTracksAreKnown() && this.allTracksKnown.resolve(), await this.interleaveChunks(), wb()
       }
       async finalize() {
-        const dd = await this.mutex.acquire();
+        const bb = await this.mutex.acquire();
         this.allTracksKnown.resolve();
-        for (const Od of this.trackDatas) Od.closed = !0;
-        if (this.segment || this.createSegment(), await this.interleaveChunks(!0), this.currentCluster && this.finalizeCurrentCluster(), (0, Kd.M)(this.cues), this.ebmlWriter.writeEBML(this.cues), !this.format._options.appendOnly) {
-          const dd = this.writer.getPos() - this.segmentDataOffset;
-          this.writer.seek(this.ebmlWriter.offsets.get(this.segment) + 4), this.ebmlWriter.writeVarInt(dd, 6);
-          const Od = this.startTimestamp === 1 / 0 ? 0 : this.endTimestamp;
-          this.segmentDuration.data = new pm(Od), this.writer.seek(this.ebmlWriter.offsets.get(this.segmentDuration)), this.ebmlWriter.writeEBML(this.segmentDuration), (0, Kd.M)(this.seekHead), this.writer.seek(this.ebmlWriter.offsets.get(this.seekHead)), this.maybeCreateSeekHead(!0), this.ebmlWriter.writeEBML(this.seekHead)
+        for (const wb of this.trackDatas) wb.closed = !0;
+        if (this.segment || this.createSegment(), await this.interleaveChunks(!0), this.currentCluster && this.finalizeCurrentCluster(), (0, gb.L)(this.cues), this.ebmlWriter.writeEBML(this.cues), !this.format._options.appendOnly) {
+          const bb = this.writer.getPos() - this.segmentDataOffset;
+          this.writer.seek(this.ebmlWriter.offsets.get(this.segment) + 4), this.ebmlWriter.writeVarInt(bb, 6);
+          const wb = this.startTimestamp === 1 / 0 ? 0 : this.endTimestamp;
+          this.segmentDuration.data = new BM(wb), this.writer.seek(this.ebmlWriter.offsets.get(this.segmentDuration)), this.ebmlWriter.writeEBML(this.segmentDuration), (0, gb.L)(this.seekHead), this.writer.seek(this.ebmlWriter.offsets.get(this.seekHead)), this.maybeCreateSeekHead(!0), this.ebmlWriter.writeEBML(this.seekHead)
         }
-        dd()
+        bb()
       }
     }
-    const sm = new Uint32Array(256);
-    for (let jm = 0; jm < 256; jm++) {
-      let dd = jm << 24;
-      for (let Od = 0; Od < 8; Od++) dd = 2147483648 & dd ? dd << 1 ^ 79764919 : dd << 1;
-      sm[jm] = dd >>> 0 & 4294967295
+    const DM = new Uint32Array(256);
+    for (let GM = 0; GM < 256; GM++) {
+      let bb = GM << 24;
+      for (let wb = 0; wb < 8; wb++) bb = 2147483648 & bb ? bb << 1 ^ 79764919 : bb << 1;
+      DM[GM] = bb >>> 0 & 4294967295
     }
     new Uint8Array([9, 240]), new Uint8Array([70, 1]);
-    const um = new Uint32Array(256);
-    for (let jm = 0; jm < 256; jm++) {
-      let dd = jm << 24;
-      for (let Od = 0; Od < 8; Od++) dd = 2147483648 & dd ? dd << 1 ^ 79764919 : dd << 1;
-      um[jm] = dd >>> 0 & 4294967295
+    const cM = new Uint32Array(256);
+    for (let GM = 0; GM < 256; GM++) {
+      let bb = GM << 24;
+      for (let wb = 0; wb < 8; wb++) bb = 2147483648 & bb ? bb << 1 ^ 79764919 : bb << 1;
+      cM[GM] = bb >>> 0 & 4294967295
     }
-    const Vm = dd => {
-        let Od = 4294967295;
-        for (let md = 0; md < dd.length; md++) {
-          const Wd = dd[md];
-          Od = (Od << 8 ^ um[Od >>> 24 ^ Wd]) >>> 0
+    const YM = bb => {
+        let wb = 4294967295;
+        for (let Mb = 0; Mb < bb.length; Mb++) {
+          const eb = bb[Mb];
+          wb = (wb << 8 ^ cM[wb >>> 24 ^ eb]) >>> 0
         }
-        return Od
+        return wb
       },
-      im = new Uint8Array(16);
+      ZM = new Uint8Array(16);
     {
-      const dd = (0, Kd.sd)(im);
-      im[0] = 0, dd.setUint16(1, 45069, !1), dd.setUint16(3, 1, !1), im[5] = 193, im[6] = 0, im[7] = 0, dd.setUint16(8, 1, !1), dd.setUint16(10, 61440, !1), dd.setUint32(12, Vm(im.subarray(0, 12)), !1)
+      const bb = (0, gb.kd)(ZM);
+      ZM[0] = 0, bb.setUint16(1, 45069, !1), bb.setUint16(3, 1, !1), ZM[5] = 193, ZM[6] = 0, ZM[7] = 0, bb.setUint16(8, 1, !1), bb.setUint16(10, 61440, !1), bb.setUint32(12, YM(ZM.subarray(0, 12)), !1)
     }
-    var Am;
-    md(41555);
-    ! function(dd) {
-      dd[dd.PCM = 1] = "PCM", dd[dd.IEEE_FLOAT = 3] = "IEEE_FLOAT", dd[dd.ALAW = 6] = "ALAW", dd[dd.MULAW = 7] = "MULAW", dd[dd.EXTENSIBLE = 65534] = "EXTENSIBLE"
-    }(Am || (Am = {}));
-    md(41559), md(41569), md(41483);
-    class rm {
+    var fM;
+    Mb(41327);
+    ! function(bb) {
+      bb[bb.PCM = 1] = "PCM", bb[bb.IEEE_FLOAT = 3] = "IEEE_FLOAT", bb[bb.ALAW = 6] = "ALAW", bb[bb.MULAW = 7] = "MULAW", bb[bb.EXTENSIBLE = 65534] = "EXTENSIBLE"
+    }(fM || (fM = {}));
+    Mb(41334), Mb(41348), Mb(41237);
+    class AM {
       get supportsVideoRotationMetadata() {
         return this.supportsVideoTransformationMetadata
       }
       getSupportedVideoCodecs() {
-        return this.getSupportedCodecs().filter((dd => Fd.q.includes(dd)))
+        return this.getSupportedCodecs().filter((bb => Hb.o.includes(bb)))
       }
       getSupportedAudioCodecs() {
-        return this.getSupportedCodecs().filter((dd => Fd.b.includes(dd)))
+        return this.getSupportedCodecs().filter((bb => Hb.b.includes(bb)))
       }
       getSupportedSubtitleCodecs() {
-        return this.getSupportedCodecs().filter((dd => Fd.p.includes(dd)))
+        return this.getSupportedCodecs().filter((bb => Hb.n.includes(bb)))
       }
-      _codecUnsupportedHint(dd) {
+      _codecUnsupportedHint(bb) {
         return ""
       }
       _isFragmentedIsobmff() {
         return !1
       }
     }
-    class Gm extends rm {
+    class WM extends AM {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (!dd || "object" !== typeof dd) throw new TypeError("options must be an object.");
-        if (void 0 !== dd.fastStart && ![!1, "in-memory", "reserve", "fragmented"].includes(dd.fastStart)) throw new TypeError("options.fastStart, when provided, must be false, 'in-memory', 'reserve', or 'fragmented'.");
-        if (void 0 !== dd.minimumFragmentDuration && (!(0, Kd.Tb)(dd.minimumFragmentDuration) || dd.minimumFragmentDuration < 0)) throw new TypeError("options.minimumFragmentDuration, when provided, must be a non-negative number.");
-        if (void 0 !== dd.onFtyp && "function" !== typeof dd.onFtyp) throw new TypeError("options.onFtyp, when provided, must be a function.");
-        if (void 0 !== dd.onMoov && "function" !== typeof dd.onMoov) throw new TypeError("options.onMoov, when provided, must be a function.");
-        if (void 0 !== dd.onMdat && "function" !== typeof dd.onMdat) throw new TypeError("options.onMdat, when provided, must be a function.");
-        if (void 0 !== dd.onMoof && "function" !== typeof dd.onMoof) throw new TypeError("options.onMoof, when provided, must be a function.");
-        if (void 0 !== dd.metadataFormat && !["mdir", "mdta", "udta", "auto"].includes(dd.metadataFormat)) throw new TypeError("options.metadataFormat, when provided, must be either 'auto', 'mdir', 'mdta', or 'udta'.");
-        super(), this._options = dd
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (!bb || "object" !== typeof bb) throw new TypeError("options must be an object.");
+        if (void 0 !== bb.fastStart && ![!1, "in-memory", "reserve", "fragmented"].includes(bb.fastStart)) throw new TypeError("options.fastStart, when provided, must be false, 'in-memory', 'reserve', or 'fragmented'.");
+        if (void 0 !== bb.minimumFragmentDuration && (!(0, gb.Ob)(bb.minimumFragmentDuration) || bb.minimumFragmentDuration < 0)) throw new TypeError("options.minimumFragmentDuration, when provided, must be a non-negative number.");
+        if (void 0 !== bb.onFtyp && "function" !== typeof bb.onFtyp) throw new TypeError("options.onFtyp, when provided, must be a function.");
+        if (void 0 !== bb.onMoov && "function" !== typeof bb.onMoov) throw new TypeError("options.onMoov, when provided, must be a function.");
+        if (void 0 !== bb.onMdat && "function" !== typeof bb.onMdat) throw new TypeError("options.onMdat, when provided, must be a function.");
+        if (void 0 !== bb.onMoof && "function" !== typeof bb.onMoof) throw new TypeError("options.onMoof, when provided, must be a function.");
+        if (void 0 !== bb.metadataFormat && !["mdir", "mdta", "udta", "auto"].includes(bb.metadataFormat)) throw new TypeError("options.metadataFormat, when provided, must be either 'auto', 'mdir', 'mdta', or 'udta'.");
+        super(), this._options = bb
       }
       getSupportedTrackCounts() {
-        const dd = 2 ** 32 - 1;
+        const bb = 2 ** 32 - 1;
         return {
           video: {
             min: 0,
-            max: dd
+            max: bb
           },
           audio: {
             min: 0,
-            max: dd
+            max: bb
           },
           subtitle: {
             min: 0,
-            max: dd
+            max: bb
           },
           total: {
             min: 0,
-            max: dd
+            max: bb
           }
         }
       }
@@ -6183,16 +6183,16 @@ export const modules = {
       get negativeTimestampSupport() {
         return "full"
       }
-      _createMuxer(dd) {
-        return new bm(dd, this)
+      _createMuxer(bb) {
+        return new EM(bb, this)
       }
       _isFragmentedIsobmff() {
         return "fragmented" === this._options.fastStart
       }
     }
-    class nm extends Gm {
-      constructor(dd) {
-        super(dd)
+    class JM extends WM {
+      constructor(bb) {
+        super(bb)
       }
       get _name() {
         return "MP4"
@@ -6204,15 +6204,15 @@ export const modules = {
         return "video/mp4"
       }
       getSupportedCodecs() {
-        return [...Fd.q, ...Fd.j, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...Fd.p]
+        return [...Hb.o, ...Hb.h, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...Hb.n]
       }
-      _codecUnsupportedHint(dd) {
-        return (new Pm).getSupportedCodecs().includes(dd) ? " Switching to MOV will grant support for this codec." : ""
+      _codecUnsupportedHint(bb) {
+        return (new NM).getSupportedCodecs().includes(bb) ? " Switching to MOV will grant support for this codec." : ""
       }
     }
-    class Lm extends Gm {
-      constructor(dd) {
-        super(dd)
+    class SM extends WM {
+      constructor(bb) {
+        super(bb)
       }
       get _name() {
         return "CMAF"
@@ -6224,12 +6224,12 @@ export const modules = {
         return "video/mp4"
       }
       getSupportedCodecs() {
-        return [...Fd.q, ...Fd.j, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...Fd.p]
+        return [...Hb.o, ...Hb.h, "pcm-s16", "pcm-s16be", "pcm-s24", "pcm-s24be", "pcm-s32", "pcm-s32be", "pcm-f32", "pcm-f32be", "pcm-f64", "pcm-f64be", ...Hb.n]
       }
     }
-    class Pm extends Gm {
-      constructor(dd) {
-        super(dd)
+    class NM extends WM {
+      constructor(bb) {
+        super(bb)
       }
       get _name() {
         return "MOV"
@@ -6241,47 +6241,47 @@ export const modules = {
         return "video/quicktime"
       }
       getSupportedCodecs() {
-        return [...Fd.q, ...Fd.b]
+        return [...Hb.o, ...Hb.b]
       }
-      _codecUnsupportedHint(dd) {
-        return (new nm).getSupportedCodecs().includes(dd) ? " Switching to MP4 will grant support for this codec." : ""
+      _codecUnsupportedHint(bb) {
+        return (new JM).getSupportedCodecs().includes(bb) ? " Switching to MP4 will grant support for this codec." : ""
       }
     }
-    class zm extends rm {
+    class vM extends AM {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (!dd || "object" !== typeof dd) throw new TypeError("options must be an object.");
-        if (void 0 !== dd.appendOnly && "boolean" !== typeof dd.appendOnly) throw new TypeError("options.appendOnly, when provided, must be a boolean.");
-        if (void 0 !== dd.minimumClusterDuration && (!(0, Kd.Tb)(dd.minimumClusterDuration) || dd.minimumClusterDuration < 0)) throw new TypeError("options.minimumClusterDuration, when provided, must be a non-negative number.");
-        if (void 0 !== dd.onEbmlHeader && "function" !== typeof dd.onEbmlHeader) throw new TypeError("options.onEbmlHeader, when provided, must be a function.");
-        if (void 0 !== dd.onSegmentHeader && "function" !== typeof dd.onSegmentHeader) throw new TypeError("options.onHeader, when provided, must be a function.");
-        if (void 0 !== dd.onCluster && "function" !== typeof dd.onCluster) throw new TypeError("options.onCluster, when provided, must be a function.");
-        super(), this._options = dd
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (!bb || "object" !== typeof bb) throw new TypeError("options must be an object.");
+        if (void 0 !== bb.appendOnly && "boolean" !== typeof bb.appendOnly) throw new TypeError("options.appendOnly, when provided, must be a boolean.");
+        if (void 0 !== bb.minimumClusterDuration && (!(0, gb.Ob)(bb.minimumClusterDuration) || bb.minimumClusterDuration < 0)) throw new TypeError("options.minimumClusterDuration, when provided, must be a non-negative number.");
+        if (void 0 !== bb.onEbmlHeader && "function" !== typeof bb.onEbmlHeader) throw new TypeError("options.onEbmlHeader, when provided, must be a function.");
+        if (void 0 !== bb.onSegmentHeader && "function" !== typeof bb.onSegmentHeader) throw new TypeError("options.onHeader, when provided, must be a function.");
+        if (void 0 !== bb.onCluster && "function" !== typeof bb.onCluster) throw new TypeError("options.onCluster, when provided, must be a function.");
+        super(), this._options = bb
       }
-      _createMuxer(dd) {
-        return new Sm(dd, this)
+      _createMuxer(bb) {
+        return new RM(bb, this)
       }
       get _name() {
         return "Matroska"
       }
       getSupportedTrackCounts() {
-        const dd = 127;
+        const bb = 127;
         return {
           video: {
             min: 0,
-            max: dd
+            max: bb
           },
           audio: {
             min: 0,
-            max: dd
+            max: bb
           },
           subtitle: {
             min: 0,
-            max: dd
+            max: bb
           },
           total: {
             min: 0,
-            max: dd
+            max: bb
           }
         }
       }
@@ -6292,7 +6292,7 @@ export const modules = {
         return "video/x-matroska"
       }
       getSupportedCodecs() {
-        return [...Fd.q, ...Fd.j, ...Fd.m.filter((dd => !["pcm-s8", "pcm-f32be", "pcm-f64be", "ulaw", "alaw"].includes(dd))), ...Fd.p]
+        return [...Hb.o, ...Hb.h, ...Hb.l.filter((bb => !["pcm-s8", "pcm-f32be", "pcm-f64be", "ulaw", "alaw"].includes(bb))), ...Hb.n]
       }
       get supportsVideoTransformationMetadata() {
         return !1
@@ -6304,12 +6304,12 @@ export const modules = {
         return "prefer-non-negative"
       }
     }
-    class cm extends zm {
-      constructor(dd) {
-        super(dd)
+    class QM extends vM {
+      constructor(bb) {
+        super(bb)
       }
       getSupportedCodecs() {
-        return [...Fd.q.filter((dd => ["vp8", "vp9", "av1"].includes(dd))), ...Fd.b.filter((dd => ["opus", "vorbis"].includes(dd))), ...Fd.p]
+        return [...Hb.o.filter((bb => ["vp8", "vp9", "av1"].includes(bb))), ...Hb.b.filter((bb => ["opus", "vorbis"].includes(bb))), ...Hb.n]
       }
       get _name() {
         return "WebM"
@@ -6320,28 +6320,28 @@ export const modules = {
       get mimeType() {
         return "video/webm"
       }
-      _codecUnsupportedHint(dd) {
-        return (new zm).getSupportedCodecs().includes(dd) ? " Switching to MKV will grant support for this codec." : ""
+      _codecUnsupportedHint(bb) {
+        return (new vM).getSupportedCodecs().includes(bb) ? " Switching to MKV will grant support for this codec." : ""
       }
     }
   },
-  41483: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => pd
+  41237: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => mb
     });
-    var Wd = md(41487),
-      Fd = md(41491),
-      Rd = md(41498),
-      Xd = md(41569),
-      Kd = md(41544),
-      hd = md(41540),
-      vd = md(41526),
-      Qd = md(41555),
-      td = md(41513);
-    const od = ["video", "audio", "subtitle"];
-    class Nd {
-      constructor(dd, Od, md, Wd, Fd) {
-        this.id = dd, this.output = Od, this.type = md, this.source = Wd, this.metadata = Fd
+    var eb = Mb(41244),
+      Hb = Mb(41252),
+      pb = Mb(41258),
+      Vb = Mb(41348),
+      gb = Mb(41316),
+      lb = Mb(41312),
+      Lb = Mb(41287),
+      Ib = Mb(41327),
+      Ob = Mb(41281);
+    const Ub = ["video", "audio", "subtitle"];
+    class tb {
+      constructor(bb, wb, Mb, eb, Hb) {
+        this.id = bb, this.output = wb, this.type = Mb, this.source = eb, this.metadata = Hb
       }
       isVideoTrack() {
         return "video" === this.type
@@ -6352,95 +6352,95 @@ export const modules = {
       isSubtitleTrack() {
         return "subtitle" === this.type
       }
-      canBePairedWith(dd) {
-        if (!(dd instanceof Nd)) throw new TypeError("other must be an OutputTrack.");
-        if (this === dd) return !1;
-        const Od = (0, Wd.pd)(this.metadata.group),
-          md = (0, Wd.pd)(dd.metadata.group);
-        for (const Wd of Od) {
-          if (this.type !== dd.type && md.some((dd => Wd === dd))) return !0;
-          if (md.some((dd => Wd._pairedGroups.has(dd)))) return !0
+      canBePairedWith(bb) {
+        if (!(bb instanceof tb)) throw new TypeError("other must be an OutputTrack.");
+        if (this === bb) return !1;
+        const wb = (0, eb.jd)(this.metadata.group),
+          Mb = (0, eb.jd)(bb.metadata.group);
+        for (const eb of wb) {
+          if (this.type !== bb.type && Mb.some((bb => eb === bb))) return !0;
+          if (Mb.some((bb => eb._pairedGroups.has(bb)))) return !0
         }
         return !1
       }
     }
-    class qd extends Nd {
-      constructor(dd, Od, md, Wd) {
-        super(dd, Od, "video", md, Wd)
+    class Cb extends tb {
+      constructor(bb, wb, Mb, eb) {
+        super(bb, wb, "video", Mb, eb)
       }
     }
-    class Hd extends Nd {
-      constructor(dd, Od, md, Wd) {
-        super(dd, Od, "audio", md, Wd)
+    class Eb extends tb {
+      constructor(bb, wb, Mb, eb) {
+        super(bb, wb, "audio", Mb, eb)
       }
     }
-    class yd extends Nd {
-      constructor(dd, Od, md, Wd) {
-        super(dd, Od, "subtitle", md, Wd)
+    class Fb extends tb {
+      constructor(bb, wb, Mb, eb) {
+        super(bb, wb, "subtitle", Mb, eb)
       }
     }
-    class bd {
+    class Bb {
       constructor() {
         this._pairedGroups = new Set
       }
-      pairWith(dd) {
-        if (!(dd instanceof bd)) throw new TypeError("other must be an OutputTrackGroup.");
-        if (this === dd) throw new TypeError("Cannot pair a group with itself.");
-        this._pairedGroups.add(dd), dd._pairedGroups.add(this)
+      pairWith(bb) {
+        if (!(bb instanceof Bb)) throw new TypeError("other must be an OutputTrackGroup.");
+        if (this === bb) throw new TypeError("Cannot pair a group with itself.");
+        this._pairedGroups.add(bb), bb._pairedGroups.add(this)
       }
     }
-    const Td = dd => {
-      if (!dd || "object" !== typeof dd) throw new TypeError("metadata must be an object.");
-      if (void 0 !== dd.languageCode && !(0, Wd.Jb)(dd.languageCode)) throw new TypeError("metadata.languageCode, when provided, must be a three-letter, ISO 639-2/T language code.");
-      if (void 0 !== dd.name && "string" !== typeof dd.name) throw new TypeError("metadata.name, when provided, must be a string.");
-      if (void 0 !== dd.disposition && (0, Fd.n)(dd.disposition), void 0 !== dd.maximumPacketCount && (!Number.isInteger(dd.maximumPacketCount) || dd.maximumPacketCount < 0)) throw new TypeError("metadata.maximumPacketCount, when provided, must be a non-negative integer.");
-      if (void 0 !== dd.bitrate && (!Number.isFinite(dd.bitrate) || dd.bitrate < 0)) throw new TypeError("metadata.bitrate, when provided, must be a non-negative number.");
-      if (void 0 !== dd.averageBitrate && (!Number.isFinite(dd.averageBitrate) || dd.averageBitrate < 0)) throw new TypeError("metadata.averageBitrate, when provided, must be a non-negative number.");
-      if (void 0 !== dd.group && !(dd.group instanceof bd) && (!Array.isArray(dd.group) || dd.group.some((dd => !(dd instanceof bd))))) throw new TypeError("metadata.group, when provided, must be an OutputTrackGroup instance or an array of OutputTrackGroup instances.")
+    const sb = bb => {
+      if (!bb || "object" !== typeof bb) throw new TypeError("metadata must be an object.");
+      if (void 0 !== bb.languageCode && !(0, eb.Gb)(bb.languageCode)) throw new TypeError("metadata.languageCode, when provided, must be a three-letter, ISO 639-2/T language code.");
+      if (void 0 !== bb.name && "string" !== typeof bb.name) throw new TypeError("metadata.name, when provided, must be a string.");
+      if (void 0 !== bb.disposition && (0, Hb.o)(bb.disposition), void 0 !== bb.maximumPacketCount && (!Number.isInteger(bb.maximumPacketCount) || bb.maximumPacketCount < 0)) throw new TypeError("metadata.maximumPacketCount, when provided, must be a non-negative integer.");
+      if (void 0 !== bb.bitrate && (!Number.isFinite(bb.bitrate) || bb.bitrate < 0)) throw new TypeError("metadata.bitrate, when provided, must be a non-negative number.");
+      if (void 0 !== bb.averageBitrate && (!Number.isFinite(bb.averageBitrate) || bb.averageBitrate < 0)) throw new TypeError("metadata.averageBitrate, when provided, must be a non-negative number.");
+      if (void 0 !== bb.group && !(bb.group instanceof Bb) && (!Array.isArray(bb.group) || bb.group.some((bb => !(bb instanceof Bb))))) throw new TypeError("metadata.group, when provided, must be an OutputTrackGroup instance or an array of OutputTrackGroup instances.")
     };
-    class pd extends Wd.k {
+    class mb extends eb.h {
       get target() {
-        const dd = "Output.target cannot be used when using PathedTarget with an async callback. Use the 'target' event instead.";
-        if (this._rootTargetPromise) throw new TypeError(dd);
-        const Od = this._getRootTarget();
-        if ((0, Wd.Xb)(Od)) throw new TypeError(dd);
-        return Od
+        const bb = "Output.target cannot be used when using PathedTarget with an async callback. Use the 'target' event instead.";
+        if (this._rootTargetPromise) throw new TypeError(bb);
+        const wb = this._getRootTarget();
+        if ((0, eb.Ub)(wb)) throw new TypeError(bb);
+        return wb
       }
-      constructor(dd) {
-        if (super(), this.state = "pending", this.defaultTrackGroup = new bd, this.tracks = [], this._onFinalize = null, this._unfinalizedTargets = new Set, this._rootWriterPromise = null, this._startPromise = null, this._cancelPromise = null, this._finalizePromise = null, this._mutex = new Wd.c, this._metadataTags = {}, this._rootTarget = null, this._rootTargetPromise = null, this._firstMediaStreamTimestamp = null, !dd || "object" !== typeof dd) throw new TypeError("options must be an object.");
-        if (!(dd.format instanceof Rd.l)) throw new TypeError("options.format must be an OutputFormat.");
-        if (!(dd.target instanceof Kd.j || dd.target instanceof Kd.g)) throw new TypeError("options.target must be a Target or a PathedTarget.");
-        if (dd.target instanceof Kd.j && this._rememberTarget(dd.target), void 0 !== dd.initTarget && !(dd.initTarget instanceof Kd.j) && "function" !== typeof dd.initTarget) throw new Error("options.initTarget, when provided, must be a Target or a function that returns or resolves to a Target.");
-        if (void 0 !== dd.onFinalize && "function" !== typeof dd.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
-        this.format = dd.format, this.Jt = dd.target, this._onFinalize = dd.onFinalize ?? null, this._initTarget = dd.initTarget ?? null, this._initTarget instanceof Kd.j && this._rememberTarget(this._initTarget), this._muxer = dd.format._createMuxer(this)
+      constructor(bb) {
+        if (super(), this.state = "pending", this.defaultTrackGroup = new Bb, this.tracks = [], this._onFinalize = null, this._unfinalizedTargets = new Set, this._rootWriterPromise = null, this._startPromise = null, this._cancelPromise = null, this._finalizePromise = null, this._mutex = new eb.d, this._metadataTags = {}, this._rootTarget = null, this._rootTargetPromise = null, this._firstMediaStreamTimestamp = null, !bb || "object" !== typeof bb) throw new TypeError("options must be an object.");
+        if (!(bb.format instanceof pb.i)) throw new TypeError("options.format must be an OutputFormat.");
+        if (!(bb.target instanceof gb.g || bb.target instanceof gb.f)) throw new TypeError("options.target must be a Target or a PathedTarget.");
+        if (bb.target instanceof gb.g && this._rememberTarget(bb.target), void 0 !== bb.initTarget && !(bb.initTarget instanceof gb.g) && "function" !== typeof bb.initTarget) throw new Error("options.initTarget, when provided, must be a Target or a function that returns or resolves to a Target.");
+        if (void 0 !== bb.onFinalize && "function" !== typeof bb.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
+        this.format = bb.format, this.mO = bb.target, this._onFinalize = bb.onFinalize ?? null, this._initTarget = bb.initTarget ?? null, this._initTarget instanceof gb.g && this._rememberTarget(this._initTarget), this._muxer = bb.format._createMuxer(this)
       }
-      _getTargetValidated(dd) {
-        (0, Wd.M)(this.Jt instanceof Kd.g);
-        const Od = this.Jt.getTarget(dd),
-          md = dd => {
-            if (!(dd instanceof Kd.j)) throw new TypeError("getTarget must return a Target.");
-            return dd
+      _getTargetValidated(bb) {
+        (0, eb.L)(this.mO instanceof gb.f);
+        const wb = this.mO.getTarget(bb),
+          Mb = bb => {
+            if (!(bb instanceof gb.g)) throw new TypeError("getTarget must return a Target.");
+            return bb
           };
-        return (0, Wd.Xb)(Od) ? Od.then(md) : md(Od)
+        return (0, eb.Ub)(wb) ? wb.then(Mb) : Mb(wb)
       }
-      async _getTarget(dd) {
-        (0, Wd.M)(this.Jt instanceof Kd.g);
-        const Od = await this._getTargetValidated(dd);
+      async _getTarget(bb) {
+        (0, eb.L)(this.mO instanceof gb.f);
+        const wb = await this._getTargetValidated(bb);
         return this._emit("target", {
-          target: Od,
-          request: dd,
-          isRoot: dd.isRoot
-        }), "canceled" === this.state ? await Od._close() : this._rememberTarget(Od), Od
+          target: wb,
+          request: bb,
+          isRoot: bb.isRoot
+        }), "canceled" === this.state ? await wb._close() : this._rememberTarget(wb), wb
       }
-      _rememberTarget(dd) {
-        this._unfinalizedTargets.add(dd), dd.on("finalized", (() => this._unfinalizedTargets.delete(dd)), {
+      _rememberTarget(bb) {
+        this._unfinalizedTargets.add(bb), bb.on("finalized", (() => this._unfinalizedTargets.delete(bb)), {
           once: !0
         })
       }
       async _getInitTarget() {
-        if ((0, Wd.M)(null !== this._initTarget), this._initTarget instanceof Kd.j) return this._initTarget;
-        const dd = await this._initTarget();
-        return "canceled" === this.state ? await dd._close() : this._rememberTarget(dd), dd
+        if ((0, eb.L)(null !== this._initTarget), this._initTarget instanceof gb.g) return this._initTarget;
+        const bb = await this._initTarget();
+        return "canceled" === this.state ? await bb._close() : this._rememberTarget(bb), bb
       }
       _hasInitTarget() {
         return null !== this._initTarget
@@ -6448,129 +6448,129 @@ export const modules = {
       _getRootTarget() {
         if (this._rootTarget) return this._rootTarget;
         if (this._rootTargetPromise) return this._rootTargetPromise;
-        if (this.Jt instanceof Kd.j) return this._emit("target", {
-          target: this.Jt,
+        if (this.mO instanceof gb.g) return this._emit("target", {
+          target: this.mO,
           request: null,
           isRoot: !0
-        }), this._rootTarget = this.Jt, this.Jt;
-        const dd = {
-            path: this.Jt.rootPath,
+        }), this._rootTarget = this.mO, this.mO;
+        const bb = {
+            path: this.mO.rootPath,
             isRoot: !0,
             mimeType: this.format.mimeType
           },
-          Od = this._getTargetValidated(dd),
-          md = Od => ("canceled" === this.state ? Od._close() : this._rememberTarget(Od), this._emit("target", {
-            target: Od,
-            request: dd,
+          wb = this._getTargetValidated(bb),
+          Mb = wb => ("canceled" === this.state ? wb._close() : this._rememberTarget(wb), this._emit("target", {
+            target: wb,
+            request: bb,
             isRoot: !0
-          }), this._rootTarget = Od, Od);
-        return (0, Wd.Xb)(Od) ? this._rootTargetPromise = Od.then(md) : md(Od)
+          }), this._rootTarget = wb, wb);
+        return (0, eb.Ub)(wb) ? this._rootTargetPromise = wb.then(Mb) : Mb(wb)
       }
-      _getRootWriter(dd) {
+      _getRootWriter(bb) {
         return this._rootWriterPromise ??= (async () => {
-          const Od = await this._getRootTarget(),
-            md = new hd.d(Od, "boolean" === typeof dd ? dd : dd(Od));
-          return md.start(), md
+          const wb = await this._getRootTarget(),
+            Mb = new lb.b(wb, "boolean" === typeof bb ? bb : bb(wb));
+          return Mb.start(), Mb
         })()
       }
-      addVideoTrack(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(dd instanceof Xd.p)) throw new TypeError("source must be a VideoSource.");
-        if (Td(Od), void 0 !== Od.rotation && ![0, 90, 180, 270].includes(Od.rotation)) throw new TypeError(`Invalid video rotation: ${Od.rotation}. Has to be 0, 90, 180 or 270.`);
-        if (void 0 !== Od.flip && "boolean" !== typeof Od.flip) throw new TypeError("metadata.flip, when provided, must be a boolean.");
-        if (void 0 !== Od.transformationMatrix && (!Array.isArray(Od.transformationMatrix) || 9 !== Od.transformationMatrix.length || !Od.transformationMatrix.every((dd => Number.isFinite(dd))))) throw new TypeError("metadata.transformationMatrix, when provided, must be an array of 9 finite numbers.");
-        if (void 0 !== Od.frameRate && (!Number.isFinite(Od.frameRate) || Od.frameRate <= 0)) throw new TypeError(`Invalid video frame rate: ${Od.frameRate}. Must be a positive number.`);
-        if (void 0 !== Od.hasOnlyKeyPackets && "boolean" !== typeof Od.hasOnlyKeyPackets) throw new TypeError("metadata.hasOnlyKeyPackets, when provided, must be a boolean.");
-        if (void 0 !== Od.canBeTransparent && "boolean" !== typeof Od.canBeTransparent) throw new TypeError("metadata.canBeTransparent, when provided, must be a boolean.");
-        if (void 0 !== Od.decoderConfig && (0, td.X)({
-            decoderConfig: Od.decoderConfig
-          }, dd._codec), void 0 !== Od.primingPacket) {
-          if (!(Od.primingPacket instanceof Qd.e)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
-          if (void 0 === Od.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
+      addVideoTrack(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(bb instanceof Vb.n)) throw new TypeError("source must be a VideoSource.");
+        if (sb(wb), void 0 !== wb.rotation && ![0, 90, 180, 270].includes(wb.rotation)) throw new TypeError(`Invalid video rotation: ${wb.rotation}. Has to be 0, 90, 180 or 270.`);
+        if (void 0 !== wb.flip && "boolean" !== typeof wb.flip) throw new TypeError("metadata.flip, when provided, must be a boolean.");
+        if (void 0 !== wb.transformationMatrix && (!Array.isArray(wb.transformationMatrix) || 9 !== wb.transformationMatrix.length || !wb.transformationMatrix.every((bb => Number.isFinite(bb))))) throw new TypeError("metadata.transformationMatrix, when provided, must be an array of 9 finite numbers.");
+        if (void 0 !== wb.frameRate && (!Number.isFinite(wb.frameRate) || wb.frameRate <= 0)) throw new TypeError(`Invalid video frame rate: ${wb.frameRate}. Must be a positive number.`);
+        if (void 0 !== wb.hasOnlyKeyPackets && "boolean" !== typeof wb.hasOnlyKeyPackets) throw new TypeError("metadata.hasOnlyKeyPackets, when provided, must be a boolean.");
+        if (void 0 !== wb.canBeTransparent && "boolean" !== typeof wb.canBeTransparent) throw new TypeError("metadata.canBeTransparent, when provided, must be a boolean.");
+        if (void 0 !== wb.decoderConfig && (0, Ob.T)({
+            decoderConfig: wb.decoderConfig
+          }, bb._codec), void 0 !== wb.primingPacket) {
+          if (!(wb.primingPacket instanceof Ib.e)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
+          if (void 0 === wb.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
         }
-        const md = {
-          ...Od
+        const Mb = {
+          ...wb
         };
-        return md.group ??= this.defaultTrackGroup, this._addTrack(new qd(this.tracks.length + 1, this, dd, md))
+        return Mb.group ??= this.defaultTrackGroup, this._addTrack(new Cb(this.tracks.length + 1, this, bb, Mb))
       }
-      addAudioTrack(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(dd instanceof Xd.e)) throw new TypeError("source must be an AudioSource.");
-        if (Td(Od), void 0 !== Od.decoderConfig && (0, td.U)({
-            decoderConfig: Od.decoderConfig
-          }, dd._codec), void 0 !== Od.primingPacket) {
-          if (!(Od.primingPacket instanceof Qd.e)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
-          if (void 0 === Od.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
+      addAudioTrack(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(bb instanceof Vb.e)) throw new TypeError("source must be an AudioSource.");
+        if (sb(wb), void 0 !== wb.decoderConfig && (0, Ob.P)({
+            decoderConfig: wb.decoderConfig
+          }, bb._codec), void 0 !== wb.primingPacket) {
+          if (!(wb.primingPacket instanceof Ib.e)) throw new TypeError("metadata.primingPacket, when provided, must be an EncodedPacket.");
+          if (void 0 === wb.decoderConfig) throw new TypeError("metadata.primingPacket can only be provided alongside metadata.decoderConfig.")
         }
-        const md = {
-          ...Od
+        const Mb = {
+          ...wb
         };
-        return md.group ??= this.defaultTrackGroup, this._addTrack(new Hd(this.tracks.length + 1, this, dd, md))
+        return Mb.group ??= this.defaultTrackGroup, this._addTrack(new Eb(this.tracks.length + 1, this, bb, Mb))
       }
-      addSubtitleTrack(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(dd instanceof Xd.n)) throw new TypeError("source must be a SubtitleSource.");
-        Td(Od);
-        const md = {
-          ...Od
+      addSubtitleTrack(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(bb instanceof Vb.l)) throw new TypeError("source must be a SubtitleSource.");
+        sb(wb);
+        const Mb = {
+          ...wb
         };
-        return md.group ??= this.defaultTrackGroup, this._addTrack(new yd(this.tracks.length + 1, this, dd, md))
+        return Mb.group ??= this.defaultTrackGroup, this._addTrack(new Fb(this.tracks.length + 1, this, bb, Mb))
       }
-      setMetadataTags(dd) {
-        if ((0, Fd.m)(dd), "pending" !== this.state) throw new Error("Cannot set metadata tags after output has been started or canceled.");
-        this._metadataTags = dd
+      setMetadataTags(bb) {
+        if ((0, Hb.k)(bb), "pending" !== this.state) throw new Error("Cannot set metadata tags after output has been started or canceled.");
+        this._metadataTags = bb
       }
-      _addTrack(dd) {
+      _addTrack(bb) {
         if ("pending" !== this.state) throw new Error("Cannot add track after output has been started or canceled.");
-        if (dd.source._connectedTrack) throw new Error("Source is already used for a track.");
-        const Od = this.format.getSupportedTrackCounts(),
-          md = this.tracks.reduce(((Od, md) => Od + (md.type === dd.type ? 1 : 0)), 0),
-          Wd = Od[dd.type].max;
-        if (md === Wd) throw new Error(0 === Wd ? `${this.format._name} does not support ${dd.type} tracks.` : `${this.format._name} does not support more than ${Wd} ${dd.type} track` + (1 === Wd ? "" : "s") + ".");
-        const Fd = Od.total.max;
-        if (this.tracks.length === Fd) throw new Error(`${this.format._name} does not support more than ${Fd} tracks` + (1 === Fd ? "" : "s") + " in total.");
-        if (dd.isVideoTrack()) {
-          const Od = this.format.getSupportedVideoCodecs();
-          if (0 === Od.length) throw new Error(`${this.format._name} does not support video tracks.` + this.format._codecUnsupportedHint(dd.source._codec));
-          if (!Od.includes(dd.source._codec)) throw new Error(`Codec '${dd.source._codec}' cannot be contained within ${this.format._name}. Supported video codecs are: ${Od.map((dd=>`'${dd}'`)).join(", ")}.` + this.format._codecUnsupportedHint(dd.source._codec))
-        } else if (dd.isAudioTrack()) {
-          const Od = this.format.getSupportedAudioCodecs();
-          if (0 === Od.length) throw new Error(`${this.format._name} does not support audio tracks.` + this.format._codecUnsupportedHint(dd.source._codec));
-          if (!Od.includes(dd.source._codec)) throw new Error(`Codec '${dd.source._codec}' cannot be contained within ${this.format._name}. Supported audio codecs are: ${Od.map((dd=>`'${dd}'`)).join(", ")}.` + this.format._codecUnsupportedHint(dd.source._codec))
-        } else if (dd.isSubtitleTrack()) {
-          const Od = this.format.getSupportedSubtitleCodecs();
-          if (0 === Od.length) throw new Error(`${this.format._name} does not support subtitle tracks.` + this.format._codecUnsupportedHint(dd.source._codec));
-          if (!Od.includes(dd.source._codec)) throw new Error(`Codec '${dd.source._codec}' cannot be contained within ${this.format._name}. Supported subtitle codecs are: ${Od.map((dd=>`'${dd}'`)).join(", ")}.` + this.format._codecUnsupportedHint(dd.source._codec))
+        if (bb.source._connectedTrack) throw new Error("Source is already used for a track.");
+        const wb = this.format.getSupportedTrackCounts(),
+          Mb = this.tracks.reduce(((wb, Mb) => wb + (Mb.type === bb.type ? 1 : 0)), 0),
+          eb = wb[bb.type].max;
+        if (Mb === eb) throw new Error(0 === eb ? `${this.format._name} does not support ${bb.type} tracks.` : `${this.format._name} does not support more than ${eb} ${bb.type} track` + (1 === eb ? "" : "s") + ".");
+        const Hb = wb.total.max;
+        if (this.tracks.length === Hb) throw new Error(`${this.format._name} does not support more than ${Hb} tracks` + (1 === Hb ? "" : "s") + " in total.");
+        if (bb.isVideoTrack()) {
+          const wb = this.format.getSupportedVideoCodecs();
+          if (0 === wb.length) throw new Error(`${this.format._name} does not support video tracks.` + this.format._codecUnsupportedHint(bb.source._codec));
+          if (!wb.includes(bb.source._codec)) throw new Error(`Codec '${bb.source._codec}' cannot be contained within ${this.format._name}. Supported video codecs are: ${wb.map((bb=>`'${bb}'`)).join(", ")}.` + this.format._codecUnsupportedHint(bb.source._codec))
+        } else if (bb.isAudioTrack()) {
+          const wb = this.format.getSupportedAudioCodecs();
+          if (0 === wb.length) throw new Error(`${this.format._name} does not support audio tracks.` + this.format._codecUnsupportedHint(bb.source._codec));
+          if (!wb.includes(bb.source._codec)) throw new Error(`Codec '${bb.source._codec}' cannot be contained within ${this.format._name}. Supported audio codecs are: ${wb.map((bb=>`'${bb}'`)).join(", ")}.` + this.format._codecUnsupportedHint(bb.source._codec))
+        } else if (bb.isSubtitleTrack()) {
+          const wb = this.format.getSupportedSubtitleCodecs();
+          if (0 === wb.length) throw new Error(`${this.format._name} does not support subtitle tracks.` + this.format._codecUnsupportedHint(bb.source._codec));
+          if (!wb.includes(bb.source._codec)) throw new Error(`Codec '${bb.source._codec}' cannot be contained within ${this.format._name}. Supported subtitle codecs are: ${wb.map((bb=>`'${bb}'`)).join(", ")}.` + this.format._codecUnsupportedHint(bb.source._codec))
         }
-        return this.tracks.push(dd), dd.source._connectedTrack = dd, dd
+        return this.tracks.push(bb), bb.source._connectedTrack = bb, bb
       }
       hasEnoughTracks() {
-        const dd = this.format.getSupportedTrackCounts();
-        for (const md of od) {
-          if (this.tracks.reduce(((dd, Od) => dd + (Od.type === md ? 1 : 0)), 0) < dd[md].min) return !1
+        const bb = this.format.getSupportedTrackCounts();
+        for (const Mb of Ub) {
+          if (this.tracks.reduce(((bb, wb) => bb + (wb.type === Mb ? 1 : 0)), 0) < bb[Mb].min) return !1
         }
-        const Od = dd.total.min;
-        return !(this.tracks.length < Od)
+        const wb = bb.total.min;
+        return !(this.tracks.length < wb)
       }
       async start() {
-        const dd = this.format.getSupportedTrackCounts();
-        for (const md of od) {
-          const Od = this.tracks.reduce(((dd, Od) => dd + (Od.type === md ? 1 : 0)), 0),
-            Wd = dd[md].min;
-          if (Od < Wd) throw new Error(Wd === dd[md].max ? `${this.format._name} requires exactly ${Wd} ${md} track${1===Wd?"":"s"}.` : `${this.format._name} requires at least ${Wd} ${md} track${1===Wd?"":"s"}.`)
+        const bb = this.format.getSupportedTrackCounts();
+        for (const Mb of Ub) {
+          const wb = this.tracks.reduce(((bb, wb) => bb + (wb.type === Mb ? 1 : 0)), 0),
+            eb = bb[Mb].min;
+          if (wb < eb) throw new Error(eb === bb[Mb].max ? `${this.format._name} requires exactly ${eb} ${Mb} track${1===eb?"":"s"}.` : `${this.format._name} requires at least ${eb} ${Mb} track${1===eb?"":"s"}.`)
         }
-        const Od = dd.total.min;
-        if (this.tracks.length < Od) throw new Error(Od === dd.total.max ? `${this.format._name} requires exactly ${Od} track` + (1 === Od ? "" : "s") + "." : `${this.format._name} requires at least ${Od} track` + (1 === Od ? "" : "s") + ".");
+        const wb = bb.total.min;
+        if (this.tracks.length < wb) throw new Error(wb === bb.total.max ? `${this.format._name} requires exactly ${wb} track` + (1 === wb ? "" : "s") + "." : `${this.format._name} requires at least ${wb} track` + (1 === wb ? "" : "s") + ".");
         if ("canceled" === this.state) throw new Error("Output has been canceled.");
-        return this._startPromise ? (vd.e._warn("Output has already been started."), this._startPromise) : this._startPromise = (async () => {
+        return this._startPromise ? (Lb.e._warn("Output has already been started."), this._startPromise) : this._startPromise = (async () => {
           this.state = "started";
-          const dd = this._mutex.acquire();
+          const bb = this._mutex.acquire();
           try {
             await this._muxer.start();
-            const dd = this.tracks.map((dd => dd.source._start()));
-            await Promise.all(dd)
+            const bb = this.tracks.map((bb => bb.source._start()));
+            await Promise.all(bb)
           } finally {
-            (await dd)()
+            (await bb)()
           }
         })()
       }
@@ -6580,69 +6580,69 @@ export const modules = {
       async cancel() {
         return "canceled" === this.state ? this._cancelPromise ?? void 0 : "finalizing" !== this.state && "finalized" !== this.state ? this._cancelPromise = (async () => {
           this.state = "canceled";
-          const dd = await this._mutex.acquire();
+          const bb = await this._mutex.acquire();
           try {
-            const dd = this.tracks.map((dd => dd.source._flushOrWaitForOngoingClose(!0)));
-            await Promise.all(dd), await Promise.all([...this._unfinalizedTargets].map((dd => dd._close()))), this._unfinalizedTargets.clear()
+            const bb = this.tracks.map((bb => bb.source._flushOrWaitForOngoingClose(!0)));
+            await Promise.all(bb), await Promise.all([...this._unfinalizedTargets].map((bb => bb._close()))), this._unfinalizedTargets.clear()
           } finally {
-            dd()
+            bb()
           }
-        })() : void("finalized" === this.state && vd.e._warn("Output has already been finalized."))
+        })() : void("finalized" === this.state && Lb.e._warn("Output has already been finalized."))
       }
       async finalize() {
         if ("pending" === this.state) throw new Error("Cannot finalize before starting.");
         if ("canceled" === this.state) throw new Error("Cannot finalize after canceling.");
-        return this._finalizePromise ? (vd.e._warn("Output has already been finalized."), this._finalizePromise) : this._finalizePromise = (async () => {
+        return this._finalizePromise ? (Lb.e._warn("Output has already been finalized."), this._finalizePromise) : this._finalizePromise = (async () => {
           this.state = "finalizing";
-          const dd = await this._mutex.acquire();
+          const bb = await this._mutex.acquire();
           try {
-            const dd = this.tracks.map((dd => dd.source._flushOrWaitForOngoingClose(!1)));
-            if (await Promise.all(dd), await this._muxer.finalize(), this._rootWriterPromise) {
-              const dd = await this._rootWriterPromise;
-              dd.finalized || (await dd.flush(), await dd.finalize())
+            const bb = this.tracks.map((bb => bb.source._flushOrWaitForOngoingClose(!1)));
+            if (await Promise.all(bb), await this._muxer.finalize(), this._rootWriterPromise) {
+              const bb = await this._rootWriterPromise;
+              bb.finalized || (await bb.flush(), await bb.finalize())
             }
             this._onFinalize && await this._onFinalize(), this.state = "finalized"
-          } catch (Od) {
-            throw this.state = "canceled", Od
+          } catch (wb) {
+            throw this.state = "canceled", wb
           } finally {
-            await Promise.all([...this._unfinalizedTargets].map((dd => dd._close().catch((() => {}))))), this._unfinalizedTargets.clear(), dd()
+            await Promise.all([...this._unfinalizedTargets].map((bb => bb._close().catch((() => {}))))), this._unfinalizedTargets.clear(), bb()
           }
         })()
       }
     }
   },
-  41555: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Rd,
-      i: () => Fd
+  41327: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => pb,
+      f: () => Hb
     });
-    var Wd = md(41487);
-    const Fd = new Uint8Array(0);
-    class Rd {
-      constructor(dd, Od, md, Wd) {
-        let Rd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          Xd = arguments.length > 5 ? arguments[5] : void 0,
-          Kd = arguments.length > 6 ? arguments[6] : void 0;
-        if (this.data = dd, this.type = Od, this.timestamp = md, this.duration = Wd, this.sequenceNumber = Rd, dd === Fd && void 0 === Xd) throw new Error("Internal error: byteLength must be explicitly provided when constructing metadata-only packets.");
-        if (void 0 === Xd && (Xd = dd.byteLength), !(dd instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
-        if ("key" !== Od && "delta" !== Od) throw new TypeError('type must be either "key" or "delta".');
-        if (!Number.isFinite(md)) throw new TypeError("timestamp must be a number.");
-        if (!Number.isFinite(Wd) || Wd < 0) throw new TypeError("duration must be a non-negative number.");
-        if (!Number.isFinite(Rd)) throw new TypeError("sequenceNumber must be a number.");
-        if (!Number.isInteger(Xd) || Xd < 0) throw new TypeError("byteLength must be a non-negative integer.");
-        if (void 0 !== Kd && ("object" !== typeof Kd || !Kd)) throw new TypeError("sideData, when provided, must be an object.");
-        if (void 0 !== Kd?.alpha && !(Kd.alpha instanceof Uint8Array)) throw new TypeError("sideData.alpha, when provided, must be a Uint8Array.");
-        if (void 0 !== Kd?.alphaByteLength && (!Number.isInteger(Kd.alphaByteLength) || Kd.alphaByteLength < 0)) throw new TypeError("sideData.alphaByteLength, when provided, must be a non-negative integer.");
-        this.byteLength = Xd, this.sideData = Kd ?? {}, this.sideData.alpha && void 0 === this.sideData.alphaByteLength && (this.sideData.alphaByteLength = this.sideData.alpha.byteLength)
+    var eb = Mb(41244);
+    const Hb = new Uint8Array(0);
+    class pb {
+      constructor(bb, wb, Mb, eb) {
+        let pb = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          Vb = arguments.length > 5 ? arguments[5] : void 0,
+          gb = arguments.length > 6 ? arguments[6] : void 0;
+        if (this.data = bb, this.type = wb, this.timestamp = Mb, this.duration = eb, this.sequenceNumber = pb, bb === Hb && void 0 === Vb) throw new Error("Internal error: byteLength must be explicitly provided when constructing metadata-only packets.");
+        if (void 0 === Vb && (Vb = bb.byteLength), !(bb instanceof Uint8Array)) throw new TypeError("data must be a Uint8Array.");
+        if ("key" !== wb && "delta" !== wb) throw new TypeError('type must be either "key" or "delta".');
+        if (!Number.isFinite(Mb)) throw new TypeError("timestamp must be a number.");
+        if (!Number.isFinite(eb) || eb < 0) throw new TypeError("duration must be a non-negative number.");
+        if (!Number.isFinite(pb)) throw new TypeError("sequenceNumber must be a number.");
+        if (!Number.isInteger(Vb) || Vb < 0) throw new TypeError("byteLength must be a non-negative integer.");
+        if (void 0 !== gb && ("object" !== typeof gb || !gb)) throw new TypeError("sideData, when provided, must be an object.");
+        if (void 0 !== gb?.alpha && !(gb.alpha instanceof Uint8Array)) throw new TypeError("sideData.alpha, when provided, must be a Uint8Array.");
+        if (void 0 !== gb?.alphaByteLength && (!Number.isInteger(gb.alphaByteLength) || gb.alphaByteLength < 0)) throw new TypeError("sideData.alphaByteLength, when provided, must be a non-negative integer.");
+        this.byteLength = Vb, this.sideData = gb ?? {}, this.sideData.alpha && void 0 === this.sideData.alphaByteLength && (this.sideData.alphaByteLength = this.sideData.alpha.byteLength)
       }
       get isMetadataOnly() {
-        return this.data === Fd
+        return this.data === Hb
       }
       get microsecondTimestamp() {
-        return Math.trunc(Wd.s * this.timestamp)
+        return Math.trunc(eb.r * this.timestamp)
       }
       get microsecondDuration() {
-        return Math.trunc(Wd.s * this.duration)
+        return Math.trunc(eb.r * this.duration)
       }
       toEncodedVideoChunk() {
         if (this.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");
@@ -6655,13 +6655,13 @@ export const modules = {
         })
       }
       alphaToEncodedVideoChunk() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.type;
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.type;
         if (!this.sideData.alpha) throw new TypeError("This packet does not contain alpha side data.");
         if (this.isMetadataOnly) throw new TypeError("Metadata-only packets cannot be converted to a video chunk.");
         if ("undefined" === typeof EncodedVideoChunk) throw new Error("EncodedVideoChunk is not available in this environment.");
         return new EncodedVideoChunk({
           data: this.sideData.alpha,
-          type: dd,
+          type: bb,
           timestamp: this.microsecondTimestamp,
           duration: this.microsecondDuration
         })
@@ -6676,104 +6676,104 @@ export const modules = {
           duration: this.microsecondDuration
         })
       }
-      static fromEncodedChunk(dd, Od) {
-        if (!(dd instanceof EncodedVideoChunk || dd instanceof EncodedAudioChunk)) throw new TypeError("chunk must be an EncodedVideoChunk or EncodedAudioChunk.");
-        const md = new Uint8Array(dd.byteLength);
-        return dd.copyTo(md), new Rd(md, dd.type, dd.timestamp / 1e6, (dd.duration ?? 0) / 1e6, void 0, void 0, Od)
+      static fromEncodedChunk(bb, wb) {
+        if (!(bb instanceof EncodedVideoChunk || bb instanceof EncodedAudioChunk)) throw new TypeError("chunk must be an EncodedVideoChunk or EncodedAudioChunk.");
+        const Mb = new Uint8Array(bb.byteLength);
+        return bb.copyTo(Mb), new pb(Mb, bb.type, bb.timestamp / 1e6, (bb.duration ?? 0) / 1e6, void 0, void 0, wb)
       }
-      clone(dd) {
-        if (void 0 !== dd && ("object" !== typeof dd || null === dd)) throw new TypeError("options, when provided, must be an object.");
-        if (void 0 !== dd?.data && !(dd.data instanceof Uint8Array)) throw new TypeError("options.data, when provided, must be a Uint8Array.");
-        if (void 0 !== dd?.type && "key" !== dd.type && "delta" !== dd.type) throw new TypeError('options.type, when provided, must be either "key" or "delta".');
-        if (void 0 !== dd?.timestamp && !Number.isFinite(dd.timestamp)) throw new TypeError("options.timestamp, when provided, must be a number.");
-        if (void 0 !== dd?.duration && !Number.isFinite(dd.duration)) throw new TypeError("options.duration, when provided, must be a number.");
-        if (void 0 !== dd?.sequenceNumber && !Number.isFinite(dd.sequenceNumber)) throw new TypeError("options.sequenceNumber, when provided, must be a number.");
-        if (void 0 !== dd?.sideData && ("object" !== typeof dd.sideData || null === dd.sideData)) throw new TypeError("options.sideData, when provided, must be an object.");
-        return new Rd(dd?.data ?? this.data, dd?.type ?? this.type, dd?.timestamp ?? this.timestamp, dd?.duration ?? this.duration, dd?.sequenceNumber ?? this.sequenceNumber, this.byteLength, dd?.sideData ?? this.sideData)
+      clone(bb) {
+        if (void 0 !== bb && ("object" !== typeof bb || null === bb)) throw new TypeError("options, when provided, must be an object.");
+        if (void 0 !== bb?.data && !(bb.data instanceof Uint8Array)) throw new TypeError("options.data, when provided, must be a Uint8Array.");
+        if (void 0 !== bb?.type && "key" !== bb.type && "delta" !== bb.type) throw new TypeError('options.type, when provided, must be either "key" or "delta".');
+        if (void 0 !== bb?.timestamp && !Number.isFinite(bb.timestamp)) throw new TypeError("options.timestamp, when provided, must be a number.");
+        if (void 0 !== bb?.duration && !Number.isFinite(bb.duration)) throw new TypeError("options.duration, when provided, must be a number.");
+        if (void 0 !== bb?.sequenceNumber && !Number.isFinite(bb.sequenceNumber)) throw new TypeError("options.sequenceNumber, when provided, must be a number.");
+        if (void 0 !== bb?.sideData && ("object" !== typeof bb.sideData || null === bb.sideData)) throw new TypeError("options.sideData, when provided, must be an object.");
+        return new pb(bb?.data ?? this.data, bb?.type ?? this.type, bb?.timestamp ?? this.timestamp, bb?.duration ?? this.duration, bb?.sequenceNumber ?? this.sequenceNumber, this.byteLength, bb?.sideData ?? this.sideData)
       }
     }
   },
-  41562: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Vd,
-      g: () => Nd,
-      j: () => cd,
-      m: () => Pd,
-      p: () => gd
+  41340: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Zb,
+      f: () => tb,
+      h: () => Qb,
+      k: () => Nb,
+      n: () => zb
     });
-    var Wd = md(41487),
-      Fd = md(41526),
-      Rd = function(dd, Od, md) {
-        if (null !== Od && void 0 !== Od) {
-          if ("object" !== typeof Od && "function" !== typeof Od) throw new TypeError("Object expected.");
-          var Wd, Fd;
-          if (md) {
+    var eb = Mb(41244),
+      Hb = Mb(41287),
+      pb = function(bb, wb, Mb) {
+        if (null !== wb && void 0 !== wb) {
+          if ("object" !== typeof wb && "function" !== typeof wb) throw new TypeError("Object expected.");
+          var eb, Hb;
+          if (Mb) {
             if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-            Wd = Od[Symbol.asyncDispose]
+            eb = wb[Symbol.asyncDispose]
           }
-          if (void 0 === Wd) {
+          if (void 0 === eb) {
             if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-            Wd = Od[Symbol.dispose], md && (Fd = Wd)
+            eb = wb[Symbol.dispose], Mb && (Hb = eb)
           }
-          if ("function" !== typeof Wd) throw new TypeError("Object not disposable.");
-          Fd && (Wd = function() {
+          if ("function" !== typeof eb) throw new TypeError("Object not disposable.");
+          Hb && (eb = function() {
             try {
-              Fd.call(this)
-            } catch (dd) {
-              return Promise.reject(dd)
+              Hb.call(this)
+            } catch (bb) {
+              return Promise.reject(bb)
             }
-          }), dd.stack.push({
-            value: Od,
-            dispose: Wd,
-            async: md
+          }), bb.stack.push({
+            value: wb,
+            dispose: eb,
+            async: Mb
           })
-        } else md && dd.stack.push({
+        } else Mb && bb.stack.push({
           async: !0
         });
-        return Od
+        return wb
       },
-      Xd = function(dd) {
-        return function(Od) {
-          function md(md) {
-            Od.error = Od.hasError ? new dd(md, Od.error, "An error was suppressed during disposal.") : md, Od.hasError = !0
+      Vb = function(bb) {
+        return function(wb) {
+          function Mb(Mb) {
+            wb.error = wb.hasError ? new bb(Mb, wb.error, "An error was suppressed during disposal.") : Mb, wb.hasError = !0
           }
-          var Wd, Fd = 0;
-          return function dd() {
-            for (; Wd = Od.stack.pop();) try {
-              if (!Wd.async && 1 === Fd) return Fd = 0, Od.stack.push(Wd), Promise.resolve().then(dd);
-              if (Wd.dispose) {
-                var Rd = Wd.dispose.call(Wd.value);
-                if (Wd.async) return Fd |= 2, Promise.resolve(Rd).then(dd, (function(Od) {
-                  return md(Od), dd()
+          var eb, Hb = 0;
+          return function bb() {
+            for (; eb = wb.stack.pop();) try {
+              if (!eb.async && 1 === Hb) return Hb = 0, wb.stack.push(eb), Promise.resolve().then(bb);
+              if (eb.dispose) {
+                var pb = eb.dispose.call(eb.value);
+                if (eb.async) return Hb |= 2, Promise.resolve(pb).then(bb, (function(wb) {
+                  return Mb(wb), bb()
                 }))
-              } else Fd |= 1
-            } catch (Xd) {
-              md(Xd)
+              } else Hb |= 1
+            } catch (Vb) {
+              Mb(Vb)
             }
-            if (1 === Fd) return Od.hasError ? Promise.reject(Od.error) : Promise.resolve();
-            if (Od.hasError) throw Od.error
+            if (1 === Hb) return wb.hasError ? Promise.reject(wb.error) : Promise.resolve();
+            if (wb.hasError) throw wb.error
           }()
         }
-      }("function" === typeof SuppressedError ? SuppressedError : function(dd, Od, md) {
-        var Wd = new Error(md);
-        return Wd.name = "SuppressedError", Wd.error = dd, Wd.suppressed = Od, Wd
+      }("function" === typeof SuppressedError ? SuppressedError : function(bb, wb, Mb) {
+        var eb = new Error(Mb);
+        return eb.name = "SuppressedError", eb.error = bb, eb.suppressed = wb, eb
       });
-    (0, Wd.wc)();
-    let Kd = -1 / 0,
-      hd = -1 / 0,
-      vd = null;
-    "undefined" !== typeof FinalizationRegistry && (vd = new FinalizationRegistry((dd => {
-      const Od = performance.now();
-      "video" === dd.type ? (Od - Kd >= 1e3 && (Fd.e._error("A VideoSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your VideoSamples as soon as you're done using them."), Kd = Od), "undefined" !== typeof VideoFrame && dd.data instanceof VideoFrame && dd.data.close()) : (Od - hd >= 1e3 && (Fd.e._error("An AudioSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your AudioSamples as soon as you're done using them."), hd = Od), "undefined" !== typeof AudioData && dd.data instanceof AudioData && dd.data.close())
+    (0, eb.qc)();
+    let gb = -1 / 0,
+      lb = -1 / 0,
+      Lb = null;
+    "undefined" !== typeof FinalizationRegistry && (Lb = new FinalizationRegistry((bb => {
+      const wb = performance.now();
+      "video" === bb.type ? (wb - gb >= 1e3 && (Hb.e._error("A VideoSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your VideoSamples as soon as you're done using them."), gb = wb), "undefined" !== typeof VideoFrame && bb.data instanceof VideoFrame && bb.data.close()) : (wb - lb >= 1e3 && (Hb.e._error("An AudioSample was garbage collected without first being closed. For proper resource management, make sure to call close() on all your AudioSamples as soon as you're done using them."), lb = wb), "undefined" !== typeof AudioData && bb.data instanceof AudioData && bb.data.close())
     })));
-    class Qd {
+    class Ib {
       constructor() {
         this._referenceCount = 0, this._lastAllocationBuffer = null
       }
     }
-    const td = ["I420", "I420P10", "I420P12", "I420A", "I420AP10", "I420AP12", "I422", "I422P10", "I422P12", "I422A", "I422AP10", "I422AP12", "I444", "I444P10", "I444P12", "I444A", "I444AP10", "I444AP12", "NV12", "RGBA", "RGBX", "BGRA", "BGRX"],
-      od = new Set(td);
-    class Nd {
+    const Ob = ["I420", "I420P10", "I420P12", "I420A", "I420AP10", "I420AP12", "I422", "I422P10", "I422P12", "I422A", "I422AP10", "I422AP12", "I444", "I444P10", "I444P12", "I444A", "I444AP10", "I444AP12", "NV12", "RGBA", "RGBX", "BGRA", "BGRX"],
+      Ub = new Set(Ob);
+    class tb {
       get codedWidth() {
         return this.visibleRect.width
       }
@@ -6787,39 +6787,39 @@ export const modules = {
         return this.rotation % 180 === 0 ? this.squarePixelHeight : this.squarePixelWidth
       }
       get microsecondTimestamp() {
-        return Math.trunc(Wd.s * this.timestamp)
+        return Math.trunc(eb.r * this.timestamp)
       }
       get microsecondDuration() {
-        return Math.trunc(Wd.s * this.duration)
+        return Math.trunc(eb.r * this.duration)
       }
       get hasAlpha() {
         return this.format && this.format.includes("A")
       }
-      constructor(dd, Od) {
-        if (this._closed = !1, dd instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && dd instanceof SharedArrayBuffer || ArrayBuffer.isView(dd)) {
-          if (!Od || "object" !== typeof Od) throw new TypeError("init must be an object.");
-          if (void 0 === Od.format || !od.has(Od.format)) throw new TypeError("init.format must be one of: " + td.join(", "));
-          if (!Number.isInteger(Od.codedWidth) || Od.codedWidth <= 0) throw new TypeError("init.codedWidth must be a positive integer.");
-          if (!Number.isInteger(Od.codedHeight) || Od.codedHeight <= 0) throw new TypeError("init.codedHeight must be a positive integer.");
-          if (void 0 !== Od.rotation && ![0, 90, 180, 270].includes(Od.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== Od.flip && "boolean" !== typeof Od.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (!Number.isFinite(Od.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          if (void 0 !== Od.duration && (!Number.isFinite(Od.duration) || Od.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          if (void 0 !== Od.layout) {
-            if (!Array.isArray(Od.layout)) throw new TypeError("init.layout, when provided, must be an array.");
-            for (const dd of Od.layout) {
-              if (!dd || "object" !== typeof dd || Array.isArray(dd)) throw new TypeError("Each entry in init.layout must be an object.");
-              if (!Number.isInteger(dd.offset) || dd.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
-              if (!Number.isInteger(dd.stride) || dd.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
+      constructor(bb, wb) {
+        if (this._closed = !1, bb instanceof ArrayBuffer || "undefined" !== typeof SharedArrayBuffer && bb instanceof SharedArrayBuffer || ArrayBuffer.isView(bb)) {
+          if (!wb || "object" !== typeof wb) throw new TypeError("init must be an object.");
+          if (void 0 === wb.format || !Ub.has(wb.format)) throw new TypeError("init.format must be one of: " + Ob.join(", "));
+          if (!Number.isInteger(wb.codedWidth) || wb.codedWidth <= 0) throw new TypeError("init.codedWidth must be a positive integer.");
+          if (!Number.isInteger(wb.codedHeight) || wb.codedHeight <= 0) throw new TypeError("init.codedHeight must be a positive integer.");
+          if (void 0 !== wb.rotation && ![0, 90, 180, 270].includes(wb.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== wb.flip && "boolean" !== typeof wb.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (!Number.isFinite(wb.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          if (void 0 !== wb.duration && (!Number.isFinite(wb.duration) || wb.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          if (void 0 !== wb.layout) {
+            if (!Array.isArray(wb.layout)) throw new TypeError("init.layout, when provided, must be an array.");
+            for (const bb of wb.layout) {
+              if (!bb || "object" !== typeof bb || Array.isArray(bb)) throw new TypeError("Each entry in init.layout must be an object.");
+              if (!Number.isInteger(bb.offset) || bb.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
+              if (!Number.isInteger(bb.stride) || bb.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
             }
           }
-          if (void 0 !== Od.visibleRect && (0, Wd.Bd)(Od.visibleRect, "init.visibleRect"), void 0 !== Od.displayWidth && (!Number.isInteger(Od.displayWidth) || Od.displayWidth <= 0)) throw new TypeError("init.displayWidth, when provided, must be a positive integer.");
-          if (void 0 !== Od.displayHeight && (!Number.isInteger(Od.displayHeight) || Od.displayHeight <= 0)) throw new TypeError("init.displayHeight, when provided, must be a positive integer.");
-          if (void 0 !== Od.displayWidth !== (void 0 !== Od.displayHeight)) throw new TypeError("init.displayWidth and init.displayHeight must be either both provided or both omitted.");
-          this.format = Od.format, this.rotation = Od.rotation ?? 0, this.flip = Od.flip ?? !1, this.timestamp = Od.timestamp, this.duration = Od.duration ?? 0;
-          const md = Od.layout ?? Ed(Od.format, Od.codedWidth, Od.codedHeight);
-          let Fd = Od.colorSpace ?? null;
-          null === Fd && (Fd = "RGBA" === this.format || "RGBX" === this.format || "BGRA" === this.format || "BGRX" === this.format ? {
+          if (void 0 !== wb.visibleRect && (0, eb.sd)(wb.visibleRect, "init.visibleRect"), void 0 !== wb.displayWidth && (!Number.isInteger(wb.displayWidth) || wb.displayWidth <= 0)) throw new TypeError("init.displayWidth, when provided, must be a positive integer.");
+          if (void 0 !== wb.displayHeight && (!Number.isInteger(wb.displayHeight) || wb.displayHeight <= 0)) throw new TypeError("init.displayHeight, when provided, must be a positive integer.");
+          if (void 0 !== wb.displayWidth !== (void 0 !== wb.displayHeight)) throw new TypeError("init.displayWidth and init.displayHeight must be either both provided or both omitted.");
+          this.format = wb.format, this.rotation = wb.rotation ?? 0, this.flip = wb.flip ?? !1, this.timestamp = wb.timestamp, this.duration = wb.duration ?? 0;
+          const Mb = wb.layout ?? xb(wb.format, wb.codedWidth, wb.codedHeight);
+          let Hb = wb.colorSpace ?? null;
+          null === Hb && (Hb = "RGBA" === this.format || "RGBX" === this.format || "BGRA" === this.format || "BGRX" === this.format ? {
             primaries: "bt709",
             transfer: "iec61966-2-1",
             matrix: "rgb",
@@ -6830,106 +6830,106 @@ export const modules = {
             matrix: "bt709",
             fullRange: !1
           }), this.visibleRect = {
-            left: Od.visibleRect?.left ?? 0,
-            top: Od.visibleRect?.top ?? 0,
-            width: Od.visibleRect?.width ?? Od.codedWidth,
-            height: Od.visibleRect?.height ?? Od.codedHeight
-          }, void 0 !== Od.displayWidth ? (this.squarePixelWidth = this.rotation % 180 === 0 ? Od.displayWidth : Od.displayHeight, this.squarePixelHeight = this.rotation % 180 === 0 ? Od.displayHeight : Od.displayWidth) : (this.squarePixelWidth = this.visibleRect.width, this.squarePixelHeight = this.visibleRect.height), this._data = Od._doNotCopy ? (0, Wd.vd)(dd) : (0, Wd.vd)(dd).slice(), this._layout = md, this.colorSpace = new Td(Fd)
-        } else if ("undefined" !== typeof VideoFrame && dd instanceof VideoFrame) {
-          if (void 0 !== Od?.rotation && ![0, 90, 180, 270].includes(Od.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== Od?.flip && "boolean" !== typeof Od.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (void 0 !== Od?.timestamp && !Number.isFinite(Od?.timestamp)) throw new TypeError("init.timestamp, when provided, must be a number.");
-          if (void 0 !== Od?.duration && (!Number.isFinite(Od.duration) || Od.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          void 0 !== Od?.visibleRect && (0, Wd.Bd)(Od.visibleRect, "init.visibleRect"), this._data = dd, this._layout = null, this.format = dd.format, this.visibleRect = {
-            left: dd.visibleRect?.x ?? 0,
-            top: dd.visibleRect?.y ?? 0,
-            width: dd.visibleRect?.width ?? dd.codedWidth,
-            height: dd.visibleRect?.height ?? dd.codedHeight
-          }, this.rotation = Od?.rotation ?? 0, this.flip = Od?.flip ?? !1, this.squarePixelWidth = dd.displayWidth, this.squarePixelHeight = dd.displayHeight, this.timestamp = Od?.timestamp ?? dd.timestamp / 1e6, this.duration = Od?.duration ?? (dd.duration ?? 0) / 1e6, this.colorSpace = new Td(dd.colorSpace)
-        } else if ("undefined" !== typeof HTMLImageElement && dd instanceof HTMLImageElement || "undefined" !== typeof SVGImageElement && dd instanceof SVGImageElement || "undefined" !== typeof ImageBitmap && dd instanceof ImageBitmap || "undefined" !== typeof HTMLVideoElement && dd instanceof HTMLVideoElement || "undefined" !== typeof HTMLCanvasElement && dd instanceof HTMLCanvasElement || "undefined" !== typeof OffscreenCanvas && dd instanceof OffscreenCanvas) {
-          if (!Od || "object" !== typeof Od) throw new TypeError("init must be an object.");
-          if (void 0 !== Od.rotation && ![0, 90, 180, 270].includes(Od.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== Od.flip && "boolean" !== typeof Od.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (!Number.isFinite(Od.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          if (void 0 !== Od.duration && (!Number.isFinite(Od.duration) || Od.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          if (void 0 !== Od.visibleRect && (0, Wd.Bd)(Od.visibleRect, "init.visibleRect"), "undefined" !== typeof VideoFrame) return new Nd(new VideoFrame(dd, {
-            timestamp: Math.trunc(Od.timestamp * Wd.s),
-            duration: Math.trunc((Od.duration ?? 0) * Wd.s) || void 0,
-            visibleRect: Od.visibleRect && {
-              x: Od.visibleRect.left,
-              y: Od.visibleRect.top,
-              width: Od.visibleRect.width,
-              height: Od.visibleRect.height
+            left: wb.visibleRect?.left ?? 0,
+            top: wb.visibleRect?.top ?? 0,
+            width: wb.visibleRect?.width ?? wb.codedWidth,
+            height: wb.visibleRect?.height ?? wb.codedHeight
+          }, void 0 !== wb.displayWidth ? (this.squarePixelWidth = this.rotation % 180 === 0 ? wb.displayWidth : wb.displayHeight, this.squarePixelHeight = this.rotation % 180 === 0 ? wb.displayHeight : wb.displayWidth) : (this.squarePixelWidth = this.visibleRect.width, this.squarePixelHeight = this.visibleRect.height), this._data = wb._doNotCopy ? (0, eb.od)(bb) : (0, eb.od)(bb).slice(), this._layout = Mb, this.colorSpace = new sb(Hb)
+        } else if ("undefined" !== typeof VideoFrame && bb instanceof VideoFrame) {
+          if (void 0 !== wb?.rotation && ![0, 90, 180, 270].includes(wb.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== wb?.flip && "boolean" !== typeof wb.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (void 0 !== wb?.timestamp && !Number.isFinite(wb?.timestamp)) throw new TypeError("init.timestamp, when provided, must be a number.");
+          if (void 0 !== wb?.duration && (!Number.isFinite(wb.duration) || wb.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          void 0 !== wb?.visibleRect && (0, eb.sd)(wb.visibleRect, "init.visibleRect"), this._data = bb, this._layout = null, this.format = bb.format, this.visibleRect = {
+            left: bb.visibleRect?.x ?? 0,
+            top: bb.visibleRect?.y ?? 0,
+            width: bb.visibleRect?.width ?? bb.codedWidth,
+            height: bb.visibleRect?.height ?? bb.codedHeight
+          }, this.rotation = wb?.rotation ?? 0, this.flip = wb?.flip ?? !1, this.squarePixelWidth = bb.displayWidth, this.squarePixelHeight = bb.displayHeight, this.timestamp = wb?.timestamp ?? bb.timestamp / 1e6, this.duration = wb?.duration ?? (bb.duration ?? 0) / 1e6, this.colorSpace = new sb(bb.colorSpace)
+        } else if ("undefined" !== typeof HTMLImageElement && bb instanceof HTMLImageElement || "undefined" !== typeof SVGImageElement && bb instanceof SVGImageElement || "undefined" !== typeof ImageBitmap && bb instanceof ImageBitmap || "undefined" !== typeof HTMLVideoElement && bb instanceof HTMLVideoElement || "undefined" !== typeof HTMLCanvasElement && bb instanceof HTMLCanvasElement || "undefined" !== typeof OffscreenCanvas && bb instanceof OffscreenCanvas) {
+          if (!wb || "object" !== typeof wb) throw new TypeError("init must be an object.");
+          if (void 0 !== wb.rotation && ![0, 90, 180, 270].includes(wb.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== wb.flip && "boolean" !== typeof wb.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (!Number.isFinite(wb.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          if (void 0 !== wb.duration && (!Number.isFinite(wb.duration) || wb.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          if (void 0 !== wb.visibleRect && (0, eb.sd)(wb.visibleRect, "init.visibleRect"), "undefined" !== typeof VideoFrame) return new tb(new VideoFrame(bb, {
+            timestamp: Math.trunc(wb.timestamp * eb.r),
+            duration: Math.trunc((wb.duration ?? 0) * eb.r) || void 0,
+            visibleRect: wb.visibleRect && {
+              x: wb.visibleRect.left,
+              y: wb.visibleRect.top,
+              width: wb.visibleRect.width,
+              height: wb.visibleRect.height
             }
-          }), Od);
-          let md = 0,
-            Fd = 0;
-          if ("naturalWidth" in dd ? (md = dd.naturalWidth, Fd = dd.naturalHeight) : "videoWidth" in dd ? (md = dd.videoWidth, Fd = dd.videoHeight) : "width" in dd && (md = Number(dd.width), Fd = Number(dd.height)), !md || !Fd) throw new TypeError("Could not determine dimensions.");
-          const Rd = Od.visibleRect ?? {
+          }), wb);
+          let Mb = 0,
+            Hb = 0;
+          if ("naturalWidth" in bb ? (Mb = bb.naturalWidth, Hb = bb.naturalHeight) : "videoWidth" in bb ? (Mb = bb.videoWidth, Hb = bb.videoHeight) : "width" in bb && (Mb = Number(bb.width), Hb = Number(bb.height)), !Mb || !Hb) throw new TypeError("Could not determine dimensions.");
+          const pb = wb.visibleRect ?? {
               left: 0,
               top: 0,
-              width: md,
-              height: Fd
+              width: Mb,
+              height: Hb
             },
-            Xd = new OffscreenCanvas(Rd.width, Rd.height),
-            Kd = Xd.getContext("2d", {
-              alpha: (0, Wd.Fb)(),
+            Vb = new OffscreenCanvas(pb.width, pb.height),
+            gb = Vb.getContext("2d", {
+              alpha: (0, eb.Cb)(),
               willReadFrequently: !0
             });
-          if (!Kd) throw new Error("OffscreenCanvas must have support for the '2d' context in order to create a VideoSample from this data.");
-          Kd.drawImage(dd, -Rd.left, -Rd.top), this._data = Xd, this._layout = null, this.format = "RGBX", this.visibleRect = {
+          if (!gb) throw new Error("OffscreenCanvas must have support for the '2d' context in order to create a VideoSample from this data.");
+          gb.drawImage(bb, -pb.left, -pb.top), this._data = Vb, this._layout = null, this.format = "RGBX", this.visibleRect = {
             left: 0,
             top: 0,
-            width: Rd.width,
-            height: Rd.height
-          }, this.squarePixelWidth = Rd.width, this.squarePixelHeight = Rd.height, this.rotation = Od.rotation ?? 0, this.flip = Od.flip ?? !1, this.timestamp = Od.timestamp, this.duration = Od.duration ?? 0, this.colorSpace = new Td({
+            width: pb.width,
+            height: pb.height
+          }, this.squarePixelWidth = pb.width, this.squarePixelHeight = pb.height, this.rotation = wb.rotation ?? 0, this.flip = wb.flip ?? !1, this.timestamp = wb.timestamp, this.duration = wb.duration ?? 0, this.colorSpace = new sb({
             matrix: "rgb",
             primaries: "bt709",
             transfer: "iec61966-2-1",
             fullRange: !0
           })
         } else {
-          if (!(dd instanceof Qd)) throw new TypeError("Invalid data type: Must be a BufferSource, CanvasImageSource, or VideoSampleResource.");
-          if (!Od || "object" !== typeof Od) throw new TypeError("init must be an object.");
-          if (void 0 !== Od.rotation && ![0, 90, 180, 270].includes(Od.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
-          if (void 0 !== Od.flip && "boolean" !== typeof Od.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
-          if (!Number.isFinite(Od.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          if (void 0 !== Od.duration && (!Number.isFinite(Od.duration) || Od.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
-          if (this._data = dd, dd._referenceCount++, this.format = dd.getFormat(), null !== this.format && !td.includes(this.format)) throw new TypeError("getFormat() must return a VideoSamplePixelFormat or null.");
+          if (!(bb instanceof Ib)) throw new TypeError("Invalid data type: Must be a BufferSource, CanvasImageSource, or VideoSampleResource.");
+          if (!wb || "object" !== typeof wb) throw new TypeError("init must be an object.");
+          if (void 0 !== wb.rotation && ![0, 90, 180, 270].includes(wb.rotation)) throw new TypeError("init.rotation, when provided, must be 0, 90, 180, or 270.");
+          if (void 0 !== wb.flip && "boolean" !== typeof wb.flip) throw new TypeError("init.flip, when provided, must be a boolean.");
+          if (!Number.isFinite(wb.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          if (void 0 !== wb.duration && (!Number.isFinite(wb.duration) || wb.duration < 0)) throw new TypeError("init.duration, when provided, must be a non-negative number.");
+          if (this._data = bb, bb._referenceCount++, this.format = bb.getFormat(), null !== this.format && !Ob.includes(this.format)) throw new TypeError("getFormat() must return a VideoSamplePixelFormat or null.");
           if (this.visibleRect = {
               left: 0,
               top: 0,
-              width: dd.getCodedWidth(),
-              height: dd.getCodedHeight()
+              width: bb.getCodedWidth(),
+              height: bb.getCodedHeight()
             }, !Number.isInteger(this.visibleRect.width) || this.visibleRect.width <= 0) throw new TypeError("getCodedWidth() must return a positive integer.");
           if (!Number.isInteger(this.visibleRect.height) || this.visibleRect.height <= 0) throw new TypeError("getCodedHeight() must return a positive integer.");
-          if (this.squarePixelWidth = dd.getSquarePixelWidth(), !Number.isInteger(this.squarePixelWidth) || this.squarePixelWidth <= 0) throw new TypeError("getSquarePixelWidth() must return a positive integer.");
-          if (this.squarePixelHeight = dd.getSquarePixelHeight(), !Number.isInteger(this.squarePixelHeight) || this.squarePixelHeight <= 0) throw new TypeError("getSquarePixelHeight() must return a positive integer.");
-          this.rotation = Od.rotation ?? 0, this.flip = Od.flip ?? !1, this.timestamp = Od.timestamp, this.duration = Od.duration ?? 0, this.colorSpace = dd.getColorSpace()
+          if (this.squarePixelWidth = bb.getSquarePixelWidth(), !Number.isInteger(this.squarePixelWidth) || this.squarePixelWidth <= 0) throw new TypeError("getSquarePixelWidth() must return a positive integer.");
+          if (this.squarePixelHeight = bb.getSquarePixelHeight(), !Number.isInteger(this.squarePixelHeight) || this.squarePixelHeight <= 0) throw new TypeError("getSquarePixelHeight() must return a positive integer.");
+          this.rotation = wb.rotation ?? 0, this.flip = wb.flip ?? !1, this.timestamp = wb.timestamp, this.duration = wb.duration ?? 0, this.colorSpace = bb.getColorSpace()
         }
-        this.encodeOptions = Od?.encodeOptions ?? {}, this.pixelAspectRatio = (0, Wd.id)({
+        this.encodeOptions = wb?.encodeOptions ?? {}, this.pixelAspectRatio = (0, eb.fd)({
           num: this.squarePixelWidth * this.codedHeight,
           den: this.squarePixelHeight * this.codedWidth
-        }), vd?.register(this, {
+        }), Lb?.register(this, {
           type: "video",
           data: this._data
         }, this)
       }
       clone() {
         if (this._closed) throw new Error("VideoSample is closed.");
-        return (0, Wd.M)(null !== this._data), this._data instanceof Qd ? new Nd(this._data, {
+        return (0, eb.L)(null !== this._data), this._data instanceof Ib ? new tb(this._data, {
           timestamp: this.timestamp,
           duration: this.duration,
           rotation: this.rotation,
           flip: this.flip,
           encodeOptions: this.encodeOptions
-        }) : pd(this._data) ? new Nd(this._data.clone(), {
+        }) : mb(this._data) ? new tb(this._data.clone(), {
           timestamp: this.timestamp,
           duration: this.duration,
           rotation: this.rotation,
           flip: this.flip,
           encodeOptions: this.encodeOptions
-        }) : this._data instanceof Uint8Array ? ((0, Wd.M)(this._layout), new Nd(this._data, {
+        }) : this._data instanceof Uint8Array ? ((0, eb.L)(this._layout), new tb(this._data, {
           format: this.format,
           layout: this._layout,
           codedWidth: this.codedWidth,
@@ -6944,7 +6944,7 @@ export const modules = {
           displayHeight: this.displayHeight,
           encodeOptions: this.encodeOptions,
           _doNotCopy: !0
-        })) : new Nd(this._data, {
+        })) : new tb(this._data, {
           format: this.format,
           codedWidth: this.codedWidth,
           codedHeight: this.codedHeight,
@@ -6960,129 +6960,129 @@ export const modules = {
         })
       }
       close() {
-        this._closed || (vd?.unregister(this), this._data instanceof Qd ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : pd(this._data) ? this._data.close() : this._data = null, this._closed = !0)
+        this._closed || (Lb?.unregister(this), this._data instanceof Ib ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : mb(this._data) ? this._data.close() : this._data = null, this._closed = !0)
       }
       allocationSize() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (wd(dd), this._closed) throw new Error("VideoSample is closed.");
-        if (null == (dd.format ?? this.format)) throw new Error("Cannot get allocation size when format is null.");
-        if (pd(this._data)) return this._data.allocationSize(dd);
-        return Ud(this, dd).allocationSize
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (Xb(bb), this._closed) throw new Error("VideoSample is closed.");
+        if (null == (bb.format ?? this.format)) throw new Error("Cannot get allocation size when format is null.");
+        if (mb(this._data)) return this._data.allocationSize(bb);
+        return Kb(this, bb).allocationSize
       }
-      async copyTo(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!(0, Wd.yb)(dd)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
-        if (wd(Od), this._closed) throw new Error("VideoSample is closed.");
-        if (null == (Od.format ?? this.format)) throw new Error("Cannot copy video sample data when format is null.");
-        if ((0, Wd.M)(null !== this._data), pd(this._data)) return this._data.copyTo(dd, Od);
-        if (Od.format && !["RGBA", "RGBX", "BGRA", "BGRX"].includes(this.format) && ["RGBA", "RGBX", "BGRA", "BGRX"].includes(Od.format)) {
-          if (!(this._data instanceof Qd)) {
+      async copyTo(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!(0, eb.sb)(bb)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
+        if (Xb(wb), this._closed) throw new Error("VideoSample is closed.");
+        if (null == (wb.format ?? this.format)) throw new Error("Cannot copy video sample data when format is null.");
+        if ((0, eb.L)(null !== this._data), mb(this._data)) return this._data.copyTo(bb, wb);
+        if (wb.format && !["RGBA", "RGBX", "BGRA", "BGRX"].includes(this.format) && ["RGBA", "RGBX", "BGRA", "BGRX"].includes(wb.format)) {
+          if (!(this._data instanceof Ib)) {
             if ("undefined" === typeof VideoFrame) throw new Error("For this sample, converting from a non-RGB to an RGB format requires VideoFrame to be defined.");
-            const md = this.toVideoFrame(),
-              Wd = await md.copyTo(dd, Od);
-            return md.close(), Wd
+            const Mb = this.toVideoFrame(),
+              eb = await Mb.copyTo(bb, wb);
+            return Mb.close(), eb
           } {
-            const md = {
+            const Mb = {
               stack: [],
               error: void 0,
               hasError: !1
             };
             try {
-              const Wd = Rd(md, await this._data.toRgbSample({
+              const eb = pb(Mb, await this._data.toRgbSample({
                 timestamp: this.timestamp,
                 duration: this.duration,
                 rotation: this.rotation,
                 flip: this.flip
-              }, Od.colorSpace ?? "srgb"), !1);
-              if (!(Wd instanceof Nd)) throw new TypeError("toRgbSample() must return a VideoSample.");
-              if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(Wd.format)) throw new Error(`Sample returned by toRgbSample was expected to have an RGB format, got '${Wd.format}' instead.`);
-              return await Wd.copyTo(dd, Od)
-            } catch (od) {
-              md.error = od, md.hasError = !0
+              }, wb.colorSpace ?? "srgb"), !1);
+              if (!(eb instanceof tb)) throw new TypeError("toRgbSample() must return a VideoSample.");
+              if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(eb.format)) throw new Error(`Sample returned by toRgbSample was expected to have an RGB format, got '${eb.format}' instead.`);
+              return await eb.copyTo(bb, wb)
+            } catch (Ub) {
+              Mb.error = Ub, Mb.hasError = !0
             } finally {
-              Xd(md)
+              Vb(Mb)
             }
           }
         }
-        const md = Ud(this, Od);
-        (0, Wd.M)(this.format);
-        const Fd = (0, Wd.vd)(dd);
-        if (Fd.byteLength < md.allocationSize) throw new TypeError(`Destination buffer too small. Required: ${md.allocationSize}, Available: ${Fd.byteLength}`);
-        const Kd = Jd(this.format);
-        let hd;
-        if (this._data instanceof Qd) {
-          let dd = this._data.getDataPlanes();
-          if ((0, Wd.Xb)(dd) && (dd = await dd), !Array.isArray(dd) || dd.some((dd => !(dd.data instanceof Uint8Array) || !Number.isInteger(dd.stride) || dd.stride < 0))) throw new TypeError('getDataPlanes() must return an array of objects with a Uint8Array "data" property and a non-negative integer "stride" property.');
-          hd = dd
-        } else if (this._data instanceof Uint8Array)(0, Wd.M)(this._layout), (0, Wd.M)(this._layout.length === Kd.length), hd = this._layout.map(((dd, Od) => {
-          const md = Math.ceil(this.codedHeight / Kd[Od].heightDivisor);
+        const Mb = Kb(this, wb);
+        (0, eb.L)(this.format);
+        const Hb = (0, eb.od)(bb);
+        if (Hb.byteLength < Mb.allocationSize) throw new TypeError(`Destination buffer too small. Required: ${Mb.allocationSize}, Available: ${Hb.byteLength}`);
+        const gb = jb(this.format);
+        let lb;
+        if (this._data instanceof Ib) {
+          let bb = this._data.getDataPlanes();
+          if ((0, eb.Ub)(bb) && (bb = await bb), !Array.isArray(bb) || bb.some((bb => !(bb.data instanceof Uint8Array) || !Number.isInteger(bb.stride) || bb.stride < 0))) throw new TypeError('getDataPlanes() must return an array of objects with a Uint8Array "data" property and a non-negative integer "stride" property.');
+          lb = bb
+        } else if (this._data instanceof Uint8Array)(0, eb.L)(this._layout), (0, eb.L)(this._layout.length === gb.length), lb = this._layout.map(((bb, wb) => {
+          const Mb = Math.ceil(this.codedHeight / gb[wb].heightDivisor);
           return {
-            data: this._data.subarray(dd.offset, dd.offset + dd.stride * md),
-            stride: dd.stride
+            data: this._data.subarray(bb.offset, bb.offset + bb.stride * Mb),
+            stride: bb.stride
           }
         }));
         else {
-          const dd = this._data.getContext("2d");
-          (0, Wd.M)(dd);
-          const Od = dd.getImageData(0, 0, this.codedWidth, this.codedHeight);
-          hd = [{
-            data: (0, Wd.vd)(Od.data),
+          const bb = this._data.getContext("2d");
+          (0, eb.L)(bb);
+          const wb = bb.getImageData(0, 0, this.codedWidth, this.codedHeight);
+          lb = [{
+            data: (0, eb.od)(wb.data),
             stride: 4 * this.codedWidth
           }]
         }
-        const vd = [],
-          td = Kd.length;
-        for (let Wd = 0; Wd < td; Wd++) {
-          const dd = md.computedLayouts[Wd],
-            Od = hd[Wd].stride,
-            Rd = hd[Wd].data;
-          let Xd = dd.sourceTop * Od;
-          Xd += dd.sourceLeftBytes;
-          let Kd = dd.destinationOffset;
-          const Qd = dd.sourceWidthBytes,
-            td = {
-              offset: Kd,
-              stride: dd.destinationStride
+        const Lb = [],
+          Ob = gb.length;
+        for (let eb = 0; eb < Ob; eb++) {
+          const bb = Mb.computedLayouts[eb],
+            wb = lb[eb].stride,
+            pb = lb[eb].data;
+          let Vb = bb.sourceTop * wb;
+          Vb += bb.sourceLeftBytes;
+          let gb = bb.destinationOffset;
+          const Ib = bb.sourceWidthBytes,
+            Ob = {
+              offset: gb,
+              stride: bb.destinationStride
             };
-          for (let md = 0; md < dd.sourceHeight; md++) {
-            if (Xd + Qd > Rd.byteLength) throw new Error("Source buffer OOB read.");
-            if (Kd + Qd > Fd.byteLength) throw new Error("Destination buffer OOB write.");
-            const md = Rd.subarray(Xd, Xd + Qd);
-            Fd.set(md, Kd), Xd += Od, Kd += dd.destinationStride
+          for (let Mb = 0; Mb < bb.sourceHeight; Mb++) {
+            if (Vb + Ib > pb.byteLength) throw new Error("Source buffer OOB read.");
+            if (gb + Ib > Hb.byteLength) throw new Error("Destination buffer OOB write.");
+            const Mb = pb.subarray(Vb, Vb + Ib);
+            Hb.set(Mb, gb), Vb += wb, gb += bb.destinationStride
           }
-          vd.push(td)
+          Lb.push(Ob)
         }
-        if (void 0 !== Od.format) {
-          const dd = this.format.startsWith("RGB") !== Od.format.startsWith("RGB"),
-            Wd = this.format.includes("X") && Od.format.includes("A");
-          if (dd || Wd)
-            for (let Od = 0; Od < md.allocationSize; Od += 4) {
-              if (dd) {
-                const dd = Fd[Od],
-                  md = Fd[Od + 2];
-                Fd[Od] = md, Fd[Od + 2] = dd
+        if (void 0 !== wb.format) {
+          const bb = this.format.startsWith("RGB") !== wb.format.startsWith("RGB"),
+            eb = this.format.includes("X") && wb.format.includes("A");
+          if (bb || eb)
+            for (let wb = 0; wb < Mb.allocationSize; wb += 4) {
+              if (bb) {
+                const bb = Hb[wb],
+                  Mb = Hb[wb + 2];
+                Hb[wb] = Mb, Hb[wb + 2] = bb
               }
-              Wd && (Fd[Od + 3] = 255)
+              eb && (Hb[wb + 3] = 255)
             }
         }
-        return vd
+        return Lb
       }
       toVideoFrame() {
         if (this._closed) throw new Error("VideoSample is closed.");
-        if ((0, Wd.M)(null !== this._data), this._data instanceof Qd) {
+        if ((0, eb.L)(null !== this._data), this._data instanceof Ib) {
           if (null === this.format) throw new Error("Cannot convert a VideoSampleResource-backed VideoSample to VideoFrame if format is null.");
-          const dd = this._data.getDataPlanes();
-          if ((0, Wd.Xb)(dd)) throw new Error("Cannot convert a VideoSampleResource-backed VideoSample to VideoFrame if getDataPlanes() returns a promise.");
-          const Od = dd.reduce(((dd, Od) => dd + Od.data.byteLength), 0),
-            md = new Uint8Array(Od);
-          let Fd = 0;
-          const Rd = [];
-          for (const Wd of dd) md.set(Wd.data, Fd), Rd.push(Fd), Fd += Wd.data.byteLength;
-          return new VideoFrame(md, {
+          const bb = this._data.getDataPlanes();
+          if ((0, eb.Ub)(bb)) throw new Error("Cannot convert a VideoSampleResource-backed VideoSample to VideoFrame if getDataPlanes() returns a promise.");
+          const wb = bb.reduce(((bb, wb) => bb + wb.data.byteLength), 0),
+            Mb = new Uint8Array(wb);
+          let Hb = 0;
+          const pb = [];
+          for (const eb of bb) Mb.set(eb.data, Hb), pb.push(Hb), Hb += eb.data.byteLength;
+          return new VideoFrame(Mb, {
             format: this.format,
-            layout: dd.map(((dd, Od) => ({
-              offset: Rd[Od],
-              stride: dd.stride
+            layout: bb.map(((bb, wb) => ({
+              offset: pb[wb],
+              stride: bb.stride
             }))),
             codedWidth: this.codedWidth,
             codedHeight: this.codedHeight,
@@ -7094,10 +7094,10 @@ export const modules = {
             displayHeight: this.squarePixelHeight
           })
         }
-        return pd(this._data) ? new VideoFrame(this._data, {
+        return mb(this._data) ? new VideoFrame(this._data, {
           timestamp: this.microsecondTimestamp,
           duration: this.microsecondDuration || void 0
-        }) : this._data instanceof Uint8Array ? ((0, Wd.M)(this._layout), new VideoFrame(this._data, {
+        }) : this._data instanceof Uint8Array ? ((0, eb.L)(this._layout), new VideoFrame(this._data, {
           format: this.format,
           codedWidth: this.codedWidth,
           codedHeight: this.codedHeight,
@@ -7113,244 +7113,244 @@ export const modules = {
           duration: this.microsecondDuration || void 0
         })
       }
-      draw(dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd) {
-        let vd = 0,
-          Qd = 0,
-          td = this.displayWidth,
-          od = this.displayHeight,
-          Nd = 0,
-          qd = 0,
-          Hd = this.displayWidth,
-          yd = this.displayHeight;
-        if (void 0 !== Rd ? (vd = Od, Qd = md, td = Wd, od = Fd, Nd = Rd, qd = Xd, void 0 !== Kd ? (Hd = Kd, yd = hd) : (Hd = td, yd = od)) : (Nd = Od, qd = md, void 0 !== Wd && (Hd = Wd, yd = Fd)), !("undefined" !== typeof CanvasRenderingContext2D && dd instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && dd instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
-        if (!Number.isFinite(vd)) throw new TypeError("sx must be a number.");
-        if (!Number.isFinite(Qd)) throw new TypeError("sy must be a number.");
-        if (!Number.isFinite(td) || td < 0) throw new TypeError("sWidth must be a non-negative number.");
-        if (!Number.isFinite(od) || od < 0) throw new TypeError("sHeight must be a non-negative number.");
-        if (!Number.isFinite(Nd)) throw new TypeError("dx must be a number.");
-        if (!Number.isFinite(qd)) throw new TypeError("dy must be a number.");
-        if (!Number.isFinite(Hd) || Hd < 0) throw new TypeError("dWidth must be a non-negative number.");
-        if (!Number.isFinite(yd) || yd < 0) throw new TypeError("dHeight must be a non-negative number.");
+      draw(bb, wb, Mb, eb, Hb, pb, Vb, gb, lb) {
+        let Lb = 0,
+          Ib = 0,
+          Ob = this.displayWidth,
+          Ub = this.displayHeight,
+          tb = 0,
+          Cb = 0,
+          Eb = this.displayWidth,
+          Fb = this.displayHeight;
+        if (void 0 !== pb ? (Lb = wb, Ib = Mb, Ob = eb, Ub = Hb, tb = pb, Cb = Vb, void 0 !== gb ? (Eb = gb, Fb = lb) : (Eb = Ob, Fb = Ub)) : (tb = wb, Cb = Mb, void 0 !== eb && (Eb = eb, Fb = Hb)), !("undefined" !== typeof CanvasRenderingContext2D && bb instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && bb instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
+        if (!Number.isFinite(Lb)) throw new TypeError("sx must be a number.");
+        if (!Number.isFinite(Ib)) throw new TypeError("sy must be a number.");
+        if (!Number.isFinite(Ob) || Ob < 0) throw new TypeError("sWidth must be a non-negative number.");
+        if (!Number.isFinite(Ub) || Ub < 0) throw new TypeError("sHeight must be a non-negative number.");
+        if (!Number.isFinite(tb)) throw new TypeError("dx must be a number.");
+        if (!Number.isFinite(Cb)) throw new TypeError("dy must be a number.");
+        if (!Number.isFinite(Eb) || Eb < 0) throw new TypeError("dWidth must be a non-negative number.");
+        if (!Number.isFinite(Fb) || Fb < 0) throw new TypeError("dHeight must be a non-negative number.");
         if (this._closed) throw new Error("VideoSample is closed.");
         ({
-          sx: vd,
-          sy: Qd,
-          sWidth: td,
-          sHeight: od
-        } = this._unmapSourceRegion(vd, Qd, td, od, this.rotation, this.flip));
-        const bd = this.toCanvasImageSource();
-        dd.save();
-        const Td = Nd + Hd / 2,
-          pd = qd + yd / 2;
-        dd.translate(Td, pd), this.flip && dd.scale(-1, 1), dd.rotate(this.rotation * Math.PI / 180);
-        const Yd = this.rotation % 180 === 0 ? 1 : Hd / yd;
-        dd.scale(1 / Yd, Yd), dd.drawImage(bd, vd, Qd, td, od, -Hd / 2, -yd / 2, Hd, yd), dd.restore()
+          sx: Lb,
+          sy: Ib,
+          sWidth: Ob,
+          sHeight: Ub
+        } = this._unmapSourceRegion(Lb, Ib, Ob, Ub, this.rotation, this.flip));
+        const Bb = this.toCanvasImageSource();
+        bb.save();
+        const sb = tb + Eb / 2,
+          mb = Cb + Fb / 2;
+        bb.translate(sb, mb), this.flip && bb.scale(-1, 1), bb.rotate(this.rotation * Math.PI / 180);
+        const hb = this.rotation % 180 === 0 ? 1 : Eb / Fb;
+        bb.scale(1 / hb, hb), bb.drawImage(Bb, Lb, Ib, Ob, Ub, -Eb / 2, -Fb / 2, Eb, Fb), bb.restore()
       }
-      drawWithFit(dd, Od) {
-        if (!("undefined" !== typeof CanvasRenderingContext2D && dd instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && dd instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
-        if (!Od || "object" !== typeof Od) throw new TypeError("options must be an object.");
-        if (!["fill", "contain", "cover"].includes(Od.fit)) throw new TypeError("options.fit must be 'fill', 'contain', or 'cover'.");
-        if (void 0 !== Od.rotation && ![0, 90, 180, 270].includes(Od.rotation)) throw new TypeError("options.rotation, when provided, must be 0, 90, 180, or 270.");
-        if (void 0 !== Od.flip && "boolean" !== typeof Od.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
-        void 0 !== Od.crop && gd(Od.crop, "options.");
-        const md = dd.canvas.width,
-          Wd = dd.canvas.height,
-          Fd = Od.rotation ?? this.rotation,
-          Rd = Od.flip ?? this.flip,
-          [Xd, Kd] = Fd % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
-        let hd, vd, Qd, td, od = Od.crop;
-        od && (od = Yd(od, Xd, Kd));
+      drawWithFit(bb, wb) {
+        if (!("undefined" !== typeof CanvasRenderingContext2D && bb instanceof CanvasRenderingContext2D || "undefined" !== typeof OffscreenCanvasRenderingContext2D && bb instanceof OffscreenCanvasRenderingContext2D)) throw new TypeError("context must be a CanvasRenderingContext2D or OffscreenCanvasRenderingContext2D.");
+        if (!wb || "object" !== typeof wb) throw new TypeError("options must be an object.");
+        if (!["fill", "contain", "cover"].includes(wb.fit)) throw new TypeError("options.fit must be 'fill', 'contain', or 'cover'.");
+        if (void 0 !== wb.rotation && ![0, 90, 180, 270].includes(wb.rotation)) throw new TypeError("options.rotation, when provided, must be 0, 90, 180, or 270.");
+        if (void 0 !== wb.flip && "boolean" !== typeof wb.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
+        void 0 !== wb.crop && zb(wb.crop, "options.");
+        const Mb = bb.canvas.width,
+          eb = bb.canvas.height,
+          Hb = wb.rotation ?? this.rotation,
+          pb = wb.flip ?? this.flip,
+          [Vb, gb] = Hb % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
+        let lb, Lb, Ib, Ob, Ub = wb.crop;
+        Ub && (Ub = hb(Ub, Vb, gb));
         const {
-          sx: Nd,
-          sy: qd,
-          sWidth: Hd,
-          sHeight: yd
-        } = this._unmapSourceRegion(Od.crop?.left ?? 0, Od.crop?.top ?? 0, Od.crop?.width ?? Xd, Od.crop?.height ?? Kd, Fd, Rd);
-        if ("fill" === Od.fit) hd = 0, vd = 0, Qd = md, td = Wd;
+          sx: tb,
+          sy: Cb,
+          sWidth: Eb,
+          sHeight: Fb
+        } = this._unmapSourceRegion(wb.crop?.left ?? 0, wb.crop?.top ?? 0, wb.crop?.width ?? Vb, wb.crop?.height ?? gb, Hb, pb);
+        if ("fill" === wb.fit) lb = 0, Lb = 0, Ib = Mb, Ob = eb;
         else {
-          const [dd, Fd] = Od.crop ? [Od.crop.width, Od.crop.height] : [Xd, Kd], Rd = "contain" === Od.fit ? Math.min(md / dd, Wd / Fd) : Math.max(md / dd, Wd / Fd);
-          Qd = dd * Rd, td = Fd * Rd, hd = (md - Qd) / 2, vd = (Wd - td) / 2
+          const [bb, Hb] = wb.crop ? [wb.crop.width, wb.crop.height] : [Vb, gb], pb = "contain" === wb.fit ? Math.min(Mb / bb, eb / Hb) : Math.max(Mb / bb, eb / Hb);
+          Ib = bb * pb, Ob = Hb * pb, lb = (Mb - Ib) / 2, Lb = (eb - Ob) / 2
         }
-        dd.save();
-        const bd = Fd % 180 === 0 ? 1 : Qd / td;
-        dd.translate(md / 2, Wd / 2), Rd && dd.scale(-1, 1), dd.rotate(Fd * Math.PI / 180), dd.scale(1 / bd, bd), dd.translate(-md / 2, -Wd / 2), dd.drawImage(this.toCanvasImageSource(), Nd, qd, Hd, yd, hd, vd, Qd, td), dd.restore()
+        bb.save();
+        const Bb = Hb % 180 === 0 ? 1 : Ib / Ob;
+        bb.translate(Mb / 2, eb / 2), pb && bb.scale(-1, 1), bb.rotate(Hb * Math.PI / 180), bb.scale(1 / Bb, Bb), bb.translate(-Mb / 2, -eb / 2), bb.drawImage(this.toCanvasImageSource(), tb, Cb, Eb, Fb, lb, Lb, Ib, Ob), bb.restore()
       }
-      _unmapSourceRegion(dd, Od, md, Wd, Fd, Rd) {
-        if (Rd) {
-          dd = (Fd % 180 === 0 ? this.squarePixelWidth : this.squarePixelHeight) - dd - md
+      _unmapSourceRegion(bb, wb, Mb, eb, Hb, pb) {
+        if (pb) {
+          bb = (Hb % 180 === 0 ? this.squarePixelWidth : this.squarePixelHeight) - bb - Mb
         }
-        return 90 === Fd ? [dd, Od, md, Wd] = [Od, this.squarePixelHeight - dd - md, Wd, md] : 180 === Fd ? [dd, Od] = [this.squarePixelWidth - dd - md, this.squarePixelHeight - Od - Wd] : 270 === Fd && ([dd, Od, md, Wd] = [this.squarePixelWidth - Od - Wd, dd, Wd, md]), {
-          sx: dd,
-          sy: Od,
-          sWidth: md,
-          sHeight: Wd
+        return 90 === Hb ? [bb, wb, Mb, eb] = [wb, this.squarePixelHeight - bb - Mb, eb, Mb] : 180 === Hb ? [bb, wb] = [this.squarePixelWidth - bb - Mb, this.squarePixelHeight - wb - eb] : 270 === Hb && ([bb, wb, Mb, eb] = [this.squarePixelWidth - wb - eb, bb, eb, Mb]), {
+          sx: bb,
+          sy: wb,
+          sWidth: Mb,
+          sHeight: eb
         }
       }
-      _drawWithFitAndMipmapping(dd, Od, md) {
-        const Wd = dd.width,
-          Fd = dd.height,
-          [Rd, Xd] = md.rotation % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth],
-          Kd = md.crop ? md.crop.width : Rd,
-          hd = md.crop ? md.crop.height : Xd;
-        let vd = 0;
-        2 * Wd < Kd && 2 * Fd < hd && (vd = Math.floor(Math.log2(Math.min(Kd / Wd, hd / Fd))));
-        const Qd = Wd * 2 ** vd,
-          td = Fd * 2 ** vd,
+      _drawWithFitAndMipmapping(bb, wb, Mb) {
+        const eb = bb.width,
+          Hb = bb.height,
+          [pb, Vb] = Mb.rotation % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth],
+          gb = Mb.crop ? Mb.crop.width : pb,
+          lb = Mb.crop ? Mb.crop.height : Vb;
+        let Lb = 0;
+        2 * eb < gb && 2 * Hb < lb && (Lb = Math.floor(Math.log2(Math.min(gb / eb, lb / Hb))));
+        const Ib = eb * 2 ** Lb,
+          Ob = Hb * 2 ** Lb,
           {
-            canvas: od,
-            context: Nd,
-            isNew: qd
-          } = vd > 0 ? bd(Qd, td) : {
-            canvas: dd,
-            context: Od,
-            isNew: md.targetIsFresh
+            canvas: Ub,
+            context: tb,
+            isNew: Cb
+          } = Lb > 0 ? Bb(Ib, Ob) : {
+            canvas: bb,
+            context: wb,
+            isNew: Mb.targetIsFresh
           };
-        Nd.imageSmoothingQuality = "high", md.fillBlack ? (Nd.fillStyle = "black", Nd.fillRect(0, 0, Qd, td)) : qd || Nd.clearRect(0, 0, Qd, td), this.drawWithFit(Nd, {
-          fit: md.fit,
-          rotation: md.rotation,
-          flip: md.flip,
-          crop: md.crop
-        }), Nd.globalCompositeOperation = "copy";
-        for (let Hd = vd; Hd > 1; Hd--) {
-          const dd = Wd * 2 ** Hd,
-            Od = Fd * 2 ** Hd;
-          Nd.drawImage(od, 0, 0, dd, Od, 0, 0, dd / 2, Od / 2)
+        tb.imageSmoothingQuality = "high", Mb.fillBlack ? (tb.fillStyle = "black", tb.fillRect(0, 0, Ib, Ob)) : Cb || tb.clearRect(0, 0, Ib, Ob), this.drawWithFit(tb, {
+          fit: Mb.fit,
+          rotation: Mb.rotation,
+          flip: Mb.flip,
+          crop: Mb.crop
+        }), tb.globalCompositeOperation = "copy";
+        for (let Eb = Lb; Eb > 1; Eb--) {
+          const bb = eb * 2 ** Eb,
+            wb = Hb * 2 ** Eb;
+          tb.drawImage(Ub, 0, 0, bb, wb, 0, 0, bb / 2, wb / 2)
         }
-        Nd.globalCompositeOperation = "source-over", vd > 0 && (Od.imageSmoothingQuality = "high", Od.globalCompositeOperation = "copy", Od.drawImage(od, 0, 0, 2 * Wd, 2 * Fd, 0, 0, Wd, Fd), Od.globalCompositeOperation = "source-over")
+        tb.globalCompositeOperation = "source-over", Lb > 0 && (wb.imageSmoothingQuality = "high", wb.globalCompositeOperation = "copy", wb.drawImage(Ub, 0, 0, 2 * eb, 2 * Hb, 0, 0, eb, Hb), wb.globalCompositeOperation = "source-over")
       }
       toCanvasImageSource() {
         if (this._closed) throw new Error("VideoSample is closed.");
-        if ((0, Wd.M)(null !== this._data), this._data instanceof Qd || this._data instanceof Uint8Array) {
-          const dd = this.toVideoFrame();
-          return queueMicrotask((() => dd.close())), dd
+        if ((0, eb.L)(null !== this._data), this._data instanceof Ib || this._data instanceof Uint8Array) {
+          const bb = this.toVideoFrame();
+          return queueMicrotask((() => bb.close())), bb
         }
         return this._data
       }
-      async transform(dd) {
-        if (!dd || "object" !== typeof dd) throw new TypeError("options must be an object.");
-        if (void 0 !== dd.width && (!Number.isInteger(dd.width) || dd.width <= 0)) throw new TypeError("options.width, when provided, must be a positive integer.");
-        if (void 0 !== dd.height && (!Number.isInteger(dd.height) || dd.height <= 0)) throw new TypeError("options.height, when provided, must be a positive integer.");
-        if (void 0 !== dd.roundDimensionsTo && (!Number.isInteger(dd.roundDimensionsTo) || dd.roundDimensionsTo <= 0)) throw new TypeError("options.roundDimensionsTo, when provided, must be a positive integer.");
-        if (void 0 !== dd.fit && !["fill", "contain", "cover"].includes(dd.fit)) throw new TypeError('options.fit, when provided, must be one of "fill", "contain", or "cover".');
-        if (void 0 !== dd.width && void 0 !== dd.height && void 0 === dd.fit) throw new TypeError("When both options.width and options.height are provided, options.fit must also be provided.");
-        if (void 0 !== dd.rotate && ![0, 90, 180, 270].includes(dd.rotate)) throw new TypeError("options.rotate, when provided, must be 0, 90, 180 or 270.");
-        if (void 0 !== dd.flip && "boolean" !== typeof dd.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
-        if (void 0 !== dd.crop && gd(dd.crop, "options."), void 0 !== dd.alpha && !["keep", "discard"].includes(dd.alpha)) throw new TypeError("options.alpha, when provided, must be 'keep' or 'discard'.");
+      async transform(bb) {
+        if (!bb || "object" !== typeof bb) throw new TypeError("options must be an object.");
+        if (void 0 !== bb.width && (!Number.isInteger(bb.width) || bb.width <= 0)) throw new TypeError("options.width, when provided, must be a positive integer.");
+        if (void 0 !== bb.height && (!Number.isInteger(bb.height) || bb.height <= 0)) throw new TypeError("options.height, when provided, must be a positive integer.");
+        if (void 0 !== bb.roundDimensionsTo && (!Number.isInteger(bb.roundDimensionsTo) || bb.roundDimensionsTo <= 0)) throw new TypeError("options.roundDimensionsTo, when provided, must be a positive integer.");
+        if (void 0 !== bb.fit && !["fill", "contain", "cover"].includes(bb.fit)) throw new TypeError('options.fit, when provided, must be one of "fill", "contain", or "cover".');
+        if (void 0 !== bb.width && void 0 !== bb.height && void 0 === bb.fit) throw new TypeError("When both options.width and options.height are provided, options.fit must also be provided.");
+        if (void 0 !== bb.rotate && ![0, 90, 180, 270].includes(bb.rotate)) throw new TypeError("options.rotate, when provided, must be 0, 90, 180 or 270.");
+        if (void 0 !== bb.flip && "boolean" !== typeof bb.flip) throw new TypeError("options.flip, when provided, must be a boolean.");
+        if (void 0 !== bb.crop && zb(bb.crop, "options."), void 0 !== bb.alpha && !["keep", "discard"].includes(bb.alpha)) throw new TypeError("options.alpha, when provided, must be 'keep' or 'discard'.");
         const {
-          rotation: Od,
-          flip: md
-        } = (0, Wd.jb)(this.rotation, this.flip, dd.rotate ?? 0, dd.flip ?? !1), [Fd, Rd] = Od % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
-        let Xd = dd.crop;
-        Xd && (Xd = Yd(Xd, Fd, Rd));
-        const Kd = Xd ? Xd.width : Fd,
-          hd = Xd ? Xd.height : Rd,
-          vd = Kd / hd;
-        let Qd, td;
-        void 0 !== dd.width && void 0 === dd.height ? (Qd = dd.width, td = Qd / vd) : void 0 === dd.width && void 0 !== dd.height ? (td = dd.height, Qd = td * vd) : void 0 !== dd.width && void 0 !== dd.height ? (Qd = dd.width, td = dd.height) : (Qd = Kd, td = hd), Qd = (0, Wd.Qc)(Qd, dd.roundDimensionsTo ?? 1), td = (0, Wd.Qc)(td, dd.roundDimensionsTo ?? 1);
-        const od = {
-          width: Qd,
-          height: td,
-          fit: dd.fit ?? "fill",
-          rotation: Od,
-          flip: md,
-          crop: Xd ?? {
+          rotation: wb,
+          flip: Mb
+        } = (0, eb.hb)(this.rotation, this.flip, bb.rotate ?? 0, bb.flip ?? !1), [Hb, pb] = wb % 180 === 0 ? [this.squarePixelWidth, this.squarePixelHeight] : [this.squarePixelHeight, this.squarePixelWidth];
+        let Vb = bb.crop;
+        Vb && (Vb = hb(Vb, Hb, pb));
+        const gb = Vb ? Vb.width : Hb,
+          lb = Vb ? Vb.height : pb,
+          Lb = gb / lb;
+        let Ib, Ob;
+        void 0 !== bb.width && void 0 === bb.height ? (Ib = bb.width, Ob = Ib / Lb) : void 0 === bb.width && void 0 !== bb.height ? (Ob = bb.height, Ib = Ob * Lb) : void 0 !== bb.width && void 0 !== bb.height ? (Ib = bb.width, Ob = bb.height) : (Ib = gb, Ob = lb), Ib = (0, eb.Pc)(Ib, bb.roundDimensionsTo ?? 1), Ob = (0, eb.Pc)(Ob, bb.roundDimensionsTo ?? 1);
+        const Ub = {
+          width: Ib,
+          height: Ob,
+          fit: bb.fit ?? "fill",
+          rotation: wb,
+          flip: Mb,
+          crop: Vb ?? {
             left: 0,
             top: 0,
-            width: Fd,
-            height: Rd
+            width: Hb,
+            height: pb
           },
-          alpha: dd.alpha ?? "keep"
+          alpha: bb.alpha ?? "keep"
         };
-        for (const Nd of qd) {
-          let dd = Nd(this, od);
-          if ((0, Wd.Xb)(dd) && (dd = await dd), null !== dd) return dd
+        for (const tb of Cb) {
+          let bb = tb(this, Ub);
+          if ((0, eb.Ub)(bb) && (bb = await bb), null !== bb) return bb
         }
         const {
-          canvas: Hd,
-          context: yd,
-          isNew: Td
-        } = bd(od.width, od.height);
-        return this._drawWithFitAndMipmapping(Hd, yd, {
-          fit: od.fit,
-          rotation: od.rotation,
-          flip: od.flip,
-          crop: od.crop,
-          targetIsFresh: Td,
-          fillBlack: "discard" === od.alpha
-        }), new Nd(Hd, {
+          canvas: Eb,
+          context: Fb,
+          isNew: sb
+        } = Bb(Ub.width, Ub.height);
+        return this._drawWithFitAndMipmapping(Eb, Fb, {
+          fit: Ub.fit,
+          rotation: Ub.rotation,
+          flip: Ub.flip,
+          crop: Ub.crop,
+          targetIsFresh: sb,
+          fillBlack: "discard" === Ub.alpha
+        }), new tb(Eb, {
           timestamp: this.timestamp,
           duration: this.duration,
           rotation: 0,
           flip: !1
         })
       }
-      setRotation(dd) {
-        if (![0, 90, 180, 270].includes(dd)) throw new TypeError("newRotation must be 0, 90, 180, or 270.");
-        this.rotation = dd
+      setRotation(bb) {
+        if (![0, 90, 180, 270].includes(bb)) throw new TypeError("newRotation must be 0, 90, 180, or 270.");
+        this.rotation = bb
       }
-      setFlip(dd) {
-        if ("boolean" !== typeof dd) throw new TypeError("newFlip must be a boolean.");
-        this.flip = dd
+      setFlip(bb) {
+        if ("boolean" !== typeof bb) throw new TypeError("newFlip must be a boolean.");
+        this.flip = bb
       }
-      setTimestamp(dd) {
-        if (!Number.isFinite(dd)) throw new TypeError("newTimestamp must be a number.");
-        this.timestamp = dd
+      setTimestamp(bb) {
+        if (!Number.isFinite(bb)) throw new TypeError("newTimestamp must be a number.");
+        this.timestamp = bb
       }
-      setDuration(dd) {
-        if (!Number.isFinite(dd) || dd < 0) throw new TypeError("newDuration must be a non-negative number.");
-        this.duration = dd
+      setDuration(bb) {
+        if (!Number.isFinite(bb) || bb < 0) throw new TypeError("newDuration must be a non-negative number.");
+        this.duration = bb
       }
-      setEncodeOptions(dd) {
-        if (!dd || "object" !== typeof dd) throw new TypeError("newEncodeOptions must be an object.");
-        this.encodeOptions = dd
+      setEncodeOptions(bb) {
+        if (!bb || "object" !== typeof bb) throw new TypeError("newEncodeOptions must be an object.");
+        this.encodeOptions = bb
       } [Symbol.dispose]() {
         this.close()
       }
     }
-    const qd = [],
-      Hd = [];
-    let yd = 0;
-    const bd = (dd, Od) => {
-      for (const Wd of Hd)
-        if (Wd.canvas.width === dd && Wd.canvas.height === Od) return Wd.age = yd++, {
-          canvas: Wd.canvas,
-          context: Wd.context,
+    const Cb = [],
+      Eb = [];
+    let Fb = 0;
+    const Bb = (bb, wb) => {
+      for (const eb of Eb)
+        if (eb.canvas.width === bb && eb.canvas.height === wb) return eb.age = Fb++, {
+          canvas: eb.canvas,
+          context: eb.context,
           isNew: !1
         };
-      let md;
-      if ("undefined" !== typeof OffscreenCanvas) md = new OffscreenCanvas(dd, Od);
+      let Mb;
+      if ("undefined" !== typeof OffscreenCanvas) Mb = new OffscreenCanvas(bb, wb);
       else {
         if ("undefined" === typeof window || "undefined" === typeof document) throw new Error("Cannot transform VideoSamples in this environment. Either run in an environment with OffscreenCanvas or HTMLCanvasElement, or supply a custom VideoSample transformer using registerVideoSampleTransformer().");
-        md = document.createElement("canvas"), md.width = dd, md.height = Od
+        Mb = document.createElement("canvas"), Mb.width = bb, Mb.height = wb
       }
-      const Fd = md.getContext("2d", {
+      const Hb = Mb.getContext("2d", {
         alpha: !0,
         willReadFrequently: !1
       });
-      if (!Fd) throw new Error("The '2d' canvas context is required to transform VideoSamples. Register a custom transformer using registerVideoSampleTransformer to work around this limitation.");
-      return Hd.length >= 3 && Hd.splice((0, Wd.F)(Hd, (dd => dd.age)), 1), Hd.push({
-        canvas: md,
-        context: Fd,
-        age: yd++
+      if (!Hb) throw new Error("The '2d' canvas context is required to transform VideoSamples. Register a custom transformer using registerVideoSampleTransformer to work around this limitation.");
+      return Eb.length >= 3 && Eb.splice((0, eb.D)(Eb, (bb => bb.age)), 1), Eb.push({
+        canvas: Mb,
+        context: Hb,
+        age: Fb++
       }), {
-        canvas: md,
-        context: Fd,
+        canvas: Mb,
+        context: Hb,
         isNew: !0
       }
     };
-    class Td {
-      constructor(dd) {
-        if (void 0 !== dd) {
-          if (!dd || "object" !== typeof dd) throw new TypeError("init.colorSpace, when provided, must be an object.");
-          const Od = Object.keys(Wd.g);
-          if (null != dd.primaries && !Od.includes(dd.primaries)) throw new TypeError(`init.colorSpace.primaries, when provided, must be one of ${Od.join(", ")}.`);
-          const md = Object.keys(Wd.t);
-          if (null != dd.transfer && !md.includes(dd.transfer)) throw new TypeError(`init.colorSpace.transfer, when provided, must be one of ${md.join(", ")}.`);
-          const Fd = Object.keys(Wd.p);
-          if (null != dd.matrix && !Fd.includes(dd.matrix)) throw new TypeError(`init.colorSpace.matrix, when provided, must be one of ${Fd.join(", ")}.`);
-          if (null != dd.fullRange && "boolean" !== typeof dd.fullRange) throw new TypeError("init.colorSpace.fullRange, when provided, must be a boolean.")
+    class sb {
+      constructor(bb) {
+        if (void 0 !== bb) {
+          if (!bb || "object" !== typeof bb) throw new TypeError("init.colorSpace, when provided, must be an object.");
+          const wb = Object.keys(eb.e);
+          if (null != bb.primaries && !wb.includes(bb.primaries)) throw new TypeError(`init.colorSpace.primaries, when provided, must be one of ${wb.join(", ")}.`);
+          const Mb = Object.keys(eb.s);
+          if (null != bb.transfer && !Mb.includes(bb.transfer)) throw new TypeError(`init.colorSpace.transfer, when provided, must be one of ${Mb.join(", ")}.`);
+          const Hb = Object.keys(eb.m);
+          if (null != bb.matrix && !Hb.includes(bb.matrix)) throw new TypeError(`init.colorSpace.matrix, when provided, must be one of ${Hb.join(", ")}.`);
+          if (null != bb.fullRange && "boolean" !== typeof bb.fullRange) throw new TypeError("init.colorSpace.fullRange, when provided, must be a boolean.")
         }
-        this.primaries = dd?.primaries ?? null, this.transfer = dd?.transfer ?? null, this.matrix = dd?.matrix ?? null, this.fullRange = dd?.fullRange ?? null
+        this.primaries = bb?.primaries ?? null, this.transfer = bb?.transfer ?? null, this.matrix = bb?.matrix ?? null, this.fullRange = bb?.fullRange ?? null
       }
       toJSON() {
         return {
@@ -7361,114 +7361,114 @@ export const modules = {
         }
       }
     }
-    const pd = dd => "undefined" !== typeof VideoFrame && dd instanceof VideoFrame,
-      Yd = (dd, Od, md) => {
-        const Fd = Math.min(dd.left, Od),
-          Rd = Math.min(dd.top, md),
-          Xd = Math.min(dd.width, Od - Fd),
-          Kd = Math.min(dd.height, md - Rd);
-        return (0, Wd.M)(Xd >= 0), (0, Wd.M)(Kd >= 0), {
-          left: Fd,
-          top: Rd,
-          width: Xd,
-          height: Kd
+    const mb = bb => "undefined" !== typeof VideoFrame && bb instanceof VideoFrame,
+      hb = (bb, wb, Mb) => {
+        const Hb = Math.min(bb.left, wb),
+          pb = Math.min(bb.top, Mb),
+          Vb = Math.min(bb.width, wb - Hb),
+          gb = Math.min(bb.height, Mb - pb);
+        return (0, eb.L)(Vb >= 0), (0, eb.L)(gb >= 0), {
+          left: Hb,
+          top: pb,
+          width: Vb,
+          height: gb
         }
       },
-      gd = (dd, Od) => {
-        if (!dd || "object" !== typeof dd) throw new TypeError(Od + "crop, when provided, must be an object.");
-        if (!Number.isInteger(dd.left) || dd.left < 0) throw new TypeError(Od + "crop.left must be a non-negative integer.");
-        if (!Number.isInteger(dd.top) || dd.top < 0) throw new TypeError(Od + "crop.top must be a non-negative integer.");
-        if (!Number.isInteger(dd.width) || dd.width < 0) throw new TypeError(Od + "crop.width must be a non-negative integer.");
-        if (!Number.isInteger(dd.height) || dd.height < 0) throw new TypeError(Od + "crop.height must be a non-negative integer.")
+      zb = (bb, wb) => {
+        if (!bb || "object" !== typeof bb) throw new TypeError(wb + "crop, when provided, must be an object.");
+        if (!Number.isInteger(bb.left) || bb.left < 0) throw new TypeError(wb + "crop.left must be a non-negative integer.");
+        if (!Number.isInteger(bb.top) || bb.top < 0) throw new TypeError(wb + "crop.top must be a non-negative integer.");
+        if (!Number.isInteger(bb.width) || bb.width < 0) throw new TypeError(wb + "crop.width must be a non-negative integer.");
+        if (!Number.isInteger(bb.height) || bb.height < 0) throw new TypeError(wb + "crop.height must be a non-negative integer.")
       },
-      wd = dd => {
-        if (!dd || "object" !== typeof dd) throw new TypeError("options must be an object.");
-        if (void 0 !== dd.colorSpace && !["display-p3", "srgb"].includes(dd.colorSpace)) throw new TypeError("options.colorSpace, when provided, must be 'display-p3' or 'srgb'.");
-        if (void 0 !== dd.format && "string" !== typeof dd.format) throw new TypeError("options.format, when provided, must be a string.");
-        if (void 0 !== dd.layout) {
-          if (!Array.isArray(dd.layout)) throw new TypeError("options.layout, when provided, must be an array.");
-          for (const Od of dd.layout) {
-            if (!Od || "object" !== typeof Od) throw new TypeError("Each entry in options.layout must be an object.");
-            if (!Number.isInteger(Od.offset) || Od.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
-            if (!Number.isInteger(Od.stride) || Od.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
+      Xb = bb => {
+        if (!bb || "object" !== typeof bb) throw new TypeError("options must be an object.");
+        if (void 0 !== bb.colorSpace && !["display-p3", "srgb"].includes(bb.colorSpace)) throw new TypeError("options.colorSpace, when provided, must be 'display-p3' or 'srgb'.");
+        if (void 0 !== bb.format && "string" !== typeof bb.format) throw new TypeError("options.format, when provided, must be a string.");
+        if (void 0 !== bb.layout) {
+          if (!Array.isArray(bb.layout)) throw new TypeError("options.layout, when provided, must be an array.");
+          for (const wb of bb.layout) {
+            if (!wb || "object" !== typeof wb) throw new TypeError("Each entry in options.layout must be an object.");
+            if (!Number.isInteger(wb.offset) || wb.offset < 0) throw new TypeError("plane.offset must be a non-negative integer.");
+            if (!Number.isInteger(wb.stride) || wb.stride < 0) throw new TypeError("plane.stride must be a non-negative integer.")
           }
         }
-        if (void 0 !== dd.rect) {
-          if (!dd.rect || "object" !== typeof dd.rect) throw new TypeError("options.rect, when provided, must be an object.");
-          if (void 0 !== dd.rect.x && (!Number.isInteger(dd.rect.x) || dd.rect.x < 0)) throw new TypeError("options.rect.x, when provided, must be a non-negative integer.");
-          if (void 0 !== dd.rect.y && (!Number.isInteger(dd.rect.y) || dd.rect.y < 0)) throw new TypeError("options.rect.y, when provided, must be a non-negative integer.");
-          if (void 0 !== dd.rect.width && (!Number.isInteger(dd.rect.width) || dd.rect.width < 0)) throw new TypeError("options.rect.width, when provided, must be a non-negative integer.");
-          if (void 0 !== dd.rect.height && (!Number.isInteger(dd.rect.height) || dd.rect.height < 0)) throw new TypeError("options.rect.height, when provided, must be a non-negative integer.")
+        if (void 0 !== bb.rect) {
+          if (!bb.rect || "object" !== typeof bb.rect) throw new TypeError("options.rect, when provided, must be an object.");
+          if (void 0 !== bb.rect.x && (!Number.isInteger(bb.rect.x) || bb.rect.x < 0)) throw new TypeError("options.rect.x, when provided, must be a non-negative integer.");
+          if (void 0 !== bb.rect.y && (!Number.isInteger(bb.rect.y) || bb.rect.y < 0)) throw new TypeError("options.rect.y, when provided, must be a non-negative integer.");
+          if (void 0 !== bb.rect.width && (!Number.isInteger(bb.rect.width) || bb.rect.width < 0)) throw new TypeError("options.rect.width, when provided, must be a non-negative integer.");
+          if (void 0 !== bb.rect.height && (!Number.isInteger(bb.rect.height) || bb.rect.height < 0)) throw new TypeError("options.rect.height, when provided, must be a non-negative integer.")
         }
       },
-      Ed = (dd, Od, md) => {
-        const Wd = Jd(dd),
-          Fd = [];
-        let Rd = 0;
-        for (const Xd of Wd) {
-          const dd = Math.ceil(Od / Xd.widthDivisor),
-            Wd = Math.ceil(md / Xd.heightDivisor),
-            Kd = dd * Xd.sampleBytes,
-            hd = Kd * Wd;
-          Fd.push({
-            offset: Rd,
-            stride: Kd
-          }), Rd += hd
+      xb = (bb, wb, Mb) => {
+        const eb = jb(bb),
+          Hb = [];
+        let pb = 0;
+        for (const Vb of eb) {
+          const bb = Math.ceil(wb / Vb.widthDivisor),
+            eb = Math.ceil(Mb / Vb.heightDivisor),
+            gb = bb * Vb.sampleBytes,
+            lb = gb * eb;
+          Hb.push({
+            offset: pb,
+            stride: gb
+          }), pb += lb
         }
-        return Fd
+        return Hb
       },
-      Jd = dd => {
-        const Od = (dd, Od, md, Wd, Fd) => {
-          const Rd = [{
-            sampleBytes: dd,
+      jb = bb => {
+        const wb = (bb, wb, Mb, eb, Hb) => {
+          const pb = [{
+            sampleBytes: bb,
             widthDivisor: 1,
             heightDivisor: 1
           }, {
-            sampleBytes: Od,
-            widthDivisor: md,
-            heightDivisor: Wd
+            sampleBytes: wb,
+            widthDivisor: Mb,
+            heightDivisor: eb
           }, {
-            sampleBytes: Od,
-            widthDivisor: md,
-            heightDivisor: Wd
+            sampleBytes: wb,
+            widthDivisor: Mb,
+            heightDivisor: eb
           }];
-          return Fd && Rd.push({
-            sampleBytes: dd,
+          return Hb && pb.push({
+            sampleBytes: bb,
             widthDivisor: 1,
             heightDivisor: 1
-          }), Rd
+          }), pb
         };
-        switch (dd) {
+        switch (bb) {
           case "I420":
-            return Od(1, 1, 2, 2, !1);
+            return wb(1, 1, 2, 2, !1);
           case "I420P10":
           case "I420P12":
-            return Od(2, 2, 2, 2, !1);
+            return wb(2, 2, 2, 2, !1);
           case "I420A":
-            return Od(1, 1, 2, 2, !0);
+            return wb(1, 1, 2, 2, !0);
           case "I420AP10":
           case "I420AP12":
-            return Od(2, 2, 2, 2, !0);
+            return wb(2, 2, 2, 2, !0);
           case "I422":
-            return Od(1, 1, 2, 1, !1);
+            return wb(1, 1, 2, 1, !1);
           case "I422P10":
           case "I422P12":
-            return Od(2, 2, 2, 1, !1);
+            return wb(2, 2, 2, 1, !1);
           case "I422A":
-            return Od(1, 1, 2, 1, !0);
+            return wb(1, 1, 2, 1, !0);
           case "I422AP10":
           case "I422AP12":
-            return Od(2, 2, 2, 1, !0);
+            return wb(2, 2, 2, 1, !0);
           case "I444":
-            return Od(1, 1, 1, 1, !1);
+            return wb(1, 1, 1, 1, !1);
           case "I444P10":
           case "I444P12":
-            return Od(2, 2, 1, 1, !1);
+            return wb(2, 2, 1, 1, !1);
           case "I444A":
-            return Od(1, 1, 1, 1, !0);
+            return wb(1, 1, 1, 1, !0);
           case "I444AP10":
           case "I444AP12":
-            return Od(2, 2, 1, 1, !0);
+            return wb(2, 2, 1, 1, !0);
           case "NV12":
             return [{
               sampleBytes: 1,
@@ -7489,64 +7489,64 @@ export const modules = {
               heightDivisor: 1
             }];
           default:
-            (0, Wd.J)(dd), (0, Wd.M)(!1)
+            (0, eb.H)(bb), (0, eb.L)(!1)
         }
       },
-      Ud = (dd, Od) => {
-        const md = {
+      Kb = (bb, wb) => {
+        const Mb = {
             left: 0,
             top: 0,
-            width: dd.codedWidth,
-            height: dd.codedHeight
+            width: bb.codedWidth,
+            height: bb.codedHeight
           },
-          Wd = Od.rect,
-          Fd = xd(md, Wd, dd.codedWidth, dd.codedHeight, dd.format),
-          Rd = Od.layout;
-        let Xd;
-        if (Od.format && Od.format !== dd.format) {
-          if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(Od.format)) throw new Error("NotSupportedError: Invalid destination format.");
-          Xd = Od.format
-        } else Xd = dd.format;
-        return Sd(Fd, Xd, Rd)
+          eb = wb.rect,
+          Hb = rb(Mb, eb, bb.codedWidth, bb.codedHeight, bb.format),
+          pb = wb.layout;
+        let Vb;
+        if (wb.format && wb.format !== bb.format) {
+          if (!["RGBA", "RGBX", "BGRA", "BGRX"].includes(wb.format)) throw new Error("NotSupportedError: Invalid destination format.");
+          Vb = wb.format
+        } else Vb = bb.format;
+        return Db(Hb, Vb, pb)
       },
-      xd = (dd, Od, md, Wd, Fd) => {
-        const Rd = {
-          ...dd
+      rb = (bb, wb, Mb, eb, Hb) => {
+        const pb = {
+          ...bb
         };
-        if (void 0 !== Od) {
-          if (0 === Od.width || 0 === Od.height) throw new TypeError("visibleRect dimensions cannot be zero.");
-          if ((Od.x || 0) + (Od.width || 0) > md) throw new TypeError("visibleRect exceeds codedWidth.");
-          if ((Od.y || 0) + (Od.height || 0) > Wd) throw new TypeError("visibleRect exceeds codedHeight.");
-          Rd.x = Od.x || 0, Rd.y = Od.y || 0, Rd.width = Od.width || 0, Rd.height = Od.height || 0
+        if (void 0 !== wb) {
+          if (0 === wb.width || 0 === wb.height) throw new TypeError("visibleRect dimensions cannot be zero.");
+          if ((wb.x || 0) + (wb.width || 0) > Mb) throw new TypeError("visibleRect exceeds codedWidth.");
+          if ((wb.y || 0) + (wb.height || 0) > eb) throw new TypeError("visibleRect exceeds codedHeight.");
+          pb.x = wb.x || 0, pb.y = wb.y || 0, pb.width = wb.width || 0, pb.height = wb.height || 0
         }
-        if (!Bd(Fd, Rd)) throw new TypeError("visibleRect alignment is invalid for the format.");
-        return Rd
+        if (!Rb(Hb, pb)) throw new TypeError("visibleRect alignment is invalid for the format.");
+        return pb
       },
-      Bd = (dd, Od) => {
-        if (null === dd) return !0;
-        const md = Jd(dd);
-        for (let Wd = 0; Wd < md.length; Wd++) {
-          const dd = md[Wd],
-            Fd = dd.widthDivisor,
-            Rd = dd.heightDivisor;
-          if ((Od.x || 0) % Fd !== 0) return !1;
-          if ((Od.y || 0) % Rd !== 0) return !1
+      Rb = (bb, wb) => {
+        if (null === bb) return !0;
+        const Mb = jb(bb);
+        for (let eb = 0; eb < Mb.length; eb++) {
+          const bb = Mb[eb],
+            Hb = bb.widthDivisor,
+            pb = bb.heightDivisor;
+          if ((wb.x || 0) % Hb !== 0) return !1;
+          if ((wb.y || 0) % pb !== 0) return !1
         }
         return !0
       },
-      Sd = (dd, Od, md) => {
-        const Wd = Jd(Od),
-          Fd = Wd.length;
-        if (void 0 !== md && md.length !== Fd) throw new TypeError(`Layout must have ${Fd} planes.`);
-        let Rd = 0;
-        const Xd = [],
-          Kd = [];
-        for (let hd = 0; hd < Fd; hd++) {
-          const Od = Wd[hd],
-            Fd = Od.sampleBytes,
-            vd = Od.widthDivisor,
-            Qd = Od.heightDivisor,
-            td = {
+      Db = (bb, wb, Mb) => {
+        const eb = jb(wb),
+          Hb = eb.length;
+        if (void 0 !== Mb && Mb.length !== Hb) throw new TypeError(`Layout must have ${Hb} planes.`);
+        let pb = 0;
+        const Vb = [],
+          gb = [];
+        for (let lb = 0; lb < Hb; lb++) {
+          const wb = eb[lb],
+            Hb = wb.sampleBytes,
+            Lb = wb.widthDivisor,
+            Ib = wb.heightDivisor,
+            Ob = {
               destinationOffset: 0,
               destinationStride: 0,
               sourceTop: 0,
@@ -7554,200 +7554,200 @@ export const modules = {
               sourceLeftBytes: 0,
               sourceWidthBytes: 0
             };
-          if (td.sourceTop = Math.ceil(Math.trunc(dd.y || 0) / Qd), td.sourceHeight = Math.ceil(Math.trunc(dd.height || 0) / Qd), td.sourceLeftBytes = Math.floor(Math.trunc(dd.x || 0) / vd) * Fd, td.sourceWidthBytes = Math.floor(Math.trunc(dd.width || 0) / vd) * Fd, void 0 !== md) {
-            const dd = md[hd];
-            if (dd.stride < td.sourceWidthBytes) throw new TypeError(`Stride for plane ${hd} is too small.`);
-            td.destinationOffset = dd.offset, td.destinationStride = dd.stride
-          } else td.destinationOffset = Rd, td.destinationStride = td.sourceWidthBytes;
-          const od = td.destinationStride * td.sourceHeight + td.destinationOffset;
-          if (od > 4294967295) throw new TypeError("Allocation size exceeds limit.");
-          Kd.push(od), Rd = Math.max(Rd, od);
-          for (let dd = 0; dd < hd; dd++) {
-            const Od = Xd[dd];
-            if (!(Kd[hd] <= Od.destinationOffset || Kd[dd] <= td.destinationOffset)) throw new TypeError("Planes overlap.")
+          if (Ob.sourceTop = Math.ceil(Math.trunc(bb.y || 0) / Ib), Ob.sourceHeight = Math.ceil(Math.trunc(bb.height || 0) / Ib), Ob.sourceLeftBytes = Math.floor(Math.trunc(bb.x || 0) / Lb) * Hb, Ob.sourceWidthBytes = Math.floor(Math.trunc(bb.width || 0) / Lb) * Hb, void 0 !== Mb) {
+            const bb = Mb[lb];
+            if (bb.stride < Ob.sourceWidthBytes) throw new TypeError(`Stride for plane ${lb} is too small.`);
+            Ob.destinationOffset = bb.offset, Ob.destinationStride = bb.stride
+          } else Ob.destinationOffset = pb, Ob.destinationStride = Ob.sourceWidthBytes;
+          const Ub = Ob.destinationStride * Ob.sourceHeight + Ob.destinationOffset;
+          if (Ub > 4294967295) throw new TypeError("Allocation size exceeds limit.");
+          gb.push(Ub), pb = Math.max(pb, Ub);
+          for (let bb = 0; bb < lb; bb++) {
+            const wb = Vb[bb];
+            if (!(gb[lb] <= wb.destinationOffset || gb[bb] <= Ob.destinationOffset)) throw new TypeError("Planes overlap.")
           }
-          Xd.push(td)
+          Vb.push(Ob)
         }
         return {
-          allocationSize: Rd,
-          computedLayouts: Xd
+          allocationSize: pb,
+          computedLayouts: Vb
         }
       },
-      sd = new Set(["f32", "f32-planar", "s16", "s16-planar", "s32", "s32-planar", "u8", "u8-planar"]);
-    class ud {
+      cb = new Set(["f32", "f32-planar", "s16", "s16-planar", "s32", "s32-planar", "u8", "u8-planar"]);
+    class Yb {
       constructor() {
         this._referenceCount = 0
       }
     }
-    class Vd {
+    class Zb {
       get microsecondTimestamp() {
-        return Math.trunc(Wd.s * this.timestamp)
+        return Math.trunc(eb.r * this.timestamp)
       }
       get microsecondDuration() {
-        return Math.trunc(Wd.s * this.duration)
+        return Math.trunc(eb.r * this.duration)
       }
-      constructor(dd) {
-        if (this._closed = !1, Ld(dd)) {
-          if (null === dd.format) throw new TypeError("AudioData with null format is not supported.");
-          this._data = dd, this.format = dd.format, this.sampleRate = dd.sampleRate, this.numberOfFrames = dd.numberOfFrames, this.numberOfChannels = dd.numberOfChannels, this.timestamp = dd.timestamp / 1e6, this.duration = dd.numberOfFrames / dd.sampleRate
-        } else if (dd instanceof ud) {
-          if (this._data = dd, dd._referenceCount++, this.format = dd.getFormat(), !sd.has(this.format)) throw new TypeError("getFormat() must return an AudioSampleFormat.");
-          if (this.sampleRate = dd.getSampleRate(), !Number.isInteger(this.sampleRate) || this.sampleRate <= 0) throw new TypeError("getSampleRate() must return a positive integer.");
-          if (this.numberOfFrames = dd.getNumberOfFrames(), !Number.isInteger(this.numberOfFrames) || this.numberOfFrames < 0) throw new TypeError("getNumberOfFrames() must return a non-negative integer.");
-          if (this.numberOfChannels = dd.getNumberOfChannels(), !Number.isInteger(this.numberOfChannels) || this.numberOfChannels <= 0) throw new TypeError("getNumberOfChannels() must return a positive integer.");
-          if (this.timestamp = dd.getTimestamp(), !Number.isFinite(this.timestamp)) throw new TypeError("getTimestamp() must return a finite number.");
+      constructor(bb) {
+        if (this._closed = !1, Sb(bb)) {
+          if (null === bb.format) throw new TypeError("AudioData with null format is not supported.");
+          this._data = bb, this.format = bb.format, this.sampleRate = bb.sampleRate, this.numberOfFrames = bb.numberOfFrames, this.numberOfChannels = bb.numberOfChannels, this.timestamp = bb.timestamp / 1e6, this.duration = bb.numberOfFrames / bb.sampleRate
+        } else if (bb instanceof Yb) {
+          if (this._data = bb, bb._referenceCount++, this.format = bb.getFormat(), !cb.has(this.format)) throw new TypeError("getFormat() must return an AudioSampleFormat.");
+          if (this.sampleRate = bb.getSampleRate(), !Number.isInteger(this.sampleRate) || this.sampleRate <= 0) throw new TypeError("getSampleRate() must return a positive integer.");
+          if (this.numberOfFrames = bb.getNumberOfFrames(), !Number.isInteger(this.numberOfFrames) || this.numberOfFrames < 0) throw new TypeError("getNumberOfFrames() must return a non-negative integer.");
+          if (this.numberOfChannels = bb.getNumberOfChannels(), !Number.isInteger(this.numberOfChannels) || this.numberOfChannels <= 0) throw new TypeError("getNumberOfChannels() must return a positive integer.");
+          if (this.timestamp = bb.getTimestamp(), !Number.isFinite(this.timestamp)) throw new TypeError("getTimestamp() must return a finite number.");
           this.duration = this.numberOfFrames / this.sampleRate
         } else {
-          if (!dd || "object" !== typeof dd) throw new TypeError("Invalid AudioDataInit: must be an object.");
-          if (!sd.has(dd.format)) throw new TypeError("Invalid AudioDataInit: invalid format.");
-          if (!Number.isFinite(dd.sampleRate) || dd.sampleRate <= 0) throw new TypeError("Invalid AudioDataInit: sampleRate must be > 0.");
-          if (!Number.isInteger(dd.numberOfChannels) || 0 === dd.numberOfChannels) throw new TypeError("Invalid AudioDataInit: numberOfChannels must be an integer > 0.");
-          if (!Number.isFinite(dd?.timestamp)) throw new TypeError("init.timestamp must be a number.");
-          const Od = dd.data.byteLength / (Ad(dd.format) * dd.numberOfChannels);
-          if (!Number.isInteger(Od)) throw new TypeError("Invalid AudioDataInit: data size is not a multiple of frame size.");
-          let md;
-          if (this.format = dd.format, this.sampleRate = dd.sampleRate, this.numberOfFrames = Od, this.numberOfChannels = dd.numberOfChannels, this.timestamp = dd.timestamp, this.duration = Od / dd.sampleRate, dd.data instanceof ArrayBuffer) md = new Uint8Array(dd.data);
+          if (!bb || "object" !== typeof bb) throw new TypeError("Invalid AudioDataInit: must be an object.");
+          if (!cb.has(bb.format)) throw new TypeError("Invalid AudioDataInit: invalid format.");
+          if (!Number.isFinite(bb.sampleRate) || bb.sampleRate <= 0) throw new TypeError("Invalid AudioDataInit: sampleRate must be > 0.");
+          if (!Number.isInteger(bb.numberOfChannels) || 0 === bb.numberOfChannels) throw new TypeError("Invalid AudioDataInit: numberOfChannels must be an integer > 0.");
+          if (!Number.isFinite(bb?.timestamp)) throw new TypeError("init.timestamp must be a number.");
+          const wb = bb.data.byteLength / (fb(bb.format) * bb.numberOfChannels);
+          if (!Number.isInteger(wb)) throw new TypeError("Invalid AudioDataInit: data size is not a multiple of frame size.");
+          let Mb;
+          if (this.format = bb.format, this.sampleRate = bb.sampleRate, this.numberOfFrames = wb, this.numberOfChannels = bb.numberOfChannels, this.timestamp = bb.timestamp, this.duration = wb / bb.sampleRate, bb.data instanceof ArrayBuffer) Mb = new Uint8Array(bb.data);
           else {
-            if (!ArrayBuffer.isView(dd.data)) throw new TypeError("Invalid AudioDataInit: data is not a BufferSource.");
-            md = new Uint8Array(dd.data.buffer, dd.data.byteOffset, dd.data.byteLength)
+            if (!ArrayBuffer.isView(bb.data)) throw new TypeError("Invalid AudioDataInit: data is not a BufferSource.");
+            Mb = new Uint8Array(bb.data.buffer, bb.data.byteOffset, bb.data.byteLength)
           }
-          const Wd = this.numberOfFrames * this.numberOfChannels * Ad(this.format);
-          if (md.byteLength < Wd) throw new TypeError("Invalid AudioDataInit: insufficient data size.");
-          this._data = md
+          const eb = this.numberOfFrames * this.numberOfChannels * fb(this.format);
+          if (Mb.byteLength < eb) throw new TypeError("Invalid AudioDataInit: insufficient data size.");
+          this._data = Mb
         }
-        vd?.register(this, {
+        Lb?.register(this, {
           type: "audio",
           data: this._data
         }, this)
       }
-      allocationSize(dd) {
-        if (!dd || "object" !== typeof dd) throw new TypeError("options must be an object.");
-        if (!Number.isInteger(dd.planeIndex) || dd.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
-        if (void 0 !== dd.format && !sd.has(dd.format)) throw new TypeError("Invalid format.");
-        if (void 0 !== dd.frameOffset && (!Number.isInteger(dd.frameOffset) || dd.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
-        if (void 0 !== dd.frameCount && (!Number.isInteger(dd.frameCount) || dd.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
+      allocationSize(bb) {
+        if (!bb || "object" !== typeof bb) throw new TypeError("options must be an object.");
+        if (!Number.isInteger(bb.planeIndex) || bb.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
+        if (void 0 !== bb.format && !cb.has(bb.format)) throw new TypeError("Invalid format.");
+        if (void 0 !== bb.frameOffset && (!Number.isInteger(bb.frameOffset) || bb.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
+        if (void 0 !== bb.frameCount && (!Number.isInteger(bb.frameCount) || bb.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
         if (this._closed) throw new Error("AudioSample is closed.");
-        const Od = dd.format ?? this.format,
-          md = dd.frameOffset ?? 0;
-        if (md >= this.numberOfFrames) throw new RangeError("frameOffset out of range");
-        const Wd = void 0 !== dd.frameCount ? dd.frameCount : this.numberOfFrames - md;
-        if (Wd > this.numberOfFrames - md) throw new RangeError("frameCount out of range");
-        const Fd = Ad(Od),
-          Rd = rd(Od);
-        if (Rd && dd.planeIndex >= this.numberOfChannels) throw new RangeError("planeIndex out of range");
-        if (!Rd && 0 !== dd.planeIndex) throw new RangeError("planeIndex out of range");
-        return (Rd ? Wd : Wd * this.numberOfChannels) * Fd
+        const wb = bb.format ?? this.format,
+          Mb = bb.frameOffset ?? 0;
+        if (Mb >= this.numberOfFrames) throw new RangeError("frameOffset out of range");
+        const eb = void 0 !== bb.frameCount ? bb.frameCount : this.numberOfFrames - Mb;
+        if (eb > this.numberOfFrames - Mb) throw new RangeError("frameCount out of range");
+        const Hb = fb(wb),
+          pb = Ab(wb);
+        if (pb && bb.planeIndex >= this.numberOfChannels) throw new RangeError("planeIndex out of range");
+        if (!pb && 0 !== bb.planeIndex) throw new RangeError("planeIndex out of range");
+        return (pb ? eb : eb * this.numberOfChannels) * Hb
       }
-      copyTo(dd, Od) {
-        if (!(0, Wd.yb)(dd)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
-        if (!Od || "object" !== typeof Od) throw new TypeError("options must be an object.");
-        if (!Number.isInteger(Od.planeIndex) || Od.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
-        if (void 0 !== Od.format && !sd.has(Od.format)) throw new TypeError("Invalid format.");
-        if (void 0 !== Od.frameOffset && (!Number.isInteger(Od.frameOffset) || Od.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
-        if (void 0 !== Od.frameCount && (!Number.isInteger(Od.frameCount) || Od.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
+      copyTo(bb, wb) {
+        if (!(0, eb.sb)(bb)) throw new TypeError("destination must be an ArrayBuffer or an ArrayBuffer view.");
+        if (!wb || "object" !== typeof wb) throw new TypeError("options must be an object.");
+        if (!Number.isInteger(wb.planeIndex) || wb.planeIndex < 0) throw new TypeError("planeIndex must be a non-negative integer.");
+        if (void 0 !== wb.format && !cb.has(wb.format)) throw new TypeError("Invalid format.");
+        if (void 0 !== wb.frameOffset && (!Number.isInteger(wb.frameOffset) || wb.frameOffset < 0)) throw new TypeError("frameOffset must be a non-negative integer.");
+        if (void 0 !== wb.frameCount && (!Number.isInteger(wb.frameCount) || wb.frameCount < 0)) throw new TypeError("frameCount must be a non-negative integer.");
         if (this._closed) throw new Error("AudioSample is closed.");
         const {
-          format: md,
-          frameCount: Fd,
-          frameOffset: Rd
-        } = Od;
+          format: Mb,
+          frameCount: Hb,
+          frameOffset: pb
+        } = wb;
         let {
-          planeIndex: Xd
-        } = Od, Kd = this.format;
-        const hd = md ?? this.format;
-        if (!hd) throw new Error("Destination format not determined");
-        const vd = this.numberOfFrames,
-          Qd = this.numberOfChannels,
-          td = Rd ?? 0;
-        if (td >= vd) throw new RangeError("frameOffset out of range");
-        const od = void 0 !== Fd ? Fd : vd - td;
-        if (od > vd - td) throw new RangeError("frameCount out of range");
-        const Nd = Ad(hd),
-          qd = rd(hd);
-        if (qd && Xd >= Qd) throw new RangeError("planeIndex out of range");
-        if (!qd && 0 !== Xd) throw new RangeError("planeIndex out of range");
-        const Hd = (qd ? od : od * Qd) * Nd;
-        if (dd.byteLength < Hd) throw new RangeError("Destination buffer is too small");
-        const yd = (0, Wd.sd)(dd),
-          bd = nd(hd);
-        if (Ld(this._data)) {
-          if ((0, Wd.cc)() && Qd > 2 && hd !== Kd) return void zd(this._data, yd, Kd, hd, Qd, Xd, td, od);
+          planeIndex: Vb
+        } = wb, gb = this.format;
+        const lb = Mb ?? this.format;
+        if (!lb) throw new Error("Destination format not determined");
+        const Lb = this.numberOfFrames,
+          Ib = this.numberOfChannels,
+          Ob = pb ?? 0;
+        if (Ob >= Lb) throw new RangeError("frameOffset out of range");
+        const Ub = void 0 !== Hb ? Hb : Lb - Ob;
+        if (Ub > Lb - Ob) throw new RangeError("frameCount out of range");
+        const tb = fb(lb),
+          Cb = Ab(lb);
+        if (Cb && Vb >= Ib) throw new RangeError("planeIndex out of range");
+        if (!Cb && 0 !== Vb) throw new RangeError("planeIndex out of range");
+        const Eb = (Cb ? Ub : Ub * Ib) * tb;
+        if (bb.byteLength < Eb) throw new RangeError("Destination buffer is too small");
+        const Fb = (0, eb.kd)(bb),
+          Bb = Jb(lb);
+        if (Sb(this._data)) {
+          if ((0, eb.Yb)() && Ib > 2 && lb !== gb) return void vb(this._data, Fb, gb, lb, Ib, Vb, Ob, Ub);
           try {
-            return void this._data.copyTo(dd, {
-              planeIndex: Xd,
-              frameOffset: td,
-              frameCount: od,
-              format: hd
+            return void this._data.copyTo(bb, {
+              planeIndex: Vb,
+              frameOffset: Ob,
+              frameCount: Ub,
+              format: lb
             })
-          } catch (Ed) {
-            if ("f32-planar" === hd) throw Ed;
-            Kd = "f32-planar"
+          } catch (xb) {
+            if ("f32-planar" === lb) throw xb;
+            gb = "f32-planar"
           }
         }
-        const Td = Gd(Kd),
-          pd = Ad(Kd),
-          Yd = rd(Kd);
-        let gd;
-        if (this._data instanceof ud) {
-          const dd = dd => {
-            const Od = this._data.getDataPlane(dd);
-            if (!(Od instanceof Uint8Array)) throw new TypeError("getDataPlane() must return a Uint8Array.");
-            const md = vd * pd * (Yd ? 1 : Qd);
-            if (Od.byteLength !== md) throw new TypeError(`Data plane ${dd} has invalid size. Expected exactly ${md} bytes, got ${Od.byteLength} bytes.`);
-            return Od
+        const sb = Wb(gb),
+          mb = fb(gb),
+          hb = Ab(gb);
+        let zb;
+        if (this._data instanceof Yb) {
+          const bb = bb => {
+            const wb = this._data.getDataPlane(bb);
+            if (!(wb instanceof Uint8Array)) throw new TypeError("getDataPlane() must return a Uint8Array.");
+            const Mb = Lb * mb * (hb ? 1 : Ib);
+            if (wb.byteLength !== Mb) throw new TypeError(`Data plane ${bb} has invalid size. Expected exactly ${Mb} bytes, got ${wb.byteLength} bytes.`);
+            return wb
           };
-          if (Yd)
-            if (qd) gd = dd(Xd), Xd = 0;
+          if (hb)
+            if (Cb) zb = bb(Vb), Vb = 0;
             else {
-              gd = new Uint8Array(vd * pd * Qd);
-              for (let Od = 0; Od < Qd; Od++) {
-                const md = dd(Od);
-                gd.set(md, Od * vd * pd)
+              zb = new Uint8Array(Lb * mb * Ib);
+              for (let wb = 0; wb < Ib; wb++) {
+                const Mb = bb(wb);
+                zb.set(Mb, wb * Lb * mb)
               }
             }
-          else gd = dd(0)
-        } else if (this._data instanceof Uint8Array) gd = this._data;
-        else if ((0, Wd.M)("f32-planar" === Kd), qd) gd = new Uint8Array(this._data.allocationSize({
+          else zb = bb(0)
+        } else if (this._data instanceof Uint8Array) zb = this._data;
+        else if ((0, eb.L)("f32-planar" === gb), Cb) zb = new Uint8Array(this._data.allocationSize({
           format: "f32-planar",
-          planeIndex: Xd
-        })), this._data.copyTo(gd, {
+          planeIndex: Vb
+        })), this._data.copyTo(zb, {
           format: "f32-planar",
-          planeIndex: Xd
-        }), Xd = 0;
+          planeIndex: Vb
+        }), Vb = 0;
         else {
-          gd = new Uint8Array(this._data.allocationSize({
+          zb = new Uint8Array(this._data.allocationSize({
             format: "f32-planar",
             planeIndex: 0
-          }) * Qd);
-          for (let dd = 0; dd < Qd; dd++) this._data.copyTo(gd.subarray(dd * vd * pd, (dd + 1) * vd * pd), {
+          }) * Ib);
+          for (let bb = 0; bb < Ib; bb++) this._data.copyTo(zb.subarray(bb * Lb * mb, (bb + 1) * Lb * mb), {
             format: "f32-planar",
-            planeIndex: dd
+            planeIndex: bb
           })
         }
-        const wd = (0, Wd.sd)(gd);
-        for (let Wd = 0; Wd < od; Wd++)
-          if (qd) {
-            let dd;
-            dd = Yd ? (Xd * vd + (Wd + td)) * pd : ((Wd + td) * Qd + Xd) * pd;
-            bd(yd, Wd * Nd, Td(wd, dd))
+        const Xb = (0, eb.kd)(zb);
+        for (let eb = 0; eb < Ub; eb++)
+          if (Cb) {
+            let bb;
+            bb = hb ? (Vb * Lb + (eb + Ob)) * mb : ((eb + Ob) * Ib + Vb) * mb;
+            Bb(Fb, eb * tb, sb(Xb, bb))
           } else
-            for (let dd = 0; dd < Qd; dd++) {
-              let Od;
-              Od = Yd ? (dd * vd + (Wd + td)) * pd : ((Wd + td) * Qd + dd) * pd;
-              bd(yd, (Wd * Qd + dd) * Nd, Td(wd, Od))
+            for (let bb = 0; bb < Ib; bb++) {
+              let wb;
+              wb = hb ? (bb * Lb + (eb + Ob)) * mb : ((eb + Ob) * Ib + bb) * mb;
+              Bb(Fb, (eb * Ib + bb) * tb, sb(Xb, wb))
             }
       }
       clone() {
         if (this._closed) throw new Error("AudioSample is closed.");
-        if (this._data instanceof ud) {
-          const dd = new Vd(this._data);
-          return dd.setTimestamp(this.timestamp), dd
+        if (this._data instanceof Yb) {
+          const bb = new Zb(this._data);
+          return bb.setTimestamp(this.timestamp), bb
         }
-        if (Ld(this._data)) {
-          const dd = new Vd(this._data.clone());
-          return dd.setTimestamp(this.timestamp), dd
+        if (Sb(this._data)) {
+          const bb = new Zb(this._data.clone());
+          return bb.setTimestamp(this.timestamp), bb
         }
-        return new Vd({
+        return new Zb({
           format: this.format,
           sampleRate: this.sampleRate,
           numberOfFrames: this.numberOfFrames,
@@ -7756,46 +7756,46 @@ export const modules = {
           data: this._data
         })
       }
-      trim(dd) {
-        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.numberOfFrames;
-        if (!Number.isInteger(dd) || dd < 0) throw new TypeError("startFrame must be a non-negative integer.");
-        if (!Number.isInteger(Od) || Od < 0) throw new TypeError("endFrame must be a non-negative integer.");
-        if (dd > this.numberOfFrames) throw new RangeError("startFrame out of range.");
-        if (Od > this.numberOfFrames) throw new RangeError("endFrame out of range.");
-        if (Od < dd) throw new RangeError("endFrame must not be less than startFrame.");
+      trim(bb) {
+        let wb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.numberOfFrames;
+        if (!Number.isInteger(bb) || bb < 0) throw new TypeError("startFrame must be a non-negative integer.");
+        if (!Number.isInteger(wb) || wb < 0) throw new TypeError("endFrame must be a non-negative integer.");
+        if (bb > this.numberOfFrames) throw new RangeError("startFrame out of range.");
+        if (wb > this.numberOfFrames) throw new RangeError("endFrame out of range.");
+        if (wb < bb) throw new RangeError("endFrame must not be less than startFrame.");
         if (this._closed) throw new Error("AudioSample is closed.");
-        const md = Od - dd,
-          Wd = Ad(this.format);
-        let Fd;
-        if (rd(this.format)) {
-          const Od = md * Wd;
-          if (Fd = new Uint8Array(Od * this.numberOfChannels), md > 0)
-            for (let Wd = 0; Wd < this.numberOfChannels; Wd++) this.copyTo(Fd.subarray(Wd * Od, (Wd + 1) * Od), {
-              planeIndex: Wd,
+        const Mb = wb - bb,
+          eb = fb(this.format);
+        let Hb;
+        if (Ab(this.format)) {
+          const wb = Mb * eb;
+          if (Hb = new Uint8Array(wb * this.numberOfChannels), Mb > 0)
+            for (let eb = 0; eb < this.numberOfChannels; eb++) this.copyTo(Hb.subarray(eb * wb, (eb + 1) * wb), {
+              planeIndex: eb,
               format: this.format,
-              frameOffset: dd,
-              frameCount: md
+              frameOffset: bb,
+              frameCount: Mb
             })
-        } else Fd = new Uint8Array(md * this.numberOfChannels * Wd), md > 0 && this.copyTo(Fd, {
+        } else Hb = new Uint8Array(Mb * this.numberOfChannels * eb), Mb > 0 && this.copyTo(Hb, {
           planeIndex: 0,
           format: this.format,
-          frameOffset: dd,
-          frameCount: md
+          frameOffset: bb,
+          frameCount: Mb
         });
-        return new Vd({
-          data: Fd,
+        return new Zb({
+          data: Hb,
           format: this.format,
           sampleRate: this.sampleRate,
           numberOfChannels: this.numberOfChannels,
-          timestamp: this.timestamp + dd / this.sampleRate
+          timestamp: this.timestamp + bb / this.sampleRate
         })
       }
       close() {
-        this._closed || (vd?.unregister(this), this._data instanceof ud ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : Ld(this._data) ? this._data.close() : this._data = new Uint8Array(0), this._closed = !0)
+        this._closed || (Lb?.unregister(this), this._data instanceof Yb ? (this._data._referenceCount--, 0 === this._data._referenceCount && this._data.close()) : Sb(this._data) ? this._data.close() : this._data = new Uint8Array(0), this._closed = !0)
       }
       toAudioData() {
         if (this._closed) throw new Error("AudioSample is closed.");
-        return this._data instanceof ud ? this._createAudioDataFromData() : Ld(this._data) ? this._data.timestamp === this.microsecondTimestamp ? this._data.clone() : this._createAudioDataFromData() : new AudioData({
+        return this._data instanceof Yb ? this._createAudioDataFromData() : Sb(this._data) ? this._data.timestamp === this.microsecondTimestamp ? this._data.clone() : this._createAudioDataFromData() : new AudioData({
           format: this.format,
           sampleRate: this.sampleRate,
           numberOfFrames: this.numberOfFrames,
@@ -7805,14 +7805,14 @@ export const modules = {
         })
       }
       _createAudioDataFromData() {
-        if (rd(this.format)) {
-          const dd = this.allocationSize({
+        if (Ab(this.format)) {
+          const bb = this.allocationSize({
               planeIndex: 0,
               format: this.format
             }),
-            Od = new ArrayBuffer(dd * this.numberOfChannels);
-          for (let md = 0; md < this.numberOfChannels; md++) this.copyTo(new Uint8Array(Od, md * dd, dd), {
-            planeIndex: md,
+            wb = new ArrayBuffer(bb * this.numberOfChannels);
+          for (let Mb = 0; Mb < this.numberOfChannels; Mb++) this.copyTo(new Uint8Array(wb, Mb * bb, bb), {
+            planeIndex: Mb,
             format: this.format
           });
           return new AudioData({
@@ -7821,14 +7821,14 @@ export const modules = {
             numberOfFrames: this.numberOfFrames,
             numberOfChannels: this.numberOfChannels,
             timestamp: this.microsecondTimestamp,
-            data: Od
+            data: wb
           })
         } {
-          const dd = new ArrayBuffer(this.allocationSize({
+          const bb = new ArrayBuffer(this.allocationSize({
             planeIndex: 0,
             format: this.format
           }));
-          return this.copyTo(dd, {
+          return this.copyTo(bb, {
             planeIndex: 0,
             format: this.format
           }), new AudioData({
@@ -7837,83 +7837,83 @@ export const modules = {
             numberOfFrames: this.numberOfFrames,
             numberOfChannels: this.numberOfChannels,
             timestamp: this.microsecondTimestamp,
-            data: dd
+            data: bb
           })
         }
       }
       toAudioBuffer() {
         if (this._closed) throw new Error("AudioSample is closed.");
-        const dd = new AudioBuffer({
+        const bb = new AudioBuffer({
             numberOfChannels: this.numberOfChannels,
             length: this.numberOfFrames,
             sampleRate: this.sampleRate
           }),
-          Od = new Float32Array(this.allocationSize({
+          wb = new Float32Array(this.allocationSize({
             planeIndex: 0,
             format: "f32-planar"
           }) / 4);
-        for (let md = 0; md < this.numberOfChannels; md++) this.copyTo(Od, {
-          planeIndex: md,
+        for (let Mb = 0; Mb < this.numberOfChannels; Mb++) this.copyTo(wb, {
+          planeIndex: Mb,
           format: "f32-planar"
-        }), dd.copyToChannel(Od, md);
-        return dd
+        }), bb.copyToChannel(wb, Mb);
+        return bb
       }
-      setTimestamp(dd) {
-        if (!Number.isFinite(dd)) throw new TypeError("newTimestamp must be a number.");
-        this.timestamp = dd
+      setTimestamp(bb) {
+        if (!Number.isFinite(bb)) throw new TypeError("newTimestamp must be a number.");
+        this.timestamp = bb
       } [Symbol.dispose]() {
         this.close()
       }
-      static * _fromAudioBuffer(dd, Od) {
-        if (!(dd instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
-        const md = dd.numberOfChannels,
-          Wd = dd.sampleRate,
-          Fd = dd.length,
-          Rd = Math.floor(24e4 / md);
-        let Xd = 0,
-          Kd = Fd;
-        for (; Kd > 0;) {
-          const Fd = Math.min(Rd, Kd),
-            hd = new Float32Array(md * Fd);
-          for (let Od = 0; Od < md; Od++) dd.copyFromChannel(hd.subarray(Od * Fd, (Od + 1) * Fd), Od, Xd);
-          yield new Vd({
+      static * _fromAudioBuffer(bb, wb) {
+        if (!(bb instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
+        const Mb = bb.numberOfChannels,
+          eb = bb.sampleRate,
+          Hb = bb.length,
+          pb = Math.floor(24e4 / Mb);
+        let Vb = 0,
+          gb = Hb;
+        for (; gb > 0;) {
+          const Hb = Math.min(pb, gb),
+            lb = new Float32Array(Mb * Hb);
+          for (let wb = 0; wb < Mb; wb++) bb.copyFromChannel(lb.subarray(wb * Hb, (wb + 1) * Hb), wb, Vb);
+          yield new Zb({
             format: "f32-planar",
-            sampleRate: Wd,
-            numberOfFrames: Fd,
-            numberOfChannels: md,
-            timestamp: Od + Xd / Wd,
-            data: hd
-          }), Xd += Fd, Kd -= Fd
+            sampleRate: eb,
+            numberOfFrames: Hb,
+            numberOfChannels: Mb,
+            timestamp: wb + Vb / eb,
+            data: lb
+          }), Vb += Hb, gb -= Hb
         }
       }
-      static fromAudioBuffer(dd, Od) {
-        if (!(dd instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
-        const md = dd.numberOfChannels,
-          Wd = dd.sampleRate,
-          Fd = dd.length,
-          Rd = Math.floor(24e4 / md);
-        let Xd = 0,
-          Kd = Fd;
-        const hd = [];
-        for (; Kd > 0;) {
-          const Fd = Math.min(Rd, Kd),
-            vd = new Float32Array(md * Fd);
-          for (let Od = 0; Od < md; Od++) dd.copyFromChannel(vd.subarray(Od * Fd, (Od + 1) * Fd), Od, Xd);
-          const Qd = new Vd({
+      static fromAudioBuffer(bb, wb) {
+        if (!(bb instanceof AudioBuffer)) throw new TypeError("audioBuffer must be an AudioBuffer.");
+        const Mb = bb.numberOfChannels,
+          eb = bb.sampleRate,
+          Hb = bb.length,
+          pb = Math.floor(24e4 / Mb);
+        let Vb = 0,
+          gb = Hb;
+        const lb = [];
+        for (; gb > 0;) {
+          const Hb = Math.min(pb, gb),
+            Lb = new Float32Array(Mb * Hb);
+          for (let wb = 0; wb < Mb; wb++) bb.copyFromChannel(Lb.subarray(wb * Hb, (wb + 1) * Hb), wb, Vb);
+          const Ib = new Zb({
             format: "f32-planar",
-            sampleRate: Wd,
-            numberOfFrames: Fd,
-            numberOfChannels: md,
-            timestamp: Od + Xd / Wd,
-            data: vd
+            sampleRate: eb,
+            numberOfFrames: Hb,
+            numberOfChannels: Mb,
+            timestamp: wb + Vb / eb,
+            data: Lb
           });
-          hd.push(Qd), Xd += Fd, Kd -= Fd
+          lb.push(Ib), Vb += Hb, gb -= Hb
         }
-        return hd
+        return lb
       }
     }
-    const Ad = dd => {
-        switch (dd) {
+    const fb = bb => {
+        switch (bb) {
           case "u8":
           case "u8-planar":
             return 1;
@@ -7929,8 +7929,8 @@ export const modules = {
             throw new Error("Unknown AudioSampleFormat")
         }
       },
-      rd = dd => {
-        switch (dd) {
+      Ab = bb => {
+        switch (bb) {
           case "u8-planar":
           case "s16-planar":
           case "s32-planar":
@@ -7940,41 +7940,41 @@ export const modules = {
             return !1
         }
       },
-      Gd = dd => {
-        switch (dd) {
+      Wb = bb => {
+        switch (bb) {
           case "u8":
           case "u8-planar":
-            return (dd, Od) => (dd.getUint8(Od) - 128) / 128;
+            return (bb, wb) => (bb.getUint8(wb) - 128) / 128;
           case "s16":
           case "s16-planar":
-            return (dd, Od) => dd.getInt16(Od, !0) / 32768;
+            return (bb, wb) => bb.getInt16(wb, !0) / 32768;
           case "s32":
           case "s32-planar":
-            return (dd, Od) => dd.getInt32(Od, !0) / 2147483648;
+            return (bb, wb) => bb.getInt32(wb, !0) / 2147483648;
           case "f32":
           case "f32-planar":
-            return (dd, Od) => dd.getFloat32(Od, !0)
+            return (bb, wb) => bb.getFloat32(wb, !0)
         }
       },
-      nd = dd => {
-        switch (dd) {
+      Jb = bb => {
+        switch (bb) {
           case "u8":
           case "u8-planar":
-            return (dd, Od, md) => dd.setUint8(Od, (0, Wd.$)(Math.round(128 * md) + 128, 0, 255));
+            return (bb, wb, Mb) => bb.setUint8(wb, (0, eb.Z)(Math.round(128 * Mb) + 128, 0, 255));
           case "s16":
           case "s16-planar":
-            return (dd, Od, md) => dd.setInt16(Od, (0, Wd.$)(Math.round(32768 * md), -32768, 32767), !0);
+            return (bb, wb, Mb) => bb.setInt16(wb, (0, eb.Z)(Math.round(32768 * Mb), -32768, 32767), !0);
           case "s32":
           case "s32-planar":
-            return (dd, Od, md) => dd.setInt32(Od, (0, Wd.$)(Math.round(2147483648 * md), -2147483648, 2147483647), !0);
+            return (bb, wb, Mb) => bb.setInt32(wb, (0, eb.Z)(Math.round(2147483648 * Mb), -2147483648, 2147483647), !0);
           case "f32":
           case "f32-planar":
-            return (dd, Od, md) => dd.setFloat32(Od, md, !0)
+            return (bb, wb, Mb) => bb.setFloat32(wb, Mb, !0)
         }
       },
-      Ld = dd => "undefined" !== typeof AudioData && dd instanceof AudioData,
-      Pd = dd => {
-        switch (dd) {
+      Sb = bb => "undefined" !== typeof AudioData && bb instanceof AudioData,
+      Nb = bb => {
+        switch (bb) {
           case "u8-planar":
             return "u8";
           case "s16-planar":
@@ -7984,228 +7984,228 @@ export const modules = {
           case "f32-planar":
             return "f32";
           default:
-            return dd
+            return bb
         }
       },
-      zd = (dd, Od, md, Fd, Rd, Xd, Kd, hd) => {
-        const vd = Gd(md),
-          Qd = nd(Fd),
-          td = Ad(md),
-          od = Ad(Fd),
-          Nd = rd(md);
-        if (rd(Fd))
-          if (Nd) {
-            const Fd = new ArrayBuffer(hd * td),
-              Rd = (0, Wd.sd)(Fd);
-            dd.copyTo(Fd, {
-              planeIndex: Xd,
-              frameOffset: Kd,
-              frameCount: hd,
-              format: md
+      vb = (bb, wb, Mb, Hb, pb, Vb, gb, lb) => {
+        const Lb = Wb(Mb),
+          Ib = Jb(Hb),
+          Ob = fb(Mb),
+          Ub = fb(Hb),
+          tb = Ab(Mb);
+        if (Ab(Hb))
+          if (tb) {
+            const Hb = new ArrayBuffer(lb * Ob),
+              pb = (0, eb.kd)(Hb);
+            bb.copyTo(Hb, {
+              planeIndex: Vb,
+              frameOffset: gb,
+              frameCount: lb,
+              format: Mb
             });
-            for (let dd = 0; dd < hd; dd++) {
-              Qd(Od, dd * od, vd(Rd, dd * td))
+            for (let bb = 0; bb < lb; bb++) {
+              Ib(wb, bb * Ub, Lb(pb, bb * Ob))
             }
           } else {
-            const Fd = new ArrayBuffer(hd * Rd * td),
-              Nd = (0, Wd.sd)(Fd);
-            dd.copyTo(Fd, {
+            const Hb = new ArrayBuffer(lb * pb * Ob),
+              tb = (0, eb.kd)(Hb);
+            bb.copyTo(Hb, {
               planeIndex: 0,
-              frameOffset: Kd,
-              frameCount: hd,
-              format: md
+              frameOffset: gb,
+              frameCount: lb,
+              format: Mb
             });
-            for (let dd = 0; dd < hd; dd++) {
-              Qd(Od, dd * od, vd(Nd, (dd * Rd + Xd) * td))
+            for (let bb = 0; bb < lb; bb++) {
+              Ib(wb, bb * Ub, Lb(tb, (bb * pb + Vb) * Ob))
             }
           }
-        else if (Nd) {
-          const Fd = new ArrayBuffer(hd * td),
-            Xd = (0, Wd.sd)(Fd);
-          for (let Wd = 0; Wd < Rd; Wd++) {
-            dd.copyTo(Fd, {
-              planeIndex: Wd,
-              frameOffset: Kd,
-              frameCount: hd,
-              format: md
+        else if (tb) {
+          const Hb = new ArrayBuffer(lb * Ob),
+            Vb = (0, eb.kd)(Hb);
+          for (let eb = 0; eb < pb; eb++) {
+            bb.copyTo(Hb, {
+              planeIndex: eb,
+              frameOffset: gb,
+              frameCount: lb,
+              format: Mb
             });
-            for (let dd = 0; dd < hd; dd++) {
-              Qd(Od, (dd * Rd + Wd) * od, vd(Xd, dd * td))
+            for (let bb = 0; bb < lb; bb++) {
+              Ib(wb, (bb * pb + eb) * Ub, Lb(Vb, bb * Ob))
             }
           }
         } else {
-          const Fd = new ArrayBuffer(hd * Rd * td),
-            Xd = (0, Wd.sd)(Fd);
-          dd.copyTo(Fd, {
+          const Hb = new ArrayBuffer(lb * pb * Ob),
+            Vb = (0, eb.kd)(Hb);
+          bb.copyTo(Hb, {
             planeIndex: 0,
-            frameOffset: Kd,
-            frameCount: hd,
-            format: md
+            frameOffset: gb,
+            frameCount: lb,
+            format: Mb
           });
-          for (let dd = 0; dd < hd; dd++)
-            for (let md = 0; md < Rd; md++) {
-              const Wd = dd * Rd + md;
-              Qd(Od, Wd * od, vd(Xd, Wd * td))
+          for (let bb = 0; bb < lb; bb++)
+            for (let Mb = 0; Mb < pb; Mb++) {
+              const eb = bb * pb + Mb;
+              Ib(wb, eb * Ub, Lb(Vb, eb * Ob))
             }
         }
       },
-      cd = (dd, Od) => {
-        const md = dd.allocationSize({
-            format: Od,
+      Qb = (bb, wb) => {
+        const Mb = bb.allocationSize({
+            format: wb,
             planeIndex: 0
           }),
-          Wd = new ArrayBuffer(md);
-        return dd.copyTo(Wd, {
-          format: Od,
+          eb = new ArrayBuffer(Mb);
+        return bb.copyTo(eb, {
+          format: wb,
           planeIndex: 0
-        }), new Vd({
-          data: Wd,
-          format: Od,
-          numberOfChannels: dd.numberOfChannels,
-          sampleRate: dd.sampleRate,
-          timestamp: dd.timestamp,
-          duration: dd.duration
+        }), new Zb({
+          data: eb,
+          format: wb,
+          numberOfChannels: bb.numberOfChannels,
+          sampleRate: bb.sampleRate,
+          timestamp: bb.timestamp,
+          duration: bb.duration
         })
       }
   },
-  41537: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Xd,
-      e: () => vd,
-      h: () => Rd,
-      k: () => hd
+  41303: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Vb,
+      h: () => Lb,
+      i: () => pb,
+      l: () => lb
     });
-    const Wd = /(?:(.+?)\n)?((?:\d{2}:)?\d{2}:\d{2}.\d{3})\s+-->\s+((?:\d{2}:)?\d{2}:\d{2}.\d{3})/g,
-      Fd = /^WEBVTT(.|\n)*?\n{2}/,
-      Rd = /<(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})>/g;
-    class Xd {
-      constructor(dd) {
-        this.preambleText = null, this.preambleEmitted = !1, this.options = dd
+    const eb = /(?:(.+?)\n)?((?:\d{2}:)?\d{2}:\d{2}.\d{3})\s+-->\s+((?:\d{2}:)?\d{2}:\d{2}.\d{3})/g,
+      Hb = /^WEBVTT(.|\n)*?\n{2}/,
+      pb = /<(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})>/g;
+    class Vb {
+      constructor(bb) {
+        this.preambleText = null, this.preambleEmitted = !1, this.options = bb
       }
-      parse(dd) {
-        let Od;
-        if (dd = dd.replaceAll("\r\n", "\n").replaceAll("\r", "\n"), Wd.lastIndex = 0, !this.preambleText) {
-          if (!Fd.test(dd)) throw new Error("WebVTT preamble incorrect.");
-          Od = Wd.exec(dd);
-          const md = dd.slice(0, Od?.index ?? dd.length).trimEnd();
-          if (!md) throw new Error("No WebVTT preamble provided.");
-          this.preambleText = md, Od && (dd = dd.slice(Od.index), Wd.lastIndex = 0)
+      parse(bb) {
+        let wb;
+        if (bb = bb.replaceAll("\r\n", "\n").replaceAll("\r", "\n"), eb.lastIndex = 0, !this.preambleText) {
+          if (!Hb.test(bb)) throw new Error("WebVTT preamble incorrect.");
+          wb = eb.exec(bb);
+          const Mb = bb.slice(0, wb?.index ?? bb.length).trimEnd();
+          if (!Mb) throw new Error("No WebVTT preamble provided.");
+          this.preambleText = Mb, wb && (bb = bb.slice(wb.index), eb.lastIndex = 0)
         }
-        for (; Od = Wd.exec(dd);) {
-          const md = dd.slice(0, Od.index),
-            Fd = Od[1],
-            Rd = Od.index + Od[0].length,
-            Xd = dd.indexOf("\n", Rd) + 1,
-            Kd = dd.slice(Rd, Xd).trim();
-          let vd = dd.indexOf("\n\n", Rd); - 1 === vd && (vd = dd.length);
-          const Qd = hd(Od[2]),
-            td = hd(Od[3]) - Qd,
-            od = dd.slice(Xd, vd).trim();
-          dd = dd.slice(vd).trimStart(), Wd.lastIndex = 0;
-          const Nd = {
-              timestamp: Qd / 1e3,
-              duration: td / 1e3,
-              text: od,
-              identifier: Fd,
-              settings: Kd,
-              notes: md
+        for (; wb = eb.exec(bb);) {
+          const Mb = bb.slice(0, wb.index),
+            Hb = wb[1],
+            pb = wb.index + wb[0].length,
+            Vb = bb.indexOf("\n", pb) + 1,
+            gb = bb.slice(pb, Vb).trim();
+          let Lb = bb.indexOf("\n\n", pb); - 1 === Lb && (Lb = bb.length);
+          const Ib = lb(wb[2]),
+            Ob = lb(wb[3]) - Ib,
+            Ub = bb.slice(Vb, Lb).trim();
+          bb = bb.slice(Lb).trimStart(), eb.lastIndex = 0;
+          const tb = {
+              timestamp: Ib / 1e3,
+              duration: Ob / 1e3,
+              text: Ub,
+              identifier: Hb,
+              settings: gb,
+              notes: Mb
             },
-            qd = {};
-          this.preambleEmitted || (qd.config = {
+            Cb = {};
+          this.preambleEmitted || (Cb.config = {
             description: this.preambleText
-          }, this.preambleEmitted = !0), this.options.output(Nd, qd)
+          }, this.preambleEmitted = !0), this.options.output(tb, Cb)
         }
       }
     }
-    const Kd = /(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})/,
-      hd = dd => {
-        const Od = Kd.exec(dd);
-        if (!Od) throw new Error("Expected match.");
-        return 36e5 * Number(Od[1] || "0") + 6e4 * Number(Od[2]) + 1e3 * Number(Od[3]) + Number(Od[4])
+    const gb = /(?:(\d{2}):)?(\d{2}):(\d{2}).(\d{3})/,
+      lb = bb => {
+        const wb = gb.exec(bb);
+        if (!wb) throw new Error("Expected match.");
+        return 36e5 * Number(wb[1] || "0") + 6e4 * Number(wb[2]) + 1e3 * Number(wb[3]) + Number(wb[4])
       },
-      vd = dd => {
-        const Od = Math.floor(dd / 36e5),
-          md = Math.floor(dd % 36e5 / 6e4),
-          Wd = Math.floor(dd % 6e4 / 1e3),
-          Fd = dd % 1e3;
-        return Od.toString().padStart(2, "0") + ":" + md.toString().padStart(2, "0") + ":" + Wd.toString().padStart(2, "0") + "." + Fd.toString().padStart(3, "0")
+      Lb = bb => {
+        const wb = Math.floor(bb / 36e5),
+          Mb = Math.floor(bb % 36e5 / 6e4),
+          eb = Math.floor(bb % 6e4 / 1e3),
+          Hb = bb % 1e3;
+        return wb.toString().padStart(2, "0") + ":" + Mb.toString().padStart(2, "0") + ":" + eb.toString().padStart(2, "0") + "." + Hb.toString().padStart(3, "0")
       }
   },
-  41544: (dd, Od, md) => {
-    var Wd;
-    md.d(Od, {
-      c: () => vd,
-      d: () => Qd,
-      g: () => od,
-      j: () => Xd
+  41316: (bb, wb, Mb) => {
+    var eb;
+    Mb.d(wb, {
+      b: () => Lb,
+      d: () => Ib,
+      f: () => Ub,
+      g: () => Vb
     });
-    var Fd = md(41551),
-      Rd = md(41487);
-    "undefined" !== typeof(Wd || (Wd = md.t(Fd, 2))) && (Wd || (Wd = md.t(Fd, 2)));
-    class Xd extends Rd.k {
+    var Hb = Mb(41318),
+      pb = Mb(41244);
+    "undefined" !== typeof(eb || (eb = Mb.t(Hb, 2))) && (eb || (eb = Mb.t(Hb, 2)));
+    class Vb extends pb.h {
       constructor() {
         super(...arguments), this._writerAcquired = !1, this._monotonicity = null, this.onwrite = null
       }
-      _setMonotonicity(dd) {
-        !1 !== this._monotonicity && (this._monotonicity = dd)
+      _setMonotonicity(bb) {
+        !1 !== this._monotonicity && (this._monotonicity = bb)
       }
-      _dispatchWrite(dd, Od) {
-        this.onwrite?.(dd, Od), this._emit("write", {
-          start: dd,
-          end: Od
+      _dispatchWrite(bb, wb) {
+        this.onwrite?.(bb, wb), this._emit("write", {
+          start: bb,
+          end: wb
         })
       }
-      slice(dd) {
-        if (!Number.isInteger(dd) || dd < 0) throw new TypeError("offset must be a non-negative integer.");
-        return new td(this, dd)
+      slice(bb) {
+        if (!Number.isInteger(bb) || bb < 0) throw new TypeError("offset must be a non-negative integer.");
+        return new Ob(this, bb)
       }
     }
-    const Kd = 65536,
-      hd = 2 ** 32;
-    class vd extends Xd {
+    const gb = 65536,
+      lb = 2 ** 32;
+    class Lb extends Vb {
       constructor() {
-        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (super(), this.buffer = null, this._maxPos = 0, !dd || "object" !== typeof dd) throw new TypeError("BufferTarget options, when provided, must be an object.");
-        if (void 0 !== dd.onFinalize && "function" !== typeof dd.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
-        if (this._options = dd, this._supportsResize = "resize" in new ArrayBuffer(0), this._supportsResize) try {
-          this._buffer = new ArrayBuffer(Kd, {
-            maxByteLength: hd
+        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (super(), this.buffer = null, this._maxPos = 0, !bb || "object" !== typeof bb) throw new TypeError("BufferTarget options, when provided, must be an object.");
+        if (void 0 !== bb.onFinalize && "function" !== typeof bb.onFinalize) throw new TypeError("options.onFinalize, when provided, must be a function.");
+        if (this._options = bb, this._supportsResize = "resize" in new ArrayBuffer(0), this._supportsResize) try {
+          this._buffer = new ArrayBuffer(gb, {
+            maxByteLength: lb
           })
         } catch {
-          this._buffer = new ArrayBuffer(Kd), this._supportsResize = !1
-        } else this._buffer = new ArrayBuffer(Kd);
+          this._buffer = new ArrayBuffer(gb), this._supportsResize = !1
+        } else this._buffer = new ArrayBuffer(gb);
         this._bytes = new Uint8Array(this._buffer)
       }
-      _ensureSize(dd) {
-        let Od = this._buffer.byteLength;
-        for (; Od < dd;) Od *= 2;
-        if (Od !== this._buffer.byteLength) {
-          if (Od > hd) throw new Error("ArrayBuffer exceeded maximum size of 4294967296 bytes. Please consider using another target.");
-          if (this._supportsResize) this._buffer.resize(Od);
+      _ensureSize(bb) {
+        let wb = this._buffer.byteLength;
+        for (; wb < bb;) wb *= 2;
+        if (wb !== this._buffer.byteLength) {
+          if (wb > lb) throw new Error("ArrayBuffer exceeded maximum size of 4294967296 bytes. Please consider using another target.");
+          if (this._supportsResize) this._buffer.resize(wb);
           else {
-            const dd = new ArrayBuffer(Od),
-              md = new Uint8Array(dd);
-            md.set(this._bytes, 0), this._buffer = dd, this._bytes = md
+            const bb = new ArrayBuffer(wb),
+              Mb = new Uint8Array(bb);
+            Mb.set(this._bytes, 0), this._buffer = bb, this._bytes = Mb
           }
         }
       }
       _start() {}
-      _write(dd, Od) {
-        this._ensureSize(Od + dd.byteLength), this._bytes.set(dd, Od), this._maxPos = Math.max(this._maxPos, Od + dd.byteLength), this._dispatchWrite(Od, Od + dd.byteLength)
+      _write(bb, wb) {
+        this._ensureSize(wb + bb.byteLength), this._bytes.set(bb, wb), this._maxPos = Math.max(this._maxPos, wb + bb.byteLength), this._dispatchWrite(wb, wb + bb.byteLength)
       }
       async _flush() {}
       async _finalize() {
         this.buffer = this._buffer.slice(0, this._maxPos), this._options.onFinalize && await this._options.onFinalize(this.buffer), this._emit("finalized")
       }
       async _close() {}
-      _getSlice(dd, Od) {
-        return this._bytes.slice(dd, Od)
+      _getSlice(bb, wb) {
+        return this._bytes.slice(bb, wb)
       }
     }
-    class Qd extends Xd {
+    class Ib extends Vb {
       _start() {}
-      _write(dd, Od) {
-        this._dispatchWrite(Od, Od + dd.byteLength)
+      _write(bb, wb) {
+        this._dispatchWrite(wb, wb + bb.byteLength)
       }
       async _flush() {}
       async _finalize() {
@@ -8213,13 +8213,13 @@ export const modules = {
       }
       async _close() {}
     }
-    class td extends Xd {
-      constructor(dd, Od) {
-        super(), this._baseTarget = dd, this._offset = Od
+    class Ob extends Vb {
+      constructor(bb, wb) {
+        super(), this._baseTarget = bb, this._offset = wb
       }
       _start() {}
-      _write(dd, Od) {
-        this._baseTarget._write(dd, this._offset + Od), this._dispatchWrite(Od, Od + dd.byteLength)
+      _write(bb, wb) {
+        this._baseTarget._write(bb, this._offset + wb), this._dispatchWrite(wb, wb + bb.byteLength)
       }
       _flush() {
         return this._baseTarget._flush()
@@ -8228,81 +8228,81 @@ export const modules = {
         this._emit("finalized")
       }
       async _close() {}
-      _setMonotonicity(dd) {
-        super._setMonotonicity(dd), this._baseTarget._setMonotonicity(dd)
+      _setMonotonicity(bb) {
+        super._setMonotonicity(bb), this._baseTarget._setMonotonicity(bb)
       }
     }
-    class od {
-      constructor(dd, Od) {
-        if (this.rootPath = dd, this.getTarget = Od, "string" !== typeof dd) throw new TypeError("rootPath must be a string.");
-        if ("function" !== typeof Od) throw new TypeError("getTarget must be a function.")
+    class Ub {
+      constructor(bb, wb) {
+        if (this.rootPath = bb, this.getTarget = wb, "string" !== typeof bb) throw new TypeError("rootPath must be a string.");
+        if ("function" !== typeof wb) throw new TypeError("getTarget must be a function.")
       }
     }
   },
-  41534: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd
+  41296: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => eb
     });
-    const Wd = "Mediabunny v1.61.3"
+    const eb = "Mediabunny v1.61.3"
   },
-  41540: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Fd
+  41312: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Hb
     });
-    var Wd = md(41487);
-    class Fd {
-      constructor(dd, Od) {
-        if (this.finalized = !1, this.started = !1, this.pos = 0, this.trackedWrites = null, this.trackedStart = -1, this.trackedEnd = -1, dd._writerAcquired) throw new Error("Can't have multiple Writers for the same Target.");
-        this.target = dd, dd._setMonotonicity(Od), dd._writerAcquired = !0
+    var eb = Mb(41244);
+    class Hb {
+      constructor(bb, wb) {
+        if (this.finalized = !1, this.started = !1, this.pos = 0, this.trackedWrites = null, this.trackedStart = -1, this.trackedEnd = -1, bb._writerAcquired) throw new Error("Can't have multiple Writers for the same Target.");
+        this.target = bb, bb._setMonotonicity(wb), bb._writerAcquired = !0
       }
       start() {
-        (0, Wd.M)(!this.started), this.target._start(), this.started = !0
+        (0, eb.L)(!this.started), this.target._start(), this.started = !0
       }
-      write(dd) {
-        (0, Wd.M)(this.started && !this.finalized), this.maybeTrackWrites(dd), this.target._write(dd, this.pos), this.pos += dd.byteLength
+      write(bb) {
+        (0, eb.L)(this.started && !this.finalized), this.maybeTrackWrites(bb), this.target._write(bb, this.pos), this.pos += bb.byteLength
       }
-      seek(dd) {
-        this.pos = dd
+      seek(bb) {
+        this.pos = bb
       }
       getPos() {
         return this.pos
       }
       async flush() {
-        return (0, Wd.M)(this.started && !this.finalized), this.target._flush()
+        return (0, eb.L)(this.started && !this.finalized), this.target._flush()
       }
       async finalize() {
-        (0, Wd.M)(this.started && !this.finalized), await this.target._finalize(), this.finalized = !0
+        (0, eb.L)(this.started && !this.finalized), await this.target._finalize(), this.finalized = !0
       }
-      maybeTrackWrites(dd) {
+      maybeTrackWrites(bb) {
         if (!this.trackedWrites) return;
-        let Od = this.getPos();
-        if (Od < this.trackedStart) {
-          if (Od + dd.byteLength <= this.trackedStart) return;
-          dd = dd.subarray(this.trackedStart - Od), Od = 0
+        let wb = this.getPos();
+        if (wb < this.trackedStart) {
+          if (wb + bb.byteLength <= this.trackedStart) return;
+          bb = bb.subarray(this.trackedStart - wb), wb = 0
         }
-        const md = Od + dd.byteLength - this.trackedStart;
-        let Wd = this.trackedWrites.byteLength;
-        for (; Wd < md;) Wd *= 2;
-        if (Wd !== this.trackedWrites.byteLength) {
-          const dd = new Uint8Array(Wd);
-          dd.set(this.trackedWrites, 0), this.trackedWrites = dd
+        const Mb = wb + bb.byteLength - this.trackedStart;
+        let eb = this.trackedWrites.byteLength;
+        for (; eb < Mb;) eb *= 2;
+        if (eb !== this.trackedWrites.byteLength) {
+          const bb = new Uint8Array(eb);
+          bb.set(this.trackedWrites, 0), this.trackedWrites = bb
         }
-        this.trackedWrites.set(dd, Od - this.trackedStart), this.trackedEnd = Math.max(this.trackedEnd, Od + dd.byteLength)
+        this.trackedWrites.set(bb, wb - this.trackedStart), this.trackedEnd = Math.max(this.trackedEnd, wb + bb.byteLength)
       }
       startTrackingWrites() {
         this.trackedWrites = new Uint8Array(1024), this.trackedStart = this.getPos(), this.trackedEnd = this.trackedStart
       }
       stopTrackingWrites() {
         if (!this.trackedWrites) throw new Error("Internal error: Can't get tracked writes since nothing was tracked.");
-        const dd = {
+        const bb = {
           data: this.trackedWrites.subarray(0, this.trackedEnd - this.trackedStart),
           start: this.trackedStart,
           end: this.trackedEnd
         };
-        return this.trackedWrites = null, dd
+        return this.trackedWrites = null, bb
       }
     }
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

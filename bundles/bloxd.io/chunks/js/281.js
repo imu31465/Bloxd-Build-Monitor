@@ -1,701 +1,701 @@
 export const id = 281;
 export const ids = [281];
 export const modules = {
-  42993: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Rd,
-      f: () => Xd
+  42714: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => pb,
+      g: () => Vb
     });
-    var Wd = md(2100);
-    let Fd = !1;
+    var eb = Mb(2150);
+    let Hb = !1;
 
-    function Rd() {
-      Fd = !0
+    function pb() {
+      Hb = !0
     }
 
-    function Xd() {
-      Fd && (Fd = !1, (0, Wd.d)())
+    function Vb() {
+      Hb && (Hb = !1, (0, eb.d)())
     }
   },
-  42856: (dd, Od, md) => {
-    md.d(Od, {
-      C: () => fd,
-      F: () => nd,
-      H: () => sd,
-      J: () => Gd,
-      K: () => Sd,
-      O: () => Id,
-      S: () => ed,
-      V: () => Vd,
-      e: () => ld,
-      h: () => Pd,
-      l: () => xd,
-      m: () => Cd,
-      n: () => Bd,
-      q: () => Ud,
-      r: () => Ld,
-      u: () => ud,
-      v: () => rd,
-      z: () => Ad
+  42561: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      C: () => yb,
+      D: () => Jb,
+      F: () => cb,
+      I: () => Wb,
+      M: () => Db,
+      Q: () => ib,
+      R: () => ab,
+      T: () => Zb,
+      b: () => ub,
+      e: () => Nb,
+      g: () => rb,
+      j: () => db,
+      k: () => Rb,
+      m: () => Kb,
+      p: () => Sb,
+      t: () => Yb,
+      x: () => Ab,
+      y: () => fb
     });
-    var Wd = md(1498),
-      Fd = md(32),
-      Rd = md(1349),
-      Xd = md(3372),
-      Kd = md(5590),
-      hd = md(5558);
-    let vd, Qd = !1,
-      td = !1,
-      od = !1,
-      Nd = !1;
-    const qd = 1300,
-      Hd = 3e3;
-    let yd = 0,
-      bd = !1,
-      Td = !1,
-      pd = 0;
-    const Yd = 2;
-    let gd = !1,
-      wd = !1;
-    const Ed = new Set,
-      Jd = new Set;
+    var eb = Mb(1549),
+      Hb = Mb(29),
+      pb = Mb(1373),
+      Vb = Mb(3470),
+      gb = Mb(5706),
+      lb = Mb(5672);
+    let Lb, Ib = !1,
+      Ob = !1,
+      Ub = !1,
+      tb = !1;
+    const Cb = 1300,
+      Eb = 3e3;
+    let Fb = 0,
+      Bb = !1,
+      sb = !1,
+      mb = 0;
+    const hb = 2;
+    let zb = !1,
+      Xb = !1;
+    const xb = new Set,
+      jb = new Set;
 
-    function Ud() {
-      return Qd
+    function Kb() {
+      return Ib
     }
 
-    function xd() {
-      return Td
+    function rb() {
+      return sb
     }
 
-    function Bd() {
-      return wd
+    function Rb() {
+      return Xb
     }
 
-    function Sd() {
-      return (0, Rd.y)() && !wd
+    function Db() {
+      return (0, pb.B)() && !Xb
     }
 
-    function sd(dd) {
-      let Od = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (dd !== wd) {
-        wd = dd;
-        for (const dd of [...Jd]) dd(wd);
-        Od && ed()
+    function cb(bb) {
+      let wb = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (bb !== Xb) {
+        Xb = bb;
+        for (const bb of [...jb]) bb(Xb);
+        wb && ab()
       }
     }
 
-    function ud(dd) {
-      return Jd.add(dd), () => {
-        Jd.delete(dd)
+    function Yb(bb) {
+      return jb.add(bb), () => {
+        jb.delete(bb)
       }
     }
 
-    function Vd() {
-      (0, Kd.i)(Xd.w.Menu, (0, Rd.y)() ? 0 : Xd.w.Menu)
+    function Zb() {
+      (0, gb.h)(Vb.y.Menu, (0, pb.B)() ? 0 : Vb.y.Menu)
     }
 
-    function Ad() {
-      Td = !1, pd = 0, Vd(), ed()
+    function fb() {
+      sb = !1, mb = 0, Zb(), ab()
     }
 
-    function rd(dd) {
-      return Ed.add(dd), () => {
-        Ed.delete(dd)
+    function Ab(bb) {
+      return xb.add(bb), () => {
+        xb.delete(bb)
       }
     }
 
-    function Gd(dd) {
-      td = !1, dd !== Qd && (Qd = dd, Nd = !1, clearTimeout(vd), od = !Qd && gd, Qd ? (bd = !1, Td = !1, pd = 0) : Sd() && !gd && (Td = !0), gd = !1, Qd && !Sd() && kd(), Md(), od && ed())
+    function Wb(bb) {
+      Ob = !1, bb !== Ib && (Ib = bb, tb = !1, clearTimeout(Lb), Ub = !Ib && zb, Ib ? (Bb = !1, sb = !1, mb = 0) : Db() && !zb && (sb = !0), zb = !1, Ib && !Db() && nb(), ob(), Ub && ab())
     }
 
-    function nd(dd) {
-      dd !== bd && (bd = dd, dd || ed())
+    function Jb(bb) {
+      bb !== Bb && (Bb = bb, bb || ab())
     }
 
-    function Ld() {
-      td = !1, Nd || !0 !== jd() || (Nd = !0, clearTimeout(vd), vd = setTimeout(zd, qd))
+    function Sb() {
+      Ob = !1, tb || !0 !== Gb() || (tb = !0, clearTimeout(Lb), Lb = setTimeout(vb, Cb))
     }
 
-    function Pd() {
-      return (!td || performance.now() - yd > Hd) && (td = (0, hd.O)().lockPointer(), yd = performance.now()), td
+    function Nb() {
+      return (!Ob || performance.now() - Fb > Eb) && (Ob = (0, lb.O)().lockPointer(), Fb = performance.now()), Ob
     }
 
-    function zd() {
-      cd() && Dd() && Pd()
+    function vb() {
+      Qb() && qb() && Nb()
     }
 
-    function cd() {
-      return Sd() && !Qd && !bd && !(0, Wd.m)()
+    function Qb() {
+      return Db() && !Ib && !Bb && !(0, eb.j)()
     }
 
-    function jd() {
-      var dd;
-      return "undefined" === typeof navigator || null === (dd = navigator.userActivation) || void 0 === dd ? void 0 : dd.isActive
+    function Gb() {
+      var bb;
+      return "undefined" === typeof navigator || null === (bb = navigator.userActivation) || void 0 === bb ? void 0 : bb.isActive
     }
 
-    function Dd() {
-      return od && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== jd()
+    function qb() {
+      return Ub && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== Gb()
     }
 
-    function ed() {
-      Sd() ? cd() && !Td && Dd() && Pd() : Qd && !gd && kd()
+    function ab() {
+      Db() ? Qb() && !sb && qb() && Nb() : Ib && !zb && nb()
     }
 
-    function Id() {
-      Td ? navigator.vendor.startsWith("Apple") ? Zd() : pd = Yd : ed()
+    function ib() {
+      sb ? navigator.vendor.startsWith("Apple") ? Pb() : mb = hb : ab()
     }
 
-    function ld() {
-      pd > 0 && 0 === --pd && Zd()
+    function ub() {
+      mb > 0 && 0 === --mb && Pb()
     }
 
-    function Cd() {
-      pd = 0
+    function db() {
+      mb = 0
     }
 
-    function Zd() {
-      cd() && !0 === jd() && Pd()
+    function Pb() {
+      Qb() && !0 === Gb() && Nb()
     }
 
-    function kd() {
-      gd = !0, (0, hd.O)().unlockPointer()
+    function nb() {
+      zb = !0, (0, lb.O)().unlockPointer()
     }
 
-    function fd() {
-      td = !1, od = !1, Nd = !1, clearTimeout(vd), bd = !1, Td = !1, pd = 0, gd = !1;
-      const dd = Qd;
-      Qd = !1, dd && Md()
+    function yb() {
+      Ob = !1, Ub = !1, tb = !1, clearTimeout(Lb), Bb = !1, sb = !1, mb = 0, zb = !1;
+      const bb = Ib;
+      Ib = !1, bb && ob()
     }
 
-    function Md() {
-      for (const dd of [...Ed]) dd(Qd);
-      Fd.j.lQ("pointerLockUpdate", Qd)
+    function ob() {
+      for (const bb of [...xb]) bb(Ib);
+      Hb.k.iI("pointerLockUpdate", Ib)
     }
   },
-  42827: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => od,
-      i: () => Kd,
-      j: () => td,
-      m: () => vd,
-      q: () => Xd,
-      t: () => Qd,
-      x: () => hd
+  42535: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Ub,
+      e: () => gb,
+      i: () => Ob,
+      m: () => Lb,
+      o: () => Vb,
+      p: () => Ib,
+      s: () => lb
     });
-    let Wd = null,
-      Fd = null,
-      Rd = null;
+    let eb = null,
+      Hb = null,
+      pb = null;
 
-    function Xd(dd) {
-      Wd = dd
+    function Vb(bb) {
+      eb = bb
     }
 
-    function Kd() {
-      return Wd
+    function gb() {
+      return eb
     }
 
-    function hd(dd) {
-      Fd = dd
+    function lb(bb) {
+      Hb = bb
     }
 
-    function vd() {
-      return Fd
+    function Lb() {
+      return Hb
     }
 
-    function Qd(dd) {
-      Rd = dd
+    function Ib(bb) {
+      pb = bb
     }
 
-    function td() {
-      return Rd
+    function Ob() {
+      return pb
     }
 
-    function od() {
-      var dd, Od;
-      return !0 === (null === (dd = Fd) || void 0 === dd || null === (Od = dd.currentViewer) || void 0 === Od ? void 0 : Od.inPlayback)
+    function Ub() {
+      var bb, wb;
+      return !0 === (null === (bb = Hb) || void 0 === bb || null === (wb = bb.currentViewer) || void 0 === wb ? void 0 : wb.inPlayback)
     }
   },
-  42991: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Xd,
-      f: () => Rd,
-      h: () => Kd
+  42705: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Vb,
+      d: () => pb,
+      g: () => gb
     });
-    var Wd = md(42540),
-      Fd = md(42552);
+    var eb = Mb(42253),
+      Hb = Mb(42263);
 
-    function Rd(dd) {
-      if (dd.queries.drawCensus() < Wd.Db.BYTES) return null;
-      const Od = dd.memoryData(dd.scratch(), Wd.Db.BYTES, 4, "the draw census");
-      return null === Od ? null : {
-        terrainOpaque: Wd.Db.terrainOpaque(Od, 0),
-        terrainTransparent: Wd.Db.terrainTransparent(Od, 0),
-        terrainPack: Wd.Db.terrainPack(Od, 0),
-        earthSky: Wd.Db.earthSky(Od, 0),
-        skyMeshes: Wd.Db.skyMeshes(Od, 0),
-        regular: Wd.Db.regular(Od, 0),
-        thin: Wd.Db.thin(Od, 0),
-        line: Wd.Db.line(Od, 0),
-        text: Wd.Db.text(Od, 0),
-        particles: Wd.Db.particles(Od, 0),
-        terrainParts: Wd.Db.terrainParts(Od, 0),
-        terrainCompiling: Wd.Db.terrainCompiling(Od, 0),
-        ringCopiesMax: Wd.Db.ringCopiesMax(Od, 0),
-        ringBusyWrites: Wd.Db.ringBusyWrites(Od, 0)
+    function pb(bb) {
+      if (bb.queries.drawCensus() < eb.tb.BYTES) return null;
+      const wb = bb.memoryData(bb.scratch(), eb.tb.BYTES, 4, "the draw census");
+      return null === wb ? null : {
+        terrainOpaque: eb.tb.terrainOpaque(wb, 0),
+        terrainTransparent: eb.tb.terrainTransparent(wb, 0),
+        terrainPack: eb.tb.terrainPack(wb, 0),
+        earthSky: eb.tb.earthSky(wb, 0),
+        skyMeshes: eb.tb.skyMeshes(wb, 0),
+        regular: eb.tb.regular(wb, 0),
+        thin: eb.tb.thin(wb, 0),
+        line: eb.tb.line(wb, 0),
+        text: eb.tb.text(wb, 0),
+        particles: eb.tb.particles(wb, 0),
+        terrainParts: eb.tb.terrainParts(wb, 0),
+        terrainCompiling: eb.tb.terrainCompiling(wb, 0),
+        ringCopiesMax: eb.tb.ringCopiesMax(wb, 0),
+        ringBusyWrites: eb.tb.ringBusyWrites(wb, 0)
       }
     }
 
-    function Xd(dd) {
+    function Vb(bb) {
       const {
-        terrainOpaque: Od,
-        terrainTransparent: md,
-        earthSky: Wd,
-        skyMeshes: Fd,
-        regular: Rd,
-        thin: Xd,
-        line: Kd,
-        text: hd,
-        particles: vd
-      } = dd;
-      return Od + md + Wd + Fd + Rd + Xd + Kd + hd + vd
+        terrainOpaque: wb,
+        terrainTransparent: Mb,
+        earthSky: eb,
+        skyMeshes: Hb,
+        regular: pb,
+        thin: Vb,
+        line: gb,
+        text: lb,
+        particles: Lb
+      } = bb;
+      return wb + Mb + eb + Hb + pb + Vb + gb + lb + Lb
     }
 
-    function Kd() {
-      const dd = (0, Fd.l)();
-      return !0 === (null === dd || void 0 === dd ? void 0 : dd.isCoreRunning) ? function(dd) {
-        const Od = Rd(dd);
-        if (null === Od) return [];
+    function gb() {
+      const bb = (0, Hb.m)();
+      return !0 === (null === bb || void 0 === bb ? void 0 : bb.isCoreRunning) ? function(bb) {
+        const wb = pb(bb);
+        if (null === wb) return [];
         const {
-          terrainOpaque: md,
-          terrainTransparent: Wd,
-          terrainPack: Fd,
-          earthSky: Kd,
-          skyMeshes: hd,
-          regular: vd,
-          thin: Qd,
-          line: td,
-          text: od,
-          particles: Nd
-        } = Od;
+          terrainOpaque: Mb,
+          terrainTransparent: eb,
+          terrainPack: Hb,
+          earthSky: gb,
+          skyMeshes: lb,
+          regular: Lb,
+          thin: Ib,
+          line: Ob,
+          text: Ub,
+          particles: tb
+        } = wb;
         return [{
           label: "Drawn",
-          value: `${Xd(Od)}`
+          value: `${Vb(wb)}`
         }, {
           label: "Terrain",
-          value: `${md} opaque / ${Wd} transparent (${Fd} shader pack)`
+          value: `${Mb} opaque / ${eb} transparent (${Hb} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${vd} / ${Qd}`
+          value: `${Lb} / ${Ib}`
         }, {
           label: "Text / Lines",
-          value: `${od} / ${td}`
+          value: `${Ub} / ${Ob}`
         }, {
           label: "Sky / Particles",
-          value: `${Kd+hd} / ${Nd}`
+          value: `${gb+lb} / ${tb}`
         }]
-      }(dd.api) : []
+      }(bb.api) : []
     }
   },
-  42977: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => qd,
-      h: () => od,
-      j: () => Nd
+  42688: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Cb,
+      f: () => Ub,
+      j: () => tb
     });
-    var Wd = md(2106),
-      Fd = md(1354),
-      Rd = md(42552),
-      Xd = md(42573),
-      Kd = md(42578),
-      hd = md(42602);
-    const vd = new Fd.e;
-    let Qd = !1;
+    var eb = Mb(2153),
+      Hb = Mb(1382),
+      pb = Mb(42263),
+      Vb = Mb(42274),
+      gb = Mb(42277),
+      lb = Mb(42295);
+    const Lb = new Hb.b;
+    let Ib = !1;
 
-    function td(dd) {
-      const Od = (0, Rd.l)();
-      return null !== Od && +dd === Od.api.localId
+    function Ob(bb) {
+      const wb = (0, pb.m)();
+      return null !== wb && +bb === wb.api.localId
     }
 
-    function od() {
-      Qd || (Qd = !0, (0, hd.k)(Xd.l, (dd => {
-        var Od, md;
-        const Wd = (0, Kd.h)(Xd.l, dd);
-        if (!(0, Kd.d)(Wd)) return;
-        const Fd = Wd;
-        td(Fd.MR) && Nd(Fd.dX, {
-          icon: Fd.mX,
-          level: Fd.FX,
-          displayName: null !== (Od = Fd.OX) && void 0 !== Od ? Od : null,
-          durationMs: null !== (md = Fd.WX) && void 0 !== md ? md : null
+    function Ub() {
+      Ib || (Ib = !0, (0, lb.m)(Vb.l, (bb => {
+        var wb, Mb;
+        const eb = (0, gb.d)(Vb.l, bb);
+        if (!(0, gb.c)(eb)) return;
+        const Hb = eb;
+        Ob(Hb.bV) && tb(Hb.wV, {
+          icon: Hb.eV,
+          level: Hb.pV,
+          displayName: null !== (wb = Hb.MV) && void 0 !== wb ? wb : null,
+          durationMs: null !== (Mb = Hb.HV) && void 0 !== Mb ? Mb : null
         })
-      })), (0, hd.k)(Xd.S, (dd => {
-        const Od = (0, Kd.h)(Xd.S, dd);
-        if (!(0, Kd.d)(Od)) return;
-        const md = Od;
-        td(md.MR) && Wd.e.remove(md.dX)
-      })), (0, hd.g)((() => {
-        Wd.e.clear()
+      })), (0, lb.m)(Vb.M, (bb => {
+        const wb = (0, gb.d)(Vb.M, bb);
+        if (!(0, gb.c)(wb)) return;
+        const Mb = wb;
+        Ob(Mb.bV) && eb.d.remove(Mb.wV)
+      })), (0, lb.f)((() => {
+        eb.d.clear()
       })))
     }
 
-    function Nd(dd, Od) {
-      Wd.e.update(dd, Od), vd.forEach((Od => {
-        Od(dd)
+    function tb(bb, wb) {
+      eb.d.update(bb, wb), Lb.forEach((wb => {
+        wb(bb)
       }))
     }
-    const qd = {
+    const Cb = {
       localEffectUpdated: {
-        watch: dd => vd.add(dd)
+        watch: bb => Lb.add(bb)
       }
     }
   },
-  42983: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Qd
+  42691: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => Ib
     });
-    var Wd = md(5571),
-      Fd = md(5568),
-      Rd = md(42587),
-      Xd = md(42602);
-    const Kd = new Set(Wd.N),
-      hd = Wd.N.map((dd => (new TextEncoder).encode(dd))),
-      vd = new Map;
+    var eb = Mb(5685),
+      Hb = Mb(5678),
+      pb = Mb(42284),
+      Vb = Mb(42295);
+    const gb = new Set(eb.Q),
+      lb = eb.Q.map((bb => (new TextEncoder).encode(bb))),
+      Lb = new Map;
 
-    function Qd(dd, Od) {
-      var md;
-      return null === (md = vd.get(dd)) || void 0 === md ? void 0 : md[Od]
-    }(0, Xd.k)(Wd.hc.NewOtherEntitySettings, (dd => {
-      dd.payloadKind === Fd.mc.Msgpack && hd.some((Od => function(dd, Od) {
-        const md = Od[0];
-        for (let Wd = dd.indexOf(md); - 1 !== Wd && Wd + Od.length <= dd.length; Wd = dd.indexOf(md, Wd + 1)) {
-          let md = 1;
-          for (; md < Od.length && dd[Wd + md] === Od[md];) md++;
-          if (md === Od.length) return !0
+    function Ib(bb, wb) {
+      var Mb;
+      return null === (Mb = Lb.get(bb)) || void 0 === Mb ? void 0 : Mb[wb]
+    }(0, Vb.m)(eb.nc.NewOtherEntitySettings, (bb => {
+      bb.payloadKind === Hb.hc.Msgpack && lb.some((wb => function(bb, wb) {
+        const Mb = wb[0];
+        for (let eb = bb.indexOf(Mb); - 1 !== eb && eb + wb.length <= bb.length; eb = bb.indexOf(Mb, eb + 1)) {
+          let Mb = 1;
+          for (; Mb < wb.length && bb[eb + Mb] === wb[Mb];) Mb++;
+          if (Mb === wb.length) return !0
         }
         return !1
-      }(dd.payload, Od))) && function(dd) {
-        if (null === dd || "object" !== typeof dd || null === dd.settings || "object" !== typeof dd.settings) return;
-        const Od = String(dd.eId),
-          md = dd.settings;
-        let Wd = vd.get(Od);
-        for (const Fd in md) {
-          if (!Kd.has(Fd)) continue;
-          const dd = md[Fd];
-          null === dd || void 0 === dd ? Wd && delete Wd[Fd] : (Wd ??= {}, Wd[Fd] = dd)
+      }(bb.payload, wb))) && function(bb) {
+        if (null === bb || "object" !== typeof bb || null === bb.settings || "object" !== typeof bb.settings) return;
+        const wb = String(bb.eId),
+          Mb = bb.settings;
+        let eb = Lb.get(wb);
+        for (const Hb in Mb) {
+          if (!gb.has(Hb)) continue;
+          const bb = Mb[Hb];
+          null === bb || void 0 === bb ? eb && delete eb[Hb] : (eb ??= {}, eb[Hb] = bb)
         }
-        Wd && vd.set(Od, Wd)
-      }((0, Rd.b)(dd.payload))
-    })), (0, Xd.g)((() => {
-      vd.clear()
+        eb && Lb.set(wb, eb)
+      }((0, pb.d)(bb.payload))
+    })), (0, Vb.f)((() => {
+      Lb.clear()
     }))
   },
-  42972: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Nd,
-      f: () => vd,
-      i: () => td
+  42685: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => tb,
+      f: () => Lb,
+      h: () => Ob
     });
-    var Wd = md(40565),
-      Fd = md(2094),
-      Rd = md(1354),
-      Xd = md(42573),
-      Kd = md(42578),
-      hd = md(42602);
-    const vd = new Wd.e;
-    let Qd = {};
+    var eb = Mb(40306),
+      Hb = Mb(2146),
+      pb = Mb(1382),
+      Vb = Mb(42274),
+      gb = Mb(42277),
+      lb = Mb(42295);
+    const Lb = new eb.c;
+    let Ib = {};
 
-    function td(dd) {
-      return Qd[dd]
+    function Ob(bb) {
+      return Ib[bb]
     }
-    const od = new Rd.e;
+    const Ub = new pb.b;
 
-    function Nd(dd) {
-      return od.add(dd)
+    function tb(bb) {
+      return Ub.add(bb)
     }
 
-    function qd(dd) {
-      od.callEach(dd, "a roster listener")
-    }(0, hd.k)(Xd._, (dd => {
-      const Od = (0, Kd.h)(Xd._, dd);
-      if (void 0 === Od) return;
-      const md = Od.EF.some((dd => {
+    function Cb(bb) {
+      Ub.callEach(bb, "a roster listener")
+    }(0, lb.m)(Vb.W, (bb => {
+      const wb = (0, gb.d)(Vb.W, bb);
+      if (void 0 === wb) return;
+      const Mb = wb.KH.some((bb => {
           let {
-            JF: Od,
-            UF: md
-          } = dd;
-          return null !== md && vd.has(Od) && vd.getName(Od) !== md
+            rH: wb,
+            RH: Mb
+          } = bb;
+          return null !== Mb && Lb.has(wb) && Lb.getName(wb) !== Mb
         })),
         {
-          added: Wd,
-          removed: Rd,
-          settingChanges: hd
-        } = vd.apply(Od),
-        Qd = new Set;
-      for (const Fd of hd)
-        for (const dd in Fd.settings) Qd.add(dd);
-      const td = md || Wd.length > 0 || Rd.length > 0;
-      (td || Qd.has("hideNameSeed")) && function() {
-        const dd = new Map;
-        for (const Od of vd.ids()) {
-          const md = vd.getName(Od),
-            Wd = vd.getSetting(Od, "hideNameSeed");
-          void 0 !== md && void 0 !== Wd && null !== Wd && dd.set(md, Wd)
+          added: eb,
+          removed: pb,
+          settingChanges: lb
+        } = Lb.apply(wb),
+        Ib = new Set;
+      for (const Hb of lb)
+        for (const bb in Hb.settings) Ib.add(bb);
+      const Ob = Mb || eb.length > 0 || pb.length > 0;
+      (Ob || Ib.has("hideNameSeed")) && function() {
+        const bb = new Map;
+        for (const wb of Lb.ids()) {
+          const Mb = Lb.getName(wb),
+            eb = Lb.getSetting(wb, "hideNameSeed");
+          void 0 !== Mb && void 0 !== eb && null !== eb && bb.set(Mb, eb)
         }
-        Fd.c.replaceAll(dd)
-      }(), qd({
+        Hb.d.replaceAll(bb)
+      }(), Cb({
         kind: "roster",
-        members: td,
-        settings: Qd
+        members: Ob,
+        settings: Ib
       })
-    })), (0, hd.k)(Xd.R, (dd => {
-      const Od = (0, Kd.h)(Xd.R, dd);
-      if (void 0 !== Od) {
+    })), (0, lb.m)(Vb.L, (bb => {
+      const wb = (0, gb.d)(Vb.L, bb);
+      if (void 0 !== wb) {
         for (const {
-            XF: dd,
-            KF: md,
-            hF: Wd
+            VH: bb,
+            gH: Mb,
+            lH: eb
           }
-          of Od) Qd[dd] = {
-          ...Qd[dd],
-          [md]: Wd
+          of wb) Ib[bb] = {
+          ...Ib[bb],
+          [Mb]: eb
         };
-        qd({
+        Cb({
           kind: "cosmetics",
-          updates: Od
+          updates: wb
         })
       }
-    })), (0, hd.g)((() => {
-      vd.clear(), Qd = {}, Fd.c.clear(), qd({
+    })), (0, lb.f)((() => {
+      Lb.clear(), Ib = {}, Hb.d.clear(), Cb({
         kind: "reset"
       })
-    })), (0, hd.i)((() => {
-      vd.clear(), qd({
+    })), (0, lb.i)((() => {
+      Lb.clear(), Cb({
         kind: "reset"
       })
     }))
   },
-  42986: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => Bd,
-      h: () => yd,
-      l: () => Vd,
-      n: () => Ad
+  42699: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => Rb,
+      e: () => Fb,
+      f: () => Zb,
+      j: () => fb
     });
-    var Wd = md(1322),
-      Fd = md(693),
-      Rd = md(107),
-      Xd = md(5571),
-      Kd = md(42540),
-      hd = md(42567),
-      vd = md(42552),
-      Qd = md(42983),
-      td = md(42972),
-      od = md(42578),
-      Nd = md(42602);
+    var eb = Mb(1333),
+      Hb = Mb(648),
+      pb = Mb(110),
+      Vb = Mb(5685),
+      gb = Mb(42253),
+      lb = Mb(42272),
+      Lb = Mb(42263),
+      Ib = Mb(42691),
+      Ob = Mb(42685),
+      Ub = Mb(42277),
+      tb = Mb(42295);
 
-    function qd(dd) {
+    function Cb(bb) {
       let {
-        deadEId: Od,
-        killerEId: md,
-        killerLifeformType: Wd,
-        withItem: Fd,
-        killstreak: Rd
-      } = dd;
+        deadEId: wb,
+        killerEId: Mb,
+        killerLifeformType: eb,
+        withItem: Hb,
+        killstreak: pb
+      } = bb;
       return {
-        killer: Yd({
-          eId: md,
-          lifeformType: Wd
+        killer: hb({
+          eId: Mb,
+          lifeformType: eb
         }),
-        victim: Yd({
-          eId: Od
+        victim: hb({
+          eId: wb
         }),
-        withItem: Fd,
-        killstreak: Rd
+        withItem: Hb,
+        killstreak: pb
       }
     }
 
-    function Hd(dd) {
+    function Eb(bb) {
       let {
-        killer: Od,
-        victim: md,
-        withItem: Wd
-      } = dd;
+        killer: wb,
+        victim: Mb,
+        withItem: eb
+      } = bb;
       return {
-        killer: Yd(Od),
-        victim: Yd(md),
-        withItem: Wd,
+        killer: hb(wb),
+        victim: hb(Mb),
+        withItem: eb,
         killstreak: 0
       }
     }
 
-    function yd(dd) {
-      Jd && xd((() => "killed" === dd.kind ? qd(dd.body) : Hd(dd.body)))
+    function Fb(bb) {
+      jb && rb((() => "killed" === bb.kind ? Cb(bb.body) : Eb(bb.body)))
     }
-    const bd = "#2727f1",
-      Td = "#912c2c";
+    const Bb = "#2727f1",
+      sb = "#912c2c";
 
-    function pd(dd, Od) {
-      var md;
-      return td.f.has(dd) ? null === (md = td.f.getSettings(dd)) || void 0 === md ? void 0 : md[Od] : (0, Qd.d)(dd, Od)
+    function mb(bb, wb) {
+      var Mb;
+      return Ob.f.has(bb) ? null === (Mb = Ob.f.getSettings(bb)) || void 0 === Mb ? void 0 : Mb[wb] : (0, Ib.e)(bb, wb)
     }
 
-    function Yd(dd) {
-      var Od, md, Xd, Kd, Qd;
+    function hb(bb) {
+      var wb, Mb, Vb, gb, Ib;
       let {
-        eId: od,
-        name: Nd,
-        colour: qd,
-        lifeformType: Hd
-      } = dd;
-      if (void 0 === od || null === od || "" === od) {
-        const dd = Nd || null;
+        eId: Ub,
+        name: tb,
+        colour: Cb,
+        lifeformType: Eb
+      } = bb;
+      if (void 0 === Ub || null === Ub || "" === Ub) {
+        const bb = tb || null;
         return {
           id: null,
-          shownName: dd,
-          lifeformType: null === dd && null !== Hd && void 0 !== Hd ? Hd : null,
-          colour: qd || null,
+          shownName: bb,
+          lifeformType: null === bb && null !== Eb && void 0 !== Eb ? Eb : null,
+          colour: Cb || null,
           local: !1,
           realName: null
         }
       }
-      const yd = String(od),
-        Yd = null === (Od = (0, vd.l)()) || void 0 === Od ? void 0 : Od.api,
-        gd = void 0 !== Yd && String(Yd.localId) === yd,
-        wd = null !== (md = td.f.getName(yd)) && void 0 !== md ? md : null,
-        Ed = null !== (Xd = pd(yd, "hideNameSeed")) && void 0 !== Xd ? Xd : null;
-      let Jd = null === wd ? null : (0, Wd.b)(wd, !Rd.featureFlags.canSeeRealPlayerNames, Ed) || null,
-        Ud = null;
-      if (null === Jd && void 0 !== Yd) {
-        const dd = Yd.getEntityType(yd);
-        "Player" !== dd && (Jd = (0, hd.f)(Yd, +yd) || null), Ud = Fd.h.includes(dd) ? dd : null
+      const Fb = String(Ub),
+        hb = null === (wb = (0, Lb.m)()) || void 0 === wb ? void 0 : wb.api,
+        zb = void 0 !== hb && String(hb.localId) === Fb,
+        Xb = null !== (Mb = Ob.f.getName(Fb)) && void 0 !== Mb ? Mb : null,
+        xb = null !== (Vb = mb(Fb, "hideNameSeed")) && void 0 !== Vb ? Vb : null;
+      let jb = null === Xb ? null : (0, eb.b)(Xb, !pb.featureFlags.canSeeRealPlayerNames, xb) || null,
+        Kb = null;
+      if (null === jb && void 0 !== hb) {
+        const bb = hb.getEntityType(Fb);
+        "Player" !== bb && (jb = (0, lb.l)(hb, +Fb) || null), Kb = Hb.j.includes(bb) ? bb : null
       }
       return {
-        id: yd,
-        shownName: Jd,
-        lifeformType: null === Jd && null !== (Kd = null !== (Qd = Ud) && void 0 !== Qd ? Qd : Hd) && void 0 !== Kd ? Kd : null,
-        colour: qd || pd(yd, "killfeedColour") || (gd ? bd : Td),
-        local: gd,
-        realName: wd
+        id: Fb,
+        shownName: jb,
+        lifeformType: null === jb && null !== (gb = null !== (Ib = Kb) && void 0 !== Ib ? Ib : Eb) && void 0 !== gb ? gb : null,
+        colour: Cb || mb(Fb, "killfeedColour") || (zb ? Bb : sb),
+        local: zb,
+        realName: Xb
       }
     }
-    const gd = 32;
-    let wd = [],
-      Ed = null,
-      Jd = !1,
-      Ud = !1;
+    const zb = 32;
+    let Xb = [],
+      xb = null,
+      jb = !1,
+      Kb = !1;
 
-    function xd(dd) {
-      null === Ed ? (wd.length === gd && wd.shift(), wd.push(dd)) : Ed(dd())
+    function rb(bb) {
+      null === xb ? (Xb.length === zb && Xb.shift(), Xb.push(bb)) : xb(bb())
     }
 
-    function Bd() {
-      Ud || (Ud = !0, (0, Nd.k)(Xd.hc.PlayerKilled, (dd => {
-        const Od = (0, od.k)(dd);
-        (0, od.d)(Od) && xd((() => qd(Od)))
-      })), (0, Nd.k)(Xd.hc.CustomKillfeed, (dd => {
-        const Od = (0, od.k)(dd);
-        (0, od.d)(Od) && (0, od.d)(Od.killer) && (0, od.d)(Od.victim) && xd((() => Hd(Od)))
-      })), (0, Nd.g)((() => {
-        wd = []
+    function Rb() {
+      Kb || (Kb = !0, (0, tb.m)(Vb.nc.PlayerKilled, (bb => {
+        const wb = (0, Ub.g)(bb);
+        (0, Ub.c)(wb) && rb((() => Cb(wb)))
+      })), (0, tb.m)(Vb.nc.CustomKillfeed, (bb => {
+        const wb = (0, Ub.g)(bb);
+        (0, Ub.c)(wb) && (0, Ub.c)(wb.killer) && (0, Ub.c)(wb.victim) && rb((() => Eb(wb)))
+      })), (0, tb.f)((() => {
+        Xb = []
       })))
     }
-    const Sd = Object.freeze([0, 0, 0]),
-      sd = [0, 0, 0],
-      ud = [0, 0, 0],
-      Vd = {
+    const Db = Object.freeze([0, 0, 0]),
+      cb = [0, 0, 0],
+      Yb = [0, 0, 0],
+      Zb = {
         kill: {
-          watch(dd) {
-            if (Jd = !0, 0 === wd.length) return Ed = dd, () => {
-              Jd = !1, Ed = null
+          watch(bb) {
+            if (jb = !0, 0 === Xb.length) return xb = bb, () => {
+              jb = !1, xb = null
             };
-            const Od = setTimeout((() => {
-              const Od = wd;
-              wd = [], Ed = dd;
-              for (const Wd of Od) try {
-                dd(Wd())
-              } catch (md) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", md)
+            const wb = setTimeout((() => {
+              const wb = Xb;
+              Xb = [], xb = bb;
+              for (const eb of wb) try {
+                bb(eb())
+              } catch (Mb) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", Mb)
               }
             }), 0);
             return () => {
-              clearTimeout(Od), Jd = !1, Ed = null
+              clearTimeout(wb), jb = !1, xb = null
             }
           }
         }
       },
-      Ad = {
+      fb = {
         localPos() {
-          const dd = (0, vd.l)();
-          if (null === dd) return Sd;
-          const Od = dd.api.apiView;
-          for (let md = 0; md < 3; md++) sd[md] = Kd.q.localPos(Od, 0, md);
-          return sd
+          const bb = (0, Lb.m)();
+          if (null === bb) return Db;
+          const wb = bb.api.apiView;
+          for (let Mb = 0; Mb < 3; Mb++) cb[Mb] = gb.q.localPos(wb, 0, Mb);
+          return cb
         },
         targetedBlockPos() {
-          const dd = (0, vd.l)();
-          if (null === dd || Kd.q.targetBlockId(dd.api.apiView, 0) === Kd.dd) return null;
-          for (let Od = 0; Od < 3; Od++) ud[Od] = Kd.q.targetBlock(dd.api.apiView, 0, Od);
-          return ud
+          const bb = (0, Lb.m)();
+          if (null === bb || gb.q.targetBlockId(bb.api.apiView, 0) === gb.Tc) return null;
+          for (let wb = 0; wb < 3; wb++) Yb[wb] = gb.q.targetBlock(bb.api.apiView, 0, wb);
+          return Yb
         }
       }
   },
-  40565: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Wd
+  40306: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => eb
     });
-    class Wd {
+    class eb {
       constructor() {
         this.members = new Map
       }
-      apply(dd) {
-        const Od = {
+      apply(bb) {
+        const wb = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Wd of dd.EF) {
-          let dd = this.members.get(Wd.JF);
-          if (dd || (dd = {
+        for (const eb of bb.KH) {
+          let bb = this.members.get(eb.rH);
+          if (bb || (bb = {
               name: null,
               settings: {}
-            }, this.members.set(Wd.JF, dd), Od.added.push(Wd.JF)), null !== Wd.UF && (dd.name = Wd.UF), null !== Wd.xF || Wd.BF.length > 0) {
-            const md = null === Wd.xF ? {} : JSON.parse(Wd.xF);
-            Object.assign(dd.settings, md);
-            for (const Od of Wd.BF) delete dd.settings[Od], md[Od] = void 0;
-            Od.settingChanges.push({
-              playerId: Wd.JF,
-              settings: md
+            }, this.members.set(eb.rH, bb), wb.added.push(eb.rH)), null !== eb.RH && (bb.name = eb.RH), null !== eb.DH || eb.cH.length > 0) {
+            const Mb = null === eb.DH ? {} : JSON.parse(eb.DH);
+            Object.assign(bb.settings, Mb);
+            for (const wb of eb.cH) delete bb.settings[wb], Mb[wb] = void 0;
+            wb.settingChanges.push({
+              playerId: eb.rH,
+              settings: Mb
             })
           }
         }
-        for (const Wd of dd.SF) {
-          const dd = this.members.get(Wd);
-          var md;
-          if (dd) this.members.delete(Wd), Od.removed.push({
-            playerId: Wd,
-            name: null !== (md = dd.name) && void 0 !== md ? md : void 0
+        for (const eb of bb.YH) {
+          const bb = this.members.get(eb);
+          var Mb;
+          if (bb) this.members.delete(eb), wb.removed.push({
+            playerId: eb,
+            name: null !== (Mb = bb.name) && void 0 !== Mb ? Mb : void 0
           })
         }
-        return Od
+        return wb
       }
-      has(dd) {
-        return this.members.has(dd)
+      has(bb) {
+        return this.members.has(bb)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(dd) {
-        var Od, md;
-        return null !== (Od = null === (md = this.members.get(dd)) || void 0 === md ? void 0 : md.name) && void 0 !== Od ? Od : void 0
+      getName(bb) {
+        var wb, Mb;
+        return null !== (wb = null === (Mb = this.members.get(bb)) || void 0 === Mb ? void 0 : Mb.name) && void 0 !== wb ? wb : void 0
       }
-      getSettings(dd) {
-        var Od;
-        return null === (Od = this.members.get(dd)) || void 0 === Od ? void 0 : Od.settings
+      getSettings(bb) {
+        var wb;
+        return null === (wb = this.members.get(bb)) || void 0 === wb ? void 0 : wb.settings
       }
-      getSetting(dd, Od) {
-        var md;
-        return null === (md = this.members.get(dd)) || void 0 === md ? void 0 : md.settings[Od]
+      getSetting(bb, wb) {
+        var Mb;
+        return null === (Mb = this.members.get(bb)) || void 0 === Mb ? void 0 : Mb.settings[wb]
       }
       clear() {
         this.members.clear()
@@ -704,4 +704,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

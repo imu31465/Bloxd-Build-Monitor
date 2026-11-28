@@ -1,132 +1,132 @@
 export const id = 162;
 export const ids = [162];
 export const modules = {
-  7586: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => Yd,
-      f: () => gd,
-      g: () => Td,
-      j: () => bd
+  7821: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      e: () => hb,
+      i: () => zb,
+      l: () => sb,
+      n: () => Bb
     });
-    var Wd = md(7592);
-    const Fd = 6,
-      Rd = 3,
-      Xd = 1,
-      Kd = 2,
-      hd = 4,
-      vd = 8,
-      Qd = 16,
-      td = 32,
-      od = 64,
-      Nd = 128,
-      qd = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var eb = Mb(7825);
+    const Hb = 6,
+      pb = 3,
+      Vb = 1,
+      gb = 2,
+      lb = 4,
+      Lb = 8,
+      Ib = 16,
+      Ob = 32,
+      Ub = 64,
+      tb = 128,
+      Cb = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Hd(dd) {
-      if (!dd) return 0;
-      const Od = qd.indexOf(dd);
-      if (Od <= 0) throw new Error(`"${dd}" is not a shader pack hook function`);
-      return Od
+    function Eb(bb) {
+      if (!bb) return 0;
+      const wb = Cb.indexOf(bb);
+      if (wb <= 0) throw new Error(`"${bb}" is not a shader pack hook function`);
+      return wb
     }
 
-    function yd(dd) {
-      if (0 === dd) return null;
-      const Od = qd[dd];
-      if (void 0 === Od) throw new Error(`${dd} is not a shader pack hook function id`);
-      return Od
+    function Fb(bb) {
+      if (0 === bb) return null;
+      const wb = Cb[bb];
+      if (void 0 === wb) throw new Error(`${bb} is not a shader pack hook function id`);
+      return wb
     }
 
-    function bd(dd) {
-      const Od = Wd.c.length;
+    function Bb(bb) {
+      const wb = eb.d.length;
       return {
-        strict: dd >= Od,
-        program: Wd.c[dd % Od]
+        strict: bb >= wb,
+        program: eb.d[bb % wb]
       }
     }
 
-    function Td(dd) {
-      return Number(dd.strict) * Wd.c.length + Wd.c.indexOf(dd.program)
+    function sb(bb) {
+      return Number(bb.strict) * eb.d.length + eb.d.indexOf(bb.program)
     }
 
-    function pd(dd) {
-      return "" === dd ? [] : dd.split(" ")
+    function mb(bb) {
+      return "" === bb ? [] : bb.split(" ")
     }
 
-    function Yd(dd) {
-      const Od = {
-        variantFlags: new Uint8Array(Fd),
-        hooks: new Uint8Array(Fd * Rd),
-        moduleCodes: Array(Fd).fill(""),
-        reads: Array(2 * Fd).fill("")
+    function hb(bb) {
+      const wb = {
+        variantFlags: new Uint8Array(Hb),
+        hooks: new Uint8Array(Hb * pb),
+        moduleCodes: Array(Hb).fill(""),
+        reads: Array(2 * Hb).fill("")
       };
-      for (const md of dd) {
-        const dd = Td(md.key),
-          Wd = (dd, Od) => null === md.hooks.surface || md.reads.fragment.includes(dd) ? 0 : Od;
-        Od.variantFlags[dd] = (md.sceneDepth ? Xd : 0) | (md.movesVertices ? Kd : 0) | (md.sunShadow ? hd : 0) | (md.airShadow ? vd : 0) | (md.discards ? Qd : 0) | Wd("localPosition", td) | Wd("enchantSpeed", od) | Wd("enchantTier", Nd), Od.hooks[dd * Rd] = Hd(md.hooks.vertex), Od.hooks[dd * Rd + 1] = Hd(md.hooks.surface), Od.hooks[dd * Rd + 2] = Hd(md.hooks.light), Od.moduleCodes[dd] = md.moduleCode, Od.reads[2 * dd] = md.reads.vertex.join(" "), Od.reads[2 * dd + 1] = md.reads.fragment.join(" ")
+      for (const Mb of bb) {
+        const bb = sb(Mb.key),
+          eb = (bb, wb) => null === Mb.hooks.surface || Mb.reads.fragment.includes(bb) ? 0 : wb;
+        wb.variantFlags[bb] = (Mb.sceneDepth ? Vb : 0) | (Mb.movesVertices ? gb : 0) | (Mb.sunShadow ? lb : 0) | (Mb.airShadow ? Lb : 0) | (Mb.discards ? Ib : 0) | eb("localPosition", Ob) | eb("enchantSpeed", Ub) | eb("enchantTier", tb), wb.hooks[bb * pb] = Eb(Mb.hooks.vertex), wb.hooks[bb * pb + 1] = Eb(Mb.hooks.surface), wb.hooks[bb * pb + 2] = Eb(Mb.hooks.light), wb.moduleCodes[bb] = Mb.moduleCode, wb.reads[2 * bb] = Mb.reads.vertex.join(" "), wb.reads[2 * bb + 1] = Mb.reads.fragment.join(" ")
       }
-      return Od
+      return wb
     }
 
-    function gd(dd) {
+    function zb(bb) {
       const {
-        hooks: Od,
-        moduleCodes: md,
-        reads: Wd
-      } = dd;
-      return Array.from(dd.variantFlags, ((dd, Fd) => {
-        const td = Fd * Rd;
+        hooks: wb,
+        moduleCodes: Mb,
+        reads: eb
+      } = bb;
+      return Array.from(bb.variantFlags, ((bb, Hb) => {
+        const Ob = Hb * pb;
         return {
-          key: bd(Fd),
+          key: Bb(Hb),
           hooks: {
-            vertex: yd(Od[td]),
-            surface: yd(Od[td + 1]),
-            light: yd(Od[td + 2])
+            vertex: Fb(wb[Ob]),
+            surface: Fb(wb[Ob + 1]),
+            light: Fb(wb[Ob + 2])
           },
-          moduleCode: md[Fd],
-          sceneDepth: 0 !== (dd & Xd),
-          sunShadow: 0 !== (dd & hd),
-          airShadow: 0 !== (dd & vd),
-          movesVertices: 0 !== (dd & Kd),
-          discards: 0 !== (dd & Qd),
+          moduleCode: Mb[Hb],
+          sceneDepth: 0 !== (bb & Vb),
+          sunShadow: 0 !== (bb & lb),
+          airShadow: 0 !== (bb & Lb),
+          movesVertices: 0 !== (bb & gb),
+          discards: 0 !== (bb & Ib),
           reads: {
-            vertex: pd(Wd[2 * Fd]),
-            fragment: pd(Wd[2 * Fd + 1])
+            vertex: mb(eb[2 * Hb]),
+            fragment: mb(eb[2 * Hb + 1])
           }
         }
       }))
     }
   },
-  42770: (dd, Od, md) => {
-    md.d(Od, {
-      D: () => qd,
-      c: () => Fd,
-      e: () => Wd,
-      i: () => od,
-      k: () => Qd,
-      l: () => yd,
-      n: () => Rd,
-      p: () => Kd,
-      r: () => hd,
-      s: () => Xd,
-      w: () => Hd,
-      z: () => Nd
+  42488: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      B: () => Eb,
+      C: () => tb,
+      E: () => Cb,
+      c: () => Hb,
+      g: () => eb,
+      j: () => Ub,
+      l: () => Ib,
+      p: () => Fb,
+      r: () => pb,
+      u: () => gb,
+      v: () => lb,
+      x: () => Vb
     });
-    const Wd = 3,
-      Fd = 0,
-      Rd = 1,
-      Xd = 2,
-      Kd = {
+    const eb = 3,
+      Hb = 0,
+      pb = 1,
+      Vb = 2,
+      gb = {
         uniform: 3,
-        QN: 4,
+        GU: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      hd = 10,
-      vd = "BloxdPackInputs",
-      Qd = "bloxdPackInputs",
-      td = [{
+      lb = 10,
+      Lb = "BloxdPackInputs",
+      Ib = "bloxdPackInputs",
+      Ob = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      od = 80;
+      Ub = 80;
 
-    function Nd() {
-      const dd = td.map((dd => {
+    function tb() {
+      const bb = Ob.map((bb => {
         let {
-          name: Od,
-          type: md
-        } = dd;
-        return `    ${Od}: ${md},\n`
+          name: wb,
+          type: Mb
+        } = bb;
+        return `    ${wb}: ${Mb},\n`
       })).join("");
-      return `struct ${vd} {\n${dd}}\n@group(${Wd}) @binding(${Fd}) var<uniform> ${Qd}: ${vd};\n`
+      return `struct ${Lb} {\n${bb}}\n@group(${eb}) @binding(${Hb}) var<uniform> ${Ib}: ${Lb};\n`
     }
 
-    function qd(dd, Od) {
-      const md = new DataView(dd, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, od),
-        [Wd, Fd, Rd, Xd, Kd, hd] = td;
-      md.setFloat32(Wd.offset, Od.seconds, !0), md.setUint32(Fd.offset, Od.lit ? 1 : 0, !0);
-      for (let vd = 0; vd < 3; vd++) md.setInt32(Rd.offset + 4 * vd, Od.renderOffset[vd], !0), md.setFloat32(Xd.offset + 4 * vd, Od.TOd[vd], !0), md.setFloat32(Kd.offset + 4 * vd, Od.eyePosition[vd], !0), md.setFloat32(hd.offset + 4 * vd, Od.shadowDirection[vd], !0)
+    function Cb(bb, wb) {
+      const Mb = new DataView(bb, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Ub),
+        [eb, Hb, pb, Vb, gb, lb] = Ob;
+      Mb.setFloat32(eb.offset, wb.seconds, !0), Mb.setUint32(Hb.offset, wb.lit ? 1 : 0, !0);
+      for (let Lb = 0; Lb < 3; Lb++) Mb.setInt32(pb.offset + 4 * Lb, wb.renderOffset[Lb], !0), Mb.setFloat32(Vb.offset + 4 * Lb, wb.jwb[Lb], !0), Mb.setFloat32(gb.offset + 4 * Lb, wb.eyePosition[Lb], !0), Mb.setFloat32(lb.offset + 4 * Lb, wb.shadowDirection[Lb], !0)
     }
 
-    function Hd(dd) {
-      const Od = new Uint32Array(Math.max(1, dd.length));
-      return dd.forEach(((dd, md) => {
+    function Eb(bb) {
+      const wb = new Uint32Array(Math.max(1, bb.length));
+      return bb.forEach(((bb, Mb) => {
         let {
-          id: Wd,
-          rotation: Fd
-        } = dd;
-        Od[md] = 65535 & Wd | (3 & Fd) << 16
-      })), Od
+          id: eb,
+          rotation: Hb
+        } = bb;
+        wb[Mb] = 65535 & eb | (3 & Hb) << 16
+      })), wb
     }
-    const yd = {
+    const Fb = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  7592: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Wd,
-      g: () => Xd,
-      k: () => Kd,
-      m: () => Fd,
-      q: () => Rd
+  7825: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => eb,
+      f: () => Vb,
+      i: () => gb,
+      l: () => Hb,
+      o: () => pb
     });
-    const Wd = ["terrain", "liquid", "model"];
+    const eb = ["terrain", "liquid", "model"];
 
-    function Fd() {
-      const dd = [];
-      for (const Od of [!1, !0])
-        for (const md of Wd) dd.push({
-          strict: Od,
-          program: md
+    function Hb() {
+      const bb = [];
+      for (const wb of [!1, !0])
+        for (const Mb of eb) bb.push({
+          strict: wb,
+          program: Mb
         });
-      return dd
+      return bb
     }
 
-    function Rd(dd) {
-      return `${dd.strict?"strict":"allow"}.${dd.program}`
+    function pb(bb) {
+      return `${bb.strict?"strict":"allow"}.${bb.program}`
     }
 
-    function Xd(dd) {
-      return !dd.hooks.vertex && !dd.hooks.surface && !dd.hooks.light
+    function Vb(bb) {
+      return !bb.hooks.vertex && !bb.hooks.surface && !bb.hooks.light
     }
 
-    function Kd(dd, Od) {
-      return "off" !== Od && (null === dd || dd.some((dd => dd.key.strict === ("strict" === Od) && !Xd(dd))))
+    function gb(bb, wb) {
+      return "off" !== wb && (null === bb || bb.some((bb => bb.key.strict === ("strict" === wb) && !Vb(bb))))
     }
   },
-  45318: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      SHADER_PACK_INPUTS_BINDING: () => Rd.c,
-      SHADER_PACK_INPUTS_GROUP: () => Rd.e,
-      SHADER_PACK_INPUTS_SIZE: () => Rd.i,
-      SHADER_PACK_INPUTS_VAR: () => Rd.k,
-      SHADER_PACK_MODES: () => Rd.l,
-      SHADER_PACK_PROGRAMS: () => Wd.c,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => Rd.n,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => Rd.p,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => Rd.r,
-      SHADER_PACK_TEXTURES_BINDING: () => Rd.s,
-      encodeTextureLayers: () => Rd.w,
-      flattenVariants: () => Fd.e,
-      isVariantOff: () => Wd.g,
-      packRunsIn: () => Wd.k,
-      shaderPackInputsWgsl: () => Rd.z,
-      shaderPackVariantKeys: () => Wd.m,
-      variantKeyId: () => Wd.q,
-      writeShaderPackInputs: () => Rd.D
+  45136: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      SHADER_PACK_INPUTS_BINDING: () => pb.c,
+      SHADER_PACK_INPUTS_GROUP: () => pb.g,
+      SHADER_PACK_INPUTS_SIZE: () => pb.j,
+      SHADER_PACK_INPUTS_VAR: () => pb.l,
+      SHADER_PACK_MODES: () => pb.p,
+      SHADER_PACK_PROGRAMS: () => eb.d,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => pb.r,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => pb.u,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => pb.v,
+      SHADER_PACK_TEXTURES_BINDING: () => pb.x,
+      encodeTextureLayers: () => pb.B,
+      flattenVariants: () => Hb.e,
+      isVariantOff: () => eb.f,
+      packRunsIn: () => eb.i,
+      shaderPackInputsWgsl: () => pb.C,
+      shaderPackVariantKeys: () => eb.l,
+      variantKeyId: () => eb.o,
+      writeShaderPackInputs: () => pb.E
     });
-    var Wd = md(7592),
-      Fd = md(7586),
-      Rd = md(42770)
+    var eb = Mb(7825),
+      Hb = Mb(7821),
+      pb = Mb(42488)
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

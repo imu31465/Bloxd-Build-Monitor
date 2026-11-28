@@ -1,108 +1,108 @@
 export const id = 244;
 export const ids = [244];
 export const modules = {
-  37846: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Kd,
-      e: () => Xd
+  37539: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => gb,
+      h: () => Vb
     });
-    var Wd = md(4515);
-    let Fd = null,
-      Rd = null;
+    var eb = Mb(4662);
+    let Hb = null,
+      pb = null;
 
-    function Xd() {
-      return Rd ??= md.e(242).then((() => md(37698))).then((dd => {
+    function Vb() {
+      return pb ??= Mb.e(242).then((() => Mb(37441))).then((bb => {
         let {
-          ITEM_SPRITES: Od,
-          ITEM_SPRITES_WITHOUT_FILE: md,
-          ITEM_FILES_WITHOUT_SPRITE: Rd
-        } = dd;
-        Fd = function(dd, Od, md) {
-          const Fd = new Set,
-            Rd = (0, Wd.C)(Od);
-          let Xd = 0;
-          for (const [Wd, Kd] of dd.entries()) Wd === Rd[Xd] ? Xd++ : Fd.add(Kd);
-          if ("" !== md)
-            for (const Kd of md.split(Wd.v)) Fd.add(Kd);
-          return Fd
-        }(Od.split(Wd.v), md, Rd)
-      }), (dd => {
-        throw Rd = null, dd
-      })), Rd
+          ITEM_SPRITES: wb,
+          ITEM_SPRITES_WITHOUT_FILE: Mb,
+          ITEM_FILES_WITHOUT_SPRITE: pb
+        } = bb;
+        Hb = function(bb, wb, Mb) {
+          const Hb = new Set,
+            pb = (0, eb.z)(wb);
+          let Vb = 0;
+          for (const [eb, gb] of bb.entries()) eb === pb[Vb] ? Vb++ : Hb.add(gb);
+          if ("" !== Mb)
+            for (const gb of Mb.split(eb.v)) Hb.add(gb);
+          return Hb
+        }(wb.split(eb.v), Mb, pb)
+      }), (bb => {
+        throw pb = null, bb
+      })), pb
     }
 
-    function Kd(dd) {
-      var Od, md;
-      return null !== (Od = null === (md = Fd) || void 0 === md ? void 0 : md.has(dd)) && void 0 !== Od && Od
+    function gb(bb) {
+      var wb, Mb;
+      return null !== (wb = null === (Mb = Hb) || void 0 === Mb ? void 0 : Mb.has(bb)) && void 0 !== wb && wb
     }
   },
-  37837: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Qd,
-      e: () => hd,
-      i: () => Kd,
-      j: () => vd
+  37530: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Ib,
+      f: () => lb,
+      h: () => gb,
+      l: () => Lb
     });
-    var Wd = md(2100);
-    let Fd = null,
-      Rd = 0;
-    const Xd = new Set;
+    var eb = Mb(2150);
+    let Hb = null,
+      pb = 0;
+    const Vb = new Set;
 
-    function Kd() {
-      return Fd
+    function gb() {
+      return Hb
     }
 
-    function hd() {
-      return Rd
+    function lb() {
+      return pb
     }
 
-    function vd(dd) {
-      Fd = dd, Rd++, (0, Wd.d)();
-      for (const Od of Xd) Od()
+    function Lb(bb) {
+      Hb = bb, pb++, (0, eb.d)();
+      for (const wb of Vb) wb()
     }
 
-    function Qd(dd) {
-      Xd.add(dd)
+    function Ib(bb) {
+      Vb.add(bb)
     }
   },
-  37839: (dd, Od, md) => {
-    md.d(Od, {
-      b: () => Xd,
-      d: () => Kd
+  37534: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Vb,
+      g: () => gb
     });
-    var Wd = md(37846);
-    let Fd = null,
-      Rd = null;
+    var eb = Mb(37539);
+    let Hb = null,
+      pb = null;
 
-    function Xd() {
-      return Fd ??= md.e(74).then((() => md(43159))).catch((dd => {
-        throw Fd = null, dd
-      })), Fd
+    function Vb() {
+      return Hb ??= Mb.e(74).then((() => Mb(42864))).catch((bb => {
+        throw Hb = null, bb
+      })), Hb
     }
 
-    function Kd() {
-      return Rd ??= Promise.all([Xd(), (0, Wd.e)()]).then((dd => {
-        let [Od] = dd;
-        return Od
-      }), (dd => {
-        throw Rd = null, dd
-      })), Rd
+    function gb() {
+      return pb ??= Promise.all([Vb(), (0, eb.h)()]).then((bb => {
+        let [wb] = bb;
+        return wb
+      }), (bb => {
+        throw pb = null, bb
+      })), pb
     }
   },
-  37746: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => wd
+  37469: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      d: () => Xb
     });
-    var Wd = md(5134),
-      Fd = md(1322),
-      Rd = md(689),
-      Xd = md(2178),
-      Kd = md(37755),
-      hd = md(37740);
-    const vd = 10,
-      Qd = 3,
-      td = 3,
-      od = [{
+    var eb = Mb(5315),
+      Hb = Mb(1333),
+      pb = Mb(644),
+      Vb = Mb(2228),
+      gb = Mb(37471),
+      lb = Mb(37464);
+    const Lb = 10,
+      Ib = 3,
+      Ob = 3,
+      Ub = [{
         healthFraction: .25,
         colour: "#ff0000"
       }, {
@@ -112,10 +112,10 @@ export const modules = {
         healthFraction: 1,
         colour: "#00ff00"
       }],
-      Nd = 64,
-      qd = 69,
-      Hd = {
-        icon: Xd.e,
+      tb = 64,
+      Cb = 69,
+      Eb = {
+        icon: Vb.c,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -125,187 +125,187 @@ export const modules = {
         visible: !0
       };
 
-    function yd(dd) {
-      return "object" !== typeof dd || null === dd || Array.isArray(dd) ? void 0 : dd
+    function Fb(bb) {
+      return "object" !== typeof bb || null === bb || Array.isArray(bb) ? void 0 : bb
     }
-    const bd = new Set(Wd.e);
+    const Bb = new Set(eb.d);
 
-    function Td(dd, Od) {
-      return "string" === typeof dd ? (0, hd.s)(dd, Od) : Od
-    }
-
-    function pd(dd) {
-      return Td(dd.width, Qd)
+    function sb(bb, wb) {
+      return "string" === typeof bb ? (0, lb.p)(bb, wb) : wb
     }
 
-    function Yd(dd, Od) {
-      var md;
-      const Wd = null !== (md = dd.applyTo) && void 0 !== md ? md : "both";
-      return "both" === Wd || Wd === Od
+    function mb(bb) {
+      return sb(bb.width, Ib)
     }
 
-    function gd(dd) {
-      const Od = pd(dd);
-      return "glow" === dd.style ? Od * td : Math.ceil(Od / 2) + 1
+    function hb(bb, wb) {
+      var Mb;
+      const eb = null !== (Mb = bb.applyTo) && void 0 !== Mb ? Mb : "both";
+      return "both" === eb || eb === wb
     }
 
-    function wd(dd, Od, md) {
-      var Wd, Xd;
-      const Qd = null !== (Wd = yd(dd.info)) && void 0 !== Wd ? Wd : {},
-        wd = "string" === typeof dd.name ? dd.name : "",
-        Ed = Qd.subtitle;
-      if (Array.isArray(Qd.content) && 0 === Qd.content.length && !(Array.isArray(Ed) && Ed.length > 0)) return null;
-      const Jd = "number" === typeof dd.hideNameSeed ? dd.hideNameSeed : null,
-        Ud = "" === wd || !0 === dd.mesh ? wd : (0, Fd.b)(wd, !md.canSeeRealPlayerNames, Jd);
-      if (!Ud && !Qd.content) return null;
-      const xd = "string" === typeof dd.colour ? dd.colour : "default",
-        Bd = Object.hasOwn(Rd.q, xd) ? Rd.q[xd] : void 0,
-        Sd = Qd.content ? (0, hd.i)(Qd.content, hd.c.DEFAULT_FONT_SIZE, md, Bd) : [{
+    function zb(bb) {
+      const wb = mb(bb);
+      return "glow" === bb.style ? wb * Ob : Math.ceil(wb / 2) + 1
+    }
+
+    function Xb(bb, wb, Mb) {
+      var eb, Vb;
+      const Ib = null !== (eb = Fb(bb.info)) && void 0 !== eb ? eb : {},
+        Xb = "string" === typeof bb.name ? bb.name : "",
+        xb = Ib.subtitle;
+      if (Array.isArray(Ib.content) && 0 === Ib.content.length && !(Array.isArray(xb) && xb.length > 0)) return null;
+      const jb = "number" === typeof bb.hideNameSeed ? bb.hideNameSeed : null,
+        Kb = "" === Xb || !0 === bb.mesh ? Xb : (0, Hb.b)(Xb, !Mb.canSeeRealPlayerNames, jb);
+      if (!Kb && !Ib.content) return null;
+      const rb = "string" === typeof bb.colour ? bb.colour : "default",
+        Rb = Object.hasOwn(pb.v, rb) ? pb.v[rb] : void 0,
+        Db = Ib.content ? (0, lb.h)(Ib.content, lb.b.DEFAULT_FONT_SIZE, Mb, Rb) : [{
           kind: "text",
-          text: Ud,
-          size: hd.c.DEFAULT_FONT_SIZE,
-          colour: Bd
+          text: Kb,
+          size: lb.b.DEFAULT_FONT_SIZE,
+          colour: Rb
         }],
-        sd = [],
-        ud = "boolean" === typeof dd.player ? dd.player : Array.isArray(dd.ranks),
-        Vd = ud ? (0, Kd.i)(Qd.backgroundColor) : null;
-      Vd && sd.push({
+        cb = [],
+        Yb = "boolean" === typeof bb.player ? bb.player : Array.isArray(bb.ranks),
+        Zb = Yb ? (0, gb.h)(Ib.backgroundColor) : null;
+      Zb && cb.push({
         kind: "rank",
-        rank: Vd
+        rank: Zb
       });
-      for (const Fd of Array.isArray(dd.ranks) ? dd.ranks : []) {
-        const dd = (0, hd.t)(Fd);
-        null !== dd && void 0 !== dd && dd.nameTag && dd.visible && sd.push({
+      for (const Hb of Array.isArray(bb.ranks) ? bb.ranks : []) {
+        const bb = (0, lb.q)(Hb);
+        null !== bb && void 0 !== bb && bb.nameTag && bb.visible && cb.push({
           kind: "rank",
-          rank: dd
+          rank: bb
         })
       }
-      sd.push(...Sd), ud && "" !== wd && md.isFriend(wd) && sd.push({
+      cb.push(...Db), Yb && "" !== Xb && Mb.isFriend(Xb) && cb.push({
         kind: "rank",
-        rank: Hd
-      }), "number" === typeof dd.UX && sd.push({
+        rank: Eb
+      }), "number" === typeof bb.DV && cb.push({
         kind: "text",
-        text: ` ${dd.UX}m`,
-        size: hd.c.DEFAULT_FONT_SIZE,
+        text: ` ${bb.DV}m`,
+        size: lb.b.DEFAULT_FONT_SIZE,
         colour: "#cef3ff"
       });
-      const Ad = Ed ? (0, hd.i)(Ed, hd.c.DEFAULT_SUBTITLE_FONT_SIZE, md) : null,
-        rd = "string" === typeof Qd.backgroundColor ? Qd.backgroundColor : "#22283b",
-        Gd = "string" === typeof Qd.subtitleBackgroundColor ? Qd.subtitleBackgroundColor : "#1a1e2d",
-        nd = yd(Qd.healthbar),
-        Ld = yd(Qd.border),
-        Pd = Array.isArray(dd.effects) ? dd.effects.filter((dd => "string" === typeof dd && bd.has(dd))) : [],
-        zd = "number" === typeof dd.health ? Math.max(0, Math.min(1, dd.health)) : null,
-        cd = (0, hd.e)(sd, Od, md),
-        jd = (0, hd.e)(null !== Ad && void 0 !== Ad ? Ad : [], Od, md),
-        Dd = {
-          width: hd.c.EFFECT_ICON_SIZE * Pd.length,
-          height: Pd.length > 0 ? hd.c.EFFECT_ICON_SIZE : 0
+      const fb = xb ? (0, lb.h)(xb, lb.b.DEFAULT_SUBTITLE_FONT_SIZE, Mb) : null,
+        Ab = "string" === typeof Ib.backgroundColor ? Ib.backgroundColor : "#22283b",
+        Wb = "string" === typeof Ib.subtitleBackgroundColor ? Ib.subtitleBackgroundColor : "#1a1e2d",
+        Jb = Fb(Ib.healthbar),
+        Sb = Fb(Ib.border),
+        Nb = Array.isArray(bb.effects) ? bb.effects.filter((bb => "string" === typeof bb && Bb.has(bb))) : [],
+        vb = "number" === typeof bb.health ? Math.max(0, Math.min(1, bb.health)) : null,
+        Qb = (0, lb.d)(cb, wb, Mb),
+        Gb = (0, lb.d)(null !== fb && void 0 !== fb ? fb : [], wb, Mb),
+        qb = {
+          width: lb.b.EFFECT_ICON_SIZE * Nb.length,
+          height: Nb.length > 0 ? lb.b.EFFECT_ICON_SIZE : 0
         },
-        ed = Ld && Yd(Ld, "nametag") ? gd(Ld) : 0,
-        Id = Td(null === nd || void 0 === nd ? void 0 : nd.height, vd),
-        ld = Ld && Yd(Ld, "healthbar") ? gd(Ld) : 0,
-        Cd = "never" === (null !== (Xd = null === nd || void 0 === nd ? void 0 : nd.display) && void 0 !== Xd ? Xd : "onDamage") ? 0 : Id + ld,
-        Zd = Math.max(Dd.height, ed),
-        kd = Math.max(hd.c.VERTICAL_PADDING, Cd, ed);
-      let fd = Math.max(cd.width, jd.width, Dd.width);
-      if (Ld) {
-        const dd = gd(Ld) + hd.c.HORIZONTAL_PADDING / 2;
-        fd = Math.max(fd, Math.max(cd.width, jd.width) + hd.c.HORIZONTAL_PADDING + 2 * dd)
+        ab = Sb && hb(Sb, "nametag") ? zb(Sb) : 0,
+        ib = sb(null === Jb || void 0 === Jb ? void 0 : Jb.height, Lb),
+        ub = Sb && hb(Sb, "healthbar") ? zb(Sb) : 0,
+        db = "never" === (null !== (Vb = null === Jb || void 0 === Jb ? void 0 : Jb.display) && void 0 !== Vb ? Vb : "onDamage") ? 0 : ib + ub,
+        Pb = Math.max(qb.height, ab),
+        nb = Math.max(lb.b.VERTICAL_PADDING, db, ab);
+      let yb = Math.max(Qb.width, Gb.width, qb.width);
+      if (Sb) {
+        const bb = zb(Sb) + lb.b.HORIZONTAL_PADDING / 2;
+        yb = Math.max(yb, Math.max(Qb.width, Gb.width) + lb.b.HORIZONTAL_PADDING + 2 * bb)
       }
-      const Md = cd.height + jd.height + Zd + kd,
-        dO = cd.width + hd.c.HORIZONTAL_PADDING,
-        OO = jd.width + hd.c.HORIZONTAL_PADDING,
-        mO = Math.max(dO, OO),
-        WO = (fd - mO) / 2,
-        FO = Math.max(Dd.height, ed);
+      const ob = Qb.height + Gb.height + Pb + nb,
+        Tb = Qb.width + lb.b.HORIZONTAL_PADDING,
+        kb = Gb.width + lb.b.HORIZONTAL_PADDING,
+        bw = Math.max(Tb, kb),
+        ww = (yb - bw) / 2,
+        Mw = Math.max(qb.height, ab);
       return {
-        width: fd,
-        height: Md,
-        draw: dd => {
-          const Od = [];
-          if (dd.fillStyle = rd, dd.fillRect(WO, FO, mO, cd.height), (0, hd.p)(sd, (fd - dO) / 2 + hd.c.HORIZONTAL_PADDING / 2, FO, cd.height, dd, md, Od), Ad) {
-            const Wd = FO + cd.height;
-            dd.fillStyle = Gd, dd.fillRect(WO, Wd, mO, jd.height), (0, hd.p)(Ad, (fd - OO) / 2 + hd.c.HORIZONTAL_PADDING / 2, Wd, jd.height, dd, md, Od)
+        width: yb,
+        height: ob,
+        draw: bb => {
+          const wb = [];
+          if (bb.fillStyle = Ab, bb.fillRect(ww, Mw, bw, Qb.height), (0, lb.m)(cb, (yb - Tb) / 2 + lb.b.HORIZONTAL_PADDING / 2, Mw, Qb.height, bb, Mb, wb), fb) {
+            const eb = Mw + Qb.height;
+            bb.fillStyle = Wb, bb.fillRect(ww, eb, bw, Gb.height), (0, lb.m)(fb, (yb - kb) / 2 + lb.b.HORIZONTAL_PADDING / 2, eb, Gb.height, bb, Mb, wb)
           }
-          let Wd = null;
-          if (null !== zd) {
-            const Od = Md - Id - ld;
-            null !== nd && void 0 !== nd && nd.backgroundColour && (dd.fillStyle = nd.backgroundColour, dd.fillRect(WO, Od, mO, Id)), dd.fillStyle = function(dd, Od) {
-              const md = null === dd || void 0 === dd ? void 0 : dd.foregroundColour;
-              if ("string" === typeof md) return md;
-              const Wd = [...Array.isArray(md) && md.length > 0 ? md : od].sort(((dd, Od) => dd.healthFraction - Od.healthFraction)),
-                Fd = Wd.find((dd => Od <= dd.healthFraction));
-              return (null !== Fd && void 0 !== Fd ? Fd : Wd[Wd.length - 1]).colour
-            }(nd, zd), dd.fillRect(WO, Od, Math.round(mO * zd), Id), Wd = {
-              x: WO,
-              y: Od,
-              width: mO,
-              height: Id
+          let eb = null;
+          if (null !== vb) {
+            const wb = ob - ib - ub;
+            null !== Jb && void 0 !== Jb && Jb.backgroundColour && (bb.fillStyle = Jb.backgroundColour, bb.fillRect(ww, wb, bw, ib)), bb.fillStyle = function(bb, wb) {
+              const Mb = null === bb || void 0 === bb ? void 0 : bb.foregroundColour;
+              if ("string" === typeof Mb) return Mb;
+              const eb = [...Array.isArray(Mb) && Mb.length > 0 ? Mb : Ub].sort(((bb, wb) => bb.healthFraction - wb.healthFraction)),
+                Hb = eb.find((bb => wb <= bb.healthFraction));
+              return (null !== Hb && void 0 !== Hb ? Hb : eb[eb.length - 1]).colour
+            }(Jb, vb), bb.fillRect(ww, wb, Math.round(bw * vb), ib), eb = {
+              x: ww,
+              y: wb,
+              width: bw,
+              height: ib
             }
           }
-          if (Ld) {
-            const Od = [];
-            Yd(Ld, "nametag") && Od.push({
-              x: WO,
-              y: FO,
-              width: mO,
-              height: cd.height + (Ad ? jd.height : 0)
-            }), Wd && Yd(Ld, "healthbar") && Od.push(Wd), Od.length > 0 && function(dd, Od, md) {
-              const Wd = pd(Od),
-                Fd = Wd / 2,
-                Rd = dd => dd.width > 0 && dd.height > 0,
-                Xd = md.map((dd => ({
-                  x: dd.x + Fd,
-                  y: dd.y + Fd,
-                  width: dd.width - Wd,
-                  height: dd.height - Wd
-                }))).filter(Rd);
-              if (0 === Xd.length) return;
-              const Kd = Od => {
-                const md = Od.filter(Rd);
-                if (0 !== md.length) {
-                  dd.beginPath();
-                  for (const Od of md) dd.rect(Od.x, Od.y, Od.width, Od.height);
-                  dd.stroke()
+          if (Sb) {
+            const wb = [];
+            hb(Sb, "nametag") && wb.push({
+              x: ww,
+              y: Mw,
+              width: bw,
+              height: Qb.height + (fb ? Gb.height : 0)
+            }), eb && hb(Sb, "healthbar") && wb.push(eb), wb.length > 0 && function(bb, wb, Mb) {
+              const eb = mb(wb),
+                Hb = eb / 2,
+                pb = bb => bb.width > 0 && bb.height > 0,
+                Vb = Mb.map((bb => ({
+                  x: bb.x + Hb,
+                  y: bb.y + Hb,
+                  width: bb.width - eb,
+                  height: bb.height - eb
+                }))).filter(pb);
+              if (0 === Vb.length) return;
+              const gb = wb => {
+                const Mb = wb.filter(pb);
+                if (0 !== Mb.length) {
+                  bb.beginPath();
+                  for (const wb of Mb) bb.rect(wb.x, wb.y, wb.width, wb.height);
+                  bb.stroke()
                 }
               };
-              if (dd.save(), dd.strokeStyle = Od.colour, dd.lineWidth = Wd, dd.lineJoin = "round", "glow" === Od.style) dd.shadowColor = Od.colour, dd.shadowBlur = Wd * td, Kd(Xd), Kd(Xd);
-              else if ("double" === Od.style) {
-                Kd(Xd);
-                const dd = Wd + 2;
-                Kd(Xd.map((Od => ({
-                  x: Od.x + dd,
-                  y: Od.y + dd,
-                  width: Od.width - 2 * dd,
-                  height: Od.height - 2 * dd
+              if (bb.save(), bb.strokeStyle = wb.colour, bb.lineWidth = eb, bb.lineJoin = "round", "glow" === wb.style) bb.shadowColor = wb.colour, bb.shadowBlur = eb * Ob, gb(Vb), gb(Vb);
+              else if ("double" === wb.style) {
+                gb(Vb);
+                const bb = eb + 2;
+                gb(Vb.map((wb => ({
+                  x: wb.x + bb,
+                  y: wb.y + bb,
+                  width: wb.width - 2 * bb,
+                  height: wb.height - 2 * bb
                 }))))
-              } else Kd(Xd);
-              dd.restore()
-            }(dd, Ld, Od)
-          }(0, hd.k)(Od, dd);
-          for (let Fd = 0; Fd < Pd.length; Fd++) {
-            const Od = md.effectImage(Pd[Fd]);
-            Od && (dd.imageSmoothingEnabled = !1, dd.drawImage(Od, 5 + qd * Fd, 5, Nd, Nd))
+              } else gb(Vb);
+              bb.restore()
+            }(bb, Sb, wb)
+          }(0, lb.j)(wb, bb);
+          for (let Hb = 0; Hb < Nb.length; Hb++) {
+            const wb = Mb.effectImage(Nb[Hb]);
+            wb && (bb.imageSmoothingEnabled = !1, bb.drawImage(wb, 5 + Cb * Hb, 5, tb, tb))
           }
         }
       }
     }
   },
-  37740: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => Rd,
-      e: () => Td,
-      i: () => Nd,
-      k: () => gd,
-      m: () => Yd,
-      p: () => pd,
-      s: () => vd,
-      t: () => td
+  37464: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      b: () => pb,
+      d: () => sb,
+      h: () => tb,
+      j: () => zb,
+      k: () => hb,
+      m: () => mb,
+      p: () => Lb,
+      q: () => Ob
     });
-    var Wd = md(689),
-      Fd = md(387);
-    const Rd = {
+    var eb = Mb(644),
+      Hb = Mb(366);
+    const pb = {
         DEFAULT_FONT_SIZE: 47,
         DEFAULT_SUBTITLE_FONT_SIZE: 30,
         HORIZONTAL_PADDING: 30,
@@ -314,498 +314,498 @@ export const modules = {
         LINE_SPACING: 8,
         EFFECT_ICON_SIZE: 70
       },
-      Xd = 41;
+      Vb = 41;
 
-    function Kd(dd) {
-      return `bolder ${dd}px 'Jetbrains Mono'`
+    function gb(bb) {
+      return `bolder ${bb}px 'Jetbrains Mono'`
     }
 
-    function hd(dd) {
-      return "object" === typeof dd && null !== dd
+    function lb(bb) {
+      return "object" === typeof bb && null !== bb
     }
 
-    function vd(dd, Od) {
-      const md = "number" === typeof dd ? dd : "string" === typeof dd ? Number(dd.replace("px", "")) : NaN;
-      return Number.isFinite(md) && md > 0 ? md : Od
+    function Lb(bb, wb) {
+      const Mb = "number" === typeof bb ? bb : "string" === typeof bb ? Number(bb.replace("px", "")) : NaN;
+      return Number.isFinite(Mb) && Mb > 0 ? Mb : wb
     }
 
-    function Qd(dd) {
-      return hd(dd) ? dd : void 0
+    function Ib(bb) {
+      return lb(bb) ? bb : void 0
     }
 
-    function td(dd) {
-      const Od = "number" === typeof dd ? Wd.r[dd] : dd;
-      return "string" === typeof Od && Object.hasOwn(Wd.l, Od) ? Wd.l[Od] : void 0
+    function Ob(bb) {
+      const wb = "number" === typeof bb ? eb.x[bb] : bb;
+      return "string" === typeof wb && Object.hasOwn(eb.l, wb) ? eb.l[wb] : void 0
     }
 
-    function od(dd, Od) {
-      return "string" === typeof dd ? dd : hd(dd) ? "string" === typeof dd.translationKey ? Od.translate(dd.translationKey, dd.params).map((dd => "string" === typeof dd ? dd : dd.icon)).join("") : "string" === typeof dd.entityName ? Od.shownPlayerName(dd.entityName) : "" : void 0 === dd || null === dd ? "" : String(dd)
+    function Ub(bb, wb) {
+      return "string" === typeof bb ? bb : lb(bb) ? "string" === typeof bb.translationKey ? wb.translate(bb.translationKey, bb.params).map((bb => "string" === typeof bb ? bb : bb.icon)).join("") : "string" === typeof bb.entityName ? wb.shownPlayerName(bb.entityName) : "" : void 0 === bb || null === bb ? "" : String(bb)
     }
 
-    function Nd(dd, Od, md, Wd) {
-      if (!Array.isArray(dd)) return [];
-      const Xd = [];
-      for (const qd of dd) {
-        var Kd, td;
-        if (hd(qd) && "chatTag" in qd) {
-          Xd.push({
+    function tb(bb, wb, Mb, eb) {
+      if (!Array.isArray(bb)) return [];
+      const Vb = [];
+      for (const Cb of bb) {
+        var gb, Ob;
+        if (lb(Cb) && "chatTag" in Cb) {
+          Vb.push({
             kind: "rank",
-            rank: qd
+            rank: Cb
           });
           continue
         }
-        if (hd(qd) && "icon" in qd && !("mainRGB" in qd)) {
-          var Nd;
-          Xd.push({
+        if (lb(Cb) && "icon" in Cb && !("mainRGB" in Cb)) {
+          var tb;
+          Vb.push({
             kind: "icon",
-            icon: String(qd.icon),
-            size: vd(null === (Nd = Qd(qd.style)) || void 0 === Nd ? void 0 : Nd.fontSize, Rd.DEFAULT_FONT_SIZE)
+            icon: String(Cb.icon),
+            size: Lb(null === (tb = Ib(Cb.style)) || void 0 === tb ? void 0 : tb.fontSize, pb.DEFAULT_FONT_SIZE)
           });
           continue
         }
-        if (hd(qd) && (0, Fd.wb)(qd)) {
-          Xd.push({
+        if (lb(Cb) && (0, Hb.xb)(Cb)) {
+          Vb.push({
             kind: "text",
             text: "",
-            size: Od,
-            colour: Wd
+            size: wb,
+            colour: eb
           });
           continue
         }
-        let dd, Hd;
-        hd(qd) && (0, Fd.sb)(qd) ? (dd = md.keyBindingText(String(qd.action)), Hd = Qd(qd.style)) : hd(qd) && "str" in qd ? (dd = qd.str, Hd = Qd(qd.style)) : dd = qd;
-        const yd = vd(null === (Kd = Hd) || void 0 === Kd ? void 0 : Kd.fontSize, Od),
-          bd = null !== (td = (0, Fd.Yb)(Hd)) && void 0 !== td ? td : Wd;
-        if (hd(dd) && "string" === typeof dd.translationKey) {
-          const Od = md.translate(dd.translationKey, dd.params);
-          if (Od.some((dd => "string" !== typeof dd))) {
-            for (const dd of Od) Xd.push("string" === typeof dd ? {
+        let bb, Eb;
+        lb(Cb) && (0, Hb.tb)(Cb) ? (bb = Mb.keyBindingText(String(Cb.action)), Eb = Ib(Cb.style)) : lb(Cb) && "str" in Cb ? (bb = Cb.str, Eb = Ib(Cb.style)) : bb = Cb;
+        const Fb = Lb(null === (gb = Eb) || void 0 === gb ? void 0 : gb.fontSize, wb),
+          Bb = null !== (Ob = (0, Hb._b)(Eb)) && void 0 !== Ob ? Ob : eb;
+        if (lb(bb) && "string" === typeof bb.translationKey) {
+          const wb = Mb.translate(bb.translationKey, bb.params);
+          if (wb.some((bb => "string" !== typeof bb))) {
+            for (const bb of wb) Vb.push("string" === typeof bb ? {
               kind: "text",
-              text: dd,
-              size: yd,
-              colour: bd
+              text: bb,
+              size: Fb,
+              colour: Bb
             } : {
               kind: "icon",
-              icon: dd.icon,
-              size: yd
+              icon: bb.icon,
+              size: Fb
             });
             continue
           }
         }
-        Xd.push({
+        Vb.push({
           kind: "text",
-          text: od(dd, md),
-          size: yd,
-          colour: bd
+          text: Ub(bb, Mb),
+          size: Fb,
+          colour: Bb
         })
       }
-      return Xd
+      return Vb
     }
 
-    function qd(dd) {
-      return void 0 !== dd && "rank" !== dd.kind
+    function Cb(bb) {
+      return void 0 !== bb && "rank" !== bb.kind
     }
 
-    function Hd(dd, Od) {
-      const md = qd(dd),
-        Wd = qd(Od);
-      return void 0 === dd && !Wd || !md && void 0 === Od ? 0 : md !== Wd ? .5 * Rd.HORIZONTAL_PADDING : 0
+    function Eb(bb, wb) {
+      const Mb = Cb(bb),
+        eb = Cb(wb);
+      return void 0 === bb && !eb || !Mb && void 0 === wb ? 0 : Mb !== eb ? .5 * pb.HORIZONTAL_PADDING : 0
     }
 
-    function yd(dd) {
-      return "rank" === dd.kind ? Rd.DEFAULT_FONT_SIZE : dd.size
+    function Fb(bb) {
+      return "rank" === bb.kind ? pb.DEFAULT_FONT_SIZE : bb.size
     }
 
-    function bd(dd, Od, md) {
-      return "icon" === dd.kind ? dd.size : "rank" === dd.kind ? function(dd, Od) {
-        const md = Od.rankIcon(dd.rank.icon);
-        return md ? Xd * (md.width / md.height) : Xd
-      }(dd, md) + Rd.HORIZONTAL_PADDING : (md.glyphsShown(dd.text), Od.font = Kd(dd.size), Od.measureText(dd.text).width)
+    function Bb(bb, wb, Mb) {
+      return "icon" === bb.kind ? bb.size : "rank" === bb.kind ? function(bb, wb) {
+        const Mb = wb.rankIcon(bb.rank.icon);
+        return Mb ? Vb * (Mb.width / Mb.height) : Vb
+      }(bb, Mb) + pb.HORIZONTAL_PADDING : (Mb.glyphsShown(bb.text), wb.font = gb(bb.size), wb.measureText(bb.text).width)
     }
 
-    function Td(dd, Od, md) {
-      if (0 === dd.length) return {
+    function sb(bb, wb, Mb) {
+      if (0 === bb.length) return {
         width: 0,
         height: 0,
         sizes: []
       };
-      let Wd = 0;
-      for (const Rd of dd) Wd = Math.max(Wd, yd(Rd));
-      const Fd = [];
-      let Xd = Hd(void 0, dd[0]);
-      for (let Rd = 0; Rd < dd.length; Rd++) {
-        const Wd = Xd;
-        Xd += bd(dd[Rd], Od, md), Xd += Hd(dd[Rd], dd[Rd + 1]), Fd.push({
-          x: Wd,
-          width: Xd - Wd
+      let eb = 0;
+      for (const pb of bb) eb = Math.max(eb, Fb(pb));
+      const Hb = [];
+      let Vb = Eb(void 0, bb[0]);
+      for (let pb = 0; pb < bb.length; pb++) {
+        const eb = Vb;
+        Vb += Bb(bb[pb], wb, Mb), Vb += Eb(bb[pb], bb[pb + 1]), Hb.push({
+          x: eb,
+          width: Vb - eb
         })
       }
       return {
-        width: Xd,
-        height: Wd + Rd.VERTICAL_PADDING,
-        sizes: Fd
+        width: Vb,
+        height: eb + pb.VERTICAL_PADDING,
+        sizes: Hb
       }
     }
 
-    function pd(dd, Od, md, Wd, Fd, Rd, Xd) {
-      Od += Hd(void 0, dd[0]);
-      for (let Kd = 0; Kd < dd.length; Kd++) {
-        const hd = Yd(dd[Kd], Od, md, Wd, Fd, Rd, Xd);
-        Od += 0 === hd ? 0 : hd + Hd(dd[Kd], dd[Kd + 1])
+    function mb(bb, wb, Mb, eb, Hb, pb, Vb) {
+      wb += Eb(void 0, bb[0]);
+      for (let gb = 0; gb < bb.length; gb++) {
+        const lb = hb(bb[gb], wb, Mb, eb, Hb, pb, Vb);
+        wb += 0 === lb ? 0 : lb + Eb(bb[gb], bb[gb + 1])
       }
     }
 
-    function Yd(dd, Od, md, Wd, Fd, hd, vd, Qd) {
-      var td;
-      if ("icon" === dd.kind) {
-        const Wd = hd.iconImage(dd.icon);
-        return Wd && vd.push({
-          image: Wd,
-          x: Od,
-          y: md + Rd.VERTICAL_PADDING / 2,
-          size: dd.size
-        }), dd.size
+    function hb(bb, wb, Mb, eb, Hb, lb, Lb, Ib) {
+      var Ob;
+      if ("icon" === bb.kind) {
+        const eb = lb.iconImage(bb.icon);
+        return eb && Lb.push({
+          image: eb,
+          x: wb,
+          y: Mb + pb.VERTICAL_PADDING / 2,
+          size: bb.size
+        }), bb.size
       }
-      if ("rank" === dd.kind) {
-        const Kd = null !== Qd && void 0 !== Qd ? Qd : bd(dd, Fd, hd);
-        return function(dd, Od, md, Wd, Fd, Kd, hd) {
-          var vd, Qd;
+      if ("rank" === bb.kind) {
+        const gb = null !== Ib && void 0 !== Ib ? Ib : Bb(bb, Hb, lb);
+        return function(bb, wb, Mb, eb, Hb, gb, lb) {
+          var Lb, Ib;
           const {
-            rank: td
-          } = dd;
-          Kd.fillStyle = td.mainRGB, Kd.fillRect(Od, md, Wd, Fd);
-          const od = hd.rankIcon(td.icon);
-          if (!od) return;
-          const Nd = Xd / od.height,
-            qd = Od + (Wd - od.width * Nd) / 2,
-            Hd = md + (Fd - Xd) / 2,
-            yd = new Path2D(od.path),
-            bd = Rd.TEXT_SHADOW_WIDTH,
-            Td = (null === (vd = td.nameTag) || void 0 === vd ? void 0 : vd.iconShadowRGB) || "black";
-          for (const Rd of [-1, 1])
-            for (const dd of [-1, 1]) wd(Kd, yd, qd + bd * Rd, Hd + bd * dd, Nd, Td);
-          wd(Kd, yd, qd, Hd, Nd, (null === (Qd = td.nameTag) || void 0 === Qd ? void 0 : Qd.iconRGB) || "white")
-        }(dd, Od, md, Kd, Wd, Fd, hd), Kd
+            rank: Ob
+          } = bb;
+          gb.fillStyle = Ob.mainRGB, gb.fillRect(wb, Mb, eb, Hb);
+          const Ub = lb.rankIcon(Ob.icon);
+          if (!Ub) return;
+          const tb = Vb / Ub.height,
+            Cb = wb + (eb - Ub.width * tb) / 2,
+            Eb = Mb + (Hb - Vb) / 2,
+            Fb = new Path2D(Ub.path),
+            Bb = pb.TEXT_SHADOW_WIDTH,
+            sb = (null === (Lb = Ob.nameTag) || void 0 === Lb ? void 0 : Lb.iconShadowRGB) || "black";
+          for (const pb of [-1, 1])
+            for (const bb of [-1, 1]) Xb(gb, Fb, Cb + Bb * pb, Eb + Bb * bb, tb, sb);
+          Xb(gb, Fb, Cb, Eb, tb, (null === (Ib = Ob.nameTag) || void 0 === Ib ? void 0 : Ib.iconRGB) || "white")
+        }(bb, wb, Mb, gb, eb, Hb, lb), gb
       }
-      if (0 === dd.text.length) return 0;
-      const od = Kd(dd.size);
-      Fd.font = od;
-      const Nd = null !== Qd && void 0 !== Qd ? Qd : Fd.measureText(dd.text).width;
-      return function(dd, Od, md, Wd, Fd, Xd) {
-        const Kd = Rd.TEXT_SHADOW_WIDTH;
-        Xd.font = Wd, Xd.fillStyle = "black";
-        for (const Rd of [-1, 1])
-          for (const Wd of [-1, 1]) Xd.fillText(dd, Od + Kd * Rd, md + Kd * Wd);
-        Xd.fillStyle = Fd, Xd.fillText(dd, Od, md)
-      }(dd.text, Od, md + Wd - Rd.VERTICAL_PADDING + 5, od, null !== (td = dd.colour) && void 0 !== td ? td : "white", Fd), Nd
+      if (0 === bb.text.length) return 0;
+      const Ub = gb(bb.size);
+      Hb.font = Ub;
+      const tb = null !== Ib && void 0 !== Ib ? Ib : Hb.measureText(bb.text).width;
+      return function(bb, wb, Mb, eb, Hb, Vb) {
+        const gb = pb.TEXT_SHADOW_WIDTH;
+        Vb.font = eb, Vb.fillStyle = "black";
+        for (const pb of [-1, 1])
+          for (const eb of [-1, 1]) Vb.fillText(bb, wb + gb * pb, Mb + gb * eb);
+        Vb.fillStyle = Hb, Vb.fillText(bb, wb, Mb)
+      }(bb.text, wb, Mb + eb - pb.VERTICAL_PADDING + 5, Ub, null !== (Ob = bb.colour) && void 0 !== Ob ? Ob : "white", Hb), tb
     }
 
-    function gd(dd, Od) {
+    function zb(bb, wb) {
       for (const {
-          image: md,
-          x: Wd,
-          y: Fd,
-          size: Rd
+          image: Mb,
+          x: eb,
+          y: Hb,
+          size: pb
         }
-        of dd) Od.imageSmoothingEnabled = !1, Od.drawImage(md, Wd, Fd, Rd, Rd)
+        of bb) wb.imageSmoothingEnabled = !1, wb.drawImage(Mb, eb, Hb, pb, pb)
     }
 
-    function wd(dd, Od, md, Wd, Fd, Rd) {
-      dd.save(), dd.translate(md, Wd), dd.scale(Fd, Fd), dd.fillStyle = Rd, dd.fill(Od), dd.restore()
+    function Xb(bb, wb, Mb, eb, Hb, pb) {
+      bb.save(), bb.translate(Mb, eb), bb.scale(Hb, Hb), bb.fillStyle = pb, bb.fill(wb), bb.restore()
     }
   },
-  37829: (dd, Od, md) => {
-    md.d(Od, {
-      d: () => kd,
-      h: () => WO,
-      i: () => ed,
-      j: () => ld,
-      l: () => Cd,
-      n: () => Zd,
-      o: () => XO,
-      r: () => Id,
-      u: () => jd
+  37528: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => nb,
+      e: () => ww,
+      i: () => ab,
+      k: () => ub,
+      n: () => db,
+      r: () => Pb,
+      t: () => Hw,
+      x: () => ib,
+      B: () => Gb
     });
-    var Wd = md(5134),
-      Fd = md(5155),
-      Rd = md(35549),
-      Xd = md(4509),
-      Kd = md(4502),
-      hd = md(1455),
-      vd = md(37729),
-      Qd = md(107),
-      td = md(1315),
-      od = md(37755),
-      Nd = md(37837),
-      qd = md(37839),
-      Hd = md(9278),
-      yd = md(8672),
-      bd = md(8854),
-      Td = md(8980),
-      pd = md(9116),
-      Yd = md(9133);
-    const gd = {
-      youtube: Hd.g,
-      "person-military-pointing": yd.d,
-      sparkle: bd.c,
-      user: Td.i,
-      wrench: pd.h,
-      zap: Yd.f,
-      ...od.d
+    var eb = Mb(5315),
+      Hb = Mb(5331),
+      pb = Mb(35334),
+      Vb = Mb(4659),
+      gb = Mb(4653),
+      lb = Mb(1499),
+      Lb = Mb(37455),
+      Ib = Mb(110),
+      Ob = Mb(1329),
+      Ub = Mb(37471),
+      tb = Mb(37530),
+      Cb = Mb(37534),
+      Eb = Mb(9503),
+      Fb = Mb(8894),
+      Bb = Mb(9076),
+      sb = Mb(9190),
+      mb = Mb(9344),
+      hb = Mb(9364);
+    const zb = {
+      youtube: Eb.i,
+      "person-military-pointing": Fb.f,
+      sparkle: Bb.f,
+      user: sb.e,
+      wrench: mb.g,
+      zap: hb.d,
+      ...Ub.d
     };
 
-    function wd(dd) {
-      const [Od, md, , , Wd] = dd.icon;
+    function Xb(bb) {
+      const [wb, Mb, , , eb] = bb.icon;
       return {
-        width: Od,
-        height: md,
-        path: "string" === typeof Wd ? Wd : Wd.join(" ")
+        width: wb,
+        height: Mb,
+        path: "string" === typeof eb ? eb : eb.join(" ")
       }
     }
-    const Ed = new Map(Object.entries(gd).map((dd => {
-      let [Od, md] = dd;
-      return [Od, wd(md)]
+    const xb = new Map(Object.entries(zb).map((bb => {
+      let [wb, Mb] = bb;
+      return [wb, Xb(Mb)]
     })));
-    let Jd = !1;
-    const Ud = new Set;
-    var xd = md(37851);
-    const Bd = "Jetbrains Mono",
-      Sd = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
-      sd = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
+    let jb = !1;
+    const Kb = new Set;
+    var rb = Mb(37544);
+    const Rb = "Jetbrains Mono",
+      Db = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
+      cb = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
 
-    function ud(dd) {
-      return dd.split(",").map((dd => {
-        const [Od, md = Od] = dd.slice(2).split("-");
-        return [parseInt(Od, 16), parseInt(md, 16)]
+    function Yb(bb) {
+      return bb.split(",").map((bb => {
+        const [wb, Mb = wb] = bb.slice(2).split("-");
+        return [parseInt(wb, 16), parseInt(Mb, 16)]
       }))
     }
-    const Vd = {
-        latin: ud(Sd),
-        rest: ud(sd)
+    const Zb = {
+        latin: Yb(Db),
+        rest: Yb(cb)
       },
-      Ad = new RegExp(`[${Vd.rest.map((dd=>{let[Od,md]=dd;return`\\u{${Od.toString(16)}}-\\u{${md.toString(16)}}`})).join("")}]`, "u");
+      fb = new RegExp(`[${Zb.rest.map((bb=>{let[wb,Mb]=bb;return`\\u{${wb.toString(16)}}-\\u{${Mb.toString(16)}}`})).join("")}]`, "u");
 
-    function rd(dd) {
-      return Od => {
-        console.warn(`[bloxd-wasm-client] the text font's ${dd} file did not load`, Od)
+    function Ab(bb) {
+      return wb => {
+        console.warn(`[bloxd-wasm-client] the text font's ${bb} file did not load`, wb)
       }
     }
-    const Gd = 397,
-      nd = 1,
-      Ld = {
-        translate: dd => [dd],
-        keyBindingText: dd => dd,
+    const Wb = 397,
+      Jb = 1,
+      Sb = {
+        translate: bb => [bb],
+        keyBindingText: bb => bb,
         isFriend: () => !1,
         hiddenNames: {},
         loadsFontRest: !1
       };
-    let Pd = null,
-      zd = 0,
-      cd = "none";
+    let Nb = null,
+      vb = 0,
+      Qb = "none";
 
-    function jd() {
-      return zd
+    function Gb() {
+      return vb
     }
-    const Dd = new Set;
+    const qb = new Set;
 
-    function ed(dd) {
-      return Dd.add(dd), () => {
-        Dd.delete(dd)
+    function ab(bb) {
+      return qb.add(bb), () => {
+        qb.delete(bb)
       }
     }
 
-    function Id() {
-      zd++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? cd = "all" : "none" === cd && (cd = "notBoards");
-      for (const dd of Dd) dd()
-    }(0, od.m)((() => {
-      Id(!1)
-    })), (0, hd.n)((() => {
+    function ib() {
+      vb++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? Qb = "all" : "none" === Qb && (Qb = "notBoards");
+      for (const bb of qb) bb()
+    }(0, Ub.j)((() => {
+      ib(!1)
+    })), (0, lb.p)((() => {
       (function() {
-        const dd = Jd;
-        return Jd = !1, dd
-      })() && Id(!1)
+        const bb = jb;
+        return jb = !1, bb
+      })() && ib(!1)
     }));
-    const ld = new class {
-      constructor(dd) {
-        this.loaded = dd, this.latin = null, this.rest = null, this.restWanted = !1
+    const ub = new class {
+      constructor(bb) {
+        this.loaded = bb, this.latin = null, this.rest = null, this.restWanted = !1
       }
       load() {
         if (null === this.latin) {
-          this.latin = new FontFace(Bd, `url(${(0,xd.d)()}) format("woff2")`, {
-            unicodeRange: Sd
-          }).load().then((dd => {
-            document.fonts.add(dd), this.loaded()
-          }), rd("Latin"));
-          const dd = new FontFace(Bd, `url(${(0,xd.f)()}) format("woff2")`, {
-            unicodeRange: sd,
+          this.latin = new FontFace(Rb, `url(${(0,rb.e)()}) format("woff2")`, {
+            unicodeRange: Db
+          }).load().then((bb => {
+            document.fonts.add(bb), this.loaded()
+          }), Ab("Latin"));
+          const bb = new FontFace(Rb, `url(${(0,rb.f)()}) format("woff2")`, {
+            unicodeRange: cb,
             display: "swap"
           });
-          document.fonts.add(dd), dd.loaded.then((() => {
+          document.fonts.add(bb), bb.loaded.then((() => {
             this.loaded()
-          }), rd("rest")), this.rest = dd, this.restWanted && dd.load()
+          }), Ab("rest")), this.rest = bb, this.restWanted && bb.load()
         }
         return this.latin
       }
       loadRest() {
-        var dd;
-        this.restWanted || (this.restWanted = !0, null === (dd = this.rest) || void 0 === dd || dd.load())
+        var bb;
+        this.restWanted || (this.restWanted = !0, null === (bb = this.rest) || void 0 === bb || bb.load())
       }
-      async untilLoadedFor(dd) {
-        await this.load(), this.loadFor(dd), await document.fonts.load(`16px '${Bd}'`, dd).catch((Od => {
-          console.warn("[bloxd-wasm-client] the text font did not load for", dd, Od)
+      async untilLoadedFor(bb) {
+        await this.load(), this.loadFor(bb), await document.fonts.load(`16px '${Rb}'`, bb).catch((wb => {
+          console.warn("[bloxd-wasm-client] the text font did not load for", bb, wb)
         }))
       }
-      loadFor(dd) {
-        !this.restWanted && Ad.test(dd) && this.loadRest()
+      loadFor(bb) {
+        !this.restWanted && fb.test(bb) && this.loadRest()
       }
-    }(Id);
+    }(ib);
 
-    function Cd(dd) {
-      Object.assign(Ld, dd), Ld.loadsFontRest && ld.loadRest(), Id(!1)
+    function db(bb) {
+      Object.assign(Sb, bb), Sb.loadsFontRest && ub.loadRest(), ib(!1)
     }
 
-    function Zd(dd) {
-      dd !== Pd && (Pd = dd, Id())
+    function Pb(bb) {
+      bb !== Nb && (Nb = bb, ib())
     }
 
-    function kd(dd) {
-      if ("none" === cd || null === dd) return;
-      dd(Gd, "all" === cd ? 0 : nd, new Uint8Array(0)) && (cd = "none")
+    function nb(bb) {
+      if ("none" === Qb || null === bb) return;
+      bb(Wb, "all" === Qb ? 0 : Jb, new Uint8Array(0)) && (Qb = "none")
     }
-    const fd = new Map,
-      Md = new Map;
+    const yb = new Map,
+      ob = new Map;
 
-    function dO(dd, Od, md) {
-      var Wd;
-      const Fd = md ? `${dd}#${md.join(",")}` : dd,
-        Rd = fd.get(Fd);
-      if (Rd) return Rd.image;
-      const Xd = {
-        image: null !== (Wd = Md.get(Fd)) && void 0 !== Wd ? Wd : null
+    function Tb(bb, wb, Mb) {
+      var eb;
+      const Hb = Mb ? `${bb}#${Mb.join(",")}` : bb,
+        pb = yb.get(Hb);
+      if (pb) return pb.image;
+      const Vb = {
+        image: null !== (eb = ob.get(Hb)) && void 0 !== eb ? eb : null
       };
-      return fd.set(Fd, Xd), Od().then((async dd => {
-        if (null === dd) return null;
-        const Od = new Image;
-        Od.crossOrigin = "anonymous", Od.src = dd, await Od.decode();
-        const Wd = await createImageBitmap(Od);
-        if (!md) return Wd;
+      return yb.set(Hb, Vb), wb().then((async bb => {
+        if (null === bb) return null;
+        const wb = new Image;
+        wb.crossOrigin = "anonymous", wb.src = bb, await wb.decode();
+        const eb = await createImageBitmap(wb);
+        if (!Mb) return eb;
         try {
-          return function(dd, Od) {
-            let [md, Wd, Fd] = Od;
-            const Rd = (0, vd.i)(dd.width, dd.height),
+          return function(bb, wb) {
+            let [Mb, eb, Hb] = wb;
+            const pb = (0, Lb.g)(bb.width, bb.height),
               {
-                canvas: Xd
-              } = Rd;
-            return Rd.drawImage(dd, 0, 0), Rd.globalCompositeOperation = "multiply", Rd.fillStyle = `rgb(${md}, ${Wd}, ${Fd})`, Rd.fillRect(0, 0, Xd.width, Xd.height), Rd.globalCompositeOperation = "destination-in", Rd.drawImage(dd, 0, 0), Xd
-          }(Wd, md)
+                canvas: Vb
+              } = pb;
+            return pb.drawImage(bb, 0, 0), pb.globalCompositeOperation = "multiply", pb.fillStyle = `rgb(${Mb}, ${eb}, ${Hb})`, pb.fillRect(0, 0, Vb.width, Vb.height), pb.globalCompositeOperation = "destination-in", pb.drawImage(bb, 0, 0), Vb
+          }(eb, Mb)
         } finally {
-          Wd.close()
+          eb.close()
         }
-      })).then((dd => {
-        fd.get(Fd) === Xd && Md.delete(Fd), dd !== Xd.image && (Xd.image = dd, Id(!1))
-      }), (Od => {
-        console.warn(`[bloxd-wasm-client] text icon ${dd} did not load`, Od), fd.get(Fd) === Xd && (fd.delete(Fd), Md.delete(Fd), null !== Xd.image && Id(!1))
-      })), Xd.image
-    }(0, Nd.c)((() => {
-      Md.clear();
-      for (const [dd, {
-          image: Od
-        }] of fd) null !== Od && Md.set(dd, Od);
-      fd.clear(), Id(!1)
+      })).then((bb => {
+        yb.get(Hb) === Vb && ob.delete(Hb), bb !== Vb.image && (Vb.image = bb, ib(!1))
+      }), (wb => {
+        console.warn(`[bloxd-wasm-client] text icon ${bb} did not load`, wb), yb.get(Hb) === Vb && (yb.delete(Hb), ob.delete(Hb), null !== Vb.image && ib(!1))
+      })), Vb.image
+    }(0, tb.c)((() => {
+      ob.clear();
+      for (const [bb, {
+          image: wb
+        }] of yb) null !== wb && ob.set(bb, wb);
+      yb.clear(), ib(!1)
     }));
-    const OO = new Set(Wd.e),
-      mO = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
+    const kb = new Set(eb.d),
+      bw = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
 
-    function WO() {
-      (0, qd.d)().catch((() => {}))
+    function ww() {
+      (0, Cb.g)().catch((() => {}))
     }
 
-    function FO(dd) {
-      return OO.has(dd) ? dO(`icon:${dd}`, (async () => {
-        var Od, md;
-        return null !== (Od = null === (md = (0, Nd.i)()) || void 0 === md ? void 0 : md.textureUrl(dd)) && void 0 !== Od ? Od : (await (0, qd.b)()).ingameIconUrl(dd)
+    function Mw(bb) {
+      return kb.has(bb) ? Tb(`icon:${bb}`, (async () => {
+        var wb, Mb;
+        return null !== (wb = null === (Mb = (0, tb.h)()) || void 0 === Mb ? void 0 : Mb.textureUrl(bb)) && void 0 !== wb ? wb : (await (0, Cb.c)()).ingameIconUrl(bb)
       })) : null
     }
-    let RO = "unasked";
-    const XO = {
+    let ew = "unasked";
+    const Hw = {
       get canSeeRealPlayerNames() {
-        return Qd.featureFlags.canSeeRealPlayerNames
+        return Ib.featureFlags.canSeeRealPlayerNames
       },
       get canSeePlayerWrittenText() {
-        return Qd.featureFlags.canSeePlayerWrittenText
+        return Ib.featureFlags.canSeePlayerWrittenText
       },
       get localPlayerDbId() {
-        return Pd
+        return Nb
       },
-      shownPlayerName: dd => (0, td.e)(dd, Ld.hiddenNames),
-      translate: (dd, Od) => {
-        const md = "object" === typeof Od && null !== Od ? Od : void 0;
-        return Ld.translate(dd, (0, td.g)(md, Ld.hiddenNames))
+      shownPlayerName: bb => (0, Ob.c)(bb, Sb.hiddenNames),
+      translate: (bb, wb) => {
+        const Mb = "object" === typeof wb && null !== wb ? wb : void 0;
+        return Sb.translate(bb, (0, Ob.g)(Mb, Sb.hiddenNames))
       },
-      keyBindingText: dd => Ld.keyBindingText(dd),
-      isFriend: dd => Ld.isFriend(dd, Ld.hiddenNames),
-      iconImage: function(dd) {
-        if (OO.has(dd)) return FO(dd);
-        if ("unasked" === RO && (RO = "loading", (0, Kd.d)().then((() => {
-            RO = "in", Id(!1)
-          }), (dd => {
-            RO = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", dd)
-          }))), "in" !== RO) return null;
-        const Od = (0, Xd.d)(dd),
-          md = void 0 === Od ? void 0 : (0, Rd.itemTypeNameOf)(Od);
-        if ("Gun" === md) return null;
-        const Wd = (0, Kd.c)(dd),
-          hd = void 0 !== md && mO.has(md);
-        if (hd && void 0 === Wd) return null;
-        const vd = void 0 !== Od && "GrayscaleArmour" === (0, Rd.itemTypeOf)(Od) || Object.hasOwn(Fd.b, dd),
-          Qd = null !== Wd && void 0 !== Wd ? Wd : dd;
-        return dO(hd ? `block:${Qd}` : `item:${Qd}`, (async () => {
-          var dd, Od;
-          const md = (0, Nd.i)(),
-            Wd = await (0, qd.d)();
-          return null !== (dd = null !== (Od = null === md || void 0 === md ? void 0 : md.textureUrl(Qd)) && void 0 !== Od ? Od : Wd.itemSpriteUrl(Qd)) && void 0 !== dd ? dd : hd ? null : Wd.notFoundUrl()
-        }), vd ? (0, Fd.c)(dd) : void 0)
+      keyBindingText: bb => Sb.keyBindingText(bb),
+      isFriend: bb => Sb.isFriend(bb, Sb.hiddenNames),
+      iconImage: function(bb) {
+        if (kb.has(bb)) return Mw(bb);
+        if ("unasked" === ew && (ew = "loading", (0, gb.f)().then((() => {
+            ew = "in", ib(!1)
+          }), (bb => {
+            ew = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", bb)
+          }))), "in" !== ew) return null;
+        const wb = (0, Vb.c)(bb),
+          Mb = void 0 === wb ? void 0 : (0, pb.itemTypeNameOf)(wb);
+        if ("Gun" === Mb) return null;
+        const eb = (0, gb.e)(bb),
+          lb = void 0 !== Mb && bw.has(Mb);
+        if (lb && void 0 === eb) return null;
+        const Lb = void 0 !== wb && "GrayscaleArmour" === (0, pb.itemTypeOf)(wb) || Object.hasOwn(Hb.b, bb),
+          Ib = null !== eb && void 0 !== eb ? eb : bb;
+        return Tb(lb ? `block:${Ib}` : `item:${Ib}`, (async () => {
+          var bb, wb;
+          const Mb = (0, tb.h)(),
+            eb = await (0, Cb.g)();
+          return null !== (bb = null !== (wb = null === Mb || void 0 === Mb ? void 0 : Mb.textureUrl(Ib)) && void 0 !== wb ? wb : eb.itemSpriteUrl(Ib)) && void 0 !== bb ? bb : lb ? null : eb.notFoundUrl()
+        }), Lb ? (0, Hb.c)(bb) : void 0)
       },
-      effectImage: FO,
-      rankIcon: function(dd) {
-        const Od = Ed.get(dd);
-        if (Od) return Od;
-        const md = (0, hd.e)(dd, (0, hd.k)(dd));
-        if (!md) return (0, hd.h)("brands") && (0, hd.h)("solid") ? Ud.has(dd) || (Ud.add(dd), console.warn(`[bloxd-wasm-client] unknown rank icon "${dd}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : Jd = !0, null;
-        const Wd = wd(md);
-        return Ed.set(dd, Wd), Wd
+      effectImage: Mw,
+      rankIcon: function(bb) {
+        const wb = xb.get(bb);
+        if (wb) return wb;
+        const Mb = (0, lb.f)(bb, (0, lb.j)(bb));
+        if (!Mb) return (0, lb.i)("brands") && (0, lb.i)("solid") ? Kb.has(bb) || (Kb.add(bb), console.warn(`[bloxd-wasm-client] unknown rank icon "${bb}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : jb = !0, null;
+        const eb = Xb(Mb);
+        return xb.set(bb, eb), eb
       },
-      glyphsShown: dd => {
-        ld.loadFor(dd)
+      glyphsShown: bb => {
+        ub.loadFor(bb)
       }
     }
   },
-  37722: (dd, Od, md) => {
-    md.d(Od, {
-      e: () => yd,
-      g: () => cd,
-      i: () => sd,
-      k: () => Ad
+  37452: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Fb,
+      g: () => Qb,
+      j: () => cb,
+      l: () => fb
     });
-    var Wd = md(37819),
-      Fd = md(37729),
-      Rd = md(37736),
-      Xd = md(37740);
+    var eb = Mb(37519),
+      Hb = Mb(37455),
+      pb = Mb(37457),
+      Vb = Mb(37464);
 
-    function Kd(dd, Od, md) {
-      const Wd = "object" === typeof dd && null !== dd ? dd : {},
-        Fd = function(dd, Od, md) {
-          if (!Array.isArray(dd) || 0 === dd.length) return [];
-          const Wd = [{
+    function gb(bb, wb, Mb) {
+      const eb = "object" === typeof bb && null !== bb ? bb : {},
+        Hb = function(bb, wb, Mb) {
+          if (!Array.isArray(bb) || 0 === bb.length) return [];
+          const eb = [{
             width: 0,
             height: 0,
             y: 0,
             items: []
           }];
-          for (const Kd of (0, Xd.i)(dd, Xd.c.DEFAULT_FONT_SIZE, md)) {
-            if ("text" !== Kd.kind) {
-              Wd[Wd.length - 1].items.push({
-                content: Kd,
+          for (const gb of (0, Vb.h)(bb, Vb.b.DEFAULT_FONT_SIZE, Mb)) {
+            if ("text" !== gb.kind) {
+              eb[eb.length - 1].items.push({
+                content: gb,
                 chars: 1,
                 size: {
                   x: 0,
@@ -814,20 +814,20 @@ export const modules = {
               });
               continue
             }
-            if (0 === Kd.text.length) continue;
-            const dd = Wd[Wd.length - 1].items.reduce(((dd, Od) => dd + ("text" === Od.content.kind ? (0, Rd.c)(Od.content.text) : Od.chars)), 0);
-            (0, Rd.f)(Kd.text, dd).forEach(((dd, Od) => {
-              Od > 0 && Wd.push({
+            if (0 === gb.text.length) continue;
+            const bb = eb[eb.length - 1].items.reduce(((bb, wb) => bb + ("text" === wb.content.kind ? (0, pb.c)(wb.content.text) : wb.chars)), 0);
+            (0, pb.e)(gb.text, bb).forEach(((bb, wb) => {
+              wb > 0 && eb.push({
                 width: 0,
                 height: 0,
                 y: 0,
                 items: []
-              }), dd.length > 0 && Wd[Wd.length - 1].items.push({
+              }), bb.length > 0 && eb[eb.length - 1].items.push({
                 content: {
-                  ...Kd,
-                  text: dd
+                  ...gb,
+                  text: bb
                 },
-                chars: dd.length,
+                chars: bb.length,
                 size: {
                   x: 0,
                   width: 0
@@ -835,270 +835,270 @@ export const modules = {
               })
             }))
           }
-          let Fd = Xd.c.VERTICAL_PADDING / 2;
-          for (const Rd of Wd) {
-            if (0 === Rd.items.length) continue;
+          let Hb = Vb.b.VERTICAL_PADDING / 2;
+          for (const pb of eb) {
+            if (0 === pb.items.length) continue;
             const {
-              width: dd,
-              height: Wd,
-              sizes: Kd
-            } = (0, Xd.e)(Rd.items.map((dd => dd.content)), Od, md);
-            Rd.items.forEach(((dd, Od) => {
-              dd.size = Kd[Od]
-            })), Rd.width = dd, Rd.height = Wd, Rd.y = Fd, Fd += Wd + Xd.c.LINE_SPACING
+              width: bb,
+              height: eb,
+              sizes: gb
+            } = (0, Vb.d)(pb.items.map((bb => bb.content)), wb, Mb);
+            pb.items.forEach(((bb, wb) => {
+              bb.size = gb[wb]
+            })), pb.width = bb, pb.height = eb, pb.y = Hb, Hb += eb + Vb.b.LINE_SPACING
           }
-          return Wd
-        }(Wd.content, Od, md);
-      let Kd = 0,
-        hd = Xd.c.VERTICAL_PADDING,
-        vd = 0;
-      for (const Rd of Fd) {
-        Kd = Math.max(Kd, Rd.width + 2 * Xd.c.HORIZONTAL_PADDING), hd += Rd.height + Xd.c.LINE_SPACING;
-        for (const dd of Rd.items) vd += dd.chars
+          return eb
+        }(eb.content, wb, Mb);
+      let gb = 0,
+        lb = Vb.b.VERTICAL_PADDING,
+        Lb = 0;
+      for (const pb of Hb) {
+        gb = Math.max(gb, pb.width + 2 * Vb.b.HORIZONTAL_PADDING), lb += pb.height + Vb.b.LINE_SPACING;
+        for (const bb of pb.items) Lb += bb.chars
       }
-      const Qd = "string" === typeof Wd.backgroundColor ? Wd.backgroundColor : "#22283b";
+      const Ib = "string" === typeof eb.backgroundColor ? eb.backgroundColor : "#22283b";
       return {
-        width: Kd,
-        height: hd,
-        chars: vd,
-        draw: (dd, Od) => {
-          const Wd = [];
-          if (dd.fillStyle = Qd, dd.fillRect(0, 0, Kd, hd), null === Od)
-            for (const Rd of Fd) Rd.items.length > 0 && (0, Xd.p)(Rd.items.map((dd => dd.content)), 0, Rd.y, Rd.height, dd, md, Wd);
+        width: gb,
+        height: lb,
+        chars: Lb,
+        draw: (bb, wb) => {
+          const eb = [];
+          if (bb.fillStyle = Ib, bb.fillRect(0, 0, gb, lb), null === wb)
+            for (const pb of Hb) pb.items.length > 0 && (0, Vb.m)(pb.items.map((bb => bb.content)), 0, pb.y, pb.height, bb, Mb, eb);
           else {
-            let Rd = 0;
-            for (const Kd of Fd)
-              for (const Fd of Kd.items) {
-                if (Rd >= Od) break;
-                const hd = "text" === Fd.content.kind ? {
-                  ...Fd.content,
-                  text: Fd.content.text.substring(0, Od - Rd)
-                } : Fd.content;
-                (0, Xd.m)(hd, Fd.size.x, Kd.y, Kd.height, dd, md, Wd, Fd.size.width), Rd += Fd.chars
+            let pb = 0;
+            for (const gb of Hb)
+              for (const Hb of gb.items) {
+                if (pb >= wb) break;
+                const lb = "text" === Hb.content.kind ? {
+                  ...Hb.content,
+                  text: Hb.content.text.substring(0, wb - pb)
+                } : Hb.content;
+                (0, Vb.k)(lb, Hb.size.x, gb.y, gb.height, bb, Mb, eb, Hb.size.width), pb += Hb.chars
               }
-          }(0, Xd.k)(Wd, dd)
+          }(0, Vb.j)(eb, bb)
         }
       }
     }
-    var hd = md(37746),
-      vd = md(37810);
-    const Qd = 256,
-      td = 1024,
-      od = {
+    var lb = Mb(37469),
+      Lb = Mb(37512);
+    const Ib = 256,
+      Ob = 1024,
+      Ub = {
         width: 1,
         height: 7 / 8
       };
-    var Nd = md(37825);
-    const qd = {
+    var tb = Mb(37523);
+    const Cb = {
       leaderboard: ""
     };
-    var Hd = md(37829);
-    const yd = {
+    var Eb = Mb(37528);
+    const Fb = {
         Nametag: 1,
         MultilineText: 2,
         Board: 3,
         Leaderboard: 4
       },
-      bd = 2048,
-      Td = 256,
-      pd = 10,
-      Yd = 4,
-      gd = 65536,
-      wd = new TextDecoder;
-    let Ed = Hd.o,
-      Jd = -1;
-    const Ud = new Map,
-      xd = new Map;
-    let Bd = 0;
-    const Sd = new TextEncoder;
+      Bb = 2048,
+      sb = 256,
+      mb = 10,
+      hb = 4,
+      zb = 65536,
+      Xb = new TextDecoder;
+    let xb = Eb.t,
+      jb = -1;
+    const Kb = new Map,
+      rb = new Map;
+    let Rb = 0;
+    const Db = new TextEncoder;
 
-    function sd(dd, Od) {
-      const md = Sd.encode(JSON.stringify(Od)),
-        Wd = new Uint8Array(md.length + 1);
-      return Wd[0] = dd, Wd.set(md, 1), Wd
+    function cb(bb, wb) {
+      const Mb = Db.encode(JSON.stringify(wb)),
+        eb = new Uint8Array(Mb.length + 1);
+      return eb[0] = bb, eb.set(Mb, 1), eb
     }
-    const ud = {
+    const Yb = {
         name: "Ag",
         info: null,
         colour: "default",
         ranks: [],
         effects: [],
         health: .5,
-        UX: null,
+        DV: null,
         hideNameSeed: null
       },
-      Vd = [sd(yd.Nametag, ud), sd(yd.Nametag, {
-        ...ud,
+      Zb = [cb(Fb.Nametag, Yb), cb(Fb.Nametag, {
+        ...Yb,
         info: {
           content: [{
             str: "Ag"
           }],
           subtitle: ["Ag"]
         }
-      }), sd(yd.MultilineText, {
+      }), cb(Fb.MultilineText, {
         box: {
           content: ["Ag"]
         },
         shown: null
-      }), ...Wd.c.map(((dd, Od) => sd(yd.Board, {
+      }), ...eb.e.map(((bb, wb) => cb(Fb.Board, {
         shared: {
           text: "Ag",
-          textSize: Od
+          textSize: wb
         },
         w: 0,
         h: 0
       })))];
 
-    function Ad(dd) {
-      Hd.j.load().then((() => {
-        if (dd()) return;
-        const Od = (0, Fd.i)(1, 1, {
+    function fb(bb) {
+      Eb.k.load().then((() => {
+        if (bb()) return;
+        const wb = (0, Hb.g)(1, 1, {
           willReadFrequently: !0
         });
-        var md;
-        Od && (md = Od.canvas, Vd.map((dd => cd(dd, md))))
+        var Mb;
+        wb && (Mb = wb.canvas, Zb.map((bb => Qb(bb, Mb))))
       }))
     }
-    let rd = Hd.u;
+    let Ab = Eb.B;
 
-    function Gd() {
-      Ud.clear(), xd.clear()
+    function Wb() {
+      Kb.clear(), rb.clear()
     }
 
-    function nd(dd, Od) {
-      const md = dd.get(Od);
-      return void 0 !== md && (dd.delete(Od), dd.set(Od, md)), md
+    function Jb(bb, wb) {
+      const Mb = bb.get(wb);
+      return void 0 !== Mb && (bb.delete(wb), bb.set(wb, Mb)), Mb
     }
 
-    function Ld(dd, Od, md) {
-      dd.set(Od, md), dd.size > Td && dd.delete(dd.keys().next().value)
+    function Sb(bb, wb, Mb) {
+      bb.set(wb, Mb), bb.size > sb && bb.delete(bb.keys().next().value)
     }
 
-    function Pd(dd, Od, md) {
-      if (dd === yd.Nametag) {
-        let dd = nd(Ud, Od);
-        return void 0 === dd && (dd = (0, hd.d)(JSON.parse(Od), md, Ed), Ld(Ud, Od, dd)), dd
+    function Nb(bb, wb, Mb) {
+      if (bb === Fb.Nametag) {
+        let bb = Jb(Kb, wb);
+        return void 0 === bb && (bb = (0, lb.d)(JSON.parse(wb), Mb, xb), Sb(Kb, wb, bb)), bb
       }
-      if (dd === yd.MultilineText) {
-        var Fd;
-        const dd = JSON.parse(Od),
-          Wd = JSON.stringify(null !== (Fd = dd.box) && void 0 !== Fd ? Fd : null),
-          Rd = "number" === typeof dd.shown ? dd.shown : null;
-        let Xd = nd(xd, Wd);
-        void 0 === Xd && (Xd = Kd(dd.box, md, Ed), Ld(xd, Wd, Xd));
-        const hd = null === Rd ? null : Math.min(Math.max(0, Math.floor(Rd)), Xd.chars),
-          vd = Xd;
+      if (bb === Fb.MultilineText) {
+        var Hb;
+        const bb = JSON.parse(wb),
+          eb = JSON.stringify(null !== (Hb = bb.box) && void 0 !== Hb ? Hb : null),
+          pb = "number" === typeof bb.shown ? bb.shown : null;
+        let Vb = Jb(rb, eb);
+        void 0 === Vb && (Vb = gb(bb.box, Mb, xb), Sb(rb, eb, Vb));
+        const lb = null === pb ? null : Math.min(Math.max(0, Math.floor(pb)), Vb.chars),
+          Lb = Vb;
         return {
-          width: vd.width,
-          height: vd.height,
-          draw: dd => {
-            vd.draw(dd, hd)
+          width: Lb.width,
+          height: Lb.height,
+          draw: bb => {
+            Lb.draw(bb, lb)
           }
         }
       }
-      if (dd === yd.Board) return function(dd, Od) {
-        var md;
-        if (!Od.canSeePlayerWrittenText) return null;
+      if (bb === Fb.Board) return function(bb, wb) {
+        var Mb;
+        if (!wb.canSeePlayerWrittenText) return null;
         const {
-          shared: Fd,
-          w: Rd = 0,
-          h: Xd = 0
-        } = dd, Kd = !Rd;
-        let hd;
-        if (Kd) {
-          var Nd, qd;
-          hd = null !== (Nd = null === Fd || void 0 === Fd || null === (qd = Fd.text) || void 0 === qd ? void 0 : qd.toString()) && void 0 !== Nd ? Nd : ""
+          shared: Hb,
+          w: pb = 0,
+          h: Vb = 0
+        } = bb, gb = !pb;
+        let lb;
+        if (gb) {
+          var tb, Cb;
+          lb = null !== (tb = null === Hb || void 0 === Hb || null === (Cb = Hb.text) || void 0 === Cb ? void 0 : Cb.toString()) && void 0 !== tb ? tb : ""
         } else {
-          if ("string" !== typeof(null === Fd || void 0 === Fd ? void 0 : Fd.text)) return null;
-          hd = Fd.text
+          if ("string" !== typeof(null === Hb || void 0 === Hb ? void 0 : Hb.text)) return null;
+          lb = Hb.text
         }
-        if ("" === hd.trim()) return null;
-        const Hd = null !== (md = null === Fd || void 0 === Fd ? void 0 : Fd.textSize) && void 0 !== md ? md : 0,
-          yd = Wd.c[Hd].ingameFontSize;
-        let bd = od,
-          Td = Qd;
-        Kd || (hd = (0, Wd.p)(hd, Hd, Rd, Xd), bd = (0, Wd.z)(Rd, Xd), Td = Math.min(Qd, td / Math.max(bd.width, bd.height)));
-        const pd = Math.round(Td * bd.width),
-          Yd = Math.round(Td * bd.height),
-          gd = Td / Qd;
+        if ("" === lb.trim()) return null;
+        const Eb = null !== (Mb = null === Hb || void 0 === Hb ? void 0 : Hb.textSize) && void 0 !== Mb ? Mb : 0,
+          Fb = eb.e[Eb].ingameFontSize;
+        let Bb = Ub,
+          sb = Ib;
+        gb || (lb = (0, eb.u)(lb, Eb, pb, Vb), Bb = (0, eb.A)(pb, Vb), sb = Math.min(Ib, Ob / Math.max(Bb.width, Bb.height)));
+        const mb = Math.round(sb * Bb.width),
+          hb = Math.round(sb * Bb.height),
+          zb = sb / Ib;
         return {
-          width: pd,
-          height: Yd,
-          draw: dd => {
-            vd.c.fontSize = yd * gd, vd.c.fontWeight = "bold", vd.c.font = "'Jetbrains Mono', monospace", vd.c.drawText(dd, hd, 0, (-10 - 7 * Hd) * gd, pd, Yd)
+          width: mb,
+          height: hb,
+          draw: bb => {
+            Lb.b.fontSize = Fb * zb, Lb.b.fontWeight = "bold", Lb.b.font = "'Jetbrains Mono', monospace", Lb.b.drawText(bb, lb, 0, (-10 - 7 * Eb) * zb, mb, hb)
           }
         }
-      }(JSON.parse(Od), Ed);
-      if (dd === yd.Leaderboard) return function(dd, Od, md) {
-        var Wd;
-        const Fd = (0, Nd.j)(dd.opts, qd),
-          Rd = (0, Nd.e)(Fd, md),
-          Xd = {
-            top: (0, Nd.i)(Fd, (0, Nd.m)(dd.top)),
-            around: null !== (Wd = dd.around) && void 0 !== Wd ? Wd : null,
-            showPlayerText: Od.canSeePlayerWrittenText,
-            localPlayerDbId: Od.localPlayerDbId
+      }(JSON.parse(wb), xb);
+      if (bb === Fb.Leaderboard) return function(bb, wb, Mb) {
+        var eb;
+        const Hb = (0, tb.j)(bb.opts, Cb),
+          pb = (0, tb.f)(Hb, Mb),
+          Vb = {
+            top: (0, tb.i)(Hb, (0, tb.k)(bb.top)),
+            around: null !== (eb = bb.around) && void 0 !== eb ? eb : null,
+            showPlayerText: wb.canSeePlayerWrittenText,
+            localPlayerDbId: wb.localPlayerDbId
           };
         return {
-          width: Rd.pixelWidth,
-          height: Rd.pixelHeight,
-          draw: dd => {
+          width: pb.pixelWidth,
+          height: pb.pixelHeight,
+          draw: bb => {
             const {
-              a: Od,
-              d: md
-            } = dd.getTransform();
-            (0, Nd.b)(dd, Math.round(Rd.pixelWidth * Od), Math.round(Rd.pixelHeight * md), Rd, Fd, Xd)
+              a: wb,
+              d: Mb
+            } = bb.getTransform();
+            (0, tb.e)(bb, Math.round(pb.pixelWidth * wb), Math.round(pb.pixelHeight * Mb), pb, Hb, Vb)
           }
         }
-      }(JSON.parse(Od), Ed, bd);
-      throw new Error(`unknown text plane kind ${dd}`)
+      }(JSON.parse(wb), xb, Bb);
+      throw new Error(`unknown text plane kind ${bb}`)
     }
-    const zd = 2 ** Math.floor(Math.log2(bd));
+    const vb = 2 ** Math.floor(Math.log2(Bb));
 
-    function cd(dd, Od) {
-      let md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Wd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function Qb(bb, wb) {
+      let Mb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        eb = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       try {
-        if (dd.length < 2) return [0, 0];
-        const Rd = (0, Fd.e)(Od);
-        if (!Rd) return [0, 0];
-        const Xd = rd();
-        Xd !== Jd && (Jd = Xd, Gd());
-        const [Kd] = dd, hd = wd.decode(dd.subarray(1));
-        let vd;
-        Kd !== yd.Board && Kd !== yd.Leaderboard || !Ed.canSeePlayerWrittenText || Ed.glyphsShown(hd), Rd.save();
+        if (bb.length < 2) return [0, 0];
+        const pb = (0, Hb.d)(wb);
+        if (!pb) return [0, 0];
+        const Vb = Ab();
+        Vb !== jb && (jb = Vb, Wb());
+        const [gb] = bb, lb = Xb.decode(bb.subarray(1));
+        let Lb;
+        gb !== Fb.Board && gb !== Fb.Leaderboard || !xb.canSeePlayerWrittenText || xb.glyphsShown(lb), pb.save();
         try {
-          vd = Pd(Kd, hd, Rd)
+          Lb = Nb(gb, lb, pb)
         } finally {
-          Rd.restore()
+          pb.restore()
         }
-        if (null === vd || !(vd.width > 0 && vd.height > 0)) return [0, 0];
-        const Qd = Math.min(1, bd / vd.width, bd / vd.height),
-          td = dd => Wd ? function(dd) {
-            const Od = 2 ** Math.ceil(Math.log2(dd));
-            return Math.min(zd, Od - dd > dd - Od / 2 ? Od / 2 : Od)
-          }(dd) : Math.min(bd, Math.ceil(dd * Qd)),
-          [od, Nd] = [td(vd.width), td(vd.height)];
-        ! function(dd, Od, md, Wd, Fd) {
-          const Rd = Math.max(dd.width, md),
-            Xd = Math.max(dd.height, Wd),
-            Kd = Fd || Rd * Xd > Math.max(Yd * md * Wd, gd),
-            [hd, vd] = Kd ? [md, Wd] : [Rd, Xd];
-          hd === dd.width && vd === dd.height ? Od.clearRect(0, 0, hd, vd) : (dd.width = hd, dd.height = vd)
-        }(Od, Rd, od, Nd, md), Rd.save();
+        if (null === Lb || !(Lb.width > 0 && Lb.height > 0)) return [0, 0];
+        const Ib = Math.min(1, Bb / Lb.width, Bb / Lb.height),
+          Ob = bb => eb ? function(bb) {
+            const wb = 2 ** Math.ceil(Math.log2(bb));
+            return Math.min(vb, wb - bb > bb - wb / 2 ? wb / 2 : wb)
+          }(bb) : Math.min(Bb, Math.ceil(bb * Ib)),
+          [Ub, tb] = [Ob(Lb.width), Ob(Lb.height)];
+        ! function(bb, wb, Mb, eb, Hb) {
+          const pb = Math.max(bb.width, Mb),
+            Vb = Math.max(bb.height, eb),
+            gb = Hb || pb * Vb > Math.max(hb * Mb * eb, zb),
+            [lb, Lb] = gb ? [Mb, eb] : [pb, Vb];
+          lb === bb.width && Lb === bb.height ? wb.clearRect(0, 0, lb, Lb) : (bb.width = lb, bb.height = Lb)
+        }(wb, pb, Ub, tb, Mb), pb.save();
         try {
-          const [dd, Od] = Wd ? [od / vd.width, Nd / vd.height] : [Qd, Qd];
-          1 === dd && 1 === Od || Rd.scale(dd, Od), vd.draw(Rd)
+          const [bb, wb] = eb ? [Ub / Lb.width, tb / Lb.height] : [Ib, Ib];
+          1 === bb && 1 === wb || pb.scale(bb, wb), Lb.draw(pb)
         } finally {
-          Rd.restore()
+          pb.restore()
         }
-        return [od, Nd]
-      } catch (Rd) {
-        ! function(dd, Od) {
-          Bd < pd && (Bd++, console.warn(`[bloxd-wasm-client] ${dd}`, Od))
-        }("could not raster a text plane", Rd);
+        return [Ub, tb]
+      } catch (pb) {
+        ! function(bb, wb) {
+          Rb < mb && (Rb++, console.warn(`[bloxd-wasm-client] ${bb}`, wb))
+        }("could not raster a text plane", pb);
         try {
-          Od.width = 1
+          wb.width = 1
         } catch {}
         return [0, 0]
       }
@@ -1106,4 +1106,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);

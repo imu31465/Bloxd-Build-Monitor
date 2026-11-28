@@ -2,17 +2,17 @@
  "context": {
   "module": "bloxd_wasm_workers_bg",
   "environment": "staging.bloxd.io",
-  "build": "yteou.5361c997",
-  "url": "https://staging.bloxd.io/static/media/bloxd_wasm_workers_bg.90b05c84385377d1ddee.wasm",
-  "sha256": "fffff5148e36b0bbe9b1ac57b88354ed0a2be82b12546b685c54f8d890ba1c25",
-  "analyzed_at": "2026-11-28T13:51:33+09:00",
+  "build": "welxxc.ffac0572",
+  "url": "https://staging.bloxd.io/static/media/bloxd_wasm_workers_bg.8e9546dac9305a8173d9.wasm",
+  "sha256": "68ec8fbb485ec5b7fcde94a988fa5914ddd0a7f0de80b29453220567a879b36d",
+  "analyzed_at": "2026-11-28T21:24:47+09:00",
   "referenced_by": "161.js"
  },
  "facts": {
   "schema": 1,
   "header": {
    "version": 1,
-   "size": 203659
+   "size": 203635
   },
   "sections": [
    {
@@ -77,7 +77,7 @@
    {
     "id": 11,
     "name": "data",
-    "bytes": 10156,
+    "bytes": 10132,
     "count": 9
    },
    {
@@ -130,36 +130,36 @@
   },
   "imports": [
    {
-    "module": "Mq9P",
-    "name": "CaFy",
+    "module": "Q9eN",
+    "name": "E9Rz",
     "kind": "func",
     "index": 0,
     "type": "(i32) -> ()"
    },
    {
-    "module": "Mq9P",
-    "name": "UC6H",
+    "module": "Q9eN",
+    "name": "PId4",
     "kind": "func",
     "index": 1,
     "type": "(i32) -> ()"
    },
    {
-    "module": "Mq9P",
-    "name": "AAUi",
+    "module": "Q9eN",
+    "name": "BA8q",
     "kind": "func",
     "index": 2,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "Mq9P",
-    "name": "EFJY",
+    "module": "Q9eN",
+    "name": "yqeP",
     "kind": "func",
     "index": 3,
     "type": "(i32 i32) -> (i32)"
    },
    {
-    "module": "Mq9P",
-    "name": "o8zU",
+    "module": "Q9eN",
+    "name": "GtDV",
     "kind": "func",
     "index": 4,
     "type": "(i32 i32) -> ()"
@@ -167,172 +167,76 @@
   ],
   "exports": [
    {
-    "name": "aKMs",
-    "kind": "func",
-    "index": 126,
-    "type": "(i32) -> (i32)"
-   },
-   {
-    "name": "mLGV",
-    "kind": "func",
-    "index": 51,
-    "type": "() -> (i32)"
-   },
-   {
-    "name": "a9e5",
-    "kind": "func",
-    "index": 142,
-    "type": "() -> (i32 i32)"
-   },
-   {
-    "name": "y996",
-    "kind": "global",
-    "index": 2,
-    "type": ""
-   },
-   {
-    "name": "JdgQ",
-    "kind": "func",
-    "index": 119,
-    "type": "(f64) -> (i32)"
-   },
-   {
-    "name": "sCS4",
+    "name": "OVLv",
     "kind": "func",
     "index": 147,
     "type": "() -> (i32)"
    },
    {
-    "name": "LAKk",
-    "kind": "func",
-    "index": 138,
-    "type": "() -> ()"
-   },
-   {
-    "name": "b7c0",
-    "kind": "func",
-    "index": 58,
-    "type": "(i32 i32) -> (i32)"
-   },
-   {
-    "name": "Nb5n",
-    "kind": "func",
-    "index": 94,
-    "type": "(i32 i32) -> ()"
-   },
-   {
-    "name": "KO2I",
-    "kind": "func",
-    "index": 169,
-    "type": "(i32) -> (i32)"
-   },
-   {
-    "name": "oWvf",
-    "kind": "func",
-    "index": 131,
-    "type": "(i32) -> (i32)"
-   },
-   {
-    "name": "Wamx",
-    "kind": "func",
-    "index": 102,
-    "type": "() -> (i32)"
-   },
-   {
-    "name": "AuoK",
-    "kind": "func",
-    "index": 98,
-    "type": "() -> (i32)"
-   },
-   {
-    "name": "eIwZ",
-    "kind": "func",
-    "index": 141,
-    "type": "(i32 i32 i32) -> (i32 i32)"
-   },
-   {
-    "name": "ZiLH",
-    "kind": "func",
-    "index": 138,
-    "type": "() -> ()"
-   },
-   {
-    "name": "k86Z",
-    "kind": "func",
-    "index": 73,
-    "type": "(i32 i32) -> ()"
-   },
-   {
-    "name": "rjqu",
-    "kind": "func",
-    "index": 127,
-    "type": "(i32) -> (i32)"
-   },
-   {
-    "name": "K7Fw",
-    "kind": "func",
-    "index": 129,
-    "type": "(i32) -> (i32)"
-   },
-   {
-    "name": "FoRz",
-    "kind": "func",
-    "index": 139,
-    "type": "(i32 i32) -> (i32)"
-   },
-   {
-    "name": "EdGT",
-    "kind": "func",
-    "index": 5,
-    "type": "(i32 i32) -> (i32)"
-   },
-   {
-    "name": "SOKz",
-    "kind": "func",
-    "index": 172,
-    "type": "() -> (i32)"
-   },
-   {
-    "name": "RW2S",
-    "kind": "func",
-    "index": 16,
-    "type": "(i32 i32 i32) -> ()"
-   },
-   {
-    "name": "bGHf",
-    "kind": "func",
-    "index": 128,
-    "type": "(i32) -> (i32)"
-   },
-   {
-    "name": "Zvrt",
+    "name": "x80T",
     "kind": "func",
     "index": 40,
     "type": "() -> (i32)"
    },
    {
-    "name": "v2L8",
-    "kind": "func",
-    "index": 106,
-    "type": "(i32 i32) -> (i32)"
+    "name": "ezFE",
+    "kind": "global",
+    "index": 2,
+    "type": ""
    },
    {
-    "name": "ejIf",
-    "kind": "func",
-    "index": 170,
-    "type": "(i32) -> ()"
-   },
-   {
-    "name": "i1hr",
-    "kind": "func",
-    "index": 117,
-    "type": "(i32) -> ()"
-   },
-   {
-    "name": "SW6h",
+    "name": "HDc1",
     "kind": "func",
     "index": 153,
     "type": "(i32 i32 i32) -> ()"
+   },
+   {
+    "name": "acwc",
+    "kind": "func",
+    "index": 51,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "vZCM",
+    "kind": "func",
+    "index": 102,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "cWsi",
+    "kind": "func",
+    "index": 138,
+    "type": "() -> ()"
+   },
+   {
+    "name": "I5Xz",
+    "kind": "func",
+    "index": 141,
+    "type": "(i32 i32 i32) -> (i32 i32)"
+   },
+   {
+    "name": "Szzg",
+    "kind": "func",
+    "index": 128,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "zAee",
+    "kind": "func",
+    "index": 73,
+    "type": "(i32 i32) -> ()"
+   },
+   {
+    "name": "WpDr",
+    "kind": "func",
+    "index": 138,
+    "type": "() -> ()"
+   },
+   {
+    "name": "SENR",
+    "kind": "func",
+    "index": 119,
+    "type": "(f64) -> (i32)"
    },
    {
     "name": "memory",
@@ -341,28 +245,124 @@
     "type": ""
    },
    {
-    "name": "MDP0",
+    "name": "MSX4",
+    "kind": "func",
+    "index": 98,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "LdM6",
+    "kind": "func",
+    "index": 142,
+    "type": "() -> (i32 i32)"
+   },
+   {
+    "name": "hacy",
     "kind": "func",
     "index": 140,
     "type": "(i32 i32 i32 i32) -> (i32)"
    },
    {
-    "name": "J2yV",
-    "kind": "global",
-    "index": 1,
-    "type": ""
+    "name": "yWUQ",
+    "kind": "func",
+    "index": 94,
+    "type": "(i32 i32) -> ()"
    },
    {
-    "name": "nakn",
+    "name": "kmTM",
+    "kind": "func",
+    "index": 58,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "gWJe",
+    "kind": "func",
+    "index": 106,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "um5o",
+    "kind": "func",
+    "index": 170,
+    "type": "(i32) -> ()"
+   },
+   {
+    "name": "jelT",
+    "kind": "func",
+    "index": 131,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "NYZn",
+    "kind": "func",
+    "index": 126,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "ICbI",
+    "kind": "func",
+    "index": 16,
+    "type": "(i32 i32 i32) -> ()"
+   },
+   {
+    "name": "Giqe",
     "kind": "func",
     "index": 114,
     "type": "(i32) -> (i32)"
    },
    {
-    "name": "Mx7o",
+    "name": "eZxZ",
+    "kind": "func",
+    "index": 129,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "cIkG",
+    "kind": "global",
+    "index": 1,
+    "type": ""
+   },
+   {
+    "name": "w7o8",
     "kind": "func",
     "index": 130,
     "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "W7QF",
+    "kind": "func",
+    "index": 127,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "Htdu",
+    "kind": "func",
+    "index": 169,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "O6OQ",
+    "kind": "func",
+    "index": 139,
+    "type": "(i32 i32) -> (i32)"
+   },
+   {
+    "name": "EyIi",
+    "kind": "func",
+    "index": 117,
+    "type": "(i32) -> ()"
+   },
+   {
+    "name": "ciwj",
+    "kind": "func",
+    "index": 172,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "JdlO",
+    "kind": "func",
+    "index": 5,
+    "type": "(i32 i32) -> (i32)"
    }
   ],
   "globals": [
@@ -376,13 +376,13 @@
     "index": 1,
     "type": "i32",
     "mutable": false,
-    "init": "i32.const 1059304"
+    "init": "i32.const 1059280"
    },
    {
     "index": 2,
     "type": "i32",
     "mutable": false,
-    "init": "i32.const 1059520"
+    "init": "i32.const 1059504"
    }
   ],
   "memories": [
@@ -412,51 +412,51 @@
   },
   "data": {
    "segments": 9,
-   "bytes": 10075,
+   "bytes": 10051,
    "details": [
     {
      "mode": 0,
      "offset": "i32.const 1048576",
-     "bytes": 2461
+     "bytes": 2437
     },
     {
      "mode": 0,
-     "offset": "i32.const 1051048",
+     "offset": "i32.const 1051024",
      "bytes": 2865
     },
     {
      "mode": 0,
-     "offset": "i32.const 1054044",
+     "offset": "i32.const 1054020",
      "bytes": 353
     },
     {
      "mode": 0,
-     "offset": "i32.const 1054408",
+     "offset": "i32.const 1054384",
      "bytes": 193
     },
     {
      "mode": 0,
-     "offset": "i32.const 1054612",
+     "offset": "i32.const 1054588",
      "bytes": 2381
     },
     {
      "mode": 0,
-     "offset": "i32.const 1057008",
+     "offset": "i32.const 1056984",
      "bytes": 733
     },
     {
      "mode": 0,
-     "offset": "i32.const 1057750",
+     "offset": "i32.const 1057726",
      "bytes": 911
     },
     {
      "mode": 0,
-     "offset": "i32.const 1058672",
+     "offset": "i32.const 1058648",
      "bytes": 167
     },
     {
      "mode": 0,
-     "offset": "i32.const 1059294",
+     "offset": "i32.const 1059270",
      "bytes": 11
     }
    ],
@@ -1151,7 +1151,7 @@
      "bytes": 23
     }
    ],
-   "module_name": "515df336a0eff72f.790",
+   "module_name": "c2d38ef465151336.790",
    "producers": {}
   },
   "strings": [
@@ -1170,10 +1170,6 @@
    {
     "len": 145,
     "text": "resumesteerdepenetrationRisechunkHashmeshLightchunkIngestblockEditsmovementTicknetReadnetSendcoreFramereplaySteplightComputebloxd-wasm debug trap"
-   },
-   {
-    "len": 101,
-    "text": "h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs"
    },
    {
     "len": 96,
@@ -1206,6 +1202,10 @@
    {
     "len": 76,
     "text": "assertion failed: blk.len() == att.len() && queue.len().is_power_of_two() &&"
+   },
+   {
+    "len": 75,
+    "text": "/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/string.rs"
    },
    {
     "len": 74,
@@ -1248,8 +1248,8 @@
     "text": "4 mat_colour values, not 3 per mat_colour_set entry ("
    },
    {
-    "len": 52,
-    "text": "cannot modify the panic hook from a panicking thread"
+    "len": 53,
+    "text": "cannot modify the panic hook from a panicking thread|"
    },
    {
     "len": 46,
@@ -1401,15 +1401,6 @@
  },
  "history": [
   {
-   "build": "igzsf.a0b73a5f",
-   "at": "2026-11-25T09:40:22+09:00",
-   "size": 201241,
-   "sha256": "d6180b50b2f3a41f",
-   "functions": 167,
-   "exports": 33,
-   "imports": 5
-  },
-  {
    "build": "dz8ef.98c5e741",
    "at": "2026-11-25T13:06:26+09:00",
    "size": 201241,
@@ -1504,6 +1495,15 @@
    "at": "2026-11-28T13:51:33+09:00",
    "size": 203659,
    "sha256": "fffff5148e36b0bb",
+   "functions": 169,
+   "exports": 33,
+   "imports": 5
+  },
+  {
+   "build": "welxxc.ffac0572",
+   "at": "2026-11-28T21:24:47+09:00",
+   "size": 203635,
+   "sha256": "68ec8fbb485ec5b7",
    "functions": 169,
    "exports": 33,
    "imports": 5

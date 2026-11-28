@@ -1,341 +1,341 @@
 export const id = 114;
 export const ids = [114];
 export const modules = {
-  5661: (dd, Od, md) => {
-    md.r(Od), md.d(Od, {
-      default: () => ed
+  5776: (bb, wb, Mb) => {
+    Mb.r(wb), Mb.d(wb, {
+      default: () => ab
     });
-    var Wd = md(66),
-      Fd = md(1650),
-      Rd = md(405),
-      Xd = md(1295),
-      Kd = md(1739),
-      hd = md(1322),
-      vd = md(1670),
-      Qd = md(1627),
-      td = md(3742);
-    const od = {
+    var eb = Mb(64),
+      Hb = Mb(1696),
+      pb = Mb(382),
+      Vb = Mb(1309),
+      gb = Mb(1799),
+      lb = Mb(1333),
+      Lb = Mb(1720),
+      Ib = Mb(1677),
+      Ob = Mb(3872);
+    const Ub = {
       retries: 2,
       minTimeout: 2e3
     };
-    var Nd = md(1170),
-      qd = md(1731),
-      Hd = md(1186),
-      yd = md(2060),
-      bd = md(1238),
-      Td = md(1286),
-      pd = md(4711),
-      Yd = md(1436),
-      gd = md(1572),
-      wd = md(1641),
-      Ed = md(3684),
-      Jd = md(3705),
-      Ud = md(5666),
-      xd = md(3044),
-      Bd = md(1155),
-      Sd = md.n(Bd),
-      sd = md(1443),
-      ud = md(5670),
-      Vd = md(29),
-      Ad = md(2092),
-      rd = md(4853),
-      Gd = md(2167),
-      nd = md(4832),
-      Ld = md(107),
-      Pd = md(5220),
-      zd = md(1341);
-    const cd = [Ud];
+    var tb = Mb(1168),
+      Cb = Mb(1793),
+      Eb = Mb(1179),
+      Fb = Mb(2116),
+      Bb = Mb(1259),
+      sb = Mb(1301),
+      mb = Mb(4881),
+      hb = Mb(1468),
+      zb = Mb(1616),
+      Xb = Mb(1686),
+      xb = Mb(3813),
+      jb = Mb(3826),
+      Kb = Mb(5783),
+      rb = Mb(3121),
+      Rb = Mb(1159),
+      Db = Mb.n(Rb),
+      cb = Mb(1475),
+      Yb = Mb(5789),
+      Zb = Mb(26),
+      fb = Mb(2142),
+      Ab = Mb(5011),
+      Wb = Mb(2218),
+      Jb = Mb(4985),
+      Sb = Mb(110),
+      Nb = Mb(5405),
+      vb = Mb(1364);
+    const Qb = [Kb];
 
-    function jd(dd) {
+    function Gb(bb) {
       let {
-        icon: Od,
-        label: md,
-        value: Wd
-      } = dd;
-      return (0, zd.jsxs)("div", {
+        icon: wb,
+        label: Mb,
+        value: eb
+      } = bb;
+      return (0, vb.jsxs)("div", {
         className: "PlayerProfileStat",
-        children: [(0, zd.jsx)(sd.c, {
-          name: Od,
+        children: [(0, vb.jsx)(cb.b, {
+          name: wb,
           className: "PlayerProfileStatIcon"
-        }), (0, zd.jsxs)("div", {
+        }), (0, vb.jsxs)("div", {
           className: "PlayerProfileStatText",
-          children: [(0, zd.jsx)("div", {
+          children: [(0, vb.jsx)("div", {
             className: "PlayerProfileStatLabel SmallTextLight",
-            children: md
-          }), (0, zd.jsx)("div", {
+            children: Mb
+          }), (0, vb.jsx)("div", {
             className: "PlayerProfileStatValue",
-            children: Wd
+            children: eb
           })]
         })]
       })
     }
 
-    function Dd(dd) {
+    function qb(bb) {
       let {
-        profile: Od
-      } = dd;
+        profile: wb
+      } = bb;
       const {
-        t: md,
-        selectedLanguage: Wd
-      } = (0, bd.G)();
-      let Fd = md("homePage:profileUnknown");
-      if (Od.lastOnline) {
-        const dd = (0, bd.p)(Wd.code, "homePage:profileTimeAgo");
-        Fd = md("homePage:profileTimeAgo", {
-          time: (0, Rd.Q)(dd, Od.lastOnline, Date.now())
+        t: Mb,
+        selectedLanguage: eb
+      } = (0, Bb.C)();
+      let Hb = Mb("homePage:profileUnknown");
+      if (wb.lastOnline) {
+        const bb = (0, Bb.l)(eb.code, "homePage:profileTimeAgo");
+        Hb = Mb("homePage:profileTimeAgo", {
+          time: (0, pb.ib)(bb, wb.lastOnline, Date.now())
         })
       }
-      let Xd = md("homePage:profileUnknown");
-      return Od.accountCreatedAt && (Xd = new Date(Od.accountCreatedAt).toLocaleDateString(void 0, {
+      let Vb = Mb("homePage:profileUnknown");
+      return wb.accountCreatedAt && (Vb = new Date(wb.accountCreatedAt).toLocaleDateString(void 0, {
         year: "numeric",
         month: "short",
         day: "numeric"
-      })), (0, zd.jsxs)("div", {
+      })), (0, vb.jsxs)("div", {
         className: "PlayerProfileStats",
-        children: [(0, zd.jsx)(jd, {
+        children: [(0, vb.jsx)(Gb, {
           icon: "hourglass",
-          label: md("homePage:profileTimePlayed"),
-          value: (0, rd.e)(Od.totalPlayMinutes)
-        }), (0, zd.jsx)(jd, {
+          label: Mb("homePage:profileTimePlayed"),
+          value: (0, Ab.c)(wb.totalPlayMinutes)
+        }), (0, vb.jsx)(Gb, {
           icon: "wifi",
-          label: md("homePage:profileLastOnline"),
-          value: Fd
-        }), (0, zd.jsx)(jd, {
+          label: Mb("homePage:profileLastOnline"),
+          value: Hb
+        }), (0, vb.jsx)(Gb, {
           icon: "calendar",
-          label: md("homePage:profileJoined"),
-          value: Xd
+          label: Mb("homePage:profileJoined"),
+          value: Vb
         })]
       })
     }
 
-    function ed() {
+    function ab() {
       const {
-        t: dd
-      } = (0, bd.G)(), Od = (0, wd.useNavigatePreserveSearch)(), md = (0, Nd.h)(), {
-        playerName: Ud,
-        playerUrlName: Bd
-      } = (0, Fd.u)(), rd = (0, Fd.p)(), jd = (0, Xd.g)(rd.pathname), ed = jd && ("urlId" in jd ? `urlId:${jd.urlId}` : `name:${jd.lowerCaseName}`), Id = (0, Wd.useRef)(ed);
-      Id.current = ed;
+        t: bb
+      } = (0, Bb.C)(), wb = (0, Xb.useNavigatePreserveSearch)(), Mb = (0, tb.h)(), {
+        playerName: Kb,
+        playerUrlName: Rb
+      } = (0, Hb.E)(), Ab = (0, Hb.v)(), Gb = (0, Vb.e)(Ab.pathname), ab = Gb && ("urlId" in Gb ? `urlId:${Gb.urlId}` : `name:${Gb.lowerCaseName}`), ib = (0, eb.useRef)(ab);
+      ib.current = ab;
       const {
-        userContext: ld,
-        isUserContextUpdating: Cd
-      } = (0, Hd.d)(), Zd = (0, Wd.useRef)(null), kd = (0, Wd.useRef)(null), fd = (0, Wd.useRef)(null), Md = (0, Wd.useRef)(!1), dO = (0, Wd.useRef)((0, Rd.Vb)(cd)), [OO, mO] = (0, Wd.useState)((() => {
-        const dd = jd && Jd.e.peek(ld, jd);
-        return dd ? {
+        userContext: ub,
+        isUserContextUpdating: db
+      } = (0, Eb.e)(), Pb = (0, eb.useRef)(null), nb = (0, eb.useRef)(null), yb = (0, eb.useRef)(null), ob = (0, eb.useRef)(!1), Tb = (0, eb.useRef)((0, pb.jc)(Qb)), [kb, bw] = (0, eb.useState)((() => {
+        const bb = Gb && jb.d.peek(ub, Gb);
+        return bb ? {
           status: "loaded",
-          profile: dd,
-          playerKey: ed
+          profile: bb,
+          playerKey: ab
         } : {
           status: "loading"
         }
-      })), [WO, FO] = (0, Wd.useState)(0);
-      (0, Wd.useEffect)(Ed.g, []), (0, Wd.useEffect)((() => {
-        Ad.gameBridge.send("leaveGame", {
+      })), [ww, Mw] = (0, eb.useState)(0);
+      (0, eb.useEffect)(xb.i, []), (0, eb.useEffect)((() => {
+        fb.gameBridge.send("leaveGame", {
           reloadPath: null
-        }), Vd.e.set({
+        }), Zb.c.set({
           gameState: "landingPage",
           openEverythingMenuName: null,
           openInGameMenuName: null
         })
-      }), [rd.key]);
-      const RO = () => {
-        const dd = (0, wd.getPreviousLocation)();
-        null === dd || dd.startsWith("/play") ? (0, wd.navigateToHomePage)() : Od(-1)
+      }), [Ab.key]);
+      const ew = () => {
+        const bb = (0, Xb.getPreviousLocation)();
+        null === bb || bb.startsWith("/play") ? (0, Xb.navigateToHomePage)() : wb(-1)
       };
-      (0, Pd.d)(RO), (0, Wd.useEffect)((() => {
-        var dd;
-        if (Cd) return;
-        if (!jd) return void mO({
+      (0, Nb.e)(ew), (0, eb.useEffect)((() => {
+        var bb;
+        if (db) return;
+        if (!Gb) return void bw({
           status: "notFound",
-          playerKey: ed
+          playerKey: ab
         });
-        const Od = "urlId" in jd && (null === (dd = kd.current) || void 0 === dd ? void 0 : dd.urlId) === jd.urlId && fd.current === ld;
-        if (Od && Md.current) return;
-        const md = Od ? null : Jd.e.peek(ld, jd);
-        let Wd = !1;
-        const Fd = dd => "loaded" === dd.status && (dd.playerKey === ed || "urlId" in jd && dd.profile.urlId === jd.urlId);
-        return md ? (fd.current = ld, Md.current = !1, mO({
+        const wb = "urlId" in Gb && (null === (bb = nb.current) || void 0 === bb ? void 0 : bb.urlId) === Gb.urlId && yb.current === ub;
+        if (wb && ob.current) return;
+        const Mb = wb ? null : jb.d.peek(ub, Gb);
+        let eb = !1;
+        const Hb = bb => "loaded" === bb.status && (bb.playerKey === ab || "urlId" in Gb && bb.profile.urlId === Gb.urlId);
+        return Mb ? (yb.current = ub, ob.current = !1, bw({
           status: "loaded",
-          profile: md,
-          playerKey: ed
-        }), Jd.e.invalidate(jd)) : mO((dd => Fd(dd) ? dd : {
+          profile: Mb,
+          playerKey: ab
+        }), jb.d.invalidate(Gb)) : bw((bb => Hb(bb) ? bb : {
           status: "loading"
-        })), async function(dd, Od) {
-          if ("lowerCaseName" in Od && Od.lowerCaseName.length > hd.g) return {
+        })), async function(bb, wb) {
+          if ("lowerCaseName" in wb && wb.lowerCaseName.length > lb.g) return {
             status: "notFound"
           };
           try {
             return {
               status: "loaded",
-              profile: await Qd.e.getPlayerProfile(dd, Od, od)
+              profile: await Ib.e.getPlayerProfile(bb, wb, Ub)
             }
-          } catch (md) {
-            return (0, td.c)(md) ? {
+          } catch (Mb) {
+            return (0, Ob.e)(Mb) ? {
               status: "notFound"
-            } : (console.error("Failed to load user profile", md), {
+            } : (console.error("Failed to load user profile", Mb), {
               status: "failed"
             })
           }
-        }(ld, jd).then((dd => {
-          Wd || ("loaded" === dd.status && (fd.current = ld, Md.current = !0), mO((Od => "failed" === dd.status && Fd(Od) ? Od : {
-            ...dd,
-            playerKey: ed
+        }(ub, Gb).then((bb => {
+          eb || ("loaded" === bb.status && (yb.current = ub, ob.current = !0), bw((wb => "failed" === bb.status && Hb(wb) ? wb : {
+            ...bb,
+            playerKey: ab
           })))
         })), () => {
-          Wd = !0
+          eb = !0
         }
-      }), [Cd, ed, ld, WO]);
-      const XO = "loading" === OO.status || OO.playerKey === ed || "loaded" === OO.status && !!jd && "urlId" in jd && OO.profile.urlId === jd.urlId ? OO : {
+      }), [db, ab, ub, ww]);
+      const Hw = "loading" === kb.status || kb.playerKey === ab || "loaded" === kb.status && !!Gb && "urlId" in Gb && kb.profile.urlId === Gb.urlId ? kb : {
           status: "loading"
         },
-        KO = "loaded" === XO.status ? XO.profile : null,
-        hO = "loading" === XO.status ? null : function(dd) {
-          if ("loaded" === dd.status) {
+        pw = "loaded" === Hw.status ? Hw.profile : null,
+        Vw = "loading" === Hw.status ? null : function(bb) {
+          if ("loaded" === bb.status) {
             const {
-              profile: Od
-            } = dd;
-            return (0, vd.$)({
-              urlId: Od.urlId,
-              name: Od.player.name,
-              ranks: Od.player.ranks,
-              socialLinks: Od.socialLinks
+              profile: wb
+            } = bb;
+            return (0, Lb.L)({
+              urlId: wb.urlId,
+              name: wb.player.name,
+              ranks: wb.player.ranks,
+              socialLinks: wb.socialLinks
             })
           }
-          return "notFound" === dd.status ? (0, vd.lb)() : null
-        }(XO),
-        vO = null !== KO && void 0 !== KO && KO.urlId ? (0, Xd.h)({
-          urlId: KO.urlId,
-          name: KO.player.name
+          return "notFound" === bb.status ? (0, Lb._)() : null
+        }(Hw),
+        gw = null !== pw && void 0 !== pw && pw.urlId ? (0, Vb.g)({
+          urlId: pw.urlId,
+          name: pw.player.name
         }) : null;
-      (0, qd.g)(vO);
-      const QO = null !== KO && void 0 !== KO && KO.player.cosmetics.profileEffect ? xd.c[KO.player.cosmetics.profileEffect] : void 0,
-        tO = null !== KO && !Cd && ld.getPlayerName().toLowerCase() === KO.player.name.toLowerCase(),
-        oO = (0, Gd.c)(null === KO || void 0 === KO ? void 0 : KO.player.name),
-        NO = tO && ld.playerHasRank("youtuber");
-      kd.current = KO;
-      const qO = (0, Wd.useCallback)((() => {
-          jd && (Jd.e.invalidate(jd), Jd.e.get(ld, jd).then((dd => {
-            Id.current === ed && (Md.current = !0, mO({
+      (0, Cb.d)(gw);
+      const lw = null !== pw && void 0 !== pw && pw.player.cosmetics.profileEffect ? rb.h[pw.player.cosmetics.profileEffect] : void 0,
+        Lw = null !== pw && !db && ub.getPlayerName().toLowerCase() === pw.player.name.toLowerCase(),
+        Iw = (0, Wb.e)(null === pw || void 0 === pw ? void 0 : pw.player.name),
+        Ow = Lw && ub.playerHasRank("youtuber");
+      nb.current = pw;
+      const Uw = (0, eb.useCallback)((() => {
+          Gb && (jb.d.invalidate(Gb), jb.d.get(ub, Gb).then((bb => {
+            ib.current === ab && (ob.current = !0, bw({
               status: "loaded",
-              profile: dd,
-              playerKey: ed
+              profile: bb,
+              playerKey: ab
             }))
-          })).catch((dd => {
-            console.error("Failed to refresh user profile", dd)
+          })).catch((bb => {
+            console.error("Failed to refresh user profile", bb)
           })))
-        }), [ed, ld]),
-        HO = (0, Wd.useCallback)((() => {
-          var dd;
-          const Od = kd.current;
-          return !(!Od || null === (dd = Zd.current) || void 0 === dd || !dd.isReady()) && (Zd.current.setAllCosmetics(Od.player.cosmetics), !0)
+        }), [ab, ub]),
+        tw = (0, eb.useCallback)((() => {
+          var bb;
+          const wb = nb.current;
+          return !(!wb || null === (bb = Pb.current) || void 0 === bb || !bb.isReady()) && (Pb.current.setAllCosmetics(wb.player.cosmetics), !0)
         }), []);
-      return (0, Wd.useEffect)((() => {
-        if (!KO) return;
-        let dd, Od = !1;
-        const md = () => {
-          Od || HO() || (dd = setTimeout(md, 100))
+      return (0, eb.useEffect)((() => {
+        if (!pw) return;
+        let bb, wb = !1;
+        const Mb = () => {
+          wb || tw() || (bb = setTimeout(Mb, 100))
         };
-        return md(), () => {
-          Od = !0, clearTimeout(dd)
+        return Mb(), () => {
+          wb = !0, clearTimeout(bb)
         }
-      }), [KO, HO]), (0, zd.jsxs)("div", {
-        className: Sd()("PlayerProfile", {
-          PlayerProfilePortrait: md
+      }), [pw, tw]), (0, vb.jsxs)("div", {
+        className: Db()("PlayerProfile", {
+          PlayerProfilePortrait: Mb
         }),
-        children: [hO && (0, zd.jsx)(Kd.c, {
-          meta: hO
-        }), (0, zd.jsxs)("div", {
+        children: [Vw && (0, vb.jsx)(gb.d, {
+          meta: Vw
+        }), (0, vb.jsxs)("div", {
           className: "PlayerProfileBackgroundContainer",
-          children: [QO && (0, zd.jsx)(QO, {}), !QO && (0, zd.jsx)("div", {
+          children: [lw && (0, vb.jsx)(lw, {}), !lw && (0, vb.jsx)("div", {
             className: "PlayerProfileBackground",
             style: {
-              backgroundImage: `url(${dO.current})`
+              backgroundImage: `url(${Tb.current})`
             }
           })]
-        }), (0, zd.jsxs)("div", {
+        }), (0, vb.jsxs)("div", {
           className: "PlayerProfileHeader",
-          children: [(0, zd.jsx)(gd.d, {
-            onClick: RO,
-            children: dd("general:back")
-          }), KO && !Cd && !tO && Ld.featureFlags.useSocialFeatures && (0, zd.jsx)("div", {
+          children: [(0, vb.jsx)(zb.b, {
+            onClick: ew,
+            children: bb("general:back")
+          }), pw && !db && !Lw && Sb.featureFlags.useSocialFeatures && (0, vb.jsx)("div", {
             className: "PlayerProfileExclusionActions",
-            children: (0, zd.jsx)(nd.b, {
-              playerName: KO.player.name,
+            children: (0, vb.jsx)(Jb.c, {
+              playerName: pw.player.name,
               className: "SmallTextLight"
             })
           })]
-        }), "loading" === XO.status && (0, zd.jsx)("div", {
+        }), "loading" === Hw.status && (0, vb.jsx)("div", {
           className: "PlayerProfileCentredMessage",
-          children: (0, zd.jsx)(Yd.c, {})
-        }), ("notFound" === XO.status || "failed" === XO.status) && (0, zd.jsxs)("div", {
+          children: (0, vb.jsx)(hb.c, {})
+        }), ("notFound" === Hw.status || "failed" === Hw.status) && (0, vb.jsxs)("div", {
           className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, zd.jsx)(sd.c, {
+          children: [(0, vb.jsx)(cb.b, {
             name: "face-dizzy"
-          }), (0, zd.jsx)("div", {
+          }), (0, vb.jsx)("div", {
             className: "PlayerProfileErrorText",
-            children: "notFound" === XO.status ? dd("socialBar:playerNotFound", {
-              playerName: null !== Bd && void 0 !== Bd ? Bd : Ud
-            }) : dd("playerProfile:loadFailed")
-          }), "failed" === XO.status && (0, zd.jsx)(gd.g, {
+            children: "notFound" === Hw.status ? bb("socialBar:playerNotFound", {
+              playerName: null !== Rb && void 0 !== Rb ? Rb : Kb
+            }) : bb("playerProfile:loadFailed")
+          }), "failed" === Hw.status && (0, vb.jsx)(zb.f, {
             onClick: () => {
-              FO((dd => dd + 1))
+              Mw((bb => bb + 1))
             },
-            children: dd("general:tryAgain")
+            children: bb("general:tryAgain")
           })]
-        }), KO && (0, zd.jsxs)("div", {
+        }), pw && (0, vb.jsxs)("div", {
           className: "PlayerProfileContent",
-          children: [(0, zd.jsxs)("div", {
+          children: [(0, vb.jsxs)("div", {
             className: "PlayerProfileLeft",
-            children: [(0, zd.jsx)("div", {
+            children: [(0, vb.jsx)("div", {
               className: "PlayerProfileName FullyFancyText",
-              children: (0, zd.jsx)(yd.d, {
-                text: (0, Td.x)(KO.player.ranks, KO.player.name, KO.player.nameColour),
-                friendBadgeFor: oO ? KO.player.name : void 0
+              children: (0, vb.jsx)(Fb.d, {
+                text: (0, sb.r)(pw.player.ranks, pw.player.name, pw.player.nameColour),
+                friendBadgeFor: Iw ? pw.player.name : void 0
               })
-            }), (0, zd.jsx)("div", {
+            }), (0, vb.jsx)("div", {
               className: "PlayerProfileModel",
-              children: (0, zd.jsx)(Wd.Suspense, {
-                fallback: (0, zd.jsx)("div", {
+              children: (0, vb.jsx)(eb.Suspense, {
+                fallback: (0, vb.jsx)("div", {
                   className: "PlayerProfileModelLoading",
-                  children: (0, zd.jsx)(Yd.c, {})
+                  children: (0, vb.jsx)(hb.c, {})
                 }),
-                children: (0, zd.jsx)(Ed.e, {
-                  ref: Zd,
+                children: (0, vb.jsx)(xb.e, {
+                  ref: Pb,
                   onReady: () => {
-                    HO()
+                    tw()
                   }
                 })
               })
             })]
-          }), (0, zd.jsxs)("div", {
+          }), (0, vb.jsxs)("div", {
             className: "PlayerProfileRight",
-            children: [(0, zd.jsx)(Dd, {
-              profile: KO
-            }), (KO.socialLinks.length > 0 || NO) && (0, zd.jsx)(ud.c, {
-              socialLinks: KO.socialLinks,
-              editable: NO,
-              userContext: ld,
-              onLinksUpdated: qO
-            }), (0, zd.jsxs)("div", {
+            children: [(0, vb.jsx)(qb, {
+              profile: pw
+            }), (pw.socialLinks.length > 0 || Ow) && (0, vb.jsx)(Yb.c, {
+              socialLinks: pw.socialLinks,
+              editable: Ow,
+              userContext: ub,
+              onLinksUpdated: Uw
+            }), (0, vb.jsxs)("div", {
               className: "PlayerProfileGames",
-              children: [(0, zd.jsx)("div", {
+              children: [(0, vb.jsx)("div", {
                 className: "PlayerProfileGamesTitle SmallTextBold",
-                children: dd("homePage:profileReleasedGames")
-              }), 0 === KO.releasedGames.length && (0, zd.jsx)("div", {
+                children: bb("homePage:profileReleasedGames")
+              }), 0 === pw.releasedGames.length && (0, vb.jsx)("div", {
                 className: "PlayerProfileNoGames",
-                children: dd("homePage:profileNoReleasedGames")
-              }), KO.releasedGames.length > 0 && (0, zd.jsx)("div", {
+                children: bb("homePage:profileNoReleasedGames")
+              }), pw.releasedGames.length > 0 && (0, vb.jsx)("div", {
                 className: "PlayerProfileGamesGrid",
-                children: KO.releasedGames.map((dd => (0, zd.jsx)(pd.f, {
+                children: pw.releasedGames.map((bb => (0, vb.jsx)(mb.f, {
                   source: {
                     type: "preview",
-                    preview: dd
+                    preview: bb
                   },
                   gameWidth: "100%",
                   useLongRatio: !0,
                   hideFavourites: !0,
                   entrySource: "other"
-                }, dd.schematicId)))
+                }, bb.schematicId)))
               })]
             })]
           })]
@@ -343,21 +343,21 @@ export const modules = {
       })
     }
   },
-  5670: (dd, Od, md) => {
-    md.d(Od, {
-      c: () => yd
+  5789: (bb, wb, Mb) => {
+    Mb.d(wb, {
+      c: () => Fb
     });
-    var Wd = md(1155),
-      Fd = md.n(Wd),
-      Rd = md(5301),
-      Xd = md(1238),
-      Kd = md(1443),
-      hd = md(1572),
-      vd = md(1627),
-      Qd = md(1462),
-      td = md(3531),
-      od = md(1341);
-    const Nd = {
+    var eb = Mb(1159),
+      Hb = Mb.n(eb),
+      pb = Mb(5480),
+      Vb = Mb(1259),
+      gb = Mb(1475),
+      lb = Mb(1616),
+      Lb = Mb(1677),
+      Ib = Mb(1504),
+      Ob = Mb(3666),
+      Ub = Mb(1364);
+    const tb = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -385,163 +385,163 @@ export const modules = {
       }
     };
 
-    function qd(dd) {
+    function Cb(bb) {
       let {
-        platform: Od
-      } = dd;
-      const md = "youtube" === Od;
-      return (0, od.jsxs)("span", {
-        className: Fd()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: md
+        platform: wb
+      } = bb;
+      const Mb = "youtube" === wb;
+      return (0, Ub.jsxs)("span", {
+        className: Hb()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: Mb
         }),
-        children: [md && (0, od.jsx)(td.b, {
+        children: [Mb && (0, Ub.jsx)(Ob.e, {
           variant: "white"
-        }), !md && (0, od.jsx)(Kd.c, {
-          name: Nd[Od].icon,
+        }), !Mb && (0, Ub.jsx)(gb.b, {
+          name: tb[wb].icon,
           kit: "brands"
         })]
       })
     }
 
-    function Hd(dd) {
+    function Eb(bb) {
       let {
-        platform: Od,
-        link: md,
-        editable: Wd,
-        userContext: Fd,
-        onLinksUpdated: td
-      } = dd;
+        platform: wb,
+        link: Mb,
+        editable: eb,
+        userContext: Hb,
+        onLinksUpdated: Ob
+      } = bb;
       const {
-        t: Hd
-      } = (0, Xd.G)(), yd = Nd[Od];
-      if (!md && !Wd) return null;
+        t: Eb
+      } = (0, Vb.C)(), Fb = tb[wb];
+      if (!Mb && !eb) return null;
 
-      function bd() {
-        var dd;
-        if (!Fd || !td) return;
-        Qd.NotificationProvider.showInputPopup({
+      function Bb() {
+        var bb;
+        if (!Hb || !Ob) return;
+        Ib.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: yd.name
+              platform: Fb.name
             }
           },
-          prefixText: Rd.x[Od],
+          prefixText: pb.B[wb],
           placeholderText: "playBloxd",
-          initialValue: null !== (dd = null === md || void 0 === md ? void 0 : md.handle) && void 0 !== dd ? dd : "",
+          initialValue: null !== (bb = null === Mb || void 0 === Mb ? void 0 : Mb.handle) && void 0 !== bb ? bb : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: md ? "general:remove" : void 0
-        }).getResult().then((async dd => {
-          if ("notificationTornDown" !== dd && null !== dd) try {
-            "submit" === dd.type ? await vd.e.setSocialLink(Fd, Od, dd.value) : await vd.e.clearSocialLink(Fd, Od), td()
-          } catch (md) {
-            console.error("Failed to update social link", md), Qd.NotificationProvider.showAlertPopup({
-              title: md.errorMessageForUser,
+          secondaryButtonText: Mb ? "general:remove" : void 0
+        }).getResult().then((async bb => {
+          if ("notificationTornDown" !== bb && null !== bb) try {
+            "submit" === bb.type ? await Lb.e.setSocialLink(Hb, wb, bb.value) : await Lb.e.clearSocialLink(Hb, wb), Ob()
+          } catch (Mb) {
+            console.error("Failed to update social link", Mb), Ib.NotificationProvider.showAlertPopup({
+              title: Mb.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (md) {
-        const dd = `@${md.handle}`;
-        return (0, od.jsxs)("a", {
+      if (Mb) {
+        const bb = `@${Mb.handle}`;
+        return (0, Ub.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: yd.color
+            background: Fb.color
           },
-          href: md.profileUrl,
+          href: Mb.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, od.jsxs)("div", {
+          children: [(0, Ub.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, od.jsx)(qd, {
-              platform: Od
-            }), (0, od.jsx)("span", {
+            children: [(0, Ub.jsx)(Cb, {
+              platform: wb
+            }), (0, Ub.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, od.jsx)("span", {
+              children: (0, Ub.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: dd
+                children: bb
               })
             })]
-          }), Wd && (0, od.jsx)("button", {
+          }), eb && (0, Ub.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, hd.X)({
+            ...(0, lb.bb)({
               stopPropagation: !0
             }),
-            onClick: dd => {
-              dd.stopPropagation(), dd.preventDefault(), bd()
+            onClick: bb => {
+              bb.stopPropagation(), bb.preventDefault(), Bb()
             },
-            children: (0, od.jsx)(Kd.c, {
+            children: (0, Ub.jsx)(gb.b, {
               name: "pen-to-square"
             })
-          }), !Wd && (0, od.jsx)("span", {
+          }), !eb && (0, Ub.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, od.jsx)(Kd.c, {
+            children: (0, Ub.jsx)(gb.b, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, od.jsxs)("button", {
+      return (0, Ub.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: yd.color
+          background: Fb.color
         },
-        ...(0, hd.X)(),
+        ...(0, lb.bb)(),
         onClick: () => {
-          bd()
+          Bb()
         },
-        children: [(0, od.jsx)(qd, {
-          platform: Od
-        }), (0, od.jsxs)("span", {
+        children: [(0, Ub.jsx)(Cb, {
+          platform: wb
+        }), (0, Ub.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, od.jsx)("span", {
+          children: [(0, Ub.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: yd.name
-          }), (0, od.jsx)("span", {
+            children: Fb.name
+          }), (0, Ub.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: Hd("homePage:profileSocialLinkAdd")
+            children: Eb("homePage:profileSocialLinkAdd")
           })]
-        }), (0, od.jsx)("span", {
+        }), (0, Ub.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, od.jsx)(Kd.c, {
+          children: (0, Ub.jsx)(gb.b, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function yd(dd) {
+    function Fb(bb) {
       let {
-        socialLinks: Od,
-        editable: md = !1,
-        userContext: Wd,
-        onLinksUpdated: Fd
-      } = dd;
-      if (!md && 0 === Od.length) return null;
-      const Xd = new Map(Od.map((dd => [dd.platform, dd]))),
-        Kd = md ? Rd.u : Od.map((dd => dd.platform));
-      return (0, od.jsx)("div", {
+        socialLinks: wb,
+        editable: Mb = !1,
+        userContext: eb,
+        onLinksUpdated: Hb
+      } = bb;
+      if (!Mb && 0 === wb.length) return null;
+      const Vb = new Map(wb.map((bb => [bb.platform, bb]))),
+        gb = Mb ? pb.y : wb.map((bb => bb.platform));
+      return (0, Ub.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, od.jsx)("div", {
+        children: (0, Ub.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: Kd.map((dd => (0, od.jsx)(Hd, {
-            platform: dd,
-            link: Xd.get(dd),
-            editable: md,
-            userContext: Wd,
-            onLinksUpdated: Fd
-          }, dd)))
+          children: gb.map((bb => (0, Ub.jsx)(Eb, {
+            platform: bb,
+            link: Vb.get(bb),
+            editable: Mb,
+            userContext: eb,
+            onLinksUpdated: Hb
+          }, bb)))
         })
       })
     }
   },
-  5666: dd => {
-    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+  5783: bb => {
+    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const dd in modules) Object.freeze(modules[dd]);
+for (const bb in modules) Object.freeze(modules[bb]);
