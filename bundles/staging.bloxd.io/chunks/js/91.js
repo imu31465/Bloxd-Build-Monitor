@@ -1,509 +1,509 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  5498: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => VS,
-      h: () => xQ,
-      k: () => dS,
-      o: () => SQ,
-      s: () => bS,
-      w: () => sS,
-      z: () => MS,
-      B: () => cS,
-      E: () => lS,
-      F: () => pQ,
-      H: () => EQ,
-      L: () => FS,
-      N: () => CS
+  5426: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => jO,
+      e: () => qm,
+      g: () => MO,
+      i: () => Wm,
+      m: () => ZO,
+      n: () => dm,
+      o: () => LO,
+      s: () => IO,
+      t: () => sO,
+      v: () => Nm,
+      z: () => om,
+      D: () => lO,
+      F: () => nO
     });
-    var Zr = Qr(2396);
-    const Wr = Function.prototype.toString,
-      ar = RegExp.prototype.exec,
-      jr = Reflect.apply,
-      Ir = Function.prototype.call,
-      fr = Function.prototype.apply,
-      Er = Function.prototype.bind,
-      pr = Object.defineProperty,
-      xr = Uint8Array;
-    let mr, Nr;
+    var Wd = md(2421);
+    const Fd = Function.prototype.toString,
+      Rd = RegExp.prototype.exec,
+      Xd = Reflect.apply,
+      Kd = Function.prototype.call,
+      hd = Function.prototype.apply,
+      vd = Function.prototype.bind,
+      Qd = Object.defineProperty,
+      td = Uint8Array;
+    let od, Nd;
     try {
-      mr = globalThis.crypto, Nr = void 0 === mr || null === mr ? void 0 : mr.getRandomValues
+      od = globalThis.crypto, Nd = void 0 === od || null === od ? void 0 : od.getRandomValues
     } catch {}
-    const Ur = "bloxdBindApply";
-    let tr;
+    const qd = "bloxdBindApply";
+    let Hd;
     try {
-      const rr = Ir;
-      pr(rr, Ur, {
+      const dd = Kd;
+      Qd(dd, qd, {
         __proto__: null,
-        value: Er,
+        value: vd,
         configurable: !0
       });
       try {
-        tr = rr[Ur](fr)
+        Hd = dd[qd](hd)
       } finally {
-        delete rr[Ur]
+        delete dd[qd]
       }
     } catch {}
-    const hr = 16,
-      zr = 256,
-      Yr = 0,
-      nr = 1,
-      er = 2,
-      Kr = 3;
-    let yr, Br = Yr,
-      Tr = jr,
-      vr = 0;
+    const yd = 16,
+      bd = 256,
+      Td = 0,
+      pd = 1,
+      Yd = 2,
+      gd = 3;
+    let wd, Ed = Td,
+      Jd = Xd,
+      Ud = 0;
 
-    function Or(rr, Sr) {
-      return rr === `function ${Sr}() { [native code] }` || rr === `function ${Sr}() {\n    [native code]\n}`
+    function xd(dd, Od) {
+      return dd === `function ${Od}() { [native code] }` || dd === `function ${Od}() {\n    [native code]\n}`
     }
-    const Lr = 0,
-      lr = 1,
-      Xr = 2;
-    let Pr = Lr;
+    const Bd = 0,
+      Sd = 1,
+      sd = 2;
+    let ud = Bd;
 
-    function Hr(rr, Sr, Qr) {
-      if (Pr === Xr && Br === nr && ! function() {
-          const rr = yr;
-          return vr >= zr && (Tr(Nr, mr, [rr]), vr = 0), rr[vr++] < 256 / hr
-        }()) return function(rr, Sr, Qr) {
-        return Tr(rr, Sr, Qr ?? 0)
+    function Vd(dd, Od, md) {
+      if (ud === sd && Ed === pd && ! function() {
+          const dd = wd;
+          return Ud >= bd && (Jd(Nd, od, [dd]), Ud = 0), dd[Ud++] < 256 / yd
+        }()) return function(dd, Od, md) {
+        return Jd(dd, Od, md ?? 0)
       }(...arguments);
-      if (Pr === Lr || Br === er) return jr(rr, Sr, Qr);
-      let Zr;
-      Pr = Lr;
+      if (ud === Bd || Ed === Yd) return Xd(dd, Od, md);
+      let Wd;
+      ud = Bd;
       try {
-        Br === Yr && (Br = Kr, Br = function() {
-          const rr = jr(Wr, jr, []);
-          if (Or(rr, "apply")) return er;
-          if (null === jr(ar, /\(\.\.\.arguments\)/, [rr]) && null === jr(ar, /^function\s*\(\.\.\.[\w$]+\)/, [rr])) return er;
-          if ("function" !== typeof tr || "function" !== typeof Ir || "function" !== typeof fr || "function" !== typeof Er || "function" !== typeof pr || "function" !== typeof Nr || "function" !== typeof xr || !Or(jr(Wr, Ir, []), "call") || !Or(jr(Wr, fr, []), "apply") || !Or(jr(Wr, Er, []), "bind") || !Or(jr(Wr, pr, []), "defineProperty") || !Or(jr(Wr, Nr, []), "getRandomValues") || !Or(jr(Wr, xr, []), "Uint8Array")) return er;
-          const Sr = tr,
-            Qr = {},
-            Zr = function(rr) {
-              return this === Qr && rr === Qr
+        Ed === Td && (Ed = gd, Ed = function() {
+          const dd = Xd(Fd, Xd, []);
+          if (xd(dd, "apply")) return Yd;
+          if (null === Xd(Rd, /\(\.\.\.arguments\)/, [dd]) && null === Xd(Rd, /^function\s*\(\.\.\.[\w$]+\)/, [dd])) return Yd;
+          if ("function" !== typeof Hd || "function" !== typeof Kd || "function" !== typeof hd || "function" !== typeof vd || "function" !== typeof Qd || "function" !== typeof Nd || "function" !== typeof td || !xd(Xd(Fd, Kd, []), "call") || !xd(Xd(Fd, hd, []), "apply") || !xd(Xd(Fd, vd, []), "bind") || !xd(Xd(Fd, Qd, []), "defineProperty") || !xd(Xd(Fd, Nd, []), "getRandomValues") || !xd(Xd(Fd, td, []), "Uint8Array")) return Yd;
+          const Od = Hd,
+            md = {},
+            Wd = function(dd) {
+              return this === md && dd === md
             };
           try {
-            if (!0 !== Sr(Zr, Qr, [Qr])) return er;
-            const rr = new xr(zr);
-            Sr(Nr, mr, [rr]), yr = rr
+            if (!0 !== Od(Wd, md, [md])) return Yd;
+            const dd = new td(bd);
+            Od(Nd, od, [dd]), wd = dd
           } catch {
-            return er
+            return Yd
           }
-          return Tr = Sr, nr
-        }()), Zr = jr(rr, Sr, Qr)
-      } catch (Ur) {
-        throw Br = er, Ur
+          return Jd = Od, pd
+        }()), Wd = Xd(dd, Od, md)
+      } catch (qd) {
+        throw Ed = Yd, qd
       }
-      return Pr = Xr, Zr
+      return ud = sd, Wd
     }
-    let qr = jr;
+    let Ad = Xd;
 
-    function Rr() {
-      return (qr === jr ? 0 : 3) + Pr
-    }
-
-    function gr() {
-      const rr = Rr();
-      return qr = jr, rr
+    function rd() {
+      return (Ad === Xd ? 0 : 3) + ud
     }
 
-    function Cr(rr) {
-      qr = rr >= 3 ? Hr : jr, Pr = rr % 3
-    }
-    const Mr = Function.prototype.toString,
-      Gr = Object.getOwnPropertyDescriptor,
-      kr = Object.prototype.hasOwnProperty,
-      Ar = RegExp.prototype.exec,
-      Vr = TextEncoder.prototype.encodeInto,
-      ir = String.prototype.startsWith,
-      wr = Number.prototype.toString,
-      cr = WeakMap.prototype.get,
-      Fr = WeakMap.prototype.set,
-      or = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      br = new TextEncoder,
-      Jr = new Uint8Array(1024),
-      Dr = 9999999,
-      dr = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      sr = new WeakMap;
-
-    function ur(rr) {
-      if ("function" !== typeof rr) return "#a0.0";
-      const Sr = qr(cr, sr, [rr]);
-      if (void 0 !== Sr) return Sr;
-      const Qr = qr(Mr, rr, []),
-        Zr = Qr.length > Dr ? Dr : Qr.length,
-        Wr = `#${function(rr,Sr){const Qr=qr(Ar,or,[Sr]);if(null===Qr)return"s";const Zr=Qr[1];if("ProxyObject"===Zr)return"p";if(""!==Zr)return qr(ir,Zr,["bound "])?"b":"n";try{const Sr=Gr(rr,"name"),Qr=void 0!==Sr&&qr(kr,Sr,["value"])?Sr.value:void 0;return"string"===typeof Qr&&qr(ir,Qr,["bound "])?"b":"p"}catch{return"p"}}(rr,Qr)}${Zr}.${function(rr){const{written:Sr}=qr(Vr,br,[rr,Jr]);let Qr=2166136261;for(let Zr=0;Zr<Sr;Zr++)Qr=(Qr^Jr[Zr])>>>0,Qr=Qr+(Qr<<1)+(Qr<<4)+(Qr<<7)+(Qr<<8)+(Qr<<24)>>>0;return qr(wr,Qr,[36])}(Qr)}`;
-      return qr(Fr, sr, [rr, Wr]), Wr
+    function Gd() {
+      const dd = rd();
+      return Ad = Xd, dd
     }
 
-    function rS(rr) {
-      const Sr = qr(Ar, dr, [rr]);
-      return null === Sr ? rr : Sr[1]
+    function nd(dd) {
+      Ad = dd >= 3 ? Vd : Xd, ud = dd % 3
     }
-    var SS = Qr(2410);
-    const QS = Function.prototype.toString,
-      ZS = Object.getOwnPropertyDescriptor,
-      WS = RegExp.prototype.exec,
-      aS = Object.prototype.hasOwnProperty,
-      jS = Set.prototype.has,
-      IS = WeakMap.prototype.get,
-      fS = WeakMap.prototype.set,
-      ES = Reflect.get,
-      pS = Object.getPrototypeOf,
-      xS = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const Ld = Function.prototype.toString,
+      Pd = Object.getOwnPropertyDescriptor,
+      zd = Object.prototype.hasOwnProperty,
+      cd = RegExp.prototype.exec,
+      jd = TextEncoder.prototype.encodeInto,
+      Dd = String.prototype.startsWith,
+      ed = Number.prototype.toString,
+      Id = WeakMap.prototype.get,
+      ld = WeakMap.prototype.set,
+      Cd = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      Zd = new TextEncoder,
+      kd = new Uint8Array(1024),
+      fd = 9999999,
+      Md = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      dO = new WeakMap;
 
-    function mS(rr, Sr, Qr) {
+    function OO(dd) {
+      if ("function" !== typeof dd) return "#a0.0";
+      const Od = Ad(Id, dO, [dd]);
+      if (void 0 !== Od) return Od;
+      const md = Ad(Ld, dd, []),
+        Wd = md.length > fd ? fd : md.length,
+        Fd = `#${function(dd,Od){const md=Ad(cd,Cd,[Od]);if(null===md)return"s";const Wd=md[1];if("ProxyObject"===Wd)return"p";if(""!==Wd)return Ad(Dd,Wd,["bound "])?"b":"n";try{const Od=Pd(dd,"name"),md=void 0!==Od&&Ad(zd,Od,["value"])?Od.value:void 0;return"string"===typeof md&&Ad(Dd,md,["bound "])?"b":"p"}catch{return"p"}}(dd,md)}${Wd}.${function(dd){const{written:Od}=Ad(jd,Zd,[dd,kd]);let md=2166136261;for(let Wd=0;Wd<Od;Wd++)md=(md^kd[Wd])>>>0,md=md+(md<<1)+(md<<4)+(md<<7)+(md<<8)+(md<<24)>>>0;return Ad(ed,md,[36])}(md)}`;
+      return Ad(ld, dO, [dd, Fd]), Fd
+    }
+
+    function mO(dd) {
+      const Od = Ad(cd, Md, [dd]);
+      return null === Od ? dd : Od[1]
+    }
+    var WO = md(2433);
+    const FO = Function.prototype.toString,
+      RO = Object.getOwnPropertyDescriptor,
+      XO = RegExp.prototype.exec,
+      KO = Object.prototype.hasOwnProperty,
+      hO = Set.prototype.has,
+      vO = WeakMap.prototype.get,
+      QO = WeakMap.prototype.set,
+      tO = Reflect.get,
+      oO = Object.getPrototypeOf,
+      NO = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function qO(dd, Od, md) {
       return {
-        code: rr,
-        holder: Sr,
-        key: Qr,
+        code: dd,
+        holder: Od,
+        key: md,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${Qr}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${md}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function NS() {
-      return xS
+    function HO() {
+      return NO
     }
-    const US = xS?.Instance.prototype,
-      tS = xS?.Memory.prototype;
+    const yO = NO?.Instance.prototype,
+      bO = NO?.Memory.prototype;
 
-    function hS() {
-      return tS
+    function TO() {
+      return bO
     }
-    let zS, YS;
+    let pO, YO;
     try {
-      const rr = globalThis.crypto,
-        Sr = rr?.subtle;
-      zS = rr ? pS(rr) : void 0, YS = Sr ? pS(Sr) : void 0
+      const dd = globalThis.crypto,
+        Od = dd?.subtle;
+      pO = dd ? oO(dd) : void 0, YO = Od ? oO(Od) : void 0
     } catch {}
 
-    function nS(rr, Sr) {
-      for (let Qr = rr; void 0 !== Qr && null !== Qr; Qr = pS(Qr)) {
-        const rr = ZS(Qr, Sr);
-        if (rr) return rr
+    function gO(dd, Od) {
+      for (let md = dd; void 0 !== md && null !== md; md = oO(md)) {
+        const dd = RO(md, Od);
+        if (dd) return dd
       }
     }
-    const eS = [mS("in", NS, "instantiate", {
+    const wO = [qO("in", HO, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), mS("is", NS, "instantiateStreaming", {
+    }), qO("is", HO, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), mS("co", NS, "compile", {
+    }), qO("co", HO, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), mS("cs", NS, "compileStreaming", {
+    }), qO("cs", HO, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), mS("mo", NS, "Module", {
+    }), qO("mo", HO, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), mS("it", NS, "Instance", {
+    }), qO("it", HO, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), mS("me", NS, "Memory", {
+    }), qO("me", HO, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), mS("ex", (function() {
-      return US
+    }), qO("ex", (function() {
+      return yO
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), mS("bu", hS, "buffer", {
+    }), qO("bu", TO, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), mS("gr", hS, "grow", {
+    }), qO("gr", TO, "grow", {
       tier: "punished"
-    }), mS("rc", (function() {
+    }), qO("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), mS("cr", (function() {
+    }), "clone"), qO("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), mS("su", (function() {
-      return zS
+    }), qO("su", (function() {
+      return pO
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), mS("dg", (function() {
-      return YS
+    }), qO("dg", (function() {
+      return YO
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function KS(rr) {
-      let Sr;
+    function aO(dd) {
+      let Od;
       try {
-        const Qr = ES(globalThis, rr);
-        Sr = "function" === typeof Qr ? Qr.prototype : void 0
+        const md = tO(globalThis, dd);
+        Od = "function" === typeof md ? md.prototype : void 0
       } catch {}
-      return () => Sr
+      return () => Od
     }
 
-    function yS(rr, Sr, Qr) {
-      return Qr.map((Qr => mS(rr, Sr, Qr)))
+    function EO(dd, Od, md) {
+      return md.map((md => qO(dd, Od, md)))
     }
-    const BS = mS("rx", KS("HTMLCanvasElement"), "getContext"),
-      TS = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      vS = {
-        webgpu: [...yS("gd", KS("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...yS("gq", KS("GPUQueue"), ["submit", "writeBuffer"]), ...yS("ge", KS("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...yS("gp", KS("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), BS],
-        webgl: [...yS("g2", KS("WebGL2RenderingContext"), [...TS, "drawArraysInstanced", "drawElementsInstanced"]), BS],
-        webgl1: [...yS("g1", KS("WebGLRenderingContext"), TS), BS]
+    const JO = qO("rx", aO("HTMLCanvasElement"), "getContext"),
+      UO = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      xO = {
+        webgpu: [...EO("gd", aO("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...EO("gq", aO("GPUQueue"), ["submit", "writeBuffer"]), ...EO("ge", aO("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...EO("gp", aO("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), JO],
+        webgl: [...EO("g2", aO("WebGL2RenderingContext"), [...UO, "drawArraysInstanced", "drawElementsInstanced"]), JO],
+        webgl1: [...EO("g1", aO("WebGLRenderingContext"), UO), JO]
       };
-    let OS = [];
-    const LS = new WeakMap;
+    let BO = [];
+    const SO = new WeakMap;
 
-    function lS(rr, Sr) {
-      const Qr = gr();
+    function sO(dd, Od) {
+      const md = Gd();
       try {
-        qr(fS, LS, [rr, Sr])
+        Ad(QO, SO, [dd, Od])
       } finally {
-        Cr(Qr)
+        nd(md)
       }
     }
 
-    function XS(rr) {
+    function uO(dd) {
       try {
-        const Sr = IQ(rr),
-          Qr = qr(IS, LS, [Sr]);
-        return rQ(Qr, rr) ? PS(rr, !0) : `${PS(rr,!1)}${ur(Qr??Sr)}`
+        const Od = Qm(dd),
+          md = Ad(vO, SO, [Od]);
+        return mm(md, dd) ? VO(dd, !0) : `${VO(dd,!1)}${OO(md??Od)}`
       } catch {
-        return `${PS(rr,!1)}${ur(void 0)}`
+        return `${VO(dd,!1)}${OO(void 0)}`
       }
     }
 
-    function PS(rr, Sr) {
+    function VO(dd, Od) {
       let {
-        code: Qr,
-        key: Zr
-      } = rr;
-      return `wh:${Qr}${Sr?"-dbg":""}:${Zr}`
+        code: md,
+        key: Wd
+      } = dd;
+      return `wh:${md}${Od?"-dbg":""}:${Wd}`
     }
 
-    function HS(rr) {
-      return Object.values(vS).flatMap((Sr => Sr.map((Sr => PS(Sr, rr)))))
+    function iO(dd) {
+      return Object.values(xO).flatMap((Od => Od.map((Od => VO(Od, dd)))))
     }
-    const qS = new Set(HS(!0)),
-      RS = new Set([...HS(!1), ...qS]),
-      gS = PS(BS, !1);
+    const AO = new Set(iO(!0)),
+      rO = new Set([...iO(!1), ...AO]),
+      GO = VO(JO, !1);
 
-    function CS(rr) {
-      OS = vS[rr]
+    function nO(dd) {
+      BO = xO[dd]
     }
 
-    function MS(rr) {
-      const Sr = gr();
+    function LO(dd) {
+      const Od = Gd();
       try {
-        return GS(rr) || GS(rS(rr))
+        return PO(dd) || PO(mO(dd))
       } finally {
-        Cr(Sr)
+        nd(Od)
       }
     }
 
-    function GS(rr) {
-      return qr(jS, RS, [rr])
+    function PO(dd) {
+      return Ad(hO, rO, [dd])
     }
 
-    function kS(rr) {
-      return new Set(eS.filter((Sr => Sr.tier === rr)).map((rr => `wh:${rr.code}`)))
+    function zO(dd) {
+      return new Set(wO.filter((Od => Od.tier === dd)).map((dd => `wh:${dd.code}`)))
     }
-    const AS = kS("punished"),
-      VS = !1,
-      iS = new Set(SS.b),
-      wS = kS("weighted");
+    const cO = zO("punished"),
+      jO = !1,
+      DO = new Set(WO.e),
+      eO = zO("weighted");
 
-    function cS(rr) {
-      const Sr = gr();
+    function IO(dd) {
+      const Od = Gd();
       try {
-        return oS(rS(rr))
+        return CO(mO(dd))
       } finally {
-        Cr(Sr)
+        nd(Od)
       }
     }
 
-    function FS(rr) {
-      const Sr = gr();
+    function lO(dd) {
+      const Od = Gd();
       try {
-        return rS(rr)
+        return mO(dd)
       } finally {
-        Cr(Sr)
+        nd(Od)
       }
     }
 
-    function oS(rr) {
-      return qr(jS, wS, [rr])
+    function CO(dd) {
+      return Ad(hO, eO, [dd])
     }
 
-    function bS(rr) {
-      const Sr = gr();
+    function ZO(dd) {
+      const Od = Gd();
       try {
-        return JS(rr)
+        return kO(dd)
       } finally {
-        Cr(Sr)
+        nd(Od)
       }
     }
 
-    function JS(rr) {
-      return qr(jS, iS, [rr])
+    function kO(dd) {
+      return Ad(hO, DO, [dd])
     }
 
-    function DS(rr) {
-      return "wb" === rr || qr(jS, AS, [rr])
+    function fO(dd) {
+      return "wb" === dd || Ad(hO, cO, [dd])
     }
 
-    function dS(rr) {
-      const Sr = gr();
+    function MO(dd) {
+      const Od = Gd();
       try {
-        return DS(rr) || JS(rr)
+        return fO(dd) || kO(dd)
       } finally {
-        Cr(Sr)
+        nd(Od)
       }
     }
 
-    function sS(rr) {
-      const Sr = gr();
+    function dm(dd) {
+      const Od = Gd();
       try {
-        return "wb" === rr || VS && DS(rr)
+        return "wb" === dd || jO && fO(dd)
       } finally {
-        Cr(Sr)
+        nd(Od)
       }
     }
 
-    function uS(rr, Sr) {
+    function Om(dd, Od) {
       let {
-        isGetter: Qr
-      } = Sr;
-      const Zr = ZS(rr, Qr ? "get" : "value");
-      return void 0 === Zr ? void 0 : Zr.value
+        isGetter: md
+      } = Od;
+      const Wd = RO(dd, md ? "get" : "value");
+      return void 0 === Wd ? void 0 : Wd.value
     }
 
-    function rQ(rr, Sr) {
+    function mm(dd, Od) {
       let {
-        isConstructor: Qr,
-        native: Zr
-      } = Sr;
-      return "function" === typeof rr && (!(!Qr && qr(aS, rr, ["prototype"])) && null !== qr(WS, Zr, [qr(QS, rr, [])]))
+        isConstructor: md,
+        native: Wd
+      } = Od;
+      return "function" === typeof dd && (!(!md && Ad(KO, dd, ["prototype"])) && null !== Ad(XO, Wd, [Ad(FO, dd, [])]))
     }
 
-    function SQ(rr, Sr) {
-      return rQ(rr, mS("", (() => {}), Sr, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function Wm(dd, Od) {
+      return mm(dd, qO("", (() => {}), Od, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let QQ = null,
-      ZQ = !1;
+    let Fm = null,
+      Rm = !1;
 
-    function WQ() {
+    function Xm() {
       try {
-        return globalThis.WebAssembly === xS
+        return globalThis.WebAssembly === NO
       } catch {
         return !1
       }
     }
 
-    function aQ(rr) {
+    function Km(dd) {
       try {
-        return function(rr) {
+        return function(dd) {
           const {
-            holder: Sr,
-            key: Qr,
-            onNamespace: Zr,
-            inSecureContext: Wr
-          } = rr, ar = Sr(), jr = nS(ar, Qr);
-          if (!jr) return !(Wr && !0 === globalThis.isSecureContext);
-          const Ir = uS(jr, rr);
-          if (!rQ(Ir, rr)) return !1;
-          if (Zr) {
-            const Sr = globalThis.WebAssembly;
-            if (Sr !== ar && null !== Sr && ("object" === typeof Sr || "function" === typeof Sr)) {
-              const Zr = ES(Sr, Qr);
-              return Zr === Ir || void 0 === Zr || rQ(Zr, rr)
+            holder: Od,
+            key: md,
+            onNamespace: Wd,
+            inSecureContext: Fd
+          } = dd, Rd = Od(), Xd = gO(Rd, md);
+          if (!Xd) return !(Fd && !0 === globalThis.isSecureContext);
+          const Kd = Om(Xd, dd);
+          if (!mm(Kd, dd)) return !1;
+          if (Wd) {
+            const Od = globalThis.WebAssembly;
+            if (Od !== Rd && null !== Od && ("object" === typeof Od || "function" === typeof Od)) {
+              const Wd = tO(Od, md);
+              return Wd === Kd || void 0 === Wd || mm(Wd, dd)
             }
           }
           return !0
-        }(rr)
+        }(dd)
       } catch {
         return !1
       }
     }
 
-    function jQ(rr) {
-      const Sr = `wh:${rr.code}`;
-      if ("punished" === rr.tier) return Sr;
+    function hm(dd) {
+      const Od = `wh:${dd.code}`;
+      if ("punished" === dd.tier) return Od;
       try {
-        return `${Sr}${ur(IQ(rr))}`
+        return `${Od}${OO(Qm(dd))}`
       } catch {
-        return `${Sr}${ur(void 0)}`
+        return `${Od}${OO(void 0)}`
       }
     }
 
-    function IQ(rr) {
-      const Sr = nS(rr.holder(), rr.key),
-        Qr = void 0 === Sr ? void 0 : uS(Sr, rr);
-      return rr.onNamespace && !WQ() && rQ(Qr, rr) ? ES(globalThis.WebAssembly, rr.key) : Qr
+    function Qm(dd) {
+      const Od = gO(dd.holder(), dd.key),
+        md = void 0 === Od ? void 0 : Om(Od, dd);
+      return dd.onNamespace && !Xm() && mm(md, dd) ? tO(globalThis.WebAssembly, dd.key) : md
     }
 
-    function fQ(rr) {
-      if (DS(rr)) return 5;
-      const Sr = rS(rr);
-      return oS(Sr) ? 4 : JS(rr) ? 3 : GS(Sr) ? function(rr) {
-        return qr(jS, qS, [rr])
-      }(Sr) ? -1 : Sr === gS ? 0 : 1 : 2
+    function tm(dd) {
+      if (fO(dd)) return 5;
+      const Od = mO(dd);
+      return CO(Od) ? 4 : kO(dd) ? 3 : PO(Od) ? function(dd) {
+        return Ad(hO, AO, [dd])
+      }(Od) ? -1 : Od === GO ? 0 : 1 : 2
     }
 
-    function EQ() {
-      const rr = function() {
-        const rr = Rr();
-        return Br === Yr || Br === nr ? (qr = Hr, Pr = lr) : qr = jr, rr
+    function om() {
+      const dd = function() {
+        const dd = rd();
+        return Ed === Td || Ed === pd ? (Ad = Vd, ud = Sd) : Ad = Xd, dd
       }();
       try {
-        if (null === QQ || !DS(QQ)) {
-          const rr = function() {
-            if (void 0 === xS) return null;
-            let rr = WQ() ? null : "wh:wa";
-            const Sr = Sr => {
-              null !== Sr && (null === rr || fQ(Sr) > fQ(rr)) && (rr = Sr)
+        if (null === Fm || !fO(Fm)) {
+          const dd = function() {
+            if (void 0 === NO) return null;
+            let dd = Xm() ? null : "wh:wa";
+            const Od = Od => {
+              null !== Od && (null === dd || tm(Od) > tm(dd)) && (dd = Od)
             };
-            for (let Qr = 0; Qr < eS.length; Qr++) {
-              const rr = eS[Qr];
-              void 0 === rr || aQ(rr) || Sr(jQ(rr))
+            for (let md = 0; md < wO.length; md++) {
+              const dd = wO[md];
+              void 0 === dd || Km(dd) || Od(hm(dd))
             }
-            Sr((0, SS.j)());
-            for (let Qr = 0; Qr < OS.length; Qr++) {
-              const rr = OS[Qr];
-              void 0 === rr || aQ(rr) || Sr(XS(rr))
+            Od((0, WO.r)());
+            for (let md = 0; md < BO.length; md++) {
+              const dd = BO[md];
+              void 0 === dd || Km(dd) || Od(uO(dd))
             }
-            return rr
+            return dd
           }();
-          (null === QQ || null !== rr && fQ(rr) > fQ(QQ)) && (QQ = rr)
+          (null === Fm || null !== dd && tm(dd) > tm(Fm)) && (Fm = dd)
         }
       } finally {
-        Cr(rr)
+        nd(dd)
       }
     }
 
-    function pQ() {
-      ZQ = !0
+    function Nm() {
+      Rm = !0
     }
 
-    function xQ() {
-      if (ZQ) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && EQ(), null !== QQ) return QQ;
-      if (void 0 === xS) return "wn:unsupported";
-      const rr = (0, Zr.l)();
-      return null === rr ? null : `wn:${rr}`
+    function qm() {
+      if (Rm) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && om(), null !== Fm) return Fm;
+      if (void 0 === NO) return "wn:unsupported";
+      const dd = (0, Wd.m)();
+      return null === dd ? null : `wn:${dd}`
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

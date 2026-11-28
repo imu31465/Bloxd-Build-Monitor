@@ -1,378 +1,378 @@
 export const id = 104;
 export const ids = [104];
 export const modules = {
-  42391: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      startWasmPadGameplay: () => kr
+  42485: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      startWasmPadGameplay: () => zd
     });
-    Qr(42398);
-    var Zr = Qr(42404),
-      Wr = Qr(42424),
-      ar = Qr(2114),
-      jr = Qr(42438),
-      Ir = Qr(5617),
-      fr = Qr(5602),
-      Er = Qr(42445),
-      pr = Qr(42451),
-      xr = Qr(5623),
-      mr = Qr(42526),
-      Nr = Qr(3378),
-      Ur = Qr(9971),
-      tr = Qr(42412),
-      hr = Qr(9946),
-      zr = Qr(40670);
-    const Yr = rr => {
-        const Sr = xr.d.indexOf(rr);
-        if (Sr < 0) throw new Error(`No core action "${rr}"`);
-        return Sr
+    md(42494);
+    var Wd = md(42501),
+      Fd = md(42526),
+      Rd = md(2116),
+      Xd = md(42540),
+      Kd = md(5571),
+      hd = md(5558),
+      vd = md(42544),
+      Qd = md(42552),
+      td = md(5588),
+      od = md(42628),
+      Nd = md(3378),
+      qd = md(9989),
+      Hd = md(42510),
+      yd = md(9967),
+      bd = md(40676);
+    const Td = dd => {
+        const Od = td.e.indexOf(dd);
+        if (Od < 0) throw new Error(`No core action "${dd}"`);
+        return Od
       },
-      nr = Yr("primary-fire"),
-      er = Yr("alt-fire"),
-      Kr = Yr("mid-fire"),
-      yr = Yr("jump"),
-      Br = Yr("ReloadGun"),
-      Tr = Yr("SwapCameraZoom"),
-      vr = Yr("Zoom"),
-      Or = Yr("TouchAction1"),
-      Lr = {
-        SpecialAction1: Yr("SpecialAction1"),
-        SpecialAction2: Yr("SpecialAction2")
+      pd = Td("primary-fire"),
+      Yd = Td("alt-fire"),
+      gd = Td("mid-fire"),
+      wd = Td("jump"),
+      Ed = Td("ReloadGun"),
+      Jd = Td("SwapCameraZoom"),
+      Ud = Td("Zoom"),
+      xd = Td("TouchAction1"),
+      Bd = {
+        SpecialAction1: Td("SpecialAction1"),
+        SpecialAction2: Td("SpecialAction2")
       },
-      lr = (rr, Sr) => {
-        (0, Nr.t)(Ir.M.PadAction, rr, 0, 0, (0, Nr.s)(Sr, performance.now()))
+      Sd = (dd, Od) => {
+        (0, Nd.m)(Kd.L.PadAction, dd, 0, 0, (0, Nd.k)(Od, performance.now()))
       },
-      Xr = rr => {
-        lr(rr, jr.dd.Down)
+      sd = dd => {
+        Sd(dd, Xd.xd.Down)
       },
-      Pr = rr => {
-        lr(rr, 0)
+      ud = dd => {
+        Sd(dd, 0)
       },
-      Hr = rr => {
-        Xr(rr), Pr(rr)
+      Vd = dd => {
+        sd(dd), ud(dd)
       },
-      qr = () => {
-        const rr = (0, pr.f)();
-        return null !== rr && void 0 !== rr && rr.isCoreRunning ? rr : null
+      Ad = () => {
+        const dd = (0, Qd.l)();
+        return null !== dd && void 0 !== dd && dd.isCoreRunning ? dd : null
       },
-      Rr = rr => jr.p.playerFlags(rr.api.apiView, 0),
-      gr = rr => null !== rr && jr.p.targetBlockId(rr.api.apiView, 0) !== jr.Oc,
-      Cr = () => {
-        const rr = (0, Ur.b)(),
-          Sr = new tr.c;
-        let Qr = !1;
-        const Zr = (rr, Sr) => {
-            (0, Nr.t)(Ir.M.PadLook, jr.nd.Rate, rr, Sr, 0)
+      rd = dd => Xd.q.playerFlags(dd.api.apiView, 0),
+      Gd = dd => null !== dd && Xd.q.targetBlockId(dd.api.apiView, 0) !== Xd.dd,
+      nd = () => {
+        const dd = (0, qd.c)(),
+          Od = new Hd.c;
+        let md = !1;
+        const Wd = (dd, Od) => {
+            (0, Nd.m)(Kd.L.PadLook, Xd.Fd.Rate, dd, Od, 0)
           },
-          Wr = () => {
-            Qr = !1, Sr.reset(), Zr(0, 0)
+          Fd = () => {
+            md = !1, Od.reset(), Wd(0, 0)
           };
         return {
-          update: (Wr, ar, fr) => {
-            Qr || (rr.discardPending(), Qr = !0);
-            const Er = (0, tr.q)(Sr, Wr, ar, fr, performance.now());
-            Zr(Er.yawRadPerSec, Er.pitchRadPerSec);
-            const pr = rr.drainLookDelta();
-            0 === pr.xR && 0 === pr.yR || (0, Nr.t)(Ir.M.PadLook, jr.nd.Gyro, pr.xR, pr.yR, 0)
+          update: (Fd, Rd, hd) => {
+            md || (dd.discardPending(), md = !0);
+            const vd = (0, Hd.n)(Od, Fd, Rd, hd, performance.now());
+            Wd(vd.yawRadPerSec, vd.pitchRadPerSec);
+            const Qd = dd.drainLookDelta();
+            0 === Qd.mV && 0 === Qd.RV || (0, Nd.m)(Kd.L.PadLook, Xd.Fd.Gyro, Qd.mV, Qd.RV, 0)
           },
-          release: Wr,
-          uninstall: Wr
+          release: Fd,
+          uninstall: Fd
         }
       },
-      Mr = () => {
-        const rr = qr();
-        return null !== rr && 0 !== (Rr(rr) & jr.ud.PadSneakToggled)
+      Ld = () => {
+        const dd = Ad();
+        return null !== dd && 0 !== (rd(dd) & Xd.Md.PadSneakToggled)
       },
-      Gr = () => {
-        const rr = (rr => {
-          const Sr = rr => function() {
-            return (0, mr.d)(), rr(...arguments)
+      Pd = () => {
+        const dd = (dd => {
+          const Od = dd => function() {
+            return (0, od.e)(), dd(...arguments)
           };
           return {
-            primaryFireDown: Sr((rr => (lr(nr, jr.dd.Down | (rr ? jr.dd.Repeat : 0)), 0))),
-            primaryFireUp: Sr((() => {
-              Pr(nr)
+            primaryFireDown: Od((dd => (Sd(pd, Xd.xd.Down | (dd ? Xd.xd.Repeat : 0)), 0))),
+            primaryFireUp: Od((() => {
+              ud(pd)
             })),
-            altFireDown: Sr((() => (Xr(er), 0))),
-            altFireUp: Sr((() => {
-              Pr(er)
+            altFireDown: Od((() => (sd(Yd), 0))),
+            altFireUp: Od((() => {
+              ud(Yd)
             })),
-            jumpDown: Sr((() => {
-              Hr(yr)
+            jumpDown: Od((() => {
+              Vd(wd)
             })),
-            specialActionDown: Sr((rr => {
-              Xr(Lr[rr])
+            specialActionDown: Od((dd => {
+              sd(Bd[dd])
             })),
-            specialActionUp: Sr((rr => {
-              Pr(Lr[rr])
+            specialActionUp: Od((dd => {
+              ud(Bd[dd])
             })),
-            reloadGun: Sr((() => {
-              Hr(Br)
+            reloadGun: Od((() => {
+              Vd(Ed)
             })),
-            dropItem: Sr((rr => {
-              lr(jr.fd.Drop, jr.dd.Down | (rr ? jr.dd.Stack : 0))
+            dropItem: Od((dd => {
+              Sd(Xd.yd.Drop, Xd.xd.Down | (dd ? Xd.xd.Stack : 0))
             })),
-            swapCameraZoom: Sr((() => {
-              Hr(Tr)
+            swapCameraZoom: Od((() => {
+              Vd(Jd)
             })),
-            zoom: Sr((rr => {
-              rr ? Xr(vr) : Pr(vr)
+            zoom: Od((dd => {
+              dd ? sd(Ud) : ud(Ud)
             })),
-            pickBlock: Sr((() => (Hr(Kr), gr(rr()))))
+            pickBlock: Od((() => (Vd(gd), Gd(dd()))))
           }
-        })(qr);
-        let Sr = !1,
-          Qr = null;
-        const Zr = () => {
-          var rr;
-          null === (rr = Qr) || void 0 === rr || rr(), Qr = null
+        })(Ad);
+        let Od = !1,
+          md = null;
+        const Wd = () => {
+          var dd;
+          null === (dd = md) || void 0 === dd || dd(), md = null
         };
         return {
-          bodies: () => rr,
-          look: Cr(),
-          move: (rr, Qr) => {
-            var Wr;
-            Zr();
+          bodies: () => dd,
+          look: nd(),
+          move: (dd, md) => {
+            var Fd;
+            Wd();
             const {
-              bits: ar,
-              flips: Ir
-            } = (rr => {
-              if (null === rr) return {
-                bits: jr.jd.Peek,
+              bits: Rd,
+              flips: Kd
+            } = (dd => {
+              if (null === dd) return {
+                bits: Xd.Bd.Peek,
                 flips: 0
               };
-              const Sr = rr.sneakHeld ? jr.jd.SneakHeld : 0;
-              return "hold" === rr.mode ? {
-                bits: Sr | jr.jd.SneakHoldMode,
-                flips: rr.sneakTogglePressed ? 1 : 0
+              const Od = dd.sneakHeld ? Xd.Bd.SneakHeld : 0;
+              return "hold" === dd.mode ? {
+                bits: Od | Xd.Bd.SneakHoldMode,
+                flips: dd.sneakTogglePressed ? 1 : 0
               } : {
-                bits: Sr,
-                flips: rr.sneakPressed || rr.sneakTogglePressed ? 1 : 0
+                bits: Od,
+                flips: dd.sneakPressed || dd.sneakTogglePressed ? 1 : 0
               }
-            })(Qr);
-            null !== (Wr = qr()) && void 0 !== Wr && Wr.padMove(rr.x, rr.y, rr.magnitude, rr.headingOffset, (rr => jr.jd.Active | (rr.jumpHeld ? jr.jd.JumpHeld : 0) | (rr.jumpPressed ? jr.jd.JumpPressed : 0) | (rr.running ? jr.jd.Running : 0) | (rr.sprintHeld ? jr.jd.SprintHeld : 0))(rr) | ar, Ir) && (Sr = !0), (0, hr.d)(Mr())
+            })(md);
+            null !== (Fd = Ad()) && void 0 !== Fd && Fd.padMove(dd.x, dd.y, dd.magnitude, dd.headingOffset, (dd => Xd.Bd.Active | (dd.jumpHeld ? Xd.Bd.JumpHeld : 0) | (dd.jumpPressed ? Xd.Bd.JumpPressed : 0) | (dd.running ? Xd.Bd.Running : 0) | (dd.sprintHeld ? Xd.Bd.SprintHeld : 0))(dd) | Rd, Kd) && (Od = !0), (0, yd.d)(Ld())
           },
           stopMoving: () => {
-            var rr;
-            Sr && (Sr = !(null !== (rr = qr()) && void 0 !== rr && rr.padMove(0, 0, 0, 0, 0, 0)), Zr(), Qr = (0, fr.z)((() => {
-              Zr(), (0, hr.d)(Mr())
+            var dd;
+            Od && (Od = !(null !== (dd = Ad()) && void 0 !== dd && dd.padMove(0, 0, 0, 0, 0, 0)), Wd(), md = (0, hd.A)((() => {
+              Wd(), (0, yd.d)(Ld())
             })))
           },
-          uninstall: Zr,
-          deviceChanged: rr => {
-            var Qr;
-            "touch" === rr ? ((0, hr.d)(!1), null !== (Qr = qr()) && void 0 !== Qr && Qr.padMove(0, 0, 0, 0, jr.jd.EndToggle, 0) && (Sr = !1)) : "gamepad" === rr && (0, hr.d)(Mr())
+          uninstall: Wd,
+          deviceChanged: dd => {
+            var md;
+            "touch" === dd ? ((0, yd.d)(!1), null !== (md = Ad()) && void 0 !== md && md.padMove(0, 0, 0, 0, Xd.Bd.EndToggle, 0) && (Od = !1)) : "gamepad" === dd && (0, yd.d)(Ld())
           },
-          hasPlayer: () => null !== qr(),
+          hasPlayer: () => null !== Ad(),
           isPlayerDead: () => {
-            var rr;
-            return !1 === (null === (rr = qr()) || void 0 === rr ? void 0 : rr.localPlayerAlive())
+            var dd;
+            return !1 === (null === (dd = Ad()) || void 0 === dd ? void 0 : dd.localPlayerAlive())
           },
           isReplayMode: () => {
-            const rr = qr();
-            return null !== rr && 0 !== (Rr(rr) & jr.ud.Replay)
+            const dd = Ad();
+            return null !== dd && 0 !== (rd(dd) & Xd.Md.Replay)
           },
           isFreeCameraOn: () => {
-            const rr = qr();
-            return null !== rr && 0 !== (Rr(rr) & jr.ud.FreeCam)
+            const dd = Ad();
+            return null !== dd && 0 !== (rd(dd) & Xd.Md.FreeCam)
           },
-          targetsBlock: () => gr(qr()),
+          targetsBlock: () => Gd(Ad()),
           selectedSlotEmpty: () => {
-            var rr;
-            return !(null !== (rr = qr()) && void 0 !== rr && rr.items.wI())
+            var dd;
+            return !(null !== (dd = Ad()) && void 0 !== dd && dd.items.jK())
           },
-          pickBlockAllowed: () => !!ar.d.get("creative") && !!ar.d.get("canPickBlocks"),
-          zoomAllowed: () => !!ar.d.get("canUseZoomKey"),
-          scrollHotbar: rr => {
-            lr(jr.fd.Hotbar, jr.dd.Down | (rr > 0 ? jr.dd.Next : 0))
+          pickBlockAllowed: () => !!Rd.e.get("creative") && !!Rd.e.get("canPickBlocks"),
+          zoomAllowed: () => !!Rd.e.get("canUseZoomKey"),
+          scrollHotbar: dd => {
+            Sd(Xd.yd.Hotbar, Xd.xd.Down | (dd > 0 ? Xd.xd.Next : 0))
           },
-          hasFullInventory: Er.o,
-          hasLobbyTab: () => (0, zr.c)({
-            lobbyLeaderboardInfo: ar.d.get("lobbyLeaderboardInfo"),
-            lobbyManage: ar.d.get("lobbyManage")
+          hasFullInventory: vd.l,
+          hasLobbyTab: () => (0, bd.b)({
+            lobbyLeaderboardInfo: Rd.e.get("lobbyLeaderboardInfo"),
+            lobbyManage: Rd.e.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var rr, Sr, Qr, Zr;
-            const Wr = qr();
+            var dd, Od, md, Wd;
+            const Fd = Ad();
             return {
-              holdingGun: !1 !== (null === Wr || void 0 === Wr ? void 0 : Wr.localPlayerAlive()) && "Gun" === (null === Wr || void 0 === Wr || null === (rr = Wr.items.wI()) || void 0 === rr || null === (Sr = rr.typeObj) || void 0 === Sr ? void 0 : Sr.type),
-              customButtons: null !== (Qr = ar.d.get("customButtons")) && void 0 !== Qr ? Qr : null,
-              touchscreenActionButton: null !== (Zr = ar.d.get("touchscreenActionButton")) && void 0 !== Zr ? Zr : null
+              holdingGun: !1 !== (null === Fd || void 0 === Fd ? void 0 : Fd.localPlayerAlive()) && "Gun" === (null === Fd || void 0 === Fd || null === (dd = Fd.items.jK()) || void 0 === dd || null === (Od = dd.typeObj) || void 0 === Od ? void 0 : Od.type),
+              customButtons: null !== (md = Rd.e.get("customButtons")) && void 0 !== md ? md : null,
+              touchscreenActionButton: null !== (Wd = Rd.e.get("touchscreenActionButton")) && void 0 !== Wd ? Wd : null
             }
           },
-          pressTouchButton: rr => {
-            rr ? Xr(Or) : Pr(Or)
+          pressTouchButton: dd => {
+            dd ? sd(xd) : ud(xd)
           }
         }
       },
-      kr = () => {
-        const rr = (0, Wr.c)(Gr()),
-          Sr = (0, Zr.c)(),
-          Qr = null;
+      zd = () => {
+        const dd = (0, Fd.c)(Pd()),
+          Od = (0, Wd.d)(),
+          md = null;
         return () => {
-          rr(), Sr(), null === Qr || void 0 === Qr || Qr()
+          dd(), Od(), null === md || void 0 === md || md()
         }
       }
   },
-  5602: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      A: () => Lr,
-      E: () => lr,
-      G: () => Yr,
-      K: () => jr,
-      N: () => Ir,
-      Q: () => vr,
-      e: () => Tr,
-      i: () => er,
-      m: () => Pr,
-      p: () => Xr,
-      r: () => zr,
-      u: () => yr,
-      v: () => nr,
-      w: () => Kr,
-      z: () => Or
+  5558: (dd, Od, md) => {
+    md.d(Od, {
+      A: () => xd,
+      B: () => Bd,
+      F: () => Sd,
+      I: () => Td,
+      M: () => Xd,
+      O: () => Kd,
+      S: () => Ud,
+      e: () => Jd,
+      h: () => Yd,
+      i: () => ud,
+      l: () => sd,
+      n: () => bd,
+      r: () => wd,
+      u: () => pd,
+      x: () => gd
     });
-    var Zr = Qr(5604);
-    const Wr = {
+    var Wd = md(5565);
+    const Fd = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let ar = Wr;
+    let Rd = Fd;
 
-    function jr(rr) {
-      ar = null !== rr && void 0 !== rr ? rr : Wr
+    function Xd(dd) {
+      Rd = null !== dd && void 0 !== dd ? dd : Fd
     }
 
-    function Ir() {
-      return ar
+    function Kd() {
+      return Rd
     }
-    const fr = new Set,
-      Er = new Set;
-    let pr = -1;
-    const xr = new Set,
-      mr = new Set;
-    let Nr = 0,
-      Ur = 0;
-    const tr = new Set,
-      hr = new Set;
+    const hd = new Set,
+      vd = new Set;
+    let Qd = -1;
+    const td = new Set,
+      od = new Set;
+    let Nd = 0,
+      qd = 0;
+    const Hd = new Set,
+      yd = new Set;
 
-    function zr(rr) {
-      return fr.add(rr), () => {
-        fr.delete(rr)
+    function bd(dd) {
+      return hd.add(dd), () => {
+        hd.delete(dd)
       }
     }
 
-    function Yr(rr, Sr) {
-      for (const Zr of fr) try {
-        Zr(rr)
-      } catch (Qr) {
-        Sr(Qr)
+    function Td(dd, Od) {
+      for (const Wd of hd) try {
+        Wd(dd)
+      } catch (md) {
+        Od(md)
       }
     }
 
-    function nr(rr) {
-      return Er.add(rr), () => {
-        Er.delete(rr)
+    function pd(dd) {
+      return vd.add(dd), () => {
+        vd.delete(dd)
       }
     }
 
-    function er(rr, Sr) {
-      const Qr = pr < 0 ? 0 : rr - pr;
-      pr = rr;
-      for (const Wr of Er) try {
-        Wr(Qr)
-      } catch (Zr) {
-        Sr(Zr)
+    function Yd(dd, Od) {
+      const md = Qd < 0 ? 0 : dd - Qd;
+      Qd = dd;
+      for (const Fd of vd) try {
+        Fd(md)
+      } catch (Wd) {
+        Od(Wd)
       }
     }
 
-    function Kr(rr) {
-      return xr.add(rr), () => {
-        xr.delete(rr)
+    function gd(dd) {
+      return td.add(dd), () => {
+        td.delete(dd)
       }
     }
 
-    function yr(rr) {
-      return mr.add(rr), () => {
-        mr.delete(rr)
+    function wd(dd) {
+      return od.add(dd), () => {
+        od.delete(dd)
       }
     }
-    let Br = 0;
+    let Ed = 0;
 
-    function Tr(rr) {
-      Br += rr
+    function Jd(dd) {
+      Ed += dd
     }
 
-    function vr() {
-      const rr = Br;
-      return Br = 0, rr
+    function Ud() {
+      const dd = Ed;
+      return Ed = 0, dd
     }
 
-    function Or(rr) {
-      return tr.add(rr), () => {
-        tr.delete(rr)
-      }
-    }
-
-    function Lr(rr) {
-      return hr.add(rr), () => {
-        hr.delete(rr)
+    function xd(dd) {
+      return Hd.add(dd), () => {
+        Hd.delete(dd)
       }
     }
 
-    function lr() {
-      Nr = 0, Ur = 0, pr = -1
+    function Bd(dd) {
+      return yd.add(dd), () => {
+        yd.delete(dd)
+      }
     }
 
-    function Xr(rr, Sr) {
-      if ("paced" === rr) return Ur += Sr, null;
-      if ("drawn" !== rr && "skipped" !== rr) return null;
-      const Qr = Sr + Ur;
-      return Ur = 0, Qr
+    function Sd() {
+      Nd = 0, qd = 0, Qd = -1
     }
 
-    function Pr(rr, Sr, Qr, Wr) {
-      const ar = (0, Zr.i)(Sr),
-        jr = rr > 0 ? performance.now() : 0;
-      for (let Zr = 0; Zr < rr; Zr++)
-        for (const rr of tr) try {
-          rr()
-        } catch (Ir) {
-          Wr(Ir)
+    function sd(dd, Od) {
+      if ("paced" === dd) return qd += Od, null;
+      if ("drawn" !== dd && "skipped" !== dd) return null;
+      const md = Od + qd;
+      return qd = 0, md
+    }
+
+    function ud(dd, Od, md, Fd) {
+      const Rd = (0, Wd.i)(Od),
+        Xd = dd > 0 ? performance.now() : 0;
+      for (let Wd = 0; Wd < dd; Wd++)
+        for (const dd of Hd) try {
+          dd()
+        } catch (Kd) {
+          Fd(Kd)
         }
-      if (rr > 0 && Tr(performance.now() - jr), null !== Qr) {
-        for (const rr of xr) try {
-          rr(Qr)
-        } catch (Ir) {
-          Wr(Ir)
+      if (dd > 0 && Jd(performance.now() - Xd), null !== md) {
+        for (const dd of td) try {
+          dd(md)
+        } catch (Kd) {
+          Fd(Kd)
         }
-        Nr += Qr
+        Nd += md
       }
-      if ("drawn" === Sr) {
-        const rr = Nr;
-        Nr = 0;
-        for (const Sr of mr) try {
-          Sr(rr)
-        } catch (Ir) {
-          Wr(Ir)
+      if ("drawn" === Od) {
+        const dd = Nd;
+        Nd = 0;
+        for (const Od of od) try {
+          Od(dd)
+        } catch (Kd) {
+          Fd(Kd)
         }
       }
-      for (const Zr of hr) try {
-        Zr(rr, ar)
-      } catch (Ir) {
-        Wr(Ir)
+      for (const Wd of yd) try {
+        Wd(dd, Rd)
+      } catch (Kd) {
+        Fd(Kd)
       }
     }
   },
-  5623: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Wr,
-      e: () => ar,
-      g: () => jr,
-      i: () => Zr,
-      m: () => Ir
+  5588: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Fd,
+      f: () => Rd,
+      i: () => Xd,
+      m: () => Wd,
+      n: () => Kd
     });
-    const Zr = {
+    const Wd = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -570,8 +570,8 @@ export const modules = {
         TouchAttack: 195,
         TouchUse: 196
       },
-      Wr = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      ar = {
+      Fd = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      Rd = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -634,7 +634,7 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      jr = {
+      Xd = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
@@ -642,153 +642,153 @@ export const modules = {
         "primary-fire": [195],
         "alt-fire": [196]
       },
-      Ir = [16]
+      Kd = [16]
   },
-  42526: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => jr,
-      h: () => ar,
-      l: () => Wr
+  42628: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Xd,
+      f: () => Rd,
+      h: () => Fd
     });
-    let Zr = null;
+    let Wd = null;
 
-    function Wr(rr) {
-      Zr = rr
+    function Fd(dd) {
+      Wd = dd
     }
 
-    function ar(rr) {
-      Zr === rr && (Zr = null)
+    function Rd(dd) {
+      Wd === dd && (Wd = null)
     }
 
-    function jr() {
-      var rr;
-      null === (rr = Zr) || void 0 === rr || rr()
+    function Xd() {
+      var dd;
+      null === (dd = Wd) || void 0 === dd || dd()
     }
   },
-  5628: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Ir,
-      e: () => jr,
-      f: () => Er
+  5590: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Kd,
+      e: () => Xd,
+      i: () => vd
     });
-    var Zr = Qr(3372),
-      Wr = Qr(3378);
-    const ar = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var Wd = md(3372),
+      Fd = md(3378);
+    const Rd = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function jr(rr) {
-      return rr instanceof HTMLElement && (!!(rr.isContentEditable || rr instanceof HTMLTextAreaElement || rr instanceof HTMLSelectElement) || rr instanceof HTMLInputElement && !ar.has(rr.type))
+    function Xd(dd) {
+      return dd instanceof HTMLElement && (!!(dd.isContentEditable || dd instanceof HTMLTextAreaElement || dd instanceof HTMLSelectElement) || dd instanceof HTMLInputElement && !Rd.has(dd.type))
     }
 
-    function Ir(rr) {
-      let Sr = null;
-      const Qr = Qr => {
-          const Wr = jr(Qr);
-          Wr !== Sr && (Sr = Wr, rr(Zr.g.UiCapture, Zr.y.Keyboard, 0, 0, Wr ? Zr.y.Keyboard : 0))
+    function Kd(dd) {
+      let Od = null;
+      const md = md => {
+          const Fd = Xd(md);
+          Fd !== Od && (Od = Fd, dd(Wd.h.UiCapture, Wd.w.Keyboard, 0, 0, Fd ? Wd.w.Keyboard : 0))
         },
-        Wr = rr => {
-          Qr(rr.target)
+        Fd = dd => {
+          md(dd.target)
         },
-        ar = rr => {
-          Qr(rr.relatedTarget)
+        Rd = dd => {
+          md(dd.relatedTarget)
         },
-        Ir = () => {
-          Qr(document.activeElement)
+        Kd = () => {
+          md(document.activeElement)
         },
-        fr = {
+        hd = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", Wr, fr), document.addEventListener("focusout", ar, fr), document.addEventListener("keydown", Ir, fr), Qr(document.activeElement), () => {
-        document.removeEventListener("focusin", Wr, fr), document.removeEventListener("focusout", ar, fr), document.removeEventListener("keydown", Ir, fr)
+      return document.addEventListener("focusin", Fd, hd), document.addEventListener("focusout", Rd, hd), document.addEventListener("keydown", Kd, hd), md(document.activeElement), () => {
+        document.removeEventListener("focusin", Fd, hd), document.removeEventListener("focusout", Rd, hd), document.removeEventListener("keydown", Kd, hd)
       }
     }
-    const fr = new Map;
+    const hd = new Map;
 
-    function Er(rr, Sr) {
-      var Qr;
-      let Zr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      fr.set(Zr, (null !== (Qr = fr.get(Zr)) && void 0 !== Qr ? Qr : 0) & ~rr | Sr & rr);
-      let ar = 0;
-      for (const Wr of fr.values()) ar |= Wr;
-      return (0, Wr.A)(rr, ar & rr)
+    function vd(dd, Od) {
+      var md;
+      let Wd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      hd.set(Wd, (null !== (md = hd.get(Wd)) && void 0 !== md ? md : 0) & ~dd | Od & dd);
+      let Rd = 0;
+      for (const Fd of hd.values()) Rd |= Fd;
+      return (0, Fd.s)(dd, Rd & dd)
     }
   },
-  38397: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return rr.includes("Leaf Bed")
+  38474: (dd, Od, md) => {
+    function Wd(dd) {
+      return dd.includes("Leaf Bed")
     }
 
-    function Wr(rr) {
-      return / Bed(?: Head)?(?:\||$)/.test(rr) && !Zr(rr)
+    function Fd(dd) {
+      return / Bed(?: Head)?(?:\||$)/.test(dd) && !Wd(dd)
     }
 
-    function ar(rr) {
-      return rr.includes(" Strongbed")
+    function Rd(dd) {
+      return dd.includes(" Strongbed")
     }
 
-    function jr(rr) {
-      return Zr(rr) || Wr(rr) || ar(rr)
+    function Xd(dd) {
+      return Wd(dd) || Fd(dd) || Rd(dd)
     }
-    Qr.d(Sr, {
-      c: () => jr,
-      f: () => Zr,
-      h: () => ar,
-      i: () => Wr
+    md.d(Od, {
+      e: () => Xd,
+      f: () => Wd,
+      j: () => Rd,
+      l: () => Fd
     })
   },
-  38390: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Er
+  38469: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => vd
     });
-    var Zr = Qr(38397),
-      Wr = Qr(5779);
-    const ar = [],
-      jr = [],
-      Ir = [],
-      fr = [];
-    for (const pr of Object.keys(Wr.n))(0, Zr.f)(pr) ? ar.push(pr) : (0, Zr.i)(pr) && jr.push(pr), (0, Zr.h)(pr) && Ir.push(pr), (pr.includes(" Bed Head") || pr.includes(" Strongbed Head")) && fr.push(pr);
-    const Er = {
-      leafBeds: ar,
-      woolBeds: jr,
-      strongBeds: Ir,
-      beds: [...ar, ...jr, ...Ir],
-      bedHeads: fr,
+    var Wd = md(38474),
+      Fd = md(5733);
+    const Rd = [],
+      Xd = [],
+      Kd = [],
+      hd = [];
+    for (const Qd of Object.keys(Fd.k))(0, Wd.f)(Qd) ? Rd.push(Qd) : (0, Wd.l)(Qd) && Xd.push(Qd), (0, Wd.j)(Qd) && Kd.push(Qd), (Qd.includes(" Bed Head") || Qd.includes(" Strongbed Head")) && hd.push(Qd);
+    const vd = {
+      leafBeds: Rd,
+      woolBeds: Xd,
+      strongBeds: Kd,
+      beds: [...Rd, ...Xd, ...Kd],
+      bedHeads: hd,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  7424: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr,
-      e: () => Wr,
-      f: () => fr,
-      j: () => ar,
-      k: () => Er,
-      n: () => Zr,
-      p: () => Ir
+  7410: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Xd,
+      f: () => Fd,
+      g: () => hd,
+      k: () => Rd,
+      n: () => vd,
+      q: () => Wd,
+      t: () => Kd
     });
-    let Zr = function(rr) {
-        return rr[rr.DEFAULT = 0] = "DEFAULT", rr[rr.BOAT = 1] = "BOAT", rr[rr.GLIDER = 2] = "GLIDER", rr[rr.BALLOON = 3] = "BALLOON", rr[rr.SLEEPING = 4] = "SLEEPING", rr[rr.RIDING_MOB = 5] = "RIDING_MOB", rr[rr.CAR = 6] = "CAR", rr[rr.HOVERCRAFT = 7] = "HOVERCRAFT", rr
+    let Wd = function(dd) {
+        return dd[dd.DEFAULT = 0] = "DEFAULT", dd[dd.BOAT = 1] = "BOAT", dd[dd.GLIDER = 2] = "GLIDER", dd[dd.BALLOON = 3] = "BALLOON", dd[dd.SLEEPING = 4] = "SLEEPING", dd[dd.RIDING_MOB = 5] = "RIDING_MOB", dd[dd.CAR = 6] = "CAR", dd[dd.HOVERCRAFT = 7] = "HOVERCRAFT", dd
       }({}),
-      Wr = function(rr) {
-        return rr[rr.WOOD = 0] = "WOOD", rr[rr.OBSIDIAN = 1] = "OBSIDIAN", rr[rr.SPEED = 2] = "SPEED", rr
+      Fd = function(dd) {
+        return dd[dd.WOOD = 0] = "WOOD", dd[dd.OBSIDIAN = 1] = "OBSIDIAN", dd[dd.SPEED = 2] = "SPEED", dd
       }({}),
-      ar = function(rr) {
-        return rr[rr.WOOD = 0] = "WOOD", rr[rr.IRON = 1] = "IRON", rr[rr.GOLD = 2] = "GOLD", rr[rr.DIAMOND = 3] = "DIAMOND", rr
+      Rd = function(dd) {
+        return dd[dd.WOOD = 0] = "WOOD", dd[dd.IRON = 1] = "IRON", dd[dd.GOLD = 2] = "GOLD", dd[dd.DIAMOND = 3] = "DIAMOND", dd
       }({}),
-      jr = function(rr) {
-        return rr[rr.YELLOW = 0] = "YELLOW", rr[rr.WHITE = 1] = "WHITE", rr[rr.RED = 2] = "RED", rr[rr.PURPLE = 3] = "PURPLE", rr[rr.PINK = 4] = "PINK", rr[rr.ORANGE = 5] = "ORANGE", rr[rr.MAGENTA = 6] = "MAGENTA", rr[rr.LIME = 7] = "LIME", rr[rr.LIGHT_GRAY = 8] = "LIGHT_GRAY", rr[rr.LIGHT_BLUE = 9] = "LIGHT_BLUE", rr[rr.GREEN = 10] = "GREEN", rr[rr.GRAY = 11] = "GRAY", rr[rr.CYAN = 12] = "CYAN", rr[rr.BROWN = 13] = "BROWN", rr[rr.BLUE = 14] = "BLUE", rr[rr.BLACK = 15] = "BLACK", rr
+      Xd = function(dd) {
+        return dd[dd.YELLOW = 0] = "YELLOW", dd[dd.WHITE = 1] = "WHITE", dd[dd.RED = 2] = "RED", dd[dd.PURPLE = 3] = "PURPLE", dd[dd.PINK = 4] = "PINK", dd[dd.ORANGE = 5] = "ORANGE", dd[dd.MAGENTA = 6] = "MAGENTA", dd[dd.LIME = 7] = "LIME", dd[dd.LIGHT_GRAY = 8] = "LIGHT_GRAY", dd[dd.LIGHT_BLUE = 9] = "LIGHT_BLUE", dd[dd.GREEN = 10] = "GREEN", dd[dd.GRAY = 11] = "GRAY", dd[dd.CYAN = 12] = "CYAN", dd[dd.BROWN = 13] = "BROWN", dd[dd.BLUE = 14] = "BLUE", dd[dd.BLACK = 15] = "BLACK", dd
       }({}),
-      Ir = function(rr) {
-        return rr[rr.ROTATION_1 = 0] = "ROTATION_1", rr[rr.ROTATION_2 = 1] = "ROTATION_2", rr[rr.ROTATION_3 = 2] = "ROTATION_3", rr[rr.ROTATION_4 = 3] = "ROTATION_4", rr
+      Kd = function(dd) {
+        return dd[dd.ROTATION_1 = 0] = "ROTATION_1", dd[dd.ROTATION_2 = 1] = "ROTATION_2", dd[dd.ROTATION_3 = 2] = "ROTATION_3", dd[dd.ROTATION_4 = 3] = "ROTATION_4", dd
       }({}),
-      fr = function(rr) {
-        return rr[rr.KART = 0] = "KART", rr[rr.OFF_ROADER = 1] = "OFF_ROADER", rr[rr.CAR = 2] = "CAR", rr[rr.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", rr[rr.ARMORED_CAR = 4] = "ARMORED_CAR", rr[rr.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", rr[rr.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", rr[rr.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", rr
+      hd = function(dd) {
+        return dd[dd.KART = 0] = "KART", dd[dd.OFF_ROADER = 1] = "OFF_ROADER", dd[dd.CAR = 2] = "CAR", dd[dd.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", dd[dd.ARMORED_CAR = 4] = "ARMORED_CAR", dd[dd.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", dd[dd.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", dd[dd.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", dd
       }({});
-    Zr.DEFAULT, Zr.BOAT, Wr.SPEED, Zr.GLIDER, ar.DIAMOND, Zr.BALLOON, jr.BLACK, Zr.SLEEPING, Ir.ROTATION_4, Zr.RIDING_MOB, Zr.CAR, fr.MOONSTONE_MINING_DRILL, Zr.HOVERCRAFT;
-    let Er = function(rr) {
-      return rr[rr.NORMAL = 0] = "NORMAL", rr[rr.GLIDING = 1] = "GLIDING", rr[rr.FLOATING = 2] = "FLOATING", rr
+    Wd.DEFAULT, Wd.BOAT, Fd.SPEED, Wd.GLIDER, Rd.DIAMOND, Wd.BALLOON, Xd.BLACK, Wd.SLEEPING, Kd.ROTATION_4, Wd.RIDING_MOB, Wd.CAR, hd.MOONSTONE_MINING_DRILL, Wd.HOVERCRAFT;
+    let vd = function(dd) {
+      return dd[dd.NORMAL = 0] = "NORMAL", dd[dd.GLIDING = 1] = "GLIDING", dd[dd.FLOATING = 2] = "FLOATING", dd
     }({})
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

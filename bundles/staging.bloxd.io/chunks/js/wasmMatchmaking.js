@@ -1,152 +1,152 @@
 export const id = 75;
 export const ids = [75, 186];
 export const modules = {
-  38154: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => hr,
-      d: () => zr,
-      h: () => mr,
-      l: () => xr
+  38243: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => yd,
+      h: () => bd,
+      i: () => od,
+      k: () => td
     });
-    var Zr = Qr(35448),
-      Wr = Qr(3425),
-      ar = Qr(3429),
-      jr = Qr(9818),
-      Ir = Qr(1573),
-      fr = Qr(72),
-      Er = Qr(92),
-      pr = Qr(1338);
+    var Wd = md(35535),
+      Fd = md(3428),
+      Rd = md(3432),
+      Xd = md(9850),
+      Kd = md(1566),
+      hd = md(66),
+      vd = md(86),
+      Qd = md(1341);
 
-    function xr() {
-      var rr;
-      return (0, Ir.g)(Wr.e, (0, Wr.w)()), (0, pr.jsx)(pr.Fragment, {
-        children: null === (rr = (0, Wr.w)()) || void 0 === rr ? void 0 : rr.content
+    function td() {
+      var dd;
+      return (0, Kd.i)(Fd.d, (0, Fd.n)()), (0, Qd.jsx)(Qd.Fragment, {
+        children: null === (dd = (0, Fd.n)()) || void 0 === dd ? void 0 : dd.content
       })
     }
 
-    function mr(rr) {
-      var Sr;
+    function od(dd) {
+      var Od;
       let {
-        show: Qr
-      } = rr;
-      (0, Ir.g)(Wr.e, (0, Wr.w)());
-      const Er = null === (Sr = (0, Wr.w)()) || void 0 === Sr ? void 0 : Sr.menu;
-      return (0, fr.useEffect)((() => {
-        var rr;
-        Qr || (null === Er || void 0 === Er || null === (rr = Er.onClose) || void 0 === rr || rr.call(Er), (0, ar.o)())
-      }), [Qr, Er]), (0, fr.useEffect)((() => Qr ? (0, jr.f)(ar.v, ar.e) : void 0), [Qr]), (0, pr.jsx)(Zr.c, {
-        showing: Qr,
+        show: md
+      } = dd;
+      (0, Kd.i)(Fd.d, (0, Fd.n)());
+      const vd = null === (Od = (0, Fd.n)()) || void 0 === Od ? void 0 : Od.menu;
+      return (0, hd.useEffect)((() => {
+        var dd;
+        md || (null === vd || void 0 === vd || null === (dd = vd.onClose) || void 0 === dd || dd.call(vd), (0, Rd.q)())
+      }), [md, vd]), (0, hd.useEffect)((() => md ? (0, Xd.d)(Rd.y, Rd.h) : void 0), [md]), (0, Qd.jsx)(Wd.b, {
+        showing: md,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Er || void 0 === Er ? void 0 : Er.content
+        children: null === vd || void 0 === vd ? void 0 : vd.content
       })
     }
-    const Nr = new Map,
-      Ur = new Set;
+    const Nd = new Map,
+      qd = new Set;
 
-    function tr(rr, Sr) {
-      Sr ? Nr.set(rr, Sr) : Nr.delete(rr);
-      for (const Qr of Ur) Qr()
+    function Hd(dd, Od) {
+      Od ? Nd.set(dd, Od) : Nd.delete(dd);
+      for (const md of qd) md()
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        placement: Sr = "bottom"
-      } = rr;
-      const Qr = (0, fr.useRef)(null);
-      return (0, fr.useLayoutEffect)((() => {
-        const rr = Qr.current;
-        return tr(Sr, rr), () => {
-          Nr.get(Sr) === rr && tr(Sr, null)
+        placement: Od = "bottom"
+      } = dd;
+      const md = (0, hd.useRef)(null);
+      return (0, hd.useLayoutEffect)((() => {
+        const dd = md.current;
+        return Hd(Od, dd), () => {
+          Nd.get(Od) === dd && Hd(Od, null)
         }
-      }), [Sr]), (0, pr.jsx)("div", {
-        ref: Qr,
-        id: `clientGameHud-${Sr}`,
+      }), [Od]), (0, Qd.jsx)("div", {
+        ref: md,
+        id: `clientGameHud-${Od}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function zr(rr) {
+    function bd(dd) {
       let {
-        children: Sr,
-        placement: Qr = "bottom"
-      } = rr;
-      const [Zr, Wr] = (0, fr.useState)((() => {
-        var rr;
-        return null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null
+        children: Od,
+        placement: md = "bottom"
+      } = dd;
+      const [Wd, Fd] = (0, hd.useState)((() => {
+        var dd;
+        return null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null
       }));
-      return (0, fr.useEffect)((() => {
-        const rr = () => {
-          var rr;
-          Wr(null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null)
+      return (0, hd.useEffect)((() => {
+        const dd = () => {
+          var dd;
+          Fd(null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null)
         };
-        return Ur.add(rr), rr(), () => {
-          Ur.delete(rr)
+        return qd.add(dd), dd(), () => {
+          qd.delete(dd)
         }
-      }), [Qr]), Zr ? (0, Er.createPortal)(Sr, Zr) : null
+      }), [md]), Wd ? (0, vd.createPortal)(Od, Wd) : null
     }
   },
-  38183: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => tr,
-      f: () => yr
+  38264: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Hd,
+      f: () => wd
     });
-    Qr(35432);
-    var Zr = Qr(72),
-      Wr = Qr(1573),
-      ar = Qr(2089),
-      jr = Qr(2128),
-      Ir = Qr(26),
-      fr = Qr(3404),
-      Er = Qr(38191),
-      pr = Qr(38193),
-      xr = Qr(35416),
-      mr = Qr(35426),
-      Nr = Qr(35437),
-      Ur = Qr(1338);
-    const tr = (0, Zr.memo)((function() {
-      var rr;
+    md(35513);
+    var Wd = md(66),
+      Fd = md(1566),
+      Rd = md(2092),
+      Xd = md(2125),
+      Kd = md(29),
+      hd = md(3403),
+      vd = md(38273),
+      Qd = md(38280),
+      td = md(35499),
+      od = md(35511),
+      Nd = md(35524),
+      qd = md(1341);
+    const Hd = (0, Wd.memo)((function() {
+      var dd;
       const {
-        isTouchScreen: Sr,
-        clientEscMenuOptions: Qr,
-        scriptedCameraFacing: ar,
-        crosshairShownOverride: tr,
-        crosshairGameView: zr
-      } = (0, Ir.n)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), Yr = (0, fr.l)("gunshotOrigin"), nr = (0, Zr.useRef)(null), er = (0, Zr.useRef)(!1), [Kr, Br] = (0, Zr.useState)(hr);
-      (0, Wr.c)("cameraZoomSet", Br), (0, Zr.useEffect)((() => {
-        Br(hr())
+        isTouchScreen: Od,
+        clientEscMenuOptions: md,
+        scriptedCameraFacing: Rd,
+        crosshairShownOverride: Hd,
+        crosshairGameView: bd
+      } = (0, Kd.p)(["isTouchScreen", "clientEscMenuOptions", "scriptedCameraFacing", "crosshairShownOverride", "crosshairGameView"]), Td = (0, hd.j)("gunshotOrigin"), pd = (0, Wd.useRef)(null), Yd = (0, Wd.useRef)(!1), [gd, Ed] = (0, Wd.useState)(yd);
+      (0, Fd.f)("cameraZoomSet", Ed), (0, Wd.useEffect)((() => {
+        Ed(yd())
       }), []);
-      const Tr = (0, jr.j)("heldItemAim"),
-        Or = Tr.gun,
-        Lr = (0, Nr.f)(),
-        lr = (0, Zr.useRef)(Lr);
-      lr.current = Lr;
-      const [Xr, Pr] = (0, Zr.useState)(!1);
-      (0, Zr.useEffect)((() => (0, pr.e)("crosshairAccuracy", yr)), []), (0, Wr.c)("mouseState", (rr => {
+      const Jd = (0, Xd.h)("heldItemAim"),
+        xd = Jd.gun,
+        Bd = (0, Nd.g)(),
+        Sd = (0, Wd.useRef)(Bd);
+      Sd.current = Bd;
+      const [sd, ud] = (0, Wd.useState)(!1);
+      (0, Wd.useEffect)((() => (0, Qd.h)("crosshairAccuracy", wd)), []), (0, Fd.f)("mouseState", (dd => {
         let {
-          isDown: Sr
-        } = rr;
-        er.current = Sr, nr.current && (nr.current.style.transform = (0, mr.f)(Sr, lr.current.growOnClick)), "shapes" === lr.current.style && Pr(Sr)
+          isDown: Od
+        } = dd;
+        Yd.current = Od, pd.current && (pd.current.style.transform = (0, od.g)(Od, Sd.current.growOnClick)), "shapes" === Sd.current.style && ud(Od)
       }));
-      const Hr = (0, xr.d)(Sr, Qr.touchActionButtons);
-      return (null !== (rr = (0, Er.c)(zr, tr)) && void 0 !== rr ? rr : (0, Er.g)(Tr, Kr > 1, Hr, Yr)) ? "movement" === ar || "cursor" === ar ? null : (0, Ur.jsxs)(Ur.Fragment, {
-        children: [Or && (0, Ur.jsx)(vr, {
-          custom: Lr.forGuns && "shapes" === Lr.style ? Lr : null,
-          touch: Sr
-        }), !Or && (0, Ur.jsx)(mr.b, {
-          settings: Lr,
-          touch: Sr,
-          pressRef: nr,
-          pressed: "shapes" === Lr.style ? Xr : er.current
+      const Vd = (0, td.f)(Od, md.touchActionButtons);
+      return (null !== (dd = (0, vd.c)(bd, Hd)) && void 0 !== dd ? dd : (0, vd.j)(Jd, gd > 1, Vd, Td)) ? "movement" === Rd || "cursor" === Rd ? null : (0, qd.jsxs)(qd.Fragment, {
+        children: [xd && (0, qd.jsx)(Ud, {
+          custom: Bd.forGuns && "shapes" === Bd.style ? Bd : null,
+          touch: Od
+        }), !xd && (0, qd.jsx)(od.d, {
+          settings: Bd,
+          touch: Od,
+          pressRef: pd,
+          pressed: "shapes" === Bd.style ? sd : Yd.current
         })]
       }) : null
     }));
 
-    function hr() {
-      return ar.gameBridge.lookup("cameraZoom", null)
+    function yd() {
+      return Rd.gameBridge.lookup("cameraZoom", null)
     }
-    const zr = [{
+    const bd = [{
         current: null
       }, {
         current: null
@@ -155,359 +155,359 @@ export const modules = {
       }, {
         current: null
       }],
-      Yr = {
+      Td = {
         current: null
       },
-      nr = {
+      pd = {
         current: null
       };
-    let er = 0,
-      Kr = 0;
+    let Yd = 0,
+      gd = 0;
 
-    function yr(rr) {
-      Kr = rr, zr[0].current || Yr.current || nr.current ? Tr(rr) : er = rr
+    function wd(dd) {
+      gd = dd, bd[0].current || Td.current || pd.current ? Jd(dd) : Yd = dd
     }
 
-    function Br(rr) {
-      return ((0, Er.d)(rr) - (0, Er.d)(0)) * window.innerHeight / 100
+    function Ed(dd) {
+      return ((0, vd.g)(dd) - (0, vd.g)(0)) * window.innerHeight / 100
     }
 
-    function Tr(rr) {
-      var Sr;
-      if (null === (Sr = nr.current) || void 0 === Sr || Sr.call(nr, Br(rr)), zr[0].current) {
-        const Sr = `${(0,Er.d)(rr)}vh`;
-        zr[0].current.style.transform = `translateX(calc(0px - ${Sr}))`, zr[1].current.style.transform = `translateX(calc(0px + ${Sr}))`, zr[2].current.style.transform = `translateY(calc(0px - ${Sr}))`, zr[3].current.style.transform = `translateY(calc(0px + ${Sr}))`
+    function Jd(dd) {
+      var Od;
+      if (null === (Od = pd.current) || void 0 === Od || Od.call(pd, Ed(dd)), bd[0].current) {
+        const Od = `${(0,vd.g)(dd)}vh`;
+        bd[0].current.style.transform = `translateX(calc(0px - ${Od}))`, bd[1].current.style.transform = `translateX(calc(0px + ${Od}))`, bd[2].current.style.transform = `translateY(calc(0px - ${Od}))`, bd[3].current.style.transform = `translateY(calc(0px + ${Od}))`
       }
-      Yr.current && (Yr.current.style.filter = `blur(${Math.round(rr/10)}px)`)
+      Td.current && (Td.current.style.filter = `blur(${Math.round(dd/10)}px)`)
     }
 
-    function vr(rr) {
+    function Ud(dd) {
       let {
-        custom: Sr,
-        touch: Qr
-      } = rr;
-      const ar = (0, Wr.g)("aimingOverlay", "none"),
-        jr = "1.2vh",
-        Ir = "0.3vh";
-      (0, Zr.useEffect)((() => {
-        er && Tr(er)
+        custom: Od,
+        touch: md
+      } = dd;
+      const Rd = (0, Fd.i)("aimingOverlay", "none"),
+        Xd = "1.2vh",
+        Kd = "0.3vh";
+      (0, Wd.useEffect)((() => {
+        Yd && Jd(Yd)
       }), []);
-      const fr = (0, Zr.useRef)(null !== Sr);
-      return (0, Zr.useLayoutEffect)((() => {
-        var rr;
-        Sr ? null === (rr = nr.current) || void 0 === rr || rr.call(nr, Br(Kr)) : fr.current && Tr(Kr);
-        fr.current = null !== Sr
-      }), [Sr]), (0, Ur.jsxs)(Ur.Fragment, {
-        children: ["sniper" === ar && (0, Ur.jsxs)("div", {
-          ref: Yr,
+      const hd = (0, Wd.useRef)(null !== Od);
+      return (0, Wd.useLayoutEffect)((() => {
+        var dd;
+        Od ? null === (dd = pd.current) || void 0 === dd || dd.call(pd, Ed(gd)) : hd.current && Jd(gd);
+        hd.current = null !== Od
+      }), [Od]), (0, qd.jsxs)(qd.Fragment, {
+        children: ["sniper" === Rd && (0, qd.jsxs)("div", {
+          ref: Td,
           className: "GunCrosshairOverlayWrapper",
-          children: [(0, Ur.jsx)("div", {
+          children: [(0, qd.jsx)("div", {
             className: "GunCrosshairOverlay"
-          }), (0, Ur.jsx)("div", {
+          }), (0, qd.jsx)("div", {
             className: "GunCrosshairOverlayLine1"
-          }), (0, Ur.jsx)("div", {
+          }), (0, qd.jsx)("div", {
             className: "GunCrosshairOverlayLine2"
-          }), (0, Ur.jsx)("div", {
+          }), (0, qd.jsx)("div", {
             className: "GunCrosshairOverlayDot"
           })]
-        }), (0, Ur.jsxs)("div", {
+        }), (0, qd.jsxs)("div", {
           className: "GunCrosshairWrapper",
           style: {
-            opacity: "sniper" === ar ? 0 : 1
+            opacity: "sniper" === Rd ? 0 : 1
           },
-          children: [Sr && (0, Ur.jsx)(mr.b, {
-            settings: Sr,
-            touch: Qr,
-            spreadRef: nr
-          }), !Sr && (0, Ur.jsxs)(Ur.Fragment, {
-            children: [(0, Ur.jsx)("div", {
+          children: [Od && (0, qd.jsx)(od.d, {
+            settings: Od,
+            touch: md,
+            spreadRef: pd
+          }), !Od && (0, qd.jsxs)(qd.Fragment, {
+            children: [(0, qd.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: jr,
-                height: Ir,
+                width: Xd,
+                height: Kd,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: zr[0]
-            }), (0, Ur.jsx)("div", {
+              ref: bd[0]
+            }), (0, qd.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: jr,
-                height: Ir,
+                width: Xd,
+                height: Kd,
                 top: "49.85vh",
                 left: "calc(50vw - 0.6vh)"
               },
-              ref: zr[1]
-            }), (0, Ur.jsx)("div", {
+              ref: bd[1]
+            }), (0, qd.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: Ir,
-                height: jr,
+                width: Kd,
+                height: Xd,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: zr[2]
-            }), (0, Ur.jsx)("div", {
+              ref: bd[2]
+            }), (0, qd.jsx)("div", {
               className: "GunCrosshair",
               style: {
-                width: Ir,
-                height: jr,
+                width: Kd,
+                height: Xd,
                 top: "49.4vh",
                 left: "calc(50vw - 0.15vh)"
               },
-              ref: zr[3]
+              ref: bd[3]
             })]
           })]
         })]
       })
     }
   },
-  35448: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => ar
+  35535: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd
     });
-    var Zr = Qr(5301),
-      Wr = Qr(5308);
+    var Wd = md(5197),
+      Fd = md(5206);
 
-    function ar(rr) {
+    function Rd(dd) {
       let {
-        children: Sr,
-        showing: Qr,
-        globallyUniqueKey: ar,
-        alwaysMountChildren: jr = !1,
-        doGameplayStartStopOnShow: Ir = !0,
-        keepsMovement: fr = !1
-      } = rr;
-      return (0, Wr.b)(!0, Qr, ar, fr), (0, Zr.e)(Ir, Qr), Qr || jr ? Sr : null
+        children: Od,
+        showing: md,
+        globallyUniqueKey: Rd,
+        alwaysMountChildren: Xd = !1,
+        doGameplayStartStopOnShow: Kd = !0,
+        keepsMovement: hd = !1
+      } = dd;
+      return (0, Fd.e)(!0, md, Rd, hd), (0, Wd.b)(Kd, md), md || Xd ? Od : null
     }
   },
-  35426: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => tr,
-      f: () => Ur
+  35511: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Hd,
+      g: () => qd
     });
-    Qr(35432);
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(72),
-      jr = Qr(35422);
+    md(35513);
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(66),
+      Xd = md(35508);
 
-    function Ir(rr, Sr) {
-      return Math.max(1, Math.round(rr * Sr))
+    function Kd(dd, Od) {
+      return Math.max(1, Math.round(dd * Od))
     }
 
-    function fr(rr, Sr) {
-      const Qr = Sr * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        Zr = function(rr, Sr) {
-          if (rr.lines) return Ir(rr.lineThickness, Sr) % 2;
-          if (rr.dot) return Ir(rr.dotSize, Sr) % 2;
-          return Er(rr, Sr) % 2
-        }(rr, Sr),
-        Wr = pr(rr.lineThickness * Qr, Zr),
-        ar = Ir(rr.lineLength, Qr),
-        jr = Math.round(rr.gap * Qr),
-        fr = rr.outline > 0 ? Ir(rr.outline, Qr) : 0,
-        mr = [];
-      if (rr.lines && (mr.push({
-          x: Wr + jr,
+    function hd(dd, Od) {
+      const md = Od * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        Wd = function(dd, Od) {
+          if (dd.lines) return Kd(dd.lineThickness, Od) % 2;
+          if (dd.dot) return Kd(dd.dotSize, Od) % 2;
+          return vd(dd, Od) % 2
+        }(dd, Od),
+        Fd = Qd(dd.lineThickness * md, Wd),
+        Rd = Kd(dd.lineLength, md),
+        Xd = Math.round(dd.gap * md),
+        hd = dd.outline > 0 ? Kd(dd.outline, md) : 0,
+        od = [];
+      if (dd.lines && (od.push({
+          x: Fd + Xd,
           y: 0,
-          w: ar,
-          h: Wr,
+          w: Rd,
+          h: Fd,
           arm: "right"
-        }), mr.push({
-          x: -jr - ar,
+        }), od.push({
+          x: -Xd - Rd,
           y: 0,
-          w: ar,
-          h: Wr,
+          w: Rd,
+          h: Fd,
           arm: "left"
-        }), mr.push({
+        }), od.push({
           x: 0,
-          y: Wr + jr,
-          w: Wr,
-          h: ar,
+          y: Fd + Xd,
+          w: Fd,
+          h: Rd,
           arm: "down"
-        }), rr.tStyle || mr.push({
+        }), dd.tStyle || od.push({
           x: 0,
-          y: -jr - ar,
-          w: Wr,
-          h: ar,
+          y: -Xd - Rd,
+          w: Fd,
+          h: Rd,
           arm: "up"
-        }), 0 === jr && mr.push({
+        }), 0 === Xd && od.push({
           x: 0,
           y: 0,
-          w: Wr,
-          h: Wr
-        })), rr.dot) {
-        const Sr = pr(rr.dotSize * Qr, Zr),
-          ar = rr.lines && 0 === jr && rr.dotSize > rr.lineThickness ? Math.max(Sr, Wr + 2) : Sr,
-          Ir = (Wr - ar) / 2;
-        mr.push({
-          x: Ir,
-          y: Ir,
-          w: ar,
-          h: ar
+          w: Fd,
+          h: Fd
+        })), dd.dot) {
+        const Od = Qd(dd.dotSize * md, Wd),
+          Rd = dd.lines && 0 === Xd && dd.dotSize > dd.lineThickness ? Math.max(Od, Fd + 2) : Od,
+          Kd = (Fd - Rd) / 2;
+        od.push({
+          x: Kd,
+          y: Kd,
+          w: Rd,
+          h: Rd
         })
       }
-      const Nr = mr.map((rr => ({
-        ...rr,
-        x: rr.x - fr,
-        y: rr.y - fr,
-        w: rr.w + 2 * fr,
-        h: rr.h + 2 * fr
+      const Nd = od.map((dd => ({
+        ...dd,
+        x: dd.x - hd,
+        y: dd.y - hd,
+        w: dd.w + 2 * hd,
+        h: dd.h + 2 * hd
       })));
-      let Ur = null,
-        tr = null;
-      if (rr.circle) {
-        const Sr = Ir(rr.circleThickness, Qr),
-          ar = function(rr, Sr) {
-            return rr + (rr % 2 === Sr ? 0 : 1)
-          }(Er(rr, Qr), Zr),
-          jr = (Wr - ar) / 2;
-        Ur = xr(jr, ar, Sr), fr > 0 && (tr = xr(jr - fr, ar + 2 * fr, Sr + 2 * fr))
+      let qd = null,
+        Hd = null;
+      if (dd.circle) {
+        const Od = Kd(dd.circleThickness, md),
+          Rd = function(dd, Od) {
+            return dd + (dd % 2 === Od ? 0 : 1)
+          }(vd(dd, md), Wd),
+          Xd = (Fd - Rd) / 2;
+        qd = td(Xd, Rd, Od), hd > 0 && (Hd = td(Xd - hd, Rd + 2 * hd, Od + 2 * hd))
       }
       return {
-        cell: Wr,
-        fills: mr,
-        outlines: fr > 0 ? Nr : [],
-        ring: Ur,
-        ringOutline: tr
+        cell: Fd,
+        fills: od,
+        outlines: hd > 0 ? Nd : [],
+        ring: qd,
+        ringOutline: Hd
       }
     }
 
-    function Er(rr, Sr) {
-      return Math.round(rr.circleRadius * Sr * 2 + Ir(rr.circleThickness, Sr))
+    function vd(dd, Od) {
+      return Math.round(dd.circleRadius * Od * 2 + Kd(dd.circleThickness, Od))
     }
 
-    function pr(rr, Sr) {
-      return Math.max(2 - Sr, 2 * Math.round((rr - Sr) / 2) + Sr)
+    function Qd(dd, Od) {
+      return Math.max(2 - Od, 2 * Math.round((dd - Od) / 2) + Od)
     }
 
-    function xr(rr, Sr, Qr) {
-      const Zr = 2 * Qr >= Sr - 1;
+    function td(dd, Od, md) {
+      const Wd = 2 * md >= Od - 1;
       return {
-        x: rr,
-        y: rr,
-        size: Sr,
-        border: Math.min(Qr, Math.floor(Sr / 2)),
-        filled: Zr
+        x: dd,
+        y: dd,
+        size: Od,
+        border: Math.min(md, Math.floor(Od / 2)),
+        filled: Wd
       }
     }
-    var mr = Qr(1338);
-    const Nr = 1.4;
+    var od = md(1341);
+    const Nd = 1.4;
 
-    function Ur(rr, Sr) {
-      return rr && Sr ? `scale(${Nr})` : "scale(1)"
+    function qd(dd, Od) {
+      return dd && Od ? `scale(${Nd})` : "scale(1)"
     }
 
-    function tr(rr) {
-      return "classic" === rr.settings.style ? (0, mr.jsx)(Yr, {
-        ...rr
-      }) : (0, mr.jsx)(vr, {
-        ...rr
+    function Hd(dd) {
+      return "classic" === dd.settings.style ? (0, od.jsx)(Td, {
+        ...dd
+      }) : (0, od.jsx)(Ud, {
+        ...dd
       })
     }
-    const hr = .125;
+    const yd = .125;
 
-    function zr(rr, Sr) {
-      const Qr = {};
-      if (rr.color !== jr.f.color && (Qr.color = (0, jr.l)(rr.color)), rr.opacity !== jr.f.opacity && (Qr.opacity = rr.opacity / 100), rr.outline !== jr.f.outline || rr.outlineColor !== jr.f.outlineColor) {
-        const Sr = rr.outline,
-          Zr = (0, jr.l)(rr.outlineColor);
-        Qr.textShadow = Sr > 0 ? `-${Sr}px 0 ${Zr}, 0 ${Sr}px ${Zr}, ${Sr}px 0 ${Zr}, 0 -${Sr}px ${Zr}` : "none"
+    function bd(dd, Od) {
+      const md = {};
+      if (dd.color !== Xd.d.color && (md.color = (0, Xd.j)(dd.color)), dd.opacity !== Xd.d.opacity && (md.opacity = dd.opacity / 100), dd.outline !== Xd.d.outline || dd.outlineColor !== Xd.d.outlineColor) {
+        const Od = dd.outline,
+          Wd = (0, Xd.j)(dd.outlineColor);
+        md.textShadow = Od > 0 ? `-${Od}px 0 ${Wd}, 0 ${Od}px ${Wd}, ${Od}px 0 ${Wd}, 0 -${Od}px ${Wd}` : "none"
       }
-      if (rr.size !== jr.f.size) {
-        const Zr = rr.size / 100;
-        Qr.fontSize = Sr ? `calc(max(1.3rem, 18px) * ${Zr})` : `calc(1.3rem * ${Zr})`, Qr.marginTop = `-${hr}em`, Qr.transformOrigin = `50% calc(50% + ${hr}em)`
+      if (dd.size !== Xd.d.size) {
+        const Wd = dd.size / 100;
+        md.fontSize = Od ? `calc(max(1.3rem, 18px) * ${Wd})` : `calc(1.3rem * ${Wd})`, md.marginTop = `-${yd}em`, md.transformOrigin = `50% calc(50% + ${yd}em)`
       }
-      return Qr
+      return md
     }
 
-    function Yr(rr) {
+    function Td(dd) {
       let {
-        settings: Sr,
-        touch: Qr,
-        inPreview: Zr,
-        inEditor: ar,
-        pressed: jr = !1,
-        pressRef: Ir
-      } = rr;
-      return (0, mr.jsx)("div", {
-        className: Wr()("Crosshair", {
-          Touch: Qr,
-          CrosshairInPreview: Zr,
-          CrosshairInEditor: ar || Zr
+        settings: Od,
+        touch: md,
+        inPreview: Wd,
+        inEditor: Rd,
+        pressed: Xd = !1,
+        pressRef: Kd
+      } = dd;
+      return (0, od.jsx)("div", {
+        className: Fd()("Crosshair", {
+          Touch: md,
+          CrosshairInPreview: Wd,
+          CrosshairInEditor: Rd || Wd
         }),
-        ref: Ir,
+        ref: Kd,
         style: {
-          transform: Ur(jr, Sr.growOnClick),
-          ...zr(Sr, Qr)
+          transform: qd(Xd, Od.growOnClick),
+          ...bd(Od, md)
         },
         children: "+"
       })
     }
 
-    function nr(rr, Sr) {
-      return rr / Sr + "px"
+    function pd(dd, Od) {
+      return dd / Od + "px"
     }
 
-    function er(rr, Sr, Qr, Zr) {
+    function Yd(dd, Od, md, Wd) {
       return {
-        ...Br(rr, Sr, Qr),
-        width: nr(rr.w, Qr),
-        height: nr(rr.h, Qr),
-        background: Zr
+        ...Ed(dd, Od, md),
+        width: pd(dd.w, md),
+        height: pd(dd.h, md),
+        background: Wd
       }
     }
 
-    function Kr(rr, Sr, Qr) {
+    function gd(dd, Od, md) {
       return {
-        left: nr(rr.x, Sr),
-        top: nr(rr.y, Sr),
-        width: nr(rr.size, Sr),
-        height: nr(rr.size, Sr),
-        borderWidth: nr(rr.border, Sr),
-        borderColor: Qr,
-        background: rr.filled ? Qr : void 0
+        left: pd(dd.x, Od),
+        top: pd(dd.y, Od),
+        width: pd(dd.size, Od),
+        height: pd(dd.size, Od),
+        borderWidth: pd(dd.border, Od),
+        borderColor: md,
+        background: dd.filled ? md : void 0
       }
     }
-    const yr = {
+    const wd = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function Br(rr, Sr, Qr) {
-      const [Zr, Wr] = rr.arm ? yr[rr.arm] : [0, 0], ar = Math.round(Sr * Qr);
+    function Ed(dd, Od, md) {
+      const [Wd, Fd] = dd.arm ? wd[dd.arm] : [0, 0], Rd = Math.round(Od * md);
       return {
-        left: nr(rr.x + Zr * ar, Qr),
-        top: nr(rr.y + Wr * ar, Qr)
+        left: pd(dd.x + Wd * Rd, md),
+        top: pd(dd.y + Fd * Rd, md)
       }
     }
 
-    function Tr(rr) {
-      return rr.arm ? {
-        "data-arm": rr.arm,
-        "data-x": rr.x,
-        "data-y": rr.y
+    function Jd(dd) {
+      return dd.arm ? {
+        "data-arm": dd.arm,
+        "data-x": dd.x,
+        "data-y": dd.y
       } : {}
     }
 
-    function vr(rr) {
+    function Ud(dd) {
       let {
-        settings: Sr,
-        inPreview: Qr,
-        inEditor: Zr,
-        pressed: Ir = !1,
-        spread: Er,
-        spreadRef: pr
-      } = rr;
-      const xr = (0, ar.useRef)(null),
+        settings: Od,
+        inPreview: md,
+        inEditor: Wd,
+        pressed: Kd = !1,
+        spread: vd,
+        spreadRef: Qd
+      } = dd;
+      const td = (0, Rd.useRef)(null),
         {
-          box: Ur,
-          dpr: tr
-        } = function(rr) {
-          const [Sr, Qr] = (0, ar.useState)({
+          box: qd,
+          dpr: Hd
+        } = function(dd) {
+          const [Od, md] = (0, Rd.useState)({
             box: {
               left: 0,
               top: 0,
@@ -516,200 +516,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, ar.useLayoutEffect)((() => {
-            const Sr = rr.current;
-            if (!Sr) return;
-            const Zr = () => {
-              const rr = Sr.getBoundingClientRect(),
-                Zr = window.devicePixelRatio || 1;
-              Qr((Sr => Sr.dpr === Zr && Sr.box.left === rr.left && Sr.box.top === rr.top && Sr.box.width === rr.width && Sr.box.height === rr.height ? Sr : {
+          return (0, Rd.useLayoutEffect)((() => {
+            const Od = dd.current;
+            if (!Od) return;
+            const Wd = () => {
+              const dd = Od.getBoundingClientRect(),
+                Wd = window.devicePixelRatio || 1;
+              md((Od => Od.dpr === Wd && Od.box.left === dd.left && Od.box.top === dd.top && Od.box.width === dd.width && Od.box.height === dd.height ? Od : {
                 box: {
-                  left: rr.left,
-                  top: rr.top,
-                  width: rr.width,
-                  height: rr.height
+                  left: dd.left,
+                  top: dd.top,
+                  width: dd.width,
+                  height: dd.height
                 },
-                dpr: Zr
+                dpr: Wd
               }))
             };
-            Zr();
-            const Wr = new ResizeObserver(Zr);
-            return Wr.observe(Sr), window.addEventListener("resize", Zr), window.addEventListener("scroll", Zr, !0), () => {
-              Wr.disconnect(), window.removeEventListener("resize", Zr), window.removeEventListener("scroll", Zr, !0)
+            Wd();
+            const Fd = new ResizeObserver(Wd);
+            return Fd.observe(Od), window.addEventListener("resize", Wd), window.addEventListener("scroll", Wd, !0), () => {
+              Fd.disconnect(), window.removeEventListener("resize", Wd), window.removeEventListener("scroll", Wd, !0)
             }
-          }), [rr]), Sr
-        }(xr),
-        hr = (0, ar.useRef)(tr);
-      hr.current = tr;
-      const zr = fr(Sr, tr, Ir && Sr.growOnClick ? Nr : 1),
-        Yr = function(rr, Sr, Qr) {
-          const Zr = Math.round((rr.left + rr.width / 2) * Qr - Sr / 2),
-            Wr = Math.round((rr.top + rr.height / 2) * Qr - Sr / 2);
+          }), [dd]), Od
+        }(td),
+        yd = (0, Rd.useRef)(Hd);
+      yd.current = Hd;
+      const bd = hd(Od, Hd, Kd && Od.growOnClick ? Nd : 1),
+        Td = function(dd, Od, md) {
+          const Wd = Math.round((dd.left + dd.width / 2) * md - Od / 2),
+            Fd = Math.round((dd.top + dd.height / 2) * md - Od / 2);
           return {
-            x: Zr / Qr - rr.left,
-            y: Wr / Qr - rr.top
+            x: Wd / md - dd.left,
+            y: Fd / md - dd.top
           }
-        }(Ur, zr.cell, tr),
-        nr = (0, jr.l)(Sr.color),
-        yr = (0, jr.l)(Sr.outlineColor),
-        vr = (0, ar.useRef)(0);
-      (0, ar.useLayoutEffect)((() => {
-        if (pr) return pr.current = rr => {
-          var Sr;
-          vr.current = rr, null === (Sr = xr.current) || void 0 === Sr || Sr.querySelectorAll("[data-arm]").forEach((Sr => {
-            Object.assign(Sr.style, Br(function(rr) {
+        }(qd, bd.cell, Hd),
+        pd = (0, Xd.j)(Od.color),
+        wd = (0, Xd.j)(Od.outlineColor),
+        Ud = (0, Rd.useRef)(0);
+      (0, Rd.useLayoutEffect)((() => {
+        if (Qd) return Qd.current = dd => {
+          var Od;
+          Ud.current = dd, null === (Od = td.current) || void 0 === Od || Od.querySelectorAll("[data-arm]").forEach((Od => {
+            Object.assign(Od.style, Ed(function(dd) {
               return {
-                x: Number(rr.dataset.x),
-                y: Number(rr.dataset.y),
-                arm: rr.dataset.arm
+                x: Number(dd.dataset.x),
+                y: Number(dd.dataset.y),
+                arm: dd.dataset.arm
               }
-            }(Sr), rr, hr.current))
+            }(Od), dd, yd.current))
           }))
         }, () => {
-          pr.current = null
+          Qd.current = null
         }
-      }), [pr]);
-      const Or = null !== Er && void 0 !== Er ? Er : vr.current;
-      return (0, mr.jsx)("div", {
-        ref: xr,
-        className: Wr()("CrosshairShapes", {
-          CrosshairInPreview: Qr,
-          CrosshairInEditor: Zr || Qr,
-          CrosshairSpreads: void 0 !== pr
+      }), [Qd]);
+      const xd = null !== vd && void 0 !== vd ? vd : Ud.current;
+      return (0, od.jsx)("div", {
+        ref: td,
+        className: Fd()("CrosshairShapes", {
+          CrosshairInPreview: md,
+          CrosshairInEditor: Wd || md,
+          CrosshairSpreads: void 0 !== Qd
         }),
-        children: (0, mr.jsx)("div", {
+        children: (0, od.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: Yr.x,
-            top: Yr.y,
-            opacity: Sr.opacity / 100
+            left: Td.x,
+            top: Td.y,
+            opacity: Od.opacity / 100
           },
-          children: (0, mr.jsxs)("div", {
+          children: (0, od.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [zr.ringOutline && (0, mr.jsx)("div", {
+            children: [bd.ringOutline && (0, od.jsx)("div", {
               className: "CrosshairRing",
-              style: Kr(zr.ringOutline, tr, yr)
-            }), zr.outlines.map(((rr, Sr) => (0, mr.jsx)("div", {
+              style: gd(bd.ringOutline, Hd, wd)
+            }), bd.outlines.map(((dd, Od) => (0, od.jsx)("div", {
               className: "CrosshairPart",
-              ...Tr(rr),
-              style: er(rr, Or, tr, yr)
-            }, `o${Sr}`))), zr.ring && (0, mr.jsx)("div", {
+              ...Jd(dd),
+              style: Yd(dd, xd, Hd, wd)
+            }, `o${Od}`))), bd.ring && (0, od.jsx)("div", {
               className: "CrosshairRing",
-              style: Kr(zr.ring, tr, nr)
-            }), zr.fills.map(((rr, Sr) => (0, mr.jsx)("div", {
+              style: gd(bd.ring, Hd, pd)
+            }), bd.fills.map(((dd, Od) => (0, od.jsx)("div", {
               className: "CrosshairPart",
-              ...Tr(rr),
-              style: er(rr, Or, tr, nr)
-            }, `f${Sr}`)))]
+              ...Jd(dd),
+              style: Yd(dd, xd, Hd, pd)
+            }, `f${Od}`)))]
           })
         })
       })
     }
   },
-  35435: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => pr,
-      i: () => hr,
-      m: () => tr
+  35521: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Qd,
+      e: () => yd,
+      h: () => Hd
     });
-    var Zr = Qr(35422);
-    const Wr = "XH1-",
-      ar = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      jr = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      Ir = ["color", "outlineColor"],
-      fr = 1 + 3 * Ir.length + jr.length + 1,
-      Er = Math.ceil(8 * fr / Math.log2(62)),
-      pr = Wr.length + Er;
+    var Wd = md(35508);
+    const Fd = "XH1-",
+      Rd = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      Xd = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      Kd = ["color", "outlineColor"],
+      hd = 1 + 3 * Kd.length + Xd.length + 1,
+      vd = Math.ceil(8 * hd / Math.log2(62)),
+      Qd = Fd.length + vd;
 
-    function xr(rr) {
-      let Sr = 90;
-      for (const Qr of rr) Sr = 31 * Sr + Qr & 255;
-      return Sr
+    function td(dd) {
+      let Od = 90;
+      for (const md of dd) Od = 31 * Od + md & 255;
+      return Od
     }
-    const mr = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      Nr = BigInt(mr.length);
+    const od = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      Nd = BigInt(od.length);
 
-    function Ur(rr, Sr) {
-      let Qr = 0n;
-      for (const Wr of rr) {
-        const rr = mr.indexOf(Wr);
-        if (rr < 0) return null;
-        Qr = Qr * Nr + BigInt(rr)
+    function qd(dd, Od) {
+      let md = 0n;
+      for (const Fd of dd) {
+        const dd = od.indexOf(Fd);
+        if (dd < 0) return null;
+        md = md * Nd + BigInt(dd)
       }
-      if (Qr >> BigInt(8 * Sr) !== 0n) return null;
-      const Zr = [];
-      for (let Wr = 0; Wr < Sr; Wr++) Zr.unshift(Number(0xffn & Qr)), Qr >>= 8n;
-      return Zr
+      if (md >> BigInt(8 * Od) !== 0n) return null;
+      const Wd = [];
+      for (let Fd = 0; Fd < Od; Fd++) Wd.unshift(Number(0xffn & md)), md >>= 8n;
+      return Wd
     }
 
-    function tr(rr) {
-      let Sr = "shapes" === rr.style ? 1 : 0;
-      ar.forEach(((Qr, Zr) => {
-        rr[Qr] && (Sr |= 1 << Zr + 1)
+    function Hd(dd) {
+      let Od = "shapes" === dd.style ? 1 : 0;
+      Rd.forEach(((md, Wd) => {
+        dd[md] && (Od |= 1 << Wd + 1)
       }));
-      const Qr = [Sr];
-      for (const Wr of Ir) {
-        const Sr = (0, Zr.j)(Wr, rr[Wr]);
-        Qr.push(Sr >> 16 & 255, Sr >> 8 & 255, 255 & Sr)
+      const md = [Od];
+      for (const Fd of Kd) {
+        const Od = (0, Wd.f)(Fd, dd[Fd]);
+        md.push(Od >> 16 & 255, Od >> 8 & 255, 255 & Od)
       }
-      for (const Wr of jr) {
+      for (const Fd of Xd) {
         const {
-          min: Sr,
-          step: ar
-        } = Zr.b[Wr];
-        Qr.push(Math.round(((0, Zr.j)(Wr, rr[Wr]) - Sr) / ar))
+          min: Od,
+          step: Rd
+        } = Wd.b[Fd];
+        md.push(Math.round(((0, Wd.f)(Fd, dd[Fd]) - Od) / Rd))
       }
-      return Qr.push(xr(Qr)), Wr + function(rr, Sr) {
-        let Qr = 0n;
-        for (const Wr of rr) Qr = Qr << 8n | BigInt(Wr);
-        let Zr = "";
-        for (let Wr = 0; Wr < Sr; Wr++) Zr = mr[Number(Qr % Nr)] + Zr, Qr /= Nr;
-        return Zr
-      }(Qr, Er)
+      return md.push(td(md)), Fd + function(dd, Od) {
+        let md = 0n;
+        for (const Fd of dd) md = md << 8n | BigInt(Fd);
+        let Wd = "";
+        for (let Fd = 0; Fd < Od; Fd++) Wd = od[Number(md % Nd)] + Wd, md /= Nd;
+        return Wd
+      }(md, vd)
     }
 
-    function hr(rr) {
-      for (const Sr of rr.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Er}})`, "gi"))) {
-        const rr = zr(Ur(Sr[1], fr));
-        if (rr) return rr
+    function yd(dd) {
+      for (const Od of dd.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${vd}})`, "gi"))) {
+        const dd = bd(qd(Od[1], hd));
+        if (dd) return dd
       }
       return null
     }
 
-    function zr(rr) {
-      if (!rr || rr.length !== fr || xr(rr.slice(0, -1)) !== rr[rr.length - 1]) return null;
-      const Sr = rr[0],
-        Qr = {
-          ...Zr.f,
-          style: 1 & Sr ? "shapes" : "classic"
+    function bd(dd) {
+      if (!dd || dd.length !== hd || td(dd.slice(0, -1)) !== dd[dd.length - 1]) return null;
+      const Od = dd[0],
+        md = {
+          ...Wd.d,
+          style: 1 & Od ? "shapes" : "classic"
         };
-      ar.forEach(((rr, Zr) => {
-        Qr[rr] = 0 !== (Sr & 1 << Zr + 1)
+      Rd.forEach(((dd, Wd) => {
+        md[dd] = 0 !== (Od & 1 << Wd + 1)
       }));
-      let Wr = 1;
-      for (const Zr of Ir) Qr[Zr] = rr[Wr] << 16 | rr[Wr + 1] << 8 | rr[Wr + 2], Wr += 3;
-      for (const ar of jr) {
+      let Fd = 1;
+      for (const Wd of Kd) md[Wd] = dd[Fd] << 16 | dd[Fd + 1] << 8 | dd[Fd + 2], Fd += 3;
+      for (const Rd of Xd) {
         const {
-          min: Sr,
-          step: jr
-        } = Zr.b[ar];
-        Qr[ar] = (0, Zr.j)(ar, Sr + rr[Wr] * jr), Wr++
+          min: Od,
+          step: Xd
+        } = Wd.b[Rd];
+        md[Rd] = (0, Wd.f)(Rd, Od + dd[Fd] * Xd), Fd++
       }
-      return Qr
+      return md
     }
   },
-  35422: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Zr,
-      f: () => Wr,
-      j: () => ar,
-      l: () => Er,
-      o: () => fr,
-      r: () => pr,
-      t: () => Ir,
-      u: () => jr
+  35508: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Wd,
+      d: () => Fd,
+      f: () => Rd,
+      j: () => vd,
+      n: () => hd,
+      o: () => Qd,
+      q: () => Kd,
+      u: () => Xd
     });
-    const Zr = {
+    const Wd = {
         opacity: {
           min: 5,
           max: 100,
@@ -766,7 +766,7 @@ export const modules = {
           step: 1
         }
       },
-      Wr = Object.freeze({
+      Fd = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -787,533 +787,533 @@ export const modules = {
         forGuns: !1
       });
 
-    function ar(rr, Sr) {
-      var Qr;
+    function Rd(dd, Od) {
+      var md;
       const {
-        min: ar,
-        max: jr,
-        step: Ir
-      } = Zr[rr];
-      if (!Number.isFinite(Sr)) return Wr[rr];
-      const fr = (null !== (Qr = String(Ir).split(".")[1]) && void 0 !== Qr ? Qr : "").length,
-        Er = Number((Math.round(Sr / Ir) * Ir).toFixed(fr));
-      return Math.min(jr, Math.max(ar, Er))
+        min: Rd,
+        max: Xd,
+        step: Kd
+      } = Wd[dd];
+      if (!Number.isFinite(Od)) return Fd[dd];
+      const hd = (null !== (md = String(Kd).split(".")[1]) && void 0 !== md ? md : "").length,
+        vd = Number((Math.round(Od / Kd) * Kd).toFixed(hd));
+      return Math.min(Xd, Math.max(Rd, vd))
     }
 
-    function jr(rr, Sr, Qr) {
-      const Zr = "number" === typeof Qr ? ar(Sr, Qr) : Qr;
+    function Xd(dd, Od, md) {
+      const Wd = "number" === typeof md ? Rd(Od, md) : md;
       return {
-        ...rr,
-        [Sr]: Zr
+        ...dd,
+        [Od]: Wd
       }
     }
 
-    function Ir(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(Wr).every((Zr => Qr.includes(Zr) || rr[Zr] === Sr[Zr]))
+    function Kd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Fd).every((Wd => md.includes(Wd) || dd[Wd] === Od[Wd]))
     }
 
-    function fr(rr) {
-      return Ir(rr, Wr)
+    function hd(dd) {
+      return Kd(dd, Fd)
     }
 
-    function Er(rr) {
-      return `#${rr.toString(16).padStart(6,"0")}`
+    function vd(dd) {
+      return `#${dd.toString(16).padStart(6,"0")}`
     }
 
-    function pr(rr) {
-      const Sr = /^#?([0-9a-f]{6})$/i.exec(rr.trim());
-      return Sr ? parseInt(Sr[1], 16) : null
+    function Qd(dd) {
+      const Od = /^#?([0-9a-f]{6})$/i.exec(dd.trim());
+      return Od ? parseInt(Od[1], 16) : null
     }
   },
-  35437: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => xr,
-      f: () => mr
+  35524: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => td,
+      g: () => od
     });
-    var Zr = Qr(72),
-      Wr = Qr(43),
-      ar = Qr(35435),
-      jr = Qr(35422);
-    const Ir = "crosshairCode";
-    let fr = null;
-    const Er = new Set;
+    var Wd = md(66),
+      Fd = md(46),
+      Rd = md(35521),
+      Xd = md(35508);
+    const Kd = "crosshairCode";
+    let hd = null;
+    const vd = new Set;
 
-    function pr() {
-      if (null === fr) {
-        var rr;
-        const Sr = Wr.j.getItem(Ir);
-        fr = null !== (rr = "string" === typeof Sr ? (0, ar.i)(Sr) : null) && void 0 !== rr ? rr : jr.f
+    function Qd() {
+      if (null === hd) {
+        var dd;
+        const Od = Fd.k.getItem(Kd);
+        hd = null !== (dd = "string" === typeof Od ? (0, Rd.e)(Od) : null) && void 0 !== dd ? dd : Xd.d
       }
-      return fr
+      return hd
     }
 
-    function xr(rr) {
-      fr = rr, (0, jr.o)(rr) ? Wr.j.removeItem(Ir) : Wr.j.setItem(Ir, (0, ar.m)(rr));
-      for (const Sr of Er) Sr()
+    function td(dd) {
+      hd = dd, (0, Xd.n)(dd) ? Fd.k.removeItem(Kd) : Fd.k.setItem(Kd, (0, Rd.h)(dd));
+      for (const Od of vd) Od()
     }
 
-    function mr() {
-      const [rr, Sr] = (0, Zr.useState)(pr);
-      return (0, Zr.useEffect)((() => {
-        const rr = () => {
-          Sr(pr())
+    function od() {
+      const [dd, Od] = (0, Wd.useState)(Qd);
+      return (0, Wd.useEffect)((() => {
+        const dd = () => {
+          Od(Qd())
         };
-        return rr(), Qr = rr, Er.add(Qr), () => {
-          Er.delete(Qr)
+        return dd(), md = dd, vd.add(md), () => {
+          vd.delete(md)
         };
-        var Qr
-      }), []), rr
+        var md
+      }), []), dd
     }
   },
-  10070: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Wr,
-      c: () => jr
+  10106: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Fd,
+      f: () => Xd
     });
-    var Zr = Qr(194);
-    class Wr {
+    var Wd = md(210);
+    class Fd {
       constructor() {
         this.marks = new Map, this.fromTap = !1
       }
-      mark(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        this.marks.has(rr) || this.marks.set(rr, Sr)
+      mark(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        this.marks.has(dd) || this.marks.set(dd, Od)
       }
       marked() {
-        return Zr.Z.flatMap((rr => {
-          var Sr;
-          const Qr = null !== (Sr = this.marks.get(rr)) && void 0 !== Sr ? Sr : ar.marks.get(rr);
-          return void 0 === Qr ? [] : [
-            [rr, Qr]
+        return Wd.V.flatMap((dd => {
+          var Od;
+          const md = null !== (Od = this.marks.get(dd)) && void 0 !== Od ? Od : Rd.marks.get(dd);
+          return void 0 === md ? [] : [
+            [dd, md]
           ]
         }))
       }
     }
-    const ar = new Wr;
+    const Rd = new Fd;
 
-    function jr(rr) {
-      ar.mark(rr)
+    function Xd(dd) {
+      Rd.mark(dd)
     }
   },
-  38191: (rr, Sr, Qr) => {
-    function Zr(rr, Sr, Qr, Zr) {
-      return !(Qr && !rr.aimable) && (!Sr || rr.gun && "head" !== Zr)
+  38273: (dd, Od, md) => {
+    function Wd(dd, Od, md, Wd) {
+      return !(md && !dd.aimable) && (!Od || dd.gun && "head" !== Wd)
     }
 
-    function Wr(rr) {
-      return Math.max(.1 * rr, 1)
+    function Fd(dd) {
+      return Math.max(.1 * dd, 1)
     }
 
-    function ar(rr, Sr) {
-      return !rr && Sr
+    function Rd(dd, Od) {
+      return !dd && Od
     }
-    Qr.d(Sr, {
-      c: () => ar,
-      d: () => Wr,
-      g: () => Zr
+    md.d(Od, {
+      c: () => Rd,
+      g: () => Fd,
+      j: () => Wd
     })
   },
-  38193: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Ir,
-      e: () => jr
+  38280: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Kd,
+      h: () => Xd
     });
-    let Zr = null;
-    const Wr = {
+    let Wd = null;
+    const Fd = {
         crosshairAccuracy: [],
         turnDamageIndicators: [],
         turnSoundCues: []
       },
-      ar = {
-        crosshairAccuracy: rr => {
-          const Sr = Wr.crosshairAccuracy.at(-1);
-          Sr ? Sr.hook(rr) : Zr = rr
+      Rd = {
+        crosshairAccuracy: dd => {
+          const Od = Fd.crosshairAccuracy.at(-1);
+          Od ? Od.hook(dd) : Wd = dd
         },
-        turnDamageIndicators: rr => {
-          var Sr;
-          null === (Sr = Wr.turnDamageIndicators.at(-1)) || void 0 === Sr || Sr.hook(rr)
+        turnDamageIndicators: dd => {
+          var Od;
+          null === (Od = Fd.turnDamageIndicators.at(-1)) || void 0 === Od || Od.hook(dd)
         },
-        turnSoundCues: rr => {
-          var Sr;
-          null === (Sr = Wr.turnSoundCues.at(-1)) || void 0 === Sr || Sr.hook(rr)
+        turnSoundCues: dd => {
+          var Od;
+          null === (Od = Fd.turnSoundCues.at(-1)) || void 0 === Od || Od.hook(dd)
         }
       };
 
-    function jr(rr, Sr) {
-      const Qr = {
-          hook: Sr
+    function Xd(dd, Od) {
+      const md = {
+          hook: Od
         },
-        jr = Wr[rr];
-      if (jr.push(Qr), "crosshairAccuracy" === rr && null !== Zr) {
-        const rr = Zr;
-        Zr = null, ar.crosshairAccuracy(rr)
+        Xd = Fd[dd];
+      if (Xd.push(md), "crosshairAccuracy" === dd && null !== Wd) {
+        const dd = Wd;
+        Wd = null, Rd.crosshairAccuracy(dd)
       }
       return () => {
-        const rr = jr.indexOf(Qr); - 1 !== rr && jr.splice(rr, 1)
+        const dd = Xd.indexOf(md); - 1 !== dd && Xd.splice(dd, 1)
       }
     }
 
-    function Ir() {
-      return ar
+    function Kd() {
+      return Rd
     }
   },
-  35416: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar,
-      d: () => Wr
+  35499: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      f: () => Fd
     });
-    var Zr = Qr(26);
+    var Wd = md(29);
 
-    function Wr(rr, Sr) {
-      return rr && !Sr
+    function Fd(dd, Od) {
+      return dd && !Od
     }
 
-    function ar() {
-      return Wr(Zr.c.get("isTouchScreen"), Zr.c.get("clientEscMenuOptions").touchActionButtons)
+    function Rd() {
+      return Fd(Wd.e.get("isTouchScreen"), Wd.e.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  9818: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar,
-      f: () => Wr
+  9850: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      d: () => Fd
     });
-    let Zr = null;
-    const Wr = function(rr) {
-        const Sr = {
-          cycle: rr,
+    let Wd = null;
+    const Fd = function(dd) {
+        const Od = {
+          cycle: dd,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Zr = Sr, () => {
-          Zr === Sr && (Zr = null)
+        return Wd = Od, () => {
+          Wd === Od && (Wd = null)
         }
       },
-      ar = () => {
-        var rr;
-        return null !== (rr = Zr) && void 0 !== rr && rr.canCycle() ? Zr.cycle : null
+      Rd = () => {
+        var dd;
+        return null !== (dd = Wd) && void 0 !== dd && dd.canCycle() ? Wd.cycle : null
       }
   },
-  37866: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar,
-      i: () => fr,
-      j: () => jr
+  37958: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      d: () => hd,
+      e: () => Xd
     });
-    var Zr = Qr(688),
-      Wr = Qr(2383);
+    var Wd = md(701),
+      Fd = md(2402);
 
-    function ar(rr) {
-      return rr === (0, Wr.e)().WC ? (0, Wr.e)().fC : rr
+    function Rd(dd) {
+      return dd === (0, Fd.c)().bV ? (0, Fd.c)().YV : dd
     }
 
-    function jr(rr) {
-      return !(0, Zr.L)(rr) && ar(rr) === (0, Wr.e)().fC
+    function Xd(dd) {
+      return !(0, Wd.O)(dd) && Rd(dd) === (0, Fd.c)().YV
     }
-    const Ir = "gravity";
+    const Kd = "gravity";
 
-    function fr() {
-      return (0, Wr.e)().physics[Ir][1]
+    function hd() {
+      return (0, Fd.c)().physics[Kd][1]
     }
   },
-  37975: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      InGameUi: () => vr.e,
-      LobbyLeaderboard: () => Or.b,
-      loadCharacterCustomisationUI: () => Lr,
-      loadCharacterPreview: () => lr,
-      matchmakeAndPlay: () => qr,
-      matchmakeForAhead: () => Ir.d,
-      setUpGame: () => Xr
+  38063: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      InGameUi: () => Ud.e,
+      LobbyLeaderboard: () => xd.c,
+      loadCharacterCustomisationUI: () => Bd,
+      loadCharacterPreview: () => Sd,
+      matchmakeAndPlay: () => Ad,
+      matchmakeForAhead: () => Kd.f,
+      setUpGame: () => sd
     });
-    var Zr = Qr(1295),
-      Wr = Qr(161),
-      ar = Qr(26),
-      jr = Qr(37977),
-      Ir = Qr(37985),
-      fr = Qr(2114),
-      Er = Qr(38026);
+    var Wd = md(1304),
+      Fd = md(180),
+      Rd = md(29),
+      Xd = md(38068),
+      Kd = md(38071),
+      hd = md(2116),
+      vd = md(38112);
 
-    function pr() {
-      return !1 !== fr.d.get("canCustomiseChar")
+    function Qd() {
+      return !1 !== hd.e.get("canCustomiseChar")
     }
-    let xr = !1;
-    var mr = Qr(1422),
-      Nr = Qr(5433),
-      Ur = Qr(1304),
-      tr = Qr(272),
-      hr = Qr(4832),
-      zr = Qr(5428),
-      Yr = Qr(10068);
+    let td = !1;
+    var od = md(1415),
+      Nd = md(5341),
+      qd = md(1306),
+      Hd = md(285),
+      yd = md(4820),
+      bd = md(5336),
+      Td = md(10097);
 
-    function nr() {
-      return function(rr) {
-        var Sr;
-        return !0 !== (null === rr || void 0 === rr ? void 0 : rr.saveData) && !/2g$/.test(null !== (Sr = null === rr || void 0 === rr ? void 0 : rr.effectiveType) && void 0 !== Sr ? Sr : "")
+    function pd() {
+      return function(dd) {
+        var Od;
+        return !0 !== (null === dd || void 0 === dd ? void 0 : dd.saveData) && !/2g$/.test(null !== (Od = null === dd || void 0 === dd ? void 0 : dd.effectiveType) && void 0 !== Od ? Od : "")
       }(navigator.connection)
     }
 
-    function er() {
+    function Yd() {
       return {
-        joinStarted: zr.d,
-        language: Ur.f.get().getCurrentLanguageCode()
+        joinStarted: bd.d,
+        language: qd.f.get().getCurrentLanguageCode()
       }
     }
 
-    function Kr() {
-      return new Promise((rr => {
-        (0, Nr.u)(rr)
+    function gd() {
+      return new Promise((dd => {
+        (0, Nd.y)(dd)
       }))
     }
 
-    function yr() {
-      (0, zr.d)() || (0, Yr.loadWasmPlayAhead)().catch((rr => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", rr)
+    function wd() {
+      (0, bd.d)() || (0, Td.loadWasmPlayAhead)().catch((dd => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", dd)
       }))
     }
-    var Br = Qr(4681),
-      Tr = Qr(829);
-    var vr = Qr(38039),
-      Or = Qr(38468);
+    var Ed = md(4664),
+      Jd = md(843);
+    var Ud = md(38128),
+      xd = md(38540);
 
-    function Lr() {
-      return Qr.e(252).then((() => Qr(45287)))
+    function Bd() {
+      return md.e(252).then((() => md(45327)))
     }
 
-    function lr() {
-      return Qr.e(611).then((() => Qr(45289)))
+    function Sd() {
+      return md.e(611).then((() => md(45334)))
     }
-    async function Xr() {
+    async function sd() {
       return await async function() {
-        if ((0, Nr.f)()) {
-          if (nr()) try {
-            await (0, Nr.t)("wasm loads ahead");
-            const rr = await (0, Yr.importClientLoad)();
-            await Promise.race([rr.startLoadAheadOfJoin(er()), Kr()]), await (0, Nr.t)("wasm previews");
+        if ((0, Nd.e)()) {
+          if (pd()) try {
+            await (0, Nd.u)("wasm loads ahead");
+            const dd = await (0, Td.importClientLoad)();
+            await Promise.race([dd.startLoadAheadOfJoin(Yd()), gd()]), await (0, Nd.u)("wasm previews");
             const {
-              pagePreviews: Sr
-            } = await Promise.all([Qr.e(177), Qr.e(91), Qr.e(225), Qr.e(158), Qr.e(246), Qr.e(245), Qr.e(244), Qr.e(223), Qr.e(50), Qr.e(161), Qr.e(243), Qr.e(72)]).then((() => Qr(45305)));
-            Sr().prefetch((0, Nr.f)() ? Nr.t : void 0)
-          } catch (rr) {
-            console.warn("[bloxd-wasm-client] the previews' loads ahead of need did not start: the open loads them itself", rr)
+              pagePreviews: Od
+            } = await Promise.all([md.e(177), md.e(91), md.e(225), md.e(158), md.e(246), md.e(245), md.e(244), md.e(223), md.e(50), md.e(161), md.e(243), md.e(72)]).then((() => md(45347)));
+            Od().prefetch((0, Nd.e)() ? Nd.u : void 0)
+          } catch (dd) {
+            console.warn("[bloxd-wasm-client] the previews' loads ahead of need did not start: the open loads them itself", dd)
           }
-          await Kr()
+          await gd()
         }
-      }(), (0, Yr.loadWasmPreviews)()
+      }(), (0, Td.loadWasmPreviews)()
     }
-    xr || (xr = !0, document.addEventListener("keydown", (rr => {
-      (0, Er.b)(rr, pr)
-    }))), nr() && (0, hr.g)((() => {
-      (0, zr.d)() || (0, Yr.importClientLoad)().then((async rr => {
-        if ((0, zr.d)()) return;
-        const Sr = rr.startLoadAheadOfJoin(er());
-        (0, tr.c)((() => {
-          (0, zr.d)() || rr.probeWebgl2AheadOfJoin()
-        })), await Sr, (0, tr.c)(yr)
-      }), (rr => {
-        console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", rr)
+    td || (td = !0, document.addEventListener("keydown", (dd => {
+      (0, vd.d)(dd, Qd)
+    }))), pd() && (0, yd.e)((() => {
+      (0, bd.d)() || (0, Td.importClientLoad)().then((async dd => {
+        if ((0, bd.d)()) return;
+        const Od = dd.startLoadAheadOfJoin(Yd());
+        (0, Hd.e)((() => {
+          (0, bd.d)() || dd.probeWebgl2AheadOfJoin()
+        })), await Od, (0, Hd.e)(wd)
+      }), (dd => {
+        console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", dd)
       }))
     }));
-    const Pr = ar.c.get("router");
-    null === Pr ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function rr(Sr) {
-      if ((0, Tr.b)(Sr.state.location.pathname)) return void(0, Yr.loadWasmPlay)().catch((() => {}));
-      const Qr = Sr.subscribe((Zr => {
-        (0, Tr.b)(Zr.location.pathname) && (Qr(), (0, Br.i)().then((() => {
-          rr(Sr)
+    const ud = Rd.e.get("router");
+    null === ud ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function dd(Od) {
+      if ((0, Jd.e)(Od.state.location.pathname)) return void(0, Td.loadWasmPlay)().catch((() => {}));
+      const md = Od.subscribe((Wd => {
+        (0, Jd.e)(Wd.location.pathname) && (md(), (0, Ed.e)().then((() => {
+          dd(Od)
         })))
       }))
-    }(Pr), (0, jr.e)();
-    const Hr = (0, Ir.c)((async function(rr, Sr) {
+    }(ud), (0, Xd.d)();
+    const Vd = (0, Kd.d)((async function(dd, Od) {
       let {
-        place: Qr,
-        userContext: ar,
-        direct: jr,
-        matchedAt: Ir,
-        rematch: fr
-      } = rr;
-      const Er = jr ? 1 / 0 : Ir;
-      let pr;
+        place: md,
+        userContext: Rd,
+        direct: Xd,
+        matchedAt: Kd,
+        rematch: hd
+      } = dd;
+      const vd = Xd ? 1 / 0 : Kd;
+      let Qd;
       try {
-        pr = await (0, Yr.loadWasmPlay)()
-      } catch (xr) {
-        return console.error("The wasm client did not load:", xr), (0, mr.m)({
+        Qd = await (0, Td.loadWasmPlay)()
+      } catch (td) {
+        return console.error("The wasm client did not load:", td), (0, od.l)({
           websocketUrl: null
-        }), Zr.e.errorWithCode(String(xr), Wr.i.CONNECT_TO_GAME_SERVER, {
-          error: xr,
-          severity: Sr.aborted ? "low" : "medium",
-          Rr: Sr.aborted
+        }), Wd.e.errorWithCode(String(td), Fd.l.CONNECT_TO_GAME_SERVER, {
+          error: td,
+          severity: Od.aborted ? "low" : "medium",
+          Ad: Od.aborted
         })
       }
-      return pr.playWasmGame({
-        userContext: ar,
-        place: Qr,
-        matchedAt: Er,
-        rematch: fr
-      }, Sr)
+      return Qd.playWasmGame({
+        userContext: Rd,
+        place: md,
+        matchedAt: vd,
+        rematch: hd
+      }, Od)
     }));
 
-    function qr() {
-      return (0, Yr.loadWasmPlay)().catch((() => {})), Hr(...arguments)
+    function Ad() {
+      return (0, Td.loadWasmPlay)().catch((() => {})), Vd(...arguments)
     }
   },
-  10068: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      importClientLoad: () => xr,
-      loadWasmPlay: () => Ur,
-      loadWasmPlayAhead: () => tr,
-      loadWasmPreviews: () => hr
+  10097: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      importClientLoad: () => td,
+      loadWasmPlay: () => qd,
+      loadWasmPlayAhead: () => Hd,
+      loadWasmPreviews: () => yd
     });
-    var Zr = Qr(4354),
-      Wr = Qr(3216),
-      ar = Qr(2304),
-      jr = Qr(5411),
-      Ir = Qr(4759),
-      fr = Qr(5428),
-      Er = Qr(10070);
-    let pr = null;
+    var Wd = md(4365),
+      Fd = md(3206),
+      Rd = md(2319),
+      Xd = md(5318),
+      Kd = md(4734),
+      hd = md(5336),
+      vd = md(10106);
+    let Qd = null;
 
-    function xr() {
-      return Promise.all([Qr.e(91), Qr.e(105), Qr.e(241), Qr.e(158), Qr.e(245), Qr.e(161), Qr.e(256), Qr.e(71)]).then((() => Qr(42541)))
+    function td() {
+      return Promise.all([md.e(91), md.e(105), md.e(241), md.e(158), md.e(245), md.e(161), md.e(256), md.e(71)]).then((() => md(42638)))
     }
 
-    function mr() {
-      return Promise.all([Qr.e(88), Qr.e(91), Qr.e(105), Qr.e(241), Qr.e(158), Qr.e(245), Qr.e(223), Qr.e(161), Qr.e(251), Qr.e(243), Qr.e(103), Qr.e(247), Qr.e(256), Qr.e(76)]).then((() => Qr(42720)))
+    function od() {
+      return Promise.all([md.e(88), md.e(91), md.e(105), md.e(241), md.e(158), md.e(245), md.e(223), md.e(161), md.e(251), md.e(243), md.e(103), md.e(247), md.e(256), md.e(76)]).then((() => md(42818)))
     }
 
-    function Nr() {
-      Promise.all([Qr.e(85), Qr.e(89), Qr.e(86), Qr.e(87), Qr.e(88), Qr.e(105), Qr.e(102), Qr.e(307), Qr.e(127), Qr.e(281), Qr.e(255), Qr.e(247), Qr.e(55)]).then((() => Qr(42871))).catch((() => {}))
+    function Nd() {
+      Promise.all([md.e(85), md.e(89), md.e(86), md.e(87), md.e(88), md.e(105), md.e(102), md.e(307), md.e(127), md.e(281), md.e(255), md.e(247), md.e(55)]).then((() => md(42968))).catch((() => {}))
     }
 
-    function Ur() {
-      return jr.e.cancelDownloadForJoin(), (0, Ir.d)(), (0, Wr.g)(), (0, fr.e)(), (0, ar.j)(), Nr(), xr().then((rr => {
+    function qd() {
+      return Xd.b.cancelDownloadForJoin(), (0, Kd.c)(), (0, Fd.f)(), (0, hd.e)(), (0, Rd.g)(), Nd(), td().then((dd => {
         let {
-          startJoinLoad: Sr
-        } = rr;
-        Sr()
-      }), (() => {})), pr ??= mr().then((rr => ((0, Er.c)("phase_chunk"), rr.startWasmPlay(), (0, Er.c)("phase_start"), rr.followPageUiPack((rr => {
-        Zr.d.showGamePack(rr)
-      })), rr)), (rr => {
-        throw pr = null, rr
-      })), pr
+          startJoinLoad: Od
+        } = dd;
+        Od()
+      }), (() => {})), Qd ??= od().then((dd => ((0, vd.f)("phase_chunk"), dd.startWasmPlay(), (0, vd.f)("phase_start"), dd.followPageUiPack((dd => {
+        Wd.c.showGamePack(dd)
+      })), dd)), (dd => {
+        throw Qd = null, dd
+      })), Qd
     }
 
-    function tr() {
-      return Nr(), Qr.e(132).then((() => Qr(42906))).catch((() => {})), mr().then((() => {
-        (0, Er.c)("phase_chunk")
+    function Hd() {
+      return Nd(), md.e(132).then((() => md(42999))).catch((() => {})), od().then((() => {
+        (0, vd.f)("phase_chunk")
       }))
     }
 
-    function hr() {
-      return mr().then((rr => {
-        rr.startWasmPreviews(), rr.prefetchWasmPreviews()
+    function yd() {
+      return od().then((dd => {
+        dd.startWasmPreviews(), dd.prefetchWasmPreviews()
       }))
     }
   },
-  37843: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Tr
+  37939: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Jd
     });
-    var Zr = Qr(37851),
-      Wr = Qr(208),
-      ar = Qr(5681),
-      jr = Qr(37853),
-      Ir = Qr(37859),
-      fr = Qr(37927),
-      Er = Qr(37866),
-      pr = Qr(388),
-      xr = Qr.n(pr),
-      mr = Qr(2383),
-      Nr = Qr(37924),
-      Ur = Qr(34),
-      tr = Qr(26),
-      hr = Qr(37875),
-      zr = Qr(37884),
-      Yr = Qr(37893),
-      nr = Qr(37902),
-      er = Qr(37915);
-    const Kr = new Set(["note"]);
-    const yr = {
-      stop: () => yr,
-      fade: () => yr,
-      rate: () => yr,
+    var Wd = md(37942),
+      Fd = md(218),
+      Rd = md(5641),
+      Xd = md(37948),
+      Kd = md(37955),
+      hd = md(38006),
+      vd = md(37958),
+      Qd = md(415),
+      td = md.n(Qd),
+      od = md(2402),
+      Nd = md(38003),
+      qd = md(32),
+      Hd = md(29),
+      yd = md(37965),
+      bd = md(37974),
+      Td = md(37982),
+      pd = md(37989),
+      Yd = md(37996);
+    const gd = new Set(["note"]);
+    const wd = {
+      stop: () => wd,
+      fade: () => wd,
+      rate: () => wd,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => yr,
-      setPannerAttr: () => yr,
-      setPosition: () => yr
+      setRelativeVolume: () => wd,
+      setPannerAttr: () => wd,
+      setPosition: () => wd
     };
-    class Br {
-      constructor(rr) {
-        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new fr.k, this._howl = (0, Ir.countDecodesAs)(new ar.Howl({
-          src: [...(0, Zr.r)(rr).src],
+    class Ed {
+      constructor(dd) {
+        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new hd.h, this._howl = (0, Kd.countDecodesAs)(new Rd.Howl({
+          src: [...(0, Wd.t)(dd).src],
           pool: 15
         }), "sound"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Sr = this._howl.play(jr.e);
-        rr && this._howl.loop(!0, Sr);
-        let Qr = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), Sr);
-        const Zr = {
+        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Od = this._howl.play(Xd.b);
+        dd && this._howl.loop(!0, Od);
+        let md = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), Od);
+        const Wd = {
           stop: () => {
-            var rr;
-            return null === (rr = this.liveHowl()) || void 0 === rr || rr.stop(Sr), Zr
+            var dd;
+            return null === (dd = this.liveHowl()) || void 0 === dd || dd.stop(Od), Wd
           },
-          fade: (rr, Qr, Wr) => {
-            var ar;
-            return null === (ar = this.liveHowl()) || void 0 === ar || ar.fade(rr, Qr, Wr, Sr), Zr
+          fade: (dd, md, Fd) => {
+            var Rd;
+            return null === (Rd = this.liveHowl()) || void 0 === Rd || Rd.fade(dd, md, Fd, Od), Wd
           },
-          rate: rr => {
-            var Qr;
-            return null === (Qr = this.liveHowl()) || void 0 === Qr || Qr.rate(rr, Sr), Zr
+          rate: dd => {
+            var md;
+            return null === (md = this.liveHowl()) || void 0 === md || md.rate(dd, Od), Wd
           },
-          stopsAtOnce: () => this._howl.playing(Sr) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(Od) && !this._howl._playLock,
           isAlive: () => {
-            const rr = this._howl._soundById(Sr);
-            return !this._loadFailed && !!rr && !rr._ended
+            const dd = this._howl._soundById(Od);
+            return !this._loadFailed && !!dd && !dd._ended
           },
-          getDurationMs: () => this._howl._soundById(Sr) ? 1e3 * this._howl.duration(Sr) / this._howl.rate(Sr) : 0,
-          getVolume: () => Qr * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => Qr,
-          setRelativeVolume: rr => {
-            var Wr;
-            if (rr > 1) throw new Error("Volume should be <= 1");
-            return Qr = tr.c.get("soundOnFromAd") ? rr : 0, null === (Wr = this.liveHowl()) || void 0 === Wr || Wr.volume(Math.min(1, Qr * this._volumeMultiplier.getTotalMultipliedVal()), Sr), Zr
+          getDurationMs: () => this._howl._soundById(Od) ? 1e3 * this._howl.duration(Od) / this._howl.rate(Od) : 0,
+          getVolume: () => md * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => md,
+          setRelativeVolume: dd => {
+            var Fd;
+            if (dd > 1) throw new Error("Volume should be <= 1");
+            return md = Hd.e.get("soundOnFromAd") ? dd : 0, null === (Fd = this.liveHowl()) || void 0 === Fd || Fd.volume(Math.min(1, md * this._volumeMultiplier.getTotalMultipliedVal()), Od), Wd
           },
-          setPannerAttr: rr => {
+          setPannerAttr: dd => {
             let {
-              coneInnerAngle: Qr,
-              coneOuterAngle: Wr = 360,
-              coneOuterGain: ar,
-              distanceModel: jr,
-              maxDistance: Ir,
-              panningModel: fr,
-              refDistance: Er,
-              rolloffFactor: pr
-            } = rr;
+              coneInnerAngle: md,
+              coneOuterAngle: Fd = 360,
+              coneOuterGain: Rd,
+              distanceModel: Xd,
+              maxDistance: Kd,
+              panningModel: hd,
+              refDistance: vd,
+              rolloffFactor: Qd
+            } = dd;
             return this._setPannerAttr({
-              id: Sr,
-              coneInnerAngle: Qr,
-              coneOuterAngle: Wr,
-              coneOuterGain: ar,
-              distanceModel: jr,
-              maxDistance: Ir,
-              panningModel: fr,
-              refDistance: Er,
-              rolloffFactor: pr
-            }), Zr
+              id: Od,
+              coneInnerAngle: md,
+              coneOuterAngle: Fd,
+              coneOuterGain: Rd,
+              distanceModel: Xd,
+              maxDistance: Kd,
+              panningModel: hd,
+              refDistance: vd,
+              rolloffFactor: Qd
+            }), Wd
           },
-          setPosition: rr => {
-            var Qr;
-            return null === (Qr = this.liveHowl()) || void 0 === Qr || Qr.pos(rr[2], rr[1], rr[0], Sr), Zr
+          setPosition: dd => {
+            var md;
+            return null === (md = this.liveHowl()) || void 0 === md || md.pos(dd[2], dd[1], dd[0], Od), Wd
           }
         };
-        return Zr
+        return Wd
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -1322,198 +1322,198 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, jr.g)(this._howl, (() => {
+        (0, Xd.e)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(rr) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", rr), this._howl.volume(rr)
+      setGlobalVolume(dd) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", dd), this._howl.volume(dd)
       }
-      _setPannerAttr(rr) {
+      _setPannerAttr(dd) {
         let {
-          id: Sr,
-          coneInnerAngle: Qr = 360,
-          coneOuterAngle: Zr = 360,
-          coneOuterGain: Wr = 0,
-          distanceModel: ar = "inverse",
-          maxDistance: jr = 1e3,
-          panningModel: Ir = "HRTF",
-          refDistance: fr = Nr.h,
-          rolloffFactor: Er = 1
-        } = rr;
-        const pr = this.liveHowl();
-        if (null === pr) return;
-        pr.pannerAttr({
-          coneOuterAngle: Zr
-        }, Sr);
-        const xr = {
-          coneInnerAngle: Qr,
-          coneOuterAngle: Zr,
-          coneOuterGain: Wr,
-          distanceModel: ar,
-          maxDistance: jr,
-          panningModel: Ir,
-          refDistance: fr,
-          rolloffFactor: Er
+          id: Od,
+          coneInnerAngle: md = 360,
+          coneOuterAngle: Wd = 360,
+          coneOuterGain: Fd = 0,
+          distanceModel: Rd = "inverse",
+          maxDistance: Xd = 1e3,
+          panningModel: Kd = "HRTF",
+          refDistance: hd = Nd.i,
+          rolloffFactor: vd = 1
+        } = dd;
+        const Qd = this.liveHowl();
+        if (null === Qd) return;
+        Qd.pannerAttr({
+          coneOuterAngle: Wd
+        }, Od);
+        const td = {
+          coneInnerAngle: md,
+          coneOuterAngle: Wd,
+          coneOuterGain: Fd,
+          distanceModel: Rd,
+          maxDistance: Xd,
+          panningModel: Kd,
+          refDistance: hd,
+          rolloffFactor: vd
         };
-        pr.pannerAttr(xr, Sr)
+        Qd.pannerAttr(td, Od)
       }
     }
-    const Tr = new class {
+    const Jd = new class {
       constructor() {
-        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new hr.d, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, Ur.i.subscribe("appManagerUpdated|soundVolume", (rr => {
-          const Sr = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
-          for (const Qr of Sr) Qr.setGlobalVolume(rr)
+        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new yd.d, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, qd.j.subscribe("appManagerUpdated|soundVolume", (dd => {
+          const Od = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
+          for (const md of Od) md.setGlobalVolume(dd)
         }))
       }
-      play(rr, Sr) {
-        var Qr;
-        let ar, jr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (Qr = (0, mr.e)()) || void 0 === Qr ? void 0 : Qr.fC,
-          Ir = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Nr.e,
-          fr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Nr.h,
-          pr = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var Ur;
-        (0, mr.e)() ? ar = !!Array.isArray(jr) || (0, Er.e)(jr) !== (null === (Ur = (0, mr.e)()) || void 0 === Ur ? void 0 : Ur.fC): ar = !1;
-        const tr = (0, Zr.g)(rr),
-          zr = this.loadSound(ar ? this.spatialSounds : this.stereoSounds, rr);
-        if (!ar) {
-          const rr = zr.play(pr);
-          return rr.setRelativeVolume(Sr), rr
+      play(dd, Od) {
+        var md;
+        let Rd, Xd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (md = (0, od.c)()) || void 0 === md ? void 0 : md.YV,
+          Kd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Nd.f,
+          hd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Nd.i,
+          Qd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var qd;
+        (0, od.c)() ? Rd = !!Array.isArray(Xd) || (0, vd.b)(Xd) !== (null === (qd = (0, od.c)()) || void 0 === qd ? void 0 : qd.YV): Rd = !1;
+        const Hd = (0, Wd.j)(dd),
+          bd = this.loadSound(Rd ? this.spatialSounds : this.stereoSounds, dd);
+        if (!Rd) {
+          const dd = bd.play(Qd);
+          return dd.setRelativeVolume(Od), dd
         }
-        const Yr = (0, mr.e)(),
-          nr = Array.isArray(jr) ? jr : Yr.YB.JY(jr),
-          Br = Yr.YB.JY(Yr.fC);
-        if (!nr || xr().sqrDist(nr, Br) > Ir * Ir) return yr;
-        let Tr;
-        if (!pr) {
+        const Td = (0, od.c)(),
+          pd = Array.isArray(Xd) ? Xd : Td.qE.hY(Xd),
+          Ed = Td.qE.hY(Td.YV);
+        if (!pd || td().sqrDist(pd, Ed) > Kd * Kd) return wd;
+        let Jd;
+        if (!Qd) {
           if (!this.spatialVoices.admit({
-              group: Kr.has(tr) ? null : (0, hr.l)(rr),
-              loudness: (0, hr.h)(Sr, xr().Oj(nr, Br), fr),
+              group: gd.has(Hd) ? null : (0, yd.i)(dd),
+              loudness: (0, yd.e)(Od, td().UX(pd, Ed), hd),
               startMs: performance.now(),
               getDurationMs: () => {
-                var rr, Sr;
-                return null !== (rr = null === (Sr = Tr) || void 0 === Sr ? void 0 : Sr.getDurationMs()) && void 0 !== rr ? rr : 0
+                var dd, Od;
+                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.getDurationMs()) && void 0 !== dd ? dd : 0
               },
               isAlive: () => {
-                var rr, Sr;
-                return null !== (rr = null === (Sr = Tr) || void 0 === Sr ? void 0 : Sr.isAlive()) && void 0 !== rr && rr
+                var dd, Od;
+                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.isAlive()) && void 0 !== dd && dd
               },
               canStop: () => {
-                var rr, Sr;
-                return null !== (rr = null === (Sr = Tr) || void 0 === Sr ? void 0 : Sr.stopsAtOnce()) && void 0 !== rr && rr
+                var dd, Od;
+                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.stopsAtOnce()) && void 0 !== dd && dd
               },
               stop: () => {
-                var rr;
-                null === (rr = Tr) || void 0 === rr || rr.stop()
+                var dd;
+                null === (dd = Jd) || void 0 === dd || dd.stop()
               }
-            })) return yr
+            })) return wd
         }
-        return Tr = zr.play(pr), Tr.setRelativeVolume(Sr), Tr.setPannerAttr({
-          refDistance: fr
-        }), Tr.setPosition([nr[0], nr[1] + Wr.i.Uz * Wr.i.playerEyeToHeightRatio, nr[2]]), !pr && (0, er.l)() && (0, er.i)(tr, rr, nr[0] - Br[0], nr[2] - Br[2]), Tr
+        return Jd = bd.play(Qd), Jd.setRelativeVolume(Od), Jd.setPannerAttr({
+          refDistance: hd
+        }), Jd.setPosition([pd[0], pd[1] + Fd.i.yb * Fd.i.playerEyeToHeightRatio, pd[2]]), !Qd && (0, Yd.g)() && (0, Yd.d)(Hd, dd, pd[0] - Ed[0], pd[2] - Ed[2]), Jd
       }
-      preload(rr) {
-        const Sr = (0, Zr.l)(rr) ? [rr] : (0, Zr.t)(rr);
-        if (0 === Sr.length) throw new Error(`Invalid sound name ${rr} (no sound has it or starts with it)`);
-        for (const Qr of Sr) this.loadSound(this.stereoSounds, Qr)
+      preload(dd) {
+        const Od = (0, Wd.o)(dd) ? [dd] : (0, Wd.v)(dd);
+        if (0 === Od.length) throw new Error(`Invalid sound name ${dd} (no sound has it or starts with it)`);
+        for (const md of Od) this.loadSound(this.stereoSounds, md)
       }
-      preloadAtIdle(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nr.c;
-        const Qr = rr.filter((rr => !this.idlePreloads.has(rr)));
-        for (const Wr of Qr) this.idlePreloads.add(Wr);
-        const Zr = this.idlePreloadGeneration;
-        (0, Yr.d)(Qr, {
-          ...Sr,
-          Rr: () => Zr !== this.idlePreloadGeneration,
-          fetchFile: rr => {
-            this.idlePreloads.delete(rr);
+      preloadAtIdle(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pd.c;
+        const md = dd.filter((dd => !this.idlePreloads.has(dd)));
+        for (const Fd of md) this.idlePreloads.add(Fd);
+        const Wd = this.idlePreloadGeneration;
+        (0, Td.b)(md, {
+          ...Od,
+          Ad: () => Wd !== this.idlePreloadGeneration,
+          fetchFile: dd => {
+            this.idlePreloads.delete(dd);
             try {
-              return this.preload(rr), Promise.resolve()
-            } catch (Sr) {
-              return Promise.reject(Sr)
+              return this.preload(dd), Promise.resolve()
+            } catch (Od) {
+              return Promise.reject(Od)
             }
           }
         })
       }
-      loadSound(rr, Sr) {
-        const Qr = rr[Sr];
-        if (Qr) return Qr;
-        const Wr = this.makeSound(rr, Sr);
-        for (const jr of null !== (ar = (0, Zr.n)(Sr)) && void 0 !== ar ? ar : []) {
-          var ar;
-          rr[jr] || this.makeSound(rr, jr)
+      loadSound(dd, Od) {
+        const md = dd[Od];
+        if (md) return md;
+        const Fd = this.makeSound(dd, Od);
+        for (const Xd of null !== (Rd = (0, Wd.s)(Od)) && void 0 !== Rd ? Rd : []) {
+          var Rd;
+          dd[Xd] || this.makeSound(dd, Xd)
         }
-        return Wr
+        return Fd
       }
-      makeSound(rr, Sr) {
-        (0, nr.f)(Sr);
-        const Qr = new Br(Sr);
-        return Qr.setGlobalVolume(tr.c.get("soundVolume")), rr[Sr] = Qr, Qr
+      makeSound(dd, Od) {
+        (0, pd.g)(Od);
+        const md = new Ed(Od);
+        return md.setGlobalVolume(Hd.e.get("soundVolume")), dd[Od] = md, md
       }
       freeSoundsAfterGame() {
         this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
       }
       freeSounds() {
-        for (const rr of [this.stereoSounds, this.spatialSounds])
-          for (const [Sr, Qr] of Object.entries(rr)) !zr.b.has((0, Zr.g)(Sr)) && Qr.loaded() && (Qr.unloadOnceIdle(), delete rr[Sr])
+        for (const dd of [this.stereoSounds, this.spatialSounds])
+          for (const [Od, md] of Object.entries(dd)) !bd.b.has((0, Wd.j)(Od)) && md.loaded() && (md.unloadOnceIdle(), delete dd[Od])
       }
     }
   },
-  37642: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => yr,
-      g: () => Lr,
-      i: () => lr,
-      m: () => Xr
+  37755: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => wd,
+      e: () => Bd,
+      i: () => Sd,
+      m: () => sd
     });
-    var Zr = Qr(37644),
-      Wr = Qr(7878),
-      ar = Qr(7947),
-      jr = Qr(37653),
-      Ir = Qr(37661),
-      fr = Qr(37667),
-      Er = Qr(8285),
-      pr = Qr(8418),
-      xr = Qr(37671),
-      mr = Qr(8637),
-      Nr = Qr(7733),
-      Ur = Qr(8913),
-      tr = Qr(37679),
-      hr = Qr(37684),
-      zr = Qr(8942),
-      Yr = Qr(37689),
-      nr = Qr(37697),
-      er = Qr(379);
-    const Kr = {
-        redTeam: ar.h,
-        blueTeam: hr.c,
-        greenTeam: nr.f,
-        yellowTeam: zr.g,
-        cyanTeam: fr.e,
-        whiteTeam: Nr.faPlus,
-        pinkTeam: pr.d,
-        grayTeam: xr.c,
-        blackTeam: tr.d,
-        orangeTeam: Yr.g,
-        lilacTeam: jr.f,
-        purpleTeam: mr.c,
-        magentaTeam: Ir.f,
-        brownTeam: Zr.d,
-        limeTeam: Wr.faBolt,
-        lightGrayTeam: Er.f,
-        lightBlueTeam: Ur.g
+    var Wd = md(37763),
+      Fd = md(7874),
+      Rd = md(7953),
+      Xd = md(37765),
+      Kd = md(37772),
+      hd = md(37775),
+      vd = md(8286),
+      Qd = md(8407),
+      td = md(37784),
+      od = md(8587),
+      Nd = md(7723),
+      qd = md(8838),
+      Hd = md(37787),
+      yd = md(37789),
+      bd = md(8874),
+      Td = md(37796),
+      pd = md(37801),
+      Yd = md(405);
+    const gd = {
+        redTeam: Rd.e,
+        blueTeam: yd.d,
+        greenTeam: pd.f,
+        yellowTeam: bd.c,
+        cyanTeam: hd.e,
+        whiteTeam: Nd.faPlus,
+        pinkTeam: Qd.e,
+        grayTeam: td.f,
+        blackTeam: Hd.d,
+        orangeTeam: Td.f,
+        lilacTeam: Xd.h,
+        purpleTeam: od.g,
+        magentaTeam: Kd.h,
+        brownTeam: Wd.g,
+        limeTeam: Fd.faBolt,
+        lightGrayTeam: vd.g,
+        lightBlueTeam: qd.e
       },
-      yr = Object.fromEntries(Object.values(Kr).map((rr => [Br(rr), rr])));
+      wd = Object.fromEntries(Object.values(gd).map((dd => [Ed(dd), dd])));
 
-    function Br(rr) {
-      return `team-${rr.iconName}`
+    function Ed(dd) {
+      return `team-${dd.iconName}`
     }
-    const Tr = new Map;
-    for (const [Pr, Hr] of Object.entries(Kr)) {
-      const rr = Br(Hr),
-        Sr = er.K[Pr];
-      Sr && Tr.set(Sr.toLowerCase(), {
-        icon: rr,
+    const Jd = new Map;
+    for (const [ud, Vd] of Object.entries(gd)) {
+      const dd = Ed(Vd),
+        Od = Yd.E[ud];
+      Od && Jd.set(Od.toLowerCase(), {
+        icon: dd,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -1523,46 +1523,46 @@ export const modules = {
         visible: !0
       })
     }
-    let vr = !1;
-    const Or = new Set;
+    let Ud = !1;
+    const xd = new Set;
 
-    function Lr(rr) {
-      if (rr !== vr) {
-        vr = rr;
-        for (const rr of Or) rr()
+    function Bd(dd) {
+      if (dd !== Ud) {
+        Ud = dd;
+        for (const dd of xd) dd()
       }
     }
 
-    function lr(rr) {
-      var Sr;
-      return "string" === typeof rr && vr && null !== (Sr = Tr.get(rr.toLowerCase())) && void 0 !== Sr ? Sr : null
+    function Sd(dd) {
+      var Od;
+      return "string" === typeof dd && Ud && null !== (Od = Jd.get(dd.toLowerCase())) && void 0 !== Od ? Od : null
     }
 
-    function Xr(rr) {
-      return Or.add(rr), () => {
-        Or.delete(rr)
+    function sd(dd) {
+      return xd.add(dd), () => {
+        xd.delete(dd)
       }
     }
   },
-  37701: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      B: () => zr,
-      D: () => nr,
-      c: () => Wr,
-      e: () => Nr,
-      g: () => jr,
-      h: () => Ur,
-      k: () => Yr,
-      n: () => mr,
-      r: () => er,
-      s: () => ar,
-      t: () => pr,
-      u: () => xr,
-      x: () => tr,
-      z: () => hr
+  37819: (dd, Od, md) => {
+    md.d(Od, {
+      A: () => td,
+      E: () => Hd,
+      F: () => yd,
+      J: () => bd,
+      K: () => pd,
+      c: () => Fd,
+      f: () => Nd,
+      g: () => Xd,
+      k: () => qd,
+      o: () => Td,
+      p: () => od,
+      t: () => Yd,
+      w: () => Rd,
+      z: () => Qd
     });
-    var Zr = Qr(2049);
-    const Wr = [{
+    var Wd = md(2057);
+    const Fd = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1579,68 +1579,68 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function ar(rr) {
-      return (0, Zr.r)(rr.toWellFormed().replace(/\uFFFD+/g, "\ufffd"))
+    function Rd(dd) {
+      return (0, Wd.v)(dd.toWellFormed().replace(/\uFFFD+/g, "\ufffd"))
     }
 
-    function jr(rr, Sr) {
+    function Xd(dd, Od) {
       const {
-        numLines: Qr,
-        charsPerLine: Zr
-      } = Wr[Sr];
-      return Kr(rr, Qr, Zr, !1)
+        numLines: md,
+        charsPerLine: Wd
+      } = Fd[Od];
+      return gd(dd, md, Wd, !1)
     }
-    const Ir = 7 / 8,
-      fr = .25,
-      Er = 8;
+    const Kd = 7 / 8,
+      hd = .25,
+      vd = 8;
 
-    function pr(rr, Sr) {
+    function Qd(dd, Od) {
       return {
-        width: Math.min(rr, Er) - 2 * fr,
-        height: Math.min(Sr, Er) - 2 * fr
+        width: Math.min(dd, vd) - 2 * hd,
+        height: Math.min(Od, vd) - 2 * hd
       }
     }
 
-    function xr(rr, Sr, Qr) {
-      const Zr = pr(rr, Sr),
+    function td(dd, Od, md) {
+      const Wd = Qd(dd, Od),
         {
-          numLines: ar,
-          charsPerLine: jr
-        } = Wr[Qr];
+          numLines: Rd,
+          charsPerLine: Xd
+        } = Fd[md];
       return {
-        numLines: Math.max(1, Math.floor(ar / Ir * Zr.height)),
-        charsPerLine: Math.max(1, Math.floor(jr * Zr.width))
+        numLines: Math.max(1, Math.floor(Rd / Kd * Wd.height)),
+        charsPerLine: Math.max(1, Math.floor(Xd * Wd.width))
       }
     }
 
-    function mr(rr, Sr, Qr, Zr) {
+    function od(dd, Od, md, Wd) {
       const {
-        numLines: Wr,
-        charsPerLine: ar
-      } = xr(Qr, Zr, Sr);
-      return Kr(rr, Wr, ar, !1)
+        numLines: Fd,
+        charsPerLine: Rd
+      } = td(md, Wd, Od);
+      return gd(dd, Fd, Rd, !1)
     }
-    const Nr = 32e3;
+    const Nd = 32e3;
 
-    function Ur(rr) {
-      return rr.slice(0, Nr)
+    function qd(dd) {
+      return dd.slice(0, Nd)
     }
-    const tr = 512e3,
-      hr = 64,
-      zr = tr;
+    const Hd = 512e3,
+      yd = 64,
+      bd = Hd;
 
-    function Yr(rr, Sr) {
-      const Qr = Math.max(0, zr - Sr),
-        Zr = Math.min(tr, Qr);
-      return rr.slice(0, Zr)
+    function Td(dd, Od) {
+      const md = Math.max(0, bd - Od),
+        Wd = Math.min(Hd, md);
+      return dd.slice(0, Wd)
     }
-    const nr = {
+    const pd = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      Up: {
+      NQ: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1652,120 +1652,120 @@ export const modules = {
       }
     };
 
-    function er(rr, Sr) {
+    function Yd(dd, Od) {
       const {
-        numLines: Qr,
-        charsPerLine: Zr
-      } = nr[Sr];
-      return Kr(rr, Qr, Zr, !1)
+        numLines: md,
+        charsPerLine: Wd
+      } = pd[Od];
+      return gd(dd, md, Wd, !1)
     }
 
-    function Kr(rr, Sr, Qr, Zr, Wr) {
-      (Wr || Zr) && (rr = rr.slice(0, null !== Wr && void 0 !== Wr ? Wr : Sr * Qr));
-      const ar = rr.split("\n");
-      if (ar.length > Sr && ar.splice(Sr, ar.length - Sr), !Zr)
-        for (let jr = 0; jr < ar.length; jr++) {
-          const rr = ar[jr];
-          rr.length > Qr && (ar[jr] = rr.substring(0, Qr), ar.length < Sr && ar.splice(jr + 1, 0, rr.substring(Qr)))
+    function gd(dd, Od, md, Wd, Fd) {
+      (Fd || Wd) && (dd = dd.slice(0, null !== Fd && void 0 !== Fd ? Fd : Od * md));
+      const Rd = dd.split("\n");
+      if (Rd.length > Od && Rd.splice(Od, Rd.length - Od), !Wd)
+        for (let Xd = 0; Xd < Rd.length; Xd++) {
+          const dd = Rd[Xd];
+          dd.length > md && (Rd[Xd] = dd.substring(0, md), Rd.length < Od && Rd.splice(Xd + 1, 0, dd.substring(md)))
         }
-      return ar.join("\n")
+      return Rd.join("\n")
     }
   },
-  38315: (rr, Sr, Qr) => {
-    function Zr(rr, Sr) {
-      var Qr, Zr, Wr, ar, jr, Ir, fr, Er;
-      return rr.name === Sr.name && ((null === (Qr = rr.attributes) || void 0 === Qr || null === (Zr = Qr.customAttributes) || void 0 === Zr ? void 0 : Zr.stackKey) === (null === (Wr = Sr.attributes) || void 0 === Wr || null === (ar = Wr.customAttributes) || void 0 === ar ? void 0 : ar.stackKey) && (!0 !== (null === (jr = rr.attributes) || void 0 === jr || null === (Ir = jr.customAttributes) || void 0 === Ir ? void 0 : Ir.unstackable) && !0 !== (null === (fr = Sr.attributes) || void 0 === fr || null === (Er = fr.customAttributes) || void 0 === Er ? void 0 : Er.unstackable)))
+  38388: (dd, Od, md) => {
+    function Wd(dd, Od) {
+      var md, Wd, Fd, Rd, Xd, Kd, hd, vd;
+      return dd.name === Od.name && ((null === (md = dd.attributes) || void 0 === md || null === (Wd = md.customAttributes) || void 0 === Wd ? void 0 : Wd.stackKey) === (null === (Fd = Od.attributes) || void 0 === Fd || null === (Rd = Fd.customAttributes) || void 0 === Rd ? void 0 : Rd.stackKey) && (!0 !== (null === (Xd = dd.attributes) || void 0 === Xd || null === (Kd = Xd.customAttributes) || void 0 === Kd ? void 0 : Kd.unstackable) && !0 !== (null === (hd = Od.attributes) || void 0 === hd || null === (vd = hd.customAttributes) || void 0 === vd ? void 0 : vd.unstackable)))
     }
-    Qr.d(Sr, {
-      b: () => Zr
+    md.d(Od, {
+      b: () => Wd
     })
   },
-  5878: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Wr,
-      h: () => ar
+  5819: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Fd,
+      f: () => Rd
     });
-    var Zr = Qr(5830);
-    const Wr = "Air",
-      ar = Object.freeze(new Zr.e(Wr, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Wd = md(5769);
+    const Fd = "Air",
+      Rd = Object.freeze(new Wd.f(Fd, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38397: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return rr.includes("Leaf Bed")
+  38474: (dd, Od, md) => {
+    function Wd(dd) {
+      return dd.includes("Leaf Bed")
     }
 
-    function Wr(rr) {
-      return / Bed(?: Head)?(?:\||$)/.test(rr) && !Zr(rr)
+    function Fd(dd) {
+      return / Bed(?: Head)?(?:\||$)/.test(dd) && !Wd(dd)
     }
 
-    function ar(rr) {
-      return rr.includes(" Strongbed")
+    function Rd(dd) {
+      return dd.includes(" Strongbed")
     }
 
-    function jr(rr) {
-      return Zr(rr) || Wr(rr) || ar(rr)
+    function Xd(dd) {
+      return Wd(dd) || Fd(dd) || Rd(dd)
     }
-    Qr.d(Sr, {
-      c: () => jr,
-      f: () => Zr,
-      h: () => ar,
-      i: () => Wr
+    md.d(Od, {
+      e: () => Xd,
+      f: () => Wd,
+      j: () => Rd,
+      l: () => Fd
     })
   },
-  38390: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Er
+  38469: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => vd
     });
-    var Zr = Qr(38397),
-      Wr = Qr(5779);
-    const ar = [],
-      jr = [],
-      Ir = [],
-      fr = [];
-    for (const pr of Object.keys(Wr.n))(0, Zr.f)(pr) ? ar.push(pr) : (0, Zr.i)(pr) && jr.push(pr), (0, Zr.h)(pr) && Ir.push(pr), (pr.includes(" Bed Head") || pr.includes(" Strongbed Head")) && fr.push(pr);
-    const Er = {
-      leafBeds: ar,
-      woolBeds: jr,
-      strongBeds: Ir,
-      beds: [...ar, ...jr, ...Ir],
-      bedHeads: fr,
+    var Wd = md(38474),
+      Fd = md(5733);
+    const Rd = [],
+      Xd = [],
+      Kd = [],
+      hd = [];
+    for (const Qd of Object.keys(Fd.k))(0, Wd.f)(Qd) ? Rd.push(Qd) : (0, Wd.l)(Qd) && Xd.push(Qd), (0, Wd.j)(Qd) && Kd.push(Qd), (Qd.includes(" Bed Head") || Qd.includes(" Strongbed Head")) && hd.push(Qd);
+    const vd = {
+      leafBeds: Rd,
+      woolBeds: Xd,
+      strongBeds: Kd,
+      beds: [...Rd, ...Xd, ...Kd],
+      bedHeads: hd,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  7424: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr,
-      e: () => Wr,
-      f: () => fr,
-      j: () => ar,
-      k: () => Er,
-      n: () => Zr,
-      p: () => Ir
+  7410: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Xd,
+      f: () => Fd,
+      g: () => hd,
+      k: () => Rd,
+      n: () => vd,
+      q: () => Wd,
+      t: () => Kd
     });
-    let Zr = function(rr) {
-        return rr[rr.DEFAULT = 0] = "DEFAULT", rr[rr.BOAT = 1] = "BOAT", rr[rr.GLIDER = 2] = "GLIDER", rr[rr.BALLOON = 3] = "BALLOON", rr[rr.SLEEPING = 4] = "SLEEPING", rr[rr.RIDING_MOB = 5] = "RIDING_MOB", rr[rr.CAR = 6] = "CAR", rr[rr.HOVERCRAFT = 7] = "HOVERCRAFT", rr
+    let Wd = function(dd) {
+        return dd[dd.DEFAULT = 0] = "DEFAULT", dd[dd.BOAT = 1] = "BOAT", dd[dd.GLIDER = 2] = "GLIDER", dd[dd.BALLOON = 3] = "BALLOON", dd[dd.SLEEPING = 4] = "SLEEPING", dd[dd.RIDING_MOB = 5] = "RIDING_MOB", dd[dd.CAR = 6] = "CAR", dd[dd.HOVERCRAFT = 7] = "HOVERCRAFT", dd
       }({}),
-      Wr = function(rr) {
-        return rr[rr.WOOD = 0] = "WOOD", rr[rr.OBSIDIAN = 1] = "OBSIDIAN", rr[rr.SPEED = 2] = "SPEED", rr
+      Fd = function(dd) {
+        return dd[dd.WOOD = 0] = "WOOD", dd[dd.OBSIDIAN = 1] = "OBSIDIAN", dd[dd.SPEED = 2] = "SPEED", dd
       }({}),
-      ar = function(rr) {
-        return rr[rr.WOOD = 0] = "WOOD", rr[rr.IRON = 1] = "IRON", rr[rr.GOLD = 2] = "GOLD", rr[rr.DIAMOND = 3] = "DIAMOND", rr
+      Rd = function(dd) {
+        return dd[dd.WOOD = 0] = "WOOD", dd[dd.IRON = 1] = "IRON", dd[dd.GOLD = 2] = "GOLD", dd[dd.DIAMOND = 3] = "DIAMOND", dd
       }({}),
-      jr = function(rr) {
-        return rr[rr.YELLOW = 0] = "YELLOW", rr[rr.WHITE = 1] = "WHITE", rr[rr.RED = 2] = "RED", rr[rr.PURPLE = 3] = "PURPLE", rr[rr.PINK = 4] = "PINK", rr[rr.ORANGE = 5] = "ORANGE", rr[rr.MAGENTA = 6] = "MAGENTA", rr[rr.LIME = 7] = "LIME", rr[rr.LIGHT_GRAY = 8] = "LIGHT_GRAY", rr[rr.LIGHT_BLUE = 9] = "LIGHT_BLUE", rr[rr.GREEN = 10] = "GREEN", rr[rr.GRAY = 11] = "GRAY", rr[rr.CYAN = 12] = "CYAN", rr[rr.BROWN = 13] = "BROWN", rr[rr.BLUE = 14] = "BLUE", rr[rr.BLACK = 15] = "BLACK", rr
+      Xd = function(dd) {
+        return dd[dd.YELLOW = 0] = "YELLOW", dd[dd.WHITE = 1] = "WHITE", dd[dd.RED = 2] = "RED", dd[dd.PURPLE = 3] = "PURPLE", dd[dd.PINK = 4] = "PINK", dd[dd.ORANGE = 5] = "ORANGE", dd[dd.MAGENTA = 6] = "MAGENTA", dd[dd.LIME = 7] = "LIME", dd[dd.LIGHT_GRAY = 8] = "LIGHT_GRAY", dd[dd.LIGHT_BLUE = 9] = "LIGHT_BLUE", dd[dd.GREEN = 10] = "GREEN", dd[dd.GRAY = 11] = "GRAY", dd[dd.CYAN = 12] = "CYAN", dd[dd.BROWN = 13] = "BROWN", dd[dd.BLUE = 14] = "BLUE", dd[dd.BLACK = 15] = "BLACK", dd
       }({}),
-      Ir = function(rr) {
-        return rr[rr.ROTATION_1 = 0] = "ROTATION_1", rr[rr.ROTATION_2 = 1] = "ROTATION_2", rr[rr.ROTATION_3 = 2] = "ROTATION_3", rr[rr.ROTATION_4 = 3] = "ROTATION_4", rr
+      Kd = function(dd) {
+        return dd[dd.ROTATION_1 = 0] = "ROTATION_1", dd[dd.ROTATION_2 = 1] = "ROTATION_2", dd[dd.ROTATION_3 = 2] = "ROTATION_3", dd[dd.ROTATION_4 = 3] = "ROTATION_4", dd
       }({}),
-      fr = function(rr) {
-        return rr[rr.KART = 0] = "KART", rr[rr.OFF_ROADER = 1] = "OFF_ROADER", rr[rr.CAR = 2] = "CAR", rr[rr.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", rr[rr.ARMORED_CAR = 4] = "ARMORED_CAR", rr[rr.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", rr[rr.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", rr[rr.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", rr
+      hd = function(dd) {
+        return dd[dd.KART = 0] = "KART", dd[dd.OFF_ROADER = 1] = "OFF_ROADER", dd[dd.CAR = 2] = "CAR", dd[dd.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", dd[dd.ARMORED_CAR = 4] = "ARMORED_CAR", dd[dd.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", dd[dd.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", dd[dd.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", dd
       }({});
-    Zr.DEFAULT, Zr.BOAT, Wr.SPEED, Zr.GLIDER, ar.DIAMOND, Zr.BALLOON, jr.BLACK, Zr.SLEEPING, Ir.ROTATION_4, Zr.RIDING_MOB, Zr.CAR, fr.MOONSTONE_MINING_DRILL, Zr.HOVERCRAFT;
-    let Er = function(rr) {
-      return rr[rr.NORMAL = 0] = "NORMAL", rr[rr.GLIDING = 1] = "GLIDING", rr[rr.FLOATING = 2] = "FLOATING", rr
+    Wd.DEFAULT, Wd.BOAT, Fd.SPEED, Wd.GLIDER, Rd.DIAMOND, Wd.BALLOON, Xd.BLACK, Wd.SLEEPING, Kd.ROTATION_4, Wd.RIDING_MOB, Wd.CAR, hd.MOONSTONE_MINING_DRILL, Wd.HOVERCRAFT;
+    let vd = function(dd) {
+      return dd[dd.NORMAL = 0] = "NORMAL", dd[dd.GLIDING = 1] = "GLIDING", dd[dd.FLOATING = 2] = "FLOATING", dd
     }({})
   },
-  35432: () => {}
+  35513: () => {}
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

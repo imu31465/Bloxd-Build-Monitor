@@ -1,377 +1,377 @@
 export const id = 96;
 export const ids = [96];
 export const modules = {
-  5564: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Zr,
-      e: () => jr,
-      f: () => hr,
-      i: () => tr,
-      j: () => Ir,
-      k: () => Wr,
-      o: () => ar,
-      r: () => Ur,
-      t: () => Nr,
-      v: () => mr
+  5509: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Wd,
+      c: () => Xd,
+      e: () => yd,
+      h: () => Hd,
+      k: () => Kd,
+      l: () => Fd,
+      m: () => Rd,
+      q: () => qd,
+      r: () => Nd,
+      s: () => od
     });
-    const Zr = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+    const Wd = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-    function Wr(rr) {
+    function Fd(dd) {
       try {
-        return decodeURIComponent(rr.slice(1))
+        return decodeURIComponent(dd.slice(1))
       } catch {
-        return rr.slice(1)
+        return dd.slice(1)
       }
     }
 
-    function ar(rr) {
-      return rr.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+    function Rd(dd) {
+      return dd.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
     }
-    const jr = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Zr.source}`, "g");
+    const Xd = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Wd.source}`, "g");
 
-    function Ir(rr, Sr) {
-      return 2 === rr.length ? Sr.replace(/^ (.*) $/, "$1") : Sr
-    }
-
-    function fr(rr) {
-      return "" === rr.trim()
+    function Kd(dd, Od) {
+      return 2 === dd.length ? Od.replace(/^ (.*) $/, "$1") : Od
     }
 
-    function Er(rr) {
-      const Sr = [];
-      for (const Qr of rr.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Sr.length > 0 && Sr[Sr.length - 1].endsWith("\\") ? Sr[Sr.length - 1] += `|${Qr}` : Sr.push(Qr);
-      return Sr.map((rr => rr.trim().replaceAll("\\|", "|")))
+    function hd(dd) {
+      return "" === dd.trim()
     }
-    const pr = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-    function xr(rr) {
-      const Sr = [],
-        Qr = [{
+    function vd(dd) {
+      const Od = [];
+      for (const md of dd.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Od.length > 0 && Od[Od.length - 1].endsWith("\\") ? Od[Od.length - 1] += `|${md}` : Od.push(md);
+      return Od.map((dd => dd.trim().replaceAll("\\|", "|")))
+    }
+    const Qd = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+    function td(dd) {
+      const Od = [],
+        md = [{
           indent: -1,
-          items: Sr
+          items: Od
         }];
-      let Zr = null;
-      for (const Wr of rr) {
-        const rr = Wr.match(pr);
-        if (!rr) {
-          Zr && (Zr.text += ` ${Wr.trim()}`);
+      let Wd = null;
+      for (const Fd of dd) {
+        const dd = Fd.match(Qd);
+        if (!dd) {
+          Wd && (Wd.text += ` ${Fd.trim()}`);
           continue
         }
-        const Sr = rr[1].replace(/\t/g, "  ").length;
-        for (; Sr <= Qr[Qr.length - 1].indent;) Qr.pop();
-        Zr = {
-          text: rr[3].trim(),
+        const Od = dd[1].replace(/\t/g, "  ").length;
+        for (; Od <= md[md.length - 1].indent;) md.pop();
+        Wd = {
+          text: dd[3].trim(),
           children: []
-        }, Qr[Qr.length - 1].items.push(Zr), Qr.push({
-          indent: Sr,
-          items: Zr.children
+        }, md[md.length - 1].items.push(Wd), md.push({
+          indent: Od,
+          items: Wd.children
         })
       }
-      return Sr
+      return Od
     }
 
-    function mr(rr) {
-      const Sr = rr.replace(/\r\n/g, "\n").split("\n"),
-        Qr = [];
-      let Zr = 0;
-      for (; Zr < Sr.length;) {
-        const rr = Sr[Zr];
-        if (fr(rr)) {
-          Zr++;
+    function od(dd) {
+      const Od = dd.replace(/\r\n/g, "\n").split("\n"),
+        md = [];
+      let Wd = 0;
+      for (; Wd < Od.length;) {
+        const dd = Od[Wd];
+        if (hd(dd)) {
+          Wd++;
           continue
         }
-        const Wr = rr.match(/^\s*```\s*(\w*)\s*$/);
-        if (Wr) {
-          const rr = [];
-          for (Zr++; Zr < Sr.length && !/^\s*```\s*$/.test(Sr[Zr]);) rr.push(Sr[Zr]), Zr++;
-          Zr++, Qr.push({
+        const Fd = dd.match(/^\s*```\s*(\w*)\s*$/);
+        if (Fd) {
+          const dd = [];
+          for (Wd++; Wd < Od.length && !/^\s*```\s*$/.test(Od[Wd]);) dd.push(Od[Wd]), Wd++;
+          Wd++, md.push({
             kind: "code",
-            lang: Wr[1] || "text",
-            code: rr.join("\n").replace(/\s+$/, "")
+            lang: Fd[1] || "text",
+            code: dd.join("\n").replace(/\s+$/, "")
           });
           continue
         }
-        const jr = rr.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (jr) {
-          const rr = jr[2].trim();
-          Qr.push({
+        const Xd = dd.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+        if (Xd) {
+          const dd = Xd[2].trim();
+          md.push({
             kind: "heading",
-            level: jr[1].length,
-            text: rr,
-            anchor: ar(rr)
-          }), Zr++;
+            level: Xd[1].length,
+            text: dd,
+            anchor: Rd(dd)
+          }), Wd++;
           continue
         }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(rr)) {
-          Qr.push({
+        if (/^\s*(-{3,}|\*{3,})\s*$/.test(dd)) {
+          md.push({
             kind: "rule"
-          }), Zr++;
+          }), Wd++;
           continue
         }
-        if (rr.trim().startsWith("|") && Zr + 1 < Sr.length && /^\s*\|[\s:|-]+\|\s*$/.test(Sr[Zr + 1])) {
-          const Wr = Er(rr),
-            ar = [];
-          for (Zr += 2; Zr < Sr.length && Sr[Zr].trim().startsWith("|");) ar.push(Er(Sr[Zr])), Zr++;
-          Qr.push({
+        if (dd.trim().startsWith("|") && Wd + 1 < Od.length && /^\s*\|[\s:|-]+\|\s*$/.test(Od[Wd + 1])) {
+          const Fd = vd(dd),
+            Rd = [];
+          for (Wd += 2; Wd < Od.length && Od[Wd].trim().startsWith("|");) Rd.push(vd(Od[Wd])), Wd++;
+          md.push({
             kind: "table",
-            header: Wr,
-            rows: ar
+            header: Fd,
+            rows: Rd
           });
           continue
         }
-        if (rr.startsWith(">")) {
-          const rr = [];
-          for (; Zr < Sr.length && Sr[Zr].startsWith(">");) rr.push(Sr[Zr].replace(/^>\s?/, "")), Zr++;
-          Qr.push({
+        if (dd.startsWith(">")) {
+          const dd = [];
+          for (; Wd < Od.length && Od[Wd].startsWith(">");) dd.push(Od[Wd].replace(/^>\s?/, "")), Wd++;
+          md.push({
             kind: "quote",
-            blocks: mr(rr.join("\n"))
+            blocks: od(dd.join("\n"))
           });
           continue
         }
-        if (pr.test(rr)) {
-          const Wr = [],
-            ar = /^\s*\d+\./.test(rr);
-          for (; Zr < Sr.length && !fr(Sr[Zr]) && (pr.test(Sr[Zr]) || /^\s+\S/.test(Sr[Zr]));) Wr.push(Sr[Zr]), Zr++;
-          Qr.push({
+        if (Qd.test(dd)) {
+          const Fd = [],
+            Rd = /^\s*\d+\./.test(dd);
+          for (; Wd < Od.length && !hd(Od[Wd]) && (Qd.test(Od[Wd]) || /^\s+\S/.test(Od[Wd]));) Fd.push(Od[Wd]), Wd++;
+          md.push({
             kind: "list",
-            ordered: ar,
-            items: xr(Wr)
+            ordered: Rd,
+            items: td(Fd)
           });
           continue
         }
-        const Ir = [];
-        for (; Zr < Sr.length && !fr(Sr[Zr]) && !/^\s*```/.test(Sr[Zr]) && !/^#{1,6}\s/.test(Sr[Zr]) && !Sr[Zr].startsWith(">") && !pr.test(Sr[Zr]) && (!Sr[Zr].trim().startsWith("|") || 0 !== Ir.length);) Ir.push(Sr[Zr].trim()), Zr++;
-        0 === Ir.length && (Ir.push(Sr[Zr].trim()), Zr++), Qr.push({
+        const Kd = [];
+        for (; Wd < Od.length && !hd(Od[Wd]) && !/^\s*```/.test(Od[Wd]) && !/^#{1,6}\s/.test(Od[Wd]) && !Od[Wd].startsWith(">") && !Qd.test(Od[Wd]) && (!Od[Wd].trim().startsWith("|") || 0 !== Kd.length);) Kd.push(Od[Wd].trim()), Wd++;
+        0 === Kd.length && (Kd.push(Od[Wd].trim()), Wd++), md.push({
           kind: "paragraph",
-          text: Ir.join(" ")
+          text: Kd.join(" ")
         })
       }
-      return Qr
+      return md
     }
 
-    function Nr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const Qr = mr(rr);
-      let Zr = "";
-      const Wr = [],
-        ar = [],
-        jr = new Map;
-      for (const Er of Qr) {
-        if ("heading" === Er.kind) {
-          var Ir;
-          const rr = (null !== (Ir = jr.get(Er.anchor)) && void 0 !== Ir ? Ir : 0) + 1;
-          jr.set(Er.anchor, rr), rr > 1 && (Er.anchor = `${Er.anchor}-${rr}`)
+    function Nd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const md = od(dd);
+      let Wd = "";
+      const Fd = [],
+        Rd = [],
+        Xd = new Map;
+      for (const vd of md) {
+        if ("heading" === vd.kind) {
+          var Kd;
+          const dd = (null !== (Kd = Xd.get(vd.anchor)) && void 0 !== Kd ? Kd : 0) + 1;
+          Xd.set(vd.anchor, dd), dd > 1 && (vd.anchor = `${vd.anchor}-${dd}`)
         }
-        if ("heading" === Er.kind && 1 === Er.level && !Zr) {
-          Zr = Er.text;
+        if ("heading" === vd.kind && 1 === vd.level && !Wd) {
+          Wd = vd.text;
           continue
         }
-        if ("heading" === Er.kind && Er.level <= Sr) {
-          ar.push({
-            heading: Er,
+        if ("heading" === vd.kind && vd.level <= Od) {
+          Rd.push({
+            heading: vd,
             blocks: []
           });
           continue
         }
-        const rr = ar.at(-1);
-        rr ? rr.blocks.push(Er) : Wr.push(Er)
+        const dd = Rd.at(-1);
+        dd ? dd.blocks.push(vd) : Fd.push(vd)
       }
-      const fr = rr => {
+      const hd = dd => {
         for (;
-          "rule" === (null === (Sr = rr.at(-1)) || void 0 === Sr ? void 0 : Sr.kind);) {
-          var Sr;
-          rr.pop()
+          "rule" === (null === (Od = dd.at(-1)) || void 0 === Od ? void 0 : Od.kind);) {
+          var Od;
+          dd.pop()
         }
       };
-      fr(Wr);
-      for (const Er of ar) fr(Er.blocks);
+      hd(Fd);
+      for (const vd of Rd) hd(vd.blocks);
       return {
-        title: Zr,
-        intro: Wr,
-        sections: ar
+        title: Wd,
+        intro: Fd,
+        sections: Rd
       }
     }
 
-    function Ur(rr) {
+    function qd(dd) {
       return [{
         heading: null,
-        blocks: rr.intro
-      }, ...rr.sections.map((rr => ({
-        heading: rr.heading,
-        blocks: rr.blocks
+        blocks: dd.intro
+      }, ...dd.sections.map((dd => ({
+        heading: dd.heading,
+        blocks: dd.blocks
       })))]
     }
 
-    function tr(rr) {
-      return rr.flatMap((rr => "code" === rr.kind ? [rr] : "quote" === rr.kind ? tr(rr.blocks) : []))
+    function Hd(dd) {
+      return dd.flatMap((dd => "code" === dd.kind ? [dd] : "quote" === dd.kind ? Hd(dd.blocks) : []))
     }
 
-    function hr(rr) {
-      switch (rr.kind) {
+    function yd(dd) {
+      switch (dd.kind) {
         case "heading":
         case "paragraph":
-          return rr.text;
+          return dd.text;
         case "code":
-          return rr.code;
+          return dd.code;
         case "table":
-          return [rr.header, ...rr.rows].map((rr => rr.join(" "))).join(" ");
+          return [dd.header, ...dd.rows].map((dd => dd.join(" "))).join(" ");
         case "list": {
-          const Sr = rr => rr.map((rr => `${rr.text} ${Sr(rr.children)}`)).join(" ");
-          return Sr(rr.items)
+          const Od = dd => dd.map((dd => `${dd.text} ${Od(dd.children)}`)).join(" ");
+          return Od(dd.items)
         }
         case "quote":
-          return rr.blocks.map(hr).join(" ");
+          return dd.blocks.map(yd).join(" ");
         case "rule":
           return ""
       }
     }
   },
-  7447: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => xr,
-      d: () => jr,
-      g: () => Ir
+  7435: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => td,
+      h: () => Xd,
+      j: () => Kd
     });
-    Qr(7443);
-    var Zr = Qr(72),
-      Wr = Qr(5564),
-      ar = Qr(1338);
-    const jr = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
+    md(7429);
+    var Wd = md(66),
+      Fd = md(5509),
+      Rd = md(1341);
+    const Xd = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
 
-    function Ir(rr, Sr) {
-      return rr === Sr ? rr : `${rr} (${Sr})`
+    function Kd(dd, Od) {
+      return dd === Od ? dd : `${dd} (${Od})`
     }
 
-    function fr(rr) {
-      const Sr = [];
-      let Qr = 0;
-      for (const Zr of rr.matchAll(jr)) {
-        Zr.index > Qr && Sr.push(rr.slice(Qr, Zr.index));
-        const [, Wr, jr, fr, Er, pr, xr] = Zr;
-        void 0 !== Wr ? Sr.push(Ir(Wr, jr)) : void 0 !== fr || void 0 !== Er ? Sr.push((0, ar.jsx)("strong", {
-          children: null !== fr && void 0 !== fr ? fr : Er
-        }, Zr.index)) : void 0 !== pr ? Sr.push((0, ar.jsx)("em", {
-          children: pr
-        }, Zr.index)) : Sr.push((0, ar.jsx)("code", {
-          children: xr
-        }, Zr.index)), Qr = Zr.index + Zr[0].length
+    function hd(dd) {
+      const Od = [];
+      let md = 0;
+      for (const Wd of dd.matchAll(Xd)) {
+        Wd.index > md && Od.push(dd.slice(md, Wd.index));
+        const [, Fd, Xd, hd, vd, Qd, td] = Wd;
+        void 0 !== Fd ? Od.push(Kd(Fd, Xd)) : void 0 !== hd || void 0 !== vd ? Od.push((0, Rd.jsx)("strong", {
+          children: null !== hd && void 0 !== hd ? hd : vd
+        }, Wd.index)) : void 0 !== Qd ? Od.push((0, Rd.jsx)("em", {
+          children: Qd
+        }, Wd.index)) : Od.push((0, Rd.jsx)("code", {
+          children: td
+        }, Wd.index)), md = Wd.index + Wd[0].length
       }
-      return Qr < rr.length && Sr.push(rr.slice(Qr)), Sr
+      return md < dd.length && Od.push(dd.slice(md)), Od
     }
 
-    function Er(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const Zr = rr.map(((rr, Sr) => (0, ar.jsxs)("li", {
-        children: [fr(rr.text), rr.children.length > 0 && Er(rr.children, !1)]
-      }, Sr)));
-      return Sr ? (0, ar.jsx)("ol", {
-        start: Qr,
-        children: Zr
-      }) : (0, ar.jsx)("ul", {
-        children: Zr
+    function vd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      const Wd = dd.map(((dd, Od) => (0, Rd.jsxs)("li", {
+        children: [hd(dd.text), dd.children.length > 0 && vd(dd.children, !1)]
+      }, Od)));
+      return Od ? (0, Rd.jsx)("ol", {
+        start: md,
+        children: Wd
+      }) : (0, Rd.jsx)("ul", {
+        children: Wd
       })
     }
 
-    function pr(rr, Sr) {
-      switch (rr.kind) {
+    function Qd(dd, Od) {
+      switch (dd.kind) {
         case "heading":
-          return rr.level <= 2 ? (0, ar.jsx)("h3", {
-            children: fr(rr.text)
-          }, Sr) : (0, ar.jsx)("h4", {
-            children: fr(rr.text)
-          }, Sr);
+          return dd.level <= 2 ? (0, Rd.jsx)("h3", {
+            children: hd(dd.text)
+          }, Od) : (0, Rd.jsx)("h4", {
+            children: hd(dd.text)
+          }, Od);
         case "paragraph":
-          return (0, ar.jsx)("p", {
-            children: fr(rr.text)
-          }, Sr);
+          return (0, Rd.jsx)("p", {
+            children: hd(dd.text)
+          }, Od);
         case "list":
-          return (0, ar.jsx)(Zr.Fragment, {
-            children: Er(rr.items, rr.ordered)
-          }, Sr);
+          return (0, Rd.jsx)(Wd.Fragment, {
+            children: vd(dd.items, dd.ordered)
+          }, Od);
         case "quote":
-          return (0, ar.jsx)("blockquote", {
-            children: rr.blocks.map(((rr, Sr) => pr(rr, Sr)))
-          }, Sr);
+          return (0, Rd.jsx)("blockquote", {
+            children: dd.blocks.map(((dd, Od) => Qd(dd, Od)))
+          }, Od);
         case "code":
-          return (0, ar.jsx)("pre", {
-            children: (0, ar.jsx)("code", {
-              children: rr.code
+          return (0, Rd.jsx)("pre", {
+            children: (0, Rd.jsx)("code", {
+              children: dd.code
             })
-          }, Sr);
+          }, Od);
         case "table":
-          return (0, ar.jsxs)("table", {
-            children: [(0, ar.jsx)("thead", {
-              children: (0, ar.jsx)("tr", {
-                children: rr.header.map(((rr, Sr) => (0, ar.jsx)("th", {
-                  children: fr(rr)
-                }, Sr)))
+          return (0, Rd.jsxs)("table", {
+            children: [(0, Rd.jsx)("thead", {
+              children: (0, Rd.jsx)("tr", {
+                children: dd.header.map(((dd, Od) => (0, Rd.jsx)("th", {
+                  children: hd(dd)
+                }, Od)))
               })
-            }), (0, ar.jsx)("tbody", {
-              children: rr.rows.map(((rr, Sr) => (0, ar.jsx)("tr", {
-                children: rr.map(((rr, Sr) => (0, ar.jsx)("td", {
-                  children: fr(rr)
-                }, Sr)))
-              }, Sr)))
+            }), (0, Rd.jsx)("tbody", {
+              children: dd.rows.map(((dd, Od) => (0, Rd.jsx)("tr", {
+                children: dd.map(((dd, Od) => (0, Rd.jsx)("td", {
+                  children: hd(dd)
+                }, Od)))
+              }, Od)))
             })]
-          }, Sr);
+          }, Od);
         case "rule":
-          return (0, ar.jsx)("hr", {}, Sr)
+          return (0, Rd.jsx)("hr", {}, Od)
       }
     }
 
-    function xr(rr) {
+    function td(dd) {
       let {
-        markdown: Sr
-      } = rr, Qr = 0;
-      return (0, ar.jsx)("div", {
+        markdown: Od
+      } = dd, md = 0;
+      return (0, Rd.jsx)("div", {
         className: "StudioAiAnswerText",
-        children: (0, Wr.v)(Sr).map(((rr, Sr) => {
-          if ("list" !== rr.kind || !rr.ordered) return Qr = 0, pr(rr, Sr);
-          const Wr = Qr + 1;
-          return Qr += rr.items.length, (0, ar.jsx)(Zr.Fragment, {
-            children: Er(rr.items, !0, Wr)
-          }, Sr)
+        children: (0, Fd.s)(Od).map(((dd, Od) => {
+          if ("list" !== dd.kind || !dd.ordered) return md = 0, Qd(dd, Od);
+          const Fd = md + 1;
+          return md += dd.items.length, (0, Rd.jsx)(Wd.Fragment, {
+            children: vd(dd.items, !0, Fd)
+          }, Od)
         }))
       })
     }
   },
-  7434: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Yr,
-      i: () => nr,
-      f: () => Kr,
-      l: () => Ur
+  7420: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Td,
+      i: () => pd,
+      h: () => gd,
+      j: () => qd
     });
-    var Zr = Qr(1267),
-      Wr = Qr(7391),
-      ar = Qr(5692);
-    const jr = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
+    var Wd = md(1268),
+      Fd = md(7374),
+      Rd = md(5656);
+    const Xd = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
 
-    function Ir(rr) {
-      return (0, ar.e)(rr, jr, (Sr => !/^my/i.test(Sr[0]) || !/follow $/i.test(rr.slice(0, Sr.index)))).length > 0
+    function Kd(dd) {
+      return (0, Rd.g)(dd, Xd, (Od => !/^my/i.test(Od[0]) || !/follow $/i.test(dd.slice(0, Od.index)))).length > 0
     }
-    const fr = /\byou(?:r|'re|'ll)?\b/i,
-      Er = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      pr = 2;
+    const hd = /\byou(?:r|'re|'ll)?\b/i,
+      vd = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
+      Qd = 2;
 
-    function xr(rr) {
-      return function(rr) {
-        const Sr = [];
-        let Qr = !1;
-        for (const Zr of rr.split("\n")) {
-          if (/^\s*(```|~~~)/.test(Zr)) {
-            Qr = !Qr;
+    function td(dd) {
+      return function(dd) {
+        const Od = [];
+        let md = !1;
+        for (const Wd of dd.split("\n")) {
+          if (/^\s*(```|~~~)/.test(Wd)) {
+            md = !md;
             continue
           }
-          if (Qr || /^\s*>/.test(Zr)) continue;
-          const rr = Zr.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          Sr.push(...(0, Wr.p)(rr))
+          if (md || /^\s*>/.test(Wd)) continue;
+          const dd = Wd.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
+          Od.push(...(0, Fd.q)(dd))
         }
-        return Sr
-      }(rr).filter((rr => Ir(rr) || Er.test(rr) && !fr.test(rr)))
+        return Od
+      }(dd).filter((dd => Kd(dd) || vd.test(dd) && !hd.test(dd)))
     }
-    const mr = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      Nr = [{
+    const od = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
+      Nd = [{
         name: "Qwen3.6-27B",
         temperature: .7,
         reasoningEffort: "none"
@@ -384,317 +384,317 @@ export const modules = {
         temperature: .15
       }];
 
-    function Ur(rr) {
-      const Sr = Nr.findIndex((Sr => Sr.name === rr));
-      return -1 === Sr ? Nr.length : Sr
+    function qd(dd) {
+      const Od = Nd.findIndex((Od => Od.name === dd));
+      return -1 === Od ? Nd.length : Od
     }
-    const tr = 2500,
-      hr = 12e4;
-    class zr extends Error {
-      constructor(rr) {
-        super(`Studio AI chat ${rr}`), this.reason = rr
+    const Hd = 2500,
+      yd = 12e4;
+    class bd extends Error {
+      constructor(dd) {
+        super(`Studio AI chat ${dd}`), this.reason = dd
       }
     }
 
-    function Yr(rr, Sr) {
-      const Qr = new AbortController,
-        Zr = () => {
-          Qr.abort()
+    function Td(dd, Od) {
+      const md = new AbortController,
+        Wd = () => {
+          md.abort()
         },
-        Wr = setTimeout(Zr, rr);
-      return null !== Sr && void 0 !== Sr && Sr.aborted && Zr(), null === Sr || void 0 === Sr || Sr.addEventListener("abort", Zr, {
+        Fd = setTimeout(Wd, dd);
+      return null !== Od && void 0 !== Od && Od.aborted && Wd(), null === Od || void 0 === Od || Od.addEventListener("abort", Wd, {
         once: !0
       }), {
-        signal: Qr.signal,
+        signal: md.signal,
         clear: () => {
-          clearTimeout(Wr), null === Sr || void 0 === Sr || Sr.removeEventListener("abort", Zr)
+          clearTimeout(Fd), null === Od || void 0 === Od || Od.removeEventListener("abort", Wd)
         }
       }
     }
 
-    function nr(rr, Sr, Qr) {
-      return new Promise(((Wr, ar) => {
-        const jr = new AbortController,
-          Ir = () => {
-            jr.abort(), ar((0, Zr.f)(Qr))
+    function pd(dd, Od, md) {
+      return new Promise(((Fd, Rd) => {
+        const Xd = new AbortController,
+          Kd = () => {
+            Xd.abort(), Rd((0, Wd.e)(md))
           };
-        if (null !== Qr && void 0 !== Qr && Qr.aborted) return void Ir();
-        null === Qr || void 0 === Qr || Qr.addEventListener("abort", Ir, {
+        if (null !== md && void 0 !== md && md.aborted) return void Kd();
+        null === md || void 0 === md || md.addEventListener("abort", Kd, {
           once: !0
         });
-        const fr = Nr.map((() => !1));
-        let Er = null;
-        const pr = Nr.map((() => !1)),
-          xr = Nr.map((() => !1));
-        Nr.forEach(((Zr, mr) => {
-          const Ur = Yr(hr, jr.signal);
-          yr(Zr, [{
+        const hd = Nd.map((() => !1));
+        let vd = null;
+        const Qd = Nd.map((() => !1)),
+          td = Nd.map((() => !1));
+        Nd.forEach(((Wd, od) => {
+          const qd = Td(yd, Xd.signal);
+          wd(Wd, [{
             role: "user",
-            content: rr
-          }], Ur.signal).then((rr => {
-            jr.signal.aborted || ("busy" === rr || "failed" === rr ? (pr[mr] = "busy" === rr, xr[mr] = !0) : null !== rr && (null === Er || mr < Er.rank) && (Er = {
-              rank: mr,
+            content: dd
+          }], qd.signal).then((dd => {
+            Xd.signal.aborted || ("busy" === dd || "failed" === dd ? (Qd[od] = "busy" === dd, td[od] = !0) : null !== dd && (null === vd || od < vd.rank) && (vd = {
+              rank: od,
               answer: {
-                text: rr.text,
-                model: Zr.name
+                text: dd.text,
+                model: Wd.name
               }
-            }, Sr(Er.answer)))
-          }), (rr => {
-            jr.signal.aborted || (xr[mr] = !0, console.warn(`Studio AI: ${Zr.name} couldn't be reached`, rr))
+            }, Od(vd.answer)))
+          }), (dd => {
+            Xd.signal.aborted || (td[od] = !0, console.warn(`Studio AI: ${Wd.name} couldn't be reached`, dd))
           })).finally((() => {
-            Ur.clear(), fr[mr] = !0, jr.signal.aborted || (() => {
-              var rr, Sr;
-              const Zr = null !== (rr = null === (Sr = Er) || void 0 === Sr ? void 0 : Sr.rank) && void 0 !== rr ? rr : Nr.length;
-              fr.slice(0, Zr).includes(!1) || (null === Qr || void 0 === Qr || Qr.removeEventListener("abort", Ir), jr.abort(), null !== Er ? Wr({
-                ...Er.answer,
-                isFinal: !xr.slice(0, Er.rank).includes(!0)
-              }) : ar(new zr(pr.includes(!0) ? "busy" : "failed")))
+            qd.clear(), hd[od] = !0, Xd.signal.aborted || (() => {
+              var dd, Od;
+              const Wd = null !== (dd = null === (Od = vd) || void 0 === Od ? void 0 : Od.rank) && void 0 !== dd ? dd : Nd.length;
+              hd.slice(0, Wd).includes(!1) || (null === md || void 0 === md || md.removeEventListener("abort", Kd), Xd.abort(), null !== vd ? Fd({
+                ...vd.answer,
+                isFinal: !td.slice(0, vd.rank).includes(!0)
+              }) : Rd(new bd(Qd.includes(!0) ? "busy" : "failed")))
             })()
-          })).catch((rr => {
-            console.error("Studio AI: showing an answer failed", rr)
+          })).catch((dd => {
+            console.error("Studio AI: showing an answer failed", dd)
           }))
         }))
       }))
     }
 
-    function er(rr) {
-      var Sr, Qr;
-      return "length" === (null === rr || void 0 === rr || null === (Sr = rr.choices) || void 0 === Sr || null === (Qr = Sr[0]) || void 0 === Qr ? void 0 : Qr.finish_reason)
+    function Yd(dd) {
+      var Od, md;
+      return "length" === (null === dd || void 0 === dd || null === (Od = dd.choices) || void 0 === Od || null === (md = Od[0]) || void 0 === md ? void 0 : md.finish_reason)
     }
-    async function Kr(rr, Sr, Qr) {
-      const Zr = Nr.find((Sr => Sr.name === rr));
-      if (void 0 === Zr) return "failed";
-      const Wr = Yr(hr, Qr);
+    async function gd(dd, Od, md) {
+      const Wd = Nd.find((Od => Od.name === dd));
+      if (void 0 === Wd) return "failed";
+      const Fd = Td(yd, md);
       try {
-        const rr = await yr(Zr, Sr, Wr.signal);
-        return null !== rr && "object" === typeof rr ? rr.isCutOff ? (console.warn(`Studio AI: ${Zr.name}'s answer was cut off at the token limit`), null) : {
-          text: rr.text
-        } : rr
+        const dd = await wd(Wd, Od, Fd.signal);
+        return null !== dd && "object" === typeof dd ? dd.isCutOff ? (console.warn(`Studio AI: ${Wd.name}'s answer was cut off at the token limit`), null) : {
+          text: dd.text
+        } : dd
       } finally {
-        Wr.clear()
+        Fd.clear()
       }
     }
-    async function yr(rr, Sr, Qr) {
-      const Zr = await fetch(mr, {
+    async function wd(dd, Od, md) {
+      const Wd = await fetch(od, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
-          model: rr.name,
-          messages: Sr,
-          max_tokens: tr,
-          temperature: rr.temperature,
-          reasoning_effort: rr.reasoningEffort
+          model: dd.name,
+          messages: Od,
+          max_tokens: Hd,
+          temperature: dd.temperature,
+          reasoning_effort: dd.reasoningEffort
         }),
         credentials: "omit",
         referrerPolicy: "no-referrer",
-        signal: Qr
+        signal: md
       });
-      if (429 === Zr.status) return "busy";
-      if (!Zr.ok) return console.warn(`Studio AI: ${rr.name} answered ${Zr.status}`), "failed";
-      const Wr = await Zr.json().catch((() => null)),
-        ar = function(rr) {
-          var Sr, Qr, Zr;
-          const Wr = null === rr || void 0 === rr || null === (Sr = rr.choices) || void 0 === Sr || null === (Qr = Sr[0]) || void 0 === Qr || null === (Zr = Qr.message) || void 0 === Zr ? void 0 : Zr.content;
-          if ("string" !== typeof Wr) return null;
-          const ar = Wr.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === ar ? null : ar
-        }(Wr);
-      return null !== ar && function(rr) {
-        const Sr = xr(rr);
-        return Sr.length >= pr || Sr.some((rr => Ir(rr)))
-      }(ar) ? (console.warn(`Studio AI: ${rr.name} thought out loud instead of answering`), "failed") : null === ar ? null : {
-        text: ar,
-        isCutOff: er(Wr)
+      if (429 === Wd.status) return "busy";
+      if (!Wd.ok) return console.warn(`Studio AI: ${dd.name} answered ${Wd.status}`), "failed";
+      const Fd = await Wd.json().catch((() => null)),
+        Rd = function(dd) {
+          var Od, md, Wd;
+          const Fd = null === dd || void 0 === dd || null === (Od = dd.choices) || void 0 === Od || null === (md = Od[0]) || void 0 === md || null === (Wd = md.message) || void 0 === Wd ? void 0 : Wd.content;
+          if ("string" !== typeof Fd) return null;
+          const Rd = Fd.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
+          return "" === Rd ? null : Rd
+        }(Fd);
+      return null !== Rd && function(dd) {
+        const Od = td(dd);
+        return Od.length >= Qd || Od.some((dd => Kd(dd)))
+      }(Rd) ? (console.warn(`Studio AI: ${dd.name} thought out loud instead of answering`), "failed") : null === Rd ? null : {
+        text: Rd,
+        isCutOff: Yd(Fd)
       }
     }
   },
-  7391: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      D: () => hr,
-      H: () => nr,
-      K: () => Kr,
-      O: () => Yr,
-      R: () => xr,
-      U: () => Er,
-      Y: () => Nr,
-      b: () => Ur,
-      f: () => Ir,
-      i: () => jr,
-      k: () => tr,
-      m: () => mr,
-      p: () => pr,
-      q: () => ar,
-      u: () => Wr,
-      y: () => er,
-      z: () => yr
+  7374: (dd, Od, md) => {
+    md.d(Od, {
+      A: () => yd,
+      B: () => pd,
+      D: () => gd,
+      E: () => Td,
+      G: () => td,
+      J: () => vd,
+      K: () => Nd,
+      c: () => qd,
+      e: () => Kd,
+      i: () => Xd,
+      m: () => Hd,
+      o: () => od,
+      q: () => Qd,
+      r: () => Rd,
+      t: () => Fd,
+      v: () => Yd,
+      x: () => wd
     });
-    var Zr = Qr(5692);
-    const Wr = 2e3,
-      ar = 2e4;
+    var Wd = md(5656);
+    const Fd = 2e3,
+      Rd = 2e4;
 
-    function jr(rr) {
-      return rr.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    function Xd(dd) {
+      return dd.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     }
 
-    function Ir(rr) {
-      return rr.replace(/\$/g, "\\$")
+    function Kd(dd) {
+      return dd.replace(/\$/g, "\\$")
     }
-    const fr = /[.!?](?=\s|\*|_|$)|\n|$/g;
+    const hd = /[.!?](?=\s|\*|_|$)|\n|$/g;
 
-    function Er(rr, Sr) {
-      fr.lastIndex = Sr;
-      const Qr = fr.exec(rr);
-      return Qr.index + Qr[0].length
-    }
-
-    function pr(rr) {
-      return (0, Zr.u)(rr, /\s+/g, (0, Zr.s)(".!?")).flatMap((rr => rr.split("\n")))
+    function vd(dd, Od) {
+      hd.lastIndex = Od;
+      const md = hd.exec(dd);
+      return md.index + md[0].length
     }
 
-    function xr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Sr;
-      const Zr = [...rr.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((rr => rr.index)),
-        Wr = Zr.filter((rr => rr < Sr)),
-        ar = Zr.find((rr => rr >= Qr));
-      return [0 === Wr.length ? 0 : Wr.at(-1) + 1, void 0 === ar ? rr.length : ar + 1]
+    function Qd(dd) {
+      return (0, Wd.w)(dd, /\s+/g, (0, Wd.s)(".!?")).flatMap((dd => dd.split("\n")))
     }
 
-    function mr(rr, Sr) {
-      const Qr = rr.charCodeAt(Sr - 1);
-      return rr.slice(0, Sr > 0 && Sr < rr.length && Qr >= 55296 && Qr <= 56319 ? Sr - 1 : Sr)
+    function td(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Od;
+      const Wd = [...dd.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((dd => dd.index)),
+        Fd = Wd.filter((dd => dd < Od)),
+        Rd = Wd.find((dd => dd >= md));
+      return [0 === Fd.length ? 0 : Fd.at(-1) + 1, void 0 === Rd ? dd.length : Rd + 1]
     }
 
-    function Nr(rr, Sr) {
-      return `${Sr}${rr.replace(/\\/g,"\\\\").split(Sr).join(`\\${Sr}`)}${Sr}`
+    function od(dd, Od) {
+      const md = dd.charCodeAt(Od - 1);
+      return dd.slice(0, Od > 0 && Od < dd.length && md >= 55296 && md <= 56319 ? Od - 1 : Od)
     }
 
-    function Ur(rr) {
-      return rr.charAt(0).toUpperCase() + rr.slice(1)
+    function Nd(dd, Od) {
+      return `${Od}${dd.replace(/\\/g,"\\\\").split(Od).join(`\\${Od}`)}${Od}`
     }
 
-    function tr(rr) {
-      return Math.round(rr).toLocaleString("en-US")
+    function qd(dd) {
+      return dd.charAt(0).toUpperCase() + dd.slice(1)
     }
 
-    function hr(rr) {
-      return rr.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((rr => "" !== rr))
-    }
-    const zr = 3;
-
-    function Yr(rr, Sr) {
-      return hr(rr).filter((rr => rr.length >= zr && !/\d/.test(rr))).map((rr => `${rr} ${Sr}`))
+    function Hd(dd) {
+      return Math.round(dd).toLocaleString("en-US")
     }
 
-    function nr(rr) {
-      return rr.split(/[\s:_]+/).filter((rr => "" !== rr)).map(jr).join("[`:_\\s]+")
+    function yd(dd) {
+      return dd.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((dd => "" !== dd))
+    }
+    const bd = 3;
+
+    function Td(dd, Od) {
+      return yd(dd).filter((dd => dd.length >= bd && !/\d/.test(dd))).map((dd => `${dd} ${Od}`))
     }
 
-    function er(rr) {
-      return hr(rr.split(".").pop())
+    function pd(dd) {
+      return dd.split(/[\s:_]+/).filter((dd => "" !== dd)).map(Xd).join("[`:_\\s]+")
     }
 
-    function Kr(rr) {
-      return rr.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    function Yd(dd) {
+      return yd(dd.split(".").pop())
     }
 
-    function yr(rr) {
-      let Sr = null;
+    function gd(dd) {
+      return dd.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
+    }
+
+    function wd(dd) {
+      let Od = null;
       return () => {
-        const Qr = Sr ??= rr();
-        return Qr.catch((() => {
-          Sr === Qr && (Sr = null)
-        })), Qr
+        const md = Od ??= dd();
+        return md.catch((() => {
+          Od === md && (Od = null)
+        })), md
       }
     }
   },
-  5692: (rr, Sr, Qr) => {
-    function Zr(rr) {
+  5656: (dd, Od, md) => {
+    function Wd(dd) {
       return {
-        notAfter: rr
+        notAfter: dd
       }
     }
-    Qr.d(Sr, {
-      c: () => fr,
-      e: () => Er,
-      g: () => Ir,
-      k: () => Zr,
-      o: () => Wr,
-      p: () => ar,
-      s: () => jr,
-      t: () => pr,
-      u: () => xr
+    md.d(Od, {
+      d: () => hd,
+      g: () => vd,
+      h: () => Kd,
+      l: () => Wd,
+      o: () => Fd,
+      q: () => Rd,
+      s: () => Xd,
+      v: () => Qd,
+      w: () => td
     });
-    const Wr = Zr("\\w$."),
-      ar = Zr("\\w.,");
+    const Fd = Wd("\\w$."),
+      Rd = Wd("\\w.,");
 
-    function jr(rr) {
-      return Sr => fr(Sr, rr)
+    function Xd(dd) {
+      return Od => hd(Od, dd)
     }
 
-    function Ir(rr) {
-      return Sr => !rr.test(Sr.input.slice(0, Sr.index))
+    function Kd(dd) {
+      return Od => !dd.test(Od.input.slice(0, Od.index))
     }
 
-    function fr(rr, Sr) {
-      return rr.index > 0 && new RegExp(`[${Sr}]`).test(rr.input[rr.index - 1])
+    function hd(dd, Od) {
+      return dd.index > 0 && new RegExp(`[${Od}]`).test(dd.input[dd.index - 1])
     }
 
-    function Er(rr, Sr, Qr) {
-      return function(rr) {
-        return void 0 !== rr && "function" !== typeof rr
-      }(Qr) ? function(rr, Sr, Qr) {
-        const Zr = Sr.flags.replace(/[gy]/g, ""),
-          Wr = new RegExp(`[^${Qr}](?:${Sr.source})`, `${Zr}g`),
-          ar = [],
-          jr = Qr => {
-            const Zr = Qr.index + Qr[0].length;
-            return ("" === Qr[0] ? mr(rr, Sr, Zr) : Zr) - 1
+    function vd(dd, Od, md) {
+      return function(dd) {
+        return void 0 !== dd && "function" !== typeof dd
+      }(md) ? function(dd, Od, md) {
+        const Wd = Od.flags.replace(/[gy]/g, ""),
+          Fd = new RegExp(`[^${md}](?:${Od.source})`, `${Wd}g`),
+          Rd = [],
+          Xd = md => {
+            const Wd = md.index + md[0].length;
+            return ("" === md[0] ? od(dd, Od, Wd) : Wd) - 1
           },
-          Ir = new RegExp(`(?:${Sr.source})`, `${Zr}y`).exec(rr);
-        if (Ir) {
-          if (ar.push(Ir), !Sr.global) return ar;
-          Wr.lastIndex = jr(Ir)
+          Kd = new RegExp(`(?:${Od.source})`, `${Wd}y`).exec(dd);
+        if (Kd) {
+          if (Rd.push(Kd), !Od.global) return Rd;
+          Fd.lastIndex = Xd(Kd)
         }
-        for (let fr = Wr.exec(rr); fr; fr = Wr.exec(rr)) {
-          const Qr = mr(rr, Sr, fr.index) - fr.index;
-          if (fr[0] = fr[0].slice(Qr), fr.index += Qr, ar.push(fr), !Sr.global) break;
-          Wr.lastIndex = jr(fr)
+        for (let hd = Fd.exec(dd); hd; hd = Fd.exec(dd)) {
+          const md = od(dd, Od, hd.index) - hd.index;
+          if (hd[0] = hd[0].slice(md), hd.index += md, Rd.push(hd), !Od.global) break;
+          Fd.lastIndex = Xd(hd)
         }
-        return ar
-      }(rr, Sr, Qr.notAfter) : function(rr, Sr, Qr) {
-        const Zr = new RegExp(Sr.source, `${Sr.flags.replace(/[gy]/g,"")}g`),
-          Wr = [];
-        for (let ar = Zr.exec(rr); ar; ar = Zr.exec(rr))
-          if (!Qr || Qr(ar)) {
-            if (Wr.push(ar), !Sr.global) break;
-            "" === ar[0] && (Zr.lastIndex = mr(rr, Sr, Zr.lastIndex))
-          } else Zr.lastIndex = mr(rr, Sr, ar.index);
-        return Wr
-      }(rr, Sr, Qr)
+        return Rd
+      }(dd, Od, md.notAfter) : function(dd, Od, md) {
+        const Wd = new RegExp(Od.source, `${Od.flags.replace(/[gy]/g,"")}g`),
+          Fd = [];
+        for (let Rd = Wd.exec(dd); Rd; Rd = Wd.exec(dd))
+          if (!md || md(Rd)) {
+            if (Fd.push(Rd), !Od.global) break;
+            "" === Rd[0] && (Wd.lastIndex = od(dd, Od, Wd.lastIndex))
+          } else Wd.lastIndex = od(dd, Od, Rd.index);
+        return Fd
+      }(dd, Od, md)
     }
 
-    function pr(rr, Sr, Qr, Zr) {
-      let Wr = "",
-        ar = 0;
-      for (const jr of Er(rr, Sr, Qr)) Wr += rr.slice(ar, jr.index) + Zr(jr), ar = jr.index + jr[0].length;
-      return Wr + rr.slice(ar)
+    function Qd(dd, Od, md, Wd) {
+      let Fd = "",
+        Rd = 0;
+      for (const Xd of vd(dd, Od, md)) Fd += dd.slice(Rd, Xd.index) + Wd(Xd), Rd = Xd.index + Xd[0].length;
+      return Fd + dd.slice(Rd)
     }
 
-    function xr(rr, Sr, Qr) {
-      const Zr = [];
-      let Wr = 0;
-      for (const ar of Er(rr, Sr, Qr)) Zr.push(rr.slice(Wr, ar.index)), Wr = ar.index + ar[0].length;
-      return [...Zr, rr.slice(Wr)]
+    function td(dd, Od, md) {
+      const Wd = [];
+      let Fd = 0;
+      for (const Rd of vd(dd, Od, md)) Wd.push(dd.slice(Fd, Rd.index)), Fd = Rd.index + Rd[0].length;
+      return [...Wd, dd.slice(Fd)]
     }
 
-    function mr(rr, Sr, Qr) {
-      var Zr;
-      return Qr + (Sr.unicode && (null !== (Zr = rr.codePointAt(Qr)) && void 0 !== Zr ? Zr : 0) > 65535 ? 2 : 1)
+    function od(dd, Od, md) {
+      var Wd;
+      return md + (Od.unicode && (null !== (Wd = dd.codePointAt(md)) && void 0 !== Wd ? Wd : 0) > 65535 ? 2 : 1)
     }
   },
-  7443: () => {}
+  7429: () => {}
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

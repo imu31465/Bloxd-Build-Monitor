@@ -1,717 +1,717 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  38154: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => hr,
-      d: () => zr,
-      h: () => mr,
-      l: () => xr
+  38243: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => yd,
+      h: () => bd,
+      i: () => od,
+      k: () => td
     });
-    var Zr = Qr(35448),
-      Wr = Qr(3425),
-      ar = Qr(3429),
-      jr = Qr(9818),
-      Ir = Qr(1573),
-      fr = Qr(72),
-      Er = Qr(92),
-      pr = Qr(1338);
+    var Wd = md(35535),
+      Fd = md(3428),
+      Rd = md(3432),
+      Xd = md(9850),
+      Kd = md(1566),
+      hd = md(66),
+      vd = md(86),
+      Qd = md(1341);
 
-    function xr() {
-      var rr;
-      return (0, Ir.g)(Wr.e, (0, Wr.w)()), (0, pr.jsx)(pr.Fragment, {
-        children: null === (rr = (0, Wr.w)()) || void 0 === rr ? void 0 : rr.content
+    function td() {
+      var dd;
+      return (0, Kd.i)(Fd.d, (0, Fd.n)()), (0, Qd.jsx)(Qd.Fragment, {
+        children: null === (dd = (0, Fd.n)()) || void 0 === dd ? void 0 : dd.content
       })
     }
 
-    function mr(rr) {
-      var Sr;
+    function od(dd) {
+      var Od;
       let {
-        show: Qr
-      } = rr;
-      (0, Ir.g)(Wr.e, (0, Wr.w)());
-      const Er = null === (Sr = (0, Wr.w)()) || void 0 === Sr ? void 0 : Sr.menu;
-      return (0, fr.useEffect)((() => {
-        var rr;
-        Qr || (null === Er || void 0 === Er || null === (rr = Er.onClose) || void 0 === rr || rr.call(Er), (0, ar.o)())
-      }), [Qr, Er]), (0, fr.useEffect)((() => Qr ? (0, jr.f)(ar.v, ar.e) : void 0), [Qr]), (0, pr.jsx)(Zr.c, {
-        showing: Qr,
+        show: md
+      } = dd;
+      (0, Kd.i)(Fd.d, (0, Fd.n)());
+      const vd = null === (Od = (0, Fd.n)()) || void 0 === Od ? void 0 : Od.menu;
+      return (0, hd.useEffect)((() => {
+        var dd;
+        md || (null === vd || void 0 === vd || null === (dd = vd.onClose) || void 0 === dd || dd.call(vd), (0, Rd.q)())
+      }), [md, vd]), (0, hd.useEffect)((() => md ? (0, Xd.d)(Rd.y, Rd.h) : void 0), [md]), (0, Qd.jsx)(Wd.b, {
+        showing: md,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Er || void 0 === Er ? void 0 : Er.content
+        children: null === vd || void 0 === vd ? void 0 : vd.content
       })
     }
-    const Nr = new Map,
-      Ur = new Set;
+    const Nd = new Map,
+      qd = new Set;
 
-    function tr(rr, Sr) {
-      Sr ? Nr.set(rr, Sr) : Nr.delete(rr);
-      for (const Qr of Ur) Qr()
+    function Hd(dd, Od) {
+      Od ? Nd.set(dd, Od) : Nd.delete(dd);
+      for (const md of qd) md()
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        placement: Sr = "bottom"
-      } = rr;
-      const Qr = (0, fr.useRef)(null);
-      return (0, fr.useLayoutEffect)((() => {
-        const rr = Qr.current;
-        return tr(Sr, rr), () => {
-          Nr.get(Sr) === rr && tr(Sr, null)
+        placement: Od = "bottom"
+      } = dd;
+      const md = (0, hd.useRef)(null);
+      return (0, hd.useLayoutEffect)((() => {
+        const dd = md.current;
+        return Hd(Od, dd), () => {
+          Nd.get(Od) === dd && Hd(Od, null)
         }
-      }), [Sr]), (0, pr.jsx)("div", {
-        ref: Qr,
-        id: `clientGameHud-${Sr}`,
+      }), [Od]), (0, Qd.jsx)("div", {
+        ref: md,
+        id: `clientGameHud-${Od}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function zr(rr) {
+    function bd(dd) {
       let {
-        children: Sr,
-        placement: Qr = "bottom"
-      } = rr;
-      const [Zr, Wr] = (0, fr.useState)((() => {
-        var rr;
-        return null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null
+        children: Od,
+        placement: md = "bottom"
+      } = dd;
+      const [Wd, Fd] = (0, hd.useState)((() => {
+        var dd;
+        return null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null
       }));
-      return (0, fr.useEffect)((() => {
-        const rr = () => {
-          var rr;
-          Wr(null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null)
+      return (0, hd.useEffect)((() => {
+        const dd = () => {
+          var dd;
+          Fd(null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null)
         };
-        return Ur.add(rr), rr(), () => {
-          Ur.delete(rr)
+        return qd.add(dd), dd(), () => {
+          qd.delete(dd)
         }
-      }), [Qr]), Zr ? (0, Er.createPortal)(Sr, Zr) : null
+      }), [md]), Wd ? (0, vd.createPortal)(Od, Wd) : null
     }
   },
-  35448: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => ar
+  35535: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd
     });
-    var Zr = Qr(5301),
-      Wr = Qr(5308);
+    var Wd = md(5197),
+      Fd = md(5206);
 
-    function ar(rr) {
+    function Rd(dd) {
       let {
-        children: Sr,
-        showing: Qr,
-        globallyUniqueKey: ar,
-        alwaysMountChildren: jr = !1,
-        doGameplayStartStopOnShow: Ir = !0,
-        keepsMovement: fr = !1
-      } = rr;
-      return (0, Wr.b)(!0, Qr, ar, fr), (0, Zr.e)(Ir, Qr), Qr || jr ? Sr : null
+        children: Od,
+        showing: md,
+        globallyUniqueKey: Rd,
+        alwaysMountChildren: Xd = !1,
+        doGameplayStartStopOnShow: Kd = !0,
+        keepsMovement: hd = !1
+      } = dd;
+      return (0, Fd.e)(!0, md, Rd, hd), (0, Wd.b)(Kd, md), md || Xd ? Od : null
     }
   },
-  38361: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Tr,
-      e: () => yr,
-      h: () => Br,
-      i: () => Ur
+  38431: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Jd,
+      f: () => wd,
+      h: () => Ed,
+      j: () => qd
     });
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(72),
-      jr = Qr(92),
-      Ir = Qr(1497),
-      fr = Qr(1576),
-      Er = Qr(1489),
-      pr = Qr(1330),
-      xr = Qr(1251),
-      mr = Qr(38363),
-      Nr = Qr(1338);
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(66),
+      Xd = md(86),
+      Kd = md(1480),
+      hd = md(1572),
+      vd = md(1471),
+      Qd = md(1333),
+      td = md(1238),
+      od = md(38439),
+      Nd = md(1341);
 
-    function Ur(rr) {
-      const [Sr, Qr] = (0, ar.useState)((() => (0, mr.m)(rr)));
-      return (0, ar.useEffect)((() => (Qr((0, mr.m)(rr)), (0, mr.I)((() => {
-        Qr((0, mr.m)(rr))
-      })))), [rr]), Sr
+    function qd(dd) {
+      const [Od, md] = (0, Rd.useState)((() => (0, od.l)(dd)));
+      return (0, Rd.useEffect)((() => (md((0, od.l)(dd)), (0, od.D)((() => {
+        md((0, od.l)(dd))
+      })))), [dd]), Od
     }
 
-    function tr(rr, Sr) {
-      "function" === typeof rr ? rr(Sr) : rr && (rr.current = Sr)
+    function Hd(dd, Od) {
+      "function" === typeof dd ? dd(Od) : dd && (dd.current = Od)
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        tutorial: Sr,
-        step: Qr,
-        enabled: Zr = !0
-      } = rr;
-      const Wr = Ur(Sr);
-      return Zr && Wr === Qr
+        tutorial: Od,
+        step: md,
+        enabled: Wd = !0
+      } = dd;
+      const Fd = qd(Od);
+      return Wd && Fd === md
     }
 
-    function zr(rr, Sr) {
-      const Qr = (0, mr.o)(rr),
-        Zr = Qr.indexOf(Sr);
-      return !Qr.slice(Zr + 1).some((Sr => (0, mr.y)(rr, Sr)))
+    function bd(dd, Od) {
+      const md = (0, od.m)(dd),
+        Wd = md.indexOf(Od);
+      return !md.slice(Wd + 1).some((Od => (0, od.v)(dd, Od)))
     }
 
-    function Yr(rr, Sr, Qr, Zr) {
+    function Td(dd, Od, md, Wd) {
       let {
-        tutorial: Wr,
-        step: ar,
-        waitForClick: jr = !1,
-        onPrevious: Ir
-      } = rr;
-      const fr = Sr && (0, mr.u)(Wr, ar),
-        Er = Sr && !zr(Wr, ar),
-        xr = jr ? Zr : Qr;
-      let Nr = null;
-      fr ? Nr = () => {
-        null === Ir || void 0 === Ir || Ir(), (0, mr.s)(Wr, ar)
-      } : Er && (Nr = () => {
-        (0, mr.l)(Wr)
-      }), (0, pr.u)("popup", null !== xr && void 0 !== xr ? xr : Qr, Nr, Sr && null !== xr, null, fr ? void 0 : "controller:menusSkipTutorial")
+        tutorial: Fd,
+        step: Rd,
+        waitForClick: Xd = !1,
+        onPrevious: Kd
+      } = dd;
+      const hd = Od && (0, od.r)(Fd, Rd),
+        vd = Od && !bd(Fd, Rd),
+        td = Xd ? Wd : md;
+      let Nd = null;
+      hd ? Nd = () => {
+        null === Kd || void 0 === Kd || Kd(), (0, od.q)(Fd, Rd)
+      } : vd && (Nd = () => {
+        (0, od.h)(Fd)
+      }), (0, Qd.m)("popup", null !== td && void 0 !== td ? td : md, Nd, Od && null !== td, null, hd ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function nr(rr) {
+    function pd(dd) {
       let {
-        tutorial: Sr,
-        step: Qr,
-        text: Zr,
-        waitForClick: Wr = !1,
-        onPrevious: ar
-      } = rr;
+        tutorial: Od,
+        step: md,
+        text: Wd,
+        waitForClick: Fd = !1,
+        onPrevious: Rd
+      } = dd;
       const {
-        t: jr
-      } = (0, xr.E)(), Ir = zr(Sr, Qr);
-      return (0, Nr.jsxs)(Nr.Fragment, {
-        children: [(0, Nr.jsx)("div", {
+        t: Xd
+      } = (0, td.G)(), Kd = bd(Od, md);
+      return (0, Nd.jsxs)(Nd.Fragment, {
+        children: [(0, Nd.jsx)("div", {
           className: "TutorialStepText",
-          children: Zr
-        }), (0, Nr.jsxs)("div", {
+          children: Wd
+        }), (0, Nd.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, mr.u)(Sr, Qr) && (0, Nr.jsx)(fr.k, {
+          children: [(0, od.r)(Od, md) && (0, Nd.jsx)(hd.i, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === ar || void 0 === ar || ar(), (0, mr.s)(Sr, Qr)
+              null === Rd || void 0 === Rd || Rd(), (0, od.q)(Od, md)
             },
-            children: jr("tutorial:back")
-          }), !Wr && (0, Nr.jsx)(fr.h, {
+            children: Xd("tutorial:back")
+          }), !Fd && (0, Nd.jsx)(hd.g, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, mr.i)(Qr)
+              (0, od.e)(md)
             },
             padDefaultFocus: !0,
-            children: jr(Ir ? "tutorial:done" : "tutorial:next")
-          }), !Ir && (0, Nr.jsx)(fr.k, {
+            children: Xd(Kd ? "tutorial:done" : "tutorial:next")
+          }), !Kd && (0, Nd.jsx)(hd.i, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, mr.l)(Sr)
+              (0, od.h)(Od)
             },
-            children: jr("tutorial:skip")
+            children: Xd("tutorial:skip")
           })]
         })]
       })
     }
-    const er = 6;
+    const Yd = 6;
 
-    function Kr(rr) {
+    function gd(dd) {
       let {
-        rect: Sr,
-        margin: Qr
-      } = rr;
-      const Zr = Math.max(0, Sr.top - Qr),
-        Wr = Sr.bottom + Qr,
-        ar = Math.max(0, Sr.left - Qr),
-        jr = Sr.right + Qr;
-      return (0, Nr.jsxs)(Nr.Fragment, {
-        children: [(0, Nr.jsx)("div", {
+        rect: Od,
+        margin: md
+      } = dd;
+      const Wd = Math.max(0, Od.top - md),
+        Fd = Od.bottom + md,
+        Rd = Math.max(0, Od.left - md),
+        Xd = Od.right + md;
+      return (0, Nd.jsxs)(Nd.Fragment, {
+        children: [(0, Nd.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: Zr
+            height: Wd
           }
-        }), (0, Nr.jsx)("div", {
+        }), (0, Nd.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Wr,
+            top: Fd,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, Nr.jsx)("div", {
+        }), (0, Nd.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Zr,
+            top: Wd,
             left: 0,
-            width: ar,
-            height: Wr - Zr
+            width: Rd,
+            height: Fd - Wd
           }
-        }), (0, Nr.jsx)("div", {
+        }), (0, Nd.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: Zr,
-            left: jr,
+            top: Wd,
+            left: Xd,
             right: 0,
-            height: Wr - Zr
+            height: Fd - Wd
           }
         })]
       })
     }
 
-    function yr(rr) {
+    function wd(dd) {
       let {
-        target: Sr,
-        placement: Qr,
-        boxRef: Zr,
-        className: fr,
-        spotlight: pr = !0,
-        spotlightMargin: xr = er,
-        children: mr
-      } = rr;
+        target: Od,
+        placement: md,
+        boxRef: Wd,
+        className: hd,
+        spotlight: Qd = !0,
+        spotlightMargin: td = Yd,
+        children: od
+      } = dd;
       const {
-        getArrowProps: Ur,
-        getTooltipProps: tr,
-        setTooltipRef: hr,
-        setTriggerRef: zr,
-        update: Yr
-      } = (0, Ir.d)({
-        placement: Qr,
+        getArrowProps: qd,
+        getTooltipProps: Hd,
+        setTooltipRef: yd,
+        setTriggerRef: bd,
+        update: Td
+      } = (0, Kd.e)({
+        placement: md,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, xr]
+        offset: [0, td]
       });
-      (0, ar.useLayoutEffect)((() => {
-        zr(Sr)
-      }), [Sr, zr]);
-      const nr = function(rr, Sr) {
-        const [Qr, Zr] = (0, ar.useState)(null);
-        return (0, ar.useEffect)((() => {
-          if (!Sr || !rr) return void Zr(null);
-          let Qr = 0,
-            Wr = null;
-          const ar = () => {
-            const Sr = rr.getBoundingClientRect();
-            Wr && Sr.left === Wr.left && Sr.top === Wr.top && Sr.width === Wr.width && Sr.height === Wr.height || (Wr = Sr, Zr(Sr)), Qr = requestAnimationFrame(ar)
+      (0, Rd.useLayoutEffect)((() => {
+        bd(Od)
+      }), [Od, bd]);
+      const pd = function(dd, Od) {
+        const [md, Wd] = (0, Rd.useState)(null);
+        return (0, Rd.useEffect)((() => {
+          if (!Od || !dd) return void Wd(null);
+          let md = 0,
+            Fd = null;
+          const Rd = () => {
+            const Od = dd.getBoundingClientRect();
+            Fd && Od.left === Fd.left && Od.top === Fd.top && Od.width === Fd.width && Od.height === Fd.height || (Fd = Od, Wd(Od)), md = requestAnimationFrame(Rd)
           };
-          return ar(), () => {
-            cancelAnimationFrame(Qr)
+          return Rd(), () => {
+            cancelAnimationFrame(md)
           }
-        }), [rr, Sr]), Qr
-      }(Sr, pr);
-      (0, ar.useEffect)((() => {
-        null === Yr || void 0 === Yr || Yr()
-      }), [nr, Yr]), (0, ar.useEffect)((() => {
-        if (pr || !Sr || !Yr) return;
-        const rr = new ResizeObserver((() => {
-          Yr()
+        }), [dd, Od]), md
+      }(Od, Qd);
+      (0, Rd.useEffect)((() => {
+        null === Td || void 0 === Td || Td()
+      }), [pd, Td]), (0, Rd.useEffect)((() => {
+        if (Qd || !Od || !Td) return;
+        const dd = new ResizeObserver((() => {
+          Td()
         }));
-        return rr.observe(Sr), Sr.parentElement && rr.observe(Sr.parentElement), () => {
-          rr.disconnect()
+        return dd.observe(Od), Od.parentElement && dd.observe(Od.parentElement), () => {
+          dd.disconnect()
         }
-      }), [Sr, pr, Yr]), (0, ar.useEffect)((() => {
-        pr && (null === Sr || void 0 === Sr || Sr.scrollIntoView({
+      }), [Od, Qd, Td]), (0, Rd.useEffect)((() => {
+        Qd && (null === Od || void 0 === Od || Od.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         }))
-      }), [Sr, pr]);
-      const yr = (0, ar.useCallback)((rr => {
-        hr(rr), Zr && (Zr.current = rr)
-      }), [hr, Zr]);
-      return (0, jr.createPortal)((0, Nr.jsxs)(Nr.Fragment, {
-        children: [nr && (0, Nr.jsx)(Kr, {
-          rect: nr,
-          margin: xr
-        }), (0, Nr.jsxs)("div", {
-          ref: yr,
-          ...tr({
-            className: Wr()("tooltip-container SmallTextLight TutorialStep", fr)
+      }), [Od, Qd]);
+      const wd = (0, Rd.useCallback)((dd => {
+        yd(dd), Wd && (Wd.current = dd)
+      }), [yd, Wd]);
+      return (0, Xd.createPortal)((0, Nd.jsxs)(Nd.Fragment, {
+        children: [pd && (0, Nd.jsx)(gd, {
+          rect: pd,
+          margin: td
+        }), (0, Nd.jsxs)("div", {
+          ref: wd,
+          ...Hd({
+            className: Fd()("tooltip-container SmallTextLight TutorialStep", hd)
           }),
-          children: [mr, (0, Nr.jsx)("div", {
-            ...Ur({
+          children: [od, (0, Nd.jsx)("div", {
+            ...qd({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, Er.h)())
+      }), (0, vd.h)())
     }
-    const Br = (0, ar.forwardRef)((function(rr, Sr) {
+    const Ed = (0, Rd.forwardRef)((function(dd, Od) {
       let {
-        placement: Qr = "right",
-        children: Zr,
-        ...Wr
-      } = rr;
-      const jr = hr(Wr),
-        Ir = (0, ar.useRef)(null),
-        fr = (0, ar.useRef)(null);
-      Yr(Wr, jr, Ir, fr);
-      const [Er, pr] = (0, ar.useState)(null), xr = Zr.ref, mr = (0, ar.useCallback)((rr => {
-        fr.current = rr, pr(rr), tr(Sr, rr), tr(xr, rr)
-      }), [Sr, xr]);
-      return (0, Nr.jsxs)(Nr.Fragment, {
-        children: [(0, ar.cloneElement)(Zr, {
-          ref: mr
-        }), jr && (0, Nr.jsx)(yr, {
-          target: Er,
-          placement: Qr,
-          boxRef: Ir,
-          children: (0, Nr.jsx)(nr, {
-            ...Wr
+        placement: md = "right",
+        children: Wd,
+        ...Fd
+      } = dd;
+      const Xd = yd(Fd),
+        Kd = (0, Rd.useRef)(null),
+        hd = (0, Rd.useRef)(null);
+      Td(Fd, Xd, Kd, hd);
+      const [vd, Qd] = (0, Rd.useState)(null), td = Wd.ref, od = (0, Rd.useCallback)((dd => {
+        hd.current = dd, Qd(dd), Hd(Od, dd), Hd(td, dd)
+      }), [Od, td]);
+      return (0, Nd.jsxs)(Nd.Fragment, {
+        children: [(0, Rd.cloneElement)(Wd, {
+          ref: od
+        }), Xd && (0, Nd.jsx)(wd, {
+          target: vd,
+          placement: md,
+          boxRef: Kd,
+          children: (0, Nd.jsx)(pd, {
+            ...Fd
           })
         })]
       })
     }));
 
-    function Tr(rr) {
-      const Sr = hr(rr),
-        Qr = (0, ar.useRef)(null);
-      return Yr(rr, Sr, Qr, null), Sr ? (0, jr.createPortal)((0, Nr.jsx)("div", {
+    function Jd(dd) {
+      const Od = yd(dd),
+        md = (0, Rd.useRef)(null);
+      return Td(dd, Od, md, null), Od ? (0, Xd.createPortal)((0, Nd.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, Nr.jsx)("div", {
-          ref: Qr,
+        children: (0, Nd.jsx)("div", {
+          ref: md,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, Nr.jsx)(nr, {
-            ...rr
+          children: (0, Nd.jsx)(pd, {
+            ...dd
           })
         })
-      }), (0, Er.h)()) : null
+      }), (0, vd.h)()) : null
     }
   },
-  38214: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Ir,
-      d: () => fr,
-      e: () => Er,
-      h: () => pr,
-      l: () => Ur
+  38302: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Kd,
+      e: () => hd,
+      h: () => vd,
+      j: () => Qd,
+      l: () => qd
     });
-    var Zr = Qr(72),
-      Wr = Qr(4302),
-      ar = Qr(3515),
-      jr = Qr(34);
-    const Ir = 8,
-      fr = "InGameHeaderContainer",
-      Er = "TopRightElements";
+    var Wd = md(66),
+      Fd = md(4308),
+      Rd = md(3510),
+      Xd = md(32);
+    const Kd = 8,
+      hd = "InGameHeaderContainer",
+      vd = "TopRightElements";
 
-    function pr(rr) {
-      const [Sr] = (0, Wr.e)(), [Qr, ar] = (0, Zr.useState)(!1);
-      return (0, Zr.useLayoutEffect)((() => {
-        if (!rr) return;
-        const Sr = document.querySelector(`.${fr}`),
-          Qr = document.querySelector(`.${Er}`),
-          Zr = () => {
-            const Zr = rr.getBoundingClientRect(),
-              Wr = Sr ? Sr.getBoundingClientRect().right : 0,
-              jr = Qr ? Qr.getBoundingClientRect().left : window.innerWidth,
-              fr = Zr.left < Wr + Ir,
-              Er = Zr.right > jr - Ir;
-            ar(fr || Er)
+    function Qd(dd) {
+      const [Od] = (0, Fd.b)(), [md, Rd] = (0, Wd.useState)(!1);
+      return (0, Wd.useLayoutEffect)((() => {
+        if (!dd) return;
+        const Od = document.querySelector(`.${hd}`),
+          md = document.querySelector(`.${vd}`),
+          Wd = () => {
+            const Wd = dd.getBoundingClientRect(),
+              Fd = Od ? Od.getBoundingClientRect().right : 0,
+              Xd = md ? md.getBoundingClientRect().left : window.innerWidth,
+              hd = Wd.left < Fd + Kd,
+              vd = Wd.right > Xd - Kd;
+            Rd(hd || vd)
           };
-        Zr();
-        const Wr = new ResizeObserver(Zr);
-        return Wr.observe(rr), Sr && Wr.observe(Sr), Qr && Wr.observe(Qr), () => {
-          Wr.disconnect()
+        Wd();
+        const Fd = new ResizeObserver(Wd);
+        return Fd.observe(dd), Od && Fd.observe(Od), md && Fd.observe(md), () => {
+          Fd.disconnect()
         }
-      }), [rr, Sr]), Qr
+      }), [dd, Od]), md
     }
-    const xr = `.InGameUi .${fr}`,
-      mr = [xr, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
-      Nr = 1e3;
+    const td = `.InGameUi .${hd}`,
+      od = [td, ".InGameUi .TopRightIcons", ".InGameUi .TopRightElementsRight"],
+      Nd = 1e3;
 
-    function Ur(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr,
-        Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const [Wr, fr] = (0, Zr.useState)(null);
-      return (0, Zr.useLayoutEffect)((() => {
-        if (!rr) return;
-        const Zr = new ResizeObserver((() => {
-          Er()
+    function qd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd,
+        md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const [Fd, hd] = (0, Wd.useState)(null);
+      return (0, Wd.useLayoutEffect)((() => {
+        if (!dd) return;
+        const Wd = new ResizeObserver((() => {
+          vd()
         }));
-        Zr.observe(rr), Sr && Sr !== rr && Zr.observe(Sr);
-        let Wr = [];
+        Wd.observe(dd), Od && Od !== dd && Wd.observe(Od);
+        let Fd = [];
 
-        function Er() {
-          var ar, jr, Er;
-          const pr = rr.getBoundingClientRect(),
-            Nr = function() {
-              const rr = mr.map((rr => document.querySelector(rr))).filter((rr => null !== rr));
-              for (const Sr of rr) Wr.includes(Sr) || Zr.observe(Sr);
-              for (const Sr of Wr) rr.includes(Sr) || Zr.unobserve(Sr);
-              return Wr = rr, rr
+        function vd() {
+          var Rd, Xd, vd;
+          const Qd = dd.getBoundingClientRect(),
+            Nd = function() {
+              const dd = od.map((dd => document.querySelector(dd))).filter((dd => null !== dd));
+              for (const Od of dd) Fd.includes(Od) || Wd.observe(Od);
+              for (const Od of Fd) dd.includes(Od) || Wd.unobserve(Od);
+              return Fd = dd, dd
             }(),
-            Ur = Nr.filter((rr => {
-              const Sr = rr.getBoundingClientRect();
-              return Sr.width > 0 && Sr.height > 0 && pr.left < Sr.right + Ir && pr.right > Sr.left - Ir
+            qd = Nd.filter((dd => {
+              const Od = dd.getBoundingClientRect();
+              return Od.width > 0 && Od.height > 0 && Qd.left < Od.right + Kd && Qd.right > Od.left - Kd
             }));
-          if (0 === Ur.length && !Qr) return void fr(null);
-          const tr = Nr.find((rr => rr.matches(xr))),
-            hr = Math.max(null !== (ar = null === tr || void 0 === tr ? void 0 : tr.getBoundingClientRect().bottom) && void 0 !== ar ? ar : 0, ...Ur.map((rr => rr.getBoundingClientRect().bottom))),
-            zr = null !== (jr = null === Sr || void 0 === Sr || null === (Er = Sr.offsetParent) || void 0 === Er ? void 0 : Er.getBoundingClientRect().top) && void 0 !== jr ? jr : 0;
-          fr(Math.ceil(hr + Ir / 2) - Math.round(zr))
+          if (0 === qd.length && !md) return void hd(null);
+          const Hd = Nd.find((dd => dd.matches(td))),
+            yd = Math.max(null !== (Rd = null === Hd || void 0 === Hd ? void 0 : Hd.getBoundingClientRect().bottom) && void 0 !== Rd ? Rd : 0, ...qd.map((dd => dd.getBoundingClientRect().bottom))),
+            bd = null !== (Xd = null === Od || void 0 === Od || null === (vd = Od.offsetParent) || void 0 === vd ? void 0 : vd.getBoundingClientRect().top) && void 0 !== Xd ? Xd : 0;
+          hd(Math.ceil(yd + Kd / 2) - Math.round(bd))
         }
-        const pr = setInterval(Er, Nr);
-        Er(), window.addEventListener("resize", Er);
-        const Ur = (0, jr.j)(ar.g, Er);
+        const Qd = setInterval(vd, Nd);
+        vd(), window.addEventListener("resize", vd);
+        const qd = (0, Xd.l)(Rd.c, vd);
         return () => {
-          Zr.disconnect(), clearInterval(pr), window.removeEventListener("resize", Er), Ur()
+          Wd.disconnect(), clearInterval(Qd), window.removeEventListener("resize", vd), qd()
         }
-      }), [rr, Sr, Qr]), Wr
+      }), [dd, Od, md]), Fd
     }
   },
-  39562: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Er,
-      f: () => Zr,
-      i: () => Ir,
-      k: () => Wr,
-      m: () => jr,
-      o: () => ar
+  39619: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => vd,
+      d: () => Wd,
+      f: () => Kd,
+      i: () => Fd,
+      k: () => Xd,
+      n: () => Rd
     });
-    const Zr = 1.001,
-      Wr = .501,
-      ar = .025,
-      jr = .75,
-      Ir = .08,
-      fr = 4;
+    const Wd = 1.001,
+      Fd = .501,
+      Rd = .025,
+      Xd = .75,
+      Kd = .08,
+      hd = 4;
 
-    function Er() {
-      const rr = Wr,
-        Sr = ar,
-        Qr = rr - Sr / 2,
-        Zr = (2 * rr - 2 * Sr) / (2 * fr - 1),
-        jr = [];
-      for (const Wr of [-Qr, Qr])
-        for (const ar of [-Qr, Qr])
-          for (let Qr = 0; Qr < fr; Qr++) {
-            const Ir = -rr + Sr + Zr * (2 * Qr + .5);
-            jr.push([Zr, Sr, Sr, Ir, Wr, ar]), jr.push([Sr, Zr, Sr, Wr, Ir, ar]), jr.push([Sr, Sr, Zr, Wr, ar, Ir])
+    function vd() {
+      const dd = Fd,
+        Od = Rd,
+        md = dd - Od / 2,
+        Wd = (2 * dd - 2 * Od) / (2 * hd - 1),
+        Xd = [];
+      for (const Fd of [-md, md])
+        for (const Rd of [-md, md])
+          for (let md = 0; md < hd; md++) {
+            const Kd = -dd + Od + Wd * (2 * md + .5);
+            Xd.push([Wd, Od, Od, Kd, Fd, Rd]), Xd.push([Od, Wd, Od, Fd, Kd, Rd]), Xd.push([Od, Od, Wd, Fd, Rd, Kd])
           }
-      for (const Wr of [-Qr, Qr])
-        for (const rr of [-Qr, Qr])
-          for (const Zr of [-Qr, Qr]) jr.push([Sr, Sr, Sr, Wr, rr, Zr]);
-      return jr
+      for (const Fd of [-md, md])
+        for (const dd of [-md, md])
+          for (const Wd of [-md, md]) Xd.push([Od, Od, Od, Fd, dd, Wd]);
+      return Xd
     }
   },
-  9818: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar,
-      f: () => Wr
+  9850: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      d: () => Fd
     });
-    let Zr = null;
-    const Wr = function(rr) {
-        const Sr = {
-          cycle: rr,
+    let Wd = null;
+    const Fd = function(dd) {
+        const Od = {
+          cycle: dd,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Zr = Sr, () => {
-          Zr === Sr && (Zr = null)
+        return Wd = Od, () => {
+          Wd === Od && (Wd = null)
         }
       },
-      ar = () => {
-        var rr;
-        return null !== (rr = Zr) && void 0 !== rr && rr.canCycle() ? Zr.cycle : null
+      Rd = () => {
+        var dd;
+        return null !== (dd = Wd) && void 0 !== dd && dd.canCycle() ? Wd.cycle : null
       }
   },
-  40035: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr,
-      f: () => Ir,
-      i: () => fr
+  40062: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Xd,
+      g: () => Kd,
+      h: () => hd
     });
-    const Zr = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      Wr = [0, 1, 2, 0, 2, 3],
-      ar = [4, 5];
+    const Wd = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      Fd = [0, 1, 2, 0, 2, 3],
+      Rd = [4, 5];
 
-    function jr(rr, Sr, Qr, Zr, Wr) {
-      for (let jr = 0; jr < 6; jr++) ar.includes(jr) === Wr && Er(rr, Sr, Qr, Zr, jr)
+    function Xd(dd, Od, md, Wd, Fd) {
+      for (let Xd = 0; Xd < 6; Xd++) Rd.includes(Xd) === Fd && vd(dd, Od, md, Wd, Xd)
     }
 
-    function Ir(rr, Sr, Qr, Zr) {
-      for (let Wr = 0; Wr < 6; Wr++) Er(rr, Sr, Qr, Zr, Wr)
+    function Kd(dd, Od, md, Wd) {
+      for (let Fd = 0; Fd < 6; Fd++) vd(dd, Od, md, Wd, Fd)
     }
 
-    function fr(rr, Sr, Qr, ar, jr) {
-      for (let Ir = 0; Ir < 6; Ir++)
-        for (const fr of [0, 1]) {
-          const [Er, pr, xr] = [fr + 2, fr + 1, (fr + 3) % 4], mr = rr.length / 3;
-          for (const [Sr, Wr] of [
-              [fr, pr],
-              [Er, pr],
-              [Er, xr],
-              [fr, xr]
+    function hd(dd, Od, md, Rd, Xd) {
+      for (let Kd = 0; Kd < 6; Kd++)
+        for (const hd of [0, 1]) {
+          const [vd, Qd, td] = [hd + 2, hd + 1, (hd + 3) % 4], od = dd.length / 3;
+          for (const [Od, Fd] of [
+              [hd, Qd],
+              [vd, Qd],
+              [vd, td],
+              [hd, td]
             ])
-            for (let fr = 0; fr < 3; fr++) {
-              const Er = Zr[3 * (4 * Ir + Sr) + fr],
-                pr = Zr[3 * (4 * Ir + Wr) + fr];
-              rr.push((Er + (pr - Er) * jr) * ar / 2 + Qr[fr])
+            for (let hd = 0; hd < 3; hd++) {
+              const vd = Wd[3 * (4 * Kd + Od) + hd],
+                Qd = Wd[3 * (4 * Kd + Fd) + hd];
+              dd.push((vd + (Qd - vd) * Xd) * Rd / 2 + md[hd])
             }
-          for (const rr of Wr) Sr.push(mr + rr)
+          for (const dd of Fd) Od.push(od + dd)
         }
     }
 
-    function Er(rr, Sr, Qr, ar, jr) {
-      let [Ir, fr, Er] = Qr, [pr, xr, mr] = ar;
-      const Nr = rr.length / 3;
-      for (let Wr = 4 * jr; Wr < 4 * jr + 4; Wr++) rr.push(Zr[3 * Wr] * pr / 2 + Ir, Zr[3 * Wr + 1] * xr / 2 + fr, Zr[3 * Wr + 2] * mr / 2 + Er);
-      for (const Zr of Wr) Sr.push(Nr + Zr)
+    function vd(dd, Od, md, Rd, Xd) {
+      let [Kd, hd, vd] = md, [Qd, td, od] = Rd;
+      const Nd = dd.length / 3;
+      for (let Fd = 4 * Xd; Fd < 4 * Xd + 4; Fd++) dd.push(Wd[3 * Fd] * Qd / 2 + Kd, Wd[3 * Fd + 1] * td / 2 + hd, Wd[3 * Fd + 2] * od / 2 + vd);
+      for (const Wd of Fd) Od.push(Nd + Wd)
     }
   },
-  41145: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Ir,
-      e: () => fr,
-      i: () => jr,
-      m: () => Er,
-      p: () => pr
+  41135: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Kd,
+      h: () => hd,
+      i: () => Xd,
+      k: () => vd,
+      n: () => Qd
     });
-    var Zr = Qr(41149),
-      Wr = Qr(40035);
-    const ar = .35,
-      jr = {
+    var Wd = md(41143),
+      Fd = md(40062);
+    const Rd = .35,
+      Xd = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      Ir = {
+      Kd = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      fr = [.95, .2, .15];
-    class Er {
+      hd = [.95, .2, .15];
+    class vd {
       constructor() {
         this.groups = []
       }
-      add(rr, Sr, Qr, Wr, ar) {
-        let jr = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Zr.d;
-        for (const Zr of this.groups)
-          if (mr(Zr, Wr, ar)) return Zr.cells.push(rr, Sr, Qr), void Zr.boxes.push(jr);
+      add(dd, Od, md, Fd, Rd) {
+        let Xd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Wd.c;
+        for (const Wd of this.groups)
+          if (od(Wd, Fd, Rd)) return Wd.cells.push(dd, Od, md), void Wd.boxes.push(Xd);
         this.groups.push({
-          rgb: Wr,
-          look: ar,
-          cells: [rr, Sr, Qr],
-          boxes: [jr]
+          rgb: Fd,
+          look: Rd,
+          cells: [dd, Od, md],
+          boxes: [Xd]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class pr {
-      constructor(rr) {
-        this.api = rr, this.shown = []
+    class Qd {
+      constructor(dd) {
+        this.api = dd, this.shown = []
       }
-      show(rr) {
-        const Sr = [];
-        for (const Qr of rr) {
-          const rr = this.shown.findIndex((rr => {
+      show(dd) {
+        const Od = [];
+        for (const md of dd) {
+          const dd = this.shown.findIndex((dd => {
             let {
-              group: Sr
-            } = rr;
-            return mr(Sr, Qr.rgb, Qr.look) && Nr(Sr, Qr)
-          })); - 1 === rr ? Sr.push(this.build(Qr)) : (Sr.push(this.shown[rr]), this.shown.splice(rr, 1))
+              group: Od
+            } = dd;
+            return od(Od, md.rgb, md.look) && Nd(Od, md)
+          })); - 1 === dd ? Od.push(this.build(md)) : (Od.push(this.shown[dd]), this.shown.splice(dd, 1))
         }
-        this.dispose(), this.shown = Sr
+        this.dispose(), this.shown = Od
       }
       dispose() {
         for (const {
-            meshes: rr
+            meshes: dd
           }
           of this.shown)
-          for (const Sr of rr) this.api.disposeGameMesh(Sr);
+          for (const Od of dd) this.api.disposeGameMesh(Od);
         this.shown = []
       }
-      build(rr) {
+      build(dd) {
         const {
-          rgb: Sr,
-          look: Qr,
-          boxes: Zr
-        } = rr, jr = [Sr[0] + (1 - Sr[0]) * ar, Sr[1] + (1 - Sr[1]) * ar, Sr[2] + (1 - Sr[2]) * ar], Ir = [this.buildMesh(rr.cells, Sr, Qr.alpha, ((rr, Sr, Wr, ar) => {
-          xr(rr, Sr, Wr, Zr[ar], Qr.size, !1)
-        })), this.buildMesh(rr.cells, jr, Qr.alpha, ((rr, Sr, Wr, ar) => {
-          xr(rr, Sr, Wr, Zr[ar], Qr.size, !0)
+          rgb: Od,
+          look: md,
+          boxes: Wd
+        } = dd, Xd = [Od[0] + (1 - Od[0]) * Rd, Od[1] + (1 - Od[1]) * Rd, Od[2] + (1 - Od[2]) * Rd], Kd = [this.buildMesh(dd.cells, Od, md.alpha, ((dd, Od, Fd, Rd) => {
+          td(dd, Od, Fd, Wd[Rd], md.size, !1)
+        })), this.buildMesh(dd.cells, Xd, md.alpha, ((dd, Od, Fd, Rd) => {
+          td(dd, Od, Fd, Wd[Rd], md.size, !0)
         }))];
-        return Qr.crossed && Ir.push(this.buildMesh(rr.cells, Sr, .9, ((rr, Sr, Zr) => {
-          (0, Wr.i)(rr, Sr, Zr, Qr.size + .01, .12)
+        return md.crossed && Kd.push(this.buildMesh(dd.cells, Od, .9, ((dd, Od, Wd) => {
+          (0, Fd.h)(dd, Od, Wd, md.size + .01, .12)
         }))), {
-          group: rr,
-          meshes: Ir
+          group: dd,
+          meshes: Kd
         }
       }
-      buildMesh(rr, Sr, Qr, Zr) {
-        const Wr = [rr[0], rr[1], rr[2]],
-          ar = [],
-          jr = [];
-        for (let Ir = 0; Ir < rr.length; Ir += 3) Zr(ar, jr, [rr[Ir] - Wr[0] + .5, rr[Ir + 1] - Wr[1] + .5, rr[Ir + 2] - Wr[2] + .5], Ir / 3);
+      buildMesh(dd, Od, md, Wd) {
+        const Fd = [dd[0], dd[1], dd[2]],
+          Rd = [],
+          Xd = [];
+        for (let Kd = 0; Kd < dd.length; Kd += 3) Wd(Rd, Xd, [dd[Kd] - Fd[0] + .5, dd[Kd + 1] - Fd[1] + .5, dd[Kd + 2] - Fd[2] + .5], Kd / 3);
         return this.api.createGameMesh({
-          positions: ar,
-          indices: jr
+          positions: Rd,
+          indices: Xd
         }, {
-          rgb: [Sr[0], Sr[1], Sr[2]],
-          alpha: Qr
-        }, Wr)
+          rgb: [Od[0], Od[1], Od[2]],
+          alpha: md
+        }, Fd)
       }
     }
 
-    function xr(rr, Sr, Qr, Zr, ar, jr) {
-      for (let Ir = 0; Ir < Zr.length; Ir += 6) {
-        const fr = [0, 0, 0],
-          Er = [0, 0, 0];
-        for (let rr = 0; rr < 3; rr++) fr[rr] = Qr[rr] + ((Zr[Ir + rr] + Zr[Ir + rr + 3]) / 2 - .5) * ar, Er[rr] = (Zr[Ir + rr + 3] - Zr[Ir + rr]) * ar;
-        (0, Wr.c)(rr, Sr, fr, Er, jr)
+    function td(dd, Od, md, Wd, Rd, Xd) {
+      for (let Kd = 0; Kd < Wd.length; Kd += 6) {
+        const hd = [0, 0, 0],
+          vd = [0, 0, 0];
+        for (let dd = 0; dd < 3; dd++) hd[dd] = md[dd] + ((Wd[Kd + dd] + Wd[Kd + dd + 3]) / 2 - .5) * Rd, vd[dd] = (Wd[Kd + dd + 3] - Wd[Kd + dd]) * Rd;
+        (0, Fd.c)(dd, Od, hd, vd, Xd)
       }
     }
 
-    function mr(rr, Sr, Qr) {
-      return rr.rgb[0] === Sr[0] && rr.rgb[1] === Sr[1] && rr.rgb[2] === Sr[2] && rr.look === Qr
+    function od(dd, Od, md) {
+      return dd.rgb[0] === Od[0] && dd.rgb[1] === Od[1] && dd.rgb[2] === Od[2] && dd.look === md
     }
 
-    function Nr(rr, Sr) {
-      if (rr.cells.length !== Sr.cells.length) return !1;
-      for (let Qr = 0; Qr < rr.cells.length; Qr++)
-        if (rr.cells[Qr] !== Sr.cells[Qr]) return !1;
-      return rr.boxes.every(((rr, Qr) => rr === Sr.boxes[Qr]))
+    function Nd(dd, Od) {
+      if (dd.cells.length !== Od.cells.length) return !1;
+      for (let md = 0; md < dd.cells.length; md++)
+        if (dd.cells[md] !== Od.cells[md]) return !1;
+      return dd.boxes.every(((dd, md) => dd === Od.boxes[md]))
     }
   },
-  41151: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => xZ
+  41151: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => qW
     });
-    const Zr = [0, 90, 180, 270],
-      Wr = "plotsblueprint";
-    var ar = Qr(72),
-      jr = Qr(3425),
-      Ir = Qr(26),
-      fr = Qr(1573),
-      Er = Qr(2135),
-      pr = Qr(1251),
-      xr = Qr(1155),
-      mr = Qr.n(xr),
-      Nr = Qr(1758),
-      Ur = Qr(41159),
-      tr = Qr(38154),
-      hr = Qr(1448),
-      zr = Qr(2075),
-      Yr = Qr(2132),
-      nr = Qr(4650),
-      er = Qr(1885);
+    const Wd = [0, 90, 180, 270],
+      Fd = "plotsblueprint";
+    var Rd = md(66),
+      Xd = md(3428),
+      Kd = md(29),
+      hd = md(1566),
+      vd = md(2134),
+      Qd = md(1238),
+      td = md(1155),
+      od = md.n(td),
+      Nd = md(1765),
+      qd = md(41159),
+      Hd = md(38243),
+      yd = md(1443),
+      bd = md(2079),
+      Td = md(2130),
+      pd = md(4629),
+      Yd = md(1890);
 
-    function Kr() {}
-    const yr = (0, ar.createContext)({
+    function gd() {}
+    const wd = (0, Rd.createContext)({
       hint: null,
-      journalRef: Kr,
-      placementCardRef: Kr,
-      buildRef: Kr
+      journalRef: gd,
+      placementCardRef: gd,
+      buildRef: gd
     });
-    var Br = Qr(34);
-    const Tr = [
+    var Ed = md(32);
+    const Jd = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      vr = {
+      Ud = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -785,18 +785,18 @@ export const modules = {
           tier: "large"
         }
       },
-      Or = ["small", "medium", "large"].flatMap((rr => Tr.flat().filter((Sr => vr[Sr].tier === rr))));
+      xd = ["small", "medium", "large"].flatMap((dd => Jd.flat().filter((Od => Ud[Od].tier === dd))));
 
-    function Lr(rr) {
-      return vr[rr]
+    function Bd(dd) {
+      return Ud[dd]
     }
-    const lr = new Map(Tr.flatMap((rr => rr.slice(1).map(((Sr, Qr) => [Sr, rr[Qr]])))));
+    const Sd = new Map(Jd.flatMap((dd => dd.slice(1).map(((Od, md) => [Od, dd[md]])))));
 
-    function Xr(rr) {
-      var Sr;
-      return null !== (Sr = lr.get(rr)) && void 0 !== Sr ? Sr : null
+    function sd(dd) {
+      var Od;
+      return null !== (Od = Sd.get(dd)) && void 0 !== Od ? Od : null
     }
-    const Pr = {
+    const ud = {
       farm_hut: {
         key: "plotsGame:journalNoteFarmHut",
         firstBuild: !0
@@ -819,110 +819,110 @@ export const modules = {
       }
     };
 
-    function Hr(rr, Sr) {
-      const Qr = new Set(rr),
-        Zr = function(rr) {
-          const Sr = new Set(rr);
-          return new Set(Or.filter((rr => {
-            const Qr = Xr(rr);
-            return null === Qr || Sr.has(Qr)
+    function Vd(dd, Od) {
+      const md = new Set(dd),
+        Wd = function(dd) {
+          const Od = new Set(dd);
+          return new Set(xd.filter((dd => {
+            const md = sd(dd);
+            return null === md || Od.has(md)
           })))
-        }(Qr);
-      return Or.map((rr => {
-        const Wr = rr === Sr;
-        if (Qr.has(rr)) return {
-          id: rr,
-          active: Wr,
+        }(md);
+      return xd.map((dd => {
+        const Fd = dd === Od;
+        if (md.has(dd)) return {
+          id: dd,
+          active: Fd,
           note: null,
           state: "completed",
           unlockedBy: null
         };
-        const ar = Pr[rr],
-          jr = void 0 === ar || ar.firstBuild && Qr.size > 0 ? null : ar.key;
-        return Zr.has(rr) ? {
-          id: rr,
-          active: Wr,
-          note: jr,
+        const Rd = ud[dd],
+          Xd = void 0 === Rd || Rd.firstBuild && md.size > 0 ? null : Rd.key;
+        return Wd.has(dd) ? {
+          id: dd,
+          active: Fd,
+          note: Xd,
           state: "open",
           unlockedBy: null
         } : {
-          id: rr,
-          active: Wr,
-          note: jr,
+          id: dd,
+          active: Fd,
+          note: Xd,
           state: "locked",
-          unlockedBy: Xr(rr)
+          unlockedBy: sd(dd)
         }
       }))
     }
-    const qr = "plotsJournalChanged";
-    class Rr {
-      constructor(rr, Sr) {
-        this.api = rr, this.placement = Sr, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.jx(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
-        }, this.build = rr => {
-          this.placement.start(rr), (0, jr.j)()
+    const Ad = "plotsJournalChanged";
+    class rd {
+      constructor(dd, Od) {
+        this.api = dd, this.placement = Od, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.Wt(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
+        }, this.build = dd => {
+          this.placement.start(dd), (0, Xd.g)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${Wr} cancel`)
+          this.api.sendCommand(`${Fd} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      vx(rr) {
-        let [, Sr, Qr] = rr;
-        this.pages = Hr(Sr, Qr), Br.i.Jp(qr, this.pages, !0)
+      Yt(dd) {
+        let [, Od, md] = dd;
+        this.pages = Vd(Od, md), Ed.j.lQ(Ad, this.pages, !0)
       }
-      openFromServer(rr) {
-        let [, Sr] = rr;
-        this.openRequested = Sr, this.lx()
+      openFromServer(dd) {
+        let [, Od] = dd;
+        this.openRequested = Od, this.Et()
       }
-      lx() {
-        const rr = this.openRequested;
-        null === rr || Ir.c.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, Nr.l)() || (0, er.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = rr, (0, jr.y)()))
+      Et() {
+        const dd = this.openRequested;
+        null === dd || Kd.e.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, Nd.m)() || (0, Yd.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = dd, (0, Xd.q)()))
       }
-      jx(rr) {
-        this.reported.has(rr) || (this.reported.add(rr), this.api.sendCommand(`${Wr} report ${rr}`))
+      Wt(dd) {
+        this.reported.has(dd) || (this.reported.add(dd), this.api.sendCommand(`${Fd} report ${dd}`))
       }
     }
-    var gr = Qr(1338);
-    const Cr = "KeyJ";
+    var Gd = md(1341);
+    const nd = "KeyJ";
 
-    function Mr(rr) {
+    function Ld(dd) {
       let {
-        journal: Sr
-      } = rr;
-      const Qr = (0, fr.g)(qr, Sr.getPages()),
+        journal: Od
+      } = dd;
+      const md = (0, hd.i)(Ad, Od.getPages()),
         {
-          isTouchScreen: Zr
-        } = (0, Ir.n)(["isTouchScreen"]),
+          isTouchScreen: Wd
+        } = (0, Kd.p)(["isTouchScreen"]),
         {
-          t: Wr
-        } = (0, pr.E)(),
-        Er = (0, ar.useContext)(yr),
-        xr = null !== Qr;
-      return (0, ar.useEffect)((() => xr ? (0, Ur.c)(Cr) : void 0), [xr]), (0, nr.d)((rr => xr && rr.code === Cr && !rr.repeat && !(0, er.isTypingInInput)()), (rr => {
-        (0, Nr.y)(rr, !0, jr.y)
-      })), null === Qr ? null : (0, gr.jsx)(tr.d, {
+          t: Fd
+        } = (0, Qd.G)(),
+        vd = (0, Rd.useContext)(wd),
+        td = null !== md;
+      return (0, Rd.useEffect)((() => td ? (0, qd.e)(nd) : void 0), [td]), (0, pd.d)((dd => td && dd.code === nd && !dd.repeat && !(0, Yd.isTypingInInput)()), (dd => {
+        (0, Nd.A)(dd, !0, Xd.q)
+      })), null === md ? null : (0, Gd.jsx)(Hd.h, {
         placement: "topRight",
-        children: (0, gr.jsx)("div", {
+        children: (0, Gd.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, gr.jsxs)("button", {
-            ref: Er.journalRef,
+          children: (0, Gd.jsxs)("button", {
+            ref: vd.journalRef,
             type: "button",
-            className: mr()("PlotsJournalButton SmallTextBold", {
-              Touch: Zr
+            className: od()("PlotsJournalButton SmallTextBold", {
+              Touch: Wd
             }),
-            onClick: jr.y,
-            children: [(0, gr.jsx)("span", {
+            onClick: Xd.q,
+            children: [(0, Gd.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, gr.jsx)(zr.d, {
+              children: (0, Gd.jsx)(bd.c, {
                 itemName: "Book",
                 amount: 0
               })
-            }), Wr("plotsGame:journalButton"), !Zr && (0, gr.jsx)(Yr.c, {
+            }), Fd("plotsGame:journalButton"), !Wd && (0, Gd.jsx)(Td.b, {
               className: "PlotsJournalButtonKey",
-              keyCode: Cr
-            }), "openJournal" === Er.hint && (0, gr.jsx)(hr.c, {
+              keyCode: nd
+            }), "openJournal" === vd.hint && (0, Gd.jsx)(yd.c, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon HandLeftAnim PlotsJournalButtonHand"
             })]
@@ -930,114 +930,114 @@ export const modules = {
         })
       })
     }
-    var Gr = Qr(5779);
-    const kr = [0, 90, 180, 270],
-      Ar = /^(meta\|rot\d)\|([lrud]+)$/,
-      Vr = "nesw",
-      ir = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      wr = function(rr) {
-        const Sr = new WeakMap;
-        return (Qr, Zr) => {
-          let Wr = Sr.get(Qr);
-          return void 0 === Wr && (Wr = rr(Qr, Zr), Sr.set(Qr, Wr)), Wr
+    var Pd = md(5733);
+    const zd = [0, 90, 180, 270],
+      cd = /^(meta\|rot\d)\|([lrud]+)$/,
+      jd = "nesw",
+      Dd = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      ed = function(dd) {
+        const Od = new WeakMap;
+        return (md, Wd) => {
+          let Fd = Od.get(md);
+          return void 0 === Fd && (Fd = dd(md, Wd), Od.set(md, Fd)), Fd
         }
-      }((rr => new cr(rr)));
-    class cr {
-      constructor(rr) {
-        this.blockMetadata = rr, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const Sr = new Set(Object.keys(rr).map((Sr => rr[Sr].id)));
-        Sr.add(0), this.maxBlockId = Math.max(...Sr)
+      }((dd => new Id(dd)));
+    class Id {
+      constructor(dd) {
+        this.blockMetadata = dd, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const Od = new Set(Object.keys(dd).map((Od => dd[Od].id)));
+        Od.add(0), this.maxBlockId = Math.max(...Od)
       }
       static
-      for (rr) {
-        return wr(rr)
+      for (dd) {
+        return ed(dd)
       }
-      getBlockIdMapping(rr, Sr) {
-        const Qr = this.getBlockIdMappingKey(rr, Sr);
-        let Zr = this.blockIdMappings.get(Qr);
-        return void 0 === Zr && kr.includes(rr) && (Zr = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, rr, Sr), this.blockIdMappings.set(Qr, Zr)), Zr
+      getBlockIdMapping(dd, Od) {
+        const md = this.getBlockIdMappingKey(dd, Od);
+        let Wd = this.blockIdMappings.get(md);
+        return void 0 === Wd && zd.includes(dd) && (Wd = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, dd, Od), this.blockIdMappings.set(md, Wd)), Wd
       }
-      turnBlockId(rr, Sr, Qr) {
-        return this.mapBlockId(this.blockMetadata[rr], Sr, this.getRotationMapping(Sr, Qr), Qr)
+      turnBlockId(dd, Od, md) {
+        return this.mapBlockId(this.blockMetadata[dd], Od, this.getRotationMapping(Od, md), md)
       }
-      getBlockIdMappingKey(rr, Sr) {
-        return `r${rr}|m${Number(Sr)}`
+      getBlockIdMappingKey(dd, Od) {
+        return `r${dd}|m${Number(Od)}`
       }
-      createBlockIdMapping(rr, Sr, Qr, Zr) {
-        const Wr = new Uint16Array(Sr + 1),
-          ar = this.getRotationMapping(Qr, Zr);
-        for (const jr in rr) {
-          const Sr = rr[jr];
-          Wr[Sr.id] = this.mapBlockId(Sr, Qr, ar, Zr)
+      createBlockIdMapping(dd, Od, md, Wd) {
+        const Fd = new Uint16Array(Od + 1),
+          Rd = this.getRotationMapping(md, Wd);
+        for (const Xd in dd) {
+          const Od = dd[Xd];
+          Fd[Od.id] = this.mapBlockId(Od, md, Rd, Wd)
         }
-        return Wr
+        return Fd
       }
-      getRotationMapping(rr, Sr) {
-        const Qr = Math.round(rr / 90),
-          Zr = new Uint8Array(4);
-        for (let Wr = 0; Wr < 4; Wr++) Zr[Wr] = (4 + Wr - Qr) % 4;
-        if (Sr) {
-          let rr = Zr[0];
-          Zr[0] = Zr[1], Zr[1] = rr, rr = Zr[2], Zr[2] = Zr[3], Zr[3] = rr
+      getRotationMapping(dd, Od) {
+        const md = Math.round(dd / 90),
+          Wd = new Uint8Array(4);
+        for (let Fd = 0; Fd < 4; Fd++) Wd[Fd] = (4 + Fd - md) % 4;
+        if (Od) {
+          let dd = Wd[0];
+          Wd[0] = Wd[1], Wd[1] = dd, dd = Wd[2], Wd[2] = Wd[3], Wd[3] = dd
         }
-        return Zr
+        return Wd
       }
-      mapBlockId(rr, Sr, Qr, Zr) {
-        var Wr;
+      mapBlockId(dd, Od, md, Wd) {
+        var Fd;
         const {
-          blockMetadata: ar
-        } = this, jr = Math.round(Sr / 90), {
-          id: Ir,
-          meta: fr
-        } = rr, {
-          rot: Er,
-          rootName: pr,
-          metaStr: xr
-        } = fr;
-        let mr;
-        const [, Nr, Ur] = null !== (Wr = ir.exec(xr)) && void 0 !== Wr ? Wr : [];
-        if (void 0 !== Nr) {
-          var tr, hr;
-          mr = null !== (tr = null === (hr = ar[`${pr}|meta|${[Vr.split("").filter(((rr,Sr)=>Nr.split("").some((rr=>{const Qr=Vr.indexOf(rr);return((Zr?3-Qr:Qr)+jr)%4===Sr})))).join(""),Ur].filter(Boolean).join("|")}`]) || void 0 === hr ? void 0 : hr.id) && void 0 !== tr ? tr : Ir
-        } else if (null === Er) mr = Ir;
+          blockMetadata: Rd
+        } = this, Xd = Math.round(Od / 90), {
+          id: Kd,
+          meta: hd
+        } = dd, {
+          rot: vd,
+          rootName: Qd,
+          metaStr: td
+        } = hd;
+        let od;
+        const [, Nd, qd] = null !== (Fd = Dd.exec(td)) && void 0 !== Fd ? Fd : [];
+        if (void 0 !== Nd) {
+          var Hd, yd;
+          od = null !== (Hd = null === (yd = Rd[`${Qd}|meta|${[jd.split("").filter(((dd,Od)=>Nd.split("").some((dd=>{const md=jd.indexOf(dd);return((Wd?3-md:md)+Xd)%4===Od})))).join(""),qd].filter(Boolean).join("|")}`]) || void 0 === yd ? void 0 : yd.id) && void 0 !== Hd ? Hd : Kd
+        } else if (null === vd) od = Kd;
         else {
-          var zr, Yr;
-          const rr = Qr[Er - 1] + 1;
-          let Sr = xr.replace(`rot${Er}`, `rot${rr}`);
-          Zr && fr.stairsCorner && (Sr = Sr.replace(/(Left|Right)$/, (rr => "Left" === rr ? "Right" : "Left"))), Zr && "Chest" === pr && (Sr = Sr.replace(/\|(left|right)$/, ((rr, Sr) => "left" === Sr ? "|right" : "|left")));
-          const Wr = Ar.exec(Sr);
-          if (Zr && null !== Wr) {
-            const rr = "lrud".split("").filter((rr => Wr[2].includes("l" === rr ? "r" : "r" === rr ? "l" : rr)));
-            Sr = `${Wr[1]}|${rr.join("")}`
+          var bd, Td;
+          const dd = md[vd - 1] + 1;
+          let Od = td.replace(`rot${vd}`, `rot${dd}`);
+          Wd && hd.stairsCorner && (Od = Od.replace(/(Left|Right)$/, (dd => "Left" === dd ? "Right" : "Left"))), Wd && "Chest" === Qd && (Od = Od.replace(/\|(left|right)$/, ((dd, Od) => "left" === Od ? "|right" : "|left")));
+          const Fd = cd.exec(Od);
+          if (Wd && null !== Fd) {
+            const dd = "lrud".split("").filter((dd => Fd[2].includes("l" === dd ? "r" : "r" === dd ? "l" : dd)));
+            Od = `${Fd[1]}|${dd.join("")}`
           }
-          const jr = `${pr}|${Sr}`;
-          if (mr = null !== (zr = null === (Yr = ar[jr]) || void 0 === Yr ? void 0 : Yr.id) && void 0 !== zr ? zr : null, null === mr) {
-            const rr = ar[pr];
-            mr = rr.rootMetaDesc === jr ? rr.id : Ir
+          const Xd = `${Qd}|${Od}`;
+          if (od = null !== (bd = null === (Td = Rd[Xd]) || void 0 === Td ? void 0 : Td.id) && void 0 !== bd ? bd : null, null === od) {
+            const dd = Rd[Qd];
+            od = dd.rootMetaDesc === Xd ? dd.id : Kd
           }
         }
-        return mr
+        return od
       }
     }
 
-    function Fr(rr, Sr, Qr) {
+    function ld(dd, Od, md) {
       let {
-        xRotationMappedOrigin: Zr,
-        shouldSwapXZ: Wr
-      } = Qr;
-      const ar = Wr ? Sr : rr;
-      return null === Zr ? ar : Zr - ar
+        xRotationMappedOrigin: Wd,
+        shouldSwapXZ: Fd
+      } = md;
+      const Rd = Fd ? Od : dd;
+      return null === Wd ? Rd : Wd - Rd
     }
 
-    function or(rr, Sr, Qr) {
+    function Cd(dd, Od, md) {
       let {
-        zRotationMappedOrigin: Zr,
-        shouldSwapXZ: Wr
-      } = Qr;
-      const ar = Wr ? rr : Sr;
-      return null === Zr ? ar : Zr - ar
+        zRotationMappedOrigin: Wd,
+        shouldSwapXZ: Fd
+      } = md;
+      const Rd = Fd ? dd : Od;
+      return null === Wd ? Rd : Wd - Rd
     }
-    const br = {
+    const Zd = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -1099,304 +1099,304 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      Jr = new Map;
+      kd = new Map;
 
-    function Dr(rr, Sr) {
-      const Qr = `${rr}|${Sr}`;
-      let Zr = Jr.get(Qr);
-      if (void 0 === Zr) {
+    function fd(dd, Od) {
+      const md = `${dd}|${Od}`;
+      let Wd = kd.get(md);
+      if (void 0 === Wd) {
         const {
-          size: Wr,
-          palette: ar,
-          layers: jr
-        } = br[rr], Ir = 90 === Sr || 270 === Sr, [fr, Er] = Ir ? [Wr[2], Wr[0]] : [Wr[0], Wr[2]], pr = function(rr, Sr, Qr) {
-          let Zr = null,
-            Wr = null,
-            ar = !1;
-          switch (rr) {
+          size: Fd,
+          palette: Rd,
+          layers: Xd
+        } = Zd[dd], Kd = 90 === Od || 270 === Od, [hd, vd] = Kd ? [Fd[2], Fd[0]] : [Fd[0], Fd[2]], Qd = function(dd, Od, md) {
+          let Wd = null,
+            Fd = null,
+            Rd = !1;
+          switch (dd) {
             case 0:
               break;
             case 90:
-              Zr = Sr - 1, ar = !0;
+              Wd = Od - 1, Rd = !0;
               break;
             case 180:
-              Zr = Sr - 1, Wr = Qr - 1;
+              Wd = Od - 1, Fd = md - 1;
               break;
             case 270:
-              Wr = Qr - 1, ar = !0;
+              Fd = md - 1, Rd = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${rr}`)
+              throw new Error(`Invalid rotation: ${dd}`)
           }
           return {
-            xRotationMappedOrigin: Zr,
-            zRotationMappedOrigin: Wr,
-            shouldSwapXZ: ar
+            xRotationMappedOrigin: Wd,
+            zRotationMappedOrigin: Fd,
+            shouldSwapXZ: Rd
           }
-        }(Sr, fr, Er), xr = cr.for(Gr.j), mr = ar.map((rr => (0, Gr.g)(xr.turnBlockId((0, Gr.k)(rr), Sr, !1)))), Nr = [];
-        jr.forEach(((rr, Sr) => {
-          rr.split(" ").forEach(((rr, Qr) => {
-            for (let Zr = 0; Zr < rr.length; Zr++)
-              if ("." !== rr[Zr]) {
-                const Wr = [Fr(Zr, Qr, pr), Sr, or(Zr, Qr, pr)];
-                Nr.push({
-                  offset: Wr,
-                  block: mr[rr.charCodeAt(Zr) - "a".charCodeAt(0)]
+        }(Od, hd, vd), td = Id.for(Pd.i), od = Rd.map((dd => (0, Pd.g)(td.turnBlockId((0, Pd.j)(dd), Od, !1)))), Nd = [];
+        Xd.forEach(((dd, Od) => {
+          dd.split(" ").forEach(((dd, md) => {
+            for (let Wd = 0; Wd < dd.length; Wd++)
+              if ("." !== dd[Wd]) {
+                const Fd = [ld(Wd, md, Qd), Od, Cd(Wd, md, Qd)];
+                Nd.push({
+                  offset: Fd,
+                  block: od[dd.charCodeAt(Wd) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), Zr = {
-          size: [fr, Wr[1], Er],
-          cells: Nr
-        }, Jr.set(Qr, Zr)
+        })), Wd = {
+          size: [hd, Fd[1], vd],
+          cells: Nd
+        }, kd.set(md, Wd)
       }
-      return Zr
+      return Wd
     }
-    const dr = "plotsBuildProgressChanged",
-      sr = new Map;
+    const Md = "plotsBuildProgressChanged",
+      dO = new Map;
 
-    function ur(rr, Sr, Qr) {
-      let Zr = 0,
-        Wr = 0;
-      return function(rr) {
-        let Sr = sr.get(rr);
-        if (void 0 === Sr) {
-          const Zr = [];
+    function OO(dd, Od, md) {
+      let Wd = 0,
+        Fd = 0;
+      return function(dd) {
+        let Od = dO.get(dd);
+        if (void 0 === Od) {
+          const Wd = [];
           for (const {
-              offset: Sr
+              offset: Od
             }
-            of Dr(rr, 0).cells) {
-            var Qr;
-            Zr[Sr[1]] = (null !== (Qr = Zr[Sr[1]]) && void 0 !== Qr ? Qr : 0) + 1
+            of fd(dd, 0).cells) {
+            var md;
+            Wd[Od[1]] = (null !== (md = Wd[Od[1]]) && void 0 !== md ? md : 0) + 1
           }
-          Sr = Zr, sr.set(rr, Sr)
+          Od = Wd, dO.set(dd, Od)
         }
-        return Sr
-      }(rr).forEach(((rr, Qr) => {
-        Zr += rr, Qr > Sr && (Wr += rr)
+        return Od
+      }(dd).forEach(((dd, md) => {
+        Wd += dd, md > Od && (Fd += dd)
       })), {
-        id: rr,
-        filled: Zr - Wr - Qr,
-        total: Zr
+        id: dd,
+        filled: Wd - Fd - md,
+        total: Wd
       }
     }
-    class rS {
+    class mO {
       constructor() {
         this.shown = null, this.topOpen = 0, this.progress = null
       }
       get() {
         return this.progress
       }
-      show(rr) {
-        this.shown = rr, this.topOpen = 0, null === rr && this.Jp(null)
+      show(dd) {
+        this.shown = dd, this.topOpen = 0, null === dd && this.lQ(null)
       }
-      update(rr, Sr, Qr) {
-        const Zr = this.shown;
-        null !== Zr && (rr >= Sr && (this.topOpen = Qr), this.Jp(ur(Zr.id, Sr - Zr.y, rr >= Sr ? Qr : this.topOpen + Qr)))
+      update(dd, Od, md) {
+        const Wd = this.shown;
+        null !== Wd && (dd >= Od && (this.topOpen = md), this.lQ(OO(Wd.id, Od - Wd.y, dd >= Od ? md : this.topOpen + md)))
       }
-      Jp(rr) {
-        const Sr = this.progress;
-        (null === rr || void 0 === rr ? void 0 : rr.id) === (null === Sr || void 0 === Sr ? void 0 : Sr.id) && (null === rr || void 0 === rr ? void 0 : rr.filled) === (null === Sr || void 0 === Sr ? void 0 : Sr.filled) && (null === rr || void 0 === rr ? void 0 : rr.total) === (null === Sr || void 0 === Sr ? void 0 : Sr.total) || (this.progress = rr, Br.i.Jp(dr, rr, !0))
+      lQ(dd) {
+        const Od = this.progress;
+        (null === dd || void 0 === dd ? void 0 : dd.id) === (null === Od || void 0 === Od ? void 0 : Od.id) && (null === dd || void 0 === dd ? void 0 : dd.filled) === (null === Od || void 0 === Od ? void 0 : Od.filled) && (null === dd || void 0 === dd ? void 0 : dd.total) === (null === Od || void 0 === Od ? void 0 : Od.total) || (this.progress = dd, Ed.j.lQ(Md, dd, !0))
       }
     }
-    const SS = "plotsPlotChanged",
-      QS = "plotsGuideChanged",
-      ZS = "plotsGuideDone";
-    class WS {
+    const WO = "plotsPlotChanged",
+      FO = "plotsGuideChanged",
+      RO = "plotsGuideDone";
+    class XO {
       constructor() {
         this.plot = ["none"], this.guide = ["none"]
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(rr) {
-        this.plot = rr, Br.i.Jp(SS, rr, !0)
+      receivePlot(dd) {
+        this.plot = dd, Ed.j.lQ(WO, dd, !0)
       }
       getGuide() {
         return this.guide
       }
-      receiveGuide(rr) {
-        this.guide = rr, Br.i.Jp(QS, rr, !0)
+      receiveGuide(dd) {
+        this.guide = dd, Ed.j.lQ(FO, dd, !0)
       }
       receiveGuideDone() {
-        Br.i.Jp(ZS, void 0, !0)
+        Ed.j.lQ(RO, void 0, !0)
       }
     }
-    var aS = Qr(1330),
-      jS = Qr(40079),
-      IS = Qr(38361),
-      fS = Qr(1597);
+    var KO = md(1333),
+      hO = md(40112),
+      vO = md(38431),
+      QO = md(1596);
 
-    function ES(rr) {
+    function tO(dd) {
       let {
-        onSkip: Sr,
-        className: Qr
-      } = rr;
+        onSkip: Od,
+        className: md
+      } = dd;
       const {
-        t: Zr
-      } = (0, pr.E)();
-      return (0, gr.jsx)("button", {
+        t: Wd
+      } = (0, Qd.G)();
+      return (0, Gd.jsx)("button", {
         type: "button",
-        className: mr()("PlotsGuideSkipButton", Qr),
-        ...(0, fS.g)(Sr, "pointerup"),
-        children: Zr("tutorial:skip")
+        className: od()("PlotsGuideSkipButton", md),
+        ...(0, QO.i)(Od, "pointerup"),
+        children: Wd("tutorial:skip")
       })
     }
 
-    function pS(rr) {
+    function oO(dd) {
       let {
-        target: Sr,
-        placement: Qr,
-        spotlight: Zr = null,
-        children: Wr
-      } = rr;
+        target: Od,
+        placement: md,
+        spotlight: Wd = null,
+        children: Fd
+      } = dd;
       const {
-        t: jr
-      } = (0, pr.E)(), Ir = (0, ar.useRef)(Sr);
-      return Ir.current = Sr, (0, aS.u)("popup", Ir, null === Zr ? null : Zr.onSkip, null !== Zr, null, "controller:menusSkipTutorial"), (0, gr.jsxs)(IS.e, {
-        target: Sr,
-        placement: Qr,
-        className: mr()("PlotsGuideBubble", {
-          Passive: null === Zr
+        t: Xd
+      } = (0, Qd.G)(), Kd = (0, Rd.useRef)(Od);
+      return Kd.current = Od, (0, KO.m)("popup", Kd, null === Wd ? null : Wd.onSkip, null !== Wd, null, "controller:menusSkipTutorial"), (0, Gd.jsxs)(vO.f, {
+        target: Od,
+        placement: md,
+        className: od()("PlotsGuideBubble", {
+          Passive: null === Wd
         }),
-        spotlight: null !== Zr,
+        spotlight: null !== Wd,
         spotlightMargin: 30,
-        children: [(0, gr.jsxs)("div", {
+        children: [(0, Gd.jsxs)("div", {
           className: "PlotsGuideBubbleHeader",
-          children: [(0, gr.jsx)("img", {
+          children: [(0, Gd.jsx)("img", {
             className: "PlotsGuideBubblePortrait",
-            src: jS,
+            src: hO,
             alt: "",
             draggable: !1
-          }), (0, gr.jsx)("span", {
+          }), (0, Gd.jsx)("span", {
             className: "PlotsGuideBubbleSpeaker",
-            children: jr("plotsGame:maverickName")
-          }), null !== Zr && (0, gr.jsx)(ES, {
-            onSkip: Zr.onSkip
+            children: Xd("plotsGame:maverickName")
+          }), null !== Wd && (0, Gd.jsx)(tO, {
+            onSkip: Wd.onSkip
           })]
-        }), (0, gr.jsx)("p", {
+        }), (0, Gd.jsx)("p", {
           className: "PlotsGuideBubbleText",
-          children: Wr
+          children: Fd
         })]
       })
     }
 
-    function xS(rr) {
+    function NO(dd) {
       let {
-        className: Sr,
-        icon: Qr,
-        title: Zr,
-        children: Wr
-      } = rr;
-      return (0, gr.jsxs)("div", {
-        className: mr()("PlotsCard", Sr),
+        className: Od,
+        icon: md,
+        title: Wd,
+        children: Fd
+      } = dd;
+      return (0, Gd.jsxs)("div", {
+        className: od()("PlotsCard", Od),
         role: "status",
-        children: [(0, gr.jsx)("span", {
+        children: [(0, Gd.jsx)("span", {
           className: "PlotsCardIcon",
-          children: (0, gr.jsx)(hr.c, {
-            name: Qr
+          children: (0, Gd.jsx)(yd.c, {
+            name: md
           })
-        }), (0, gr.jsxs)("div", {
+        }), (0, Gd.jsxs)("div", {
           className: "PlotsCardBody",
-          children: [(0, gr.jsx)("div", {
+          children: [(0, Gd.jsx)("div", {
             className: "PlotsCardTitle SmallTextBold",
-            children: Zr
-          }), Wr]
+            children: Wd
+          }), Fd]
         })]
       })
     }
 
-    function mS(rr) {
+    function qO(dd) {
       let {
-        progress: Sr,
-        goal: Qr
-      } = rr;
-      const Zr = Math.min(Sr, Qr);
-      return (0, gr.jsxs)("div", {
+        progress: Od,
+        goal: md
+      } = dd;
+      const Wd = Math.min(Od, md);
+      return (0, Gd.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, gr.jsx)("div", {
+        children: [(0, Gd.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": Qr,
-          "aria-valuenow": Zr,
-          children: (0, gr.jsx)("div", {
+          "aria-valuemax": md,
+          "aria-valuenow": Wd,
+          children: (0, Gd.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${Zr/Qr})`
+              transform: `scaleX(${Wd/md})`
             }
           })
-        }), (0, gr.jsxs)("span", {
+        }), (0, Gd.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [Zr, "/", Qr]
+          children: [Wd, "/", md]
         })]
       })
     }
 
-    function NS(rr) {
+    function HO(dd) {
       let {
-        progress: Sr,
-        guide: Qr
-      } = rr;
+        progress: Od,
+        guide: md
+      } = dd;
       const {
-        t: Zr
-      } = (0, pr.E)(), {
-        isTouchScreen: Wr
-      } = (0, Ir.n)(["isTouchScreen"]), ar = Sr.filled < 5;
-      return (0, gr.jsxs)(gr.Fragment, {
-        children: [(ar || Sr.total - Sr.filled <= 5) && (0, gr.jsx)("div", {
+        t: Wd
+      } = (0, Qd.G)(), {
+        isTouchScreen: Fd
+      } = (0, Kd.p)(["isTouchScreen"]), Rd = Od.filled < 5;
+      return (0, Gd.jsxs)(Gd.Fragment, {
+        children: [(Rd || Od.total - Od.filled <= 5) && (0, Gd.jsx)("div", {
           className: "PlotsGuideHandLayer",
-          children: (0, gr.jsx)("div", {
-            ref: Qr.bindHand,
+          children: (0, Gd.jsx)("div", {
+            ref: md.bindHand,
             className: "PlotsGuideHand",
-            children: (0, gr.jsx)(hr.c, {
+            children: (0, Gd.jsx)(yd.c, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon"
             })
           })
-        }), (0, gr.jsx)(tr.d, {
+        }), (0, Gd.jsx)(Hd.h, {
           placement: "bottom",
-          children: (0, gr.jsxs)(xS, {
+          children: (0, Gd.jsxs)(NO, {
             icon: "hammer",
-            title: Zr(Lr(Sr.id).displayName.translationKey),
-            children: [ar && (0, gr.jsx)("div", {
+            title: Wd(Bd(Od.id).displayName.translationKey),
+            children: [Rd && (0, Gd.jsx)("div", {
               className: "PlotsCardHint SmallTextLight",
-              children: Wr ? Zr("plotsGame:guideBuildTouch") : US(Zr)
-            }), (0, gr.jsx)(mS, {
-              progress: Sr.filled,
-              goal: Sr.total
+              children: Fd ? Wd("plotsGame:guideBuildTouch") : yO(Wd)
+            }), (0, Gd.jsx)(qO, {
+              progress: Od.filled,
+              goal: Od.total
             })]
           })
         })]
       })
     }
 
-    function US(rr) {
-      const Sr = Er.q["alt-fire"][0];
-      return "Mouse3" === Sr ? rr("plotsGame:guideBuildRightClick") : rr("plotsGame:guideBuildKeys", {
-        key: (0, Er.j)(Sr)
+    function yO(dd) {
+      const Od = vd.y["alt-fire"][0];
+      return "Mouse3" === Od ? dd("plotsGame:guideBuildRightClick") : dd("plotsGame:guideBuildKeys", {
+        key: (0, vd.r)(Od)
       })
     }
 
-    function tS() {
-      return (0, gr.jsx)("div", {
+    function bO() {
+      return (0, Gd.jsx)("div", {
         className: "PlotsGuideDragHand",
-        children: (0, gr.jsx)(hr.c, {
+        children: (0, Gd.jsx)(yd.c, {
           name: "hand-back-point-up",
           className: "SmallTextBold TouchTutorialIcon"
         })
       })
     }
-    var hS = Qr(1353),
-      zS = Qr(3640),
-      YS = Qr(39907),
-      nS = Qr(39679),
-      eS = Qr(38390),
-      KS = Qr(5817),
-      yS = Qr(5833),
-      BS = Qr(379),
-      TS = Qr(39311);
-    const vS = new Map([
+    var TO = md(1349),
+      pO = md(3645),
+      YO = md(39951),
+      gO = md(39716),
+      wO = md(38469),
+      aO = md(5759),
+      EO = md(5774),
+      JO = md(405),
+      UO = md(39354);
+    const xO = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -1416,320 +1416,320 @@ export const modules = {
         ["Stone Bricks", [.522, .545, .573]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      OS = [...eS.c.blockRemoveActionRoots, ...nS.e, ...KS.l, "Board", "Code Block", "Custom Lobby Block"],
-      LS = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let lS = null;
+      BO = [...wO.c.blockRemoveActionRoots, ...gO.b, ...aO.j, "Board", "Code Block", "Custom Lobby Block"],
+      SO = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let sO = null;
 
-    function XS() {
-      return lS ??= function() {
-        const rr = PS(),
-          Sr = Math.max(...rr.map((rr => Gr.j[rr].id))) + 1,
-          Qr = new Int32Array(Sr),
-          Zr = new Int32Array(Sr),
-          Wr = new Uint8Array(Sr).fill(1),
-          ar = new Uint8Array(Sr),
-          jr = new Uint8Array(Sr),
-          Ir = new Array(Sr).fill("Air"),
-          fr = new Map,
-          Er = rr => {
-            let Sr = fr.get(rr);
-            return void 0 === Sr && (Sr = fr.size + 1, fr.set(rr, Sr)), Sr
+    function uO() {
+      return sO ??= function() {
+        const dd = VO(),
+          Od = Math.max(...dd.map((dd => Pd.i[dd].id))) + 1,
+          md = new Int32Array(Od),
+          Wd = new Int32Array(Od),
+          Fd = new Uint8Array(Od).fill(1),
+          Rd = new Uint8Array(Od),
+          Xd = new Uint8Array(Od),
+          Kd = new Array(Od).fill("Air"),
+          hd = new Map,
+          vd = dd => {
+            let Od = hd.get(dd);
+            return void 0 === Od && (Od = hd.size + 1, hd.set(dd, Od)), Od
           },
-          pr = new Set(OS);
-        for (const mr of rr) {
-          var xr;
+          Qd = new Set(BO);
+        for (const od of dd) {
+          var td;
           const {
-            id: rr,
-            meta: Sr,
-            altActionable: fr,
-            canBePlacedOver: Nr
-          } = Gr.j[mr];
-          Qr[rr] = Er(HS(mr));
-          const Ur = Sr.stairsCorner;
-          if (null === Ur) Zr[rr] = Qr[rr];
+            id: dd,
+            meta: Od,
+            altActionable: hd,
+            canBePlacedOver: Nd
+          } = Pd.i[od];
+          md[dd] = vd(iO(od));
+          const qd = Od.stairsCorner;
+          if (null === qd) Wd[dd] = md[dd];
           else {
-            const Qr = Ur.endsWith("Right");
-            Zr[rr] = Er(`${Sr.rootName}|rot${Qr?Sr.rot%4+1:Sr.rot}|${Sr.halfblockPlacement}|${Ur.replace("Right","Left")}`)
+            const md = qd.endsWith("Right");
+            Wd[dd] = vd(`${Od.rootName}|rot${md?Od.rot%4+1:Od.rot}|${Od.halfblockPlacement}|${qd.replace("Right","Left")}`)
           }
-          Wr[rr] = Nr ? 1 : 0, ar[rr] = fr || null !== Sr.open || mr in TS.d || pr.has(Sr.rootName) || void 0 !== (0, nS.i)(Sr.rootName) ? 1 : 0;
+          Fd[dd] = Nd ? 1 : 0, Rd[dd] = hd || null !== Od.open || od in UO.d || Qd.has(Od.rootName) || void 0 !== (0, gO.f)(Od.rootName) ? 1 : 0;
           const {
-            rootName: tr
-          } = Sr;
-          jr[rr] = null !== Sr.open || nS.e.includes(tr) || tr.includes("Bookshelf") || tr.includes("Mailbox") ? 1 : 0, Ir[rr] = null !== (xr = (0, YS.h)(rr)) && void 0 !== xr ? xr : tr
+            rootName: Hd
+          } = Od;
+          Xd[dd] = null !== Od.open || gO.b.includes(Hd) || Hd.includes("Bookshelf") || Hd.includes("Mailbox") ? 1 : 0, Kd[dd] = null !== (td = (0, YO.f)(dd)) && void 0 !== td ? td : Hd
         }
         return {
-          kinds: Qr,
-          shapes: Zr,
-          empty: Wr,
-          inUse: ar,
-          ownAltActionMessage: jr,
-          placingItems: Ir
+          kinds: md,
+          shapes: Wd,
+          empty: Fd,
+          inUse: Rd,
+          ownAltActionMessage: Xd,
+          placingItems: Kd
         }
-      }(), lS
+      }(), sO
     }
 
-    function PS() {
-      return Object.keys(Gr.j).filter((rr => Gr.j[rr].name === rr))
+    function VO() {
+      return Object.keys(Pd.i).filter((dd => Pd.i[dd].name === dd))
     }
 
-    function HS(rr) {
-      var Sr;
-      const Qr = Gr.j[rr],
+    function iO(dd) {
+      var Od;
+      const md = Pd.i[dd],
         {
-          rootName: Zr,
-          rot: Wr
-        } = Qr.meta,
-        [, ...ar] = (null !== (Sr = Qr.rootMetaDesc) && void 0 !== Sr ? Sr : rr).split("|"),
-        jr = ar.filter((rr => !("meta" === rr || LS.test(rr) || (0, yS.B)(Qr) && /^[nesw]+$/.test(rr) || KS.l.includes(Zr) && /^[lrud]+$/.test(rr) || BS.I.includes(Zr) && /^(left|right)$/.test(rr))));
-      return [Zr, ...jr].map((rr => "fenceGate" === Qr.model && rr === `rot${Wr}` ? "rot" + ((Wr - 1) % 2 + 1) : rr)).join("|")
+          rootName: Wd,
+          rot: Fd
+        } = md.meta,
+        [, ...Rd] = (null !== (Od = md.rootMetaDesc) && void 0 !== Od ? Od : dd).split("|"),
+        Xd = Rd.filter((dd => !("meta" === dd || SO.test(dd) || (0, EO.H)(md) && /^[nesw]+$/.test(dd) || aO.j.includes(Wd) && /^[lrud]+$/.test(dd) || JO.C.includes(Wd) && /^(left|right)$/.test(dd))));
+      return [Wd, ...Xd].map((dd => "fenceGate" === md.model && dd === `rot${Fd}` ? "rot" + ((Fd - 1) % 2 + 1) : dd)).join("|")
     }
 
-    function qS(rr, Sr) {
+    function AO(dd, Od) {
       const {
-        kinds: Qr,
-        shapes: Zr
-      } = XS();
-      return Qr[rr] === Qr[Sr] || Zr[rr] === Zr[Sr]
+        kinds: md,
+        shapes: Wd
+      } = uO();
+      return md[dd] === md[Od] || Wd[dd] === Wd[Od]
     }
 
-    function RS(rr) {
-      return 1 === XS().empty[rr]
+    function rO(dd) {
+      return 1 === uO().empty[dd]
     }
 
-    function gS(rr) {
-      return XS().placingItems[rr]
+    function GO(dd) {
+      return uO().placingItems[dd]
     }
 
-    function CS(rr) {
-      return vS.get(Gr.j[rr].meta.rootName)
+    function nO(dd) {
+      return xO.get(Pd.i[dd].meta.rootName)
     }
-    var MS = Qr(41149),
-      GS = Qr(208);
-    class kS {
-      constructor(rr) {
-        this.api = rr, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    var LO = md(41143),
+      PO = md(218);
+    class zO {
+      constructor(dd) {
+        this.api = dd, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(rr) {
-        const Sr = GS.i.hx;
+      watch(dd) {
+        const Od = PO.i.Qt;
         this.chunks = [];
-        for (let Qr = 0; Qr < rr.length; Qr += 3) {
-          const Zr = Math.floor(rr[Qr] / Sr),
-            Wr = Math.floor(rr[Qr + 1] / Sr),
-            ar = Math.floor(rr[Qr + 2] / Sr);
-          this.watches(Zr, Wr, ar) || this.chunks.push(Zr, Wr, ar)
+        for (let md = 0; md < dd.length; md += 3) {
+          const Wd = Math.floor(dd[md] / Od),
+            Fd = Math.floor(dd[md + 1] / Od),
+            Rd = Math.floor(dd[md + 2] / Od);
+          this.watches(Wd, Fd, Rd) || this.chunks.push(Wd, Fd, Rd)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const rr = performance.now();
-        if (rr - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = rr;
-        let Sr = !1;
-        for (let Qr = 0; Qr < this.chunks.length; Qr += 3) {
-          const rr = this.api.getChunkVersion(this.chunks[Qr], this.chunks[Qr + 1], this.chunks[Qr + 2]);
-          this.versions[Qr / 3] !== rr && (this.versions[Qr / 3] = rr, Sr = !0)
+        const dd = performance.now();
+        if (dd - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = dd;
+        let Od = !1;
+        for (let md = 0; md < this.chunks.length; md += 3) {
+          const dd = this.api.getChunkVersion(this.chunks[md], this.chunks[md + 1], this.chunks[md + 2]);
+          this.versions[md / 3] !== dd && (this.versions[md / 3] = dd, Od = !0)
         }
-        return Sr
+        return Od
       }
-      watches(rr, Sr, Qr) {
-        for (let Zr = 0; Zr < this.chunks.length; Zr += 3)
-          if (this.chunks[Zr] === rr && this.chunks[Zr + 1] === Sr && this.chunks[Zr + 2] === Qr) return !0;
+      watches(dd, Od, md) {
+        for (let Wd = 0; Wd < this.chunks.length; Wd += 3)
+          if (this.chunks[Wd] === dd && this.chunks[Wd + 1] === Od && this.chunks[Wd + 2] === md) return !0;
         return !1
       }
     }
-    var AS = Qr(41145);
+    var cO = md(41135);
 
-    function VS(rr, Sr, Qr, Zr, Wr) {
-      if (!rr.isBlockInLoadedChunk(Sr, Zr - 6, Qr) || !rr.isBlockInLoadedChunk(Sr, Zr + 6 + Wr, Qr) || !rr.canModifyBlockAt(Sr, Zr, Qr)) return NaN;
-      let ar = Zr - 1;
-      if (0 !== rr.getBlockId(Sr, ar, Qr)) {
-        for (; ar < Zr + 6 && 0 !== rr.getBlockId(Sr, ar + 1, Qr);) ar++;
-        return ar
+    function jO(dd, Od, md, Wd, Fd) {
+      if (!dd.isBlockInLoadedChunk(Od, Wd - 6, md) || !dd.isBlockInLoadedChunk(Od, Wd + 6 + Fd, md) || !dd.canModifyBlockAt(Od, Wd, md)) return NaN;
+      let Rd = Wd - 1;
+      if (0 !== dd.getBlockId(Od, Rd, md)) {
+        for (; Rd < Wd + 6 && 0 !== dd.getBlockId(Od, Rd + 1, md);) Rd++;
+        return Rd
       }
-      for (; ar > Zr - 6;)
-        if (ar--, 0 !== rr.getBlockId(Sr, ar, Qr)) return ar;
+      for (; Rd > Wd - 6;)
+        if (Rd--, 0 !== dd.getBlockId(Od, Rd, md)) return Rd;
       return NaN
     }
 
-    function iS(rr, Sr, Qr, Zr, Wr) {
-      let ar = 0;
-      for (let jr = Zr + 1; jr <= Zr + Wr; jr++) 0 !== rr.getBlockId(Sr, jr, Qr) && ar++;
-      return ar
+    function DO(dd, Od, md, Wd, Fd) {
+      let Rd = 0;
+      for (let Xd = Wd + 1; Xd <= Wd + Fd; Xd++) 0 !== dd.getBlockId(Od, Xd, md) && Rd++;
+      return Rd
     }
 
-    function wS(rr) {
-      const Sr = new Map;
-      for (const jr of rr) {
-        var Qr;
-        if (Number.isNaN(jr)) return null;
-        Sr.set(jr, (null !== (Qr = Sr.get(jr)) && void 0 !== Qr ? Qr : 0) + 1)
+    function eO(dd) {
+      const Od = new Map;
+      for (const Xd of dd) {
+        var md;
+        if (Number.isNaN(Xd)) return null;
+        Od.set(Xd, (null !== (md = Od.get(Xd)) && void 0 !== md ? md : 0) + 1)
       }
-      let Zr = NaN,
-        Wr = 0;
-      for (const [jr, Ir] of Sr)(Ir > Wr || Ir === Wr && jr < Zr) && (Zr = jr, Wr = Ir);
-      let ar = 0;
-      for (const jr of rr) ar += Math.abs(jr - Zr);
-      return ar
+      let Wd = NaN,
+        Fd = 0;
+      for (const [Xd, Kd] of Od)(Kd > Fd || Kd === Fd && Xd < Wd) && (Wd = Xd, Fd = Kd);
+      let Rd = 0;
+      for (const Xd of dd) Rd += Math.abs(Xd - Wd);
+      return Rd
     }
 
-    function cS(rr, Sr, Qr, Zr) {
+    function IO(dd, Od, md, Wd) {
       const {
-        eye: Wr,
-        forward: ar,
-        tanHalfFovX: jr,
-        tanHalfFovY: Ir
-      } = rr, [fr, Er] = function(rr) {
-        let [Sr, Qr, Zr] = rr;
-        const Wr = Math.hypot(Sr, Zr),
-          [ar, jr] = [Zr / Wr, -Sr / Wr];
+        eye: Fd,
+        forward: Rd,
+        tanHalfFovX: Xd,
+        tanHalfFovY: Kd
+      } = dd, [hd, vd] = function(dd) {
+        let [Od, md, Wd] = dd;
+        const Fd = Math.hypot(Od, Wd),
+          [Rd, Xd] = [Wd / Fd, -Od / Fd];
         return [
-          [ar, 0, jr],
-          [Qr * jr, Zr * ar - Sr * jr, -Qr * ar]
+          [Rd, 0, Xd],
+          [md * Xd, Wd * Rd - Od * Xd, -md * Rd]
         ]
-      }(ar), [pr, xr] = [Sr * jr, Qr * Ir], mr = ar[0] + pr * fr[0] + xr * Er[0], Nr = ar[1] + xr * Er[1], Ur = ar[2] + pr * fr[2] + xr * Er[2], tr = (Zr - Wr[1]) / Nr;
-      return tr > 0 && tr < 1 / 0 ? [Wr[0] + tr * mr, Wr[2] + tr * Ur] : null
+      }(Rd), [Qd, td] = [Od * Xd, md * Kd], od = Rd[0] + Qd * hd[0] + td * vd[0], Nd = Rd[1] + td * vd[1], qd = Rd[2] + Qd * hd[2] + td * vd[2], Hd = (Wd - Fd[1]) / Nd;
+      return Hd > 0 && Hd < 1 / 0 ? [Fd[0] + Hd * od, Fd[2] + Hd * qd] : null
     }
-    const FS = "plotsBlueprintPlacementChanged",
-      oS = {
+    const lO = "plotsBlueprintPlacementChanged",
+      CO = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class bS {
-      constructor(rr, Sr) {
-        this.api = rr, this.localPlayerId = Sr, this.placing = null, this.view = null, this.camera = {
+    class ZO {
+      constructor(dd, Od) {
+        this.api = dd, this.localPlayerId = Od, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = rr => {
-          var Sr, Qr, Zr, ar;
-          const jr = null !== (Sr = null === (Qr = this.placing) || void 0 === Qr ? void 0 : Qr.rotation) && void 0 !== Sr ? Sr : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = dd => {
+          var Od, md, Wd, Rd;
+          const Xd = null !== (Od = null === (md = this.placing) || void 0 === md ? void 0 : md.rotation) && void 0 !== Od ? Od : 0,
             {
-              size: Ir
-            } = Dr(rr, jr),
-            fr = this.api.JY(this.localPlayerId),
-            [Er, pr] = null !== (Zr = null !== (ar = function(rr, Sr, Qr, Zr) {
-              const [Wr, ar, jr] = Sr, [Ir, fr, Er] = [Math.floor(Qr[0]), Math.floor(Qr[1]), Math.floor(Qr[2])], pr = 6 + Math.max(Wr, jr) / 2, [xr, mr] = [Math.ceil(pr + Wr / 2), Math.ceil(pr + jr / 2)], [Nr, Ur] = [Ir - xr, Er - mr], [tr, hr] = [2 * xr + 1, 2 * mr + 1], zr = new Float64Array(tr * hr), Yr = new Uint16Array(tr * hr);
-              for (let Br = 0; Br < tr; Br++)
-                for (let Sr = 0; Sr < hr; Sr++) {
-                  const Qr = VS(rr, Nr + Br, Ur + Sr, fr, ar);
-                  zr[Br * hr + Sr] = Qr, Number.isNaN(Qr) || (Yr[Br * hr + Sr] = iS(rr, Nr + Br, Ur + Sr, Qr, ar))
+              size: Kd
+            } = fd(dd, Xd),
+            hd = this.api.hY(this.localPlayerId),
+            [vd, Qd] = null !== (Wd = null !== (Rd = function(dd, Od, md, Wd) {
+              const [Fd, Rd, Xd] = Od, [Kd, hd, vd] = [Math.floor(md[0]), Math.floor(md[1]), Math.floor(md[2])], Qd = 6 + Math.max(Fd, Xd) / 2, [td, od] = [Math.ceil(Qd + Fd / 2), Math.ceil(Qd + Xd / 2)], [Nd, qd] = [Kd - td, vd - od], [Hd, yd] = [2 * td + 1, 2 * od + 1], bd = new Float64Array(Hd * yd), Td = new Uint16Array(Hd * yd);
+              for (let Ed = 0; Ed < Hd; Ed++)
+                for (let Od = 0; Od < yd; Od++) {
+                  const md = jO(dd, Nd + Ed, qd + Od, hd, Rd);
+                  bd[Ed * yd + Od] = md, Number.isNaN(md) || (Td[Ed * yd + Od] = DO(dd, Nd + Ed, qd + Od, md, Rd))
                 }
-              const nr = Math.hypot(Zr[0], Zr[2]),
-                er = [];
-              let Kr = null,
-                yr = 1 / 0;
-              for (let Br = 0; Br + Wr <= tr; Br++)
-                for (let rr = 0; rr + jr <= hr; rr++) {
-                  const [Sr, ar] = [Nr + Br, Ur + rr], [fr, xr] = [Sr + Wr / 2 - Qr[0], ar + jr / 2 - Qr[2]], mr = Math.hypot(fr, xr);
-                  if (mr > pr || Ir >= Sr - 2 && Ir < Sr + Wr + 2 && Er >= ar - 2 && Er < ar + jr + 2) continue;
-                  er.length = 0;
-                  let tr = 0;
-                  for (let Qr = 0; Qr < Wr; Qr++)
-                    for (let Sr = 0; Sr < jr; Sr++) er.push(zr[(Br + Qr) * hr + rr + Sr]), tr += Yr[(Br + Qr) * hr + rr + Sr];
-                  const Tr = wS(er);
-                  if (null === Tr) continue;
-                  const vr = mr + 3 * (Tr + tr) + (1 - (0 === nr ? 1 : (fr * Zr[0] + xr * Zr[2]) / (mr * nr))) / 2 * 6;
-                  vr < yr && (yr = vr, Kr = [Sr, ar])
+              const pd = Math.hypot(Wd[0], Wd[2]),
+                Yd = [];
+              let gd = null,
+                wd = 1 / 0;
+              for (let Ed = 0; Ed + Fd <= Hd; Ed++)
+                for (let dd = 0; dd + Xd <= yd; dd++) {
+                  const [Od, Rd] = [Nd + Ed, qd + dd], [hd, td] = [Od + Fd / 2 - md[0], Rd + Xd / 2 - md[2]], od = Math.hypot(hd, td);
+                  if (od > Qd || Kd >= Od - 2 && Kd < Od + Fd + 2 && vd >= Rd - 2 && vd < Rd + Xd + 2) continue;
+                  Yd.length = 0;
+                  let Hd = 0;
+                  for (let md = 0; md < Fd; md++)
+                    for (let Od = 0; Od < Xd; Od++) Yd.push(bd[(Ed + md) * yd + dd + Od]), Hd += Td[(Ed + md) * yd + dd + Od];
+                  const Jd = eO(Yd);
+                  if (null === Jd) continue;
+                  const Ud = od + 3 * (Jd + Hd) + (1 - (0 === pd ? 1 : (hd * Wd[0] + td * Wd[2]) / (od * pd))) / 2 * 6;
+                  Ud < wd && (wd = Ud, gd = [Od, Rd])
                 }
-              return Kr
-            }(this.api, Ir, fr, this.camera.forward)) && void 0 !== ar ? ar : this.cornerOnTarget(Ir)) && void 0 !== Zr ? Zr : [Math.floor(fr[0]) + 2, Math.floor(fr[2])];
+              return gd
+            }(this.api, Kd, hd, this.camera.forward)) && void 0 !== Rd ? Rd : this.cornerOnTarget(Kd)) && void 0 !== Wd ? Wd : [Math.floor(hd[0]) + 2, Math.floor(hd[2])];
           this.placing = {
-            id: rr,
-            rotation: jr,
-            corner: [Er, this.playerLevel(), pr],
+            id: dd,
+            rotation: Xd,
+            corner: [vd, this.playerLevel(), Qd],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null,
             moved: !1,
             stillSinceMs: performance.now()
-          }, this.update(), this.api.sendCommand(`${Wr} preview`)
+          }, this.update(), this.api.sendCommand(`${Fd} preview`)
         }, this.rotate = () => {
           const {
-            id: rr,
-            rotation: Sr,
-            corner: Qr
-          } = this.placing, Wr = Zr[(Zr.indexOf(Sr) + 1) % Zr.length], [ar, , jr] = Dr(rr, Sr).size, [Ir, , fr] = Dr(rr, Wr).size;
-          this.moveTo(Qr[0] + Math.floor(ar / 2) - Math.floor(Ir / 2), Qr[2] + Math.floor(jr / 2) - Math.floor(fr / 2), Wr)
-        }, this.hoverAt = (rr, Sr) => {
-          this.placing.hover = [rr, Sr], this.moveCentreTo(this.camera, rr, Sr)
+            id: dd,
+            rotation: Od,
+            corner: md
+          } = this.placing, Fd = Wd[(Wd.indexOf(Od) + 1) % Wd.length], [Rd, , Xd] = fd(dd, Od).size, [Kd, , hd] = fd(dd, Fd).size;
+          this.moveTo(md[0] + Math.floor(Rd / 2) - Math.floor(Kd / 2), md[2] + Math.floor(Xd / 2) - Math.floor(hd / 2), Fd)
+        }, this.hoverAt = (dd, Od) => {
+          this.placing.hover = [dd, Od], this.moveCentreTo(this.camera, dd, Od)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (rr, Sr) => {
-          const Qr = this.placing,
+        }, this.beginDrag = (dd, Od) => {
+          const md = this.placing,
             {
-              eye: Zr,
-              forward: Wr,
-              tanHalfFovX: ar,
-              tanHalfFovY: jr
+              eye: Wd,
+              forward: Fd,
+              tanHalfFovX: Rd,
+              tanHalfFovY: Xd
             } = this.camera,
-            Ir = {
-              eye: [Zr[0], Zr[1], Zr[2]],
-              forward: [Wr[0], Wr[1], Wr[2]],
-              tanHalfFovX: ar,
-              tanHalfFovY: jr
+            Kd = {
+              eye: [Wd[0], Wd[1], Wd[2]],
+              forward: [Fd[0], Fd[1], Fd[2]],
+              tanHalfFovX: Rd,
+              tanHalfFovY: Xd
             },
-            fr = Qr.corner[1],
-            Er = cS(Ir, rr, Sr, fr);
-          Qr.hover = null, Qr.drag = Er && {
-            view: Ir,
-            ground: Er,
-            corner: [Qr.corner[0], Qr.corner[2]],
-            level: fr
+            hd = md.corner[1],
+            vd = IO(Kd, dd, Od, hd);
+          md.hover = null, md.drag = vd && {
+            view: Kd,
+            ground: vd,
+            corner: [md.corner[0], md.corner[2]],
+            level: hd
           }
-        }, this.dragTo = (rr, Sr) => {
-          const Qr = this.placing.drag,
-            Zr = Qr && cS(Qr.view, rr, Sr, Qr.level);
-          null !== Qr && null !== Zr && this.moveTo(Qr.corner[0] + Math.round(Zr[0] - Qr.ground[0]), Qr.corner[1] + Math.round(Zr[1] - Qr.ground[1]))
+        }, this.dragTo = (dd, Od) => {
+          const md = this.placing.drag,
+            Wd = md && IO(md.view, dd, Od, md.level);
+          null !== md && null !== Wd && this.moveTo(md.corner[0] + Math.round(Wd[0] - md.ground[0]), md.corner[1] + Math.round(Wd[1] - md.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const rr = this.view;
-          rr.waiting || (rr.blocked ? this.Jp({
-            ...rr,
+          const dd = this.view;
+          dd.waiting || (dd.blocked ? this.lQ({
+            ...dd,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const rr = this.placing,
+          const dd = this.placing,
             {
-              id: Sr,
-              rotation: Qr,
-              corner: Zr
-            } = rr;
-          this.api.sendCommand(`${Wr} place ${Sr} ${Zr.join(" ")} ${Qr}`), rr.sent = {
+              id: Od,
+              rotation: md,
+              corner: Wd
+            } = dd;
+          this.api.sendCommand(`${Fd} place ${Od} ${Wd.join(" ")} ${md}`), dd.sent = {
             atMs: performance.now(),
-            corner: [...Zr],
-            rotation: Qr,
+            corner: [...Wd],
+            rotation: md,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${Wr} preview off`))
-        }, this.chunkWatch = new kS(rr), this.meshes = new AS.p(rr)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${Fd} preview off`))
+        }, this.chunkWatch = new zO(dd), this.meshes = new cO.n(dd)
       }
       getView() {
         return this.view
       }
-      lx() {
-        const rr = this.placing;
-        null !== rr && (null !== rr.sent && !rr.sent.timedOut && performance.now() - rr.sent.atMs > 3e3 ? (rr.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(rr) || this.chunkWatch.changed() || this.view.settled !== JS(rr, this.view.blocked)) && this.update())
+      Et() {
+        const dd = this.placing;
+        null !== dd && (null !== dd.sent && !dd.sent.timedOut && performance.now() - dd.sent.atMs > 3e3 ? (dd.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(dd) || this.chunkWatch.changed() || this.view.settled !== kO(dd, this.view.blocked)) && this.update())
       }
-      afterRender(rr) {
-        ! function(rr, Sr) {
-          for (let Qr = 0; Qr < 3; Qr++) Sr.eye[Qr] = rr.cameraPosition[Qr], Sr.forward[Qr] = rr.cameraDirection[Qr];
-          Sr.tanHalfFovX = rr.tanHalfFovX, Sr.tanHalfFovY = rr.tanHalfFovY
-        }(rr, this.camera);
-        const Sr = this.placing;
-        null !== Sr && null !== Sr.hover && this.moveCentreTo(this.camera, Sr.hover[0], Sr.hover[1])
+      afterRender(dd) {
+        ! function(dd, Od) {
+          for (let md = 0; md < 3; md++) Od.eye[md] = dd.cameraPosition[md], Od.forward[md] = dd.cameraDirection[md];
+          Od.tanHalfFovX = dd.tanHalfFovX, Od.tanHalfFovY = dd.tanHalfFovY
+        }(dd, this.camera);
+        const Od = this.placing;
+        null !== Od && null !== Od.hover && this.moveCentreTo(this.camera, Od.hover[0], Od.hover[1])
       }
-      vx(rr) {
-        const Sr = this.placing;
-        if (null === Sr || null === Sr.sent || "active" !== rr[0]) return;
+      Yt(dd) {
+        const Od = this.placing;
+        if (null === Od || null === Od.sent || "active" !== dd[0]) return;
         const {
-          sent: Qr
-        } = Sr, [, Zr, Wr, ar, jr, Ir, fr] = rr;
-        Wr && Zr === Sr.id && fr === Qr.rotation && ar === Qr.corner[0] && jr === Qr.corner[1] && Ir === Qr.corner[2] && this.close()
+          sent: md
+        } = Od, [, Wd, Fd, Rd, Xd, Kd, hd] = dd;
+        Fd && Wd === Od.id && hd === md.rotation && Rd === md.corner[0] && Xd === md.corner[1] && Kd === md.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1737,1238 +1737,1238 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(rr) {
-        let [Sr, , Qr] = rr;
-        const Zr = this.api.getTargetedBlock();
-        if (null === Zr) return null;
-        const [Wr, , ar] = Zr.position;
-        return [Wr - Math.floor(Sr / 2), ar - Math.floor(Qr / 2)]
+      cornerOnTarget(dd) {
+        let [Od, , md] = dd;
+        const Wd = this.api.getTargetedBlock();
+        if (null === Wd) return null;
+        const [Fd, , Rd] = Wd.position;
+        return [Fd - Math.floor(Od / 2), Rd - Math.floor(md / 2)]
       }
       playerLevel() {
-        var rr;
-        const [Sr, Qr, Zr] = this.api.JY(this.localPlayerId);
-        if (null !== (rr = this.api.getLocalPlayerMovement()) && void 0 !== rr && rr.onGround) return Math.ceil(Qr - .01);
-        const [Wr, ar, jr] = [Math.floor(Sr), Math.floor(Qr), Math.floor(Zr)];
-        for (let Ir = ar; Ir >= ar - 2; Ir--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(Wr, Ir, jr))) return Ir + 1;
-        return ar
+        var dd;
+        const [Od, md, Wd] = this.api.hY(this.localPlayerId);
+        if (null !== (dd = this.api.getLocalPlayerMovement()) && void 0 !== dd && dd.onGround) return Math.ceil(md - .01);
+        const [Fd, Rd, Xd] = [Math.floor(Od), Math.floor(md), Math.floor(Wd)];
+        for (let Kd = Rd; Kd >= Rd - 2; Kd--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(Fd, Kd, Xd))) return Kd + 1;
+        return Rd
       }
-      followPlayerLevel(rr) {
-        if (DS(rr)) return !1;
-        const Sr = this.playerLevel();
-        return Sr !== rr.corner[1] && (rr.corner[1] = Sr, !0)
+      followPlayerLevel(dd) {
+        if (fO(dd)) return !1;
+        const Od = this.playerLevel();
+        return Od !== dd.corner[1] && (dd.corner[1] = Od, !0)
       }
-      moveCentreTo(rr, Sr, Qr) {
-        const Zr = this.placing,
-          Wr = cS(rr, Sr, Qr, Zr.corner[1]);
-        if (null !== Wr) {
-          const [rr, , Sr] = Dr(Zr.id, Zr.rotation).size;
-          this.moveTo(Math.round(Wr[0] - rr / 2), Math.round(Wr[1] - Sr / 2))
+      moveCentreTo(dd, Od, md) {
+        const Wd = this.placing,
+          Fd = IO(dd, Od, md, Wd.corner[1]);
+        if (null !== Fd) {
+          const [dd, , Od] = fd(Wd.id, Wd.rotation).size;
+          this.moveTo(Math.round(Fd[0] - dd / 2), Math.round(Fd[1] - Od / 2))
         }
       }
-      moveTo(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const Zr = this.placing;
-        if (DS(Zr)) return;
-        const [Wr, ar, jr] = Zr.corner;
-        if (this.centreOnPlot(Wr, jr) && !this.centreOnPlot(rr, Sr, Qr))
-          if (this.centreOnPlot(rr, jr, Qr)) Sr = jr;
+      moveTo(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const Wd = this.placing;
+        if (fO(Wd)) return;
+        const [Fd, Rd, Xd] = Wd.corner;
+        if (this.centreOnPlot(Fd, Xd) && !this.centreOnPlot(dd, Od, md))
+          if (this.centreOnPlot(dd, Xd, md)) Od = Xd;
           else {
-            if (!this.centreOnPlot(Wr, Sr, Qr)) return;
-            rr = Wr
-          } rr === Wr && Sr === jr && Qr === Zr.rotation || (Zr.rotation = Qr, Zr.corner = [rr, ar, Sr], Zr.moved = !0, Zr.stillSinceMs = performance.now(), this.update())
+            if (!this.centreOnPlot(Fd, Od, md)) return;
+            dd = Fd
+          } dd === Fd && Od === Xd && md === Wd.rotation || (Wd.rotation = md, Wd.corner = [dd, Rd, Od], Wd.moved = !0, Wd.stillSinceMs = performance.now(), this.update())
       }
-      centreOnPlot(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: Zr,
-          corner: Wr
-        } = this.placing, [ar, , jr] = Dr(Zr, Qr).size;
-        return this.api.canModifyBlockAt(rr + Math.floor(ar / 2), Wr[1], Sr + Math.floor(jr / 2))
+          id: Wd,
+          corner: Fd
+        } = this.placing, [Rd, , Xd] = fd(Wd, md).size;
+        return this.api.canModifyBlockAt(dd + Math.floor(Rd / 2), Fd[1], Od + Math.floor(Xd / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.Jp(null)
+        this.placing = null, this.meshes.dispose(), this.lQ(null)
       }
       update() {
         const {
-          id: rr,
-          rotation: Sr,
-          corner: Qr,
-          refusals: Zr
-        } = this.placing, Wr = new AS.m, ar = [];
-        let jr = !1,
-          Ir = 0;
+          id: dd,
+          rotation: Od,
+          corner: md,
+          refusals: Wd
+        } = this.placing, Fd = new cO.k, Rd = [];
+        let Xd = !1,
+          Kd = 0;
         for (const {
-            offset: xr,
-            block: mr
+            offset: td,
+            block: od
           }
-          of Dr(rr, Sr).cells) {
-          const [rr, Sr, Zr] = [Qr[0] + xr[0], Qr[1] + xr[1], Qr[2] + xr[2]];
-          ar.push(rr, Sr, Zr);
-          const fr = !this.api.canModifyBlockAt(rr, Sr, Zr),
-            Er = this.api.getBlockId(rr, Sr, Zr),
-            pr = !RS(Er) && !qS(this.api.blockNameToBlockId(mr), Er);
-          jr ||= fr, Ir += pr ? 1 : 0, fr || pr ? Wr.add(rr, Sr, Zr, AS.e, AS.b) : Wr.add(rr, Sr, Zr, CS(mr), oS, (0, MS.f)(mr))
+          of fd(dd, Od).cells) {
+          const [dd, Od, Wd] = [md[0] + td[0], md[1] + td[1], md[2] + td[2]];
+          Rd.push(dd, Od, Wd);
+          const hd = !this.api.canModifyBlockAt(dd, Od, Wd),
+            vd = this.api.getBlockId(dd, Od, Wd),
+            Qd = !rO(vd) && !AO(this.api.blockNameToBlockId(od), vd);
+          Xd ||= hd, Kd += Qd ? 1 : 0, hd || Qd ? Fd.add(dd, Od, Wd, cO.h, cO.e) : Fd.add(dd, Od, Wd, nO(od), CO, (0, LO.g)(od))
         }
-        this.chunkWatch.watch(ar), this.meshes.show(Wr.toArray());
-        const fr = this.view,
-          Er = DS(this.placing),
-          pr = JS(this.placing, jr);
-        (null === fr || void 0 === fr ? void 0 : fr.id) === rr && fr.blocked === jr && fr.toClear === Ir && fr.waiting === Er && fr.refusals === Zr && fr.settled === pr || this.Jp({
-          id: rr,
-          blocked: jr,
-          toClear: Ir,
-          waiting: Er,
-          refusals: Zr,
-          settled: pr
+        this.chunkWatch.watch(Rd), this.meshes.show(Fd.toArray());
+        const hd = this.view,
+          vd = fO(this.placing),
+          Qd = kO(this.placing, Xd);
+        (null === hd || void 0 === hd ? void 0 : hd.id) === dd && hd.blocked === Xd && hd.toClear === Kd && hd.waiting === vd && hd.refusals === Wd && hd.settled === Qd || this.lQ({
+          id: dd,
+          blocked: Xd,
+          toClear: Kd,
+          waiting: vd,
+          refusals: Wd,
+          settled: Qd
         })
       }
-      Jp(rr) {
-        this.view = rr, Br.i.Jp(FS, rr, !0)
+      lQ(dd) {
+        this.view = dd, Ed.j.lQ(lO, dd, !0)
       }
     }
 
-    function JS(rr, Sr) {
+    function kO(dd, Od) {
       let {
-        moved: Qr,
-        stillSinceMs: Zr
-      } = rr;
-      return !Sr && performance.now() - Zr >= (Qr ? 1500 : 6e3)
+        moved: md,
+        stillSinceMs: Wd
+      } = dd;
+      return !Od && performance.now() - Wd >= (md ? 1500 : 6e3)
     }
 
-    function DS(rr) {
+    function fO(dd) {
       let {
-        sent: Sr
-      } = rr;
-      return null !== Sr && !Sr.timedOut
+        sent: Od
+      } = dd;
+      return null !== Od && !Od.timedOut
     }
-    var dS = Qr(5308);
-    class sS {
-      constructor(rr) {
-        this.placement = rr, this.press = null
+    var MO = md(5206);
+    class dm {
+      constructor(dd) {
+        this.placement = dd, this.press = null
       }
-      down(rr) {
+      down(dd) {
         if (null !== this.press) return !1;
         const {
-          id: Sr,
-          mouse: Qr,
-          x: Zr,
-          y: Wr,
-          atMs: ar
-        } = rr;
+          id: Od,
+          mouse: md,
+          x: Wd,
+          y: Fd,
+          atMs: Rd
+        } = dd;
         return this.press = {
-          id: Sr,
-          mouse: Qr,
-          x: Zr,
-          y: Wr,
-          atMs: ar,
+          id: Od,
+          mouse: md,
+          x: Wd,
+          y: Fd,
+          atMs: Rd,
           moved: !1
-        }, Qr || this.placement.beginDrag(rr.ndcX, rr.ndcY), !0
+        }, md || this.placement.beginDrag(dd.ndcX, dd.ndcY), !0
       }
-      move(rr) {
-        const Sr = this.press;
-        null !== Sr && Sr.id === rr.id && (Sr.moved ||= Math.hypot(rr.x - Sr.x, rr.y - Sr.y) > 8), rr.mouse ? this.placement.hoverAt(rr.ndcX, rr.ndcY) : (null === Sr || void 0 === Sr ? void 0 : Sr.id) === rr.id && this.placement.dragTo(rr.ndcX, rr.ndcY)
+      move(dd) {
+        const Od = this.press;
+        null !== Od && Od.id === dd.id && (Od.moved ||= Math.hypot(dd.x - Od.x, dd.y - Od.y) > 8), dd.mouse ? this.placement.hoverAt(dd.ndcX, dd.ndcY) : (null === Od || void 0 === Od ? void 0 : Od.id) === dd.id && this.placement.dragTo(dd.ndcX, dd.ndcY)
       }
-      up(rr) {
-        const Sr = this.press;
-        (null === Sr || void 0 === Sr ? void 0 : Sr.id) === rr.id && (this.move(rr), this.end(), !Sr.moved && (Sr.mouse || rr.atMs - Sr.atMs <= 250) && this.placement.tap())
+      up(dd) {
+        const Od = this.press;
+        (null === Od || void 0 === Od ? void 0 : Od.id) === dd.id && (this.move(dd), this.end(), !Od.moved && (Od.mouse || dd.atMs - Od.atMs <= 250) && this.placement.tap())
       }
-      cancel(rr) {
-        var Sr;
-        (null === (Sr = this.press) || void 0 === Sr ? void 0 : Sr.id) === rr && this.end()
+      cancel(dd) {
+        var Od;
+        (null === (Od = this.press) || void 0 === Od ? void 0 : Od.id) === dd && this.end()
       }
-      leave(rr) {
+      leave(dd) {
         let {
-          id: Sr,
-          mouse: Qr
-        } = rr;
-        Qr && this.placement.endHover(), this.cancel(Sr)
+          id: Od,
+          mouse: md
+        } = dd;
+        md && this.placement.endHover(), this.cancel(Od)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
-    const uS = "PlotsPlacementLayer";
+    const Om = "PlotsPlacementLayer";
 
-    function rQ(rr) {
+    function mm(dd) {
       let {
-        placement: Sr
-      } = rr;
-      return null === (0, fr.g)(FS, Sr.getView()) ? null : (0, gr.jsx)(SQ, {
-        placement: Sr
+        placement: Od
+      } = dd;
+      return null === (0, hd.i)(lO, Od.getView()) ? null : (0, Gd.jsx)(Wm, {
+        placement: Od
       })
     }
 
-    function SQ(rr) {
+    function Wm(dd) {
       let {
-        placement: Sr
-      } = rr;
-      (0, dS.b)(!0, !0, uS);
-      const Qr = (0, ar.useMemo)((() => new sS(Sr)), [Sr]);
-      return (0, gr.jsx)("div", {
+        placement: Od
+      } = dd;
+      (0, MO.e)(!0, !0, Om);
+      const md = (0, Rd.useMemo)((() => new dm(Od)), [Od]);
+      return (0, Gd.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: rr => {
-          "mouse" === rr.pointerType && 0 !== rr.button || !Qr.down(QQ(rr)) || rr.currentTarget.setPointerCapture(rr.pointerId)
+        onPointerDown: dd => {
+          "mouse" === dd.pointerType && 0 !== dd.button || !md.down(Fm(dd)) || dd.currentTarget.setPointerCapture(dd.pointerId)
         },
-        onPointerMove: rr => {
-          Qr.move(QQ(rr))
+        onPointerMove: dd => {
+          md.move(Fm(dd))
         },
-        onPointerUp: rr => {
-          Qr.up(QQ(rr))
+        onPointerUp: dd => {
+          md.up(Fm(dd))
         },
-        onPointerCancel: rr => {
-          Qr.cancel(rr.pointerId)
+        onPointerCancel: dd => {
+          md.cancel(dd.pointerId)
         },
-        onLostPointerCapture: rr => {
-          Qr.cancel(rr.pointerId)
+        onLostPointerCapture: dd => {
+          md.cancel(dd.pointerId)
         },
-        onPointerLeave: rr => {
-          Qr.leave(QQ(rr))
+        onPointerLeave: dd => {
+          md.leave(Fm(dd))
         },
         "aria-hidden": !0
       })
     }
 
-    function QQ(rr) {
+    function Fm(dd) {
       const {
-        left: Sr,
-        top: Qr,
-        width: Zr,
-        height: Wr
-      } = rr.currentTarget.getBoundingClientRect();
+        left: Od,
+        top: md,
+        width: Wd,
+        height: Fd
+      } = dd.currentTarget.getBoundingClientRect();
       return {
-        id: rr.pointerId,
-        mouse: "mouse" === rr.pointerType,
-        x: rr.clientX,
-        y: rr.clientY,
-        ndcX: (rr.clientX - Sr) / Zr * 2 - 1,
-        ndcY: 1 - (rr.clientY - Qr) / Wr * 2,
-        atMs: rr.timeStamp
+        id: dd.pointerId,
+        mouse: "mouse" === dd.pointerType,
+        x: dd.clientX,
+        y: dd.clientY,
+        ndcX: (dd.clientX - Od) / Wd * 2 - 1,
+        ndcY: 1 - (dd.clientY - md) / Fd * 2,
+        atMs: dd.timeStamp
       }
     }
 
-    function ZQ() {
-      return (0, hS.p)().some((rr => rr !== hS.e && rr !== uS))
+    function Rm() {
+      return (0, TO.q)().some((dd => dd !== TO.e && dd !== Om))
     }
-    const WQ = 2500;
+    const Xm = 2500;
 
-    function aQ(rr) {
+    function Km(dd) {
       let {
-        hud: Sr,
-        guide: Qr,
-        tracker: Zr,
-        placement: Wr,
-        children: jr
-      } = rr;
+        hud: Od,
+        guide: md,
+        tracker: Wd,
+        placement: Fd,
+        children: Xd
+      } = dd;
       const {
-        t: xr
-      } = (0, pr.E)(), {
-        isTouchScreen: mr
-      } = (0, Ir.n)(["isTouchScreen"]), Nr = (0, fr.g)(QS, Sr.getGuide()), Ur = (0, fr.g)(SS, Sr.getPlot()), tr = (0, fr.g)(dr, Zr.get()), hr = function(rr) {
+        t: td
+      } = (0, Qd.G)(), {
+        isTouchScreen: od
+      } = (0, Kd.p)(["isTouchScreen"]), Nd = (0, hd.i)(FO, Od.getGuide()), qd = (0, hd.i)(WO, Od.getPlot()), Hd = (0, hd.i)(Md, Wd.get()), yd = function(dd) {
         const {
-          openInGameMenuName: Sr,
-          openEverythingMenuName: Qr,
-          loadingOverlayVisible: Zr
-        } = (0, Ir.n)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), Wr = (0, zS.b)(), [jr, Er] = (0, ar.useState)(ZQ);
-        (0, ar.useEffect)((() => {
-          const rr = () => {
-            Er(ZQ())
+          openInGameMenuName: Od,
+          openEverythingMenuName: md,
+          loadingOverlayVisible: Wd
+        } = (0, Kd.p)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), Fd = (0, pO.d)(), [Xd, vd] = (0, Rd.useState)(Rm);
+        (0, Rd.useEffect)((() => {
+          const dd = () => {
+            vd(Rm())
           };
-          rr();
-          const Sr = (0, hS.n)(rr),
-            Qr = (0, hS.m)(rr);
+          dd();
+          const Od = (0, TO.n)(dd),
+            md = (0, TO.m)(dd);
           return () => {
-            Sr(), Qr()
+            Od(), md()
           }
         }), []);
-        const pr = (0, fr.g)(FS, rr.getView()),
-          xr = "clientGame" === Sr;
+        const Qd = (0, hd.i)(lO, dd.getView()),
+          td = "clientGame" === Od;
         return {
-          hudHidden: Wr || Zr,
-          journalOpen: xr,
-          covered: jr || null !== Qr || null !== Sr && !xr,
-          placing: null === pr ? null : pr.settled ? "placeBuild" : "placeSpot"
+          hudHidden: Fd || Wd,
+          journalOpen: td,
+          covered: Xd || null !== md || null !== Od && !td,
+          placing: null === Qd ? null : Qd.settled ? "placeBuild" : "placeSpot"
         }
-      }(Wr), zr = function(rr, Sr, Qr) {
-        return "none" === rr[0] || Qr.hudHidden || Qr.journalOpen || Qr.covered ? null : null !== Qr.placing ? Qr.placing : null !== Sr ? "build" : "choose" === rr[1] ? "openJournal" : null
-      }(Nr, null === tr ? null : tr.id, hr), Yr = function() {
-        const [rr, Sr] = (0, ar.useState)(null), [Qr, Zr] = (0, ar.useState)(!1);
-        return (0, fr.c)(ZS, (() => {
-          Sr(performance.now())
-        })), (0, ar.useEffect)((() => {
-          if (null === rr) return;
-          const Sr = window.setTimeout((() => {
-              Zr(!0)
-            }), WQ),
-            Qr = window.setTimeout((() => {
-              Zr(!1)
+      }(Fd), bd = function(dd, Od, md) {
+        return "none" === dd[0] || md.hudHidden || md.journalOpen || md.covered ? null : null !== md.placing ? md.placing : null !== Od ? "build" : "choose" === dd[1] ? "openJournal" : null
+      }(Nd, null === Hd ? null : Hd.id, yd), Td = function() {
+        const [dd, Od] = (0, Rd.useState)(null), [md, Wd] = (0, Rd.useState)(!1);
+        return (0, hd.f)(RO, (() => {
+          Od(performance.now())
+        })), (0, Rd.useEffect)((() => {
+          if (null === dd) return;
+          const Od = window.setTimeout((() => {
+              Wd(!0)
+            }), Xm),
+            md = window.setTimeout((() => {
+              Wd(!1)
             }), 7500);
           return () => {
-            window.clearTimeout(Sr), window.clearTimeout(Qr)
+            window.clearTimeout(Od), window.clearTimeout(md)
           }
-        }), [rr]), Qr
-      }() && !hr.hudHidden && !hr.covered && !hr.journalOpen && null === hr.placing, [nr, er] = (0, ar.useState)(!1);
-      (0, ar.useEffect)((() => {
-        hr.journalOpen && er(!0)
-      }), [hr.journalOpen]);
-      const [Kr, Br] = (0, ar.useState)(null), [Tr, vr] = (0, ar.useState)(null), [Or, Lr] = (0, ar.useState)(null), lr = (0, ar.useMemo)((() => ({
-        hint: zr,
-        journalRef: Br,
-        placementCardRef: vr,
-        buildRef: Lr
-      })), [zr]), Xr = "plot" === Ur[0] && "own" === Ur[5], Pr = mr && !nr && Xr ? {
-        onSkip: Qr.skip
+        }), [dd]), md
+      }() && !yd.hudHidden && !yd.covered && !yd.journalOpen && null === yd.placing, [pd, Yd] = (0, Rd.useState)(!1);
+      (0, Rd.useEffect)((() => {
+        yd.journalOpen && Yd(!0)
+      }), [yd.journalOpen]);
+      const [gd, Ed] = (0, Rd.useState)(null), [Jd, Ud] = (0, Rd.useState)(null), [xd, Bd] = (0, Rd.useState)(null), Sd = (0, Rd.useMemo)((() => ({
+        hint: bd,
+        journalRef: Ed,
+        placementCardRef: Ud,
+        buildRef: Bd
+      })), [bd]), sd = "plot" === qd[0] && "own" === qd[5], ud = od && !pd && sd ? {
+        onSkip: md.skip
       } : null;
-      return (0, gr.jsxs)(yr.Provider, {
-        value: lr,
-        children: [jr, "openJournal" === zr && null !== Kr && (0, gr.jsx)(pS, {
-          target: Kr,
+      return (0, Gd.jsxs)(wd.Provider, {
+        value: Sd,
+        children: [Xd, "openJournal" === bd && null !== gd && (0, Gd.jsx)(oO, {
+          target: gd,
           placement: "left",
-          spotlight: Pr,
-          children: mr ? xr("plotsGame:guideOpenJournal") : xr("plotsGame:guideOpenJournalKeys", {
-            key: (0, Er.j)(Cr)
+          spotlight: ud,
+          children: od ? td("plotsGame:guideOpenJournal") : td("plotsGame:guideOpenJournalKeys", {
+            key: (0, vd.r)(nd)
           })
-        }), "placeSpot" === zr && null !== Tr && (0, gr.jsxs)(gr.Fragment, {
-          children: [mr && (0, gr.jsx)(tS, {}), (0, gr.jsx)(pS, {
-            target: Tr,
+        }), "placeSpot" === bd && null !== Jd && (0, Gd.jsxs)(Gd.Fragment, {
+          children: [od && (0, Gd.jsx)(bO, {}), (0, Gd.jsx)(oO, {
+            target: Jd,
             placement: "top",
-            children: xr(mr ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
+            children: td(od ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
           })]
-        }), "placeBuild" === zr && null !== Or && null !== Tr && (0, gr.jsx)(pS, {
-          target: mr ? Or : Tr,
+        }), "placeBuild" === bd && null !== xd && null !== Jd && (0, Gd.jsx)(oO, {
+          target: od ? xd : Jd,
           placement: "top",
-          children: xr(mr ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
-        }), "build" === zr && null !== tr && (0, gr.jsx)(NS, {
-          progress: tr,
-          guide: Qr
-        }), Yr && null !== Kr && (0, gr.jsx)(pS, {
-          target: Kr,
+          children: td(od ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
+        }), "build" === bd && null !== Hd && (0, Gd.jsx)(HO, {
+          progress: Hd,
+          guide: md
+        }), Td && null !== gd && (0, Gd.jsx)(oO, {
+          target: gd,
           placement: "left",
-          children: xr("plotsGame:guideMoreBuilds")
+          children: td("plotsGame:guideMoreBuilds")
         })]
       })
     }
-    var jQ = Qr(40013),
-      IQ = Qr(40020);
-    class fQ {
-      constructor(rr, Sr, Qr) {
-        this.api = rr, this.localPlayerId = Sr, this.nextCell = Qr, this.hand = null, this.skip = () => {
+    var hm = md(40028),
+      Qm = md(40036);
+    class tm {
+      constructor(dd, Od, md) {
+        this.api = dd, this.localPlayerId = Od, this.nextCell = md, this.hand = null, this.skip = () => {
           this.api.sendCommand("plotsguide skip")
-        }, this.bindHand = rr => {
-          this.hand = rr
+        }, this.bindHand = dd => {
+          this.hand = dd
         }
       }
-      afterRender(rr) {
-        const Sr = this.hand;
-        if (null === Sr) return;
-        const Qr = this.nextCell.get();
-        if (null === Qr) return void(0, jQ.f)(Sr, !0);
-        const Zr = (0, IQ.b)(Sr, rr, this.api.getPositionView(this.localPlayerId), Qr, 1, 40);
-        null !== Zr && (0, jQ.e)(Sr, Math.round(100 * Zr.x) / 100, Math.round(100 * Zr.y) / 100)
+      afterRender(dd) {
+        const Od = this.hand;
+        if (null === Od) return;
+        const md = this.nextCell.get();
+        if (null === md) return void(0, hm.h)(Od, !0);
+        const Wd = (0, Qm.c)(Od, dd, this.api.getPositionView(this.localPlayerId), md, 1, 40);
+        null !== Wd && (0, hm.e)(Od, Math.round(100 * Wd.x) / 100, Math.round(100 * Wd.y) / 100)
       }
     }
-    var EQ = Qr(1576),
-      pQ = Qr(5297),
-      xQ = Qr(1177);
-    const mQ = {
-        farm_hut: Qr.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-        farm_house: Qr.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-        farm_barn: Qr.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-        rusticHome_tent: Qr.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-        rusticHome_cabin: Qr.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-        rusticHome_house: Qr.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-        market_stand: Qr.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-        market_stall: Qr.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-        market_shop: Qr.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-        castle_wall: Qr.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-        castle_gate: Qr.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-        castle_tower: Qr.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    var om = md(1572),
+      Nm = md(5194),
+      qm = md(1178);
+    const Hm = {
+        farm_hut: md.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+        farm_house: md.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+        farm_barn: md.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+        rusticHome_tent: md.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+        rusticHome_cabin: md.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+        rusticHome_house: md.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+        market_stand: md.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+        market_stall: md.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+        market_shop: md.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+        castle_wall: md.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+        castle_gate: md.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+        castle_tower: md.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
       },
-      NQ = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
-      UQ = ["market_stand", "rusticHome_tent", "farm_hut"].map((rr => ({
-        id: rr,
-        blocks: Dr(rr, 0).cells.length
-      }))).sort(((rr, Sr) => rr.blocks - Sr.blocks)).map(((rr, Sr) => ({
-        ...rr,
-        effortKey: NQ[Sr]
+      ym = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
+      bm = ["market_stand", "rusticHome_tent", "farm_hut"].map((dd => ({
+        id: dd,
+        blocks: fd(dd, 0).cells.length
+      }))).sort(((dd, Od) => dd.blocks - Od.blocks)).map(((dd, Od) => ({
+        ...dd,
+        effortKey: ym[Od]
       })));
 
-    function tQ(rr) {
+    function Tm(dd) {
       let {
-        onBuild: Sr
-      } = rr;
+        onBuild: Od
+      } = dd;
       const {
-        t: Qr
-      } = (0, pr.E)();
-      return (0, gr.jsx)("div", {
+        t: md
+      } = (0, Qd.G)();
+      return (0, Gd.jsx)("div", {
         className: "PlotsJournalBookPages PlotsGuideChooserCover",
-        children: (0, gr.jsxs)("div", {
+        children: (0, Gd.jsxs)("div", {
           className: "PlotsGuideChooser",
-          children: [(0, gr.jsx)("h3", {
+          children: [(0, Gd.jsx)("h3", {
             className: "PlotsGuideChooserTitle",
-            children: Qr("plotsGame:guidePickTitle")
-          }), (0, gr.jsxs)("p", {
+            children: md("plotsGame:guidePickTitle")
+          }), (0, Gd.jsxs)("p", {
             className: "PlotsGuideChooserNote",
-            children: [(0, gr.jsx)("img", {
-              src: jS,
+            children: [(0, Gd.jsx)("img", {
+              src: hO,
               alt: "",
               draggable: !1
-            }), Qr("plotsGame:guidePickNote")]
-          }), (0, gr.jsx)("div", {
+            }), md("plotsGame:guidePickNote")]
+          }), (0, Gd.jsx)("div", {
             className: "PlotsGuideChooserStarters",
-            children: UQ.map((rr => {
+            children: bm.map((dd => {
               let {
-                id: Zr,
-                blocks: Wr,
-                effortKey: ar
-              } = rr;
-              return (0, gr.jsxs)("article", {
+                id: Wd,
+                blocks: Fd,
+                effortKey: Rd
+              } = dd;
+              return (0, Gd.jsxs)("article", {
                 className: "PlotsGuideStarter",
-                children: [(0, gr.jsx)("button", {
+                children: [(0, Gd.jsx)("button", {
                   type: "button",
                   className: "PlotsGuideStarterSketch",
                   tabIndex: -1,
                   "aria-hidden": !0,
                   "data-pad-ignore": !0,
                   onClick: () => {
-                    Sr(Zr)
+                    Od(Wd)
                   },
-                  children: (0, gr.jsx)("img", {
-                    src: mQ[Zr],
+                  children: (0, Gd.jsx)("img", {
+                    src: Hm[Wd],
                     alt: "",
                     draggable: !1
                   })
-                }), (0, gr.jsxs)("div", {
+                }), (0, Gd.jsxs)("div", {
                   className: "PlotsGuideStarterInfo",
-                  children: [(0, gr.jsxs)("span", {
+                  children: [(0, Gd.jsxs)("span", {
                     className: "PlotsGuideStarterText",
-                    children: [(0, gr.jsx)("span", {
+                    children: [(0, Gd.jsx)("span", {
                       className: "PlotsGuideStarterName",
-                      children: Qr(Lr(Zr).displayName.translationKey)
-                    }), (0, gr.jsx)("span", {
+                      children: md(Bd(Wd).displayName.translationKey)
+                    }), (0, Gd.jsx)("span", {
                       className: "PlotsGuideStarterEffort",
-                      children: Qr(ar)
-                    }), (0, gr.jsx)("span", {
+                      children: md(Rd)
+                    }), (0, Gd.jsx)("span", {
                       className: "PlotsGuideStarterBlocks",
-                      children: Qr("plotsGame:journalBlocks", {
-                        blocks: String(Wr)
+                      children: md("plotsGame:journalBlocks", {
+                        blocks: String(Fd)
                       })
                     })]
-                  }), (0, gr.jsx)(EQ.p, {
+                  }), (0, Gd.jsx)(om.m, {
                     onClick: () => {
-                      Sr(Zr)
+                      Od(Wd)
                     },
-                    children: Qr("plotsGame:placementBuild")
+                    children: md("plotsGame:placementBuild")
                   })]
                 })]
-              }, Zr)
+              }, Wd)
             }))
           })]
         })
       })
     }
 
-    function hQ(rr) {
+    function pm(dd) {
       let {
-        direction: Sr,
-        disabled: Qr,
-        onTurn: Zr
-      } = rr;
+        direction: Od,
+        disabled: md,
+        onTurn: Wd
+      } = dd;
       const {
-        t: Wr
-      } = (0, pr.E)();
-      return (0, gr.jsx)("div", {
-        className: mr()("PlotsJournalArrow", Sr),
-        children: (0, gr.jsx)(EQ.h, {
-          disabled: Qr,
-          ariaLabel: Wr("Forward" === Sr ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: Fd
+      } = (0, Qd.G)();
+      return (0, Gd.jsx)("div", {
+        className: od()("PlotsJournalArrow", Od),
+        children: (0, Gd.jsx)(om.g, {
+          disabled: md,
+          ariaLabel: Fd("Forward" === Od ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            Zr(Sr)
+            Wd(Od)
           },
-          children: (0, gr.jsx)(hr.c, {
+          children: (0, Gd.jsx)(yd.c, {
             name: "angle-up"
           })
         })
       })
     }
-    const zQ = {
+    const Ym = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function YQ(rr) {
+    function gm(dd) {
       let {
-        page: Sr,
-        building: Qr,
-        onBuild: Zr,
-        onPutAway: Wr
-      } = rr;
+        page: Od,
+        building: md,
+        onBuild: Wd,
+        onPutAway: Fd
+      } = dd;
       const {
-        t: ar
-      } = (0, pr.E)(), {
-        displayName: jr,
-        tier: Ir
-      } = Lr(Sr.id), fr = Dr(Sr.id, 0).cells.length, Er = "locked" === Sr.state, xr = Qr ? EQ.h : EQ.p;
-      return (0, gr.jsxs)("article", {
-        className: mr()("PlotsJournalPage", {
-          Locked: Er
+        t: Rd
+      } = (0, Qd.G)(), {
+        displayName: Xd,
+        tier: Kd
+      } = Bd(Od.id), hd = fd(Od.id, 0).cells.length, vd = "locked" === Od.state, td = md ? om.g : om.m;
+      return (0, Gd.jsxs)("article", {
+        className: od()("PlotsJournalPage", {
+          Locked: vd
         }),
-        children: [(0, gr.jsx)("h3", {
+        children: [(0, Gd.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: ar(jr.translationKey)
-        }), (0, gr.jsxs)("div", {
+          children: Rd(Xd.translationKey)
+        }), (0, Gd.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [ar(zQ[Ir]), " \xb7 ", ar("plotsGame:journalBlocks", {
-            blocks: String(fr)
+          children: [Rd(Ym[Kd]), " \xb7 ", Rd("plotsGame:journalBlocks", {
+            blocks: String(hd)
           })]
-        }), (0, gr.jsxs)("div", {
+        }), (0, Gd.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [Or.map((rr => (0, gr.jsx)("img", {
-            className: mr()({
-              Shown: rr === Sr.id
+          children: [xd.map((dd => (0, Gd.jsx)("img", {
+            className: od()({
+              Shown: dd === Od.id
             }),
-            src: mQ[rr],
+            src: Hm[dd],
             alt: "",
             draggable: !1
-          }, rr))), "completed" === Sr.state && (0, gr.jsx)("span", {
+          }, dd))), "completed" === Od.state && (0, Gd.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: ar("plotsGame:journalBuilt")
-          }), Er && (0, gr.jsx)("span", {
+            children: Rd("plotsGame:journalBuilt")
+          }), vd && (0, Gd.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, gr.jsx)(hr.c, {
+            children: (0, Gd.jsx)(yd.c, {
               name: "lock"
             })
           })]
-        }), null !== Sr.note && (0, gr.jsx)("p", {
+        }), null !== Od.note && (0, Gd.jsx)("p", {
           className: "PlotsJournalNote",
-          children: ar(Sr.note)
-        }), (0, gr.jsxs)("div", {
+          children: Rd(Od.note)
+        }), (0, Gd.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === Sr.state && (0, gr.jsx)("p", {
+          children: ["locked" === Od.state && (0, Gd.jsx)("p", {
             className: "PlotsJournalHint",
-            children: ar("plotsGame:journalLocked", {
-              name: ar(Lr(Sr.unlockedBy).displayName.translationKey)
+            children: Rd("plotsGame:journalLocked", {
+              name: Rd(Bd(Od.unlockedBy).displayName.translationKey)
             })
-          }), Sr.active && (0, gr.jsxs)(gr.Fragment, {
-            children: [(0, gr.jsx)("p", {
+          }), Od.active && (0, Gd.jsxs)(Gd.Fragment, {
+            children: [(0, Gd.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: ar("plotsGame:journalBuilding")
-            }), (0, gr.jsx)(EQ.k, {
-              onClick: Wr,
-              children: ar("plotsGame:journalPutAway")
+              children: Rd("plotsGame:journalBuilding")
+            }), (0, Gd.jsx)(om.i, {
+              onClick: Fd,
+              children: Rd("plotsGame:journalPutAway")
             })]
-          }), !Er && !Sr.active && (0, gr.jsx)(xr, {
+          }), !vd && !Od.active && (0, Gd.jsx)(td, {
             onClick: () => {
-              Zr(Sr.id)
+              Wd(Od.id)
             },
-            children: ar("plotsGame:placementBuild")
+            children: Rd("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function nQ(rr) {
+    function wm(dd) {
       let {
-        className: Sr,
-        page: Qr,
-        hidden: Zr,
-        building: Wr,
-        journal: ar
-      } = rr;
-      return (0, gr.jsxs)("div", {
-        ref: rr => {
-          null !== rr && (rr.inert = Zr)
+        className: Od,
+        page: md,
+        hidden: Wd,
+        building: Fd,
+        journal: Rd
+      } = dd;
+      return (0, Gd.jsxs)("div", {
+        ref: dd => {
+          null !== dd && (dd.inert = Wd)
         },
-        className: mr()("PlotsJournalSide", Sr),
-        children: [void 0 !== Qr && (0, gr.jsx)(YQ, {
-          page: Qr,
-          building: Wr,
-          onBuild: ar.build,
-          onPutAway: ar.putAway
-        }), void 0 === Qr && (0, gr.jsx)("div", {
+        className: od()("PlotsJournalSide", Od),
+        children: [void 0 !== md && (0, Gd.jsx)(gm, {
+          page: md,
+          building: Fd,
+          onBuild: Rd.build,
+          onPutAway: Rd.putAway
+        }), void 0 === md && (0, Gd.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var eQ = Qr(2049);
+    var am = md(2057);
 
-    function KQ(rr) {
-      return Math.cos((0, eQ.k)(rr))
+    function Em(dd) {
+      return Math.cos((0, am.n)(dd))
     }
 
-    function yQ(rr) {
-      return (0, eQ.B)(Math.acos(BS.b.clamp(rr, -1, 1)))
+    function Jm(dd) {
+      return (0, am.B)(Math.acos(JO.b.clamp(dd, -1, 1)))
     }
 
-    function BQ(rr, Sr, Qr, Zr, Wr) {
-      const ar = Math.abs(Sr - rr),
-        jr = (0, eQ.B)(Wr / (Qr * Math.abs(Math.sin((0, eQ.k)(rr))))),
-        Ir = 450 * Math.min(1, ar / Zr),
-        fr = jr > 0 ? 3 * ar / jr : 1 / 0;
-      return Math.round(Math.max(120, Math.min(Ir, fr)))
+    function Um(dd, Od, md, Wd, Fd) {
+      const Rd = Math.abs(Od - dd),
+        Xd = (0, am.B)(Fd / (md * Math.abs(Math.sin((0, am.n)(dd))))),
+        Kd = 450 * Math.min(1, Rd / Wd),
+        hd = Xd > 0 ? 3 * Rd / Xd : 1 / 0;
+      return Math.round(Math.max(120, Math.min(Kd, hd)))
     }
-    class TQ {
+    class xm {
       constructor() {
         this.samples = []
       }
-      add(rr, Sr) {
+      add(dd, Od) {
         for (this.samples.push({
-            x: rr,
-            at: Sr
-          }); Sr - this.samples[0].at > 100;) this.samples.shift()
+            x: dd,
+            at: Od
+          }); Od - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const rr = this.samples[0],
-          Sr = this.samples[this.samples.length - 1];
-        return Sr.at > rr.at ? (Sr.x - rr.x) / (Sr.at - rr.at) : 0
+        const dd = this.samples[0],
+          Od = this.samples[this.samples.length - 1];
+        return Od.at > dd.at ? (Od.x - dd.x) / (Od.at - dd.at) : 0
       }
     }
 
-    function vQ(rr) {
-      return yQ(new DOMMatrixReadOnly(getComputedStyle(rr).transform).m11)
+    function Bm(dd) {
+      return Jm(new DOMMatrixReadOnly(getComputedStyle(dd).transform).m11)
     }
 
-    function OQ(rr, Sr) {
-      rr.style.transform = `rotateY(${-Sr}deg)`, rr.classList.add("Turning")
+    function Sm(dd, Od) {
+      dd.style.transform = `rotateY(${-Od}deg)`, dd.classList.add("Turning")
     }
 
-    function LQ(rr, Sr, Qr) {
-      const [Zr, Wr] = (0, ar.useState)(Qr), jr = (0, ar.useRef)(null), Ir = (0, ar.useRef)(null), fr = (0, ar.useRef)({
+    function sm(dd, Od, md) {
+      const [Wd, Fd] = (0, Rd.useState)(md), Xd = (0, Rd.useRef)(null), Kd = (0, Rd.useRef)(null), hd = (0, Rd.useRef)({
         Forward: null,
         Back: null
-      }), Er = Sr ? 2 : 1, pr = Sr ? 180 : 90, xr = Zr - Zr % Er, mr = xr > 0, Nr = xr + Er < rr, Ur = (0, ar.useCallback)((() => {
-        const rr = Ir.current;
-        return null === rr ? xr : (Ir.current = null, rr.animation.cancel(), (Sr = fr.current[rr.direction]).style.transform = "", Sr.classList.remove("Turning"), null === rr.next ? xr : (Wr(rr.next), rr.next));
-        var Sr
-      }), [xr]), tr = (0, ar.useCallback)(((rr, Sr, Qr, Zr) => {
-        const Wr = fr.current[rr],
-          ar = vQ(Wr),
-          jr = Sr === ("Forward" === rr) ? pr : 0;
-        OQ(Wr, jr);
-        const xr = Wr.animate([{
-          transform: `rotateY(${-ar}deg)`
+      }), vd = Od ? 2 : 1, Qd = Od ? 180 : 90, td = Wd - Wd % vd, od = td > 0, Nd = td + vd < dd, qd = (0, Rd.useCallback)((() => {
+        const dd = Kd.current;
+        return null === dd ? td : (Kd.current = null, dd.animation.cancel(), (Od = hd.current[dd.direction]).style.transform = "", Od.classList.remove("Turning"), null === dd.next ? td : (Fd(dd.next), dd.next));
+        var Od
+      }), [td]), Hd = (0, Rd.useCallback)(((dd, Od, md, Wd) => {
+        const Fd = hd.current[dd],
+          Rd = Bm(Fd),
+          Xd = Od === ("Forward" === dd) ? Qd : 0;
+        Sm(Fd, Xd);
+        const td = Fd.animate([{
+          transform: `rotateY(${-Rd}deg)`
         }, {
-          transform: `rotateY(${-jr}deg)`
+          transform: `rotateY(${-Xd}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : BQ(ar, jr, Wr.offsetWidth, pr, jr > ar ? -Qr : Qr),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : Um(Rd, Xd, Fd.offsetWidth, Qd, Xd > Rd ? -md : md),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        Ir.current = {
-          direction: rr,
-          animation: xr,
-          next: Sr ? Zr + ("Forward" === rr ? Er : -Er) : null
-        }, xr.onfinish = () => {
-          var rr;
-          (null === (rr = Ir.current) || void 0 === rr ? void 0 : rr.animation) === xr && Ur()
+        Kd.current = {
+          direction: dd,
+          animation: td,
+          next: Od ? Wd + ("Forward" === dd ? vd : -vd) : null
+        }, td.onfinish = () => {
+          var dd;
+          (null === (dd = Kd.current) || void 0 === dd ? void 0 : dd.animation) === td && qd()
         }
-      }), [Er, pr, Ur]), hr = (0, ar.useCallback)((Sr => {
-        if (null !== jr.current) return;
-        const Qr = Ur();
-        ("Forward" === Sr ? Qr + Er < rr : Qr > 0) && tr(Sr, !0, 0, Qr)
-      }), [Ur, tr, Er, rr]);
-      (0, ar.useEffect)((() => () => {
-        var rr;
-        null === (rr = Ir.current) || void 0 === rr || rr.animation.cancel()
-      }), []), (0, ar.useEffect)((() => {
-        const rr = rr => {
-          var Sr;
-          rr.pointerId !== (null === (Sr = jr.current) || void 0 === Sr ? void 0 : Sr.pointerId) || jr.current.following || (jr.current = null)
+      }), [vd, Qd, qd]), yd = (0, Rd.useCallback)((Od => {
+        if (null !== Xd.current) return;
+        const md = qd();
+        ("Forward" === Od ? md + vd < dd : md > 0) && Hd(Od, !0, 0, md)
+      }), [qd, Hd, vd, dd]);
+      (0, Rd.useEffect)((() => () => {
+        var dd;
+        null === (dd = Kd.current) || void 0 === dd || dd.animation.cancel()
+      }), []), (0, Rd.useEffect)((() => {
+        const dd = dd => {
+          var Od;
+          dd.pointerId !== (null === (Od = Xd.current) || void 0 === Od ? void 0 : Od.pointerId) || Xd.current.following || (Xd.current = null)
         };
-        return window.addEventListener("pointerup", rr), () => {
-          window.removeEventListener("pointerup", rr)
+        return window.addEventListener("pointerup", dd), () => {
+          window.removeEventListener("pointerup", dd)
         }
       }), []);
-      const zr = (rr, Sr, Qr) => {
-          const Zr = function(rr, Sr, Qr, Zr) {
-            return (rr < 0 ? Qr : Zr) ? BS.b.clampAbs(rr, Sr) : Math.sign(rr) * Sr * (1 - 1 / (.55 * Math.abs(rr) / Sr + 1))
-          }(rr.base + Qr, Er * rr.width, Nr, mr);
-          return "Forward" === Sr ? Math.min(Zr, 0) : Math.max(Zr, 0)
+      const bd = (dd, Od, md) => {
+          const Wd = function(dd, Od, md, Wd) {
+            return (dd < 0 ? md : Wd) ? JO.b.clampAbs(dd, Od) : Math.sign(dd) * Od * (1 - 1 / (.55 * Math.abs(dd) / Od + 1))
+          }(dd.base + md, vd * dd.width, Nd, od);
+          return "Forward" === Od ? Math.min(Wd, 0) : Math.max(Wd, 0)
         },
-        Yr = (rr, Sr) => {
-          const Qr = jr.current;
-          if (jr.current = null, null === Qr.direction) return;
-          Qr.speed.add(rr, Sr);
-          const Zr = Qr.speed.get(),
-            Wr = zr(Qr, Qr.direction, rr - Qr.x);
-          tr(Qr.direction, null !== function(rr, Sr, Qr, Zr, Wr) {
-            if (Math.abs(Sr) >= .3 ? Math.sign(Sr) !== Math.sign(rr) : Math.abs(rr) < .5 * Qr) return null;
-            const ar = rr < 0 ? "Forward" : "Back";
-            return ("Forward" === ar ? Zr : Wr) ? ar : null
-          }(Wr, Zr, Er * Qr.width, Nr, mr), Zr, xr)
+        Td = (dd, Od) => {
+          const md = Xd.current;
+          if (Xd.current = null, null === md.direction) return;
+          md.speed.add(dd, Od);
+          const Wd = md.speed.get(),
+            Fd = bd(md, md.direction, dd - md.x);
+          Hd(md.direction, null !== function(dd, Od, md, Wd, Fd) {
+            if (Math.abs(Od) >= .3 ? Math.sign(Od) !== Math.sign(dd) : Math.abs(dd) < .5 * md) return null;
+            const Rd = dd < 0 ? "Forward" : "Back";
+            return ("Forward" === Rd ? Wd : Fd) ? Rd : null
+          }(Fd, Wd, vd * md.width, Nd, od), Wd, td)
         },
-        nr = {
-          onPointerDown: rr => {
-            var Sr;
-            if (!rr.isPrimary || 0 !== rr.button || null !== Ir.current && null !== rr.target.closest("button")) return;
-            const Qr = new TQ;
-            Qr.add(rr.clientX, rr.timeStamp);
-            const Zr = fr.current.Forward.offsetWidth,
-              Wr = Ir.current;
-            Ir.current = null;
-            let ar = 0;
-            if (null !== Wr) {
-              const Sr = fr.current[Wr.direction],
-                Qr = vQ(Sr);
-              Wr.animation.cancel(), OQ(Sr, Qr), ar = function(rr, Sr, Qr, Zr) {
-                return (rr < 0 ? Qr : Zr) ? rr : Math.sign(rr) * Sr * (1 / (1 - Math.min(Math.abs(rr) / Sr, .99)) - 1) / .55
-              }(function(rr, Sr, Qr, Zr) {
-                return Qr * (KQ(Sr) - KQ("Forward" === rr ? 0 : Zr))
-              }(Wr.direction, Qr, Zr, pr), Er * Zr, Nr, mr), rr.currentTarget.setPointerCapture(rr.pointerId)
+        pd = {
+          onPointerDown: dd => {
+            var Od;
+            if (!dd.isPrimary || 0 !== dd.button || null !== Kd.current && null !== dd.target.closest("button")) return;
+            const md = new xm;
+            md.add(dd.clientX, dd.timeStamp);
+            const Wd = hd.current.Forward.offsetWidth,
+              Fd = Kd.current;
+            Kd.current = null;
+            let Rd = 0;
+            if (null !== Fd) {
+              const Od = hd.current[Fd.direction],
+                md = Bm(Od);
+              Fd.animation.cancel(), Sm(Od, md), Rd = function(dd, Od, md, Wd) {
+                return (dd < 0 ? md : Wd) ? dd : Math.sign(dd) * Od * (1 / (1 - Math.min(Math.abs(dd) / Od, .99)) - 1) / .55
+              }(function(dd, Od, md, Wd) {
+                return md * (Em(Od) - Em("Forward" === dd ? 0 : Wd))
+              }(Fd.direction, md, Wd, Qd), vd * Wd, Nd, od), dd.currentTarget.setPointerCapture(dd.pointerId)
             }
-            jr.current = {
-              pointerId: rr.pointerId,
-              x: rr.clientX,
-              y: rr.clientY,
-              base: ar,
-              width: Zr,
-              following: null !== Wr,
-              direction: null !== (Sr = null === Wr || void 0 === Wr ? void 0 : Wr.direction) && void 0 !== Sr ? Sr : null,
-              speed: Qr
+            Xd.current = {
+              pointerId: dd.pointerId,
+              x: dd.clientX,
+              y: dd.clientY,
+              base: Rd,
+              width: Wd,
+              following: null !== Fd,
+              direction: null !== (Od = null === Fd || void 0 === Fd ? void 0 : Fd.direction) && void 0 !== Od ? Od : null,
+              speed: md
             }
           },
-          onPointerMove: rr => {
-            const Sr = jr.current;
-            if (null === Sr || rr.pointerId !== Sr.pointerId) return;
-            if (0 === rr.buttons) return void Yr(rr.clientX, rr.timeStamp);
-            const Qr = rr.clientX - Sr.x;
-            !Sr.following && function(rr, Sr) {
-              return Math.abs(rr) > 8 && Math.abs(rr) > Math.abs(Sr)
-            }(Qr, rr.clientY - Sr.y) && (Sr.following = !0, Sr.direction = Qr < 0 ? "Forward" : "Back", rr.currentTarget.setPointerCapture(rr.pointerId)), null !== Sr.direction && (Sr.speed.add(rr.clientX, rr.timeStamp), OQ(fr.current[Sr.direction], function(rr, Sr, Qr, Zr) {
-              const Wr = Qr * KQ("Forward" === rr ? 0 : Zr) + Sr;
-              return BS.b.clamp(yQ(Wr / Qr), 0, Zr)
-            }(Sr.direction, zr(Sr, Sr.direction, Qr), Sr.width, pr)))
+          onPointerMove: dd => {
+            const Od = Xd.current;
+            if (null === Od || dd.pointerId !== Od.pointerId) return;
+            if (0 === dd.buttons) return void Td(dd.clientX, dd.timeStamp);
+            const md = dd.clientX - Od.x;
+            !Od.following && function(dd, Od) {
+              return Math.abs(dd) > 8 && Math.abs(dd) > Math.abs(Od)
+            }(md, dd.clientY - Od.y) && (Od.following = !0, Od.direction = md < 0 ? "Forward" : "Back", dd.currentTarget.setPointerCapture(dd.pointerId)), null !== Od.direction && (Od.speed.add(dd.clientX, dd.timeStamp), Sm(hd.current[Od.direction], function(dd, Od, md, Wd) {
+              const Fd = md * Em("Forward" === dd ? 0 : Wd) + Od;
+              return JO.b.clamp(Jm(Fd / md), 0, Wd)
+            }(Od.direction, bd(Od, Od.direction, md), Od.width, Qd)))
           },
-          onPointerUp: rr => {
-            var Sr;
-            rr.pointerId === (null === (Sr = jr.current) || void 0 === Sr ? void 0 : Sr.pointerId) && Yr(rr.clientX, rr.timeStamp)
+          onPointerUp: dd => {
+            var Od;
+            dd.pointerId === (null === (Od = Xd.current) || void 0 === Od ? void 0 : Od.pointerId) && Td(dd.clientX, dd.timeStamp)
           },
-          onPointerCancel: rr => {
-            const Sr = jr.current;
-            rr.pointerId === (null === Sr || void 0 === Sr ? void 0 : Sr.pointerId) && (jr.current = null, null !== Sr.direction && tr(Sr.direction, !1, 0, xr))
+          onPointerCancel: dd => {
+            const Od = Xd.current;
+            dd.pointerId === (null === Od || void 0 === Od ? void 0 : Od.pointerId) && (Xd.current = null, null !== Od.direction && Hd(Od.direction, !1, 0, td))
           }
         };
       return {
-        first: xr,
-        step: Er,
-        canGoBack: mr,
-        canGoForward: Nr,
-        turnPage: hr,
-        leaves: fr,
-        pagesHandlers: nr
+        first: td,
+        step: vd,
+        canGoBack: od,
+        canGoForward: Nd,
+        turnPage: yd,
+        leaves: hd,
+        pagesHandlers: pd
       }
     }
 
-    function lQ(rr, Sr) {
-      return rr > Sr && rr >= 600
+    function um(dd, Od) {
+      return dd > Od && dd >= 600
     }
 
-    function XQ(rr) {
+    function Vm(dd) {
       let {
-        journal: Sr,
-        hud: Qr,
-        guide: Zr
-      } = rr;
+        journal: Od,
+        hud: md,
+        guide: Wd
+      } = dd;
       const {
-        t: Wr
-      } = (0, pr.E)(), Ir = (0, fr.g)(qr, Sr.getPages()), Er = (0, fr.g)(QS, Qr.getGuide()), xr = Ir.find((rr => rr.active)), Nr = (Ur = Er, tr = void 0 === xr ? null : xr.id, "active" === Ur[0] && null === tr);
-      var Ur, tr;
-      const hr = (0, xQ.t)(lQ),
+        t: Fd
+      } = (0, Qd.G)(), Kd = (0, hd.i)(Ad, Od.getPages()), vd = (0, hd.i)(FO, md.getGuide()), td = Kd.find((dd => dd.active)), Nd = (qd = vd, Hd = void 0 === td ? null : td.id, "active" === qd[0] && null === Hd);
+      var qd, Hd;
+      const yd = (0, qm.l)(um),
         {
-          first: zr,
-          step: Yr,
-          canGoBack: Kr,
-          canGoForward: yr,
-          turnPage: Br,
-          leaves: Tr,
-          pagesHandlers: vr
-        } = LQ(Ir.length, hr, (() => function(rr) {
-          const Sr = rr.findIndex((rr => rr.active));
-          return -1 !== Sr ? Sr : Math.max(0, rr.findIndex((rr => "open" === rr.state)))
-        }(Ir)));
-      (0, ar.useEffect)((() => {
-        Sr.onOpened()
-      }), [Sr]), (0, nr.d)((rr => !Nr && ("ArrowLeft" === rr.code || "ArrowRight" === rr.code) && !(0, er.isTypingInInput)()), (rr => {
-        rr.stopPropagation(), Br("ArrowLeft" === rr.code ? "Back" : "Forward")
+          first: bd,
+          step: Td,
+          canGoBack: gd,
+          canGoForward: wd,
+          turnPage: Ed,
+          leaves: Jd,
+          pagesHandlers: Ud
+        } = sm(Kd.length, yd, (() => function(dd) {
+          const Od = dd.findIndex((dd => dd.active));
+          return -1 !== Od ? Od : Math.max(0, dd.findIndex((dd => "open" === dd.state)))
+        }(Kd)));
+      (0, Rd.useEffect)((() => {
+        Od.onOpened()
+      }), [Od]), (0, pd.d)((dd => !Nd && ("ArrowLeft" === dd.code || "ArrowRight" === dd.code) && !(0, Yd.isTypingInInput)()), (dd => {
+        dd.stopPropagation(), Ed("ArrowLeft" === dd.code ? "Back" : "Forward")
       }));
-      const Or = void 0 !== xr,
-        Lr = (rr, Qr, Zr) => (0, gr.jsx)(nQ, {
-          className: rr,
-          page: Qr >= 0 && Qr < Ir.length ? Ir[Qr] : void 0,
-          hidden: Zr,
-          building: Or,
-          journal: Sr
+      const xd = void 0 !== td,
+        Bd = (dd, md, Wd) => (0, Gd.jsx)(wm, {
+          className: dd,
+          page: md >= 0 && md < Kd.length ? Kd[md] : void 0,
+          hidden: Wd,
+          building: xd,
+          journal: Od
         });
-      return (0, gr.jsx)(pQ.b, {
-        close: jr.m,
+      return (0, Gd.jsx)(Nm.c, {
+        close: Xd.h,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, gr.jsxs)("section", {
-          className: mr()("PlotsJournal", {
-            Spread: hr
+        children: (0, Gd.jsxs)("section", {
+          className: od()("PlotsJournal", {
+            Spread: yd
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": Wr("plotsGame:journalTitle"),
-          children: [(0, gr.jsx)(EQ.l, {
+          "aria-label": Fd("plotsGame:journalTitle"),
+          children: [(0, Gd.jsx)(om.j, {
             className: "PlotsJournalClose",
-            onClick: jr.m
-          }), "active" === Er[0] && (0, gr.jsx)(ES, {
+            onClick: Xd.h
+          }), "active" === vd[0] && (0, Gd.jsx)(tO, {
             className: "PlotsJournalGuideSkip",
-            onSkip: Zr.skip
-          }), Nr && (0, gr.jsx)(tQ, {
-            onBuild: Sr.build
-          }), !Nr && (0, gr.jsx)(hQ, {
+            onSkip: Wd.skip
+          }), Nd && (0, Gd.jsx)(Tm, {
+            onBuild: Od.build
+          }), !Nd && (0, Gd.jsx)(pm, {
             direction: "Back",
-            disabled: !Kr,
-            onTurn: Br
-          }), (0, gr.jsx)("div", {
-            hidden: Nr,
+            disabled: !gd,
+            onTurn: Ed
+          }), (0, Gd.jsx)("div", {
+            hidden: Nd,
             className: "PlotsJournalBookPages",
-            ...vr,
-            children: (0, gr.jsxs)("div", {
+            ...Ud,
+            children: (0, Gd.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [hr && Lr("Left", zr - 2, !0), Lr("Right", zr + 2 * Yr - 1, !0), (0, gr.jsxs)("div", {
-                ref: rr => {
-                  Tr.current.Back = rr
+              children: [yd && Bd("Left", bd - 2, !0), Bd("Right", bd + 2 * Td - 1, !0), (0, Gd.jsxs)("div", {
+                ref: dd => {
+                  Jd.current.Back = dd
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [Lr("Recto", zr - 1, !0), hr && Lr("Verso", zr, !1)]
-              }), (0, gr.jsxs)("div", {
-                ref: rr => {
-                  Tr.current.Forward = rr
+                children: [Bd("Recto", bd - 1, !0), yd && Bd("Verso", bd, !1)]
+              }), (0, Gd.jsxs)("div", {
+                ref: dd => {
+                  Jd.current.Forward = dd
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [Lr("Recto", zr + Yr - 1, !1), hr && Lr("Verso", zr + Yr, !0)]
+                children: [Bd("Recto", bd + Td - 1, !1), yd && Bd("Verso", bd + Td, !0)]
               })]
             })
-          }), !Nr && (0, gr.jsx)(hQ, {
+          }), !Nd && (0, Gd.jsx)(pm, {
             direction: "Forward",
-            disabled: !yr,
-            onTurn: Br
+            disabled: !wd,
+            onTurn: Ed
           })]
         })
       })
     }
 
-    function PQ(rr, Sr, Qr, Zr, Wr) {
-      const ar = Math.hypot(...Sr.dir);
-      if (!Number.isFinite(ar) || 0 === ar) return -1;
+    function im(dd, Od, md, Wd, Fd) {
+      const Rd = Math.hypot(...Od.dir);
+      if (!Number.isFinite(Rd) || 0 === Rd) return -1;
       const {
-        from: jr,
-        reach: Ir,
-        solid: fr
-      } = Sr, Er = [Sr.dir[0] / ar, Sr.dir[1] / ar, Sr.dir[2] / ar], pr = null === fr ? Ir : Math.min(Ir, function(rr, Sr, Qr) {
-        const Zr = HQ(rr, Sr, Qr);
-        if (Zr !== 1 / 0) return Zr;
-        return (Qr[0] + .5 - rr[0]) * Sr[0] + (Qr[1] + .5 - rr[1]) * Sr[1] + (Qr[2] + .5 - rr[2]) * Sr[2]
-      }(jr, Er, fr) + .75);
-      let xr = -1,
-        mr = 1 / 0,
-        Nr = 1 / 0;
-      for (let Ur = 0; Ur < rr.length; Ur += 4) {
-        const Sr = [rr[Ur], rr[Ur + 1], rr[Ur + 2]],
-          ar = Wr(Ur) ? Ir : pr;
-        let fr = -1,
-          tr = HQ(jr, Er, Sr);
-        if (tr > ar) {
-          const rr = [Sr[0] + .5 - jr[0], Sr[1] + .5 - jr[1], Sr[2] + .5 - jr[2]];
-          if (tr = rr[0] * Er[0] + rr[1] * Er[1] + rr[2] * Er[2], tr <= 0 || tr > ar) continue;
-          if (fr = Math.hypot(rr[0] - tr * Er[0], rr[1] - tr * Er[1], rr[2] - tr * Er[2]), fr > .7 || !Zr(Ur)) continue
-        }(fr < mr || fr === mr && tr < Nr) && Qr(Ur) && (xr = Ur, mr = fr, Nr = tr)
+        from: Xd,
+        reach: Kd,
+        solid: hd
+      } = Od, vd = [Od.dir[0] / Rd, Od.dir[1] / Rd, Od.dir[2] / Rd], Qd = null === hd ? Kd : Math.min(Kd, function(dd, Od, md) {
+        const Wd = Am(dd, Od, md);
+        if (Wd !== 1 / 0) return Wd;
+        return (md[0] + .5 - dd[0]) * Od[0] + (md[1] + .5 - dd[1]) * Od[1] + (md[2] + .5 - dd[2]) * Od[2]
+      }(Xd, vd, hd) + .75);
+      let td = -1,
+        od = 1 / 0,
+        Nd = 1 / 0;
+      for (let qd = 0; qd < dd.length; qd += 4) {
+        const Od = [dd[qd], dd[qd + 1], dd[qd + 2]],
+          Rd = Fd(qd) ? Kd : Qd;
+        let hd = -1,
+          Hd = Am(Xd, vd, Od);
+        if (Hd > Rd) {
+          const dd = [Od[0] + .5 - Xd[0], Od[1] + .5 - Xd[1], Od[2] + .5 - Xd[2]];
+          if (Hd = dd[0] * vd[0] + dd[1] * vd[1] + dd[2] * vd[2], Hd <= 0 || Hd > Rd) continue;
+          if (hd = Math.hypot(dd[0] - Hd * vd[0], dd[1] - Hd * vd[1], dd[2] - Hd * vd[2]), hd > .7 || !Wd(qd)) continue
+        }(hd < od || hd === od && Hd < Nd) && md(qd) && (td = qd, od = hd, Nd = Hd)
       }
-      return xr
+      return td
     }
 
-    function HQ(rr, Sr, Qr) {
-      let Zr = 0,
-        Wr = 1 / 0;
-      for (let ar = 0; ar < 3; ar++) {
-        const jr = Qr[ar] - rr[ar];
-        if (0 === Sr[ar]) {
-          if (jr > 0 || jr + 1 < 0) return 1 / 0;
+    function Am(dd, Od, md) {
+      let Wd = 0,
+        Fd = 1 / 0;
+      for (let Rd = 0; Rd < 3; Rd++) {
+        const Xd = md[Rd] - dd[Rd];
+        if (0 === Od[Rd]) {
+          if (Xd > 0 || Xd + 1 < 0) return 1 / 0;
           continue
         }
-        const Ir = jr / Sr[ar],
-          fr = (jr + 1) / Sr[ar];
-        Zr = Math.max(Zr, Math.min(Ir, fr)), Wr = Math.min(Wr, Math.max(Ir, fr))
+        const Kd = Xd / Od[Rd],
+          hd = (Xd + 1) / Od[Rd];
+        Wd = Math.max(Wd, Math.min(Kd, hd)), Fd = Math.min(Fd, Math.max(Kd, hd))
       }
-      return Zr <= Wr ? Zr : 1 / 0
+      return Wd <= Fd ? Wd : 1 / 0
     }
-    var qQ = Qr(38368),
-      RQ = Qr(39562),
-      gQ = Qr(40035);
-    const CQ = [1, 1, 1];
-    class MQ {
-      constructor(rr) {
-        this.api = rr, this.meshes = null, this.shown = null
+    var rm = md(38448),
+      Gm = md(39619),
+      nm = md(40062);
+    const Lm = [1, 1, 1];
+    class Pm {
+      constructor(dd) {
+        this.api = dd, this.meshes = null, this.shown = null
       }
-      show(rr) {
-        if (!(0, qQ.h)(rr, this.shown))
-          if (this.shown = null === rr ? null : [rr[0], rr[1], rr[2]], null !== this.meshes)
-            for (const Sr of this.meshes) this.api.setGameMesh(Sr, null === rr ? {
+      show(dd) {
+        if (!(0, rm.f)(dd, this.shown))
+          if (this.shown = null === dd ? null : [dd[0], dd[1], dd[2]], null !== this.meshes)
+            for (const Od of this.meshes) this.api.setGameMesh(Od, null === dd ? {
               visible: !1
             } : {
-              anchor: rr,
+              anchor: dd,
               visible: !0
             });
-          else if (null !== rr) {
-          const Sr = [RQ.f, RQ.f, RQ.f, 0, 0, 0];
-          this.meshes = [this.build([Sr], RQ.i, rr), this.build((0, RQ.e)(), RQ.m, rr)]
+          else if (null !== dd) {
+          const Od = [Gm.d, Gm.d, Gm.d, 0, 0, 0];
+          this.meshes = [this.build([Od], Gm.f, dd), this.build((0, Gm.b)(), Gm.k, dd)]
         }
       }
       dispose() {
-        for (const Sr of null !== (rr = this.meshes) && void 0 !== rr ? rr : []) {
-          var rr;
-          this.api.disposeGameMesh(Sr)
+        for (const Od of null !== (dd = this.meshes) && void 0 !== dd ? dd : []) {
+          var dd;
+          this.api.disposeGameMesh(Od)
         }
         this.meshes = null, this.shown = null
       }
-      build(rr, Sr, Qr) {
-        const Zr = [],
-          Wr = [];
-        for (const [ar, jr, Ir, fr, Er, pr] of rr)(0, gQ.f)(Zr, Wr, [fr + .5, Er + .5, pr + .5], [ar, jr, Ir]);
+      build(dd, Od, md) {
+        const Wd = [],
+          Fd = [];
+        for (const [Rd, Xd, Kd, hd, vd, Qd] of dd)(0, nm.g)(Wd, Fd, [hd + .5, vd + .5, Qd + .5], [Rd, Xd, Kd]);
         return this.api.createGameMesh({
-          positions: Zr,
-          indices: Wr
+          positions: Wd,
+          indices: Fd
         }, {
-          rgb: CQ,
-          alpha: Sr,
+          rgb: Lm,
+          alpha: Od,
           onTop: !0
-        }, Qr)
+        }, md)
       }
     }
 
-    function GQ(rr, Sr) {
-      const Qr = GS.i.Nz / 2;
-      return rr[0] < Sr[0] + Qr && rr[0] + 1 > Sr[0] - Qr && rr[1] < Sr[1] + GS.i.Uz && rr[1] + 1 > Sr[1] && rr[2] < Sr[2] + Qr && rr[2] + 1 > Sr[2] - Qr
+    function zm(dd, Od) {
+      const md = PO.i.Hb / 2;
+      return dd[0] < Od[0] + md && dd[0] + 1 > Od[0] - md && dd[1] < Od[1] + PO.i.yb && dd[1] + 1 > Od[1] && dd[2] < Od[2] + md && dd[2] + 1 > Od[2] - md
     }
 
-    function kQ(rr, Sr) {
-      return rr.getClientOption(Sr, "blockReach") + 1
+    function cm(dd, Od) {
+      return dd.getClientOption(Od, "blockReach") + 1
     }
-    class AQ {
-      constructor(rr, Sr, Qr) {
-        this.api = rr, this.localPlayerId = Sr, this.foreseen = Qr, this.cells = [], this.playerCells = [], this.next = null
+    class jm {
+      constructor(dd, Od, md) {
+        this.api = dd, this.localPlayerId = Od, this.foreseen = md, this.cells = [], this.playerCells = [], this.next = null
       }
       get() {
         return this.next
       }
-      setCells(rr) {
-        this.cells = rr
+      setCells(dd) {
+        this.cells = dd
       }
       playerMoved() {
-        return VQ(this.api.getPositionView(this.localPlayerId)).some(((rr, Sr) => rr !== this.playerCells[Sr]))
+        return Dm(this.api.getPositionView(this.localPlayerId)).some(((dd, Od) => dd !== this.playerCells[Od]))
       }
-      eN(rr) {
-        const Sr = this.api.getPositionView(this.localPlayerId);
-        return this.playerCells.splice(0, 1 / 0, ...VQ(Sr)), this.next = this.pickFrom(null === rr ? [Sr[0], Sr[1] + 1, Sr[2]] : (0, qQ.e)(rr), (() => !1)), this.next
+      xN(dd) {
+        const Od = this.api.getPositionView(this.localPlayerId);
+        return this.playerCells.splice(0, 1 / 0, ...Dm(Od)), this.next = this.pickFrom(null === dd ? [Od[0], Od[1] + 1, Od[2]] : (0, rm.d)(dd), (() => !1)), this.next
       }
-      pickFrom(rr, Sr) {
-        const Qr = this.api.getPositionView(this.localPlayerId),
-          Zr = [Qr[0], Qr[1] + GS.i.Uz * GS.i.playerEyeToHeightRatio, Qr[2]],
-          Wr = kQ(this.api, this.localPlayerId),
+      pickFrom(dd, Od) {
+        const md = this.api.getPositionView(this.localPlayerId),
+          Wd = [md[0], md[1] + PO.i.yb * PO.i.playerEyeToHeightRatio, md[2]],
+          Fd = cm(this.api, this.localPlayerId),
           {
-            cells: ar
+            cells: Rd
           } = this,
-          jr = rr => [ar[rr], ar[rr + 1], ar[rr + 2]],
-          Ir = function(rr, Sr, Qr, Zr, Wr, ar) {
-            let jr = -1,
-              Ir = -1,
-              fr = 1 / 0;
-            for (let Er = 0; Er < rr.length; Er += Sr) {
-              const Sr = (ar(Er) ? 2 : 0) + (Zr(Er) ? 1 : 0);
-              if (Sr < Ir || Wr(Er)) continue;
-              const pr = (rr[Er] + .5 - Qr[0]) ** 2 + (rr[Er + 1] + .5 - Qr[1]) ** 2 + (rr[Er + 2] + .5 - Qr[2]) ** 2;
-              (Sr > Ir || pr < fr) && (jr = Er, Ir = Sr, fr = pr)
+          Xd = dd => [Rd[dd], Rd[dd + 1], Rd[dd + 2]],
+          Kd = function(dd, Od, md, Wd, Fd, Rd) {
+            let Xd = -1,
+              Kd = -1,
+              hd = 1 / 0;
+            for (let vd = 0; vd < dd.length; vd += Od) {
+              const Od = (Rd(vd) ? 2 : 0) + (Wd(vd) ? 1 : 0);
+              if (Od < Kd || Fd(vd)) continue;
+              const Qd = (dd[vd] + .5 - md[0]) ** 2 + (dd[vd + 1] + .5 - md[1]) ** 2 + (dd[vd + 2] + .5 - md[2]) ** 2;
+              (Od > Kd || Qd < hd) && (Xd = vd, Kd = Od, hd = Qd)
             }
-            return jr
-          }(ar, 4, rr, (rr => 1 === ar[rr + 3]), (rr => {
-            const Zr = jr(rr);
-            return GQ(Zr, Qr) || this.foreseen.has(Zr.join()) || Sr(Zr)
-          }), (rr => function(rr, Sr, Qr) {
-            return (Sr[0] + .5 - rr[0]) ** 2 + (Sr[1] + .5 - rr[1]) ** 2 + (Sr[2] + .5 - rr[2]) ** 2 <= Qr ** 2
-          }(Zr, jr(rr), Wr)));
-        return -1 === Ir ? null : jr(Ir)
+            return Xd
+          }(Rd, 4, dd, (dd => 1 === Rd[dd + 3]), (dd => {
+            const Wd = Xd(dd);
+            return zm(Wd, md) || this.foreseen.has(Wd.join()) || Od(Wd)
+          }), (dd => function(dd, Od, md) {
+            return (Od[0] + .5 - dd[0]) ** 2 + (Od[1] + .5 - dd[1]) ** 2 + (Od[2] + .5 - dd[2]) ** 2 <= md ** 2
+          }(Wd, Xd(dd), Fd)));
+        return -1 === Kd ? null : Xd(Kd)
       }
     }
 
-    function VQ(rr) {
-      let [Sr, Qr, Zr] = rr;
-      const Wr = GS.i.Nz / 2;
-      return [Math.floor(Sr), Math.floor(Qr), Math.floor(Zr), Math.floor(Sr - Wr), Math.floor(Sr + Wr), Math.floor(Qr + GS.i.Uz), Math.floor(Zr - Wr), Math.floor(Zr + Wr)]
+    function Dm(dd) {
+      let [Od, md, Wd] = dd;
+      const Fd = PO.i.Hb / 2;
+      return [Math.floor(Od), Math.floor(md), Math.floor(Wd), Math.floor(Od - Fd), Math.floor(Od + Fd), Math.floor(md + PO.i.yb), Math.floor(Wd - Fd), Math.floor(Wd + Fd)]
     }
-    class iQ {
-      constructor(rr, Sr, Qr) {
-        this.api = rr, this.localPlayerId = Sr, this.pickNext = Qr, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class em {
+      constructor(dd, Od, md) {
+        this.api = dd, this.localPlayerId = Od, this.pickNext = md, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(rr) {
-        const [Sr, , Qr] = rr.cameraDirection, Zr = Math.hypot(Sr, Qr);
-        Zr > .001 && (this.heading = [Sr / Zr, Qr / Zr])
+      look(dd) {
+        const [Od, , md] = dd.cameraDirection, Wd = Math.hypot(Od, md);
+        Wd > .001 && (this.heading = [Od / Wd, md / Wd])
       }
-      tapped(rr, Sr, Qr) {
-        const Zr = kQ(this.api, this.localPlayerId),
+      tapped(dd, Od, md) {
+        const Wd = cm(this.api, this.localPlayerId),
           {
-            origin: Wr,
-            direction: ar
+            origin: Fd,
+            direction: Rd
           } = this.api.getActionRay(),
-          jr = [...Wr],
-          Ir = [
-            [jr, [jr[0] + ar[0] * Zr, jr[1] + ar[1] * Zr, jr[2] + ar[2] * Zr]]
+          Xd = [...Fd],
+          Kd = [
+            [Xd, [Xd[0] + Rd[0] * Wd, Xd[1] + Rd[1] * Wd, Xd[2] + Rd[2] * Wd]]
           ];
-        null !== rr && Ir.push([jr, (0, qQ.e)(rr)]), this.tap = {
-          lines: Ir,
-          next: Sr,
-          ms: Qr
+        null !== dd && Kd.push([Xd, (0, rm.d)(dd)]), this.tap = {
+          lines: Kd,
+          next: Od,
+          ms: md
         }
       }
-      filled(rr, Sr) {
-        this.tap = null, this.turnFrom(rr, Sr), this.retry(Sr)
+      filled(dd, Od) {
+        this.tap = null, this.turnFrom(dd, Od), this.retry(Od)
       }
-      arrived(rr, Sr) {
+      arrived(dd, Od) {
         const {
-          tap: Qr
+          tap: md
         } = this;
-        if (null === Qr || Sr - Qr.ms > 1500) return null;
-        const Zr = (0, qQ.e)(rr);
-        return (0, qQ.h)(Qr.next, rr) || Qr.lines.some((rr => {
-          let [Sr, Qr] = rr;
-          return function(rr, Sr, Qr) {
-            const Zr = [Qr[0] - Sr[0], Qr[1] - Sr[1], Qr[2] - Sr[2]],
-              Wr = [rr[0] - Sr[0], rr[1] - Sr[1], rr[2] - Sr[2]],
-              ar = Zr[0] ** 2 + Zr[1] ** 2 + Zr[2] ** 2,
-              jr = 0 === ar ? 0 : Math.min(1, Math.max(0, (Wr[0] * Zr[0] + Wr[1] * Zr[1] + Wr[2] * Zr[2]) / ar));
-            return Math.hypot(Wr[0] - Zr[0] * jr, Wr[1] - Zr[1] * jr, Wr[2] - Zr[2] * jr)
-          }(Zr, Sr, Qr) <= .9
-        })) ? (this.tap = null, this.turnFrom(rr, Sr), Qr.ms) : null
+        if (null === md || Od - md.ms > 1500) return null;
+        const Wd = (0, rm.d)(dd);
+        return (0, rm.f)(md.next, dd) || md.lines.some((dd => {
+          let [Od, md] = dd;
+          return function(dd, Od, md) {
+            const Wd = [md[0] - Od[0], md[1] - Od[1], md[2] - Od[2]],
+              Fd = [dd[0] - Od[0], dd[1] - Od[1], dd[2] - Od[2]],
+              Rd = Wd[0] ** 2 + Wd[1] ** 2 + Wd[2] ** 2,
+              Xd = 0 === Rd ? 0 : Math.min(1, Math.max(0, (Fd[0] * Wd[0] + Fd[1] * Wd[1] + Fd[2] * Wd[2]) / Rd));
+            return Math.hypot(Fd[0] - Wd[0] * Xd, Fd[1] - Wd[1] * Xd, Fd[2] - Wd[2] * Xd)
+          }(Wd, Od, md) <= .9
+        })) ? (this.tap = null, this.turnFrom(dd, Od), md.ms) : null
       }
-      turnFrom(rr, Sr) {
+      turnFrom(dd, Od) {
         this.pending = {
-          from: rr,
-          ms: Sr,
-          turnMs: Math.max(50, Math.min(250, Sr - this.lastFillMs))
-        }, this.lastFillMs = Sr
+          from: dd,
+          ms: Od,
+          turnMs: Math.max(50, Math.min(250, Od - this.lastFillMs))
+        }, this.lastFillMs = Od
       }
-      retry(rr) {
+      retry(dd) {
         const {
-          pending: Sr
+          pending: Od
         } = this;
-        if (null === Sr) return;
-        if (rr - Sr.ms > 1500) return void(this.pending = null);
-        const Qr = this.pickNext((0, qQ.e)(Sr.from), (rr => (0, qQ.h)(rr, Sr.from)));
-        if (null === Qr) return;
+        if (null === Od) return;
+        if (dd - Od.ms > 1500) return void(this.pending = null);
+        const md = this.pickNext((0, rm.d)(Od.from), (dd => (0, rm.f)(dd, Od.from)));
+        if (null === md) return;
         this.pending = null;
         const {
-          turning: Zr
+          turning: Wd
         } = this;
-        if (null !== Zr && rr < Zr.endMs && (0, qQ.h)(Zr.to, Qr)) return;
-        const Wr = this.api.getActionRay().origin,
-          ar = [Qr[0] + .5 - Wr[0], Qr[1] + .5 - Wr[1], Qr[2] + .5 - Wr[2]],
-          jr = Math.hypot(ar[0], ar[2]);
-        if (jr < .3) {
-          const rr = Math.max(jr, .001);
-          ar[0] = this.heading[0] * rr, ar[2] = this.heading[1] * rr
+        if (null !== Wd && dd < Wd.endMs && (0, rm.f)(Wd.to, md)) return;
+        const Fd = this.api.getActionRay().origin,
+          Rd = [md[0] + .5 - Fd[0], md[1] + .5 - Fd[1], md[2] + .5 - Fd[2]],
+          Xd = Math.hypot(Rd[0], Rd[2]);
+        if (Xd < .3) {
+          const dd = Math.max(Xd, .001);
+          Rd[0] = this.heading[0] * dd, Rd[2] = this.heading[1] * dd
         }
-        this.api.turnCamera(ar, Sr.turnMs), this.turning = {
-          to: Qr,
-          endMs: rr + Sr.turnMs
+        this.api.turnCamera(Rd, Od.turnMs), this.turning = {
+          to: md,
+          endMs: dd + Od.turnMs
         }
       }
     }
-    class wQ {
-      constructor(rr, Sr, Qr, Zr) {
-        this.api = rr, this.localPlayerId = Sr, this.juice = Qr, this.tracker = Zr, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new kS(rr), this.meshes = new AS.p(rr), this.outline = new MQ(rr), this.nextCell = new AQ(rr, Sr, this.foreseen), this.turn = new iQ(rr, Sr, ((rr, Sr) => this.nextCell.pickFrom(rr, Sr)))
+    class Im {
+      constructor(dd, Od, md, Wd) {
+        this.api = dd, this.localPlayerId = Od, this.juice = md, this.tracker = Wd, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new zO(dd), this.meshes = new cO.n(dd), this.outline = new Pm(dd), this.nextCell = new jm(dd, Od, this.foreseen), this.turn = new em(dd, Od, ((dd, Od) => this.nextCell.pickFrom(dd, Od)))
       }
-      vx(rr) {
-        const Sr = "active" === rr[0] ? `${rr[1]}|${rr[3]}|${rr[4]}|${rr[5]}|${rr[6]}` : "";
-        if ("active" !== rr[0]) "built" === rr[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      Yt(dd) {
+        const Od = "active" === dd[0] ? `${dd[1]}|${dd[3]}|${dd[4]}|${dd[5]}|${dd[6]}` : "";
+        if ("active" !== dd[0]) "built" === dd[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , Qr, Zr, Wr, ar] = rr;
-          Sr !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = Qr) : Qr === this.layerY ? this.burstUnlisted(Zr) : Qr > this.layerY && this.finishLayer(Qr), this.layerY = Qr, this.layerCells.has(Qr) || this.layerCells.set(Qr, Zr.filter(cQ)), this.ghostCells = Zr, this.palette = Wr, this.occupiedCells = ar
+          const [, , , , , , , md, Wd, Fd, Rd] = dd;
+          Od !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = md) : md === this.layerY ? this.burstUnlisted(Wd) : md > this.layerY && this.finishLayer(md), this.layerY = md, this.layerCells.has(md) || this.layerCells.set(md, Wd.filter(lm)), this.ghostCells = Wd, this.palette = Fd, this.occupiedCells = Rd
         }
-        Sr !== this.blueprint && (this.tracker.show("active" === rr[0] && rr[2] ? {
-          id: rr[1],
-          y: rr[4]
-        } : null), this.blueprint = Sr, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((rr => this.api.blockNameToBlockId(rr))), this.chunkWatch.watch([...this.ghostCells.filter(cQ), ...this.occupiedCells]), this.refresh()
+        Od !== this.blueprint && (this.tracker.show("active" === dd[0] && dd[2] ? {
+          id: dd[1],
+          y: dd[4]
+        } : null), this.blueprint = Od, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((dd => this.api.blockNameToBlockId(dd))), this.chunkWatch.watch([...this.ghostCells.filter(lm), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(rr) {
-        this.burstUnlisted([]), rr > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = rr)
+      finishLayer(dd) {
+        this.burstUnlisted([]), dd > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = dd)
       }
-      lx() {
+      Et() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const rr = performance.now();
-        let Sr = !1;
-        for (const [Zr, Wr] of this.foreseen) {
-          var Qr;
-          if (rr - Wr > 1e3) this.foreseen.delete(Zr), Sr = !0, (null === (Qr = this.lastFilled) || void 0 === Qr ? void 0 : Qr.join()) === Zr && (this.lastFilled = this.lastSeenFilled)
-        }(Sr || this.nextCell.playerMoved()) && this.showNext()
+        const dd = performance.now();
+        let Od = !1;
+        for (const [Wd, Fd] of this.foreseen) {
+          var md;
+          if (dd - Fd > 1e3) this.foreseen.delete(Wd), Od = !0, (null === (md = this.lastFilled) || void 0 === md ? void 0 : md.join()) === Wd && (this.lastFilled = this.lastSeenFilled)
+        }(Od || this.nextCell.playerMoved()) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(rr) {
-        const Sr = new Set;
-        for (let Wr = 0; Wr < rr.length; Wr += 4) Sr.add(`${rr[Wr]},${rr[Wr+1]},${rr[Wr+2]}`);
-        const Qr = [],
+      burstUnlisted(dd) {
+        const Od = new Set;
+        for (let Fd = 0; Fd < dd.length; Fd += 4) Od.add(`${dd[Fd]},${dd[Fd+1]},${dd[Fd+2]}`);
+        const md = [],
           {
-            ghostCells: Zr
+            ghostCells: Wd
           } = this;
-        for (let Wr = 0; Wr < Zr.length; Wr += 4) {
-          const rr = `${Zr[Wr]},${Zr[Wr+1]},${Zr[Wr+2]}`;
-          !Sr.has(rr) && this.open.delete(rr) && Qr.push(this.filledCell(Wr))
+        for (let Fd = 0; Fd < Wd.length; Fd += 4) {
+          const dd = `${Wd[Fd]},${Wd[Fd+1]},${Wd[Fd+2]}`;
+          !Od.has(dd) && this.open.delete(dd) && md.push(this.filledCell(Fd))
         }
-        this.burst(Qr)
+        this.burst(md)
       }
       refresh() {
         const {
-          ghostCells: rr,
-          palette: Sr,
-          occupiedCells: Qr
-        } = this, Zr = new AS.m, Wr = new Set, ar = [], jr = [];
-        let Ir = 0;
-        for (let fr = 0; fr < rr.length; fr += 4) {
-          const [Qr, Er, pr, xr] = [rr[fr], rr[fr + 1], rr[fr + 2], rr[fr + 3]], mr = this.api.getBlockId(Qr, Er, pr), Nr = `${Qr},${Er},${pr}`, Ur = qS(this.blockIds[xr], mr);
-          !Ur && RS(mr) ? Zr.add(Qr, Er, pr, CS(Sr[xr]), AS.i, (0, MS.f)(Sr[xr])) : Ur ? this.open.has(Nr) && ar.push(this.filledCell(fr)) : Zr.add(Qr, Er, pr, AS.e, AS.b), Ur || Ir++, !Ur && this.api.isBlockInLoadedChunk(Qr, Er, pr) && (Wr.add(Nr), jr.push(Qr, Er, pr, RS(mr) ? 0 : 1))
+          ghostCells: dd,
+          palette: Od,
+          occupiedCells: md
+        } = this, Wd = new cO.k, Fd = new Set, Rd = [], Xd = [];
+        let Kd = 0;
+        for (let hd = 0; hd < dd.length; hd += 4) {
+          const [md, vd, Qd, td] = [dd[hd], dd[hd + 1], dd[hd + 2], dd[hd + 3]], od = this.api.getBlockId(md, vd, Qd), Nd = `${md},${vd},${Qd}`, qd = AO(this.blockIds[td], od);
+          !qd && rO(od) ? Wd.add(md, vd, Qd, nO(Od[td]), cO.i, (0, LO.g)(Od[td])) : qd ? this.open.has(Nd) && Rd.push(this.filledCell(hd)) : Wd.add(md, vd, Qd, cO.h, cO.e), qd || Kd++, !qd && this.api.isBlockInLoadedChunk(md, vd, Qd) && (Fd.add(Nd), Xd.push(md, vd, Qd, rO(od) ? 0 : 1))
         }
-        this.open = Wr, this.nextCell.setCells(jr), this.tracker.update(this.layerY, this.topLayerY, Ir);
-        for (let fr = 0; fr < Qr.length; fr += 3) {
-          const [rr, Sr, Wr] = [Qr[fr], Qr[fr + 1], Qr[fr + 2]];
-          RS(this.api.getBlockId(rr, Sr, Wr)) || Zr.add(rr, Sr, Wr, AS.e, AS.b)
+        this.open = Fd, this.nextCell.setCells(Xd), this.tracker.update(this.layerY, this.topLayerY, Kd);
+        for (let hd = 0; hd < md.length; hd += 3) {
+          const [dd, Od, Fd] = [md[hd], md[hd + 1], md[hd + 2]];
+          rO(this.api.getBlockId(dd, Od, Fd)) || Wd.add(dd, Od, Fd, cO.h, cO.e)
         }
-        this.meshes.show(Zr.toArray()), this.burst(ar), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(Wd.toArray()), this.burst(Rd), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(rr) {
-        const Sr = performance.now(),
-          Qr = [];
-        for (const [Wr, ar, jr] of rr) {
-          const rr = [Wr, ar, jr];
-          this.lastSeenFilled = rr, this.foreseen.delete(rr.join()) || Qr.push(rr)
+      burst(dd) {
+        const Od = performance.now(),
+          md = [];
+        for (const [Fd, Rd, Xd] of dd) {
+          const dd = [Fd, Rd, Xd];
+          this.lastSeenFilled = dd, this.foreseen.delete(dd.join()) || md.push(dd)
         }
-        const Zr = this.isHolding(Sr);
-        for (const Wr of Qr) {
-          if (this.lastFilled = Wr, Zr && this.pressFilled) {
-            this.turn.filled(Wr, Sr);
+        const Wd = this.isHolding(Od);
+        for (const Fd of md) {
+          if (this.lastFilled = Fd, Wd && this.pressFilled) {
+            this.turn.filled(Fd, Od);
             continue
           }
-          const rr = this.turn.arrived(Wr, Sr);
-          if (null !== rr) {
-            this.pressFilled = Zr;
-            for (const [Sr, Qr] of this.foreseen) Qr <= rr && this.foreseen.delete(Sr)
+          const dd = this.turn.arrived(Fd, Od);
+          if (null !== dd) {
+            this.pressFilled = Wd;
+            for (const [Od, md] of this.foreseen) md <= dd && this.foreseen.delete(Od)
           }
         }
-        this.juice.filled(rr)
+        this.juice.filled(dd)
       }
       showNext() {
-        var rr;
-        this.outline.show(null !== (rr = this.aimed) && void 0 !== rr ? rr : this.nextCell.eN(this.lastFilled))
+        var dd;
+        this.outline.show(null !== (dd = this.aimed) && void 0 !== dd ? dd : this.nextCell.xN(this.lastFilled))
       }
-      afterRender(rr) {
-        var Sr;
-        this.turn.look(rr);
-        const Qr = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === Qr ? null : Qr.position), this.outline.show(null !== (Sr = this.aimed) && void 0 !== Sr ? Sr : this.nextCell.get())
+      afterRender(dd) {
+        var Od;
+        this.turn.look(dd);
+        const md = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === md ? null : md.position), this.outline.show(null !== (Od = this.aimed) && void 0 !== Od ? Od : this.nextCell.get())
       }
-      isHolding(rr) {
-        return null !== this.altMs && rr - this.altMs <= 500
+      isHolding(dd) {
+        return null !== this.altMs && dd - this.altMs <= 500
       }
-      attemptAltAction(rr) {
-        const Sr = performance.now();
-        if (this.isHolding(Sr) || (this.pressFilled = !1), this.altMs = Sr, this.pressFilled) return "preventPlacement";
-        const Qr = this.findAimed(rr);
-        if (null !== Qr) return this.foreseen.set(Qr.join(), Sr), this.lastFilled = Qr, this.aimed = null, this.showNext(), this.turn.filled(Qr, Sr), this.pressFilled = !0, "preventPlacement";
+      attemptAltAction(dd) {
+        const Od = performance.now();
+        if (this.isHolding(Od) || (this.pressFilled = !1), this.altMs = Od, this.pressFilled) return "preventPlacement";
+        const md = this.findAimed(dd);
+        if (null !== md) return this.foreseen.set(md.join(), Od), this.lastFilled = md, this.aimed = null, this.showNext(), this.turn.filled(md, Od), this.pressFilled = !0, "preventPlacement";
         {
-          const Qr = this.nextCell.get();
-          null !== Qr && this.turn.tapped(rr, Qr, Sr)
+          const md = this.nextCell.get();
+          null !== md && this.turn.tapped(dd, md, Od)
         }
       }
       holdPressOnEntity() {
-        const rr = performance.now();
-        this.pressFilled && this.isHolding(rr) && (this.altMs = rr)
+        const dd = performance.now();
+        this.pressFilled && this.isHolding(dd) && (this.altMs = dd)
       }
-      findAimed(rr) {
-        return function(rr, Sr, Qr, Zr, Wr, ar, jr) {
-          const Ir = rr.XQr(Sr),
-            fr = null === Ir || null === rr.blockNameToBlockId(Ir.name, !0) ? null : Ir.name,
-            Er = rr.getPositionView(Sr),
+      findAimed(dd) {
+        return function(dd, Od, md, Wd, Fd, Rd, Xd) {
+          const Kd = dd.NWd(Od),
+            hd = null === Kd || null === dd.blockNameToBlockId(Kd.name, !0) ? null : Kd.name,
+            vd = dd.getPositionView(Od),
             {
-              origin: pr,
-              direction: xr
-            } = rr.getActionRay(),
-            mr = PQ(Zr, {
-              from: pr,
-              dir: xr,
-              reach: kQ(rr, Sr),
-              solid: Qr
-            }, (Sr => {
-              const Qr = [Zr[Sr], Zr[Sr + 1], Zr[Sr + 2]];
-              return !qS(Wr[Zr[Sr + 3]], rr.getBlockId(...Qr)) && !jr.has(Qr.join()) && rr.isBlockInLoadedChunk(...Qr) && !GQ(Qr, Er)
-            }), (rr => null === fr || fr === gS(Wr[Zr[rr + 3]])), (rr => null !== ar && Zr[rr] === ar[0] && Zr[rr + 1] === ar[1] && Zr[rr + 2] === ar[2]));
-          return -1 === mr ? null : [Zr[mr], Zr[mr + 1], Zr[mr + 2]]
-        }(this.api, this.localPlayerId, rr, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
+              origin: Qd,
+              direction: td
+            } = dd.getActionRay(),
+            od = im(Wd, {
+              from: Qd,
+              dir: td,
+              reach: cm(dd, Od),
+              solid: md
+            }, (Od => {
+              const md = [Wd[Od], Wd[Od + 1], Wd[Od + 2]];
+              return !AO(Fd[Wd[Od + 3]], dd.getBlockId(...md)) && !Xd.has(md.join()) && dd.isBlockInLoadedChunk(...md) && !zm(md, vd)
+            }), (dd => null === hd || hd === GO(Fd[Wd[dd + 3]])), (dd => null !== Rd && Wd[dd] === Rd[0] && Wd[dd + 1] === Rd[1] && Wd[dd + 2] === Rd[2]));
+          return -1 === od ? null : [Wd[od], Wd[od + 1], Wd[od + 2]]
+        }(this.api, this.localPlayerId, dd, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(rr) {
+      filledCell(dd) {
         const {
-          ghostCells: Sr
-        } = this, [Qr, Zr, Wr] = CS(this.palette[Sr[rr + 3]]);
-        return [Sr[rr], Sr[rr + 1], Sr[rr + 2], Qr, Zr, Wr]
+          ghostCells: Od
+        } = this, [md, Wd, Fd] = nO(this.palette[Od[dd + 3]]);
+        return [Od[dd], Od[dd + 1], Od[dd + 2], md, Wd, Fd]
       }
     }
 
-    function cQ(rr, Sr) {
-      return Sr % 4 !== 3
+    function lm(dd, Od) {
+      return Od % 4 !== 3
     }
-    class FQ {
-      constructor(rr) {
-        this.api = rr, this.sent = !1
+    class Cm {
+      constructor(dd) {
+        this.api = dd, this.sent = !1
       }
-      lx() {
-        this.sent || Ir.c.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
+      Et() {
+        this.sent || Kd.e.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
       }
     }
-    var oQ = Qr(2984),
-      bQ = Qr(40721);
+    var Zm = md(2991),
+      km = md(40748);
 
-    function JQ(rr, Sr, Qr) {
-      const Zr = [255 * rr, 255 * Sr, 255 * Qr],
-        [Wr, ar, jr] = Zr.map((rr => rr + .4 * (255 - rr)));
+    function fm(dd, Od, md) {
+      const Wd = [255 * dd, 255 * Od, 255 * md],
+        [Fd, Rd, Xd] = Wd.map((dd => dd + .4 * (255 - dd)));
       return {
         texture: "square_particle",
-        sx: 48,
-        minLifeTime: .3 / bQ.c,
-        maxLifeTime: .55 / bQ.c,
+        Mt: 48,
+        minLifeTime: .3 / km.c,
+        maxLifeTime: .55 / km.c,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * bQ.c * bQ.c, 0],
+        gravity: [0, -14 * km.c * km.c, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...Zr, 1],
-          maxColor: [Wr, ar, jr, 1]
+          minColor: [...Wd, 1],
+          maxColor: [Fd, Rd, Xd, 1]
         }, {
           timeFraction: 1,
-          minColor: [...Zr, 0],
-          maxColor: [Wr, ar, jr, 0]
+          minColor: [...Wd, 0],
+          maxColor: [Fd, Rd, Xd, 0]
         }],
-        blendMode: oQ.e.Standard
+        blendMode: Zm.g.Standard
       }
     }
-    const DQ = {
+    const Mm = {
       texture: "glint",
       mipmaps: !1,
-      sx: 96,
-      minLifeTime: .5 / bQ.c,
-      maxLifeTime: .9 / bQ.c,
+      Mt: 96,
+      minLifeTime: .5 / km.c,
+      maxLifeTime: .9 / km.c,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * bQ.c * bQ.c, 0],
+      gravity: [0, 2 * km.c * km.c, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -2977,112 +2977,112 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: oQ.e.OneOne
+      blendMode: Zm.g.OneOne
     };
-    class dQ {
-      constructor(rr, Sr) {
-        this.api = rr, this.localPlayerId = Sr, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class dW {
+      constructor(dd, Od) {
+        this.api = dd, this.localPlayerId = Od, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(rr) {
+      filled(dd) {
         if (this.api.particlesEnabled())
-          for (const [Sr, Qr, Zr, Wr, ar, jr] of rr.slice(0, 3)) {
-            const rr = `${Wr},${ar},${jr}`;
-            let Ir = this.chips.get(rr);
-            void 0 === Ir && (Ir = this.api.createParticles(JQ(Wr, ar, jr), {
-              pos: [Sr + .5, Qr + .5, Zr + .5]
-            }), this.chips.set(rr, Ir));
-            for (let Sr = 0; Sr < 8; Sr++) this.setPoint(Sr, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            Ir.emitPoints([Sr + .5, Qr + .5, Zr + .5], this.points, 8)
+          for (const [Od, md, Wd, Fd, Rd, Xd] of dd.slice(0, 3)) {
+            const dd = `${Fd},${Rd},${Xd}`;
+            let Kd = this.chips.get(dd);
+            void 0 === Kd && (Kd = this.api.createParticles(fm(Fd, Rd, Xd), {
+              pos: [Od + .5, md + .5, Wd + .5]
+            }), this.chips.set(dd, Kd));
+            for (let Od = 0; Od < 8; Od++) this.setPoint(Od, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            Kd.emitPoints([Od + .5, md + .5, Wd + .5], this.points, 8)
           }
       }
-      layerDone(rr) {
+      layerDone(dd) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const Sr = rr.length / 3;
-        if (0 === Sr || !this.api.particlesEnabled()) return;
-        const Qr = Math.min(Sr, 48),
-          [Zr, Wr, ar] = [rr[0] + .5, rr[1] + 1, rr[2] + .5];
-        let jr = 0;
-        for (let Ir = 0; Ir < Qr; Ir++) {
-          const fr = 3 * Math.floor(Ir * Sr / Qr);
-          for (let Sr = 0; Sr < 2; Sr++) this.setPoint(jr++, rr[fr] + Math.random() - Zr, rr[fr + 1] + 1 - Wr, rr[fr + 2] + Math.random() - ar, .6 + .8 * Math.random())
+        const Od = dd.length / 3;
+        if (0 === Od || !this.api.particlesEnabled()) return;
+        const md = Math.min(Od, 48),
+          [Wd, Fd, Rd] = [dd[0] + .5, dd[1] + 1, dd[2] + .5];
+        let Xd = 0;
+        for (let Kd = 0; Kd < md; Kd++) {
+          const hd = 3 * Math.floor(Kd * Od / md);
+          for (let Od = 0; Od < 2; Od++) this.setPoint(Xd++, dd[hd] + Math.random() - Wd, dd[hd + 1] + 1 - Fd, dd[hd + 2] + Math.random() - Rd, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(DQ, {
-          pos: [Zr, Wr, ar]
-        }), this.sparkles.emitPoints([Zr, Wr, ar], this.points, jr)
+        this.sparkles ??= this.api.createParticles(Mm, {
+          pos: [Wd, Fd, Rd]
+        }), this.sparkles.emitPoints([Wd, Fd, Rd], this.points, Xd)
       }
       dispose() {
-        var rr;
-        for (const Sr of this.chips.values()) Sr.stop();
-        this.chips.clear(), null === (rr = this.sparkles) || void 0 === rr || rr.stop(), this.sparkles = null
+        var dd;
+        for (const Od of this.chips.values()) Od.stop();
+        this.chips.clear(), null === (dd = this.sparkles) || void 0 === dd || dd.stop(), this.sparkles = null
       }
-      setPoint(rr, Sr, Qr, Zr, Wr) {
-        const ar = 4 * rr;
-        this.points[ar] = Sr, this.points[ar + 1] = Qr, this.points[ar + 2] = Zr, this.points[ar + 3] = Wr
+      setPoint(dd, Od, md, Wd, Fd) {
+        const Rd = 4 * dd;
+        this.points[Rd] = Od, this.points[Rd + 1] = md, this.points[Rd + 2] = Wd, this.points[Rd + 3] = Fd
       }
     }
-    const sQ = "SpecialAction1",
-      uQ = "KeyY",
-      rZ = "KeyX";
+    const OW = "SpecialAction1",
+      mW = "KeyY",
+      WW = "KeyX";
 
-    function SZ(rr) {
+    function FW(dd) {
       let {
-        placement: Sr
-      } = rr;
-      const Qr = (0, fr.g)(FS, Sr.getView()),
+        placement: Od
+      } = dd;
+      const md = (0, hd.i)(lO, Od.getView()),
         {
-          t: Zr
-        } = (0, pr.E)(),
+          t: Wd
+        } = (0, Qd.G)(),
         {
-          isTouchScreen: Wr
-        } = (0, Ir.n)(["isTouchScreen"]),
-        jr = (0, ar.useContext)(yr),
-        xr = null !== Qr,
-        Ur = xr && !Qr.blocked && !Qr.waiting;
-      if ((0, nr.d)((rr => xr && !rr.repeat && !(0, er.isTypingInInput)() && !(0, Nr.l)() && !Wr), (rr => {
-          const Qr = function(rr, Sr, Qr) {
-            if (rr === rZ) return Sr.stop;
-            if (rr === uQ) return Qr ? Sr.build : ZZ;
-            return Er.q[sQ].includes(rr) ? Sr.rotate : null
-          }(rr.code, Sr, Ur);
-          null !== Qr && (rr.stopPropagation(), Qr())
-        })), !xr) return null;
-      let hr = Wr ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return Qr.blocked ? hr = "plotsGame:placementOffPlot" : Qr.toClear > 0 ? hr = "plotsGame:placementClear" : "placeSpot" !== jr.hint && "placeBuild" !== jr.hint || (hr = null), (0, gr.jsx)(tr.d, {
+          isTouchScreen: Fd
+        } = (0, Kd.p)(["isTouchScreen"]),
+        Xd = (0, Rd.useContext)(wd),
+        td = null !== md,
+        qd = td && !md.blocked && !md.waiting;
+      if ((0, pd.d)((dd => td && !dd.repeat && !(0, Yd.isTypingInInput)() && !(0, Nd.m)() && !Fd), (dd => {
+          const md = function(dd, Od, md) {
+            if (dd === WW) return Od.stop;
+            if (dd === mW) return md ? Od.build : XW;
+            return vd.y[OW].includes(dd) ? Od.rotate : null
+          }(dd.code, Od, qd);
+          null !== md && (dd.stopPropagation(), md())
+        })), !td) return null;
+      let yd = Fd ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return md.blocked ? yd = "plotsGame:placementOffPlot" : md.toClear > 0 ? yd = "plotsGame:placementClear" : "placeSpot" !== Xd.hint && "placeBuild" !== Xd.hint || (yd = null), (0, Gd.jsx)(Hd.h, {
         placement: "bottom",
-        children: (0, gr.jsxs)("div", {
-          ref: jr.placementCardRef,
+        children: (0, Gd.jsxs)("div", {
+          ref: Xd.placementCardRef,
           className: "PlotsPlacementCard",
-          children: [(0, gr.jsx)("div", {
+          children: [(0, Gd.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: Zr(Lr(Qr.id).displayName.translationKey)
-          }), null !== hr && (0, gr.jsx)("div", {
-            className: mr()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: Qr.refusals > 0
+            children: Wd(Bd(md.id).displayName.translationKey)
+          }), null !== yd && (0, Gd.jsx)("div", {
+            className: od()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: md.refusals > 0
             }),
-            children: Zr(hr)
-          }, Qr.refusals), (0, gr.jsxs)("div", {
+            children: Wd(yd)
+          }, md.refusals), (0, Gd.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, gr.jsxs)(EQ.h, {
-              onClick: Sr.rotate,
-              children: [(0, gr.jsx)(QZ, {
-                noaAction: sQ
-              }), Zr("plotsGame:placementRotate")]
-            }), (0, gr.jsxs)(EQ.L, {
-              onClick: Sr.stop,
-              children: [(0, gr.jsx)(QZ, {
-                keyCode: rZ
-              }), Zr("general:cancel")]
-            }), (0, gr.jsx)("span", {
-              ref: jr.buildRef,
-              className: mr()("PlotsPlacementBuild", {
-                Pulse: "placeBuild" === jr.hint && Ur && Wr
+            children: [(0, Gd.jsxs)(om.g, {
+              onClick: Od.rotate,
+              children: [(0, Gd.jsx)(RW, {
+                noaAction: OW
+              }), Wd("plotsGame:placementRotate")]
+            }), (0, Gd.jsxs)(om.G, {
+              onClick: Od.stop,
+              children: [(0, Gd.jsx)(RW, {
+                keyCode: WW
+              }), Wd("general:cancel")]
+            }), (0, Gd.jsx)("span", {
+              ref: Xd.buildRef,
+              className: od()("PlotsPlacementBuild", {
+                Pulse: "placeBuild" === Xd.hint && qd && Fd
               }),
-              children: (0, gr.jsxs)(EQ.p, {
-                disabled: !Ur,
-                onClick: Sr.build,
-                children: [(0, gr.jsx)(QZ, {
-                  keyCode: uQ
-                }), Zr("plotsGame:placementBuild")]
+              children: (0, Gd.jsxs)(om.m, {
+                disabled: !qd,
+                onClick: Od.build,
+                children: [(0, Gd.jsx)(RW, {
+                  keyCode: mW
+                }), Wd("plotsGame:placementBuild")]
               })
             })]
           })]
@@ -3090,495 +3090,495 @@ export const modules = {
       })
     }
 
-    function QZ(rr) {
-      return (0, gr.jsx)(Yr.c, {
+    function RW(dd) {
+      return (0, Gd.jsx)(Td.b, {
         className: "PlotsPlacementKey",
-        ...rr
+        ...dd
       })
     }
 
-    function ZZ() {}
-    var WZ = Qr(3320),
-      aZ = Qr(38214),
-      jZ = Qr(2128),
-      IZ = Qr(1317);
-    const fZ = {
+    function XW() {}
+    var KW = md(3307),
+      hW = md(38302),
+      vW = md(2125),
+      QW = md(1315);
+    const tW = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function EZ(rr) {
+    function oW(dd) {
       let {
-        hud: Sr
-      } = rr;
-      const Qr = (0, fr.g)(SS, Sr.getPlot()),
-        [Zr, Wr] = (0, ar.useState)(null),
-        jr = (0, aZ.h)(Zr);
-      if ("none" === Qr[0]) return null;
-      const [, Ir, Er, pr, xr, Nr] = Qr;
-      return (0, gr.jsx)("div", {
-        className: mr()("PlotsPlotBannerContainer", {
-          Below: jr
+        hud: Od
+      } = dd;
+      const md = (0, hd.i)(WO, Od.getPlot()),
+        [Wd, Fd] = (0, Rd.useState)(null),
+        Xd = (0, hW.j)(Wd);
+      if ("none" === md[0]) return null;
+      const [, Kd, vd, Qd, td, Nd] = md;
+      return (0, Gd.jsx)("div", {
+        className: od()("PlotsPlotBannerContainer", {
+          Below: Xd
         }),
-        children: (0, gr.jsx)(pZ, {
-          plotX: Ir,
-          plotZ: Er,
-          ownerName: pr,
-          ownerId: xr,
-          relation: Nr,
-          plaqueRef: Wr
-        }, `${Ir},${Er}`)
+        children: (0, Gd.jsx)(NW, {
+          plotX: Kd,
+          plotZ: vd,
+          ownerName: Qd,
+          ownerId: td,
+          relation: Nd,
+          plaqueRef: Fd
+        }, `${Kd},${vd}`)
       })
     }
 
-    function pZ(rr) {
-      var Sr, Qr;
+    function NW(dd) {
+      var Od, md;
       let {
-        plotX: Zr,
-        plotZ: Wr,
-        ownerName: ar,
-        ownerId: jr,
-        relation: Ir,
-        plaqueRef: fr
-      } = rr;
+        plotX: Wd,
+        plotZ: Fd,
+        ownerName: Rd,
+        ownerId: Xd,
+        relation: Kd,
+        plaqueRef: hd
+      } = dd;
       const {
-        t: Er
-      } = (0, pr.E)(), xr = (0, jZ.j)("hiddenPlayerNames"), Nr = (0, jZ.j)("players"), Ur = null === jr ? null : null !== (Sr = null === (Qr = Nr.byId[jr]) || void 0 === Qr ? void 0 : Qr.cosmetics) && void 0 !== Sr ? Sr : null, tr = Er("plotsGame:plotBannerCoords", {
-        x: Zr,
-        z: Wr
-      }), zr = "own" === Ir || null !== ar;
-      return (0, gr.jsxs)("div", {
-        ref: fr,
-        className: mr()("PlotsPlotBanner", {
-          Own: "own" === Ir,
-          Shared: "shared" === Ir
+        t: vd
+      } = (0, Qd.G)(), td = (0, vW.h)("hiddenPlayerNames"), Nd = (0, vW.h)("players"), qd = null === Xd ? null : null !== (Od = null === (md = Nd.byId[Xd]) || void 0 === md ? void 0 : md.cosmetics) && void 0 !== Od ? Od : null, Hd = vd("plotsGame:plotBannerCoords", {
+        x: Wd,
+        z: Fd
+      }), bd = "own" === Kd || null !== Rd;
+      return (0, Gd.jsxs)("div", {
+        ref: hd,
+        className: od()("PlotsPlotBanner", {
+          Own: "own" === Kd,
+          Shared: "shared" === Kd
         }),
         role: "status",
-        children: [(0, gr.jsxs)("span", {
-          className: mr()("PlotsPlotBannerSeal", {
-            Face: null !== Ur
+        children: [(0, Gd.jsxs)("span", {
+          className: od()("PlotsPlotBannerSeal", {
+            Face: null !== qd
           }),
-          children: [null !== Ur && (0, gr.jsx)(WZ.b, {
-            cosmetics: Ur
-          }), null === Ur && (0, gr.jsx)(hr.c, {
-            name: fZ[Ir]
+          children: [null !== qd && (0, Gd.jsx)(KW.e, {
+            cosmetics: qd
+          }), null === qd && (0, Gd.jsx)(yd.c, {
+            name: tW[Kd]
           })]
-        }), (0, gr.jsxs)("div", {
+        }), (0, Gd.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, gr.jsxs)("div", {
+          children: [(0, Gd.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === Ir && Er("plotsGame:plotBannerYours"), "own" !== Ir && null !== ar && Er("plotsGame:plotBannerOwner", {
-              name: (0, IZ.c)(ar, xr)
-            }), !zr && tr]
-          }), zr && (0, gr.jsxs)("div", {
+            children: ["own" === Kd && vd("plotsGame:plotBannerYours"), "own" !== Kd && null !== Rd && vd("plotsGame:plotBannerOwner", {
+              name: (0, QW.e)(Rd, td)
+            }), !bd && Hd]
+          }), bd && (0, Gd.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [tr, "shared" === Ir && (0, gr.jsx)("span", {
+            children: [Hd, "shared" === Kd && (0, Gd.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: Er("plotsGame:plotBannerShared")
+              children: vd("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
-    const xZ = function(rr, Sr, Qr, Zr) {
+    const qW = function(dd, Od, md, Wd) {
       let {
-        localPlayerId: Wr
-      } = Zr;
-      const Ir = new WS;
-      let fr = null,
-        Er = null,
-        pr = null,
-        xr = null,
-        mr = null,
-        Nr = null;
-      const Ur = [];
+        localPlayerId: Fd
+      } = Wd;
+      const Kd = new XO;
+      let hd = null,
+        vd = null,
+        Qd = null,
+        td = null,
+        od = null,
+        Nd = null;
+      const qd = [];
       return {
-        onCreate: rr => {
-          fr = new dQ(rr, Wr);
-          const Sr = new rS;
-          Er = new wQ(rr, Wr, fr, Sr), pr = new bS(rr, Wr), xr = new Rr(rr, pr), mr = new fQ(rr, Wr, Er.nextCell), Nr = new FQ(rr), Ur.push((0, jr.H)((0, ar.createElement)(aQ, {
-            hud: Ir,
-            guide: mr,
-            tracker: Sr,
-            placement: pr
-          }, (0, ar.createElement)(EZ, {
-            hud: Ir
-          }), (0, ar.createElement)(Mr, {
-            journal: xr
-          }), (0, ar.createElement)(rQ, {
-            placement: pr
-          }), (0, ar.createElement)(SZ, {
-            placement: pr
+        onCreate: dd => {
+          hd = new dW(dd, Fd);
+          const Od = new mO;
+          vd = new Im(dd, Fd, hd, Od), Qd = new ZO(dd, Fd), td = new rd(dd, Qd), od = new tm(dd, Fd, vd.nextCell), Nd = new Cm(dd), qd.push((0, Xd.F)((0, Rd.createElement)(Km, {
+            hud: Kd,
+            guide: od,
+            tracker: Od,
+            placement: Qd
+          }, (0, Rd.createElement)(oW, {
+            hud: Kd
+          }), (0, Rd.createElement)(Ld, {
+            journal: td
+          }), (0, Rd.createElement)(mm, {
+            placement: Qd
+          }), (0, Rd.createElement)(FW, {
+            placement: Qd
           })), {
-            content: (0, ar.createElement)(XQ, {
-              journal: xr,
-              hud: Ir,
-              guide: mr
+            content: (0, Rd.createElement)(Vm, {
+              journal: td,
+              hud: Kd,
+              guide: od
             })
           }))
         },
-        lx: () => {
-          Nr.lx(), Er.lx(), pr.lx(), xr.lx()
+        Et: () => {
+          Nd.Et(), vd.Et(), Qd.Et(), td.Et()
         },
-        onPlayerAttemptAltAction: (rr, Sr, Qr, Zr, Wr, ar) => {
-          if (null !== ar) return void Er.holdPressOnEntity();
-          const jr = void 0 === Sr ? null : [Sr, Qr, Zr];
-          return Er.attemptAltAction(jr)
+        onPlayerAttemptAltAction: (dd, Od, md, Wd, Fd, Rd) => {
+          if (null !== Rd) return void vd.holdPressOnEntity();
+          const Xd = void 0 === Od ? null : [Od, md, Wd];
+          return vd.attemptAltAction(Xd)
         },
         onPlayerClickUp: () => {
-          Er.endPress()
+          vd.endPress()
         },
-        onAfterRender: (rr, Sr) => {
-          pr.afterRender(Sr), Er.afterRender(Sr), mr.afterRender(Sr)
+        onAfterRender: (dd, Od) => {
+          Qd.afterRender(Od), vd.afterRender(Od), od.afterRender(Od)
         },
         onClose: () => {
-          for (const rr of Ur) rr();
-          fr.dispose(), Er.dispose(), pr.dispose(), fr = null, Er = null, pr = null, xr = null, mr = null, Nr = null
+          for (const dd of qd) dd();
+          hd.dispose(), vd.dispose(), Qd.dispose(), hd = null, vd = null, Qd = null, td = null, od = null, Nd = null
         },
-        onReceivedMessageFromServer: (rr, Sr) => {
-          if ("plotsPlot" === rr) Ir.receivePlot(Sr);
-          else if ("plotsBlueprint" === rr) {
-            const rr = Sr;
-            Er.vx(rr), pr.vx(rr)
-          } else "plotsJournal" === rr ? xr.vx(Sr) : "plotsJournalOpen" === rr ? xr.openFromServer(Sr) : "plotsPreviewEnd" === rr ? pr.endFromServer() : "plotsGuide" === rr ? Ir.receiveGuide(Sr) : "plotsGuideDone" === rr && Ir.receiveGuideDone()
+        onReceivedMessageFromServer: (dd, Od) => {
+          if ("plotsPlot" === dd) Kd.receivePlot(Od);
+          else if ("plotsBlueprint" === dd) {
+            const dd = Od;
+            vd.Yt(dd), Qd.Yt(dd)
+          } else "plotsJournal" === dd ? td.Yt(Od) : "plotsJournalOpen" === dd ? td.openFromServer(Od) : "plotsPreviewEnd" === dd ? Qd.endFromServer() : "plotsGuide" === dd ? Kd.receiveGuide(Od) : "plotsGuideDone" === dd && Kd.receiveGuideDone()
         }
       }
     }
   },
-  40020: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Ir
+  40036: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Kd
     });
-    var Zr = Qr(40013);
-    const Wr = 5,
-      ar = [0, 0, 0],
-      jr = {
+    var Wd = md(40028);
+    const Fd = 5,
+      Rd = [0, 0, 0],
+      Xd = {
         x: 0,
         y: 0,
         distSq: 0
       };
 
-    function Ir(rr, Sr, Qr, Ir, fr, Er) {
-      let [pr, xr, mr] = Ir;
-      const Nr = (pr + .5 - Qr[0]) ** 2 + (xr - Qr[1]) ** 2 + (mr + .5 - Qr[2]) ** 2;
-      let Ur = null;
-      Nr <= Er ** 2 && (ar[0] = pr + .5, ar[1] = xr + fr, ar[2] = mr + .5, Ur = Sr.projectWorldPosToViewport(ar));
-      const tr = null !== Ur && Ur.x > -Wr && Ur.x < 100 + Wr && Ur.y > -Wr && Ur.y < 100 + Wr;
-      return (0, Zr.f)(rr, !tr), tr ? (jr.x = Ur.x, jr.y = Ur.y, jr.distSq = Nr, jr) : null
+    function Kd(dd, Od, md, Kd, hd, vd) {
+      let [Qd, td, od] = Kd;
+      const Nd = (Qd + .5 - md[0]) ** 2 + (td - md[1]) ** 2 + (od + .5 - md[2]) ** 2;
+      let qd = null;
+      Nd <= vd ** 2 && (Rd[0] = Qd + .5, Rd[1] = td + hd, Rd[2] = od + .5, qd = Od.projectWorldPosToViewport(Rd));
+      const Hd = null !== qd && qd.x > -Fd && qd.x < 100 + Fd && qd.y > -Fd && qd.y < 100 + Fd;
+      return (0, Wd.h)(dd, !Hd), Hd ? (Xd.x = qd.x, Xd.y = qd.y, Xd.distSq = Nd, Xd) : null
     }
   },
-  40721: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Zr,
-      d: () => ar
+  40748: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Wd,
+      f: () => Rd
     });
-    const Zr = 1 / .6,
-      Wr = {
+    const Wd = 1 / .6,
+      Fd = {
         kind: "smokePuff"
       };
-    class ar {
-      constructor(rr, Sr, Qr) {
-        this.style = rr, this.sx = Sr, this.half = Qr, this.particles = null, this.lastFrame = -1
+    class Rd {
+      constructor(dd, Od, md) {
+        this.style = dd, this.Mt = Od, this.half = md, this.particles = null, this.lastFrame = -1
       }
-      emit(rr, Sr, Qr) {
-        let ar = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return Qr !== this.lastFrame && (this.lastFrame = Qr, this.particles || (this.particles = rr.createParticles(function(rr, Sr) {
+      emit(dd, Od, md) {
+        let Rd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return md !== this.lastFrame && (this.lastFrame = md, this.particles || (this.particles = dd.createParticles(function(dd, Od) {
           const [
-            [Qr, ar, jr],
-            [Ir, fr, Er]
-          ] = rr.colours;
+            [md, Rd, Xd],
+            [Kd, hd, vd]
+          ] = dd.colours;
           return {
-            texture: rr.soft ? Wr : "square_particle",
-            sx: Sr,
-            minLifeTime: rr.life[0] / Zr,
-            maxLifeTime: rr.life[1] / Zr,
-            minEmitPower: rr.power[0] * Zr,
-            maxEmitPower: rr.power[1] * Zr,
-            minSize: rr.size[0],
-            maxSize: rr.size[1],
+            texture: dd.soft ? Fd : "square_particle",
+            Mt: Od,
+            minLifeTime: dd.life[0] / Wd,
+            maxLifeTime: dd.life[1] / Wd,
+            minEmitPower: dd.power[0] * Wd,
+            maxEmitPower: dd.power[1] * Wd,
+            minSize: dd.size[0],
+            maxSize: dd.size[1],
             emitRate: 0,
-            gravity: [0, rr.lift * Zr * Zr, 0],
-            dir1: [-rr.spread, 1, -rr.spread],
-            dir2: [rr.spread, 1, rr.spread],
+            gravity: [0, dd.lift * Wd * Wd, 0],
+            dir1: [-dd.spread, 1, -dd.spread],
+            dir2: [dd.spread, 1, dd.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [Qr, ar, jr, rr.alpha],
-              maxColor: [Ir, fr, Er, rr.alpha]
+              minColor: [md, Rd, Xd, dd.alpha],
+              maxColor: [Kd, hd, vd, dd.alpha]
             }, {
               timeFraction: 1,
-              minColor: [Qr, ar, jr, 0],
-              maxColor: [Ir, fr, Er, 0]
+              minColor: [md, Rd, Xd, 0],
+              maxColor: [Kd, hd, vd, 0]
             }],
-            blendMode: rr.blendMode
+            blendMode: dd.blendMode
           }
-        }(this.style, this.sx), {
-          pos: Sr,
+        }(this.style, this.Mt), {
+          pos: Od,
           half: this.half
-        })), this.particles.moveTo(Sr, this.half), this.particles.emit(ar), !0)
+        })), this.particles.moveTo(Od, this.half), this.particles.emit(Rd), !0)
       }
       dispose() {
-        var rr;
-        null === (rr = this.particles) || void 0 === rr || rr.stop(), this.particles = null
+        var dd;
+        null === (dd = this.particles) || void 0 === dd || dd.stop(), this.particles = null
       }
     }
   },
-  41159: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr,
-      d: () => Ir,
-      h: () => fr
+  41159: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Xd,
+      h: () => Kd,
+      j: () => hd
     });
-    const Zr = new Map,
-      Wr = [];
+    const Wd = new Map,
+      Fd = [];
 
-    function ar() {
-      for (const rr of Wr) rr()
+    function Rd() {
+      for (const dd of Fd) dd()
     }
 
-    function jr(rr) {
-      var Sr;
-      return Zr.set(rr, (null !== (Sr = Zr.get(rr)) && void 0 !== Sr ? Sr : 0) + 1), ar(), () => {
-        const Sr = Zr.get(rr) - 1;
-        0 === Sr ? Zr.delete(rr) : Zr.set(rr, Sr), ar()
+    function Xd(dd) {
+      var Od;
+      return Wd.set(dd, (null !== (Od = Wd.get(dd)) && void 0 !== Od ? Od : 0) + 1), Rd(), () => {
+        const Od = Wd.get(dd) - 1;
+        0 === Od ? Wd.delete(dd) : Wd.set(dd, Od), Rd()
       }
     }
 
-    function Ir() {
-      return [...Zr.keys()]
+    function Kd() {
+      return [...Wd.keys()]
     }
 
-    function fr(rr) {
-      Wr.push(rr)
+    function hd(dd) {
+      Fd.push(dd)
     }
   },
-  38363: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      B: () => gr,
-      F: () => Cr,
-      G: () => Mr,
-      H: () => Rr,
-      I: () => Gr,
-      e: () => fr,
-      i: () => lr,
-      j: () => Ir,
-      l: () => qr,
-      m: () => Or,
-      o: () => yr,
-      s: () => Hr,
-      u: () => Pr,
-      y: () => vr
+  38439: (dd, Od, md) => {
+    md.d(Od, {
+      A: () => nd,
+      B: () => Ld,
+      C: () => rd,
+      D: () => Pd,
+      c: () => hd,
+      e: () => Sd,
+      f: () => Kd,
+      h: () => Ad,
+      l: () => xd,
+      m: () => wd,
+      q: () => Vd,
+      r: () => ud,
+      v: () => Ud,
+      y: () => Gd
     });
-    var Zr = Qr(43);
-    const Wr = {
+    var Wd = md(46);
+    const Fd = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      ar = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      jr = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      Ir = ar.filter((rr => "docsButton" !== rr)),
-      fr = jr.filter((rr => "aiHelperButton" !== rr)),
-      Er = "codeEditorTutorials",
-      pr = {
+      Rd = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      Xd = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      Kd = Rd.filter((dd => "docsButton" !== dd)),
+      hd = Xd.filter((dd => "aiHelperButton" !== dd)),
+      vd = "codeEditorTutorials",
+      Qd = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      xr = {
+      td = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let mr = null,
-      Nr = null;
-    const Ur = new Set,
-      tr = new Set;
-    let hr = null;
-    const zr = new Set,
-      Yr = new Set;
+    let od = null,
+      Nd = null;
+    const qd = new Set,
+      Hd = new Set;
+    let yd = null;
+    const bd = new Set,
+      Td = new Set;
 
-    function nr() {
-      Yr.forEach((rr => {
-        rr()
+    function pd() {
+      Td.forEach((dd => {
+        dd()
       }))
     }
 
-    function er() {
-      if (!mr) {
-        const rr = Zr.j.getItem(Er);
-        mr = {
+    function Yd() {
+      if (!od) {
+        const dd = Wd.k.getItem(vd);
+        od = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof rr && null !== rr ? rr : {}
+          ..."object" === typeof dd && null !== dd ? dd : {}
         }
       }
-      return mr
+      return od
     }
 
-    function Kr(rr) {
-      const Sr = er();
-      Sr[rr] || (mr = {
-        ...Sr,
-        [rr]: !0
-      }, Zr.j.setItem(Er, mr))
+    function gd(dd) {
+      const Od = Yd();
+      Od[dd] || (od = {
+        ...Od,
+        [dd]: !0
+      }, Wd.k.setItem(vd, od))
     }
 
-    function yr(rr) {
-      return "docsOverview" === rr ? ar : "aiHelperOverview" === rr ? jr : Nr ? Wr[Nr] : []
+    function wd(dd) {
+      return "docsOverview" === dd ? Rd : "aiHelperOverview" === dd ? Xd : Nd ? Fd[Nd] : []
     }
 
-    function Br(rr) {
-      return ("worldCodeButton" !== rr || !er().worldCodeIntroShown) && !zr.has(rr)
+    function Ed(dd) {
+      return ("worldCodeButton" !== dd || !Yd().worldCodeIntroShown) && !bd.has(dd)
     }
 
-    function Tr(rr) {
-      var Sr;
-      return (null === (Sr = hr) || void 0 === Sr ? void 0 : Sr.name) === rr ? hr.stepsDone : Ur
+    function Jd(dd) {
+      var Od;
+      return (null === (Od = yd) || void 0 === Od ? void 0 : Od.name) === dd ? yd.stepsDone : qd
     }
 
-    function vr(rr, Sr) {
-      if (! function(rr) {
-          return hr ? hr.name === rr : "welcome" === rr
-        }(rr) || !Br(Sr) || Tr(rr).has(Sr)) return !1;
-      if (hr) return !0;
-      const Qr = pr[Sr];
-      return Qr ? !er()[Qr] || tr.has(Sr) : !er()[xr[rr]]
+    function Ud(dd, Od) {
+      if (! function(dd) {
+          return yd ? yd.name === dd : "welcome" === dd
+        }(dd) || !Ed(Od) || Jd(dd).has(Od)) return !1;
+      if (yd) return !0;
+      const md = Qd[Od];
+      return md ? !Yd()[md] || Hd.has(Od) : !Yd()[td[dd]]
     }
 
-    function Or(rr) {
-      var Sr;
-      return null !== (Sr = yr(rr).find((Sr => vr(rr, Sr)))) && void 0 !== Sr ? Sr : null
+    function xd(dd) {
+      var Od;
+      return null !== (Od = wd(dd).find((Od => Ud(dd, Od)))) && void 0 !== Od ? Od : null
     }
 
-    function Lr(rr) {
-      var Sr;
-      Kr(xr[rr]), (null === (Sr = hr) || void 0 === Sr ? void 0 : Sr.name) === rr && (hr = null)
+    function Bd(dd) {
+      var Od;
+      gd(td[dd]), (null === (Od = yd) || void 0 === Od ? void 0 : Od.name) === dd && (yd = null)
     }
 
-    function lr(rr) {
-      const Sr = (hr ? [hr.name] : ["welcome", "docsOverview"]).find((Sr => Or(Sr) === rr));
-      if (!Sr) return;
-      Tr(Sr).add(rr);
-      const Qr = pr[rr];
-      Qr && (Kr(Qr), hr || tr.add(rr)), null === Or(Sr) && Lr(Sr), nr()
+    function Sd(dd) {
+      const Od = (yd ? [yd.name] : ["welcome", "docsOverview"]).find((Od => xd(Od) === dd));
+      if (!Od) return;
+      Jd(Od).add(dd);
+      const md = Qd[dd];
+      md && (gd(md), yd || Hd.add(dd)), null === xd(Od) && Bd(Od), pd()
     }
 
-    function Xr(rr, Sr) {
-      const Qr = yr(rr),
-        Zr = Tr(rr);
-      for (let Wr = Qr.indexOf(Sr) - 1; Wr >= 0; Wr--)
-        if (Zr.has(Qr[Wr]) && Br(Qr[Wr])) return Qr[Wr];
+    function sd(dd, Od) {
+      const md = wd(dd),
+        Wd = Jd(dd);
+      for (let Fd = md.indexOf(Od) - 1; Fd >= 0; Fd--)
+        if (Wd.has(md[Fd]) && Ed(md[Fd])) return md[Fd];
       return null
     }
 
-    function Pr(rr, Sr) {
-      return null !== Xr(rr, Sr)
+    function ud(dd, Od) {
+      return null !== sd(dd, Od)
     }
 
-    function Hr(rr, Sr) {
-      const Qr = Xr(rr, Sr);
-      Qr && (Tr(rr).delete(Qr), nr())
+    function Vd(dd, Od) {
+      const md = sd(dd, Od);
+      md && (Jd(dd).delete(md), pd())
     }
 
-    function qr(rr) {
-      Lr(rr), "welcome" === rr && yr("welcome").forEach((rr => {
-        const Sr = pr[rr];
-        Sr && Kr(Sr)
-      })), nr()
+    function Ad(dd) {
+      Bd(dd), "welcome" === dd && wd("welcome").forEach((dd => {
+        const Od = Qd[dd];
+        Od && gd(Od)
+      })), pd()
     }
 
-    function Rr(rr) {
-      hr = {
-        name: rr,
+    function rd(dd) {
+      yd = {
+        name: dd,
         stepsDone: new Set
-      }, nr()
+      }, pd()
     }
 
-    function gr() {
-      (hr || 0 !== Ur.size || 0 !== tr.size) && (hr = null, Ur.clear(), tr.clear(), nr())
+    function Gd() {
+      (yd || 0 !== qd.size || 0 !== Hd.size) && (yd = null, qd.clear(), Hd.clear(), pd())
     }
 
-    function Cr(rr, Sr) {
-      const Qr = Sr ? rr : Nr === rr ? null : Nr;
-      Qr !== Nr && (Nr = Qr, nr())
+    function nd(dd, Od) {
+      const md = Od ? dd : Nd === dd ? null : Nd;
+      md !== Nd && (Nd = md, pd())
     }
 
-    function Mr(rr, Sr) {
-      zr.has(rr) === Sr && (Sr ? zr.delete(rr) : zr.add(rr), nr())
+    function Ld(dd, Od) {
+      bd.has(dd) === Od && (Od ? bd.delete(dd) : bd.add(dd), pd())
     }
 
-    function Gr(rr) {
-      return Yr.add(rr), () => {
-        Yr.delete(rr)
+    function Pd(dd) {
+      return Td.add(dd), () => {
+        Td.delete(dd)
       }
     }
   },
-  40013: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => jr,
-      f: () => ar
+  40028: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Xd,
+      h: () => Rd
     });
-    const Zr = new WeakMap;
+    const Wd = new WeakMap;
 
-    function Wr(rr) {
-      let Sr = Zr.get(rr);
-      return Sr || (Sr = {
-        hidden: rr.hidden,
+    function Fd(dd) {
+      let Od = Wd.get(dd);
+      return Od || (Od = {
+        hidden: dd.hidden,
         x: NaN,
         y: NaN
-      }, Zr.set(rr, Sr)), Sr
+      }, Wd.set(dd, Od)), Od
     }
 
-    function ar(rr, Sr) {
-      const Qr = Wr(rr);
-      Qr.hidden !== Sr && (Qr.hidden = Sr, rr.hidden = Sr)
+    function Rd(dd, Od) {
+      const md = Fd(dd);
+      md.hidden !== Od && (md.hidden = Od, dd.hidden = Od)
     }
 
-    function jr(rr, Sr, Qr) {
-      const Zr = Wr(rr);
-      Zr.x === Sr && Zr.y === Qr || (Zr.x = Sr, Zr.y = Qr, rr.style.translate = `${Sr}vw ${Qr}vh`)
+    function Xd(dd, Od, md) {
+      const Wd = Fd(dd);
+      Wd.x === Od && Wd.y === md || (Wd.x = Od, Wd.y = md, dd.style.translate = `${Od}vw ${md}vh`)
     }
   },
-  39920: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      C: () => yr,
-      D: () => Tr,
-      G: () => Kr,
-      I: () => er,
-      K: () => mr,
-      N: () => tr,
-      P: () => zr,
-      S: () => Wr,
-      b: () => pr,
-      d: () => fr,
-      e: () => nr,
-      i: () => Er,
-      m: () => Ir,
-      q: () => jr,
-      t: () => ar,
-      w: () => Br,
-      z: () => Nr
+  39958: (dd, Od, md) => {
+    md.d(Od, {
+      A: () => Jd,
+      E: () => gd,
+      F: () => Yd,
+      G: () => od,
+      K: () => Hd,
+      L: () => bd,
+      O: () => Fd,
+      b: () => Qd,
+      e: () => hd,
+      i: () => pd,
+      m: () => vd,
+      o: () => Kd,
+      q: () => Xd,
+      t: () => Rd,
+      w: () => Ed,
+      x: () => Nd,
+      y: () => wd
     });
-    var Zr = Qr(5870);
+    var Wd = md(5813);
 
-    function Wr(rr) {
-      return Math.floor(rr).toLocaleString("en-US")
+    function Fd(dd) {
+      return Math.floor(dd).toLocaleString("en-US")
     }
-    const ar = 2e3,
-      jr = .005,
-      Ir = .001,
-      fr = 2,
-      Er = "Fluid Tank",
-      pr = "Coolant Mixer",
-      xr = 144;
+    const Rd = 2e3,
+      Xd = .005,
+      Kd = .001,
+      hd = 2,
+      vd = "Fluid Tank",
+      Qd = "Coolant Mixer",
+      td = 144;
 
-    function mr(rr) {
-      const Sr = rr.split("|")[0];
-      return (0, Zr.k)(Sr) ? Sr === Zr.d ? "cryo" : "water" : null
+    function od(dd) {
+      const Od = dd.split("|")[0];
+      return (0, Wd.n)(Od) ? Od === Wd.d ? "cryo" : "water" : null
     }
-    const Nr = [
+    const Nd = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -3586,43 +3586,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      Ur = 63;
+      qd = 63;
 
-    function tr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Qr = Sr ? function(rr, Sr, Qr) {
-        const Zr = Nr.findIndex((Zr => {
-          let [Wr, ar, jr] = Zr;
-          return Wr === rr && ar === Sr && jr === Qr
+    function Hd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const md = Od ? function(dd, Od, md) {
+        const Wd = Nd.findIndex((Wd => {
+          let [Fd, Rd, Xd] = Wd;
+          return Fd === dd && Rd === Od && Xd === md
         }));
-        return Zr < 0 ? 0 : 1 << Zr
-      }(Sr[0], Sr[1], Sr[2]) : 0;
-      return "maker" === rr ? {
-        kind: rr,
-        faces: Qr
-      } : "user" === rr ? {
-        kind: rr,
-        faces: Ur & ~Qr
+        return Wd < 0 ? 0 : 1 << Wd
+      }(Od[0], Od[1], Od[2]) : 0;
+      return "maker" === dd ? {
+        kind: dd,
+        faces: md
+      } : "user" === dd ? {
+        kind: dd,
+        faces: qd & ~md
       } : {
-        kind: rr,
-        faces: Ur
+        kind: dd,
+        faces: qd
       }
     }
 
-    function hr(rr) {
-      return "pipe" === rr || "tank" === rr || "maker" === rr
+    function yd(dd) {
+      return "pipe" === dd || "tank" === dd || "maker" === dd
     }
 
-    function zr(rr, Sr, Qr) {
-      return 0 !== (rr.faces & 1 << Qr) && 0 !== (Sr.faces & 1 << (1 ^ Qr)) && (hr(rr.kind) || hr(Sr.kind))
+    function bd(dd, Od, md) {
+      return 0 !== (dd.faces & 1 << md) && 0 !== (Od.faces & 1 << (1 ^ md)) && (yd(dd.kind) || yd(Od.kind))
     }
-    const Yr = (rr, Sr, Qr, Zr) => ({
-        input: rr,
-        inputAmount: Zr,
-        output: Sr,
-        outputAmount: Qr
+    const Td = (dd, Od, md, Wd) => ({
+        input: dd,
+        inputAmount: Wd,
+        output: Od,
+        outputAmount: md
       }),
-      nr = {
+      pd = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -3641,7 +3641,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [Yr("Uranium Grit", "Uranium Pellet", 1, 12), Yr("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [Td("Uranium Grit", "Uranium Pellet", 1, 12), Td("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -3662,68 +3662,68 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [Yr("Biomass", "", 0, 1)],
+          recipes: [Td("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: xr,
+          cryoMade: td,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function er(rr, Sr) {
-      return 1e3 * (null !== Sr && void 0 !== Sr ? Sr : 0) / rr.opMs
+    function Yd(dd, Od) {
+      return 1e3 * (null !== Od && void 0 !== Od ? Od : 0) / dd.opMs
     }
 
-    function Kr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const Qr = er(nr["Coolant Mixer"], xr) * Sr;
-      return rr <= 0 ? 0 : Math.ceil(rr / Qr - 1e-9)
+    function gd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const md = Yd(pd["Coolant Mixer"], td) * Od;
+      return dd <= 0 ? 0 : Math.ceil(dd / md - 1e-9)
     }
-    const yr = "baf2Water",
-      Br = "baf2waterclose",
-      Tr = "baf2wateropen"
+    const wd = "baf2Water",
+      Ed = "baf2waterclose",
+      Jd = "baf2wateropen"
   },
-  41149: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => jr,
-      f: () => xr
+  41143: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Xd,
+      g: () => td
     });
-    var Zr = Qr(5779),
-      Wr = Qr(5811),
-      ar = Qr(5830);
-    const jr = [0, 0, 0, 1, 1, 1],
-      Ir = (0, Wr.e)([
+    var Wd = md(5733),
+      Fd = md(5756),
+      Rd = md(5769);
+    const Xd = [0, 0, 0, 1, 1, 1],
+      Kd = (0, Fd.d)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      fr = (0, Wr.e)([
+      hd = (0, Fd.d)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      Er = (0, Wr.e)([
+      vd = (0, Fd.d)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      pr = [0, 1, 2, 3].map((rr => (0, Wr.e)((0, Wr.n)([
+      Qd = [0, 1, 2, 3].map((dd => (0, Fd.d)((0, Fd.n)([
         [3, 2, 0, 5, 7, 3]
-      ], rr))));
+      ], dd))));
 
-    function xr(rr) {
+    function td(dd) {
       const {
-        Bh: Sr,
-        model: Qr,
-        blockModel: Wr,
-        meta: xr
-      } = Zr.j[rr];
-      return void 0 !== Sr ? Sr : "CentreCross" === Qr ? Ir : null !== Wr && void 0 !== Wr && Wr.startsWith("torch") ? xr.halfblockPlacement === ar.b.side ? pr[xr.rot - 1] : xr.halfblockPlacement === ar.b.top ? Er : fr : jr
+        Sy: Od,
+        model: md,
+        blockModel: Fd,
+        meta: td
+      } = Wd.i[dd];
+      return void 0 !== Od ? Od : "CentreCross" === md ? Kd : null !== Fd && void 0 !== Fd && Fd.startsWith("torch") ? td.halfblockPlacement === Rd.c.side ? Qd[td.rot - 1] : td.halfblockPlacement === Rd.c.top ? vd : hd : Xd
     }
   },
-  39907: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => qr,
-      h: () => Rr
+  39951: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Ad,
+      f: () => rd
     });
-    var Zr = Qr(5779),
-      Wr = Qr(5817);
-    const ar = [
+    var Wd = md(5733),
+      Fd = md(5759);
+    const Rd = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -3731,45 +3731,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var jr = Qr(5833),
-      Ir = Qr(39717),
-      fr = Qr(5830);
-    const Er = {
+    var Xd = md(5774),
+      Kd = md(39756),
+      hd = md(5769);
+    const vd = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function pr(rr) {
-      let [Sr, Qr] = rr;
-      return [-Qr, Sr]
+    function Qd(dd) {
+      let [Od, md] = dd;
+      return [-md, Od]
     }
 
-    function xr(rr, Sr) {
-      return rr[0] === Sr[0] && rr[1] === Sr[1]
+    function td(dd, Od) {
+      return dd[0] === Od[0] && dd[1] === Od[1]
     }
 
-    function mr(rr, Sr) {
-      return rr[0] * Sr[0] + rr[1] * Sr[1] === 0
+    function od(dd, Od) {
+      return dd[0] * Od[0] + dd[1] * Od[1] === 0
     }
-    const Nr = [
+    const Nd = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var Ur = Qr(5861);
+    var qd = md(5804);
 
-    function tr(rr, Sr, Qr, Zr, Wr) {
-      return Sr < Ur.r || Sr >= Ur.r + Ur.s || Math.floor(rr / Ur.y) === Math.floor(Zr / Ur.y) && Math.floor(Qr / Ur.y) === Math.floor(Wr / Ur.y)
+    function Hd(dd, Od, md, Wd, Fd) {
+      return Od < qd.p || Od >= qd.p + qd.t || Math.floor(dd / qd.y) === Math.floor(Wd / qd.y) && Math.floor(md / qd.y) === Math.floor(Fd / qd.y)
     }
-    const hr = "Splitter",
-      zr = "Sorting Gate",
-      Yr = new Set(Ur.L),
-      nr = new Set([...Ur.L, "Belt Loader", "Fast Loader", zr]),
-      er = new Set(Ur.w),
-      Kr = [
+    const yd = "Splitter",
+      bd = "Sorting Gate",
+      Td = new Set(qd.N),
+      pd = new Set([...qd.N, "Belt Loader", "Fast Loader", bd]),
+      Yd = new Set(qd.x),
+      gd = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -3778,259 +3778,259 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function yr(rr) {
-      var Sr, Qr;
-      return null !== (Sr = null === (Qr = Zr.j[rr]) || void 0 === Qr ? void 0 : Qr.meta.rootName) && void 0 !== Sr ? Sr : ""
+    function wd(dd) {
+      var Od, md;
+      return null !== (Od = null === (md = Wd.i[dd]) || void 0 === md ? void 0 : md.meta.rootName) && void 0 !== Od ? Od : ""
     }
 
-    function Br(rr) {
-      return yr(rr) === Ur.g && (0, Ur.W)(Zr.j[rr].name)
+    function Ed(dd) {
+      return wd(dd) === qd.i && (0, qd.Z)(Wd.i[dd].name)
     }
-    var Tr = Qr(5825),
-      vr = Qr(5843);
-    const Or = [
+    var Jd = md(5766),
+      Ud = md(5781);
+    const xd = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function Lr(rr) {
-      var Sr, Qr;
-      const Wr = null === (Sr = Zr.j[rr]) || void 0 === Sr ? void 0 : Sr.meta;
-      return (null === Wr || void 0 === Wr ? void 0 : Wr.rootName) !== vr.r ? null : {
-        rot: null !== (Qr = Wr.rot) && void 0 !== Qr ? Qr : 1,
-        half: (0, vr.h)(Wr.rootName, Wr.metaStr)
+    function Bd(dd) {
+      var Od, md;
+      const Fd = null === (Od = Wd.i[dd]) || void 0 === Od ? void 0 : Od.meta;
+      return (null === Fd || void 0 === Fd ? void 0 : Fd.rootName) !== Ud.g ? null : {
+        rot: null !== (md = Fd.rot) && void 0 !== md ? md : 1,
+        half: (0, Ud.c)(Fd.rootName, Fd.metaStr)
       }
     }
 
-    function lr(rr, Sr, Qr, Zr) {
-      return Lr(rr(Sr, Qr, Zr))
+    function Sd(dd, Od, md, Wd) {
+      return Bd(dd(Od, md, Wd))
     }
 
-    function Xr(rr, Sr, Qr, Zr, Wr) {
+    function sd(dd, Od, md, Wd, Fd) {
       let {
-        rot: ar,
-        half: jr
-      } = Wr;
-      const [Ir, fr] = (0, vr.n)(ar, jr), Er = lr(rr, Sr + Ir, Qr, Zr + fr);
-      return null !== Er && Er.rot === ar && Er.half === vr.u[jr]
+        rot: Rd,
+        half: Xd
+      } = Fd;
+      const [Kd, hd] = (0, Ud.e)(Rd, Xd), vd = Sd(dd, Od + Kd, md, Wd + hd);
+      return null !== vd && vd.rot === Rd && vd.half === Ud.h[Xd]
     }
-    var Pr = Qr(39914);
-    const Hr = [new class {
+    var ud = md(39955);
+    const Vd = [new class {
       constructor() {
-        this.reshapeOffsets = Nr
+        this.reshapeOffsets = Nd
       }
-      handles(rr) {
-        var Sr;
-        return "Stairs" === (null === (Sr = Zr.j[rr]) || void 0 === Sr ? void 0 : Sr.model)
+      handles(dd) {
+        var Od;
+        return "Stairs" === (null === (Od = Wd.i[dd]) || void 0 === Od ? void 0 : Od.model)
       }
-      affects(rr) {
-        return this.handles(rr)
+      affects(dd) {
+        return this.handles(dd)
       }
-      shape(rr, Sr, Qr, Wr, ar) {
-        const jr = this.stairsOf(ar),
-          Ir = this.cornerAt(rr, Sr, Qr, Wr, jr),
-          Er = jr.half === fr.b.top ? "top" : "bot";
-        return (0, Zr.k)(`${Zr.j[ar].meta.rootName}|meta|rot${jr.rot}|${Er}${null===Ir?"":`|${Ir}`}`)
+      shape(dd, Od, md, Fd, Rd) {
+        const Xd = this.stairsOf(Rd),
+          Kd = this.cornerAt(dd, Od, md, Fd, Xd),
+          vd = Xd.half === hd.c.top ? "top" : "bot";
+        return (0, Wd.j)(`${Wd.i[Rd].meta.rootName}|meta|rot${Xd.rot}|${vd}${null===Kd?"":`|${Kd}`}`)
       }
-      stairsOf(rr) {
+      stairsOf(dd) {
         const {
-          rot: Sr,
-          halfblockPlacement: Qr
-        } = Zr.j[rr].meta;
+          rot: Od,
+          halfblockPlacement: md
+        } = Wd.i[dd].meta;
         return {
-          rot: Sr,
-          half: Qr
+          rot: Od,
+          half: md
         }
       }
-      stairsAt(rr, Sr, Qr, Zr) {
-        const Wr = rr(Sr, Qr, Zr);
-        return this.handles(Wr) ? this.stairsOf(Wr) : null
+      stairsAt(dd, Od, md, Wd) {
+        const Fd = dd(Od, md, Wd);
+        return this.handles(Fd) ? this.stairsOf(Fd) : null
       }
-      cornerAt(rr, Sr, Qr, Zr, Wr) {
+      cornerAt(dd, Od, md, Wd, Fd) {
         let {
-          rot: ar,
-          half: jr
-        } = Wr;
-        const Ir = Er[ar],
-          fr = Wr => {
-            let [Ir, fr] = Wr;
-            const Er = this.stairsAt(rr, Sr + Ir, Qr, Zr + fr);
-            return null !== Er && Er.rot === ar && Er.half === jr
+          rot: Rd,
+          half: Xd
+        } = Fd;
+        const Kd = vd[Rd],
+          hd = Fd => {
+            let [Kd, hd] = Fd;
+            const vd = this.stairsAt(dd, Od + Kd, md, Wd + hd);
+            return null !== vd && vd.rot === Rd && vd.half === Xd
           },
-          Nr = this.stairsAt(rr, Sr + Ir[0], Qr, Zr + Ir[1]);
-        if (null !== Nr && Nr.half === jr) {
-          const rr = Er[Nr.rot];
-          if (mr(Ir, rr) && !fr([-rr[0], -rr[1]])) return xr(rr, pr(Ir)) ? "outerLeft" : "outerRight"
+          Nd = this.stairsAt(dd, Od + Kd[0], md, Wd + Kd[1]);
+        if (null !== Nd && Nd.half === Xd) {
+          const dd = vd[Nd.rot];
+          if (od(Kd, dd) && !hd([-dd[0], -dd[1]])) return td(dd, Qd(Kd)) ? "outerLeft" : "outerRight"
         }
-        const Ur = this.stairsAt(rr, Sr - Ir[0], Qr, Zr - Ir[1]);
-        if (null !== Ur && Ur.half === jr) {
-          const rr = Er[Ur.rot];
-          if (mr(Ir, rr) && !fr(rr)) return xr(rr, pr(Ir)) ? "innerLeft" : "innerRight"
+        const qd = this.stairsAt(dd, Od - Kd[0], md, Wd - Kd[1]);
+        if (null !== qd && qd.half === Xd) {
+          const dd = vd[qd.rot];
+          if (od(Kd, dd) && !hd(dd)) return td(dd, Qd(Kd)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = ar, this.rootIds = new Set(Wr.l.map((rr => (0, Zr.k)(rr))))
+        this.reshapeOffsets = Rd, this.rootIds = new Set(Fd.j.map((dd => (0, Wd.j)(dd))))
       }
-      handles(rr) {
-        var Sr;
-        const Qr = null === (Sr = Zr.j[rr]) || void 0 === Sr ? void 0 : Sr.meta;
-        return void 0 !== Qr && this.rootIds.has(Qr.rootId)
+      handles(dd) {
+        var Od;
+        const md = null === (Od = Wd.i[dd]) || void 0 === Od ? void 0 : Od.meta;
+        return void 0 !== md && this.rootIds.has(md.rootId)
       }
-      affects(rr) {
-        return this.handles(rr)
+      affects(dd) {
+        return this.handles(dd)
       }
-      placedBy(rr) {
-        return Zr.j[rr].meta.rootName === Wr.u ? null : Wr.u
+      placedBy(dd) {
+        return Wd.i[dd].meta.rootName === Fd.s ? null : Fd.s
       }
-      shape(rr, Sr, Qr, ar, jr) {
+      shape(dd, Od, md, Rd, Xd) {
         const {
-          rootId: Ir,
-          rootName: fr,
-          rot: Er
-        } = Zr.j[jr].meta;
-        let pr = 0;
-        return Wr.A[Er].forEach(((Wr, jr) => {
-          var fr;
-          let [xr, mr, Nr] = Wr;
-          const Ur = null === (fr = Zr.j[rr(Sr + xr, Qr + mr, ar + Nr)]) || void 0 === fr ? void 0 : fr.meta;
-          (null === Ur || void 0 === Ur ? void 0 : Ur.rootId) === Ir && Ur.rot === Er && (pr |= 1 << jr)
-        })), (0, Zr.k)((0, Wr.h)(fr, Er, pr))
+          rootId: Kd,
+          rootName: hd,
+          rot: vd
+        } = Wd.i[Xd].meta;
+        let Qd = 0;
+        return Fd.A[vd].forEach(((Fd, Xd) => {
+          var hd;
+          let [td, od, Nd] = Fd;
+          const qd = null === (hd = Wd.i[dd(Od + td, md + od, Rd + Nd)]) || void 0 === hd ? void 0 : hd.meta;
+          (null === qd || void 0 === qd ? void 0 : qd.rootId) === Kd && qd.rot === vd && (Qd |= 1 << Xd)
+        })), (0, Wd.j)((0, Fd.g)(hd, vd, Qd))
       }
-    }, ...jr.d.map((rr => new Ir.b(rr))), new class {
+    }, ...Xd.c.map((dd => new Kd.e(dd))), new class {
       constructor() {
-        this.reshapeOffsets = Kr
+        this.reshapeOffsets = gd
       }
-      handles(rr) {
-        const Sr = yr(rr);
-        return Yr.has(Sr) || Sr === Ur.g
+      handles(dd) {
+        const Od = wd(dd);
+        return Td.has(Od) || Od === qd.i
       }
-      affects(rr) {
-        const Sr = yr(rr);
-        return nr.has(Sr) || er.has(Sr) || Sr === hr || Sr === Ur.g || void 0 !== Ur.b[Sr]
+      affects(dd) {
+        const Od = wd(dd);
+        return pd.has(Od) || Yd.has(Od) || Od === yd || Od === qd.i || void 0 !== qd.d[Od]
       }
-      shape(rr, Sr, Qr, Wr, ar, jr) {
+      shape(dd, Od, md, Fd, Rd, Xd) {
         const {
-          rootName: Ir,
-          rot: fr
-        } = Zr.j[ar].meta;
-        return Ir === Ur.g ? jr ? ar : function(rr, Sr, Qr, Wr, ar) {
-          const [jr, Ir] = Ur.d[ar - 1];
-          for (let fr = 1; fr <= Ur.J; fr++) {
-            const [Er, pr] = [Sr - jr * fr, Wr - Ir * fr], xr = rr(Er, Qr, pr);
-            if (yr(xr) === Ur.g && Zr.j[xr].meta.rot === ar && tr(Sr, Qr, Wr, Er, pr)) return (0, Zr.k)((0, Ur.ab)(ar, !Br(xr)))
+          rootName: Kd,
+          rot: hd
+        } = Wd.i[Rd].meta;
+        return Kd === qd.i ? Xd ? Rd : function(dd, Od, md, Fd, Rd) {
+          const [Xd, Kd] = qd.g[Rd - 1];
+          for (let hd = 1; hd <= qd.L; hd++) {
+            const [vd, Qd] = [Od - Xd * hd, Fd - Kd * hd], td = dd(vd, md, Qd);
+            if (wd(td) === qd.i && Wd.i[td].meta.rot === Rd && Hd(Od, md, Fd, vd, Qd)) return (0, Wd.j)((0, qd.fb)(Rd, !Ed(td)))
           }
-          return (0, Zr.k)((0, Ur.ab)(ar, !1))
-        }(rr, Sr, Qr, Wr, fr) : (0, Zr.k)((0, Ur.P)(Ir, fr, function(rr, Sr, Qr, Wr, ar) {
-          const [jr, Ir] = Ur.d[ar - 1], fr = (ar, jr) => function(rr, Sr, Qr) {
-            var Wr;
-            const ar = null === (Wr = Zr.j[rr]) || void 0 === Wr ? void 0 : Wr.meta;
-            if (!ar) return !1;
-            const jr = ar.rootName,
-              Ir = nr.has(jr) || Br(rr);
-            if (!Ir && !er.has(jr) && jr !== hr) return !1;
-            const [fr, Er] = Ur.d[ar.rot - 1];
-            if (Ir && fr === -Sr && Er === -Qr) return !0;
-            if (er.has(jr)) return fr === Sr && Er === Qr;
-            const pr = Zr.j[rr].name;
-            return (jr === hr ? (0, Ur._)(pr, fr, Er) : jr === zr ? [(0, Ur.R)(pr, fr, Er)] : []).some((rr => {
-              let [Zr, Wr] = rr;
-              return Zr === -Sr && Wr === -Qr
+          return (0, Wd.j)((0, qd.fb)(Rd, !1))
+        }(dd, Od, md, Fd, hd) : (0, Wd.j)((0, qd.P)(Kd, hd, function(dd, Od, md, Fd, Rd) {
+          const [Xd, Kd] = qd.g[Rd - 1], hd = (Rd, Xd) => function(dd, Od, md) {
+            var Fd;
+            const Rd = null === (Fd = Wd.i[dd]) || void 0 === Fd ? void 0 : Fd.meta;
+            if (!Rd) return !1;
+            const Xd = Rd.rootName,
+              Kd = pd.has(Xd) || Ed(dd);
+            if (!Kd && !Yd.has(Xd) && Xd !== yd) return !1;
+            const [hd, vd] = qd.g[Rd.rot - 1];
+            if (Kd && hd === -Od && vd === -md) return !0;
+            if (Yd.has(Xd)) return hd === Od && vd === md;
+            const Qd = Wd.i[dd].name;
+            return (Xd === yd ? (0, qd.db)(Qd, hd, vd) : Xd === bd ? [(0, qd.T)(Qd, hd, vd)] : []).some((dd => {
+              let [Wd, Fd] = dd;
+              return Wd === -Od && Fd === -md
             }))
-          }(rr(Sr + ar, Qr, Wr + jr), ar, jr), Er = rr(Sr - jr, Qr, Wr - Ir), pr = yr(Er) === hr && Zr.j[Er].meta.rot === ar, xr = 1 === Ur.b[yr(rr(Sr, Qr - 1, Wr))] || -1 === Ur.b[yr(rr(Sr, Qr + 1, Wr))];
-          if (xr || pr || fr(-jr, -Ir)) return null;
-          const mr = fr(-Ir, jr),
-            Nr = fr(Ir, -jr);
-          if (mr === Nr) return null;
-          return mr ? "turnLeft" : "turnRight"
-        }(rr, Sr, Qr, Wr, fr)))
+          }(dd(Od + Rd, md, Fd + Xd), Rd, Xd), vd = dd(Od - Xd, md, Fd - Kd), Qd = wd(vd) === yd && Wd.i[vd].meta.rot === Rd, td = 1 === qd.d[wd(dd(Od, md - 1, Fd))] || -1 === qd.d[wd(dd(Od, md + 1, Fd))];
+          if (td || Qd || hd(-Xd, -Kd)) return null;
+          const od = hd(-Kd, Xd),
+            Nd = hd(Kd, -Xd);
+          if (od === Nd) return null;
+          return od ? "turnLeft" : "turnRight"
+        }(dd, Od, md, Fd, hd)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = Or, this.rootId = (0, Zr.k)(vr.r)
+        this.reshapeOffsets = xd, this.rootId = (0, Wd.j)(Ud.g)
       }
-      handles(rr) {
-        var Sr;
-        return (null === (Sr = Zr.j[rr]) || void 0 === Sr ? void 0 : Sr.meta.rootId) === this.rootId
+      handles(dd) {
+        var Od;
+        return (null === (Od = Wd.i[dd]) || void 0 === Od ? void 0 : Od.meta.rootId) === this.rootId
       }
-      affects(rr) {
-        return this.handles(rr)
+      affects(dd) {
+        return this.handles(dd)
       }
-      shape(rr, Sr, Qr, Wr, ar, jr) {
-        const Ir = Lr(ar);
-        return (0, Zr.k)((fr = Ir.rot, null !== (Er = jr ? this.reshapedHalf(rr, Sr, Qr, Wr, Ir) : this.placedHalf(rr, Sr, Qr, Wr, Ir.rot)) ? (0, vr.e)(vr.r, fr, Er) : 1 === fr ? vr.r : `${vr.r}|meta|rot${fr}`));
-        var fr, Er
+      shape(dd, Od, md, Fd, Rd, Xd) {
+        const Kd = Bd(Rd);
+        return (0, Wd.j)((hd = Kd.rot, null !== (vd = Xd ? this.reshapedHalf(dd, Od, md, Fd, Kd) : this.placedHalf(dd, Od, md, Fd, Kd.rot)) ? (0, Ud.b)(Ud.g, hd, vd) : 1 === hd ? Ud.g : `${Ud.g}|meta|rot${hd}`));
+        var hd, vd
       }
-      placedHalf(rr, Sr, Qr, Zr, Wr) {
-        const [ar, jr] = Tr.b[Wr];
-        for (const [Ir, fr] of [
+      placedHalf(dd, Od, md, Wd, Fd) {
+        const [Rd, Xd] = Jd.e[Fd];
+        for (const [Kd, hd] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const Er = Sr + fr * ar,
-            pr = Zr + fr * jr,
-            xr = lr(rr, Er, Qr, pr);
-          if (null !== xr && xr.rot === Wr && (null === xr.half || !Xr(rr, Er, Qr, pr, xr))) return Ir
+          const vd = Od + hd * Rd,
+            Qd = Wd + hd * Xd,
+            td = Sd(dd, vd, md, Qd);
+          if (null !== td && td.rot === Fd && (null === td.half || !sd(dd, vd, md, Qd, td))) return Kd
         }
         return null
       }
-      reshapedHalf(rr, Sr, Qr, Zr, Wr) {
-        if (null !== Wr.half && Xr(rr, Sr, Qr, Zr, Wr)) return Wr.half;
-        for (const ar of ["right", "left"]) {
-          const [jr, Ir] = (0, vr.n)(Wr.rot, ar), fr = lr(rr, Sr + jr, Qr, Zr + Ir);
-          if (null !== fr && fr.rot === Wr.rot && fr.half === vr.u[ar]) return ar
+      reshapedHalf(dd, Od, md, Wd, Fd) {
+        if (null !== Fd.half && sd(dd, Od, md, Wd, Fd)) return Fd.half;
+        for (const Rd of ["right", "left"]) {
+          const [Xd, Kd] = (0, Ud.e)(Fd.rot, Rd), hd = Sd(dd, Od + Xd, md, Wd + Kd);
+          if (null !== hd && hd.rot === Fd.rot && hd.half === Ud.h[Rd]) return Rd
         }
         return null
       }
-    }, new Pr.e];
+    }, new ud.e];
 
-    function qr(rr, Sr, Qr, Zr, Wr) {
-      let ar = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const jr of Hr)
-        if (jr.handles(Wr)) return jr.shape(rr, Sr, Qr, Zr, Wr, ar);
-      return Wr
+    function Ad(dd, Od, md, Wd, Fd) {
+      let Rd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const Xd of Vd)
+        if (Xd.handles(Fd)) return Xd.shape(dd, Od, md, Wd, Fd, Rd);
+      return Fd
     }
 
-    function Rr(rr) {
-      for (const Zr of Hr) {
-        var Sr, Qr;
-        if (Zr.handles(rr)) return null !== (Sr = null === (Qr = Zr.placedBy) || void 0 === Qr ? void 0 : Qr.call(Zr, rr)) && void 0 !== Sr ? Sr : null
+    function rd(dd) {
+      for (const Wd of Vd) {
+        var Od, md;
+        if (Wd.handles(dd)) return null !== (Od = null === (md = Wd.placedBy) || void 0 === md ? void 0 : md.call(Wd, dd)) && void 0 !== Od ? Od : null
       }
       return null
     }
   },
-  39914: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => vr,
-      f: () => er,
-      h: () => nr
+  39955: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Ud,
+      h: () => Yd,
+      l: () => pd
     });
-    var Zr = Qr(5779),
-      Wr = Qr(5806),
-      ar = Qr(5870),
-      jr = Qr(39920),
-      Ir = Qr(5861);
-    const fr = (0, jr.N)("pipe"),
-      Er = (0, jr.N)("tank"),
-      pr = (0, jr.N)("port"),
-      xr = "Reactor Port";
+    var Wd = md(5733),
+      Fd = md(5752),
+      Rd = md(5813),
+      Xd = md(39958),
+      Kd = md(5804);
+    const hd = (0, Xd.K)("pipe"),
+      vd = (0, Xd.K)("tank"),
+      Qd = (0, Xd.K)("port"),
+      td = "Reactor Port";
 
-    function mr(rr, Sr, Qr) {
-      const Zr = new Set([ar.g, ar.d, xr, ...Sr, ...Qr, ...rr ? [jr.i] : []]);
+    function od(dd, Od, md) {
+      const Wd = new Set([Rd.h, Rd.d, td, ...Od, ...md, ...dd ? [Xd.m] : []]);
       return {
-        makers: new Set(Sr),
-        roots: Zr
+        makers: new Set(Od),
+        roots: Wd
       }
     }
-    const Nr = {
-        water: mr(!0, ["Condenser"], ["Centrifuge", "Synthesizer", jr.b]),
-        cryo: mr(!1, [jr.b], [])
+    const Nd = {
+        water: od(!0, ["Condenser"], ["Centrifuge", "Synthesizer", Xd.b]),
+        cryo: od(!1, [Xd.b], [])
       },
-      Ur = new Set([...Nr.water.roots, ...Nr.cryo.roots]),
-      tr = {
+      qd = new Set([...Nd.water.roots, ...Nd.cryo.roots]),
+      Hd = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -4038,140 +4038,140 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      hr = Wr.f.map((rr => tr[rr])),
-      zr = hr.map((rr => {
-        let [Sr, Qr, Zr] = rr;
-        return jr.z.findIndex((rr => {
-          let [Wr, ar, jr] = rr;
-          return Wr === Sr && ar === Qr && jr === Zr
+      yd = Fd.c.map((dd => Hd[dd])),
+      bd = yd.map((dd => {
+        let [Od, md, Wd] = dd;
+        return Xd.x.findIndex((dd => {
+          let [Fd, Rd, Xd] = dd;
+          return Fd === Od && Rd === md && Xd === Wd
         }))
       }));
 
-    function Yr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const Qr = Zr.j[rr],
-        Wr = null === Qr || void 0 === Qr ? void 0 : Qr.meta.rootName,
-        mr = Nr[Sr];
-      if (!Wr || !mr.roots.has(Wr)) return null;
-      if ((0, ar.k)(Wr)) return (0, jr.K)(Qr.name) === Sr ? fr : null;
-      if (Wr === jr.i) return Er;
-      if (Wr === xr) return Qr.name.endsWith("|Water") ? pr : null;
-      const [Ur, tr] = Ir.d[(Qr.meta.rot || 1) - 1];
-      return (0, jr.N)(mr.makers.has(Wr) ? "maker" : "user", [-Ur, 0, -tr])
+    function Td(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const md = Wd.i[dd],
+        Fd = null === md || void 0 === md ? void 0 : md.meta.rootName,
+        od = Nd[Od];
+      if (!Fd || !od.roots.has(Fd)) return null;
+      if ((0, Rd.n)(Fd)) return (0, Xd.G)(md.name) === Od ? hd : null;
+      if (Fd === Xd.m) return vd;
+      if (Fd === td) return md.name.endsWith("|Water") ? Qd : null;
+      const [qd, Hd] = Kd.g[(md.meta.rot || 1) - 1];
+      return (0, Xd.K)(od.makers.has(Fd) ? "maker" : "user", [-qd, 0, -Hd])
     }
 
-    function nr(rr, Sr, Qr, Wr) {
-      let ar = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function pd(dd, Od, md, Fd) {
+      let Rd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: Ir
-      } = Nr[ar];
-      return hr.some(((Er, pr) => {
-        var xr, mr;
-        let [Nr, Ur, tr] = Er;
-        const hr = rr(Sr + Nr, Qr + Ur, Wr + tr),
-          nr = Yr(hr, ar);
-        return null !== nr && Ir.has(null !== (xr = null === (mr = Zr.j[hr]) || void 0 === mr ? void 0 : mr.meta.rootName) && void 0 !== xr ? xr : "") && !(0, jr.P)(fr, nr, zr[pr])
+        makers: Kd
+      } = Nd[Rd];
+      return yd.some(((vd, Qd) => {
+        var td, od;
+        let [Nd, qd, Hd] = vd;
+        const yd = dd(Od + Nd, md + qd, Fd + Hd),
+          pd = Td(yd, Rd);
+        return null !== pd && Kd.has(null !== (td = null === (od = Wd.i[yd]) || void 0 === od ? void 0 : od.meta.rootName) && void 0 !== td ? td : "") && !(0, Xd.L)(hd, pd, bd[Qd])
       }))
     }
 
-    function er(rr) {
-      const Sr = Zr.j[rr];
-      return Sr ? (0, jr.K)(Sr.name) : null
+    function Yd(dd) {
+      const Od = Wd.i[dd];
+      return Od ? (0, Xd.G)(Od.name) : null
     }
-    let Kr = null;
+    let gd = null;
 
-    function yr(rr) {
-      if (!Kr) {
-        Kr = new Map;
-        for (const rr of ["water", "cryo"])
-          for (let Sr = 0; Sr < 64; Sr++)
-            for (const Qr of [!1, !0]) Kr.set((0, ar.o)(rr, Sr, Qr), {
-              HN: rr,
-              mask: Sr,
-              full: Qr
+    function wd(dd) {
+      if (!gd) {
+        gd = new Map;
+        for (const dd of ["water", "cryo"])
+          for (let Od = 0; Od < 64; Od++)
+            for (const md of [!1, !0]) gd.set((0, Rd.o)(dd, Od, md), {
+              LN: dd,
+              mask: Od,
+              full: md
             })
       }
-      return Kr.get(rr)
+      return gd.get(dd)
     }
-    const Br = new Map(Array.from({
-      length: ar.h + 1
-    }, ((rr, Sr) => [(0, ar.p)(Sr), Sr])));
+    const Ed = new Map(Array.from({
+      length: Rd.k + 1
+    }, ((dd, Od) => [(0, Rd.s)(Od), Od])));
 
-    function Tr(rr, Sr, Qr, Wr, ar, jr) {
-      return hr.some(((Ir, fr) => {
-        var Er, pr, xr;
-        let [mr, Nr, Ur] = Ir;
-        if (0 === (jr >> fr & 1)) return !1;
-        const tr = null !== (Er = null === (pr = Zr.j[rr(Sr + mr, Qr + Nr, Wr + Ur)]) || void 0 === pr ? void 0 : pr.name) && void 0 !== Er ? Er : "",
-          hr = yr(tr);
-        return hr ? hr.HN === ar && hr.full : (null !== (xr = function(rr) {
-          var Sr;
-          return null !== (Sr = Br.get(rr)) && void 0 !== Sr ? Sr : null
-        }(tr)) && void 0 !== xr ? xr : 0) > 0
+    function Jd(dd, Od, md, Fd, Rd, Xd) {
+      return yd.some(((Kd, hd) => {
+        var vd, Qd, td;
+        let [od, Nd, qd] = Kd;
+        if (0 === (Xd >> hd & 1)) return !1;
+        const Hd = null !== (vd = null === (Qd = Wd.i[dd(Od + od, md + Nd, Fd + qd)]) || void 0 === Qd ? void 0 : Qd.name) && void 0 !== vd ? vd : "",
+          yd = wd(Hd);
+        return yd ? yd.LN === Rd && yd.full : (null !== (td = function(dd) {
+          var Od;
+          return null !== (Od = Ed.get(dd)) && void 0 !== Od ? Od : null
+        }(Hd)) && void 0 !== td ? td : 0) > 0
       }))
     }
-    class vr {
+    class Ud {
       constructor() {
-        this.reshapeOffsets = hr
+        this.reshapeOffsets = yd
       }
-      handles(rr) {
-        return null !== er(rr)
+      handles(dd) {
+        return null !== Yd(dd)
       }
-      affects(rr) {
-        var Sr, Qr;
-        return Ur.has(null !== (Sr = null === (Qr = Zr.j[rr]) || void 0 === Qr ? void 0 : Qr.meta.rootName) && void 0 !== Sr ? Sr : "")
+      affects(dd) {
+        var Od, md;
+        return qd.has(null !== (Od = null === (md = Wd.i[dd]) || void 0 === md ? void 0 : md.meta.rootName) && void 0 !== Od ? Od : "")
       }
-      placedBy(rr) {
-        var Sr;
-        return (null === (Sr = Zr.j[rr]) || void 0 === Sr ? void 0 : Sr.meta.rootName) === ar.d ? ar.g : null
+      placedBy(dd) {
+        var Od;
+        return (null === (Od = Wd.i[dd]) || void 0 === Od ? void 0 : Od.meta.rootName) === Rd.d ? Rd.h : null
       }
-      shape(rr, Sr, Qr, Wr, Ir, Er) {
-        var pr, xr, mr;
-        const Nr = null !== (pr = null === (xr = Zr.j[Ir]) || void 0 === xr ? void 0 : xr.name) && void 0 !== pr ? pr : "",
-          Ur = Er || Nr !== ar.g ? null !== (mr = (0, jr.K)(Nr)) && void 0 !== mr ? mr : "water" : function(rr, Sr, Qr, Zr) {
-            return hr.some(((Wr, ar) => {
-              let [Ir, Er, pr] = Wr;
-              const xr = Yr(rr(Sr + Ir, Qr + Er, Zr + pr), "cryo");
-              return null !== xr && "port" !== xr.kind && (0, jr.P)(fr, xr, zr[ar])
+      shape(dd, Od, md, Fd, Kd, vd) {
+        var Qd, td, od;
+        const Nd = null !== (Qd = null === (td = Wd.i[Kd]) || void 0 === td ? void 0 : td.name) && void 0 !== Qd ? Qd : "",
+          qd = vd || Nd !== Rd.h ? null !== (od = (0, Xd.G)(Nd)) && void 0 !== od ? od : "water" : function(dd, Od, md, Wd) {
+            return yd.some(((Fd, Rd) => {
+              let [Kd, vd, Qd] = Fd;
+              const td = Td(dd(Od + Kd, md + vd, Wd + Qd), "cryo");
+              return null !== td && "port" !== td.kind && (0, Xd.L)(hd, td, bd[Rd])
             })) ? "cryo" : "water"
-          }(rr, Sr, Qr, Wr),
-          tr = function(rr, Sr, Qr, Zr) {
-            let Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              ar = 0;
-            return hr.forEach(((Ir, Er) => {
-              let [pr, xr, mr] = Ir;
-              const Nr = Yr(rr(Sr + pr, Qr + xr, Zr + mr), Wr);
-              Nr && (0, jr.P)(fr, Nr, zr[Er]) && (ar |= 1 << Er)
-            })), ar
-          }(rr, Sr, Qr, Wr, Ur),
-          nr = Er ? function(rr) {
-            var Sr;
-            return !0 === (null === (Sr = yr(rr)) || void 0 === Sr ? void 0 : Sr.full)
-          }(Nr) : Tr(rr, Sr, Qr, Wr, Ur, tr);
-        return (0, Zr.k)((0, ar.o)(Ur, tr, nr))
+          }(dd, Od, md, Fd),
+          Hd = function(dd, Od, md, Wd) {
+            let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              Rd = 0;
+            return yd.forEach(((Kd, vd) => {
+              let [Qd, td, od] = Kd;
+              const Nd = Td(dd(Od + Qd, md + td, Wd + od), Fd);
+              Nd && (0, Xd.L)(hd, Nd, bd[vd]) && (Rd |= 1 << vd)
+            })), Rd
+          }(dd, Od, md, Fd, qd),
+          pd = vd ? function(dd) {
+            var Od;
+            return !0 === (null === (Od = wd(dd)) || void 0 === Od ? void 0 : Od.full)
+          }(Nd) : Jd(dd, Od, md, Fd, qd, Hd);
+        return (0, Wd.j)((0, Rd.o)(qd, Hd, pd))
       }
     }
   },
-  38368: (rr, Sr, Qr) => {
-    function Zr(rr, Sr) {
-      return null === rr || null === Sr ? rr === Sr : rr[0] === Sr[0] && rr[1] === Sr[1] && rr[2] === Sr[2]
+  38448: (dd, Od, md) => {
+    function Wd(dd, Od) {
+      return null === dd || null === Od ? dd === Od : dd[0] === Od[0] && dd[1] === Od[1] && dd[2] === Od[2]
     }
 
-    function Wr(rr) {
-      return [rr[0] + .5, rr[1] + .5, rr[2] + .5]
+    function Fd(dd) {
+      return [dd[0] + .5, dd[1] + .5, dd[2] + .5]
     }
-    Qr.d(Sr, {
-      e: () => Wr,
-      h: () => Zr
+    md.d(Od, {
+      d: () => Fd,
+      f: () => Wd
     })
   },
-  39679: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Zr,
-      i: () => ar
+  39716: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Wd,
+      f: () => Rd
     });
-    const Zr = ["Chest", "Loot Chest", "Moonstone Chest"],
-      Wr = [{
+    const Wd = ["Chest", "Loot Chest", "Moonstone Chest"],
+      Fd = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -4191,56 +4191,56 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function ar(rr) {
-      return Wr.find((Sr => Sr.exactMatch ? rr === Sr.name : rr.includes(Sr.name)))
+    function Rd(dd) {
+      return Fd.find((Od => Od.exactMatch ? dd === Od.name : dd.includes(Od.name)))
     }
   },
-  38397: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return rr.includes("Leaf Bed")
+  38474: (dd, Od, md) => {
+    function Wd(dd) {
+      return dd.includes("Leaf Bed")
     }
 
-    function Wr(rr) {
-      return / Bed(?: Head)?(?:\||$)/.test(rr) && !Zr(rr)
+    function Fd(dd) {
+      return / Bed(?: Head)?(?:\||$)/.test(dd) && !Wd(dd)
     }
 
-    function ar(rr) {
-      return rr.includes(" Strongbed")
+    function Rd(dd) {
+      return dd.includes(" Strongbed")
     }
 
-    function jr(rr) {
-      return Zr(rr) || Wr(rr) || ar(rr)
+    function Xd(dd) {
+      return Wd(dd) || Fd(dd) || Rd(dd)
     }
-    Qr.d(Sr, {
-      c: () => jr,
-      f: () => Zr,
-      h: () => ar,
-      i: () => Wr
+    md.d(Od, {
+      e: () => Xd,
+      f: () => Wd,
+      j: () => Rd,
+      l: () => Fd
     })
   },
-  38390: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Er
+  38469: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => vd
     });
-    var Zr = Qr(38397),
-      Wr = Qr(5779);
-    const ar = [],
-      jr = [],
-      Ir = [],
-      fr = [];
-    for (const pr of Object.keys(Wr.n))(0, Zr.f)(pr) ? ar.push(pr) : (0, Zr.i)(pr) && jr.push(pr), (0, Zr.h)(pr) && Ir.push(pr), (pr.includes(" Bed Head") || pr.includes(" Strongbed Head")) && fr.push(pr);
-    const Er = {
-      leafBeds: ar,
-      woolBeds: jr,
-      strongBeds: Ir,
-      beds: [...ar, ...jr, ...Ir],
-      bedHeads: fr,
+    var Wd = md(38474),
+      Fd = md(5733);
+    const Rd = [],
+      Xd = [],
+      Kd = [],
+      hd = [];
+    for (const Qd of Object.keys(Fd.k))(0, Wd.f)(Qd) ? Rd.push(Qd) : (0, Wd.l)(Qd) && Xd.push(Qd), (0, Wd.j)(Qd) && Kd.push(Qd), (Qd.includes(" Bed Head") || Qd.includes(" Strongbed Head")) && hd.push(Qd);
+    const vd = {
+      leafBeds: Rd,
+      woolBeds: Xd,
+      strongBeds: Kd,
+      beds: [...Rd, ...Xd, ...Kd],
+      bedHeads: hd,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  40079: rr => {
-    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
+  40112: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

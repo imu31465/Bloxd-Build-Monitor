@@ -1,113 +1,113 @@
 export const id = 243;
 export const ids = [243];
 export const modules = {
-  42831: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => jr,
-      g: () => ar
+  42952: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Xd,
+      c: () => Rd
     });
-    var Zr = Qr(2325),
-      Wr = Qr(1127);
+    var Wd = md(2337),
+      Fd = md(1122);
 
-    function ar(rr, Sr) {
-      return null !== rr.gameSource && (0, Zr.n)(Sr, rr.gameSource)
+    function Rd(dd, Od) {
+      return null !== dd.gameSource && (0, Wd.k)(Od, dd.gameSource)
     }
 
-    function jr(rr, Sr) {
-      if (null === rr.gameSource || "" === rr.gameSource || null === Sr) return !0;
-      const Qr = (0, Wr.l)(Sr) ? (0, Wr.q)(Sr) : null;
-      return null !== Qr && ar(rr, Qr)
+    function Xd(dd, Od) {
+      if (null === dd.gameSource || "" === dd.gameSource || null === Od) return !0;
+      const md = (0, Fd.k)(Od) ? (0, Fd.p)(Od) : null;
+      return null !== md && Rd(dd, md)
     }
   },
-  42810: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Ir
+  42926: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Kd
     });
-    var Zr = Qr(679),
-      Wr = Qr(42816),
-      ar = Qr(42694);
-    async function jr(rr) {
-      const Sr = await (0, Wr.i)({
-        Helmet: Qr(39465),
-        Chestplate: Qr(39470),
-        Gauntlets: Qr(39483),
-        Leggings: Qr(39477),
-        Boots: Qr(39479)
-      } [Zr.e[rr]]);
+    var Wd = md(693),
+      Fd = md(42929),
+      Rd = md(42797);
+    async function Xd(dd) {
+      const Od = await (0, Fd.g)({
+        Helmet: md(39520),
+        Chestplate: md(39524),
+        Gauntlets: md(39538),
+        Leggings: md(39526),
+        Boots: md(39534)
+      } [Wd.b[dd]]);
       try {
-        return (0, ar.v)(Sr)
+        return (0, Rd.n)(Od)
       } finally {
-        Sr.close()
+        Od.close()
       }
     }
-    const Ir = new class {
+    const Kd = new class {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : jr,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wr.k;
-        this.decode = rr, this.register = Sr, this.decoded = new Map
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xd,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fd.n;
+        this.decode = dd, this.register = Od, this.decoded = new Map
       }
       warm() {
-        for (let rr = 0; rr < Zr.e.length; rr++) this.part(rr).catch((Sr => {
-          console.warn(`The grayscale armour ${Zr.e[rr]} image didn't decode ahead of use`, Sr)
+        for (let dd = 0; dd < Wd.b.length; dd++) this.part(dd).catch((Od => {
+          console.warn(`The grayscale armour ${Wd.b[dd]} image didn't decode ahead of use`, Od)
         }))
       }
-      async load(rr, Sr) {
+      async load(dd, Od) {
         const {
-          width: Qr,
-          height: ar,
-          pixels: jr
-        } = await this.part(rr), Ir = new ImageData(function(rr, Sr) {
-          const Qr = new Uint8ClampedArray(rr.length);
-          for (let Zr = 0; Zr < rr.length; Zr += 4) Qr[Zr] = Math.round(rr[Zr] * Sr[0] / 255), Qr[Zr + 1] = Math.round(rr[Zr + 1] * Sr[1] / 255), Qr[Zr + 2] = Math.round(rr[Zr + 2] * Sr[2] / 255), Qr[Zr + 3] = rr[Zr + 3];
-          return Qr
-        }(jr, function(rr) {
-          return [rr >>> 16 & 255, rr >>> 8 & 255, 255 & rr]
-        }(Sr)), Qr, ar);
-        let fr;
+          width: md,
+          height: Rd,
+          pixels: Xd
+        } = await this.part(dd), Kd = new ImageData(function(dd, Od) {
+          const md = new Uint8ClampedArray(dd.length);
+          for (let Wd = 0; Wd < dd.length; Wd += 4) md[Wd] = Math.round(dd[Wd] * Od[0] / 255), md[Wd + 1] = Math.round(dd[Wd + 1] * Od[1] / 255), md[Wd + 2] = Math.round(dd[Wd + 2] * Od[2] / 255), md[Wd + 3] = dd[Wd + 3];
+          return md
+        }(Xd, function(dd) {
+          return [dd >>> 16 & 255, dd >>> 8 & 255, 255 & dd]
+        }(Od)), md, Rd);
+        let hd;
         try {
-          fr = await createImageBitmap(Ir, {
+          hd = await createImageBitmap(Kd, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
           })
-        } catch (Er) {
-          throw new Wr.e("decode", `grayscale armour ${Zr.e[rr]}`, {
-            cause: Er
+        } catch (vd) {
+          throw new Fd.e("decode", `grayscale armour ${Wd.b[dd]}`, {
+            cause: vd
           })
         }
         return {
-          id: this.register(fr),
-          width: Qr,
-          height: ar
+          id: this.register(hd),
+          width: md,
+          height: Rd
         }
       }
-      part(rr) {
-        const Sr = this.decoded.get(rr);
-        if (void 0 !== Sr) return Sr;
-        const Qr = this.decode(rr).catch((Sr => {
-          throw this.decoded.delete(rr), Sr instanceof Wr.e ? Sr : new Wr.e("decode", `grayscale armour ${Zr.e[rr]}`, {
-            cause: Sr
+      part(dd) {
+        const Od = this.decoded.get(dd);
+        if (void 0 !== Od) return Od;
+        const md = this.decode(dd).catch((Od => {
+          throw this.decoded.delete(dd), Od instanceof Fd.e ? Od : new Fd.e("decode", `grayscale armour ${Wd.b[dd]}`, {
+            cause: Od
           })
         }));
-        return this.decoded.set(rr, Qr), Qr
+        return this.decoded.set(dd, md), md
       }
     }
   },
-  42805: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => jr,
-      g: () => hr,
-      i: () => pr,
-      l: () => xr,
-      o: () => tr
+  42923: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Xd,
+      e: () => yd,
+      h: () => Qd,
+      l: () => td,
+      n: () => Hd
     });
-    var Zr = Qr(42684),
-      Wr = Qr(42810),
-      ar = Qr(42816);
-    const jr = 396,
-      Ir = 1,
-      fr = 2,
-      Er = 3,
-      pr = {
+    var Wd = md(42779),
+      Fd = md(42926),
+      Rd = md(42929);
+    const Xd = 396,
+      Kd = 1,
+      hd = 2,
+      vd = 3,
+      Qd = {
         Glb: 1,
         LifeformAtlas: 2,
         ArmourAtlas: 3,
@@ -118,37 +118,37 @@ export const modules = {
         BlockImage: 8,
         GreyscaleArmour: 9
       },
-      xr = {
+      td = {
         File: 0,
         Item: 1
       },
-      mr = 0,
-      Nr = 1,
-      Ur = 2;
+      od = 0,
+      Nd = 1,
+      qd = 2;
 
-    function tr(rr) {
-      const Sr = (0, Zr.o)();
-      Sr.catch((() => {}));
-      let Wr = null;
+    function Hd(dd) {
+      const Od = (0, Wd.n)();
+      Od.catch((() => {}));
+      let Fd = null;
       return {
-        glbUrl: rr,
-        lifeformAtlasUrl: async rr => (await Sr).lifeformAtlasUrl(rr),
-        armourAtlasUrl: async () => (await Qr.e(235).then((() => Qr(35587)))).armourAtlasUrl,
-        capeUrl: async rr => (await Sr).capeUrl(rr),
-        attachmentImageUrl: async rr => (await Sr).attachmentImageUrl(rr),
-        blockImageUrl: async rr => (await Sr).blockImageUrl(rr),
-        groupAtlasUrl: async rr => (await Sr).groupAtlasUrl(rr),
-        particleTextureUrl: async rr => (await Sr).particleTextureUrl(rr),
-        particleItemUrl: async rr => (Wr ??= Qr.e(45).then((() => Qr(55213))).catch((rr => {
-          throw Wr = null, rr
-        })), (await Wr).particleItemUrl(rr))
+        glbUrl: dd,
+        lifeformAtlasUrl: async dd => (await Od).lifeformAtlasUrl(dd),
+        armourAtlasUrl: async () => (await md.e(235).then((() => md(35669)))).armourAtlasUrl,
+        capeUrl: async dd => (await Od).capeUrl(dd),
+        attachmentImageUrl: async dd => (await Od).attachmentImageUrl(dd),
+        blockImageUrl: async dd => (await Od).blockImageUrl(dd),
+        groupAtlasUrl: async dd => (await Od).groupAtlasUrl(dd),
+        particleTextureUrl: async dd => (await Od).particleTextureUrl(dd),
+        particleItemUrl: async dd => (Fd ??= md.e(45).then((() => md(55140))).catch((dd => {
+          throw Fd = null, dd
+        })), (await Fd).particleItemUrl(dd))
       }
     }
-    class hr {
-      constructor(rr, Sr) {
-        var Qr, jr, Ir, fr;
-        let Er = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.sources = rr, this.onFailure = Sr, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.vU = !1, this.load = null !== (Qr = Er.load) && void 0 !== Qr ? Qr : (rr, Sr, Qr) => (0, ar.j)(rr, Er.fetchImage, Sr, Qr), this.release = null !== (jr = Er.release) && void 0 !== jr ? jr : ar.m, this.fetchFile = null !== (Ir = Er.fetchFile) && void 0 !== Ir ? Ir : rr => (0, Zr.j)(rr), this.greyscaleArmour = null !== (fr = Er.greyscaleArmour) && void 0 !== fr ? fr : Wr.c
+    class yd {
+      constructor(dd, Od) {
+        var md, Xd, Kd, hd;
+        let vd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.sources = dd, this.onFailure = Od, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.Aq = !1, this.load = null !== (md = vd.load) && void 0 !== md ? md : (dd, Od, md) => (0, Rd.j)(dd, vd.fetchImage, Od, md), this.release = null !== (Xd = vd.release) && void 0 !== Xd ? Xd : Rd.q, this.fetchFile = null !== (Kd = vd.fetchFile) && void 0 !== Kd ? Kd : dd => (0, Wd.i)(dd), this.greyscaleArmour = null !== (hd = vd.greyscaleArmour) && void 0 !== hd ? hd : Fd.d
       }
       get waiting() {
         return this.ready.length
@@ -156,706 +156,706 @@ export const modules = {
       get inFlight() {
         return this.loading.size
       }
-      glbWritten(rr, Sr) {
-        this.glbWrittenImages.set(rr, Br(Sr))
+      glbWritten(dd, Od) {
+        this.glbWrittenImages.set(dd, Ed(Od))
       }
-      glbTaken(rr, Sr) {
-        const Qr = this.glbWrittenImages.get(rr);
-        this.glbWrittenImages.delete(rr), Sr && this.setGlbImages(rr, void 0 !== Qr && Qr.length > 0 ? Qr : void 0)
+      glbTaken(dd, Od) {
+        const md = this.glbWrittenImages.get(dd);
+        this.glbWrittenImages.delete(dd), Od && this.setGlbImages(dd, void 0 !== md && md.length > 0 ? md : void 0)
       }
-      setGlbImages(rr, Sr) {
-        var Qr;
-        this.glbTakenCount.set(rr, (null !== (Qr = this.glbTakenCount.get(rr)) && void 0 !== Qr ? Qr : 0) + 1), void 0 === Sr ? this.glbImages.delete(rr) : this.glbImages.set(rr, Sr);
-        const Zr = [];
+      setGlbImages(dd, Od) {
+        var md;
+        this.glbTakenCount.set(dd, (null !== (md = this.glbTakenCount.get(dd)) && void 0 !== md ? md : 0) + 1), void 0 === Od ? this.glbImages.delete(dd) : this.glbImages.set(dd, Od);
+        const Wd = [];
         for (const {
-            key: Wr
+            key: Fd
           }
-          of this.loading.values()) Wr.kind === pr.Glb && Wr.word === rr && Zr.push(Wr);
-        for (let Wr = this.ready.length - 1; Wr >= 0; Wr--) {
+          of this.loading.values()) Fd.kind === Qd.Glb && Fd.word === dd && Wd.push(Fd);
+        for (let Fd = this.ready.length - 1; Fd >= 0; Fd--) {
           const {
-            key: Sr,
-            id: Qr
-          } = this.ready[Wr];
-          Sr.kind === pr.Glb && Sr.word === rr && (this.ready.splice(Wr, 1), null !== Qr && (this.answered.delete(Qr), this.release(Qr)), Zr.push(Sr))
+            key: Od,
+            id: md
+          } = this.ready[Fd];
+          Od.kind === Qd.Glb && Od.word === dd && (this.ready.splice(Fd, 1), null !== md && (this.answered.delete(md), this.release(md)), Wd.push(Od))
         }
-        this.loadAgain(Zr)
+        this.loadAgain(Wd)
       }
-      onEvent(rr) {
-        if (this.vU) return;
-        const Sr = new DataView(rr.buffer, rr.byteOffset, rr.byteLength);
-        for (let Qr = 0; Qr + 8 <= rr.byteLength; Qr += 8) {
-          const rr = Sr.getUint8(Qr),
-            Zr = Sr.getUint32(Qr + 4, !0);
-          if (rr === Er) {
-            this.answered.delete(Zr), this.release(Zr);
+      onEvent(dd) {
+        if (this.Aq) return;
+        const Od = new DataView(dd.buffer, dd.byteOffset, dd.byteLength);
+        for (let md = 0; md + 8 <= dd.byteLength; md += 8) {
+          const dd = Od.getUint8(md),
+            Wd = Od.getUint32(md + 4, !0);
+          if (dd === vd) {
+            this.answered.delete(Wd), this.release(Wd);
             continue
           }
-          const Wr = {
-            kind: Sr.getUint8(Qr + 1),
-            index: Sr.getUint8(Qr + 2),
-            word: Zr
+          const Fd = {
+            kind: Od.getUint8(md + 1),
+            index: Od.getUint8(md + 2),
+            word: Wd
           };
-          rr === Ir ? this.want(Wr) : rr === fr && this.loading.delete(zr(Wr))
+          dd === Kd ? this.want(Fd) : dd === hd && this.loading.delete(bd(Fd))
         }
       }
-      reload(rr, Sr) {
-        const Qr = Qr => rr.includes(Qr.kind) && (void 0 === Sr || Sr(Qr)),
-          Zr = new Map;
-        for (const Wr of this.answered.values()) Qr(Wr) && Zr.set(zr(Wr), Wr);
-        for (const [Wr, {
-            key: ar
-          }] of this.loading) Qr(ar) && Zr.set(Wr, ar);
-        this.loadAgain(Zr.values())
+      reload(dd, Od) {
+        const md = md => dd.includes(md.kind) && (void 0 === Od || Od(md)),
+          Wd = new Map;
+        for (const Fd of this.answered.values()) md(Fd) && Wd.set(bd(Fd), Fd);
+        for (const [Fd, {
+            key: Rd
+          }] of this.loading) md(Rd) && Wd.set(Fd, Rd);
+        this.loadAgain(Wd.values())
       }
-      loadAgain(rr) {
-        for (const Sr of rr) this.loading.delete(zr(Sr)), this.want(Sr)
+      loadAgain(dd) {
+        for (const Od of dd) this.loading.delete(bd(Od)), this.want(Od)
       }
-      drain(rr) {
-        if (null !== rr)
+      drain(dd) {
+        if (null !== dd)
           for (; this.ready.length > 0;) {
-            if (!rr(jr, 0, this.ready[0].record)) return;
+            if (!dd(Xd, 0, this.ready[0].record)) return;
             this.ready.shift()
           }
       }
       dispose() {
-        this.vU = !0, this.loading.clear(), this.ready.length = 0;
-        for (const rr of this.answered.keys()) this.release(rr);
+        this.Aq = !0, this.loading.clear(), this.ready.length = 0;
+        for (const dd of this.answered.keys()) this.release(dd);
         this.answered.clear()
       }
-      want(rr) {
-        const Sr = zr(rr);
-        if (this.loading.has(Sr)) return;
-        const Qr = {
-          key: rr
+      want(dd) {
+        const Od = bd(dd);
+        if (this.loading.has(Od)) return;
+        const md = {
+          key: dd
         };
-        this.loading.set(Sr, Qr), this.loadKey(rr).then((Zr => {
-          this.vU || this.loading.get(Sr) !== Qr ? this.release(Zr.id) : (this.loading.delete(Sr), this.answered.set(Zr.id, rr), this.ready.push({
-            record: nr(rr, mr, Zr),
-            key: rr,
-            id: Zr.id
+        this.loading.set(Od, md), this.loadKey(dd).then((Wd => {
+          this.Aq || this.loading.get(Od) !== md ? this.release(Wd.id) : (this.loading.delete(Od), this.answered.set(Wd.id, dd), this.ready.push({
+            record: pd(dd, od, Wd),
+            key: dd,
+            id: Wd.id
           }))
-        }), (Zr => {
-          if (this.vU || this.loading.get(Sr) !== Qr) return;
-          this.loading.delete(Sr), this.onFailure({
-            key: rr,
-            error: Zr
+        }), (Wd => {
+          if (this.Aq || this.loading.get(Od) !== md) return;
+          this.loading.delete(Od), this.onFailure({
+            key: dd,
+            error: Wd
           });
-          const Wr = Zr instanceof ar.e && "decode" === Zr.stage ? Nr : Ur;
+          const Fd = Wd instanceof Rd.e && "decode" === Wd.stage ? Nd : qd;
           this.ready.push({
-            record: nr(rr, Wr, null),
-            key: rr,
+            record: pd(dd, Fd, null),
+            key: dd,
             id: null
           })
         }))
       }
-      async loadKey(rr) {
-        switch (rr.kind) {
-          case pr.Glb:
-            return this.load(await this.glbImage(rr), "none");
-          case pr.LifeformAtlas:
-            return this.load(Yr(await this.sources.lifeformAtlasUrl(rr.word), rr), "none", !0);
-          case pr.ArmourAtlas:
-            return this.load(Yr(await this.sources.armourAtlasUrl(), rr), "none");
-          case pr.Cape:
-            return this.load(Yr(await this.sources.capeUrl(rr.word), rr), "none");
-          case pr.AttachmentImage:
-            return this.load(Yr(await this.sources.attachmentImageUrl(rr.word), rr), "none");
-          case pr.GroupAtlas:
-            return this.load(Yr(await this.sources.groupAtlasUrl(rr.word), rr), "none");
-          case pr.BlockImage:
-            return this.load(Yr(await this.sources.blockImageUrl(rr.word), rr), "none");
-          case pr.Particle: {
-            const Sr = await (rr.index === xr.Item ? this.sources.particleItemUrl(rr.word) : this.sources.particleTextureUrl(rr.word));
-            return this.load(Yr(Sr, rr), "flipY")
+      async loadKey(dd) {
+        switch (dd.kind) {
+          case Qd.Glb:
+            return this.load(await this.glbImage(dd), "none");
+          case Qd.LifeformAtlas:
+            return this.load(Td(await this.sources.lifeformAtlasUrl(dd.word), dd), "none", !0);
+          case Qd.ArmourAtlas:
+            return this.load(Td(await this.sources.armourAtlasUrl(), dd), "none");
+          case Qd.Cape:
+            return this.load(Td(await this.sources.capeUrl(dd.word), dd), "none");
+          case Qd.AttachmentImage:
+            return this.load(Td(await this.sources.attachmentImageUrl(dd.word), dd), "none");
+          case Qd.GroupAtlas:
+            return this.load(Td(await this.sources.groupAtlasUrl(dd.word), dd), "none");
+          case Qd.BlockImage:
+            return this.load(Td(await this.sources.blockImageUrl(dd.word), dd), "none");
+          case Qd.Particle: {
+            const Od = await (dd.index === td.Item ? this.sources.particleItemUrl(dd.word) : this.sources.particleTextureUrl(dd.word));
+            return this.load(Td(Od, dd), "flipY")
           }
-          case pr.GreyscaleArmour:
-            return this.greyscaleArmour.load(rr.index, rr.word);
+          case Qd.GreyscaleArmour:
+            return this.greyscaleArmour.load(dd.index, dd.word);
           default:
-            throw new ar.e("fetch", `image kind ${rr.kind}`, {
+            throw new Rd.e("fetch", `image kind ${dd.kind}`, {
               cause: null
             })
         }
       }
-      async glbImage(rr) {
-        var Sr;
-        let Qr = this.glbImages.get(rr.word);
-        if (void 0 === Qr) {
-          const Sr = this.glbTakenCount.get(rr.word),
-            Zr = Yr(await this.sources.glbUrl(rr.word), rr);
+      async glbImage(dd) {
+        var Od;
+        let md = this.glbImages.get(dd.word);
+        if (void 0 === md) {
+          const Od = this.glbTakenCount.get(dd.word),
+            Wd = Td(await this.sources.glbUrl(dd.word), dd);
           try {
-            Qr = Br(await this.fetchFile(Zr))
-          } catch (Wr) {
-            throw new ar.e("fetch", Zr, {
-              cause: Wr
+            md = Ed(await this.fetchFile(Wd))
+          } catch (Fd) {
+            throw new Rd.e("fetch", Wd, {
+              cause: Fd
             })
           }
-          this.glbTakenCount.get(rr.word) === Sr && this.glbImages.set(rr.word, Qr)
+          this.glbTakenCount.get(dd.word) === Od && this.glbImages.set(dd.word, md)
         }
-        const Zr = null === (Sr = Qr) || void 0 === Sr ? void 0 : Sr[rr.index];
-        if (!Zr) throw new ar.e("decode", `image ${rr.index} of file ${2147483647&rr.word}`, {
+        const Wd = null === (Od = md) || void 0 === Od ? void 0 : Od[dd.index];
+        if (!Wd) throw new Rd.e("decode", `image ${dd.index} of file ${2147483647&dd.word}`, {
           cause: null
         });
-        return Zr
+        return Wd
       }
     }
 
-    function zr(rr) {
+    function bd(dd) {
       let {
-        kind: Sr,
-        index: Qr,
-        word: Zr
-      } = rr;
-      return `${Sr}:${Qr}:${Zr}`
+        kind: Od,
+        index: md,
+        word: Wd
+      } = dd;
+      return `${Od}:${md}:${Wd}`
     }
 
-    function Yr(rr, Sr) {
-      if (null === rr) throw new ar.e("fetch", `no URL for image ${zr(Sr)}`, {
+    function Td(dd, Od) {
+      if (null === dd) throw new Rd.e("fetch", `no URL for image ${bd(Od)}`, {
         cause: null
       });
-      return rr
+      return dd
     }
 
-    function nr(rr, Sr, Qr) {
-      var Zr, Wr, ar;
-      const jr = new Uint8Array(16),
-        Ir = new DataView(jr.buffer);
-      return Ir.setUint8(0, rr.kind), Ir.setUint8(1, rr.index), Ir.setUint8(2, Sr), Ir.setUint32(4, rr.word, !0), Ir.setUint32(8, null !== (Zr = null === Qr || void 0 === Qr ? void 0 : Qr.id) && void 0 !== Zr ? Zr : 0, !0), Ir.setUint16(12, Math.min(null !== (Wr = null === Qr || void 0 === Qr ? void 0 : Qr.width) && void 0 !== Wr ? Wr : 0, 65535), !0), Ir.setUint16(14, Math.min(null !== (ar = null === Qr || void 0 === Qr ? void 0 : Qr.height) && void 0 !== ar ? ar : 0, 65535), !0), jr
+    function pd(dd, Od, md) {
+      var Wd, Fd, Rd;
+      const Xd = new Uint8Array(16),
+        Kd = new DataView(Xd.buffer);
+      return Kd.setUint8(0, dd.kind), Kd.setUint8(1, dd.index), Kd.setUint8(2, Od), Kd.setUint32(4, dd.word, !0), Kd.setUint32(8, null !== (Wd = null === md || void 0 === md ? void 0 : md.id) && void 0 !== Wd ? Wd : 0, !0), Kd.setUint16(12, Math.min(null !== (Fd = null === md || void 0 === md ? void 0 : md.width) && void 0 !== Fd ? Fd : 0, 65535), !0), Kd.setUint16(14, Math.min(null !== (Rd = null === md || void 0 === md ? void 0 : md.height) && void 0 !== Rd ? Rd : 0, 65535), !0), Xd
     }
-    const er = 1179937895,
-      Kr = 1313821514,
-      yr = 5130562;
+    const Yd = 1179937895,
+      gd = 1313821514,
+      wd = 5130562;
 
-    function Br(rr) {
-      var Sr;
-      const Qr = new DataView(rr.buffer, rr.byteOffset, rr.byteLength);
-      if (rr.byteLength < 20 || Qr.getUint32(0, !0) !== er || Qr.getUint32(16, !0) !== Kr) return [];
-      let Zr, Wr = 20 + Qr.getUint32(12, !0);
+    function Ed(dd) {
+      var Od;
+      const md = new DataView(dd.buffer, dd.byteOffset, dd.byteLength);
+      if (dd.byteLength < 20 || md.getUint32(0, !0) !== Yd || md.getUint32(16, !0) !== gd) return [];
+      let Wd, Fd = 20 + md.getUint32(12, !0);
       try {
-        Zr = JSON.parse((new TextDecoder).decode(rr.subarray(20, Wr)))
+        Wd = JSON.parse((new TextDecoder).decode(dd.subarray(20, Fd)))
       } catch {
         return []
       }
-      for (; Wr + 8 <= rr.byteLength && Qr.getUint32(Wr + 4, !0) !== yr;) Wr += 8 + Qr.getUint32(Wr, !0);
-      const ar = null !== (Sr = Zr.images) && void 0 !== Sr ? Sr : [];
-      if (0 === ar.length || Wr + 8 > rr.byteLength) return ar.map((() => null));
-      const jr = rr.subarray(Wr + 8, Math.min(rr.byteLength, Wr + 8 + Qr.getUint32(Wr, !0)));
-      return ar.map((rr => {
-        var Sr, Qr, Wr;
-        const ar = void 0 === rr.bufferView || null === (Sr = Zr.bufferViews) || void 0 === Sr ? void 0 : Sr[rr.bufferView];
-        if (!ar || 0 !== (null !== (Qr = ar.buffer) && void 0 !== Qr ? Qr : 0) || void 0 === ar.byteLength) return null;
-        const Ir = null !== (Wr = ar.byteOffset) && void 0 !== Wr ? Wr : 0,
-          fr = Ir + ar.byteLength;
-        return fr <= jr.byteLength ? jr.slice(Ir, fr) : null
+      for (; Fd + 8 <= dd.byteLength && md.getUint32(Fd + 4, !0) !== wd;) Fd += 8 + md.getUint32(Fd, !0);
+      const Rd = null !== (Od = Wd.images) && void 0 !== Od ? Od : [];
+      if (0 === Rd.length || Fd + 8 > dd.byteLength) return Rd.map((() => null));
+      const Xd = dd.subarray(Fd + 8, Math.min(dd.byteLength, Fd + 8 + md.getUint32(Fd, !0)));
+      return Rd.map((dd => {
+        var Od, md, Fd;
+        const Rd = void 0 === dd.bufferView || null === (Od = Wd.bufferViews) || void 0 === Od ? void 0 : Od[dd.bufferView];
+        if (!Rd || 0 !== (null !== (md = Rd.buffer) && void 0 !== md ? md : 0) || void 0 === Rd.byteLength) return null;
+        const Kd = null !== (Fd = Rd.byteOffset) && void 0 !== Fd ? Fd : 0,
+          hd = Kd + Rd.byteLength;
+        return hd <= Xd.byteLength ? Xd.slice(Kd, hd) : null
       }))
     }
   },
-  42820: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => pr,
-      e: () => ar,
-      h: () => xr,
-      i: () => jr
+  42938: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Qd,
+      g: () => Rd,
+      j: () => td,
+      l: () => Xd
     });
-    var Zr = Qr(42805),
-      Wr = Qr(42684);
-    const ar = new class {
+    var Wd = md(42923),
+      Fd = md(42779);
+    const Rd = new class {
       constructor() {
         this.page = null, this.session = void 0, this.follower = null, this.isWanted = !1, this.listeners = new Set, this.pageListeners = new Set, this.wantedListeners = new Set
       }
       get current() {
         return void 0 === this.session ? this.page : this.session
       }
-      setPageFiles(rr) {
+      setPageFiles(dd) {
         this.change((() => {
-          this.page = rr
+          this.page = dd
         }))
       }
-      setSessionFiles(rr) {
-        const Sr = void 0 !== this.session && void 0 === rr;
+      setSessionFiles(dd) {
+        const Od = void 0 !== this.session && void 0 === dd;
         if (this.change((() => {
-            this.session = rr
-          })), Sr)
-          for (const Qr of [...this.pageListeners]) Qr()
+            this.session = dd
+          })), Od)
+          for (const md of [...this.pageListeners]) md()
       }
       showsPage() {
         return void 0 === this.session
       }
-      onPageShown(rr) {
-        return this.pageListeners.add(rr), () => {
-          this.pageListeners.delete(rr)
+      onPageShown(dd) {
+        return this.pageListeners.add(dd), () => {
+          this.pageListeners.delete(dd)
         }
       }
-      setFollower(rr) {
-        this.follower = rr, this.startFollower()
+      setFollower(dd) {
+        this.follower = dd, this.startFollower()
       }
       wanted() {
         this.isWanted = !0;
-        for (const rr of [...this.wantedListeners]) rr();
+        for (const dd of [...this.wantedListeners]) dd();
         this.startFollower()
       }
-      onWanted(rr) {
-        return this.wantedListeners.add(rr), () => {
-          this.wantedListeners.delete(rr)
+      onWanted(dd) {
+        return this.wantedListeners.add(dd), () => {
+          this.wantedListeners.delete(dd)
         }
       }
-      onChange(rr) {
-        return this.listeners.add(rr), () => {
-          this.listeners.delete(rr)
+      onChange(dd) {
+        return this.listeners.add(dd), () => {
+          this.listeners.delete(dd)
         }
       }
       startFollower() {
-        const rr = this.follower;
-        this.isWanted && null !== rr && (this.follower = null, rr((() => {
-          this.follower = rr
+        const dd = this.follower;
+        this.isWanted && null !== dd && (this.follower = null, dd((() => {
+          this.follower = dd
         })))
       }
-      change(rr) {
-        const Sr = this.current;
-        if (rr(), this.current !== Sr)
-          for (const Qr of this.listeners) Qr()
+      change(dd) {
+        const Od = this.current;
+        if (dd(), this.current !== Od)
+          for (const md of this.listeners) md()
       }
     };
 
-    function jr(rr, Sr) {
+    function Xd(dd, Od) {
       return {
-        ...rr,
+        ...dd,
         armourAtlasUrl: () => {
-          var Qr, Zr;
-          return null !== (Qr = null === (Zr = Sr()) || void 0 === Zr ? void 0 : Zr.armourAtlasUrl()) && void 0 !== Qr ? Qr : rr.armourAtlasUrl()
+          var md, Wd;
+          return null !== (md = null === (Wd = Od()) || void 0 === Wd ? void 0 : Wd.armourAtlasUrl()) && void 0 !== md ? md : dd.armourAtlasUrl()
         },
-        lifeformAtlasUrl: Qr => fr(Sr(), (rr => rr.LIFEFORM_ATLAS_PATHS[Qr]), (() => rr.lifeformAtlasUrl(Qr))),
-        groupAtlasUrl: Qr => fr(Sr(), (rr => rr.GROUP_ATLAS_PATHS[Qr]), (() => rr.groupAtlasUrl(Qr))),
-        particleItemUrl: Zr => Er(Sr(), (async () => {
-          const rr = await Qr.e(45).then((() => Qr(55213))).catch((() => null));
-          return (null === rr || void 0 === rr ? void 0 : rr.particleItemSprite(Zr)) || null
-        }), (() => rr.particleItemUrl(Zr))),
-        blockImageUrl: Qr => Er(Sr(), (async () => {
-          var rr, Sr;
-          return null !== (rr = null === (Sr = await Ir()) || void 0 === Sr ? void 0 : Sr.blockImageName(Qr)) && void 0 !== rr ? rr : null
-        }), (() => rr.blockImageUrl(Qr)))
+        lifeformAtlasUrl: md => hd(Od(), (dd => dd.LIFEFORM_ATLAS_PATHS[md]), (() => dd.lifeformAtlasUrl(md))),
+        groupAtlasUrl: md => hd(Od(), (dd => dd.GROUP_ATLAS_PATHS[md]), (() => dd.groupAtlasUrl(md))),
+        particleItemUrl: Wd => vd(Od(), (async () => {
+          const dd = await md.e(45).then((() => md(55140))).catch((() => null));
+          return (null === dd || void 0 === dd ? void 0 : dd.particleItemSprite(Wd)) || null
+        }), (() => dd.particleItemUrl(Wd))),
+        blockImageUrl: md => vd(Od(), (async () => {
+          var dd, Od;
+          return null !== (dd = null === (Od = await Kd()) || void 0 === Od ? void 0 : Od.blockImageName(md)) && void 0 !== dd ? dd : null
+        }), (() => dd.blockImageUrl(md)))
       }
     }
 
-    function Ir() {
-      return (0, Wr.o)().catch((() => null))
+    function Kd() {
+      return (0, Fd.n)().catch((() => null))
     }
 
-    function fr(rr, Sr, Qr) {
-      return Er(rr, (async () => {
-        var rr;
-        const Qr = await Ir(),
-          Zr = null === Qr ? null : Sr(Qr),
-          Wr = null !== (rr = null === Zr || void 0 === Zr ? void 0 : Zr.slice(Zr.lastIndexOf("/") + 1)) && void 0 !== rr ? rr : null;
-        return "Player_Atlas" === Wr ? null : Wr
-      }), Qr)
+    function hd(dd, Od, md) {
+      return vd(dd, (async () => {
+        var dd;
+        const md = await Kd(),
+          Wd = null === md ? null : Od(md),
+          Fd = null !== (dd = null === Wd || void 0 === Wd ? void 0 : Wd.slice(Wd.lastIndexOf("/") + 1)) && void 0 !== dd ? dd : null;
+        return "Player_Atlas" === Fd ? null : Fd
+      }), md)
     }
-    async function Er(rr, Sr, Qr) {
-      if (null !== rr) {
-        const Qr = await Sr(),
-          Zr = null === Qr ? null : rr.textureUrl(Qr);
-        if (null !== Zr) return Zr
+    async function vd(dd, Od, md) {
+      if (null !== dd) {
+        const md = await Od(),
+          Wd = null === md ? null : dd.textureUrl(md);
+        if (null !== Wd) return Wd
       }
-      return Qr()
+      return md()
     }
-    const pr = 0;
+    const Qd = 0;
 
-    function xr(rr) {
-      const Sr = [Zr.i.ArmourAtlas, Zr.i.LifeformAtlas, Zr.i.GroupAtlas, Zr.i.BlockImage, Zr.i.Particle];
-      rr.reload(Sr, (rr => {
-        switch (rr.kind) {
-          case Zr.i.Particle:
-            return rr.index === Zr.l.Item;
-          case Zr.i.LifeformAtlas:
-            return rr.word !== pr;
+    function td(dd) {
+      const Od = [Wd.h.ArmourAtlas, Wd.h.LifeformAtlas, Wd.h.GroupAtlas, Wd.h.BlockImage, Wd.h.Particle];
+      dd.reload(Od, (dd => {
+        switch (dd.kind) {
+          case Wd.h.Particle:
+            return dd.index === Wd.l.Item;
+          case Wd.h.LifeformAtlas:
+            return dd.word !== Qd;
           default:
             return !0
         }
       }))
     }
   },
-  42746: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Zr,
-      f: () => Ir,
-      h: () => Wr,
-      i: () => ar
+  42849: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd,
+      i: () => Kd,
+      k: () => Fd,
+      m: () => Rd
     });
-    const Zr = 1e3;
+    const Wd = 1e3;
 
-    function Wr() {
-      fr((() => {
+    function Fd() {
+      hd((() => {
         window.location.reload()
       }))
     }
 
-    function ar() {
+    function Rd() {
       return new Promise((() => {}))
     }
 
-    function jr(rr) {
-      fr((() => {
-        window.location.replace(rr(window.location.href))
+    function Xd(dd) {
+      hd((() => {
+        window.location.replace(dd(window.location.href))
       }))
     }
 
-    function Ir(rr) {
-      Promise.resolve().then((() => Qr(120))).then((Sr => {
+    function Kd(dd) {
+      Promise.resolve().then((() => md(118))).then((Od => {
         let {
-          currentUrl: Qr
-        } = Sr;
-        jr((() => Qr.mergeSearchParamsInto(rr)))
+          currentUrl: md
+        } = Od;
+        Xd((() => md.mergeSearchParamsInto(dd)))
       }), (() => {
-        jr((() => rr))
+        Xd((() => dd))
       }))
     }
 
-    function fr(rr) {
-      null !== window.onbeforeunload ? Promise.resolve().then((() => Qr(1885))).then((Sr => {
+    function hd(dd) {
+      null !== window.onbeforeunload ? Promise.resolve().then((() => md(1890))).then((Od => {
         let {
-          prepareForUnloadWithoutConfirmation: Qr
-        } = Sr;
+          prepareForUnloadWithoutConfirmation: md
+        } = Od;
         try {
-          Qr()
-        } catch (Zr) {
-          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", Zr), window.onbeforeunload = null
+          md()
+        } catch (Wd) {
+          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", Wd), window.onbeforeunload = null
         }
-        rr()
+        dd()
       }), (() => {
-        window.onbeforeunload = null, rr()
-      })) : rr()
+        window.onbeforeunload = null, dd()
+      })) : dd()
     }
   },
-  37587: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => hr,
-      d: () => pr,
-      f: () => Nr,
-      i: () => xr,
-      k: () => zr,
-      l: () => Ur,
-      p: () => tr,
-      s: () => mr
+  37709: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => yd,
+      d: () => Qd,
+      g: () => Nd,
+      h: () => td,
+      l: () => bd,
+      p: () => qd,
+      r: () => Hd,
+      s: () => od
     });
-    const Zr = 30,
-      Wr = 4;
-    let ar = 0,
-      jr = !1,
-      Ir = !1,
-      fr = Number.NEGATIVE_INFINITY,
-      Er = [];
+    const Wd = 30,
+      Fd = 4;
+    let Rd = 0,
+      Xd = !1,
+      Kd = !1,
+      hd = Number.NEGATIVE_INFINITY,
+      vd = [];
 
-    function pr() {
-      0 === ar && (jr = !1, Ir = !1), ar++;
-      let rr = !1;
+    function Qd() {
+      0 === Rd && (Xd = !1, Kd = !1), Rd++;
+      let dd = !1;
       return () => {
-        rr || (rr = !0, ar--)
+        dd || (dd = !0, Rd--)
       }
     }
 
-    function xr(rr) {
-      rr && (Ir = !0)
+    function td(dd) {
+      dd && (Kd = !0)
     }
 
-    function mr() {
-      return Ir
+    function od() {
+      return Kd
     }
 
-    function Nr(rr) {
-      jr = rr
+    function Nd(dd) {
+      Xd = dd
     }
 
-    function Ur() {
-      return ar > 0
+    function qd() {
+      return Rd > 0
     }
 
-    function tr(rr) {
-      return !(ar > 0 && (jr || rr - fr < 1e3 / Zr - Wr)) && (fr = rr, !0)
+    function Hd(dd) {
+      return !(Rd > 0 && (Xd || dd - hd < 1e3 / Wd - Fd)) && (hd = dd, !0)
     }
 
-    function hr(rr) {
-      return Er.push(rr), () => {
-        Er = Er.filter((Sr => Sr !== rr))
+    function yd(dd) {
+      return vd.push(dd), () => {
+        vd = vd.filter((Od => Od !== dd))
       }
     }
 
-    function zr() {
-      if (0 === Er.length) return;
-      const rr = Er;
-      Er = [];
-      for (const Qr of rr) try {
-        Qr()
-      } catch (Sr) {
-        console.warn("[bloxd-previews] an after-draw callback threw", Sr)
+    function bd() {
+      if (0 === vd.length) return;
+      const dd = vd;
+      vd = [];
+      for (const md of dd) try {
+        md()
+      } catch (Od) {
+        console.warn("[bloxd-previews] an after-draw callback threw", Od)
       }
     }
   },
-  42753: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => yr,
-      g: () => mr,
-      k: () => nr,
-      n: () => Kr,
-      q: () => er,
-      s: () => Br
+  42861: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => wd,
+      f: () => od,
+      h: () => pd,
+      l: () => gd,
+      n: () => Yd,
+      o: () => Ed
     });
-    var Zr = Qr(181),
-      Wr = Qr(26),
-      ar = Qr(34),
-      jr = Qr(3995),
-      Ir = Qr(1364),
-      fr = Qr(35386),
-      Er = Qr(319),
-      pr = Qr(109),
-      xr = Qr(174);
+    var Wd = md(200),
+      Fd = md(29),
+      Rd = md(32),
+      Xd = md(3973),
+      Kd = md(1361),
+      hd = md(35471),
+      vd = md(339),
+      Qd = md(107),
+      td = md(191);
 
-    function mr() {
-      var rr;
-      const Sr = (0, jr.J)(),
-        Qr = function(rr, Sr) {
+    function od() {
+      var dd;
+      const Od = (0, Xd.K)(),
+        md = function(dd, Od) {
           return {
-            sampleCount: rr.antiAliasing ? 4 : 1,
-            n: (0, jr.y)(rr.pixelScale, Sr),
-            pixelated: (0, jr.v)(rr.pixelSmoothing)
+            sampleCount: dd.antiAliasing ? 4 : 1,
+            n: (0, Xd.y)(dd.pixelScale, Od),
+            pixelated: (0, Xd.u)(dd.pixelSmoothing)
           }
-        }(Wr.c.get("clientEscMenuOptions"), Sr);
-      return Qr.sampleCount > 1 && (0, fr.c)() && (Qr.sampleCount = 1), Qr.n = null !== (rr = (0, fr.n)()) && void 0 !== rr ? rr : Qr.n, Zr.i.includes((0, pr.getSoftwareRenderer)()) && (Qr.sampleCount = 1, Qr.n = Math.max(Qr.n, (0, jr.y)(xr.l.pixelScale, Sr))), Qr
+        }(Fd.e.get("clientEscMenuOptions"), Od);
+      return md.sampleCount > 1 && (0, hd.d)() && (md.sampleCount = 1), md.n = null !== (dd = (0, hd.m)()) && void 0 !== dd ? dd : md.n, Wd.l.includes((0, Qd.getSoftwareRenderer)()) && (md.sampleCount = 1, md.n = Math.max(md.n, (0, Xd.y)(td.r.pixelScale, Od))), md
     }
-    let Nr = null,
-      Ur = null;
-    const tr = new Set;
-    let hr = null;
+    let Nd = null,
+      qd = null;
+    const Hd = new Set;
+    let yd = null;
 
-    function zr() {
-      for (const rr of tr) rr()
+    function bd() {
+      for (const dd of Hd) dd()
     }
 
-    function Yr() {
-      if (null === Nr) {
-        const rr = document.createElement("div");
-        rr.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none", rr.setAttribute("aria-hidden", "true"), document.body.append(rr), Ur = rr, Nr = new jr.d(rr, zr)
+    function Td() {
+      if (null === Nd) {
+        const dd = document.createElement("div");
+        dd.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none", dd.setAttribute("aria-hidden", "true"), document.body.append(dd), qd = dd, Nd = new Xd.b(dd, bd)
       }
-      return Nr
+      return Nd
     }
 
-    function nr(rr) {
-      const Sr = (0, jr.m)(),
-        [Qr, Zr] = Yr().size(Sr);
-      return (0, jr.i)(Qr, Zr, Sr, rr.n)
+    function pd(dd) {
+      const Od = (0, Xd.m)(),
+        [md, Wd] = Td().size(Od);
+      return (0, Xd.i)(md, Wd, Od, dd.n)
     }
 
-    function er(rr) {
-      var Sr, Qr, Zr, Wr;
-      const ar = (0, jr.m)(),
-        [fr, Er] = Yr().size(ar);
-      if (fr <= 0 || Er <= 0) return null;
-      const pr = (0, jr.i)(fr, Er, ar, mr().n);
-      return (0, jr.g)(rr, pr), rr.style.left = `${null!==(Sr=null===(Qr=hr)||void 0===Qr?void 0:Qr.rect.left)&&void 0!==Sr?Sr:0}px`, rr.style.top = `${null!==(Zr=null===(Wr=hr)||void 0===Wr?void 0:Wr.rect.top)&&void 0!==Zr?Zr:0}px`, (0, Ir.cb)(rr.style, hr), pr
+    function Yd(dd) {
+      var Od, md, Wd, Fd;
+      const Rd = (0, Xd.m)(),
+        [hd, vd] = Td().size(Rd);
+      if (hd <= 0 || vd <= 0) return null;
+      const Qd = (0, Xd.i)(hd, vd, Rd, od().n);
+      return (0, Xd.e)(dd, Qd), dd.style.left = `${null!==(Od=null===(md=yd)||void 0===md?void 0:md.rect.left)&&void 0!==Od?Od:0}px`, dd.style.top = `${null!==(Wd=null===(Fd=yd)||void 0===Fd?void 0:Fd.rect.top)&&void 0!==Wd?Wd:0}px`, (0, Kd.cb)(dd.style, yd), Qd
     }
 
-    function Kr(rr) {
-      hr = rr, Yr(), (0, Ir.X)(Ur.style, rr, ""), zr()
+    function gd(dd) {
+      yd = dd, Td(), (0, Kd.Z)(qd.style, dd, ""), bd()
     }
 
-    function yr(rr, Sr) {
-      rr.style.imageRendering = (0, jr.K)(Sr.pixelated)
+    function wd(dd, Od) {
+      dd.style.imageRendering = (0, Xd.O)(Od.pixelated)
     }
 
-    function Br(rr, Sr) {
-      const Qr = (0, ar.j)("appManagerUpdated|clientEscMenuOptions", (() => {
-          yr(rr, mr()), Sr()
+    function Ed(dd, Od) {
+      const md = (0, Rd.l)("appManagerUpdated|clientEscMenuOptions", (() => {
+          wd(dd, od()), Od()
         })),
-        Zr = (0, fr.A)(Sr),
-        Wr = (0, Er.q)(Sr);
-      return Yr(), tr.add(Sr), () => {
-        Qr(), Zr(), Wr(), tr.delete(Sr)
+        Wd = (0, hd.A)(Od),
+        Fd = (0, vd.m)(Od);
+      return Td(), Hd.add(Od), () => {
+        md(), Wd(), Fd(), Hd.delete(Od)
       }
     }
   },
-  42827: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar
+  42946: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Rd
     });
-    var Zr = Qr(42831),
-      Wr = Qr(42820);
-    const ar = new class {
-      constructor(rr) {
-        this.pack = rr, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, rr.onWanted((() => {
+    var Wd = md(42952),
+      Fd = md(42938);
+    const Rd = new class {
+      constructor(dd) {
+        this.pack = dd, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, dd.onWanted((() => {
           this.release()
         }))
       }
-      setGame(rr) {
-        if (void 0 === rr && null !== this.hold) return void(this.endedWhileHeld = !0);
+      setGame(dd) {
+        if (void 0 === dd && null !== this.hold) return void(this.endedWhileHeld = !0);
         this.hold = null, this.endedWhileHeld = !1;
-        const Sr = this.inGame();
-        if (this.game = rr, this.update(), this.inGame() !== Sr)
-          for (const Qr of this.gameListeners) Qr()
+        const Od = this.inGame();
+        if (this.game = dd, this.update(), this.inGame() !== Od)
+          for (const md of this.gameListeners) md()
       }
       inGame() {
         return void 0 !== this.game
       }
-      onGameChange(rr) {
-        return this.gameListeners.add(rr), () => {
-          this.gameListeners.delete(rr)
+      onGameChange(dd) {
+        return this.gameListeners.add(dd), () => {
+          this.gameListeners.delete(dd)
         }
       }
-      unwantedLeave(rr) {
-        rr && void 0 !== this.game ? this.hold = {
+      unwantedLeave(dd) {
+        dd && void 0 !== this.game ? this.hold = {
           game: this.game
         } : this.release()
       }
       rejoinHold() {
         return this.hold
       }
-      releaseHold(rr) {
-        null !== rr && rr === this.hold && this.release()
+      releaseHold(dd) {
+        null !== dd && dd === this.hold && this.release()
       }
       release() {
         if (null === this.hold) return;
-        const rr = this.endedWhileHeld;
-        this.hold = null, this.endedWhileHeld = !1, rr && this.setGame(void 0)
+        const dd = this.endedWhileHeld;
+        this.hold = null, this.endedWhileHeld = !1, dd && this.setGame(void 0)
       }
-      setSettled(rr) {
-        this.settle = rr, this.update()
+      setSettled(dd) {
+        this.settle = dd, this.update()
       }
       update() {
-        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, Zr.d)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
+        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, Wd.b)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
       }
-    }(Wr.e)
+    }(Fd.g)
   },
-  42816: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Ir,
-      g: () => tr,
-      i: () => fr,
-      j: () => er,
-      k: () => nr,
-      m: () => Kr
+  42929: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Kd,
+      f: () => Hd,
+      g: () => hd,
+      j: () => Yd,
+      n: () => pd,
+      q: () => gd
     });
-    var Zr = Qr(2398);
-    const Wr = 8388608,
-      ar = 1e3,
-      jr = 3e4;
-    class Ir extends Error {
-      constructor(rr, Sr, Qr) {
-        super(`${"fetch"===rr?"fetching":"decoding"} ${Sr} failed`, Qr), this.stage = rr, this.source = Sr, this.name = "ShellImageError"
+    var Wd = md(2425);
+    const Fd = 8388608,
+      Rd = 1e3,
+      Xd = 3e4;
+    class Kd extends Error {
+      constructor(dd, Od, md) {
+        super(`${"fetch"===dd?"fetching":"decoding"} ${Od} failed`, md), this.stage = dd, this.source = Od, this.name = "ShellImageError"
       }
     }
-    async function fr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Zr.K,
-        Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
-      return pr(await Er(rr, Sr), "string" === typeof rr ? rr : null, Qr)
+    async function hd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wd.J,
+        md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
+      return Qd(await vd(dd, Od), "string" === typeof dd ? dd : null, md)
     }
-    async function Er(rr, Sr) {
-      if ("string" !== typeof rr) return rr;
+    async function vd(dd, Od) {
+      if ("string" !== typeof dd) return dd;
       try {
-        return await Sr(rr)
-      } catch (Qr) {
-        throw new Ir("fetch", rr, {
-          cause: Qr
+        return await Od(dd)
+      } catch (md) {
+        throw new Kd("fetch", dd, {
+          cause: md
         })
       }
     }
-    async function pr(rr, Sr, Qr) {
+    async function Qd(dd, Od, md) {
       try {
-        const Sr = new Blob([rr.slice()], {
+        const Od = new Blob([dd.slice()], {
           type: "image/png"
         });
-        return await createImageBitmap(Sr, {
+        return await createImageBitmap(Od, {
           premultiplyAlpha: "none",
           colorSpaceConversion: "none",
-          imageOrientation: Qr
+          imageOrientation: md
         })
-      } catch (Zr) {
-        throw new Ir("decode", null !== Sr && void 0 !== Sr ? Sr : `${rr.byteLength} bytes`, {
-          cause: Zr
+      } catch (Wd) {
+        throw new Kd("decode", null !== Od && void 0 !== Od ? Od : `${dd.byteLength} bytes`, {
+          cause: Wd
         })
       }
     }
-    let xr = null;
-    const mr = new Map;
-    let Nr = 1;
-    const Ur = new Map;
+    let td = null;
+    const od = new Map;
+    let Nd = 1;
+    const qd = new Map;
 
-    function tr(rr) {
-      var Sr;
-      if (xr = rr, null !== rr) {
-        null === (Sr = rr.BWr) || void 0 === Sr || Sr.call(rr, Yr);
-        for (const [Sr, Qr] of mr) hr(rr, Sr, Qr);
-        mr.clear()
+    function Hd(dd) {
+      var Od;
+      if (td = dd, null !== dd) {
+        null === (Od = dd.ORd) || void 0 === Od || Od.call(dd, Td);
+        for (const [Od, md] of od) yd(dd, Od, md);
+        od.clear()
       }
     }
 
-    function hr(rr, Sr, Qr) {
-      Ur.has(Sr) && void 0 !== rr.yWr ? rr.yWr(Sr, Qr) : rr.eWr(Sr, Qr)
+    function yd(dd, Od, md) {
+      qd.has(Od) && void 0 !== dd.dRd ? dd.dRd(Od, md) : dd.fFd(Od, md)
     }
 
-    function zr(rr, Sr) {
-      xr ? hr(xr, rr, Sr) : mr.set(rr, Sr)
+    function bd(dd, Od) {
+      td ? yd(td, dd, Od) : od.set(dd, Od)
     }
 
-    function Yr(rr) {
-      const Sr = Ur.get(rr);
-      void 0 === Sr || Sr.decoding || (Sr.decoding = !0, pr(Sr.bytes, Sr.url, Sr.orientation).then((Qr => {
-        Sr.decoding = !1, Ur.get(rr) === Sr ? (Sr.failures = 0, zr(rr, Qr)) : Qr.close()
-      }), (Qr => {
-        Sr.decoding = !1, Sr.failures++, 1 === Sr.failures && console.warn(`shellImages: decoding image ${rr} again failed; trying again until it decodes`, Qr), setTimeout((() => {
-          Yr(rr)
-        }), Math.min(ar * 2 ** (Sr.failures - 1), jr))
+    function Td(dd) {
+      const Od = qd.get(dd);
+      void 0 === Od || Od.decoding || (Od.decoding = !0, Qd(Od.bytes, Od.url, Od.orientation).then((md => {
+        Od.decoding = !1, qd.get(dd) === Od ? (Od.failures = 0, bd(dd, md)) : md.close()
+      }), (md => {
+        Od.decoding = !1, Od.failures++, 1 === Od.failures && console.warn(`shellImages: decoding image ${dd} again failed; trying again until it decodes`, md), setTimeout((() => {
+          Td(dd)
+        }), Math.min(Rd * 2 ** (Od.failures - 1), Xd))
       })))
     }
 
-    function nr(rr) {
-      const Sr = Nr++;
-      return zr(Sr, rr), Sr
+    function pd(dd) {
+      const Od = Nd++;
+      return bd(Od, dd), Od
     }
-    async function er(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Zr.K,
-        Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none",
-        ar = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const jr = "string" === typeof rr ? rr : null,
-        Ir = await Er(rr, Sr),
-        fr = await pr(Ir, jr, Qr),
+    async function Yd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wd.J,
+        md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none",
+        Rd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const Xd = "string" === typeof dd ? dd : null,
+        Kd = await vd(dd, Od),
+        hd = await Qd(Kd, Xd, md),
         {
-          width: xr,
-          height: mr
-        } = fr,
-        tr = Nr++;
-      return ar && xr * mr * 4 >= Wr && Ur.set(tr, {
-        bytes: Ir.slice(),
-        url: jr,
-        orientation: Qr,
+          width: td,
+          height: od
+        } = hd,
+        Hd = Nd++;
+      return Rd && td * od * 4 >= Fd && qd.set(Hd, {
+        bytes: Kd.slice(),
+        url: Xd,
+        orientation: md,
         decoding: !1,
         failures: 0
-      }), zr(tr, fr), {
-        id: tr,
-        width: xr,
-        height: mr
+      }), bd(Hd, hd), {
+        id: Hd,
+        width: td,
+        height: od
       }
     }
 
-    function Kr(rr) {
-      var Sr;
-      Ur.delete(rr);
-      const Qr = mr.get(rr);
-      if (Qr) return Qr.close(), void mr.delete(rr);
-      null === (Sr = xr) || void 0 === Sr || Sr.KWr(rr)
+    function gd(dd) {
+      var Od;
+      qd.delete(dd);
+      const md = od.get(dd);
+      if (md) return md.close(), void od.delete(dd);
+      null === (Od = td) || void 0 === Od || Od.MFd(dd)
     }
   },
-  39479: rr => {
-    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  39534: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  39470: rr => {
-    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  39524: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  39483: rr => {
-    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  39538: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  39465: rr => {
-    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  39520: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  39477: rr => {
-    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  39526: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

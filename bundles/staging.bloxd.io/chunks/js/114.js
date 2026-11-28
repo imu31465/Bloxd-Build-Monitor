@@ -1,341 +1,341 @@
 export const id = 114;
 export const ids = [114];
 export const modules = {
-  5695: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => wr
+  5661: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => ed
     });
-    var Zr = Qr(72),
-      Wr = Qr(1653),
-      ar = Qr(379),
-      jr = Qr(1283),
-      Ir = Qr(1743),
-      fr = Qr(1321),
-      Er = Qr(1675),
-      pr = Qr(1629),
-      xr = Qr(3733);
-    const mr = {
+    var Wd = md(66),
+      Fd = md(1650),
+      Rd = md(405),
+      Xd = md(1295),
+      Kd = md(1739),
+      hd = md(1322),
+      vd = md(1670),
+      Qd = md(1627),
+      td = md(3742);
+    const od = {
       retries: 2,
       minTimeout: 2e3
     };
-    var Nr = Qr(1171),
-      Ur = Qr(1738),
-      tr = Qr(1181),
-      hr = Qr(2057),
-      zr = Qr(1251),
-      Yr = Qr(1279),
-      nr = Qr(4743),
-      er = Qr(1444),
-      Kr = Qr(1576),
-      yr = Qr(1644),
-      Br = Qr(3672),
-      Tr = Qr(3686),
-      vr = Qr(5698),
-      Or = Qr(3045),
-      Lr = Qr(1155),
-      lr = Qr.n(Lr),
-      Xr = Qr(1448),
-      Pr = Qr(5707),
-      Hr = Qr(26),
-      qr = Qr(2089),
-      Rr = Qr(4881),
-      gr = Qr(2168),
-      Cr = Qr(4849),
-      Mr = Qr(109),
-      Gr = Qr(5320),
-      kr = Qr(1338);
-    const Ar = [vr];
+    var Nd = md(1170),
+      qd = md(1731),
+      Hd = md(1186),
+      yd = md(2060),
+      bd = md(1238),
+      Td = md(1286),
+      pd = md(4711),
+      Yd = md(1436),
+      gd = md(1572),
+      wd = md(1641),
+      Ed = md(3684),
+      Jd = md(3705),
+      Ud = md(5666),
+      xd = md(3044),
+      Bd = md(1155),
+      Sd = md.n(Bd),
+      sd = md(1443),
+      ud = md(5670),
+      Vd = md(29),
+      Ad = md(2092),
+      rd = md(4853),
+      Gd = md(2167),
+      nd = md(4832),
+      Ld = md(107),
+      Pd = md(5220),
+      zd = md(1341);
+    const cd = [Ud];
 
-    function Vr(rr) {
+    function jd(dd) {
       let {
-        icon: Sr,
-        label: Qr,
-        value: Zr
-      } = rr;
-      return (0, kr.jsxs)("div", {
+        icon: Od,
+        label: md,
+        value: Wd
+      } = dd;
+      return (0, zd.jsxs)("div", {
         className: "PlayerProfileStat",
-        children: [(0, kr.jsx)(Xr.c, {
-          name: Sr,
+        children: [(0, zd.jsx)(sd.c, {
+          name: Od,
           className: "PlayerProfileStatIcon"
-        }), (0, kr.jsxs)("div", {
+        }), (0, zd.jsxs)("div", {
           className: "PlayerProfileStatText",
-          children: [(0, kr.jsx)("div", {
+          children: [(0, zd.jsx)("div", {
             className: "PlayerProfileStatLabel SmallTextLight",
-            children: Qr
-          }), (0, kr.jsx)("div", {
+            children: md
+          }), (0, zd.jsx)("div", {
             className: "PlayerProfileStatValue",
-            children: Zr
+            children: Wd
           })]
         })]
       })
     }
 
-    function ir(rr) {
+    function Dd(dd) {
       let {
-        profile: Sr
-      } = rr;
+        profile: Od
+      } = dd;
       const {
-        t: Qr,
-        selectedLanguage: Zr
-      } = (0, zr.E)();
-      let Wr = Qr("homePage:profileUnknown");
-      if (Sr.lastOnline) {
-        const rr = (0, zr.m)(Zr.code, "homePage:profileTimeAgo");
-        Wr = Qr("homePage:profileTimeAgo", {
-          time: (0, ar.W)(rr, Sr.lastOnline, Date.now())
+        t: md,
+        selectedLanguage: Wd
+      } = (0, bd.G)();
+      let Fd = md("homePage:profileUnknown");
+      if (Od.lastOnline) {
+        const dd = (0, bd.p)(Wd.code, "homePage:profileTimeAgo");
+        Fd = md("homePage:profileTimeAgo", {
+          time: (0, Rd.Q)(dd, Od.lastOnline, Date.now())
         })
       }
-      let jr = Qr("homePage:profileUnknown");
-      return Sr.accountCreatedAt && (jr = new Date(Sr.accountCreatedAt).toLocaleDateString(void 0, {
+      let Xd = md("homePage:profileUnknown");
+      return Od.accountCreatedAt && (Xd = new Date(Od.accountCreatedAt).toLocaleDateString(void 0, {
         year: "numeric",
         month: "short",
         day: "numeric"
-      })), (0, kr.jsxs)("div", {
+      })), (0, zd.jsxs)("div", {
         className: "PlayerProfileStats",
-        children: [(0, kr.jsx)(Vr, {
+        children: [(0, zd.jsx)(jd, {
           icon: "hourglass",
-          label: Qr("homePage:profileTimePlayed"),
-          value: (0, Rr.e)(Sr.totalPlayMinutes)
-        }), (0, kr.jsx)(Vr, {
+          label: md("homePage:profileTimePlayed"),
+          value: (0, rd.e)(Od.totalPlayMinutes)
+        }), (0, zd.jsx)(jd, {
           icon: "wifi",
-          label: Qr("homePage:profileLastOnline"),
-          value: Wr
-        }), (0, kr.jsx)(Vr, {
+          label: md("homePage:profileLastOnline"),
+          value: Fd
+        }), (0, zd.jsx)(jd, {
           icon: "calendar",
-          label: Qr("homePage:profileJoined"),
-          value: jr
+          label: md("homePage:profileJoined"),
+          value: Xd
         })]
       })
     }
 
-    function wr() {
+    function ed() {
       const {
-        t: rr
-      } = (0, zr.E)(), Sr = (0, yr.useNavigatePreserveSearch)(), Qr = (0, Nr.j)(), {
-        playerName: vr,
-        playerUrlName: Lr
-      } = (0, Wr.w)(), Rr = (0, Wr.s)(), Vr = (0, jr.h)(Rr.pathname), wr = Vr && ("urlId" in Vr ? `urlId:${Vr.urlId}` : `name:${Vr.lowerCaseName}`), cr = (0, Zr.useRef)(wr);
-      cr.current = wr;
+        t: dd
+      } = (0, bd.G)(), Od = (0, wd.useNavigatePreserveSearch)(), md = (0, Nd.h)(), {
+        playerName: Ud,
+        playerUrlName: Bd
+      } = (0, Fd.u)(), rd = (0, Fd.p)(), jd = (0, Xd.g)(rd.pathname), ed = jd && ("urlId" in jd ? `urlId:${jd.urlId}` : `name:${jd.lowerCaseName}`), Id = (0, Wd.useRef)(ed);
+      Id.current = ed;
       const {
-        userContext: Fr,
-        isUserContextUpdating: or
-      } = (0, tr.c)(), br = (0, Zr.useRef)(null), Jr = (0, Zr.useRef)(null), Dr = (0, Zr.useRef)(null), dr = (0, Zr.useRef)(!1), sr = (0, Zr.useRef)((0, ar.Yb)(Ar)), [ur, rS] = (0, Zr.useState)((() => {
-        const rr = Vr && Tr.d.peek(Fr, Vr);
-        return rr ? {
+        userContext: ld,
+        isUserContextUpdating: Cd
+      } = (0, Hd.d)(), Zd = (0, Wd.useRef)(null), kd = (0, Wd.useRef)(null), fd = (0, Wd.useRef)(null), Md = (0, Wd.useRef)(!1), dO = (0, Wd.useRef)((0, Rd.Vb)(cd)), [OO, mO] = (0, Wd.useState)((() => {
+        const dd = jd && Jd.e.peek(ld, jd);
+        return dd ? {
           status: "loaded",
-          profile: rr,
-          playerKey: wr
+          profile: dd,
+          playerKey: ed
         } : {
           status: "loading"
         }
-      })), [SS, QS] = (0, Zr.useState)(0);
-      (0, Zr.useEffect)(Br.f, []), (0, Zr.useEffect)((() => {
-        qr.gameBridge.send("leaveGame", {
+      })), [WO, FO] = (0, Wd.useState)(0);
+      (0, Wd.useEffect)(Ed.g, []), (0, Wd.useEffect)((() => {
+        Ad.gameBridge.send("leaveGame", {
           reloadPath: null
-        }), Hr.c.set({
+        }), Vd.e.set({
           gameState: "landingPage",
           openEverythingMenuName: null,
           openInGameMenuName: null
         })
-      }), [Rr.key]);
-      const ZS = () => {
-        const rr = (0, yr.getPreviousLocation)();
-        null === rr || rr.startsWith("/play") ? (0, yr.navigateToHomePage)() : Sr(-1)
+      }), [rd.key]);
+      const RO = () => {
+        const dd = (0, wd.getPreviousLocation)();
+        null === dd || dd.startsWith("/play") ? (0, wd.navigateToHomePage)() : Od(-1)
       };
-      (0, Gr.e)(ZS), (0, Zr.useEffect)((() => {
-        var rr;
-        if (or) return;
-        if (!Vr) return void rS({
+      (0, Pd.d)(RO), (0, Wd.useEffect)((() => {
+        var dd;
+        if (Cd) return;
+        if (!jd) return void mO({
           status: "notFound",
-          playerKey: wr
+          playerKey: ed
         });
-        const Sr = "urlId" in Vr && (null === (rr = Jr.current) || void 0 === rr ? void 0 : rr.urlId) === Vr.urlId && Dr.current === Fr;
-        if (Sr && dr.current) return;
-        const Qr = Sr ? null : Tr.d.peek(Fr, Vr);
-        let Zr = !1;
-        const Wr = rr => "loaded" === rr.status && (rr.playerKey === wr || "urlId" in Vr && rr.profile.urlId === Vr.urlId);
-        return Qr ? (Dr.current = Fr, dr.current = !1, rS({
+        const Od = "urlId" in jd && (null === (dd = kd.current) || void 0 === dd ? void 0 : dd.urlId) === jd.urlId && fd.current === ld;
+        if (Od && Md.current) return;
+        const md = Od ? null : Jd.e.peek(ld, jd);
+        let Wd = !1;
+        const Fd = dd => "loaded" === dd.status && (dd.playerKey === ed || "urlId" in jd && dd.profile.urlId === jd.urlId);
+        return md ? (fd.current = ld, Md.current = !1, mO({
           status: "loaded",
-          profile: Qr,
-          playerKey: wr
-        }), Tr.d.invalidate(Vr)) : rS((rr => Wr(rr) ? rr : {
+          profile: md,
+          playerKey: ed
+        }), Jd.e.invalidate(jd)) : mO((dd => Fd(dd) ? dd : {
           status: "loading"
-        })), async function(rr, Sr) {
-          if ("lowerCaseName" in Sr && Sr.lowerCaseName.length > fr.h) return {
+        })), async function(dd, Od) {
+          if ("lowerCaseName" in Od && Od.lowerCaseName.length > hd.g) return {
             status: "notFound"
           };
           try {
             return {
               status: "loaded",
-              profile: await pr.c.getPlayerProfile(rr, Sr, mr)
+              profile: await Qd.e.getPlayerProfile(dd, Od, od)
             }
-          } catch (Qr) {
-            return (0, xr.e)(Qr) ? {
+          } catch (md) {
+            return (0, td.c)(md) ? {
               status: "notFound"
-            } : (console.error("Failed to load user profile", Qr), {
+            } : (console.error("Failed to load user profile", md), {
               status: "failed"
             })
           }
-        }(Fr, Vr).then((rr => {
-          Zr || ("loaded" === rr.status && (Dr.current = Fr, dr.current = !0), rS((Sr => "failed" === rr.status && Wr(Sr) ? Sr : {
-            ...rr,
-            playerKey: wr
+        }(ld, jd).then((dd => {
+          Wd || ("loaded" === dd.status && (fd.current = ld, Md.current = !0), mO((Od => "failed" === dd.status && Fd(Od) ? Od : {
+            ...dd,
+            playerKey: ed
           })))
         })), () => {
-          Zr = !0
+          Wd = !0
         }
-      }), [or, wr, Fr, SS]);
-      const WS = "loading" === ur.status || ur.playerKey === wr || "loaded" === ur.status && !!Vr && "urlId" in Vr && ur.profile.urlId === Vr.urlId ? ur : {
+      }), [Cd, ed, ld, WO]);
+      const XO = "loading" === OO.status || OO.playerKey === ed || "loaded" === OO.status && !!jd && "urlId" in jd && OO.profile.urlId === jd.urlId ? OO : {
           status: "loading"
         },
-        aS = "loaded" === WS.status ? WS.profile : null,
-        jS = "loading" === WS.status ? null : function(rr) {
-          if ("loaded" === rr.status) {
+        KO = "loaded" === XO.status ? XO.profile : null,
+        hO = "loading" === XO.status ? null : function(dd) {
+          if ("loaded" === dd.status) {
             const {
-              profile: Sr
-            } = rr;
-            return (0, Er.V)({
-              urlId: Sr.urlId,
-              name: Sr.player.name,
-              ranks: Sr.player.ranks,
-              socialLinks: Sr.socialLinks
+              profile: Od
+            } = dd;
+            return (0, vd.$)({
+              urlId: Od.urlId,
+              name: Od.player.name,
+              ranks: Od.player.ranks,
+              socialLinks: Od.socialLinks
             })
           }
-          return "notFound" === rr.status ? (0, Er.bb)() : null
-        }(WS),
-        IS = null !== aS && void 0 !== aS && aS.urlId ? (0, jr.l)({
-          urlId: aS.urlId,
-          name: aS.player.name
+          return "notFound" === dd.status ? (0, vd.lb)() : null
+        }(XO),
+        vO = null !== KO && void 0 !== KO && KO.urlId ? (0, Xd.h)({
+          urlId: KO.urlId,
+          name: KO.player.name
         }) : null;
-      (0, Ur.e)(IS);
-      const fS = null !== aS && void 0 !== aS && aS.player.cosmetics.profileEffect ? Or.f[aS.player.cosmetics.profileEffect] : void 0,
-        ES = null !== aS && !or && Fr.getPlayerName().toLowerCase() === aS.player.name.toLowerCase(),
-        pS = (0, gr.c)(null === aS || void 0 === aS ? void 0 : aS.player.name),
-        xS = ES && Fr.playerHasRank("youtuber");
-      Jr.current = aS;
-      const mS = (0, Zr.useCallback)((() => {
-          Vr && (Tr.d.invalidate(Vr), Tr.d.get(Fr, Vr).then((rr => {
-            cr.current === wr && (dr.current = !0, rS({
+      (0, qd.g)(vO);
+      const QO = null !== KO && void 0 !== KO && KO.player.cosmetics.profileEffect ? xd.c[KO.player.cosmetics.profileEffect] : void 0,
+        tO = null !== KO && !Cd && ld.getPlayerName().toLowerCase() === KO.player.name.toLowerCase(),
+        oO = (0, Gd.c)(null === KO || void 0 === KO ? void 0 : KO.player.name),
+        NO = tO && ld.playerHasRank("youtuber");
+      kd.current = KO;
+      const qO = (0, Wd.useCallback)((() => {
+          jd && (Jd.e.invalidate(jd), Jd.e.get(ld, jd).then((dd => {
+            Id.current === ed && (Md.current = !0, mO({
               status: "loaded",
-              profile: rr,
-              playerKey: wr
+              profile: dd,
+              playerKey: ed
             }))
-          })).catch((rr => {
-            console.error("Failed to refresh user profile", rr)
+          })).catch((dd => {
+            console.error("Failed to refresh user profile", dd)
           })))
-        }), [wr, Fr]),
-        NS = (0, Zr.useCallback)((() => {
-          var rr;
-          const Sr = Jr.current;
-          return !(!Sr || null === (rr = br.current) || void 0 === rr || !rr.isReady()) && (br.current.setAllCosmetics(Sr.player.cosmetics), !0)
+        }), [ed, ld]),
+        HO = (0, Wd.useCallback)((() => {
+          var dd;
+          const Od = kd.current;
+          return !(!Od || null === (dd = Zd.current) || void 0 === dd || !dd.isReady()) && (Zd.current.setAllCosmetics(Od.player.cosmetics), !0)
         }), []);
-      return (0, Zr.useEffect)((() => {
-        if (!aS) return;
-        let rr, Sr = !1;
-        const Qr = () => {
-          Sr || NS() || (rr = setTimeout(Qr, 100))
+      return (0, Wd.useEffect)((() => {
+        if (!KO) return;
+        let dd, Od = !1;
+        const md = () => {
+          Od || HO() || (dd = setTimeout(md, 100))
         };
-        return Qr(), () => {
-          Sr = !0, clearTimeout(rr)
+        return md(), () => {
+          Od = !0, clearTimeout(dd)
         }
-      }), [aS, NS]), (0, kr.jsxs)("div", {
-        className: lr()("PlayerProfile", {
-          PlayerProfilePortrait: Qr
+      }), [KO, HO]), (0, zd.jsxs)("div", {
+        className: Sd()("PlayerProfile", {
+          PlayerProfilePortrait: md
         }),
-        children: [jS && (0, kr.jsx)(Ir.b, {
-          meta: jS
-        }), (0, kr.jsxs)("div", {
+        children: [hO && (0, zd.jsx)(Kd.c, {
+          meta: hO
+        }), (0, zd.jsxs)("div", {
           className: "PlayerProfileBackgroundContainer",
-          children: [fS && (0, kr.jsx)(fS, {}), !fS && (0, kr.jsx)("div", {
+          children: [QO && (0, zd.jsx)(QO, {}), !QO && (0, zd.jsx)("div", {
             className: "PlayerProfileBackground",
             style: {
-              backgroundImage: `url(${sr.current})`
+              backgroundImage: `url(${dO.current})`
             }
           })]
-        }), (0, kr.jsxs)("div", {
+        }), (0, zd.jsxs)("div", {
           className: "PlayerProfileHeader",
-          children: [(0, kr.jsx)(Kr.d, {
-            onClick: ZS,
-            children: rr("general:back")
-          }), aS && !or && !ES && Mr.featureFlags.useSocialFeatures && (0, kr.jsx)("div", {
+          children: [(0, zd.jsx)(gd.d, {
+            onClick: RO,
+            children: dd("general:back")
+          }), KO && !Cd && !tO && Ld.featureFlags.useSocialFeatures && (0, zd.jsx)("div", {
             className: "PlayerProfileExclusionActions",
-            children: (0, kr.jsx)(Cr.b, {
-              playerName: aS.player.name,
+            children: (0, zd.jsx)(nd.b, {
+              playerName: KO.player.name,
               className: "SmallTextLight"
             })
           })]
-        }), "loading" === WS.status && (0, kr.jsx)("div", {
+        }), "loading" === XO.status && (0, zd.jsx)("div", {
           className: "PlayerProfileCentredMessage",
-          children: (0, kr.jsx)(er.c, {})
-        }), ("notFound" === WS.status || "failed" === WS.status) && (0, kr.jsxs)("div", {
+          children: (0, zd.jsx)(Yd.c, {})
+        }), ("notFound" === XO.status || "failed" === XO.status) && (0, zd.jsxs)("div", {
           className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, kr.jsx)(Xr.c, {
+          children: [(0, zd.jsx)(sd.c, {
             name: "face-dizzy"
-          }), (0, kr.jsx)("div", {
+          }), (0, zd.jsx)("div", {
             className: "PlayerProfileErrorText",
-            children: "notFound" === WS.status ? rr("socialBar:playerNotFound", {
-              playerName: null !== Lr && void 0 !== Lr ? Lr : vr
-            }) : rr("playerProfile:loadFailed")
-          }), "failed" === WS.status && (0, kr.jsx)(Kr.h, {
+            children: "notFound" === XO.status ? dd("socialBar:playerNotFound", {
+              playerName: null !== Bd && void 0 !== Bd ? Bd : Ud
+            }) : dd("playerProfile:loadFailed")
+          }), "failed" === XO.status && (0, zd.jsx)(gd.g, {
             onClick: () => {
-              QS((rr => rr + 1))
+              FO((dd => dd + 1))
             },
-            children: rr("general:tryAgain")
+            children: dd("general:tryAgain")
           })]
-        }), aS && (0, kr.jsxs)("div", {
+        }), KO && (0, zd.jsxs)("div", {
           className: "PlayerProfileContent",
-          children: [(0, kr.jsxs)("div", {
+          children: [(0, zd.jsxs)("div", {
             className: "PlayerProfileLeft",
-            children: [(0, kr.jsx)("div", {
+            children: [(0, zd.jsx)("div", {
               className: "PlayerProfileName FullyFancyText",
-              children: (0, kr.jsx)(hr.c, {
-                text: (0, Yr.x)(aS.player.ranks, aS.player.name, aS.player.nameColour),
-                friendBadgeFor: pS ? aS.player.name : void 0
+              children: (0, zd.jsx)(yd.d, {
+                text: (0, Td.x)(KO.player.ranks, KO.player.name, KO.player.nameColour),
+                friendBadgeFor: oO ? KO.player.name : void 0
               })
-            }), (0, kr.jsx)("div", {
+            }), (0, zd.jsx)("div", {
               className: "PlayerProfileModel",
-              children: (0, kr.jsx)(Zr.Suspense, {
-                fallback: (0, kr.jsx)("div", {
+              children: (0, zd.jsx)(Wd.Suspense, {
+                fallback: (0, zd.jsx)("div", {
                   className: "PlayerProfileModelLoading",
-                  children: (0, kr.jsx)(er.c, {})
+                  children: (0, zd.jsx)(Yd.c, {})
                 }),
-                children: (0, kr.jsx)(Br.b, {
-                  ref: br,
+                children: (0, zd.jsx)(Ed.e, {
+                  ref: Zd,
                   onReady: () => {
-                    NS()
+                    HO()
                   }
                 })
               })
             })]
-          }), (0, kr.jsxs)("div", {
+          }), (0, zd.jsxs)("div", {
             className: "PlayerProfileRight",
-            children: [(0, kr.jsx)(ir, {
-              profile: aS
-            }), (aS.socialLinks.length > 0 || xS) && (0, kr.jsx)(Pr.e, {
-              socialLinks: aS.socialLinks,
-              editable: xS,
-              userContext: Fr,
-              onLinksUpdated: mS
-            }), (0, kr.jsxs)("div", {
+            children: [(0, zd.jsx)(Dd, {
+              profile: KO
+            }), (KO.socialLinks.length > 0 || NO) && (0, zd.jsx)(ud.c, {
+              socialLinks: KO.socialLinks,
+              editable: NO,
+              userContext: ld,
+              onLinksUpdated: qO
+            }), (0, zd.jsxs)("div", {
               className: "PlayerProfileGames",
-              children: [(0, kr.jsx)("div", {
+              children: [(0, zd.jsx)("div", {
                 className: "PlayerProfileGamesTitle SmallTextBold",
-                children: rr("homePage:profileReleasedGames")
-              }), 0 === aS.releasedGames.length && (0, kr.jsx)("div", {
+                children: dd("homePage:profileReleasedGames")
+              }), 0 === KO.releasedGames.length && (0, zd.jsx)("div", {
                 className: "PlayerProfileNoGames",
-                children: rr("homePage:profileNoReleasedGames")
-              }), aS.releasedGames.length > 0 && (0, kr.jsx)("div", {
+                children: dd("homePage:profileNoReleasedGames")
+              }), KO.releasedGames.length > 0 && (0, zd.jsx)("div", {
                 className: "PlayerProfileGamesGrid",
-                children: aS.releasedGames.map((rr => (0, kr.jsx)(nr.e, {
+                children: KO.releasedGames.map((dd => (0, zd.jsx)(pd.f, {
                   source: {
                     type: "preview",
-                    preview: rr
+                    preview: dd
                   },
                   gameWidth: "100%",
                   useLongRatio: !0,
                   hideFavourites: !0,
                   entrySource: "other"
-                }, rr.schematicId)))
+                }, dd.schematicId)))
               })]
             })]
           })]
@@ -343,21 +343,21 @@ export const modules = {
       })
     }
   },
-  5707: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => hr
+  5670: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => yd
     });
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(5390),
-      jr = Qr(1251),
-      Ir = Qr(1448),
-      fr = Qr(1576),
-      Er = Qr(1629),
-      pr = Qr(1475),
-      xr = Qr(3536),
-      mr = Qr(1338);
-    const Nr = {
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(5301),
+      Xd = md(1238),
+      Kd = md(1443),
+      hd = md(1572),
+      vd = md(1627),
+      Qd = md(1462),
+      td = md(3531),
+      od = md(1341);
+    const Nd = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -385,163 +385,163 @@ export const modules = {
       }
     };
 
-    function Ur(rr) {
+    function qd(dd) {
       let {
-        platform: Sr
-      } = rr;
-      const Qr = "youtube" === Sr;
-      return (0, mr.jsxs)("span", {
-        className: Wr()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: Qr
+        platform: Od
+      } = dd;
+      const md = "youtube" === Od;
+      return (0, od.jsxs)("span", {
+        className: Fd()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: md
         }),
-        children: [Qr && (0, mr.jsx)(xr.c, {
+        children: [md && (0, od.jsx)(td.b, {
           variant: "white"
-        }), !Qr && (0, mr.jsx)(Ir.c, {
-          name: Nr[Sr].icon,
+        }), !md && (0, od.jsx)(Kd.c, {
+          name: Nd[Od].icon,
           kit: "brands"
         })]
       })
     }
 
-    function tr(rr) {
+    function Hd(dd) {
       let {
-        platform: Sr,
-        link: Qr,
-        editable: Zr,
-        userContext: Wr,
-        onLinksUpdated: xr
-      } = rr;
+        platform: Od,
+        link: md,
+        editable: Wd,
+        userContext: Fd,
+        onLinksUpdated: td
+      } = dd;
       const {
-        t: tr
-      } = (0, jr.E)(), hr = Nr[Sr];
-      if (!Qr && !Zr) return null;
+        t: Hd
+      } = (0, Xd.G)(), yd = Nd[Od];
+      if (!md && !Wd) return null;
 
-      function zr() {
-        var rr;
-        if (!Wr || !xr) return;
-        pr.NotificationProvider.showInputPopup({
+      function bd() {
+        var dd;
+        if (!Fd || !td) return;
+        Qd.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: hr.name
+              platform: yd.name
             }
           },
-          prefixText: ar.v[Sr],
+          prefixText: Rd.x[Od],
           placeholderText: "playBloxd",
-          initialValue: null !== (rr = null === Qr || void 0 === Qr ? void 0 : Qr.handle) && void 0 !== rr ? rr : "",
+          initialValue: null !== (dd = null === md || void 0 === md ? void 0 : md.handle) && void 0 !== dd ? dd : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: Qr ? "general:remove" : void 0
-        }).getResult().then((async rr => {
-          if ("notificationTornDown" !== rr && null !== rr) try {
-            "submit" === rr.type ? await Er.c.setSocialLink(Wr, Sr, rr.value) : await Er.c.clearSocialLink(Wr, Sr), xr()
-          } catch (Qr) {
-            console.error("Failed to update social link", Qr), pr.NotificationProvider.showAlertPopup({
-              title: Qr.errorMessageForUser,
+          secondaryButtonText: md ? "general:remove" : void 0
+        }).getResult().then((async dd => {
+          if ("notificationTornDown" !== dd && null !== dd) try {
+            "submit" === dd.type ? await vd.e.setSocialLink(Fd, Od, dd.value) : await vd.e.clearSocialLink(Fd, Od), td()
+          } catch (md) {
+            console.error("Failed to update social link", md), Qd.NotificationProvider.showAlertPopup({
+              title: md.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (Qr) {
-        const rr = `@${Qr.handle}`;
-        return (0, mr.jsxs)("a", {
+      if (md) {
+        const dd = `@${md.handle}`;
+        return (0, od.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: hr.color
+            background: yd.color
           },
-          href: Qr.profileUrl,
+          href: md.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, mr.jsxs)("div", {
+          children: [(0, od.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, mr.jsx)(Ur, {
-              platform: Sr
-            }), (0, mr.jsx)("span", {
+            children: [(0, od.jsx)(qd, {
+              platform: Od
+            }), (0, od.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, mr.jsx)("span", {
+              children: (0, od.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: rr
+                children: dd
               })
             })]
-          }), Zr && (0, mr.jsx)("button", {
+          }), Wd && (0, od.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, fr._)({
+            ...(0, hd.X)({
               stopPropagation: !0
             }),
-            onClick: rr => {
-              rr.stopPropagation(), rr.preventDefault(), zr()
+            onClick: dd => {
+              dd.stopPropagation(), dd.preventDefault(), bd()
             },
-            children: (0, mr.jsx)(Ir.c, {
+            children: (0, od.jsx)(Kd.c, {
               name: "pen-to-square"
             })
-          }), !Zr && (0, mr.jsx)("span", {
+          }), !Wd && (0, od.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, mr.jsx)(Ir.c, {
+            children: (0, od.jsx)(Kd.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, mr.jsxs)("button", {
+      return (0, od.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: hr.color
+          background: yd.color
         },
-        ...(0, fr._)(),
+        ...(0, hd.X)(),
         onClick: () => {
-          zr()
+          bd()
         },
-        children: [(0, mr.jsx)(Ur, {
-          platform: Sr
-        }), (0, mr.jsxs)("span", {
+        children: [(0, od.jsx)(qd, {
+          platform: Od
+        }), (0, od.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, mr.jsx)("span", {
+          children: [(0, od.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: hr.name
-          }), (0, mr.jsx)("span", {
+            children: yd.name
+          }), (0, od.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: tr("homePage:profileSocialLinkAdd")
+            children: Hd("homePage:profileSocialLinkAdd")
           })]
-        }), (0, mr.jsx)("span", {
+        }), (0, od.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, mr.jsx)(Ir.c, {
+          children: (0, od.jsx)(Kd.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        socialLinks: Sr,
-        editable: Qr = !1,
-        userContext: Zr,
-        onLinksUpdated: Wr
-      } = rr;
-      if (!Qr && 0 === Sr.length) return null;
-      const jr = new Map(Sr.map((rr => [rr.platform, rr]))),
-        Ir = Qr ? ar.r : Sr.map((rr => rr.platform));
-      return (0, mr.jsx)("div", {
+        socialLinks: Od,
+        editable: md = !1,
+        userContext: Wd,
+        onLinksUpdated: Fd
+      } = dd;
+      if (!md && 0 === Od.length) return null;
+      const Xd = new Map(Od.map((dd => [dd.platform, dd]))),
+        Kd = md ? Rd.u : Od.map((dd => dd.platform));
+      return (0, od.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, mr.jsx)("div", {
+        children: (0, od.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: Ir.map((rr => (0, mr.jsx)(tr, {
-            platform: rr,
-            link: jr.get(rr),
-            editable: Qr,
-            userContext: Zr,
-            onLinksUpdated: Wr
-          }, rr)))
+          children: Kd.map((dd => (0, od.jsx)(Hd, {
+            platform: dd,
+            link: Xd.get(dd),
+            editable: md,
+            userContext: Wd,
+            onLinksUpdated: Fd
+          }, dd)))
         })
       })
     }
   },
-  5698: rr => {
-    rr.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+  5666: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

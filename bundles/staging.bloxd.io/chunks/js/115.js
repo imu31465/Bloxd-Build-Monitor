@@ -1,26 +1,26 @@
 export const id = 115;
 export const ids = [115];
 export const modules = {
-  5713: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => er
+  5672: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => Yd
     });
-    var Zr = Qr(1653),
-      Wr = Qr(72),
-      ar = Qr(1251),
-      jr = Qr(1181),
-      Ir = Qr(1171),
-      fr = Qr(2232),
-      Er = Qr(1644),
-      pr = Qr(1444),
-      xr = Qr(1162),
-      mr = Qr(26),
-      Nr = Qr(1576),
-      Ur = Qr(1448),
-      tr = Qr(3631),
-      hr = Qr(1671),
-      zr = Qr(1338);
-    const Yr = [{
+    var Wd = md(1650),
+      Fd = md(66),
+      Rd = md(1238),
+      Xd = md(1186),
+      Kd = md(1170),
+      hd = md(2240),
+      vd = md(1641),
+      Qd = md(1436),
+      td = md(1161),
+      od = md(29),
+      Nd = md(1572),
+      qd = md(1443),
+      Hd = md(3637),
+      yd = md(1666),
+      bd = md(1341);
+    const Td = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      nr = {
+      pd = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function er() {
+    function Yd() {
       const {
-        t: rr
-      } = (0, ar.E)(), Sr = (0, Er.useNavigatePreserveSearch)(), Qr = (0, Zr.s)(), {
-        isUserContextUpdating: er
-      } = (0, jr.c)(), Kr = (0, fr.e)(), yr = (0, Ir.j)(), Br = (Tr = Qr.pathname).startsWith(hr.u) ? null : Tr.startsWith(nr.docs) ? "docs" : Tr.startsWith(nr.leaderboard) ? "leaderboard" : "myGames";
-      var Tr;
-      const vr = function(rr) {
-        if (!rr.startsWith(hr.u)) return {
+        t: dd
+      } = (0, Rd.G)(), Od = (0, vd.useNavigatePreserveSearch)(), md = (0, Wd.p)(), {
+        isUserContextUpdating: Yd
+      } = (0, Xd.d)(), gd = (0, hd.e)(), wd = (0, Kd.h)(), Ed = (Jd = md.pathname).startsWith(yd.s) ? null : Jd.startsWith(pd.docs) ? "docs" : Jd.startsWith(pd.leaderboard) ? "leaderboard" : "myGames";
+      var Jd;
+      const Ud = function(dd) {
+        if (!dd.startsWith(yd.s)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const Sr = (0, Er.getPreviousLocation)();
+        const Od = (0, vd.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== Sr && Sr.startsWith(nr.myGames) ? -1 : nr.myGames
+          to: null !== Od && Od.startsWith(pd.myGames) ? -1 : pd.myGames
         }
-      }(Qr.pathname);
-      return (0, Wr.useEffect)((() => {
-        mr.c.set({
+      }(md.pathname);
+      return (0, Fd.useEffect)((() => {
+        od.e.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, zr.jsxs)("div", {
+      }), []), (0, bd.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [Kr && (0, zr.jsx)("aside", {
+        children: [gd && (0, bd.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, zr.jsx)(tr.e, {})
-        }), (0, zr.jsxs)("div", {
+          children: (0, bd.jsx)(Hd.c, {})
+        }), (0, bd.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, zr.jsxs)("div", {
+          children: [(0, bd.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, zr.jsx)(xr.e, {
+            children: [(0, bd.jsx)(td.e, {
               show: !0,
-              socialBarIsDocked: Kr
-            }), (0, zr.jsxs)("nav", {
+              socialBarIsDocked: gd
+            }), (0, bd.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, zr.jsx)(Nr.d, {
-                icon: vr.icon,
+              children: [(0, bd.jsx)(Nd.d, {
+                icon: Ud.icon,
                 onClick: () => {
-                  Sr(vr.to)
+                  Od(Ud.to)
                 },
-                children: rr(vr.title)
-              }), (0, zr.jsx)("div", {
+                children: dd(Ud.title)
+              }), (0, bd.jsx)("div", {
                 className: "StudioNavTabs",
-                children: Yr.map((Qr => (0, zr.jsxs)(Nr.U, {
-                  active: Br === Qr.id,
-                  href: nr[Qr.id],
+                children: Td.map((md => (0, bd.jsxs)(Nd.S, {
+                  active: Ed === md.id,
+                  href: pd[md.id],
                   onClick: () => {
-                    Sr(nr[Qr.id])
+                    Od(pd[md.id])
                   },
-                  children: [(0, zr.jsx)(Ur.c, {
-                    name: Qr.icon
-                  }), !yr && rr(Qr.title)]
-                }, Qr.id)))
+                  children: [(0, bd.jsx)(qd.c, {
+                    name: md.icon
+                  }), !wd && dd(md.title)]
+                }, md.id)))
               })]
             })]
-          }), (0, zr.jsxs)("main", {
+          }), (0, bd.jsxs)("main", {
             className: "StudioBottom",
-            children: [er && (0, zr.jsx)("div", {
+            children: [Yd && (0, bd.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, zr.jsx)(pr.c, {})
-            }), !er && (0, zr.jsx)("div", {
+              children: (0, bd.jsx)(Qd.c, {})
+            }), !Yd && (0, bd.jsx)("div", {
               className: "StudioContent",
-              children: (0, zr.jsx)(Zr.h, {})
+              children: (0, bd.jsx)(Wd.e, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

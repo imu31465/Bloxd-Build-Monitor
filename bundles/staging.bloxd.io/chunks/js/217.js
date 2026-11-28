@@ -1,84 +1,84 @@
 export const id = 217;
 export const ids = [217, 218];
 export const modules = {
-  35278: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      reportJsMainStall: () => Ir,
-      resetJsMainStallReport: () => fr
+  35371: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      reportJsMainStall: () => Kd,
+      resetJsMainStallReport: () => hd
     });
-    var Zr = Qr(35287),
-      Wr = Qr(1912),
-      ar = Qr(35293);
-    let jr = !1;
+    var Wd = md(35375),
+      Fd = md(1916),
+      Rd = md(35381);
+    let Xd = !1;
 
-    function Ir(rr, Sr, Qr, Ir) {
-      jr || (jr = !0, (0, Wr.reportClientError)("wasm_load", (0, ar.b)(rr, Sr, Qr, Ir, (0, ar.f)()), "JS-mainStall", !0, Zr.CAPPED_COUNTS_VISIT_CAP))
+    function Kd(dd, Od, md, Kd) {
+      Xd || (Xd = !0, (0, Fd.reportClientError)("wasm_load", (0, Rd.e)(dd, Od, md, Kd, (0, Rd.f)()), "JS-mainStall", !0, Wd.CAPPED_COUNTS_VISIT_CAP))
     }
 
-    function fr() {
-      jr = !1
+    function hd() {
+      Xd = !1
     }
   },
-  35293: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Ir,
-      f: () => jr
+  35381: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Kd,
+      f: () => Xd
     });
-    var Zr = Qr(285),
-      Wr = Qr(135),
-      ar = Qr(35296);
+    var Wd = md(310),
+      Fd = md(145),
+      Rd = md(35387);
 
-    function jr() {
-      var rr, Sr, Qr;
-      return null !== (rr = (0, Zr.j)(null !== (Sr = null === (Qr = (0, Wr.q)()) || void 0 === Qr ? void 0 : Qr.renderer) && void 0 !== Sr ? Sr : null, (0, Wr.m)())) && void 0 !== rr ? rr : "unknown"
+    function Xd() {
+      var dd, Od, md;
+      return null !== (dd = (0, Wd.n)(null !== (Od = null === (md = (0, Fd.p)()) || void 0 === md ? void 0 : md.renderer) && void 0 !== Od ? Od : null, (0, Fd.l)())) && void 0 !== dd ? dd : "unknown"
     }
 
-    function Ir(rr, Sr, Qr, Zr, Wr) {
-      const jr = null === Sr ? "untimed" : `${Math.round(Sr)} ms`;
-      return `frames stalled, ${Qr}, gpu ${(0,ar.b)(Wr)}, blocking ${jr}, drawn ${Math.round(rr)} ms apart, timers ${Zr.timers}, timer gap ${Math.round(Zr.longestGapMs)} ms`
+    function Kd(dd, Od, md, Wd, Fd) {
+      const Xd = null === Od ? "untimed" : `${Math.round(Od)} ms`;
+      return `frames stalled, ${md}, gpu ${(0,Rd.d)(Fd)}, blocking ${Xd}, drawn ${Math.round(dd)} ms apart, timers ${Wd.timers}, timer gap ${Math.round(Wd.longestGapMs)} ms`
     }
   },
-  35287: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      CAPPED_COUNTS_VISIT_CAP: () => ar,
-      reportCappedWasmFailure: () => fr,
-      reportUncappedWasmFailure: () => Ir,
-      reportWasmCrash: () => Wr,
-      reportWasmFailure: () => jr
+  35375: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      CAPPED_COUNTS_VISIT_CAP: () => Rd,
+      reportCappedWasmFailure: () => hd,
+      reportUncappedWasmFailure: () => Kd,
+      reportWasmCrash: () => Fd,
+      reportWasmFailure: () => Xd
     });
-    var Zr = Qr(1912);
+    var Wd = md(1916);
 
-    function Wr(rr) {
-      (0, Zr.reportClientError)("wasm_load", rr.message, rr.code)
+    function Fd(dd) {
+      (0, Wd.reportClientError)("wasm_load", dd.message, dd.code)
     }
-    const ar = Zr.MAX_ERRORS_PER_VISIT - 4;
+    const Rd = Wd.MAX_ERRORS_PER_VISIT - 4;
 
-    function jr(rr, Sr, Qr, Wr) {
-      (0, Zr.reportClientError)(rr, Sr, Qr, !1, Zr.MAX_ERRORS_PER_VISIT, {
-        context: Wr
+    function Xd(dd, Od, md, Fd) {
+      (0, Wd.reportClientError)(dd, Od, md, !1, Wd.MAX_ERRORS_PER_VISIT, {
+        context: Fd
       })
     }
 
-    function Ir(rr, Sr, Qr, Wr) {
-      (0, Zr.reportClientError)(rr, Sr, Qr, !1, 1 / 0, {
-        context: Wr
+    function Kd(dd, Od, md, Fd) {
+      (0, Wd.reportClientError)(dd, Od, md, !1, 1 / 0, {
+        context: Fd
       })
     }
 
-    function fr(rr, Sr, Qr, Wr) {
-      (0, Zr.reportClientError)(rr, Sr, Qr, !1, ar, {
-        context: Wr
+    function hd(dd, Od, md, Fd) {
+      (0, Wd.reportClientError)(dd, Od, md, !1, Rd, {
+        context: Fd
       })
     }
   },
-  35296: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return String(rr).replace(/\d/g, (rr => String.fromCharCode(97 + Number(rr))))
+  35387: (dd, Od, md) => {
+    function Wd(dd) {
+      return String(dd).replace(/\d/g, (dd => String.fromCharCode(97 + Number(dd))))
     }
-    Qr.d(Sr, {
-      b: () => Zr
+    md.d(Od, {
+      d: () => Wd
     })
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

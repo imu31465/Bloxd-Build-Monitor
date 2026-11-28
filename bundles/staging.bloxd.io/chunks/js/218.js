@@ -1,39 +1,39 @@
 export const id = 218;
 export const ids = [218];
 export const modules = {
-  35287: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      CAPPED_COUNTS_VISIT_CAP: () => ar,
-      reportCappedWasmFailure: () => fr,
-      reportUncappedWasmFailure: () => Ir,
-      reportWasmCrash: () => Wr,
-      reportWasmFailure: () => jr
+  35375: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      CAPPED_COUNTS_VISIT_CAP: () => Rd,
+      reportCappedWasmFailure: () => hd,
+      reportUncappedWasmFailure: () => Kd,
+      reportWasmCrash: () => Fd,
+      reportWasmFailure: () => Xd
     });
-    var Zr = Qr(1912);
+    var Wd = md(1916);
 
-    function Wr(rr) {
-      (0, Zr.reportClientError)("wasm_load", rr.message, rr.code)
+    function Fd(dd) {
+      (0, Wd.reportClientError)("wasm_load", dd.message, dd.code)
     }
-    const ar = Zr.MAX_ERRORS_PER_VISIT - 4;
+    const Rd = Wd.MAX_ERRORS_PER_VISIT - 4;
 
-    function jr(rr, Sr, Qr, Wr) {
-      (0, Zr.reportClientError)(rr, Sr, Qr, !1, Zr.MAX_ERRORS_PER_VISIT, {
-        context: Wr
+    function Xd(dd, Od, md, Fd) {
+      (0, Wd.reportClientError)(dd, Od, md, !1, Wd.MAX_ERRORS_PER_VISIT, {
+        context: Fd
       })
     }
 
-    function Ir(rr, Sr, Qr, Wr) {
-      (0, Zr.reportClientError)(rr, Sr, Qr, !1, 1 / 0, {
-        context: Wr
+    function Kd(dd, Od, md, Fd) {
+      (0, Wd.reportClientError)(dd, Od, md, !1, 1 / 0, {
+        context: Fd
       })
     }
 
-    function fr(rr, Sr, Qr, Wr) {
-      (0, Zr.reportClientError)(rr, Sr, Qr, !1, ar, {
-        context: Wr
+    function hd(dd, Od, md, Fd) {
+      (0, Wd.reportClientError)(dd, Od, md, !1, Rd, {
+        context: Fd
       })
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

@@ -1,187 +1,187 @@
 export const id = 11;
 export const ids = [11];
 export const modules = {
-  38154: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => hr,
-      d: () => zr,
-      h: () => mr,
-      l: () => xr
+  38243: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => yd,
+      h: () => bd,
+      i: () => od,
+      k: () => td
     });
-    var Zr = Qr(35448),
-      Wr = Qr(3425),
-      ar = Qr(3429),
-      jr = Qr(9818),
-      Ir = Qr(1573),
-      fr = Qr(72),
-      Er = Qr(92),
-      pr = Qr(1338);
+    var Wd = md(35535),
+      Fd = md(3428),
+      Rd = md(3432),
+      Xd = md(9850),
+      Kd = md(1566),
+      hd = md(66),
+      vd = md(86),
+      Qd = md(1341);
 
-    function xr() {
-      var rr;
-      return (0, Ir.g)(Wr.e, (0, Wr.w)()), (0, pr.jsx)(pr.Fragment, {
-        children: null === (rr = (0, Wr.w)()) || void 0 === rr ? void 0 : rr.content
+    function td() {
+      var dd;
+      return (0, Kd.i)(Fd.d, (0, Fd.n)()), (0, Qd.jsx)(Qd.Fragment, {
+        children: null === (dd = (0, Fd.n)()) || void 0 === dd ? void 0 : dd.content
       })
     }
 
-    function mr(rr) {
-      var Sr;
+    function od(dd) {
+      var Od;
       let {
-        show: Qr
-      } = rr;
-      (0, Ir.g)(Wr.e, (0, Wr.w)());
-      const Er = null === (Sr = (0, Wr.w)()) || void 0 === Sr ? void 0 : Sr.menu;
-      return (0, fr.useEffect)((() => {
-        var rr;
-        Qr || (null === Er || void 0 === Er || null === (rr = Er.onClose) || void 0 === rr || rr.call(Er), (0, ar.o)())
-      }), [Qr, Er]), (0, fr.useEffect)((() => Qr ? (0, jr.f)(ar.v, ar.e) : void 0), [Qr]), (0, pr.jsx)(Zr.c, {
-        showing: Qr,
+        show: md
+      } = dd;
+      (0, Kd.i)(Fd.d, (0, Fd.n)());
+      const vd = null === (Od = (0, Fd.n)()) || void 0 === Od ? void 0 : Od.menu;
+      return (0, hd.useEffect)((() => {
+        var dd;
+        md || (null === vd || void 0 === vd || null === (dd = vd.onClose) || void 0 === dd || dd.call(vd), (0, Rd.q)())
+      }), [md, vd]), (0, hd.useEffect)((() => md ? (0, Xd.d)(Rd.y, Rd.h) : void 0), [md]), (0, Qd.jsx)(Wd.b, {
+        showing: md,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Er || void 0 === Er ? void 0 : Er.content
+        children: null === vd || void 0 === vd ? void 0 : vd.content
       })
     }
-    const Nr = new Map,
-      Ur = new Set;
+    const Nd = new Map,
+      qd = new Set;
 
-    function tr(rr, Sr) {
-      Sr ? Nr.set(rr, Sr) : Nr.delete(rr);
-      for (const Qr of Ur) Qr()
+    function Hd(dd, Od) {
+      Od ? Nd.set(dd, Od) : Nd.delete(dd);
+      for (const md of qd) md()
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        placement: Sr = "bottom"
-      } = rr;
-      const Qr = (0, fr.useRef)(null);
-      return (0, fr.useLayoutEffect)((() => {
-        const rr = Qr.current;
-        return tr(Sr, rr), () => {
-          Nr.get(Sr) === rr && tr(Sr, null)
+        placement: Od = "bottom"
+      } = dd;
+      const md = (0, hd.useRef)(null);
+      return (0, hd.useLayoutEffect)((() => {
+        const dd = md.current;
+        return Hd(Od, dd), () => {
+          Nd.get(Od) === dd && Hd(Od, null)
         }
-      }), [Sr]), (0, pr.jsx)("div", {
-        ref: Qr,
-        id: `clientGameHud-${Sr}`,
+      }), [Od]), (0, Qd.jsx)("div", {
+        ref: md,
+        id: `clientGameHud-${Od}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function zr(rr) {
+    function bd(dd) {
       let {
-        children: Sr,
-        placement: Qr = "bottom"
-      } = rr;
-      const [Zr, Wr] = (0, fr.useState)((() => {
-        var rr;
-        return null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null
+        children: Od,
+        placement: md = "bottom"
+      } = dd;
+      const [Wd, Fd] = (0, hd.useState)((() => {
+        var dd;
+        return null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null
       }));
-      return (0, fr.useEffect)((() => {
-        const rr = () => {
-          var rr;
-          Wr(null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null)
+      return (0, hd.useEffect)((() => {
+        const dd = () => {
+          var dd;
+          Fd(null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null)
         };
-        return Ur.add(rr), rr(), () => {
-          Ur.delete(rr)
+        return qd.add(dd), dd(), () => {
+          qd.delete(dd)
         }
-      }), [Qr]), Zr ? (0, Er.createPortal)(Sr, Zr) : null
+      }), [md]), Wd ? (0, vd.createPortal)(Od, Wd) : null
     }
   },
-  35448: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => ar
+  35535: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd
     });
-    var Zr = Qr(5301),
-      Wr = Qr(5308);
+    var Wd = md(5197),
+      Fd = md(5206);
 
-    function ar(rr) {
+    function Rd(dd) {
       let {
-        children: Sr,
-        showing: Qr,
-        globallyUniqueKey: ar,
-        alwaysMountChildren: jr = !1,
-        doGameplayStartStopOnShow: Ir = !0,
-        keepsMovement: fr = !1
-      } = rr;
-      return (0, Wr.b)(!0, Qr, ar, fr), (0, Zr.e)(Ir, Qr), Qr || jr ? Sr : null
+        children: Od,
+        showing: md,
+        globallyUniqueKey: Rd,
+        alwaysMountChildren: Xd = !1,
+        doGameplayStartStopOnShow: Kd = !0,
+        keepsMovement: hd = !1
+      } = dd;
+      return (0, Fd.e)(!0, md, Rd, hd), (0, Wd.b)(Kd, md), md || Xd ? Od : null
     }
   },
-  9818: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar,
-      f: () => Wr
+  9850: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      d: () => Fd
     });
-    let Zr = null;
-    const Wr = function(rr) {
-        const Sr = {
-          cycle: rr,
+    let Wd = null;
+    const Fd = function(dd) {
+        const Od = {
+          cycle: dd,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Zr = Sr, () => {
-          Zr === Sr && (Zr = null)
+        return Wd = Od, () => {
+          Wd === Od && (Wd = null)
         }
       },
-      ar = () => {
-        var rr;
-        return null !== (rr = Zr) && void 0 !== rr && rr.canCycle() ? Zr.cycle : null
+      Rd = () => {
+        var dd;
+        return null !== (dd = Wd) && void 0 !== dd && dd.canCycle() ? Wd.cycle : null
       }
   },
-  38303: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Wr,
-      f: () => ar
+  38382: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Fd,
+      g: () => Rd
     });
-    const Zr = new Map;
+    const Wd = new Map;
 
-    function Wr(rr) {
-      var Sr;
-      return null === rr ? null : null !== (Sr = Zr.get(rr)) && void 0 !== Sr ? Sr : null
+    function Fd(dd) {
+      var Od;
+      return null === dd ? null : null !== (Od = Wd.get(dd)) && void 0 !== Od ? Od : null
     }
 
-    function ar(rr, Sr) {
-      return Zr.set(rr, Sr), () => {
-        Zr.get(rr) === Sr && Zr.delete(rr)
+    function Rd(dd, Od) {
+      return Wd.set(dd, Od), () => {
+        Wd.get(dd) === Od && Wd.delete(dd)
       }
     }
   },
-  39920: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      C: () => yr,
-      D: () => Tr,
-      G: () => Kr,
-      I: () => er,
-      K: () => mr,
-      N: () => tr,
-      P: () => zr,
-      S: () => Wr,
-      b: () => pr,
-      d: () => fr,
-      e: () => nr,
-      i: () => Er,
-      m: () => Ir,
-      q: () => jr,
-      t: () => ar,
-      w: () => Br,
-      z: () => Nr
+  39958: (dd, Od, md) => {
+    md.d(Od, {
+      A: () => Jd,
+      E: () => gd,
+      F: () => Yd,
+      G: () => od,
+      K: () => Hd,
+      L: () => bd,
+      O: () => Fd,
+      b: () => Qd,
+      e: () => hd,
+      i: () => pd,
+      m: () => vd,
+      o: () => Kd,
+      q: () => Xd,
+      t: () => Rd,
+      w: () => Ed,
+      x: () => Nd,
+      y: () => wd
     });
-    var Zr = Qr(5870);
+    var Wd = md(5813);
 
-    function Wr(rr) {
-      return Math.floor(rr).toLocaleString("en-US")
+    function Fd(dd) {
+      return Math.floor(dd).toLocaleString("en-US")
     }
-    const ar = 2e3,
-      jr = .005,
-      Ir = .001,
-      fr = 2,
-      Er = "Fluid Tank",
-      pr = "Coolant Mixer",
-      xr = 144;
+    const Rd = 2e3,
+      Xd = .005,
+      Kd = .001,
+      hd = 2,
+      vd = "Fluid Tank",
+      Qd = "Coolant Mixer",
+      td = 144;
 
-    function mr(rr) {
-      const Sr = rr.split("|")[0];
-      return (0, Zr.k)(Sr) ? Sr === Zr.d ? "cryo" : "water" : null
+    function od(dd) {
+      const Od = dd.split("|")[0];
+      return (0, Wd.n)(Od) ? Od === Wd.d ? "cryo" : "water" : null
     }
-    const Nr = [
+    const Nd = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -189,43 +189,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      Ur = 63;
+      qd = 63;
 
-    function tr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Qr = Sr ? function(rr, Sr, Qr) {
-        const Zr = Nr.findIndex((Zr => {
-          let [Wr, ar, jr] = Zr;
-          return Wr === rr && ar === Sr && jr === Qr
+    function Hd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const md = Od ? function(dd, Od, md) {
+        const Wd = Nd.findIndex((Wd => {
+          let [Fd, Rd, Xd] = Wd;
+          return Fd === dd && Rd === Od && Xd === md
         }));
-        return Zr < 0 ? 0 : 1 << Zr
-      }(Sr[0], Sr[1], Sr[2]) : 0;
-      return "maker" === rr ? {
-        kind: rr,
-        faces: Qr
-      } : "user" === rr ? {
-        kind: rr,
-        faces: Ur & ~Qr
+        return Wd < 0 ? 0 : 1 << Wd
+      }(Od[0], Od[1], Od[2]) : 0;
+      return "maker" === dd ? {
+        kind: dd,
+        faces: md
+      } : "user" === dd ? {
+        kind: dd,
+        faces: qd & ~md
       } : {
-        kind: rr,
-        faces: Ur
+        kind: dd,
+        faces: qd
       }
     }
 
-    function hr(rr) {
-      return "pipe" === rr || "tank" === rr || "maker" === rr
+    function yd(dd) {
+      return "pipe" === dd || "tank" === dd || "maker" === dd
     }
 
-    function zr(rr, Sr, Qr) {
-      return 0 !== (rr.faces & 1 << Qr) && 0 !== (Sr.faces & 1 << (1 ^ Qr)) && (hr(rr.kind) || hr(Sr.kind))
+    function bd(dd, Od, md) {
+      return 0 !== (dd.faces & 1 << md) && 0 !== (Od.faces & 1 << (1 ^ md)) && (yd(dd.kind) || yd(Od.kind))
     }
-    const Yr = (rr, Sr, Qr, Zr) => ({
-        input: rr,
-        inputAmount: Zr,
-        output: Sr,
-        outputAmount: Qr
+    const Td = (dd, Od, md, Wd) => ({
+        input: dd,
+        inputAmount: Wd,
+        output: Od,
+        outputAmount: md
       }),
-      nr = {
+      pd = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -244,7 +244,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [Yr("Uranium Grit", "Uranium Pellet", 1, 12), Yr("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [Td("Uranium Grit", "Uranium Pellet", 1, 12), Td("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -265,57 +265,57 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [Yr("Biomass", "", 0, 1)],
+          recipes: [Td("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: xr,
+          cryoMade: td,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function er(rr, Sr) {
-      return 1e3 * (null !== Sr && void 0 !== Sr ? Sr : 0) / rr.opMs
+    function Yd(dd, Od) {
+      return 1e3 * (null !== Od && void 0 !== Od ? Od : 0) / dd.opMs
     }
 
-    function Kr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const Qr = er(nr["Coolant Mixer"], xr) * Sr;
-      return rr <= 0 ? 0 : Math.ceil(rr / Qr - 1e-9)
+    function gd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const md = Yd(pd["Coolant Mixer"], td) * Od;
+      return dd <= 0 ? 0 : Math.ceil(dd / md - 1e-9)
     }
-    const yr = "baf2Water",
-      Br = "baf2waterclose",
-      Tr = "baf2wateropen"
+    const wd = "baf2Water",
+      Ed = "baf2waterclose",
+      Jd = "baf2wateropen"
   },
-  39914: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => vr,
-      f: () => er,
-      h: () => nr
+  39955: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Ud,
+      h: () => Yd,
+      l: () => pd
     });
-    var Zr = Qr(5779),
-      Wr = Qr(5806),
-      ar = Qr(5870),
-      jr = Qr(39920),
-      Ir = Qr(5861);
-    const fr = (0, jr.N)("pipe"),
-      Er = (0, jr.N)("tank"),
-      pr = (0, jr.N)("port"),
-      xr = "Reactor Port";
+    var Wd = md(5733),
+      Fd = md(5752),
+      Rd = md(5813),
+      Xd = md(39958),
+      Kd = md(5804);
+    const hd = (0, Xd.K)("pipe"),
+      vd = (0, Xd.K)("tank"),
+      Qd = (0, Xd.K)("port"),
+      td = "Reactor Port";
 
-    function mr(rr, Sr, Qr) {
-      const Zr = new Set([ar.g, ar.d, xr, ...Sr, ...Qr, ...rr ? [jr.i] : []]);
+    function od(dd, Od, md) {
+      const Wd = new Set([Rd.h, Rd.d, td, ...Od, ...md, ...dd ? [Xd.m] : []]);
       return {
-        makers: new Set(Sr),
-        roots: Zr
+        makers: new Set(Od),
+        roots: Wd
       }
     }
-    const Nr = {
-        water: mr(!0, ["Condenser"], ["Centrifuge", "Synthesizer", jr.b]),
-        cryo: mr(!1, [jr.b], [])
+    const Nd = {
+        water: od(!0, ["Condenser"], ["Centrifuge", "Synthesizer", Xd.b]),
+        cryo: od(!1, [Xd.b], [])
       },
-      Ur = new Set([...Nr.water.roots, ...Nr.cryo.roots]),
-      tr = {
+      qd = new Set([...Nd.water.roots, ...Nd.cryo.roots]),
+      Hd = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -323,120 +323,120 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      hr = Wr.f.map((rr => tr[rr])),
-      zr = hr.map((rr => {
-        let [Sr, Qr, Zr] = rr;
-        return jr.z.findIndex((rr => {
-          let [Wr, ar, jr] = rr;
-          return Wr === Sr && ar === Qr && jr === Zr
+      yd = Fd.c.map((dd => Hd[dd])),
+      bd = yd.map((dd => {
+        let [Od, md, Wd] = dd;
+        return Xd.x.findIndex((dd => {
+          let [Fd, Rd, Xd] = dd;
+          return Fd === Od && Rd === md && Xd === Wd
         }))
       }));
 
-    function Yr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const Qr = Zr.j[rr],
-        Wr = null === Qr || void 0 === Qr ? void 0 : Qr.meta.rootName,
-        mr = Nr[Sr];
-      if (!Wr || !mr.roots.has(Wr)) return null;
-      if ((0, ar.k)(Wr)) return (0, jr.K)(Qr.name) === Sr ? fr : null;
-      if (Wr === jr.i) return Er;
-      if (Wr === xr) return Qr.name.endsWith("|Water") ? pr : null;
-      const [Ur, tr] = Ir.d[(Qr.meta.rot || 1) - 1];
-      return (0, jr.N)(mr.makers.has(Wr) ? "maker" : "user", [-Ur, 0, -tr])
+    function Td(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const md = Wd.i[dd],
+        Fd = null === md || void 0 === md ? void 0 : md.meta.rootName,
+        od = Nd[Od];
+      if (!Fd || !od.roots.has(Fd)) return null;
+      if ((0, Rd.n)(Fd)) return (0, Xd.G)(md.name) === Od ? hd : null;
+      if (Fd === Xd.m) return vd;
+      if (Fd === td) return md.name.endsWith("|Water") ? Qd : null;
+      const [qd, Hd] = Kd.g[(md.meta.rot || 1) - 1];
+      return (0, Xd.K)(od.makers.has(Fd) ? "maker" : "user", [-qd, 0, -Hd])
     }
 
-    function nr(rr, Sr, Qr, Wr) {
-      let ar = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function pd(dd, Od, md, Fd) {
+      let Rd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: Ir
-      } = Nr[ar];
-      return hr.some(((Er, pr) => {
-        var xr, mr;
-        let [Nr, Ur, tr] = Er;
-        const hr = rr(Sr + Nr, Qr + Ur, Wr + tr),
-          nr = Yr(hr, ar);
-        return null !== nr && Ir.has(null !== (xr = null === (mr = Zr.j[hr]) || void 0 === mr ? void 0 : mr.meta.rootName) && void 0 !== xr ? xr : "") && !(0, jr.P)(fr, nr, zr[pr])
+        makers: Kd
+      } = Nd[Rd];
+      return yd.some(((vd, Qd) => {
+        var td, od;
+        let [Nd, qd, Hd] = vd;
+        const yd = dd(Od + Nd, md + qd, Fd + Hd),
+          pd = Td(yd, Rd);
+        return null !== pd && Kd.has(null !== (td = null === (od = Wd.i[yd]) || void 0 === od ? void 0 : od.meta.rootName) && void 0 !== td ? td : "") && !(0, Xd.L)(hd, pd, bd[Qd])
       }))
     }
 
-    function er(rr) {
-      const Sr = Zr.j[rr];
-      return Sr ? (0, jr.K)(Sr.name) : null
+    function Yd(dd) {
+      const Od = Wd.i[dd];
+      return Od ? (0, Xd.G)(Od.name) : null
     }
-    let Kr = null;
+    let gd = null;
 
-    function yr(rr) {
-      if (!Kr) {
-        Kr = new Map;
-        for (const rr of ["water", "cryo"])
-          for (let Sr = 0; Sr < 64; Sr++)
-            for (const Qr of [!1, !0]) Kr.set((0, ar.o)(rr, Sr, Qr), {
-              HN: rr,
-              mask: Sr,
-              full: Qr
+    function wd(dd) {
+      if (!gd) {
+        gd = new Map;
+        for (const dd of ["water", "cryo"])
+          for (let Od = 0; Od < 64; Od++)
+            for (const md of [!1, !0]) gd.set((0, Rd.o)(dd, Od, md), {
+              LN: dd,
+              mask: Od,
+              full: md
             })
       }
-      return Kr.get(rr)
+      return gd.get(dd)
     }
-    const Br = new Map(Array.from({
-      length: ar.h + 1
-    }, ((rr, Sr) => [(0, ar.p)(Sr), Sr])));
+    const Ed = new Map(Array.from({
+      length: Rd.k + 1
+    }, ((dd, Od) => [(0, Rd.s)(Od), Od])));
 
-    function Tr(rr, Sr, Qr, Wr, ar, jr) {
-      return hr.some(((Ir, fr) => {
-        var Er, pr, xr;
-        let [mr, Nr, Ur] = Ir;
-        if (0 === (jr >> fr & 1)) return !1;
-        const tr = null !== (Er = null === (pr = Zr.j[rr(Sr + mr, Qr + Nr, Wr + Ur)]) || void 0 === pr ? void 0 : pr.name) && void 0 !== Er ? Er : "",
-          hr = yr(tr);
-        return hr ? hr.HN === ar && hr.full : (null !== (xr = function(rr) {
-          var Sr;
-          return null !== (Sr = Br.get(rr)) && void 0 !== Sr ? Sr : null
-        }(tr)) && void 0 !== xr ? xr : 0) > 0
+    function Jd(dd, Od, md, Fd, Rd, Xd) {
+      return yd.some(((Kd, hd) => {
+        var vd, Qd, td;
+        let [od, Nd, qd] = Kd;
+        if (0 === (Xd >> hd & 1)) return !1;
+        const Hd = null !== (vd = null === (Qd = Wd.i[dd(Od + od, md + Nd, Fd + qd)]) || void 0 === Qd ? void 0 : Qd.name) && void 0 !== vd ? vd : "",
+          yd = wd(Hd);
+        return yd ? yd.LN === Rd && yd.full : (null !== (td = function(dd) {
+          var Od;
+          return null !== (Od = Ed.get(dd)) && void 0 !== Od ? Od : null
+        }(Hd)) && void 0 !== td ? td : 0) > 0
       }))
     }
-    class vr {
+    class Ud {
       constructor() {
-        this.reshapeOffsets = hr
+        this.reshapeOffsets = yd
       }
-      handles(rr) {
-        return null !== er(rr)
+      handles(dd) {
+        return null !== Yd(dd)
       }
-      affects(rr) {
-        var Sr, Qr;
-        return Ur.has(null !== (Sr = null === (Qr = Zr.j[rr]) || void 0 === Qr ? void 0 : Qr.meta.rootName) && void 0 !== Sr ? Sr : "")
+      affects(dd) {
+        var Od, md;
+        return qd.has(null !== (Od = null === (md = Wd.i[dd]) || void 0 === md ? void 0 : md.meta.rootName) && void 0 !== Od ? Od : "")
       }
-      placedBy(rr) {
-        var Sr;
-        return (null === (Sr = Zr.j[rr]) || void 0 === Sr ? void 0 : Sr.meta.rootName) === ar.d ? ar.g : null
+      placedBy(dd) {
+        var Od;
+        return (null === (Od = Wd.i[dd]) || void 0 === Od ? void 0 : Od.meta.rootName) === Rd.d ? Rd.h : null
       }
-      shape(rr, Sr, Qr, Wr, Ir, Er) {
-        var pr, xr, mr;
-        const Nr = null !== (pr = null === (xr = Zr.j[Ir]) || void 0 === xr ? void 0 : xr.name) && void 0 !== pr ? pr : "",
-          Ur = Er || Nr !== ar.g ? null !== (mr = (0, jr.K)(Nr)) && void 0 !== mr ? mr : "water" : function(rr, Sr, Qr, Zr) {
-            return hr.some(((Wr, ar) => {
-              let [Ir, Er, pr] = Wr;
-              const xr = Yr(rr(Sr + Ir, Qr + Er, Zr + pr), "cryo");
-              return null !== xr && "port" !== xr.kind && (0, jr.P)(fr, xr, zr[ar])
+      shape(dd, Od, md, Fd, Kd, vd) {
+        var Qd, td, od;
+        const Nd = null !== (Qd = null === (td = Wd.i[Kd]) || void 0 === td ? void 0 : td.name) && void 0 !== Qd ? Qd : "",
+          qd = vd || Nd !== Rd.h ? null !== (od = (0, Xd.G)(Nd)) && void 0 !== od ? od : "water" : function(dd, Od, md, Wd) {
+            return yd.some(((Fd, Rd) => {
+              let [Kd, vd, Qd] = Fd;
+              const td = Td(dd(Od + Kd, md + vd, Wd + Qd), "cryo");
+              return null !== td && "port" !== td.kind && (0, Xd.L)(hd, td, bd[Rd])
             })) ? "cryo" : "water"
-          }(rr, Sr, Qr, Wr),
-          tr = function(rr, Sr, Qr, Zr) {
-            let Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              ar = 0;
-            return hr.forEach(((Ir, Er) => {
-              let [pr, xr, mr] = Ir;
-              const Nr = Yr(rr(Sr + pr, Qr + xr, Zr + mr), Wr);
-              Nr && (0, jr.P)(fr, Nr, zr[Er]) && (ar |= 1 << Er)
-            })), ar
-          }(rr, Sr, Qr, Wr, Ur),
-          nr = Er ? function(rr) {
-            var Sr;
-            return !0 === (null === (Sr = yr(rr)) || void 0 === Sr ? void 0 : Sr.full)
-          }(Nr) : Tr(rr, Sr, Qr, Wr, Ur, tr);
-        return (0, Zr.k)((0, ar.o)(Ur, tr, nr))
+          }(dd, Od, md, Fd),
+          Hd = function(dd, Od, md, Wd) {
+            let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              Rd = 0;
+            return yd.forEach(((Kd, vd) => {
+              let [Qd, td, od] = Kd;
+              const Nd = Td(dd(Od + Qd, md + td, Wd + od), Fd);
+              Nd && (0, Xd.L)(hd, Nd, bd[vd]) && (Rd |= 1 << vd)
+            })), Rd
+          }(dd, Od, md, Fd, qd),
+          pd = vd ? function(dd) {
+            var Od;
+            return !0 === (null === (Od = wd(dd)) || void 0 === Od ? void 0 : Od.full)
+          }(Nd) : Jd(dd, Od, md, Fd, qd, Hd);
+        return (0, Wd.j)((0, Rd.o)(qd, Hd, pd))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

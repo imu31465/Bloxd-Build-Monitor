@@ -1,83 +1,83 @@
 export const id = 290;
 export const ids = [290];
 export const modules = {
-  41919: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => mr,
-      e: () => xr,
-      f: () => fr,
-      h: () => Nr,
-      j: () => Er,
-      k: () => Ir,
-      n: () => pr
+  41991: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => od,
+      f: () => td,
+      i: () => hd,
+      m: () => Nd,
+      o: () => vd,
+      p: () => Kd,
+      q: () => Qd
     });
-    var Zr = Qr(40246),
-      Wr = Qr(41922);
+    var Wd = md(40262),
+      Fd = md(41997);
 
-    function ar(rr, Sr, Qr, Zr) {
-      switch (Sr) {
+    function Rd(dd, Od, md, Wd) {
+      switch (Od) {
         case 5120: {
-          let Sr = rr.getInt8(Qr);
-          return Zr && (Sr = Math.max(Sr / 127, -1)), Sr
+          let Od = dd.getInt8(md);
+          return Wd && (Od = Math.max(Od / 127, -1)), Od
         }
         case 5121: {
-          let Sr = rr.getUint8(Qr);
-          return Zr && (Sr /= 255), Sr
+          let Od = dd.getUint8(md);
+          return Wd && (Od /= 255), Od
         }
         case 5122: {
-          let Sr = rr.getInt16(Qr, !0);
-          return Zr && (Sr = Math.max(Sr / 32767, -1)), Sr
+          let Od = dd.getInt16(md, !0);
+          return Wd && (Od = Math.max(Od / 32767, -1)), Od
         }
         case 5123: {
-          let Sr = rr.getUint16(Qr, !0);
-          return Zr && (Sr /= 65535), Sr
+          let Od = dd.getUint16(md, !0);
+          return Wd && (Od /= 65535), Od
         }
         case 5131:
-          return (0, Wr.c)(rr.getUint16(Qr, !0));
+          return (0, Fd.b)(dd.getUint16(md, !0));
         case 5124:
-          return rr.getInt32(Qr, !0);
+          return dd.getInt32(md, !0);
         case 5125:
-          return rr.getUint32(Qr, !0);
+          return dd.getUint32(md, !0);
         case 5126:
-          return rr.getFloat32(Qr, !0);
+          return dd.getFloat32(md, !0);
         default:
-          throw new Error(`Invalid component type ${Sr}`)
+          throw new Error(`Invalid component type ${Od}`)
       }
     }
 
-    function jr(rr, Sr, Qr, Zr, ar) {
-      switch (Sr) {
+    function Xd(dd, Od, md, Wd, Rd) {
+      switch (Od) {
         case 5120:
-          Zr && (ar = Math.round(127 * ar)), rr.setInt8(Qr, ar);
+          Wd && (Rd = Math.round(127 * Rd)), dd.setInt8(md, Rd);
           break;
         case 5121:
-          Zr && (ar = Math.round(255 * ar)), rr.setUint8(Qr, ar);
+          Wd && (Rd = Math.round(255 * Rd)), dd.setUint8(md, Rd);
           break;
         case 5122:
-          Zr && (ar = Math.round(32767 * ar)), rr.setInt16(Qr, ar, !0);
+          Wd && (Rd = Math.round(32767 * Rd)), dd.setInt16(md, Rd, !0);
           break;
         case 5123:
-          Zr && (ar = Math.round(65535 * ar)), rr.setUint16(Qr, ar, !0);
+          Wd && (Rd = Math.round(65535 * Rd)), dd.setUint16(md, Rd, !0);
           break;
         case 5131:
-          rr.setUint16(Qr, (0, Wr.g)(ar), !0);
+          dd.setUint16(md, (0, Fd.g)(Rd), !0);
           break;
         case 5124:
-          rr.setInt32(Qr, ar, !0);
+          dd.setInt32(md, Rd, !0);
           break;
         case 5125:
-          rr.setUint32(Qr, ar, !0);
+          dd.setUint32(md, Rd, !0);
           break;
         case 5126:
-          rr.setFloat32(Qr, ar, !0);
+          dd.setFloat32(md, Rd, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${Sr}`)
+          throw new Error(`Invalid component type ${Od}`)
       }
     }
 
-    function Ir(rr) {
-      switch (rr) {
+    function Kd(dd) {
+      switch (dd) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${rr}'`)
+          throw new Error(`Invalid type '${dd}'`)
       }
     }
 
-    function fr(rr, Sr, Qr, Zr, Wr, fr, Er, pr) {
-      const xr = new Array(Zr),
-        mr = new Array(Zr);
-      if (rr instanceof Array) {
-        let Wr = Sr / 4;
-        const ar = Qr / 4;
-        for (let Sr = 0; Sr < fr; Sr += Zr) {
-          for (let Sr = 0; Sr < Zr; Sr++) xr[Sr] = mr[Sr] = rr[Wr + Sr];
-          pr(mr, Sr);
-          for (let Sr = 0; Sr < Zr; Sr++) xr[Sr] !== mr[Sr] && (rr[Wr + Sr] = mr[Sr]);
-          Wr += ar
+    function hd(dd, Od, md, Wd, Fd, hd, vd, Qd) {
+      const td = new Array(Wd),
+        od = new Array(Wd);
+      if (dd instanceof Array) {
+        let Fd = Od / 4;
+        const Rd = md / 4;
+        for (let Od = 0; Od < hd; Od += Wd) {
+          for (let Od = 0; Od < Wd; Od++) td[Od] = od[Od] = dd[Fd + Od];
+          Qd(od, Od);
+          for (let Od = 0; Od < Wd; Od++) td[Od] !== od[Od] && (dd[Fd + Od] = od[Od]);
+          Fd += Rd
         }
       } else {
-        const Nr = ArrayBuffer.isView(rr) ? new DataView(rr.buffer, rr.byteOffset, rr.byteLength) : new DataView(rr),
-          Ur = Ir(Wr);
-        for (let rr = 0; rr < fr; rr += Zr) {
-          for (let rr = 0, Qr = Sr; rr < Zr; rr++, Qr += Ur) xr[rr] = mr[rr] = ar(Nr, Wr, Qr, Er);
-          pr(mr, rr);
-          for (let rr = 0, Qr = Sr; rr < Zr; rr++, Qr += Ur) xr[rr] !== mr[rr] && jr(Nr, Wr, Qr, Er, mr[rr]);
-          Sr += Qr
+        const Nd = ArrayBuffer.isView(dd) ? new DataView(dd.buffer, dd.byteOffset, dd.byteLength) : new DataView(dd),
+          qd = Kd(Fd);
+        for (let dd = 0; dd < hd; dd += Wd) {
+          for (let dd = 0, md = Od; dd < Wd; dd++, md += qd) td[dd] = od[dd] = Rd(Nd, Fd, md, vd);
+          Qd(od, dd);
+          for (let dd = 0, md = Od; dd < Wd; dd++, md += qd) td[dd] !== od[dd] && Xd(Nd, Fd, md, vd, od[dd]);
+          Od += md
         }
       }
     }
 
-    function Er(rr, Sr, Qr, Wr, ar, jr, Er, pr) {
-      const xr = Sr * Ir(Qr),
-        mr = Er * Sr;
-      if (5126 !== Qr || ar !== xr) {
-        const Zr = new Float32Array(mr);
-        return fr(rr, Wr, ar, Sr, Qr, mr, jr, ((rr, Qr) => {
-          for (let Wr = 0; Wr < Sr; Wr++) Zr[Qr + Wr] = rr[Wr]
-        })), Zr
+    function vd(dd, Od, md, Fd, Rd, Xd, vd, Qd) {
+      const td = Od * Kd(md),
+        od = vd * Od;
+      if (5126 !== md || Rd !== td) {
+        const Wd = new Float32Array(od);
+        return hd(dd, Fd, Rd, Od, md, od, Xd, ((dd, md) => {
+          for (let Fd = 0; Fd < Od; Fd++) Wd[md + Fd] = dd[Fd]
+        })), Wd
       }
-      if (!(rr instanceof Array || rr instanceof Float32Array) || 0 !== Wr || rr.length !== mr) {
-        if (rr instanceof Array) {
-          const Sr = Wr / 4;
-          return rr.slice(Sr, Sr + mr)
+      if (!(dd instanceof Array || dd instanceof Float32Array) || 0 !== Fd || dd.length !== od) {
+        if (dd instanceof Array) {
+          const Od = Fd / 4;
+          return dd.slice(Od, Od + od)
         }
-        if (ArrayBuffer.isView(rr)) {
-          const Sr = rr.byteOffset + Wr;
-          return 0 !== (3 & Sr) && (Zr.c.Warn("Float array must be aligned to 4-bytes border"), pr = !0), pr ? new Float32Array(rr.buffer.slice(Sr, Sr + mr * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(rr.buffer, Sr, mr)
+        if (ArrayBuffer.isView(dd)) {
+          const Od = dd.byteOffset + Fd;
+          return 0 !== (3 & Od) && (Wd.c.Warn("Float array must be aligned to 4-bytes border"), Qd = !0), Qd ? new Float32Array(dd.buffer.slice(Od, Od + od * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(dd.buffer, Od, od)
         }
-        return new Float32Array(rr, Wr, mr)
+        return new Float32Array(dd, Fd, od)
       }
-      return pr ? rr.slice() : rr
+      return Qd ? dd.slice() : dd
     }
 
-    function pr(rr, Sr, Qr, Wr, ar, jr, Er) {
-      const pr = Ir(Qr),
-        xr = function(rr) {
-          switch (rr) {
+    function Qd(dd, Od, md, Fd, Rd, Xd, vd) {
+      const Qd = Kd(md),
+        td = function(dd) {
+          switch (dd) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${rr}'`)
+              throw new Error(`Invalid component type '${dd}'`)
           }
-        }(Qr),
-        mr = jr * Sr;
-      if (Array.isArray(rr)) {
-        if (0 !== (3 & Wr) || 0 !== (3 & ar)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const Zr = Wr / 4,
-          Ir = ar / 4;
-        if (Zr + (jr - 1) * Ir + Sr > rr.length) throw new Error("Last accessed index is out of bounds.");
-        if (Ir < Sr) throw new Error("Data stride cannot be smaller than the component size.");
-        if (Ir !== Sr) {
-          const Zr = new xr(mr);
-          return fr(rr, Wr, ar, Sr, Qr, mr, !1, ((rr, Qr) => {
-            for (let Wr = 0; Wr < Sr; Wr++) Zr[Qr + Wr] = rr[Wr]
-          })), Zr
+        }(md),
+        od = Xd * Od;
+      if (Array.isArray(dd)) {
+        if (0 !== (3 & Fd) || 0 !== (3 & Rd)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const Wd = Fd / 4,
+          Kd = Rd / 4;
+        if (Wd + (Xd - 1) * Kd + Od > dd.length) throw new Error("Last accessed index is out of bounds.");
+        if (Kd < Od) throw new Error("Data stride cannot be smaller than the component size.");
+        if (Kd !== Od) {
+          const Wd = new td(od);
+          return hd(dd, Fd, Rd, Od, md, od, !1, ((dd, md) => {
+            for (let Fd = 0; Fd < Od; Fd++) Wd[md + Fd] = dd[Fd]
+          })), Wd
         }
-        return new xr(rr.slice(Zr, Zr + mr))
+        return new td(dd.slice(Wd, Wd + od))
       }
-      let Nr, Ur = Wr;
-      ArrayBuffer.isView(rr) ? (Nr = rr.buffer, Ur += rr.byteOffset) : Nr = rr;
-      if (Ur + (jr - 1) * ar + Sr * pr > Nr.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const tr = Sr * pr;
-      if (ar < tr) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (ar !== tr) {
-        const rr = new xr(mr),
-          Qr = new Uint8Array(Nr, Ur),
-          Zr = new Uint8Array(rr.buffer),
-          Wr = Sr * pr;
-        for (let Sr = 0, Ir = 0, fr = 0; Sr < jr; Sr++, Ir += ar, fr += Wr) Zr.set(Qr.subarray(Ir, Ir + Wr), fr);
-        return rr
+      let Nd, qd = Fd;
+      ArrayBuffer.isView(dd) ? (Nd = dd.buffer, qd += dd.byteOffset) : Nd = dd;
+      if (qd + (Xd - 1) * Rd + Od * Qd > Nd.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const Hd = Od * Qd;
+      if (Rd < Hd) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (Rd !== Hd) {
+        const dd = new td(od),
+          md = new Uint8Array(Nd, qd),
+          Wd = new Uint8Array(dd.buffer),
+          Fd = Od * Qd;
+        for (let Od = 0, Kd = 0, hd = 0; Od < Xd; Od++, Kd += Rd, hd += Fd) Wd.set(md.subarray(Kd, Kd + Fd), hd);
+        return dd
       }
-      return 1 !== pr && 0 !== (Ur & pr - 1) && (Zr.c.Warn("Array must be aligned to border of element size. Data will be copied."), Er = !0), Er ? new xr(Nr.slice(Ur, Ur + mr * pr)) : new xr(Nr, Ur, mr)
+      return 1 !== Qd && 0 !== (qd & Qd - 1) && (Wd.c.Warn("Array must be aligned to border of element size. Data will be copied."), vd = !0), vd ? new td(Nd.slice(qd, qd + od * Qd)) : new td(Nd, qd, od)
     }
 
-    function xr(rr, Sr, Qr, Wr, ar, jr, Er, pr) {
-      const xr = Sr * Ir(Qr),
-        mr = Er * Sr;
-      if (pr.length !== mr) throw new Error("Output length is not valid");
-      if (5126 === Qr && ar === xr)
-        if (rr instanceof Array) {
-          const Sr = Wr / 4;
-          pr.set(rr, Sr)
-        } else if (ArrayBuffer.isView(rr)) {
-        const Sr = rr.byteOffset + Wr;
-        if (0 !== (3 & Sr)) return Zr.c.Warn("Float array must be aligned to 4-bytes border"), void pr.set(new Float32Array(rr.buffer.slice(Sr, Sr + mr * Float32Array.BYTES_PER_ELEMENT)));
-        const Qr = new Float32Array(rr.buffer, Sr, mr);
-        pr.set(Qr)
+    function td(dd, Od, md, Fd, Rd, Xd, vd, Qd) {
+      const td = Od * Kd(md),
+        od = vd * Od;
+      if (Qd.length !== od) throw new Error("Output length is not valid");
+      if (5126 === md && Rd === td)
+        if (dd instanceof Array) {
+          const Od = Fd / 4;
+          Qd.set(dd, Od)
+        } else if (ArrayBuffer.isView(dd)) {
+        const Od = dd.byteOffset + Fd;
+        if (0 !== (3 & Od)) return Wd.c.Warn("Float array must be aligned to 4-bytes border"), void Qd.set(new Float32Array(dd.buffer.slice(Od, Od + od * Float32Array.BYTES_PER_ELEMENT)));
+        const md = new Float32Array(dd.buffer, Od, od);
+        Qd.set(md)
       } else {
-        const Sr = new Float32Array(rr, Wr, mr);
-        pr.set(Sr)
-      } else fr(rr, Wr, ar, Sr, Qr, mr, jr, ((rr, Qr) => {
-        for (let Zr = 0; Zr < Sr; Zr++) pr[Qr + Zr] = rr[Zr]
+        const Od = new Float32Array(dd, Fd, od);
+        Qd.set(Od)
+      } else hd(dd, Fd, Rd, Od, md, od, Xd, ((dd, md) => {
+        for (let Wd = 0; Wd < Od; Wd++) Qd[md + Wd] = dd[Wd]
       }))
     }
 
-    function mr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(rr)) {
-        for (let Wr = 0; Wr < Sr; Wr++)
-          if (rr[Qr + Wr] - Zr > 65535) return !0;
+    function od(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(dd)) {
+        for (let Fd = 0; Fd < Od; Fd++)
+          if (dd[md + Fd] - Wd > 65535) return !0;
         return !1
       }
-      return 4 === rr.BYTES_PER_ELEMENT
+      return 4 === dd.BYTES_PER_ELEMENT
     }
 
-    function Nr(rr) {
-      const Sr = rr.buffer;
-      if (Sr instanceof ArrayBuffer) return rr;
-      const Qr = new ArrayBuffer(rr.byteLength);
-      return new Uint8Array(Qr).set(new Uint8Array(Sr, rr.byteOffset, rr.byteLength)), Qr
+    function Nd(dd) {
+      const Od = dd.buffer;
+      if (Od instanceof ArrayBuffer) return dd;
+      const md = new ArrayBuffer(dd.byteLength);
+      return new Uint8Array(md).set(new Uint8Array(Od, dd.byteOffset, dd.byteLength)), md
     }
   },
-  41775: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Tr,
-      c: () => yr,
-      j: () => Br,
-      g: () => Hr,
-      k: () => qr
+  41822: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Jd,
+      h: () => wd,
+      n: () => Ed,
+      l: () => Vd,
+      q: () => Ad
     });
-    class Zr {
+    class Wd {
       constructor() {
         this.children = []
       }
-      isValid(rr) {
+      isValid(dd) {
         return !0
       }
-      process(rr, Sr, Qr) {
-        let Zr = "";
+      process(dd, Od, md) {
+        let Wd = "";
         if (this.line) {
-          let Qr = this.line;
-          const Wr = Sr.processor;
-          if (Wr) {
-            Wr.lineProcessor && (Qr = Wr.lineProcessor(Qr, Sr.isFragment, Sr.processingContext));
-            const Zr = Sr.processor?.attributeKeywordName ?? "attribute",
-              ar = Sr.isFragment && Sr.processor?.varyingFragmentKeywordName ? Sr.processor?.varyingFragmentKeywordName : !Sr.isFragment && Sr.processor?.varyingVertexKeywordName ? Sr.processor?.varyingVertexKeywordName : "varying";
-            if (!Sr.isFragment && Wr.attributeProcessor && this.line.startsWith(Zr)) Qr = Wr.attributeProcessor(this.line, rr, Sr.processingContext);
-            else if (Wr.varyingProcessor && (Wr.varyingCheck?.(this.line, Sr.isFragment) || !Wr.varyingCheck && this.line.startsWith(ar))) Qr = Wr.varyingProcessor(this.line, Sr.isFragment, rr, Sr.processingContext);
-            else if (Wr.uniformProcessor && Wr.uniformRegexp && Wr.uniformRegexp.test(this.line)) Sr.lookForClosingBracketForUniformBuffer || (Qr = Wr.uniformProcessor(this.line, Sr.isFragment, rr, Sr.processingContext));
-            else if (Wr.uniformBufferProcessor && Wr.uniformBufferRegexp && Wr.uniformBufferRegexp.test(this.line)) Sr.lookForClosingBracketForUniformBuffer || (Qr = Wr.uniformBufferProcessor(this.line, Sr.isFragment, Sr.processingContext), Sr.lookForClosingBracketForUniformBuffer = !0);
-            else if (Wr.textureProcessor && Wr.textureRegexp && Wr.textureRegexp.test(this.line)) Qr = Wr.textureProcessor(this.line, Sr.isFragment, rr, Sr.processingContext);
-            else if ((Wr.uniformProcessor || Wr.uniformBufferProcessor) && this.line.startsWith("uniform") && !Sr.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? Wr.uniformProcessor && (Qr = Wr.uniformProcessor(this.line, Sr.isFragment, rr, Sr.processingContext)) : Wr.uniformBufferProcessor && (Qr = Wr.uniformBufferProcessor(this.line, Sr.isFragment, Sr.processingContext), Sr.lookForClosingBracketForUniformBuffer = !0)
+          let md = this.line;
+          const Fd = Od.processor;
+          if (Fd) {
+            Fd.lineProcessor && (md = Fd.lineProcessor(md, Od.isFragment, Od.processingContext));
+            const Wd = Od.processor?.attributeKeywordName ?? "attribute",
+              Rd = Od.isFragment && Od.processor?.varyingFragmentKeywordName ? Od.processor?.varyingFragmentKeywordName : !Od.isFragment && Od.processor?.varyingVertexKeywordName ? Od.processor?.varyingVertexKeywordName : "varying";
+            if (!Od.isFragment && Fd.attributeProcessor && this.line.startsWith(Wd)) md = Fd.attributeProcessor(this.line, dd, Od.processingContext);
+            else if (Fd.varyingProcessor && (Fd.varyingCheck?.(this.line, Od.isFragment) || !Fd.varyingCheck && this.line.startsWith(Rd))) md = Fd.varyingProcessor(this.line, Od.isFragment, dd, Od.processingContext);
+            else if (Fd.uniformProcessor && Fd.uniformRegexp && Fd.uniformRegexp.test(this.line)) Od.lookForClosingBracketForUniformBuffer || (md = Fd.uniformProcessor(this.line, Od.isFragment, dd, Od.processingContext));
+            else if (Fd.uniformBufferProcessor && Fd.uniformBufferRegexp && Fd.uniformBufferRegexp.test(this.line)) Od.lookForClosingBracketForUniformBuffer || (md = Fd.uniformBufferProcessor(this.line, Od.isFragment, Od.processingContext), Od.lookForClosingBracketForUniformBuffer = !0);
+            else if (Fd.textureProcessor && Fd.textureRegexp && Fd.textureRegexp.test(this.line)) md = Fd.textureProcessor(this.line, Od.isFragment, dd, Od.processingContext);
+            else if ((Fd.uniformProcessor || Fd.uniformBufferProcessor) && this.line.startsWith("uniform") && !Od.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? Fd.uniformProcessor && (md = Fd.uniformProcessor(this.line, Od.isFragment, dd, Od.processingContext)) : Fd.uniformBufferProcessor && (md = Fd.uniformBufferProcessor(this.line, Od.isFragment, Od.processingContext), Od.lookForClosingBracketForUniformBuffer = !0)
             }
-            Sr.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (Sr.lookForClosingBracketForUniformBuffer = !1, Wr.endOfUniformBufferProcessor && (Qr = Wr.endOfUniformBufferProcessor(this.line, Sr.isFragment, Sr.processingContext)))
+            Od.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (Od.lookForClosingBracketForUniformBuffer = !1, Fd.endOfUniformBufferProcessor && (md = Fd.endOfUniformBufferProcessor(this.line, Od.isFragment, Od.processingContext)))
           }
-          Zr += Qr + "\n"
+          Wd += md + "\n"
         }
-        for (const Wr of this.children) Zr += Wr.process(rr, Sr, Qr);
-        return this.additionalDefineKey && (rr[this.additionalDefineKey] = this.additionalDefineValue || "true", Qr[this.additionalDefineKey] = rr[this.additionalDefineKey]), Zr
+        for (const Fd of this.children) Wd += Fd.process(dd, Od, md);
+        return this.additionalDefineKey && (dd[this.additionalDefineKey] = this.additionalDefineValue || "true", md[this.additionalDefineKey] = dd[this.additionalDefineKey]), Wd
       }
     }
-    class Wr {
+    class Fd {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(rr) {
+      set lines(dd) {
         this._lines.length = 0;
-        for (const Sr of rr) {
-          if (!Sr || "\r" === Sr) continue;
-          if ("#" === Sr[0]) {
-            this._lines.push(Sr);
+        for (const Od of dd) {
+          if (!Od || "\r" === Od) continue;
+          if ("#" === Od[0]) {
+            this._lines.push(Od);
             continue
           }
-          const rr = Sr.trim();
-          if (!rr) continue;
-          if (rr.startsWith("//")) {
-            this._lines.push(Sr);
+          const dd = Od.trim();
+          if (!dd) continue;
+          if (dd.startsWith("//")) {
+            this._lines.push(Od);
             continue
           }
-          const Qr = rr.indexOf(";");
-          if (-1 === Qr) this._lines.push(rr);
-          else if (Qr === rr.length - 1) rr.length > 1 && this._lines.push(rr);
+          const md = dd.indexOf(";");
+          if (-1 === md) this._lines.push(dd);
+          else if (md === dd.length - 1) dd.length > 1 && this._lines.push(dd);
           else {
-            const rr = Sr.split(";");
-            for (let Sr = 0; Sr < rr.length; Sr++) {
-              let Qr = rr[Sr];
-              Qr && (Qr = Qr.trim(), Qr && this._lines.push(Qr + (Sr !== rr.length - 1 ? ";" : "")))
+            const dd = Od.split(";");
+            for (let Od = 0; Od < dd.length; Od++) {
+              let md = dd[Od];
+              md && (md = md.trim(), md && this._lines.push(md + (Od !== dd.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class ar extends Zr {
-      process(rr, Sr, Qr) {
-        for (let Zr = 0; Zr < this.children.length; Zr++) {
-          const Wr = this.children[Zr];
-          if (Wr.isValid(rr)) return Wr.process(rr, Sr, Qr)
+    class Rd extends Wd {
+      process(dd, Od, md) {
+        for (let Wd = 0; Wd < this.children.length; Wd++) {
+          const Fd = this.children[Wd];
+          if (Fd.isValid(dd)) return Fd.process(dd, Od, md)
         }
         return ""
       }
     }
-    class jr extends Zr {
-      isValid(rr) {
-        return this.testExpression.isTrue(rr)
+    class Xd extends Wd {
+      isValid(dd) {
+        return this.testExpression.isTrue(dd)
       }
     }
-    class Ir {
-      isTrue(rr) {
+    class Kd {
+      isTrue(dd) {
         return !0
       }
-      static postfixToInfix(rr) {
-        const Sr = [];
-        for (const Qr of rr)
-          if (void 0 === Ir._OperatorPriority[Qr]) Sr.push(Qr);
+      static postfixToInfix(dd) {
+        const Od = [];
+        for (const md of dd)
+          if (void 0 === Kd._OperatorPriority[md]) Od.push(md);
           else {
-            const rr = Sr[Sr.length - 1],
-              Zr = Sr[Sr.length - 2];
-            Sr.length -= 2, Sr.push(`(${Zr}${Qr}${rr})`)
-          } return Sr[Sr.length - 1]
+            const dd = Od[Od.length - 1],
+              Wd = Od[Od.length - 2];
+            Od.length -= 2, Od.push(`(${Wd}${md}${dd})`)
+          } return Od[Od.length - 1]
       }
-      static infixToPostfix(rr) {
-        const Sr = Ir._InfixToPostfixCache.get(rr);
-        if (Sr) return Sr.accessTime = Date.now(), Sr.result;
-        if (!rr.includes("&&") && !rr.includes("||") && !rr.includes(")") && !rr.includes("(")) return [rr];
-        const Qr = [];
-        let Zr = -1;
-        const Wr = () => {
-            pr = pr.trim(), "" !== pr && (Qr.push(pr), pr = "")
+      static infixToPostfix(dd) {
+        const Od = Kd._InfixToPostfixCache.get(dd);
+        if (Od) return Od.accessTime = Date.now(), Od.result;
+        if (!dd.includes("&&") && !dd.includes("||") && !dd.includes(")") && !dd.includes("(")) return [dd];
+        const md = [];
+        let Wd = -1;
+        const Fd = () => {
+            Qd = Qd.trim(), "" !== Qd && (md.push(Qd), Qd = "")
           },
-          ar = rr => {
-            Zr < Ir._Stack.length - 1 && (Ir._Stack[++Zr] = rr)
+          Rd = dd => {
+            Wd < Kd._Stack.length - 1 && (Kd._Stack[++Wd] = dd)
           },
-          jr = () => Ir._Stack[Zr],
-          fr = () => -1 === Zr ? "!!INVALID EXPRESSION!!" : Ir._Stack[Zr--];
-        let Er = 0,
-          pr = "";
-        for (; Er < rr.length;) {
-          const Sr = rr.charAt(Er),
-            xr = Er < rr.length - 1 ? rr.substring(Er, 2 + Er) : "";
-          if ("(" === Sr) pr = "", ar(Sr);
-          else if (")" === Sr) {
-            for (Wr(); - 1 !== Zr && "(" !== jr();) Qr.push(fr());
-            fr()
-          } else if (Ir._OperatorPriority[xr] > 1) {
-            for (Wr(); - 1 !== Zr && Ir._OperatorPriority[jr()] >= Ir._OperatorPriority[xr];) Qr.push(fr());
-            ar(xr), Er++
-          } else pr += Sr;
-          Er++
+          Xd = () => Kd._Stack[Wd],
+          hd = () => -1 === Wd ? "!!INVALID EXPRESSION!!" : Kd._Stack[Wd--];
+        let vd = 0,
+          Qd = "";
+        for (; vd < dd.length;) {
+          const Od = dd.charAt(vd),
+            td = vd < dd.length - 1 ? dd.substring(vd, 2 + vd) : "";
+          if ("(" === Od) Qd = "", Rd(Od);
+          else if (")" === Od) {
+            for (Fd(); - 1 !== Wd && "(" !== Xd();) md.push(hd());
+            hd()
+          } else if (Kd._OperatorPriority[td] > 1) {
+            for (Fd(); - 1 !== Wd && Kd._OperatorPriority[Xd()] >= Kd._OperatorPriority[td];) md.push(hd());
+            Rd(td), vd++
+          } else Qd += Od;
+          vd++
         }
-        for (Wr(); - 1 !== Zr;) "(" === jr() ? fr() : Qr.push(fr());
-        return Ir._InfixToPostfixCache.size >= Ir.InfixToPostfixCacheLimitSize && Ir.ClearCache(), Ir._InfixToPostfixCache.set(rr, {
-          result: Qr,
+        for (Fd(); - 1 !== Wd;) "(" === Xd() ? hd() : md.push(hd());
+        return Kd._InfixToPostfixCache.size >= Kd.InfixToPostfixCacheLimitSize && Kd.ClearCache(), Kd._InfixToPostfixCache.set(dd, {
+          result: md,
           accessTime: Date.now()
-        }), Qr
+        }), md
       }
       static ClearCache() {
-        const rr = Array.from(Ir._InfixToPostfixCache.entries()).sort(((rr, Sr) => rr[1].accessTime - Sr[1].accessTime));
-        for (let Sr = 0; Sr < Ir.InfixToPostfixCacheCleanupSize; Sr++) Ir._InfixToPostfixCache.delete(rr[Sr][0])
+        const dd = Array.from(Kd._InfixToPostfixCache.entries()).sort(((dd, Od) => dd[1].accessTime - Od[1].accessTime));
+        for (let Od = 0; Od < Kd.InfixToPostfixCacheCleanupSize; Od++) Kd._InfixToPostfixCache.delete(dd[Od][0])
       }
     }
-    Ir.InfixToPostfixCacheLimitSize = 5e4, Ir.InfixToPostfixCacheCleanupSize = 25e3, Ir._InfixToPostfixCache = new Map, Ir._OperatorPriority = {
+    Kd.InfixToPostfixCacheLimitSize = 5e4, Kd.InfixToPostfixCacheCleanupSize = 25e3, Kd._InfixToPostfixCache = new Map, Kd._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, Ir._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class fr extends Ir {
-      constructor(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = rr, this.not = Sr
+    }, Kd._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class hd extends Kd {
+      constructor(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = dd, this.not = Od
       }
-      isTrue(rr) {
-        let Sr = void 0 !== rr[this.define];
-        return this.not && (Sr = !Sr), Sr
-      }
-    }
-    class Er extends Ir {
-      isTrue(rr) {
-        return this.leftOperand.isTrue(rr) || this.rightOperand.isTrue(rr)
+      isTrue(dd) {
+        let Od = void 0 !== dd[this.define];
+        return this.not && (Od = !Od), Od
       }
     }
-    class pr extends Ir {
-      isTrue(rr) {
-        return this.leftOperand.isTrue(rr) && this.rightOperand.isTrue(rr)
+    class vd extends Kd {
+      isTrue(dd) {
+        return this.leftOperand.isTrue(dd) || this.rightOperand.isTrue(dd)
       }
     }
-    class xr extends Ir {
-      constructor(rr, Sr, Qr) {
-        super(), this.define = rr, this.operand = Sr, this.testValue = Qr
+    class Qd extends Kd {
+      isTrue(dd) {
+        return this.leftOperand.isTrue(dd) && this.rightOperand.isTrue(dd)
+      }
+    }
+    class td extends Kd {
+      constructor(dd, Od, md) {
+        super(), this.define = dd, this.operand = Od, this.testValue = md
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(rr) {
-        let Sr = !1;
-        const Qr = parseInt(void 0 != rr[this.define] ? rr[this.define] : this.define),
-          Zr = parseInt(void 0 != rr[this.testValue] ? rr[this.testValue] : this.testValue);
-        if (isNaN(Qr) || isNaN(Zr)) return !1;
+      isTrue(dd) {
+        let Od = !1;
+        const md = parseInt(void 0 != dd[this.define] ? dd[this.define] : this.define),
+          Wd = parseInt(void 0 != dd[this.testValue] ? dd[this.testValue] : this.testValue);
+        if (isNaN(md) || isNaN(Wd)) return !1;
         switch (this.operand) {
           case ">":
-            Sr = Qr > Zr;
+            Od = md > Wd;
             break;
           case "<":
-            Sr = Qr < Zr;
+            Od = md < Wd;
             break;
           case "<=":
-            Sr = Qr <= Zr;
+            Od = md <= Wd;
             break;
           case ">=":
-            Sr = Qr >= Zr;
+            Od = md >= Wd;
             break;
           case "==":
-            Sr = Qr === Zr;
+            Od = md === Wd;
             break;
           case "!=":
-            Sr = Qr !== Zr
+            Od = md !== Wd
         }
-        return Sr
+        return Od
       }
     }
-    var mr = Qr(41769),
-      Nr = Qr(41764);
-    const Ur = /defined\s*?\((.+?)\)/g,
-      tr = /defined\s*?\[(.+?)\]/g,
-      hr = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      zr = /__decl__/,
-      Yr = /light\{X\}.(\w*)/g,
-      nr = /\{X\}/g,
-      er = [],
-      Kr = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var od = md(41817),
+      Nd = md(41810);
+    const qd = /defined\s*?\((.+?)\)/g,
+      Hd = /defined\s*?\[(.+?)\]/g,
+      yd = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      bd = /__decl__/,
+      Td = /light\{X\}.(\w*)/g,
+      pd = /\{X\}/g,
+      Yd = [],
+      gd = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function yr(rr) {
-      rr.processor && rr.processor.initializeShaders && rr.processor.initializeShaders(rr.processingContext)
+    function wd(dd) {
+      dd.processor && dd.processor.initializeShaders && dd.processor.initializeShaders(dd.processingContext)
     }
 
-    function Br(rr, Sr, Qr, Zr) {
-      Sr.processor?.preProcessShaderCode && (rr = Sr.processor.preProcessShaderCode(rr, Sr.isFragment)), Hr(rr, Sr, (rr => {
-        Sr.processCodeAfterIncludes && (rr = Sr.processCodeAfterIncludes(Sr.isFragment ? "fragment" : "vertex", rr, Sr.defines));
-        const Wr = function(rr, Sr, Qr) {
-          let Zr = function(rr, Sr) {
-            if (Sr.processor?.noPrecision) return rr;
-            const Qr = Sr.shouldUseHighPrecisionShader; - 1 === rr.indexOf("precision highp float") ? rr = Qr ? "precision highp float;\n" + rr : "precision mediump float;\n" + rr : Qr || (rr = rr.replace("precision highp float", "precision mediump float"));
-            return rr
-          }(rr, Sr);
-          if (!Sr.processor) return Zr;
-          if (0 === Sr.processor.shaderLanguage && -1 !== Zr.indexOf("#version 3") && (Zr = Zr.replace("#version 300 es", ""), !Sr.processor.parseGLES3)) return Zr;
-          const Wr = Sr.defines,
-            ar = Pr(Sr, Qr);
-          Sr.processor.preProcessor && (Zr = Sr.processor.preProcessor(Zr, Wr, ar, Sr.isFragment, Sr.processingContext));
-          const jr = {};
-          Zr = Xr(Zr, ar, Sr, jr), Sr.processor.postProcessor && (Zr = Sr.processor.postProcessor(Zr, Wr, Sr.isFragment, Sr.processingContext, Qr ? {
-            drawBuffersExtensionDisabled: !Qr.getCaps().drawBuffersExtension
-          } : {}, ar, jr));
-          Qr?._features.needShaderCodeInlining && (Zr = Qr.inlineShaderCode(Zr));
-          return Zr
-        }(rr, Sr, Zr);
-        Qr(Wr, rr)
+    function Ed(dd, Od, md, Wd) {
+      Od.processor?.preProcessShaderCode && (dd = Od.processor.preProcessShaderCode(dd, Od.isFragment)), Vd(dd, Od, (dd => {
+        Od.processCodeAfterIncludes && (dd = Od.processCodeAfterIncludes(Od.isFragment ? "fragment" : "vertex", dd, Od.defines));
+        const Fd = function(dd, Od, md) {
+          let Wd = function(dd, Od) {
+            if (Od.processor?.noPrecision) return dd;
+            const md = Od.shouldUseHighPrecisionShader; - 1 === dd.indexOf("precision highp float") ? dd = md ? "precision highp float;\n" + dd : "precision mediump float;\n" + dd : md || (dd = dd.replace("precision highp float", "precision mediump float"));
+            return dd
+          }(dd, Od);
+          if (!Od.processor) return Wd;
+          if (0 === Od.processor.shaderLanguage && -1 !== Wd.indexOf("#version 3") && (Wd = Wd.replace("#version 300 es", ""), !Od.processor.parseGLES3)) return Wd;
+          const Fd = Od.defines,
+            Rd = ud(Od, md);
+          Od.processor.preProcessor && (Wd = Od.processor.preProcessor(Wd, Fd, Rd, Od.isFragment, Od.processingContext));
+          const Xd = {};
+          Wd = sd(Wd, Rd, Od, Xd), Od.processor.postProcessor && (Wd = Od.processor.postProcessor(Wd, Fd, Od.isFragment, Od.processingContext, md ? {
+            drawBuffersExtensionDisabled: !md.getCaps().drawBuffersExtension
+          } : {}, Rd, Xd));
+          md?._features.needShaderCodeInlining && (Wd = md.inlineShaderCode(Wd));
+          return Wd
+        }(dd, Od, Wd);
+        md(Fd, dd)
       }))
     }
 
-    function Tr(rr, Sr, Qr) {
-      return Qr.processor && Qr.processor.finalizeShaders ? Qr.processor.finalizeShaders(rr, Sr, Qr.processingContext) : {
-        vertexCode: rr,
-        fragmentCode: Sr
+    function Jd(dd, Od, md) {
+      return md.processor && md.processor.finalizeShaders ? md.processor.finalizeShaders(dd, Od, md.processingContext) : {
+        vertexCode: dd,
+        fragmentCode: Od
       }
     }
 
-    function vr(rr) {
-      const Sr = /defined\((.+)\)/.exec(rr);
-      if (Sr && Sr.length) return new fr(Sr[1].trim(), "!" === rr[0]);
-      const Qr = ["==", "!=", ">=", "<=", "<", ">"];
-      let Zr = "",
-        Wr = 0;
-      for (Zr of Qr)
-        if (Wr = rr.indexOf(Zr), Wr > -1) break;
-      if (-1 === Wr) return new fr(rr);
-      const ar = rr.substring(0, Wr).trim(),
-        jr = rr.substring(Wr + Zr.length).trim();
-      return new xr(ar, Zr, jr)
+    function Ud(dd) {
+      const Od = /defined\((.+)\)/.exec(dd);
+      if (Od && Od.length) return new hd(Od[1].trim(), "!" === dd[0]);
+      const md = ["==", "!=", ">=", "<=", "<", ">"];
+      let Wd = "",
+        Fd = 0;
+      for (Wd of md)
+        if (Fd = dd.indexOf(Wd), Fd > -1) break;
+      if (-1 === Fd) return new hd(dd);
+      const Rd = dd.substring(0, Fd).trim(),
+        Xd = dd.substring(Fd + Wd.length).trim();
+      return new td(Rd, Wd, Xd)
     }
 
-    function Or(rr, Sr) {
-      const Qr = new jr,
-        Zr = rr.substring(0, Sr);
-      let Wr = rr.substring(Sr);
-      return Wr = Wr.substring(0, (Wr.indexOf("//") + 1 || Wr.length + 1) - 1).trim(), Qr.testExpression = "#ifdef" === Zr ? new fr(Wr) : "#ifndef" === Zr ? new fr(Wr, !0) : function(rr) {
-        rr = rr.replace(Ur, "defined[$1]");
-        const Sr = Ir.infixToPostfix(rr),
-          Qr = [];
-        for (const Wr of Sr)
-          if ("||" !== Wr && "&&" !== Wr) Qr.push(Wr);
-          else if (Qr.length >= 2) {
-          let rr = Qr[Qr.length - 1],
-            Sr = Qr[Qr.length - 2];
-          Qr.length -= 2;
-          const Zr = "&&" == Wr ? new pr : new Er;
-          "string" === typeof rr && (rr = rr.replace(tr, "defined($1)")), "string" === typeof Sr && (Sr = Sr.replace(tr, "defined($1)")), Zr.leftOperand = "string" === typeof Sr ? vr(Sr) : Sr, Zr.rightOperand = "string" === typeof rr ? vr(rr) : rr, Qr.push(Zr)
+    function xd(dd, Od) {
+      const md = new Xd,
+        Wd = dd.substring(0, Od);
+      let Fd = dd.substring(Od);
+      return Fd = Fd.substring(0, (Fd.indexOf("//") + 1 || Fd.length + 1) - 1).trim(), md.testExpression = "#ifdef" === Wd ? new hd(Fd) : "#ifndef" === Wd ? new hd(Fd, !0) : function(dd) {
+        dd = dd.replace(qd, "defined[$1]");
+        const Od = Kd.infixToPostfix(dd),
+          md = [];
+        for (const Fd of Od)
+          if ("||" !== Fd && "&&" !== Fd) md.push(Fd);
+          else if (md.length >= 2) {
+          let dd = md[md.length - 1],
+            Od = md[md.length - 2];
+          md.length -= 2;
+          const Wd = "&&" == Fd ? new Qd : new vd;
+          "string" === typeof dd && (dd = dd.replace(Hd, "defined($1)")), "string" === typeof Od && (Od = Od.replace(Hd, "defined($1)")), Wd.leftOperand = "string" === typeof Od ? Ud(Od) : Od, Wd.rightOperand = "string" === typeof dd ? Ud(dd) : dd, md.push(Wd)
         }
-        let Zr = Qr[Qr.length - 1];
-        return "string" === typeof Zr && (Zr = Zr.replace(tr, "defined($1)")), "string" === typeof Zr ? vr(Zr) : Zr
-      }(Wr), Qr
+        let Wd = md[md.length - 1];
+        return "string" === typeof Wd && (Wd = Wd.replace(Hd, "defined($1)")), "string" === typeof Wd ? Ud(Wd) : Wd
+      }(Fd), md
     }
 
-    function Lr(rr, Sr, Qr, Wr) {
-      let ar;
-      for (; lr(rr, Qr, Wr);) {
-        ar = rr.currentLine;
-        const jr = ar.substring(0, 5).toLowerCase();
-        if ("#else" === jr) {
-          const Qr = new Zr;
-          return Sr.children.push(Qr), void lr(rr, Qr, Wr)
+    function Bd(dd, Od, md, Fd) {
+      let Rd;
+      for (; Sd(dd, md, Fd);) {
+        Rd = dd.currentLine;
+        const Xd = Rd.substring(0, 5).toLowerCase();
+        if ("#else" === Xd) {
+          const md = new Wd;
+          return Od.children.push(md), void Sd(dd, md, Fd)
         }
-        if ("#elif" === jr) {
-          const rr = Or(ar, 5);
-          Sr.children.push(rr), Qr = rr
+        if ("#elif" === Xd) {
+          const dd = xd(Rd, 5);
+          Od.children.push(dd), md = dd
         }
       }
     }
 
-    function lr(rr, Sr, Qr) {
-      for (; rr.canRead;) {
-        rr.lineIndex++;
-        const Wr = rr.currentLine;
-        if (Wr.indexOf("#") >= 0) {
-          const Zr = Kr.exec(Wr);
-          if (Zr && Zr.length) {
-            switch (Zr[0]) {
+    function Sd(dd, Od, md) {
+      for (; dd.canRead;) {
+        dd.lineIndex++;
+        const Fd = dd.currentLine;
+        if (Fd.indexOf("#") >= 0) {
+          const Wd = gd.exec(Fd);
+          if (Wd && Wd.length) {
+            switch (Wd[0]) {
               case "#ifdef": {
-                const Zr = new ar;
-                Sr.children.push(Zr);
-                const jr = Or(Wr, 6);
-                Zr.children.push(jr), Lr(rr, Zr, jr, Qr);
+                const Wd = new Rd;
+                Od.children.push(Wd);
+                const Xd = xd(Fd, 6);
+                Wd.children.push(Xd), Bd(dd, Wd, Xd, md);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const Zr = new ar;
-                Sr.children.push(Zr);
-                const jr = Or(Wr, 7);
-                Zr.children.push(jr), Lr(rr, Zr, jr, Qr);
+                const Wd = new Rd;
+                Od.children.push(Wd);
+                const Xd = xd(Fd, 7);
+                Wd.children.push(Xd), Bd(dd, Wd, Xd, md);
                 break
               }
               case "#if": {
-                const Zr = new ar,
-                  jr = Or(Wr, 3);
-                Sr.children.push(Zr), Zr.children.push(jr), Lr(rr, Zr, jr, Qr);
+                const Wd = new Rd,
+                  Xd = xd(Fd, 3);
+                Od.children.push(Wd), Wd.children.push(Xd), Bd(dd, Wd, Xd, md);
                 break
               }
             }
             continue
           }
         }
-        const jr = new Zr;
-        if (jr.line = Wr, Sr.children.push(jr), "#" === Wr[0] && "d" === Wr[1]) {
-          const rr = Wr.replace(";", "").split(" ");
-          jr.additionalDefineKey = rr[1], 3 === rr.length && (jr.additionalDefineValue = rr[2])
+        const Xd = new Wd;
+        if (Xd.line = Fd, Od.children.push(Xd), "#" === Fd[0] && "d" === Fd[1]) {
+          const dd = Fd.replace(";", "").split(" ");
+          Xd.additionalDefineKey = dd[1], 3 === dd.length && (Xd.additionalDefineValue = dd[2])
         }
       }
       return !1
     }
 
-    function Xr(rr, Sr, Qr, ar) {
-      const jr = new Zr,
-        Ir = new Wr;
-      return Ir.lineIndex = -1, Ir.lines = rr.split("\n"), lr(Ir, jr, ar), jr.process(Sr, Qr, ar)
+    function sd(dd, Od, md, Rd) {
+      const Xd = new Wd,
+        Kd = new Fd;
+      return Kd.lineIndex = -1, Kd.lines = dd.split("\n"), Sd(Kd, Xd, Rd), Xd.process(Od, md, Rd)
     }
 
-    function Pr(rr, Sr) {
-      const Qr = rr.defines,
-        Zr = {};
-      for (const Wr of Qr) {
-        const rr = Wr.replace("#define", "").replace(";", "").trim().split(" ");
-        Zr[rr[0]] = rr.length > 1 ? rr[1] : ""
+    function ud(dd, Od) {
+      const md = dd.defines,
+        Wd = {};
+      for (const Fd of md) {
+        const dd = Fd.replace("#define", "").replace(";", "").trim().split(" ");
+        Wd[dd[0]] = dd.length > 1 ? dd[1] : ""
       }
-      return 0 === rr.processor?.shaderLanguage && (Zr.GL_ES = "true"), Zr.__VERSION__ = rr.version, Zr[rr.platformName] = "true", (0, Nr.i)(Zr, Sr?.isNDCHalfZRange, Sr?.JZr, Sr?.useExactSrgbConversions), Zr
+      return 0 === dd.processor?.shaderLanguage && (Wd.GL_ES = "true"), Wd.__VERSION__ = dd.version, Wd[dd.platformName] = "true", (0, Nd.h)(Wd, Od?.isNDCHalfZRange, Od?.JFd, Od?.useExactSrgbConversions), Wd
     }
 
-    function Hr(rr, Sr, Qr) {
-      let Zr;
-      for (er.length = 0; null !== (Zr = hr.exec(rr));) er.push(Zr);
-      let Wr = [rr],
-        ar = !1;
-      for (const Ir of er) {
-        let rr = Ir[1];
-        if (-1 !== rr.indexOf("__decl__") && (rr = rr.replace(zr, ""), Sr.supportsUniformBuffers && (rr = rr.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), rr += "Declaration"), !Sr.includesShadersStore[rr]) {
-          const Zr = Sr.shadersRepository + "ShadersInclude/" + rr + ".fx";
-          return void qr.loadFile(Zr, (Zr => {
-            Sr.includesShadersStore[rr] = Zr, Hr(Wr.join(""), Sr, Qr)
+    function Vd(dd, Od, md) {
+      let Wd;
+      for (Yd.length = 0; null !== (Wd = yd.exec(dd));) Yd.push(Wd);
+      let Fd = [dd],
+        Rd = !1;
+      for (const Kd of Yd) {
+        let dd = Kd[1];
+        if (-1 !== dd.indexOf("__decl__") && (dd = dd.replace(bd, ""), Od.supportsUniformBuffers && (dd = dd.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), dd += "Declaration"), !Od.includesShadersStore[dd]) {
+          const Wd = Od.shadersRepository + "ShadersInclude/" + dd + ".fx";
+          return void Ad.loadFile(Wd, (Wd => {
+            Od.includesShadersStore[dd] = Wd, Vd(Fd.join(""), Od, md)
           }))
         } {
-          let Qr = Sr.includesShadersStore[rr];
-          if (Ir[2]) {
-            const rr = Ir[3].split(",");
-            for (let Sr = 0; Sr < rr.length; Sr += 2) {
-              const Zr = new RegExp(rr[Sr], "g"),
-                Wr = rr[Sr + 1];
-              Qr = Qr.replace(Zr, Wr)
+          let md = Od.includesShadersStore[dd];
+          if (Kd[2]) {
+            const dd = Kd[3].split(",");
+            for (let Od = 0; Od < dd.length; Od += 2) {
+              const Wd = new RegExp(dd[Od], "g"),
+                Fd = dd[Od + 1];
+              md = md.replace(Wd, Fd)
             }
           }
-          if (Ir[4]) {
-            const rr = Ir[5];
-            if (-1 !== rr.indexOf("..")) {
-              const Zr = rr.split(".."),
-                Wr = parseInt(Zr[0]);
-              let ar = parseInt(Zr[1]),
-                jr = Qr.slice(0);
-              Qr = "", isNaN(ar) && (ar = Sr.indexParameters[Zr[1]]);
-              for (let rr = Wr; rr < ar; rr++) Sr.supportsUniformBuffers || (jr = jr.replace(Yr, ((rr, Sr) => Sr + "{X}"))), Qr += jr.replace(nr, rr.toString()) + "\n"
-            } else Sr.supportsUniformBuffers || (Qr = Qr.replace(Yr, ((rr, Sr) => Sr + "{X}"))), Qr = Qr.replace(nr, rr)
+          if (Kd[4]) {
+            const dd = Kd[5];
+            if (-1 !== dd.indexOf("..")) {
+              const Wd = dd.split(".."),
+                Fd = parseInt(Wd[0]);
+              let Rd = parseInt(Wd[1]),
+                Xd = md.slice(0);
+              md = "", isNaN(Rd) && (Rd = Od.indexParameters[Wd[1]]);
+              for (let dd = Fd; dd < Rd; dd++) Od.supportsUniformBuffers || (Xd = Xd.replace(Td, ((dd, Od) => Od + "{X}"))), md += Xd.replace(pd, dd.toString()) + "\n"
+            } else Od.supportsUniformBuffers || (md = md.replace(Td, ((dd, Od) => Od + "{X}"))), md = md.replace(pd, dd)
           }
-          const Zr = [];
-          for (const rr of Wr) {
-            const Sr = rr.split(Ir[0]);
-            for (let rr = 0; rr < Sr.length - 1; rr++) Zr.push(Sr[rr]), Zr.push(Qr);
-            Zr.push(Sr[Sr.length - 1])
+          const Wd = [];
+          for (const dd of Fd) {
+            const Od = dd.split(Kd[0]);
+            for (let dd = 0; dd < Od.length - 1; dd++) Wd.push(Od[dd]), Wd.push(md);
+            Wd.push(Od[Od.length - 1])
           }
-          Wr = Zr, ar = ar || Qr.indexOf("#include<") >= 0 || Qr.indexOf("#include <") >= 0
+          Fd = Wd, Rd = Rd || md.indexOf("#include<") >= 0 || md.indexOf("#include <") >= 0
         }
       }
-      er.length = 0;
-      const jr = Wr.join("");
-      ar ? Hr(jr.toString(), Sr, Qr) : Qr(jr)
+      Yd.length = 0;
+      const Xd = Fd.join("");
+      Rd ? Vd(Xd.toString(), Od, md) : md(Xd)
     }
-    const qr = {
-      loadFile: (rr, Sr, Qr, Zr, Wr, ar) => {
-        throw (0, mr.l)("FileTools")
+    const Ad = {
+      loadFile: (dd, Od, md, Wd, Fd, Rd) => {
+        throw (0, od.m)("FileTools")
       }
     }
   },
-  41764: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Wr,
-      f: () => ar,
-      i: () => Ir,
-      k: () => jr,
-      m: () => fr
+  41810: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Fd,
+      e: () => Rd,
+      h: () => Kd,
+      i: () => Xd,
+      j: () => hd
     });
-    var Zr = Qr(41769);
-    const Wr = {};
+    var Wd = md(41817);
+    const Fd = {};
 
-    function ar(rr, Sr) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (Sr ? Sr + "\n" : "") + rr
+    function Rd(dd, Od) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (Od ? Od + "\n" : "") + dd
     }
 
-    function jr(rr, Sr, Qr, ar, jr, Ir, fr) {
-      const Er = fr || Wr.loadFile;
-      if (!Er) throw (0, Zr.l)("FileTools");
-      return Er(rr, Sr, Qr, ar, jr, Ir)
+    function Xd(dd, Od, md, Rd, Xd, Kd, hd) {
+      const vd = hd || Fd.loadFile;
+      if (!vd) throw (0, Wd.m)("FileTools");
+      return vd(dd, Od, md, Rd, Xd, Kd)
     }
 
-    function Ir(rr, Sr, Qr, Zr) {
-      if (rr) return Sr ? rr.IS_NDC_HALF_ZRANGE = "" : delete rr.IS_NDC_HALF_ZRANGE, Qr ? rr.USE_REVERSE_DEPTHBUFFER = "" : delete rr.USE_REVERSE_DEPTHBUFFER, void(Zr ? rr.USE_EXACT_SRGB_CONVERSIONS = "" : delete rr.USE_EXACT_SRGB_CONVERSIONS);
+    function Kd(dd, Od, md, Wd) {
+      if (dd) return Od ? dd.IS_NDC_HALF_ZRANGE = "" : delete dd.IS_NDC_HALF_ZRANGE, md ? dd.USE_REVERSE_DEPTHBUFFER = "" : delete dd.USE_REVERSE_DEPTHBUFFER, void(Wd ? dd.USE_EXACT_SRGB_CONVERSIONS = "" : delete dd.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let rr = "";
-        return Sr && (rr += "#define IS_NDC_HALF_ZRANGE"), Qr && (rr && (rr += "\n"), rr += "#define USE_REVERSE_DEPTHBUFFER"), Zr && (rr && (rr += "\n"), rr += "#define USE_EXACT_SRGB_CONVERSIONS"), rr
+        let dd = "";
+        return Od && (dd += "#define IS_NDC_HALF_ZRANGE"), md && (dd && (dd += "\n"), dd += "#define USE_REVERSE_DEPTHBUFFER"), Wd && (dd && (dd += "\n"), dd += "#define USE_EXACT_SRGB_CONVERSIONS"), dd
       }
     }
 
-    function fr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Zr = arguments.length > 3 ? arguments[3] : void 0;
-      switch (rr) {
+    function hd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Wd = arguments.length > 3 ? arguments[3] : void 0;
+      switch (dd) {
         case 3: {
-          const rr = new Int8Array(Sr);
-          return Zr && rr.set(new Int8Array(Zr)), rr
+          const dd = new Int8Array(Od);
+          return Wd && dd.set(new Int8Array(Wd)), dd
         }
         case 0: {
-          const rr = new Uint8Array(Sr);
-          return Zr && rr.set(new Uint8Array(Zr)), rr
+          const dd = new Uint8Array(Od);
+          return Wd && dd.set(new Uint8Array(Wd)), dd
         }
         case 4: {
-          const rr = "number" !== typeof Sr ? new Int16Array(Sr) : new Int16Array(Qr ? Sr / 2 : Sr);
-          return Zr && rr.set(new Int16Array(Zr)), rr
+          const dd = "number" !== typeof Od ? new Int16Array(Od) : new Int16Array(md ? Od / 2 : Od);
+          return Wd && dd.set(new Int16Array(Wd)), dd
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const rr = "number" !== typeof Sr ? new Uint16Array(Sr) : new Uint16Array(Qr ? Sr / 2 : Sr);
-          return Zr && rr.set(new Uint16Array(Zr)), rr
+          const dd = "number" !== typeof Od ? new Uint16Array(Od) : new Uint16Array(md ? Od / 2 : Od);
+          return Wd && dd.set(new Uint16Array(Wd)), dd
         }
         case 6: {
-          const rr = "number" !== typeof Sr ? new Int32Array(Sr) : new Int32Array(Qr ? Sr / 4 : Sr);
-          return Zr && rr.set(new Int32Array(Zr)), rr
+          const dd = "number" !== typeof Od ? new Int32Array(Od) : new Int32Array(md ? Od / 4 : Od);
+          return Wd && dd.set(new Int32Array(Wd)), dd
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const rr = "number" !== typeof Sr ? new Uint32Array(Sr) : new Uint32Array(Qr ? Sr / 4 : Sr);
-          return Zr && rr.set(new Uint32Array(Zr)), rr
+          const dd = "number" !== typeof Od ? new Uint32Array(Od) : new Uint32Array(md ? Od / 4 : Od);
+          return Wd && dd.set(new Uint32Array(Wd)), dd
         }
         case 1: {
-          const rr = "number" !== typeof Sr ? new Float32Array(Sr) : new Float32Array(Qr ? Sr / 4 : Sr);
-          return Zr && rr.set(new Float32Array(Zr)), rr
+          const dd = "number" !== typeof Od ? new Float32Array(Od) : new Float32Array(md ? Od / 4 : Od);
+          return Wd && dd.set(new Float32Array(Wd)), dd
         }
       }
-      const Wr = new Uint8Array(Sr);
-      return Zr && Wr.set(new Uint8Array(Zr)), Wr
+      const Fd = new Uint8Array(Od);
+      return Wd && Fd.set(new Uint8Array(Wd)), Fd
     }
   },
-  41769: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Er,
-      g: () => pr,
-      h: () => fr,
-      l: () => Wr
+  41817: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => vd,
+      g: () => Qd,
+      i: () => hd,
+      m: () => Fd
     });
-    const Zr = {};
+    const Wd = {};
 
-    function Wr(rr) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Zr[rr]) return Zr[rr] = !0, `${rr} needs to be imported before as it contains a side-effect required by your code.`
+    function Fd(dd) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Wd[dd]) return Wd[dd] = !0, `${dd} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const ar = {};
-    let jr = !1,
-      Ir = 0;
+    const Rd = {};
+    let Xd = !1,
+      Kd = 0;
 
-    function fr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Zr = function() {
-        if ((Qr || jr) && 0 === Ir) {
-          const Qr = `${rr}.${Sr}`;
-          ar[Qr] || (ar[Qr] = !0, console.warn(`[Babylon.js] ${Qr}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function hd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Wd = function() {
+        if ((md || Xd) && 0 === Kd) {
+          const md = `${dd}.${Od}`;
+          Rd[md] || (Rd[md] = !0, console.warn(`[Babylon.js] ${md}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return Zr.__isSideEffectStub = !0, Zr
+      return Wd.__isSideEffectStub = !0, Wd
     }
 
-    function Er(rr) {
-      return !!rr && !rr.__isSideEffectStub
+    function vd(dd) {
+      return !!dd && !dd.__isSideEffectStub
     }
 
-    function pr(rr, Sr) {
+    function Qd(dd, Od) {
       return {
         get() {},
-        set(rr) {
-          Object.defineProperty(this, Sr, {
-            value: rr,
+        set(dd) {
+          Object.defineProperty(this, Od, {
+            value: dd,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  41749: (rr, Sr, Qr) => {
-    function Zr() {
+  41799: (dd, Od, md) => {
+    function Wd() {
       return "undefined" !== typeof window
     }
 
-    function Wr() {
+    function Fd() {
       return "undefined" !== typeof navigator
     }
 
-    function ar() {
+    function Rd() {
       return "undefined" !== typeof document
     }
 
-    function jr(rr) {
-      let Sr = "",
-        Qr = rr.firstChild;
-      for (; Qr;) 3 === Qr.nodeType && (Sr += Qr.textContent), Qr = Qr.nextSibling;
-      return Sr
+    function Xd(dd) {
+      let Od = "",
+        md = dd.firstChild;
+      for (; md;) 3 === md.nodeType && (Od += md.textContent), md = md.nextSibling;
+      return Od
     }
-    Qr.d(Sr, {
-      e: () => jr,
-      f: () => ar,
-      j: () => Wr,
-      m: () => Zr
+    md.d(Od, {
+      b: () => Xd,
+      d: () => Rd,
+      f: () => Fd,
+      h: () => Wd
     })
   },
-  41910: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Zr,
-      e: () => Wr,
-      i: () => ar
+  41975: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Wd,
+      e: () => Fd,
+      h: () => Rd
     });
-    class Zr extends Error {}
-    Zr._setPrototypeOf = Object.setPrototypeOf || ((rr, Sr) => (rr.__proto__ = Sr, rr));
-    const Wr = {
+    class Wd extends Error {}
+    Wd._setPrototypeOf = Object.setPrototypeOf || ((dd, Od) => (dd.__proto__ = Od, dd));
+    const Fd = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class ar extends Zr {
-      constructor(rr, Sr, Qr) {
-        super(rr), this.errorCode = Sr, this.innerError = Qr, this.name = "RuntimeError", Zr._setPrototypeOf(this, ar.prototype)
+    class Rd extends Wd {
+      constructor(dd, Od, md) {
+        super(dd), this.errorCode = Od, this.innerError = md, this.name = "RuntimeError", Wd._setPrototypeOf(this, Rd.prototype)
       }
     }
   },
-  41898: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Pr,
-      e: () => nr,
-      g: () => Or,
-      j: () => lr,
-      n: () => Tr,
-      q: () => yr,
-      t: () => Br,
-      x: () => Cr,
-      A: () => vr,
-      E: () => er
+  41961: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => ud,
+      d: () => pd,
+      e: () => xd,
+      f: () => Sd,
+      g: () => Jd,
+      h: () => wd,
+      i: () => Ed,
+      k: () => nd,
+      m: () => Ud,
+      o: () => Yd
     });
-    var Zr = Qr(41906),
-      Wr = Qr(41749),
-      ar = Qr(38595);
-    class jr {}
-    jr.FilesToLoad = {};
-    var Ir = Qr(41910),
-      fr = Qr(41917),
-      Er = Qr(38587),
-      pr = Qr(41764),
-      xr = Qr(41775),
-      mr = Qr(40246),
-      Nr = Qr(41781),
-      Ur = Qr(41919);
-    const tr = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class hr extends Ir.i {
-      constructor(rr, Sr) {
-        super(rr, Ir.e.LoadFileError), this.name = "LoadFileError", Ir.d._setPrototypeOf(this, hr.prototype), Sr instanceof Zr.b ? this.request = Sr : this.file = Sr
+    var Wd = md(41969),
+      Fd = md(41799),
+      Rd = md(38660);
+    class Xd {}
+    Xd.FilesToLoad = {};
+    var Kd = md(41975),
+      hd = md(41983),
+      vd = md(38651),
+      Qd = md(41810),
+      td = md(41822),
+      od = md(40262),
+      Nd = md(41831),
+      qd = md(41991);
+    const Hd = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class yd extends Kd.h {
+      constructor(dd, Od) {
+        super(dd, Kd.e.LoadFileError), this.name = "LoadFileError", Kd.b._setPrototypeOf(this, yd.prototype), Od instanceof Wd.e ? this.request = Od : this.file = Od
       }
     }
-    class zr extends Ir.i {
-      constructor(rr, Sr) {
-        super(rr, Ir.e.RequestFileError), this.request = Sr, this.name = "RequestFileError", Ir.d._setPrototypeOf(this, zr.prototype)
+    class bd extends Kd.h {
+      constructor(dd, Od) {
+        super(dd, Kd.e.RequestFileError), this.request = Od, this.name = "RequestFileError", Kd.b._setPrototypeOf(this, bd.prototype)
       }
     }
-    class Yr extends Ir.i {
-      constructor(rr, Sr) {
-        super(rr, Ir.e.ReadFileError), this.file = Sr, this.name = "ReadFileError", Ir.d._setPrototypeOf(this, Yr.prototype)
+    class Td extends Kd.h {
+      constructor(dd, Od) {
+        super(dd, Kd.e.ReadFileError), this.file = Od, this.name = "ReadFileError", Kd.b._setPrototypeOf(this, Td.prototype)
       }
     }
-    const nr = {
+    const pd = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (Qr, Zr, Wr) => 0 !== Zr.status || Wr >= rr || -1 !== Qr.indexOf("file:") ? -1 : Math.pow(2, Wr) * Sr
+            let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (md, Wd, Fd) => 0 !== Wd.status || Fd >= dd || -1 !== md.indexOf("file:") ? -1 : Math.pow(2, Fd) * Od
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: rr => rr,
+        PreprocessUrl: dd => dd,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: rr => rr,
-        CleanUrl: rr => rr = rr.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: dd => dd,
+        CleanUrl: dd => dd = dd.replace(/#/gm, "%23")
       },
-      er = (rr, Sr) => {
-        if ((!rr || 0 !== rr.indexOf("data:")) && nr.CorsBehavior)
-          if ("string" === typeof nr.CorsBehavior || nr.CorsBehavior instanceof String) Sr.crossOrigin = nr.CorsBehavior;
+      Yd = (dd, Od) => {
+        if ((!dd || 0 !== dd.indexOf("data:")) && pd.CorsBehavior)
+          if ("string" === typeof pd.CorsBehavior || pd.CorsBehavior instanceof String) Od.crossOrigin = pd.CorsBehavior;
           else {
-            const Qr = nr.CorsBehavior(rr);
-            Qr && (Sr.crossOrigin = Qr)
+            const md = pd.CorsBehavior(dd);
+            md && (Od.crossOrigin = md)
           }
       },
-      Kr = {
+      gd = {
         getRequiredSize: null
       },
-      yr = function(rr, Sr, Qr, Wr) {
-        let ar, Ir = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          pr = arguments.length > 5 ? arguments[5] : void 0,
-          xr = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Er.b.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !xr?._features.forceBitmapOverHTMLImageElement) return Qr("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (xr?._features.forceBitmapOverHTMLImageElement && "string" !== typeof rr && "undefined" !== typeof Blob) {
-          let Zr;
-          if (rr instanceof Blob) Zr = rr;
+      wd = function(dd, Od, md, Fd) {
+        let Rd, Kd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          Qd = arguments.length > 5 ? arguments[5] : void 0,
+          td = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : vd.e.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !td?._features.forceBitmapOverHTMLImageElement) return md("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (td?._features.forceBitmapOverHTMLImageElement && "string" !== typeof dd && "undefined" !== typeof Blob) {
+          let Wd;
+          if (dd instanceof Blob) Wd = dd;
           else {
-            const Sr = rr instanceof ArrayBuffer ? rr : (0, Ur.h)(rr);
-            Zr = new Blob([Sr], {
-              type: Ir
+            const Od = dd instanceof ArrayBuffer ? dd : (0, qd.m)(dd);
+            Wd = new Blob([Od], {
+              type: Kd
             })
           }
-          return xr.createImageBitmap(Zr, {
+          return td.createImageBitmap(Wd, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...pr
-          }).then(Sr).catch((Sr => {
-            Qr && Qr("Error while trying to load image: " + rr, Sr)
+            ...Qd
+          }).then(Od).catch((Od => {
+            md && md("Error while trying to load image: " + dd, Od)
           })), null
         }
-        let mr = !1;
-        if (rr instanceof ArrayBuffer || ArrayBuffer.isView(rr))
+        let od = !1;
+        if (dd instanceof ArrayBuffer || ArrayBuffer.isView(dd))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let Sr;
-            Sr = rr instanceof ArrayBuffer ? rr : (0, Ur.h)(rr), ar = URL.createObjectURL(new Blob([Sr], {
-              type: Ir
-            })), mr = !0
-          } else ar = `data:${Ir};base64,` + (0, fr.d)(rr);
-        else rr instanceof Blob ? (ar = URL.createObjectURL(rr), mr = !0) : (ar = nr.CleanUrl(rr), ar = nr.PreprocessUrl(ar));
-        const Nr = Sr => {
-          if (Qr) {
-            const Zr = ar || rr.toString();
-            Qr(`Error while trying to load image: ${0===Zr.indexOf("http")||Zr.length<=128?Zr:Zr.slice(0,128)+"..."}`, Sr)
+            let Od;
+            Od = dd instanceof ArrayBuffer ? dd : (0, qd.m)(dd), Rd = URL.createObjectURL(new Blob([Od], {
+              type: Kd
+            })), od = !0
+          } else Rd = `data:${Kd};base64,` + (0, hd.h)(dd);
+        else dd instanceof Blob ? (Rd = URL.createObjectURL(dd), od = !0) : (Rd = pd.CleanUrl(dd), Rd = pd.PreprocessUrl(Rd));
+        const Nd = Od => {
+          if (md) {
+            const Wd = Rd || dd.toString();
+            md(`Error while trying to load image: ${0===Wd.indexOf("http")||Wd.length<=128?Wd:Wd.slice(0,128)+"..."}`, Od)
           }
         };
-        if (xr?._features.forceBitmapOverHTMLImageElement) return Tr(ar, (Zr => {
-          xr.createImageBitmap(new Blob([Zr], {
-            type: Ir
+        if (td?._features.forceBitmapOverHTMLImageElement) return Jd(Rd, (Wd => {
+          td.createImageBitmap(new Blob([Wd], {
+            type: Kd
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...pr
-          }).then((rr => {
-            Sr(rr), mr && URL.revokeObjectURL(ar)
-          })).catch((Sr => {
-            Qr && Qr("Error while trying to load image: " + rr, Sr)
+            ...Qd
+          }).then((dd => {
+            Od(dd), od && URL.revokeObjectURL(Rd)
+          })).catch((Od => {
+            md && md("Error while trying to load image: " + dd, Od)
           }))
-        }), void 0, Wr || void 0, !0, ((rr, Sr) => {
-          Nr(Sr)
+        }), void 0, Fd || void 0, !0, ((dd, Od) => {
+          Nd(Od)
         })), null;
-        const tr = new Image;
-        if (Kr.getRequiredSize) {
-          const Sr = Kr.getRequiredSize(rr);
-          Sr.width && (tr.width = Sr.width), Sr.height && (tr.height = Sr.height)
+        const Hd = new Image;
+        if (gd.getRequiredSize) {
+          const Od = gd.getRequiredSize(dd);
+          Od.width && (Hd.width = Od.width), Od.height && (Hd.height = Od.height)
         }
-        er(ar, tr);
-        const hr = [],
-          zr = () => {
-            for (const rr of hr) rr.target.removeEventListener(rr.name, rr.handler);
-            hr.length = 0
+        Yd(Rd, Hd);
+        const yd = [],
+          bd = () => {
+            for (const dd of yd) dd.target.removeEventListener(dd.name, dd.handler);
+            yd.length = 0
           };
-        hr.push({
-          target: tr,
+        yd.push({
+          target: Hd,
           name: "load",
           handler: () => {
-            zr(), Sr(tr), mr && tr.src && URL.revokeObjectURL(tr.src)
+            bd(), Od(Hd), od && Hd.src && URL.revokeObjectURL(Hd.src)
           }
-        }), hr.push({
-          target: tr,
+        }), yd.push({
+          target: Hd,
           name: "error",
-          handler: rr => {
-            zr(), Nr(rr), mr && tr.src && URL.revokeObjectURL(tr.src)
+          handler: dd => {
+            bd(), Nd(dd), od && Hd.src && URL.revokeObjectURL(Hd.src)
           }
-        }), hr.push({
+        }), yd.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: rr => {
-            if (rr.blockedURI !== tr.src || "jx" === rr.disposition) return;
-            zr();
-            const Sr = new Error(`CSP violation of policy ${rr.effectiveDirective} ${rr.blockedURI}. Current policy is ${rr.originalPolicy}`);
-            Er.b.UseFallbackTexture = !1, Nr(Sr), mr && tr.src && URL.revokeObjectURL(tr.src), tr.src = ""
+          handler: dd => {
+            if (dd.blockedURI !== Hd.src || "Wt" === dd.disposition) return;
+            bd();
+            const Od = new Error(`CSP violation of policy ${dd.effectiveDirective} ${dd.blockedURI}. Current policy is ${dd.originalPolicy}`);
+            vd.e.UseFallbackTexture = !1, Nd(Od), od && Hd.src && URL.revokeObjectURL(Hd.src), Hd.src = ""
           }
         }), (() => {
-          for (const rr of hr) rr.target.addEventListener(rr.name, rr.handler)
+          for (const dd of yd) dd.target.addEventListener(dd.name, dd.handler)
         })();
-        const Yr = "blob:" === ar.substring(0, 5),
-          yr = "data:" === ar.substring(0, 5),
-          Br = () => {
-            Yr || yr || !Zr.b.IsCustomRequestAvailable ? tr.src = ar : Tr(ar, ((rr, Sr, Qr) => {
-              const Zr = new Blob([rr], {
-                  type: !Ir && Qr ? Qr : Ir
+        const Td = "blob:" === Rd.substring(0, 5),
+          wd = "data:" === Rd.substring(0, 5),
+          Ed = () => {
+            Td || wd || !Wd.e.IsCustomRequestAvailable ? Hd.src = Rd : Jd(Rd, ((dd, Od, md) => {
+              const Wd = new Blob([dd], {
+                  type: !Kd && md ? md : Kd
                 }),
-                Wr = URL.createObjectURL(Zr);
-              mr = !0, tr.src = Wr
-            }), void 0, Wr || void 0, !0, ((rr, Sr) => {
-              Nr(Sr)
+                Fd = URL.createObjectURL(Wd);
+              od = !0, Hd.src = Fd
+            }), void 0, Fd || void 0, !0, ((dd, Od) => {
+              Nd(Od)
             }))
           },
-          vr = () => {
-            Wr && Wr.loadImage(ar, tr)
+          Ud = () => {
+            Fd && Fd.loadImage(Rd, Hd)
           };
-        if (!Yr && !yr && Wr && Wr.enableTexturesOffline) Wr.open(vr, Br);
+        if (!Td && !wd && Fd && Fd.enableTexturesOffline) Fd.open(Ud, Ed);
         else {
-          if (-1 !== ar.indexOf("file:")) {
-            const rr = decodeURIComponent(ar.substring(5).toLowerCase());
-            if (jr.FilesToLoad[rr] && "undefined" !== typeof URL) {
+          if (-1 !== Rd.indexOf("file:")) {
+            const dd = decodeURIComponent(Rd.substring(5).toLowerCase());
+            if (Xd.FilesToLoad[dd] && "undefined" !== typeof URL) {
               try {
-                let Sr;
+                let Od;
                 try {
-                  Sr = URL.createObjectURL(jr.FilesToLoad[rr])
-                } catch (Or) {
-                  Sr = URL.createObjectURL(jr.FilesToLoad[rr])
+                  Od = URL.createObjectURL(Xd.FilesToLoad[dd])
+                } catch (xd) {
+                  Od = URL.createObjectURL(Xd.FilesToLoad[dd])
                 }
-                tr.src = Sr, mr = !0
-              } catch (Lr) {
-                tr.src = ""
+                Hd.src = Od, od = !0
+              } catch (Bd) {
+                Hd.src = ""
               }
-              return tr
+              return Hd
             }
           }
-          Br()
+          Ed()
         }
-        return tr
+        return Hd
       },
-      Br = (rr, Sr, Qr, Zr, Wr) => {
-        const jr = new FileReader,
-          Ir = {
-            onCompleteObservable: new ar.d,
-            abort: () => jr.abort()
+      Ed = (dd, Od, md, Wd, Fd) => {
+        const Xd = new FileReader,
+          Kd = {
+            onCompleteObservable: new Rd.c,
+            abort: () => Xd.abort()
           };
-        return jr.onloadend = () => Ir.onCompleteObservable.notifyObservers(Ir), Wr && (jr.onerror = () => {
-          Wr(new Yr(`Unable to read ${rr.name}`, rr))
-        }), jr.onload = rr => {
-          Sr(rr.target.result)
-        }, Qr && (jr.onprogress = Qr), Zr ? jr.readAsArrayBuffer(rr) : jr.readAsText(rr), Ir
+        return Xd.onloadend = () => Kd.onCompleteObservable.notifyObservers(Kd), Fd && (Xd.onerror = () => {
+          Fd(new Td(`Unable to read ${dd.name}`, dd))
+        }), Xd.onload = dd => {
+          Od(dd.target.result)
+        }, md && (Xd.onprogress = md), Wd ? Xd.readAsArrayBuffer(dd) : Xd.readAsText(dd), Kd
       },
-      Tr = (rr, Sr, Qr, Zr, Wr, fr, Er) => {
-        if (rr.name) return Br(rr, Sr, Qr, Wr, fr ? rr => {
-          fr(void 0, rr)
+      Jd = (dd, Od, md, Wd, Fd, hd, vd) => {
+        if (dd.name) return Ed(dd, Od, md, Fd, hd ? dd => {
+          hd(void 0, dd)
         } : void 0);
-        const pr = rr;
-        if (-1 !== pr.indexOf("file:")) {
-          let rr = decodeURIComponent(pr.substring(5).toLowerCase());
-          0 === rr.indexOf("./") && (rr = rr.substring(2));
-          const Zr = jr.FilesToLoad[rr];
-          if (Zr) return Br(Zr, Sr, Qr, Wr, fr ? rr => fr(void 0, new hr(rr.message, rr.file)) : void 0)
+        const Qd = dd;
+        if (-1 !== Qd.indexOf("file:")) {
+          let dd = decodeURIComponent(Qd.substring(5).toLowerCase());
+          0 === dd.indexOf("./") && (dd = dd.substring(2));
+          const Wd = Xd.FilesToLoad[dd];
+          if (Wd) return Ed(Wd, Od, md, Fd, hd ? dd => hd(void 0, new yd(dd.message, dd.file)) : void 0)
         }
         const {
-          match: xr,
-          type: Ur
-        } = Xr(pr);
-        if (xr) {
-          const rr = {
-            onCompleteObservable: new ar.d,
+          match: td,
+          type: qd
+        } = sd(Qd);
+        if (td) {
+          const dd = {
+            onCompleteObservable: new Rd.c,
             abort: () => () => {}
           };
           try {
-            const rr = Wr ? Pr(pr) : Hr(pr);
-            Sr(rr, void 0, Ur)
-          } catch (Ir) {
-            fr ? fr(void 0, Ir) : mr.c.Error(Ir.message || "Failed to parse the Data URL")
+            const dd = Fd ? ud(Qd) : Vd(Qd);
+            Od(dd, void 0, qd)
+          } catch (Kd) {
+            hd ? hd(void 0, Kd) : od.c.Error(Kd.message || "Failed to parse the Data URL")
           }
-          return Nr.d.SetImmediate((() => {
-            rr.onCompleteObservable.notifyObservers(rr)
-          })), rr
+          return Nd.c.SetImmediate((() => {
+            dd.onCompleteObservable.notifyObservers(dd)
+          })), dd
         }
-        return vr(pr, ((rr, Qr) => {
-          Sr(rr, Qr?.responseURL, Qr?.getResponseHeader("content-type"))
-        }), Qr, Zr, Wr, fr ? rr => {
-          fr(rr.request, new hr(rr.message, rr.request))
-        } : void 0, Er)
+        return Ud(Qd, ((dd, md) => {
+          Od(dd, md?.responseURL, md?.getResponseHeader("content-type"))
+        }), md, Wd, Fd, hd ? dd => {
+          hd(dd.request, new yd(dd.message, dd.request))
+        } : void 0, vd)
       },
-      vr = (rr, Sr, Qr, jr, Ir, fr, pr) => {
-        null !== jr && (jr ?? (jr = Er.b.LastCreatedScene?.offlineProvider)), rr = nr.CleanUrl(rr), rr = nr.PreprocessUrl(rr);
-        const xr = nr.BaseUrl + rr;
-        let Nr = !1;
-        const Ur = {
-            onCompleteObservable: new ar.d,
-            abort: () => Nr = !0
+      Ud = (dd, Od, md, Xd, Kd, hd, Qd) => {
+        null !== Xd && (Xd ?? (Xd = vd.e.LastCreatedScene?.offlineProvider)), dd = pd.CleanUrl(dd), dd = pd.PreprocessUrl(dd);
+        const td = pd.BaseUrl + dd;
+        let Nd = !1;
+        const qd = {
+            onCompleteObservable: new Rd.c,
+            abort: () => Nd = !0
           },
-          tr = () => {
-            let rr, ar = new Zr.b,
-              jr = null;
-            const Er = () => {
-              ar && (Qr && ar.removeEventListener("progress", Qr), rr && ar.removeEventListener("readystatechange", rr), ar.removeEventListener("loadend", tr))
+          Hd = () => {
+            let dd, Rd = new Wd.e,
+              Xd = null;
+            const vd = () => {
+              Rd && (md && Rd.removeEventListener("progress", md), dd && Rd.removeEventListener("readystatechange", dd), Rd.removeEventListener("loadend", Hd))
             };
-            let tr = () => {
-              Er(), Ur.onCompleteObservable.notifyObservers(Ur), Ur.onCompleteObservable.clear(), Qr = void 0, rr = null, tr = null, fr = void 0, pr = void 0, Sr = void 0
+            let Hd = () => {
+              vd(), qd.onCompleteObservable.notifyObservers(qd), qd.onCompleteObservable.clear(), md = void 0, dd = null, Hd = null, hd = void 0, Qd = void 0, Od = void 0
             };
-            Ur.abort = () => {
-              Nr = !0, tr && tr(), ar && ar.readyState !== (XMLHttpRequest.DONE || 4) && ar.abort(), null !== jr && (clearTimeout(jr), jr = null), ar = null
+            qd.abort = () => {
+              Nd = !0, Hd && Hd(), Rd && Rd.readyState !== (XMLHttpRequest.DONE || 4) && Rd.abort(), null !== Xd && (clearTimeout(Xd), Xd = null), Rd = null
             };
-            const hr = rr => {
-                const Sr = rr.message || "Unknown error";
-                fr && ar ? fr(new zr(Sr, ar)) : mr.c.Error(Sr)
+            const yd = dd => {
+                const Od = dd.message || "Unknown error";
+                hd && Rd ? hd(new bd(Od, Rd)) : od.c.Error(Od)
               },
-              Yr = mr => {
-                if (ar) {
-                  if (ar.open("GET", xr), pr) try {
-                    pr(ar)
-                  } catch (Ur) {
-                    return void hr(Ur)
+              Td = od => {
+                if (Rd) {
+                  if (Rd.open("GET", td), Qd) try {
+                    Qd(Rd)
+                  } catch (qd) {
+                    return void yd(qd)
                   }
-                  Ir && (ar.responseType = "arraybuffer"), Qr && ar.addEventListener("progress", Qr), tr && ar.addEventListener("loadend", tr), rr = () => {
-                    if (!Nr && ar && ar.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (rr && ar.removeEventListener("readystatechange", rr), ar.status >= 200 && ar.status < 300 || 0 === ar.status && (!(0, Wr.m)() || Lr())) {
-                        const rr = Ir ? ar.response : ar.responseText;
-                        if (null !== rr) {
+                  Kd && (Rd.responseType = "arraybuffer"), md && Rd.addEventListener("progress", md), Hd && Rd.addEventListener("loadend", Hd), dd = () => {
+                    if (!Nd && Rd && Rd.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (dd && Rd.removeEventListener("readystatechange", dd), Rd.status >= 200 && Rd.status < 300 || 0 === Rd.status && (!(0, Fd.h)() || Bd())) {
+                        const dd = Kd ? Rd.response : Rd.responseText;
+                        if (null !== dd) {
                           try {
-                            Sr && Sr(rr, ar)
-                          } catch (Ur) {
-                            hr(Ur)
+                            Od && Od(dd, Rd)
+                          } catch (qd) {
+                            yd(qd)
                           }
                           return
                         }
                       }
-                      const Qr = nr.DefaultRetryStrategy;
-                      if (Qr) {
-                        const rr = Qr(xr, ar, mr);
-                        if (-1 !== rr) return Er(), ar = new Zr.b, void(jr = setTimeout((() => Yr(mr + 1)), rr))
+                      const md = pd.DefaultRetryStrategy;
+                      if (md) {
+                        const dd = md(td, Rd, od);
+                        if (-1 !== dd) return vd(), Rd = new Wd.e, void(Xd = setTimeout((() => Td(od + 1)), dd))
                       }
-                      const pr = new zr("Error status: " + ar.status + " " + ar.statusText + " - Unable to load " + xr, ar);
-                      fr && fr(pr)
+                      const Qd = new bd("Error status: " + Rd.status + " " + Rd.statusText + " - Unable to load " + td, Rd);
+                      hd && hd(Qd)
                     }
-                  }, ar.addEventListener("readystatechange", rr), ar.send()
+                  }, Rd.addEventListener("readystatechange", dd), Rd.send()
                 }
               };
-            Yr(0)
+            Td(0)
           };
-        if (jr && jr.enableSceneOffline && !rr.startsWith("blob:")) {
-          const Zr = rr => {
-              rr && rr.status > 400 ? fr && fr(rr) : tr()
+        if (Xd && Xd.enableSceneOffline && !dd.startsWith("blob:")) {
+          const Wd = dd => {
+              dd && dd.status > 400 ? hd && hd(dd) : Hd()
             },
-            Wr = () => {
-              jr && jr.loadFile(nr.BaseUrl + rr, (rr => {
-                !Nr && Sr && Sr(rr), Ur.onCompleteObservable.notifyObservers(Ur)
-              }), Qr ? rr => {
-                !Nr && Qr && Qr(rr)
-              } : void 0, Zr, Ir)
+            Fd = () => {
+              Xd && Xd.loadFile(pd.BaseUrl + dd, (dd => {
+                !Nd && Od && Od(dd), qd.onCompleteObservable.notifyObservers(qd)
+              }), md ? dd => {
+                !Nd && md && md(dd)
+              } : void 0, Wd, Kd)
             };
-          jr.open(Wr, Zr)
-        } else tr();
-        return Ur
+          Xd.open(Fd, Wd)
+        } else Hd();
+        return qd
       },
-      Or = rr => {
+      xd = dd => {
         const {
-          match: Sr,
-          type: Qr
-        } = Xr(rr);
-        if (Sr) return Qr || void 0;
-        const Zr = rr.lastIndexOf(".");
-        switch (rr.substring(Zr + 1).toLowerCase()) {
+          match: Od,
+          type: md
+        } = sd(dd);
+        if (Od) return md || void 0;
+        const Wd = dd.lastIndexOf(".");
+        switch (dd.substring(Wd + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "bR":
+          case "tV":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      Lr = () => "undefined" !== typeof location && "file:" === location.protocol,
-      lr = rr => tr.test(rr),
-      Xr = rr => {
-        const Sr = tr.exec(rr);
-        if (null === Sr || 0 === Sr.length) return {
+      Bd = () => "undefined" !== typeof location && "file:" === location.protocol,
+      Sd = dd => Hd.test(dd),
+      sd = dd => {
+        const Od = Hd.exec(dd);
+        if (null === Od || 0 === Od.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: Sr[0].replace("data:", "").replace(";base64,", "")
+          type: Od[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function Pr(rr) {
-      return (0, fr.b)(rr.split(",")[1])
+    function ud(dd) {
+      return (0, hd.d)(dd.split(",")[1])
     }
-    const Hr = rr => (0, fr.c)(rr.split(",")[1]);
-    let qr;
-    const Rr = (rr, Sr, Qr, Zr, Wr, ar, jr, Ir, fr, Er) => {
-      qr = {
-        DecodeBase64UrlToBinary: rr,
-        DecodeBase64UrlToString: Sr,
-        DefaultRetryStrategy: Qr.DefaultRetryStrategy,
-        BaseUrl: Qr.BaseUrl,
-        CorsBehavior: Qr.CorsBehavior,
-        PreprocessUrl: Qr.PreprocessUrl,
-        IsBase64DataUrl: Zr,
-        IsFileURL: Wr,
-        LoadFile: ar,
-        LoadImage: jr,
-        ReadFile: Ir,
-        RequestFile: fr,
-        SetCorsBehavior: Er
-      }, Object.defineProperty(qr, "DefaultRetryStrategy", {
+    const Vd = dd => (0, hd.g)(dd.split(",")[1]);
+    let Ad;
+    const rd = (dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd, vd) => {
+      Ad = {
+        DecodeBase64UrlToBinary: dd,
+        DecodeBase64UrlToString: Od,
+        DefaultRetryStrategy: md.DefaultRetryStrategy,
+        BaseUrl: md.BaseUrl,
+        CorsBehavior: md.CorsBehavior,
+        PreprocessUrl: md.PreprocessUrl,
+        IsBase64DataUrl: Wd,
+        IsFileURL: Fd,
+        LoadFile: Rd,
+        LoadImage: Xd,
+        ReadFile: Kd,
+        RequestFile: hd,
+        SetCorsBehavior: vd
+      }, Object.defineProperty(Ad, "DefaultRetryStrategy", {
         get: function() {
-          return Qr.DefaultRetryStrategy
+          return md.DefaultRetryStrategy
         },
-        set: function(rr) {
-          Qr.DefaultRetryStrategy = rr
+        set: function(dd) {
+          md.DefaultRetryStrategy = dd
         }
-      }), Object.defineProperty(qr, "BaseUrl", {
+      }), Object.defineProperty(Ad, "BaseUrl", {
         get: function() {
-          return Qr.BaseUrl
+          return md.BaseUrl
         },
-        set: function(rr) {
-          Qr.BaseUrl = rr
+        set: function(dd) {
+          md.BaseUrl = dd
         }
-      }), Object.defineProperty(qr, "PreprocessUrl", {
+      }), Object.defineProperty(Ad, "PreprocessUrl", {
         get: function() {
-          return Qr.PreprocessUrl
+          return md.PreprocessUrl
         },
-        set: function(rr) {
-          Qr.PreprocessUrl = rr
+        set: function(dd) {
+          md.PreprocessUrl = dd
         }
-      }), Object.defineProperty(qr, "CorsBehavior", {
+      }), Object.defineProperty(Ad, "CorsBehavior", {
         get: function() {
-          return Qr.CorsBehavior
+          return md.CorsBehavior
         },
-        set: function(rr) {
-          Qr.CorsBehavior = rr
+        set: function(dd) {
+          md.CorsBehavior = dd
         }
       })
     };
-    let gr = !1;
+    let Gd = !1;
 
-    function Cr() {
-      gr || (gr = !0, Rr(Pr, Hr, nr, lr, Lr, Tr, yr, Br, vr, er), pr.b.loadFile = Tr, pr.b.loadImage = yr, xr.k.loadFile = Tr)
+    function nd() {
+      Gd || (Gd = !0, rd(ud, Vd, pd, Sd, Bd, Jd, wd, Ed, Ud, Yd), Qd.c.loadFile = Jd, Qd.c.loadImage = wd, td.q.loadFile = Jd)
     }
   },
-  41922: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Ir,
-      d: () => ar,
-      g: () => jr
+  41997: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Kd,
+      d: () => Rd,
+      g: () => Xd
     });
-    let Zr = null;
+    let Wd = null;
 
-    function Wr() {
-      if (Zr) return Zr;
-      const rr = new ArrayBuffer(4),
-        Sr = new Float32Array(rr),
-        Qr = new Uint32Array(rr),
-        Wr = new Uint32Array(512),
-        ar = new Uint32Array(512);
-      for (let Zr = 0; Zr < 256; ++Zr) {
-        const rr = Zr - 127;
-        rr < -24 ? (Wr[Zr] = 0, Wr[256 | Zr] = 32768, ar[Zr] = 24, ar[256 | Zr] = 24) : rr < -14 ? (Wr[Zr] = 1024 >> -rr - 14, Wr[256 | Zr] = 1024 >> -rr - 14 | 32768, ar[Zr] = -rr - 1, ar[256 | Zr] = -rr - 1) : rr <= 15 ? (Wr[Zr] = rr + 15 << 10, Wr[256 | Zr] = rr + 15 << 10 | 32768, ar[Zr] = 13, ar[256 | Zr] = 13) : rr < 128 ? (Wr[Zr] = 31744, Wr[256 | Zr] = 64512, ar[Zr] = 24, ar[256 | Zr] = 24) : (Wr[Zr] = 31744, Wr[256 | Zr] = 64512, ar[Zr] = 13, ar[256 | Zr] = 13)
+    function Fd() {
+      if (Wd) return Wd;
+      const dd = new ArrayBuffer(4),
+        Od = new Float32Array(dd),
+        md = new Uint32Array(dd),
+        Fd = new Uint32Array(512),
+        Rd = new Uint32Array(512);
+      for (let Wd = 0; Wd < 256; ++Wd) {
+        const dd = Wd - 127;
+        dd < -24 ? (Fd[Wd] = 0, Fd[256 | Wd] = 32768, Rd[Wd] = 24, Rd[256 | Wd] = 24) : dd < -14 ? (Fd[Wd] = 1024 >> -dd - 14, Fd[256 | Wd] = 1024 >> -dd - 14 | 32768, Rd[Wd] = -dd - 1, Rd[256 | Wd] = -dd - 1) : dd <= 15 ? (Fd[Wd] = dd + 15 << 10, Fd[256 | Wd] = dd + 15 << 10 | 32768, Rd[Wd] = 13, Rd[256 | Wd] = 13) : dd < 128 ? (Fd[Wd] = 31744, Fd[256 | Wd] = 64512, Rd[Wd] = 24, Rd[256 | Wd] = 24) : (Fd[Wd] = 31744, Fd[256 | Wd] = 64512, Rd[Wd] = 13, Rd[256 | Wd] = 13)
       }
-      const jr = new Uint32Array(2048),
-        Ir = new Uint32Array(64),
-        fr = new Uint32Array(64);
-      for (let Zr = 1; Zr < 1024; ++Zr) {
-        let rr = Zr << 13,
-          Sr = 0;
-        for (; 0 === (8388608 & rr);) rr <<= 1, Sr -= 8388608;
-        rr &= -8388609, Sr += 947912704, jr[Zr] = rr | Sr
+      const Xd = new Uint32Array(2048),
+        Kd = new Uint32Array(64),
+        hd = new Uint32Array(64);
+      for (let Wd = 1; Wd < 1024; ++Wd) {
+        let dd = Wd << 13,
+          Od = 0;
+        for (; 0 === (8388608 & dd);) dd <<= 1, Od -= 8388608;
+        dd &= -8388609, Od += 947912704, Xd[Wd] = dd | Od
       }
-      for (let Zr = 1024; Zr < 2048; ++Zr) jr[Zr] = 939524096 + (Zr - 1024 << 13);
-      for (let Zr = 1; Zr < 31; ++Zr) Ir[Zr] = Zr << 23;
-      Ir[31] = 1199570944, Ir[32] = 2147483648;
-      for (let Zr = 33; Zr < 63; ++Zr) Ir[Zr] = 2147483648 + (Zr - 32 << 23);
-      Ir[63] = 3347054592;
-      for (let Zr = 1; Zr < 64; ++Zr) 32 !== Zr && (fr[Zr] = 1024);
-      return Zr = {
-        floatView: Sr,
-        uint32View: Qr,
-        baseTable: Wr,
-        shiftTable: ar,
-        mantissaTable: jr,
-        exponentTable: Ir,
-        offsetTable: fr
-      }, Zr
+      for (let Wd = 1024; Wd < 2048; ++Wd) Xd[Wd] = 939524096 + (Wd - 1024 << 13);
+      for (let Wd = 1; Wd < 31; ++Wd) Kd[Wd] = Wd << 23;
+      Kd[31] = 1199570944, Kd[32] = 2147483648;
+      for (let Wd = 33; Wd < 63; ++Wd) Kd[Wd] = 2147483648 + (Wd - 32 << 23);
+      Kd[63] = 3347054592;
+      for (let Wd = 1; Wd < 64; ++Wd) 32 !== Wd && (hd[Wd] = 1024);
+      return Wd = {
+        floatView: Od,
+        uint32View: md,
+        baseTable: Fd,
+        shiftTable: Rd,
+        mantissaTable: Xd,
+        exponentTable: Kd,
+        offsetTable: hd
+      }, Wd
     }
-    const ar = 65504;
+    const Rd = 65504;
 
-    function jr(rr) {
-      const Sr = Wr();
-      Sr.floatView[0] = rr;
-      const Qr = Sr.uint32View[0],
-        Zr = Qr >> 23 & 511;
-      return Sr.baseTable[Zr] + ((8388607 & Qr) >> Sr.shiftTable[Zr])
+    function Xd(dd) {
+      const Od = Fd();
+      Od.floatView[0] = dd;
+      const md = Od.uint32View[0],
+        Wd = md >> 23 & 511;
+      return Od.baseTable[Wd] + ((8388607 & md) >> Od.shiftTable[Wd])
     }
 
-    function Ir(rr) {
-      const Sr = Wr();
-      return Sr.uint32View[0] = Sr.mantissaTable[Sr.offsetTable[rr >> 10] + (1023 & rr)] + Sr.exponentTable[rr >> 10], Sr.floatView[0]
+    function Kd(dd) {
+      const Od = Fd();
+      return Od.uint32View[0] = Od.mantissaTable[Od.offsetTable[dd >> 10] + (1023 & dd)] + Od.exponentTable[dd >> 10], Od.floatView[0]
     }
   },
-  41917: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar,
-      c: () => Wr,
-      d: () => Zr
+  41983: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Rd,
+      g: () => Fd,
+      h: () => Wd
     });
-    const Zr = rr => {
-        const Sr = ArrayBuffer.isView(rr) ? new Uint8Array(rr.buffer, rr.byteOffset, rr.byteLength) : new Uint8Array(rr);
-        return "function" === typeof Sr.toBase64 ? Sr.toBase64() : function(rr) {
-          const Sr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let Qr, Zr, Wr, ar, jr, Ir, fr, Er = "",
-            pr = 0;
-          for (; pr < rr.length;) Qr = rr[pr++], Zr = pr < rr.length ? rr[pr++] : Number.NaN, Wr = pr < rr.length ? rr[pr++] : Number.NaN, ar = Qr >> 2, jr = (3 & Qr) << 4 | Zr >> 4, Ir = (15 & Zr) << 2 | Wr >> 6, fr = 63 & Wr, isNaN(Zr) ? Ir = fr = 64 : isNaN(Wr) && (fr = 64), Er += Sr.charAt(ar) + Sr.charAt(jr) + Sr.charAt(Ir) + Sr.charAt(fr);
-          return Er
-        }(Sr)
+    const Wd = dd => {
+        const Od = ArrayBuffer.isView(dd) ? new Uint8Array(dd.buffer, dd.byteOffset, dd.byteLength) : new Uint8Array(dd);
+        return "function" === typeof Od.toBase64 ? Od.toBase64() : function(dd) {
+          const Od = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let md, Wd, Fd, Rd, Xd, Kd, hd, vd = "",
+            Qd = 0;
+          for (; Qd < dd.length;) md = dd[Qd++], Wd = Qd < dd.length ? dd[Qd++] : Number.NaN, Fd = Qd < dd.length ? dd[Qd++] : Number.NaN, Rd = md >> 2, Xd = (3 & md) << 4 | Wd >> 4, Kd = (15 & Wd) << 2 | Fd >> 6, hd = 63 & Fd, isNaN(Wd) ? Kd = hd = 64 : isNaN(Fd) && (hd = 64), vd += Od.charAt(Rd) + Od.charAt(Xd) + Od.charAt(Kd) + Od.charAt(hd);
+          return vd
+        }(Od)
       },
-      Wr = rr => atob(rr),
-      ar = rr => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(rr).buffer : function(rr) {
-        const Sr = Wr(rr),
-          Qr = Sr.length,
-          Zr = new Uint8Array(new ArrayBuffer(Qr));
-        for (let Wr = 0; Wr < Qr; Wr++) Zr[Wr] = Sr.charCodeAt(Wr);
-        return Zr.buffer
-      }(rr)
+      Fd = dd => atob(dd),
+      Rd = dd => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(dd).buffer : function(dd) {
+        const Od = Fd(dd),
+          md = Od.length,
+          Wd = new Uint8Array(new ArrayBuffer(md));
+        for (let Fd = 0; Fd < md; Fd++) Wd[Fd] = Od.charCodeAt(Fd);
+        return Wd.buffer
+      }(dd)
   },
-  41781: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Wr,
-      f: () => jr
+  41831: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Fd,
+      g: () => Xd
     });
-    let Zr = [];
-    class Wr {
-      static SetImmediate(rr) {
-        0 === Zr.length && setTimeout((() => {
-          const rr = Zr;
-          Zr = [];
-          for (const Sr of rr) Sr()
-        }), 1), Zr.push(rr)
+    let Wd = [];
+    class Fd {
+      static SetImmediate(dd) {
+        0 === Wd.length && setTimeout((() => {
+          const dd = Wd;
+          Wd = [];
+          for (const Od of dd) Od()
+        }), 1), Wd.push(dd)
       }
     }
 
-    function ar(rr, Sr, Qr) {
+    function Rd(dd, Od, md) {
       try {
-        if (rr()) return Sr(), !0
-      } catch (Zr) {
-        return Qr?.(Zr), !0
+        if (dd()) return Od(), !0
+      } catch (Wd) {
+        return md?.(Wd), !0
       }
       return !1
     }
-    const jr = function(rr, Sr, Qr) {
-      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        jr = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && ar(rr, Sr, Qr)) return null;
-      const Ir = setInterval((() => {
-        ar(rr, Sr, Qr) ? clearInterval(Ir) : (Wr -= Zr, Wr < 0 && (clearInterval(Ir), Qr?.(new Error("Operation timed out after maximum retries. " + (jr || "")), !0)))
-      }), Zr);
-      return () => clearInterval(Ir)
+    const Xd = function(dd, Od, md) {
+      let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        Xd = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Rd(dd, Od, md)) return null;
+      const Kd = setInterval((() => {
+        Rd(dd, Od, md) ? clearInterval(Kd) : (Fd -= Wd, Fd < 0 && (clearInterval(Kd), md?.(new Error("Operation timed out after maximum retries. " + (Xd || "")), !0)))
+      }), Wd);
+      return () => clearInterval(Kd)
     }
   },
-  41906: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Zr
+  41969: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd
     });
-    class Zr {
+    class Wd {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(Zr.CustomRequestHeaders).length > 0 || Zr.CustomRequestModifiers.length > 0
+        return Object.keys(Wd.CustomRequestHeaders).length > 0 || Wd.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(rr) {
-        return rr = (rr = rr.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(dd) {
+        return dd = (dd = dd.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(rr) {
-        return Zr.SkipRequestModificationForBabylonCDN && (rr.includes("preview.babylonjs.com") || rr.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(dd) {
+        return Wd.SkipRequestModificationForBabylonCDN && (dd.includes("preview.babylonjs.com") || dd.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(rr) {
-        const Sr = {
+      static _CollectCustomizations(dd) {
+        const Od = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (Zr._ShouldSkipRequestModifications(rr)) return {
-          url: rr,
-          headers: Sr
+        if (Wd._ShouldSkipRequestModifications(dd)) return {
+          url: dd,
+          headers: Od
         };
-        for (const Wr in Zr.CustomRequestHeaders) {
-          const rr = Zr.CustomRequestHeaders[Wr];
-          rr && (Sr[Wr] = rr)
+        for (const Fd in Wd.CustomRequestHeaders) {
+          const dd = Wd.CustomRequestHeaders[Fd];
+          dd && (Od[Fd] = dd)
         }
-        const Qr = {
-          setRequestHeader: (rr, Qr) => {
-            Sr[rr] = Qr
+        const md = {
+          setRequestHeader: (dd, md) => {
+            Od[dd] = md
           }
         };
-        for (const Wr of Zr.CustomRequestModifiers) {
-          if (Zr._ShouldSkipRequestModifications(rr)) break;
-          const Sr = Wr(Qr, rr);
-          "string" === typeof Sr && (rr = Sr)
+        for (const Fd of Wd.CustomRequestModifiers) {
+          if (Wd._ShouldSkipRequestModifications(dd)) break;
+          const Od = Fd(md, dd);
+          "string" === typeof Od && (dd = Od)
         }
         return {
-          url: rr,
-          headers: Sr
+          url: dd,
+          headers: Od
         }
       }
-      static async FetchAsync(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Qr = Sr.method ?? "GET";
+      static async FetchAsync(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const md = Od.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: Wr,
-            headers: ar
-          } = Zr._CollectCustomizations(Zr._CleanUrl(rr), Sr.headers ?? {});
-          return await fetch(Wr, {
-            method: Qr,
-            headers: ar,
-            body: Sr.body ?? void 0
+            url: Fd,
+            headers: Rd
+          } = Wd._CollectCustomizations(Wd._CleanUrl(dd), Od.headers ?? {});
+          return await fetch(Fd, {
+            method: md,
+            headers: Rd,
+            body: Od.body ?? void 0
           })
         }
-        return await new Promise(((Wr, ar) => {
-          const jr = new Zr;
-          jr.responseType = "arraybuffer", jr.addEventListener("readystatechange", (() => {
-            if (4 === jr.readyState)
-              if (jr.status >= 200 && jr.status < 300) {
-                const rr = "undefined" !== typeof Headers ? new Headers : void 0,
-                  Sr = jr.getResponseHeader("Content-Type");
-                Sr && rr && rr.set("Content-Type", Sr), "undefined" !== typeof Response ? Wr(new Response(jr.response, {
-                  status: jr.status,
-                  statusText: jr.statusText,
-                  headers: rr
-                })) : Wr({
+        return await new Promise(((Fd, Rd) => {
+          const Xd = new Wd;
+          Xd.responseType = "arraybuffer", Xd.addEventListener("readystatechange", (() => {
+            if (4 === Xd.readyState)
+              if (Xd.status >= 200 && Xd.status < 300) {
+                const dd = "undefined" !== typeof Headers ? new Headers : void 0,
+                  Od = Xd.getResponseHeader("Content-Type");
+                Od && dd && dd.set("Content-Type", Od), "undefined" !== typeof Response ? Fd(new Response(Xd.response, {
+                  status: Xd.status,
+                  statusText: Xd.statusText,
+                  headers: dd
+                })) : Fd({
                   ok: !0,
-                  status: jr.status,
-                  statusText: jr.statusText,
+                  status: Xd.status,
+                  statusText: Xd.statusText,
                   headers: {
-                    get: rr => jr.getResponseHeader(rr)
+                    get: dd => Xd.getResponseHeader(dd)
                   },
-                  arrayBuffer: async () => await Promise.resolve(jr.response)
+                  arrayBuffer: async () => await Promise.resolve(Xd.response)
                 })
-              } else ar(new Error(`HTTP ${jr.status} loading '${jr.requestURL}': ${jr.statusText}`))
-          })), jr.open(Qr, rr, Sr.headers), jr.send(Sr.body ?? null)
+              } else Rd(new Error(`HTTP ${Xd.status} loading '${Xd.requestURL}': ${Xd.statusText}`))
+          })), Xd.open(md, dd, Od.headers), Xd.send(Od.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(rr) {
-        this._xhr.onprogress = rr
+      set onprogress(dd) {
+        this._xhr.onprogress = dd
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(rr) {
-        this._xhr.responseType = rr
+      set responseType(dd) {
+        this._xhr.responseType = dd
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(rr) {
-        this._xhr.timeout = rr
+      set timeout(dd) {
+        this._xhr.timeout = dd
       }
-      addEventListener(rr, Sr, Qr) {
-        this._xhr.addEventListener(rr, Sr, Qr)
+      addEventListener(dd, Od, md) {
+        this._xhr.addEventListener(dd, Od, md)
       }
-      removeEventListener(rr, Sr, Qr) {
-        this._xhr.removeEventListener(rr, Sr, Qr)
+      removeEventListener(dd, Od, md) {
+        this._xhr.removeEventListener(dd, Od, md)
       }
       abort() {
         this._xhr.abort()
       }
-      send(rr) {
-        this._xhr.send(rr)
+      send(dd) {
+        this._xhr.send(dd)
       }
-      open(rr, Sr, Qr) {
+      open(dd, Od, md) {
         const {
-          url: Wr,
-          headers: ar
-        } = Zr._CollectCustomizations(Sr, Qr);
-        this._requestURL = Zr._CleanUrl(Wr), this._xhr.open(rr, this._requestURL, !0);
-        for (const Zr in ar) this._xhr.setRequestHeader(Zr, ar[Zr])
+          url: Fd,
+          headers: Rd
+        } = Wd._CollectCustomizations(Od, md);
+        this._requestURL = Wd._CleanUrl(Fd), this._xhr.open(dd, this._requestURL, !0);
+        for (const Wd in Rd) this._xhr.setRequestHeader(Wd, Rd[Wd])
       }
-      setRequestHeader(rr, Sr) {
-        this._xhr.setRequestHeader(rr, Sr)
+      setRequestHeader(dd, Od) {
+        this._xhr.setRequestHeader(dd, Od)
       }
-      getResponseHeader(rr) {
-        return this._xhr.getResponseHeader(rr)
+      getResponseHeader(dd) {
+        return this._xhr.getResponseHeader(dd)
       }
     }
-    Zr.CustomRequestHeaders = {}, Zr.CustomRequestModifiers = new Array, Zr.SkipRequestModificationForBabylonCDN = !0
+    Wd.CustomRequestHeaders = {}, Wd.CustomRequestModifiers = new Array, Wd.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

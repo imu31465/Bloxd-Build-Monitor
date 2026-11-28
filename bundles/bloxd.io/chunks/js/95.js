@@ -1,99 +1,99 @@
 export const id = 95;
 export const ids = [95];
 export const modules = {
-  5547: rr => {
-    function Sr(rr) {
-      return rr instanceof Map ? rr.clear = rr.delete = rr.set = function() {
+  5493: dd => {
+    function Od(dd) {
+      return dd instanceof Map ? dd.clear = dd.delete = dd.set = function() {
         throw new Error("map is read-only")
-      } : rr instanceof Set && (rr.add = rr.clear = rr.delete = function() {
+      } : dd instanceof Set && (dd.add = dd.clear = dd.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(rr), Object.getOwnPropertyNames(rr).forEach((Qr => {
-        const Zr = rr[Qr],
-          Wr = typeof Zr;
-        "object" !== Wr && "function" !== Wr || Object.isFrozen(Zr) || Sr(Zr)
-      })), rr
+      }), Object.freeze(dd), Object.getOwnPropertyNames(dd).forEach((md => {
+        const Wd = dd[md],
+          Fd = typeof Wd;
+        "object" !== Fd && "function" !== Fd || Object.isFrozen(Wd) || Od(Wd)
+      })), dd
     }
-    class Qr {
-      constructor(rr) {
-        void 0 === rr.data && (rr.data = {}), this.data = rr.data, this.isMatchIgnored = !1
+    class md {
+      constructor(dd) {
+        void 0 === dd.data && (dd.data = {}), this.data = dd.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function Zr(rr) {
-      return rr.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function Wd(dd) {
+      return dd.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function Wr(rr) {
-      const Sr = Object.create(null);
-      for (const ar in rr) Sr[ar] = rr[ar];
-      for (var Qr = arguments.length, Zr = new Array(Qr > 1 ? Qr - 1 : 0), Wr = 1; Wr < Qr; Wr++) Zr[Wr - 1] = arguments[Wr];
-      return Zr.forEach((function(rr) {
-        for (const Qr in rr) Sr[Qr] = rr[Qr]
-      })), Sr
+    function Fd(dd) {
+      const Od = Object.create(null);
+      for (const Rd in dd) Od[Rd] = dd[Rd];
+      for (var md = arguments.length, Wd = new Array(md > 1 ? md - 1 : 0), Fd = 1; Fd < md; Fd++) Wd[Fd - 1] = arguments[Fd];
+      return Wd.forEach((function(dd) {
+        for (const md in dd) Od[md] = dd[md]
+      })), Od
     }
-    const ar = rr => !!rr.scope;
-    class jr {
-      constructor(rr, Sr) {
-        this.buffer = "", this.classPrefix = Sr.classPrefix, rr.walk(this)
+    const Rd = dd => !!dd.scope;
+    class Xd {
+      constructor(dd, Od) {
+        this.buffer = "", this.classPrefix = Od.classPrefix, dd.walk(this)
       }
-      addText(rr) {
-        this.buffer += Zr(rr)
+      addText(dd) {
+        this.buffer += Wd(dd)
       }
-      openNode(rr) {
-        if (!ar(rr)) return;
-        const Sr = ((rr, Sr) => {
+      openNode(dd) {
+        if (!Rd(dd)) return;
+        const Od = ((dd, Od) => {
           let {
-            prefix: Qr
-          } = Sr;
-          if (rr.startsWith("language:")) return rr.replace("language:", "language-");
-          if (rr.includes(".")) {
-            const Sr = rr.split(".");
-            return [`${Qr}${Sr.shift()}`, ...Sr.map(((rr, Sr) => `${rr}${"_".repeat(Sr+1)}`))].join(" ")
+            prefix: md
+          } = Od;
+          if (dd.startsWith("language:")) return dd.replace("language:", "language-");
+          if (dd.includes(".")) {
+            const Od = dd.split(".");
+            return [`${md}${Od.shift()}`, ...Od.map(((dd, Od) => `${dd}${"_".repeat(Od+1)}`))].join(" ")
           }
-          return `${Qr}${rr}`
-        })(rr.scope, {
+          return `${md}${dd}`
+        })(dd.scope, {
           prefix: this.classPrefix
         });
-        this.span(Sr)
+        this.span(Od)
       }
-      closeNode(rr) {
-        ar(rr) && (this.buffer += "</span>")
+      closeNode(dd) {
+        Rd(dd) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(rr) {
-        this.buffer += `<span class="${rr}">`
+      span(dd) {
+        this.buffer += `<span class="${dd}">`
       }
     }
-    const Ir = function() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const Sr = {
+    const Kd = function() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Od = {
         children: []
       };
-      return Object.assign(Sr, rr), Sr
+      return Object.assign(Od, dd), Od
     };
-    class fr {
+    class hd {
       constructor() {
-        this.bY = Ir(), this.stack = [this.bY]
+        this.RY = Kd(), this.stack = [this.RY]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.bY
+        return this.RY
       }
-      add(rr) {
-        this.top.children.push(rr)
+      add(dd) {
+        this.top.children.push(dd)
       }
-      openNode(rr) {
-        const Sr = Ir({
-          scope: rr
+      openNode(dd) {
+        const Od = Kd({
+          scope: dd
         });
-        this.add(Sr), this.stack.push(Sr)
+        this.add(Od), this.stack.push(Od)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.bY, null, 4)
+        return JSON.stringify(this.RY, null, 4)
       }
-      walk(rr) {
-        return this.constructor._walk(rr, this.bY)
+      walk(dd) {
+        return this.constructor._walk(dd, this.RY)
       }
-      static _walk(rr, Sr) {
-        return "string" === typeof Sr ? rr.addText(Sr) : Sr.children && (rr.openNode(Sr), Sr.children.forEach((Sr => this._walk(rr, Sr))), rr.closeNode(Sr)), rr
+      static _walk(dd, Od) {
+        return "string" === typeof Od ? dd.addText(Od) : Od.children && (dd.openNode(Od), Od.children.forEach((Od => this._walk(dd, Od))), dd.closeNode(Od)), dd
       }
-      static _collapse(rr) {
-        "string" !== typeof rr && rr.children && (rr.children.every((rr => "string" === typeof rr)) ? rr.children = [rr.children.join("")] : rr.children.forEach((rr => {
-          fr._collapse(rr)
+      static _collapse(dd) {
+        "string" !== typeof dd && dd.children && (dd.children.every((dd => "string" === typeof dd)) ? dd.children = [dd.children.join("")] : dd.children.forEach((dd => {
+          hd._collapse(dd)
         })))
       }
     }
-    class Er extends fr {
-      constructor(rr) {
-        super(), this.options = rr
+    class vd extends hd {
+      constructor(dd) {
+        super(), this.options = dd
       }
-      addText(rr) {
-        "" !== rr && this.add(rr)
+      addText(dd) {
+        "" !== dd && this.add(dd)
       }
-      startScope(rr) {
-        this.openNode(rr)
+      startScope(dd) {
+        this.openNode(dd)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(rr, Sr) {
-        const Qr = rr.root;
-        Sr && (Qr.scope = `language:${Sr}`), this.add(Qr)
+      __addSublanguage(dd, Od) {
+        const md = dd.root;
+        Od && (md.scope = `language:${Od}`), this.add(md)
       }
       toHTML() {
-        return new jr(this, this.options).value()
+        return new Xd(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function pr(rr) {
-      return rr ? "string" === typeof rr ? rr : rr.source : null
+    function Qd(dd) {
+      return dd ? "string" === typeof dd ? dd : dd.source : null
     }
 
-    function xr(rr) {
-      return Ur("(?=", rr, ")")
+    function td(dd) {
+      return qd("(?=", dd, ")")
     }
 
-    function mr(rr) {
-      return Ur("(?:", rr, ")*")
+    function od(dd) {
+      return qd("(?:", dd, ")*")
     }
 
-    function Nr(rr) {
-      return Ur("(?:", rr, ")?")
+    function Nd(dd) {
+      return qd("(?:", dd, ")?")
     }
 
-    function Ur() {
-      for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
-      return Sr.map((rr => pr(rr))).join("")
+    function qd() {
+      for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
+      return Od.map((dd => Qd(dd))).join("")
     }
 
-    function tr() {
-      for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
-      const Zr = function(rr) {
-        const Sr = rr[rr.length - 1];
-        return "object" === typeof Sr && Sr.constructor === Object ? (rr.splice(rr.length - 1, 1), Sr) : {}
-      }(Sr);
-      return "(" + (Zr.capture ? "" : "?:") + Sr.map((rr => pr(rr))).join("|") + ")"
+    function Hd() {
+      for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
+      const Wd = function(dd) {
+        const Od = dd[dd.length - 1];
+        return "object" === typeof Od && Od.constructor === Object ? (dd.splice(dd.length - 1, 1), Od) : {}
+      }(Od);
+      return "(" + (Wd.capture ? "" : "?:") + Od.map((dd => Qd(dd))).join("|") + ")"
     }
 
-    function hr(rr) {
-      return new RegExp(rr.toString() + "|").exec("").length - 1
+    function yd(dd) {
+      return new RegExp(dd.toString() + "|").exec("").length - 1
     }
-    const zr = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const bd = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function Yr(rr, Sr) {
+    function Td(dd, Od) {
       let {
-        joinWith: Qr
-      } = Sr, Zr = 0;
-      return rr.map((rr => {
-        Zr += 1;
-        const Sr = Zr;
-        let Qr = pr(rr),
-          Wr = "";
-        for (; Qr.length > 0;) {
-          const rr = zr.exec(Qr);
-          if (!rr) {
-            Wr += Qr;
+        joinWith: md
+      } = Od, Wd = 0;
+      return dd.map((dd => {
+        Wd += 1;
+        const Od = Wd;
+        let md = Qd(dd),
+          Fd = "";
+        for (; md.length > 0;) {
+          const dd = bd.exec(md);
+          if (!dd) {
+            Fd += md;
             break
           }
-          Wr += Qr.substring(0, rr.index), Qr = Qr.substring(rr.index + rr[0].length), "\\" === rr[0][0] && rr[1] ? Wr += "\\" + String(Number(rr[1]) + Sr) : (Wr += rr[0], "(" === rr[0] && Zr++)
+          Fd += md.substring(0, dd.index), md = md.substring(dd.index + dd[0].length), "\\" === dd[0][0] && dd[1] ? Fd += "\\" + String(Number(dd[1]) + Od) : (Fd += dd[0], "(" === dd[0] && Wd++)
         }
-        return Wr
-      })).map((rr => `(${rr})`)).join(Qr)
+        return Fd
+      })).map((dd => `(${dd})`)).join(md)
     }
-    const nr = "[a-zA-Z]\\w*",
-      er = "[a-zA-Z_]\\w*",
-      Kr = "\\b\\d+(\\.\\d+)?",
-      yr = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      Br = "\\b(0b[01]+)",
-      Tr = {
-        Yx: "\\\\[\\s\\S]",
+    const pd = "[a-zA-Z]\\w*",
+      Yd = "[a-zA-Z_]\\w*",
+      gd = "\\b\\d+(\\.\\d+)?",
+      wd = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      Ed = "\\b(0b[01]+)",
+      Jd = {
+        ot: "\\\\[\\s\\S]",
         relevance: 0
       },
-      vr = {
+      Ud = {
         scope: "string",
-        Yx: "'",
+        ot: "'",
         end: "'",
         illegal: "\\n",
-        contains: [Tr]
+        contains: [Jd]
       },
-      Or = {
+      xd = {
         scope: "string",
-        Yx: '"',
+        ot: '"',
         end: '"',
         illegal: "\\n",
-        contains: [Tr]
+        contains: [Jd]
       },
-      Lr = function(rr, Sr) {
-        const Qr = Wr({
+      Bd = function(dd, Od) {
+        const md = Fd({
           scope: "comment",
-          Yx: rr,
-          end: Sr,
+          ot: dd,
+          end: Od,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        Qr.contains.push({
+        md.contains.push({
           scope: "doctag",
-          Yx: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          ot: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const Zr = tr("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return Qr.contains.push({
-          Yx: Ur(/[ ]+/, "(", Zr, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), Qr
+        const Wd = Hd("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return md.contains.push({
+          ot: qd(/[ ]+/, "(", Wd, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), md
       },
-      lr = Lr("//", "$"),
-      Xr = Lr("/\\*", "\\*/"),
-      Pr = Lr("#", "$"),
-      Hr = {
+      Sd = Bd("//", "$"),
+      sd = Bd("/\\*", "\\*/"),
+      ud = Bd("#", "$"),
+      Vd = {
         scope: "number",
-        Yx: Kr,
+        ot: gd,
         relevance: 0
       },
-      qr = {
+      Ad = {
         scope: "number",
-        Yx: yr,
+        ot: wd,
         relevance: 0
       },
-      Rr = {
+      rd = {
         scope: "number",
-        Yx: Br,
+        ot: Ed,
         relevance: 0
       },
-      gr = {
+      Gd = {
         scope: "regexp",
-        Yx: /\/(?=[^/\n]*\/)/,
+        ot: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [Tr, {
-          Yx: /\[/,
+        contains: [Jd, {
+          ot: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [Tr]
+          contains: [Jd]
         }]
       },
-      Cr = {
+      nd = {
         scope: "title",
-        Yx: nr,
+        ot: pd,
         relevance: 0
       },
-      Mr = {
+      Ld = {
         scope: "title",
-        Yx: er,
+        ot: Yd,
         relevance: 0
       },
-      Gr = {
-        Yx: "\\.\\s*" + er,
+      Pd = {
+        ot: "\\.\\s*" + Yd,
         relevance: 0
       };
-    var kr = Object.freeze({
+    var zd = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: vr,
-      BACKSLASH_ESCAPE: Tr,
-      BINARY_NUMBER_MODE: Rr,
-      BINARY_NUMBER_RE: Br,
-      COMMENT: Lr,
-      C_BLOCK_COMMENT_MODE: Xr,
-      C_LINE_COMMENT_MODE: lr,
-      C_NUMBER_MODE: qr,
-      C_NUMBER_RE: yr,
-      END_SAME_AS_BEGIN: function(rr) {
-        return Object.assign(rr, {
-          "on:begin": (rr, Sr) => {
-            Sr.data._beginMatch = rr[1]
+      APOS_STRING_MODE: Ud,
+      BACKSLASH_ESCAPE: Jd,
+      BINARY_NUMBER_MODE: rd,
+      BINARY_NUMBER_RE: Ed,
+      COMMENT: Bd,
+      C_BLOCK_COMMENT_MODE: sd,
+      C_LINE_COMMENT_MODE: Sd,
+      C_NUMBER_MODE: Ad,
+      C_NUMBER_RE: wd,
+      END_SAME_AS_BEGIN: function(dd) {
+        return Object.assign(dd, {
+          "on:begin": (dd, Od) => {
+            Od.data._beginMatch = dd[1]
           },
-          "on:end": (rr, Sr) => {
-            Sr.data._beginMatch !== rr[1] && Sr.ignoreMatch()
+          "on:end": (dd, Od) => {
+            Od.data._beginMatch !== dd[1] && Od.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: Pr,
-      IDENT_RE: nr,
+      HASH_COMMENT_MODE: ud,
+      IDENT_RE: pd,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: Gr,
-      NUMBER_MODE: Hr,
-      NUMBER_RE: Kr,
+      METHOD_GUARD: Pd,
+      NUMBER_MODE: Vd,
+      NUMBER_RE: gd,
       PHRASAL_WORDS_MODE: {
-        Yx: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        ot: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: Or,
-      REGEXP_MODE: gr,
+      QUOTE_STRING_MODE: xd,
+      REGEXP_MODE: Gd,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const Sr = /^#![ ]*\//;
-        return rr.binary && (rr.Yx = Ur(Sr, /.*\b/, rr.binary, /\b.*/)), Wr({
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const Od = /^#![ ]*\//;
+        return dd.binary && (dd.ot = qd(Od, /.*\b/, dd.binary, /\b.*/)), Fd({
           scope: "meta",
-          Yx: Sr,
+          ot: Od,
           end: /$/,
           relevance: 0,
-          "on:begin": (rr, Sr) => {
-            0 !== rr.index && Sr.ignoreMatch()
+          "on:begin": (dd, Od) => {
+            0 !== dd.index && Od.ignoreMatch()
           }
-        }, rr)
+        }, dd)
       },
-      TITLE_MODE: Cr,
-      UNDERSCORE_IDENT_RE: er,
-      UNDERSCORE_TITLE_MODE: Mr
+      TITLE_MODE: nd,
+      UNDERSCORE_IDENT_RE: Yd,
+      UNDERSCORE_TITLE_MODE: Ld
     });
 
-    function Ar(rr, Sr) {
-      "." === rr.input[rr.index - 1] && Sr.ignoreMatch()
+    function cd(dd, Od) {
+      "." === dd.input[dd.index - 1] && Od.ignoreMatch()
     }
 
-    function Vr(rr, Sr) {
-      void 0 !== rr.className && (rr.scope = rr.className, delete rr.className)
+    function jd(dd, Od) {
+      void 0 !== dd.className && (dd.scope = dd.className, delete dd.className)
     }
 
-    function ir(rr, Sr) {
-      Sr && rr.beginKeywords && (rr.Yx = "\\b(" + rr.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", rr.__beforeBegin = Ar, rr.keywords = rr.keywords || rr.beginKeywords, delete rr.beginKeywords, void 0 === rr.relevance && (rr.relevance = 0))
+    function Dd(dd, Od) {
+      Od && dd.beginKeywords && (dd.ot = "\\b(" + dd.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", dd.__beforeBegin = cd, dd.keywords = dd.keywords || dd.beginKeywords, delete dd.beginKeywords, void 0 === dd.relevance && (dd.relevance = 0))
     }
 
-    function wr(rr, Sr) {
-      Array.isArray(rr.illegal) && (rr.illegal = tr(...rr.illegal))
+    function ed(dd, Od) {
+      Array.isArray(dd.illegal) && (dd.illegal = Hd(...dd.illegal))
     }
 
-    function cr(rr, Sr) {
-      if (rr.match) {
-        if (rr.Yx || rr.end) throw new Error("begin & end are not supported with match");
-        rr.Yx = rr.match, delete rr.match
+    function Id(dd, Od) {
+      if (dd.match) {
+        if (dd.ot || dd.end) throw new Error("begin & end are not supported with match");
+        dd.ot = dd.match, delete dd.match
       }
     }
 
-    function Fr(rr, Sr) {
-      void 0 === rr.relevance && (rr.relevance = 1)
+    function ld(dd, Od) {
+      void 0 === dd.relevance && (dd.relevance = 1)
     }
-    const or = (rr, Sr) => {
-        if (!rr.beforeMatch) return;
-        if (rr.starts) throw new Error("beforeMatch cannot be used with starts");
-        const Qr = Object.assign({}, rr);
-        Object.keys(rr).forEach((Sr => {
-          delete rr[Sr]
-        })), rr.keywords = Qr.keywords, rr.Yx = Ur(Qr.beforeMatch, xr(Qr.Yx)), rr.starts = {
+    const Cd = (dd, Od) => {
+        if (!dd.beforeMatch) return;
+        if (dd.starts) throw new Error("beforeMatch cannot be used with starts");
+        const md = Object.assign({}, dd);
+        Object.keys(dd).forEach((Od => {
+          delete dd[Od]
+        })), dd.keywords = md.keywords, dd.ot = qd(md.beforeMatch, td(md.ot)), dd.starts = {
           relevance: 0,
-          contains: [Object.assign(Qr, {
+          contains: [Object.assign(md, {
             endsParent: !0
           })]
-        }, rr.relevance = 0, delete Qr.beforeMatch
+        }, dd.relevance = 0, delete md.beforeMatch
       },
-      br = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      Zd = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function Jr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const Zr = Object.create(null);
-      return "string" === typeof rr ? Wr(Qr, rr.split(" ")) : Array.isArray(rr) ? Wr(Qr, rr) : Object.keys(rr).forEach((function(Qr) {
-        Object.assign(Zr, Jr(rr[Qr], Sr, Qr))
-      })), Zr;
+    function kd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const Wd = Object.create(null);
+      return "string" === typeof dd ? Fd(md, dd.split(" ")) : Array.isArray(dd) ? Fd(md, dd) : Object.keys(dd).forEach((function(md) {
+        Object.assign(Wd, kd(dd[md], Od, md))
+      })), Wd;
 
-      function Wr(rr, Qr) {
-        Sr && (Qr = Qr.map((rr => rr.toLowerCase()))), Qr.forEach((function(Sr) {
-          const Qr = Sr.split("|");
-          Zr[Qr[0]] = [rr, Dr(Qr[0], Qr[1])]
+      function Fd(dd, md) {
+        Od && (md = md.map((dd => dd.toLowerCase()))), md.forEach((function(Od) {
+          const md = Od.split("|");
+          Wd[md[0]] = [dd, fd(md[0], md[1])]
         }))
       }
     }
 
-    function Dr(rr, Sr) {
-      return Sr ? Number(Sr) : function(rr) {
-        return br.includes(rr.toLowerCase())
-      }(rr) ? 0 : 1
+    function fd(dd, Od) {
+      return Od ? Number(Od) : function(dd) {
+        return Zd.includes(dd.toLowerCase())
+      }(dd) ? 0 : 1
     }
-    const dr = {},
-      sr = rr => {
-        console.error(rr)
+    const Md = {},
+      dO = dd => {
+        console.error(dd)
       },
-      ur = function(rr) {
-        for (var Sr = arguments.length, Qr = new Array(Sr > 1 ? Sr - 1 : 0), Zr = 1; Zr < Sr; Zr++) Qr[Zr - 1] = arguments[Zr];
-        console.log(`WARN: ${rr}`, ...Qr)
+      OO = function(dd) {
+        for (var Od = arguments.length, md = new Array(Od > 1 ? Od - 1 : 0), Wd = 1; Wd < Od; Wd++) md[Wd - 1] = arguments[Wd];
+        console.log(`WARN: ${dd}`, ...md)
       },
-      rS = (rr, Sr) => {
-        dr[`${rr}/${Sr}`] || (console.log(`Deprecated as of ${rr}. ${Sr}`), dr[`${rr}/${Sr}`] = !0)
+      mO = (dd, Od) => {
+        Md[`${dd}/${Od}`] || (console.log(`Deprecated as of ${dd}. ${Od}`), Md[`${dd}/${Od}`] = !0)
       },
-      SS = new Error;
+      WO = new Error;
 
-    function QS(rr, Sr, Qr) {
+    function FO(dd, Od, md) {
       let {
-        key: Zr
-      } = Qr, Wr = 0;
-      const ar = rr[Zr],
-        jr = {},
-        Ir = {};
-      for (let fr = 1; fr <= Sr.length; fr++) Ir[fr + Wr] = ar[fr], jr[fr + Wr] = !0, Wr += hr(Sr[fr - 1]);
-      rr[Zr] = Ir, rr[Zr]._emit = jr, rr[Zr]._multi = !0
+        key: Wd
+      } = md, Fd = 0;
+      const Rd = dd[Wd],
+        Xd = {},
+        Kd = {};
+      for (let hd = 1; hd <= Od.length; hd++) Kd[hd + Fd] = Rd[hd], Xd[hd + Fd] = !0, Fd += yd(Od[hd - 1]);
+      dd[Wd] = Kd, dd[Wd]._emit = Xd, dd[Wd]._multi = !0
     }
 
-    function ZS(rr) {
-      ! function(rr) {
-        rr.scope && "object" === typeof rr.scope && null !== rr.scope && (rr.beginScope = rr.scope, delete rr.scope)
-      }(rr), "string" === typeof rr.beginScope && (rr.beginScope = {
-          _wrap: rr.beginScope
-        }), "string" === typeof rr.endScope && (rr.endScope = {
-          _wrap: rr.endScope
+    function RO(dd) {
+      ! function(dd) {
+        dd.scope && "object" === typeof dd.scope && null !== dd.scope && (dd.beginScope = dd.scope, delete dd.scope)
+      }(dd), "string" === typeof dd.beginScope && (dd.beginScope = {
+          _wrap: dd.beginScope
+        }), "string" === typeof dd.endScope && (dd.endScope = {
+          _wrap: dd.endScope
         }),
-        function(rr) {
-          if (Array.isArray(rr.Yx)) {
-            if (rr.skip || rr.excludeBegin || rr.returnBegin) throw sr("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), SS;
-            if ("object" !== typeof rr.beginScope || null === rr.beginScope) throw sr("beginScope must be object"), SS;
-            QS(rr, rr.Yx, {
+        function(dd) {
+          if (Array.isArray(dd.ot)) {
+            if (dd.skip || dd.excludeBegin || dd.returnBegin) throw dO("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), WO;
+            if ("object" !== typeof dd.beginScope || null === dd.beginScope) throw dO("beginScope must be object"), WO;
+            FO(dd, dd.ot, {
               key: "beginScope"
-            }), rr.Yx = Yr(rr.Yx, {
+            }), dd.ot = Td(dd.ot, {
               joinWith: ""
             })
           }
-        }(rr),
-        function(rr) {
-          if (Array.isArray(rr.end)) {
-            if (rr.skip || rr.excludeEnd || rr.returnEnd) throw sr("skip, excludeEnd, returnEnd not compatible with endScope: {}"), SS;
-            if ("object" !== typeof rr.endScope || null === rr.endScope) throw sr("endScope must be object"), SS;
-            QS(rr, rr.end, {
+        }(dd),
+        function(dd) {
+          if (Array.isArray(dd.end)) {
+            if (dd.skip || dd.excludeEnd || dd.returnEnd) throw dO("skip, excludeEnd, returnEnd not compatible with endScope: {}"), WO;
+            if ("object" !== typeof dd.endScope || null === dd.endScope) throw dO("endScope must be object"), WO;
+            FO(dd, dd.end, {
               key: "endScope"
-            }), rr.end = Yr(rr.end, {
+            }), dd.end = Td(dd.end, {
               joinWith: ""
             })
           }
-        }(rr)
+        }(dd)
     }
 
-    function WS(rr) {
-      function Sr(Sr, Qr) {
-        return new RegExp(pr(Sr), "m" + (rr.case_insensitive ? "i" : "") + (rr.unicodeRegex ? "u" : "") + (Qr ? "g" : ""))
+    function XO(dd) {
+      function Od(Od, md) {
+        return new RegExp(Qd(Od), "m" + (dd.case_insensitive ? "i" : "") + (dd.unicodeRegex ? "u" : "") + (md ? "g" : ""))
       }
-      class Qr {
+      class md {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(rr, Sr) {
-          Sr.position = this.position++, this.matchIndexes[this.matchAt] = Sr, this.regexes.push([Sr, rr]), this.matchAt += hr(rr) + 1
+        addRule(dd, Od) {
+          Od.position = this.position++, this.matchIndexes[this.matchAt] = Od, this.regexes.push([Od, dd]), this.matchAt += yd(dd) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const rr = this.regexes.map((rr => rr[1]));
-          this.matcherRe = Sr(Yr(rr, {
+          const dd = this.regexes.map((dd => dd[1]));
+          this.matcherRe = Od(Td(dd, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(rr) {
+        exec(dd) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const Sr = this.matcherRe.exec(rr);
-          if (!Sr) return null;
-          const Qr = Sr.findIndex(((rr, Sr) => Sr > 0 && void 0 !== rr)),
-            Zr = this.matchIndexes[Qr];
-          return Sr.splice(0, Qr), Object.assign(Sr, Zr)
+          const Od = this.matcherRe.exec(dd);
+          if (!Od) return null;
+          const md = Od.findIndex(((dd, Od) => Od > 0 && void 0 !== dd)),
+            Wd = this.matchIndexes[md];
+          return Od.splice(0, md), Object.assign(Od, Wd)
         }
       }
-      class Zr {
+      class Wd {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(rr) {
-          if (this.multiRegexes[rr]) return this.multiRegexes[rr];
-          const Sr = new Qr;
-          return this.rules.slice(rr).forEach((rr => {
-            let [Qr, Zr] = rr;
-            return Sr.addRule(Qr, Zr)
-          })), Sr.compile(), this.multiRegexes[rr] = Sr, Sr
+        getMatcher(dd) {
+          if (this.multiRegexes[dd]) return this.multiRegexes[dd];
+          const Od = new md;
+          return this.rules.slice(dd).forEach((dd => {
+            let [md, Wd] = dd;
+            return Od.addRule(md, Wd)
+          })), Od.compile(), this.multiRegexes[dd] = Od, Od
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(rr, Sr) {
-          this.rules.push([rr, Sr]), "Yx" === Sr.type && this.count++
+        addRule(dd, Od) {
+          this.rules.push([dd, Od]), "ot" === Od.type && this.count++
         }
-        exec(rr) {
-          const Sr = this.getMatcher(this.regexIndex);
-          Sr.lastIndex = this.lastIndex;
-          let Qr = Sr.exec(rr);
+        exec(dd) {
+          const Od = this.getMatcher(this.regexIndex);
+          Od.lastIndex = this.lastIndex;
+          let md = Od.exec(dd);
           if (this.resumingScanAtSamePosition())
-            if (Qr && Qr.index === this.lastIndex);
+            if (md && md.index === this.lastIndex);
             else {
-              const Sr = this.getMatcher(0);
-              Sr.lastIndex = this.lastIndex + 1, Qr = Sr.exec(rr)
-            } return Qr && (this.regexIndex += Qr.position + 1, this.regexIndex === this.count && this.considerAll()), Qr
+              const Od = this.getMatcher(0);
+              Od.lastIndex = this.lastIndex + 1, md = Od.exec(dd)
+            } return md && (this.regexIndex += md.position + 1, this.regexIndex === this.count && this.considerAll()), md
         }
       }
-      if (rr.compilerExtensions || (rr.compilerExtensions = []), rr.contains && rr.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return rr.classNameAliases = Wr(rr.classNameAliases || {}),
-        function Qr(ar, jr) {
-          const Ir = ar;
-          if (ar.isCompiled) return Ir;
-          [Vr, cr, ZS, or].forEach((rr => rr(ar, jr))), rr.compilerExtensions.forEach((rr => rr(ar, jr))), ar.__beforeBegin = null, [ir, wr, Fr].forEach((rr => rr(ar, jr))), ar.isCompiled = !0;
-          let fr = null;
-          return "object" === typeof ar.keywords && ar.keywords.$pattern && (ar.keywords = Object.assign({}, ar.keywords), fr = ar.keywords.$pattern, delete ar.keywords.$pattern), fr = fr || /\w+/, ar.keywords && (ar.keywords = Jr(ar.keywords, rr.case_insensitive)), Ir.keywordPatternRe = Sr(fr, !0), jr && (ar.Yx || (ar.Yx = /\B|\b/), Ir.beginRe = Sr(Ir.Yx), ar.end || ar.endsWithParent || (ar.end = /\B|\b/), ar.end && (Ir.endRe = Sr(Ir.end)), Ir.terminatorEnd = pr(Ir.end) || "", ar.endsWithParent && jr.terminatorEnd && (Ir.terminatorEnd += (ar.end ? "|" : "") + jr.terminatorEnd)), ar.illegal && (Ir.illegalRe = Sr(ar.illegal)), ar.contains || (ar.contains = []), ar.contains = [].concat(...ar.contains.map((function(rr) {
-            return function(rr) {
-              rr.variants && !rr.cachedVariants && (rr.cachedVariants = rr.variants.map((function(Sr) {
-                return Wr(rr, {
+      if (dd.compilerExtensions || (dd.compilerExtensions = []), dd.contains && dd.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return dd.classNameAliases = Fd(dd.classNameAliases || {}),
+        function md(Rd, Xd) {
+          const Kd = Rd;
+          if (Rd.isCompiled) return Kd;
+          [jd, Id, RO, Cd].forEach((dd => dd(Rd, Xd))), dd.compilerExtensions.forEach((dd => dd(Rd, Xd))), Rd.__beforeBegin = null, [Dd, ed, ld].forEach((dd => dd(Rd, Xd))), Rd.isCompiled = !0;
+          let hd = null;
+          return "object" === typeof Rd.keywords && Rd.keywords.$pattern && (Rd.keywords = Object.assign({}, Rd.keywords), hd = Rd.keywords.$pattern, delete Rd.keywords.$pattern), hd = hd || /\w+/, Rd.keywords && (Rd.keywords = kd(Rd.keywords, dd.case_insensitive)), Kd.keywordPatternRe = Od(hd, !0), Xd && (Rd.ot || (Rd.ot = /\B|\b/), Kd.beginRe = Od(Kd.ot), Rd.end || Rd.endsWithParent || (Rd.end = /\B|\b/), Rd.end && (Kd.endRe = Od(Kd.end)), Kd.terminatorEnd = Qd(Kd.end) || "", Rd.endsWithParent && Xd.terminatorEnd && (Kd.terminatorEnd += (Rd.end ? "|" : "") + Xd.terminatorEnd)), Rd.illegal && (Kd.illegalRe = Od(Rd.illegal)), Rd.contains || (Rd.contains = []), Rd.contains = [].concat(...Rd.contains.map((function(dd) {
+            return function(dd) {
+              dd.variants && !dd.cachedVariants && (dd.cachedVariants = dd.variants.map((function(Od) {
+                return Fd(dd, {
                   variants: null
-                }, Sr)
+                }, Od)
               })));
-              if (rr.cachedVariants) return rr.cachedVariants;
-              if (aS(rr)) return Wr(rr, {
-                starts: rr.starts ? Wr(rr.starts) : null
+              if (dd.cachedVariants) return dd.cachedVariants;
+              if (KO(dd)) return Fd(dd, {
+                starts: dd.starts ? Fd(dd.starts) : null
               });
-              if (Object.isFrozen(rr)) return Wr(rr);
-              return rr
-            }("self" === rr ? ar : rr)
-          }))), ar.contains.forEach((function(rr) {
-            Qr(rr, Ir)
-          })), ar.starts && Qr(ar.starts, jr), Ir.matcher = function(rr) {
-            const Sr = new Zr;
-            return rr.contains.forEach((rr => Sr.addRule(rr.Yx, {
-              rule: rr,
-              type: "Yx"
-            }))), rr.terminatorEnd && Sr.addRule(rr.terminatorEnd, {
+              if (Object.isFrozen(dd)) return Fd(dd);
+              return dd
+            }("self" === dd ? Rd : dd)
+          }))), Rd.contains.forEach((function(dd) {
+            md(dd, Kd)
+          })), Rd.starts && md(Rd.starts, Xd), Kd.matcher = function(dd) {
+            const Od = new Wd;
+            return dd.contains.forEach((dd => Od.addRule(dd.ot, {
+              rule: dd,
+              type: "ot"
+            }))), dd.terminatorEnd && Od.addRule(dd.terminatorEnd, {
               type: "end"
-            }), rr.illegal && Sr.addRule(rr.illegal, {
+            }), dd.illegal && Od.addRule(dd.illegal, {
               type: "illegal"
-            }), Sr
-          }(Ir), Ir
-        }(rr)
+            }), Od
+          }(Kd), Kd
+        }(dd)
     }
 
-    function aS(rr) {
-      return !!rr && (rr.endsWithParent || aS(rr.starts))
+    function KO(dd) {
+      return !!dd && (dd.endsWithParent || KO(dd.starts))
     }
-    class jS extends Error {
-      constructor(rr, Sr) {
-        super(rr), this.name = "HTMLInjectionError", this.html = Sr
+    class hO extends Error {
+      constructor(dd, Od) {
+        super(dd), this.name = "HTMLInjectionError", this.html = Od
       }
     }
-    const IS = Zr,
-      fS = Wr,
-      ES = Symbol("nomatch"),
-      pS = function(rr) {
-        const Zr = Object.create(null),
-          Wr = Object.create(null),
-          ar = [];
-        let jr = !0;
-        const Ir = "Could not find the language '{}', did you forget to load/include a language module?",
-          fr = {
+    const vO = Wd,
+      QO = Fd,
+      tO = Symbol("nomatch"),
+      oO = function(dd) {
+        const Wd = Object.create(null),
+          Fd = Object.create(null),
+          Rd = [];
+        let Xd = !0;
+        const Kd = "Could not find the language '{}', did you forget to load/include a language module?",
+          hd = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let pr = {
+        let Qd = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: Er
+          __emitter: vd
         };
 
-        function hr(rr) {
-          return pr.noHighlightRe.test(rr)
+        function yd(dd) {
+          return Qd.noHighlightRe.test(dd)
         }
 
-        function zr(rr, Sr, Qr) {
-          let Zr = "",
-            Wr = "";
-          "object" === typeof Sr ? (Zr = rr, Qr = Sr.ignoreIllegals, Wr = Sr.language) : (rS("10.7.0", "highlight(lang, code, ...args) has been deprecated."), rS("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), Wr = rr, Zr = Sr), void 0 === Qr && (Qr = !0);
-          const ar = {
-            code: Zr,
-            language: Wr
+        function bd(dd, Od, md) {
+          let Wd = "",
+            Fd = "";
+          "object" === typeof Od ? (Wd = dd, md = Od.ignoreIllegals, Fd = Od.language) : (mO("10.7.0", "highlight(lang, code, ...args) has been deprecated."), mO("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), Fd = dd, Wd = Od), void 0 === md && (md = !0);
+          const Rd = {
+            code: Wd,
+            language: Fd
           };
-          Or("before:highlight", ar);
-          const jr = ar.result ? ar.result : Yr(ar.language, ar.code, Qr);
-          return jr.code = ar.code, Or("after:highlight", jr), jr
+          xd("before:highlight", Rd);
+          const Xd = Rd.result ? Rd.result : Td(Rd.language, Rd.code, md);
+          return Xd.code = Rd.code, xd("after:highlight", Xd), Xd
         }
 
-        function Yr(rr, Sr, Wr, ar) {
-          const fr = Object.create(null);
+        function Td(dd, Od, Fd, Rd) {
+          const hd = Object.create(null);
 
-          function Er() {
-            if (!Or.keywords) return void lr.addText(Xr);
-            let rr = 0;
-            Or.keywordPatternRe.lastIndex = 0;
-            let Sr = Or.keywordPatternRe.exec(Xr),
-              Qr = "";
-            for (; Sr;) {
-              Qr += Xr.substring(rr, Sr.index);
-              const Wr = yr.case_insensitive ? Sr[0].toLowerCase() : Sr[0],
-                ar = (Zr = Wr, Or.keywords[Zr]);
-              if (ar) {
-                const [rr, Zr] = ar;
-                if (lr.addText(Qr), Qr = "", fr[Wr] = (fr[Wr] || 0) + 1, fr[Wr] <= 7 && (Pr += Zr), rr.startsWith("_")) Qr += Sr[0];
+          function vd() {
+            if (!xd.keywords) return void Sd.addText(sd);
+            let dd = 0;
+            xd.keywordPatternRe.lastIndex = 0;
+            let Od = xd.keywordPatternRe.exec(sd),
+              md = "";
+            for (; Od;) {
+              md += sd.substring(dd, Od.index);
+              const Fd = wd.case_insensitive ? Od[0].toLowerCase() : Od[0],
+                Rd = (Wd = Fd, xd.keywords[Wd]);
+              if (Rd) {
+                const [dd, Wd] = Rd;
+                if (Sd.addText(md), md = "", hd[Fd] = (hd[Fd] || 0) + 1, hd[Fd] <= 7 && (ud += Wd), dd.startsWith("_")) md += Od[0];
                 else {
-                  const Qr = yr.classNameAliases[rr] || rr;
-                  mr(Sr[0], Qr)
+                  const md = wd.classNameAliases[dd] || dd;
+                  od(Od[0], md)
                 }
-              } else Qr += Sr[0];
-              rr = Or.keywordPatternRe.lastIndex, Sr = Or.keywordPatternRe.exec(Xr)
+              } else md += Od[0];
+              dd = xd.keywordPatternRe.lastIndex, Od = xd.keywordPatternRe.exec(sd)
             }
-            var Zr;
-            Qr += Xr.substring(rr), lr.addText(Qr)
+            var Wd;
+            md += sd.substring(dd), Sd.addText(md)
           }
 
-          function xr() {
-            null != Or.subLanguage ? function() {
-              if ("" === Xr) return;
-              let rr = null;
-              if ("string" === typeof Or.subLanguage) {
-                if (!Zr[Or.subLanguage]) return void lr.addText(Xr);
-                rr = Yr(Or.subLanguage, Xr, !0, Lr[Or.subLanguage]), Lr[Or.subLanguage] = rr._top
-              } else rr = nr(Xr, Or.subLanguage.length ? Or.subLanguage : null);
-              Or.relevance > 0 && (Pr += rr.relevance), lr.__addSublanguage(rr._emitter, rr.language)
-            }() : Er(), Xr = ""
+          function td() {
+            null != xd.subLanguage ? function() {
+              if ("" === sd) return;
+              let dd = null;
+              if ("string" === typeof xd.subLanguage) {
+                if (!Wd[xd.subLanguage]) return void Sd.addText(sd);
+                dd = Td(xd.subLanguage, sd, !0, Bd[xd.subLanguage]), Bd[xd.subLanguage] = dd._top
+              } else dd = pd(sd, xd.subLanguage.length ? xd.subLanguage : null);
+              xd.relevance > 0 && (ud += dd.relevance), Sd.__addSublanguage(dd._emitter, dd.language)
+            }() : vd(), sd = ""
           }
 
-          function mr(rr, Sr) {
-            "" !== rr && (lr.startScope(Sr), lr.addText(rr), lr.endScope())
+          function od(dd, Od) {
+            "" !== dd && (Sd.startScope(Od), Sd.addText(dd), Sd.endScope())
           }
 
-          function Nr(rr, Sr) {
-            let Qr = 1;
-            const Zr = Sr.length - 1;
-            for (; Qr <= Zr;) {
-              if (!rr._emit[Qr]) {
-                Qr++;
+          function Nd(dd, Od) {
+            let md = 1;
+            const Wd = Od.length - 1;
+            for (; md <= Wd;) {
+              if (!dd._emit[md]) {
+                md++;
                 continue
               }
-              const Zr = yr.classNameAliases[rr[Qr]] || rr[Qr],
-                Wr = Sr[Qr];
-              Zr ? mr(Wr, Zr) : (Xr = Wr, Er(), Xr = ""), Qr++
+              const Wd = wd.classNameAliases[dd[md]] || dd[md],
+                Fd = Od[md];
+              Wd ? od(Fd, Wd) : (sd = Fd, vd(), sd = ""), md++
             }
           }
 
-          function Ur(rr, Sr) {
-            return rr.scope && "string" === typeof rr.scope && lr.openNode(yr.classNameAliases[rr.scope] || rr.scope), rr.beginScope && (rr.beginScope._wrap ? (mr(Xr, yr.classNameAliases[rr.beginScope._wrap] || rr.beginScope._wrap), Xr = "") : rr.beginScope._multi && (Nr(rr.beginScope, Sr), Xr = "")), Or = Object.create(rr, {
+          function qd(dd, Od) {
+            return dd.scope && "string" === typeof dd.scope && Sd.openNode(wd.classNameAliases[dd.scope] || dd.scope), dd.beginScope && (dd.beginScope._wrap ? (od(sd, wd.classNameAliases[dd.beginScope._wrap] || dd.beginScope._wrap), sd = "") : dd.beginScope._multi && (Nd(dd.beginScope, Od), sd = "")), xd = Object.create(dd, {
               parent: {
-                value: Or
+                value: xd
               }
-            }), Or
+            }), xd
           }
 
-          function tr(rr, Sr, Zr) {
-            let Wr = function(rr, Sr) {
-              const Qr = rr && rr.exec(Sr);
-              return Qr && 0 === Qr.index
-            }(rr.endRe, Zr);
-            if (Wr) {
-              if (rr["on:end"]) {
-                const Zr = new Qr(rr);
-                rr["on:end"](Sr, Zr), Zr.isMatchIgnored && (Wr = !1)
+          function Hd(dd, Od, Wd) {
+            let Fd = function(dd, Od) {
+              const md = dd && dd.exec(Od);
+              return md && 0 === md.index
+            }(dd.endRe, Wd);
+            if (Fd) {
+              if (dd["on:end"]) {
+                const Wd = new md(dd);
+                dd["on:end"](Od, Wd), Wd.isMatchIgnored && (Fd = !1)
               }
-              if (Wr) {
-                for (; rr.endsParent && rr.parent;) rr = rr.parent;
-                return rr
+              if (Fd) {
+                for (; dd.endsParent && dd.parent;) dd = dd.parent;
+                return dd
               }
             }
-            if (rr.endsWithParent) return tr(rr.parent, Sr, Zr)
+            if (dd.endsWithParent) return Hd(dd.parent, Od, Wd)
           }
 
-          function hr(rr) {
-            return 0 === Or.matcher.regexIndex ? (Xr += rr[0], 1) : (Rr = !0, 0)
+          function yd(dd) {
+            return 0 === xd.matcher.regexIndex ? (sd += dd[0], 1) : (rd = !0, 0)
           }
 
-          function zr(rr) {
-            const Qr = rr[0],
-              Zr = Sr.substring(rr.index),
-              Wr = tr(Or, rr, Zr);
-            if (!Wr) return ES;
-            const ar = Or;
-            Or.endScope && Or.endScope._wrap ? (xr(), mr(Qr, Or.endScope._wrap)) : Or.endScope && Or.endScope._multi ? (xr(), Nr(Or.endScope, rr)) : ar.skip ? Xr += Qr : (ar.returnEnd || ar.excludeEnd || (Xr += Qr), xr(), ar.excludeEnd && (Xr = Qr));
+          function bd(dd) {
+            const md = dd[0],
+              Wd = Od.substring(dd.index),
+              Fd = Hd(xd, dd, Wd);
+            if (!Fd) return tO;
+            const Rd = xd;
+            xd.endScope && xd.endScope._wrap ? (td(), od(md, xd.endScope._wrap)) : xd.endScope && xd.endScope._multi ? (td(), Nd(xd.endScope, dd)) : Rd.skip ? sd += md : (Rd.returnEnd || Rd.excludeEnd || (sd += md), td(), Rd.excludeEnd && (sd = md));
             do {
-              Or.scope && lr.closeNode(), Or.skip || Or.subLanguage || (Pr += Or.relevance), Or = Or.parent
-            } while (Or !== Wr.parent);
-            return Wr.starts && Ur(Wr.starts, rr), ar.returnEnd ? 0 : Qr.length
+              xd.scope && Sd.closeNode(), xd.skip || xd.subLanguage || (ud += xd.relevance), xd = xd.parent
+            } while (xd !== Fd.parent);
+            return Fd.starts && qd(Fd.starts, dd), Rd.returnEnd ? 0 : md.length
           }
-          let er = {};
+          let Yd = {};
 
-          function Kr(Zr, ar) {
-            const Ir = ar && ar[0];
-            if (Xr += Zr, null == Ir) return xr(), 0;
-            if ("Yx" === er.type && "end" === ar.type && er.index === ar.index && "" === Ir) {
-              if (Xr += Sr.slice(ar.index, ar.index + 1), !jr) {
-                const Sr = new Error(`0 width match regex (${rr})`);
-                throw Sr.languageName = rr, Sr.badRule = er.rule, Sr
+          function gd(Wd, Rd) {
+            const Kd = Rd && Rd[0];
+            if (sd += Wd, null == Kd) return td(), 0;
+            if ("ot" === Yd.type && "end" === Rd.type && Yd.index === Rd.index && "" === Kd) {
+              if (sd += Od.slice(Rd.index, Rd.index + 1), !Xd) {
+                const Od = new Error(`0 width match regex (${dd})`);
+                throw Od.languageName = dd, Od.badRule = Yd.rule, Od
               }
               return 1
             }
-            if (er = ar, "Yx" === ar.type) return function(rr) {
-              const Sr = rr[0],
-                Zr = rr.rule,
-                Wr = new Qr(Zr),
-                ar = [Zr.__beforeBegin, Zr["on:begin"]];
-              for (const Qr of ar)
-                if (Qr && (Qr(rr, Wr), Wr.isMatchIgnored)) return hr(Sr);
-              return Zr.skip ? Xr += Sr : (Zr.excludeBegin && (Xr += Sr), xr(), Zr.returnBegin || Zr.excludeBegin || (Xr = Sr)), Ur(Zr, rr), Zr.returnBegin ? 0 : Sr.length
-            }(ar);
-            if ("illegal" === ar.type && !Wr) {
-              const rr = new Error('Illegal lexeme "' + Ir + '" for mode "' + (Or.scope || "<unnamed>") + '"');
-              throw rr.mode = Or, rr
+            if (Yd = Rd, "ot" === Rd.type) return function(dd) {
+              const Od = dd[0],
+                Wd = dd.rule,
+                Fd = new md(Wd),
+                Rd = [Wd.__beforeBegin, Wd["on:begin"]];
+              for (const md of Rd)
+                if (md && (md(dd, Fd), Fd.isMatchIgnored)) return yd(Od);
+              return Wd.skip ? sd += Od : (Wd.excludeBegin && (sd += Od), td(), Wd.returnBegin || Wd.excludeBegin || (sd = Od)), qd(Wd, dd), Wd.returnBegin ? 0 : Od.length
+            }(Rd);
+            if ("illegal" === Rd.type && !Fd) {
+              const dd = new Error('Illegal lexeme "' + Kd + '" for mode "' + (xd.scope || "<unnamed>") + '"');
+              throw dd.mode = xd, dd
             }
-            if ("end" === ar.type) {
-              const rr = zr(ar);
-              if (rr !== ES) return rr
+            if ("end" === Rd.type) {
+              const dd = bd(Rd);
+              if (dd !== tO) return dd
             }
-            if ("illegal" === ar.type && "" === Ir) return Xr += "\n", 1;
-            if (qr > 1e5 && qr > 3 * ar.index) {
+            if ("illegal" === Rd.type && "" === Kd) return sd += "\n", 1;
+            if (Ad > 1e5 && Ad > 3 * Rd.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return Xr += Ir, Ir.length
+            return sd += Kd, Kd.length
           }
-          const yr = Br(rr);
-          if (!yr) throw sr(Ir.replace("{}", rr)), new Error('Unknown language: "' + rr + '"');
-          const Tr = WS(yr);
-          let vr = "",
-            Or = ar || Tr;
-          const Lr = {},
-            lr = new pr.__emitter(pr);
+          const wd = Ed(dd);
+          if (!wd) throw dO(Kd.replace("{}", dd)), new Error('Unknown language: "' + dd + '"');
+          const Jd = XO(wd);
+          let Ud = "",
+            xd = Rd || Jd;
+          const Bd = {},
+            Sd = new Qd.__emitter(Qd);
           ! function() {
-            const rr = [];
-            for (let Sr = Or; Sr !== yr; Sr = Sr.parent) Sr.scope && rr.unshift(Sr.scope);
-            rr.forEach((rr => lr.openNode(rr)))
+            const dd = [];
+            for (let Od = xd; Od !== wd; Od = Od.parent) Od.scope && dd.unshift(Od.scope);
+            dd.forEach((dd => Sd.openNode(dd)))
           }();
-          let Xr = "",
-            Pr = 0,
-            Hr = 0,
-            qr = 0,
-            Rr = !1;
+          let sd = "",
+            ud = 0,
+            Vd = 0,
+            Ad = 0,
+            rd = !1;
           try {
-            if (yr.__emitTokens) yr.__emitTokens(Sr, lr);
+            if (wd.__emitTokens) wd.__emitTokens(Od, Sd);
             else {
-              for (Or.matcher.considerAll();;) {
-                qr++, Rr ? Rr = !1 : Or.matcher.considerAll(), Or.matcher.lastIndex = Hr;
-                const rr = Or.matcher.exec(Sr);
-                if (!rr) break;
-                const Qr = Kr(Sr.substring(Hr, rr.index), rr);
-                Hr = rr.index + Qr
+              for (xd.matcher.considerAll();;) {
+                Ad++, rd ? rd = !1 : xd.matcher.considerAll(), xd.matcher.lastIndex = Vd;
+                const dd = xd.matcher.exec(Od);
+                if (!dd) break;
+                const md = gd(Od.substring(Vd, dd.index), dd);
+                Vd = dd.index + md
               }
-              Kr(Sr.substring(Hr))
+              gd(Od.substring(Vd))
             }
-            return lr.finalize(), vr = lr.toHTML(), {
-              language: rr,
-              value: vr,
-              relevance: Pr,
+            return Sd.finalize(), Ud = Sd.toHTML(), {
+              language: dd,
+              value: Ud,
+              relevance: ud,
               illegal: !1,
-              _emitter: lr,
-              _top: Or
+              _emitter: Sd,
+              _top: xd
             }
-          } catch (gr) {
-            if (gr.message && gr.message.includes("Illegal")) return {
-              language: rr,
-              value: IS(Sr),
+          } catch (Gd) {
+            if (Gd.message && Gd.message.includes("Illegal")) return {
+              language: dd,
+              value: vO(Od),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: gr.message,
-                index: Hr,
-                context: Sr.slice(Hr - 100, Hr + 100),
-                mode: gr.mode,
-                resultSoFar: vr
+                message: Gd.message,
+                index: Vd,
+                context: Od.slice(Vd - 100, Vd + 100),
+                mode: Gd.mode,
+                resultSoFar: Ud
               },
-              _emitter: lr
+              _emitter: Sd
             };
-            if (jr) return {
-              language: rr,
-              value: IS(Sr),
+            if (Xd) return {
+              language: dd,
+              value: vO(Od),
               illegal: !1,
               relevance: 0,
-              errorRaised: gr,
-              _emitter: lr,
-              _top: Or
+              errorRaised: Gd,
+              _emitter: Sd,
+              _top: xd
             };
-            throw gr
+            throw Gd
           }
         }
 
-        function nr(rr, Sr) {
-          Sr = Sr || pr.languages || Object.keys(Zr);
-          const Qr = function(rr) {
-              const Sr = {
-                value: IS(rr),
+        function pd(dd, Od) {
+          Od = Od || Qd.languages || Object.keys(Wd);
+          const md = function(dd) {
+              const Od = {
+                value: vO(dd),
                 illegal: !1,
                 relevance: 0,
-                _top: fr,
-                _emitter: new pr.__emitter(pr)
+                _top: hd,
+                _emitter: new Qd.__emitter(Qd)
               };
-              return Sr._emitter.addText(rr), Sr
-            }(rr),
-            Wr = Sr.filter(Br).filter(vr).map((Sr => Yr(Sr, rr, !1)));
-          Wr.unshift(Qr);
-          const ar = Wr.sort(((rr, Sr) => {
-              if (rr.relevance !== Sr.relevance) return Sr.relevance - rr.relevance;
-              if (rr.language && Sr.language) {
-                if (Br(rr.language).supersetOf === Sr.language) return 1;
-                if (Br(Sr.language).supersetOf === rr.language) return -1
+              return Od._emitter.addText(dd), Od
+            }(dd),
+            Fd = Od.filter(Ed).filter(Ud).map((Od => Td(Od, dd, !1)));
+          Fd.unshift(md);
+          const Rd = Fd.sort(((dd, Od) => {
+              if (dd.relevance !== Od.relevance) return Od.relevance - dd.relevance;
+              if (dd.language && Od.language) {
+                if (Ed(dd.language).supersetOf === Od.language) return 1;
+                if (Ed(Od.language).supersetOf === dd.language) return -1
               }
               return 0
             })),
-            [jr, Ir] = ar,
-            Er = jr;
-          return Er.secondBest = Ir, Er
+            [Xd, Kd] = Rd,
+            vd = Xd;
+          return vd.secondBest = Kd, vd
         }
 
-        function er(rr) {
-          let Sr = null;
-          const Qr = function(rr) {
-            let Sr = rr.className + " ";
-            Sr += rr.parentNode ? rr.parentNode.className : "";
-            const Qr = pr.languageDetectRe.exec(Sr);
-            if (Qr) {
-              const Sr = Br(Qr[1]);
-              return Sr || (ur(Ir.replace("{}", Qr[1])), ur("Falling back to no-highlight mode for this block.", rr)), Sr ? Qr[1] : "no-highlight"
+        function Yd(dd) {
+          let Od = null;
+          const md = function(dd) {
+            let Od = dd.className + " ";
+            Od += dd.parentNode ? dd.parentNode.className : "";
+            const md = Qd.languageDetectRe.exec(Od);
+            if (md) {
+              const Od = Ed(md[1]);
+              return Od || (OO(Kd.replace("{}", md[1])), OO("Falling back to no-highlight mode for this block.", dd)), Od ? md[1] : "no-highlight"
             }
-            return Sr.split(/\s+/).find((rr => hr(rr) || Br(rr)))
-          }(rr);
-          if (hr(Qr)) return;
-          if (Or("before:highlightElement", {
-              el: rr,
-              language: Qr
-            }), rr.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", rr);
-          if (rr.children.length > 0 && (pr.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(rr)), pr.throwUnescapedHTML)) {
-            throw new jS("One of your code blocks includes unescaped HTML.", rr.innerHTML)
+            return Od.split(/\s+/).find((dd => yd(dd) || Ed(dd)))
+          }(dd);
+          if (yd(md)) return;
+          if (xd("before:highlightElement", {
+              el: dd,
+              language: md
+            }), dd.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", dd);
+          if (dd.children.length > 0 && (Qd.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(dd)), Qd.throwUnescapedHTML)) {
+            throw new hO("One of your code blocks includes unescaped HTML.", dd.innerHTML)
           }
-          Sr = rr;
-          const Zr = Sr.textContent,
-            ar = Qr ? zr(Zr, {
-              language: Qr,
+          Od = dd;
+          const Wd = Od.textContent,
+            Rd = md ? bd(Wd, {
+              language: md,
               ignoreIllegals: !0
-            }) : nr(Zr);
-          rr.innerHTML = ar.value, rr.dataset.highlighted = "yes",
-            function(rr, Sr, Qr) {
-              const Zr = Sr && Wr[Sr] || Qr;
-              rr.classList.add("hljs"), rr.classList.add(`language-${Zr}`)
-            }(rr, Qr, ar.language), rr.result = {
-              language: ar.language,
-              re: ar.relevance,
-              relevance: ar.relevance
-            }, ar.secondBest && (rr.secondBest = {
-              language: ar.secondBest.language,
-              relevance: ar.secondBest.relevance
-            }), Or("after:highlightElement", {
-              el: rr,
-              result: ar,
-              text: Zr
+            }) : pd(Wd);
+          dd.innerHTML = Rd.value, dd.dataset.highlighted = "yes",
+            function(dd, Od, md) {
+              const Wd = Od && Fd[Od] || md;
+              dd.classList.add("hljs"), dd.classList.add(`language-${Wd}`)
+            }(dd, md, Rd.language), dd.result = {
+              language: Rd.language,
+              re: Rd.relevance,
+              relevance: Rd.relevance
+            }, Rd.secondBest && (dd.secondBest = {
+              language: Rd.secondBest.language,
+              relevance: Rd.secondBest.relevance
+            }), xd("after:highlightElement", {
+              el: dd,
+              result: Rd,
+              text: Wd
             })
         }
-        let Kr = !1;
+        let gd = !1;
 
-        function yr() {
-          if ("loading" === document.readyState) return Kr || window.addEventListener("DOMContentLoaded", (function() {
-            yr()
-          }), !1), void(Kr = !0);
-          document.querySelectorAll(pr.cssSelector).forEach(er)
+        function wd() {
+          if ("loading" === document.readyState) return gd || window.addEventListener("DOMContentLoaded", (function() {
+            wd()
+          }), !1), void(gd = !0);
+          document.querySelectorAll(Qd.cssSelector).forEach(Yd)
         }
 
-        function Br(rr) {
-          return rr = (rr || "").toLowerCase(), Zr[rr] || Zr[Wr[rr]]
+        function Ed(dd) {
+          return dd = (dd || "").toLowerCase(), Wd[dd] || Wd[Fd[dd]]
         }
 
-        function Tr(rr, Sr) {
+        function Jd(dd, Od) {
           let {
-            languageName: Qr
-          } = Sr;
-          "string" === typeof rr && (rr = [rr]), rr.forEach((rr => {
-            Wr[rr.toLowerCase()] = Qr
+            languageName: md
+          } = Od;
+          "string" === typeof dd && (dd = [dd]), dd.forEach((dd => {
+            Fd[dd.toLowerCase()] = md
           }))
         }
 
-        function vr(rr) {
-          const Sr = Br(rr);
-          return Sr && !Sr.disableAutodetect
+        function Ud(dd) {
+          const Od = Ed(dd);
+          return Od && !Od.disableAutodetect
         }
 
-        function Or(rr, Sr) {
-          const Qr = rr;
-          ar.forEach((function(rr) {
-            rr[Qr] && rr[Qr](Sr)
+        function xd(dd, Od) {
+          const md = dd;
+          Rd.forEach((function(dd) {
+            dd[md] && dd[md](Od)
           }))
         }
-        Object.assign(rr, {
-          highlight: zr,
-          highlightAuto: nr,
-          highlightAll: yr,
-          highlightElement: er,
-          highlightBlock: function(rr) {
-            return rS("10.7.0", "highlightBlock will be removed entirely in v12.0"), rS("10.7.0", "Please use highlightElement now."), er(rr)
+        Object.assign(dd, {
+          highlight: bd,
+          highlightAuto: pd,
+          highlightAll: wd,
+          highlightElement: Yd,
+          highlightBlock: function(dd) {
+            return mO("10.7.0", "highlightBlock will be removed entirely in v12.0"), mO("10.7.0", "Please use highlightElement now."), Yd(dd)
           },
-          configure: function(rr) {
-            pr = fS(pr, rr)
+          configure: function(dd) {
+            Qd = QO(Qd, dd)
           },
           initHighlighting: () => {
-            yr(), rS("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            wd(), mO("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            yr(), rS("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            wd(), mO("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(Sr, Qr) {
-            let Wr = null;
+          registerLanguage: function(Od, md) {
+            let Fd = null;
             try {
-              Wr = Qr(rr)
-            } catch (ar) {
-              if (sr("Language definition for '{}' could not be registered.".replace("{}", Sr)), !jr) throw ar;
-              sr(ar), Wr = fr
+              Fd = md(dd)
+            } catch (Rd) {
+              if (dO("Language definition for '{}' could not be registered.".replace("{}", Od)), !Xd) throw Rd;
+              dO(Rd), Fd = hd
             }
-            Wr.name || (Wr.name = Sr), Zr[Sr] = Wr, Wr.rawDefinition = Qr.bind(null, rr), Wr.aliases && Tr(Wr.aliases, {
-              languageName: Sr
+            Fd.name || (Fd.name = Od), Wd[Od] = Fd, Fd.rawDefinition = md.bind(null, dd), Fd.aliases && Jd(Fd.aliases, {
+              languageName: Od
             })
           },
-          unregisterLanguage: function(rr) {
-            delete Zr[rr];
-            for (const Sr of Object.keys(Wr)) Wr[Sr] === rr && delete Wr[Sr]
+          unregisterLanguage: function(dd) {
+            delete Wd[dd];
+            for (const Od of Object.keys(Fd)) Fd[Od] === dd && delete Fd[Od]
           },
           listLanguages: function() {
-            return Object.keys(Zr)
+            return Object.keys(Wd)
           },
-          getLanguage: Br,
-          registerAliases: Tr,
-          autoDetection: vr,
-          inherit: fS,
-          addPlugin: function(rr) {
-            ! function(rr) {
-              rr["before:highlightBlock"] && !rr["before:highlightElement"] && (rr["before:highlightElement"] = Sr => {
-                rr["before:highlightBlock"](Object.assign({
-                  block: Sr.el
-                }, Sr))
-              }), rr["after:highlightBlock"] && !rr["after:highlightElement"] && (rr["after:highlightElement"] = Sr => {
-                rr["after:highlightBlock"](Object.assign({
-                  block: Sr.el
-                }, Sr))
+          getLanguage: Ed,
+          registerAliases: Jd,
+          autoDetection: Ud,
+          inherit: QO,
+          addPlugin: function(dd) {
+            ! function(dd) {
+              dd["before:highlightBlock"] && !dd["before:highlightElement"] && (dd["before:highlightElement"] = Od => {
+                dd["before:highlightBlock"](Object.assign({
+                  block: Od.el
+                }, Od))
+              }), dd["after:highlightBlock"] && !dd["after:highlightElement"] && (dd["after:highlightElement"] = Od => {
+                dd["after:highlightBlock"](Object.assign({
+                  block: Od.el
+                }, Od))
               })
-            }(rr), ar.push(rr)
+            }(dd), Rd.push(dd)
           },
-          removePlugin: function(rr) {
-            const Sr = ar.indexOf(rr); - 1 !== Sr && ar.splice(Sr, 1)
+          removePlugin: function(dd) {
+            const Od = Rd.indexOf(dd); - 1 !== Od && Rd.splice(Od, 1)
           }
-        }), rr.debugMode = function() {
-          jr = !1
-        }, rr.safeMode = function() {
-          jr = !0
-        }, rr.versionString = "11.11.1", rr.regex = {
-          concat: Ur,
-          lookahead: xr,
-          either: tr,
-          optional: Nr,
-          anyNumberOfTimes: mr
+        }), dd.debugMode = function() {
+          Xd = !1
+        }, dd.safeMode = function() {
+          Xd = !0
+        }, dd.versionString = "11.11.1", dd.regex = {
+          concat: qd,
+          lookahead: td,
+          either: Hd,
+          optional: Nd,
+          anyNumberOfTimes: od
         };
-        for (const Qr in kr) "object" === typeof kr[Qr] && Sr(kr[Qr]);
-        return Object.assign(rr, kr), rr
+        for (const md in zd) "object" === typeof zd[md] && Od(zd[md]);
+        return Object.assign(dd, zd), dd
       },
-      xS = pS({});
-    xS.newInstance = () => pS({}), rr.exports = xS, xS.HighlightJS = xS, xS.default = xS
+      NO = oO({});
+    NO.newInstance = () => oO({}), dd.exports = NO, NO.HighlightJS = NO, NO.default = NO
   },
-  5538: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Zr
+  5489: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd
     });
-    const Zr = Qr(5547)
+    const Wd = md(5493)
   },
-  5553: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => xr
+  5495: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => td
     });
-    const Zr = "[A-Za-z$_][0-9A-Za-z$_]*",
-      Wr = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      ar = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      jr = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      Ir = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      fr = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      Er = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      pr = [].concat(fr, jr, Ir);
+    const Wd = "[A-Za-z$_][0-9A-Za-z$_]*",
+      Fd = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      Rd = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      Xd = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      Kd = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      hd = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      vd = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Qd = [].concat(hd, Xd, Kd);
 
-    function xr(rr) {
-      const Sr = rr.regex,
-        Qr = Zr,
-        xr = "<>",
-        mr = "</>",
-        Nr = {
-          Yx: /<[A-Za-z0-9\\._:-]+/,
+    function td(dd) {
+      const Od = dd.regex,
+        md = Wd,
+        td = "<>",
+        od = "</>",
+        Nd = {
+          ot: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (rr, Sr) => {
-            const Qr = rr[0].length + rr.index,
-              Zr = rr.input[Qr];
-            if ("<" === Zr || "," === Zr) return void Sr.ignoreMatch();
-            let Wr;
-            ">" === Zr && (((rr, Sr) => {
+          isTrulyOpeningTag: (dd, Od) => {
+            const md = dd[0].length + dd.index,
+              Wd = dd.input[md];
+            if ("<" === Wd || "," === Wd) return void Od.ignoreMatch();
+            let Fd;
+            ">" === Wd && (((dd, Od) => {
               let {
-                after: Qr
-              } = Sr;
-              const Zr = "</" + rr[0].slice(1);
-              return -1 !== rr.input.indexOf(Zr, Qr)
-            })(rr, {
-              after: Qr
-            }) || Sr.ignoreMatch());
-            const ar = rr.input.substring(Qr);
-            ((Wr = ar.match(/^\s*=/)) || (Wr = ar.match(/^\s+extends\s+/)) && 0 === Wr.index) && Sr.ignoreMatch()
+                after: md
+              } = Od;
+              const Wd = "</" + dd[0].slice(1);
+              return -1 !== dd.input.indexOf(Wd, md)
+            })(dd, {
+              after: md
+            }) || Od.ignoreMatch());
+            const Rd = dd.input.substring(md);
+            ((Fd = Rd.match(/^\s*=/)) || (Fd = Rd.match(/^\s+extends\s+/)) && 0 === Fd.index) && Od.ignoreMatch()
           }
         },
-        Ur = {
-          $pattern: Zr,
-          keyword: Wr,
-          literal: ar,
-          built_in: pr,
-          "variable.language": Er
+        qd = {
+          $pattern: Wd,
+          keyword: Fd,
+          literal: Rd,
+          built_in: Qd,
+          "variable.language": vd
         },
-        tr = "[0-9](_?[0-9])*",
-        hr = `\\.(${tr})`,
-        zr = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        Yr = {
+        Hd = "[0-9](_?[0-9])*",
+        yd = `\\.(${Hd})`,
+        bd = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        Td = {
           className: "number",
           variants: [{
-            Yx: `(\\b(${zr})((${hr})|\\.)?|(${hr}))[eE][+-]?(${tr})\\b`
+            ot: `(\\b(${bd})((${yd})|\\.)?|(${yd}))[eE][+-]?(${Hd})\\b`
           }, {
-            Yx: `\\b(${zr})\\b((${hr})\\b|\\.)?|(${hr})\\b`
+            ot: `\\b(${bd})\\b((${yd})\\b|\\.)?|(${yd})\\b`
           }, {
-            Yx: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            ot: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            Yx: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            ot: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            Yx: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            ot: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            Yx: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            ot: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            Yx: "\\b0[0-7]+n?\\b"
+            ot: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        nr = {
+        pd = {
           className: "subst",
-          Yx: "\\$\\{",
+          ot: "\\$\\{",
           end: "\\}",
-          keywords: Ur,
+          keywords: qd,
           contains: []
         },
-        er = {
-          Yx: ".?html`",
+        Yd = {
+          ot: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [rr.BACKSLASH_ESCAPE, nr],
+            contains: [dd.BACKSLASH_ESCAPE, pd],
             subLanguage: "xml"
           }
         },
-        Kr = {
-          Yx: ".?css`",
+        gd = {
+          ot: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [rr.BACKSLASH_ESCAPE, nr],
+            contains: [dd.BACKSLASH_ESCAPE, pd],
             subLanguage: "css"
           }
         },
-        yr = {
-          Yx: ".?gql`",
+        wd = {
+          ot: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [rr.BACKSLASH_ESCAPE, nr],
+            contains: [dd.BACKSLASH_ESCAPE, pd],
             subLanguage: "graphql"
           }
         },
-        Br = {
+        Ed = {
           className: "string",
-          Yx: "`",
+          ot: "`",
           end: "`",
-          contains: [rr.BACKSLASH_ESCAPE, nr]
+          contains: [dd.BACKSLASH_ESCAPE, pd]
         },
-        Tr = {
+        Jd = {
           className: "comment",
-          variants: [rr.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [dd.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              Yx: "(?=@[A-Za-z]+)",
+              ot: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                Yx: "@[A-Za-z]+"
+                ot: "@[A-Za-z]+"
               }, {
                 className: "type",
-                Yx: "\\{",
+                ot: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                Yx: Qr + "(?=\\s*(-)|$)",
+                ot: md + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                Yx: /(?=[^\n])\s/,
+                ot: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), rr.C_BLOCK_COMMENT_MODE, rr.C_LINE_COMMENT_MODE]
+          }), dd.C_BLOCK_COMMENT_MODE, dd.C_LINE_COMMENT_MODE]
         },
-        vr = [rr.APOS_STRING_MODE, rr.QUOTE_STRING_MODE, er, Kr, yr, Br, {
+        Ud = [dd.APOS_STRING_MODE, dd.QUOTE_STRING_MODE, Yd, gd, wd, Ed, {
           match: /\$\d+/
-        }, Yr];
-      nr.contains = vr.concat({
-        Yx: /\{/,
+        }, Td];
+      pd.contains = Ud.concat({
+        ot: /\{/,
         end: /\}/,
-        keywords: Ur,
-        contains: ["self"].concat(vr)
+        keywords: qd,
+        contains: ["self"].concat(Ud)
       });
-      const Or = [].concat(Tr, nr.contains),
-        Lr = Or.concat([{
-          Yx: /(\s*)\(/,
+      const xd = [].concat(Jd, pd.contains),
+        Bd = xd.concat([{
+          ot: /(\s*)\(/,
           end: /\)/,
-          keywords: Ur,
-          contains: ["self"].concat(Or)
+          keywords: qd,
+          contains: ["self"].concat(xd)
         }]),
-        lr = {
+        Sd = {
           className: "params",
-          Yx: /(\s*)\(/,
+          ot: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: Ur,
-          contains: Lr
+          keywords: qd,
+          contains: Bd
         },
-        Xr = {
+        sd = {
           variants: [{
-            match: [/class/, /\s+/, Qr, /\s+/, /extends/, /\s+/, Sr.concat(Qr, "(", Sr.concat(/\./, Qr), ")*")],
+            match: [/class/, /\s+/, md, /\s+/, /extends/, /\s+/, Od.concat(md, "(", Od.concat(/\./, md), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, Qr],
+            match: [/class/, /\s+/, md],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        Pr = {
+        ud = {
           relevance: 0,
-          match: Sr.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: Od.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...jr, ...Ir]
+            _: [...Xd, ...Kd]
           }
         },
-        Hr = {
+        Vd = {
           variants: [{
-            match: [/function/, /\s+/, Qr, /(?=\s*\()/]
+            match: [/function/, /\s+/, md, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [lr],
+          contains: [Sd],
           illegal: /%/
         };
-      const qr = {
-        match: Sr.concat(/\b/, (Rr = [...fr, "super", "import"].map((rr => `${rr}\\s*\\(`)), Sr.concat("(?!", Rr.join("|"), ")")), Qr, Sr.lookahead(/\s*\(/)),
+      const Ad = {
+        match: Od.concat(/\b/, (rd = [...hd, "super", "import"].map((dd => `${dd}\\s*\\(`)), Od.concat("(?!", rd.join("|"), ")")), md, Od.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var Rr;
-      const gr = {
-          Yx: Sr.concat(/\./, Sr.lookahead(Sr.concat(Qr, /(?![0-9A-Za-z$_(])/))),
-          end: Qr,
+      var rd;
+      const Gd = {
+          ot: Od.concat(/\./, Od.lookahead(Od.concat(md, /(?![0-9A-Za-z$_(])/))),
+          end: md,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        Cr = {
-          match: [/get|set/, /\s+/, Qr, /(?=\()/],
+        nd = {
+          match: [/get|set/, /\s+/, md, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            Yx: /\(\)/
-          }, lr]
+            ot: /\(\)/
+          }, Sd]
         },
-        Mr = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + rr.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        Gr = {
-          match: [/const|var|let/, /\s+/, Qr, /\s*/, /=\s*/, /(async\s*)?/, Sr.lookahead(Mr)],
+        Ld = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + dd.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Pd = {
+          match: [/const|var|let/, /\s+/, md, /\s*/, /=\s*/, /(async\s*)?/, Od.lookahead(Ld)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [lr]
+          contains: [Sd]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: Ur,
+        keywords: qd,
         exports: {
-          PARAMS_CONTAINS: Lr,
-          CLASS_REFERENCE: Pr
+          PARAMS_CONTAINS: Bd,
+          CLASS_REFERENCE: ud
         },
         illegal: /#(?![$_A-z])/,
-        contains: [rr.SHEBANG({
+        contains: [dd.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          Yx: /^\s*['"]use (strict|asm)['"]/
-        }, rr.APOS_STRING_MODE, rr.QUOTE_STRING_MODE, er, Kr, yr, Br, Tr, {
+          ot: /^\s*['"]use (strict|asm)['"]/
+        }, dd.APOS_STRING_MODE, dd.QUOTE_STRING_MODE, Yd, gd, wd, Ed, Jd, {
           match: /\$\d+/
-        }, Yr, Pr, {
+        }, Td, ud, {
           scope: "attr",
-          match: Qr + Sr.lookahead(":"),
+          match: md + Od.lookahead(":"),
           relevance: 0
-        }, Gr, {
-          Yx: "(" + rr.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, Pd, {
+          ot: "(" + dd.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [Tr, rr.REGEXP_MODE, {
+          contains: [Jd, dd.REGEXP_MODE, {
             className: "function",
-            Yx: Mr,
+            ot: Ld,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                Yx: rr.UNDERSCORE_IDENT_RE,
+                ot: dd.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                Yx: /\(\s*\)/,
+                ot: /\(\s*\)/,
                 skip: !0
               }, {
-                Yx: /(\s*)\(/,
+                ot: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: Ur,
-                contains: Lr
+                keywords: qd,
+                contains: Bd
               }]
             }]
           }, {
-            Yx: /,/,
+            ot: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              Yx: xr,
-              end: mr
+              ot: td,
+              end: od
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              Yx: Nr.Yx,
-              "on:begin": Nr.isTrulyOpeningTag,
-              end: Nr.end
+              ot: Nd.ot,
+              "on:begin": Nd.isTrulyOpeningTag,
+              end: Nd.end
             }],
             subLanguage: "xml",
             contains: [{
-              Yx: Nr.Yx,
-              end: Nr.end,
+              ot: Nd.ot,
+              end: Nd.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, Hr, {
+        }, Vd, {
           beginKeywords: "while if switch catch for"
         }, {
-          Yx: "\\b(?!function)" + rr.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          ot: "\\b(?!function)" + dd.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [lr, rr.inherit(rr.TITLE_MODE, {
-            Yx: Qr,
+          contains: [Sd, dd.inherit(dd.TITLE_MODE, {
+            ot: md,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, gr, {
-          match: "\\$" + Qr,
+        }, Gd, {
+          match: "\\$" + md,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [lr]
-        }, qr, {
+          contains: [Sd]
+        }, Ad, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, Xr, Cr, {
+        }, sd, nd, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  5562: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => mr
+  5504: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => od
     });
-    const Zr = "[A-Za-z$_][0-9A-Za-z$_]*",
-      Wr = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      ar = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      jr = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      Ir = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      fr = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      Er = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      pr = [].concat(fr, jr, Ir);
+    const Wd = "[A-Za-z$_][0-9A-Za-z$_]*",
+      Fd = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      Rd = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      Xd = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      Kd = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      hd = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      vd = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Qd = [].concat(hd, Xd, Kd);
 
-    function xr(rr) {
-      const Sr = rr.regex,
-        Qr = Zr,
-        xr = "<>",
-        mr = "</>",
-        Nr = {
-          Yx: /<[A-Za-z0-9\\._:-]+/,
+    function td(dd) {
+      const Od = dd.regex,
+        md = Wd,
+        td = "<>",
+        od = "</>",
+        Nd = {
+          ot: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (rr, Sr) => {
-            const Qr = rr[0].length + rr.index,
-              Zr = rr.input[Qr];
-            if ("<" === Zr || "," === Zr) return void Sr.ignoreMatch();
-            let Wr;
-            ">" === Zr && (((rr, Sr) => {
+          isTrulyOpeningTag: (dd, Od) => {
+            const md = dd[0].length + dd.index,
+              Wd = dd.input[md];
+            if ("<" === Wd || "," === Wd) return void Od.ignoreMatch();
+            let Fd;
+            ">" === Wd && (((dd, Od) => {
               let {
-                after: Qr
-              } = Sr;
-              const Zr = "</" + rr[0].slice(1);
-              return -1 !== rr.input.indexOf(Zr, Qr)
-            })(rr, {
-              after: Qr
-            }) || Sr.ignoreMatch());
-            const ar = rr.input.substring(Qr);
-            ((Wr = ar.match(/^\s*=/)) || (Wr = ar.match(/^\s+extends\s+/)) && 0 === Wr.index) && Sr.ignoreMatch()
+                after: md
+              } = Od;
+              const Wd = "</" + dd[0].slice(1);
+              return -1 !== dd.input.indexOf(Wd, md)
+            })(dd, {
+              after: md
+            }) || Od.ignoreMatch());
+            const Rd = dd.input.substring(md);
+            ((Fd = Rd.match(/^\s*=/)) || (Fd = Rd.match(/^\s+extends\s+/)) && 0 === Fd.index) && Od.ignoreMatch()
           }
         },
-        Ur = {
-          $pattern: Zr,
-          keyword: Wr,
-          literal: ar,
-          built_in: pr,
-          "variable.language": Er
+        qd = {
+          $pattern: Wd,
+          keyword: Fd,
+          literal: Rd,
+          built_in: Qd,
+          "variable.language": vd
         },
-        tr = "[0-9](_?[0-9])*",
-        hr = `\\.(${tr})`,
-        zr = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        Yr = {
+        Hd = "[0-9](_?[0-9])*",
+        yd = `\\.(${Hd})`,
+        bd = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        Td = {
           className: "number",
           variants: [{
-            Yx: `(\\b(${zr})((${hr})|\\.)?|(${hr}))[eE][+-]?(${tr})\\b`
+            ot: `(\\b(${bd})((${yd})|\\.)?|(${yd}))[eE][+-]?(${Hd})\\b`
           }, {
-            Yx: `\\b(${zr})\\b((${hr})\\b|\\.)?|(${hr})\\b`
+            ot: `\\b(${bd})\\b((${yd})\\b|\\.)?|(${yd})\\b`
           }, {
-            Yx: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            ot: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            Yx: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            ot: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            Yx: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            ot: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            Yx: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            ot: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            Yx: "\\b0[0-7]+n?\\b"
+            ot: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        nr = {
+        pd = {
           className: "subst",
-          Yx: "\\$\\{",
+          ot: "\\$\\{",
           end: "\\}",
-          keywords: Ur,
+          keywords: qd,
           contains: []
         },
-        er = {
-          Yx: ".?html`",
+        Yd = {
+          ot: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [rr.BACKSLASH_ESCAPE, nr],
+            contains: [dd.BACKSLASH_ESCAPE, pd],
             subLanguage: "xml"
           }
         },
-        Kr = {
-          Yx: ".?css`",
+        gd = {
+          ot: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [rr.BACKSLASH_ESCAPE, nr],
+            contains: [dd.BACKSLASH_ESCAPE, pd],
             subLanguage: "css"
           }
         },
-        yr = {
-          Yx: ".?gql`",
+        wd = {
+          ot: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [rr.BACKSLASH_ESCAPE, nr],
+            contains: [dd.BACKSLASH_ESCAPE, pd],
             subLanguage: "graphql"
           }
         },
-        Br = {
+        Ed = {
           className: "string",
-          Yx: "`",
+          ot: "`",
           end: "`",
-          contains: [rr.BACKSLASH_ESCAPE, nr]
+          contains: [dd.BACKSLASH_ESCAPE, pd]
         },
-        Tr = {
+        Jd = {
           className: "comment",
-          variants: [rr.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [dd.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              Yx: "(?=@[A-Za-z]+)",
+              ot: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                Yx: "@[A-Za-z]+"
+                ot: "@[A-Za-z]+"
               }, {
                 className: "type",
-                Yx: "\\{",
+                ot: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                Yx: Qr + "(?=\\s*(-)|$)",
+                ot: md + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                Yx: /(?=[^\n])\s/,
+                ot: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), rr.C_BLOCK_COMMENT_MODE, rr.C_LINE_COMMENT_MODE]
+          }), dd.C_BLOCK_COMMENT_MODE, dd.C_LINE_COMMENT_MODE]
         },
-        vr = [rr.APOS_STRING_MODE, rr.QUOTE_STRING_MODE, er, Kr, yr, Br, {
+        Ud = [dd.APOS_STRING_MODE, dd.QUOTE_STRING_MODE, Yd, gd, wd, Ed, {
           match: /\$\d+/
-        }, Yr];
-      nr.contains = vr.concat({
-        Yx: /\{/,
+        }, Td];
+      pd.contains = Ud.concat({
+        ot: /\{/,
         end: /\}/,
-        keywords: Ur,
-        contains: ["self"].concat(vr)
+        keywords: qd,
+        contains: ["self"].concat(Ud)
       });
-      const Or = [].concat(Tr, nr.contains),
-        Lr = Or.concat([{
-          Yx: /(\s*)\(/,
+      const xd = [].concat(Jd, pd.contains),
+        Bd = xd.concat([{
+          ot: /(\s*)\(/,
           end: /\)/,
-          keywords: Ur,
-          contains: ["self"].concat(Or)
+          keywords: qd,
+          contains: ["self"].concat(xd)
         }]),
-        lr = {
+        Sd = {
           className: "params",
-          Yx: /(\s*)\(/,
+          ot: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: Ur,
-          contains: Lr
+          keywords: qd,
+          contains: Bd
         },
-        Xr = {
+        sd = {
           variants: [{
-            match: [/class/, /\s+/, Qr, /\s+/, /extends/, /\s+/, Sr.concat(Qr, "(", Sr.concat(/\./, Qr), ")*")],
+            match: [/class/, /\s+/, md, /\s+/, /extends/, /\s+/, Od.concat(md, "(", Od.concat(/\./, md), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, Qr],
+            match: [/class/, /\s+/, md],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        Pr = {
+        ud = {
           relevance: 0,
-          match: Sr.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: Od.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...jr, ...Ir]
+            _: [...Xd, ...Kd]
           }
         },
-        Hr = {
+        Vd = {
           variants: [{
-            match: [/function/, /\s+/, Qr, /(?=\s*\()/]
+            match: [/function/, /\s+/, md, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [lr],
+          contains: [Sd],
           illegal: /%/
         };
-      const qr = {
-        match: Sr.concat(/\b/, (Rr = [...fr, "super", "import"].map((rr => `${rr}\\s*\\(`)), Sr.concat("(?!", Rr.join("|"), ")")), Qr, Sr.lookahead(/\s*\(/)),
+      const Ad = {
+        match: Od.concat(/\b/, (rd = [...hd, "super", "import"].map((dd => `${dd}\\s*\\(`)), Od.concat("(?!", rd.join("|"), ")")), md, Od.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var Rr;
-      const gr = {
-          Yx: Sr.concat(/\./, Sr.lookahead(Sr.concat(Qr, /(?![0-9A-Za-z$_(])/))),
-          end: Qr,
+      var rd;
+      const Gd = {
+          ot: Od.concat(/\./, Od.lookahead(Od.concat(md, /(?![0-9A-Za-z$_(])/))),
+          end: md,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        Cr = {
-          match: [/get|set/, /\s+/, Qr, /(?=\()/],
+        nd = {
+          match: [/get|set/, /\s+/, md, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            Yx: /\(\)/
-          }, lr]
+            ot: /\(\)/
+          }, Sd]
         },
-        Mr = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + rr.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        Gr = {
-          match: [/const|var|let/, /\s+/, Qr, /\s*/, /=\s*/, /(async\s*)?/, Sr.lookahead(Mr)],
+        Ld = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + dd.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Pd = {
+          match: [/const|var|let/, /\s+/, md, /\s*/, /=\s*/, /(async\s*)?/, Od.lookahead(Ld)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [lr]
+          contains: [Sd]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: Ur,
+        keywords: qd,
         exports: {
-          PARAMS_CONTAINS: Lr,
-          CLASS_REFERENCE: Pr
+          PARAMS_CONTAINS: Bd,
+          CLASS_REFERENCE: ud
         },
         illegal: /#(?![$_A-z])/,
-        contains: [rr.SHEBANG({
+        contains: [dd.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          Yx: /^\s*['"]use (strict|asm)['"]/
-        }, rr.APOS_STRING_MODE, rr.QUOTE_STRING_MODE, er, Kr, yr, Br, Tr, {
+          ot: /^\s*['"]use (strict|asm)['"]/
+        }, dd.APOS_STRING_MODE, dd.QUOTE_STRING_MODE, Yd, gd, wd, Ed, Jd, {
           match: /\$\d+/
-        }, Yr, Pr, {
+        }, Td, ud, {
           scope: "attr",
-          match: Qr + Sr.lookahead(":"),
+          match: md + Od.lookahead(":"),
           relevance: 0
-        }, Gr, {
-          Yx: "(" + rr.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, Pd, {
+          ot: "(" + dd.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [Tr, rr.REGEXP_MODE, {
+          contains: [Jd, dd.REGEXP_MODE, {
             className: "function",
-            Yx: Mr,
+            ot: Ld,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                Yx: rr.UNDERSCORE_IDENT_RE,
+                ot: dd.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                Yx: /\(\s*\)/,
+                ot: /\(\s*\)/,
                 skip: !0
               }, {
-                Yx: /(\s*)\(/,
+                ot: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: Ur,
-                contains: Lr
+                keywords: qd,
+                contains: Bd
               }]
             }]
           }, {
-            Yx: /,/,
+            ot: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              Yx: xr,
-              end: mr
+              ot: td,
+              end: od
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              Yx: Nr.Yx,
-              "on:begin": Nr.isTrulyOpeningTag,
-              end: Nr.end
+              ot: Nd.ot,
+              "on:begin": Nd.isTrulyOpeningTag,
+              end: Nd.end
             }],
             subLanguage: "xml",
             contains: [{
-              Yx: Nr.Yx,
-              end: Nr.end,
+              ot: Nd.ot,
+              end: Nd.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, Hr, {
+        }, Vd, {
           beginKeywords: "while if switch catch for"
         }, {
-          Yx: "\\b(?!function)" + rr.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          ot: "\\b(?!function)" + dd.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [lr, rr.inherit(rr.TITLE_MODE, {
-            Yx: Qr,
+          contains: [Sd, dd.inherit(dd.TITLE_MODE, {
+            ot: md,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, gr, {
-          match: "\\$" + Qr,
+        }, Gd, {
+          match: "\\$" + md,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [lr]
-        }, qr, {
+          contains: [Sd]
+        }, Ad, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, Xr, Cr, {
+        }, sd, nd, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function mr(rr) {
-      const Sr = rr.regex,
-        Qr = xr(rr),
-        jr = Zr,
-        Ir = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        fr = {
-          Yx: [/namespace/, /\s+/, rr.IDENT_RE],
+    function od(dd) {
+      const Od = dd.regex,
+        md = td(dd),
+        Xd = Wd,
+        Kd = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        hd = {
+          ot: [/namespace/, /\s+/, dd.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        mr = {
+        od = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: Ir
+            built_in: Kd
           },
-          contains: [Qr.exports.CLASS_REFERENCE]
+          contains: [md.exports.CLASS_REFERENCE]
         },
-        Nr = {
-          $pattern: Zr,
-          keyword: Wr.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: ar,
-          built_in: pr.concat(Ir),
-          "variable.language": Er
+        Nd = {
+          $pattern: Wd,
+          keyword: Fd.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: Rd,
+          built_in: Qd.concat(Kd),
+          "variable.language": vd
         },
-        Ur = {
+        qd = {
           className: "meta",
-          Yx: "@" + jr
+          ot: "@" + Xd
         },
-        tr = (rr, Sr, Qr) => {
-          const Zr = rr.contains.findIndex((rr => rr.label === Sr));
-          if (-1 === Zr) throw new Error("can not find mode to replace");
-          rr.contains.splice(Zr, 1, Qr)
+        Hd = (dd, Od, md) => {
+          const Wd = dd.contains.findIndex((dd => dd.label === Od));
+          if (-1 === Wd) throw new Error("can not find mode to replace");
+          dd.contains.splice(Wd, 1, md)
         };
-      Object.assign(Qr.keywords, Nr), Qr.exports.PARAMS_CONTAINS.push(Ur);
-      const hr = Qr.contains.find((rr => "attr" === rr.scope)),
-        zr = Object.assign({}, hr, {
-          match: Sr.concat(jr, Sr.lookahead(/\s*\?:/))
+      Object.assign(md.keywords, Nd), md.exports.PARAMS_CONTAINS.push(qd);
+      const yd = md.contains.find((dd => "attr" === dd.scope)),
+        bd = Object.assign({}, yd, {
+          match: Od.concat(Xd, Od.lookahead(/\s*\?:/))
         });
-      Qr.exports.PARAMS_CONTAINS.push([Qr.exports.CLASS_REFERENCE, hr, zr]), Qr.contains = Qr.contains.concat([Ur, fr, mr, zr]), tr(Qr, "shebang", rr.SHEBANG()), tr(Qr, "use_strict", {
+      md.exports.PARAMS_CONTAINS.push([md.exports.CLASS_REFERENCE, yd, bd]), md.contains = md.contains.concat([qd, hd, od, bd]), Hd(md, "shebang", dd.SHEBANG()), Hd(md, "use_strict", {
         className: "meta",
         relevance: 10,
-        Yx: /^\s*['"]use strict['"]/
+        ot: /^\s*['"]use strict['"]/
       });
-      return Qr.contains.find((rr => "func.def" === rr.label)).relevance = 0, Object.assign(Qr, {
+      return md.contains.find((dd => "func.def" === dd.label)).relevance = 0, Object.assign(md, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), Qr
+      }), md
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

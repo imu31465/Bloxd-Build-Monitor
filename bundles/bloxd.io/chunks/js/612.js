@@ -1,66 +1,66 @@
 export const id = 612;
 export const ids = [612];
 export const modules = {
-  53853: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => FS
+  53748: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => lO
     });
-    var Zr = Qr(53855),
-      Wr = Qr(53902),
-      ar = Qr(53908),
-      jr = Qr(72),
-      Ir = Qr(92),
-      fr = Qr(53928),
-      Er = Qr(53933),
-      pr = Qr(5577),
-      xr = Qr(53935),
-      mr = Qr(2057),
-      Nr = Qr(53943),
-      Ur = Qr(53957),
-      tr = Qr.n(Ur),
-      hr = Qr(53915),
-      zr = Qr(53919),
-      Yr = Qr(1444),
-      nr = Qr(38327),
-      er = Qr(1287),
-      Kr = Qr(3396),
-      yr = Qr(37701),
-      Br = Qr(1573),
-      Tr = Qr(688),
-      vr = Qr(1295),
-      Or = Qr(54016),
-      Lr = Qr(53864),
-      lr = Qr(53872),
-      Xr = Qr(2089),
-      Pr = Qr(2484),
-      Hr = Qr(34),
-      qr = Qr(1187);
-    const Rr = 1e4,
-      gr = 250,
-      Cr = 250;
-    var Mr = Qr(53892);
-    const Gr = 50,
-      kr = 100;
-    const Ar = 2e3,
-      Vr = Lr.P.define(),
-      ir = Lr.P.define(),
-      wr = Lr.P.define();
-    class cr extends lr.q {
-      constructor(rr, Sr, Qr) {
-        super(), this.colour = rr, this.playerName = Sr, this.showName = Qr
+    var Wd = md(53757),
+      Fd = md(53809),
+      Rd = md(53812),
+      Xd = md(66),
+      Kd = md(86),
+      hd = md(53827),
+      vd = md(53832),
+      Qd = md(5534),
+      td = md(53841),
+      od = md(2060),
+      Nd = md(53845),
+      qd = md(53856),
+      Hd = md.n(qd),
+      yd = md(53814),
+      bd = md(53821),
+      Td = md(1436),
+      pd = md(38404),
+      Yd = md(1300),
+      gd = md(3401),
+      wd = md(37819),
+      Ed = md(1566),
+      Jd = md(701),
+      Ud = md(1304),
+      xd = md(53911),
+      Bd = md(53759),
+      Sd = md(53768),
+      sd = md(2092),
+      ud = md(2497),
+      Vd = md(32),
+      Ad = md(1189);
+    const rd = 1e4,
+      Gd = 250,
+      nd = 250;
+    var Ld = md(53793);
+    const Pd = 50,
+      zd = 100;
+    const cd = 2e3,
+      jd = Bd.I.define(),
+      Dd = Bd.I.define(),
+      ed = Bd.I.define();
+    class Id extends Sd.o {
+      constructor(dd, Od, md) {
+        super(), this.colour = dd, this.playerName = Od, this.showName = md
       }
       toDOM() {
-        const rr = document.createElement("span");
-        rr.className = "cm-remote-cursor-wrapper", rr.style.borderLeftColor = this.colour;
-        const Sr = document.createElement("span");
-        if (Sr.className = "cm-remote-cursor", Sr.style.borderLeftColor = this.colour, rr.appendChild(Sr), this.showName) {
-          const Sr = document.createElement("span");
-          Sr.className = "cm-remote-cursor-name", Sr.style.backgroundColor = this.colour, Sr.textContent = this.playerName, rr.appendChild(Sr)
+        const dd = document.createElement("span");
+        dd.className = "cm-remote-cursor-wrapper", dd.style.borderLeftColor = this.colour;
+        const Od = document.createElement("span");
+        if (Od.className = "cm-remote-cursor", Od.style.borderLeftColor = this.colour, dd.appendChild(Od), this.showName) {
+          const Od = document.createElement("span");
+          Od.className = "cm-remote-cursor-name", Od.style.backgroundColor = this.colour, Od.textContent = this.playerName, dd.appendChild(Od)
         }
-        return rr
+        return dd
       }
-      eq(rr) {
-        return this.colour === rr.colour && this.playerName === rr.playerName && this.showName === rr.showName
+      eq(dd) {
+        return this.colour === dd.colour && this.playerName === dd.playerName && this.showName === dd.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,270 +70,270 @@ export const modules = {
       }
     }
 
-    function Fr(rr, Sr) {
-      const Qr = [],
-        Zr = [];
-      for (const [, jr] of rr) {
-        const rr = Sr - jr.lastMoved < Ar;
-        if (Qr.push({
-            pos: jr.head,
-            decoration: lr.c.widget({
-              widget: new cr(jr.colour, jr.playerName, rr),
+    function ld(dd, Od) {
+      const md = [],
+        Wd = [];
+      for (const [, Xd] of dd) {
+        const dd = Od - Xd.lastMoved < cd;
+        if (md.push({
+            pos: Xd.head,
+            decoration: Sd.d.widget({
+              widget: new Id(Xd.colour, Xd.playerName, dd),
               side: 1
             })
-          }), jr.anchor !== jr.head) {
-          const rr = Math.min(jr.anchor, jr.head),
-            Sr = Math.max(jr.anchor, jr.head);
-          Zr.push({
-            from: rr,
-            to: Sr,
-            decoration: lr.c.mark({
+          }), Xd.anchor !== Xd.head) {
+          const dd = Math.min(Xd.anchor, Xd.head),
+            Od = Math.max(Xd.anchor, Xd.head);
+          Wd.push({
+            from: dd,
+            to: Od,
+            decoration: Sd.d.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${jr.colour}33`
+                style: `background-color: ${Xd.colour}33`
               }
             })
           })
         }
       }
-      const Wr = new Lr.E,
-        ar = [];
-      for (const jr of Qr) ar.push({
+      const Fd = new Bd.z,
+        Rd = [];
+      for (const Xd of md) Rd.push({
         bias: 1,
-        deco: jr.decoration,
-        from: jr.pos,
-        to: jr.pos
+        deco: Xd.decoration,
+        from: Xd.pos,
+        to: Xd.pos
       });
-      for (const jr of Zr) ar.push({
+      for (const Xd of Wd) Rd.push({
         bias: 0,
-        deco: jr.decoration,
-        from: jr.from,
-        to: jr.to
+        deco: Xd.decoration,
+        from: Xd.from,
+        to: Xd.to
       });
-      ar.sort(((rr, Sr) => rr.from - Sr.from || rr.deco.startSide - Sr.deco.startSide || rr.bias - Sr.bias));
-      for (const jr of ar) Wr.add(jr.from, jr.to, jr.deco);
-      return Wr.finish()
+      Rd.sort(((dd, Od) => dd.from - Od.from || dd.deco.startSide - Od.deco.startSide || dd.bias - Od.bias));
+      for (const Xd of Rd) Fd.add(Xd.from, Xd.to, Xd.deco);
+      return Fd.finish()
     }
-    const or = Lr.T.define({
+    const Cd = Bd.M.define({
       create: () => ({
         cursors: new Map,
-        OZ: lr.c.none
+        aW: Sd.d.none
       }),
-      update(rr, Sr) {
-        let Qr = rr.cursors,
-          Zr = !1;
-        if (Sr.docChanged) {
-          const rr = new Map;
-          for (const [Zr, Wr] of Qr) rr.set(Zr, {
-            ...Wr,
-            anchor: Sr.changes.mapPos(Wr.anchor, 1),
-            head: Sr.changes.mapPos(Wr.head, 1)
+      update(dd, Od) {
+        let md = dd.cursors,
+          Wd = !1;
+        if (Od.docChanged) {
+          const dd = new Map;
+          for (const [Wd, Fd] of md) dd.set(Wd, {
+            ...Fd,
+            anchor: Od.changes.mapPos(Fd.anchor, 1),
+            head: Od.changes.mapPos(Fd.head, 1)
           });
-          Qr = rr, Zr = !0
+          md = dd, Wd = !0
         }
-        for (const Wr of Sr.effects)
-          if (Wr.is(Vr)) {
-            if (!Number.isInteger(Wr.value.anchor) || !Number.isInteger(Wr.value.head)) {
-              console.warn(`Code Editor: ignored player ${Wr.value.playerId}'s cursor at ${Wr.value.anchor}-${Wr.value.head}`);
+        for (const Fd of Od.effects)
+          if (Fd.is(jd)) {
+            if (!Number.isInteger(Fd.value.anchor) || !Number.isInteger(Fd.value.head)) {
+              console.warn(`Code Editor: ignored player ${Fd.value.playerId}'s cursor at ${Fd.value.anchor}-${Fd.value.head}`);
               continue
             }
-            const ar = Sr.state.doc.length,
-              jr = {
-                ...Wr.value,
-                anchor: Math.min(Wr.value.anchor, ar),
-                head: Math.min(Wr.value.head, ar)
+            const Rd = Od.state.doc.length,
+              Xd = {
+                ...Fd.value,
+                anchor: Math.min(Fd.value.anchor, Rd),
+                head: Math.min(Fd.value.head, Rd)
               };
-            Qr === rr.cursors && (Qr = new Map(Qr)), Qr.set(jr.playerId, jr), Zr = !0
-          } else Wr.is(ir) ? Qr.has(Wr.value) && (Qr === rr.cursors && (Qr = new Map(Qr)), Qr.delete(Wr.value), Zr = !0) : Wr.is(wr) && (Zr = !0);
-        return Zr ? {
-          cursors: Qr,
-          OZ: Fr(Qr, Date.now())
-        } : rr
+            md === dd.cursors && (md = new Map(md)), md.set(Xd.playerId, Xd), Wd = !0
+          } else Fd.is(Dd) ? md.has(Fd.value) && (md === dd.cursors && (md = new Map(md)), md.delete(Fd.value), Wd = !0) : Fd.is(ed) && (Wd = !0);
+        return Wd ? {
+          cursors: md,
+          aW: ld(md, Date.now())
+        } : dd
       },
-      provide: rr => lr.i.OZ.from(rr, (rr => rr.OZ))
+      provide: dd => Sd.h.aW.from(dd, (dd => dd.aW))
     });
-    const br = Lr.P.define(),
-      Jr = lr.c.mark({
+    const Zd = Bd.I.define(),
+      kd = Sd.d.mark({
         class: "CodeInsertFlash"
       }),
-      Dr = Lr.T.define({
-        create: () => lr.c.none,
-        update(rr, Sr) {
-          let Qr = rr.map(Sr.changes);
-          for (const Zr of Sr.effects) Zr.is(br) && (Qr = Zr.value ? lr.c.set(Jr.range(Zr.value.from, Zr.value.to)) : lr.c.none);
-          return Qr
+      fd = Bd.M.define({
+        create: () => Sd.d.none,
+        update(dd, Od) {
+          let md = dd.map(Od.changes);
+          for (const Wd of Od.effects) Wd.is(Zd) && (md = Wd.value ? Sd.d.set(kd.range(Wd.value.from, Wd.value.to)) : Sd.d.none);
+          return md
         },
-        provide: rr => lr.i.OZ.from(rr)
+        provide: dd => Sd.h.aW.from(dd)
       }),
-      dr = Lr.T.define({
+      Md = Bd.M.define({
         create: () => !1,
-        update: (rr, Sr) => rr || void 0 !== Sr.annotation(Lr.Y.userEvent) && !Sr.annotation(Lr.Y.remote)
+        update: (dd, Od) => dd || void 0 !== Od.annotation(Bd.Q.userEvent) && !Od.annotation(Bd.Q.remote)
       }),
-      sr = [Dr, dr];
+      dO = [fd, Md];
 
-    function ur(rr) {
-      return rr.field(dr)
+    function OO(dd) {
+      return dd.field(Md)
     }
-    const rS = 3e4;
+    const mO = 3e4;
 
-    function SS(rr, Sr) {
-      const Qr = (0, jr.useRef)(null);
-      (0, jr.useEffect)((() => {
-        var rr;
-        (null === (rr = Qr.current) || void 0 === rr ? void 0 : rr.path) !== Sr && (Qr.current = null)
-      }), [Sr]);
-      const Zr = rr => {
-        var Zr;
-        const Wr = Qr.current;
-        if (null === rr || void 0 === rr || !rr.dom.isConnected || !Wr || Wr.path !== Sr) return;
-        Qr.current = null;
+    function WO(dd, Od) {
+      const md = (0, Xd.useRef)(null);
+      (0, Xd.useEffect)((() => {
+        var dd;
+        (null === (dd = md.current) || void 0 === dd ? void 0 : dd.path) !== Od && (md.current = null)
+      }), [Od]);
+      const Wd = dd => {
+        var Wd;
+        const Fd = md.current;
+        if (null === dd || void 0 === dd || !dd.dom.isConnected || !Fd || Fd.path !== Od) return;
+        md.current = null;
         const {
-          sp: jr
-        } = Wr;
-        if (jr && null !== jr.text && performance.now() - jr.at < rS) {
-          const Sr = function(rr, Sr) {
-            if (rr === Sr) return null;
-            const Qr = Math.min(rr.length, Sr.length);
-            let Zr = 0;
-            for (; Zr < Qr && rr[Zr] === Sr[Zr];) Zr++;
-            let Wr = 0;
-            for (; Wr < Qr - Zr && rr[rr.length - 1 - Wr] === Sr[Sr.length - 1 - Wr];) Wr++;
+          kQ: Xd
+        } = Fd;
+        if (Xd && null !== Xd.text && performance.now() - Xd.at < mO) {
+          const Od = function(dd, Od) {
+            if (dd === Od) return null;
+            const md = Math.min(dd.length, Od.length);
+            let Wd = 0;
+            for (; Wd < md && dd[Wd] === Od[Wd];) Wd++;
+            let Fd = 0;
+            for (; Fd < md - Wd && dd[dd.length - 1 - Fd] === Od[Od.length - 1 - Fd];) Fd++;
             return {
-              from: Zr,
-              to: rr.length - Wr,
-              insert: Sr.slice(Zr, Sr.length - Wr)
+              from: Wd,
+              to: dd.length - Fd,
+              insert: Od.slice(Wd, Od.length - Fd)
             }
-          }(rr.state.doc.toString(), jr.text);
-          null !== Sr && rr.dispatch({
-            changes: Sr,
-            userEvent: jr.placed ? "input" : void 0
+          }(dd.state.doc.toString(), Xd.text);
+          null !== Od && dd.dispatch({
+            changes: Od,
+            userEvent: Xd.placed ? "input" : void 0
           })
         }
         const {
-          doc: Ir
-        } = rr.state, fr = Ir.line(Math.min(Math.max(Wr.line, 1), Ir.lines)), Er = fr.from + Math.min(null !== (Zr = Wr.column) && void 0 !== Zr ? Zr : 0, fr.length);
-        rr.dispatch({
+          doc: Kd
+        } = dd.state, hd = Kd.line(Math.min(Math.max(Fd.line, 1), Kd.lines)), vd = hd.from + Math.min(null !== (Wd = Fd.column) && void 0 !== Wd ? Wd : 0, hd.length);
+        dd.dispatch({
           selection: {
-            anchor: Er
+            anchor: vd
           },
-          effects: ar.b.scrollIntoView(Er, {
+          effects: Rd.b.scrollIntoView(vd, {
             y: "center"
           }),
-          userEvent: null !== jr && void 0 !== jr && jr.placed ? "select" : void 0
-        }), !1 !== (null === jr || void 0 === jr ? void 0 : jr.focused) && rr.focus()
+          userEvent: null !== Xd && void 0 !== Xd && Xd.placed ? "select" : void 0
+        }), !1 !== (null === Xd || void 0 === Xd ? void 0 : Xd.focused) && dd.focus()
       };
-      return (0, Br.c)("CodeEditorGoToLine", (Sr => {
-        Qr.current = Sr, Zr(rr.current)
-      })), (0, Br.c)("CodeEditorKeepEdits", (() => {
-        const Zr = rr.current;
-        if (null === Zr || !Zr.dom.isConnected || null === Sr) return;
+      return (0, Ed.f)("CodeEditorGoToLine", (Od => {
+        md.current = Od, Wd(dd.current)
+      })), (0, Ed.f)("CodeEditorKeepEdits", (() => {
+        const Wd = dd.current;
+        if (null === Wd || !Wd.dom.isConnected || null === Od) return;
         const {
-          doc: Wr,
-          selection: ar
-        } = Zr.state, {
-          head: jr
-        } = ar.main, Ir = Wr.lineAt(jr), fr = {
-          text: (0, Or.h)(Zr.state).length > 0 ? Wr.toString() : null,
+          doc: Fd,
+          selection: Rd
+        } = Wd.state, {
+          head: Xd
+        } = Rd.main, Kd = Fd.lineAt(Xd), hd = {
+          text: (0, xd.j)(Wd.state).length > 0 ? Fd.toString() : null,
           at: performance.now(),
-          focused: Zr.hasFocus,
-          placed: ur(Zr.state)
+          focused: Wd.hasFocus,
+          placed: OO(Wd.state)
         };
-        Qr.current = {
-          path: Sr,
-          line: Ir.number,
-          column: jr - Ir.from,
-          sp: fr
+        md.current = {
+          path: Od,
+          line: Kd.number,
+          column: Xd - Kd.from,
+          kQ: hd
         }
-      })), rr => {
-        var Wr;
-        const ar = Qr.current;
-        !1 === (null === ar || void 0 === ar || null === (Wr = ar.sp) || void 0 === Wr ? void 0 : Wr.focused) && ar.path === Sr || rr.focus(), Zr(rr)
+      })), dd => {
+        var Fd;
+        const Rd = md.current;
+        !1 === (null === Rd || void 0 === Rd || null === (Fd = Rd.kQ) || void 0 === Fd ? void 0 : Fd.focused) && Rd.path === Od || dd.focus(), Wd(dd)
       }
     }
-    var QS = Qr(5063),
-      ZS = Qr(1251);
+    var FO = md(4998),
+      RO = md(1238);
 
-    function WS(rr, Sr) {
+    function XO(dd, Od) {
       const {
-        t: Qr
-      } = (0, ZS.E)();
-      (0, Br.c)("CodeEditorInsertText", (Zr => {
+        t: md
+      } = (0, RO.G)();
+      (0, Ed.f)("CodeEditorInsertText", (Wd => {
         let {
-          text: Wr,
-          focus: ar
-        } = Zr;
-        const jr = rr.current,
-          Ir = null !== jr && void 0 !== jr && jr.dom.isConnected ? function(rr, Sr) {
-            if (!ur(rr)) return null;
+          text: Fd,
+          focus: Rd
+        } = Wd;
+        const Xd = dd.current,
+          Kd = null !== Xd && void 0 !== Xd && Xd.dom.isConnected ? function(dd, Od) {
+            if (!OO(dd)) return null;
             const {
-              from: Qr,
-              to: Zr
-            } = rr.selection.main, Wr = Qr + Sr.length;
+              from: md,
+              to: Wd
+            } = dd.selection.main, Fd = md + Od.length;
             return {
               changes: {
-                from: Qr,
-                to: Zr,
-                insert: Sr
+                from: md,
+                to: Wd,
+                insert: Od
               },
               selection: {
-                anchor: Wr
+                anchor: Fd
               },
-              effects: [lr.i.scrollIntoView(Wr, {
+              effects: [Sd.h.scrollIntoView(Fd, {
                 y: "center"
-              }), br.of({
-                from: Qr,
-                to: Wr
+              }), Zd.of({
+                from: md,
+                to: Fd
               })],
               userEvent: "input"
             }
-          }(jr.state, Wr) : null;
-        null !== jr && null !== Ir ? (jr.dispatch(Ir), ar && jr.focus(), setTimeout((() => {
-          jr.dom.isConnected && jr.dispatch({
-            effects: br.of(null)
+          }(Xd.state, Fd) : null;
+        null !== Xd && null !== Kd ? (Xd.dispatch(Kd), Rd && Xd.focus(), setTimeout((() => {
+          Xd.dom.isConnected && Xd.dispatch({
+            effects: Zd.of(null)
           })
-        }), 1500)) : (0, QS.b)(Wr).then((() => {
-          Sr({
-            message: Qr("codeEditorWorld:pickCopied", {
-              coords: Wr
+        }), 1500)) : (0, FO.e)(Fd).then((() => {
+          Od({
+            message: md("codeEditorWorld:pickCopied", {
+              coords: Fd
             }),
             type: "success"
           })
-        }), (rr => {
-          console.error("Pick could not copy the coordinates", rr), Sr({
-            message: Qr("codeEditorWorld:pickPlaceCursor", {
-              coords: Wr
+        }), (dd => {
+          console.error("Pick could not copy the coordinates", dd), Od({
+            message: md("codeEditorWorld:pickPlaceCursor", {
+              coords: Fd
             }),
             type: "warning"
           })
         }))
       }))
     }
-    var aS = Qr(53897);
-    const jS = "#e45649",
-      IS = "#383a42",
-      fS = "#696c77",
-      ES = "#986801",
-      pS = "#e5e5e6",
-      xS = "#fafafa",
-      mS = "#eaeaeb",
-      NS = "#526fff",
-      US = lr.i.theme({
+    var KO = md(53805);
+    const hO = "#e45649",
+      vO = "#383a42",
+      QO = "#696c77",
+      tO = "#986801",
+      oO = "#e5e5e6",
+      NO = "#fafafa",
+      qO = "#eaeaeb",
+      HO = "#526fff",
+      yO = Sd.h.theme({
         "&": {
-          color: IS,
-          backgroundColor: xS
+          color: vO,
+          backgroundColor: NO
         },
         ".cm-content": {
-          caretColor: NS
+          caretColor: HO
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: NS
+          borderLeftColor: HO
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: IS
+          color: vO
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -358,12 +358,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: xS,
-          color: fS,
+          backgroundColor: NO,
+          color: QO,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: pS
+          backgroundColor: oO
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -372,88 +372,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: mS
+          backgroundColor: qO
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: mS,
-          borderBottomColor: mS
+          borderTopColor: qO,
+          borderBottomColor: qO
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: pS,
-            color: IS
+            backgroundColor: oO,
+            color: vO
           }
         }
       }, {
         dark: !1
       }),
-      tS = Mr.b.define([{
-        tag: aS.m.keyword,
+      bO = Ld.e.define([{
+        tag: KO.k.keyword,
         color: "#a626a4"
       }, {
-        tag: [aS.m.name, aS.m.deleted, aS.m.character, aS.m.propertyName, aS.m.macroName],
-        color: jS
+        tag: [KO.k.name, KO.k.deleted, KO.k.character, KO.k.propertyName, KO.k.macroName],
+        color: hO
       }, {
-        tag: [aS.m.function(aS.m.variableName), aS.m.labelName],
+        tag: [KO.k.function(KO.k.variableName), KO.k.labelName],
         color: "#4078f2"
       }, {
-        tag: [aS.m.color, aS.m.constant(aS.m.name), aS.m.standard(aS.m.name)],
-        color: ES
+        tag: [KO.k.color, KO.k.constant(KO.k.name), KO.k.standard(KO.k.name)],
+        color: tO
       }, {
-        tag: [aS.m.definition(aS.m.name), aS.m.separator],
-        color: IS
+        tag: [KO.k.definition(KO.k.name), KO.k.separator],
+        color: vO
       }, {
-        tag: [aS.m.typeName, aS.m.className, aS.m.number, aS.m.changed, aS.m.annotation, aS.m.modifier, aS.m.self, aS.m.namespace],
+        tag: [KO.k.typeName, KO.k.className, KO.k.number, KO.k.changed, KO.k.annotation, KO.k.modifier, KO.k.self, KO.k.namespace],
         color: "#c18401"
       }, {
-        tag: [aS.m.operator, aS.m.operatorKeyword, aS.m.url, aS.m.escape, aS.m.regexp, aS.m.link, aS.m.special(aS.m.string)],
+        tag: [KO.k.operator, KO.k.operatorKeyword, KO.k.url, KO.k.escape, KO.k.regexp, KO.k.link, KO.k.special(KO.k.string)],
         color: "#0184bc"
       }, {
-        tag: [aS.m.meta, aS.m.comment],
-        color: fS
+        tag: [KO.k.meta, KO.k.comment],
+        color: QO
       }, {
-        tag: aS.m.strong,
+        tag: KO.k.strong,
         fontWeight: "bold"
       }, {
-        tag: aS.m.emphasis,
+        tag: KO.k.emphasis,
         fontStyle: "italic"
       }, {
-        tag: aS.m.strikethrough,
+        tag: KO.k.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: aS.m.link,
-        color: fS,
+        tag: KO.k.link,
+        color: QO,
         textDecoration: "underline"
       }, {
-        tag: aS.m.heading,
+        tag: KO.k.heading,
         fontWeight: "bold",
-        color: jS
+        color: hO
       }, {
-        tag: [aS.m.atom, aS.m.bool, aS.m.special(aS.m.variableName)],
-        color: ES
+        tag: [KO.k.atom, KO.k.bool, KO.k.special(KO.k.variableName)],
+        color: tO
       }, {
-        tag: [aS.m.processingInstruction, aS.m.string, aS.m.inserted],
+        tag: [KO.k.processingInstruction, KO.k.string, KO.k.inserted],
         color: "#50a14f"
       }, {
-        tag: aS.m.invalid,
+        tag: KO.k.invalid,
         color: "#000000"
       }]),
-      hS = [US, (0, Mr.qb)(tS)];
-    var zS = Qr(38374),
-      YS = Qr(54025);
-    const nS = ar.f.define(),
-      eS = ar.i.define({
+      TO = [yO, (0, Ld.lb)(bO)];
+    var pO = md(38452),
+      YO = md(53918);
+    const gO = Rd.g.define(),
+      wO = Rd.i.define({
         create: () => !1,
-        update(rr, Sr) {
-          for (const Qr of Sr.effects) Qr.is(nS) && (rr = Qr.value);
-          return rr
+        update(dd, Od) {
+          for (const md of Od.effects) md.is(gO) && (dd = md.value);
+          return dd
         }
       }),
-      KS = [{
+      aO = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -464,68 +464,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function yS(rr, Sr) {
-      return [eS, ar.m.fromClass(class {
-        constructor(rr) {
-          this.view = rr, this.onDown = rr => {
-            const Sr = rr.target instanceof Element && null !== rr.target.closest(".cm-tooltip");
-            0 !== rr.button || Sr || this.view.state.field(eS) || this.view.dispatch({
-              effects: nS.of(!0)
+    function EO(dd, Od) {
+      return [wO, Rd.l.fromClass(class {
+        constructor(dd) {
+          this.view = dd, this.onDown = dd => {
+            const Od = dd.target instanceof Element && null !== dd.target.closest(".cm-tooltip");
+            0 !== dd.button || Od || this.view.state.field(wO) || this.view.dispatch({
+              effects: gO.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(eS) && this.view.dispatch({
-              effects: nS.of(!1)
+            this.view.state.field(wO) && this.view.dispatch({
+              effects: gO.of(!1)
             })
-          }, rr.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, dd.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), ar.t.compute(["selection", eS], (Qr => function(rr, Sr, Qr) {
-        const Zr = rr.selection.main;
-        return Zr.empty || rr.field(eS) || rr.sliceDoc(Zr.from, Zr.to).trim().length < 2 ? null : {
-          pos: Zr.from,
+      }), Rd.r.compute(["selection", wO], (md => function(dd, Od, md) {
+        const Wd = dd.selection.main;
+        return Wd.empty || dd.field(wO) || dd.sliceDoc(Wd.from, Wd.to).trim().length < 2 ? null : {
+          pos: Wd.from,
           above: !0,
-          create: rr => {
-            const Zr = document.createElement("div");
-            Zr.className = "CodeSelectionActions", Zr.setAttribute("role", "toolbar"), Zr.setAttribute("aria-label", "AI Helper: picked code");
+          create: dd => {
+            const Wd = document.createElement("div");
+            Wd.className = "CodeSelectionActions", Wd.setAttribute("role", "toolbar"), Wd.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: Wr,
-                label: ar
+                action: Fd,
+                label: Rd
               }
-              of KS) {
-              if (!Qr && "explain" !== Wr) continue;
-              const jr = document.createElement("button");
-              jr.type = "button", jr.textContent = ar, "change" !== Wr && (jr.title = YS.e, jr.dataset.asksAi = "true"), jr.addEventListener("mousedown", (rr => {
-                rr.preventDefault()
-              })), jr.addEventListener("click", (() => {
-                const Qr = rr.state.selection.main;
-                if (Qr.empty) return;
-                const Zr = {
-                  action: Wr,
-                  path: Sr,
-                  fromLine: rr.state.doc.lineAt(Qr.from).number,
-                  toLine: rr.state.doc.lineAt(Qr.to > Qr.from && rr.state.doc.lineAt(Qr.to).from === Qr.to ? Qr.to - 1 : Qr.to).number,
-                  text: rr.state.sliceDoc(Qr.from, Qr.to)
+              of aO) {
+              if (!md && "explain" !== Fd) continue;
+              const Xd = document.createElement("button");
+              Xd.type = "button", Xd.textContent = Rd, "change" !== Fd && (Xd.title = YO.d, Xd.dataset.asksAi = "true"), Xd.addEventListener("mousedown", (dd => {
+                dd.preventDefault()
+              })), Xd.addEventListener("click", (() => {
+                const md = dd.state.selection.main;
+                if (md.empty) return;
+                const Wd = {
+                  action: Fd,
+                  path: Od,
+                  fromLine: dd.state.doc.lineAt(md.from).number,
+                  toLine: dd.state.doc.lineAt(md.to > md.from && dd.state.doc.lineAt(md.to).from === md.to ? md.to - 1 : md.to).number,
+                  text: dd.state.sliceDoc(md.from, md.to)
                 };
-                Hr.i.Jp("WorldCodeAiSelection", Zr), rr.dispatch({
+                Vd.j.lQ("WorldCodeAiSelection", Wd), dd.dispatch({
                   selection: {
-                    anchor: Qr.to
+                    anchor: md.to
                   }
                 })
-              })), Zr.appendChild(jr)
+              })), Wd.appendChild(Xd)
             }
             return {
-              dom: Zr
+              dom: Wd
             }
           }
         }
-      }(Qr, rr, Sr)))]
+      }(md, dd, Od)))]
     }
-    var BS = Qr(1338);
-    const TS = new Set(["(", "{", "[", "<"]),
-      vS = new Set([")", "}", "]", ">"]),
-      OS = {
+    var JO = md(1341);
+    const UO = new Set(["(", "{", "[", "<"]),
+      xO = new Set([")", "}", "]", ">"]),
+      BO = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -533,100 +533,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function LS(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function SO(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function Qr(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Zr = [];
-        for (const Wr of rr) {
-          let rr;
-          rr = "punctuation" === Wr.kind ? OS.text : "parameterName" === Wr.kind ? OS.parameterName : Sr, Zr.push({
-            str: Wr.text,
+      function md(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Wd = [];
+        for (const Fd of dd) {
+          let dd;
+          dd = "punctuation" === Fd.kind ? BO.text : "parameterName" === Fd.kind ? BO.parameterName : Od, Wd.push({
+            str: Fd.text,
             style: {
-              color: rr,
-              opacity: Qr ? .5 : void 0
+              color: dd,
+              opacity: md ? .5 : void 0
             }
           })
         }
-        return Zr
+        return Wd
       }
-      const Zr = [];
-      if (Zr.push(...Qr(rr.prefixDisplayParts, OS.text)), rr.parameters.length > 0) {
-        Zr.push("\n");
-        for (let Wr = 0; Wr < rr.parameters.length; Wr++) {
-          const ar = rr.parameters[Wr];
-          Zr.push("\t"), Zr.push(...Qr(ar.displayParts, OS.parameter, null !== Sr && Wr !== Sr)), Zr.push("\n")
+      const Wd = [];
+      if (Wd.push(...md(dd.prefixDisplayParts, BO.text)), dd.parameters.length > 0) {
+        Wd.push("\n");
+        for (let Fd = 0; Fd < dd.parameters.length; Fd++) {
+          const Rd = dd.parameters[Fd];
+          Wd.push("\t"), Wd.push(...md(Rd.displayParts, BO.parameter, null !== Od && Fd !== Od)), Wd.push("\n")
         }
       }
-      return Zr.push(...Qr(rr.suffixDisplayParts, OS.suffix)), rr.documentation && (Zr.push("\n\n"), Zr.push(...Qr(rr.documentation, OS.docs))), Zr
+      return Wd.push(...md(dd.suffixDisplayParts, BO.suffix)), dd.documentation && (Wd.push("\n\n"), Wd.push(...md(dd.documentation, BO.docs))), Wd
     }
-    var lS = function(rr) {
-      return rr[rr.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", rr[rr.DuplicateIdentifier = 2300] = "DuplicateIdentifier", rr
-    }(lS || {});
-    const XS = new Set([lS.DuplicateIdentifier]),
-      PS = new Set([lS.VariableDefinedElsewhere]),
-      HS = new Set([]),
-      qS = "/index.js";
+    var sO = function(dd) {
+      return dd[dd.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", dd[dd.DuplicateIdentifier = 2300] = "DuplicateIdentifier", dd
+    }(sO || {});
+    const uO = new Set([sO.DuplicateIdentifier]),
+      VO = new Set([sO.VariableDefinedElsewhere]),
+      iO = new Set([]),
+      AO = "/index.js";
 
-    function RS(rr) {
-      return "/" + rr
-    }
-
-    function gS(rr, Sr, Qr) {
-      rr.getSourceFile(Sr) && rr.deleteFile(Sr), rr.createFile(Sr, Qr)
+    function rO(dd) {
+      return "/" + dd
     }
 
-    function CS(rr) {
-      return !!rr && ((0, Kr.o)(rr) || (0, Kr.n)(rr))
+    function GO(dd, Od, md) {
+      dd.getSourceFile(Od) && dd.deleteFile(Od), dd.createFile(Od, md)
     }
 
-    function MS(rr, Sr, Qr) {
+    function nO(dd) {
+      return !!dd && ((0, gd.m)(dd) || (0, gd.k)(dd))
+    }
+
+    function LO(dd, Od, md) {
       return () => {
-        let Zr = [...Sr.languageService.getSemanticDiagnostics(Qr), ...Sr.languageService.getSyntacticDiagnostics(Qr)];
-        return Zr = Zr.filter((rr => !(0, Tr.L)(rr.start) && !(0, Tr.L)(rr.length) && !XS.has(rr.code))), rr || (Zr = Zr.filter((rr => !PS.has(rr.code)))), Zr.map((rr => ({
-          from: rr.start,
-          to: rr.start + rr.length,
-          message: "string" === typeof rr.messageText ? rr.messageText : rr.messageText.messageText,
-          severity: HS.has(rr.code) ? "warning" : "error"
+        let Wd = [...Od.languageService.getSemanticDiagnostics(md), ...Od.languageService.getSyntacticDiagnostics(md)];
+        return Wd = Wd.filter((dd => !(0, Jd.O)(dd.start) && !(0, Jd.O)(dd.length) && !uO.has(dd.code))), dd || (Wd = Wd.filter((dd => !VO.has(dd.code)))), Wd.map((dd => ({
+          from: dd.start,
+          to: dd.start + dd.length,
+          message: "string" === typeof dd.messageText ? dd.messageText : dd.messageText.messageText,
+          severity: iO.has(dd.code) ? "warning" : "error"
         })))
       }
     }
 
-    function GS(rr, Sr) {
-      return Qr => {
-        var Zr, Wr;
-        const ar = rr.languageService.getCompletionsAtPosition(Sr, Qr.pos, {});
-        if (!ar) return {
-          from: Qr.pos,
+    function PO(dd, Od) {
+      return md => {
+        var Wd, Fd;
+        const Rd = dd.languageService.getCompletionsAtPosition(Od, md.pos, {});
+        if (!Rd) return {
+          from: md.pos,
           options: []
         };
-        let jr = null !== (Zr = null === (Wr = ar.optionalReplacementSpan) || void 0 === Wr ? void 0 : Wr.start) && void 0 !== Zr ? Zr : Qr.pos;
-        if (!ar.optionalReplacementSpan) {
-          const rr = Qr.state.doc.sliceString(0, Qr.pos);
-          for (; jr > 0 && /[\w$]/.test(rr[jr - 1]);) jr--
+        let Xd = null !== (Wd = null === (Fd = Rd.optionalReplacementSpan) || void 0 === Fd ? void 0 : Fd.start) && void 0 !== Wd ? Wd : md.pos;
+        if (!Rd.optionalReplacementSpan) {
+          const dd = md.state.doc.sliceString(0, md.pos);
+          for (; Xd > 0 && /[\w$]/.test(dd[Xd - 1]);) Xd--
         }
-        return ar.entries = ar.entries.filter((rr => rr.kind !== tr().ScriptElementKind.warning)), {
-          from: jr,
-          options: ar.entries.map((Zr => {
-            var Wr, ar, Ir, fr;
-            const Er = rr.languageService.getCompletionEntryDetails(Sr, Qr.pos, Zr.name, {}, Zr.source, {}, Zr.data),
-              pr = null !== (Wr = null === (ar = Zr.replacementSpan) || void 0 === ar ? void 0 : ar.start) && void 0 !== Wr ? Wr : jr,
-              xr = Zr.replacementSpan ? Zr.replacementSpan.start + Zr.replacementSpan.length : Qr.pos,
-              mr = null !== (Ir = Zr.insertText) && void 0 !== Ir ? Ir : Zr.name;
+        return Rd.entries = Rd.entries.filter((dd => dd.kind !== Hd().ScriptElementKind.warning)), {
+          from: Xd,
+          options: Rd.entries.map((Wd => {
+            var Fd, Rd, Kd, hd;
+            const vd = dd.languageService.getCompletionEntryDetails(Od, md.pos, Wd.name, {}, Wd.source, {}, Wd.data),
+              Qd = null !== (Fd = null === (Rd = Wd.replacementSpan) || void 0 === Rd ? void 0 : Rd.start) && void 0 !== Fd ? Fd : Xd,
+              td = Wd.replacementSpan ? Wd.replacementSpan.start + Wd.replacementSpan.length : md.pos,
+              od = null !== (Kd = Wd.insertText) && void 0 !== Kd ? Kd : Wd.name;
             return {
-              label: Zr.name,
-              detail: null === Er || void 0 === Er ? void 0 : Er.displayParts.map((rr => rr.text)).join(""),
-              info: null === Er || void 0 === Er || null === (fr = Er.documentation) || void 0 === fr ? void 0 : fr.map((rr => rr.text)).join(""),
-              apply: rr => {
-                rr.dispatch({
+              label: Wd.name,
+              detail: null === vd || void 0 === vd ? void 0 : vd.displayParts.map((dd => dd.text)).join(""),
+              info: null === vd || void 0 === vd || null === (hd = vd.documentation) || void 0 === hd ? void 0 : hd.map((dd => dd.text)).join(""),
+              apply: dd => {
+                dd.dispatch({
                   changes: {
-                    from: pr,
-                    to: xr,
-                    insert: mr
+                    from: Qd,
+                    to: td,
+                    insert: od
                   },
                   selection: {
-                    anchor: pr + mr.length
+                    anchor: Qd + od.length
                   }
                 })
               }
@@ -636,114 +636,114 @@ export const modules = {
       }
     }
 
-    function kS(rr) {
-      return Sr => {
-        const Qr = document.createElement("div");
-        Qr.className = "CodeEditorTooltip";
-        let Zr = !1;
+    function zO(dd) {
+      return Od => {
+        const md = document.createElement("div");
+        md.className = "CodeEditorTooltip";
+        let Wd = !1;
         return queueMicrotask((() => {
-          Zr || (Ir.render((0, BS.jsx)(mr.c, {
-            text: rr
-          }), Qr), Sr.requestMeasure())
+          Wd || (Kd.render((0, JO.jsx)(od.d, {
+            text: dd
+          }), md), Od.requestMeasure())
         })), {
-          dom: Qr,
+          dom: md,
           destroy() {
-            Zr = !0, queueMicrotask((() => {
-              Ir.unmountComponentAtNode(Qr)
+            Wd = !0, queueMicrotask((() => {
+              Kd.unmountComponentAtNode(md)
             }))
           }
         }
       }
     }
 
-    function AS(rr, Sr, Qr) {
-      return Zr => {
-        var Wr;
-        if (!Sr) return [];
-        const ar = null === (Wr = Zr.selection.yh[0]) || void 0 === Wr ? void 0 : Wr.head;
-        if (void 0 === ar) return [];
-        const jr = rr.languageService.getSignatureHelpItems(Qr, ar, {});
-        if (!jr || !jr.items.length) return [];
-        const Ir = jr.applicableSpan.start - jr.items[0].prefixDisplayParts.map((rr => rr.text)).join("").length,
-          fr = jr.applicableSpan.start,
-          Er = Zr.doc.lineAt(ar),
-          pr = Er.from,
-          xr = Math.min(Er.to, ar);
-        let mr, Nr;
-        return Ir < pr ? (mr = pr, Nr = xr) : (mr = Ir, Nr = fr), [{
-          pos: mr,
-          end: Nr,
+    function cO(dd, Od, md) {
+      return Wd => {
+        var Fd;
+        if (!Od) return [];
+        const Rd = null === (Fd = Wd.selection.By[0]) || void 0 === Fd ? void 0 : Fd.head;
+        if (void 0 === Rd) return [];
+        const Xd = dd.languageService.getSignatureHelpItems(md, Rd, {});
+        if (!Xd || !Xd.items.length) return [];
+        const Kd = Xd.applicableSpan.start - Xd.items[0].prefixDisplayParts.map((dd => dd.text)).join("").length,
+          hd = Xd.applicableSpan.start,
+          vd = Wd.doc.lineAt(Rd),
+          Qd = vd.from,
+          td = Math.min(vd.to, Rd);
+        let od, Nd;
+        return Kd < Qd ? (od = Qd, Nd = td) : (od = Kd, Nd = hd), [{
+          pos: od,
+          end: Nd,
           above: !1,
-          create: kS(LS(jr.items[0], jr.argumentIndex))
+          create: zO(SO(Xd.items[0], Xd.argumentIndex))
         }]
       }
     }
 
-    function VS(rr, Sr) {
-      return (Qr, Zr, Wr) => {
-        const ar = rr.languageService.getQuickInfoAtPosition(Sr, Zr);
-        if (!ar) return [];
-        const jr = ar.textSpan.start,
-          Ir = ar.textSpan.start + ar.textSpan.length;
-        if (Zr < jr || Zr >= Ir) return [];
-        if (ar.kind === tr().ScriptElementKind.memberFunctionElement || ar.kind === tr().ScriptElementKind.variableElement && "declare" === ar.kindModifiers) {
-          const rr = ar.displayParts.findIndex((rr => "space" === rr.kind)); - 1 !== rr && (ar.displayParts = ar.displayParts.slice(rr));
-          const Sr = {
+    function jO(dd, Od) {
+      return (md, Wd, Fd) => {
+        const Rd = dd.languageService.getQuickInfoAtPosition(Od, Wd);
+        if (!Rd) return [];
+        const Xd = Rd.textSpan.start,
+          Kd = Rd.textSpan.start + Rd.textSpan.length;
+        if (Wd < Xd || Wd >= Kd) return [];
+        if (Rd.kind === Hd().ScriptElementKind.memberFunctionElement || Rd.kind === Hd().ScriptElementKind.variableElement && "declare" === Rd.kindModifiers) {
+          const dd = Rd.displayParts.findIndex((dd => "space" === dd.kind)); - 1 !== dd && (Rd.displayParts = Rd.displayParts.slice(dd));
+          const Od = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            Qr = ar.displayParts.findIndex((rr => "punctuation" === rr.kind && "(" === rr.text)); - 1 !== Qr && (Sr.prefixDisplayParts = ar.displayParts.slice(0, Qr + 1), ar.displayParts = ar.displayParts.slice(Qr + 1));
-          const Zr = ar.displayParts.findLastIndex((rr => "punctuation" === rr.kind && ")" === rr.text)); - 1 !== Zr && (Sr.suffixDisplayParts = ar.displayParts.slice(Zr), ar.displayParts = ar.displayParts.slice(0, Zr));
-          let Wr = 0,
-            fr = [];
-          for (const jr of ar.displayParts)
-            if (TS.has(jr.text) ? Wr++ : vS.has(jr.text) && Wr--, "lineBreak" !== jr.kind) {
-              if ("space" === jr.kind) {
-                if (0 === fr.length) continue;
-                fr.push({
+            md = Rd.displayParts.findIndex((dd => "punctuation" === dd.kind && "(" === dd.text)); - 1 !== md && (Od.prefixDisplayParts = Rd.displayParts.slice(0, md + 1), Rd.displayParts = Rd.displayParts.slice(md + 1));
+          const Wd = Rd.displayParts.findLastIndex((dd => "punctuation" === dd.kind && ")" === dd.text)); - 1 !== Wd && (Od.suffixDisplayParts = Rd.displayParts.slice(Wd), Rd.displayParts = Rd.displayParts.slice(0, Wd));
+          let Fd = 0,
+            hd = [];
+          for (const Xd of Rd.displayParts)
+            if (UO.has(Xd.text) ? Fd++ : xO.has(Xd.text) && Fd--, "lineBreak" !== Xd.kind) {
+              if ("space" === Xd.kind) {
+                if (0 === hd.length) continue;
+                hd.push({
                   kind: "space",
                   text: " "
                 })
-              } else fr.push(jr);
-              0 === Wr && "," === jr.text && (Sr.parameters.push({
-                displayParts: fr
-              }), fr = [])
-            } return fr.length > 0 && Sr.parameters.push({
-            displayParts: fr
-          }), Sr.documentation = ar.documentation, [{
-            pos: jr,
-            end: Ir,
+              } else hd.push(Xd);
+              0 === Fd && "," === Xd.text && (Od.parameters.push({
+                displayParts: hd
+              }), hd = [])
+            } return hd.length > 0 && Od.parameters.push({
+            displayParts: hd
+          }), Od.documentation = Rd.documentation, [{
+            pos: Xd,
+            end: Kd,
             above: !0,
-            create: kS(LS(Sr))
+            create: zO(SO(Od))
           }]
         }
-        const fr = [];
-        for (const rr of ar.displayParts) fr.push({
-          str: rr.text,
+        const hd = [];
+        for (const dd of Rd.displayParts) hd.push({
+          str: dd.text,
           style: {
-            color: OS.text
+            color: BO.text
           }
         });
-        if (ar.documentation) {
-          fr.push("\n\n");
-          for (const rr of ar.documentation) fr.push({
-            str: rr.text,
+        if (Rd.documentation) {
+          hd.push("\n\n");
+          for (const dd of Rd.documentation) hd.push({
+            str: dd.text,
             style: {
-              color: OS.docs
+              color: BO.docs
             }
           })
         }
         return [{
-          pos: jr,
-          end: Ir,
+          pos: Xd,
+          end: Kd,
           above: !0,
-          create: kS(fr)
+          create: zO(hd)
         }]
       }
     }
-    const iS = {
+    const DO = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -762,209 +762,209 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: tr().SemicolonPreference.Insert
+      semicolons: Hd().SemicolonPreference.Insert
     };
-    const wS = ar.f.define(),
-      cS = {
+    const eO = Rd.g.define(),
+      IO = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function FS(rr) {
+    function lO(dd) {
       let {
-        isLobbyCode: Sr,
-        code: Qr,
-        onChange: Ir,
-        canEditCode: mr,
-        setTemporaryMessage: Ur,
-        close: Tr,
-        showTooltips: cr,
-        lightMode: Fr,
-        collabState: br,
-        onRemoteDocChange: Jr,
-        files: Dr,
-        activePath: dr,
-        pluginName: ur,
-        pluginFile: rS,
-        pluginSource: QS,
-        setActiveDocReplacer: ZS,
-        showAiHints: aS,
-        canAiChangeCode: jS = mr
-      } = rr;
-      const [IS, fS] = (0, jr.useState)(null), ES = null === br || void 0 === br ? void 0 : br.version, pS = null === br || void 0 === br ? void 0 : br.clientID, xS = (0, jr.useRef)({
-        isLobbyCode: Sr,
-        files: Dr,
-        code: Qr,
-        activePath: dr
-      }), mS = (0, jr.useRef)(Jr);
-      mS.current = Jr;
-      const NS = (0, jr.useRef)(null),
-        US = (0, jr.useRef)(br);
-      US.current = br;
-      const tS = (0, jr.useRef)(null),
-        YS = (0, jr.useRef)(null),
-        nS = (0, jr.useRef)(null),
-        eS = (0, jr.useRef)(Tr);
-      eS.current = Tr;
-      const KS = (0, jr.useRef)(Qr);
-      KS.current = Qr;
-      const TS = (0, jr.useRef)(QS);
-      TS.current = QS;
-      const vS = function(rr, Sr, Qr, Zr) {
-        return Qr ? `/plugin-preview/${Qr}/${null!==Zr&&void 0!==Zr?Zr:"index.ts"}` : rr ? RS(null !== Sr && void 0 !== Sr ? Sr : er.j) : qS
-      }(Sr, dr, ur, rS);
-      (0, jr.useEffect)((() => {
+        isLobbyCode: Od,
+        code: md,
+        onChange: Kd,
+        canEditCode: od,
+        setTemporaryMessage: qd,
+        close: Jd,
+        showTooltips: Id,
+        lightMode: ld,
+        collabState: Zd,
+        onRemoteDocChange: kd,
+        files: fd,
+        activePath: Md,
+        pluginName: OO,
+        pluginFile: mO,
+        pluginSource: FO,
+        setActiveDocReplacer: RO,
+        showAiHints: KO,
+        canAiChangeCode: hO = od
+      } = dd;
+      const [vO, QO] = (0, Xd.useState)(null), tO = null === Zd || void 0 === Zd ? void 0 : Zd.version, oO = null === Zd || void 0 === Zd ? void 0 : Zd.clientID, NO = (0, Xd.useRef)({
+        isLobbyCode: Od,
+        files: fd,
+        code: md,
+        activePath: Md
+      }), qO = (0, Xd.useRef)(kd);
+      qO.current = kd;
+      const HO = (0, Xd.useRef)(null),
+        yO = (0, Xd.useRef)(Zd);
+      yO.current = Zd;
+      const bO = (0, Xd.useRef)(null),
+        YO = (0, Xd.useRef)(null),
+        gO = (0, Xd.useRef)(null),
+        wO = (0, Xd.useRef)(Jd);
+      wO.current = Jd;
+      const aO = (0, Xd.useRef)(md);
+      aO.current = md;
+      const UO = (0, Xd.useRef)(FO);
+      UO.current = FO;
+      const xO = function(dd, Od, md, Wd) {
+        return md ? `/plugin-preview/${md}/${null!==Wd&&void 0!==Wd?Wd:"index.ts"}` : dd ? rO(null !== Od && void 0 !== Od ? Od : Yd.g) : AO
+      }(Od, Md, OO, mO);
+      (0, Xd.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: rr,
-            files: Sr,
-            code: Qr,
-            activePath: Zr
-          } = xS.current, Wr = {
+            isLobbyCode: dd,
+            files: Od,
+            code: md,
+            activePath: Wd
+          } = NO.current, Fd = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: tr().ModuleKind.ESNext,
-            moduleResolution: tr().ModuleResolutionKind.Bundler,
-            target: tr().ScriptTarget.ES2015,
+            module: Hd().ModuleKind.ESNext,
+            moduleResolution: Hd().ModuleResolutionKind.Bundler,
+            target: Hd().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(nr.e).map((rr => [rr.specifier, [rr.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(pd.f).map((dd => [dd.specifier, [dd.typesVfsPath]])))
             }
-          }, ar = new Map, jr = [];
-          if (rr) {
-            const rr = null !== Sr && void 0 !== Sr ? Sr : {
-              [er.j]: Qr || "\n"
+          }, Rd = new Map, Xd = [];
+          if (dd) {
+            const dd = null !== Od && void 0 !== Od ? Od : {
+              [Yd.g]: md || "\n"
             };
-            for (const [Sr, Qr] of Object.entries(rr)) {
-              const rr = RS(Sr);
-              ar.set(rr, Qr || "\n"), jr.push(rr)
+            for (const [Od, md] of Object.entries(dd)) {
+              const dd = rO(Od);
+              Rd.set(dd, md || "\n"), Xd.push(dd)
             }
-            const Wr = RS(null !== Zr && void 0 !== Zr ? Zr : er.j);
-            ar.has(Wr) ? ar.set(Wr, Qr || "\n") : (ar.set(Wr, Qr || "\n"), jr.push(Wr)), ar.set("/node_modules/@bloxd/index.d.ts", pr.default), jr.push("/node_modules/@bloxd/index.d.ts");
-            for (const Sr of Object.values(nr.e)) {
-              ar.set(Sr.typesVfsPath, Sr.types), jr.push(Sr.typesVfsPath);
-              for (const [rr, Qr] of Object.entries(Sr.files)) {
-                const Zr = `/plugin-preview/${Sr.name}/${rr}`;
-                ar.set(Zr, Qr || "\n"), jr.push(Zr)
+            const Fd = rO(null !== Wd && void 0 !== Wd ? Wd : Yd.g);
+            Rd.has(Fd) ? Rd.set(Fd, md || "\n") : (Rd.set(Fd, md || "\n"), Xd.push(Fd)), Rd.set("/node_modules/@bloxd/index.d.ts", Qd.default), Xd.push("/node_modules/@bloxd/index.d.ts");
+            for (const Od of Object.values(pd.f)) {
+              Rd.set(Od.typesVfsPath, Od.types), Xd.push(Od.typesVfsPath);
+              for (const [dd, md] of Object.entries(Od.files)) {
+                const Wd = `/plugin-preview/${Od.name}/${dd}`;
+                Rd.set(Wd, md || "\n"), Xd.push(Wd)
               }
             }
-          } else ar.set(qS, Qr || "\n"), jr.push(qS);
-          ar.set("/globals.d.ts", rr ? Er.d : fr.b), ar.set("/lib.d.ts", xr.c), jr.push("/globals.d.ts", "/lib.d.ts");
-          const Ir = Nr.e(ar),
-            mr = Nr.h(Ir, jr, tr(), Wr);
-          fS({
-            Kx: mr,
-            fsMap: ar
+          } else Rd.set(AO, md || "\n"), Xd.push(AO);
+          Rd.set("/globals.d.ts", dd ? vd.c : hd.b), Rd.set("/lib.d.ts", td.d), Xd.push("/globals.d.ts", "/lib.d.ts");
+          const Kd = Nd.e(Rd),
+            od = Nd.h(Kd, Xd, Hd(), Fd);
+          QO({
+            Ht: od,
+            fsMap: Rd
           })
         }()
-      }), []), (0, jr.useEffect)((() => {
-        var rr, Zr;
-        if (!IS || !Sr) return;
+      }), []), (0, Xd.useEffect)((() => {
+        var dd, Wd;
+        if (!vO || !Od) return;
         const {
-          Kx: Wr,
-          fsMap: ar
-        } = IS;
-        if (function(rr, Sr, Qr) {
-            const Zr = new Set;
-            for (const [Wr, ar] of Object.entries(Qr)) {
-              const Qr = RS(Wr);
-              Zr.add(Qr);
-              const jr = ar || "\n";
-              Sr.get(Qr) !== jr && (Sr.set(Qr, jr), gS(rr, Qr, jr))
+          Ht: Fd,
+          fsMap: Rd
+        } = vO;
+        if (function(dd, Od, md) {
+            const Wd = new Set;
+            for (const [Fd, Rd] of Object.entries(md)) {
+              const md = rO(Fd);
+              Wd.add(md);
+              const Xd = Rd || "\n";
+              Od.get(md) !== Xd && (Od.set(md, Xd), GO(dd, md, Xd))
             }
-            for (const Wr of [...Sr.keys()]) "/globals.d.ts" === Wr || "/lib.d.ts" === Wr || Wr.startsWith("/node_modules/") || Wr.startsWith("/plugin-preview/") || Zr.has(Wr) || (Sr.delete(Wr), rr.getSourceFile(Wr) && rr.deleteFile(Wr))
-          }(Wr, ar, null !== Dr && void 0 !== Dr ? Dr : {
-            [er.j]: Qr || "\n"
-          }), ur) return void gS(Wr, vS, QS || "\n");
-        const jr = null !== (rr = null === (Zr = NS.current) || void 0 === Zr ? void 0 : Zr.state.doc.toString()) && void 0 !== rr ? rr : Qr;
-        gS(Wr, vS, jr || "\n")
-      }), [Dr, dr, IS, ur, QS, vS, Qr, Sr]), (0, jr.useEffect)((() => {
-        if (!IS) return;
+            for (const Fd of [...Od.keys()]) "/globals.d.ts" === Fd || "/lib.d.ts" === Fd || Fd.startsWith("/node_modules/") || Fd.startsWith("/plugin-preview/") || Wd.has(Fd) || (Od.delete(Fd), dd.getSourceFile(Fd) && dd.deleteFile(Fd))
+          }(Fd, Rd, null !== fd && void 0 !== fd ? fd : {
+            [Yd.g]: md || "\n"
+          }), OO) return void GO(Fd, xO, FO || "\n");
+        const Xd = null !== (dd = null === (Wd = HO.current) || void 0 === Wd ? void 0 : Wd.state.doc.toString()) && void 0 !== dd ? dd : md;
+        GO(Fd, xO, Xd || "\n")
+      }), [fd, Md, vO, OO, FO, xO, md, Od]), (0, Xd.useEffect)((() => {
+        if (!vO) return;
         const {
-          Kx: rr
-        } = IS;
-        gS(rr, vS, (ur ? QS : Qr) || "\n")
-      }), [Qr, ur, QS, vS, IS]), (0, jr.useEffect)((() => () => {
-        YS.current && (YS.current(), YS.current = null)
-      }), []), (0, jr.useEffect)((() => (ZS(((rr, Sr) => {
-        if (ur) return !1;
-        const Qr = NS.current,
-          Zr = US.current,
-          Wr = Zr ? (0, Kr.u)(Zr.docKey) : null;
-        if (!Qr || !Zr || tS.current !== Zr.clientID || rr !== Wr) return !1;
-        const ar = Qr.state.doc.toString();
-        return ar !== Sr && Qr.dispatch({
+          Ht: dd
+        } = vO;
+        GO(dd, xO, (OO ? FO : md) || "\n")
+      }), [md, OO, FO, xO, vO]), (0, Xd.useEffect)((() => () => {
+        YO.current && (YO.current(), YO.current = null)
+      }), []), (0, Xd.useEffect)((() => (RO(((dd, Od) => {
+        if (OO) return !1;
+        const md = HO.current,
+          Wd = yO.current,
+          Fd = Wd ? (0, gd.t)(Wd.docKey) : null;
+        if (!md || !Wd || bO.current !== Wd.clientID || dd !== Fd) return !1;
+        const Rd = md.state.doc.toString();
+        return Rd !== Od && md.dispatch({
           changes: {
             from: 0,
-            to: ar.length,
-            insert: Sr
+            to: Rd.length,
+            insert: Od
           }
         }), !0
       })), () => {
-        NS.current = null, tS.current = null, ZS(null)
-      })), [ZS, ur]);
-      const OS = Sr ? ur ? null : null !== dr && void 0 !== dr ? dr : er.j : zS.d,
-        LS = SS(NS, OS);
-      WS(NS, Ur), (0, Br.c)("FormatCode", (() => {
-        if (!IS || !NS.current || ur) return;
+        HO.current = null, bO.current = null, RO(null)
+      })), [RO, OO]);
+      const BO = Od ? OO ? null : null !== Md && void 0 !== Md ? Md : Yd.g : pO.d,
+        SO = WO(HO, BO);
+      XO(HO, qd), (0, Ed.f)("FormatCode", (() => {
+        if (!vO || !HO.current || OO) return;
         const {
-          Kx: rr,
-          fsMap: Qr
-        } = IS, Zr = rr.getSourceFile(vS).getFullText();
-        let Wr = 0;
-        if (Sr && Dr)
-          for (const [Sr, Ir] of Object.entries(Dr)) Sr !== (null !== dr && void 0 !== dr ? dr : er.j) && (Wr += Ir.length);
-        const ar = function(rr, Sr, Qr, Zr, Wr) {
-          const ar = rr.languageService.getFormattingEditsForDocument(Zr, iS);
-          if (!ar.length) return vr.e.error("Code is already formatted.");
-          ar.sort(((rr, Sr) => Sr.span.start - rr.span.start));
-          let jr = rr.getSourceFile(Zr).getFullText();
-          for (const Ir of ar) jr = jr.slice(0, Ir.span.start) + Ir.rf + jr.slice(Ir.span.start + Ir.span.length);
-          return jr !== (Qr ? (0, yr.k)(jr, Wr) : (0, yr.h)(jr)) ? vr.e.error("Formatting the code will go beyond the character limit.") : vr.e.value(jr)
-        }(rr, 0, Sr, vS, Wr);
-        if (ar.isError()) return void Ur({
-          message: ar.asError().message,
+          Ht: dd,
+          fsMap: md
+        } = vO, Wd = dd.getSourceFile(xO).getFullText();
+        let Fd = 0;
+        if (Od && fd)
+          for (const [Od, Kd] of Object.entries(fd)) Od !== (null !== Md && void 0 !== Md ? Md : Yd.g) && (Fd += Kd.length);
+        const Rd = function(dd, Od, md, Wd, Fd) {
+          const Rd = dd.languageService.getFormattingEditsForDocument(Wd, DO);
+          if (!Rd.length) return Ud.e.error("Code is already formatted.");
+          Rd.sort(((dd, Od) => Od.span.start - dd.span.start));
+          let Xd = dd.getSourceFile(Wd).getFullText();
+          for (const Kd of Rd) Xd = Xd.slice(0, Kd.span.start) + Kd.dh + Xd.slice(Kd.span.start + Kd.span.length);
+          return Xd !== (md ? (0, wd.o)(Xd, Fd) : (0, wd.k)(Xd)) ? Ud.e.error("Formatting the code will go beyond the character limit.") : Ud.e.value(Xd)
+        }(dd, 0, Od, xO, Fd);
+        if (Rd.isError()) return void qd({
+          message: Rd.asError().message,
           type: "warning"
         });
-        const jr = ar.getValue();
-        jr && (NS.current.dispatch({
+        const Xd = Rd.getValue();
+        Xd && (HO.current.dispatch({
           changes: {
             from: 0,
-            to: Zr.length,
-            insert: jr
+            to: Wd.length,
+            insert: Xd
           },
           selection: {
-            anchor: jr.length
+            anchor: Xd.length
           }
-        }), gS(rr, vS, jr), Ir(jr))
+        }), GO(dd, xO, Xd), Kd(Xd))
       }));
-      const lS = (0, jr.useMemo)((() => {
-        if (!IS) return [];
+      const sO = (0, Xd.useMemo)((() => {
+        if (!vO) return [];
         const {
-          Kx: rr,
-          fsMap: Qr
-        } = IS;
-        ! function(rr, Sr, Qr, Zr) {
-          if (rr.getSourceFile(Qr)) return;
-          const Wr = Zr || "\n";
-          Sr.set(Qr, Wr), rr.createFile(Qr, Wr)
-        }(rr, Qr, vS, (ur ? TS.current : KS.current) || "\n");
-        const jr = Sr && CS(ur ? null !== rS && void 0 !== rS ? rS : "index.ts" : dr),
-          Ir = [(0, Wr.d)({
+          Ht: dd,
+          fsMap: md
+        } = vO;
+        ! function(dd, Od, md, Wd) {
+          if (dd.getSourceFile(md)) return;
+          const Fd = Wd || "\n";
+          Od.set(md, Fd), dd.createFile(md, Fd)
+        }(dd, md, xO, (OO ? UO.current : aO.current) || "\n");
+        const Xd = Od && nO(OO ? null !== mO && void 0 !== mO ? mO : "index.ts" : Md),
+          Kd = [(0, Fd.e)({
             jsx: !1,
-            typescript: jr
-          }), ar.d.highest(ar.b.domEventHandlers({
-            keydown: rr => "Escape" === rr.key ? (eS.current(), rr.stopPropagation(), !0) : (rr.stopPropagation(), !1)
-          })), (0, Zr.c)({
-            override: [GS(rr, vS)]
-          }), lr.m.fromClass(class {
-            constructor(rr) {
-              this.view = rr, this.timeout = null, this.scheduleParse()
+            typescript: Xd
+          }), Rd.e.highest(Rd.b.domEventHandlers({
+            keydown: dd => "Escape" === dd.key ? (wO.current(), dd.stopPropagation(), !0) : (dd.stopPropagation(), !1)
+          })), (0, Wd.c)({
+            override: [PO(dd, xO)]
+          }), Sd.l.fromClass(class {
+            constructor(dd) {
+              this.view = dd, this.timeout = null, this.scheduleParse()
             }
-            update(rr) {
-              (rr.docChanged || rr.viewportChanged) && this.scheduleParse()
+            update(dd) {
+              (dd.docChanged || dd.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -972,215 +972,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const rr = this.view.viewport.to;
-                (0, Mr.ub)(this.view.state, rr) || (0, Mr.P)(this.view, rr, Gr) || this.scheduleParse()
-              }), kr))
+                const dd = this.view.viewport.to;
+                (0, Ld.ob)(this.view.state, dd) || (0, Ld.S)(this.view, dd, Pd) || this.scheduleParse()
+              }), zd))
             }
-          }), ...sr, ar.b.lineWrapping, ar.i.define({
-            create: AS(rr, cr, vS),
-            update(Sr, Qr) {
-              const Zr = Qr.effects.some((rr => rr.is(wS)));
-              return Qr.docChanged || Qr.selection || Zr ? (gS(rr, vS, Qr.state.doc.toString() || " "), AS(rr, cr, vS)(Qr.state)) : Sr
+          }), ...dO, Rd.b.lineWrapping, Rd.i.define({
+            create: cO(dd, Id, xO),
+            update(Od, md) {
+              const Wd = md.effects.some((dd => dd.is(eO)));
+              return md.docChanged || md.selection || Wd ? (GO(dd, xO, md.state.doc.toString() || " "), cO(dd, Id, xO)(md.state)) : Od
             },
-            provide: rr => ar.t.computeN([rr], (Sr => Sr.field(rr)))
-          }), (0, ar.p)(VS(rr, vS)), (0, zr.c)(MS(Sr, rr, vS)), ar.m.fromClass(class {
-            constructor(rr) {
-              this.view = rr, this.searchPanel = null
+            provide: dd => Rd.r.computeN([dd], (Od => Od.field(dd)))
+          }), (0, Rd.p)(jO(dd, xO)), (0, bd.h)(LO(Od, dd, xO)), Rd.l.fromClass(class {
+            constructor(dd) {
+              this.view = dd, this.searchPanel = null
             }
-            update(rr) {
-              const Sr = rr.view.dom.querySelector(".cm-search");
-              if (Sr !== this.searchPanel) {
-                if (this.searchPanel = Sr, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (rr => {
-                  "Escape" === rr.key && (0, hr.b)(this.view), rr.stopPropagation()
+            update(dd) {
+              const Od = dd.view.dom.querySelector(".cm-search");
+              if (Od !== this.searchPanel) {
+                if (this.searchPanel = Od, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (dd => {
+                  "Escape" === dd.key && (0, yd.d)(this.view), dd.stopPropagation()
                 }))
               }
             }
           })];
-        aS && !ur && Ir.push(yS(Sr ? null !== dr && void 0 !== dr ? dr : er.j : zS.d, jS));
-        const fr = US.current;
-        if (fr && !ur) {
-          Ir.push(... function(rr, Sr, Qr, Zr, Wr) {
-            let ar = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const jr = (0, Kr.u)(Qr),
-              Ir = lr.m.fromClass(class {
-                constructor(rr) {
-                  this.view = rr, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = Hr.i.subscribe("codeCollab", (rr => {
-                    rr.docKey === jr && rr.type === Kr.g.Updates && (rr.updates ? this.applyUpdates(rr.updates) : this.pull())
+        KO && !OO && Kd.push(EO(Od ? null !== Md && void 0 !== Md ? Md : Yd.g : pO.d, hO));
+        const hd = yO.current;
+        if (hd && !OO) {
+          Kd.push(... function(dd, Od, md, Wd, Fd) {
+            let Rd = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const Xd = (0, gd.t)(md),
+              Kd = Sd.l.fromClass(class {
+                constructor(dd) {
+                  this.view = dd, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = Vd.j.subscribe("codeCollab", (dd => {
+                    dd.docKey === Xd && dd.type === gd.e.Updates && (dd.updates ? this.applyUpdates(dd.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(rr) {
-                  const Sr = JSON.parse(rr).map((rr => ({
-                    clientID: rr.clientID,
-                    changes: Lr.ChangeSet.fromJSON(rr.changes)
+                applyUpdates(dd) {
+                  const Od = JSON.parse(dd).map((dd => ({
+                    clientID: dd.clientID,
+                    changes: Bd.ChangeSet.fromJSON(dd.changes)
                   })));
-                  Sr.length > 0 && (this.view.dispatch((0, Or.f)(this.view.state, Sr)), Wr && Wr(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  Od.length > 0 && (this.view.dispatch((0, xd.f)(this.view.state, Od)), Fd && Fd(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(rr) {
-                  ar && (rr.docChanged && this.push(), this.sendCursor())
+                update(dd) {
+                  Rd && (dd.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const rr = (0, Or.h)(this.view.state);
-                  if (this.pushing || !rr.length) return;
-                  const Sr = Date.now() - this.lastPushTime;
-                  if (Sr < Cr) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const dd = (0, xd.j)(this.view.state);
+                  if (this.pushing || !dd.length) return;
+                  const Od = Date.now() - this.lastPushTime;
+                  if (Od < nd) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), Cr - Sr)));
+                  }), nd - Od)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), Rr);
-                  const Qr = (0, Or.e)(this.view.state),
-                    Wr = rr.map((rr => ({
-                      clientID: rr.clientID,
-                      changes: rr.changes.toJSON()
+                  }), rd);
+                  const md = (0, xd.c)(this.view.state),
+                    Fd = dd.map((dd => ({
+                      clientID: dd.clientID,
+                      changes: dd.changes.toJSON()
                     }))),
-                    ar = JSON.stringify(Wr);
-                  ar.length <= Kr.h ? Xr.gameBridge.send("sendCodeCollab", {
-                    GQ: Kr.c.Push,
-                    kQ: jr,
-                    AQ: Qr,
-                    wQ: ar
-                  }) : (0, qr.postJsonWithMetricsCookiesAndJsonResponse)(`${Zr.gsUrl}/code/collab-push`, Pr.s["collab-push"].toBuffer({
-                    gameNameWithVariation: Zr.gameNameWithVariation,
-                    lobbyName: Zr.lobbyName,
-                    docKey: jr,
-                    version: Qr,
-                    updates: ar
+                    Rd = JSON.stringify(Fd);
+                  Rd.length <= gd.h ? sd.gameBridge.send("sendCodeCollab", {
+                    Vm: gd.c.Push,
+                    im: Xd,
+                    Am: md,
+                    nm: Rd
+                  }) : (0, Ad.postJsonWithMetricsCookiesAndJsonResponse)(`${Wd.gsUrl}/code/collab-push`, ud.o["collab-push"].toBuffer({
+                    gameNameWithVariation: Wd.gameNameWithVariation,
+                    lobbyName: Wd.lobbyName,
+                    docKey: Xd,
+                    version: md,
+                    updates: Rd
                   }), {
                     retries: 0
-                  }).catch((rr => {
-                    console.error("[CodeCollab] HTTP push failed", rr)
+                  }).catch((dd => {
+                    console.error("[CodeCollab] HTTP push failed", dd)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const rr = (0, Or.e)(this.view.state);
-                  (0, qr.postJsonWithMetricsCookiesAndJsonResponse)(`${Zr.gsUrl}/code/collab-pull`, Pr.s["collab-pull"].toBuffer({
-                    gameNameWithVariation: Zr.gameNameWithVariation,
-                    lobbyName: Zr.lobbyName,
-                    docKey: jr,
-                    fromVersion: rr
+                  const dd = (0, xd.c)(this.view.state);
+                  (0, Ad.postJsonWithMetricsCookiesAndJsonResponse)(`${Wd.gsUrl}/code/collab-pull`, ud.o["collab-pull"].toBuffer({
+                    gameNameWithVariation: Wd.gameNameWithVariation,
+                    lobbyName: Wd.lobbyName,
+                    docKey: Xd,
+                    fromVersion: dd
                   }), {
                     retries: 1
-                  }).then((rr => {
-                    this.destroyed || (rr.fullDoc ? Hr.i.Jp("codeCollabRejoin", {
-                      docKey: jr,
-                      doc: rr.fullDoc,
-                      version: rr.version
-                    }) : this.applyUpdates(rr.updates))
-                  })).catch((rr => {
-                    console.error("[CodeCollab] Pull failed", rr)
+                  }).then((dd => {
+                    this.destroyed || (dd.fullDoc ? Vd.j.lQ("codeCollabRejoin", {
+                      docKey: Xd,
+                      doc: dd.fullDoc,
+                      version: dd.version
+                    }) : this.applyUpdates(dd.updates))
+                  })).catch((dd => {
+                    console.error("[CodeCollab] Pull failed", dd)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const rr = Date.now();
-                  if (rr - this.lastCursorSent < gr) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const dd = Date.now();
+                  if (dd - this.lastCursorSent < Gd) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), gr)));
-                  this.lastCursorSent = rr;
-                  const Sr = this.view.state.selection.main;
-                  Xr.gameBridge.send("sendCodeCollab", {
-                    GQ: Kr.c.Cursor,
-                    kQ: jr,
-                    bQ: Sr.anchor,
-                    JQ: Sr.head
+                  }), Gd)));
+                  this.lastCursorSent = dd;
+                  const Od = this.view.state.selection.main;
+                  sd.gameBridge.send("sendCodeCollab", {
+                    Vm: gd.c.Cursor,
+                    im: Xd,
+                    jm: Od.anchor,
+                    Dm: Od.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, Hr.i.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, Vd.j.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, Or.c)({
-              startVersion: rr,
-              clientID: Sr
-            }), Ir]
-          }(ES, pS, fr.docKey, fr.httpConfig, (rr => {
-            var Sr;
-            null === (Sr = mS.current) || void 0 === Sr || Sr.call(mS, rr)
-          }), mr));
-          const rr = function(rr, Sr) {
-            const Qr = (0, Kr.u)(rr);
+            return [(0, xd.b)({
+              startVersion: dd,
+              clientID: Od
+            }), Kd]
+          }(tO, oO, hd.docKey, hd.httpConfig, (dd => {
+            var Od;
+            null === (Od = qO.current) || void 0 === Od || Od.call(qO, dd)
+          }), od));
+          const dd = function(dd, Od) {
+            const md = (0, gd.t)(dd);
             return {
-              extensions: [or],
-              connect(rr) {
-                if (Sr) {
-                  const Qr = Sr.map((rr => Vr.of({
-                    playerId: rr.playerId,
-                    playerName: rr.playerName,
-                    colour: rr.colour,
-                    anchor: rr.anchor,
-                    head: rr.head,
+              extensions: [Cd],
+              connect(dd) {
+                if (Od) {
+                  const md = Od.map((dd => jd.of({
+                    playerId: dd.playerId,
+                    playerName: dd.playerName,
+                    colour: dd.colour,
+                    anchor: dd.anchor,
+                    head: dd.head,
                     lastMoved: Date.now()
                   })));
-                  Qr.length > 0 && rr.dispatch({
-                    effects: Qr
+                  md.length > 0 && dd.dispatch({
+                    effects: md
                   })
                 }
-                const Zr = Hr.i.subscribe("codeCollab", (Sr => {
-                    if (Sr.docKey === Qr)
-                      if (Sr.type === Kr.g.RemoteCursor) rr.dispatch({
-                        effects: Vr.of({
-                          playerId: Sr.playerId,
-                          playerName: Sr.playerName,
-                          colour: Sr.colour,
-                          anchor: Sr.anchor,
-                          head: Sr.head,
+                const Wd = Vd.j.subscribe("codeCollab", (Od => {
+                    if (Od.docKey === md)
+                      if (Od.type === gd.e.RemoteCursor) dd.dispatch({
+                        effects: jd.of({
+                          playerId: Od.playerId,
+                          playerName: Od.playerName,
+                          colour: Od.colour,
+                          anchor: Od.anchor,
+                          head: Od.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (Sr.type === Kr.g.Presence) {
-                      const Qr = JSON.parse(Sr.peers),
-                        Zr = new Set(Qr.map((rr => rr.playerId))),
-                        Wr = rr.state.field(or),
-                        ar = [];
-                      for (const [rr] of Wr.cursors) Zr.has(rr) || ar.push(ir.of(rr));
-                      ar.length > 0 && rr.dispatch({
-                        effects: ar
+                      else if (Od.type === gd.e.Presence) {
+                      const md = JSON.parse(Od.peers),
+                        Wd = new Set(md.map((dd => dd.playerId))),
+                        Fd = dd.state.field(Cd),
+                        Rd = [];
+                      for (const [dd] of Fd.cursors) Wd.has(dd) || Rd.push(Dd.of(dd));
+                      Rd.length > 0 && dd.dispatch({
+                        effects: Rd
                       })
                     }
                   })),
-                  Wr = setInterval((() => {
-                    rr.dom.isConnected ? rr.dispatch({
-                      effects: wr.of(Date.now())
-                    }) : clearInterval(Wr)
-                  }), Ar);
+                  Fd = setInterval((() => {
+                    dd.dom.isConnected ? dd.dispatch({
+                      effects: ed.of(Date.now())
+                    }) : clearInterval(Fd)
+                  }), cd);
                 return () => {
-                  Hr.i.unsubscribe(Zr), clearInterval(Wr)
+                  Vd.j.unsubscribe(Wd), clearInterval(Fd)
                 }
               }
             }
-          }(fr.docKey, fr.existingCursors);
-          Ir.push(...rr.extensions), nS.current = rr.connect
-        } else nS.current = null;
-        return Ir
-      }), [Sr, IS, cr, ES, pS, vS, dr, ur, rS, mr, aS, jS]);
-      if (!IS || !br && !ur) return (0, BS.jsx)("div", {
+          }(hd.docKey, hd.existingCursors);
+          Kd.push(...dd.extensions), gO.current = dd.connect
+        } else gO.current = null;
+        return Kd
+      }), [Od, vO, Id, tO, oO, xO, Md, OO, mO, od, KO, hO]);
+      if (!vO || !Zd && !OO) return (0, JO.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, BS.jsx)(Yr.c, {})
+        children: (0, JO.jsx)(Td.c, {})
       });
-      const XS = ur ? `plugin-${ur}-${null!==rS&&void 0!==rS?rS:"index.ts"}` : br ? `collab-${br.clientID}` : `local-${Sr}`;
-      return (0, BS.jsx)(ar.o, {
-        value: ur ? null !== QS && void 0 !== QS ? QS : "" : Qr,
-        onChange: Ir,
-        extensions: lS,
+      const uO = OO ? `plugin-${OO}-${null!==mO&&void 0!==mO?mO:"index.ts"}` : Zd ? `collab-${Zd.clientID}` : `local-${Od}`;
+      return (0, JO.jsx)(Rd.n, {
+        value: OO ? null !== FO && void 0 !== FO ? FO : "" : md,
+        onChange: Kd,
+        extensions: sO,
         className: "CodeEditorContent",
-        theme: Fr ? hS : "dark",
-        editable: mr && !ur,
-        basicSetup: cS,
-        onCreateEditor: rr => {
-          var Sr;
-          NS.current = rr, tS.current = null !== (Sr = null === br || void 0 === br ? void 0 : br.clientID) && void 0 !== Sr ? Sr : null, LS(rr), YS.current && YS.current(), nS.current && (YS.current = nS.current(rr))
+        theme: ld ? TO : "dark",
+        editable: od && !OO,
+        basicSetup: IO,
+        onCreateEditor: dd => {
+          var Od;
+          HO.current = dd, bO.current = null !== (Od = null === Zd || void 0 === Zd ? void 0 : Zd.clientID) && void 0 !== Od ? Od : null, SO(dd), YO.current && YO.current(), gO.current && (YO.current = gO.current(dd))
         }
-      }, XS)
+      }, uO)
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

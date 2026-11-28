@@ -1,247 +1,247 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  38154: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => hr,
-      d: () => zr,
-      h: () => mr,
-      l: () => xr
+  38243: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => yd,
+      h: () => bd,
+      i: () => od,
+      k: () => td
     });
-    var Zr = Qr(35448),
-      Wr = Qr(3425),
-      ar = Qr(3429),
-      jr = Qr(9818),
-      Ir = Qr(1573),
-      fr = Qr(72),
-      Er = Qr(92),
-      pr = Qr(1338);
+    var Wd = md(35535),
+      Fd = md(3428),
+      Rd = md(3432),
+      Xd = md(9850),
+      Kd = md(1566),
+      hd = md(66),
+      vd = md(86),
+      Qd = md(1341);
 
-    function xr() {
-      var rr;
-      return (0, Ir.g)(Wr.e, (0, Wr.w)()), (0, pr.jsx)(pr.Fragment, {
-        children: null === (rr = (0, Wr.w)()) || void 0 === rr ? void 0 : rr.content
+    function td() {
+      var dd;
+      return (0, Kd.i)(Fd.d, (0, Fd.n)()), (0, Qd.jsx)(Qd.Fragment, {
+        children: null === (dd = (0, Fd.n)()) || void 0 === dd ? void 0 : dd.content
       })
     }
 
-    function mr(rr) {
-      var Sr;
+    function od(dd) {
+      var Od;
       let {
-        show: Qr
-      } = rr;
-      (0, Ir.g)(Wr.e, (0, Wr.w)());
-      const Er = null === (Sr = (0, Wr.w)()) || void 0 === Sr ? void 0 : Sr.menu;
-      return (0, fr.useEffect)((() => {
-        var rr;
-        Qr || (null === Er || void 0 === Er || null === (rr = Er.onClose) || void 0 === rr || rr.call(Er), (0, ar.o)())
-      }), [Qr, Er]), (0, fr.useEffect)((() => Qr ? (0, jr.f)(ar.v, ar.e) : void 0), [Qr]), (0, pr.jsx)(Zr.c, {
-        showing: Qr,
+        show: md
+      } = dd;
+      (0, Kd.i)(Fd.d, (0, Fd.n)());
+      const vd = null === (Od = (0, Fd.n)()) || void 0 === Od ? void 0 : Od.menu;
+      return (0, hd.useEffect)((() => {
+        var dd;
+        md || (null === vd || void 0 === vd || null === (dd = vd.onClose) || void 0 === dd || dd.call(vd), (0, Rd.q)())
+      }), [md, vd]), (0, hd.useEffect)((() => md ? (0, Xd.d)(Rd.y, Rd.h) : void 0), [md]), (0, Qd.jsx)(Wd.b, {
+        showing: md,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Er || void 0 === Er ? void 0 : Er.content
+        children: null === vd || void 0 === vd ? void 0 : vd.content
       })
     }
-    const Nr = new Map,
-      Ur = new Set;
+    const Nd = new Map,
+      qd = new Set;
 
-    function tr(rr, Sr) {
-      Sr ? Nr.set(rr, Sr) : Nr.delete(rr);
-      for (const Qr of Ur) Qr()
+    function Hd(dd, Od) {
+      Od ? Nd.set(dd, Od) : Nd.delete(dd);
+      for (const md of qd) md()
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        placement: Sr = "bottom"
-      } = rr;
-      const Qr = (0, fr.useRef)(null);
-      return (0, fr.useLayoutEffect)((() => {
-        const rr = Qr.current;
-        return tr(Sr, rr), () => {
-          Nr.get(Sr) === rr && tr(Sr, null)
+        placement: Od = "bottom"
+      } = dd;
+      const md = (0, hd.useRef)(null);
+      return (0, hd.useLayoutEffect)((() => {
+        const dd = md.current;
+        return Hd(Od, dd), () => {
+          Nd.get(Od) === dd && Hd(Od, null)
         }
-      }), [Sr]), (0, pr.jsx)("div", {
-        ref: Qr,
-        id: `clientGameHud-${Sr}`,
+      }), [Od]), (0, Qd.jsx)("div", {
+        ref: md,
+        id: `clientGameHud-${Od}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function zr(rr) {
+    function bd(dd) {
       let {
-        children: Sr,
-        placement: Qr = "bottom"
-      } = rr;
-      const [Zr, Wr] = (0, fr.useState)((() => {
-        var rr;
-        return null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null
+        children: Od,
+        placement: md = "bottom"
+      } = dd;
+      const [Wd, Fd] = (0, hd.useState)((() => {
+        var dd;
+        return null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null
       }));
-      return (0, fr.useEffect)((() => {
-        const rr = () => {
-          var rr;
-          Wr(null !== (rr = Nr.get(Qr)) && void 0 !== rr ? rr : null)
+      return (0, hd.useEffect)((() => {
+        const dd = () => {
+          var dd;
+          Fd(null !== (dd = Nd.get(md)) && void 0 !== dd ? dd : null)
         };
-        return Ur.add(rr), rr(), () => {
-          Ur.delete(rr)
+        return qd.add(dd), dd(), () => {
+          qd.delete(dd)
         }
-      }), [Qr]), Zr ? (0, Er.createPortal)(Sr, Zr) : null
+      }), [md]), Wd ? (0, vd.createPortal)(Od, Wd) : null
     }
   },
-  35448: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => ar
+  35535: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd
     });
-    var Zr = Qr(5301),
-      Wr = Qr(5308);
+    var Wd = md(5197),
+      Fd = md(5206);
 
-    function ar(rr) {
+    function Rd(dd) {
       let {
-        children: Sr,
-        showing: Qr,
-        globallyUniqueKey: ar,
-        alwaysMountChildren: jr = !1,
-        doGameplayStartStopOnShow: Ir = !0,
-        keepsMovement: fr = !1
-      } = rr;
-      return (0, Wr.b)(!0, Qr, ar, fr), (0, Zr.e)(Ir, Qr), Qr || jr ? Sr : null
+        children: Od,
+        showing: md,
+        globallyUniqueKey: Rd,
+        alwaysMountChildren: Xd = !1,
+        doGameplayStartStopOnShow: Kd = !0,
+        keepsMovement: hd = !1
+      } = dd;
+      return (0, Fd.e)(!0, md, Rd, hd), (0, Wd.b)(Kd, md), md || Xd ? Od : null
     }
   },
-  9818: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar,
-      f: () => Wr
+  9850: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      d: () => Fd
     });
-    let Zr = null;
-    const Wr = function(rr) {
-        const Sr = {
-          cycle: rr,
+    let Wd = null;
+    const Fd = function(dd) {
+        const Od = {
+          cycle: dd,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Zr = Sr, () => {
-          Zr === Sr && (Zr = null)
+        return Wd = Od, () => {
+          Wd === Od && (Wd = null)
         }
       },
-      ar = () => {
-        var rr;
-        return null !== (rr = Zr) && void 0 !== rr && rr.canCycle() ? Zr.cycle : null
+      Rd = () => {
+        var dd;
+        return null !== (dd = Wd) && void 0 !== dd && dd.canCycle() ? Wd.cycle : null
       }
   },
-  54288: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      Smp2OnboardingUi: () => tr
+  54177: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      Smp2OnboardingUi: () => Hd
     });
-    var Zr = Qr(72),
-      Wr = Qr(1155),
-      ar = Qr.n(Wr),
-      jr = Qr(40876),
-      Ir = Qr(34),
-      fr = Qr(38154),
-      Er = Qr(3039),
-      pr = Qr(2075),
-      xr = Qr(3640),
-      mr = Qr(26),
-      Nr = Qr(40873),
-      Ur = Qr(1338);
+    var Wd = md(66),
+      Fd = md(1155),
+      Rd = md.n(Fd),
+      Xd = md(40894),
+      Kd = md(32),
+      hd = md(38243),
+      vd = md(3039),
+      Qd = md(2079),
+      td = md(3645),
+      od = md(29),
+      Nd = md(40887),
+      qd = md(1341);
 
-    function tr(rr) {
+    function Hd(dd) {
       let {
-        store: Sr
-      } = rr;
-      const Qr = function(rr) {
-          const [Sr, Qr] = (0, Zr.useState)((() => rr.get()));
-          return (0, Zr.useEffect)((() => {
-            const Sr = Ir.i.subscribe(Nr.c, (rr => {
-              Qr(rr)
+        store: Od
+      } = dd;
+      const md = function(dd) {
+          const [Od, md] = (0, Wd.useState)((() => dd.get()));
+          return (0, Wd.useEffect)((() => {
+            const Od = Kd.j.subscribe(Nd.b, (dd => {
+              md(dd)
             }));
-            return Qr(rr.get()), () => {
-              Ir.i.unsubscribe(Sr)
+            return md(dd.get()), () => {
+              Kd.j.unsubscribe(Od)
             }
-          }), [rr]), Sr
-        }(Sr),
-        Wr = (0, xr.b)(),
+          }), [dd]), Od
+        }(Od),
+        Fd = (0, td.d)(),
         {
-          openInGameMenuName: ar,
-          openEverythingMenuName: jr
-        } = (0, mr.n)(["openInGameMenuName", "openEverythingMenuName"]),
-        tr = !Wr && null === ar && null === jr;
-      (0, Zr.useEffect)((() => {
-        Sr.setShowing(tr)
-      }), [Sr, tr]);
-      const zr = Boolean(Qr.path);
-      return (0, Zr.useEffect)((() => {
-        if (zr) return (0, Er.f)()
-      }), [zr]), tr ? (0, Ur.jsxs)(Ur.Fragment, {
-        children: [Qr.path && (0, Ur.jsx)(fr.d, {
+          openInGameMenuName: Rd,
+          openEverythingMenuName: Xd
+        } = (0, od.p)(["openInGameMenuName", "openEverythingMenuName"]),
+        Hd = !Fd && null === Rd && null === Xd;
+      (0, Wd.useEffect)((() => {
+        Od.setShowing(Hd)
+      }), [Od, Hd]);
+      const bd = Boolean(md.path);
+      return (0, Wd.useEffect)((() => {
+        if (bd) return (0, vd.f)()
+      }), [bd]), Hd ? (0, qd.jsxs)(qd.Fragment, {
+        children: [md.path && (0, qd.jsx)(hd.h, {
           placement: "topRight",
-          children: (0, Ur.jsx)(hr, {
-            path: Qr.path
+          children: (0, qd.jsx)(yd, {
+            path: md.path
           })
-        }), Qr.reward && (0, Ur.jsxs)("div", {
+        }), md.reward && (0, qd.jsxs)("div", {
           className: "Smp2RewardCard",
           role: "status",
           style: {
-            "--smp2-reward-show-ms": `${Nr.e}ms`
+            "--smp2-reward-show-ms": `${Nd.c}ms`
           },
-          children: [(0, Ur.jsx)("span", {
+          children: [(0, qd.jsx)("span", {
             className: "Smp2RewardBurst",
             "aria-hidden": "true"
-          }), (0, Ur.jsx)("div", {
+          }), (0, qd.jsx)("div", {
             className: "Smp2RewardIcon",
-            children: (0, Ur.jsx)(pr.d, {
-              itemName: Qr.reward.icon,
+            children: (0, qd.jsx)(Qd.c, {
+              itemName: md.reward.icon,
               amount: 1
             })
-          }), (0, Ur.jsxs)("div", {
+          }), (0, qd.jsxs)("div", {
             className: "Smp2RewardText",
-            children: [(0, Ur.jsx)("strong", {
-              children: Qr.reward.title
-            }), (0, Ur.jsx)("span", {
-              children: Qr.reward.text
+            children: [(0, qd.jsx)("strong", {
+              children: md.reward.title
+            }), (0, qd.jsx)("span", {
+              children: md.reward.text
             })]
           })]
-        }, Qr.reward.id)]
+        }, md.reward.id)]
       }) : null
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        path: Sr
-      } = rr;
-      const Qr = Sr.steps[Sr.step],
-        Zr = (0, jr.n)(Qr);
-      return (0, Ur.jsxs)("div", {
+        path: Od
+      } = dd;
+      const md = Od.steps[Od.step],
+        Wd = (0, Xd.j)(md);
+      return (0, qd.jsxs)("div", {
         className: "Smp2PathCard",
-        children: [(0, Ur.jsx)("span", {
+        children: [(0, qd.jsx)("span", {
           className: "Smp2PathTitle",
-          children: Sr.title
-        }), (0, Ur.jsx)("div", {
+          children: Od.title
+        }), (0, qd.jsx)("div", {
           className: "Smp2PathSegments",
           "aria-hidden": "true",
-          children: Sr.steps.map(((rr, Qr) => (0, Ur.jsx)("span", {
-            className: ar()("Smp2PathSegment", {
-              Filled: Qr < Sr.step,
-              Current: Qr === Sr.step
+          children: Od.steps.map(((dd, md) => (0, qd.jsx)("span", {
+            className: Rd()("Smp2PathSegment", {
+              Filled: md < Od.step,
+              Current: md === Od.step
             })
-          }, rr.key)))
-        }), (0, Ur.jsxs)("div", {
+          }, dd.key)))
+        }), (0, qd.jsxs)("div", {
           className: "Smp2PathStep",
-          children: [(0, Ur.jsx)("div", {
+          children: [(0, qd.jsx)("div", {
             className: "Smp2PathStepIcon",
-            children: (0, Ur.jsx)(pr.d, {
-              itemName: Qr.icon,
+            children: (0, qd.jsx)(Qd.c, {
+              itemName: md.icon,
               amount: 1
             })
-          }), (0, Ur.jsx)("span", {
+          }), (0, qd.jsx)("span", {
             className: "Smp2PathStepText",
-            children: Qr.text
-          }), Zr > 1 && (0, Ur.jsxs)("span", {
+            children: md.text
+          }), Wd > 1 && (0, qd.jsxs)("span", {
             className: "Smp2PathStepProgress",
-            children: [Sr.progress, "/", Zr]
+            children: [Od.progress, "/", Wd]
           })]
-        }, `${Sr.step}`)]
+        }, `${Od.step}`)]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

@@ -1,68 +1,68 @@
 export const id = 280;
 export const ids = [280];
 export const modules = {
-  40728: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return void 0 === rr ? void 0 : [rr[0], rr[1], rr[2]]
+  40756: (dd, Od, md) => {
+    function Wd(dd) {
+      return void 0 === dd ? void 0 : [dd[0], dd[1], dd[2]]
     }
 
-    function Wr(rr) {
-      const Sr = rr.particles;
+    function Fd(dd) {
+      const Od = dd.particles;
       return {
         opts: {
-          texture: Sr.texture,
-          sx: Sr.sx,
-          minLifeTime: Sr.minLifeTime,
-          maxLifeTime: Sr.maxLifeTime,
-          minSize: Sr.minSize,
-          maxSize: Sr.maxSize,
-          minEmitPower: Sr.minEmitPower,
-          maxEmitPower: Sr.maxEmitPower,
-          emitRate: Sr.emitRate,
-          gravity: Zr(Sr.gravity),
-          dir1: Zr(Sr.dir1),
-          dir2: Zr(Sr.dir2),
-          colorGradients: Sr.colorGradients,
-          blendMode: Sr.blendMode
+          texture: Od.texture,
+          Mt: Od.Mt,
+          minLifeTime: Od.minLifeTime,
+          maxLifeTime: Od.maxLifeTime,
+          minSize: Od.minSize,
+          maxSize: Od.maxSize,
+          minEmitPower: Od.minEmitPower,
+          maxEmitPower: Od.maxEmitPower,
+          emitRate: Od.emitRate,
+          gravity: Wd(Od.gravity),
+          dir1: Wd(Od.dir1),
+          dir2: Wd(Od.dir2),
+          colorGradients: Od.colorGradients,
+          blendMode: Od.blendMode
         },
-        half: [Sr.width / 2, Sr.height / 2, Sr.depth / 2]
+        half: [Od.width / 2, Od.height / 2, Od.depth / 2]
       }
     }
-    Qr.d(Sr, {
-      e: () => Wr
+    md.d(Od, {
+      d: () => Fd
     })
   },
-  40699: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar,
-      h: () => Er,
-      i: () => fr,
-      l: () => jr
+  40721: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Rd,
+      i: () => vd,
+      j: () => hd,
+      k: () => Xd
     });
-    var Zr = Qr(215);
-    const Wr = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      ar = "PetRoot";
-    let jr = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      Ir = Wr;
+    var Wd = md(231);
+    const Fd = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      Rd = "PetRoot";
+    let Xd = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      Kd = Fd;
     new Map, new Map;
 
-    function fr(rr) {
-      var Sr;
-      return null !== (Sr = (0, Zr.b)(jr, rr)) && void 0 !== Sr ? Sr : null
+    function hd(dd) {
+      var Od;
+      return null !== (Od = (0, Wd.b)(Xd, dd)) && void 0 !== Od ? Od : null
     }
 
-    function Er(rr) {
-      var Sr;
-      return null !== (Sr = (0, Zr.b)(Ir, rr)) && void 0 !== Sr ? Sr : null
+    function vd(dd) {
+      var Od;
+      return null !== (Od = (0, Wd.b)(Kd, dd)) && void 0 !== Od ? Od : null
     }
   },
-  40733: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Zr,
-      e: () => Wr,
-      f: () => ar
+  40760: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Wd,
+      d: () => Fd,
+      e: () => Rd
     });
-    class Zr {
+    class Wd {
       constructor() {
         this.pose = {
           pos: [0, 0, 0],
@@ -70,390 +70,390 @@ export const modules = {
           mode: "flying",
           seated: !1,
           clip: void 0
-        }, this.Lh = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
+        }, this.Gy = [0, 0, 0], this.lastFeet = [0, 0, 0], this.target = [0, 0, 0], this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0
       }
-      step(rr) {
-        var Sr;
+      step(dd) {
+        var Od;
         const {
-          feet: Qr,
-          heading: Zr,
-          tuning: jr
-        } = rr, Ir = Math.min(Math.max(rr.dt, 0), .1), {
-          pose: fr,
-          Lh: Er,
-          target: pr
+          feet: md,
+          heading: Wd,
+          tuning: Xd
+        } = dd, Kd = Math.min(Math.max(dd.dt, 0), .1), {
+          pose: hd,
+          Gy: vd,
+          target: Qd
         } = this;
-        if (this.started && Ir > 0) {
-          const rr = Math.hypot(Qr[0] - this.lastFeet[0], Qr[1] - this.lastFeet[1], Qr[2] - this.lastFeet[2]);
-          this.speed += (rr / Ir - this.speed) * Math.min(Ir / .15, 1)
+        if (this.started && Kd > 0) {
+          const dd = Math.hypot(md[0] - this.lastFeet[0], md[1] - this.lastFeet[1], md[2] - this.lastFeet[2]);
+          this.speed += (dd / Kd - this.speed) * Math.min(Kd / .15, 1)
         }
-        this.lastFeet[0] = Qr[0], this.lastFeet[1] = Qr[1], this.lastFeet[2] = Qr[2], this.stillS = this.speed > .3 ? 0 : this.stillS + Ir;
-        const xr = this.stillS >= .6 ? "perched" : "flying";
-        "flying" === xr && "perched" === fr.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += Ir, fr.mode = xr;
-        const mr = Math.sin(Zr),
-          Nr = Math.cos(Zr);
-        "perched" === xr ? (ar(pr, Qr, jr.perchOffset, mr, Nr), pr[1] += rr.headTopY - Qr[1]) : (ar(pr, Qr, jr.followOffset, mr, Nr), pr[1] += Wr(jr, rr.timeS));
+        this.lastFeet[0] = md[0], this.lastFeet[1] = md[1], this.lastFeet[2] = md[2], this.stillS = this.speed > .3 ? 0 : this.stillS + Kd;
+        const td = this.stillS >= .6 ? "perched" : "flying";
+        "flying" === td && "perched" === hd.mode && (this.sinceTakeOffS = 0, this.perchLocked = !1), this.sinceTakeOffS += Kd, hd.mode = td;
+        const od = Math.sin(Wd),
+          Nd = Math.cos(Wd);
+        "perched" === td ? (Rd(Qd, md, Xd.perchOffset, od, Nd), Qd[1] += dd.headTopY - md[1]) : (Rd(Qd, md, Xd.followOffset, od, Nd), Qd[1] += Fd(Xd, dd.timeS));
         const {
-          pos: Ur
-        } = fr, tr = Math.hypot(pr[0] - Ur[0], pr[1] - Ur[1], pr[2] - Ur[2]);
-        if (!this.started || tr > 8 || "perched" === xr && (this.perchLocked || tr < .05)) this.perchLocked = this.started && "perched" === xr, Ur[0] = pr[0], Ur[1] = pr[1], Ur[2] = pr[2], Er[0] = Er[1] = Er[2] = 0;
+          pos: qd
+        } = hd, Hd = Math.hypot(Qd[0] - qd[0], Qd[1] - qd[1], Qd[2] - qd[2]);
+        if (!this.started || Hd > 8 || "perched" === td && (this.perchLocked || Hd < .05)) this.perchLocked = this.started && "perched" === td, qd[0] = Qd[0], qd[1] = Qd[1], qd[2] = Qd[2], vd[0] = vd[1] = vd[2] = 0;
         else {
-          const rr = jr.followStiffness;
-          for (let Sr = 0; Sr < 3; Sr++) Er[Sr] += (rr * rr * (pr[Sr] - Ur[Sr]) - 2 * rr * Er[Sr]) * Ir, Ur[Sr] += Er[Sr] * Ir
+          const dd = Xd.followStiffness;
+          for (let Od = 0; Od < 3; Od++) vd[Od] += (dd * dd * (Qd[Od] - qd[Od]) - 2 * dd * vd[Od]) * Kd, qd[Od] += vd[Od] * Kd
         }
-        const hr = Zr + jr.yawOffset;
-        var zr;
-        return this.started ? fr.yaw += ((zr = hr - fr.yaw) - 2 * Math.PI * Math.round(zr / (2 * Math.PI))) * Math.min(8 * Ir, 1) : fr.yaw = hr, this.started = !0, fr.seated = "perched" === xr && this.perchLocked, fr.clip = null === (Sr = jr.clips) || void 0 === Sr ? void 0 : Sr[this.eQ(xr)], fr
+        const yd = Wd + Xd.yawOffset;
+        var bd;
+        return this.started ? hd.yaw += ((bd = yd - hd.yaw) - 2 * Math.PI * Math.round(bd / (2 * Math.PI))) * Math.min(8 * Kd, 1) : hd.yaw = yd, this.started = !0, hd.seated = "perched" === td && this.perchLocked, hd.clip = null === (Od = Xd.clips) || void 0 === Od ? void 0 : Od[this.Tm(td)], hd
       }
       reset() {
         this.started = !1, this.speed = 0, this.stillS = 0, this.perchLocked = !1, this.sinceTakeOffS = 1 / 0, this.pose.mode = "flying", this.pose.seated = !1
       }
-      eQ(rr) {
-        return "perched" === rr ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
+      Tm(dd) {
+        return "perched" === dd ? this.perchLocked ? "perch" : "land" : this.sinceTakeOffS < .4 ? "takeOff" : "fly"
       }
     }
 
-    function Wr(rr, Sr) {
-      return rr.bobAmplitude * Math.sin(2 * Math.PI * rr.bobHz * Sr)
+    function Fd(dd, Od) {
+      return dd.bobAmplitude * Math.sin(2 * Math.PI * dd.bobHz * Od)
     }
 
-    function ar(rr, Sr, Qr, Zr, Wr) {
-      const [ar, jr, Ir] = Qr;
-      rr[0] = Sr[0] + ar * Wr + Ir * Zr, rr[1] = Sr[1] + jr, rr[2] = Sr[2] - ar * Zr + Ir * Wr
+    function Rd(dd, Od, md, Wd, Fd) {
+      const [Rd, Xd, Kd] = md;
+      dd[0] = Od[0] + Rd * Fd + Kd * Wd, dd[1] = Od[1] + Xd, dd[2] = Od[2] - Rd * Wd + Kd * Fd
     }
   },
-  40701: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar
+  40729: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Rd
     });
-    var Zr = Qr(38555),
-      Wr = Qr(39365);
+    var Wd = md(38627),
+      Fd = md(39409);
 
-    function ar(rr, Sr) {
-      var Qr;
-      rr.blendMode = Sr.blendMode, rr.minLifeTime = Sr.minLifeTime, rr.maxLifeTime = Sr.maxLifeTime, rr.minSize = Sr.minSize, rr.maxSize = Sr.maxSize, rr.minEmitPower = Sr.minEmitPower, rr.maxEmitPower = Sr.maxEmitPower;
-      const ar = null !== (Qr = Sr.gravity) && void 0 !== Qr ? Qr : [0, 0, 0];
-      rr.gravity = new Zr.kU(ar[0], ar[1], ar[2]);
-      for (const Zr of Sr.colorGradients) rr.addColorGradient(Zr.timeFraction, (0, Wr.i)(Zr.minColor), Zr.maxColor ? (0, Wr.i)(Zr.maxColor) : void 0)
+    function Rd(dd, Od) {
+      var md;
+      dd.blendMode = Od.blendMode, dd.minLifeTime = Od.minLifeTime, dd.maxLifeTime = Od.maxLifeTime, dd.minSize = Od.minSize, dd.maxSize = Od.maxSize, dd.minEmitPower = Od.minEmitPower, dd.maxEmitPower = Od.maxEmitPower;
+      const Rd = null !== (md = Od.gravity) && void 0 !== md ? md : [0, 0, 0];
+      dd.gravity = new Wd.Cq(Rd[0], Rd[1], Rd[2]);
+      for (const Wd of Od.colorGradients) dd.addColorGradient(Wd.timeFraction, (0, Fd.h)(Wd.minColor), Wd.maxColor ? (0, Fd.h)(Wd.maxColor) : void 0)
     }
   },
-  40313: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => er,
-      g: () => Br,
-      i: () => yr,
-      m: () => vr,
-      p: () => Or,
-      s: () => nr
+  40319: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Yd,
+      i: () => Ed,
+      l: () => wd,
+      p: () => Ud,
+      r: () => xd,
+      u: () => pd
     });
-    var Zr = Qr(360),
-      Wr = Qr(40327),
-      ar = Qr(3879),
-      jr = Qr(3884),
-      Ir = Qr(40317),
-      fr = Qr(40320),
-      Er = Qr(26),
-      pr = Qr(120),
-      xr = Qr(3995),
-      mr = Qr(109),
-      Nr = Qr(135),
-      Ur = Qr(43),
-      tr = Qr(335),
-      hr = Qr(4832),
-      zr = Qr(127);
-    const Yr = {
+    var Wd = md(387),
+      Fd = md(40327),
+      Rd = md(3864),
+      Xd = md(3868),
+      Kd = md(40323),
+      hd = md(40325),
+      vd = md(29),
+      Qd = md(118),
+      td = md(3973),
+      od = md(107),
+      Nd = md(145),
+      qd = md(46),
+      Hd = md(364),
+      yd = md(4820),
+      bd = md(132);
+    const Td = {
       no_adapter: "start_no_adapter",
       device: "device_failed"
     };
 
-    function nr(rr) {
-      var Sr;
-      const Qr = null !== (Sr = pr.currentUrl.getSearchParam(rr)) && void 0 !== Sr ? Sr : Ur.j.getItem(rr);
-      return null === Qr || void 0 === Qr || "" === Qr ? null : "0" !== Qr && "false" !== Qr && !1 !== Qr && 0 !== Qr
+    function pd(dd) {
+      var Od;
+      const md = null !== (Od = Qd.currentUrl.getSearchParam(dd)) && void 0 !== Od ? Od : qd.k.getItem(dd);
+      return null === md || void 0 === md || "" === md ? null : "0" !== md && "false" !== md && !1 !== md && 0 !== md
     }
-    async function er(rr, Sr) {
-      (0, ar.H)(null);
-      const Qr = (0, jr.p)((0, jr.n)(Sr.useWebGpu, !0));
-      (0, mr.setWebGpuRequested)("lite" === Qr.requested && (0, mr.getWebGpuSupported)());
-      const Ir = (0, jr.i)(Qr.source);
-      null !== Ir && console.info(`Renderer: ${Qr.requested} from ${Ir}`), null !== Qr.fallbackReason && console.warn(`Renderer: ${Qr.fallbackReason}`);
-      let pr = Qr.fallbackReason;
-      if ("webgl2" !== Qr.choice) {
-        const Ir = await async function(rr, Sr, Qr, jr) {
-          const Ir = await (0, mr.probeWebGpuAdapter)();
-          if ("usable" !== Ir) return (0, mr.setWebGpuFallbackReason)(Ir), console.info("No usable WebGPU adapter, rendering with WebGL."), "no usable WebGPU adapter";
-          if (Qr && !0 !== Ur.j.getItem(Zr.mc)) {
-            if (!0 === Ur.j.getItem(zr.F)) return (0, mr.setWebGpuFallbackReason)("old_intel_driver"), console.info("The WebGPU adapter is an Intel GPU whose driver is too old for Lite (no shader-f16), rendering with WebGL."), zr.b;
-            if (await (0, tr.p)(), (0, tr.i)()) return (0, mr.setWebGpuFallbackReason)("few_wasm_memories"), console.info("This tab fits too few wasm memories for WebGPU, rendering with WebGL."), tr.e
+    async function Yd(dd, Od) {
+      (0, Rd.x)(null);
+      const md = (0, Xd.q)((0, Xd.m)(Od.useWebGpu, !0));
+      (0, od.setWebGpuRequested)("lite" === md.requested && (0, od.getWebGpuSupported)());
+      const Kd = (0, Xd.i)(md.source);
+      null !== Kd && console.info(`Renderer: ${md.requested} from ${Kd}`), null !== md.fallbackReason && console.warn(`Renderer: ${md.fallbackReason}`);
+      let Qd = md.fallbackReason;
+      if ("webgl2" !== md.choice) {
+        const Kd = await async function(dd, Od, md, Xd) {
+          const Kd = await (0, od.probeWebGpuAdapter)();
+          if ("usable" !== Kd) return (0, od.setWebGpuFallbackReason)(Kd), console.info("No usable WebGPU adapter, rendering with WebGL."), "no usable WebGPU adapter";
+          if (md && !0 !== qd.k.getItem(Wd.kc)) {
+            if (!0 === qd.k.getItem(bd.J)) return (0, od.setWebGpuFallbackReason)("old_intel_driver"), console.info("The WebGPU adapter is an Intel GPU whose driver is too old for Lite (no shader-f16), rendering with WebGL."), bd.b;
+            if (await (0, Hd.p)(), (0, Hd.h)()) return (0, od.setWebGpuFallbackReason)("few_wasm_memories"), console.info("This tab fits too few wasm memories for WebGPU, rendering with WebGL."), Hd.e
           }
-          let pr = "load_failed";
+          let Qd = "load_failed";
           try {
             const {
-              create: Qr
-            } = await (0, ar.t)(jr).load();
-            pr = "start_failed";
-            const Zr = Er.c.antiAliasingOnWebGpuAdapter((0, Nr.m)()),
-              Wr = (0, fr.i)(rr),
-              Ir = (0, fr.e)(Wr, {
-                size: rr => (0, xr.l)(Wr, rr)
+              create: md
+            } = await (0, Rd.p)(Xd).load();
+            Qd = "start_failed";
+            const Wd = vd.e.antiAliasingOnWebGpuAdapter((0, Nd.l)()),
+              Fd = (0, hd.f)(dd),
+              Kd = (0, hd.b)(Fd, {
+                size: dd => (0, td.l)(Fd, dd)
               });
-            return await Qr(rr, {
-              aZr: Zr,
-              sceneDepth: Sr.sceneDepth,
-              sunShadow: Sr.sunShadow,
-              bufferSize: Ir
+            return await md(dd, {
+              zWd: Wd,
+              sceneDepth: Od.sceneDepth,
+              sunShadow: Od.sunShadow,
+              bufferSize: Kd
             })
-          } catch (hr) {
-            const rr = (0, Wr.e)(hr);
-            (0, mr.setWebGpuFallbackReason)(rr ? Yr[rr] : pr);
-            const Sr = null === hr || void 0 === hr ? void 0 : hr.fallbackReason;
-            return "string" === typeof Sr ? (console.warn(`Lite could not start, falling back to WebGL: ${String(hr)}`), Sr) : (console.error("Failed to initialise the Lite renderer, falling back to WebGL.", hr), "it failed to start (see the console)")
+          } catch (yd) {
+            const dd = (0, Fd.b)(yd);
+            (0, od.setWebGpuFallbackReason)(dd ? Td[dd] : Qd);
+            const Od = null === yd || void 0 === yd ? void 0 : yd.fallbackReason;
+            return "string" === typeof Od ? (console.warn(`Lite could not start, falling back to WebGL: ${String(yd)}`), Od) : (console.error("Failed to initialise the Lite renderer, falling back to WebGL.", yd), "it failed to start (see the console)")
           }
-        }(rr, Sr, "setting" === Qr.source, Qr.choice);
-        if ("lite" === Qr.choice && Ur.j.setItem(zr.s, "string" === typeof Ir), "string" !== typeof Ir) return Er.c.followGameGpu((0, Nr.m)()), (0, mr.setWebGpuFallbackReason)("none"), (0, jr.s)(Qr), (0, ar.H)(Ir), {
-          lite: Ir
+        }(dd, Od, "setting" === md.source, md.choice);
+        if ("lite" === md.choice && qd.k.setItem(bd.s, "string" === typeof Kd), "string" !== typeof Kd) return vd.e.followGameGpu((0, Nd.l)()), (0, od.setWebGpuFallbackReason)("none"), (0, Xd.t)(md), (0, Rd.x)(Kd), {
+          lite: Kd
         };
-        pr = (0, jr.e)(Qr.choice, [Ir]), rr.replaceWith(rr.cloneNode(!1))
-      } else "lite" === Qr.requested ? (0, mr.setWebGpuFallbackReason)("load_failed") : "default" === Qr.source && Sr.webGpuDefaultOffReason ? (0, mr.setWebGpuFallbackReason)(Sr.webGpuDefaultOffReason) : (0, mr.setWebGpuFallbackReason)("not_requested");
-      return (0, jr.s)({
-        ...Qr,
+        Qd = (0, Xd.e)(md.choice, [Kd]), dd.replaceWith(dd.cloneNode(!1))
+      } else "lite" === md.requested ? (0, od.setWebGpuFallbackReason)("load_failed") : "default" === md.source && Od.webGpuDefaultOffReason ? (0, od.setWebGpuFallbackReason)(Od.webGpuDefaultOffReason) : (0, od.setWebGpuFallbackReason)("not_requested");
+      return (0, Xd.t)({
+        ...md,
         choice: "webgl2",
-        fallbackReason: pr
-      }), Er.c.followGameGpu(null), {
+        fallbackReason: Qd
+      }), vd.e.followGameGpu(null), {
         lite: null
       }
     }
 
-    function Kr() {
-      return Promise.all([Qr.e(290), Qr.e(291), Qr.e(288), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(300), Qr.e(312), Qr.e(299), Qr.e(293), Qr.e(294), Qr.e(278), Qr.e(0)]).then((() => Qr(54088)))
+    function gd() {
+      return Promise.all([md.e(290), md.e(291), md.e(288), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(300), md.e(312), md.e(299), md.e(293), md.e(294), md.e(278), md.e(0)]).then((() => md(53976)))
     }
-    async function yr() {
-      return (await Kr()).createSceneParticleSystem
+    async function wd() {
+      return (await gd()).createSceneParticleSystem
     }
-    async function Br() {
-      Promise.all([Qr.e(290), Qr.e(622)]).then((() => Qr(54157))).then((rr => {
-        rr.installImageBitmapTextureLoader()
+    async function Ed() {
+      Promise.all([md.e(290), md.e(622)]).then((() => md(54045))).then((dd => {
+        dd.installImageBitmapTextureLoader()
       })).catch((() => {}));
-      const [rr, Sr] = await Promise.all([Kr(), Promise.all([Qr.e(290), Qr.e(291), Qr.e(288), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(300), Qr.e(312), Qr.e(299), Qr.e(293), Qr.e(294), Qr.e(278), Qr.e(0)]).then((() => Qr(54165))), Promise.all([Qr.e(290), Qr.e(291), Qr.e(288), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(300), Qr.e(312), Qr.e(299), Qr.e(293), Qr.e(294), Qr.e(278), Qr.e(0)]).then((() => Qr(42986)))]);
-      return (0, Ir.c)(Sr.SkyMaterial), rr.default
+      const [dd, Od] = await Promise.all([gd(), Promise.all([md.e(290), md.e(291), md.e(288), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(300), md.e(312), md.e(299), md.e(293), md.e(294), md.e(278), md.e(0)]).then((() => md(54055))), Promise.all([md.e(290), md.e(291), md.e(288), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(300), md.e(312), md.e(299), md.e(293), md.e(294), md.e(278), md.e(0)]).then((() => md(43085)))]);
+      return (0, Kd.f)(Od.SkyMaterial), dd.default
     }
 
-    function Tr(rr) {
-      return "lite" === (0, jr.p)((0, jr.n)(rr, !1)).choice && (0, mr.getWebGpuSupported)() && !Ur.j.getItem(zr.s)
+    function Jd(dd) {
+      return "lite" === (0, Xd.q)((0, Xd.m)(dd, !1)).choice && (0, od.getWebGpuSupported)() && !qd.k.getItem(bd.s)
     }
 
-    function vr(rr) {
-      Tr(rr) || Br().catch((rr => {
-        console.warn("Failed to prefetch noa's Babylon backend.", rr)
+    function Ud(dd) {
+      Jd(dd) || Ed().catch((dd => {
+        console.warn("Failed to prefetch noa's Babylon backend.", dd)
       }))
     }
 
-    function Or(rr) {
-      (0, hr.g)((() => {
-        Tr(rr) ? (0, ar.q)().load().catch((rr => {
-          console.warn("Failed to prefetch the Lite renderer.", rr)
-        })) : vr(rr)
+    function xd(dd) {
+      (0, yd.e)((() => {
+        Jd(dd) ? (0, Rd.n)().load().catch((dd => {
+          console.warn("Failed to prefetch the Lite renderer.", dd)
+        })) : Ud(dd)
       }))
     }
   },
-  40320: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Ir,
-      i: () => jr
+  40325: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Kd,
+      f: () => Xd
     });
-    var Zr = Qr(26),
-      Wr = Qr(35399),
-      ar = Qr(3995);
+    var Wd = md(29),
+      Fd = md(35482),
+      Rd = md(3973);
 
-    function jr(rr) {
-      var Sr;
-      return null !== (Sr = rr.parentElement) && void 0 !== Sr ? Sr : rr
+    function Xd(dd) {
+      var Od;
+      return null !== (Od = dd.parentElement) && void 0 !== Od ? Od : dd
     }
 
-    function Ir(rr, Sr) {
-      if (rr.clientWidth <= 0 || rr.clientHeight <= 0 || Wr.d.isHeld()) return null;
-      const Qr = (0, ar.m)(),
-        [jr, Ir] = Sr.size(Qr);
-      return (0, ar.o)(jr, Ir, Qr, Zr.c.get("clientEscMenuOptions").pixelScale)
+    function Kd(dd, Od) {
+      if (dd.clientWidth <= 0 || dd.clientHeight <= 0 || Fd.d.isHeld()) return null;
+      const md = (0, Rd.m)(),
+        [Xd, Kd] = Od.size(md);
+      return (0, Rd.r)(Xd, Kd, md, Wd.e.get("clientEscMenuOptions").pixelScale)
     }
   },
-  40445: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Zr,
-      f: () => Wr
+  40453: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd,
+      f: () => Fd
     });
-    const Zr = 2.2;
+    const Wd = 2.2;
 
-    function Wr(rr) {
-      let Sr = 0;
-      return rr > 5 && (Sr = .12 * Math.min(rr - 5, 15), rr > 20 && (Sr += .01 * (rr - 20))), 1.4 + Sr
+    function Fd(dd) {
+      let Od = 0;
+      return dd > 5 && (Od = .12 * Math.min(dd - 5, 15), dd > 20 && (Od += .01 * (dd - 20))), 1.4 + Od
     }
   },
-  40436: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr,
-      d: () => Ir,
-      h: () => ar,
-      l: () => Nr,
-      m: () => fr,
-      p: () => pr,
-      s: () => Er,
-      t: () => mr
+  40439: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Xd,
+      c: () => Kd,
+      d: () => Rd,
+      f: () => Nd,
+      i: () => hd,
+      j: () => Qd,
+      n: () => vd,
+      p: () => od
     });
-    var Zr = Qr(38555),
-      Wr = Qr(38849);
-    const ar = 0,
-      jr = 1,
-      Ir = 18;
+    var Wd = md(38627),
+      Fd = md(38907);
+    const Rd = 0,
+      Xd = 1,
+      Kd = 18;
 
-    function fr(rr) {
-      return !1 !== rr && (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || arguments.length > 2 && void 0 !== arguments[2] && arguments[2])
+    function hd(dd) {
+      return !1 !== dd && (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || arguments.length > 2 && void 0 !== arguments[2] && arguments[2])
     }
 
-    function Er(rr, Sr) {
-      return null !== rr && void 0 !== rr ? rr : Sr
+    function vd(dd, Od) {
+      return null !== dd && void 0 !== dd ? dd : Od
     }
 
-    function pr(rr, Sr, Qr) {
-      return Sr && !Qr ? Math.max(1, rr / Ir) : 1
+    function Qd(dd, Od, md) {
+      return Od && !md ? Math.max(1, dd / Kd) : 1
     }
-    const xr = new WeakMap;
+    const td = new WeakMap;
 
-    function mr(rr, Sr, Qr, Wr) {
-      const ar = rr.YB.rQr(Qr),
-        jr = ar.offset;
-      jr[0] = jr[1] = jr[2] = 0;
-      const Ir = rr.YB.rQr(Sr);
-      if (Wr || !Ir || !ar.mesh.isEnabled() || !ar.mesh.isVisible) return 1;
-      const fr = rr.YB.gJ(Qr).lD,
-        Er = rr.camera.PD(),
-        pr = rr.camera.W4(),
-        mr = Er[0] - fr[0],
-        Nr = Er[1] - fr[1],
-        Ur = Er[2] - fr[2];
-      if (-(pr[0] * mr + pr[1] * Nr + pr[2] * Ur) <= 0 || Math.hypot(mr, Nr, Ur) < .1) return 1;
-      const tr = rr.Ox.eC().getFrameId();
-      let hr = xr.get(Ir);
-      if (hr || (hr = {
+    function od(dd, Od, md, Fd) {
+      const Rd = dd.qE.Vmd(md),
+        Xd = Rd.offset;
+      Xd[0] = Xd[1] = Xd[2] = 0;
+      const Kd = dd.qE.Vmd(Od);
+      if (Fd || !Kd || !Rd.mesh.isEnabled() || !Rd.mesh.isVisible) return 1;
+      const hd = dd.qE.gM(md).y_,
+        vd = dd.camera.b_(),
+        Qd = dd.camera.S_(),
+        od = vd[0] - hd[0],
+        Nd = vd[1] - hd[1],
+        qd = vd[2] - hd[2];
+      if (-(Qd[0] * od + Qd[1] * Nd + Qd[2] * qd) <= 0 || Math.hypot(od, Nd, qd) < .1) return 1;
+      const Hd = dd.gt.zV().getFrameId();
+      let yd = td.get(Kd);
+      if (yd || (yd = {
           frame: -1,
-          minimum: new Zr.kU,
-          maximum: new Zr.kU,
+          minimum: new Wd.Cq,
+          maximum: new Wd.Cq,
           valid: !1
-        }, xr.set(Ir, hr)), hr.frame !== tr)
-        if (hr.frame = tr, Ir.tZr) hr.valid = rr.Ox.bC.getObjectBounds(Ir.JC, hr.minimum, hr.maximum);
+        }, td.set(Kd, yd)), yd.frame !== Hd)
+        if (yd.frame = Hd, Kd.fWd) yd.valid = dd.gt.HA.getObjectBounds(Kd.JA, yd.minimum, yd.maximum);
         else {
-          hr.minimum.Srr(1 / 0), hr.maximum.Srr(-1 / 0), hr.valid = !1;
-          const rr = [Ir.mesh, ...Ir.mesh.getChildMeshes(!1)];
-          for (const Sr of rr) {
-            if (!("getTotalVertices" in Sr) || !Sr.isEnabled() || !Sr.isVisible || !Sr.getTotalVertices()) continue;
-            Sr.computeWorldMatrix();
-            const rr = Sr.mG().boundingBox;
-            hr.minimum.minimizeInPlace(rr.minimumWorld), hr.maximum.maximizeInPlace(rr.maximumWorld), hr.valid = !0
+          yd.minimum.Bdd(1 / 0), yd.maximum.Bdd(-1 / 0), yd.valid = !1;
+          const dd = [Kd.mesh, ...Kd.mesh.getChildMeshes(!1)];
+          for (const Od of dd) {
+            if (!("getTotalVertices" in Od) || !Od.isEnabled() || !Od.isVisible || !Od.getTotalVertices()) continue;
+            Od.computeWorldMatrix();
+            const dd = Od.iG().boundingBox;
+            yd.minimum.minimizeInPlace(dd.minimumWorld), yd.maximum.maximizeInPlace(dd.maximumWorld), yd.valid = !0
           }
-        } if (!hr.valid) return 1;
-      const zr = function(rr, Sr, Qr, Zr, Wr) {
-        const ar = Sr[0] - rr[0],
-          jr = Sr[1] - rr[1],
-          Ir = Sr[2] - rr[2],
-          fr = Math.hypot(ar, jr, Ir),
-          Er = -(Wr[0] * ar + Wr[1] * jr + Wr[2] * Ir);
-        if (fr < .1 || Er <= 0) return 0;
-        const pr = (Math.abs(Wr[0]) * (Zr.x - Qr.x) + Math.abs(Wr[1]) * (Zr.y - Qr.y) + Math.abs(Wr[2]) * (Zr.z - Qr.z)) / 2,
-          xr = -(Wr[0] * ((Qr.x + Zr.x) / 2 - rr[0]) + Wr[1] * ((Qr.y + Zr.y) / 2 - rr[1]) + Wr[2] * ((Qr.z + Zr.z) / 2 - rr[2]));
-        return Math.max(0, Math.min((xr + pr + .01) / Er, 2 * pr / Er, 1 - .1 / Er))
-      }(fr, Er, hr.minimum, hr.maximum, rr.camera.W4());
-      for (let Zr = 0; Zr < 3; Zr++) jr[Zr] = (Er[Zr] - fr[Zr]) * zr;
-      return 1 - zr
+        } if (!yd.valid) return 1;
+      const bd = function(dd, Od, md, Wd, Fd) {
+        const Rd = Od[0] - dd[0],
+          Xd = Od[1] - dd[1],
+          Kd = Od[2] - dd[2],
+          hd = Math.hypot(Rd, Xd, Kd),
+          vd = -(Fd[0] * Rd + Fd[1] * Xd + Fd[2] * Kd);
+        if (hd < .1 || vd <= 0) return 0;
+        const Qd = (Math.abs(Fd[0]) * (Wd.x - md.x) + Math.abs(Fd[1]) * (Wd.y - md.y) + Math.abs(Fd[2]) * (Wd.z - md.z)) / 2,
+          td = -(Fd[0] * ((md.x + Wd.x) / 2 - dd[0]) + Fd[1] * ((md.y + Wd.y) / 2 - dd[1]) + Fd[2] * ((md.z + Wd.z) / 2 - dd[2]));
+        return Math.max(0, Math.min((td + Qd + .01) / vd, 2 * Qd / vd, 1 - .1 / vd))
+      }(hd, vd, yd.minimum, yd.maximum, dd.camera.S_());
+      for (let Wd = 0; Wd < 3; Wd++) Xd[Wd] = (vd[Wd] - hd[Wd]) * bd;
+      return 1 - bd
     }
 
-    function Nr(rr, Sr) {
+    function Nd(dd, Od) {
       const {
-        mesh: Qr,
-        offset: Zr
-      } = rr.YB.rQr(Sr), ar = rr.YB.gJ(Sr).lD, jr = ar[0] + Zr[0], Ir = ar[1] + Zr[1], fr = ar[2] + Zr[2];
-      (0, Wr.p)(Qr, jr, Ir, fr)
+        mesh: md,
+        offset: Wd
+      } = dd.qE.Vmd(Od), Rd = dd.qE.gM(Od).y_, Xd = Rd[0] + Wd[0], Kd = Rd[1] + Wd[1], hd = Rd[2] + Wd[2];
+      (0, Fd.q)(md, Xd, Kd, hd)
     }
   },
-  40317: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Er,
-      c: () => Ir,
-      e: () => fr
+  40323: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => vd,
+      f: () => Kd,
+      g: () => hd
     });
-    var Zr = Qr(38845),
-      Wr = Qr(38736);
-    const ar = new Set;
-    let jr = null;
+    var Wd = md(38898),
+      Fd = md(38779);
+    const Rd = new Set;
+    let Xd = null;
 
-    function Ir(rr) {
-      jr = rr
+    function Kd(dd) {
+      Xd = dd
     }
 
-    function fr(rr) {
-      if (!jr) throw new Error("No SkyMaterial: WebGL2's backend installs it");
-      return new jr("sky", rr)
+    function hd(dd) {
+      if (!Xd) throw new Error("No SkyMaterial: WebGL2's backend installs it");
+      return new Xd("sky", dd)
     }
 
-    function Er(rr, Sr, Qr) {
-      if (!(0, Zr.c)(rr)) return void rr.material.forceCompilation(rr, Sr);
-      const jr = () => {
-        if (rr.Dv()) return void ar.delete(rr);
-        const Zr = (0, Wr.Y)(rr.material);
-        if (![null === Zr || void 0 === Zr ? void 0 : Zr.diffuseTexture, null === Zr || void 0 === Zr ? void 0 : Zr.opacityTexture, null === Zr || void 0 === Zr ? void 0 : Zr.emissiveTexture, null === Zr || void 0 === Zr ? void 0 : Zr.reflectionTexture].every((rr => !rr || Qr.prepareTexture(rr)))) return ar.add(rr), void setTimeout(jr, 16);
-        ar.delete(rr), Sr()
+    function vd(dd, Od, md) {
+      if (!(0, Wd.g)(dd)) return void dd.material.forceCompilation(dd, Od);
+      const Xd = () => {
+        if (dd.yJ()) return void Rd.delete(dd);
+        const Wd = (0, Fd.db)(dd.material);
+        if (![null === Wd || void 0 === Wd ? void 0 : Wd.diffuseTexture, null === Wd || void 0 === Wd ? void 0 : Wd.opacityTexture, null === Wd || void 0 === Wd ? void 0 : Wd.emissiveTexture, null === Wd || void 0 === Wd ? void 0 : Wd.reflectionTexture].every((dd => !dd || md.prepareTexture(dd)))) return Rd.add(dd), void setTimeout(Xd, 16);
+        Rd.delete(dd), Od()
       };
-      jr()
+      Xd()
     }
   },
-  40434: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      D: () => xS,
-      e: () => Ar,
-      i: () => Mr,
-      j: () => dr,
-      m: () => ir,
-      n: () => pS,
-      o: () => aS,
-      q: () => WS,
-      s: () => Vr,
-      t: () => Jr,
-      x: () => wr,
-      z: () => QS
+  40431: (dd, Od, md) => {
+    md.d(Od, {
+      A: () => kd,
+      C: () => ed,
+      D: () => FO,
+      G: () => NO,
+      d: () => cd,
+      h: () => Ld,
+      i: () => Md,
+      k: () => Dd,
+      n: () => oO,
+      r: () => KO,
+      u: () => XO,
+      x: () => jd
     });
-    var Zr = Qr(1251),
-      Wr = Qr(1304),
-      ar = Qr(360),
-      jr = Qr(1463),
-      Ir = Qr(5223),
-      fr = Qr(5249),
-      Er = Qr(2383),
-      pr = Qr(38762),
-      xr = Qr(38754),
-      mr = Qr(39402),
-      Nr = Qr(39030),
-      Ur = Qr(38889),
-      tr = Qr(38677),
-      hr = Qr(40436),
-      zr = Qr(39428),
-      Yr = Qr(40255),
-      nr = Qr(38723),
-      er = Qr(38824),
-      Kr = Qr(688),
-      yr = Qr(1317),
-      Br = Qr(2093),
-      Tr = Qr(2179),
-      vr = Qr(4362),
-      Or = Qr(4354),
-      Lr = Qr(2135),
-      lr = Qr(26),
-      Xr = Qr(9937),
-      Pr = Qr(5195),
-      Hr = Qr(5229),
-      qr = Qr(5231),
-      Rr = Qr(37642);
-    const gr = Object.create(null),
-      Cr = Object.create(null),
-      Mr = {
+    var Wd = md(1238),
+      Fd = md(1306),
+      Rd = md(387),
+      Xd = md(1452),
+      Kd = md(5134),
+      hd = md(5155),
+      vd = md(2402),
+      Qd = md(38799),
+      td = md(38794),
+      od = md(39459),
+      Nd = md(39074),
+      qd = md(38933),
+      Hd = md(38731),
+      yd = md(40439),
+      bd = md(39484),
+      Td = md(40269),
+      pd = md(38766),
+      Yd = md(38869),
+      gd = md(701),
+      wd = md(1315),
+      Ed = md(2094),
+      Jd = md(2178),
+      Ud = md(4373),
+      xd = md(4365),
+      Bd = md(2134),
+      Sd = md(29),
+      sd = md(9965),
+      ud = md(5124),
+      Vd = md(5141),
+      Ad = md(5147),
+      rd = md(37755);
+    const Gd = Object.create(null),
+      nd = Object.create(null),
+      Ld = {
         DEFAULT_FONT_SIZE: 47,
         DEFAULT_SUBTITLE_FONT_SIZE: 30,
         HORIZONTAL_PADDING: 30,
@@ -465,12 +465,12 @@ export const modules = {
         ANIMATE_IN_DELAY: 40,
         EFFECT_ICON_SIZE: 70
       },
-      Gr = {
-        text: rr => `bolder ${rr}px 'Jetbrains Mono'`
+      Pd = {
+        text: dd => `bolder ${dd}px 'Jetbrains Mono'`
       },
-      kr = 41,
-      Ar = {
-        icon: Tr.b,
+      zd = 41,
+      cd = {
+        icon: Jd.e,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -480,347 +480,347 @@ export const modules = {
         visible: !0
       };
 
-    function Vr(rr, Sr) {
-      return rr.flatMap((rr => {
-        var Qr;
-        if ("object" === typeof rr && "chatTag" in rr) return [rr];
-        if (cr(rr)) return [rr];
-        if ((0, ar.xb)(rr)) return [{
+    function jd(dd, Od) {
+      return dd.flatMap((dd => {
+        var md;
+        if ("object" === typeof dd && "chatTag" in dd) return [dd];
+        if (Id(dd)) return [dd];
+        if ((0, Rd.wb)(dd)) return [{
           str: ""
         }];
-        if ((0, ar.wb)(rr)) {
-          const Qr = (0, Xr.d)(rr.action);
-          if (Qr) {
-            var jr;
-            const Zr = rr.style;
+        if ((0, Rd.sb)(dd)) {
+          const md = (0, sd.d)(dd.action);
+          if (md) {
+            var Xd;
+            const Wd = dd.style;
             return [{
-              icon: (0, Xr.h)(Qr),
+              icon: (0, sd.e)(md),
               style: {
-                fontSize: null !== (jr = null === Zr || void 0 === Zr ? void 0 : Zr.fontSize) && void 0 !== jr ? jr : `${Sr}px`,
-                opacity: null === Zr || void 0 === Zr ? void 0 : Zr.opacity
+                fontSize: null !== (Xd = null === Wd || void 0 === Wd ? void 0 : Wd.fontSize) && void 0 !== Xd ? Xd : `${Od}px`,
+                opacity: null === Wd || void 0 === Wd ? void 0 : Wd.opacity
               }
             }]
           }
-          const Zr = (0, Lr.o)(rr.action, lr.c.get("isTouchScreen")),
-            Wr = (0, Lr.m)(rr.action);
-          null === Zr && null === Wr && console.warn(`No key binding found for action: ${rr.action}`), rr = {
-            str: null !== Zr && void 0 !== Zr ? Zr : (0, Lr.j)(Wr),
-            style: rr.style
+          const Wd = (0, Bd.w)(dd.action, Sd.e.get("isTouchScreen")),
+            Fd = (0, Bd.u)(dd.action);
+          null === Wd && null === Fd && console.warn(`No key binding found for action: ${dd.action}`), dd = {
+            str: null !== Wd && void 0 !== Wd ? Wd : (0, Bd.r)(Fd),
+            style: dd.style
           }
         }
-        let Ir;
-        return Ir = "string" !== typeof rr && "str" in rr ? rr : {
-            str: rr
-          }, null !== (Qr = Ir.style) && void 0 !== Qr && Qr.fontSize ? Ir.style.fontSize.endsWith("px") || console.warn(new Error("Canvas text font size should be in px").stack) : Ir.style ? Ir.style.fontSize = `${Sr}px` : Ir.style = {
-            fontSize: `${Sr}px`
+        let Kd;
+        return Kd = "string" !== typeof dd && "str" in dd ? dd : {
+            str: dd
+          }, null !== (md = Kd.style) && void 0 !== md && md.fontSize ? Kd.style.fontSize.endsWith("px") || console.warn(new Error("Canvas text font size should be in px").stack) : Kd.style ? Kd.style.fontSize = `${Od}px` : Kd.style = {
+            fontSize: `${Od}px`
           },
-          function(rr) {
-            if ("object" !== typeof rr.str || !("translationKey" in rr.str)) return [rr];
-            const Sr = Wr.f.get().getCurrentLanguageCode(),
-              Qr = (0, Zr.p)(rr.str.params, Br.b.shown),
-              ar = (0, Zr.v)(Sr, rr.str.translationKey, Qr);
-            if (ar.every((rr => "string" === typeof rr))) return [rr];
-            return ar.map((Sr => "string" === typeof Sr ? {
-              str: Sr,
-              style: rr.style
+          function(dd) {
+            if ("object" !== typeof dd.str || !("translationKey" in dd.str)) return [dd];
+            const Od = Fd.f.get().getCurrentLanguageCode(),
+              md = (0, Wd.s)(dd.str.params, Ed.c.shown),
+              Rd = (0, Wd.x)(Od, dd.str.translationKey, md);
+            if (Rd.every((dd => "string" === typeof dd))) return [dd];
+            return Rd.map((Od => "string" === typeof Od ? {
+              str: Od,
+              style: dd.style
             } : {
-              icon: Sr.icon,
+              icon: Od.icon,
               style: {
-                fontSize: rr.style.fontSize,
-                opacity: rr.style.opacity
+                fontSize: dd.style.fontSize,
+                opacity: dd.style.opacity
               }
             }))
-          }(Ir)
+          }(Kd)
       }))
     }
 
-    function ir(rr) {
-      const Sr = Object.keys(rr).length;
+    function Dd(dd) {
+      const Od = Object.keys(dd).length;
       return {
-        width: Mr.EFFECT_ICON_SIZE * Sr,
-        height: Sr > 0 ? Mr.EFFECT_ICON_SIZE : 0
+        width: Ld.EFFECT_ICON_SIZE * Od,
+        height: Od > 0 ? Ld.EFFECT_ICON_SIZE : 0
       }
     }
 
-    function wr(rr) {
-      return rr && void 0 !== rr.str
+    function ed(dd) {
+      return dd && void 0 !== dd.str
     }
 
-    function cr(rr) {
-      return rr && "object" === typeof rr && "icon" in rr && !("mainRGB" in rr)
+    function Id(dd) {
+      return dd && "object" === typeof dd && "icon" in dd && !("mainRGB" in dd)
     }
 
-    function Fr(rr) {
-      return rr && "object" === typeof rr && "mainRGB" in rr
+    function ld(dd) {
+      return dd && "object" === typeof dd && "mainRGB" in dd
     }
 
-    function or(rr) {
-      var Sr, Qr;
-      const Zr = null !== (Sr = wr(rr) ? null === (Qr = rr.style) || void 0 === Qr ? void 0 : Qr.fontSize : void 0) && void 0 !== Sr ? Sr : `${Mr.DEFAULT_FONT_SIZE}px`;
-      return Gr.text(Number(Zr.replace("px", "")))
+    function Cd(dd) {
+      var Od, md;
+      const Wd = null !== (Od = ed(dd) ? null === (md = dd.style) || void 0 === md ? void 0 : md.fontSize : void 0) && void 0 !== Od ? Od : `${Ld.DEFAULT_FONT_SIZE}px`;
+      return Pd.text(Number(Wd.replace("px", "")))
     }
 
-    function br(rr) {
-      var Sr;
-      const Qr = null !== (Sr = Object.hasOwn(Rr.d, rr) ? Rr.d[rr] : null) && void 0 !== Sr ? Sr : (0, jr.e)(rr, (0, jr.m)(rr));
-      return Qr || console.warn(`Unknown rank icon "${rr}" \u2014 not in the bundled Font Awesome subset.`), Qr
+    function Zd(dd) {
+      var Od;
+      const md = null !== (Od = Object.hasOwn(rd.d, dd) ? rd.d[dd] : null) && void 0 !== Od ? Od : (0, Xd.e)(dd, (0, Xd.m)(dd));
+      return md || console.warn(`Unknown rank icon "${dd}" \u2014 not in the bundled Font Awesome subset.`), md
     }
 
-    function Jr(rr) {
-      return Fr(rr) ? "" : Dr(rr)
+    function kd(dd) {
+      return ld(dd) ? "" : fd(dd)
     }
 
-    function Dr(rr) {
-      if (!wr(rr)) return "";
-      if ("string" === typeof rr.str) return rr.str;
-      if ("translationKey" in rr.str) {
-        const Sr = Wr.f.get().getCurrentLanguageCode(),
-          Qr = (0, Zr.p)(rr.str.params, Br.b.shown);
-        return (0, Zr.z)(Sr, rr.str.translationKey, Qr)
+    function fd(dd) {
+      if (!ed(dd)) return "";
+      if ("string" === typeof dd.str) return dd.str;
+      if ("translationKey" in dd.str) {
+        const Od = Fd.f.get().getCurrentLanguageCode(),
+          md = (0, Wd.s)(dd.str.params, Ed.c.shown);
+        return (0, Wd.B)(Od, dd.str.translationKey, md)
       }
-      return "entityName" in rr.str ? (0, yr.c)(rr.str.entityName, Br.b.shown) : ""
+      return "entityName" in dd.str ? (0, wd.e)(dd.str.entityName, Ed.c.shown) : ""
     }
 
-    function dr(rr, Sr) {
-      if ((0, Kr.L)(rr) || 0 === rr.length) return {
+    function Md(dd, Od) {
+      if ((0, gd.O)(dd) || 0 === dd.length) return {
         width: 0,
         height: 0,
         sizeCache: []
       };
-      let Qr = 0;
-      for (const jr of rr) {
-        const rr = ES(jr);
-        Qr = Math.max(Qr, rr)
+      let md = 0;
+      for (const Xd of dd) {
+        const dd = tO(Xd);
+        md = Math.max(md, dd)
       }
-      const Zr = Qr + Mr.VERTICAL_PADDING,
-        Wr = [];
-      let ar = 0;
-      ar += rS(void 0, rr[0]);
-      for (let jr = 0; jr < rr.length; jr++) {
-        const Qr = rr[jr],
-          Zr = {
-            x: ar,
+      const Wd = md + Ld.VERTICAL_PADDING,
+        Fd = [];
+      let Rd = 0;
+      Rd += mO(void 0, dd[0]);
+      for (let Xd = 0; Xd < dd.length; Xd++) {
+        const md = dd[Xd],
+          Wd = {
+            x: Rd,
             width: 0
           };
-        ar += sr(Qr, Sr), ar += rS(Qr, rr[jr + 1]), Zr.width = ar - Zr.x, Wr.push(Zr)
+        Rd += dO(md, Od), Rd += mO(md, dd[Xd + 1]), Wd.width = Rd - Wd.x, Fd.push(Wd)
       }
       return {
-        width: ar,
-        height: Zr,
-        sizeCache: Wr
+        width: Rd,
+        height: Wd,
+        sizeCache: Fd
       }
     }
 
-    function sr(rr, Sr) {
-      if (cr(rr)) return ES(rr);
-      if (Fr(rr)) return function(rr) {
-        const Sr = br(rr);
-        if (!Sr) return kr;
-        const [Qr, Zr] = Sr.icon;
-        return kr * (Qr / Zr)
-      }(rr.icon) + Mr.HORIZONTAL_PADDING;
-      const Qr = or(rr);
-      return function(rr, Sr, Qr) {
-        return Qr.font = Sr, Qr.measureText(rr).width
-      }(Dr(rr), Qr, Sr)
+    function dO(dd, Od) {
+      if (Id(dd)) return tO(dd);
+      if (ld(dd)) return function(dd) {
+        const Od = Zd(dd);
+        if (!Od) return zd;
+        const [md, Wd] = Od.icon;
+        return zd * (md / Wd)
+      }(dd.icon) + Ld.HORIZONTAL_PADDING;
+      const md = Cd(dd);
+      return function(dd, Od, md) {
+        return md.font = Od, md.measureText(dd).width
+      }(fd(dd), md, Od)
     }
 
-    function ur(rr) {
-      return wr(rr) || cr(rr)
+    function OO(dd) {
+      return ed(dd) || Id(dd)
     }
 
-    function rS(rr, Sr) {
-      const Qr = ur(rr),
-        Zr = ur(Sr);
-      return void 0 === rr && !Zr || !Qr && void 0 === Sr ? 0 : Qr !== Zr ? .5 * Mr.HORIZONTAL_PADDING : 0
+    function mO(dd, Od) {
+      const md = OO(dd),
+        Wd = OO(Od);
+      return void 0 === dd && !Wd || !md && void 0 === Od ? 0 : md !== Wd ? .5 * Ld.HORIZONTAL_PADDING : 0
     }
-    let SS;
+    let WO;
 
-    function QS() {
-      return SS ??= document.createElement("canvas").getContext("2d"), SS
+    function FO() {
+      return WO ??= document.createElement("canvas").getContext("2d"), WO
     }
-    const ZS = () => 0;
+    const RO = () => 0;
 
-    function WS(rr, Sr, Qr, Zr, Wr) {
-      let ar = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : ZS;
-      Sr += rS(void 0, rr[0]);
-      for (let jr = 0; jr < rr.length; jr++) {
-        const Ir = rr[jr],
-          fr = aS(Ir, Sr, Qr, Zr, Wr, void 0, ar);
-        Sr += 0 === fr ? 0 : fr + rS(Ir, rr[jr + 1])
+    function XO(dd, Od, md, Wd, Fd) {
+      let Rd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : RO;
+      Od += mO(void 0, dd[0]);
+      for (let Xd = 0; Xd < dd.length; Xd++) {
+        const Kd = dd[Xd],
+          hd = KO(Kd, Od, md, Wd, Fd, void 0, Rd);
+        Od += 0 === hd ? 0 : hd + mO(Kd, dd[Xd + 1])
       }
     }
 
-    function aS(rr, Sr, Qr, Zr, Wr, jr) {
-      var xr;
-      let mr = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : ZS;
-      if (cr(rr)) {
-        const Zr = ES(rr);
-        return function(rr, Sr, Qr, Zr, Wr) {
-          var ar;
-          let jr = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : ZS;
-          const xr = (0, pr.h)(Wr);
-          Qr += Mr.VERTICAL_PADDING / 2;
-          const mr = jr(),
-            Nr = (0, Xr.p)(rr.icon),
-            Ur = rr => {
-              if (mr === jr())
-                if (xr.imageSmoothingEnabled = Nr, Nr && rr.width > rr.height) {
-                  const Wr = Zr * rr.height / rr.width;
-                  xr.drawImage(rr, Sr, Qr + (Zr - Wr) / 2, Zr, Wr)
-                } else xr.drawImage(rr, Sr, Qr, Zr, Zr)
+    function KO(dd, Od, md, Wd, Fd, Xd) {
+      var td;
+      let od = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : RO;
+      if (Id(dd)) {
+        const Wd = tO(dd);
+        return function(dd, Od, md, Wd, Fd) {
+          var Rd;
+          let Xd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : RO;
+          const td = (0, Qd.k)(Fd);
+          md += Ld.VERTICAL_PADDING / 2;
+          const od = Xd(),
+            Nd = (0, sd.m)(dd.icon),
+            qd = dd => {
+              if (od === Xd())
+                if (td.imageSmoothingEnabled = Nd, Nd && dd.width > dd.height) {
+                  const Fd = Wd * dd.height / dd.width;
+                  td.drawImage(dd, Od, md + (Wd - Fd) / 2, Wd, Fd)
+                } else td.drawImage(dd, Od, md, Wd, Wd)
             };
-          if (Cr[rr.icon]) return void Ur(Cr[rr.icon]);
-          if (gr[rr.icon]) {
-            const Sr = gr[rr.icon];
-            if (Sr.complete) return void Ur(Sr)
+          if (nd[dd.icon]) return void qd(nd[dd.icon]);
+          if (Gd[dd.icon]) {
+            const Od = Gd[dd.icon];
+            if (Od.complete) return void qd(Od)
           }
-          const tr = (0, Pr.i)(rr.icon, Zr);
-          if (tr) return void Ur(tr);
-          const hr = function(rr) {
-              const Sr = (0, Xr.l)(rr);
-              if (null !== Sr) return {
-                url: Sr,
+          const Hd = (0, ud.g)(dd.icon, Wd);
+          if (Hd) return void qd(Hd);
+          const yd = function(dd) {
+              const Od = (0, sd.i)(dd);
+              if (null !== Od) return {
+                url: Od,
                 type: "padGlyph"
               };
-              if (Ir.b.includes(rr)) return {
-                url: Or.d.getTexture(rr, vr.e.ICON).url,
+              if (Kd.e.includes(dd)) return {
+                url: xd.c.getTexture(dd, Ud.i.ICON).url,
                 type: "ingameIcon"
               };
               {
-                var Qr;
-                const Sr = null === (Qr = Er.h.itemsClient[rr]) || void 0 === Qr ? void 0 : Qr.type;
-                return fS.includes(Sr) ? (console.error(new Error(`Invalid icon type ${Sr} is not supported in nametags`).stack), {
+                var md;
+                const Od = null === (md = vd.g.itemsClient[dd]) || void 0 === md ? void 0 : md.type;
+                return QO.includes(Od) ? (console.error(new Error(`Invalid icon type ${Od} is not supported in nametags`).stack), {
                   url: "",
                   type: ""
-                }) : (0, Hr.e)(Sr) ? {
+                }) : (0, Vd.e)(Od) ? {
                   url: "",
-                  type: Sr
-                } : "GrayscaleArmour" === Sr || fr.c[rr] ? {
-                  url: (0, qr.e)(rr),
-                  type: Sr,
-                  tint: (0, fr.e)(rr)
+                  type: Od
+                } : "GrayscaleArmour" === Od || hd.b[dd] ? {
+                  url: (0, Ad.h)(dd),
+                  type: Od,
+                  tint: (0, hd.c)(dd)
                 } : {
-                  url: (0, qr.e)(rr),
-                  type: Sr
+                  url: (0, Ad.h)(dd),
+                  type: Od
                 }
               }
-            }(rr.icon),
-            zr = hr.tint;
-          let nr = hr.url;
-          if ((0, Hr.e)(null === (ar = Er.h.itemsClient[rr.icon]) || void 0 === ar ? void 0 : ar.type)) {
-            const Sr = rr.icon;
-            if (!Er.h.itemsClient[Sr].itemTexture) return void(0, Pr.e)(Sr, Zr).then((rr => {
-              Ur(rr), (0, Yr.i)(Wr)
+            }(dd.icon),
+            bd = yd.tint;
+          let pd = yd.url;
+          if ((0, Vd.e)(null === (Rd = vd.g.itemsClient[dd.icon]) || void 0 === Rd ? void 0 : Rd.type)) {
+            const Od = dd.icon;
+            if (!vd.g.itemsClient[Od].itemTexture) return void(0, ud.f)(Od, Wd).then((dd => {
+              qd(dd), (0, Td.o)(Fd)
             }), (() => {}));
-            nr = (0, qr.e)(Sr)
+            pd = (0, Ad.h)(Od)
           }
-          if (!nr) return;
-          const er = new Image;
-          Nr && (er.crossOrigin = "anonymous");
-          if (er.src = nr, zr) return void(er.onload = () => {
-            const Sr = function(rr, Sr) {
-              let [Qr, Zr, Wr] = Sr;
-              const ar = document.createElement("canvas");
-              ar.width = rr.naturalWidth, ar.height = rr.naturalHeight;
-              const jr = ar.getContext("2d");
-              return jr.drawImage(rr, 0, 0), jr.globalCompositeOperation = "multiply", jr.fillStyle = `rgb(${Qr}, ${Zr}, ${Wr})`, jr.fillRect(0, 0, ar.width, ar.height), jr.globalCompositeOperation = "destination-in", jr.drawImage(rr, 0, 0), ar
-            }(er, zr);
-            Cr[rr.icon] = Sr, Ur(Sr), (0, Yr.i)(Wr)
+          if (!pd) return;
+          const Yd = new Image;
+          Nd && (Yd.crossOrigin = "anonymous");
+          if (Yd.src = pd, bd) return void(Yd.onload = () => {
+            const Od = function(dd, Od) {
+              let [md, Wd, Fd] = Od;
+              const Rd = document.createElement("canvas");
+              Rd.width = dd.naturalWidth, Rd.height = dd.naturalHeight;
+              const Xd = Rd.getContext("2d");
+              return Xd.drawImage(dd, 0, 0), Xd.globalCompositeOperation = "multiply", Xd.fillStyle = `rgb(${md}, ${Wd}, ${Fd})`, Xd.fillRect(0, 0, Rd.width, Rd.height), Xd.globalCompositeOperation = "destination-in", Xd.drawImage(dd, 0, 0), Rd
+            }(Yd, bd);
+            nd[dd.icon] = Od, qd(Od), (0, Td.o)(Fd)
           });
-          gr[rr.icon] = er, er.onload = () => {
-            Ur(er), (0, Yr.i)(Wr)
+          Gd[dd.icon] = Yd, Yd.onload = () => {
+            qd(Yd), (0, Td.o)(Fd)
           }
-        }(rr, Sr, Qr, Zr, Wr, mr), Zr
+        }(dd, Od, md, Wd, Fd, od), Wd
       }
-      const Nr = (0, pr.h)(Wr);
-      if (Fr(rr)) {
-        const Wr = null !== jr && void 0 !== jr ? jr : sr(rr, Nr);
-        return function(rr, Sr, Qr, Zr, Wr, ar) {
-          var jr, Ir;
-          ar.fillStyle = rr.mainRGB, ar.fillRect(Sr, Qr, Zr, Wr);
-          const fr = br(rr.icon);
-          if (!fr) return;
-          const Er = (null === (jr = rr.nameTag) || void 0 === jr ? void 0 : jr.iconRGB) || "white",
-            pr = (null === (Ir = rr.nameTag) || void 0 === Ir ? void 0 : Ir.iconShadowRGB) || "black",
-            [xr, mr, , , Nr] = fr.icon,
-            Ur = "string" === typeof Nr ? Nr : Nr.join(" "),
-            tr = kr / mr,
-            hr = Sr + (Zr - xr * tr) / 2,
-            zr = Qr + (Wr - kr) / 2,
-            Yr = new Path2D(Ur),
-            nr = ar;
-          for (const er of [-1, 1])
-            for (const rr of [-1, 1]) jS(nr, Yr, hr + Mr.TEXT_SHADOW_WIDTH * er, zr + Mr.TEXT_SHADOW_WIDTH * rr, tr, pr);
-          jS(nr, Yr, hr, zr, tr, Er)
-        }(rr, Sr, Qr, Wr, Zr, Nr), Wr
+      const Nd = (0, Qd.k)(Fd);
+      if (ld(dd)) {
+        const Fd = null !== Xd && void 0 !== Xd ? Xd : dO(dd, Nd);
+        return function(dd, Od, md, Wd, Fd, Rd) {
+          var Xd, Kd;
+          Rd.fillStyle = dd.mainRGB, Rd.fillRect(Od, md, Wd, Fd);
+          const hd = Zd(dd.icon);
+          if (!hd) return;
+          const vd = (null === (Xd = dd.nameTag) || void 0 === Xd ? void 0 : Xd.iconRGB) || "white",
+            Qd = (null === (Kd = dd.nameTag) || void 0 === Kd ? void 0 : Kd.iconShadowRGB) || "black",
+            [td, od, , , Nd] = hd.icon,
+            qd = "string" === typeof Nd ? Nd : Nd.join(" "),
+            Hd = zd / od,
+            yd = Od + (Wd - td * Hd) / 2,
+            bd = md + (Fd - zd) / 2,
+            Td = new Path2D(qd),
+            pd = Rd;
+          for (const Yd of [-1, 1])
+            for (const dd of [-1, 1]) hO(pd, Td, yd + Ld.TEXT_SHADOW_WIDTH * Yd, bd + Ld.TEXT_SHADOW_WIDTH * dd, Hd, Qd);
+          hO(pd, Td, yd, bd, Hd, vd)
+        }(dd, Od, md, Fd, Wd, Nd), Fd
       }
-      const Ur = Dr(rr);
-      if (0 === Ur.length) return 0;
-      const tr = or(rr);
-      Nr.font = tr;
-      const hr = null !== jr && void 0 !== jr ? jr : sr(rr, Nr),
-        zr = wr(rr) && null !== (xr = (0, ar._b)(rr.style)) && void 0 !== xr ? xr : "white";
-      let nr = Qr + Zr;
-      return nr -= Mr.VERTICAL_PADDING, nr += wr(rr) ? 5 : 0,
-        function(rr, Sr, Qr, Zr, Wr, ar, jr) {
-          let Ir = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Mr.TEXT_SHADOW_WIDTH;
-          for (const fr of [-1, 1])
-            for (const Wr of [-1, 1]) IS(jr, rr, Sr + Ir * fr, Qr + Ir * Wr, Zr, ar);
-          IS(jr, rr, Sr, Qr, Zr, Wr)
-        }(Ur, Sr, nr, tr, zr, "black", Nr), hr
+      const qd = fd(dd);
+      if (0 === qd.length) return 0;
+      const Hd = Cd(dd);
+      Nd.font = Hd;
+      const yd = null !== Xd && void 0 !== Xd ? Xd : dO(dd, Nd),
+        bd = ed(dd) && null !== (td = (0, Rd.Yb)(dd.style)) && void 0 !== td ? td : "white";
+      let pd = md + Wd;
+      return pd -= Ld.VERTICAL_PADDING, pd += ed(dd) ? 5 : 0,
+        function(dd, Od, md, Wd, Fd, Rd, Xd) {
+          let Kd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Ld.TEXT_SHADOW_WIDTH;
+          for (const hd of [-1, 1])
+            for (const Fd of [-1, 1]) vO(Xd, dd, Od + Kd * hd, md + Kd * Fd, Wd, Rd);
+          vO(Xd, dd, Od, md, Wd, Fd)
+        }(qd, Od, pd, Hd, bd, "black", Nd), yd
     }
 
-    function jS(rr, Sr, Qr, Zr, Wr, ar) {
-      rr.save(), rr.translate(Qr, Zr), rr.scale(Wr, Wr), rr.fillStyle = ar, rr.fill(Sr), rr.restore()
+    function hO(dd, Od, md, Wd, Fd, Rd) {
+      dd.save(), dd.translate(md, Wd), dd.scale(Fd, Fd), dd.fillStyle = Rd, dd.fill(Od), dd.restore()
     }
 
-    function IS(rr, Sr, Qr, Zr, Wr, ar) {
-      rr.font = Wr, rr.fillStyle = ar, rr.fillText(Sr, Qr, Zr)
+    function vO(dd, Od, md, Wd, Fd, Rd) {
+      dd.font = Fd, dd.fillStyle = Rd, dd.fillText(Od, md, Wd)
     }
-    const fS = ["Gun"];
+    const QO = ["Gun"];
 
-    function ES(rr) {
-      if (wr(rr) || cr(rr)) {
-        var Sr, Qr;
-        const Zr = null !== (Sr = null === (Qr = rr.style) || void 0 === Qr ? void 0 : Qr.fontSize) && void 0 !== Sr ? Sr : `${Mr.DEFAULT_FONT_SIZE}px`;
-        return Number(Zr.replace("px", "")) || Mr.DEFAULT_FONT_SIZE
+    function tO(dd) {
+      if (ed(dd) || Id(dd)) {
+        var Od, md;
+        const Wd = null !== (Od = null === (md = dd.style) || void 0 === md ? void 0 : md.fontSize) && void 0 !== Od ? Od : `${Ld.DEFAULT_FONT_SIZE}px`;
+        return Number(Wd.replace("px", "")) || Ld.DEFAULT_FONT_SIZE
       }
-      return Mr.DEFAULT_FONT_SIZE
+      return Ld.DEFAULT_FONT_SIZE
     }
 
-    function pS(rr, Sr, Qr) {
-      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-        Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-        ar = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      const jr = rr.Ox.eC(),
-        Ir = (0, Yr.f)(rr, `${Qr}Tex`, Zr, Wr, {
-          mipped: xr.g.nearestLinearMipLinear,
-          unmipped: xr.g.nearestLinearMipNearest
+    function oO(dd, Od, md) {
+      let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+        Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+        Rd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      const Xd = dd.gt.zV(),
+        Kd = (0, Td.g)(dd, `${md}Tex`, Wd, Fd, {
+          mipped: td.g.nearestLinearMipLinear,
+          unmipped: td.g.nearestLinearMipNearest
         }),
-        fr = (0, mr.p)(rr.Ox, Qr, (0, Nr.h)({
+        hd = (0, od.p)(dd.gt, md, (0, Nd.j)({
           width: 1,
           height: 1
         }));
-      fr.metadata = new rr.Ox.rh, fr.metadata[Ur.C] = !0, fr.billboardMode = tr.d.BILLBOARDMODE_ALL, fr.renderingGroupId = hr.c;
-      const Er = rr.YB.add([0, 0, 0], 1, 1, fr, [0, 0, 0]);
-      let pr;
-      rr.YB.gM(Er, rr.YB.names.pB, {
-        nU: Sr
+      hd.metadata = new dd.gt.Wy, hd.metadata[qd.E] = !0, hd.billboardMode = Hd.c.BILLBOARDMODE_ALL, hd.renderingGroupId = yd.b;
+      const vd = dd.qE.add([0, 0, 0], 1, 1, hd, [0, 0, 0]);
+      let Qd;
+      dd.qE.yG(vd, dd.qE.names.XE, {
+        xq: Od
       });
       const {
-        mirror: Kr
-      } = (0, nr.b)({
-        name: `${Qr}Mat`,
-        Dt: jr,
+        mirror: gd
+      } = (0, pd.d)({
+        name: `${md}Mat`,
+        MH: Xd,
         sets: {
           specularColor: [0, 0, 0],
           ambientColor: [1.3, 1.3, 1.3],
           emissiveColor: [1, 1, 1],
-          ...(0, Yr.h)(Ir)
+          ...(0, Td.k)(Kd)
         },
-        features: Sr => {
-          (0, Yr.b)(Sr, "planes"), pr = (0, er.d)(Sr, rr.Ox, ar ? {
+        features: Od => {
+          (0, Td.d)(Od, "planes"), Qd = (0, Yd.e)(Od, dd.gt, Rd ? {
             x: 1,
             y: 1,
             z: 1,
@@ -830,115 +830,115 @@ export const modules = {
         unrendered: !0,
         freeze: !0
       });
-      return fr.material = Kr, ar ? rr.YB.rQr(Er).Tfr = !1 : (0, zr.h)(fr), fr.lC.add((() => {
-        Kr.dispose(!1, !0)
+      return hd.material = gd, Rd ? dd.qE.Vmd(vd).xhd = !1 : (0, bd.g)(hd), hd.cV.add((() => {
+        gd.dispose(!1, !0)
       })), {
-        planeEId: Er,
-        plane: fr,
-        texture: Ir,
-        lightState: pr
+        planeEId: vd,
+        plane: hd,
+        texture: Kd,
+        lightState: Qd
       }
     }
 
-    function xS(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Zr = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const Wr = (0, hr.m)(Sr, Qr, Zr);
-      return rr.renderingGroupId = Wr ? hr.c : hr.h, Wr
+    function NO(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Wd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const Fd = (0, yd.i)(Od, md, Wd);
+      return dd.renderingGroupId = Fd ? yd.b : yd.d, Fd
     }
   },
-  40255: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Er,
-      f: () => jr,
-      h: () => fr,
-      i: () => Ir
+  40269: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => vd,
+      g: () => Xd,
+      k: () => hd,
+      o: () => Kd
     });
-    var Zr = Qr(38762),
-      Wr = Qr(38736),
-      ar = Qr(40263);
+    var Wd = md(38799),
+      Fd = md(38779),
+      Rd = md(40272);
 
-    function jr(rr, Sr, Qr, Wr, ar) {
-      const jr = function(rr) {
-          return !rr.Ox.engine.needPOTTextures
-        }(rr),
-        Ir = jr ? ar.mipped : ar.unmipped;
-      return (0, Zr.k)(rr.Ox.eC(), Sr, {
-        width: Qr,
-        height: Wr,
-        mipmaps: jr,
-        samplingMode: Ir,
+    function Xd(dd, Od, md, Fd, Rd) {
+      const Xd = function(dd) {
+          return !dd.gt.engine.needPOTTextures
+        }(dd),
+        Kd = Xd ? Rd.mipped : Rd.unmipped;
+      return (0, Wd.m)(dd.gt.zV(), Od, {
+        width: md,
+        height: Fd,
+        mipmaps: Xd,
+        samplingMode: Kd,
         hasAlpha: !0
       })
     }
 
-    function Ir(rr) {
-      (0, Zr.R)(rr, !0, !rr.sampler.noMipmap)
+    function Kd(dd) {
+      (0, Wd.T)(dd, !0, !dd.sampler.noMipmap)
     }
 
-    function fr(rr) {
+    function hd(dd) {
       return {
-        diffuseTexture: rr,
+        diffuseTexture: dd,
         useAlphaFromDiffuseTexture: !0,
-        transparencyMode: Wr.s.alphaTestAndBlend,
+        transparencyMode: Fd.r.alphaTestAndBlend,
         alphaCutOff: .05,
-        alphaMode: Wr.e.premultiplied,
+        alphaMode: Fd.d.premultiplied,
         forceDepthWrite: !0
       }
     }
 
-    function Er(rr, Sr) {
-      rr.diffuseTexture.sampler.noMipmap || (0, Wr.t)(rr, ar.h, {
-        lodBias: ar.d[Sr]
+    function vd(dd, Od) {
+      dd.diffuseTexture.sampler.noMipmap || (0, Fd.t)(dd, Rd.f, {
+        lodBias: Rd.b[Od]
       })
     }
   },
-  40327: (rr, Sr, Qr) => {
-    function Zr(rr, Sr) {
-      return "object" === typeof rr && null !== rr ? Object.assign(rr, {
-        startStep: Sr
-      }) : rr
+  40327: (dd, Od, md) => {
+    function Wd(dd, Od) {
+      return "object" === typeof dd && null !== dd ? Object.assign(dd, {
+        startStep: Od
+      }) : dd
     }
 
-    function Wr(rr) {
-      return "object" === typeof rr && null !== rr && "startStep" in rr ? rr.startStep : null
+    function Fd(dd) {
+      return "object" === typeof dd && null !== dd && "startStep" in dd ? dd.startStep : null
     }
-    Qr.d(Sr, {
-      e: () => Wr,
-      f: () => Zr
+    md.d(Od, {
+      b: () => Fd,
+      c: () => Wd
     })
   },
-  40378: (rr, Sr, Qr) => {
-    var Zr = {
-      "./cape_cow_cream.png": 29026,
-      "./cape_cow_normal.png": 29035,
-      "./cape_creator_level1.png": 29043,
-      "./cape_creator_level2.png": 29051,
-      "./cape_creator_level3.png": 29055,
-      "./cape_none.png": 29061,
-      "./cape_pig.png": 29065,
-      "./cape_sheep.png": 29073,
-      "./cape_super.png": 29079,
-      "./cape_super_inverted.png": 29087,
-      "./cape_youtuber.png": 29089
+  40376: (dd, Od, md) => {
+    var Wd = {
+      "./cape_cow_cream.png": 29157,
+      "./cape_cow_normal.png": 29162,
+      "./cape_creator_level1.png": 29171,
+      "./cape_creator_level2.png": 29173,
+      "./cape_creator_level3.png": 29176,
+      "./cape_none.png": 29178,
+      "./cape_pig.png": 29184,
+      "./cape_sheep.png": 29187,
+      "./cape_super.png": 29194,
+      "./cape_super_inverted.png": 29200,
+      "./cape_youtuber.png": 29204
     };
 
-    function Wr(rr) {
-      var Sr = ar(rr);
-      return Qr(Sr)
+    function Fd(dd) {
+      var Od = Rd(dd);
+      return md(Od)
     }
 
-    function ar(rr) {
-      if (!Qr.o(Zr, rr)) {
-        var Sr = new Error("Cannot find module '" + rr + "'");
-        throw Sr.code = "MODULE_NOT_FOUND", Sr
+    function Rd(dd) {
+      if (!md.o(Wd, dd)) {
+        var Od = new Error("Cannot find module '" + dd + "'");
+        throw Od.code = "MODULE_NOT_FOUND", Od
       }
-      return Zr[rr]
+      return Wd[dd]
     }
-    Wr.keys = function() {
-      return Object.keys(Zr)
-    }, Wr.resolve = ar, rr.exports = Wr, Wr.id = 40378
+    Fd.keys = function() {
+      return Object.keys(Wd)
+    }, Fd.resolve = Rd, dd.exports = Fd, Fd.id = 40376
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

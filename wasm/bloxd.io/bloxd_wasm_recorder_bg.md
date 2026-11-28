@@ -1,13 +1,17 @@
 # WASM module: `bloxd_wasm_recorder_bg`
 
-> environment **bloxd.io** · build `fl4vv.bd3c59ce` · analyzed 2026-11-28T08:15:42+09:00
-> source: https://bloxd.io/static/media/bloxd_wasm_recorder_bg.f5359b830e339e18ba6d.wasm
-> 193,653 bytes (189.1 KB) · sha256 `92aabaf952eabf5e…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **bloxd.io** · build `yteou.5361c997` · analyzed 2026-11-28T13:51:29+09:00
+> source: https://bloxd.io/static/media/bloxd_wasm_recorder_bg.57800feae4e04a63a6b7.wasm
+> 193,989 bytes (189.4 KB) · sha256 `6c20921e31a8867a…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- name-section module id `52d298b89a25580e.1078` → `4135a7316ce1fd22.1078` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 193,653 → 193,989 bytes (+336)
+- data bytes 8,113 → 8,449
+- name-section module id `4135a7316ce1fd22.1078` → `61f9981c799734f6.1078` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/26 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `assertion failed: bits <= ((1u32 << len) - 1u32)`; `cannot modify the panic hook from a panicking threads`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
+- removed embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/`; `AccessError`
 
 ## Overview
 
@@ -18,10 +22,10 @@
 | Code bytes (function bodies) | 183,469 (179.2 KB) |
 | Total local variables | 1,978 |
 | Instructions (scanable bodies) | 89,508 |
-| Data segments / bytes | 39 / 8,113 |
+| Data segments / bytes | 39 / 8,449 |
 | Element segments / entries | 1 / 54 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `4135a7316ce1fd22.1078` |
+| name-section module id | `61f9981c799734f6.1078` |
 | Sections | 12 |
 
 ## Sections
@@ -38,7 +42,7 @@
 | 9 | element | 109 | 1 |
 | 12 | datacount | 1 | — |
 | 10 | code | 184,107 | 424 |
-| 11 | data | 8,434 | 39 |
+| 11 | data | 8,770 | 39 |
 | 0 | custom:name | 29 | — |
 
 ## Types
@@ -51,11 +55,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `cKxT.KTum` | func | `() -> (f64)` |
-| 1 | `cKxT.PEwc` | func | `(i32 i32) -> ()` |
-| 2 | `cKxT.g1KC` | func | `(i32 i32) -> ()` |
-| 3 | `cKxT.ZmCF` | func | `(i32 i32) -> (i32)` |
-| 4 | `cKxT.ORnr` | func | `() -> (i32)` |
+| 0 | `tMWP.jJ6M` | func | `() -> (f64)` |
+| 1 | `tMWP.n1tJ` | func | `(i32 i32) -> ()` |
+| 2 | `tMWP.Y9GI` | func | `(i32 i32) -> ()` |
+| 3 | `tMWP.sP2y` | func | `(i32 i32) -> (i32)` |
+| 4 | `tMWP.mwY5` | func | `() -> (i32)` |
 
 ## Exports
 
@@ -63,32 +67,32 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `kbZ0` | func | 415 | `(i32) -> (i32)` |
-| `ABz1` | func | 417 | `(i32) -> (i32)` |
-| `C8Z9` | func | 258 | `() -> (i32)` |
-| `l8cP` | func | 425 | `() -> (i32)` |
-| `WUYS` | func | 251 | `(i32 i32) -> ()` |
-| `F4bQ` | func | 189 | `(i32 i32 i32) -> (i32)` |
-| `WF2N` | func | 416 | `(i32) -> ()` |
-| `vfZv` | func | 146 | `(i32 i32 i32 i32) -> (i32)` |
-| `I9Tm` | func | 317 | `(i32 i32) -> (i32)` |
-| `hYWI` | func | 423 | `() -> ()` |
-| `rjQn` | global | 1 | `` |
-| `Y27G` | func | 422 | `(i32) -> (i32)` |
-| `qGvy` | func | 424 | `() -> (i32)` |
-| `PKxT` | func | 420 | `(i32) -> (i32)` |
-| `n4dt` | func | 421 | `(i32) -> (i32)` |
-| `WIJm` | func | 256 | `(i32 i32) -> (i32)` |
-| `Bnzg` | func | 259 | `(i32 i32) -> (i32)` |
-| `tgn8` | func | 328 | `(i32) -> (i32)` |
-| `cBEG` | func | 329 | `(i32 i32 i32 i32) -> (i32)` |
-| `Uonh` | func | 418 | `(i32) -> (i32)` |
+| `j4Q9` | func | 328 | `(i32) -> (i32)` |
+| `OY5q` | func | 317 | `(i32 i32) -> (i32)` |
+| `dqYE` | func | 419 | `(i32) -> (i32)` |
+| `RrSo` | global | 1 | `` |
+| `BAx9` | func | 189 | `(i32 i32 i32) -> (i32)` |
+| `OQD0` | func | 146 | `(i32 i32 i32 i32) -> (i32)` |
+| `Ltrf` | func | 417 | `(i32) -> (i32)` |
+| `tIhL` | func | 251 | `(i32 i32) -> ()` |
 | `memory` | memory | 0 | `` |
-| `IheL` | func | 345 | `(i32 i32 i32) -> (i32 i32)` |
-| `y2oM` | func | 257 | `(i32 i32) -> (i32)` |
-| `c78D` | global | 2 | `` |
-| `TpM8` | func | 423 | `() -> ()` |
-| `g0p0` | func | 419 | `(i32) -> (i32)` |
+| `t0bL` | func | 423 | `() -> ()` |
+| `OpB2` | func | 422 | `(i32) -> (i32)` |
+| `sSxj` | global | 2 | `` |
+| `swyT` | func | 258 | `() -> (i32)` |
+| `h7Dx` | func | 329 | `(i32 i32 i32 i32) -> (i32)` |
+| `yptR` | func | 425 | `() -> (i32)` |
+| `GG6L` | func | 345 | `(i32 i32 i32) -> (i32 i32)` |
+| `MnWT` | func | 421 | `(i32) -> (i32)` |
+| `TkaQ` | func | 420 | `(i32) -> (i32)` |
+| `sva4` | func | 415 | `(i32) -> (i32)` |
+| `ligO` | func | 418 | `(i32) -> (i32)` |
+| `nlrL` | func | 259 | `(i32 i32) -> (i32)` |
+| `atIh` | func | 416 | `(i32) -> ()` |
+| `Re9A` | func | 424 | `() -> (i32)` |
+| `gvuS` | func | 423 | `() -> ()` |
+| `pyoB` | func | 256 | `(i32 i32) -> (i32)` |
+| `QfZu` | func | 257 | `(i32 i32) -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -96,7 +100,7 @@
 
 - memory 0: min 18 pages · max ∞ · shared=False
 - table 0: funcref · min 55 · max 55
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1122692, `i32` = i32.const 1123184
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1123028, `i32` = i32.const 1123520
 
 ## Functions
 
@@ -158,25 +162,25 @@ Largest functions:
 
 ```
 called `Option::unwrap()` on a `None` value0001020304050607080910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/collections/vec_deque/mod.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/sort/select.rs
 Errornull pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rust
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/collections/vec_deque/mod.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/raw_vec/mod.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/std/src/thread/local.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/vec/mod.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs
 a formatting trait implementation returned an error when the underlying stream did not
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/sort/select.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/raw_vec/mod.rs
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/index.rs
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/thread/local.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/panicking.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/vec/mod.rs
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/string.rs
 d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/deflate/buffer.rs
 d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/deflate/stored.rs
 Hcannot access a Thread Local Storage value during or after destruction: 
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/fmt.rs
 d/index.crates.io-1949cf8c6b5b557f/miniz_oxide-0.9.1/src/deflate/core.rs
 attempted to take ownership of Rust value while it was borrowed
-a Display implementation returned an error unexpectedly
-cannot modify the panic hook from a panicking thread
 ```
 
 ## Opcode histogram (aggregated)

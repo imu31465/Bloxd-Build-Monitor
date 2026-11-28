@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  40858: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => Zr
+  40874: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => Wd
     });
-    const Zr = function(rr, Sr, Qr) {
-      let Zr;
+    const Wd = function(dd, Od, md) {
+      let Wd;
       return {
-        onCreate: rr => {
-          Zr = rr
+        onCreate: dd => {
+          Wd = dd
         },
-        onPlayerAltAction: (rr, Sr, Qr, Wr, ar, jr) => {
-          jr && "Mesh" === Zr.getEntityType(jr) && ("Permanent Upgrades" === Zr.getEntityName(jr) ? Zr.openShop(rr, !1, "Upgrades") : "Items" === Zr.getEntityName(jr) ? Zr.openShop(rr, !1, "Items") : "Prestige" === Zr.getEntityName(jr) && Zr.openShop(rr, !1, "Prestige"))
+        onPlayerAltAction: (dd, Od, md, Fd, Rd, Xd) => {
+          Xd && "Mesh" === Wd.getEntityType(Xd) && ("Permanent Upgrades" === Wd.getEntityName(Xd) ? Wd.openShop(dd, !1, "Upgrades") : "Items" === Wd.getEntityName(Xd) ? Wd.openShop(dd, !1, "Items") : "Prestige" === Wd.getEntityName(Xd) && Wd.openShop(dd, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

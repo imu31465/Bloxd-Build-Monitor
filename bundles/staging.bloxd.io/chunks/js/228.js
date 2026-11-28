@@ -1,263 +1,263 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  37841: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      GiftOpening: () => aS
+  37935: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      GiftOpening: () => KO
     });
-    var Zr = Qr(72),
-      Wr = Qr(1155),
-      ar = Qr.n(Wr),
-      jr = Qr(1251),
-      Ir = Qr(26),
-      fr = Qr(1605),
-      Er = Qr(35505),
-      pr = Qr(5297),
-      xr = Qr(1576),
-      mr = Qr(1448),
-      Nr = Qr(3362),
-      Ur = Qr(3672),
-      tr = Qr(3320),
-      hr = Qr(1181),
-      zr = Qr(4340),
-      Yr = Qr(1338);
-    const nr = {
+    var Wd = md(66),
+      Fd = md(1155),
+      Rd = md.n(Fd),
+      Xd = md(1238),
+      Kd = md(29),
+      hd = md(1605),
+      vd = md(35582),
+      Qd = md(5194),
+      td = md(1572),
+      od = md(1443),
+      Nd = md(3353),
+      qd = md(3684),
+      Hd = md(3307),
+      yd = md(1186),
+      bd = md(4339),
+      Td = md(1341);
+    const pd = {
       festive: "\ud83c\udf84 \u26c4 \ud83c\udf81",
       sweater: "\u2744"
     };
 
-    function er(rr) {
+    function Yd(dd) {
       let {
-        wrap: Sr,
-        className: Qr,
-        rootRef: Zr,
-        bodyRef: Wr,
-        lidRef: jr,
-        seamRef: Ir
-      } = rr;
-      const fr = nr[Sr];
-      return (0, Yr.jsxs)("div", {
-        className: ar()("GiftBox", `GiftBoxWrap_${Sr}`, Qr),
-        ref: Zr,
-        children: [(0, Yr.jsx)("div", {
+        wrap: Od,
+        className: md,
+        rootRef: Wd,
+        bodyRef: Fd,
+        lidRef: Xd,
+        seamRef: Kd
+      } = dd;
+      const hd = pd[Od];
+      return (0, Td.jsxs)("div", {
+        className: Rd()("GiftBox", `GiftBoxWrap_${Od}`, md),
+        ref: Wd,
+        children: [(0, Td.jsx)("div", {
           className: "GiftBoxPlinth"
-        }), (0, Yr.jsxs)("div", {
+        }), (0, Td.jsxs)("div", {
           className: "GiftBoxBody",
-          ref: Wr,
-          children: [(0, Yr.jsxs)("div", {
+          ref: Fd,
+          children: [(0, Td.jsxs)("div", {
             className: "GiftBoxCube",
-            children: [(0, Yr.jsxs)("div", {
+            children: [(0, Td.jsxs)("div", {
               className: "GiftBoxFace GiftBoxFront",
-              children: [fr && (0, Yr.jsx)("span", {
+              children: [hd && (0, Td.jsx)("span", {
                 className: "GiftBoxPrint",
-                children: fr
-              }), "blocks" === Sr && (0, Yr.jsxs)("svg", {
+                children: hd
+              }), "blocks" === Od && (0, Td.jsxs)("svg", {
                 className: "GiftBoxCracks",
                 viewBox: "0 0 100 80",
                 "aria-hidden": !0,
-                children: [(0, Yr.jsx)("polyline", {
+                children: [(0, Td.jsx)("polyline", {
                   points: "50,0 44,18 56,30 47,48 58,62 52,80"
-                }), (0, Yr.jsx)("polyline", {
+                }), (0, Td.jsx)("polyline", {
                   points: "44,18 24,26 14,44"
-                }), (0, Yr.jsx)("polyline", {
+                }), (0, Td.jsx)("polyline", {
                   points: "56,30 78,36 90,58"
                 })]
               })]
-            }), (0, Yr.jsx)("div", {
+            }), (0, Td.jsx)("div", {
               className: "GiftBoxFace GiftBoxSide"
-            }), (0, Yr.jsxs)("div", {
+            }), (0, Td.jsxs)("div", {
               className: "GiftBoxLid",
-              ref: jr,
-              children: [(0, Yr.jsx)("div", {
+              ref: Xd,
+              children: [(0, Td.jsx)("div", {
                 className: "GiftBoxFace GiftBoxLidFront"
-              }), (0, Yr.jsx)("div", {
+              }), (0, Td.jsx)("div", {
                 className: "GiftBoxFace GiftBoxLidSide"
-              }), (0, Yr.jsx)("div", {
+              }), (0, Td.jsx)("div", {
                 className: "GiftBoxFace GiftBoxLidTop"
-              }), (0, Yr.jsxs)("div", {
+              }), (0, Td.jsxs)("div", {
                 className: "GiftBoxBow",
-                children: [(0, Yr.jsx)("div", {
+                children: [(0, Td.jsx)("div", {
                   className: "GiftBoxBowLoop GiftBoxBowLeft"
-                }), (0, Yr.jsx)("div", {
+                }), (0, Td.jsx)("div", {
                   className: "GiftBoxBowLoop GiftBoxBowRight"
-                }), (0, Yr.jsx)("div", {
+                }), (0, Td.jsx)("div", {
                   className: "GiftBoxBowKnot"
                 })]
               })]
             })]
-          }), (0, Yr.jsx)("div", {
+          }), (0, Td.jsx)("div", {
             className: "GiftBoxSeam",
-            ref: Ir
+            ref: Kd
           })]
         })]
       })
     }
-    var Kr = Qr(5030),
-      yr = Qr(4231),
-      Br = Qr(3043);
+    var gd = md(4977),
+      wd = md(4223),
+      Ed = md(3042);
 
-    function Tr(rr, Sr) {
-      const [Qr] = Sr.cosmeticPacks;
-      return void 0 !== Qr ? (0, Br.j)(Qr) : Sr.superDays > 0 ? rr("paymentHistory:superRankDays", {
-        count: Sr.superDays
-      }) : Sr.hyperDays > 0 ? rr("paymentHistory:hyperRankDays", {
-        count: Sr.hyperDays
-      }) : rr("paymentHistory:premiumCurrency", {
-        count: Sr.premiumCurrency
+    function Jd(dd, Od) {
+      const [md] = Od.cosmeticPacks;
+      return void 0 !== md ? (0, Ed.i)(md) : Od.superDays > 0 ? dd("paymentHistory:superRankDays", {
+        count: Od.superDays
+      }) : Od.hyperDays > 0 ? dd("paymentHistory:hyperRankDays", {
+        count: Od.hyperDays
+      }) : dd("paymentHistory:premiumCurrency", {
+        count: Od.premiumCurrency
       })
     }
 
-    function vr(rr) {
-      var Sr, Qr;
+    function Ud(dd) {
+      var Od, md;
       const {
-        t: Zr
-      } = (0, jr.E)(), Wr = yr.k.find((Sr => Sr.id === rr.message));
+        t: Wd
+      } = (0, Xd.G)(), Fd = wd.j.find((Od => Od.id === dd.message));
       return {
-        message: void 0 === Wr ? null : Zr(Wr.key, {
-          name: rr.recipientName,
-          level: null !== (Sr = rr.senderLevel) && void 0 !== Sr ? Sr : 1,
-          tier: null !== (Qr = rr.tierLabel) && void 0 !== Qr ? Qr : ""
+        message: void 0 === Fd ? null : Wd(Fd.key, {
+          name: dd.recipientName,
+          level: null !== (Od = dd.senderLevel) && void 0 !== Od ? Od : 1,
+          tier: null !== (md = dd.tierLabel) && void 0 !== md ? md : ""
         }),
-        level: null === rr.senderLevel || "levelFlex" === (null === Wr || void 0 === Wr ? void 0 : Wr.kind) ? null : Zr("giftOpening:gifterLevel", {
-          level: rr.senderLevel
+        level: null === dd.senderLevel || "levelFlex" === (null === Fd || void 0 === Fd ? void 0 : Fd.kind) ? null : Wd("giftOpening:gifterLevel", {
+          level: dd.senderLevel
         })
       }
     }
 
-    function Or(rr) {
+    function xd(dd) {
       let {
-        gift: Sr,
-        shown: Qr
-      } = rr;
+        gift: Od,
+        shown: md
+      } = dd;
       const {
-        t: Zr
-      } = (0, jr.E)(), {
-        message: Wr,
-        level: Ir
-      } = vr(Sr);
-      return (0, Yr.jsxs)("div", {
-        className: ar()("GiftOpeningCard", {
-          GiftOpeningCardShown: Qr
+        t: Wd
+      } = (0, Xd.G)(), {
+        message: Fd,
+        level: Kd
+      } = Ud(Od);
+      return (0, Td.jsxs)("div", {
+        className: Rd()("GiftOpeningCard", {
+          GiftOpeningCardShown: md
         }),
-        children: [(0, Yr.jsx)("div", {
+        children: [(0, Td.jsx)("div", {
           className: "GiftOpeningItem SmallTextBold",
-          children: Tr(Zr, Sr.items)
-        }), null !== Wr && (0, Yr.jsx)("div", {
+          children: Jd(Wd, Od.items)
+        }), null !== Fd && (0, Td.jsx)("div", {
           className: "GiftOpeningCardMessage SmallTextLight",
-          children: Wr
-        }), (0, Yr.jsxs)("div", {
+          children: Fd
+        }), (0, Td.jsxs)("div", {
           className: "GiftOpeningFrom SmallTextLight",
-          children: [Sr.senderName, null !== Ir && ` \xb7 ${Ir}`]
+          children: [Od.senderName, null !== Kd && ` \xb7 ${Kd}`]
         })]
       })
     }
 
-    function Lr(rr) {
+    function Bd(dd) {
       let {
-        gift: Sr
-      } = rr;
+        gift: Od
+      } = dd;
       const {
-        message: Qr,
-        level: Zr
-      } = vr(Sr);
-      return (0, Yr.jsxs)(Yr.Fragment, {
-        children: [null !== Qr && (0, Yr.jsx)("div", {
+        message: md,
+        level: Wd
+      } = Ud(Od);
+      return (0, Td.jsxs)(Td.Fragment, {
+        children: [null !== md && (0, Td.jsx)("div", {
           className: "GiftOpeningIntroMessage SmallTextLight",
-          children: `"${Qr}"`
-        }), null !== Zr && (0, Yr.jsx)("div", {
+          children: `"${md}"`
+        }), null !== Wd && (0, Td.jsx)("div", {
           className: "GiftOpeningIntroLevel SmallTextBold",
-          children: Zr
+          children: Wd
         })]
       })
     }
 
-    function lr(rr) {
+    function Sd(dd) {
       let {
-        gift: Sr,
-        preview: Qr,
-        analyticsValue: Zr,
-        onReplay: Wr,
-        onClose: ar
-      } = rr;
+        gift: Od,
+        preview: md,
+        analyticsValue: Wd,
+        onReplay: Fd,
+        onClose: Rd
+      } = dd;
       const {
-        t: Er
-      } = (0, jr.E)(), {
-        gameState: pr
-      } = (0, Ir.n)(["gameState"]), Nr = !Qr && Sr.items.cosmeticPacks.length > 0 && !(0, Ir.g)(pr);
-      return (0, Yr.jsxs)("div", {
+        t: vd
+      } = (0, Xd.G)(), {
+        gameState: Qd
+      } = (0, Kd.p)(["gameState"]), Nd = !md && Od.items.cosmeticPacks.length > 0 && !(0, Kd.f)(Qd);
+      return (0, Td.jsxs)("div", {
         className: "GiftOpeningButtons",
-        children: [Qr && (0, Yr.jsxs)(xr.h, {
+        children: [md && (0, Td.jsxs)(td.g, {
           className: "GiftOpeningButton",
           touchPressOn: "pointerup",
-          onClick: Wr,
-          children: [(0, Yr.jsx)(mr.c, {
+          onClick: Fd,
+          children: [(0, Td.jsx)(od.c, {
             name: "rotate-right"
-          }), " ", Er("giftOpening:replay")]
-        }), Nr && (0, Yr.jsx)(xr.h, {
+          }), " ", vd("giftOpening:replay")]
+        }), Nd && (0, Td.jsx)(td.g, {
           className: "GiftOpeningButton",
           padDefaultFocus: !0,
           touchPressOn: "pointerup",
           onClick: () => {
-            (0, fr.reportAnalyticsClick)({
+            (0, hd.reportAnalyticsClick)({
               id: "gift.open_customise",
-              value: Zr
-            }), (0, Br.p)(), ar()
+              value: Wd
+            }), (0, Ed.q)(), Rd()
           },
-          children: Er("general:customize")
-        }), (0, Yr.jsx)(xr.h, {
+          children: vd("general:customize")
+        }), (0, Td.jsx)(td.g, {
           className: "GiftOpeningButton",
-          padDefaultFocus: !Nr,
+          padDefaultFocus: !Nd,
           touchPressOn: "pointerup",
-          onClick: ar,
-          children: Er(Qr ? "giftOpening:back" : "giftOpening:done")
+          onClick: Rd,
+          children: vd(md ? "giftOpening:back" : "giftOpening:done")
         })]
       })
     }
-    var Xr = Qr(37843);
-    const Pr = {
+    var sd = md(37939);
+    const ud = {
         1: "harp_pling",
         2: "exp_levelup",
         3: "trumpetFlare"
       },
-      Hr = {
+      Vd = {
         wobble: "chestClose",
         pop: "chestOpen",
         sparkle: "exp_collect"
       },
-      qr = {
+      Ad = {
         wobble: .55,
         pop: .8,
         sparkle: .4,
         sting: .7
       };
 
-    function Rr(rr, Sr) {
-      return "sting" === rr ? Pr[Sr] : Hr[rr]
+    function rd(dd, Od) {
+      return "sting" === dd ? ud[Od] : Vd[dd]
     }
 
-    function gr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+    function Gd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
       try {
-        Xr.b.play(Rr(rr, Sr), qr[rr]).rate(Math.pow(2, 2 * Qr / 12))
-      } catch (Zr) {
-        console.warn("[gift-opening] a sound failed to play", Zr)
+        sd.d.play(rd(dd, Od), Ad[dd]).rate(Math.pow(2, 2 * md / 12))
+      } catch (Wd) {
+        console.warn("[gift-opening] a sound failed to play", Wd)
       }
     }
-    const Cr = "cubic-bezier(0.22, 1, 0.36, 1)";
-    class Mr {
-      constructor(rr, Sr) {
-        this.parts = rr, this.options = Sr, this.phase = "arrive", this.timers = [], this.animations = [], this.opened = !1, this.popped = !1
+    const nd = "cubic-bezier(0.22, 1, 0.36, 1)";
+    class Ld {
+      constructor(dd, Od) {
+        this.parts = dd, this.options = Od, this.phase = "arrive", this.timers = [], this.animations = [], this.opened = !1, this.popped = !1
       }
-      setPhase(rr) {
-        this.phase = rr, this.options.onPhase(rr)
+      setPhase(dd) {
+        this.phase = dd, this.options.onPhase(dd)
       }
-      at(rr, Sr) {
-        this.timers.push(setTimeout(Sr, rr))
+      at(dd, Od) {
+        this.timers.push(setTimeout(Od, dd))
       }
-      animate(rr, Sr, Qr) {
-        this.animations.push(rr.animate(Sr, {
+      animate(dd, Od, md) {
+        this.animations.push(dd.animate(Od, {
           fill: "forwards",
-          ...Qr
+          ...md
         }))
       }
       markOpened() {
@@ -265,9 +265,9 @@ export const modules = {
       }
       arrive() {
         const {
-          timeline: rr,
-          reducedMotion: Sr
-        } = this.options, Qr = Sr ? [{
+          timeline: dd,
+          reducedMotion: Od
+        } = this.options, md = Od ? [{
           opacity: 0
         }, {
           opacity: 1
@@ -285,10 +285,10 @@ export const modules = {
         }, {
           transform: "none"
         }];
-        this.animate(this.parts.body, Qr, {
-          duration: Sr ? 200 : rr.arriveMs,
+        this.animate(this.parts.body, md, {
+          duration: Od ? 200 : dd.arriveMs,
           fill: "none"
-        }), this.at(Sr ? 200 : rr.arriveMs, (() => {
+        }), this.at(Od ? 200 : dd.arriveMs, (() => {
           this.setPhase("wait")
         }))
       }
@@ -318,105 +318,105 @@ export const modules = {
           transform: "none"
         }], {
           duration: 300
-        }), gr("sting", this.options.tier), this.at(300, (() => {
+        }), Gd("sting", this.options.tier), this.at(300, (() => {
           this.setPhase("done")
         }))
       }
       charge() {
         const {
-          timeline: rr,
-          tier: Sr,
-          fx: Qr
+          timeline: dd,
+          tier: Od,
+          fx: md
         } = this.options;
         this.setPhase("charge");
-        const Zr = rr.wobbles,
-          Wr = rr.burstAt,
-          ar = (rr.chargeMs - 80) / Zr.length,
-          jr = [{
+        const Wd = dd.wobbles,
+          Fd = dd.burstAt,
+          Rd = (dd.chargeMs - 80) / Wd.length,
+          Xd = [{
             transform: "none",
             offset: 0
           }, {
             transform: "scale(1.06, 0.92)",
-            offset: 80 / Wr
+            offset: 80 / Fd
           }];
-        Zr.forEach(((rr, Qr) => {
-          const Zr = 80 + Qr * ar;
-          jr.push({
-            transform: `rotate(${rr}deg) translateX(${.3*rr}px)`,
-            offset: (Zr + .3 * ar) / Wr
-          }), jr.push({
-            transform: `rotate(${-rr}deg) translateX(${.3*-rr}px)`,
-            offset: (Zr + .75 * ar) / Wr
-          }), this.at(Zr, (() => {
-            gr("wobble", Sr, Qr)
+        Wd.forEach(((dd, md) => {
+          const Wd = 80 + md * Rd;
+          Xd.push({
+            transform: `rotate(${dd}deg) translateX(${.3*dd}px)`,
+            offset: (Wd + .3 * Rd) / Fd
+          }), Xd.push({
+            transform: `rotate(${-dd}deg) translateX(${.3*-dd}px)`,
+            offset: (Wd + .75 * Rd) / Fd
+          }), this.at(Wd, (() => {
+            Gd("wobble", Od, md)
           }))
-        })), jr.push({
+        })), Xd.push({
           transform: "rotate(0deg)",
-          offset: rr.chargeMs / Wr
-        }), jr.push({
+          offset: dd.chargeMs / Fd
+        }), Xd.push({
           transform: "scale(1.12, 0.84)",
-          offset: (rr.chargeMs + 40) / Wr
-        }), jr.push({
+          offset: (dd.chargeMs + 40) / Fd
+        }), Xd.push({
           transform: "scale(1.12, 0.84)",
           offset: 1
-        }), this.animate(this.parts.body, jr, {
-          duration: Wr
+        }), this.animate(this.parts.body, Xd, {
+          duration: Fd
         });
-        const Ir = [{
+        const Kd = [{
           opacity: 0,
           transform: "translate(-50%, -50%) scale(0.6)"
         }];
-        Zr.forEach(((rr, Sr) => {
-          const Qr = (Sr + 1) / (Zr.length + .5);
-          Ir.push({
-            opacity: Qr,
-            transform: `translate(-50%, -50%) scale(${.7+.5*Qr})`,
-            offset: (80 + (Sr + 1) * ar) / Wr
+        Wd.forEach(((dd, Od) => {
+          const md = (Od + 1) / (Wd.length + .5);
+          Kd.push({
+            opacity: md,
+            transform: `translate(-50%, -50%) scale(${.7+.5*md})`,
+            offset: (80 + (Od + 1) * Rd) / Fd
           })
-        })), Ir.push({
+        })), Kd.push({
           opacity: 1,
           transform: "translate(-50%, -50%) scale(1.3)"
-        }), this.animate(this.parts.seam, Ir, {
-          duration: Wr,
+        }), this.animate(this.parts.seam, Kd, {
+          duration: Fd,
           easing: "linear"
         });
-        const fr = this.parts.box.querySelector(".GiftBoxCracks");
-        fr && this.animate(fr, [{
+        const hd = this.parts.box.querySelector(".GiftBoxCracks");
+        hd && this.animate(hd, [{
           opacity: 0
         }, {
           opacity: 1
         }], {
-          duration: Wr,
+          duration: Fd,
           easing: "steps(3, end)"
         });
         const {
-          x: Er,
-          y: pr
+          x: vd,
+          y: Qd
         } = this.boxCentre();
-        null === Qr || void 0 === Qr || Qr.charge(Er, pr, rr.chargeMs), this.at(Wr, (() => {
-          this.burst(Wr)
+        null === md || void 0 === md || md.charge(vd, Qd, dd.chargeMs), this.at(Fd, (() => {
+          this.burst(Fd)
         }))
       }
       boxCentre() {
-        const rr = this.parts.box.getBoundingClientRect();
+        const dd = this.parts.box.getBoundingClientRect();
         return {
-          x: rr.left + rr.width / 2,
-          y: rr.top + .45 * rr.height,
-          floorY: rr.bottom
+          x: dd.left + dd.width / 2,
+          y: dd.top + .45 * dd.height,
+          floorY: dd.bottom
         }
       }
-      burst(rr) {
+      burst(dd) {
         const {
-          timeline: Sr,
-          tier: Qr,
-          fx: Zr
+          timeline: Od,
+          tier: md,
+          fx: Wd
         } = this.options;
         if (this.popped) return;
         this.popped = !0, this.markOpened();
-        const Wr = Sr => Math.max(0, Sr - rr),
-          ar = {
+        const Fd = Od => Math.max(0, Od - dd),
+          Rd = {
             duration: 620,
-            easing: Cr
+            easing: nd
           };
         this.animate(this.parts.lid, [{
           transform: "translateY(-0.36em)"
@@ -425,15 +425,15 @@ export const modules = {
           offset: .55
         }, {
           transform: "translate(0.6em, -3.2em) rotateZ(40deg) rotateX(40deg)"
-        }], ar);
-        for (const Er of this.parts.lid.querySelectorAll(":scope > *")) this.animate(Er, [{
+        }], Rd);
+        for (const vd of this.parts.lid.querySelectorAll(":scope > *")) this.animate(vd, [{
           opacity: 1
         }, {
           opacity: 1,
           offset: .55
         }, {
           opacity: 0
-        }], ar);
+        }], Rd);
         if (this.animate(this.parts.body, [{
             transform: "scale(1.12, 0.84)"
           }, {
@@ -452,11 +452,11 @@ export const modules = {
             transform: "translate(-50%, -50%) scale(3)"
           }], {
             duration: 380,
-            easing: Cr
-          }), Sr.flashAlpha > 0 && this.animate(this.parts.flash, [{
+            easing: nd
+          }), Od.flashAlpha > 0 && this.animate(this.parts.flash, [{
             opacity: 0
           }, {
-            opacity: Sr.flashAlpha,
+            opacity: Od.flashAlpha,
             offset: .2
           }, {
             opacity: 0
@@ -471,7 +471,7 @@ export const modules = {
             transform: "translate(-50%, -50%) scale(3.6)"
           }], {
             duration: 520,
-            easing: Cr
+            easing: nd
           }), this.animate(this.parts.beam, [{
             opacity: 0,
             transform: "translateX(-50%) scaleY(0)"
@@ -484,17 +484,17 @@ export const modules = {
             transform: "translateX(-50%) scaleY(1) scaleX(0.3)"
           }], {
             duration: 900,
-            easing: Cr
-          }), Sr.kickPx > 0) {
-          const rr = Sr.kickPx;
+            easing: nd
+          }), Od.kickPx > 0) {
+          const dd = Od.kickPx;
           this.animate(this.parts.shake, [{
             transform: "none"
           }, {
-            transform: `translate(${rr}px, ${-rr}px)`
+            transform: `translate(${dd}px, ${-dd}px)`
           }, {
-            transform: `translate(${.7*-rr}px, ${.5*rr}px)`
+            transform: `translate(${.7*-dd}px, ${.5*dd}px)`
           }, {
-            transform: `translate(${.4*rr}px, ${.3*rr}px)`
+            transform: `translate(${.4*dd}px, ${.3*dd}px)`
           }, {
             transform: "none"
           }], {
@@ -503,25 +503,25 @@ export const modules = {
             fill: "none"
           })
         }
-        gr("pop", Qr), gr("sparkle", Qr, 2);
+        Gd("pop", md), Gd("sparkle", md, 2);
         const {
-          x: jr,
-          y: Ir,
-          floorY: fr
+          x: Xd,
+          y: Kd,
+          floorY: hd
         } = this.boxCentre();
-        null === Zr || void 0 === Zr || Zr.burst(jr, Ir, Sr.burstParticles, fr), this.at(Wr(Sr.revealAt), (() => {
+        null === Wd || void 0 === Wd || Wd.burst(Xd, Kd, Od.burstParticles, hd), this.at(Fd(Od.revealAt), (() => {
           this.reveal()
-        })), this.at(Wr(Sr.cardAt), (() => {
+        })), this.at(Fd(Od.cardAt), (() => {
           this.setPhase("card")
-        })), this.at(Wr(Sr.buttonsAt), (() => {
+        })), this.at(Fd(Od.buttonsAt), (() => {
           this.setPhase("done")
         }))
       }
       reveal() {
         const {
-          timeline: rr,
-          tier: Sr,
-          fx: Qr
+          timeline: dd,
+          tier: Od,
+          fx: md
         } = this.options;
         this.setPhase("reveal"), this.animate(this.parts.character, [{
           opacity: 0,
@@ -535,7 +535,7 @@ export const modules = {
           transform: "none"
         }], {
           duration: 520,
-          easing: Cr
+          easing: nd
         }), this.animate(this.parts.body, [{
           opacity: 1,
           transform: "none"
@@ -546,30 +546,30 @@ export const modules = {
           duration: 420,
           delay: 120,
           easing: "ease-in"
-        }), gr("sting", Sr), null === Qr || void 0 === Qr || Qr.linger(this.boxCentre().x, rr.buttonsAt - rr.revealAt + 1500, rr.rain)
+        }), Gd("sting", Od), null === md || void 0 === md || md.linger(this.boxCentre().x, dd.buttonsAt - dd.revealAt + 1500, dd.rain)
       }
       skip() {
-        var rr;
-        (this.clearTimers(), this.cancelAnimations(), this.popped) || (null === (rr = this.options.fx) || void 0 === rr || rr.clear());
+        var dd;
+        (this.clearTimers(), this.cancelAnimations(), this.popped) || (null === (dd = this.options.fx) || void 0 === dd || dd.clear());
         this.markOpened(), this.parts.body.style.opacity = "0", this.parts.character.style.opacity = "1", this.parts.character.style.transform = "none", this.setPhase("done")
       }
       cancelAnimations() {
-        for (const rr of this.animations) rr.cancel();
+        for (const dd of this.animations) dd.cancel();
         this.animations = []
       }
       clearTimers() {
-        for (const rr of this.timers) clearTimeout(rr);
+        for (const dd of this.timers) clearTimeout(dd);
         this.timers = []
       }
       dispose() {
         this.clearTimers(), this.cancelAnimations(), this.parts.body.style.removeProperty("opacity"), this.parts.character.style.removeProperty("opacity"), this.parts.character.style.removeProperty("transform")
       }
     }
-    const Gr = {
+    const Pd = {
       2: 500,
       3: 1200
     };
-    const kr = {
+    const zd = {
       1: {
         arriveMs: 450,
         wobbles: [5, 9],
@@ -611,80 +611,80 @@ export const modules = {
       }
     };
 
-    function Ar(rr) {
-      const Sr = kr[rr];
+    function cd(dd) {
+      const Od = zd[dd];
       return {
-        ...Sr,
-        burstAt: Sr.chargeMs + Sr.hitStopMs
+        ...Od,
+        burstAt: Od.chargeMs + Od.hitStopMs
       }
     }
-    const Vr = {
+    const jd = {
       1: "#5ab8ff",
       2: "#b673ff",
       3: "#ffc83d"
     };
 
-    function ir(rr, Sr, Qr) {
-      const Zr = document.createElement("canvas"),
-        Wr = Math.ceil(rr * Sr);
-      Zr.width = Wr, Zr.height = Wr;
-      const ar = Zr.getContext("2d");
-      return ar && Qr(ar, Wr), {
-        image: Zr
+    function Dd(dd, Od, md) {
+      const Wd = document.createElement("canvas"),
+        Fd = Math.ceil(dd * Od);
+      Wd.width = Fd, Wd.height = Fd;
+      const Rd = Wd.getContext("2d");
+      return Rd && md(Rd, Fd), {
+        image: Wd
       }
     }
 
-    function wr(rr, Sr) {
-      return ir(16, Sr, ((Sr, Qr) => {
-        Sr.fillStyle = rr, Sr.fillRect(.3 * Qr, 0, .4 * Qr, Qr)
+    function ed(dd, Od) {
+      return Dd(16, Od, ((Od, md) => {
+        Od.fillStyle = dd, Od.fillRect(.3 * md, 0, .4 * md, md)
       }))
     }
 
-    function cr(rr, Sr, Qr) {
-      return ir(14, Qr, ((Qr, Zr) => {
-        Qr.fillStyle = Sr, Qr.fillRect(0, 0, Zr, Zr), Qr.fillStyle = rr, Qr.fillRect(0, 0, Zr, .35 * Zr)
+    function Id(dd, Od, md) {
+      return Dd(14, md, ((md, Wd) => {
+        md.fillStyle = Od, md.fillRect(0, 0, Wd, Wd), md.fillStyle = dd, md.fillRect(0, 0, Wd, .35 * Wd)
       }))
     }
 
-    function Fr(rr, Sr) {
-      return ir(18, Sr, ((Sr, Qr) => {
-        Sr.fillStyle = rr, Sr.beginPath(), Sr.moveTo(Qr / 2, 0), Sr.lineTo(.85 * Qr, .55 * Qr), Sr.lineTo(Qr / 2, Qr), Sr.lineTo(.2 * Qr, .45 * Qr), Sr.closePath(), Sr.fill(), Sr.fillStyle = "rgba(255,255,255,0.55)", Sr.beginPath(), Sr.moveTo(Qr / 2, 0), Sr.lineTo(.6 * Qr, .5 * Qr), Sr.lineTo(.2 * Qr, .45 * Qr), Sr.closePath(), Sr.fill()
+    function ld(dd, Od) {
+      return Dd(18, Od, ((Od, md) => {
+        Od.fillStyle = dd, Od.beginPath(), Od.moveTo(md / 2, 0), Od.lineTo(.85 * md, .55 * md), Od.lineTo(md / 2, md), Od.lineTo(.2 * md, .45 * md), Od.closePath(), Od.fill(), Od.fillStyle = "rgba(255,255,255,0.55)", Od.beginPath(), Od.moveTo(md / 2, 0), Od.lineTo(.6 * md, .5 * md), Od.lineTo(.2 * md, .45 * md), Od.closePath(), Od.fill()
       }))
     }
 
-    function or(rr, Sr) {
-      return ir(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20, Sr, ((Sr, Qr) => {
-        const Zr = Qr / 2;
-        Sr.fillStyle = rr, Sr.beginPath();
-        for (let rr = 0; rr < 10; rr++) {
-          const Qr = rr % 2 === 0 ? Zr : .45 * Zr,
-            Wr = -Math.PI / 2 + rr * Math.PI / 5;
-          Sr.lineTo(Zr + Math.cos(Wr) * Qr, Zr + Math.sin(Wr) * Qr)
+    function Cd(dd, Od) {
+      return Dd(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20, Od, ((Od, md) => {
+        const Wd = md / 2;
+        Od.fillStyle = dd, Od.beginPath();
+        for (let dd = 0; dd < 10; dd++) {
+          const md = dd % 2 === 0 ? Wd : .45 * Wd,
+            Fd = -Math.PI / 2 + dd * Math.PI / 5;
+          Od.lineTo(Wd + Math.cos(Fd) * md, Wd + Math.sin(Fd) * md)
         }
-        Sr.closePath(), Sr.fill()
+        Od.closePath(), Od.fill()
       }))
     }
 
-    function br(rr, Sr) {
-      return ir(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24, Sr, ((Sr, Qr) => {
-        const Zr = Sr.createRadialGradient(Qr / 2, Qr / 2, 0, Qr / 2, Qr / 2, Qr / 2);
-        Zr.addColorStop(0, "rgba(255,255,255,1)"), Zr.addColorStop(.25, rr), Zr.addColorStop(1, "rgba(0,0,0,0)"), Sr.fillStyle = Zr, Sr.fillRect(0, 0, Qr, Qr)
+    function Zd(dd, Od) {
+      return Dd(arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 24, Od, ((Od, md) => {
+        const Wd = Od.createRadialGradient(md / 2, md / 2, 0, md / 2, md / 2, md / 2);
+        Wd.addColorStop(0, "rgba(255,255,255,1)"), Wd.addColorStop(.25, dd), Wd.addColorStop(1, "rgba(0,0,0,0)"), Od.fillStyle = Wd, Od.fillRect(0, 0, md, md)
       }))
     }
-    const Jr = {
-      classic: rr => [wr("#e63946", rr), wr("#ffffff", rr), wr("#ffd166", rr), wr("#2a9d8f", rr), or("#ffd166", rr, 14)],
-      blocks: rr => [cr("#6abe30", "#8a5a33", rr), cr("#8a5a33", "#6d4426", rr), cr("#9da3a6", "#7b8083", rr), cr("#7ff3f0", "#3fb7c0", rr)],
-      gems: rr => [Fr("#b673ff", rr), Fr("#ff7ad9", rr), Fr("#6fe0ff", rr), Fr("#ffffff", rr)],
-      stars: rr => [or("#fff6b0", rr), or("#ffffff", rr, 14), or("#9fd0ff", rr, 12), br("#9fd0ff", rr, 16)],
-      legend: rr => [wr("#ffc83d", rr), wr("#ff5d8f", rr), wr("#5ab8ff", rr), wr("#7cf29a", rr), or("#ffc83d", rr), or("#fff4c2", rr, 14)],
-      sweater: rr => [br("#ffffff", rr, 18), br("#dff3ff", rr, 12), or("#ffffff", rr, 12)],
-      festive: rr => ["\ud83c\udf84", "\u26c4", "\ud83c\udf81", "\u2744\ufe0f", "\u2b50"].map((Sr => function(rr, Sr) {
-        return ir(26, Sr, ((Sr, Qr) => {
-          Sr.font = `${Math.round(.8*Qr)}px sans-serif`, Sr.textAlign = "center", Sr.textBaseline = "middle", Sr.fillText(rr, Qr / 2, Qr / 2 + .05 * Qr)
+    const kd = {
+      classic: dd => [ed("#e63946", dd), ed("#ffffff", dd), ed("#ffd166", dd), ed("#2a9d8f", dd), Cd("#ffd166", dd, 14)],
+      blocks: dd => [Id("#6abe30", "#8a5a33", dd), Id("#8a5a33", "#6d4426", dd), Id("#9da3a6", "#7b8083", dd), Id("#7ff3f0", "#3fb7c0", dd)],
+      gems: dd => [ld("#b673ff", dd), ld("#ff7ad9", dd), ld("#6fe0ff", dd), ld("#ffffff", dd)],
+      stars: dd => [Cd("#fff6b0", dd), Cd("#ffffff", dd, 14), Cd("#9fd0ff", dd, 12), Zd("#9fd0ff", dd, 16)],
+      legend: dd => [ed("#ffc83d", dd), ed("#ff5d8f", dd), ed("#5ab8ff", dd), ed("#7cf29a", dd), Cd("#ffc83d", dd), Cd("#fff4c2", dd, 14)],
+      sweater: dd => [Zd("#ffffff", dd, 18), Zd("#dff3ff", dd, 12), Cd("#ffffff", dd, 12)],
+      festive: dd => ["\ud83c\udf84", "\u26c4", "\ud83c\udf81", "\u2744\ufe0f", "\u2b50"].map((Od => function(dd, Od) {
+        return Dd(26, Od, ((Od, md) => {
+          Od.font = `${Math.round(.8*md)}px sans-serif`, Od.textAlign = "center", Od.textBaseline = "middle", Od.fillText(dd, md / 2, md / 2 + .05 * md)
         }))
-      }(Sr, rr)))
+      }(Od, dd)))
     };
-    const Dr = {
+    const fd = {
       classic: {
         gravity: 1e3,
         speed: [380, 760],
@@ -743,579 +743,579 @@ export const modules = {
       }
     };
 
-    function dr(rr) {
-      let [Sr, Qr] = rr;
-      return Sr + Math.random() * (Qr - Sr)
+    function Md(dd) {
+      let [Od, md] = dd;
+      return Od + Math.random() * (md - Od)
     }
 
-    function sr(rr) {
-      return rr[Math.floor(Math.random() * rr.length)]
+    function dO(dd) {
+      return dd[Math.floor(Math.random() * dd.length)]
     }
-    class ur {
-      constructor(rr, Sr) {
-        var Qr, Zr, Wr;
-        this.canvas = rr, this.options = Sr, this.context = void 0, this.sprites = void 0, this.particles = [], this.scale = void 0, this.frame = 0, this.lastAt = 0, this.embersUntil = 0, this.embersX = 0, this.rainUntil = 0, this.spawnCarry = 0, this.stopped = !1, this.frameMs = [], this.lx = rr => {
-          const Sr = Math.min(rr - this.lastAt, 50);
-          this.lastAt = rr, this.spawnLingering(Sr), this.step(Sr), this.draw();
-          const Qr = rr < this.embersUntil || rr < this.rainUntil;
-          this.frame = this.particles.length > 0 || Qr ? requestAnimationFrame(this.lx) : 0, 0 === this.frame && (this.canvas.style.visibility = "hidden")
-        }, this.context = rr.getContext("2d"), this.scale = Math.min(window.devicePixelRatio || 1, Sr.phone ? 1.5 : 2), this.sprites = (Qr = Sr.wrap, Zr = Vr[Sr.tier], Wr = this.scale, {
-          burst: Jr[Qr](Wr),
-          spark: br(Zr, Wr),
-          rain: [or("#ffc83d", Wr, 16), wr("#ffc83d", Wr), wr("#fff1b8", Wr)]
+    class OO {
+      constructor(dd, Od) {
+        var md, Wd, Fd;
+        this.canvas = dd, this.options = Od, this.context = void 0, this.sprites = void 0, this.particles = [], this.scale = void 0, this.frame = 0, this.lastAt = 0, this.embersUntil = 0, this.embersX = 0, this.rainUntil = 0, this.spawnCarry = 0, this.stopped = !1, this.frameMs = [], this.Et = dd => {
+          const Od = Math.min(dd - this.lastAt, 50);
+          this.lastAt = dd, this.spawnLingering(Od), this.step(Od), this.draw();
+          const md = dd < this.embersUntil || dd < this.rainUntil;
+          this.frame = this.particles.length > 0 || md ? requestAnimationFrame(this.Et) : 0, 0 === this.frame && (this.canvas.style.visibility = "hidden")
+        }, this.context = dd.getContext("2d"), this.scale = Math.min(window.devicePixelRatio || 1, Od.phone ? 1.5 : 2), this.sprites = (md = Od.wrap, Wd = jd[Od.tier], Fd = this.scale, {
+          burst: kd[md](Fd),
+          spark: Zd(Wd, Fd),
+          rain: [Cd("#ffc83d", Fd, 16), ed("#ffc83d", Fd), ed("#fff1b8", Fd)]
         }), this.resize()
       }
       resize() {
         const {
-          clientWidth: rr,
-          clientHeight: Sr
+          clientWidth: dd,
+          clientHeight: Od
         } = this.canvas;
-        this.canvas.width = Math.round(rr * this.scale), this.canvas.height = Math.round(Sr * this.scale)
+        this.canvas.width = Math.round(dd * this.scale), this.canvas.height = Math.round(Od * this.scale)
       }
-      count(rr) {
-        return Math.round(this.options.phone ? rr / 2 : rr)
+      count(dd) {
+        return Math.round(this.options.phone ? dd / 2 : dd)
       }
-      add(rr) {
+      add(dd) {
         this.particles.push({
           motion: "fall",
-          vx: 0,
-          Fq: 0,
+          jB: 0,
+          vy: 0,
           gravity: 0,
           drag: 0,
           rotation: Math.random() * Math.PI * 2,
           spin: 0,
           flutterSpeed: 0,
-          fromX: rr.x,
-          fromY: rr.y,
-          toX: rr.x,
-          toY: rr.y,
+          fromX: dd.x,
+          fromY: dd.y,
+          toX: dd.x,
+          toY: dd.y,
           floorY: 1 / 0,
           additive: !1,
-          ...rr,
+          ...dd,
           flutter: Math.random() * Math.PI * 2,
           ageMs: 0
         }), this.wake()
       }
-      charge(rr, Sr, Qr) {
-        for (let Zr = 0; Zr < this.count(18 + 8 * this.options.tier); Zr++) {
-          const Zr = Math.random() * Math.PI * 2,
-            Wr = dr([120, 240]);
+      charge(dd, Od, md) {
+        for (let Wd = 0; Wd < this.count(18 + 8 * this.options.tier); Wd++) {
+          const Wd = Math.random() * Math.PI * 2,
+            Fd = Md([120, 240]);
           this.add({
             sprite: this.sprites.spark,
             motion: "converge",
-            x: rr,
-            y: Sr,
-            fromX: rr + Math.cos(Zr) * Wr,
-            fromY: Sr + Math.sin(Zr) * Wr,
-            size: dr([.5, 1]),
-            lifeMs: Qr * dr([.55, 1]),
+            x: dd,
+            y: Od,
+            fromX: dd + Math.cos(Wd) * Fd,
+            fromY: Od + Math.sin(Wd) * Fd,
+            size: Md([.5, 1]),
+            lifeMs: md * Md([.55, 1]),
             additive: !0
           })
         }
       }
-      burst(rr, Sr, Qr, Zr) {
-        const Wr = Dr[this.options.wrap];
-        for (let ar = 0; ar < this.count(Qr); ar++) {
-          const Qr = -Math.PI / 2 + (Math.random() - .5) * Math.PI * 1.5,
-            ar = dr(Wr.speed);
+      burst(dd, Od, md, Wd) {
+        const Fd = fd[this.options.wrap];
+        for (let Rd = 0; Rd < this.count(md); Rd++) {
+          const md = -Math.PI / 2 + (Math.random() - .5) * Math.PI * 1.5,
+            Rd = Md(Fd.speed);
           this.add({
-            sprite: sr(this.sprites.burst),
-            x: rr + 30 * (Math.random() - .5),
-            y: Sr,
-            vx: Math.cos(Qr) * ar,
-            Fq: Math.sin(Qr) * ar,
-            gravity: Wr.gravity,
-            drag: Wr.drag,
+            sprite: dO(this.sprites.burst),
+            x: dd + 30 * (Math.random() - .5),
+            y: Od,
+            jB: Math.cos(md) * Rd,
+            vy: Math.sin(md) * Rd,
+            gravity: Fd.gravity,
+            drag: Fd.drag,
             spin: 14 * (Math.random() - .5),
-            flutterSpeed: Wr.flutter ? dr([8, 16]) : 0,
-            size: dr([.7, 1.15]),
-            lifeMs: dr(Wr.lifeMs),
-            floorY: Wr.bounce ? Zr : 1 / 0
+            flutterSpeed: Fd.flutter ? Md([8, 16]) : 0,
+            size: Md([.7, 1.15]),
+            lifeMs: Md(Fd.lifeMs),
+            floorY: Fd.bounce ? Wd : 1 / 0
           })
         }
-        for (let ar = 0; ar < this.count(16 + 8 * this.options.tier); ar++) {
-          const Qr = Math.random() * Math.PI * 2,
-            Zr = dr([300, 900]);
+        for (let Rd = 0; Rd < this.count(16 + 8 * this.options.tier); Rd++) {
+          const md = Math.random() * Math.PI * 2,
+            Wd = Md([300, 900]);
           this.add({
             sprite: this.sprites.spark,
-            x: rr,
-            y: Sr,
-            vx: Math.cos(Qr) * Zr,
-            Fq: Math.sin(Qr) * Zr,
+            x: dd,
+            y: Od,
+            jB: Math.cos(md) * Wd,
+            vy: Math.sin(md) * Wd,
             gravity: 200,
             drag: .05,
-            size: dr([.4, .9]),
-            lifeMs: dr([350, 700]),
+            size: Md([.4, .9]),
+            lifeMs: Md([350, 700]),
             additive: !0
           })
         }
       }
-      linger(rr, Sr, Qr) {
-        const Zr = performance.now();
-        this.embersX = rr, this.embersUntil = Zr + Sr, this.rainUntil = Qr ? Zr + Math.min(Sr, 1800) : 0, this.wake()
+      linger(dd, Od, md) {
+        const Wd = performance.now();
+        this.embersX = dd, this.embersUntil = Wd + Od, this.rainUntil = md ? Wd + Math.min(Od, 1800) : 0, this.wake()
       }
-      spawnLingering(rr) {
+      spawnLingering(dd) {
         const {
-          clientWidth: Sr,
-          clientHeight: Qr
-        } = this.canvas, Zr = performance.now(), Wr = (Zr < this.embersUntil ? this.count(14) : 0) + (Zr < this.rainUntil ? this.count(50) : 0);
-        for (this.spawnCarry += Wr * rr / 1e3; this.spawnCarry >= 1;) this.spawnCarry--, Zr < this.rainUntil && Math.random() < .75 ? this.add({
-          sprite: sr(this.sprites.rain),
-          x: Math.random() * Sr,
+          clientWidth: Od,
+          clientHeight: md
+        } = this.canvas, Wd = performance.now(), Fd = (Wd < this.embersUntil ? this.count(14) : 0) + (Wd < this.rainUntil ? this.count(50) : 0);
+        for (this.spawnCarry += Fd * dd / 1e3; this.spawnCarry >= 1;) this.spawnCarry--, Wd < this.rainUntil && Math.random() < .75 ? this.add({
+          sprite: dO(this.sprites.rain),
+          x: Math.random() * Od,
           y: -20,
-          vx: 60 * (Math.random() - .5),
-          Fq: dr([160, 320]),
+          jB: 60 * (Math.random() - .5),
+          vy: Md([160, 320]),
           gravity: 500,
           drag: .2,
           spin: 8 * (Math.random() - .5),
-          flutterSpeed: dr([6, 12]),
-          size: dr([.6, 1]),
+          flutterSpeed: Md([6, 12]),
+          size: Md([.6, 1]),
           lifeMs: 2200
         }) : this.add({
           sprite: this.sprites.spark,
           motion: "float",
-          x: this.embersX + (Math.random() - .5) * Math.min(Sr, 420),
-          y: Qr * dr([.55, .8]),
-          vx: 20 * (Math.random() - .5),
-          Fq: -dr([30, 70]),
+          x: this.embersX + (Math.random() - .5) * Math.min(Od, 420),
+          y: md * Md([.55, .8]),
+          jB: 20 * (Math.random() - .5),
+          vy: -Md([30, 70]),
           drag: .6,
-          size: dr([.3, .6]),
-          lifeMs: dr([1200, 2e3]),
+          size: Md([.3, .6]),
+          lifeMs: Md([1200, 2e3]),
           additive: !0
         })
       }
       clear() {
-        var rr;
-        this.particles.length = 0, this.embersUntil = 0, this.rainUntil = 0, null === (rr = this.context) || void 0 === rr || rr.clearRect(0, 0, this.canvas.width, this.canvas.height)
+        var dd;
+        this.particles.length = 0, this.embersUntil = 0, this.rainUntil = 0, null === (dd = this.context) || void 0 === dd || dd.clearRect(0, 0, this.canvas.width, this.canvas.height)
       }
       stop() {
         this.stopped = !0, cancelAnimationFrame(this.frame), this.frame = 0, this.clear(), this.canvas.style.visibility = "hidden"
       }
       wake() {
-        0 !== this.frame || this.stopped || (this.lastAt = performance.now(), this.frame = requestAnimationFrame(this.lx), this.canvas.style.visibility = "visible")
+        0 !== this.frame || this.stopped || (this.lastAt = performance.now(), this.frame = requestAnimationFrame(this.Et), this.canvas.style.visibility = "visible")
       }
-      step(rr) {
-        const Sr = rr / 1e3;
-        let Qr = 0;
-        for (const Zr of this.particles)
-          if (Zr.ageMs += rr, !(Zr.ageMs >= Zr.lifeMs)) {
-            if ("converge" === Zr.motion) {
-              const rr = Zr.ageMs / Zr.lifeMs,
-                Sr = rr * rr * rr;
-              Zr.x = Zr.fromX + (Zr.toX - Zr.fromX) * Sr, Zr.y = Zr.fromY + (Zr.toY - Zr.fromY) * Sr
+      step(dd) {
+        const Od = dd / 1e3;
+        let md = 0;
+        for (const Wd of this.particles)
+          if (Wd.ageMs += dd, !(Wd.ageMs >= Wd.lifeMs)) {
+            if ("converge" === Wd.motion) {
+              const dd = Wd.ageMs / Wd.lifeMs,
+                Od = dd * dd * dd;
+              Wd.x = Wd.fromX + (Wd.toX - Wd.fromX) * Od, Wd.y = Wd.fromY + (Wd.toY - Wd.fromY) * Od
             } else {
-              const rr = Math.pow(1 - Zr.drag, Sr);
-              Zr.vx *= rr, Zr.Fq = Zr.Fq * rr + Zr.gravity * Sr, Zr.x += Zr.vx * Sr, Zr.y += Zr.Fq * Sr, Zr.y > Zr.floorY && Zr.Fq > 0 && (Zr.y = Zr.floorY, Zr.Fq *= -.35, Zr.vx *= .6, Zr.floorY = 1 / 0)
+              const dd = Math.pow(1 - Wd.drag, Od);
+              Wd.jB *= dd, Wd.vy = Wd.vy * dd + Wd.gravity * Od, Wd.x += Wd.jB * Od, Wd.y += Wd.vy * Od, Wd.y > Wd.floorY && Wd.vy > 0 && (Wd.y = Wd.floorY, Wd.vy *= -.35, Wd.jB *= .6, Wd.floorY = 1 / 0)
             }
-            Zr.rotation += Zr.spin * Sr, Zr.flutter += Zr.flutterSpeed * Sr, this.particles[Qr++] = Zr
-          } this.particles.length = Qr
+            Wd.rotation += Wd.spin * Od, Wd.flutter += Wd.flutterSpeed * Od, this.particles[md++] = Wd
+          } this.particles.length = md
       }
       draw() {
-        const rr = this.context;
-        if (rr) {
-          rr.setTransform(1, 0, 0, 1, 0, 0), rr.clearRect(0, 0, this.canvas.width, this.canvas.height);
-          for (const Sr of this.particles) {
-            const Qr = Sr.ageMs / Sr.lifeMs,
-              Zr = "converge" === Sr.motion ? .35 + .65 * Qr : Math.min(1, 4 * (1 - Qr)),
-              Wr = Sr.size,
-              ar = Math.cos(Sr.rotation) * Wr,
-              jr = Math.sin(Sr.rotation) * Wr,
-              Ir = 0 === Sr.flutterSpeed ? 1 : Math.cos(Sr.flutter);
-            rr.globalAlpha = Zr, rr.globalCompositeOperation = Sr.additive ? "lighter" : "source-over", rr.setTransform(ar * Ir, jr * Ir, -jr, ar, Sr.x * this.scale, Sr.y * this.scale);
+        const dd = this.context;
+        if (dd) {
+          dd.setTransform(1, 0, 0, 1, 0, 0), dd.clearRect(0, 0, this.canvas.width, this.canvas.height);
+          for (const Od of this.particles) {
+            const md = Od.ageMs / Od.lifeMs,
+              Wd = "converge" === Od.motion ? .35 + .65 * md : Math.min(1, 4 * (1 - md)),
+              Fd = Od.size,
+              Rd = Math.cos(Od.rotation) * Fd,
+              Xd = Math.sin(Od.rotation) * Fd,
+              Kd = 0 === Od.flutterSpeed ? 1 : Math.cos(Od.flutter);
+            dd.globalAlpha = Wd, dd.globalCompositeOperation = Od.additive ? "lighter" : "source-over", dd.setTransform(Rd * Kd, Xd * Kd, -Xd, Rd, Od.x * this.scale, Od.y * this.scale);
             const {
-              image: fr
-            } = Sr.sprite;
-            rr.drawImage(fr, -fr.width / 2, -fr.height / 2)
+              image: hd
+            } = Od.sprite;
+            dd.drawImage(hd, -hd.width / 2, -hd.height / 2)
           }
-          rr.globalAlpha = 1, rr.globalCompositeOperation = "source-over"
+          dd.globalAlpha = 1, dd.globalCompositeOperation = "source-over"
         }
       }
     }
-    var rS = Qr(3286),
-      SS = Qr(1684),
-      QS = Qr(1686),
-      ZS = Qr(3242);
-    const WS = 5e3;
+    var mO = md(3287),
+      WO = md(1679),
+      FO = md(1685),
+      RO = md(3249);
+    const XO = 5e3;
 
-    function aS(rr) {
+    function KO(dd) {
       let {
-        request: Sr
-      } = rr;
+        request: Od
+      } = dd;
       const {
-        t: Qr
-      } = (0, jr.E)(), {
-        userContext: Wr
-      } = (0, hr.c)(), {
-        gift: nr,
-        preview: Br
-      } = Sr, {
-        isTouchScreen: Tr
-      } = (0, Ir.n)(["isTouchScreen"]), vr = function(rr) {
-        var Sr;
-        const Qr = yr.o.find((Sr => Sr.id === rr));
-        return null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.id) && void 0 !== Sr ? Sr : "classic"
-      }(nr.wrap), Pr = (Hr = nr.gems) >= Gr[3] ? 3 : Hr >= Gr[2] ? 2 : 1;
-      var Hr;
-      const qr = `${vr}:t${Pr}`,
-        [gr] = (0, Zr.useState)((() => function(rr, Sr) {
-          const [Qr] = rr.cosmeticPacks;
-          let Zr = null;
-          if ((0, rS.h)(rr) ? Zr = "rank" : void 0 === Qr && rr.premiumCurrency > 0 && (Zr = "gems"), void 0 === Qr) return {
-            cosmetics: Sr,
-            badge: Zr
+        t: md
+      } = (0, Xd.G)(), {
+        userContext: Fd
+      } = (0, yd.d)(), {
+        gift: pd,
+        preview: Ed
+      } = Od, {
+        isTouchScreen: Jd
+      } = (0, Kd.p)(["isTouchScreen"]), Ud = function(dd) {
+        var Od;
+        const md = wd.n.find((Od => Od.id === dd));
+        return null !== (Od = null === md || void 0 === md ? void 0 : md.id) && void 0 !== Od ? Od : "classic"
+      }(pd.wrap), ud = (Vd = pd.gems) >= Pd[3] ? 3 : Vd >= Pd[2] ? 2 : 1;
+      var Vd;
+      const Ad = `${Ud}:t${ud}`,
+        [Gd] = (0, Wd.useState)((() => function(dd, Od) {
+          const [md] = dd.cosmeticPacks;
+          let Wd = null;
+          if ((0, mO.g)(dd) ? Wd = "rank" : void 0 === md && dd.premiumCurrency > 0 && (Wd = "gems"), void 0 === md) return {
+            cosmetics: Od,
+            badge: Wd
           };
-          const Wr = (0, SS.d)(Qr),
-            ar = void 0 === Wr ? void 0 : QS.e[Wr];
-          if (void 0 !== ar) return {
-            cosmetics: ar.cosmetics,
-            badge: Zr
+          const Fd = (0, WO.d)(md),
+            Rd = void 0 === Fd ? void 0 : FO.b[Fd];
+          if (void 0 !== Rd) return {
+            cosmetics: Rd.cosmetics,
+            badge: Wd
           };
-          const jr = {
-              ...Sr
+          const Xd = {
+              ...Od
             },
-            Ir = new Set;
-          for (const fr of (0, ZS.l)(Qr)) {
-            const [rr, Sr] = fr.split("|");
-            Ir.has(rr) || (Ir.add(rr), jr[rr] = Sr)
+            Kd = new Set;
+          for (const hd of (0, RO.j)(md)) {
+            const [dd, Od] = hd.split("|");
+            Kd.has(dd) || (Kd.add(dd), Xd[dd] = Od)
           }
           return {
-            cosmetics: jr,
-            badge: Zr
+            cosmetics: Xd,
+            badge: Wd
           }
-        }(nr.items, {
-          ...Wr.getPlayerCosmetics()
+        }(pd.items, {
+          ...Fd.getPlayerCosmetics()
         }))),
-        [Cr, kr] = (0, Zr.useState)("arrive"),
-        [ir, wr] = (0, Zr.useState)(0),
-        [cr, Fr] = (0, Zr.useState)(!1),
-        [or, br] = (0, Zr.useState)(!1),
-        [Jr, Dr] = (0, Zr.useState)(!1),
-        dr = (0, Zr.useRef)(null),
-        sr = (0, Zr.useRef)(null),
-        aS = {
-          box: (0, Zr.useRef)(null),
-          body: (0, Zr.useRef)(null),
-          lid: (0, Zr.useRef)(null),
-          seam: (0, Zr.useRef)(null),
-          character: (0, Zr.useRef)(null),
-          ring: (0, Zr.useRef)(null),
-          beam: (0, Zr.useRef)(null),
-          flash: (0, Zr.useRef)(null),
-          shake: (0, Zr.useRef)(null),
-          canvas: (0, Zr.useRef)(null)
+        [nd, zd] = (0, Wd.useState)("arrive"),
+        [Dd, ed] = (0, Wd.useState)(0),
+        [Id, ld] = (0, Wd.useState)(!1),
+        [Cd, Zd] = (0, Wd.useState)(!1),
+        [kd, fd] = (0, Wd.useState)(!1),
+        Md = (0, Wd.useRef)(null),
+        dO = (0, Wd.useRef)(null),
+        KO = {
+          box: (0, Wd.useRef)(null),
+          body: (0, Wd.useRef)(null),
+          lid: (0, Wd.useRef)(null),
+          seam: (0, Wd.useRef)(null),
+          character: (0, Wd.useRef)(null),
+          ring: (0, Wd.useRef)(null),
+          beam: (0, Wd.useRef)(null),
+          flash: (0, Wd.useRef)(null),
+          shake: (0, Wd.useRef)(null),
+          canvas: (0, Wd.useRef)(null)
         };
-      (0, zr.h)("paused"), (0, Zr.useEffect)((() => {
-        const rr = setTimeout((() => {
-          Dr(!0)
-        }), WS);
+      (0, bd.c)("paused"), (0, Wd.useEffect)((() => {
+        const dd = setTimeout((() => {
+          fd(!0)
+        }), XO);
         return () => {
-          clearTimeout(rr)
+          clearTimeout(dd)
         }
-      }), []), (0, Zr.useEffect)((() => {
-        const rr = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-          Qr = aS.canvas.current,
-          Zr = Qr && !rr ? new ur(Qr, {
-            wrap: vr,
-            tier: Pr,
-            phone: Tr
+      }), []), (0, Wd.useEffect)((() => {
+        const dd = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+          md = KO.canvas.current,
+          Wd = md && !dd ? new OO(md, {
+            wrap: Ud,
+            tier: ud,
+            phone: Jd
           }) : null,
-          Wr = () => {
-            null === Zr || void 0 === Zr || Zr.resize()
+          Fd = () => {
+            null === Wd || void 0 === Wd || Wd.resize()
           };
-        window.addEventListener("resize", Wr),
-          function(rr) {
-            for (const Sr of ["wobble", "pop", "sparkle", "sting"]) Xr.b.preload(Rr(Sr, rr))
-          }(Pr), kr("arrive");
-        const ar = new Mr({
-          box: aS.box.current,
-          body: aS.body.current,
-          lid: aS.lid.current,
-          seam: aS.seam.current,
-          character: aS.character.current,
-          ring: aS.ring.current,
-          beam: aS.beam.current,
-          flash: aS.flash.current,
-          shake: aS.shake.current
+        window.addEventListener("resize", Fd),
+          function(dd) {
+            for (const Od of ["wobble", "pop", "sparkle", "sting"]) sd.d.preload(rd(Od, dd))
+          }(ud), zd("arrive");
+        const Rd = new Ld({
+          box: KO.box.current,
+          body: KO.body.current,
+          lid: KO.lid.current,
+          seam: KO.seam.current,
+          character: KO.character.current,
+          ring: KO.ring.current,
+          beam: KO.beam.current,
+          flash: KO.flash.current,
+          shake: KO.shake.current
         }, {
-          tier: Pr,
-          timeline: Ar(Pr),
-          reducedMotion: rr,
-          fx: Zr,
-          onPhase: kr,
+          tier: ud,
+          timeline: cd(ud),
+          reducedMotion: dd,
+          fx: Wd,
+          onPhase: zd,
           onOpened: () => {
-            var rr;
-            Br || ((0, fr.reportAnalyticsClick)({
+            var dd;
+            Ed || ((0, hd.reportAnalyticsClick)({
               id: "gift.open_anim",
-              value: qr
-            }), null === (rr = Sr.onOpened) || void 0 === rr || rr.call(Sr))
+              value: Ad
+            }), null === (dd = Od.onOpened) || void 0 === dd || dd.call(Od))
           }
         });
-        return sr.current = ar, ar.arrive(), () => {
-          window.removeEventListener("resize", Wr), ar.dispose(), Zr && (! function(rr) {
-            if (rr.frameMs.length < 10) return;
-            const Sr = [...rr.frameMs].sort(((rr, Sr) => rr - Sr)),
-              Qr = {
-                frames: Sr.length,
-                medianFps: Math.round(1e3 / Math.max(Sr[Math.floor(Sr.length / 2)], 1)),
-                p95FrameMs: Math.round(Sr[Math.floor(.95 * Sr.length)])
+        return dO.current = Rd, Rd.arrive(), () => {
+          window.removeEventListener("resize", Fd), Rd.dispose(), Wd && (! function(dd) {
+            if (dd.frameMs.length < 10) return;
+            const Od = [...dd.frameMs].sort(((dd, Od) => dd - Od)),
+              md = {
+                frames: Od.length,
+                medianFps: Math.round(1e3 / Math.max(Od[Math.floor(Od.length / 2)], 1)),
+                p95FrameMs: Math.round(Od[Math.floor(.95 * Od.length)])
               };
-            window.giftOpeningFrames = Qr, console.info("[gift-opening] frames", Qr)
-          }(Zr), Zr.stop())
+            window.giftOpeningFrames = md, console.info("[gift-opening] frames", md)
+          }(Wd), Wd.stop())
         }
-      }), [ir]);
-      const jS = () => {
-          (0, Kr.b)(Sr)
+      }), [Dd]);
+      const hO = () => {
+          (0, gd.b)(Od)
         },
-        IS = () => {
-          var rr;
-          Br || (0, fr.reportAnalyticsClick)({
+        vO = () => {
+          var dd;
+          Ed || (0, hd.reportAnalyticsClick)({
             id: "gift.open_skip",
-            value: `${qr}:${Cr}`
-          }), null === (rr = sr.current) || void 0 === rr || rr.skip()
+            value: `${Ad}:${nd}`
+          }), null === (dd = dO.current) || void 0 === dd || dd.skip()
         },
-        fS = cr || or || Jr,
-        ES = "arrive" === Cr || "wait" === Cr || "charge" === Cr,
-        pS = "charge" === Cr || "reveal" === Cr || "card" === Cr || "wait" === Cr && fS,
-        xS = {
-          "--gift-tier": Vr[Pr]
+        QO = Id || Cd || kd,
+        tO = "arrive" === nd || "wait" === nd || "charge" === nd,
+        oO = "charge" === nd || "reveal" === nd || "card" === nd || "wait" === nd && QO,
+        NO = {
+          "--gift-tier": jd[ud]
         };
-      return (0, Yr.jsx)(pr.b, {
+      return (0, Td.jsx)(Qd.c, {
         className: "GiftOpeningScreen",
-        close: "done" === Cr ? jS : pS ? IS : () => {},
+        close: "done" === nd ? hO : oO ? vO : () => {},
         togglePointerLock: !0,
         forcePointerUnlock: !0,
         globallyUniqueKey: "giftOpening",
         closeOnPressBackground: !1,
-        children: (0, Yr.jsxs)("div", {
-          className: ar()("GiftOpening", `GiftOpeningTier${Pr}`, `GiftOpeningPhase_${Cr}`, {
-            GiftOpeningDrawn: cr
+        children: (0, Td.jsxs)("div", {
+          className: Rd()("GiftOpening", `GiftOpeningTier${ud}`, `GiftOpeningPhase_${nd}`, {
+            GiftOpeningDrawn: Id
           }),
-          style: xS,
-          ref: aS.shake,
-          children: [(0, Yr.jsx)("div", {
+          style: NO,
+          ref: KO.shake,
+          children: [(0, Td.jsx)("div", {
             className: "GiftOpeningBackdrop"
-          }), (0, Yr.jsx)("div", {
+          }), (0, Td.jsx)("div", {
             className: "GiftOpeningRays"
-          }), (0, Yr.jsxs)("div", {
+          }), (0, Td.jsxs)("div", {
             className: "GiftOpeningStage",
-            children: [(0, Yr.jsx)("div", {
+            children: [(0, Td.jsx)("div", {
               className: "GiftOpeningBeam",
-              ref: aS.beam
-            }), (0, Yr.jsxs)("div", {
+              ref: KO.beam
+            }), (0, Td.jsxs)("div", {
               className: "GiftOpeningCharacter",
-              ref: aS.character,
-              children: [(0, Yr.jsx)(Zr.Suspense, {
+              ref: KO.character,
+              children: [(0, Td.jsx)(Wd.Suspense, {
                 fallback: null,
-                children: (0, Yr.jsx)(Ur.b, {
-                  ref: dr,
+                children: (0, Td.jsx)(qd.e, {
+                  ref: Md,
                   framing: "store",
                   owner: "other",
-                  turntableFromYaw: ES ? null : Er.c.store.yaw,
+                  turntableFromYaw: tO ? null : vd.c.store.yaw,
                   onNoWebGl: () => {
-                    br(!0)
+                    Zd(!0)
                   },
                   onReady: () => {
-                    var rr, Sr;
-                    null === (rr = dr.current) || void 0 === rr || rr.resetCamera(), null === (Sr = dr.current) || void 0 === Sr || Sr.setAllCosmetics(gr.cosmetics)
+                    var dd, Od;
+                    null === (dd = Md.current) || void 0 === dd || dd.resetCamera(), null === (Od = Md.current) || void 0 === Od || Od.setAllCosmetics(Gd.cosmetics)
                   },
                   onDrawn: () => {
-                    Fr(!0)
+                    ld(!0)
                   }
                 })
-              }), (or || !ES && !cr) && (0, Yr.jsx)("div", {
+              }), (Cd || !tO && !Id) && (0, Td.jsx)("div", {
                 className: "GiftOpeningHead",
-                children: (0, Yr.jsx)(tr.b, {
-                  cosmetics: gr.cosmetics
+                children: (0, Td.jsx)(Hd.e, {
+                  cosmetics: Gd.cosmetics
                 })
-              }), gr.badge && (0, Yr.jsx)("div", {
+              }), Gd.badge && (0, Td.jsx)("div", {
                 className: "GiftOpeningBadge",
-                children: "gems" === gr.badge ? (0, Yr.jsx)(Nr.f, {}) : (0, Yr.jsx)(mr.c, {
+                children: "gems" === Gd.badge ? (0, Td.jsx)(Nd.f, {}) : (0, Td.jsx)(od.c, {
                   name: "bolt"
                 })
               })]
-            }), (0, Yr.jsx)(er, {
-              wrap: vr,
-              className: ar()("GiftOpeningBox", {
-                GiftOpeningBoxIdle: "wait" === Cr
+            }), (0, Td.jsx)(Yd, {
+              wrap: Ud,
+              className: Rd()("GiftOpeningBox", {
+                GiftOpeningBoxIdle: "wait" === nd
               }),
-              rootRef: aS.box,
-              bodyRef: aS.body,
-              lidRef: aS.lid,
-              seamRef: aS.seam
-            }), (0, Yr.jsx)("div", {
+              rootRef: KO.box,
+              bodyRef: KO.body,
+              lidRef: KO.lid,
+              seamRef: KO.seam
+            }), (0, Td.jsx)("div", {
               className: "GiftOpeningRing",
-              ref: aS.ring
+              ref: KO.ring
             })]
-          }), (0, Yr.jsx)("canvas", {
+          }), (0, Td.jsx)("canvas", {
             className: "GiftOpeningFx",
-            ref: aS.canvas
-          }), (0, Yr.jsx)("div", {
+            ref: KO.canvas
+          }), (0, Td.jsx)("div", {
             className: "GiftOpeningFlash",
-            ref: aS.flash
-          }), ES && (0, Yr.jsxs)("div", {
+            ref: KO.flash
+          }), tO && (0, Td.jsxs)("div", {
             className: "GiftOpeningTitle",
-            children: [(0, Yr.jsx)("div", {
+            children: [(0, Td.jsx)("div", {
               className: "SmallTextBold",
-              children: Qr("giftOpening:sentYou", {
-                name: nr.senderName
+              children: md("giftOpening:sentYou", {
+                name: pd.senderName
               })
-            }), (0, Yr.jsx)(Lr, {
-              gift: nr
+            }), (0, Td.jsx)(Bd, {
+              gift: pd
             })]
-          }), "wait" === Cr && fS && (0, Yr.jsx)("div", {
+          }), "wait" === nd && QO && (0, Td.jsx)("div", {
             className: "GiftOpeningHint SmallTextBold",
-            children: Qr("giftOpening:tapToOpen")
-          }), (0, Yr.jsx)(Or, {
-            gift: nr,
-            shown: "card" === Cr || "done" === Cr
-          }), "done" !== Cr && (0, Yr.jsx)("button", {
+            children: md("giftOpening:tapToOpen")
+          }), (0, Td.jsx)(xd, {
+            gift: pd,
+            shown: "card" === nd || "done" === nd
+          }), "done" !== nd && (0, Td.jsx)("button", {
             type: "button",
             className: "GiftOpeningTap",
             "data-pad-default-focus": !0,
-            "aria-label": Qr("giftOpening:tapToOpen"),
+            "aria-label": md("giftOpening:tapToOpen"),
             onClick: () => {
-              var rr;
-              ("wait" !== Cr || fS) && (null === (rr = sr.current) || void 0 === rr || rr.tap())
+              var dd;
+              ("wait" !== nd || QO) && (null === (dd = dO.current) || void 0 === dd || dd.tap())
             }
-          }), pS && (0, Yr.jsxs)(xr.k, {
+          }), oO && (0, Td.jsxs)(td.i, {
             className: "GiftOpeningSkip",
-            onClick: IS,
-            children: [Qr("giftOpening:skip"), " ", (0, Yr.jsx)(mr.c, {
+            onClick: vO,
+            children: [md("giftOpening:skip"), " ", (0, Td.jsx)(od.c, {
               name: "arrow-right"
             })]
-          }), "done" === Cr && (0, Yr.jsx)(lr, {
-            gift: nr,
-            preview: Br,
-            analyticsValue: qr,
+          }), "done" === nd && (0, Td.jsx)(Sd, {
+            gift: pd,
+            preview: Ed,
+            analyticsValue: Ad,
             onReplay: () => {
-              wr(ir + 1)
+              ed(Dd + 1)
             },
-            onClose: jS
+            onClose: hO
           })]
         })
       })
     }
   },
-  35509: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Ir,
-      e: () => Wr,
-      i: () => xr
+  35587: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Kd,
+      g: () => Fd,
+      j: () => td
     });
-    var Zr = Qr(1686);
+    var Wd = md(1685);
 
-    function Wr(rr) {
-      var Sr;
+    function Fd(dd) {
+      var Od;
       return {
-        ...Ir.store,
-        yaw: Ir.store.yaw + (null !== (Sr = Zr.e[rr].previewYaw) && void 0 !== Sr ? Sr : 0)
+        ...Kd.store,
+        yaw: Kd.store.yaw + (null !== (Od = Wd.b[dd].previewYaw) && void 0 !== Od ? Od : 0)
       }
     }
-    const ar = {
+    const Rd = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      jr = {
-        ...ar,
+      Xd = {
+        ...Rd,
         radius: 33,
         target: [0, 3.9, 0]
       },
-      Ir = {
-        player: ar,
-        store: jr,
+      Kd = {
+        player: Rd,
+        store: Xd,
         showcase: {
-          ...jr,
+          ...Xd,
           target: [0, 1.9, 0]
         }
       };
 
-    function fr(rr, Sr) {
-      rr instanceof Promise ? rr.then(Sr).catch((rr => {
-        console.error("Couldn't open the preview", rr)
-      })) : Sr(rr)
+    function hd(dd, Od) {
+      dd instanceof Promise ? dd.then(Od).catch((dd => {
+        console.error("Couldn't open the preview", dd)
+      })) : Od(dd)
     }
-    class Er {
-      constructor(rr) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, fr(rr, (rr => {
-          this.closed ? rr.close() : (this.opened = rr, null !== this.size && rr.resize(this.size.width, this.size.height), null !== this.view && rr.show(this.view))
+    class vd {
+      constructor(dd) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, hd(dd, (dd => {
+          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height), null !== this.view && dd.show(this.view))
         }))
       }
-      show(rr) {
-        var Sr;
-        this.view = rr, null === (Sr = this.opened) || void 0 === Sr || Sr.show(rr)
+      show(dd) {
+        var Od;
+        this.view = dd, null === (Od = this.opened) || void 0 === Od || Od.show(dd)
       }
-      resize(rr, Sr) {
-        var Qr;
+      resize(dd, Od) {
+        var md;
         this.size = {
-          width: rr,
-          height: Sr
-        }, null === (Qr = this.opened) || void 0 === Qr || Qr.resize(rr, Sr)
+          width: dd,
+          height: Od
+        }, null === (md = this.opened) || void 0 === md || md.resize(dd, Od)
       }
       close() {
-        var rr;
-        this.closed = !0, null === (rr = this.opened) || void 0 === rr || rr.close(), this.opened = null
+        var dd;
+        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
       }
     }
-    class pr {
-      constructor(rr) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(rr).then((rr => rr.ready)), fr(rr, (rr => {
-          this.closed ? rr.close() : (this.opened = rr, null !== this.size && rr.resize(this.size.width, this.size.height))
+    class Qd {
+      constructor(dd) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(dd).then((dd => dd.ready)), hd(dd, (dd => {
+          this.closed ? dd.close() : (this.opened = dd, null !== this.size && dd.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var rr, Sr;
-        return null !== (rr = null === (Sr = this.opened) || void 0 === Sr ? void 0 : Sr.isReady()) && void 0 !== rr && rr
+        var dd, Od;
+        return null !== (dd = null === (Od = this.opened) || void 0 === Od ? void 0 : Od.isReady()) && void 0 !== dd && dd
       }
-      setCosmetic(rr, Sr) {
-        var Qr;
-        null === (Qr = this.opened) || void 0 === Qr || Qr.setCosmetic(rr, Sr)
+      setCosmetic(dd, Od) {
+        var md;
+        null === (md = this.opened) || void 0 === md || md.setCosmetic(dd, Od)
       }
-      setNametag(rr) {
-        var Sr;
-        null === (Sr = this.opened) || void 0 === Sr || Sr.setNametag(rr)
+      setNametag(dd) {
+        var Od;
+        null === (Od = this.opened) || void 0 === Od || Od.setNametag(dd)
       }
-      playEmote(rr) {
-        var Sr;
-        null === (Sr = this.opened) || void 0 === Sr || Sr.playEmote(rr)
+      playEmote(dd) {
+        var Od;
+        null === (Od = this.opened) || void 0 === Od || Od.playEmote(dd)
       }
-      setOrbit(rr) {
-        var Sr;
-        null === (Sr = this.opened) || void 0 === Sr || Sr.setOrbit(rr)
+      setOrbit(dd) {
+        var Od;
+        null === (Od = this.opened) || void 0 === Od || Od.setOrbit(dd)
       }
       resetCamera() {
-        var rr;
-        null === (rr = this.opened) || void 0 === rr || rr.resetCamera()
+        var dd;
+        null === (dd = this.opened) || void 0 === dd || dd.resetCamera()
       }
-      async untilDrawn(rr) {
-        var Sr;
-        await this.ready, await (null === (Sr = this.opened) || void 0 === Sr ? void 0 : Sr.untilDrawn(rr))
+      async untilDrawn(dd) {
+        var Od;
+        await this.ready, await (null === (Od = this.opened) || void 0 === Od ? void 0 : Od.untilDrawn(dd))
       }
-      resize(rr, Sr) {
-        var Qr;
+      resize(dd, Od) {
+        var md;
         this.size = {
-          width: rr,
-          height: Sr
-        }, null === (Qr = this.opened) || void 0 === Qr || Qr.resize(rr, Sr)
+          width: dd,
+          height: Od
+        }, null === (md = this.opened) || void 0 === md || md.resize(dd, Od)
       }
       close() {
-        var rr;
-        this.closed = !0, null === (rr = this.opened) || void 0 === rr || rr.close(), this.opened = null
+        var dd;
+        this.closed = !0, null === (dd = this.opened) || void 0 === dd || dd.close(), this.opened = null
       }
     }
-    const xr = new class {
+    const td = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(rr) {
-        this.host = rr
+      setHost(dd) {
+        this.host = dd
       }
-      setDefaultHost(rr) {
-        this.makeDefault = rr
+      setDefaultHost(dd) {
+        this.makeDefault = dd
       }
       current() {
         if (null === this.host) {
@@ -1324,187 +1324,187 @@ export const modules = {
         }
         return this.host
       }
-      openMob(rr) {
-        return new Er(this.current().openMob(rr))
+      openMob(dd) {
+        return new vd(this.current().openMob(dd))
       }
-      openPet(rr) {
-        return new Er(this.current().openPet(rr))
+      openPet(dd) {
+        return new vd(this.current().openPet(dd))
       }
-      openMobLineup(rr) {
-        return new Er(this.current().openMobLineup(rr))
+      openMobLineup(dd) {
+        return new vd(this.current().openMobLineup(dd))
       }
       sharesCharacter() {
         return !0 === this.current().sharesCharacter
       }
-      openCharacter(rr, Sr) {
-        return new pr(this.current().openCharacter(rr, Sr))
+      openCharacter(dd, Od) {
+        return new Qd(this.current().openCharacter(dd, Od))
       }
     }
   },
-  35505: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Zr.d,
-      f: () => Zr.e,
-      j: () => Zr.i
+  35582: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Wd.c,
+      g: () => Wd.g,
+      i: () => Wd.j
     });
-    var Zr = Qr(35509);
-    class Wr {
-      constructor(rr) {
-        this.load = rr, this.loaded = null, this.loading = null
+    var Wd = md(35587);
+    class Fd {
+      constructor(dd) {
+        this.load = dd, this.loaded = null, this.loading = null
       }
-      run(rr) {
-        return null !== this.loaded ? rr(this.loaded) : (this.loading ??= this.load().then((rr => (this.loaded = rr, rr)), (rr => {
-          throw this.loading = null, rr
-        })), this.loading.then(rr))
+      run(dd) {
+        return null !== this.loaded ? dd(this.loaded) : (this.loading ??= this.load().then((dd => (this.loaded = dd, dd)), (dd => {
+          throw this.loading = null, dd
+        })), this.loading.then(dd))
       }
     }
-    class ar {
+    class Rd {
       constructor() {
-        this.sharesCharacter = !0, this.mobScene = new Wr((() => Promise.all([Qr.e(85), Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(113), Qr.e(291), Qr.e(89), Qr.e(86), Qr.e(288), Qr.e(87), Qr.e(88), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(312), Qr.e(261), Qr.e(279), Qr.e(293), Qr.e(296), Qr.e(91), Qr.e(253), Qr.e(267), Qr.e(112), Qr.e(124), Qr.e(258), Qr.e(142), Qr.e(90), Qr.e(122), Qr.e(311)]).then((() => Qr(42945))))), this.characterScene = new Wr((() => Promise.all([Qr.e(85), Qr.e(265), Qr.e(264), Qr.e(290), Qr.e(113), Qr.e(291), Qr.e(89), Qr.e(86), Qr.e(288), Qr.e(87), Qr.e(88), Qr.e(298), Qr.e(292), Qr.e(297), Qr.e(295), Qr.e(287), Qr.e(312), Qr.e(177), Qr.e(261), Qr.e(279), Qr.e(293), Qr.e(296), Qr.e(91), Qr.e(225), Qr.e(253), Qr.e(267), Qr.e(112), Qr.e(124), Qr.e(258), Qr.e(142), Qr.e(90), Qr.e(122), Qr.e(280), Qr.e(184)]).then((() => Qr(43048)))))
+        this.sharesCharacter = !0, this.mobScene = new Fd((() => Promise.all([md.e(85), md.e(265), md.e(264), md.e(290), md.e(113), md.e(291), md.e(89), md.e(86), md.e(288), md.e(87), md.e(88), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(312), md.e(261), md.e(279), md.e(293), md.e(296), md.e(91), md.e(253), md.e(267), md.e(112), md.e(124), md.e(258), md.e(142), md.e(90), md.e(122), md.e(311)]).then((() => md(43035))))), this.characterScene = new Fd((() => Promise.all([md.e(85), md.e(265), md.e(264), md.e(290), md.e(113), md.e(291), md.e(89), md.e(86), md.e(288), md.e(87), md.e(88), md.e(298), md.e(292), md.e(297), md.e(295), md.e(287), md.e(312), md.e(177), md.e(261), md.e(279), md.e(293), md.e(296), md.e(91), md.e(225), md.e(253), md.e(267), md.e(112), md.e(124), md.e(258), md.e(142), md.e(90), md.e(122), md.e(280), md.e(184)]).then((() => md(43148)))))
       }
-      openMob(rr) {
-        return this.mobScene.run((Sr => Sr.openMobPreview(rr)))
+      openMob(dd) {
+        return this.mobScene.run((Od => Od.openMobPreview(dd)))
       }
-      openPet(rr) {
-        return this.mobScene.run((Sr => Sr.openPetPreview(rr)))
+      openPet(dd) {
+        return this.mobScene.run((Od => Od.openPetPreview(dd)))
       }
-      openMobLineup(rr) {
-        return this.mobScene.run((Sr => Sr.openMobLineupPreview(rr)))
+      openMobLineup(dd) {
+        return this.mobScene.run((Od => Od.openMobLineupPreview(dd)))
       }
-      openCharacter(rr, Sr) {
-        return this.characterScene.run((Qr => Qr.openCharacterPreview(rr, Sr)))
+      openCharacter(dd, Od) {
+        return this.characterScene.run((md => md.openCharacterPreview(dd, Od)))
       }
     }
-    Zr.i.setDefaultHost((() => new ar))
+    Wd.j.setDefaultHost((() => new Rd))
   },
-  37866: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar,
-      i: () => fr,
-      j: () => jr
+  37958: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      d: () => hd,
+      e: () => Xd
     });
-    var Zr = Qr(688),
-      Wr = Qr(2383);
+    var Wd = md(701),
+      Fd = md(2402);
 
-    function ar(rr) {
-      return rr === (0, Wr.e)().WC ? (0, Wr.e)().fC : rr
+    function Rd(dd) {
+      return dd === (0, Fd.c)().bV ? (0, Fd.c)().YV : dd
     }
 
-    function jr(rr) {
-      return !(0, Zr.L)(rr) && ar(rr) === (0, Wr.e)().fC
+    function Xd(dd) {
+      return !(0, Wd.O)(dd) && Rd(dd) === (0, Fd.c)().YV
     }
-    const Ir = "gravity";
+    const Kd = "gravity";
 
-    function fr() {
-      return (0, Wr.e)().physics[Ir][1]
+    function hd() {
+      return (0, Fd.c)().physics[Kd][1]
     }
   },
-  37843: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Tr
+  37939: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Jd
     });
-    var Zr = Qr(37851),
-      Wr = Qr(208),
-      ar = Qr(5681),
-      jr = Qr(37853),
-      Ir = Qr(37859),
-      fr = Qr(37927),
-      Er = Qr(37866),
-      pr = Qr(388),
-      xr = Qr.n(pr),
-      mr = Qr(2383),
-      Nr = Qr(37924),
-      Ur = Qr(34),
-      tr = Qr(26),
-      hr = Qr(37875),
-      zr = Qr(37884),
-      Yr = Qr(37893),
-      nr = Qr(37902),
-      er = Qr(37915);
-    const Kr = new Set(["note"]);
-    const yr = {
-      stop: () => yr,
-      fade: () => yr,
-      rate: () => yr,
+    var Wd = md(37942),
+      Fd = md(218),
+      Rd = md(5641),
+      Xd = md(37948),
+      Kd = md(37955),
+      hd = md(38006),
+      vd = md(37958),
+      Qd = md(415),
+      td = md.n(Qd),
+      od = md(2402),
+      Nd = md(38003),
+      qd = md(32),
+      Hd = md(29),
+      yd = md(37965),
+      bd = md(37974),
+      Td = md(37982),
+      pd = md(37989),
+      Yd = md(37996);
+    const gd = new Set(["note"]);
+    const wd = {
+      stop: () => wd,
+      fade: () => wd,
+      rate: () => wd,
       stopsAtOnce: () => !1,
       isAlive: () => !1,
       getDurationMs: () => 0,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => yr,
-      setPannerAttr: () => yr,
-      setPosition: () => yr
+      setRelativeVolume: () => wd,
+      setPannerAttr: () => wd,
+      setPosition: () => wd
     };
-    class Br {
-      constructor(rr) {
-        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new fr.k, this._howl = (0, Ir.countDecodesAs)(new ar.Howl({
-          src: [...(0, Zr.r)(rr).src],
+    class Ed {
+      constructor(dd) {
+        this._howl = void 0, this._volumeMultiplier = void 0, this._loadFailed = !1, this._unloaded = !1, this._volumeMultiplier = new hd.h, this._howl = (0, Kd.countDecodesAs)(new Rd.Howl({
+          src: [...(0, Wd.t)(dd).src],
           pool: 15
         }), "sound"), this._howl.once("loaderror", (() => {
           this._loadFailed = !0
         }))
       }
       play() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Sr = this._howl.play(jr.e);
-        rr && this._howl.loop(!0, Sr);
-        let Qr = 1;
-        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), Sr);
-        const Zr = {
+        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Od = this._howl.play(Xd.b);
+        dd && this._howl.loop(!0, Od);
+        let md = 1;
+        this._howl.volume(this._volumeMultiplier.getTotalMultipliedVal(), Od);
+        const Wd = {
           stop: () => {
-            var rr;
-            return null === (rr = this.liveHowl()) || void 0 === rr || rr.stop(Sr), Zr
+            var dd;
+            return null === (dd = this.liveHowl()) || void 0 === dd || dd.stop(Od), Wd
           },
-          fade: (rr, Qr, Wr) => {
-            var ar;
-            return null === (ar = this.liveHowl()) || void 0 === ar || ar.fade(rr, Qr, Wr, Sr), Zr
+          fade: (dd, md, Fd) => {
+            var Rd;
+            return null === (Rd = this.liveHowl()) || void 0 === Rd || Rd.fade(dd, md, Fd, Od), Wd
           },
-          rate: rr => {
-            var Qr;
-            return null === (Qr = this.liveHowl()) || void 0 === Qr || Qr.rate(rr, Sr), Zr
+          rate: dd => {
+            var md;
+            return null === (md = this.liveHowl()) || void 0 === md || md.rate(dd, Od), Wd
           },
-          stopsAtOnce: () => this._howl.playing(Sr) && !this._howl._playLock,
+          stopsAtOnce: () => this._howl.playing(Od) && !this._howl._playLock,
           isAlive: () => {
-            const rr = this._howl._soundById(Sr);
-            return !this._loadFailed && !!rr && !rr._ended
+            const dd = this._howl._soundById(Od);
+            return !this._loadFailed && !!dd && !dd._ended
           },
-          getDurationMs: () => this._howl._soundById(Sr) ? 1e3 * this._howl.duration(Sr) / this._howl.rate(Sr) : 0,
-          getVolume: () => Qr * this._volumeMultiplier.getTotalMultipliedVal(),
-          getRelativeVolume: () => Qr,
-          setRelativeVolume: rr => {
-            var Wr;
-            if (rr > 1) throw new Error("Volume should be <= 1");
-            return Qr = tr.c.get("soundOnFromAd") ? rr : 0, null === (Wr = this.liveHowl()) || void 0 === Wr || Wr.volume(Math.min(1, Qr * this._volumeMultiplier.getTotalMultipliedVal()), Sr), Zr
+          getDurationMs: () => this._howl._soundById(Od) ? 1e3 * this._howl.duration(Od) / this._howl.rate(Od) : 0,
+          getVolume: () => md * this._volumeMultiplier.getTotalMultipliedVal(),
+          getRelativeVolume: () => md,
+          setRelativeVolume: dd => {
+            var Fd;
+            if (dd > 1) throw new Error("Volume should be <= 1");
+            return md = Hd.e.get("soundOnFromAd") ? dd : 0, null === (Fd = this.liveHowl()) || void 0 === Fd || Fd.volume(Math.min(1, md * this._volumeMultiplier.getTotalMultipliedVal()), Od), Wd
           },
-          setPannerAttr: rr => {
+          setPannerAttr: dd => {
             let {
-              coneInnerAngle: Qr,
-              coneOuterAngle: Wr = 360,
-              coneOuterGain: ar,
-              distanceModel: jr,
-              maxDistance: Ir,
-              panningModel: fr,
-              refDistance: Er,
-              rolloffFactor: pr
-            } = rr;
+              coneInnerAngle: md,
+              coneOuterAngle: Fd = 360,
+              coneOuterGain: Rd,
+              distanceModel: Xd,
+              maxDistance: Kd,
+              panningModel: hd,
+              refDistance: vd,
+              rolloffFactor: Qd
+            } = dd;
             return this._setPannerAttr({
-              id: Sr,
-              coneInnerAngle: Qr,
-              coneOuterAngle: Wr,
-              coneOuterGain: ar,
-              distanceModel: jr,
-              maxDistance: Ir,
-              panningModel: fr,
-              refDistance: Er,
-              rolloffFactor: pr
-            }), Zr
+              id: Od,
+              coneInnerAngle: md,
+              coneOuterAngle: Fd,
+              coneOuterGain: Rd,
+              distanceModel: Xd,
+              maxDistance: Kd,
+              panningModel: hd,
+              refDistance: vd,
+              rolloffFactor: Qd
+            }), Wd
           },
-          setPosition: rr => {
-            var Qr;
-            return null === (Qr = this.liveHowl()) || void 0 === Qr || Qr.pos(rr[2], rr[1], rr[0], Sr), Zr
+          setPosition: dd => {
+            var md;
+            return null === (md = this.liveHowl()) || void 0 === md || md.pos(dd[2], dd[1], dd[0], Od), Wd
           }
         };
-        return Zr
+        return Wd
       }
       liveHowl() {
         return this._unloaded ? null : this._howl
@@ -1513,143 +1513,143 @@ export const modules = {
         return "loaded" === this._howl.state()
       }
       unloadOnceIdle() {
-        (0, jr.g)(this._howl, (() => {
+        (0, Xd.e)(this._howl, (() => {
           this._unloaded = !0
         }))
       }
-      setGlobalVolume(rr) {
-        this._volumeMultiplier.setMultiplierType("globalVolume", rr), this._howl.volume(rr)
+      setGlobalVolume(dd) {
+        this._volumeMultiplier.setMultiplierType("globalVolume", dd), this._howl.volume(dd)
       }
-      _setPannerAttr(rr) {
+      _setPannerAttr(dd) {
         let {
-          id: Sr,
-          coneInnerAngle: Qr = 360,
-          coneOuterAngle: Zr = 360,
-          coneOuterGain: Wr = 0,
-          distanceModel: ar = "inverse",
-          maxDistance: jr = 1e3,
-          panningModel: Ir = "HRTF",
-          refDistance: fr = Nr.h,
-          rolloffFactor: Er = 1
-        } = rr;
-        const pr = this.liveHowl();
-        if (null === pr) return;
-        pr.pannerAttr({
-          coneOuterAngle: Zr
-        }, Sr);
-        const xr = {
-          coneInnerAngle: Qr,
-          coneOuterAngle: Zr,
-          coneOuterGain: Wr,
-          distanceModel: ar,
-          maxDistance: jr,
-          panningModel: Ir,
-          refDistance: fr,
-          rolloffFactor: Er
+          id: Od,
+          coneInnerAngle: md = 360,
+          coneOuterAngle: Wd = 360,
+          coneOuterGain: Fd = 0,
+          distanceModel: Rd = "inverse",
+          maxDistance: Xd = 1e3,
+          panningModel: Kd = "HRTF",
+          refDistance: hd = Nd.i,
+          rolloffFactor: vd = 1
+        } = dd;
+        const Qd = this.liveHowl();
+        if (null === Qd) return;
+        Qd.pannerAttr({
+          coneOuterAngle: Wd
+        }, Od);
+        const td = {
+          coneInnerAngle: md,
+          coneOuterAngle: Wd,
+          coneOuterGain: Fd,
+          distanceModel: Rd,
+          maxDistance: Xd,
+          panningModel: Kd,
+          refDistance: hd,
+          rolloffFactor: vd
         };
-        pr.pannerAttr(xr, Sr)
+        Qd.pannerAttr(td, Od)
       }
     }
-    const Tr = new class {
+    const Jd = new class {
       constructor() {
-        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new hr.d, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, Ur.i.subscribe("appManagerUpdated|soundVolume", (rr => {
-          const Sr = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
-          for (const Qr of Sr) Qr.setGlobalVolume(rr)
+        this.stereoSounds = {}, this.spatialSounds = {}, this.spatialVoices = new yd.d, this.idlePreloads = new Set, this.idlePreloadGeneration = 0, qd.j.subscribe("appManagerUpdated|soundVolume", (dd => {
+          const Od = Object.values(this.stereoSounds).concat(Object.values(this.spatialSounds));
+          for (const md of Od) md.setGlobalVolume(dd)
         }))
       }
-      play(rr, Sr) {
-        var Qr;
-        let ar, jr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (Qr = (0, mr.e)()) || void 0 === Qr ? void 0 : Qr.fC,
-          Ir = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Nr.e,
-          fr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Nr.h,
-          pr = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        var Ur;
-        (0, mr.e)() ? ar = !!Array.isArray(jr) || (0, Er.e)(jr) !== (null === (Ur = (0, mr.e)()) || void 0 === Ur ? void 0 : Ur.fC): ar = !1;
-        const tr = (0, Zr.g)(rr),
-          zr = this.loadSound(ar ? this.spatialSounds : this.stereoSounds, rr);
-        if (!ar) {
-          const rr = zr.play(pr);
-          return rr.setRelativeVolume(Sr), rr
+      play(dd, Od) {
+        var md;
+        let Rd, Xd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null === (md = (0, od.c)()) || void 0 === md ? void 0 : md.YV,
+          Kd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Nd.f,
+          hd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Nd.i,
+          Qd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        var qd;
+        (0, od.c)() ? Rd = !!Array.isArray(Xd) || (0, vd.b)(Xd) !== (null === (qd = (0, od.c)()) || void 0 === qd ? void 0 : qd.YV): Rd = !1;
+        const Hd = (0, Wd.j)(dd),
+          bd = this.loadSound(Rd ? this.spatialSounds : this.stereoSounds, dd);
+        if (!Rd) {
+          const dd = bd.play(Qd);
+          return dd.setRelativeVolume(Od), dd
         }
-        const Yr = (0, mr.e)(),
-          nr = Array.isArray(jr) ? jr : Yr.YB.JY(jr),
-          Br = Yr.YB.JY(Yr.fC);
-        if (!nr || xr().sqrDist(nr, Br) > Ir * Ir) return yr;
-        let Tr;
-        if (!pr) {
+        const Td = (0, od.c)(),
+          pd = Array.isArray(Xd) ? Xd : Td.qE.hY(Xd),
+          Ed = Td.qE.hY(Td.YV);
+        if (!pd || td().sqrDist(pd, Ed) > Kd * Kd) return wd;
+        let Jd;
+        if (!Qd) {
           if (!this.spatialVoices.admit({
-              group: Kr.has(tr) ? null : (0, hr.l)(rr),
-              loudness: (0, hr.h)(Sr, xr().Oj(nr, Br), fr),
+              group: gd.has(Hd) ? null : (0, yd.i)(dd),
+              loudness: (0, yd.e)(Od, td().UX(pd, Ed), hd),
               startMs: performance.now(),
               getDurationMs: () => {
-                var rr, Sr;
-                return null !== (rr = null === (Sr = Tr) || void 0 === Sr ? void 0 : Sr.getDurationMs()) && void 0 !== rr ? rr : 0
+                var dd, Od;
+                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.getDurationMs()) && void 0 !== dd ? dd : 0
               },
               isAlive: () => {
-                var rr, Sr;
-                return null !== (rr = null === (Sr = Tr) || void 0 === Sr ? void 0 : Sr.isAlive()) && void 0 !== rr && rr
+                var dd, Od;
+                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.isAlive()) && void 0 !== dd && dd
               },
               canStop: () => {
-                var rr, Sr;
-                return null !== (rr = null === (Sr = Tr) || void 0 === Sr ? void 0 : Sr.stopsAtOnce()) && void 0 !== rr && rr
+                var dd, Od;
+                return null !== (dd = null === (Od = Jd) || void 0 === Od ? void 0 : Od.stopsAtOnce()) && void 0 !== dd && dd
               },
               stop: () => {
-                var rr;
-                null === (rr = Tr) || void 0 === rr || rr.stop()
+                var dd;
+                null === (dd = Jd) || void 0 === dd || dd.stop()
               }
-            })) return yr
+            })) return wd
         }
-        return Tr = zr.play(pr), Tr.setRelativeVolume(Sr), Tr.setPannerAttr({
-          refDistance: fr
-        }), Tr.setPosition([nr[0], nr[1] + Wr.i.Uz * Wr.i.playerEyeToHeightRatio, nr[2]]), !pr && (0, er.l)() && (0, er.i)(tr, rr, nr[0] - Br[0], nr[2] - Br[2]), Tr
+        return Jd = bd.play(Qd), Jd.setRelativeVolume(Od), Jd.setPannerAttr({
+          refDistance: hd
+        }), Jd.setPosition([pd[0], pd[1] + Fd.i.yb * Fd.i.playerEyeToHeightRatio, pd[2]]), !Qd && (0, Yd.g)() && (0, Yd.d)(Hd, dd, pd[0] - Ed[0], pd[2] - Ed[2]), Jd
       }
-      preload(rr) {
-        const Sr = (0, Zr.l)(rr) ? [rr] : (0, Zr.t)(rr);
-        if (0 === Sr.length) throw new Error(`Invalid sound name ${rr} (no sound has it or starts with it)`);
-        for (const Qr of Sr) this.loadSound(this.stereoSounds, Qr)
+      preload(dd) {
+        const Od = (0, Wd.o)(dd) ? [dd] : (0, Wd.v)(dd);
+        if (0 === Od.length) throw new Error(`Invalid sound name ${dd} (no sound has it or starts with it)`);
+        for (const md of Od) this.loadSound(this.stereoSounds, md)
       }
-      preloadAtIdle(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : nr.c;
-        const Qr = rr.filter((rr => !this.idlePreloads.has(rr)));
-        for (const Wr of Qr) this.idlePreloads.add(Wr);
-        const Zr = this.idlePreloadGeneration;
-        (0, Yr.d)(Qr, {
-          ...Sr,
-          Rr: () => Zr !== this.idlePreloadGeneration,
-          fetchFile: rr => {
-            this.idlePreloads.delete(rr);
+      preloadAtIdle(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pd.c;
+        const md = dd.filter((dd => !this.idlePreloads.has(dd)));
+        for (const Fd of md) this.idlePreloads.add(Fd);
+        const Wd = this.idlePreloadGeneration;
+        (0, Td.b)(md, {
+          ...Od,
+          Ad: () => Wd !== this.idlePreloadGeneration,
+          fetchFile: dd => {
+            this.idlePreloads.delete(dd);
             try {
-              return this.preload(rr), Promise.resolve()
-            } catch (Sr) {
-              return Promise.reject(Sr)
+              return this.preload(dd), Promise.resolve()
+            } catch (Od) {
+              return Promise.reject(Od)
             }
           }
         })
       }
-      loadSound(rr, Sr) {
-        const Qr = rr[Sr];
-        if (Qr) return Qr;
-        const Wr = this.makeSound(rr, Sr);
-        for (const jr of null !== (ar = (0, Zr.n)(Sr)) && void 0 !== ar ? ar : []) {
-          var ar;
-          rr[jr] || this.makeSound(rr, jr)
+      loadSound(dd, Od) {
+        const md = dd[Od];
+        if (md) return md;
+        const Fd = this.makeSound(dd, Od);
+        for (const Xd of null !== (Rd = (0, Wd.s)(Od)) && void 0 !== Rd ? Rd : []) {
+          var Rd;
+          dd[Xd] || this.makeSound(dd, Xd)
         }
-        return Wr
+        return Fd
       }
-      makeSound(rr, Sr) {
-        (0, nr.f)(Sr);
-        const Qr = new Br(Sr);
-        return Qr.setGlobalVolume(tr.c.get("soundVolume")), rr[Sr] = Qr, Qr
+      makeSound(dd, Od) {
+        (0, pd.g)(Od);
+        const md = new Ed(Od);
+        return md.setGlobalVolume(Hd.e.get("soundVolume")), dd[Od] = md, md
       }
       freeSoundsAfterGame() {
         this.idlePreloadGeneration++, this.idlePreloads.clear(), this.freeSounds()
       }
       freeSounds() {
-        for (const rr of [this.stereoSounds, this.spatialSounds])
-          for (const [Sr, Qr] of Object.entries(rr)) !zr.b.has((0, Zr.g)(Sr)) && Qr.loaded() && (Qr.unloadOnceIdle(), delete rr[Sr])
+        for (const dd of [this.stereoSounds, this.spatialSounds])
+          for (const [Od, md] of Object.entries(dd)) !bd.b.has((0, Wd.j)(Od)) && md.loaded() && (md.unloadOnceIdle(), delete dd[Od])
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

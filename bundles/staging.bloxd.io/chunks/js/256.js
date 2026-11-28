@@ -1,24 +1,24 @@
 export const id = 256;
 export const ids = [256];
 export const modules = {
-  38320: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return "fetch" === rr || "timeout" === rr || "integrity" === rr ? "download" : "browser"
+  38397: (dd, Od, md) => {
+    function Wd(dd) {
+      return "fetch" === dd || "timeout" === dd || "integrity" === dd ? "download" : "browser"
     }
-    Qr.d(Sr, {
-      d: () => Wr,
-      e: () => fr,
-      g: () => pr,
-      h: () => Ir,
-      l: () => jr,
-      p: () => Er,
-      t: () => Zr,
-      u: () => ar
+    md.d(Od, {
+      d: () => Fd,
+      f: () => hd,
+      i: () => Qd,
+      l: () => Kd,
+      o: () => Xd,
+      q: () => vd,
+      u: () => Wd,
+      v: () => Rd
     });
-    const Wr = "https://discord.gg/playbloxd";
+    const Fd = "https://discord.gg/playbloxd";
 
-    function ar(rr, Sr) {
-      return "download" === rr ? {
+    function Rd(dd, Od) {
+      return "download" === dd ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -26,18 +26,18 @@ export const modules = {
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
-      } : "memory" === rr || "noContext" === rr || "graphicsLost" === rr ? {
+      } : "memory" === dd || "noContext" === dd || "graphicsLost" === dd ? {
         icon: "face-dizzy",
-        title: `wasmUnsupported:${rr}Title`,
-        help: `wasmUnsupported:${rr}Help${Sr?"App":""}`,
+        title: `wasmUnsupported:${dd}Title`,
+        help: `wasmUnsupported:${dd}Help${Od?"App":""}`,
         helpValues: {},
         discordLink: !1,
         confirm: "general:tryAgain",
         cancel: "general:back"
       } : {
         icon: "face-dizzy",
-        title: Sr ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
-        help: Sr ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === rr ? "noWebAssemblyHelp" : "help"),
+        title: Od ? "wasmUnsupported:titleApp" : "wasmUnsupported:title",
+        help: Od ? "wasmUnsupported:helpApp" : "wasmUnsupported:" + ("noWebAssembly" === dd ? "noWebAssemblyHelp" : "help"),
         helpValues: {},
         discordLink: !1,
         confirm: "general:ok",
@@ -45,17 +45,17 @@ export const modules = {
       }
     }
 
-    function jr(rr, Sr) {
+    function Xd(dd, Od) {
       return {
-        ...ar(rr, Sr),
-        help: Sr ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${rr}StillHelp`
+        ...Rd(dd, Od),
+        help: Od ? "wasmUnsupported:stillBlockedHelpApp" : `wasmUnsupported:${dd}StillHelp`
       }
     }
 
-    function Ir(rr) {
+    function Kd(dd) {
       return {
         icon: "face-dizzy",
-        title: `wasmUnsupported:${rr}Title`,
+        title: `wasmUnsupported:${dd}Title`,
         help: "wasmScreens:noContextHelp",
         helpValues: {},
         discordLink: !1,
@@ -64,21 +64,21 @@ export const modules = {
       }
     }
 
-    function fr(rr, Sr) {
+    function hd(dd, Od) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: Sr ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: Od ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: rr.code
+          code: dd.code
         },
-        discordLink: Sr,
+        discordLink: Od,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function Er() {
+    function vd() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -90,20 +90,20 @@ export const modules = {
       }
     }
 
-    function pr(rr, Sr, Qr) {
+    function Qd(dd, Od, md) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: Qr ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: md ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: rr.reason
+          reason: dd.reason
         },
-        discordLink: null === rr.name,
-        confirm: Sr ? "general:reconnect" : rr.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === dd.name,
+        confirm: Od ? "general:reconnect" : dd.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

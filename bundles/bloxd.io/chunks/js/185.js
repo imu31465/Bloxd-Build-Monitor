@@ -1,1260 +1,1260 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  40670: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return !(!rr.lobbyLeaderboardInfo && !rr.lobbyManage)
+  40676: (dd, Od, md) => {
+    function Wd(dd) {
+      return !(!dd.lobbyLeaderboardInfo && !dd.lobbyManage)
     }
-    Qr.d(Sr, {
-      c: () => Zr
+    md.d(Od, {
+      b: () => Wd
     })
   },
-  40646: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar,
-      f: () => jr
+  40652: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Rd,
+      f: () => Xd
     });
-    var Zr = Qr(34);
-    let Wr = !1;
+    var Wd = md(32);
+    let Fd = !1;
 
-    function ar() {
-      return Wr
+    function Rd() {
+      return Fd
     }
 
-    function jr(rr) {
-      Wr !== rr && (Wr = rr, Zr.i.Jp("replayViewer|videoExportChanged"))
+    function Xd(dd) {
+      Fd !== dd && (Fd = dd, Wd.j.lQ("replayViewer|videoExportChanged"))
     }
   },
-  40587: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar
+  40584: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Rd
     });
-    var Zr = Qr(34),
-      Wr = Qr(2114);
+    var Wd = md(32),
+      Fd = md(2116);
 
-    function ar(rr) {
+    function Rd(dd) {
       let {
-        taskId: Sr,
-        progress: Qr
-      } = rr;
-      const Zr = Wr.d.get("_tasks");
-      null !== Zr && void 0 !== Zr && Zr[Sr] && Wr.d.apply({
+        taskId: Od,
+        progress: md
+      } = dd;
+      const Wd = Fd.e.get("_tasks");
+      null !== Wd && void 0 !== Wd && Wd[Od] && Fd.e.apply({
         _tasks: {
-          ...Zr,
-          [Sr]: {
-            ...Zr[Sr],
-            progress: Qr
+          ...Wd,
+          [Od]: {
+            ...Wd[Od],
+            progress: md
           }
         }
       })
     }
-    Zr.i.subscribe("clientTaskProgress", (rr => {
-      ar(rr)
+    Wd.j.subscribe("clientTaskProgress", (dd => {
+      Rd(dd)
     }))
   },
-  40531: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => QQ,
-      e: () => rQ,
-      f: () => SQ
+  40531: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Fm,
+      i: () => mm,
+      j: () => Wm
     });
-    var Zr = Qr(2364),
-      Wr = Qr(161),
-      ar = Qr(208),
-      jr = Qr(692),
-      Ir = Qr(43),
-      fr = Qr(2383),
-      Er = Qr(2484),
-      pr = Qr(2448),
-      xr = Qr(1279);
-    const mr = new WeakMap;
-    class Nr {
-      constructor(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-          upr: !0
+    var Wd = md(2386),
+      Fd = md(180),
+      Rd = md(218),
+      Xd = md(708),
+      Kd = md(46),
+      hd = md(2402),
+      vd = md(2497),
+      Qd = md(2471),
+      td = md(1286);
+    const od = new WeakMap;
+    class Nd {
+      constructor(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+          lQd: !0
         };
-        this.callbacks = Sr, this.options = Qr, this.pZr = void 0, this.sessionId = void 0, this.bK = [], this.rxr = !1, this.vU = !1, this.Sxr = void 0, this.iK = 0, this.pjr = 0, this.Qxr = (rr, Sr) => {
-          if (this.vU) return;
-          const Qr = Number(rr);
-          this.rxr ? this.Zxr(Qr, Sr) : this.bK.push({
-            id: Qr,
-            payload: Sr
+        this.callbacks = Od, this.options = md, this.IWd = void 0, this.sessionId = void 0, this.ZY = [], this.CQd = !1, this.Aq = !1, this.ZQd = void 0, this.lY = 0, this.HXd = 0, this.kQd = (dd, Od) => {
+          if (this.Aq) return;
+          const md = Number(dd);
+          this.CQd ? this.fQd(md, Od) : this.ZY.push({
+            id: md,
+            payload: Od
           })
         }, this.dispose = () => {
-          this.vU || (this.vU = !0, mr.delete(this), this.bK.length = 0, this.Sxr())
-        }, this.pZr = rr, this.sessionId = rr.sessionId, mr.set(this, []), this.Sxr = this.Wxr()
+          this.Aq || (this.Aq = !0, od.delete(this), this.ZY.length = 0, this.ZQd())
+        }, this.IWd = dd, this.sessionId = dd.sessionId, od.set(this, []), this.ZQd = this.MQd()
       }
-      axr(rr) {
-        this.Sxr(), this.pZr = rr, this.sessionId = rr.sessionId, this.iK = 0, this.pjr = 0, this.Sxr = this.Wxr()
+      dtd(dd) {
+        this.ZQd(), this.IWd = dd, this.sessionId = dd.sessionId, this.lY = 0, this.HXd = 0, this.ZQd = this.MQd()
       }
-      get lK() {
-        return this.pjr
+      get AY() {
+        return this.HXd
       }
-      Wxr() {
-        const rr = this.pZr.rK("*", this.Qxr);
-        return this.options.upr && this.pZr.WK(this.dispose), rr
+      MQd() {
+        const dd = this.IWd.bY("*", this.kQd);
+        return this.options.lQd && this.IWd.TY(this.dispose), dd
       }
-      Zxr(rr, Sr) {
+      fQd(dd, Od) {
         try {
-          (0, Er.Bc)(rr) && (Sr = (0, Er.d)(rr, pr.Dp.from(Sr)));
-          const Qr = mr.get(this)[rr];
-          if ("function" !== typeof Qr) {
-            if (this.callbacks.jxr) return void this.callbacks.jxr(rr, Sr);
-            throw new Error(`No onMessage handler registered for message id ${rr}`)
+          (0, vd.jc)(dd) && (Od = (0, vd.b)(dd, Qd.CQ.from(Od)));
+          const md = od.get(this)[dd];
+          if ("function" !== typeof md) {
+            if (this.callbacks.Otd) return void this.callbacks.Otd(dd, Od);
+            throw new Error(`No onMessage handler registered for message id ${dd}`)
           }
-          Qr(Sr)
-        } catch (Qr) {
-          this.callbacks.fxr(`Error in onMessage ${rr} with payload ${JSON.stringify(Sr)}`, Qr)
+          md(Od)
+        } catch (md) {
+          this.callbacks.Ftd(`Error in onMessage ${dd} with payload ${JSON.stringify(Od)}`, md)
         } finally {
-          this.iK++
+          this.lY++
         }
       }
-      Exr() {
+      Rtd() {
         for (const {
-            id: rr,
-            payload: Sr
+            id: dd,
+            payload: Od
           }
-          of this.bK) {
-          if (this.vU) break;
-          this.Zxr(rr, Sr)
+          of this.ZY) {
+          if (this.Aq) break;
+          this.fQd(dd, Od)
         }
-        this.bK.length = 0
+        this.ZY.length = 0
       }
-      Dv() {
-        return this.vU
+      yJ() {
+        return this.Aq
       }
-      pxr() {
-        if (this.rxr || this.vU) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
+      Xtd() {
+        if (this.CQd || this.Aq) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
         return {
-          rK: (rr, Sr) => {
-            if (this.rxr || this.vU) throw new Error("Trying to call onMessage after registration finished");
-            this.rK(rr, Sr)
+          bY: (dd, Od) => {
+            if (this.CQd || this.Aq) throw new Error("Trying to call onMessage after registration finished");
+            this.bY(dd, Od)
           },
           finishRegistration: () => {
-            if (this.vU) throw new Error("Cannot finish message registration after disposal");
-            this.rxr = !0, this.Exr()
+            if (this.Aq) throw new Error("Cannot finish message registration after disposal");
+            this.CQd = !0, this.Rtd()
           }
         }
       }
-      rK(rr, Sr) {
-        var Qr, Zr;
-        null === (Qr = (Zr = this.callbacks).xxr) || void 0 === Qr || Qr.call(Zr);
-        const Wr = mr.get(this);
-        for (; rr > Wr.length;) Wr[Wr.length] = null;
-        Wr[rr] = Sr
+      bY(dd, Od) {
+        var md, Wd;
+        null === (md = (Wd = this.callbacks).Ktd) || void 0 === md || md.call(Wd);
+        const Fd = od.get(this);
+        for (; dd > Fd.length;) Fd[Fd.length] = null;
+        Fd[dd] = Od
       }
-      send(rr, Sr) {
-        this.mxr(), (0, xr.B)(Sr) ? this.pZr.Uy(rr, Sr) : this.pZr.send(rr, Sr)
+      send(dd, Od) {
+        this.htd(), (0, td.B)(Od) ? this.IWd.pw(dd, Od) : this.IWd.send(dd, Od)
       }
-      mxr() {
-        var rr, Sr;
-        (this.pjr++, 5 === Ur++) && (null === (rr = (Sr = this.callbacks).xxr) || void 0 === rr || rr.call(Sr), Ur = 0)
+      htd() {
+        var dd, Od;
+        (this.HXd++, 5 === qd++) && (null === (dd = (Od = this.callbacks).Ktd) || void 0 === dd || dd.call(Od), qd = 0)
       }
-      hY() {
-        this.dispose(), this.pZr.hY()
+      eT() {
+        this.dispose(), this.IWd.eT()
       }
       leave() {
-        this.dispose(), this.pZr.leave()
+        this.dispose(), this.IWd.leave()
       }
     }
-    let Ur = 0;
-    var tr = Qr(2385);
-    class hr extends Nr {
-      constructor(rr) {
-        super(rr, {
-          xxr: () => {
-            (0, Ir.r)(!0) && (0, Zr.hK)()
+    let qd = 0;
+    var Hd = md(2405);
+    class yd extends Nd {
+      constructor(dd) {
+        super(dd, {
+          Ktd: () => {
+            (0, Kd.s)(!0) && (0, Wd.JY)()
           },
-          fxr: (rr, Sr) => {
-            var Qr;
-            null === (Qr = (0, fr.e)()) || void 0 === Qr || Qr.Xt(rr, Sr)
+          Ftd: (dd, Od) => {
+            var md;
+            null === (md = (0, hd.c)()) || void 0 === md || md.AH(dd, Od)
           }
         }, {
-          upr: !1
-        }), (0, tr.e)(rr)
+          lQd: !1
+        }), (0, Hd.c)(dd)
       }
-      sK(rr, Sr) {
-        return !!(0, tr.h)((0, tr.b)(), this.pZr, rr, Sr) && (this.mxr(), !0)
+      kY(dd, Od) {
+        return !!(0, Hd.j)((0, Hd.b)(), this.IWd, dd, Od) && (this.htd(), !0)
       }
-      axr(rr) {
-        this.Nxr(), super.axr(rr), (0, tr.e)(rr)
+      dtd(dd) {
+        this.vtd(), super.dtd(dd), (0, Hd.c)(dd)
       }
-      hY() {
-        super.hY(), this.Nxr()
+      eT() {
+        super.eT(), this.vtd()
       }
-      Nxr() {
-        this.pZr.TY.Ix.oR = void 0
+      vtd() {
+        this.IWd.lT.Ft.hV = void 0
       }
     }
-    var zr = Qr(34),
-      Yr = Qr(2114),
-      nr = Qr(1885),
-      er = Qr(37992),
-      Kr = Qr(40540),
-      yr = Qr(39533),
-      Br = Qr(39311),
-      Tr = Qr(688),
-      vr = Qr(39899);
+    var bd = md(32),
+      Td = md(2116),
+      pd = md(1890),
+      Yd = md(38074),
+      gd = md(40537),
+      wd = md(39593),
+      Ed = md(39354),
+      Jd = md(701),
+      Ud = md(39947);
 
-    function Or(rr, Sr, Qr) {
-      const Zr = function(rr) {
-          const Sr = new Int32Array(rr.length * vr.g);
-          return rr.forEach(((rr, Qr) => {
-            const Zr = Qr * vr.g;
-            if (4 === rr.length) {
-              const [Qr, Wr, ar, jr] = rr;
-              Sr.set([Qr, Wr, ar, Qr, Wr, ar, jr], Zr)
+    function xd(dd, Od, md) {
+      const Wd = function(dd) {
+          const Od = new Int32Array(dd.length * Ud.c);
+          return dd.forEach(((dd, md) => {
+            const Wd = md * Ud.c;
+            if (4 === dd.length) {
+              const [md, Fd, Rd, Xd] = dd;
+              Od.set([md, Fd, Rd, md, Fd, Rd, Xd], Wd)
             } else {
-              const [Qr, Wr, ar, jr, Ir, fr, Er] = rr;
-              Sr.set([Qr, ar, Ir, Wr, jr, fr, Er], Zr)
+              const [md, Fd, Rd, Xd, Kd, hd, vd] = dd;
+              Od.set([md, Rd, Kd, Fd, Xd, hd, vd], Wd)
             }
-          })), Sr
-        }(Qr),
-        Wr = (Sr, Qr, Zr, Wr) => {
-          rr.setBlockNoMulti(Sr, Qr, Zr, Wr, !0)
+          })), Od
+        }(md),
+        Fd = (Od, md, Wd, Fd) => {
+          dd.setBlockNoMulti(Od, md, Wd, Fd, !0)
         };
-      rr.client.gameRecorder.isCapturing() ? (0, vr.ob)(Zr, (0, vr.kb)(Zr), Wr) : rr.gm.qx.cL(Zr, {
-        pw: Wr,
-        isHookId: Sr => rr.blockChangeHasHooks(Sr),
-        watched: () => function(rr, Sr, Qr) {
-          const Zr = [],
-            Wr = (rr, Sr, Qr) => {
-              Zr.push(rr, Sr, Qr)
+      dd.client.gameRecorder.isCapturing() ? (0, Ud.ib)(Wd, (0, Ud.hb)(Wd), Fd) : dd.zo.Bt.LJ(Wd, {
+        rC: Fd,
+        isHookId: Od => dd.blockChangeHasHooks(Od),
+        watched: () => function(dd, Od, md) {
+          const Wd = [],
+            Fd = (dd, Od, md) => {
+              Wd.push(dd, Od, md)
             },
-            ar = new Set;
-          for (let jr = 0; jr < Qr.length; jr += vr.g)
-            for (let Sr = (0, Tr.U)(Qr[jr]); Sr <= (0, Tr.U)(Qr[jr + 3]); Sr++)
-              for (let Zr = (0, Tr.U)(Qr[jr + 1]); Zr <= (0, Tr.U)(Qr[jr + 4]); Zr++)
-                for (let Ir = (0, Tr.U)(Qr[jr + 2]); Ir <= (0, Tr.U)(Qr[jr + 5]); Ir++) {
-                  const Qr = `${Sr}|${Zr}|${Ir}`;
-                  ar.has(Qr) || (ar.add(Qr), rr.blockDataOwner.forEachDataCell(Sr, Zr, Ir, Wr))
+            Rd = new Set;
+          for (let Xd = 0; Xd < md.length; Xd += Ud.c)
+            for (let Od = (0, Jd.T)(md[Xd]); Od <= (0, Jd.T)(md[Xd + 3]); Od++)
+              for (let Wd = (0, Jd.T)(md[Xd + 1]); Wd <= (0, Jd.T)(md[Xd + 4]); Wd++)
+                for (let Kd = (0, Jd.T)(md[Xd + 2]); Kd <= (0, Jd.T)(md[Xd + 5]); Kd++) {
+                  const md = `${Od}|${Wd}|${Kd}`;
+                  Rd.has(md) || (Rd.add(md), dd.blockDataOwner.forEachDataCell(Od, Wd, Kd, Fd))
                 }
-          return Sr.forEachCell(Wr), Int32Array.from(Zr)
-        }(rr, Sr, Zr)
-      }), rr.gm.NSr()
+          return Od.forEachCell(Fd), Int32Array.from(Wd)
+        }(dd, Od, Wd)
+      }), dd.zo.POd()
     }
 
-    function Lr(rr) {
-      rr.dQr = new Set, rr.SZr = new Set, rr.sQr = new Set, rr.ZZr = new Set, rr.uQr = [], rr.WZr = [], rr.GV = new Set, rr.uQ = [], rr.VV = []
+    function Bd(dd) {
+      dd.iWd = new Set, dd.GWd = new Set, dd.AWd = new Set, dd.nWd = new Set, dd.rWd = [], dd.PWd = [], dd.WC = new Set, dd.Zm = [], dd.tC = []
     }
-    class lr {
-      constructor(rr) {
-        this.gm = rr
+    class Sd {
+      constructor(dd) {
+        this.zo = dd
       }
-      register(rr) {
-        const Sr = this.gm,
-          Qr = (0, fr.c)();
-        rr.rK(Er.bb, (rr => {
-          Sr.qx.dQr.add(rr), Sr.qx.SZr.delete(rr)
-        })), rr.rK(Er.gb, (rr => {
-          Sr.qx.SZr.add(rr), Sr.qx.dQr.delete(rr)
-        })), rr.rK(Er.oe, (rr => {
-          Sr.qx.SZr.delete(rr), Sr.qx.dQr.delete(rr)
-        })), rr.rK(Er.fb, (rr => {
-          Sr.qx.sQr.add(rr), Sr.qx.ZZr.delete(rr)
-        })), rr.rK(Er.ob, (rr => {
-          Sr.qx.ZZr.add(rr), Sr.qx.sQr.delete(rr)
-        })), rr.rK(Er.ve, (rr => {
-          Sr.qx.ZZr.delete(rr), Sr.qx.sQr.delete(rr)
-        })), rr.rK(Er.cb, (rr => {
-          (0, xr.hb)(rr, Sr.qx.WZr), (0, xr.hb)(rr, Sr.qx.uQr), Sr.qx.uQr.push(rr)
-        })), rr.rK(Er.kb, (rr => {
-          (0, xr.hb)(rr, Sr.qx.uQr), (0, xr.hb)(rr, Sr.qx.WZr), Sr.qx.WZr.push(rr)
-        })), rr.rK(Er.re, (rr => {
-          (0, xr.hb)(rr, Sr.qx.uQr), (0, xr.hb)(rr, Sr.qx.WZr)
-        })), rr.rK(Er.$f, (rr => {
+      register(dd) {
+        const Od = this.zo,
+          md = (0, hd.b)();
+        dd.bY(vd.T, (dd => {
+          Od.Bt.iWd.add(dd), Od.Bt.GWd.delete(dd)
+        })), dd.bY(vd._, (dd => {
+          Od.Bt.GWd.add(dd), Od.Bt.iWd.delete(dd)
+        })), dd.bY(vd.ae, (dd => {
+          Od.Bt.GWd.delete(dd), Od.Bt.iWd.delete(dd)
+        })), dd.bY(vd.W, (dd => {
+          Od.Bt.AWd.add(dd), Od.Bt.nWd.delete(dd)
+        })), dd.bY(vd.fb, (dd => {
+          Od.Bt.nWd.add(dd), Od.Bt.AWd.delete(dd)
+        })), dd.bY(vd.ee, (dd => {
+          Od.Bt.nWd.delete(dd), Od.Bt.AWd.delete(dd)
+        })), dd.bY(vd.U, (dd => {
+          (0, td.db)(dd, Od.Bt.PWd), (0, td.db)(dd, Od.Bt.rWd), Od.Bt.rWd.push(dd)
+        })), dd.bY(vd.bb, (dd => {
+          (0, td.db)(dd, Od.Bt.rWd), (0, td.db)(dd, Od.Bt.PWd), Od.Bt.PWd.push(dd)
+        })), dd.bY(vd.de, (dd => {
+          (0, td.db)(dd, Od.Bt.rWd), (0, td.db)(dd, Od.Bt.PWd)
+        })), dd.bY(vd.sf, (dd => {
           let {
-            QW: Qr,
-            ZW: Zr
-          } = rr;
-          Zr ? Sr.qx.GV.delete(Qr) : Sr.qx.GV.add(Qr)
-        })), rr.rK(Er.Yf, (rr => {
+            dF: md,
+            mF: Wd
+          } = dd;
+          Wd ? Od.Bt.WC.delete(md) : Od.Bt.WC.add(md)
+        })), dd.bY(vd.of, (dd => {
           let {
-            uQ: Zr,
-            rZ: Wr
-          } = rr;
-          Qr.updateWalkThroughRect(Sr.fC, Zr, Wr)
-        })), (0, Zr.onGameResetOnce)((() => {
-          Lr(Sr.qx)
-        })), rr.rK(Er.uc, (rr => {
-          yr.c.applyServerUpdate(rr)
-        })), rr.rK(Er.rb, (rr => {
-          Qr.applyServerBlocks((() => {
-            ! function(rr, Sr) {
+            Zm: Wd,
+            km: Fd
+          } = dd;
+          md.updateWalkThroughRect(Od.YV, Wd, Fd)
+        })), (0, Wd.onGameResetOnce)((() => {
+          Bd(Od.Bt)
+        })), dd.bY(vd.dc, (dd => {
+          wd.c.applyServerUpdate(dd)
+        })), dd.bY(vd.lb, (dd => {
+          md.applyServerBlocks((() => {
+            ! function(dd, Od) {
               for (const {
-                  zS: Qr,
-                  YS: Zr
+                  yO: md,
+                  bO: Wd
                 }
-                of Sr) {
-                const Sr = Br.d[Zr];
-                if (Sr) {
+                of Od) {
+                const Od = Ed.d[Wd];
+                if (Od) {
                   const {
-                    compX: Zr,
-                    compY: Wr,
-                    compZ: ar,
-                    mainMultiblock: jr
-                  } = Sr;
-                  rr.fR(Qr[0] - Zr, Qr[1] - Wr, Qr[2] - ar, jr)
+                    compX: Wd,
+                    compY: Fd,
+                    compZ: Rd,
+                    mainMultiblock: Xd
+                  } = Od;
+                  dd.nS(md[0] - Wd, md[1] - Fd, md[2] - Rd, Xd)
                 }
               }
               for (const {
-                  zS: Qr,
-                  YS: Zr,
-                  nS: Wr
+                  yO: md,
+                  bO: Wd,
+                  pO: Fd
                 }
-                of Sr) rr.setBlockNoMulti(Qr[0], Qr[1], Qr[2], Zr, !0), rr.blockDataOwner.setBlockData(Qr[0], Qr[1], Qr[2], null === Wr ? void 0 : JSON.parse(Wr)), rr.blockAdded(Qr[0], Qr[1], Qr[2], Zr)
-            }(Qr, rr)
-          })), zr.i.Jp("changeBlockFail", rr), zr.i.Jp("blockChangeRefused"), Qr.client.triggerGameCallback("onChangeBlockFail", rr), zr.i.Jp("EditBoard", {
+                of Od) dd.setBlockNoMulti(md[0], md[1], md[2], Wd, !0), dd.blockDataOwner.setBlockData(md[0], md[1], md[2], null === Fd ? void 0 : JSON.parse(Fd)), dd.blockAdded(md[0], md[1], md[2], Wd)
+            }(md, dd)
+          })), bd.j.lQ("changeBlockFail", dd), bd.j.lQ("blockChangeRefused"), md.client.triggerGameCallback("onChangeBlockFail", dd), bd.j.lQ("EditBoard", {
             pos: null
-          }), zr.i.Jp("EditCodeBlock", {
+          }), bd.j.lQ("EditCodeBlock", {
             pos: null,
             canChangePos: null
           })
         }));
-        const Wr = rr => {
-          Qr.applyServerBlocks((() => {
-            Or(Qr, yr.c, rr)
+        const Fd = dd => {
+          md.applyServerBlocks((() => {
+            xd(md, wd.c, dd)
           }))
         };
-        rr.rK(Er.Vb, Wr), rr.rK(Er.lc, Wr), rr.rK(Er.Of, (rr => {
+        dd.bY(vd.Hb, Fd), dd.bY(vd.Xb, Fd), dd.bY(vd.hf, (dd => {
           let {
-            Na: Sr,
-            Ua: Zr
-          } = rr;
-          if (Qr.aJ(Sr[0], Sr[1], Sr[2])) {
-            const rr = (0, fr.c)().VY(Sr[0], Sr[1], Sr[2]);
-            (0, fr.c)().updateMailboxContents(Sr[0], Sr[1], Sr[2], rr, Zr)
+            tR: Od,
+            oR: Wd
+          } = dd;
+          if (md.Rk(Od[0], Od[1], Od[2])) {
+            const dd = (0, hd.b)().mY(Od[0], Od[1], Od[2]);
+            (0, hd.b)().updateMailboxContents(Od[0], Od[1], Od[2], dd, Wd)
           }
-        })), rr.rK(Er.Qe, (rr => {
+        })), dd.bY(vd.ve, (dd => {
           let {
-            pos: Sr,
-            data: Zr
-          } = rr;
-          Qr.blockDataOwner.setBlockData(Sr[0], Sr[1], Sr[2], Zr), Qr.blockAdded(Sr[0], Sr[1], Sr[2], Qr.VY(Sr[0], Sr[1], Sr[2]))
+            pos: Od,
+            data: Wd
+          } = dd;
+          md.blockDataOwner.setBlockData(Od[0], Od[1], Od[2], Wd), md.blockAdded(Od[0], Od[1], Od[2], md.mY(Od[0], Od[1], Od[2]))
         }))
       }
     }
-    var Xr = Qr(38630),
-      Pr = Qr(37866),
-      Hr = Qr(39580),
-      qr = Qr(39417),
-      Rr = Qr(39604);
-    class gr {
-      constructor(rr, Sr) {
-        this.gm = rr, this.setUpQueuedEntity = Sr
+    var sd = md(38677),
+      ud = md(37958),
+      Vd = md(39627),
+      Ad = md(39470),
+      rd = md(39639);
+    class Gd {
+      constructor(dd, Od) {
+        this.zo = dd, this.setUpQueuedEntity = Od
       }
-      register(rr) {
-        const Sr = this.gm,
-          Qr = (0, fr.c)();
-        rr.rK(Er._, (rr => {
+      register(dd) {
+        const Od = this.zo,
+          md = (0, hd.b)();
+        dd.bY(vd.S, (dd => {
           let {
-            rr: Sr,
-            Sr: Qr
-          } = rr;
-          this.setUpQueuedEntity(Sr), Sr = (0, Pr.e)(Sr), (0, fr.c)().client.gameRecorder.recordBulletShot(Sr, Qr), zr.i.Jp(`bulletShot|${Sr}`, {
-            bulletDirections: Qr
+            dd: Od,
+            Od: md
+          } = dd;
+          this.setUpQueuedEntity(Od), Od = (0, ud.b)(Od), (0, hd.b)().client.gameRecorder.recordBulletShot(Od, md), bd.j.lQ(`bulletShot|${Od}`, {
+            bulletDirections: md
           })
-        })), rr.rK(Er.xc, (rr => {
+        })), dd.bY(vd.fc, (dd => {
           let {
-            BW: Sr,
-            TW: Qr
-          } = rr;
-          zr.i.Jp("damagedByOtherPlayer", {
-            BW: Sr,
-            direction: Qr
+            wF: Od,
+            aF: md
+          } = dd;
+          bd.j.lQ("damagedByOtherPlayer", {
+            wF: Od,
+            direction: md
           }, !0)
-        })), rr.rK(Er.Qd, (rr => {
-          zr.i.Jp("playerKilled", rr, !0), (0, Pr.j)(rr.killerEId) && !(0, Pr.j)(rr.deadEId) && zr.i.Jp("sessionReplayPlayerKill", {
-            killstreak: rr.killstreak
-          }), (0, fr.c)().client.gameRecorder.recordPlayerKilled(rr.deadEId, rr.killerEId, rr.withItem, rr.killstreak)
-        })), rr.rK(Er._b, (rr => {
-          zr.i.Jp("customKillfeed", rr, !0), (0, fr.c)().client.gameRecorder.recordCustomKillfeed(rr.killer, rr.victim, rr.withItem)
-        })), rr.rK(Er.Yd, (rr => {
+        })), dd.bY(vd.wd, (dd => {
+          bd.j.lQ("playerKilled", dd, !0), (0, ud.e)(dd.killerEId) && !(0, ud.e)(dd.deadEId) && bd.j.lQ("sessionReplayPlayerKill", {
+            killstreak: dd.killstreak
+          }), (0, hd.b)().client.gameRecorder.recordPlayerKilled(dd.deadEId, dd.killerEId, dd.withItem, dd.killstreak)
+        })), dd.bY(vd.Ob, (dd => {
+          bd.j.lQ("customKillfeed", dd, !0), (0, hd.b)().client.gameRecorder.recordCustomKillfeed(dd.killer, dd.victim, dd.withItem)
+        })), dd.bY(vd.Fd, (dd => {
           let {
-            pZ: Qr,
-            xZ: Zr
-          } = rr;
-          this.setUpQueuedEntity(Qr);
-          const Wr = Sr.YB.XQr(Qr);
-          null !== Wr && void 0 !== Wr && Wr.isGun() && Wr.reload(Date.now(), Zr)
-        })), rr.rK(Er.Le, (rr => {
+            KW: md,
+            hW: Wd
+          } = dd;
+          this.setUpQueuedEntity(md);
+          const Fd = Od.qE.NWd(md);
+          null !== Fd && void 0 !== Fd && Fd.isGun() && Fd.reload(Date.now(), Wd)
+        })), dd.bY(vd.te, (dd => {
           let {
-            GS: Qr,
-            kS: Zr
-          } = rr;
-          const Wr = Zr ? (0, Rr.g)(Sr, Zr) : void 0;
-          zr.i.Jp("sendHitmarker", {
-            GS: Qr,
-            screenPos: Wr
+            rO: md,
+            GO: Wd
+          } = dd;
+          const Fd = Wd ? (0, rd.e)(Od, Wd) : void 0;
+          bd.j.lQ("sendHitmarker", {
+            rO: md,
+            screenPos: Fd
           }, !0)
-        })), rr.rK(Er.cd, (rr => {
+        })), dd.bY(vd.Hc, (dd => {
           let {
-            HW: Zr,
-            qW: Wr,
-            gW: ar,
-            MW: jr,
-            GW: Ir,
-            kW: fr,
-            AW: Er
-          } = rr;
-          this.setUpQueuedEntity(Zr), Zr = (0, Pr.e)(Zr);
-          const pr = Sr.YB.yQr(Zr);
-          if (pr && (pr.lastHurtTime = performance.now()), (0, Hr.playRigHurt)(Sr, Zr, fr), zr.i.Jp("lifeformHurt", {
-              eId: Zr,
-              AW: Er
-            }), Wr) {
-            const rr = (0, Rr.g)(Sr, Wr.kS);
-            zr.i.Jp("yourAttackHit", {
-              GS: jr,
-              screenPos: rr,
-              hitSelf: Zr === Sr.fC
+            sF: Wd,
+            uF: Fd,
+            iF: Rd,
+            AF: Xd,
+            rF: Kd,
+            GF: hd,
+            nF: vd
+          } = dd;
+          this.setUpQueuedEntity(Wd), Wd = (0, ud.b)(Wd);
+          const Qd = Od.qE.XWd(Wd);
+          if (Qd && (Qd.lastHurtTime = performance.now()), (0, Vd.playRigHurt)(Od, Wd, hd), bd.j.lQ("lifeformHurt", {
+              eId: Wd,
+              nF: vd
+            }), Fd) {
+            const dd = (0, rd.e)(Od, Fd.GO);
+            bd.j.lQ("yourAttackHit", {
+              rO: Xd,
+              screenPos: dd,
+              hitSelf: Wd === Od.YV
             })
           }
-          Zr === Sr.fC && (Qr.shakePlayerCamera(Zr, Ir / 40, 200), zr.i.Jp("closeShopOnDamaged", null), zr.i.Jp("damagedByOtherPlayer", {
-            BW: null,
-            direction: fr,
-            GW: Ir
+          Wd === Od.YV && (md.shakePlayerCamera(Wd, Kd / 40, 200), bd.j.lQ("closeShopOnDamaged", null), bd.j.lQ("damagedByOtherPlayer", {
+            wF: null,
+            direction: hd,
+            rF: Kd
           }, !0));
-          const xr = Sr.YB.JY(Zr);
-          if (xr && (ar || jr)) {
-            const rr = [xr[0], xr[1] + 1, xr[2]];
-            ar && (0, qr.i)(Sr, qr.x, rr, 15), jr && (0, qr.i)(Sr, qr.n, rr, 10)
+          const td = Od.qE.hY(Wd);
+          if (td && (Rd || Xd)) {
+            const dd = [td[0], td[1] + 1, td[2]];
+            Rd && (0, Ad.j)(Od, Ad.B, dd, 15), Xd && (0, Ad.j)(Od, Ad.q, dd, 10)
           }
-        })), rr.rK(Er._c, (rr => {
+        })), dd.bY(vd.Gc, (dd => {
           let {
-            dW: Qr,
-            sW: Zr,
-            uW: Wr
-          } = rr;
-          (0, Xr.b)(Sr).setHealthFrac((0, Pr.e)(Qr), Wr), zr.i.Jp("lifeformHealthChanged", {
-            eId: (0, Pr.e)(Qr),
-            sW: Zr,
-            uW: Wr
+            CF: md,
+            ZF: Wd,
+            kF: Fd
+          } = dd;
+          (0, sd.e)(Od).setHealthFrac((0, ud.b)(md), Fd), bd.j.lQ("lifeformHealthChanged", {
+            eId: (0, ud.b)(md),
+            ZF: Wd,
+            kF: Fd
           })
-        })), rr.rK(Er.U, (rr => {
+        })), dd.bY(vd.O, (dd => {
           let {
-            xW: Qr,
-            mW: Zr
-          } = rr;
-          (0, fr.c)().playerAttacked(Sr.fC, Qr, Zr)
-        })), rr.rK(Er.zb, (() => {
-          const rr = Sr.YB.XQr(Sr.fC);
-          null !== rr && void 0 !== rr && rr.isChargeable() && rr.finishCharging(!1, Date.now())
-        })), rr.rK(Er.gc, (rr => {
+            QF: md,
+            tF: Wd
+          } = dd;
+          (0, hd.b)().playerAttacked(Od.YV, md, Wd)
+        })), dd.bY(vd.sb, (() => {
+          const dd = Od.qE.NWd(Od.YV);
+          null !== dd && void 0 !== dd && dd.isChargeable() && dd.finishCharging(!1, Date.now())
+        })), dd.bY(vd.Tb, (dd => {
           let {
-            ua: Sr,
-            rj: Qr,
-            Sj: Zr,
-            Qj: Wr,
-            Zj: ar,
-            Wj: jr
-          } = rr;
-          Sr = (0, Pr.e)(Sr), (0, fr.c)().client.updateEffect(Sr, Qr, {
-            displayName: Zr,
-            icon: Wr,
-            duration: ar,
-            level: jr
+            MR: Od,
+            dX: md,
+            OX: Wd,
+            mX: Fd,
+            WX: Rd,
+            FX: Xd
+          } = dd;
+          Od = (0, ud.b)(Od), (0, hd.b)().client.updateEffect(Od, md, {
+            displayName: Wd,
+            icon: Fd,
+            duration: Rd,
+            level: Xd
           })
-        })), rr.rK(Er.Zd, (rr => {
+        })), dd.bY(vd.Hd, (dd => {
           let {
-            ua: Sr,
-            rj: Qr
-          } = rr;
-          Sr = (0, Pr.e)(Sr), (0, fr.c)().client.removeEffect(Sr, Qr)
-        })), rr.rK(Er.Jf, (rr => {
-          zr.i.Jp("ttbEffectMultiplier", rr)
+            MR: Od,
+            dX: md
+          } = dd;
+          Od = (0, ud.b)(Od), (0, hd.b)().client.removeEffect(Od, md)
+        })), dd.bY(vd.df, (dd => {
+          bd.j.lQ("ttbEffectMultiplier", dd)
         }))
       }
     }
-    var Cr = Qr(40561),
-      Mr = Qr(38625),
-      Gr = Qr(2968),
-      kr = Qr(39609),
-      Ar = Qr(37843),
-      Vr = Qr(37851),
-      ir = Qr(38541),
-      wr = Qr(38659),
-      cr = Qr(39612),
-      Fr = Qr(40563);
-    class or {
-      constructor(rr, Sr) {
-        this.gm = rr, this.setUpQueuedEntity = Sr
+    var nd = md(40553),
+      Ld = md(38673),
+      Pd = md(2972),
+      zd = md(39645),
+      cd = md(37939),
+      jd = md(37942),
+      Dd = md(38608),
+      ed = md(38702),
+      Id = md(39649),
+      ld = md(40559);
+    class Cd {
+      constructor(dd, Od) {
+        this.zo = dd, this.setUpQueuedEntity = Od
       }
-      register(rr) {
-        const Sr = this.gm,
-          Qr = (0, fr.c)();
-        rr.rK(Er.nd, (rr => {
+      register(dd) {
+        const Od = this.zo,
+          md = (0, hd.b)();
+        dd.bY(vd.Wc, (dd => {
           let {
-            eId: Qr,
-            settings: Zr
-          } = rr;
-          (0, wr.d)(Qr);
-          for (const Sr in Zr)(0, wr.c)(Qr, Sr, Zr[Sr]);
-          if ("canSee" in Zr && Sr.YB.TSr(Qr, "hidingMeshManager")) {
-            const rr = Sr.YB.getState(Qr, "hidingMeshManager");
-            rr.canSee = (0, cr.d)("canSee", Zr.canSee), rr._forceUpdate = !0
+            eId: md,
+            settings: Wd
+          } = dd;
+          (0, ed.h)(md);
+          for (const Od in Wd)(0, ed.e)(md, Od, Wd[Od]);
+          if ("canSee" in Wd && Od.qE.MOd(md, "hidingMeshManager")) {
+            const dd = Od.qE.getState(md, "hidingMeshManager");
+            dd.canSee = (0, Id.c)("canSee", Wd.canSee), dd._forceUpdate = !0
           }
-        })), rr.rK(Er.K, (rr => {
+        })), dd.bY(vd.H, (dd => {
           let {
-            hQ: Qr,
-            zQ: Zr,
-            animationScript: Wr,
-            YQ: ar,
-            nQ: jr,
-            eQ: Ir,
-            KQ: Er
-          } = rr;
-          Qr = (0, Pr.e)(Qr);
-          const pr = null === Wr && null !== Ir ? (0, Cr.f)(Ir, Er) : Wr;
-          (0, fr.c)().client.gameRecorder.recordAnimateEntity(Qr, Zr, pr, ar, jr), (0, Xr.b)(Sr).animations.animateEntity(Qr, Zr, Wr, ar, jr, Ir, Er), null !== Wr || Qr === Sr.fC && Zr === Mr.i.Emote && (0, fr.c)().client.cameraController.endTemporaryThirdPerson()
-        })), rr.rK(Er.He, (rr => {
-          (0, Fr.e)(rr)
-        })), rr.rK(Er.Od, (rr => {
-          for (const Sr of rr)(0, kr.A)(Sr);
-          zr.i.Jp("playerCosmeticsUpdated", rr, !0)
-        })), rr.rK(Er.R, (rr => {
-          for (const Qr of rr)(0, ir.g)(Sr, Qr)
-        })), rr.rK(Er.od, (rr => {
-          (0, qr.j)(Sr, (0, xr.t)(rr))
-        })), rr.rK(Er.qd, (rr => {
-          Gr.f[rr.pW] ? (0, qr.j)(Sr, {
-            ...Gr.f[rr.pW],
-            pos1: rr.pos1,
-            pos2: rr.pos2
-          }) : console.error(`Unknown preset id: ${rr.pW}`)
-        })), rr.rK(Er.Kd, (rr => {
-          var Sr, Qr;
+            qm: md,
+            Hm: Wd,
+            animationScript: Fd,
+            ym: Rd,
+            bm: Xd,
+            Tm: Kd,
+            pm: vd
+          } = dd;
+          md = (0, ud.b)(md);
+          const Qd = null === Fd && null !== Kd ? (0, nd.f)(Kd, vd) : Fd;
+          (0, hd.b)().client.gameRecorder.recordAnimateEntity(md, Wd, Qd, Rd, Xd), (0, sd.e)(Od).animations.animateEntity(md, Wd, Fd, Rd, Xd, Kd, vd), null !== Fd || md === Od.YV && Wd === Ld.c.Emote && (0, hd.b)().client.cameraController.endTemporaryThirdPerson()
+        })), dd.bY(vd.se, (dd => {
+          (0, ld.e)(dd)
+        })), dd.bY(vd.ud, (dd => {
+          for (const Od of dd)(0, zd.A)(Od);
+          bd.j.lQ("playerCosmeticsUpdated", dd, !0)
+        })), dd.bY(vd.M, (dd => {
+          for (const md of dd)(0, Dd.f)(Od, md)
+        })), dd.bY(vd.Xc, (dd => {
+          (0, Ad.n)(Od, (0, td.v)(dd))
+        })), dd.bY(vd.Zc, (dd => {
+          Pd.g[dd.vF] ? (0, Ad.n)(Od, {
+            ...Pd.g[dd.vF],
+            pos1: dd.pos1,
+            pos2: dd.pos2
+          }) : console.error(`Unknown preset id: ${dd.vF}`)
+        })), dd.bY(vd.qd, (dd => {
+          var Od, md;
           let {
-            SZ: Zr,
-            QZ: Wr,
-            ZZ: ar,
-            WZ: jr
-          } = rr, {
-            jZ: Ir,
-            IZ: Er
-          } = null !== jr && void 0 !== jr ? jr : {};
+            fm: Wd,
+            Mm: Fd,
+            dW: Rd,
+            OW: Xd
+          } = dd, {
+            WW: Kd,
+            FW: vd
+          } = null !== Xd && void 0 !== Xd ? Xd : {};
           const {
-            aZ: pr
-          } = null !== jr && void 0 !== jr ? jr : {};
-          Ir = null !== (Sr = Ir) && void 0 !== Sr ? Sr : void 0, Er = null !== (Qr = Er) && void 0 !== Qr ? Qr : void 0, "string" === typeof pr && this.setUpQueuedEntity(pr), (0, fr.c)().client.gameRecorder.recordPlaySound(Zr, Wr, ar, jr), Ar.b.play((0, Vr.c)(Zr), Wr, pr, Ir, Er).rate(ar)
-        })), rr.rK(Er.Rf, (rr => {
-          for (const Sr in rr) {
-            const Zr = rr[Sr];
-            for (const rr in Zr) Qr.client.meshCreator.handleParticleSystemUpdate(Sr, rr, Zr[rr])
+            mW: Qd
+          } = null !== Xd && void 0 !== Xd ? Xd : {};
+          Kd = null !== (Od = Kd) && void 0 !== Od ? Od : void 0, vd = null !== (md = vd) && void 0 !== md ? md : void 0, "string" === typeof Qd && this.setUpQueuedEntity(Qd), (0, hd.b)().client.gameRecorder.recordPlaySound(Wd, Fd, Rd, Xd), cd.d.play((0, jd.f)(Wd), Fd, Qd, Kd, vd).rate(Rd)
+        })), dd.bY(vd.lf, (dd => {
+          for (const Od in dd) {
+            const Wd = dd[Od];
+            for (const dd in Wd) md.client.meshCreator.handleParticleSystemUpdate(Od, dd, Wd[dd])
           }
         }))
       }
     }
-    var br = Qr(39286),
-      Jr = Qr(39256);
-    class Dr {
-      constructor(rr) {
-        this.gm = rr
+    var Zd = md(39327),
+      kd = md(39292);
+    class fd {
+      constructor(dd) {
+        this.zo = dd
       }
-      register(rr) {
-        const Sr = this.gm,
-          Qr = (0, fr.c)();
+      register(dd) {
+        const Od = this.zo,
+          md = (0, hd.b)();
 
-        function Zr() {
-          return Sr.YB.fQr(Sr.fC)
+        function Wd() {
+          return Od.qE.Dmd(Od.YV)
         }
-        rr.rK(Er.Lc, (rr => {
+        dd.bY(vd.sc, (dd => {
           let {
-            NW: Qr,
-            UW: Zr,
-            tW: Wr,
-            hW: ar,
-            zW: jr,
-            YW: Ir,
-            nW: fr,
-            eW: Er,
-            KW: pr
-          } = rr;
-          if (!Sr.YB.TSr(Qr, "itemState")) return void(0, br.l)(Sr, Qr, [jr, Ir, fr], Zr, {
-            amount: Wr,
-            attributes: JSON.parse(ar),
-            eW: Er,
-            size: pr
+            oF: md,
+            NF: Wd,
+            qF: Fd,
+            HF: Rd,
+            yF: Xd,
+            bF: Kd,
+            TF: hd,
+            pF: vd,
+            YF: Qd
+          } = dd;
+          if (!Od.qE.MOd(md, "itemState")) return void(0, Zd.h)(Od, md, [Xd, Kd, hd], Wd, {
+            amount: Fd,
+            attributes: JSON.parse(Rd),
+            pF: vd,
+            size: Qd
           });
-          const xr = Sr.YB.getState(Qr, "itemState");
-          xr.amount = Wr, xr.eW = Er, xr.creationTime = Date.now(), (0, Jr.setServerPosition)(Sr.YB.getState(Qr, "smoothToServerPos"), jr, Ir, fr)
-        })), rr.rK(Er.qb, (rr => {
-          (0, Xr.b)(Sr).setCantPickUp(rr, !0), Sr.YB.TSr(rr, "itemState") && (Sr.YB.getState(rr, "itemState").eW = !0)
-        })), rr.rK(Er.me, (rr => {
-          (0, Xr.b)(Sr).setCantPickUp(rr, !1), Sr.YB.TSr(rr, "itemState") && (Sr.YB.getState(rr, "itemState").eW = !1)
-        })), rr.rK(Er.Fd, (rr => {
+          const td = Od.qE.getState(md, "itemState");
+          td.amount = Fd, td.pF = vd, td.creationTime = Date.now(), (0, kd.setServerPosition)(Od.qE.getState(md, "smoothToServerPos"), Xd, Kd, hd)
+        })), dd.bY(vd.ib, (dd => {
+          (0, sd.e)(Od).setCantPickUp(dd, !0), Od.qE.MOd(dd, "itemState") && (Od.qE.getState(dd, "itemState").pF = !0)
+        })), dd.bY(vd.$d, (dd => {
+          (0, sd.e)(Od).setCantPickUp(dd, !1), Od.qE.MOd(dd, "itemState") && (Od.qE.getState(dd, "itemState").pF = !1)
+        })), dd.bY(vd.nd, (dd => {
           let {
-            pickUpItems: Sr,
-            pickUpAckSeq: Qr
-          } = rr;
+            pickUpItems: Od,
+            pickUpAckSeq: md
+          } = dd;
           for (const {
-              name: Wr,
-              amount: ar,
-              attributes: jr
+              name: Fd,
+              amount: Rd,
+              attributes: Xd
             }
-            of Sr) Zr().pickUpItem({
-            name: Wr,
-            amount: ar,
-            typeObj: br.x[Wr],
-            attributes: jr
+            of Od) Wd().pickUpItem({
+            name: Fd,
+            amount: Rd,
+            typeObj: Zd.v[Fd],
+            attributes: Xd
           });
-          (0, fr.c)().client.inventoryPrediction.serverChangeApplied(Qr)
-        })), rr.rK(Er.ef, (rr => {
+          (0, hd.b)().client.inventoryPrediction.serverChangeApplied(md)
+        })), dd.bY(vd.Ke, (dd => {
           let {
-            index: Qr,
-            name: Zr,
-            amount: Wr,
-            attributes: ar,
-            setSlotAckSeq: jr
-          } = rr;
-          const Ir = Sr.YB.EQr(Sr.fC);
-          (Qr < Ir.playerInventory.numSlots || Ir.pQ || Ir.inCreative) && Ir.setItemSlot(Qr, Zr, Wr, ar), (0, fr.c)().client.inventoryPrediction.serverChangeApplied(jr)
-        })), rr.rK(Er.Jc, (rr => {
-          (0, fr.c)().client.inventoryPrediction.acknowledge(rr)
-        })), rr.rK(Er.G, (rr => {
+            index: md,
+            name: Wd,
+            amount: Fd,
+            attributes: Rd,
+            setSlotAckSeq: Xd
+          } = dd;
+          const Kd = Od.qE.emd(Od.YV);
+          (md < Kd.playerInventory.numSlots || Kd.Km || Kd.inCreative) && Kd.setItemSlot(md, Wd, Fd, Rd), (0, hd.b)().client.inventoryPrediction.serverChangeApplied(Xd)
+        })), dd.bY(vd.qc, (dd => {
+          (0, hd.b)().client.inventoryPrediction.acknowledge(dd)
+        })), dd.bY(vd.D, (dd => {
           let {
-            FS: Sr,
-            oS: Qr,
-            bS: Zr,
-            DS: Wr
-          } = rr;
-          (0, fr.c)().client.itemDropPrediction.onActionItemDrops(Sr, Qr, Zr, Wr)
-        })), rr.rK(Er.Rb, (rr => {
-          Zr().clearInventory(), (0, fr.c)().client.inventoryPrediction.serverChangeApplied(rr)
-        })), rr.rK(Er.hf, (rr => {
-          zr.i.Jp("setSelectedInventorySlotI", rr, !0)
-        })), rr.rK(Er.Ib, (rr => {
+            cO: Od,
+            jO: md,
+            DO: Wd,
+            eO: Fd
+          } = dd;
+          (0, hd.b)().client.itemDropPrediction.onActionItemDrops(Od, md, Wd, Fd)
+        })), dd.bY(vd.Cb, (dd => {
+          Wd().clearInventory(), (0, hd.b)().client.inventoryPrediction.serverChangeApplied(dd)
+        })), dd.bY(vd.Le, (dd => {
+          bd.j.lQ("setSelectedInventorySlotI", dd, !0)
+        })), dd.bY(vd.wb, (dd => {
           let {
-            VW: Qr,
-            iW: Zr,
-            wW: Wr,
-            cW: ar,
-            FW: jr,
-            oW: Ir,
-            bW: Er,
-            JW: pr
-          } = rr;
-          const xr = Sr.YB.EQr(Sr.fC);
-          if (Ir) {
+            LF: md,
+            PF: Wd,
+            zF: Fd,
+            cF: Rd,
+            jF: Xd,
+            DF: Kd,
+            eF: vd,
+            IF: Qd
+          } = dd;
+          const td = Od.qE.emd(Od.YV);
+          if (Kd) {
             const {
-              EQ: rr,
-              tQ: Sr
-            } = pr;
-            return (0, fr.c)().client.inventoryPrediction.Prr(Sr, (() => {
-              xr.chestRefreshed(Zr, Wr, ar, Er, rr)
-            })) && zr.i.Jp("chestToggleFromServer", !1, !0), void zr.i.Jp("chestRefreshedFromServer")
-          }(Qr || xr.pQ) && (Qr ? (xr.chestOpened(Zr, Wr, ar, jr, Er), null !== jr && (0, fr.c)().client.ironChestPasskeyCache.onChestOpened(ar, jr)) : xr.chestClosed(), zr.i.Jp("chestToggleFromServer", Qr, !0))
-        })), rr.rK(Er.cc, (rr => {
+              Xm: dd,
+              Nm: Od
+            } = Qd;
+            return (0, hd.b)().client.inventoryPrediction.XOd(Od, (() => {
+              td.chestRefreshed(Wd, Fd, Rd, vd, dd)
+            })) && bd.j.lQ("chestToggleFromServer", !1, !0), void bd.j.lQ("chestRefreshedFromServer")
+          }(md || td.Km) && (md ? (td.chestOpened(Wd, Fd, Rd, Xd, vd), null !== Xd && (0, hd.b)().client.ironChestPasskeyCache.onChestOpened(Rd, Xd)) : td.chestClosed(), bd.j.lQ("chestToggleFromServer", md, !0))
+        })), dd.bY(vd.Sb, (dd => {
           let {
-            craftingRecipeItemName: Zr,
-            recipesForItem: Wr
-          } = rr;
-          Zr ? Qr.craftingManager.editRecipesForPlayer(Sr.fC, Zr, Wr) : Qr.craftingManager.resetAllPlayerRecipes(Sr.fC), zr.i.Jp("craftingRecipesEdited", {
-            itemName: Zr,
-            recipesForItem: Wr
+            craftingRecipeItemName: Wd,
+            recipesForItem: Fd
+          } = dd;
+          Wd ? md.craftingManager.editRecipesForPlayer(Od.YV, Wd, Fd) : md.craftingManager.resetAllPlayerRecipes(Od.YV), bd.j.lQ("craftingRecipesEdited", {
+            itemName: Wd,
+            recipesForItem: Fd
           })
-        })), rr.rK(Er.ce, (rr => {
+        })), dd.bY(vd.Od, (dd => {
           let {
-            jS: Sr,
-            fS: Qr,
-            pS: Wr
-          } = rr;
-          Zr().removeItemName(Sr, Qr), (0, fr.c)().client.inventoryPrediction.serverChangeApplied(Wr)
-        })), rr.rK(Er._d, (rr => {
+            KO: Od,
+            hO: md,
+            vO: Fd
+          } = dd;
+          Wd().removeItemName(Od, md), (0, hd.b)().client.inventoryPrediction.serverChangeApplied(Fd)
+        })), dd.bY(vd.Ld, (dd => {
           let {
-            aS: Zr
-          } = rr;
-          Qr.craftingManager.removeRecipes(Sr.fC, Zr), zr.i.Jp("craftingRecipesEdited", {
-            itemName: Zr,
+            XO: Wd
+          } = dd;
+          md.craftingManager.removeRecipes(Od.YV, Wd), bd.j.lQ("craftingRecipesEdited", {
+            itemName: Wd,
             recipesForItem: []
           })
         }))
       }
     }
-    var dr = Qr(7424),
-      sr = Qr(39120),
-      ur = Qr(388),
-      rS = Qr.n(ur),
-      SS = Qr(5287),
-      QS = Qr(39198),
-      ZS = Qr(39747),
-      WS = Qr(39113);
-    class aS {
-      constructor(rr, Sr) {
-        this.gm = rr, this.setUpQueuedEntity = Sr
+    var Md = md(7410),
+      dO = md(39146),
+      OO = md(415),
+      mO = md.n(OO),
+      WO = md(5180),
+      FO = md(39229),
+      RO = md(39787),
+      XO = md(39142);
+    class KO {
+      constructor(dd, Od) {
+        this.zo = dd, this.setUpQueuedEntity = Od
       }
-      register(rr) {
-        const Sr = this.gm,
-          Qr = (0, fr.c)();
-        rr.rK(Er.Cf, (rr => {
+      register(dd) {
+        const Od = this.zo,
+          md = (0, hd.b)();
+        dd.bY(vd._e, (dd => {
           let {
-            WQ: Qr,
-            aQ: Wr,
-            jQ: ar,
-            IQ: jr
-          } = rr;
-          const Ir = [Wr, ar, jr];
-          Sr.YB.setPosition(Sr.fC, Ir), (0, Zr.sendColyMessage)(Er.kh, {
-            wp: Qr,
-            cp: SS.f
-          }), zr.i.Jp("localPlayerTeleported", {
-            pos: Ir,
+            dm: md,
+            Om: Fd,
+            Wm: Rd,
+            Fm: Xd
+          } = dd;
+          const Kd = [Fd, Rd, Xd];
+          Od.qE.setPosition(Od.YV, Kd), (0, Wd.sendColyMessage)(vd.Jg, {
+            jQ: md,
+            DQ: WO.f
+          }), bd.j.lQ("localPlayerTeleported", {
+            pos: Kd,
             isCorrection: !1
           })
-        })), rr.rK(Er.xd, (rr => {
+        })), dd.bY(vd.fd, (dd => {
           let {
-            VS: Sr,
-            iS: Qr,
-            wS: Zr,
-            cS: Wr
-          } = rr;
-          this.setUpQueuedEntity(Sr);
-          const ar = [Qr, Zr, Wr];
-          zr.i.Jp(`otherPlayerTeleported|${Sr}`, {
-            pos: ar
+            nO: Od,
+            LO: md,
+            PO: Wd,
+            zO: Fd
+          } = dd;
+          this.setUpQueuedEntity(Od);
+          const Rd = [md, Wd, Fd];
+          bd.j.lQ(`otherPlayerTeleported|${Od}`, {
+            pos: Rd
           })
-        })), rr.rK(Er.Td, (rr => {
+        })), dd.bY(vd.yd, (dd => {
           let {
-            gr: Qr,
-            Cr: Wr,
-            Mr: ar,
-            Gr: jr,
-            kr: Ir,
-            Ar: fr,
-            Vr: pr,
-            wr: xr,
-            ir: mr,
-            br: Nr
-          } = rr;
-          const Ur = [Wr, ar, jr];
-          Sr.YB.setPosition(Sr.fC, Ur);
-          const tr = Sr.YB.ASr(Sr.fC),
-            hr = Sr.YB.cV(Sr.fC);
-          rS().set(hr.YV, 0, 0, 0), rS().set(hr.KV, 0, 0, 0), rS().set(hr.Lh, Ir, fr, pr), hr.yV(), tr._flying = null !== Nr, Nr ? (tr.flyAccel.Jr = Nr.Jr, tr.flyAccel.Dr = Nr.Dr) : tr.flyAccel.reset(), xr && tr.movementType === dr.k.GLIDING && (tr.cr = xr.cr, rS().copy(tr.Fr, xr.Fr)), (0, Zr.sendColyMessage)(Er.kh, {
-            wp: Qr,
-            cp: SS.f
-          }), zr.i.Jp("localPlayerTeleported", {
-            pos: Ur,
+            rd: md,
+            Gd: Fd,
+            nd: Rd,
+            Ld: Xd,
+            Pd: Kd,
+            zd: hd,
+            jd: Qd,
+            ed: td,
+            Dd: od,
+            Cd: Nd
+          } = dd;
+          const qd = [Fd, Rd, Xd];
+          Od.qE.setPosition(Od.YV, qd);
+          const Hd = Od.qE.Hmd(Od.YV),
+            yd = Od.qE.pC(Od.YV);
+          mO().set(yd.ZD, 0, 0, 0), mO().set(yd.mI, 0, 0, 0), mO().set(yd.Gy, Kd, hd, Qd), yd.vI(), Hd._flying = null !== Nd, Nd ? (Hd.flyAccel.Zd = Nd.Zd, Hd.flyAccel.kd = Nd.kd) : Hd.flyAccel.reset(), td && Hd.movementType === Md.n.GLIDING && (Hd.Id = td.Id, mO().copy(Hd.ld, td.ld)), (0, Wd.sendColyMessage)(vd.Jg, {
+            jQ: md,
+            DQ: WO.f
+          }), bd.j.lQ("localPlayerTeleported", {
+            pos: qd,
             isCorrection: !0
           })
-        })), rr.rK(Er.jf, (rr => {
+        })), dd.bY(vd.Pe, (dd => {
           let {
-            vehicleEId: Sr,
-            overrides: Qr
-          } = rr;
-          (0, fr.c)().applyRiddenVehicleSettingOverrides(Sr, Qr)
-        })), rr.rK(Er.Vf, (rr => {
+            vehicleEId: Od,
+            overrides: md
+          } = dd;
+          (0, hd.b)().applyRiddenVehicleSettingOverrides(Od, md)
+        })), dd.bY(vd.mf, (dd => {
           let {
-            WW: Qr,
-            aW: Zr,
-            jW: Wr
-          } = rr;
-          const ar = Sr.YB.ASr(Sr.fC).physicsState.type === dr.n.SLEEPING && Qr === dr.n.DEFAULT;
-          (0, fr.c)().updatePositionAndPhysics(Sr.fC, {
-            type: Qr,
-            tier: Zr
-          }, !0, Wr), ar && (0, fr.c)().updateHeldVehicleStatus()
-        })), rr.rK(Er.vb, (rr => {
+            WF: md,
+            FF: Wd,
+            RF: Fd
+          } = dd;
+          const Rd = Od.qE.Hmd(Od.YV).physicsState.type === Md.q.SLEEPING && md === Md.q.DEFAULT;
+          (0, hd.b)().updatePositionAndPhysics(Od.YV, {
+            type: md,
+            tier: Wd
+          }, !0, Fd), Rd && (0, hd.b)().updateHeldVehicleStatus()
+        })), dd.bY(vd.ob, (dd => {
           let {
-            Ea: Qr,
-            pa: Zr
-          } = rr;
-          Sr.YB.jQr(Sr.fC).setPose(Qr, Zr)
-        })), rr.rK(Er.Te, (rr => {
+            KR: md,
+            hR: Wd
+          } = dd;
+          Od.qE.Pmd(Od.YV).setPose(md, Wd)
+        })), dd.bY(vd.ze, (dd => {
           const {
-            Qx: Qr,
-            kQr: Zr
-          } = (0, sr.e)([rr[0], rr[1], rr[2]]);
-          WS.e.setLookDirection(Sr, Qr, Zr), (0, QS.v)(Qr, Zr);
-          const Wr = Sr.YB.jQr(Sr.fC);
-          Wr && (Wr.heading = Qr)
-        })), rr.rK(Er.Xe, (rr => {
-          Qr.client.cameraController.setCameraZoom(rr)
-        })), rr.rK(Er.qf, (rr => {
+            MQ: md,
+            wWd: Wd
+          } = (0, dO.e)([dd[0], dd[1], dd[2]]);
+          XO.c.setLookDirection(Od, md, Wd), (0, FO.v)(md, Wd);
+          const Fd = Od.qE.Pmd(Od.YV);
+          Fd && (Fd.heading = md)
+        })), dd.bY(vd.De, (dd => {
+          md.client.cameraController.setCameraZoom(dd)
+        })), dd.bY(vd.Te, (dd => {
           let {
-            fZ: Zr,
-            EZ: Wr
-          } = rr;
-          Qr.shakePlayerCamera(Sr.fC, Zr, Wr)
-        })), rr.rK(Er.Qc, (rr => {
-          Sr.YB.jQr(Sr.fC).jumpMultiplier.setMultiplierType("jumpEffectAmount", rr)
-        })), (0, Zr.onGameResetOnce)((() => {
-          Sr.YB.jQr(Sr.fC).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
-        })), rr.rK(Er.N, (rr => {
-          Sr.YB.cV(Sr.fC).applyImpulse(rr)
-        })), rr.rK(Er.mf, (rr => {
-          const Qr = Sr.YB.cV(Sr.fC);
-          rS().set(Qr.YV, 0, 0, 0), rS().set(Qr.KV, 0, 0, 0), rS().copy(Qr.Lh, rr), Qr.yV()
-        })), (0, Zr.onGameResetOnce)((() => {
-          (0, ZS.setFloatingYValue)(Sr.YB.getState(Sr.fC, "physics"), Sr.YB.gJ(Sr.fC), null)
-        })), rr.rK(Er.hc, (rr => {
+            RW: Wd,
+            XW: Fd
+          } = dd;
+          md.shakePlayerCamera(Od.YV, Wd, Fd)
+        })), dd.bY(vd.yc, (dd => {
+          Od.qE.Pmd(Od.YV).jumpMultiplier.setMultiplierType("jumpEffectAmount", dd)
+        })), (0, Wd.onGameResetOnce)((() => {
+          Od.qE.Pmd(Od.YV).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
+        })), dd.bY(vd.J, (dd => {
+          Od.qE.pC(Od.YV).applyImpulse(dd)
+        })), dd.bY(vd.Se, (dd => {
+          const md = Od.qE.pC(Od.YV);
+          mO().set(md.ZD, 0, 0, 0), mO().set(md.mI, 0, 0, 0), mO().copy(md.Gy, dd), md.vI()
+        })), (0, Wd.onGameResetOnce)((() => {
+          (0, RO.setFloatingYValue)(Od.qE.getState(Od.YV, "physics"), Od.qE.gM(Od.YV), null)
+        })), dd.bY(vd.Wb, (dd => {
           let {
-            Da: Qr,
-            da: Zr,
-            sa: Wr
-          } = rr;
-          const ar = (0, Pr.e)(Qr);
-          if (ar === Sr.fC) {
-            const rr = Sr.YB.gJ(Sr.fC).position;
-            Wr ??= Math.floor(rr[1]) - 1, (0, ZS.setFloatingYValue)(Sr.YB.getState(Sr.fC, "physics"), Sr.YB.gJ(Sr.fC), Zr ? Wr : null)
-          }(0, Xr.b)(Sr).setFloating(ar, Zr, Wr);
-          const jr = Sr.YB.getState(ar, "floating");
-          jr && (jr.isFloating = Zr, jr.sa = Zr ? Wr : null)
+            ZR: md,
+            kR: Wd,
+            fR: Fd
+          } = dd;
+          const Rd = (0, ud.b)(md);
+          if (Rd === Od.YV) {
+            const dd = Od.qE.gM(Od.YV).position;
+            Fd ??= Math.floor(dd[1]) - 1, (0, RO.setFloatingYValue)(Od.qE.getState(Od.YV, "physics"), Od.qE.gM(Od.YV), Wd ? Fd : null)
+          }(0, sd.e)(Od).setFloating(Rd, Wd, Fd);
+          const Xd = Od.qE.getState(Rd, "floating");
+          Xd && (Xd.isFloating = Wd, Xd.fR = Wd ? Fd : null)
         }))
       }
     }
 
-    function jS(rr, Sr, Qr, Zr, Wr) {
-      let ar = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (!rr.YB.IQr(rr.fC)) return console.log("Got resync inven but don't have inven component"), void Sr.acknowledge(Zr);
-      ar && console.error("Had to sync inven"), Sr.Prr(Zr, Wr) && Qr.Jp("chestToggleFromServer", !1, !0), Qr.Jp("syncedInvenFromServer")
+    function hO(dd, Od, md, Wd, Fd) {
+      let Rd = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (!dd.qE.zmd(dd.YV)) return console.log("Got resync inven but don't have inven component"), void Od.acknowledge(Wd);
+      Rd && console.error("Had to sync inven"), Od.XOd(Wd, Fd) && md.lQ("chestToggleFromServer", !1, !0), md.lQ("syncedInvenFromServer")
     }
-    var IS = Qr(40574),
-      fS = Qr(10047),
-      ES = Qr(40583),
-      pS = Qr(2117);
-    var xS = Qr(5264);
+    var vO = md(40573),
+      QO = md(10081),
+      tO = md(40575),
+      oO = md(2118);
+    var NO = md(5167);
 
-    function mS(rr) {
-      const Sr = rr.qx;
-      let Qr = 0,
-        Wr = -1,
-        jr = -1 / 0,
-        Ir = null,
-        fr = !0;
-      const pr = () => {
-        if (++Qr % 10 !== 0) return;
-        const pr = (0, Zr.getLastReceivedPacketId)();
-        if (pr <= Wr) return;
-        const [xr, mr, Nr] = rr.YB.JY(rr.fC), Ur = ! function(rr) {
-          var Sr;
-          let Qr = null === (Sr = rr.YB.iQr(rr.fC)) || void 0 === Sr ? void 0 : Sr.nU;
-          if (void 0 === Qr) return !1;
-          const Zr = new Set;
-          for (; void 0 !== Qr && !Zr.has(Qr);) {
-            var Wr;
-            Zr.add(Qr);
-            const Sr = rr.YB.getState(Qr, "smoothToServerPos"),
-              ar = Array.isArray(Sr) ? null : null === Sr || void 0 === Sr ? void 0 : Sr.serverPosition;
-            if (ar) {
-              const Sr = rr.YB.JY(Qr);
-              if (Math.abs(Sr[0] - ar[0]) > 10 || Math.abs(Sr[1] - ar[1]) > 10 || Math.abs(Sr[2] - ar[2]) > 10) return !0
+    function qO(dd) {
+      const Od = dd.Bt;
+      let md = 0,
+        Fd = -1,
+        Xd = -1 / 0,
+        Kd = null,
+        hd = !0;
+      const Qd = () => {
+        if (++md % 10 !== 0) return;
+        const Qd = (0, Wd.getLastReceivedPacketId)();
+        if (Qd <= Fd) return;
+        const [td, od, Nd] = dd.qE.hY(dd.YV), qd = ! function(dd) {
+          var Od;
+          let md = null === (Od = dd.qE.JWd(dd.YV)) || void 0 === Od ? void 0 : Od.xq;
+          if (void 0 === md) return !1;
+          const Wd = new Set;
+          for (; void 0 !== md && !Wd.has(md);) {
+            var Fd;
+            Wd.add(md);
+            const Od = dd.qE.getState(md, "smoothToServerPos"),
+              Rd = Array.isArray(Od) ? null : null === Od || void 0 === Od ? void 0 : Od.serverPosition;
+            if (Rd) {
+              const Od = dd.qE.hY(md);
+              if (Math.abs(Od[0] - Rd[0]) > 10 || Math.abs(Od[1] - Rd[1]) > 10 || Math.abs(Od[2] - Rd[2]) > 10) return !0
             }
-            Qr = null === (Wr = rr.YB.iQr(Qr)) || void 0 === Wr ? void 0 : Wr.nU
+            md = null === (Fd = dd.qE.JWd(md)) || void 0 === Fd ? void 0 : Fd.xq
           }
           return !1
-        }(rr) && function(rr, Sr, Qr, Zr) {
-          const Wr = ar.i.hx;
-          for (let ar = 0; ar < rr.length; ar++) {
-            const jr = rr[ar];
-            if (!(0, xS.g)(Sr, Qr, Zr, jr[0] * Wr, jr[1] * Wr, jr[2] * Wr)) return !1
+        }(dd) && function(dd, Od, md, Wd) {
+          const Fd = Rd.i.Qt;
+          for (let Rd = 0; Rd < dd.length; Rd++) {
+            const Xd = dd[Rd];
+            if (!(0, NO.i)(Od, md, Wd, Xd[0] * Fd, Xd[1] * Fd, Xd[2] * Fd)) return !1
           }
           return !0
-        }(Sr.Ih.Zx, xr, mr, Nr), tr = null === Ir || Math.abs(xr - Ir[0]) > 8 || Math.abs(mr - Ir[1]) > 8 || Math.abs(Nr - Ir[2]) > 8, hr = !fr || tr || performance.now() - jr >= 1e4;
-        fr = Ur, Ur && hr && (Wr = pr, jr = performance.now(), Ir = [xr, mr, Nr], (0, Zr.sendColyMessage)(Er.Pg, {
-          lp: pr
+        }(Od.Qy.dt, td, od, Nd), Hd = null === Kd || Math.abs(td - Kd[0]) > 8 || Math.abs(od - Kd[1]) > 8 || Math.abs(Nd - Kd[2]) > 8, yd = !hd || Hd || performance.now() - Xd >= 1e4;
+        hd = qd, qd && yd && (Fd = Qd, Xd = performance.now(), Kd = [td, od, Nd], (0, Wd.sendColyMessage)(vd.jg, {
+          BQ: Qd
         }))
       };
-      return rr.on("lx", pr), () => {
-        rr.off("lx", pr)
+      return dd.on("Et", Qd), () => {
+        dd.off("Et", Qd)
       }
     }
-    var NS = Qr(40585),
-      US = Qr(1644),
-      tS = Qr(3868),
-      hS = Qr(1965),
-      zS = Qr(4010),
-      YS = Qr(5594);
-    class nS {
-      constructor(rr, Sr, Qr) {
-        this.gm = rr, this.gameNameWithVariation = Sr, this.connectionResume = Qr, this.stopChunkReports = () => {}, this.replayResume = null
+    var HO = md(40577),
+      yO = md(1641),
+      bO = md(3860),
+      TO = md(1954),
+      pO = md(3986),
+      YO = md(5550);
+    class gO {
+      constructor(dd, Od, md) {
+        this.zo = dd, this.gameNameWithVariation = Od, this.connectionResume = md, this.stopChunkReports = () => {}, this.replayResume = null
       }
       clearUiRequestsAndQTEs() {
-        YS.e.reset(), (0, IS.b)()
+        YO.e.reset(), (0, vO.e)()
       }
       startChunkReports() {
-        const rr = function(rr) {
-            let Sr = null,
-              Qr = -1 / 0,
-              Wr = null;
-            const ar = () => {
-                Wr = null;
-                const ar = Math.ceil(rr.Iq[0]),
-                  jr = Math.ceil(rr.Iq[1]);
-                Sr && Sr[0] === ar && Sr[1] === jr || (Sr = [ar, jr], Qr = performance.now(), (0, Zr.sendColyMessage)(Er.Og, {
-                  dI: ar,
-                  sI: jr
+        const dd = function(dd) {
+            let Od = null,
+              md = -1 / 0,
+              Fd = null;
+            const Rd = () => {
+                Fd = null;
+                const Rd = Math.ceil(dd.yB[0]),
+                  Xd = Math.ceil(dd.yB[1]);
+                Od && Od[0] === Rd && Od[1] === Xd || (Od = [Rd, Xd], md = performance.now(), (0, Wd.sendColyMessage)(vd.hg, {
+                  kK: Rd,
+                  fK: Xd
                 }))
               },
-              jr = () => {
-                null === Wr && (Wr = setTimeout(ar, Math.max(0, Qr + 250 - performance.now())))
+              Xd = () => {
+                null === Fd && (Fd = setTimeout(Rd, Math.max(0, md + 250 - performance.now())))
               };
-            return ar(), rr.on("addRemoveDistanceChanged", jr), () => {
-              rr.off("addRemoveDistanceChanged", jr), null !== Wr && (clearTimeout(Wr), Wr = null)
+            return Rd(), dd.on("addRemoveDistanceChanged", Xd), () => {
+              dd.off("addRemoveDistanceChanged", Xd), null !== Fd && (clearTimeout(Fd), Fd = null)
             }
-          }(this.gm.qx),
-          Sr = mS(this.gm);
+          }(this.zo.Bt),
+          Od = qO(this.zo);
         this.stopChunkReports = () => {
-          rr(), Sr()
+          dd(), Od()
         }
       }
       restartChunkStreaming() {
-        (0, QS.m)(this.gm, (0, fr.c)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - NS.e)), this.startChunkReports()
+        (0, FO.k)(this.zo, (0, hd.b)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - HO.e)), this.startChunkReports()
       }
-      register(rr) {
-        const Sr = this.gm,
-          Qr = (0, fr.c)();
-        rr.rK(Er.kd, (rr => {
-          Yr.d.applyNewClientOptions(rr)
-        })), rr.rK(Er.Id, (rr => {
-          tS.e.onReceiveColyseusPing(rr)
-        })), rr.rK(Er._e, (rr => {
+      register(dd) {
+        const Od = this.zo,
+          md = (0, hd.b)();
+        dd.bY(vd.Sc, (dd => {
+          Td.e.applyNewClientOptions(dd)
+        })), dd.bY(vd.pd, (dd => {
+          bO.c.onReceiveColyseusPing(dd)
+        })), dd.bY(vd.He, (dd => {
           let {
-            key: Sr,
-            value: Qr
-          } = rr;
-          (0, nr.setCookie)(this.gameNameWithVariation, Sr, Qr)
-        })), rr.rK(Er.df, (rr => {
-          zr.i.Jp("setDiscordReportKey", rr)
-        })), (0, Zr.onGameResetOnce)((() => {
+            key: Od,
+            value: md
+          } = dd;
+          (0, pd.setCookie)(this.gameNameWithVariation, Od, md)
+        })), dd.bY(vd.Je, (dd => {
+          bd.j.lQ("setDiscordReportKey", dd)
+        })), (0, Wd.onGameResetOnce)((() => {
           this.stopChunkReports()
-        })), rr.rK(Er.Cc, (Wr => {
+        })), dd.bY(vd.lc, (Fd => {
           const {
-            eS: ar,
-            KS: jr
-          } = Wr;
-          if ((0, Zr.setAdjustment)(jr), this.connectionResume.onInitialInfo(Wr.yS, Wr.BS), Zr.offlineInputReplay.VK(Wr.vS), this.connectionResume.isResuming()) {
-            console.log("Resumed the connection as eId", ar);
+            YO: Rd,
+            gO: Xd
+          } = Fd;
+          if ((0, Wd.setAdjustment)(Xd), this.connectionResume.onInitialInfo(Fd.wO, Fd.aO), Wd.offlineInputReplay.rY(Fd.EO), this.connectionResume.isResuming()) {
+            console.log("Resumed the connection as eId", Rd);
             try {
-              null === Wr.OS && (0, fr.c)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), Lr(Sr.qx), Yr.d.apply({
+              null === Fd.JO && (0, hd.b)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), Bd(Od.Bt), Td.e.apply({
                 shopInfo: null,
-                _shopVersion: pS.c
+                _shopVersion: oO.e
               });
-              const Qr = Sr.YB.EQr(Sr.fC);
-              Qr.pQ && (Qr.chestClosed(), zr.i.Jp("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), zr.i.Jp("initInfoReceived", rr)
+              const md = Od.qE.emd(Od.YV);
+              md.Km && (md.chestClosed(), bd.j.lQ("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), bd.j.lQ("initInfoReceived", dd)
             } finally {
-              const rr = null === Wr.OS ? null : {
+              const dd = null === Fd.JO ? null : {
                 sync: null,
                 endSeq: null
               };
-              this.replayResume = rr, this.connectionResume.onResumeInitialInfo(Wr.OS, (() => {
-                rr.endSeq = (0, fr.c)().client.inventoryPrediction.lastActionSeq
-              })), null === rr && this.restartChunkStreaming()
+              this.replayResume = dd, this.connectionResume.onResumeInitialInfo(Fd.JO, (() => {
+                dd.endSeq = (0, hd.b)().client.inventoryPrediction.lastActionSeq
+              })), null === dd && this.restartChunkStreaming()
             }
-          } else console.log("Local client is eId", ar), zr.i.Jp("sessionReplayJoinTicket", Wr.HS), hS.c.markAdmitted(), (0, QS.p)(Sr), zr.i.Jp("loadingScreenState", "loadingPage:loadingWorld"), Sr.WC = ar, Sr.YB.TSr(Sr.fC, Sr.YB.names.entityName) && Sr.YB.bM(Sr.fC, Sr.YB.names.entityName), (0, fr.c)().setEntityName(Sr.WC, (0, fr.c)().getRawEntityName(Sr.fC)), Sr.xG[Sr.WC] = {}, Sr.YB.gM(Sr.fC, Sr.YB.names.entityName), zr.i.Jp("initInfoReceived", rr), this.startChunkReports(), Qr.client.onServerConnectionFinalised()
-        })), rr.rK(Er.De, (() => {
+          } else console.log("Local client is eId", Rd), bd.j.lQ("sessionReplayJoinTicket", Fd.SO), TO.e.markAdmitted(), (0, FO.m)(Od), bd.j.lQ("loadingScreenState", "loadingPage:loadingWorld"), Od.bV = Rd, Od.qE.MOd(Od.YV, Od.qE.names.entityName) && Od.qE.pG(Od.YV, Od.qE.names.entityName), (0, hd.b)().setEntityName(Od.bV, (0, hd.b)().getRawEntityName(Od.YV)), Od.sG[Od.bV] = {}, Od.qE.yG(Od.YV, Od.qE.names.entityName), bd.j.lQ("initInfoReceived", dd), this.startChunkReports(), md.client.onServerConnectionFinalised()
+        })), dd.bY(vd.re, (() => {
           this.connectionResume.isResuming() ? this.connectionResume.onResumed((() => {
-            const rr = this.replayResume;
-            if (this.replayResume = null, !rr) return;
+            const dd = this.replayResume;
+            if (this.replayResume = null, !dd) return;
             this.restartChunkStreaming();
             const {
-              inventoryPrediction: Qr
-            } = (0, fr.c)().client, {
-              sync: Wr
-            } = rr, ar = new Set(Zr.offlineInputReplay.takeDroppedActions());
-            if (Wr) {
-              var jr;
-              const Zr = null !== (jr = rr.endSeq) && void 0 !== jr ? jr : Qr.lastActionSeq;
-              Qr.forget((rr => rr > Wr.tQ && rr <= Zr || ar.has(rr))), jS(Sr, Qr, zr.i, Wr.tQ, Wr.load)
-            } else Qr.dropPending(), Qr.askForSnapshot()
+              inventoryPrediction: md
+            } = (0, hd.b)().client, {
+              sync: Fd
+            } = dd, Rd = new Set(Wd.offlineInputReplay.takeDroppedActions());
+            if (Fd) {
+              var Xd;
+              const Wd = null !== (Xd = dd.endSeq) && void 0 !== Xd ? Xd : md.lastActionSeq;
+              md.forget((dd => dd > Fd.Nm && dd <= Wd || Rd.has(dd))), hO(Od, md, bd.j, Fd.Nm, Fd.load)
+            } else md.dropPending(), md.askForSnapshot()
           })) : console.warn("ResumeComplete arrived without a resume")
-        })), rr.rK(Er.vf, (rr => {
+        })), dd.bY(vd.We, (dd => {
           let {
-            fQ: Qr,
-            UQ: Zr,
-            tQ: Wr
-          } = rr;
+            Rm: md,
+            om: Wd,
+            Nm: Fd
+          } = dd;
           const {
-            inventoryPrediction: ar
-          } = (0, fr.c)().client, jr = () => {
-            Sr.YB.EQr(Sr.fC).loadFromString(Qr)
+            inventoryPrediction: Rd
+          } = (0, hd.b)().client, Xd = () => {
+            Od.qE.emd(Od.YV).loadFromString(md)
           };
           this.replayResume && (this.replayResume.sync = {
-            tQ: Wr,
-            load: jr
-          }), jS(Sr, ar, zr.i, Wr, jr, Zr)
-        })), rr.rK(Er.Wd, (rr => {
+            Nm: Fd,
+            load: Xd
+          }), hO(Od, Rd, bd.j, Fd, Xd, Wd)
+        })), dd.bY(vd.Cd, (dd => {
           let {
-            type: Sr,
-            location1: Qr,
-            location2: Zr,
-            location3: Wr,
-            score: ar
-          } = rr;
-          (0, zS.logProgressionEvent)({
-            type: Sr,
-            location1: Qr,
-            location2: Zr,
-            location3: Wr,
-            score: ar
+            type: Od,
+            location1: md,
+            location2: Wd,
+            location3: Fd,
+            score: Rd
+          } = dd;
+          (0, pO.logProgressionEvent)({
+            type: Od,
+            location1: md,
+            location2: Wd,
+            location3: Fd,
+            score: Rd
           })
-        })), rr.rK(Er.Ae, (rr => {
+        })), dd.bY(vd.oe, (dd => {
           let {
-            type: Sr,
-            resourceType: Qr,
-            amount: Zr,
-            category: Wr,
-            itemName: ar
-          } = rr;
-          (0, zS.logResourceEvent)({
-            type: Sr,
-            resourceType: Qr,
-            amount: Zr,
-            category: Wr,
-            itemName: ar
+            type: Od,
+            resourceType: md,
+            amount: Wd,
+            category: Fd,
+            itemName: Rd
+          } = dd;
+          (0, pO.logResourceEvent)({
+            type: Od,
+            resourceType: md,
+            amount: Wd,
+            category: Fd,
+            itemName: Rd
           })
-        })), rr.rK(Er.Yc, (rr => {
+        })), dd.bY(vd.Fc, (dd => {
           let {
-            leaveEventType: Sr,
-            category: Qr,
-            subCategory: Zr,
-            value: Wr
-          } = rr;
-          (0, zS.updateLeaveValue)({
-            leaveEventType: Sr,
-            category: Qr,
-            subCategory: Zr,
-            value: Wr
+            leaveEventType: Od,
+            category: md,
+            subCategory: Wd,
+            value: Fd
+          } = dd;
+          (0, pO.updateLeaveValue)({
+            leaveEventType: Od,
+            category: md,
+            subCategory: Wd,
+            value: Fd
           })
-        })), rr.rK(Er.Zb, (rr => {
+        })), dd.bY(vd.Lb, (dd => {
           let {
-            cat1: Sr,
-            cat2: Qr,
-            cat3: Zr,
-            value: Wr
-          } = rr;
-          (0, zS.logCustomAnalyticsEvent)({
-            cat1: Sr,
-            cat2: Qr,
-            cat3: Zr,
-            value: Wr
+            cat1: Od,
+            cat2: md,
+            cat3: Wd,
+            value: Fd
+          } = dd;
+          (0, pO.logCustomAnalyticsEvent)({
+            cat1: Od,
+            cat2: md,
+            cat3: Wd,
+            value: Fd
           })
-        })), rr.rK(Er.Tc, (rr => {
-          (0, fr.c)().client.leaveGameUnwanted({
-            reason: (0, fS.d)(rr),
+        })), dd.bY(vd.Ac, (dd => {
+          (0, hd.b)().client.leaveGameUnwanted({
+            reason: (0, QO.e)(dd),
             requiresRefresh: !1,
             canReconnect: !1,
             automaticallyReconnect: !1
-          }), (0, US.navigatePreserveSearch)("/")
-        })), rr.rK(Er.Pe, (rr => {
-          zr.i.Jp("serverUpdating", Date.now() + rr, !0)
-        })), rr.rK(Er.jd, ES.b), rr.rK(Er.dd, (rr => {
-          console.error(`[logErrorToConsole]: ${rr}`)
+          }), (0, yO.navigatePreserveSearch)("/")
+        })), dd.bY(vd.ue, (dd => {
+          bd.j.lQ("serverUpdating", Date.now() + dd, !0)
+        })), dd.bY(vd.Rc, tO.c), dd.bY(vd.Kc, (dd => {
+          console.error(`[logErrorToConsole]: ${dd}`)
         }))
       }
     }
-    var eS = Qr(40587),
-      KS = Qr(40599),
-      yS = Qr(1127),
-      BS = Qr(40593),
-      TS = Qr(3394),
-      vS = Qr(4897);
-    class OS {
-      constructor(rr, Sr) {
-        this.gm = rr, this.clientApi = Sr
+    var wO = md(40584),
+      aO = md(40596),
+      EO = md(1122),
+      JO = md(40592),
+      UO = md(3394),
+      xO = md(4869);
+    class BO {
+      constructor(dd, Od) {
+        this.zo = dd, this.clientApi = Od
       }
-      register(rr) {
-        const Sr = this.gm,
-          Qr = (0, fr.c)();
-        rr.rK(Er.Eb, (rr => {
+      register(dd) {
+        const Od = this.zo,
+          md = (0, hd.b)();
+        dd.bY(vd.vb, (dd => {
           let {
-            chatMsgId: Sr,
-            worldCodeLineId: Qr,
-            content: Zr,
-            chatterEId: Wr,
-            chatterObjectsToReplay: ar
-          } = rr;
-          zr.i.Jp("chat", {
-            serverChatMsgId: Sr,
-            worldCodeLineId: Qr,
-            content: Zr,
-            chatterEId: Wr,
-            chatterObjectsToReplay: ar
+            chatMsgId: Od,
+            worldCodeLineId: md,
+            content: Wd,
+            chatterEId: Fd,
+            chatterObjectsToReplay: Rd
+          } = dd;
+          bd.j.lQ("chat", {
+            serverChatMsgId: Od,
+            worldCodeLineId: md,
+            content: Wd,
+            chatterEId: Fd,
+            chatterObjectsToReplay: Rd
           }, !0)
-        })), rr.rK(Er.Db, (rr => {
+        })), dd.bY(vd.tb, (dd => {
           let {
-            chatMsgId: Sr
-          } = rr;
-          zr.i.Jp("chatRemoved", Sr, !0)
-        })), rr.rK(Er.Gf, (rr => {
-          zr.i.Jp("TopRightHelper", rr, !0)
-        })), rr.rK(Er.zf, (rr => {
-          (0, eS.d)(rr)
-        })), rr.rK(Er.Xc, (rr => {
+            chatMsgId: Od
+          } = dd;
+          bd.j.lQ("chatRemoved", Od, !0)
+        })), dd.bY(vd.bf, (dd => {
+          bd.j.lQ("TopRightHelper", dd, !0)
+        })), dd.bY(vd.Xe, (dd => {
+          (0, wO.e)(dd)
+        })), dd.bY(vd.Bc, (dd => {
           let {
-            category: Sr,
-            timeframe: Qr,
-            data: Zr
-          } = rr;
-          zr.i.Jp("leaderboardResponse", {
-            category: Sr,
-            timeframe: Qr,
-            data: Zr
+            category: Od,
+            timeframe: md,
+            data: Wd
+          } = dd;
+          bd.j.lQ("leaderboardResponse", {
+            category: Od,
+            timeframe: md,
+            data: Wd
           })
-        })), rr.rK(Er.uf, (() => {
-          zr.i.Jp("showShopTutorial", null, !0)
-        })), rr.rK(Er.Vd, (rr => {
-          zr.i.Jp("progressBarUpdate", rr, !0)
-        })), rr.rK(Er.Gc, (rr => {
-          zr.i.Jp("middleScreenBarInitiate", {
-            duration: rr.ta,
-            ha: rr.ha,
-            horizBarRemOffset: rr.za
+        })), dd.bY(vd.Ue, (() => {
+          bd.j.lQ("showShopTutorial", null, !0)
+        })), dd.bY(vd.Bd, (dd => {
+          bd.j.lQ("progressBarUpdate", dd, !0)
+        })), dd.bY(vd.mc, (dd => {
+          bd.j.lQ("middleScreenBarInitiate", {
+            duration: dd.NR,
+            qR: dd.qR,
+            horizBarRemOffset: dd.HR
           }, !0)
-        })), rr.rK(Er.ee, (() => {
-          zr.i.Jp("middleScreenBarRemove", !0)
-        })), rr.rK(Er.af, (rr => {
+        })), dd.bY(vd.Sd, (() => {
+          bd.j.lQ("middleScreenBarRemove", !0)
+        })), dd.bY(vd.Ie, (dd => {
           let {
-            id: Sr,
-            position: Qr,
-            style: Zr,
-            uS: Wr,
-            ZQ: ar
-          } = rr;
-          zr.i.Jp("setDirectionArrow", {
-            id: Sr,
-            position: Qr,
-            style: Zr,
-            text: (0, Er.y)(Wr),
-            ZQ: ar
+            id: Od,
+            position: md,
+            style: Wd,
+            CO: Fd,
+            MO: Rd
+          } = dd;
+          bd.j.lQ("setDirectionArrow", {
+            id: Od,
+            position: md,
+            style: Wd,
+            text: (0, vd.s)(Fd),
+            MO: Rd
           }, !0)
-        })), rr.rK(Er.Nb, (rr => {
+        })), dd.bY(vd.Bb, (dd => {
           let {
-            id: Sr
-          } = rr;
-          zr.i.Jp("clearDirectionArrow", {
-            id: Sr
+            id: Od
+          } = dd;
+          bd.j.lQ("clearDirectionArrow", {
+            id: Od
           }, !0)
-        })), rr.rK(Er.Yb, (rr => {
-          (0, vS.onCosmeticPackGranted)(rr)
-        })), rr.rK(Er.td, (rr => {
+        })), dd.bY(vd.Kb, (dd => {
+          (0, xO.onCosmeticPackGranted)(dd)
+        })), dd.bY(vd._c, (dd => {
           let {
-            id: Sr,
-            Ya: Qr
-          } = rr;
+            id: Od,
+            yR: md
+          } = dd;
           const {
-            type: Wr,
-            params: ar
-          } = (0, KS.g)(Qr), jr = {
-            ...ar
+            type: Fd,
+            params: Rd
+          } = (0, aO.d)(md), Xd = {
+            ...Rd
           };
-          for (const Zr of KS.e) Zr in jr && jr[Zr] && (jr[Zr] = (0, Er.y)(jr[Zr]));
-          YS.e.queueQTE(Sr, Wr, jr).getResult().then((rr => {
-            "boolean" === typeof rr && (0, Zr.sendColyMessage)(Er.Mi, {
-              qteId: Sr,
-              qteResponse: rr
+          for (const Wd of aO.b) Wd in Xd && Xd[Wd] && (Xd[Wd] = (0, vd.s)(Xd[Wd]));
+          YO.e.queueQTE(Od, Fd, Xd).getResult().then((dd => {
+            "boolean" === typeof dd && (0, Wd.sendColyMessage)(vd.bi, {
+              qteId: Od,
+              qteResponse: dd
             })
           }))
-        })), rr.rK(Er.he, (rr => {
-          YS.e.cancelQTE(rr)
-        })), (0, Zr.onGameResetOnce)((() => {
-          YS.e.reset()
-        })), rr.rK(Er.vd, (rr => {
+        })), dd.bY(vd.Vd, (dd => {
+          YO.e.cancelQTE(dd)
+        })), (0, Wd.onGameResetOnce)((() => {
+          YO.e.reset()
+        })), dd.bY(vd.cd, (dd => {
           let {
-            id: Sr,
-            clientParameters: Qr
-          } = rr;
-          (0, IS.e)(Sr, Qr)
-        })), rr.rK(Er.ie, (rr => {
-          (0, IS.h)(rr)
-        })), rr.rK(Er.Nf, (rr => {
+            id: Od,
+            clientParameters: md
+          } = dd;
+          (0, vO.i)(Od, md)
+        })), dd.bY(vd.Yd, (dd => {
+          (0, vO.m)(dd)
+        })), dd.bY(vd.ff, (dd => {
           let {
-            text: Sr,
-            id: Qr,
-            destructive: Wr
-          } = rr;
-          (0, IS.j)(Qr, Sr, Wr, (rr => {
-            (0, Zr.sendColyMessage)(Er.ak, {
-              zj: Qr,
-              Yj: rr,
-              nj: 5
+            text: Od,
+            id: md,
+            destructive: Fd
+          } = dd;
+          (0, vO.o)(md, Od, Fd, (dd => {
+            (0, Wd.sendColyMessage)(vd.Cj, {
+              bX: md,
+              TX: dd,
+              pX: 5
             })
           }))
-        })), rr.rK(Er.Bd, (rr => {
+        })), dd.bY(vd.jd, (dd => {
           let {
-            info: Sr
-          } = rr;
-          zr.i.Jp("overShopInfo", Sr, !0)
-        })), rr.rK(Er.oc, (rr => {
+            info: Od
+          } = dd;
+          bd.j.lQ("overShopInfo", Od, !0)
+        })), dd.bY(vd.$b, (dd => {
           let {
-            CS: Qr,
-            MS: Zr
-          } = rr;
-          this.clientApi.openShop(Sr.fC, Qr, Zr)
-        })), rr.rK(Er.mc, (rr => {
+            iO: md,
+            AO: Wd
+          } = dd;
+          this.clientApi.openShop(Od.YV, md, Wd)
+        })), dd.bY(vd.Zb, (dd => {
           let {
-            oa: Sr,
-            ba: Qr,
-            Ja: Zr
-          } = rr;
-          zr.i.Jp("flyingMiddleMessage", {
-            content: (0, Er.y)(Sr),
-            ba: Qr,
-            Ja: Zr
+            IR: Od,
+            lR: md,
+            CR: Wd
+          } = dd;
+          bd.j.lQ("flyingMiddleMessage", {
+            content: (0, vd.s)(Od),
+            lR: md,
+            CR: Wd
           }, !0)
-        })), rr.rK(Er.dg, (rr => {
-          const Sr = rr === yS.e ? null : {
-            message: `Currently loaded as variation: ${rr}`,
+        })), dd.bY(vd.tf, (dd => {
+          const Od = dd === EO.h ? null : {
+            message: `Currently loaded as variation: ${dd}`,
             type: "Warning"
           };
-          zr.i.Jp("showPermanentBottomMessage", Sr, !0)
-        })), rr.rK(Er.sc, (rr => {
+          bd.j.lQ("showPermanentBottomMessage", Od, !0)
+        })), dd.bY(vd.cc, (dd => {
           let {
-            messageType: Sr,
-            data: Zr
-          } = rr;
-          (0, BS.e)(Sr) ? (0, BS.b)(Sr, Zr) : ("freeCamPerms" === Sr && Qr.client.freeCameraController.setPerms(Zr.key, Zr.value), Qr.client.triggerGameCallback("onReceivedMessageFromServer", Sr, Zr))
-        })), rr.rK(Er.Tb, TS.l)
+            messageType: Od,
+            data: Wd
+          } = dd;
+          (0, JO.f)(Od) ? (0, JO.d)(Od, Wd) : ("freeCamPerms" === Od && md.client.freeCameraController.setPerms(Wd.key, Wd.value), md.client.triggerGameCallback("onReceivedMessageFromServer", Od, Wd))
+        })), dd.bY(vd.Eb, UO.l)
       }
     }
-    class LS {
-      constructor(rr, Sr, Qr, Zr) {
-        this.gameNameWithVariation = rr, this.gm = Qr, this.connectionResume = Zr, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new Kr.b(Sr, this.gm)
+    class SO {
+      constructor(dd, Od, md, Wd) {
+        this.gameNameWithVariation = dd, this.zo = md, this.connectionResume = Wd, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new gd.e(Od, this.zo)
       }
       setupStateReplicationHandlers() {
-        this.stateReplicationHandler.setup(), (0, Zr.onGameResetOnce)((() => {
+        this.stateReplicationHandler.setup(), (0, Wd.onGameResetOnce)((() => {
           this.stateReplicationHandler.dispose()
         }))
       }
-      axr(rr) {
-        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new Kr.b(rr, this.gm), this.stateReplicationHandler.setup()
+      dtd(dd) {
+        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new gd.e(dd, this.zo), this.stateReplicationHandler.setup()
       }
-      setupOnMessageListeners(rr, Sr) {
-        const Qr = this.gm,
-          Zr = rr => {
-            this.stateReplicationHandler.setUpIfQueued(rr)
+      setupOnMessageListeners(dd, Od) {
+        const md = this.zo,
+          Wd = dd => {
+            this.stateReplicationHandler.setUpIfQueued(dd)
           };
-        new nS(Qr, this.gameNameWithVariation, this.connectionResume).register(rr), new lr(Qr).register(rr), new Dr(Qr).register(rr), new gr(Qr, Zr).register(rr), new or(Qr, Zr).register(rr), new OS(Qr, Sr).register(rr), new aS(Qr, Zr).register(rr)
+        new gO(md, this.gameNameWithVariation, this.connectionResume).register(dd), new Sd(md).register(dd), new fd(md).register(dd), new Gd(md, Wd).register(dd), new Cd(md, Wd).register(dd), new BO(md, Od).register(dd), new KO(md, Wd).register(dd)
       }
     }
     window.addEventListener("beforeunload", (() => {}));
-    var lS = Qr(40605),
-      XS = Qr(40608),
-      PS = Qr(727),
-      HS = Qr(1912);
-    class qS {
-      constructor(rr, Sr, Qr, Zr) {
-        this.msgHandler = Qr, this.listener = Zr, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new lS.c({
-          reconnect: rr,
-          isLive: () => Zr.isLive(),
-          onReconnected: rr => {
-            this.resumeOnRoom(rr)
+    var sO = md(40603),
+      uO = md(40611),
+      VO = md(747),
+      iO = md(1916);
+    class AO {
+      constructor(dd, Od, md, Wd) {
+        this.msgHandler = md, this.listener = Wd, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new sO.c({
+          reconnect: dd,
+          isLive: () => Wd.isLive(),
+          onReconnected: dd => {
+            this.resumeOnRoom(dd)
           },
-          onGaveUp: (rr, Sr) => {
-            Zr.onGaveUp(rr, Sr)
+          onGaveUp: (dd, Od) => {
+            Wd.onGaveUp(dd, Od)
           },
-          freeze: Sr,
-          releaseSeat: Sr => {
-            rr(Sr).then((rr => {
-              rr.leave(!0)
-            }), (rr => {
-              console.warn("Couldn't release the held seat of a game left while reconnecting", rr)
+          freeze: Od,
+          releaseSeat: Od => {
+            dd(Od).then((dd => {
+              dd.leave(!0)
+            }), (dd => {
+              console.warn("Couldn't release the held seat of a game left while reconnecting", dd)
             }))
           }
         })
       }
-      onInitialInfo(rr, Sr) {
-        this.session.onInitialInfo(rr, Sr)
+      onInitialInfo(dd, Od) {
+        this.session.onInitialInfo(dd, Od)
       }
       isResuming() {
         return this.session.isResuming()
@@ -1262,174 +1262,174 @@ export const modules = {
       getDroppedAt() {
         return this.droppedAt
       }
-      onResumeInitialInfo(rr, Sr) {
-        if (this.session.onResuming(), null === rr) {
+      onResumeInitialInfo(dd, Od) {
+        if (this.session.onResuming(), null === dd) {
           try {
-            (0, fr.c)().client.itemDropPrediction.reset()
-          } catch (Qr) {
-            console.error("Error dropping the item drop predictions on resuming", Qr)
+            (0, hd.b)().client.itemDropPrediction.reset()
+          } catch (md) {
+            console.error("Error dropping the item drop predictions on resuming", md)
           }
-          return Zr.offlineInputReplay.discard(), void this.setSuspended(!1)
-        }(0, fr.c)().client.itemDropPrediction.onResumeReplayOffered(), Zr.offlineInputReplay.replayFrom(rr.lS, Sr)
+          return Wd.offlineInputReplay.discard(), void this.setSuspended(!1)
+        }(0, hd.b)().client.itemDropPrediction.onResumeReplayOffered(), Wd.offlineInputReplay.replayFrom(dd.xO, Od)
       }
-      onResumed(rr) {
-        this.setSuspended(!1), (0, Zr.resendBeacons)();
+      onResumed(dd) {
+        this.setSuspended(!1), (0, Wd.resendBeacons)();
         try {
-          rr()
-        } catch (Sr) {
-          console.error("Error completing the resume", Sr)
+          dd()
+        } catch (Od) {
+          console.error("Error completing the resume", Od)
         } finally {
           this.session.onResumed()
         }
       }
-      attachRoom(rr) {
-        const Sr = (0, PS.onVisitSessionGameServerConnected)((() => rr.connection.isOpen));
-        rr.WK(Sr);
-        const Qr = new XS.e((() => {
-          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(rr, "silent"), rr.leave(!1))
+      attachRoom(dd) {
+        const Od = (0, VO.onVisitSessionGameServerConnected)((() => dd.connection.isOpen));
+        dd.TY(Od);
+        const md = new uO.d((() => {
+          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(dd, "silent"), dd.leave(!1))
         }));
-        rr.onStateChange((() => {
-          Qr.heard()
+        dd.onStateChange((() => {
+          md.heard()
         }));
-        const Zr = Sr => {
-          Sr.persisted || rr.leave(!0)
+        const Wd = Od => {
+          Od.persisted || dd.leave(!0)
         };
-        window.addEventListener("pagehide", Zr), rr.WK(((Sr, Qr) => {
-          if (rr === this.attachedRoom && this.listener.isLive()) return (0, ar.k)(Sr) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${Sr}, reconnecting`), this.listener.onDropped(Sr, Qr), void this.onConnectionDropped(rr, String(Sr))) : void this.listener.onRoomLeft(Sr, Qr)
-        })), this.attachedRoom = rr, this.detachRoomListeners = () => {
-          Sr(), Qr.dispose(), window.removeEventListener("pagehide", Zr)
+        window.addEventListener("pagehide", Wd), dd.TY(((Od, md) => {
+          if (dd === this.attachedRoom && this.listener.isLive()) return (0, Rd.l)(Od) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${Od}, reconnecting`), this.listener.onDropped(Od, md), void this.onConnectionDropped(dd, String(Od))) : void this.listener.onRoomLeft(Od, md)
+        })), this.attachedRoom = dd, this.detachRoomListeners = () => {
+          Od(), md.dispose(), window.removeEventListener("pagehide", Wd)
         }
       }
       dispose() {
         this.detachRoom(), this.session.leave(), this.setSuspended(!1)
       }
-      setSuspended(rr) {
-        rr !== this.suspended && (this.suspended = rr, (0, Zr.setConnectionSuspended)(rr), (0, fr.c)().client.itemDropPrediction.setSuspended(rr))
+      setSuspended(dd) {
+        dd !== this.suspended && (this.suspended = dd, (0, Wd.setConnectionSuspended)(dd), (0, hd.b)().client.itemDropPrediction.setSuspended(dd))
       }
       detachRoom() {
-        var rr;
-        null === (rr = this.detachRoomListeners) || void 0 === rr || rr.call(this), this.detachRoomListeners = null, this.attachedRoom = null
+        var dd;
+        null === (dd = this.detachRoomListeners) || void 0 === dd || dd.call(this), this.detachRoomListeners = null, this.attachedRoom = null
       }
-      onConnectionDropped(rr, Sr) {
-        (0, HS.reportClientError)("disconnect", "Left room", Sr), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), Zr.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(rr.reconnectionToken)
+      onConnectionDropped(dd, Od) {
+        (0, iO.reportClientError)("disconnect", "Left room", Od), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), Wd.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(dd.reconnectionToken)
       }
-      resumeOnRoom(rr) {
-        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), rr.leave(!0), void this.dispose();
-        console.log("Reconnected to the game server, waiting for the game to resume"), (0, Fr.n)(), Zr.offlineInputReplay.onConnectionReplaced(), this.msgHandler.axr(rr), this.listener.onReconnected(rr), this.attachRoom(rr)
+      resumeOnRoom(dd) {
+        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), dd.leave(!0), void this.dispose();
+        console.log("Reconnected to the game server, waiting for the game to resume"), (0, ld.q)(), Wd.offlineInputReplay.onConnectionReplaced(), this.msgHandler.dtd(dd), this.listener.onReconnected(dd), this.attachRoom(dd)
       }
     }
-    var RS = Qr(2466),
-      gS = Qr(2472),
-      CS = Qr(1422),
-      MS = Qr(1364),
-      GS = Qr(5479),
-      kS = Qr(4354),
-      AS = Qr(1371),
-      VS = Qr(39225),
-      iS = Qr(40617),
-      wS = Qr(10062),
-      cS = Qr(40625),
-      FS = Qr(1267),
-      oS = Qr(38018),
-      bS = Qr(40627),
-      JS = Qr(1849),
-      DS = Qr(3873),
-      dS = Qr(1629);
+    var rO = md(2482),
+      GO = md(2484),
+      nO = md(1415),
+      LO = md(1361),
+      PO = md(5402),
+      zO = md(4365),
+      cO = md(1368),
+      jO = md(39249),
+      DO = md(40620),
+      eO = md(10092),
+      IO = md(40627),
+      lO = md(1268),
+      CO = md(38109),
+      ZO = md(40634),
+      kO = md(1860),
+      fO = md(3862),
+      MO = md(1627);
 
-    function sS(rr) {
-      var Sr, Qr;
-      if ("object" !== typeof rr || null === rr) return {
-        errType: typeof rr
+    function dm(dd) {
+      var Od, md;
+      if ("object" !== typeof dd || null === dd) return {
+        errType: typeof dd
       };
-      const Zr = rr;
+      const Wd = dd;
       return {
-        errType: null !== (Sr = null === (Qr = rr.constructor) || void 0 === Qr ? void 0 : Qr.name) && void 0 !== Sr ? Sr : "",
-        errName: "string" === typeof Zr.name ? Zr.name : "",
-        eventType: "string" === typeof Zr.type ? Zr.type : "",
-        errStack: "string" === typeof Zr.stack ? Zr.stack.split("\n").slice(1).join(" | ") : ""
+        errType: null !== (Od = null === (md = dd.constructor) || void 0 === md ? void 0 : md.name) && void 0 !== Od ? Od : "",
+        errName: "string" === typeof Wd.name ? Wd.name : "",
+        eventType: "string" === typeof Wd.type ? Wd.type : "",
+        errStack: "string" === typeof Wd.stack ? Wd.stack.split("\n").slice(1).join(" | ") : ""
       }
     }
 
-    function uS(rr) {
-      if ("undefined" !== typeof ProgressEvent && rr instanceof ProgressEvent) return !0;
-      if (!(rr instanceof Error)) return !1;
-      const Sr = rr.code;
-      return "ServerError" === rr.name && void 0 === Sr || "AbortError" === rr.name || "seat reservation expired." === rr.message || "early_leave" === rr.message
-    }(0, tr.i)((rr => {
-      (0, HS.reportClientError)("wasm_net", rr)
+    function Om(dd) {
+      if ("undefined" !== typeof ProgressEvent && dd instanceof ProgressEvent) return !0;
+      if (!(dd instanceof Error)) return !1;
+      const Od = dd.code;
+      return "ServerError" === dd.name && void 0 === Od || "AbortError" === dd.name || "seat reservation expired." === dd.message || "early_leave" === dd.message
+    }(0, Hd.l)((dd => {
+      (0, iO.reportClientError)("wasm_net", dd)
     }));
-    let rQ = !0;
+    let mm = !0;
 
-    function SQ() {
-      rQ = !1
+    function Wm() {
+      mm = !1
     }
-    class QQ {
-      constructor(rr) {
-        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.joinAdHold = !1, this.checkSendPath = () => {}, this.gm = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = rr.gameNameWithVariation, this.lobbyName = rr.lobbyName, this.colyClient = rr.colyClient, this.userContext = rr.userContext
+    class Fm {
+      constructor(dd) {
+        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.joinAdHold = !1, this.checkSendPath = () => {}, this.zo = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = dd.gameNameWithVariation, this.lobbyName = dd.lobbyName, this.colyClient = dd.colyClient, this.userContext = dd.userContext
       }
-      async connectToServer(rr, Sr, Qr) {
-        Yr.d.reset(), rr.xG = {
-          [rr.fC]: {}
-        }, rr.WC = void 0, (0, Fr.n)(), (0, fr.c)().removeAllEntityNames(), (0, fr.c)().setEntityName(rr.fC, this.userContext.getPlayerName()), (0, CS.m)({
+      async connectToServer(dd, Od, md) {
+        Td.e.reset(), dd.sG = {
+          [dd.YV]: {}
+        }, dd.bV = void 0, (0, ld.q)(), (0, hd.b)().removeAllEntityNames(), (0, hd.b)().setEntityName(dd.YV, this.userContext.getPlayerName()), (0, nO.l)({
           lobbyName: this.lobbyName
-        }), console.log("Waiting for clientConnection passed promise to resolve"), this.joinAdHold = (0, JS.d)(), console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
-        const jr = performance.now();
-        Qr.aborted || (0, MS.D)("wasm_core_ready", jr);
-        const Ir = (0, cS.h)(this.userContext, (() => {
+        }), console.log("Waiting for clientConnection passed promise to resolve"), this.joinAdHold = (0, kO.f)(), console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
+        const Xd = performance.now();
+        md.aborted || (0, LO.A)("wasm_core_ready", Xd);
+        const Kd = (0, IO.g)(this.userContext, (() => {
           const {
-            roomName: Zr,
-            joinOptions: Wr
-          } = (0, er.f)(this.userContext, this.gameNameWithVariation, this.lobbyName, Sr, (rr => kS.d.isUsingCustomGameTexturePack(rr)));
-          return Wr.joinAdHold = this.joinAdHold, Wr.renderBackend = (0, DS.b)(rr.Ox), (0, iS.d)((() => this.colyClient.joinOrCreateUntil(Qr, Zr, Wr)), Qr)
+            roomName: Wd,
+            joinOptions: Fd
+          } = (0, Yd.g)(this.userContext, this.gameNameWithVariation, this.lobbyName, Od, (dd => zO.c.isUsingCustomGameTexturePack(dd)));
+          return Fd.joinAdHold = this.joinAdHold, Fd.renderBackend = (0, fO.d)(dd.gt), (0, DO.e)((() => this.colyClient.joinOrCreateUntil(md, Wd, Fd)), md)
         }));
-        return zr.i.Jp("loadingScreenState", "loadingPage:joiningLobby"), await Ir.then((Sr => {
-          if (this.joinedAt = performance.now(), (0, MS.D)("wasm_joined", this.joinedAt), this.gm = rr, this.joinAdHold) {
-            const rr = (0, JS.n)((() => {
-              Sr.send(Wr.f), (0, MS.w)(), hS.c.markJoinAdEnded()
+        return bd.j.lQ("loadingScreenState", "loadingPage:joiningLobby"), await Kd.then((Od => {
+          if (this.joinedAt = performance.now(), (0, LO.A)("wasm_joined", this.joinedAt), this.zo = dd, this.joinAdHold) {
+            const dd = (0, kO.p)((() => {
+              Od.send(Fd.f), (0, LO.u)(), TO.e.markJoinAdEnded()
             }));
-            Sr.WK(rr), (0, Zr.onGameResetOnce)(rr)
+            Od.TY(dd), (0, Wd.onGameResetOnce)(dd)
           }
-          const Qr = new hr(Sr);
-          this.connectionResume = new qS((rr => this.colyClient.reconnect(rr)), (Sr => {
-            rr.Qq(Sr)
-          }), Qr, {
-            isLive: () => (0, fr.c)().client.getMsgHandler() === Qr,
-            onDropped: (rr, Sr) => {
-              (0, gS.e)(rr) || this.logUnrecognisedConnectionLoss(rr, void 0, {
+          const md = new yd(Od);
+          this.connectionResume = new AO((dd => this.colyClient.reconnect(dd)), (Od => {
+            dd.qB(Od)
+          }), md, {
+            isLive: () => (0, hd.b)().client.getMsgHandler() === md,
+            onDropped: (dd, Od) => {
+              (0, GO.k)(dd) || this.logUnrecognisedConnectionLoss(dd, void 0, {
                 site: "drop",
-                closeReason: null !== Sr && void 0 !== Sr ? Sr : "",
+                closeReason: null !== Od && void 0 !== Od ? Od : "",
                 sinceJoined: this.sinceJoined()
               })
             },
-            onRoomLeft: (rr, Sr) => {
-              this.onRoomLeft(rr, Sr)
+            onRoomLeft: (dd, Od) => {
+              this.onRoomLeft(dd, Od)
             },
-            onReconnected: rr => {
-              this.incomingMsgInitialisor.axr(rr), this.checkSendPath = (0, VS.f)(Qr, rr, tr.k)
+            onReconnected: dd => {
+              this.incomingMsgInitialisor.dtd(dd), this.checkSendPath = (0, jO.d)(md, dd, Hd.o)
             },
-            onGaveUp: (rr, Sr) => {
-              this.onResumeGaveUp(rr, Sr)
+            onGaveUp: (dd, Od) => {
+              this.onResumeGaveUp(dd, Od)
             }
-          }), this.connectionResume.attachRoom(Sr), (0, Zr.onGameResetOnce)((() => {
+          }), this.connectionResume.attachRoom(Od), (0, Wd.onGameResetOnce)((() => {
             this.connectionResume.dispose()
           }));
-          const ar = Qr.send,
-            jr = Qr.rK,
-            Ir = Qr.pZr.send,
-            Er = Qr.pZr.rK,
-            pr = Qr.Zxr;
-          this.checkSendPath = (0, VS.f)(Qr, Sr, tr.k);
-          const xr = setInterval((() => {
-            ar === Qr.send && jr === Qr.rK && Ir === Qr.pZr.send && Er === Qr.pZr.rK && pr === Qr.Zxr || SQ(), this.checkSendPath()
+          const Rd = md.send,
+            Xd = md.bY,
+            Kd = md.IWd.send,
+            vd = md.IWd.bY,
+            Qd = md.fQd;
+          this.checkSendPath = (0, jO.d)(md, Od, Hd.o);
+          const td = setInterval((() => {
+            Rd === md.send && Xd === md.bY && Kd === md.IWd.send && vd === md.IWd.bY && Qd === md.fQd || Wm(), this.checkSendPath()
           }), 1e4);
-          return (0, Zr.onGameResetOnce)((() => {
-            clearInterval(xr)
+          return (0, Wd.onGameResetOnce)((() => {
+            clearInterval(td)
           })), {
             success: !0,
-            successDetails: Qr
+            successDetails: md
           }
-        })).catch((Sr => {
-          if (Qr.aborted && Sr === (0, FS.f)(Qr)) return {
+        })).catch((Od => {
+          if (md.aborted && Od === (0, lO.e)(md)) return {
             success: !1,
             failDetails: {
               reason: "Left the game while it loaded",
@@ -1437,22 +1437,22 @@ export const modules = {
               canReconnect: !1
             }
           };
-          if (Sr instanceof oS.c) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
+          if (Od instanceof CO.i) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
             success: !1,
             failDetails: {
-              reason: Sr.message,
+              reason: Od.message,
               requiresRefresh: !1,
               canReconnect: !1,
               gameServerUnreachable: "timedOut",
-              joinFailure: (0, bS.b)(Sr, Sr.leg)
+              joinFailure: (0, ZO.b)(Od, Od.leg)
             }
           };
-          rr.Xt(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${Sr.code}\n`, Sr);
-          const Zr = Sr.code;
-          return Zr === ar.e.serverUpdating.code ? (this.goToUpdateWaiting(), {
+          dd.AH(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${Od.code}\n`, Od);
+          const Wd = Od.code;
+          return Wd === Rd.e.serverUpdating.code ? (this.goToUpdateWaiting(), {
             success: !1,
             failDetails: {
-              reason: ar.e.serverUpdating.text,
+              reason: Rd.e.serverUpdating.text,
               requiresRefresh: !1,
               canReconnect: !0,
               goesToUpdateWaiting: !0
@@ -1460,1408 +1460,1408 @@ export const modules = {
           }) : {
             success: !1,
             failDetails: {
-              ...this.onConnectionToServerLost(Zr, Sr.message, {
+              ...this.onConnectionToServerLost(Wd, Od.message, {
                 site: "join",
-                sinceJoinStart: (0, gS.b)(performance.now() - jr),
-                ...sS(Sr)
-              }, uS(Sr)),
-              rematch: (0, iS.b)(Sr),
-              gameRefused: (0, wS.c)(Sr),
-              joinFailure: (0, bS.b)(Sr, this.colyClient.legReached())
+                sinceJoinStart: (0, GO.d)(performance.now() - Xd),
+                ...dm(Od)
+              }, Om(Od)),
+              rematch: (0, DO.b)(Od),
+              gameRefused: (0, eO.c)(Od),
+              joinFailure: (0, ZO.b)(Od, this.colyClient.legReached())
             }
           }
         }))
       }
-      setupServerListeners(rr, Sr, Qr) {
-        zr.i.Jp("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new LS(this.gameNameWithVariation, Sr.pZr, rr, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
-        const Wr = Sr.pxr();
-        this.incomingMsgInitialisor.setupOnMessageListeners(Wr, Qr), (0, Zr.onConnectionToServerReady)(Wr, Sr), this.joinAdHold && hS.c.markAdmissionAwaited(), Wr.finishRegistration()
+      setupServerListeners(dd, Od, md) {
+        bd.j.lQ("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new SO(this.gameNameWithVariation, Od.IWd, dd, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
+        const Fd = Od.Xtd();
+        this.incomingMsgInitialisor.setupOnMessageListeners(Fd, md), (0, Wd.onConnectionToServerReady)(Fd, Od), this.joinAdHold && TO.e.markAdmissionAwaited(), Fd.finishRegistration()
       }
       dispose() {
         this.connectionResume.dispose()
       }
-      onResumeGaveUp(rr, Sr) {
-        (0, AS.Pt)(new Error("Reconnect failed"), {
-          ...(0, RS.q)(Sr),
+      onResumeGaveUp(dd, Od) {
+        (0, cO.rH)(new Error("Reconnect failed"), {
+          ...(0, rO.o)(Od),
           game: this.gameNameWithVariation
-        }), (0, HS.reportClientError)("disconnect", "Reconnect failed", Sr.reason), (0, fr.c)().client.leaveGameUnwanted({
+        }), (0, iO.reportClientError)("disconnect", "Reconnect failed", Od.reason), (0, hd.b)().client.leaveGameUnwanted({
           reason: {
             translationKey: "general:lostConnection"
           },
-          canReconnect: !rr,
-          canPlayAgain: rr,
+          canReconnect: !dd,
+          canPlayAgain: dd,
           requiresRefresh: !1,
           automaticallyReconnect: !1
-        }), (0, US.navigatePreserveSearch)("/")
+        }), (0, yO.navigatePreserveSearch)("/")
       }
       sinceJoined() {
-        return null === this.joinedAt ? "" : (0, gS.b)(performance.now() - this.joinedAt)
+        return null === this.joinedAt ? "" : (0, GO.d)(performance.now() - this.joinedAt)
       }
-      onRoomLeft(rr, Sr) {
-        var Qr;
-        if (rr === ar.e.gameOrPluginKick.code) return;
-        if (console.log(`Left room with code ${rr}`), rr === ar.e.serverUpdating.code) return (0, HS.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, fr.c)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
-        this.gm.Xt(`Kicked from server with code ${rr}`, new Error);
-        const Zr = Object.keys(ar.e).find((Sr => ar.e[Sr].code === rr));
-        (0, HS.reportClientError)("disconnect", "Left room", null !== Zr && void 0 !== Zr ? Zr : String(rr)), dS.c.leftGame(this.gameNameWithVariation, rr);
-        const Wr = this.onConnectionToServerLost(rr, void 0, {
+      onRoomLeft(dd, Od) {
+        var md;
+        if (dd === Rd.e.gameOrPluginKick.code) return;
+        if (console.log(`Left room with code ${dd}`), dd === Rd.e.serverUpdating.code) return (0, iO.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, hd.b)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
+        this.zo.AH(`Kicked from server with code ${dd}`, new Error);
+        const Wd = Object.keys(Rd.e).find((Od => Rd.e[Od].code === dd));
+        (0, iO.reportClientError)("disconnect", "Left room", null !== Wd && void 0 !== Wd ? Wd : String(dd)), MO.e.leftGame(this.gameNameWithVariation, dd);
+        const Fd = this.onConnectionToServerLost(dd, void 0, {
           site: "leave",
-          closeReason: null !== Sr && void 0 !== Sr ? Sr : "",
+          closeReason: null !== Od && void 0 !== Od ? Od : "",
           sinceJoined: this.sinceJoined()
         });
-        (0, fr.c)().client.leaveGameUnwanted({
-          reason: `You have disconnected from the server.\n${Wr.reason}`,
-          canReconnect: Wr.canReconnect,
-          requiresRefresh: Wr.requiresRefresh,
-          automaticallyReconnect: null !== (Qr = Wr.automaticallyReconnect) && void 0 !== Qr && Qr
-        }), (0, US.navigatePreserveSearch)("/")
+        (0, hd.b)().client.leaveGameUnwanted({
+          reason: `You have disconnected from the server.\n${Fd.reason}`,
+          canReconnect: Fd.canReconnect,
+          requiresRefresh: Fd.requiresRefresh,
+          automaticallyReconnect: null !== (md = Fd.automaticallyReconnect) && void 0 !== md && md
+        }), (0, yO.navigatePreserveSearch)("/")
       }
       getUpdateWaitingUrl() {
-        return (0, GS.G)(this.gameNameWithVariation, this.lobbyName)
+        return (0, PO.F)(this.gameNameWithVariation, this.lobbyName)
       }
       goToUpdateWaiting() {
-        (0, US.navigatePreserveSearch)(this.getUpdateWaitingUrl())
+        (0, yO.navigatePreserveSearch)(this.getUpdateWaitingUrl())
       }
-      onConnectionToServerLost(rr, Sr, Qr) {
-        var Zr;
-        let Wr = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (null !== (Zr = Sr) && void 0 !== Zr && Zr.endsWith(ar.l) && (this.userContext.invalidateTrafficCode(), Sr = Sr.replace(ar.l, "")), rr === ar.e.outdatedVersion.code) return console.error("Outdated client with version ", jr.e, ", refreshing page"), (0, nr.reloadBloxd)(), {
+      onConnectionToServerLost(dd, Od, md) {
+        var Wd;
+        let Fd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (null !== (Wd = Od) && void 0 !== Wd && Wd.endsWith(Rd.m) && (this.userContext.invalidateTrafficCode(), Od = Od.replace(Rd.m, "")), dd === Rd.e.outdatedVersion.code) return console.error("Outdated client with version ", Xd.c, ", refreshing page"), (0, pd.reloadBloxd)(), {
           reason: "Outdated client",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        if (rr === ar.e.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, nr.reloadBloxd)(), {
+        if (dd === Rd.e.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, pd.reloadBloxd)(), {
           reason: "Failed to load recaptcha",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        for (const jr in ar.e) {
+        for (const Xd in Rd.e) {
           const {
-            code: Qr,
-            text: Zr,
-            canReconnect: Wr
-          } = ar.e[jr];
-          if (Qr === rr) {
-            console.log("matched known error", rr, "leaving game");
+            code: md,
+            text: Wd,
+            canReconnect: Fd
+          } = Rd.e[Xd];
+          if (md === dd) {
+            console.log("matched known error", dd, "leaving game");
             return {
-              reason: "" !== Zr ? Zr : Sr || `Code: ${rr}`,
+              reason: "" !== Wd ? Wd : Od || `Code: ${dd}`,
               requiresRefresh: !1,
-              canReconnect: Wr,
-              automaticallyReconnect: Qr === ar.e.customGameUpdated.code || Qr === ar.e.duplicateLobbyNameError.code
+              canReconnect: Fd,
+              automaticallyReconnect: md === Rd.e.customGameUpdated.code || md === Rd.e.duplicateLobbyNameError.code
             }
           }
         }
-        return console.log("Didn't match known error, leaving game"), (0, gS.c)(rr) || Wr ? console.warn("Connection lost", rr, Sr) : this.logUnrecognisedConnectionLoss(rr, Sr, Qr), {
-          reason: `Either your internet isn't working or this is a bug.\nCode: ${rr}`,
+        return console.log("Didn't match known error, leaving game"), (0, GO.g)(dd) || Fd ? console.warn("Connection lost", dd, Od) : this.logUnrecognisedConnectionLoss(dd, Od, md), {
+          reason: `Either your internet isn't working or this is a bug.\nCode: ${dd}`,
           requiresRefresh: !1,
           canReconnect: !1,
-          gameServerUnreachable: Wr ? "failed" : void 0
+          gameServerUnreachable: Fd ? "failed" : void 0
         }
       }
-      logUnrecognisedConnectionLoss(rr, Sr, Qr) {
-        (0, AS.Pt)(new Error("Unrecognised connection loss"), {
-          code: String(rr),
-          cause: null !== Sr && void 0 !== Sr ? Sr : "",
-          ...Qr,
+      logUnrecognisedConnectionLoss(dd, Od, md) {
+        (0, cO.rH)(new Error("Unrecognised connection loss"), {
+          code: String(dd),
+          cause: null !== Od && void 0 !== Od ? Od : "",
+          ...md,
           game: this.gameNameWithVariation,
-          ...(0, gS.f)()
+          ...(0, GO.o)()
         })
       }
     }
   },
-  40540: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => oQ,
-      e: () => uQ
+  40537: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Zm,
+      i: () => mW
     });
-    var Zr, Wr, ar, jr, Ir, fr, Er, pr, xr, mr, Nr, Ur, tr, hr, zr, Yr, nr, er, Kr, yr, Br, Tr, vr, Or, Lr, lr, Xr, Pr, Hr, qr, Rr, gr, Cr, Mr, Gr, kr, Ar, Vr, ir, wr, cr, Fr, or, br, Jr, Dr, dr, sr, ur, rS, SS, QS, ZS, WS, aS, jS, IS, fS, ES, pS, xS, mS, NS, US, tS, hS, zS, YS, nS, eS, KS, yS, BS, TS, vS, OS, LS, lS, XS, PS, HS, qS, RS, gS, CS, MS, GS, kS, AS, VS, iS, wS, cS, FS, oS, bS, JS, DS, dS, sS = Qr(34),
-      uS = Qr(38630),
-      rQ = Qr(40552),
-      SQ = Qr(40556),
-      QQ = Qr(10287),
-      ZQ = Qr(683),
-      WQ = Qr(679),
-      aQ = Qr(37924);
-    let jQ = (Zr = (0, QQ.type)("number"), Wr = (0, QQ.type)("number"), ar = (0, QQ.type)("number"), jr = (0, QQ.type)("number"), Ir = (0, QQ.type)("number"), fr = (0, QQ.type)("number"), Er = (0, QQ.type)("string"), pr = class extends QQ.Schema {
+    var Wd, Fd, Rd, Xd, Kd, hd, vd, Qd, td, od, Nd, qd, Hd, yd, bd, Td, pd, Yd, gd, wd, Ed, Jd, Ud, xd, Bd, Sd, sd, ud, Vd, Ad, rd, Gd, nd, Ld, Pd, zd, cd, jd, Dd, ed, Id, ld, Cd, Zd, kd, fd, Md, dO, OO, mO, WO, FO, RO, XO, KO, hO, vO, QO, tO, oO, NO, qO, HO, yO, bO, TO, pO, YO, gO, wO, aO, EO, JO, UO, xO, BO, SO, sO, uO, VO, iO, AO, rO, GO, nO, LO, PO, zO, cO, jO, DO, eO, IO, lO, CO, ZO, kO, fO, MO, dm = md(32),
+      Om = md(38677),
+      mm = md(40546),
+      Wm = md(40550),
+      Fm = md(10329),
+      Rm = md(699),
+      Xm = md(693),
+      Km = md(38003);
+    let hm = (Wd = (0, Fm.type)("number"), Fd = (0, Fm.type)("number"), Rd = (0, Fm.type)("number"), Xd = (0, Fm.type)("number"), Kd = (0, Fm.type)("number"), hd = (0, Fm.type)("number"), vd = (0, Fm.type)("string"), Qd = class extends Fm.Schema {
         constructor() {
-          super(...arguments), (0, rQ.c)(this, "id", xr, this), (0, rQ.c)(this, "amount", mr, this), (0, rQ.c)(this, "x", Nr, this), (0, rQ.c)(this, "y", Ur, this), (0, rQ.c)(this, "z", tr, this), (0, rQ.c)(this, "size", hr, this), (0, rQ.c)(this, "attributes", zr, this)
+          super(...arguments), (0, mm.e)(this, "id", td, this), (0, mm.e)(this, "amount", od, this), (0, mm.e)(this, "x", Nd, this), (0, mm.e)(this, "y", qd, this), (0, mm.e)(this, "z", Hd, this), (0, mm.e)(this, "size", yd, this), (0, mm.e)(this, "attributes", bd, this)
         }
-      }, xr = (0, SQ.c)(pr.prototype, "id", [Zr], {
+      }, td = (0, Wm.c)(Qd.prototype, "id", [Wd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), mr = (0, SQ.c)(pr.prototype, "amount", [Wr], {
+      }), od = (0, Wm.c)(Qd.prototype, "amount", [Fd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Nr = (0, SQ.c)(pr.prototype, "x", [ar], {
+      }), Nd = (0, Wm.c)(Qd.prototype, "x", [Rd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Ur = (0, SQ.c)(pr.prototype, "y", [jr], {
+      }), qd = (0, Wm.c)(Qd.prototype, "y", [Xd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), tr = (0, SQ.c)(pr.prototype, "z", [Ir], {
+      }), Hd = (0, Wm.c)(Qd.prototype, "z", [Kd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), hr = (0, SQ.c)(pr.prototype, "size", [fr], {
+      }), yd = (0, Wm.c)(Qd.prototype, "size", [hd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), zr = (0, SQ.c)(pr.prototype, "attributes", [Er], {
+      }), bd = (0, Wm.c)(Qd.prototype, "attributes", [vd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "{}"
         }
-      }), pr),
-      IQ = (Yr = (0, QQ.type)("string"), nr = (0, QQ.type)("string"), er = class extends QQ.Schema {
+      }), Qd),
+      Qm = (Td = (0, Fm.type)("string"), pd = (0, Fm.type)("string"), Yd = class extends Fm.Schema {
         constructor() {
-          super(...arguments), (0, rQ.c)(this, "itemName", Kr, this), (0, rQ.c)(this, "enchantmentTier", yr, this)
+          super(...arguments), (0, mm.e)(this, "itemName", gd, this), (0, mm.e)(this, "enchantmentTier", wd, this)
         }
-      }, Kr = (0, SQ.c)(er.prototype, "itemName", [Yr], {
+      }, gd = (0, Wm.c)(Yd.prototype, "itemName", [Td], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), yr = (0, SQ.c)(er.prototype, "enchantmentTier", [nr], {
+      }), wd = (0, Wm.c)(Yd.prototype, "enchantmentTier", [pd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), er),
-      fQ = (Br = (0, QQ.type)("string"), Tr = (0, QQ.type)("string"), vr = (0, QQ.type)("number"), Or = (0, QQ.type)("number"), Lr = (0, QQ.type)("number"), lr = (0, QQ.type)("float32"), Xr = (0, QQ.type)("float32"), Pr = (0, QQ.type)("float32"), Hr = (0, QQ.type)("string"), qr = (0, QQ.type)(["number"]), Rr = (0, QQ.type)("boolean"), gr = class extends QQ.Schema {
+      }), Yd),
+      tm = (Ed = (0, Fm.type)("string"), Jd = (0, Fm.type)("string"), Ud = (0, Fm.type)("number"), xd = (0, Fm.type)("number"), Bd = (0, Fm.type)("number"), Sd = (0, Fm.type)("float32"), sd = (0, Fm.type)("float32"), ud = (0, Fm.type)("float32"), Vd = (0, Fm.type)("string"), Ad = (0, Fm.type)(["number"]), rd = (0, Fm.type)("boolean"), Gd = class extends Fm.Schema {
         constructor() {
-          super(...arguments), (0, rQ.c)(this, "type", Cr, this), (0, rQ.c)(this, "name", Mr, this), (0, rQ.c)(this, "x", Gr, this), (0, rQ.c)(this, "y", kr, this), (0, rQ.c)(this, "z", Ar, this), (0, rQ.c)(this, "xRotation", Vr, this), (0, rQ.c)(this, "yRotation", ir, this), (0, rQ.c)(this, "zRotation", wr, this), (0, rQ.c)(this, "followingEId", cr, this), (0, rQ.c)(this, "followingOffset", Fr, this), (0, rQ.c)(this, "shouldMatchFollowingEntityRotation", or, this)
+          super(...arguments), (0, mm.e)(this, "type", nd, this), (0, mm.e)(this, "name", Ld, this), (0, mm.e)(this, "x", Pd, this), (0, mm.e)(this, "y", zd, this), (0, mm.e)(this, "z", cd, this), (0, mm.e)(this, "xRotation", jd, this), (0, mm.e)(this, "yRotation", Dd, this), (0, mm.e)(this, "zRotation", ed, this), (0, mm.e)(this, "followingEId", Id, this), (0, mm.e)(this, "followingOffset", ld, this), (0, mm.e)(this, "shouldMatchFollowingEntityRotation", Cd, this)
         }
-      }, Cr = (0, SQ.c)(gr.prototype, "type", [Br], {
+      }, nd = (0, Wm.c)(Gd.prototype, "type", [Ed], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), Mr = (0, SQ.c)(gr.prototype, "name", [Tr], {
+      }), Ld = (0, Wm.c)(Gd.prototype, "name", [Jd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), Gr = (0, SQ.c)(gr.prototype, "x", [vr], {
+      }), Pd = (0, Wm.c)(Gd.prototype, "x", [Ud], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), kr = (0, SQ.c)(gr.prototype, "y", [Or], {
+      }), zd = (0, Wm.c)(Gd.prototype, "y", [xd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Ar = (0, SQ.c)(gr.prototype, "z", [Lr], {
+      }), cd = (0, Wm.c)(Gd.prototype, "z", [Bd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Vr = (0, SQ.c)(gr.prototype, "xRotation", [lr], {
+      }), jd = (0, Wm.c)(Gd.prototype, "xRotation", [Sd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), ir = (0, SQ.c)(gr.prototype, "yRotation", [Xr], {
+      }), Dd = (0, Wm.c)(Gd.prototype, "yRotation", [sd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), wr = (0, SQ.c)(gr.prototype, "zRotation", [Pr], {
+      }), ed = (0, Wm.c)(Gd.prototype, "zRotation", [ud], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), cr = (0, SQ.c)(gr.prototype, "followingEId", [Hr], {
+      }), Id = (0, Wm.c)(Gd.prototype, "followingEId", [Vd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), Fr = (0, SQ.c)(gr.prototype, "followingOffset", [qr], {
+      }), ld = (0, Wm.c)(Gd.prototype, "followingOffset", [Ad], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new QQ.ArraySchema(0, 0, 0)
+          return new Fm.ArraySchema(0, 0, 0)
         }
-      }), or = (0, SQ.c)(gr.prototype, "shouldMatchFollowingEntityRotation", [Rr], {
+      }), Cd = (0, Wm.c)(Gd.prototype, "shouldMatchFollowingEntityRotation", [rd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !0
         }
-      }), gr),
-      EQ = (br = (0, QQ.type)("float32"), Jr = (0, QQ.type)("float32"), Dr = (0, QQ.type)("boolean"), dr = (0, QQ.type)("boolean"), sr = (0, QQ.type)("float32"), ur = (0, QQ.type)("boolean"), rS = (0, QQ.type)("string"), SS = (0, QQ.type)("string"), QS = (0, QQ.type)("string"), ZS = (0, QQ.type)("string"), WS = (0, QQ.type)(["number"]), aS = (0, QQ.type)("number"), jS = (0, QQ.type)({
-        map: IQ
-      }), IS = class extends fQ {
+      }), Gd),
+      om = (Zd = (0, Fm.type)("float32"), kd = (0, Fm.type)("float32"), fd = (0, Fm.type)("boolean"), Md = (0, Fm.type)("boolean"), dO = (0, Fm.type)("float32"), OO = (0, Fm.type)("boolean"), mO = (0, Fm.type)("string"), WO = (0, Fm.type)("string"), FO = (0, Fm.type)("string"), RO = (0, Fm.type)("string"), XO = (0, Fm.type)(["number"]), KO = (0, Fm.type)("number"), hO = (0, Fm.type)({
+        map: Qm
+      }), vO = class extends tm {
         constructor() {
-          super(...arguments), (0, rQ.c)(this, "scale", fS, this), (0, rQ.c)(this, "speed", ES, this), (0, rQ.c)(this, "jumping", pS, this), (0, rQ.c)(this, "crouching", xS, this), (0, rQ.c)(this, "cameraPitch", mS, this), (0, rQ.c)(this, "armSwinging", NS, this), (0, rQ.c)(this, "heldItemName", US, this), (0, rQ.c)(this, "heldItemEnchantmentTier", tS, this), (0, rQ.c)(this, "pose", hS, this), (0, rQ.c)(this, "ridingVehicleEId", zS, this), (0, rQ.c)(this, "meshOffset", YS, this), (0, rQ.c)(this, "baseRenderHeading", nS, this), (0, rQ.c)(this, "armour", eS, this)
+          super(...arguments), (0, mm.e)(this, "scale", QO, this), (0, mm.e)(this, "speed", tO, this), (0, mm.e)(this, "jumping", oO, this), (0, mm.e)(this, "crouching", NO, this), (0, mm.e)(this, "cameraPitch", qO, this), (0, mm.e)(this, "armSwinging", HO, this), (0, mm.e)(this, "heldItemName", yO, this), (0, mm.e)(this, "heldItemEnchantmentTier", bO, this), (0, mm.e)(this, "pose", TO, this), (0, mm.e)(this, "ridingVehicleEId", pO, this), (0, mm.e)(this, "meshOffset", YO, this), (0, mm.e)(this, "baseRenderHeading", gO, this), (0, mm.e)(this, "armour", wO, this)
         }
-      }, fS = (0, SQ.c)(IS.prototype, "scale", [br], {
+      }, QO = (0, Wm.c)(vO.prototype, "scale", [Zd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), ES = (0, SQ.c)(IS.prototype, "speed", [Jr], {
+      }), tO = (0, Wm.c)(vO.prototype, "speed", [kd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), pS = (0, SQ.c)(IS.prototype, "jumping", [Dr], {
+      }), oO = (0, Wm.c)(vO.prototype, "jumping", [fd], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), xS = (0, SQ.c)(IS.prototype, "crouching", [dr], {
+      }), NO = (0, Wm.c)(vO.prototype, "crouching", [Md], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), mS = (0, SQ.c)(IS.prototype, "cameraPitch", [sr], {
+      }), qO = (0, Wm.c)(vO.prototype, "cameraPitch", [dO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), NS = (0, SQ.c)(IS.prototype, "armSwinging", [ur], {
+      }), HO = (0, Wm.c)(vO.prototype, "armSwinging", [OO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), US = (0, SQ.c)(IS.prototype, "heldItemName", [rS], {
+      }), yO = (0, Wm.c)(vO.prototype, "heldItemName", [mO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), tS = (0, SQ.c)(IS.prototype, "heldItemEnchantmentTier", [SS], {
+      }), bO = (0, Wm.c)(vO.prototype, "heldItemEnchantmentTier", [WO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), hS = (0, SQ.c)(IS.prototype, "pose", [QS], {
+      }), TO = (0, Wm.c)(vO.prototype, "pose", [FO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "standing"
         }
-      }), zS = (0, SQ.c)(IS.prototype, "ridingVehicleEId", [ZS], {
+      }), pO = (0, Wm.c)(vO.prototype, "ridingVehicleEId", [RO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), YS = (0, SQ.c)(IS.prototype, "meshOffset", [WS], {
+      }), YO = (0, Wm.c)(vO.prototype, "meshOffset", [XO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new QQ.ArraySchema(0, 0, 0)
+          return new Fm.ArraySchema(0, 0, 0)
         }
-      }), nS = (0, SQ.c)(IS.prototype, "baseRenderHeading", [aS], {
+      }), gO = (0, Wm.c)(vO.prototype, "baseRenderHeading", [KO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), eS = (0, SQ.c)(IS.prototype, "armour", [jS], {
+      }), wO = (0, Wm.c)(vO.prototype, "armour", [hO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new QQ.MapSchema
+          return new Fm.MapSchema
         }
-      }), IS),
-      pQ = (KS = (0, QQ.type)("string"), yS = (0, QQ.type)("string"), BS = (0, QQ.type)("string"), TS = (0, QQ.type)("uint8"), vS = class extends EQ {
+      }), vO),
+      Nm = (aO = (0, Fm.type)("string"), EO = (0, Fm.type)("string"), JO = (0, Fm.type)("string"), UO = (0, Fm.type)("uint8"), xO = class extends om {
         constructor() {
-          super(...arguments), (0, rQ.c)(this, "variation", OS, this), (0, rQ.c)(this, "ownerDbId", LS, this), (0, rQ.c)(this, "metaInfo", lS, this), (0, rQ.c)(this, "aiState", XS, this)
+          super(...arguments), (0, mm.e)(this, "variation", BO, this), (0, mm.e)(this, "ownerDbId", SO, this), (0, mm.e)(this, "metaInfo", sO, this), (0, mm.e)(this, "aiState", uO, this)
         }
-      }, OS = (0, SQ.c)(vS.prototype, "variation", [KS], {
+      }, BO = (0, Wm.c)(xO.prototype, "variation", [aO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "default"
         }
-      }), LS = (0, SQ.c)(vS.prototype, "ownerDbId", [yS], {
+      }), SO = (0, Wm.c)(xO.prototype, "ownerDbId", [EO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), lS = (0, SQ.c)(vS.prototype, "metaInfo", [BS], {
+      }), sO = (0, Wm.c)(xO.prototype, "metaInfo", [JO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), XS = (0, SQ.c)(vS.prototype, "aiState", [TS], {
+      }), uO = (0, Wm.c)(xO.prototype, "aiState", [UO], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), vS);
-    PS = (0, QQ.type)("string"), HS = (0, QQ.type)("string"), qS = (0, QQ.type)("string"), RS = (0, QQ.type)("string"), gS = class extends fQ {
+      }), xO);
+    VO = (0, Fm.type)("string"), iO = (0, Fm.type)("string"), AO = (0, Fm.type)("string"), rO = (0, Fm.type)("string"), GO = class extends tm {
       constructor() {
-        super(...arguments), (0, rQ.c)(this, "meshKind", CS, this), (0, rQ.c)(this, "meshOpts", MS, this), (0, rQ.c)(this, "pose", GS, this), (0, rQ.c)(this, "leaderboardTop", kS, this)
+        super(...arguments), (0, mm.e)(this, "meshKind", nO, this), (0, mm.e)(this, "meshOpts", LO, this), (0, mm.e)(this, "pose", PO, this), (0, mm.e)(this, "leaderboardTop", zO, this)
       }
-    }, CS = (0, SQ.c)(gS.prototype, "meshKind", [PS], {
+    }, nO = (0, Wm.c)(GO.prototype, "meshKind", [VO], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), MS = (0, SQ.c)(gS.prototype, "meshOpts", [HS], {
+    }), LO = (0, Wm.c)(GO.prototype, "meshOpts", [iO], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), GS = (0, SQ.c)(gS.prototype, "pose", [qS], {
+    }), PO = (0, Wm.c)(GO.prototype, "pose", [AO], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), kS = (0, SQ.c)(gS.prototype, "leaderboardTop", [RS], {
+    }), zO = (0, Wm.c)(GO.prototype, "leaderboardTop", [rO], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
     });
 
-    function xQ(rr) {
-      return Object.keys(QQ.Metadata.getFields(rr))
+    function qm(dd) {
+      return Object.keys(Fm.Metadata.getFields(dd))
     }
-    const mQ = xQ(pQ);
-    for (const rZ of ZQ.p)
-      if (!mQ.includes(rZ)) throw new Error(`Mob Schema is missing a networked property: "${rZ}"`);
-    const NQ = xQ((AS = (0, QQ.type)("string"), VS = (0, QQ.type)("float32"), iS = (0, QQ.type)("float32"), wS = (0, QQ.type)("float32"), cS = (0, QQ.type)("float32"), FS = class extends fQ {
+    const Hm = qm(Nm);
+    for (const WW of Rm.x)
+      if (!Hm.includes(WW)) throw new Error(`Mob Schema is missing a networked property: "${WW}"`);
+    const ym = qm((cO = (0, Fm.type)("string"), jO = (0, Fm.type)("float32"), DO = (0, Fm.type)("float32"), eO = (0, Fm.type)("float32"), IO = (0, Fm.type)("float32"), lO = class extends tm {
       constructor() {
-        super(...arguments), (0, rQ.c)(this, "soundName", oS, this), (0, rQ.c)(this, "volume", bS, this), (0, rQ.c)(this, "refDistance", JS, this), (0, rQ.c)(this, "maxHearDist", DS, this), (0, rQ.c)(this, "rate", dS, this)
+        super(...arguments), (0, mm.e)(this, "soundName", CO, this), (0, mm.e)(this, "volume", ZO, this), (0, mm.e)(this, "refDistance", kO, this), (0, mm.e)(this, "maxHearDist", fO, this), (0, mm.e)(this, "rate", MO, this)
       }
-    }, oS = (0, SQ.c)(FS.prototype, "soundName", [AS], {
+    }, CO = (0, Wm.c)(lO.prototype, "soundName", [cO], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return ""
       }
-    }), bS = (0, SQ.c)(FS.prototype, "volume", [VS], {
+    }), ZO = (0, Wm.c)(lO.prototype, "volume", [jO], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), JS = (0, SQ.c)(FS.prototype, "refDistance", [iS], {
+    }), kO = (0, Wm.c)(lO.prototype, "refDistance", [DO], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return aQ.h
+        return Km.i
       }
-    }), DS = (0, SQ.c)(FS.prototype, "maxHearDist", [wS], {
+    }), fO = (0, Wm.c)(lO.prototype, "maxHearDist", [eO], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return aQ.d
+        return Km.d
       }
-    }), dS = (0, SQ.c)(FS.prototype, "rate", [cS], {
+    }), MO = (0, Wm.c)(lO.prototype, "rate", [IO], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), FS));
-    for (const rZ of WQ.l)
-      if (!NQ.includes(rZ)) throw new Error(`AudioEntity Schema is missing a replicated property: "${rZ}"`);
-    var UQ = Qr(39934),
-      tQ = Qr(1287),
-      hQ = Qr(688),
-      zQ = Qr(39711),
-      YQ = Qr(2984),
-      nQ = Qr(379),
-      eQ = Qr(38679),
-      KQ = Qr(39609),
-      yQ = Qr(3139),
-      BQ = Qr(38659),
-      TQ = Qr(39961),
-      vQ = Qr(39104),
-      OQ = Qr(388),
-      LQ = Qr.n(OQ),
-      lQ = Qr(39439),
-      XQ = Qr(38548),
-      PQ = Qr(39588),
-      HQ = Qr(39618);
-    class qQ {
-      constructor(rr, Sr) {
-        this.bloxd = rr, this.eId = Sr, this.gm = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.vU = !1, this.gm = rr.gm
+    }), lO));
+    for (const WW of Xm.f)
+      if (!ym.includes(WW)) throw new Error(`AudioEntity Schema is missing a replicated property: "${WW}"`);
+    var bm = md(39970),
+      Tm = md(1300),
+      pm = md(701),
+      Ym = md(39744),
+      gm = md(2991),
+      wm = md(405),
+      am = md(38736),
+      Em = md(39645),
+      Jm = md(3143),
+      Um = md(38702),
+      xm = md(39997),
+      Bm = md(39137),
+      Sm = md(415),
+      sm = md.n(Sm),
+      um = md(39498),
+      Vm = md(38615),
+      im = md(39629),
+      Am = md(39662);
+    class rm {
+      constructor(dd, Od) {
+        this.bloxd = dd, this.eId = Od, this.zo = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.Aq = !1, this.zo = dd.zo
       }
-      initClient(rr) {
-        var Sr, Qr, Zr;
-        this.colyseusEntity = rr, this.meshKind = rr.meshKind, this.meshOpts = rr.meshOpts, this.leaderboardTop = rr.leaderboardTop, this.gm.YB.add([rr.x, rr.y, rr.z], 1, 1, null, null, !1, !1, this.eId), this.gm.YB.gM(this.eId, "smoothToServerPos");
-        const Wr = "Person" === this.meshKind;
-        this.gm.YB.gM(this.eId, "meshRotation", {
+      initClient(dd) {
+        var Od, md, Wd;
+        this.colyseusEntity = dd, this.meshKind = dd.meshKind, this.meshOpts = dd.meshOpts, this.leaderboardTop = dd.leaderboardTop, this.zo.qE.add([dd.x, dd.y, dd.z], 1, 1, null, null, !1, !1, this.eId), this.zo.qE.yG(this.eId, "smoothToServerPos");
+        const Fd = "Person" === this.meshKind;
+        this.zo.qE.yG(this.eId, "meshRotation", {
           isServerControlled: !0,
-          ...Wr ? {
+          ...Fd ? {
             defaultRotationsPerSecond: .5
           } : {},
-          childrenNodeParams: Wr ? [{
+          childrenNodeParams: Fd ? [{
             nodeName: "HeadMesh",
-            softTolerance: TQ.m,
+            softTolerance: xm.j,
             hardTolerance: null
           }] : []
-        }), this.updateHidingMeshMgr(), this.canSeeSub = sS.i.subscribe(`otherEntitySettings|${this.eId}|canSee`, (rr => {
+        }), this.updateHidingMeshMgr(), this.canSeeSub = dm.j.subscribe(`otherEntitySettings|${this.eId}|canSee`, (dd => {
           this.updateHidingMeshMgr()
         }));
-        const ar = () => {
-          const rr = this.gm.YB.rQr(this.eId);
-          if (!rr) return;
-          const Sr = (0, vQ.l)(this.eId);
-          if ("number" === typeof rr.JC) {
-            var Qr, Zr, Wr, ar;
-            const jr = null === (Qr = (0, yQ.k)("head", null === (Wr = this.getSpec()) || void 0 === Wr || null === (ar = Wr.opts.textures) || void 0 === ar ? void 0 : ar.head)) || void 0 === Qr || null === (Zr = Qr.personModel) || void 0 === Zr ? void 0 : Zr.fullBody;
-            return this.gm.Ox.bC.setPickable(rr.JC, Sr && !jr), void(0, XQ.updatePersonAttachmentPickability)(this.gm, this.eId, Sr)
+        const Rd = () => {
+          const dd = this.zo.qE.Vmd(this.eId);
+          if (!dd) return;
+          const Od = (0, Bm.h)(this.eId);
+          if ("number" === typeof dd.JA) {
+            var md, Wd, Fd, Rd;
+            const Xd = null === (md = (0, Jm.i)("head", null === (Fd = this.getSpec()) || void 0 === Fd || null === (Rd = Fd.opts.textures) || void 0 === Rd ? void 0 : Rd.head)) || void 0 === md || null === (Wd = md.personModel) || void 0 === Wd ? void 0 : Wd.fullBody;
+            return this.zo.gt.HA.setPickable(dd.JA, Od && !Xd), void(0, Vm.updatePersonAttachmentPickability)(this.zo, this.eId, Od)
           }
-          const jr = rr.mesh;
-          if (jr)
-            for (const Ir of [jr, ...jr.getChildMeshes(!1)]) "ut" in Ir && !Ir.name.startsWith("Cape|") && (Ir.ut = Sr)
+          const Xd = dd.mesh;
+          if (Xd)
+            for (const Kd of [Xd, ...Xd.getChildMeshes(!1)]) "my" in Kd && !Kd.name.startsWith("Cape|") && (Kd.my = Od)
         };
-        this.canAttackSub = sS.i.subscribe(`otherEntitySettings|${this.eId}|canAttack`, ar), this.interactableSub = sS.i.subscribe(`otherEntitySettings|${this.eId}|interactable`, ar), this.overlayColourSub = sS.i.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (rr => {
-          this.updateOverlayColour(rr)
-        })), this.opacitySub = sS.i.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (rr => {
-          this.updateOpacity(rr)
-        })), this.zIndexSub = sS.i.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (rr => {
-          this.updateZIndex(rr)
+        this.canAttackSub = dm.j.subscribe(`otherEntitySettings|${this.eId}|canAttack`, Rd), this.interactableSub = dm.j.subscribe(`otherEntitySettings|${this.eId}|interactable`, Rd), this.overlayColourSub = dm.j.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (dd => {
+          this.updateOverlayColour(dd)
+        })), this.opacitySub = dm.j.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (dd => {
+          this.updateOpacity(dd)
+        })), this.zIndexSub = dm.j.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (dd => {
+          this.updateZIndex(dd)
         }));
-        const jr = this.gm.xG[this.gm.fC][this.eId];
-        this.updateOverlayColour(null !== (Sr = null === jr || void 0 === jr ? void 0 : jr.overlayColour) && void 0 !== Sr ? Sr : null), this.updateOpacity(null !== (Qr = null === jr || void 0 === jr ? void 0 : jr.opacity) && void 0 !== Qr ? Qr : 1), this.updateZIndex(null !== (Zr = null === jr || void 0 === jr ? void 0 : jr.zIndex) && void 0 !== Zr ? Zr : 0), this.multilineTextBoxSub = (0, BQ.m)(this.gm, this.eId)
+        const Xd = this.zo.sG[this.zo.YV][this.eId];
+        this.updateOverlayColour(null !== (Od = null === Xd || void 0 === Xd ? void 0 : Xd.overlayColour) && void 0 !== Od ? Od : null), this.updateOpacity(null !== (md = null === Xd || void 0 === Xd ? void 0 : Xd.opacity) && void 0 !== md ? md : 1), this.updateZIndex(null !== (Wd = null === Xd || void 0 === Xd ? void 0 : Xd.zIndex) && void 0 !== Wd ? Wd : 0), this.multilineTextBoxSub = (0, Um.u)(this.zo, this.eId)
       }
-      onChangeClient(rr, Sr) {
-        if ("xRotation" === rr || "yRotation" === rr || "zRotation" === rr)(0, BQ.q)(this.gm, this.eId, rr, Sr);
-        else if ("pose" === rr) {
-          const rr = this.gm.YB.jQr(this.eId);
-          rr && (rr.pose = Sr || "standing")
-        } else "meshKind" === rr || "meshOpts" === rr ? (this[rr] = Sr, this.queueMeshRebuild()) : "name" === rr && "" !== Sr ? this.updateHidingMeshMgr() : "leaderboardTop" === rr && (this.leaderboardTop = Sr, sS.i.Jp(`leaderboardTop|${this.eId}`, Sr))
+      onChangeClient(dd, Od) {
+        if ("xRotation" === dd || "yRotation" === dd || "zRotation" === dd)(0, Um.v)(this.zo, this.eId, dd, Od);
+        else if ("pose" === dd) {
+          const dd = this.zo.qE.Pmd(this.eId);
+          dd && (dd.pose = Od || "standing")
+        } else "meshKind" === dd || "meshOpts" === dd ? (this[dd] = Od, this.queueMeshRebuild()) : "name" === dd && "" !== Od ? this.updateHidingMeshMgr() : "leaderboardTop" === dd && (this.leaderboardTop = Od, dm.j.lQ(`leaderboardTop|${this.eId}`, Od))
       }
       disposeClient() {
-        this.vU = !0, this.gm.YB.deleteEntity(this.eId), sS.i.unsubscribe(this.canSeeSub), sS.i.unsubscribe(this.canAttackSub), sS.i.unsubscribe(this.interactableSub), sS.i.unsubscribe(this.overlayColourSub), sS.i.unsubscribe(this.opacitySub), sS.i.unsubscribe(this.zIndexSub), sS.i.unsubscribe(this.multilineTextBoxSub)
+        this.Aq = !0, this.zo.qE.deleteEntity(this.eId), dm.j.unsubscribe(this.canSeeSub), dm.j.unsubscribe(this.canAttackSub), dm.j.unsubscribe(this.interactableSub), dm.j.unsubscribe(this.overlayColourSub), dm.j.unsubscribe(this.opacitySub), dm.j.unsubscribe(this.zIndexSub), dm.j.unsubscribe(this.multilineTextBoxSub)
       }
       getCurrentHidingMeshMgrState() {
-        var rr, Sr;
+        var dd, Od;
         return {
-          canSee: null !== (rr = null === (Sr = this.gm.xG[this.gm.fC][this.eId]) || void 0 === Sr ? void 0 : Sr.canSee) && void 0 !== rr && rr,
+          canSee: null !== (dd = null === (Od = this.zo.sG[this.zo.YV][this.eId]) || void 0 === Od ? void 0 : Od.canSee) && void 0 !== dd && dd,
           name: this.colyseusEntity.name,
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         }
       }
       updateHidingMeshMgr() {
-        var rr, Sr, Qr;
+        var dd, Od, md;
         const {
-          gm: Zr
+          zo: Wd
         } = this, {
-          YB: Wr
-        } = Zr, ar = this.getCurrentHidingMeshMgrState();
-        if ((0, nQ.Yd)(this.previousHidingMeshManagerState, ar)) return;
-        if (this.previousHidingMeshManagerState = ar, Wr.bM(this.eId, "hidingMeshManager"), null === (rr = Zr.xG[Zr.fC][this.eId]) || void 0 === rr || !rr.canSee) return;
-        const jr = this.getSpec();
-        if (!jr) return;
+          qE: Fd
+        } = Wd, Rd = this.getCurrentHidingMeshMgrState();
+        if ((0, wm.fe)(this.previousHidingMeshManagerState, Rd)) return;
+        if (this.previousHidingMeshManagerState = Rd, Fd.pG(this.eId, "hidingMeshManager"), null === (dd = Wd.sG[Wd.YV][this.eId]) || void 0 === dd || !dd.canSee) return;
+        const Xd = this.getSpec();
+        if (!Xd) return;
         const {
-          type: Ir,
-          opts: fr
-        } = jr;
-        "Person" === Ir && (fr.textures = (0, yQ.q)(fr.textures)), fr.eId = this.eId, Wr.gM(this.eId, "hidingMeshManager", {
+          type: Kd,
+          opts: hd
+        } = Xd;
+        "Person" === Kd && (hd.textures = (0, Jm.n)(hd.textures)), hd.eId = this.eId, Fd.yG(this.eId, "hidingMeshManager", {
           addMeshComponent: () => {
-            var rr, Sr, Qr;
-            "Leaderboard" === Ir && (fr.leaderboardTop = this.leaderboardTop);
-            const ar = this.bloxd.client.meshCreator.getEntityMesh(Ir, fr, (rr => {
-              var Sr, Qr;
-              if ("number" === typeof rr) {
-                var Wr, ar, jr;
-                const Sr = Zr.Ox.bC;
-                Sr.setEntityId(rr, this.eId);
-                const Qr = "Person" === Ir && (null === (Wr = (0, yQ.k)("head", null === (jr = fr.textures) || void 0 === jr ? void 0 : jr.head)) || void 0 === Wr || null === (ar = Wr.personModel) || void 0 === ar ? void 0 : ar.fullBody);
-                return void Sr.setPickable(rr, (0, vQ.l)(this.eId) && !Qr)
+            var dd, Od, md;
+            "Leaderboard" === Kd && (hd.leaderboardTop = this.leaderboardTop);
+            const Rd = this.bloxd.client.meshCreator.getEntityMesh(Kd, hd, (dd => {
+              var Od, md;
+              if ("number" === typeof dd) {
+                var Fd, Rd, Xd;
+                const Od = Wd.gt.HA;
+                Od.setEntityId(dd, this.eId);
+                const md = "Person" === Kd && (null === (Fd = (0, Jm.i)("head", null === (Xd = hd.textures) || void 0 === Xd ? void 0 : Xd.head)) || void 0 === Fd || null === (Rd = Fd.personModel) || void 0 === Rd ? void 0 : Rd.fullBody);
+                return void Od.setPickable(dd, (0, Bm.h)(this.eId) && !md)
               }
-              const Er = rr;
-              for (const Ir of [Er, ...Er.getChildMeshes(!1)]) void 0 === Ir.ut || Ir.name.startsWith("Cape|") || (Ir.ut = (0, vQ.l)(this.eId), Ir.metadata ??= new Zr.Ox.rh, Ir.metadata.eId = this.eId);
-              this.updateOpacity(null !== (Sr = null === (Qr = Zr.xG[Zr.fC][this.eId]) || void 0 === Qr ? void 0 : Qr.opacity) && void 0 !== Sr ? Sr : 1)
+              const vd = dd;
+              for (const Kd of [vd, ...vd.getChildMeshes(!1)]) void 0 === Kd.my || Kd.name.startsWith("Cape|") || (Kd.my = (0, Bm.h)(this.eId), Kd.metadata ??= new Wd.gt.Wy, Kd.metadata.eId = this.eId);
+              this.updateOpacity(null !== (Od = null === (md = Wd.sG[Wd.YV][this.eId]) || void 0 === md ? void 0 : md.opacity) && void 0 !== Od ? Od : 1)
             }));
-            if (!ar) return;
+            if (!Rd) return;
             const {
-              JC: jr,
-              mesh: Er,
-              meshOffset: pr,
-              nameYOffset: xr,
-              modelLoaded: mr
-            } = ar;
-            null === mr || void 0 === mr || mr.then((() => {
-              var rr;
-              (null === (rr = Wr.rQr(this.eId)) || void 0 === rr ? void 0 : rr.mesh) === Er && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
+              JA: Xd,
+              mesh: vd,
+              meshOffset: Qd,
+              nameYOffset: td,
+              modelLoaded: od
+            } = Rd;
+            null === od || void 0 === od || od.then((() => {
+              var dd;
+              (null === (dd = Fd.Vmd(this.eId)) || void 0 === dd ? void 0 : dd.mesh) === vd && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
             }));
-            const Nr = null === jr ? null : Zr.Ox.bC.lZr(jr, 0);
-            if (Wr.gM(this.eId, Wr.names.mesh, {
-                JC: jr,
-                tZr: Nr,
-                mesh: Er,
-                Bfr: !1,
-                Tfr: "Leaderboard" !== Ir,
-                offset: pr.slice(),
-                yfr: "ParticleEmitter" === Ir && fr.followTargetMeshOffset ? rr => {
-                  var Sr;
-                  LQ().copy(rr, pr);
-                  const Qr = null === (Sr = Wr.iQr(this.eId)) || void 0 === Sr ? void 0 : Sr.nU,
-                    Zr = void 0 === Qr ? null : Wr.jQr(Qr);
-                  if (Zr) {
-                    var ar, jr;
-                    const Sr = this.bloxd.getEntityHeading(null !== (ar = Zr.ridingVehicleEId) && void 0 !== ar ? ar : Qr, !0),
-                      Wr = Math.sin(Sr),
-                      Ir = Math.cos(Sr);
-                    rr[0] += Zr.meshOffset[0] * Ir + Zr.meshOffset[2] * Wr, rr[1] += Zr.meshOffset[1], rr[2] += Zr.meshOffset[2] * Ir - Zr.meshOffset[0] * Wr;
-                    const fr = null !== (jr = Zr.ridingVehicleEId) && void 0 !== jr ? jr : null;
-                    null !== fr && (0, HQ.d)(this.gm, fr, rr)
+            const Nd = null === Xd ? null : Wd.gt.HA.QFd(Xd, 0);
+            if (Fd.yG(this.eId, Fd.names.mesh, {
+                JA: Xd,
+                fWd: Nd,
+                mesh: vd,
+                Uhd: !1,
+                xhd: "Leaderboard" !== Kd,
+                offset: Qd.slice(),
+                Jhd: "ParticleEmitter" === Kd && hd.followTargetMeshOffset ? dd => {
+                  var Od;
+                  sm().copy(dd, Qd);
+                  const md = null === (Od = Fd.JWd(this.eId)) || void 0 === Od ? void 0 : Od.xq,
+                    Wd = void 0 === md ? null : Fd.Pmd(md);
+                  if (Wd) {
+                    var Rd, Xd;
+                    const Od = this.bloxd.getEntityHeading(null !== (Rd = Wd.ridingVehicleEId) && void 0 !== Rd ? Rd : md, !0),
+                      Fd = Math.sin(Od),
+                      Kd = Math.cos(Od);
+                    dd[0] += Wd.meshOffset[0] * Kd + Wd.meshOffset[2] * Fd, dd[1] += Wd.meshOffset[1], dd[2] += Wd.meshOffset[2] * Kd - Wd.meshOffset[0] * Fd;
+                    const hd = null !== (Xd = Wd.ridingVehicleEId) && void 0 !== Xd ? Xd : null;
+                    null !== hd && (0, Am.c)(this.zo, hd, dd)
                   }
                 } : null
-              }), "Person" === Ir) {
-              var Ur, tr, hr, zr;
-              Wr.gM(this.eId, Wr.names.meshAttachments, {
-                personFullBody: null !== (Ur = null === (tr = (0, yQ.k)("head", null === (zr = fr.textures) || void 0 === zr ? void 0 : zr.head)) || void 0 === tr || null === (hr = tr.personModel) || void 0 === hr ? void 0 : hr.fullBody) && void 0 !== Ur && Ur
+              }), "Person" === Kd) {
+              var qd, Hd, yd, bd;
+              Fd.yG(this.eId, Fd.names.meshAttachments, {
+                personFullBody: null !== (qd = null === (Hd = (0, Jm.i)("head", null === (bd = hd.textures) || void 0 === bd ? void 0 : bd.head)) || void 0 === Hd || null === (yd = Hd.personModel) || void 0 === yd ? void 0 : yd.fullBody) && void 0 !== qd && qd
               });
-              for (const rr of tQ.A) {
-                var Yr, nr, er;
-                const Sr = null === (Yr = fr.textures) || void 0 === Yr ? void 0 : Yr[rr];
-                Sr && null !== (nr = (0, yQ.k)(rr, Sr)) && void 0 !== nr && null !== (er = nr.attachments) && void 0 !== er && er.length && KQ.c.Player.meshApi.updatePlayerCosmetic(this.eId, jr, rr, Sr)
+              for (const dd of Tm.s) {
+                var Td, pd, Yd;
+                const Od = null === (Td = hd.textures) || void 0 === Td ? void 0 : Td[dd];
+                Od && null !== (pd = (0, Jm.i)(dd, Od)) && void 0 !== pd && null !== (Yd = pd.attachments) && void 0 !== Yd && Yd.length && Em.c.Player.meshApi.updatePlayerCosmetic(this.eId, Xd, dd, Od)
               }
-              Wr.gM(this.eId, Wr.names.moveState), Wr.gM(this.eId, "updateWalkingState", {
-                JC: jr,
-                tZr: Nr,
-                walkingLegSwingDuration: TQ.u
-              }), Wr.gM(this.eId, "humanoidMesh", {
-                JC: jr,
-                tZr: Nr,
+              Fd.yG(this.eId, Fd.names.moveState), Fd.yG(this.eId, "updateWalkingState", {
+                JA: Xd,
+                fWd: Nd,
+                walkingLegSwingDuration: xm.t
+              }), Fd.yG(this.eId, "humanoidMesh", {
+                JA: Xd,
+                fWd: Nd,
                 heldItemPositionParams: {},
                 maxWalkingAngleOverride: null
-              }), Wr.gM(this.eId, "animator", {
-                JC: jr,
-                tZr: Nr,
+              }), Fd.yG(this.eId, "animator", {
+                JA: Xd,
+                fWd: Nd,
                 modelLifeformType: "Player"
-              }), PQ.e.hasAnimation("Person") && Wr.gM(this.eId, "rigAnimation", {
+              }), im.d.hasAnimation("Person") && Fd.yG(this.eId, "rigAnimation", {
                 target: "Person",
-                JC: jr
-              }), Wr.jQr(this.eId).pose = this.colyseusEntity.pose || "standing"
-            } else if ("BloxdBlock" === Ir && null !== jr) {
-              Wr.gM(this.eId, "animator", {
-                JC: jr,
-                tZr: Nr,
+                JA: Xd
+              }), Fd.Pmd(this.eId).pose = this.colyseusEntity.pose || "standing"
+            } else if ("BloxdBlock" === Kd && null !== Xd) {
+              Fd.yG(this.eId, "animator", {
+                JA: Xd,
+                fWd: Nd,
                 modelLifeformType: null
               });
-              const rr = (0, zQ.u)(fr.blockName);
-              null !== rr && Wr.gM(this.eId, "rigAnimation", {
-                target: rr,
-                JC: jr
+              const dd = (0, Ym.q)(hd.blockName);
+              null !== dd && Fd.yG(this.eId, "rigAnimation", {
+                target: dd,
+                JA: Xd
               })
             }
-            Wr.ofr(this.eId, "entityName", {
+            Fd.khd(this.eId, "entityName", {
               name: this.colyseusEntity.name,
-              nameYOffset: xr
-            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === fr.autoRotate && (Wr.bM(this.eId, "meshRotation"), Wr.gM(this.eId, "autoRotate"));
+              nameYOffset: td
+            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === hd.autoRotate && (Fd.pG(this.eId, "meshRotation"), Fd.yG(this.eId, "autoRotate"));
             const {
-              lineToEId: Kr
-            } = fr;
-            (0, hQ.L)(Kr) || Wr.gM(this.eId, "lineToEntity", {
-              lineToEId: Kr
+              lineToEId: gd
+            } = hd;
+            (0, pm.O)(gd) || Fd.yG(this.eId, "lineToEntity", {
+              lineToEId: gd
             });
-            const yr = Zr.xG[Zr.fC][this.eId];
-            this.updateOverlayColour(null !== (rr = null === yr || void 0 === yr ? void 0 : yr.overlayColour) && void 0 !== rr ? rr : null), this.updateOpacity(null !== (Sr = null === yr || void 0 === yr ? void 0 : yr.opacity) && void 0 !== Sr ? Sr : 1), this.updateZIndex(null !== (Qr = null === yr || void 0 === yr ? void 0 : yr.zIndex) && void 0 !== Qr ? Qr : 0)
+            const wd = Wd.sG[Wd.YV][this.eId];
+            this.updateOverlayColour(null !== (dd = null === wd || void 0 === wd ? void 0 : wd.overlayColour) && void 0 !== dd ? dd : null), this.updateOpacity(null !== (Od = null === wd || void 0 === wd ? void 0 : wd.opacity) && void 0 !== Od ? Od : 1), this.updateZIndex(null !== (md = null === wd || void 0 === wd ? void 0 : wd.zIndex) && void 0 !== md ? md : 0)
           },
           removeMeshComponent: () => {
-            "Person" !== Ir && "BloxdBlock" !== Ir || Wr.bM(this.eId, "rigAnimation"), Wr.bM(this.eId, Wr.names.mesh), Wr.TSr(this.eId, Wr.names.meshAttachments) && Wr.bM(this.eId, Wr.names.meshAttachments), Wr.bM(this.eId, "entityName"), Wr.bM(this.eId, "autoRotate"), Wr.bM(this.eId, "lineToEntity"), "Person" === Ir ? (Wr.bM(this.eId, Wr.names.moveState), Wr.bM(this.eId, "updateWalkingState"), Wr.bM(this.eId, "humanoidMesh"), Wr.bM(this.eId, "animator")) : "BloxdBlock" === Ir && Wr.bM(this.eId, "animator")
+            "Person" !== Kd && "BloxdBlock" !== Kd || Fd.pG(this.eId, "rigAnimation"), Fd.pG(this.eId, Fd.names.mesh), Fd.MOd(this.eId, Fd.names.meshAttachments) && Fd.pG(this.eId, Fd.names.meshAttachments), Fd.pG(this.eId, "entityName"), Fd.pG(this.eId, "autoRotate"), Fd.pG(this.eId, "lineToEntity"), "Person" === Kd ? (Fd.pG(this.eId, Fd.names.moveState), Fd.pG(this.eId, "updateWalkingState"), Fd.pG(this.eId, "humanoidMesh"), Fd.pG(this.eId, "animator")) : "BloxdBlock" === Kd && Fd.pG(this.eId, "animator")
           },
-          hideDist: null !== (Sr = fr.hideDist) && void 0 !== Sr ? Sr : 80,
-          movingHideDist: null !== (Qr = fr.hideDist) && void 0 !== Qr ? Qr : 120,
-          displayOutsideLoadedChunk: fr.hideDist > 100,
+          hideDist: null !== (Od = hd.hideDist) && void 0 !== Od ? Od : 80,
+          movingHideDist: null !== (md = hd.hideDist) && void 0 !== md ? md : 120,
+          displayOutsideLoadedChunk: hd.hideDist > 100,
           immediatelyUpdate: !0,
-          Fp: "BloxdBlock" === Ir ? fr.blockName : Ir
+          eQ: "BloxdBlock" === Kd ? hd.blockName : Kd
         })
       }
       queueMeshRebuild() {
         this.meshRebuildQueued || (this.meshRebuildQueued = !0, queueMicrotask((() => {
-          this.meshRebuildQueued = !1, this.vU || this.updateHidingMeshMgr()
+          this.meshRebuildQueued = !1, this.Aq || this.updateHidingMeshMgr()
         })))
       }
       getSpec() {
-        return (0, YQ.h)({
+        return (0, gm.k)({
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         })
       }
-      updateOverlayColour(rr) {
-        var Sr, Qr;
+      updateOverlayColour(dd) {
+        var Od, md;
         if ("Person" !== this.meshKind) return;
-        let Zr = new eQ.d(0, 0, 0, 0);
-        if (null !== rr) {
-          const Sr = (0, nQ.T)(rr);
-          Zr = new eQ.d(Sr[0] / 255, Sr[1] / 255, Sr[2] / 255, .5)
+        let Wd = new am.b(0, 0, 0, 0);
+        if (null !== dd) {
+          const Od = (0, wm.M)(dd);
+          Wd = new am.b(Od[0] / 255, Od[1] / 255, Od[2] / 255, .5)
         }
-        const Wr = null !== (Sr = null === (Qr = this.gm.YB.rQr(this.eId)) || void 0 === Qr ? void 0 : Qr.JC) && void 0 !== Sr ? Sr : null;
-        null !== Wr && KQ.c.Player.meshApi.updateMeshOverlayColour(Wr, Zr)
+        const Fd = null !== (Od = null === (md = this.zo.qE.Vmd(this.eId)) || void 0 === md ? void 0 : md.JA) && void 0 !== Od ? Od : null;
+        null !== Fd && Em.c.Player.meshApi.updateMeshOverlayColour(Fd, Wd)
       }
-      updateZIndex(rr) {
-        var Sr;
+      updateZIndex(dd) {
+        var Od;
         if ("Person" !== this.meshKind) return;
-        const Qr = null === (Sr = this.gm.YB.rQr(this.eId)) || void 0 === Sr ? void 0 : Sr.JC;
-        "number" === typeof Qr && this.gm.Ox.bC.setRenderingGroupId(Qr, rr)
+        const md = null === (Od = this.zo.qE.Vmd(this.eId)) || void 0 === Od ? void 0 : Od.JA;
+        "number" === typeof md && this.zo.gt.HA.setRenderingGroupId(md, dd)
       }
-      updateOpacity(rr) {
-        const Sr = this.gm.YB.rQr(this.eId);
-        Sr && ("number" !== typeof Sr.JC ? Sr.mesh && "ParticleEmitter" !== this.meshKind && (0, lQ.h)(Sr.mesh, rr) : KQ.c.Player.meshApi.updateMeshOpacity(Sr.JC, rr))
+      updateOpacity(dd) {
+        const Od = this.zo.qE.Vmd(this.eId);
+        Od && ("number" !== typeof Od.JA ? Od.mesh && "ParticleEmitter" !== this.meshKind && (0, um.e)(Od.mesh, dd) : Em.c.Player.meshApi.updateMeshOpacity(Od.JA, dd))
       }
     }
-    var RQ = Qr(40543);
-    class gQ {
-      constructor(rr, Sr) {
-        this.eId = Sr, this.gm = void 0, this.schema = void 0, this.gm = rr.gm
+    var Gm = md(40544);
+    class nm {
+      constructor(dd, Od) {
+        this.eId = Od, this.zo = void 0, this.schema = void 0, this.zo = dd.zo
       }
-      initClient(rr) {
-        this.schema = rr, this.gm.YB.add([rr.x, rr.y, rr.z], .1, .1, null, null, !1, !1, this.eId), this.gm.YB.gM(this.eId, "smoothToServerPos"), RQ.d.add(this.eId, this.copyOpts())
+      initClient(dd) {
+        this.schema = dd, this.zo.qE.add([dd.x, dd.y, dd.z], .1, .1, null, null, !1, !1, this.eId), this.zo.qE.yG(this.eId, "smoothToServerPos"), Gm.c.add(this.eId, this.copyOpts())
       }
-      onChangeClient(rr) {
-        WQ.l.includes(rr) && RQ.d.update(this.eId, this.copyOpts())
+      onChangeClient(dd) {
+        Xm.f.includes(dd) && Gm.c.update(this.eId, this.copyOpts())
       }
       disposeClient() {
-        RQ.d.remove(this.eId), this.gm.YB.deleteEntity(this.eId)
+        Gm.c.remove(this.eId), this.zo.qE.deleteEntity(this.eId)
       }
       copyOpts() {
         const {
-          soundName: rr,
-          volume: Sr,
-          refDistance: Qr,
-          maxHearDist: Zr,
-          rate: Wr
+          soundName: dd,
+          volume: Od,
+          refDistance: md,
+          maxHearDist: Wd,
+          rate: Fd
         } = this.schema;
         return {
-          soundName: rr,
-          volume: Sr,
-          refDistance: Qr,
-          maxHearDist: Zr,
-          rate: Wr
+          soundName: dd,
+          volume: Od,
+          refDistance: md,
+          maxHearDist: Wd,
+          rate: Fd
         }
       }
     }
-    var CQ = Qr(2364),
-      MQ = Qr(37866),
-      GQ = Qr(7424),
-      kQ = Qr(39286),
-      AQ = Qr(2383),
-      VQ = Qr(39646),
-      iQ = Qr(10242),
-      wQ = Qr(39975),
-      cQ = Qr(39256),
-      FQ = Qr(1912);
-    class oQ {
-      constructor(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
-          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
-        this.pZr = rr, this.gm = Sr, this.setupBudgetMs = Qr, this.now = Zr, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.vU = !1, this.onFrame = () => {
+    var Lm = md(2386),
+      Pm = md(37958),
+      zm = md(7410),
+      cm = md(39327),
+      jm = md(2402),
+      Dm = md(39693),
+      em = md(10297),
+      Im = md(40009),
+      lm = md(39292),
+      Cm = md(1916);
+    class Zm {
+      constructor(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
+          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
+        this.IWd = dd, this.zo = Od, this.setupBudgetMs = md, this.now = Wd, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.Aq = !1, this.onFrame = () => {
           this.setUpQueuedEntities(!0)
         }, this.FY = () => {
           this.setUpQueuedEntities(this.now() - this.lastRefillMs > 100)
         }, this.setUpPromoted = () => {
-          for (const rr of this.promotedSetups) {
-            this.promotedSetups.delete(rr);
-            const Sr = this.queuedSetups.get(rr);
-            Sr && (this.queuedSetups.delete(rr), this.timedSetup(Sr, rr))
+          for (const dd of this.promotedSetups) {
+            this.promotedSetups.delete(dd);
+            const Od = this.queuedSetups.get(dd);
+            Od && (this.queuedSetups.delete(dd), this.timedSetup(Od, dd))
           }
-        }, this.createStateCallbacks = (0, iQ.getStateCallbacks)(rr), this.roomStateCallbacks = this.createStateCallbacks(rr.state), this.roomState = rr.state, this.setupBudgetLeftMs = Qr, this.lastRefillMs = Zr()
+        }, this.createStateCallbacks = (0, em.getStateCallbacks)(dd), this.roomStateCallbacks = this.createStateCallbacks(dd.state), this.roomState = dd.state, this.setupBudgetLeftMs = md, this.lastRefillMs = Wd()
       }
       setup() {
-        this.setupEntityHandlers(), this.setupItemHandlers(), this.pZr.onStateChange(this.setUpPromoted), this.gm.on("beforeInputs", this.onFrame), this.gm.on("lx", this.FY)
+        this.setupEntityHandlers(), this.setupItemHandlers(), this.IWd.onStateChange(this.setUpPromoted), this.zo.on("beforeInputs", this.onFrame), this.zo.on("Et", this.FY)
       }
-      setUpQueuedEntities(rr) {
-        var Sr;
-        if ((null === (Sr = (0, AQ.c)().client.getMsgHandler()) || void 0 === Sr ? void 0 : Sr.pZr) !== this.pZr) return this.gm.off("beforeInputs", this.onFrame), this.gm.off("lx", this.FY), this.queuedSetups.clear(), void this.promotedSetups.clear();
-        if (rr && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
-          for (LQ().copy(bQ, this.gm.YB.JY(this.gm.fC)); this.setupBudgetLeftMs > 0;) {
-            const rr = this.nearestQueued(bQ);
-            if (null === rr) return;
-            this.setUpIfQueued(rr), this.setUpPromoted()
+      setUpQueuedEntities(dd) {
+        var Od;
+        if ((null === (Od = (0, jm.b)().client.getMsgHandler()) || void 0 === Od ? void 0 : Od.IWd) !== this.IWd) return this.zo.off("beforeInputs", this.onFrame), this.zo.off("Et", this.FY), this.queuedSetups.clear(), void this.promotedSetups.clear();
+        if (dd && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
+          for (sm().copy(km, this.zo.qE.hY(this.zo.YV)); this.setupBudgetLeftMs > 0;) {
+            const dd = this.nearestQueued(km);
+            if (null === dd) return;
+            this.setUpIfQueued(dd), this.setUpPromoted()
           }
       }
-      nearestQueued(rr) {
-        let Sr = null,
-          Qr = 1 / 0;
-        return this.queuedSetups.forEach(((Zr, Wr) => {
-          const ar = function(rr, Sr) {
-            return (Sr.x - rr[0]) ** 2 + (Sr.y - rr[1]) ** 2 + (Sr.z - rr[2]) ** 2
-          }(rr, Zr);
-          (null === Sr || ar < Qr) && (Sr = Wr, Qr = ar)
-        })), Sr
+      nearestQueued(dd) {
+        let Od = null,
+          md = 1 / 0;
+        return this.queuedSetups.forEach(((Wd, Fd) => {
+          const Rd = function(dd, Od) {
+            return (Od.x - dd[0]) ** 2 + (Od.y - dd[1]) ** 2 + (Od.z - dd[2]) ** 2
+          }(dd, Wd);
+          (null === Od || Rd < md) && (Od = Fd, md = Rd)
+        })), Od
       }
-      setUpOrQueue(rr, Sr) {
-        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(rr, Sr) ? this.timedSetup(rr, Sr) : this.queuedSetups.set(Sr, rr)
+      setUpOrQueue(dd, Od) {
+        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(dd, Od) ? this.timedSetup(dd, Od) : this.queuedSetups.set(Od, dd)
       }
-      mustSetUpNow(rr, Sr) {
-        const Qr = this.gm.WC;
-        if (Sr === Qr) return !0;
-        const Zr = this.roomState.entities.get(Qr);
-        return !(!Zr || Zr.ridingVehicleEId !== Sr && Zr.followingEId !== Sr) || (JQ(rr.type) === UQ.b || (0, AQ.c)().getFollowingEntities(Sr).length > 0)
+      mustSetUpNow(dd, Od) {
+        const md = this.zo.bV;
+        if (Od === md) return !0;
+        const Wd = this.roomState.entities.get(md);
+        return !(!Wd || Wd.ridingVehicleEId !== Od && Wd.followingEId !== Od) || (fm(dd.type) === bm.b || (0, jm.b)().getFollowingEntities(Od).length > 0)
       }
-      setUpIfQueued(rr) {
-        const Sr = this.queuedSetups.get(rr);
-        Sr && (this.queuedSetups.delete(rr), this.timedSetup(Sr, rr))
+      setUpIfQueued(dd) {
+        const Od = this.queuedSetups.get(dd);
+        Od && (this.queuedSetups.delete(dd), this.timedSetup(Od, dd))
       }
-      promoteIfQueued(rr) {
-        null !== rr && this.queuedSetups.has(rr) && this.promotedSetups.add(rr)
+      promoteIfQueued(dd) {
+        null !== dd && this.queuedSetups.has(dd) && this.promotedSetups.add(dd)
       }
-      timedSetup(rr, Sr) {
-        const Qr = this.now();
-        this.setupEntity(rr, Sr), this.setupBudgetLeftMs -= this.now() - Qr
+      timedSetup(dd, Od) {
+        const md = this.now();
+        this.setupEntity(dd, Od), this.setupBudgetLeftMs -= this.now() - md
       }
       setupEntityHandlers() {
-        this.roomStateCallbacks.entities.zB(((rr, Sr) => {
-          this.gm.WC ? this.setUpOrQueue(rr, Sr) : this.deferEntitySetupUntilInitInfo(rr, Sr)
-        })), this.roomStateCallbacks.entities.bq(((rr, Sr) => {
-          const Qr = this.deferredSetups.get(Sr);
-          Qr && (sS.i.unsubscribe(Qr), this.deferredSetups.delete(Sr)), this.queuedSetups.delete(Sr), this.detach(Sr), (0, AQ.c)().client.disposeEntity(Sr)
+        this.roomStateCallbacks.entities.QE(((dd, Od) => {
+          this.zo.bV ? this.setUpOrQueue(dd, Od) : this.deferEntitySetupUntilInitInfo(dd, Od)
+        })), this.roomStateCallbacks.entities.qS(((dd, Od) => {
+          const md = this.deferredSetups.get(Od);
+          md && (dm.j.unsubscribe(md), this.deferredSetups.delete(Od)), this.queuedSetups.delete(Od), this.detach(Od), (0, jm.b)().client.disposeEntity(Od)
         }))
       }
-      deferEntitySetupUntilInitInfo(rr, Sr) {
-        const Qr = sS.i.EY("initInfoReceived", (() => {
-          this.deferredSetups.delete(Sr), this.setUpOrQueue(rr, Sr)
+      deferEntitySetupUntilInitInfo(dd, Od) {
+        const md = dm.j.wT("initInfoReceived", (() => {
+          this.deferredSetups.delete(Od), this.setUpOrQueue(dd, Od)
         }));
-        this.deferredSetups.set(Sr, Qr), (0, CQ.onGameResetOnce)((() => {
-          this.deferredSetups.get(Sr) === Qr && (sS.i.unsubscribe(Qr), this.deferredSetups.delete(Sr)), (0, AQ.c)().updatePositionAndPhysics(this.gm.fC, {
-            type: GQ.n.DEFAULT,
+        this.deferredSetups.set(Od, md), (0, Lm.onGameResetOnce)((() => {
+          this.deferredSetups.get(Od) === md && (dm.j.unsubscribe(md), this.deferredSetups.delete(Od)), (0, jm.b)().updatePositionAndPhysics(this.zo.YV, {
+            type: zm.q.DEFAULT,
             tier: null
-          }, !0), (0, AQ.c)().takeHeldPlayerBodySize(this.gm.fC);
-          const rr = this.gm.YB.ASr(this.gm.fC);
-          rr && (rr.movementType = GQ.k.NORMAL)
+          }, !0), (0, jm.b)().takeHeldPlayerBodySize(this.zo.YV);
+          const dd = this.zo.qE.Hmd(this.zo.YV);
+          dd && (dd.movementType = zm.n.NORMAL)
         }))
       }
-      setupEntity(rr, Sr) {
-        const Qr = Sr === this.gm.WC;
-        if (Qr)(0, AQ.c)().client.RJ(this.gm.fC, null, null);
+      setupEntity(dd, Od) {
+        const md = Od === this.zo.bV;
+        if (md)(0, jm.b)().client.YM(this.zo.YV, null, null);
         else {
           const {
-            type: Qr
-          } = rr, Zr = JQ(Qr);
-          if (void 0 === Zr) return void
-          function(rr, Sr) {
-            const Qr = String(rr);
-            if (DQ.has(Qr)) return;
-            DQ.add(Qr);
-            const Zr = Qr.length > 80 ? `${Qr.slice(0,80)}...` : Qr,
-              Wr = `No client handler for entity type ${JSON.stringify(Zr)}, so entity ${Sr} is not set up`;
-            console.warn(Wr), (0, FQ.reportClientError)("uncaught", Wr, "unknown_entity_type")
-          }(Qr, Sr);
-          (0, AQ.c)().client.RJ(Sr, rr, new Zr((0, AQ.c)(), Sr, Qr))
+            type: md
+          } = dd, Wd = fm(md);
+          if (void 0 === Wd) return void
+          function(dd, Od) {
+            const md = String(dd);
+            if (Mm.has(md)) return;
+            Mm.add(md);
+            const Wd = md.length > 80 ? `${md.slice(0,80)}...` : md,
+              Fd = `No client handler for entity type ${JSON.stringify(Wd)}, so entity ${Od} is not set up`;
+            console.warn(Fd), (0, Cm.reportClientError)("uncaught", Fd, "unknown_entity_type")
+          }(md, Od);
+          (0, jm.b)().client.YM(Od, dd, new Wd((0, jm.b)(), Od, md))
         }
-        const Zr = this.createStateCallbacks(rr);
-        if (Qr) return this.setupMapSchemaCallbacks(Sr, rr, Zr, "armour"), this.setupScalarField(Sr, rr, Zr, "scale"), this.setupScalarField(Sr, rr, Zr, "ridingVehicleEId"), this.setupScalarField(Sr, rr, Zr, "followingEId"), this.setupScalarField(Sr, rr, Zr, "followingOffset"), void this.setupScalarField(Sr, rr, Zr, "shouldMatchFollowingEntityRotation");
-        for (const Wr of xQ(rr.constructor)) rr[Wr] instanceof QQ.MapSchema ? this.setupMapSchemaCallbacks(Sr, rr, Zr, Wr) : this.setupScalarField(Sr, rr, Zr, Wr)
+        const Wd = this.createStateCallbacks(dd);
+        if (md) return this.setupMapSchemaCallbacks(Od, dd, Wd, "armour"), this.setupScalarField(Od, dd, Wd, "scale"), this.setupScalarField(Od, dd, Wd, "ridingVehicleEId"), this.setupScalarField(Od, dd, Wd, "followingEId"), this.setupScalarField(Od, dd, Wd, "followingOffset"), void this.setupScalarField(Od, dd, Wd, "shouldMatchFollowingEntityRotation");
+        for (const Fd of qm(dd.constructor)) dd[Fd] instanceof Fm.MapSchema ? this.setupMapSchemaCallbacks(Od, dd, Wd, Fd) : this.setupScalarField(Od, dd, Wd, Fd)
       }
-      setupMapSchemaCallbacks(rr, Sr, Qr, Zr) {
-        const Wr = Qr[Zr],
-          ar = new Map;
-        Wr.zB(((Qr, Wr) => {
-          if (this.onEntityFieldChange(rr, Sr, Zr, {
-              key: Wr,
-              value: Qr
-            }), !(Qr instanceof QQ.Schema)) return;
-          const jr = this.createStateCallbacks(Qr),
-            Ir = [];
-          for (const ar of xQ(Qr.constructor)) Ir.push(this.listenForFutureChanges(jr, ar, (() => {
-            this.onEntityFieldChange(rr, Sr, Zr, {
-              key: Wr,
-              value: Qr
+      setupMapSchemaCallbacks(dd, Od, md, Wd) {
+        const Fd = md[Wd],
+          Rd = new Map;
+        Fd.QE(((md, Fd) => {
+          if (this.onEntityFieldChange(dd, Od, Wd, {
+              key: Fd,
+              value: md
+            }), !(md instanceof Fm.Schema)) return;
+          const Xd = this.createStateCallbacks(md),
+            Kd = [];
+          for (const Rd of qm(md.constructor)) Kd.push(this.listenForFutureChanges(Xd, Rd, (() => {
+            this.onEntityFieldChange(dd, Od, Wd, {
+              key: Fd,
+              value: md
             })
           })));
-          ar.set(Wr, (() => {
-            for (const rr of Ir) rr()
+          Rd.set(Fd, (() => {
+            for (const dd of Kd) dd()
           }))
-        })), Wr.bq(((Qr, Wr) => {
-          var jr;
-          null === (jr = ar.get(Wr)) || void 0 === jr || jr(), ar.delete(Wr), this.onEntityFieldChange(rr, Sr, Zr, {
-            key: Wr,
+        })), Fd.qS(((md, Fd) => {
+          var Xd;
+          null === (Xd = Rd.get(Fd)) || void 0 === Xd || Xd(), Rd.delete(Fd), this.onEntityFieldChange(dd, Od, Wd, {
+            key: Fd,
             value: null
           })
-        })), this.addDetacher(rr, (() => {
-          for (const rr of ar.values()) rr();
-          ar.clear()
+        })), this.addDetacher(dd, (() => {
+          for (const dd of Rd.values()) dd();
+          Rd.clear()
         }))
       }
-      setupScalarField(rr, Sr, Qr, Zr) {
-        this.onEntityFieldChange(rr, Sr, Zr, Sr[Zr]);
-        const Wr = this.listenForFutureChanges(Qr, Zr, (Qr => {
-          this.onEntityFieldChange(rr, Sr, Zr, Qr)
+      setupScalarField(dd, Od, md, Wd) {
+        this.onEntityFieldChange(dd, Od, Wd, Od[Wd]);
+        const Fd = this.listenForFutureChanges(md, Wd, (md => {
+          this.onEntityFieldChange(dd, Od, Wd, md)
         }));
-        this.addDetacher(rr, Wr)
+        this.addDetacher(dd, Fd)
       }
-      addDetacher(rr, Sr) {
-        let Qr = this.detachers.get(rr);
-        Qr || (Qr = [], this.detachers.set(rr, Qr)), Qr.push(Sr)
+      addDetacher(dd, Od) {
+        let md = this.detachers.get(dd);
+        md || (md = [], this.detachers.set(dd, md)), md.push(Od)
       }
-      detach(rr) {
-        for (const Qr of null !== (Sr = this.detachers.get(rr)) && void 0 !== Sr ? Sr : []) {
-          var Sr;
-          Qr()
+      detach(dd) {
+        for (const md of null !== (Od = this.detachers.get(dd)) && void 0 !== Od ? Od : []) {
+          var Od;
+          md()
         }
-        this.detachers.delete(rr)
+        this.detachers.delete(dd)
       }
-      listenForFutureChanges(rr, Sr, Qr) {
-        return rr.listen(Sr, Qr, !1)
+      listenForFutureChanges(dd, Od, md) {
+        return dd.listen(Od, md, !1)
       }
-      onEntityFieldChange(rr, Sr, Qr, Zr) {
-        switch (Qr) {
+      onEntityFieldChange(dd, Od, md, Wd) {
+        switch (md) {
           case "ridingVehicleEId": {
-            this.promoteIfQueued(Zr);
-            const Sr = this.gm.YB.jQr((0, MQ.e)(rr));
-            Sr && (Sr.ridingVehicleEId = Zr);
+            this.promoteIfQueued(Wd);
+            const Od = this.zo.qE.Pmd((0, Pm.b)(dd));
+            Od && (Od.ridingVehicleEId = Wd);
             break
           }
           case "armour":
-            this.handleArmourChange(rr, Zr);
+            this.handleArmourChange(dd, Wd);
             break;
           case "followingEId":
-            this.promoteIfQueued(Zr), this.handleFollowingEIdChange(rr, Sr, Zr);
+            this.promoteIfQueued(Wd), this.handleFollowingEIdChange(dd, Od, Wd);
             break;
           case "xRotation":
           case "yRotation":
           case "zRotation":
-            this.handleRotationChange(rr, Qr, Zr);
+            this.handleRotationChange(dd, md, Wd);
             break;
           case "scale":
-            this.handleScaleChange(rr, Zr);
+            this.handleScaleChange(dd, Wd);
             break;
           case "baseRenderHeading":
-            this.handleBaseRenderHeadingChange(rr, Zr);
+            this.handleBaseRenderHeadingChange(dd, Wd);
             break;
           case "followingOffset":
-            this.handleFollowingOffsetChange(rr, Zr);
+            this.handleFollowingOffsetChange(dd, Wd);
             break;
           case "shouldMatchFollowingEntityRotation":
-            this.handleShouldMatchFollowingEntityRotationChange(rr, Zr);
+            this.handleShouldMatchFollowingEntityRotationChange(dd, Wd);
             break;
           case "x":
           case "y":
           case "z":
-            return void this.handlePositionChange(rr, Qr, Zr)
-        }(0, AQ.c)().client.updateEntityField(rr, Qr, Zr)
+            return void this.handlePositionChange(dd, md, Wd)
+        }(0, jm.b)().client.updateEntityField(dd, md, Wd)
       }
-      handleArmourChange(rr, Sr) {
-        var Qr, Zr;
+      handleArmourChange(dd, Od) {
+        var md, Wd;
         const {
-          key: Wr,
-          value: ar
-        } = Sr;
-        (0, KQ.w)(rr, Wr, null !== (Qr = null === ar || void 0 === ar ? void 0 : ar.itemName) && void 0 !== Qr ? Qr : null, null !== (Zr = null === ar || void 0 === ar ? void 0 : ar.enchantmentTier) && void 0 !== Zr ? Zr : null)
+          key: Fd,
+          value: Rd
+        } = Od;
+        (0, Em.z)(dd, Fd, null !== (md = null === Rd || void 0 === Rd ? void 0 : Rd.itemName) && void 0 !== md ? md : null, null !== (Wd = null === Rd || void 0 === Rd ? void 0 : Rd.enchantmentTier) && void 0 !== Wd ? Wd : null)
       }
-      handleFollowingEIdChange(rr, Sr, Qr) {
-        const Zr = (0, MQ.e)(rr),
-          Wr = Zr === this.gm.fC;
-        if (this.gm.YB.bM(Zr, this.gm.YB.names.pB), Qr) this.gm.YB.bM(Zr, "smoothToServerPos"), this.gm.YB.gM(Zr, this.gm.YB.names.pB, {
-          nU: (0, MQ.e)(Qr),
-          offset: Array.from(Sr.followingOffset),
-          wQr: Sr.shouldMatchFollowingEntityRotation,
-          bQr: !0,
-          JQr: (rr, Zr) => {
-            if (LQ().copy(rr, Sr.followingOffset), Sr.ridingVehicleEId === Qr) {
-              const Sr = (0, MQ.e)(Qr),
-                Wr = (0, AQ.c)().getEntityHeading(Sr, Zr);
-              LQ().mh(rr, rr, LQ().ZERO, Wr)
+      handleFollowingEIdChange(dd, Od, md) {
+        const Wd = (0, Pm.b)(dd),
+          Fd = Wd === this.zo.YV;
+        if (this.zo.qE.pG(Wd, this.zo.qE.names.XE), md) this.zo.qE.pG(Wd, "smoothToServerPos"), this.zo.qE.yG(Wd, this.zo.qE.names.XE, {
+          xq: (0, Pm.b)(md),
+          offset: Array.from(Od.followingOffset),
+          UWd: Od.shouldMatchFollowingEntityRotation,
+          sWd: !0,
+          uWd: (dd, Wd) => {
+            if (sm().copy(dd, Od.followingOffset), Od.ridingVehicleEId === md) {
+              const Od = (0, Pm.b)(md),
+                Fd = (0, jm.b)().getEntityHeading(Od, Wd);
+              sm().Hy(dd, dd, sm().ZERO, Fd)
             }
           }
         });
-        else if (!Wr) {
-          this.gm.YB.TSr(Zr, "smoothToServerPos") || this.gm.YB.gM(Zr, "smoothToServerPos");
-          const rr = this.gm.YB.getState(Zr, "smoothToServerPos"),
-            Sr = this.gm.YB.gJ(Zr).position;
-          (0, cQ.setServerPosition)(rr, Sr[0], Sr[1], Sr[2])
+        else if (!Fd) {
+          this.zo.qE.MOd(Wd, "smoothToServerPos") || this.zo.qE.yG(Wd, "smoothToServerPos");
+          const dd = this.zo.qE.getState(Wd, "smoothToServerPos"),
+            Od = this.zo.qE.gM(Wd).position;
+          (0, lm.setServerPosition)(dd, Od[0], Od[1], Od[2])
         }
       }
-      handleRotationChange(rr, Sr, Qr) {
-        const Zr = "xRotation" === Sr ? 0 : "yRotation" === Sr ? 1 : 2;
-        for (const Wr of (0, AQ.c)().getFollowingEntities(rr)) {
-          const rr = this.gm.YB.getState(Wr, "meshRotation"),
-            Sr = this.gm.YB.iQr(Wr);
-          rr && Sr.wQr && (rr.serverSetRotation[Zr] = Qr)
+      handleRotationChange(dd, Od, md) {
+        const Wd = "xRotation" === Od ? 0 : "yRotation" === Od ? 1 : 2;
+        for (const Fd of (0, jm.b)().getFollowingEntities(dd)) {
+          const dd = this.zo.qE.getState(Fd, "meshRotation"),
+            Od = this.zo.qE.JWd(Fd);
+          dd && Od.UWd && (dd.serverSetRotation[Wd] = md)
         }
       }
-      handleScaleChange(rr, Sr) {
-        const Qr = (0, MQ.e)(rr);
-        if (sS.i.Jp(`entityScale|${Qr}`, Sr), Qr === this.gm.fC) {
-          var Zr;
-          (0, AQ.c)().removeFromEyeHeightCache(Qr);
-          const rr = this.gm.YB.ASr(this.gm.fC),
-            Sr = null !== (Zr = null === rr || void 0 === rr ? void 0 : rr.physicsState) && void 0 !== Zr ? Zr : {
-              type: GQ.n.DEFAULT,
+      handleScaleChange(dd, Od) {
+        const md = (0, Pm.b)(dd);
+        if (dm.j.lQ(`entityScale|${md}`, Od), md === this.zo.YV) {
+          var Wd;
+          (0, jm.b)().removeFromEyeHeightCache(md);
+          const dd = this.zo.qE.Hmd(this.zo.YV),
+            Od = null !== (Wd = null === dd || void 0 === dd ? void 0 : dd.physicsState) && void 0 !== Wd ? Wd : {
+              type: zm.q.DEFAULT,
               tier: null
             };
-          return void(0, AQ.c)().updatePositionAndPhysics(this.gm.fC, Sr, !1)
+          return void(0, jm.b)().updatePositionAndPhysics(this.zo.YV, Od, !1)
         }
-        const Wr = (0, AQ.c)().getLifeformType(Qr);
-        if (null === Wr) return;
+        const Fd = (0, jm.b)().getLifeformType(md);
+        if (null === Fd) return;
         const {
-          physicsBodyWidth: ar,
-          physicsBodyHeight: jr
-        } = (0, wQ.d)(Sr, Wr);
-        this.gm.YB.AQr(Qr, ar, jr, ar)
+          physicsBodyWidth: Rd,
+          physicsBodyHeight: Xd
+        } = (0, Im.h)(Od, Fd);
+        this.zo.qE.aWd(md, Rd, Xd, Rd)
       }
-      handleBaseRenderHeadingChange(rr, Sr) {
-        const Qr = this.gm.YB.getState(rr, "meshRotation");
-        Qr && (Qr.baseRenderRotation[1] = Sr);
-        for (const Zr of (0, AQ.c)().getFollowingEntities(rr)) {
-          const rr = this.gm.YB.getState(Zr, "meshRotation"),
-            Qr = this.gm.YB.iQr(Zr);
-          rr && Qr.wQr && (rr.baseRenderRotation[1] = Sr)
+      handleBaseRenderHeadingChange(dd, Od) {
+        const md = this.zo.qE.getState(dd, "meshRotation");
+        md && (md.baseRenderRotation[1] = Od);
+        for (const Wd of (0, jm.b)().getFollowingEntities(dd)) {
+          const dd = this.zo.qE.getState(Wd, "meshRotation"),
+            md = this.zo.qE.JWd(Wd);
+          dd && md.UWd && (dd.baseRenderRotation[1] = Od)
         }
       }
-      handleFollowingOffsetChange(rr, Sr) {
-        const Qr = this.gm.YB.iQr((0, MQ.e)(rr));
-        if (Qr && Qr.offset) {
-          const rr = Sr ? Array.from(Sr) : LQ().ZERO;
-          Qr.offset[0] = rr[0], Qr.offset[1] = rr[1], Qr.offset[2] = rr[2]
+      handleFollowingOffsetChange(dd, Od) {
+        const md = this.zo.qE.JWd((0, Pm.b)(dd));
+        if (md && md.offset) {
+          const dd = Od ? Array.from(Od) : sm().ZERO;
+          md.offset[0] = dd[0], md.offset[1] = dd[1], md.offset[2] = dd[2]
         }
       }
-      handleShouldMatchFollowingEntityRotationChange(rr, Sr) {
-        const Qr = this.gm.YB.iQr((0, MQ.e)(rr));
-        Qr && (Qr.wQr = null === Sr || void 0 === Sr || Sr)
+      handleShouldMatchFollowingEntityRotationChange(dd, Od) {
+        const md = this.zo.qE.JWd((0, Pm.b)(dd));
+        md && (md.UWd = null === Od || void 0 === Od || Od)
       }
-      handlePositionChange(rr, Sr, Qr) {
-        if (this.gm.YB.TSr(rr, "smoothToServerPos")) {
-          const Zr = this.gm.YB.getState(rr, "smoothToServerPos");
-          (0, cQ.setServerPositionAxis)(Zr, dQ[Sr], Qr)
+      handlePositionChange(dd, Od, md) {
+        if (this.zo.qE.MOd(dd, "smoothToServerPos")) {
+          const Wd = this.zo.qE.getState(dd, "smoothToServerPos");
+          (0, lm.setServerPositionAxis)(Wd, dW[Od], md)
         }
       }
       setupItemHandlers() {
-        this.roomStateCallbacks.items.zB(((rr, Sr) => {
-          this.allItems[Sr] = rr, (0, kQ.l)(this.gm, Sr, [rr.x, rr.y, rr.z], rr.id, {
-            amount: rr.amount,
-            attributes: JSON.parse(rr.attributes),
-            eW: (0, uS.b)(this.gm).cantPickUpItem(Sr),
-            size: rr.size,
-            predictedAt: (0, AQ.c)().client.itemDropPrediction.onServerItemAdded(Sr)
+        this.roomStateCallbacks.items.QE(((dd, Od) => {
+          this.allItems[Od] = dd, (0, cm.h)(this.zo, Od, [dd.x, dd.y, dd.z], dd.id, {
+            amount: dd.amount,
+            attributes: JSON.parse(dd.attributes),
+            pF: (0, Om.e)(this.zo).cantPickUpItem(Od),
+            size: dd.size,
+            predictedAt: (0, jm.b)().client.itemDropPrediction.onServerItemAdded(Od)
           });
-          const Qr = this.createStateCallbacks(rr);
-          for (const Zr of xQ(jQ)) this.onItemFieldChange(Sr, Zr, rr[Zr]), this.addDetacher(Sr, this.listenForFutureChanges(Qr, Zr, (rr => {
-            this.onItemFieldChange(Sr, Zr, rr)
+          const md = this.createStateCallbacks(dd);
+          for (const Wd of qm(hm)) this.onItemFieldChange(Od, Wd, dd[Wd]), this.addDetacher(Od, this.listenForFutureChanges(md, Wd, (dd => {
+            this.onItemFieldChange(Od, Wd, dd)
           })))
-        })), this.roomStateCallbacks.items.bq(((rr, Sr) => {
-          delete this.allItems[Sr], this.detach(Sr), (0, AQ.c)().client.itemDropPrediction.onServerItemRemoved(Sr), this.gm.YB.TSr(Sr, this.gm.YB.names.itemState) && this.gm.YB.deleteEntity(Sr), (0, uS.b)(this.gm).disposeEntity(Sr)
+        })), this.roomStateCallbacks.items.qS(((dd, Od) => {
+          delete this.allItems[Od], this.detach(Od), (0, jm.b)().client.itemDropPrediction.onServerItemRemoved(Od), this.zo.qE.MOd(Od, this.zo.qE.names.itemState) && this.zo.qE.deleteEntity(Od), (0, Om.e)(this.zo).disposeEntity(Od)
         }))
       }
-      onItemFieldChange(rr, Sr, Qr) {
-        if (Sr in dQ) {
-          if (this.gm.YB.TSr(rr, "itemState")) {
-            const Zr = this.gm.YB.getState(rr, "smoothToServerPos");
-            (0, cQ.setServerPositionAxis)(Zr, dQ[Sr], Qr), (0, AQ.c)().client.itemDropPrediction.onServerItemMoved(rr)
+      onItemFieldChange(dd, Od, md) {
+        if (Od in dW) {
+          if (this.zo.qE.MOd(dd, "itemState")) {
+            const Wd = this.zo.qE.getState(dd, "smoothToServerPos");
+            (0, lm.setServerPositionAxis)(Wd, dW[Od], md), (0, jm.b)().client.itemDropPrediction.onServerItemMoved(dd)
           }
           return
         }
-        if (!this.gm.YB.TSr(rr, "itemState")) return;
-        const Zr = this.gm.YB.getState(rr, "itemState");
-        "amount" === Sr && Qr !== Zr.amount && (Zr.creationTime = Date.now()), Zr[Sr] = "attributes" === Sr ? JSON.parse(Qr) : Qr
+        if (!this.zo.qE.MOd(dd, "itemState")) return;
+        const Wd = this.zo.qE.getState(dd, "itemState");
+        "amount" === Od && md !== Wd.amount && (Wd.creationTime = Date.now()), Wd[Od] = "attributes" === Od ? JSON.parse(md) : md
       }
       dispose() {
-        if (!this.vU) {
-          this.vU = !0, this.gm.off("beforeInputs", this.onFrame), this.gm.off("lx", this.FY), this.queuedSetups.clear(), this.promotedSetups.clear();
-          for (const rr of this.deferredSetups.values()) sS.i.unsubscribe(rr);
-          this.deferredSetups.clear(), this.gm.YB.bM(this.gm.fC, this.gm.YB.names.pB);
-          for (const rr in this.allItems) this.gm.YB.deleteEntity(rr), delete this.allItems[rr];
-          for (const rr of [...this.detachers.keys()]) this.detach(rr);
-          (0, uS.b)(this.gm).clear();
-          for (const rr of (0, AQ.c)().client.iterateEntityIds())(0, AQ.c)().client.disposeEntity(rr)
+        if (!this.Aq) {
+          this.Aq = !0, this.zo.off("beforeInputs", this.onFrame), this.zo.off("Et", this.FY), this.queuedSetups.clear(), this.promotedSetups.clear();
+          for (const dd of this.deferredSetups.values()) dm.j.unsubscribe(dd);
+          this.deferredSetups.clear(), this.zo.qE.pG(this.zo.YV, this.zo.qE.names.XE);
+          for (const dd in this.allItems) this.zo.qE.deleteEntity(dd), delete this.allItems[dd];
+          for (const dd of [...this.detachers.keys()]) this.detach(dd);
+          (0, Om.e)(this.zo).clear();
+          for (const dd of (0, jm.b)().client.iterateEntityIds())(0, jm.b)().client.disposeEntity(dd)
         }
       }
     }
-    const bQ = [0, 0, 0];
+    const km = [0, 0, 0];
 
-    function JQ(rr) {
-      if ("string" !== typeof rr) return;
-      const Sr = rr.indexOf("|"),
-        Qr = -1 === Sr ? rr : rr.slice(0, Sr),
-        Zr = uQ();
-      return Object.hasOwn(Zr, Qr) ? Zr[Qr] : void 0
+    function fm(dd) {
+      if ("string" !== typeof dd) return;
+      const Od = dd.indexOf("|"),
+        md = -1 === Od ? dd : dd.slice(0, Od),
+        Wd = mW();
+      return Object.hasOwn(Wd, md) ? Wd[md] : void 0
     }
-    const DQ = new Set;
-    const dQ = {
+    const Mm = new Set;
+    const dW = {
       x: 0,
       y: 1,
       z: 2
     };
-    let sQ = null;
+    let OW = null;
 
-    function uQ() {
-      return null !== sQ || (sQ = {
-        ...Object.fromEntries(WQ.n.map((rr => {
+    function mW() {
+      return null !== OW || (OW = {
+        ...Object.fromEntries(Xm.h.map((dd => {
           const {
-            Fp: Sr
-          } = (0, VQ.d)(rr);
-          return [rr, Sr]
+            eQ: Od
+          } = (0, Dm.d)(dd);
+          return [dd, Od]
         }))),
-        Pebble: UQ.b,
-        Snowball: UQ.b,
-        "Snowball Launcher": UQ.b,
-        "Reinforced Pebble": UQ.b,
-        Bullet: UQ.b,
-        "Reinforced Ball": UQ.b,
-        Ball: UQ.b,
-        Mango: UQ.b,
-        "Moonstone Orb": UQ.b,
-        ...Object.fromEntries(ZQ.t.map((rr => [(0, nQ.Ub)(rr), UQ.b]))),
-        Arrow: UQ.b,
-        "Arrow of Speed": UQ.b,
-        "Arrow of Poison": UQ.b,
-        "Arrow of Slowness": UQ.b,
-        "Arrow of Weakness": UQ.b,
-        "Arrow of Knockback": UQ.b,
-        "Arrow of Strength": UQ.b,
-        "Arrow of Invisibility": UQ.b,
-        "Arrow of Jumping": UQ.b,
-        "Arrow of Defense": UQ.b,
-        "Arrow of Instant Healing": UQ.b,
-        "Arrow of Instant Damage": UQ.b,
-        "Arrow of Regeneration": UQ.b,
-        "Arrow of Haste": UQ.b,
-        "Arrow of Shield": UQ.b,
-        "Arrow of Double Jump": UQ.b,
-        "Arrow of Heat Resistance": UQ.b,
-        "Arrow of X-Ray Vision": UQ.b,
-        "Arrow of Mining Yield": UQ.b,
-        "Arrow of Brain Rot": UQ.b,
-        "Arrow of Milk": UQ.b,
-        Fireball: UQ.b,
-        "Bouncy Bomb": UQ.b,
-        RPG: UQ.b,
-        "Obby RPG": UQ.b,
-        "Super RPG": UQ.b,
-        "Grenade Launcher": UQ.b,
-        Iceball: UQ.b,
-        Coconut: UQ.b,
-        "Splash Speed Potion": UQ.b,
-        "Splash Defense Potion": UQ.b,
-        "Splash Strength Potion": UQ.b,
-        "Splash Invisibility Potion": UQ.b,
-        "Splash Jump Potion": UQ.b,
-        "Splash Knockback Potion": UQ.b,
-        "Splash Poison Potion": UQ.b,
-        "Splash Speed Potion II": UQ.b,
-        "Splash Defense Potion II": UQ.b,
-        "Splash Strength Potion II": UQ.b,
-        "Splash Jump Potion II": UQ.b,
-        "Splash Knockback Potion II": UQ.b,
-        "Splash Poison Potion II": UQ.b,
-        "Splash Slowness Potion": UQ.b,
-        "Splash Slowness Potion II": UQ.b,
-        "Splash Weakness Potion": UQ.b,
-        "Splash Weakness Potion II": UQ.b,
-        "Splash Milk Potion": UQ.b,
-        "Splash Instant Damage Potion": UQ.b,
-        "Splash Instant Damage Potion II": UQ.b,
-        "Splash Instant Healing Potion": UQ.b,
-        "Splash Instant Healing Potion II": UQ.b,
-        "Splash Regeneration Potion": UQ.b,
-        "Splash Regeneration Potion II": UQ.b,
-        "Splash Haste Potion": UQ.b,
-        "Splash Haste Potion II": UQ.b,
-        "Splash Shield Potion": UQ.b,
-        "Splash Shield Potion II": UQ.b,
-        "Splash Double Jump Potion": UQ.b,
-        "Splash Heat Resistance Potion": UQ.b,
-        "Splash X-Ray Vision Potion": UQ.b,
-        "Splash Mining Yield Potion": UQ.b,
-        "Splash Mining Yield Potion II": UQ.b,
-        "Splash Brain Rot Potion": UQ.b,
-        "Yellow Paintball Gun": UQ.b,
-        "White Paintball Gun": UQ.b,
-        "Red Paintball Gun": UQ.b,
-        "Purple Paintball Gun": UQ.b,
-        "Pink Paintball Gun": UQ.b,
-        "Orange Paintball Gun": UQ.b,
-        "Magenta Paintball Gun": UQ.b,
-        "Lime Paintball Gun": UQ.b,
-        "Light Gray Paintball Gun": UQ.b,
-        "Light Blue Paintball Gun": UQ.b,
-        "Green Paintball Gun": UQ.b,
-        "Gray Paintball Gun": UQ.b,
-        "Cyan Paintball Gun": UQ.b,
-        "Brown Paintball Gun": UQ.b,
-        "Blue Paintball Gun": UQ.b,
-        "Black Paintball Gun": UQ.b,
-        "Yellow Heavy Paintball Gun": UQ.b,
-        "White Heavy Paintball Gun": UQ.b,
-        "Red Heavy Paintball Gun": UQ.b,
-        "Purple Heavy Paintball Gun": UQ.b,
-        "Pink Heavy Paintball Gun": UQ.b,
-        "Orange Heavy Paintball Gun": UQ.b,
-        "Magenta Heavy Paintball Gun": UQ.b,
-        "Lime Heavy Paintball Gun": UQ.b,
-        "Light Gray Heavy Paintball Gun": UQ.b,
-        "Light Blue Heavy Paintball Gun": UQ.b,
-        "Green Heavy Paintball Gun": UQ.b,
-        "Gray Heavy Paintball Gun": UQ.b,
-        "Cyan Heavy Paintball Gun": UQ.b,
-        "Brown Heavy Paintball Gun": UQ.b,
-        "Blue Heavy Paintball Gun": UQ.b,
-        "Black Heavy Paintball Gun": UQ.b,
-        "Toxin Ball": UQ.b,
-        "Splash Aura XP Potion": UQ.b,
-        "Splash Aura XP Potion II": UQ.b,
-        "Arrow of Aura XP": UQ.b,
-        Firecracker: UQ.b,
-        "Rainbow Firecracker": UQ.b,
-        "White Firecracker": UQ.b,
-        "Orange Firecracker": UQ.b,
-        "Magenta Firecracker": UQ.b,
-        "Light Blue Firecracker": UQ.b,
-        "Yellow Firecracker": UQ.b,
-        "Lime Firecracker": UQ.b,
-        "Pink Firecracker": UQ.b,
-        "Gray Firecracker": UQ.b,
-        "Light Gray Firecracker": UQ.b,
-        "Cyan Firecracker": UQ.b,
-        "Purple Firecracker": UQ.b,
-        "Blue Firecracker": UQ.b,
-        "Brown Firecracker": UQ.b,
-        "Green Firecracker": UQ.b,
-        "Red Firecracker": UQ.b,
-        "Black Firecracker": UQ.b,
-        "Firecracker Pebble": UQ.b,
-        "Rainbow Firecracker Pebble": UQ.b,
-        "White Firecracker Pebble": UQ.b,
-        "Orange Firecracker Pebble": UQ.b,
-        "Magenta Firecracker Pebble": UQ.b,
-        "Light Blue Firecracker Pebble": UQ.b,
-        "Yellow Firecracker Pebble": UQ.b,
-        "Lime Firecracker Pebble": UQ.b,
-        "Pink Firecracker Pebble": UQ.b,
-        "Gray Firecracker Pebble": UQ.b,
-        "Light Gray Firecracker Pebble": UQ.b,
-        "Cyan Firecracker Pebble": UQ.b,
-        "Purple Firecracker Pebble": UQ.b,
-        "Blue Firecracker Pebble": UQ.b,
-        "Brown Firecracker Pebble": UQ.b,
-        "Green Firecracker Pebble": UQ.b,
-        "Red Firecracker Pebble": UQ.b,
-        "Black Firecracker Pebble": UQ.b,
-        "Blinding Pebble": UQ.b,
-        Poop: UQ.b,
-        "Wood Boomerang": UQ.b,
-        "Stone Boomerang": UQ.b,
-        "Iron Boomerang": UQ.b,
-        "Gold Boomerang": UQ.b,
-        "Diamond Boomerang": UQ.b,
-        "Amethite Boomerang": UQ.b,
-        "Magmasteel Boomerang": UQ.b,
-        "Rubellite Boomerang": UQ.b,
-        "Serpentite Boomerang": UQ.b,
-        "Moonstone Boomerang": UQ.b,
-        "67 Base Projectile": UQ.b,
-        "67 Boosted Projectile": UQ.b,
-        "Capitano Grenade": UQ.b,
-        "Scatter Pellet": UQ.b,
-        "Lucky Bomb": UQ.b,
-        "Unlucky Bomb": UQ.b,
-        "Swap Orb": UQ.b,
-        Mesh: qQ,
-        AudioEntity: gQ
-      }), sQ
+        Pebble: bm.b,
+        Snowball: bm.b,
+        "Snowball Launcher": bm.b,
+        "Reinforced Pebble": bm.b,
+        Bullet: bm.b,
+        "Reinforced Ball": bm.b,
+        Ball: bm.b,
+        Mango: bm.b,
+        "Moonstone Orb": bm.b,
+        ...Object.fromEntries(Rm.B.map((dd => [(0, wm.Rb)(dd), bm.b]))),
+        Arrow: bm.b,
+        "Arrow of Speed": bm.b,
+        "Arrow of Poison": bm.b,
+        "Arrow of Slowness": bm.b,
+        "Arrow of Weakness": bm.b,
+        "Arrow of Knockback": bm.b,
+        "Arrow of Strength": bm.b,
+        "Arrow of Invisibility": bm.b,
+        "Arrow of Jumping": bm.b,
+        "Arrow of Defense": bm.b,
+        "Arrow of Instant Healing": bm.b,
+        "Arrow of Instant Damage": bm.b,
+        "Arrow of Regeneration": bm.b,
+        "Arrow of Haste": bm.b,
+        "Arrow of Shield": bm.b,
+        "Arrow of Double Jump": bm.b,
+        "Arrow of Heat Resistance": bm.b,
+        "Arrow of X-Ray Vision": bm.b,
+        "Arrow of Mining Yield": bm.b,
+        "Arrow of Brain Rot": bm.b,
+        "Arrow of Milk": bm.b,
+        Fireball: bm.b,
+        "Bouncy Bomb": bm.b,
+        RPG: bm.b,
+        "Obby RPG": bm.b,
+        "Super RPG": bm.b,
+        "Grenade Launcher": bm.b,
+        Iceball: bm.b,
+        Coconut: bm.b,
+        "Splash Speed Potion": bm.b,
+        "Splash Defense Potion": bm.b,
+        "Splash Strength Potion": bm.b,
+        "Splash Invisibility Potion": bm.b,
+        "Splash Jump Potion": bm.b,
+        "Splash Knockback Potion": bm.b,
+        "Splash Poison Potion": bm.b,
+        "Splash Speed Potion II": bm.b,
+        "Splash Defense Potion II": bm.b,
+        "Splash Strength Potion II": bm.b,
+        "Splash Jump Potion II": bm.b,
+        "Splash Knockback Potion II": bm.b,
+        "Splash Poison Potion II": bm.b,
+        "Splash Slowness Potion": bm.b,
+        "Splash Slowness Potion II": bm.b,
+        "Splash Weakness Potion": bm.b,
+        "Splash Weakness Potion II": bm.b,
+        "Splash Milk Potion": bm.b,
+        "Splash Instant Damage Potion": bm.b,
+        "Splash Instant Damage Potion II": bm.b,
+        "Splash Instant Healing Potion": bm.b,
+        "Splash Instant Healing Potion II": bm.b,
+        "Splash Regeneration Potion": bm.b,
+        "Splash Regeneration Potion II": bm.b,
+        "Splash Haste Potion": bm.b,
+        "Splash Haste Potion II": bm.b,
+        "Splash Shield Potion": bm.b,
+        "Splash Shield Potion II": bm.b,
+        "Splash Double Jump Potion": bm.b,
+        "Splash Heat Resistance Potion": bm.b,
+        "Splash X-Ray Vision Potion": bm.b,
+        "Splash Mining Yield Potion": bm.b,
+        "Splash Mining Yield Potion II": bm.b,
+        "Splash Brain Rot Potion": bm.b,
+        "Yellow Paintball Gun": bm.b,
+        "White Paintball Gun": bm.b,
+        "Red Paintball Gun": bm.b,
+        "Purple Paintball Gun": bm.b,
+        "Pink Paintball Gun": bm.b,
+        "Orange Paintball Gun": bm.b,
+        "Magenta Paintball Gun": bm.b,
+        "Lime Paintball Gun": bm.b,
+        "Light Gray Paintball Gun": bm.b,
+        "Light Blue Paintball Gun": bm.b,
+        "Green Paintball Gun": bm.b,
+        "Gray Paintball Gun": bm.b,
+        "Cyan Paintball Gun": bm.b,
+        "Brown Paintball Gun": bm.b,
+        "Blue Paintball Gun": bm.b,
+        "Black Paintball Gun": bm.b,
+        "Yellow Heavy Paintball Gun": bm.b,
+        "White Heavy Paintball Gun": bm.b,
+        "Red Heavy Paintball Gun": bm.b,
+        "Purple Heavy Paintball Gun": bm.b,
+        "Pink Heavy Paintball Gun": bm.b,
+        "Orange Heavy Paintball Gun": bm.b,
+        "Magenta Heavy Paintball Gun": bm.b,
+        "Lime Heavy Paintball Gun": bm.b,
+        "Light Gray Heavy Paintball Gun": bm.b,
+        "Light Blue Heavy Paintball Gun": bm.b,
+        "Green Heavy Paintball Gun": bm.b,
+        "Gray Heavy Paintball Gun": bm.b,
+        "Cyan Heavy Paintball Gun": bm.b,
+        "Brown Heavy Paintball Gun": bm.b,
+        "Blue Heavy Paintball Gun": bm.b,
+        "Black Heavy Paintball Gun": bm.b,
+        "Toxin Ball": bm.b,
+        "Splash Aura XP Potion": bm.b,
+        "Splash Aura XP Potion II": bm.b,
+        "Arrow of Aura XP": bm.b,
+        Firecracker: bm.b,
+        "Rainbow Firecracker": bm.b,
+        "White Firecracker": bm.b,
+        "Orange Firecracker": bm.b,
+        "Magenta Firecracker": bm.b,
+        "Light Blue Firecracker": bm.b,
+        "Yellow Firecracker": bm.b,
+        "Lime Firecracker": bm.b,
+        "Pink Firecracker": bm.b,
+        "Gray Firecracker": bm.b,
+        "Light Gray Firecracker": bm.b,
+        "Cyan Firecracker": bm.b,
+        "Purple Firecracker": bm.b,
+        "Blue Firecracker": bm.b,
+        "Brown Firecracker": bm.b,
+        "Green Firecracker": bm.b,
+        "Red Firecracker": bm.b,
+        "Black Firecracker": bm.b,
+        "Firecracker Pebble": bm.b,
+        "Rainbow Firecracker Pebble": bm.b,
+        "White Firecracker Pebble": bm.b,
+        "Orange Firecracker Pebble": bm.b,
+        "Magenta Firecracker Pebble": bm.b,
+        "Light Blue Firecracker Pebble": bm.b,
+        "Yellow Firecracker Pebble": bm.b,
+        "Lime Firecracker Pebble": bm.b,
+        "Pink Firecracker Pebble": bm.b,
+        "Gray Firecracker Pebble": bm.b,
+        "Light Gray Firecracker Pebble": bm.b,
+        "Cyan Firecracker Pebble": bm.b,
+        "Purple Firecracker Pebble": bm.b,
+        "Blue Firecracker Pebble": bm.b,
+        "Brown Firecracker Pebble": bm.b,
+        "Green Firecracker Pebble": bm.b,
+        "Red Firecracker Pebble": bm.b,
+        "Black Firecracker Pebble": bm.b,
+        "Blinding Pebble": bm.b,
+        Poop: bm.b,
+        "Wood Boomerang": bm.b,
+        "Stone Boomerang": bm.b,
+        "Iron Boomerang": bm.b,
+        "Gold Boomerang": bm.b,
+        "Diamond Boomerang": bm.b,
+        "Amethite Boomerang": bm.b,
+        "Magmasteel Boomerang": bm.b,
+        "Rubellite Boomerang": bm.b,
+        "Serpentite Boomerang": bm.b,
+        "Moonstone Boomerang": bm.b,
+        "67 Base Projectile": bm.b,
+        "67 Boosted Projectile": bm.b,
+        "Capitano Grenade": bm.b,
+        "Scatter Pellet": bm.b,
+        "Lucky Bomb": bm.b,
+        "Unlucky Bomb": bm.b,
+        "Swap Orb": bm.b,
+        Mesh: rm,
+        AudioEntity: nm
+      }), OW
     }
   },
-  40585: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar,
-      h: () => jr
+  40577: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Rd,
+      h: () => Xd
     });
-    var Zr = Qr(688),
-      Wr = Qr(39228);
-    const ar = 4e4;
-    class jr {
+    var Wd = md(701),
+      Fd = md(39254);
+    const Rd = 4e4;
+    class Xd {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
-        this.now = rr, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
+        this.now = dd, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
       }
-      noteEdit(rr, Sr, Qr) {
-        const ar = (0, Zr.U)(rr),
-          jr = (0, Zr.U)(Sr),
-          Ir = (0, Zr.U)(Qr),
-          fr = this.now();
-        if (ar !== this.lastChunkX || jr !== this.lastChunkY || Ir !== this.lastChunkZ) {
-          this.lastChunkX = ar, this.lastChunkY = jr, this.lastChunkZ = Ir, this.lastChunkId = (0, Wr.b)(ar, jr, Ir), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, fr);
-          for (const [rr, Sr] of this.editedAt) {
-            if (Sr >= fr - 3e5) break;
-            this.editedAt.delete(rr)
+      noteEdit(dd, Od, md) {
+        const Rd = (0, Wd.T)(dd),
+          Xd = (0, Wd.T)(Od),
+          Kd = (0, Wd.T)(md),
+          hd = this.now();
+        if (Rd !== this.lastChunkX || Xd !== this.lastChunkY || Kd !== this.lastChunkZ) {
+          this.lastChunkX = Rd, this.lastChunkY = Xd, this.lastChunkZ = Kd, this.lastChunkId = (0, Fd.c)(Rd, Xd, Kd), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, hd);
+          for (const [dd, Od] of this.editedAt) {
+            if (Od >= hd - 3e5) break;
+            this.editedAt.delete(dd)
           }
-        } else this.editedAt.set(this.lastChunkId, fr)
+        } else this.editedAt.set(this.lastChunkId, hd)
       }
-      chunksEditedSince(rr) {
-        const Sr = [];
-        for (const [Qr, Zr] of this.editedAt) Zr >= rr && Sr.push(Qr);
-        return Sr
+      chunksEditedSince(dd) {
+        const Od = [];
+        for (const [md, Wd] of this.editedAt) Wd >= dd && Od.push(md);
+        return Od
       }
     }
   },
-  40635: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => US,
-      f: () => iS,
-      i: () => qS,
-      l: () => wS
+  40643: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => yO,
+      f: () => jO,
+      i: () => iO,
+      l: () => DO
     });
-    var Zr = Qr(2364),
-      Wr = Qr(9888),
-      ar = Qr(38197),
-      jr = Qr(38200),
-      Ir = Qr(1568),
-      fr = Qr(37843),
-      Er = Qr(40543),
-      pr = Qr(40531),
-      xr = Qr(2484),
-      mr = Qr(39374),
-      Nr = Qr(40640),
-      Ur = Qr(1287),
-      tr = Qr(360),
-      hr = Qr(34),
-      zr = Qr(2114),
-      Yr = Qr(109),
-      nr = Qr(43),
-      er = Qr(2135),
-      Kr = Qr(2049),
-      yr = Qr(4083);
-    class Br {
-      constructor(rr) {
-        this.storeForMs = rr, this.clicks = new yr.d
+    var Wd = md(2386),
+      Fd = md(9907),
+      Rd = md(38282),
+      Xd = md(38290),
+      Kd = md(1549),
+      hd = md(37939),
+      vd = md(40544),
+      Qd = md(40531),
+      td = md(2497),
+      od = md(39417),
+      Nd = md(40650),
+      qd = md(1300),
+      Hd = md(387),
+      yd = md(32),
+      bd = md(2116),
+      Td = md(107),
+      pd = md(46),
+      Yd = md(2134),
+      gd = md(2057),
+      wd = md(4073);
+    class Ed {
+      constructor(dd) {
+        this.storeForMs = dd, this.clicks = new wd.d
       }
       click() {
         this.clicks.enqueue(Date.now());
-        const rr = Date.now() - this.storeForMs;
-        for (; this.clicks.size > 0 && this.clicks.peek() < rr;) this.clicks.dequeue()
+        const dd = Date.now() - this.storeForMs;
+        for (; this.clicks.size > 0 && this.clicks.peek() < dd;) this.clicks.dequeue()
       }
-      getNumClicksInMs(rr) {
-        let Sr = 0;
-        return this.clicks.forEach((Qr => {
-          Qr > Date.now() - rr && Sr++
-        })), Sr
+      getNumClicksInMs(dd) {
+        let Od = 0;
+        return this.clicks.forEach((md => {
+          md > Date.now() - dd && Od++
+        })), Od
       }
-      getMaxClickSeparationInMs(rr) {
+      getMaxClickSeparationInMs(dd) {
         if (0 === this.clicks.size) return this.storeForMs;
-        let Sr = 0,
-          Qr = Date.now() - rr;
-        this.clicks.forEach((Zr => {
-          Zr < Date.now() - rr || (Sr = Math.max(Sr, Math.abs(Zr - Qr)), Qr = Zr)
+        let Od = 0,
+          md = Date.now() - dd;
+        this.clicks.forEach((Wd => {
+          Wd < Date.now() - dd || (Od = Math.max(Od, Math.abs(Wd - md)), md = Wd)
         }));
-        const Zr = Math.abs(Date.now() - Qr);
-        return Math.max(Sr, Zr)
+        const Wd = Math.abs(Date.now() - md);
+        return Math.max(Od, Wd)
       }
     }
-    class Tr {
-      constructor(rr) {
-        this.storeForMs = rr, this.clickDownDurations = new yr.d
+    class Jd {
+      constructor(dd) {
+        this.storeForMs = dd, this.clickDownDurations = new wd.d
       }
-      registerClickDownDuration(rr) {
+      registerClickDownDuration(dd) {
         this.clickDownDurations.enqueue({
-          dur: rr,
+          dur: dd,
           atTime: Date.now()
         });
-        const Sr = Date.now() - this.storeForMs;
-        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < Sr;) this.clickDownDurations.dequeue()
+        const Od = Date.now() - this.storeForMs;
+        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < Od;) this.clickDownDurations.dequeue()
       }
-      clickDownDurationsCheck(rr) {
-        if (rr > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
-        let Sr = 0,
-          Qr = 0;
-        return this.clickDownDurations.forEach((Zr => {
-          Zr.atTime > Date.now() - rr && (Sr++, Qr = Math.max(Qr, Zr.dur))
-        })), `${Sr}:${Qr}`
+      clickDownDurationsCheck(dd) {
+        if (dd > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
+        let Od = 0,
+          md = 0;
+        return this.clickDownDurations.forEach((Wd => {
+          Wd.atTime > Date.now() - dd && (Od++, md = Math.max(md, Wd.dur))
+        })), `${Od}:${md}`
       }
     }
-    var vr = Qr(38031),
-      Or = Qr(40646),
-      Lr = Qr(26),
-      lr = Qr(2383),
-      Xr = Qr(1422),
-      Pr = Qr(3394),
-      Hr = Qr(5179),
-      qr = Qr(139),
-      Rr = Qr(39652),
-      gr = Qr(39859),
-      Cr = Qr(688),
-      Mr = Qr(38026),
-      Gr = Qr(13),
-      kr = Qr(5779),
-      Ar = Qr(1279),
-      Vr = Qr(208),
-      ir = Qr(40653),
-      wr = Qr(40655),
-      cr = Qr(40662),
-      Fr = Qr(39688),
-      or = Qr(40675),
-      br = Qr(39604),
-      Jr = Qr(4637),
-      Dr = Qr(1758),
-      dr = Qr(3425),
-      sr = Qr(3909),
-      ur = Qr(37811),
-      rS = Qr(37815),
-      SS = Qr(40670),
-      QS = Qr(39447);
-    const ZS = {
+    var Ud = md(38121),
+      xd = md(40652),
+      Bd = md(29),
+      Sd = md(2402),
+      sd = md(1415),
+      ud = md(3394),
+      Vd = md(5114),
+      Ad = md(151),
+      rd = md(39698),
+      Gd = md(39919),
+      nd = md(701),
+      Ld = md(38112),
+      Pd = md(15),
+      zd = md(5733),
+      cd = md(1286),
+      jd = md(218),
+      Dd = md(40659),
+      ed = md(40666),
+      Id = md(40672),
+      ld = md(39725),
+      Cd = md(40681),
+      Zd = md(39639),
+      kd = md(4624),
+      fd = md(1765),
+      Md = md(3428),
+      dO = md(3903),
+      OO = md(37908),
+      mO = md(37915),
+      WO = md(40676),
+      FO = md(39502);
+    const RO = {
       forward: "freeCamForward",
       backward: "freeCamBackward",
       left: "freeCamLeft",
@@ -2870,1323 +2870,1166 @@ export const modules = {
       crouch: "freeCamDown"
     };
 
-    function WS() {
-      var rr, Sr;
-      return !(null === (rr = (0, lr.c)().client) || void 0 === rr || null === (Sr = rr.freeCameraController) || void 0 === Sr || !Sr.movesFly())
+    function XO() {
+      var dd, Od;
+      return !(null === (dd = (0, Sd.b)().client) || void 0 === dd || null === (Od = dd.freeCameraController) || void 0 === Od || !Od.movesFly())
     }
 
-    function aS(rr) {
-      const Sr = rr.on.bind(rr);
-      rr.on = (rr, Qr) => {
-        er.z.has(rr) ? Sr(rr, Qr) : Sr(rr, (Sr => {
-          var Zr;
-          return null !== (Zr = (0, lr.c)().client) && void 0 !== Zr && Zr.isReplayMode() ? function(rr) {
-            return rr in ZS
-          }(rr) && WS() ? Qr(Sr) : void 0 : Qr(Sr)
+    function KO(dd) {
+      const Od = dd.on.bind(dd);
+      dd.on = (dd, md) => {
+        Yd.F.has(dd) ? Od(dd, md) : Od(dd, (Od => {
+          var Wd;
+          return null !== (Wd = (0, Sd.b)().client) && void 0 !== Wd && Wd.isReplayMode() ? function(dd) {
+            return dd in RO
+          }(dd) && XO() ? md(Od) : void 0 : md(Od)
         }))
       }
     }
-    const jS = 5e3,
-      IS = 1;
-    let fS, ES = IS,
-      pS = 0;
-    const xS = !0;
-    let mS = xS;
-    zr.d.subscribe("_ignoreBasicBoards", (rr => {
-      mS = rr
-    })), (0, Zr.onGameReset)((() => {
-      mS = xS
+    const hO = 5e3,
+      vO = 1;
+    let QO, tO = vO,
+      oO = 0;
+    const NO = !0;
+    let qO = NO;
+    bd.e.subscribe("_ignoreBasicBoards", (dd => {
+      qO = dd
+    })), (0, Wd.onGameReset)((() => {
+      qO = NO
     }));
-    let NS = null;
-    const US = () => NS;
-    let tS, hS, zS;
-    var YS, nS, eS, KS, yS, BS, TS, vS, OS;
-    const LS = [2, 0, 1, "h", 15, "a", "i", 7, "e", "f", 143, 8, 255, "length", "c", "d", "b", "undefined", void 0, 189, 63, 6, "fromCodePoint", 12, "push", 144, 3, 5, 145, 178, 30, "g", 91, 8191, 88, 13, 14, 246, 161, 229, 74, 103, 4, 92, 56, 36, 1023, 65536, 10, 55296, 56320, 127, 87, 167, 128, 31, 18, 95, 192, 134, 206, 223, 195, 199, 38, 224, 209, 240, 69, !1, 73, 146, 9, null, 111, 105, 86, 61, 163, 141, 221, 26, 137, 218, !0, 130, 116, 17, 216, 84, 131, 11, 107];
+    let HO = null;
+    const yO = () => HO;
+    let bO, TO, pO;
+    var YO, gO, wO, aO, EO, JO, UO, xO, BO;
+    const SO = ["b", 0, 1, 98, "c", 78, 9, 112, 42, 192, 4, 8, 255, "length", "undefined", void 0, 2, "d", "a", 63, 6, "fromCodePoint", 7, 12, "push", 109, 110, 3, 245, 62, "h", 144, 188, "g", 91, 5, 8191, 88, 13, 14, 45, 234, "i", "e", 117, 108, !1, 141, 250, 121, 95, !0, "s", 232, 99, 51, 187, 143, 184, 256, 65537, 100, 30, 127, 128, "f", 229, 84, 175, ")", 199, 197, null, 10];
 
-    function lS(rr) {
-      return typeof YS[rr] === LS[17] ? YS[rr] = function(...rr) {
-        for (HS(rr[LS[13]] = LS[2], rr[LS[5]] = '|NAetTg;Hbf&Ku:v?p81MB[*@RPd%V}>l9siy(h#6QYzr2wJ]LI.`),j<4XWxSm0{aFDckon_O5G=Zq~+E$C3U"7!/^', rr[LS[0]] = "" + (rr[LS[1]] || ""), rr[LS[4]] = rr[LS[0]].length, rr[LS[10]] = [], rr[LS[8]] = LS[1], rr[LS[9]] = LS[1], rr[LS[7]] = -LS[2]), rr[LS[3]] = LS[1]; rr[LS[3]] < rr[LS[4]]; rr[LS[3]]++)
-          if (rr[LS[6]] = rr[LS[5]].indexOf(rr[LS[0]][rr[LS[3]]]), rr[LS[6]] !== -LS[2])
-            if (rr[LS[7]] < LS[1]) rr[LS[7]] = rr[LS[6]];
-            else {
-              HS(rr[LS[7]] += rr[LS[6]] * LS[32], rr[LS[8]] |= rr[LS[7]] << rr[LS[9]], rr[LS[9]] += (rr[LS[7]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-              do {
-                HS(rr[LS[10]].push(rr[LS[8]] & LS[12]), rr[LS[8]] >>= LS[11], rr[LS[9]] -= LS[11])
-              } while (rr[LS[9]] > LS[7]);
-              rr[LS[7]] = -LS[2]
-            } return rr[LS[7]] > -LS[2] && rr[LS[10]].push((rr[LS[8]] | rr[LS[7]] << rr[LS[9]]) & LS[12]), XS(rr[LS[10]])
-      }(nS[rr]) : YS[rr]
+    function sO(...dd) {
+      return dd[SO[13]] = SO[2], typeof aO !== SO[14] && aO ? (new aO).decode(new EO(dd[SO[1]])) : typeof JO !== SO[14] && JO ? JO.from(dd[SO[1]]).toString("utf-8") : BO(dd[SO[1]])
     }
 
-    function XS(...rr) {
-      return rr[LS[13]] = LS[2], typeof KS !== LS[17] && KS ? (new KS).decode(new yS(rr[LS[1]])) : typeof BS !== LS[17] && BS ? BS.from(rr[LS[1]]).toString("utf-8") : OS(rr[LS[1]])
+    function uO() {}
+
+    function VO() {
+      VO = function() {}
     }
 
-    function PS() {}
-
-    function HS() {
-      HS = function() {}
-    }
-
-    function qS(rr) {
-      function Sr() {
-        return rr.YB.XQr(rr.fC)
+    function iO(dd) {
+      function Od() {
+        return dd.qE.NWd(dd.YV)
       }
-      aS(rr.inputs.down), aS(rr.inputs.up);
-      for (const Zr of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
-        const Sr = (Sr, Qr) => {
-          var Wr, ar;
-          if (WS()) {
-            var jr;
-            const Wr = ZS[Zr];
-            var Ir, fr;
-            if (Wr) null === (Ir = (0, lr.c)().client) || void 0 === Ir || null === (fr = Ir.freeCameraController) || void 0 === fr || fr.handlefreeCamKeyPress(Wr, Sr, Qr);
-            return void(Qr || null !== (jr = (0, lr.c)().client) && void 0 !== jr && jr.isReplayMode() || (rr.YB.gQr()[Zr] = !1))
+      KO(dd.inputs.down), KO(dd.inputs.up);
+      for (const Wd of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
+        const Od = (Od, md) => {
+          var Fd, Rd;
+          if (XO()) {
+            var Xd;
+            const Fd = RO[Wd];
+            var Kd, hd;
+            if (Fd) null === (Kd = (0, Sd.b)().client) || void 0 === Kd || null === (hd = Kd.freeCameraController) || void 0 === hd || hd.handlefreeCamKeyPress(Fd, Od, md);
+            return void(md || null !== (Xd = (0, Sd.b)().client) && void 0 !== Xd && Xd.isReplayMode() || (dd.qE.TWd()[Wd] = !1))
           }
-          if (null !== (Wr = (0, lr.c)().client) && void 0 !== Wr && null !== (ar = Wr.freeCameraController) && void 0 !== ar && ar.isKeyPressOverriden(Sr)) return;
-          rr.YB.gQr()[Zr] = Qr
+          if (null !== (Fd = (0, Sd.b)().client) && void 0 !== Fd && null !== (Rd = Fd.freeCameraController) && void 0 !== Rd && Rd.isKeyPressOverriden(Od)) return;
+          dd.qE.TWd()[Wd] = md
         };
-        rr.inputs.down.on(Zr, (rr => Sr(rr, !0))), rr.inputs.up.on(Zr, (rr => Sr(rr, !1)))
+        dd.inputs.down.on(Wd, (dd => Od(dd, !0))), dd.inputs.up.on(Wd, (dd => Od(dd, !1)))
       }
-      rr.inputs.down.on("crouch", (() => {
-        if (WS()) return;
-        if (!rr.NK.canCrouch) return;
-        const Sr = rr.YB.gQr();
-        Lr.c.get("clientEscMenuOptions").crouchIsToggle && (Sr.crouchToggled = !Sr.crouchToggled && !Sr.padSneakToggled), Sr.padSneakToggled = !1
+      dd.inputs.down.on("crouch", (() => {
+        if (XO()) return;
+        if (!dd.EY.canCrouch) return;
+        const Od = dd.qE.TWd();
+        Bd.e.get("clientEscMenuOptions").crouchIsToggle && (Od.crouchToggled = !Od.crouchToggled && !Od.padSneakToggled), Od.padSneakToggled = !1
       }));
-      const Qr = () => {
-        const rr = Sr();
-        rr.isGun() && rr.inaccuracyCalculator.jump()
+      const md = () => {
+        const dd = Od();
+        dd.isGun() && dd.inaccuracyCalculator.jump()
       };
-      rr.inputs.down.on("jump", (rr => {
-        WS() || (Qr(), tS(rr))
+      dd.inputs.down.on("jump", (dd => {
+        XO() || (md(), bO(dd))
       }));
-      for (const Zr of er.h) rr.inputs.down.on(Zr, (rr => {
-        var Sr, Qr;
-        null !== (Sr = (0, lr.c)().client) && void 0 !== Sr && null !== (Qr = Sr.freeCameraController) && void 0 !== Qr && Qr.handlefreeCamKeyPress(Zr, rr, !0) && (rr.preventDefault(), rr.stopPropagation())
-      })), rr.inputs.up.on(Zr, (rr => {
-        var Sr, Qr;
-        null !== (Sr = (0, lr.c)().client) && void 0 !== Sr && null !== (Qr = Sr.freeCameraController) && void 0 !== Qr && Qr.handlefreeCamKeyPress(Zr, rr, !1) && (rr.preventDefault(), rr.stopPropagation())
+      for (const Wd of Yd.n) dd.inputs.down.on(Wd, (dd => {
+        var Od, md;
+        null !== (Od = (0, Sd.b)().client) && void 0 !== Od && null !== (md = Od.freeCameraController) && void 0 !== md && md.handlefreeCamKeyPress(Wd, dd, !0) && (dd.preventDefault(), dd.stopPropagation())
+      })), dd.inputs.up.on(Wd, (dd => {
+        var Od, md;
+        null !== (Od = (0, Sd.b)().client) && void 0 !== Od && null !== (md = Od.freeCameraController) && void 0 !== md && md.handlefreeCamKeyPress(Wd, dd, !1) && (dd.preventDefault(), dd.stopPropagation())
       }));
-      rr.inputs.down.on("recordGame", (() => {
-        var rr, Sr;
-        null === (rr = (0, lr.c)().client) || void 0 === rr || null === (Sr = rr.gameRecorder) || void 0 === Sr || Sr.toggleRecording()
-      })), rr.inputs.down.on("recordClip", (() => {
-        var rr, Sr;
-        (0, vr.e)() || null === (rr = (0, lr.c)().client) || void 0 === rr || null === (Sr = rr.gameRecorder) || void 0 === Sr || Sr.saveClip()
+      dd.inputs.down.on("recordGame", (() => {
+        var dd, Od;
+        null === (dd = (0, Sd.b)().client) || void 0 === dd || null === (Od = dd.gameRecorder) || void 0 === Od || Od.toggleRecording()
+      })), dd.inputs.down.on("recordClip", (() => {
+        var dd, Od;
+        (0, Ud.b)() || null === (dd = (0, Sd.b)().client) || void 0 === dd || null === (Od = dd.gameRecorder) || void 0 === Od || Od.saveClip()
       }));
-      for (const Zr of er.z) rr.inputs.down.on(Zr, (() => {
-        var rr;
-        if ((0, Or.e)()) return;
-        if ("replayViewerOpen" === Zr) return void hr.i.Jp("replayViewer|requested", "toggle");
-        const Sr = null === (rr = (0, lr.c)().client) || void 0 === rr ? void 0 : rr.gameReplayer;
-        ((0, vr.e)() || null !== Sr && void 0 !== Sr && Sr.isReplayMode()) && (null === Sr || void 0 === Sr || Sr.handleAction(Zr))
+      for (const Wd of Yd.F) dd.inputs.down.on(Wd, (() => {
+        var dd;
+        if ((0, xd.d)()) return;
+        if ("replayViewerOpen" === Wd) return void yd.j.lQ("replayViewer|requested", "toggle");
+        const Od = null === (dd = (0, Sd.b)().client) || void 0 === dd ? void 0 : dd.gameReplayer;
+        ((0, Ud.b)() || null !== Od && void 0 !== Od && Od.isReplayMode()) && (null === Od || void 0 === Od || Od.handleAction(Wd))
       }));
-      const Ir = new Br(3e4),
-        mr = new Tr(4e4);
-      let Nr = 0;
-      const nr = rr => {
-          let Sr = 0,
-            Qr = null;
-          const Zr = Sr => null !== Sr && Sr === Qr && (Qr = null, rr(), !0);
+      const Kd = new Ed(3e4),
+        od = new Jd(4e4);
+      let Nd = 0;
+      const pd = dd => {
+          let Od = 0,
+            md = null;
+          const Wd = Od => null !== Od && Od === md && (md = null, dd(), !0);
           return {
-            press: () => (Sr++, (0, ir.d)() || (Zr(Qr), Qr = Sr), Sr),
-            owns: rr => rr === Qr,
-            release: Zr
+            press: () => (Od++, (0, Dd.c)() || (Wd(md), md = Od), Od),
+            owns: dd => dd === md,
+            release: Wd
           }
         },
-        yr = (rr, Qr) => {
-          Qr && wS(Ur.d.TouchDownFirePrimary), rr ? kr() : ((0, gr.e)(), Sr().vZr()), Qr || wS(Ur.d.DownFirePrimary), iS(!0), Ir.click();
-          const Wr = Ir.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
-            ar = Ir.getMaxClickSeparationInMs(1e4) < 20,
-            jr = Ir.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
-          if (Wr || ar || jr) {
-            let rr;
-            if (Wr) rr = 30;
-            else if (ar) rr = 50;
+        wd = (dd, md) => {
+          md && DO(qd.b.TouchDownFirePrimary), dd ? zd() : ((0, Gd.g)(), Od().KFd()), md || DO(qd.b.DownFirePrimary), jO(!0), Kd.click();
+          const Fd = Kd.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
+            Rd = Kd.getMaxClickSeparationInMs(1e4) < 20,
+            Xd = Kd.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
+          if (Fd || Rd || Xd) {
+            let dd;
+            if (Fd) dd = 30;
+            else if (Rd) dd = 50;
             else {
-              if (!jr) throw new Error("???");
-              rr = 70
-            }(0, Zr.sendColyMessage)(xr.mk, rr)
+              if (!Xd) throw new Error("???");
+              dd = 70
+            }(0, Wd.sendColyMessage)(td.Rj, dd)
           }
         },
-        Hr = new wr.d,
-        qr = nr((() => {
-          wr.d.stopRunning();
-          const rr = Date.now() - Nr;
-          mr.registerClickDownDuration(rr), Sr().yZr(), wS(Ur.d.UpFirePrimary), iS(!1);
-          const Qr = mr.clickDownDurationsCheck(4e4);
-          (0, Zr.sendColyMessage)(xr.Rg, Qr)
+        Vd = new ed.d,
+        Ad = pd((() => {
+          ed.d.stopRunning();
+          const dd = Date.now() - Nd;
+          od.registerClickDownDuration(dd), Od().FFd(), DO(qd.b.UpFirePrimary), jO(!1);
+          const md = od.clickDownDurationsCheck(4e4);
+          (0, Wd.sendColyMessage)(td.ng, md)
         }));
-      let Rr = 0;
-      rr.inputs.down.on("primary-fire", (function(rr) {
-        Rr = qr.press(), qr.owns(Rr) && (Nr = Date.now(), Math.abs(performance.now() - rr.timeStamp) > 5e3 || (yr(rr.altKey, "changedTouches" in rr), tS(rr)))
-      })), rr.inputs.up.on("primary-fire", (function(rr) {
-        qr.release(Rr) && tS(rr, !0)
+      let rd = 0;
+      dd.inputs.down.on("primary-fire", (function(dd) {
+        rd = Ad.press(), Ad.owns(rd) && (Nd = Date.now(), Math.abs(performance.now() - dd.timeStamp) > 5e3 || (wd(dd.altKey, "changedTouches" in dd), bO(dd)))
+      })), dd.inputs.up.on("primary-fire", (function(dd) {
+        Ad.release(rd) && bO(dd, !0)
       }));
-      const Cr = () => {
-          Sr().bpr(), wS(Ur.d.DownFireSecondary), iS(!0), rr.xSr && !rr.xSr.position && (0, pr.f)()
+      const nd = () => {
+          Od().jQd(), DO(qd.b.DownFireSecondary), jO(!0), dd.nOd && !dd.nOd.position && (0, Qd.j)()
         },
-        Mr = nr((() => {
-          Sr().KZr(), wS(Ur.d.UpFireSecondary), iS(!1)
+        Ld = pd((() => {
+          Od().WFd(), DO(qd.b.UpFireSecondary), jO(!1)
         }));
-      let Gr = 0;
-      rr.inputs.down.on("alt-fire", (function(rr) {
-        Gr = Mr.press(), Mr.owns(Gr) && (Cr(), tS(rr))
-      })), rr.inputs.up.on("alt-fire", (function(rr) {
-        Mr.release(Gr) && tS(rr, !0)
+      let Pd = 0;
+      dd.inputs.down.on("alt-fire", (function(dd) {
+        Pd = Ld.press(), Ld.owns(Pd) && (nd(), bO(dd))
+      })), dd.inputs.up.on("alt-fire", (function(dd) {
+        Ld.release(Pd) && bO(dd, !0)
       }));
-      const kr = () => Sr().spr();
-      rr.inputs.down.on("mid-fire", (() => {
-        (0, ir.d)() || kr()
+      const zd = () => Od().IQd();
+      dd.inputs.down.on("mid-fire", (() => {
+        (0, Dd.c)() || zd()
       }));
-      const or = rr => {
-          (0, Zr.sendColyMessage)(xr.ai, rr, !0)
+      const Cd = dd => {
+          (0, Wd.sendColyMessage)(td.lh, dd, !0)
         },
-        fS = rr => {
-          (0, Zr.sendColyMessage)(xr.di, {
-            iI: rr,
-            wI: xS()
+        QO = dd => {
+          (0, Wd.sendColyMessage)(td.ph, {
+            cK: dd,
+            jK: NO()
           }, !0)
         };
-      for (const Zr of ["SpecialAction1", "SpecialAction2"]) rr.inputs.down.on(Zr, (() => {
-        or(Zr)
-      })), rr.inputs.up.on(Zr, (() => {
-        fS(Zr)
+      for (const Wd of ["SpecialAction1", "SpecialAction2"]) dd.inputs.down.on(Wd, (() => {
+        Cd(Wd)
+      })), dd.inputs.up.on(Wd, (() => {
+        QO(Wd)
       }));
-      const pS = () => {
-        const rr = Sr();
-        rr.isGun() && rr.reload(Date.now())
+      const oO = () => {
+        const dd = Od();
+        dd.isGun() && dd.reload(Date.now())
       };
-      rr.inputs.down.on("ReloadGun", pS);
-      const xS = () => {
-        let Sr = "a";
-        return rr.physics.testSolid.toString().includes("SN") || (Sr = "b"), Sr
+      dd.inputs.down.on("ReloadGun", oO);
+      const NO = () => {
+        let Od = "a";
+        return dd.physics.testSolid.toString().includes("hN") || (Od = "b"), Od
       };
-      rr.inputs.down.on("OpenInventory", (rr => {
-        rr.preventDefault(), (0, Dr.v)(rr, "inventory", (0, cr.b)((0, lr.e)()))
-      })), rr.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
-      const mS = rr => {
-        hr.i.Jp("DropItemKeyPressed", rr)
+      dd.inputs.down.on("OpenInventory", (dd => {
+        dd.preventDefault(), (0, fd.v)(dd, "inventory", (0, Id.c)((0, Sd.c)()))
+      })), dd.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
+      const qO = dd => {
+        yd.j.lQ("DropItemKeyPressed", dd)
       };
-      rr.inputs.down.on("DropItem", (() => {
-        mS(rr.YB.gQr().crouch)
-      })), rr.inputs.down.on("OpenShop", (Sr => {
-        (0, vr.e)() || "inGame" === Lr.c.get("gameState") && (0, Dr.s)(Sr, tr.q.SHOP, !(0, Wr.b)(rr.NK.shopInfo))
-      })), rr.inputs.down.on("OpenLobbyLeaderboard", (Sr => {
-        (0, vr.e)() || "inGame" === Lr.c.get("gameState") && (0, Dr.w)(Sr, (0, SS.c)(rr.NK), (0, dr.o)())
-      })), rr.inputs.down.on("HideUi", (() => {
-        hr.i.Jp("showUi", !1)
-      })), rr.inputs.up.on("HideUi", (() => {
-        hr.i.Jp("showUi", !0)
+      dd.inputs.down.on("DropItem", (() => {
+        qO(dd.qE.TWd().crouch)
+      })), dd.inputs.down.on("OpenShop", (Od => {
+        (0, Ud.b)() || "inGame" === Bd.e.get("gameState") && (0, fd.s)(Od, Hd.m.SHOP, !(0, Fd.b)(dd.EY.shopInfo))
+      })), dd.inputs.down.on("OpenLobbyLeaderboard", (Od => {
+        (0, Ud.b)() || "inGame" === Bd.e.get("gameState") && (0, fd.x)(Od, (0, WO.b)(dd.EY), (0, Md.i)())
+      })), dd.inputs.down.on("HideUi", (() => {
+        yd.j.lQ("showUi", !1)
+      })), dd.inputs.up.on("HideUi", (() => {
+        yd.j.lQ("showUi", !0)
       }));
-      const US = rr => {
-        0 === rr && (rr = 10), hr.i.Jp("setSelectedInventorySlotI", rr - 1), hr.i.Jp("numkeyPressed", rr)
+      const yO = dd => {
+        0 === dd && (dd = 10), yd.j.lQ("setSelectedInventorySlotI", dd - 1), yd.j.lQ("numkeyPressed", dd)
       };
-      for (let Zr = 1; Zr <= 10; Zr++) rr.inputs.down.on("HotBarSlot" + Zr.toString(), (() => {
-        US(Zr)
+      for (let Wd = 1; Wd <= 10; Wd++) dd.inputs.down.on("HotBarSlot" + Wd.toString(), (() => {
+        yO(Wd)
       }));
-      rr.inputs.down.on("OpenTasksAndLeaderboard", (Sr => {
-        const Qr = (0, dr.r)();
-        Qr ? (0, Dr.y)(Sr, !0, Qr) : (0, Dr.v)(Sr, "retentionFeatures", !(!rr.NK._tasks && !rr.NK._availableLeaderboards))
-      })), rr.inputs.down.on("OpenCodeEditor", (Sr => {
-        (0, Dr.y)(Sr, (0, Pr.e)((0, Xr.b)()), (() => {
-          (0, Pr.h)(rr.YB.JY(rr.fC))
+      dd.inputs.down.on("OpenTasksAndLeaderboard", (Od => {
+        const md = (0, Md.j)();
+        md ? (0, fd.A)(Od, !0, md) : (0, fd.v)(Od, "retentionFeatures", !(!dd.EY._tasks && !dd.EY._availableLeaderboards))
+      })), dd.inputs.down.on("OpenCodeEditor", (Od => {
+        (0, fd.A)(Od, (0, ud.b)((0, sd.b)()), (() => {
+          (0, ud.h)(dd.qE.hY(dd.YV))
         }))
-      })), rr.inputs.bind("ToggleFullCoordinateOverlay", "F3"), rr.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
-        hr.i.Jp("toggleFullCoordinateOverlay")
+      })), dd.inputs.bind("ToggleFullCoordinateOverlay", "F3"), dd.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
+        yd.j.lQ("toggleFullCoordinateOverlay")
       }));
-      const zS = () => {
-        (0, lr.c)().client.cameraController.swapCameraZoom()
+      const pO = () => {
+        (0, Sd.b)().client.cameraController.swapCameraZoom()
       };
-      rr.inputs.down.on("SwapCameraZoom", zS), rr.inputs.down.on("OpenInviteLink", (rr => {
-        (0, Dr.v)(rr, "inviteLink", Yr.featureFlags.canUseInviteLinks)
-      })), rr.inputs.bind("Y", "KeyY"), rr.inputs.down.on("Y", (rr => {
-        (0, vr.e)() || hr.i.Jp("YKeyPressed")
-      })), rr.inputs.bind("X", "KeyX"), rr.inputs.down.on("X", (rr => {
-        (0, vr.e)() || hr.i.Jp("XKeyPressed")
-      })), rr.inputs.down.on("OpenEmoteWheel", (() => {
-        hr.i.Jp("requestEmoteWheelHoldOpen")
-      })), rr.inputs.up.on("OpenEmoteWheel", (() => {
-        hr.i.Jp("requestEmoteWheelHoldRelease")
-      })), rr.inputs.down.on("Zoom", (() => {
-        "inGame" === Lr.c.get("gameState") && (0, lr.c)().client.cameraController.setZoomKeyHeld("keys", !0)
-      })), rr.inputs.up.on("Zoom", (() => {
-        (0, lr.c)().client.cameraController.setZoomKeyHeld("keys", !1)
-      })), RS();
-      const YS = rr => function() {
-        return hS(), rr(...arguments)
+      dd.inputs.down.on("SwapCameraZoom", pO), dd.inputs.down.on("OpenInviteLink", (dd => {
+        (0, fd.v)(dd, "inviteLink", Td.featureFlags.canUseInviteLinks)
+      })), dd.inputs.bind("Y", "KeyY"), dd.inputs.down.on("Y", (dd => {
+        (0, Ud.b)() || yd.j.lQ("YKeyPressed")
+      })), dd.inputs.bind("X", "KeyX"), dd.inputs.down.on("X", (dd => {
+        (0, Ud.b)() || yd.j.lQ("XKeyPressed")
+      })), dd.inputs.down.on("OpenEmoteWheel", (() => {
+        yd.j.lQ("requestEmoteWheelHoldOpen")
+      })), dd.inputs.up.on("OpenEmoteWheel", (() => {
+        yd.j.lQ("requestEmoteWheelHoldRelease")
+      })), dd.inputs.down.on("Zoom", (() => {
+        "inGame" === Bd.e.get("gameState") && (0, Sd.b)().client.cameraController.setZoomKeyHeld("keys", !0)
+      })), dd.inputs.up.on("Zoom", (() => {
+        (0, Sd.b)().client.cameraController.setZoomKeyHeld("keys", !1)
+      })), AO();
+      const YO = dd => function() {
+        return TO(), dd(...arguments)
       };
 
-      function nS(rr) {
-        "inGame" !== Lr.c.get("gameState") || (0, Dr.p)() || (hr.i.Jp("ctrlCrouchWithoutFullscreen"), rr.preventDefault())
+      function gO(dd) {
+        "inGame" !== Bd.e.get("gameState") || (0, fd.q)() || (yd.j.lQ("ctrlCrouchWithoutFullscreen"), dd.preventDefault())
       }
-      NS = {
-        primaryFireDown: YS((rr => {
-          const Sr = qr.press();
-          return qr.owns(Sr) && (Nr = Date.now(), yr(!1, !1), rr && Hr.start()), Sr
+      HO = {
+        primaryFireDown: YO((dd => {
+          const Od = Ad.press();
+          return Ad.owns(Od) && (Nd = Date.now(), wd(!1, !1), dd && Vd.start()), Od
         })),
-        primaryFireUp: YS((rr => {
-          qr.release(rr)
+        primaryFireUp: YO((dd => {
+          Ad.release(dd)
         })),
-        altFireDown: YS((() => {
-          const rr = Mr.press();
-          return Mr.owns(rr) && Cr(), rr
+        altFireDown: YO((() => {
+          const dd = Ld.press();
+          return Ld.owns(dd) && nd(), dd
         })),
-        altFireUp: YS((rr => {
-          Mr.release(rr)
+        altFireUp: YO((dd => {
+          Ld.release(dd)
         })),
-        jumpDown: YS(Qr),
-        specialActionDown: YS(or),
-        specialActionUp: YS(fS),
-        reloadGun: YS(pS),
-        dropItem: YS(mS),
-        swapCameraZoom: YS(zS),
-        zoom: YS((rr => {
-          (0, lr.c)().client.cameraController.setZoomKeyHeld("pad", rr)
+        jumpDown: YO(md),
+        specialActionDown: YO(Cd),
+        specialActionUp: YO(QO),
+        reloadGun: YO(oO),
+        dropItem: YO(qO),
+        swapCameraZoom: YO(pO),
+        zoom: YO((dd => {
+          (0, Sd.b)().client.cameraController.setZoomKeyHeld("pad", dd)
         })),
-        pickBlock: YS(kr)
-      }, rr.inputs.down.on("ctrlCrouch", nS), rr.inputs.up.on("ctrlCrouch", nS), rr.inputs.bind("ctrlCrouch", "ControlLeft");
-      const eS = rr => {
-        "inGame" === Lr.c.get("gameState") && rr.ctrlKey && !(0, Dr.p)() && rr.preventDefault()
+        pickBlock: YO(zd)
+      }, dd.inputs.down.on("ctrlCrouch", gO), dd.inputs.up.on("ctrlCrouch", gO), dd.inputs.bind("ctrlCrouch", "ControlLeft");
+      const wO = dd => {
+        "inGame" === Bd.e.get("gameState") && dd.ctrlKey && !(0, fd.q)() && dd.preventDefault()
       };
-      document.addEventListener("keydown", eS), document.addEventListener("keyup", eS), document.addEventListener("keypress", eS), rr.inputs.bind("Alt", "AltLeft", "AltRight"), rr.inputs.down.on("Alt", (rr => {
-        rr.preventDefault()
+      document.addEventListener("keydown", wO), document.addEventListener("keyup", wO), document.addEventListener("keypress", wO), dd.inputs.bind("Alt", "AltLeft", "AltRight"), dd.inputs.down.on("Alt", (dd => {
+        dd.preventDefault()
       }));
-      const KS = Sr => (0, br.i)(rr, Sr),
-        yS = Sr => (0, br.k)(rr, Sr),
-        BS = [0, 0, 0],
-        TS = [0, 0, 1];
-      rr.on("afterRender", (Sr => {
-        rS.k.frame(Sr, rr.camera.heading, rr.camera.pitch, rS.f.drawn), (0, ar.f)(rr.camera.heading), (0, jr.i)(rr.camera.heading), (0, br.o)(rr, BS, TS), (0, lr.c)().client.triggerGameCallback("onAfterRender", Sr, {
-          cameraHeading: rr.camera.heading,
-          cameraPitch: rr.camera.pitch,
-          cameraPosition: BS,
-          cameraDirection: TS,
-          tanHalfFovX: (0, br.c)(rr),
-          tanHalfFovY: Math.tan(rr.Ox.r_().fov / 2),
+      const aO = Od => (0, Zd.i)(dd, Od),
+        EO = Od => (0, Zd.m)(dd, Od),
+        JO = [0, 0, 0],
+        UO = [0, 0, 1];
+      dd.on("afterRender", (Od => {
+        mO.o.frame(Od, dd.camera.heading, dd.camera.pitch, mO.l.drawn), (0, Rd.e)(dd.camera.heading), (0, Xd.e)(dd.camera.heading), (0, Zd.q)(dd, JO, UO), (0, Sd.b)().client.triggerGameCallback("onAfterRender", Od, {
+          cameraHeading: dd.camera.heading,
+          cameraPitch: dd.camera.pitch,
+          cameraPosition: JO,
+          cameraDirection: UO,
+          tanHalfFovX: (0, Zd.b)(dd),
+          tanHalfFovY: Math.tan(dd.gt.l_().fov / 2),
           screenBandPct: {
-            x: Jr.c,
-            y: (0, Jr.h)()
+            x: kd.b,
+            y: (0, kd.m)()
           },
-          projectWorldPosToScreenPos: KS,
-          projectWorldPosToViewport: yS
+          projectWorldPosToScreenPos: aO,
+          projectWorldPosToViewport: EO
         })
-      })), rr.camera.JR = (0, ur.startLookDebug)("js"), rr.inputs.mC = ur.noteLookDroppedCopy, (0, sr.p)("remesh") && (0, QS.j)(rr), rr.on("beforeInputs", (() => {
-        if ((0, Or.e)()) return rr.inputs.JF.dx = 0, void(rr.inputs.JF.dy = 0);
-        if (rr.camera.JF.dx += rr.inputs.JF.dx, rr.camera.JF.dy += rr.inputs.JF.dy, 0 !== rr.inputs.JF.dx || 0 !== rr.inputs.JF.dy) {
-          rr.YB.getState(rr.fC, "playerCameraAdjustment").lastPointerMove = Date.now()
+      })), dd.camera.oV = (0, OO.startLookDebug)("js"), dd.inputs.JV = OO.noteLookDroppedCopy, (0, dO.o)("remesh") && (0, FO.l)(dd), dd.on("beforeInputs", (() => {
+        if ((0, xd.d)()) return dd.inputs.iZ.dx = 0, void(dd.inputs.iZ.dy = 0);
+        if (dd.camera.iZ.dx += dd.inputs.iZ.dx, dd.camera.iZ.dy += dd.inputs.iZ.dy, 0 !== dd.inputs.iZ.dx || 0 !== dd.inputs.iZ.dy) {
+          dd.qE.getState(dd.YV, "playerCameraAdjustment").lastPointerMove = Date.now()
         }
-        rr.inputs.JF.dx = 0, rr.inputs.JF.dy = 0
+        dd.inputs.iZ.dx = 0, dd.inputs.iZ.dy = 0
       }));
-      let vS = 0;
-      const OS = [0, 0, 0],
-        LS = [0, 0, 0],
-        lS = {
-          base: OS,
-          max: LS
+      let xO = 0;
+      const BO = [0, 0, 0],
+        SO = [0, 0, 0],
+        sO = {
+          base: BO,
+          max: SO
         },
-        XS = rr => {
-          const Sr = Vr.i.droppedBlockSize / 2;
-          return [0, 1, 2].every((Qr => rr[Qr] >= OS[Qr] - Sr && rr[Qr] <= LS[Qr] + Sr))
+        uO = dd => {
+          const Od = jd.i.droppedBlockSize / 2;
+          return [0, 1, 2].every((md => dd[md] >= BO[md] - Od && dd[md] <= SO[md] + Od))
         };
-      rr.on("lx", (function(Sr) {
-        hr.i.Jp("noaTick", Sr);
-        const Qr = (0, lr.c)().client;
-        if (Qr.triggerGameCallback("lx", Sr), Qr.isClientGameSessionActive()) try {
-          Er.d.lx(Sr)
-        } catch (jr) {
-          console.error("Error ticking audio entities", jr)
+      dd.on("Et", (function(Od) {
+        yd.j.lQ("noaTick", Od);
+        const md = (0, Sd.b)().client;
+        if (md.triggerGameCallback("Et", Od), md.isClientGameSessionActive()) try {
+          vd.c.Et(Od)
+        } catch (Xd) {
+          console.error("Error ticking audio entities", Xd)
         }
-        if (!rr.YB.LQr(rr.fC).isAlive) return;
-        Date.now() - vS > 9e3 && (! function() {
-          const rr = (0, lr.e)();
-          "number" === typeof rr.NK.speedMultiplier && "number" === typeof rr.NK.jumpAmount && (0, Zr.sendColyMessage)(xr.Bi, {
-            ij: (0, Ar.h)(rr.NK.speedMultiplier),
-            wj: (0, Ar.e)(rr.NK.jumpAmount),
-            cj: (0, Ar.h)(rr.NK.crouchingSpeed),
-            Fj: (0, Ar.h)(rr.NK.walkingSpeed),
-            oj: (0, Ar.h)(rr.NK.runningSpeed),
-            bj: (0, Ar.e)(rr.WSr),
-            Jj: rr.YB.ASr(rr.fC).jumpForce,
-            Dj: rr.YB.gJ(1).width,
-            dj: rr.YB.gJ(1).height,
-            sj: rr.YB.cV(1).sj
+        if (!dd.qE.tWd(dd.YV).isAlive) return;
+        Date.now() - xO > 9e3 && (! function() {
+          const dd = (0, Sd.c)();
+          "number" === typeof dd.EY.speedMultiplier && "number" === typeof dd.EY.jumpAmount && (0, Wd.sendColyMessage)(td.Oh, {
+            cX: (0, cd.e)(dd.EY.speedMultiplier),
+            jX: (0, cd.d)(dd.EY.jumpAmount),
+            DX: (0, cd.e)(dd.EY.crouchingSpeed),
+            eX: (0, cd.e)(dd.EY.walkingSpeed),
+            IX: (0, cd.e)(dd.EY.runningSpeed),
+            lX: (0, cd.d)(dd.sOd),
+            CX: dd.qE.Hmd(dd.YV).jumpForce,
+            ZX: dd.qE.gM(1).width,
+            kX: dd.qE.gM(1).height,
+            fX: dd.qE.pC(1).fX
           }, !0)
-        }(), vS = Date.now());
-        const Wr = rr.YB.gQr();
-        if ((Wr.jump || Wr.forward || Wr.backward || Wr.left || Wr.right || Wr.sprint) && hr.i.Jp("usedKeyboard"), rr.YB.pQr(rr.fC) && !0 === rr.NK.canPickUpItems) {
-          const Sr = rr.YB.JY(rr.fC),
-            Qr = (0, Kr.o)(ES),
-            Wr = (0, Kr.p)(ES);
-          OS[0] = Sr[0] - Qr, OS[1] = Sr[1] - .6 * Wr, OS[2] = Sr[2] - Qr, LS[0] = Sr[0] + Qr, LS[1] = Sr[1] + Vr.i.Uz + .6 * Wr, LS[2] = Sr[2] + Qr;
-          const ar = rr.YB.bfr(lS, rr.YB.names.autoRotate),
+        }(), xO = Date.now());
+        const Fd = dd.qE.TWd();
+        if ((Fd.jump || Fd.forward || Fd.backward || Fd.left || Fd.right || Fd.sprint) && yd.j.lQ("usedKeyboard"), dd.qE.Imd(dd.YV) && !0 === dd.EY.canPickUpItems) {
+          const Od = dd.qE.hY(dd.YV),
+            md = (0, gd.t)(tO),
+            Fd = (0, gd.u)(tO);
+          BO[0] = Od[0] - md, BO[1] = Od[1] - .6 * Fd, BO[2] = Od[2] - md, SO[0] = Od[0] + md, SO[1] = Od[1] + jd.i.yb + .6 * Fd, SO[2] = Od[2] + md;
+          const Rd = dd.qE.fhd(sO, dd.qE.names.autoRotate),
             {
-              itemDropPrediction: jr
-            } = (0, lr.c)().client,
-            Ir = Zr.offlineInputReplay.holdsInput();
-          if (ar.length > 0)
-            for (const Er of ar) {
-              const Sr = rr.YB.getState(Er, "itemState");
-              if (void 0 === Sr || Date.now() - Sr.creationTime < 500) continue;
-              let Qr = Er,
-                Wr = null;
-              if (Sr.eW) {
-                const rr = jr.pickupTarget(Er, XS, Ir);
-                if (null === rr) continue;
+              itemDropPrediction: Xd
+            } = (0, Sd.b)().client,
+            Kd = Wd.offlineInputReplay.holdsInput();
+          if (Rd.length > 0)
+            for (const vd of Rd) {
+              const Od = dd.qE.getState(vd, "itemState");
+              if (void 0 === Od || Date.now() - Od.creationTime < 500) continue;
+              let md = vd,
+                Fd = null;
+              if (Od.pF) {
+                const dd = Xd.pickupTarget(vd, uO, Kd);
+                if (null === dd) continue;
                 ({
-                  gp: Qr,
-                  Gp: Wr
-                } = rr)
+                  AQ: md,
+                  nQ: Fd
+                } = dd)
               }
-              const ar = rr.YB.getState(Qr, "itemState");
-              if (ar.eW && null === Wr) continue;
-              let mr = 0,
-                Nr = null,
-                Ur = !1;
-              if (0 === ar.amount) Ur = !0;
+              const Rd = dd.qE.getState(md, "itemState");
+              if (Rd.pF && null === Fd) continue;
+              let od = 0,
+                Nd = null,
+                qd = !1;
+              if (0 === Rd.amount) qd = !0;
               else {
                 const {
-                  amountPickedUp: Sr
-                } = rr.YB.fQr(rr.fC).pickUpItem({
-                  name: ar.name,
-                  typeObj: ar.typeObj,
-                  amount: ar.amount,
-                  attributes: ar.attributes
+                  amountPickedUp: Od
+                } = dd.qE.Dmd(dd.YV).pickUpItem({
+                  name: Rd.name,
+                  typeObj: Rd.typeObj,
+                  amount: Rd.amount,
+                  attributes: Rd.attributes
                 });
-                if (mr = Sr, 0 === mr) continue;
-                Nr = Fr.c.pickUp(ar, mr), ar.amount -= mr, ar.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === ar.amount ? Ur = !0 : ar.creationTime = Date.now() + jS
+                if (od = Od, 0 === od) continue;
+                Nd = ld.b.pickUp(Rd, od), Rd.amount -= od, Rd.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === Rd.amount ? qd = !0 : Rd.creationTime = Date.now() + hO
               }
-              const tr = (0, lr.c)().client.inventoryPrediction.record(Nr);
-              (0, Zr.sendColyMessage)(xr.Uh, {
-                gp: null === Wr ? Qr : "",
-                Cp: mr,
-                Mp: pr.e,
-                jj: tr,
-                Gp: Wr
-              }, !0), Ur && (Ir && jr.onPickedUpOffline(Qr, tr, Wr), null === Wr && rr.YB.deleteEntity(Qr));
-              fr.b.play("pickUp", Vr.i.pickupSoundVol).rate(1 + Math.random() * Vr.i.pickupSoundRateVariation)
+              const Hd = (0, Sd.b)().client.inventoryPrediction.record(Nd);
+              (0, Wd.sendColyMessage)(td.gh, {
+                AQ: null === Fd ? md : "",
+                rQ: od,
+                GQ: Qd.i,
+                XX: Hd,
+                nQ: Fd
+              }, !0), qd && (Kd && Xd.onPickedUpOffline(md, Hd, Fd), null === Fd && dd.qE.deleteEntity(md));
+              hd.d.play("pickUp", jd.i.pickupSoundVol).rate(1 + Math.random() * jd.i.pickupSoundRateVariation)
             }
         }
-        if (!rr.YB.rQr(rr.fC)) return;
-        const ar = rr.inputs.JF.FSr;
-        if (0 !== ar) {
-          const Sr = ar > 0 ? 1 : -1;
-          rr.inputs.state["mid-fire"] || rr.inputs.state.Alt || !rr.NK.useInventory ? (rr.inputs.state["mid-fire"] && hr.i.Jp("requestEmoteWheelClose"), (0, lr.c)().client.cameraController.handleScrollZoom(Sr)) : hr.i.Jp("ScrollInventorySlot", Sr)
+        if (!dd.qE.Vmd(dd.YV)) return;
+        const Rd = dd.inputs.iZ.wmd;
+        if (0 !== Rd) {
+          const Od = Rd > 0 ? 1 : -1;
+          dd.inputs.state["mid-fire"] || dd.inputs.state.Alt || !dd.EY.useInventory ? (dd.inputs.state["mid-fire"] && yd.j.lQ("requestEmoteWheelClose"), (0, Sd.b)().client.cameraController.handleScrollZoom(Od)) : yd.j.lQ("ScrollInventorySlot", Od)
         }
-      })), zr.d.subscribe("droppedItemScale", (rr => {
-        ES = "number" === typeof rr && isFinite(rr) ? rr : IS
+      })), bd.e.subscribe("droppedItemScale", (dd => {
+        tO = "number" === typeof dd && isFinite(dd) ? dd : vO
       }))
     }
 
-    function RS() {
-      const rr = (0, lr.e)();
-      if (rr)
-        for (const Sr in er.q) {
-          rr.inputs.unbind(Sr);
-          for (const Qr of er.q[Sr]) rr.inputs.bind(Sr, Qr)
+    function AO() {
+      const dd = (0, Sd.c)();
+      if (dd)
+        for (const Od in Yd.y) {
+          dd.inputs.unbind(Od);
+          for (const md of Yd.y[Od]) dd.inputs.bind(Od, md)
         }
     }
-    HS(YS = {}, nS = ["[MGTZ]|", 's4|d<X"+.b!EXk=#QmQ,s+NG~)_Dg$w6giA', "Xa*gHyC;Fv1g!v:1haGViiBJA4,>8S;hD*$H", "eB`5XoFw7XZ8~P}*Q.e", "g8*t9`%}OM:jv:*i+eS>:yzND,qHa]Hh^&tZ~CbR=pI8nh/Vj,R}fE|", '9V=V"`6`k1#moR@QXs<LBI.;<p|*zo;(zn}j<w:H{8h', "eKvba~fH+v8Gm$}yxpTflWzieKrFKv5RqWE.XoeRVWA.Zt", 'p6m%AEAoy,Q:_d86WpC)lWTumH:c4RCd_W"=N"p;tb{&5R&RvKGZ_y66Db', "ePPG@4.u>BGlGh]P;0m>74l}+0=vsS6>k*Cl#SQN$42Wqk(>JmU>F_`ANKI", "Caj`QS:{Z&8@*$kRwsL.^=7iw8p@yWrh", "m]DH.weuZm;JL?n>i52>/C3sk1cOata*GgnbrS|", "K5<gnx2uCbS+p_}p`sHbRW7Q,X=ViofM^aDPL(bk|xQ", 'Ax9le"{}N,i@]v!?^<9.MnkN', "*gh`b=?XXM<o)S}y6erZz,uRvFHclC_PzstTX)OQ`{Ot2?jihe]g:", "~2Ol)$U~E4?dHCKhvP<gMmZ~.1ppN", '"]_b2(*i?v,8?np#b66Lt_pV>vPm#P~dhx?.=5y}lxRpR]:', 'd(kn!nj*WM9s?e>}"]xf$924+0~ob]+6oY"`I.Vi9F<:4?AybN', "e5h>hJ|8){I8zXmpoY$HJLR)w)zkX:|y", "52wLGhn;8boosALP+|", ":wIZ<#JJpKR", "5g6}*kT1hu>j~:$#e4x)6<@`bjnvfEM%0a@LE`c898.@{d?MU%tT7kLuy{4", "%MU;{3`XPaUVIS#R4P?bRO<ApKnDj:_17.dlR", 'ALU5S~5"^m{W!vHh:n#gny|', "84bqlq|", 'hbWl`<P"gfV~~vBQhp~L_m6K4a#mO_Zdne.lox|', '|z#L0s_`XW5<"Lrh$]*}|j+w8,71j$T11N', "2pxZi,,Xsvhk#CJd`,ATtsjQ)1*sGo(Rxc8Gz+KXg", "L,^T!JlKsv2L?d3%Fb6b5x>4Cxy", "t48dmZ1V{xps~:7iQM=V^U&)B,8Xw(}pt5~OE=]AnMC&cCQ#hVkP]0H{YM2", "2>rVXsj;jMI8ILDpM0j%?5tX.1A}1$b", 'tVk>wcn;F4"ZOLch!%;`R4y`uBT*3Jc}sg=V9i|', "oc[%9`l{,X*=JJl83aVfP=z;VF}=*:`%iP2jY<iiG:2ts(ezNib.*J<6]v", "GMQ.&Cl5VBlkt#&RlgR.POaV4:a8<e,Q@ne", "v0yj3=_K~xi", "p4cn.w)*zH@p+C|YrP#`yWv)A,fM>P]s@b?gwXEi^:", "G<0%9nAHX:]=fAUiQcY.B`&Rqv", "24Pla_)JY:gX[SWQvnXl74jQJvZ5f:ez%xe", 'wnYZT5hyRaX+zW}V(vWZ"=6wgu{L@J&#E.|bVi|', "WbB;G5x@.bCwJ:wd?g25_E0J%pu~Io3dC(uj?4f}_X0N~A3QMxy;S_wwS<c+|", "<6A.8=00p4jt~ob", '+MlbECt@?B1}B]l8Fsl}{X8{"{"0hujV^sCZ_E;0i1"D`WG#:45TD)@"9b', "(,C)n~(J]BqxgST>n:0O[`=K2<!y!JbRWb,%,X0u(X]", '4,3V;5iipbnDEkW*R6";)3""~v1G,hep1.Y_?=}A]BUI}(I6p0A', 'iV._OE"`pxY;N', "n.q`#0vuIvCo/t", '2cMZgI"6e,eA@W5PXn(>a3U~^m0N8(/V%*3Zcs0QY:lk2(b', "<gy5j0HwgfOo)(8MxcOgwSD4>0;bk_dQ6M{gu", "icB>Yo1;e", 'TP&Z;xw}z&9Mn:a8_Y>tph3"C1JBPE`%', "V*H9}Oly#uc&/yg", "m,y5QL1VV8#~/E_>@*xV(JMyIxl=6n#RUYxf", '.4pqJ.Y6.1d_CCF8"eKVlO|Hxmy=H]l@B,Mf8', "7em>dU[XQp3RN", "xnmtWX5@M1is8Em@", "#ehtaj~um)~[QtN>nc5V^`C4WM(=hPjVw6:>dq``.bW&rndV+ge", "94dZ[Ux@WWfMILR*N0Z>]GrKk{rF5ks(3Ow>{#zN", "uPs.*kZ.nuD:~h@%.aT`sq|", "X6,=dn5@W<LkXEIs96%ZrS{wsvT,D:_1)4@dd,)us1D0Stb", '^#=)K"bRe,+DV]#1Pxu`xwfHy{<&>:I6Xbdld', 'QP@L_m_w]F:f6J*sP,|}"Imwa0:cI:Y#I._,WXCkg', "(pkne~N19b8e?CVVLPhjr+jN", 'Wbg;,X}yKBw%WoBd7g.)o)+"?F>j[(7VB.(jb43w{KPf|d|y@bil:h=8g', "xb0%Q+%8nX|Gxx0Y5(&Z9U>i+b~EcvRVE2,LNEQ1bM]`nXf", "U:%Zv=QJrp7V=WUQ", "B4#L/n6w^p&}xW]#^%nbos?{lKci&:;", ']a*9S#%`2:FH#h0pVx"LB47*?vH.!n1ss(FlF]uQI49', "T*RqgIY`2&Qf$ks@D*T>[`GklK(~*A", "<]|q+CX@L08]u]HP?6pg{#VVfp[poL|Yu4C)7q&NY&RpHC;h6m*b", "r.GTP4f}^Wsk0W+6L..Z^O$6ybUT.:3d}4{,Qc(i8x#iCPm*_aUI2L;1XpbGN", "/:)5H~o}+xGZCP|8y,p.3`fwAKaiW$o(mpWH&4|YbXJmXLe(db`f8", "24|}4.|", "bz4,(i#0Ev&c%tps#5Zn#,eR}0<R>I`6waCV0##N", "F*cflWhK;{*MgTA>N,N_KybN|v75oR`sE(UP&j~ua4A?KvY1Xe7t", '/)k5ewCunu9@uy(>=WM5"4Okzp_xXSg', 'WaZPvk`89x4+~e1s{(>bdOP"008@Z]AyNKp.3IhA', "O:*b4~@wG<<<mk@%{.A", "y(ZIGh5g|Bc+/t", 'pb,=6c|XU,H?Zyo8Racf{3N0a4UZsSw6E<>g,09;lBa<?Wh(2aWZ|"6A:B', "wbB>$9VVt", 'Cs!bf]2;0xAJ{vi8vv">g566M1dmWhE6Wp7ON"0.g', "@cm`~h9Jr&IWrer#qmu>|x9ix<,o%nl82P8_$C~N", "Q(kIOERJWH75yWF}q<(=H=@}=a&~a@E#lch`nmd;]b", "^H!,u=8o6M2B!iQR?KSj:ygwg", "wK@L%h~0{KO%j$U%:N", "X]N,sWc+U1e}ih}YSco%_j=K])E)qkt}.6!bP4n;L,r+OEa*Xc].EEWN", 'M6GHb"vNhuHe:Efh8lo%Rn~u?FS:NxN*2zRg..]A', "iK@bWZ4GGpjOT?H", "Sm6b`Z1NUXaZ[$nR/:#%*W/*wHI", "64L,]0rA", 'ne=5?CFK"X]Bu3y8Ws~%:=*JY&qNFk7QD|', "oaFVf4k4hXaW~Pc@C>#=mZA{lKG+LtU%@*&l+n|", "kYDVPCHXCxL+F:g8}N", "TvDZ_]VQ#uj=^oXVobfd_=Qu2Fi_3ti(", "U%H,*hK8zH7V<Cx*[4=V79bQ6Xm83JzPI2onh,iE.bujMd$s80P.ChdQu8", "^<.Vos40c,M>6nH>MN", "]KNGlczN2<4LiIw6eL$H2<NuRp]ji:a8~oA", "dxKV,sOQt1|Gk_4%3.A", "7Ojb.(/i,X/)^L+dybB5#JyA", "txB5|~N)_M.", 'kbWH.o+X;j|c1e(}Fm:;{j"`huaB{CYP,2Ng`X|', "VaGTP`B;JH?~!e76cpm%.L^m!XC5+Cb", "3W9lMmb0SW/[0:c}#P1VWwmg@M3K?Ck@%N", "?g6b+5CkxHc%!WRVMl*ts`7*pbq<u?=P@xg9uk+wsvZ5Ao^Q=snbRhpit", "wpntok74J8]=8T*%^<6bQclyI0|_R_H", "P(0LnIt8$1T,ok}@MncVz(|", "Gm|9:4]{<X0NrWl@}(6bbEF8Zm3Z7:vdXa;}s6Z;p01_FE:", ";5:;~5`A", "#gc),0ZuPaFWXL0([bXHZyj0[{WLOt", "VK~%qI2N", "W*S5Cm{}({Vmi:/*N,~OB", ".,NGwozU9vxtB?k1)s{b*k|8^p|ab_1s@P(jB", "qm,j6<6@}W![yJa@!%cZ,sfo/p35N", "5aldBWgX1xOt@dh8_<|dc)UVvx8_FoWYbce", ",K~=>,4i/pJ>3C|@9z+,$hc5gXikPA", 'RbQ}gk]"a4vpU@yp*b2;/ON1dM!1i$A(26*t#cww110<Nxi8b*dVdJkuo1', '4mtI5It"`,5VL?n8ngdldCWu@uC)`vUd5m7=gjE4wH?}%ni}7p~tK', "{(CZL3AHU,]m|elV~p|,+5BV@M*u#A@i6pVfzLU;yu6", "yb[;Ic3K:0d@C:RiVa~t6c74L87y;PAzI.;g9nbk2Wd@vPB6z*s_P", '>c3>a_4Vku*e9_Apxn/gPO`5=:7lcd[6ngWlG5"s,1f,eP?M7:3VK', "D];=@hqXx<pa[Sx*BbTfzoqsIx6:XLnhi5bg~5`8]8", '/<7g|s^6DxKXgSQ#"oH,OmSiZ:9>FLT>VaP_E=+X=WowKW#(^eA', "+(H9w<66xWYe*I!s%brZ$9&kxHN9]eMs?.Unb]g`/:y_`dKR7o2`VC|", "ls:j`X~kl8Q]pxi}dPQGU=g@$,M_iea@1,X)ri_w:B!0.:t}:nM;`(pQm0v*N", '2M+gW_M`dpM(U@t>"a^l(W=w|8w:O_K', "v6eZ;D7N", "JC&{)o^A", "P|nK<%Zh", ']}8"?BDN', "x6E|_S(N", '&G"f}n0', "Rf5kJ|VN", "fzroyK3N", "Z{EUWBiN", 'Z{Z"f', "F$(:1]>d!a|;%`+ML$^v`gw", "/[,YJIZUrAi@oBN+~jE<2ZC.ac5veQH", "&7cJtLU_1Hb*w?@u;7Il?s=", "MO7Cu&z=>|UXe9%Klx]<Zzm?rcIy+v0", 'qI4(hcK*^m$P!eOk3YFJXKg"ft8|S7x', "i&sD;4eWFkTvD2dE8OsND9(W4ik", ")k}L;Kw", "4m>XR,bB", "2HxA", "$U],KpZ0", "0fPjXjk0", "o[w=MjImZz", "CzGr&1e,.G", "yE1`)lScSp", "F[)~hdrrB]", "L:/k[dqC", ",o)jR_RU`8Y", "$czyAW,u$`#", "RNngx:tzXs#", "SQW~/LEf<(4", '"tGnLi,c^It', "L:<aLb1!;Y#", "Ycrn<q1EH", "A>@^0=+CK6wn;Qz^Yc:~4V9f,SB#.U|xN.8rP{)qBSss;e", "kcrnp+nf,S`nH+S,ttky1iBi:RwnCn(3A##1/LE8Y5783C", "Jtp~NjO5BxDtQuX4HNKH@O*UXs>OOu03TQrneqnf,S6*2Z", "BBM~iq!fvs;thu*I1BM~X+_fapotIu<(_.t12;CoFglDDe", "4c!>}7T@", "6KRd?I@A", "2Yl@05u$", "!f+:45b", "INl@@5v$", "vl[1K@`d", "mWYc<yQ$", "T(KA($)g", "`O0Y", "rE+TMdsS", "lOSR3aAl"]), HS(eS = function(...rr) {
-      HS(rr[LS[13]] = LS[1], rr[LS[16]] = [function() {
-        return globalThis
-      }, function() {
-        return global
-      }, function() {
-        return window
-      }, function() {
-        return new Function("return this")()
-      }], rr[LS[14]] = LS[18], rr[LS[15]] = []);
-      try {
-        HS(rr[LS[14]] = Object, rr[LS[15]][LS[24]]("".__proto__.constructor.name))
-      } catch (nS) {}
-      rr: for (rr[LS[8]] = LS[1]; rr[LS[8]] < rr[LS[16]][LS[13]]; rr[LS[8]]++) try {
-        for (rr[LS[14]] = rr[LS[16]][rr[LS[8]]](), rr[LS[9]] = LS[1]; rr[LS[9]] < rr[LS[15]][LS[13]]; rr[LS[9]]++)
-          if (typeof rr[LS[14]][rr[LS[15]][rr[LS[9]]]] === LS[17]) continue rr;
-        return rr[LS[14]]
-      } catch (nS) {}
-      return rr[LS[14]] || this
-    }() || {}, KS = eS.TextDecoder, yS = eS.Uint8Array, BS = eS.Dp, TS = eS.String || String, vS = eS.Array || Array, OS = function(...rr) {
-      return HS(rr[LS[13]] = LS[1], rr[-LS[25]] = new vS(LS[54]), rr[LS[16]] = TS[LS[22]] || TS.fromCharCode, rr[LS[0]] = []),
-        function(...Sr) {
-          for (HS(Sr[LS[13]] = LS[2], Sr[LS[19]] = LS[18], Sr[LS[0]] = LS[18], Sr[LS[14]] = Sr[LS[1]][LS[13]], rr[LS[0]][LS[13]] = LS[1]), Sr[LS[15]] = LS[1]; Sr[LS[15]] < Sr[LS[14]];) HS(Sr[LS[0]] = Sr[LS[1]][Sr[LS[15]]++], Sr[LS[0]] <= LS[51] ? Sr[LS[19]] = Sr[LS[0]] : Sr[LS[0]] <= LS[61] ? Sr[LS[19]] = (Sr[LS[0]] & LS[55]) << LS[21] | Sr[LS[1]][Sr[LS[15]]++] & LS[20] : Sr[LS[0]] <= 239 ? Sr[LS[19]] = (Sr[LS[0]] & LS[4]) << LS[23] | (Sr[LS[1]][Sr[LS[15]]++] & LS[20]) << LS[21] | Sr[LS[1]][Sr[LS[15]]++] & LS[20] : TS[LS[22]] ? Sr[LS[19]] = (Sr[LS[0]] & LS[7]) << LS[56] | (Sr[LS[1]][Sr[LS[15]]++] & LS[20]) << LS[23] | (Sr[LS[1]][Sr[LS[15]]++] & LS[20]) << LS[21] | Sr[LS[1]][Sr[LS[15]]++] & LS[20] : (Sr[LS[19]] = LS[20], Sr[LS[15]] += LS[26]), rr[LS[0]][LS[24]](rr[-LS[25]][Sr[LS[19]]] || (rr[-LS[25]][Sr[LS[19]]] = rr[LS[16]](Sr[LS[19]]))));
-          return rr[LS[0]].join("")
-        }
-    }()), lS(124) in PS && function(...rr) {
-      HS(rr[LS[13]] = LS[1], rr[LS[5]] = function(...rr) {
-        for (HS(rr[LS[13]] = LS[2], rr[LS[2]] = rr[LS[1]].length, rr[-LS[29]] = [], rr[LS[26]] = LS[1], rr[-LS[28]] = LS[1], rr[LS[1]].sort(((rr, Sr) => rr - Sr))), rr[LS[27]] = LS[1]; rr[LS[27]] < rr[LS[2]]; rr[LS[27]]++)
-          if (!(rr[LS[27]] > LS[1] && rr[LS[1]][rr[LS[27]]] === rr[LS[1]][rr[LS[27]] - LS[2]]))
-            for (HS(rr[LS[26]] = rr[LS[27]] + LS[2], rr[-LS[28]] = rr[LS[2]] - LS[2]); rr[LS[26]] < rr[-LS[28]];)
-              if (rr[LS[1]][rr[LS[27]]] + rr[LS[1]][rr[LS[26]]] + rr[LS[1]][rr[-LS[28]]] < LS[1]) rr[LS[26]]++;
-              else if (rr[LS[1]][rr[LS[27]]] + rr[LS[1]][rr[LS[26]]] + rr[LS[1]][rr[-LS[28]]] > LS[1]) rr[-LS[28]]--;
-        else {
-          for (rr[-LS[29]].push([rr[LS[1]][rr[LS[27]]], rr[LS[1]][rr[LS[26]]], rr[LS[1]][rr[-LS[28]]]]); rr[LS[26]] < rr[-LS[28]] && rr[LS[1]][rr[LS[26]]] === rr[LS[1]][rr[LS[26]] + LS[2]];) rr[LS[26]]++;
-          for (; rr[LS[26]] < rr[-LS[28]] && rr[LS[1]][rr[-LS[28]]] === rr[LS[1]][rr[-LS[28]] - LS[2]];) rr[-LS[28]]--;
-          HS(rr[LS[26]]++, rr[-LS[28]]--)
-        }
-        return rr[-LS[29]]
-      }, console.log(rr[LS[5]]))
-    }(), HS(zS = (...rr) => {
-      function Sr(rr) {
-        return typeof YS[rr] === LS[17] ? YS[rr] = function(...rr) {
-          for (HS(rr[LS[13]] = LS[2], rr[LS[5]] = 'whmsSaNEHY8M#{@"AFBx17}ndXez0V^v:K%+6r?k$Z/RGCQi*LJjf2[c<p5b=`,!D|y9Ul3.ut>4]~OI;P&(gT)oqW_', rr[LS[39]] = "" + (rr[LS[1]] || ""), rr[LS[14]] = rr[LS[39]].length, rr[LS[42]] = [], rr[LS[8]] = LS[1], rr[LS[41]] = LS[1], rr[LS[31]] = -LS[2]), rr[LS[11]] = LS[1]; rr[LS[11]] < rr[LS[14]]; rr[LS[11]]++)
-            if (rr[-LS[40]] = rr[LS[5]].indexOf(rr[LS[39]][rr[LS[11]]]), rr[-LS[40]] !== -LS[2])
-              if (rr[LS[31]] < LS[1]) rr[LS[31]] = rr[-LS[40]];
-              else {
-                HS(rr[LS[31]] += rr[-LS[40]] * LS[32], rr[LS[8]] |= rr[LS[31]] << rr[LS[41]], rr[LS[41]] += (rr[LS[31]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                do {
-                  HS(rr[LS[42]].push(rr[LS[8]] & LS[12]), rr[LS[8]] >>= LS[11], rr[LS[41]] -= LS[11])
-                } while (rr[LS[41]] > LS[7]);
-                rr[LS[31]] = -LS[2]
-              } return rr[LS[31]] > -LS[2] && rr[LS[42]].push((rr[LS[8]] | rr[LS[31]] << rr[LS[41]]) & LS[12]), XS(rr[LS[42]])
-        }(nS[rr]) : YS[rr]
-      }
-      rr[LS[13]] = LS[2], Sr(126) + "A" in PS && function(...rr) {
-        function Qr(...rr) {
-          for (HS(rr[LS[13]] = LS[2], rr[LS[43]] = 'uRBTNpijArlKfGJHoFcIQ0VC321(b:>XW&}#=S[UmYy`?+M9vgs*;.Eh"dwZ54Da@!~q%nLe,P)xtk|zO68^_7$/{]<', rr[LS[16]] = "" + (rr[LS[1]] || ""), rr[LS[26]] = rr[LS[16]].length, rr[LS[42]] = [], rr[-LS[44]] = LS[1], rr[-LS[45]] = LS[1], rr[LS[31]] = -LS[2]), rr[LS[3]] = LS[1]; rr[LS[3]] < rr[LS[26]]; rr[LS[3]]++)
-            if (rr[LS[19]] = rr[LS[43]].indexOf(rr[LS[16]][rr[LS[3]]]), rr[LS[19]] !== -LS[2])
-              if (rr[LS[31]] < LS[1]) rr[LS[31]] = rr[LS[19]];
-              else {
-                HS(rr[LS[31]] += rr[LS[19]] * LS[32], rr[-LS[44]] |= rr[LS[31]] << rr[-LS[45]], rr[-LS[45]] += (rr[LS[31]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                do {
-                  HS(rr[LS[42]].push(rr[-LS[44]] & LS[12]), rr[-LS[44]] >>= LS[11], rr[-LS[45]] -= LS[11])
-                } while (rr[-LS[45]] > LS[7]);
-                rr[LS[31]] = -LS[2]
-              } return rr[LS[31]] > -LS[2] && rr[LS[42]].push((rr[-LS[44]] | rr[LS[31]] << rr[-LS[45]]) & LS[12]), XS(rr[LS[42]])
-        }
-
-        function Zr(...rr) {
-          return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = Qr(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-        }
-        rr[LS[13]] = LS[1],
-          function(rr) {
-            var Qr, Zr, Wr, ar = String.fromCharCode;
-
-            function jr(rr) {
-              var Sr, Qr, Zr, Wr, ar = [];
-              for (HS(Sr = LS[1], Qr = rr.length, Zr = void 0, Wr = void 0); Sr < Qr;) HS(Zr = rr.charCodeAt(Sr++), Zr >= LS[49] && Zr <= 56319 && Sr < Qr ? (64512 & (Wr = rr.charCodeAt(Sr++))) == LS[50] ? ar.push(((Zr & LS[46]) << LS[48]) + (Wr & LS[46]) + LS[47]) : (ar.push(Zr), Sr--) : ar.push(Zr));
-              return ar
-            }
-
-            function Ir(...rr) {
-              for (HS(rr[LS[13]] = LS[2], rr[LS[5]] = rr[LS[1]].length, rr[LS[0]] = -LS[2], rr[LS[26]] = LS[18], rr[LS[42]] = ""); ++rr[LS[0]] < rr[LS[5]];) rr[LS[26]] = rr[LS[1]][rr[LS[0]]], rr[LS[26]] > 65535 && HS(rr[LS[26]] -= LS[47], rr[LS[42]] += ar(rr[LS[26]] >>> LS[48] & LS[46] | LS[49]), rr[LS[26]] = LS[50] | rr[LS[26]] & LS[46]), rr[LS[42]] += ar(rr[LS[26]]);
-              return rr[LS[42]]
-            }
-
-            function fr(...rr) {
-              if (rr[LS[13]] = LS[2], rr[LS[1]] >= LS[49] && rr[LS[1]] <= 57343) {
-                function Sr(...rr) {
-                  for (HS(rr[LS[13]] = LS[2], rr[LS[2]] = '0zN]`~*do<kt(5AG3j!8ueB7CfF1I,n&"M{PY;H>VJ)}lQO^DrT6EUi.m4v9pR%:c@w_#s2?S/WZg|h=Kb+ax$LXyq[', rr[-LS[52]] = "" + (rr[LS[1]] || ""), rr[-LS[51]] = rr[-LS[52]].length, rr[LS[53]] = [], rr[LS[8]] = LS[1], rr[LS[21]] = LS[1], rr[LS[31]] = -LS[2]), rr[LS[11]] = LS[1]; rr[LS[11]] < rr[-LS[51]]; rr[LS[11]]++)
-                    if (rr[LS[6]] = rr[LS[2]].indexOf(rr[-LS[52]][rr[LS[11]]]), rr[LS[6]] !== -LS[2])
-                      if (rr[LS[31]] < LS[1]) rr[LS[31]] = rr[LS[6]];
-                      else {
-                        HS(rr[LS[31]] += rr[LS[6]] * LS[32], rr[LS[8]] |= rr[LS[31]] << rr[LS[21]], rr[LS[21]] += (rr[LS[31]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                        do {
-                          HS(rr[LS[53]].push(rr[LS[8]] & LS[12]), rr[LS[8]] >>= LS[11], rr[LS[21]] -= LS[11])
-                        } while (rr[LS[21]] > LS[7]);
-                        rr[LS[31]] = -LS[2]
-                      } return rr[LS[31]] > -LS[2] && rr[LS[53]].push((rr[LS[8]] | rr[LS[31]] << rr[LS[21]]) & LS[12]), XS(rr[LS[53]])
-                }
-
-                function Qr(...rr) {
-                  return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = Sr(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-                }
-                throw Error(Qr(LS[51]) + Qr(LS[54]) + Qr(129) + rr[LS[1]].toString(16).toUpperCase() + (Qr(LS[85]) + Qr(LS[90]) + Qr(132) + Qr(133)))
-              }
-            }
-
-            function Er(...rr) {
-              return rr[LS[13]] = LS[0], ar(rr[LS[1]] >> rr[LS[2]] & LS[20] | LS[54])
-            }
-
-            function pr(...rr) {
-              return rr[LS[13]] = LS[2], (4294967168 & rr[LS[1]]) == LS[1] ? ar(rr[LS[1]]) : (rr[LS[2]] = "", (4294965248 & rr[LS[1]]) == LS[1] ? rr[LS[2]] = ar(rr[LS[1]] >> LS[21] & LS[55] | LS[58]) : (4294901760 & rr[LS[1]]) == LS[1] ? HS(fr(rr[LS[1]]), rr[LS[2]] = ar(rr[LS[1]] >> LS[23] & LS[4] | LS[65]), rr[LS[2]] += Er(rr[LS[1]], LS[21])) : (4292870144 & rr[LS[1]]) == LS[1] && HS(rr[LS[2]] = ar(rr[LS[1]] >> LS[56] & LS[7] | LS[67]), rr[LS[2]] += Er(rr[LS[1]], LS[23]), rr[LS[2]] += Er(rr[LS[1]], LS[21])), rr[LS[2]] += ar(rr[LS[1]] & LS[20] | LS[54]), rr[LS[2]])
-            }
-
-            function xr(...rr) {
-              for (HS(rr[LS[13]] = LS[2], rr[-LS[57]] = jr(rr[LS[1]]), rr[LS[0]] = rr[-LS[57]].length, rr[LS[14]] = -LS[2], rr[LS[15]] = LS[18], rr[LS[8]] = ""); ++rr[LS[14]] < rr[LS[0]];) HS(rr[LS[15]] = rr[-LS[57]][rr[LS[14]]], rr[LS[8]] += pr(rr[LS[15]]));
-              return rr[LS[8]]
-            }
-
-            function mr() {
-              var rr;
-
-              function ar(rr) {
-                var Sr, Qr, Zr, Wr, ar, jr, Ir, fr = 'D`0GRcbN<(x|HT#2%/fCJ6>1Us~p)h^lYmeO$+z:[qdV?=K*8BAEPt&9LF{ijQ]ar5@S3_kwWgZnI}oMv.!,"u74y;X';
-                for (HS(Sr = "" + (rr || ""), Qr = Sr.length, Zr = [], Wr = LS[1], ar = LS[1], jr = -LS[2]), Ir = LS[1]; Ir < Qr; Ir++) {
-                  var Er = fr.indexOf(Sr[Ir]);
-                  if (Er !== -LS[2])
-                    if (jr < LS[1]) jr = Er;
-                    else {
-                      HS(jr += Er * LS[32], Wr |= jr << ar, ar += (jr & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                      do {
-                        HS(Zr.push(Wr & LS[12]), Wr >>= LS[11], ar -= LS[11])
-                      } while (ar > LS[7]);
-                      jr = -LS[2]
-                    }
-                }
-                return jr > -LS[2] && Zr.push((Wr | jr << ar) & LS[12]), XS(Zr)
-              }
-
-              function jr(...rr) {
-                return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = ar(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-              }
-              if (Wr >= Zr) throw Error(Sr(LS[59]));
-              if (HS(rr = Qr[Wr] & LS[12], Wr++), (rr & LS[58]) == LS[54]) return rr & LS[20];
-              throw Error(jr(135))
-            }
-
-            function Nr(...rr) {
-              function Sr(...rr) {
-                for (HS(rr[LS[13]] = LS[2], rr[LS[2]] = 'c+BtAoHJNjZOflM{,i5E;uIqW<Vrv.$wD}b[_PgG&x!76X?L%ak]h"T8^*Y2n|(/FSUyd`K9~me=4>RC@3psz#10)Q:', rr[LS[0]] = "" + (rr[LS[1]] || ""), rr[LS[60]] = rr[LS[0]].length, rr[LS[42]] = [], rr[LS[27]] = LS[1], rr[LS[21]] = LS[1], rr[LS[31]] = -LS[2]), rr[-LS[59]] = LS[1]; rr[-LS[59]] < rr[LS[60]]; rr[-LS[59]]++)
-                  if (rr[LS[6]] = rr[LS[2]].indexOf(rr[LS[0]][rr[-LS[59]]]), rr[LS[6]] !== -LS[2])
-                    if (rr[LS[31]] < LS[1]) rr[LS[31]] = rr[LS[6]];
-                    else {
-                      HS(rr[LS[31]] += rr[LS[6]] * LS[32], rr[LS[27]] |= rr[LS[31]] << rr[LS[21]], rr[LS[21]] += (rr[LS[31]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                      do {
-                        HS(rr[LS[42]].push(rr[LS[27]] & LS[12]), rr[LS[27]] >>= LS[11], rr[LS[21]] -= LS[11])
-                      } while (rr[LS[21]] > LS[7]);
-                      rr[LS[31]] = -LS[2]
-                    } return rr[LS[31]] > -LS[2] && rr[LS[42]].push((rr[LS[27]] | rr[LS[31]] << rr[LS[21]]) & LS[12]), XS(rr[LS[42]])
-              }
-
-              function ar(...rr) {
-                return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = Sr(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-              }
-              if (rr[LS[13]] = LS[1], HS(rr[-LS[41]] = LS[18], rr[LS[2]] = LS[18], rr[LS[4]] = LS[18], rr[LS[8]] = LS[18], rr[LS[9]] = LS[18]), Wr > Zr) {
-                function jr(...rr) {
-                  for (HS(rr[LS[13]] = LS[2], rr[LS[5]] = '=PROZHdW5QnufvpNA&+it$)a_TS0/rIlJ>w@:2kq7o%Me4`Gg;h,][<y}"{!X?Y16bKx~|#CD^UELFB(*V3cs.jm89z', rr[LS[0]] = "" + (rr[LS[1]] || ""), rr[-LS[62]] = rr[LS[0]].length, rr[LS[42]] = [], rr[LS[61]] = LS[1], rr[-LS[64]] = LS[1], rr[LS[7]] = -LS[2]), rr[LS[3]] = LS[1]; rr[LS[3]] < rr[-LS[62]]; rr[LS[3]]++)
-                    if (rr[-LS[63]] = rr[LS[5]].indexOf(rr[LS[0]][rr[LS[3]]]), rr[-LS[63]] !== -LS[2])
-                      if (rr[LS[7]] < LS[1]) rr[LS[7]] = rr[-LS[63]];
-                      else {
-                        HS(rr[LS[7]] += rr[-LS[63]] * LS[32], rr[LS[61]] |= rr[LS[7]] << rr[-LS[64]], rr[-LS[64]] += (rr[LS[7]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                        do {
-                          HS(rr[LS[42]].push(rr[LS[61]] & LS[12]), rr[LS[61]] >>= LS[11], rr[-LS[64]] -= LS[11])
-                        } while (rr[-LS[64]] > LS[7]);
-                        rr[LS[7]] = -LS[2]
-                      } return rr[LS[7]] > -LS[2] && rr[LS[42]].push((rr[LS[61]] | rr[LS[7]] << rr[-LS[64]]) & LS[12]), XS(rr[LS[42]])
-                }
-
-                function Ir(...rr) {
-                  return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = jr(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-                }
-                throw Error(Ir(136))
-              }
-              if (Wr == Zr) return LS[69];
-              if (HS(rr[-LS[41]] = Qr[Wr] & LS[12], Wr++), (rr[-LS[41]] & LS[54]) == LS[1]) return rr[-LS[41]];
-              if ((rr[-LS[41]] & LS[65]) == LS[58]) {
-                if (HS(rr[LS[2]] = mr(), rr[LS[9]] = (rr[-LS[41]] & LS[55]) << LS[21] | rr[LS[2]]), rr[LS[9]] >= LS[54]) return rr[LS[9]];
-                {
-                  function Er(...rr) {
-                    for (HS(rr[LS[13]] = LS[2], rr[LS[2]] = 'BHRDWch%<Pa~0pqZEMNmuQ*f=!lA65dkC/+.sK@FO[giYnjL19|];2b`J$#Uxv4r>IXSTGV}3,z:&oe^y?w78_("{)t', rr[LS[16]] = "" + (rr[LS[1]] || ""), rr[LS[14]] = rr[LS[16]].length, rr[LS[42]] = [], rr[LS[8]] = LS[1], rr[LS[9]] = LS[1], rr[-LS[66]] = -LS[2]), rr[LS[11]] = LS[1]; rr[LS[11]] < rr[LS[14]]; rr[LS[11]]++)
-                      if (rr[LS[6]] = rr[LS[2]].indexOf(rr[LS[16]][rr[LS[11]]]), rr[LS[6]] !== -LS[2])
-                        if (rr[-LS[66]] < LS[1]) rr[-LS[66]] = rr[LS[6]];
-                        else {
-                          HS(rr[-LS[66]] += rr[LS[6]] * LS[32], rr[LS[8]] |= rr[-LS[66]] << rr[LS[9]], rr[LS[9]] += (rr[-LS[66]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                          do {
-                            HS(rr[LS[42]].push(rr[LS[8]] & LS[12]), rr[LS[8]] >>= LS[11], rr[LS[9]] -= LS[11])
-                          } while (rr[LS[9]] > LS[7]);
-                          rr[-LS[66]] = -LS[2]
-                        } return rr[-LS[66]] > -LS[2] && rr[LS[42]].push((rr[LS[8]] | rr[-LS[66]] << rr[LS[9]]) & LS[12]), XS(rr[LS[42]])
-                  }
-
-                  function pr(...rr) {
-                    return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = Er(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-                  }
-                  throw Error(pr(LS[82]))
-                }
-              }
-              if ((rr[-LS[41]] & LS[67]) == LS[65]) {
-                if (HS(rr[LS[2]] = mr(), rr[LS[4]] = mr(), rr[LS[9]] = (rr[-LS[41]] & LS[4]) << LS[23] | rr[LS[2]] << LS[21] | rr[LS[4]]), rr[LS[9]] >= 2048) return fr(rr[LS[9]]), rr[LS[9]];
-                {
-                  function xr(...rr) {
-                    for (HS(rr[LS[13]] = LS[2], rr[LS[68]] = '01;_DtnOJ}[ix@sXpq?gh]wR*>3l`oMv(NSuWkA<IT/UyG9=.emFB5d:zE2$Y7Hf^8P+ar6,~%KLcV!#|"&4b)j{QCZ', rr[LS[0]] = "" + (rr[LS[1]] || ""), rr[LS[14]] = rr[LS[0]].length, rr[LS[15]] = [], rr[LS[27]] = LS[1], rr[LS[21]] = LS[1], rr[LS[31]] = -LS[2]), rr[LS[3]] = LS[1]; rr[LS[3]] < rr[LS[14]]; rr[LS[3]]++)
-                      if (rr[LS[6]] = rr[LS[68]].indexOf(rr[LS[0]][rr[LS[3]]]), rr[LS[6]] !== -LS[2])
-                        if (rr[LS[31]] < LS[1]) rr[LS[31]] = rr[LS[6]];
-                        else {
-                          HS(rr[LS[31]] += rr[LS[6]] * LS[32], rr[LS[27]] |= rr[LS[31]] << rr[LS[21]], rr[LS[21]] += (rr[LS[31]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                          do {
-                            HS(rr[LS[15]].push(rr[LS[27]] & LS[12]), rr[LS[27]] >>= LS[11], rr[LS[21]] -= LS[11])
-                          } while (rr[LS[21]] > LS[7]);
-                          rr[LS[31]] = -LS[2]
-                        } return rr[LS[31]] > -LS[2] && rr[LS[15]].push((rr[LS[27]] | rr[LS[31]] << rr[LS[21]]) & LS[12]), XS(rr[LS[15]])
-                  }
-
-                  function Nr(...rr) {
-                    return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = xr(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-                  }
-                  throw Error(Nr(138))
-                }
-              }
-              if ((248 & rr[-LS[41]]) == LS[67] && (HS(rr[LS[2]] = mr(), rr[LS[4]] = mr(), rr[LS[8]] = mr(), rr[LS[9]] = (rr[-LS[41]] & LS[7]) << LS[56] | rr[LS[2]] << LS[23] | rr[LS[4]] << LS[21] | rr[LS[8]]), rr[LS[9]] >= LS[47] && rr[LS[9]] <= 1114111)) return rr[LS[9]];
-              throw Error(ar(139))
-            }
-
-            function Ur(...rr) {
-              for (HS(rr[LS[13]] = LS[2], Qr = jr(rr[LS[1]]), Zr = Qr.length, Wr = LS[1], rr[LS[2]] = [], rr[LS[0]] = LS[18]);
-                (rr[LS[0]] = Nr()) !== LS[69];) rr[LS[2]].push(rr[LS[0]]);
-              return Ir(rr[LS[2]])
-            }
-            HS(Qr = void 0, Zr = void 0, Wr = void 0), HS(rr.version = Sr(140), rr.encode = xr, rr.decode = Ur)
-          }(typeof exports === Zr(LS[79]) + Zr(142) ? this.utf8 = {} : exports)
-      }(), rr[LS[2]] = LS[1];
-      for (const Qr in rr[LS[1]]) {
-        function Zr(...rr) {
-          for (HS(rr[LS[13]] = LS[2], rr[-LS[71]] = '|0$*25{]#3:%d[C4W=&Xz"/yoAf9Y7gVITQk.>@S8JxPcmOj`_FHMwt6bU1^vBhsElLu?DGe;rp~,K}qa)(Z+iNRn!<', rr[LS[70]] = "" + (rr[LS[1]] || ""), rr[LS[26]] = rr[LS[70]].length, rr[LS[15]] = [], rr[LS[8]] = LS[1], rr[LS[9]] = LS[1], rr[LS[31]] = -LS[2]), rr[LS[11]] = LS[1]; rr[LS[11]] < rr[LS[26]]; rr[LS[11]]++)
-            if (rr[LS[72]] = rr[-LS[71]].indexOf(rr[LS[70]][rr[LS[11]]]), rr[LS[72]] !== -LS[2])
-              if (rr[LS[31]] < LS[1]) rr[LS[31]] = rr[LS[72]];
-              else {
-                HS(rr[LS[31]] += rr[LS[72]] * LS[32], rr[LS[8]] |= rr[LS[31]] << rr[LS[9]], rr[LS[9]] += (rr[LS[31]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                do {
-                  HS(rr[LS[15]].push(rr[LS[8]] & LS[12]), rr[LS[8]] >>= LS[11], rr[LS[9]] -= LS[11])
-                } while (rr[LS[9]] > LS[7]);
-                rr[LS[31]] = -LS[2]
-              } return rr[LS[31]] > -LS[2] && rr[LS[15]].push((rr[LS[8]] | rr[LS[31]] << rr[LS[9]]) & LS[12]), XS(rr[LS[15]])
-        }
-
-        function Wr(...rr) {
-          return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = Zr(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-        }
-
-        function ar(...rr) {
-          var Sr;
-          HS(rr[LS[13]] = LS[1], Sr = function(...rr) {
-            HS(rr[LS[13]] = LS[2], this.sx = rr[LS[1]], this.length = LS[1], this.map = {}, this.head = LS[73], this.tail = LS[73])
-          }, Sr.prototype.get = function(...rr) {
-            var Sr;
-            return HS(rr[LS[13]] = LS[2], Sr = this.map[rr[LS[1]]]), Sr ? (this.remove(Sr), this.insert(Sr.key, Sr.val), Sr.val) : -LS[2]
-          }, Sr.prototype.put = function(rr, Sr) {
-            this.map[rr] ? (this.remove(this.map[rr]), this.insert(rr, Sr)) : this.length === this.sx ? (this.remove(this.head), this.insert(rr, Sr)) : (this.insert(rr, Sr), this.length++)
-          }, Sr.prototype.remove = function(...rr) {
-            HS(rr[LS[13]] = LS[2], rr[LS[2]] = rr[LS[1]].prev, rr[LS[16]] = rr[LS[1]].next), rr[LS[16]] && (rr[LS[16]].prev = rr[LS[2]]), rr[LS[2]] && (rr[LS[2]].next = rr[LS[16]]), this.head === rr[LS[1]] && (this.head = rr[LS[16]]), this.tail === rr[LS[1]] && (this.tail = rr[LS[2]]), delete this.map[rr[LS[1]].key]
-          }, Sr.prototype.insert = function(rr, Sr) {
-            var Qr = new List(rr, Sr);
-            HS(this.tail ? (this.tail.next = Qr, Qr.prev = this.tail, this.tail = Qr) : (this.tail = Qr, this.head = Qr), this.map[rr] = Qr)
-          }, console.log(Sr))
-        }
-        Wr(LS[10]) in PS && ar(), rr[LS[2]]++
-      }
-      return rr[LS[2]]
-    }, hS = () => {
-      if (pS++ === LS[27]) {
-        function rr(rr) {
-          var Sr, Qr, Zr, Wr, ar, jr, Ir;
-          for (HS(Sr = "" + (rr || ""), Qr = Sr.length, Zr = [], Wr = LS[1], ar = LS[1], jr = -LS[2]), Ir = LS[1]; Ir < Qr; Ir++) {
-            var fr = ']@0G5Hn{[NLgk,%UJZ9x3ezc#/*=u>2h~lPRI")vdtVf8&CM(ayX!64AFpB?;|iOWsr_m$Y7b.<jE1^+oKwT}SDQ`q:'.indexOf(Sr[Ir]);
-            if (fr !== -LS[2])
-              if (jr < LS[1]) jr = fr;
-              else {
-                HS(jr += fr * LS[32], Wr |= jr << ar, ar += (jr & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                do {
-                  HS(Zr.push(Wr & LS[12]), Wr >>= LS[11], ar -= LS[11])
-                } while (ar > LS[7]);
-                jr = -LS[2]
-              }
+    VO(YO = {}, gO = [']@PI>rr|!:"Lw(,~2Cya@6&ZXe)s6.)^2![6x/Wi3zQUL(NiAI%VE3y', 'BDD4mst2YZ~*y8c~n$>Q$BLKj@DR}[:JwdW<{Wmd9@r;efZF,l^@f"a%}zO', "_@VWKl<ZvZ`0[fri)8Q_%H*E(N[xYPiOHQvIhQy", 'd}>144,|p|{#zp"aY$w', 'U+Y6g7xcZeZV"_dFo+x', "2}komW{!SKlSz}>YsdmU}*:%*`M7V]P?", 'C!Yr5.8Kfd!n"but9^IKV(y', "aNJ2{6digzi,#}<YjJf@`*|)>C>>2Y|", "6961N]Cc_|}ea10ByBEbCby", "T40jRdWt<rp>y8y~rQcnSOfM1/}e@bW^oAw", "=+C<?u8st$/`tf8$F%S@pOX&q9|l1lbEFItcpK<c9@k`~w", "eobAJUnt<|wHNzVPcl7UMJ4~38pn6aEB@)", '!!Pa*#$0S8Y,7i#c4/o2["IV<r"%(PiPMJb<', "D1V@AlUV381<OaJ~$Q2(Td7488yIZ,yc!lS6UlHiJDFV)", '5*8WCZ3J~|*,9"t]v#)', "_!64m(Bjh|h<mp7J", "~0`oHb{0.MqvkYYl/Ay2ZJc45AOG^1bPme{U|", "W<,Q#ZXJ<", "t<%G%B?i[:bk)lCF|U<Wh", "xERot2K%yD$668UBUI%_|", "E0>4%7XBN9AV5.9lde}j)NG&<Z}e*wua|lx", "`@/_/Nzs3K5Cv]vE(Iw>w&8::ML9?1VE.]%GvO)26}nh)", "[U>;s>ru6v54N.OYm;e3b/Ht~ed", '><~3@&oja9f2]ZQY`;d<*Z+2f`RpX"WOr1V6<JRBoT', '!ga%O!|:wAA}E"ABToY6kSeiRAC6YP|139_^r5MDzz,;KbE;5P)2<"hjJDlSy', "i%T^uQkI)`d>~aa;+BLo*#BO_:Je]Z(;!!Zow/[Pm|y9(|atpy", "@Bg^_bg:yN?GzR~impX>3O}O!:fe3UG", "??O%mYuene", "/*`>$,H,*NMvN8s1ADwoAKccmM~GeODY@iUanre%=9Hj]xiP4$UA0l3BU@~Z)", "j1zK8Y@V0z4kG}kOQy", 'A}EISYm?Lz!np"LP^Bpj>r<c:Dj6y5YPU9KGtUjx', "~0/6IC>Iw@3)^}_PLQEb0Z+|g`Cp;sKtdy", "$$&V}4x~^#z#P*RB2L<^/>$v[", "`J>^lHV#^8uKCzO^Z9w", "$I;%ZN_O7E7#M.4YRp@I+n#tgTOGhHC;!!j%L(@)sCdo=z)?:#)", ":1<rC#6E08U~y8OYhd*nglNxoT``nbO^3C,;lu3~f@#CIZ;?Cy", ":Qh6[49t|/_J}ld?_AH^%.;v/vp_2}bY0/s@Pdx&fNV!UH}", "}DZI5,giq}SLHN)^i!Zo(lxFx@CL~aatiAQAZ0$jBZ`vh[", 'dgu(0lm%G$~*"*@:d?#;@"Vtm|.Ebw~tOAeahuvjd$"Kv8j;hoMA/>/&<', ')+|^r>sVde@wnOQE9@[^aY*j=z&)]xp^BQr;<"2I(81', 'Wd"oe/RJy`U,eN&fzBN>@,GZ1e@amx1O#/K^V(n%YZ4p[lL1UIt<;Y;~V', 'e8@a"6$x', "D1$>*2}M!AGR$w", "S^c^pO}vgzibRPuJ!!pjE3l:Le%a8Y}1{IUo(>y", "h0Woluc~;}/z5.t:q]T^3YLKOdCo>*F1:Im656RZ7D0rG[", "b!qIDr8|E#iJya1OAJw", "h4WA~juuZ}~a58iE/!)", "b/xbo3mVzvMV;agaeDq<f.pcFLb7kYdt<_crdbV)", '"$/jg7xcRAs668ciS^)aBs6Bid8R)5n:EB>1jl;EEA~bRxhtc)', 'k*#U%.5J"@!KOw|', "]4_[A#Y~0L?Sy", "^A/jb4,,<", "$NQ<Q44csEg`qO+PhIU<SO6E{e?Ru*EJY9+%3,144$7how6]D0k>$6tsHz.#)", "el,4?dSIR@=7#a!^]9X[)0Dpu|RozRb1X$ioedp~69Ui)", "`/36kK+u@9boUN*1klzo|.+)x#_S9|a%_8@I*pVK88LI,~lEU9G%VKy", "|ohrPnWdE#!v$._EF/Y^:d}M%Twaa1<Y3pcUc", "j$h^gCI:[|zzd_UBDdJ>>Ors4$I6r8.az1x", "O4bUz0y", '.$0_e/o&T:nvh"@]=QS@gR:%6e`CP*{J[AgG<JH|$|hIGlQYjQPA~', "C<xacA]|4/U76Qy?c%gV@N,|*`xa0HY~GU_V!b3Dj|@9wp_Y:I?cqzwK(dy<)", 'f+<rqnM&>KjCZPY~Y+u1#4@:Gzq"YUyE3zo2sU{D98N_+x', "/?{@(0%sO@BG8xae@#fIlC<O@$(", '/})2FU[)ID7EZ"g:KI}6zpSV7KrzVRze4zBUd>(7T:iz}Hy~X/8WYsy', "?QYVv&1jG$Rpt_R]V+`v]u*03L44X}B^HQ5>sRa2Wd~by", '[dCAE"TtNeRh@NAB}l/^sl}vY:N>f8;c8DTru6#duMwbS._+<Uw', "n?,^;jq%1zX4BbkcRP;46.8)9DFT9O|", 'U*o@p4"iRDphuNwcH9,GII;D0zF~kRW^AAfWiBb~G}4))', "y#^jlH5D.DR#iY5B?Iw", "]%bnwS]s.@oz*w", "M!EaAl|VOMMjz}aFK@|^7Q9%2C60+pwE&pUaeO#,bZAjjw", "T!6V*#pETZFjdf>]AQlVHNAB[Aqo,O&;&z#<5,I2+L`0Fl)e^0tcKbhjUE", "DDs_qYKst99>+Roct/)", "&9s;oB#I4Ll,6*YEFlyW|.:ieN$,baW~7/Y_*R+|b||?.YG", '8IP2S"nV7DB7&pB:>LmUY!~~[Zxb}[di;?yW5Y$j<', "{g)o(lcx", '!IrA"Yd2|Tuka.t^&ghWw0XJbem%CaZi6!}Vjlrt0Th<nOL:hBQ_XjU)', "=B@IoQ(B&Mfly8|aH^!G^HC&(N0}.pXhGDA^Ys=jO|[RtboOv%BcH>]|F/cS)", "+DDGH>eiWD@9QpV:by", "b!mUW7,#(N(,n,/%C1fcr0g)fTc,eO,~_NoIPnBj_@!`Q}z;V)", "*lD%)O=x[Z6C%_X%(1?U1nbc+zxHVRpY/ek%<KDM9#[@ax(B`!bnZpcx", "Rw<Vglsd:dQ8)", 'G4V6|4o7"@mNwp2:LUzved@tWAnvxPyex#s@bS@tTZs6JU}1', "8dl^hjccx#cjclua?I(KP", "^0EoUl:i88mkz8,l;1w%_S%VkDge6QJe7II%=2MZO@=w.Y!~)B5>:", ">9A@MOg,;/nhNz#?|NR%TQ{~{|##os{FoBiorly", "3g64;z^Vc#P,C*pYz9>6!N$vn}*~J[+Yo0]UVOy", '4l1I}d4~^TFiKbkEA*eb}6`02z=/H~#?I$i%m6)"T:B', "u}1IK>3<*KPb.p|", "YNArA0Ax&|m>axdFPNcU!0vc49W6Iwb1#@>17ry", "rg;rud8|_", ')#_%+IL,U8F7/U:ap!h6x"gVd}R%!z5hToD%c3.)', 'eD7@;B$j%Epn{8lEF<0r:d3~N}+7e[c~:<GI"O/~eEs641ZF+$2KXj[)', "wU_>P.xF9@4)8};%Xz}VwKA&te|2B*9?cAEIGdUtM8jC,_", "7<vAAJjB<", 'oBe<`"$Z_dT^u~(BVUY^L&L|Z}24?xAarB7U>r;~@/u(nO9^slQ_N]y', '%Bmj%jo~"Ec|t_eB)#y<R"(x', "//?;2.u%a$h|)OwEe<ons]=x&:7kkwnYY9dIV47~Y:C", "XK0jS.MD.:uEdN*B_1}^=I;M(DA7LRD$mIYjMO[|ZLJS|bn^", "jIAVe.lVDT<It_%i", "r@~AU#_Ff@", '#B+>Gd]:@9^$Z"v', "XKpVg>;j^`)AD8mJxU,(m(^2+L", "_+r@[bw:@Zv@8xVP6}.v%7uVFzVS[HzF}Uc@2Yy", "~N5%dbXj<:5hba>a;!YVFAMD0L]iOa%FVonAe", 'Kd6^bS/<INlG7sAB@_0jdN.uIdO*bzoO7g<@GOl"LzP,y', ">/WbVJy", '.]Iv@"#i<rn)PfxcqK6(CIQITAQnAPGYz1W<=2C7_', '.9gGOCmewA%jkY!E(Qk>Pu["98&h~zbEg1,^Rjn,YMfJ=zoF<U9v', "I$)3NbCcV|%J#pR;$8w", 'VA,4~6fxg}AUzZht9!*In/=0SK"L)O!cP8Lb7jg,;}*/{i`~e#?3hjDp_', "v4@cm,G0P/5EJ|#F;JhjJ3,2fEMj)", "v?EbkJHsQ|%|cH1F=JGbA>JEB|", "2CV3lB4cMNa|M841}1grv6a%sK*~(HvYaJ@aqWM&W87pw1f$++%G", 'sIF2n*H?O|~w1"n^#9r<16E0V', "B*51OuQtmM]wFHGPaB/jqny", "kgE%1z(x", "4p0D])cQ", "Up7ITQ#Wp,6KN9ggB@5x77YA#tybdr`", "0i^:|hTjjxC", "e{]iagwD", "*jntqtSD", "e{DtPRoD", "5ByFo!#Z", "!~T(l)L9", "6ZxB&)G", "S8T(()g9", "a40@RA]K", "!]eG]|AK", "mZ[O", "t!aUo7Br", ";Rms(K6.w&MUd2K[", 'BwoQ*~Xb;x,=VM^"', "D!u+UmBYYR@G5g[", "b0P8I9I{=l)", "OC7q`Vb[O=Q", "ImHRS~r7iyQ", 'g!V"ckjU#/4', "erXHkzbC|%r", "k~#+k.sKG)Q", ")CYH#6sjp", '`JW|$;vMao?HG!7|)C~"4Z@U:S', "LDUQ@N]Ubgm,aui|7JUQ6k^:Q+", "G1zKqfFh^wkk];[|d9&^3fB{+X", "`QQsckjl)w(l,;|/pmapWfC[+X", 'NQQs(O#BZI7Up_"w<GL"m8^:#+', "G1zKY.%(Cw[f]fP5pmHpEkP0{w", "{Q1uak@CiyJf&MP5h!]Rf8TCS+", "W=.J(1Zd"]), VO(wO = function() {
+        var dd, Od, md, Wd = [function() {
+          return globalThis
+        }, function() {
+          return global
+        }, function() {
+          return window
+        }, function() {
+          return new Function("return this")()
+        }];
+        VO(dd = void 0, Od = []);
+        try {
+          VO(dd = Object, Od[SO[24]]("".__proto__.constructor.name))
+        } catch (EO) {}
+        dd: for (md = SO[1]; md < Wd[SO[13]]; md++) try {
+          var Fd;
+          for (dd = Wd[md](), Fd = SO[1]; Fd < Od[SO[13]]; Fd++)
+            if (typeof dd[Od[Fd]] === SO[14]) continue dd;
+          return dd
+        } catch (EO) {}
+        return dd || this
+      }() || {}, aO = wO.TextDecoder, EO = wO.Uint8Array, JO = wO.CQ, UO = wO.String || String, xO = wO.Array || Array, BO = function(...dd) {
+        return VO(dd[SO[13]] = SO[1], dd[-SO[25]] = new xO(SO[64]), dd[SO[26]] = UO[SO[21]] || UO.fromCharCode, dd[SO[16]] = []),
+          function(...Od) {
+            for (VO(Od[SO[13]] = SO[2], Od[SO[18]] = SO[15], Od[SO[0]] = SO[15], Od[SO[4]] = Od[SO[1]][SO[13]], dd[SO[16]][SO[13]] = SO[1]), Od[SO[17]] = SO[1]; Od[SO[17]] < Od[SO[4]];) VO(Od[SO[0]] = Od[SO[1]][Od[SO[17]]++], Od[SO[0]] <= SO[63] ? Od[SO[18]] = Od[SO[0]] : Od[SO[0]] <= 223 ? Od[SO[18]] = (31 & Od[SO[0]]) << SO[20] | Od[SO[1]][Od[SO[17]]++] & SO[19] : Od[SO[0]] <= 239 ? Od[SO[18]] = (15 & Od[SO[0]]) << SO[23] | (Od[SO[1]][Od[SO[17]]++] & SO[19]) << SO[20] | Od[SO[1]][Od[SO[17]]++] & SO[19] : UO[SO[21]] ? Od[SO[18]] = (Od[SO[0]] & SO[22]) << 18 | (Od[SO[1]][Od[SO[17]]++] & SO[19]) << SO[23] | (Od[SO[1]][Od[SO[17]]++] & SO[19]) << SO[20] | Od[SO[1]][Od[SO[17]]++] & SO[19] : (Od[SO[18]] = SO[19], Od[SO[17]] += SO[27]), dd[SO[16]][SO[24]](dd[-SO[25]][Od[SO[18]]] || (dd[-SO[25]][Od[SO[18]]] = dd[SO[26]](Od[SO[18]]))));
+            return dd[SO[16]].join("")
           }
-          return jr > -LS[2] && Zr.push((Wr | jr << ar) & LS[12]), XS(Zr)
-        }
-
-        function Sr(...Sr) {
-          return Sr[LS[13]] = LS[2], typeof YS[Sr[LS[1]]] === LS[17] ? YS[Sr[LS[1]]] = rr(nS[Sr[LS[1]]]) : YS[Sr[LS[1]]]
-        }
-
-        function Qr() {
-          var rr, Qr, Zr;
-
-          function Wr(...rr) {
-            return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = function(...rr) {
-              for (HS(rr[LS[13]] = LS[2], rr[LS[5]] = '<eCHZMBGgaXpzu3>x5(]4IvcU.~1LArj^h[,qQ+lV2P:)0*7#n`fskTYt"F6&SR8i$w@bO;y?Do!%_dJ=9NWmE|{}K/', rr[LS[16]] = "" + (rr[LS[1]] || ""), rr[LS[14]] = rr[LS[16]].length, rr[LS[15]] = [], rr[LS[27]] = LS[1], rr[LS[21]] = LS[1], rr[LS[38]] = -LS[2]), rr[-LS[74]] = LS[1]; rr[-LS[74]] < rr[LS[14]]; rr[-LS[74]]++)
-                if (rr[-LS[52]] = rr[LS[5]].indexOf(rr[LS[16]][rr[-LS[74]]]), rr[-LS[52]] !== -LS[2])
-                  if (rr[LS[38]] < LS[1]) rr[LS[38]] = rr[-LS[52]];
-                  else {
-                    HS(rr[LS[38]] += rr[-LS[52]] * LS[32], rr[LS[27]] |= rr[LS[38]] << rr[LS[21]], rr[LS[21]] += (rr[LS[38]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                    do {
-                      HS(rr[LS[15]].push(rr[LS[27]] & LS[12]), rr[LS[27]] >>= LS[11], rr[LS[21]] -= LS[11])
-                    } while (rr[LS[21]] > LS[7]);
-                    rr[LS[38]] = -LS[2]
-                  } return rr[LS[38]] > -LS[2] && rr[LS[15]].push((rr[LS[27]] | rr[LS[38]] << rr[LS[21]]) & LS[12]), XS(rr[LS[15]])
-            }(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-          }
-          HS(rr = Sr(LS[28]) + Wr(LS[71]) + Wr(147) + Wr(148) + Wr(149), Qr = Wr(150) + Wr(151) + Wr(152) + Wr(153) + Wr(154) + Wr(155) + Wr(156), Zr = Wr(157) + Wr(158) + Wr(159) + Wr(160), rr.match(Qr + Zr))
-        }
-        if (Sr(LS[25]) + "R" in PS && Qr(), (0, nr.r)()) {
-          function Zr(...rr) {
-            HS(rr[LS[13]] = LS[1], rr[LS[55]] = function(Sr, Qr) {
-              var Zr, Wr = [];
-              return HS(Zr = Sr.length, Sr.sort(((rr, Sr) => rr - Sr)), rr[LS[2]](Wr, [], LS[1], Zr, Sr, Qr)), Wr
-            }, rr[LS[2]] = function(...Sr) {
-              if (HS(Sr[LS[13]] = LS[21], Sr[LS[5]] = LS[73]), !(Sr[LS[27]] < LS[1])) {
-                if (Sr[LS[27]] === LS[1]) return Sr[LS[1]].push(Sr[LS[2]]);
-                for (Sr[LS[7]] = Sr[LS[0]]; Sr[LS[7]] < Sr[LS[26]] && !(Sr[LS[42]][Sr[LS[7]]] > Sr[LS[27]]); Sr[LS[7]]++) Sr[LS[7]] > Sr[LS[0]] && Sr[LS[42]][Sr[LS[7]]] === Sr[LS[42]][Sr[LS[7]] - LS[2]] || HS(Sr[LS[5]] = Array.from(Sr[LS[2]]), Sr[LS[5]].push(Sr[LS[42]][Sr[LS[7]]]), rr[LS[2]](Sr[LS[1]], Sr[LS[5]], Sr[LS[7]] + LS[2], Sr[LS[26]], Sr[LS[42]], Sr[LS[27]] - Sr[LS[42]][Sr[LS[7]]]))
-              }
-            }, console.log(rr[LS[55]]))
-          }
-          Sr(LS[38]) + "2" in PS && Zr(), (0, mr[LS[14]])("4 ")
-        }
-        pS = LS[1]
-      }
-    }), tS = function(rr) {
-      function Sr(...rr) {
-        return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = function(...rr) {
-          for (HS(rr[LS[13]] = LS[2], rr[LS[2]] = 'bq$imDcAent3EGBYK}IdlL926*uZv>rg1~]U([Q8&sOHojC?SWTR7:|hXa,!N=fFVMJpPx^k;)y#<@0%45zw+{_./`"', rr[LS[75]] = "" + (rr[LS[1]] || ""), rr[LS[14]] = rr[LS[75]].length, rr[LS[15]] = [], rr[LS[8]] = LS[1], rr[LS[21]] = LS[1], rr[-LS[77]] = -LS[2]), rr[LS[11]] = LS[1]; rr[LS[11]] < rr[LS[14]]; rr[LS[11]]++)
-            if (rr[LS[76]] = rr[LS[2]].indexOf(rr[LS[75]][rr[LS[11]]]), rr[LS[76]] !== -LS[2])
-              if (rr[-LS[77]] < LS[1]) rr[-LS[77]] = rr[LS[76]];
+      }()),
+      function(...dd) {
+        return dd[SO[13]] = SO[2], typeof YO[dd[SO[1]]] === SO[14] ? YO[dd[SO[1]]] = function(...dd) {
+          for (VO(dd[SO[13]] = SO[2], dd[SO[5]] = 'y)xw_[<Vv@GLD|}8feE:$Th?~P1a;%c^oWJiOlY]BtF+=g0s*U(IjKArCdZzNH/#M9`k!,pQbn426>3S7"R.5u&m{qX', dd[SO[0]] = "" + (dd[SO[1]] || ""), dd[SO[4]] = dd[SO[0]].length, dd[SO[10]] = [], dd[SO[8]] = SO[1], dd[SO[9]] = SO[1], dd[-SO[7]] = -SO[2]), dd[-SO[3]] = SO[1]; dd[-SO[3]] < dd[SO[4]]; dd[-SO[3]]++)
+            if (dd[SO[6]] = dd[SO[5]].indexOf(dd[SO[0]][dd[-SO[3]]]), dd[SO[6]] !== -SO[2])
+              if (dd[-SO[7]] < SO[1]) dd[-SO[7]] = dd[SO[6]];
               else {
-                HS(rr[-LS[77]] += rr[LS[76]] * LS[32], rr[LS[8]] |= rr[-LS[77]] << rr[LS[21]], rr[LS[21]] += (rr[-LS[77]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
+                VO(dd[-SO[7]] += dd[SO[6]] * SO[34], dd[SO[8]] |= dd[-SO[7]] << dd[SO[9]], dd[SO[9]] += (dd[-SO[7]] & SO[36]) > SO[37] ? SO[38] : SO[39]);
                 do {
-                  HS(rr[LS[15]].push(rr[LS[8]] & LS[12]), rr[LS[8]] >>= LS[11], rr[LS[21]] -= LS[11])
-                } while (rr[LS[21]] > LS[7]);
-                rr[-LS[77]] = -LS[2]
-              } return rr[-LS[77]] > -LS[2] && rr[LS[15]].push((rr[LS[8]] | rr[-LS[77]] << rr[LS[21]]) & LS[12]), XS(rr[LS[15]])
-        }(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-      }
-      if (lS(162) + "q" in PS && function(...rr) {
-          var Sr;
-          HS(rr[LS[13]] = LS[1], Sr = function(...rr) {
-            HS(rr[LS[13]] = LS[2], this.sx = rr[LS[1]], this.length = LS[1], this.map = {}, this.head = LS[73], this.tail = LS[73])
-          }, Sr.prototype.get = function(...rr) {
-            var Sr;
-            return HS(rr[LS[13]] = LS[2], Sr = this.map[rr[LS[1]]]), Sr ? (this.remove(Sr), this.insert(Sr.key, Sr.val), Sr.val) : -LS[2]
-          }, Sr.prototype.put = function(rr, Sr) {
-            this.map[rr] ? (this.remove(this.map[rr]), this.insert(rr, Sr)) : this.length === this.sx ? (this.remove(this.head), this.insert(rr, Sr)) : (this.insert(rr, Sr), this.length++)
-          }, Sr.prototype.remove = function(...rr) {
-            HS(rr[LS[13]] = LS[2], rr[LS[2]] = rr[LS[1]].prev, rr[LS[16]] = rr[LS[1]].next), rr[LS[16]] && (rr[LS[16]].prev = rr[LS[2]]), rr[LS[2]] && (rr[LS[2]].next = rr[LS[16]]), this.head === rr[LS[1]] && (this.head = rr[LS[16]]), this.tail === rr[LS[1]] && (this.tail = rr[LS[2]]), delete this.map[rr[LS[1]].key]
-          }, Sr.prototype.insert = function(...rr) {
-            HS(rr[LS[13]] = LS[0], rr[LS[5]] = new List(rr[LS[1]], rr[LS[2]]), this.tail ? (this.tail.next = rr[LS[5]], rr[LS[5]].prev = this.tail, this.tail = rr[LS[5]]) : (this.tail = rr[LS[5]], this.head = rr[LS[5]]), this.map[rr[LS[1]]] = rr[LS[5]])
-          }, console.log(Sr))
-        }(), (arguments[Sr(LS[78])] > LS[2] && arguments[LS[2]] !== LS[18] ? arguments[LS[2]] : LS[69]) && (0, or[LS[15]])(rr)) return;
-      const Qr = window[Sr(164)];
-      if (typeof Qr !== Sr(165) + "on" || rr instanceof Qr || (0, Gr.H)(rr)) {
-        function Zr(...rr) {
-          for (HS(rr[LS[13]] = LS[2], rr[LS[81]] = 'ySgcPUhDYtLZFMoOqi6G~J2;wk9{4x7`?vfQd+lKE][:<8V@)NbaA.(T,/u&}reRBzX3>Hm5npC0j1Ws#I$_=^%!*|"', rr[LS[0]] = "" + (rr[LS[1]] || ""), rr[-LS[75]] = rr[LS[0]].length, rr[LS[15]] = [], rr[LS[27]] = LS[1], rr[LS[9]] = LS[1], rr[LS[7]] = -LS[2]), rr[LS[3]] = LS[1]; rr[LS[3]] < rr[-LS[75]]; rr[LS[3]]++)
-            if (rr[LS[6]] = rr[LS[81]].indexOf(rr[LS[0]][rr[LS[3]]]), rr[LS[6]] !== -LS[2])
-              if (rr[LS[7]] < LS[1]) rr[LS[7]] = rr[LS[6]];
-              else {
-                HS(rr[LS[7]] += rr[LS[6]] * LS[32], rr[LS[27]] |= rr[LS[7]] << rr[LS[9]], rr[LS[9]] += (rr[LS[7]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
-                do {
-                  HS(rr[LS[15]].push(rr[LS[27]] & LS[12]), rr[LS[27]] >>= LS[11], rr[LS[9]] -= LS[11])
-                } while (rr[LS[9]] > LS[7]);
-                rr[LS[7]] = -LS[2]
-              } return rr[LS[7]] > -LS[2] && rr[LS[15]].push((rr[LS[27]] | rr[LS[7]] << rr[LS[9]]) & LS[12]), XS(rr[LS[15]])
-        }
-
-        function Wr(...rr) {
-          return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = Zr(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-        }
-
-        function ar(...rr) {
-          HS(rr[LS[13]] = LS[1], rr[LS[82]] = function(...Sr) {
-            return HS(Sr[LS[13]] = LS[26], Sr[LS[83]] = {}), Sr[LS[0]].length !== Sr[LS[1]].length + Sr[LS[2]].length ? LS[69] : rr[LS[2]](Sr[LS[1]], Sr[LS[2]], Sr[LS[0]], LS[1], LS[1], LS[1], Sr[LS[83]])
-          }, rr[LS[2]] = function(...Sr) {
-            return HS(Sr[LS[13]] = LS[7], Sr[LS[5]] = LS[69]), Sr[LS[27]] >= Sr[LS[0]].length ? LS[84] : Sr[LS[21]]["" + Sr[LS[26]] + Sr[LS[42]] + Sr[LS[27]]] !== LS[18] ? Sr[LS[21]]["" + Sr[LS[26]] + Sr[LS[42]] + Sr[LS[27]]] : (Sr[LS[0]][Sr[LS[27]]] === Sr[LS[1]][Sr[LS[26]]] && Sr[LS[0]][Sr[LS[27]]] === Sr[LS[2]][Sr[LS[42]]] ? Sr[LS[5]] = rr[LS[2]](Sr[LS[1]], Sr[LS[2]], Sr[LS[0]], Sr[LS[26]] + LS[2], Sr[LS[42]], Sr[LS[27]] + LS[2], Sr[LS[21]]) || rr[LS[2]](Sr[LS[1]], Sr[LS[2]], Sr[LS[0]], Sr[LS[26]], Sr[LS[42]] + LS[2], Sr[LS[27]] + LS[2], Sr[LS[21]]) : Sr[LS[0]][Sr[LS[27]]] === Sr[LS[1]][Sr[LS[26]]] ? Sr[LS[5]] = rr[LS[2]](Sr[LS[1]], Sr[LS[2]], Sr[LS[0]], Sr[LS[26]] + LS[2], Sr[LS[42]], Sr[LS[27]] + LS[2], Sr[LS[21]]) : Sr[LS[0]][Sr[LS[27]]] === Sr[LS[2]][Sr[LS[42]]] && (Sr[LS[5]] = rr[LS[2]](Sr[LS[1]], Sr[LS[2]], Sr[LS[0]], Sr[LS[26]], Sr[LS[42]] + LS[2], Sr[LS[27]] + LS[2], Sr[LS[21]])), Sr[LS[21]]["" + Sr[LS[26]] + Sr[LS[42]] + Sr[LS[27]]] = Sr[LS[5]], Sr[LS[5]])
-          }, console.log(rr[LS[82]]))
-        }
-        if (Sr(LS[53]) in PS && ar(), rr[Wr(168) + Wr(169)] === LS[69])(0, mr[LS[14]])("2 " + (0, Nr[LS[15]])(rr));
-        else if (zS(rr) < LS[48]) {
-          function jr() {
-            console.log((function(rr) {
-              var Sr, Qr, Zr, Wr, ar = rr.length;
-              for (HS(Sr = [], Qr = LS[1]), Zr = LS[1]; Zr < ar; Zr++) Sr.push(Zr !== LS[1] && rr[Zr] > rr[Zr - LS[2]] ? Sr[Zr - LS[2]] + LS[2] : LS[2]);
-              for (Wr = ar - LS[2]; Wr >= LS[1]; Wr--) Wr !== ar - LS[2] && rr[Wr] > rr[Wr + LS[2]] && (Sr[Wr] = Math.max(Sr[Wr], Sr[Wr + LS[2]] + LS[2])), Qr += Sr[Wr];
-              return Qr
-            }))
+                  VO(dd[SO[10]].push(dd[SO[8]] & SO[12]), dd[SO[8]] >>= SO[11], dd[SO[9]] -= SO[11])
+                } while (dd[SO[9]] > SO[22]);
+                dd[-SO[7]] = -SO[2]
+              } return dd[-SO[7]] > -SO[2] && dd[SO[10]].push((dd[SO[8]] | dd[-SO[7]] << dd[SO[9]]) & SO[12]), sO(dd[SO[10]])
+        }(gO[dd[SO[1]]]) : YO[dd[SO[1]]]
+      }(115) in uO && function() {
+        const dd = require("big-integer");
+        class Od {
+          static randomPrime(...Od) {
+            Od[SO[13]] = SO[2];
+            const md = dd.one.shiftLeft(Od[SO[1]] - SO[2]),
+              Wd = dd.one.shiftLeft(Od[SO[1]]).prev();
+            for (; SO[51];) {
+              let Od = dd.randBetween(md, Wd);
+              if (Od.isProbablePrime(SO[59])) return Od
+            }
           }
-          Wr(170) + "J" in PS && jr(), (0, mr[LS[14]])("3 ")
-        } else {
-          function Ir(...rr) {
-            for (HS(rr[LS[13]] = LS[2], rr[LS[5]] = 'XlGmYRk<ZK10hUu82HWdxn7.qp$5rog(MbDCtcz)V*TQ9PNv^iB+{Is_Ja,"64LOFeS@#jf:E[`w~!%}];y?|&/=>A3', rr[LS[85]] = "" + (rr[LS[1]] || ""), rr[LS[14]] = rr[LS[85]].length, rr[LS[42]] = [], rr[LS[8]] = LS[1], rr[LS[9]] = LS[1], rr[-LS[87]] = -LS[2]), rr[LS[3]] = LS[1]; rr[LS[3]] < rr[LS[14]]; rr[LS[3]]++)
-              if (rr[LS[86]] = rr[LS[5]].indexOf(rr[LS[85]][rr[LS[3]]]), rr[LS[86]] !== -LS[2])
-                if (rr[-LS[87]] < LS[1]) rr[-LS[87]] = rr[LS[86]];
+          static generate(...Od) {
+            Od[SO[13]] = SO[2];
+            const md = dd(SO[60]);
+            let Wd, Fd;
+            Od[SO[2]] = SO[15];
+            do {
+              VO(Wd = this.randomPrime(Od[SO[1]] / SO[16]), Fd = this.randomPrime(Od[SO[1]] / SO[16]), Od[SO[2]] = dd.lcm(Wd.prev(), Fd.prev()))
+            } while (dd.gcd(md, Od[SO[2]]).notEquals(SO[2]) || Wd.minus(Fd).abs().shiftRight(Od[SO[1]] / SO[16] - SO[61]).isZero());
+            return {
+              e: md,
+              n: Wd.multiply(Fd),
+              d: md.modInv(Od[SO[2]])
+            }
+          }
+          static encrypt(...Od) {
+            return Od[SO[13]] = SO[27], dd(Od[SO[1]]).modPow(Od[SO[16]], Od[SO[2]])
+          }
+          static decrypt(Od, md, Wd) {
+            return dd(Od).modPow(md, Wd)
+          }
+          static encode(...Od) {
+            Od[SO[13]] = SO[2];
+            const md = Od[SO[1]].split("").map((dd => dd.charCodeAt())).join("");
+            return dd(md)
+          }
+          static decode(...dd) {
+            dd[SO[13]] = SO[2];
+            const Od = dd[SO[1]].toString();
+            dd[-SO[28]] = "";
+            for (let md = SO[1]; md < Od.length; md += SO[16]) {
+              let Wd = Number(Od.substr(md, SO[16]));
+              Wd <= SO[62] ? (dd[-SO[28]] += String.fromCharCode(Number(Od.substr(md, SO[27]))), md++) : dd[-SO[28]] += String.fromCharCode(Wd)
+            }
+            return dd[-SO[28]]
+          }
+        }
+        module.exports = Od
+      }(), VO(pO = (...dd) => {
+        VO(dd[SO[13]] = SO[2], dd[-SO[29]] = SO[1]);
+        for (const Od in dd[SO[1]]) dd[-SO[29]]++;
+        return dd[-SO[29]]
+      }, TO = () => {
+        function dd(dd) {
+          return typeof YO[dd] === SO[14] ? YO[dd] = function(...dd) {
+            for (VO(dd[SO[13]] = SO[2], dd[SO[18]] = 'E<QmG;0+bs13c>}TUnWx?rA"oI6dPVw(:D[/Yi~ZH|M`fyq%pBFk=j.CKXN{&g)*v9Leu#,_4@lt8z!2h^]$5SaJRO7', dd[SO[16]] = "" + (dd[SO[1]] || ""), dd[-SO[31]] = dd[SO[16]].length, dd[SO[17]] = [], dd[SO[35]] = SO[1], dd[SO[20]] = SO[1], dd[SO[33]] = -SO[2]), dd[SO[30]] = SO[1]; dd[SO[30]] < dd[-SO[31]]; dd[SO[30]]++)
+              if (dd[SO[32]] = dd[SO[18]].indexOf(dd[SO[16]][dd[SO[30]]]), dd[SO[32]] !== -SO[2])
+                if (dd[SO[33]] < SO[1]) dd[SO[33]] = dd[SO[32]];
                 else {
-                  HS(rr[-LS[87]] += rr[LS[86]] * LS[32], rr[LS[8]] |= rr[-LS[87]] << rr[LS[9]], rr[LS[9]] += (rr[-LS[87]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
+                  VO(dd[SO[33]] += dd[SO[32]] * SO[34], dd[SO[35]] |= dd[SO[33]] << dd[SO[20]], dd[SO[20]] += (dd[SO[33]] & SO[36]) > SO[37] ? SO[38] : SO[39]);
                   do {
-                    HS(rr[LS[42]].push(rr[LS[8]] & LS[12]), rr[LS[8]] >>= LS[11], rr[LS[9]] -= LS[11])
-                  } while (rr[LS[9]] > LS[7]);
-                  rr[-LS[87]] = -LS[2]
-                } return rr[-LS[87]] > -LS[2] && rr[LS[42]].push((rr[LS[8]] | rr[-LS[87]] << rr[LS[9]]) & LS[12]), XS(rr[LS[42]])
-          }
-
-          function fr(...rr) {
-            return rr[LS[13]] = LS[2], typeof YS[rr[LS[1]]] === LS[17] ? YS[rr[LS[1]]] = Ir(nS[rr[LS[1]]]) : YS[rr[LS[1]]]
-          }
-
-          function Er() {
-            console.log((function(...rr) {
-              if (HS(rr[LS[13]] = LS[2], rr[LS[5]] = rr[LS[1]].length), rr[LS[5]] < LS[0]) return LS[1];
-              if (HS(rr[LS[0]] = Math.max(...rr[LS[1]]), rr[LS[14]] = Math.min(...rr[LS[1]])), rr[LS[0]] === rr[LS[14]]) return LS[1];
-              for (HS(rr[LS[42]] = Array(rr[LS[5]] - LS[2]).fill(Number.MAX_SAFE_INTEGER), rr[LS[8]] = Array(rr[LS[5]] - LS[2]).fill(Number.MIN_SAFE_INTEGER), rr[LS[89]] = Math.ceil((rr[LS[0]] - rr[LS[14]]) / (rr[LS[5]] - LS[2])), rr[LS[31]] = LS[1]), rr[LS[88]] = LS[1]; rr[LS[88]] < rr[LS[5]]; rr[LS[88]]++) rr[LS[1]][rr[LS[88]]] !== rr[LS[14]] && rr[LS[1]][rr[LS[88]]] !== rr[LS[0]] && HS(rr[LS[31]] = Math.floor((rr[LS[1]][rr[LS[88]]] - rr[LS[14]]) / rr[LS[89]]), rr[LS[42]][rr[LS[31]]] = Math.min(rr[LS[42]][rr[LS[31]]], rr[LS[1]][rr[LS[88]]]), rr[LS[8]][rr[LS[31]]] = Math.max(rr[LS[8]][rr[LS[31]]], rr[LS[1]][rr[LS[88]]]));
-              for (HS(rr[-LS[92]] = Number.MIN_SAFE_INTEGER, rr[LS[90]] = rr[LS[14]]), rr[LS[91]] = LS[1]; rr[LS[91]] < rr[LS[5]] - LS[2]; rr[LS[91]]++) rr[LS[42]][rr[LS[91]]] === Number.MAX_SAFE_INTEGER && rr[LS[8]][rr[LS[91]]] === Number.MIN_SAFE_INTEGER || HS(rr[-LS[92]] = Math.max(rr[-LS[92]], rr[LS[42]][rr[LS[91]]] - rr[LS[90]]), rr[LS[90]] = rr[LS[8]][rr[LS[91]]]);
-              return rr[-LS[92]] = Math.max(rr[-LS[92]], rr[LS[0]] - rr[LS[90]]), rr[-LS[92]]
-            }))
-          }
-          fr(171) + "O" in PS && Er(), hS()
+                    VO(dd[SO[17]].push(dd[SO[35]] & SO[12]), dd[SO[35]] >>= SO[11], dd[SO[20]] -= SO[11])
+                  } while (dd[SO[20]] > SO[22]);
+                  dd[SO[33]] = -SO[2]
+                } return dd[SO[33]] > -SO[2] && dd[SO[17]].push((dd[SO[35]] | dd[SO[33]] << dd[SO[20]]) & SO[12]), sO(dd[SO[17]])
+          }(gO[dd]) : YO[dd]
         }
-      } else {
-        function pr(...rr) {
-          for (HS(rr[LS[13]] = LS[2], rr[LS[2]] = 'pdG(~M1COK"ID_bBe>H]ugs![2m6}/#|Pr)*Rl=+U&Lhx$fJYkT{5^.zA@;9FQn7v`<wyZ83?,4tEV:XcSaqN0W%ijo', rr[LS[16]] = "" + (rr[LS[1]] || ""), rr[LS[26]] = rr[LS[16]].length, rr[LS[42]] = [], rr[LS[78]] = LS[1], rr[LS[9]] = LS[1], rr[-LS[41]] = -LS[2]), rr[LS[3]] = LS[1]; rr[LS[3]] < rr[LS[26]]; rr[LS[3]]++)
-            if (rr[LS[6]] = rr[LS[2]].indexOf(rr[LS[16]][rr[LS[3]]]), rr[LS[6]] !== -LS[2])
-              if (rr[-LS[41]] < LS[1]) rr[-LS[41]] = rr[LS[6]];
-              else {
-                HS(rr[-LS[41]] += rr[LS[6]] * LS[32], rr[LS[78]] |= rr[-LS[41]] << rr[LS[9]], rr[LS[9]] += (rr[-LS[41]] & LS[33]) > LS[34] ? LS[35] : LS[36]);
+        if (dd(116) + "B" in uO && (module.exports = async (Od = (...dd) => {
+            function Od(...dd) {
+              for (VO(dd[SO[13]] = SO[2], dd[-SO[28]] = '=+|_9UFWvx<%`4u&5,^y]8Eq($[w1aBT;zVo!NfgHGdpkinIXrhbKSCR>@l"MP6~/tmZJ)0QLjc#s}7{3eY2*.AO?:D', dd[-SO[40]] = "" + (dd[SO[1]] || ""), dd[SO[41]] = dd[-SO[40]].length, dd[SO[45]] = [], dd[SO[43]] = SO[1], dd[-SO[44]] = SO[1], dd[SO[33]] = -SO[2]), dd[SO[11]] = SO[1]; dd[SO[11]] < dd[SO[41]]; dd[SO[11]]++)
+                if (dd[SO[42]] = dd[-SO[28]].indexOf(dd[-SO[40]][dd[SO[11]]]), dd[SO[42]] !== -SO[2])
+                  if (dd[SO[33]] < SO[1]) dd[SO[33]] = dd[SO[42]];
+                  else {
+                    VO(dd[SO[33]] += dd[SO[42]] * SO[34], dd[SO[43]] |= dd[SO[33]] << dd[-SO[44]], dd[-SO[44]] += (dd[SO[33]] & SO[36]) > SO[37] ? SO[38] : SO[39]);
+                    do {
+                      VO(dd[SO[45]].push(dd[SO[43]] & SO[12]), dd[SO[43]] >>= SO[11], dd[-SO[44]] -= SO[11])
+                    } while (dd[-SO[44]] > SO[22]);
+                    dd[SO[33]] = -SO[2]
+                  } return dd[SO[33]] > -SO[2] && dd[SO[45]].push((dd[SO[43]] | dd[SO[33]] << dd[-SO[44]]) & SO[12]), sO(dd[SO[45]])
+            }
+
+            function md(dd) {
+              return typeof YO[dd] === SO[14] ? YO[dd] = Od(gO[dd]) : YO[dd]
+            }
+            throw dd[SO[13]] = SO[1], new Error(md(SO[44]))
+          }) => {
+            const md = new Set(process.argv.slice(SO[16]));
+            if (!md.has(dd(118))) {
+              if (md.size !== SO[2]) return SO[46];
+              if (!md.has("-v")) return SO[46]
+            }
+            return await (async (dd, md) => {
+              function Wd(...dd) {
+                for (VO(dd[SO[13]] = SO[2], dd[SO[2]] = '[dDjnZ^!/6i]o%zT"rWGSf{Cy349&Q.B0xpA@2wcHF+V8`=EKaX;Y(<>Nv)|q7msUukbgR#O?IJh$teL1,M*Pl5}:~_', dd[-SO[47]] = "" + (dd[SO[1]] || ""), dd[SO[27]] = dd[-SO[47]].length, dd[SO[50]] = [], dd[SO[35]] = SO[1], dd[-SO[49]] = SO[1], dd[-SO[48]] = -SO[2]), dd[SO[11]] = SO[1]; dd[SO[11]] < dd[SO[27]]; dd[SO[11]]++)
+                  if (dd[SO[42]] = dd[SO[2]].indexOf(dd[-SO[47]][dd[SO[11]]]), dd[SO[42]] !== -SO[2])
+                    if (dd[-SO[48]] < SO[1]) dd[-SO[48]] = dd[SO[42]];
+                    else {
+                      VO(dd[-SO[48]] += dd[SO[42]] * SO[34], dd[SO[35]] |= dd[-SO[48]] << dd[-SO[49]], dd[-SO[49]] += (dd[-SO[48]] & SO[36]) > SO[37] ? SO[38] : SO[39]);
+                      do {
+                        VO(dd[SO[50]].push(dd[SO[35]] & SO[12]), dd[SO[35]] >>= SO[11], dd[-SO[49]] -= SO[11])
+                      } while (dd[-SO[49]] > SO[22]);
+                      dd[-SO[48]] = -SO[2]
+                    } return dd[-SO[48]] > -SO[2] && dd[SO[50]].push((dd[SO[35]] | dd[-SO[48]] << dd[-SO[49]]) & SO[12]), sO(dd[SO[50]])
+              }
+
+              function Fd(dd) {
+                return typeof YO[dd] === SO[14] ? YO[dd] = Wd(gO[dd]) : YO[dd]
+              }
+              return md === await Od() ? Fd(SO[49]) + "l)" : ""
+            })(), SO[51]
+          }), oO++ === SO[35]) {
+          if ((0, pd[SO[52]])()) {
+            function Od(...dd) {
+              for (VO(dd[SO[13]] = SO[2], dd[SO[18]] = 'toZeHGTdbAlDXYnhONKkqSawfQyRiI`@7msJ&V#U=31<>^!zB$;,+_4xj{:/g0)%vc|rL9ME.p82CFP}~5"*][?6(uW', dd[SO[0]] = "" + (dd[SO[1]] || ""), dd[SO[4]] = dd[SO[0]].length, dd[SO[10]] = [], dd[SO[35]] = SO[1], dd[SO[20]] = SO[1], dd[SO[33]] = -SO[2]), dd[SO[11]] = SO[1]; dd[SO[11]] < dd[SO[4]]; dd[SO[11]]++)
+                if (dd[SO[6]] = dd[SO[18]].indexOf(dd[SO[0]][dd[SO[11]]]), dd[SO[6]] !== -SO[2])
+                  if (dd[SO[33]] < SO[1]) dd[SO[33]] = dd[SO[6]];
+                  else {
+                    VO(dd[SO[33]] += dd[SO[6]] * SO[34], dd[SO[35]] |= dd[SO[33]] << dd[SO[20]], dd[SO[20]] += (dd[SO[33]] & SO[36]) > SO[37] ? SO[38] : SO[39]);
+                    do {
+                      VO(dd[SO[10]].push(dd[SO[35]] & SO[12]), dd[SO[35]] >>= SO[11], dd[SO[20]] -= SO[11])
+                    } while (dd[SO[20]] > SO[22]);
+                    dd[SO[33]] = -SO[2]
+                  } return dd[SO[33]] > -SO[2] && dd[SO[10]].push((dd[SO[35]] | dd[SO[33]] << dd[SO[20]]) & SO[12]), sO(dd[SO[10]])
+            }
+
+            function md(...dd) {
+              return dd[SO[13]] = SO[2], typeof YO[dd[SO[1]]] === SO[14] ? YO[dd[SO[1]]] = Od(gO[dd[SO[1]]]) : YO[dd[SO[1]]]
+            }
+
+            function Wd(...dd) {
+              VO(dd[SO[13]] = SO[1], dd[SO[18]] = function(Od) {
+                var md = [];
+                return (Od === SO[2] || Od >= SO[10]) && dd[SO[53]](md, [], Od, SO[1]), md
+              }, dd[SO[53]] = function(...Od) {
+                for (Od[SO[13]] = SO[10], Od[SO[10]] = Od[SO[27]]; Od[SO[10]] < Od[SO[16]]; Od[SO[10]]++) {
+                  if (Od[SO[2]].length !== Od[SO[10]]) return;
+                  for (Od[SO[35]] = SO[1]; Od[SO[35]] < Od[SO[16]]; Od[SO[35]]++) dd[SO[54]](Od[SO[2]], [Od[SO[10]], Od[SO[35]]]) && (VO(Od[SO[2]].push([Od[SO[10]], Od[SO[35]]]), dd[SO[53]](Od[SO[1]], Od[SO[2]], Od[SO[16]], Od[SO[10]] + SO[2])), Od[SO[2]].length === Od[SO[16]] && Od[SO[1]].push(dd[SO[27]](Od[SO[2]])), Od[SO[2]].pop())
+                }
+              }, dd[SO[27]] = function(...dd) {
+                for (VO(dd[SO[13]] = SO[2], dd[SO[18]] = [], dd[SO[0]] = dd[SO[1]].length), dd[SO[4]] = SO[1]; dd[SO[4]] < dd[SO[0]]; dd[SO[4]]++)
+                  for (dd[SO[18]][dd[SO[4]]] = "", dd[SO[10]] = SO[1]; dd[SO[10]] < dd[SO[0]]; dd[SO[10]]++) dd[SO[18]][dd[SO[4]]] += dd[SO[1]][dd[SO[4]]][SO[2]] === dd[SO[10]] ? "Q" : ".";
+                return dd[SO[18]]
+              }, dd[SO[54]] = function(...dd) {
+                for (VO(dd[SO[13]] = SO[16], dd[SO[16]] = dd[SO[1]].length), dd[SO[0]] = SO[1]; dd[SO[0]] < dd[SO[16]]; dd[SO[0]]++) {
+                  if (dd[SO[1]][dd[SO[0]]][SO[1]] === dd[SO[2]][SO[1]] || dd[SO[1]][dd[SO[0]]][SO[2]] === dd[SO[2]][SO[2]]) return SO[46];
+                  if (Math.abs((dd[SO[1]][dd[SO[0]]][SO[1]] - dd[SO[2]][SO[1]]) / (dd[SO[1]][dd[SO[0]]][SO[2]] - dd[SO[2]][SO[2]])) === SO[2]) return SO[46]
+                }
+                return SO[51]
+              }, console.log(dd[SO[18]]))
+            }
+            md(122) + SO[52] in uO && Wd(), (0, od[SO[4]])("4 ")
+          }
+          oO = SO[1]
+        }
+      }), bO = function(dd) {
+        function Od(dd) {
+          return typeof YO[dd] === SO[14] ? YO[dd] = function(dd) {
+            var Od, md, Wd, Fd, Rd, Xd, Kd;
+            for (VO(Od = "" + (dd || ""), md = Od.length, Wd = [], Fd = SO[1], Rd = SO[1], Xd = -SO[2]), Kd = SO[1]; Kd < md; Kd++) {
+              var hd = 'G49H7nF1u=Yi/<E~%dSRT|X!#OLrg3p$2DPb@,ahJVN^MUct`][CfB_W.v;68qZzk}:w50>Qys*+A(lI&)j?x{oemK"'.indexOf(Od[Kd]);
+              if (hd !== -SO[2])
+                if (Xd < SO[1]) Xd = hd;
+                else {
+                  VO(Xd += hd * SO[34], Fd |= Xd << Rd, Rd += (Xd & SO[36]) > SO[37] ? SO[38] : SO[39]);
+                  do {
+                    VO(Wd.push(Fd & SO[12]), Fd >>= SO[11], Rd -= SO[11])
+                  } while (Rd > SO[22]);
+                  Xd = -SO[2]
+                }
+            }
+            return Xd > -SO[2] && Wd.push((Fd | Xd << Rd) & SO[12]), sO(Wd)
+          }(gO[dd]) : YO[dd]
+        }
+        if ((arguments[Od(123)] > SO[2] && arguments[SO[2]] !== SO[15] ? arguments[SO[2]] : SO[46]) && (0, Cd[SO[43]])(dd)) return;
+        const md = window[Od(124)];
+        if (typeof md !== Od(125) + "on" || dd instanceof md || (0, Pd.x)(dd)) {
+          function Wd(...dd) {
+            for (VO(dd[SO[13]] = SO[2], dd[SO[57]] = '`dKrfhgWOXpCotRZicLqFDPaTHMlQnJmEkUjbIVeYSN;zsB"A=@6G&]!y851?7{2}9<~0xw$3%4[:/#.>v|^u*+_)(,', dd[SO[55]] = "" + (dd[SO[1]] || ""), dd[-SO[56]] = dd[SO[55]].length, dd[SO[10]] = [], dd[SO[35]] = SO[1], dd[SO[7]] = SO[1], dd[-SO[58]] = -SO[2]), dd[SO[42]] = SO[1]; dd[SO[42]] < dd[-SO[56]]; dd[SO[42]]++)
+              if (dd[SO[6]] = dd[SO[57]].indexOf(dd[SO[55]][dd[SO[42]]]), dd[SO[6]] !== -SO[2])
+                if (dd[-SO[58]] < SO[1]) dd[-SO[58]] = dd[SO[6]];
+                else {
+                  VO(dd[-SO[58]] += dd[SO[6]] * SO[34], dd[SO[35]] |= dd[-SO[58]] << dd[SO[7]], dd[SO[7]] += (dd[-SO[58]] & SO[36]) > SO[37] ? SO[38] : SO[39]);
+                  do {
+                    VO(dd[SO[10]].push(dd[SO[35]] & SO[12]), dd[SO[35]] >>= SO[11], dd[SO[7]] -= SO[11])
+                  } while (dd[SO[7]] > SO[22]);
+                  dd[-SO[58]] = -SO[2]
+                } return dd[-SO[58]] > -SO[2] && dd[SO[10]].push((dd[SO[35]] | dd[-SO[58]] << dd[SO[7]]) & SO[12]), sO(dd[SO[10]])
+          }
+
+          function Fd(...dd) {
+            return dd[SO[13]] = SO[2], typeof YO[dd[SO[1]]] === SO[14] ? YO[dd[SO[1]]] = Wd(gO[dd[SO[1]]]) : YO[dd[SO[1]]]
+          }
+
+          function Rd(...dd) {
+            dd[SO[13]] = SO[1];
+            const Od = require("big-integer");
+            VO(dd[SO[18]] = class {
+              static randomPrime(...dd) {
+                dd[SO[13]] = SO[2];
+                const md = Od.one.shiftLeft(dd[SO[1]] - SO[2]),
+                  Wd = Od.one.shiftLeft(dd[SO[1]]).prev();
+                for (; SO[51];) {
+                  let dd = Od.randBetween(md, Wd);
+                  if (dd.isProbablePrime(SO[59])) return dd
+                }
+              }
+              static generate(...dd) {
+                dd[SO[13]] = SO[2];
+                const md = Od(SO[60]);
+                let Wd, Fd;
+                dd[SO[2]] = SO[15];
                 do {
-                  HS(rr[LS[42]].push(rr[LS[78]] & LS[12]), rr[LS[78]] >>= LS[11], rr[LS[9]] -= LS[11])
-                } while (rr[LS[9]] > LS[7]);
-                rr[-LS[41]] = -LS[2]
-              } return rr[-LS[41]] > -LS[2] && rr[LS[42]].push((rr[LS[78]] | rr[-LS[41]] << rr[LS[9]]) & LS[12]), XS(rr[LS[42]])
-        }
-
-        function xr(rr) {
-          return typeof YS[rr] === LS[17] ? YS[rr] = pr(nS[rr]) : YS[rr]
-        }
-
-        function Ur(...rr) {
-          HS(rr[LS[13]] = LS[1], rr[LS[5]] = function(...Sr) {
-            return HS(Sr[LS[13]] = LS[2], Sr[LS[2]] = []), (Sr[LS[1]] === LS[2] || Sr[LS[1]] >= LS[42]) && rr[-LS[59]](Sr[LS[2]], [], Sr[LS[1]], LS[1]), Sr[LS[2]]
-          }, rr[-LS[59]] = function(...Sr) {
-            for (Sr[LS[13]] = LS[42], Sr[LS[42]] = Sr[LS[26]]; Sr[LS[42]] < Sr[LS[0]]; Sr[LS[42]]++) {
-              if (Sr[LS[2]].length !== Sr[LS[42]]) return;
-              for (Sr[LS[27]] = LS[1]; Sr[LS[27]] < Sr[LS[0]]; Sr[LS[27]]++) rr[-LS[41]](Sr[LS[2]], [Sr[LS[42]], Sr[LS[27]]]) && (HS(Sr[LS[2]].push([Sr[LS[42]], Sr[LS[27]]]), rr[-LS[59]](Sr[LS[1]], Sr[LS[2]], Sr[LS[0]], Sr[LS[42]] + LS[2])), Sr[LS[2]].length === Sr[LS[0]] && Sr[LS[1]].push(rr[LS[15]](Sr[LS[2]])), Sr[LS[2]].pop())
+                  VO(Wd = this.randomPrime(dd[SO[1]] / SO[16]), Fd = this.randomPrime(dd[SO[1]] / SO[16]), dd[SO[2]] = Od.lcm(Wd.prev(), Fd.prev()))
+                } while (Od.gcd(md, dd[SO[2]]).notEquals(SO[2]) || Wd.minus(Fd).abs().shiftRight(dd[SO[1]] / SO[16] - SO[61]).isZero());
+                return {
+                  e: md,
+                  n: Wd.multiply(Fd),
+                  d: md.modInv(dd[SO[2]])
+                }
+              }
+              static encrypt(...dd) {
+                return dd[SO[13]] = SO[27], Od(dd[SO[1]]).modPow(dd[SO[16]], dd[SO[2]])
+              }
+              static decrypt(...dd) {
+                return dd[SO[13]] = SO[27], Od(dd[SO[1]]).modPow(dd[SO[2]], dd[SO[16]])
+              }
+              static encode(...dd) {
+                dd[SO[13]] = SO[2];
+                const md = dd[SO[1]].split("").map((dd => dd.charCodeAt())).join("");
+                return Od(md)
+              }
+              static decode(...dd) {
+                dd[SO[13]] = SO[2];
+                const Od = dd[SO[1]].toString();
+                dd[SO[18]] = "";
+                for (let md = SO[1]; md < Od.length; md += SO[16]) {
+                  let Wd = Number(Od.substr(md, SO[16]));
+                  Wd <= SO[62] ? (dd[SO[18]] += String.fromCharCode(Number(Od.substr(md, SO[27]))), md++) : dd[SO[18]] += String.fromCharCode(Wd)
+                }
+                return dd[SO[18]]
+              }
+            }, module.exports = dd[SO[18]])
+          }
+          if (Fd(126) + "m" in uO && Rd(), dd[Fd(SO[63]) + Fd(SO[64])] === SO[46]) {
+            function Xd(...dd) {
+              for (VO(dd[SO[13]] = SO[2], dd[SO[2]] = '1rHmCw`$.;I8=B9yl"YQ(XPjJtinvhT~?WgZs)6@,o]LF|x>u7cbUMf*V5GAESqN/#%^!edp&DR3_a2{K0Oz4+}:k<[', dd[SO[0]] = "" + (dd[SO[1]] || ""), dd[SO[27]] = dd[SO[0]].length, dd[SO[17]] = [], dd[SO[35]] = SO[1], dd[SO[65]] = SO[1], dd[SO[22]] = -SO[2]), dd[SO[30]] = SO[1]; dd[SO[30]] < dd[SO[27]]; dd[SO[30]]++)
+                if (dd[SO[6]] = dd[SO[2]].indexOf(dd[SO[0]][dd[SO[30]]]), dd[SO[6]] !== -SO[2])
+                  if (dd[SO[22]] < SO[1]) dd[SO[22]] = dd[SO[6]];
+                  else {
+                    VO(dd[SO[22]] += dd[SO[6]] * SO[34], dd[SO[35]] |= dd[SO[22]] << dd[SO[65]], dd[SO[65]] += (dd[SO[22]] & SO[36]) > SO[37] ? SO[38] : SO[39]);
+                    do {
+                      VO(dd[SO[17]].push(dd[SO[35]] & SO[12]), dd[SO[35]] >>= SO[11], dd[SO[65]] -= SO[11])
+                    } while (dd[SO[65]] > SO[22]);
+                    dd[SO[22]] = -SO[2]
+                  } return dd[SO[22]] > -SO[2] && dd[SO[17]].push((dd[SO[35]] | dd[SO[22]] << dd[SO[65]]) & SO[12]), sO(dd[SO[17]])
             }
-          }, rr[LS[15]] = function(...rr) {
-            for (HS(rr[LS[13]] = LS[2], rr[LS[2]] = [], rr[LS[16]] = rr[LS[1]].length), rr[LS[56]] = LS[1]; rr[LS[56]] < rr[LS[16]]; rr[LS[56]]++)
-              for (rr[LS[2]][rr[LS[56]]] = "", rr[LS[15]] = LS[1]; rr[LS[15]] < rr[LS[16]]; rr[LS[15]]++) rr[LS[2]][rr[LS[56]]] += rr[LS[1]][rr[LS[56]]][LS[2]] === rr[LS[15]] ? "Q" : ".";
-            return rr[LS[2]]
-          }, rr[-LS[41]] = function(...rr) {
-            for (HS(rr[LS[13]] = LS[0], rr[LS[80]] = rr[LS[1]].length), rr[LS[79]] = LS[1]; rr[LS[79]] < rr[LS[80]]; rr[LS[79]]++) {
-              if (rr[LS[1]][rr[LS[79]]][LS[1]] === rr[LS[2]][LS[1]] || rr[LS[1]][rr[LS[79]]][LS[2]] === rr[LS[2]][LS[2]]) return LS[69];
-              if (Math.abs((rr[LS[1]][rr[LS[79]]][LS[1]] - rr[LS[2]][LS[1]]) / (rr[LS[1]][rr[LS[79]]][LS[2]] - rr[LS[2]][LS[2]])) === LS[2]) return LS[69]
+
+            function Kd(dd) {
+              return typeof YO[dd] === SO[14] ? YO[dd] = Xd(gO[dd]) : YO[dd]
             }
-            return LS[84]
-          }, console.log(rr[LS[5]]))
-        }
-        xr(166) + LS[31] in PS && Ur(), (0, mr[LS[14]])("5 ")
-      }
-    }, hr.i.subscribe("customBindingsChanged", (() => {
-      RS()
-    }));
-    let gS = !1,
-      CS = !1;
-    const MS = () => gS || CS && Hr.c.isInGame(),
-      GS = rr => {
-        MS() && rr.preventDefault()
+
+            function hd(...dd) {
+              function Od(...dd) {
+                return dd[SO[13]] = SO[2], typeof YO[dd[SO[1]]] === SO[14] ? YO[dd[SO[1]]] = function(...dd) {
+                  for (VO(dd[SO[13]] = SO[2], dd[SO[18]] = '#FMpdnDXR+iL7[5JSw/h4%&C{1"sk`Y8|N:b6!v}Zt>~P$B(QH=UyTx)re_o2gIlzO?W.fGqu]0K^9A3;@mV,j*<Eac', dd[-SO[66]] = "" + (dd[SO[1]] || ""), dd[SO[27]] = dd[-SO[66]].length, dd[SO[17]] = [], dd[SO[43]] = SO[1], dd[SO[68]] = SO[1], dd[SO[67]] = -SO[2]), dd[SO[11]] = SO[1]; dd[SO[11]] < dd[SO[27]]; dd[SO[11]]++)
+                    if (dd[SO[6]] = dd[SO[18]].indexOf(dd[-SO[66]][dd[SO[11]]]), dd[SO[6]] !== -SO[2])
+                      if (dd[SO[67]] < SO[1]) dd[SO[67]] = dd[SO[6]];
+                      else {
+                        VO(dd[SO[67]] += dd[SO[6]] * SO[34], dd[SO[43]] |= dd[SO[67]] << dd[SO[68]], dd[SO[68]] += (dd[SO[67]] & SO[36]) > SO[37] ? SO[38] : SO[39]);
+                        do {
+                          VO(dd[SO[17]].push(dd[SO[43]] & SO[12]), dd[SO[43]] >>= SO[11], dd[SO[68]] -= SO[11])
+                        } while (dd[SO[68]] > SO[22]);
+                        dd[SO[67]] = -SO[2]
+                      } return dd[SO[67]] > -SO[2] && dd[SO[17]].push((dd[SO[43]] | dd[SO[67]] << dd[SO[68]]) & SO[12]), sO(dd[SO[17]])
+                }(gO[dd[SO[1]]]) : YO[dd[SO[1]]]
+              }
+              dd[SO[13]] = SO[1], VO(dd[SO[70]] = Od(130) + Od(131) + Od(132), dd[SO[2]] = Od(133) + Od(134) + Od(135) + Od(136) + Od(137) + Od(138) + Od(139), dd[-SO[71]] = Od(140) + Od(SO[47]) + Od(142) + Od(SO[57]) + Od(SO[31]) + Od(145) + Od(146) + SO[69], dd[SO[70]].match(dd[SO[2]] + dd[-SO[71]]))
+            }
+            Kd(129) + "R" in uO && hd(), (0, od[SO[4]])("2 " + (0, Nd[SO[4]])(dd))
+          } else {
+            function vd(...dd) {
+              function Od() {}
+              dd[SO[13]] = SO[1], VO(dd[SO[18]] = function(...dd) {
+                for (VO(dd[SO[13]] = SO[16], dd[SO[16]] = SO[1], dd[SO[0]] = SO[1], dd[SO[10]] = new Od(SO[1]), dd[SO[35]] = dd[SO[10]], dd[SO[20]] = dd[SO[1]], dd[SO[22]] = dd[SO[2]]); dd[SO[20]] !== SO[72] || dd[SO[22]] !== SO[72];) VO(dd[SO[0]] = (dd[SO[20]] ? dd[SO[20]].val : SO[1]) + (dd[SO[22]] ? dd[SO[22]].val : SO[1]) + dd[SO[16]], dd[SO[16]] = Math.floor(dd[SO[0]] / SO[73]), dd[SO[35]].next = new Od(dd[SO[0]] % SO[73]), dd[SO[35]] = dd[SO[35]].next, dd[SO[20]] = dd[SO[20]] ? dd[SO[20]].next : SO[72], dd[SO[22]] = dd[SO[22]] ? dd[SO[22]].next : SO[72]);
+                return dd[SO[16]] && (dd[SO[35]].next = new Od(dd[SO[16]])), dd[SO[10]].next
+              }, console.log(dd[SO[18]]))
+            }
+            Fd(147) + "u" in uO && vd(), pO(dd) < SO[73] ? (0, od[SO[4]])("3 ") : TO()
+          }
+        } else(0, od[SO[4]])("5 ")
+      }, yd.j.subscribe("customBindingsChanged", (() => {
+        AO()
+      }));
+    let rO = !1,
+      GO = !1;
+    const nO = () => rO || GO && Vd.b.isInGame(),
+      LO = dd => {
+        nO() && dd.preventDefault()
       };
-    hr.i.subscribe("displaymodeFullscreenChange", (rr => {
-      kS()
-    })), hr.i.subscribe("pointerLockUpdate", (rr => {
-      gS = rr, kS(), AS()
-    })), hr.i.subscribe("freeCursorUpdate", (rr => {
-      CS = rr, kS(), AS()
+    yd.j.subscribe("displaymodeFullscreenChange", (dd => {
+      PO()
+    })), yd.j.subscribe("pointerLockUpdate", (dd => {
+      rO = dd, PO(), zO()
+    })), yd.j.subscribe("freeCursorUpdate", (dd => {
+      GO = dd, PO(), zO()
     }));
-    const kS = () => {
-        window.removeEventListener("wheel", GS), qr.isIframed && !(0, Ir.q)() && (gS || CS) && window.addEventListener("wheel", GS, {
+    const PO = () => {
+        window.removeEventListener("wheel", LO), Ad.isIframed && !(0, Kd.o)() && (rO || GO) && window.addEventListener("wheel", LO, {
           passive: !1
         })
       },
-      AS = () => {
-        window.removeEventListener("wheel", VS), (gS || CS) && window.addEventListener("wheel", VS, {
+      zO = () => {
+        window.removeEventListener("wheel", cO), (rO || GO) && window.addEventListener("wheel", cO, {
           passive: !1
         })
       },
-      VS = rr => {
-        !0 === rr.ctrlKey && MS() && rr.preventDefault()
+      cO = dd => {
+        !0 === dd.ctrlKey && nO() && dd.preventDefault()
       };
 
-    function iS(rr) {
-      hr.i.Jp("QTEMouseState", {
-        isDown: rr
+    function jO(dd) {
+      yd.j.lQ("QTEMouseState", {
+        isDown: dd
       })
     }
 
-    function wS(rr) {
-      var Sr, Qr, Wr, ar, jr, Ir, fr, Er;
-      const pr = (0, lr.e)();
-      pr.xSr = null !== (Sr = function(rr, Sr) {
-        var Qr, Zr;
-        if (!mS) return null;
-        const Wr = rr.bloxd;
-        fS ??= Wr.getMetaInfo("Board").rootId;
-        const ar = null !== (Qr = null === Sr || void 0 === Sr ? void 0 : Sr.e_) && void 0 !== Qr ? Qr : null;
-        if (!ar || Wr.getMetaInfo(ar).rootId !== fS) return null;
-        const jr = null !== (Zr = null === Sr || void 0 === Sr ? void 0 : Sr.position) && void 0 !== Zr ? Zr : null;
-        if (Wr.playerCanChangePos(rr.fC, jr[0], jr[1], jr[2])) return null;
-        const Ir = (rr, Sr, Qr) => {
-          const Zr = Wr.blockDataOwner.getBlockData(rr, Sr, Qr),
-            ar = null === Zr || void 0 === Zr ? void 0 : Zr.persisted.shared.text.split("\n")[0].toLowerCase().trim();
-          return Rr.singleLineBoardActions.has(ar)
+    function DO(dd) {
+      var Od, md, Fd, Rd, Xd, Kd, hd, vd;
+      const Qd = (0, Sd.c)();
+      Qd.nOd = null !== (Od = function(dd, Od) {
+        var md, Wd;
+        if (!qO) return null;
+        const Fd = dd.bloxd;
+        QO ??= Fd.getMetaInfo("Board").rootId;
+        const Rd = null !== (md = null === Od || void 0 === Od ? void 0 : Od.K9) && void 0 !== md ? md : null;
+        if (!Rd || Fd.getMetaInfo(Rd).rootId !== QO) return null;
+        const Xd = null !== (Wd = null === Od || void 0 === Od ? void 0 : Od.position) && void 0 !== Wd ? Wd : null;
+        if (Fd.playerCanChangePos(dd.YV, Xd[0], Xd[1], Xd[2])) return null;
+        const Kd = (dd, Od, md) => {
+          const Wd = Fd.blockDataOwner.getBlockData(dd, Od, md),
+            Rd = null === Wd || void 0 === Wd ? void 0 : Wd.persisted.shared.text.split("\n")[0].toLowerCase().trim();
+          return rd.singleLineBoardActions.has(Rd)
         };
-        if (Ir(jr[0], jr[1], jr[2])) return null;
-        let fr;
-        rr.OSr && (fr = [...rr.OSr], rr.dD(fr, fr));
-        const Er = (fr ? rr.camera.MJ : 0) + Wr.getBlockReach(rr.fC);
-        return rr.pickBlock(fr, rr.LSr, Er, ((Sr, Qr, Zr, ar) => 0 !== Sr && ("Board" !== Wr.getMetaInfo(Sr).rootName || Wr.playerCanChangePos(rr.fC, Qr, Zr, ar) || Ir(Qr, Zr, ar))))
-      }(pr, pr.xSr)) && void 0 !== Sr ? Sr : pr.xSr;
-      const mr = null !== (Qr = null === (Wr = pr.xSr) || void 0 === Wr ? void 0 : Wr.position) && void 0 !== Qr ? Qr : null,
-        Nr = null !== (ar = pr.LSr) && void 0 !== ar ? ar : pr.camera.Y1(),
-        tr = lr.h.localPlayerPickActionHelper.getPickEntityResult(Nr),
-        zr = null !== (jr = pr.xSr) && void 0 !== jr && jr.e_ ? (0, kr.g)(pr.xSr.e_) : "Air",
-        Yr = rr === Ur.d.UpFirePrimary || rr === Ur.d.UpFireSecondary,
-        nr = Yr ? "onPlayerClickUp" : "onPlayerClick",
-        er = Yr ? rr === Ur.d.UpFireSecondary : rr === Ur.d.DownFireSecondary,
-        Kr = !Yr && (0, Zr.getWasDoubleClick)();
-      hr.i.Jp("mouseState", {
-        bI: rr,
-        isDown: !Yr
-      }), (0, Zr.sendColyMessage)(xr.Ph, {
-        bI: rr,
-        JI: Kr,
-        lj: mr,
-        Xj: tr
-      }, !0), (0, lr.c)().client.triggerGameCallback(nr, pr.fC, er, null !== (Ir = null === mr || void 0 === mr ? void 0 : mr[0]) && void 0 !== Ir ? Ir : null, null !== (fr = null === mr || void 0 === mr ? void 0 : mr[1]) && void 0 !== fr ? fr : null, null !== (Er = null === mr || void 0 === mr ? void 0 : mr[2]) && void 0 !== Er ? Er : null, zr, tr)
+        if (Kd(Xd[0], Xd[1], Xd[2])) return null;
+        let hd;
+        dd.Omd && (hd = [...dd.Omd], dd.E_(hd, hd));
+        const vd = (hd ? dd.camera.rM : 0) + Fd.getBlockReach(dd.YV);
+        return dd.pickBlock(hd, dd.mmd, vd, ((Od, md, Wd, Rd) => 0 !== Od && ("Board" !== Fd.getMetaInfo(Od).rootName || Fd.playerCanChangePos(dd.YV, md, Wd, Rd) || Kd(md, Wd, Rd))))
+      }(Qd, Qd.nOd)) && void 0 !== Od ? Od : Qd.nOd;
+      const od = null !== (md = null === (Fd = Qd.nOd) || void 0 === Fd ? void 0 : Fd.position) && void 0 !== md ? md : null,
+        Nd = null !== (Rd = Qd.mmd) && void 0 !== Rd ? Rd : Qd.camera.B_(),
+        Hd = Sd.g.localPlayerPickActionHelper.getPickEntityResult(Nd),
+        bd = null !== (Xd = Qd.nOd) && void 0 !== Xd && Xd.K9 ? (0, zd.g)(Qd.nOd.K9) : "Air",
+        Td = dd === qd.b.UpFirePrimary || dd === qd.b.UpFireSecondary,
+        pd = Td ? "onPlayerClickUp" : "onPlayerClick",
+        Yd = Td ? dd === qd.b.UpFireSecondary : dd === qd.b.DownFireSecondary,
+        gd = !Td && (0, Wd.getWasDoubleClick)();
+      yd.j.lQ("mouseState", {
+        lK: dd,
+        isDown: !Td
+      }), (0, Wd.sendColyMessage)(td.eh, {
+        lK: dd,
+        CK: gd,
+        BX: od,
+        SX: Hd
+      }, !0), (0, Sd.b)().client.triggerGameCallback(pd, Qd.YV, Yd, null !== (Kd = null === od || void 0 === od ? void 0 : od[0]) && void 0 !== Kd ? Kd : null, null !== (hd = null === od || void 0 === od ? void 0 : od[1]) && void 0 !== hd ? hd : null, null !== (vd = null === od || void 0 === od ? void 0 : od[2]) && void 0 !== vd ? vd : null, bd, Hd)
     }
-    window.addEventListener("keydown", (rr => {
-      ["ArrowUp", "ArrowDown"].includes(rr.key) && rr.preventDefault()
-    })), document.addEventListener("keydown", (rr => {
-      (0, Mr.b)(rr, (() => {
-        const rr = (0, lr.e)();
-        return (0, Cr.L)(rr) || !1 !== rr.NK.canCustomiseChar
+    window.addEventListener("keydown", (dd => {
+      ["ArrowUp", "ArrowDown"].includes(dd.key) && dd.preventDefault()
+    })), document.addEventListener("keydown", (dd => {
+      (0, Ld.d)(dd, (() => {
+        const dd = (0, Sd.c)();
+        return (0, nd.O)(dd) || !1 !== dd.EY.canCustomiseChar
       }))
     }))
   },
-  40653: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar,
-      g: () => jr
+  40659: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd,
+      e: () => Xd
     });
-    var Zr = Qr(39926);
-    let Wr = !1;
+    var Wd = md(39966);
+    let Fd = !1;
 
-    function ar() {
-      return Wr
+    function Rd() {
+      return Fd
     }
 
-    function jr(rr) {
-      Wr = rr, rr ? Zr.f.setMultiplierType("emoteWheel", 0) : Zr.f.removeMultiplier("emoteWheel")
+    function Xd(dd) {
+      Fd = dd, dd ? Wd.g.setMultiplierType("emoteWheel", 0) : Wd.g.removeMultiplier("emoteWheel")
     }
   },
-  40662: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return Boolean(rr.NK.useInventory && rr.NK.useFullInventory && rr.YB.pQr(rr.fC))
+  40672: (dd, Od, md) => {
+    function Wd(dd) {
+      return Boolean(dd.EY.useInventory && dd.EY.useFullInventory && dd.qE.Imd(dd.YV))
     }
-    Qr.d(Sr, {
-      b: () => Zr
+    md.d(Od, {
+      c: () => Wd
     })
   },
-  40561: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => ar,
-      f: () => Wr
+  40553: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd,
+      f: () => Fd
     });
-    var Zr = Qr(38625);
+    var Wd = md(38673);
 
-    function Wr(rr, Sr) {
+    function Fd(dd, Od) {
       return {
-        replayedClipName: rr,
-        replayedClipAgeSeconds: Sr
+        replayedClipName: dd,
+        replayedClipAgeSeconds: Od
       }
     }
 
-    function ar(rr, Sr, Qr, Wr, ar) {
-      const jr = function(rr) {
-          if ("object" !== typeof rr || null === rr) return null;
+    function Rd(dd, Od, md, Fd, Rd) {
+      const Xd = function(dd) {
+          if ("object" !== typeof dd || null === dd) return null;
           const {
-            replayedClipName: Sr,
-            replayedClipAgeSeconds: Qr
-          } = rr;
-          return "string" === typeof Sr && "number" === typeof Qr ? {
-            eQ: Sr,
-            KQ: Qr
+            replayedClipName: Od,
+            replayedClipAgeSeconds: md
+          } = dd;
+          return "string" === typeof Od && "number" === typeof md ? {
+            Tm: Od,
+            pm: md
           } : null
-        }(Qr),
-        Ir = null === jr ? Qr : null,
+        }(md),
+        Kd = null === Xd ? md : null,
         {
-          eQ: fr = null,
-          KQ: Er = 0
-        } = null !== jr && void 0 !== jr ? jr : {};
-      rr.animateEntity(Sr, Zr.i.Custom, Ir, Wr, ar, fr, Er)
+          Tm: hd = null,
+          pm: vd = 0
+        } = null !== Xd && void 0 !== Xd ? Xd : {};
+      dd.animateEntity(Od, Wd.c.Custom, Kd, Fd, Rd, hd, vd)
     }
   },
-  40655: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => pr
+  40666: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Qd
     });
-    var Zr = Qr(39859),
-      Wr = Qr(379),
-      ar = Qr(2383);
+    var Wd = md(39919),
+      Fd = md(405),
+      Rd = md(2402);
 
-    function jr() {
-      var rr, Sr, Qr, Zr;
-      const jr = (0, ar.e)(),
-        Ir = null !== (rr = null === (Sr = jr.YB.IQr(jr.fC)) || void 0 === Sr ? void 0 : Sr.selectedItem) && void 0 !== rr ? rr : null,
-        fr = Ir ? (0, ar.c)().getItemStat(jr.fC, Ir.name, "attackCooldownMs") : null,
-        Er = (0, Wr.$c)(fr, null === Ir || void 0 === Ir || null === (Qr = Ir.attributes.customAttributes) || void 0 === Qr || null === (Zr = Qr.enchantments) || void 0 === Zr ? void 0 : Zr["Attack Speed"]);
-      return Math.max(56, Math.ceil((Er + 30) / 3))
+    function Xd() {
+      var dd, Od, md, Wd;
+      const Xd = (0, Rd.c)(),
+        Kd = null !== (dd = null === (Od = Xd.qE.zmd(Xd.YV)) || void 0 === Od ? void 0 : Od.selectedItem) && void 0 !== dd ? dd : null,
+        hd = Kd ? (0, Rd.b)().getItemStat(Xd.YV, Kd.name, "attackCooldownMs") : null,
+        vd = (0, Fd.ad)(hd, null === Kd || void 0 === Kd || null === (md = Kd.attributes.customAttributes) || void 0 === md || null === (Wd = md.enchantments) || void 0 === Wd ? void 0 : Wd["Attack Speed"]);
+      return Math.max(56, Math.ceil((vd + 30) / 3))
     }
-    class Ir {
-      constructor(rr, Sr) {
-        this.tries = void 0, this.dueMs = void 0, this.intervalMs = void 0, this.tries = [rr], this.dueMs = rr, this.intervalMs = Sr
+    class Kd {
+      constructor(dd, Od) {
+        this.tries = void 0, this.dueMs = void 0, this.intervalMs = void 0, this.tries = [dd], this.dueMs = dd, this.intervalMs = Od
       }
-      spacedBy(rr, Sr) {
-        if (rr === this.intervalMs) return this;
-        const Qr = this.tries[this.tries.length - 1],
-          Zr = new Ir(Qr, rr);
-        return Zr.dueMs = Math.max(Qr, Sr - rr), Zr
+      spacedBy(dd, Od) {
+        if (dd === this.intervalMs) return this;
+        const md = this.tries[this.tries.length - 1],
+          Wd = new Kd(md, dd);
+        return Wd.dueMs = Math.max(md, Od - dd), Wd
       }
       nextDueMs() {
-        const rr = this.tries[this.tries.length - 1];
-        return Math.max(rr + 56, this.tries[0] + this.tries.length * this.intervalMs, this.dueMs + this.intervalMs)
+        const dd = this.tries[this.tries.length - 1];
+        return Math.max(dd + 56, this.tries[0] + this.tries.length * this.intervalMs, this.dueMs + this.intervalMs)
       }
-      noteTry(rr, Sr) {
-        this.tries.push(rr), this.tries.length > 3 && this.tries.shift(), this.dueMs = Sr
+      noteTry(dd, Od) {
+        this.tries.push(dd), this.tries.length > 3 && this.tries.shift(), this.dueMs = Od
       }
     }
-    var fr = Qr(40653),
-      Er = Qr(1353);
-    class pr {
+    var hd = md(40659),
+      vd = md(1349);
+    class Qd {
       constructor() {
-        this.timer = null, this.tries = new Ir(0, 0), this.check = () => {
-          const rr = Date.now(),
-            Sr = this.tries.spacedBy(jr(), rr),
-            Qr = Sr.nextDueMs();
-          if (rr < Qr) this.schedule();
+        this.timer = null, this.tries = new Kd(0, 0), this.check = () => {
+          const dd = Date.now(),
+            Od = this.tries.spacedBy(Xd(), dd),
+            md = Od.nextDueMs();
+          if (dd < md) this.schedule();
           else {
-            if (Sr.noteTry(rr, Qr), this.tries = Sr, (0, Er.v)() && !(0, fr.d)()) {
-              var Wr, Ir;
-              (0, Zr.e)();
-              const rr = (0, ar.e)();
-              null === (Wr = rr.YB.lQr(rr.fC)) || void 0 === Wr || null === (Ir = Wr.jB) || void 0 === Ir || Ir.repeatAttack()
+            if (Od.noteTry(dd, md), this.tries = Od, (0, vd.y)() && !(0, hd.c)()) {
+              var Fd, Kd;
+              (0, Wd.g)();
+              const dd = (0, Rd.c)();
+              null === (Fd = dd.qE.oWd(dd.YV)) || void 0 === Fd || null === (Kd = Fd.WE) || void 0 === Kd || Kd.repeatAttack()
             }
             this.schedule()
           }
         }
       }
       start() {
-        var rr;
-        null === (rr = pr.running) || void 0 === rr || rr.stop(), pr.running = this, this.tries = new Ir(Date.now(), jr()), this.schedule()
+        var dd;
+        null === (dd = Qd.running) || void 0 === dd || dd.stop(), Qd.running = this, this.tries = new Kd(Date.now(), Xd()), this.schedule()
       }
       static stopRunning() {
-        var rr;
-        null === (rr = pr.running) || void 0 === rr || rr.stop()
+        var dd;
+        null === (dd = Qd.running) || void 0 === dd || dd.stop()
       }
       stop() {
-        clearTimeout(this.timer), this.timer = null, pr.running === this && (pr.running = null)
+        clearTimeout(this.timer), this.timer = null, Qd.running === this && (Qd.running = null)
       }
       schedule() {
-        const rr = Date.now(),
-          Sr = this.tries.spacedBy(jr(), rr).nextDueMs() - rr;
-        this.timer = setTimeout(this.check, Math.min(Sr, 100))
+        const dd = Date.now(),
+          Od = this.tries.spacedBy(Xd(), dd).nextDueMs() - dd;
+        this.timer = setTimeout(this.check, Math.min(Od, 100))
       }
     }
-    pr.running = null
+    Qd.running = null
   },
-  40563: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Ur,
-      g: () => pr,
-      h: () => Nr,
-      l: () => mr,
-      m: () => tr,
-      n: () => xr
+  40559: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => qd,
+      f: () => Qd,
+      g: () => Nd,
+      i: () => od,
+      m: () => Hd,
+      q: () => td
     });
-    var Zr = Qr(40568),
-      Wr = Qr(38659),
-      ar = Qr(2364),
-      jr = Qr(2093),
-      Ir = Qr(34),
-      fr = Qr(2383);
-    const Er = new Zr.b;
+    var Wd = md(40565),
+      Fd = md(38702),
+      Rd = md(2386),
+      Xd = md(2094),
+      Kd = md(32),
+      hd = md(2402);
+    const vd = new Wd.e;
 
-    function pr() {
-      return Er
+    function Qd() {
+      return vd
     }
 
-    function xr() {
-      Er.clear()
+    function td() {
+      vd.clear()
     }
 
-    function mr() {
-      for (const rr of Er.ids()) {
-        const Sr = Er.getName(rr);
-        void 0 !== Sr && jr.b.delete(Sr)
+    function od() {
+      for (const dd of vd.ids()) {
+        const Od = vd.getName(dd);
+        void 0 !== Od && Xd.c.delete(Od)
       }
-      xr(), Ir.i.Jp("playerRosterChanged", Er.ids())
+      td(), Kd.j.lQ("playerRosterChanged", vd.ids())
     }
 
-    function Nr(rr, Sr) {
-      var Qr, Zr;
-      if (Er.has(rr)) return Er.getSetting(rr, Sr);
-      const Wr = (0, fr.e)();
-      return null === (Qr = Wr.xG[Wr.fC]) || void 0 === Qr || null === (Zr = Qr[rr]) || void 0 === Zr ? void 0 : Zr[Sr]
+    function Nd(dd, Od) {
+      var md, Wd;
+      if (vd.has(dd)) return vd.getSetting(dd, Od);
+      const Fd = (0, hd.c)();
+      return null === (md = Fd.sG[Fd.YV]) || void 0 === md || null === (Wd = md[dd]) || void 0 === Wd ? void 0 : Wd[Od]
     }
 
-    function Ur(rr) {
+    function qd(dd) {
       const {
-        added: Sr,
-        removed: Qr,
-        settingChanges: Zr
-      } = Er.apply(rr);
+        added: Od,
+        removed: md,
+        settingChanges: Wd
+      } = vd.apply(dd);
       for (const {
-          playerId: Wr,
-          name: ar
+          playerId: Fd,
+          name: Rd
         }
-        of Qr) void 0 === ar || hr(Wr) || jr.b.delete(ar);
+        of md) void 0 === Rd || yd(Fd) || Xd.c.delete(Rd);
       for (const {
-          playerId: ar,
-          settings: jr
+          playerId: Rd,
+          settings: Xd
         }
-        of Zr)
-        if (hr(ar)) tr(ar, jr);
+        of Wd)
+        if (yd(Rd)) Hd(Rd, Xd);
         else
-          for (const rr in jr)(0, Wr.i)(ar, rr, jr[rr]);
-      (Sr.length > 0 || Qr.length > 0) && Ir.i.Jp("playerRosterChanged", Er.ids())
+          for (const dd in Xd)(0, Fd.n)(Rd, dd, Xd[dd]);
+      (Od.length > 0 || md.length > 0) && Kd.j.lQ("playerRosterChanged", vd.ids())
     }
 
-    function tr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Er.getSettings(rr);
-      if (Sr) {
-        (0, Wr.d)(rr);
-        for (const Qr in Sr)(0, Wr.c)(rr, Qr, Sr[Qr])
+    function Hd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vd.getSettings(dd);
+      if (Od) {
+        (0, Fd.h)(dd);
+        for (const md in Od)(0, Fd.e)(dd, md, Od[md])
       }
     }
 
-    function hr(rr) {
-      return rr === (0, fr.e)().WC || (0, fr.c)().client.hasEntity(rr)
-    }(0, ar.onGameReset)(xr)
+    function yd(dd) {
+      return dd === (0, hd.c)().bV || (0, hd.b)().client.hasEntity(dd)
+    }(0, Rd.onGameReset)(td)
   },
-  39604: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Or,
-      g: () => yr,
-      i: () => Tr,
-      k: () => vr,
-      o: () => Lr
+  39639: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => xd,
+      e: () => wd,
+      i: () => Jd,
+      m: () => Ud,
+      q: () => Bd
     });
-    var Zr = Qr(38555),
-      Wr = Qr(39607),
-      ar = Qr(388),
-      jr = Qr.n(ar),
-      Ir = Qr(4637);
-    const fr = new Zr.kU,
-      Er = new Zr.kU,
-      pr = new Zr.kU,
-      xr = new Zr.kU,
-      mr = new Zr.kU,
-      Nr = [0, 0, 0],
-      Ur = {
+    var Wd = md(38627),
+      Fd = md(39642),
+      Rd = md(415),
+      Xd = md.n(Rd),
+      Kd = md(4624);
+    const hd = new Wd.Cq,
+      vd = new Wd.Cq,
+      Qd = new Wd.Cq,
+      td = new Wd.Cq,
+      od = new Wd.Cq,
+      Nd = [0, 0, 0],
+      qd = {
         x: 0,
         y: 0
       },
-      tr = new Zr.kU(1, 0, 0),
-      hr = new Zr.kU(0, 1, 0),
-      zr = Zr.Matrix.Identity(),
-      Yr = new Zr.Matrix,
-      nr = new Zr.Matrix,
-      er = new Zr.kU,
-      Kr = new Wr.d(0, 0, 0, 0);
+      Hd = new Wd.Cq(1, 0, 0),
+      yd = new Wd.Cq(0, 1, 0),
+      bd = Wd.Matrix.Identity(),
+      Td = new Wd.Matrix,
+      pd = new Wd.Matrix,
+      Yd = new Wd.Cq,
+      gd = new Fd.b(0, 0, 0, 0);
 
-    function yr(rr, Sr) {
-      var Qr, Wr;
-      const ar = Br(rr, Sr);
-      if (ar) {
-        const rr = ar.x,
-          Sr = ar.y,
-          Qr = rr - 50,
-          Zr = Sr - 50;
-        return Math.abs(Qr) <= Ir.c && Math.abs(Zr) <= (0, Ir.h)() ? {
-          x: rr,
-          y: Sr
-        } : Xr(Qr, Zr)
+    function wd(dd, Od) {
+      var md, Fd;
+      const Rd = Ed(dd, Od);
+      if (Rd) {
+        const dd = Rd.x,
+          Od = Rd.y,
+          md = dd - 50,
+          Wd = Od - 50;
+        return Math.abs(md) <= Kd.b && Math.abs(Wd) <= (0, Kd.m)() ? {
+          x: dd,
+          y: Od
+        } : sd(md, Wd)
       }
-      pr.Hrr(Sr[0], Sr[1], Sr[2]),
-        function(rr) {
-          const Sr = rr.Ox.nZr(),
-            Qr = Sr ? Zr.Matrix.FromArrayToRef(Sr.worldMatrix, 0, nr) : rr.Ox.eC().activeCamera.getWorldMatrix();
-          Zr.kU.TransformNormalToRef(tr, Qr, xr), xr.normalize(), Zr.kU.TransformNormalToRef(hr, Qr, mr), mr.normalize()
-        }(rr);
-      const jr = Zr.kU.Dot(pr, xr);
-      let fr = -Zr.kU.Dot(pr, mr);
-      Math.abs(jr) < .001 && Math.abs(fr) < .001 && (fr = -1);
-      const Er = null !== (Qr = null === (Wr = rr.Ox.nZr()) || void 0 === Wr ? void 0 : Wr.projectionMatrix) && void 0 !== Qr ? Qr : rr.Ox.eC().activeCamera.getProjectionMatrix().m;
-      return Xr(jr * Er[0], fr * Er[5])
+      Qd.KOd(Od[0], Od[1], Od[2]),
+        function(dd) {
+          const Od = dd.gt.OFd(),
+            md = Od ? Wd.Matrix.FromArrayToRef(Od.worldMatrix, 0, pd) : dd.gt.zV().activeCamera.getWorldMatrix();
+          Wd.Cq.TransformNormalToRef(Hd, md, td), td.normalize(), Wd.Cq.TransformNormalToRef(yd, md, od), od.normalize()
+        }(dd);
+      const Xd = Wd.Cq.Dot(Qd, td);
+      let hd = -Wd.Cq.Dot(Qd, od);
+      Math.abs(Xd) < .001 && Math.abs(hd) < .001 && (hd = -1);
+      const vd = null !== (md = null === (Fd = dd.gt.OFd()) || void 0 === Fd ? void 0 : Fd.projectionMatrix) && void 0 !== md ? md : dd.gt.zV().activeCamera.getProjectionMatrix().m;
+      return sd(Xd * vd[0], hd * vd[5])
     }
 
-    function Br(rr, Sr) {
-      const Qr = rr.Ox.eC(),
-        Wr = Qr.MU(),
-        ar = Wr.getRenderWidth(),
-        jr = Wr.getRenderHeight();
-      Kr.width = ar, Kr.height = jr;
-      const Ir = rr.Ox.nZr(),
-        pr = Ir ? er.Hrr(Ir.eye[0], Ir.eye[1], Ir.eye[2]) : rr.Ox.camera.globalPosition;
-      fr.Hrr(pr.x + 10 * Sr[0], pr.y + 10 * Sr[1], pr.z + 10 * Sr[2]);
-      const xr = Ir ? Zr.Matrix.FromArrayToRef(Ir.viewProjectionMatrix, 0, Yr) : Qr.getTransformMatrix();
-      return Zr.kU.ProjectToRef(fr, zr, xr, Kr, Er), Er.z < 0 || Er.z > 1 ? null : (Ur.x = Er.x / ar * 100, Ur.y = Er.y / jr * 100, Ur)
+    function Ed(dd, Od) {
+      const md = dd.gt.zV(),
+        Fd = md.Iq(),
+        Rd = Fd.getRenderWidth(),
+        Xd = Fd.getRenderHeight();
+      gd.width = Rd, gd.height = Xd;
+      const Kd = dd.gt.OFd(),
+        Qd = Kd ? Yd.KOd(Kd.eye[0], Kd.eye[1], Kd.eye[2]) : dd.gt.camera.globalPosition;
+      hd.KOd(Qd.x + 10 * Od[0], Qd.y + 10 * Od[1], Qd.z + 10 * Od[2]);
+      const td = Kd ? Wd.Matrix.FromArrayToRef(Kd.viewProjectionMatrix, 0, Td) : md.getTransformMatrix();
+      return Wd.Cq.ProjectToRef(hd, bd, td, gd, vd), vd.z < 0 || vd.z > 1 ? null : (qd.x = vd.x / Rd * 100, qd.y = vd.y / Xd * 100, qd)
     }
 
-    function Tr(rr, Sr) {
-      return yr(rr, lr(rr, Sr))
+    function Jd(dd, Od) {
+      return wd(dd, Sd(dd, Od))
     }
 
-    function vr(rr, Sr) {
-      const Qr = Br(rr, lr(rr, Sr));
-      return Qr && {
-        x: Qr.x,
-        y: Qr.y
+    function Ud(dd, Od) {
+      const md = Ed(dd, Sd(dd, Od));
+      return md && {
+        x: md.x,
+        y: md.y
       }
     }
 
-    function Or(rr) {
-      var Sr, Qr;
-      return 1 / (null !== (Sr = null === (Qr = rr.Ox.nZr()) || void 0 === Qr ? void 0 : Qr.projectionMatrix[0]) && void 0 !== Sr ? Sr : rr.Ox.eC().activeCamera.getProjectionMatrix().m[0])
+    function xd(dd) {
+      var Od, md;
+      return 1 / (null !== (Od = null === (md = dd.gt.OFd()) || void 0 === md ? void 0 : md.projectionMatrix[0]) && void 0 !== Od ? Od : dd.gt.zV().activeCamera.getProjectionMatrix().m[0])
     }
 
-    function Lr(rr, Sr, Qr) {
-      const Zr = rr.Ox.nZr(),
-        Wr = Zr ? Zr.worldMatrix : rr.Ox.eC().activeCamera.getWorldMatrix().m,
-        ar = rr.um;
-      for (let jr = 0; jr < 3; jr++) Sr[jr] = Wr[12 + jr] + ar[jr], Qr[jr] = Wr[8 + jr];
-      jr().normalize(Qr, Qr)
+    function Bd(dd, Od, md) {
+      const Wd = dd.gt.OFd(),
+        Fd = Wd ? Wd.worldMatrix : dd.gt.zV().activeCamera.getWorldMatrix().m,
+        Rd = dd.XN;
+      for (let Xd = 0; Xd < 3; Xd++) Od[Xd] = Fd[12 + Xd] + Rd[Xd], md[Xd] = Fd[8 + Xd];
+      Xd().normalize(md, md)
     }
 
-    function lr(rr, Sr) {
-      const Qr = rr.um,
-        Zr = rr.Ox.nZr(),
-        Wr = Zr ? er.Hrr(Zr.eye[0], Zr.eye[1], Zr.eye[2]) : rr.Ox.camera.globalPosition;
-      return Nr[0] = Sr[0] - Qr[0] - Wr.x, Nr[1] = Sr[1] - Qr[1] - Wr.y, Nr[2] = Sr[2] - Qr[2] - Wr.z, jr().normalize(Nr, Nr), Nr
+    function Sd(dd, Od) {
+      const md = dd.XN,
+        Wd = dd.gt.OFd(),
+        Fd = Wd ? Yd.KOd(Wd.eye[0], Wd.eye[1], Wd.eye[2]) : dd.gt.camera.globalPosition;
+      return Nd[0] = Od[0] - md[0] - Fd.x, Nd[1] = Od[1] - md[1] - Fd.y, Nd[2] = Od[2] - md[2] - Fd.z, Xd().normalize(Nd, Nd), Nd
     }
 
-    function Xr(rr, Sr) {
-      return (0, Ir.d)(rr, Sr, Ir.c, (0, Ir.h)())
+    function sd(dd, Od) {
+      return (0, Kd.f)(dd, Od, Kd.b, (0, Kd.m)())
     }
   },
-  40605: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Ir
+  40603: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Kd
     });
-    var Zr = Qr(34),
-      Wr = Qr(1353),
-      ar = Qr(2466);
-    const jr = "Reconnecting";
-    class Ir {
-      constructor(rr) {
-        this.hooks = rr, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
+    var Wd = md(32),
+      Fd = md(1349),
+      Rd = md(2482);
+    const Xd = "Reconnecting";
+    class Kd {
+      constructor(dd) {
+        this.hooks = dd, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
           "visible" === document.visibilityState && this.controller.retryNow()
-        }, this.onPageHide = rr => {
-          rr.persisted || this.leave()
-        }, this.controller = new ar.h((Sr => rr.reconnect(Sr)), {
-          isSessionLive: () => !this.ended && rr.isLive(),
-          onPhaseChanged: rr => {
-            this.onPhaseChanged(rr)
+        }, this.onPageHide = dd => {
+          dd.persisted || this.leave()
+        }, this.controller = new Rd.g((Od => dd.reconnect(Od)), {
+          isSessionLive: () => !this.ended && dd.isLive(),
+          onPhaseChanged: dd => {
+            this.onPhaseChanged(dd)
           },
-          onReconnected: Sr => {
-            rr.onReconnected(Sr)
+          onReconnected: Od => {
+            dd.onReconnected(Od)
           },
-          onGaveUp: Sr => {
-            !this.ended && rr.isLive() && rr.onGaveUp(this.sessionBased, Sr)
+          onGaveUp: Od => {
+            !this.ended && dd.isLive() && dd.onGaveUp(this.sessionBased, Od)
           }
         })
       }
-      onInitialInfo(rr, Sr) {
-        this.graceMs = rr, this.sessionBased = Sr
+      onInitialInfo(dd, Od) {
+        this.graceMs = dd, this.sessionBased = Od
       }
       canHoldSeat() {
         return this.graceMs > 0 && !this.ended
@@ -4194,8 +4037,8 @@ export const modules = {
       isResuming() {
         return "connected" !== this.controller.phase
       }
-      onConnectionLost(rr) {
-        this.ended || this.controller.onConnectionLost(rr, this.graceMs)
+      onConnectionLost(dd) {
+        this.ended || this.controller.onConnectionLost(dd, this.graceMs)
       }
       onResuming() {
         this.ended || this.controller.onResuming()
@@ -4204,40 +4047,40 @@ export const modules = {
         this.controller.stop()
       }
       leave() {
-        const rr = this.isResuming() && !this.controller.awaitingResumeOnRoom,
-          Sr = this.controller.heldToken;
-        this.end(), rr && "" !== Sr && this.hooks.releaseSeat(Sr)
+        const dd = this.isResuming() && !this.controller.awaitingResumeOnRoom,
+          Od = this.controller.heldToken;
+        this.end(), dd && "" !== Od && this.hooks.releaseSeat(Od)
       }
       end() {
         this.ended = !0, this.controller.stop()
       }
-      onPhaseChanged(rr) {
-        const Sr = (0, ar.v)(rr);
-        Sr !== this.stopped && (this.stopped = Sr, this.hooks.freeze(Sr));
-        const Qr = "frozen" === rr || "resuming" === rr && this.frozen;
-        Qr && !this.frozen ? (0, Wr.t)(jr, {
+      onPhaseChanged(dd) {
+        const Od = (0, Rd.v)(dd);
+        Od !== this.stopped && (this.stopped = Od, this.hooks.freeze(Od));
+        const md = "frozen" === dd || "resuming" === dd && this.frozen;
+        md && !this.frozen ? (0, Fd.v)(Xd, {
           overridesPause: !0
-        }) : !Qr && this.frozen && (0, Wr.s)(jr), this.frozen = Qr, this.setListening("connected" !== rr), Zr.i.Jp(ar.u, Qr ? "frozen" : rr)
+        }) : !md && this.frozen && (0, Fd.u)(Xd), this.frozen = md, this.setListening("connected" !== dd), Wd.j.lQ(Rd.r, md ? "frozen" : dd)
       }
-      setListening(rr) {
-        rr !== this.listening && (this.listening = rr, rr ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
+      setListening(dd) {
+        dd !== this.listening && (this.listening = dd, dd ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
       }
     }
   },
-  40608: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Zr
+  40611: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Wd
     });
-    class Zr {
-      constructor(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.onSilent = rr, this.now = Sr, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
-          const rr = this.now(),
-            Sr = rr - this.lastCheckAt <= 2e3;
-          this.lastCheckAt = rr;
-          const Qr = "visible" === document.visibilityState;
-          !Qr || Sr && this.wasVisible || (this.resumedAt = rr), this.wasVisible = Qr, Qr && rr - this.lastHeardAt > 12e3 && rr - this.resumedAt > 2e3 && this.onSilent()
-        }, this.lastHeardAt = Sr(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
+    class Wd {
+      constructor(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.onSilent = dd, this.now = Od, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
+          const dd = this.now(),
+            Od = dd - this.lastCheckAt <= 2e3;
+          this.lastCheckAt = dd;
+          const md = "visible" === document.visibilityState;
+          !md || Od && this.wasVisible || (this.resumedAt = dd), this.wasVisible = md, md && dd - this.lastHeardAt > 12e3 && dd - this.resumedAt > 2e3 && this.onSilent()
+        }, this.lastHeardAt = Od(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
       }
       heard() {
         this.lastHeardAt = this.now()
@@ -4247,533 +4090,533 @@ export const modules = {
       }
     }
   },
-  40543: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => mr
+  40544: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => od
     });
-    var Zr = Qr(208),
-      Wr = Qr(388),
-      ar = Qr.n(Wr),
-      jr = Qr(37843),
-      Ir = Qr(37851),
-      fr = Qr(2383);
-    const Er = Zr.i.Uz * Zr.i.playerEyeToHeightRatio,
-      pr = 250,
-      xr = 1.1,
-      mr = new class {
+    var Wd = md(218),
+      Fd = md(415),
+      Rd = md.n(Fd),
+      Xd = md(37939),
+      Kd = md(37942),
+      hd = md(2402);
+    const vd = Wd.i.yb * Wd.i.playerEyeToHeightRatio,
+      Qd = 250,
+      td = 1.1,
+      od = new class {
         constructor() {
           this.entities = new Map, this.playing = new Map, this.msSinceLastScan = 0
         }
-        add(rr, Sr) {
-          this.entities.set(rr, Sr)
+        add(dd, Od) {
+          this.entities.set(dd, Od)
         }
-        update(rr, Sr) {
-          const Qr = this.entities.get(rr);
-          this.entities.set(rr, Sr);
-          const Zr = this.playing.get(rr);
-          Zr && (Qr && Qr.soundName === Sr.soundName ? (Zr.sound.setRelativeVolume(Sr.volume), Zr.sound.rate(Sr.rate), Zr.sound.setPannerAttr({
-            refDistance: Sr.refDistance
-          })) : this.stopEntity(rr))
+        update(dd, Od) {
+          const md = this.entities.get(dd);
+          this.entities.set(dd, Od);
+          const Wd = this.playing.get(dd);
+          Wd && (md && md.soundName === Od.soundName ? (Wd.sound.setRelativeVolume(Od.volume), Wd.sound.rate(Od.rate), Wd.sound.setPannerAttr({
+            refDistance: Od.refDistance
+          })) : this.stopEntity(dd))
         }
-        remove(rr) {
-          this.stopEntity(rr), this.entities.delete(rr)
+        remove(dd) {
+          this.stopEntity(dd), this.entities.delete(dd)
         }
-        lx(rr) {
-          this.msSinceLastScan += rr, this.msSinceLastScan < pr || (this.msSinceLastScan = 0, this.scan())
+        Et(dd) {
+          this.msSinceLastScan += dd, this.msSinceLastScan < Qd || (this.msSinceLastScan = 0, this.scan())
         }
-        stopEntity(rr) {
-          const Sr = this.playing.get(rr);
-          Sr && (Sr.sound.stop(), this.playing.delete(rr))
+        stopEntity(dd) {
+          const Od = this.playing.get(dd);
+          Od && (Od.sound.stop(), this.playing.delete(dd))
         }
-        startEntity(rr, Sr, Qr) {
-          const Zr = (0, Ir.c)(Sr.soundName);
-          if (!Zr) return console.error(`AudioEntityManager: no sound found for "${Sr.soundName}", dropping audio entity ${rr}`), void this.remove(rr);
-          const Wr = jr.b.play(Zr, Sr.volume, Qr, Sr.maxHearDist, Sr.refDistance, !0);
-          Wr.rate(Sr.rate), this.playing.set(rr, {
-            sound: Wr,
-            lastPos: ar().clone(Qr)
+        startEntity(dd, Od, md) {
+          const Wd = (0, Kd.f)(Od.soundName);
+          if (!Wd) return console.error(`AudioEntityManager: no sound found for "${Od.soundName}", dropping audio entity ${dd}`), void this.remove(dd);
+          const Fd = Xd.d.play(Wd, Od.volume, md, Od.maxHearDist, Od.refDistance, !0);
+          Fd.rate(Od.rate), this.playing.set(dd, {
+            sound: Fd,
+            lastPos: Rd().clone(md)
           })
         }
         scan() {
-          const rr = (0, fr.e)();
-          if (!rr) return;
-          const Sr = rr.YB.JY(rr.fC);
-          if (Sr)
-            for (const [Qr, Zr] of this.entities) {
-              if (!rr.YB.TSr(Qr, "position")) continue;
-              const Wr = rr.YB.JY(Qr),
-                jr = ar().sqrDist(Sr, Wr),
-                Ir = this.playing.get(Qr);
-              if (Ir) {
-                const rr = Zr.maxHearDist * xr;
-                jr > rr * rr ? this.stopEntity(Qr) : ar().equals(Wr, Ir.lastPos) || (Ir.sound.setPosition([Wr[0], Wr[1] + Er, Wr[2]]), ar().copy(Ir.lastPos, Wr))
-              } else jr <= Zr.maxHearDist * Zr.maxHearDist && this.startEntity(Qr, Zr, Wr)
+          const dd = (0, hd.c)();
+          if (!dd) return;
+          const Od = dd.qE.hY(dd.YV);
+          if (Od)
+            for (const [md, Wd] of this.entities) {
+              if (!dd.qE.MOd(md, "position")) continue;
+              const Fd = dd.qE.hY(md),
+                Xd = Rd().sqrDist(Od, Fd),
+                Kd = this.playing.get(md);
+              if (Kd) {
+                const dd = Wd.maxHearDist * td;
+                Xd > dd * dd ? this.stopEntity(md) : Rd().equals(Fd, Kd.lastPos) || (Kd.sound.setPosition([Fd[0], Fd[1] + vd, Fd[2]]), Rd().copy(Kd.lastPos, Fd))
+              } else Xd <= Wd.maxHearDist * Wd.maxHearDist && this.startEntity(md, Wd, Fd)
             }
         }
       }
   },
-  40625: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Er,
-      h: () => pr
+  40627: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => vd,
+      g: () => Qd
     });
-    var Zr = Qr(1846),
-      Wr = Qr(208),
-      ar = Qr(1815),
-      jr = Qr(1940),
-      Ir = Qr(1262),
-      fr = Qr(1187);
-    async function Er(rr, Sr) {
-      return function(rr) {
-        return "object" === typeof rr && null !== rr && rr.code === Wr.e.VpnIp.code
-      }(Sr) && function(rr) {
-        return ar.b.supports("appCheck") && rr.isLoggedIn() && !rr.hasTriedAppAttestation()
-      }(rr) && await async function(rr) {
+    var Wd = md(1856),
+      Fd = md(218),
+      Rd = md(1822),
+      Xd = md(1941),
+      Kd = md(1253),
+      hd = md(1189);
+    async function vd(dd, Od) {
+      return function(dd) {
+        return "object" === typeof dd && null !== dd && dd.code === Fd.e.VpnIp.code
+      }(Od) && function(dd) {
+        return Rd.c.supports("appCheck") && dd.isLoggedIn() && !dd.hasTriedAppAttestation()
+      }(dd) && await async function(dd) {
         try {
           const {
-            token: Sr
-          } = await (0, jr.d)(), {
-            "3PSIDMCPP": Qr
-          } = await (0, fr.postJsonWithMetricsCookiesAndJsonResponse)(`${Ir.clientSideServerUrls.indexUrl}/index/app-attestation`, {
-            appCheckToken: Sr
+            token: Od
+          } = await (0, Xd.c)(), {
+            "3PSIDMCPP": md
+          } = await (0, hd.postJsonWithMetricsCookiesAndJsonResponse)(`${Kd.clientSideServerUrls.indexUrl}/index/app-attestation`, {
+            appCheckToken: Od
           }, {
             retries: 0
-          }, rr.getMetricsCookies());
-          return rr.setAppAttestedAuthJwt(Qr), !0
-        } catch (Sr) {
-          return Sr instanceof Zr.e && "failed" === Sr.code ? (console.warn("The app couldn't get an App Check token:", Sr), rr.markAppAttestationTried()) : console.error("Failed to attest the app:", Sr), !1
+          }, dd.getMetricsCookies());
+          return dd.setAppAttestedAuthJwt(md), !0
+        } catch (Od) {
+          return Od instanceof Wd.c && "failed" === Od.code ? (console.warn("The app couldn't get an App Check token:", Od), dd.markAppAttestationTried()) : console.error("Failed to attest the app:", Od), !1
         }
-      }(rr)
+      }(dd)
     }
-    async function pr(rr, Sr) {
+    async function Qd(dd, Od) {
       try {
-        return await Sr()
-      } catch (Qr) {
-        if (!await Er(rr, Qr)) throw Qr
+        return await Od()
+      } catch (md) {
+        if (!await vd(dd, md)) throw md
       }
-      return Sr()
+      return Od()
     }
   },
-  40617: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => mr,
-      d: () => pr
+  40620: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => od,
+      e: () => Qd
     });
-    var Zr = Qr(208),
-      Wr = Qr(1974),
-      ar = Qr(1267),
-      jr = Qr(10062);
-    const Ir = [250, 500, 1e3, 2e3, 1250],
-      fr = 406;
+    var Wd = md(218),
+      Fd = md(1965),
+      Rd = md(1268),
+      Xd = md(10092);
+    const Kd = [250, 500, 1e3, 2e3, 1250],
+      hd = 406;
 
-    function Er(rr) {
-      if ("object" !== typeof rr || null === rr) return !1;
+    function vd(dd) {
+      if ("object" !== typeof dd || null === dd) return !1;
       const {
-        code: Sr,
-        message: Qr
-      } = rr, Wr = Zr.e.duplicateLobbyNameError;
-      return (Sr === Wr.code || Sr === fr) && (Qr === Wr.text || Qr === Wr.text + Zr.l)
+        code: Od,
+        message: md
+      } = dd, Fd = Wd.e.duplicateLobbyNameError;
+      return (Od === Fd.code || Od === hd) && (md === Fd.text || md === Fd.text + Wd.m)
     }
-    async function pr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Wr.e;
-      for (let Wr = 0;; Wr++) {
-        let jr;
-        (0, ar.l)(Sr);
+    async function Qd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Fd.c;
+      for (let Fd = 0;; Fd++) {
+        let Xd;
+        (0, Rd.p)(Od);
         try {
-          return await rr()
-        } catch (Zr) {
-          if (jr = Ir[Wr], void 0 === jr || !Er(Zr)) throw Zr
+          return await dd()
+        } catch (Wd) {
+          if (Xd = Kd[Fd], void 0 === Xd || !vd(Wd)) throw Wd
         }
-        await Qr(jr, Sr)
+        await md(Xd, Od)
       }
     }
-    const xr = new Set([Zr.e.duplicateLobbyNameError.code, Zr.e.lobbyCantBeCreated.code, Zr.e.roomDisposedEarlyError.code, Zr.e.roomDisposedLateError.code, Zr.e.serverRoomLimitReached.code]);
+    const td = new Set([Wd.e.duplicateLobbyNameError.code, Wd.e.lobbyCantBeCreated.code, Wd.e.roomDisposedEarlyError.code, Wd.e.roomDisposedLateError.code, Wd.e.serverRoomLimitReached.code]);
 
-    function mr(rr) {
-      if (Er(rr)) return !0;
-      const Sr = (0, jr.d)(rr);
-      return "number" === typeof Sr && xr.has(Sr)
+    function od(dd) {
+      if (vd(dd)) return !0;
+      const Od = (0, Xd.f)(dd);
+      return "number" === typeof Od && td.has(Od)
     }
   },
-  40593: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar,
-      e: () => Wr
+  40592: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Rd,
+      f: () => Fd
     });
-    var Zr = Qr(34);
+    var Wd = md(32);
 
-    function Wr(rr) {
-      return "refetchCode" === rr || "devDownloadJson" === rr || rr.startsWith("Plugin")
+    function Fd(dd) {
+      return "refetchCode" === dd || "devDownloadJson" === dd || dd.startsWith("Plugin")
     }
 
-    function ar(rr, Sr) {
-      "refetchCode" !== rr ? "Plugin|MobAiPlugin|ShowPetUi" !== rr ? Promise.all([Qr.e(128), Qr.e(129), Qr.e(118), Qr.e(120), Qr.e(248)]).then((() => Qr(54268))).then((Qr => {
+    function Rd(dd, Od) {
+      "refetchCode" !== dd ? "Plugin|MobAiPlugin|ShowPetUi" !== dd ? Promise.all([md.e(128), md.e(129), md.e(118), md.e(120), md.e(248)]).then((() => md(54153))).then((md => {
         let {
-          runClientGameMessage: Zr
-        } = Qr;
-        Zr(rr, Sr)
-      })).catch((Sr => {
-        console.error(`Game message ${rr} failed`, Sr)
-      })) : Zr.i.Jp("showPetUi", Sr) : Zr.i.Jp("refetchCode")
+          runClientGameMessage: Wd
+        } = md;
+        Wd(dd, Od)
+      })).catch((Od => {
+        console.error(`Game message ${dd} failed`, Od)
+      })) : Wd.j.lQ("showPetUi", Od) : Wd.j.lQ("refetchCode")
     }
   },
-  40627: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => fr
+  40634: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => hd
     });
-    var Zr = Qr(10062),
-      Wr = Qr(38018),
-      ar = Qr(40632);
-    const jr = {
+    var Wd = md(10092),
+      Fd = md(38109),
+      Rd = md(40638);
+    const Xd = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      Ir = {
+      Kd = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function fr(rr, Sr) {
-      if (rr instanceof Wr.c) return {
-        at: jr[Sr],
+    function hd(dd, Od) {
+      if (dd instanceof Fd.i) return {
+        at: Xd[Od],
         code: 0
       };
-      const Qr = (0, Zr.d)(rr),
-        fr = "number" === typeof Qr ? Qr : 0;
-      return null !== (0, ar.i)(fr).name ? {
+      const md = (0, Wd.f)(dd),
+        hd = "number" === typeof md ? md : 0;
+      return null !== (0, Rd.f)(hd).name ? {
         at: "refused",
-        code: fr
+        code: hd
       } : {
-        at: Ir[Sr],
-        code: fr
+        at: Kd[Od],
+        code: hd
       }
     }
   },
-  10062: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => ar,
-      d: () => jr,
-      e: () => Ir,
-      f: () => Er,
-      g: () => fr
+  10092: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd,
+      f: () => Xd,
+      h: () => Kd,
+      i: () => vd,
+      j: () => hd
     });
-    var Zr = Qr(208),
-      Wr = Qr(5384);
+    var Wd = md(218),
+      Fd = md(5294);
 
-    function ar(rr) {
-      return jr(rr) === Zr.e.gameOrPluginOnPlayerAuthRejected.code
+    function Rd(dd) {
+      return Xd(dd) === Wd.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function jr(rr) {
-      return "object" === typeof rr && null !== rr ? rr.code : void 0
+    function Xd(dd) {
+      return "object" === typeof dd && null !== dd ? dd.code : void 0
     }
 
-    function Ir(rr) {
-      var Sr;
-      return null !== (Sr = Object.keys(Wr.b).find((Sr => Wr.b[Sr] === rr))) && void 0 !== Sr ? Sr : null
+    function Kd(dd) {
+      var Od;
+      return null !== (Od = Object.keys(Fd.e).find((Od => Fd.e[Od] === dd))) && void 0 !== Od ? Od : null
     }
 
-    function fr(rr) {
-      return "notWhitelisted" === rr ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function hd(dd) {
+      return "notWhitelisted" === dd ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const Er = {
+    const vd = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  10047: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Er,
-      f: () => fr
+  10081: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => vd,
+      h: () => hd
     });
-    var Zr = Qr(379);
+    var Wd = md(405);
 
-    function Wr(rr) {
-      if (!rr.startsWith("{")) return rr;
-      let Sr;
+    function Fd(dd) {
+      if (!dd.startsWith("{")) return dd;
+      let Od;
       try {
-        Sr = JSON.parse(rr)
+        Od = JSON.parse(dd)
       } catch {
-        return rr
+        return dd
       }
-      return function(rr) {
-        if (null === (0, Zr.te)(rr)) return !1;
+      return function(dd) {
+        if (null === (0, Wd.Ce)(dd)) return !1;
         const {
-          params: Sr
-        } = rr;
-        return void 0 === Sr || "object" === typeof Sr && null !== Sr && Object.values(Sr).every((rr => "string" === typeof rr))
-      }(Sr) ? Sr : rr
+          params: Od
+        } = dd;
+        return void 0 === Od || "object" === typeof Od && null !== Od && Object.values(Od).every((dd => "string" === typeof dd))
+      }(Od) ? Od : dd
     }
-    var ar = Qr(1251),
-      jr = Qr(1304);
+    var Rd = md(1238),
+      Xd = md(1306);
 
-    function Ir(rr) {
-      return (0, ar.z)(jr.f.get().getCurrentLanguageCode(), rr.translationKey, rr.params)
-    }
-
-    function fr(rr) {
-      const Sr = Wr(rr);
-      return "string" === typeof Sr ? Sr : Ir(Sr)
+    function Kd(dd) {
+      return (0, Rd.B)(Xd.f.get().getCurrentLanguageCode(), dd.translationKey, dd.params)
     }
 
-    function Er(rr) {
-      const Sr = Wr(rr);
-      return "string" === typeof Sr ? Sr : Ir({
+    function hd(dd) {
+      const Od = Fd(dd);
+      return "string" === typeof Od ? Od : Kd(Od)
+    }
+
+    function vd(dd) {
+      const Od = Fd(dd);
+      return "string" === typeof Od ? Od : Kd({
         translationKey: "moderation:kicked",
         params: {
-          reason: Ir(Sr)
+          reason: Kd(Od)
         }
       })
     }
   },
-  40583: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => pr
+  40575: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Qd
     });
-    var Zr = Qr(1279),
-      Wr = Qr(1433),
-      ar = Qr(26),
-      jr = Qr(1413),
-      Ir = Qr(1422),
-      fr = Qr(1644),
-      Er = Qr(38001);
+    var Wd = md(1286),
+      Fd = md(1424),
+      Rd = md(29),
+      Xd = md(1406),
+      Kd = md(1415),
+      hd = md(1641),
+      vd = md(38082);
 
-    function pr(rr) {
+    function Qd(dd) {
       let {
-        xa: Sr,
-        ma: Qr
-      } = rr;
-      const pr = null !== Sr && void 0 !== Sr ? Sr : (0, Ir.b)().gameNameWithVariation;
-      (0, Zr.J)(pr) && ((0, Er.o)(), (0, jr.Y)((() => {
-        console.log("Received matchmaking order from game server to game", Sr), (0, ar.m)("inGameReplay"), (0, fr.navigatePreserveSearch)((0, Wr.c)(pr, null !== Qr && void 0 !== Qr ? Qr : void 0))
+        vR: Od,
+        QR: md
+      } = dd;
+      const Qd = null !== Od && void 0 !== Od ? Od : (0, Kd.b)().gameNameWithVariation;
+      (0, Wd.H)(Qd) && ((0, vd.i)(), (0, Xd.nb)((() => {
+        console.log("Received matchmaking order from game server to game", Od), (0, Rd.l)("inGameReplay"), (0, hd.navigatePreserveSearch)((0, Fd.c)(Qd, null !== md && void 0 !== md ? md : void 0))
       }), "video_start"))
     }
   },
-  40574: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => pr,
-      e: () => fr,
-      h: () => Er,
-      j: () => xr
+  40573: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Qd,
+      i: () => hd,
+      m: () => vd,
+      o: () => td
     });
-    var Zr = Qr(2089),
-      Wr = Qr(34),
-      ar = Qr(1475),
-      jr = Qr(1317);
-    const Ir = new Map;
+    var Wd = md(2092),
+      Fd = md(32),
+      Rd = md(1462),
+      Xd = md(1315);
+    const Kd = new Map;
 
-    function fr(rr, Sr) {
-      Wr.i.Jp("newUiRequest", {
-        id: rr,
-        clientParameters: Sr
+    function hd(dd, Od) {
+      Fd.j.lQ("newUiRequest", {
+        id: dd,
+        clientParameters: Od
       }, !0)
     }
 
-    function Er(rr) {
-      Wr.i.Jp("removeUiRequest", rr, !0);
-      const Sr = Ir.get(rr);
-      Sr && (Sr.tearDownNotification(), Ir.delete(rr))
+    function vd(dd) {
+      Fd.j.lQ("removeUiRequest", dd, !0);
+      const Od = Kd.get(dd);
+      Od && (Od.tearDownNotification(), Kd.delete(dd))
     }
 
-    function pr() {
-      Wr.i.Jp("clearUiRequests");
-      for (const rr of Ir.values()) rr.tearDownNotification();
-      Ir.clear()
+    function Qd() {
+      Fd.j.lQ("clearUiRequests");
+      for (const dd of Kd.values()) dd.tearDownNotification();
+      Kd.clear()
     }
 
-    function xr(rr, Sr, Qr, Wr) {
-      const fr = "string" === typeof Sr ? {
-          translationKey: Sr
-        } : Sr,
-        Er = ar.NotificationProvider.showPromptPopup({
-          title: fr.translationKey,
+    function td(dd, Od, md, Fd) {
+      const hd = "string" === typeof Od ? {
+          translationKey: Od
+        } : Od,
+        vd = Rd.NotificationProvider.showPromptPopup({
+          title: hd.translationKey,
           textOpts: {
-            title: (0, jr.e)(fr.params, Zr.gameBridge.latest("hiddenPlayerNames"))
+            title: (0, Xd.g)(hd.params, Wd.gameBridge.latest("hiddenPlayerNames"))
           },
           confirmText: "general:yes",
           cancelText: "general:no",
-          destructive: Qr,
+          destructive: md,
           unlockPointerKey: "uiRequestPopup"
         });
-      Ir.set(rr, Er), Er.getResult().then((Sr => {
-        Ir.delete(rr), "notificationTornDown" !== Sr && Wr(Sr)
+      Kd.set(dd, vd), vd.getResult().then((Od => {
+        Kd.delete(dd), "notificationTornDown" !== Od && Fd(Od)
       }))
     }
   },
-  40640: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Nr,
-      f: () => mr
+  40650: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Nd,
+      e: () => od
     });
-    const Zr = "ue:",
-      Wr = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
-      ar = "[A-Za-z0-9]{1,24}",
-      jr = 15,
-      Ir = new RegExp(`^${ar}$`);
-    new RegExp(`^${Zr}(${[...Wr,"other"].join("|")}):(?:n|k(${ar})|b(0|[1-9][0-9]?)):([01])([01])$`);
+    const Wd = "ue:",
+      Fd = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
+      Rd = "[A-Za-z0-9]{1,24}",
+      Xd = 15,
+      Kd = new RegExp(`^${Rd}$`);
+    new RegExp(`^${Wd}(${[...Fd,"other"].join("|")}):(?:n|k(${Rd})|b(0|[1-9][0-9]?)):([01])([01])$`);
 
-    function fr(rr, Sr, Qr, ar, fr) {
-      const Er = "string" === typeof rr && Wr.includes(rr) ? rr : "other";
-      let pr = "n";
-      return "string" === typeof Sr ? pr = Ir.test(Sr) ? `k${Sr}` : "n" : "number" === typeof Qr && Number.isInteger(Qr) && Qr >= 0 && Qr <= jr && (pr = `b${Qr}`), `${Zr}${Er}:${pr}:${ar?1:0}${fr?1:0}`
+    function hd(dd, Od, md, Rd, hd) {
+      const vd = "string" === typeof dd && Fd.includes(dd) ? dd : "other";
+      let Qd = "n";
+      return "string" === typeof Od ? Qd = Kd.test(Od) ? `k${Od}` : "n" : "number" === typeof md && Number.isInteger(md) && md >= 0 && md <= Xd && (Qd = `b${md}`), `${Wd}${vd}:${Qd}:${Rd?1:0}${hd?1:0}`
     }
-    var Er = Qr(1793),
-      pr = Qr(1890);
-    let xr = null;
+    var vd = md(1798),
+      Qd = md(1893);
+    let td = null;
 
-    function mr(rr) {
-      const Sr = rr instanceof Element && rr !== document.body && rr !== document.documentElement && !(0, Er.q)(rr) && !rr.closest("#root");
+    function od(dd) {
+      const Od = dd instanceof Element && dd !== document.body && dd !== document.documentElement && !(0, vd.p)(dd) && !dd.closest("#root");
       return {
-        editable: (0, pr.e)(rr),
-        outsideView: Sr
+        editable: (0, Qd.c)(dd),
+        outsideView: Od
       }
     }
 
-    function Nr(rr) {
-      return xr ??= function(rr) {
+    function Nd(dd) {
+      return td ??= function(dd) {
         try {
           const {
-            editable: Sr,
-            outsideView: Qr
-          } = mr(rr.target), Zr = rr;
-          return fr(rr.type, Zr.code, Zr.button, Sr, Qr)
+            editable: Od,
+            outsideView: md
+          } = od(dd.target), Wd = dd;
+          return hd(dd.type, Wd.code, Wd.button, Od, md)
         } catch {
-          return fr(null, null, null, !1, !1)
+          return hd(null, null, null, !1, !1)
         }
-      }(rr), xr
+      }(dd), td
     }
   },
-  40632: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar,
-      i: () => fr,
-      j: () => jr,
-      n: () => Wr
+  40638: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      f: () => hd,
+      i: () => Xd,
+      m: () => Fd
     });
-    var Zr = Qr(208);
+    var Wd = md(218);
 
-    function Wr(rr) {
-      const Sr = rr.endsWith(Zr.l);
+    function Fd(dd) {
+      const Od = dd.endsWith(Wd.m);
       return {
-        text: (Sr ? rr.slice(0, -Zr.l.length) : rr) || null,
-        dropsCache: Sr
+        text: (Od ? dd.slice(0, -Wd.m.length) : dd) || null,
+        dropsCache: Od
       }
     }
-    const ar = "Either your internet isn't working or this is a bug.";
+    const Rd = "Either your internet isn't working or this is a bug.";
 
-    function jr(rr, Sr) {
-      const Qr = fr(rr);
-      return null !== Qr.name && "" === Zr.e[Qr.name].text && null !== Sr ? Sr : Qr.reason
+    function Xd(dd, Od) {
+      const md = hd(dd);
+      return null !== md.name && "" === Wd.e[md.name].text && null !== Od ? Od : md.reason
     }
-    const Ir = "You were removed from the game.";
+    const Kd = "You were removed from the game.";
 
-    function fr(rr) {
-      var Sr;
-      let Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Wr = null !== (Sr = Object.keys(Zr.e).find((Sr => Zr.e[Sr].code === rr))) && void 0 !== Sr ? Sr : null;
-      if (null === Wr) return {
-        code: rr,
-        name: Wr,
-        reason: null !== Qr && void 0 !== Qr ? Qr : `${ar}\nCode: ${rr}`,
+    function hd(dd) {
+      var Od;
+      let md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const Fd = null !== (Od = Object.keys(Wd.e).find((Od => Wd.e[Od].code === dd))) && void 0 !== Od ? Od : null;
+      if (null === Fd) return {
+        code: dd,
+        name: Fd,
+        reason: null !== md && void 0 !== md ? md : `${Rd}\nCode: ${dd}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: jr,
-        canReconnect: fr = !1
-      } = Zr.e[Wr], Er = rr === Zr.e.outdatedVersion.code || rr === Zr.e.loadRecaptchaError.code;
+        text: Xd,
+        canReconnect: hd = !1
+      } = Wd.e[Fd], vd = dd === Wd.e.outdatedVersion.code || dd === Wd.e.loadRecaptchaError.code;
       return {
-        code: rr,
-        name: Wr,
-        reason: "" !== jr ? jr : null !== Qr && void 0 !== Qr ? Qr : rr === Zr.e.gameOrPluginKick.code ? Ir : `Code: ${rr}`,
-        canReconnect: fr,
-        automaticallyReconnect: rr === Zr.e.customGameUpdated.code || rr === Zr.e.duplicateLobbyNameError.code,
-        requiresRefresh: Er
+        code: dd,
+        name: Fd,
+        reason: "" !== Xd ? Xd : null !== md && void 0 !== md ? md : dd === Wd.e.gameOrPluginKick.code ? Kd : `Code: ${dd}`,
+        canReconnect: hd,
+        automaticallyReconnect: dd === Wd.e.customGameUpdated.code || dd === Wd.e.duplicateLobbyNameError.code,
+        requiresRefresh: vd
       }
     }
   },
-  40568: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Zr
+  40565: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd
     });
-    class Zr {
+    class Wd {
       constructor() {
         this.members = new Map
       }
-      apply(rr) {
-        const Sr = {
+      apply(dd) {
+        const Od = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Zr of rr.vW) {
-          let rr = this.members.get(Zr.OW);
-          if (rr || (rr = {
+        for (const Wd of dd.EF) {
+          let dd = this.members.get(Wd.JF);
+          if (dd || (dd = {
               name: null,
               settings: {}
-            }, this.members.set(Zr.OW, rr), Sr.added.push(Zr.OW)), null !== Zr.LW && (rr.name = Zr.LW), null !== Zr.lW || Zr.XW.length > 0) {
-            const Qr = null === Zr.lW ? {} : JSON.parse(Zr.lW);
-            Object.assign(rr.settings, Qr);
-            for (const Sr of Zr.XW) delete rr.settings[Sr], Qr[Sr] = void 0;
-            Sr.settingChanges.push({
-              playerId: Zr.OW,
-              settings: Qr
+            }, this.members.set(Wd.JF, dd), Od.added.push(Wd.JF)), null !== Wd.UF && (dd.name = Wd.UF), null !== Wd.xF || Wd.BF.length > 0) {
+            const md = null === Wd.xF ? {} : JSON.parse(Wd.xF);
+            Object.assign(dd.settings, md);
+            for (const Od of Wd.BF) delete dd.settings[Od], md[Od] = void 0;
+            Od.settingChanges.push({
+              playerId: Wd.JF,
+              settings: md
             })
           }
         }
-        for (const Zr of rr.PW) {
-          const rr = this.members.get(Zr);
-          var Qr;
-          if (rr) this.members.delete(Zr), Sr.removed.push({
-            playerId: Zr,
-            name: null !== (Qr = rr.name) && void 0 !== Qr ? Qr : void 0
+        for (const Wd of dd.SF) {
+          const dd = this.members.get(Wd);
+          var md;
+          if (dd) this.members.delete(Wd), Od.removed.push({
+            playerId: Wd,
+            name: null !== (md = dd.name) && void 0 !== md ? md : void 0
           })
         }
-        return Sr
+        return Od
       }
-      has(rr) {
-        return this.members.has(rr)
+      has(dd) {
+        return this.members.has(dd)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(rr) {
-        var Sr, Qr;
-        return null !== (Sr = null === (Qr = this.members.get(rr)) || void 0 === Qr ? void 0 : Qr.name) && void 0 !== Sr ? Sr : void 0
+      getName(dd) {
+        var Od, md;
+        return null !== (Od = null === (md = this.members.get(dd)) || void 0 === md ? void 0 : md.name) && void 0 !== Od ? Od : void 0
       }
-      getSettings(rr) {
-        var Sr;
-        return null === (Sr = this.members.get(rr)) || void 0 === Sr ? void 0 : Sr.settings
+      getSettings(dd) {
+        var Od;
+        return null === (Od = this.members.get(dd)) || void 0 === Od ? void 0 : Od.settings
       }
-      getSetting(rr, Sr) {
-        var Qr;
-        return null === (Qr = this.members.get(rr)) || void 0 === Qr ? void 0 : Qr.settings[Sr]
+      getSetting(dd, Od) {
+        var md;
+        return null === (md = this.members.get(dd)) || void 0 === md ? void 0 : md.settings[Od]
       }
       clear() {
         this.members.clear()
       }
     }
   },
-  40599: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Zr,
-      g: () => Wr
+  40596: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Wd,
+      d: () => Fd
     });
-    const Zr = ["description", "label"];
+    const Wd = ["description", "label"];
 
-    function Wr(rr) {
-      const Sr = rr.type;
+    function Fd(dd) {
+      const Od = dd.type;
       return {
-        type: Sr,
-        params: rr[Sr]
+        type: Od,
+        params: dd[Od]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

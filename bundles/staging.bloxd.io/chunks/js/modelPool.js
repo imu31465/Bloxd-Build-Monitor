@@ -1,27 +1,27 @@
 export const id = 51;
 export const ids = [51];
 export const modules = {
-  55199: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      MODELS_MODULE_RETRY_DELAYS_MS: () => hr,
-      pageModelPool: () => nr
+  55136: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      MODELS_MODULE_RETRY_DELAYS_MS: () => yd,
+      pageModelPool: () => pd
     });
-    var Zr = Qr(2398),
-      Wr = Qr(37566),
-      ar = Qr(42550),
-      jr = Qr(4050),
-      Ir = Qr(5104),
-      fr = Qr(5116),
-      Er = Qr(335),
-      pr = Qr(4001),
-      xr = Qr(42684),
-      mr = Qr(42691),
-      Nr = Qr(37529),
-      Ur = Qr(42796);
-    class tr {
-      constructor(rr) {
-        this.opts = rr, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
-        for (let Sr = 0; Sr < Math.max(1, rr.count); Sr++) this.slots.push({
+    var Wd = md(2425),
+      Fd = md(37688),
+      Rd = md(42640),
+      Xd = md(4034),
+      Kd = md(5043),
+      hd = md(5055),
+      vd = md(364),
+      Qd = md(3984),
+      td = md(42779),
+      od = md(42788),
+      Nd = md(37659),
+      qd = md(42915);
+    class Hd {
+      constructor(dd) {
+        this.opts = dd, this.queue = [], this.slots = [], this.stopped = null, this.create = null, this.nextSeq = 0, this.jobLosses = 0, this.resting = !1;
+        for (let Od = 0; Od < Math.max(1, dd.count); Od++) this.slots.push({
           worker: null,
           starting: !1,
           timer: null,
@@ -34,15 +34,15 @@ export const modules = {
         this.pump()
       }
       get pending() {
-        return this.queue.length + this.slots.filter((rr => null !== rr.job)).length
+        return this.queue.length + this.slots.filter((dd => null !== dd.job)).length
       }
-      build(rr, Sr) {
-        return null !== this.stopped ? Promise.resolve((0, mr.r)(rr, this.stopped)) : new Promise((Qr => {
+      build(dd, Od) {
+        return null !== this.stopped ? Promise.resolve((0, od.r)(dd, this.stopped)) : new Promise((md => {
           this.queue.push({
-            word: rr,
-            glb: Sr,
+            word: dd,
+            glb: Od,
             attempts: 0,
-            resolve: Qr
+            resolve: md
           }), this.pump()
         }))
       }
@@ -56,178 +56,178 @@ export const modules = {
         this.fail(null)
       }
       pump() {
-        const rr = this.resting && 0 === this.queue.length;
-        for (const Sr of this.slots) {
+        const dd = this.resting && 0 === this.queue.length;
+        for (const Od of this.slots) {
           if (null !== this.stopped) return;
-          if (Sr.gaveUp || Sr.starting) continue;
-          if (null === Sr.worker) {
-            rr || this.start(Sr);
+          if (Od.gaveUp || Od.starting) continue;
+          if (null === Od.worker) {
+            dd || this.start(Od);
             continue
           }
-          if (rr) {
-            null === Sr.job && this.end(Sr);
+          if (dd) {
+            null === Od.job && this.end(Od);
             continue
           }
-          const Qr = null === Sr.job ? this.queue.shift() : void 0;
-          void 0 !== Qr && this.run(Sr, Sr.worker, Qr)
+          const md = null === Od.job ? this.queue.shift() : void 0;
+          void 0 !== md && this.run(Od, Od.worker, md)
         }
       }
-      start(rr) {
-        if (rr.losses >= 6) return rr.gaveUp = !0, void(this.slots.every((rr => rr.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
-        rr.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((Sr => {
-          let [Qr, Zr] = Sr;
-          null === this.stopped && this.launch(rr, Qr, Zr)
-        }), (rr => {
-          this.fail(rr)
+      start(dd) {
+        if (dd.losses >= 6) return dd.gaveUp = !0, void(this.slots.every((dd => dd.gaveUp)) && this.fail(new Error("every model worker went 6 times with no file built")));
+        dd.starting = !0, this.create ??= this.opts.loadWorker(), Promise.all([this.create, this.opts.module]).then((Od => {
+          let [md, Wd] = Od;
+          null === this.stopped && this.launch(dd, md, Wd)
+        }), (dd => {
+          this.fail(dd)
         }))
       }
-      launch(rr, Sr, Qr) {
-        let Zr;
+      launch(dd, Od, md) {
+        let Wd;
         try {
-          Zr = Sr()
-        } catch (Wr) {
-          return void this.lose(rr, `a model worker could not be created (${String(Wr)})`)
+          Wd = Od()
+        } catch (Fd) {
+          return void this.lose(dd, `a model worker could not be created (${String(Fd)})`)
         }
-        rr.worker = Zr, rr.timer = new Ur.m(3e4, (Sr => {
-          rr.timer = null, this.lose(rr, `a model worker did not start: ${(0,Ur.o)(Sr)}`)
-        }), void 0, this.opts.visibility), Zr.onmessage = Sr => {
+        dd.worker = Wd, dd.timer = new qd.g(3e4, (Od => {
+          dd.timer = null, this.lose(dd, `a model worker did not start: ${(0,qd.j)(Od)}`)
+        }), void 0, this.opts.visibility), Wd.onmessage = Od => {
           let {
-            data: Qr
-          } = Sr;
-          this.answered(rr, Qr)
-        }, Zr.onerror = Sr => {
-          this.lose(rr, rr.starting ? `a model worker failed to start: ${Sr.message}` : `a model worker failed: ${Sr.message}`)
-        }, Zr.postMessage({
+            data: md
+          } = Od;
+          this.answered(dd, md)
+        }, Wd.onerror = Od => {
+          this.lose(dd, dd.starting ? `a model worker failed to start: ${Od.message}` : `a model worker failed: ${Od.message}`)
+        }, Wd.postMessage({
           type: "start",
-          module: Qr
+          module: md
         })
       }
-      end(rr) {
-        const Sr = rr.worker;
-        null !== Sr && (Sr.onmessage = null, Sr.onerror = null, Sr.terminate()), rr.worker = null, rr.startedAt = void 0
+      end(dd) {
+        const Od = dd.worker;
+        null !== Od && (Od.onmessage = null, Od.onerror = null, Od.terminate()), dd.worker = null, dd.startedAt = void 0
       }
-      clearTimer(rr) {
-        var Sr;
-        null === (Sr = rr.timer) || void 0 === Sr || Sr.cancel(), rr.timer = null
+      clearTimer(dd) {
+        var Od;
+        null === (Od = dd.timer) || void 0 === Od || Od.cancel(), dd.timer = null
       }
-      answered(rr, Sr) {
-        if ("lost" === Sr.type) return void this.lose(rr, Sr.reason);
-        if (rr.starting) return "started" !== Sr.type ? void this.lose(rr, `a model worker answered ${Sr.type} before it started`) : (this.clearTimer(rr), rr.starting = !1, rr.startedAt = performance.now(), void this.pump());
-        const Qr = rr.job;
-        null !== Qr && "started" !== Sr.type && Sr.seq === rr.seq && ("trapped" !== Sr.type ? (rr.job = null, rr.losses = 0, this.jobLosses = 0, Qr.resolve(new Uint8Array(Sr.record)), this.pump()) : this.lose(rr, Sr.trap))
+      answered(dd, Od) {
+        if ("lost" === Od.type) return void this.lose(dd, Od.reason);
+        if (dd.starting) return "started" !== Od.type ? void this.lose(dd, `a model worker answered ${Od.type} before it started`) : (this.clearTimer(dd), dd.starting = !1, dd.startedAt = performance.now(), void this.pump());
+        const md = dd.job;
+        null !== md && "started" !== Od.type && Od.seq === dd.seq && ("trapped" !== Od.type ? (dd.job = null, dd.losses = 0, this.jobLosses = 0, md.resolve(new Uint8Array(Od.record)), this.pump()) : this.lose(dd, Od.trap))
       }
-      run(rr, Sr, Qr) {
-        const Zr = this.nextSeq++;
-        rr.seq = Zr, rr.job = Qr, Qr.attempts++;
-        const Wr = Qr.glb.slice();
-        Sr.postMessage({
+      run(dd, Od, md) {
+        const Wd = this.nextSeq++;
+        dd.seq = Wd, dd.job = md, md.attempts++;
+        const Fd = md.glb.slice();
+        Od.postMessage({
           type: "job",
-          seq: Zr,
-          word: Qr.word,
-          glb: Wr.buffer
-        }, [Wr.buffer])
+          seq: Wd,
+          word: md.word,
+          glb: Fd.buffer
+        }, [Fd.buffer])
       }
-      lose(rr, Sr) {
-        this.clearTimer(rr), void 0 !== rr.startedAt && performance.now() - rr.startedAt >= 6e4 && (rr.losses = 0), this.end(rr), rr.starting = !1;
-        const Qr = rr.job;
-        rr.job = null, null === Qr && rr.losses++, this.opts.onWorkerLost(Sr), null !== Qr && (Qr.attempts < 2 ? this.queue.unshift(Qr) : Qr.resolve((0, mr.o)(Qr.word, Sr)), 0 === (Qr.word & xr.d) && ++this.jobLosses >= 32) ? this.fail(new Error("model workers were lost on 32 jobs with no file built")) : this.pump()
+      lose(dd, Od) {
+        this.clearTimer(dd), void 0 !== dd.startedAt && performance.now() - dd.startedAt >= 6e4 && (dd.losses = 0), this.end(dd), dd.starting = !1;
+        const md = dd.job;
+        dd.job = null, null === md && dd.losses++, this.opts.onWorkerLost(Od), null !== md && (md.attempts < 2 ? this.queue.unshift(md) : md.resolve((0, od.q)(md.word, Od)), 0 === (md.word & td.e) && ++this.jobLosses >= 32) ? this.fail(new Error("model workers were lost on 32 jobs with no file built")) : this.pump()
       }
-      fail(rr) {
+      fail(dd) {
         if (null !== this.stopped) return;
-        this.stopped = null === rr ? "the model workers stopped" : `the model workers could not start: ${(0,Nr.l)(rr)}`;
-        const Sr = this.stopped,
-          Qr = rr => {
-            rr.resolve((0, mr.r)(rr.word, Sr))
+        this.stopped = null === dd ? "the model workers stopped" : `the model workers could not start: ${(0,Nd.h)(dd)}`;
+        const Od = this.stopped,
+          md = dd => {
+            dd.resolve((0, od.r)(dd.word, Od))
           };
-        for (const Wr of this.slots) {
-          var Zr;
-          this.clearTimer(Wr), null === (Zr = Wr.worker) || void 0 === Zr || Zr.terminate(), Wr.worker = null, null !== Wr.job && Qr(Wr.job), Wr.job = null
+        for (const Fd of this.slots) {
+          var Wd;
+          this.clearTimer(Fd), null === (Wd = Fd.worker) || void 0 === Wd || Wd.terminate(), Fd.worker = null, null !== Fd.job && md(Fd.job), Fd.job = null
         }
-        this.queue.splice(0).forEach(Qr), null !== rr && this.opts.onUnavailable(rr)
+        this.queue.splice(0).forEach(md), null !== dd && this.opts.onUnavailable(dd)
       }
     }
-    const hr = [...Zr.s, 5e3, 15e3, 3e4];
-    let zr = null;
-    const Yr = new Set;
+    const yd = [...Wd.p, 5e3, 15e3, 3e4];
+    let bd = null;
+    const Td = new Set;
 
-    function nr(rr) {
-      return Yr.add(rr), zr ??= function() {
-        let rr = "fix" === (0, fr.n)() || (0, fr.f)() || (0, Ir.n)() || (0, jr.j)() ? 1 : (Sr = navigator.hardwareConcurrency, xr = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, Sr > 2 && !(0, pr.v)(xr) ? 2 : 1);
-        var Sr, xr;
-        const mr = new tr({
-          module: (0, Wr.i)(ar.e, {
-            delays: hr,
-            onRetry: (rr, Sr) => {
-              zr === mr && er((Qr => {
-                Qr.onModuleRetry(rr, Sr)
+    function pd(dd) {
+      return Td.add(dd), bd ??= function() {
+        let dd = "fix" === (0, hd.m)() || (0, hd.e)() || (0, Kd.o)() || (0, Xd.h)() ? 1 : (Od = navigator.hardwareConcurrency, td = "deviceMemory" in navigator ? navigator.deviceMemory : void 0, Od > 2 && !(0, Qd.t)(td) ? 2 : 1);
+        var Od, td;
+        const od = new Hd({
+          module: (0, Fd.e)(Rd.c, {
+            delays: yd,
+            onRetry: (dd, Od) => {
+              bd === od && Yd((md => {
+                md.onModuleRetry(dd, Od)
               }))
             }
           }),
           loadWorker: async () => {
-            const [rr] = await Promise.all([Qr.e(52).then((() => Qr(64841))), (0, Er.p)()]);
-            return rr.createModelWorker
+            const [dd] = await Promise.all([md.e(52).then((() => md(64992))), (0, vd.p)()]);
+            return dd.createModelWorker
           },
-          count: rr,
-          onUnavailable: rr => {
-            if (zr === mr) {
-              zr = null;
-              const Sr = function(rr) {
-                return rr instanceof Zr.b ? [ar.e.url().href] : void 0
-              }(rr);
-              er((Qr => {
-                Qr.onUnavailable(rr, Sr)
+          count: dd,
+          onUnavailable: dd => {
+            if (bd === od) {
+              bd = null;
+              const Od = function(dd) {
+                return dd instanceof Wd.b ? [Rd.c.url().href] : void 0
+              }(dd);
+              Yd((md => {
+                md.onUnavailable(dd, Od)
               }))
             }
           },
-          onWorkerLost: rr => {
-            zr === mr && er((Sr => {
-              Sr.onWorkerLost(rr)
+          onWorkerLost: dd => {
+            bd === od && Yd((Od => {
+              Od.onWorkerLost(dd)
             }))
           }
         });
-        return mr
+        return od
       }(), {
-        pool: zr,
+        pool: bd,
         unlisten: () => {
-          Yr.delete(rr)
+          Td.delete(dd)
         }
       }
     }
 
-    function er(rr) {
-      for (const Qr of [...Yr]) try {
-        rr(Qr)
-      } catch (Sr) {
-        console.error("[pageModelPool] a listener threw", Sr)
+    function Yd(dd) {
+      for (const md of [...Td]) try {
+        dd(md)
+      } catch (Od) {
+        console.error("[pageModelPool] a listener threw", Od)
       }
     }
   },
-  42796: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Wr,
-      i: () => Zr,
-      m: () => Ir,
-      o: () => jr
+  42915: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Fd,
+      e: () => Wd,
+      g: () => Kd,
+      j: () => Xd
     });
-    const Zr = 12e4,
-      Wr = 3e4,
-      ar = {
+    const Wd = 12e4,
+      Fd = 3e4,
+      Rd = {
         hidden: () => "undefined" !== typeof document && document.hidden,
-        listen: rr => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", rr), () => {
-          document.removeEventListener("visibilitychange", rr)
+        listen: dd => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", dd), () => {
+          document.removeEventListener("visibilitychange", dd)
         })
       };
 
-    function jr(rr) {
-      return `it sent no start within ${Math.round(rr)} ms`
+    function Xd(dd) {
+      return `it sent no start within ${Math.round(dd)} ms`
     }
-    class Ir {
-      constructor(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ar;
-        this.timeoutMs = rr, this.onTimeout = Sr, this.now = Qr, this.visibility = Zr, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = Zr.listen((() => {
+    class Kd {
+      constructor(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Rd;
+        this.timeoutMs = dd, this.onTimeout = Od, this.now = md, this.visibility = Wd, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = Wd.listen((() => {
           this.onVisibility()
-        })), Zr.hidden() || this.next()
+        })), Wd.hidden() || this.next()
       }
       cancel() {
         this.pause(), this.unlisten()
@@ -236,32 +236,32 @@ export const modules = {
         this.visibility.hidden() ? (this.counted += this.credit(), this.pause()) : null === this.timer && this.next()
       }
       credit() {
-        const rr = this.step;
-        return null === rr ? 0 : Math.min(this.now() - rr.at, rr.ms)
+        const dd = this.step;
+        return null === dd ? 0 : Math.min(this.now() - dd.at, dd.ms)
       }
       pause() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null), this.step = null
       }
       next() {
-        const rr = this.timeoutMs - this.counted;
-        if (rr <= 0) return void this.arm(1e3, (() => {
+        const dd = this.timeoutMs - this.counted;
+        if (dd <= 0) return void this.arm(1e3, (() => {
           this.cancel(), this.onTimeout(this.counted)
         }));
-        const Sr = Math.min(rr, 5e3);
+        const Od = Math.min(dd, 5e3);
         this.step = {
           at: this.now(),
-          ms: Sr
-        }, this.arm(Sr, (() => {
+          ms: Od
+        }, this.arm(Od, (() => {
           this.counted += this.credit(), this.step = null, this.next()
         }))
       }
-      arm(rr, Sr) {
+      arm(dd, Od) {
         this.timer = setTimeout((() => {
-          this.timer = null, Sr()
-        }), rr)
+          this.timer = null, Od()
+        }), dd)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

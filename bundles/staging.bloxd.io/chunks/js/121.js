@@ -1,255 +1,255 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  37792: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => fr
+  37899: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => hd
     });
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(72),
-      jr = Qr(5338),
-      Ir = Qr(1338);
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(66),
+      Xd = md(5241),
+      Kd = md(1341);
 
-    function fr(rr) {
+    function hd(dd) {
       let {
-        locked: Sr,
-        children: Qr
-      } = rr;
-      const Zr = (0, ar.useRef)(null),
-        fr = (0, jr.b)(Zr, "y");
-      return (0, Ir.jsx)("div", {
-        ref: Zr,
-        className: Wr()("CreateCustomLobbyBody", {
-          CreateCustomLobbyBodyMoreAbove: fr.before,
-          CreateCustomLobbyBodyMoreBelow: fr.after
+        locked: Od,
+        children: md
+      } = dd;
+      const Wd = (0, Rd.useRef)(null),
+        hd = (0, Xd.b)(Wd, "y");
+      return (0, Kd.jsx)("div", {
+        ref: Wd,
+        className: Fd()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: hd.before,
+          CreateCustomLobbyBodyMoreBelow: hd.after
         }),
-        "data-pad-ignore": Sr || void 0,
-        children: Qr
+        "data-pad-ignore": Od || void 0,
+        children: md
       })
     }
   },
-  37971: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      showFirstWorldSetupPopup: () => tr
+  38054: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      showFirstWorldSetupPopup: () => Hd
     });
-    Qr(5753), Qr(37774);
-    var Zr = Qr(5384),
-      Wr = Qr(72),
-      ar = Qr(5347),
-      jr = Qr(1251),
-      Ir = Qr(1475),
-      fr = Qr(37792),
-      Er = Qr(5762),
-      pr = Qr(1576),
-      xr = Qr(4746),
-      mr = Qr(37789),
-      Nr = Qr(5380),
-      Ur = Qr(1338);
+    md(5716), md(37882);
+    var Wd = md(5294),
+      Fd = md(66),
+      Rd = md(5255),
+      Xd = md(1238),
+      Kd = md(1462),
+      hd = md(37899),
+      vd = md(5719),
+      Qd = md(1572),
+      td = md(4717),
+      od = md(37892),
+      Nd = md(5288),
+      qd = md(1341);
 
-    function tr(rr) {
-      const Sr = {
+    function Hd(dd) {
+      const Od = {
         requested: !1,
         closed: !1
       };
-      Ir.NotificationProvider.showCustomPopup({
-        body: Qr => (0, Ur.jsx)(hr, {
-          flow: Sr,
-          close: Qr,
-          ...rr
+      Kd.NotificationProvider.showCustomPopup({
+        body: md => (0, qd.jsx)(yd, {
+          flow: Od,
+          close: md,
+          ...dd
         }),
         middleScreenPopupClassName: "CreateCustomLobbyPopup",
         onClose: () => {
-          Sr.closed = !0, Sr.requested || (0, Nr.f)()
+          Od.closed = !0, Od.requested || (0, Nd.f)()
         }
       })
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        flow: Sr,
-        close: Qr,
-        onCreating: Ir,
-        onCreated: tr,
-        onFailedClosed: hr,
-        join: zr
-      } = rr;
+        flow: Od,
+        close: md,
+        onCreating: Kd,
+        onCreated: Hd,
+        onFailedClosed: yd,
+        join: bd
+      } = dd;
       const {
-        t: Yr
-      } = (0, jr.E)(), [nr, er] = (0, Wr.useState)(Zr.r), [Kr, yr] = (0, Wr.useState)(!1), [Br, Tr] = (0, Wr.useState)(""), vr = (0, xr.b)();
-      (0, Wr.useEffect)((() => {
-        (0, Nr.l)()
+        t: Td
+      } = (0, Xd.G)(), [pd, Yd] = (0, Fd.useState)(Wd.w), [gd, wd] = (0, Fd.useState)(!1), [Ed, Jd] = (0, Fd.useState)(""), Ud = (0, td.b)();
+      (0, Fd.useEffect)((() => {
+        (0, Nd.n)()
       }), []);
-      const Or = rr => ({
-        isEnabled: () => nr.plugins[rr],
-        VK: Sr => {
-          (0, Nr.i)({
-            plugin: rr,
-            enabled: Sr
-          }), er({
-            ...nr,
+      const xd = dd => ({
+        isEnabled: () => pd.plugins[dd],
+        rY: Od => {
+          (0, Nd.j)({
+            plugin: dd,
+            enabled: Od
+          }), Yd({
+            ...pd,
             plugins: {
-              ...nr.plugins,
-              [rr]: Sr
+              ...pd.plugins,
+              [dd]: Od
             }
           })
         }
       });
-      return (0, Ur.jsxs)("div", {
+      return (0, qd.jsxs)("div", {
         className: "CreateCustomLobby",
-        children: [(0, Ur.jsx)("div", {
+        children: [(0, qd.jsx)("div", {
           className: "CreateCustomLobbyTitleContainer",
-          children: (0, Ur.jsx)("div", {
+          children: (0, qd.jsx)("div", {
             className: "CreateCustomLobbyTitle",
-            children: Yr("homePage:myWorld")
+            children: Td("homePage:myWorld")
           })
-        }), (0, Ur.jsx)(fr.c, {
-          locked: Kr,
-          children: (0, Ur.jsxs)("div", {
+        }), (0, qd.jsx)(hd.b, {
+          locked: gd,
+          children: (0, qd.jsxs)("div", {
             className: "CreateCustomLobbyFields",
-            children: [(0, Ur.jsx)(mr.b, {
-              value: nr.defaultGamemode,
-              onChange: rr => {
-                (0, Zr.s)(rr) && rr !== nr.defaultGamemode && ((0, Nr.i)({
-                  defaultGamemode: rr
-                }), er({
-                  ...nr,
-                  defaultGamemode: rr
+            children: [(0, qd.jsx)(od.d, {
+              value: pd.defaultGamemode,
+              onChange: dd => {
+                (0, Wd.x)(dd) && dd !== pd.defaultGamemode && ((0, Nd.j)({
+                  defaultGamemode: dd
+                }), Yd({
+                  ...pd,
+                  defaultGamemode: dd
                 }))
               },
               showAll: !1,
-              disabled: Kr
-            }), (0, Ur.jsx)(mr.f, {
-              mapTypes: Zr.e,
-              value: nr.mapType,
-              onChange: rr => {
-                (0, Zr.t)(rr) && rr !== nr.mapType && ((0, Nr.i)({
-                  mapType: rr
-                }), er({
-                  ...nr,
-                  mapType: rr
+              disabled: gd
+            }), (0, qd.jsx)(od.f, {
+              mapTypes: Wd.i,
+              value: pd.mapType,
+              onChange: dd => {
+                (0, Wd.y)(dd) && dd !== pd.mapType && ((0, Nd.j)({
+                  mapType: dd
+                }), Yd({
+                  ...pd,
+                  mapType: dd
                 }))
               },
               showAll: !1,
-              disabled: Kr
-            }), (0, Ur.jsx)(Er.d, {
+              disabled: gd
+            }), (0, qd.jsx)(vd.b, {
               callbacks: {
-                dayNight: Or("dayNight"),
-                fallDamage: Or("fallDamage"),
-                survivalGuns: Or("survivalGuns")
+                dayNight: xd("dayNight"),
+                fallDamage: xd("fallDamage"),
+                survivalGuns: xd("survivalGuns")
               },
-              disabled: Kr,
+              disabled: gd,
               advancedMode: !1
             })]
           })
-        }), (0, Ur.jsxs)("div", {
+        }), (0, qd.jsxs)("div", {
           className: "CreateCustomLobbyFooter",
-          children: [(0, Ur.jsx)(pr.p, {
+          children: [(0, qd.jsx)(Qd.m, {
             className: "CreateCustomLobbyButton",
             padDefaultFocus: !0,
-            loading: Kr,
+            loading: gd,
             onClick: () => {
-              Sr.requested = !0, yr(!0), Ir(!0), Tr(""), (0, Nr.k)(nr), ar.c.createPersonalWorld(nr).then((rr => {
-                Ir(!1);
-                const Zr = tr(rr);
-                !Sr.closed && vr.current ? (Qr(), zr(rr)) : Zr || (0, Nr.f)()
-              }), (rr => {
-                if (console.error("Failed to create personal world:", rr), Ir(!1), Sr.requested = !1, Sr.closed || !vr.current) return (0, Nr.f)(), void hr(rr);
-                Tr(rr.message), yr(!1)
+              Od.requested = !0, wd(!0), Kd(!0), Jd(""), (0, Nd.k)(pd), Rd.e.createPersonalWorld(pd).then((dd => {
+                Kd(!1);
+                const Wd = Hd(dd);
+                !Od.closed && Ud.current ? (md(), bd(dd)) : Wd || (0, Nd.f)()
+              }), (dd => {
+                if (console.error("Failed to create personal world:", dd), Kd(!1), Od.requested = !1, Od.closed || !Ud.current) return (0, Nd.f)(), void yd(dd);
+                Jd(dd.message), wd(!1)
               }))
             },
-            children: Yr("general:play")
-          }), Br && (0, Ur.jsx)("div", {
+            children: Td("general:play")
+          }), Ed && (0, qd.jsx)("div", {
             className: "CreateCustomLobbyError AnimFadeInScaleUp",
-            children: Br
+            children: Ed
           })]
         })]
       })
     }
   },
-  5762: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Er
+  5719: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => vd
     });
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(5384),
-      jr = Qr(1251),
-      Ir = Qr(1338);
-    const fr = [...ar.i, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(5294),
+      Xd = md(1238),
+      Kd = md(1341);
+    const hd = [...Rd.l, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function Er(rr) {
+    function vd(dd) {
       const {
-        disabled: Sr,
-        hideWrapper: Qr
-      } = rr, {
-        t: Zr
-      } = (0, jr.E)(), Er = rr.advancedMode ? fr.map((Sr => [Sr, rr.callbacks[Sr]])) : ar.i.map((Sr => [Sr, rr.callbacks[Sr]])), xr = (0, Ir.jsx)("div", {
-        className: Wr()("PluginsGrid", {
-          SectionBody: !Qr
+        disabled: Od,
+        hideWrapper: md
+      } = dd, {
+        t: Wd
+      } = (0, Xd.G)(), vd = dd.advancedMode ? hd.map((Od => [Od, dd.callbacks[Od]])) : Rd.l.map((Od => [Od, dd.callbacks[Od]])), td = (0, Kd.jsx)("div", {
+        className: Fd()("PluginsGrid", {
+          SectionBody: !md
         }),
-        children: Er.map((rr => {
-          let [Qr, Zr] = rr;
-          return (0, Ir.jsx)(pr, {
-            plugin: Qr,
-            callbacks: Zr,
-            disabled: Sr
-          }, Qr)
+        children: vd.map((dd => {
+          let [md, Wd] = dd;
+          return (0, Kd.jsx)(Qd, {
+            plugin: md,
+            callbacks: Wd,
+            disabled: Od
+          }, md)
         }))
       });
-      return Qr ? xr : (0, Ir.jsxs)("div", {
+      return md ? td : (0, Kd.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, Ir.jsx)("div", {
+        children: [(0, Kd.jsx)("div", {
           className: "SectionTitle",
-          children: Zr("worldBuilder:pluginsSection")
-        }), xr]
+          children: Wd("worldBuilder:pluginsSection")
+        }), td]
       })
     }
 
-    function pr(rr) {
+    function Qd(dd) {
       let {
-        plugin: Sr,
+        plugin: Od,
         callbacks: {
-          isEnabled: Qr,
-          VK: Zr
+          isEnabled: md,
+          rY: Wd
         },
-        disabled: ar
-      } = rr;
+        disabled: Rd
+      } = dd;
       const {
-        t: fr
-      } = (0, jr.E)(), Er = Qr();
-      return (0, Ir.jsxs)("div", {
-        className: Wr()("PluginCard", {
-          PluginCardEnabled: Er,
-          PluginCardDisabledForm: ar
+        t: hd
+      } = (0, Xd.G)(), vd = md();
+      return (0, Kd.jsxs)("div", {
+        className: Fd()("PluginCard", {
+          PluginCardEnabled: vd,
+          PluginCardDisabledForm: Rd
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": ar || void 0,
+        "aria-disabled": Rd || void 0,
         onClick: () => {
-          ar || Zr(!Er)
+          Rd || Wd(!vd)
         },
-        children: [(0, Ir.jsx)("div", {
+        children: [(0, Kd.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, Ir.jsx)("img", {
-            src: `/textures/games/classic/customGames/${Sr}.png`,
-            alt: Sr
+          children: (0, Kd.jsx)("img", {
+            src: `/textures/games/classic/customGames/${Od}.png`,
+            alt: Od
           })
-        }), (0, Ir.jsxs)("div", {
+        }), (0, Kd.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, Ir.jsx)("div", {
+          children: [(0, Kd.jsx)("div", {
             className: "PluginCardTitle",
-            children: fr(xr[Sr])
-          }), (0, Ir.jsx)("div", {
+            children: hd(td[Od])
+          }), (0, Kd.jsx)("div", {
             className: "PluginCardDescription",
-            children: fr(mr[Sr])
+            children: hd(od[Od])
           })]
-        }), (0, Ir.jsx)("span", {
+        }), (0, Kd.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: fr(Er ? "general:on" : "general:off")
+          children: hd(vd ? "general:on" : "general:off")
         })]
       })
     }
-    const xr = {
+    const td = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -258,7 +258,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      mr = {
+      od = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -268,97 +268,97 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  37789: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Er,
-      f: () => pr
+  37892: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => vd,
+      f: () => Qd
     });
-    Qr(72);
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(5384),
-      jr = Qr(360),
-      Ir = Qr(1251),
-      fr = Qr(1338);
+    md(66);
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(5294),
+      Xd = md(387),
+      Kd = md(1238),
+      hd = md(1341);
 
-    function Er(rr) {
+    function vd(dd) {
       let {
-        value: Sr,
-        onChange: Qr,
-        showAll: Zr,
-        disabled: Er = !1
-      } = rr;
+        value: Od,
+        onChange: md,
+        showAll: Wd,
+        disabled: vd = !1
+      } = dd;
       const {
-        t: pr
-      } = (0, Ir.E)();
-      return (0, fr.jsxs)("div", {
-        className: Wr()("BloxdForm GamemodeForm", {
-          BasicOptions: !Zr
+        t: Qd
+      } = (0, Kd.G)();
+      return (0, hd.jsxs)("div", {
+        className: Fd()("BloxdForm GamemodeForm", {
+          BasicOptions: !Wd
         }),
-        children: [(0, fr.jsx)("div", {
+        children: [(0, hd.jsx)("div", {
           className: "SectionTitle",
-          children: pr("classic:defaultGamemode")
-        }), (0, fr.jsx)("div", {
+          children: Qd("classic:defaultGamemode")
+        }), (0, hd.jsx)("div", {
           className: "SectionBody",
-          children: ar.A.map((rr => Zr || (0, ar.s)(rr) ? (0, fr.jsx)("button", {
+          children: Rd.F.map((dd => Wd || (0, Rd.x)(dd) ? (0, hd.jsx)("button", {
             type: "button",
-            className: Wr()("WorldGamemode", {
-              Selected: Sr === rr
+            className: Fd()("WorldGamemode", {
+              Selected: Od === dd
             }),
-            disabled: Er,
+            disabled: vd,
             onClick: () => {
-              Qr(rr)
+              md(dd)
             },
             style: {
-              "--background-image": `url(${jr.u[rr]})`
+              "--background-image": `url(${Xd.s[dd]})`
             },
-            children: jr.t[rr]
-          }, rr) : null))
+            children: Xd.p[dd]
+          }, dd) : null))
         })]
       })
     }
 
-    function pr(rr) {
+    function Qd(dd) {
       let {
-        mapTypes: Sr,
-        value: Qr,
-        onChange: Zr,
-        showAll: Er,
-        disabled: pr = !1,
-        children: xr
-      } = rr;
+        mapTypes: Od,
+        value: md,
+        onChange: Wd,
+        showAll: vd,
+        disabled: Qd = !1,
+        children: td
+      } = dd;
       const {
-        t: mr
-      } = (0, Ir.E)();
-      return (0, fr.jsxs)("div", {
-        className: Wr()("BloxdForm MapTypeForm", {
-          BasicOptions: !Er
+        t: od
+      } = (0, Kd.G)();
+      return (0, hd.jsxs)("div", {
+        className: Fd()("BloxdForm MapTypeForm", {
+          BasicOptions: !vd
         }),
-        children: [(0, fr.jsx)("div", {
+        children: [(0, hd.jsx)("div", {
           className: "SectionTitle",
-          children: mr("customLobby:mapType")
-        }), (0, fr.jsx)("div", {
+          children: od("customLobby:mapType")
+        }), (0, hd.jsx)("div", {
           className: "SectionBody",
-          children: Sr.map((rr => Er || (0, ar.t)(rr) ? (0, fr.jsx)("button", {
+          children: Od.map((dd => vd || (0, Rd.y)(dd) ? (0, hd.jsx)("button", {
             type: "button",
-            className: Wr()("MapType", {
-              Selected: Qr === rr
+            className: Fd()("MapType", {
+              Selected: md === dd
             }),
-            disabled: pr,
+            disabled: Qd,
             onClick: () => {
-              Zr(rr)
+              Wd(dd)
             },
             style: {
-              "--background-image": `url(${jr.n[rr]})`
+              "--background-image": `url(${Xd.l[dd]})`
             },
-            children: jr.j[rr]
-          }, rr) : null))
-        }), xr]
+            children: Xd.j[dd]
+          }, dd) : null))
+        }), td]
       })
     }
   },
-  5753: () => {},
-  37774: () => {}
+  5716: () => {},
+  37882: () => {}
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

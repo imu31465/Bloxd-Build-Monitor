@@ -1,13 +1,17 @@
 # WASM module: `bloxd_wasm_shader_pack_bg`
 
-> environment **staging.bloxd.io** · build `fl4vv.bd3c59ce` · analyzed 2026-11-28T08:15:48+09:00
-> source: https://staging.bloxd.io/static/media/bloxd_wasm_shader_pack_bg.57d655048cabc284946d.wasm
-> 303,820 bytes (296.7 KB) · sha256 `bc15fb00e7a581fb…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **staging.bloxd.io** · build `yteou.5361c997` · analyzed 2026-11-28T13:51:33+09:00
+> source: https://staging.bloxd.io/static/media/bloxd_wasm_shader_pack_bg.531414ffe21363b90130.wasm
+> 304,132 bytes (297.0 KB) · sha256 `c6afc4ff72171aa4…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- name-section module id `1d3284b6c0adb221.1190` → `6e25beb77e0aa548.1190` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 303,820 → 304,132 bytes (+312)
+- data bytes 44,569 → 44,881
+- name-section module id `6e25beb77e0aa548.1190` → `fcc612654967c373.1190` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/29 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
+- removed embedded strings: `    rg8unorm rg8snorm rg8uint rg8sint rg16unorm rg16snorm rg`; `    texture_depth_2d texture_depth_2d_array texture_depth_cu`; `    texture_storage_1d texture_storage_2d texture_storage_2d`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `a formatting trait implementation returned an error when the`
 
 ## Overview
 
@@ -18,10 +22,10 @@
 | Code bytes (function bodies) | 256,592 (250.6 KB) |
 | Total local variables | 1,865 |
 | Instructions (scanable bodies) | 127,325 |
-| Data segments / bytes | 121 / 44,569 |
+| Data segments / bytes | 121 / 44,881 |
 | Element segments / entries | 1 / 94 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `6e25beb77e0aa548.1190` |
+| name-section module id | `fcc612654967c373.1190` |
 | Sections | 12 |
 
 ## Sections
@@ -38,7 +42,7 @@
 | 9 | element | 185 | 1 |
 | 12 | datacount | 1 | — |
 | 10 | code | 257,031 | 265 |
-| 11 | data | 45,564 | 121 |
+| 11 | data | 45,876 | 121 |
 | 0 | custom:name | 29 | — |
 
 ## Types
@@ -51,16 +55,16 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `CyM5.l3Ju` | func | `(i32 i32) -> ()` |
-| 1 | `CyM5.a0zy` | func | `(i32) -> ()` |
-| 2 | `CyM5.YAoG` | func | `(i32) -> (i32)` |
-| 3 | `CyM5.KszC` | func | `(i32 i32) -> (f64)` |
-| 4 | `CyM5.CPRo` | func | `(i32 i32) -> ()` |
-| 5 | `CyM5.FYzC` | func | `(i32) -> (i32)` |
-| 6 | `CyM5.sQ8M` | func | `(i32 i32) -> (i32)` |
-| 7 | `CyM5.WzKq` | func | `(i32) -> (i32)` |
-| 8 | `CyM5.f9ec` | func | `(i32 i32) -> ()` |
-| 9 | `CyM5.CV6t` | func | `(i32 i32) -> (i32)` |
+| 0 | `Rqac.fxj2` | func | `(i32 i32) -> ()` |
+| 1 | `Rqac.aDdL` | func | `(i32) -> ()` |
+| 2 | `Rqac.F3OH` | func | `(i32) -> (i32)` |
+| 3 | `Rqac.atO5` | func | `(i32 i32) -> (f64)` |
+| 4 | `Rqac.Ngez` | func | `(i32 i32) -> ()` |
+| 5 | `Rqac.AtvY` | func | `(i32) -> (i32)` |
+| 6 | `Rqac.DfkE` | func | `(i32 i32) -> (i32)` |
+| 7 | `Rqac.Qfze` | func | `(i32) -> (i32)` |
+| 8 | `Rqac.Ww2K` | func | `(i32 i32) -> ()` |
+| 9 | `Rqac.VFMg` | func | `(i32 i32) -> (i32)` |
 
 ## Exports
 
@@ -68,35 +72,35 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `gPKP` | func | 220 | `(i32) -> (i32 i32)` |
-| `EwC1` | func | 190 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
-| `OiXG` | func | 216 | `(i32) -> (i32 i32)` |
-| `dNY9` | func | 215 | `(i32) -> (i32 i32)` |
-| `PEiv` | func | 228 | `() -> (i32 i32)` |
-| `wnYr` | global | 1 | `` |
-| `Y2I8` | func | 217 | `(i32) -> (i32 i32)` |
-| `Een5` | func | 193 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
-| `KHg9` | func | 218 | `(i32) -> (i32 i32)` |
-| `xngU` | func | 227 | `() -> (i32 i32)` |
-| `BZxR` | func | 208 | `(i32) -> (i32 i32 i32 i32)` |
-| `yc8p` | func | 201 | `(i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
+| `ZIIw` | func | 217 | `(i32) -> (i32 i32)` |
+| `g4LI` | func | 221 | `(i32) -> (i32 i32)` |
+| `B8rk` | func | 270 | `() -> ()` |
+| `H1YW` | func | 218 | `(i32) -> (i32 i32)` |
+| `cOAY` | func | 227 | `() -> (i32 i32)` |
+| `d9bT` | func | 215 | `(i32) -> (i32 i32)` |
+| `sA7c` | func | 146 | `(i32 i32) -> ()` |
+| `UdBK` | func | 273 | `() -> (i32)` |
+| `kcec` | func | 226 | `() -> (i32 i32)` |
+| `Gmu1` | func | 223 | `(i32) -> (i32 i32)` |
+| `ceuD` | func | 244 | `(i32 i32 i32) -> ()` |
+| `fnh7` | func | 270 | `() -> ()` |
+| `Zdm3` | func | 209 | `(i32) -> (i32 i32 i32 i32)` |
+| `N19D` | func | 201 | `(i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
+| `ssOQ` | func | 220 | `(i32) -> (i32 i32)` |
+| `fMUP` | func | 198 | `(i32 i32 f64 f64 i32 i32) -> (i32 i32 i32 i32)` |
+| `yyt8` | func | 225 | `() -> (i32 i32)` |
+| `HSG3` | func | 200 | `(i32 i32) -> (i32)` |
+| `RkN0` | func | 190 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
+| `lvQg` | func | 228 | `() -> (i32 i32)` |
+| `vUxn` | global | 1 | `` |
+| `OzXo` | global | 2 | `` |
 | `memory` | memory | 0 | `` |
-| `l6Ia` | func | 222 | `(i32) -> (i32 i32)` |
-| `D2Ug` | func | 270 | `() -> ()` |
-| `aqnI` | func | 219 | `(i32) -> (i32 i32)` |
-| `JN0D` | func | 202 | `(i32 i32 i32 i32) -> (i32)` |
-| `kqD4` | func | 273 | `() -> (i32)` |
-| `DRmg` | global | 2 | `` |
-| `V2Vd` | func | 226 | `() -> (i32 i32)` |
-| `WQJD` | func | 198 | `(i32 i32 f64 f64 i32 i32) -> (i32 i32 i32 i32)` |
-| `mkeo` | func | 200 | `(i32 i32) -> (i32)` |
-| `gDuS` | func | 244 | `(i32 i32 i32) -> ()` |
-| `mJps` | func | 221 | `(i32) -> (i32 i32)` |
-| `Foh4` | func | 209 | `(i32) -> (i32 i32 i32 i32)` |
-| `M3mv` | func | 223 | `(i32) -> (i32 i32)` |
-| `tBFa` | func | 270 | `() -> ()` |
-| `MfqQ` | func | 146 | `(i32 i32) -> ()` |
-| `XNqY` | func | 225 | `() -> (i32 i32)` |
+| `VM1V` | func | 222 | `(i32) -> (i32 i32)` |
+| `Gh2H` | func | 193 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
+| `iztn` | func | 216 | `(i32) -> (i32 i32)` |
+| `P9LX` | func | 208 | `(i32) -> (i32 i32 i32 i32)` |
+| `INIw` | func | 202 | `(i32 i32 i32 i32) -> (i32)` |
+| `xB85` | func | 219 | `(i32) -> (i32 i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -104,7 +108,7 @@
 
 - memory 0: min 17 pages · max ∞ · shared=False
 - table 0: funcref · min 95 · max 95
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1097408, `i32` = i32.const 1097988
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1097728, `i32` = i32.const 1098308
 
 ## Functions
 
@@ -179,12 +183,12 @@ pathsourcetexture namealias namealias texturelineNumlinePosmessagemessage typete
 , BLOXD_LIGHTING was removed in apiVersion 5; test bloxdLit() in code instead.This conditional isn't closed with #endif before the end of the file.
 array contains a value of the wrong typenull pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rust
 . Texture names are the file names texture packs use, as in bloxdTextureIdGrassTop for grass_top.png; BLOCK_TEXTURES.md lists them.
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/sort/stable/quicksort.rs
 w directly, since the shader pack API adds fields to it over time; start from a bloxdDefault* function or copy an input.
 ${SHADER_PACK_API_VERSION}${SHADER_PACK_INPUTS_VAR}bloxdPackInputsThis comment isn't closed before the end of the file.
 555555555555555555555555555555555555555555555555555555555555555555555555555555555551555555554555555555585555555555555
 q can only be a function's parameter or return type, the type of an initialised let or var, or a ptr's store type.
 n: the engine binds every texture and sampler. Surface and light hooks can read atlas textures with bloxdTexel.
-    alias break case const const_assert continue continuing default diagnostic discard else enable false fn for
 ```
 
 ## Opcode histogram (aggregated)

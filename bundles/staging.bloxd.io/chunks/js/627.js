@@ -1,467 +1,467 @@
 export const id = 627;
 export const ids = [627];
 export const modules = {
-  54322: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      _ENVTextureLoader: () => vr
+  54213: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      _ENVTextureLoader: () => Ud
     });
-    var Zr = Qr(41818),
-      Wr = Qr(38560),
-      ar = Qr(38599),
-      jr = Qr(41861),
-      Ir = Qr(41731),
-      fr = Qr(41865),
-      Er = (Qr(41941), Qr(54330)),
-      pr = Qr(40246),
-      xr = (Qr(54344), Qr(54362), Qr(41919));
-    const mr = "image/png",
-      Nr = [134, 22, 135, 150, 246, 214, 150, 54];
+    var Wd = md(41859),
+      Fd = md(38636),
+      Rd = md(38663),
+      Xd = md(41907),
+      Kd = md(41763),
+      hd = md(41914),
+      vd = (md(42020), md(54217)),
+      Qd = md(40262),
+      td = (md(54227), md(54245), md(41991));
+    const od = "image/png",
+      Nd = [134, 22, 135, 150, 246, 214, 150, 54];
 
-    function Ur(rr) {
-      const Sr = new DataView(rr.buffer, rr.byteOffset, rr.byteLength);
-      let Qr = 0;
-      for (let jr = 0; jr < Nr.length; jr++)
-        if (Sr.getUint8(Qr++) !== Nr[jr]) return pr.c.Error("Not a babylon environment map"), null;
-      let Zr, Wr = "";
-      for (; Zr = Sr.getUint8(Qr++);) Wr += String.fromCharCode(Zr);
-      let ar = JSON.parse(Wr);
-      return ar = tr(ar), ar.binaryDataPosition = Qr, ar.specular && (ar.specular.lodGenerationScale = ar.specular.lodGenerationScale || .8), ar
+    function qd(dd) {
+      const Od = new DataView(dd.buffer, dd.byteOffset, dd.byteLength);
+      let md = 0;
+      for (let Xd = 0; Xd < Nd.length; Xd++)
+        if (Od.getUint8(md++) !== Nd[Xd]) return Qd.c.Error("Not a babylon environment map"), null;
+      let Wd, Fd = "";
+      for (; Wd = Od.getUint8(md++);) Fd += String.fromCharCode(Wd);
+      let Rd = JSON.parse(Fd);
+      return Rd = Hd(Rd), Rd.binaryDataPosition = md, Rd.specular && (Rd.specular.lodGenerationScale = Rd.specular.lodGenerationScale || .8), Rd
     }
 
-    function tr(rr) {
-      if (rr.version > 2) throw new Error(`Unsupported babylon environment map version "${rr.version}". Latest supported version is "2".`);
-      return 2 === rr.version ? rr : rr = {
-        ...rr,
+    function Hd(dd) {
+      if (dd.version > 2) throw new Error(`Unsupported babylon environment map version "${dd.version}". Latest supported version is "2".`);
+      return 2 === dd.version ? dd : dd = {
+        ...dd,
         version: 2,
-        imageType: mr
+        imageType: od
       }
     }
 
-    function hr(rr, Sr) {
-      const Qr = (Sr = tr(Sr)).specular;
-      let Zr = Math.log2(Sr.width);
-      if (Zr = Math.round(Zr) + 1, Qr.mipmaps.length !== 6 * Zr) throw new Error(`Unsupported specular mipmaps number "${Qr.mipmaps.length}"`);
-      const Wr = new Array(Zr);
-      for (let ar = 0; ar < Zr; ar++) {
-        Wr[ar] = new Array(6);
-        for (let Zr = 0; Zr < 6; Zr++) {
-          const jr = Qr.mipmaps[6 * ar + Zr];
-          Wr[ar][Zr] = new Uint8Array(rr.buffer, rr.byteOffset + Sr.binaryDataPosition + jr.position, jr.length)
+    function yd(dd, Od) {
+      const md = (Od = Hd(Od)).specular;
+      let Wd = Math.log2(Od.width);
+      if (Wd = Math.round(Wd) + 1, md.mipmaps.length !== 6 * Wd) throw new Error(`Unsupported specular mipmaps number "${md.mipmaps.length}"`);
+      const Fd = new Array(Wd);
+      for (let Rd = 0; Rd < Wd; Rd++) {
+        Fd[Rd] = new Array(6);
+        for (let Wd = 0; Wd < 6; Wd++) {
+          const Xd = md.mipmaps[6 * Rd + Wd];
+          Fd[Rd][Wd] = new Uint8Array(dd.buffer, dd.byteOffset + Od.binaryDataPosition + Xd.position, Xd.length)
         }
       }
-      return Wr
+      return Fd
     }
 
-    function zr(rr, Sr) {
-      Sr = tr(Sr);
-      const Qr = new Array(6),
-        Zr = Sr.irradiance?.irradianceTexture;
-      if (Zr) {
-        if (6 !== Zr.faces.length) throw new Error(`Incorrect irradiance texture faces number "${Zr.faces.length}"`);
-        for (let Wr = 0; Wr < 6; Wr++) {
-          const ar = Zr.faces[Wr];
-          Qr[Wr] = new Uint8Array(rr.buffer, rr.byteOffset + Sr.binaryDataPosition + ar.position, ar.length)
+    function bd(dd, Od) {
+      Od = Hd(Od);
+      const md = new Array(6),
+        Wd = Od.irradiance?.irradianceTexture;
+      if (Wd) {
+        if (6 !== Wd.faces.length) throw new Error(`Incorrect irradiance texture faces number "${Wd.faces.length}"`);
+        for (let Fd = 0; Fd < 6; Fd++) {
+          const Rd = Wd.faces[Fd];
+          md[Fd] = new Uint8Array(dd.buffer, dd.byteOffset + Od.binaryDataPosition + Rd.position, Rd.length)
         }
       }
-      return Qr
+      return md
     }
 
-    function Yr(rr, Sr, Qr) {
-      const Zr = (Qr = tr(Qr)).specular;
-      if (!Zr) return Promise.resolve([]);
-      rr._lodGenerationScale = Zr.lodGenerationScale;
-      const ar = [],
-        jr = hr(Sr, Qr);
-      ar.push(er(rr, jr, Qr.imageType));
-      const Ir = Qr.irradiance?.irradianceTexture;
-      if (Ir) {
-        const Zr = zr(Sr, Qr);
-        let jr = null;
-        Qr.irradiance?.irradianceTexture?.dominantDirection && (jr = Wr.u.FromArray(Qr.irradiance.irradianceTexture.dominantDirection)), ar.push(Kr(rr, Zr, Ir.size, Qr.imageType, jr))
+    function Td(dd, Od, md) {
+      const Wd = (md = Hd(md)).specular;
+      if (!Wd) return Promise.resolve([]);
+      dd._lodGenerationScale = Wd.lodGenerationScale;
+      const Rd = [],
+        Xd = yd(Od, md);
+      Rd.push(Yd(dd, Xd, md.imageType));
+      const Kd = md.irradiance?.irradianceTexture;
+      if (Kd) {
+        const Wd = bd(Od, md);
+        let Xd = null;
+        md.irradiance?.irradianceTexture?.dominantDirection && (Xd = Fd.j.FromArray(md.irradiance.irradianceTexture.dominantDirection)), Rd.push(gd(dd, Wd, Kd.size, md.imageType, Xd))
       }
-      return Promise.all(ar)
+      return Promise.all(Rd)
     }
-    async function nr(rr, Sr, Qr, Zr, Wr, ar, jr, Ir, fr, Er, pr) {
-      return await new Promise(((xr, mr) => {
-        if (Qr) {
-          const Qr = Sr.createTexture(null, !0, !0, null, 1, null, (rr => {
-            mr(rr)
-          }), rr);
-          Zr?.onEffectCreatedObservable.addOnce((Ir => {
-            Ir.executeWhenCompiled((() => {
-              Zr.externalTextureSamplerBinding = !0, Zr.onApply = Zr => {
-                Zr._bindTexture("textureSampler", Qr), Zr.setFloat2("scale", 1, Sr._features.needsInvertingBitmap && rr instanceof ImageBitmap ? -1 : 1)
-              }, Sr.scenes.length && (Sr.scenes[0].postProcessManager.directRender([Zr], Er, !0, ar, jr), Sr.restoreDefaultFramebuffer(), Qr.dispose(), URL.revokeObjectURL(Wr), xr())
+    async function pd(dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd, vd, Qd) {
+      return await new Promise(((td, od) => {
+        if (md) {
+          const md = Od.createTexture(null, !0, !0, null, 1, null, (dd => {
+            od(dd)
+          }), dd);
+          Wd?.onEffectCreatedObservable.addOnce((Kd => {
+            Kd.executeWhenCompiled((() => {
+              Wd.externalTextureSamplerBinding = !0, Wd.onApply = Wd => {
+                Wd._bindTexture("textureSampler", md), Wd.setFloat2("scale", 1, Od._features.needsInvertingBitmap && dd instanceof ImageBitmap ? -1 : 1)
+              }, Od.scenes.length && (Od.scenes[0].postProcessManager.directRender([Wd], vd, !0, Rd, Xd), Od.restoreDefaultFramebuffer(), md.dispose(), URL.revokeObjectURL(Fd), td())
             }))
           }))
         } else {
-          if (Sr._uploadImageToTexture(pr, rr, ar, jr), Ir) {
-            const Qr = fr[jr];
-            Qr && Sr._uploadImageToTexture(Qr._texture, rr, ar, 0)
+          if (Od._uploadImageToTexture(Qd, dd, Rd, Xd), Kd) {
+            const md = hd[Xd];
+            md && Od._uploadImageToTexture(md._texture, dd, Rd, 0)
           }
-          xr()
+          td()
         }
       }))
     }
-    async function er(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mr;
-      const Zr = rr.MU();
-      rr.format = 5, rr.type = 0, rr.generateMipMaps = !0, rr._cachedAnisotropicFilteringLevel = null, Zr.updateTextureSamplingMode(3, rr), await yr(rr, Sr, !0, Qr), rr.isReady = !0
+    async function Yd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : od;
+      const Wd = dd.Iq();
+      dd.format = 5, dd.type = 0, dd.generateMipMaps = !0, dd._cachedAnisotropicFilteringLevel = null, Wd.updateTextureSamplingMode(3, dd), await wd(dd, Od, !0, md), dd.isReady = !0
     }
-    async function Kr(rr, Sr, Qr) {
-      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : mr,
-        Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-      const ar = rr.MU(),
-        jr = new Ir.b(ar, 5),
-        Er = new fr.b(ar, jr);
-      rr._irradianceTexture = Er, Er._dominantDirection = Wr, jr.isCube = !0, jr.format = 5, jr.type = 0, jr.generateMipMaps = !0, jr._cachedAnisotropicFilteringLevel = null, jr.generateMipMaps = !0, jr.width = Qr, jr.height = Qr, ar.updateTextureSamplingMode(3, jr), await yr(jr, [Sr], !1, Zr), ar.generateMipMapsForCubemap(jr), jr.isReady = !0
+    async function gd(dd, Od, md) {
+      let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : od,
+        Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+      const Rd = dd.Iq(),
+        Xd = new Kd.c(Rd, 5),
+        vd = new hd.c(Rd, Xd);
+      dd._irradianceTexture = vd, vd._dominantDirection = Fd, Xd.isCube = !0, Xd.format = 5, Xd.type = 0, Xd.generateMipMaps = !0, Xd._cachedAnisotropicFilteringLevel = null, Xd.generateMipMaps = !0, Xd.width = md, Xd.height = md, Rd.updateTextureSamplingMode(3, Xd), await wd(Xd, [Od], !1, Wd), Rd.generateMipMapsForCubemap(Xd), Xd.isReady = !0
     }
-    async function yr(rr, Sr, Wr) {
-      let jr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : mr;
-      if (!(0, Zr.l)(rr.width)) throw new Error("Texture size must be a power of two");
-      const pr = (0, ar.ILog2)(rr.width) + 1,
-        Nr = rr.MU();
-      let Ur = !1,
-        tr = !1,
-        hr = null,
-        zr = null,
-        Yr = null;
-      const er = Nr.getCaps();
-      er.textureLOD ? Nr._features.supportRenderAndCopyToLodForFloatTextures ? er.textureHalfFloatRender && er.textureHalfFloatLinearFiltering ? (Ur = !0, rr.type = 2) : er.textureFloatRender && er.textureFloatLinearFiltering && (Ur = !0, rr.type = 1) : Ur = !1 : (Ur = !1, tr = Wr);
-      let Kr = 0;
-      if (Ur) Nr.isWebGPU ? (Kr = 1, await Qr.e(661).then((() => Qr(64736)))) : await Qr.e(643).then((() => Qr(64742))), hr = new Er.b("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, Nr, !1, void 0, rr.type, void 0, null, !1, void 0, Kr), rr._isRGBD = !1, rr.invertY = !1, zr = Nr.createRenderTargetCubeTexture(rr.width, {
+    async function wd(dd, Od, Fd) {
+      let Xd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : od;
+      if (!(0, Wd.i)(dd.width)) throw new Error("Texture size must be a power of two");
+      const Qd = (0, Rd.ILog2)(dd.width) + 1,
+        Nd = dd.Iq();
+      let qd = !1,
+        Hd = !1,
+        yd = null,
+        bd = null,
+        Td = null;
+      const Yd = Nd.getCaps();
+      Yd.textureLOD ? Nd._features.supportRenderAndCopyToLodForFloatTextures ? Yd.textureHalfFloatRender && Yd.textureHalfFloatLinearFiltering ? (qd = !0, dd.type = 2) : Yd.textureFloatRender && Yd.textureFloatLinearFiltering && (qd = !0, dd.type = 1) : qd = !1 : (qd = !1, Hd = Fd);
+      let gd = 0;
+      if (qd) Nd.isWebGPU ? (gd = 1, await md.e(661).then((() => md(64889)))) : await md.e(643).then((() => md(64894))), yd = new vd.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, Nd, !1, void 0, dd.type, void 0, null, !1, void 0, gd), dd._isRGBD = !1, dd.invertY = !1, bd = Nd.createRenderTargetCubeTexture(dd.width, {
         generateDepthBuffer: !1,
         generateMipMaps: !0,
         generateStencilBuffer: !1,
         samplingMode: 3,
-        type: rr.type,
+        type: dd.type,
         format: 5
       });
-      else if (rr._isRGBD = !0, rr.invertY = !0, tr) {
-        const Sr = 3;
-        Yr = {};
-        const Qr = rr._lodGenerationScale,
-          Zr = rr._lodGenerationOffset;
-        for (let Wr = 0; Wr < Sr; Wr++) {
-          const ar = (pr - 1) * Qr + Zr,
-            jr = Zr + (ar - Zr) * (1 - Wr / (Sr - 1)),
-            Er = Math.round(Math.min(Math.max(jr, 0), ar)),
-            xr = new Ir.b(Nr, 2);
-          xr.isCube = !0, xr.invertY = !0, xr.generateMipMaps = !1, Nr.updateTextureSamplingMode(2, xr);
-          const mr = new fr.b(null);
-          switch (mr._isCube = !0, mr._texture = xr, Yr[Er] = mr, Wr) {
+      else if (dd._isRGBD = !0, dd.invertY = !0, Hd) {
+        const Od = 3;
+        Td = {};
+        const md = dd._lodGenerationScale,
+          Wd = dd._lodGenerationOffset;
+        for (let Fd = 0; Fd < Od; Fd++) {
+          const Rd = (Qd - 1) * md + Wd,
+            Xd = Wd + (Rd - Wd) * (1 - Fd / (Od - 1)),
+            vd = Math.round(Math.min(Math.max(Xd, 0), Rd)),
+            td = new Kd.c(Nd, 2);
+          td.isCube = !0, td.invertY = !0, td.generateMipMaps = !1, Nd.updateTextureSamplingMode(2, td);
+          const od = new hd.c(null);
+          switch (od._isCube = !0, od._texture = td, Td[vd] = od, Fd) {
             case 0:
-              rr._lodTextureLow = mr;
+              dd._lodTextureLow = od;
               break;
             case 1:
-              rr._lodTextureMid = mr;
+              dd._lodTextureMid = od;
               break;
             case 2:
-              rr._lodTextureHigh = mr
+              dd._lodTextureHigh = od
           }
         }
       }
-      const yr = [];
-      for (let Qr = 0; Qr < Sr.length; Qr++)
-        for (let Zr = 0; Zr < 6; Zr++) {
-          const Wr = Sr[Qr][Zr],
-            ar = (0, xr.h)(Wr),
-            Ir = new Blob([ar], {
-              type: jr
+      const wd = [];
+      for (let md = 0; md < Od.length; md++)
+        for (let Wd = 0; Wd < 6; Wd++) {
+          const Fd = Od[md][Wd],
+            Rd = (0, td.m)(Fd),
+            Kd = new Blob([Rd], {
+              type: Xd
             }),
-            fr = URL.createObjectURL(Ir);
-          let Er;
-          if (Nr._features.forceBitmapOverHTMLImageElement) Er = Nr.createImageBitmap(Ir, {
+            hd = URL.createObjectURL(Kd);
+          let vd;
+          if (Nd._features.forceBitmapOverHTMLImageElement) vd = Nd.createImageBitmap(Kd, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
-          }).then((async Sr => await nr(Sr, Nr, Ur, hr, fr, Zr, Qr, tr, Yr, zr, rr)));
+          }).then((async Od => await pd(Od, Nd, qd, yd, hd, Wd, md, Hd, Td, bd, dd)));
           else {
-            const Sr = new Image;
-            Sr.src = fr, Er = new Promise(((Wr, ar) => {
-              Sr.onload = () => {
-                nr(Sr, Nr, Ur, hr, fr, Zr, Qr, tr, Yr, zr, rr).then((() => Wr())).catch((rr => {
-                  ar(rr)
+            const Od = new Image;
+            Od.src = hd, vd = new Promise(((Fd, Rd) => {
+              Od.onload = () => {
+                pd(Od, Nd, qd, yd, hd, Wd, md, Hd, Td, bd, dd).then((() => Fd())).catch((dd => {
+                  Rd(dd)
                 }))
-              }, Sr.onerror = rr => {
-                ar(rr)
+              }, Od.onerror = dd => {
+                Rd(dd)
               }
             }))
           }
-          yr.push(Er)
+          wd.push(vd)
         }
-      if (await Promise.all(yr), Sr.length < pr) {
-        let Qr;
-        const Zr = Math.pow(2, pr - 1 - Sr.length),
-          Wr = Zr * Zr * 4;
-        switch (rr.type) {
+      if (await Promise.all(wd), Od.length < Qd) {
+        let md;
+        const Wd = Math.pow(2, Qd - 1 - Od.length),
+          Fd = Wd * Wd * 4;
+        switch (dd.type) {
           case 0:
-            Qr = new Uint8Array(Wr);
+            md = new Uint8Array(Fd);
             break;
           case 2:
-            Qr = new Uint16Array(Wr);
+            md = new Uint16Array(Fd);
             break;
           case 1:
-            Qr = new Float32Array(Wr)
+            md = new Float32Array(Fd)
         }
-        for (let ar = Sr.length; ar < pr; ar++)
-          for (let Sr = 0; Sr < 6; Sr++) Nr._uploadArrayBufferViewToTexture(zr?.texture || rr, Qr, Sr, ar)
+        for (let Rd = Od.length; Rd < Qd; Rd++)
+          for (let Od = 0; Od < 6; Od++) Nd._uploadArrayBufferViewToTexture(bd?.texture || dd, md, Od, Rd)
       }
-      if (zr) {
-        const Sr = rr._irradianceTexture;
-        rr._irradianceTexture = null, Nr._releaseTexture(rr), zr._swapAndDie(rr), rr._irradianceTexture = Sr
+      if (bd) {
+        const Od = dd._irradianceTexture;
+        dd._irradianceTexture = null, Nd._releaseTexture(dd), bd._swapAndDie(dd), dd._irradianceTexture = Od
       }
-      hr && hr.dispose(), tr && (rr._lodTextureHigh && rr._lodTextureHigh._texture && (rr._lodTextureHigh._texture.isReady = !0), rr._lodTextureMid && rr._lodTextureMid._texture && (rr._lodTextureMid._texture.isReady = !0), rr._lodTextureLow && rr._lodTextureLow._texture && (rr._lodTextureLow._texture.isReady = !0))
+      yd && yd.dispose(), Hd && (dd._lodTextureHigh && dd._lodTextureHigh._texture && (dd._lodTextureHigh._texture.isReady = !0), dd._lodTextureMid && dd._lodTextureMid._texture && (dd._lodTextureMid._texture.isReady = !0), dd._lodTextureLow && dd._lodTextureLow._texture && (dd._lodTextureLow._texture.isReady = !0))
     }
 
-    function Br(rr, Sr) {
-      const Qr = (Sr = tr(Sr)).irradiance;
-      if (!Qr) return;
-      const Zr = new jr.d;
-      Wr.u.FromArrayToRef(Qr.x, 0, Zr.x), Wr.u.FromArrayToRef(Qr.y, 0, Zr.y), Wr.u.FromArrayToRef(Qr.z, 0, Zr.z), Wr.u.FromArrayToRef(Qr.xx, 0, Zr.xx), Wr.u.FromArrayToRef(Qr.yy, 0, Zr.yy), Wr.u.FromArrayToRef(Qr.zz, 0, Zr.zz), Wr.u.FromArrayToRef(Qr.yz, 0, Zr.yz), Wr.u.FromArrayToRef(Qr.zx, 0, Zr.zx), Wr.u.FromArrayToRef(Qr.xy, 0, Zr.xy), rr._sphericalPolynomial = Zr
+    function Ed(dd, Od) {
+      const md = (Od = Hd(Od)).irradiance;
+      if (!md) return;
+      const Wd = new Xd.e;
+      Fd.j.FromArrayToRef(md.x, 0, Wd.x), Fd.j.FromArrayToRef(md.y, 0, Wd.y), Fd.j.FromArrayToRef(md.z, 0, Wd.z), Fd.j.FromArrayToRef(md.xx, 0, Wd.xx), Fd.j.FromArrayToRef(md.yy, 0, Wd.yy), Fd.j.FromArrayToRef(md.zz, 0, Wd.zz), Fd.j.FromArrayToRef(md.yz, 0, Wd.yz), Fd.j.FromArrayToRef(md.zx, 0, Wd.zx), Fd.j.FromArrayToRef(md.xy, 0, Wd.xy), dd._sphericalPolynomial = Wd
     }
-    var Tr = Qr(54371);
-    class vr {
+    var Jd = md(54247);
+    class Ud {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(rr, Sr, Qr, Zr, Wr) {
-        if (Array.isArray(rr)) return;
-        const ar = Ur(rr);
-        if (ar) {
-          Sr.width = ar.width, Sr.height = ar.width;
+      loadCubeData(dd, Od, md, Wd, Fd) {
+        if (Array.isArray(dd)) return;
+        const Rd = qd(dd);
+        if (Rd) {
+          Od.width = Rd.width, Od.height = Rd.width;
           try {
-            (0, Tr.c)(), Br(Sr, ar), Yr(Sr, rr, ar).then((() => {
-              Sr.isReady = !0, Sr.onLoadedObservable.notifyObservers(Sr), Sr.onLoadedObservable.clear(), Zr && Zr()
-            }), (rr => {
-              Wr?.("Can not upload environment levels", rr)
+            (0, Jd.e)(), Ed(Od, Rd), Td(Od, dd, Rd).then((() => {
+              Od.isReady = !0, Od.onLoadedObservable.notifyObservers(Od), Od.onLoadedObservable.clear(), Wd && Wd()
+            }), (dd => {
+              Fd?.("Can not upload environment levels", dd)
             }))
-          } catch (jr) {
-            Wr?.("Can not upload environment file", jr)
+          } catch (Xd) {
+            Fd?.("Can not upload environment file", Xd)
           }
-        } else Wr && Wr("Can not parse the environment file", null)
+        } else Fd && Fd("Can not parse the environment file", null)
       }
       loadData() {
         throw ".env not supported in 2d."
       }
     }
   },
-  54371: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr
+  54247: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Xd
     });
-    var Zr = Qr(54310),
-      Wr = Qr(41865);
-    let ar = !1;
+    var Wd = md(54193),
+      Fd = md(41914);
+    let Rd = !1;
 
-    function jr() {
-      ar || (ar = !0, Wr.b.prototype._sphericalPolynomialTargetSize = 0, Wr.b.prototype.forceSphericalPolynomialsRecompute = function() {
+    function Xd() {
+      Rd || (Rd = !0, Fd.c.prototype._sphericalPolynomialTargetSize = 0, Fd.c.prototype.forceSphericalPolynomialsRecompute = function() {
         this._texture && (this._texture._sphericalPolynomial = null, this._texture._sphericalPolynomialPromise = null, this._texture._sphericalPolynomialComputed = !1)
-      }, Object.defineProperty(Wr.b.prototype, "sphericalPolynomial", {
+      }, Object.defineProperty(Fd.c.prototype, "sphericalPolynomial", {
         get: function() {
           if (this._texture) {
             if (this._texture._sphericalPolynomial || this._texture._sphericalPolynomialComputed) return this._texture._sphericalPolynomial;
-            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = Zr.d.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((rr => {
-              this._texture._sphericalPolynomial = rr, this._texture._sphericalPolynomialComputed = !0
+            if (this._texture.isReady) return this._texture._sphericalPolynomialPromise || (this._texture._sphericalPolynomialPromise = Wd.c.ConvertCubeMapTextureToSphericalPolynomial(this), null === this._texture._sphericalPolynomialPromise ? this._texture._sphericalPolynomialComputed = !0 : this._texture._sphericalPolynomialPromise.then((dd => {
+              this._texture._sphericalPolynomial = dd, this._texture._sphericalPolynomialComputed = !0
             }))), null
           }
           return null
         },
-        set: function(rr) {
-          this._texture && (this._texture._sphericalPolynomial = rr)
+        set: function(dd) {
+          this._texture && (this._texture._sphericalPolynomial = dd)
         },
         enumerable: !0,
         configurable: !0
       }))
     }
   },
-  54310: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Er
+  54193: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => vd
     });
-    var Zr = Qr(38560),
-      Wr = Qr(38599),
-      ar = Qr(41861),
-      jr = Qr(38569),
-      Ir = Qr(38684);
-    class fr {
-      constructor(rr, Sr, Qr, Zr) {
-        this.name = rr, this.worldAxisForNormal = Sr, this.worldAxisForFileX = Qr, this.worldAxisForFileY = Zr
+    var Wd = md(38636),
+      Fd = md(38663),
+      Rd = md(41907),
+      Xd = md(38644),
+      Kd = md(38741);
+    class hd {
+      constructor(dd, Od, md, Wd) {
+        this.name = dd, this.worldAxisForNormal = Od, this.worldAxisForFileX = md, this.worldAxisForFileY = Wd
       }
     }
-    class Er {
-      static _NearestPow2Floor(rr) {
-        return rr <= 1 ? 1 : 1 << Math.floor(Math.log2(rr))
+    class vd {
+      static _NearestPow2Floor(dd) {
+        return dd <= 1 ? 1 : 1 << Math.floor(Math.log2(dd))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(rr) {
-        if (!rr.isCube) return null;
-        rr.eC()?.MU().flushFramebuffer();
-        const Sr = rr.getSize().width,
-          Qr = rr._sphericalPolynomialTargetSize,
-          Zr = Qr > 0 ? this._NearestPow2Floor(Qr) : 0,
-          Wr = !rr.noMipmap && !0 === rr._texture?.generateMipMaps,
-          ar = Zr > 0 && Zr < Sr && Wr,
-          jr = ar ? Math.max(0, Math.round(Math.log2(Sr / Zr))) : 0,
-          Ir = ar ? Math.max(1, Math.floor(Sr / Math.pow(2, jr))) : Sr,
-          fr = rr.readPixels(0, jr, void 0, !1),
-          Er = rr.readPixels(1, jr, void 0, !1);
-        let pr, xr;
-        rr.isRenderTarget ? (pr = rr.readPixels(3, jr, void 0, !1), xr = rr.readPixels(2, jr, void 0, !1)) : (pr = rr.readPixels(2, jr, void 0, !1), xr = rr.readPixels(3, jr, void 0, !1));
-        const mr = rr.readPixels(4, jr, void 0, !1),
-          Nr = rr.readPixels(5, jr, void 0, !1),
-          Ur = rr.gammaSpace,
-          tr = Zr > 0 && Zr < Sr && !ar;
-        return new Promise((rr => {
-          Promise.all([Er, fr, pr, xr, mr, Nr]).then((Qr => {
-            let [Wr, ar, jr, fr, Er, pr] = Qr, xr = Ir;
-            if (tr) {
-              const rr = 4;
-              Wr = this._DownsampleFace(Wr, Sr, Zr, rr), ar = this._DownsampleFace(ar, Sr, Zr, rr), jr = this._DownsampleFace(jr, Sr, Zr, rr), fr = this._DownsampleFace(fr, Sr, Zr, rr), Er = this._DownsampleFace(Er, Sr, Zr, rr), pr = this._DownsampleFace(pr, Sr, Zr, rr), xr = Zr
+      static ConvertCubeMapTextureToSphericalPolynomial(dd) {
+        if (!dd.isCube) return null;
+        dd.zV()?.Iq().flushFramebuffer();
+        const Od = dd.getSize().width,
+          md = dd._sphericalPolynomialTargetSize,
+          Wd = md > 0 ? this._NearestPow2Floor(md) : 0,
+          Fd = !dd.noMipmap && !0 === dd._texture?.generateMipMaps,
+          Rd = Wd > 0 && Wd < Od && Fd,
+          Xd = Rd ? Math.max(0, Math.round(Math.log2(Od / Wd))) : 0,
+          Kd = Rd ? Math.max(1, Math.floor(Od / Math.pow(2, Xd))) : Od,
+          hd = dd.readPixels(0, Xd, void 0, !1),
+          vd = dd.readPixels(1, Xd, void 0, !1);
+        let Qd, td;
+        dd.isRenderTarget ? (Qd = dd.readPixels(3, Xd, void 0, !1), td = dd.readPixels(2, Xd, void 0, !1)) : (Qd = dd.readPixels(2, Xd, void 0, !1), td = dd.readPixels(3, Xd, void 0, !1));
+        const od = dd.readPixels(4, Xd, void 0, !1),
+          Nd = dd.readPixels(5, Xd, void 0, !1),
+          qd = dd.gammaSpace,
+          Hd = Wd > 0 && Wd < Od && !Rd;
+        return new Promise((dd => {
+          Promise.all([vd, hd, Qd, td, od, Nd]).then((md => {
+            let [Fd, Rd, Xd, hd, vd, Qd] = md, td = Kd;
+            if (Hd) {
+              const dd = 4;
+              Fd = this._DownsampleFace(Fd, Od, Wd, dd), Rd = this._DownsampleFace(Rd, Od, Wd, dd), Xd = this._DownsampleFace(Xd, Od, Wd, dd), hd = this._DownsampleFace(hd, Od, Wd, dd), vd = this._DownsampleFace(vd, Od, Wd, dd), Qd = this._DownsampleFace(Qd, Od, Wd, dd), td = Wd
             }
-            const mr = {
-              size: xr,
-              right: ar,
-              left: Wr,
-              up: jr,
-              down: fr,
-              front: Er,
-              back: pr,
+            const od = {
+              size: td,
+              right: Rd,
+              left: Fd,
+              up: Xd,
+              down: hd,
+              front: vd,
+              back: Qd,
               format: 5,
-              type: Wr instanceof Float32Array ? 1 : 0,
-              gammaSpace: Ur
+              type: Fd instanceof Float32Array ? 1 : 0,
+              gammaSpace: qd
             };
-            rr(this.ConvertCubeMapToSphericalPolynomial(mr))
+            dd(this.ConvertCubeMapToSphericalPolynomial(od))
           }))
         }))
       }
-      static _AreaElement(rr, Sr) {
-        return Math.atan2(rr * Sr, Math.sqrt(rr * rr + Sr * Sr + 1))
+      static _AreaElement(dd, Od) {
+        return Math.atan2(dd * Od, Math.sqrt(dd * dd + Od * Od + 1))
       }
-      static _DownsampleFace(rr, Sr, Qr, Zr) {
-        const Wr = rr instanceof Float32Array ? rr : Float32Array.from(rr),
-          ar = Qr * Qr * Zr,
-          jr = new Float32Array(ar),
-          Ir = Sr / Qr,
-          fr = 1 / (Ir * Ir);
-        for (let pr = 0; pr < Qr; pr++) {
-          const rr = Math.floor(pr * Ir),
-            ar = Math.floor((pr + 1) * Ir);
-          for (let Er = 0; Er < Qr; Er++) {
-            const xr = Math.floor(Er * Ir),
-              mr = Math.floor((Er + 1) * Ir),
-              Nr = (pr * Qr + Er) * Zr;
-            for (let Qr = 0; Qr < Zr; Qr++) {
-              let Ir = 0;
-              for (let jr = rr; jr < ar; jr++)
-                for (let rr = xr; rr < mr; rr++) Ir += Wr[(jr * Sr + rr) * Zr + Qr];
-              jr[Nr + Qr] = Ir * fr
+      static _DownsampleFace(dd, Od, md, Wd) {
+        const Fd = dd instanceof Float32Array ? dd : Float32Array.from(dd),
+          Rd = md * md * Wd,
+          Xd = new Float32Array(Rd),
+          Kd = Od / md,
+          hd = 1 / (Kd * Kd);
+        for (let Qd = 0; Qd < md; Qd++) {
+          const dd = Math.floor(Qd * Kd),
+            Rd = Math.floor((Qd + 1) * Kd);
+          for (let vd = 0; vd < md; vd++) {
+            const td = Math.floor(vd * Kd),
+              od = Math.floor((vd + 1) * Kd),
+              Nd = (Qd * md + vd) * Wd;
+            for (let md = 0; md < Wd; md++) {
+              let Kd = 0;
+              for (let Xd = dd; Xd < Rd; Xd++)
+                for (let dd = td; dd < od; dd++) Kd += Fd[(Xd * Od + dd) * Wd + md];
+              Xd[Nd + md] = Kd * hd
             }
           }
         }
-        if (rr instanceof Float32Array) return jr;
-        const Er = new(0, rr.constructor)(ar);
-        for (let pr = 0; pr < ar; pr++) Er[pr] = jr[pr] + .5 | 0;
-        return Er
+        if (dd instanceof Float32Array) return Xd;
+        const vd = new(0, dd.constructor)(Rd);
+        for (let Qd = 0; Qd < Rd; Qd++) vd[Qd] = Xd[Qd] + .5 | 0;
+        return vd
       }
-      static ConvertCubeMapToSphericalPolynomial(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Qr = Sr > 0 ? this._NearestPow2Floor(Sr) : 0;
-        if (Qr > 0 && rr.size > Qr) {
-          const Sr = 5 === rr.format ? 4 : 3,
-            Zr = ["right", "left", "up", "down", "front", "back"],
-            Wr = {};
-          for (const ar of Zr) Wr[ar] = this._DownsampleFace(rr[ar], rr.size, Qr, Sr);
-          rr = {
-            ...rr,
-            ...Wr,
-            size: Qr
+      static ConvertCubeMapToSphericalPolynomial(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const md = Od > 0 ? this._NearestPow2Floor(Od) : 0;
+        if (md > 0 && dd.size > md) {
+          const Od = 5 === dd.format ? 4 : 3,
+            Wd = ["right", "left", "up", "down", "front", "back"],
+            Fd = {};
+          for (const Rd of Wd) Fd[Rd] = this._DownsampleFace(dd[Rd], dd.size, md, Od);
+          dd = {
+            ...dd,
+            ...Fd,
+            size: md
           }
         }
-        const Zr = new ar.c;
-        let fr = 0;
-        const Er = 2 / rr.size,
-          pr = Er,
-          xr = .5 * Er,
-          mr = xr - 1;
-        for (let ar = 0; ar < 6; ar++) {
-          const Sr = this._FileFaces[ar],
-            Qr = rr[Sr.name];
-          let Nr = mr;
-          const Ur = 5 === rr.format ? 4 : 3;
-          for (let ar = 0; ar < rr.size; ar++) {
-            let tr = mr;
-            for (let pr = 0; pr < rr.size; pr++) {
-              const mr = Sr.worldAxisForFileX.scale(tr).add(Sr.worldAxisForFileY.scale(Nr)).add(Sr.worldAxisForNormal);
-              mr.normalize();
-              const hr = this._AreaElement(tr - xr, Nr - xr) - this._AreaElement(tr - xr, Nr + xr) - this._AreaElement(tr + xr, Nr - xr) + this._AreaElement(tr + xr, Nr + xr);
-              let zr = Qr[ar * rr.size * Ur + pr * Ur + 0],
-                Yr = Qr[ar * rr.size * Ur + pr * Ur + 1],
-                nr = Qr[ar * rr.size * Ur + pr * Ur + 2];
-              isNaN(zr) && (zr = 0), isNaN(Yr) && (Yr = 0), isNaN(nr) && (nr = 0), 0 === rr.type && (zr /= 255, Yr /= 255, nr /= 255), rr.gammaSpace && (zr = Math.pow((0, Wr.Clamp)(zr), jr.h), Yr = Math.pow((0, Wr.Clamp)(Yr), jr.h), nr = Math.pow((0, Wr.Clamp)(nr), jr.h));
-              const er = this.MAX_HDRI_VALUE;
+        const Wd = new Rd.c;
+        let hd = 0;
+        const vd = 2 / dd.size,
+          Qd = vd,
+          td = .5 * vd,
+          od = td - 1;
+        for (let Rd = 0; Rd < 6; Rd++) {
+          const Od = this._FileFaces[Rd],
+            md = dd[Od.name];
+          let Nd = od;
+          const qd = 5 === dd.format ? 4 : 3;
+          for (let Rd = 0; Rd < dd.size; Rd++) {
+            let Hd = od;
+            for (let Qd = 0; Qd < dd.size; Qd++) {
+              const od = Od.worldAxisForFileX.scale(Hd).add(Od.worldAxisForFileY.scale(Nd)).add(Od.worldAxisForNormal);
+              od.normalize();
+              const yd = this._AreaElement(Hd - td, Nd - td) - this._AreaElement(Hd - td, Nd + td) - this._AreaElement(Hd + td, Nd - td) + this._AreaElement(Hd + td, Nd + td);
+              let bd = md[Rd * dd.size * qd + Qd * qd + 0],
+                Td = md[Rd * dd.size * qd + Qd * qd + 1],
+                pd = md[Rd * dd.size * qd + Qd * qd + 2];
+              isNaN(bd) && (bd = 0), isNaN(Td) && (Td = 0), isNaN(pd) && (pd = 0), 0 === dd.type && (bd /= 255, Td /= 255, pd /= 255), dd.gammaSpace && (bd = Math.pow((0, Fd.Clamp)(bd), Xd.f), Td = Math.pow((0, Fd.Clamp)(Td), Xd.f), pd = Math.pow((0, Fd.Clamp)(pd), Xd.f));
+              const Yd = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const rr = Math.max(zr, Yr, nr);
-                if (rr > er) {
-                  const Sr = er / rr;
-                  zr *= Sr, Yr *= Sr, nr *= Sr
+                const dd = Math.max(bd, Td, pd);
+                if (dd > Yd) {
+                  const Od = Yd / dd;
+                  bd *= Od, Td *= Od, pd *= Od
                 }
-              } else zr = (0, Wr.Clamp)(zr, 0, er), Yr = (0, Wr.Clamp)(Yr, 0, er), nr = (0, Wr.Clamp)(nr, 0, er);
-              const Kr = new Ir.e(zr, Yr, nr);
-              Zr.addLight(mr, Kr, hr), fr += hr, tr += Er
+              } else bd = (0, Fd.Clamp)(bd, 0, Yd), Td = (0, Fd.Clamp)(Td, 0, Yd), pd = (0, Fd.Clamp)(pd, 0, Yd);
+              const gd = new Kd.d(bd, Td, pd);
+              Wd.addLight(od, gd, yd), hd += yd, Hd += vd
             }
-            Nr += pr
+            Nd += Qd
           }
         }
-        const Nr = 6 * (4 * Math.PI) / 6 / fr;
-        return Zr.scaleInPlace(Nr), Zr.convertIncidentRadianceToIrradiance(), Zr.convertIrradianceToLambertianRadiance(), ar.d.FromHarmonics(Zr)
+        const Nd = 6 * (4 * Math.PI) / 6 / hd;
+        return Wd.scaleInPlace(Nd), Wd.convertIncidentRadianceToIrradiance(), Wd.convertIrradianceToLambertianRadiance(), Rd.e.FromHarmonics(Wd)
       }
     }
-    Er._FileFaces = [new fr("right", new Zr.u(1, 0, 0), new Zr.u(0, 0, -1), new Zr.u(0, -1, 0)), new fr("left", new Zr.u(-1, 0, 0), new Zr.u(0, 0, 1), new Zr.u(0, -1, 0)), new fr("up", new Zr.u(0, 1, 0), new Zr.u(1, 0, 0), new Zr.u(0, 0, 1)), new fr("down", new Zr.u(0, -1, 0), new Zr.u(1, 0, 0), new Zr.u(0, 0, -1)), new fr("front", new Zr.u(0, 0, 1), new Zr.u(1, 0, 0), new Zr.u(0, -1, 0)), new fr("back", new Zr.u(0, 0, -1), new Zr.u(-1, 0, 0), new Zr.u(0, -1, 0))], Er.MAX_HDRI_VALUE = 4096, Er.PRESERVE_CLAMPED_COLORS = !1
+    vd._FileFaces = [new hd("right", new Wd.j(1, 0, 0), new Wd.j(0, 0, -1), new Wd.j(0, -1, 0)), new hd("left", new Wd.j(-1, 0, 0), new Wd.j(0, 0, 1), new Wd.j(0, -1, 0)), new hd("up", new Wd.j(0, 1, 0), new Wd.j(1, 0, 0), new Wd.j(0, 0, 1)), new hd("down", new Wd.j(0, -1, 0), new Wd.j(1, 0, 0), new Wd.j(0, 0, -1)), new hd("front", new Wd.j(0, 0, 1), new Wd.j(1, 0, 0), new Wd.j(0, -1, 0)), new hd("back", new Wd.j(0, 0, -1), new Wd.j(-1, 0, 0), new Wd.j(0, -1, 0))], vd.MAX_HDRI_VALUE = 4096, vd.PRESERVE_CLAMPED_COLORS = !1
   },
-  54344: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar
+  54227: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd
     });
-    var Zr = Qr(54330),
-      Wr = Qr(54348);
-    class ar {
-      static ExpandRGBDTexture(rr) {
-        const Sr = rr._texture;
-        if (!Sr || !rr.isRGBD) return;
-        const Wr = Sr.MU(),
-          ar = Wr.getCaps(),
-          jr = Sr.isReady;
-        let Ir = !1;
-        ar.textureHalfFloatRender && ar.textureHalfFloatLinearFiltering ? (Ir = !0, Sr.type = 2) : ar.textureFloatRender && ar.textureFloatLinearFiltering && (Ir = !0, Sr.type = 1), Ir && (Sr.isReady = !1, Sr._isRGBD = !1, Sr.invertY = !1);
-        const fr = async () => {
-          const ar = Wr.isWebGPU,
-            jr = ar ? 1 : 0;
-          Sr.isReady = !1, ar ? await Qr.e(661).then((() => Qr(64736))) : await Qr.e(643).then((() => Qr(64742)));
-          const Ir = new Zr.b("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, Wr, !1, void 0, Sr.type, void 0, null, !1, void 0, jr);
-          Ir.externalTextureSamplerBinding = !0;
-          const fr = Wr.createRenderTargetTexture(Sr.width, {
+    var Wd = md(54217),
+      Fd = md(54229);
+    class Rd {
+      static ExpandRGBDTexture(dd) {
+        const Od = dd._texture;
+        if (!Od || !dd.isRGBD) return;
+        const Fd = Od.Iq(),
+          Rd = Fd.getCaps(),
+          Xd = Od.isReady;
+        let Kd = !1;
+        Rd.textureHalfFloatRender && Rd.textureHalfFloatLinearFiltering ? (Kd = !0, Od.type = 2) : Rd.textureFloatRender && Rd.textureFloatLinearFiltering && (Kd = !0, Od.type = 1), Kd && (Od.isReady = !1, Od._isRGBD = !1, Od.invertY = !1);
+        const hd = async () => {
+          const Rd = Fd.isWebGPU,
+            Xd = Rd ? 1 : 0;
+          Od.isReady = !1, Rd ? await md.e(661).then((() => md(64889))) : await md.e(643).then((() => md(64894)));
+          const Kd = new Wd.c("rgbdDecode", "rgbdDecode", null, null, 1, null, 3, Fd, !1, void 0, Od.type, void 0, null, !1, void 0, Xd);
+          Kd.externalTextureSamplerBinding = !0;
+          const hd = Fd.createRenderTargetTexture(Od.width, {
             generateDepthBuffer: !1,
             generateMipMaps: !1,
             generateStencilBuffer: !1,
-            samplingMode: Sr.samplingMode,
-            type: Sr.type,
+            samplingMode: Od.samplingMode,
+            type: Od.type,
             format: 5
           });
-          Ir.onEffectCreatedObservable.addOnce((Qr => {
-            Qr.executeWhenCompiled((() => {
-              Ir.onApply = rr => {
-                rr._bindTexture("textureSampler", Sr), rr.setFloat2("scale", 1, 1)
-              }, rr.eC()?.postProcessManager.directRender([Ir], fr, !0), Wr.restoreDefaultFramebuffer(), Wr._releaseTexture(Sr), Ir && Ir.dispose(), fr._swapAndDie(Sr), Sr.isReady = !0
+          Kd.onEffectCreatedObservable.addOnce((md => {
+            md.executeWhenCompiled((() => {
+              Kd.onApply = dd => {
+                dd._bindTexture("textureSampler", Od), dd.setFloat2("scale", 1, 1)
+              }, dd.zV()?.postProcessManager.directRender([Kd], hd, !0), Fd.restoreDefaultFramebuffer(), Fd._releaseTexture(Od), Kd && Kd.dispose(), hd._swapAndDie(Od), Od.isReady = !0
             }))
           }))
         };
-        Ir && (jr ? fr() : rr.onLoadObservable.addOnce(fr))
+        Kd && (Xd ? hd() : dd.onLoadObservable.addOnce(hd))
       }
-      static async EncodeTextureToRGBD(rr, Sr) {
-        let Zr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        return Sr.MU().isWebGPU ? await Qr.e(662).then((() => Qr(64756))) : await Qr.e(644).then((() => Qr(64750))), await (0, Wr.d)("rgbdEncode", rr, Sr, Zr, 1, 5)
+      static async EncodeTextureToRGBD(dd, Od) {
+        let Wd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        return Od.Iq().isWebGPU ? await md.e(662).then((() => md(64907))) : await md.e(644).then((() => md(64899))), await (0, Fd.e)("rgbdEncode", dd, Od, Wd, 1, 5)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

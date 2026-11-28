@@ -1,582 +1,582 @@
 export const id = 634;
 export const ids = [634];
 export const modules = {
-  54386: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      ReadExrDataAsync: () => xS,
-      _ExrTextureLoader: () => pS
+  54284: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      ReadExrDataAsync: () => NO,
+      _ExrTextureLoader: () => oO
     });
-    var Zr = Qr(40246),
-      Wr = Qr(38599),
-      ar = Qr(41922);
-    const jr = 4,
-      Ir = 4,
-      fr = 1,
-      Er = 2,
-      pr = 8,
-      xr = 65536,
-      mr = xr >> 3,
-      Nr = 14,
-      Ur = 65537,
-      tr = 1 << Nr,
-      hr = tr - 1,
-      zr = 59,
-      Yr = 63,
-      nr = 2 + Yr - zr;
-    var er, Kr;
+    var Wd = md(40262),
+      Fd = md(38663),
+      Rd = md(41997);
+    const Xd = 4,
+      Kd = 4,
+      hd = 1,
+      vd = 2,
+      Qd = 8,
+      td = 65536,
+      od = td >> 3,
+      Nd = 14,
+      qd = 65537,
+      Hd = 1 << Nd,
+      yd = Hd - 1,
+      bd = 59,
+      Td = 63,
+      pd = 2 + Td - bd;
+    var Yd, gd;
 
-    function yr(rr, Sr) {
-      const Qr = new Uint8Array(rr);
-      let Zr = 0;
-      for (; 0 != Qr[Sr.value + Zr];) Zr += 1;
-      const Wr = (new TextDecoder).decode(Qr.slice(Sr.value, Sr.value + Zr));
-      return Sr.value = Sr.value + Zr + 1, Wr
+    function wd(dd, Od) {
+      const md = new Uint8Array(dd);
+      let Wd = 0;
+      for (; 0 != md[Od.value + Wd];) Wd += 1;
+      const Fd = (new TextDecoder).decode(md.slice(Od.value, Od.value + Wd));
+      return Od.value = Od.value + Wd + 1, Fd
     }
 
-    function Br(rr, Sr) {
-      const Qr = rr.getInt32(Sr.value, !0);
-      return Sr.value += jr, Qr
+    function Ed(dd, Od) {
+      const md = dd.getInt32(Od.value, !0);
+      return Od.value += Xd, md
     }
 
-    function Tr(rr, Sr) {
-      const Qr = rr.getUint32(Sr.value, !0);
-      return Sr.value += jr, Qr
+    function Jd(dd, Od) {
+      const md = dd.getUint32(Od.value, !0);
+      return Od.value += Xd, md
     }
 
-    function vr(rr, Sr) {
-      const Qr = rr.getUint8(Sr.value);
-      return Sr.value += fr, Qr
+    function Ud(dd, Od) {
+      const md = dd.getUint8(Od.value);
+      return Od.value += hd, md
     }
 
-    function Or(rr, Sr) {
-      const Qr = rr.getUint16(Sr.value, !0);
-      return Sr.value += Er, Qr
+    function xd(dd, Od) {
+      const md = dd.getUint16(Od.value, !0);
+      return Od.value += vd, md
     }
 
-    function Lr(rr, Sr) {
-      const Qr = rr[Sr.value];
-      return Sr.value += fr, Qr
+    function Bd(dd, Od) {
+      const md = dd[Od.value];
+      return Od.value += hd, md
     }
 
-    function lr(rr, Sr) {
-      let Qr;
-      return Qr = "getBigInt64" in DataView.prototype ? Number(rr.getBigInt64(Sr.value, !0)) : rr.getUint32(Sr.value + 4, !0) + Number(rr.getUint32(Sr.value, !0) << 32), Sr.value += pr, Qr
+    function Sd(dd, Od) {
+      let md;
+      return md = "getBigInt64" in DataView.prototype ? Number(dd.getBigInt64(Od.value, !0)) : dd.getUint32(Od.value + 4, !0) + Number(dd.getUint32(Od.value, !0) << 32), Od.value += Qd, md
     }
 
-    function Xr(rr, Sr) {
-      const Qr = rr.getFloat32(Sr.value, !0);
-      return Sr.value += Ir, Qr
+    function sd(dd, Od) {
+      const md = dd.getFloat32(Od.value, !0);
+      return Od.value += Kd, md
     }
 
-    function Pr(rr, Sr) {
-      return (0, ar.c)(Or(rr, Sr))
+    function ud(dd, Od) {
+      return (0, Rd.b)(xd(dd, Od))
     }
 
-    function Hr(rr, Sr) {
-      return (0, ar.g)((0, Wr.Clamp)(Xr(rr, Sr), -ar.d, ar.d))
+    function Vd(dd, Od) {
+      return (0, Rd.g)((0, Fd.Clamp)(sd(dd, Od), -Rd.d, Rd.d))
     }
 
-    function qr(rr, Sr, Qr, Zr) {
-      switch (Qr) {
+    function Ad(dd, Od, md, Wd) {
+      switch (md) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(rr, Sr, Qr) {
-            const Zr = (new TextDecoder).decode(new Uint8Array(rr).slice(Sr.value, Sr.value + Qr));
-            return Sr.value = Sr.value + Qr, Zr
-          }(rr.buffer, Sr, Zr);
+          return function(dd, Od, md) {
+            const Wd = (new TextDecoder).decode(new Uint8Array(dd).slice(Od.value, Od.value + md));
+            return Od.value = Od.value + md, Wd
+          }(dd.buffer, Od, Wd);
         case "chlist":
-          return function(rr, Sr, Qr) {
-            const Zr = Sr.value,
-              Wr = [];
-            for (; Sr.value < Zr + Qr - 1;) {
-              const Qr = yr(rr.buffer, Sr),
-                Zr = Br(rr, Sr),
-                ar = vr(rr, Sr);
-              Sr.value += 3;
-              const jr = Br(rr, Sr),
-                Ir = Br(rr, Sr);
-              Wr.push({
-                name: Qr,
-                pixelType: Zr,
-                pLinear: ar,
-                xSampling: jr,
-                ySampling: Ir
+          return function(dd, Od, md) {
+            const Wd = Od.value,
+              Fd = [];
+            for (; Od.value < Wd + md - 1;) {
+              const md = wd(dd.buffer, Od),
+                Wd = Ed(dd, Od),
+                Rd = Ud(dd, Od);
+              Od.value += 3;
+              const Xd = Ed(dd, Od),
+                Kd = Ed(dd, Od);
+              Fd.push({
+                name: md,
+                pixelType: Wd,
+                pLinear: Rd,
+                xSampling: Xd,
+                ySampling: Kd
               })
             }
-            return Sr.value += 1, Wr
-          }(rr, Sr, Zr);
+            return Od.value += 1, Fd
+          }(dd, Od, Wd);
         case "chromaticities":
-          return function(rr, Sr) {
+          return function(dd, Od) {
             return {
-              redX: Xr(rr, Sr),
-              redY: Xr(rr, Sr),
-              greenX: Xr(rr, Sr),
-              greenY: Xr(rr, Sr),
-              blueX: Xr(rr, Sr),
-              blueY: Xr(rr, Sr),
-              whiteX: Xr(rr, Sr),
-              whiteY: Xr(rr, Sr)
+              redX: sd(dd, Od),
+              redY: sd(dd, Od),
+              greenX: sd(dd, Od),
+              greenY: sd(dd, Od),
+              blueX: sd(dd, Od),
+              blueY: sd(dd, Od),
+              whiteX: sd(dd, Od),
+              whiteY: sd(dd, Od)
             }
-          }(rr, Sr);
+          }(dd, Od);
         case "compression":
-          return function(rr, Sr) {
-            return vr(rr, Sr)
-          }(rr, Sr);
+          return function(dd, Od) {
+            return Ud(dd, Od)
+          }(dd, Od);
         case "box2i":
-          return function(rr, Sr) {
+          return function(dd, Od) {
             return {
-              xMin: Br(rr, Sr),
-              yMin: Br(rr, Sr),
-              xMax: Br(rr, Sr),
-              yMax: Br(rr, Sr)
+              xMin: Ed(dd, Od),
+              yMin: Ed(dd, Od),
+              xMax: Ed(dd, Od),
+              yMax: Ed(dd, Od)
             }
-          }(rr, Sr);
+          }(dd, Od);
         case "lineOrder":
-          return function(rr, Sr) {
-            const Qr = vr(rr, Sr);
-            return Kr[Qr]
-          }(rr, Sr);
+          return function(dd, Od) {
+            const md = Ud(dd, Od);
+            return gd[md]
+          }(dd, Od);
         case "float":
-          return Xr(rr, Sr);
+          return sd(dd, Od);
         case "v2f":
-          return function(rr, Sr) {
-            return [Xr(rr, Sr), Xr(rr, Sr)]
-          }(rr, Sr);
+          return function(dd, Od) {
+            return [sd(dd, Od), sd(dd, Od)]
+          }(dd, Od);
         case "v3f":
-          return function(rr, Sr) {
-            return [Xr(rr, Sr), Xr(rr, Sr), Xr(rr, Sr)]
-          }(rr, Sr);
+          return function(dd, Od) {
+            return [sd(dd, Od), sd(dd, Od), sd(dd, Od)]
+          }(dd, Od);
         case "int":
-          return Br(rr, Sr);
+          return Ed(dd, Od);
         case "rational":
-          return function(rr, Sr) {
-            return [Br(rr, Sr), Tr(rr, Sr)]
-          }(rr, Sr);
+          return function(dd, Od) {
+            return [Ed(dd, Od), Jd(dd, Od)]
+          }(dd, Od);
         case "timecode":
-          return function(rr, Sr) {
-            return [Tr(rr, Sr), Tr(rr, Sr)]
-          }(rr, Sr);
+          return function(dd, Od) {
+            return [Jd(dd, Od), Jd(dd, Od)]
+          }(dd, Od);
         case "preview":
-          return Sr.value += Zr, "skipped";
+          return Od.value += Wd, "skipped";
         default:
-          return void(Sr.value += Zr)
+          return void(Od.value += Wd)
       }
     }
 
-    function Rr(rr) {
-      for (let Sr = 1; Sr < rr.length; Sr++) {
-        const Qr = rr[Sr - 1] + rr[Sr] - 128;
-        rr[Sr] = Qr
+    function rd(dd) {
+      for (let Od = 1; Od < dd.length; Od++) {
+        const md = dd[Od - 1] + dd[Od] - 128;
+        dd[Od] = md
       }
     }
 
-    function gr(rr, Sr) {
-      let Qr = 0,
-        Zr = Math.floor((rr.length + 1) / 2),
-        Wr = 0;
-      const ar = rr.length - 1;
-      for (; !(Wr > ar) && (Sr[Wr++] = rr[Qr++], !(Wr > ar));) Sr[Wr++] = rr[Zr++]
-    }! function(rr) {
-      rr[rr.NO_COMPRESSION = 0] = "NO_COMPRESSION", rr[rr.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", rr[rr.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", rr[rr.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", rr[rr.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", rr[rr.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(er || (er = {})),
-    function(rr) {
-      rr[rr.INCREASING_Y = 0] = "INCREASING_Y", rr[rr.DECREASING_Y = 1] = "DECREASING_Y"
-    }(Kr || (Kr = {}));
-    const Cr = 20000630;
+    function Gd(dd, Od) {
+      let md = 0,
+        Wd = Math.floor((dd.length + 1) / 2),
+        Fd = 0;
+      const Rd = dd.length - 1;
+      for (; !(Fd > Rd) && (Od[Fd++] = dd[md++], !(Fd > Rd));) Od[Fd++] = dd[Wd++]
+    }! function(dd) {
+      dd[dd.NO_COMPRESSION = 0] = "NO_COMPRESSION", dd[dd.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", dd[dd.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", dd[dd.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", dd[dd.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", dd[dd.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(Yd || (Yd = {})),
+    function(dd) {
+      dd[dd.INCREASING_Y = 0] = "INCREASING_Y", dd[dd.DECREASING_Y = 1] = "DECREASING_Y"
+    }(gd || (gd = {}));
+    const nd = 20000630;
 
-    function Mr(rr, Sr) {
-      if (rr.getUint32(0, !0) != Cr) throw new Error("Incorrect OpenEXR format");
-      const Qr = rr.getUint8(4),
-        Wr = rr.getUint8(5),
-        ar = {
-          singleTile: !!(2 & Wr),
-          longName: !!(4 & Wr),
-          deepFormat: !!(8 & Wr),
-          multiPart: !!(16 & Wr)
+    function Ld(dd, Od) {
+      if (dd.getUint32(0, !0) != nd) throw new Error("Incorrect OpenEXR format");
+      const md = dd.getUint8(4),
+        Fd = dd.getUint8(5),
+        Rd = {
+          singleTile: !!(2 & Fd),
+          longName: !!(4 & Fd),
+          deepFormat: !!(8 & Fd),
+          multiPart: !!(16 & Fd)
         };
-      Sr.value = 8;
-      const jr = {};
-      let Ir = !0;
-      for (; Ir;) {
-        const Qr = yr(rr.buffer, Sr);
-        if (Qr) {
-          const Wr = yr(rr.buffer, Sr),
-            ar = qr(rr, Sr, Wr, Tr(rr, Sr));
-          void 0 === ar ? Zr.c.Warn(`Unknown header attribute type ${Wr}'.`) : jr[Qr] = ar
-        } else Ir = !1
+      Od.value = 8;
+      const Xd = {};
+      let Kd = !0;
+      for (; Kd;) {
+        const md = wd(dd.buffer, Od);
+        if (md) {
+          const Fd = wd(dd.buffer, Od),
+            Rd = Ad(dd, Od, Fd, Jd(dd, Od));
+          void 0 === Rd ? Wd.c.Warn(`Unknown header attribute type ${Fd}'.`) : Xd[md] = Rd
+        } else Kd = !1
       }
-      if (0 != (-5 & Wr)) throw new Error("Unsupported file format");
+      if (0 != (-5 & Fd)) throw new Error("Unsupported file format");
       return {
-        version: Qr,
-        spec: ar,
-        ...jr
-      }
-    }
-    const Gr = 32768,
-      kr = 65535;
-
-    function Ar(rr, Sr, Qr, Zr, Wr) {
-      for (; Qr < rr;) Sr = Sr << 8 | Lr(Zr, Wr), Qr += 8;
-      return {
-        l: Sr >> (Qr -= rr) & (1 << rr) - 1,
-        c: Sr,
-        lc: Qr
+        version: md,
+        spec: Rd,
+        ...Xd
       }
     }
+    const Pd = 32768,
+      zd = 65535;
 
-    function Vr(rr, Sr, Qr, Zr) {
+    function cd(dd, Od, md, Wd, Fd) {
+      for (; md < dd;) Od = Od << 8 | Bd(Wd, Fd), md += 8;
       return {
-        c: rr = rr << 8 | Lr(Qr, Zr),
-        lc: Sr += 8
+        l: Od >> (md -= dd) & (1 << dd) - 1,
+        c: Od,
+        lc: md
       }
     }
 
-    function ir(rr, Sr, Qr, Zr, Wr, ar, jr, Ir, fr) {
-      if (rr == Sr) {
-        if (Zr < 8) {
-          const rr = Vr(Qr, Zr, Wr, ar);
-          Qr = rr.c, Zr = rr.lc
+    function jd(dd, Od, md, Wd) {
+      return {
+        c: dd = dd << 8 | Bd(md, Wd),
+        lc: Od += 8
+      }
+    }
+
+    function Dd(dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd) {
+      if (dd == Od) {
+        if (Wd < 8) {
+          const dd = jd(md, Wd, Fd, Rd);
+          md = dd.c, Wd = dd.lc
         }
-        let rr = Qr >> (Zr -= 8);
-        if (rr = new Uint8Array([rr])[0], Ir.value + rr > fr) return null;
-        const Sr = jr[Ir.value - 1];
-        for (; rr-- > 0;) jr[Ir.value++] = Sr
+        let dd = md >> (Wd -= 8);
+        if (dd = new Uint8Array([dd])[0], Kd.value + dd > hd) return null;
+        const Od = Xd[Kd.value - 1];
+        for (; dd-- > 0;) Xd[Kd.value++] = Od
       } else {
-        if (!(Ir.value < fr)) return null;
-        jr[Ir.value++] = rr
+        if (!(Kd.value < hd)) return null;
+        Xd[Kd.value++] = dd
       }
       return {
-        c: Qr,
-        lc: Zr
+        c: md,
+        lc: Wd
       }
     }
-    const wr = new Array(59);
+    const ed = new Array(59);
 
-    function cr(rr, Sr, Qr, Zr, Wr, ar) {
-      const jr = Sr;
-      let Ir = 0,
-        fr = 0;
-      for (; Zr <= Wr; Zr++) {
-        if (jr.value - Sr.value > Qr) return;
-        let Er = Ar(6, Ir, fr, rr, jr);
-        const pr = Er.l;
-        if (Ir = Er.c, fr = Er.lc, ar[Zr] = pr, pr == Yr) {
-          if (jr.value - Sr.value > Qr) throw new Error("Error in HufUnpackEncTable");
-          Er = Ar(8, Ir, fr, rr, jr);
-          let pr = Er.l + nr;
-          if (Ir = Er.c, fr = Er.lc, Zr + pr > Wr + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; pr--;) ar[Zr++] = 0;
-          Zr--
-        } else if (pr >= zr) {
-          let rr = pr - zr + 2;
-          if (Zr + rr > Wr + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; rr--;) ar[Zr++] = 0;
-          Zr--
+    function Id(dd, Od, md, Wd, Fd, Rd) {
+      const Xd = Od;
+      let Kd = 0,
+        hd = 0;
+      for (; Wd <= Fd; Wd++) {
+        if (Xd.value - Od.value > md) return;
+        let vd = cd(6, Kd, hd, dd, Xd);
+        const Qd = vd.l;
+        if (Kd = vd.c, hd = vd.lc, Rd[Wd] = Qd, Qd == Td) {
+          if (Xd.value - Od.value > md) throw new Error("Error in HufUnpackEncTable");
+          vd = cd(8, Kd, hd, dd, Xd);
+          let Qd = vd.l + pd;
+          if (Kd = vd.c, hd = vd.lc, Wd + Qd > Fd + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; Qd--;) Rd[Wd++] = 0;
+          Wd--
+        } else if (Qd >= bd) {
+          let dd = Qd - bd + 2;
+          if (Wd + dd > Fd + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; dd--;) Rd[Wd++] = 0;
+          Wd--
         }
-      }! function(rr) {
-        for (let Qr = 0; Qr <= 58; ++Qr) wr[Qr] = 0;
-        for (let Qr = 0; Qr < Ur; ++Qr) wr[rr[Qr]] += 1;
-        let Sr = 0;
-        for (let Qr = 58; Qr > 0; --Qr) {
-          const rr = Sr + wr[Qr] >> 1;
-          wr[Qr] = Sr, Sr = rr
+      }! function(dd) {
+        for (let md = 0; md <= 58; ++md) ed[md] = 0;
+        for (let md = 0; md < qd; ++md) ed[dd[md]] += 1;
+        let Od = 0;
+        for (let md = 58; md > 0; --md) {
+          const dd = Od + ed[md] >> 1;
+          ed[md] = Od, Od = dd
         }
-        for (let Qr = 0; Qr < Ur; ++Qr) {
-          const Sr = rr[Qr];
-          Sr > 0 && (rr[Qr] = Sr | wr[Sr]++ << 6)
+        for (let md = 0; md < qd; ++md) {
+          const Od = dd[md];
+          Od > 0 && (dd[md] = Od | ed[Od]++ << 6)
         }
-      }(ar)
+      }(Rd)
     }
 
-    function Fr(rr) {
-      return 63 & rr
+    function ld(dd) {
+      return 63 & dd
     }
 
-    function or(rr) {
-      return rr >> 6
+    function Cd(dd) {
+      return dd >> 6
     }
 
-    function br(rr, Sr, Qr, Zr, Wr, ar) {
-      const jr = Qr.value,
-        Ir = Tr(Sr, Qr),
-        fr = Tr(Sr, Qr);
-      Qr.value += 4;
-      const Er = Tr(Sr, Qr);
-      if (Qr.value += 4, Ir < 0 || Ir >= Ur || fr < 0 || fr >= Ur) throw new Error("Wrong HUF_ENCSIZE");
-      const pr = new Array(Ur),
-        xr = new Array(tr);
-      ! function(rr) {
-        for (let Sr = 0; Sr < tr; Sr++) rr[Sr] = {}, rr[Sr].len = 0, rr[Sr].lit = 0, rr[Sr].p = null
-      }(xr);
-      if (cr(rr, Qr, Zr - (Qr.value - jr), Ir, fr, pr), Er > 8 * (Zr - (Qr.value - jr))) throw new Error("Wrong hufUncompress");
-      ! function(rr, Sr, Qr, Zr) {
-        for (; Sr <= Qr; Sr++) {
-          const Qr = or(rr[Sr]),
-            Wr = Fr(rr[Sr]);
-          if (Qr >> Wr) throw new Error("Invalid table entry");
-          if (Wr > Nr) {
-            const rr = Zr[Qr >> Wr - Nr];
-            if (rr.len) throw new Error("Invalid table entry");
-            if (rr.lit++, rr.p) {
-              const Sr = rr.p;
-              rr.p = new Array(rr.lit);
-              for (let Qr = 0; Qr < rr.lit - 1; ++Qr) rr.p[Qr] = Sr[Qr]
-            } else rr.p = new Array(1);
-            rr.p[rr.lit - 1] = Sr
-          } else if (Wr) {
-            let rr = 0;
-            for (let ar = 1 << Nr - Wr; ar > 0; ar--) {
-              const ar = Zr[(Qr << Nr - Wr) + rr];
-              if (ar.len || ar.p) throw new Error("Invalid table entry");
-              ar.len = Wr, ar.lit = Sr, rr++
+    function Zd(dd, Od, md, Wd, Fd, Rd) {
+      const Xd = md.value,
+        Kd = Jd(Od, md),
+        hd = Jd(Od, md);
+      md.value += 4;
+      const vd = Jd(Od, md);
+      if (md.value += 4, Kd < 0 || Kd >= qd || hd < 0 || hd >= qd) throw new Error("Wrong HUF_ENCSIZE");
+      const Qd = new Array(qd),
+        td = new Array(Hd);
+      ! function(dd) {
+        for (let Od = 0; Od < Hd; Od++) dd[Od] = {}, dd[Od].len = 0, dd[Od].lit = 0, dd[Od].p = null
+      }(td);
+      if (Id(dd, md, Wd - (md.value - Xd), Kd, hd, Qd), vd > 8 * (Wd - (md.value - Xd))) throw new Error("Wrong hufUncompress");
+      ! function(dd, Od, md, Wd) {
+        for (; Od <= md; Od++) {
+          const md = Cd(dd[Od]),
+            Fd = ld(dd[Od]);
+          if (md >> Fd) throw new Error("Invalid table entry");
+          if (Fd > Nd) {
+            const dd = Wd[md >> Fd - Nd];
+            if (dd.len) throw new Error("Invalid table entry");
+            if (dd.lit++, dd.p) {
+              const Od = dd.p;
+              dd.p = new Array(dd.lit);
+              for (let md = 0; md < dd.lit - 1; ++md) dd.p[md] = Od[md]
+            } else dd.p = new Array(1);
+            dd.p[dd.lit - 1] = Od
+          } else if (Fd) {
+            let dd = 0;
+            for (let Rd = 1 << Nd - Fd; Rd > 0; Rd--) {
+              const Rd = Wd[(md << Nd - Fd) + dd];
+              if (Rd.len || Rd.p) throw new Error("Invalid table entry");
+              Rd.len = Fd, Rd.lit = Od, dd++
             }
           }
         }
-      }(pr, Ir, fr, xr),
-      function(rr, Sr, Qr, Zr, Wr, ar, jr, Ir, fr) {
-        let Er = 0,
-          pr = 0;
-        const xr = jr,
-          mr = Math.trunc(Zr.value + (Wr + 7) / 8);
-        for (; Zr.value < mr;) {
-          let Wr = Vr(Er, pr, Qr, Zr);
-          for (Er = Wr.c, pr = Wr.lc; pr >= Nr;) {
-            const jr = Sr[Er >> pr - Nr & hr];
-            if (jr.len) {
-              pr -= jr.len;
-              const rr = ir(jr.lit, ar, Er, pr, Qr, Zr, Ir, fr, xr);
-              rr && (Er = rr.c, pr = rr.lc)
+      }(Qd, Kd, hd, td),
+      function(dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd) {
+        let vd = 0,
+          Qd = 0;
+        const td = Xd,
+          od = Math.trunc(Wd.value + (Fd + 7) / 8);
+        for (; Wd.value < od;) {
+          let Fd = jd(vd, Qd, md, Wd);
+          for (vd = Fd.c, Qd = Fd.lc; Qd >= Nd;) {
+            const Xd = Od[vd >> Qd - Nd & yd];
+            if (Xd.len) {
+              Qd -= Xd.len;
+              const dd = Dd(Xd.lit, Rd, vd, Qd, md, Wd, Kd, hd, td);
+              dd && (vd = dd.c, Qd = dd.lc)
             } else {
-              if (!jr.p) throw new Error("hufDecode issues");
-              let Sr;
-              for (Sr = 0; Sr < jr.lit; Sr++) {
-                const Nr = Fr(rr[jr.p[Sr]]);
-                for (; pr < Nr && Zr.value < mr;) Wr = Vr(Er, pr, Qr, Zr), Er = Wr.c, pr = Wr.lc;
-                if (pr >= Nr && or(rr[jr.p[Sr]]) == (Er >> pr - Nr & (1 << Nr) - 1)) {
-                  pr -= Nr;
-                  const rr = ir(jr.p[Sr], ar, Er, pr, Qr, Zr, Ir, fr, xr);
-                  rr && (Er = rr.c, pr = rr.lc);
+              if (!Xd.p) throw new Error("hufDecode issues");
+              let Od;
+              for (Od = 0; Od < Xd.lit; Od++) {
+                const Nd = ld(dd[Xd.p[Od]]);
+                for (; Qd < Nd && Wd.value < od;) Fd = jd(vd, Qd, md, Wd), vd = Fd.c, Qd = Fd.lc;
+                if (Qd >= Nd && Cd(dd[Xd.p[Od]]) == (vd >> Qd - Nd & (1 << Nd) - 1)) {
+                  Qd -= Nd;
+                  const dd = Dd(Xd.p[Od], Rd, vd, Qd, md, Wd, Kd, hd, td);
+                  dd && (vd = dd.c, Qd = dd.lc);
                   break
                 }
               }
-              if (Sr == jr.lit) throw new Error("HufDecode issues")
+              if (Od == Xd.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const Ur = 8 - Wr & 7;
-        for (Er >>= Ur, pr -= Ur; pr > 0;) {
-          const rr = Sr[Er << Nr - pr & hr];
-          if (!rr.len) throw new Error("HufDecode issues");
+        const qd = 8 - Fd & 7;
+        for (vd >>= qd, Qd -= qd; Qd > 0;) {
+          const dd = Od[vd << Nd - Qd & yd];
+          if (!dd.len) throw new Error("HufDecode issues");
           {
-            pr -= rr.len;
-            const Sr = ir(rr.lit, ar, Er, pr, Qr, Zr, Ir, fr, xr);
-            Sr && (Er = Sr.c, pr = Sr.lc)
+            Qd -= dd.len;
+            const Od = Dd(dd.lit, Rd, vd, Qd, md, Wd, Kd, hd, td);
+            Od && (vd = Od.c, Qd = Od.lc)
           }
         }
-      }(pr, xr, rr, Qr, Er, fr, ar, Wr, {
+      }(Qd, td, dd, md, vd, hd, Rd, Fd, {
         value: 0
       })
     }
 
-    function Jr(rr) {
-      return 65535 & rr
+    function kd(dd) {
+      return 65535 & dd
     }
 
-    function Dr(rr) {
-      const Sr = Jr(rr);
-      return Sr > 32767 ? Sr - 65536 : Sr
+    function fd(dd) {
+      const Od = kd(dd);
+      return Od > 32767 ? Od - 65536 : Od
     }
 
-    function dr(rr, Sr) {
-      const Qr = Dr(rr),
-        Zr = Dr(Sr),
-        Wr = Qr + (1 & Zr) + (Zr >> 1);
+    function Md(dd, Od) {
+      const md = fd(dd),
+        Wd = fd(Od),
+        Fd = md + (1 & Wd) + (Wd >> 1);
       return {
-        a: Wr,
-        b: Wr - Zr
+        a: Fd,
+        b: Fd - Wd
       }
     }
 
-    function sr(rr, Sr) {
-      const Qr = Jr(rr),
-        Zr = Jr(Sr),
-        Wr = Qr - (Zr >> 1) & kr;
+    function dO(dd, Od) {
+      const md = kd(dd),
+        Wd = kd(Od),
+        Fd = md - (Wd >> 1) & zd;
       return {
-        a: Zr + Wr - Gr & kr,
-        b: Wr
+        a: Wd + Fd - Pd & zd,
+        b: Fd
       }
     }
 
-    function ur(rr, Sr, Qr, Zr, Wr, ar, jr) {
-      const Ir = jr < 16384,
-        fr = Qr > Wr ? Wr : Qr;
-      let Er, pr, xr = 1;
-      for (; xr <= fr;) xr <<= 1;
-      for (xr >>= 1, Er = xr, xr >>= 1; xr >= 1;) {
-        pr = 0;
-        const jr = pr + ar * (Wr - Er),
-          fr = ar * xr,
-          mr = ar * Er,
-          Nr = Zr * xr,
-          Ur = Zr * Er;
-        let tr, hr, zr, Yr;
-        for (; pr <= jr; pr += mr) {
-          let Wr = pr;
-          const ar = pr + Zr * (Qr - Er);
-          for (; Wr <= ar; Wr += Ur) {
-            const Qr = Wr + Nr,
-              Zr = Wr + fr,
-              ar = Zr + Nr;
-            if (Ir) {
-              let jr = dr(rr[Wr + Sr], rr[Zr + Sr]);
-              tr = jr.a, zr = jr.b, jr = dr(rr[Qr + Sr], rr[ar + Sr]), hr = jr.a, Yr = jr.b, jr = dr(tr, hr), rr[Wr + Sr] = jr.a, rr[Qr + Sr] = jr.b, jr = dr(zr, Yr), rr[Zr + Sr] = jr.a, rr[ar + Sr] = jr.b
+    function OO(dd, Od, md, Wd, Fd, Rd, Xd) {
+      const Kd = Xd < 16384,
+        hd = md > Fd ? Fd : md;
+      let vd, Qd, td = 1;
+      for (; td <= hd;) td <<= 1;
+      for (td >>= 1, vd = td, td >>= 1; td >= 1;) {
+        Qd = 0;
+        const Xd = Qd + Rd * (Fd - vd),
+          hd = Rd * td,
+          od = Rd * vd,
+          Nd = Wd * td,
+          qd = Wd * vd;
+        let Hd, yd, bd, Td;
+        for (; Qd <= Xd; Qd += od) {
+          let Fd = Qd;
+          const Rd = Qd + Wd * (md - vd);
+          for (; Fd <= Rd; Fd += qd) {
+            const md = Fd + Nd,
+              Wd = Fd + hd,
+              Rd = Wd + Nd;
+            if (Kd) {
+              let Xd = Md(dd[Fd + Od], dd[Wd + Od]);
+              Hd = Xd.a, bd = Xd.b, Xd = Md(dd[md + Od], dd[Rd + Od]), yd = Xd.a, Td = Xd.b, Xd = Md(Hd, yd), dd[Fd + Od] = Xd.a, dd[md + Od] = Xd.b, Xd = Md(bd, Td), dd[Wd + Od] = Xd.a, dd[Rd + Od] = Xd.b
             } else {
-              let jr = sr(rr[Wr + Sr], rr[Zr + Sr]);
-              tr = jr.a, zr = jr.b, jr = sr(rr[Qr + Sr], rr[ar + Sr]), hr = jr.a, Yr = jr.b, jr = sr(tr, hr), rr[Wr + Sr] = jr.a, rr[Qr + Sr] = jr.b, jr = sr(zr, Yr), rr[Zr + Sr] = jr.a, rr[ar + Sr] = jr.b
+              let Xd = dO(dd[Fd + Od], dd[Wd + Od]);
+              Hd = Xd.a, bd = Xd.b, Xd = dO(dd[md + Od], dd[Rd + Od]), yd = Xd.a, Td = Xd.b, Xd = dO(Hd, yd), dd[Fd + Od] = Xd.a, dd[md + Od] = Xd.b, Xd = dO(bd, Td), dd[Wd + Od] = Xd.a, dd[Rd + Od] = Xd.b
             }
           }
-          if (Qr & xr) {
-            const Qr = Wr + fr;
-            let Zr;
-            Zr = Ir ? dr(rr[Wr + Sr], rr[Qr + Sr]) : sr(rr[Wr + Sr], rr[Qr + Sr]), tr = Zr.a, rr[Qr + Sr] = Zr.b, rr[Wr + Sr] = tr
+          if (md & td) {
+            const md = Fd + hd;
+            let Wd;
+            Wd = Kd ? Md(dd[Fd + Od], dd[md + Od]) : dO(dd[Fd + Od], dd[md + Od]), Hd = Wd.a, dd[md + Od] = Wd.b, dd[Fd + Od] = Hd
           }
         }
-        if (Wr & xr) {
-          let Wr = pr;
-          const ar = pr + Zr * (Qr - Er);
-          for (; Wr <= ar; Wr += Ur) {
-            const Qr = Wr + Nr;
-            let Zr;
-            Zr = Ir ? dr(rr[Wr + Sr], rr[Qr + Sr]) : sr(rr[Wr + Sr], rr[Qr + Sr]), tr = Zr.a, rr[Qr + Sr] = Zr.b, rr[Wr + Sr] = tr
+        if (Fd & td) {
+          let Fd = Qd;
+          const Rd = Qd + Wd * (md - vd);
+          for (; Fd <= Rd; Fd += qd) {
+            const md = Fd + Nd;
+            let Wd;
+            Wd = Kd ? Md(dd[Fd + Od], dd[md + Od]) : dO(dd[Fd + Od], dd[md + Od]), Hd = Wd.a, dd[md + Od] = Wd.b, dd[Fd + Od] = Hd
           }
         }
-        Er = xr, xr >>= 1
+        vd = td, td >>= 1
       }
-      return pr
+      return Qd
     }
 
-    function rS(rr) {
-      return new DataView(rr.array.buffer, rr.offset.value, rr.size)
+    function mO(dd) {
+      return new DataView(dd.array.buffer, dd.offset.value, dd.size)
     }
 
-    function SS(rr) {
-      const Sr = rr.viewer.buffer.slice(rr.offset.value, rr.offset.value + rr.size),
-        Qr = new Uint8Array(function(rr) {
-          let Sr = rr.byteLength;
-          const Qr = [];
-          let Zr = 0;
-          const Wr = new DataView(rr);
-          for (; Sr > 0;) {
-            const rr = Wr.getInt8(Zr++);
-            if (rr < 0) {
-              const ar = -rr;
-              Sr -= ar + 1;
-              for (let rr = 0; rr < ar; rr++) Qr.push(Wr.getUint8(Zr++))
+    function WO(dd) {
+      const Od = dd.viewer.buffer.slice(dd.offset.value, dd.offset.value + dd.size),
+        md = new Uint8Array(function(dd) {
+          let Od = dd.byteLength;
+          const md = [];
+          let Wd = 0;
+          const Fd = new DataView(dd);
+          for (; Od > 0;) {
+            const dd = Fd.getInt8(Wd++);
+            if (dd < 0) {
+              const Rd = -dd;
+              Od -= Rd + 1;
+              for (let dd = 0; dd < Rd; dd++) md.push(Fd.getUint8(Wd++))
             } else {
-              const ar = rr;
-              Sr -= 2;
-              const jr = Wr.getUint8(Zr++);
-              for (let rr = 0; rr < ar + 1; rr++) Qr.push(jr)
+              const Rd = dd;
+              Od -= 2;
+              const Xd = Fd.getUint8(Wd++);
+              for (let dd = 0; dd < Rd + 1; dd++) md.push(Xd)
             }
           }
-          return Qr
-        }(Sr)),
-        Zr = new Uint8Array(Qr.length);
-      return Rr(Qr), gr(Qr, Zr), new DataView(Zr.buffer)
+          return md
+        }(Od)),
+        Wd = new Uint8Array(md.length);
+      return rd(md), Gd(md, Wd), new DataView(Wd.buffer)
     }
 
-    function QS(rr) {
-      const Sr = rr.array.slice(rr.offset.value, rr.offset.value + rr.size),
-        Qr = fflate.unzlibSync(Sr),
-        Zr = new Uint8Array(Qr.length);
-      return Rr(Qr), gr(Qr, Zr), new DataView(Zr.buffer)
+    function FO(dd) {
+      const Od = dd.array.slice(dd.offset.value, dd.offset.value + dd.size),
+        md = fflate.unzlibSync(Od),
+        Wd = new Uint8Array(md.length);
+      return rd(md), Gd(md, Wd), new DataView(Wd.buffer)
     }
 
-    function ZS(rr) {
-      const Sr = rr.array.slice(rr.offset.value, rr.offset.value + rr.size),
-        Qr = fflate.unzlibSync(Sr),
-        Zr = rr.lines * rr.channels * rr.width,
-        Wr = 1 == rr.type ? new Uint16Array(Zr) : new Uint32Array(Zr);
-      let ar = 0,
-        jr = 0;
-      const Ir = new Array(4);
-      for (let fr = 0; fr < rr.lines; fr++)
-        for (let Sr = 0; Sr < rr.channels; Sr++) {
-          let Sr = 0;
-          switch (rr.type) {
+    function RO(dd) {
+      const Od = dd.array.slice(dd.offset.value, dd.offset.value + dd.size),
+        md = fflate.unzlibSync(Od),
+        Wd = dd.lines * dd.channels * dd.width,
+        Fd = 1 == dd.type ? new Uint16Array(Wd) : new Uint32Array(Wd);
+      let Rd = 0,
+        Xd = 0;
+      const Kd = new Array(4);
+      for (let hd = 0; hd < dd.lines; hd++)
+        for (let Od = 0; Od < dd.channels; Od++) {
+          let Od = 0;
+          switch (dd.type) {
             case 1:
-              Ir[0] = ar, Ir[1] = Ir[0] + rr.width, ar = Ir[1] + rr.width;
-              for (let Zr = 0; Zr < rr.width; ++Zr) {
-                Sr += Qr[Ir[0]++] << 8 | Qr[Ir[1]++], Wr[jr] = Sr, jr++
+              Kd[0] = Rd, Kd[1] = Kd[0] + dd.width, Rd = Kd[1] + dd.width;
+              for (let Wd = 0; Wd < dd.width; ++Wd) {
+                Od += md[Kd[0]++] << 8 | md[Kd[1]++], Fd[Xd] = Od, Xd++
               }
               break;
             case 2:
-              Ir[0] = ar, Ir[1] = Ir[0] + rr.width, Ir[2] = Ir[1] + rr.width, ar = Ir[2] + rr.width;
-              for (let Zr = 0; Zr < rr.width; ++Zr) {
-                Sr += Qr[Ir[0]++] << 24 | Qr[Ir[1]++] << 16 | Qr[Ir[2]++] << 8, Wr[jr] = Sr, jr++
+              Kd[0] = Rd, Kd[1] = Kd[0] + dd.width, Kd[2] = Kd[1] + dd.width, Rd = Kd[2] + dd.width;
+              for (let Wd = 0; Wd < dd.width; ++Wd) {
+                Od += md[Kd[0]++] << 24 | md[Kd[1]++] << 16 | md[Kd[2]++] << 8, Fd[Xd] = Od, Xd++
               }
           }
         }
-      return new DataView(Wr.buffer)
+      return new DataView(Fd.buffer)
     }
 
-    function WS(rr) {
-      const Sr = rr.viewer,
-        Qr = {
-          value: rr.offset.value
+    function XO(dd) {
+      const Od = dd.viewer,
+        md = {
+          value: dd.offset.value
         },
-        Zr = new Uint16Array(rr.width * rr.scanlineBlockSize * (rr.channels * rr.type)),
-        Wr = new Uint8Array(mr);
-      let ar = 0;
-      const jr = new Array(rr.channels);
-      for (let Er = 0; Er < rr.channels; Er++) jr[Er] = {}, jr[Er].start = ar, jr[Er].end = jr[Er].start, jr[Er].nx = rr.width, jr[Er].ny = rr.lines, jr[Er].size = rr.type, ar += jr[Er].nx * jr[Er].ny * jr[Er].size;
-      const Ir = Or(Sr, Qr),
-        fr = Or(Sr, Qr);
-      if (fr >= mr) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (Ir <= fr)
-        for (let Er = 0; Er < fr - Ir + 1; Er++) Wr[Er + Ir] = vr(Sr, Qr);
-      const pr = new Uint16Array(xr),
-        Nr = function(rr, Sr) {
-          let Qr = 0;
-          for (let Wr = 0; Wr < xr; ++Wr)(0 == Wr || rr[Wr >> 3] & 1 << (7 & Wr)) && (Sr[Qr++] = Wr);
-          const Zr = Qr - 1;
-          for (; Qr < xr;) Sr[Qr++] = 0;
-          return Zr
-        }(Wr, pr),
-        Ur = Tr(Sr, Qr);
-      br(rr.array, Sr, Qr, Ur, Zr, ar);
-      for (let Er = 0; Er < rr.channels; ++Er) {
-        const rr = jr[Er];
-        for (let Sr = 0; Sr < jr[Er].size; ++Sr) ur(Zr, rr.start + Sr, rr.nx, rr.size, rr.ny, rr.nx * rr.size, Nr)
-      }! function(rr, Sr, Qr) {
-        for (let Zr = 0; Zr < Qr; ++Zr) Sr[Zr] = rr[Sr[Zr]]
-      }(pr, Zr, ar);
-      let tr = 0;
-      const hr = new Uint8Array(Zr.buffer.byteLength);
-      for (let xr = 0; xr < rr.lines; xr++)
-        for (let Sr = 0; Sr < rr.channels; Sr++) {
-          const rr = jr[Sr],
-            Qr = rr.nx * rr.size,
-            Wr = new Uint8Array(Zr.buffer, rr.end * Er, Qr * Er);
-          hr.set(Wr, tr), tr += Qr * Er, rr.end += Qr
+        Wd = new Uint16Array(dd.width * dd.scanlineBlockSize * (dd.channels * dd.type)),
+        Fd = new Uint8Array(od);
+      let Rd = 0;
+      const Xd = new Array(dd.channels);
+      for (let vd = 0; vd < dd.channels; vd++) Xd[vd] = {}, Xd[vd].start = Rd, Xd[vd].end = Xd[vd].start, Xd[vd].nx = dd.width, Xd[vd].ny = dd.lines, Xd[vd].size = dd.type, Rd += Xd[vd].nx * Xd[vd].ny * Xd[vd].size;
+      const Kd = xd(Od, md),
+        hd = xd(Od, md);
+      if (hd >= od) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (Kd <= hd)
+        for (let vd = 0; vd < hd - Kd + 1; vd++) Fd[vd + Kd] = Ud(Od, md);
+      const Qd = new Uint16Array(td),
+        Nd = function(dd, Od) {
+          let md = 0;
+          for (let Fd = 0; Fd < td; ++Fd)(0 == Fd || dd[Fd >> 3] & 1 << (7 & Fd)) && (Od[md++] = Fd);
+          const Wd = md - 1;
+          for (; md < td;) Od[md++] = 0;
+          return Wd
+        }(Fd, Qd),
+        qd = Jd(Od, md);
+      Zd(dd.array, Od, md, qd, Wd, Rd);
+      for (let vd = 0; vd < dd.channels; ++vd) {
+        const dd = Xd[vd];
+        for (let Od = 0; Od < Xd[vd].size; ++Od) OO(Wd, dd.start + Od, dd.nx, dd.size, dd.ny, dd.nx * dd.size, Nd)
+      }! function(dd, Od, md) {
+        for (let Wd = 0; Wd < md; ++Wd) Od[Wd] = dd[Od[Wd]]
+      }(Qd, Wd, Rd);
+      let Hd = 0;
+      const yd = new Uint8Array(Wd.buffer.byteLength);
+      for (let td = 0; td < dd.lines; td++)
+        for (let Od = 0; Od < dd.channels; Od++) {
+          const dd = Xd[Od],
+            md = dd.nx * dd.size,
+            Fd = new Uint8Array(Wd.buffer, dd.end * vd, md * vd);
+          yd.set(Fd, Hd), Hd += md * vd, dd.end += md
         }
-      return new DataView(hr.buffer)
+      return new DataView(yd.buffer)
     }
-    var aS, jS = Qr(41950);
-    ! function(rr) {
-      rr[rr.Float = 0] = "Float", rr[rr.HalfFloat = 1] = "HalfFloat"
-    }(aS || (aS = {}));
-    class IS {}
-    async function fS(rr, Sr, Qr, Zr) {
-      const Wr = {
+    var KO, hO = md(42029);
+    ! function(dd) {
+      dd[dd.Float = 0] = "Float", dd[dd.HalfFloat = 1] = "HalfFloat"
+    }(KO || (KO = {}));
+    class vO {}
+    async function QO(dd, Od, md, Wd) {
+      const Fd = {
         size: 0,
-        viewer: Sr,
-        array: new Uint8Array(Sr.buffer),
-        offset: Qr,
-        width: rr.dataWindow.xMax - rr.dataWindow.xMin + 1,
-        height: rr.dataWindow.yMax - rr.dataWindow.yMin + 1,
-        channels: rr.channels.length,
+        viewer: Od,
+        array: new Uint8Array(Od.buffer),
+        offset: md,
+        width: dd.dataWindow.xMax - dd.dataWindow.xMin + 1,
+        height: dd.dataWindow.yMax - dd.dataWindow.yMin + 1,
+        channels: dd.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (rr.compression) {
-        case er.NO_COMPRESSION:
-          Wr.lines = 1, Wr.uncompress = rS;
+      switch (dd.compression) {
+        case Yd.NO_COMPRESSION:
+          Fd.lines = 1, Fd.uncompress = mO;
           break;
-        case er.RLE_COMPRESSION:
-          Wr.lines = 1, Wr.uncompress = SS;
+        case Yd.RLE_COMPRESSION:
+          Fd.lines = 1, Fd.uncompress = WO;
           break;
-        case er.ZIPS_COMPRESSION:
-          Wr.lines = 1, Wr.uncompress = QS, await jS.h.LoadScriptAsync(IS.FFLATEUrl);
+        case Yd.ZIPS_COMPRESSION:
+          Fd.lines = 1, Fd.uncompress = FO, await hO.g.LoadScriptAsync(vO.FFLATEUrl);
           break;
-        case er.ZIP_COMPRESSION:
-          Wr.lines = 16, Wr.uncompress = QS, await jS.h.LoadScriptAsync(IS.FFLATEUrl);
+        case Yd.ZIP_COMPRESSION:
+          Fd.lines = 16, Fd.uncompress = FO, await hO.g.LoadScriptAsync(vO.FFLATEUrl);
           break;
-        case er.PIZ_COMPRESSION:
-          Wr.lines = 32, Wr.uncompress = WS;
+        case Yd.PIZ_COMPRESSION:
+          Fd.lines = 32, Fd.uncompress = XO;
           break;
-        case er.PXR24_COMPRESSION:
-          Wr.lines = 16, Wr.uncompress = ZS, await jS.h.LoadScriptAsync(IS.FFLATEUrl);
+        case Yd.PXR24_COMPRESSION:
+          Fd.lines = 16, Fd.uncompress = RO, await hO.g.LoadScriptAsync(vO.FFLATEUrl);
           break;
         default:
-          throw new Error(er[rr.compression] + " is unsupported")
+          throw new Error(Yd[dd.compression] + " is unsupported")
       }
-      Wr.scanlineBlockSize = Wr.lines;
-      const ar = {};
-      for (const Ir of rr.channels) switch (Ir.name) {
+      Fd.scanlineBlockSize = Fd.lines;
+      const Rd = {};
+      for (const Kd of dd.channels) switch (Kd.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          ar[Ir.name] = !0, Wr.type = Ir.pixelType
+          Rd[Kd.name] = !0, Fd.type = Kd.pixelType
       }
-      let jr = !1;
-      if (ar.R && ar.G && ar.B && ar.A) Wr.outputChannels = 4, Wr.decodeChannels = {
+      let Xd = !1;
+      if (Rd.R && Rd.G && Rd.B && Rd.A) Fd.outputChannels = 4, Fd.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (ar.R && ar.G && ar.B) jr = !0, Wr.outputChannels = 4, Wr.decodeChannels = {
+      else if (Rd.R && Rd.G && Rd.B) Xd = !0, Fd.outputChannels = 4, Fd.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (ar.R && ar.G) Wr.outputChannels = 2, Wr.decodeChannels = {
+      else if (Rd.R && Rd.G) Fd.outputChannels = 2, Fd.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (ar.R) Wr.outputChannels = 1, Wr.decodeChannels = {
+      else if (Rd.R) Fd.outputChannels = 1, Fd.decodeChannels = {
         R: 0
       };
       else {
-        if (!ar.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        Wr.outputChannels = 1, Wr.decodeChannels = {
+        if (!Rd.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        Fd.outputChannels = 1, Fd.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === Wr.type) switch (Zr) {
-        case aS.Float:
-          Wr.getter = Pr, Wr.inputSize = Er;
+      if (1 === Fd.type) switch (Wd) {
+        case KO.Float:
+          Fd.getter = ud, Fd.inputSize = vd;
           break;
-        case aS.HalfFloat:
-          Wr.getter = Or, Wr.inputSize = Er
+        case KO.HalfFloat:
+          Fd.getter = xd, Fd.inputSize = vd
       } else {
-        if (2 !== Wr.type) throw new Error("Unsupported pixelType " + Wr.type + " for " + rr.compression);
-        switch (Zr) {
-          case aS.Float:
-            Wr.getter = Xr, Wr.inputSize = Ir;
+        if (2 !== Fd.type) throw new Error("Unsupported pixelType " + Fd.type + " for " + dd.compression);
+        switch (Wd) {
+          case KO.Float:
+            Fd.getter = sd, Fd.inputSize = Kd;
             break;
-          case aS.HalfFloat:
-            Wr.getter = Hr, Wr.inputSize = Ir
+          case KO.HalfFloat:
+            Fd.getter = Vd, Fd.inputSize = Kd
         }
       }
-      Wr.blockCount = Wr.height / Wr.scanlineBlockSize;
-      for (let Ir = 0; Ir < Wr.blockCount; Ir++) lr(Sr, Qr);
-      const fr = Wr.width * Wr.height * Wr.outputChannels;
-      switch (Zr) {
-        case aS.Float:
-          Wr.byteArray = new Float32Array(fr), Wr.textureType = 1, jr && Wr.byteArray.fill(1, 0, fr);
+      Fd.blockCount = Fd.height / Fd.scanlineBlockSize;
+      for (let Kd = 0; Kd < Fd.blockCount; Kd++) Sd(Od, md);
+      const hd = Fd.width * Fd.height * Fd.outputChannels;
+      switch (Wd) {
+        case KO.Float:
+          Fd.byteArray = new Float32Array(hd), Fd.textureType = 1, Xd && Fd.byteArray.fill(1, 0, hd);
           break;
-        case aS.HalfFloat:
-          Wr.byteArray = new Uint16Array(fr), Wr.textureType = 2, jr && Wr.byteArray.fill(15360, 0, fr);
+        case KO.HalfFloat:
+          Fd.byteArray = new Uint16Array(hd), Fd.textureType = 2, Xd && Fd.byteArray.fill(15360, 0, hd);
           break;
         default:
-          throw new Error("Unsupported type: " + Zr)
+          throw new Error("Unsupported type: " + Wd)
       }
-      let pr = 0;
-      for (const Ir of rr.channels) void 0 !== Wr.decodeChannels[Ir.name] && (Wr.channelLineOffsets[Ir.name] = pr * Wr.width), pr += 2 * Ir.pixelType;
-      return Wr.bytesPerLine = Wr.width * pr, Wr.outLineWidth = Wr.width * Wr.outputChannels, "INCREASING_Y" === rr.lineOrder ? Wr.scanOrder = rr => rr : Wr.scanOrder = rr => Wr.height - 1 - rr, 4 == Wr.outputChannels ? (Wr.format = 5, Wr.linearSpace = !0) : (Wr.format = 6, Wr.linearSpace = !1), Wr
+      let Qd = 0;
+      for (const Kd of dd.channels) void 0 !== Fd.decodeChannels[Kd.name] && (Fd.channelLineOffsets[Kd.name] = Qd * Fd.width), Qd += 2 * Kd.pixelType;
+      return Fd.bytesPerLine = Fd.width * Qd, Fd.outLineWidth = Fd.width * Fd.outputChannels, "INCREASING_Y" === dd.lineOrder ? Fd.scanOrder = dd => dd : Fd.scanOrder = dd => Fd.height - 1 - dd, 4 == Fd.outputChannels ? (Fd.format = 5, Fd.linearSpace = !0) : (Fd.format = 6, Fd.linearSpace = !1), Fd
     }
 
-    function ES(rr, Sr, Qr, Zr) {
-      const Wr = {
+    function tO(dd, Od, md, Wd) {
+      const Fd = {
         value: 0
       };
-      for (let ar = 0; ar < rr.height / rr.scanlineBlockSize; ar++) {
-        const jr = Br(Qr, Zr) - Sr.dataWindow.yMin;
-        rr.size = Tr(Qr, Zr), rr.lines = jr + rr.scanlineBlockSize > rr.height ? rr.height - jr : rr.scanlineBlockSize;
-        const Ir = rr.size < rr.lines * rr.bytesPerLine && rr.uncompress ? rr.uncompress(rr) : rS(rr);
-        Zr.value += rr.size;
-        for (let Qr = 0; Qr < rr.scanlineBlockSize; Qr++) {
-          const Zr = ar * rr.scanlineBlockSize,
-            jr = Qr + rr.scanOrder(Zr);
-          if (jr >= rr.height) continue;
-          const fr = Qr * rr.bytesPerLine,
-            Er = (rr.height - 1 - jr) * rr.outLineWidth;
-          for (let Qr = 0; Qr < rr.channels; Qr++) {
-            const Zr = Sr.channels[Qr].name,
-              ar = rr.channelLineOffsets[Zr],
-              jr = rr.decodeChannels[Zr];
-            if (void 0 !== jr) {
-              Wr.value = fr + ar;
-              for (let Sr = 0; Sr < rr.width; Sr++) {
-                const Qr = Er + Sr * rr.outputChannels + jr;
-                rr.byteArray && (rr.byteArray[Qr] = rr.getter(Ir, Wr))
+      for (let Rd = 0; Rd < dd.height / dd.scanlineBlockSize; Rd++) {
+        const Xd = Ed(md, Wd) - Od.dataWindow.yMin;
+        dd.size = Jd(md, Wd), dd.lines = Xd + dd.scanlineBlockSize > dd.height ? dd.height - Xd : dd.scanlineBlockSize;
+        const Kd = dd.size < dd.lines * dd.bytesPerLine && dd.uncompress ? dd.uncompress(dd) : mO(dd);
+        Wd.value += dd.size;
+        for (let md = 0; md < dd.scanlineBlockSize; md++) {
+          const Wd = Rd * dd.scanlineBlockSize,
+            Xd = md + dd.scanOrder(Wd);
+          if (Xd >= dd.height) continue;
+          const hd = md * dd.bytesPerLine,
+            vd = (dd.height - 1 - Xd) * dd.outLineWidth;
+          for (let md = 0; md < dd.channels; md++) {
+            const Wd = Od.channels[md].name,
+              Rd = dd.channelLineOffsets[Wd],
+              Xd = dd.decodeChannels[Wd];
+            if (void 0 !== Xd) {
+              Fd.value = hd + Rd;
+              for (let Od = 0; Od < dd.width; Od++) {
+                const md = vd + Od * dd.outputChannels + Xd;
+                dd.byteArray && (dd.byteArray[md] = dd.getter(Kd, Fd))
               }
             }
           }
         }
       }
     }
-    IS.DefaultOutputType = aS.HalfFloat, IS.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class pS {
+    vO.DefaultOutputType = KO.HalfFloat, vO.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class oO {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(rr, Sr, Qr, Zr, Wr) {
+      loadCubeData(dd, Od, md, Wd, Fd) {
         throw ".exr not supported in Cube."
       }
-      loadData(rr, Sr, Qr) {
-        const Wr = new DataView(rr.buffer),
-          ar = {
+      loadData(dd, Od, md) {
+        const Fd = new DataView(dd.buffer),
+          Rd = {
             value: 0
           },
-          jr = Mr(Wr, ar);
-        fS(jr, Wr, ar, IS.DefaultOutputType).then((rr => {
-          ES(rr, jr, Wr, ar);
-          const Zr = jr.dataWindow.xMax - jr.dataWindow.xMin + 1,
-            Ir = jr.dataWindow.yMax - jr.dataWindow.yMin + 1;
-          Qr(Zr, Ir, Sr.generateMipMaps, !1, (() => {
-            const Qr = Sr.MU();
-            Sr.format = jr.format, Sr.type = rr.textureType, Sr.invertY = !1, Sr._gammaSpace = !jr.linearSpace, rr.byteArray && Qr._uploadDataToTextureDirectly(Sr, rr.byteArray, 0, 0, void 0, !0)
+          Xd = Ld(Fd, Rd);
+        QO(Xd, Fd, Rd, vO.DefaultOutputType).then((dd => {
+          tO(dd, Xd, Fd, Rd);
+          const Wd = Xd.dataWindow.xMax - Xd.dataWindow.xMin + 1,
+            Kd = Xd.dataWindow.yMax - Xd.dataWindow.yMin + 1;
+          md(Wd, Kd, Od.generateMipMaps, !1, (() => {
+            const md = Od.Iq();
+            Od.format = Xd.format, Od.type = dd.textureType, Od.invertY = !1, Od._gammaSpace = !Xd.linearSpace, dd.byteArray && md._uploadDataToTextureDirectly(Od, dd.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((rr => {
-          Zr.c.Error("Failed to load EXR texture: ", rr)
+        })).catch((dd => {
+          Wd.c.Error("Failed to load EXR texture: ", dd)
         }))
       }
     }
-    async function xS(rr) {
-      const Sr = new DataView(rr),
-        Qr = {
+    async function NO(dd) {
+      const Od = new DataView(dd),
+        md = {
           value: 0
         },
-        Wr = Mr(Sr, Qr);
+        Fd = Ld(Od, md);
       try {
-        const rr = await fS(Wr, Sr, Qr, aS.Float);
-        return ES(rr, Wr, Sr, Qr), rr.byteArray ? {
-          width: Wr.dataWindow.xMax - Wr.dataWindow.xMin + 1,
-          height: Wr.dataWindow.yMax - Wr.dataWindow.yMin + 1,
-          data: new Float32Array(rr.byteArray)
-        } : (Zr.c.Error("Failed to decode EXR data: No byte array available."), {
+        const dd = await QO(Fd, Od, md, KO.Float);
+        return tO(dd, Fd, Od, md), dd.byteArray ? {
+          width: Fd.dataWindow.xMax - Fd.dataWindow.xMin + 1,
+          height: Fd.dataWindow.yMax - Fd.dataWindow.yMin + 1,
+          data: new Float32Array(dd.byteArray)
+        } : (Wd.c.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (ar) {
-        Zr.c.Error("Failed to load EXR data: ", ar)
+      } catch (Rd) {
+        Wd.c.Error("Failed to load EXR data: ", Rd)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

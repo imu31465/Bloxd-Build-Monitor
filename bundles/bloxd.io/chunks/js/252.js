@@ -1,63 +1,63 @@
 export const id = 252;
 export const ids = [252, 611];
 export const modules = {
-  45287: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      CharacterCustomisationUI: () => tS
+  45327: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      CharacterCustomisationUI: () => bO
     });
-    var Zr = Qr(72),
-      Wr = Qr(3002),
-      ar = Qr(4736),
-      jr = Qr(4713),
-      Ir = Qr(1181),
-      fr = Qr(1187),
-      Er = Qr(1155),
-      pr = Qr.n(Er),
-      xr = Qr(1287),
-      mr = Qr(672),
-      Nr = Qr(661),
-      Ur = Qr(1251),
-      tr = Qr(3139),
-      hr = Qr(1686),
-      zr = Qr(3601),
-      Yr = Qr(38167),
-      nr = Qr(3148),
-      er = Qr(4280),
-      Kr = Qr(2128),
-      yr = Qr(1576),
-      Br = Qr(3184),
-      Tr = Qr(3267),
-      vr = Qr(26),
-      Or = Qr(3757),
-      Lr = Qr(1629),
-      lr = Qr(2015);
-    class Xr {
+    var Wd = md(66),
+      Fd = md(3016),
+      Rd = md(4705),
+      Xd = md(4687),
+      Kd = md(1186),
+      hd = md(1189),
+      vd = md(1155),
+      Qd = md.n(vd),
+      td = md(1300),
+      od = md(689),
+      Nd = md(678),
+      qd = md(1238),
+      Hd = md(3143),
+      yd = md(1685),
+      bd = md(3597),
+      Td = md(38256),
+      pd = md(3146),
+      Yd = md(4280),
+      gd = md(2125),
+      wd = md(1572),
+      Ed = md(3181),
+      Jd = md(3277),
+      Ud = md(29),
+      xd = md(3762),
+      Bd = md(1627),
+      Sd = md(2010);
+    class sd {
       constructor() {
         this.slots = new Map, this.before = new Map, this.accountId = null
       }
-      moveTo(rr) {
-        null !== rr && rr !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = rr)
+      moveTo(dd) {
+        null !== dd && dd !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = dd)
       }
-      isFor(rr) {
-        return null === this.accountId || this.accountId === rr
+      isFor(dd) {
+        return null === this.accountId || this.accountId === dd
       }
-      overlay(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return rr.map(((rr, Qr) => {
-          var Zr, Wr;
-          return null !== (Zr = null !== (Wr = this.slots.get(Qr)) && void 0 !== Wr ? Wr : Sr.get(Qr)) && void 0 !== Zr ? Zr : rr
+      overlay(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return dd.map(((dd, md) => {
+          var Wd, Fd;
+          return null !== (Wd = null !== (Fd = this.slots.get(md)) && void 0 !== Fd ? Fd : Od.get(md)) && void 0 !== Wd ? Wd : dd
         }))
       }
     }
-    class Pr extends Or.e {
+    class ud extends xd.e {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Xr;
-        super("saved outfits", (async Sr => {
-          const Qr = rr.isFor(Sr.whamm),
-            Zr = new Map(rr.slots),
-            Wr = await Lr.c.getSavedOutfits(Sr);
-          return Qr ? rr.overlay(Wr, Zr) : Wr
-        })), this.unsaved = rr, this.started = !1, this.sending = !1
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new sd;
+        super("saved outfits", (async Od => {
+          const md = dd.isFor(Od.whamm),
+            Wd = new Map(dd.slots),
+            Fd = await Bd.e.getSavedOutfits(Od);
+          return md ? dd.overlay(Fd, Wd) : Fd
+        })), this.unsaved = dd, this.started = !1, this.sending = !1
       }
       ensureLoaded() {
         if (this.started) {
@@ -65,311 +65,311 @@ export const modules = {
         } else this.started = !0, this.watchAccount();
         this.refresh()
       }
-      save(rr, Sr) {
-        var Qr, Zr;
-        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(rr)) || this.unsaved.before.set(rr, null !== (Qr = null === (Zr = this.getState().data) || void 0 === Zr ? void 0 : Zr[rr]) && void 0 !== Qr ? Qr : {});
-        this.unsaved.slots.set(rr, Sr), this.update((Qr => Qr.map(((Qr, Zr) => Zr === rr ? Sr : Qr)))), this.sending || this.sendUnsaved()
+      save(dd, Od) {
+        var md, Wd;
+        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(dd)) || this.unsaved.before.set(dd, null !== (md = null === (Wd = this.getState().data) || void 0 === Wd ? void 0 : Wd[dd]) && void 0 !== md ? md : {});
+        this.unsaved.slots.set(dd, Od), this.update((md => md.map(((md, Wd) => Wd === dd ? Od : md)))), this.sending || this.sendUnsaved()
       }
-      clear(rr) {
-        this.save(rr, {})
+      clear(dd) {
+        this.save(dd, {})
       }
       async sendUnsaved() {
         this.sending = !0;
-        let rr = !1;
+        let dd = !1;
         for (; this.unsaved.slots.size > 0;) {
-          const Qr = new Map(this.unsaved.slots);
-          let Zr = this.getState().accountId;
+          const md = new Map(this.unsaved.slots);
+          let Wd = this.getState().accountId;
           try {
-            const rr = await fr.userContextManager.getCurrentUserContext();
-            if (Zr = rr.whamm, this.unsaved.moveTo(rr.whamm), 0 === this.unsaved.slots.size) {
+            const dd = await hd.userContextManager.getCurrentUserContext();
+            if (Wd = dd.whamm, this.unsaved.moveTo(dd.whamm), 0 === this.unsaved.slots.size) {
               this.refresh();
               break
             }
             const {
-              accountId: Sr,
-              data: Wr
+              accountId: Od,
+              data: Fd
             } = this.getState();
-            let ar = Wr;
-            Sr === rr.whamm && null !== ar || (ar = this.unsaved.overlay(await Lr.c.getSavedOutfits(rr)), this.refresh()), await Lr.c.setSavedOutfits(rr, ar), this.unsaved.isFor(rr.whamm) && ar.forEach(((rr, Sr) => {
-              const Zr = this.unsaved.slots.get(Sr);
-              void 0 === Zr || Zr === Qr.get(Sr) ? this.unsaved.before.delete(Sr) : this.unsaved.before.set(Sr, rr)
+            let Rd = Fd;
+            Od === dd.whamm && null !== Rd || (Rd = this.unsaved.overlay(await Bd.e.getSavedOutfits(dd)), this.refresh()), await Bd.e.setSavedOutfits(dd, Rd), this.unsaved.isFor(dd.whamm) && Rd.forEach(((dd, Od) => {
+              const Wd = this.unsaved.slots.get(Od);
+              void 0 === Wd || Wd === md.get(Od) ? this.unsaved.before.delete(Od) : this.unsaved.before.set(Od, dd)
             }))
-          } catch (Sr) {
-            if (console.error("Failed to save outfits", Sr), this.getState().accountId === Zr && [...this.unsaved.slots].every((rr => {
-                let [Sr, Zr] = rr;
-                return Qr.get(Sr) === Zr
+          } catch (Od) {
+            if (console.error("Failed to save outfits", Od), this.getState().accountId === Wd && [...this.unsaved.slots].every((dd => {
+                let [Od, Wd] = dd;
+                return md.get(Od) === Wd
               }))) {
-              const Sr = [...Qr.values()].every(Yr.f);
-              lr.h.showMessage({
-                translationKey: Sr ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
+              const Od = [...md.values()].every(Td.c);
+              Sd.g.showMessage({
+                translationKey: Od ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
               });
-              const Zr = new Map(this.unsaved.before);
-              this.unsaved.before.clear(), this.update((rr => rr.map(((rr, Sr) => {
-                var Qr;
-                return null !== (Qr = Zr.get(Sr)) && void 0 !== Qr ? Qr : rr
-              })))), rr = !0
+              const Wd = new Map(this.unsaved.before);
+              this.unsaved.before.clear(), this.update((dd => dd.map(((dd, Od) => {
+                var md;
+                return null !== (md = Wd.get(Od)) && void 0 !== md ? md : dd
+              })))), dd = !0
             }
           }
-          for (const [rr, Sr] of Qr) this.unsaved.slots.get(rr) === Sr && this.unsaved.slots.delete(rr)
+          for (const [dd, Od] of md) this.unsaved.slots.get(dd) === Od && this.unsaved.slots.delete(dd)
         }
-        this.sending = !1, rr && this.refresh()
+        this.sending = !1, dd && this.refresh()
       }
     }
-    const Hr = new Pr;
-    var qr = Qr(45289),
-      Rr = Qr(1684),
-      gr = Qr(3242),
-      Cr = Qr(4100),
-      Mr = Qr(4278),
-      Gr = Qr(3208),
-      kr = Qr(1448);
-    Qr(35505), Qr(4287);
+    const Vd = new ud;
+    var Ad = md(45334),
+      rd = md(1679),
+      Gd = md(3249),
+      nd = md(4096),
+      Ld = md(4276),
+      Pd = md(3198),
+      zd = md(1443);
+    md(35582), md(4283);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var Ar = Qr(3192),
-      Vr = Qr(4293),
-      ir = Qr(4297),
-      wr = Qr(1489),
-      cr = Qr(3320),
-      Fr = Qr(1475),
-      or = Qr(1338);
+    var cd = md(3184),
+      jd = md(4298),
+      Dd = md(4303),
+      ed = md(1471),
+      Id = md(3307),
+      ld = md(1462),
+      Cd = md(1341);
 
-    function br(rr) {
+    function Zd(dd) {
       let {
-        wornOutfit: Sr,
-        onApply: Qr,
-        onOverwrite: Wr,
-        onDelete: ar
-      } = rr;
+        wornOutfit: Od,
+        onApply: md,
+        onOverwrite: Fd,
+        onDelete: Rd
+      } = dd;
       const {
-        t: jr
-      } = (0, Ur.E)(), {
-        accountId: fr,
-        data: Er
-      } = (0, Or.j)(Hr, !1), {
-        userContext: xr
-      } = (0, Ir.c)();
-      async function mr(rr, Sr) {
-        const Qr = await Fr.NotificationProvider.showPromptPopup({
+        t: Xd
+      } = (0, qd.G)(), {
+        accountId: hd,
+        data: vd
+      } = (0, xd.g)(Vd, !1), {
+        userContext: td
+      } = (0, Kd.d)();
+      async function od(dd, Od) {
+        const md = await ld.NotificationProvider.showPromptPopup({
             title: "homePage:deleteOutfitConfirm",
             confirmText: "general:delete",
             cancelText: "general:cancel",
             destructive: !0
           }).getResult(),
           {
-            accountId: Zr,
-            data: Wr
-          } = Hr.getState();
-        var jr, Ir;
-        !0 === Qr && Zr === fr && null !== Wr && (jr = Wr[rr], Ir = Sr, (0, Yr.e)(jr, Ir) && (0, Yr.e)(Ir, jr)) && (Hr.clear(rr), ar(rr))
+            accountId: Wd,
+            data: Fd
+          } = Vd.getState();
+        var Xd, Kd;
+        !0 === md && Wd === hd && null !== Fd && (Xd = Fd[dd], Kd = Od, (0, Td.b)(Xd, Kd) && (0, Td.b)(Kd, Xd)) && (Vd.clear(dd), Rd(dd))
       }
-      return (0, Zr.useEffect)((() => {
-        Hr.ensureLoaded()
-      }), []), null === Er || fr !== xr.whamm ? null : (0, or.jsxs)("div", {
+      return (0, Wd.useEffect)((() => {
+        Vd.ensureLoaded()
+      }), []), null === vd || hd !== td.whamm ? null : (0, Cd.jsxs)("div", {
         className: "CosmeticPackGroup SavedOutfits",
-        children: [(0, or.jsx)("div", {
+        children: [(0, Cd.jsx)("div", {
           className: "CosmeticPackGroupLabel",
-          children: (0, or.jsx)("span", {
+          children: (0, Cd.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: jr("homePage:myOutfits")
+            children: Xd("homePage:myOutfits")
           })
-        }), (0, or.jsx)("div", {
+        }), (0, Cd.jsx)("div", {
           className: "CharacterPresetsGrid SavedOutfitsGrid",
-          children: Er.map(((rr, Zr) => {
-            const ar = (0, Yr.f)(rr);
-            return (0, or.jsxs)("div", {
-              className: pr()("SavedOutfitSlot", {
-                SavedOutfitSlotFilled: !ar
+          children: vd.map(((dd, Wd) => {
+            const Rd = (0, Td.c)(dd);
+            return (0, Cd.jsxs)("div", {
+              className: Qd()("SavedOutfitSlot", {
+                SavedOutfitSlotFilled: !Rd
               }),
-              children: [(0, or.jsxs)("div", {
-                ...(0, yr._)(),
-                role: ar ? "button" : "link",
+              children: [(0, Cd.jsxs)("div", {
+                ...(0, wd.X)(),
+                role: Rd ? "button" : "link",
                 "data-pad-focusable": !0,
-                className: pr()("CharacterPresetCard SavedOutfitCard", {
-                  SavedOutfitCardEmpty: ar,
-                  CharacterPresetCardActive: !ar && (0, Yr.e)(rr, Sr)
+                className: Qd()("CharacterPresetCard SavedOutfitCard", {
+                  SavedOutfitCardEmpty: Rd,
+                  CharacterPresetCardActive: !Rd && (0, Td.b)(dd, Od)
                 }),
                 onClick: () => {
-                  ar ? Hr.save(Zr, Sr) : Qr(rr)
+                  Rd ? Vd.save(Wd, Od) : md(dd)
                 },
-                children: [ar && (0, or.jsxs)(or.Fragment, {
-                  children: [(0, or.jsx)(kr.c, {
+                children: [Rd && (0, Cd.jsxs)(Cd.Fragment, {
+                  children: [(0, Cd.jsx)(zd.c, {
                     name: "plus"
-                  }), jr("homePage:saveOutfit")]
-                }), !ar && (0, or.jsxs)(or.Fragment, {
-                  children: [(0, or.jsx)("div", {
+                  }), Xd("homePage:saveOutfit")]
+                }), !Rd && (0, Cd.jsxs)(Cd.Fragment, {
+                  children: [(0, Cd.jsx)("div", {
                     className: "SavedOutfitCardPicture",
-                    children: (0, or.jsx)(cr.b, {
-                      cosmetics: rr
+                    children: (0, Cd.jsx)(Id.e, {
+                      cosmetics: dd
                     })
-                  }), (0, or.jsx)(yr.U, {
+                  }), (0, Cd.jsx)(wd.S, {
                     padSecondaryLabelKey: "homePage:saveOutfit",
                     stopPropagation: !0,
                     onClick: () => {
-                      (0, Yr.e)(Sr, rr) || (Hr.save(Zr, Sr), Wr(Zr, rr))
+                      (0, Td.b)(Od, dd) || (Vd.save(Wd, Od), Fd(Wd, dd))
                     },
-                    children: jr("general:save")
+                    children: Xd("general:save")
                   })]
                 })]
-              }), !ar && (0, or.jsx)("button", {
+              }), !Rd && (0, Cd.jsx)("button", {
                 type: "button",
                 className: "SavedOutfitDeleteButton",
                 "data-pad-destructive": !0,
-                "aria-label": jr("general:delete"),
-                title: jr("general:delete"),
+                "aria-label": Xd("general:delete"),
+                title: Xd("general:delete"),
                 onClick: () => {
-                  mr(Zr, rr)
+                  od(Wd, dd)
                 },
-                children: (0, or.jsx)(kr.c, {
+                children: (0, Cd.jsx)(zd.c, {
                   name: "trash-can"
                 })
               })]
-            }, Zr)
+            }, Wd)
           }))
         })]
       })
     }
-    var Jr = Qr(379),
-      Dr = Qr(1481);
+    var kd = md(405),
+      fd = md(1466);
 
-    function dr() {
-      (0, Br.o)({
+    function Md() {
+      (0, Ed.p)({
         mode: "self",
         source: "characterCustomisation",
         openItem: "superRank"
       })
     }
 
-    function sr(rr) {
+    function dO(dd) {
       let {
-        fW: Sr,
-        EW: Qr,
-        missingRanks: Zr,
-        playerRanks: Wr,
-        canBuy: ar,
-        closePopup: jr
-      } = rr;
+        KF: Od,
+        hF: md,
+        missingRanks: Wd,
+        playerRanks: Fd,
+        canBuy: Rd,
+        closePopup: Xd
+      } = dd;
       const {
-        t: Ir
-      } = (0, Ur.E)(), fr = (0, Tr.r)(Date.now()), Er = Nr.r.find((rr => Wr.includes(rr.rank))), pr = Ir((void 0 === Er ? fr : (0, Tr.l)(Er.id)).nameKey), {
-        title: xr,
-        subtitle: tr,
-        textOpts: hr,
-        soldRankUnlocks: zr
-      } = function(rr, Sr, Qr, Zr) {
-        const Wr = rr.find((rr => !(0, Nr.j)(Nr.r, rr)));
-        if (void 0 === Wr) return {
-          title: Qr.unlockWithKey,
+        t: Kd
+      } = (0, qd.G)(), hd = (0, Jd.v)(Date.now()), vd = Nd.n.find((dd => Fd.includes(dd.rank))), Qd = Kd((void 0 === vd ? hd : (0, Jd.p)(vd.id)).nameKey), {
+        title: td,
+        subtitle: Hd,
+        textOpts: yd,
+        soldRankUnlocks: bd
+      } = function(dd, Od, md, Wd) {
+        const Fd = dd.find((dd => !(0, Nd.g)(Nd.n, dd)));
+        if (void 0 === Fd) return {
+          title: md.unlockWithKey,
           soldRankUnlocks: !0
         };
-        if ("youtuber" === Wr) return {
+        if ("youtuber" === Fd) return {
           title: "homePage:youtuberCape",
           subtitle: "homePage:youtuberCapeHow",
           textOpts: {
             subtitle: {
-              tierRank: Zr
+              tierRank: Wd
             }
           },
           soldRankUnlocks: !1
         };
-        const ar = {
-          rank: mr.k[Wr].chatTag[0].str
+        const Rd = {
+          rank: od.l[Fd].chatTag[0].str
         };
         return {
           title: "homePage:creatorCape",
-          subtitle: Sr.some(mr.n) ? "homePage:creatorCapeOtherTier" : "homePage:creatorCapeHow",
+          subtitle: Od.some(od.n) ? "homePage:creatorCapeOtherTier" : "homePage:creatorCapeHow",
           textOpts: {
-            title: ar,
+            title: Rd,
             subtitle: {
-              ...ar,
-              tierRank: Zr
+              ...Rd,
+              tierRank: Wd
             }
           },
           soldRankUnlocks: !1
         }
-      }(Zr, Wr, fr, pr), Yr = ar && zr;
-      return (0, or.jsx)(Dr.j, {
+      }(Wd, Fd, hd, Qd), Td = Rd && bd;
+      return (0, Cd.jsx)(fd.j, {
         className: "RankLockedCosmeticPopup",
-        title: xr,
-        subtitle: tr,
-        textOpts: hr,
-        confirm: Yr ? {
+        title: td,
+        subtitle: Hd,
+        textOpts: yd,
+        confirm: Td ? {
           text: "general:getItNow",
           onClick: () => {
-            jr(), dr()
+            Xd(), Md()
           }
         } : {
           text: "general:ok",
-          onClick: jr
+          onClick: Xd
         },
-        cancel: Yr ? {
+        cancel: Td ? {
           text: "general:cancel",
-          onClick: jr
+          onClick: Xd
         } : void 0,
-        children: (0, or.jsx)("div", {
+        children: (0, Cd.jsx)("div", {
           className: "RankLockedCosmeticPicture",
-          children: (0, or.jsx)(ir.e, {
-            fW: Sr,
-            EW: Qr
+          children: (0, Cd.jsx)(Dd.e, {
+            KF: Od,
+            hF: md
           })
         })
       })
     }
-    var ur = Qr(37827);
+    var OO = md(37929);
 
-    function rS(rr, Sr, Qr) {
-      return !(0, gr.y)(rr, Sr) && !(0, gr.E)(rr, Sr, Qr)
+    function mO(dd, Od, md) {
+      return !(0, Gd.y)(dd, Od) && !(0, Gd.G)(dd, Od, md)
     }
 
-    function SS(rr, Sr) {
-      return !(0, gr.C)(rr, Sr)
+    function WO(dd, Od) {
+      return !(0, Gd.C)(dd, Od)
     }
 
-    function QS(rr) {
-      return Rr.l.find((Sr => (0, Rr.d)(Sr) === rr))
+    function FO(dd) {
+      return rd.n.find((Od => (0, rd.d)(Od) === dd))
     }
 
-    function ZS(rr, Sr, Qr) {
-      var Zr;
-      if (!rS(rr, Sr, Qr)) return null;
-      const Wr = (0, tr.k)(rr, Sr).cosmeticPack;
-      return Rr.s.includes(Wr) ? Wr : null !== (Zr = (0, gr.h)(rr, Sr).find((rr => Rr.s.includes(rr)))) && void 0 !== Zr ? Zr : null
+    function RO(dd, Od, md) {
+      var Wd;
+      if (!mO(dd, Od, md)) return null;
+      const Fd = (0, Hd.i)(dd, Od).cosmeticPack;
+      return rd.r.includes(Fd) ? Fd : null !== (Wd = (0, Gd.h)(dd, Od).find((dd => rd.r.includes(dd)))) && void 0 !== Wd ? Wd : null
     }
 
-    function WS(rr, Sr, Qr) {
-      const Zr = function(rr, Sr) {
-          for (const [Zr, Wr] of Object.entries(hr.e)) {
-            var Qr;
-            if (!(0, Yr.e)(Wr.cosmetics, rr) || !SS(Wr.cosmetics, Sr)) continue;
-            const ar = null !== (Qr = QS(Zr)) && void 0 !== Qr ? Qr : Wr.cosmeticPack;
-            if (Object.entries(Wr.cosmetics).every((rr => {
-                let [Qr, Zr] = rr;
-                return !rS(Qr, Zr, Sr) || (0, gr.e)(ar, Qr, Zr)
-              })) && Rr.s.includes(ar)) return ar
+    function XO(dd, Od, md) {
+      const Wd = function(dd, Od) {
+          for (const [Wd, Fd] of Object.entries(yd.b)) {
+            var md;
+            if (!(0, Td.b)(Fd.cosmetics, dd) || !WO(Fd.cosmetics, Od)) continue;
+            const Rd = null !== (md = FO(Wd)) && void 0 !== md ? md : Fd.cosmeticPack;
+            if (Object.entries(Fd.cosmetics).every((dd => {
+                let [md, Wd] = dd;
+                return !mO(md, Wd, Od) || (0, Gd.e)(Rd, md, Wd)
+              })) && rd.r.includes(Rd)) return Rd
           }
           return null
-        }(Sr, Qr),
-        Wr = null === Zr ? [] : [{
+        }(Od, md),
+        Fd = null === Wd ? [] : [{
           kind: "characters",
-          pack: Zr
+          pack: Wd
         }],
-        ar = "characters" === rr ? xr.A : [rr, ...xr.A.filter((Sr => Sr !== rr))];
-      for (const jr of ar) {
-        const rr = Sr[jr];
-        if (void 0 === rr || null !== Zr && (0, gr.e)(Zr, jr, rr)) continue;
-        const ar = ZS(jr, rr, Qr);
-        if (null === ar) continue;
-        const Ir = void 0 === (0, Rr.d)(ar) ? -1 : Wr.findIndex((rr => rr.pack === ar)); - 1 === Ir ? Wr.push({
-          kind: jr,
-          pack: ar
-        }) : Wr[Ir] = {
+        Rd = "characters" === dd ? td.s : [dd, ...td.s.filter((Od => Od !== dd))];
+      for (const Xd of Rd) {
+        const dd = Od[Xd];
+        if (void 0 === dd || null !== Wd && (0, Gd.e)(Wd, Xd, dd)) continue;
+        const Rd = RO(Xd, dd, md);
+        if (null === Rd) continue;
+        const Kd = void 0 === (0, rd.d)(Rd) ? -1 : Fd.findIndex((dd => dd.pack === Rd)); - 1 === Kd ? Fd.push({
+          kind: Xd,
+          pack: Rd
+        }) : Fd[Kd] = {
           kind: "characters",
-          pack: ar
+          pack: Rd
         }
       }
-      return Wr
+      return Fd
     }
-    var aS = Qr(3043);
-    const jS = {
+    var KO = md(3042);
+    const hO = {
       skin: "homePage:getTriedOnSkin",
       hat: "homePage:getTriedOnHat",
       head: "homePage:getTriedOnHead",
@@ -387,688 +387,688 @@ export const modules = {
       aura: "homePage:getTriedOnAura"
     };
 
-    function IS(rr) {
+    function vO(dd) {
       let {
-        gets: Sr
-      } = rr;
+        gets: Od
+      } = dd;
       const {
-        t: Qr
-      } = (0, Ur.E)();
-      return (0, or.jsx)("div", {
+        t: md
+      } = (0, qd.G)();
+      return (0, Cd.jsx)("div", {
         className: "CharCustomisationGetTriedOn",
-        children: Sr.map((rr => {
+        children: Od.map((dd => {
           let {
-            kind: Sr,
-            pack: Zr
-          } = rr;
-          return (0, or.jsxs)(yr.p, {
+            kind: Od,
+            pack: Wd
+          } = dd;
+          return (0, Cd.jsxs)(wd.m, {
             className: "CharCustomisationGetPiece",
             onClick: () => {
-              (0, Cr.g)(Zr, "triedOnGet")
+              (0, nd.j)(Wd, "triedOnGet")
             },
-            children: [(0, or.jsx)(kr.c, {
+            children: [(0, Cd.jsx)(zd.c, {
               name: "store"
-            }), "characters" === Sr ? Qr("homePage:getPack", {
-              name: (0, aS.j)(Zr)
-            }) : Qr(jS[Sr])]
-          }, Sr + Zr)
+            }), "characters" === Od ? md("homePage:getPack", {
+              name: (0, KO.i)(Wd)
+            }) : md(hO[Od])]
+          }, Od + Wd)
         }))
       })
     }
-    var fS = Qr(3587),
-      ES = Qr(3593);
+    var QO = md(3584),
+      tO = md(3592);
 
-    function pS(rr, Sr, Qr) {
-      return null !== rr && !(0, fS.e)(ES.b, Sr, Qr, rr.collected, rr.ownedPacks)
+    function oO(dd, Od, md) {
+      return null !== dd && !(0, QO.f)(tO.c, Od, md, dd.collected, dd.ownedPacks)
     }
 
-    function xS(rr) {
+    function NO(dd) {
       let {
-        locked: Sr,
-        children: Qr
-      } = rr;
-      return Sr ? (0, or.jsx)(mS, {
-        children: Qr
-      }) : Qr
+        locked: Od,
+        children: md
+      } = dd;
+      return Od ? (0, Cd.jsx)(qO, {
+        children: md
+      }) : md
     }
 
-    function mS(rr) {
-      var Sr;
+    function qO(dd) {
+      var Od;
       let {
-        children: Qr
-      } = rr;
+        children: md
+      } = dd;
       const {
-        t: Zr
-      } = (0, Ur.E)(), {
-        userContext: Wr
-      } = (0, Ir.c)(), ar = null !== (Sr = Wr.dailyDrop) && void 0 !== Sr && Sr.hidden ? Zr("dailyDrop:lockedFromHidden") : Zr("dailyDrop:lockedFrom");
-      return (0, or.jsx)(wr.f, {
-        tooltipInner: (0, or.jsx)(or.Fragment, {
-          children: ar
+        t: Wd
+      } = (0, qd.G)(), {
+        userContext: Fd
+      } = (0, Kd.d)(), Rd = null !== (Od = Fd.dailyDrop) && void 0 !== Od && Od.hidden ? Wd("dailyDrop:lockedFromHidden") : Wd("dailyDrop:lockedFrom");
+      return (0, Cd.jsx)(ed.g, {
+        tooltipInner: (0, Cd.jsx)(Cd.Fragment, {
+          children: Rd
         }),
-        children: Qr
+        children: md
       })
     }
 
-    function NS(rr) {
+    function HO(dd) {
       let {
-        pack: Sr,
-        ownedPacks: Qr,
-        showStoreLink: Zr = !1,
-        children: Wr
-      } = rr;
+        pack: Od,
+        ownedPacks: md,
+        showStoreLink: Wd = !1,
+        children: Fd
+      } = dd;
       const {
-        t: ar
-      } = (0, Ur.E)(), jr = Rr.b[Sr].purchasable && !Qr.includes(Sr) && Rr.s.includes(Sr), Ir = Cr.i[Sr];
-      return (0, or.jsxs)("div", {
-        className: pr()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: jr
+        t: Rd
+      } = (0, qd.G)(), Xd = rd.c[Od].purchasable && !md.includes(Od) && rd.r.includes(Od), Kd = nd.n[Od];
+      return (0, Cd.jsxs)("div", {
+        className: Qd()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: Xd
         }),
-        children: [Ir && (0, or.jsx)(Ir, {}), (0, or.jsxs)("div", {
+        children: [Kd && (0, Cd.jsx)(Kd, {}), (0, Cd.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, or.jsx)("span", {
+          children: [(0, Cd.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: (0, aS.j)(Sr)
-          }), (jr || Zr) && (0, or.jsxs)(yr.F, {
+            children: (0, KO.i)(Od)
+          }), (Xd || Wd) && (0, Cd.jsxs)(wd.C, {
             onClick: () => {
-              jr ? (0, Cr.g)(Sr) : (0, Br.o)({
+              Xd ? (0, nd.j)(Od) : (0, Ed.p)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, or.jsx)(kr.c, {
+            children: [(0, Cd.jsx)(zd.c, {
               name: "store"
-            }), " ", ar("general:viewInShop")]
+            }), " ", Rd("general:viewInShop")]
           })]
-        }), jr && "bee" === Sr && (0, or.jsx)(Cr.b, {}), Wr]
+        }), Xd && "bee" === Od && (0, Cd.jsx)(nd.c, {}), Fd]
       })
     }
 
-    function US(rr) {
+    function yO(dd) {
       let {
-        equippedEmoteIds: Sr,
-        ownedPacks: Qr,
-        canBuy: Zr,
-        onUpdateLoadout: Wr,
-        onEmoteSelected: ar,
-        onEquipPreviewSkin: jr
-      } = rr;
+        equippedEmoteIds: Od,
+        ownedPacks: md,
+        canBuy: Wd,
+        onUpdateLoadout: Fd,
+        onEmoteSelected: Rd,
+        onEquipPreviewSkin: Xd
+      } = dd;
       const {
-        t: Ir
-      } = (0, Ur.E)(), fr = new Set(Sr), Er = new Map, mr = Object.keys(tr.f.emote).sort(((rr, Sr) => {
-        var Qr, Zr, Wr, ar;
-        return (null !== (Qr = null === (Zr = (0, tr.k)("emote", rr)) || void 0 === Zr ? void 0 : Zr.clientIdx) && void 0 !== Qr ? Qr : 0) - (null !== (Wr = null === (ar = (0, tr.k)("emote", Sr)) || void 0 === ar ? void 0 : ar.clientIdx) && void 0 !== Wr ? Wr : 0)
-      })).filter((rr => {
-        const Sr = (0, tr.m)("emote", rr),
-          Wr = (0, gr.E)("emote", rr, Qr);
-        return !(Sr.purchasable && !Wr && !Zr) && (Sr.clientSelectable || Wr)
+        t: Kd
+      } = (0, qd.G)(), hd = new Set(Od), vd = new Map, od = Object.keys(Hd.f.emote).sort(((dd, Od) => {
+        var md, Wd, Fd, Rd;
+        return (null !== (md = null === (Wd = (0, Hd.i)("emote", dd)) || void 0 === Wd ? void 0 : Wd.clientIdx) && void 0 !== md ? md : 0) - (null !== (Fd = null === (Rd = (0, Hd.i)("emote", Od)) || void 0 === Rd ? void 0 : Rd.clientIdx) && void 0 !== Fd ? Fd : 0)
+      })).filter((dd => {
+        const Od = (0, Hd.m)("emote", dd),
+          Fd = (0, Gd.G)("emote", dd, md);
+        return !(Od.purchasable && !Fd && !Wd) && (Od.clientSelectable || Fd)
       }));
-      for (const pr of mr) {
-        const rr = (0, tr.k)("emote", pr).cosmeticPack;
-        Er.has(rr) || Er.set(rr, []), Er.get(rr).push(pr)
+      for (const Qd of od) {
+        const dd = (0, Hd.i)("emote", Qd).cosmeticPack;
+        vd.has(dd) || vd.set(dd, []), vd.get(dd).push(Qd)
       }
-      const Nr = Array.from(Er.keys());
-      return (0, or.jsxs)("div", {
+      const Nd = Array.from(vd.keys());
+      return (0, Cd.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, or.jsxs)("div", {
+        children: [!1, (0, Cd.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, or.jsx)("span", {
+          children: [(0, Cd.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: Ir("emotes:equippedCount", {
-              count: Sr.length,
-              max: xr.q
+            children: Kd("emotes:equippedCount", {
+              count: Od.length,
+              max: td.k
             })
-          }), (0, or.jsx)("span", {
+          }), (0, Cd.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: Ir("emotes:loadoutHint")
+            children: Kd("emotes:loadoutHint")
           })]
-        }), Nr.map((rr => {
-          const Zr = Er.get(rr);
-          return (0, or.jsx)(NS, {
-            pack: rr,
-            ownedPacks: Qr,
-            children: (0, or.jsx)("div", {
+        }), Nd.map((dd => {
+          const Wd = vd.get(dd);
+          return (0, Cd.jsx)(HO, {
+            pack: dd,
+            ownedPacks: md,
+            children: (0, Cd.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: Zr.map((rr => {
-                var Zr;
-                const jr = Sr.indexOf(rr),
-                  Er = -1 !== jr,
-                  mr = Sr.length >= xr.q,
-                  Nr = rS("emote", rr, Qr),
-                  Ur = Nr || !Er && mr,
-                  tr = (0, nr.h)(rr);
-                return (0, or.jsxs)("div", {
-                  className: pr()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: Er
+              children: Wd.map((dd => {
+                var Wd;
+                const Xd = Od.indexOf(dd),
+                  vd = -1 !== Xd,
+                  od = Od.length >= td.k,
+                  Nd = mO("emote", dd, md),
+                  qd = Nd || !vd && od,
+                  Hd = (0, pd.j)(dd);
+                return (0, Cd.jsxs)("div", {
+                  className: Qd()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: vd
                   }),
                   onClick: () => {
-                    ar(rr)
+                    Rd(dd)
                   },
-                  children: [(0, or.jsxs)("div", {
+                  children: [(0, Cd.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, or.jsx)("div", {
+                    children: [(0, Cd.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(${(0,Vr.d)("emote",rr)})`
+                        backgroundImage: `url(${(0,jd.h)("emote",dd)})`
                       },
                       "aria-hidden": !0
-                    }), (0, or.jsx)("span", {
+                    }), (0, Cd.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (Zr = null === tr || void 0 === tr ? void 0 : tr.displayName) && void 0 !== Zr ? Zr : rr
+                      children: null !== (Wd = null === Hd || void 0 === Hd ? void 0 : Hd.displayName) && void 0 !== Wd ? Wd : dd
                     })]
-                  }), (0, or.jsxs)("div", {
+                  }), (0, Cd.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [Er && (0, or.jsx)("span", {
+                    children: [vd && (0, Cd.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: jr + 1
-                    }), Nr && (0, or.jsx)(kr.c, {
+                      children: Xd + 1
+                    }), Nd && (0, Cd.jsx)(zd.c, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, or.jsx)(wr.f, {
-                      tooltipInner: (0, or.jsx)(or.Fragment, {
-                        children: Ir(Er ? "general:remove" : "general:add")
+                    }), (0, Cd.jsx)(ed.g, {
+                      tooltipInner: (0, Cd.jsx)(Cd.Fragment, {
+                        children: Kd(vd ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, or.jsx)("div", {
-                        className: pr()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: Ur,
-                          EmoteCustomPartToggleEquipped: Er
+                      children: (0, Cd.jsx)("div", {
+                        className: Qd()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: qd,
+                          EmoteCustomPartToggleEquipped: vd
                         }),
-                        onClick: Qr => {
-                          Qr.stopPropagation(), Ur || function(rr) {
-                            fr.has(rr) ? Wr(Sr.filter((Sr => Sr !== rr))) : Sr.length >= xr.q || Wr([...Sr, rr])
-                          }(rr)
+                        onClick: md => {
+                          md.stopPropagation(), qd || function(dd) {
+                            hd.has(dd) ? Fd(Od.filter((Od => Od !== dd))) : Od.length >= td.k || Fd([...Od, dd])
+                          }(dd)
                         },
-                        children: (0, or.jsx)(kr.c, {
-                          name: Er ? "minus" : "plus",
+                        children: (0, Cd.jsx)(zd.c, {
+                          name: vd ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, rr)
+                }, dd)
               }))
             })
-          }, rr)
+          }, dd)
         }))]
       })
     }
-    const tS = (0, Zr.memo)((function(rr) {
-      var Sr, Qr;
+    const bO = (0, Wd.memo)((function(dd) {
+      var Od, md;
       let {
-        selectedTab: Er
-      } = rr;
-      const nr = "characters" === Er ? "skin" : Er,
+        selectedTab: vd
+      } = dd;
+      const pd = "characters" === vd ? "skin" : vd,
         {
-          t: Br
-        } = (0, Ur.E)(),
+          t: Ed
+        } = (0, qd.G)(),
         {
-          userContext: Or,
-          isUserContextUpdating: Lr
-        } = (0, Ir.c)(),
-        lr = (0, Wr.e)(),
+          userContext: xd,
+          isUserContextUpdating: Bd
+        } = (0, Kd.d)(),
+        Sd = (0, Fd.d)(),
         {
-          gameState: Xr
-        } = (0, vr.n)(["gameState"]),
-        [Pr, Cr] = (0, Zr.useState)({}),
-        Vr = (0, Zr.useRef)(Pr);
-      Vr.current = Pr;
-      const [wr, cr] = (0, Zr.useState)({}), [Dr, ZS] = (0, Zr.useState)(null), {
-        previewEmote: aS,
-        triggerEmote: jS
-      } = (0, er.d)(), fS = (0, Zr.useRef)(xr.A.reduce(((rr, Sr) => (rr[Sr] = (0, zr.b)(Sr), rr)), {})), ES = (0, Zr.useRef)(!1), mS = (0, Zr.useRef)(null), tS = (0, Zr.useRef)(aS);
-      tS.current = aS;
-      const hS = (0, Zr.useRef)(null),
-        zS = (0, Zr.useRef)(null);
+          gameState: sd
+        } = (0, Ud.p)(["gameState"]),
+        [ud, nd] = (0, Wd.useState)({}),
+        jd = (0, Wd.useRef)(ud);
+      jd.current = ud;
+      const [ed, Id] = (0, Wd.useState)({}), [fd, RO] = (0, Wd.useState)(null), {
+        previewEmote: KO,
+        triggerEmote: hO
+      } = (0, Yd.b)(), QO = (0, Wd.useRef)(td.s.reduce(((dd, Od) => (dd[Od] = (0, bd.b)(Od), dd)), {})), tO = (0, Wd.useRef)(!1), qO = (0, Wd.useRef)(null), bO = (0, Wd.useRef)(KO);
+      bO.current = KO;
+      const TO = (0, Wd.useRef)(null),
+        pO = (0, Wd.useRef)(null);
 
-      function YS() {
-        null !== hS.current && (clearTimeout(hS.current), hS.current = null);
-        const rr = zS.current;
-        null !== rr && (zS.current = null, (0, ur.b)(Or, [
-          ["emote", rr]
+      function YO() {
+        null !== TO.current && (clearTimeout(TO.current), TO.current = null);
+        const dd = pO.current;
+        null !== dd && (pO.current = null, (0, OO.d)(xd, [
+          ["emote", dd]
         ]))
       }
 
-      function nS(rr, Sr, Qr) {
-        var Zr, Wr, ar;
-        fS.current = {
-          ...fS.current,
-          [rr]: Sr
-        }, lr(), Qr && ((0, ur.b)(Or, [
-          [rr, Sr]
-        ]), ZS(null));
-        const jr = (0, tr.k)(rr, Sr);
-        if (null !== jr && void 0 !== jr && jr.colourGroup && null !== (Zr = Rr.b[jr.cosmeticPack].colourGroups) && void 0 !== Zr && null !== (Wr = Zr[jr.colourGroup]) && void 0 !== Wr && Wr.showSwatchSelector) {
-          const Qr = (0, tr.g)(Sr);
-          Qr && cr((Sr => ({
-            ...Sr,
-            [`${jr.cosmeticPack}_${rr}_${jr.colourGroup}`]: parseInt(Qr[1])
+      function gO(dd, Od, md) {
+        var Wd, Fd, Rd;
+        QO.current = {
+          ...QO.current,
+          [dd]: Od
+        }, Sd(), md && ((0, OO.d)(xd, [
+          [dd, Od]
+        ]), RO(null));
+        const Xd = (0, Hd.i)(dd, Od);
+        if (null !== Xd && void 0 !== Xd && Xd.colourGroup && null !== (Wd = rd.c[Xd.cosmeticPack].colourGroups) && void 0 !== Wd && null !== (Fd = Wd[Xd.colourGroup]) && void 0 !== Fd && Fd.showSwatchSelector) {
+          const md = (0, Hd.h)(Od);
+          md && Id((Od => ({
+            ...Od,
+            [`${Xd.cosmeticPack}_${dd}_${Xd.colourGroup}`]: parseInt(md[1])
           })))
         }
-        null !== (ar = mS.current) && void 0 !== ar && ar.isReady() && mS.current.updateCosmetic(rr, Sr)
+        null !== (Rd = qO.current) && void 0 !== Rd && Rd.isReady() && qO.current.updateCosmetic(dd, Od)
       }
 
-      function eS(rr) {
-        Cr((Sr => {
-          const Qr = {
-            ...Sr
+      function wO(dd) {
+        nd((Od => {
+          const md = {
+            ...Od
           };
-          return delete Qr[rr], Qr
+          return delete md[dd], md
         }))
       }
 
-      function KS(rr, Sr) {
+      function aO(dd, Od) {
         let {
-          undoable: Qr
-        } = Sr;
-        Object.keys(Pr).length > 0 && Cr({});
-        const Zr = function(rr, Sr, Qr, Zr) {
-          return Object.entries(rr).filter((rr => {
-            let [Wr, ar] = rr;
-            return Sr[Wr] !== ar && !rS(Wr, ar, Qr) && !Zr(Wr, ar)
+          undoable: md
+        } = Od;
+        Object.keys(ud).length > 0 && nd({});
+        const Wd = function(dd, Od, md, Wd) {
+          return Object.entries(dd).filter((dd => {
+            let [Fd, Rd] = dd;
+            return Od[Fd] !== Rd && !mO(Fd, Rd, md) && !Wd(Fd, Rd)
           }))
-        }(rr, fS.current, yS, ((rr, Sr) => pS(BS, rr, Sr)));
-        Qr ? Zr.length > 0 && ZS({
+        }(dd, QO.current, EO, ((dd, Od) => oO(JO, dd, Od)));
+        md ? Wd.length > 0 && RO({
           kind: "worn",
-          outfit: (0, Yr.g)(fS.current)
-        }) : ZS(null);
-        for (const [Wr, ar] of Zr) nS(Wr, ar, !1);
-        Zr.length > 0 && (0, ur.b)(Or, Zr)
-      }(0, Kr.d)("cosmeticsUpdated", (rr => {
-        let Sr = !1;
+          outfit: (0, Td.g)(QO.current)
+        }) : RO(null);
+        for (const [Fd, Rd] of Wd) gO(Fd, Rd, !1);
+        Wd.length > 0 && (0, OO.d)(xd, Wd)
+      }(0, gd.b)("cosmeticsUpdated", (dd => {
+        let Od = !1;
         for (const {
-            local: Qr,
-            fW: Zr,
-            EW: Wr
+            local: md,
+            KF: Wd,
+            hF: Fd
           }
-          of rr) {
-          if (!Qr) return;
-          Sr = !0, ES.current || nS(Zr, Wr, !1), lr()
+          of dd) {
+          if (!md) return;
+          Od = !0, tO.current || gO(Wd, Fd, !1), Sd()
         }
-        Sr && (ES.current = !0)
-      })), (0, Zr.useEffect)((() => {
-        if (!Lr) {
-          for (const [rr, Sr] of Object.entries(Or.getPlayerCosmetics())) nS(rr, Sr, !1);
-          lr()
+        Od && (tO.current = !0)
+      })), (0, Wd.useEffect)((() => {
+        if (!Bd) {
+          for (const [dd, Od] of Object.entries(xd.getPlayerCosmetics())) gO(dd, Od, !1);
+          Sd()
         }
-      }), [Lr]), (0, Zr.useEffect)((() => () => {
-        YS()
+      }), [Bd]), (0, Wd.useEffect)((() => () => {
+        YO()
       }), []);
-      const yS = Or.getOwnedCosmeticPacks(),
-        BS = function(rr, Sr) {
-          return null === rr ? null : {
-            collected: new Set(rr.collected),
-            ownedPacks: Sr
+      const EO = xd.getOwnedCosmeticPacks(),
+        JO = function(dd, Od) {
+          return null === dd ? null : {
+            collected: new Set(dd.collected),
+            ownedPacks: Od
           }
-        }(Or.dailyDrop, yS),
-        TS = (0, Ar.usePurchasesAllowed)(),
-        vS = Or.getPlayerRanks(),
-        OS = Or === fr.NULL_USER_CONTEXT ? "" : Or.getPlayerName(),
-        LS = null !== (Sr = null !== (Qr = Pr.nameColour) && void 0 !== Qr ? Qr : Or.getPlayerCosmetics().nameColour) && void 0 !== Sr ? Sr : mr.e,
-        lS = (0, Zr.useMemo)((() => ({
-          name: OS,
-          ranks: vS,
-          nameColour: LS
-        })), [OS, vS, LS]),
-        XS = Object.keys(tr.f[nr]).filter((rr => {
-          const Sr = (0, tr.m)(nr, rr),
-            Qr = (0, gr.E)(nr, rr, yS);
-          return !(Sr.purchasable && !Qr && !TS) && (Sr.clientSelectable || Qr)
-        })).sort(((rr, Sr) => {
-          var Qr, Zr, Wr, ar;
-          return (null !== (Qr = null === (Zr = (0, tr.k)(nr, rr)) || void 0 === Zr ? void 0 : Zr.clientIdx) && void 0 !== Qr ? Qr : 0) - (null !== (Wr = null === (ar = (0, tr.k)(nr, Sr)) || void 0 === ar ? void 0 : ar.clientIdx) && void 0 !== Wr ? Wr : 0)
+        }(xd.dailyDrop, EO),
+        UO = (0, cd.usePurchasesAllowed)(),
+        xO = xd.getPlayerRanks(),
+        BO = xd === hd.NULL_USER_CONTEXT ? "" : xd.getPlayerName(),
+        SO = null !== (Od = null !== (md = ud.nameColour) && void 0 !== md ? md : xd.getPlayerCosmetics().nameColour) && void 0 !== Od ? Od : od.b,
+        sO = (0, Wd.useMemo)((() => ({
+          name: BO,
+          ranks: xO,
+          nameColour: SO
+        })), [BO, xO, SO]),
+        uO = Object.keys(Hd.f[pd]).filter((dd => {
+          const Od = (0, Hd.m)(pd, dd),
+            md = (0, Gd.G)(pd, dd, EO);
+          return !(Od.purchasable && !md && !UO) && (Od.clientSelectable || md)
+        })).sort(((dd, Od) => {
+          var md, Wd, Fd, Rd;
+          return (null !== (md = null === (Wd = (0, Hd.i)(pd, dd)) || void 0 === Wd ? void 0 : Wd.clientIdx) && void 0 !== md ? md : 0) - (null !== (Fd = null === (Rd = (0, Hd.i)(pd, Od)) || void 0 === Rd ? void 0 : Rd.clientIdx) && void 0 !== Fd ? Fd : 0)
         })),
-        PS = new Map;
-      for (const Zr of XS) {
-        var HS;
-        const rr = null === (HS = (0, tr.k)(nr, Zr)) || void 0 === HS ? void 0 : HS.cosmeticPack;
-        PS.has(rr) || PS.set(rr, []), PS.get(rr).push(Zr)
+        VO = new Map;
+      for (const Wd of uO) {
+        var iO;
+        const dd = null === (iO = (0, Hd.i)(pd, Wd)) || void 0 === iO ? void 0 : iO.cosmeticPack;
+        VO.has(dd) || VO.set(dd, []), VO.get(dd).push(Wd)
       }
-      const qS = function(rr, Sr) {
-          const Qr = new Set,
-            Zr = new Set;
-          for (const [Wr, ar] of Object.entries(tr.f[rr])) {
-            if (void 0 === ar.colourGroup) continue;
-            const jr = `${ar.cosmeticPack}_${ar.colourGroup}`;
-            (rS(rr, Wr, Sr) ? Zr : Qr).add(jr)
+      const AO = function(dd, Od) {
+          const md = new Set,
+            Wd = new Set;
+          for (const [Fd, Rd] of Object.entries(Hd.f[dd])) {
+            if (void 0 === Rd.colourGroup) continue;
+            const Xd = `${Rd.cosmeticPack}_${Rd.colourGroup}`;
+            (mO(dd, Fd, Od) ? Wd : md).add(Xd)
           }
-          return new Set([...Qr].filter((rr => Zr.has(rr))))
-        }(nr, yS),
-        RS = new Map;
-      for (const [Zr, Wr] of PS) {
-        const rr = [],
-          Sr = new Map;
-        for (const Zr of Wr) {
-          var gS, CS;
-          const Qr = null !== (gS = null === (CS = (0, tr.k)(nr, Zr)) || void 0 === CS ? void 0 : CS.colourGroup) && void 0 !== gS ? gS : null;
-          Sr.has(Qr) || (Sr.set(Qr, []), rr.push(Qr)), Sr.get(Qr).push(Zr)
+          return new Set([...md].filter((dd => Wd.has(dd))))
+        }(pd, EO),
+        rO = new Map;
+      for (const [Wd, Fd] of VO) {
+        const dd = [],
+          Od = new Map;
+        for (const Wd of Fd) {
+          var GO, nO;
+          const md = null !== (GO = null === (nO = (0, Hd.i)(pd, Wd)) || void 0 === nO ? void 0 : nO.colourGroup) && void 0 !== GO ? GO : null;
+          Od.has(md) || (Od.set(md, []), dd.push(md)), Od.get(md).push(Wd)
         }
-        const Qr = rr.map((rr => {
-          var Qr;
-          const Wr = Sr.get(rr),
-            ar = rr ? null === (Qr = Rr.b[Zr].colourGroups) || void 0 === Qr ? void 0 : Qr[rr] : void 0,
-            jr = !0 === (null === ar || void 0 === ar ? void 0 : ar.showSwatchSelector) && !qS.has(`${Zr}_${rr}`);
-          if (jr && ar) {
-            var Ir;
-            const Sr = null !== (Ir = wr[`${Zr}_${nr}_${rr}`]) && void 0 !== Ir ? Ir : (0, Rr.e)(ar.colours);
+        const md = dd.map((dd => {
+          var md;
+          const Fd = Od.get(dd),
+            Rd = dd ? null === (md = rd.c[Wd].colourGroups) || void 0 === md ? void 0 : md[dd] : void 0,
+            Xd = !0 === (null === Rd || void 0 === Rd ? void 0 : Rd.showSwatchSelector) && !AO.has(`${Wd}_${dd}`);
+          if (Xd && Rd) {
+            var Kd;
+            const Od = null !== (Kd = ed[`${Wd}_${pd}_${dd}`]) && void 0 !== Kd ? Kd : (0, rd.f)(Rd.colours);
             return {
-              groupName: rr,
-              showSwatch: jr,
-              cosmetics: Wr.filter((rr => {
-                const Qr = (0, tr.g)(rr);
-                return !Qr || Sr.toString() === Qr[1].toString()
+              groupName: dd,
+              showSwatch: Xd,
+              cosmetics: Fd.filter((dd => {
+                const md = (0, Hd.h)(dd);
+                return !md || Od.toString() === md[1].toString()
               }))
             }
           }
           return {
-            groupName: rr,
-            cosmetics: Wr,
-            showSwatch: jr
+            groupName: dd,
+            cosmetics: Fd,
+            showSwatch: Xd
           }
         }));
-        RS.set(Zr, Qr)
+        rO.set(Wd, md)
       }
-      const MS = Array.from(PS.keys()),
-        GS = new Map;
-      for (const [Zr, Wr] of Object.entries(hr.e)) {
-        const rr = Rr.b[Wr.cosmeticPack],
-          Sr = (0, gr.C)(Wr.cosmetics, yS),
-          Qr = void 0 !== QS(Zr);
-        (rr.clientSelectable || Qr || Sr) && ((!rr.purchasable || Sr || TS) && (GS.has(Wr.cosmeticPack) || GS.set(Wr.cosmeticPack, []), GS.get(Wr.cosmeticPack).push([Zr, Wr])))
+      const LO = Array.from(VO.keys()),
+        PO = new Map;
+      for (const [Wd, Fd] of Object.entries(yd.b)) {
+        const dd = rd.c[Fd.cosmeticPack],
+          Od = (0, Gd.C)(Fd.cosmetics, EO),
+          md = void 0 !== FO(Wd);
+        (dd.clientSelectable || md || Od) && ((!dd.purchasable || Od || UO) && (PO.has(Fd.cosmeticPack) || PO.set(Fd.cosmeticPack, []), PO.get(Fd.cosmeticPack).push([Wd, Fd])))
       }
-      const kS = Array.from(GS.keys()),
-        AS = TS ? WS(Er, Pr, yS) : [],
-        [VS, iS] = (0, Zr.useState)(!1);
-      return !VS && (AS.length > 0 || null !== Dr) && iS(!0), (0, or.jsxs)("div", {
+      const zO = Array.from(PO.keys()),
+        cO = UO ? XO(vd, ud, EO) : [],
+        [jO, DO] = (0, Wd.useState)(!1);
+      return !jO && (cO.length > 0 || null !== fd) && DO(!0), (0, Cd.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === nr || "nameColour" === nr) && !(0, Nr.c)(vS) && (0, or.jsxs)("div", {
+        children: [("cape" === pd || "nameColour" === pd) && !(0, Nd.b)(xO) && (0, Cd.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, or.jsx)(kr.c, {
+          children: [(0, Cd.jsx)(zd.c, {
             name: "bolt"
-          }), Br((0, Tr.r)(Date.now()).unlockWithKey), TS && (0, or.jsx)(yr.p, {
+          }), Ed((0, Jd.v)(Date.now()).unlockWithKey), UO && (0, Cd.jsx)(wd.m, {
             onClick: () => {
-              dr()
+              Md()
             },
-            children: Br("general:getItNow")
+            children: Ed("general:getItNow")
           })]
-        }), (0, or.jsxs)("div", {
+        }), (0, Cd.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === Er && (0, or.jsxs)("div", {
+          children: ["characters" === vd && (0, Cd.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, (0, or.jsx)(br, {
-              wornOutfit: (0, Yr.g)(fS.current),
-              onApply: rr => {
-                KS(rr, {
+            children: [!1, (0, Cd.jsx)(Zd, {
+              wornOutfit: (0, Td.g)(QO.current),
+              onApply: dd => {
+                aO(dd, {
                   undoable: !0
                 })
               },
-              onOverwrite: (rr, Sr) => {
-                ZS({
+              onOverwrite: (dd, Od) => {
+                RO({
                   kind: "slot",
-                  slot: rr,
-                  outfit: Sr
+                  slot: dd,
+                  outfit: Od
                 })
               },
-              onDelete: rr => {
-                ZS((Sr => "slot" === (null === Sr || void 0 === Sr ? void 0 : Sr.kind) && Sr.slot === rr ? null : Sr))
+              onDelete: dd => {
+                RO((Od => "slot" === (null === Od || void 0 === Od ? void 0 : Od.kind) && Od.slot === dd ? null : Od))
               }
-            }), kS.map((rr => {
-              const Sr = GS.get(rr);
-              return (0, or.jsx)(NS, {
-                pack: rr,
-                ownedPacks: yS,
-                showStoreLink: !Rr.o.includes(rr) && Sr.some((rr => {
+            }), zO.map((dd => {
+              const Od = PO.get(dd);
+              return (0, Cd.jsx)(HO, {
+                pack: dd,
+                ownedPacks: EO,
+                showStoreLink: !rd.p.includes(dd) && Od.some((dd => {
                   let [, {
-                    cosmetics: Sr
-                  }] = rr;
-                  return SS(Sr, yS)
+                    cosmetics: Od
+                  }] = dd;
+                  return WO(Od, EO)
                 })),
-                children: (0, or.jsx)("div", {
+                children: (0, Cd.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: Sr.map((rr => {
-                    let [Sr, {
-                      cosmetics: Qr
-                    }] = rr;
-                    const Zr = SS(Qr, yS),
-                      Wr = !Zr && function(rr, Sr) {
-                        return Object.entries(Sr).some((Sr => {
-                          let [Qr, Zr] = Sr;
-                          return pS(rr, Qr, Zr)
+                  children: Od.map((dd => {
+                    let [Od, {
+                      cosmetics: md
+                    }] = dd;
+                    const Wd = WO(md, EO),
+                      Fd = !Wd && function(dd, Od) {
+                        return Object.entries(Od).some((Od => {
+                          let [md, Wd] = Od;
+                          return oO(dd, md, Wd)
                         }))
-                      }(BS, Qr),
-                      ar = Zr || Wr,
-                      jr = (0, Yr.e)(Qr, Pr),
-                      Ir = !jr && (0, Yr.e)(Qr, fS.current);
-                    return (0, or.jsx)(xS, {
-                      locked: Wr,
-                      children: (0, or.jsxs)("div", {
+                      }(JO, md),
+                      Rd = Wd || Fd,
+                      Xd = (0, Td.b)(md, ud),
+                      Kd = !Xd && (0, Td.b)(md, QO.current);
+                    return (0, Cd.jsx)(NO, {
+                      locked: Fd,
+                      children: (0, Cd.jsxs)("div", {
                         "data-pad-focusable": !0,
-                        className: pr()("CharacterPresetCard", {
-                          CharacterPresetCardActive: Ir,
-                          CharacterPresetCardTryingOn: jr
+                        className: Qd()("CharacterPresetCard", {
+                          CharacterPresetCardActive: Kd,
+                          CharacterPresetCardTryingOn: Xd
                         }),
                         onClick: () => {
-                          ar ? function(rr) {
-                            (0, Yr.e)(rr, Pr) ? Cr({}): Cr({
-                              ...rr
+                          Rd ? function(dd) {
+                            (0, Td.b)(dd, ud) ? nd({}): nd({
+                              ...dd
                             })
-                          }(Qr) : KS(Qr, {
+                          }(md) : aO(md, {
                             undoable: !0
                           })
                         },
-                        children: [(0, or.jsx)("div", {
+                        children: [(0, Cd.jsx)("div", {
                           className: "CharacterPresetCardPreview",
                           style: {
-                            backgroundImage: `url(${(0,Gr.g)(Sr)})`
+                            backgroundImage: `url(${(0,Pd.g)(Od)})`
                           }
-                        }), ar && (0, or.jsx)(kr.c, {
+                        }), Rd && (0, Cd.jsx)(zd.c, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
                       })
-                    }, Sr)
+                    }, Od)
                   }))
                 })
-              }, rr)
+              }, dd)
             }))]
-          }), "emote" === Er && (0, or.jsx)(US, {
-            equippedEmoteIds: (0, zr.i)(fS.current.emote),
-            ownedPacks: yS,
-            canBuy: TS,
-            onUpdateLoadout: rr => {
-              const Sr = (0, zr.l)(rr);
-              var Qr;
-              fS.current = {
-                ...fS.current,
-                emote: Sr
-              }, Or.setPlayerCosmetics("emote", Sr), lr(), Qr = Sr, zS.current = Qr, null !== hS.current && clearTimeout(hS.current), hS.current = setTimeout(YS, 350)
+          }), "emote" === vd && (0, Cd.jsx)(yO, {
+            equippedEmoteIds: (0, bd.h)(QO.current.emote),
+            ownedPacks: EO,
+            canBuy: UO,
+            onUpdateLoadout: dd => {
+              const Od = (0, bd.k)(dd);
+              var md;
+              QO.current = {
+                ...QO.current,
+                emote: Od
+              }, xd.setPlayerCosmetics("emote", Od), Sd(), md = Od, pO.current = md, null !== TO.current && clearTimeout(TO.current), TO.current = setTimeout(YO, 350)
             },
-            onEmoteSelected: jS,
+            onEmoteSelected: hO,
             onEquipPreviewSkin: () => {
-              ! function(rr, Sr) {
-                for (const Qr of xr.A)(0, hr.h)(Qr) && rr(Qr, "skin" === Qr ? "skin_preview" : `${Qr}_none`, !1);
-                Sr()
-              }(nS, lr)
+              ! function(dd, Od) {
+                for (const md of td.s)(0, yd.e)(md) && dd(md, "skin" === md ? "skin_preview" : `${md}_none`, !1);
+                Od()
+              }(gO, Sd)
             }
-          }), "characters" !== Er && "emote" !== Er && (0, or.jsxs)("div", {
+          }), "characters" !== vd && "emote" !== vd && (0, Cd.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, MS.map((rr => {
-              const Sr = RS.get(rr);
-              return (0, or.jsx)(NS, {
-                pack: rr,
-                ownedPacks: yS,
-                children: Sr.map((Sr => {
-                  var Qr;
+            children: [!1, LO.map((dd => {
+              const Od = rO.get(dd);
+              return (0, Cd.jsx)(HO, {
+                pack: dd,
+                ownedPacks: EO,
+                children: Od.map((Od => {
+                  var md;
                   let {
-                    groupName: Zr,
-                    cosmetics: Wr,
-                    showSwatch: ar
-                  } = Sr;
-                  const jr = Zr ? null === (Qr = Rr.b[rr].colourGroups) || void 0 === Qr ? void 0 : Qr[Zr] : void 0,
-                    Ir = `${rr}_${nr}_${Zr}`;
-                  return (0, or.jsxs)("div", {
+                    groupName: Wd,
+                    cosmetics: Fd,
+                    showSwatch: Rd
+                  } = Od;
+                  const Xd = Wd ? null === (md = rd.c[dd].colourGroups) || void 0 === md ? void 0 : md[Wd] : void 0,
+                    Kd = `${dd}_${pd}_${Wd}`;
+                  return (0, Cd.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [ar && jr && (0, or.jsx)("div", {
+                    children: [Rd && Xd && (0, Cd.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...jr.colours.map(((rr, Sr) => ({
-                        color: rr,
-                        index: Sr
-                      })))].sort(((rr, Sr) => rr.color.order - Sr.color.order)).map((Sr => {
-                        var Qr;
+                      children: [...Xd.colours.map(((dd, Od) => ({
+                        color: dd,
+                        index: Od
+                      })))].sort(((dd, Od) => dd.color.order - Od.color.order)).map((Od => {
+                        var md;
                         let {
-                          color: Wr,
-                          index: ar
-                        } = Sr;
-                        return (0, or.jsx)("div", {
-                          className: pr()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (Qr = wr[Ir]) && void 0 !== Qr ? Qr : (0, Rr.e)(jr.colours)) === ar
+                          color: Fd,
+                          index: Rd
+                        } = Od;
+                        return (0, Cd.jsx)("div", {
+                          className: Qd()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (md = ed[Kd]) && void 0 !== md ? md : (0, rd.f)(Xd.colours)) === Rd
                           }),
                           style: {
-                            backgroundColor: `rgb(${Wr.rbg.join(",")})`
+                            backgroundColor: `rgb(${Fd.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var Sr;
-                            cr((rr => ({
-                              ...rr,
-                              [Ir]: ar
+                            var Od;
+                            Id((dd => ({
+                              ...dd,
+                              [Kd]: Rd
                             })));
-                            const Qr = Pr[nr],
-                              Wr = Qr ? (0, tr.k)(nr, Qr) : null,
-                              jr = (null === Wr || void 0 === Wr ? void 0 : Wr.cosmeticPack) === rr,
-                              fr = jr ? Qr : fS.current[nr],
-                              Er = jr ? Wr : (0, tr.k)(nr, fr);
-                            if ((null === Er || void 0 === Er ? void 0 : Er.cosmeticPack) !== rr) return;
-                            if ((null !== (Sr = null === Er || void 0 === Er ? void 0 : Er.colourGroup) && void 0 !== Sr ? Sr : null) !== Zr) return;
-                            const pr = (0, tr.g)(fr);
-                            if (pr) {
-                              const rr = `${nr}_${pr[0]}_${ar}`;
-                              rS(nr, rr, yS) || pS(BS, nr, rr) ? Cr((Sr => ({
-                                ...Sr,
-                                [nr]: rr
-                              }))) : (jr && eS(nr), nS(nr, rr, !0))
+                            const md = ud[pd],
+                              Fd = md ? (0, Hd.i)(pd, md) : null,
+                              Xd = (null === Fd || void 0 === Fd ? void 0 : Fd.cosmeticPack) === dd,
+                              hd = Xd ? md : QO.current[pd],
+                              vd = Xd ? Fd : (0, Hd.i)(pd, hd);
+                            if ((null === vd || void 0 === vd ? void 0 : vd.cosmeticPack) !== dd) return;
+                            if ((null !== (Od = null === vd || void 0 === vd ? void 0 : vd.colourGroup) && void 0 !== Od ? Od : null) !== Wd) return;
+                            const Qd = (0, Hd.h)(hd);
+                            if (Qd) {
+                              const dd = `${pd}_${Qd[0]}_${Rd}`;
+                              mO(pd, dd, EO) || oO(JO, pd, dd) ? nd((Od => ({
+                                ...Od,
+                                [pd]: dd
+                              }))) : (Xd && wO(pd), gO(pd, dd, !0))
                             }
                           }
-                        }, Wr.rbg.join())
+                        }, Fd.rbg.join())
                       }))
-                    }), Wr.map((rr => {
-                      const Sr = rr === fS.current[nr],
-                        Qr = Pr[nr] === rr,
-                        Zr = rS(nr, rr, yS),
-                        Wr = !Zr && pS(BS, nr, rr),
-                        ar = Zr || Wr,
-                        jr = ar || Sr ? [] : function(rr, Sr, Qr) {
-                          if ("cape" === rr) {
+                    }), Fd.map((dd => {
+                      const Od = dd === QO.current[pd],
+                        md = ud[pd] === dd,
+                        Wd = mO(pd, dd, EO),
+                        Fd = !Wd && oO(JO, pd, dd),
+                        Rd = Wd || Fd,
+                        Xd = Rd || Od ? [] : function(dd, Od, md) {
+                          if ("cape" === dd) {
                             const {
-                              needsSuperRankPerks: rr,
-                              rank: Zr
-                            } = mr.h[Sr];
-                            return [...rr && !(0, Nr.c)(Qr) ? [Nr.t.rank] : [], ...void 0 === Zr || Qr.includes(Zr) ? [] : [Zr]]
+                              needsSuperRankPerks: dd,
+                              rank: Wd
+                            } = od.i[Od];
+                            return [...dd && !(0, Nd.b)(md) ? [Nd.q.rank] : [], ...void 0 === Wd || md.includes(Wd) ? [] : [Wd]]
                           }
-                          return "nameColour" !== rr || (0, Jr.Ld)(Qr, Sr) ? [] : [Nr.t.rank]
-                        }(nr, rr, vS),
-                        Ir = 0 === jr.length;
-                      return (0, or.jsx)(xS, {
-                        locked: Wr,
-                        children: (0, or.jsxs)("div", {
+                          return "nameColour" !== dd || (0, kd.Rd)(md, Od) ? [] : [Nd.q.rank]
+                        }(pd, dd, xO),
+                        Kd = 0 === Xd.length;
+                      return (0, Cd.jsx)(NO, {
+                        locked: Fd,
+                        children: (0, Cd.jsxs)("div", {
                           "data-pad-focusable": !0,
-                          className: pr()("CharCustomPartWrapper", {
-                            SelectedCharCustomPartWrapper: Sr && !Qr,
-                            TryingOnCharCustomPartWrapper: Qr,
-                            DisabledCharCustomPartWrapper: !Ir,
-                            CharCustomPartWrapperProfileEffect: "profileEffect" === nr
+                          className: Qd()("CharCustomPartWrapper", {
+                            SelectedCharCustomPartWrapper: Od && !md,
+                            TryingOnCharCustomPartWrapper: md,
+                            DisabledCharCustomPartWrapper: !Kd,
+                            CharCustomPartWrapperProfileEffect: "profileEffect" === pd
                           }),
                           onClick: () => {
-                            if (!Ir) return Sr = {
-                              fW: nr,
-                              EW: rr,
-                              missingRanks: jr,
-                              playerRanks: vS,
-                              canBuy: TS
-                            }, void Fr.NotificationProvider.showCustomPopup({
-                              body: rr => (0, or.jsx)(sr, {
-                                ...Sr,
-                                closePopup: rr
+                            if (!Kd) return Od = {
+                              KF: pd,
+                              hF: dd,
+                              missingRanks: Xd,
+                              playerRanks: xO,
+                              canBuy: UO
+                            }, void ld.NotificationProvider.showCustomPopup({
+                              body: dd => (0, Cd.jsx)(dO, {
+                                ...Od,
+                                closePopup: dd
                               }),
                               disableExitButton: !0
                             });
-                            var Sr;
-                            if (ar) Cr((Sr => {
-                              if (Sr[nr] === rr) {
-                                const rr = {
-                                  ...Sr
+                            var Od;
+                            if (Rd) nd((Od => {
+                              if (Od[pd] === dd) {
+                                const dd = {
+                                  ...Od
                                 };
-                                return delete rr[nr], rr
+                                return delete dd[pd], dd
                               }
                               return {
-                                ...Sr,
-                                [nr]: rr
+                                ...Od,
+                                [pd]: dd
                               }
                             }));
                             else {
-                              var Qr;
-                              if (Pr[nr] && eS(nr), rr === fS.current[nr]) return;
-                              null !== (Qr = mS.current) && void 0 !== Qr && Qr.isReady() && nS(nr, rr, !0)
+                              var md;
+                              if (ud[pd] && wO(pd), dd === QO.current[pd]) return;
+                              null !== (md = qO.current) && void 0 !== md && md.isReady() && gO(pd, dd, !0)
                             }
                           },
-                          children: ["profileEffect" === nr ? (0, or.jsx)(Mr.c, {
-                            profileEffect: rr,
-                            name: Or.getPlayerName(),
-                            cosmetics: Or.getPlayerCosmetics()
-                          }) : (0, or.jsx)(ir.e, {
-                            fW: nr,
-                            EW: rr
-                          }), ar && (0, or.jsx)(kr.c, {
+                          children: ["profileEffect" === pd ? (0, Cd.jsx)(Ld.d, {
+                            profileEffect: dd,
+                            name: xd.getPlayerName(),
+                            cosmetics: xd.getPlayerCosmetics()
+                          }) : (0, Cd.jsx)(Dd.e, {
+                            KF: pd,
+                            hF: dd
+                          }), Rd && (0, Cd.jsx)(zd.c, {
                             name: "lock",
                             className: "LockedCosmeticIcon"
                           })]
                         })
-                      }, rr)
+                      }, dd)
                     }))]
-                  }, null !== Zr && void 0 !== Zr ? Zr : "ungrouped")
+                  }, null !== Wd && void 0 !== Wd ? Wd : "ungrouped")
                 }))
-              }, rr)
+              }, dd)
             }))]
-          }), (0, or.jsxs)("div", {
+          }), (0, Cd.jsxs)("div", {
             className: "CharCustomisationPreviewColumn",
-            children: [(0, or.jsx)(qr.CharacterPreview, {
-              ref: mS,
-              forcedCosmetics: Pr,
-              II: aS.id,
-              emotePlaySeq: aS.seq,
-              nametag: lS,
+            children: [(0, Cd.jsx)(Ad.CharacterPreview, {
+              ref: qO,
+              forcedCosmetics: ud,
+              hK: KO.id,
+              emotePlaySeq: KO.seq,
+              nametag: sO,
               onReady: () => {
-                for (const rr of xr.A) nS(rr, fS.current[rr], !1)
+                for (const dd of td.s) gO(dd, QO.current[dd], !1)
               },
-              onDrawn: rr => {
-                var Sr, Qr;
-                const Zr = null === (Sr = mS.current) || void 0 === Sr || null === (Qr = Sr.getDevTools()) || void 0 === Qr ? void 0 : Qr.canvas(),
-                  Wr = (rr, Sr) => 0 === Object.keys(Vr.current).length && JSON.stringify(Or.getPlayerCosmetics()) === rr && tS.current.seq === Sr.seq && null === tS.current.id,
-                  Ir = JSON.stringify(Or.getPlayerCosmetics()),
-                  fr = tS.current;
-                if (!ar.j || !rr || void 0 === Zr || !Wr(Ir, fr)) return;
-                const Er = (0, jr.h)(Or),
-                  pr = mS.current;
-                pr.setNametagShown(!1), (0, jr.d)(Zr, Er, (() => Wr(Ir, fr))).catch((rr => {
-                  console.warn("[loading-character] couldn't keep your picture from Customise", rr)
+              onDrawn: dd => {
+                var Od, md;
+                const Wd = null === (Od = qO.current) || void 0 === Od || null === (md = Od.getDevTools()) || void 0 === md ? void 0 : md.canvas(),
+                  Fd = (dd, Od) => 0 === Object.keys(jd.current).length && JSON.stringify(xd.getPlayerCosmetics()) === dd && bO.current.seq === Od.seq && null === bO.current.id,
+                  Kd = JSON.stringify(xd.getPlayerCosmetics()),
+                  hd = bO.current;
+                if (!Rd.i || !dd || void 0 === Wd || !Fd(Kd, hd)) return;
+                const vd = (0, Xd.g)(xd),
+                  Qd = qO.current;
+                Qd.setNametagShown(!1), (0, Xd.e)(Wd, vd, (() => Fd(Kd, hd))).catch((dd => {
+                  console.warn("[loading-character] couldn't keep your picture from Customise", dd)
                 })).finally((() => {
-                  pr.setNametagShown(!0)
+                  Qd.setNametagShown(!0)
                 }))
               }
-            }), VS && (0, or.jsxs)("div", {
+            }), jO && (0, Cd.jsxs)("div", {
               className: "CharCustomisationPreviewActions",
-              children: [AS.length > 0 && (0, or.jsx)(IS, {
-                gets: AS
-              }), Dr && (0, or.jsxs)(yr.h, {
+              children: [cO.length > 0 && (0, Cd.jsx)(vO, {
+                gets: cO
+              }), fd && (0, Cd.jsxs)(wd.g, {
                 className: "CharCustomisationUndo",
                 onClick: () => {
-                  "worn" === Dr.kind ? KS(Dr.outfit, {
+                  "worn" === fd.kind ? aO(fd.outfit, {
                     undoable: !1
-                  }) : (Hr.save(Dr.slot, Dr.outfit), ZS(null))
+                  }) : (Vd.save(fd.slot, fd.outfit), RO(null))
                 },
-                children: [(0, or.jsx)(kr.c, {
+                children: [(0, Cd.jsx)(zd.c, {
                   name: "rotate-left"
-                }), Br("general:undo")]
+                }), Ed("general:undo")]
               })]
             })]
           })]
@@ -1076,269 +1076,269 @@ export const modules = {
       })
     }))
   },
-  45289: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      CharacterPreview: () => Nr
+  45334: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      CharacterPreview: () => Nd
     });
-    var Zr = Qr(72),
-      Wr = Qr(3855),
-      ar = Qr(1287),
-      jr = Qr(3601),
-      Ir = Qr(35505),
-      fr = Qr(4876),
-      Er = Qr(1338);
-    let pr = null;
-    const xr = [],
-      mr = .6 * Math.PI,
-      Nr = (0, Zr.memo)((0, Zr.forwardRef)((function(rr, Sr) {
+    var Wd = md(66),
+      Fd = md(3851),
+      Rd = md(1300),
+      Xd = md(3597),
+      Kd = md(35582),
+      hd = md(4849),
+      vd = md(1341);
+    let Qd = null;
+    const td = [],
+      od = .6 * Math.PI,
+      Nd = (0, Wd.memo)((0, Wd.forwardRef)((function(dd, Od) {
         let {
-          onReady: Qr,
-          onDrawn: Nr,
-          onSetupFailed: Ur,
-          owner: tr = "other",
-          framing: hr = "player",
-          forcedCosmetics: zr,
-          II: Yr,
-          emotePlaySeq: nr,
-          turntableFromYaw: er = null,
-          nametag: Kr
-        } = rr;
-        const yr = (0, Zr.useRef)(null),
+          onReady: md,
+          onDrawn: Nd,
+          onSetupFailed: qd,
+          owner: Hd = "other",
+          framing: yd = "player",
+          forcedCosmetics: bd,
+          hK: Td,
+          emotePlaySeq: pd,
+          turntableFromYaw: Yd = null,
+          nametag: gd
+        } = dd;
+        const wd = (0, Wd.useRef)(null),
           {
-            width: Br,
-            height: Tr
-          } = (0, Wr.b)(yr),
-          vr = (0, Zr.useRef)({
-            width: Br,
-            height: Tr
+            width: Ed,
+            height: Jd
+          } = (0, Fd.b)(wd),
+          Ud = (0, Wd.useRef)({
+            width: Ed,
+            height: Jd
           });
-        vr.current = {
-          width: Br,
-          height: Tr
+        Ud.current = {
+          width: Ed,
+          height: Jd
         };
-        const Or = (0, Zr.useRef)(null),
-          Lr = (0, Zr.useRef)({}),
-          lr = (0, Zr.useRef)({}),
-          [Xr, Pr] = (0, Zr.useState)(!1),
-          Hr = (0, Zr.useRef)(Qr);
-        Hr.current = Qr;
-        const qr = (0, Zr.useRef)(Nr);
-        qr.current = Nr;
-        const Rr = (0, Zr.useRef)(Ur);
-        Rr.current = Ur;
-        const gr = (0, Zr.useRef)(null),
-          Cr = (0, Zr.useRef)(!1),
-          Mr = (0, Zr.useRef)(Kr);
-        Mr.current = Kr;
-        const Gr = (0, Zr.useRef)(!0),
-          kr = (0, Zr.useRef)(!1),
-          Ar = (0, Zr.useCallback)((() => {
-            const rr = Or.current;
-            if (!rr || !qr.current || Cr.current || !kr.current) return;
-            const Sr = {};
-            gr.current = Sr, queueMicrotask((() => {
-              if (gr.current !== Sr) return;
-              const Qr = Promise.all(ar.A.map((Sr => rr.untilDrawn(Sr)))).then((() => !0), (rr => (console.error("Failed to draw the character preview", rr), !1))),
-                Zr = new Promise((rr => {
+        const xd = (0, Wd.useRef)(null),
+          Bd = (0, Wd.useRef)({}),
+          Sd = (0, Wd.useRef)({}),
+          [sd, ud] = (0, Wd.useState)(!1),
+          Vd = (0, Wd.useRef)(md);
+        Vd.current = md;
+        const Ad = (0, Wd.useRef)(Nd);
+        Ad.current = Nd;
+        const rd = (0, Wd.useRef)(qd);
+        rd.current = qd;
+        const Gd = (0, Wd.useRef)(null),
+          nd = (0, Wd.useRef)(!1),
+          Ld = (0, Wd.useRef)(gd);
+        Ld.current = gd;
+        const Pd = (0, Wd.useRef)(!0),
+          zd = (0, Wd.useRef)(!1),
+          cd = (0, Wd.useCallback)((() => {
+            const dd = xd.current;
+            if (!dd || !Ad.current || nd.current || !zd.current) return;
+            const Od = {};
+            Gd.current = Od, queueMicrotask((() => {
+              if (Gd.current !== Od) return;
+              const md = Promise.all(Rd.s.map((Od => dd.untilDrawn(Od)))).then((() => !0), (dd => (console.error("Failed to draw the character preview", dd), !1))),
+                Wd = new Promise((dd => {
                   setTimeout((() => {
-                    rr(!1)
+                    dd(!1)
                   }), 1e4)
                 }));
-              Promise.race([Qr, Zr]).then((Qr => {
-                const Zr = qr.current;
-                Or.current === rr && gr.current === Sr && !Cr.current && Zr && (Cr.current = !0, Zr(Qr))
+              Promise.race([md, Wd]).then((md => {
+                const Wd = Ad.current;
+                xd.current === dd && Gd.current === Od && !nd.current && Wd && (nd.current = !0, Wd(md))
               }))
             }))
           }), []);
-        return (0, Zr.useImperativeHandle)(Sr, (() => {
-          const rr = (rr, Sr) => {
-            var Qr;
-            (Lr.current[rr] = Sr, null !== zr && void 0 !== zr && zr[rr]) || (null === (Qr = Or.current) || void 0 === Qr || Qr.setCosmetic(rr, Sr), Ar())
+        return (0, Wd.useImperativeHandle)(Od, (() => {
+          const dd = (dd, Od) => {
+            var md;
+            (Bd.current[dd] = Od, null !== bd && void 0 !== bd && bd[dd]) || (null === (md = xd.current) || void 0 === md || md.setCosmetic(dd, Od), cd())
           };
           return {
-            updateCosmetic: rr,
-            setAllCosmetics(Sr) {
-              for (const Zr of ar.A) {
-                var Qr;
-                rr(Zr, null !== (Qr = Sr[Zr]) && void 0 !== Qr ? Qr : (0, jr.b)(Zr))
+            updateCosmetic: dd,
+            setAllCosmetics(Od) {
+              for (const Wd of Rd.s) {
+                var md;
+                dd(Wd, null !== (md = Od[Wd]) && void 0 !== md ? md : (0, Xd.b)(Wd))
               }
             },
             isReady() {
-              var rr, Sr;
-              return null !== (rr = null === (Sr = Or.current) || void 0 === Sr ? void 0 : Sr.isReady()) && void 0 !== rr && rr
+              var dd, Od;
+              return null !== (dd = null === (Od = xd.current) || void 0 === Od ? void 0 : Od.isReady()) && void 0 !== dd && dd
             },
             resetCamera() {
-              var rr;
-              null === (rr = Or.current) || void 0 === rr || rr.resetCamera()
+              var dd;
+              null === (dd = xd.current) || void 0 === dd || dd.resetCamera()
             },
-            setOrbit(rr) {
-              var Sr;
-              null === (Sr = Or.current) || void 0 === Sr || Sr.setOrbit(rr)
+            setOrbit(dd) {
+              var Od;
+              null === (Od = xd.current) || void 0 === Od || Od.setOrbit(dd)
             },
-            turnCamera(rr) {
-              var Sr;
-              const Qr = Ir.c[hr];
-              null === (Sr = Or.current) || void 0 === Sr || Sr.setOrbit({
-                ...Qr,
-                yaw: Qr.yaw + rr
+            turnCamera(dd) {
+              var Od;
+              const md = Kd.c[yd];
+              null === (Od = xd.current) || void 0 === Od || Od.setOrbit({
+                ...md,
+                yaw: md.yaw + dd
               })
             },
-            async ensureReadyForCapture(rr) {
-              var Sr;
-              await (null === (Sr = Or.current) || void 0 === Sr ? void 0 : Sr.untilDrawn(rr))
+            async ensureReadyForCapture(dd) {
+              var Od;
+              await (null === (Od = xd.current) || void 0 === Od ? void 0 : Od.untilDrawn(dd))
             },
             getDevTools() {
-              var rr;
-              return null !== (rr = Or.current) && void 0 !== rr && rr.isReady() ? Or.current.dev : null
+              var dd;
+              return null !== (dd = xd.current) && void 0 !== dd && dd.isReady() ? xd.current.dev : null
             },
-            setNametagShown(rr) {
-              var Sr, Qr;
-              Gr.current = rr, null === (Sr = Or.current) || void 0 === Sr || Sr.setNametag(rr && null !== (Qr = Mr.current) && void 0 !== Qr ? Qr : null)
+            setNametagShown(dd) {
+              var Od, md;
+              Pd.current = dd, null === (Od = xd.current) || void 0 === Od || Od.setNametag(dd && null !== (md = Ld.current) && void 0 !== md ? md : null)
             }
           }
-        }), [zr, hr, Ar]), (0, Zr.useEffect)((() => {
-          const rr = fr.c.register(tr);
-          let Sr = !0;
-          const Qr = rr => {
-            const Qr = Or.current,
-              Zr = Ir.j.openCharacter(yr.current, hr);
-            if (Or.current = Zr, pr = Zr, Qr) {
-              Qr.close();
+        }), [bd, yd, cd]), (0, Wd.useEffect)((() => {
+          const dd = hd.b.register(Hd);
+          let Od = !0;
+          const md = dd => {
+            const md = xd.current,
+              Wd = Kd.i.openCharacter(wd.current, yd);
+            if (xd.current = Wd, Qd = Wd, md) {
+              md.close();
               const {
-                width: rr,
-                height: Sr
-              } = vr.current;
-              rr > 0 && Sr > 0 && Zr.resize(rr, Sr)
+                width: dd,
+                height: Od
+              } = Ud.current;
+              dd > 0 && Od > 0 && Wd.resize(dd, Od)
             }
-            lr.current = {}, Pr(!1), Zr.ready.then((() => {
-              if (Sr && Or.current === Zr)
-                if (Pr(!0), rr) {
-                  Zr.resetCamera();
-                  for (const rr of ar.A) {
-                    var Qr;
-                    Zr.setCosmetic(rr, null !== (Qr = Lr.current[rr]) && void 0 !== Qr ? Qr : (0, jr.b)(rr))
+            Sd.current = {}, ud(!1), Wd.ready.then((() => {
+              if (Od && xd.current === Wd)
+                if (ud(!0), dd) {
+                  Wd.resetCamera();
+                  for (const dd of Rd.s) {
+                    var md;
+                    Wd.setCosmetic(dd, null !== (md = Bd.current[dd]) && void 0 !== md ? md : (0, Xd.b)(dd))
                   }
-                } else Hr.current()
-            })).catch((rr => {
-              var Qr;
-              (console.error("Failed to set up the character preview", rr), Sr && Or.current === Zr) && (null === (Qr = Rr.current) || void 0 === Qr || Qr.call(Rr))
+                } else Vd.current()
+            })).catch((dd => {
+              var md;
+              (console.error("Failed to set up the character preview", dd), Od && xd.current === Wd) && (null === (md = rd.current) || void 0 === md || md.call(rd))
             }))
           };
-          Qr(!1);
-          const Zr = {
+          md(!1);
+          const Wd = {
             reopen: () => {
-              Qr(!0)
+              md(!0)
             }
           };
-          return xr.push(Zr), () => {
-            Sr = !1, rr();
-            const Qr = Or.current;
-            pr === Qr && (Qr.resetCamera(), pr = null), Qr.close(), Or.current = null;
-            const Wr = xr.indexOf(Zr);
-            if (xr.splice(Wr, 1), Wr === xr.length && Wr > 0) {
-              const rr = xr[Wr - 1];
+          return td.push(Wd), () => {
+            Od = !1, dd();
+            const md = xd.current;
+            Qd === md && (md.resetCamera(), Qd = null), md.close(), xd.current = null;
+            const Fd = td.indexOf(Wd);
+            if (td.splice(Fd, 1), Fd === td.length && Fd > 0) {
+              const dd = td[Fd - 1];
               queueMicrotask((() => {
-                xr.at(-1) === rr && null === pr && Ir.j.sharesCharacter() && rr.reopen()
+                td.at(-1) === dd && null === Qd && Kd.i.sharesCharacter() && dd.reopen()
               }))
             }
           }
-        }), []), (0, Zr.useEffect)((() => {
-          Br <= 0 || Tr <= 0 || Or.current.resize(Br, Tr)
-        }), [Br, Tr]), (0, Zr.useEffect)((() => {
-          if (!Xr) return;
-          const rr = lr.current;
-          for (const Sr of ar.A) {
-            const Qr = null === zr || void 0 === zr ? void 0 : zr[Sr],
-              Zr = rr[Sr];
-            Qr && Qr !== Zr ? Or.current.setCosmetic(Sr, Qr) : !Qr && Zr && Lr.current[Sr] && Or.current.setCosmetic(Sr, Lr.current[Sr])
+        }), []), (0, Wd.useEffect)((() => {
+          Ed <= 0 || Jd <= 0 || xd.current.resize(Ed, Jd)
+        }), [Ed, Jd]), (0, Wd.useEffect)((() => {
+          if (!sd) return;
+          const dd = Sd.current;
+          for (const Od of Rd.s) {
+            const md = null === bd || void 0 === bd ? void 0 : bd[Od],
+              Wd = dd[Od];
+            md && md !== Wd ? xd.current.setCosmetic(Od, md) : !md && Wd && Bd.current[Od] && xd.current.setCosmetic(Od, Bd.current[Od])
           }
-          lr.current = {
-            ...zr
-          }, kr.current = !0, Ar()
-        }), [zr, Xr, Ar]), (0, Zr.useEffect)((() => {
-          Xr && Or.current.playEmote(null !== Yr && void 0 !== Yr ? Yr : null)
-        }), [Yr, nr, Xr]), (0, Zr.useEffect)((() => {
-          Xr && Gr.current && Or.current.setNametag(null !== Kr && void 0 !== Kr ? Kr : null)
-        }), [Kr, Xr]), (0, Zr.useEffect)((() => {
-          if (!Xr || null === er) return;
-          const rr = Or.current,
+          Sd.current = {
+            ...bd
+          }, zd.current = !0, cd()
+        }), [bd, sd, cd]), (0, Wd.useEffect)((() => {
+          sd && xd.current.playEmote(null !== Td && void 0 !== Td ? Td : null)
+        }), [Td, pd, sd]), (0, Wd.useEffect)((() => {
+          sd && Pd.current && xd.current.setNametag(null !== gd && void 0 !== gd ? gd : null)
+        }), [gd, sd]), (0, Wd.useEffect)((() => {
+          if (!sd || null === Yd) return;
+          const dd = xd.current,
             {
-              pitch: Sr,
-              radius: Qr
-            } = Ir.c[hr];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return rr.setOrbit({
-            yaw: er + mr,
-            pitch: Sr,
-            radius: Qr
+              pitch: Od,
+              radius: md
+            } = Kd.c[yd];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return dd.setOrbit({
+            yaw: Yd + od,
+            pitch: Od,
+            radius: md
           }), () => {
-            pr === rr && rr.resetCamera()
+            Qd === dd && dd.resetCamera()
           };
-          const Zr = performance.now();
-          let Wr = 0;
-          const ar = jr => {
-            Or.current === rr && (rr.setOrbit({
-              yaw: er + (jr - Zr) / 6e3 * 2 * Math.PI,
-              pitch: Sr,
-              radius: Qr
-            }), Wr = requestAnimationFrame(ar))
+          const Wd = performance.now();
+          let Fd = 0;
+          const Rd = Xd => {
+            xd.current === dd && (dd.setOrbit({
+              yaw: Yd + (Xd - Wd) / 6e3 * 2 * Math.PI,
+              pitch: Od,
+              radius: md
+            }), Fd = requestAnimationFrame(Rd))
           };
-          return Wr = requestAnimationFrame(ar), () => {
-            cancelAnimationFrame(Wr), pr === rr && rr.resetCamera()
+          return Fd = requestAnimationFrame(Rd), () => {
+            cancelAnimationFrame(Fd), Qd === dd && dd.resetCamera()
           }
-        }), [Xr, er]), (0, Er.jsx)("div", {
+        }), [sd, Yd]), (0, vd.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: yr
+          ref: wd
         })
       })))
   },
-  37827: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => jr
+  37929: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Xd
     });
-    var Zr = Qr(2089),
-      Wr = Qr(1629);
-    const ar = new class {
+    var Wd = md(2092),
+      Fd = md(1627);
+    const Rd = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(rr, Sr) {
-        rr !== this.userContext && this.sendHeld(), this.userContext = rr;
-        for (const [Zr, Wr] of Sr) this.pending.set(Zr, Wr);
+      save(dd, Od) {
+        dd !== this.userContext && this.sendHeld(), this.userContext = dd;
+        for (const [Wd, Fd] of Od) this.pending.set(Wd, Fd);
         if (null !== this.timer) return;
-        const Qr = this.lastSentAt + 1100 - Date.now();
-        Qr <= 0 ? this.send(rr) : (this.timer = setTimeout((() => {
+        const md = this.lastSentAt + 1100 - Date.now();
+        md <= 0 ? this.send(dd) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), Qr), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), md), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(rr) {
-        const Sr = Array.from(this.pending, (rr => {
-          let [Sr, Qr] = rr;
+      send(dd) {
+        const Od = Array.from(this.pending, (dd => {
+          let [Od, md] = dd;
           return {
-            fW: Sr,
-            EW: Qr
+            KF: Od,
+            hF: md
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), Wr.c.updateCosmetics(rr, Sr).catch((rr => {
-          console.error("Failed to update cosmetics", rr)
+        this.pending.clear(), this.lastSentAt = Date.now(), Fd.e.updateCosmetics(dd, Od).catch((dd => {
+          console.error("Failed to update cosmetics", dd)
         }))
       }
     };
 
-    function jr(rr, Sr) {
-      for (const [Qr, Zr] of Sr) rr.setPlayerCosmetics(Qr, Zr);
-      if (null === Zr.gameBridge.latest("connectedGame").websocketUrl) ar.save(rr, Sr);
+    function Xd(dd, Od) {
+      for (const [md, Wd] of Od) dd.setPlayerCosmetics(md, Wd);
+      if (null === Wd.gameBridge.latest("connectedGame").websocketUrl) Rd.save(dd, Od);
       else
-        for (const [Qr, Wr] of Sr) Zr.gameBridge.send("updateMyCosmetic", {
-          fW: Qr,
-          EW: Wr
+        for (const [md, Fd] of Od) Wd.gameBridge.send("updateMyCosmetic", {
+          KF: md,
+          hF: Fd
         })
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

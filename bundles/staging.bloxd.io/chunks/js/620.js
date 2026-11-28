@@ -1,55 +1,55 @@
 export const id = 620;
 export const ids = [620];
 export const modules = {
-  54028: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => yr
+  53922: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => wd
     });
-    var Zr = Qr(72),
-      Wr = Qr(5566),
-      ar = Qr(1804),
-      jr = Qr(1155),
-      Ir = Qr.n(jr),
-      fr = Qr(1576),
-      Er = Qr(1251),
-      pr = Qr(5538),
-      xr = Qr(5553),
-      mr = Qr(5562),
-      Nr = Qr(1338);
+    var Wd = md(66),
+      Fd = md(5513),
+      Rd = md(1808),
+      Xd = md(1155),
+      Kd = md.n(Xd),
+      hd = md(1572),
+      vd = md(1238),
+      Qd = md(5489),
+      td = md(5495),
+      od = md(5504),
+      Nd = md(1341);
 
-    function Ur(rr) {
-      return rr.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    function qd(dd) {
+      return dd.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     }
-    pr.d.registerLanguage("javascript", xr.d), pr.d.registerLanguage("typescript", mr.c);
+    Qd.e.registerLanguage("javascript", td.b), Qd.e.registerLanguage("typescript", od.e);
 
-    function tr(rr, Sr) {
-      const Qr = Ur(rr).replace(/"/g, "&quot;");
-      return `<button type="button" class="DocsCopyButton ${Sr}" title="${Qr}" aria-label="${Qr}"><svg class="DocsCopyIcon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5"/><path d="M10.5 3.5V1.5H1.5v9h2"/></svg><svg class="DocsCopiedIcon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-7.5"/></svg></button>`
+    function Hd(dd, Od) {
+      const md = qd(dd).replace(/"/g, "&quot;");
+      return `<button type="button" class="DocsCopyButton ${Od}" title="${md}" aria-label="${md}"><svg class="DocsCopyIcon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8.5" height="8.5"/><path d="M10.5 3.5V1.5H1.5v9h2"/></svg><svg class="DocsCopiedIcon" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8.5l3.5 3.5 7.5-7.5"/></svg></button>`
     }
 
-    function hr(rr, Sr) {
-      const Qr = [],
-        Zr = rr.toLowerCase(),
-        Wr = Sr.toLowerCase();
-      let ar = 0;
-      for (; ar < rr.length;) {
-        const jr = Zr.indexOf(Wr, ar);
-        if (-1 === jr) {
-          Qr.push(rr.slice(ar));
+    function yd(dd, Od) {
+      const md = [],
+        Wd = dd.toLowerCase(),
+        Fd = Od.toLowerCase();
+      let Rd = 0;
+      for (; Rd < dd.length;) {
+        const Xd = Wd.indexOf(Fd, Rd);
+        if (-1 === Xd) {
+          md.push(dd.slice(Rd));
           break
         }
-        jr > ar && Qr.push(rr.slice(ar, jr)), Qr.push((0, Nr.jsx)("mark", {
+        Xd > Rd && md.push(dd.slice(Rd, Xd)), md.push((0, Nd.jsx)("mark", {
           className: "DocsHighlight",
-          children: rr.slice(jr, jr + Sr.length)
-        }, jr)), ar = jr + Sr.length
+          children: dd.slice(Xd, Xd + Od.length)
+        }, Xd)), Rd = Xd + Od.length
       }
-      return Qr
+      return md
     }
-    var zr = Qr(1448),
-      Yr = Qr(1489),
-      nr = Qr(38361),
-      er = Qr(38363);
-    const Kr = {
+    var bd = md(1443),
+      Td = md(1471),
+      pd = md(38431),
+      Yd = md(38439);
+    const gd = {
         clientOptions: {
           tabStep: "docsClientOptionsTab",
           tabText: "codeEditor:tutorialClientOptionsTab",
@@ -69,342 +69,342 @@ export const modules = {
           pageText: "codeEditor:tutorialCallbacks"
         }
       },
-      yr = (0, Zr.memo)((function(rr) {
-        var Sr, Qr, jr, xr, mr, yr, Br;
+      wd = (0, Wd.memo)((function(dd) {
+        var Od, md, Xd, td, od, wd, Ed;
         let {
-          popOutDocs: Tr,
-          hideDocs: vr,
-          tutorialEnabled: Or
-        } = rr;
-        const [Lr, lr] = (0, Zr.useState)(Wr.e[0].id), Xr = (0, Zr.useRef)(null), Pr = (0, Zr.useRef)(null), [Hr, qr] = (0, Zr.useState)(""), [Rr, gr] = (0, Zr.useState)(0), [Cr, Mr] = (0, Zr.useState)(null), [Gr, kr] = (0, Zr.useState)(!1), [Ar, Vr] = (0, Zr.useState)(160), ir = (0, Zr.useRef)(!1), wr = (0, Zr.useRef)(null), cr = (0, nr.i)("docsOverview"), [Fr, or] = (0, Zr.useState)(0), br = Object.values(Kr).some((rr => (null === rr || void 0 === rr ? void 0 : rr.tabStep) === cr));
-        (0, Zr.useEffect)((() => {
-          br && Hr.length > 0 && (qr(""), or((rr => rr + 1)))
-        }), [br, Hr]);
-        const Jr = Hr.length > 0,
-          Dr = (0, Zr.useMemo)((() => function(rr) {
-            if (!rr) return [];
-            const Sr = rr.toLowerCase(),
-              Qr = [];
-            for (const Zr of Wr.e) {
-              const rr = Zr.content.toLowerCase();
-              let Wr = 0,
-                ar = -1,
-                jr = 0,
-                Ir = rr.indexOf(Sr, jr);
-              for (; - 1 !== Ir;) - 1 === ar && (ar = Ir), Wr++, jr = Ir + Sr.length, Ir = rr.indexOf(Sr, jr);
-              if (0 === Wr) continue;
-              const fr = Math.max(0, ar - 40),
-                Er = Math.min(Zr.content.length, ar + Sr.length + 40),
-                pr = (fr > 0 ? "..." : "") + Zr.content.slice(fr, Er).replace(/\n/g, " ") + (Er < Zr.content.length ? "..." : "");
-              Qr.push({
-                doc: Zr,
-                matchCount: Wr,
-                snippet: pr
+          popOutDocs: Jd,
+          hideDocs: Ud,
+          tutorialEnabled: xd
+        } = dd;
+        const [Bd, Sd] = (0, Wd.useState)(Fd.c[0].id), sd = (0, Wd.useRef)(null), ud = (0, Wd.useRef)(null), [Vd, Ad] = (0, Wd.useState)(""), [rd, Gd] = (0, Wd.useState)(0), [nd, Ld] = (0, Wd.useState)(null), [Pd, zd] = (0, Wd.useState)(!1), [cd, jd] = (0, Wd.useState)(160), Dd = (0, Wd.useRef)(!1), ed = (0, Wd.useRef)(null), Id = (0, pd.j)("docsOverview"), [ld, Cd] = (0, Wd.useState)(0), Zd = Object.values(gd).some((dd => (null === dd || void 0 === dd ? void 0 : dd.tabStep) === Id));
+        (0, Wd.useEffect)((() => {
+          Zd && Vd.length > 0 && (Ad(""), Cd((dd => dd + 1)))
+        }), [Zd, Vd]);
+        const kd = Vd.length > 0,
+          fd = (0, Wd.useMemo)((() => function(dd) {
+            if (!dd) return [];
+            const Od = dd.toLowerCase(),
+              md = [];
+            for (const Wd of Fd.c) {
+              const dd = Wd.content.toLowerCase();
+              let Fd = 0,
+                Rd = -1,
+                Xd = 0,
+                Kd = dd.indexOf(Od, Xd);
+              for (; - 1 !== Kd;) - 1 === Rd && (Rd = Kd), Fd++, Xd = Kd + Od.length, Kd = dd.indexOf(Od, Xd);
+              if (0 === Fd) continue;
+              const hd = Math.max(0, Rd - 40),
+                vd = Math.min(Wd.content.length, Rd + Od.length + 40),
+                Qd = (hd > 0 ? "..." : "") + Wd.content.slice(hd, vd).replace(/\n/g, " ") + (vd < Wd.content.length ? "..." : "");
+              md.push({
+                doc: Wd,
+                matchCount: Fd,
+                snippet: Qd
               })
             }
-            return Qr.sort(((rr, Sr) => Sr.matchCount - rr.matchCount)), Qr
-          }(Hr)), [Hr]),
-          dr = Jr ? null !== (Sr = null !== (Qr = null === (jr = Dr.find((rr => rr.doc.id === Lr))) || void 0 === jr ? void 0 : jr.doc) && void 0 !== Qr ? Qr : null === (xr = Dr[0]) || void 0 === xr ? void 0 : xr.doc) && void 0 !== Sr ? Sr : null : null !== (mr = Wr.e.find((rr => rr.id === Lr))) && void 0 !== mr ? mr : Wr.e[0],
+            return md.sort(((dd, Od) => Od.matchCount - dd.matchCount)), md
+          }(Vd)), [Vd]),
+          Md = kd ? null !== (Od = null !== (md = null === (Xd = fd.find((dd => dd.doc.id === Bd))) || void 0 === Xd ? void 0 : Xd.doc) && void 0 !== md ? md : null === (td = fd[0]) || void 0 === td ? void 0 : td.doc) && void 0 !== Od ? Od : null : null !== (od = Fd.c.find((dd => dd.id === Bd))) && void 0 !== od ? od : Fd.c[0],
           {
-            t: sr
-          } = (0, Er.E)(),
-          ur = sr("codeEditor:copySnippet"),
-          rS = (0, Zr.useMemo)((() => dr ? function(rr, Sr, Qr, Zr) {
-            let Wr = Sr;
-            Wr = Wr.replace(/\r\n/g, "\n");
-            const ar = [];
-            Wr = Wr.replace(/```(\w*)\n([\s\S]*?)```/g, ((rr, Sr, Zr) => {
-              const Wr = ar.length;
-              let jr = Ur(Zr);
+            t: dO
+          } = (0, vd.G)(),
+          OO = dO("codeEditor:copySnippet"),
+          mO = (0, Wd.useMemo)((() => Md ? function(dd, Od, md, Wd) {
+            let Fd = Od;
+            Fd = Fd.replace(/\r\n/g, "\n");
+            const Rd = [];
+            Fd = Fd.replace(/```(\w*)\n([\s\S]*?)```/g, ((dd, Od, Wd) => {
+              const Fd = Rd.length;
+              let Xd = qd(Wd);
               try {
-                jr = pr.d.highlight(Zr.trimEnd(), {
-                  language: Sr
+                Xd = Qd.e.highlight(Wd.trimEnd(), {
+                  language: Od
                 }).value
-              } catch (Ir) {
-                console.warn("Could not highlight documentation code block", Ir)
+              } catch (Kd) {
+                console.warn("Could not highlight documentation code block", Kd)
               }
-              return ar.push(`<div class="DocsCodeBlockRow"><pre class="DocsCodeBlock" data-lang="${Sr}"><code>${jr}</code></pre>${tr(Qr,"DocsCopyBlock")}</div>`), `\0PLACEHOLDER_${Wr}\0`
-            })), Wr = Wr.replace(/(`{1,2})([^\n]+?)\1(?!`)/g, ((Sr, Zr, Wr) => {
-              const jr = ar.length,
-                Ir = 2 === Zr.length ? Wr.replace(/^ (.*) $/, "$1") : Wr;
-              let fr = Ur(Ir);
+              return Rd.push(`<div class="DocsCodeBlockRow"><pre class="DocsCodeBlock" data-lang="${Od}"><code>${Xd}</code></pre>${Hd(md,"DocsCopyBlock")}</div>`), `\0PLACEHOLDER_${Fd}\0`
+            })), Fd = Fd.replace(/(`{1,2})([^\n]+?)\1(?!`)/g, ((Od, Wd, Fd) => {
+              const Xd = Rd.length,
+                Kd = 2 === Wd.length ? Fd.replace(/^ (.*) $/, "$1") : Fd;
+              let hd = qd(Kd);
               try {
-                "apiReference" !== rr && "callbacks" !== rr || (fr = pr.d.highlight(Ir.trimEnd().replaceAll("\\|", "|"), {
+                "apiReference" !== dd && "callbacks" !== dd || (hd = Qd.e.highlight(Kd.trimEnd().replaceAll("\\|", "|"), {
                   language: "typescript"
                 }).value)
-              } catch (Er) {
-                console.warn("Could not highlight documentation snippet", Er)
+              } catch (vd) {
+                console.warn("Could not highlight documentation snippet", vd)
               }
-              return ar.push(`<span class="DocsInlineCodeRow"><code class="DocsInlineCode">${fr}</code>${tr(Qr,"DocsCopyInline")}</span>`), `\0PLACEHOLDER_${jr}\0`
-            })), Wr = Ur(Wr), Wr = Wr.replace(/^#### (.+)$/gm, '<h4 class="DocsH4">$1</h4>'), Wr = Wr.replace(/^### (.+)$/gm, '<h3 class="DocsH3">$1</h3>'), Wr = Wr.replace(/^## (.+)$/gm, '<h2 class="DocsH2">$1</h2>'), Wr = Wr.replace(/^# (.+)$/gm, '<h1 class="DocsH1">$1</h1>'), Wr = Wr.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"), Wr = Wr.replace(/\[([^\]]+)\]\(([^)]+)\)/g, ((rr, Sr, Qr) => Qr.startsWith("#") ? `<a class="DocsAnchor" data-id="${Qr}">${Sr}</a>` : `<a href="${Qr}" target="_blank" rel="noopener noreferrer">${Sr}</a>`)), Wr = Wr.replace(/^(\|.+\|)\n(\|[\s:\-|]+\|)\n((?:\|.+\|\s*\r?\n?)*)/gm, ((rr, Sr, Qr, Zr) => `<table class="DocsTable"><thead><tr>${Sr.split("|").slice(1,-1).map((rr=>`<th>${rr.trim()}</th>`)).join("")}</tr></thead><tbody>${Zr.trim().split("\n").map((rr=>`<tr>${rr.split("|").slice(1,-1).map((rr=>`<td>${rr.trim()}</td>`)).join("")}</tr>`)).join("")}</tbody></table>`)), Wr = Wr.replace(/(?:^[ \t]*([*-])[ \t]+.+(?:\n|$))+/gm, ((rr, Sr) => function(rr, Sr) {
-              const Qr = "*" === Sr,
-                Zr = [];
-              for (const Ir of rr.split("\n")) {
-                const rr = Ir.match(/^([ \t]*)(?:[*-])[ \t]+(.+)$/);
-                rr && Zr.push({
-                  indent: rr[1].replace(/\t/g, "  ").length,
-                  content: rr[2]
+              return Rd.push(`<span class="DocsInlineCodeRow"><code class="DocsInlineCode">${hd}</code>${Hd(md,"DocsCopyInline")}</span>`), `\0PLACEHOLDER_${Xd}\0`
+            })), Fd = qd(Fd), Fd = Fd.replace(/^#### (.+)$/gm, '<h4 class="DocsH4">$1</h4>'), Fd = Fd.replace(/^### (.+)$/gm, '<h3 class="DocsH3">$1</h3>'), Fd = Fd.replace(/^## (.+)$/gm, '<h2 class="DocsH2">$1</h2>'), Fd = Fd.replace(/^# (.+)$/gm, '<h1 class="DocsH1">$1</h1>'), Fd = Fd.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>"), Fd = Fd.replace(/\[([^\]]+)\]\(([^)]+)\)/g, ((dd, Od, md) => md.startsWith("#") ? `<a class="DocsAnchor" data-id="${md}">${Od}</a>` : `<a href="${md}" target="_blank" rel="noopener noreferrer">${Od}</a>`)), Fd = Fd.replace(/^(\|.+\|)\n(\|[\s:\-|]+\|)\n((?:\|.+\|\s*\r?\n?)*)/gm, ((dd, Od, md, Wd) => `<table class="DocsTable"><thead><tr>${Od.split("|").slice(1,-1).map((dd=>`<th>${dd.trim()}</th>`)).join("")}</tr></thead><tbody>${Wd.trim().split("\n").map((dd=>`<tr>${dd.split("|").slice(1,-1).map((dd=>`<td>${dd.trim()}</td>`)).join("")}</tr>`)).join("")}</tbody></table>`)), Fd = Fd.replace(/(?:^[ \t]*([*-])[ \t]+.+(?:\n|$))+/gm, ((dd, Od) => function(dd, Od) {
+              const md = "*" === Od,
+                Wd = [];
+              for (const Kd of dd.split("\n")) {
+                const dd = Kd.match(/^([ \t]*)(?:[*-])[ \t]+(.+)$/);
+                dd && Wd.push({
+                  indent: dd[1].replace(/\t/g, "  ").length,
+                  content: dd[2]
                 })
               }
-              let Wr = "";
-              const ar = [],
-                jr = Qr ? "ol" : "ul";
+              let Fd = "";
+              const Rd = [],
+                Xd = md ? "ol" : "ul";
               for (const {
-                  indent: Ir,
-                  content: fr
+                  indent: Kd,
+                  content: hd
                 }
-                of Zr) {
-                for (; ar.length > 0 && Ir < ar[ar.length - 1];) Wr += `</${jr}></li>`, ar.pop();
-                (0 === ar.length || Ir > ar[ar.length - 1]) && (ar.length > 0 && (Wr = Wr.replace(/<\/li>$/, "")), Wr += `<${jr} class="DocsList">`, ar.push(Ir)), Wr += `<li class="DocsListItem">${fr}</li>`
+                of Wd) {
+                for (; Rd.length > 0 && Kd < Rd[Rd.length - 1];) Fd += `</${Xd}></li>`, Rd.pop();
+                (0 === Rd.length || Kd > Rd[Rd.length - 1]) && (Rd.length > 0 && (Fd = Fd.replace(/<\/li>$/, "")), Fd += `<${Xd} class="DocsList">`, Rd.push(Kd)), Fd += `<li class="DocsListItem">${hd}</li>`
               }
-              for (; ar.length > 0;) Wr += `</${jr}>`, ar.pop(), ar.length > 0 && (Wr += "</li>");
-              return Wr
-            }(rr, Sr))), Wr = Wr.replace(/\n{2,}/g, "\n<br/>\n");
-            for (let jr = 0; jr < ar.length; jr++) Wr = Wr.replace(`\0PLACEHOLDER_${jr}\0`, ar[jr]);
-            if (Zr) {
-              const rr = Ur(Zr).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-                Sr = new RegExp(rr, "gi");
-              Wr = Wr.replace(/([^<>]+)(?=<|$)/g, (rr => rr.replace(Sr, (rr => `<mark class="DocsHighlight">${rr}</mark>`))))
+              for (; Rd.length > 0;) Fd += `</${Xd}>`, Rd.pop(), Rd.length > 0 && (Fd += "</li>");
+              return Fd
+            }(dd, Od))), Fd = Fd.replace(/\n{2,}/g, "\n<br/>\n");
+            for (let Xd = 0; Xd < Rd.length; Xd++) Fd = Fd.replace(`\0PLACEHOLDER_${Xd}\0`, Rd[Xd]);
+            if (Wd) {
+              const dd = qd(Wd).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+                Od = new RegExp(dd, "gi");
+              Fd = Fd.replace(/([^<>]+)(?=<|$)/g, (dd => dd.replace(Od, (dd => `<mark class="DocsHighlight">${dd}</mark>`))))
             }
-            return Wr
-          }(dr.id, dr.content, ur, Jr ? Hr : void 0) : ""), [dr, ur, Jr, Hr]);
-        (0, Zr.useEffect)((() => {
-          const rr = Pr.current;
-          if (!rr) return;
-          const Sr = rr => {
-            var Sr, Qr, Zr, Wr, ar;
-            const jr = null === (Sr = (Qr = rr.target).closest) || void 0 === Sr ? void 0 : Sr.call(Qr, ".DocsCopyButton");
-            if (!jr) return;
-            rr.preventDefault(), rr.stopPropagation();
-            const Ir = null !== (Zr = null === (Wr = jr.parentElement) || void 0 === Wr || null === (ar = Wr.querySelector("code")) || void 0 === ar ? void 0 : ar.textContent) && void 0 !== Zr ? Zr : "";
-            navigator.clipboard.writeText(Ir.trimEnd()).then((() => {
-              jr.classList.add("Copied"), setTimeout((() => {
-                jr.classList.remove("Copied")
+            return Fd
+          }(Md.id, Md.content, OO, kd ? Vd : void 0) : ""), [Md, OO, kd, Vd]);
+        (0, Wd.useEffect)((() => {
+          const dd = ud.current;
+          if (!dd) return;
+          const Od = dd => {
+            var Od, md, Wd, Fd, Rd;
+            const Xd = null === (Od = (md = dd.target).closest) || void 0 === Od ? void 0 : Od.call(md, ".DocsCopyButton");
+            if (!Xd) return;
+            dd.preventDefault(), dd.stopPropagation();
+            const Kd = null !== (Wd = null === (Fd = Xd.parentElement) || void 0 === Fd || null === (Rd = Fd.querySelector("code")) || void 0 === Rd ? void 0 : Rd.textContent) && void 0 !== Wd ? Wd : "";
+            navigator.clipboard.writeText(Kd.trimEnd()).then((() => {
+              Xd.classList.add("Copied"), setTimeout((() => {
+                Xd.classList.remove("Copied")
               }), 1500)
-            })).catch((rr => {
-              console.warn("Could not copy documentation code", rr)
+            })).catch((dd => {
+              console.warn("Could not copy documentation code", dd)
             }))
           };
-          return rr.addEventListener("click", Sr, !0), () => {
-            rr.removeEventListener("click", Sr, !0)
+          return dd.addEventListener("click", Od, !0), () => {
+            dd.removeEventListener("click", Od, !0)
           }
         }), []);
-        const [SS, QS] = (0, Zr.useState)(0);
-        (0, Zr.useEffect)((() => {
-          if (!Jr || !Pr.current) return void QS(0);
-          const rr = Pr.current.querySelectorAll(".DocsHighlight").length;
-          QS(rr)
-        }), [Jr, rS]), (0, Zr.useEffect)((() => {
-          if (null === Cr || !Pr.current) return;
-          Mr(null);
-          const rr = Pr.current.querySelectorAll(".DocsHighlight");
-          if (0 === rr.length) return;
-          const Sr = Math.min(Cr, rr.length - 1);
-          gr(Sr), rr.forEach((rr => {
-            rr.classList.remove("DocsHighlightActive")
-          })), rr[Sr].classList.add("DocsHighlightActive"), rr[Sr].scrollIntoView({
+        const [WO, FO] = (0, Wd.useState)(0);
+        (0, Wd.useEffect)((() => {
+          if (!kd || !ud.current) return void FO(0);
+          const dd = ud.current.querySelectorAll(".DocsHighlight").length;
+          FO(dd)
+        }), [kd, mO]), (0, Wd.useEffect)((() => {
+          if (null === nd || !ud.current) return;
+          Ld(null);
+          const dd = ud.current.querySelectorAll(".DocsHighlight");
+          if (0 === dd.length) return;
+          const Od = Math.min(nd, dd.length - 1);
+          Gd(Od), dd.forEach((dd => {
+            dd.classList.remove("DocsHighlightActive")
+          })), dd[Od].classList.add("DocsHighlightActive"), dd[Od].scrollIntoView({
             block: "center",
             behavior: "smooth"
           })
-        }), [Cr, rS]);
-        const ZS = (0, Zr.useCallback)((rr => {
-            if (!Pr.current) return;
-            const Sr = Pr.current.querySelectorAll(".DocsHighlight");
-            if (0 === Sr.length) return;
-            const Qr = (Rr + rr + Sr.length) % Sr.length;
-            gr(Qr), Mr(Qr)
-          }), [Rr]),
-          WS = (0, Zr.useCallback)((rr => {
-            var Sr;
-            const Qr = null === (Sr = Kr[rr]) || void 0 === Sr ? void 0 : Sr.tabStep;
-            Qr && Qr === cr && (0, er.i)(Qr), rr !== Lr ? (kr(!0), lr(rr), gr(0), Pr.current && (Pr.current.scrollTop = 0), Jr && Mr(0)) : kr(!Gr)
-          }), [Jr, Lr, Gr, cr]),
-          aS = (0, Zr.useCallback)((rr => {
-            var Sr;
-            const Qr = Array.from((null === (Sr = Pr.current) || void 0 === Sr ? void 0 : Sr.querySelectorAll(".DocsH2, .DocsH3")) || []).find((Sr => {
-              var Qr;
-              return null === (Qr = Sr.textContent) || void 0 === Qr ? void 0 : Qr.includes(rr)
+        }), [nd, mO]);
+        const RO = (0, Wd.useCallback)((dd => {
+            if (!ud.current) return;
+            const Od = ud.current.querySelectorAll(".DocsHighlight");
+            if (0 === Od.length) return;
+            const md = (rd + dd + Od.length) % Od.length;
+            Gd(md), Ld(md)
+          }), [rd]),
+          XO = (0, Wd.useCallback)((dd => {
+            var Od;
+            const md = null === (Od = gd[dd]) || void 0 === Od ? void 0 : Od.tabStep;
+            md && md === Id && (0, Yd.e)(md), dd !== Bd ? (zd(!0), Sd(dd), Gd(0), ud.current && (ud.current.scrollTop = 0), kd && Ld(0)) : zd(!Pd)
+          }), [kd, Bd, Pd, Id]),
+          KO = (0, Wd.useCallback)((dd => {
+            var Od;
+            const md = Array.from((null === (Od = ud.current) || void 0 === Od ? void 0 : Od.querySelectorAll(".DocsH2, .DocsH3")) || []).find((Od => {
+              var md;
+              return null === (md = Od.textContent) || void 0 === md ? void 0 : md.includes(dd)
             }));
-            Qr && Qr.scrollIntoView({
+            md && md.scrollIntoView({
               block: "start",
               behavior: "smooth"
             })
-          }), [Pr]),
-          jS = (0, Zr.useCallback)((rr => {
-            var Sr, Qr;
-            const Zr = null !== (Sr = null === (Qr = Xr.current) || void 0 === Qr ? void 0 : Qr.clientWidth) && void 0 !== Sr ? Sr : window.innerWidth,
-              Wr = Math.max(120, Zr - 200);
-            return Math.min(Math.max(rr, 120), Wr)
+          }), [ud]),
+          hO = (0, Wd.useCallback)((dd => {
+            var Od, md;
+            const Wd = null !== (Od = null === (md = sd.current) || void 0 === md ? void 0 : md.clientWidth) && void 0 !== Od ? Od : window.innerWidth,
+              Fd = Math.max(120, Wd - 200);
+            return Math.min(Math.max(dd, 120), Fd)
           }), []),
-          IS = (0, Zr.useCallback)((() => {
-            var rr;
-            ir.current && (ir.current = !1, null === (rr = Xr.current) || void 0 === rr || rr.classList.remove("DocsSidebarResizing"))
+          vO = (0, Wd.useCallback)((() => {
+            var dd;
+            Dd.current && (Dd.current = !1, null === (dd = sd.current) || void 0 === dd || dd.classList.remove("DocsSidebarResizing"))
           }), []),
-          fS = (0, Zr.useCallback)((rr => {
-            var Sr;
-            rr.preventDefault(), ir.current = !0, null === (Sr = Xr.current) || void 0 === Sr || Sr.classList.add("DocsSidebarResizing")
+          QO = (0, Wd.useCallback)((dd => {
+            var Od;
+            dd.preventDefault(), Dd.current = !0, null === (Od = sd.current) || void 0 === Od || Od.classList.add("DocsSidebarResizing")
           }), []);
-        (0, Zr.useEffect)((() => {
-          const rr = Xr.current,
-            Sr = rr => {
-              if (!ir.current || !Xr.current) return;
-              const Sr = Xr.current.getBoundingClientRect().left;
-              Vr(jS(rr.clientX - Sr))
+        (0, Wd.useEffect)((() => {
+          const dd = sd.current,
+            Od = dd => {
+              if (!Dd.current || !sd.current) return;
+              const Od = sd.current.getBoundingClientRect().left;
+              jd(hO(dd.clientX - Od))
             };
-          return window.addEventListener("mousemove", Sr), window.addEventListener("mouseup", IS), () => {
-            window.removeEventListener("mousemove", Sr), window.removeEventListener("mouseup", IS), null === rr || void 0 === rr || rr.classList.remove("DocsSidebarResizing")
+          return window.addEventListener("mousemove", Od), window.addEventListener("mouseup", vO), () => {
+            window.removeEventListener("mousemove", Od), window.removeEventListener("mouseup", vO), null === dd || void 0 === dd || dd.classList.remove("DocsSidebarResizing")
           }
-        }), [jS, IS]);
-        const ES = (0, Zr.useCallback)((rr => {
-          if (rr) {
-            const [Sr, Qr] = rr.slice(1).split("-");
-            Qr && (wr.current = {
-              docId: Sr,
-              subsection: Qr
-            }), Sr && WS(Sr)
+        }), [hO, vO]);
+        const tO = (0, Wd.useCallback)((dd => {
+          if (dd) {
+            const [Od, md] = dd.slice(1).split("-");
+            md && (ed.current = {
+              docId: Od,
+              subsection: md
+            }), Od && XO(Od)
           }
-        }), [WS]);
-        (0, Zr.useEffect)((() => {
-          const rr = wr.current;
-          rr && Lr === rr.docId && (setTimeout((() => {
-            aS(rr.subsection)
-          }), 0), wr.current = null)
-        })), (0, Zr.useEffect)((() => {
-          if (!Pr.current) return;
-          Pr.current.querySelectorAll("a.DocsAnchor").forEach((rr => {
-            rr.addEventListener("click", (Sr => {
-              Sr.preventDefault(), ES(rr.dataset.id)
+        }), [XO]);
+        (0, Wd.useEffect)((() => {
+          const dd = ed.current;
+          dd && Bd === dd.docId && (setTimeout((() => {
+            KO(dd.subsection)
+          }), 0), ed.current = null)
+        })), (0, Wd.useEffect)((() => {
+          if (!ud.current) return;
+          ud.current.querySelectorAll("a.DocsAnchor").forEach((dd => {
+            dd.addEventListener("click", (Od => {
+              Od.preventDefault(), tO(dd.dataset.id)
             }))
           }))
-        }), [Lr, ES]);
-        const pS = Object.values(Kr).find((rr => (null === rr || void 0 === rr ? void 0 : rr.pageStep) === cr));
-        return (0, Nr.jsx)(nr.h, {
+        }), [Bd, tO]);
+        const oO = Object.values(gd).find((dd => (null === dd || void 0 === dd ? void 0 : dd.pageStep) === Id));
+        return (0, Nd.jsx)(pd.h, {
           tutorial: "docsOverview",
-          step: null !== (yr = null === pS || void 0 === pS ? void 0 : pS.pageStep) && void 0 !== yr ? yr : "docsPanel",
-          text: sr(null !== (Br = null === pS || void 0 === pS ? void 0 : pS.pageText) && void 0 !== Br ? Br : "codeEditor:tutorialDocsPanel"),
-          enabled: Or,
+          step: null !== (wd = null === oO || void 0 === oO ? void 0 : oO.pageStep) && void 0 !== wd ? wd : "docsPanel",
+          text: dO(null !== (Ed = null === oO || void 0 === oO ? void 0 : oO.pageText) && void 0 !== Ed ? Ed : "codeEditor:tutorialDocsPanel"),
+          enabled: xd,
           placement: "left",
-          onPrevious: pS ? void 0 : vr,
-          children: (0, Nr.jsxs)("div", {
+          onPrevious: oO ? void 0 : Ud,
+          children: (0, Nd.jsxs)("div", {
             className: "DocsPanel",
-            ref: Xr,
-            children: [(0, Nr.jsxs)("div", {
+            ref: sd,
+            children: [(0, Nd.jsxs)("div", {
               className: "DocsSidebar",
               style: {
-                width: Ar,
-                minWidth: Ar,
-                maxWidth: Ar
+                width: cd,
+                minWidth: cd,
+                maxWidth: cd
               },
-              children: [(0, Nr.jsx)(ar.b, {
+              children: [(0, Nd.jsx)(Rd.c, {
                 className: "DocsSearch",
                 placeholderText: "\ud83d\udd0e Search docs...",
-                onValueChange: rr => {
-                  qr(rr), gr(0), Mr(0)
+                onValueChange: dd => {
+                  Ad(dd), Gd(0), Ld(0)
                 }
-              }, Fr), (0, Nr.jsx)("div", {
+              }, ld), (0, Nd.jsx)("div", {
                 className: "DocsNavList",
-                children: Jr ? Dr.map((rr => (0, Nr.jsxs)("div", {
-                  className: Ir()("DocsNavItem", "SearchResult", {
-                    Active: rr.doc.id === (null === dr || void 0 === dr ? void 0 : dr.id)
+                children: kd ? fd.map((dd => (0, Nd.jsxs)("div", {
+                  className: Kd()("DocsNavItem", "SearchResult", {
+                    Active: dd.doc.id === (null === Md || void 0 === Md ? void 0 : Md.id)
                   }),
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    WS(rr.doc.id)
+                    XO(dd.doc.id)
                   },
-                  children: [(0, Nr.jsxs)("div", {
+                  children: [(0, Nd.jsxs)("div", {
                     className: "SearchResultTitle",
-                    children: [rr.doc.title, (0, Nr.jsx)("span", {
+                    children: [dd.doc.title, (0, Nd.jsx)("span", {
                       className: "SearchResultCount",
-                      children: rr.matchCount
+                      children: dd.matchCount
                     })]
-                  }), (0, Nr.jsx)("div", {
+                  }), (0, Nd.jsx)("div", {
                     className: "SearchResultSnippet",
-                    children: hr(rr.snippet, Hr)
+                    children: yd(dd.snippet, Vd)
                   })]
-                }, rr.doc.id))) : Wr.e.map((rr => {
-                  const Sr = (0, Nr.jsxs)("div", {
-                      className: Ir()("DocsNavItem", {
-                        Active: rr.id === (null === dr || void 0 === dr ? void 0 : dr.id)
+                }, dd.doc.id))) : Fd.c.map((dd => {
+                  const Od = (0, Nd.jsxs)("div", {
+                      className: Kd()("DocsNavItem", {
+                        Active: dd.id === (null === Md || void 0 === Md ? void 0 : Md.id)
                       }),
                       "data-pad-focusable": !0,
                       onClick: () => {
-                        WS(rr.id)
+                        XO(dd.id)
                       },
-                      children: [(0, Nr.jsx)("span", {
+                      children: [(0, Nd.jsx)("span", {
                         className: "DocsNavItemTitle",
-                        children: rr.title
-                      }), rr.subsections && rr.id === (null === dr || void 0 === dr ? void 0 : dr.id) && Gr && (0, Nr.jsx)("span", {
+                        children: dd.title
+                      }), dd.subsections && dd.id === (null === Md || void 0 === Md ? void 0 : Md.id) && Pd && (0, Nd.jsx)("span", {
                         className: "DocsNavItemSubsectionArrow",
-                        children: (0, Nr.jsx)(zr.c, {
+                        children: (0, Nd.jsx)(bd.c, {
                           name: "angle-down"
                         })
-                      }), rr.subsections && (rr.id !== (null === dr || void 0 === dr ? void 0 : dr.id) || !Gr) && (0, Nr.jsx)("span", {
+                      }), dd.subsections && (dd.id !== (null === Md || void 0 === Md ? void 0 : Md.id) || !Pd) && (0, Nd.jsx)("span", {
                         className: "DocsNavItemSubsectionArrow",
-                        children: (0, Nr.jsx)(zr.c, {
+                        children: (0, Nd.jsx)(bd.c, {
                           name: "angle-up"
                         })
                       })]
                     }),
-                    Qr = Kr[rr.id];
-                  return (0, Nr.jsxs)(Zr.Fragment, {
-                    children: [Qr && (0, Nr.jsx)(nr.h, {
+                    md = gd[dd.id];
+                  return (0, Nd.jsxs)(Wd.Fragment, {
+                    children: [md && (0, Nd.jsx)(pd.h, {
                       tutorial: "docsOverview",
-                      step: Qr.tabStep,
-                      text: sr(Qr.tabText),
-                      enabled: Or,
+                      step: md.tabStep,
+                      text: dO(md.tabText),
+                      enabled: xd,
                       placement: "left",
                       waitForClick: !0,
-                      children: Sr
-                    }), !Qr && Sr, Gr && rr.subsections && rr.id === (null === dr || void 0 === dr ? void 0 : dr.id) && rr.subsections.map((rr => (0, Nr.jsx)("div", {
+                      children: Od
+                    }), !md && Od, Pd && dd.subsections && dd.id === (null === Md || void 0 === Md ? void 0 : Md.id) && dd.subsections.map((dd => (0, Nd.jsx)("div", {
                       className: "DocsNavItem DocsSubsection",
                       "data-pad-focusable": !0,
                       onClick: () => {
-                        aS(rr)
+                        KO(dd)
                       },
-                      children: rr
-                    }, rr)))]
-                  }, rr.id)
+                      children: dd
+                    }, dd)))]
+                  }, dd.id)
                 }))
-              }), (0, Nr.jsx)("div", {
+              }), (0, Nd.jsx)("div", {
                 className: "DocsSidebarButtonContainer",
-                children: (0, Nr.jsx)(Yr.f, {
-                  tooltipInner: sr("codeEditor:popOutDocsTooltip"),
+                children: (0, Nd.jsx)(Td.g, {
+                  tooltipInner: dO("codeEditor:popOutDocsTooltip"),
                   placement: "top",
-                  children: (0, Nr.jsx)(fr.h, {
+                  children: (0, Nd.jsx)(hd.g, {
                     className: "DocsSidebarButton",
-                    onClick: Tr,
-                    children: sr("codeEditor:popOutDocs")
+                    onClick: Jd,
+                    children: dO("codeEditor:popOutDocs")
                   })
                 })
               })]
-            }), (0, Nr.jsx)("div", {
+            }), (0, Nd.jsx)("div", {
               className: "DocsSidebarResizeHandle",
-              onMouseDown: fS
-            }), (0, Nr.jsxs)("div", {
+              onMouseDown: QO
+            }), (0, Nd.jsxs)("div", {
               className: "DocsContentWrapper",
-              children: [Jr && SS > 0 && (0, Nr.jsxs)("div", {
+              children: [kd && WO > 0 && (0, Nd.jsxs)("div", {
                 className: "DocsMatchNav",
-                children: [(0, Nr.jsxs)("span", {
+                children: [(0, Nd.jsxs)("span", {
                   className: "DocsMatchNavLabel",
-                  children: [Rr + 1, " / ", SS]
-                }), (0, Nr.jsx)("button", {
+                  children: [rd + 1, " / ", WO]
+                }), (0, Nd.jsx)("button", {
                   className: "DocsMatchNavButton",
                   onClick: () => {
-                    ZS(-1)
+                    RO(-1)
                   },
                   children: "\u25b2"
-                }), (0, Nr.jsx)("button", {
+                }), (0, Nd.jsx)("button", {
                   className: "DocsMatchNavButton",
                   onClick: () => {
-                    ZS(1)
+                    RO(1)
                   },
                   children: "\u25bc"
                 })]
-              }), (0, Nr.jsx)("div", {
+              }), (0, Nd.jsx)("div", {
                 className: "DocsContent",
-                ref: Pr,
+                ref: ud,
                 dangerouslySetInnerHTML: {
-                  __html: rS
+                  __html: mO
                 }
               })]
             })]
@@ -414,4 +414,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

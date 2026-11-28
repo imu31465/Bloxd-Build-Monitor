@@ -1,477 +1,477 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var rr = __webpack_require__.u,
-        Sr = __webpack_require__.e,
-        Qr = {},
-        Zr = {};
-      __webpack_require__.u = function(Sr) {
-        return rr(Sr) + (Qr.hasOwnProperty(Sr) ? "?" + Qr[Sr] : "")
-      }, __webpack_require__.e = function(Wr) {
-        return Sr(Wr).catch((function(Sr) {
-          var ar = Zr.hasOwnProperty(Wr) ? Zr[Wr] : 4;
-          if (ar < 1) {
-            var jr = rr(Wr);
-            if (Sr.message = "Loading chunk " + Wr + " failed after 4 retries.\n(" + jr + ")", Sr.request = jr, Qr[Wr] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete Zr[Wr]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === Sr.code) {
-              var Ir = __webpack_require__.miniCssF(Wr);
-              Sr.message = Sr.message.replace("Loading chunk", "Loading CSS chunk").replace(jr, Ir), Sr.request = Ir
+      var dd = __webpack_require__.u,
+        Od = __webpack_require__.e,
+        md = {},
+        Wd = {};
+      __webpack_require__.u = function(Od) {
+        return dd(Od) + (md.hasOwnProperty(Od) ? "?" + md[Od] : "")
+      }, __webpack_require__.e = function(Fd) {
+        return Od(Fd).catch((function(Od) {
+          var Rd = Wd.hasOwnProperty(Fd) ? Wd[Fd] : 4;
+          if (Rd < 1) {
+            var Xd = dd(Fd);
+            if (Od.message = "Loading chunk " + Fd + " failed after 4 retries.\n(" + Xd + ")", Od.request = Xd, md[Fd] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete Wd[Fd]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === Od.code) {
+              var Kd = __webpack_require__.miniCssF(Fd);
+              Od.message = Od.message.replace("Loading chunk", "Loading CSS chunk").replace(Xd, Kd), Od.request = Kd
             }
-            throw Sr
+            throw Od
           }
-          return new Promise((function(rr) {
-            var Sr = 4 - ar + 1;
+          return new Promise((function(dd) {
+            var Od = 4 - Rd + 1;
             setTimeout((function() {
-              var Sr = "cache-bust=" + Date.now();
-              Qr[Wr] = Sr, Zr[Wr] = ar - 1, rr(__webpack_require__.e(Wr))
-            }), function(rr) {
-              return 500 * Math.pow(2, rr)
-            }(Sr))
+              var Od = "cache-bust=" + Date.now();
+              md[Fd] = Od, Wd[Fd] = Rd - 1, dd(__webpack_require__.e(Fd))
+            }), function(dd) {
+              return 500 * Math.pow(2, dd)
+            }(Od))
           }))
         }))
       }
     }
   })();
 
-  function rr(rr) {
-    return rr instanceof Error ? rr.message : String(rr)
+  function dd(dd) {
+    return dd instanceof Error ? dd.message : String(dd)
   }
-  const Sr = ArrayBuffer,
-    Qr = Uint8Array,
-    Zr = Uint16Array,
-    Wr = Int16Array,
-    ar = Int32Array,
-    jr = (rr, Sr, Zr) => {
-      if (Qr.prototype.slice) return Qr.prototype.slice.call(rr, Sr, Zr);
-      (null == Sr || Sr < 0) && (Sr = 0), (null == Zr || Zr > rr.length) && (Zr = rr.length);
-      const Wr = new Qr(Zr - Sr);
-      return Wr.set(rr.subarray(Sr, Zr)), Wr
+  const Od = ArrayBuffer,
+    md = Uint8Array,
+    Wd = Uint16Array,
+    Fd = Int16Array,
+    Rd = Int32Array,
+    Xd = (dd, Od, Wd) => {
+      if (md.prototype.slice) return md.prototype.slice.call(dd, Od, Wd);
+      (null == Od || Od < 0) && (Od = 0), (null == Wd || Wd > dd.length) && (Wd = dd.length);
+      const Fd = new md(Wd - Od);
+      return Fd.set(dd.subarray(Od, Wd)), Fd
     },
-    Ir = (rr, Sr, Zr, Wr) => {
-      if (Qr.prototype.fill) return Qr.prototype.fill.call(rr, Sr, Zr, Wr);
-      for ((null == Zr || Zr < 0) && (Zr = 0), (null == Wr || Wr > rr.length) && (Wr = rr.length); Zr < Wr; ++Zr) rr[Zr] = Sr;
-      return rr
+    Kd = (dd, Od, Wd, Fd) => {
+      if (md.prototype.fill) return md.prototype.fill.call(dd, Od, Wd, Fd);
+      for ((null == Wd || Wd < 0) && (Wd = 0), (null == Fd || Fd > dd.length) && (Fd = dd.length); Wd < Fd; ++Wd) dd[Wd] = Od;
+      return dd
     },
-    fr = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    Er = (rr, Sr, Qr) => {
-      const Zr = new Error(Sr || fr[rr]);
-      if (Zr.code = rr, Error.captureStackTrace && Error.captureStackTrace(Zr, Er), !Qr) throw Zr;
-      return Zr
+    hd = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    vd = (dd, Od, md) => {
+      const Wd = new Error(Od || hd[dd]);
+      if (Wd.code = dd, Error.captureStackTrace && Error.captureStackTrace(Wd, vd), !md) throw Wd;
+      return Wd
     },
-    pr = (rr, Sr, Qr) => {
-      let Zr = 0,
-        Wr = 0;
-      for (; Zr < Qr; ++Zr) Wr |= rr[Sr++] << (Zr << 3);
-      return Wr
+    Qd = (dd, Od, md) => {
+      let Wd = 0,
+        Fd = 0;
+      for (; Wd < md; ++Wd) Fd |= dd[Od++] << (Wd << 3);
+      return Fd
     },
-    xr = (rr, Sr) => {
-      const Zr = rr[0] | rr[1] << 8 | rr[2] << 16;
-      if (3126568 == Zr && 253 == rr[3]) {
-        const Zr = rr[4],
-          Wr = Zr >> 5 & 1,
-          jr = Zr >> 2 & 1,
-          Ir = 3 & Zr,
-          fr = Zr >> 6;
-        8 & Zr && Er(0);
-        let xr = 6 - Wr;
-        const mr = 3 == Ir ? 4 : Ir,
-          Nr = pr(rr, xr, mr);
-        xr += mr;
-        const Ur = fr ? 1 << fr : Wr,
-          tr = pr(rr, xr, Ur) + (1 == fr && 256);
-        let hr = tr;
-        if (!Wr) {
-          const Sr = 1 << 10 + (rr[5] >> 3);
-          hr = Sr + (Sr >> 3) * (7 & rr[5])
+    td = (dd, Od) => {
+      const Wd = dd[0] | dd[1] << 8 | dd[2] << 16;
+      if (3126568 == Wd && 253 == dd[3]) {
+        const Wd = dd[4],
+          Fd = Wd >> 5 & 1,
+          Xd = Wd >> 2 & 1,
+          Kd = 3 & Wd,
+          hd = Wd >> 6;
+        8 & Wd && vd(0);
+        let td = 6 - Fd;
+        const od = 3 == Kd ? 4 : Kd,
+          Nd = Qd(dd, td, od);
+        td += od;
+        const qd = hd ? 1 << hd : Fd,
+          Hd = Qd(dd, td, qd) + (1 == hd && 256);
+        let yd = Hd;
+        if (!Fd) {
+          const Od = 1 << 10 + (dd[5] >> 3);
+          yd = Od + (Od >> 3) * (7 & dd[5])
         }
-        hr > 2145386496 && Er(1);
-        const zr = new Qr((1 == Sr ? tr || hr : Sr ? 0 : hr) + 12);
-        return zr[0] = 1, zr[4] = 4, zr[8] = 8, {
-          b: xr + Ur,
+        yd > 2145386496 && vd(1);
+        const bd = new md((1 == Od ? Hd || yd : Od ? 0 : yd) + 12);
+        return bd[0] = 1, bd[4] = 4, bd[8] = 8, {
+          b: td + qd,
           y: 0,
           l: 0,
-          d: Nr,
-          w: Sr && 1 != Sr ? Sr : zr.subarray(12),
-          e: hr,
-          o: new ar(zr.buffer, 0, 3),
-          u: tr,
-          c: jr,
-          m: Math.min(131072, hr)
+          d: Nd,
+          w: Od && 1 != Od ? Od : bd.subarray(12),
+          e: yd,
+          o: new Rd(bd.buffer, 0, 3),
+          u: Hd,
+          c: Xd,
+          m: Math.min(131072, yd)
         }
       }
-      if (25481893 == (Zr >> 4 | rr[3] << 20)) return 8 + (((Wr = rr)[jr = 4] | Wr[jr + 1] << 8 | Wr[jr + 2] << 16 | Wr[jr + 3] << 24) >>> 0);
-      var Wr, jr;
-      Er(0)
+      if (25481893 == (Wd >> 4 | dd[3] << 20)) return 8 + (((Fd = dd)[Xd = 4] | Fd[Xd + 1] << 8 | Fd[Xd + 2] << 16 | Fd[Xd + 3] << 24) >>> 0);
+      var Fd, Xd;
+      vd(0)
     },
-    mr = rr => {
-      let Sr = 0;
-      for (; 1 << Sr <= rr; ++Sr);
-      return Sr - 1
+    od = dd => {
+      let Od = 0;
+      for (; 1 << Od <= dd; ++Od);
+      return Od - 1
     },
-    Nr = (rr, ar, jr) => {
-      let Ir = 4 + (ar << 3);
-      const fr = 5 + (15 & rr[ar]);
-      fr > jr && Er(3);
-      const pr = 1 << fr;
-      let xr = pr,
-        Nr = -1,
-        Ur = -1,
-        tr = -1,
-        hr = pr;
-      const zr = new Sr(512 + (pr << 2)),
-        Yr = new Wr(zr, 0, 256),
-        nr = new Zr(zr, 0, 256),
-        er = new Zr(zr, 512, pr),
-        Kr = 512 + (pr << 1),
-        yr = new Qr(zr, Kr, pr),
-        Br = new Qr(zr, Kr + pr);
-      for (; Nr < 255 && xr > 0;) {
-        const Sr = mr(xr + 1),
-          Qr = Ir >> 3,
-          Zr = (1 << Sr + 1) - 1;
-        let Wr = (rr[Qr] | rr[Qr + 1] << 8 | rr[Qr + 2] << 16) >> (7 & Ir) & Zr;
-        const ar = (1 << Sr) - 1,
-          jr = Zr - xr - 1,
-          fr = Wr & ar;
-        if (fr < jr ? (Ir += Sr, Wr = fr) : (Ir += Sr + 1, Wr > ar && (Wr -= jr)), Yr[++Nr] = --Wr, -1 == Wr ? (xr += Wr, yr[--hr] = Nr) : xr -= Wr, !Wr)
+    Nd = (dd, Rd, Xd) => {
+      let Kd = 4 + (Rd << 3);
+      const hd = 5 + (15 & dd[Rd]);
+      hd > Xd && vd(3);
+      const Qd = 1 << hd;
+      let td = Qd,
+        Nd = -1,
+        qd = -1,
+        Hd = -1,
+        yd = Qd;
+      const bd = new Od(512 + (Qd << 2)),
+        Td = new Fd(bd, 0, 256),
+        pd = new Wd(bd, 0, 256),
+        Yd = new Wd(bd, 512, Qd),
+        gd = 512 + (Qd << 1),
+        wd = new md(bd, gd, Qd),
+        Ed = new md(bd, gd + Qd);
+      for (; Nd < 255 && td > 0;) {
+        const Od = od(td + 1),
+          md = Kd >> 3,
+          Wd = (1 << Od + 1) - 1;
+        let Fd = (dd[md] | dd[md + 1] << 8 | dd[md + 2] << 16) >> (7 & Kd) & Wd;
+        const Rd = (1 << Od) - 1,
+          Xd = Wd - td - 1,
+          hd = Fd & Rd;
+        if (hd < Xd ? (Kd += Od, Fd = hd) : (Kd += Od + 1, Fd > Rd && (Fd -= Xd)), Td[++Nd] = --Fd, -1 == Fd ? (td += Fd, wd[--yd] = Nd) : td -= Fd, !Fd)
           do {
-            const Sr = Ir >> 3;
-            Ur = (rr[Sr] | rr[Sr + 1] << 8) >> (7 & Ir) & 3, Ir += 2, Nr += Ur
-          } while (3 == Ur)
-      }(Nr > 255 || xr) && Er(0);
-      let Tr = 0;
-      const vr = (pr >> 1) + (pr >> 3) + 3,
-        Or = pr - 1;
-      for (let Sr = 0; Sr <= Nr; ++Sr) {
-        const rr = Yr[Sr];
-        if (rr < 1) nr[Sr] = -rr;
+            const Od = Kd >> 3;
+            qd = (dd[Od] | dd[Od + 1] << 8) >> (7 & Kd) & 3, Kd += 2, Nd += qd
+          } while (3 == qd)
+      }(Nd > 255 || td) && vd(0);
+      let Jd = 0;
+      const Ud = (Qd >> 1) + (Qd >> 3) + 3,
+        xd = Qd - 1;
+      for (let Od = 0; Od <= Nd; ++Od) {
+        const dd = Td[Od];
+        if (dd < 1) pd[Od] = -dd;
         else
-          for (tr = 0; tr < rr; ++tr) {
-            yr[Tr] = Sr;
+          for (Hd = 0; Hd < dd; ++Hd) {
+            wd[Jd] = Od;
             do {
-              Tr = Tr + vr & Or
-            } while (Tr >= hr)
+              Jd = Jd + Ud & xd
+            } while (Jd >= yd)
           }
       }
-      for (Tr && Er(0), tr = 0; tr < pr; ++tr) {
-        const rr = nr[yr[tr]]++,
-          Sr = Br[tr] = fr - mr(rr);
-        er[tr] = (rr << Sr) - pr
+      for (Jd && vd(0), Hd = 0; Hd < Qd; ++Hd) {
+        const dd = pd[wd[Hd]]++,
+          Od = Ed[Hd] = hd - od(dd);
+        Yd[Hd] = (dd << Od) - Qd
       }
-      return [Ir + 7 >> 3, {
-        b: fr,
-        s: yr,
-        n: Br,
-        t: er
+      return [Kd + 7 >> 3, {
+        b: hd,
+        s: wd,
+        n: Ed,
+        t: Yd
       }]
     },
-    Ur = Nr(new Qr([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    tr = Nr(new Qr([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    hr = Nr(new Qr([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    zr = (rr, Sr) => {
-      const Qr = rr.length,
-        Zr = new ar(Qr);
-      for (let Wr = 0; Wr < Qr; ++Wr) Zr[Wr] = Sr, Sr += 1 << rr[Wr];
-      return Zr
+    qd = Nd(new md([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    Hd = Nd(new md([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    yd = Nd(new md([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    bd = (dd, Od) => {
+      const md = dd.length,
+        Wd = new Rd(md);
+      for (let Fd = 0; Fd < md; ++Fd) Wd[Fd] = Od, Od += 1 << dd[Fd];
+      return Wd
     },
-    Yr = new Qr(new ar([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    nr = zr(Yr, 0),
-    er = new Qr(new ar([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    Kr = zr(er, 3),
-    yr = (rr, Sr, Qr) => {
-      const Zr = rr.length,
-        Wr = Sr.length,
-        ar = rr[Zr - 1],
-        jr = (1 << Qr.b) - 1,
-        Ir = -Qr.b;
-      ar || Er(0);
-      let fr = 0,
-        pr = Qr.b,
-        xr = (Zr << 3) - 8 + mr(ar) - pr,
-        Nr = -1;
-      for (; xr > Ir && Nr < Wr;) {
-        const Zr = xr >> 3;
-        fr = (fr << pr | (rr[Zr] | rr[Zr + 1] << 8 | rr[Zr + 2] << 16) >> (7 & xr)) & jr, Sr[++Nr] = Qr.s[fr], xr -= pr = Qr.n[fr]
+    Td = new md(new Rd([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    pd = bd(Td, 0),
+    Yd = new md(new Rd([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    gd = bd(Yd, 3),
+    wd = (dd, Od, md) => {
+      const Wd = dd.length,
+        Fd = Od.length,
+        Rd = dd[Wd - 1],
+        Xd = (1 << md.b) - 1,
+        Kd = -md.b;
+      Rd || vd(0);
+      let hd = 0,
+        Qd = md.b,
+        td = (Wd << 3) - 8 + od(Rd) - Qd,
+        Nd = -1;
+      for (; td > Kd && Nd < Fd;) {
+        const Wd = td >> 3;
+        hd = (hd << Qd | (dd[Wd] | dd[Wd + 1] << 8 | dd[Wd + 2] << 16) >> (7 & td)) & Xd, Od[++Nd] = md.s[hd], td -= Qd = md.n[hd]
       }
-      xr == Ir && Nr + 1 == Wr || Er(0)
+      td == Kd && Nd + 1 == Fd || vd(0)
     },
-    Br = (rr, Sr, Qr) => {
-      let Zr = 6;
-      const Wr = Sr.length + 3 >> 2,
-        ar = Wr << 1,
-        jr = Wr + ar;
-      yr(rr.subarray(Zr, Zr += rr[0] | rr[1] << 8), Sr.subarray(0, Wr), Qr), yr(rr.subarray(Zr, Zr += rr[2] | rr[3] << 8), Sr.subarray(Wr, ar), Qr), yr(rr.subarray(Zr, Zr += rr[4] | rr[5] << 8), Sr.subarray(ar, jr), Qr), yr(rr.subarray(Zr), Sr.subarray(jr), Qr)
+    Ed = (dd, Od, md) => {
+      let Wd = 6;
+      const Fd = Od.length + 3 >> 2,
+        Rd = Fd << 1,
+        Xd = Fd + Rd;
+      wd(dd.subarray(Wd, Wd += dd[0] | dd[1] << 8), Od.subarray(0, Fd), md), wd(dd.subarray(Wd, Wd += dd[2] | dd[3] << 8), Od.subarray(Fd, Rd), md), wd(dd.subarray(Wd, Wd += dd[4] | dd[5] << 8), Od.subarray(Rd, Xd), md), wd(dd.subarray(Wd), Od.subarray(Xd), md)
     },
-    Tr = (rr, Sr, Wr) => {
-      let ar = Sr.b;
-      const fr = rr[ar],
-        pr = fr >> 1 & 3;
-      Sr.l = 1 & fr;
-      const xr = fr >> 3 | rr[ar + 1] << 5 | rr[ar + 2] << 13,
-        zr = (ar += 3) + xr;
-      if (1 == pr) {
-        if (ar >= rr.length) return;
-        return Sr.b = ar + 1, Wr ? (Ir(Wr, rr[ar], Sr.y, Sr.y += xr), Wr) : Ir(new Qr(xr), rr[ar])
+    Jd = (dd, Od, Fd) => {
+      let Rd = Od.b;
+      const hd = dd[Rd],
+        Qd = hd >> 1 & 3;
+      Od.l = 1 & hd;
+      const td = hd >> 3 | dd[Rd + 1] << 5 | dd[Rd + 2] << 13,
+        bd = (Rd += 3) + td;
+      if (1 == Qd) {
+        if (Rd >= dd.length) return;
+        return Od.b = Rd + 1, Fd ? (Kd(Fd, dd[Rd], Od.y, Od.y += td), Fd) : Kd(new md(td), dd[Rd])
       }
-      if (!(zr > rr.length)) {
-        if (0 == pr) return Sr.b = zr, Wr ? (Wr.set(rr.subarray(ar, zr), Sr.y), Sr.y += xr, Wr) : jr(rr, ar, zr);
-        if (2 == pr) {
-          const fr = rr[ar],
-            pr = 3 & fr,
-            xr = fr >> 2 & 3;
-          let Tr = fr >> 4,
-            vr = 0,
-            Or = 0;
-          pr < 2 ? 1 & xr ? Tr |= rr[++ar] << 4 | (2 & xr && rr[++ar] << 12) : Tr = fr >> 3 : (Or = xr, xr < 2 ? (Tr |= (63 & rr[++ar]) << 4, vr = rr[ar] >> 6 | rr[++ar] << 2) : 2 == xr ? (Tr |= rr[++ar] << 4 | (3 & rr[++ar]) << 12, vr = rr[ar] >> 2 | rr[++ar] << 6) : (Tr |= rr[++ar] << 4 | (63 & rr[++ar]) << 12, vr = rr[ar] >> 6 | rr[++ar] << 2 | rr[++ar] << 10)), ++ar;
-          let Lr = Wr ? Wr.subarray(Sr.y, Sr.y + Sr.m) : new Qr(Sr.m),
-            lr = Lr.length - Tr;
-          if (lr < 0 && Er(0), 0 == pr) Lr.set(rr.subarray(ar, ar += Tr), lr);
-          else if (1 == pr) Ir(Lr, rr[ar++], lr);
+      if (!(bd > dd.length)) {
+        if (0 == Qd) return Od.b = bd, Fd ? (Fd.set(dd.subarray(Rd, bd), Od.y), Od.y += td, Fd) : Xd(dd, Rd, bd);
+        if (2 == Qd) {
+          const hd = dd[Rd],
+            Qd = 3 & hd,
+            td = hd >> 2 & 3;
+          let Jd = hd >> 4,
+            Ud = 0,
+            xd = 0;
+          Qd < 2 ? 1 & td ? Jd |= dd[++Rd] << 4 | (2 & td && dd[++Rd] << 12) : Jd = hd >> 3 : (xd = td, td < 2 ? (Jd |= (63 & dd[++Rd]) << 4, Ud = dd[Rd] >> 6 | dd[++Rd] << 2) : 2 == td ? (Jd |= dd[++Rd] << 4 | (3 & dd[++Rd]) << 12, Ud = dd[Rd] >> 2 | dd[++Rd] << 6) : (Jd |= dd[++Rd] << 4 | (63 & dd[++Rd]) << 12, Ud = dd[Rd] >> 6 | dd[++Rd] << 2 | dd[++Rd] << 10)), ++Rd;
+          let Bd = Fd ? Fd.subarray(Od.y, Od.y + Od.m) : new md(Od.m),
+            Sd = Bd.length - Jd;
+          if (Sd < 0 && vd(0), 0 == Qd) Bd.set(dd.subarray(Rd, Rd += Jd), Sd);
+          else if (1 == Qd) Kd(Bd, dd[Rd++], Sd);
           else {
-            let Wr = Sr.h;
-            if (2 == pr) {
-              const jr = ((rr, Sr) => {
-                let Wr = 0,
-                  ar = -1;
-                const jr = new Qr(292),
-                  fr = rr[Sr],
-                  pr = jr.subarray(0, 256),
-                  xr = jr.subarray(256, 268),
-                  Ur = new Zr(jr.buffer, 268);
-                if (fr < 128) {
-                  const [Qr, Zr] = Nr(rr, Sr + 1, 6), Wr = Qr << 3, jr = rr[Sr += fr];
-                  jr || Er(0);
-                  let Ir = 0,
-                    xr = 0,
-                    Ur = Zr.b,
-                    tr = Ur,
-                    hr = (++Sr << 3) - 8 + mr(jr);
-                  for (; ar > 254 && Er(0), hr -= Ur, !(hr < Wr);) {
-                    let Sr = hr >> 3;
-                    if (Ir += (rr[Sr] | rr[Sr + 1] << 8) >> (7 & hr) & (1 << Ur) - 1, pr[++ar] = Zr.s[Ir], hr -= tr, hr < Wr) break;
-                    Sr = hr >> 3, xr += (rr[Sr] | rr[Sr + 1] << 8) >> (7 & hr) & (1 << tr) - 1, pr[++ar] = Zr.s[xr], Ur = Zr.n[Ir], Ir = Zr.t[Ir], tr = Zr.n[xr], xr = Zr.t[xr]
-                  }++ar > 255 && Er(0)
+            let Fd = Od.h;
+            if (2 == Qd) {
+              const Xd = ((dd, Od) => {
+                let Fd = 0,
+                  Rd = -1;
+                const Xd = new md(292),
+                  hd = dd[Od],
+                  Qd = Xd.subarray(0, 256),
+                  td = Xd.subarray(256, 268),
+                  qd = new Wd(Xd.buffer, 268);
+                if (hd < 128) {
+                  const [md, Wd] = Nd(dd, Od + 1, 6), Fd = md << 3, Xd = dd[Od += hd];
+                  Xd || vd(0);
+                  let Kd = 0,
+                    td = 0,
+                    qd = Wd.b,
+                    Hd = qd,
+                    yd = (++Od << 3) - 8 + od(Xd);
+                  for (; Rd > 254 && vd(0), yd -= qd, !(yd < Fd);) {
+                    let Od = yd >> 3;
+                    if (Kd += (dd[Od] | dd[Od + 1] << 8) >> (7 & yd) & (1 << qd) - 1, Qd[++Rd] = Wd.s[Kd], yd -= Hd, yd < Fd) break;
+                    Od = yd >> 3, td += (dd[Od] | dd[Od + 1] << 8) >> (7 & yd) & (1 << Hd) - 1, Qd[++Rd] = Wd.s[td], qd = Wd.n[Kd], Kd = Wd.t[Kd], Hd = Wd.n[td], td = Wd.t[td]
+                  }++Rd > 255 && vd(0)
                 } else {
-                  for (ar = fr - 127; Wr < ar; Wr += 2) {
-                    const Qr = rr[++Sr];
-                    pr[Wr] = Qr >> 4, pr[Wr + 1] = 15 & Qr
-                  }++Sr
+                  for (Rd = hd - 127; Fd < Rd; Fd += 2) {
+                    const md = dd[++Od];
+                    Qd[Fd] = md >> 4, Qd[Fd + 1] = 15 & md
+                  }++Od
                 }
-                let tr = 0;
-                for (Wr = 0; Wr < ar; ++Wr) {
-                  const rr = pr[Wr];
-                  rr > 11 && Er(0), tr += rr && 1 << rr - 1
+                let Hd = 0;
+                for (Fd = 0; Fd < Rd; ++Fd) {
+                  const dd = Qd[Fd];
+                  dd > 11 && vd(0), Hd += dd && 1 << dd - 1
                 }
-                const hr = mr(tr) + 1,
-                  zr = 1 << hr,
-                  Yr = zr - tr;
-                for (Yr & Yr - 1 && Er(0), pr[ar++] = mr(Yr) + 1, Wr = 0; Wr < ar; ++Wr) {
-                  const rr = pr[Wr];
-                  ++xr[pr[Wr] = rr && hr + 1 - rr]
+                const yd = od(Hd) + 1,
+                  bd = 1 << yd,
+                  Td = bd - Hd;
+                for (Td & Td - 1 && vd(0), Qd[Rd++] = od(Td) + 1, Fd = 0; Fd < Rd; ++Fd) {
+                  const dd = Qd[Fd];
+                  ++td[Qd[Fd] = dd && yd + 1 - dd]
                 }
-                const nr = new Qr(zr << 1),
-                  er = nr.subarray(0, zr),
-                  Kr = nr.subarray(zr);
-                for (Ur[hr] = 0, Wr = hr; Wr > 0; --Wr) {
-                  const rr = Ur[Wr];
-                  Ir(Kr, Wr, rr, Ur[Wr - 1] = rr + xr[Wr] * (1 << hr - Wr))
+                const pd = new md(bd << 1),
+                  Yd = pd.subarray(0, bd),
+                  gd = pd.subarray(bd);
+                for (qd[yd] = 0, Fd = yd; Fd > 0; --Fd) {
+                  const dd = qd[Fd];
+                  Kd(gd, Fd, dd, qd[Fd - 1] = dd + td[Fd] * (1 << yd - Fd))
                 }
-                for (Ur[0] != zr && Er(0), Wr = 0; Wr < ar; ++Wr) {
-                  const rr = pr[Wr];
-                  if (rr) {
-                    const Sr = Ur[rr];
-                    Ir(er, Wr, Sr, Ur[rr] = Sr + (1 << hr - rr))
+                for (qd[0] != bd && vd(0), Fd = 0; Fd < Rd; ++Fd) {
+                  const dd = Qd[Fd];
+                  if (dd) {
+                    const Od = qd[dd];
+                    Kd(Yd, Fd, Od, qd[dd] = Od + (1 << yd - dd))
                   }
                 }
-                return [Sr, {
-                  n: Kr,
-                  b: hr,
-                  s: er
+                return [Od, {
+                  n: gd,
+                  b: yd,
+                  s: Yd
                 }]
-              })(rr, ar);
-              vr += ar - (ar = jr[0]), Sr.h = Wr = jr[1]
-            } else Wr || Er(0);
-            (Or ? Br : yr)(rr.subarray(ar, ar += vr), Lr.subarray(lr), Wr)
+              })(dd, Rd);
+              Ud += Rd - (Rd = Xd[0]), Od.h = Fd = Xd[1]
+            } else Fd || vd(0);
+            (xd ? Ed : wd)(dd.subarray(Rd, Rd += Ud), Bd.subarray(Sd), Fd)
           }
-          let Xr = rr[ar++];
-          if (Xr) {
-            255 == Xr ? Xr = 32512 + (rr[ar++] | rr[ar++] << 8) : Xr > 127 && (Xr = Xr - 128 << 8 | rr[ar++]);
-            const Ir = rr[ar++];
-            3 & Ir && Er(0);
-            const fr = [tr, hr, Ur];
-            for (let Wr = 2; Wr > -1; --Wr) {
-              const jr = Ir >> 2 + (Wr << 1) & 3;
-              if (1 == jr) {
-                const Sr = new Qr([0, 0, rr[ar++]]);
-                fr[Wr] = {
-                  s: Sr.subarray(2, 3),
-                  n: Sr.subarray(0, 1),
-                  t: new Zr(Sr.buffer, 0, 1),
+          let sd = dd[Rd++];
+          if (sd) {
+            255 == sd ? sd = 32512 + (dd[Rd++] | dd[Rd++] << 8) : sd > 127 && (sd = sd - 128 << 8 | dd[Rd++]);
+            const Kd = dd[Rd++];
+            3 & Kd && vd(0);
+            const hd = [Hd, yd, qd];
+            for (let Fd = 2; Fd > -1; --Fd) {
+              const Xd = Kd >> 2 + (Fd << 1) & 3;
+              if (1 == Xd) {
+                const Od = new md([0, 0, dd[Rd++]]);
+                hd[Fd] = {
+                  s: Od.subarray(2, 3),
+                  n: Od.subarray(0, 1),
+                  t: new Wd(Od.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == jr ? [ar, fr[Wr]] = Nr(rr, ar, 9 - (1 & Wr)) : 3 == jr && (Sr.t || Er(0), fr[Wr] = Sr.t[Wr])
+              } else 2 == Xd ? [Rd, hd[Fd]] = Nd(dd, Rd, 9 - (1 & Fd)) : 3 == Xd && (Od.t || vd(0), hd[Fd] = Od.t[Fd])
             }
-            const [pr, xr, yr] = Sr.t = fr, Br = rr[zr - 1];
-            Br || Er(0);
-            let Tr = (zr << 3) - 8 + mr(Br) - yr.b,
-              vr = Tr >> 3,
-              Or = 0,
-              Pr = (rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << yr.b) - 1;
-            vr = (Tr -= xr.b) >> 3;
-            let Hr = (rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << xr.b) - 1;
-            vr = (Tr -= pr.b) >> 3;
-            let qr = (rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << pr.b) - 1;
-            for (++Xr; --Xr;) {
-              const Qr = yr.s[Pr],
-                Zr = yr.n[Pr],
-                Wr = pr.s[qr],
-                ar = pr.n[qr],
-                jr = xr.s[Hr],
-                Ir = xr.n[Hr];
-              vr = (Tr -= jr) >> 3;
-              const fr = 1 << jr;
-              let mr = fr + ((rr[vr] | rr[vr + 1] << 8 | rr[vr + 2] << 16 | rr[vr + 3] << 24) >>> (7 & Tr) & fr - 1);
-              vr = (Tr -= er[Wr]) >> 3;
-              let Nr = Kr[Wr] + ((rr[vr] | rr[vr + 1] << 8 | rr[vr + 2] << 16) >> (7 & Tr) & (1 << er[Wr]) - 1);
-              vr = (Tr -= Yr[Qr]) >> 3;
-              const Ur = nr[Qr] + ((rr[vr] | rr[vr + 1] << 8 | rr[vr + 2] << 16) >> (7 & Tr) & (1 << Yr[Qr]) - 1);
-              if ((Tr < 0 || lr + Ur > Lr.length || Or + Ur + Nr > Lr.length) && Er(0), vr = (Tr -= Zr) >> 3, Pr = yr.t[Pr] + ((rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << Zr) - 1), vr = (Tr -= ar) >> 3, qr = pr.t[qr] + ((rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << ar) - 1), vr = (Tr -= Ir) >> 3, Hr = xr.t[Hr] + ((rr[vr] | rr[vr + 1] << 8) >> (7 & Tr) & (1 << Ir) - 1), mr > 3) Sr.o[2] = Sr.o[1], Sr.o[1] = Sr.o[0], Sr.o[0] = mr -= 3;
+            const [Qd, td, wd] = Od.t = hd, Ed = dd[bd - 1];
+            Ed || vd(0);
+            let Jd = (bd << 3) - 8 + od(Ed) - wd.b,
+              Ud = Jd >> 3,
+              xd = 0,
+              ud = (dd[Ud] | dd[Ud + 1] << 8) >> (7 & Jd) & (1 << wd.b) - 1;
+            Ud = (Jd -= td.b) >> 3;
+            let Vd = (dd[Ud] | dd[Ud + 1] << 8) >> (7 & Jd) & (1 << td.b) - 1;
+            Ud = (Jd -= Qd.b) >> 3;
+            let id = (dd[Ud] | dd[Ud + 1] << 8) >> (7 & Jd) & (1 << Qd.b) - 1;
+            for (++sd; --sd;) {
+              const md = wd.s[ud],
+                Wd = wd.n[ud],
+                Fd = Qd.s[id],
+                Rd = Qd.n[id],
+                Xd = td.s[Vd],
+                Kd = td.n[Vd];
+              Ud = (Jd -= Xd) >> 3;
+              const hd = 1 << Xd;
+              let od = hd + ((dd[Ud] | dd[Ud + 1] << 8 | dd[Ud + 2] << 16 | dd[Ud + 3] << 24) >>> (7 & Jd) & hd - 1);
+              Ud = (Jd -= Yd[Fd]) >> 3;
+              let Nd = gd[Fd] + ((dd[Ud] | dd[Ud + 1] << 8 | dd[Ud + 2] << 16) >> (7 & Jd) & (1 << Yd[Fd]) - 1);
+              Ud = (Jd -= Td[md]) >> 3;
+              const qd = pd[md] + ((dd[Ud] | dd[Ud + 1] << 8 | dd[Ud + 2] << 16) >> (7 & Jd) & (1 << Td[md]) - 1);
+              if ((Jd < 0 || Sd + qd > Bd.length || xd + qd + Nd > Bd.length) && vd(0), Ud = (Jd -= Wd) >> 3, ud = wd.t[ud] + ((dd[Ud] | dd[Ud + 1] << 8) >> (7 & Jd) & (1 << Wd) - 1), Ud = (Jd -= Rd) >> 3, id = Qd.t[id] + ((dd[Ud] | dd[Ud + 1] << 8) >> (7 & Jd) & (1 << Rd) - 1), Ud = (Jd -= Kd) >> 3, Vd = td.t[Vd] + ((dd[Ud] | dd[Ud + 1] << 8) >> (7 & Jd) & (1 << Kd) - 1), od > 3) Od.o[2] = Od.o[1], Od.o[1] = Od.o[0], Od.o[0] = od -= 3;
               else {
-                const rr = mr - (0 != Ur);
-                rr ? (mr = 3 == rr ? Sr.o[0] - 1 : Sr.o[rr], rr > 1 && (Sr.o[2] = Sr.o[1]), Sr.o[1] = Sr.o[0], Sr.o[0] = mr) : mr = Sr.o[0]
+                const dd = od - (0 != qd);
+                dd ? (od = 3 == dd ? Od.o[0] - 1 : Od.o[dd], dd > 1 && (Od.o[2] = Od.o[1]), Od.o[1] = Od.o[0], Od.o[0] = od) : od = Od.o[0]
               }
-              for (let rr = 0; rr < Ur; ++rr) Lr[Or + rr] = Lr[lr + rr];
-              Or += Ur, lr += Ur;
-              let tr = Or - mr;
-              if (tr < 0) {
-                let rr = -tr;
-                const Qr = Sr.e + tr;
-                Qr < 0 && Er(4), rr > Nr && (rr = Nr);
-                for (let Zr = 0; Zr < rr; ++Zr) Lr[Or + Zr] = Sr.w[Qr + Zr];
-                Or += rr, Nr -= rr, tr = 0
+              for (let dd = 0; dd < qd; ++dd) Bd[xd + dd] = Bd[Sd + dd];
+              xd += qd, Sd += qd;
+              let Hd = xd - od;
+              if (Hd < 0) {
+                let dd = -Hd;
+                const md = Od.e + Hd;
+                md < 0 && vd(4), dd > Nd && (dd = Nd);
+                for (let Wd = 0; Wd < dd; ++Wd) Bd[xd + Wd] = Od.w[md + Wd];
+                xd += dd, Nd -= dd, Hd = 0
               }
-              for (let rr = 0; rr < Nr; ++rr) Lr[Or + rr] = Lr[tr + rr];
-              Or += Nr
+              for (let dd = 0; dd < Nd; ++dd) Bd[xd + dd] = Bd[Hd + dd];
+              xd += Nd
             }
-            if (Or != lr)
-              for (; lr < Lr.length;) Lr[Or++] = Lr[lr++];
-            else Or = Lr.length;
-            Wr ? Sr.y += Or : Lr = jr(Lr, 0, Or)
-          } else if (Wr) {
-            if (Sr.y += Tr, lr)
-              for (let rr = 0; rr < Tr; ++rr) Lr[rr] = Lr[lr + rr]
-          } else lr && (Lr = jr(Lr, lr));
-          return Sr.b = zr, Lr
+            if (xd != Sd)
+              for (; Sd < Bd.length;) Bd[xd++] = Bd[Sd++];
+            else xd = Bd.length;
+            Fd ? Od.y += xd : Bd = Xd(Bd, 0, xd)
+          } else if (Fd) {
+            if (Od.y += Jd, Sd)
+              for (let dd = 0; dd < Jd; ++dd) Bd[dd] = Bd[Sd + dd]
+          } else Sd && (Bd = Xd(Bd, Sd));
+          return Od.b = bd, Bd
         }
-        Er(2)
+        vd(2)
       }
     };
-  class vr {
+  class Ud {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    wI = 0;
+    jK = 0;
     needed = 18;
     size;
-    constructor(rr) {
-      this.size = rr
+    constructor(dd) {
+      this.size = dd
     }
-    push(rr) {
+    push(dd) {
       if (this.done) return;
-      if (this.parts.push(rr), this.wI += rr.length, this.wI < this.needed) return;
-      const Sr = ((rr, Sr) => {
-        if (1 == rr.length) return rr[0];
-        const Zr = new Qr(Sr);
-        for (let Qr = 0, Wr = 0; Qr < rr.length; ++Qr) {
-          const Sr = rr[Qr];
-          Zr.set(Sr, Wr), Wr += Sr.length
+      if (this.parts.push(dd), this.jK += dd.length, this.jK < this.needed) return;
+      const Od = ((dd, Od) => {
+        if (1 == dd.length) return dd[0];
+        const Wd = new md(Od);
+        for (let md = 0, Fd = 0; md < dd.length; ++md) {
+          const Od = dd[md];
+          Wd.set(Od, Fd), Fd += Od.length
         }
-        return Zr
-      })(this.parts, this.wI);
-      let Zr = this.st;
-      if (!Zr) {
-        const rr = xr(Sr, new Qr(0));
-        "number" != typeof rr && rr.u === this.size || Er(0, `not a zstd frame of ${this.size} bytes`), Zr = this.st = xr(Sr, 1), Zr.e = 0, this.output = Zr.w
+        return Wd
+      })(this.parts, this.jK);
+      let Wd = this.st;
+      if (!Wd) {
+        const dd = td(Od, new md(0));
+        "number" != typeof dd && dd.u === this.size || vd(0, `not a zstd frame of ${this.size} bytes`), Wd = this.st = td(Od, 1), Wd.e = 0, this.output = Wd.w
       }
       for (;;) {
-        const rr = Sr.length - Zr.b;
-        if (rr < 3) {
+        const dd = Od.length - Wd.b;
+        if (dd < 3) {
           this.needed = 3;
           break
         }
-        const Qr = Sr[Zr.b],
-          Wr = Qr >> 1 & 3;
-        3 == Wr && Er(2);
-        const ar = Qr >> 3 | Sr[Zr.b + 1] << 5 | Sr[Zr.b + 2] << 13;
-        ar > Zr.m && Er(0), 0 == Wr && Zr.y + ar > Zr.u && Er(0);
-        const jr = 1 == Wr ? 4 : 3 + ar;
-        if (rr < jr) {
-          this.needed = jr;
+        const md = Od[Wd.b],
+          Fd = md >> 1 & 3;
+        3 == Fd && vd(2);
+        const Rd = md >> 3 | Od[Wd.b + 1] << 5 | Od[Wd.b + 2] << 13;
+        Rd > Wd.m && vd(0), 0 == Fd && Wd.y + Rd > Wd.u && vd(0);
+        const Xd = 1 == Fd ? 4 : 3 + Rd;
+        if (dd < Xd) {
+          this.needed = Xd;
           break
         }
-        if (Tr(Sr, Zr, Zr.w) || Er(5), Zr.e = Zr.y, (Zr.y > Zr.u || Zr.l && Zr.y != Zr.u) && Er(0), Zr.l) {
+        if (Jd(Od, Wd, Wd.w) || vd(5), Wd.e = Wd.y, (Wd.y > Wd.u || Wd.l && Wd.y != Wd.u) && vd(0), Wd.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = Zr.y;
-      const Wr = Sr.subarray(Zr.b);
-      this.parts = Wr.length ? [Wr] : [], this.wI = Wr.length, Zr.b = 0
+      this.decoded = Wd.y;
+      const Fd = Od.subarray(Wd.b);
+      this.parts = Fd.length ? [Fd] : [], this.jK = Fd.length, Wd.b = 0
     }
   }
-  class Or {
+  class xd {
     post;
     href = "";
-    Ix = null;
+    Ft = null;
     given = 0;
     stopped = !1;
-    constructor(rr) {
-      this.post = rr
+    constructor(dd) {
+      this.post = dd
     }
-    take(Sr) {
+    take(Od) {
       if (!this.stopped) try {
-        this.answer(Sr)
-      } catch (Qr) {
-        this.stop(Qr instanceof RangeError ? `out of memory decoding ${this.href}: ${rr(Qr)}` : `${this.href} did not decode: ${rr(Qr)}`)
+        this.answer(Od)
+      } catch (md) {
+        this.stop(md instanceof RangeError ? `out of memory decoding ${this.href}: ${dd(md)}` : `${this.href} did not decode: ${dd(md)}`)
       }
     }
-    answer(rr) {
-      if (null === this.Ix) {
-        const [Sr, Qr] = rr;
-        return this.href = Sr, void(this.Ix = new vr(Qr))
+    answer(dd) {
+      if (null === this.Ft) {
+        const [Od, md] = dd;
+        return this.href = Od, void(this.Ft = new Ud(md))
       }
-      if (null === rr) return void this.stop(`${this.href} ended before its module did`);
-      const Sr = this.Ix;
-      Sr.push(rr);
+      if (null === dd) return void this.stop(`${this.href} ended before its module did`);
+      const Od = this.Ft;
+      Od.push(dd);
       const {
-        output: Qr,
-        decoded: Zr
-      } = Sr;
-      if (null !== Qr && Zr > this.given) {
-        const rr = Qr.slice(this.given, Zr).buffer;
-        this.given = Zr, this.post(rr, [rr])
+        output: md,
+        decoded: Wd
+      } = Od;
+      if (null !== md && Wd > this.given) {
+        const dd = md.slice(this.given, Wd).buffer;
+        this.given = Wd, this.post(dd, [dd])
       }
-      Sr.done && this.stop(!0)
+      Od.done && this.stop(!0)
     }
-    stop(rr) {
-      this.stopped = !0, this.post(rr)
+    stop(dd) {
+      this.stopped = !0, this.post(dd)
     }
   }
-  const Lr = globalThis.WorkerGlobalScope;
-  if (void 0 !== Lr && globalThis instanceof Lr) {
-    const rr = globalThis,
-      Sr = new Or((function(Sr) {
-        let Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        rr.postMessage(Sr, Qr)
+  const Bd = globalThis.WorkerGlobalScope;
+  if (void 0 !== Bd && globalThis instanceof Bd) {
+    const dd = globalThis,
+      Od = new xd((function(Od) {
+        let md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        dd.postMessage(Od, md)
       }));
-    rr.addEventListener("message", (rr => {
+    dd.addEventListener("message", (dd => {
       let {
-        data: Qr
-      } = rr;
-      Sr.take(Qr)
+        data: md
+      } = dd;
+      Od.take(md)
     }))
   }
 })();

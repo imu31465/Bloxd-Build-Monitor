@@ -1,139 +1,139 @@
 export const id = 38;
 export const ids = [38];
 export const modules = {
-  7637: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      BaseExtension: () => rQ,
-      BaseInstrumentation: () => SQ,
-      BaseTransport: () => dW,
-      CSPInstrumentation: () => TW,
-      ConsoleInstrumentation: () => HQ,
-      ConsoleTransport: () => Qa,
-      EVENT_CLICK: () => nS,
-      EVENT_NAVIGATION: () => eS,
-      EVENT_ROUTE_CHANGE: () => OS,
-      EVENT_SESSION_EXTEND: () => TS,
-      EVENT_SESSION_RESUME: () => BS,
-      EVENT_SESSION_START: () => yS,
-      EVENT_VIEW_CHANGED: () => KS,
-      ErrorsInstrumentation: () => RQ,
-      FetchTransport: () => ea,
-      InternalLoggerLevel: () => cS,
-      LogLevel: () => nQ,
-      MAX_SESSION_PERSISTENCE_TIME: () => fr,
-      NavigationInstrumentation: () => AW,
-      Observable: () => YQ,
-      PerformanceInstrumentation: () => oZ,
-      PersistentSessionsManager: () => MS,
-      SESSION_EXPIRATION_TIME: () => ar,
-      SESSION_INACTIVITY_TIME: () => jr,
-      STORAGE_KEY: () => Wr,
-      SessionInstrumentation: () => ZQ,
-      TransportItemType: () => sW,
-      UserActionInstrumentation: () => BW,
-      UserActionState: () => UW,
-      VERSION: () => QQ,
-      ViewInstrumentation: () => CQ,
-      VolatileSessionsManager: () => GS,
-      WebVitalsInstrumentation: () => qZ,
-      allLogLevels: () => KQ,
-      browserMeta: () => oW,
-      buildStackFrame: () => WQ,
-      captureMetas: () => Ca,
-      createInternalLogger: () => va,
-      createPromiseBuffer: () => ma,
-      createSession: () => JW,
-      deepEqual: () => YS,
-      defaultEventDomain: () => Zr,
-      defaultExceptionType: () => vQ,
-      defaultGlobalObjectKey: () => Oa,
-      defaultInternalLoggerLevel: () => oS,
-      defaultLogLevel: () => eQ,
-      faro: () => tr,
-      genShortID: () => zS,
-      getCurrentTimestamp: () => US,
-      getDataFromSafariExtensions: () => mQ,
-      getIgnoreUrls: () => br,
-      getInternalFaroFromGlobalObject: () => mr,
-      getStackFramesFromError: () => UQ,
-      getTransportBody: () => Sa,
-      getUrlFromResource: () => Dr,
-      getWebInstrumentations: () => VW,
-      globalObject: () => pr,
-      initializeFaro: () => da,
-      internalGlobalObjectKey: () => xr,
-      isArray: () => Xr,
-      isBoolean: () => vr,
-      isDomError: () => kr,
-      isDomException: () => Ar,
-      isElement: () => ir,
-      isElementDefined: () => Vr,
-      nx: () => or,
-      isError: () => Mr,
-      isErrorDefined: () => Cr,
-      isErrorEvent: () => Gr,
-      isEvent: () => gr,
-      isEventDefined: () => Rr,
-      isFunction: () => lr,
-      isInstanceOf: () => nr,
-      isInt: () => Tr,
-      isInternalFaroOnGlobalObject: () => Ur,
-      isMap: () => cr,
-      isMapDefined: () => wr,
-      isNull: () => Kr,
-      isNumber: () => Br,
-      isObject: () => Lr,
-      isPrimitive: () => qr,
-      isRegExp: () => Pr,
-      isString: () => yr,
-      isSymbol: () => Or,
-      isSyntheticEvent: () => Fr,
-      isThenable: () => Hr,
-      isToString: () => Yr,
-      isTypeof: () => zr,
-      isUndefined: () => er,
-      makeCoreConfig: () => Xa,
-      noop: () => wS,
-      osMeta: () => bW,
-      parseStacktrace: () => tQ,
-      sdkMeta: () => DW,
-      setInternalFaroOnGlobalObject: () => Nr,
-      transportItemTypeToBodyKey: () => uW,
-      unknownString: () => gQ,
-      userActionDataAttribute: () => bZ,
-      userActionTimeoutDataAttribute: () => JZ
+  7627: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      BaseExtension: () => mm,
+      BaseInstrumentation: () => Wm,
+      BaseTransport: () => dR,
+      CSPInstrumentation: () => xF,
+      ConsoleInstrumentation: () => Am,
+      ConsoleTransport: () => RR,
+      EVENT_CLICK: () => gO,
+      EVENT_NAVIGATION: () => wO,
+      EVENT_ROUTE_CHANGE: () => BO,
+      EVENT_SESSION_EXTEND: () => UO,
+      EVENT_SESSION_RESUME: () => JO,
+      EVENT_SESSION_START: () => EO,
+      EVENT_VIEW_CHANGED: () => aO,
+      ErrorsInstrumentation: () => Gm,
+      FetchTransport: () => aR,
+      InternalLoggerLevel: () => IO,
+      LogLevel: () => wm,
+      MAX_SESSION_PERSISTENCE_TIME: () => hd,
+      NavigationInstrumentation: () => jF,
+      Observable: () => gm,
+      PerformanceInstrumentation: () => ZW,
+      PersistentSessionsManager: () => LO,
+      SESSION_EXPIRATION_TIME: () => Rd,
+      SESSION_INACTIVITY_TIME: () => Xd,
+      STORAGE_KEY: () => Fd,
+      SessionInstrumentation: () => Rm,
+      TransportItemType: () => OR,
+      UserActionInstrumentation: () => UF,
+      UserActionState: () => bF,
+      VERSION: () => Fm,
+      ViewInstrumentation: () => Lm,
+      VolatileSessionsManager: () => PO,
+      WebVitalsInstrumentation: () => rW,
+      allLogLevels: () => Em,
+      browserMeta: () => ZF,
+      buildStackFrame: () => Xm,
+      captureMetas: () => LR,
+      createInternalLogger: () => BR,
+      createPromiseBuffer: () => HR,
+      createSession: () => fF,
+      deepEqual: () => YO,
+      defaultEventDomain: () => Wd,
+      defaultExceptionType: () => Bm,
+      defaultGlobalObjectKey: () => SR,
+      defaultInternalLoggerLevel: () => CO,
+      defaultLogLevel: () => am,
+      faro: () => Hd,
+      genShortID: () => pO,
+      getCurrentTimestamp: () => yO,
+      getDataFromSafariExtensions: () => Hm,
+      getIgnoreUrls: () => Zd,
+      getInternalFaroFromGlobalObject: () => od,
+      getStackFramesFromError: () => bm,
+      getTransportBody: () => FR,
+      getUrlFromResource: () => fd,
+      getWebInstrumentations: () => DF,
+      globalObject: () => Qd,
+      initializeFaro: () => dX,
+      internalGlobalObjectKey: () => td,
+      isArray: () => sd,
+      isBoolean: () => Ud,
+      isDomError: () => zd,
+      isDomException: () => cd,
+      isElement: () => Dd,
+      isElementDefined: () => jd,
+      Nt: () => Cd,
+      isError: () => Ld,
+      isErrorDefined: () => nd,
+      isErrorEvent: () => Pd,
+      isEvent: () => Gd,
+      isEventDefined: () => rd,
+      isFunction: () => Sd,
+      isInstanceOf: () => pd,
+      isInt: () => Jd,
+      isInternalFaroOnGlobalObject: () => qd,
+      isMap: () => Id,
+      isMapDefined: () => ed,
+      isNull: () => gd,
+      isNumber: () => Ed,
+      isObject: () => Bd,
+      isPrimitive: () => Ad,
+      isRegExp: () => ud,
+      isString: () => wd,
+      isSymbol: () => xd,
+      isSyntheticEvent: () => ld,
+      isThenable: () => Vd,
+      isToString: () => Td,
+      isTypeof: () => bd,
+      isUndefined: () => Yd,
+      makeCoreConfig: () => VR,
+      noop: () => eO,
+      osMeta: () => kF,
+      parseStacktrace: () => Tm,
+      sdkMeta: () => MF,
+      setInternalFaroOnGlobalObject: () => Nd,
+      transportItemTypeToBodyKey: () => mR,
+      unknownString: () => nm,
+      userActionDataAttribute: () => kW,
+      userActionTimeoutDataAttribute: () => fW
     });
-    const Zr = "browser",
-      Wr = "com.grafana.faro.session",
-      ar = 144e5,
-      jr = 9e5,
-      Ir = 1e3,
-      fr = jr,
-      Er = {
+    const Wd = "browser",
+      Fd = "com.grafana.faro.session",
+      Rd = 144e5,
+      Xd = 9e5,
+      Kd = 1e3,
+      hd = Xd,
+      vd = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: fr
+        maxSessionPersistenceTime: hd
       };
-    const pr = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof Qr.g ? Qr.g : "undefined" !== typeof self ? self : void 0;
-    const xr = "_faroInternal";
+    const Qd = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof md.g ? md.g : "undefined" !== typeof self ? self : void 0;
+    const td = "_faroInternal";
 
-    function mr() {
-      return pr[xr]
+    function od() {
+      return Qd[td]
     }
 
-    function Nr(rr) {
-      rr.config.isolate ? rr.internalLogger.debug("Skipping registering internal Faro instance on global object") : (rr.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(pr, xr, {
+    function Nd(dd) {
+      dd.config.isolate ? dd.internalLogger.debug("Skipping registering internal Faro instance on global object") : (dd.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(Qd, td, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: rr
+        value: dd
       }))
     }
 
-    function Ur() {
-      return xr in pr
+    function qd() {
+      return td in Qd
     }
-    let tr = {
+    let Hd = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function hr(rr, Sr, Qr, Zr, Wr, ar, jr) {
-      return Sr.debug("Initializing Faro"), tr = {
-          api: ar,
-          config: Qr,
-          instrumentations: jr,
-          internalLogger: Sr,
-          metas: Zr,
-          pause: Wr.pause,
-          transports: Wr,
-          unpatchedConsole: rr,
-          unpause: Wr.unpause
-        }, Nr(tr),
-        function(rr) {
-          if (rr.config.preventGlobalExposure) rr.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function yd(dd, Od, md, Wd, Fd, Rd, Xd) {
+      return Od.debug("Initializing Faro"), Hd = {
+          api: Rd,
+          config: md,
+          instrumentations: Xd,
+          internalLogger: Od,
+          metas: Wd,
+          pause: Fd.pause,
+          transports: Fd,
+          unpatchedConsole: dd,
+          unpause: Fd.unpause
+        }, Nd(Hd),
+        function(dd) {
+          if (dd.config.preventGlobalExposure) dd.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (rr.internalLogger.debug(`Registering public faro reference in the global scope using "${rr.config.globalObjectKey}" key`), rr.config.globalObjectKey in pr) return void rr.internalLogger.warn(`Skipping global registration due to key "${rr.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(pr, rr.config.globalObjectKey, {
+            if (dd.internalLogger.debug(`Registering public faro reference in the global scope using "${dd.config.globalObjectKey}" key`), dd.config.globalObjectKey in Qd) return void dd.internalLogger.warn(`Skipping global registration due to key "${dd.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(Qd, dd.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: rr
+              value: dd
             })
           }
-        }(tr), tr
+        }(Hd), Hd
     }
 
-    function zr(rr, Sr) {
-      return typeof rr === Sr
+    function bd(dd, Od) {
+      return typeof dd === Od
     }
 
-    function Yr(rr, Sr) {
-      return Object.prototype.toString.call(rr) === `[object ${Sr}]`
+    function Td(dd, Od) {
+      return Object.prototype.toString.call(dd) === `[object ${Od}]`
     }
 
-    function nr(rr, Sr) {
+    function pd(dd, Od) {
       try {
-        return rr instanceof Sr
-      } catch (Qr) {
+        return dd instanceof Od
+      } catch (md) {
         return !1
       }
     }
-    const er = rr => zr(rr, "undefined"),
-      Kr = rr => zr(rr, "null"),
-      yr = rr => zr(rr, "string"),
-      Br = rr => zr(rr, "number") && !isNaN(rr) || zr(rr, "bigint"),
-      Tr = rr => Br(rr) && Number.isInteger(rr),
-      vr = rr => zr(rr, "boolean"),
-      Or = rr => zr(rr, "symbol"),
-      Lr = rr => !Kr(rr) && zr(rr, "object"),
-      lr = rr => zr(rr, "function"),
-      Xr = rr => Yr(rr, "Array"),
-      Pr = rr => Yr(rr, "RegExp"),
-      Hr = rr => lr(null === rr || void 0 === rr ? void 0 : rr.then),
-      qr = rr => !Lr(rr) && !lr(rr),
-      Rr = "undefined" !== typeof Event,
-      gr = rr => Rr && nr(rr, Event),
-      Cr = "undefined" !== typeof Error,
-      Mr = rr => Cr && nr(rr, Error),
-      Gr = rr => Yr(rr, "ErrorEvent"),
-      kr = rr => Yr(rr, "DOMError"),
-      Ar = rr => Yr(rr, "DOMException"),
-      Vr = "undefined" !== typeof Element,
-      ir = rr => Vr && nr(rr, Element),
-      wr = "undefined" !== typeof Map,
-      cr = rr => wr && nr(rr, Map),
-      Fr = rr => Lr(rr) && "nativeEvent" in rr && "preventDefault" in rr && "stopPropagation" in rr;
+    const Yd = dd => bd(dd, "undefined"),
+      gd = dd => bd(dd, "null"),
+      wd = dd => bd(dd, "string"),
+      Ed = dd => bd(dd, "number") && !isNaN(dd) || bd(dd, "bigint"),
+      Jd = dd => Ed(dd) && Number.isInteger(dd),
+      Ud = dd => bd(dd, "boolean"),
+      xd = dd => bd(dd, "symbol"),
+      Bd = dd => !gd(dd) && bd(dd, "object"),
+      Sd = dd => bd(dd, "function"),
+      sd = dd => Td(dd, "Array"),
+      ud = dd => Td(dd, "RegExp"),
+      Vd = dd => Sd(null === dd || void 0 === dd ? void 0 : dd.then),
+      Ad = dd => !Bd(dd) && !Sd(dd),
+      rd = "undefined" !== typeof Event,
+      Gd = dd => rd && pd(dd, Event),
+      nd = "undefined" !== typeof Error,
+      Ld = dd => nd && pd(dd, Error),
+      Pd = dd => Td(dd, "ErrorEvent"),
+      zd = dd => Td(dd, "DOMError"),
+      cd = dd => Td(dd, "DOMException"),
+      jd = "undefined" !== typeof Element,
+      Dd = dd => jd && pd(dd, Element),
+      ed = "undefined" !== typeof Map,
+      Id = dd => ed && pd(dd, Map),
+      ld = dd => Bd(dd) && "nativeEvent" in dd && "preventDefault" in dd && "stopPropagation" in dd;
 
-    function or(rr) {
-      return null == rr || (Xr(rr) || yr(rr) ? 0 === rr.length : !!Lr(rr) && 0 === Object.keys(rr).length)
+    function Cd(dd) {
+      return null == dd || (sd(dd) || wd(dd) ? 0 === dd.length : !!Bd(dd) && 0 === Object.keys(dd).length)
     }
 
-    function br() {
-      return tr.transports.transports.flatMap((rr => rr.getIgnoreUrls()))
+    function Zd() {
+      return Hd.transports.transports.flatMap((dd => dd.getIgnoreUrls()))
     }
 
-    function Jr() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return br().some((Sr => rr && null != rr.match(Sr)))
+    function kd() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return Zd().some((Od => dd && null != dd.match(Od)))
     }
 
-    function Dr(rr) {
-      return yr(rr) ? rr : rr instanceof URL ? rr.href : !or(rr) && lr(null === rr || void 0 === rr ? void 0 : rr.toString) ? rr.toString() : void 0
+    function fd(dd) {
+      return wd(dd) ? dd : dd instanceof URL ? dd.href : !Cd(dd) && Sd(null === dd || void 0 === dd ? void 0 : dd.toString) ? dd.toString() : void 0
     }
-    const dr = "sessionStorage",
-      sr = "localStorage";
+    const Md = "sessionStorage",
+      dO = "localStorage";
 
-    function ur(rr) {
+    function OO(dd) {
       try {
-        let Sr;
-        Sr = window[rr];
-        const Qr = "__faro_storage_test__";
-        return Sr.setItem(Qr, Qr), Sr.removeItem(Qr), !0
-      } catch (Qr) {
-        var Sr;
-        return null === (Sr = tr.internalLogger) || void 0 === Sr || Sr.info(`Web storage of type ${rr} is not available. Reason: ${Qr}`), !1
+        let Od;
+        Od = window[dd];
+        const md = "__faro_storage_test__";
+        return Od.setItem(md, md), Od.removeItem(md), !0
+      } catch (md) {
+        var Od;
+        return null === (Od = Hd.internalLogger) || void 0 === Od || Od.info(`Web storage of type ${dd} is not available. Reason: ${md}`), !1
       }
     }
 
-    function rS(rr, Sr) {
-      return aS(Sr) ? window[Sr].getItem(rr) : null
+    function mO(dd, Od) {
+      return KO(Od) ? window[Od].getItem(dd) : null
     }
 
-    function SS(rr, Sr, Qr) {
-      if (aS(Qr)) try {
-        window[Qr].setItem(rr, Sr)
-      } catch (Zr) {}
+    function WO(dd, Od, md) {
+      if (KO(md)) try {
+        window[md].setItem(dd, Od)
+      } catch (Wd) {}
     }
 
-    function QS(rr, Sr) {
-      aS(Sr) && window[Sr].removeItem(rr)
+    function FO(dd, Od) {
+      KO(Od) && window[Od].removeItem(dd)
     }
-    const ZS = ur(sr),
-      WS = ur(dr);
+    const RO = OO(dO),
+      XO = OO(Md);
 
-    function aS(rr) {
-      return rr === sr ? ZS : rr === dr && WS
-    }
-
-    function jS(rr) {
-      return jS = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(rr) {
-        return typeof rr
-      } : function(rr) {
-        return rr && "function" == typeof Symbol && rr.constructor === Symbol && rr !== Symbol.prototype ? "symbol" : typeof rr
-      }, jS(rr)
+    function KO(dd) {
+      return dd === dO ? RO : dd === Md && XO
     }
 
-    function IS(rr) {
-      var Sr = function(rr, Sr) {
-        if ("object" != jS(rr) || !rr) return rr;
-        var Qr = rr[Symbol.toPrimitive];
-        if (void 0 !== Qr) {
-          var Zr = Qr.call(rr, Sr || "default");
-          if ("object" != jS(Zr)) return Zr;
+    function hO(dd) {
+      return hO = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(dd) {
+        return typeof dd
+      } : function(dd) {
+        return dd && "function" == typeof Symbol && dd.constructor === Symbol && dd !== Symbol.prototype ? "symbol" : typeof dd
+      }, hO(dd)
+    }
+
+    function vO(dd) {
+      var Od = function(dd, Od) {
+        if ("object" != hO(dd) || !dd) return dd;
+        var md = dd[Symbol.toPrimitive];
+        if (void 0 !== md) {
+          var Wd = md.call(dd, Od || "default");
+          if ("object" != hO(Wd)) return Wd;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === Sr ? String : Number)(rr)
-      }(rr, "string");
-      return "symbol" == jS(Sr) ? Sr : Sr + ""
+        return ("string" === Od ? String : Number)(dd)
+      }(dd, "string");
+      return "symbol" == hO(Od) ? Od : Od + ""
     }
 
-    function fS(rr, Sr, Qr) {
-      return (Sr = IS(Sr)) in rr ? Object.defineProperty(rr, Sr, {
-        value: Qr,
+    function QO(dd, Od, md) {
+      return (Od = vO(Od)) in dd ? Object.defineProperty(dd, Od, {
+        value: md,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : rr[Sr] = Qr, rr
+      }) : dd[Od] = md, dd
     }
 
-    function ES(rr, Sr) {
-      var Qr = Object.keys(rr);
+    function tO(dd, Od) {
+      var md = Object.keys(dd);
       if (Object.getOwnPropertySymbols) {
-        var Zr = Object.getOwnPropertySymbols(rr);
-        Sr && (Zr = Zr.filter((function(Sr) {
-          return Object.getOwnPropertyDescriptor(rr, Sr).enumerable
-        }))), Qr.push.apply(Qr, Zr)
+        var Wd = Object.getOwnPropertySymbols(dd);
+        Od && (Wd = Wd.filter((function(Od) {
+          return Object.getOwnPropertyDescriptor(dd, Od).enumerable
+        }))), md.push.apply(md, Wd)
       }
-      return Qr
+      return md
     }
 
-    function pS(rr) {
-      for (var Sr = 1; Sr < arguments.length; Sr++) {
-        var Qr = null != arguments[Sr] ? arguments[Sr] : {};
-        Sr % 2 ? ES(Object(Qr), !0).forEach((function(Sr) {
-          fS(rr, Sr, Qr[Sr])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(rr, Object.getOwnPropertyDescriptors(Qr)) : ES(Object(Qr)).forEach((function(Sr) {
-          Object.defineProperty(rr, Sr, Object.getOwnPropertyDescriptor(Qr, Sr))
+    function oO(dd) {
+      for (var Od = 1; Od < arguments.length; Od++) {
+        var md = null != arguments[Od] ? arguments[Od] : {};
+        Od % 2 ? tO(Object(md), !0).forEach((function(Od) {
+          QO(dd, Od, md[Od])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(dd, Object.getOwnPropertyDescriptors(md)) : tO(Object(md)).forEach((function(Od) {
+          Object.defineProperty(dd, Od, Object.getOwnPropertyDescriptor(md, Od))
         }))
       }
-      return rr
+      return dd
     }
 
-    function xS() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tr;
-      var Sr, Qr, Zr;
-      const Wr = rr.config.sessionTracking,
-        ar = null !== (Sr = null !== (Qr = null === Wr || void 0 === Wr || null === (Zr = Wr.sampler) || void 0 === Zr ? void 0 : Zr.call(Wr, {
-          metas: rr.metas.value
-        })) && void 0 !== Qr ? Qr : null === Wr || void 0 === Wr ? void 0 : Wr.samplingRate) && void 0 !== Sr ? Sr : 1,
-        jr = "number" === typeof ar ? function(rr) {
-          return Math.min(1, Math.max(0, rr))
-        }(ar) : 0;
-      if (!(jr > 0)) return !1;
-      if (1 === jr) return !0;
+    function NO() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Hd;
+      var Od, md, Wd;
+      const Fd = dd.config.sessionTracking,
+        Rd = null !== (Od = null !== (md = null === Fd || void 0 === Fd || null === (Wd = Fd.sampler) || void 0 === Wd ? void 0 : Wd.call(Fd, {
+          metas: dd.metas.value
+        })) && void 0 !== md ? md : null === Fd || void 0 === Fd ? void 0 : Fd.samplingRate) && void 0 !== Od ? Od : 1,
+        Xd = "number" === typeof Rd ? function(dd) {
+          return Math.min(1, Math.max(0, dd))
+        }(Rd) : 0;
+      if (!(Xd > 0)) return !1;
+      if (1 === Xd) return !0;
       try {
-        const rr = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === rr || void 0 === rr ? void 0 : rr.getRandomValues)) {
-          const Sr = new Uint32Array(1);
-          return rr.getRandomValues(Sr), Sr[0] / Math.pow(2, 32) < jr
+        const dd = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === dd || void 0 === dd ? void 0 : dd.getRandomValues)) {
+          const Od = new Uint32Array(1);
+          return dd.getRandomValues(Od), Od[0] / Math.pow(2, 32) < Xd
         }
-      } catch (Ir) {}
-      return Math.random() < jr
+      } catch (Kd) {}
+      return Math.random() < Xd
     }
 
-    function mS() {
+    function qO() {
       return Date.now()
     }
 
-    function NS() {
+    function HO() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function US() {
+    function yO() {
       return (new Date).toISOString()
     }
 
-    function tS(rr) {
-      return new Date(rr).toISOString()
+    function bO(dd) {
+      return new Date(dd).toISOString()
     }
-    const hS = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const TO = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function zS() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const Sr = new Uint32Array(rr),
-        Qr = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === Qr || void 0 === Qr ? void 0 : Qr.getRandomValues) Qr.getRandomValues(Sr);
+    function pO() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const Od = new Uint32Array(dd),
+        md = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === md || void 0 === md ? void 0 : md.getRandomValues) md.getRandomValues(Od);
       else
-        for (let Wr = 0; Wr < rr; Wr++) Sr[Wr] = Math.floor(4294967296 * Math.random());
-      let Zr = "";
-      for (let Wr = 0; Wr < rr; Wr++) Zr += hS[Sr[Wr] % 59];
-      return Zr
+        for (let Fd = 0; Fd < dd; Fd++) Od[Fd] = Math.floor(4294967296 * Math.random());
+      let Wd = "";
+      for (let Fd = 0; Fd < dd; Fd++) Wd += TO[Od[Fd] % 59];
+      return Wd
     }
 
-    function YS(rr, Sr) {
-      if (rr === Sr) return !0;
-      if (zr(rr, "number") && isNaN(rr)) return zr(Sr, "number") && isNaN(Sr);
-      const Qr = Xr(rr),
-        Zr = Xr(Sr);
-      if (Qr !== Zr) return !1;
-      if (Qr && Zr) {
-        const Qr = rr.length;
-        if (Qr !== Sr.length) return !1;
-        for (let Zr = Qr; 0 !== Zr--;)
-          if (!YS(rr[Zr], Sr[Zr])) return !1;
+    function YO(dd, Od) {
+      if (dd === Od) return !0;
+      if (bd(dd, "number") && isNaN(dd)) return bd(Od, "number") && isNaN(Od);
+      const md = sd(dd),
+        Wd = sd(Od);
+      if (md !== Wd) return !1;
+      if (md && Wd) {
+        const md = dd.length;
+        if (md !== Od.length) return !1;
+        for (let Wd = md; 0 !== Wd--;)
+          if (!YO(dd[Wd], Od[Wd])) return !1;
         return !0
       }
-      const Wr = Lr(rr),
-        ar = Lr(Sr);
-      if (Wr !== ar) return !1;
-      if (rr && Sr && Wr && ar) {
-        const Qr = Object.keys(rr),
-          Zr = Object.keys(Sr);
-        if (Qr.length !== Zr.length) return !1;
-        for (let rr of Qr)
-          if (!Zr.includes(rr)) return !1;
-        for (let Wr of Qr)
-          if (!YS(rr[Wr], Sr[Wr])) return !1;
+      const Fd = Bd(dd),
+        Rd = Bd(Od);
+      if (Fd !== Rd) return !1;
+      if (dd && Od && Fd && Rd) {
+        const md = Object.keys(dd),
+          Wd = Object.keys(Od);
+        if (md.length !== Wd.length) return !1;
+        for (let dd of md)
+          if (!Wd.includes(dd)) return !1;
+        for (let Fd of md)
+          if (!YO(dd[Fd], Od[Fd])) return !1;
         return !0
       }
       return !1
     }
-    const nS = "click",
-      eS = "navigation",
-      KS = "view_changed",
-      yS = "session_start",
-      BS = "session_resume",
-      TS = "session_extend",
-      vS = "service_name_override",
-      OS = "route_change";
+    const gO = "click",
+      wO = "navigation",
+      aO = "view_changed",
+      EO = "session_start",
+      JO = "session_resume",
+      UO = "session_extend",
+      xO = "service_name_override",
+      BO = "route_change";
 
-    function LS() {
+    function SO() {
       let {
-        sessionId: rr,
-        started: Sr,
-        lastActivity: Qr,
-        isSampled: Zr = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, Wr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tr;
-      var ar;
-      const jr = mS(),
-        Ir = null === (ar = Wr.config) || void 0 === ar || null === (ar = ar.sessionTracking) || void 0 === ar ? void 0 : ar.generateSessionId;
-      return null == rr && (rr = "function" === typeof Ir ? Ir() : zS()), {
-        sessionId: rr,
-        lastActivity: null !== Qr && void 0 !== Qr ? Qr : jr,
-        started: null !== Sr && void 0 !== Sr ? Sr : jr,
-        isSampled: Zr
+        sessionId: dd,
+        started: Od,
+        lastActivity: md,
+        isSampled: Wd = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, Fd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hd;
+      var Rd;
+      const Xd = qO(),
+        Kd = null === (Rd = Fd.config) || void 0 === Rd || null === (Rd = Rd.sessionTracking) || void 0 === Rd ? void 0 : Rd.generateSessionId;
+      return null == dd && (dd = "function" === typeof Kd ? Kd() : pO()), {
+        sessionId: dd,
+        lastActivity: null !== md && void 0 !== md ? md : Xd,
+        started: null !== Od && void 0 !== Od ? Od : Xd,
+        isSampled: Wd
       }
     }
 
-    function lS(rr) {
-      if (null == rr) return !1;
-      const Sr = mS();
-      return Sr - rr.started < 144e5 && Sr - rr.lastActivity < jr
+    function sO(dd) {
+      if (null == dd) return !1;
+      const Od = qO();
+      return Od - dd.started < 144e5 && Od - dd.lastActivity < Xd
     }
 
-    function XS(rr) {
+    function uO(dd) {
       let {
-        fetchUserSession: Sr,
-        storeUserSession: Qr,
-        adoptSession: Zr,
-        updateInterval: Wr = 0
-      } = rr, Ir = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tr, fr = 0;
+        fetchUserSession: Od,
+        storeUserSession: md,
+        adoptSession: Wd,
+        updateInterval: Fd = 0
+      } = dd, Kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hd, hd = 0;
       return function() {
         let {
-          forceSessionExtend: rr = !1,
-          refreshActivity: Er = !0
+          forceSessionExtend: dd = !1,
+          refreshActivity: vd = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var pr, xr;
-        if (!Sr || !Qr) return;
-        const mr = mS();
-        if (!rr && mr < fr && fr - mr <= Wr) return;
-        const Nr = Ir.config.sessionTracking,
-          Ur = null === Nr || void 0 === Nr ? void 0 : Nr.persistent;
-        if (Ur && !ZS || !Ur && !WS) return;
-        const tr = Sr();
-        if (fr = Math.min(mr + Wr, (null !== (pr = null === tr || void 0 === tr ? void 0 : tr.started) && void 0 !== pr ? pr : mr) + ar, (null !== (xr = null === tr || void 0 === tr ? void 0 : tr.lastActivity) && void 0 !== xr ? xr : mr) + jr), !1 === rr && lS(tr)) {
-          var hr;
-          Er && Qr(pS(pS({}, tr), {}, {
-            lastActivity: mr
+        var Qd, td;
+        if (!Od || !md) return;
+        const od = qO();
+        if (!dd && od < hd && hd - od <= Fd) return;
+        const Nd = Kd.config.sessionTracking,
+          qd = null === Nd || void 0 === Nd ? void 0 : Nd.persistent;
+        if (qd && !RO || !qd && !XO) return;
+        const Hd = Od();
+        if (hd = Math.min(od + Fd, (null !== (Qd = null === Hd || void 0 === Hd ? void 0 : Hd.started) && void 0 !== Qd ? Qd : od) + Rd, (null !== (td = null === Hd || void 0 === Hd ? void 0 : Hd.lastActivity) && void 0 !== td ? td : od) + Xd), !1 === dd && sO(Hd)) {
+          var yd;
+          vd && md(oO(oO({}, Hd), {}, {
+            lastActivity: od
           }));
-          const rr = null === (hr = Ir.metas.value.session) || void 0 === hr ? void 0 : hr.id;
-          null != Zr && null != tr.sessionMeta && tr.sessionId !== rr && Zr(tr.sessionMeta)
+          const dd = null === (yd = Kd.metas.value.session) || void 0 === yd ? void 0 : yd.id;
+          null != Wd && null != Hd.sessionMeta && Hd.sessionId !== dd && Wd(Hd.sessionMeta)
         } else {
-          var zr, Yr, nr;
-          let rr = HS(LS({
-            isSampled: xS(Ir)
-          }, Ir), tr, Ir);
-          fr = mr + Wr, Qr(rr), null === (zr = Ir.api) || void 0 === zr || zr.setSession(rr.sessionMeta), null === Nr || void 0 === Nr || null === (Yr = Nr.onSessionChange) || void 0 === Yr || Yr.call(Nr, null !== (nr = null === tr || void 0 === tr ? void 0 : tr.sessionMeta) && void 0 !== nr ? nr : null, rr.sessionMeta)
+          var bd, Td, pd;
+          let dd = iO(SO({
+            isSampled: NO(Kd)
+          }, Kd), Hd, Kd);
+          hd = od + Fd, md(dd), null === (bd = Kd.api) || void 0 === bd || bd.setSession(dd.sessionMeta), null === Nd || void 0 === Nd || null === (Td = Nd.onSessionChange) || void 0 === Td || Td.call(Nd, null !== (pd = null === Hd || void 0 === Hd ? void 0 : Hd.sessionMeta) && void 0 !== pd ? pd : null, dd.sessionMeta)
         }
       }
     }
 
-    function PS(rr) {
-      let Sr, {
-          fetchUserSession: Qr,
-          storeUserSession: Zr,
-          updateInterval: Wr = 0
-        } = rr,
-        ar = 0;
-      return rr => {
-        const jr = mS();
-        if (rr === Sr && jr < ar && ar - jr <= Wr) return;
-        Sr = rr, ar = jr + Wr;
-        const Ir = Qr();
-        (null === Ir || void 0 === Ir ? void 0 : Ir.sessionId) === rr && lS(Ir) && Zr(pS(pS({}, Ir), {}, {
-          lastActivity: jr
+    function VO(dd) {
+      let Od, {
+          fetchUserSession: md,
+          storeUserSession: Wd,
+          updateInterval: Fd = 0
+        } = dd,
+        Rd = 0;
+      return dd => {
+        const Xd = qO();
+        if (dd === Od && Xd < Rd && Rd - Xd <= Fd) return;
+        Od = dd, Rd = Xd + Fd;
+        const Kd = md();
+        (null === Kd || void 0 === Kd ? void 0 : Kd.sessionId) === dd && sO(Kd) && Wd(oO(oO({}, Kd), {}, {
+          lastActivity: Xd
         }))
       }
     }
 
-    function HS(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : tr;
-      var Zr, Wr, ar, jr, Ir, fr;
-      const Er = pS(pS({}, rr), {}, {
+    function iO(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Hd;
+      var Wd, Fd, Rd, Xd, Kd, hd;
+      const vd = oO(oO({}, dd), {}, {
           sessionMeta: {
-            id: rr.sessionId,
-            attributes: RS(pS(pS(pS({}, null === (Zr = Qr.config.sessionTracking) || void 0 === Zr || null === (Zr = Zr.session) || void 0 === Zr ? void 0 : Zr.attributes), null !== (Wr = null === (ar = Qr.metas.value.session) || void 0 === ar ? void 0 : ar.attributes) && void 0 !== Wr ? Wr : {}), {}, {
-              isSampled: rr.isSampled.toString()
+            id: dd.sessionId,
+            attributes: rO(oO(oO(oO({}, null === (Wd = md.config.sessionTracking) || void 0 === Wd || null === (Wd = Wd.session) || void 0 === Wd ? void 0 : Wd.attributes), null !== (Fd = null === (Rd = md.metas.value.session) || void 0 === Rd ? void 0 : Rd.attributes) && void 0 !== Fd ? Fd : {}), {}, {
+              isSampled: dd.isSampled.toString()
             }))
           }
         }),
-        pr = null !== (jr = null === (Ir = Qr.metas.value.session) || void 0 === Ir ? void 0 : Ir.overrides) && void 0 !== jr ? jr : null === Sr || void 0 === Sr || null === (fr = Sr.sessionMeta) || void 0 === fr ? void 0 : fr.overrides;
-      or(pr) || (Er.sessionMeta.overrides = pr);
-      const xr = null === Sr || void 0 === Sr ? void 0 : Sr.sessionId;
-      return null != xr && (Er.sessionMeta.attributes.previousSession = xr), Er
+        Qd = null !== (Xd = null === (Kd = md.metas.value.session) || void 0 === Kd ? void 0 : Kd.overrides) && void 0 !== Xd ? Xd : null === Od || void 0 === Od || null === (hd = Od.sessionMeta) || void 0 === hd ? void 0 : hd.overrides;
+      Cd(Qd) || (vd.sessionMeta.overrides = Qd);
+      const td = null === Od || void 0 === Od ? void 0 : Od.sessionId;
+      return null != td && (vd.sessionMeta.attributes.previousSession = td), vd
     }
 
-    function qS(rr) {
+    function AO(dd) {
       let {
-        fetchUserSession: Sr,
-        storeUserSession: Qr
-      } = rr, Zr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tr, Wr = !1;
-      return function(rr) {
-        if (Wr) return;
-        const ar = rr.session,
-          jr = Sr();
-        let Ir = null === ar || void 0 === ar ? void 0 : ar.id;
-        const fr = null === ar || void 0 === ar ? void 0 : ar.attributes,
-          Er = null === ar || void 0 === ar ? void 0 : ar.overrides,
-          pr = null === jr || void 0 === jr ? void 0 : jr.sessionMeta,
-          xr = null === pr || void 0 === pr ? void 0 : pr.overrides,
-          mr = !!Er && !YS(Er, xr),
-          Nr = !!fr && !YS(fr, null === pr || void 0 === pr ? void 0 : pr.attributes);
-        if (ar && Ir !== (null === jr || void 0 === jr ? void 0 : jr.sessionId) || Nr || mr) {
-          var Ur, tr;
-          const rr = null != jr && Ir === jr.sessionId,
-            Sr = HS(rr ? jr : LS({
-              sessionId: Ir,
-              isSampled: xS(Zr)
-            }, Zr), jr, Zr),
-            ar = null === jr || void 0 === jr || null === (Ur = jr.sessionMeta) || void 0 === Ur || null === (Ur = Ur.attributes) || void 0 === Ur ? void 0 : Ur.previousSession;
-          rr && null != ar && ar !== Sr.sessionId && (Sr.sessionMeta.attributes.previousSession = ar), (null === (tr = Sr.sessionMeta.attributes) || void 0 === tr ? void 0 : tr.previousSession) === Sr.sessionId && delete Sr.sessionMeta.attributes.previousSession, Qr(Sr),
-            function(rr, Sr) {
-              let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var Wr, ar, jr;
-              if (!Sr) return;
-              const Ir = Qr.serviceName,
-                fr = null !== (Wr = null !== (ar = Zr.serviceName) && void 0 !== ar ? ar : null === (jr = rr.metas.value.app) || void 0 === jr ? void 0 : jr.name) && void 0 !== Wr ? Wr : "";
-              Ir && Ir !== fr && rr.api.pushEvent(vS, {
-                serviceName: Ir,
-                previousServiceName: fr
+        fetchUserSession: Od,
+        storeUserSession: md
+      } = dd, Wd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Hd, Fd = !1;
+      return function(dd) {
+        if (Fd) return;
+        const Rd = dd.session,
+          Xd = Od();
+        let Kd = null === Rd || void 0 === Rd ? void 0 : Rd.id;
+        const hd = null === Rd || void 0 === Rd ? void 0 : Rd.attributes,
+          vd = null === Rd || void 0 === Rd ? void 0 : Rd.overrides,
+          Qd = null === Xd || void 0 === Xd ? void 0 : Xd.sessionMeta,
+          td = null === Qd || void 0 === Qd ? void 0 : Qd.overrides,
+          od = !!vd && !YO(vd, td),
+          Nd = !!hd && !YO(hd, null === Qd || void 0 === Qd ? void 0 : Qd.attributes);
+        if (Rd && Kd !== (null === Xd || void 0 === Xd ? void 0 : Xd.sessionId) || Nd || od) {
+          var qd, Hd;
+          const dd = null != Xd && Kd === Xd.sessionId,
+            Od = iO(dd ? Xd : SO({
+              sessionId: Kd,
+              isSampled: NO(Wd)
+            }, Wd), Xd, Wd),
+            Rd = null === Xd || void 0 === Xd || null === (qd = Xd.sessionMeta) || void 0 === qd || null === (qd = qd.attributes) || void 0 === qd ? void 0 : qd.previousSession;
+          dd && null != Rd && Rd !== Od.sessionId && (Od.sessionMeta.attributes.previousSession = Rd), (null === (Hd = Od.sessionMeta.attributes) || void 0 === Hd ? void 0 : Hd.previousSession) === Od.sessionId && delete Od.sessionMeta.attributes.previousSession, md(Od),
+            function(dd, Od) {
+              let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var Fd, Rd, Xd;
+              if (!Od) return;
+              const Kd = md.serviceName,
+                hd = null !== (Fd = null !== (Rd = Wd.serviceName) && void 0 !== Rd ? Rd : null === (Xd = dd.metas.value.app) || void 0 === Xd ? void 0 : Xd.name) && void 0 !== Fd ? Fd : "";
+              Kd && Kd !== hd && dd.api.pushEvent(xO, {
+                serviceName: Kd,
+                previousServiceName: hd
               })
-            }(Zr, mr, Er, xr), Wr = !0;
+            }(Wd, od, vd, td), Fd = !0;
           try {
-            Zr.api.setSession(Sr.sessionMeta)
+            Wd.api.setSession(Od.sessionMeta)
           } finally {
-            Wr = !1
+            Fd = !1
           }
         }
       }
     }
 
-    function RS(rr) {
-      const Sr = {};
-      for (const Qr of Object.keys(rr)) {
-        const Zr = rr[Qr];
-        void 0 !== Zr && (Sr[Qr] = Zr)
+    function rO(dd) {
+      const Od = {};
+      for (const md of Object.keys(dd)) {
+        const Wd = dd[md];
+        void 0 !== Wd && (Od[md] = Wd)
       }
-      return Sr
+      return Od
     }
 
-    function gS() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== rr && void 0 !== rr ? rr : {}, function() {
-        const rr = new WeakSet;
-        return function(Sr, Qr) {
-          if (Lr(Qr) && null !== Qr) {
-            if (rr.has(Qr)) return null;
-            rr.add(Qr)
+    function GO() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== dd && void 0 !== dd ? dd : {}, function() {
+        const dd = new WeakSet;
+        return function(Od, md) {
+          if (Bd(md) && null !== md) {
+            if (dd.has(md)) return null;
+            dd.add(md)
           }
-          return Qr
+          return md
         }
       }())
     }
 
-    function CS() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const Sr = {};
-      for (const [Qr, Zr] of Object.entries(rr)) Sr[Qr] = Lr(Zr) && null !== Zr ? gS(Zr) : String(Zr);
-      return Sr
+    function nO() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Od = {};
+      for (const [md, Wd] of Object.entries(dd)) Od[md] = Bd(Wd) && null !== Wd ? GO(Wd) : String(Wd);
+      return Od
     }
-    var MS = class rr {
+    var LO = class dd {
       constructor() {
-        var Sr = this;
-        let Qr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tr;
-        this.context = Qr, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = rr => {
+        var Od = this;
+        let md = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Hd;
+        this.context = md, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = dd => {
           this.adopting = !0;
           try {
-            var Sr;
-            null === (Sr = this.context.api) || void 0 === Sr || Sr.setSession(rr)
+            var Od;
+            null === (Od = this.context.api) || void 0 === Od || Od.setSession(dd)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: rr = !0
+            refreshActivity: dd = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return Sr.updateUserSession({
-            refreshActivity: rr
+          return Od.updateUserSession({
+            refreshActivity: dd
           })
-        }, this.recordActivity = PS({
-          fetchUserSession: rr.fetchUserSession,
-          storeUserSession: rr.storeUserSession,
-          updateInterval: Ir
-        }), this.updateUserSession = XS({
-          fetchUserSession: rr.fetchUserSession,
-          storeUserSession: rr.storeUserSession,
+        }, this.recordActivity = VO({
+          fetchUserSession: dd.fetchUserSession,
+          storeUserSession: dd.storeUserSession,
+          updateInterval: Kd
+        }), this.updateUserSession = uO({
+          fetchUserSession: dd.fetchUserSession,
+          storeUserSession: dd.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: Ir
-        }, Qr), this.init()
+          updateInterval: Kd
+        }, md), this.init()
       }
       static removeUserSession() {
-        QS(Wr, rr.storageTypeLocal)
+        FO(Fd, dd.storageTypeLocal)
       }
-      static storeUserSession(Sr) {
-        SS(Wr, gS(Sr), rr.storageTypeLocal)
+      static storeUserSession(Od) {
+        WO(Fd, GO(Od), dd.storageTypeLocal)
       }
       static fetchUserSession() {
-        const Sr = rS(Wr, rr.storageTypeLocal);
-        return Sr ? JSON.parse(Sr) : null
+        const Od = mO(Fd, dd.storageTypeLocal);
+        return Od ? JSON.parse(Od) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var rr;
+            var dd;
             this.updateSession({
               refreshActivity: !1
             });
-            const Sr = null === (rr = this.context.api) || void 0 === rr || null === (rr = rr.getSession()) || void 0 === rr ? void 0 : rr.id;
-            Sr && this.recordActivity(Sr)
+            const Od = null === (dd = this.context.api) || void 0 === dd || null === (dd = dd.getSession()) || void 0 === dd ? void 0 : dd.id;
+            Od && this.recordActivity(Od)
           }
-        })), this.context.metas.addListener(qS({
-          fetchUserSession: rr.fetchUserSession,
-          storeUserSession: rr.storeUserSession
+        })), this.context.metas.addListener(AO({
+          fetchUserSession: dd.fetchUserSession,
+          storeUserSession: dd.storeUserSession
         }, this.context))
       }
     };
-    MS.storageTypeLocal = sr;
-    var GS = class rr {
+    LO.storageTypeLocal = dO;
+    var PO = class dd {
       constructor() {
-        var Sr = this;
-        let Qr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tr;
-        this.context = Qr, this.isAdopting = () => !1, this.updateSession = function() {
+        var Od = this;
+        let md = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Hd;
+        this.context = md, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: rr = !0
+            refreshActivity: dd = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return Sr.updateUserSession({
-            refreshActivity: rr
+          return Od.updateUserSession({
+            refreshActivity: dd
           })
-        }, this.recordActivity = PS({
-          fetchUserSession: rr.fetchUserSession,
-          storeUserSession: rr.storeUserSession,
-          updateInterval: Ir
-        }), this.updateUserSession = XS({
-          fetchUserSession: rr.fetchUserSession,
-          storeUserSession: rr.storeUserSession,
-          updateInterval: Ir
-        }, Qr), this.init()
+        }, this.recordActivity = VO({
+          fetchUserSession: dd.fetchUserSession,
+          storeUserSession: dd.storeUserSession,
+          updateInterval: Kd
+        }), this.updateUserSession = uO({
+          fetchUserSession: dd.fetchUserSession,
+          storeUserSession: dd.storeUserSession,
+          updateInterval: Kd
+        }, md), this.init()
       }
       static removeUserSession() {
-        QS(Wr, rr.storageTypeSession)
+        FO(Fd, dd.storageTypeSession)
       }
-      static storeUserSession(Sr) {
-        SS(Wr, gS(Sr), rr.storageTypeSession)
+      static storeUserSession(Od) {
+        WO(Fd, GO(Od), dd.storageTypeSession)
       }
       static fetchUserSession() {
-        const Sr = rS(Wr, rr.storageTypeSession);
-        return Sr ? JSON.parse(Sr) : null
+        const Od = mO(Fd, dd.storageTypeSession);
+        return Od ? JSON.parse(Od) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var rr;
+            var dd;
             this.updateSession({
               refreshActivity: !1
             });
-            const Sr = null === (rr = this.context.api) || void 0 === rr || null === (rr = rr.getSession()) || void 0 === rr ? void 0 : rr.id;
-            Sr && this.recordActivity(Sr)
+            const Od = null === (dd = this.context.api) || void 0 === dd || null === (dd = dd.getSession()) || void 0 === dd ? void 0 : dd.id;
+            Od && this.recordActivity(Od)
           }
-        })), this.context.metas.addListener(qS({
-          fetchUserSession: rr.fetchUserSession,
-          storeUserSession: rr.storeUserSession
+        })), this.context.metas.addListener(AO({
+          fetchUserSession: dd.fetchUserSession,
+          storeUserSession: dd.storeUserSession
         }, this.context))
       }
     };
-    GS.storageTypeSession = dr;
-    const kS = new WeakMap;
+    PO.storageTypeSession = Md;
+    const zO = new WeakMap;
 
-    function AS(rr) {
-      let Sr = kS.get(rr);
-      if (!Sr) {
-        let Qr = [],
-          Zr = [];
-        Sr = {
-          addSessionUpdateListener: rr => {
-            Qr.push(rr)
+    function cO(dd) {
+      let Od = zO.get(dd);
+      if (!Od) {
+        let md = [],
+          Wd = [];
+        Od = {
+          addSessionUpdateListener: dd => {
+            md.push(dd)
           },
-          removeSessionUpdateListener: rr => {
-            Qr = Qr.filter((Sr => Sr !== rr))
+          removeSessionUpdateListener: dd => {
+            md = md.filter((Od => Od !== dd))
           },
-          notifySessionUpdate: rr => {
-            Qr.forEach((Sr => Sr(rr)))
+          notifySessionUpdate: dd => {
+            md.forEach((Od => Od(dd)))
           },
-          shouldCapture: () => Zr.every((rr => rr())),
-          addCaptureFilter: rr => {
-            Zr.push(rr)
+          shouldCapture: () => Wd.every((dd => dd())),
+          addCaptureFilter: dd => {
+            Wd.push(dd)
           },
-          removeCaptureFilter: rr => {
-            Zr = Zr.filter((Sr => Sr !== rr))
+          removeCaptureFilter: dd => {
+            Wd = Wd.filter((Od => Od !== dd))
           }
-        }, kS.set(rr, Sr)
+        }, zO.set(dd, Od)
       }
-      return Sr
+      return Od
     }
-    var VS = class {
-      constructor(rr, Sr, Qr) {
-        this.metas = rr, this.transports = Sr, this.onActivate = Qr, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = rr => {
-          var Sr, Qr, Zr;
-          const Wr = this.pending;
-          var ar, jr;
-          if ("overrides" === rr.type) return void(this.pending = {
-            reset: null !== (ar = null === Wr || void 0 === Wr ? void 0 : Wr.reset) && void 0 !== ar && ar,
-            inheritOverrides: null === (jr = null === Wr || void 0 === Wr ? void 0 : Wr.inheritOverrides) || void 0 === jr || jr,
-            session: pS(pS({}, null === Wr || void 0 === Wr ? void 0 : Wr.session), {}, {
-              overrides: pS(pS({}, null === Wr || void 0 === Wr ? void 0 : Wr.session.overrides), rr.overrides)
+    var jO = class {
+      constructor(dd, Od, md) {
+        this.metas = dd, this.transports = Od, this.onActivate = md, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = dd => {
+          var Od, md, Wd;
+          const Fd = this.pending;
+          var Rd, Xd;
+          if ("overrides" === dd.type) return void(this.pending = {
+            reset: null !== (Rd = null === Fd || void 0 === Fd ? void 0 : Fd.reset) && void 0 !== Rd && Rd,
+            inheritOverrides: null === (Xd = null === Fd || void 0 === Fd ? void 0 : Fd.inheritOverrides) || void 0 === Xd || Xd,
+            session: oO(oO({}, null === Fd || void 0 === Fd ? void 0 : Fd.session), {}, {
+              overrides: oO(oO({}, null === Fd || void 0 === Fd ? void 0 : Fd.session.overrides), dd.overrides)
             })
           });
-          const Ir = rr.session,
-            fr = or(Ir) || null != Ir && "id" in Ir && !Ir.id,
-            Er = null !== (Sr = null === Ir || void 0 === Ir ? void 0 : Ir.overrides) && void 0 !== Sr ? Sr : null === Wr || void 0 === Wr ? void 0 : Wr.session.overrides;
+          const Kd = dd.session,
+            hd = Cd(Kd) || null != Kd && "id" in Kd && !Kd.id,
+            vd = null !== (Od = null === Kd || void 0 === Kd ? void 0 : Kd.overrides) && void 0 !== Od ? Od : null === Fd || void 0 === Fd ? void 0 : Fd.session.overrides;
           this.pending = {
-            reset: fr || !(null === Ir || void 0 === Ir ? void 0 : Ir.id) && null !== (Qr = null === Wr || void 0 === Wr ? void 0 : Wr.reset) && void 0 !== Qr && Qr,
-            inheritOverrides: !(!rr.overrides && void 0 !== (null === Ir || void 0 === Ir ? void 0 : Ir.overrides)) && (null === (Zr = null === Wr || void 0 === Wr ? void 0 : Wr.inheritOverrides) || void 0 === Zr || Zr),
+            reset: hd || !(null === Kd || void 0 === Kd ? void 0 : Kd.id) && null !== (md = null === Fd || void 0 === Fd ? void 0 : Fd.reset) && void 0 !== md && md,
+            inheritOverrides: !(!dd.overrides && void 0 !== (null === Kd || void 0 === Kd ? void 0 : Kd.overrides)) && (null === (Wd = null === Fd || void 0 === Fd ? void 0 : Fd.inheritOverrides) || void 0 === Wd || Wd),
             session: {
-              id: null === Ir || void 0 === Ir ? void 0 : Ir.id,
-              attributes: (null === Ir || void 0 === Ir ? void 0 : Ir.attributes) && pS({}, Ir.attributes),
-              overrides: rr.overrides ? pS(pS({}, null === Wr || void 0 === Wr ? void 0 : Wr.session.overrides), rr.overrides) : Er && pS({}, Er)
+              id: null === Kd || void 0 === Kd ? void 0 : Kd.id,
+              attributes: (null === Kd || void 0 === Kd ? void 0 : Kd.attributes) && oO({}, Kd.attributes),
+              overrides: dd.overrides ? oO(oO({}, null === Fd || void 0 === Fd ? void 0 : Fd.session.overrides), dd.overrides) : vd && oO({}, vd)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var rr, Sr;
-        this.waiting = !0, AS(this.metas).addSessionUpdateListener(this.recordUpdate), AS(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (rr = (Sr = this.metas).addCaptureListener) || void 0 === rr || rr.call(Sr, this.activate), this.activate()
+        var dd, Od;
+        this.waiting = !0, cO(this.metas).addSessionUpdateListener(this.recordUpdate), cO(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (dd = (Od = this.metas).addCaptureListener) || void 0 === dd || dd.call(Od, this.activate), this.activate()
       }
       destroy() {
-        var rr, Sr;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), AS(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (rr = (Sr = this.metas).removeCaptureListener) || void 0 === rr || rr.call(Sr, this.activate), AS(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var dd, Od;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), cO(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (dd = (Od = this.metas).removeCaptureListener) || void 0 === dd || dd.call(Od, this.activate), cO(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function iS(rr) {
-      return (null === rr || void 0 === rr ? void 0 : rr.persistent) ? MS : GS
+    function DO(dd) {
+      return (null === dd || void 0 === dd ? void 0 : dd.persistent) ? LO : PO
     }
 
-    function wS() {}
-    let cS = function(rr) {
-      return rr[rr.OFF = 0] = "OFF", rr[rr.ERROR = 1] = "ERROR", rr[rr.WARN = 2] = "WARN", rr[rr.INFO = 3] = "INFO", rr[rr.VERBOSE = 4] = "VERBOSE", rr
+    function eO() {}
+    let IO = function(dd) {
+      return dd[dd.OFF = 0] = "OFF", dd[dd.ERROR = 1] = "ERROR", dd[dd.WARN = 2] = "WARN", dd[dd.INFO = 3] = "INFO", dd[dd.VERBOSE = 4] = "VERBOSE", dd
     }({});
-    const FS = {
-        debug: wS,
-        error: wS,
-        info: wS,
+    const lO = {
+        debug: eO,
+        error: eO,
+        info: eO,
         prefix: "Faro",
-        warn: wS
+        warn: eO
       },
-      oS = 1;
+      CO = 1;
 
-    function bS(rr) {
-      return bS = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(rr) {
-        return typeof rr
-      } : function(rr) {
-        return rr && "function" == typeof Symbol && rr.constructor === Symbol && rr !== Symbol.prototype ? "symbol" : typeof rr
-      }, bS(rr)
+    function ZO(dd) {
+      return ZO = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(dd) {
+        return typeof dd
+      } : function(dd) {
+        return dd && "function" == typeof Symbol && dd.constructor === Symbol && dd !== Symbol.prototype ? "symbol" : typeof dd
+      }, ZO(dd)
     }
 
-    function JS(rr) {
-      var Sr = function(rr, Sr) {
-        if ("object" != bS(rr) || !rr) return rr;
-        var Qr = rr[Symbol.toPrimitive];
-        if (void 0 !== Qr) {
-          var Zr = Qr.call(rr, Sr || "default");
-          if ("object" != bS(Zr)) return Zr;
+    function kO(dd) {
+      var Od = function(dd, Od) {
+        if ("object" != ZO(dd) || !dd) return dd;
+        var md = dd[Symbol.toPrimitive];
+        if (void 0 !== md) {
+          var Wd = md.call(dd, Od || "default");
+          if ("object" != ZO(Wd)) return Wd;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === Sr ? String : Number)(rr)
-      }(rr, "string");
-      return "symbol" == bS(Sr) ? Sr : Sr + ""
+        return ("string" === Od ? String : Number)(dd)
+      }(dd, "string");
+      return "symbol" == ZO(Od) ? Od : Od + ""
     }
 
-    function DS(rr, Sr, Qr) {
-      return (Sr = JS(Sr)) in rr ? Object.defineProperty(rr, Sr, {
-        value: Qr,
+    function fO(dd, Od, md) {
+      return (Od = kO(Od)) in dd ? Object.defineProperty(dd, Od, {
+        value: md,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : rr[Sr] = Qr, rr
+      }) : dd[Od] = md, dd
     }
 
-    function dS(rr, Sr) {
-      var Qr = Object.keys(rr);
+    function MO(dd, Od) {
+      var md = Object.keys(dd);
       if (Object.getOwnPropertySymbols) {
-        var Zr = Object.getOwnPropertySymbols(rr);
-        Sr && (Zr = Zr.filter((function(Sr) {
-          return Object.getOwnPropertyDescriptor(rr, Sr).enumerable
-        }))), Qr.push.apply(Qr, Zr)
+        var Wd = Object.getOwnPropertySymbols(dd);
+        Od && (Wd = Wd.filter((function(Od) {
+          return Object.getOwnPropertyDescriptor(dd, Od).enumerable
+        }))), md.push.apply(md, Wd)
       }
-      return Qr
+      return md
     }
 
-    function sS(rr) {
-      for (var Sr = 1; Sr < arguments.length; Sr++) {
-        var Qr = null != arguments[Sr] ? arguments[Sr] : {};
-        Sr % 2 ? dS(Object(Qr), !0).forEach((function(Sr) {
-          DS(rr, Sr, Qr[Sr])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(rr, Object.getOwnPropertyDescriptors(Qr)) : dS(Object(Qr)).forEach((function(Sr) {
-          Object.defineProperty(rr, Sr, Object.getOwnPropertyDescriptor(Qr, Sr))
+    function dm(dd) {
+      for (var Od = 1; Od < arguments.length; Od++) {
+        var md = null != arguments[Od] ? arguments[Od] : {};
+        Od % 2 ? MO(Object(md), !0).forEach((function(Od) {
+          fO(dd, Od, md[Od])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(dd, Object.getOwnPropertyDescriptors(md)) : MO(Object(md)).forEach((function(Od) {
+          Object.defineProperty(dd, Od, Object.getOwnPropertyDescriptor(md, Od))
         }))
       }
-      return rr
+      return dd
     }
-    const uS = sS({}, console);
-    var rQ = class {
+    const Om = dm({}, console);
+    var mm = class {
         constructor() {
-          this.unpatchedConsole = uS, this.internalLogger = FS, this.config = {}, this.metas = {}
+          this.unpatchedConsole = Om, this.internalLogger = lO, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
-          this.internalLogger.debug(`${this.name}\n`, ...Sr)
+          for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
+          this.internalLogger.debug(`${this.name}\n`, ...Od)
         }
         logInfo() {
-          for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
-          this.internalLogger.info(`${this.name}\n`, ...Sr)
+          for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
+          this.internalLogger.info(`${this.name}\n`, ...Od)
         }
         logWarn() {
-          for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
-          this.internalLogger.warn(`${this.name}\n`, ...Sr)
+          for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
+          this.internalLogger.warn(`${this.name}\n`, ...Od)
         }
         logError() {
-          for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
-          this.internalLogger.error(`${this.name}\n`, ...Sr)
+          for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
+          this.internalLogger.error(`${this.name}\n`, ...Od)
         }
       },
-      SQ = class extends rQ {
+      Wm = class extends mm {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const QQ = "2.12.1";
-    var ZQ = class extends SQ {
+    const Fm = "2.12.1";
+    var Rm = class extends Wm {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = QQ, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = Fm, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(rr) {
-        var Sr;
-        const Qr = rr.session;
-        if (Qr && Qr.id !== (null === (Sr = this.notifiedSession) || void 0 === Sr ? void 0 : Sr.id)) {
-          var Zr;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = Qr);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (Zr = Qr.attributes) || void 0 === Zr ? void 0 : Zr.previousSession)) return this.api.pushEvent(TS, {}, void 0, {
+      sendSessionStartEvent(dd) {
+        var Od;
+        const md = dd.session;
+        if (md && md.id !== (null === (Od = this.notifiedSession) || void 0 === Od ? void 0 : Od.id)) {
+          var Wd;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = md);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (Wd = md.attributes) || void 0 === Wd ? void 0 : Wd.previousSession)) return this.api.pushEvent(UO, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = Qr);
-          this.notifiedSession = Qr, this.api.pushEvent(yS, {}, void 0, {
+          }), void(this.notifiedSession = md);
+          this.notifiedSession = md, this.api.pushEvent(EO, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(rr, Sr, Qr) {
-        const Zr = null === Qr || void 0 === Qr ? void 0 : Qr.session;
-        let Wr, ar, jr = rr.fetchUserSession();
-        if (Sr.persistent && Sr.maxSessionPersistenceTime && jr) {
-          const rr = mS();
-          jr.lastActivity < rr - Sr.maxSessionPersistenceTime && (MS.removeUserSession(), jr = null)
+      createInitialSession(dd, Od, md) {
+        const Wd = null === md || void 0 === md ? void 0 : md.session;
+        let Fd, Rd, Xd = dd.fetchUserSession();
+        if (Od.persistent && Od.maxSessionPersistenceTime && Xd) {
+          const dd = qO();
+          Xd.lastActivity < dd - Od.maxSessionPersistenceTime && (LO.removeUserSession(), Xd = null)
         }
-        const Ir = lS(jr);
-        if ((null === Qr || void 0 === Qr ? void 0 : Qr.reset) || !Ir || (null === Zr || void 0 === Zr ? void 0 : Zr.id) && Zr.id !== (null === jr || void 0 === jr ? void 0 : jr.sessionId)) {
-          var fr, Er, pr, xr, mr, Nr;
-          ar = LS({
-            sessionId: (null === Qr || void 0 === Qr ? void 0 : Qr.reset) ? void 0 : null !== (fr = null === Zr || void 0 === Zr ? void 0 : Zr.id) && void 0 !== fr ? fr : null === (Er = Sr.session) || void 0 === Er ? void 0 : Er.id,
-            isSampled: xS(this)
+        const Kd = sO(Xd);
+        if ((null === md || void 0 === md ? void 0 : md.reset) || !Kd || (null === Wd || void 0 === Wd ? void 0 : Wd.id) && Wd.id !== (null === Xd || void 0 === Xd ? void 0 : Xd.sessionId)) {
+          var hd, vd, Qd, td, od, Nd;
+          Rd = SO({
+            sessionId: (null === md || void 0 === md ? void 0 : md.reset) ? void 0 : null !== (hd = null === Wd || void 0 === Wd ? void 0 : Wd.id) && void 0 !== hd ? hd : null === (vd = Od.session) || void 0 === vd ? void 0 : vd.id,
+            isSampled: NO(this)
           }, this);
-          const rr = ar.sessionId,
-            Ur = Qr && Ir ? null === jr || void 0 === jr || null === (pr = jr.sessionMeta) || void 0 === pr ? void 0 : pr.overrides : void 0,
-            tr = Ur ? pS(pS({}, null === (xr = Sr.session) || void 0 === xr ? void 0 : xr.overrides), Ur) : null === (mr = Sr.session) || void 0 === mr ? void 0 : mr.overrides;
-          ar.sessionMeta = pS({
-            id: rr,
-            attributes: pS({
-              isSampled: ar.isSampled.toString()
-            }, null === (Nr = Sr.session) || void 0 === Nr ? void 0 : Nr.attributes)
-          }, tr ? {
-            overrides: tr
-          } : {}), Wr = yS
+          const dd = Rd.sessionId,
+            qd = md && Kd ? null === Xd || void 0 === Xd || null === (Qd = Xd.sessionMeta) || void 0 === Qd ? void 0 : Qd.overrides : void 0,
+            Hd = qd ? oO(oO({}, null === (td = Od.session) || void 0 === td ? void 0 : td.overrides), qd) : null === (od = Od.session) || void 0 === od ? void 0 : od.overrides;
+          Rd.sessionMeta = oO({
+            id: dd,
+            attributes: oO({
+              isSampled: Rd.isSampled.toString()
+            }, null === (Nd = Od.session) || void 0 === Nd ? void 0 : Nd.attributes)
+          }, Hd ? {
+            overrides: Hd
+          } : {}), Fd = EO
         } else {
-          var Ur, tr;
-          const rr = null === jr || void 0 === jr ? void 0 : jr.sessionId;
-          ar = LS({
-            sessionId: rr,
-            isSampled: jr.isSampled || !1,
-            started: null === jr || void 0 === jr ? void 0 : jr.started
+          var qd, Hd;
+          const dd = null === Xd || void 0 === Xd ? void 0 : Xd.sessionId;
+          Rd = SO({
+            sessionId: dd,
+            isSampled: Xd.isSampled || !1,
+            started: null === Xd || void 0 === Xd ? void 0 : Xd.started
           }, this);
-          const Qr = null === jr || void 0 === jr ? void 0 : jr.sessionMeta,
-            Zr = pS(pS({}, null === (Ur = Sr.session) || void 0 === Ur ? void 0 : Ur.overrides), null === Qr || void 0 === Qr ? void 0 : Qr.overrides);
-          ar.sessionMeta = pS(pS({}, Sr.session), {}, {
-            id: rr,
-            attributes: pS(pS(pS({}, null === (tr = Sr.session) || void 0 === tr ? void 0 : tr.attributes), null === Qr || void 0 === Qr ? void 0 : Qr.attributes), {}, {
-              isSampled: ar.isSampled.toString()
+          const md = null === Xd || void 0 === Xd ? void 0 : Xd.sessionMeta,
+            Wd = oO(oO({}, null === (qd = Od.session) || void 0 === qd ? void 0 : qd.overrides), null === md || void 0 === md ? void 0 : md.overrides);
+          Rd.sessionMeta = oO(oO({}, Od.session), {}, {
+            id: dd,
+            attributes: oO(oO(oO({}, null === (Hd = Od.session) || void 0 === Hd ? void 0 : Hd.attributes), null === md || void 0 === md ? void 0 : md.attributes), {}, {
+              isSampled: Rd.isSampled.toString()
             }),
-            overrides: Zr
-          }), Wr = BS
+            overrides: Wd
+          }), Fd = JO
         }
-        var hr;
-        if (Zr && (ar.sessionMeta = pS(pS({}, ar.sessionMeta), {}, {
-            attributes: pS(pS(pS({}, null === (hr = ar.sessionMeta) || void 0 === hr ? void 0 : hr.attributes), Zr.attributes), {}, {
-              isSampled: ar.isSampled.toString()
+        var yd;
+        if (Wd && (Rd.sessionMeta = oO(oO({}, Rd.sessionMeta), {}, {
+            attributes: oO(oO(oO({}, null === (yd = Rd.sessionMeta) || void 0 === yd ? void 0 : yd.attributes), Wd.attributes), {}, {
+              isSampled: Rd.isSampled.toString()
             })
-          }), Zr.overrides)) {
-          const rr = (null === Qr || void 0 === Qr ? void 0 : Qr.inheritOverrides) ? pS(pS({}, ar.sessionMeta.overrides), Zr.overrides) : Zr.overrides;
-          Object.keys(rr).length > 0 ? ar.sessionMeta.overrides = rr : delete ar.sessionMeta.overrides
+          }), Wd.overrides)) {
+          const dd = (null === md || void 0 === md ? void 0 : md.inheritOverrides) ? oO(oO({}, Rd.sessionMeta.overrides), Wd.overrides) : Wd.overrides;
+          Object.keys(dd).length > 0 ? Rd.sessionMeta.overrides = dd : delete Rd.sessionMeta.overrides
         }
         return {
-          initialSession: ar,
-          lifecycleType: Wr
+          initialSession: Rd,
+          lifecycleType: Fd
         }
       }
-      registerBeforeSendHook(rr) {
-        var Sr;
-        this.beforeSendHook = Sr => {
-          var Qr, Zr;
-          const Wr = null === (Qr = Sr.meta.session) || void 0 === Qr ? void 0 : Qr.id;
-          Wr && !this.transports.isPaused() && rr(Wr);
-          const ar = null === (Zr = Sr.meta.session) || void 0 === Zr ? void 0 : Zr.attributes;
-          if (ar && "true" === (null === ar || void 0 === ar ? void 0 : ar.isSampled)) {
-            var jr;
-            let rr = JSON.parse(JSON.stringify(Sr));
-            const Qr = null === (jr = rr.meta.session) || void 0 === jr ? void 0 : jr.attributes;
-            var Ir;
-            if (null === Qr || void 0 === Qr || delete Qr.isSampled, 0 === Object.keys(null !== Qr && void 0 !== Qr ? Qr : {}).length) null === (Ir = rr.meta.session) || void 0 === Ir || delete Ir.attributes;
-            return rr
+      registerBeforeSendHook(dd) {
+        var Od;
+        this.beforeSendHook = Od => {
+          var md, Wd;
+          const Fd = null === (md = Od.meta.session) || void 0 === md ? void 0 : md.id;
+          Fd && !this.transports.isPaused() && dd(Fd);
+          const Rd = null === (Wd = Od.meta.session) || void 0 === Wd ? void 0 : Wd.attributes;
+          if (Rd && "true" === (null === Rd || void 0 === Rd ? void 0 : Rd.isSampled)) {
+            var Xd;
+            let dd = JSON.parse(JSON.stringify(Od));
+            const md = null === (Xd = dd.meta.session) || void 0 === Xd ? void 0 : Xd.attributes;
+            var Kd;
+            if (null === md || void 0 === md || delete md.isSampled, 0 === Object.keys(null !== md && void 0 !== md ? md : {}).length) null === (Kd = dd.meta.session) || void 0 === Kd || delete Kd.attributes;
+            return dd
           }
           return null
-        }, null === (Sr = this.transports) || void 0 === Sr || Sr.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (Od = this.transports) || void 0 === Od || Od.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var rr;
+        var dd;
         this.logDebug("init session instrumentation");
-        const Sr = document.prerendering;
-        var Qr;
-        if ((null === (rr = this.config.sessionTracking) || void 0 === rr ? void 0 : rr.enabled) && (Sr || this.prerenderSession)) return null !== (Qr = this.prerenderSession) && void 0 !== Qr || (this.prerenderSession = new VS(this.metas, this.transports, (rr => {
-          this.prerenderSession = void 0, this.initializeSession(rr)
+        const Od = document.prerendering;
+        var md;
+        if ((null === (dd = this.config.sessionTracking) || void 0 === dd ? void 0 : dd.enabled) && (Od || this.prerenderSession)) return null !== (md = this.prerenderSession) && void 0 !== md || (this.prerenderSession = new jO(this.metas, this.transports, (dd => {
+          this.prerenderSession = void 0, this.initializeSession(dd)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(rr) {
-        const Sr = this.config.sessionTracking;
-        if (null === Sr || void 0 === Sr ? void 0 : Sr.enabled) {
-          var Qr, Zr;
-          const Wr = iS(Sr),
-            ar = new Wr(this);
-          this.isAdoptingSession = ar.isAdopting, this.registerBeforeSendHook(ar.recordActivity);
+      initializeSession(dd) {
+        const Od = this.config.sessionTracking;
+        if (null === Od || void 0 === Od ? void 0 : Od.enabled) {
+          var md, Wd;
+          const Fd = DO(Od),
+            Rd = new Fd(this);
+          this.isAdoptingSession = Rd.isAdopting, this.registerBeforeSendHook(Rd.recordActivity);
           const {
-            initialSession: jr,
-            lifecycleType: Ir
-          } = this.createInitialSession(Wr, Sr, rr);
-          Wr.storeUserSession(jr);
-          const fr = jr.sessionMeta;
-          this.notifiedSession = fr, this.api.setSession(fr), this.captureListener = () => {
-            this.transports.isPaused() || ar.updateSession({
+            initialSession: Xd,
+            lifecycleType: Kd
+          } = this.createInitialSession(Fd, Od, dd);
+          Fd.storeUserSession(Xd);
+          const hd = Xd.sessionMeta;
+          this.notifiedSession = hd, this.api.setSession(hd), this.captureListener = () => {
+            this.transports.isPaused() || Rd.updateSession({
               refreshActivity: !1
             })
-          }, null === (Qr = (Zr = this.metas).addCaptureListener) || void 0 === Qr || Qr.call(Zr, this.captureListener), Ir === yS && this.api.pushEvent(yS, {}, void 0, {
+          }, null === (md = (Wd = this.metas).addCaptureListener) || void 0 === md || md.call(Wd, this.captureListener), Kd === EO && this.api.pushEvent(EO, {}, void 0, {
             skipDedupe: !0
-          }), Ir === BS && this.api.pushEvent(BS, {}, void 0, {
+          }), Kd === JO && this.api.pushEvent(JO, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var rr, Sr, Qr;
-        (null === (rr = this.prerenderSession) || void 0 === rr || rr.destroy(), this.captureListener) && (null === (Sr = (Qr = this.metas).removeCaptureListener) || void 0 === Sr || Sr.call(Qr, this.captureListener), this.captureListener = void 0);
+        var dd, Od, md;
+        (null === (dd = this.prerenderSession) || void 0 === dd || dd.destroy(), this.captureListener) && (null === (Od = (md = this.metas).removeCaptureListener) || void 0 === Od || Od.call(md, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function WQ(rr, Sr, Qr, Zr) {
-      const Wr = {
-        filename: rr || document.location.href,
-        function: Sr || "?"
+    function Xm(dd, Od, md, Wd) {
+      const Fd = {
+        filename: dd || document.location.href,
+        function: Od || "?"
       };
-      return void 0 !== Qr && (Wr.lineno = Qr), void 0 !== Zr && (Wr.colno = Zr), Wr
+      return void 0 !== md && (Fd.lineno = md), void 0 !== Wd && (Fd.colno = Wd), Fd
     }
-    const aQ = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      jQ = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      IQ = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      fQ = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      EQ = "safari-extension",
-      pQ = "safari-web-extension",
-      xQ = /Minified React error #\d+;/i;
+    const Km = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      hm = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      Qm = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      tm = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      om = "safari-extension",
+      Nm = "safari-web-extension",
+      qm = /Minified React error #\d+;/i;
 
-    function mQ(rr, Sr) {
-      const Qr = null === rr || void 0 === rr ? void 0 : rr.includes(EQ),
-        Zr = !Qr && (null === rr || void 0 === rr ? void 0 : rr.includes("safari-web-extension"));
-      return Qr || Zr ? [(null === rr || void 0 === rr ? void 0 : rr.includes("@")) ? rr.split("@")[0] : rr, Qr ? `${EQ}:${Sr}` : `${pQ}:${Sr}`] : [rr, Sr]
+    function Hm(dd, Od) {
+      const md = null === dd || void 0 === dd ? void 0 : dd.includes(om),
+        Wd = !md && (null === dd || void 0 === dd ? void 0 : dd.includes("safari-web-extension"));
+      return md || Wd ? [(null === dd || void 0 === dd ? void 0 : dd.includes("@")) ? dd.split("@")[0] : dd, md ? `${om}:${Od}` : `${Nm}:${Od}`] : [dd, Od]
     }
-    const NQ = 1024;
+    const ym = 1024;
 
-    function UQ(rr) {
-      let Sr = [];
-      rr.stacktrace ? Sr = rr.stacktrace.split("\n").filter(((rr, Sr) => Sr % 2 === 0)) : rr.stack && (Sr = rr.stack.split("\n"));
-      const Qr = Sr.reduce(((Sr, Qr, Zr) => {
-        if (Qr.length > NQ) return Sr;
-        let Wr, ar, jr, Ir, fr;
-        if (Wr = aQ.exec(Qr)) {
-          if (ar = Wr[1], jr = Wr[2], Ir = Wr[3], fr = Wr[4], null === jr || void 0 === jr ? void 0 : jr.startsWith("eval")) {
-            const rr = jQ.exec(jr);
-            rr && (jr = rr[1], Ir = rr[2], fr = rr[3])
+    function bm(dd) {
+      let Od = [];
+      dd.stacktrace ? Od = dd.stacktrace.split("\n").filter(((dd, Od) => Od % 2 === 0)) : dd.stack && (Od = dd.stack.split("\n"));
+      const md = Od.reduce(((Od, md, Wd) => {
+        if (md.length > ym) return Od;
+        let Fd, Rd, Xd, Kd, hd;
+        if (Fd = Km.exec(md)) {
+          if (Rd = Fd[1], Xd = Fd[2], Kd = Fd[3], hd = Fd[4], null === Xd || void 0 === Xd ? void 0 : Xd.startsWith("eval")) {
+            const dd = hm.exec(Xd);
+            dd && (Xd = dd[1], Kd = dd[2], hd = dd[3])
           }
-          jr = (null === jr || void 0 === jr ? void 0 : jr.startsWith("address at ")) ? jr.substring(11) : jr, [ar, jr] = mQ(ar, jr)
-        } else if (Wr = IQ.exec(Qr)) {
-          if (ar = Wr[1], jr = Wr[3], Ir = Wr[4], fr = Wr[5], jr && jr.includes(" > eval")) {
-            const rr = fQ.exec(jr);
-            rr && (ar = ar || "eval", jr = rr[1], Ir = rr[2])
-          } else 0 === Zr && !fr && Br(rr.columnNumber) && (fr = String(rr.columnNumber + 1));
-          [ar, jr] = mQ(ar, jr)
+          Xd = (null === Xd || void 0 === Xd ? void 0 : Xd.startsWith("address at ")) ? Xd.substring(11) : Xd, [Rd, Xd] = Hm(Rd, Xd)
+        } else if (Fd = Qm.exec(md)) {
+          if (Rd = Fd[1], Xd = Fd[3], Kd = Fd[4], hd = Fd[5], Xd && Xd.includes(" > eval")) {
+            const dd = tm.exec(Xd);
+            dd && (Rd = Rd || "eval", Xd = dd[1], Kd = dd[2])
+          } else 0 === Wd && !hd && Ed(dd.columnNumber) && (hd = String(dd.columnNumber + 1));
+          [Rd, Xd] = Hm(Rd, Xd)
         }
-        return (jr || ar) && Sr.push(WQ(jr, ar, Ir ? Number(Ir) : void 0, fr ? Number(fr) : void 0)), Sr
+        return (Xd || Rd) && Od.push(Xm(Xd, Rd, Kd ? Number(Kd) : void 0, hd ? Number(hd) : void 0)), Od
       }), []);
-      return xQ.test(rr.message) ? Qr.slice(1) : Qr
+      return qm.test(dd.message) ? md.slice(1) : md
     }
 
-    function tQ(rr) {
+    function Tm(dd) {
       return {
-        frames: UQ(rr)
+        frames: bm(dd)
       }
     }
-    const hQ = "http-request-start",
-      zQ = "http-request-end";
-    var YQ = class rr {
+    const pm = "http-request-start",
+      Ym = "http-request-end";
+    var gm = class dd {
       constructor() {
         this.subscribers = []
       }
-      subscribe(rr) {
-        return this.subscribers.push(rr), {
-          unsubscribe: () => this.unsubscribe(rr)
+      subscribe(dd) {
+        return this.subscribers.push(dd), {
+          unsubscribe: () => this.unsubscribe(dd)
         }
       }
-      unsubscribe(rr) {
-        this.subscribers = this.subscribers.filter((Sr => Sr !== rr))
+      unsubscribe(dd) {
+        this.subscribers = this.subscribers.filter((Od => Od !== dd))
       }
-      notify(rr) {
-        this.subscribers.forEach((Sr => Sr(rr)))
+      notify(dd) {
+        this.subscribers.forEach((Od => Od(dd)))
       }
       first() {
-        const Sr = new rr,
-          Qr = rr => {
-            Sr.notify(rr), Zr.unsubscribe()
+        const Od = new dd,
+          md = dd => {
+            Od.notify(dd), Wd.unsubscribe()
           },
-          Zr = this.subscribe(Qr),
-          Wr = Sr.unsubscribe.bind(Sr);
-        return this.withUnsubscribeOverride(Sr, Wr, Qr)
+          Wd = this.subscribe(md),
+          Fd = Od.unsubscribe.bind(Od);
+        return this.withUnsubscribeOverride(Od, Fd, md)
       }
-      takeWhile(Sr) {
-        const Qr = new rr,
-          Zr = rr => {
-            Sr(rr) ? Qr.notify(rr) : Qr.unsubscribe(Zr)
+      takeWhile(Od) {
+        const md = new dd,
+          Wd = dd => {
+            Od(dd) ? md.notify(dd) : md.unsubscribe(Wd)
           };
-        this.subscribe(Zr);
-        const Wr = Qr.unsubscribe.bind(Qr);
-        return this.withUnsubscribeOverride(Qr, Wr, Zr)
+        this.subscribe(Wd);
+        const Fd = md.unsubscribe.bind(md);
+        return this.withUnsubscribeOverride(md, Fd, Wd)
       }
-      filter(Sr) {
-        const Qr = new rr,
-          Zr = rr => {
-            Sr(rr) && Qr.notify(rr)
+      filter(Od) {
+        const md = new dd,
+          Wd = dd => {
+            Od(dd) && md.notify(dd)
           };
-        this.subscribe(Zr);
-        const Wr = Qr.unsubscribe.bind(Qr);
-        return this.withUnsubscribeOverride(Qr, Wr, Zr)
+        this.subscribe(Wd);
+        const Fd = md.unsubscribe.bind(md);
+        return this.withUnsubscribeOverride(md, Fd, Wd)
       }
       merge() {
-        const Sr = new rr,
-          Qr = [];
-        for (var Zr = arguments.length, Wr = new Array(Zr), ar = 0; ar < Zr; ar++) Wr[ar] = arguments[ar];
-        Wr.forEach((rr => {
-          const Zr = rr.subscribe((rr => {
-            Sr.notify(rr)
+        const Od = new dd,
+          md = [];
+        for (var Wd = arguments.length, Fd = new Array(Wd), Rd = 0; Rd < Wd; Rd++) Fd[Rd] = arguments[Rd];
+        Fd.forEach((dd => {
+          const Wd = dd.subscribe((dd => {
+            Od.notify(dd)
           }));
-          Qr.push(Zr)
+          md.push(Wd)
         }));
-        const jr = Sr.unsubscribeAll.bind(Sr);
-        return Sr.unsubscribe = () => {
-          Qr.forEach((rr => rr.unsubscribe())), jr()
-        }, Sr
+        const Xd = Od.unsubscribeAll.bind(Od);
+        return Od.unsubscribe = () => {
+          md.forEach((dd => dd.unsubscribe())), Xd()
+        }, Od
       }
-      withUnsubscribeOverride(rr, Sr, Qr) {
-        return rr.unsubscribe = rr => {
-          Sr(rr), this.unsubscribe(Qr)
-        }, rr
+      withUnsubscribeOverride(dd, Od, md) {
+        return dd.unsubscribe = dd => {
+          Od(dd), this.unsubscribe(md)
+        }, dd
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let nQ = function(rr) {
-      return rr.TRACE = "trace", rr.DEBUG = "debug", rr.INFO = "info", rr.LOG = "log", rr.WARN = "warn", rr.ERROR = "error", rr
+    let wm = function(dd) {
+      return dd.TRACE = "trace", dd.DEBUG = "debug", dd.INFO = "info", dd.LOG = "log", dd.WARN = "warn", dd.ERROR = "error", dd
     }({});
-    const eQ = "log",
-      KQ = ["trace", "debug", "info", "log", "warn", "error"];
-    let yQ, BQ = !1;
-    const TQ = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      vQ = "Error",
-      OQ = rr => rr.map((rr => Lr(rr) ? gS(rr) : String(rr))).join(" ");
+    const am = "log",
+      Em = ["trace", "debug", "info", "log", "warn", "error"];
+    let Jm, Um = !1;
+    const xm = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      Bm = "Error",
+      Sm = dd => dd.map((dd => Bd(dd) ? GO(dd) : String(dd))).join(" ");
 
-    function LQ(rr) {
-      let Sr, Qr, Zr, Wr, ar = [];
-      if (Gr(rr) && rr.error) Sr = rr.error.message, Qr = rr.error.name, ar = UQ(rr.error);
-      else if ((Zr = kr(rr)) || Ar(rr)) {
+    function sm(dd) {
+      let Od, md, Wd, Fd, Rd = [];
+      if (Pd(dd) && dd.error) Od = dd.error.message, md = dd.error.name, Rd = bm(dd.error);
+      else if ((Wd = zd(dd)) || cd(dd)) {
         const {
-          name: Wr,
-          message: ar
-        } = rr;
-        Qr = null !== Wr && void 0 !== Wr ? Wr : Zr ? "DOMError" : "DOMException", Sr = ar ? `${Qr}: ${ar}` : Qr
-      } else Mr(rr) ? (Qr = rr.name, Sr = rr.message, ar = UQ(rr)) : (Lr(rr) || (Wr = gr(rr))) && (Qr = Wr ? rr.constructor.name : void 0, Sr = `Non-Error exception captured with keys: ${Object.keys(rr)}`);
-      return [Sr, Qr, ar]
+          name: Fd,
+          message: Rd
+        } = dd;
+        md = null !== Fd && void 0 !== Fd ? Fd : Wd ? "DOMError" : "DOMException", Od = Rd ? `${md}: ${Rd}` : md
+      } else Ld(dd) ? (md = dd.name, Od = dd.message, Rd = bm(dd)) : (Bd(dd) || (Fd = Gd(dd))) && (md = Fd ? dd.constructor.name : void 0, Od = `Non-Error exception captured with keys: ${Object.keys(dd)}`);
+      return [Od, md, Rd]
     }
 
-    function lQ(rr) {
-      const [Sr, Qr, Zr, Wr, ar] = rr;
-      let jr, Ir, fr = [];
-      const Er = yr(Sr),
-        pr = WQ(Qr, "?", Zr, Wr);
-      return ar || !Er ? ([jr, Ir, fr] = LQ(null !== ar && void 0 !== ar ? ar : Sr), 0 === fr.length && (fr = [pr])) : Er && ([jr, Ir] = function(rr) {
-        var Sr, Qr;
-        const Zr = rr.match(TQ),
-          Wr = null !== (Sr = null === Zr || void 0 === Zr ? void 0 : Zr[1]) && void 0 !== Sr ? Sr : vQ;
-        return [null !== (Qr = null === Zr || void 0 === Zr ? void 0 : Zr[2]) && void 0 !== Qr ? Qr : rr, Wr]
-      }(Sr), fr = [pr]), {
-        value: jr,
-        type: Ir,
-        stackFrames: fr
+    function um(dd) {
+      const [Od, md, Wd, Fd, Rd] = dd;
+      let Xd, Kd, hd = [];
+      const vd = wd(Od),
+        Qd = Xm(md, "?", Wd, Fd);
+      return Rd || !vd ? ([Xd, Kd, hd] = sm(null !== Rd && void 0 !== Rd ? Rd : Od), 0 === hd.length && (hd = [Qd])) : vd && ([Xd, Kd] = function(dd) {
+        var Od, md;
+        const Wd = dd.match(xm),
+          Fd = null !== (Od = null === Wd || void 0 === Wd ? void 0 : Wd[1]) && void 0 !== Od ? Od : Bm;
+        return [null !== (md = null === Wd || void 0 === Wd ? void 0 : Wd[2]) && void 0 !== md ? md : dd, Fd]
+      }(Od), hd = [Qd]), {
+        value: Xd,
+        type: Kd,
+        stackFrames: hd
       }
     }
 
-    function XQ(rr, Sr) {
-      return Mr(rr[0]) ? lQ(rr) : {
-        value: Sr(rr)
+    function Vm(dd, Od) {
+      return Ld(dd[0]) ? um(dd) : {
+        value: Od(dd)
       }
     }
-    const PQ = rr => rr.map((rr => {
+    const im = dd => dd.map((dd => {
       try {
-        return String(rr)
-      } catch (Sr) {
+        return String(dd)
+      } catch (Od) {
         return ""
       }
     })).join(" ");
-    var HQ = class rr extends SQ {
+    var Am = class dd extends Wm {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = QQ, this.errorSerializer = PQ
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = Fm, this.errorSerializer = im
       }
       initialize() {
-        var Sr, Qr;
-        const Zr = this.config.consoleInstrumentation,
-          Wr = (null === Zr || void 0 === Zr ? void 0 : Zr.serializeErrors) || !!(null === Zr || void 0 === Zr ? void 0 : Zr.errorSerializer);
-        this.errorSerializer = Wr ? null !== (Sr = null === Zr || void 0 === Zr ? void 0 : Zr.errorSerializer) && void 0 !== Sr ? Sr : OQ : PQ;
-        const ar = null !== (Qr = null === Zr || void 0 === Zr ? void 0 : Zr.disabledLevels) && void 0 !== Qr ? Qr : rr.defaultDisabledLevels,
-          jr = function(rr) {
-            if (yQ || (yQ = new YQ), !BQ) {
-              const Sr = null !== rr && void 0 !== rr ? rr : uS;
-              KQ.forEach((rr => {
-                console[rr] = function() {
-                  for (var Qr, Zr = arguments.length, Wr = new Array(Zr), ar = 0; ar < Zr; ar++) Wr[ar] = arguments[ar];
-                  yQ.notify({
+        var Od, md;
+        const Wd = this.config.consoleInstrumentation,
+          Fd = (null === Wd || void 0 === Wd ? void 0 : Wd.serializeErrors) || !!(null === Wd || void 0 === Wd ? void 0 : Wd.errorSerializer);
+        this.errorSerializer = Fd ? null !== (Od = null === Wd || void 0 === Wd ? void 0 : Wd.errorSerializer) && void 0 !== Od ? Od : Sm : im;
+        const Rd = null !== (md = null === Wd || void 0 === Wd ? void 0 : Wd.disabledLevels) && void 0 !== md ? md : dd.defaultDisabledLevels,
+          Xd = function(dd) {
+            if (Jm || (Jm = new gm), !Um) {
+              const Od = null !== dd && void 0 !== dd ? dd : Om;
+              Em.forEach((dd => {
+                console[dd] = function() {
+                  for (var md, Wd = arguments.length, Fd = new Array(Wd), Rd = 0; Rd < Wd; Rd++) Fd[Rd] = arguments[Rd];
+                  Jm.notify({
                     type: "console",
-                    level: rr,
-                    args: Wr
-                  }), null === (Qr = Sr[rr]) || void 0 === Qr || Qr.apply(console, Wr)
+                    level: dd,
+                    args: Fd
+                  }), null === (md = Od[dd]) || void 0 === md || md.apply(console, Fd)
                 }
-              })), BQ = !0
+              })), Um = !0
             }
-            return yQ
+            return Jm
           }(this.unpatchedConsole);
-        this.subscription = jr.subscribe((Sr => {
+        this.subscription = Xd.subscribe((Od => {
           let {
-            level: Qr,
-            args: Wr
-          } = Sr;
-          if (!ar.includes(Qr)) try {
-            if (Qr !== nQ.ERROR || (null === Zr || void 0 === Zr ? void 0 : Zr.consoleErrorAsLog))
-              if (Qr === nQ.ERROR && (null === Zr || void 0 === Zr ? void 0 : Zr.consoleErrorAsLog)) {
+            level: md,
+            args: Fd
+          } = Od;
+          if (!Rd.includes(md)) try {
+            if (md !== wm.ERROR || (null === Wd || void 0 === Wd ? void 0 : Wd.consoleErrorAsLog))
+              if (md === wm.ERROR && (null === Wd || void 0 === Wd ? void 0 : Wd.consoleErrorAsLog)) {
                 const {
-                  value: Sr,
-                  type: Zr,
-                  stackFrames: ar
-                } = XQ(Wr, this.errorSerializer);
-                this.api.pushLog(Sr ? [rr.consoleErrorPrefix + Sr] : Wr, {
-                  level: Qr,
+                  value: Od,
+                  type: Wd,
+                  stackFrames: Rd
+                } = Vm(Fd, this.errorSerializer);
+                this.api.pushLog(Od ? [dd.consoleErrorPrefix + Od] : Fd, {
+                  level: md,
                   context: {
-                    value: null !== Sr && void 0 !== Sr ? Sr : "",
-                    type: null !== Zr && void 0 !== Zr ? Zr : "",
-                    stackFrames: (null === ar || void 0 === ar ? void 0 : ar.length) ? OQ(ar) : ""
+                    value: null !== Od && void 0 !== Od ? Od : "",
+                    type: null !== Wd && void 0 !== Wd ? Wd : "",
+                    stackFrames: (null === Rd || void 0 === Rd ? void 0 : Rd.length) ? Sm(Rd) : ""
                   }
                 })
-              } else this.api.pushLog(Wr, {
-                level: Qr
+              } else this.api.pushLog(Fd, {
+                level: md
               });
             else {
               const {
-                value: Sr,
-                type: Qr,
-                stackFrames: Zr
-              } = XQ(Wr, this.errorSerializer);
-              if (Sr && !Qr && !Zr) return void this.api.pushError(new Error(rr.consoleErrorPrefix + Sr));
-              this.api.pushError(new Error(rr.consoleErrorPrefix + Sr), {
-                type: Qr,
-                stackFrames: Zr
+                value: Od,
+                type: md,
+                stackFrames: Wd
+              } = Vm(Fd, this.errorSerializer);
+              if (Od && !md && !Wd) return void this.api.pushError(new Error(dd.consoleErrorPrefix + Od));
+              this.api.pushError(new Error(dd.consoleErrorPrefix + Od), {
+                type: md,
+                stackFrames: Wd
               })
             }
-          } catch (jr) {
-            this.logError(jr)
+          } catch (Xd) {
+            this.logError(Xd)
           }
         }))
       }
       destroy() {
-        var rr;
-        null === (rr = this.subscription) || void 0 === rr || rr.unsubscribe(), this.subscription = void 0
+        var dd;
+        null === (dd = this.subscription) || void 0 === dd || dd.unsubscribe(), this.subscription = void 0
       }
     };
-    HQ.defaultDisabledLevels = [nQ.DEBUG, nQ.TRACE, nQ.LOG], HQ.consoleErrorPrefix = "console.error: ";
-    const qQ = [];
-    var RQ = class extends SQ {
+    Am.defaultDisabledLevels = [wm.DEBUG, wm.TRACE, wm.LOG], Am.consoleErrorPrefix = "console.error: ";
+    const rm = [];
+    var Gm = class extends Wm {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = QQ
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = Fm
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(rr) {
-            const Sr = window.onerror;
+          function(dd) {
+            const Od = window.onerror;
             window.onerror = function() {
-              for (var Qr = arguments.length, Zr = new Array(Qr), Wr = 0; Wr < Qr; Wr++) Zr[Wr] = arguments[Wr];
+              for (var md = arguments.length, Wd = new Array(md), Fd = 0; Fd < md; Fd++) Wd[Fd] = arguments[Fd];
               try {
                 const {
-                  value: Sr,
-                  type: Qr,
-                  stackFrames: Wr
-                } = lQ(Zr), ar = Zr[4];
-                if (Sr) {
-                  const Zr = {
-                    type: Qr,
-                    stackFrames: Wr
+                  value: Od,
+                  type: md,
+                  stackFrames: Fd
+                } = um(Wd), Rd = Wd[4];
+                if (Od) {
+                  const Wd = {
+                    type: md,
+                    stackFrames: Fd
                   };
-                  null != ar && (Zr.originalError = ar), rr.pushError(new Error(Sr), Zr)
+                  null != Rd && (Wd.originalError = Rd), dd.pushError(new Error(Od), Wd)
                 }
               } finally {
-                null === Sr || void 0 === Sr || Sr.apply(window, Zr)
+                null === Od || void 0 === Od || Od.apply(window, Wd)
               }
             }
           }(this.api),
-          function(rr) {
-            const Sr = Sr => {
-              var Qr;
-              let Zr, Wr, ar = Sr;
-              if (ar.reason) ar = Sr.reason;
-              else if (null === (Qr = Sr.detail) || void 0 === Qr ? void 0 : Qr.reason) {
-                var jr;
-                ar = null === (jr = Sr.detail) || void 0 === jr ? void 0 : jr.reason
+          function(dd) {
+            const Od = Od => {
+              var md;
+              let Wd, Fd, Rd = Od;
+              if (Rd.reason) Rd = Od.reason;
+              else if (null === (md = Od.detail) || void 0 === md ? void 0 : md.reason) {
+                var Xd;
+                Rd = null === (Xd = Od.detail) || void 0 === Xd ? void 0 : Xd.reason
               }
-              let Ir = [];
-              qr(ar) ? (Zr = `Non-Error promise rejection captured with value: ${String(ar)}`, Wr = "UnhandledRejection") : [Zr, Wr, Ir] = LQ(ar), Zr && rr.pushError(new Error(Zr), {
-                type: Wr,
-                stackFrames: Ir
+              let Kd = [];
+              Ad(Rd) ? (Wd = `Non-Error promise rejection captured with value: ${String(Rd)}`, Fd = "UnhandledRejection") : [Wd, Fd, Kd] = sm(Rd), Wd && dd.pushError(new Error(Wd), {
+                type: Fd,
+                stackFrames: Kd
               })
             };
-            window.addEventListener("unhandledrejection", Sr), qQ.push(Sr)
+            window.addEventListener("unhandledrejection", Od), rm.push(Od)
           }(this.api)
       }
     };
-    const gQ = "unknown";
-    var CQ = class extends SQ {
+    const nm = "unknown";
+    var Lm = class extends Wm {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = QQ, this.waitingForActivation = !1, this.sendViewChangedEvent = rr => {
-          var Sr;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = Fm, this.waitingForActivation = !1, this.sendViewChangedEvent = dd => {
+          var Od;
           if (this.waitingForActivation || document.prerendering) return;
-          const Qr = rr.view;
-          if (Qr && Qr.name !== (null === (Sr = this.notifiedView) || void 0 === Sr ? void 0 : Sr.name)) {
-            var Zr, Wr, ar;
-            const rr = null !== (Zr = null === (Wr = this.notifiedView) || void 0 === Wr ? void 0 : Wr.name) && void 0 !== Zr ? Zr : gQ;
-            this.notifiedView = Qr, this.api.pushEvent(KS, {
-              fromView: rr,
-              toView: null !== (ar = Qr.name) && void 0 !== ar ? ar : gQ
+          const md = dd.view;
+          if (md && md.name !== (null === (Od = this.notifiedView) || void 0 === Od ? void 0 : Od.name)) {
+            var Wd, Fd, Rd;
+            const dd = null !== (Wd = null === (Fd = this.notifiedView) || void 0 === Fd ? void 0 : Fd.name) && void 0 !== Wd ? Wd : nm;
+            this.notifiedView = md, this.api.pushEvent(aO, {
+              fromView: dd,
+              toView: null !== (Rd = md.name) && void 0 !== Rd ? Rd : nm
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class MQ {
+    class Pm {
       t;
       o = 0;
       i = [];
-      l(rr) {
-        if (rr.hadRecentInput) return;
-        const Sr = this.i[0],
-          Qr = this.i.at(-1);
-        this.o && Sr && Qr && rr.startTime - Qr.startTime < 1e3 && rr.startTime - Sr.startTime < 5e3 ? (this.o += rr.value, this.i.push(rr)) : (this.o = rr.value, this.i = [rr]), this.t?.(rr)
+      l(dd) {
+        if (dd.hadRecentInput) return;
+        const Od = this.i[0],
+          md = this.i.at(-1);
+        this.o && Od && md && dd.startTime - md.startTime < 1e3 && dd.startTime - Od.startTime < 5e3 ? (this.o += dd.value, this.i.push(dd)) : (this.o = dd.value, this.i = [dd]), this.t?.(dd)
       }
     }
-    const GQ = () => {
-        const rr = performance.getEntriesByType("navigation")[0];
-        if (rr && rr.responseStart > 0 && rr.responseStart < performance.now()) return rr
+    const zm = () => {
+        const dd = performance.getEntriesByType("navigation")[0];
+        if (dd && dd.responseStart > 0 && dd.responseStart < performance.now()) return dd
       },
-      kQ = rr => {
+      cm = dd => {
         if ("loading" === document.readyState) return "loading";
-        const Sr = GQ();
-        if (Sr) {
-          if (rr < Sr.domInteractive) return "loading";
-          if (0 === Sr.domContentLoadedEventStart || rr < Sr.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === Sr.domComplete || rr < Sr.domComplete) return "dom-content-loaded"
+        const Od = zm();
+        if (Od) {
+          if (dd < Od.domInteractive) return "loading";
+          if (0 === Od.domContentLoadedEventStart || dd < Od.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === Od.domComplete || dd < Od.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      AQ = rr => {
-        const Sr = rr.nodeName;
-        return 1 === rr.nodeType ? Sr.toLowerCase() : Sr.toUpperCase().replace(/^#/, "")
+      jm = dd => {
+        const Od = dd.nodeName;
+        return 1 === dd.nodeType ? Od.toLowerCase() : Od.toUpperCase().replace(/^#/, "")
       },
-      VQ = rr => {
-        let Sr = "";
+      Dm = dd => {
+        let Od = "";
         try {
-          for (; 9 !== rr?.nodeType;) {
-            const Qr = rr,
-              Zr = Qr.id ? "#" + Qr.id : [AQ(Qr), ...Array.from(Qr.classList ?? []).sort()].join(".");
-            if (Sr.length + Zr.length > 99) return Sr || Zr;
-            if (Sr = Sr ? Zr + ">" + Sr : Zr, Qr.id) break;
-            rr = Qr.parentNode
+          for (; 9 !== dd?.nodeType;) {
+            const md = dd,
+              Wd = md.id ? "#" + md.id : [jm(md), ...Array.from(md.classList ?? []).sort()].join(".");
+            if (Od.length + Wd.length > 99) return Od || Wd;
+            if (Od = Od ? Wd + ">" + Od : Wd, md.id) break;
+            dd = md.parentNode
           }
         } catch {}
-        return Sr
+        return Od
       },
-      iQ = new WeakMap;
+      em = new WeakMap;
 
-    function wQ(rr, Sr) {
-      let Qr = iQ.get(Sr);
-      return Qr || (Qr = new WeakMap, iQ.set(Sr, Qr)), Qr.get(rr) || Qr.set(rr, new Sr), Qr.get(rr)
+    function Im(dd, Od) {
+      let md = em.get(Od);
+      return md || (md = new WeakMap, em.set(Od, md)), md.get(dd) || md.set(dd, new Od), md.get(dd)
     }
-    let cQ = -1;
-    const FQ = () => cQ,
-      oQ = rr => {
-        addEventListener("pageshow", (Sr => {
-          Sr.persisted && (cQ = Sr.timeStamp, rr(Sr))
+    let lm = -1;
+    const Cm = () => lm,
+      Zm = dd => {
+        addEventListener("pageshow", (Od => {
+          Od.persisted && (lm = Od.timeStamp, dd(Od))
         }), !0)
       },
-      bQ = (rr, Sr, Qr, Zr) => {
-        let Wr, ar;
-        return jr => {
-          Sr.value >= 0 && (jr || Zr) && (ar = Sr.value - (Wr ?? 0), (ar || void 0 === Wr) && (Wr = Sr.value, Sr.delta = ar, Sr.rating = ((rr, Sr) => rr > Sr[1] ? "poor" : rr > Sr[0] ? "needs-improvement" : "good")(Sr.value, Qr), rr(Sr)))
+      km = (dd, Od, md, Wd) => {
+        let Fd, Rd;
+        return Xd => {
+          Od.value >= 0 && (Xd || Wd) && (Rd = Od.value - (Fd ?? 0), (Rd || void 0 === Fd) && (Fd = Od.value, Od.delta = Rd, Od.rating = ((dd, Od) => dd > Od[1] ? "poor" : dd > Od[0] ? "needs-improvement" : "good")(Od.value, md), dd(Od)))
         }
       },
-      JQ = rr => {
-        requestAnimationFrame((() => requestAnimationFrame((() => rr()))))
+      fm = dd => {
+        requestAnimationFrame((() => requestAnimationFrame((() => dd()))))
       },
-      DQ = () => GQ()?.activationStart ?? 0;
-    let dQ = -1;
-    const sQ = new Set,
-      uQ = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      rZ = rr => {
+      Mm = () => zm()?.activationStart ?? 0;
+    let dW = -1;
+    const OW = new Set,
+      mW = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      WW = dd => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === rr.type)
-            for (const rr of sQ) rr();
-          isFinite(dQ) || (dQ = "visibilitychange" === rr.type ? rr.timeStamp : 0, removeEventListener("prerenderingchange", rZ, !0))
+          if ("visibilitychange" === dd.type)
+            for (const dd of OW) dd();
+          isFinite(dW) || (dW = "visibilitychange" === dd.type ? dd.timeStamp : 0, removeEventListener("prerenderingchange", WW, !0))
         }
       },
-      SZ = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (dQ = 1 / 0), dQ < 0) {
-          const rr = DQ(),
-            Sr = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((Sr => "hidden" === Sr.name && Sr.startTime >= rr))?.startTime;
-          dQ = Sr ?? uQ(), addEventListener("visibilitychange", rZ, !0), addEventListener("prerenderingchange", rZ, !0), oQ((() => {
+      FW = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (dW = 1 / 0), dW < 0) {
+          const dd = Mm(),
+            Od = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((Od => "hidden" === Od.name && Od.startTime >= dd))?.startTime;
+          dW = Od ?? mW(), addEventListener("visibilitychange", WW, !0), addEventListener("prerenderingchange", WW, !0), Zm((() => {
             setTimeout((() => {
-              dQ = uQ()
+              dW = mW()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return dQ
+            return dW
           },
-          onHidden(rr) {
-            sQ.add(rr)
+          onHidden(dd) {
+            OW.add(dd)
           }
         }
       },
-      QZ = function(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          Qr = arguments.length > 2 ? arguments[2] : void 0,
-          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Wr = arguments.length > 4 ? arguments[4] : void 0,
-          ar = arguments.length > 5 ? arguments[5] : void 0,
-          jr = arguments.length > 6 ? arguments[6] : void 0;
-        const Ir = GQ(),
-          fr = Ir?.navigationId || 0;
-        let Er = "navigate";
-        return Qr ? Er = Qr : FQ() >= 0 ? Er = "back-forward-cache" : Ir && (document.prerendering || DQ() > 0 ? Er = "prerender" : document.wasDiscarded ? Er = "restore" : Ir.type && (Er = Ir.type.replace(/_/g, "-"))), {
-          name: rr,
-          value: Sr,
+      RW = function(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          md = arguments.length > 2 ? arguments[2] : void 0,
+          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Fd = arguments.length > 4 ? arguments[4] : void 0,
+          Rd = arguments.length > 5 ? arguments[5] : void 0,
+          Xd = arguments.length > 6 ? arguments[6] : void 0;
+        const Kd = zm(),
+          hd = Kd?.navigationId || 0;
+        let vd = "navigate";
+        return md ? vd = md : Cm() >= 0 ? vd = "back-forward-cache" : Kd && (document.prerendering || Mm() > 0 ? vd = "prerender" : document.wasDiscarded ? vd = "restore" : Kd.type && (vd = Kd.type.replace(/_/g, "-"))), {
+          name: dd,
+          value: Od,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: Er,
-          navigationId: Zr || fr,
-          navigationInteractionId: Wr,
-          navigationURL: ar || Ir?.name,
-          navigationStartTime: jr || 0
+          navigationType: vd,
+          navigationId: Wd || hd,
+          navigationInteractionId: Fd,
+          navigationURL: Rd || Kd?.name,
+          navigationStartTime: Xd || 0
         }
       },
-      ZZ = function(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      XW = function(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const Zr = rr.filter((rr => PerformanceObserver.supportedEntryTypes.includes(rr)));
-          if (Zr.length > 0) {
-            const rr = new PerformanceObserver((rr => {
+          const Wd = dd.filter((dd => PerformanceObserver.supportedEntryTypes.includes(dd)));
+          if (Wd.length > 0) {
+            const dd = new PerformanceObserver((dd => {
               queueMicrotask((() => {
-                const Qr = rr.getEntries();
-                Zr.length > 1 && Qr.sort(((rr, Sr) => rr.startTime + rr.duration - (Sr.startTime + Sr.duration))), Sr(Qr)
+                const md = dd.getEntries();
+                Wd.length > 1 && md.sort(((dd, Od) => dd.startTime + dd.duration - (Od.startTime + Od.duration))), Od(md)
               }))
             }));
-            for (const Sr of Zr) rr.observe({
-              type: Sr,
+            for (const Od of Wd) dd.observe({
+              type: Od,
               buffered: !0,
-              ...Qr
+              ...md
             });
-            return rr
+            return dd
           }
         } catch {}
       },
-      WZ = rr => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && rr && rr.reportSoftNavs,
-      aZ = (rr, Sr) => {
-        if (rr.set(Sr.navigationId, Sr), rr.size > 2) {
-          const Sr = rr.keys().next().value;
-          void 0 !== Sr && rr.delete(Sr)
+      KW = dd => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && dd && dd.reportSoftNavs,
+      hW = (dd, Od) => {
+        if (dd.set(Od.navigationId, Od), dd.size > 2) {
+          const Od = dd.keys().next().value;
+          void 0 !== Od && dd.delete(Od)
         }
       },
-      jZ = rr => {
-        let Sr = !1;
+      vW = dd => {
+        let Od = !1;
         return () => {
-          Sr || (rr(), Sr = !0)
+          Od || (dd(), Od = !0)
         }
       };
-    class IZ {
+    class QW {
       u
     }
-    const fZ = rr => {
-        document.prerendering ? addEventListener("prerenderingchange", rr, !0) : rr()
+    const tW = dd => {
+        document.prerendering ? addEventListener("prerenderingchange", dd, !0) : dd()
       },
-      EZ = [1800, 3e3],
-      pZ = function(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Qr = WZ(Sr);
-        fZ((() => {
-          const Zr = wQ(Sr, IZ),
-            Wr = SZ();
-          let ar, jr = QZ("FCP");
-          const Ir = ZZ(["paint"], (rr => {
-            for (const Sr of rr) "first-contentful-paint" === Sr.name && (Ir.disconnect(), Sr.startTime < Wr.firstHiddenTime && (jr.value = Math.max(Sr.startTime - DQ(), 0), jr.entries.push(Sr), jr.navigationId = Sr.navigationId || jr.navigationId, ar(!0)))
+      oW = [1800, 3e3],
+      NW = function(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const md = KW(Od);
+        tW((() => {
+          const Wd = Im(Od, QW),
+            Fd = FW();
+          let Rd, Xd = RW("FCP");
+          const Kd = XW(["paint"], (dd => {
+            for (const Od of dd) "first-contentful-paint" === Od.name && (Kd.disconnect(), Od.startTime < Fd.firstHiddenTime && (Xd.value = Math.max(Od.startTime - Mm(), 0), Xd.entries.push(Od), Xd.navigationId = Od.navigationId || Xd.navigationId, Rd(!0)))
           }));
-          Ir && (ar = bQ(rr, jr, EZ, Sr.reportAllChanges), oQ((Qr => {
-            jr = QZ("FCP", -1, "back-forward-cache", jr.navigationId, jr.navigationInteractionId, jr.navigationURL, FQ()), ar = bQ(rr, jr, EZ, Sr.reportAllChanges), JQ((() => {
-              jr.value = performance.now() - Qr.timeStamp, ar(!0)
+          Kd && (Rd = km(dd, Xd, oW, Od.reportAllChanges), Zm((md => {
+            Xd = RW("FCP", -1, "back-forward-cache", Xd.navigationId, Xd.navigationInteractionId, Xd.navigationURL, Cm()), Rd = km(dd, Xd, oW, Od.reportAllChanges), fm((() => {
+              Xd.value = performance.now() - md.timeStamp, Rd(!0)
             }))
-          }))), Qr && ZZ(["soft-navigation"], (Qr => {
-            Qr.forEach((Qr => {
-              Zr.u && Qr.navigationId && aZ(Zr.u, Qr);
-              const Wr = Math.max((Qr.presentationTime || Qr.paintTime || 0) - Qr.startTime, 0);
-              jr = QZ("FCP", Wr, "soft-navigation", Qr.navigationId, Qr.interactionId, Qr.name, Qr.startTime), ar = bQ(rr, jr, EZ, Sr.reportAllChanges), ar(!0)
+          }))), md && XW(["soft-navigation"], (md => {
+            md.forEach((md => {
+              Wd.u && md.navigationId && hW(Wd.u, md);
+              const Fd = Math.max((md.presentationTime || md.paintTime || 0) - md.startTime, 0);
+              Xd = RW("FCP", Fd, "soft-navigation", md.navigationId, md.interactionId, md.name, md.startTime), Rd = km(dd, Xd, oW, Od.reportAllChanges), Rd(!0)
             }))
-          }), Sr)
+          }), Od)
         }))
       },
-      xZ = [.1, .25],
-      mZ = rr => rr.find((rr => 1 === rr.node?.nodeType)) || rr[0];
-    let NZ = 0,
-      UZ = 1 / 0,
-      tZ = 0;
-    const hZ = rr => {
-      for (const Sr of rr) Sr.interactionId && (UZ = Math.min(UZ, Sr.interactionId), tZ = Math.max(tZ, Sr.interactionId), NZ = tZ ? (tZ - UZ) / 7 + 1 : 0)
+      qW = [.1, .25],
+      HW = dd => dd.find((dd => 1 === dd.node?.nodeType)) || dd[0];
+    let yW = 0,
+      bW = 1 / 0,
+      TW = 0;
+    const pW = dd => {
+      for (const Od of dd) Od.interactionId && (bW = Math.min(bW, Od.interactionId), TW = Math.max(TW, Od.interactionId), yW = TW ? (TW - bW) / 7 + 1 : 0)
     };
-    let zZ;
-    const YZ = () => zZ ? NZ : performance.interactionCount ?? 0;
-    class nZ {
+    let YW;
+    const gW = () => YW ? yW : performance.interactionCount ?? 0;
+    class wW {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return YZ() - this.h
+        return gW() - this.h
       }
       D() {
-        this.h = YZ(), this.v.length = 0, this.p.clear()
+        this.h = gW(), this.v.length = 0, this.p.clear()
       }
-      S(rr) {
-        const Sr = this.T(),
-          Qr = Math.min(this.v.length - 1, Math.floor(Sr / 50));
-        return !Sr || -1 !== Qr || "soft-navigation" !== rr && "back-forward-cache" !== rr ? this.v[Qr] : {
+      S(dd) {
+        const Od = this.T(),
+          md = Math.min(this.v.length - 1, Math.floor(Od / 50));
+        return !Od || -1 !== md || "soft-navigation" !== dd && "back-forward-cache" !== dd ? this.v[md] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(rr) {
-        if (this.m?.(rr), !rr.interactionId) return;
-        const Sr = this.v.at(-1);
-        let Qr = this.p.get(rr.interactionId);
-        if (Qr || this.v.length < 10 || rr.duration > Sr.k) {
-          if (Qr ? rr.duration > Qr.k ? (Qr.entries = [rr], Qr.k = rr.duration) : rr.duration === Qr.k && rr.startTime === Qr.entries[0].startTime && Qr.entries.push(rr) : (Qr = {
-              id: rr.interactionId,
-              entries: [rr],
-              k: rr.duration
-            }, this.p.set(Qr.id, Qr), this.v.push(Qr)), this.v.sort(((rr, Sr) => Sr.k - rr.k)), this.v.length > 10) {
-            const rr = this.v.splice(10);
-            for (const Sr of rr) this.p.delete(Sr.id)
+      l(dd) {
+        if (this.m?.(dd), !dd.interactionId) return;
+        const Od = this.v.at(-1);
+        let md = this.p.get(dd.interactionId);
+        if (md || this.v.length < 10 || dd.duration > Od.k) {
+          if (md ? dd.duration > md.k ? (md.entries = [dd], md.k = dd.duration) : dd.duration === md.k && dd.startTime === md.entries[0].startTime && md.entries.push(dd) : (md = {
+              id: dd.interactionId,
+              entries: [dd],
+              k: dd.duration
+            }, this.p.set(md.id, md), this.v.push(md)), this.v.sort(((dd, Od) => Od.k - dd.k)), this.v.length > 10) {
+            const dd = this.v.splice(10);
+            for (const Od of dd) this.p.delete(Od.id)
           }
-          this.M?.(Qr)
+          this.M?.(md)
         }
       }
     }
-    const eZ = rr => {
-        const Sr = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          Qr = globalThis.requestIdleCallback || setTimeout,
-          Zr = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) rr();
+    const aW = dd => {
+        const Od = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          md = globalThis.requestIdleCallback || setTimeout,
+          Wd = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) dd();
         else {
-          const Wr = jZ(rr);
-          let ar = -1;
-          const jr = () => {
-            Zr(ar), Wr()
+          const Fd = vW(dd);
+          let Rd = -1;
+          const Xd = () => {
+            Wd(Rd), Fd()
           };
-          addEventListener("visibilitychange", jr, {
+          addEventListener("visibilitychange", Xd, {
             once: !0,
             capture: !0
-          }), ar = Qr((() => {
-            removeEventListener("visibilitychange", jr, {
+          }), Rd = md((() => {
+            removeEventListener("visibilitychange", Xd, {
               capture: !0
-            }), Wr()
+            }), Fd()
           }), {
-            timeout: Sr
+            timeout: Od
           })
         }
       },
-      KZ = [200, 500],
-      yZ = function(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Qr = wQ(Sr = Object.assign({}, Sr), nZ);
-        let Zr = [],
-          Wr = [],
-          ar = 0;
-        const jr = new WeakMap,
-          Ir = new WeakMap;
-        let fr = !1;
-        const Er = () => {
-            fr || (fr = !0, eZ(pr))
+      EW = [200, 500],
+      JW = function(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const md = Im(Od = Object.assign({}, Od), wW);
+        let Wd = [],
+          Fd = [],
+          Rd = 0;
+        const Xd = new WeakMap,
+          Kd = new WeakMap;
+        let hd = !1;
+        const vd = () => {
+            hd || (hd = !0, aW(Qd))
           },
-          pr = () => {
-            const rr = new Set(Qr.v.map((rr => jr.get(rr.entries[0])))),
-              Sr = Wr.length - 10;
-            Wr = Wr.filter(((Qr, Zr) => Zr >= Sr || rr.has(Qr)));
-            const Ir = new Set;
-            for (const Qr of Wr) {
-              const rr = xr(Qr.startTime, Qr.processingEnd);
-              for (const Sr of rr) Ir.add(Sr)
+          Qd = () => {
+            const dd = new Set(md.v.map((dd => Xd.get(dd.entries[0])))),
+              Od = Fd.length - 10;
+            Fd = Fd.filter(((md, Wd) => Wd >= Od || dd.has(md)));
+            const Kd = new Set;
+            for (const md of Fd) {
+              const dd = td(md.startTime, md.processingEnd);
+              for (const Od of dd) Kd.add(Od)
             }
-            const Er = Zr.length - 10;
-            Zr = Zr.filter(((rr, Sr) => Ir.has(rr) || Sr >= Er && rr.startTime > ar)), fr = !1
+            const vd = Wd.length - 10;
+            Wd = Wd.filter(((dd, Od) => Kd.has(dd) || Od >= vd && dd.startTime > Rd)), hd = !1
           };
-        Qr.m = rr => {
-          const Qr = rr.startTime + rr.duration;
-          let Zr;
-          ar = Math.max(ar, rr.processingEnd);
-          for (let ar = Wr.length - 1; ar >= 0; ar--) {
-            const jr = Wr[ar];
-            if (Math.abs(Qr - jr.renderTime) <= 8) {
-              Zr = jr, Zr.startTime = Math.min(rr.startTime, Zr.startTime), Zr.processingStart = Math.min(rr.processingStart, Zr.processingStart), Zr.processingEnd = Math.max(rr.processingEnd, Zr.processingEnd), Sr.includeProcessedEventEntries && Zr.entries.push(rr);
+        md.m = dd => {
+          const md = dd.startTime + dd.duration;
+          let Wd;
+          Rd = Math.max(Rd, dd.processingEnd);
+          for (let Rd = Fd.length - 1; Rd >= 0; Rd--) {
+            const Xd = Fd[Rd];
+            if (Math.abs(md - Xd.renderTime) <= 8) {
+              Wd = Xd, Wd.startTime = Math.min(dd.startTime, Wd.startTime), Wd.processingStart = Math.min(dd.processingStart, Wd.processingStart), Wd.processingEnd = Math.max(dd.processingEnd, Wd.processingEnd), Od.includeProcessedEventEntries && Wd.entries.push(dd);
               break
             }
           }
-          Zr || (Zr = {
-            startTime: rr.startTime,
-            processingStart: rr.processingStart,
-            processingEnd: rr.processingEnd,
-            renderTime: Qr,
-            entries: Sr.includeProcessedEventEntries ? [rr] : []
-          }, Wr.push(Zr)), rr.interactionId && jr.set(rr, Zr), Er()
-        }, Qr.M = rr => {
-          if (!Ir.get(rr)) {
-            const Qr = rr.entries.find((rr => rr.target))?.target;
-            if (Qr) {
-              const Zr = Sr.generateTarget?.(Qr) ?? VQ(Qr);
-              Ir.set(rr, Zr)
+          Wd || (Wd = {
+            startTime: dd.startTime,
+            processingStart: dd.processingStart,
+            processingEnd: dd.processingEnd,
+            renderTime: md,
+            entries: Od.includeProcessedEventEntries ? [dd] : []
+          }, Fd.push(Wd)), dd.interactionId && Xd.set(dd, Wd), vd()
+        }, md.M = dd => {
+          if (!Kd.get(dd)) {
+            const md = dd.entries.find((dd => dd.target))?.target;
+            if (md) {
+              const Wd = Od.generateTarget?.(md) ?? Dm(md);
+              Kd.set(dd, Wd)
             } else {
-              const Sr = rr.entries.find((rr => rr.targetSelector))?.targetSelector;
-              Sr && Ir.set(rr, Sr)
+              const Od = dd.entries.find((dd => dd.targetSelector))?.targetSelector;
+              Od && Kd.set(dd, Od)
             }
           }
         };
-        const xr = (rr, Sr) => {
-          const Qr = [];
-          for (const Wr of Zr)
-            if (!(Wr.startTime + Wr.duration < rr)) {
-              if (Wr.startTime > Sr) break;
-              Qr.push(Wr)
-            } return Qr
+        const td = (dd, Od) => {
+          const md = [];
+          for (const Fd of Wd)
+            if (!(Fd.startTime + Fd.duration < dd)) {
+              if (Fd.startTime > Od) break;
+              md.push(Fd)
+            } return md
         };
-        ZZ(["long-animation-frame"], (rr => {
-            Zr = Zr.concat(rr), Er()
-          }), Sr),
-          function(rr) {
-            let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        XW(["long-animation-frame"], (dd => {
+            Wd = Wd.concat(dd), vd()
+          }), Od),
+          function(dd) {
+            let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const Qr = SZ();
-            fZ((() => {
-              "interactionCount" in performance || zZ || (zZ = ZZ(["event"], hZ, {
+            const md = FW();
+            tW((() => {
+              "interactionCount" in performance || YW || (YW = XW(["event"], pW, {
                 durationThreshold: 0
               }));
-              let Zr, Wr = QZ("INP");
-              const ar = wQ(Sr, nZ),
-                jr = (Qr, jr, Ir, fr, Er) => {
-                  ar.D(), Wr = QZ("INP", -1, Qr, jr, Ir, fr, Er), Zr = bQ(rr, Wr, KZ, Sr.reportAllChanges)
+              let Wd, Fd = RW("INP");
+              const Rd = Im(Od, wW),
+                Xd = (md, Xd, Kd, hd, vd) => {
+                  Rd.D(), Fd = RW("INP", -1, md, Xd, Kd, hd, vd), Wd = km(dd, Fd, EW, Od.reportAllChanges)
                 },
-                Ir = () => {
-                  const rr = ar.S(Wr.navigationType);
-                  rr && rr.k !== Wr.value && (Wr.value = rr.k, Wr.entries = rr.entries, Zr())
+                Kd = () => {
+                  const dd = Rd.S(Fd.navigationType);
+                  dd && dd.k !== Fd.value && (Fd.value = dd.k, Fd.entries = dd.entries, Wd())
                 },
-                fr = rr => {
-                  Ir(), Zr(!0), jr("soft-navigation", rr.navigationId, rr.interactionId, rr.name, rr.startTime)
+                hd = dd => {
+                  Kd(), Wd(!0), Xd("soft-navigation", dd.navigationId, dd.interactionId, dd.name, dd.startTime)
                 },
-                Er = function(rr) {
-                  let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  eZ((() => {
-                    for (const Sr of rr) "soft-navigation" !== Sr.entryType ? ar.l(Sr) : fr(Sr);
-                    Ir(), Sr && Zr(!0)
+                vd = function(dd) {
+                  let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  aW((() => {
+                    for (const Od of dd) "soft-navigation" !== Od.entryType ? Rd.l(Od) : hd(Od);
+                    Kd(), Od && Wd(!0)
                   }))
                 },
-                pr = ["event", "first-input"];
-              WZ(Sr) && pr.push("soft-navigation");
-              const xr = ZZ(pr, Er, {
-                ...Sr,
-                durationThreshold: Sr.durationThreshold ?? 40
+                Qd = ["event", "first-input"];
+              KW(Od) && Qd.push("soft-navigation");
+              const td = XW(Qd, vd, {
+                ...Od,
+                durationThreshold: Od.durationThreshold ?? 40
               });
-              Zr = bQ(rr, Wr, KZ, Sr.reportAllChanges), xr && (Qr.onHidden((() => {
-                Er(xr.takeRecords(), !0)
-              })), oQ((() => {
-                jr("back-forward-cache", Wr.navigationId, Wr.navigationInteractionId, Wr.navigationURL, FQ())
+              Wd = km(dd, Fd, EW, Od.reportAllChanges), td && (md.onHidden((() => {
+                vd(td.takeRecords(), !0)
+              })), Zm((() => {
+                Xd("back-forward-cache", Fd.navigationId, Fd.navigationInteractionId, Fd.navigationURL, Cm())
               })))
             }))
-          }((Sr => {
-            rr((rr => {
-              if (0 === rr.entries.length) {
-                const Sr = rr.navigationStartTime || 0,
-                  Qr = {
+          }((Od => {
+            dd((dd => {
+              if (0 === dd.entries.length) {
+                const Od = dd.navigationStartTime || 0,
+                  md = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: rr.value,
-                    loadState: kQ(Sr)
+                    presentationDelay: dd.value,
+                    loadState: cm(Od)
                   };
-                return Object.assign(rr, {
-                  attribution: Qr
+                return Object.assign(dd, {
+                  attribution: md
                 })
               }
-              const Sr = rr.entries[0],
-                Zr = jr.get(Sr),
-                Wr = Math.max(Zr.processingStart, Sr.startTime),
-                ar = Math.max(Sr.startTime + Sr.duration, Wr),
-                fr = Math.min(Zr.processingEnd, ar),
-                Er = Zr.entries.sort(((rr, Sr) => rr.processingStart - Sr.processingStart)),
-                pr = xr(Sr.startTime, fr),
-                mr = Qr.p.get(Sr.interactionId),
-                Nr = {
-                  interactionTarget: Ir.get(mr),
-                  interactionType: Sr.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: Sr.startTime,
-                  nextPaintTime: ar,
-                  processedEventEntries: Er,
-                  longAnimationFrameEntries: pr,
-                  inputDelay: Wr - Sr.startTime,
-                  processingDuration: fr - Wr,
-                  presentationDelay: ar - fr,
-                  loadState: kQ(Sr.startTime),
+              const Od = dd.entries[0],
+                Wd = Xd.get(Od),
+                Fd = Math.max(Wd.processingStart, Od.startTime),
+                Rd = Math.max(Od.startTime + Od.duration, Fd),
+                hd = Math.min(Wd.processingEnd, Rd),
+                vd = Wd.entries.sort(((dd, Od) => dd.processingStart - Od.processingStart)),
+                Qd = td(Od.startTime, hd),
+                od = md.p.get(Od.interactionId),
+                Nd = {
+                  interactionTarget: Kd.get(od),
+                  interactionType: Od.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: Od.startTime,
+                  nextPaintTime: Rd,
+                  processedEventEntries: vd,
+                  longAnimationFrameEntries: Qd,
+                  inputDelay: Fd - Od.startTime,
+                  processingDuration: hd - Fd,
+                  presentationDelay: Rd - hd,
+                  loadState: cm(Od.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (rr => {
-                const Sr = rr.interactionTime,
-                  Qr = rr.nextPaintTime;
-                if (!rr.longAnimationFrameEntries?.length || !Sr || !Qr) return;
-                const Zr = rr.inputDelay,
-                  Wr = rr.processingDuration;
-                let ar, jr, Ir = 0,
-                  fr = 0,
-                  Er = 0,
-                  pr = 0;
-                for (const Nr of rr.longAnimationFrameEntries) {
-                  fr = fr + Nr.startTime + Nr.duration - Nr.styleAndLayoutStart;
-                  for (const rr of Nr.scripts) {
-                    const Qr = rr.startTime + rr.duration;
-                    if (Qr < Sr) continue;
-                    const Er = Qr - Math.max(Sr, rr.startTime),
-                      xr = rr.duration ? Er / rr.duration * rr.forcedStyleAndLayoutDuration : 0;
-                    Ir += Er - xr, fr += xr, Er > pr && (jr = rr.startTime < Sr + Zr ? "input-delay" : rr.startTime >= Sr + Zr + Wr ? "presentation-delay" : "processing-duration", ar = rr, pr = Er)
+              return (dd => {
+                const Od = dd.interactionTime,
+                  md = dd.nextPaintTime;
+                if (!dd.longAnimationFrameEntries?.length || !Od || !md) return;
+                const Wd = dd.inputDelay,
+                  Fd = dd.processingDuration;
+                let Rd, Xd, Kd = 0,
+                  hd = 0,
+                  vd = 0,
+                  Qd = 0;
+                for (const Nd of dd.longAnimationFrameEntries) {
+                  hd = hd + Nd.startTime + Nd.duration - Nd.styleAndLayoutStart;
+                  for (const dd of Nd.scripts) {
+                    const md = dd.startTime + dd.duration;
+                    if (md < Od) continue;
+                    const vd = md - Math.max(Od, dd.startTime),
+                      td = dd.duration ? vd / dd.duration * dd.forcedStyleAndLayoutDuration : 0;
+                    Kd += vd - td, hd += td, vd > Qd && (Xd = dd.startTime < Od + Wd ? "input-delay" : dd.startTime >= Od + Wd + Fd ? "presentation-delay" : "processing-duration", Rd = dd, Qd = vd)
                   }
                 }
-                const xr = rr.longAnimationFrameEntries.at(-1),
-                  mr = xr ? xr.startTime + xr.duration : 0;
-                mr >= Sr + Zr + Wr && (Er = Qr - mr), ar && jr && (rr.longestScript = {
-                  entry: ar,
-                  subpart: jr,
-                  intersectingDuration: pr
-                }), rr.totalScriptDuration = Ir, rr.totalStyleAndLayoutDuration = fr, rr.totalPaintDuration = Er, rr.totalUnattributedDuration = Qr - Sr - Ir - fr - Er
-              })(Nr), Object.assign(rr, {
-                attribution: Nr
+                const td = dd.longAnimationFrameEntries.at(-1),
+                  od = td ? td.startTime + td.duration : 0;
+                od >= Od + Wd + Fd && (vd = md - od), Rd && Xd && (dd.longestScript = {
+                  entry: Rd,
+                  subpart: Xd,
+                  intersectingDuration: Qd
+                }), dd.totalScriptDuration = Kd, dd.totalStyleAndLayoutDuration = hd, dd.totalPaintDuration = vd, dd.totalUnattributedDuration = md - Od - Kd - hd - vd
+              })(Nd), Object.assign(dd, {
+                attribution: Nd
               })
-            })(Sr))
-          }), Sr)
+            })(Od))
+          }), Od)
       };
-    class BZ {
+    class UW {
       m;
       u;
-      l(rr) {
-        this.m?.(rr)
+      l(dd) {
+        this.m?.(dd)
       }
     }
-    const TZ = [2500, 4e3];
-    let vZ = 50;
-    const OZ = [];
-    ZZ(["resource"], (rr => {
-      for (const Sr of rr) OZ.push(Sr), OZ.length > vZ && OZ.shift()
+    const xW = [2500, 4e3];
+    let BW = 50;
+    const SW = [];
+    XW(["resource"], (dd => {
+      for (const Od of dd) SW.push(Od), SW.length > BW && SW.shift()
     }));
-    const LZ = [800, 1800],
-      lZ = rr => {
-        document.prerendering ? fZ((() => lZ(rr))) : "complete" !== document.readyState ? addEventListener("load", (() => lZ(rr)), !0) : setTimeout(rr)
+    const sW = [800, 1800],
+      uW = dd => {
+        document.prerendering ? tW((() => uW(dd))) : "complete" !== document.readyState ? addEventListener("load", (() => uW(dd)), !0) : setTimeout(dd)
       },
-      XZ = "load_state",
-      PZ = "time_to_first_byte";
-    var HZ = class {
-        constructor(rr, Sr) {
-          this.corePushMeasurement = rr, this.webVitalConfig = Sr
+      VW = "load_state",
+      iW = "time_to_first_byte";
+    var AW = class {
+        constructor(dd, Od) {
+          this.corePushMeasurement = dd, this.webVitalConfig = Od
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var rr;
-          ! function(rr) {
-            let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const Qr = wQ(Sr = Object.assign({}, Sr), MQ),
-              Zr = new WeakMap;
-            Qr.t = rr => {
-                if (rr?.sources?.length) {
-                  const Qr = mZ(rr.sources),
-                    Wr = Qr?.node;
-                  if (Wr) {
-                    const rr = Sr.generateTarget?.(Wr) ?? VQ(Wr);
-                    Zr.set(Qr, rr)
+          var dd;
+          ! function(dd) {
+            let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const md = Im(Od = Object.assign({}, Od), Pm),
+              Wd = new WeakMap;
+            md.t = dd => {
+                if (dd?.sources?.length) {
+                  const md = HW(dd.sources),
+                    Fd = md?.node;
+                  if (Fd) {
+                    const dd = Od.generateTarget?.(Fd) ?? Dm(Fd);
+                    Wd.set(md, dd)
                   }
                 }
               },
-              function(rr) {
-                let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const Qr = SZ();
-                pZ(jZ((() => {
-                  let Zr, Wr = QZ("CLS", 0);
-                  const ar = wQ(Sr, MQ),
-                    jr = (Qr, jr, Ir, fr, Er) => {
-                      Wr = QZ("CLS", 0, Qr, jr, Ir, fr, Er), ar.o = 0, Zr = bQ(rr, Wr, xZ, Sr.reportAllChanges)
+              function(dd) {
+                let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const md = FW();
+                NW(vW((() => {
+                  let Wd, Fd = RW("CLS", 0);
+                  const Rd = Im(Od, Pm),
+                    Xd = (md, Xd, Kd, hd, vd) => {
+                      Fd = RW("CLS", 0, md, Xd, Kd, hd, vd), Rd.o = 0, Wd = km(dd, Fd, qW, Od.reportAllChanges)
                     },
-                    Ir = function() {
-                      let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      ar.o > Wr.value && (Wr.value = ar.o, Wr.entries = ar.i), Zr(rr)
+                    Kd = function() {
+                      let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      Rd.o > Fd.value && (Fd.value = Rd.o, Fd.entries = Rd.i), Wd(dd)
                     },
-                    fr = rr => {
-                      Ir(!0), jr("soft-navigation", rr.navigationId, rr.interactionId, rr.name, rr.startTime)
+                    hd = dd => {
+                      Kd(!0), Xd("soft-navigation", dd.navigationId, dd.interactionId, dd.name, dd.startTime)
                     },
-                    Er = rr => {
-                      for (const Sr of rr) "soft-navigation" !== Sr.entryType ? ar.l(Sr) : fr(Sr);
-                      Ir()
+                    vd = dd => {
+                      for (const Od of dd) "soft-navigation" !== Od.entryType ? Rd.l(Od) : hd(Od);
+                      Kd()
                     },
-                    pr = ["layout-shift"];
-                  WZ(Sr) && pr.push("soft-navigation");
-                  const xr = ZZ(pr, Er);
-                  xr && (Zr = bQ(rr, Wr, xZ, Sr.reportAllChanges), Qr.onHidden((() => {
-                    Er(xr.takeRecords()), Zr(!0)
-                  })), oQ((() => {
-                    jr("back-forward-cache", Wr.navigationId, Wr.navigationInteractionId, Wr.navigationURL, FQ()), JQ(Zr)
-                  })), setTimeout(Zr))
+                    Qd = ["layout-shift"];
+                  KW(Od) && Qd.push("soft-navigation");
+                  const td = XW(Qd, vd);
+                  td && (Wd = km(dd, Fd, qW, Od.reportAllChanges), md.onHidden((() => {
+                    vd(td.takeRecords()), Wd(!0)
+                  })), Zm((() => {
+                    Xd("back-forward-cache", Fd.navigationId, Fd.navigationInteractionId, Fd.navigationURL, Cm()), fm(Wd)
+                  })), setTimeout(Wd))
                 })))
-              }((Sr => {
-                rr((rr => {
-                  let Sr = {};
-                  if (rr.entries.length) {
-                    const Qr = rr.entries.reduce(((rr, Sr) => rr.value > Sr.value ? rr : Sr));
-                    if (Qr?.sources?.length) {
-                      const rr = mZ(Qr.sources);
-                      rr && (Sr = {
-                        largestShiftTarget: Zr.get(rr),
-                        largestShiftTime: Qr.startTime,
-                        largestShiftValue: Qr.value,
-                        largestShiftSource: rr,
-                        largestShiftEntry: Qr,
-                        loadState: kQ(Qr.startTime)
+              }((Od => {
+                dd((dd => {
+                  let Od = {};
+                  if (dd.entries.length) {
+                    const md = dd.entries.reduce(((dd, Od) => dd.value > Od.value ? dd : Od));
+                    if (md?.sources?.length) {
+                      const dd = HW(md.sources);
+                      dd && (Od = {
+                        largestShiftTarget: Wd.get(dd),
+                        largestShiftTime: md.startTime,
+                        largestShiftValue: md.value,
+                        largestShiftSource: dd,
+                        largestShiftEntry: md,
+                        loadState: cm(md.startTime)
                       })
                     }
                   }
-                  return Object.assign(rr, {
-                    attribution: Sr
+                  return Object.assign(dd, {
+                    attribution: Od
                   })
-                })(Sr))
-              }), Sr)
-          }((rr => {
+                })(Od))
+              }), Od)
+          }((dd => {
             const {
-              loadState: Sr,
-              largestShiftValue: Qr,
-              largestShiftTime: Zr,
-              largestShiftTarget: Wr
-            } = rr.attribution, ar = this.buildInitialValues(rr);
-            this.addIfPresent(ar, "largest_shift_value", Qr), this.addIfPresent(ar, "largest_shift_time", Zr);
-            const jr = this.buildInitialContext(rr);
-            this.addIfPresent(jr, XZ, Sr), this.addIfPresent(jr, "largest_shift_target", Wr), this.pushMeasurement(ar, jr)
+              loadState: Od,
+              largestShiftValue: md,
+              largestShiftTime: Wd,
+              largestShiftTarget: Fd
+            } = dd.attribution, Rd = this.buildInitialValues(dd);
+            this.addIfPresent(Rd, "largest_shift_value", md), this.addIfPresent(Rd, "largest_shift_time", Wd);
+            const Xd = this.buildInitialContext(dd);
+            this.addIfPresent(Xd, VW, Od), this.addIfPresent(Xd, "largest_shift_target", Fd), this.pushMeasurement(Rd, Xd)
           }), {
-            reportAllChanges: null === (rr = this.webVitalConfig) || void 0 === rr ? void 0 : rr.reportAllChanges
+            reportAllChanges: null === (dd = this.webVitalConfig) || void 0 === dd ? void 0 : dd.reportAllChanges
           })
         }
         measureFCP() {
-          var rr;
-          ! function(rr) {
-            let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const Qr = wQ(Sr = Object.assign({}, Sr), IZ);
-            WZ(Sr) && (Qr.u = new Map), pZ((Sr => {
-              rr((rr => {
-                let Sr = {
+          var dd;
+          ! function(dd) {
+            let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const md = Im(Od = Object.assign({}, Od), QW);
+            KW(Od) && (md.u = new Map), NW((Od => {
+              dd((dd => {
+                let Od = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: rr.value,
-                  loadState: kQ(FQ())
+                  firstByteToFCP: dd.value,
+                  loadState: cm(Cm())
                 };
-                if ("soft-navigation" !== rr.navigationType) {
-                  if (rr.entries.length) {
-                    const Qr = GQ(),
-                      Zr = rr.entries.at(-1);
-                    if (Qr) {
-                      const Wr = Qr.responseStart,
-                        ar = Qr.activationStart || 0,
-                        jr = Math.max(0, Wr - ar);
-                      Sr = {
-                        timeToFirstByte: jr,
-                        firstByteToFCP: rr.value - jr,
-                        loadState: kQ(rr.entries[0].startTime),
-                        navigationEntry: Qr,
-                        fcpEntry: Zr
+                if ("soft-navigation" !== dd.navigationType) {
+                  if (dd.entries.length) {
+                    const md = zm(),
+                      Wd = dd.entries.at(-1);
+                    if (md) {
+                      const Fd = md.responseStart,
+                        Rd = md.activationStart || 0,
+                        Xd = Math.max(0, Fd - Rd);
+                      Od = {
+                        timeToFirstByte: Xd,
+                        firstByteToFCP: dd.value - Xd,
+                        loadState: cm(dd.entries[0].startTime),
+                        navigationEntry: md,
+                        fcpEntry: Wd
                       }
                     }
                   }
                 } else {
-                  const Zr = Qr.u?.get(rr.navigationId);
-                  Zr && (Sr = {
+                  const Wd = md.u?.get(dd.navigationId);
+                  Wd && (Od = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: rr.value,
+                    firstByteToFCP: dd.value,
                     loadState: "complete",
-                    navigationEntry: Zr
+                    navigationEntry: Wd
                   })
                 }
-                return Object.assign(rr, {
-                  attribution: Sr
+                return Object.assign(dd, {
+                  attribution: Od
                 })
-              })(Sr))
-            }), Sr)
-          }((rr => {
+              })(Od))
+            }), Od)
+          }((dd => {
             const {
-              firstByteToFCP: Sr,
-              timeToFirstByte: Qr,
-              loadState: Zr
-            } = rr.attribution, Wr = this.buildInitialValues(rr);
-            this.addIfPresent(Wr, "first_byte_to_fcp", Sr), this.addIfPresent(Wr, PZ, Qr);
-            const ar = this.buildInitialContext(rr);
-            this.addIfPresent(ar, XZ, Zr), this.pushMeasurement(Wr, ar)
+              firstByteToFCP: Od,
+              timeToFirstByte: md,
+              loadState: Wd
+            } = dd.attribution, Fd = this.buildInitialValues(dd);
+            this.addIfPresent(Fd, "first_byte_to_fcp", Od), this.addIfPresent(Fd, iW, md);
+            const Rd = this.buildInitialContext(dd);
+            this.addIfPresent(Rd, VW, Wd), this.pushMeasurement(Fd, Rd)
           }), {
-            reportAllChanges: null === (rr = this.webVitalConfig) || void 0 === rr ? void 0 : rr.reportAllChanges
+            reportAllChanges: null === (dd = this.webVitalConfig) || void 0 === dd ? void 0 : dd.reportAllChanges
           })
         }
         measureINP() {
-          var rr;
-          yZ((rr => {
-            var Sr;
+          var dd;
+          JW((dd => {
+            var Od;
             const {
-              interactionTime: Qr,
-              presentationDelay: Zr,
-              inputDelay: Wr,
-              processingDuration: ar,
-              nextPaintTime: jr,
-              loadState: Ir,
-              interactionTarget: fr,
-              interactionType: Er,
-              totalScriptDuration: pr,
-              totalStyleAndLayoutDuration: xr,
-              totalPaintDuration: mr,
-              totalUnattributedDuration: Nr,
-              longestScript: Ur
-            } = rr.attribution, tr = this.buildInitialValues(rr);
-            this.addIfPresent(tr, "interaction_time", Qr), this.addIfPresent(tr, "presentation_delay", Zr), this.addIfPresent(tr, "input_delay", Wr), this.addIfPresent(tr, "processing_duration", ar), this.addIfPresent(tr, "next_paint_time", jr), this.addNumberIfDefined(tr, "total_script_duration", pr), this.addNumberIfDefined(tr, "total_style_and_layout_duration", xr), this.addNumberIfDefined(tr, "total_paint_duration", mr), this.addNumberIfDefined(tr, "total_unattributed_duration", Nr), this.addNumberIfDefined(tr, "longest_script_intersecting_duration", null === Ur || void 0 === Ur ? void 0 : Ur.intersectingDuration);
-            const hr = this.buildInitialContext(rr);
-            this.addIfPresent(hr, XZ, Ir), this.addIfPresent(hr, "interaction_target", fr), this.addIfPresent(hr, "interaction_type", Er), this.addIfPresent(hr, "longest_script_subpart", null === Ur || void 0 === Ur ? void 0 : Ur.subpart), this.addIfPresent(hr, "longest_script_invoker_type", null === Ur || void 0 === Ur ? void 0 : Ur.entry.invokerType), (null === (Sr = this.webVitalConfig) || void 0 === Sr ? void 0 : Sr.trackAttributionSources) && (this.addIfPresent(hr, "longest_script_invoker", null === Ur || void 0 === Ur ? void 0 : Ur.entry.invoker), this.addIfPresent(hr, "longest_script_source_url", null === Ur || void 0 === Ur ? void 0 : Ur.entry.sourceURL), this.addIfPresent(hr, "longest_script_source_function_name", null === Ur || void 0 === Ur ? void 0 : Ur.entry.sourceFunctionName), this.addIfPresent(hr, "longest_script_source_char_position", void 0 !== (null === Ur || void 0 === Ur ? void 0 : Ur.entry.sourceCharPosition) ? String(Ur.entry.sourceCharPosition) : void 0)), this.pushMeasurement(tr, hr)
+              interactionTime: md,
+              presentationDelay: Wd,
+              inputDelay: Fd,
+              processingDuration: Rd,
+              nextPaintTime: Xd,
+              loadState: Kd,
+              interactionTarget: hd,
+              interactionType: vd,
+              totalScriptDuration: Qd,
+              totalStyleAndLayoutDuration: td,
+              totalPaintDuration: od,
+              totalUnattributedDuration: Nd,
+              longestScript: qd
+            } = dd.attribution, Hd = this.buildInitialValues(dd);
+            this.addIfPresent(Hd, "interaction_time", md), this.addIfPresent(Hd, "presentation_delay", Wd), this.addIfPresent(Hd, "input_delay", Fd), this.addIfPresent(Hd, "processing_duration", Rd), this.addIfPresent(Hd, "next_paint_time", Xd), this.addNumberIfDefined(Hd, "total_script_duration", Qd), this.addNumberIfDefined(Hd, "total_style_and_layout_duration", td), this.addNumberIfDefined(Hd, "total_paint_duration", od), this.addNumberIfDefined(Hd, "total_unattributed_duration", Nd), this.addNumberIfDefined(Hd, "longest_script_intersecting_duration", null === qd || void 0 === qd ? void 0 : qd.intersectingDuration);
+            const yd = this.buildInitialContext(dd);
+            this.addIfPresent(yd, VW, Kd), this.addIfPresent(yd, "interaction_target", hd), this.addIfPresent(yd, "interaction_type", vd), this.addIfPresent(yd, "longest_script_subpart", null === qd || void 0 === qd ? void 0 : qd.subpart), this.addIfPresent(yd, "longest_script_invoker_type", null === qd || void 0 === qd ? void 0 : qd.entry.invokerType), (null === (Od = this.webVitalConfig) || void 0 === Od ? void 0 : Od.trackAttributionSources) && (this.addIfPresent(yd, "longest_script_invoker", null === qd || void 0 === qd ? void 0 : qd.entry.invoker), this.addIfPresent(yd, "longest_script_source_url", null === qd || void 0 === qd ? void 0 : qd.entry.sourceURL), this.addIfPresent(yd, "longest_script_source_function_name", null === qd || void 0 === qd ? void 0 : qd.entry.sourceFunctionName), this.addIfPresent(yd, "longest_script_source_char_position", void 0 !== (null === qd || void 0 === qd ? void 0 : qd.entry.sourceCharPosition) ? String(qd.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Hd, yd)
           }), {
-            reportAllChanges: null === (rr = this.webVitalConfig) || void 0 === rr ? void 0 : rr.reportAllChanges
+            reportAllChanges: null === (dd = this.webVitalConfig) || void 0 === dd ? void 0 : dd.reportAllChanges
           })
         }
         measureLCP() {
-          var rr;
-          ! function(rr) {
-            let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (Sr = Object.assign({}, Sr)).resourceBufferSize && (vZ = Sr.resourceBufferSize);
-            const Qr = wQ(Sr, BZ),
-              Zr = new WeakMap;
-            WZ(Sr) && (Qr.u = new Map), Qr.m = rr => {
-                const Qr = rr.element;
-                if (Qr) {
-                  const Wr = Sr.generateTarget?.(Qr) ?? VQ(Qr);
-                  Zr.set(rr, Wr)
-                } else rr.id && Zr.set(rr, `#${rr.id}`)
+          var dd;
+          ! function(dd) {
+            let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (Od = Object.assign({}, Od)).resourceBufferSize && (BW = Od.resourceBufferSize);
+            const md = Im(Od, UW),
+              Wd = new WeakMap;
+            KW(Od) && (md.u = new Map), md.m = dd => {
+                const md = dd.element;
+                if (md) {
+                  const Fd = Od.generateTarget?.(md) ?? Dm(md);
+                  Wd.set(dd, Fd)
+                } else dd.id && Wd.set(dd, `#${dd.id}`)
               },
-              function(rr) {
-                let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  Qr = !1;
-                const Zr = WZ(Sr);
-                fZ((() => {
-                  let Wr, ar = SZ(),
-                    jr = QZ("LCP");
-                  const Ir = wQ(Sr, BZ),
-                    fr = (Zr, Ir, fr, Er, pr) => {
-                      jr = QZ("LCP", -1, Zr, Ir, fr, Er, pr), Wr = bQ(rr, jr, TZ, Sr.reportAllChanges), Qr = !1, "soft-navigation" === Zr && (ar = SZ(!0))
+              function(dd) {
+                let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  md = !1;
+                const Wd = KW(Od);
+                tW((() => {
+                  let Fd, Rd = FW(),
+                    Xd = RW("LCP");
+                  const Kd = Im(Od, UW),
+                    hd = (Wd, Kd, hd, vd, Qd) => {
+                      Xd = RW("LCP", -1, Wd, Kd, hd, vd, Qd), Fd = km(dd, Xd, xW, Od.reportAllChanges), md = !1, "soft-navigation" === Wd && (Rd = FW(!0))
                     },
-                    Er = rr => {
-                      Ir.u && rr.navigationId && aZ(Ir.u, rr), Qr || Wr(!0), fr("soft-navigation", rr.navigationId, rr.interactionId, rr.name, rr.startTime);
-                      const Sr = rr.getLargestInteractionContentfulPaint?.();
-                      Sr && pr([Sr])
+                    vd = dd => {
+                      Kd.u && dd.navigationId && hW(Kd.u, dd), md || Fd(!0), hd("soft-navigation", dd.navigationId, dd.interactionId, dd.name, dd.startTime);
+                      const Od = dd.getLargestInteractionContentfulPaint?.();
+                      Od && Qd([Od])
                     },
-                    pr = rr => {
-                      Sr.reportAllChanges || Zr || (rr = rr.slice(-1));
-                      for (const Sr of rr) {
-                        if (!Sr) continue;
-                        if ("soft-navigation" === Sr.entryType) {
-                          Er(Sr);
+                    Qd = dd => {
+                      Od.reportAllChanges || Wd || (dd = dd.slice(-1));
+                      for (const Od of dd) {
+                        if (!Od) continue;
+                        if ("soft-navigation" === Od.entryType) {
+                          vd(Od);
                           continue
                         }
-                        let rr = 0,
-                          Qr = [],
-                          Zr = Sr.startTime;
-                        if ("largest-contentful-paint" === Sr.entryType) rr = Math.max(Sr.startTime - DQ(), 0), Ir.l(Sr), Qr = [Sr];
-                        else if ("interaction-contentful-paint" === Sr.entryType) {
-                          const Wr = Sr;
-                          if (!jr.navigationId) continue;
-                          if ("interactionId" in Wr && Wr.interactionId != jr.navigationInteractionId) continue;
-                          Zr = Wr.largestContentfulPaint?.renderTime || 0, rr = Math.max(Zr - Sr.startTime, 0), Wr.largestContentfulPaint && (Ir.l(Wr.largestContentfulPaint), Qr = [Wr.largestContentfulPaint])
+                        let dd = 0,
+                          md = [],
+                          Wd = Od.startTime;
+                        if ("largest-contentful-paint" === Od.entryType) dd = Math.max(Od.startTime - Mm(), 0), Kd.l(Od), md = [Od];
+                        else if ("interaction-contentful-paint" === Od.entryType) {
+                          const Fd = Od;
+                          if (!Xd.navigationId) continue;
+                          if ("interactionId" in Fd && Fd.interactionId != Xd.navigationInteractionId) continue;
+                          Wd = Fd.largestContentfulPaint?.renderTime || 0, dd = Math.max(Wd - Od.startTime, 0), Fd.largestContentfulPaint && (Kd.l(Fd.largestContentfulPaint), md = [Fd.largestContentfulPaint])
                         }
-                        Zr < ar.firstHiddenTime && (jr.value = rr, jr.entries = Qr, Wr())
+                        Wd < Rd.firstHiddenTime && (Xd.value = dd, Xd.entries = md, Fd())
                       }
                     },
-                    xr = ["largest-contentful-paint"];
-                  Zr && xr.push("interaction-contentful-paint", "soft-navigation");
-                  const mr = ZZ(xr, pr);
-                  if (mr) {
-                    Wr = bQ(rr, jr, TZ, Sr.reportAllChanges);
-                    const ar = ["keydown", "click", "visibilitychange"],
-                      Ir = rr => {
-                        if (rr.isTrusted && !Qr) {
-                          const rr = jr.id;
-                          eZ((() => {
-                            if (!Qr) {
-                              if (!Zr) {
-                                mr.disconnect();
-                                for (const rr of ar) removeEventListener(rr, Ir, {
+                    td = ["largest-contentful-paint"];
+                  Wd && td.push("interaction-contentful-paint", "soft-navigation");
+                  const od = XW(td, Qd);
+                  if (od) {
+                    Fd = km(dd, Xd, xW, Od.reportAllChanges);
+                    const Rd = ["keydown", "click", "visibilitychange"],
+                      Kd = dd => {
+                        if (dd.isTrusted && !md) {
+                          const dd = Xd.id;
+                          aW((() => {
+                            if (!md) {
+                              if (!Wd) {
+                                od.disconnect();
+                                for (const dd of Rd) removeEventListener(dd, Kd, {
                                   capture: !0
                                 })
                               }
-                              rr === jr.id && (Qr = !0, Wr(!0))
+                              dd === Xd.id && (md = !0, Fd(!0))
                             }
                           }))
                         }
                       };
-                    for (const rr of ar) addEventListener(rr, Ir, {
+                    for (const dd of Rd) addEventListener(dd, Kd, {
                       capture: !0
                     });
-                    oQ((Zr => {
-                      fr("back-forward-cache", jr.navigationId, jr.navigationInteractionId, jr.navigationURL, FQ()), Wr = bQ(rr, jr, TZ, Sr.reportAllChanges), JQ((() => {
-                        jr.value = performance.now() - Zr.timeStamp, Qr = !0, Wr(!0)
+                    Zm((Wd => {
+                      hd("back-forward-cache", Xd.navigationId, Xd.navigationInteractionId, Xd.navigationURL, Cm()), Fd = km(dd, Xd, xW, Od.reportAllChanges), fm((() => {
+                        Xd.value = performance.now() - Wd.timeStamp, md = !0, Fd(!0)
                       }))
                     }))
                   }
                 }))
-              }((Sr => {
-                rr((rr => {
-                  let Sr = {
+              }((Od => {
+                dd((dd => {
+                  let Od = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: rr.value
+                    elementRenderDelay: dd.value
                   };
-                  if (rr.entries.length) {
-                    const Wr = rr.entries.at(-1),
-                      ar = rr => rr.name === Wr.url && (rr.requestStart || rr.startTime) <= Wr.startTime,
-                      jr = Wr.url && (OZ.findLast(ar) || performance.getEntriesByType("resource").findLast(ar));
-                    let Ir;
-                    Sr.target = Zr.get(Wr), Sr.lcpEntry = Wr, Wr.url && (Sr.url = Wr.url), jr && (Sr.lcpResourceEntry = jr);
-                    let fr = 0,
-                      Er = 0;
-                    if ("soft-navigation" !== rr.navigationType ? (Ir = GQ(), fr = Ir?.activationStart ?? 0, Er = Ir?.responseStart ?? 0) : (fr = rr.navigationStartTime || 0, Ir = Qr.u?.get(rr.navigationId)), Ir) {
-                      const Qr = Math.max(0, Er - fr),
-                        Zr = Math.max(Qr, jr ? (jr.requestStart || jr.startTime) - fr : 0),
-                        Wr = Math.min(rr.value, Math.max(Zr, jr ? jr.responseEnd - fr : 0));
-                      Sr = {
-                        ...Sr,
-                        timeToFirstByte: Qr,
-                        resourceLoadDelay: Zr - Qr,
-                        resourceLoadDuration: Wr - Zr,
-                        elementRenderDelay: rr.value - Wr,
-                        navigationEntry: Ir
+                  if (dd.entries.length) {
+                    const Fd = dd.entries.at(-1),
+                      Rd = dd => dd.name === Fd.url && (dd.requestStart || dd.startTime) <= Fd.startTime,
+                      Xd = Fd.url && (SW.findLast(Rd) || performance.getEntriesByType("resource").findLast(Rd));
+                    let Kd;
+                    Od.target = Wd.get(Fd), Od.lcpEntry = Fd, Fd.url && (Od.url = Fd.url), Xd && (Od.lcpResourceEntry = Xd);
+                    let hd = 0,
+                      vd = 0;
+                    if ("soft-navigation" !== dd.navigationType ? (Kd = zm(), hd = Kd?.activationStart ?? 0, vd = Kd?.responseStart ?? 0) : (hd = dd.navigationStartTime || 0, Kd = md.u?.get(dd.navigationId)), Kd) {
+                      const md = Math.max(0, vd - hd),
+                        Wd = Math.max(md, Xd ? (Xd.requestStart || Xd.startTime) - hd : 0),
+                        Fd = Math.min(dd.value, Math.max(Wd, Xd ? Xd.responseEnd - hd : 0));
+                      Od = {
+                        ...Od,
+                        timeToFirstByte: md,
+                        resourceLoadDelay: Wd - md,
+                        resourceLoadDuration: Fd - Wd,
+                        elementRenderDelay: dd.value - Fd,
+                        navigationEntry: Kd
                       }
                     }
                   }
-                  return Object.assign(rr, {
-                    attribution: Sr
+                  return Object.assign(dd, {
+                    attribution: Od
                   })
-                })(Sr))
-              }), Sr)
-          }((rr => {
-            var Sr;
+                })(Od))
+              }), Od)
+          }((dd => {
+            var Od;
             const {
-              elementRenderDelay: Qr,
-              resourceLoadDelay: Zr,
-              resourceLoadDuration: Wr,
-              timeToFirstByte: ar,
-              target: jr,
-              url: Ir,
-              lcpResourceEntry: fr
-            } = rr.attribution, Er = this.buildInitialValues(rr);
-            this.addIfPresent(Er, "element_render_delay", Qr), this.addIfPresent(Er, "resource_load_delay", Zr), this.addIfPresent(Er, "resource_load_duration", Wr), this.addIfPresent(Er, PZ, ar);
-            const pr = this.buildInitialContext(rr);
-            this.addIfPresent(pr, "element", jr), (null === (Sr = this.webVitalConfig) || void 0 === Sr ? void 0 : Sr.trackAttributionSources) && (this.addIfPresent(pr, "resource_url", Ir), this.addIfPresent(pr, "resource_delivery_type", null === fr || void 0 === fr ? void 0 : fr.deliveryType), this.addIfPresent(pr, "resource_initiator_type", null === fr || void 0 === fr ? void 0 : fr.initiatorType)), this.pushMeasurement(Er, pr)
+              elementRenderDelay: md,
+              resourceLoadDelay: Wd,
+              resourceLoadDuration: Fd,
+              timeToFirstByte: Rd,
+              target: Xd,
+              url: Kd,
+              lcpResourceEntry: hd
+            } = dd.attribution, vd = this.buildInitialValues(dd);
+            this.addIfPresent(vd, "element_render_delay", md), this.addIfPresent(vd, "resource_load_delay", Wd), this.addIfPresent(vd, "resource_load_duration", Fd), this.addIfPresent(vd, iW, Rd);
+            const Qd = this.buildInitialContext(dd);
+            this.addIfPresent(Qd, "element", Xd), (null === (Od = this.webVitalConfig) || void 0 === Od ? void 0 : Od.trackAttributionSources) && (this.addIfPresent(Qd, "resource_url", Kd), this.addIfPresent(Qd, "resource_delivery_type", null === hd || void 0 === hd ? void 0 : hd.deliveryType), this.addIfPresent(Qd, "resource_initiator_type", null === hd || void 0 === hd ? void 0 : hd.initiatorType)), this.pushMeasurement(vd, Qd)
           }), {
-            reportAllChanges: null === (rr = this.webVitalConfig) || void 0 === rr ? void 0 : rr.reportAllChanges
+            reportAllChanges: null === (dd = this.webVitalConfig) || void 0 === dd ? void 0 : dd.reportAllChanges
           })
         }
         measureTTFB() {
-          var rr;
-          ! function(rr) {
-            ! function(rr) {
-              let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const Qr = WZ(Sr);
-              let Zr = QZ("TTFB"),
-                Wr = bQ(rr, Zr, LZ, Sr.reportAllChanges);
-              lZ((() => {
-                const ar = GQ();
-                if (ar) {
-                  const jr = ar.responseStart;
-                  Zr.value = Math.max(jr - DQ(), 0), Zr.entries = [ar], Wr(!0), oQ((() => {
-                    Zr = QZ("TTFB", 0, "back-forward-cache", Zr.navigationId, Zr.navigationInteractionId, Zr.navigationURL, FQ()), Wr = bQ(rr, Zr, LZ, Sr.reportAllChanges), Wr(!0)
-                  })), Qr && ZZ(["soft-navigation"], (Qr => {
-                    Qr.forEach((Qr => {
-                      Qr.navigationId && (Zr = QZ("TTFB", 0, "soft-navigation", Qr.navigationId, Qr.interactionId, Qr.name, Qr.startTime), Zr.entries = [Qr], Wr = bQ(rr, Zr, LZ, Sr.reportAllChanges), Wr(!0))
+          var dd;
+          ! function(dd) {
+            ! function(dd) {
+              let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const md = KW(Od);
+              let Wd = RW("TTFB"),
+                Fd = km(dd, Wd, sW, Od.reportAllChanges);
+              uW((() => {
+                const Rd = zm();
+                if (Rd) {
+                  const Xd = Rd.responseStart;
+                  Wd.value = Math.max(Xd - Mm(), 0), Wd.entries = [Rd], Fd(!0), Zm((() => {
+                    Wd = RW("TTFB", 0, "back-forward-cache", Wd.navigationId, Wd.navigationInteractionId, Wd.navigationURL, Cm()), Fd = km(dd, Wd, sW, Od.reportAllChanges), Fd(!0)
+                  })), md && XW(["soft-navigation"], (md => {
+                    md.forEach((md => {
+                      md.navigationId && (Wd = RW("TTFB", 0, "soft-navigation", md.navigationId, md.interactionId, md.name, md.startTime), Wd.entries = [md], Fd = km(dd, Wd, sW, Od.reportAllChanges), Fd(!0))
                     }))
-                  }), Sr)
+                  }), Od)
                 }
               }))
-            }((Sr => {
-              rr((rr => {
-                const Sr = rr.entries[0];
-                let Qr = {
+            }((Od => {
+              dd((dd => {
+                const Od = dd.entries[0];
+                let md = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: Sr
+                  navigationEntry: Od
                 };
-                if (rr.entries.length && Sr instanceof PerformanceNavigationTiming) {
-                  const Zr = Sr.activationStart || 0,
-                    Wr = Math.max((Sr.workerStart || Sr.fetchStart || 0) - Zr, 0),
-                    ar = Math.max(Sr.domainLookupStart - Zr, 0),
-                    jr = Math.max(Sr.connectStart - Zr, 0),
-                    Ir = Math.max(Sr.connectEnd - Zr, 0);
-                  Qr = {
-                    waitingDuration: Wr,
-                    cacheDuration: ar - Wr,
-                    dnsDuration: jr - ar,
-                    connectionDuration: Ir - jr,
-                    requestDuration: rr.value - Ir,
-                    navigationEntry: Sr
+                if (dd.entries.length && Od instanceof PerformanceNavigationTiming) {
+                  const Wd = Od.activationStart || 0,
+                    Fd = Math.max((Od.workerStart || Od.fetchStart || 0) - Wd, 0),
+                    Rd = Math.max(Od.domainLookupStart - Wd, 0),
+                    Xd = Math.max(Od.connectStart - Wd, 0),
+                    Kd = Math.max(Od.connectEnd - Wd, 0);
+                  md = {
+                    waitingDuration: Fd,
+                    cacheDuration: Rd - Fd,
+                    dnsDuration: Xd - Rd,
+                    connectionDuration: Kd - Xd,
+                    requestDuration: dd.value - Kd,
+                    navigationEntry: Od
                   }
                 }
-                return Object.assign(rr, {
-                  attribution: Qr
+                return Object.assign(dd, {
+                  attribution: md
                 })
-              })(Sr))
+              })(Od))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((rr => {
+          }((dd => {
             const {
-              dnsDuration: Sr,
-              connectionDuration: Qr,
-              requestDuration: Zr,
-              waitingDuration: Wr,
-              cacheDuration: ar
-            } = rr.attribution, jr = this.buildInitialValues(rr);
-            this.addIfPresent(jr, "dns_duration", Sr), this.addIfPresent(jr, "connection_duration", Qr), this.addIfPresent(jr, "request_duration", Zr), this.addIfPresent(jr, "waiting_duration", Wr), this.addIfPresent(jr, "cache_duration", ar);
-            const Ir = this.buildInitialContext(rr);
-            this.pushMeasurement(jr, Ir)
+              dnsDuration: Od,
+              connectionDuration: md,
+              requestDuration: Wd,
+              waitingDuration: Fd,
+              cacheDuration: Rd
+            } = dd.attribution, Xd = this.buildInitialValues(dd);
+            this.addIfPresent(Xd, "dns_duration", Od), this.addIfPresent(Xd, "connection_duration", md), this.addIfPresent(Xd, "request_duration", Wd), this.addIfPresent(Xd, "waiting_duration", Fd), this.addIfPresent(Xd, "cache_duration", Rd);
+            const Kd = this.buildInitialContext(dd);
+            this.pushMeasurement(Xd, Kd)
           }), {
-            reportAllChanges: null === (rr = this.webVitalConfig) || void 0 === rr ? void 0 : rr.reportAllChanges
+            reportAllChanges: null === (dd = this.webVitalConfig) || void 0 === dd ? void 0 : dd.reportAllChanges
           })
         }
-        buildInitialValues(rr) {
+        buildInitialValues(dd) {
           return {
-            [rr.name.toLowerCase()]: rr.value,
-            delta: rr.delta
+            [dd.name.toLowerCase()]: dd.value,
+            delta: dd.delta
           }
         }
-        buildInitialContext(rr) {
-          var Sr;
-          const Qr = null !== (Sr = rS("com.grafana.faro.lastNavigationId", dr)) && void 0 !== Sr ? Sr : gQ;
+        buildInitialContext(dd) {
+          var Od;
+          const md = null !== (Od = mO("com.grafana.faro.lastNavigationId", Md)) && void 0 !== Od ? Od : nm;
           return {
-            id: rr.id,
-            rating: rr.rating,
-            navigation_type: rr.navigationType,
-            navigation_entry_id: Qr
+            id: dd.id,
+            rating: dd.rating,
+            navigation_type: dd.navigationType,
+            navigation_entry_id: md
           }
         }
-        pushMeasurement(rr, Sr) {
+        pushMeasurement(dd, Od) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: rr
+            values: dd
           }, {
-            context: Sr
+            context: Od
           })
         }
-        addIfPresent(rr, Sr, Qr) {
-          Qr && (rr[Sr] = Qr)
+        addIfPresent(dd, Od, md) {
+          md && (dd[Od] = md)
         }
-        addNumberIfDefined(rr, Sr, Qr) {
-          void 0 !== Qr && (rr[Sr] = Qr)
+        addNumberIfDefined(dd, Od, md) {
+          void 0 !== md && (dd[Od] = md)
         }
       },
-      qZ = class extends SQ {
+      rW = class extends Wm {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = QQ
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = Fm
         }
         initialize() {
-          this.logDebug("Initializing"), new HZ(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new AW(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const RZ = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const GW = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function gZ() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const Sr of rr)
-        if ("traceparent" === Sr.name) {
-          if (!RZ.test(Sr.description)) continue;
-          const [, rr, Qr] = Sr.description.split("-");
-          if (null != rr && null != Qr) return {
-            traceId: rr,
-            spanId: Qr
+    function nW() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const Od of dd)
+        if ("traceparent" === Od.name) {
+          if (!GW.test(Od.description)) continue;
+          const [, dd, md] = Od.description.split("-");
+          if (null != dd && null != md) return {
+            traceId: dd,
+            spanId: md
           };
           break
         }
     }
 
-    function CZ(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function LW(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: Qr,
-        monoNow: Zr
-      } = Sr;
-      return Math.min(Qr, Qr - (Zr - rr))
+        wallNow: md,
+        monoNow: Wd
+      } = Od;
+      return Math.min(md, md - (Wd - dd))
     }
 
-    function MZ(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [Qr, Zr] of Object.entries(Sr)) {
-        const Sr = rr[Qr];
-        return null != Sr && (Xr(Zr) ? Zr.includes(Sr) : Sr === Zr)
+    function PW(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [md, Wd] of Object.entries(Od)) {
+        const Od = dd[md];
+        return null != Od && (sd(Wd) ? Wd.includes(Od) : Od === Wd)
       }
       return !0
     }
 
-    function GZ(rr) {
+    function zW(dd) {
       const {
-        connectEnd: Sr,
-        connectStart: Qr,
-        decodedBodySize: Zr,
-        domainLookupEnd: Wr,
-        domainLookupStart: ar,
-        duration: jr,
-        encodedBodySize: Ir,
-        fetchStart: fr,
-        initiatorType: Er,
-        name: pr,
-        nextHopProtocol: xr,
-        redirectEnd: mr,
-        redirectStart: Nr,
-        renderBlockingStatus: Ur,
-        requestStart: tr,
-        responseEnd: hr,
-        responseStart: zr,
-        responseStatus: Yr,
-        secureConnectionStart: nr,
-        transferSize: er,
-        workerStart: Kr
-      } = rr;
+        connectEnd: Od,
+        connectStart: md,
+        decodedBodySize: Wd,
+        domainLookupEnd: Fd,
+        domainLookupStart: Rd,
+        duration: Xd,
+        encodedBodySize: Kd,
+        fetchStart: hd,
+        initiatorType: vd,
+        name: Qd,
+        nextHopProtocol: td,
+        redirectEnd: od,
+        redirectStart: Nd,
+        renderBlockingStatus: qd,
+        requestStart: Hd,
+        responseEnd: yd,
+        responseStart: bd,
+        responseStatus: Td,
+        secureConnectionStart: pd,
+        transferSize: Yd,
+        workerStart: gd
+      } = dd;
       return {
-        name: pr,
-        httpHost: AZ(pr),
-        duration: VZ(jr),
-        tcpHandshakeTime: VZ(Sr - Qr),
-        dnsLookupTime: VZ(Wr - ar),
-        tlsNegotiationTime: VZ(Sr - nr),
-        responseStatus: VZ(Yr),
-        redirectTime: VZ(mr - Nr),
-        requestTime: VZ(zr - tr),
-        responseTime: VZ(hr - zr),
-        fetchTime: VZ(hr - fr),
-        serviceWorkerTime: VZ(Kr > 0 ? fr - Kr : 0),
-        decodedBodySize: VZ(Zr),
-        encodedBodySize: VZ(Ir),
+        name: Qd,
+        httpHost: jW(Qd),
+        duration: DW(Xd),
+        tcpHandshakeTime: DW(Od - md),
+        dnsLookupTime: DW(Fd - Rd),
+        tlsNegotiationTime: DW(Od - pd),
+        responseStatus: DW(Td),
+        redirectTime: DW(od - Nd),
+        requestTime: DW(bd - Hd),
+        responseTime: DW(yd - bd),
+        fetchTime: DW(yd - hd),
+        serviceWorkerTime: DW(gd > 0 ? hd - gd : 0),
+        decodedBodySize: DW(Wd),
+        encodedBodySize: DW(Kd),
         cacheHitStatus: function() {
-          let rr = "fullLoad";
-          0 === er ? Zr > 0 && (rr = "cache") : null != Yr ? 304 === Yr && (rr = "conditionalFetch") : Ir > 0 && er < Ir && (rr = "conditionalFetch");
-          return rr
+          let dd = "fullLoad";
+          0 === Yd ? Wd > 0 && (dd = "cache") : null != Td ? 304 === Td && (dd = "conditionalFetch") : Kd > 0 && Yd < Kd && (dd = "conditionalFetch");
+          return dd
         }(),
-        renderBlockingStatus: VZ(Ur),
-        protocol: xr,
-        initiatorType: Er,
+        renderBlockingStatus: DW(qd),
+        protocol: td,
+        initiatorType: vd,
         visibilityState: document.visibilityState,
-        ttfb: VZ(zr - tr),
-        transferSize: VZ(er)
+        ttfb: DW(bd - Hd),
+        transferSize: DW(Yd)
       }
     }
 
-    function kZ(rr) {
+    function cW(dd) {
       const {
-        activationStart: Sr,
-        domComplete: Qr,
-        domContentLoadedEventEnd: Zr,
-        domContentLoadedEventStart: Wr,
-        domInteractive: ar,
-        fetchStart: jr,
-        loadEventEnd: Ir,
-        loadEventStart: fr,
-        responseStart: Er,
-        type: pr
-      } = rr, xr = function() {
-        var rr;
-        return null != (null === (rr = performance.timing) || void 0 === rr ? void 0 : rr.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: Od,
+        domComplete: md,
+        domContentLoadedEventEnd: Wd,
+        domContentLoadedEventStart: Fd,
+        domInteractive: Rd,
+        fetchStart: Xd,
+        loadEventEnd: Kd,
+        loadEventStart: hd,
+        responseStart: vd,
+        type: Qd
+      } = dd, td = function() {
+        var dd;
+        return null != (null === (dd = performance.timing) || void 0 === dd ? void 0 : dd.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return pS(pS({}, GZ(rr)), {}, {
-        pageLoadTime: VZ(Qr - jr),
-        documentParsingTime: VZ(xr ? ar - xr : null),
-        domProcessingTime: VZ(Qr - ar),
-        domContentLoadHandlerTime: VZ(Zr - Wr),
-        onLoadTime: VZ(Ir - fr),
-        ttfb: VZ(Math.max(Er - (null !== Sr && void 0 !== Sr ? Sr : 0), 0)),
-        type: pr
+      return oO(oO({}, zW(dd)), {}, {
+        pageLoadTime: DW(md - Xd),
+        documentParsingTime: DW(td ? Rd - td : null),
+        domProcessingTime: DW(md - Rd),
+        domContentLoadHandlerTime: DW(Wd - Fd),
+        onLoadTime: DW(Kd - hd),
+        ttfb: DW(Math.max(vd - (null !== Od && void 0 !== Od ? Od : 0), 0)),
+        type: Qd
       })
     }
 
-    function AZ(rr) {
+    function jW(dd) {
       try {
-        return new URL(rr).host || gQ
-      } catch (Sr) {
-        return gQ
+        return new URL(dd).host || nm
+      } catch (Od) {
+        return nm
       }
     }
 
-    function VZ(rr) {
-      return null == rr ? gQ : "number" === typeof rr ? Math.round(rr > 0 ? rr : 0).toString() : rr.toString()
+    function DW(dd) {
+      return null == dd ? nm : "number" === typeof dd ? Math.round(dd > 0 ? dd : 0).toString() : dd.toString()
     }
-    const iZ = {
+    const eW = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function wZ(rr, Sr, Qr, Zr, Wr, ar, jr) {
+    function IW(dd, Od, md, Wd, Fd, Rd, Xd) {
       try {
-        var Ir = rr[ar](jr),
-          fr = Ir.value
-      } catch (rr) {
-        return void Qr(rr)
+        var Kd = dd[Rd](Xd),
+          hd = Kd.value
+      } catch (dd) {
+        return void md(dd)
       }
-      Ir.done ? Sr(fr) : Promise.resolve(fr).then(Zr, Wr)
+      Kd.done ? Od(hd) : Promise.resolve(hd).then(Wd, Fd)
     }
 
-    function cZ(rr) {
+    function lW(dd) {
       return function() {
-        var Sr = this,
-          Qr = arguments;
-        return new Promise((function(Zr, Wr) {
-          var ar = rr.apply(Sr, Qr);
+        var Od = this,
+          md = arguments;
+        return new Promise((function(Wd, Fd) {
+          var Rd = dd.apply(Od, md);
 
-          function jr(rr) {
-            wZ(ar, Zr, Wr, jr, Ir, "next", rr)
+          function Xd(dd) {
+            IW(Rd, Wd, Fd, Xd, Kd, "next", dd)
           }
 
-          function Ir(rr) {
-            wZ(ar, Zr, Wr, jr, Ir, "throw", rr)
+          function Kd(dd) {
+            IW(Rd, Wd, Fd, Xd, Kd, "throw", dd)
           }
-          jr(void 0)
+          Xd(void 0)
         }))
       }
     }
-    const FZ = new YQ;
-    var oZ = class extends SQ {
+    const CW = new gm;
+    var ZW = class extends Wm {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = QQ
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = Fm
       }
       initialize() {
-        var rr = this;
+        var dd = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let Sr = !1;
-        const Qr = () => {
-          ! function(rr) {
-            if ("complete" === document.readyState) rr();
+        let Od = !1;
+        const md = () => {
+          ! function(dd) {
+            if ("complete" === document.readyState) dd();
             else {
-              const Sr = () => {
-                "complete" === document.readyState && (rr(), document.removeEventListener("readystatechange", Sr))
+              const Od = () => {
+                "complete" === document.readyState && (dd(), document.removeEventListener("readystatechange", Od))
               };
-              document.addEventListener("readystatechange", Sr)
+              document.addEventListener("readystatechange", Od)
             }
-          }(cZ((function*() {
-            if (Sr) return;
-            const Qr = rr.api.pushEvent,
+          }(lW((function*() {
+            if (Od) return;
+            const md = dd.api.pushEvent,
               {
-                faroNavigationId: Zr
-              } = yield function(rr) {
-                let Sr;
-                const Qr = new Promise((rr => {
-                  Sr = rr
+                faroNavigationId: Wd
+              } = yield function(dd) {
+                let Od;
+                const md = new Promise((dd => {
+                  Od = dd
                 }));
-                return new PerformanceObserver((Qr => {
-                  var Zr;
-                  const [Wr] = Qr.getEntries();
-                  if (null == Wr || Jr(Wr.name)) return;
-                  const ar = Wr.toJSON();
-                  let jr = gZ(null === ar || void 0 === ar ? void 0 : ar.serverTiming);
-                  const Ir = null !== (Zr = rS("com.grafana.faro.lastNavigationId", dr)) && void 0 !== Zr ? Zr : gQ,
-                    fr = pS(pS({}, kZ(ar)), {}, {
-                      faroNavigationId: zS(),
-                      faroPreviousNavigationId: Ir
+                return new PerformanceObserver((md => {
+                  var Wd;
+                  const [Fd] = md.getEntries();
+                  if (null == Fd || kd(Fd.name)) return;
+                  const Rd = Fd.toJSON();
+                  let Xd = nW(null === Rd || void 0 === Rd ? void 0 : Rd.serverTiming);
+                  const Kd = null !== (Wd = mO("com.grafana.faro.lastNavigationId", Md)) && void 0 !== Wd ? Wd : nm,
+                    hd = oO(oO({}, cW(Rd)), {}, {
+                      faroNavigationId: pO(),
+                      faroPreviousNavigationId: Kd
                     });
-                  SS("com.grafana.faro.lastNavigationId", fr.faroNavigationId, dr), rr("faro.performance.navigation", fr, void 0, {
-                    spanContext: jr,
-                    timestampOverwriteMs: CZ(ar.startTime)
-                  }), Sr(fr)
+                  WO("com.grafana.faro.lastNavigationId", hd.faroNavigationId, Md), dd("faro.performance.navigation", hd, void 0, {
+                    spanContext: Xd,
+                    timestampOverwriteMs: LW(Rd.startTime)
+                  }), Od(hd)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), Qr
-              }(Qr);
-            Sr || null == Zr || function(rr, Sr, Qr, Zr) {
-              const Wr = Zr.trackResources;
-              new PerformanceObserver((Zr => {
-                const ar = Zr.getEntries(),
-                  jr = {
+                }), md
+              }(md);
+            Od || null == Wd || function(dd, Od, md, Wd) {
+              const Fd = Wd.trackResources;
+              new PerformanceObserver((Wd => {
+                const Rd = Wd.getEntries(),
+                  Xd = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const Ir of ar) {
-                  if (Jr(Ir.name)) continue;
-                  null === Qr || void 0 === Qr || Qr.notify({
+                for (const Kd of Rd) {
+                  if (kd(Kd.name)) continue;
+                  null === md || void 0 === md || md.notify({
                     type: "resource"
                   });
-                  const Zr = Ir.toJSON();
-                  let ar = gZ(null === Zr || void 0 === Zr ? void 0 : Zr.serverTiming);
-                  (null == Wr && MZ(Zr, iZ) || Wr) && Sr("faro.performance.resource", pS(pS({}, GZ(Zr)), {}, {
-                    faroNavigationId: rr,
-                    faroResourceId: zS()
+                  const Wd = Kd.toJSON();
+                  let Rd = nW(null === Wd || void 0 === Wd ? void 0 : Wd.serverTiming);
+                  (null == Fd && PW(Wd, eW) || Fd) && Od("faro.performance.resource", oO(oO({}, zW(Wd)), {}, {
+                    faroNavigationId: dd,
+                    faroResourceId: pO()
                   }), void 0, {
-                    spanContext: ar,
-                    timestampOverwriteMs: CZ(Zr.startTime, jr)
+                    spanContext: Rd,
+                    timestampOverwriteMs: LW(Wd.startTime, Xd)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(Zr, Qr, FZ, rr.config)
+            }(Wd, md, CW, dd.config)
           })))
         };
         this.cancelInitialization = () => {
-          Sr = !0, document.removeEventListener("prerenderingchange", Qr)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", Qr, {
+          Od = !0, document.removeEventListener("prerenderingchange", md)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", md, {
           once: !0
-        }) : Qr()
+        }) : md()
       }
       destroy() {
-        var rr;
-        null === (rr = this.cancelInitialization) || void 0 === rr || rr.call(this), this.cancelInitialization = void 0
+        var dd;
+        null === (dd = this.cancelInitialization) || void 0 === dd || dd.call(this), this.cancelInitialization = void 0
       }
     };
-    const bZ = "data-faro-user-action-name",
-      JZ = bZ.replace(/-name$/, "-timeout"),
-      DZ = 1e3;
+    const kW = "data-faro-user-action-name",
+      fW = kW.replace(/-name$/, "-timeout"),
+      MW = 1e3;
 
-    function dZ(rr) {
-      return `data-${(rr.startsWith("data-")?rr.slice(5):rr).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function dF(dd) {
+      return `data-${(dd.startsWith("data-")?dd.slice(5):dd).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function sZ(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wS;
-      if (void 0 === rr) return Sr;
-      let Zr = NaN;
+    function OF(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : eO;
+      if (void 0 === dd) return Od;
+      let Wd = NaN;
       try {
-        Zr = "string" === typeof rr && "" === rr.trim() ? NaN : Number(rr)
-      } catch (Wr) {}
-      return !Number.isFinite(Zr) || Zr <= 0 ? (Qr(`initialActivityTimeout must be a finite number greater than zero; using ${Sr} ms`), Sr) : Zr > 1e3 ? (Qr(`initialActivityTimeout cannot exceed ${DZ} ms; clamping to the maximum`), DZ) : Zr
+        Wd = "string" === typeof dd && "" === dd.trim() ? NaN : Number(dd)
+      } catch (Fd) {}
+      return !Number.isFinite(Wd) || Wd <= 0 ? (md(`initialActivityTimeout must be a finite number greater than zero; using ${Od} ms`), Od) : Wd > 1e3 ? (md(`initialActivityTimeout cannot exceed ${MW} ms; clamping to the maximum`), MW) : Wd
     }
 
-    function uZ(rr, Sr, Qr) {
-      return void 0 !== rr && window.clearTimeout(rr), window.setTimeout((() => {
-        Sr()
-      }), Qr)
+    function mF(dd, Od, md) {
+      return void 0 !== dd && window.clearTimeout(dd), window.setTimeout((() => {
+        Od()
+      }), md)
     }
 
-    function rW(rr) {
-      return rr.type === zQ
+    function WF(dd) {
+      return dd.type === Ym
     }
-    let SW, QW;
+    let FF, RF;
 
-    function ZW() {
-      return SW || (SW = new YQ), QW || (QW = new MutationObserver(((rr, Sr) => {
-        SW.notify({
+    function XF() {
+      return FF || (FF = new gm), RF || (RF = new MutationObserver(((dd, Od) => {
+        FF.notify({
           type: "dom-mutation"
         })
-      })), QW.observe(document, {
+      })), RF.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), SW
+      })), FF
     }
-    const WW = "fetch",
-      aW = "xhr";
-    let jW, IW, fW, EW, pW = !1;
+    const KF = "fetch",
+      hF = "xhr";
+    let vF, QF, tF, oF, NF = !1;
 
-    function xW() {
-      if (jW) return jW;
+    function qF() {
+      if (vF) return vF;
 
-      function rr(rr) {
-        jW.notify({
-          type: hQ,
-          request: rr
+      function dd(dd) {
+        vF.notify({
+          type: pm,
+          request: dd
         })
       }
 
-      function Sr(rr) {
-        jW.notify({
-          type: zQ,
-          request: rr
+      function Od(dd) {
+        vF.notify({
+          type: Ym,
+          request: dd
         })
       }
-      return jW = new YQ, pW || (! function(rr) {
+      return vF = new gm, NF || (! function(dd) {
         let {
-          onRequestEnd: Sr,
-          onRequestStart: Qr
-        } = rr;
-        fW || (fW = window.fetch);
+          onRequestEnd: Od,
+          onRequestStart: md
+        } = dd;
+        tF || (tF = window.fetch);
         window.fetch = function() {
-          var rr, Zr;
-          const Wr = null !== (rr = Dr(arguments[0])) && void 0 !== rr ? rr : "",
-            ar = Jr(Wr),
-            jr = (null !== (Zr = arguments[1]) && void 0 !== Zr ? Zr : {}).method,
-            Ir = zS();
-          return ar || Qr({
-            url: Wr,
-            method: jr,
-            requestId: Ir,
-            apiType: WW
-          }), fW.apply(this, arguments).then((rr => (ar || Sr({
-            url: Wr,
-            method: jr,
-            requestId: Ir,
-            apiType: WW
-          }), rr))).catch((rr => {
-            throw ar || Sr({
-              url: Wr,
-              method: jr,
-              requestId: Ir,
-              apiType: WW
-            }), rr
+          var dd, Wd;
+          const Fd = null !== (dd = fd(arguments[0])) && void 0 !== dd ? dd : "",
+            Rd = kd(Fd),
+            Xd = (null !== (Wd = arguments[1]) && void 0 !== Wd ? Wd : {}).method,
+            Kd = pO();
+          return Rd || md({
+            url: Fd,
+            method: Xd,
+            requestId: Kd,
+            apiType: KF
+          }), tF.apply(this, arguments).then((dd => (Rd || Od({
+            url: Fd,
+            method: Xd,
+            requestId: Kd,
+            apiType: KF
+          }), dd))).catch((dd => {
+            throw Rd || Od({
+              url: Fd,
+              method: Xd,
+              requestId: Kd,
+              apiType: KF
+            }), dd
           }))
         }
       }({
-        onRequestStart: rr,
-        onRequestEnd: Sr
-      }), function(rr) {
+        onRequestStart: dd,
+        onRequestEnd: Od
+      }), function(dd) {
         let {
-          onRequestStart: Sr,
-          onRequestEnd: Qr
-        } = rr;
-        IW || (IW = XMLHttpRequest.prototype.open);
+          onRequestStart: Od,
+          onRequestEnd: md
+        } = dd;
+        QF || (QF = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const rr = arguments[1],
-            Zr = Jr(rr),
-            Wr = arguments[0],
-            ar = zS();
+          const dd = arguments[1],
+            Wd = kd(dd),
+            Fd = arguments[0],
+            Rd = pO();
           this.addEventListener("loadstart", (function() {
-            Zr || Sr({
-              url: rr,
-              method: Wr,
-              requestId: ar,
-              apiType: aW
+            Wd || Od({
+              url: dd,
+              method: Fd,
+              requestId: Rd,
+              apiType: hF
             })
           })), this.addEventListener("load", (function() {
-            Zr || Qr({
-              url: rr,
-              method: Wr,
-              requestId: ar,
-              apiType: aW
+            Wd || md({
+              url: dd,
+              method: Fd,
+              requestId: Rd,
+              apiType: hF
             })
           })), this.addEventListener("error", (function() {
-            Zr || Qr({
-              url: rr,
-              method: Wr,
-              requestId: ar,
-              apiType: aW
+            Wd || md({
+              url: dd,
+              method: Fd,
+              requestId: Rd,
+              apiType: hF
             })
           })), this.addEventListener("abort", (function() {
-            Zr || Qr({
-              url: rr,
-              method: Wr,
-              requestId: ar,
-              apiType: aW
+            Wd || md({
+              url: dd,
+              method: Fd,
+              requestId: Rd,
+              apiType: hF
             })
-          })), IW.apply(this, arguments)
+          })), QF.apply(this, arguments)
         }
       }({
-        onRequestStart: rr,
-        onRequestEnd: Sr
-      }), pW = !0), jW
+        onRequestStart: dd,
+        onRequestEnd: Od
+      }), NF = !0), vF
     }
-    let mW, NW = !1;
-    let UW = function(rr) {
-      return rr[rr.Started = 0] = "Started", rr[rr.Halted = 1] = "Halted", rr[rr.Cancelled = 2] = "Cancelled", rr[rr.Ended = 3] = "Ended", rr
+    let HF, yF = !1;
+    let bF = function(dd) {
+      return dd[dd.Started = 0] = "Started", dd[dd.Halted = 1] = "Halted", dd[dd.Cancelled = 2] = "Cancelled", dd[dd.Ended = 3] = "Ended", dd
     }({});
-    var tW = class {
-      constructor(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = rr, this.logDebug = Sr, this.initialActivityTimeout = Qr, this.http = xW(), this.dom = ZW(), this.perf = (EW || (EW = new YQ), NW || (mW = FZ.subscribe((rr => {
-          "resource" === rr.type && EW.notify({
+    var TF = class {
+      constructor(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = dd, this.logDebug = Od, this.initialActivityTimeout = md, this.http = qF(), this.dom = XF(), this.perf = (oF || (oF = new gm), yF || (HF = CW.subscribe((dd => {
+          "resource" === dd.type && oF.notify({
             type: "resource-entry"
           })
-        })), NW = !0), EW), this.isValid = !1, this.runningRequests = new Map
+        })), yF = !0), oF), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new YQ).merge(this.http, this.dom, this.perf).takeWhile((() => [UW.Started, UW.Halted].includes(this.userAction.getState()))).filter((rr => !!(this.userAction.getState() !== UW.Halted || rW(rr) && this.runningRequests.has(rr.request.requestId)))).subscribe((rr => {
-          (function(rr) {
-            return rr.type === hQ
-          })(rr) && this.runningRequests.set(rr.request.requestId, rr.request), rW(rr) && this.runningRequests.delete(rr.request.requestId), rW(rr) ? this.userAction.getState() === UW.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((rr => [UW.Ended, UW.Cancelled].includes(rr))).first().subscribe((() => this.cleanup())), this.startupTid = uZ(this.startupTid, (() => {
+        this.allMonitorsSub = (new gm).merge(this.http, this.dom, this.perf).takeWhile((() => [bF.Started, bF.Halted].includes(this.userAction.getState()))).filter((dd => !!(this.userAction.getState() !== bF.Halted || WF(dd) && this.runningRequests.has(dd.request.requestId)))).subscribe((dd => {
+          (function(dd) {
+            return dd.type === pm
+          })(dd) && this.runningRequests.set(dd.request.requestId, dd.request), WF(dd) && this.runningRequests.delete(dd.request.requestId), WF(dd) ? this.userAction.getState() === bF.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((dd => [bF.Ended, bF.Cancelled].includes(dd))).first().subscribe((() => this.cleanup())), this.startupTid = mF(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === UW.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === bF.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === UW.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === bF.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = uZ(this.haltTid, (() => {
-          this.userAction.getState() === UW.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = mF(this.haltTid, (() => {
+          this.userAction.getState() === bF.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var rr, Sr;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (rr = this.allMonitorsSub) || void 0 === rr || rr.unsubscribe(), null === (Sr = this.stateSub) || void 0 === Sr || Sr.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var dd, Od;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (dd = this.allMonitorsSub) || void 0 === dd || dd.unsubscribe(), null === (Od = this.stateSub) || void 0 === Od || Od.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(rr) {
-        void 0 !== rr && window.clearTimeout(rr)
+      clearTimer(dd) {
+        void 0 !== dd && window.clearTimeout(dd)
       }
     };
 
-    function hW(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wS;
-      var Qr;
+    function pF(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eO;
+      var md;
       const {
-        api: Zr,
-        config: Wr,
-        internalLogger: ar
-      } = rr, jr = sZ(null === (Qr = Wr.userActionsInstrumentation) || void 0 === Qr ? void 0 : Qr.initialActivityTimeout, 100, Sr);
+        api: Wd,
+        config: Fd,
+        internalLogger: Rd
+      } = dd, Xd = OF(null === (md = Fd.userActionsInstrumentation) || void 0 === md ? void 0 : md.initialActivityTimeout, 100, Od);
       return {
-        processUserEvent: function(rr) {
-          var Sr, Qr;
-          const ar = null !== (Sr = null === (Qr = Wr.userActionsInstrumentation) || void 0 === Qr ? void 0 : Qr.dataAttributeName) && void 0 !== Sr ? Sr : bZ,
-            jr = rr.target;
-          if (!(jr instanceof Element)) return;
-          const Ir = function(rr, Sr) {
-              let Qr = rr;
-              for (; Qr;) {
-                if (Qr.hasAttribute(Sr)) return Qr;
-                Qr = Qr.parentElement
+        processUserEvent: function(dd) {
+          var Od, md;
+          const Rd = null !== (Od = null === (md = Fd.userActionsInstrumentation) || void 0 === md ? void 0 : md.dataAttributeName) && void 0 !== Od ? Od : kW,
+            Xd = dd.target;
+          if (!(Xd instanceof Element)) return;
+          const Kd = function(dd, Od) {
+              let md = dd;
+              for (; md;) {
+                if (md.hasAttribute(Od)) return md;
+                md = md.parentElement
               }
               return null
-            }(jr, dZ(ar)),
-            fr = function(rr, Sr) {
-              if (!rr) return;
-              const Qr = function(rr) {
-                  return dZ(rr).slice(5).replace(/-(.)/g, ((rr, Sr) => Sr.toUpperCase()))
-                }(Sr),
-                Zr = rr.dataset;
-              for (const Wr in Zr)
-                if (Wr === Qr) return Zr[Wr]
-            }(Ir, ar);
-          if (!Ir || !fr) return;
-          const Er = function(rr, Sr) {
-            const Qr = rr.getAttribute(function(rr) {
-              const Sr = dZ(rr);
-              return Sr.endsWith("-name") ? `${Sr.slice(0,-5)}-timeout` : `${Sr}-timeout`
-            }(Sr));
-            return null === Qr ? void 0 : Number(Qr)
-          }(Ir, ar);
-          Zr.startUserAction(fr, {}, {
-            triggerName: rr.type,
-            initialActivityTimeout: Er
+            }(Xd, dF(Rd)),
+            hd = function(dd, Od) {
+              if (!dd) return;
+              const md = function(dd) {
+                  return dF(dd).slice(5).replace(/-(.)/g, ((dd, Od) => Od.toUpperCase()))
+                }(Od),
+                Wd = dd.dataset;
+              for (const Fd in Wd)
+                if (Fd === md) return Wd[Fd]
+            }(Kd, Rd);
+          if (!Kd || !hd) return;
+          const vd = function(dd, Od) {
+            const md = dd.getAttribute(function(dd) {
+              const Od = dF(dd);
+              return Od.endsWith("-name") ? `${Od.slice(0,-5)}-timeout` : `${Od}-timeout`
+            }(Od));
+            return null === md ? void 0 : Number(md)
+          }(Kd, Rd);
+          Wd.startUserAction(hd, {}, {
+            triggerName: dd.type,
+            initialActivityTimeout: vd
           })
         },
-        processUserActionStarted: function(rr, Qr) {
-          const Zr = rr,
-            Wr = sZ(Qr, jr, Sr);
-          new tW(Zr, ar.debug, Wr).attach()
+        processUserActionStarted: function(dd, md) {
+          const Wd = dd,
+            Fd = OF(md, Xd, Od);
+          new TF(Wd, Rd.debug, Fd).attach()
         }
       }
     }
-    const zW = "user_action_start",
-      YW = {
+    const YF = "user_action_start",
+      gF = {
         Normal: "normal",
         Critical: "critical"
       };
-    var nW = class {
+    var wF = class {
         constructor() {
           this.buffer = []
         }
-        addItem(rr) {
-          this.buffer.push(rr)
+        addItem(dd) {
+          this.buffer.push(dd)
         }
-        flushBuffer(rr) {
-          if (lr(rr))
-            for (const Sr of this.buffer) rr(Sr);
+        flushBuffer(dd) {
+          if (Sd(dd))
+            for (const Od of this.buffer) dd(Od);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      eW = class extends YQ {
-        constructor(rr) {
+      aF = class extends gm {
+        constructor(dd) {
           let {
-            name: Sr,
-            parentId: Qr,
-            trigger: Zr,
-            transports: Wr,
-            attributes: ar,
-            trackUserActionsExcludeItem: jr,
-            importance: Ir = YW.Normal,
-            pushEvent: fr
-          } = rr;
-          super(), this.name = Sr, this.attributes = ar, this.id = zS(), this.trigger = Zr, this.parentId = null !== Qr && void 0 !== Qr ? Qr : this.id, this.trackUserActionsExcludeItem = jr, this.importance = Ir, this._pushEvent = fr, this._itemBuffer = new nW, this._transports = Wr, this._state = 0, this._start()
+            name: Od,
+            parentId: md,
+            trigger: Wd,
+            transports: Fd,
+            attributes: Rd,
+            trackUserActionsExcludeItem: Xd,
+            importance: Kd = gF.Normal,
+            pushEvent: hd
+          } = dd;
+          super(), this.name = Od, this.attributes = Rd, this.id = pO(), this.trigger = Wd, this.parentId = null !== md && void 0 !== md ? md : this.id, this.trackUserActionsExcludeItem = Xd, this.importance = Kd, this._pushEvent = hd, this._itemBuffer = new wF, this._transports = Fd, this._state = 0, this._start()
         }
-        addItem(rr) {
-          return 0 === this._state && (this._itemBuffer.addItem(rr), !0)
+        addItem(dd) {
+          return 0 === this._state && (this._itemBuffer.addItem(dd), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = mS(), this._startTimeMono = NS())
+          this._state = 0, 0 === this._state && (this.startTime = qO(), this._startTimeMono = HO())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((rr => {
-            this._transports.execute(rr)
+          0 === this._state && this._itemBuffer.flushBuffer((dd => {
+            this._transports.execute(dd)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const rr = mS(),
-            Sr = NS() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((rr => {
-            if (function(rr, Sr) {
-                return (null === Sr || void 0 === Sr ? void 0 : Sr(rr)) || "measurement" === rr.type && "web-vitals" === rr.payload.type
-              }(rr, this.trackUserActionsExcludeItem)) return void this._transports.execute(rr);
-            const Sr = sS(sS({}, rr), {}, {
-              payload: sS(sS({}, rr.payload), {}, {
+          const dd = qO(),
+            Od = HO() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((dd => {
+            if (function(dd, Od) {
+                return (null === Od || void 0 === Od ? void 0 : Od(dd)) || "measurement" === dd.type && "web-vitals" === dd.payload.type
+              }(dd, this.trackUserActionsExcludeItem)) return void this._transports.execute(dd);
+            const Od = dm(dm({}, dd), {}, {
+              payload: dm(dm({}, dd.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(Sr)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", sS({
+            this._transports.execute(Od)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", dm({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: rr.toString(),
-            userActionDuration: Sr.toString(),
+            userActionEndTime: dd.toString(),
+            userActionDuration: Od.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, CS(this.attributes)), void 0, {
+          }, nO(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: rr => (rr.action = {
+            customPayloadTransformer: dd => (dd.action = {
               id: this.id,
               name: this.name
-            }, rr)
+            }, dd)
           })
         }
         getState() {
           return this._state
         }
       };
-    const KW = new YQ;
+    const EF = new gm;
 
-    function yW(rr, Sr) {
-      return !!rr && (0 === (null === rr || void 0 === rr ? void 0 : rr.getState()) && (rr.addItem(Sr), !0))
+    function JF(dd, Od) {
+      return !!dd && (0 === (null === dd || void 0 === dd ? void 0 : dd.getState()) && (dd.addItem(Od), !0))
     }
-    var BW = class extends SQ {
+    var UF = class extends Wm {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = QQ
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = Fm
         }
         initialize() {
           const {
-            processUserEvent: rr,
-            processUserActionStarted: Sr
-          } = hW(tr, (rr => this.logWarn(rr)));
-          this._processUserEvent = rr, this._processKeydown = Sr => {
-            [" ", "Enter"].includes(Sr.key) && rr(Sr)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = KW.subscribe((rr => {
+            processUserEvent: dd,
+            processUserActionStarted: Od
+          } = pF(Hd, (dd => this.logWarn(dd)));
+          this._processUserEvent = dd, this._processKeydown = Od => {
+            [" ", "Enter"].includes(Od.key) && dd(Od)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = EF.subscribe((dd => {
             let {
-              type: Qr,
-              userAction: Zr,
-              initialActivityTimeout: Wr
-            } = rr;
-            "user_action_start" === Qr && Sr(Zr, Wr)
+              type: md,
+              userAction: Wd,
+              initialActivityTimeout: Fd
+            } = dd;
+            "user_action_start" === md && Od(Wd, Fd)
           }))
         }
         destroy() {
-          var rr;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (rr = this._userActionSub) || void 0 === rr || rr.unsubscribe()
+          var dd;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (dd = this._userActionSub) || void 0 === dd || dd.unsubscribe()
         }
       },
-      TW = class extends SQ {
+      xF = class extends Wm {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = QQ, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = Fm, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(rr) {
-          const Sr = {
-            blockedURI: rr.blockedURI,
-            columnNumber: rr.columnNumber,
-            disposition: rr.disposition,
-            documentURI: rr.documentURI,
-            effectiveDirective: rr.effectiveDirective,
-            lineNumber: rr.lineNumber,
-            originalPolicy: rr.originalPolicy,
-            referrer: rr.referrer,
-            sample: rr.sample,
-            sourceFile: rr.sourceFile,
-            statusCode: rr.statusCode,
-            violatedDirective: rr.violatedDirective
+        securitypolicyviolationHandler(dd) {
+          const Od = {
+            blockedURI: dd.blockedURI,
+            columnNumber: dd.columnNumber,
+            disposition: dd.disposition,
+            documentURI: dd.documentURI,
+            effectiveDirective: dd.effectiveDirective,
+            lineNumber: dd.lineNumber,
+            originalPolicy: dd.originalPolicy,
+            referrer: dd.referrer,
+            sample: dd.sample,
+            sourceFile: dd.sourceFile,
+            statusCode: dd.statusCode,
+            violatedDirective: dd.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", CS(Sr))
+          this.api.pushEvent("securitypolicyviolation", nO(Od))
         }
       };
-    var vW = class extends YQ {
-      constructor(rr, Sr) {
-        var Qr, Zr, Wr, ar;
-        super(), this._tracking = !1, this.eventsObservable = rr, this._options = {
-          inactivityMs: null !== (Qr = null === Sr || void 0 === Sr ? void 0 : Sr.inactivityMs) && void 0 !== Qr ? Qr : 100,
-          drainTimeoutMs: null !== (Zr = null === Sr || void 0 === Sr ? void 0 : Sr.drainTimeoutMs) && void 0 !== Zr ? Zr : 1e4,
-          isOperationStart: null !== (Wr = null === Sr || void 0 === Sr ? void 0 : Sr.isOperationStart) && void 0 !== Wr ? Wr : () => {},
-          isOperationEnd: null !== (ar = null === Sr || void 0 === Sr ? void 0 : Sr.isOperationEnd) && void 0 !== ar ? ar : () => {}
+    var BF = class extends gm {
+      constructor(dd, Od) {
+        var md, Wd, Fd, Rd;
+        super(), this._tracking = !1, this.eventsObservable = dd, this._options = {
+          inactivityMs: null !== (md = null === Od || void 0 === Od ? void 0 : Od.inactivityMs) && void 0 !== md ? md : 100,
+          drainTimeoutMs: null !== (Wd = null === Od || void 0 === Od ? void 0 : Od.drainTimeoutMs) && void 0 !== Wd ? Wd : 1e4,
+          isOperationStart: null !== (Fd = null === Od || void 0 === Od ? void 0 : Od.isOperationStart) && void 0 !== Fd ? Fd : () => {},
+          isOperationEnd: null !== (Rd = null === Od || void 0 === Od ? void 0 : Od.isOperationEnd) && void 0 !== Rd ? Rd : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((rr => {
-          var Sr;
-          this._lastEventTime = NS(), null === (Sr = this._currentEvents) || void 0 === Sr || Sr.push(rr);
-          const Qr = this._options.isOperationStart(rr);
-          var Zr;
-          Qr && (null === (Zr = this._activeOperations) || void 0 === Zr || Zr.set(Qr, !0));
-          const Wr = this._options.isOperationEnd(rr);
-          var ar;
-          Wr && (null === (ar = this._activeOperations) || void 0 === ar || ar.delete(Wr));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((dd => {
+          var Od;
+          this._lastEventTime = HO(), null === (Od = this._currentEvents) || void 0 === Od || Od.push(dd);
+          const md = this._options.isOperationStart(dd);
+          var Wd;
+          md && (null === (Wd = this._activeOperations) || void 0 === Wd || Wd.set(md, !0));
+          const Fd = this._options.isOperationEnd(dd);
+          var Rd;
+          Fd && (null === (Rd = this._activeOperations) || void 0 === Rd || Rd.delete(Fd));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = NS(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = HO(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let rr;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), rr = this.hasActiveOperations() ? NS() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let dd;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), dd = this.hasActiveOperations() ? HO() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: rr
+          duration: dd
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = OW(this._inactivityTid, (() => {
+        this._inactivityTid = SF(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = OW(this._drainTid, (() => {
+        this._drainTid = SF(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(rr) {
-        rr && clearTimeout(rr)
+      _clearTimer(dd) {
+        dd && clearTimeout(dd)
       }
     };
 
-    function OW(rr, Sr, Qr) {
-      return rr && clearTimeout(rr), rr = setTimeout((() => {
-        Sr()
-      }), Qr)
+    function SF(dd, Od, md) {
+      return dd && clearTimeout(dd), dd = setTimeout((() => {
+        Od()
+      }), md)
     }
-    let LW;
-    const lW = new Set,
-      XW = new Map;
-    let PW, HW, qW, RW, gW, CW, MW, GW, kW = !1;
-    var AW = class extends SQ {
+    let sF;
+    const uF = new Set,
+      VF = new Map;
+    let iF, AF, rF, GF, nF, LF, PF, zF, cF = !1;
+    var jF = class extends Wm {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = QQ
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = Fm
       }
       initialize() {
-        const rr = xW(),
-          Sr = ZW(),
-          Qr = function() {
-            function rr(rr, Sr) {
-              const Qr = null !== Sr && void 0 !== Sr ? Sr : location.href;
-              Qr !== HW && (PW.notify({
+        const dd = qF(),
+          Od = XF(),
+          md = function() {
+            function dd(dd, Od) {
+              const md = null !== Od && void 0 !== Od ? Od : location.href;
+              md !== AF && (iF.notify({
                 type: "url-change",
-                from: HW,
-                to: Qr,
-                trigger: rr
-              }), HW = Qr)
+                from: AF,
+                to: md,
+                trigger: dd
+              }), AF = md)
             }
-            if (PW || (PW = new YQ, HW = location.href), !kW)
+            if (iF || (iF = new gm, AF = location.href), !cF)
               if ("navigation" in window && "NavigateEvent" in window) {
-                MW = Sr => {
+                PF = Od => {
                   try {
-                    const Qr = null === Sr || void 0 === Sr ? void 0 : Sr.destination;
-                    (null === Qr || void 0 === Qr ? void 0 : Qr.sameDocument) && "string" === typeof Qr.url && rr("navigate", Qr.url)
-                  } catch (Qr) {}
-                }, window.navigation.addEventListener("navigate", MW);
-                const Sr = window.NavigateEvent;
-                Sr && Sr.prototype && "function" === typeof Sr.prototype.intercept && (GW || (GW = Sr.prototype.intercept), Sr.prototype.intercept = function(Sr) {
+                    const md = null === Od || void 0 === Od ? void 0 : Od.destination;
+                    (null === md || void 0 === md ? void 0 : md.sameDocument) && "string" === typeof md.url && dd("navigate", md.url)
+                  } catch (md) {}
+                }, window.navigation.addEventListener("navigate", PF);
+                const Od = window.NavigateEvent;
+                Od && Od.prototype && "function" === typeof Od.prototype.intercept && (zF || (zF = Od.prototype.intercept), Od.prototype.intercept = function(Od) {
                   try {
-                    const Sr = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      Qr = null === this || void 0 === this ? void 0 : this.destination;
-                    Sr && Qr && !1 === Qr.sameDocument && "string" === typeof Qr.url && rr("navigate-intercept", Qr.url)
-                  } catch (Qr) {}
-                  return GW.call(this, Sr)
-                }), kW = !0
-              } else qW || (qW = window.history.pushState), window.history.pushState = function() {
-                for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
-                const Wr = qW.apply(window.history, Qr);
-                return rr("pushState"), Wr
-              }, RW || (RW = window.history.replaceState), window.history.replaceState = function() {
-                for (var Sr = arguments.length, Qr = new Array(Sr), Zr = 0; Zr < Sr; Zr++) Qr[Zr] = arguments[Zr];
-                const Wr = RW.apply(window.history, Qr);
-                return rr("replaceState"), Wr
-              }, gW = () => rr("popstate"), CW = () => rr("hashchange"), window.addEventListener("popstate", gW), window.addEventListener("hashchange", CW), kW = !0;
-            return PW
+                    const Od = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      md = null === this || void 0 === this ? void 0 : this.destination;
+                    Od && md && !1 === md.sameDocument && "string" === typeof md.url && dd("navigate-intercept", md.url)
+                  } catch (md) {}
+                  return zF.call(this, Od)
+                }), cF = !0
+              } else rF || (rF = window.history.pushState), window.history.pushState = function() {
+                for (var Od = arguments.length, md = new Array(Od), Wd = 0; Wd < Od; Wd++) md[Wd] = arguments[Wd];
+                const Fd = rF.apply(window.history, md);
+                return dd("pushState"), Fd
+              }, GF || (GF = window.history.replaceState), window.history.replaceState = function() {
+                for (var Od = arguments.length, md = new Array(Od), Wd = 0; Wd < Od; Wd++) md[Wd] = arguments[Wd];
+                const Fd = GF.apply(window.history, md);
+                return dd("replaceState"), Fd
+              }, nF = () => dd("popstate"), LF = () => dd("hashchange"), window.addEventListener("popstate", nF), window.addEventListener("hashchange", LF), cF = !0;
+            return iF
           }(),
-          Zr = (Wr = ["pointerdown", "keydown"], LW || (LW = new YQ), Wr.forEach((rr => {
-            if (!lW.has(rr)) {
-              const Sr = () => {
-                LW.notify({
+          Wd = (Fd = ["pointerdown", "keydown"], sF || (sF = new gm), Fd.forEach((dd => {
+            if (!uF.has(dd)) {
+              const Od = () => {
+                sF.notify({
                   type: "interaction",
-                  name: rr
+                  name: dd
                 })
               };
-              window.addEventListener(rr, Sr), lW.add(rr), XW.set(rr, Sr)
+              window.addEventListener(dd, Od), uF.add(dd), VF.set(dd, Od)
             }
-          })), LW);
-        var Wr;
-        const ar = new vW((new YQ).merge(rr, Sr, Qr), {
+          })), sF);
+        var Fd;
+        const Rd = new BF((new gm).merge(dd, Od, md), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: rr => function(rr) {
-            return rr.type === hQ
-          }(rr) ? rr.request.requestId : void 0,
-          isOperationEnd: rr => function(rr) {
-            return rr.type === zQ
-          }(rr) ? rr.request.requestId : void 0
+          isOperationStart: dd => function(dd) {
+            return dd.type === pm
+          }(dd) ? dd.request.requestId : void 0,
+          isOperationEnd: dd => function(dd) {
+            return dd.type === Ym
+          }(dd) ? dd.request.requestId : void 0
         });
-        ar.filter((rr => "tracking-ended" === rr.message)).subscribe((rr => {
-          var Sr, Qr;
-          if ((null === (Sr = rr.events) || void 0 === Sr ? void 0 : Sr.some((rr => "url-change" === rr.type))) && (null === (Qr = rr.events) || void 0 === Qr ? void 0 : Qr.some((rr => "dom-mutation" === rr.type)))) {
-            var Zr;
-            const Sr = null === (Zr = rr.events) || void 0 === Zr ? void 0 : Zr.find((rr => "url-change" === rr.type));
-            tr.api.pushEvent("faro.navigation", {
-              fromUrl: null === Sr || void 0 === Sr ? void 0 : Sr.from,
-              toUrl: null === Sr || void 0 === Sr ? void 0 : Sr.to,
+        Rd.filter((dd => "tracking-ended" === dd.message)).subscribe((dd => {
+          var Od, md;
+          if ((null === (Od = dd.events) || void 0 === Od ? void 0 : Od.some((dd => "url-change" === dd.type))) && (null === (md = dd.events) || void 0 === md ? void 0 : md.some((dd => "dom-mutation" === dd.type)))) {
+            var Wd;
+            const Od = null === (Wd = dd.events) || void 0 === Wd ? void 0 : Wd.find((dd => "url-change" === dd.type));
+            Hd.api.pushEvent("faro.navigation", {
+              fromUrl: null === Od || void 0 === Od ? void 0 : Od.from,
+              toUrl: null === Od || void 0 === Od ? void 0 : Od.to,
               sameDocument: String(!0),
-              duration: rr.duration
+              duration: dd.duration
             })
           }
-        })), Zr.subscribe((() => {
-          ar.startTracking()
+        })), Wd.subscribe((() => {
+          Rd.startTracking()
         }))
       }
     };
 
-    function VW() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const Sr = [new BW, new RQ, new qZ, new ZQ, new CQ, new AW];
-      return !1 !== rr.enablePerformanceInstrumentation && Sr.unshift(new oZ), !1 !== rr.enableContentSecurityPolicyInstrumentation && Sr.push(new TW), !1 !== rr.captureConsole && Sr.push(new HQ), Sr
+    function DF() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Od = [new UF, new Gm, new rW, new Rm, new Lm, new jF];
+      return !1 !== dd.enablePerformanceInstrumentation && Od.unshift(new ZW), !1 !== dd.enableContentSecurityPolicyInstrumentation && Od.push(new xF), !1 !== dd.captureConsole && Od.push(new Am), Od
     }
-    var iW = Qr(7643);
-    let wW, cW;
+    var eF = md(7629);
+    let IF, lF;
 
-    function FW() {
-      const rr = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return wW === rr && cW || (cW = new iW.UAParser(rr).getResult(), wW = rr), cW
+    function CF() {
+      const dd = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return IF === dd && lF || (lF = new eF.UAParser(dd).getResult(), IF = dd), lF
     }
-    const oW = () => {
+    const ZF = () => {
         const {
-          browser: rr,
-          os: Sr,
-          ua: Qr
-        } = FW(), {
-          name: Zr,
-          version: Wr
-        } = rr, {
-          name: ar,
-          version: jr
-        } = Sr, Ir = navigator.language, fr = Qr.includes("Mobi"), Er = function() {
-          if (!Zr || !Wr) return;
+          browser: dd,
+          os: Od,
+          ua: md
+        } = CF(), {
+          name: Wd,
+          version: Fd
+        } = dd, {
+          name: Rd,
+          version: Xd
+        } = Od, Kd = navigator.language, hd = md.includes("Mobi"), vd = function() {
+          if (!Wd || !Fd) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== Zr && void 0 !== Zr ? Zr : gQ,
-            version: null !== Wr && void 0 !== Wr ? Wr : gQ,
-            os: `${null!==ar&&void 0!==ar?ar:gQ} ${null!==jr&&void 0!==jr?jr:gQ}`,
-            userAgent: null !== Qr && void 0 !== Qr ? Qr : gQ,
-            language: null !== Ir && void 0 !== Ir ? Ir : gQ,
-            mobile: fr,
-            brands: null !== Er && void 0 !== Er ? Er : gQ,
+            name: null !== Wd && void 0 !== Wd ? Wd : nm,
+            version: null !== Fd && void 0 !== Fd ? Fd : nm,
+            os: `${null!==Rd&&void 0!==Rd?Rd:nm} ${null!==Xd&&void 0!==Xd?Xd:nm}`,
+            userAgent: null !== md && void 0 !== md ? md : nm,
+            language: null !== Kd && void 0 !== Kd ? Kd : nm,
+            mobile: hd,
+            brands: null !== vd && void 0 !== vd ? vd : nm,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      bW = () => {
+      kF = () => {
         const {
-          name: rr,
-          version: Sr
-        } = FW().os;
-        if (!rr && !Sr) return {};
-        const Qr = {};
-        return rr && (Qr.name = rr), Sr && (Qr.version = Sr), {
-          os: Qr
+          name: dd,
+          version: Od
+        } = CF().os;
+        if (!dd && !Od) return {};
+        const md = {};
+        return dd && (md.name = dd), Od && (md.version = Od), {
+          os: md
         }
       };
 
-    function JW(rr) {
-      var Sr, Qr, Zr;
+    function fF(dd) {
+      var Od, md, Wd;
       return {
-        id: null !== (Sr = null === (Qr = tr.config) || void 0 === Qr || null === (Qr = Qr.sessionTracking) || void 0 === Qr || null === (Zr = Qr.generateSessionId) || void 0 === Zr ? void 0 : Zr.call(Qr)) && void 0 !== Sr ? Sr : zS(),
-        attributes: rr
+        id: null !== (Od = null === (md = Hd.config) || void 0 === md || null === (md = md.sessionTracking) || void 0 === md || null === (Wd = md.generateSessionId) || void 0 === Wd ? void 0 : Wd.call(md)) && void 0 !== Od ? Od : pO(),
+        attributes: dd
       }
     }
-    const DW = () => ({
+    const MF = () => ({
       sdk: {
         name: "faro-web",
-        version: QQ
+        version: Fm
       }
     });
-    var dW = class extends rQ {
+    var dR = class extends mm {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let sW = function(rr) {
-      return rr.EXCEPTION = "exception", rr.LOG = "log", rr.MEASUREMENT = "measurement", rr.TRACE = "trace", rr.EVENT = "event", rr
+    let OR = function(dd) {
+      return dd.EXCEPTION = "exception", dd.LOG = "log", dd.MEASUREMENT = "measurement", dd.TRACE = "trace", dd.EVENT = "event", dd
     }({});
-    const uW = {
+    const mR = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function ra(rr, Sr) {
-      var Qr, Zr;
-      if (void 0 === Sr) return rr;
-      if (void 0 === rr) return {
-        resourceSpans: Sr
+    function WR(dd, Od) {
+      var md, Wd;
+      if (void 0 === Od) return dd;
+      if (void 0 === dd) return {
+        resourceSpans: Od
       };
-      const Wr = null === (Qr = rr.resourceSpans) || void 0 === Qr ? void 0 : Qr[0];
-      if (void 0 === Wr) return rr;
-      const ar = (null === Wr || void 0 === Wr ? void 0 : Wr.scopeSpans) || [],
-        jr = (null === Sr || void 0 === Sr || null === (Zr = Sr[0]) || void 0 === Zr ? void 0 : Zr.scopeSpans) || [];
-      return sS(sS({}, rr), {}, {
-        resourceSpans: [sS(sS({}, Wr), {}, {
-          scopeSpans: [...ar, ...jr]
+      const Fd = null === (md = dd.resourceSpans) || void 0 === md ? void 0 : md[0];
+      if (void 0 === Fd) return dd;
+      const Rd = (null === Fd || void 0 === Fd ? void 0 : Fd.scopeSpans) || [],
+        Xd = (null === Od || void 0 === Od || null === (Wd = Od[0]) || void 0 === Wd ? void 0 : Wd.scopeSpans) || [];
+      return dm(dm({}, dd), {}, {
+        resourceSpans: [dm(dm({}, Fd), {}, {
+          scopeSpans: [...Rd, ...Xd]
         })]
       })
     }
 
-    function Sa(rr) {
-      let Sr = {
+    function FR(dd) {
+      let Od = {
         meta: {}
       };
-      return void 0 !== rr[0] && (Sr.meta = rr[0].meta), rr.forEach((rr => {
-        switch (rr.type) {
+      return void 0 !== dd[0] && (Od.meta = dd[0].meta), dd.forEach((dd => {
+        switch (dd.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const Qr = uW[rr.type],
-              Zr = Sr[Qr];
-            Sr = sS(sS({}, Sr), {}, {
-              [Qr]: void 0 === Zr ? [rr.payload] : [...Zr, rr.payload]
+            const md = mR[dd.type],
+              Wd = Od[md];
+            Od = dm(dm({}, Od), {}, {
+              [md]: void 0 === Wd ? [dd.payload] : [...Wd, dd.payload]
             });
             break
           }
           case "trace":
-            Sr = sS(sS({}, Sr), {}, {
-              traces: ra(Sr.traces, rr.payload.resourceSpans)
+            Od = dm(dm({}, Od), {}, {
+              traces: WR(Od.traces, dd.payload.resourceSpans)
             })
         }
-      })), Sr
+      })), Od
     }
-    var Qa = class extends dW {
+    var RR = class extends dR {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = rr, this.name = "@grafana/faro-web-sdk:transport-console", this.version = QQ
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = dd, this.name = "@grafana/faro-web-sdk:transport-console", this.version = Fm
       }
-      send(rr) {
-        var Sr;
-        return this.unpatchedConsole[null !== (Sr = this.options.level) && void 0 !== Sr ? Sr : nQ.DEBUG]("New event", Sa([rr]))
+      send(dd) {
+        var Od;
+        return this.unpatchedConsole[null !== (Od = this.options.level) && void 0 !== Od ? Od : wm.DEBUG]("New event", FR([dd]))
       }
     };
-    const Za = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      Wa = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      aa = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      ja = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      Ia = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      fa = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const XR = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      KR = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      hR = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      vR = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      QR = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      tR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function Ea(rr) {
+    function oR(dd) {
       let {
-        weekday: Sr,
-        day: Qr,
-        month: Zr,
-        year: Wr,
-        hour: ar,
-        minute: jr,
-        second: Ir
-      } = rr;
-      if (Wr < 1900 || Qr < 1 || ar > 23 || jr > 59 || Ir > 60) return;
-      const fr = 60 === Ir,
-        Er = new Date(0);
-      return Er.setUTCFullYear(Wr, Zr, Qr), Er.setUTCHours(ar, jr, fr ? 59 : Ir, 0), Er.getUTCDay() === Sr && Er.getUTCDate() === Qr && Er.getUTCMonth() === Zr && Er.getUTCFullYear() === Wr && Er.getUTCHours() === ar && Er.getUTCMinutes() === jr && Er.getUTCSeconds() === (fr ? 59 : Ir) ? Er.getTime() + (fr ? 1e3 : 0) : void 0
+        weekday: Od,
+        day: md,
+        month: Wd,
+        year: Fd,
+        hour: Rd,
+        minute: Xd,
+        second: Kd
+      } = dd;
+      if (Fd < 1900 || md < 1 || Rd > 23 || Xd > 59 || Kd > 60) return;
+      const hd = 60 === Kd,
+        vd = new Date(0);
+      return vd.setUTCFullYear(Fd, Wd, md), vd.setUTCHours(Rd, Xd, hd ? 59 : Kd, 0), vd.getUTCDay() === Od && vd.getUTCDate() === md && vd.getUTCMonth() === Wd && vd.getUTCFullYear() === Fd && vd.getUTCHours() === Rd && vd.getUTCMinutes() === Xd && vd.getUTCSeconds() === (hd ? 59 : Kd) ? vd.getTime() + (hd ? 1e3 : 0) : void 0
     }
-    var pa = class {
-      constructor(rr) {
-        this.options = rr, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var NR = class {
+      constructor(dd) {
+        this.options = dd, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var rr = this;
+        var dd = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const Sr = this.sequence++;
-        let Qr = !1;
+        const Od = this.sequence++;
+        let md = !1;
         return {
           deliver: function() {
-            var Qr = cZ((function*(Qr) {
-              const Zr = rr.options.getNow();
-              let Wr, ar = 0;
+            var md = lW((function*(md) {
+              const Wd = dd.options.getNow();
+              let Fd, Rd = 0;
               for (;;) {
-                var jr, Ir, fr;
-                const Er = rr.options.retry.maxAttempts - ar,
-                  pr = yield rr.runAttempt((() => Qr(Er, rr.unloading)), ar > 0);
-                if (ar += pr.attemptsMade, "success" === pr.kind) return {
+                var Xd, Kd, hd;
+                const vd = dd.options.retry.maxAttempts - Rd,
+                  Qd = yield dd.runAttempt((() => md(vd, dd.unloading)), Rd > 0);
+                if (Rd += Qd.attemptsMade, "success" === Qd.kind) return {
                   kind: "success",
-                  attempts: ar,
-                  elapsedTimeMs: rr.options.getNow() - Zr
+                  attempts: Rd,
+                  elapsedTimeMs: dd.options.getNow() - Wd
                 };
-                if (Wr = pr.failure, "terminal" === pr.kind || rr.unloading) return {
+                if (Fd = Qd.failure, "terminal" === Qd.kind || dd.unloading) return {
                   kind: "terminal",
-                  attempts: ar,
-                  elapsedTimeMs: rr.options.getNow() - Zr,
-                  failure: Wr
+                  attempts: Rd,
+                  elapsedTimeMs: dd.options.getNow() - Wd,
+                  failure: Fd
                 };
-                if (ar >= rr.options.retry.maxAttempts) return {
+                if (Rd >= dd.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: ar,
-                  elapsedTimeMs: rr.options.getNow() - Zr,
-                  failure: Wr,
+                  attempts: Rd,
+                  elapsedTimeMs: dd.options.getNow() - Wd,
+                  failure: Fd,
                   reason: "retries-exhausted"
                 };
-                if (null != pr.retryAfterMs && pr.retryAfterMs > rr.options.retry.maxBackoffMs) return {
+                if (null != Qd.retryAfterMs && Qd.retryAfterMs > dd.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: ar,
-                  elapsedTimeMs: rr.options.getNow() - Zr,
-                  failure: Wr,
+                  attempts: Rd,
+                  elapsedTimeMs: dd.options.getNow() - Wd,
+                  failure: Fd,
                   reason: "retry-after-too-long"
                 };
-                const xr = Math.min(null !== (jr = pr.retryAfterMs) && void 0 !== jr ? jr : rr.options.retry.initialBackoffMs * Math.pow(rr.options.retry.backoffMultiplier, ar - 1), rr.options.retry.maxBackoffMs);
-                if (null === (Ir = (fr = rr.options).onRetry) || void 0 === Ir || Ir.call(fr, xr, ar + 1), yield rr.waitForTurn(Sr, xr)) {
-                  const Sr = rr.options.retry.maxAttempts - ar,
-                    Wr = yield rr.runAttempt((() => Qr(Sr, !0)));
-                  return ar += Wr.attemptsMade, {
-                    kind: "success" === Wr.kind ? "success" : "terminal",
-                    attempts: ar,
-                    elapsedTimeMs: rr.options.getNow() - Zr,
-                    failure: "success" === Wr.kind ? void 0 : Wr.failure
+                const td = Math.min(null !== (Xd = Qd.retryAfterMs) && void 0 !== Xd ? Xd : dd.options.retry.initialBackoffMs * Math.pow(dd.options.retry.backoffMultiplier, Rd - 1), dd.options.retry.maxBackoffMs);
+                if (null === (Kd = (hd = dd.options).onRetry) || void 0 === Kd || Kd.call(hd, td, Rd + 1), yield dd.waitForTurn(Od, td)) {
+                  const Od = dd.options.retry.maxAttempts - Rd,
+                    Fd = yield dd.runAttempt((() => md(Od, !0)));
+                  return Rd += Fd.attemptsMade, {
+                    kind: "success" === Fd.kind ? "success" : "terminal",
+                    attempts: Rd,
+                    elapsedTimeMs: dd.options.getNow() - Wd,
+                    failure: "success" === Fd.kind ? void 0 : Fd.failure
                   }
                 }
               }
             }));
-            return function(rr) {
-              return Qr.apply(this, arguments)
+            return function(dd) {
+              return md.apply(this, arguments)
             }
           }(),
           release: () => {
-            Qr || (Qr = !0, this.admitted--)
+            md || (md = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const rr = this.waiting.splice(0);
+        const dd = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const Sr of rr) Sr.resolve(!0);
+        for (const Od of dd) Od.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((Qr, Zr) => {
+      runAttempt(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((md, Wd) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const Sr = () => {
+              const Od = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              rr().then((rr => {
-                Sr(), Qr(rr)
-              }), (rr => {
-                Sr(), Zr(rr)
+              dd().then((dd => {
+                Od(), md(dd)
+              }), (dd => {
+                Od(), Wd(dd)
               }))
             },
-            isRedelivery: Sr
+            isRedelivery: Od
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const rr = this.options.getNow(),
-            Sr = this.attemptQueue.findIndex((Sr => {
+          const dd = this.options.getNow(),
+            Od = this.attemptQueue.findIndex((Od => {
               let {
-                isRedelivery: Qr
-              } = Sr;
-              return this.unloading || !Qr || rr >= this.nextSendAt
+                isRedelivery: md
+              } = Od;
+              return this.unloading || !md || dd >= this.nextSendAt
             }));
-          if (Sr < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (Od < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - rr)));
-          const [Qr] = this.attemptQueue.splice(Sr, 1);
-          Qr.isRedelivery && !this.unloading && (this.nextSendAt = rr + 1), Qr.run()
+          }), Math.max(0, this.nextSendAt - dd)));
+          const [md] = this.attemptQueue.splice(Od, 1);
+          md.isRedelivery && !this.unloading && (this.nextSendAt = dd + 1), md.run()
         }
       }
-      waitForTurn(rr, Sr) {
-        const Qr = Math.min(Sr * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((Sr => {
+      waitForTurn(dd, Od) {
+        const md = Math.min(Od * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((Od => {
           this.waiting.push({
-            sequence: rr,
-            readyAt: this.options.getNow() + Qr,
-            resolve: Sr
-          }), this.waiting.sort(((rr, Sr) => rr.readyAt === Sr.readyAt ? rr.sequence - Sr.sequence : rr.readyAt - Sr.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: dd,
+            readyAt: this.options.getNow() + md,
+            resolve: Od
+          }), this.waiting.sort(((dd, Od) => dd.readyAt === Od.readyAt ? dd.sequence - Od.sequence : dd.readyAt - Od.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const rr = this.waiting[0],
-          Sr = rr.readyAt;
+        const dd = this.waiting[0],
+          Od = dd.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const Sr = this.waiting.indexOf(rr);
-          Sr >= 0 && this.waiting.splice(Sr, 1), rr.resolve(!1), this.scheduleNext()
-        }), Math.max(0, Sr - this.options.getNow()))
+          const Od = this.waiting.indexOf(dd);
+          Od >= 0 && this.waiting.splice(Od, 1), dd.resolve(!1), this.scheduleNext()
+        }), Math.max(0, Od - this.options.getNow()))
       }
     };
 
-    function xa(rr, Sr) {
-      if (null == rr) return {};
-      var Qr, Zr, Wr = function(rr, Sr) {
-        if (null == rr) return {};
-        var Qr = {};
-        for (var Zr in rr)
-          if ({}.hasOwnProperty.call(rr, Zr)) {
-            if (Sr.includes(Zr)) continue;
-            Qr[Zr] = rr[Zr]
-          } return Qr
-      }(rr, Sr);
+    function qR(dd, Od) {
+      if (null == dd) return {};
+      var md, Wd, Fd = function(dd, Od) {
+        if (null == dd) return {};
+        var md = {};
+        for (var Wd in dd)
+          if ({}.hasOwnProperty.call(dd, Wd)) {
+            if (Od.includes(Wd)) continue;
+            md[Wd] = dd[Wd]
+          } return md
+      }(dd, Od);
       if (Object.getOwnPropertySymbols) {
-        var ar = Object.getOwnPropertySymbols(rr);
-        for (Zr = 0; Zr < ar.length; Zr++) Qr = ar[Zr], Sr.includes(Qr) || {}.propertyIsEnumerable.call(rr, Qr) && (Wr[Qr] = rr[Qr])
+        var Rd = Object.getOwnPropertySymbols(dd);
+        for (Wd = 0; Wd < Rd.length; Wd++) md = Rd[Wd], Od.includes(md) || {}.propertyIsEnumerable.call(dd, md) && (Fd[md] = dd[md])
       }
-      return Wr
+      return Fd
     }
 
-    function ma(rr) {
+    function HR(dd) {
       const {
-        size: Sr,
-        concurrency: Qr
-      } = rr, Zr = [];
-      let Wr = 0;
-      const ar = () => {
-        if (Wr < Qr && Zr.length) {
+        size: Od,
+        concurrency: md
+      } = dd, Wd = [];
+      let Fd = 0;
+      const Rd = () => {
+        if (Fd < md && Wd.length) {
           const {
-            producer: rr,
-            resolve: Sr,
-            reject: Qr
-          } = Zr.shift();
-          Wr++, rr().then((rr => {
-            Wr--, ar(), Sr(rr)
-          }), (rr => {
-            Wr--, ar(), Qr(rr)
+            producer: dd,
+            resolve: Od,
+            reject: md
+          } = Wd.shift();
+          Fd++, dd().then((dd => {
+            Fd--, Rd(), Od(dd)
+          }), (dd => {
+            Fd--, Rd(), md(dd)
           }))
         }
       };
       return {
-        add: rr => {
-          if (Zr.length + Wr >= Sr) throw new Error("Task buffer full");
-          return new Promise(((Sr, Qr) => {
-            Zr.push({
-              producer: rr,
-              resolve: Sr,
-              reject: Qr
-            }), ar()
+        add: dd => {
+          if (Wd.length + Fd >= Od) throw new Error("Task buffer full");
+          return new Promise(((Od, md) => {
+            Wd.push({
+              producer: dd,
+              resolve: Od,
+              reject: md
+            }), Rd()
           }))
         }
       }
     }
-    const Na = ["headers"],
-      Ua = ["keepalive", "signal"],
-      ta = new Set([408, 425, 429, 500, 502, 503, 504]),
-      ha = new Set([429, 503]);
-    let za = 0,
-      Ya = 0;
-    var na = class extends Error {};
-    var ea = class extends dW {
-      constructor(rr) {
-        var Sr, Qr, Zr, Wr, ar, jr, Ir, fr, Er, pr, xr, mr, Nr, Ur, tr, hr, zr;
-        super(), this.options = rr, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = QQ, this.pendingCustomSends = 0, this.getNow = null !== (Sr = rr.getNow) && void 0 !== Sr ? Sr : Date.now, this.requestTimeoutMs = null !== (Qr = rr.requestTimeoutMs) && void 0 !== Qr ? Qr : 1e4, this.compressionEnabled = null !== (Zr = rr.requestCompression) && void 0 !== Zr && Zr && "undefined" !== typeof CompressionStream, rr.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new pa({
-          bufferSize: null !== (Wr = rr.bufferSize) && void 0 !== Wr ? Wr : 30,
-          concurrency: null !== (ar = rr.concurrency) && void 0 !== ar ? ar : 5,
+    const yR = ["headers"],
+      bR = ["keepalive", "signal"],
+      TR = new Set([408, 425, 429, 500, 502, 503, 504]),
+      pR = new Set([429, 503]);
+    let YR = 0,
+      gR = 0;
+    var wR = class extends Error {};
+    var aR = class extends dR {
+      constructor(dd) {
+        var Od, md, Wd, Fd, Rd, Xd, Kd, hd, vd, Qd, td, od, Nd, qd, Hd, yd, bd;
+        super(), this.options = dd, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = Fm, this.pendingCustomSends = 0, this.getNow = null !== (Od = dd.getNow) && void 0 !== Od ? Od : Date.now, this.requestTimeoutMs = null !== (md = dd.requestTimeoutMs) && void 0 !== md ? md : 1e4, this.compressionEnabled = null !== (Wd = dd.requestCompression) && void 0 !== Wd && Wd && "undefined" !== typeof CompressionStream, dd.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new NR({
+          bufferSize: null !== (Fd = dd.bufferSize) && void 0 !== Fd ? Fd : 30,
+          concurrency: null !== (Rd = dd.concurrency) && void 0 !== Rd ? Rd : 5,
           retry: {
-            maxAttempts: null !== (jr = null === (Ir = rr.retry) || void 0 === Ir ? void 0 : Ir.maxAttempts) && void 0 !== jr ? jr : 3,
-            initialBackoffMs: null !== (fr = null !== (Er = null === (pr = rr.retry) || void 0 === pr ? void 0 : pr.initialBackoffMs) && void 0 !== Er ? Er : rr.defaultRateLimitBackoffMs) && void 0 !== fr ? fr : 1e3,
-            maxBackoffMs: null !== (xr = null === (mr = rr.retry) || void 0 === mr ? void 0 : mr.maxBackoffMs) && void 0 !== xr ? xr : 3e4,
-            backoffMultiplier: null !== (Nr = null === (Ur = rr.retry) || void 0 === Ur ? void 0 : Ur.backoffMultiplier) && void 0 !== Nr ? Nr : 2
+            maxAttempts: null !== (Xd = null === (Kd = dd.retry) || void 0 === Kd ? void 0 : Kd.maxAttempts) && void 0 !== Xd ? Xd : 3,
+            initialBackoffMs: null !== (hd = null !== (vd = null === (Qd = dd.retry) || void 0 === Qd ? void 0 : Qd.initialBackoffMs) && void 0 !== vd ? vd : dd.defaultRateLimitBackoffMs) && void 0 !== hd ? hd : 1e3,
+            maxBackoffMs: null !== (td = null === (od = dd.retry) || void 0 === od ? void 0 : od.maxBackoffMs) && void 0 !== td ? td : 3e4,
+            backoffMultiplier: null !== (Nd = null === (qd = dd.retry) || void 0 === qd ? void 0 : qd.backoffMultiplier) && void 0 !== Nd ? Nd : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (tr = rr.getRandom) && void 0 !== tr ? tr : Math.random,
-          onRetry: (rr, Sr) => {
-            this.logDebug(`Retrying failed request after ${rr}ms. Attempt ${Sr}.`)
+          getRandom: null !== (Hd = dd.getRandom) && void 0 !== Hd ? Hd : Math.random,
+          onRetry: (dd, Od) => {
+            this.logDebug(`Retrying failed request after ${dd}ms. Attempt ${Od}.`)
           }
-        }), this.customPromiseBuffer = ma({
-          size: null !== (hr = rr.bufferSize) && void 0 !== hr ? hr : 30,
-          concurrency: null !== (zr = rr.concurrency) && void 0 !== zr ? zr : 5
+        }), this.customPromiseBuffer = HR({
+          size: null !== (yd = dd.bufferSize) && void 0 !== yd ? yd : 30,
+          concurrency: null !== (bd = dd.concurrency) && void 0 !== bd ? bd : 5
         }), this.defaultPromiseBuffer = {
-          add: rr => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(rr);
-            const Sr = this.deliveryQueue.reserve();
-            if (!Sr) throw new Error("Task buffer full");
-            return this.runBufferedTask(Sr, rr)
+          add: dd => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(dd);
+            const Od = this.deliveryQueue.reserve();
+            if (!Od) throw new Error("Task buffer full");
+            return this.runBufferedTask(Od, dd)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (rr => {
-          rr.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (dd => {
+          dd.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(rr) {
-        var Sr = this;
-        return cZ((function*() {
-          const Qr = Sr.promiseBuffer;
-          if (Qr !== Sr.defaultPromiseBuffer || Qr.add !== Sr.defaultBufferAdd) {
-            Sr.pendingCustomSends++;
+      send(dd) {
+        var Od = this;
+        return lW((function*() {
+          const md = Od.promiseBuffer;
+          if (md !== Od.defaultPromiseBuffer || md.add !== Od.defaultBufferAdd) {
+            Od.pendingCustomSends++;
             try {
-              yield Qr.add((() => Sr.deliver(rr)))
-            } catch (Zr) {
-              Sr.logError("Permanent delivery failure", {
-                error: Zr,
+              yield md.add((() => Od.deliver(dd)))
+            } catch (Wd) {
+              Od.logError("Permanent delivery failure", {
+                error: Wd,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              Sr.pendingCustomSends--
+              Od.pendingCustomSends--
             }
-          } else yield Sr.deliver(rr)
+          } else yield Od.deliver(dd)
         }))()
       }
-      runBufferedTask(rr, Sr) {
-        return cZ((function*() {
-          let Qr;
+      runBufferedTask(dd, Od) {
+        return lW((function*() {
+          let md;
           try {
-            return yield rr.deliver(cZ((function*() {
-              return Qr = yield Sr(), {
+            return yield dd.deliver(lW((function*() {
+              return md = yield Od(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), Qr
+            }))), md
           } finally {
-            rr.release()
+            dd.release()
           }
         }))()
       }
-      deliver(rr) {
-        var Sr = this;
-        return cZ((function*() {
-          const Qr = Sr.deliveryQueue.reserve();
-          if (Qr) try {
-            const Zr = yield Sr.prepareRequest(rr), Wr = yield Qr.deliver(((rr, Qr) => Sr.performAttempt(Zr, rr, Qr)));
-            "terminal" === Wr.kind && Sr.logError("retries-exhausted" === Wr.reason ? "Delivery retries exhausted" : "Permanent delivery failure", pS(pS({}, Wr.failure), {}, {
-              reason: Wr.reason,
-              attempts: Wr.attempts,
-              elapsedTimeMs: Wr.elapsedTimeMs
+      deliver(dd) {
+        var Od = this;
+        return lW((function*() {
+          const md = Od.deliveryQueue.reserve();
+          if (md) try {
+            const Wd = yield Od.prepareRequest(dd), Fd = yield md.deliver(((dd, md) => Od.performAttempt(Wd, dd, md)));
+            "terminal" === Fd.kind && Od.logError("retries-exhausted" === Fd.reason ? "Delivery retries exhausted" : "Permanent delivery failure", oO(oO({}, Fd.failure), {}, {
+              reason: Fd.reason,
+              attempts: Fd.attempts,
+              elapsedTimeMs: Fd.elapsedTimeMs
             }))
-          } catch (Zr) {
-            Sr.logError("Permanent delivery failure", {
-              error: Zr,
+          } catch (Wd) {
+            Od.logError("Permanent delivery failure", {
+              error: Wd,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            Qr.release()
-          } else Sr.logError("Permanent delivery failure", {
+            md.release()
+          } else Od.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var rr;
-        return [this.options.url].concat(null !== (rr = this.config.ignoreUrls) && void 0 !== rr ? rr : [])
+        var dd;
+        return [this.options.url].concat(null !== (dd = this.config.ignoreUrls) && void 0 !== dd ? dd : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(rr) {
-        var Sr = this;
-        return cZ((function*() {
-          var Qr, Zr;
-          const Wr = Sa(rr),
-            ar = null === (Qr = Wr.meta.session) || void 0 === Qr ? void 0 : Qr.id,
-            jr = JSON.stringify(Wr),
-            Ir = null !== (Zr = Sr.options.requestOptions) && void 0 !== Zr ? Zr : {},
+      prepareRequest(dd) {
+        var Od = this;
+        return lW((function*() {
+          var md, Wd;
+          const Fd = FR(dd),
+            Rd = null === (md = Fd.meta.session) || void 0 === md ? void 0 : md.id,
+            Xd = JSON.stringify(Fd),
+            Kd = null !== (Wd = Od.options.requestOptions) && void 0 !== Wd ? Wd : {},
             {
-              headers: fr = {}
-            } = Ir,
-            Er = xa(Ir, Na),
+              headers: hd = {}
+            } = Kd,
+            vd = qR(Kd, yR),
             {
-              keepalive: pr,
-              signal: xr
-            } = Er,
-            mr = xa(Er, Ua),
-            Nr = {};
-          for (const [rr, Sr] of Object.entries(fr)) Nr[rr] = "function" === typeof Sr ? yield Sr(): Sr;
-          let Ur = jr,
-            tr = function(rr) {
-              return "undefined" === typeof TextEncoder ? rr.length : (new TextEncoder).encode(rr).byteLength
-            }(jr);
-          const hr = {};
-          return Sr.compressionEnabled && (Ur = yield Sr.compress(jr), tr = Ur.size, hr["Content-Encoding"] = "gzip"), {
-            bodySize: tr,
-            sessionId: ar,
-            requestInit: pS({
+              keepalive: Qd,
+              signal: td
+            } = vd,
+            od = qR(vd, bR),
+            Nd = {};
+          for (const [dd, Od] of Object.entries(hd)) Nd[dd] = "function" === typeof Od ? yield Od(): Od;
+          let qd = Xd,
+            Hd = function(dd) {
+              return "undefined" === typeof TextEncoder ? dd.length : (new TextEncoder).encode(dd).byteLength
+            }(Xd);
+          const yd = {};
+          return Od.compressionEnabled && (qd = yield Od.compress(Xd), Hd = qd.size, yd["Content-Encoding"] = "gzip"), {
+            bodySize: Hd,
+            sessionId: Rd,
+            requestInit: oO({
               method: "POST",
-              headers: pS(pS(pS(pS(pS({
+              headers: oO(oO(oO(oO(oO({
                 "Content-Type": "application/json"
-              }, hr), Nr), Sr.options.apiKey ? {
-                "x-api-key": Sr.options.apiKey
-              } : {}), ar ? {
-                "x-faro-session-id": ar
+              }, yd), Nd), Od.options.apiKey ? {
+                "x-api-key": Od.options.apiKey
+              } : {}), Rd ? {
+                "x-faro-session-id": Rd
               } : {}), {}, {
-                "Idempotency-Key": zS(20)
+                "Idempotency-Key": pO(20)
               }),
-              body: Ur
-            }, mr)
+              body: qd
+            }, od)
           }
         }))()
       }
-      performAttempt(rr, Sr, Qr) {
-        var Zr = this;
-        return cZ((function*() {
-          var Wr;
-          const ar = null === (Wr = Zr.options.requestOptions) || void 0 === Wr ? void 0 : Wr.signal;
-          if (null === ar || void 0 === ar ? void 0 : ar.aborted) return {
+      performAttempt(dd, Od, md) {
+        var Wd = this;
+        return lW((function*() {
+          var Fd;
+          const Rd = null === (Fd = Wd.options.requestOptions) || void 0 === Fd ? void 0 : Fd.signal;
+          if (null === Rd || void 0 === Rd ? void 0 : Rd.aborted) return {
             kind: "terminal",
             failure: {
-              error: ar.reason
+              error: Rd.reason
             },
             attemptsMade: 0
           };
-          let jr = 0;
+          let Xd = 0;
           try {
-            var Ir;
-            const Wr = yield Zr.fetchWithKeepaliveFallback(rr.requestInit, rr.bodySize, !!Qr || (null === (Ir = Zr.options.requestOptions) || void 0 === Ir ? void 0 : Ir.keepalive), Sr, (() => jr++));
-            if (Zr.handleResponse(Wr, rr.sessionId), Wr.status >= 200 && Wr.status < 300) return {
+            var Kd;
+            const Fd = yield Wd.fetchWithKeepaliveFallback(dd.requestInit, dd.bodySize, !!md || (null === (Kd = Wd.options.requestOptions) || void 0 === Kd ? void 0 : Kd.keepalive), Od, (() => Xd++));
+            if (Wd.handleResponse(Fd, dd.sessionId), Fd.status >= 200 && Fd.status < 300) return {
               kind: "success",
-              attemptsMade: jr
+              attemptsMade: Xd
             };
-            const ar = {
-              status: Wr.status
+            const Rd = {
+              status: Fd.status
             };
-            return !ta.has(Wr.status) || Qr ? {
+            return !TR.has(Fd.status) || md ? {
               kind: "terminal",
-              failure: ar,
-              attemptsMade: jr
+              failure: Rd,
+              attemptsMade: Xd
             } : {
               kind: "retry",
-              failure: ar,
-              attemptsMade: jr,
-              retryAfterMs: ha.has(Wr.status) ? Zr.getRetryAfterDelayMs(Wr) : void 0
+              failure: Rd,
+              attemptsMade: Xd,
+              retryAfterMs: pR.has(Fd.status) ? Wd.getRetryAfterDelayMs(Fd) : void 0
             }
-          } catch (fr) {
-            const rr = {
-              error: fr
+          } catch (hd) {
+            const dd = {
+              error: hd
             };
-            return (null === ar || void 0 === ar ? void 0 : ar.aborted) || !Zr.isFetchNetworkError(fr) || Qr ? {
+            return (null === Rd || void 0 === Rd ? void 0 : Rd.aborted) || !Wd.isFetchNetworkError(hd) || md ? {
               kind: "terminal",
-              failure: rr,
-              attemptsMade: jr
+              failure: dd,
+              attemptsMade: Xd
             } : {
               kind: "retry",
-              failure: rr,
-              attemptsMade: jr
+              failure: dd,
+              attemptsMade: Xd
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(rr, Sr, Qr, Zr, Wr) {
-        var ar = this;
-        return cZ((function*() {
-          const jr = ar.getNow(),
-            Ir = ar.reserveKeepalive(Sr, Qr);
+      fetchWithKeepaliveFallback(dd, Od, md, Wd, Fd) {
+        var Rd = this;
+        return lW((function*() {
+          const Xd = Rd.getNow(),
+            Kd = Rd.reserveKeepalive(Od, md);
           try {
-            return yield ar.fetchWithTimeout(pS(pS({}, rr), {}, {
-              keepalive: Ir.keepalive
-            }), ar.requestTimeoutMs, Wr)
-          } catch (Er) {
-            var fr;
-            if (Ir.keepalive && Zr > 1 && ar.isFetchNetworkError(Er) && !(Er instanceof na) && !(null === (fr = ar.options.requestOptions) || void 0 === fr || null === (fr = fr.signal) || void 0 === fr ? void 0 : fr.aborted)) {
-              ar.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const Sr = ar.requestTimeoutMs - (ar.getNow() - jr);
-              return ar.fetchWithTimeout(pS(pS({}, rr), {}, {
+            return yield Rd.fetchWithTimeout(oO(oO({}, dd), {}, {
+              keepalive: Kd.keepalive
+            }), Rd.requestTimeoutMs, Fd)
+          } catch (vd) {
+            var hd;
+            if (Kd.keepalive && Wd > 1 && Rd.isFetchNetworkError(vd) && !(vd instanceof wR) && !(null === (hd = Rd.options.requestOptions) || void 0 === hd || null === (hd = hd.signal) || void 0 === hd ? void 0 : hd.aborted)) {
+              Rd.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const Od = Rd.requestTimeoutMs - (Rd.getNow() - Xd);
+              return Rd.fetchWithTimeout(oO(oO({}, dd), {}, {
                 keepalive: !1
-              }), Sr, Wr)
+              }), Od, Fd)
             }
-            throw Er
+            throw vd
           } finally {
-            Ir.release()
+            Kd.release()
           }
         }))()
       }
-      fetchWithTimeout(rr, Sr, Qr) {
-        var Zr = this;
-        return cZ((function*() {
-          var Wr;
-          const ar = null === (Wr = Zr.options.requestOptions) || void 0 === Wr ? void 0 : Wr.signal;
-          if (Zr.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return Qr(), fetch(Zr.options.url, pS(pS({}, rr), {}, {
-            signal: ar
+      fetchWithTimeout(dd, Od, md) {
+        var Wd = this;
+        return lW((function*() {
+          var Fd;
+          const Rd = null === (Fd = Wd.options.requestOptions) || void 0 === Fd ? void 0 : Fd.signal;
+          if (Wd.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return md(), fetch(Wd.options.url, oO(oO({}, dd), {}, {
+            signal: Rd
           }));
-          if (Sr <= 0) throw new na("Request timed out");
-          const jr = new AbortController,
-            Ir = () => jr.abort(null === ar || void 0 === ar ? void 0 : ar.reason);
-          null === ar || void 0 === ar || ar.addEventListener("abort", Ir, {
+          if (Od <= 0) throw new wR("Request timed out");
+          const Xd = new AbortController,
+            Kd = () => Xd.abort(null === Rd || void 0 === Rd ? void 0 : Rd.reason);
+          null === Rd || void 0 === Rd || Rd.addEventListener("abort", Kd, {
             once: !0
           });
-          let fr = !1;
-          const Er = setTimeout((() => {
-            fr = !0, jr.abort()
-          }), Sr);
+          let hd = !1;
+          const vd = setTimeout((() => {
+            hd = !0, Xd.abort()
+          }), Od);
           try {
-            return Qr(), yield fetch(Zr.options.url, pS(pS({}, rr), {}, {
-              signal: jr.signal
+            return md(), yield fetch(Wd.options.url, oO(oO({}, dd), {}, {
+              signal: Xd.signal
             }))
-          } catch (pr) {
-            if (fr && !(null === ar || void 0 === ar ? void 0 : ar.aborted)) throw new na("Request timed out");
-            throw pr
+          } catch (Qd) {
+            if (hd && !(null === Rd || void 0 === Rd ? void 0 : Rd.aborted)) throw new wR("Request timed out");
+            throw Qd
           } finally {
-            clearTimeout(Er), null === ar || void 0 === ar || ar.removeEventListener("abort", Ir)
+            clearTimeout(vd), null === Rd || void 0 === Rd || Rd.removeEventListener("abort", Kd)
           }
         }))()
       }
-      getRetryAfterDelayMs(rr) {
-        const Sr = rr.headers.get("Retry-After");
-        if (!Sr) return;
-        if (/^\d+$/.test(Sr)) {
-          const rr = 1e3 * Number(Sr);
-          return Number.isFinite(rr) ? rr : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(dd) {
+        const Od = dd.headers.get("Retry-After");
+        if (!Od) return;
+        if (/^\d+$/.test(Od)) {
+          const dd = 1e3 * Number(Od);
+          return Number.isFinite(dd) ? dd : Number.POSITIVE_INFINITY
         }
-        const Qr = this.getNow(),
-          Zr = function(rr, Sr) {
-            const Qr = Za.exec(rr);
-            if (Qr) {
-              const [, rr, Sr, Zr, Wr, ar, jr, Ir] = Qr;
-              return Ea({
-                weekday: ja.indexOf(rr),
-                day: Number(Sr),
-                month: fa.indexOf(Zr),
-                year: Number(Wr),
-                hour: Number(ar),
-                minute: Number(jr),
-                second: Number(Ir)
+        const md = this.getNow(),
+          Wd = function(dd, Od) {
+            const md = XR.exec(dd);
+            if (md) {
+              const [, dd, Od, Wd, Fd, Rd, Xd, Kd] = md;
+              return oR({
+                weekday: vR.indexOf(dd),
+                day: Number(Od),
+                month: tR.indexOf(Wd),
+                year: Number(Fd),
+                hour: Number(Rd),
+                minute: Number(Xd),
+                second: Number(Kd)
               })
             }
-            const Zr = Wa.exec(rr);
-            if (Zr) {
-              const [, rr, Qr, jr, Ir, fr, Er, pr] = Zr, xr = new Date(Sr);
-              if (Number.isNaN(xr.getTime())) return;
-              const mr = xr.getUTCFullYear();
-              let Nr = 100 * Math.floor(mr / 100) + Number(Ir);
-              Nr < mr && (Nr += 100);
-              const Ur = fa.indexOf(jr),
-                tr = {
-                  month: Ur,
-                  day: Number(Qr),
-                  hour: Number(fr),
-                  minute: Number(Er),
-                  second: Number(pr),
+            const Wd = KR.exec(dd);
+            if (Wd) {
+              const [, dd, md, Xd, Kd, hd, vd, Qd] = Wd, td = new Date(Od);
+              if (Number.isNaN(td.getTime())) return;
+              const od = td.getUTCFullYear();
+              let Nd = 100 * Math.floor(od / 100) + Number(Kd);
+              Nd < od && (Nd += 100);
+              const qd = tR.indexOf(Xd),
+                Hd = {
+                  month: qd,
+                  day: Number(md),
+                  hour: Number(hd),
+                  minute: Number(vd),
+                  second: Number(Qd),
                   millisecond: 0
                 },
-                hr = {
-                  month: xr.getUTCMonth(),
-                  day: xr.getUTCDate(),
-                  hour: xr.getUTCHours(),
-                  minute: xr.getUTCMinutes(),
-                  second: xr.getUTCSeconds(),
-                  millisecond: xr.getUTCMilliseconds()
+                yd = {
+                  month: td.getUTCMonth(),
+                  day: td.getUTCDate(),
+                  hour: td.getUTCHours(),
+                  minute: td.getUTCMinutes(),
+                  second: td.getUTCSeconds(),
+                  millisecond: td.getUTCMilliseconds()
                 };
-              return (Nr > mr + 50 || Nr === mr + 50 && (ar = hr, ((Wr = tr).month - ar.month || Wr.day - ar.day || Wr.hour - ar.hour || Wr.minute - ar.minute || Wr.second - ar.second || Wr.millisecond - ar.millisecond) > 0)) && (Nr -= 100), Ea({
-                weekday: Ia.indexOf(rr),
-                day: Number(Qr),
-                month: Ur,
-                year: Nr,
-                hour: Number(fr),
-                minute: Number(Er),
-                second: Number(pr)
+              return (Nd > od + 50 || Nd === od + 50 && (Rd = yd, ((Fd = Hd).month - Rd.month || Fd.day - Rd.day || Fd.hour - Rd.hour || Fd.minute - Rd.minute || Fd.second - Rd.second || Fd.millisecond - Rd.millisecond) > 0)) && (Nd -= 100), oR({
+                weekday: QR.indexOf(dd),
+                day: Number(md),
+                month: qd,
+                year: Nd,
+                hour: Number(hd),
+                minute: Number(vd),
+                second: Number(Qd)
               })
             }
-            var Wr, ar;
-            const jr = aa.exec(rr);
-            if (!jr) return;
-            const [, Ir, fr, Er, pr, xr, mr, Nr, Ur] = jr;
-            return Ea({
-              weekday: ja.indexOf(Ir),
-              day: Number(null !== Er && void 0 !== Er ? Er : pr),
-              month: fa.indexOf(fr),
-              year: Number(Ur),
-              hour: Number(xr),
-              minute: Number(mr),
-              second: Number(Nr)
+            var Fd, Rd;
+            const Xd = hR.exec(dd);
+            if (!Xd) return;
+            const [, Kd, hd, vd, Qd, td, od, Nd, qd] = Xd;
+            return oR({
+              weekday: vR.indexOf(Kd),
+              day: Number(null !== vd && void 0 !== vd ? vd : Qd),
+              month: tR.indexOf(hd),
+              year: Number(qd),
+              hour: Number(td),
+              minute: Number(od),
+              second: Number(Nd)
             })
-          }(Sr, Qr);
-        return null == Zr ? void 0 : Math.max(0, Zr - Qr)
+          }(Od, md);
+        return null == Wd ? void 0 : Math.max(0, Wd - md)
       }
-      reserveKeepalive(rr, Sr) {
-        if (!1 === Sr || rr > 6e4 || za + rr > 6e4 || Ya >= 9) return {
+      reserveKeepalive(dd, Od) {
+        if (!1 === Od || dd > 6e4 || YR + dd > 6e4 || gR >= 9) return {
           keepalive: !1,
-          release: wS
+          release: eO
         };
-        za += rr, Ya++;
-        let Qr = !1;
+        YR += dd, gR++;
+        let md = !1;
         return {
           keepalive: !0,
           release: () => {
-            Qr || (Qr = !0, za -= rr, Ya--)
+            md || (md = !0, YR -= dd, gR--)
           }
         }
       }
-      handleResponse(rr, Sr) {
-        202 === rr.status && "invalid" === rr.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), Sr), rr.text().catch(wS)
+      handleResponse(dd, Od) {
+        202 === dd.status && "invalid" === dd.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), Od), dd.text().catch(eO)
       }
-      isFetchNetworkError(rr) {
-        return rr instanceof TypeError || rr instanceof na || rr instanceof DOMException && "AbortError" === rr.name
+      isFetchNetworkError(dd) {
+        return dd instanceof TypeError || dd instanceof wR || dd instanceof DOMException && "AbortError" === dd.name
       }
-      compress(rr) {
-        return cZ((function*() {
-          const Sr = [],
-            Qr = new ReadableStream({
-              start(Sr) {
-                Sr.enqueue((new TextEncoder).encode(rr)), Sr.close()
+      compress(dd) {
+        return lW((function*() {
+          const Od = [],
+            md = new ReadableStream({
+              start(Od) {
+                Od.enqueue((new TextEncoder).encode(dd)), Od.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: rr,
-              value: Zr
-            } = yield Qr.read();
-            if (rr) return new Blob(Sr);
-            Sr.push(Zr)
+              done: dd,
+              value: Wd
+            } = yield md.read();
+            if (dd) return new Blob(Od);
+            Od.push(Wd)
           }
         }))()
       }
-      extendFaroSession(rr, Sr, Qr) {
-        var Zr, Wr;
-        const ar = rr.sessionTracking;
-        if (!(null === ar || void 0 === ar ? void 0 : ar.enabled)) return void Sr("Session expired.");
+      extendFaroSession(dd, Od, md) {
+        var Wd, Fd;
+        const Rd = dd.sessionTracking;
+        if (!(null === Rd || void 0 === Rd ? void 0 : Rd.enabled)) return void Od("Session expired.");
         const {
-          fetchUserSession: jr,
-          storeUserSession: Ir
-        } = iS(ar), fr = null === (Zr = this.metas.value.session) || void 0 === Zr ? void 0 : Zr.id, Er = null === (Wr = jr()) || void 0 === Wr ? void 0 : Wr.sessionId;
-        Qr && Qr === fr && Qr === Er ? (XS({
-          fetchUserSession: jr,
-          storeUserSession: Ir
+          fetchUserSession: Xd,
+          storeUserSession: Kd
+        } = DO(Rd), hd = null === (Wd = this.metas.value.session) || void 0 === Wd ? void 0 : Wd.id, vd = null === (Fd = Xd()) || void 0 === Fd ? void 0 : Fd.sessionId;
+        md && md === hd && md === vd ? (uO({
+          fetchUserSession: Xd,
+          storeUserSession: Kd
         })({
           forceSessionExtend: !0
-        }), Sr("Session expired; created new session.")) : Sr("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), Od("Session expired; created new session.")) : Od("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const Ka = () => {
-      const rr = window.k6;
+    const ER = () => {
+      const dd = window.k6;
       return {
-        k6: pS({
+        k6: oO({
           isK6Browser: !0
-        }, (null === rr || void 0 === rr ? void 0 : rr.testRunId) && {
-          testRunId: null === rr || void 0 === rr ? void 0 : rr.testRunId
+        }, (null === dd || void 0 === dd ? void 0 : dd.testRunId) && {
+          testRunId: null === dd || void 0 === dd ? void 0 : dd.testRunId
         })
       }
     };
-    let ya, Ba;
+    let JR, UR;
 
-    function Ta() {
+    function xR() {
       let {
-        generatePageId: rr,
-        initialPageMeta: Sr
+        generatePageId: dd,
+        initialPageMeta: Od
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const Qr = location.href;
-        return lr(rr) && ya !== Qr && (ya = Qr, Ba = rr(location)), {
-          page: pS(pS({
-            url: Qr
-          }, Ba ? {
-            id: Ba
-          } : {}), Sr)
+        const md = location.href;
+        return Sd(dd) && JR !== md && (JR = md, UR = dd(location)), {
+          page: oO(oO({
+            url: md
+          }, UR ? {
+            id: UR
+          } : {}), Od)
         }
       }
     }
 
-    function va() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : uS,
-        Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const Qr = FS;
-      return Sr > 0 && (Qr.error = Sr >= 1 ? function() {
-        for (var Sr = arguments.length, Zr = new Array(Sr), Wr = 0; Wr < Sr; Wr++) Zr[Wr] = arguments[Wr];
-        rr.error(`${Qr.prefix}\n`, ...Zr)
-      } : wS, Qr.warn = Sr >= 2 ? function() {
-        for (var Sr = arguments.length, Zr = new Array(Sr), Wr = 0; Wr < Sr; Wr++) Zr[Wr] = arguments[Wr];
-        rr.warn(`${Qr.prefix}\n`, ...Zr)
-      } : wS, Qr.info = Sr >= 3 ? function() {
-        for (var Sr = arguments.length, Zr = new Array(Sr), Wr = 0; Wr < Sr; Wr++) Zr[Wr] = arguments[Wr];
-        rr.info(`${Qr.prefix}\n`, ...Zr)
-      } : wS, Qr.debug = Sr >= 4 ? function() {
-        for (var Sr = arguments.length, Zr = new Array(Sr), Wr = 0; Wr < Sr; Wr++) Zr[Wr] = arguments[Wr];
-        rr.debug(`${Qr.prefix}\n`, ...Zr)
-      } : wS), Qr
+    function BR() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Om,
+        Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const md = lO;
+      return Od > 0 && (md.error = Od >= 1 ? function() {
+        for (var Od = arguments.length, Wd = new Array(Od), Fd = 0; Fd < Od; Fd++) Wd[Fd] = arguments[Fd];
+        dd.error(`${md.prefix}\n`, ...Wd)
+      } : eO, md.warn = Od >= 2 ? function() {
+        for (var Od = arguments.length, Wd = new Array(Od), Fd = 0; Fd < Od; Fd++) Wd[Fd] = arguments[Fd];
+        dd.warn(`${md.prefix}\n`, ...Wd)
+      } : eO, md.info = Od >= 3 ? function() {
+        for (var Od = arguments.length, Wd = new Array(Od), Fd = 0; Fd < Od; Fd++) Wd[Fd] = arguments[Fd];
+        dd.info(`${md.prefix}\n`, ...Wd)
+      } : eO, md.debug = Od >= 4 ? function() {
+        for (var Od = arguments.length, Wd = new Array(Od), Fd = 0; Fd < Od; Fd++) Wd[Fd] = arguments[Fd];
+        dd.debug(`${md.prefix}\n`, ...Wd)
+      } : eO), md
     }
-    const Oa = "faro",
-      La = {
+    const SR = "faro",
+      sR = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      la = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      uR = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function Xa(rr) {
-      var Sr, Qr, Wr, ar, jr, Ir;
-      const fr = [],
-        pr = va(rr.unpatchedConsole, rr.internalLoggerLevel);
-      rr.transports ? ((rr.url || rr.apiKey) && pr.error('if "transports" is defined, "url" and "apiKey" should not be defined'), fr.push(...rr.transports)) : rr.url ? fr.push(new ea({
-        url: rr.url,
-        apiKey: rr.apiKey,
-        requestCompression: rr.requestCompression
-      })) : pr.error('either "url" or "transports" must be defined');
+    function VR(dd) {
+      var Od, md, Fd, Rd, Xd, Kd;
+      const hd = [],
+        Qd = BR(dd.unpatchedConsole, dd.internalLoggerLevel);
+      dd.transports ? ((dd.url || dd.apiKey) && Qd.error('if "transports" is defined, "url" and "apiKey" should not be defined'), hd.push(...dd.transports)) : dd.url ? hd.push(new aR({
+        url: dd.url,
+        apiKey: dd.apiKey,
+        requestCompression: dd.requestCompression
+      })) : Qd.error('either "url" or "transports" must be defined');
       const {
-        dedupe: xr = !0,
-        eventDomain: mr = Zr,
-        globalObjectKey: Nr = Oa,
-        instrumentations: Ur = VW(),
-        internalLoggerLevel: tr = oS,
-        isolate: hr = !1,
-        logArgsSerializer: zr = PQ,
-        metas: Yr = Ha(rr),
-        paused: nr = !1,
-        preventGlobalExposure: er = !1,
-        unpatchedConsole: Kr = uS,
-        url: yr,
-        experimental: Br
-      } = rr, Tr = xa(rr, la), vr = null !== (Sr = null === Br || void 0 === Br ? void 0 : Br.trackNavigation) && void 0 !== Sr && Sr, Or = {
-        dataAttributeName: dZ(null !== (Qr = null === (Wr = rr.userActionsInstrumentation) || void 0 === Wr ? void 0 : Wr.dataAttributeName) && void 0 !== Qr ? Qr : bZ),
-        excludeItem: null === (ar = rr.userActionsInstrumentation) || void 0 === ar ? void 0 : ar.excludeItem,
-        initialActivityTimeout: sZ(null === (jr = rr.userActionsInstrumentation) || void 0 === jr ? void 0 : jr.initialActivityTimeout, 100, (rr => pr.warn(rr)))
+        dedupe: td = !0,
+        eventDomain: od = Wd,
+        globalObjectKey: Nd = SR,
+        instrumentations: qd = DF(),
+        internalLoggerLevel: Hd = CO,
+        isolate: yd = !1,
+        logArgsSerializer: bd = im,
+        metas: Td = AR(dd),
+        paused: pd = !1,
+        preventGlobalExposure: Yd = !1,
+        unpatchedConsole: gd = Om,
+        url: wd,
+        experimental: Ed
+      } = dd, Jd = qR(dd, uR), Ud = null !== (Od = null === Ed || void 0 === Ed ? void 0 : Ed.trackNavigation) && void 0 !== Od && Od, xd = {
+        dataAttributeName: dF(null !== (md = null === (Fd = dd.userActionsInstrumentation) || void 0 === Fd ? void 0 : Fd.dataAttributeName) && void 0 !== md ? md : kW),
+        excludeItem: null === (Rd = dd.userActionsInstrumentation) || void 0 === Rd ? void 0 : Rd.excludeItem,
+        initialActivityTimeout: OF(null === (Xd = dd.userActionsInstrumentation) || void 0 === Xd ? void 0 : Xd.initialActivityTimeout, 100, (dd => Qd.warn(dd)))
       };
-      return pS(pS({}, Tr), {}, {
-        batching: pS(pS({}, La), rr.batching),
-        dedupe: xr,
-        globalObjectKey: Nr,
-        instrumentations: Pa(Ur, rr),
-        internalLoggerLevel: tr,
-        isolate: hr,
-        logArgsSerializer: zr,
-        metas: Yr,
-        parseStacktrace: tQ,
-        paused: nr,
-        preventGlobalExposure: er,
-        transports: fr,
-        unpatchedConsole: Kr,
-        eventDomain: mr,
-        ignoreUrls: [...null !== (Ir = rr.ignoreUrls) && void 0 !== Ir ? Ir : [], ...yr ? [yr] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: pS(pS(pS({}, Er), rr.sessionTracking), qa({
-          trackGeolocation: rr.trackGeolocation,
-          sessionTracking: rr.sessionTracking
+      return oO(oO({}, Jd), {}, {
+        batching: oO(oO({}, sR), dd.batching),
+        dedupe: td,
+        globalObjectKey: Nd,
+        instrumentations: iR(qd, dd),
+        internalLoggerLevel: Hd,
+        isolate: yd,
+        logArgsSerializer: bd,
+        metas: Td,
+        parseStacktrace: Tm,
+        paused: pd,
+        preventGlobalExposure: Yd,
+        transports: hd,
+        unpatchedConsole: gd,
+        eventDomain: od,
+        ignoreUrls: [...null !== (Kd = dd.ignoreUrls) && void 0 !== Kd ? Kd : [], ...wd ? [wd] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: oO(oO(oO({}, vd), dd.sessionTracking), rR({
+          trackGeolocation: dd.trackGeolocation,
+          sessionTracking: dd.sessionTracking
         })),
-        userActionsInstrumentation: Or,
+        userActionsInstrumentation: xd,
         experimental: {
-          trackNavigation: vr
+          trackNavigation: Ud
         }
       })
     }
 
-    function Pa(rr, Sr) {
+    function iR(dd, Od) {
       let {
-        experimental: Qr
-      } = Sr;
-      var Zr;
-      const Wr = null !== (Zr = null === Qr || void 0 === Qr ? void 0 : Qr.trackNavigation) && void 0 !== Zr && Zr;
-      return rr.filter((rr => !("@grafana/faro-web-sdk:instrumentation-navigation" === rr.name && !Wr)))
+        experimental: md
+      } = Od;
+      var Wd;
+      const Fd = null !== (Wd = null === md || void 0 === md ? void 0 : md.trackNavigation) && void 0 !== Wd && Wd;
+      return dd.filter((dd => !("@grafana/faro-web-sdk:instrumentation-navigation" === dd.name && !Fd)))
     }
 
-    function Ha(rr) {
-      var Sr, Qr, Zr;
+    function AR(dd) {
+      var Od, md, Wd;
       const {
-        page: Wr,
-        generatePageId: ar
-      } = null !== (Sr = null === rr || void 0 === rr ? void 0 : rr.pageTracking) && void 0 !== Sr ? Sr : {}, jr = [oW, bW, Ta({
-        generatePageId: ar,
-        initialPageMeta: Wr
-      }), ...null !== (Qr = rr.metas) && void 0 !== Qr ? Qr : [], DW];
-      return Lr(null === (Zr = window) || void 0 === Zr ? void 0 : Zr.k6) ? [...jr, Ka] : jr
+        page: Fd,
+        generatePageId: Rd
+      } = null !== (Od = null === dd || void 0 === dd ? void 0 : dd.pageTracking) && void 0 !== Od ? Od : {}, Xd = [ZF, kF, xR({
+        generatePageId: Rd,
+        initialPageMeta: Fd
+      }), ...null !== (md = dd.metas) && void 0 !== md ? md : [], MF];
+      return Bd(null === (Wd = window) || void 0 === Wd ? void 0 : Wd.k6) ? [...Xd, ER] : Xd
     }
 
-    function qa(rr) {
+    function rR(dd) {
       let {
-        trackGeolocation: Sr,
-        sessionTracking: Qr
-      } = rr;
-      var Zr;
-      const Wr = {};
-      return vr(Sr) && (Wr.geoLocationTrackingEnabled = Sr), or(Wr) ? {} : {
-        session: pS(pS({}, null !== (Zr = null === Qr || void 0 === Qr ? void 0 : Qr.session) && void 0 !== Zr ? Zr : {}), {}, {
-          overrides: Wr
+        trackGeolocation: Od,
+        sessionTracking: md
+      } = dd;
+      var Wd;
+      const Fd = {};
+      return Ud(Od) && (Fd.geoLocationTrackingEnabled = Od), Cd(Fd) ? {} : {
+        session: oO(oO({}, null !== (Wd = null === md || void 0 === md ? void 0 : md.session) && void 0 !== Wd ? Wd : {}), {}, {
+          overrides: Fd
         })
       }
     }
-    const Ra = new WeakSet;
+    const GR = new WeakSet;
 
-    function ga(rr) {
-      return Ra.add(rr), rr
+    function nR(dd) {
+      return GR.add(dd), dd
     }
 
-    function Ca(rr, Sr) {
-      if (rr.capture) return ga(rr.capture(Sr));
-      const Qr = ga(rr.value);
-      return null === Sr || void 0 === Sr || Sr(), Qr
+    function LR(dd, Od) {
+      if (dd.capture) return nR(dd.capture(Od));
+      const md = nR(dd.value);
+      return null === Od || void 0 === Od || Od(), md
     }
 
-    function Ma(rr) {
-      const Sr = `__faroBundleId_${rr}`,
-        Qr = null === pr || void 0 === pr ? void 0 : pr[Sr];
-      if ("string" === typeof Qr && "" !== Qr) return Qr;
-      const Zr = "undefined" !== typeof window ? window[Sr] : void 0;
-      return "string" === typeof Zr && "" !== Zr ? Zr : void 0
+    function PR(dd) {
+      const Od = `__faroBundleId_${dd}`,
+        md = null === Qd || void 0 === Qd ? void 0 : Qd[Od];
+      if ("string" === typeof md && "" !== md) return md;
+      const Wd = "undefined" !== typeof window ? window[Od] : void 0;
+      return "string" === typeof Wd && "" !== Wd ? Wd : void 0
     }
 
-    function Ga(rr) {
-      var Sr, Qr;
-      const Zr = rr.config.app.name,
-        Wr = Zr ? function(rr) {
-          return null === pr || void 0 === pr ? void 0 : pr[`__faroGitHash_${rr}`]
-        }(Zr) : void 0,
-        ar = {
+    function zR(dd) {
+      var Od, md;
+      const Wd = dd.config.app.name,
+        Fd = Wd ? function(dd) {
+          return null === Qd || void 0 === Qd ? void 0 : Qd[`__faroGitHash_${dd}`]
+        }(Wd) : void 0,
+        Rd = {
           sdk: {
-            version: QQ,
+            version: Fm,
             name: "faro"
           },
-          app: sS({
-            bundleId: Zr && Ma(Zr)
-          }, void 0 !== Wr ? {
-            gitHash: Wr
+          app: dm({
+            bundleId: Wd && PR(Wd)
+          }, void 0 !== Fd ? {
+            gitHash: Fd
           } : {})
         },
-        jr = null === (Sr = rr.config.sessionTracking) || void 0 === Sr ? void 0 : Sr.session;
-      jr && rr.api.setSession(jr), rr.config.app && (ar.app = sS(sS({}, rr.config.app), ar.app)), rr.config.user && (ar.user = rr.config.user), rr.config.view && (ar.view = rr.config.view), rr.metas.add(ar, ...null !== (Qr = rr.config.metas) && void 0 !== Qr ? Qr : [])
+        Xd = null === (Od = dd.config.sessionTracking) || void 0 === Od ? void 0 : Od.session;
+      Xd && dd.api.setSession(Xd), dd.config.app && (Rd.app = dm(dm({}, dd.config.app), Rd.app)), dd.config.user && (Rd.user = dd.config.user), dd.config.view && (Rd.view = dd.config.view), dd.metas.add(Rd, ...null !== (md = dd.config.metas) && void 0 !== md ? md : [])
     }
-    var ka = class {
-      constructor(rr, Sr) {
-        var Qr, Zr;
-        this.signalBuffer = [], this.itemLimit = null !== (Qr = null === Sr || void 0 === Sr ? void 0 : Sr.itemLimit) && void 0 !== Qr ? Qr : 50, this.sendTimeout = null !== (Zr = null === Sr || void 0 === Sr ? void 0 : Sr.sendTimeout) && void 0 !== Zr ? Zr : 250, this.paused = (null === Sr || void 0 === Sr ? void 0 : Sr.paused) || !1, this.sendFn = rr, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var cR = class {
+      constructor(dd, Od) {
+        var md, Wd;
+        this.signalBuffer = [], this.itemLimit = null !== (md = null === Od || void 0 === Od ? void 0 : Od.itemLimit) && void 0 !== md ? md : 50, this.sendTimeout = null !== (Wd = null === Od || void 0 === Od ? void 0 : Od.sendTimeout) && void 0 !== Wd ? Wd : 250, this.paused = (null === Od || void 0 === Od ? void 0 : Od.paused) || !1, this.sendFn = dd, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(rr) {
-        this.paused || (this.signalBuffer.push(rr), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(dd) {
+        this.paused || (this.signalBuffer.push(dd), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(rr) {
-        const Sr = new Map;
-        return rr.forEach((rr => {
-          const Qr = JSON.stringify(rr.meta);
-          let Zr = Sr.get(Qr);
-          Zr = void 0 === Zr ? [rr] : [...Zr, rr], Sr.set(Qr, Zr)
-        })), Array.from(Sr.values())
+      groupItems(dd) {
+        const Od = new Map;
+        return dd.forEach((dd => {
+          const md = JSON.stringify(dd.meta);
+          let Wd = Od.get(md);
+          Wd = void 0 === Wd ? [dd] : [...Wd, dd], Od.set(md, Wd)
+        })), Array.from(Od.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const rr = this.signalBuffer;
+        const dd = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(rr).forEach(this.sendFn)
-        } catch (Sr) {
-          throw this.signalBuffer = [...rr, ...this.signalBuffer], this.trimBufferToLimit(), Sr
+          this.groupItems(dd).forEach(this.sendFn)
+        } catch (Od) {
+          throw this.signalBuffer = [...dd, ...this.signalBuffer], this.trimBufferToLimit(), Od
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function Aa(rr, Sr, Qr, Zr) {
-      var Wr;
-      Sr.debug("Initializing transports");
-      const ar = [];
-      let jr = [];
-      const Ir = rr => {
-        let Sr = rr;
-        for (const Zr of jr) {
-          const rr = Sr.map(Zr).filter(Boolean);
-          if (0 === rr.length) return [];
-          Sr = Va(rr, Qr)
+    function jR(dd, Od, md, Wd) {
+      var Fd;
+      Od.debug("Initializing transports");
+      const Rd = [];
+      let Xd = [];
+      const Kd = dd => {
+        let Od = dd;
+        for (const Wd of Xd) {
+          const dd = Od.map(Wd).filter(Boolean);
+          if (0 === dd.length) return [];
+          Od = DR(dd, md)
         }
-        return Sr
+        return Od
       };
-      let fr;
-      (null === (Wr = Qr.batching) || void 0 === Wr ? void 0 : Wr.enabled) && (fr = new ka((rr => {
-        const Qr = Ir(rr);
-        if (0 !== Qr.length)
-          for (const Zr of ar) Sr.debug(`Transporting item using ${Zr.name}\n`, Qr), Zr.isBatched() && Zr.send(Qr)
+      let hd;
+      (null === (Fd = md.batching) || void 0 === Fd ? void 0 : Fd.enabled) && (hd = new cR((dd => {
+        const md = Kd(dd);
+        if (0 !== md.length)
+          for (const Wd of Rd) Od.debug(`Transporting item using ${Wd.name}\n`, md), Wd.isBatched() && Wd.send(md)
       }), {
-        sendTimeout: Qr.batching.sendTimeout,
-        itemLimit: Qr.batching.itemLimit,
-        paused: Qr.paused
+        sendTimeout: md.batching.sendTimeout,
+        itemLimit: md.batching.itemLimit,
+        paused: md.paused
       }));
       return {
         add: function() {
-          Sr.debug("Adding transports");
-          for (var Wr = arguments.length, jr = new Array(Wr), Ir = 0; Ir < Wr; Ir++) jr[Ir] = arguments[Ir];
-          jr.forEach((Wr => {
-            Sr.debug(`Adding "${Wr.name}" transport`), ar.some((rr => rr === Wr)) ? Sr.warn(`Transport ${Wr.name} is already added`) : (Wr.unpatchedConsole = rr, Wr.internalLogger = Sr, Wr.config = Qr, Wr.metas = Zr, ar.push(Wr))
+          Od.debug("Adding transports");
+          for (var Fd = arguments.length, Xd = new Array(Fd), Kd = 0; Kd < Fd; Kd++) Xd[Kd] = arguments[Kd];
+          Xd.forEach((Fd => {
+            Od.debug(`Adding "${Fd.name}" transport`), Rd.some((dd => dd === Fd)) ? Od.warn(`Transport ${Fd.name} is already added`) : (Fd.unpatchedConsole = dd, Fd.internalLogger = Od, Fd.config = md, Fd.metas = Wd, Rd.push(Fd))
           }))
         },
         addBeforeSendHooks: function() {
-          Sr.debug("Adding beforeSendHooks\n", jr);
-          for (var rr = arguments.length, Qr = new Array(rr), Zr = 0; Zr < rr; Zr++) Qr[Zr] = arguments[Zr];
-          Qr.forEach((rr => {
-            rr && jr.push(rr)
+          Od.debug("Adding beforeSendHooks\n", Xd);
+          for (var dd = arguments.length, md = new Array(dd), Wd = 0; Wd < dd; Wd++) md[Wd] = arguments[Wd];
+          md.forEach((dd => {
+            dd && Xd.push(dd)
           }))
         },
-        getBeforeSendHooks: () => [...jr],
-        execute: rr => {
-          var Wr;
-          if (!Qr.paused && AS(Zr).shouldCapture()) {
-            if (xr = rr.meta, !Ra.has(xr)) {
-              var jr, Er, pr;
-              const Sr = null === (jr = Zr.value.session) || void 0 === jr ? void 0 : jr.id,
-                Wr = Ca(Zr);
-              if (Qr.paused) return;
-              const ar = sS({}, rr.meta);
-              (null === (Er = ar.session) || void 0 === Er ? void 0 : Er.id) === Sr && (null === (pr = Wr.session) || void 0 === pr ? void 0 : pr.id) !== Sr && (void 0 === Wr.session ? delete ar.session : ar.session = Wr.session), rr = sS(sS({}, rr), {}, {
-                meta: ga(ar)
+        getBeforeSendHooks: () => [...Xd],
+        execute: dd => {
+          var Fd;
+          if (!md.paused && cO(Wd).shouldCapture()) {
+            if (td = dd.meta, !GR.has(td)) {
+              var Xd, vd, Qd;
+              const Od = null === (Xd = Wd.value.session) || void 0 === Xd ? void 0 : Xd.id,
+                Fd = LR(Wd);
+              if (md.paused) return;
+              const Rd = dm({}, dd.meta);
+              (null === (vd = Rd.session) || void 0 === vd ? void 0 : vd.id) === Od && (null === (Qd = Fd.session) || void 0 === Qd ? void 0 : Qd.id) !== Od && (void 0 === Fd.session ? delete Rd.session : Rd.session = Fd.session), dd = dm(dm({}, dd), {}, {
+                meta: nR(Rd)
               })
             }
-            var xr;
-            (null === (Wr = Qr.batching) || void 0 === Wr ? void 0 : Wr.enabled) && (null === fr || void 0 === fr || fr.addItem(rr)), (rr => {
-              var Zr;
-              if ((null === (Zr = Qr.batching) || void 0 === Zr ? void 0 : Zr.enabled) && ar.every((rr => rr.isBatched()))) return;
-              const [Wr] = Ir([rr]);
-              if (void 0 !== Wr)
-                for (const Ir of ar) {
-                  var jr;
-                  Sr.debug(`Transporting item using ${Ir.name}\n`, Wr), Ir.isBatched() ? (null === (jr = Qr.batching) || void 0 === jr ? void 0 : jr.enabled) || Ir.send([Wr]) : Ir.send(Wr)
+            var td;
+            (null === (Fd = md.batching) || void 0 === Fd ? void 0 : Fd.enabled) && (null === hd || void 0 === hd || hd.addItem(dd)), (dd => {
+              var Wd;
+              if ((null === (Wd = md.batching) || void 0 === Wd ? void 0 : Wd.enabled) && Rd.every((dd => dd.isBatched()))) return;
+              const [Fd] = Kd([dd]);
+              if (void 0 !== Fd)
+                for (const Kd of Rd) {
+                  var Xd;
+                  Od.debug(`Transporting item using ${Kd.name}\n`, Fd), Kd.isBatched() ? (null === (Xd = md.batching) || void 0 === Xd ? void 0 : Xd.enabled) || Kd.send([Fd]) : Kd.send(Fd)
                 }
-            })(rr)
+            })(dd)
           }
         },
-        isPaused: () => Qr.paused,
+        isPaused: () => md.paused,
         pause: () => {
-          Sr.debug("Pausing transports"), null === fr || void 0 === fr || fr.pause(), Qr.paused = !0
+          Od.debug("Pausing transports"), null === hd || void 0 === hd || hd.pause(), md.paused = !0
         },
         remove: function() {
-          Sr.debug("Removing transports");
-          for (var rr = arguments.length, Qr = new Array(rr), Zr = 0; Zr < rr; Zr++) Qr[Zr] = arguments[Zr];
-          Qr.forEach((rr => {
-            Sr.debug(`Removing "${rr.name}" transport`);
-            const Qr = ar.indexOf(rr); - 1 !== Qr ? ar.splice(Qr, 1) : Sr.warn(`Transport "${rr.name}" is not added`)
+          Od.debug("Removing transports");
+          for (var dd = arguments.length, md = new Array(dd), Wd = 0; Wd < dd; Wd++) md[Wd] = arguments[Wd];
+          md.forEach((dd => {
+            Od.debug(`Removing "${dd.name}" transport`);
+            const md = Rd.indexOf(dd); - 1 !== md ? Rd.splice(md, 1) : Od.warn(`Transport "${dd.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var rr = arguments.length, Qr = new Array(rr), Zr = 0; Zr < rr; Zr++) Qr[Zr] = arguments[Zr];
-          Sr.debug("Removing beforeSendHooks"), jr = jr.filter((rr => !Qr.includes(rr)))
+          for (var dd = arguments.length, md = new Array(dd), Wd = 0; Wd < dd; Wd++) md[Wd] = arguments[Wd];
+          Od.debug("Removing beforeSendHooks"), Xd = Xd.filter((dd => !md.includes(dd)))
         },
         get transports() {
-          return [...ar]
+          return [...Rd]
         },
         unpause: () => {
-          Sr.debug("Unpausing transports"), null === fr || void 0 === fr || fr.start(), Qr.paused = !1
+          Od.debug("Unpausing transports"), null === hd || void 0 === hd || hd.start(), md.paused = !1
         }
       }
     }
 
-    function Va(rr, Sr) {
-      if (Sr.preserveOriginalError)
-        for (const Qr of rr) "exception" === Qr.type && delete Qr.payload.originalError;
-      return rr
+    function DR(dd, Od) {
+      if (Od.preserveOriginalError)
+        for (const md of dd) "exception" === md.type && delete md.payload.originalError;
+      return dd
     }
-    let ia = uS;
+    let eR = Om;
 
-    function wa(rr) {
-      var Sr;
-      return ia = null !== (Sr = rr.unpatchedConsole) && void 0 !== Sr ? Sr : ia, ia
+    function IR(dd) {
+      var Od;
+      return eR = null !== (Od = dd.unpatchedConsole) && void 0 !== Od ? Od : eR, eR
     }
-    let ca, Fa = FS;
+    let lR, CR = lO;
 
-    function oa(rr, Sr) {
-      return Fa = va(rr, Sr.internalLoggerLevel), Fa
+    function ZR(dd, Od) {
+      return CR = BR(dd, Od.internalLoggerLevel), CR
     }
 
-    function ba(rr) {
+    function kR(dd) {
       let {
-        internalLogger: Sr,
-        config: Qr,
-        metas: Zr,
-        transports: Wr,
-        tracesApi: ar,
-        userActionsApi: jr
-      } = rr;
-      var Ir;
-      Sr.debug("Initializing exceptions API");
-      let fr = null;
-      ca = null !== (Ir = Qr.parseStacktrace) && void 0 !== Ir ? Ir : ca;
-      const Er = rr => {
-          Sr.debug("Changing stacktrace parser"), ca = null !== rr && void 0 !== rr ? rr : ca
+        internalLogger: Od,
+        config: md,
+        metas: Wd,
+        transports: Fd,
+        tracesApi: Rd,
+        userActionsApi: Xd
+      } = dd;
+      var Kd;
+      Od.debug("Initializing exceptions API");
+      let hd = null;
+      lR = null !== (Kd = md.parseStacktrace) && void 0 !== Kd ? Kd : lR;
+      const vd = dd => {
+          Od.debug("Changing stacktrace parser"), lR = null !== dd && void 0 !== dd ? dd : lR
         },
         {
-          ignoreErrors: pr = [],
-          preserveOriginalError: xr
-        } = Qr;
-      return Er(Qr.parseStacktrace), {
-        changeStacktraceParser: Er,
-        getStacktraceParser: () => ca,
-        pushError: function(rr) {
+          ignoreErrors: Qd = [],
+          preserveOriginalError: td
+        } = md;
+      return vd(md.parseStacktrace), {
+        changeStacktraceParser: vd,
+        getStacktraceParser: () => lR,
+        pushError: function(dd) {
           let {
-            skipDedupe: Ir,
-            stackFrames: Er,
-            type: mr,
-            context: Nr,
-            spanContext: Ur,
-            timestampOverwriteMs: tr,
-            originalError: hr,
-            fingerprint: zr,
-            fatal: Yr
+            skipDedupe: Kd,
+            stackFrames: vd,
+            type: od,
+            context: Nd,
+            spanContext: qd,
+            timestampOverwriteMs: Hd,
+            originalError: yd,
+            fingerprint: bd,
+            fatal: Td
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(rr, Sr) {
+          if (! function(dd, Od) {
               const {
-                message: Qr,
-                name: Zr,
-                stack: Wr
-              } = Sr;
-              return ar = rr, jr = Qr + " " + Zr + " " + Wr, ar.some((rr => yr(rr) ? jr.includes(rr) : !!jr.match(rr)));
-              var ar, jr
-            }(pr, null !== hr && void 0 !== hr ? hr : rr)) try {
-            var nr, er;
-            if (!AS(Zr).shouldCapture()) return;
-            const pr = CS(sS(sS({}, function(rr) {
-                let Sr = rr.cause;
-                Mr(Sr) ? Sr = rr.cause.toString() : null !== Sr && (Lr(rr.cause) || Xr(rr.cause)) ? Sr = gS(rr.cause) : null != Sr && (Sr = rr.cause.toString());
-                return null == Sr ? {} : {
-                  cause: Sr
+                message: md,
+                name: Wd,
+                stack: Fd
+              } = Od;
+              return Rd = dd, Xd = md + " " + Wd + " " + Fd, Rd.some((dd => wd(dd) ? Xd.includes(dd) : !!Xd.match(dd)));
+              var Rd, Xd
+            }(Qd, null !== yd && void 0 !== yd ? yd : dd)) try {
+            var pd, Yd;
+            if (!cO(Wd).shouldCapture()) return;
+            const Qd = nO(dm(dm({}, function(dd) {
+                let Od = dd.cause;
+                Ld(Od) ? Od = dd.cause.toString() : null !== Od && (Bd(dd.cause) || sd(dd.cause)) ? Od = GO(dd.cause) : null != Od && (Od = dd.cause.toString());
+                return null == Od ? {} : {
+                  cause: Od
                 }
-              }(null !== hr && void 0 !== hr ? hr : rr)), null !== Nr && void 0 !== Nr ? Nr : {})),
-              yr = sS(sS(sS(sS({
-                type: mr || rr.name || "Error",
-                value: rr.message,
-                timestamp: tr ? tS(tr) : US(),
-                trace: Ur ? {
-                  trace_id: Ur.traceId,
-                  span_id: Ur.spanId
-                } : ar.getTraceContext()
-              }, or(pr) ? {} : {
-                context: pr
-              }), xr ? {
-                originalError: hr
-              } : {}), zr ? {
-                fingerprint: zr
-              } : {}), void 0 !== Yr ? {
-                fatal: Yr
+              }(null !== yd && void 0 !== yd ? yd : dd)), null !== Nd && void 0 !== Nd ? Nd : {})),
+              wd = dm(dm(dm(dm({
+                type: od || dd.name || "Error",
+                value: dd.message,
+                timestamp: Hd ? bO(Hd) : yO(),
+                trace: qd ? {
+                  trace_id: qd.traceId,
+                  span_id: qd.spanId
+                } : Rd.getTraceContext()
+              }, Cd(Qd) ? {} : {
+                context: Qd
+              }), td ? {
+                originalError: yd
+              } : {}), bd ? {
+                fingerprint: bd
+              } : {}), void 0 !== Td ? {
+                fatal: Td
               } : {});
-            Er = null !== (nr = Er) && void 0 !== nr ? nr : rr.stack ? null === ca || void 0 === ca ? void 0 : ca(rr).frames : void 0, (null === Er || void 0 === Er ? void 0 : Er.length) && (yr.stacktrace = {
-              frames: Er
+            vd = null !== (pd = vd) && void 0 !== pd ? pd : dd.stack ? null === lR || void 0 === lR ? void 0 : lR(dd).frames : void 0, (null === vd || void 0 === vd ? void 0 : vd.length) && (wd.stacktrace = {
+              frames: vd
             });
-            const Br = {
-              type: yr.type,
-              value: yr.value,
-              stacktrace: yr.stacktrace,
-              context: yr.context,
-              fingerprint: yr.fingerprint,
-              fatal: null !== (er = yr.fatal) && void 0 !== er && er
+            const Ed = {
+              type: wd.type,
+              value: wd.value,
+              stacktrace: wd.stacktrace,
+              context: wd.context,
+              fingerprint: wd.fingerprint,
+              fatal: null !== (Yd = wd.fatal) && void 0 !== Yd && Yd
             };
-            if (!Ir && Qr.dedupe && !Kr(fr) && YS(Br, fr)) return void Sr.debug("Skipping error push because it is the same as the last one\n", yr);
-            const Tr = fr,
-              vr = Ca(Zr);
-            if (fr !== Tr && !Ir && Qr.dedupe && YS(Br, fr)) return;
-            fr = Br;
-            const Or = {
-              meta: vr,
-              payload: yr,
+            if (!Kd && md.dedupe && !gd(hd) && YO(Ed, hd)) return void Od.debug("Skipping error push because it is the same as the last one\n", wd);
+            const Jd = hd,
+              Ud = LR(Wd);
+            if (hd !== Jd && !Kd && md.dedupe && YO(Ed, hd)) return;
+            hd = Ed;
+            const xd = {
+              meta: Ud,
+              payload: wd,
               type: "exception"
             };
-            Sr.debug("Pushing exception\n", Or), yW(jr.getActiveUserAction(), Or) || Wr.execute(Or)
-          } catch (Br) {
-            Sr.error("Error pushing event", Br)
+            Od.debug("Pushing exception\n", xd), JF(Xd.getActiveUserAction(), xd) || Fd.execute(xd)
+          } catch (Ed) {
+            Od.error("Error pushing event", Ed)
           }
         }
       }
     }
 
-    function Ja(rr, Sr, Qr, Zr, Wr) {
-      Sr.debug("Initializing API");
-      let ar = null;
-      const jr = function(rr) {
+    function fR(dd, Od, md, Wd, Fd) {
+      Od.debug("Initializing API");
+      let Rd = null;
+      const Xd = function(dd) {
           let {
-            transports: Sr,
-            internalLogger: Qr,
-            config: Zr,
-            pushEvent: Wr
-          } = rr;
-          var ar;
-          const jr = null === (ar = Zr.userActionsInstrumentation) || void 0 === ar ? void 0 : ar.excludeItem;
-          let Ir;
-          const fr = () => Ir;
+            transports: Od,
+            internalLogger: md,
+            config: Wd,
+            pushEvent: Fd
+          } = dd;
+          var Rd;
+          const Xd = null === (Rd = Wd.userActionsInstrumentation) || void 0 === Rd ? void 0 : Rd.excludeItem;
+          let Kd;
+          const hd = () => Kd;
           return {
-            startUserAction: (rr, Zr, ar) => {
-              if (void 0 === fr()) {
-                const Qr = new eW({
-                  name: rr,
-                  transports: Sr,
-                  attributes: Zr,
-                  trigger: (null === ar || void 0 === ar ? void 0 : ar.triggerName) || "faroApiCall",
-                  importance: (null === ar || void 0 === ar ? void 0 : ar.importance) || YW.Normal,
-                  trackUserActionsExcludeItem: jr,
-                  pushEvent: Wr
+            startUserAction: (dd, Wd, Rd) => {
+              if (void 0 === hd()) {
+                const md = new aF({
+                  name: dd,
+                  transports: Od,
+                  attributes: Wd,
+                  trigger: (null === Rd || void 0 === Rd ? void 0 : Rd.triggerName) || "faroApiCall",
+                  importance: (null === Rd || void 0 === Rd ? void 0 : Rd.importance) || gF.Normal,
+                  trackUserActionsExcludeItem: Xd,
+                  pushEvent: Fd
                 });
-                return Qr.filter((rr => [3, 2].includes(rr))).first().subscribe((() => {
-                  Ir = void 0
-                })), KW.notify({
-                  type: zW,
-                  userAction: Qr,
-                  initialActivityTimeout: null === ar || void 0 === ar ? void 0 : ar.initialActivityTimeout
-                }), Ir = Qr, Ir
+                return md.filter((dd => [3, 2].includes(dd))).first().subscribe((() => {
+                  Kd = void 0
+                })), EF.notify({
+                  type: YF,
+                  userAction: md,
+                  initialActivityTimeout: null === Rd || void 0 === Rd ? void 0 : Rd.initialActivityTimeout
+                }), Kd = md, Kd
               }
-              Qr.error("Attempted to create a new user action while one is already running. This is not possible.")
+              md.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: fr
+            getActiveUserAction: hd
           }
         }({
-          transports: Wr,
-          config: Qr,
-          internalLogger: Sr,
-          pushEvent: (rr, Qr, Zr, Wr) => {
-            ar ? ar(rr, Qr, Zr, Wr) : Sr.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: rr,
-              attributes: Qr,
-              domain: Zr,
-              options: Wr
+          transports: Fd,
+          config: md,
+          internalLogger: Od,
+          pushEvent: (dd, md, Wd, Fd) => {
+            Rd ? Rd(dd, md, Wd, Fd) : Od.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: dd,
+              attributes: md,
+              domain: Wd,
+              options: Fd
             })
           }
         }),
-        Ir = function(rr, Sr, Qr, Zr, Wr) {
-          let ar;
-          return Sr.debug("Initializing traces API"), {
-            getOTEL: () => ar,
+        Kd = function(dd, Od, md, Wd, Fd) {
+          let Rd;
+          return Od.debug("Initializing traces API"), {
+            getOTEL: () => Rd,
             getTraceContext: () => {
-              const rr = null === ar || void 0 === ar ? void 0 : ar.trace.getSpanContext(ar.context.active());
-              return rr ? {
-                trace_id: rr.traceId,
-                span_id: rr.spanId
+              const dd = null === Rd || void 0 === Rd ? void 0 : Rd.trace.getSpanContext(Rd.context.active());
+              return dd ? {
+                trace_id: dd.traceId,
+                span_id: dd.spanId
               } : void 0
             },
-            initOTEL: (rr, Qr) => {
-              Sr.debug("Initializing OpenTelemetry"), ar = {
-                trace: rr,
-                context: Qr
+            initOTEL: (dd, md) => {
+              Od.debug("Initializing OpenTelemetry"), Rd = {
+                trace: dd,
+                context: md
               }
             },
-            isOTELInitialized: () => !!ar,
-            pushTraces: rr => {
+            isOTELInitialized: () => !!Rd,
+            pushTraces: dd => {
               try {
-                if (!AS(Zr).shouldCapture()) return;
-                const Qr = {
+                if (!cO(Wd).shouldCapture()) return;
+                const md = {
                   type: "trace",
-                  payload: rr,
-                  meta: Ca(Zr)
+                  payload: dd,
+                  meta: LR(Wd)
                 };
-                Sr.debug("Pushing trace\n", Qr), Wr.execute(Qr)
-              } catch (Qr) {
-                Sr.error("Error pushing trace\n", Qr)
+                Od.debug("Pushing trace\n", md), Fd.execute(md)
+              } catch (md) {
+                Od.error("Error pushing trace\n", md)
               }
             }
           }
-        }(0, Sr, 0, Zr, Wr),
-        fr = {
-          unpatchedConsole: rr,
-          internalLogger: Sr,
-          userActionsApi: jr,
-          config: Qr,
-          metas: Zr,
-          transports: Wr,
-          tracesApi: Ir
+        }(0, Od, 0, Wd, Fd),
+        hd = {
+          unpatchedConsole: dd,
+          internalLogger: Od,
+          userActionsApi: Xd,
+          config: md,
+          metas: Wd,
+          transports: Fd,
+          tracesApi: Kd
         },
-        Er = function(rr) {
+        vd = function(dd) {
           let {
-            internalLogger: Sr,
-            config: Qr,
-            metas: Zr,
-            transports: Wr,
-            tracesApi: ar,
-            userActionsApi: jr
-          } = rr, Ir = null;
+            internalLogger: Od,
+            config: md,
+            metas: Wd,
+            transports: Fd,
+            tracesApi: Rd,
+            userActionsApi: Xd
+          } = dd, Kd = null;
           return {
-            pushEvent: function(rr, fr, Er) {
+            pushEvent: function(dd, hd, vd) {
               let {
-                skipDedupe: pr,
-                spanContext: xr,
-                timestampOverwriteMs: mr,
-                customPayloadTransformer: Nr = rr => rr
+                skipDedupe: Qd,
+                spanContext: td,
+                timestampOverwriteMs: od,
+                customPayloadTransformer: Nd = dd => dd
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!AS(Zr).shouldCapture()) return;
-                const Ur = CS(fr),
-                  tr = Nr({
-                    name: rr,
-                    domain: null !== Er && void 0 !== Er ? Er : Qr.eventDomain,
-                    attributes: or(Ur) ? void 0 : Ur,
-                    timestamp: mr ? tS(mr) : US(),
-                    trace: xr ? {
-                      trace_id: xr.traceId,
-                      span_id: xr.spanId
-                    } : ar.getTraceContext()
+                if (!cO(Wd).shouldCapture()) return;
+                const qd = nO(hd),
+                  Hd = Nd({
+                    name: dd,
+                    domain: null !== vd && void 0 !== vd ? vd : md.eventDomain,
+                    attributes: Cd(qd) ? void 0 : qd,
+                    timestamp: od ? bO(od) : yO(),
+                    trace: td ? {
+                      trace_id: td.traceId,
+                      span_id: td.spanId
+                    } : Rd.getTraceContext()
                   }),
-                  hr = {
-                    name: tr.name,
-                    attributes: tr.attributes,
-                    domain: tr.domain
+                  yd = {
+                    name: Hd.name,
+                    attributes: Hd.attributes,
+                    domain: Hd.domain
                   };
-                if (!pr && Qr.dedupe && !Kr(Ir) && YS(hr, Ir)) return void Sr.debug("Skipping event push because it is the same as the last one\n", tr);
-                const zr = Ir,
-                  Yr = Ca(Zr);
-                if (Ir !== zr && !pr && Qr.dedupe && YS(hr, Ir)) return;
-                Ir = hr;
-                const nr = {
-                  meta: Yr,
-                  payload: tr,
+                if (!Qd && md.dedupe && !gd(Kd) && YO(yd, Kd)) return void Od.debug("Skipping event push because it is the same as the last one\n", Hd);
+                const bd = Kd,
+                  Td = LR(Wd);
+                if (Kd !== bd && !Qd && md.dedupe && YO(yd, Kd)) return;
+                Kd = yd;
+                const pd = {
+                  meta: Td,
+                  payload: Hd,
                   type: "event"
                 };
-                Sr.debug("Pushing event\n", nr), yW(jr.getActiveUserAction(), nr) || Wr.execute(nr)
-              } catch (Ur) {
-                Sr.error("Error pushing event", Ur)
+                Od.debug("Pushing event\n", pd), JF(Xd.getActiveUserAction(), pd) || Fd.execute(pd)
+              } catch (qd) {
+                Od.error("Error pushing event", qd)
               }
             }
           }
-        }(fr);
-      return ar = Er.pushEvent, sS(sS(sS(sS(sS(sS(sS({}, Ir), ba(fr)), function(rr) {
-        let Sr, Qr, Zr, Wr, {
-          internalLogger: ar,
-          metas: jr
-        } = rr;
-        ar.debug("Initializing meta API");
-        const Ir = rr => {
-            Qr && jr.remove(Qr), Qr = {
-              user: rr
-            }, jr.add(Qr)
+        }(hd);
+      return Rd = vd.pushEvent, dm(dm(dm(dm(dm(dm(dm({}, Kd), kR(hd)), function(dd) {
+        let Od, md, Wd, Fd, {
+          internalLogger: Rd,
+          metas: Xd
+        } = dd;
+        Rd.debug("Initializing meta API");
+        const Kd = dd => {
+            md && Xd.remove(md), md = {
+              user: dd
+            }, Xd.add(md)
           },
-          fr = (rr, Qr) => {
-            var Zr;
-            const Wr = null === Qr || void 0 === Qr ? void 0 : Qr.overrides,
-              ar = Wr ? {
-                overrides: sS(sS({}, null === Sr || void 0 === Sr || null === (Zr = Sr.session) || void 0 === Zr ? void 0 : Zr.overrides), Wr)
+          hd = (dd, md) => {
+            var Wd;
+            const Fd = null === md || void 0 === md ? void 0 : md.overrides,
+              Rd = Fd ? {
+                overrides: dm(dm({}, null === Od || void 0 === Od || null === (Wd = Od.session) || void 0 === Wd ? void 0 : Wd.overrides), Fd)
               } : {};
-            Sr && jr.remove(Sr), Sr = {
-              session: sS(sS({}, or(rr) ? void 0 : rr), ar)
-            }, jr.add(Sr)
+            Od && Xd.remove(Od), Od = {
+              session: dm(dm({}, Cd(dd) ? void 0 : dd), Rd)
+            }, Xd.add(Od)
           },
-          Er = (rr, Sr) => {
-            AS(jr).notifySessionUpdate({
+          vd = (dd, Od) => {
+            cO(Xd).notifySessionUpdate({
               type: "replace",
-              session: rr,
-              overrides: null === Sr || void 0 === Sr ? void 0 : Sr.overrides
-            }), fr(rr, Sr)
+              session: dd,
+              overrides: null === Od || void 0 === Od ? void 0 : Od.overrides
+            }), hd(dd, Od)
           },
-          pr = () => jr.value.session,
-          xr = () => jr.value.page;
+          Qd = () => Xd.value.session,
+          td = () => Xd.value.page;
         return {
-          setUser: Ir,
-          resetUser: Ir,
-          setSession: Er,
-          resetSession: Er,
-          getSession: pr,
-          setView: (rr, Sr) => {
-            var Qr;
-            if ((null === Sr || void 0 === Sr ? void 0 : Sr.overrides) && (AS(jr).notifySessionUpdate({
+          setUser: Kd,
+          resetUser: Kd,
+          setSession: vd,
+          resetSession: vd,
+          getSession: Qd,
+          setView: (dd, Od) => {
+            var md;
+            if ((null === Od || void 0 === Od ? void 0 : Od.overrides) && (cO(Xd).notifySessionUpdate({
                 type: "overrides",
-                overrides: Sr.overrides
-              }), fr(pr(), {
-                overrides: Sr.overrides
-              })), (null === Zr || void 0 === Zr || null === (Qr = Zr.view) || void 0 === Qr ? void 0 : Qr.name) === (null === rr || void 0 === rr ? void 0 : rr.name)) return;
-            const Wr = Zr;
-            Zr = {
-              view: rr
-            }, jr.add(Zr), Wr && jr.remove(Wr)
+                overrides: Od.overrides
+              }), hd(Qd(), {
+                overrides: Od.overrides
+              })), (null === Wd || void 0 === Wd || null === (md = Wd.view) || void 0 === md ? void 0 : md.name) === (null === dd || void 0 === dd ? void 0 : dd.name)) return;
+            const Fd = Wd;
+            Wd = {
+              view: dd
+            }, Xd.add(Wd), Fd && Xd.remove(Fd)
           },
-          getView: () => jr.value.view,
-          setPage: rr => {
-            var Sr;
-            const Qr = yr(rr) ? sS(sS({}, null !== (Sr = null === Wr || void 0 === Wr ? void 0 : Wr.page) && void 0 !== Sr ? Sr : xr()), {}, {
-              id: rr
-            }) : rr;
-            Wr && jr.remove(Wr), Wr = {
-              page: Qr
-            }, jr.add(Wr)
+          getView: () => Xd.value.view,
+          setPage: dd => {
+            var Od;
+            const md = wd(dd) ? dm(dm({}, null !== (Od = null === Fd || void 0 === Fd ? void 0 : Fd.page) && void 0 !== Od ? Od : td()), {}, {
+              id: dd
+            }) : dd;
+            Fd && Xd.remove(Fd), Fd = {
+              page: md
+            }, Xd.add(Fd)
           },
-          getPage: xr
+          getPage: td
         }
-      }(fr)), function(rr) {
+      }(hd)), function(dd) {
         let {
-          internalLogger: Sr,
-          config: Qr,
-          metas: Zr,
-          transports: Wr,
-          tracesApi: ar,
-          userActionsApi: jr
-        } = rr;
-        var Ir;
-        Sr.debug("Initializing logs API");
-        let fr = null;
-        const Er = null !== (Ir = Qr.logArgsSerializer) && void 0 !== Ir ? Ir : PQ;
+          internalLogger: Od,
+          config: md,
+          metas: Wd,
+          transports: Fd,
+          tracesApi: Rd,
+          userActionsApi: Xd
+        } = dd;
+        var Kd;
+        Od.debug("Initializing logs API");
+        let hd = null;
+        const vd = null !== (Kd = md.logArgsSerializer) && void 0 !== Kd ? Kd : im;
         return {
-          pushLog: function(rr) {
+          pushLog: function(dd) {
             let {
-              context: Ir,
-              level: pr,
-              skipDedupe: xr,
-              spanContext: mr,
-              timestampOverwriteMs: Nr
+              context: Kd,
+              level: Qd,
+              skipDedupe: td,
+              spanContext: od,
+              timestampOverwriteMs: Nd
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!AS(Zr).shouldCapture()) return;
-              const Ur = CS(Ir),
-                tr = {
-                  message: Er(rr),
-                  level: null !== pr && void 0 !== pr ? pr : "log",
-                  context: or(Ur) ? void 0 : Ur,
-                  timestamp: Nr ? tS(Nr) : US(),
-                  trace: mr ? {
-                    trace_id: mr.traceId,
-                    span_id: mr.spanId
-                  } : ar.getTraceContext()
+              if (!cO(Wd).shouldCapture()) return;
+              const qd = nO(Kd),
+                Hd = {
+                  message: vd(dd),
+                  level: null !== Qd && void 0 !== Qd ? Qd : "log",
+                  context: Cd(qd) ? void 0 : qd,
+                  timestamp: Nd ? bO(Nd) : yO(),
+                  trace: od ? {
+                    trace_id: od.traceId,
+                    span_id: od.spanId
+                  } : Rd.getTraceContext()
                 },
-                hr = {
-                  message: tr.message,
-                  level: tr.level,
-                  context: tr.context
+                yd = {
+                  message: Hd.message,
+                  level: Hd.level,
+                  context: Hd.context
                 };
-              if (!xr && Qr.dedupe && !Kr(fr) && YS(hr, fr)) return void Sr.debug("Skipping log push because it is the same as the last one\n", tr);
-              const zr = fr,
-                Yr = Ca(Zr);
-              if (fr !== zr && !xr && Qr.dedupe && YS(hr, fr)) return;
-              fr = hr;
-              const nr = {
+              if (!td && md.dedupe && !gd(hd) && YO(yd, hd)) return void Od.debug("Skipping log push because it is the same as the last one\n", Hd);
+              const bd = hd,
+                Td = LR(Wd);
+              if (hd !== bd && !td && md.dedupe && YO(yd, hd)) return;
+              hd = yd;
+              const pd = {
                 type: "log",
-                payload: tr,
-                meta: Yr
+                payload: Hd,
+                meta: Td
               };
-              Sr.debug("Pushing log\n", nr), yW(jr.getActiveUserAction(), nr) || Wr.execute(nr)
-            } catch (Ur) {
-              Sr.error("Error pushing log\n", Ur)
+              Od.debug("Pushing log\n", pd), JF(Xd.getActiveUserAction(), pd) || Fd.execute(pd)
+            } catch (qd) {
+              Od.error("Error pushing log\n", qd)
             }
           }
         }
-      }(fr)), function(rr) {
+      }(hd)), function(dd) {
         let {
-          internalLogger: Sr,
-          config: Qr,
-          metas: Zr,
-          transports: Wr,
-          tracesApi: ar,
-          userActionsApi: jr
-        } = rr;
-        Sr.debug("Initializing measurements API");
-        let Ir = null;
+          internalLogger: Od,
+          config: md,
+          metas: Wd,
+          transports: Fd,
+          tracesApi: Rd,
+          userActionsApi: Xd
+        } = dd;
+        Od.debug("Initializing measurements API");
+        let Kd = null;
         return {
-          pushMeasurement: function(rr) {
+          pushMeasurement: function(dd) {
             let {
-              skipDedupe: fr,
-              context: Er,
-              spanContext: pr,
-              timestampOverwriteMs: xr
+              skipDedupe: hd,
+              context: vd,
+              spanContext: Qd,
+              timestampOverwriteMs: td
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!AS(Zr).shouldCapture()) return;
-              const mr = CS(Er),
-                Nr = sS(sS({}, rr), {}, {
-                  trace: pr ? {
-                    trace_id: pr.traceId,
-                    span_id: pr.spanId
-                  } : ar.getTraceContext(),
-                  timestamp: xr ? tS(xr) : US(),
-                  context: or(mr) ? void 0 : mr
+              if (!cO(Wd).shouldCapture()) return;
+              const od = nO(vd),
+                Nd = dm(dm({}, dd), {}, {
+                  trace: Qd ? {
+                    trace_id: Qd.traceId,
+                    span_id: Qd.spanId
+                  } : Rd.getTraceContext(),
+                  timestamp: td ? bO(td) : yO(),
+                  context: Cd(od) ? void 0 : od
                 }),
-                Ur = {
-                  type: Nr.type,
-                  values: Nr.values,
-                  context: Nr.context
+                qd = {
+                  type: Nd.type,
+                  values: Nd.values,
+                  context: Nd.context
                 };
-              if (!fr && Qr.dedupe && !Kr(Ir) && YS(Ur, Ir)) return void Sr.debug("Skipping measurement push because it is the same as the last one\n", Nr);
-              const tr = Ir,
-                hr = Ca(Zr);
-              if (Ir !== tr && !fr && Qr.dedupe && YS(Ur, Ir)) return;
-              Ir = Ur;
-              const zr = {
+              if (!hd && md.dedupe && !gd(Kd) && YO(qd, Kd)) return void Od.debug("Skipping measurement push because it is the same as the last one\n", Nd);
+              const Hd = Kd,
+                yd = LR(Wd);
+              if (Kd !== Hd && !hd && md.dedupe && YO(qd, Kd)) return;
+              Kd = qd;
+              const bd = {
                 type: "measurement",
-                payload: Nr,
-                meta: hr
+                payload: Nd,
+                meta: yd
               };
-              Sr.debug("Pushing measurement\n", zr), yW(jr.getActiveUserAction(), zr) || Wr.execute(zr)
-            } catch (mr) {
-              Sr.error("Error pushing measurement\n", mr)
+              Od.debug("Pushing measurement\n", bd), JF(Xd.getActiveUserAction(), bd) || Fd.execute(bd)
+            } catch (od) {
+              Od.error("Error pushing measurement\n", od)
             }
           }
         }
-      }(fr)), Er), jr)
+      }(hd)), vd), Xd)
     }
 
-    function Da(rr) {
-      const Sr = wa(rr),
-        Qr = oa(Sr, rr);
-      if (Ur() && !rr.isolate) return void Qr.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      Qr.debug("Initializing");
-      const Zr = function(rr, Sr) {
-          let Qr, Zr = [],
-            Wr = [],
-            ar = [],
-            jr = 0,
-            Ir = 0;
-          const fr = () => Zr.reduce(((rr, Sr) => Object.assign(rr, lr(Sr) ? Sr() : Sr)), {}),
-            Er = () => {
-              if (Wr.length) {
-                const rr = fr();
-                Wr.forEach((Sr => Sr(rr)))
+    function MR(dd) {
+      const Od = IR(dd),
+        md = ZR(Od, dd);
+      if (qd() && !dd.isolate) return void md.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      md.debug("Initializing");
+      const Wd = function(dd, Od) {
+          let md, Wd = [],
+            Fd = [],
+            Rd = [],
+            Xd = 0,
+            Kd = 0;
+          const hd = () => Wd.reduce(((dd, Od) => Object.assign(dd, Sd(Od) ? Od() : Od)), {}),
+            vd = () => {
+              if (Fd.length) {
+                const dd = hd();
+                Fd.forEach((Od => Od(dd)))
               }
             };
           return {
             add: function() {
-              for (var rr = arguments.length, Qr = new Array(rr), Wr = 0; Wr < rr; Wr++) Qr[Wr] = arguments[Wr];
-              Sr.debug("Adding metas\n", Qr), Zr.push(...Qr), Er()
+              for (var dd = arguments.length, md = new Array(dd), Fd = 0; Fd < dd; Fd++) md[Fd] = arguments[Fd];
+              Od.debug("Adding metas\n", md), Wd.push(...md), vd()
             },
             remove: function() {
-              for (var rr = arguments.length, Qr = new Array(rr), Wr = 0; Wr < rr; Wr++) Qr[Wr] = arguments[Wr];
-              Sr.debug("Removing metas\n", Qr), Zr = Zr.filter((rr => !Qr.includes(rr))), Er()
+              for (var dd = arguments.length, md = new Array(dd), Fd = 0; Fd < dd; Fd++) md[Fd] = arguments[Fd];
+              Od.debug("Removing metas\n", md), Wd = Wd.filter((dd => !md.includes(dd))), vd()
             },
-            addListener: rr => {
-              Sr.debug("Adding metas listener\n", rr), Wr.push(rr)
+            addListener: dd => {
+              Od.debug("Adding metas listener\n", dd), Fd.push(dd)
             },
-            removeListener: rr => {
-              Sr.debug("Removing metas listener\n", rr), Wr = Wr.filter((Sr => Sr !== rr))
+            removeListener: dd => {
+              Od.debug("Removing metas listener\n", dd), Fd = Fd.filter((Od => Od !== dd))
             },
-            capture: rr => {
-              var Sr;
-              const Zr = void 0 !== Qr,
-                Wr = null !== (Sr = Qr) && void 0 !== Sr ? Sr : ar;
-              Zr || (Qr = Wr, jr = 0, Ir = Wr.length);
+            capture: dd => {
+              var Od;
+              const Wd = void 0 !== md,
+                Fd = null !== (Od = md) && void 0 !== Od ? Od : Rd;
+              Wd || (md = Fd, Xd = 0, Kd = Fd.length);
               try {
-                for (; jr < Ir;) {
-                  const rr = Wr[jr++];
-                  null === rr || void 0 === rr || rr()
+                for (; Xd < Kd;) {
+                  const dd = Fd[Xd++];
+                  null === dd || void 0 === dd || dd()
                 }
-                const Sr = ga(fr());
-                return null === rr || void 0 === rr || rr(), Sr
+                const Od = nR(hd());
+                return null === dd || void 0 === dd || dd(), Od
               } finally {
-                Zr || (Qr = void 0)
+                Wd || (md = void 0)
               }
             },
-            addCaptureListener: rr => {
-              ar.push(rr)
+            addCaptureListener: dd => {
+              Rd.push(dd)
             },
-            removeCaptureListener: rr => {
-              ar = ar.filter((Sr => Sr !== rr))
+            removeCaptureListener: dd => {
+              Rd = Rd.filter((Od => Od !== dd))
             },
             get value() {
-              return fr()
+              return hd()
             }
           }
-        }(0, Qr),
-        Wr = Aa(Sr, Qr, rr, Zr),
-        ar = Ja(Sr, Qr, rr, Zr, Wr),
-        jr = function(rr, Sr, Qr, Zr, Wr, ar) {
-          Sr.debug("Initializing instrumentations");
-          const jr = [];
+        }(0, md),
+        Fd = jR(Od, md, dd, Wd),
+        Rd = fR(Od, md, dd, Wd, Fd),
+        Xd = function(dd, Od, md, Wd, Fd, Rd) {
+          Od.debug("Initializing instrumentations");
+          const Xd = [];
           return {
             add: function() {
-              Sr.debug("Adding instrumentations");
-              for (var Ir = arguments.length, fr = new Array(Ir), Er = 0; Er < Ir; Er++) fr[Er] = arguments[Er];
-              fr.forEach((Ir => {
-                Sr.debug(`Adding "${Ir.name}" instrumentation`), jr.some((rr => rr.name === Ir.name)) ? Sr.warn(`Instrumentation ${Ir.name} is already added`) : (Ir.unpatchedConsole = rr, Ir.internalLogger = Sr, Ir.config = Qr, Ir.metas = Zr, Ir.transports = Wr, Ir.api = ar, jr.push(Ir), Ir.initialize())
+              Od.debug("Adding instrumentations");
+              for (var Kd = arguments.length, hd = new Array(Kd), vd = 0; vd < Kd; vd++) hd[vd] = arguments[vd];
+              hd.forEach((Kd => {
+                Od.debug(`Adding "${Kd.name}" instrumentation`), Xd.some((dd => dd.name === Kd.name)) ? Od.warn(`Instrumentation ${Kd.name} is already added`) : (Kd.unpatchedConsole = dd, Kd.internalLogger = Od, Kd.config = md, Kd.metas = Wd, Kd.transports = Fd, Kd.api = Rd, Xd.push(Kd), Kd.initialize())
               }))
             },
             get instrumentations() {
-              return [...jr]
+              return [...Xd]
             },
             remove: function() {
-              Sr.debug("Removing instrumentations");
-              for (var rr = arguments.length, Qr = new Array(rr), Zr = 0; Zr < rr; Zr++) Qr[Zr] = arguments[Zr];
-              Qr.forEach((rr => {
-                var Qr, Zr;
-                Sr.debug(`Removing "${rr.name}" instrumentation`);
-                const Wr = jr.reduce(((Sr, Qr, Zr) => null === Sr && Qr.name === rr.name ? Zr : null), null);
-                null !== Wr ? (null === (Qr = (Zr = jr[Wr]).destroy) || void 0 === Qr || Qr.call(Zr), jr.splice(Wr, 1)) : Sr.warn(`Instrumentation "${rr.name}" is not added`)
+              Od.debug("Removing instrumentations");
+              for (var dd = arguments.length, md = new Array(dd), Wd = 0; Wd < dd; Wd++) md[Wd] = arguments[Wd];
+              md.forEach((dd => {
+                var md, Wd;
+                Od.debug(`Removing "${dd.name}" instrumentation`);
+                const Fd = Xd.reduce(((Od, md, Wd) => null === Od && md.name === dd.name ? Wd : null), null);
+                null !== Fd ? (null === (md = (Wd = Xd[Fd]).destroy) || void 0 === md || md.call(Wd), Xd.splice(Fd, 1)) : Od.warn(`Instrumentation "${dd.name}" is not added`)
               }))
             }
           }
-        }(Sr, Qr, rr, Zr, Wr, ar),
-        Ir = hr(Sr, Qr, rr, Zr, Wr, ar, jr);
-      return Ga(Ir),
-        function(rr) {
-          rr.transports.add(...rr.config.transports), rr.transports.addBeforeSendHooks(rr.config.beforeSend)
-        }(Ir),
-        function(rr) {
-          rr.instrumentations.add(...rr.config.instrumentations)
-        }(Ir), Ir
+        }(Od, md, dd, Wd, Fd, Rd),
+        Kd = yd(Od, md, dd, Wd, Fd, Rd, Xd);
+      return zR(Kd),
+        function(dd) {
+          dd.transports.add(...dd.config.transports), dd.transports.addBeforeSendHooks(dd.config.beforeSend)
+        }(Kd),
+        function(dd) {
+          dd.instrumentations.add(...dd.config.instrumentations)
+        }(Kd), Kd
     }
 
-    function da(rr) {
-      const Sr = Xa(rr);
-      if (Sr) return Da(Sr)
+    function dX(dd) {
+      const Od = VR(dd);
+      if (Od) return MR(Od)
     }
   },
-  7643: function(rr, Sr, Qr) {
-    var Zr;
-    ! function(Wr, ar) {
-      var jr = "function",
-        Ir = "undefined",
-        fr = "object",
-        Er = "string",
-        pr = "major",
-        xr = "model",
-        mr = "name",
-        Nr = "type",
-        Ur = "vendor",
-        tr = "version",
-        hr = "architecture",
-        zr = "console",
-        Yr = "mobile",
-        nr = "tablet",
-        er = "smarttv",
-        Kr = "wearable",
-        yr = "embedded",
-        Br = "Amazon",
-        Tr = "Apple",
-        vr = "ASUS",
-        Or = "BlackBerry",
-        Lr = "Browser",
-        lr = "Chrome",
-        Xr = "Firefox",
-        Pr = "Google",
-        Hr = "Honor",
-        qr = "Huawei",
-        Rr = "LG",
-        gr = "Microsoft",
-        Cr = "Motorola",
-        Mr = "Nvidia",
-        Gr = "OnePlus",
-        kr = "Opera",
-        Ar = "OPPO",
-        Vr = "Samsung",
-        ir = "Sharp",
-        wr = "Sony",
-        cr = "Xiaomi",
-        Fr = "Zebra",
-        or = "Facebook",
-        br = "Chromium OS",
-        Jr = "Mac OS",
-        Dr = " Browser",
-        dr = function(rr) {
-          for (var Sr = {}, Qr = 0; Qr < rr.length; Qr++) Sr[rr[Qr].toUpperCase()] = rr[Qr];
-          return Sr
+  7629: function(dd, Od, md) {
+    var Wd;
+    ! function(Fd, Rd) {
+      var Xd = "function",
+        Kd = "undefined",
+        hd = "object",
+        vd = "string",
+        Qd = "major",
+        td = "model",
+        od = "name",
+        Nd = "type",
+        qd = "vendor",
+        Hd = "version",
+        yd = "architecture",
+        bd = "console",
+        Td = "mobile",
+        pd = "tablet",
+        Yd = "smarttv",
+        gd = "wearable",
+        wd = "embedded",
+        Ed = "Amazon",
+        Jd = "Apple",
+        Ud = "ASUS",
+        xd = "BlackBerry",
+        Bd = "Browser",
+        Sd = "Chrome",
+        sd = "Firefox",
+        ud = "Google",
+        Vd = "Honor",
+        Ad = "Huawei",
+        rd = "LG",
+        Gd = "Microsoft",
+        nd = "Motorola",
+        Ld = "Nvidia",
+        Pd = "OnePlus",
+        zd = "Opera",
+        cd = "OPPO",
+        jd = "Samsung",
+        Dd = "Sharp",
+        ed = "Sony",
+        Id = "Xiaomi",
+        ld = "Zebra",
+        Cd = "Facebook",
+        Zd = "Chromium OS",
+        kd = "Mac OS",
+        fd = " Browser",
+        Md = function(dd) {
+          for (var Od = {}, md = 0; md < dd.length; md++) Od[dd[md].toUpperCase()] = dd[md];
+          return Od
         },
-        sr = function(rr, Sr) {
-          return typeof rr === Er && -1 !== ur(Sr).indexOf(ur(rr))
+        dO = function(dd, Od) {
+          return typeof dd === vd && -1 !== OO(Od).indexOf(OO(dd))
         },
-        ur = function(rr) {
-          return rr.toLowerCase()
+        OO = function(dd) {
+          return dd.toLowerCase()
         },
-        rS = function(rr, Sr) {
-          if (typeof rr === Er) return rr = rr.replace(/^\s\s*/, ""), typeof Sr === Ir ? rr : rr.substring(0, 500)
+        mO = function(dd, Od) {
+          if (typeof dd === vd) return dd = dd.replace(/^\s\s*/, ""), typeof Od === Kd ? dd : dd.substring(0, 500)
         },
-        SS = function(rr, Sr) {
-          for (var Qr, Zr, Wr, Ir, Er, pr, xr = 0; xr < Sr.length && !Er;) {
-            var mr = Sr[xr],
-              Nr = Sr[xr + 1];
-            for (Qr = Zr = 0; Qr < mr.length && !Er && mr[Qr];)
-              if (Er = mr[Qr++].exec(rr))
-                for (Wr = 0; Wr < Nr.length; Wr++) pr = Er[++Zr], typeof(Ir = Nr[Wr]) === fr && Ir.length > 0 ? 2 === Ir.length ? typeof Ir[1] == jr ? this[Ir[0]] = Ir[1].call(this, pr) : this[Ir[0]] = Ir[1] : 3 === Ir.length ? typeof Ir[1] !== jr || Ir[1].exec && Ir[1].test ? this[Ir[0]] = pr ? pr.replace(Ir[1], Ir[2]) : ar : this[Ir[0]] = pr ? Ir[1].call(this, pr, Ir[2]) : ar : 4 === Ir.length && (this[Ir[0]] = pr ? Ir[3].call(this, pr.replace(Ir[1], Ir[2])) : ar) : this[Ir] = pr || ar;
-            xr += 2
+        WO = function(dd, Od) {
+          for (var md, Wd, Fd, Kd, vd, Qd, td = 0; td < Od.length && !vd;) {
+            var od = Od[td],
+              Nd = Od[td + 1];
+            for (md = Wd = 0; md < od.length && !vd && od[md];)
+              if (vd = od[md++].exec(dd))
+                for (Fd = 0; Fd < Nd.length; Fd++) Qd = vd[++Wd], typeof(Kd = Nd[Fd]) === hd && Kd.length > 0 ? 2 === Kd.length ? typeof Kd[1] == Xd ? this[Kd[0]] = Kd[1].call(this, Qd) : this[Kd[0]] = Kd[1] : 3 === Kd.length ? typeof Kd[1] !== Xd || Kd[1].exec && Kd[1].test ? this[Kd[0]] = Qd ? Qd.replace(Kd[1], Kd[2]) : Rd : this[Kd[0]] = Qd ? Kd[1].call(this, Qd, Kd[2]) : Rd : 4 === Kd.length && (this[Kd[0]] = Qd ? Kd[3].call(this, Qd.replace(Kd[1], Kd[2])) : Rd) : this[Kd] = Qd || Rd;
+            td += 2
           }
         },
-        QS = function(rr, Sr) {
-          for (var Qr in Sr)
-            if (typeof Sr[Qr] === fr && Sr[Qr].length > 0) {
-              for (var Zr = 0; Zr < Sr[Qr].length; Zr++)
-                if (sr(Sr[Qr][Zr], rr)) return "?" === Qr ? ar : Qr
-            } else if (sr(Sr[Qr], rr)) return "?" === Qr ? ar : Qr;
-          return Sr.hasOwnProperty("*") ? Sr["*"] : rr
+        FO = function(dd, Od) {
+          for (var md in Od)
+            if (typeof Od[md] === hd && Od[md].length > 0) {
+              for (var Wd = 0; Wd < Od[md].length; Wd++)
+                if (dO(Od[md][Wd], dd)) return "?" === md ? Rd : md
+            } else if (dO(Od[md], dd)) return "?" === md ? Rd : md;
+          return Od.hasOwnProperty("*") ? Od["*"] : dd
         },
-        ZS = {
+        RO = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        WS = {
+        XO = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [tr, [mr, "Chrome"]],
+            [Hd, [od, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [tr, [mr, "Edge"]],
+            [Hd, [od, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [mr, tr],
+            [od, Hd],
             [/opios[\/ ]+([\w\.]+)/i],
-            [tr, [mr, kr + " Mini"]],
+            [Hd, [od, zd + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [tr, [mr, kr + " GX"]],
+            [Hd, [od, zd + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [tr, [mr, kr]],
+            [Hd, [od, zd]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [tr, [mr, "Baidu"]],
+            [Hd, [od, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [tr, [mr, "Maxthon"]],
+            [Hd, [od, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [mr, tr],
+            [od, Hd],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [tr, [mr, "Quark"]],
+            [Hd, [od, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [tr, [mr, "DuckDuckGo"]],
+            [Hd, [od, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [tr, [mr, "UC" + Lr]],
+            [Hd, [od, "UC" + Bd]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [tr, [mr, "WeChat"]],
+            [Hd, [od, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [tr, [mr, "Konqueror"]],
+            [Hd, [od, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [tr, [mr, "IE"]],
+            [Hd, [od, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [tr, [mr, "Yandex"]],
+            [Hd, [od, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [tr, [mr, "Smart Lenovo " + Lr]],
+            [Hd, [od, "Smart Lenovo " + Bd]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [mr, /(.+)/, "$1 Secure " + Lr], tr
+              [od, /(.+)/, "$1 Secure " + Bd], Hd
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [tr, [mr, Xr + " Focus"]],
+            [Hd, [od, sd + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [tr, [mr, kr + " Touch"]],
+            [Hd, [od, zd + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [tr, [mr, "Coc Coc"]],
+            [Hd, [od, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [tr, [mr, "Dolphin"]],
+            [Hd, [od, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [tr, [mr, kr + " Coast"]],
+            [Hd, [od, zd + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [tr, [mr, "MIUI" + Dr]],
+            [Hd, [od, "MIUI" + fd]],
             [/fxios\/([\w\.-]+)/i],
-            [tr, [mr, Xr]],
+            [Hd, [od, sd]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [tr, [mr, "360"]],
+            [Hd, [od, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [mr, /(.+)/, "$1Browser"], tr
+              [od, /(.+)/, "$1Browser"], Hd
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [mr, /(.+)/, "$1" + Dr], tr
+              [od, /(.+)/, "$1" + fd], Hd
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [tr, [mr, Vr + " Internet"]],
+            [Hd, [od, jd + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [tr, [mr, "Sogou Explorer"]],
+            [Hd, [od, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [mr, "Sogou Mobile"], tr
+              [od, "Sogou Mobile"], Hd
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [mr, tr],
+            [od, Hd],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [mr],
+            [od],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [tr, mr],
+            [Hd, od],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [mr, or], tr
+              [od, Cd], Hd
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [mr, tr],
+            [od, Hd],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [tr, [mr, "GSA"]],
+            [Hd, [od, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [tr, [mr, "TikTok"]],
+            [Hd, [od, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [tr, [mr, lr + " Headless"]],
+            [Hd, [od, Sd + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [mr, lr + " WebView"], tr
+              [od, Sd + " WebView"], Hd
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [tr, [mr, "Android " + Lr]],
+            [Hd, [od, "Android " + Bd]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [mr, tr],
+            [od, Hd],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [tr, [mr, "Mobile Safari"]],
+            [Hd, [od, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [tr, mr],
+            [Hd, od],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [mr, [tr, QS, {
+            [od, [Hd, FO, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [mr, tr],
+            [od, Hd],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [mr, "Netscape"], tr
+              [od, "Netscape"], Hd
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [mr, tr],
+            [od, Hd],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [tr, [mr, Xr + " Reality"]],
+            [Hd, [od, sd + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [mr, [tr, /_/g, "."]],
+            [od, [Hd, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [mr, [tr, /master.|lts./, ""]]
+            [od, [Hd, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [hr, "amd64"]
+              [yd, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [hr, "ia32"]
+              [yd, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [hr, "arm64"]
+              [yd, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [hr, "armhf"]
+              [yd, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [hr, "arm"]
+              [yd, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [hr, /ower/, "", ur]
+              [yd, /ower/, "", OO]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [hr, "sparc"]
+              [yd, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [hr, ur]
+              [yd, OO]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [xr, [Ur, Vr],
-              [Nr, nr]
+            [td, [qd, jd],
+              [Nd, pd]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [xr, [Ur, Vr],
-              [Nr, Yr]
+            [td, [qd, jd],
+              [Nd, Td]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [xr, [Ur, Tr],
-              [Nr, Yr]
+            [td, [qd, Jd],
+              [Nd, Td]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [xr, [Ur, Tr],
-              [Nr, nr]
+            [td, [qd, Jd],
+              [Nd, pd]
             ],
             [/(macintosh);/i],
-            [xr, [Ur, Tr]],
+            [td, [qd, Jd]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [xr, [Ur, ir],
-              [Nr, Yr]
+            [td, [qd, Dd],
+              [Nd, Td]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [xr, [Ur, Hr],
-              [Nr, nr]
+            [td, [qd, Vd],
+              [Nd, pd]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [xr, [Ur, Hr],
-              [Nr, Yr]
+            [td, [qd, Vd],
+              [Nd, Td]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [xr, [Ur, qr],
-              [Nr, nr]
+            [td, [qd, Ad],
+              [Nd, pd]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [xr, [Ur, qr],
-              [Nr, Yr]
+            [td, [qd, Ad],
+              [Nd, Td]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [xr, /_/g, " "],
-              [Ur, cr],
-              [Nr, nr]
+              [td, /_/g, " "],
+              [qd, Id],
+              [Nd, pd]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [xr, /_/g, " "],
-              [Ur, cr],
-              [Nr, Yr]
+              [td, /_/g, " "],
+              [qd, Id],
+              [Nd, Td]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [xr, [Ur, Ar],
-              [Nr, Yr]
+            [td, [qd, cd],
+              [Nd, Td]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [xr, [Ur, QS, {
+            [td, [qd, FO, {
                 OnePlus: ["304", "403", "203"],
-                "*": Ar
+                "*": cd
               }],
-              [Nr, nr]
+              [Nd, pd]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [xr, [Ur, "Vivo"],
-              [Nr, Yr]
+            [td, [qd, "Vivo"],
+              [Nd, Td]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [xr, [Ur, "Realme"],
-              [Nr, Yr]
+            [td, [qd, "Realme"],
+              [Nd, Td]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [xr, [Ur, Cr],
-              [Nr, Yr]
+            [td, [qd, nd],
+              [Nd, Td]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [xr, [Ur, Cr],
-              [Nr, nr]
+            [td, [qd, nd],
+              [Nd, pd]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [xr, [Ur, Rr],
-              [Nr, nr]
+            [td, [qd, rd],
+              [Nd, pd]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [xr, [Ur, Rr],
-              [Nr, Yr]
+            [td, [qd, rd],
+              [Nd, Td]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [xr, [Ur, "Lenovo"],
-              [Nr, nr]
+            [td, [qd, "Lenovo"],
+              [Nd, pd]
             ],
             [/(nokia) (t[12][01])/i],
-            [Ur, xr, [Nr, nr]],
+            [qd, td, [Nd, pd]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [xr, /_/g, " "],
-              [Nr, Yr],
-              [Ur, "Nokia"]
+              [td, /_/g, " "],
+              [Nd, Td],
+              [qd, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [xr, [Ur, Pr],
-              [Nr, nr]
+            [td, [qd, ud],
+              [Nd, pd]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [xr, [Ur, Pr],
-              [Nr, Yr]
+            [td, [qd, ud],
+              [Nd, Td]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [xr, [Ur, wr],
-              [Nr, Yr]
+            [td, [qd, ed],
+              [Nd, Td]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [xr, "Xperia Tablet"],
-              [Ur, wr],
-              [Nr, nr]
+              [td, "Xperia Tablet"],
+              [qd, ed],
+              [Nd, pd]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [xr, [Ur, Gr],
-              [Nr, Yr]
+            [td, [qd, Pd],
+              [Nd, Td]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [xr, [Ur, Br],
-              [Nr, nr]
+            [td, [qd, Ed],
+              [Nd, pd]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [xr, /(.+)/g, "Fire Phone $1"],
-              [Ur, Br],
-              [Nr, Yr]
+              [td, /(.+)/g, "Fire Phone $1"],
+              [qd, Ed],
+              [Nd, Td]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [xr, Ur, [Nr, nr]],
+            [td, qd, [Nd, pd]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [xr, [Ur, Or],
-              [Nr, Yr]
+            [td, [qd, xd],
+              [Nd, Td]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [xr, [Ur, vr],
-              [Nr, nr]
+            [td, [qd, Ud],
+              [Nd, pd]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [xr, [Ur, vr],
-              [Nr, Yr]
+            [td, [qd, Ud],
+              [Nd, Td]
             ],
             [/(nexus 9)/i],
-            [xr, [Ur, "HTC"],
-              [Nr, nr]
+            [td, [qd, "HTC"],
+              [Nd, pd]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [Ur, [xr, /_/g, " "],
-              [Nr, Yr]
+            [qd, [td, /_/g, " "],
+              [Nd, Td]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [xr, [Ur, "TCL"],
-              [Nr, nr]
+            [td, [qd, "TCL"],
+              [Nd, pd]
             ],
             [/(itel) ((\w+))/i],
             [
-              [Ur, ur], xr, [Nr, QS, {
+              [qd, OO], td, [Nd, FO, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [xr, [Ur, "Acer"],
-              [Nr, nr]
+            [td, [qd, "Acer"],
+              [Nd, pd]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [xr, [Ur, "Meizu"],
-              [Nr, Yr]
+            [td, [qd, "Meizu"],
+              [Nd, Td]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [xr, [Ur, "Ulefone"],
-              [Nr, Yr]
+            [td, [qd, "Ulefone"],
+              [Nd, Td]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [xr, [Ur, "Energizer"],
-              [Nr, Yr]
+            [td, [qd, "Energizer"],
+              [Nd, Td]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [xr, [Ur, "Cat"],
-              [Nr, Yr]
+            [td, [qd, "Cat"],
+              [Nd, Td]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [xr, [Ur, "Smartfren"],
-              [Nr, Yr]
+            [td, [qd, "Smartfren"],
+              [Nd, Td]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [xr, [Ur, "Nothing"],
-              [Nr, Yr]
+            [td, [qd, "Nothing"],
+              [Nd, Td]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [xr, [Ur, "Archos"],
-              [Nr, nr]
+            [td, [qd, "Archos"],
+              [Nd, pd]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [xr, [Ur, "Archos"],
-              [Nr, Yr]
+            [td, [qd, "Archos"],
+              [Nd, Td]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [Ur, xr, [Nr, nr]],
+            [qd, td, [Nd, pd]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [Ur, xr, [Nr, Yr]],
+            [qd, td, [Nd, Td]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [Ur, xr, [Nr, nr]],
+            [qd, td, [Nd, pd]],
             [/(surface duo)/i],
-            [xr, [Ur, gr],
-              [Nr, nr]
+            [td, [qd, Gd],
+              [Nd, pd]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [xr, [Ur, "Fairphone"],
-              [Nr, Yr]
+            [td, [qd, "Fairphone"],
+              [Nd, Td]
             ],
             [/(u304aa)/i],
-            [xr, [Ur, "AT&T"],
-              [Nr, Yr]
+            [td, [qd, "AT&T"],
+              [Nd, Td]
             ],
             [/\bsie-(\w*)/i],
-            [xr, [Ur, "Siemens"],
-              [Nr, Yr]
+            [td, [qd, "Siemens"],
+              [Nd, Td]
             ],
             [/\b(rct\w+) b/i],
-            [xr, [Ur, "RCA"],
-              [Nr, nr]
+            [td, [qd, "RCA"],
+              [Nd, pd]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [xr, [Ur, "Dell"],
-              [Nr, nr]
+            [td, [qd, "Dell"],
+              [Nd, pd]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [xr, [Ur, "Verizon"],
-              [Nr, nr]
+            [td, [qd, "Verizon"],
+              [Nd, pd]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [xr, [Ur, "Barnes & Noble"],
-              [Nr, nr]
+            [td, [qd, "Barnes & Noble"],
+              [Nd, pd]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [xr, [Ur, "NuVision"],
-              [Nr, nr]
+            [td, [qd, "NuVision"],
+              [Nd, pd]
             ],
             [/\b(k88) b/i],
-            [xr, [Ur, "ZTE"],
-              [Nr, nr]
+            [td, [qd, "ZTE"],
+              [Nd, pd]
             ],
             [/\b(nx\d{3}j) b/i],
-            [xr, [Ur, "ZTE"],
-              [Nr, Yr]
+            [td, [qd, "ZTE"],
+              [Nd, Td]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [xr, [Ur, "Swiss"],
-              [Nr, Yr]
+            [td, [qd, "Swiss"],
+              [Nd, Td]
             ],
             [/\b(zur\d{3}) b/i],
-            [xr, [Ur, "Swiss"],
-              [Nr, nr]
+            [td, [qd, "Swiss"],
+              [Nd, pd]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [xr, [Ur, "Zeki"],
-              [Nr, nr]
+            [td, [qd, "Zeki"],
+              [Nd, pd]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [Ur, "Dragon Touch"], xr, [Nr, nr]
+              [qd, "Dragon Touch"], td, [Nd, pd]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [xr, [Ur, "Insignia"],
-              [Nr, nr]
+            [td, [qd, "Insignia"],
+              [Nd, pd]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [xr, [Ur, "NextBook"],
-              [Nr, nr]
+            [td, [qd, "NextBook"],
+              [Nd, pd]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [Ur, "Voice"], xr, [Nr, Yr]
+              [qd, "Voice"], td, [Nd, Td]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [Ur, "LvTel"], xr, [Nr, Yr]
+              [qd, "LvTel"], td, [Nd, Td]
             ],
             [/\b(ph-1) /i],
-            [xr, [Ur, "Essential"],
-              [Nr, Yr]
+            [td, [qd, "Essential"],
+              [Nd, Td]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [xr, [Ur, "Envizen"],
-              [Nr, nr]
+            [td, [qd, "Envizen"],
+              [Nd, pd]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [xr, [Ur, "MachSpeed"],
-              [Nr, nr]
+            [td, [qd, "MachSpeed"],
+              [Nd, pd]
             ],
             [/\btu_(1491) b/i],
-            [xr, [Ur, "Rotor"],
-              [Nr, nr]
+            [td, [qd, "Rotor"],
+              [Nd, pd]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [xr, [Ur, Mr],
-              [Nr, nr]
+            [td, [qd, Ld],
+              [Nd, pd]
             ],
             [/(sprint) (\w+)/i],
-            [Ur, xr, [Nr, Yr]],
+            [qd, td, [Nd, Td]],
             [/(kin\.[onetw]{3})/i],
             [
-              [xr, /\./g, " "],
-              [Ur, gr],
-              [Nr, Yr]
+              [td, /\./g, " "],
+              [qd, Gd],
+              [Nd, Td]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [xr, [Ur, Fr],
-              [Nr, nr]
+            [td, [qd, ld],
+              [Nd, pd]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [xr, [Ur, Fr],
-              [Nr, Yr]
+            [td, [qd, ld],
+              [Nd, Td]
             ],
             [/smart-tv.+(samsung)/i],
-            [Ur, [Nr, er]],
+            [qd, [Nd, Yd]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [xr, /^/, "SmartTV"],
-              [Ur, Vr],
-              [Nr, er]
+              [td, /^/, "SmartTV"],
+              [qd, jd],
+              [Nd, Yd]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [Ur, Rr],
-              [Nr, er]
+              [qd, rd],
+              [Nd, Yd]
             ],
             [/(apple) ?tv/i],
-            [Ur, [xr, Tr + " TV"],
-              [Nr, er]
+            [qd, [td, Jd + " TV"],
+              [Nd, Yd]
             ],
             [/crkey/i],
             [
-              [xr, lr + "cast"],
-              [Ur, Pr],
-              [Nr, er]
+              [td, Sd + "cast"],
+              [qd, ud],
+              [Nd, Yd]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [xr, [Ur, Br],
-              [Nr, er]
+            [td, [qd, Ed],
+              [Nd, Yd]
             ],
             [/(shield \w+ tv)/i],
-            [xr, [Ur, Mr],
-              [Nr, er]
+            [td, [qd, Ld],
+              [Nd, Yd]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [xr, [Ur, ir],
-              [Nr, er]
+            [td, [qd, Dd],
+              [Nd, Yd]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [xr, [Ur, wr],
-              [Nr, er]
+            [td, [qd, ed],
+              [Nd, Yd]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [xr, [Ur, cr],
-              [Nr, er]
+            [td, [qd, Id],
+              [Nd, Yd]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [Ur, xr, [Nr, er]],
+            [qd, td, [Nd, Yd]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [Ur, rS],
-              [xr, rS],
-              [Nr, er]
+              [qd, mO],
+              [td, mO],
+              [Nd, Yd]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [xr, [Nr, er]],
+            [td, [Nd, Yd]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [Nr, er]
+              [Nd, Yd]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [Ur, xr, [Nr, zr]],
+            [qd, td, [Nd, bd]],
             [/droid.+; (shield)( bui|\))/i],
-            [xr, [Ur, Mr],
-              [Nr, zr]
+            [td, [qd, Ld],
+              [Nd, bd]
             ],
             [/(playstation \w+)/i],
-            [xr, [Ur, wr],
-              [Nr, zr]
+            [td, [qd, ed],
+              [Nd, bd]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [xr, [Ur, gr],
-              [Nr, zr]
+            [td, [qd, Gd],
+              [Nd, bd]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [xr, [Ur, Vr],
-              [Nr, Kr]
+            [td, [qd, jd],
+              [Nd, gd]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [Ur, xr, [Nr, Kr]],
+            [qd, td, [Nd, gd]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [xr, [Ur, Ar],
-              [Nr, Kr]
+            [td, [qd, cd],
+              [Nd, gd]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [xr, [Ur, Tr],
-              [Nr, Kr]
+            [td, [qd, Jd],
+              [Nd, gd]
             ],
             [/(opwwe\d{3})/i],
-            [xr, [Ur, Gr],
-              [Nr, Kr]
+            [td, [qd, Pd],
+              [Nd, gd]
             ],
             [/(moto 360)/i],
-            [xr, [Ur, Cr],
-              [Nr, Kr]
+            [td, [qd, nd],
+              [Nd, gd]
             ],
             [/(smartwatch 3)/i],
-            [xr, [Ur, wr],
-              [Nr, Kr]
+            [td, [qd, ed],
+              [Nd, gd]
             ],
             [/(g watch r)/i],
-            [xr, [Ur, Rr],
-              [Nr, Kr]
+            [td, [qd, rd],
+              [Nd, gd]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [xr, [Ur, Fr],
-              [Nr, Kr]
+            [td, [qd, ld],
+              [Nd, gd]
             ],
             [/droid.+; (glass) \d/i],
-            [xr, [Ur, Pr],
-              [Nr, Kr]
+            [td, [qd, ud],
+              [Nd, gd]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [Ur, xr, [Nr, Kr]],
+            [qd, td, [Nd, gd]],
             [/; (quest( \d| pro)?)/i],
-            [xr, [Ur, or],
-              [Nr, Kr]
+            [td, [qd, Cd],
+              [Nd, gd]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [Ur, [Nr, yr]],
+            [qd, [Nd, wd]],
             [/(aeobc)\b/i],
-            [xr, [Ur, Br],
-              [Nr, yr]
+            [td, [qd, Ed],
+              [Nd, wd]
             ],
             [/(homepod).+mac os/i],
-            [xr, [Ur, Tr],
-              [Nr, yr]
+            [td, [qd, Jd],
+              [Nd, wd]
             ],
             [/windows iot/i],
             [
-              [Nr, yr]
+              [Nd, wd]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [xr, [Nr, Yr]],
+            [td, [Nd, Td]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [xr, [Nr, nr]],
+            [td, [Nd, pd]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [Nr, nr]
+              [Nd, pd]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [Nr, Yr]
+              [Nd, Td]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [xr, [Ur, "Generic"]]
+            [td, [qd, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [tr, [mr, "EdgeHTML"]],
+            [Hd, [od, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [mr, tr],
+            [od, Hd],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [tr, [mr, "Blink"]],
+            [Hd, [od, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [mr, tr],
+            [od, Hd],
             [/ladybird\//i],
             [
-              [mr, "LibWeb"]
+              [od, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [tr, mr]
+            [Hd, od]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [mr, tr],
+            [od, Hd],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [mr, [tr, QS, ZS]],
+            [od, [Hd, FO, RO]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [tr, QS, ZS],
-              [mr, "Windows"]
+              [Hd, FO, RO],
+              [od, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [tr, /_/g, "."],
-              [mr, "iOS"]
+              [Hd, /_/g, "."],
+              [od, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [mr, Jr],
-              [tr, /_/g, "."]
+              [od, kd],
+              [Hd, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [tr, mr],
+            [Hd, od],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [mr, /(.+)/, "$1 Touch"], tr
+              [od, /(.+)/, "$1 Touch"], Hd
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [mr, tr],
+            [od, Hd],
             [/\(bb(10);/i],
-            [tr, [mr, Or]],
+            [Hd, [od, xd]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [tr, [mr, "Symbian"]],
+            [Hd, [od, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [tr, [mr, Xr + " OS"]],
+            [Hd, [od, sd + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [tr, [mr, "webOS"]],
+            [Hd, [od, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [tr, [mr, "watchOS"]],
+            [Hd, [od, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [tr, [mr, lr + "cast"]],
+            [Hd, [od, Sd + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [mr, br], tr
+              [od, Zd], Hd
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [mr, tr],
+            [od, Hd],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [mr, "Solaris"], tr
+              [od, "Solaris"], Hd
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [mr, tr]
+            [od, Hd]
           ]
         },
-        aS = function(rr, Sr) {
-          if (typeof rr === fr && (Sr = rr, rr = ar), !(this instanceof aS)) return new aS(rr, Sr).getResult();
-          var Qr = typeof Wr !== Ir && Wr.navigator ? Wr.navigator : ar,
-            Zr = rr || (Qr && Qr.userAgent ? Qr.userAgent : ""),
-            zr = Qr && Qr.userAgentData ? Qr.userAgentData : ar,
-            er = Sr ? function(rr, Sr) {
-              var Qr = {};
-              for (var Zr in rr) Sr[Zr] && Sr[Zr].length % 2 === 0 ? Qr[Zr] = Sr[Zr].concat(rr[Zr]) : Qr[Zr] = rr[Zr];
-              return Qr
-            }(WS, Sr) : WS,
-            Kr = Qr && Qr.userAgent == Zr;
+        KO = function(dd, Od) {
+          if (typeof dd === hd && (Od = dd, dd = Rd), !(this instanceof KO)) return new KO(dd, Od).getResult();
+          var md = typeof Fd !== Kd && Fd.navigator ? Fd.navigator : Rd,
+            Wd = dd || (md && md.userAgent ? md.userAgent : ""),
+            bd = md && md.userAgentData ? md.userAgentData : Rd,
+            Yd = Od ? function(dd, Od) {
+              var md = {};
+              for (var Wd in dd) Od[Wd] && Od[Wd].length % 2 === 0 ? md[Wd] = Od[Wd].concat(dd[Wd]) : md[Wd] = dd[Wd];
+              return md
+            }(XO, Od) : XO,
+            gd = md && md.userAgent == Wd;
           return this.getBrowser = function() {
-            var rr, Sr = {};
-            return Sr[mr] = ar, Sr[tr] = ar, SS.call(Sr, Zr, er.browser), Sr[pr] = typeof(rr = Sr[tr]) === Er ? rr.replace(/[^\d\.]/g, "").split(".")[0] : ar, Kr && Qr && Qr.brave && typeof Qr.brave.isBrave == jr && (Sr[mr] = "Brave"), Sr
+            var dd, Od = {};
+            return Od[od] = Rd, Od[Hd] = Rd, WO.call(Od, Wd, Yd.browser), Od[Qd] = typeof(dd = Od[Hd]) === vd ? dd.replace(/[^\d\.]/g, "").split(".")[0] : Rd, gd && md && md.brave && typeof md.brave.isBrave == Xd && (Od[od] = "Brave"), Od
           }, this.getCPU = function() {
-            var rr = {};
-            return rr[hr] = ar, SS.call(rr, Zr, er.cpu), rr
+            var dd = {};
+            return dd[yd] = Rd, WO.call(dd, Wd, Yd.cpu), dd
           }, this.getDevice = function() {
-            var rr = {};
-            return rr[Ur] = ar, rr[xr] = ar, rr[Nr] = ar, SS.call(rr, Zr, er.device), Kr && !rr[Nr] && zr && zr.mobile && (rr[Nr] = Yr), Kr && "Macintosh" == rr[xr] && Qr && typeof Qr.standalone !== Ir && Qr.maxTouchPoints && Qr.maxTouchPoints > 2 && (rr[xr] = "iPad", rr[Nr] = nr), rr
-          }, this.MU = function() {
-            var rr = {};
-            return rr[mr] = ar, rr[tr] = ar, SS.call(rr, Zr, er.engine), rr
+            var dd = {};
+            return dd[qd] = Rd, dd[td] = Rd, dd[Nd] = Rd, WO.call(dd, Wd, Yd.device), gd && !dd[Nd] && bd && bd.mobile && (dd[Nd] = Td), gd && "Macintosh" == dd[td] && md && typeof md.standalone !== Kd && md.maxTouchPoints && md.maxTouchPoints > 2 && (dd[td] = "iPad", dd[Nd] = pd), dd
+          }, this.Iq = function() {
+            var dd = {};
+            return dd[od] = Rd, dd[Hd] = Rd, WO.call(dd, Wd, Yd.engine), dd
           }, this.getOS = function() {
-            var rr = {};
-            return rr[mr] = ar, rr[tr] = ar, SS.call(rr, Zr, er.os), Kr && !rr[mr] && zr && zr.platform && "Unknown" != zr.platform && (rr[mr] = zr.platform.replace(/chrome os/i, br).replace(/macos/i, Jr)), rr
+            var dd = {};
+            return dd[od] = Rd, dd[Hd] = Rd, WO.call(dd, Wd, Yd.os), gd && !dd[od] && bd && bd.platform && "Unknown" != bd.platform && (dd[od] = bd.platform.replace(/chrome os/i, Zd).replace(/macos/i, kd)), dd
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.MU(),
+              engine: this.Iq(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return Zr
-          }, this.setUA = function(rr) {
-            return Zr = typeof rr === Er && rr.length > 500 ? rS(rr, 500) : rr, this
-          }, this.setUA(Zr), this
+            return Wd
+          }, this.setUA = function(dd) {
+            return Wd = typeof dd === vd && dd.length > 500 ? mO(dd, 500) : dd, this
+          }, this.setUA(Wd), this
         };
-      aS.VERSION = "1.0.41", aS.BROWSER = dr([mr, tr, pr]), aS.CPU = dr([hr]), aS.DEVICE = dr([xr, Ur, Nr, zr, Yr, er, nr, Kr, yr]), aS.ENGINE = aS.OS = dr([mr, tr]), typeof Sr !== Ir ? (rr.exports && (Sr = rr.exports = aS), Sr.UAParser = aS) : Qr.amdO ? (Zr = function() {
-        return aS
-      }.call(Sr, Qr, Sr, rr)) === ar || (rr.exports = Zr) : typeof Wr !== Ir && (Wr.UAParser = aS);
-      var jS = typeof Wr !== Ir && (Wr.jQuery || Wr.Zepto);
-      if (jS && !jS.ua) {
-        var IS = new aS;
-        jS.ua = IS.getResult(), jS.ua.get = function() {
-          return IS.getUA()
-        }, jS.ua.set = function(rr) {
-          IS.setUA(rr);
-          var Sr = IS.getResult();
-          for (var Qr in Sr) jS.ua[Qr] = Sr[Qr]
+      KO.VERSION = "1.0.41", KO.BROWSER = Md([od, Hd, Qd]), KO.CPU = Md([yd]), KO.DEVICE = Md([td, qd, Nd, bd, Td, Yd, pd, gd, wd]), KO.ENGINE = KO.OS = Md([od, Hd]), typeof Od !== Kd ? (dd.exports && (Od = dd.exports = KO), Od.UAParser = KO) : md.amdO ? (Wd = function() {
+        return KO
+      }.call(Od, md, Od, dd)) === Rd || (dd.exports = Wd) : typeof Fd !== Kd && (Fd.UAParser = KO);
+      var hO = typeof Fd !== Kd && (Fd.jQuery || Fd.Zepto);
+      if (hO && !hO.ua) {
+        var vO = new KO;
+        hO.ua = vO.getResult(), hO.ua.get = function() {
+          return vO.getUA()
+        }, hO.ua.set = function(dd) {
+          vO.setUA(dd);
+          var Od = vO.getResult();
+          for (var md in Od) hO.ua[md] = Od[md]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

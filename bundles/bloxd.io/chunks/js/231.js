@@ -1,618 +1,618 @@
 export const id = 231;
 export const ids = [231];
 export const modules = {
-  37835: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => QS
+  37931: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => FO
     });
-    var Zr = Qr(72);
-    const Wr = "newPlayerDeal",
-      ar = 36e5,
-      jr = [4, 12, 20, 20, 30];
-    const Ir = 12 * ar;
+    var Wd = md(66);
+    const Fd = "newPlayerDeal",
+      Rd = 36e5,
+      Xd = [4, 12, 20, 20, 30];
+    const Kd = 12 * Rd;
 
-    function fr(rr) {
-      return rr - Ir
+    function hd(dd) {
+      return dd - Kd
     }
 
-    function Er(rr, Sr, Qr) {
-      const Zr = fr(Qr);
-      return Sr >= Zr && Sr < Qr && (null === rr.lastShownAt || rr.lastShownAt < Zr)
+    function vd(dd, Od, md) {
+      const Wd = hd(md);
+      return Od >= Wd && Od < md && (null === dd.lastShownAt || dd.lastShownAt < Wd)
     }
 
-    function pr(rr, Sr) {
+    function Qd(dd, Od) {
       const {
-        arrival: Qr,
-        now: Zr,
-        endsAt: Wr,
-        playedOnDevice: Ir
-      } = Sr;
-      return !(Zr >= Wr || !Ir) && (!(!Er(rr, Zr, Wr) && 0 !== rr.shownCount && null !== rr.lastShownAt) || "open" === Qr && Zr - rr.lastShownAt >= (fr = rr.shownCount, jr[Math.min(Math.max(fr, 1), jr.length) - 1] * ar));
-      var fr
+        arrival: md,
+        now: Wd,
+        endsAt: Fd,
+        playedOnDevice: Kd
+      } = Od;
+      return !(Wd >= Fd || !Kd) && (!(!vd(dd, Wd, Fd) && 0 !== dd.shownCount && null !== dd.lastShownAt) || "open" === md && Wd - dd.lastShownAt >= (hd = dd.shownCount, Xd[Math.min(Math.max(hd, 1), Xd.length) - 1] * Rd));
+      var hd
     }
-    var xr = Qr(360),
-      mr = Qr(1605),
-      Nr = Qr(26),
-      Ur = Qr(3192),
-      tr = Qr(4131),
-      hr = Qr(4135),
-      zr = Qr(2110),
-      Yr = Qr(1262),
-      nr = Qr(1187);
-    var er = Qr(1475),
-      Kr = Qr(43),
-      yr = Qr(727),
-      Br = Qr(3570),
-      Tr = Qr(1481),
-      vr = Qr(3572),
-      Or = Qr(3184),
-      Lr = Qr(1181),
-      lr = Qr(3612),
-      Xr = Qr(3617),
-      Pr = Qr(4170),
-      Hr = Qr(1251),
-      qr = Qr(1576),
-      Rr = Qr(4190),
-      gr = Qr(35523),
-      Cr = Qr(3619),
-      Mr = Qr(35532),
-      Gr = Qr(1338);
+    var td = md(387),
+      od = md(1605),
+      Nd = md(29),
+      qd = md(3184),
+      Hd = md(4113),
+      yd = md(4122),
+      bd = md(2111),
+      Td = md(1253),
+      pd = md(1189);
+    var Yd = md(1462),
+      gd = md(46),
+      wd = md(747),
+      Ed = md(3568),
+      Jd = md(1466),
+      Ud = md(3573),
+      xd = md(3181),
+      Bd = md(1186),
+      Sd = md(3610),
+      sd = md(3618),
+      ud = md(4164),
+      Vd = md(1238),
+      Ad = md(1572),
+      rd = md(4184),
+      Gd = md(35602),
+      nd = md(3621),
+      Ld = md(35611),
+      Pd = md(1341);
 
-    function kr(rr) {
+    function zd(dd) {
       let {
-        shownView: Sr,
-        close: Qr
-      } = rr;
+        shownView: Od,
+        close: md
+      } = dd;
       const {
-        t: Wr
-      } = (0, Hr.E)(), ar = (0, lr.R)(), {
-        purchaseUnderWay: jr,
-        notice: Ir,
-        needsLogin: fr,
-        buyPack: Er
-      } = (0, Mr.e)("popup", ((rr, Sr) => {
-        Qr(!1), (0, Pr.e)(rr, Sr)
-      })), pr = null === ar;
-      (0, Zr.useEffect)((() => {
-        pr && Qr(!1)
-      }), [pr, Qr]);
-      const xr = null !== ar && void 0 !== ar ? ar : Sr;
-      return (0, Gr.jsxs)("div", {
+        t: Fd
+      } = (0, Vd.G)(), Rd = (0, Sd.O)(), {
+        purchaseUnderWay: Xd,
+        notice: Kd,
+        needsLogin: hd,
+        buyPack: vd
+      } = (0, Ld.d)("popup", ((dd, Od) => {
+        md(!1), (0, ud.d)(dd, Od)
+      })), Qd = null === Rd;
+      (0, Wd.useEffect)((() => {
+        Qd && md(!1)
+      }), [Qd, md]);
+      const td = null !== Rd && void 0 !== Rd ? Rd : Od;
+      return (0, Pd.jsxs)("div", {
         className: "NewPlayerDealPopup",
-        children: [(0, Gr.jsx)("div", {
+        children: [(0, Pd.jsx)("div", {
           className: "NewPlayerDealPopupTitle",
-          children: Wr("newPlayerDeal:title")
-        }), (0, Gr.jsx)("div", {
+          children: Fd("newPlayerDeal:title")
+        }), (0, Pd.jsx)("div", {
           className: "NewPlayerDealPopupSub",
-          children: Wr("newPlayerDeal:samePrice")
-        }), (0, Gr.jsx)(gr.d, {
+          children: Fd("newPlayerDeal:samePrice")
+        }), (0, Pd.jsx)(Gd.c, {
           className: "NewPlayerDealClockBig",
-          endsAt: xr.endsAt
-        }), (0, Gr.jsx)(gr.g, {
-          view: xr,
-          needsLogin: fr,
-          busy: jr,
+          endsAt: td.endsAt
+        }), (0, Pd.jsx)(Gd.f, {
+          view: td,
+          needsLogin: hd,
+          busy: Xd,
           highlight: null,
-          onBuy: rr => {
-            Er(xr, rr)
+          onBuy: dd => {
+            vd(td, dd)
           }
-        }), (0, Gr.jsx)(Rr.h, {
-          notice: Ir,
+        }), (0, Pd.jsx)(rd.j, {
+          notice: Kd,
           className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, Gr.jsx)(Rr.c, {
+        }), (0, Pd.jsx)(rd.c, {
           className: "SmallTextBold NewPlayerDealNotice"
-        }), (0, Gr.jsx)(qr.L, {
+        }), (0, Pd.jsx)(Ad.G, {
           className: "NewPlayerDealNoThanks",
           onClick: () => {
-            Qr(!0)
+            md(!0)
           },
-          children: Wr("newPlayerDeal:noThanks")
+          children: Fd("newPlayerDeal:noThanks")
         })]
       })
     }
 
-    function Ar(rr) {
+    function cd(dd) {
       let {
-        arm: Sr,
-        children: Qr
-      } = rr;
-      return (0, Zr.useEffect)((() => {
-        (0, lr.I)(!0)
-      }), []), (0, lr.S)(Sr, "popup"), Qr
+        arm: Od,
+        children: md
+      } = dd;
+      return (0, Wd.useEffect)((() => {
+        (0, Sd.D)(!0)
+      }), []), (0, Sd.Q)(Od, "popup"), md
     }
 
-    function Vr(rr) {
-      let Sr = null;
-      er.NotificationProvider.showCustomPopup({
-        body: Qr => (0, Gr.jsx)(Ar, {
-          arm: rr.arm,
-          children: (0, Gr.jsx)(kr, {
-            shownView: rr,
-            close: rr => {
-              Sr ??= rr, Qr()
+    function jd(dd) {
+      let Od = null;
+      Yd.NotificationProvider.showCustomPopup({
+        body: md => (0, Pd.jsx)(cd, {
+          arm: dd.arm,
+          children: (0, Pd.jsx)(zd, {
+            shownView: dd,
+            close: dd => {
+              Od ??= dd, md()
             }
           })
         }),
         middleScreenPopupContainerClassName: "NewPlayerDealPopupContainer",
         middleScreenPopupClassName: "NewPlayerDealPopupPanel",
         unlockPointerKey: "NewPlayerDealPopup"
-      }).getResult().then((Qr => {
-        (0, lr.I)(!1), !1 !== Sr && "notificationTornDown" !== Qr && (0, lr.E)("new_player_deal.close", (0, Cr.b)(rr.arm, "popup"))
+      }).getResult().then((md => {
+        (0, Sd.D)(!1), !1 !== Od && "notificationTornDown" !== md && (0, Sd.y)("new_player_deal.close", (0, nd.e)(dd.arm, "popup"))
       }))
     }
-    const ir = 2500,
-      wr = 6e4;
-    const cr = 500,
-      Fr = 6e4;
+    const Dd = 2500,
+      ed = 6e4;
+    const Id = 500,
+      ld = 6e4;
 
-    function or(rr) {
-      const Sr = Date.now() + Fr;
-      return new Promise((Qr => {
-        const Zr = () => {
-          rr() ? (0, vr.g)() || er.NotificationProvider.hasPopup() || (0, Tr.m)() || (0, lr.s)() || null !== Nr.c.get("openEverythingMenuName") ? Date.now() > Sr ? Qr(!1) : setTimeout(Zr, cr) : Qr(!0) : Qr(!1)
+    function Cd(dd) {
+      const Od = Date.now() + ld;
+      return new Promise((md => {
+        const Wd = () => {
+          dd() ? (0, Ud.d)() || Yd.NotificationProvider.hasPopup() || (0, Jd.k)() || (0, Sd.s)() || null !== Nd.e.get("openEverythingMenuName") ? Date.now() > Od ? md(!1) : setTimeout(Wd, Id) : md(!0) : md(!1)
         };
-        Zr()
+        Wd()
       }))
     }
-    const br = "newPlayerDealPointerDeferred_";
-    let Jr = !1,
-      Dr = null;
+    const Zd = "newPlayerDealPointerDeferred_";
+    let kd = !1,
+      fd = null;
 
-    function dr(rr, Sr) {
-      var Qr;
-      return (null === (Qr = Dr) || void 0 === Qr ? void 0 : Qr.accountId) === Sr && Dr.shownCount === rr.shownCount
+    function Md(dd, Od) {
+      var md;
+      return (null === (md = fd) || void 0 === md ? void 0 : md.accountId) === Od && fd.shownCount === dd.shownCount
     }
 
-    function sr(rr, Sr, Qr) {
-      return !!dr(Sr, Qr) && (Dr = null, (0, lr.x)(Qr), Vr(rr), !0)
+    function dO(dd, Od, md) {
+      return !!Md(Od, md) && (fd = null, (0, Sd.v)(md), jd(dd), !0)
     }
-    async function ur(rr, Sr, Qr, Zr) {
-      if (Jr) return !1;
-      let Wr;
-      Jr = !0;
+    async function OO(dd, Od, md, Wd) {
+      if (kd) return !1;
+      let Fd;
+      kd = !0;
       try {
-        Wr = await async function(rr) {
+        Fd = await async function(dd) {
           const {
-            newPlayerDeal: Sr,
-            counted: Qr
-          } = await (0, nr.postJsonWithMetricsCookiesAndJsonResponse)(`${Yr.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
-            shownCount: rr
+            newPlayerDeal: Od,
+            counted: md
+          } = await (0, pd.postJsonWithMetricsCookiesAndJsonResponse)(`${Td.clientSideServerUrls.indexUrl}/index/new-player-deal/shown`, {
+            shownCount: dd
           }, {
             retries: 1
           });
           return {
-            newPlayerDeal: Sr,
-            counted: !0 === Qr
+            newPlayerDeal: Od,
+            counted: !0 === md
           }
-        }(Sr.shownCount)
-      } catch (ar) {
-        return console.error("New player deal: counting a showing of its popup failed", ar), !1
+        }(Od.shownCount)
+      } catch (Rd) {
+        return console.error("New player deal: counting a showing of its popup failed", Rd), !1
       } finally {
-        Jr = !1
+        kd = !1
       }
-      return (0, lr.M)(Qr, Wr.newPlayerDeal), Wr.counted && null !== Wr.newPlayerDeal && (Dr = {
-        accountId: Zr,
-        shownCount: Wr.newPlayerDeal.shownCount
-      }, "landingPage" === Nr.c.get("gameState") && sr(rr, Wr.newPlayerDeal, Zr)), !0
+      return (0, Sd.G)(md, Fd.newPlayerDeal), Fd.counted && null !== Fd.newPlayerDeal && (fd = {
+        accountId: Wd,
+        shownCount: Fd.newPlayerDeal.shownCount
+      }, "landingPage" === Nd.e.get("gameState") && dO(dd, Fd.newPlayerDeal, Wd)), !0
     }
-    let rS = null;
+    let mO = null;
 
-    function SS(rr, Sr, Qr, Wr, ar) {
-      var jr;
+    function WO(dd, Od, md, Fd, Rd) {
+      var Xd;
       const {
-        gameState: Ir
-      } = (0, Nr.n)(["gameState"]), mr = "landingPage" === Ir, {
-        pointing: Ur
-      } = (0, Br.i)(), tr = (0, Zr.useRef)(Ur);
-      tr.current = Ur;
-      const hr = (0, Zr.useRef)(rr);
-      hr.current = rr;
-      const Yr = (0, Zr.useRef)(Sr);
-      Yr.current = Sr;
-      const nr = (0, Zr.useRef)(Qr);
-      nr.current = Qr;
-      const [er, Tr] = (0, Zr.useState)(null), vr = (0, Zr.useRef)(0), Or = (0, Zr.useRef)(0), Lr = (0, Zr.useRef)(!1), lr = (0, Zr.useCallback)((rr => {
-        "open" === function(rr) {
-          const Sr = rr ? (0, yr.getVisitSessionId)() : (0, yr.peekVisitSessionId)(),
-            Qr = null !== Sr && Sr === rS ? "return" : "open";
-          return rS = Sr, Qr
-        }(rr) && (Lr.current = !0), vr.current++, Tr({
-          seq: vr.current,
-          kind: Lr.current ? "open" : "return"
+        gameState: Kd
+      } = (0, Nd.p)(["gameState"]), od = "landingPage" === Kd, {
+        pointing: qd
+      } = (0, Ed.h)(), Hd = (0, Wd.useRef)(qd);
+      Hd.current = qd;
+      const yd = (0, Wd.useRef)(dd);
+      yd.current = dd;
+      const Td = (0, Wd.useRef)(Od);
+      Td.current = Od;
+      const pd = (0, Wd.useRef)(md);
+      pd.current = md;
+      const [Yd, Jd] = (0, Wd.useState)(null), Ud = (0, Wd.useRef)(0), xd = (0, Wd.useRef)(0), Bd = (0, Wd.useRef)(!1), Sd = (0, Wd.useCallback)((dd => {
+        "open" === function(dd) {
+          const Od = dd ? (0, wd.getVisitSessionId)() : (0, wd.peekVisitSessionId)(),
+            md = null !== Od && Od === mO ? "return" : "open";
+          return mO = Od, md
+        }(dd) && (Bd.current = !0), Ud.current++, Jd({
+          seq: Ud.current,
+          kind: Bd.current ? "open" : "return"
         })
       }), []);
-      (0, Zr.useEffect)((() => {
-        if (!mr) return void Tr(null);
-        lr(!0);
-        const rr = () => {
-          "visible" === document.visibilityState && lr(!0)
+      (0, Wd.useEffect)((() => {
+        if (!od) return void Jd(null);
+        Sd(!0);
+        const dd = () => {
+          "visible" === document.visibilityState && Sd(!0)
         };
-        return document.addEventListener("visibilitychange", rr), () => {
-          document.removeEventListener("visibilitychange", rr)
+        return document.addEventListener("visibilitychange", dd), () => {
+          document.removeEventListener("visibilitychange", dd)
         }
-      }), [mr, lr]);
-      const Xr = null !== (jr = null === rr || void 0 === rr ? void 0 : rr.endsAt) && void 0 !== jr ? jr : null;
-      (0, Zr.useEffect)((() => {
-        if (!mr || null === Xr) return;
-        const rr = fr(Xr) - Date.now();
-        if (rr <= 0 || rr > zr.c) return;
-        const Sr = setTimeout((() => {
-          lr(!1)
-        }), rr);
+      }), [od, Sd]);
+      const sd = null !== (Xd = null === dd || void 0 === dd ? void 0 : dd.endsAt) && void 0 !== Xd ? Xd : null;
+      (0, Wd.useEffect)((() => {
+        if (!od || null === sd) return;
+        const dd = hd(sd) - Date.now();
+        if (dd <= 0 || dd > bd.d) return;
+        const Od = setTimeout((() => {
+          Sd(!1)
+        }), dd);
         return () => {
-          clearTimeout(Sr)
+          clearTimeout(Od)
         }
-      }), [mr, Xr, lr]);
-      const Pr = null !== rr && null !== Wr && null === ar;
-      (0, Zr.useEffect)((() => {
-        if (null === er || !Pr || Or.current >= er.seq) return;
-        const rr = () => vr.current === er.seq && "landingPage" === Nr.c.get("gameState"),
-          Sr = setTimeout((() => {
-            const Sr = hr.current,
-              Qr = Yr.current;
-            if (null === Sr || null === Qr || !rr()) return;
-            Or.current = er.seq;
-            const Zr = Date.now(),
-              ar = dr(Qr, Wr);
-            if (!(ar || pr(Qr, {
-                arrival: er.kind,
-                now: Zr,
-                endsAt: Sr.endsAt,
-                playedOnDevice: Kr.j.getItem(xr.Ib) > 0
-              }))) return void(Lr.current = !1);
-            const jr = Er(Qr, Zr, Sr.endsAt);
-            or(rr).then((async rr => {
-              const Sr = hr.current;
-              rr && null !== Sr && Yr.current === Qr && (!tr.current || jr || function(rr, Sr) {
-                return Kr.j.getItem(br + rr) === Sr
-              }(Wr, Qr.shownCount) ? ar ? sr(Sr, Qr, Wr) && (Lr.current = !1) : await ur(Sr, Qr, nr.current, Wr) && (Lr.current = !1) : function(rr, Sr) {
-                Kr.j.setItem(br + rr, Sr)
-              }(Wr, Qr.shownCount))
+      }), [od, sd, Sd]);
+      const ud = null !== dd && null !== Fd && null === Rd;
+      (0, Wd.useEffect)((() => {
+        if (null === Yd || !ud || xd.current >= Yd.seq) return;
+        const dd = () => Ud.current === Yd.seq && "landingPage" === Nd.e.get("gameState"),
+          Od = setTimeout((() => {
+            const Od = yd.current,
+              md = Td.current;
+            if (null === Od || null === md || !dd()) return;
+            xd.current = Yd.seq;
+            const Wd = Date.now(),
+              Rd = Md(md, Fd);
+            if (!(Rd || Qd(md, {
+                arrival: Yd.kind,
+                now: Wd,
+                endsAt: Od.endsAt,
+                playedOnDevice: gd.k.getItem(td.Ib) > 0
+              }))) return void(Bd.current = !1);
+            const Xd = vd(md, Wd, Od.endsAt);
+            Cd(dd).then((async dd => {
+              const Od = yd.current;
+              dd && null !== Od && Td.current === md && (!Hd.current || Xd || function(dd, Od) {
+                return gd.k.getItem(Zd + dd) === Od
+              }(Fd, md.shownCount) ? Rd ? dO(Od, md, Fd) && (Bd.current = !1) : await OO(Od, md, pd.current, Fd) && (Bd.current = !1) : function(dd, Od) {
+                gd.k.setItem(Zd + dd, Od)
+              }(Fd, md.shownCount))
             }))
-          }), ir);
+          }), Dd);
         return () => {
-          clearTimeout(Sr)
+          clearTimeout(Od)
         }
-      }), [er, Pr, Wr])
+      }), [Yd, ud, Fd])
     }
 
-    function QS() {
+    function FO() {
       const {
-        userContext: rr
-      } = (0, Lr.c)(), Sr = (0, Ur.usePurchasesAllowed)(), [Qr, ar] = (0, Zr.useState)(Xr.g);
-      (0, Zr.useEffect)((() => (ar((0, Xr.g)()), (0, Xr.h)(ar))), []);
-      const jr = (0, lr.b)(rr);
-      ! function(rr, Sr, Qr) {
-        const [ar, jr] = (0, Zr.useState)(0);
-        (0, Zr.useEffect)((() => {
-          if (!Sr || null === rr) return;
-          if (null !== Qr) return void(0, lr.G)(rr, (0, Xr.d)());
-          if (null !== (0, lr.h)(rr)) return;
-          let Zr, ar = !1;
-          return (0, hr.getBillingClient)().getOfferings(Wr).then((Sr => {
+        userContext: dd
+      } = (0, Bd.d)(), Od = (0, qd.usePurchasesAllowed)(), [md, Rd] = (0, Wd.useState)(sd.k);
+      (0, Wd.useEffect)((() => (Rd((0, sd.k)()), (0, sd.m)(Rd))), []);
+      const Xd = (0, Sd.c)(dd);
+      ! function(dd, Od, md) {
+        const [Rd, Xd] = (0, Wd.useState)(0);
+        (0, Wd.useEffect)((() => {
+          if (!Od || null === dd) return;
+          if (null !== md) return void(0, Sd.A)(dd, (0, sd.d)());
+          if (null !== (0, Sd.j)(dd)) return;
+          let Wd, Rd = !1;
+          return (0, yd.getBillingClient)().getOfferings(Fd).then((Od => {
             let {
-              offering: Qr
-            } = Sr;
-            (0, lr.G)(rr, null === Qr ? [] : Qr.packages.filter(tr.isPricedPackage))
-          }), (rr => {
-            console.error("New player deal: loading its prices failed", rr), ar || (Zr = setTimeout((() => {
-              jr((rr => rr + 1))
-            }), wr))
+              offering: md
+            } = Od;
+            (0, Sd.A)(dd, null === md ? [] : md.packages.filter(Hd.isPricedPackage))
+          }), (dd => {
+            console.error("New player deal: loading its prices failed", dd), Rd || (Wd = setTimeout((() => {
+              Xd((dd => dd + 1))
+            }), ed))
           })), () => {
-            ar = !0, clearTimeout(Zr)
+            Rd = !0, clearTimeout(Wd)
           }
-        }), [rr, Sr, Qr, ar])
-      }(jr, null !== (0, lr.j)(rr) && (Sr || null !== Qr), Qr);
-      const Ir = (0, lr.R)();
-      return SS(Ir, (0, lr.j)(rr), rr, jr, Qr),
+        }), [dd, Od, md, Rd])
+      }(Xd, null !== (0, Sd.m)(dd) && (Od || null !== md), md);
+      const Kd = (0, Sd.O)();
+      return WO(Kd, (0, Sd.m)(dd), dd, Xd, md),
         function() {
           const {
-            userContext: rr
-          } = (0, Lr.c)(), {
-            gameState: Sr
-          } = (0, Nr.n)(["gameState"]);
-          (0, Zr.useEffect)((() => {
-            if ("landingPage" !== Sr || !rr.isLoggedIn() && !(0, Ur.guestsMayBuy)()) return;
-            const Qr = (0, lr.f)(rr),
-              Zr = (0, Or.F)((rr => Qr.includes(rr.item)));
-            null !== Zr && ((0, mr.reportAnalyticsClick)({
+            userContext: dd
+          } = (0, Bd.d)(), {
+            gameState: Od
+          } = (0, Nd.p)(["gameState"]);
+          (0, Wd.useEffect)((() => {
+            if ("landingPage" !== Od || !dd.isLoggedIn() && !(0, qd.guestsMayBuy)()) return;
+            const md = (0, Sd.g)(dd),
+              Wd = (0, xd.z)((dd => md.includes(dd.item)));
+            null !== Wd && ((0, od.reportAnalyticsClick)({
               id: "store.login_resume",
-              value: Zr.item
-            }), (0, Or.o)({
+              value: Wd.item
+            }), (0, xd.p)({
               mode: "self",
               source: "loginResume",
-              highlight: Zr.item
+              highlight: Wd.item
             }))
-          }), [rr, Sr])
+          }), [dd, Od])
         }(),
-        function(rr, Sr, Qr) {
-          const Wr = (0, Zr.useRef)(null);
-          (0, Zr.useEffect)((() => {
-            if (null === Qr || null === rr || null === Sr || Wr.current === Qr) return;
-            Wr.current = Qr;
-            const Zr = rr.packs[0].pack;
-            switch (Qr.show) {
+        function(dd, Od, md) {
+          const Fd = (0, Wd.useRef)(null);
+          (0, Wd.useEffect)((() => {
+            if (null === md || null === dd || null === Od || Fd.current === md) return;
+            Fd.current = md;
+            const Wd = dd.packs[0].pack;
+            switch (md.show) {
               case "popup":
-                (0, lr.x)(Sr), Vr(rr);
+                (0, Sd.v)(Od), jd(dd);
                 break;
               case "store":
-                (0, Or.o)({
+                (0, xd.p)({
                   mode: "self",
                   source: "newPlayerDeal"
                 });
                 break;
               case "resume":
-                (0, Or.o)({
+                (0, xd.p)({
                   mode: "self",
                   source: "loginResume",
-                  highlight: Zr.packageId
+                  highlight: Wd.packageId
                 });
                 break;
               case "bought":
-                (0, Or.o)({
+                (0, xd.p)({
                   mode: "self",
                   source: "newPlayerDeal"
-                }), (0, lr.v)(Sr), (0, Mr.c)(Zr.gems);
+                }), (0, Sd.u)(Od), (0, Ld.c)(Wd.gems);
                 break;
               case "gift":
-                (0, Or.o)({
+                (0, xd.p)({
                   mode: "gift",
                   source: "newPlayerDeal",
                   giftRecipientName: "Friend"
                 })
             }
-          }), [Qr, rr, Sr])
-        }(Ir, jr, Qr), null
+          }), [md, dd, Od])
+        }(Kd, Xd, md), null
     }
   },
-  35523: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Ur,
-      g: () => hr
+  35602: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => qd,
+      f: () => yd
     });
-    Qr(35525);
-    var Zr = Qr(72),
-      Wr = Qr(1155),
-      ar = Qr.n(Wr),
-      jr = Qr(1251),
-      Ir = Qr(1576),
-      fr = Qr(3628),
-      Er = Qr(1448),
-      pr = Qr(3362),
-      xr = Qr(4187),
-      mr = Qr(3208),
-      Nr = Qr(1338);
+    md(35605);
+    var Wd = md(66),
+      Fd = md(1155),
+      Rd = md.n(Fd),
+      Xd = md(1238),
+      Kd = md(1572),
+      hd = md(3635),
+      vd = md(1443),
+      Qd = md(3353),
+      td = md(4177),
+      od = md(3198),
+      Nd = md(1341);
 
-    function Ur(rr) {
+    function qd(dd) {
       let {
-        endsAt: Sr,
-        className: Qr
-      } = rr;
-      return (0, Nr.jsxs)("span", {
-        className: ar()("NewPlayerDealClock", Qr),
-        children: [(0, Nr.jsx)(Er.c, {
+        endsAt: Od,
+        className: md
+      } = dd;
+      return (0, Nd.jsxs)("span", {
+        className: Rd()("NewPlayerDealClock", md),
+        children: [(0, Nd.jsx)(vd.c, {
           name: "hourglass"
-        }), (0, Nr.jsx)(fr.f, {
-          toTime: Sr
+        }), (0, Nd.jsx)(hd.e, {
+          toTime: Od
         })]
       })
     }
 
-    function tr(rr) {
+    function Hd(dd) {
       let {
-        offered: Sr,
-        needsLogin: Qr,
-        busy: Zr,
-        highlight: Wr,
-        onBuy: fr
-      } = rr;
+        offered: Od,
+        needsLogin: md,
+        busy: Wd,
+        highlight: Fd,
+        onBuy: hd
+      } = dd;
       const {
-        t: Er
-      } = (0, jr.E)(), {
-        pack: Ur
-      } = Sr, tr = (0, xr.e)(Sr.package);
-      return (0, Nr.jsxs)("div", {
-        className: ar()("NewPlayerDealPack", {
-          NewPlayerDealPackHighlight: Wr
+        t: vd
+      } = (0, Xd.G)(), {
+        pack: qd
+      } = Od, Hd = (0, td.e)(Od.package);
+      return (0, Nd.jsxs)("div", {
+        className: Rd()("NewPlayerDealPack", {
+          NewPlayerDealPackHighlight: Fd
         }),
-        children: [(0, Nr.jsxs)("div", {
+        children: [(0, Nd.jsxs)("div", {
           className: "NewPlayerDealPackArt",
-          children: [(0, Nr.jsx)("img", {
-            src: mr.d[Sr.tier],
+          children: [(0, Nd.jsx)("img", {
+            src: od.c[Od.tier],
             alt: "",
             draggable: !1
-          }), (0, Nr.jsx)("span", {
+          }), (0, Nd.jsx)("span", {
             className: "NewPlayerDealTag",
-            children: Er("newPlayerDeal:tag")
+            children: vd("newPlayerDeal:tag")
           })]
-        }), (0, Nr.jsxs)("div", {
+        }), (0, Nd.jsxs)("div", {
           className: "NewPlayerDealPackText",
-          children: [(0, Nr.jsx)(pr.c, {
+          children: [(0, Nd.jsx)(Qd.c, {
             className: "NewPlayerDealPackAmount",
-            amount: Ur.gems
-          }), (0, Nr.jsx)("span", {
+            amount: qd.gems
+          }), (0, Nd.jsx)("span", {
             className: "NewPlayerDealSplit",
-            children: Er("newPlayerDeal:split", {
-              usual: Ur.usualGems.toLocaleString(),
-              bonus: (Ur.gems - Ur.usualGems).toLocaleString()
+            children: vd("newPlayerDeal:split", {
+              usual: qd.usualGems.toLocaleString(),
+              bonus: (qd.gems - qd.usualGems).toLocaleString()
             })
           })]
-        }), (0, Nr.jsx)(Ir.p, {
+        }), (0, Nd.jsx)(Kd.m, {
           className: "NewPlayerDealBuy",
-          loading: Zr,
-          onClick: fr,
-          ariaLabel: Er("newPlayerDeal:buyLabel", {
-            amount: Ur.gems.toLocaleString(),
-            price: tr
+          loading: Wd,
+          onClick: hd,
+          ariaLabel: vd("newPlayerDeal:buyLabel", {
+            amount: qd.gems.toLocaleString(),
+            price: Hd
           }),
-          children: Er(Qr ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
-            price: tr
+          children: vd(md ? "newPlayerDeal:logInToBuy" : "newPlayerDeal:buy", {
+            price: Hd
           })
         })]
       })
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        view: Sr,
-        needsLogin: Qr,
-        busy: Wr,
-        highlight: Ir,
-        onBuy: fr
-      } = rr;
+        view: Od,
+        needsLogin: md,
+        busy: Fd,
+        highlight: Kd,
+        onBuy: hd
+      } = dd;
       const {
-        t: Er
-      } = (0, jr.E)();
-      return (0, Nr.jsxs)("div", {
-        className: ar()("NewPlayerDealPacks", Sr.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
-        children: [Sr.packs.map(((rr, Sr) => (0, Nr.jsxs)(Zr.Fragment, {
-          children: [Sr > 0 && (0, Nr.jsx)("div", {
+        t: vd
+      } = (0, Xd.G)();
+      return (0, Nd.jsxs)("div", {
+        className: Rd()("NewPlayerDealPacks", Od.packs.length > 1 ? "NewPlayerDealPacksTwo" : "NewPlayerDealPacksOne"),
+        children: [Od.packs.map(((dd, Od) => (0, Nd.jsxs)(Wd.Fragment, {
+          children: [Od > 0 && (0, Nd.jsx)("div", {
             className: "NewPlayerDealDivider",
             "aria-hidden": !0,
-            children: (0, Nr.jsx)("i", {})
-          }), (0, Nr.jsx)(tr, {
-            offered: rr,
-            needsLogin: Qr,
-            busy: Wr,
-            highlight: Ir === rr.pack.packageId,
+            children: (0, Nd.jsx)("i", {})
+          }), (0, Nd.jsx)(Hd, {
+            offered: dd,
+            needsLogin: md,
+            busy: Fd,
+            highlight: Kd === dd.pack.packageId,
             onBuy: () => {
-              fr(rr)
+              hd(dd)
             }
           })]
-        }, rr.pack.packageId))), (0, Nr.jsx)("div", {
+        }, dd.pack.packageId))), (0, Nd.jsx)("div", {
           className: "NewPlayerDealUnder",
-          children: (0, Nr.jsx)("span", {
+          children: (0, Nd.jsx)("span", {
             className: "NewPlayerDealLimit",
-            children: Er("newPlayerDeal:limit")
+            children: vd("newPlayerDeal:limit")
           })
         })]
       })
     }
   },
-  35532: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => vr,
-      e: () => Lr
+  35611: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Ud,
+      d: () => Bd
     });
-    Qr(35525);
-    var Zr = Qr(4184),
-      Wr = Qr(1605),
-      ar = Qr(3192),
-      jr = Qr(4170),
-      Ir = Qr(4151),
-      fr = Qr(4176),
-      Er = Qr(4135),
-      pr = Qr(1251),
-      xr = Qr(1475),
-      mr = Qr(1181),
-      Nr = Qr(1576),
-      Ur = Qr(1448),
-      tr = Qr(3362),
-      hr = Qr(3749),
-      zr = Qr(3612),
-      Yr = Qr(3617),
-      nr = Qr(3619),
-      er = Qr(1338);
-    const Kr = new fr.c(Er.getBillingClient, Er.addPurchaseRecordListener);
-    let yr = !1;
+    md(35605);
+    var Wd = md(4175),
+      Fd = md(1605),
+      Rd = md(3184),
+      Xd = md(4164),
+      Kd = md(4141),
+      hd = md(4173),
+      vd = md(4122),
+      Qd = md(1238),
+      td = md(1462),
+      od = md(1186),
+      Nd = md(1572),
+      qd = md(1443),
+      Hd = md(3353),
+      yd = md(3758),
+      bd = md(3610),
+      Td = md(3618),
+      pd = md(3621),
+      Yd = md(1341);
+    const gd = new hd.d(vd.getBillingClient, vd.addPurchaseRecordListener);
+    let wd = !1;
 
-    function Br(rr, Sr) {
-      null !== rr && (0, zr.p)(rr) || ((0, Wr.reportAnalyticsClick)({
+    function Ed(dd, Od) {
+      null !== dd && (0, bd.q)(dd) || ((0, Fd.reportAnalyticsClick)({
         id: "store.purchase_done",
-        value: `self:${Sr.pack.packageId}`
-      }), null !== rr && (0, zr.v)(rr), vr(Sr.pack.gems))
+        value: `self:${Od.pack.packageId}`
+      }), null !== dd && (0, bd.u)(dd), Ud(Od.pack.gems))
     }
 
-    function Tr(rr, Sr, Qr) {
-      const Wr = (0, zr.b)(Sr);
-      switch (rr.kind) {
+    function Jd(dd, Od, md) {
+      const Fd = (0, bd.c)(Od);
+      switch (dd.kind) {
         case "completed":
-          Br(Wr, Qr);
+          Ed(Fd, md);
           break;
         case "pending":
-          ar = rr.intentId, jr = () => {
-            hr.j.refresh(), Br(Wr, Qr)
-          }, yr || (yr = !0, Kr.listen()), Kr.follow(ar, jr);
+          Rd = dd.intentId, Xd = () => {
+            yd.j.refresh(), Ed(Fd, md)
+          }, wd || (wd = !0, gd.listen()), gd.follow(Rd, Xd);
           break;
         case "unknownPackage":
-          (0, zr.M)(Sr, null);
+          (0, bd.G)(Od, null);
           break;
         case "failed":
-          rr.errorKey === Zr.e.newPlayerDealUnavailable && (0, zr.M)(Sr, null)
+          dd.errorKey === Wd.e.newPlayerDealUnavailable && (0, bd.G)(Od, null)
       }
-      var ar, jr
+      var Rd, Xd
     }
 
-    function vr(rr) {
-      xr.NotificationProvider.showCustomPopup({
-        body: Sr => (0, er.jsx)(Or, {
-          gems: rr,
-          close: Sr
+    function Ud(dd) {
+      td.NotificationProvider.showCustomPopup({
+        body: Od => (0, Yd.jsx)(xd, {
+          gems: dd,
+          close: Od
         }),
         middleScreenPopupClassName: "NewPlayerDealAddedPopup",
         disableExitButton: !0
       })
     }
 
-    function Or(rr) {
+    function xd(dd) {
       let {
-        gems: Sr,
-        close: Qr
-      } = rr;
+        gems: Od,
+        close: md
+      } = dd;
       const {
-        t: Zr
-      } = (0, pr.E)();
-      return (0, er.jsxs)("div", {
+        t: Wd
+      } = (0, Qd.G)();
+      return (0, Yd.jsxs)("div", {
         className: "NewPlayerDealAdded",
-        children: [(0, er.jsxs)("div", {
+        children: [(0, Yd.jsxs)("div", {
           className: "NewPlayerDealAddedHead",
-          children: [(0, er.jsx)(Ur.c, {
+          children: [(0, Yd.jsx)(qd.c, {
             name: "circle-check"
-          }), (0, er.jsx)(tr.c, {
-            amount: Sr
-          }), (0, er.jsx)("span", {
-            children: Zr("newPlayerDeal:added")
+          }), (0, Yd.jsx)(Hd.c, {
+            amount: Od
+          }), (0, Yd.jsx)("span", {
+            children: Wd("newPlayerDeal:added")
           })]
-        }), (0, er.jsx)(Nr.p, {
+        }), (0, Yd.jsx)(Nd.m, {
           className: "NewPlayerDealAddedOk",
-          onClick: Qr,
-          children: Zr("general:ok")
+          onClick: md,
+          children: Wd("general:ok")
         })]
       })
     }
 
-    function Lr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jr.e;
+    function Bd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xd.d;
       const {
-        userContext: Qr
-      } = (0, mr.c)(), {
-        purchaseUnderWay: Zr,
-        notice: Wr,
-        buy: fr
-      } = (0, Ir.d)(Sr), Er = (0, Yr.g)(), pr = Qr.mayBuy() || (0, ar.guestsMayBuy)(), xr = null === Er ? !pr : Er.guest && !Qr.isLoggedIn();
+        userContext: md
+      } = (0, od.d)(), {
+        purchaseUnderWay: Wd,
+        notice: Fd,
+        buy: hd
+      } = (0, Kd.d)(Od), vd = (0, Td.k)(), Qd = md.mayBuy() || (0, Rd.guestsMayBuy)(), td = null === vd ? !Qd : vd.guest && !md.isLoggedIn();
       return {
-        purchaseUnderWay: Zr,
-        notice: Wr,
-        needsLogin: xr,
-        buyPack: function(Zr, Wr) {
-          (0, zr.E)("new_player_deal.buy", (0, nr.b)(Zr.arm, rr, Wr.pack.packageId)), null === Er ? fr(function(rr) {
+        purchaseUnderWay: Wd,
+        notice: Fd,
+        needsLogin: td,
+        buyPack: function(Wd, Fd) {
+          (0, bd.y)("new_player_deal.buy", (0, pd.e)(Wd.arm, dd, Fd.pack.packageId)), null === vd ? hd(function(dd) {
             return {
-              sku: rr.pack.packageId,
-              tier: rr.tier,
-              amount: rr.pack.gems,
+              sku: dd.pack.packageId,
+              tier: dd.tier,
+              amount: dd.pack.gems,
               bonusPercent: 0,
-              package: rr.package
+              package: dd.package
             }
-          }(Wr), null, {
+          }(Fd), null, {
             followPending: !1
-          }).then((rr => {
-            Tr(rr, Qr, Wr)
-          })) : xr ? Sr(Wr.pack.packageId, null) : Br((0, zr.b)(Qr), Wr)
+          }).then((dd => {
+            Jd(dd, md, Fd)
+          })) : td ? Od(Fd.pack.packageId, null) : Ed((0, bd.c)(md), Fd)
         }
       }
     }
   },
-  35525: () => {}
+  35605: () => {}
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

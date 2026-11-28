@@ -1,116 +1,116 @@
 export const id = 32;
 export const ids = [32];
 export const modules = {
-  41240: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => Ir
+  41259: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => Kd
     });
-    var Zr = Qr(35488);
-    const Wr = 1e3 / 3;
+    var Wd = md(35563);
+    const Fd = 1e3 / 3;
 
-    function ar(rr, Sr, Qr) {
-      if ("parenthetical-seconds" === Sr) return ` (${rr}s)`;
-      const Zr = `${Math.floor(rr/60)}:${(rr%60).toString().padStart(2,"0")}`;
-      return Qr ? `${Qr}${Zr}` : Zr
+    function Rd(dd, Od, md) {
+      if ("parenthetical-seconds" === Od) return ` (${dd}s)`;
+      const Wd = `${Math.floor(dd/60)}:${(dd%60).toString().padStart(2,"0")}`;
+      return md ? `${md}${Wd}` : Wd
     }
 
-    function jr(rr, Sr, Qr, Wr, ar) {
-      var jr;
-      const Ir = {
-        ...Wr.baseNametag
+    function Xd(dd, Od, md, Fd, Rd) {
+      var Xd;
+      const Kd = {
+        ...Fd.baseNametag
       };
-      Ir.content = [...null !== (jr = Wr.baseNametag.content) && void 0 !== jr ? jr : [], {
+      Kd.content = [...null !== (Xd = Fd.baseNametag.content) && void 0 !== Xd ? Xd : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,Zr.e)(ar)}`
-      }], rr.setOtherEntitySetting(Sr, Qr, "nameTagInfo", Ir)
+        str: `: ${(0,Wd.d)(Rd)}`
+      }], dd.setOtherEntitySetting(Od, md, "nameTagInfo", Kd)
     }
-    const Ir = function(rr, Sr, Qr, Zr) {
-      let Ir, {
-        localPlayerId: fr
-      } = Zr;
-      const Er = new Map,
-        pr = new Map;
-      let xr = 0,
-        mr = 0;
+    const Kd = function(dd, Od, md, Wd) {
+      let Kd, {
+        localPlayerId: hd
+      } = Wd;
+      const vd = new Map,
+        Qd = new Map;
+      let td = 0,
+        od = 0;
       return {
-        onCreate: rr => {
-          Ir = rr
+        onCreate: dd => {
+          Kd = dd
         },
-        lx: rr => {
-          const Sr = Date.now();
-          for (const [Zr, Wr] of Er) {
-            const rr = Math.floor((Sr - Wr.startTime) / 1e3),
-              jr = Math.max(0, Wr.remainingSeconds - rr);
-            if (jr === Wr.lastRenderedSecond) continue;
-            Wr.lastRenderedSecond = jr;
-            const pr = {
-                str: ar(jr, Wr.format, Wr.prefix),
-                style: Wr.style
+        Et: dd => {
+          const Od = Date.now();
+          for (const [Wd, Fd] of vd) {
+            const dd = Math.floor((Od - Fd.startTime) / 1e3),
+              Xd = Math.max(0, Fd.remainingSeconds - dd);
+            if (Xd === Fd.lastRenderedSecond) continue;
+            Fd.lastRenderedSecond = Xd;
+            const Qd = {
+                str: Rd(Xd, Fd.format, Fd.prefix),
+                style: Fd.style
               },
-              xr = {
-                ...Wr.baseNametag
+              td = {
+                ...Fd.baseNametag
               };
-            var Qr;
-            if ("content" === Wr.location) xr.content = [...null !== (Qr = Wr.baseNametag.content) && void 0 !== Qr ? Qr : [], pr];
-            else xr.subtitle = [pr];
-            Ir.setOtherEntitySetting(fr, Zr, "nameTagInfo", xr), jr <= 0 && Er.delete(Zr)
+            var md;
+            if ("content" === Fd.location) td.content = [...null !== (md = Fd.baseNametag.content) && void 0 !== md ? md : [], Qd];
+            else td.subtitle = [Qd];
+            Kd.setOtherEntitySetting(hd, Wd, "nameTagInfo", td), Xd <= 0 && vd.delete(Wd)
           }
-          if (pr.size > 0 && Sr - xr >= Wr) {
-            xr = Sr, mr = (mr + 1) % 3;
-            let rr = 0;
-            for (const [Qr, Zr] of pr) {
-              if (rr++ % 3 !== mr) continue;
-              const Wr = Math.floor((Sr - Zr.startTime) / 1e3);
-              if (Wr === Zr.lastRenderedSecond) continue;
-              Zr.lastRenderedSecond = Wr;
-              const ar = Zr.accumulatedIncome + Zr.incomePerSecond * BigInt(Wr);
-              jr(Ir, fr, Qr, Zr, ar)
+          if (Qd.size > 0 && Od - td >= Fd) {
+            td = Od, od = (od + 1) % 3;
+            let dd = 0;
+            for (const [md, Wd] of Qd) {
+              if (dd++ % 3 !== od) continue;
+              const Fd = Math.floor((Od - Wd.startTime) / 1e3);
+              if (Fd === Wd.lastRenderedSecond) continue;
+              Wd.lastRenderedSecond = Fd;
+              const Rd = Wd.accumulatedIncome + Wd.incomePerSecond * BigInt(Fd);
+              Xd(Kd, hd, md, Wd, Rd)
             }
           }
         },
-        onReceivedMessageFromServer: (rr, Sr) => {
-          if ("startCountdown" === rr) Er.set(Sr.eId, {
-            baseNametag: Sr.baseNametag,
-            remainingSeconds: Sr.remainingSeconds,
+        onReceivedMessageFromServer: (dd, Od) => {
+          if ("startCountdown" === dd) vd.set(Od.eId, {
+            baseNametag: Od.baseNametag,
+            remainingSeconds: Od.remainingSeconds,
             startTime: Date.now(),
-            format: Sr.format,
-            location: Sr.location,
-            prefix: Sr.prefix,
-            style: Sr.style,
+            format: Od.format,
+            location: Od.location,
+            prefix: Od.prefix,
+            style: Od.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === rr) Er.delete(Sr.eId);
-          else if ("startIncomeTicking" === rr) {
-            const rr = {
-              baseNametag: Sr.baseNametag,
-              accumulatedIncome: BigInt(Sr.accumulatedIncome),
-              incomePerSecond: BigInt(Sr.incomePerSecond),
+          else if ("stopCountdown" === dd) vd.delete(Od.eId);
+          else if ("startIncomeTicking" === dd) {
+            const dd = {
+              baseNametag: Od.baseNametag,
+              accumulatedIncome: BigInt(Od.accumulatedIncome),
+              incomePerSecond: BigInt(Od.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            pr.set(Sr.eId, rr), jr(Ir, fr, Sr.eId, rr, rr.accumulatedIncome)
-          } else "stopIncomeTicking" === rr && pr.delete(Sr.eId) && Ir.setOtherEntitySetting(fr, Sr.eId, "nameTagInfo", {
+            Qd.set(Od.eId, dd), Xd(Kd, hd, Od.eId, dd, dd.accumulatedIncome)
+          } else "stopIncomeTicking" === dd && Qd.delete(Od.eId) && Kd.setOtherEntitySetting(hd, Od.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (rr, Sr, Qr, Zr, Wr, ar) => {
-          if (ar && "Mesh" === Ir.getEntityType(ar)) {
-            const Sr = Ir.getEntityName(ar);
-            "Upgrades" === Sr ? Ir.openShop(rr, !1, "Upgrades") : "Items" === Sr ? Ir.openShop(rr, !1, "Items") : "Prestige" === Sr ? Ir.openShop(rr, !1, "Prestige") : "Collections" === Sr ? Ir.openShop(rr, !1, "Collections") : "Base Skins" === Sr ? Ir.openShop(rr, !1, "Base Skins") : "Gauntlet" === Sr ? Ir.openShop(rr, !1, "Gauntlet") : "Diamond Shop" === Sr && Ir.openShop(rr, !1, "Diamond Shop")
+        onPlayerAltAction: (dd, Od, md, Wd, Fd, Rd) => {
+          if (Rd && "Mesh" === Kd.getEntityType(Rd)) {
+            const Od = Kd.getEntityName(Rd);
+            "Upgrades" === Od ? Kd.openShop(dd, !1, "Upgrades") : "Items" === Od ? Kd.openShop(dd, !1, "Items") : "Prestige" === Od ? Kd.openShop(dd, !1, "Prestige") : "Collections" === Od ? Kd.openShop(dd, !1, "Collections") : "Base Skins" === Od ? Kd.openShop(dd, !1, "Base Skins") : "Gauntlet" === Od ? Kd.openShop(dd, !1, "Gauntlet") : "Diamond Shop" === Od && Kd.openShop(dd, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  35488: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Wr,
-      i: () => jr
+  35563: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Fd,
+      g: () => Xd
     });
-    const Zr = [{
+    const Wd = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Wr(rr) {
-      let Sr, Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof rr) {
-        if (!Number.isFinite(rr)) return "0";
-        if (Math.abs(rr) < 100) {
-          const Sr = rr < 0 ? "-" : "",
-            Qr = Math.abs(rr);
-          return Qr >= 10 ? `${Sr}${Qr.toFixed(1).replace(/\.0$/,"")}` : `${Sr}${Qr.toFixed(2).replace(/\.?0+$/,"")}`
+    function Fd(dd) {
+      let Od, md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof dd) {
+        if (!Number.isFinite(dd)) return "0";
+        if (Math.abs(dd) < 100) {
+          const Od = dd < 0 ? "-" : "",
+            md = Math.abs(dd);
+          return md >= 10 ? `${Od}${md.toFixed(1).replace(/\.0$/,"")}` : `${Od}${md.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        Sr = BigInt(Math.floor(rr))
-      } else Sr = rr;
-      const Wr = Sr < 0n ? -Sr : Sr,
-        ar = Sr < 0n ? "-" : "",
-        jr = Wr.toString();
-      if (jr.length <= Qr) return `${ar}${jr}`;
-      const Ir = 3 * Math.floor((jr.length - 1) / 3);
-      if (Ir < 3) return `${ar}${jr}`;
-      if (Ir > 3 * Zr.length) {
-        const rr = jr[0],
-          Sr = jr.slice(1, 3).replace(/0+$/, "");
-        return `${ar}${Sr?`${rr}.${Sr}`:rr}e${jr.length-1}`
+        Od = BigInt(Math.floor(dd))
+      } else Od = dd;
+      const Fd = Od < 0n ? -Od : Od,
+        Rd = Od < 0n ? "-" : "",
+        Xd = Fd.toString();
+      if (Xd.length <= md) return `${Rd}${Xd}`;
+      const Kd = 3 * Math.floor((Xd.length - 1) / 3);
+      if (Kd < 3) return `${Rd}${Xd}`;
+      if (Kd > 3 * Wd.length) {
+        const dd = Xd[0],
+          Od = Xd.slice(1, 3).replace(/0+$/, "");
+        return `${Rd}${Od?`${dd}.${Od}`:dd}e${Xd.length-1}`
       }
       const {
-        threshold: fr,
-        suffix: Er
-      } = Zr[Zr.length - Ir / 3], pr = Wr / fr, xr = Number(1000n * (Wr % fr) / fr), mr = Number(pr) + xr / 1e3;
-      let Nr;
-      return Nr = mr >= 100 ? Math.floor(mr).toString() : mr >= 10 ? mr.toFixed(1).replace(/\.0$/, "") : mr.toFixed(2).replace(/\.?0+$/, ""), `${ar}${Nr}${Er}`
+        threshold: hd,
+        suffix: vd
+      } = Wd[Wd.length - Kd / 3], Qd = Fd / hd, td = Number(1000n * (Fd % hd) / hd), od = Number(Qd) + td / 1e3;
+      let Nd;
+      return Nd = od >= 100 ? Math.floor(od).toString() : od >= 10 ? od.toFixed(1).replace(/\.0$/, "") : od.toFixed(2).replace(/\.?0+$/, ""), `${Rd}${Nd}${vd}`
     }
-    const ar = Zr.map((rr => {
+    const Rd = Wd.map((dd => {
       let {
-        threshold: Sr,
-        suffix: Qr
-      } = rr;
+        threshold: Od,
+        suffix: md
+      } = dd;
       return {
-        threshold: Number(Sr),
-        suffix: Qr
+        threshold: Number(Od),
+        suffix: md
       }
-    })).filter((rr => {
+    })).filter((dd => {
       let {
-        threshold: Sr
-      } = rr;
-      return Number.isFinite(Sr)
+        threshold: Od
+      } = dd;
+      return Number.isFinite(Od)
     }));
 
-    function jr(rr) {
-      const Sr = Math.abs(rr),
-        Qr = rr < 0 ? "-" : "";
+    function Xd(dd) {
+      const Od = Math.abs(dd),
+        md = dd < 0 ? "-" : "";
       for (const {
-          threshold: Zr,
-          suffix: Wr
+          threshold: Wd,
+          suffix: Fd
         }
-        of ar)
-        if (Sr >= Zr) {
-          const rr = Sr / Zr;
-          if (rr >= 1e3) return `${Qr}${Sr.toExponential(2).replace("e+","e")}`;
-          let ar;
-          return ar = rr >= 100 ? Math.floor(rr).toString() : rr >= 10 ? rr.toFixed(1).replace(/\.0$/, "") : rr.toFixed(2).replace(/\.?0+$/, ""), `${Qr}${ar}${Wr}`
-        } return `${Qr}${Sr}`
+        of Rd)
+        if (Od >= Wd) {
+          const dd = Od / Wd;
+          if (dd >= 1e3) return `${md}${Od.toExponential(2).replace("e+","e")}`;
+          let Rd;
+          return Rd = dd >= 100 ? Math.floor(dd).toString() : dd >= 10 ? dd.toFixed(1).replace(/\.0$/, "") : dd.toFixed(2).replace(/\.?0+$/, ""), `${md}${Rd}${Fd}`
+        } return `${md}${Od}`
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

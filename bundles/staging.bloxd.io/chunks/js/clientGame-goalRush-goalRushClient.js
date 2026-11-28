@@ -1,73 +1,73 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  41071: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => Wr
+  41077: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => Fd
     });
-    const Zr = .4,
-      Wr = function(rr, Sr, Qr, Wr) {
-        let ar, {
-            localPlayerId: jr
-          } = Wr,
-          Ir = !1,
-          fr = null,
-          Er = null,
-          pr = null,
-          xr = 1,
-          mr = null,
-          Nr = 0,
-          Ur = 0;
+    const Wd = .4,
+      Fd = function(dd, Od, md, Fd) {
+        let Rd, {
+            localPlayerId: Xd
+          } = Fd,
+          Kd = !1,
+          hd = null,
+          vd = null,
+          Qd = null,
+          td = 1,
+          od = null,
+          Nd = 0,
+          qd = 0;
 
-        function tr() {
-          if (mr) {
-            const rr = mr;
-            rr.fade(rr.getVolume(), 0, 500), setTimeout((() => {
-              rr.stop()
-            }), 500), mr = null
+        function Hd() {
+          if (od) {
+            const dd = od;
+            dd.fade(dd.getVolume(), 0, 500), setTimeout((() => {
+              dd.stop()
+            }), 500), od = null
           }
-          Ur = 0
+          qd = 0
         }
 
-        function hr(rr) {
-          var Sr;
-          if (!fr || Ir || null === Er) return void(mr && tr());
-          const Qr = Date.now();
-          if (!mr || Qr - Nr > 54e3) {
-            if (mr) {
-              const rr = mr;
-              rr.fade(rr.getVolume(), 0, 2e3), setTimeout((() => {
-                rr.stop()
+        function yd(dd) {
+          var Od;
+          if (!hd || Kd || null === vd) return void(od && Hd());
+          const md = Date.now();
+          if (!od || md - Nd > 54e3) {
+            if (od) {
+              const dd = od;
+              dd.fade(dd.getVolume(), 0, 2e3), setTimeout((() => {
+                dd.stop()
               }), 2e3)
             }
-            mr = ar.playSound(jr, "crowdAmbience", Zr, 1), Nr = Qr, Ur = Zr
+            od = Rd.playSound(Xd, "crowdAmbience", Wd, 1), Nd = md, qd = Wd
           }
-          const Wr = function() {
-              if (null === Er || null === pr || !fr) return 0;
-              const rr = ar.getPositionView(fr);
-              if (!rr) return 0;
-              const Sr = Math.abs(rr[2] - Er),
-                Qr = Math.abs(rr[2] - pr),
-                Zr = Math.min(Sr, Qr);
-              return Math.max(0, 1 - Zr / xr)
+          const Fd = function() {
+              if (null === vd || null === Qd || !hd) return 0;
+              const dd = Rd.getPositionView(hd);
+              if (!dd) return 0;
+              const Od = Math.abs(dd[2] - vd),
+                md = Math.abs(dd[2] - Qd),
+                Wd = Math.min(Od, md);
+              return Math.max(0, 1 - Wd / td)
             }(),
-            hr = rr / 1e3;
-          Ur += (Zr + .6 * Wr - Ur) * Math.min(1, 2 * hr), null === (Sr = mr) || void 0 === Sr || Sr.setRelativeVolume(Ur)
+            yd = dd / 1e3;
+          qd += (Wd + .6 * Fd - qd) * Math.min(1, 2 * yd), null === (Od = od) || void 0 === Od || Od.setRelativeVolume(qd)
         }
         return {
-          onCreate: rr => {
-            ar = rr
+          onCreate: dd => {
+            Rd = dd
           },
-          onReceivedMessageFromServer: (rr, Sr) => {
-            var Qr;
-            "ballState" === rr ? (fr = null !== (Qr = Sr.eId) && void 0 !== Qr ? Qr : null, fr || tr()) : "frozen" === rr ? Ir = Sr.frozen : "pitchInfo" === rr && (Er = Sr.goalZRed, pr = Sr.goalZBlue, xr = Math.abs(pr - Er) / 2)
+          onReceivedMessageFromServer: (dd, Od) => {
+            var md;
+            "ballState" === dd ? (hd = null !== (md = Od.eId) && void 0 !== md ? md : null, hd || Hd()) : "frozen" === dd ? Kd = Od.frozen : "pitchInfo" === dd && (vd = Od.goalZRed, Qd = Od.goalZBlue, td = Math.abs(Qd - vd) / 2)
           },
-          lx: rr => {
-            hr(rr)
+          Et: dd => {
+            yd(dd)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

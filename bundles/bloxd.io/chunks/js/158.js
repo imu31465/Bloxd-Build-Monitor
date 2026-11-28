@@ -1,117 +1,117 @@
 export const id = 158;
 export const ids = [158];
 export const modules = {
-  37529: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Ir,
-      g: () => Er,
-      k: () => jr,
-      l: () => xr
+  37659: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Kd,
+      e: () => vd,
+      f: () => Xd,
+      h: () => td
     });
-    var Zr = Qr(37514),
-      Wr = Qr(13);
-    const ar = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+    var Wd = md(37644),
+      Fd = md(15);
+    const Rd = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
 
-    function jr(rr) {
-      if (rr instanceof WebAssembly.RuntimeError) return !0;
-      const Sr = rr instanceof Error ? rr.stack : void 0;
-      return "string" === typeof Sr && ar.test(Sr)
+    function Xd(dd) {
+      if (dd instanceof WebAssembly.RuntimeError) return !0;
+      const Od = dd instanceof Error ? dd.stack : void 0;
+      return "string" === typeof Od && Rd.test(Od)
     }
 
-    function Ir(rr, Sr, Qr) {
-      var Wr;
-      const jr = rr instanceof Error ? rr.name : "thrown",
-        Ir = (rr instanceof Error && null !== (Wr = rr.stack) && void 0 !== Wr ? Wr : "").split("\n").filter((rr => ar.test(rr))).slice(0, 8).map((rr => rr.trim())),
-        fr = null === Sr ? "wasm memory unknown" : `wasm memory ${Math.round(Sr/2**20)} MB`,
-        Er = null === Qr.panic ? "" : `, panic: ${(0,Zr.i)(Qr.panic)}`,
-        pr = `${jr}: ${rr instanceof Error?rr.message:String(rr)}`;
-      return `${(0,Zr.l)(Qr.kind,Qr.refusedBytes)} ${pr} (${fr})${Er}${Ir.length>0?` | ${Ir.join(" < ")}`:""}`
+    function Kd(dd, Od, md) {
+      var Fd;
+      const Xd = dd instanceof Error ? dd.name : "thrown",
+        Kd = (dd instanceof Error && null !== (Fd = dd.stack) && void 0 !== Fd ? Fd : "").split("\n").filter((dd => Rd.test(dd))).slice(0, 8).map((dd => dd.trim())),
+        hd = null === Od ? "wasm memory unknown" : `wasm memory ${Math.round(Od/2**20)} MB`,
+        vd = null === md.panic ? "" : `, panic: ${(0,Wd.l)(md.panic)}`,
+        Qd = `${Xd}: ${dd instanceof Error?dd.message:String(dd)}`;
+      return `${(0,Wd.q)(md.kind,md.refusedBytes)} ${Qd} (${hd})${vd}${Kd.length>0?` | ${Kd.join(" < ")}`:""}`
     }
-    const fr = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
+    const hd = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
 
-    function Er(rr) {
-      var Sr;
-      let Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(rr instanceof Error) || !fr.test(rr.message)) return {};
-      if (!("detached" in Qr)) return {
+    function vd(dd) {
+      var Od;
+      let md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
+      if (!(dd instanceof Error) || !hd.test(dd.message)) return {};
+      if (!("detached" in md)) return {
         arrayBufferDetached: "absent"
       };
       return {
-        arrayBufferDetached: (0, Wr.V)(null === (Sr = (0, Wr.O)(Qr, "detached")) || void 0 === Sr ? void 0 : Sr.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
+        arrayBufferDetached: (0, Fd.K)(null === (Od = (0, Fd.C)(md, "detached")) || void 0 === Od ? void 0 : Od.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
       }
     }
-    const pr = 500;
+    const Qd = 500;
 
-    function xr(rr) {
-      let Sr = "[object Object]";
+    function td(dd) {
+      let Od = "[object Object]";
       try {
-        Sr = String(rr)
+        Od = String(dd)
       } catch {}
-      if ("[object Object]" !== Sr) return Sr;
+      if ("[object Object]" !== Od) return Od;
       try {
-        var Qr, Zr;
-        return null !== (Qr = null === (Zr = JSON.stringify(rr)) || void 0 === Zr ? void 0 : Zr.slice(0, pr)) && void 0 !== Qr ? Qr : Sr
+        var md, Wd;
+        return null !== (md = null === (Wd = JSON.stringify(dd)) || void 0 === Wd ? void 0 : Wd.slice(0, Qd)) && void 0 !== md ? md : Od
       } catch {
-        return Sr
+        return Od
       }
     }
   },
-  37566: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ur,
-      i: () => ZS,
-      j: () => Dr,
-      l: () => SS,
-      n: () => dr,
-      q: () => sr
+  37688: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => OO,
+      e: () => RO,
+      g: () => fd,
+      j: () => WO,
+      l: () => Md,
+      n: () => dO
     });
-    var Zr = Qr(2396),
-      Wr = Qr(2410),
-      ar = Qr(7577),
-      jr = Qr(5498),
-      Ir = Qr(2402),
-      fr = Qr(2398);
-    const Er = "bloxd-wasmDownloaded",
-      pr = 12;
+    var Wd = md(2421),
+      Fd = md(2433),
+      Rd = md(7573),
+      Xd = md(5426),
+      Kd = md(2428),
+      hd = md(2425);
+    const vd = "bloxd-wasmDownloaded",
+      Qd = 12;
 
-    function xr(rr) {
-      return rr.pathname.slice(rr.pathname.lastIndexOf("/") + 1)
+    function td(dd) {
+      return dd.pathname.slice(dd.pathname.lastIndexOf("/") + 1)
     }
 
-    function mr() {
+    function od() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const rr = JSON.parse(localStorage.getItem(Er) ?? "[]");
-        return Array.isArray(rr) ? rr.filter((rr => "string" === typeof rr)) : []
-      } catch (rr) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", rr), null
+        const dd = JSON.parse(localStorage.getItem(vd) ?? "[]");
+        return Array.isArray(dd) ? dd.filter((dd => "string" === typeof dd)) : []
+      } catch (dd) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", dd), null
       }
     }
-    const Nr = Reflect.apply,
-      Ur = "undefined" === typeof Worker ? void 0 : Worker,
-      tr = Ur?.prototype.postMessage,
-      hr = Ur?.prototype.terminate,
-      zr = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      Yr = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      nr = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      er = function() {
+    const Nd = Reflect.apply,
+      qd = "undefined" === typeof Worker ? void 0 : Worker,
+      Hd = qd?.prototype.postMessage,
+      yd = qd?.prototype.terminate,
+      bd = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      Td = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      pd = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      Yd = function() {
         try {
-          return (0, jr.o)(Ur, "Worker", !0) && (0, jr.o)(tr, "postMessage") && (0, jr.o)(hr, "terminate") && (0, jr.o)(nr, "buffer") && void 0 !== zr && void 0 !== Yr
+          return (0, Xd.i)(qd, "Worker", !0) && (0, Xd.i)(Hd, "postMessage") && (0, Xd.i)(yd, "terminate") && (0, Xd.i)(pd, "buffer") && void 0 !== bd && void 0 !== Td
         } catch {
           return !1
         }
       }();
-    let Kr = !1;
+    let gd = !1;
 
-    function yr() {
-      return er && !Kr
+    function wd() {
+      return Yd && !gd
     }
-    class Br {
+    class Ed {
       worker = null;
       failed = !1;
       constructor() {
-        if (yr()) try {
-          this.worker = vr(), Nr(zr, this.worker, ["error", () => {
+        if (wd()) try {
+          this.worker = Ud(), Nd(bd, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -119,125 +119,125 @@ export const modules = {
         }
       }
       take() {
-        const rr = this.worker;
-        if (this.worker = null, null !== rr && this.failed) throw Nr(hr, rr, []), new Error("it did not run");
-        return rr
+        const dd = this.worker;
+        if (this.worker = null, null !== dd && this.failed) throw Nd(yd, dd, []), new Error("it did not run");
+        return dd
       }
       stop() {
-        const rr = this.worker;
-        this.worker = null, null !== rr && Nr(hr, rr, [])
+        const dd = this.worker;
+        this.worker = null, null !== dd && Nd(yd, dd, [])
       }
     }
-    class Tr {
+    class Jd {
       decoded;
       worker;
       reject;
-      constructor(rr, Sr, Qr, Zr, ar) {
+      constructor(dd, Od, md, Wd, Rd) {
         try {
-          this.worker = ar?.take() ?? vr()
-        } catch (Er) {
-          throw Kr = !0, new Error(`The zstd decoder's worker did not start: ${(0,Ir.e)(Er)}`)
+          this.worker = Rd?.take() ?? Ud()
+        } catch (vd) {
+          throw gd = !0, new Error(`The zstd decoder's worker did not start: ${(0,Kd.i)(vd)}`)
         }
-        const jr = this.worker;
-        this.decoded = (0, Wr.g)(((Sr, Wr) => {
-          this.reject = Wr;
-          const ar = (rr, Sr) => {
-            Nr(zr, jr, [rr, Sr])
+        const Xd = this.worker;
+        this.decoded = (0, Fd.j)(((Od, Fd) => {
+          this.reject = Fd;
+          const Rd = (dd, Od) => {
+            Nd(bd, Xd, [dd, Od])
           };
-          ar("message", (rr => {
-            Zr();
+          Rd("message", (dd => {
+            Wd();
             try {
-              const Zr = Nr(Yr, rr, []);
-              if (!0 === Zr) Sr();
+              const Wd = Nd(Td, dd, []);
+              if (!0 === Wd) Od();
               else {
-                if ("string" === typeof Zr) throw Zr.startsWith(Ir.c) && (Kr = !0), new Error(Zr);
-                Qr(Zr, Nr(fr.x, Zr, []))
+                if ("string" === typeof Wd) throw Wd.startsWith(Kd.e) && (gd = !0), new Error(Wd);
+                md(Wd, Nd(hd.u, Wd, []))
               }
-            } catch (Er) {
-              Wr(Er)
+            } catch (vd) {
+              Fd(vd)
             }
-          })), ar("error", (() => {
-            Kr = !0, Wr(new Error("The zstd decoder's worker did not run"))
-          })), ar("messageerror", (() => {
-            Wr(new Error(`${rr}'s decoder sent a piece that could not be read`))
+          })), Rd("error", (() => {
+            gd = !0, Fd(new Error("The zstd decoder's worker did not run"))
+          })), Rd("messageerror", (() => {
+            Fd(new Error(`${dd}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, fr.V)(this.decoded), Nr(tr, jr, [
-          [rr, Sr]
+        })), (0, hd.T)(this.decoded), Nd(Hd, Xd, [
+          [dd, Od]
         ])
       }
-      push(rr) {
-        Nr(tr, this.worker, [rr, [Nr(nr, rr, [])]])
+      push(dd) {
+        Nd(Hd, this.worker, [dd, [Nd(pd, dd, [])]])
       }
       end() {
-        Nr(tr, this.worker, [null])
+        Nd(Hd, this.worker, [null])
       }
       markWorkerFailed() {
-        Kr = !0
+        gd = !0
       }
-      fail(rr) {
-        this.reject(rr), this.terminate()
+      fail(dd) {
+        this.reject(dd), this.terminate()
       }
       terminate() {
-        Nr(hr, this.worker, [])
+        Nd(yd, this.worker, [])
       }
     }
 
-    function vr() {
-      if (globalThis.Worker !== Ur) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(Qr.p + Qr.u(80), Qr.b), {
+    function Ud() {
+      if (globalThis.Worker !== qd) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(md.p + md.u(80), md.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const Or = Reflect.apply,
-      Lr = ArrayBuffer,
-      lr = "undefined" === typeof Response ? void 0 : Response,
-      Xr = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      Pr = function() {
-        let rr;
-        void 0 !== Xr && new Xr({
+    const xd = Reflect.apply,
+      Bd = ArrayBuffer,
+      Sd = "undefined" === typeof Response ? void 0 : Response,
+      sd = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      ud = function() {
+        let dd;
+        void 0 !== sd && new sd({
           __proto__: null,
-          start(Sr) {
+          start(Od) {
             const {
-              enqueue: Qr,
-              close: Zr,
-              error: Wr
-            } = Object.getPrototypeOf(Sr);
-            rr = {
-              enqueue: Qr,
-              close: Zr,
-              error: Wr
+              enqueue: md,
+              close: Wd,
+              error: Fd
+            } = Object.getPrototypeOf(Od);
+            dd = {
+              enqueue: md,
+              close: Wd,
+              error: Fd
             }
           }
         }, {
           __proto__: null
         });
-        return rr
+        return dd
       }(),
-      Hr = function() {
+      Vd = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Pr && (0, jr.o)(lr, "Response", !0) && (0, jr.o)(Xr, "ReadableStream", !0) && (0, jr.o)(Pr.enqueue, "enqueue") && (0, jr.o)(Pr.close, "close") && (0, jr.o)(Pr.error, "error") && (0, jr.o)(fr.$, "body") && (0, jr.o)(fr.N, "getReader") && (0, jr.o)(fr.X, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== ud && (0, Xd.i)(Sd, "Response", !0) && (0, Xd.i)(sd, "ReadableStream", !0) && (0, Xd.i)(ud.enqueue, "enqueue") && (0, Xd.i)(ud.close, "close") && (0, Xd.i)(ud.error, "error") && (0, Xd.i)(hd.Y, "body") && (0, Xd.i)(hd.M, "getReader") && (0, Xd.i)(hd.V, "read")
         } catch {
           return !1
         }
       }();
-    async function qr(rr, Sr, Qr, Zr, ar, jr, Er) {
-      const pr = new Lr(Sr),
+    async function Ad(dd, Od, md, Wd, Rd, Xd, vd) {
+      const Qd = new Bd(Od),
         {
-          controller: xr,
-          compiled: mr
-        } = function(rr) {
+          controller: td,
+          compiled: od
+        } = function(dd) {
           try {
-            let rr;
-            const Sr = new Xr({
+            let dd;
+            const Od = new sd({
                 __proto__: null,
-                start(Sr) {
-                  rr = Sr
+                start(Od) {
+                  dd = Od
                 }
               }, {
                 __proto__: null
               }),
-              Qr = new lr(Sr, {
+              md = new Sd(Od, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -245,415 +245,415 @@ export const modules = {
                 }
               });
             return {
-              controller: rr,
-              compiled: (0, fr.V)((0, fr.B)((0, fr.fb)(Qr)))
+              controller: dd,
+              compiled: (0, hd.T)((0, hd.z)((0, hd.gb)(md)))
             }
-          } catch (Sr) {
-            throw new Error(`${rr} could not be streamed into a compile: ${(0,Ir.e)(Sr)}`)
+          } catch (Od) {
+            throw new Error(`${dd} could not be streamed into a compile: ${(0,Kd.i)(Od)}`)
           }
-        }(rr),
+        }(dd),
         {
-          enqueue: Nr,
-          close: Ur,
-          error: tr
-        } = Pr,
-        hr = rr => {
+          enqueue: Nd,
+          close: qd,
+          error: Hd
+        } = ud,
+        yd = dd => {
           try {
-            Or(tr, xr, [rr])
+            xd(Hd, td, [dd])
           } catch {}
         };
-      let zr = 0;
-      const Yr = (Qr, Zr) => {
-        if (zr + Zr > Sr) throw new Error(`${rr} decoded past its module's ${Sr} bytes`);
-        Or(fr.ab, new fr.m(pr), [new fr.m(Qr), zr]);
+      let bd = 0;
+      const Td = (md, Wd) => {
+        if (bd + Wd > Od) throw new Error(`${dd} decoded past its module's ${Od} bytes`);
+        xd(hd.$, new hd.l(Qd), [new hd.l(md), bd]);
         try {
-          Or(Nr, xr, [new fr.m(pr, zr, Zr)])
+          xd(Nd, td, [new hd.l(Qd, bd, Wd)])
         } catch {}
-        zr += Zr
+        bd += Wd
       };
-      let nr, er;
+      let pd, Yd;
       try {
-        nr = new Tr(rr, Sr, Yr, Zr, Er)
-      } catch (vr) {
-        throw hr(vr), vr
+        pd = new Jd(dd, Od, Td, Wd, vd)
+      } catch (Ud) {
+        throw yd(Ud), Ud
       }
-      const Kr = rr => {
-        nr.fail(rr), void 0 !== er && Rr(er)
+      const gd = dd => {
+        pd.fail(dd), void 0 !== Yd && rd(Yd)
       };
-      let yr = !1;
-      Qr.addEventListener("abort", (() => {
-        yr && nr.markWorkerFailed(), Kr(new Error(`${rr} stalled`))
+      let wd = !1;
+      md.addEventListener("abort", (() => {
+        wd && pd.markWorkerFailed(), gd(new Error(`${dd} stalled`))
       }), {
         once: !0
-      }), (0, Wr.p)(mr, (() => {}), Kr);
+      }), (0, Fd.w)(od, (() => {}), gd);
       try {
-        let jr;
+        let Xd;
         try {
-          jr = await fetch(rr, {
-            signal: Qr
+          Xd = await fetch(dd, {
+            signal: md
           })
-        } catch (vr) {
-          throw new Error(`Fetching ${rr} failed: ${(0,Ir.e)(vr)}`)
+        } catch (Ud) {
+          throw new Error(`Fetching ${dd} failed: ${(0,Kd.i)(Ud)}`)
         }
         const {
-          ok: Er,
-          status: pr,
-          body: xr
-        } = function(rr, Sr) {
+          ok: vd,
+          status: Qd,
+          body: td
+        } = function(dd, Od) {
           try {
             const {
-              ok: rr,
-              status: Qr
-            } = Sr;
+              ok: dd,
+              status: md
+            } = Od;
             return {
-              ok: rr,
-              status: Qr,
-              body: Or(fr.$, Sr, [])
+              ok: dd,
+              status: md,
+              body: xd(hd.Y, Od, [])
             }
           } catch {
-            throw new Error(`${rr} came in a response a page script made`)
+            throw new Error(`${dd} came in a response a page script made`)
           }
-        }(rr, jr);
-        if (!Er) throw new Error(`Fetching ${rr} failed: HTTP ${pr}`);
-        Zr();
-        const mr = Or(fr.N, xr, []);
-        er = mr;
-        const Nr = () => {
-          Rr(mr)
+        }(dd, Xd);
+        if (!vd) throw new Error(`Fetching ${dd} failed: HTTP ${Qd}`);
+        Wd();
+        const od = xd(hd.M, td, []);
+        Yd = od;
+        const Nd = () => {
+          rd(od)
         };
-        for ((0, Wr.p)(nr.decoded, Nr, Nr);;) {
-          let Sr;
+        for ((0, Fd.w)(pd.decoded, Nd, Nd);;) {
+          let Od;
           try {
-            Sr = await Or(fr.X, mr, [])
-          } catch (vr) {
-            throw new Error(`Downloading ${rr} failed: ${(0,Ir.e)(vr)}`)
+            Od = await xd(hd.V, od, [])
+          } catch (Ud) {
+            throw new Error(`Downloading ${dd} failed: ${(0,Kd.i)(Ud)}`)
           }
-          if (Sr.done) break;
-          Zr(), nr.push(Sr.value)
+          if (Od.done) break;
+          Wd(), pd.push(Od.value)
         }
-        if (yr = !0, nr.end(), await nr.decoded, ar(), zr !== Sr) throw new Error(`${rr} ended before its module did`)
-      } catch (vr) {
-        throw hr(vr), Kr(vr), vr
+        if (wd = !0, pd.end(), await pd.decoded, Rd(), bd !== Od) throw new Error(`${dd} ended before its module did`)
+      } catch (Ud) {
+        throw yd(Ud), gd(Ud), Ud
       }
-      nr.terminate();
+      pd.terminate();
       try {
-        Or(Ur, xr, [])
+        xd(qd, td, [])
       } catch {}
-      const Br = await mr;
-      return void 0 !== jr && await (0, fr.z)(rr, new fr.m(pr), {
-        sha256: jr.sha256,
+      const Ed = await od;
+      return void 0 !== Xd && await (0, hd.x)(dd, new hd.l(Qd), {
+        sha256: Xd.sha256,
         onMismatch: () => {}
-      }), Br
+      }), Ed
     }
 
-    function Rr(rr) {
+    function rd(dd) {
       try {
-        (0, fr.V)(rr.cancel())
+        (0, hd.T)(dd.cancel())
       } catch {}
     }
-    const gr = ".zst.bin",
-      Cr = 1e3;
-    let Mr = null;
+    const Gd = ".zst.bin",
+      nd = 1e3;
+    let Ld = null;
 
-    function Gr(rr) {
-      return Mr ??= function() {
-        const rr = new Map,
-          Sr = "bloxd_wasm_webgpu:5238928,bloxd_wasm_webgl:5662882,bloxd_wasm_webgl1:4934167,bloxd_wasm_workers:203635,bloxd_wasm_models:478484,bloxd_wasm_client:3741670";
-        for (const Qr of Sr?.split(",") ?? []) {
-          const [Sr = "", Zr] = Qr.split(":"), Wr = Number(Zr);
-          Number.isInteger(Wr) && Wr > 0 && rr.set(Sr, Wr)
+    function Pd(dd) {
+      return Ld ??= function() {
+        const dd = new Map,
+          Od = "bloxd_wasm_webgpu:5239836,bloxd_wasm_webgl:5663636,bloxd_wasm_webgl1:4934921,bloxd_wasm_workers:203659,bloxd_wasm_models:478723,bloxd_wasm_client:3742267";
+        for (const md of Od?.split(",") ?? []) {
+          const [Od = "", Wd] = md.split(":"), Fd = Number(Wd);
+          Number.isInteger(Fd) && Fd > 0 && dd.set(Od, Fd)
         }
-        return rr
-      }(), Mr.get(rr)
+        return dd
+      }(), Ld.get(dd)
     }
-    async function kr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Zr = Gr(rr.name);
-      if (void 0 === Zr) return Ar(await Vr(rr, Sr, Qr), "cold-wasm");
-      const ar = Hr ? new Br : null;
-      let jr;
+    async function zd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Wd = Pd(dd.name);
+      if (void 0 === Wd) return cd(await jd(dd, Od, md), "cold-wasm");
+      const Rd = Vd ? new Ed : null;
+      let Xd;
       try {
-        if (Er = rr.url(), mr()?.includes(xr(Er)) && await async function(rr) {
-            const Sr = new AbortController;
-            let Qr;
-            const Zr = (0, Wr.g)((rr => {
-              Qr = setTimeout((() => {
-                Sr.abort(), rr(null)
-              }), Cr)
+        if (vd = dd.url(), od()?.includes(td(vd)) && await async function(dd) {
+            const Od = new AbortController;
+            let md;
+            const Wd = (0, Fd.j)((dd => {
+              md = setTimeout((() => {
+                Od.abort(), dd(null)
+              }), nd)
             }));
             try {
-              const Qr = fetch(rr.href, {
+              const md = fetch(dd.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: Sr.signal
+                  signal: Od.signal
                 }),
-                ar = await (0, Wr.m)([Qr, Zr]);
-              return !!ar?.ok && ((0, fr.V)(ar.body.cancel()), !0)
+                Rd = await (0, Fd.t)([md, Wd]);
+              return !!Rd?.ok && ((0, hd.T)(Rd.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(Qr)
+              clearTimeout(md)
             }
-          }(rr.url())) return ar?.stop(), await async function(rr, Sr, Qr, Zr) {
-          let Wr = !1;
-          const ar = Qr && {
-            sha256: Qr.sha256,
+          }(dd.url())) return Rd?.stop(), await async function(dd, Od, md, Wd) {
+          let Fd = !1;
+          const Rd = md && {
+            sha256: md.sha256,
             onMismatch: () => {
-              Wr = !0
+              Fd = !0
             }
           };
           try {
-            return Ar(await Vr(rr, ar, Zr), "warm")
-          } catch (jr) {
-            const Zr = await ir(rr, Sr, Qr, null);
-            if (null === Zr) throw Wr && Qr.onMismatch(), jr;
-            return console.warn(`${rr.url().href} from the HTTP cache failed: ${(0,Ir.e)(jr)}: loaded its copy instead`), Ar(Zr, Wr ? "warm-refused" : "warm-broken")
+            return cd(await jd(dd, Rd, Wd), "warm")
+          } catch (Xd) {
+            const Wd = await Dd(dd, Od, md, null);
+            if (null === Wd) throw Fd && md.onMismatch(), Xd;
+            return console.warn(`${dd.url().href} from the HTTP cache failed: ${(0,Kd.i)(Xd)}: loaded its copy instead`), cd(Wd, Fd ? "warm-refused" : "warm-broken")
           }
-        }(rr, Zr, Sr, Qr);
-        jr = await ir(rr, Zr, Sr, ar)
+        }(dd, Wd, Od, md);
+        Xd = await Dd(dd, Wd, Od, Rd)
       } finally {
-        ar?.stop()
+        Rd?.stop()
       }
-      var Er;
-      return null !== jr ? Ar(jr, "cold-worker") : Ar(await Vr(rr, Sr, Qr), "cold-wasm")
+      var vd;
+      return null !== Xd ? cd(Xd, "cold-worker") : cd(await jd(dd, Od, md), "cold-wasm")
     }
 
-    function Ar(rr, Sr) {
+    function cd(dd, Od) {
       return {
         __proto__: null,
-        module: rr,
-        path: Sr
+        module: dd,
+        path: Od
       }
     }
 
-    function Vr(rr, Sr, Qr) {
-      return void 0 === Gr(rr.name) ? (0, fr.I)(rr.url(), Sr, Qr) : (0, fr.I)(rr.url(), Sr, {
-        ...Qr,
+    function jd(dd, Od, md) {
+      return void 0 === Pd(dd.name) ? (0, hd.F)(dd.url(), Od, md) : (0, hd.F)(dd.url(), Od, {
+        ...md,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(rr) {
-            const Sr = mr();
-            if (null === Sr) return;
-            const Qr = xr(rr),
-              Zr = Sr.filter((rr => rr !== Qr));
-            Zr.push(Qr);
+          ! function(dd) {
+            const Od = od();
+            if (null === Od) return;
+            const md = td(dd),
+              Wd = Od.filter((dd => dd !== md));
+            Wd.push(md);
             try {
-              localStorage.setItem(Er, JSON.stringify(Zr.slice(-pr)))
-            } catch (Wr) {
-              console.warn(`Bloxd wasm: ${Qr} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Wr)
+              localStorage.setItem(vd, JSON.stringify(Wd.slice(-Qd)))
+            } catch (Fd) {
+              console.warn(`Bloxd wasm: ${md} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Fd)
             }
-          }(rr.url()), Qr.onDownloaded?.()
+          }(dd.url()), md.onDownloaded?.()
         }
       })
     }
-    async function ir(rr, Sr, Qr, Zr) {
-      if (!Hr || !yr()) return null;
-      const Wr = rr.url(),
-        ar = `${Wr.href}${gr}`;
+    async function Dd(dd, Od, md, Wd) {
+      if (!Vd || !wd()) return null;
+      const Fd = dd.url(),
+        Rd = `${Fd.href}${Gd}`;
       try {
-        return await (0, fr.cb)(ar, ((rr, Wr, jr) => qr(ar, Sr, rr, Wr, jr, Qr, Zr)))
-      } catch (jr) {
-        return console.warn(`${(0,Ir.e)(jr)}: loading ${Wr.href} instead`), null
+        return await (0, hd.db)(Rd, ((dd, Fd, Xd) => Ad(Rd, Od, dd, Fd, Xd, md, Wd)))
+      } catch (Xd) {
+        return console.warn(`${(0,Kd.i)(Xd)}: loading ${Fd.href} instead`), null
       }
     }
-    let wr = null,
-      cr = !1;
-    const Fr = new Map,
-      or = new Map;
-    let br = null;
+    let ed = null,
+      Id = !1;
+    const ld = new Map,
+      Cd = new Map;
+    let Zd = null;
 
-    function Jr(rr) {
-      const Sr = Sr => rr.filter((rr => Fr.get(rr)?.state === Sr)).length,
-        Qr = Sr("compiled");
-      return Qr > 0 && Qr === rr.length ? "compiled" : Qr + Sr("compiling") > 0 ? "compiling" : "none"
+    function kd(dd) {
+      const Od = Od => dd.filter((dd => ld.get(dd)?.state === Od)).length,
+        md = Od("compiled");
+      return md > 0 && md === dd.length ? "compiled" : md + Od("compiling") > 0 ? "compiling" : "none"
     }
 
-    function Dr() {
-      return br ?? Jr([...Fr.keys()])
+    function fd() {
+      return Zd ?? kd([...ld.keys()])
     }
 
-    function dr(rr, Sr, Qr) {
-      return null === wr ? wr = rS(rr, Sr, Qr?.memoryMaximumBytes) : rr !== wr.build ? console.warn(`Bloxd wasm: ${rr.name} was asked for after ${wr.build.name} started loading, which this thread keeps`) : Sr.name !== wr.workers.name && console.warn(`Bloxd wasm: ${Sr.name} was asked for workers after ${wr.workers.name}, which this thread keeps`), Qr?.reloadFailedDownload && !cr && (0, Zr.fb)() && (cr = !0, wr = rS(wr.build, wr.workers, wr.memoryMaximumBytes)), wr.loaded
+    function Md(dd, Od, md) {
+      return null === ed ? ed = mO(dd, Od, md?.memoryMaximumBytes) : dd !== ed.build ? console.warn(`Bloxd wasm: ${dd.name} was asked for after ${ed.build.name} started loading, which this thread keeps`) : Od.name !== ed.workers.name && console.warn(`Bloxd wasm: ${Od.name} was asked for workers after ${ed.workers.name}, which this thread keeps`), md?.reloadFailedDownload && !Id && (0, Wd.eb)() && (Id = !0, ed = mO(ed.build, ed.workers, ed.memoryMaximumBytes)), ed.loaded
     }
 
-    function sr(rr) {
-      return null === wr ? (0, Wr.g)((rr => {
-        rr(!1)
-      })) : ((0, Zr.bb)() && (wr = rS(wr.build, wr.workers, rr ?? wr.memoryMaximumBytes)), wr.loaded)
+    function dO(dd) {
+      return null === ed ? (0, Fd.j)((dd => {
+        dd(!1)
+      })) : ((0, Wd.ab)() && (ed = mO(ed.build, ed.workers, dd ?? ed.memoryMaximumBytes)), ed.loaded)
     }
 
-    function ur(rr, Sr) {
-      if (null !== wr) return (0, Wr.e)([]);
-      const Qr = rr.filter((rr => !Fr.has(rr.name))).map((rr => {
-        const Qr = new AbortController,
-          Zr = {
-            compiled: Vr(rr, (0, ar.c)(rr.name), {
-              priority: Sr,
-              Rr: Qr.signal,
+    function OO(dd, Od) {
+      if (null !== ed) return (0, Fd.g)([]);
+      const md = dd.filter((dd => !ld.has(dd.name))).map((dd => {
+        const md = new AbortController,
+          Wd = {
+            compiled: jd(dd, (0, Rd.b)(dd.name), {
+              priority: Od,
+              Ad: md.signal,
               onDownloaded: () => {
-                Zr.downloaded = !0
+                Wd.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  Zr.downloaded = !1, null !== wr && Qr.abort()
+                  Wd.downloaded = !1, null !== ed && md.abort()
                 }
               }
             }),
-            cancel: Qr,
+            cancel: md,
             downloaded: !1,
             state: "compiling"
           };
-        return Fr.set(rr.name, Zr), (0, Wr.g)((Sr => {
-          (0, Wr.p)(Zr.compiled, (() => {
-            Zr.downloaded = !0, Zr.state = "compiled", Sr()
-          }), (Wr => {
-            Zr.state = "failed", Qr.signal.aborted || console.warn(`Bloxd wasm: ${rr.name}'s compile ahead of the load failed: the load compiles it afresh`, Wr), Sr()
+        return ld.set(dd.name, Wd), (0, Fd.j)((Od => {
+          (0, Fd.w)(Wd.compiled, (() => {
+            Wd.downloaded = !0, Wd.state = "compiled", Od()
+          }), (Fd => {
+            Wd.state = "failed", md.signal.aborted || console.warn(`Bloxd wasm: ${dd.name}'s compile ahead of the load failed: the load compiles it afresh`, Fd), Od()
           }))
         }))
       }));
-      return (0, Wr.e)(Qr)
+      return (0, Fd.g)(md)
     }
 
-    function rS(rr, Sr, Qr) {
-      br ??= Jr(Sr.name === rr.name ? [rr.name] : [rr.name, Sr.name]);
-      const ar = (0, Zr.F)((async () => {
-        (0, jr.H)(), or.clear();
-        const Qr = QS(rr),
-          Zr = Sr.name === rr.name ? Qr : QS(Sr);
+    function mO(dd, Od, md) {
+      Zd ??= kd(Od.name === dd.name ? [dd.name] : [dd.name, Od.name]);
+      const Rd = (0, Wd.E)((async () => {
+        (0, Xd.z)(), Cd.clear();
+        const md = FO(dd),
+          Wd = Od.name === dd.name ? md : FO(Od);
         for (const {
-            cancel: rr
+            cancel: dd
           }
-          of Fr.values()) rr.abort();
-        Fr.clear(), await (0, Wr.e)([Qr, Zr]);
-        const ar = await Qr,
-          Ir = await Zr;
-        return (0, jr.H)(), {
-          module: ar,
-          workerModule: Ir
+          of ld.values()) dd.abort();
+        ld.clear(), await (0, Fd.g)([md, Wd]);
+        const Rd = await md,
+          Kd = await Wd;
+        return (0, Xd.z)(), {
+          module: Rd,
+          workerModule: Kd
         }
-      }), rr, Qr);
+      }), dd, md);
       return {
-        build: rr,
-        workers: Sr,
-        memoryMaximumBytes: Qr,
-        loaded: ar
+        build: dd,
+        workers: Od,
+        memoryMaximumBytes: md,
+        loaded: Rd
       }
     }
 
-    function SS(rr) {
-      return or.get(rr)
+    function WO(dd) {
+      return Cd.get(dd)
     }
 
-    function QS(rr) {
-      const Sr = performance.now(),
-        Qr = Fr.get(rr.name);
-      Fr.delete(rr.name);
-      const Zr = !0 === Qr?.downloaded ? Qr : void 0;
-      return void 0 !== Qr && void 0 === Zr && Qr.cancel.abort(), (0, Wr.g)(((Qr, ar) => {
-        const jr = (Zr, Wr) => {
-            or.set(rr.name, {
-              path: Wr,
-              ms: performance.now() - Sr
-            }), Qr(Zr)
+    function FO(dd) {
+      const Od = performance.now(),
+        md = ld.get(dd.name);
+      ld.delete(dd.name);
+      const Wd = !0 === md?.downloaded ? md : void 0;
+      return void 0 !== md && void 0 === Wd && md.cancel.abort(), (0, Fd.j)(((md, Rd) => {
+        const Xd = (Wd, Fd) => {
+            Cd.set(dd.name, {
+              path: Fd,
+              ms: performance.now() - Od
+            }), md(Wd)
           },
-          Ir = () => {
-            (0, Wr.p)(WS(rr), (rr => {
+          Kd = () => {
+            (0, Fd.w)(XO(dd), (dd => {
               let {
-                module: Sr,
-                path: Qr
-              } = rr;
-              jr(Sr, Qr)
-            }), ar)
+                module: Od,
+                path: md
+              } = dd;
+              Xd(Od, md)
+            }), Rd)
           };
-        void 0 === Zr ? Ir() : (0, Wr.p)(Zr.compiled, (rr => {
-          jr(rr, "ahead")
-        }), Ir)
+        void 0 === Wd ? Kd() : (0, Fd.w)(Wd.compiled, (dd => {
+          Xd(dd, "ahead")
+        }), Kd)
       }))
     }
-    async function ZS(rr, Sr) {
+    async function RO(dd, Od) {
       const {
-        module: Qr
-      } = await WS(rr, {
-        retries: Sr
+        module: md
+      } = await XO(dd, {
+        retries: Od
       });
-      return Qr
+      return md
     }
-    async function WS(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await kr(rr, (0, ar.c)(rr.name), Sr)
+    async function XO(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await zd(dd, (0, Rd.b)(dd.name), Od)
     }
   },
-  7577: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr
+  7573: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Xd
     });
-    var Zr = Qr(2398);
-    const Wr = {
-      bloxd_wasm: () => "0c8b86ea7f87e28f201c328dade5c6244d58a98edf5279fe5c0ea9b57062f385",
-      bloxd_wasm_client: () => "299c35eb71d5d037788ea25f6b7287e40485e2a6ed22851efd5823593ae5be1b",
-      bloxd_wasm_workers: () => "eaeeb1e1d8f554dcf56047201f83b3954f1d231f54df5846dca6de7c92e59bde",
-      bloxd_wasm_models: () => "dc6d52b18d6afa3461a33750f7f1f0c757dbae6ea30bca3991affab56fad42de",
-      bloxd_wasm_webgpu: () => "4397e4e2e7e494aef2a757d6873b432cca5ceac83c5a3e54dd330b4ece9ba81a",
-      bloxd_wasm_webgl: () => "e3e0bf0da073da5cd2c55227a812527d1d5b4fd38f91e8c71b70364278ad47cf",
-      bloxd_wasm_webgl1: () => "6b69ab072c5f9793e3fee3b1fa30c246fb689a2400aefd7f486fe41358e364e5",
-      bloxd_wasm_replay: () => "f884251e5cfbdf122fa0e4c2746c9cc8bb3465ab2dcf3e9877f29ba5868851b0",
-      bloxd_wasm_recorder: () => "92aabaf952eabf5eb693775f1095c77a6582e07a32896291ede0cd044a026b22",
-      bloxd_wasm_anim: () => "74e18404f7ee650a703373595c2a2a131482e1a0dcb950788bac36e01714fec0",
-      bloxd_wasm_textures: () => "4752f813d0338c3727c1127168df7e6c13b50988f32409a906ecc533947797ed",
-      bloxd_wasm_shader_pack: () => "bc15fb00e7a581fb79301bdbfc659bdbc7ccbe7b0e189b588edf35cbec796fbe"
+    var Wd = md(2425);
+    const Fd = {
+      bloxd_wasm: () => "39543e4ba6a42e25a6e9bcb2e34f530578c4ebc01c5184958515a8ca76d6b0a5",
+      bloxd_wasm_client: () => "b20a5dcdeba23853bd4aefb57c26d920dc0384ea18796517bc3a29925c6ad1c2",
+      bloxd_wasm_workers: () => "fffff5148e36b0bbe9b1ac57b88354ed0a2be82b12546b685c54f8d890ba1c25",
+      bloxd_wasm_models: () => "fea8372a66374bbfe5d995df968eb0d6e1d729788522378129be977ab279b0f5",
+      bloxd_wasm_webgpu: () => "d81a74bd0196aa7197896faff29d91d6cd561d3ccf553f86e40533cf05f94d54",
+      bloxd_wasm_webgl: () => "c6b230e8190fad497320f1c2b3194c840fc84e84d2930037ce26bc2f7ffa73df",
+      bloxd_wasm_webgl1: () => "53a0d02bf121cebe98d2e57ee9aff001fef877975331d07c3144e6a509444da7",
+      bloxd_wasm_replay: () => "6fdc64e1f63d992be19559282023d659e1e193da38e2253f4b228bb2cf163a79",
+      bloxd_wasm_recorder: () => "6c20921e31a8867aca13baae406b57fd8365b0ce30ef2ea114524fe3b407a11b",
+      bloxd_wasm_anim: () => "40ced071a7948ecc9a2ebcc6399db3dd2db0b6c806b64d60ae581d410556b61e",
+      bloxd_wasm_textures: () => "7d3511b9add4c1e220dc305c472d29d9de6a5e5dc0d699b160381f10cb169ea5",
+      bloxd_wasm_shader_pack: () => "c6afc4ff72171aa4edf7f5ee6a093af43505cb0aad9dabc79f64bdf94eadada3"
     };
-    var ar = Qr(5498);
+    var Rd = md(5426);
 
-    function jr(rr) {
-      const Sr = Object.prototype.hasOwnProperty.call(Wr, rr) ? Wr[rr]() : void 0;
-      if (void 0 !== Sr) return {
-        sha256: Sr,
-        onMismatch: ar.F
+    function Xd(dd) {
+      const Od = Object.prototype.hasOwnProperty.call(Fd, dd) ? Fd[dd]() : void 0;
+      if (void 0 !== Od) return {
+        sha256: Od,
+        onMismatch: Rd.v
       };
-      throw new Zr.g(`${rr} has no release digest, so this build refuses it`)
+      throw new Wd.h(`${dd} has no release digest, so this build refuses it`)
     }
   },
-  37514: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Zr,
-      e: () => ar,
-      i: () => fr,
-      j: () => jr,
-      l: () => Wr
+  37644: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd,
+      h: () => Rd,
+      l: () => hd,
+      m: () => Xd,
+      q: () => Fd
     });
-    const Zr = /^alloc_failed (\d+) bytes$/;
+    const Wd = /^alloc_failed (\d+) bytes$/;
 
-    function Wr(rr, Sr) {
-      return ar(rr, Sr) ? `trap=alloc_failed ${Sr} bytes` : `trap=${rr}`
+    function Fd(dd, Od) {
+      return Rd(dd, Od) ? `trap=alloc_failed ${Od} bytes` : `trap=${dd}`
     }
 
-    function ar(rr, Sr) {
-      return "unreachable" === rr && Sr > 0
+    function Rd(dd, Od) {
+      return "unreachable" === dd && Od > 0
     }
 
-    function jr(rr, Sr, Qr) {
-      const Zr = function(rr) {
-        return rr instanceof WebAssembly.RuntimeError ? /unreachable/i.test(rr.message) ? "unreachable" : /out of bounds/i.test(rr.message) ? "out_of_bounds" : "runtime_error" : (rr instanceof RangeError || rr instanceof Error && "InternalError" === rr.name) && /call stack|recursion/i.test(rr.message) ? "stack_overflow" : "js_error"
-      }(rr);
-      if ("unreachable" !== Zr) return {
-        kind: Zr,
+    function Xd(dd, Od, md) {
+      const Wd = function(dd) {
+        return dd instanceof WebAssembly.RuntimeError ? /unreachable/i.test(dd.message) ? "unreachable" : /out of bounds/i.test(dd.message) ? "out_of_bounds" : "runtime_error" : (dd instanceof RangeError || dd instanceof Error && "InternalError" === dd.name) && /call stack|recursion/i.test(dd.message) ? "stack_overflow" : "js_error"
+      }(dd);
+      if ("unreachable" !== Wd) return {
+        kind: Wd,
         panic: null,
         refusedBytes: 0
       };
-      const Wr = Sr(),
-        ar = Qr();
+      const Fd = Od(),
+        Rd = md();
       return {
-        kind: Zr,
-        panic: ar > 0 ? null : Wr,
-        refusedBytes: ar
+        kind: Wd,
+        panic: Rd > 0 ? null : Fd,
+        refusedBytes: Rd
       }
     }
-    const Ir = 300;
+    const Kd = 300;
 
-    function fr(rr) {
-      return rr.replace(/\s*\n\s*/g, " / ").slice(0, Ir)
+    function hd(dd) {
+      return dd.replace(/\s*\n\s*/g, " / ").slice(0, Kd)
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

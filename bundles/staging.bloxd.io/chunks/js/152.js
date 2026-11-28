@@ -1,203 +1,203 @@
 export const id = 152;
 export const ids = [152];
 export const modules = {
-  7539: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Ir
+  7515: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Kd
     });
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(1251),
-      jr = Qr(1338);
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(1238),
+      Xd = md(1341);
 
-    function Ir(rr) {
+    function Kd(dd) {
       let {
-        item: Sr,
-        className: Qr
-      } = rr;
+        item: Od,
+        className: md
+      } = dd;
       const {
-        t: Zr
-      } = (0, ar.E)();
-      return null === Sr.renderId || Sr.previewsOutdated ? (0, jr.jsx)("div", {
-        className: Wr()("ShaderPackPreviewsNotice", Qr),
-        children: (0, jr.jsx)("span", {
-          children: Zr(null === Sr.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: Wd
+      } = (0, Rd.G)();
+      return null === Od.renderId || Od.previewsOutdated ? (0, Xd.jsx)("div", {
+        className: Fd()("ShaderPackPreviewsNotice", md),
+        children: (0, Xd.jsx)("span", {
+          children: Wd(null === Od.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  7554: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Er
+  7539: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => vd
     });
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(7533),
-      jr = Qr(1251),
-      Ir = Qr(7526),
-      fr = Qr(1338);
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(7512),
+      Xd = md(1238),
+      Kd = md(7509),
+      hd = md(1341);
 
-    function Er(rr) {
+    function vd(dd) {
       let {
-        selected: Sr,
-        onSelect: Qr,
-        imageUrl: Zr
-      } = rr;
+        selected: Od,
+        onSelect: md,
+        imageUrl: Wd
+      } = dd;
       const {
-        t: Er
-      } = (0, jr.E)();
-      return (0, fr.jsx)("div", {
+        t: vd
+      } = (0, Xd.G)();
+      return (0, hd.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: ar.D.map((rr => {
-          const ar = Zr(rr);
-          return (0, fr.jsxs)("button", {
+        children: Rd.A.map((dd => {
+          const Rd = Wd(dd);
+          return (0, hd.jsxs)("button", {
             type: "button",
-            "aria-pressed": rr === Sr,
-            className: Wr()("ShaderPackViewOption", {
-              Selected: rr === Sr
+            "aria-pressed": dd === Od,
+            className: Fd()("ShaderPackViewOption", {
+              Selected: dd === Od
             }),
             onClick: () => {
-              Qr(rr)
+              md(dd)
             },
-            children: [null !== ar && (0, fr.jsx)("img", {
-              src: ar,
+            children: [null !== Rd && (0, hd.jsx)("img", {
+              src: Rd,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, fr.jsx)("span", {
+            }), (0, hd.jsx)("span", {
               className: "SmallTextBold",
-              children: Er(Ir.eb[rr])
+              children: vd(Kd.hb[dd])
             })]
-          }, rr)
+          }, dd)
         }))
       })
     }
   },
-  7541: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => mr,
-      f: () => Nr,
-      i: () => xr,
-      l: () => Ur
+  7523: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => od,
+      i: () => Nd,
+      j: () => td,
+      k: () => qd
     });
-    var Zr = Qr(72),
-      Wr = Qr(7533),
-      ar = Qr(1629),
-      jr = Qr(7526),
-      Ir = Qr(7550),
-      fr = Qr(1181);
-    const Er = "shaderPackListingView",
-      pr = "shaderPackListingFilterOpen";
+    var Wd = md(66),
+      Fd = md(7512),
+      Rd = md(1627),
+      Xd = md(7509),
+      Kd = md(7530),
+      hd = md(1186);
+    const vd = "shaderPackListingView",
+      Qd = "shaderPackListingFilterOpen";
 
-    function xr() {
-      var rr;
-      const [Sr, Qr] = (0, Ir.e)(Er, Wr.D[0]);
-      return [null !== (rr = Wr.D.find((rr => rr === Sr))) && void 0 !== rr ? rr : Wr.D[0], Qr]
+    function td() {
+      var dd;
+      const [Od, md] = (0, Kd.c)(vd, Fd.A[0]);
+      return [null !== (dd = Fd.A.find((dd => dd === Od))) && void 0 !== dd ? dd : Fd.A[0], md]
     }
 
-    function mr() {
-      (0, Zr.useEffect)((() => () => {
-        window.location.pathname.startsWith(jr.X) || (0, jr.l)()
+    function od() {
+      (0, Wd.useEffect)((() => () => {
+        window.location.pathname.startsWith(Xd.U) || (0, Xd.k)()
       }), [])
     }
 
-    function Nr() {
-      return (0, Ir.e)(pr, !1)
+    function Nd() {
+      return (0, Kd.c)(Qd, !1)
     }
 
-    function Ur() {
+    function qd() {
       const {
-        userContext: rr,
-        isUserContextUpdating: Sr
-      } = (0, fr.c)(), [Qr, Wr] = (0, Zr.useState)(null), jr = (0, Zr.useRef)(new Set);
+        userContext: dd,
+        isUserContextUpdating: Od
+      } = (0, hd.d)(), [md, Fd] = (0, Wd.useState)(null), Xd = (0, Wd.useRef)(new Set);
 
-      function Ir(rr, Sr) {
-        Wr((Qr => {
-          const Zr = new Set(Qr);
-          return Sr ? Zr.add(rr) : Zr.delete(rr), Zr
+      function Kd(dd, Od) {
+        Fd((md => {
+          const Wd = new Set(md);
+          return Od ? Wd.add(dd) : Wd.delete(dd), Wd
         }))
       }
-      return (0, Zr.useEffect)((() => {
-        if (Sr) return;
-        let Qr = !1;
-        return ar.c.getFavouriteShaderPacks(rr).then((rr => {
-          Qr || Wr(new Set(rr))
-        })).catch((rr => {
-          console.error("Failed to get favourite shader packs", rr), Qr || Wr(new Set)
+      return (0, Wd.useEffect)((() => {
+        if (Od) return;
+        let md = !1;
+        return Rd.e.getFavouriteShaderPacks(dd).then((dd => {
+          md || Fd(new Set(dd))
+        })).catch((dd => {
+          console.error("Failed to get favourite shader packs", dd), md || Fd(new Set)
         })), () => {
-          Qr = !0
+          md = !0
         }
-      }), [rr, Sr]), {
-        isFavourite: rr => null === Qr ? null : Qr.has(rr),
-        toggle: function(Sr) {
-          if (null === Qr || jr.current.has(Sr)) return;
-          jr.current.add(Sr);
-          const Zr = !Qr.has(Sr);
-          Ir(Sr, Zr), (Zr ? ar.c.favouriteShaderPack(rr, Sr) : ar.c.unfavouriteShaderPack(rr, Sr)).catch((rr => {
-            console.error("Failed to change a favourite shader pack", rr), Ir(Sr, !Zr)
+      }), [dd, Od]), {
+        isFavourite: dd => null === md ? null : md.has(dd),
+        toggle: function(Od) {
+          if (null === md || Xd.current.has(Od)) return;
+          Xd.current.add(Od);
+          const Wd = !md.has(Od);
+          Kd(Od, Wd), (Wd ? Rd.e.favouriteShaderPack(dd, Od) : Rd.e.unfavouriteShaderPack(dd, Od)).catch((dd => {
+            console.error("Failed to change a favourite shader pack", dd), Kd(Od, !Wd)
           })).finally((() => {
-            jr.current.delete(Sr)
+            Xd.current.delete(Od)
           }))
         }
       }
     }
   },
-  7526: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      A: () => Ur,
-      B: () => zr,
-      F: () => Lr,
-      I: () => pr,
-      M: () => Xr,
-      Q: () => tr,
-      R: () => Gr,
-      V: () => Cr,
-      X: () => jr,
-      Z: () => Mr,
-      _: () => fr,
-      bb: () => Ir,
-      cb: () => Rr,
-      d: () => Yr,
-      eb: () => gr,
-      gb: () => nr,
-      h: () => vr,
-      i: () => hr,
-      kb: () => lr,
-      l: () => mr,
-      n: () => xr,
-      p: () => Pr,
-      t: () => Nr,
-      v: () => Hr,
-      z: () => kr
+  7509: (dd, Od, md) => {
+    md.d(Od, {
+      D: () => bd,
+      H: () => Bd,
+      L: () => Qd,
+      N: () => sd,
+      O: () => Hd,
+      Q: () => Pd,
+      R: () => nd,
+      U: () => Xd,
+      X: () => Ld,
+      Y: () => hd,
+      ab: () => Kd,
+      d: () => Td,
+      eb: () => rd,
+      f: () => Ud,
+      hb: () => Gd,
+      i: () => yd,
+      k: () => od,
+      l: () => td,
+      lb: () => pd,
+      mb: () => Sd,
+      p: () => ud,
+      r: () => Nd,
+      u: () => Vd,
+      w: () => zd,
+      z: () => qd
     });
-    var Zr = Qr(7533),
-      Wr = Qr(161),
-      ar = Qr(5323);
-    const jr = "/shader-packs",
-      Ir = `${jr}/publish`;
+    var Wd = md(7512),
+      Fd = md(180),
+      Rd = md(5223);
+    const Xd = "/shader-packs",
+      Kd = `${Xd}/publish`;
 
-    function fr(rr) {
-      return `${jr}/${encodeURIComponent(rr)}`
+    function hd(dd) {
+      return `${Xd}/${encodeURIComponent(dd)}`
     }
-    let Er = null;
+    let vd = null;
 
-    function pr(rr) {
-      Er = rr
-    }
-
-    function xr() {
-      return Er
+    function Qd(dd) {
+      vd = dd
     }
 
-    function mr() {
-      Er = null
+    function td() {
+      return vd
     }
 
-    function Nr(rr) {
-      return rr.playerHasRank("developer") || rr.playerHasRank("admin")
+    function od() {
+      vd = null
     }
-    const Ur = ["terrain", "water", "models", "sunShadows", "strict"],
-      tr = {
+
+    function Nd(dd) {
+      return dd.playerHasRank("developer") || dd.playerHasRank("admin")
+    }
+    const qd = ["terrain", "water", "models", "sunShadows", "strict"],
+      Hd = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function hr(rr, Sr) {
-      return rr.withFeatures.includes(Sr) ? "with" : rr.withoutFeatures.includes(Sr) ? "without" : null
+    function yd(dd, Od) {
+      return dd.withFeatures.includes(Od) ? "with" : dd.withoutFeatures.includes(Od) ? "without" : null
     }
 
-    function zr(rr) {
-      return null === rr ? "with" : "with" === rr ? "without" : null
+    function bd(dd) {
+      return null === dd ? "with" : "with" === dd ? "without" : null
     }
 
-    function Yr(rr) {
-      return "with" === rr ? "only" : null === rr ? "include" : void 0
+    function Td(dd) {
+      return "with" === dd ? "only" : null === dd ? "include" : void 0
     }
 
-    function nr(rr, Sr) {
-      const Qr = hr(rr, Sr),
-        Zr = rr => rr.filter((rr => rr !== Sr));
+    function pd(dd, Od) {
+      const md = yd(dd, Od),
+        Wd = dd => dd.filter((dd => dd !== Od));
       return {
-        withFeatures: null === Qr ? [...rr.withFeatures, Sr] : Zr(rr.withFeatures),
-        withoutFeatures: "with" === Qr ? [...rr.withoutFeatures, Sr] : Zr(rr.withoutFeatures)
+        withFeatures: null === md ? [...dd.withFeatures, Od] : Wd(dd.withFeatures),
+        withoutFeatures: "with" === md ? [...dd.withoutFeatures, Od] : Wd(dd.withoutFeatures)
       }
     }
-    const er = "section",
-      Kr = "sort",
-      yr = "filters",
-      Br = "q",
-      Tr = "banned",
-      vr = "popular",
-      Or = "strict";
+    const Yd = "section",
+      gd = "sort",
+      wd = "filters",
+      Ed = "q",
+      Jd = "banned",
+      Ud = "popular",
+      xd = "strict";
 
-    function Lr(rr) {
-      var Sr, Qr, Wr;
-      const jr = rr.get(er),
-        Ir = (null !== (Sr = rr.get(yr)) && void 0 !== Sr ? Sr : Or).split(","),
-        fr = rr.get(Tr);
+    function Bd(dd) {
+      var Od, md, Fd;
+      const Xd = dd.get(Yd),
+        Kd = (null !== (Od = dd.get(wd)) && void 0 !== Od ? Od : xd).split(","),
+        hd = dd.get(Jd);
       return {
-        section: "favourites" === jr || "mine" === jr ? jr : "explore",
-        sort: null !== (Qr = Zr.w.find((Sr => Sr === rr.get(Kr)))) && void 0 !== Qr ? Qr : vr,
-        withFeatures: Ur.filter((rr => Ir.includes(rr) && !Ir.includes(`-${rr}`))),
-        withoutFeatures: Ur.filter((rr => Ir.includes(`-${rr}`))),
-        searchQuery: (null === (Wr = rr.get(Br)) || void 0 === Wr ? void 0 : Wr.slice(0, Zr.I)) || null,
-        pageNumber: (0, ar.c)(rr.get(ar.b)),
-        banned: "only" === fr ? "with" : "include" === fr ? null : "without"
+        section: "favourites" === Xd || "mine" === Xd ? Xd : "explore",
+        sort: null !== (md = Wd.v.find((Od => Od === dd.get(gd)))) && void 0 !== md ? md : Ud,
+        withFeatures: qd.filter((dd => Kd.includes(dd) && !Kd.includes(`-${dd}`))),
+        withoutFeatures: qd.filter((dd => Kd.includes(`-${dd}`))),
+        searchQuery: (null === (Fd = dd.get(Ed)) || void 0 === Fd ? void 0 : Fd.slice(0, Wd.F)) || null,
+        pageNumber: (0, Rd.e)(dd.get(Rd.d)),
+        banned: "only" === hd ? "with" : "include" === hd ? null : "without"
       }
     }
 
-    function lr(rr, Sr) {
-      var Qr;
-      const Zr = qr(Sr);
-      (0, ar.g)(rr, er, "explore" === Sr.section ? null : Sr.section), (0, ar.g)(rr, Kr, Sr.sort === vr ? null : Sr.sort), (0, ar.g)(rr, yr, Zr === Or ? null : Zr), (0, ar.g)(rr, Br, Sr.searchQuery), (0, ar.g)(rr, Tr, null !== (Qr = Yr(Sr.banned)) && void 0 !== Qr ? Qr : null), (0, ar.j)(rr, Sr.pageNumber)
+    function Sd(dd, Od) {
+      var md;
+      const Wd = Ad(Od);
+      (0, Rd.g)(dd, Yd, "explore" === Od.section ? null : Od.section), (0, Rd.g)(dd, gd, Od.sort === Ud ? null : Od.sort), (0, Rd.g)(dd, wd, Wd === xd ? null : Wd), (0, Rd.g)(dd, Ed, Od.searchQuery), (0, Rd.g)(dd, Jd, null !== (md = Td(Od.banned)) && void 0 !== md ? md : null), (0, Rd.j)(dd, Od.pageNumber)
     }
 
-    function Xr(rr) {
-      const Sr = new URLSearchParams;
-      return lr(Sr, {
+    function sd(dd) {
+      const Od = new URLSearchParams;
+      return Sd(Od, {
         section: "explore",
-        sort: vr,
-        withFeatures: "strict" === rr ? [rr] : [rr, "strict"],
+        sort: Ud,
+        withFeatures: "strict" === dd ? [dd] : [dd, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${jr}?${Sr.toString()}`
+      }), `${Xd}?${Od.toString()}`
     }
 
-    function Pr(rr) {
-      return qr(rr) === Or
+    function ud(dd) {
+      return Ad(dd) === xd
     }
 
-    function Hr(rr) {
-      return null !== rr.searchQuery || "with" === rr.banned || qr(rr) !== Or
+    function Vd(dd) {
+      return null !== dd.searchQuery || "with" === dd.banned || Ad(dd) !== xd
     }
 
-    function qr(rr) {
-      return Ur.flatMap((Sr => {
-        const Qr = hr(rr, Sr);
-        return "with" === Qr ? [Sr] : "without" === Qr ? [`-${Sr}`] : []
+    function Ad(dd) {
+      return qd.flatMap((Od => {
+        const md = yd(dd, Od);
+        return "with" === md ? [Od] : "without" === md ? [`-${Od}`] : []
       })).join(",")
     }
-    const Rr = {
+    const rd = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      gr = {
+      Gd = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,94 +295,94 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function Cr(rr) {
-      return Math.round(100 * Math.max(0, 1 - 1 / rr))
+    function nd(dd) {
+      return Math.round(100 * Math.max(0, 1 - 1 / dd))
     }
 
-    function Mr(rr, Sr, Qr, Wr) {
-      const ar = [];
-      rr.isBanned && ar.push({
+    function Ld(dd, Od, md, Fd) {
+      const Rd = [];
+      dd.isBanned && Rd.push({
         tone: "warning",
-        text: Wr("shaderPackListing:ownerBanned"),
+        text: Fd("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: jr
-      } = rr;
-      if (null === rr.brokenError || jr && !jr.error || ar.push({
+        pending: Xd
+      } = dd;
+      if (null === dd.brokenError || Xd && !Xd.error || Rd.push({
           tone: "warning",
-          text: Wr("shaderPackListing:ownerBroken"),
-          detail: rr.brokenError
-        }), null !== jr && void 0 !== jr && jr.error) ar.push({
+          text: Fd("shaderPackListing:ownerBroken"),
+          detail: dd.brokenError
+        }), null !== Xd && void 0 !== Xd && Xd.error) Rd.push({
         tone: "warning",
-        text: Wr(Sr ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Zr.l)(jr.error) ? null : jr.error
+        text: Fd(Od ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, Wd.m)(Xd.error) ? null : Xd.error
       });
-      else if (jr) {
-        const rr = null === jr.renderNotBefore ? 0 : jr.renderNotBefore - Qr,
-          Zr = String(Math.ceil(rr / 6e4)),
-          Ir = Wr(Sr ? rr > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : rr > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Zr
+      else if (Xd) {
+        const dd = null === Xd.renderNotBefore ? 0 : Xd.renderNotBefore - md,
+          Wd = String(Math.ceil(dd / 6e4)),
+          Kd = Fd(Od ? dd > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : dd > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: Wd
           });
-        ar.push({
+        Rd.push({
           tone: "info",
-          text: Ir,
+          text: Kd,
           detail: null
         })
       }
-      return rr.listed || ar.push({
+      return dd.listed || Rd.push({
         tone: "info",
-        text: Wr("shaderPackListing:ownerUnlisted"),
+        text: Fd("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), ar
+      }), Rd
     }
 
-    function Gr(rr) {
-      return Math.max(1, Math.round(rr / 1024))
+    function Pd(dd) {
+      return Math.max(1, Math.round(dd / 1024))
     }
 
-    function kr(rr, Sr, Qr) {
-      return rr instanceof Wr.b && rr.errorMessageForUser ? rr.errorMessageForUser : Sr(Qr)
+    function zd(dd, Od, md) {
+      return dd instanceof Fd.e && dd.errorMessageForUser ? dd.errorMessageForUser : Od(md)
     }
   },
-  7550: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar
+  7530: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd
     });
-    var Zr = Qr(72),
-      Wr = Qr(43);
+    var Wd = md(66),
+      Fd = md(46);
 
-    function ar(rr, Sr) {
-      var Qr;
-      const [ar, jr] = (0, Zr.useState)(null !== (Qr = Wr.j.getItem(rr)) && void 0 !== Qr ? Qr : Sr);
-      return [ar, Sr => {
-        Wr.j.setItem(rr, Sr), jr(Sr)
+    function Rd(dd, Od) {
+      var md;
+      const [Rd, Xd] = (0, Wd.useState)(null !== (md = Fd.k.getItem(dd)) && void 0 !== md ? md : Od);
+      return [Rd, Od => {
+        Fd.k.setItem(dd, Od), Xd(Od)
       }]
     }
   },
-  7533: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      C: () => jr,
-      D: () => Zr,
-      E: () => mr,
-      I: () => pr,
-      J: () => er,
-      K: () => xr,
-      L: () => Er,
-      c: () => Ur,
-      g: () => hr,
-      i: () => tr,
-      j: () => Nr,
-      l: () => nr,
-      o: () => yr,
-      q: () => fr,
-      r: () => Wr,
-      u: () => Kr,
-      w: () => ar,
-      z: () => Ir
+  7512: (dd, Od, md) => {
+    md.d(Od, {
+      A: () => Wd,
+      D: () => od,
+      F: () => Qd,
+      H: () => Yd,
+      L: () => td,
+      P: () => vd,
+      d: () => qd,
+      f: () => yd,
+      j: () => Hd,
+      l: () => Nd,
+      m: () => pd,
+      n: () => wd,
+      p: () => hd,
+      q: () => Fd,
+      r: () => gd,
+      v: () => Rd,
+      w: () => Kd,
+      y: () => Xd
     });
-    const Zr = ["forest", "desert", "water", "night", "cave"];
-    const Wr = {
+    const Wd = ["forest", "desert", "water", "night", "cave"];
+    const Fd = {
         full: {
           width: 3840,
           height: 2160
@@ -396,49 +396,49 @@ export const modules = {
           height: 360
         }
       },
-      ar = ["popular", "updated", "newest"],
-      jr = 3,
-      Ir = 32,
-      fr = 300;
+      Rd = ["popular", "updated", "newest"],
+      Xd = 3,
+      Kd = 32,
+      hd = 300;
 
-    function Er(rr, Sr) {
-      return rr.slice(0, Sr).replace(/[\uD800-\uDBFF]$/, "")
+    function vd(dd, Od) {
+      return dd.slice(0, Od).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const pr = 64,
-      xr = 512,
-      mr = 18e5;
+    const Qd = 64,
+      td = 512,
+      od = 18e5;
 
-    function Nr(rr) {
-      const Sr = rr,
-        Qr = null === Sr || void 0 === Sr ? void 0 : Sr.files;
-      return "number" === typeof(null === Sr || void 0 === Sr ? void 0 : Sr.apiVersion) && "string" === typeof Sr.name && (null === Sr.author || "string" === typeof Sr.author) && (void 0 === Sr.keepCircleShadows || "boolean" === typeof Sr.keepCircleShadows) && "object" === typeof Qr && null !== Qr && Object.values(Qr).every((rr => "string" === typeof rr))
+    function Nd(dd) {
+      const Od = dd,
+        md = null === Od || void 0 === Od ? void 0 : Od.files;
+      return "number" === typeof(null === Od || void 0 === Od ? void 0 : Od.apiVersion) && "string" === typeof Od.name && (null === Od.author || "string" === typeof Od.author) && (void 0 === Od.keepCircleShadows || "boolean" === typeof Od.keepCircleShadows) && "object" === typeof md && null !== md && Object.values(md).every((dd => "string" === typeof dd))
     }
-    const Ur = "Bloxdhub",
-      tr = "https://bloxdhub.com/shaders";
+    const qd = "Bloxdhub",
+      Hd = "https://bloxdhub.com/shaders";
 
-    function hr(rr) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(rr)}`
+    function yd(dd) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(dd)}`
     }
-    const zr = "Screenshot generation failed.",
-      Yr = "Its screenshots couldn't be generated:";
+    const bd = "Screenshot generation failed.",
+      Td = "Its screenshots couldn't be generated:";
 
-    function nr(rr) {
-      var Sr;
-      return rr === zr || null !== (Sr = null === rr || void 0 === rr ? void 0 : rr.startsWith(Yr)) && void 0 !== Sr && Sr
-    }
-
-    function er(rr, Sr) {
-      return `shaderPacks/${rr}/${Sr}.json`
+    function pd(dd) {
+      var Od;
+      return dd === bd || null !== (Od = null === dd || void 0 === dd ? void 0 : dd.startsWith(Td)) && void 0 !== Od && Od
     }
 
-    function Kr(rr, Sr, Qr, Zr) {
-      return null === Sr.renderId ? yr(rr, Sr.baselineVersion, Qr, Zr) : `${rr}/${function(rr,Sr,Qr,Zr){return`shaderPacks/${rr}/${Sr}/${Qr}-${Zr}.webp`}(Sr.packId,Sr.renderId,Qr,Zr)}`
+    function Yd(dd, Od) {
+      return `shaderPacks/${dd}/${Od}.json`
     }
 
-    function yr(rr, Sr, Qr, Zr) {
-      return `${rr}/${function(rr,Sr,Qr){return`shaderPacks/baseline/${rr}/${Sr}-${Qr}.webp`}(Sr,Qr,Zr)}`
+    function gd(dd, Od, md, Wd) {
+      return null === Od.renderId ? wd(dd, Od.baselineVersion, md, Wd) : `${dd}/${function(dd,Od,md,Wd){return`shaderPacks/${dd}/${Od}/${md}-${Wd}.webp`}(Od.packId,Od.renderId,md,Wd)}`
+    }
+
+    function wd(dd, Od, md, Wd) {
+      return `${dd}/${function(dd,Od,md){return`shaderPacks/baseline/${dd}/${Od}-${md}.webp`}(Od,md,Wd)}`
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

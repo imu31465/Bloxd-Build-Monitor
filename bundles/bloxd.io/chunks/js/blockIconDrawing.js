@@ -1,497 +1,497 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  37933: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      drawBlockIcon: () => Yr,
-      drawBlockIconUrl: () => nr,
-      getDrawnBlockIcon: () => zr,
-      resetBlockIconDrawingForTests: () => Ur
+  38010: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      drawBlockIcon: () => Td,
+      drawBlockIconUrl: () => pd,
+      getDrawnBlockIcon: () => bd,
+      resetBlockIconDrawingForTests: () => qd
     });
-    var Zr = Qr(37939);
-    const Wr = {
+    var Wd = md(38013);
+    const Fd = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      ar = {
+      Rd = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      jr = {
+      Xd = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const Ir = 1e-6;
+    const Kd = 1e-6;
 
-    function fr(rr, Sr, Qr, Zr) {
+    function hd(dd, Od, md, Wd) {
       let {
-        origin: Wr,
-        across: ar,
-        down: jr,
-        texture: fr,
-        rect: [Er, pr, xr, mr],
-        shade: Nr
-      } = Zr;
-      const Ur = ar.x * jr.y - ar.y * jr.x;
-      if (Math.abs(Ur) < 1e-9) return;
-      const tr = [Wr.x, Wr.x + ar.x, Wr.x + jr.x, Wr.x + ar.x + jr.x],
-        hr = [Wr.y, Wr.y + ar.y, Wr.y + jr.y, Wr.y + ar.y + jr.y],
-        zr = Math.max(0, Math.floor(Math.min(...tr))),
-        Yr = Math.min(Qr - 1, Math.ceil(Math.max(...tr))),
-        nr = Math.max(0, Math.floor(Math.min(...hr))),
-        er = Math.min(Qr - 1, Math.ceil(Math.max(...hr)));
-      for (let Kr = nr; Kr <= er; Kr++)
-        for (let Zr = zr; Zr <= Yr; Zr++) {
-          const tr = Zr + .5 - Wr.x,
-            hr = Kr + .5 - Wr.y,
-            zr = (tr * jr.y - hr * jr.x) / Ur,
-            Yr = (ar.x * hr - ar.y * tr) / Ur;
-          if (zr < -Ir || zr > 1 + Ir || Yr < -Ir || Yr > 1 + Ir) continue;
-          const nr = Kr * Qr + Zr;
-          Sr[nr] = 1;
-          const er = Er + Math.min(Math.max(zr, 0), 1) * (xr - Er),
-            yr = pr + Math.min(Math.max(Yr, 0), 1) * (mr - pr),
-            Br = Math.min(fr.width - 1, Math.floor(er * fr.width)),
-            Tr = 4 * (Math.min(fr.height - 1, Math.floor(yr * fr.height)) * fr.width + Br),
-            vr = fr.pixels[Tr + 3] / 255;
-          if (0 === vr) continue;
-          const Or = 4 * nr,
-            Lr = rr[Or + 3] / 255 * (1 - vr),
-            lr = vr + Lr;
-          for (let Sr = 0; Sr < 3; Sr++) rr[Or + Sr] = (fr.pixels[Tr + Sr] * Nr * vr + rr[Or + Sr] * Lr) / lr;
-          rr[Or + 3] = 255 * lr
+        origin: Fd,
+        across: Rd,
+        down: Xd,
+        texture: hd,
+        rect: [vd, Qd, td, od],
+        shade: Nd
+      } = Wd;
+      const qd = Rd.x * Xd.y - Rd.y * Xd.x;
+      if (Math.abs(qd) < 1e-9) return;
+      const Hd = [Fd.x, Fd.x + Rd.x, Fd.x + Xd.x, Fd.x + Rd.x + Xd.x],
+        yd = [Fd.y, Fd.y + Rd.y, Fd.y + Xd.y, Fd.y + Rd.y + Xd.y],
+        bd = Math.max(0, Math.floor(Math.min(...Hd))),
+        Td = Math.min(md - 1, Math.ceil(Math.max(...Hd))),
+        pd = Math.max(0, Math.floor(Math.min(...yd))),
+        Yd = Math.min(md - 1, Math.ceil(Math.max(...yd)));
+      for (let gd = pd; gd <= Yd; gd++)
+        for (let Wd = bd; Wd <= Td; Wd++) {
+          const Hd = Wd + .5 - Fd.x,
+            yd = gd + .5 - Fd.y,
+            bd = (Hd * Xd.y - yd * Xd.x) / qd,
+            Td = (Rd.x * yd - Rd.y * Hd) / qd;
+          if (bd < -Kd || bd > 1 + Kd || Td < -Kd || Td > 1 + Kd) continue;
+          const pd = gd * md + Wd;
+          Od[pd] = 1;
+          const Yd = vd + Math.min(Math.max(bd, 0), 1) * (td - vd),
+            wd = Qd + Math.min(Math.max(Td, 0), 1) * (od - Qd),
+            Ed = Math.min(hd.width - 1, Math.floor(Yd * hd.width)),
+            Jd = 4 * (Math.min(hd.height - 1, Math.floor(wd * hd.height)) * hd.width + Ed),
+            Ud = hd.pixels[Jd + 3] / 255;
+          if (0 === Ud) continue;
+          const xd = 4 * pd,
+            Bd = dd[xd + 3] / 255 * (1 - Ud),
+            Sd = Ud + Bd;
+          for (let Od = 0; Od < 3; Od++) dd[xd + Od] = (hd.pixels[Jd + Od] * Nd * Ud + dd[xd + Od] * Bd) / Sd;
+          dd[xd + 3] = 255 * Sd
         }
     }
-    var Er = Qr(37942);
-    const pr = new Map,
-      xr = new Map,
-      mr = new Map,
-      Nr = new Map;
+    var vd = md(38020);
+    const Qd = new Map,
+      td = new Map,
+      od = new Map,
+      Nd = new Map;
 
-    function Ur() {
-      pr.clear(), xr.clear(), mr.clear(), Nr.clear()
+    function qd() {
+      Qd.clear(), td.clear(), od.clear(), Nd.clear()
     }
 
-    function tr(rr, Sr, Qr) {
-      return `${Sr}|${Qr}|${rr}`
+    function Hd(dd, Od, md) {
+      return `${Od}|${md}|${dd}`
     }
 
-    function hr(rr, Sr, Qr) {
-      let Zr = rr.get(Sr);
-      return void 0 === Zr && (Zr = Qr().catch((Qr => {
-        throw rr.delete(Sr), Qr
-      })), rr.set(Sr, Zr)), Zr
+    function yd(dd, Od, md) {
+      let Wd = dd.get(Od);
+      return void 0 === Wd && (Wd = md().catch((md => {
+        throw dd.delete(Od), md
+      })), dd.set(Od, Wd)), Wd
     }
 
-    function zr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return xr.get(tr(rr, Sr, Qr))
+    function bd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return td.get(Hd(dd, Od, md))
     }
 
-    function Yr(rr, Sr, Qr, Zr) {
-      const Wr = tr(rr, Sr, Qr);
-      return hr(pr, Wr, (async () => {
-        const ar = await er(Zr(rr), Sr, Qr);
-        return xr.set(Wr, ar), ar
+    function Td(dd, Od, md, Wd) {
+      const Fd = Hd(dd, Od, md);
+      return yd(Qd, Fd, (async () => {
+        const Rd = await Yd(Wd(dd), Od, md);
+        return td.set(Fd, Rd), Rd
       }))
     }
 
-    function nr(rr, Sr, Qr, Zr) {
-      return hr(mr, tr(rr, Sr, Qr), (async () => {
-        var Wr;
-        const ar = Zr(rr);
-        return null !== (Wr = await (0, Er.b)(ar, Sr, Qr)) && void 0 !== Wr ? Wr : (await er(ar, Sr, Qr)).toDataURL()
+    function pd(dd, Od, md, Wd) {
+      return yd(od, Hd(dd, Od, md), (async () => {
+        var Fd;
+        const Rd = Wd(dd);
+        return null !== (Fd = await (0, vd.b)(Rd, Od, md)) && void 0 !== Fd ? Fd : (await Yd(Rd, Od, md)).toDataURL()
       }))
     }
-    async function er(rr, Sr, Qr) {
+    async function Yd(dd, Od, md) {
       let {
-        top: Ir,
-        left: Er,
-        right: pr,
-        itemType: xr
-      } = rr;
-      const [mr, Nr, Ur] = await Promise.all([Kr(Ir), Kr(Er), Kr(pr)]), tr = function(rr, Sr, Qr, Wr) {
-        const ar = (0, Zr.j)(Qr, Wr),
-          jr = ar * Zr.d.across,
-          Ir = ar * Zr.d.down,
-          Er = ar * Zr.d.up,
-          pr = Math.max(...Sr.boxes.map((rr => rr[4]))),
-          xr = Qr / 2,
-          mr = Ir + (Qr - Ir - Ir - pr * Er) / 2,
-          Nr = (rr, Sr, Qr) => ({
-            x: xr + (rr - Qr) * jr,
-            y: mr - Ir + (rr + Qr) * Ir + (pr - Sr) * Er
+        top: Kd,
+        left: vd,
+        right: Qd,
+        itemType: td
+      } = dd;
+      const [od, Nd, qd] = await Promise.all([gd(Kd), gd(vd), gd(Qd)]), Hd = function(dd, Od, md, Fd) {
+        const Rd = (0, Wd.g)(md, Fd),
+          Xd = Rd * Wd.c.across,
+          Kd = Rd * Wd.c.down,
+          vd = Rd * Wd.c.up,
+          Qd = Math.max(...Od.boxes.map((dd => dd[4]))),
+          td = md / 2,
+          od = Kd + (md - Kd - Kd - Qd * vd) / 2,
+          Nd = (dd, Od, md) => ({
+            x: td + (dd - md) * Xd,
+            y: od - Kd + (dd + md) * Kd + (Qd - Od) * vd
           }),
-          Ur = (rr, Qr, Zr, Wr, ar, jr) => ({
-            origin: rr,
+          qd = (dd, md, Wd, Fd, Rd, Xd) => ({
+            origin: dd,
             across: {
-              x: Qr.x - rr.x,
-              y: Qr.y - rr.y
+              x: md.x - dd.x,
+              y: md.y - dd.y
             },
             down: {
-              x: Zr.x - rr.x,
-              y: Zr.y - rr.y
+              x: Wd.x - dd.x,
+              y: Wd.y - dd.y
             },
-            texture: Wr,
-            rect: Sr.cropFaces ? ar : [0, 0, 1, 1],
-            shade: jr
+            texture: Fd,
+            rect: Od.cropFaces ? Rd : [0, 0, 1, 1],
+            shade: Xd
           }),
-          tr = new Uint8ClampedArray(Qr * Qr * 4),
-          hr = new Uint8Array(Qr * Qr),
-          zr = Zr.g;
-        for (const [Zr, Yr, nr, er, Kr, yr] of Sr.boxes) {
-          const Sr = Ur(Nr(er, Kr, yr), Nr(er, Kr, nr), Nr(er, Yr, yr), rr.right, [1 - yr, 1 - Kr, 1 - nr, 1 - Yr], zr.right),
-            Wr = Ur(Nr(Zr, Kr, yr), Nr(er, Kr, yr), Nr(Zr, Yr, yr), rr.left, [Zr, 1 - Kr, er, 1 - Yr], zr.left),
-            ar = Ur(Nr(Zr, Kr, nr), Nr(er, Kr, nr), Nr(Zr, Kr, yr), rr.top, [Zr, nr, er, yr], zr.top);
-          for (const rr of [Sr, Wr, ar]) fr(tr, hr, Qr, rr)
+          Hd = new Uint8ClampedArray(md * md * 4),
+          yd = new Uint8Array(md * md),
+          bd = Wd.e;
+        for (const [Wd, Td, pd, Yd, gd, wd] of Od.boxes) {
+          const Od = qd(Nd(Yd, gd, wd), Nd(Yd, gd, pd), Nd(Yd, Td, wd), dd.right, [1 - wd, 1 - gd, 1 - pd, 1 - Td], bd.right),
+            Fd = qd(Nd(Wd, gd, wd), Nd(Yd, gd, wd), Nd(Wd, Td, wd), dd.left, [Wd, 1 - gd, Yd, 1 - Td], bd.left),
+            Rd = qd(Nd(Wd, gd, pd), Nd(Yd, gd, pd), Nd(Wd, gd, wd), dd.top, [Wd, pd, Yd, wd], bd.top);
+          for (const dd of [Od, Fd, Rd]) hd(Hd, yd, md, dd)
         }
-        return (0, Zr.l)(tr, Qr, Wr, (rr => 1 === hr[rr])), tr
+        return (0, Wd.h)(Hd, md, Fd, (dd => 1 === yd[dd])), Hd
       }({
-        top: mr,
-        left: Nr,
-        right: Ur
-      }, function(rr) {
-        return "SlabBlock" === rr ? ar : "StairsBlock" === rr ? jr : Wr
-      }(xr), Sr, Qr), hr = document.createElement("canvas");
-      hr.width = Sr, hr.height = Sr;
-      const zr = hr.getContext("2d");
-      if (!zr) throw new Error("Failed to get 2D context");
-      return zr.putImageData(new ImageData(tr, Sr, Sr), 0, 0), hr
+        top: od,
+        left: Nd,
+        right: qd
+      }, function(dd) {
+        return "SlabBlock" === dd ? Rd : "StairsBlock" === dd ? Xd : Fd
+      }(td), Od, md), yd = document.createElement("canvas");
+      yd.width = Od, yd.height = Od;
+      const bd = yd.getContext("2d");
+      if (!bd) throw new Error("Failed to get 2D context");
+      return bd.putImageData(new ImageData(Hd, Od, Od), 0, 0), yd
     }
 
-    function Kr(rr) {
-      return hr(Nr, rr, (async () => {
-        const Sr = await (0, Er.g)(rr),
-          Qr = document.createElement("canvas");
-        Qr.width = Sr.width, Qr.height = Sr.height;
-        const Zr = Qr.getContext("2d");
-        if (!Zr) throw new Error("Failed to get 2D context");
-        return Zr.drawImage(Sr, 0, 0), {
-          width: Sr.width,
-          height: Sr.height,
-          pixels: Zr.getImageData(0, 0, Sr.width, Sr.height).data
+    function gd(dd) {
+      return yd(Nd, dd, (async () => {
+        const Od = await (0, vd.j)(dd),
+          md = document.createElement("canvas");
+        md.width = Od.width, md.height = Od.height;
+        const Wd = md.getContext("2d");
+        if (!Wd) throw new Error("Failed to get 2D context");
+        return Wd.drawImage(Od, 0, 0), {
+          width: Od.width,
+          height: Od.height,
+          pixels: Wd.getImageData(0, 0, Od.width, Od.height).data
         }
       }))
     }
   },
-  37942: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Lr,
-      d: () => lr,
-      f: () => Kr,
-      g: () => nr,
-      k: () => yr
+  38020: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Bd,
+      c: () => Sd,
+      f: () => gd,
+      j: () => pd,
+      l: () => wd
     });
-    var Zr = Qr(300),
-      Wr = Qr(109);
-    const ar = new(Qr(37945).d)(new URL(Qr.p + Qr.u(3), Qr.b), {
+    var Wd = md(320),
+      Fd = md(107);
+    const Rd = new(md(38022).c)(new URL(md.p + md.u(3), md.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var jr = Qr(1783),
-      Ir = Qr(2311);
-    const fr = 1e4,
-      Er = 3e4;
-    let pr = null,
-      xr = null,
-      mr = null,
-      Nr = !1,
-      Ur = 0;
-    const tr = new Map;
-    let hr = null;
-    const zr = new Map,
-      Yr = new Map;
+    var Xd = md(1786),
+      Kd = md(2324);
+    const hd = 1e4,
+      vd = 3e4;
+    let Qd = null,
+      td = null,
+      od = null,
+      Nd = !1,
+      qd = 0;
+    const Hd = new Map;
+    let yd = null;
+    const bd = new Map,
+      Td = new Map;
 
-    function nr(rr) {
-      const Sr = new Promise(((Sr, Qr) => {
-        const Zr = new Image;
-        Zr.crossOrigin = "anonymous", Zr.fetchPriority = "high", Zr.onload = () => {
-          Sr(Zr)
-        }, Zr.onerror = () => {
-          Qr(new Error(`A block icon's texture did not load: ${rr.slice(0,100)}`))
-        }, Zr.src = rr
+    function pd(dd) {
+      const Od = new Promise(((Od, md) => {
+        const Wd = new Image;
+        Wd.crossOrigin = "anonymous", Wd.fetchPriority = "high", Wd.onload = () => {
+          Od(Wd)
+        }, Wd.onerror = () => {
+          md(new Error(`A block icon's texture did not load: ${dd.slice(0,100)}`))
+        }, Wd.src = dd
       }));
-      return (0, Ir.g)(Sr)
+      return (0, Kd.g)(Od)
     }
 
-    function er(rr) {
-      var Sr, Qr;
-      Nr || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${rr}`), Nr = !0, null === (Sr = pr) || void 0 === Sr || Sr.terminate(), pr = null, xr = null, zr.clear(), Yr.clear();
-      for (const Zr of tr.values()) Zr(null);
-      tr.clear(), null === (Qr = hr) || void 0 === Qr || Qr()
+    function Yd(dd) {
+      var Od, md;
+      Nd || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${dd}`), Nd = !0, null === (Od = Qd) || void 0 === Od || Od.terminate(), Qd = null, td = null, bd.clear(), Td.clear();
+      for (const Wd of Hd.values()) Wd(null);
+      Hd.clear(), null === (md = yd) || void 0 === md || md()
     }
 
-    function Kr() {
-      return null !== xr
+    function gd() {
+      return null !== td
     }
 
-    function yr() {
-      return mr ??= async function() {
+    function wd() {
+      return od ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === Zr.e.ios_icon_worker_v1 && (0, Wr.isWebKit)()) return;
+        if ("page" === Wd.d.ios_icon_worker_v1 && (0, Fd.isWebKit)()) return;
         try {
-          pr = await async function() {
-            return await ar.ready(), ar.start()
+          Qd = await async function() {
+            return await Rd.ready(), Rd.start()
           }()
-        } catch (Ir) {
-          return void er(`did not start (${String(Ir)})`)
+        } catch (Kd) {
+          return void Yd(`did not start (${String(Kd)})`)
         }
-        let rr = () => {};
-        const Sr = new Promise((Sr => {
-          rr = Sr
+        let dd = () => {};
+        const Od = new Promise((Od => {
+          dd = Od
         }));
-        pr.onmessage = Sr => {
+        Qd.onmessage = Od => {
           let {
-            data: Qr
-          } = Sr;
-          if ("started" === Qr.type) xr = pr, rr();
-          else if ("failed" === Qr.type) er(`failed a draw (${Qr.message})`);
+            data: md
+          } = Od;
+          if ("started" === md.type) td = Qd, dd();
+          else if ("failed" === md.type) Yd(`failed a draw (${md.message})`);
           else {
-            var Zr, Wr;
-            null === (Zr = tr.get(Qr.id)) || void 0 === Zr || Zr(Qr.url), tr.delete(Qr.id), null === (Wr = hr) || void 0 === Wr || Wr()
+            var Wd, Fd;
+            null === (Wd = Hd.get(md.id)) || void 0 === Wd || Wd(md.url), Hd.delete(md.id), null === (Fd = yd) || void 0 === Fd || Fd()
           }
-        }, pr.onerror = Sr => {
-          Sr.preventDefault(), er(`stopped (${Sr.message||"its script did not load or run"})`), rr()
+        }, Qd.onerror = Od => {
+          Od.preventDefault(), Yd(`stopped (${Od.message||"its script did not load or run"})`), dd()
         };
-        const Qr = `did not start in ${Er/1e3} s`;
-        await (0, jr.h)(Sr, Er, Qr).catch((() => {
-          er(Qr)
+        const md = `did not start in ${vd/1e3} s`;
+        await (0, Xd.k)(Od, vd, md).catch((() => {
+          Yd(md)
         }))
-      }(), mr
+      }(), od
     }
 
-    function Br() {
-      if (null !== hr || 0 === tr.size) return;
-      const rr = new Promise((rr => {
-          hr = rr
+    function Ed() {
+      if (null !== yd || 0 === Hd.size) return;
+      const dd = new Promise((dd => {
+          yd = dd
         })),
-        Sr = `did not answer in ${fr/1e3} s`;
-      (0, jr.h)(rr, fr, Sr).then((() => {
-        hr = null, Br()
+        Od = `did not answer in ${hd/1e3} s`;
+      (0, Xd.k)(dd, hd, Od).then((() => {
+        yd = null, Ed()
       }), (() => {
-        hr = null, er(Sr)
+        yd = null, Yd(Od)
       }))
     }
 
-    function Tr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      rr.postMessage(Sr, Qr)
+    function Jd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      dd.postMessage(Od, md)
     }
 
-    function vr(rr, Sr, Qr, Zr) {
-      let Wr = Sr.get(Qr);
-      return void 0 === Wr && (Wr = Zr().then((async Sr => {
+    function Ud(dd, Od, md, Wd) {
+      let Fd = Od.get(md);
+      return void 0 === Fd && (Fd = Wd().then((async Od => {
         let {
-          image: Qr,
-          request: Zr
-        } = Sr;
+          image: md,
+          request: Wd
+        } = Od;
         try {
-          const Sr = await createImageBitmap(Qr);
-          Tr(rr, Zr(Sr), [Sr])
-        } catch (Wr) {
-          er(`could not take an image (${String(Wr)})`)
+          const Od = await createImageBitmap(md);
+          Jd(dd, Wd(Od), [Od])
+        } catch (Fd) {
+          Yd(`could not take an image (${String(Fd)})`)
         }
-      })), Wr.catch((() => {
-        Sr.get(Qr) === Wr && Sr.delete(Qr)
-      })), Sr.set(Qr, Wr)), Wr
+      })), Fd.catch((() => {
+        Od.get(md) === Fd && Od.delete(md)
+      })), Od.set(md, Fd)), Fd
     }
-    async function Or(rr, Sr) {
-      yr();
-      const Qr = xr;
-      if (null === Qr) return null;
-      if (await rr(Qr), xr !== Qr) return null;
-      const Zr = ++Ur;
-      return new Promise((rr => {
-        tr.set(Zr, rr), Tr(Qr, Sr(Zr)), Br()
+    async function xd(dd, Od) {
+      wd();
+      const md = td;
+      if (null === md) return null;
+      if (await dd(md), td !== md) return null;
+      const Wd = ++qd;
+      return new Promise((dd => {
+        Hd.set(Wd, dd), Jd(md, Od(Wd)), Ed()
       }))
     }
 
-    function Lr(rr, Sr, Qr) {
-      return Or((Sr => Promise.all([rr.top, rr.left, rr.right].map((rr => function(rr, Sr) {
-        return vr(rr, zr, Sr, (async () => ({
-          image: await nr(Sr),
-          request: rr => ({
+    function Bd(dd, Od, md) {
+      return xd((Od => Promise.all([dd.top, dd.left, dd.right].map((dd => function(dd, Od) {
+        return Ud(dd, bd, Od, (async () => ({
+          image: await pd(Od),
+          request: dd => ({
             type: "texture",
-            url: Sr,
-            bitmap: rr
+            url: Od,
+            bitmap: dd
           })
         })))
-      }(Sr, rr))))), (Zr => ({
+      }(Od, dd))))), (Wd => ({
         type: "draw",
-        id: Zr,
-        ...rr,
-        size: Sr,
-        outlineWidth: Qr
+        id: Wd,
+        ...dd,
+        size: Od,
+        outlineWidth: md
       })))
     }
 
-    function lr(rr, Sr, Qr, Zr) {
-      return Or((Qr => function(rr, Sr, Qr) {
-        return vr(rr, Yr, Sr, (async () => {
+    function Sd(dd, Od, md, Wd) {
+      return xd((md => function(dd, Od, md) {
+        return Ud(dd, Td, Od, (async () => {
           const {
-            texture: rr,
-            ...Zr
-          } = await Qr();
+            texture: dd,
+            ...Wd
+          } = await md();
           return {
-            image: await nr(rr),
-            request: rr => ({
+            image: await pd(dd),
+            request: dd => ({
               type: "model",
-              name: Sr,
-              bitmap: rr,
-              geometry: Zr
+              name: Od,
+              bitmap: dd,
+              geometry: Wd
             })
           }
         }))
-      }(Qr, rr, Sr)), (Sr => ({
+      }(md, dd, Od)), (Od => ({
         type: "drawModel",
-        id: Sr,
-        name: rr,
-        size: Qr,
-        outlineWidth: Zr
+        id: Od,
+        name: dd,
+        size: md,
+        outlineWidth: Wd
       })))
     }
   },
-  37939: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Zr,
-      g: () => fr,
-      j: () => jr,
-      l: () => mr,
-      n: () => Er
+  38013: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Wd,
+      e: () => hd,
+      g: () => Xd,
+      h: () => od,
+      i: () => vd
     });
-    const Zr = {
+    const Wd = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      Wr = .6,
-      ar = {
-        width: 2 * Zr.across,
-        height: 2 * Zr.down + Zr.up
+      Fd = .6,
+      Rd = {
+        width: 2 * Wd.across,
+        height: 2 * Wd.down + Wd.up
       };
 
-    function jr(rr, Sr) {
-      const Qr = Sr > 0 ? Sr + 1 : 0,
-        jr = rr * Wr - Sr / Zr.across;
-      return Math.max(0, Math.min(jr, (rr - 2 * Qr) / ar.height))
+    function Xd(dd, Od) {
+      const md = Od > 0 ? Od + 1 : 0,
+        Xd = dd * Fd - Od / Wd.across;
+      return Math.max(0, Math.min(Xd, (dd - 2 * md) / Rd.height))
     }
-    const Ir = [15, 15, 15],
-      fr = {
+    const Kd = [15, 15, 15],
+      hd = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function Er(rr, Sr, Qr, Zr) {
+    function vd(dd, Od, md, Wd) {
       const {
-        vertices: Wr,
-        uvs: Ir,
-        indices: fr,
-        shades: Er
-      } = rr, pr = function(rr, Sr) {
-        const Qr = jr(rr, Sr),
-          Zr = ar.width * Qr,
-          Wr = ar.height * Qr;
+        vertices: Fd,
+        uvs: Kd,
+        indices: hd,
+        shades: vd
+      } = dd, Qd = function(dd, Od) {
+        const md = Xd(dd, Od),
+          Wd = Rd.width * md,
+          Fd = Rd.height * md;
         return {
-          left: (rr - Zr) / 2,
-          top: (rr - Wr) / 2,
-          width: Zr,
-          height: Wr
+          left: (dd - Wd) / 2,
+          top: (dd - Fd) / 2,
+          width: Wd,
+          height: Fd
         }
-      }(Qr, Zr), xr = new Float32Array(Wr.length);
-      for (let ar = 0; ar < Wr.length; ar += 3) xr[ar] = pr.left + Wr[ar] * pr.width, xr[ar + 1] = pr.top + Wr[ar + 1] * pr.height, xr[ar + 2] = Wr[ar + 2];
-      const Nr = new Float32Array(Qr * Qr).fill(-1 / 0),
-        Ur = new Uint8ClampedArray(Qr * Qr * 4),
-        tr = 255 * rr.alphaCutoff;
-      for (let ar = 0; ar < fr.length; ar += 3) {
-        const [rr, Zr, Wr] = [fr[ar], fr[ar + 1], fr[ar + 2]], [jr, pr, mr] = [3 * rr, 3 * Zr, 3 * Wr], [hr, zr, Yr, nr, er, Kr] = [xr[jr], xr[jr + 1], xr[pr], xr[pr + 1], xr[mr], xr[mr + 1]], yr = (Yr - hr) * (Kr - zr) - (er - hr) * (nr - zr);
-        if (Math.abs(yr) < 1e-9) continue;
-        const Br = Er[ar / 3],
-          [Tr, vr, Or, Lr, lr, Xr] = [Ir[2 * rr], Ir[2 * rr + 1], Ir[2 * Zr], Ir[2 * Zr + 1], Ir[2 * Wr], Ir[2 * Wr + 1]],
-          Pr = Math.max(0, Math.floor(Math.min(hr, Yr, er))),
-          Hr = Math.min(Qr - 1, Math.ceil(Math.max(hr, Yr, er))),
-          qr = Math.max(0, Math.floor(Math.min(zr, nr, Kr))),
-          Rr = Math.min(Qr - 1, Math.ceil(Math.max(zr, nr, Kr)));
-        for (let ar = qr; ar <= Rr; ar++)
-          for (let rr = Pr; rr <= Hr; rr++) {
-            const [Zr, Wr] = [rr + .5, ar + .5], Ir = ((Zr - hr) * (Kr - zr) - (er - hr) * (Wr - zr)) / yr, fr = ((Yr - hr) * (Wr - zr) - (Zr - hr) * (nr - zr)) / yr, Er = 1 - Ir - fr;
-            if (Er < 0 || Ir < 0 || fr < 0) continue;
-            const Pr = Er * xr[jr + 2] + Ir * xr[pr + 2] + fr * xr[mr + 2],
-              Hr = ar * Qr + rr;
-            if (Pr <= Nr[Hr]) continue;
-            const qr = Math.max(0, Math.min(Sr.width - 1, Math.floor((Er * Tr + Ir * Or + fr * lr) * Sr.width))),
-              Rr = 4 * (Math.max(0, Math.min(Sr.height - 1, Math.floor((Er * vr + Ir * Lr + fr * Xr) * Sr.height))) * Sr.width + qr);
-            Sr.pixels[Rr + 3] < tr || (Nr[Hr] = Pr, Ur[4 * Hr] = Sr.pixels[Rr] * Br, Ur[4 * Hr + 1] = Sr.pixels[Rr + 1] * Br, Ur[4 * Hr + 2] = Sr.pixels[Rr + 2] * Br, Ur[4 * Hr + 3] = 255)
+      }(md, Wd), td = new Float32Array(Fd.length);
+      for (let Rd = 0; Rd < Fd.length; Rd += 3) td[Rd] = Qd.left + Fd[Rd] * Qd.width, td[Rd + 1] = Qd.top + Fd[Rd + 1] * Qd.height, td[Rd + 2] = Fd[Rd + 2];
+      const Nd = new Float32Array(md * md).fill(-1 / 0),
+        qd = new Uint8ClampedArray(md * md * 4),
+        Hd = 255 * dd.alphaCutoff;
+      for (let Rd = 0; Rd < hd.length; Rd += 3) {
+        const [dd, Wd, Fd] = [hd[Rd], hd[Rd + 1], hd[Rd + 2]], [Xd, Qd, od] = [3 * dd, 3 * Wd, 3 * Fd], [yd, bd, Td, pd, Yd, gd] = [td[Xd], td[Xd + 1], td[Qd], td[Qd + 1], td[od], td[od + 1]], wd = (Td - yd) * (gd - bd) - (Yd - yd) * (pd - bd);
+        if (Math.abs(wd) < 1e-9) continue;
+        const Ed = vd[Rd / 3],
+          [Jd, Ud, xd, Bd, Sd, sd] = [Kd[2 * dd], Kd[2 * dd + 1], Kd[2 * Wd], Kd[2 * Wd + 1], Kd[2 * Fd], Kd[2 * Fd + 1]],
+          ud = Math.max(0, Math.floor(Math.min(yd, Td, Yd))),
+          Vd = Math.min(md - 1, Math.ceil(Math.max(yd, Td, Yd))),
+          Ad = Math.max(0, Math.floor(Math.min(bd, pd, gd))),
+          rd = Math.min(md - 1, Math.ceil(Math.max(bd, pd, gd)));
+        for (let Rd = Ad; Rd <= rd; Rd++)
+          for (let dd = ud; dd <= Vd; dd++) {
+            const [Wd, Fd] = [dd + .5, Rd + .5], Kd = ((Wd - yd) * (gd - bd) - (Yd - yd) * (Fd - bd)) / wd, hd = ((Td - yd) * (Fd - bd) - (Wd - yd) * (pd - bd)) / wd, vd = 1 - Kd - hd;
+            if (vd < 0 || Kd < 0 || hd < 0) continue;
+            const ud = vd * td[Xd + 2] + Kd * td[Qd + 2] + hd * td[od + 2],
+              Vd = Rd * md + dd;
+            if (ud <= Nd[Vd]) continue;
+            const Ad = Math.max(0, Math.min(Od.width - 1, Math.floor((vd * Jd + Kd * xd + hd * Sd) * Od.width))),
+              rd = 4 * (Math.max(0, Math.min(Od.height - 1, Math.floor((vd * Ud + Kd * Bd + hd * sd) * Od.height))) * Od.width + Ad);
+            Od.pixels[rd + 3] < Hd || (Nd[Vd] = ud, qd[4 * Vd] = Od.pixels[rd] * Ed, qd[4 * Vd + 1] = Od.pixels[rd + 1] * Ed, qd[4 * Vd + 2] = Od.pixels[rd + 2] * Ed, qd[4 * Vd + 3] = 255)
           }
       }
-      return mr(Ur, Qr, Zr), Ur
+      return od(qd, md, Wd), qd
     }
-    let pr = NaN,
-      xr = new Int32Array(0);
+    let Qd = NaN,
+      td = new Int32Array(0);
 
-    function mr(rr, Sr, Qr) {
-      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Sr => 0 !== rr[4 * Sr + 3];
-      const Wr = new Uint8Array(Sr * Sr);
-      for (let Ir = 0; Ir < Sr * Sr; Ir++) Wr[Ir] = Zr(Ir) ? 1 : 0;
-      const ar = (rr, Qr) => rr >= 0 && Qr >= 0 && rr < Sr && Qr < Sr && 0 === Wr[Qr * Sr + rr],
-        jr = new Float32Array(Sr * Sr).fill(1 / 0),
-        fr = function(rr) {
-          if (rr !== pr) {
-            const Sr = Math.ceil(rr + 1),
-              Qr = [];
-            for (let Zr = -Sr; Zr <= Sr; Zr++)
-              for (let Wr = -Sr; Wr <= Sr; Wr++) {
-                const Sr = Wr * Wr + Zr * Zr;
-                Sr > 0 && Sr < (rr + 1) ** 2 && Qr.push(Wr, Zr, Sr)
+    function od(dd, Od, md) {
+      let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Od => 0 !== dd[4 * Od + 3];
+      const Fd = new Uint8Array(Od * Od);
+      for (let Kd = 0; Kd < Od * Od; Kd++) Fd[Kd] = Wd(Kd) ? 1 : 0;
+      const Rd = (dd, md) => dd >= 0 && md >= 0 && dd < Od && md < Od && 0 === Fd[md * Od + dd],
+        Xd = new Float32Array(Od * Od).fill(1 / 0),
+        hd = function(dd) {
+          if (dd !== Qd) {
+            const Od = Math.ceil(dd + 1),
+              md = [];
+            for (let Wd = -Od; Wd <= Od; Wd++)
+              for (let Fd = -Od; Fd <= Od; Fd++) {
+                const Od = Fd * Fd + Wd * Wd;
+                Od > 0 && Od < (dd + 1) ** 2 && md.push(Fd, Wd, Od)
               }
-            pr = rr, xr = Int32Array.from(Qr)
+            Qd = dd, td = Int32Array.from(md)
           }
-          return xr
-        }(Qr);
-      for (let Ir = 0; Ir < Sr; Ir++)
-        for (let rr = 0; rr < Sr; rr++) {
-          if (1 === Wr[Ir * Sr + rr] && (ar(rr - 1, Ir) || ar(rr + 1, Ir) || ar(rr, Ir - 1) || ar(rr, Ir + 1)))
-            for (let Qr = 0; Qr < fr.length; Qr += 3) {
-              const Zr = rr + fr[Qr],
-                Wr = Ir + fr[Qr + 1];
-              if (Zr >= 0 && Wr >= 0 && Zr < Sr && Wr < Sr) {
-                const rr = Wr * Sr + Zr;
-                jr[rr] = Math.min(jr[rr], fr[Qr + 2])
+          return td
+        }(md);
+      for (let Kd = 0; Kd < Od; Kd++)
+        for (let dd = 0; dd < Od; dd++) {
+          if (1 === Fd[Kd * Od + dd] && (Rd(dd - 1, Kd) || Rd(dd + 1, Kd) || Rd(dd, Kd - 1) || Rd(dd, Kd + 1)))
+            for (let md = 0; md < hd.length; md += 3) {
+              const Wd = dd + hd[md],
+                Fd = Kd + hd[md + 1];
+              if (Wd >= 0 && Fd >= 0 && Wd < Od && Fd < Od) {
+                const dd = Fd * Od + Wd;
+                Xd[dd] = Math.min(Xd[dd], hd[md + 2])
               }
             }
         }
-      for (let Er = 0; Er < Sr * Sr; Er++) 1 !== Wr[Er] && jr[Er] !== 1 / 0 && (rr.set(Ir, 4 * Er), rr[4 * Er + 3] = Math.round(255 * Math.min(1, Qr + 1 - Math.sqrt(jr[Er]))))
+      for (let vd = 0; vd < Od * Od; vd++) 1 !== Fd[vd] && Xd[vd] !== 1 / 0 && (dd.set(Kd, 4 * vd), dd[4 * vd + 3] = Math.round(255 * Math.min(1, md + 1 - Math.sqrt(Xd[vd]))))
     }
   },
-  37945: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Wr
+  38022: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Fd
     });
-    const Zr = {
-      wait: function(rr) {
-        return new Promise((Sr => {
-          setTimeout(Sr, rr)
+    const Wd = {
+      wait: function(dd) {
+        return new Promise((Od => {
+          setTimeout(Od, dd)
         }))
       },
       stallMs: 2e4
     };
-    class Wr {
-      constructor(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Zr;
-        this.url = rr, this.options = Sr, this.timing = Qr, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = rr
+    class Fd {
+      constructor(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Wd;
+        this.url = dd, this.options = Od, this.timing = md, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = dd
       }
       ready() {
         if (null === this.fetched) {
-          const rr = new AbortController;
-          this.fetchAbort = rr, this.fetched = this.fetchWithRetries(rr.signal).then((Sr => (this.fetchAbort === rr && (this.fetchAbort = null), Sr)))
+          const dd = new AbortController;
+          this.fetchAbort = dd, this.fetched = this.fetchWithRetries(dd.signal).then((Od => (this.fetchAbort === dd && (this.fetchAbort = null), Od)))
         }
         return this.fetched
       }
@@ -507,51 +507,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(rr) {
-        for (let Sr = 0;; Sr++) {
-          const Qr = new URL(this.url);
-          if (Sr > 0 && Qr.searchParams.set("cache-bust", `${Date.now()}-${Sr}`), await this.fetchWhole(Qr, rr)) return this.scriptUrl = Qr, !0;
-          if (Sr >= 3 || rr.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** Sr), rr.aborted) return !1
+      async fetchWithRetries(dd) {
+        for (let Od = 0;; Od++) {
+          const md = new URL(this.url);
+          if (Od > 0 && md.searchParams.set("cache-bust", `${Date.now()}-${Od}`), await this.fetchWhole(md, dd)) return this.scriptUrl = md, !0;
+          if (Od >= 3 || dd.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** Od), dd.aborted) return !1
         }
       }
-      async fetchWhole(rr, Sr) {
-        const Qr = new AbortController;
-        let Zr;
-        const Wr = () => {
-            clearTimeout(Zr), Zr = setTimeout((() => {
-              Qr.abort()
+      async fetchWhole(dd, Od) {
+        const md = new AbortController;
+        let Wd;
+        const Fd = () => {
+            clearTimeout(Wd), Wd = setTimeout((() => {
+              md.abort()
             }), this.timing.stallMs)
           },
-          ar = () => {
-            Qr.abort()
+          Rd = () => {
+            md.abort()
           };
-        Sr.addEventListener("abort", ar, {
+        Od.addEventListener("abort", Rd, {
           once: !0
-        }), Wr();
+        }), Fd();
         try {
-          var jr;
-          const Sr = await fetch(rr, {
-            signal: Qr.signal
+          var Xd;
+          const Od = await fetch(dd, {
+            signal: md.signal
           });
-          if (!Sr.ok) return !1;
-          const Zr = null === (jr = Sr.body) || void 0 === jr ? void 0 : jr.getReader();
-          if (!Zr) return !1;
+          if (!Od.ok) return !1;
+          const Wd = null === (Xd = Od.body) || void 0 === Xd ? void 0 : Xd.getReader();
+          if (!Wd) return !1;
           for (;;) {
             const {
-              done: rr
-            } = await Zr.read();
-            if (rr) return !0;
-            Wr()
+              done: dd
+            } = await Wd.read();
+            if (dd) return !0;
+            Fd()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Zr), Sr.removeEventListener("abort", ar)
+          clearTimeout(Wd), Od.removeEventListener("abort", Rd)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

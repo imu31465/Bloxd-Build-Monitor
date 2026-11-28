@@ -1,42 +1,42 @@
 export const id = 301;
 export const ids = [301];
 export const modules = {
-  42321: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => PQ
+  42424: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => im
     });
-    var Zr = Qr(72),
-      Wr = Qr(1155),
-      ar = Qr.n(Wr);
-    const jr = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"],
-      Ir = 3e3;
+    var Wd = md(66),
+      Fd = md(1155),
+      Rd = md.n(Fd);
+    const Xd = ["forward", "backward", "left", "right", "jump", "sprint", "crouch", "primary", "secondary", "middle"],
+      Kd = 3e3;
 
-    function fr(rr) {
-      return rr.down && rr.inPlay && !rr.bound
+    function hd(dd) {
+      return dd.down && dd.inPlay && !dd.bound
     }
 
-    function Er(rr, Sr) {
-      let Qr = 0,
-        Zr = rr.length;
-      for (; Qr < Zr;) {
-        const Wr = Qr + Zr >> 1;
-        rr[Wr].atMs <= Sr ? Qr = Wr + 1 : Zr = Wr
+    function vd(dd, Od) {
+      let md = 0,
+        Wd = dd.length;
+      for (; md < Wd;) {
+        const Fd = md + Wd >> 1;
+        dd[Fd].atMs <= Od ? md = Fd + 1 : Wd = Fd
       }
-      return Qr - 1
+      return md - 1
     }
 
-    function pr(rr) {
+    function Qd(dd) {
       let {
-        code: Sr,
-        unbound: Qr
-      } = rr;
-      return `${Sr}:${Qr}`
+        code: Od,
+        unbound: md
+      } = dd;
+      return `${Od}:${md}`
     }
 
-    function xr(rr, Sr) {
-      return Sr[1] - rr[1] || (rr[0] < Sr[0] ? -1 : 1)
+    function td(dd, Od) {
+      return Od[1] - dd[1] || (dd[0] < Od[0] ? -1 : 1)
     }
-    const mr = {
+    const od = {
       Mouse1: "Left click",
       Mouse2: "Middle click",
       Mouse3: "Right click",
@@ -71,370 +71,370 @@ export const modules = {
       Unidentified: "Another key"
     };
 
-    function Nr(rr) {
-      var Sr;
-      const Qr = mr[rr];
-      if (void 0 !== Qr) return Qr;
-      const Zr = null !== (Sr = /^(?:Key|Digit)(.)$/.exec(rr)) && void 0 !== Sr ? Sr : /^Numpad(.+)$/.exec(rr);
-      return null !== Zr ? rr.startsWith("Numpad") ? `Num ${Zr[1]}` : Zr[1] : rr
+    function Nd(dd) {
+      var Od;
+      const md = od[dd];
+      if (void 0 !== md) return md;
+      const Wd = null !== (Od = /^(?:Key|Digit)(.)$/.exec(dd)) && void 0 !== Od ? Od : /^Numpad(.+)$/.exec(dd);
+      return null !== Wd ? dd.startsWith("Numpad") ? `Num ${Wd[1]}` : Wd[1] : dd
     }
-    const Ur = 250,
-      tr = 60;
-    var hr = Qr(1338);
-    const zr = 6;
+    const qd = 250,
+      Hd = 60;
+    var yd = md(1341);
+    const bd = 6;
 
-    function Yr(rr) {
-      const Sr = Math.max(0, Math.floor(rr / 1e3)),
-        Qr = Math.floor(Sr / 3600),
-        Zr = Math.floor(Sr % 3600 / 60),
-        Wr = String(Sr % 60).padStart(2, "0");
-      return Qr > 0 ? `${Qr}:${String(Zr).padStart(2,"0")}:${Wr}` : `${Zr}:${Wr}`
-    }
-
-    function nr(rr, Sr) {
-      return getComputedStyle(rr).getPropertyValue(Sr).trim()
+    function Td(dd) {
+      const Od = Math.max(0, Math.floor(dd / 1e3)),
+        md = Math.floor(Od / 3600),
+        Wd = Math.floor(Od % 3600 / 60),
+        Fd = String(Od % 60).padStart(2, "0");
+      return md > 0 ? `${md}:${String(Wd).padStart(2,"0")}:${Fd}` : `${Wd}:${Fd}`
     }
 
-    function er(rr, Sr) {
-      switch (rr.kind) {
+    function pd(dd, Od) {
+      return getComputedStyle(dd).getPropertyValue(Od).trim()
+    }
+
+    function Yd(dd, Od) {
+      switch (dd.kind) {
         case "note":
-          return rr.label;
+          return dd.label;
         case "hidden":
-          return Sr.tabHidden;
+          return Od.tabHidden;
         default:
-          return Sr[rr.kind]
+          return Od[dd.kind]
       }
     }
 
-    function Kr(rr) {
+    function gd(dd) {
       let {
-        draw: Sr,
-        className: Qr
-      } = rr;
-      const Wr = (0, Zr.useRef)(null);
-      return (0, Zr.useEffect)((() => {
-        const rr = Wr.current,
-          Qr = rr.getContext("2d");
-        if (null === Sr || null === Qr) return;
+        draw: Od,
+        className: md
+      } = dd;
+      const Fd = (0, Wd.useRef)(null);
+      return (0, Wd.useEffect)((() => {
+        const dd = Fd.current,
+          md = dd.getContext("2d");
+        if (null === Od || null === md) return;
         const {
-          clientWidth: Zr,
-          clientHeight: ar
-        } = rr, jr = window.devicePixelRatio;
-        rr.width = Math.round(Zr * jr), rr.height = Math.round(ar * jr), Qr.setTransform(jr, 0, 0, jr, 0, 0), Sr(Qr, Zr, ar, rr)
-      }), [Sr]), (0, hr.jsx)("canvas", {
-        ref: Wr,
-        className: Qr
+          clientWidth: Wd,
+          clientHeight: Rd
+        } = dd, Xd = window.devicePixelRatio;
+        dd.width = Math.round(Wd * Xd), dd.height = Math.round(Rd * Xd), md.setTransform(Xd, 0, 0, Xd, 0, 0), Od(md, Wd, Rd, dd)
+      }), [Od]), (0, yd.jsx)("canvas", {
+        ref: Fd,
+        className: md
       })
     }
 
-    function yr(rr) {
+    function wd(dd) {
       let {
-        controller: Sr,
-        frames: Qr,
-        input: Wr,
-        markers: ar,
-        inactiveRanges: jr,
-        videoGaps: Er,
-        labels: pr
-      } = rr;
+        controller: Od,
+        frames: md,
+        input: Fd,
+        markers: Rd,
+        inactiveRanges: Xd,
+        videoGaps: vd,
+        labels: Qd
+      } = dd;
       const {
-        timeline: mr
-      } = Sr, yr = (0, Zr.useRef)(null), [Br, Tr] = (0, Zr.useState)(0), [vr, Or] = (0, Zr.useState)(null), Lr = (0, Zr.useRef)(null), lr = Math.max(1, mr.durationMs);
-      ! function(rr, Sr, Qr) {
-        (0, Zr.useEffect)((() => {
-          let Zr = 0,
-            Wr = NaN;
-          const ar = () => {
-            var jr;
-            Zr = requestAnimationFrame(ar);
-            const Ir = (null !== (jr = Sr.current) && void 0 !== jr ? jr : rr.getPositionMs()) / Math.max(1, rr.timeline.durationMs) * 100;
-            Ir !== Wr && (Wr = Ir, Qr.current.style.setProperty("--brv-position", `${Ir}%`))
+        timeline: od
+      } = Od, wd = (0, Wd.useRef)(null), [Ed, Jd] = (0, Wd.useState)(0), [Ud, xd] = (0, Wd.useState)(null), Bd = (0, Wd.useRef)(null), Sd = Math.max(1, od.durationMs);
+      ! function(dd, Od, md) {
+        (0, Wd.useEffect)((() => {
+          let Wd = 0,
+            Fd = NaN;
+          const Rd = () => {
+            var Xd;
+            Wd = requestAnimationFrame(Rd);
+            const Kd = (null !== (Xd = Od.current) && void 0 !== Xd ? Xd : dd.getPositionMs()) / Math.max(1, dd.timeline.durationMs) * 100;
+            Kd !== Fd && (Fd = Kd, md.current.style.setProperty("--brv-position", `${Kd}%`))
           };
-          return ar(), () => {
-            cancelAnimationFrame(Zr)
+          return Rd(), () => {
+            cancelAnimationFrame(Wd)
           }
-        }), [rr])
-      }(Sr, Lr, yr), (0, Zr.useEffect)((() => {
-        const rr = yr.current,
-          Sr = new ResizeObserver((() => {
-            Tr(rr.clientWidth)
+        }), [dd])
+      }(Od, Bd, wd), (0, Wd.useEffect)((() => {
+        const dd = wd.current,
+          Od = new ResizeObserver((() => {
+            Jd(dd.clientWidth)
           }));
-        return Sr.observe(rr), () => {
-          Sr.disconnect()
+        return Od.observe(dd), () => {
+          Od.disconnect()
         }
       }), []);
-      const Xr = (0, Zr.useMemo)((() => 0 === Br ? null : function(rr, Sr, Qr) {
-          const Zr = Math.max(1, Math.min(Qr, Math.floor(Sr.durationMs / Ur))),
-            Wr = Sr.durationMs / Zr,
-            ar = new Array(Zr).fill(0);
-          for (const jr of rr) Sr.contains(jr.atMs) && ar[Math.min(Zr - 1, Math.floor(Sr.toPosition(jr.atMs) / Wr))]++;
+      const sd = (0, Wd.useMemo)((() => 0 === Ed ? null : function(dd, Od, md) {
+          const Wd = Math.max(1, Math.min(md, Math.floor(Od.durationMs / qd))),
+            Fd = Od.durationMs / Wd,
+            Rd = new Array(Wd).fill(0);
+          for (const Xd of dd) Od.contains(Xd.atMs) && Rd[Math.min(Wd - 1, Math.floor(Od.toPosition(Xd.atMs) / Fd))]++;
           return {
-            bucketMs: Wr,
-            fps: ar.map((rr => 0 === rr ? null : 1e3 * rr / Wr))
+            bucketMs: Fd,
+            fps: Rd.map((dd => 0 === dd ? null : 1e3 * dd / Fd))
           }
-        }(Qr, mr, Math.round(Br))), [Qr, mr, Br]),
-        Pr = Sr.lowFps,
-        Hr = (0, Zr.useMemo)((() => null === Xr ? null : (rr, Sr, Qr, Zr) => {
-          ! function(rr, Sr, Qr, Zr, Wr, ar) {
-            rr.clearRect(0, 0, Qr, Zr);
-            const jr = Qr / Sr.fps.length;
-            Sr.fps.forEach(((Sr, Qr) => {
-              if (null === Sr) return;
-              const Ir = Math.max(1, Math.min(Sr, tr) / tr * Zr);
-              rr.fillStyle = Sr < Wr ? ar.lowFps : ar.fps, rr.fillRect(Qr * jr, Zr - Ir, Math.max(1, jr), Ir)
+        }(md, od, Math.round(Ed))), [md, od, Ed]),
+        ud = Od.lowFps,
+        Vd = (0, Wd.useMemo)((() => null === sd ? null : (dd, Od, md, Wd) => {
+          ! function(dd, Od, md, Wd, Fd, Rd) {
+            dd.clearRect(0, 0, md, Wd);
+            const Xd = md / Od.fps.length;
+            Od.fps.forEach(((Od, md) => {
+              if (null === Od) return;
+              const Kd = Math.max(1, Math.min(Od, Hd) / Hd * Wd);
+              dd.fillStyle = Od < Fd ? Rd.lowFps : Rd.fps, dd.fillRect(md * Xd, Wd - Kd, Math.max(1, Xd), Kd)
             }))
-          }(rr, Xr, Sr, Qr, Pr, {
-            fps: nr(Zr, "--brv-fps"),
-            lowFps: nr(Zr, "--brv-low-fps")
+          }(dd, sd, Od, md, ud, {
+            fps: pd(Wd, "--brv-fps"),
+            lowFps: pd(Wd, "--brv-low-fps")
           })
-        }), [Xr, Pr]),
-        qr = (0, Zr.useMemo)((() => {
-          if (0 === Br || !Wr.inputRecorded) return null;
-          const rr = function(rr, Sr, Qr) {
-            const Zr = Math.max(1, Sr.durationMs) / Qr,
-              Wr = new Array(Qr).fill(0),
-              ar = new Array(Qr).fill(0);
-            for (const jr of rr) {
-              if (!jr.down || !Sr.contains(jr.atMs)) continue;
-              const rr = Math.min(Qr - 1, Math.floor(Sr.toPosition(jr.atMs) / Zr));
-              Wr[rr]++, fr(jr) && ar[rr]++
+        }), [sd, ud]),
+        Ad = (0, Wd.useMemo)((() => {
+          if (0 === Ed || !Fd.inputRecorded) return null;
+          const dd = function(dd, Od, md) {
+            const Wd = Math.max(1, Od.durationMs) / md,
+              Fd = new Array(md).fill(0),
+              Rd = new Array(md).fill(0);
+            for (const Xd of dd) {
+              if (!Xd.down || !Od.contains(Xd.atMs)) continue;
+              const dd = Math.min(md - 1, Math.floor(Od.toPosition(Xd.atMs) / Wd));
+              Fd[dd]++, hd(Xd) && Rd[dd]++
             }
             return {
-              presses: Wr,
-              unbound: ar
+              presses: Fd,
+              unbound: Rd
             }
-          }(Wr.keys, mr, Math.max(1, Math.round(Br)));
-          return (Sr, Qr, Zr, Wr) => {
-            ! function(rr, Sr, Qr, Zr, Wr) {
-              rr.clearRect(0, 0, Qr, Zr);
-              const ar = Qr / Sr.presses.length;
-              Sr.presses.forEach(((Qr, jr) => {
-                if (0 === Qr) return;
-                const Ir = Sr.unbound[jr] > 0;
-                rr.globalAlpha = Ir ? 1 : Math.min(1, .35 + .15 * Qr), rr.fillStyle = Ir ? Wr.unbound : Wr.presses, rr.fillRect(jr * ar, 0, Math.max(Ir ? 2 : 1, ar), Zr)
-              })), rr.globalAlpha = 1
-            }(Sr, rr, Qr, Zr, {
-              presses: nr(Wr, "--brv-key-press"),
-              unbound: nr(Wr, "--brv-key-unbound")
+          }(Fd.keys, od, Math.max(1, Math.round(Ed)));
+          return (Od, md, Wd, Fd) => {
+            ! function(dd, Od, md, Wd, Fd) {
+              dd.clearRect(0, 0, md, Wd);
+              const Rd = md / Od.presses.length;
+              Od.presses.forEach(((md, Xd) => {
+                if (0 === md) return;
+                const Kd = Od.unbound[Xd] > 0;
+                dd.globalAlpha = Kd ? 1 : Math.min(1, .35 + .15 * md), dd.fillStyle = Kd ? Fd.unbound : Fd.presses, dd.fillRect(Xd * Rd, 0, Math.max(Kd ? 2 : 1, Rd), Wd)
+              })), dd.globalAlpha = 1
+            }(Od, dd, md, Wd, {
+              presses: pd(Fd, "--brv-key-press"),
+              unbound: pd(Fd, "--brv-key-unbound")
             })
           }
-        }), [Wr, mr, Br]),
-        Rr = (0, Zr.useMemo)((() => function(rr) {
-          const Sr = [];
-          for (const Zr of rr) {
-            var Qr;
-            if (!fr(Zr)) continue;
-            let rr = Sr.at(-1);
-            (void 0 === rr || Zr.atMs - rr.endMs > Ir) && (rr = {
-              startMs: Zr.atMs,
-              endMs: Zr.atMs,
+        }), [Fd, od, Ed]),
+        rd = (0, Wd.useMemo)((() => function(dd) {
+          const Od = [];
+          for (const Wd of dd) {
+            var md;
+            if (!hd(Wd)) continue;
+            let dd = Od.at(-1);
+            (void 0 === dd || Wd.atMs - dd.endMs > Kd) && (dd = {
+              startMs: Wd.atMs,
+              endMs: Wd.atMs,
               counts: new Map
-            }, Sr.push(rr)), rr.endMs = Zr.atMs, rr.counts.set(Zr.code, (null !== (Qr = rr.counts.get(Zr.code)) && void 0 !== Qr ? Qr : 0) + 1)
+            }, Od.push(dd)), dd.endMs = Wd.atMs, dd.counts.set(Wd.code, (null !== (md = dd.counts.get(Wd.code)) && void 0 !== md ? md : 0) + 1)
           }
-          return Sr.map((rr => {
+          return Od.map((dd => {
             let {
-              startMs: Sr,
-              endMs: Qr,
-              counts: Zr
-            } = rr;
+              startMs: Od,
+              endMs: md,
+              counts: Wd
+            } = dd;
             return {
-              startMs: Sr,
-              endMs: Qr,
-              keys: [...Zr].sort(xr)
+              startMs: Od,
+              endMs: md,
+              keys: [...Wd].sort(td)
             }
           }))
-        }(Wr.keys.filter((rr => mr.contains(rr.atMs))))), [Wr.keys, mr]),
-        gr = rr => mr.toPosition(rr) / lr * 100,
-        Cr = rr => gr(rr) / 100 * Br,
-        Mr = rr => {
-          const Sr = yr.current.getBoundingClientRect();
+        }(Fd.keys.filter((dd => od.contains(dd.atMs))))), [Fd.keys, od]),
+        Gd = dd => od.toPosition(dd) / Sd * 100,
+        nd = dd => Gd(dd) / 100 * Ed,
+        Ld = dd => {
+          const Od = wd.current.getBoundingClientRect();
           return {
-            px: rr - Sr.left,
-            positionMs: Math.max(0, Math.min(Sr.width, rr - Sr.left)) / Sr.width * lr
+            px: dd - Od.left,
+            positionMs: Math.max(0, Math.min(Od.width, dd - Od.left)) / Od.width * Sd
           }
         },
-        Gr = null === vr || 0 === Br ? null : {
-          px: vr,
-          positionMs: Math.max(0, Math.min(Br, vr)) / Br * lr
+        Pd = null === Ud || 0 === Ed ? null : {
+          px: Ud,
+          positionMs: Math.max(0, Math.min(Ed, Ud)) / Ed * Sd
         },
-        kr = null === Gr || null === Xr ? null : function(rr, Sr) {
-          const Qr = Math.max(0, Math.min(rr.fps.length - 1, Math.floor(Sr / rr.bucketMs))),
-            Zr = rr.fps[Qr];
-          return null === Zr ? null : Math.round(Zr)
-        }(Xr, Gr.positionMs),
-        Ar = null !== Gr && Er.some((rr => Gr.px >= Cr(rr.startMs) && Gr.px < Cr(rr.endMs))),
-        Vr = null === Gr ? void 0 : ar.find((rr => {
-          var Sr;
-          return Gr.px >= Cr(rr.atMs) - zr && Gr.px <= Cr(null !== (Sr = rr.endMs) && void 0 !== Sr ? Sr : rr.atMs) + zr
+        zd = null === Pd || null === sd ? null : function(dd, Od) {
+          const md = Math.max(0, Math.min(dd.fps.length - 1, Math.floor(Od / dd.bucketMs))),
+            Wd = dd.fps[md];
+          return null === Wd ? null : Math.round(Wd)
+        }(sd, Pd.positionMs),
+        cd = null !== Pd && vd.some((dd => Pd.px >= nd(dd.startMs) && Pd.px < nd(dd.endMs))),
+        jd = null === Pd ? void 0 : Rd.find((dd => {
+          var Od;
+          return Pd.px >= nd(dd.atMs) - bd && Pd.px <= nd(null !== (Od = dd.endMs) && void 0 !== Od ? Od : dd.atMs) + bd
         })),
-        ir = null === Gr ? void 0 : Rr.find((rr => Gr.px >= Cr(rr.startMs) - zr && Gr.px <= Cr(rr.endMs) + zr));
-      return (0, hr.jsxs)("div", {
-        ref: yr,
-        className: Wr.inputRecorded ? "brv-seekbar brv-seekbar-with-input" : "brv-seekbar",
-        onPointerDown: rr => {
-          rr.currentTarget.setPointerCapture(rr.pointerId);
-          const Sr = Mr(rr.clientX);
-          Or(Sr.px), Lr.current = Sr.positionMs
+        Dd = null === Pd ? void 0 : rd.find((dd => Pd.px >= nd(dd.startMs) - bd && Pd.px <= nd(dd.endMs) + bd));
+      return (0, yd.jsxs)("div", {
+        ref: wd,
+        className: Fd.inputRecorded ? "brv-seekbar brv-seekbar-with-input" : "brv-seekbar",
+        onPointerDown: dd => {
+          dd.currentTarget.setPointerCapture(dd.pointerId);
+          const Od = Ld(dd.clientX);
+          xd(Od.px), Bd.current = Od.positionMs
         },
-        onPointerMove: rr => {
-          const Sr = Mr(rr.clientX);
-          Or(Sr.px), null !== Lr.current && (Lr.current = Sr.positionMs)
+        onPointerMove: dd => {
+          const Od = Ld(dd.clientX);
+          xd(Od.px), null !== Bd.current && (Bd.current = Od.positionMs)
         },
-        onPointerUp: rr => {
-          null !== Lr.current && (Sr.seekToPosition(Mr(rr.clientX).positionMs), Lr.current = null)
+        onPointerUp: dd => {
+          null !== Bd.current && (Od.seekToPosition(Ld(dd.clientX).positionMs), Bd.current = null)
         },
         onPointerCancel: () => {
-          Lr.current = null, Or(null)
+          Bd.current = null, xd(null)
         },
         onPointerLeave: () => {
-          Or(null)
+          xd(null)
         },
-        children: [(0, hr.jsxs)("div", {
+        children: [(0, yd.jsxs)("div", {
           className: "brv-seekbar-track",
-          children: [(0, hr.jsx)(Kr, {
-            draw: Hr,
+          children: [(0, yd.jsx)(gd, {
+            draw: Vd,
             className: "brv-seekbar-canvas"
-          }), jr.map((rr => {
-            const Sr = gr(rr.startMs);
-            return (0, hr.jsx)("div", {
+          }), Xd.map((dd => {
+            const Od = Gd(dd.startMs);
+            return (0, yd.jsx)("div", {
               className: "brv-seekbar-inactive",
               style: {
-                left: `${Sr}%`,
-                width: gr(rr.endMs) - Sr + "%"
+                left: `${Od}%`,
+                width: Gd(dd.endMs) - Od + "%"
               }
-            }, rr.startMs)
-          })), Er.map((rr => {
-            const Sr = gr(rr.startMs);
-            return (0, hr.jsx)("div", {
+            }, dd.startMs)
+          })), vd.map((dd => {
+            const Od = Gd(dd.startMs);
+            return (0, yd.jsx)("div", {
               className: "brv-seekbar-video-gap",
               style: {
-                left: `${Sr}%`,
-                width: gr(rr.endMs) - Sr + "%"
+                left: `${Od}%`,
+                width: Gd(dd.endMs) - Od + "%"
               }
-            }, rr.startMs)
-          })), (0, hr.jsx)("div", {
+            }, dd.startMs)
+          })), (0, yd.jsx)("div", {
             className: "brv-seekbar-progress"
-          }), null !== Gr && (0, hr.jsx)("div", {
+          }), null !== Pd && (0, yd.jsx)("div", {
             className: "brv-seekbar-hover",
             style: {
-              left: Gr.px
+              left: Pd.px
             }
           })]
-        }), Wr.inputRecorded && (0, hr.jsx)(Kr, {
-          draw: qr,
+        }), Fd.inputRecorded && (0, yd.jsx)(gd, {
+          draw: Ad,
           className: "brv-seekbar-input"
-        }), (0, hr.jsx)("div", {
+        }), (0, yd.jsx)("div", {
           className: "brv-seekbar-markers",
-          children: ar.map(((rr, Sr) => {
-            var Qr;
-            const Zr = gr(rr.atMs),
-              Wr = void 0 !== rr.endMs;
-            return (0, hr.jsx)("div", {
-              className: `brv-marker brv-marker-${rr.kind}${Wr?" brv-marker-range":""}`,
+          children: Rd.map(((dd, Od) => {
+            var md;
+            const Wd = Gd(dd.atMs),
+              Fd = void 0 !== dd.endMs;
+            return (0, yd.jsx)("div", {
+              className: `brv-marker brv-marker-${dd.kind}${Fd?" brv-marker-range":""}`,
               style: {
-                left: `${Zr}%`,
-                width: Wr ? gr(null !== (Qr = rr.endMs) && void 0 !== Qr ? Qr : rr.atMs) - Zr + "%" : void 0
+                left: `${Wd}%`,
+                width: Fd ? Gd(null !== (md = dd.endMs) && void 0 !== md ? md : dd.atMs) - Wd + "%" : void 0
               }
-            }, Sr)
+            }, Od)
           }))
-        }), (0, hr.jsx)("div", {
+        }), (0, yd.jsx)("div", {
           className: "brv-seekbar-playhead"
-        }), null !== Gr && (0, hr.jsxs)("div", {
+        }), null !== Pd && (0, yd.jsxs)("div", {
           className: "brv-tooltip",
           style: {
-            left: Gr.px
+            left: Pd.px
           },
-          children: [Yr(Gr.positionMs), null !== kr && ` \xb7 ${pr.fps(kr)}`, void 0 !== Vr && ` \xb7 ${er(Vr,pr)}`, Ar && ` \xb7 ${pr.videoGap}`, void 0 !== ir && ` \xb7 ${pr.unboundKeys((wr=ir.keys,wr.map((rr=>{let[Sr,Qr]=rr;return Qr>1?`${Nr(Sr)} \xd7${Qr}`:Nr(Sr)})).join(", ")))}`]
+          children: [Td(Pd.positionMs), null !== zd && ` \xb7 ${Qd.fps(zd)}`, void 0 !== jd && ` \xb7 ${Yd(jd,Qd)}`, cd && ` \xb7 ${Qd.videoGap}`, void 0 !== Dd && ` \xb7 ${Qd.unboundKeys((ed=Dd.keys,ed.map((dd=>{let[Od,md]=dd;return md>1?`${Nd(Od)} \xd7${md}`:Nd(Od)})).join(", ")))}`]
         })]
       });
-      var wr
+      var ed
     }
-    var Br = Qr(5440),
-      Tr = Qr(1251),
-      vr = Qr(5323),
-      Or = Qr(1444),
-      Lr = Qr(1576),
-      lr = Qr(1448),
-      Xr = Qr(7460),
-      Pr = Qr(6042),
-      Hr = Qr(6034);
-    const qr = [.5, 1, 2, 4, 8, 16];
-    var Rr = Qr(42327);
+    var Ed = md(5343),
+      Jd = md(1238),
+      Ud = md(5223),
+      xd = md(1436),
+      Bd = md(1572),
+      Sd = md(1443),
+      sd = md(7451),
+      ud = md(5994),
+      Vd = md(5991);
+    const Ad = [.5, 1, 2, 4, 8, 16];
+    var rd = md(42432);
 
-    function gr(rr) {
-      const Sr = rr.filter((rr => rr.endMs > rr.startMs)).sort(((rr, Sr) => rr.startMs - Sr.startMs)),
-        Qr = [];
-      for (const Zr of Sr) {
-        const rr = Qr.at(-1);
-        void 0 !== rr && Zr.startMs <= rr.endMs ? rr.endMs = Math.max(rr.endMs, Zr.endMs) : Qr.push({
-          ...Zr
+    function Gd(dd) {
+      const Od = dd.filter((dd => dd.endMs > dd.startMs)).sort(((dd, Od) => dd.startMs - Od.startMs)),
+        md = [];
+      for (const Wd of Od) {
+        const dd = md.at(-1);
+        void 0 !== dd && Wd.startMs <= dd.endMs ? dd.endMs = Math.max(dd.endMs, Wd.endMs) : md.push({
+          ...Wd
         })
       }
-      return Qr
+      return md
     }
-    class Cr {
-      constructor(rr) {
-        this.yh = void 0, this.durationMs = void 0, this.positionStarts = void 0, this.yh = gr(rr), this.positionStarts = [];
-        let Sr = 0;
-        for (const Qr of this.yh) this.positionStarts.push(Sr), Sr += Qr.endMs - Qr.startMs;
-        this.durationMs = Sr
+    class nd {
+      constructor(dd) {
+        this.By = void 0, this.durationMs = void 0, this.positionStarts = void 0, this.By = Gd(dd), this.positionStarts = [];
+        let Od = 0;
+        for (const md of this.By) this.positionStarts.push(Od), Od += md.endMs - md.startMs;
+        this.durationMs = Od
       }
       get startMs() {
-        var rr, Sr;
-        return null !== (rr = null === (Sr = this.yh[0]) || void 0 === Sr ? void 0 : Sr.startMs) && void 0 !== rr ? rr : 0
+        var dd, Od;
+        return null !== (dd = null === (Od = this.By[0]) || void 0 === Od ? void 0 : Od.startMs) && void 0 !== dd ? dd : 0
       }
       get endMs() {
-        var rr, Sr;
-        return null !== (rr = null === (Sr = this.yh.at(-1)) || void 0 === Sr ? void 0 : Sr.endMs) && void 0 !== rr ? rr : 0
+        var dd, Od;
+        return null !== (dd = null === (Od = this.By.at(-1)) || void 0 === Od ? void 0 : Od.endMs) && void 0 !== dd ? dd : 0
       }
-      toPosition(rr) {
-        for (let Sr = 0; Sr < this.yh.length; Sr++) {
-          const Qr = this.yh[Sr];
-          if (rr < Qr.endMs) return this.positionStarts[Sr] + Math.max(0, rr - Qr.startMs)
+      toPosition(dd) {
+        for (let Od = 0; Od < this.By.length; Od++) {
+          const md = this.By[Od];
+          if (dd < md.endMs) return this.positionStarts[Od] + Math.max(0, dd - md.startMs)
         }
         return this.durationMs
       }
-      toTime(rr) {
-        const Sr = Math.max(0, Math.min(this.durationMs, rr));
-        for (let Qr = this.yh.length - 1; Qr >= 0; Qr--)
-          if (Sr >= this.positionStarts[Qr]) return this.yh[Qr].startMs + (Sr - this.positionStarts[Qr]);
+      toTime(dd) {
+        const Od = Math.max(0, Math.min(this.durationMs, dd));
+        for (let md = this.By.length - 1; md >= 0; md--)
+          if (Od >= this.positionStarts[md]) return this.By[md].startMs + (Od - this.positionStarts[md]);
         return this.startMs
       }
-      contains(rr) {
-        return this.yh.some((Sr => rr >= Sr.startMs && rr < Sr.endMs))
+      contains(dd) {
+        return this.By.some((Od => dd >= Od.startMs && dd < Od.endMs))
       }
-      nextPlayableTime(rr) {
-        for (const Sr of this.yh) {
-          if (rr < Sr.startMs) return Sr.startMs;
-          if (rr < Sr.endMs) return rr
+      nextPlayableTime(dd) {
+        for (const Od of this.By) {
+          if (dd < Od.startMs) return Od.startMs;
+          if (dd < Od.endMs) return dd
         }
         return null
       }
     }
 
-    function Mr(rr) {
-      return [...rr].sort(((rr, Sr) => rr.startMs - Sr.startMs))
+    function Ld(dd) {
+      return [...dd].sort(((dd, Od) => dd.startMs - Od.startMs))
     }
 
-    function Gr(rr, Sr) {
-      let Qr = 1 / 0,
-        Zr = -1 / 0;
-      const Wr = rr => {
-        Qr = Math.min(Qr, rr), Zr = Math.max(Zr, rr)
+    function Pd(dd, Od) {
+      let md = 1 / 0,
+        Wd = -1 / 0;
+      const Fd = dd => {
+        md = Math.min(md, dd), Wd = Math.max(Wd, dd)
       };
-      for (const ar of [...rr.videoSegments, ...rr.telemetryChunks]) Wr(ar.startMs), Wr(ar.endMs);
-      for (const ar of rr.domEvents) Wr(Sr.toEpoch(ar.timestamp));
-      return Qr < Zr ? {
-        startMs: Qr,
-        endMs: Zr
+      for (const Rd of [...dd.videoSegments, ...dd.telemetryChunks]) Fd(Rd.startMs), Fd(Rd.endMs);
+      for (const Rd of dd.domEvents) Fd(Od.toEpoch(Rd.timestamp));
+      return md < Wd ? {
+        startMs: md,
+        endMs: Wd
       } : {
         startMs: 0,
         endMs: 0
       }
     }
-    class kr {
-      constructor(rr, Sr) {
-        this.wallNowMs = Sr, this.anchorTimeMs = void 0, this.anchorWallMs = void 0, this.playingState = !1, this.speedState = 1, this.anchorTimeMs = rr, this.anchorWallMs = Sr()
+    class zd {
+      constructor(dd, Od) {
+        this.wallNowMs = Od, this.anchorTimeMs = void 0, this.anchorWallMs = void 0, this.playingState = !1, this.speedState = 1, this.anchorTimeMs = dd, this.anchorWallMs = Od()
       }
       get playing() {
         return this.playingState
@@ -445,8 +445,8 @@ export const modules = {
       timeMs() {
         return this.timeAtWall(this.wallNowMs())
       }
-      timeAtWall(rr) {
-        return this.playingState ? this.anchorTimeMs + (rr - this.anchorWallMs) * this.speedState : this.anchorTimeMs
+      timeAtWall(dd) {
+        return this.playingState ? this.anchorTimeMs + (dd - this.anchorWallMs) * this.speedState : this.anchorTimeMs
       }
       play() {
         this.reanchor(), this.playingState = !0
@@ -454,119 +454,119 @@ export const modules = {
       pause() {
         this.reanchor(), this.playingState = !1
       }
-      seek(rr) {
-        this.anchorTimeMs = rr, this.anchorWallMs = this.wallNowMs()
+      seek(dd) {
+        this.anchorTimeMs = dd, this.anchorWallMs = this.wallNowMs()
       }
-      setSpeed(rr) {
-        this.reanchor(), this.speedState = rr
+      setSpeed(dd) {
+        this.reanchor(), this.speedState = dd
       }
       reanchor() {
-        const rr = this.wallNowMs();
-        this.anchorTimeMs = this.timeAtWall(rr), this.anchorWallMs = rr
+        const dd = this.wallNowMs();
+        this.anchorTimeMs = this.timeAtWall(dd), this.anchorWallMs = dd
       }
     }
-    const Ar = "bloxd-clock";
-    class Vr {
-      constructor(rr) {
+    const cd = "bloxd-clock";
+    class jd {
+      constructor(dd) {
         this.samples = void 0, this.samples = [];
-        for (const Qr of rr) {
-          var Sr;
-          const rr = Qr.data;
-          Qr.type === Rr.e.Custom && (null === rr || void 0 === rr ? void 0 : rr.tag) === Ar && "number" === typeof(null === (Sr = rr.payload) || void 0 === Sr ? void 0 : Sr.epochMs) && this.samples.push({
-            domMs: Qr.timestamp,
-            offsetMs: rr.payload.epochMs - Qr.timestamp
+        for (const md of dd) {
+          var Od;
+          const dd = md.data;
+          md.type === rd.d.Custom && (null === dd || void 0 === dd ? void 0 : dd.tag) === cd && "number" === typeof(null === (Od = dd.payload) || void 0 === Od ? void 0 : Od.epochMs) && this.samples.push({
+            domMs: md.timestamp,
+            offsetMs: dd.payload.epochMs - md.timestamp
           })
         }
-        this.samples.sort(((rr, Sr) => rr.domMs - Sr.domMs))
+        this.samples.sort(((dd, Od) => dd.domMs - Od.domMs))
       }
-      toEpoch(rr) {
-        return rr + this.offsetAtDom(rr)
+      toEpoch(dd) {
+        return dd + this.offsetAtDom(dd)
       }
-      toDom(rr) {
-        return rr - this.offsetAtDom(rr)
+      toDom(dd) {
+        return dd - this.offsetAtDom(dd)
       }
-      offsetAtDom(rr) {
-        var Sr, Qr;
-        let Zr = 0,
-          Wr = this.samples.length - 1;
-        for (; Zr < Wr;) {
-          const Sr = Math.ceil((Zr + Wr) / 2);
-          this.samples[Sr].domMs <= rr ? Zr = Sr : Wr = Sr - 1
+      offsetAtDom(dd) {
+        var Od, md;
+        let Wd = 0,
+          Fd = this.samples.length - 1;
+        for (; Wd < Fd;) {
+          const Od = Math.ceil((Wd + Fd) / 2);
+          this.samples[Od].domMs <= dd ? Wd = Od : Fd = Od - 1
         }
-        return null !== (Sr = null === (Qr = this.samples[Zr]) || void 0 === Qr ? void 0 : Qr.offsetMs) && void 0 !== Sr ? Sr : 0
+        return null !== (Od = null === (md = this.samples[Wd]) || void 0 === md ? void 0 : md.offsetMs) && void 0 !== Od ? Od : 0
       }
     }
-    const ir = new Set([Rr.h.MouseMove, Rr.h.MouseInteraction, Rr.h.Scroll, Rr.h.Input, Rr.h.TouchMove, Rr.h.Drag]),
-      wr = "bloxd-active",
-      cr = "player_death",
-      Fr = "error",
-      or = {
+    const Dd = new Set([rd.g.MouseMove, rd.g.MouseInteraction, rd.g.Scroll, rd.g.Input, rd.g.TouchMove, rd.g.Drag]),
+      ed = "bloxd-active",
+      Id = "player_death",
+      ld = "error",
+      Cd = {
         $exception: "error",
-        [Fr]: "error",
+        [ld]: "error",
         death: "death",
-        [cr]: "death"
+        [Id]: "death"
       };
 
-    function br(rr, Sr, Qr) {
-      return function(rr, Sr) {
-        const Qr = [];
-        for (const Zr of rr) {
-          let rr = Zr.startMs;
-          for (const Wr of Sr) Wr.endMs <= rr || Wr.startMs >= Zr.endMs || (Wr.startMs > rr && Qr.push({
-            startMs: rr,
-            endMs: Wr.startMs
-          }), rr = Math.max(rr, Wr.endMs));
-          rr < Zr.endMs && Qr.push({
-            startMs: rr,
-            endMs: Zr.endMs
+    function Zd(dd, Od, md) {
+      return function(dd, Od) {
+        const md = [];
+        for (const Wd of dd) {
+          let dd = Wd.startMs;
+          for (const Fd of Od) Fd.endMs <= dd || Fd.startMs >= Wd.endMs || (Fd.startMs > dd && md.push({
+            startMs: dd,
+            endMs: Fd.startMs
+          }), dd = Math.max(dd, Fd.endMs));
+          dd < Wd.endMs && md.push({
+            startMs: dd,
+            endMs: Wd.endMs
           })
         }
-        return Qr
-      }(function(rr) {
-        const Sr = [];
-        for (const Qr of rr) {
-          const rr = Sr.at(-1);
-          void 0 !== rr && Qr.atMs - rr.endMs <= 5e3 ? rr.endMs = Qr.atMs : Sr.push({
-            startMs: Qr.atMs,
-            endMs: Qr.atMs
+        return md
+      }(function(dd) {
+        const Od = [];
+        for (const md of dd) {
+          const dd = Od.at(-1);
+          void 0 !== dd && md.atMs - dd.endMs <= 5e3 ? dd.endMs = md.atMs : Od.push({
+            startMs: md.atMs,
+            endMs: md.atMs
           })
         }
-        return Sr
-      }(rr), gr([...Sr, ...Qr])).filter((rr => rr.endMs - rr.startMs >= 1e3))
+        return Od
+      }(dd), Gd([...Od, ...md])).filter((dd => dd.endMs - dd.startMs >= 1e3))
     }
 
-    function Jr(rr) {
-      var Sr, Qr, Zr;
-      return rr.type === Rr.e.IncrementalSnapshot ? ir.has(null !== (Qr = null === (Zr = rr.data) || void 0 === Zr ? void 0 : Zr.source) && void 0 !== Qr ? Qr : -1) : rr.type === Rr.e.Custom && (null === (Sr = rr.data) || void 0 === Sr ? void 0 : Sr.tag) === wr
+    function kd(dd) {
+      var Od, md, Wd;
+      return dd.type === rd.d.IncrementalSnapshot ? Dd.has(null !== (md = null === (Wd = dd.data) || void 0 === Wd ? void 0 : Wd.source) && void 0 !== md ? md : -1) : dd.type === rd.d.Custom && (null === (Od = dd.data) || void 0 === Od ? void 0 : Od.tag) === ed
     }
 
-    function Dr(rr, Sr) {
-      const Qr = [];
-      for (const jr of rr)
-        if (jr.type === Rr.e.Custom) {
-          var Zr;
-          const rr = null === (Zr = jr.data) || void 0 === Zr ? void 0 : Zr.tag,
-            Wr = void 0 === rr ? void 0 : or[rr];
-          void 0 !== Wr && Qr.push({
-            kind: Wr,
-            atMs: Sr.toEpoch(jr.timestamp)
+    function fd(dd, Od) {
+      const md = [];
+      for (const Xd of dd)
+        if (Xd.type === rd.d.Custom) {
+          var Wd;
+          const dd = null === (Wd = Xd.data) || void 0 === Wd ? void 0 : Wd.tag,
+            Fd = void 0 === dd ? void 0 : Cd[dd];
+          void 0 !== Fd && md.push({
+            kind: Fd,
+            atMs: Od.toEpoch(Xd.timestamp)
           })
-        } else if (jr.type === Rr.e.Plugin) {
-        var Wr, ar;
-        const rr = jr.data;
-        "rrweb/console@1" !== (null === rr || void 0 === rr ? void 0 : rr.plugin) || "error" !== (null === (Wr = rr.payload) || void 0 === Wr ? void 0 : Wr.level) && "assert" !== (null === (ar = rr.payload) || void 0 === ar ? void 0 : ar.level) || Qr.push({
+        } else if (Xd.type === rd.d.Plugin) {
+        var Fd, Rd;
+        const dd = Xd.data;
+        "rrweb/console@1" !== (null === dd || void 0 === dd ? void 0 : dd.plugin) || "error" !== (null === (Fd = dd.payload) || void 0 === Fd ? void 0 : Fd.level) && "assert" !== (null === (Rd = dd.payload) || void 0 === Rd ? void 0 : Rd.level) || md.push({
           kind: "error",
-          atMs: Sr.toEpoch(jr.timestamp)
+          atMs: Od.toEpoch(Xd.timestamp)
         })
       }
-      return Qr
+      return md
     }
-    const dr = 3e6;
-    class sr {
-      constructor(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
-          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dr;
-        this.fetchUrls = rr, this.onUrls = Sr, this.wallNowMs = Qr, this.refreshableAfterMs = Zr, this.lastRefreshWallMs = -1 / 0, this.urlsFetchedAtWallMs = void 0, this.inFlight = !1, this.timer = null, this.destroyed = !1, this.urlsFetchedAtWallMs = Qr()
+    const Md = 3e6;
+    class dO {
+      constructor(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
+          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Md;
+        this.fetchUrls = dd, this.onUrls = Od, this.wallNowMs = md, this.refreshableAfterMs = Wd, this.lastRefreshWallMs = -1 / 0, this.urlsFetchedAtWallMs = void 0, this.inFlight = !1, this.timer = null, this.destroyed = !1, this.urlsFetchedAtWallMs = md()
       }
       get refreshing() {
         return this.inFlight
@@ -574,91 +574,91 @@ export const modules = {
       request() {
         if (null === this.fetchUrls || this.destroyed || null !== this.timer || this.inFlight) return;
         if (this.wallNowMs() - this.urlsFetchedAtWallMs < this.refreshableAfterMs) return;
-        const rr = this.lastRefreshWallMs + 6e4 - this.wallNowMs();
-        rr > 0 ? this.timer = setTimeout((() => {
+        const dd = this.lastRefreshWallMs + 6e4 - this.wallNowMs();
+        dd > 0 ? this.timer = setTimeout((() => {
           this.timer = null, this.request()
-        }), rr) : this.start(this.fetchUrls)
+        }), dd) : this.start(this.fetchUrls)
       }
       destroy() {
         this.destroyed = !0, null !== this.timer && clearTimeout(this.timer)
       }
-      start(rr) {
+      start(dd) {
         this.inFlight = !0;
-        const Sr = this.wallNowMs();
-        this.lastRefreshWallMs = Sr;
-        let Qr = !1;
-        rr().then((rr => {
-          this.destroyed || (this.urlsFetchedAtWallMs = Sr, this.onUrls(rr))
-        })).catch((rr => {
-          console.error("Failed to refresh the replay's URLs.", rr), Qr = !0
+        const Od = this.wallNowMs();
+        this.lastRefreshWallMs = Od;
+        let md = !1;
+        dd().then((dd => {
+          this.destroyed || (this.urlsFetchedAtWallMs = Od, this.onUrls(dd))
+        })).catch((dd => {
+          console.error("Failed to refresh the replay's URLs.", dd), md = !0
         })).finally((() => {
-          this.inFlight = !1, Qr && this.request()
+          this.inFlight = !1, md && this.request()
         }))
       }
     }
-    class ur {
-      constructor(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
-          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : dr;
-        this.source = rr, this.description = Sr, this.wallNowMs = Qr, this.refreshableAfterMs = Zr, this.entries = new Map, this.unavailable = new Set, this.inFlight = !1, this.failedFetches = 0, this.retryAtWallMs = -1 / 0, this.destroyed = !1
+    class OO {
+      constructor(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now,
+          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Md;
+        this.source = dd, this.description = Od, this.wallNowMs = md, this.refreshableAfterMs = Wd, this.entries = new Map, this.unavailable = new Set, this.inFlight = !1, this.failedFetches = 0, this.retryAtWallMs = -1 / 0, this.destroyed = !1
       }
-      reset(rr) {
+      reset(dd) {
         this.entries.clear(), this.unavailable.clear(), this.failedFetches = 0, this.retryAtWallMs = -1 / 0;
-        const Sr = this.wallNowMs();
-        for (const Qr of rr) this.entries.set(Qr.sequence, {
-          urls: Qr,
-          fetchedAtWallMs: Sr
+        const Od = this.wallNowMs();
+        for (const md of dd) this.entries.set(md.sequence, {
+          urls: md,
+          fetchedAtWallMs: Od
         })
       }
-      get(rr) {
-        const Sr = this.getFresh(rr);
-        return null !== Sr ? Sr : null === this.source || this.unavailable.has(rr) || this.failedFetches > 0 ? "failed" : "pending"
+      get(dd) {
+        const Od = this.getFresh(dd);
+        return null !== Od ? Od : null === this.source || this.unavailable.has(dd) || this.failedFetches > 0 ? "failed" : "pending"
       }
-      needs(rr) {
-        return null === this.getFresh(rr) && !this.unavailable.has(rr)
+      needs(dd) {
+        return null === this.getFresh(dd) && !this.unavailable.has(dd)
       }
-      request(rr) {
+      request(dd) {
         if (null === this.source || this.inFlight || this.failedFetches >= 3 || this.wallNowMs() < this.retryAtWallMs) return;
-        const Sr = rr.filter((rr => this.needs(rr)));
-        Sr.length > 0 && this.fetch(this.source, Sr.slice(0, this.source.maxSequences))
+        const Od = dd.filter((dd => this.needs(dd)));
+        Od.length > 0 && this.fetch(this.source, Od.slice(0, this.source.maxSequences))
       }
       destroy() {
         this.destroyed = !0
       }
-      getFresh(rr) {
-        const Sr = this.entries.get(rr);
-        return void 0 === Sr ? null : null === this.source || this.wallNowMs() - Sr.fetchedAtWallMs < this.refreshableAfterMs ? Sr.urls : null
+      getFresh(dd) {
+        const Od = this.entries.get(dd);
+        return void 0 === Od ? null : null === this.source || this.wallNowMs() - Od.fetchedAtWallMs < this.refreshableAfterMs ? Od.urls : null
       }
-      fetch(rr, Sr) {
+      fetch(dd, Od) {
         this.inFlight = !0;
-        const Qr = this.wallNowMs();
-        rr.load(Sr).then((rr => {
+        const md = this.wallNowMs();
+        dd.load(Od).then((dd => {
           if (this.destroyed) return;
           this.failedFetches = 0;
-          const Zr = new Set;
-          for (const Sr of rr) this.entries.set(Sr.sequence, {
-            urls: Sr,
-            fetchedAtWallMs: Qr
-          }), Zr.add(Sr.sequence);
-          for (const Qr of Sr) Zr.has(Qr) || (console.warn(`Replay sequence ${Qr} has no ${this.description}.`), this.unavailable.add(Qr))
-        })).catch((rr => {
-          console.error(`Failed to fetch the replay's ${this.description}.`, rr), this.failedFetches++, this.retryAtWallMs = this.wallNowMs() + 6e4
+          const Wd = new Set;
+          for (const Od of dd) this.entries.set(Od.sequence, {
+            urls: Od,
+            fetchedAtWallMs: md
+          }), Wd.add(Od.sequence);
+          for (const md of Od) Wd.has(md) || (console.warn(`Replay sequence ${md} has no ${this.description}.`), this.unavailable.add(md))
+        })).catch((dd => {
+          console.error(`Failed to fetch the replay's ${this.description}.`, dd), this.failedFetches++, this.retryAtWallMs = this.wallNowMs() + 6e4
         })).finally((() => {
           this.inFlight = !1
         }))
       }
     }
-    class rS {
-      constructor(rr, Sr, Qr, Zr) {
-        let Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          ar = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
-          jr = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : dr;
-        this.load = Sr, this.onLoaded = Qr, this.onFailed = Zr, this.chunks = void 0, this.urls = void 0, this.loading = 0, this.merged = SS([]), this.hidden = [], this.destroyed = !1, this.chunks = [...rr].sort(((rr, Sr) => rr.startMs - Sr.startMs)).map((rr => ({
-          chunk: rr,
+    class mO {
+      constructor(dd, Od, md, Wd) {
+        let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          Rd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Date.now,
+          Xd = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Md;
+        this.load = Od, this.onLoaded = md, this.onFailed = Wd, this.chunks = void 0, this.urls = void 0, this.loading = 0, this.merged = WO([]), this.hidden = [], this.destroyed = !1, this.chunks = [...dd].sort(((dd, Od) => dd.startMs - Od.startMs)).map((dd => ({
+          chunk: dd,
           status: "idle",
           attempts: 0,
           telemetry: null
-        }))), this.urls = new ur(Wr, "telemetry URLs", ar, jr), this.urls.reset(ZS(rr))
+        }))), this.urls = new OO(Fd, "telemetry URLs", Rd, Xd), this.urls.reset(RO(dd))
       }
       get telemetry() {
         return this.merged
@@ -667,145 +667,145 @@ export const modules = {
         return this.hidden
       }
       get loadedCount() {
-        return this.chunks.filter((rr => "loaded" === rr.status)).length
+        return this.chunks.filter((dd => "loaded" === dd.status)).length
       }
-      update(rr, Sr, Qr) {
+      update(dd, Od, md) {
         if (null === this.load || this.destroyed) return;
-        const Zr = Sr.toPosition(rr),
-          Wr = Sr.toTime(Zr - 1e4),
-          ar = Sr.toTime(Zr + 6e4 * Math.max(1, Qr)),
-          jr = Sr.toTime(Zr + 12e4 * Math.max(1, Qr)),
-          Ir = this.chunks.filter((rr => "idle" === rr.status && rr.chunk.endMs >= Wr && rr.chunk.startMs <= jr)).sort(((Sr, Qr) => WS(rr, Sr.chunk) - WS(rr, Qr.chunk)));
-        this.urls.request(Ir.flatMap((rr => {
-          var Sr;
+        const Wd = Od.toPosition(dd),
+          Fd = Od.toTime(Wd - 1e4),
+          Rd = Od.toTime(Wd + 6e4 * Math.max(1, md)),
+          Xd = Od.toTime(Wd + 12e4 * Math.max(1, md)),
+          Kd = this.chunks.filter((dd => "idle" === dd.status && dd.chunk.endMs >= Fd && dd.chunk.startMs <= Xd)).sort(((Od, md) => XO(dd, Od.chunk) - XO(dd, md.chunk)));
+        this.urls.request(Kd.flatMap((dd => {
+          var Od;
           let {
-            chunk: Qr
-          } = rr;
-          return null !== (Sr = Qr.sequence) && void 0 !== Sr ? Sr : []
+            chunk: md
+          } = dd;
+          return null !== (Od = md.sequence) && void 0 !== Od ? Od : []
         })));
-        for (const fr of Ir) {
+        for (const hd of Kd) {
           if (this.loading >= 3) return;
-          const rr = fr.chunk.startMs <= ar ? this.getUrl(fr.chunk) : null;
-          null !== rr && this.startLoad(fr, rr, this.load)
+          const dd = hd.chunk.startMs <= Rd ? this.getUrl(hd.chunk) : null;
+          null !== dd && this.startLoad(hd, dd, this.load)
         }
       }
-      replaceUrls(rr) {
-        this.urls.reset(ZS(rr));
-        for (const Sr of this.chunks) {
-          const Qr = rr.find((rr => rr.startMs === Sr.chunk.startMs && rr.endMs === Sr.chunk.endMs));
-          void 0 !== Qr && (Sr.chunk = Qr, "failed" === Sr.status && (Sr.status = "idle"))
+      replaceUrls(dd) {
+        this.urls.reset(RO(dd));
+        for (const Od of this.chunks) {
+          const md = dd.find((dd => dd.startMs === Od.chunk.startMs && dd.endMs === Od.chunk.endMs));
+          void 0 !== md && (Od.chunk = md, "failed" === Od.status && (Od.status = "idle"))
         }
       }
       destroy() {
         this.destroyed = !0, this.urls.destroy()
       }
-      getUrl(rr) {
-        var Sr;
-        if (void 0 === rr.sequence) return null !== (Sr = rr.url) && void 0 !== Sr ? Sr : null;
-        const Qr = this.urls.get(rr.sequence);
-        return "string" === typeof Qr ? null : Qr.url
+      getUrl(dd) {
+        var Od;
+        if (void 0 === dd.sequence) return null !== (Od = dd.url) && void 0 !== Od ? Od : null;
+        const md = this.urls.get(dd.sequence);
+        return "string" === typeof md ? null : md.url
       }
-      startLoad(rr, Sr, Qr) {
-        rr.status = "loading", rr.attempts++, this.loading++, Qr(Sr).then((Sr => {
-          this.destroyed || (rr.status = "loaded", rr.telemetry = Sr, this.merge(), this.onLoaded())
-        })).catch((Sr => {
-          this.destroyed || (console.error(`Failed to load replay telemetry for ${rr.chunk.startMs}-${rr.chunk.endMs}.`, Sr), rr.status = rr.attempts < 2 ? "idle" : "failed", this.onFailed())
+      startLoad(dd, Od, md) {
+        dd.status = "loading", dd.attempts++, this.loading++, md(Od).then((Od => {
+          this.destroyed || (dd.status = "loaded", dd.telemetry = Od, this.merge(), this.onLoaded())
+        })).catch((Od => {
+          this.destroyed || (console.error(`Failed to load replay telemetry for ${dd.chunk.startMs}-${dd.chunk.endMs}.`, Od), dd.status = dd.attempts < 2 ? "idle" : "failed", this.onFailed())
         })).finally((() => {
           this.loading--
         }))
       }
       merge() {
-        const rr = [];
-        let Sr = !1;
-        for (const Zr of this.chunks) {
-          const Qr = rr.at(-1);
-          if (null === Zr.telemetry) {
-            Sr = !1;
+        const dd = [];
+        let Od = !1;
+        for (const Wd of this.chunks) {
+          const md = dd.at(-1);
+          if (null === Wd.telemetry) {
+            Od = !1;
             continue
           }
-          const Wr = QS(Zr.telemetry, Zr.chunk);
-          void 0 !== Qr && Sr && Zr.chunk.startMs <= Qr.endMs + 1e3 ? (Qr.telemetry.push(Wr), Qr.endMs = Zr.chunk.endMs) : (rr.push({
-            telemetry: [Wr],
-            endMs: Zr.chunk.endMs
-          }), Sr = !0)
+          const Fd = FO(Wd.telemetry, Wd.chunk);
+          void 0 !== md && Od && Wd.chunk.startMs <= md.endMs + 1e3 ? (md.telemetry.push(Fd), md.endMs = Wd.chunk.endMs) : (dd.push({
+            telemetry: [Fd],
+            endMs: Wd.chunk.endMs
+          }), Od = !0)
         }
-        const Qr = rr.map((rr => function(rr, Sr) {
-          const Qr = rr.actions.at(-1);
-          if (void 0 === Qr || 0 === Qr.bits) return rr;
+        const md = dd.map((dd => function(dd, Od) {
+          const md = dd.actions.at(-1);
+          if (void 0 === md || 0 === md.bits) return dd;
           return {
-            ...rr,
-            actions: [...rr.actions, {
-              atMs: Sr,
+            ...dd,
+            actions: [...dd.actions, {
+              atMs: Od,
               bits: 0
             }]
           }
-        }(SS(rr.telemetry), rr.endMs)));
-        this.merged = SS(Qr), this.hidden = Qr.flatMap(((Sr, Qr) => function(rr, Sr) {
-          const Qr = [];
-          let Zr = null;
+        }(WO(dd.telemetry), dd.endMs)));
+        this.merged = WO(md), this.hidden = md.flatMap(((Od, md) => function(dd, Od) {
+          const md = [];
+          let Wd = null;
           for (const {
-              atMs: Wr,
-              event: ar
+              atMs: Fd,
+              event: Rd
             }
-            of rr.events) "hidden" === ar && null === Zr ? Zr = Wr : "visible" === ar && null !== Zr && (Qr.push({
-            startMs: Zr,
-            endMs: Wr
-          }), Zr = null);
-          return null !== Zr && Qr.push({
-            startMs: Zr,
-            endMs: Sr
-          }), gr(Qr)
-        }(Sr, rr[Qr].endMs)))
+            of dd.events) "hidden" === Rd && null === Wd ? Wd = Fd : "visible" === Rd && null !== Wd && (md.push({
+            startMs: Wd,
+            endMs: Fd
+          }), Wd = null);
+          return null !== Wd && md.push({
+            startMs: Wd,
+            endMs: Od
+          }), Gd(md)
+        }(Od, dd[md].endMs)))
       }
     }
 
-    function SS(rr) {
+    function WO(dd) {
       return {
-        inputRecorded: rr.some((rr => rr.keys.length > 0)),
-        frames: rr.flatMap((rr => rr.frames)),
-        states: rr.flatMap((rr => rr.states)),
-        events: rr.flatMap((rr => rr.events)),
-        actions: rr.flatMap((rr => rr.actions)),
-        keys: rr.flatMap((rr => rr.keys))
+        inputRecorded: dd.some((dd => dd.keys.length > 0)),
+        frames: dd.flatMap((dd => dd.frames)),
+        states: dd.flatMap((dd => dd.states)),
+        events: dd.flatMap((dd => dd.events)),
+        actions: dd.flatMap((dd => dd.actions)),
+        keys: dd.flatMap((dd => dd.keys))
       }
     }
 
-    function QS(rr, Sr) {
+    function FO(dd, Od) {
       const {
-        actions: Qr
-      } = rr;
-      return !rr.inputRecorded || Qr.length > 0 && Qr[0].atMs <= Sr.startMs + 1 ? rr : {
-        ...rr,
+        actions: md
+      } = dd;
+      return !dd.inputRecorded || md.length > 0 && md[0].atMs <= Od.startMs + 1 ? dd : {
+        ...dd,
         actions: [{
-          atMs: Sr.startMs,
+          atMs: Od.startMs,
           bits: 0
-        }, ...Qr]
+        }, ...md]
       }
     }
 
-    function ZS(rr) {
-      return rr.flatMap((rr => {
+    function RO(dd) {
+      return dd.flatMap((dd => {
         let {
-          sequence: Sr,
-          url: Qr
-        } = rr;
-        return void 0 === Sr || void 0 === Qr ? [] : [{
-          sequence: Sr,
-          url: Qr
+          sequence: Od,
+          url: md
+        } = dd;
+        return void 0 === Od || void 0 === md ? [] : [{
+          sequence: Od,
+          url: md
         }]
       }))
     }
 
-    function WS(rr, Sr) {
-      return rr < Sr.startMs ? Sr.startMs - rr : rr > Sr.endMs ? 2 * (rr - Sr.endMs) : 0
+    function XO(dd, Od) {
+      return dd < Od.startMs ? Od.startMs - dd : dd > Od.endMs ? 2 * (dd - Od.endMs) : 0
     }
-    class aS {
-      constructor(rr, Sr, Qr, Zr) {
-        this.data = rr, this.domClock = Sr, this.timeline = Qr, this.options = Zr, this.telemetry = void 0, this.activityTimes = void 0, this.markerList = [], this.inactiveRangeList = [], this.videoGapRanges = [], this.activityTimes = function(rr, Sr) {
-          return rr.filter(Jr).map((rr => Sr.toEpoch(rr.timestamp)))
-        }(rr.domEvents, Sr), this.telemetry = new rS(rr.telemetryChunks, Zr.loadTelemetryChunk, (() => {
+    class KO {
+      constructor(dd, Od, md, Wd) {
+        this.data = dd, this.domClock = Od, this.timeline = md, this.options = Wd, this.telemetry = void 0, this.activityTimes = void 0, this.markerList = [], this.inactiveRangeList = [], this.videoGapRanges = [], this.activityTimes = function(dd, Od) {
+          return dd.filter(kd).map((dd => Od.toEpoch(dd.timestamp)))
+        }(dd.domEvents, Od), this.telemetry = new mO(dd.telemetryChunks, Wd.loadTelemetryChunk, (() => {
           this.rebuild()
-        }), Zr.onTelemetryFailed, Zr.telemetryUrls), this.rebuild()
+        }), Wd.onTelemetryFailed, Wd.telemetryUrls), this.rebuild()
       }
       get markers() {
         return this.markerList
@@ -825,257 +825,257 @@ export const modules = {
       get telemetryChunksLoaded() {
         return this.telemetry.loadedCount
       }
-      update(rr, Sr) {
-        this.telemetry.update(rr, this.timeline, Sr)
+      update(dd, Od) {
+        this.telemetry.update(dd, this.timeline, Od)
       }
-      replaceTelemetryUrls(rr) {
-        this.telemetry.replaceUrls(rr)
+      replaceTelemetryUrls(dd) {
+        this.telemetry.replaceUrls(dd)
       }
       destroy() {
         this.telemetry.destroy()
       }
-      isHiddenAt(rr) {
-        return this.telemetry.hiddenRanges.some(jS(rr))
+      isHiddenAt(dd) {
+        return this.telemetry.hiddenRanges.some(hO(dd))
       }
-      isVideoGapAt(rr) {
-        return this.videoGapRanges.some(jS(rr))
+      isVideoGapAt(dd) {
+        return this.videoGapRanges.some(hO(dd))
       }
       rebuild() {
-        const rr = this.telemetry.telemetry,
-          Sr = this.telemetry.hiddenRanges;
-        this.videoGapRanges = br(rr.frames, this.data.videoSegments, Sr), this.inactiveRangeList = function(rr, Sr, Qr, Zr) {
-          const Wr = [...Sr];
-          if (rr.length > 0) {
-            const Sr = [Qr.startMs, ...rr, Qr.endMs];
-            for (let rr = 1; rr < Sr.length; rr++) {
-              const Qr = Sr[rr - 1],
-                ar = Sr[rr] - 1e3;
-              ar - Qr >= Zr && Wr.push({
-                startMs: Qr,
-                endMs: ar
+        const dd = this.telemetry.telemetry,
+          Od = this.telemetry.hiddenRanges;
+        this.videoGapRanges = Zd(dd.frames, this.data.videoSegments, Od), this.inactiveRangeList = function(dd, Od, md, Wd) {
+          const Fd = [...Od];
+          if (dd.length > 0) {
+            const Od = [md.startMs, ...dd, md.endMs];
+            for (let dd = 1; dd < Od.length; dd++) {
+              const md = Od[dd - 1],
+                Rd = Od[dd] - 1e3;
+              Rd - md >= Wd && Fd.push({
+                startMs: md,
+                endMs: Rd
               })
             }
           }
-          return gr(Wr).filter((rr => rr.endMs - rr.startMs >= Zr))
-        }(this.activityTimes, Sr, this.timeline, this.options.inactivityThresholdMs), this.markerList = function(rr) {
+          return Gd(Fd).filter((dd => dd.endMs - dd.startMs >= Wd))
+        }(this.activityTimes, Od, this.timeline, this.options.inactivityThresholdMs), this.markerList = function(dd) {
           const {
-            timeline: Sr
-          } = rr;
-          return [...Dr(rr.domEvents, rr.domClock), ...rr.telemetry.events.filter((rr => {
+            timeline: Od
+          } = dd;
+          return [...fd(dd.domEvents, dd.domClock), ...dd.telemetry.events.filter((dd => {
             let {
-              event: Sr
-            } = rr;
-            return "contextLost" === Sr
-          })).map((rr => {
+              event: Od
+            } = dd;
+            return "contextLost" === Od
+          })).map((dd => {
             let {
-              atMs: Sr
-            } = rr;
+              atMs: Od
+            } = dd;
             return {
               kind: "graphicsCrash",
-              atMs: Sr
+              atMs: Od
             }
-          })), ...rr.hidden.map((rr => ({
+          })), ...dd.hidden.map((dd => ({
             kind: "hidden",
-            atMs: rr.startMs,
-            endMs: rr.endMs
-          }))), ...rr.extraMarkers].filter((rr => rr.atMs >= Sr.startMs && rr.atMs <= Sr.endMs && (Sr.contains(rr.atMs) || Sr.contains(rr.atMs - 1)))).sort(((rr, Sr) => rr.atMs - Sr.atMs))
+            atMs: dd.startMs,
+            endMs: dd.endMs
+          }))), ...dd.extraMarkers].filter((dd => dd.atMs >= Od.startMs && dd.atMs <= Od.endMs && (Od.contains(dd.atMs) || Od.contains(dd.atMs - 1)))).sort(((dd, Od) => dd.atMs - Od.atMs))
         }({
           domEvents: this.data.domEvents,
           domClock: this.domClock,
-          telemetry: rr,
+          telemetry: dd,
           extraMarkers: this.data.markers,
-          hidden: Sr,
+          hidden: Od,
           timeline: this.timeline
         })
       }
     }
 
-    function jS(rr) {
-      return Sr => rr >= Sr.startMs && rr < Sr.endMs
+    function hO(dd) {
+      return Od => dd >= Od.startMs && dd < Od.endMs
     }
-    class IS {
+    class vO {
       constructor() {
         this.addedAt = new Map, this.settleQueued = !1, this.plugin = {
-          handler: (rr, Sr, Qr) => {
+          handler: (dd, Od, md) => {
             let {
-              replayer: Zr
-            } = Qr;
-            this.record(rr), Sr && !this.settleQueued && (this.settleQueued = !0, queueMicrotask((() => {
-              this.settleQueued = !1, this.settle(Zr)
+              replayer: Wd
+            } = md;
+            this.record(dd), Od && !this.settleQueued && (this.settleQueued = !0, queueMicrotask((() => {
+              this.settleQueued = !1, this.settle(Wd)
             })))
           }
         }
       }
-      settle(rr) {
-        const Sr = rr.iframe.contentDocument;
-        if (null === Sr || void 0 === Sr || !Sr.documentElement.classList.contains("rrweb-paused")) return;
-        const Qr = rr.getMetaData().startTime + rr.getCurrentTime();
-        ! function(rr, Sr, Qr, Zr) {
-          for (const Wr of rr) {
-            const rr = Wr.effect,
-              ar = Qr.get(Sr.getId(rr.target)),
-              jr = void 0 === ar ? 1 / 0 : Zr - ar,
-              Ir = Math.min(Math.max(jr, Number(Wr.currentTime)), Number(rr.getComputedTiming().endTime));
-            Number.isFinite(Ir) && (Wr.currentTime = Ir)
+      settle(dd) {
+        const Od = dd.iframe.contentDocument;
+        if (null === Od || void 0 === Od || !Od.documentElement.classList.contains("rrweb-paused")) return;
+        const md = dd.getMetaData().startTime + dd.getCurrentTime();
+        ! function(dd, Od, md, Wd) {
+          for (const Fd of dd) {
+            const dd = Fd.effect,
+              Rd = md.get(Od.getId(dd.target)),
+              Xd = void 0 === Rd ? 1 / 0 : Wd - Rd,
+              Kd = Math.min(Math.max(Xd, Number(Fd.currentTime)), Number(dd.getComputedTiming().endTime));
+            Number.isFinite(Kd) && (Fd.currentTime = Kd)
           }
-        }(Sr.getAnimations(), rr.getMirror(), this.addedAt, Qr)
+        }(Od.getAnimations(), dd.getMirror(), this.addedAt, md)
       }
-      record(rr) {
-        if (rr.type === Rr.e.FullSnapshot) this.addedAt.clear();
-        else if (rr.type === Rr.e.IncrementalSnapshot && rr.data.source === Rr.h.Mutation) {
+      record(dd) {
+        if (dd.type === rd.d.FullSnapshot) this.addedAt.clear();
+        else if (dd.type === rd.d.IncrementalSnapshot && dd.data.source === rd.g.Mutation) {
           for (const {
-              id: Sr
+              id: Od
             }
-            of rr.data.removes) this.addedAt.delete(Sr);
+            of dd.data.removes) this.addedAt.delete(Od);
           for (const {
-              node: Sr
+              node: Od
             }
-            of rr.data.adds) this.addedAt.set(Sr.id, rr.timestamp)
+            of dd.data.adds) this.addedAt.set(Od.id, dd.timestamp)
         }
       }
     }
-    const fS = new Set(["src", "href", "xlink:href", "poster", "data", "background", "lowsrc", "dynsrc", "manifest", "icon", "action", "formaction", "ping", "codebase", "archive", "longdesc", "rr_src", "rr_dataurl"]),
-      ES = new Set(["srcset", "imagesrcset"]),
-      pS = new Set(["to", "from", "by", "values"]),
-      xS = new Set(["srcdoc", "http-equiv", "attributionsrc"]),
-      mS = /url\(\s*(?:"([^"]*)"|'([^']*)'|([^"')\s]*))\s*\)|@import\s*(?:"([^"]*)"|'([^']*)')|"\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^"]*)"|'\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^']*)'/gi,
-      NS = /url\(|@import|image-set|\\|["']\s*(?:[a-z][a-z\d+.-]*:|\/\/)/i,
-      US = /\\(?:([\da-f]{1,6})\s?|(.))/gis,
-      tS = /url\(|@import(?!\s*"")|\/\\|\\[/\\]/i,
-      hS = /^(?:[a-z][a-z\d+.-]*:|\/\/|\\\\)/i,
-      zS = /^data:image\/(?!svg)/i,
-      YS = "about:invalid";
+    const QO = new Set(["src", "href", "xlink:href", "poster", "data", "background", "lowsrc", "dynsrc", "manifest", "icon", "action", "formaction", "ping", "codebase", "archive", "longdesc", "rr_src", "rr_dataurl"]),
+      tO = new Set(["srcset", "imagesrcset"]),
+      oO = new Set(["to", "from", "by", "values"]),
+      NO = new Set(["srcdoc", "http-equiv", "attributionsrc"]),
+      qO = /url\(\s*(?:"([^"]*)"|'([^']*)'|([^"')\s]*))\s*\)|@import\s*(?:"([^"]*)"|'([^']*)')|"\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^"]*)"|'\s*((?:[a-z][a-z\d+.-]*:|\/\/)[^']*)'/gi,
+      HO = /url\(|@import|image-set|\\|["']\s*(?:[a-z][a-z\d+.-]*:|\/\/)/i,
+      yO = /\\(?:([\da-f]{1,6})\s?|(.))/gis,
+      bO = /url\(|@import(?!\s*"")|\/\\|\\[/\\]/i,
+      TO = /^(?:[a-z][a-z\d+.-]*:|\/\/|\\\\)/i,
+      pO = /^data:image\/(?!svg)/i,
+      YO = "about:invalid";
 
-    function nS(rr, Sr) {
+    function gO(dd, Od) {
       let {
-        hosts: Qr
-      } = Sr, Zr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Wr = rr.trim();
-      if (/[\\\u0000-\u001f]/.test(Wr)) return !1;
-      if (!hS.test(Wr)) return !0;
-      let ar;
+        hosts: md
+      } = Od, Wd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Fd = dd.trim();
+      if (/[\\\u0000-\u001f]/.test(Fd)) return !1;
+      if (!TO.test(Fd)) return !0;
+      let Rd;
       try {
-        ar = new URL(Wr.startsWith("//") ? `https:${Wr}` : Wr)
+        Rd = new URL(Fd.startsWith("//") ? `https:${Fd}` : Fd)
       } catch {
         return !1
       }
-      return "data:" === ar.protocol ? Zr ? "text/css" !== Wr.slice(5).split(/[,;]/)[0].trim().toLowerCase() : zS.test(Wr) : "blob:" === ar.protocol || ("http:" === ar.protocol || "https:" === ar.protocol) && Qr.some((rr => ar.hostname === rr || ar.hostname.endsWith(`.${rr}`)))
+      return "data:" === Rd.protocol ? Wd ? "text/css" !== Fd.slice(5).split(/[,;]/)[0].trim().toLowerCase() : pO.test(Fd) : "blob:" === Rd.protocol || ("http:" === Rd.protocol || "https:" === Rd.protocol) && md.some((dd => Rd.hostname === dd || Rd.hostname.endsWith(`.${dd}`)))
     }
 
-    function eS(rr, Sr) {
-      return rr.replace(mS, (function(rr) {
-        for (var Qr = arguments.length, Zr = new Array(Qr > 1 ? Qr - 1 : 0), Wr = 1; Wr < Qr; Wr++) Zr[Wr - 1] = arguments[Wr];
-        if (nS(Zr.slice(0, 7).find((rr => "string" === typeof rr)), Sr, !0)) return rr;
-        const ar = rr.slice(0, 4).toLowerCase();
-        return "url(" === ar ? `url("${YS}")` : "@imp" === ar ? `@import "${YS}"` : `"${YS}"`
+    function wO(dd, Od) {
+      return dd.replace(qO, (function(dd) {
+        for (var md = arguments.length, Wd = new Array(md > 1 ? md - 1 : 0), Fd = 1; Fd < md; Fd++) Wd[Fd - 1] = arguments[Fd];
+        if (gO(Wd.slice(0, 7).find((dd => "string" === typeof dd)), Od, !0)) return dd;
+        const Rd = dd.slice(0, 4).toLowerCase();
+        return "url(" === Rd ? `url("${YO}")` : "@imp" === Rd ? `@import "${YO}"` : `"${YO}"`
       }))
     }
 
-    function KS(rr) {
-      return tS.test(rr.replace(mS, '""'))
+    function aO(dd) {
+      return bO.test(dd.replace(qO, '""'))
     }
 
-    function yS(rr) {
-      let Sr = "between";
-      for (let Qr = 0; Qr < rr.length; Qr++) {
-        const Zr = rr[Qr];
-        if ("/" === Zr && "*" === rr[Qr + 1]) {
-          if (Qr = rr.indexOf("*/", Qr + 2), -1 === Qr) return "open";
-          Qr++, Sr = "between"
-        } else if ('"' === Zr || "'" === Zr) {
-          for (Qr++; Qr < rr.length && rr[Qr] !== Zr && !/[\n\r\f]/.test(rr[Qr]); Qr++) "\\" === rr[Qr] && Qr++;
-          if (Qr >= rr.length) return "open";
-          Sr = "token"
-        } else "\\" === Zr ? (Qr++, Sr = "token") : ";" === Zr || "{" === Zr || "}" === Zr ? Sr = "between" : /\s/.test(Zr) || (Sr = "token")
+    function EO(dd) {
+      let Od = "between";
+      for (let md = 0; md < dd.length; md++) {
+        const Wd = dd[md];
+        if ("/" === Wd && "*" === dd[md + 1]) {
+          if (md = dd.indexOf("*/", md + 2), -1 === md) return "open";
+          md++, Od = "between"
+        } else if ('"' === Wd || "'" === Wd) {
+          for (md++; md < dd.length && dd[md] !== Wd && !/[\n\r\f]/.test(dd[md]); md++) "\\" === dd[md] && md++;
+          if (md >= dd.length) return "open";
+          Od = "token"
+        } else "\\" === Wd ? (md++, Od = "token") : ";" === Wd || "{" === Wd || "}" === Wd ? Od = "between" : /\s/.test(Wd) || (Od = "token")
       }
-      return Sr
+      return Od
     }
 
-    function BS(rr, Sr) {
-      const Qr = eS(rr, Sr);
-      if (KS(Qr) || "open" === yS(Qr)) return "";
-      if (!Qr.includes("\\")) return Qr;
-      const Zr = function(rr) {
-        return rr.replace(US, ((rr, Sr, Qr) => void 0 !== Sr ? String.fromCodePoint(Math.min(parseInt(Sr, 16), 1114111)) : null !== Qr && void 0 !== Qr ? Qr : ""))
-      }(Qr);
-      return eS(Zr, Sr) !== Zr || KS(Zr) ? "" : Qr
+    function JO(dd, Od) {
+      const md = wO(dd, Od);
+      if (aO(md) || "open" === EO(md)) return "";
+      if (!md.includes("\\")) return md;
+      const Wd = function(dd) {
+        return dd.replace(yO, ((dd, Od, md) => void 0 !== Od ? String.fromCodePoint(Math.min(parseInt(Od, 16), 1114111)) : null !== md && void 0 !== md ? md : ""))
+      }(md);
+      return wO(Wd, Od) !== Wd || aO(Wd) ? "" : md
     }
 
-    function TS(rr, Sr) {
-      const Qr = NS.test(rr) ? BS(rr, Sr) : rr;
-      return Qr.split("/* rr_split */").every((rr => "between" === yS(rr))) ? Qr : ""
+    function UO(dd, Od) {
+      const md = HO.test(dd) ? JO(dd, Od) : dd;
+      return md.split("/* rr_split */").every((dd => "between" === EO(dd))) ? md : ""
     }
 
-    function vS(rr, Sr, Qr) {
-      if ("string" === typeof Sr) {
-        const Zr = rr.toLowerCase();
-        if (xS.has(Zr)) return null;
-        if (ES.has(Zr)) return function(rr, Sr) {
-          return rr.split(",").every((rr => {
-            const Qr = rr.trim().split(/\s+/)[0];
-            return void 0 === Qr || "" === Qr || nS(Qr, Sr)
+    function xO(dd, Od, md) {
+      if ("string" === typeof Od) {
+        const Wd = dd.toLowerCase();
+        if (NO.has(Wd)) return null;
+        if (tO.has(Wd)) return function(dd, Od) {
+          return dd.split(",").every((dd => {
+            const md = dd.trim().split(/\s+/)[0];
+            return void 0 === md || "" === md || gO(md, Od)
           }))
-        }(Sr, Qr) ? Sr : null;
-        if (pS.has(Zr)) {
-          return Sr.split(";").every((rr => nS(rr, Qr))) ? vS("", Sr, Qr) : null
+        }(Od, md) ? Od : null;
+        if (oO.has(Wd)) {
+          return Od.split(";").every((dd => gO(dd, md))) ? xO("", Od, md) : null
         }
-        return fS.has(Zr) ? nS(Sr, Qr) ? Sr : null : "_csstext" === Zr ? TS(Sr, Qr) : NS.test(Sr) ? BS(Sr, Qr) : Sr
+        return QO.has(Wd) ? gO(Od, md) ? Od : null : "_csstext" === Wd ? UO(Od, md) : HO.test(Od) ? JO(Od, md) : Od
       }
-      if (Array.isArray(Sr)) return Sr.map((rr => vS("", rr, Qr)));
-      if (null !== Sr && "object" === typeof Sr) {
-        const Zr = "style" === rr.toLowerCase(),
-          Wr = {};
-        for (const [rr, jr] of Object.entries(Sr)) Wr[rr] = vS(Zr ? "" : rr, jr, Qr);
+      if (Array.isArray(Od)) return Od.map((dd => xO("", dd, md)));
+      if (null !== Od && "object" === typeof Od) {
+        const Wd = "style" === dd.toLowerCase(),
+          Fd = {};
+        for (const [dd, Xd] of Object.entries(Od)) Fd[dd] = xO(Wd ? "" : dd, Xd, md);
         const {
-          id: ar
-        } = Wr;
-        if ("number" === typeof ar && Qr.styleTextIds.has(ar))
-          for (const rr of ["textContent", "value"]) {
-            const Sr = Wr[rr];
-            "string" === typeof Sr && (Wr[rr] = TS(Sr, Qr))
+          id: Rd
+        } = Fd;
+        if ("number" === typeof Rd && md.styleTextIds.has(Rd))
+          for (const dd of ["textContent", "value"]) {
+            const Od = Fd[dd];
+            "string" === typeof Od && (Fd[dd] = UO(Od, md))
           }
-        return Wr
+        return Fd
       }
-      return Sr
+      return Od
     }
 
-    function OS(rr, Sr) {
-      const Qr = (rr, Zr) => {
-        if (null === rr || "object" !== typeof rr) return;
-        const Wr = rr;
-        if (Sr(Wr, Zr), Array.isArray(Wr.childNodes))
-          for (const Sr of Wr.childNodes) Qr(Sr, Wr.id)
+    function BO(dd, Od) {
+      const md = (dd, Wd) => {
+        if (null === dd || "object" !== typeof dd) return;
+        const Fd = dd;
+        if (Od(Fd, Wd), Array.isArray(Fd.childNodes))
+          for (const Od of Fd.childNodes) md(Od, Fd.id)
       };
-      for (const Zr of rr) {
-        const rr = Zr.data;
-        if (Zr.type === Rr.e.FullSnapshot) Qr(null === rr || void 0 === rr ? void 0 : rr.node, null);
-        else if (Zr.type === Rr.e.IncrementalSnapshot && Array.isArray(null === rr || void 0 === rr ? void 0 : rr.adds))
-          for (const Sr of rr.adds) Qr(null === Sr || void 0 === Sr ? void 0 : Sr.node, null === Sr || void 0 === Sr ? void 0 : Sr.parentId)
+      for (const Wd of dd) {
+        const dd = Wd.data;
+        if (Wd.type === rd.d.FullSnapshot) md(null === dd || void 0 === dd ? void 0 : dd.node, null);
+        else if (Wd.type === rd.d.IncrementalSnapshot && Array.isArray(null === dd || void 0 === dd ? void 0 : dd.adds))
+          for (const Od of dd.adds) md(null === Od || void 0 === Od ? void 0 : Od.node, null === Od || void 0 === Od ? void 0 : Od.parentId)
       }
     }
 
-    function LS(rr) {
-      const Sr = new Set,
-        Qr = [];
-      OS(rr, ((rr, Zr) => {
+    function SO(dd) {
+      const Od = new Set,
+        md = [];
+      BO(dd, ((dd, Wd) => {
         let {
-          id: Wr,
-          tagName: ar
-        } = rr;
-        "number" === typeof Wr && ("string" === typeof ar && "style" === ar.toLowerCase() && Sr.add(Wr), Qr.push({
-          id: Wr,
-          parentId: Zr
+          id: Fd,
+          tagName: Rd
+        } = dd;
+        "number" === typeof Fd && ("string" === typeof Rd && "style" === Rd.toLowerCase() && Od.add(Fd), md.push({
+          id: Fd,
+          parentId: Wd
         }))
       }));
-      const Zr = new Set;
+      const Wd = new Set;
       for (const {
-          id: Wr,
-          parentId: ar
+          id: Fd,
+          parentId: Rd
         }
-        of Qr) "number" === typeof ar && Sr.has(ar) && Zr.add(Wr);
-      return Zr
+        of md) "number" === typeof Rd && Od.has(Rd) && Wd.add(Fd);
+      return Wd
     }
-    const lS = {
+    const sO = {
         coarse: {
           pointer: "coarse",
           "any-pointer": "coarse",
@@ -1089,135 +1089,135 @@ export const modules = {
           "any-hover": "hover"
         }
       },
-      XS = {
+      uO = {
         pointer: ["none", "coarse", "fine"],
         "any-pointer": ["none", "coarse", "fine"],
         hover: ["none", "hover"],
         "any-hover": ["none", "hover"]
       },
-      PS = "(min-width: 0px)",
-      HS = "(not (min-width: 0px))",
-      qS = /@media\b[^{;]*/gi,
-      RS = /\(\s*((?:any-)?(?:pointer|hover))\s*(?::\s*([a-z]+)\s*)?\)/gi,
-      gS = new Set(["_cssText", "rule", "replace", "replaceSync"]);
+      VO = "(min-width: 0px)",
+      iO = "(not (min-width: 0px))",
+      AO = /@media\b[^{;]*/gi,
+      rO = /\(\s*((?:any-)?(?:pointer|hover))\s*(?::\s*([a-z]+)\s*)?\)/gi,
+      GO = new Set(["_cssText", "rule", "replace", "replaceSync"]);
 
-    function CS(rr, Sr) {
-      return rr.replace(qS, (rr => rr.replace(RS, ((rr, Qr, Zr) => {
-        const Wr = Qr.toLowerCase(),
-          ar = lS[Sr][Wr];
-        if (void 0 === Zr) return "none" === ar ? HS : PS;
-        const jr = Zr.toLowerCase();
-        return XS[Wr].includes(jr) ? jr === ar ? PS : HS : rr
+    function nO(dd, Od) {
+      return dd.replace(AO, (dd => dd.replace(rO, ((dd, md, Wd) => {
+        const Fd = md.toLowerCase(),
+          Rd = sO[Od][Fd];
+        if (void 0 === Wd) return "none" === Rd ? iO : VO;
+        const Xd = Wd.toLowerCase();
+        return uO[Fd].includes(Xd) ? Xd === Rd ? VO : iO : dd
       }))))
     }
 
-    function MS(rr) {
-      const Sr = rr.attributes,
-        Qr = null === Sr || void 0 === Sr ? void 0 : Sr.rel,
-        Zr = null === Sr || void 0 === Sr ? void 0 : Sr.href;
-      return "link" === rr.tagName && "string" === typeof Qr && Qr.toLowerCase().split(/\s+/).includes("stylesheet") && "string" === typeof Zr ? Zr : null
+    function LO(dd) {
+      const Od = dd.attributes,
+        md = null === Od || void 0 === Od ? void 0 : Od.rel,
+        Wd = null === Od || void 0 === Od ? void 0 : Od.href;
+      return "link" === dd.tagName && "string" === typeof md && md.toLowerCase().split(/\s+/).includes("stylesheet") && "string" === typeof Wd ? Wd : null
     }
 
-    function GS(rr) {
-      const Sr = new Map;
-      OS(rr, (rr => {
-        const Qr = MS(rr);
-        null !== Qr && Sr.set(rr.id, Qr)
+    function PO(dd) {
+      const Od = new Map;
+      BO(dd, (dd => {
+        const md = LO(dd);
+        null !== md && Od.set(dd.id, md)
       }));
-      const Qr = new Map;
-      for (const Wr of rr) {
-        const rr = Wr.data;
-        if (Wr.type === Rr.e.IncrementalSnapshot && (null === rr || void 0 === rr ? void 0 : rr.source) === Rr.h.Mutation)
-          for (const Wr of null !== (Zr = rr.attributes) && void 0 !== Zr ? Zr : []) {
-            var Zr;
-            const rr = Wr.attributes._cssText,
-              ar = Sr.get(Wr.id);
-            "string" !== typeof rr || void 0 === ar || Qr.has(ar) || Qr.set(ar, rr)
+      const md = new Map;
+      for (const Fd of dd) {
+        const dd = Fd.data;
+        if (Fd.type === rd.d.IncrementalSnapshot && (null === dd || void 0 === dd ? void 0 : dd.source) === rd.g.Mutation)
+          for (const Fd of null !== (Wd = dd.attributes) && void 0 !== Wd ? Wd : []) {
+            var Wd;
+            const dd = Fd.attributes._cssText,
+              Rd = Od.get(Fd.id);
+            "string" !== typeof dd || void 0 === Rd || md.has(Rd) || md.set(Rd, dd)
           }
       }
-      return Qr
+      return md
     }
 
-    function kS(rr, Sr, Qr) {
-      var Zr;
-      if ("string" === typeof rr) return null !== Qr.pointer && gS.has(Sr) ? CS(rr, Qr.pointer) : rr;
-      if (Array.isArray(rr)) {
-        let Sr = !1;
-        const Zr = rr.map((rr => {
-          const Zr = kS(rr, "", Qr);
-          return Sr ||= Zr !== rr, Zr
+    function zO(dd, Od, md) {
+      var Wd;
+      if ("string" === typeof dd) return null !== md.pointer && GO.has(Od) ? nO(dd, md.pointer) : dd;
+      if (Array.isArray(dd)) {
+        let Od = !1;
+        const Wd = dd.map((dd => {
+          const Wd = zO(dd, "", md);
+          return Od ||= Wd !== dd, Wd
         }));
-        return Sr ? Zr : rr
+        return Od ? Wd : dd
       }
-      if (null === rr || "object" !== typeof rr) return rr;
-      const Wr = function(rr, Sr) {
-        const Qr = rr.attributes,
-          Zr = MS(rr),
-          Wr = null !== Zr && void 0 === (null === Qr || void 0 === Qr ? void 0 : Qr._cssText) ? Sr.sheets.get(Zr) : void 0;
-        return void 0 === Wr ? rr : {
-          ...rr,
+      if (null === dd || "object" !== typeof dd) return dd;
+      const Fd = function(dd, Od) {
+        const md = dd.attributes,
+          Wd = LO(dd),
+          Fd = null !== Wd && void 0 === (null === md || void 0 === md ? void 0 : md._cssText) ? Od.sheets.get(Wd) : void 0;
+        return void 0 === Fd ? dd : {
+          ...dd,
           attributes: {
-            ...Qr,
-            _cssText: Wr
+            ...md,
+            _cssText: Fd
           }
         }
-      }(rr, Qr);
-      let ar = null;
-      for (const [Ir, fr] of Object.entries(Wr)) {
-        const rr = kS(fr, Ir, Qr);
-        rr !== fr && (ar ??= {
-          ...Wr
-        }, ar[Ir] = rr)
+      }(dd, md);
+      let Rd = null;
+      for (const [Kd, hd] of Object.entries(Fd)) {
+        const dd = zO(hd, Kd, md);
+        dd !== hd && (Rd ??= {
+          ...Fd
+        }, Rd[Kd] = dd)
       }
       const {
-        id: jr
-      } = Wr;
-      if (null !== Qr.pointer && "number" === typeof jr && Qr.styleTextIds.has(jr))
-        for (const Ir of ["textContent", "value"]) {
-          const rr = Wr[Ir],
-            Sr = "string" === typeof rr ? CS(rr, Qr.pointer) : rr;
-          Sr !== rr && (ar ??= {
-            ...Wr
-          }, ar[Ir] = Sr)
+        id: Xd
+      } = Fd;
+      if (null !== md.pointer && "number" === typeof Xd && md.styleTextIds.has(Xd))
+        for (const Kd of ["textContent", "value"]) {
+          const dd = Fd[Kd],
+            Od = "string" === typeof dd ? nO(dd, md.pointer) : dd;
+          Od !== dd && (Rd ??= {
+            ...Fd
+          }, Rd[Kd] = Od)
         }
-      return null !== (Zr = ar) && void 0 !== Zr ? Zr : Wr
+      return null !== (Wd = Rd) && void 0 !== Wd ? Wd : Fd
     }
-    const AS = "brv-styles",
-      VS = [".brv-video-layer { position: absolute !important; margin: 0 !important; padding: 0 !important; border: 0 !important; }", ".brv-video-layer { overflow: hidden !important; pointer-events: none !important; background: none !important; transform: none !important; }", ".brv-video { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-video { object-fit: fill !important; visibility: hidden !important; }", ".brv-video.brv-video-shown { visibility: visible !important; }", ".brv-still { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-still { object-fit: fill !important; visibility: hidden !important; max-width: none !important; }", ".brv-still.brv-still-shown { visibility: visible !important; }"],
-      iS = `\n.brv-player {\n\t--brv-bg: #22283b;\n\t--brv-panel: #2b3249;\n\t--brv-text: #f2f2f2;\n\t--brv-muted: #a4a4a4;\n\t--brv-accent: #ffb914;\n\t--brv-track: #3c4b68;\n\t--brv-fps: #1dd06d;\n\t--brv-low-fps: #e34f4f;\n\t--brv-inactive: rgba(164, 164, 164, 0.18);\n\t--brv-video-gap: rgba(10, 12, 20, 0.62);\n\t--brv-marker-error: #fc6464;\n\t--brv-marker-death: #6ec1ff;\n\t--brv-marker-note: #fcd373;\n\t--brv-key-press: #a4a4a4;\n\t--brv-key-unbound: #ff5a5a;\n\tdisplay: flex;\n\tflex-direction: column;\n\tmin-height: 0;\n\tbackground: var(--brv-bg);\n\tcolor: var(--brv-text);\n\tfont: inherit;\n\toutline: none;\n\tuser-select: none;\n}\n.brv-player:focus-visible { box-shadow: inset 0 0 0 2px var(--brv-accent); }\n.brv-player:fullscreen { width: 100%; height: 100%; }\n.brv-viewport { position: relative; flex: 1 1 auto; min-height: 12rem; overflow: hidden; background: #000; cursor: pointer; }\n.brv-stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }\n.brv-stage .replayer-wrapper { position: relative; }\n.brv-stage .replayer-wrapper > iframe { position: relative; z-index: 1; display: block; border: 0; background: transparent; color-scheme: normal; pointer-events: none; }\n.brv-stage .replayer-mouse { position: absolute; z-index: 2; width: 20px; height: 20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l15 11-7 1 4 8-3 1-4-8-5 5z' fill='%23fff' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center / contain; transition: left 0.05s linear, top 0.05s linear; }\n.brv-stage .replayer-mouse.touch-device { width: 48px; height: 48px; margin: -24px 0 0 -24px; background: none; border: 3px solid transparent; border-radius: 50%; }\n.brv-stage .replayer-mouse.touch-device.touch-active { border-color: color-mix(in srgb, var(--brv-accent) 90%, transparent); }\n.brv-stage .replayer-mouse-tail { position: absolute; pointer-events: none; }\n${VS.join("\n")}\n.brv-video-layer { z-index: 0; }\n.brv-stage-video-only .brv-video-layer { inset: 0; }\n.brv-overlay { position: absolute; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; color: var(--brv-text); background: rgba(0, 0, 0, 0.55); pointer-events: none; }\n.brv-seekbar { position: relative; height: 2.75rem; margin: 0.5rem 0.75rem 0; cursor: pointer; touch-action: none; }\n.brv-seekbar-track { position: absolute; left: 0; right: 0; top: 0; height: 1.75rem; background: var(--brv-track); overflow: hidden; }\n.brv-seekbar-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.85; }\n.brv-seekbar-video-gap { position: absolute; top: 0; bottom: 0; background: var(--brv-video-gap); box-shadow: inset 0 -2px 0 var(--brv-muted); }\n.brv-seekbar-inactive { position: absolute; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, var(--brv-inactive) 0 4px, transparent 4px 8px); }\n.brv-seekbar-progress { position: absolute; left: 0; top: 0; bottom: 0; width: var(--brv-position, 0); background: color-mix(in srgb, var(--brv-accent) 18%, transparent); pointer-events: none; }\n.brv-seekbar-hover { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(255, 255, 255, 0.6); pointer-events: none; }\n.brv-seekbar-playhead { position: absolute; left: var(--brv-position, 0); top: -3px; bottom: -3px; width: 3px; margin-left: -1px; background: var(--brv-accent); pointer-events: none; }\n.brv-seekbar-markers { position: absolute; left: 0; right: 0; top: 1.75rem; height: 1rem; }\n.brv-seekbar-with-input { height: 3.25rem; }\n.brv-seekbar-input { position: absolute; left: 0; top: calc(1.75rem + 2px); width: 100%; height: 0.4rem; background: color-mix(in srgb, var(--brv-track) 55%, transparent); }\n.brv-seekbar-with-input .brv-seekbar-markers { top: calc(2.15rem + 4px); }\n.brv-input { position: absolute; right: 0.75rem; bottom: 0.75rem; z-index: 3; display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; pointer-events: none; font-size: 0.8rem; }\n.brv-input-slot { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; }\n.brv-input-press { padding: 0.15rem 0.5rem; color: var(--brv-text); background: rgba(0, 0, 0, 0.7); white-space: nowrap; }\n.brv-input-press-unbound { background: color-mix(in srgb, var(--brv-key-unbound) 85%, black); font-weight: bold; }\n.brv-input-devices { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.4rem; background: rgba(0, 0, 0, 0.7); }\n.brv-keys { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }\n.brv-keys-row { display: flex; gap: 0.2rem; }\n.brv-key { min-width: 1.6rem; height: 1.6rem; padding: 0 0.3rem; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; color: var(--brv-muted); border: 1px solid var(--brv-muted); font-size: 0.7rem; }\n.brv-key-wide { min-width: 4.5rem; }\n.brv-key-held { color: #000; background: var(--brv-accent); border-color: var(--brv-accent); }\n.brv-mouse { position: relative; width: 2.4rem; height: 3.4rem; border: 1px solid var(--brv-muted); border-radius: 1.05rem 1.05rem 0.9rem 0.9rem; overflow: hidden; } /* round by design: the mouse's body */\n.brv-mouse-left, .brv-mouse-right { position: absolute; top: 0; width: 50%; height: 45%; box-sizing: border-box; border-bottom: 1px solid var(--brv-muted); }\n.brv-mouse-left { left: 0; border-right: 1px solid var(--brv-muted); }\n.brv-mouse-right { right: 0; }\n.brv-mouse-middle { position: absolute; left: calc(50% - 0.2rem); top: 0.35rem; z-index: 1; width: 0.4rem; height: 0.7rem; box-sizing: border-box; border: 1px solid var(--brv-muted); border-radius: 0.2rem; background: var(--brv-bg); } /* round by design: the scroll wheel */\n.brv-mouse .brv-key-held { background: var(--brv-accent); }\n.brv-marker { position: absolute; top: 2px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--brv-marker-note); }\n.brv-marker-range { margin-left: 0; height: 4px; top: 4px; min-width: 3px; }\n.brv-marker-error, .brv-marker-graphicsCrash { background: var(--brv-marker-error); }\n.brv-marker-death { background: var(--brv-marker-death); }\n.brv-marker-hidden { background: var(--brv-muted); }\n.brv-tooltip { position: absolute; bottom: calc(100% + 6px); transform: translateX(-50%); padding: 0.2rem 0.45rem; white-space: nowrap; font-size: 0.75rem; background: rgba(0, 0, 0, 0.85); pointer-events: none; z-index: 4; }\n.brv-chapters { display: flex; gap: 0.35rem; flex-wrap: wrap; margin: 0.25rem 0.75rem 0; }\n.brv-chapter { padding: 0.15rem 0.5rem; font: inherit; font-size: 0.75rem; color: var(--brv-text); background: var(--brv-panel); border: 1px solid transparent; cursor: pointer; }\n.brv-chapter.brv-chapter-current { border-color: var(--brv-accent); }\n.brv-controls { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding: 0.5rem 0.75rem 0.75rem; }\n.brv-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem; min-width: 2.25rem; height: 2.25rem; padding: 0 0.55rem; font: inherit; font-size: 0.85rem; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-button:hover { filter: brightness(1.2); }\n.brv-button svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }\n.brv-time { font-variant-numeric: tabular-nums; font-size: 0.85rem; color: var(--brv-muted); margin-right: auto; }\n.brv-speed { height: 2.25rem; padding: 0 0.4rem; font: inherit; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-speed:hover { filter: brightness(1.2); }\n.brv-speed option { color: var(--brv-text); background: var(--brv-bg); }\n.brv-switch { display: inline-flex; align-items: center; gap: 0.45rem; height: 2.25rem; padding: 0 0.6rem; font: inherit; font-size: 0.85rem; color: var(--brv-muted); background: transparent; border: 0; cursor: pointer; }\n.brv-switch:hover { color: var(--brv-text); }\n.brv-switch[aria-checked="true"] { color: var(--brv-text); }\n.brv-switch-track { position: relative; width: 1.9rem; height: 1.05rem; background: var(--brv-track); transition: background 0.15s; }\n.brv-switch-track::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.05rem - 4px); height: calc(1.05rem - 4px); background: var(--brv-text); transition: transform 0.15s; }\n.brv-switch[aria-checked="true"] .brv-switch-track { background: var(--brv-accent); }\n.brv-switch[aria-checked="true"] .brv-switch-track::after { transform: translateX(0.85rem); }\n.brv-player button:focus-visible, .brv-speed:focus-visible { outline: 2px solid var(--brv-accent); outline-offset: 1px; }\n`;
-    class wS {
-      static create(rr, Sr, Qr, Zr, Wr, ar, jr, Ir) {
-        if (!Sr.some((rr => rr.type === Rr.e.FullSnapshot))) return null;
-        const fr = function(rr, Sr) {
-          const Qr = {
-            sheets: GS(rr),
-            styleTextIds: LS(rr),
-            pointer: Sr
+    const cO = "brv-styles",
+      jO = [".brv-video-layer { position: absolute !important; margin: 0 !important; padding: 0 !important; border: 0 !important; }", ".brv-video-layer { overflow: hidden !important; pointer-events: none !important; background: none !important; transform: none !important; }", ".brv-video { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-video { object-fit: fill !important; visibility: hidden !important; }", ".brv-video.brv-video-shown { visibility: visible !important; }", ".brv-still { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; margin: 0 !important; }", ".brv-still { object-fit: fill !important; visibility: hidden !important; max-width: none !important; }", ".brv-still.brv-still-shown { visibility: visible !important; }"],
+      DO = `\n.brv-player {\n\t--brv-bg: #22283b;\n\t--brv-panel: #2b3249;\n\t--brv-text: #f2f2f2;\n\t--brv-muted: #a4a4a4;\n\t--brv-accent: #ffb914;\n\t--brv-track: #3c4b68;\n\t--brv-fps: #1dd06d;\n\t--brv-low-fps: #e34f4f;\n\t--brv-inactive: rgba(164, 164, 164, 0.18);\n\t--brv-video-gap: rgba(10, 12, 20, 0.62);\n\t--brv-marker-error: #fc6464;\n\t--brv-marker-death: #6ec1ff;\n\t--brv-marker-note: #fcd373;\n\t--brv-key-press: #a4a4a4;\n\t--brv-key-unbound: #ff5a5a;\n\tdisplay: flex;\n\tflex-direction: column;\n\tmin-height: 0;\n\tbackground: var(--brv-bg);\n\tcolor: var(--brv-text);\n\tfont: inherit;\n\toutline: none;\n\tuser-select: none;\n}\n.brv-player:focus-visible { box-shadow: inset 0 0 0 2px var(--brv-accent); }\n.brv-player:fullscreen { width: 100%; height: 100%; }\n.brv-viewport { position: relative; flex: 1 1 auto; min-height: 12rem; overflow: hidden; background: #000; cursor: pointer; }\n.brv-stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }\n.brv-stage .replayer-wrapper { position: relative; }\n.brv-stage .replayer-wrapper > iframe { position: relative; z-index: 1; display: block; border: 0; background: transparent; color-scheme: normal; pointer-events: none; }\n.brv-stage .replayer-mouse { position: absolute; z-index: 2; width: 20px; height: 20px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 2l15 11-7 1 4 8-3 1-4-8-5 5z' fill='%23fff' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat center / contain; transition: left 0.05s linear, top 0.05s linear; }\n.brv-stage .replayer-mouse.touch-device { width: 48px; height: 48px; margin: -24px 0 0 -24px; background: none; border: 3px solid transparent; border-radius: 50%; }\n.brv-stage .replayer-mouse.touch-device.touch-active { border-color: color-mix(in srgb, var(--brv-accent) 90%, transparent); }\n.brv-stage .replayer-mouse-tail { position: absolute; pointer-events: none; }\n${jO.join("\n")}\n.brv-video-layer { z-index: 0; }\n.brv-stage-video-only .brv-video-layer { inset: 0; }\n.brv-overlay { position: absolute; inset: 0; z-index: 3; display: flex; align-items: center; justify-content: center; padding: 1rem; text-align: center; color: var(--brv-text); background: rgba(0, 0, 0, 0.55); pointer-events: none; }\n.brv-seekbar { position: relative; height: 2.75rem; margin: 0.5rem 0.75rem 0; cursor: pointer; touch-action: none; }\n.brv-seekbar-track { position: absolute; left: 0; right: 0; top: 0; height: 1.75rem; background: var(--brv-track); overflow: hidden; }\n.brv-seekbar-canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.85; }\n.brv-seekbar-video-gap { position: absolute; top: 0; bottom: 0; background: var(--brv-video-gap); box-shadow: inset 0 -2px 0 var(--brv-muted); }\n.brv-seekbar-inactive { position: absolute; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, var(--brv-inactive) 0 4px, transparent 4px 8px); }\n.brv-seekbar-progress { position: absolute; left: 0; top: 0; bottom: 0; width: var(--brv-position, 0); background: color-mix(in srgb, var(--brv-accent) 18%, transparent); pointer-events: none; }\n.brv-seekbar-hover { position: absolute; top: 0; bottom: 0; width: 1px; background: rgba(255, 255, 255, 0.6); pointer-events: none; }\n.brv-seekbar-playhead { position: absolute; left: var(--brv-position, 0); top: -3px; bottom: -3px; width: 3px; margin-left: -1px; background: var(--brv-accent); pointer-events: none; }\n.brv-seekbar-markers { position: absolute; left: 0; right: 0; top: 1.75rem; height: 1rem; }\n.brv-seekbar-with-input { height: 3.25rem; }\n.brv-seekbar-input { position: absolute; left: 0; top: calc(1.75rem + 2px); width: 100%; height: 0.4rem; background: color-mix(in srgb, var(--brv-track) 55%, transparent); }\n.brv-seekbar-with-input .brv-seekbar-markers { top: calc(2.15rem + 4px); }\n.brv-input { position: absolute; right: 0.75rem; bottom: 0.75rem; z-index: 3; display: flex; flex-direction: column; align-items: flex-end; gap: 0.4rem; pointer-events: none; font-size: 0.8rem; }\n.brv-input-slot { display: flex; flex-direction: column; align-items: flex-end; gap: 0.2rem; }\n.brv-input-press { padding: 0.15rem 0.5rem; color: var(--brv-text); background: rgba(0, 0, 0, 0.7); white-space: nowrap; }\n.brv-input-press-unbound { background: color-mix(in srgb, var(--brv-key-unbound) 85%, black); font-weight: bold; }\n.brv-input-devices { display: flex; align-items: flex-end; gap: 0.5rem; padding: 0.4rem; background: rgba(0, 0, 0, 0.7); }\n.brv-keys { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }\n.brv-keys-row { display: flex; gap: 0.2rem; }\n.brv-key { min-width: 1.6rem; height: 1.6rem; padding: 0 0.3rem; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; color: var(--brv-muted); border: 1px solid var(--brv-muted); font-size: 0.7rem; }\n.brv-key-wide { min-width: 4.5rem; }\n.brv-key-held { color: #000; background: var(--brv-accent); border-color: var(--brv-accent); }\n.brv-mouse { position: relative; width: 2.4rem; height: 3.4rem; border: 1px solid var(--brv-muted); border-radius: 1.05rem 1.05rem 0.9rem 0.9rem; overflow: hidden; } /* round by design: the mouse's body */\n.brv-mouse-left, .brv-mouse-right { position: absolute; top: 0; width: 50%; height: 45%; box-sizing: border-box; border-bottom: 1px solid var(--brv-muted); }\n.brv-mouse-left { left: 0; border-right: 1px solid var(--brv-muted); }\n.brv-mouse-right { right: 0; }\n.brv-mouse-middle { position: absolute; left: calc(50% - 0.2rem); top: 0.35rem; z-index: 1; width: 0.4rem; height: 0.7rem; box-sizing: border-box; border: 1px solid var(--brv-muted); border-radius: 0.2rem; background: var(--brv-bg); } /* round by design: the scroll wheel */\n.brv-mouse .brv-key-held { background: var(--brv-accent); }\n.brv-marker { position: absolute; top: 2px; width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: var(--brv-marker-note); }\n.brv-marker-range { margin-left: 0; height: 4px; top: 4px; min-width: 3px; }\n.brv-marker-error, .brv-marker-graphicsCrash { background: var(--brv-marker-error); }\n.brv-marker-death { background: var(--brv-marker-death); }\n.brv-marker-hidden { background: var(--brv-muted); }\n.brv-tooltip { position: absolute; bottom: calc(100% + 6px); transform: translateX(-50%); padding: 0.2rem 0.45rem; white-space: nowrap; font-size: 0.75rem; background: rgba(0, 0, 0, 0.85); pointer-events: none; z-index: 4; }\n.brv-chapters { display: flex; gap: 0.35rem; flex-wrap: wrap; margin: 0.25rem 0.75rem 0; }\n.brv-chapter { padding: 0.15rem 0.5rem; font: inherit; font-size: 0.75rem; color: var(--brv-text); background: var(--brv-panel); border: 1px solid transparent; cursor: pointer; }\n.brv-chapter.brv-chapter-current { border-color: var(--brv-accent); }\n.brv-controls { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; padding: 0.5rem 0.75rem 0.75rem; }\n.brv-button { display: inline-flex; align-items: center; justify-content: center; gap: 0.3rem; min-width: 2.25rem; height: 2.25rem; padding: 0 0.55rem; font: inherit; font-size: 0.85rem; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-button:hover { filter: brightness(1.2); }\n.brv-button svg { width: 1.1rem; height: 1.1rem; fill: currentColor; }\n.brv-time { font-variant-numeric: tabular-nums; font-size: 0.85rem; color: var(--brv-muted); margin-right: auto; }\n.brv-speed { height: 2.25rem; padding: 0 0.4rem; font: inherit; font-size: 0.85rem; font-variant-numeric: tabular-nums; color: var(--brv-text); background: var(--brv-panel); border: 0; cursor: pointer; }\n.brv-speed:hover { filter: brightness(1.2); }\n.brv-speed option { color: var(--brv-text); background: var(--brv-bg); }\n.brv-switch { display: inline-flex; align-items: center; gap: 0.45rem; height: 2.25rem; padding: 0 0.6rem; font: inherit; font-size: 0.85rem; color: var(--brv-muted); background: transparent; border: 0; cursor: pointer; }\n.brv-switch:hover { color: var(--brv-text); }\n.brv-switch[aria-checked="true"] { color: var(--brv-text); }\n.brv-switch-track { position: relative; width: 1.9rem; height: 1.05rem; background: var(--brv-track); transition: background 0.15s; }\n.brv-switch-track::after { content: ""; position: absolute; top: 2px; left: 2px; width: calc(1.05rem - 4px); height: calc(1.05rem - 4px); background: var(--brv-text); transition: transform 0.15s; }\n.brv-switch[aria-checked="true"] .brv-switch-track { background: var(--brv-accent); }\n.brv-switch[aria-checked="true"] .brv-switch-track::after { transform: translateX(0.85rem); }\n.brv-player button:focus-visible, .brv-speed:focus-visible { outline: 2px solid var(--brv-accent); outline-offset: 1px; }\n`;
+    class eO {
+      static create(dd, Od, md, Wd, Fd, Rd, Xd, Kd) {
+        if (!Od.some((dd => dd.type === rd.d.FullSnapshot))) return null;
+        const hd = function(dd, Od) {
+          const md = {
+            sheets: PO(dd),
+            styleTextIds: SO(dd),
+            pointer: Od
           };
-          return rr.map((rr => {
-            if (rr.type !== Rr.e.FullSnapshot && rr.type !== Rr.e.IncrementalSnapshot) return rr;
-            const Sr = kS(rr.data, "data", Qr);
-            return Sr === rr.data ? rr : {
-              ...rr,
-              data: Sr
+          return dd.map((dd => {
+            if (dd.type !== rd.d.FullSnapshot && dd.type !== rd.d.IncrementalSnapshot) return dd;
+            const Od = zO(dd.data, "data", md);
+            return Od === dd.data ? dd : {
+              ...dd,
+              data: Od
             }
           }))
-        }(function(rr, Sr) {
-          const Qr = {
-            hosts: Sr,
-            styleTextIds: LS(rr)
+        }(function(dd, Od) {
+          const md = {
+            hosts: Od,
+            styleTextIds: SO(dd)
           };
-          return rr.map((rr => rr.type === Rr.e.Meta ? rr : {
-            ...rr,
-            data: vS("data", rr.data, Qr)
+          return dd.map((dd => dd.type === rd.d.Meta ? dd : {
+            ...dd,
+            data: xO("data", dd.data, md)
           }))
-        }(Sr, ar), Qr);
-        return new wS(rr, fr, Zr, Wr, jr, Ir)
+        }(Od, Rd), md);
+        return new eO(dd, hd, Wd, Fd, Xd, Kd)
       }
-      constructor(rr, Sr, Qr, Zr, Wr, ar) {
-        var jr, Ir, fr, Er;
-        this.domClock = Qr, this.canvasSelectors = Zr, this.videoLayer = Wr, this.replayer = void 0, this.pausedAnimations = new IS, this.firstDomMs = void 0, this.lastDomMs = void 0, this.lastCanvasRectMs = -1 / 0, this.lastDomCheckMs = -1 / 0, this.firstDomMs = null !== (jr = null === (Ir = Sr[0]) || void 0 === Ir ? void 0 : Ir.timestamp) && void 0 !== jr ? jr : 0, this.lastDomMs = null !== (fr = null === (Er = Sr.at(-1)) || void 0 === Er ? void 0 : Er.timestamp) && void 0 !== fr ? fr : 0, this.replayer = new Rr.l(Sr, {
-          root: rr,
+      constructor(dd, Od, md, Wd, Fd, Rd) {
+        var Xd, Kd, hd, vd;
+        this.domClock = md, this.canvasSelectors = Wd, this.videoLayer = Fd, this.replayer = void 0, this.pausedAnimations = new vO, this.firstDomMs = void 0, this.lastDomMs = void 0, this.lastCanvasRectMs = -1 / 0, this.lastDomCheckMs = -1 / 0, this.firstDomMs = null !== (Xd = null === (Kd = Od[0]) || void 0 === Kd ? void 0 : Kd.timestamp) && void 0 !== Xd ? Xd : 0, this.lastDomMs = null !== (hd = null === (vd = Od.at(-1)) || void 0 === vd ? void 0 : vd.timestamp) && void 0 !== hd ? hd : 0, this.replayer = new rd.k(Od, {
+          root: dd,
           speed: 1,
           skipInactive: !1,
           mouseTail: !1,
@@ -1225,30 +1225,30 @@ export const modules = {
           triggerFocus: !1,
           pauseAnimation: !0,
           plugins: [this.pausedAnimations.plugin],
-          insertStyleRules: VS
-        }), this.replayer.on("resize", (rr => {
+          insertStyleRules: jO
+        }), this.replayer.on("resize", (dd => {
           const {
-            width: Sr,
-            height: Qr
-          } = rr;
-          ar({
-            width: Sr,
-            height: Qr
+            width: Od,
+            height: md
+          } = dd;
+          Rd({
+            width: Od,
+            height: md
           })
         })), this.replayer.on("fullsnapshot-rebuilded", (() => {
           this.invalidateCanvasRect(), this.pausedAnimations.settle(this.replayer)
         }))
       }
-      sync(rr, Sr) {
-        const Qr = this.domOffsetAt(rr);
-        Sr ? this.replayer.play(Qr) : this.replayer.pause(Qr), this.lastDomCheckMs = performance.now()
+      sync(dd, Od) {
+        const md = this.domOffsetAt(dd);
+        Od ? this.replayer.play(md) : this.replayer.pause(md), this.lastDomCheckMs = performance.now()
       }
-      update(rr, Sr, Qr) {
-        Qr - this.lastCanvasRectMs >= 250 && (this.lastCanvasRectMs = Qr, this.placeVideoOverCanvas()), Sr && Qr - this.lastDomCheckMs >= 500 && (this.lastDomCheckMs = Qr, this.checkDrift(rr))
+      update(dd, Od, md) {
+        md - this.lastCanvasRectMs >= 250 && (this.lastCanvasRectMs = md, this.placeVideoOverCanvas()), Od && md - this.lastDomCheckMs >= 500 && (this.lastDomCheckMs = md, this.checkDrift(dd))
       }
-      setSpeed(rr) {
+      setSpeed(dd) {
         this.replayer.setConfig({
-          speed: rr
+          speed: dd
         })
       }
       invalidateCanvasRect() {
@@ -1257,283 +1257,283 @@ export const modules = {
       destroy() {
         this.replayer.destroy()
       }
-      domOffsetAt(rr) {
-        return Math.max(0, Math.min(this.lastDomMs + 1, this.domClock.toDom(rr)) - this.firstDomMs)
+      domOffsetAt(dd) {
+        return Math.max(0, Math.min(this.lastDomMs + 1, this.domClock.toDom(dd)) - this.firstDomMs)
       }
-      checkDrift(rr) {
-        const Sr = this.domOffsetAt(rr);
-        Sr >= this.lastDomMs - this.firstDomMs || Math.abs(this.replayer.getCurrentTime() - Sr) > 400 && this.replayer.play(Sr)
+      checkDrift(dd) {
+        const Od = this.domOffsetAt(dd);
+        Od >= this.lastDomMs - this.firstDomMs || Math.abs(this.replayer.getCurrentTime() - Od) > 400 && this.replayer.play(Od)
       }
       placeVideoOverCanvas() {
-        const rr = this.replayer.iframe.contentDocument,
-          Sr = null === rr ? null : function(rr, Sr) {
-            for (const Qr of Sr) {
-              const Sr = rr.querySelector(Qr);
-              if (null !== Sr) return Sr
+        const dd = this.replayer.iframe.contentDocument,
+          Od = null === dd ? null : function(dd, Od) {
+            for (const md of Od) {
+              const Od = dd.querySelector(md);
+              if (null !== Od) return Od
             }
             return null
-          }(rr, this.canvasSelectors),
-          Qr = this.videoLayer.element;
-        null !== Sr ? (Qr.previousSibling !== Sr && Sr.after(Qr), Qr.style.display = "", Qr.style.left = `${Sr.offsetLeft}px`, Qr.style.top = `${Sr.offsetTop}px`, Qr.style.width = `${Sr.offsetWidth}px`, Qr.style.height = `${Sr.offsetHeight}px`) : Qr.style.display = "none"
+          }(dd, this.canvasSelectors),
+          md = this.videoLayer.element;
+        null !== Od ? (md.previousSibling !== Od && Od.after(md), md.style.display = "", md.style.left = `${Od.offsetLeft}px`, md.style.top = `${Od.offsetTop}px`, md.style.width = `${Od.offsetWidth}px`, md.style.height = `${Od.offsetHeight}px`) : md.style.display = "none"
       }
     }
-    const cS = {
+    const IO = {
       width: 1280,
       height: 720
     };
-    class FS {
-      constructor(rr, Sr) {
-        this.root = rr, this.onViewportChanged = Sr, this.element = void 0, this.viewport = null, this.resizeObserver = void 0, this.element = document.createElement("div"), this.element.className = "brv-stage", rr.appendChild(this.element), this.resizeObserver = new ResizeObserver((() => {
+    class lO {
+      constructor(dd, Od) {
+        this.root = dd, this.onViewportChanged = Od, this.element = void 0, this.viewport = null, this.resizeObserver = void 0, this.element = document.createElement("div"), this.element.className = "brv-stage", dd.appendChild(this.element), this.resizeObserver = new ResizeObserver((() => {
           this.fit()
-        })), this.resizeObserver.observe(rr)
+        })), this.resizeObserver.observe(dd)
       }
-      setViewport(rr) {
-        var Sr;
-        null === rr || rr.width <= 0 || rr.height <= 0 || rr.width === (null === (Sr = this.viewport) || void 0 === Sr ? void 0 : Sr.width) && rr.height === this.viewport.height || (this.viewport = rr, this.element.style.width = `${rr.width}px`, this.element.style.height = `${rr.height}px`, this.onViewportChanged(), this.fit())
+      setViewport(dd) {
+        var Od;
+        null === dd || dd.width <= 0 || dd.height <= 0 || dd.width === (null === (Od = this.viewport) || void 0 === Od ? void 0 : Od.width) && dd.height === this.viewport.height || (this.viewport = dd, this.element.style.width = `${dd.width}px`, this.element.style.height = `${dd.height}px`, this.onViewportChanged(), this.fit())
       }
       destroy() {
         this.resizeObserver.disconnect(), this.element.remove()
       }
       fit() {
-        var rr;
-        const Sr = null !== (rr = this.viewport) && void 0 !== rr ? rr : cS,
-          Qr = this.root.getBoundingClientRect(),
-          Zr = Math.min(Qr.width / Sr.width, Qr.height / Sr.height),
-          Wr = (Qr.width - Sr.width * Zr) / 2,
-          ar = (Qr.height - Sr.height * Zr) / 2;
-        this.element.style.transform = `translate(${Wr}px, ${ar}px) scale(${Zr})`
+        var dd;
+        const Od = null !== (dd = this.viewport) && void 0 !== dd ? dd : IO,
+          md = this.root.getBoundingClientRect(),
+          Wd = Math.min(md.width / Od.width, md.height / Od.height),
+          Fd = (md.width - Od.width * Wd) / 2,
+          Rd = (md.height - Od.height * Wd) / 2;
+        this.element.style.transform = `translate(${Fd}px, ${Rd}px) scale(${Wd})`
       }
     }
-    class oS {
-      constructor(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : dr;
-        this.urls = void 0, this.urls = new ur(rr, "video URLs", Sr, Qr)
+    class CO {
+      constructor(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Md;
+        this.urls = void 0, this.urls = new OO(dd, "video URLs", Od, md)
       }
-      reset(rr) {
-        this.urls.reset(rr.flatMap((rr => {
-          var Sr;
-          return null !== (Sr = function(rr) {
-            return "url" in rr ? null === rr.url ? null : {
-              sequence: rr.sequence,
-              url: rr.url
-            } : void 0 === rr.partUrls ? null : {
-              sequence: rr.sequence,
-              partUrls: rr.partUrls
+      reset(dd) {
+        this.urls.reset(dd.flatMap((dd => {
+          var Od;
+          return null !== (Od = function(dd) {
+            return "url" in dd ? null === dd.url ? null : {
+              sequence: dd.sequence,
+              url: dd.url
+            } : void 0 === dd.partUrls ? null : {
+              sequence: dd.sequence,
+              partUrls: dd.partUrls
             }
-          }(rr)) && void 0 !== Sr ? Sr : []
+          }(dd)) && void 0 !== Od ? Od : []
         })))
       }
-      get(rr) {
-        return this.urls.get(rr)
+      get(dd) {
+        return this.urls.get(dd)
       }
-      update(rr, Sr, Qr) {
-        this.urls.request(function(rr, Sr, Qr, Zr) {
-          return rr.filter((rr => rr.endMs > Sr && rr.startMs < Sr + Qr && Zr(rr.sequence))).map((rr => rr.sequence))
-        }(rr, Sr, 12e4 * Math.max(1, Qr), (rr => this.urls.needs(rr))))
+      update(dd, Od, md) {
+        this.urls.request(function(dd, Od, md, Wd) {
+          return dd.filter((dd => dd.endMs > Od && dd.startMs < Od + md && Wd(dd.sequence))).map((dd => dd.sequence))
+        }(dd, Od, 12e4 * Math.max(1, md), (dd => this.urls.needs(dd))))
       }
       destroy() {
         this.urls.destroy()
       }
     }
-    async function bS(rr, Sr, Qr) {
-      const Zr = [];
-      let Wr = rr.length,
-        ar = 0;
+    async function ZO(dd, Od, md) {
+      const Wd = [];
+      let Fd = dd.length,
+        Rd = 0;
       return await Promise.all(Array.from({
-        length: Math.min(3, rr.length)
+        length: Math.min(3, dd.length)
       }, (() => (async () => {
-        for (; ar < Wr;) {
-          const Ir = ar++;
+        for (; Rd < Fd;) {
+          const Kd = Rd++;
           try {
-            Zr[Ir] = await Sr(rr[Ir], Qr)
-          } catch (jr) {
-            if (Qr.aborted) throw jr;
-            console.warn(`Replay video part ${Ir} failed to load; playing the parts before it.`, jr), Wr = Math.min(Wr, Ir)
+            Wd[Kd] = await Od(dd[Kd], md)
+          } catch (Xd) {
+            if (md.aborted) throw Xd;
+            console.warn(`Replay video part ${Kd} failed to load; playing the parts before it.`, Xd), Fd = Math.min(Fd, Kd)
           }
         }
-      })()))), Zr.slice(0, Wr)
+      })()))), Wd.slice(0, Fd)
     }
 
-    function JS(rr) {
-      const Sr = [];
-      let Qr = 0;
-      for (const pr of rr) Sr.push(Qr), Qr += pr.byteLength;
-      let Zr = 0;
-      const Wr = Qr => {
-          for (; Sr[Zr] > Qr;) Zr--;
-          for (; Zr + 1 < Sr.length && Sr[Zr + 1] <= Qr;) Zr++;
-          return rr[Zr][Qr - Sr[Zr]]
+    function kO(dd) {
+      const Od = [];
+      let md = 0;
+      for (const Qd of dd) Od.push(md), md += Qd.byteLength;
+      let Wd = 0;
+      const Fd = md => {
+          for (; Od[Wd] > md;) Wd--;
+          for (; Wd + 1 < Od.length && Od[Wd + 1] <= md;) Wd++;
+          return dd[Wd][md - Od[Wd]]
         },
-        ar = rr => Wr(rr) * 2 ** 24 + 65536 * Wr(rr + 1) + 256 * Wr(rr + 2) + Wr(rr + 3);
-      let jr = 0,
-        Ir = !1,
-        fr = !1,
-        Er = 0;
-      for (; jr + 8 <= Qr;) {
-        const rr = String.fromCharCode(Wr(jr + 4), Wr(jr + 5), Wr(jr + 6), Wr(jr + 7));
-        let Sr = ar(jr);
-        if (1 === Sr) {
-          if (jr + 16 > Qr) break;
-          Sr = ar(jr + 8) * 2 ** 32 + ar(jr + 12)
-        } else 0 === Sr && (Sr = Qr - jr);
-        if (Sr < 8 || jr + Sr > Qr) break;
-        jr += Sr, "moov" === rr ? Ir = !0 : "moof" === rr ? fr = !0 : "mdat" === rr && fr ? (fr = !1, Er = jr) : !fr && Er > 0 && (Er = jr)
+        Rd = dd => Fd(dd) * 2 ** 24 + 65536 * Fd(dd + 1) + 256 * Fd(dd + 2) + Fd(dd + 3);
+      let Xd = 0,
+        Kd = !1,
+        hd = !1,
+        vd = 0;
+      for (; Xd + 8 <= md;) {
+        const dd = String.fromCharCode(Fd(Xd + 4), Fd(Xd + 5), Fd(Xd + 6), Fd(Xd + 7));
+        let Od = Rd(Xd);
+        if (1 === Od) {
+          if (Xd + 16 > md) break;
+          Od = Rd(Xd + 8) * 2 ** 32 + Rd(Xd + 12)
+        } else 0 === Od && (Od = md - Xd);
+        if (Od < 8 || Xd + Od > md) break;
+        Xd += Od, "moov" === dd ? Kd = !0 : "moof" === dd ? hd = !0 : "mdat" === dd && hd ? (hd = !1, vd = Xd) : !hd && vd > 0 && (vd = Xd)
       }
-      return Ir && Er > 0 ? Er : null
+      return Kd && vd > 0 ? vd : null
     }
-    async function DS(rr, Sr) {
-      const Qr = await fetch(rr, {
-        signal: Sr
+    async function fO(dd, Od) {
+      const md = await fetch(dd, {
+        signal: Od
       });
-      if (!Qr.ok) throw new Error(`HTTP ${Qr.status}`);
-      return Qr.arrayBuffer()
+      if (!md.ok) throw new Error(`HTTP ${md.status}`);
+      return md.arrayBuffer()
     }
-    class dS {
+    class MO {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : DS,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        this.fetchPart = rr, this.sx = Sr, this.blobs = new Map
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : fO,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        this.fetchPart = dd, this.Mt = Od, this.blobs = new Map
       }
-      get(rr, Sr) {
-        const Qr = sS(rr, Sr),
-          Zr = this.blobs.get(Qr);
-        return void 0 === Zr ? null : (this.remember(Qr, Zr), Zr)
+      get(dd, Od) {
+        const md = dm(dd, Od),
+          Wd = this.blobs.get(md);
+        return void 0 === Wd ? null : (this.remember(md, Wd), Wd)
       }
-      async load(rr, Sr, Qr) {
-        const Zr = await bS(Sr, this.fetchPart, Qr),
-          Wr = function(rr) {
-            const Sr = rr.map((rr => new Uint8Array(rr))),
-              Qr = JS(Sr);
-            return null === Qr ? null : new Blob(function(rr, Sr) {
-              const Qr = [];
-              let Zr = Sr;
-              for (const Wr of rr) {
-                if (Zr <= 0) break;
-                Qr.push(Wr.byteLength <= Zr ? Wr : Wr.subarray(0, Zr)), Zr -= Wr.byteLength
+      async load(dd, Od, md) {
+        const Wd = await ZO(Od, this.fetchPart, md),
+          Fd = function(dd) {
+            const Od = dd.map((dd => new Uint8Array(dd))),
+              md = kO(Od);
+            return null === md ? null : new Blob(function(dd, Od) {
+              const md = [];
+              let Wd = Od;
+              for (const Fd of dd) {
+                if (Wd <= 0) break;
+                md.push(Fd.byteLength <= Wd ? Fd : Fd.subarray(0, Wd)), Wd -= Fd.byteLength
               }
-              return Qr
-            }(Sr, Qr), {
+              return md
+            }(Od, md), {
               type: "video/mp4"
             })
-          }(Zr);
-        return null !== Wr && Zr.length === Sr.length && this.remember(sS(rr, Sr.length), Wr), Wr
+          }(Wd);
+        return null !== Fd && Wd.length === Od.length && this.remember(dm(dd, Od.length), Fd), Fd
       }
-      remember(rr, Sr) {
-        this.blobs.delete(rr), this.blobs.set(rr, Sr), this.blobs.size > this.sx && this.blobs.delete(this.blobs.keys().next().value)
+      remember(dd, Od) {
+        this.blobs.delete(dd), this.blobs.set(dd, Od), this.blobs.size > this.Mt && this.blobs.delete(this.blobs.keys().next().value)
       }
     }
 
-    function sS(rr, Sr) {
-      return `${rr}/${Sr}`
+    function dm(dd, Od) {
+      return `${dd}/${Od}`
     }
 
-    function uS(rr) {
-      const Sr = function(rr) {
-        return rr.map(((Sr, Qr) => {
-          const Zr = rr[Qr + 1];
-          return void 0 === Zr ? Sr.endMs : Math.min(Sr.endMs, Zr.startMs)
+    function Om(dd) {
+      const Od = function(dd) {
+        return dd.map(((Od, md) => {
+          const Wd = dd[md + 1];
+          return void 0 === Wd ? Od.endMs : Math.min(Od.endMs, Wd.startMs)
         }))
-      }(rr);
-      return rr.map(((rr, Qr) => ({
-        ...rr,
-        endMs: Sr[Qr]
-      }))).filter((rr => rr.endMs > rr.startMs))
+      }(dd);
+      return dd.map(((dd, md) => ({
+        ...dd,
+        endMs: Od[md]
+      }))).filter((dd => dd.endMs > dd.startMs))
     }
 
-    function rQ(rr, Sr) {
-      let Qr = 0,
-        Zr = rr.length - 1;
-      for (; Qr <= Zr;) {
-        const Wr = Qr + Zr >> 1,
-          ar = rr[Wr];
-        if (Sr < ar.startMs) Zr = Wr - 1;
+    function mm(dd, Od) {
+      let md = 0,
+        Wd = dd.length - 1;
+      for (; md <= Wd;) {
+        const Fd = md + Wd >> 1,
+          Rd = dd[Fd];
+        if (Od < Rd.startMs) Wd = Fd - 1;
         else {
-          if (!(Sr >= ar.endMs)) return ar;
-          Qr = Wr + 1
+          if (!(Od >= Rd.endMs)) return Rd;
+          md = Fd + 1
         }
       }
       return null
     }
 
-    function SQ(rr, Sr) {
-      return (Sr - rr.startMs) / 1e3
+    function Wm(dd, Od) {
+      return (Od - dd.startMs) / 1e3
     }
 
-    function QQ(rr) {
-      return Math.max(.4, .1 * rr)
+    function Fm(dd) {
+      return Math.max(.4, .1 * dd)
     }
 
-    function ZQ(rr) {
-      return Math.max(.0625, Math.min(16, rr))
+    function Rm(dd) {
+      return Math.max(.0625, Math.min(16, dd))
     }
-    class WQ {
-      constructor(rr, Sr, Qr, Zr, Wr, ar, jr) {
-        this.still = Sr, this.clock = Qr, this.frameDurationS = Zr, this.wallNowMs = Wr, this.onLoadFailed = jr, this.element = void 0, this.slots = new Map, this.shown = null, this.seekLatencyS = .15, this.lastSeekWallMs = -1 / 0, this.lastPresented = null, this.stats = {
+    class Xm {
+      constructor(dd, Od, md, Wd, Fd, Rd, Xd) {
+        this.still = Od, this.clock = md, this.frameDurationS = Wd, this.wallNowMs = Fd, this.onLoadFailed = Xd, this.element = void 0, this.slots = new Map, this.shown = null, this.seekLatencyS = .15, this.lastSeekWallMs = -1 / 0, this.lastPresented = null, this.stats = {
           frames: 0,
           sumAbsDriftMs: 0,
           maxAbsDriftMs: 0,
           withinOneFrame: 0,
           seeks: 0
-        }, this.failed = new Set, this.segments = void 0, this.segmentUrls = void 0, this.blobs = new dS, this.stillImage = void 0, this.stillShown = !1, this.failedStillUrl = null, this.segments = uS(rr), this.segmentUrls = new oS(ar), this.segmentUrls.reset(this.segments), this.element = document.createElement("div"), this.element.className = "brv-video-layer", this.stillImage = document.createElement("img"), this.stillImage.className = "brv-still", this.stillImage.alt = "", this.stillImage.addEventListener("error", (() => {
+        }, this.failed = new Set, this.segments = void 0, this.segmentUrls = void 0, this.blobs = new MO, this.stillImage = void 0, this.stillShown = !1, this.failedStillUrl = null, this.segments = Om(dd), this.segmentUrls = new CO(Rd), this.segmentUrls.reset(this.segments), this.element = document.createElement("div"), this.element.className = "brv-video-layer", this.stillImage = document.createElement("img"), this.stillImage.className = "brv-still", this.stillImage.alt = "", this.stillImage.addEventListener("error", (() => {
           console.warn("Replay still failed to load."), this.failedStillUrl = this.stillImage.getAttribute("src"), this.stillImage.removeAttribute("src"), this.onLoadFailed()
         })), this.element.appendChild(this.stillImage)
       }
       get visible() {
         return null !== this.shown || this.stillShown
       }
-      getVideoSizeAt(rr) {
-        var Sr, Qr;
-        const Zr = null !== (Sr = null !== (Qr = rQ(this.segments, rr)) && void 0 !== Qr ? Qr : this.segments.find((Sr => Sr.startMs > rr))) && void 0 !== Sr ? Sr : this.segments.at(-1);
-        return void 0 === Zr ? null : {
-          width: Zr.width,
-          height: Zr.height
+      getVideoSizeAt(dd) {
+        var Od, md;
+        const Wd = null !== (Od = null !== (md = mm(this.segments, dd)) && void 0 !== md ? md : this.segments.find((Od => Od.startMs > dd))) && void 0 !== Od ? Od : this.segments.at(-1);
+        return void 0 === Wd ? null : {
+          width: Wd.width,
+          height: Wd.height
         }
       }
-      failedAt(rr) {
-        const Sr = rQ(this.segments, rr);
-        return null !== Sr && this.failed.has(Sr.sequence)
+      failedAt(dd) {
+        const Od = mm(this.segments, dd);
+        return null !== Od && this.failed.has(Od.sequence)
       }
-      replaceSegments(rr, Sr) {
-        for (const Qr of this.slots.values()) this.release(Qr);
-        this.slots.clear(), this.failed.clear(), this.segments = uS(rr), this.segmentUrls.reset(this.segments), this.still = Sr
+      replaceSegments(dd, Od) {
+        for (const md of this.slots.values()) this.release(md);
+        this.slots.clear(), this.failed.clear(), this.segments = Om(dd), this.segmentUrls.reset(this.segments), this.still = Od
       }
-      update(rr) {
-        var Sr, Qr;
-        this.segmentUrls.update(this.segments, rr, this.clock.speed);
-        const Zr = rQ(this.segments, rr),
-          Wr = function(rr, Sr) {
-            const Qr = rr.find((rr => rr.startMs > Sr));
-            return void 0 === Qr ? null : Qr.startMs - Sr <= ("parts" in Qr ? 15e3 : 8e3) ? Qr : null
-          }(this.segments, rr);
-        this.evictExcept([Zr, Wr, null !== (Sr = null === (Qr = this.shown) || void 0 === Qr ? void 0 : Qr.segment) && void 0 !== Sr ? Sr : null]), null !== Wr && this.getSlot(Wr), this.showStill(null === Zr ? function(rr, Sr, Qr) {
-          if (null === Sr) return null;
-          const Zr = rr.at(-1);
-          return void 0 === Zr ? Qr >= Sr.atMs - 1e4 ? Sr : null : Qr >= Zr.endMs && Math.abs(Sr.atMs - Zr.endMs) <= 1e4 ? Sr : null
-        }(this.segments, this.still, rr) : null);
-        const ar = null === Zr ? null : this.getSlot(Zr);
-        if (null !== ar) {
-          this.sync(ar, SQ(ar.segment, rr)), ar.video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA && !ar.video.seeking && this.show(ar);
-          for (const rr of this.slots.values()) rr === ar || rr.video.paused || rr.video.pause()
+      update(dd) {
+        var Od, md;
+        this.segmentUrls.update(this.segments, dd, this.clock.speed);
+        const Wd = mm(this.segments, dd),
+          Fd = function(dd, Od) {
+            const md = dd.find((dd => dd.startMs > Od));
+            return void 0 === md ? null : md.startMs - Od <= ("parts" in md ? 15e3 : 8e3) ? md : null
+          }(this.segments, dd);
+        this.evictExcept([Wd, Fd, null !== (Od = null === (md = this.shown) || void 0 === md ? void 0 : md.segment) && void 0 !== Od ? Od : null]), null !== Fd && this.getSlot(Fd), this.showStill(null === Wd ? function(dd, Od, md) {
+          if (null === Od) return null;
+          const Wd = dd.at(-1);
+          return void 0 === Wd ? md >= Od.atMs - 1e4 ? Od : null : md >= Wd.endMs && Math.abs(Od.atMs - Wd.endMs) <= 1e4 ? Od : null
+        }(this.segments, this.still, dd) : null);
+        const Rd = null === Wd ? null : this.getSlot(Wd);
+        if (null !== Rd) {
+          this.sync(Rd, Wm(Rd.segment, dd)), Rd.video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA && !Rd.video.seeking && this.show(Rd);
+          for (const dd of this.slots.values()) dd === Rd || dd.video.paused || dd.video.pause()
         } else {
-          null === Zr && this.show(null);
-          for (const rr of this.slots.values()) rr.video.pause()
+          null === Wd && this.show(null);
+          for (const dd of this.slots.values()) dd.video.pause()
         }
       }
       getSyncStats() {
         const {
-          frames: rr,
-          sumAbsDriftMs: Sr,
-          maxAbsDriftMs: Qr,
-          withinOneFrame: Zr,
-          seeks: Wr
+          frames: dd,
+          sumAbsDriftMs: Od,
+          maxAbsDriftMs: md,
+          withinOneFrame: Wd,
+          seeks: Fd
         } = this.stats;
         return {
-          frames: rr,
-          meanAbsDriftMs: 0 === rr ? 0 : Sr / rr,
-          maxAbsDriftMs: Qr,
-          withinOneFrame: 0 === rr ? 1 : Zr / rr,
-          seeks: Wr
+          frames: dd,
+          meanAbsDriftMs: 0 === dd ? 0 : Od / dd,
+          maxAbsDriftMs: md,
+          withinOneFrame: 0 === dd ? 1 : Wd / dd,
+          seeks: Fd
         }
       }
       resetSyncStats() {
@@ -1549,181 +1549,181 @@ export const modules = {
         this.lastSeekWallMs = this.wallNowMs(), this.lastPresented = null
       }
       destroy() {
-        for (const rr of this.slots.values()) this.release(rr);
+        for (const dd of this.slots.values()) this.release(dd);
         this.slots.clear(), this.segmentUrls.destroy(), this.element.remove()
       }
-      sync(rr, Sr) {
+      sync(dd, Od) {
         const {
-          video: Qr
-        } = rr;
-        if (Qr.seeking) return;
+          video: md
+        } = dd;
+        if (md.seeking) return;
         const {
-          playing: Zr,
-          speed: Wr
-        } = this.clock, ar = Zr && Wr < 16, jr = function(rr) {
+          playing: Wd,
+          speed: Fd
+        } = this.clock, Rd = Wd && Fd < 16, Xd = function(dd) {
           let {
-            targetS: Sr,
-            currentS: Qr,
-            playing: Zr,
-            speed: Wr,
-            frameDurationS: ar
-          } = rr;
-          const jr = Qr - Sr;
-          if (!Zr) return Math.abs(jr) > ar / 2 ? {
+            targetS: Od,
+            currentS: md,
+            playing: Wd,
+            speed: Fd,
+            frameDurationS: Rd
+          } = dd;
+          const Xd = md - Od;
+          if (!Wd) return Math.abs(Xd) > Rd / 2 ? {
             kind: "seek",
-            mediaTimeS: Sr
+            mediaTimeS: Od
           } : {
             kind: "none"
           };
-          if (Math.abs(jr) > QQ(Wr)) return {
+          if (Math.abs(Xd) > Fm(Fd)) return {
             kind: "seek",
-            mediaTimeS: Sr
+            mediaTimeS: Od
           };
-          if (Math.abs(jr) < ar / 4) return {
+          if (Math.abs(Xd) < Rd / 4) return {
             kind: "rate",
-            playbackRate: ZQ(Wr)
+            playbackRate: Rm(Fd)
           };
-          const Ir = Wr - jr / .5;
+          const Kd = Fd - Xd / .5;
           return {
             kind: "rate",
-            playbackRate: ZQ(Math.max(.5 * Wr, Math.min(1.5 * Wr, Ir)))
+            playbackRate: Rm(Math.max(.5 * Fd, Math.min(1.5 * Fd, Kd)))
           }
         }({
-          targetS: Sr,
-          currentS: Qr.currentTime,
-          playing: ar,
-          speed: Wr,
+          targetS: Od,
+          currentS: md.currentTime,
+          playing: Rd,
+          speed: Fd,
           frameDurationS: this.frameDurationS
         });
-        if ("seek" === jr.kind) {
-          const Sr = this.seekLatencyS * Wr,
-            Ir = Zr ? ar ? Math.min(Sr, QQ(Wr) / 2) : Sr : 0;
-          rr.seekStartedWallMs = this.wallNowMs(), this.stats.seeks++, ar && (this.lastSeekWallMs = this.wallNowMs(), this.lastPresented = null), Qr.currentTime = Math.max(0, jr.mediaTimeS + Ir)
-        } else "rate" === jr.kind && Math.abs(Qr.playbackRate - jr.playbackRate) > .001 && (Qr.playbackRate = jr.playbackRate);
-        ar && Qr.paused && Qr.currentTime < Qr.duration ? (Qr.playbackRate = ZQ(Wr), Qr.play().catch((rr => {
-          console.warn("Replay video refused to play.", rr)
-        }))) : ar || Qr.paused || Qr.pause()
+        if ("seek" === Xd.kind) {
+          const Od = this.seekLatencyS * Fd,
+            Kd = Wd ? Rd ? Math.min(Od, Fm(Fd) / 2) : Od : 0;
+          dd.seekStartedWallMs = this.wallNowMs(), this.stats.seeks++, Rd && (this.lastSeekWallMs = this.wallNowMs(), this.lastPresented = null), md.currentTime = Math.max(0, Xd.mediaTimeS + Kd)
+        } else "rate" === Xd.kind && Math.abs(md.playbackRate - Xd.playbackRate) > .001 && (md.playbackRate = Xd.playbackRate);
+        Rd && md.paused && md.currentTime < md.duration ? (md.playbackRate = Rm(Fd), md.play().catch((dd => {
+          console.warn("Replay video refused to play.", dd)
+        }))) : Rd || md.paused || md.pause()
       }
-      getSlot(rr) {
-        const Sr = this.slots.get(rr.sequence);
-        if (void 0 !== Sr) return Sr;
-        const Qr = "parts" in rr ? this.blobs.get(rr.sequence, rr.parts) : null,
-          Zr = null === Qr ? this.segmentUrls.get(rr.sequence) : null;
-        if ("pending" === Zr) return null;
-        if ("failed" === Zr) return this.failed.has(rr.sequence) || (console.error(`Replay video segment ${rr.sequence} has no URLs to load.`), this.markFailed(rr)), null;
-        const Wr = document.createElement("video");
-        Wr.className = "brv-video", Wr.muted = !0, Wr.playsInline = !0, Wr.preload = "auto", Wr.disablePictureInPicture = !0;
-        const ar = {
-          segment: rr,
-          video: Wr,
+      getSlot(dd) {
+        const Od = this.slots.get(dd.sequence);
+        if (void 0 !== Od) return Od;
+        const md = "parts" in dd ? this.blobs.get(dd.sequence, dd.parts) : null,
+          Wd = null === md ? this.segmentUrls.get(dd.sequence) : null;
+        if ("pending" === Wd) return null;
+        if ("failed" === Wd) return this.failed.has(dd.sequence) || (console.error(`Replay video segment ${dd.sequence} has no URLs to load.`), this.markFailed(dd)), null;
+        const Fd = document.createElement("video");
+        Fd.className = "brv-video", Fd.muted = !0, Fd.playsInline = !0, Fd.preload = "auto", Fd.disablePictureInPicture = !0;
+        const Rd = {
+          segment: dd,
+          video: Fd,
           seekStartedWallMs: null,
           objectUrl: null,
           abort: new AbortController
         };
-        return null !== Qr ? this.playBlob(ar, Qr) : null !== Zr && ("url" in Zr ? Wr.src = Zr.url : this.loadParts(ar, Zr.partUrls)), Wr.addEventListener("seeked", (() => {
-          if (null !== ar.seekStartedWallMs) {
-            const rr = (this.wallNowMs() - ar.seekStartedWallMs) / 1e3;
-            this.seekLatencyS = .7 * this.seekLatencyS + .3 * Math.min(1, rr), ar.seekStartedWallMs = null
+        return null !== md ? this.playBlob(Rd, md) : null !== Wd && ("url" in Wd ? Fd.src = Wd.url : this.loadParts(Rd, Wd.partUrls)), Fd.addEventListener("seeked", (() => {
+          if (null !== Rd.seekStartedWallMs) {
+            const dd = (this.wallNowMs() - Rd.seekStartedWallMs) / 1e3;
+            this.seekLatencyS = .7 * this.seekLatencyS + .3 * Math.min(1, dd), Rd.seekStartedWallMs = null
           }
-        })), Wr.addEventListener("loadeddata", (() => {
-          this.slots.get(rr.sequence) === ar && this.failed.delete(rr.sequence)
-        })), Wr.addEventListener("error", (() => {
-          this.slots.get(rr.sequence) === ar && (console.error(`Replay video segment ${rr.sequence} failed to load.`, Wr.error), this.markFailed(rr))
-        })), this.watchFrames(ar), this.element.appendChild(Wr), this.slots.set(rr.sequence, ar), ar
+        })), Fd.addEventListener("loadeddata", (() => {
+          this.slots.get(dd.sequence) === Rd && this.failed.delete(dd.sequence)
+        })), Fd.addEventListener("error", (() => {
+          this.slots.get(dd.sequence) === Rd && (console.error(`Replay video segment ${dd.sequence} failed to load.`, Fd.error), this.markFailed(dd))
+        })), this.watchFrames(Rd), this.element.appendChild(Fd), this.slots.set(dd.sequence, Rd), Rd
       }
-      loadParts(rr, Sr) {
-        this.blobs.load(rr.segment.sequence, Sr, rr.abort.signal).then((Sr => {
-          if (this.slots.get(rr.segment.sequence) === rr) return null === Sr ? (console.error(`Replay video segment ${rr.segment.sequence} has no playable parts.`), void this.markFailed(rr.segment)) : void this.playBlob(rr, Sr)
-        }), (Sr => {
-          this.slots.get(rr.segment.sequence) === rr && (console.error(`Replay video segment ${rr.segment.sequence} failed to load.`, Sr), this.markFailed(rr.segment))
+      loadParts(dd, Od) {
+        this.blobs.load(dd.segment.sequence, Od, dd.abort.signal).then((Od => {
+          if (this.slots.get(dd.segment.sequence) === dd) return null === Od ? (console.error(`Replay video segment ${dd.segment.sequence} has no playable parts.`), void this.markFailed(dd.segment)) : void this.playBlob(dd, Od)
+        }), (Od => {
+          this.slots.get(dd.segment.sequence) === dd && (console.error(`Replay video segment ${dd.segment.sequence} failed to load.`, Od), this.markFailed(dd.segment))
         }))
       }
-      playBlob(rr, Sr) {
-        rr.objectUrl = URL.createObjectURL(Sr), rr.video.src = rr.objectUrl
+      playBlob(dd, Od) {
+        dd.objectUrl = URL.createObjectURL(Od), dd.video.src = dd.objectUrl
       }
-      markFailed(rr) {
-        this.failed.add(rr.sequence), this.onLoadFailed()
+      markFailed(dd) {
+        this.failed.add(dd.sequence), this.onLoadFailed()
       }
-      showStill(rr) {
-        const Sr = null !== rr && rr.url !== this.failedStillUrl ? rr : null;
-        null !== Sr && this.stillImage.getAttribute("src") !== Sr.url && (this.stillImage.src = Sr.url);
-        const Qr = null !== Sr && this.stillImage.complete && this.stillImage.naturalWidth > 0;
-        Qr !== this.stillShown && (this.stillImage.classList.toggle("brv-still-shown", Qr), this.stillShown = Qr)
+      showStill(dd) {
+        const Od = null !== dd && dd.url !== this.failedStillUrl ? dd : null;
+        null !== Od && this.stillImage.getAttribute("src") !== Od.url && (this.stillImage.src = Od.url);
+        const md = null !== Od && this.stillImage.complete && this.stillImage.naturalWidth > 0;
+        md !== this.stillShown && (this.stillImage.classList.toggle("brv-still-shown", md), this.stillShown = md)
       }
-      show(rr) {
-        var Sr;
-        this.shown !== rr && (null === (Sr = this.shown) || void 0 === Sr || Sr.video.classList.remove("brv-video-shown"), null === rr || void 0 === rr || rr.video.classList.add("brv-video-shown"), this.shown = rr)
+      show(dd) {
+        var Od;
+        this.shown !== dd && (null === (Od = this.shown) || void 0 === Od || Od.video.classList.remove("brv-video-shown"), null === dd || void 0 === dd || dd.video.classList.add("brv-video-shown"), this.shown = dd)
       }
-      evictExcept(rr) {
-        for (const [Sr, Qr] of this.slots) rr.includes(Qr.segment) || (this.release(Qr), this.slots.delete(Sr))
+      evictExcept(dd) {
+        for (const [Od, md] of this.slots) dd.includes(md.segment) || (this.release(md), this.slots.delete(Od))
       }
-      release(rr) {
-        this.shown === rr && (this.shown = null), rr.abort.abort(), rr.video.pause(), rr.video.removeAttribute("src"), rr.video.load(), rr.video.remove(), null !== rr.objectUrl && URL.revokeObjectURL(rr.objectUrl)
+      release(dd) {
+        this.shown === dd && (this.shown = null), dd.abort.abort(), dd.video.pause(), dd.video.removeAttribute("src"), dd.video.load(), dd.video.remove(), null !== dd.objectUrl && URL.revokeObjectURL(dd.objectUrl)
       }
-      watchFrames(rr) {
+      watchFrames(dd) {
         const {
-          video: Sr
-        } = rr;
-        if ("function" !== typeof Sr.requestVideoFrameCallback) return;
-        const Qr = (Zr, Wr) => {
-          if (!this.slots.has(rr.segment.sequence)) return;
-          const ar = Sr.ownerDocument.defaultView,
-            jr = null === ar ? 0 : ar.performance.timeOrigin - performance.timeOrigin,
-            Ir = SQ(rr.segment, this.clock.timeAtWall(Wr.expectedDisplayTime + jr)),
-            fr = this.lastPresented,
-            Er = this.wallNowMs() - this.lastSeekWallMs > 1e3;
-          if (null !== fr && fr.slot === rr && Er && this.clock.playing && Wr.mediaTime > fr.mediaTimeS) {
-            const rr = Math.abs(function(rr, Sr, Qr) {
-              return Qr < rr ? 1e3 * (Qr - rr) : 1e3 * Math.max(0, Qr - Sr)
-            }(fr.mediaTimeS, Wr.mediaTime, fr.clockMediaTimeS));
-            this.stats.frames++, this.stats.sumAbsDriftMs += rr, this.stats.maxAbsDriftMs = Math.max(this.stats.maxAbsDriftMs, rr), rr <= 1e3 * this.frameDurationS && this.stats.withinOneFrame++
+          video: Od
+        } = dd;
+        if ("function" !== typeof Od.requestVideoFrameCallback) return;
+        const md = (Wd, Fd) => {
+          if (!this.slots.has(dd.segment.sequence)) return;
+          const Rd = Od.ownerDocument.defaultView,
+            Xd = null === Rd ? 0 : Rd.performance.timeOrigin - performance.timeOrigin,
+            Kd = Wm(dd.segment, this.clock.timeAtWall(Fd.expectedDisplayTime + Xd)),
+            hd = this.lastPresented,
+            vd = this.wallNowMs() - this.lastSeekWallMs > 1e3;
+          if (null !== hd && hd.slot === dd && vd && this.clock.playing && Fd.mediaTime > hd.mediaTimeS) {
+            const dd = Math.abs(function(dd, Od, md) {
+              return md < dd ? 1e3 * (md - dd) : 1e3 * Math.max(0, md - Od)
+            }(hd.mediaTimeS, Fd.mediaTime, hd.clockMediaTimeS));
+            this.stats.frames++, this.stats.sumAbsDriftMs += dd, this.stats.maxAbsDriftMs = Math.max(this.stats.maxAbsDriftMs, dd), dd <= 1e3 * this.frameDurationS && this.stats.withinOneFrame++
           }
           this.lastPresented = {
-            slot: rr,
-            mediaTimeS: Wr.mediaTime,
-            clockMediaTimeS: Ir
-          }, Sr.requestVideoFrameCallback(Qr)
+            slot: dd,
+            mediaTimeS: Fd.mediaTime,
+            clockMediaTimeS: Kd
+          }, Od.requestVideoFrameCallback(md)
         };
-        Sr.requestVideoFrameCallback(Qr)
+        Od.requestVideoFrameCallback(md)
       }
     }
-    const aQ = 1 / 30,
-      jQ = ["#noa-canvas", "#noa-container"];
-    class IQ {
-      constructor(rr, Sr) {
-        var Qr, Zr, Wr, ar, jr, Ir, fr, Er;
-        let pr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.timeline = void 0, this.chapters = void 0, this.lowFps = void 0, this.stage = void 0, this.clock = void 0, this.annotations = void 0, this.videoLayer = void 0, this.domLayer = void 0, this.listeners = new Set, this.skipInactive = !0, this.ended = !1, this.frame = 0, this.lastState = null, this.urlRefresher = void 0, this.lx = () => {
-          this.frame = requestAnimationFrame(this.lx);
-          const rr = performance.now();
+    const Km = 1 / 30,
+      hm = ["#noa-canvas", "#noa-container"];
+    class Qm {
+      constructor(dd, Od) {
+        var md, Wd, Fd, Rd, Xd, Kd, hd, vd;
+        let Qd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.timeline = void 0, this.chapters = void 0, this.lowFps = void 0, this.stage = void 0, this.clock = void 0, this.annotations = void 0, this.videoLayer = void 0, this.domLayer = void 0, this.listeners = new Set, this.skipInactive = !0, this.ended = !1, this.frame = 0, this.lastState = null, this.urlRefresher = void 0, this.Et = () => {
+          this.frame = requestAnimationFrame(this.Et);
+          const dd = performance.now();
           this.applySkips();
-          const Sr = this.clock.timeMs();
-          this.annotations.update(Sr, this.clock.speed), this.videoLayer.update(Sr), null === this.domLayer ? this.stage.setViewport(this.videoLayer.getVideoSizeAt(Sr)) : this.domLayer.update(Sr, this.clock.playing, rr);
-          const Qr = this.getState();
-          (null === this.lastState || function(rr, Sr) {
-            return Object.keys(rr).some((Qr => "positionMs" === Qr ? Math.floor(rr.positionMs / 1e3) !== Math.floor(Sr.positionMs / 1e3) : rr[Qr] !== Sr[Qr]))
-          }(Qr, this.lastState)) && this.emitState(Qr)
+          const Od = this.clock.timeMs();
+          this.annotations.update(Od, this.clock.speed), this.videoLayer.update(Od), null === this.domLayer ? this.stage.setViewport(this.videoLayer.getVideoSizeAt(Od)) : this.domLayer.update(Od, this.clock.playing, dd);
+          const md = this.getState();
+          (null === this.lastState || function(dd, Od) {
+            return Object.keys(dd).some((md => "positionMs" === md ? Math.floor(dd.positionMs / 1e3) !== Math.floor(Od.positionMs / 1e3) : dd[md] !== Od[md]))
+          }(md, this.lastState)) && this.emitState(md)
         };
-        const xr = () => performance.now();
-        this.lowFps = null !== (Qr = pr.lowFps) && void 0 !== Qr ? Qr : 25;
-        const mr = new Vr(Sr.domEvents);
-        this.timeline = new Cr(Sr.windows.length > 0 ? Sr.windows : [Gr(Sr, mr)]), this.chapters = [...Sr.chapters].sort(((rr, Sr) => rr.startMs - Sr.startMs)), this.annotations = new aS(Sr, mr, this.timeline, {
-          inactivityThresholdMs: null !== (Zr = pr.inactivityThresholdMs) && void 0 !== Zr ? Zr : 1e4,
-          loadTelemetryChunk: null !== (Wr = pr.loadTelemetryChunk) && void 0 !== Wr ? Wr : null,
-          telemetryUrls: null !== (ar = pr.telemetryUrls) && void 0 !== ar ? ar : null,
+        const td = () => performance.now();
+        this.lowFps = null !== (md = Qd.lowFps) && void 0 !== md ? md : 25;
+        const od = new jd(Od.domEvents);
+        this.timeline = new nd(Od.windows.length > 0 ? Od.windows : [Pd(Od, od)]), this.chapters = [...Od.chapters].sort(((dd, Od) => dd.startMs - Od.startMs)), this.annotations = new KO(Od, od, this.timeline, {
+          inactivityThresholdMs: null !== (Wd = Qd.inactivityThresholdMs) && void 0 !== Wd ? Wd : 1e4,
+          loadTelemetryChunk: null !== (Fd = Qd.loadTelemetryChunk) && void 0 !== Fd ? Fd : null,
+          telemetryUrls: null !== (Rd = Qd.telemetryUrls) && void 0 !== Rd ? Rd : null,
           onTelemetryFailed: () => {
             this.urlRefresher.request()
           }
-        }), this.urlRefresher = new sr(null !== (jr = pr.refreshUrls) && void 0 !== jr ? jr : null, (rr => {
-          this.videoLayer.replaceSegments(Mr(rr.videoSegments), rr.still), this.videoLayer.noteClockJump(), this.annotations.replaceTelemetryUrls(rr.telemetryChunks)
-        })), this.clock = new kr(this.timeline.startMs, xr), this.stage = new FS(rr, (() => {
-          var rr;
-          null === (rr = this.domLayer) || void 0 === rr || rr.invalidateCanvasRect()
-        })), this.videoLayer = new WQ(Mr(Sr.videoSegments), Sr.still, this.clock, aQ, xr, null !== (Ir = pr.segmentUrls) && void 0 !== Ir ? Ir : null, (() => {
+        }), this.urlRefresher = new dO(null !== (Xd = Qd.refreshUrls) && void 0 !== Xd ? Xd : null, (dd => {
+          this.videoLayer.replaceSegments(Ld(dd.videoSegments), dd.still), this.videoLayer.noteClockJump(), this.annotations.replaceTelemetryUrls(dd.telemetryChunks)
+        })), this.clock = new zd(this.timeline.startMs, td), this.stage = new lO(dd, (() => {
+          var dd;
+          null === (dd = this.domLayer) || void 0 === dd || dd.invalidateCanvasRect()
+        })), this.videoLayer = new Xm(Ld(Od.videoSegments), Od.still, this.clock, Km, td, null !== (Kd = Qd.segmentUrls) && void 0 !== Kd ? Kd : null, (() => {
           this.urlRefresher.request()
-        })), this.domLayer = wS.create(this.stage.element, Sr.domEvents, Sr.recordedPointer, mr, null !== (fr = pr.canvasSelectors) && void 0 !== fr ? fr : jQ, null !== (Er = pr.resourceHosts) && void 0 !== Er ? Er : [], this.videoLayer, (rr => {
-          this.stage.setViewport(rr)
-        })), null === this.domLayer && (this.stage.element.classList.add("brv-stage-video-only"), this.stage.element.appendChild(this.videoLayer.element)), this.syncDom(), this.lx()
+        })), this.domLayer = eO.create(this.stage.element, Od.domEvents, Od.recordedPointer, od, null !== (hd = Qd.canvasSelectors) && void 0 !== hd ? hd : hm, null !== (vd = Qd.resourceHosts) && void 0 !== vd ? vd : [], this.videoLayer, (dd => {
+          this.stage.setViewport(dd)
+        })), null === this.domLayer && (this.stage.element.classList.add("brv-stage-video-only"), this.stage.element.appendChild(this.videoLayer.element)), this.syncDom(), this.Et()
       }
       get markers() {
         return this.annotations.markers
@@ -1740,21 +1740,21 @@ export const modules = {
       get input() {
         return this.annotations.input
       }
-      subscribe(rr) {
-        return this.listeners.add(rr), rr(this.getState()), () => {
-          this.listeners.delete(rr)
+      subscribe(dd) {
+        return this.listeners.add(dd), dd(this.getState()), () => {
+          this.listeners.delete(dd)
         }
       }
       getState() {
-        const rr = this.clock.timeMs();
+        const dd = this.clock.timeMs();
         return {
-          positionMs: this.timeline.toPosition(rr),
+          positionMs: this.timeline.toPosition(dd),
           durationMs: this.timeline.durationMs,
           playing: this.clock.playing,
           speed: this.clock.speed,
           skipInactive: this.skipInactive,
           ended: this.ended,
-          notice: this.getNotice(rr),
+          notice: this.getNotice(dd),
           telemetryChunksLoaded: this.annotations.telemetryChunksLoaded
         }
       }
@@ -1776,74 +1776,74 @@ export const modules = {
       togglePlay() {
         this.clock.playing ? this.pause() : this.play()
       }
-      seekToPosition(rr) {
-        this.seekToTime(this.timeline.toTime(rr))
+      seekToPosition(dd) {
+        this.seekToTime(this.timeline.toTime(dd))
       }
-      seekBy(rr) {
-        this.seekToPosition(this.timeline.toPosition(this.clock.timeMs()) + rr)
+      seekBy(dd) {
+        this.seekToPosition(this.timeline.toPosition(this.clock.timeMs()) + dd)
       }
-      stepFrame(rr) {
-        this.clock.pause(), this.seekBy(rr * aQ * 1e3)
+      stepFrame(dd) {
+        this.clock.pause(), this.seekBy(dd * Km * 1e3)
       }
-      setSpeed(rr) {
-        var Sr;
-        this.clock.setSpeed(rr), null === (Sr = this.domLayer) || void 0 === Sr || Sr.setSpeed(rr), this.emit()
+      setSpeed(dd) {
+        var Od;
+        this.clock.setSpeed(dd), null === (Od = this.domLayer) || void 0 === Od || Od.setSpeed(dd), this.emit()
       }
-      setSkipInactive(rr) {
-        this.skipInactive = rr, this.emit()
+      setSkipInactive(dd) {
+        this.skipInactive = dd, this.emit()
       }
-      goToChapter(rr) {
-        const Sr = this.clock.timeMs(),
-          Qr = 1 === rr ? this.chapters.find((rr => rr.startMs > Sr + 500)) : this.chapters.findLast((rr => rr.startMs < Sr - 2e3));
-        void 0 !== Qr && this.seekToTime(Qr.startMs)
+      goToChapter(dd) {
+        const Od = this.clock.timeMs(),
+          md = 1 === dd ? this.chapters.find((dd => dd.startMs > Od + 500)) : this.chapters.findLast((dd => dd.startMs < Od - 2e3));
+        void 0 !== md && this.seekToTime(md.startMs)
       }
       destroy() {
-        var rr;
-        cancelAnimationFrame(this.frame), this.urlRefresher.destroy(), this.annotations.destroy(), null === (rr = this.domLayer) || void 0 === rr || rr.destroy(), this.videoLayer.destroy(), this.stage.destroy(), this.listeners.clear()
+        var dd;
+        cancelAnimationFrame(this.frame), this.urlRefresher.destroy(), this.annotations.destroy(), null === (dd = this.domLayer) || void 0 === dd || dd.destroy(), this.videoLayer.destroy(), this.stage.destroy(), this.listeners.clear()
       }
-      getNotice(rr) {
-        return this.annotations.isHiddenAt(rr) ? "tabHidden" : this.videoLayer.failedAt(rr) && !this.urlRefresher.refreshing ? "videoFailed" : null !== this.domLayer || this.videoLayer.visible ? this.annotations.isVideoGapAt(rr) ? "videoGap" : null : "nothingToShow"
+      getNotice(dd) {
+        return this.annotations.isHiddenAt(dd) ? "tabHidden" : this.videoLayer.failedAt(dd) && !this.urlRefresher.refreshing ? "videoFailed" : null !== this.domLayer || this.videoLayer.visible ? this.annotations.isVideoGapAt(dd) ? "videoGap" : null : "nothingToShow"
       }
       applySkips() {
-        var rr;
+        var dd;
         if (!this.clock.playing) return;
-        const Sr = this.clock.timeMs(),
-          Qr = this.timeline.nextPlayableTime(Sr);
-        if (null === Qr) return this.clock.pause(), this.clock.seek(this.timeline.endMs), this.ended = !0, this.syncDom(), void this.emit();
-        const Zr = this.skipInactive ? this.annotations.inactiveRanges.find((rr => Qr >= rr.startMs && Qr < rr.endMs - 500)) : void 0,
-          Wr = null !== (rr = null === Zr || void 0 === Zr ? void 0 : Zr.endMs) && void 0 !== rr ? rr : Qr;
-        Wr !== Sr && this.seekToTime(Wr)
+        const Od = this.clock.timeMs(),
+          md = this.timeline.nextPlayableTime(Od);
+        if (null === md) return this.clock.pause(), this.clock.seek(this.timeline.endMs), this.ended = !0, this.syncDom(), void this.emit();
+        const Wd = this.skipInactive ? this.annotations.inactiveRanges.find((dd => md >= dd.startMs && md < dd.endMs - 500)) : void 0,
+          Fd = null !== (dd = null === Wd || void 0 === Wd ? void 0 : Wd.endMs) && void 0 !== dd ? dd : md;
+        Fd !== Od && this.seekToTime(Fd)
       }
-      seekToTime(rr) {
-        this.ended = !1, this.clock.seek(Math.max(this.timeline.startMs, Math.min(this.timeline.endMs, rr))), this.videoLayer.noteClockJump(), this.syncDom(), this.emit()
+      seekToTime(dd) {
+        this.ended = !1, this.clock.seek(Math.max(this.timeline.startMs, Math.min(this.timeline.endMs, dd))), this.videoLayer.noteClockJump(), this.syncDom(), this.emit()
       }
       syncDom() {
-        var rr;
-        null === (rr = this.domLayer) || void 0 === rr || rr.sync(this.clock.timeMs(), this.clock.playing)
+        var dd;
+        null === (dd = this.domLayer) || void 0 === dd || dd.sync(this.clock.timeMs(), this.clock.playing)
       }
       emit() {
         this.emitState(this.getState())
       }
-      emitState(rr) {
-        this.lastState = rr;
-        for (const Sr of this.listeners) Sr(rr)
+      emitState(dd) {
+        this.lastState = dd;
+        for (const Od of this.listeners) Od(dd)
       }
     }
-    const fQ = 2500,
-      EQ = 5;
+    const tm = 2500,
+      om = 5;
 
-    function pQ(rr) {
+    function Nm(dd) {
       let {
-        label: Sr,
-        wI: Qr,
-        wide: Zr = !1
-      } = rr;
-      return (0, hr.jsx)("span", {
-        className: `brv-key${Qr?" brv-key-held":""}${Zr?" brv-key-wide":""}`,
-        children: Sr
+        label: Od,
+        jK: md,
+        wide: Wd = !1
+      } = dd;
+      return (0, yd.jsx)("span", {
+        className: `brv-key${md?" brv-key-held":""}${Wd?" brv-key-wide":""}`,
+        children: Od
       })
     }
-    const xQ = [{
+    const qm = [{
       action: "primary",
       className: "brv-mouse-left"
     }, {
@@ -1854,136 +1854,136 @@ export const modules = {
       className: "brv-mouse-right"
     }];
 
-    function mQ(rr) {
-      const [Sr, Qr] = (0, Zr.useState)({
+    function Hm(dd) {
+      const [Od, md] = (0, Wd.useState)({
         bits: 0,
         presses: []
       });
-      return (0, Zr.useEffect)((() => {
-        let Sr = 0,
-          Zr = "";
-        const Wr = () => {
-          Sr = requestAnimationFrame(Wr);
-          const ar = rr.timeline.toTime(rr.getPositionMs()),
+      return (0, Wd.useEffect)((() => {
+        let Od = 0,
+          Wd = "";
+        const Fd = () => {
+          Od = requestAnimationFrame(Fd);
+          const Rd = dd.timeline.toTime(dd.getPositionMs()),
             {
-              actions: jr,
-              keys: Ir
-            } = rr.input,
-            mr = function(rr, Sr) {
-              const Qr = Er(rr, Sr);
-              return Qr < 0 ? 0 : rr[Qr].bits
-            }(jr, ar),
-            Nr = function(rr, Sr, Qr, Zr) {
-              const Wr = Math.floor(Sr / Qr) * Qr,
-                ar = new Map;
-              for (let jr = Er(rr, Wr + Qr); jr >= 0 && rr[jr].atMs >= Wr; jr--) {
-                const Sr = rr[jr];
-                if (!Sr.down || !Sr.inPlay || Sr.atMs === Wr + Qr) continue;
-                const Zr = {
-                    code: Sr.code,
-                    unbound: fr(Sr)
+              actions: Xd,
+              keys: Kd
+            } = dd.input,
+            od = function(dd, Od) {
+              const md = vd(dd, Od);
+              return md < 0 ? 0 : dd[md].bits
+            }(Xd, Rd),
+            Nd = function(dd, Od, md, Wd) {
+              const Fd = Math.floor(Od / md) * md,
+                Rd = new Map;
+              for (let Xd = vd(dd, Fd + md); Xd >= 0 && dd[Xd].atMs >= Fd; Xd--) {
+                const Od = dd[Xd];
+                if (!Od.down || !Od.inPlay || Od.atMs === Fd + md) continue;
+                const Wd = {
+                    code: Od.code,
+                    unbound: hd(Od)
                   },
-                  Ir = pr(Zr),
-                  Er = ar.get(Ir);
-                void 0 === Er ? ar.set(Ir, {
-                  key: Zr,
+                  Kd = Qd(Wd),
+                  vd = Rd.get(Kd);
+                void 0 === vd ? Rd.set(Kd, {
+                  key: Wd,
                   presses: 1
-                }) : Er.presses++
+                }) : vd.presses++
               }
-              return [...ar].sort(((rr, Sr) => xr([rr[0], rr[1].presses], [Sr[0], Sr[1].presses]))).slice(0, Zr).map((rr => {
+              return [...Rd].sort(((dd, Od) => td([dd[0], dd[1].presses], [Od[0], Od[1].presses]))).slice(0, Wd).map((dd => {
                 let [, {
-                  key: Sr
-                }] = rr;
-                return Sr
+                  key: Od
+                }] = dd;
+                return Od
               }))
-            }(Ir, ar, fQ, EQ),
-            Ur = `${mr};${Nr.map((rr=>pr(rr))).join(",")}`;
-          Ur !== Zr && (Zr = Ur, Qr({
-            bits: mr,
-            presses: Nr
+            }(Kd, Rd, tm, om),
+            qd = `${od};${Nd.map((dd=>Qd(dd))).join(",")}`;
+          qd !== Wd && (Wd = qd, md({
+            bits: od,
+            presses: Nd
           }))
         };
-        return Wr(), () => {
-          cancelAnimationFrame(Sr)
+        return Fd(), () => {
+          cancelAnimationFrame(Od)
         }
-      }), [rr]), Sr
+      }), [dd]), Od
     }
 
-    function NQ(rr) {
+    function ym(dd) {
       let {
-        controller: Sr,
-        labels: Qr
-      } = rr;
+        controller: Od,
+        labels: md
+      } = dd;
       const {
-        bits: Zr,
-        presses: Wr
-      } = mQ(Sr), ar = rr => function(rr, Sr) {
-        return 0 !== (rr & 1 << jr.indexOf(Sr))
-      }(Zr, rr);
-      return (0, hr.jsxs)("div", {
+        bits: Wd,
+        presses: Fd
+      } = Hm(Od), Rd = dd => function(dd, Od) {
+        return 0 !== (dd & 1 << Xd.indexOf(Od))
+      }(Wd, dd);
+      return (0, yd.jsxs)("div", {
         className: "brv-input",
         "aria-hidden": !0,
-        children: [(0, hr.jsx)("div", {
+        children: [(0, yd.jsx)("div", {
           className: "brv-input-slot",
-          children: Wr.map((rr => {
-            const Sr = Nr(rr.code);
-            return (0, hr.jsx)("span", {
-              className: rr.unbound ? "brv-input-press brv-input-press-unbound" : "brv-input-press",
-              children: rr.unbound ? Qr.unboundKey(Sr) : Sr
-            }, pr(rr))
+          children: Fd.map((dd => {
+            const Od = Nd(dd.code);
+            return (0, yd.jsx)("span", {
+              className: dd.unbound ? "brv-input-press brv-input-press-unbound" : "brv-input-press",
+              children: dd.unbound ? md.unboundKey(Od) : Od
+            }, Qd(dd))
           }))
-        }), (0, hr.jsxs)("div", {
+        }), (0, yd.jsxs)("div", {
           className: "brv-input-devices",
-          children: [(0, hr.jsxs)("div", {
+          children: [(0, yd.jsxs)("div", {
             className: "brv-keys",
-            children: [(0, hr.jsx)("div", {
+            children: [(0, yd.jsx)("div", {
               className: "brv-keys-row",
-              children: (0, hr.jsx)(pQ, {
+              children: (0, yd.jsx)(Nm, {
                 label: "W",
-                wI: ar("forward")
+                jK: Rd("forward")
               })
-            }), (0, hr.jsxs)("div", {
+            }), (0, yd.jsxs)("div", {
               className: "brv-keys-row",
-              children: [(0, hr.jsx)(pQ, {
+              children: [(0, yd.jsx)(Nm, {
                 label: "A",
-                wI: ar("left")
-              }), (0, hr.jsx)(pQ, {
+                jK: Rd("left")
+              }), (0, yd.jsx)(Nm, {
                 label: "S",
-                wI: ar("backward")
-              }), (0, hr.jsx)(pQ, {
+                jK: Rd("backward")
+              }), (0, yd.jsx)(Nm, {
                 label: "D",
-                wI: ar("right")
+                jK: Rd("right")
               })]
-            }), (0, hr.jsxs)("div", {
+            }), (0, yd.jsxs)("div", {
               className: "brv-keys-row",
-              children: [(0, hr.jsx)(pQ, {
+              children: [(0, yd.jsx)(Nm, {
                 label: "Shift",
-                wI: ar("sprint")
-              }), (0, hr.jsx)(pQ, {
+                jK: Rd("sprint")
+              }), (0, yd.jsx)(Nm, {
                 label: "Ctrl",
-                wI: ar("crouch")
-              }), (0, hr.jsx)(pQ, {
+                jK: Rd("crouch")
+              }), (0, yd.jsx)(Nm, {
                 label: "Space",
-                wI: ar("jump"),
+                jK: Rd("jump"),
                 wide: !0
               })]
             })]
-          }), (0, hr.jsx)("div", {
+          }), (0, yd.jsx)("div", {
             className: "brv-mouse",
-            children: xQ.map((rr => {
+            children: qm.map((dd => {
               let {
-                action: Sr,
-                className: Qr
-              } = rr;
-              return (0, hr.jsx)("span", {
-                className: `${Qr}${ar(Sr)?" brv-key-held":""}`
-              }, Sr)
+                action: Od,
+                className: md
+              } = dd;
+              return (0, yd.jsx)("span", {
+                className: `${md}${Rd(Od)?" brv-key-held":""}`
+              }, Od)
             }))
           })]
         })]
       })
     }
-    const UQ = {
+    const bm = {
       play: "Play (space)",
       pause: "Pause (space)",
       speed: "Playback speed",
@@ -1996,113 +1996,113 @@ export const modules = {
       error: "Error",
       graphicsCrash: "The game's graphics crashed",
       death: "Died",
-      fps: rr => `${rr} FPS`,
+      fps: dd => `${dd} FPS`,
       keys: "Keys",
-      unboundKey: rr => `${rr} does nothing here`,
-      unboundKeys: rr => `${rr} did nothing`
+      unboundKey: dd => `${dd} does nothing here`,
+      unboundKeys: dd => `${dd} did nothing`
     };
 
-    function tQ(rr) {
+    function Tm(dd) {
       let {
-        path: Sr
-      } = rr;
-      return (0, hr.jsx)("svg", {
+        path: Od
+      } = dd;
+      return (0, yd.jsx)("svg", {
         viewBox: "0 0 24 24",
         "aria-hidden": !0,
-        children: (0, hr.jsx)("path", {
-          d: Sr
+        children: (0, yd.jsx)("path", {
+          d: Od
         })
       })
     }
-    const hQ = {
+    const pm = {
       play: "M7 4v16l13-8z",
       pause: "M6 4h4v16H6zm8 0h4v16h-4z",
       fullscreen: "M4 4h6v2H6v4H4zm10 0h6v6h-2V6h-4zM4 14h2v4h4v2H4zm14 0h2v6h-6v-2h4z"
     };
 
-    function zQ(rr) {
+    function Ym(dd) {
       let {
-        label: Sr,
-        onClick: Qr,
-        children: Zr
-      } = rr;
-      return (0, hr.jsx)("button", {
+        label: Od,
+        onClick: md,
+        children: Wd
+      } = dd;
+      return (0, yd.jsx)("button", {
         type: "button",
         className: "brv-button",
-        title: Sr,
-        "aria-label": Sr,
-        onClick: Qr,
-        children: Zr
+        title: Od,
+        "aria-label": Od,
+        onClick: md,
+        children: Wd
       })
     }
 
-    function YQ(rr) {
+    function gm(dd) {
       if (!document.fullscreenEnabled) return;
-      (document.fullscreenElement === rr ? document.exitFullscreen() : rr.requestFullscreen()).catch((rr => {
-        console.warn("Couldn't toggle fullscreen.", rr)
+      (document.fullscreenElement === dd ? document.exitFullscreen() : dd.requestFullscreen()).catch((dd => {
+        console.warn("Couldn't toggle fullscreen.", dd)
       }))
     }
 
-    function nQ(rr) {
+    function wm(dd) {
       let {
-        data: Sr,
-        className: Qr,
-        autoPlay: Wr = !1,
-        options: ar,
-        labels: jr = UQ,
-        onController: Ir
-      } = rr;
-      const fr = (0, Zr.useRef)(null),
-        Er = (0, Zr.useRef)(null),
-        pr = (0, Zr.useRef)(ar);
-      pr.current = ar;
-      const xr = (0, Zr.useRef)(Wr);
-      xr.current = Wr;
-      const mr = (0, Zr.useRef)(Ir);
-      mr.current = Ir;
-      const [Nr, Ur] = (0, Zr.useState)(null), [tr, zr] = (0, Zr.useState)(null), [nr, er] = (0, Zr.useState)(!0), Kr = () => {
-        er((rr => !rr))
+        data: Od,
+        className: md,
+        autoPlay: Fd = !1,
+        options: Rd,
+        labels: Xd = bm,
+        onController: Kd
+      } = dd;
+      const hd = (0, Wd.useRef)(null),
+        vd = (0, Wd.useRef)(null),
+        Qd = (0, Wd.useRef)(Rd);
+      Qd.current = Rd;
+      const td = (0, Wd.useRef)(Fd);
+      td.current = Fd;
+      const od = (0, Wd.useRef)(Kd);
+      od.current = Kd;
+      const [Nd, qd] = (0, Wd.useState)(null), [Hd, bd] = (0, Wd.useState)(null), [pd, Yd] = (0, Wd.useState)(!0), gd = () => {
+        Yd((dd => !dd))
       };
-      (0, Zr.useEffect)((() => {
-        var rr;
-        ! function(rr) {
-          if (null !== rr.getElementById(AS)) return;
-          const Sr = rr.createElement("style");
-          Sr.id = AS, Sr.textContent = iS, rr.head.appendChild(Sr)
+      (0, Wd.useEffect)((() => {
+        var dd;
+        ! function(dd) {
+          if (null !== dd.getElementById(cO)) return;
+          const Od = dd.createElement("style");
+          Od.id = cO, Od.textContent = DO, dd.head.appendChild(Od)
         }(document);
-        const Qr = new IQ(fr.current, Sr, pr.current),
-          Zr = Qr.subscribe(zr);
-        return Ur(Qr), null === (rr = mr.current) || void 0 === rr || rr.call(mr, Qr), xr.current && Qr.play(), Er.current.focus({
+        const md = new Qm(hd.current, Od, Qd.current),
+          Wd = md.subscribe(bd);
+        return qd(md), null === (dd = od.current) || void 0 === dd || dd.call(od, md), td.current && md.play(), vd.current.focus({
           preventScroll: !0
         }), () => {
-          var rr;
-          Zr(), Qr.destroy(), null === (rr = mr.current) || void 0 === rr || rr.call(mr, null)
+          var dd;
+          Wd(), md.destroy(), null === (dd = od.current) || void 0 === dd || dd.call(od, null)
         }
-      }), [Sr]);
-      const Br = null !== Nr && Nr.input.inputRecorded,
-        Tr = null === Nr || null === tr ? void 0 : Nr.chapters.findLast((rr => Nr.timeline.toPosition(rr.startMs) <= tr.positionMs));
-      return (0, hr.jsxs)("div", {
-        ref: Er,
-        className: void 0 === Qr ? "brv-player" : `brv-player ${Qr}`,
+      }), [Od]);
+      const Ed = null !== Nd && Nd.input.inputRecorded,
+        Jd = null === Nd || null === Hd ? void 0 : Nd.chapters.findLast((dd => Nd.timeline.toPosition(dd.startMs) <= Hd.positionMs));
+      return (0, yd.jsxs)("div", {
+        ref: vd,
+        className: void 0 === md ? "brv-player" : `brv-player ${md}`,
         tabIndex: 0,
-        onKeyDown: rr => {
-          if (rr.target instanceof HTMLSelectElement) return;
-          if (" " === rr.key && rr.target !== rr.currentTarget && rr.target instanceof HTMLButtonElement) return;
-          const Sr = function(rr) {
+        onKeyDown: dd => {
+          if (dd.target instanceof HTMLSelectElement) return;
+          if (" " === dd.key && dd.target !== dd.currentTarget && dd.target instanceof HTMLButtonElement) return;
+          const Od = function(dd) {
             let {
-              key: Sr,
-              shiftKey: Qr,
-              ctrlKey: Zr,
-              metaKey: Wr,
-              altKey: ar
-            } = rr;
-            if (Zr || Wr || ar) return null;
-            const jr = Number(Sr) - 1;
-            if (/^[1-9]$/.test(Sr) && jr < qr.length) return {
+              key: Od,
+              shiftKey: md,
+              ctrlKey: Wd,
+              metaKey: Fd,
+              altKey: Rd
+            } = dd;
+            if (Wd || Fd || Rd) return null;
+            const Xd = Number(Od) - 1;
+            if (/^[1-9]$/.test(Od) && Xd < Ad.length) return {
               type: "setSpeed",
-              speed: qr[jr]
+              speed: Ad[Xd]
             };
-            switch (Sr.toLowerCase()) {
+            switch (Od.toLowerCase()) {
               case " ":
               case "k":
                 return {
@@ -2110,11 +2110,11 @@ export const modules = {
                 };
               case "arrowleft":
                 return {
-                  type: "seekBy", deltaMs: Qr ? -1e3 : -5e3
+                  type: "seekBy", deltaMs: md ? -1e3 : -5e3
                 };
               case "arrowright":
                 return {
-                  type: "seekBy", deltaMs: Qr ? 1e3 : 5e3
+                  type: "seekBy", deltaMs: md ? 1e3 : 5e3
                 };
               case "j":
                 return {
@@ -2134,7 +2134,7 @@ export const modules = {
                 };
               case "n":
                 return {
-                  type: "chapter", direction: Qr ? -1 : 1
+                  type: "chapter", direction: md ? -1 : 1
                 };
               case "s":
                 return {
@@ -2151,265 +2151,265 @@ export const modules = {
               default:
                 return null
             }
-          }(rr);
-          null !== Sr && null !== Nr && null !== tr && (rr.preventDefault(), function(rr, Sr, Qr, Zr) {
-            switch (Sr.type) {
+          }(dd);
+          null !== Od && null !== Nd && null !== Hd && (dd.preventDefault(), function(dd, Od, md, Wd) {
+            switch (Od.type) {
               case "togglePlay":
-                rr.togglePlay();
+                dd.togglePlay();
                 break;
               case "seekBy":
-                rr.seekBy(Sr.deltaMs);
+                dd.seekBy(Od.deltaMs);
                 break;
               case "stepFrame":
-                rr.stepFrame(Sr.direction);
+                dd.stepFrame(Od.direction);
                 break;
               case "setSpeed":
-                rr.setSpeed(Sr.speed);
+                dd.setSpeed(Od.speed);
                 break;
               case "chapter":
-                rr.goToChapter(Sr.direction);
+                dd.goToChapter(Od.direction);
                 break;
               case "toggleSkipInactive":
-                rr.setSkipInactive(!Qr.skipInactive);
+                dd.setSkipInactive(!md.skipInactive);
                 break;
               case "toggleFullscreen":
-                YQ(Zr.root);
+                gm(Wd.root);
                 break;
               case "toggleKeys":
-                Zr.toggleKeys()
+                Wd.toggleKeys()
             }
-          }(Nr, Sr, tr, {
-            root: rr.currentTarget,
-            toggleKeys: Kr
+          }(Nd, Od, Hd, {
+            root: dd.currentTarget,
+            toggleKeys: gd
           }))
         },
-        children: [(0, hr.jsxs)("div", {
-          ref: fr,
+        children: [(0, yd.jsxs)("div", {
+          ref: hd,
           className: "brv-viewport",
           onClick: () => {
-            null === Nr || void 0 === Nr || Nr.togglePlay()
+            null === Nd || void 0 === Nd || Nd.togglePlay()
           },
-          children: [null !== tr && null !== tr.notice && (0, hr.jsx)("div", {
+          children: [null !== Hd && null !== Hd.notice && (0, yd.jsx)("div", {
             className: "brv-overlay",
-            children: jr[tr.notice]
-          }), null !== Nr && nr && Br && (0, hr.jsx)(NQ, {
-            controller: Nr,
-            labels: jr
+            children: Xd[Hd.notice]
+          }), null !== Nd && pd && Ed && (0, yd.jsx)(ym, {
+            controller: Nd,
+            labels: Xd
           })]
-        }), null !== Nr && null !== tr && (0, hr.jsxs)(hr.Fragment, {
-          children: [(0, hr.jsx)(yr, {
-            controller: Nr,
-            frames: Nr.frames,
-            input: Nr.input,
-            markers: Nr.markers,
-            inactiveRanges: Nr.inactiveRanges,
-            videoGaps: Nr.videoGaps,
-            labels: jr
-          }), Nr.chapters.length > 1 && (0, hr.jsx)("div", {
+        }), null !== Nd && null !== Hd && (0, yd.jsxs)(yd.Fragment, {
+          children: [(0, yd.jsx)(wd, {
+            controller: Nd,
+            frames: Nd.frames,
+            input: Nd.input,
+            markers: Nd.markers,
+            inactiveRanges: Nd.inactiveRanges,
+            videoGaps: Nd.videoGaps,
+            labels: Xd
+          }), Nd.chapters.length > 1 && (0, yd.jsx)("div", {
             className: "brv-chapters",
-            children: Nr.chapters.map((rr => (0, hr.jsxs)("button", {
+            children: Nd.chapters.map((dd => (0, yd.jsxs)("button", {
               type: "button",
-              className: rr === Tr ? "brv-chapter brv-chapter-current" : "brv-chapter",
+              className: dd === Jd ? "brv-chapter brv-chapter-current" : "brv-chapter",
               onClick: () => {
-                Nr.seekToPosition(Nr.timeline.toPosition(rr.startMs))
+                Nd.seekToPosition(Nd.timeline.toPosition(dd.startMs))
               },
-              children: [rr.label, " \xb7 ", Yr(rr.endMs - rr.startMs)]
-            }, rr.startMs)))
-          }), (0, hr.jsxs)("div", {
+              children: [dd.label, " \xb7 ", Td(dd.endMs - dd.startMs)]
+            }, dd.startMs)))
+          }), (0, yd.jsxs)("div", {
             className: "brv-controls",
-            children: [(0, hr.jsx)(zQ, {
-              label: tr.playing ? jr.pause : jr.play,
+            children: [(0, yd.jsx)(Ym, {
+              label: Hd.playing ? Xd.pause : Xd.play,
               onClick: () => {
-                Nr.togglePlay()
+                Nd.togglePlay()
               },
-              children: (0, hr.jsx)(tQ, {
-                path: tr.playing ? hQ.pause : hQ.play
+              children: (0, yd.jsx)(Tm, {
+                path: Hd.playing ? pm.pause : pm.play
               })
-            }), (0, hr.jsxs)("span", {
+            }), (0, yd.jsxs)("span", {
               className: "brv-time",
-              children: [Yr(tr.positionMs), " / ", Yr(tr.durationMs)]
-            }), (0, hr.jsx)("select", {
+              children: [Td(Hd.positionMs), " / ", Td(Hd.durationMs)]
+            }), (0, yd.jsx)("select", {
               className: "brv-speed",
-              value: tr.speed,
-              title: `${jr.speed} (1-${qr.length})`,
-              "aria-label": jr.speed,
-              onChange: rr => {
-                Nr.setSpeed(Number(rr.target.value))
+              value: Hd.speed,
+              title: `${Xd.speed} (1-${Ad.length})`,
+              "aria-label": Xd.speed,
+              onChange: dd => {
+                Nd.setSpeed(Number(dd.target.value))
               },
-              children: qr.map((rr => (0, hr.jsxs)("option", {
-                value: rr,
-                children: [rr, "x"]
-              }, rr)))
-            }), (0, hr.jsxs)("button", {
+              children: Ad.map((dd => (0, yd.jsxs)("option", {
+                value: dd,
+                children: [dd, "x"]
+              }, dd)))
+            }), (0, yd.jsxs)("button", {
               type: "button",
               role: "switch",
               className: "brv-switch",
-              "aria-checked": tr.skipInactive,
-              title: `${jr.skipInactive} (S)`,
+              "aria-checked": Hd.skipInactive,
+              title: `${Xd.skipInactive} (S)`,
               onClick: () => {
-                Nr.setSkipInactive(!tr.skipInactive)
+                Nd.setSkipInactive(!Hd.skipInactive)
               },
-              children: [(0, hr.jsx)("span", {
+              children: [(0, yd.jsx)("span", {
                 className: "brv-switch-track",
                 "aria-hidden": !0
-              }), jr.skipInactive]
-            }), Br && (0, hr.jsxs)("button", {
+              }), Xd.skipInactive]
+            }), Ed && (0, yd.jsxs)("button", {
               type: "button",
               role: "switch",
               className: "brv-switch",
-              "aria-checked": nr,
-              title: `${jr.keys} (I)`,
-              onClick: Kr,
-              children: [(0, hr.jsx)("span", {
+              "aria-checked": pd,
+              title: `${Xd.keys} (I)`,
+              onClick: gd,
+              children: [(0, yd.jsx)("span", {
                 className: "brv-switch-track",
                 "aria-hidden": !0
-              }), jr.keys]
-            }), document.fullscreenEnabled && (0, hr.jsx)(zQ, {
-              label: jr.fullscreen,
+              }), Xd.keys]
+            }), document.fullscreenEnabled && (0, yd.jsx)(Ym, {
+              label: Xd.fullscreen,
               onClick: () => {
-                YQ(Er.current)
+                gm(vd.current)
               },
-              children: (0, hr.jsx)(tQ, {
-                path: hQ.fullscreen
+              children: (0, yd.jsx)(Tm, {
+                path: pm.fullscreen
               })
             })]
           })]
         })]
       })
     }
-    var eQ = Qr(6028);
-    const KQ = ["bloxd.io", window.location.hostname];
+    var am = md(5989);
+    const Em = ["bloxd.io", window.location.hostname];
 
-    function yQ(rr) {
+    function Jm(dd) {
       let {
-        gameAnalyticsId: Sr,
-        recordingId: Qr,
-        userContext: Wr,
-        autoPlay: ar
-      } = rr;
+        gameAnalyticsId: Od,
+        recordingId: md,
+        userContext: Fd,
+        autoPlay: Rd
+      } = dd;
       const {
-        t: jr
-      } = (0, Tr.E)(), [Ir, fr] = (0, Zr.useState)({
+        t: Xd
+      } = (0, Jd.G)(), [Kd, hd] = (0, Wd.useState)({
         status: "loading"
-      }), [Er, pr] = (0, Zr.useState)(0), xr = (0, Zr.useMemo)((() => function(rr) {
+      }), [vd, Qd] = (0, Wd.useState)(0), td = (0, Wd.useMemo)((() => function(dd) {
         return {
-          play: rr("studio:replayPlay"),
-          pause: rr("studio:replayPause"),
-          speed: rr("studio:replaySpeed"),
-          skipInactive: rr("studio:replaySkipIdle"),
-          fullscreen: rr("studio:replayFullscreen"),
-          tabHidden: rr("studio:replayTabHidden"),
-          videoFailed: rr("studio:replayVideoFailed"),
-          nothingToShow: rr("studio:replayNothingToShow"),
-          videoGap: rr("studio:replayVideoGap"),
-          error: rr("general:error"),
-          graphicsCrash: rr("studio:replayMarkerGraphicsCrash"),
-          death: rr("studio:replayMarkerDeath"),
-          fps: Sr => rr("studio:replayFps", {
-            fps: Sr
+          play: dd("studio:replayPlay"),
+          pause: dd("studio:replayPause"),
+          speed: dd("studio:replaySpeed"),
+          skipInactive: dd("studio:replaySkipIdle"),
+          fullscreen: dd("studio:replayFullscreen"),
+          tabHidden: dd("studio:replayTabHidden"),
+          videoFailed: dd("studio:replayVideoFailed"),
+          nothingToShow: dd("studio:replayNothingToShow"),
+          videoGap: dd("studio:replayVideoGap"),
+          error: dd("general:error"),
+          graphicsCrash: dd("studio:replayMarkerGraphicsCrash"),
+          death: dd("studio:replayMarkerDeath"),
+          fps: Od => dd("studio:replayFps", {
+            fps: Od
           }),
-          keys: rr("studio:replayKeys"),
-          unboundKey: Sr => rr("studio:replayUnboundKey", {
-            key: Sr
+          keys: dd("studio:replayKeys"),
+          unboundKey: Od => dd("studio:replayUnboundKey", {
+            key: Od
           }),
-          unboundKeys: Sr => rr("studio:replayUnboundKeys", {
-            keys: Sr
+          unboundKeys: Od => dd("studio:replayUnboundKeys", {
+            keys: Od
           })
         }
-      }(jr)), [jr]), mr = (0, Zr.useMemo)((() => ({
-        resourceHosts: KQ,
-        loadTelemetryChunk: Xr.y,
-        refreshUrls: async () => (0, Xr.r)(await eQ.c.getReplay(Wr, Sr, Qr)),
+      }(Xd)), [Xd]), od = (0, Wd.useMemo)((() => ({
+        resourceHosts: Em,
+        loadTelemetryChunk: sd.C,
+        refreshUrls: async () => (0, sd.t)(await am.b.getReplay(Fd, Od, md)),
         segmentUrls: {
-          load: async rr => (await eQ.c.getReplaySegmentUrls(Wr, Sr, Qr, rr, [])).videoSegments,
-          maxSequences: Hr.e
+          load: async dd => (await am.b.getReplaySegmentUrls(Fd, Od, md, dd, [])).videoSegments,
+          maxSequences: Vd.b
         },
         telemetryUrls: {
-          load: async rr => (await eQ.c.getReplaySegmentUrls(Wr, Sr, Qr, [], rr)).telemetrySegments,
-          maxSequences: Hr.j
+          load: async dd => (await am.b.getReplaySegmentUrls(Fd, Od, md, [], dd)).telemetrySegments,
+          maxSequences: Vd.i
         }
-      })), [Sr, Qr]);
-      return (0, Zr.useEffect)((() => {
-        let rr = !1;
-        return fr({
+      })), [Od, md]);
+      return (0, Wd.useEffect)((() => {
+        let dd = !1;
+        return hd({
           status: "loading"
-        }), (0, Xr.B)({
-          getReplay: () => eQ.c.getReplay(Wr, Sr, Qr),
-          loadDomEvents: Xr.x,
+        }), (0, sd.E)({
+          getReplay: () => am.b.getReplay(Fd, Od, md),
+          loadDomEvents: sd.A,
           onPreparing: () => {
-            fr({
+            hd({
               status: "preparing"
             })
           },
-          wait: rr => new Promise((Sr => {
-            setTimeout(Sr, rr)
+          wait: dd => new Promise((Od => {
+            setTimeout(Od, dd)
           })),
-          isCancelled: () => rr
-        }).then((Sr => {
-          if (!rr && null !== Sr) {
-            const rr = (0, Xr.v)(Sr.replay, Sr.domEvents, (rr => jr("studio:replayVisit", {
-              number: rr
+          isCancelled: () => dd
+        }).then((Od => {
+          if (!dd && null !== Od) {
+            const dd = (0, sd.x)(Od.replay, Od.domEvents, (dd => Xd("studio:replayVisit", {
+              number: dd
             })));
-            fr({
+            hd({
               status: "loaded",
-              value: rr
+              value: dd
             })
           }
-        })).catch((Sr => {
-          console.error("Failed to load studio replay", Sr), rr || fr({
+        })).catch((Od => {
+          console.error("Failed to load studio replay", Od), dd || hd({
             status: "error",
-            message: (0, Xr.m)(Sr, jr("studio:replayLoadFailed"))
+            message: (0, sd.m)(Od, Xd("studio:replayLoadFailed"))
           })
         })), () => {
-          rr = !0
+          dd = !0
         }
-      }), [Sr, Qr, Er]), "loading" === Ir.status ? (0, hr.jsx)("div", {
+      }), [Od, md, vd]), "loading" === Kd.status ? (0, yd.jsx)("div", {
         className: "StudioReplaysMessage",
-        children: (0, hr.jsx)(Or.c, {})
-      }) : "preparing" === Ir.status ? (0, hr.jsxs)("div", {
+        children: (0, yd.jsx)(xd.c, {})
+      }) : "preparing" === Kd.status ? (0, yd.jsxs)("div", {
         className: "StudioReplaysMessage",
-        children: [(0, hr.jsx)(Or.c, {}), jr("studio:replayPreparing")]
-      }) : "error" === Ir.status ? (0, hr.jsxs)("div", {
+        children: [(0, yd.jsx)(xd.c, {}), Xd("studio:replayPreparing")]
+      }) : "error" === Kd.status ? (0, yd.jsxs)("div", {
         className: "StudioReplaysMessage",
-        children: [Ir.message, (0, hr.jsx)(Lr.U, {
+        children: [Kd.message, (0, yd.jsx)(Bd.S, {
           onClick: () => {
-            pr((rr => rr + 1))
+            Qd((dd => dd + 1))
           },
-          children: jr("general:tryAgain")
+          children: Xd("general:tryAgain")
         })]
-      }) : (0, hr.jsx)(nQ, {
+      }) : (0, yd.jsx)(wm, {
         className: "StudioReplayPlayer",
-        data: Ir.value,
-        labels: xr,
-        options: mr,
-        autoPlay: ar || Er > 0
+        data: Kd.value,
+        labels: td,
+        options: od,
+        autoPlay: Rd || vd > 0
       })
     }
 
-    function BQ(rr) {
+    function Um(dd) {
       let {
-        onPlay: Sr
-      } = rr;
+        onPlay: Od
+      } = dd;
       const {
-        t: Qr
-      } = (0, Tr.E)();
-      return (0, hr.jsx)("button", {
+        t: md
+      } = (0, Jd.G)();
+      return (0, yd.jsx)("button", {
         type: "button",
         className: "StudioReplayPlaceholder",
-        "aria-label": Qr("general:play"),
-        onClick: Sr,
-        children: (0, hr.jsx)("span", {
+        "aria-label": md("general:play"),
+        onClick: Od,
+        children: (0, yd.jsx)("span", {
           className: "StudioReplayPlaceholderPlay",
-          children: (0, hr.jsx)(lr.c, {
+          children: (0, yd.jsx)(Sd.c, {
             name: "play"
           })
         })
       })
     }
-    const TQ = Xr.M.replay,
-      vQ = Xr.M.filters,
-      OQ = Xr.M.endedAt,
-      LQ = {
+    const xm = sd.S.replay,
+      Bm = sd.S.filters,
+      Sm = sd.S.endedAt,
+      sm = {
         newPlayers: "studio:replaysFilterNewPlayers",
         quickQuits: "studio:replaysFilterQuickQuits",
         neverMoved: "studio:replaysFilterNeverMoved",
@@ -2420,7 +2420,7 @@ export const modules = {
         chromebooks: "studio:replaysFilterChromebooks",
         errors: "studio:replaysFilterErrors"
       },
-      lQ = {
+      um = {
         mobile: "studio:replayTagMobile",
         tablet: "studio:replayTagTablet",
         chromebook: "studio:replayTagChromebook",
@@ -2433,204 +2433,204 @@ export const modules = {
         error: "studio:replayTagError"
       };
 
-    function XQ(rr) {
+    function Vm(dd) {
       let {
-        item: Sr,
-        selected: Qr,
-        onSelect: Zr
-      } = rr;
+        item: Od,
+        selected: md,
+        onSelect: Wd
+      } = dd;
       const {
-        t: Wr
-      } = (0, Tr.E)(), jr = (0, Xr.o)(Sr);
-      return (0, hr.jsxs)("button", {
+        t: Fd
+      } = (0, Jd.G)(), Xd = (0, sd.q)(Od);
+      return (0, yd.jsxs)("button", {
         type: "button",
-        className: ar()("StudioReplayListItem", {
-          StudioReplayListItemSelected: Qr
+        className: Rd()("StudioReplayListItem", {
+          StudioReplayListItemSelected: md
         }),
-        onClick: Zr,
-        children: [(0, hr.jsxs)("div", {
+        onClick: Wd,
+        children: [(0, yd.jsxs)("div", {
           className: "StudioReplayListItemTop",
-          children: [(0, hr.jsx)("span", {
-            children: (0, Xr.i)(Sr.startedAtMs)
-          }), (0, hr.jsx)("span", {
+          children: [(0, yd.jsx)("span", {
+            children: (0, sd.k)(Od.startedAtMs)
+          }), (0, yd.jsx)("span", {
             className: "StudioReplayListItemDuration",
-            children: Yr(Sr.inGameDurationMs)
+            children: Td(Od.inGameDurationMs)
           })]
-        }), jr.length > 0 && (0, hr.jsx)("div", {
+        }), Xd.length > 0 && (0, yd.jsx)("div", {
           className: "StudioReplayListItemTags",
-          children: jr.map((rr => (0, hr.jsx)("span", {
-            className: ar()("StudioReplayTag", `StudioReplayTag-${rr}`),
-            children: Wr(lQ[rr])
-          }, rr)))
+          children: Xd.map((dd => (0, yd.jsx)("span", {
+            className: Rd()("StudioReplayTag", `StudioReplayTag-${dd}`),
+            children: Fd(um[dd])
+          }, dd)))
         })]
       })
     }
 
-    function PQ(rr) {
+    function im(dd) {
       let {
-        gameAnalyticsId: Sr,
-        userContext: Qr,
-        availability: Zr
-      } = rr;
+        gameAnalyticsId: Od,
+        userContext: md,
+        availability: Wd
+      } = dd;
       const {
-        t: Wr
-      } = (0, Tr.E)();
-      return "on" === Zr ? (0, hr.jsx)(HQ, {
-        gameAnalyticsId: Sr,
-        userContext: Qr
-      }) : "failed" === Zr ? (0, hr.jsxs)("div", {
+        t: Fd
+      } = (0, Jd.G)();
+      return "on" === Wd ? (0, yd.jsx)(Am, {
+        gameAnalyticsId: Od,
+        userContext: md
+      }) : "failed" === Wd ? (0, yd.jsxs)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: [(0, hr.jsx)(lr.c, {
+        children: [(0, yd.jsx)(Sd.c, {
           name: "face-dizzy"
-        }), Wr("studio:replaysStartFailed"), (0, hr.jsx)(Lr.U, {
+        }), Fd("studio:replaysStartFailed"), (0, yd.jsx)(Bd.S, {
           onClick: () => {
-            Br.e.startNow()
+            Ed.c.startNow()
           },
-          children: Wr("general:tryAgain")
+          children: Fd("general:tryAgain")
         })]
-      }) : (0, hr.jsx)("div", {
+      }) : (0, yd.jsx)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: (0, hr.jsx)(Or.c, {})
+        children: (0, yd.jsx)(xd.c, {})
       })
     }
 
-    function HQ(rr) {
-      var Sr, Qr;
+    function Am(dd) {
+      var Od, md;
       let {
-        gameAnalyticsId: Wr,
-        userContext: jr
-      } = rr;
+        gameAnalyticsId: Fd,
+        userContext: Xd
+      } = dd;
       const {
-        t: Ir
-      } = (0, Tr.E)(), fr = function(rr, Sr) {
+        t: Kd
+      } = (0, Jd.G)(), hd = function(dd, Od) {
         const {
-          t: Qr
-        } = (0, Tr.E)(), [Wr, ar] = (0, Zr.useState)({
+          t: md
+        } = (0, Jd.G)(), [Fd, Rd] = (0, Wd.useState)({
           status: "loading"
         });
-        return (0, Zr.useEffect)((() => {
-          let Zr = !1;
-          return ar({
+        return (0, Wd.useEffect)((() => {
+          let Wd = !1;
+          return Rd({
             status: "loading"
-          }), eQ.c.listReplays(Sr, rr).then((rr => {
-            Zr || ar({
+          }), am.b.listReplays(Od, dd).then((dd => {
+            Wd || Rd({
               status: "loaded",
-              value: rr
+              value: dd
             })
-          })).catch((rr => {
-            console.error("Failed to list studio replays", rr), Zr || ar({
+          })).catch((dd => {
+            console.error("Failed to list studio replays", dd), Wd || Rd({
               status: "error",
-              message: (0, Xr.m)(rr, Qr("studio:replaysLoadFailed"))
+              message: (0, sd.m)(dd, md("studio:replaysLoadFailed"))
             })
           })), () => {
-            Zr = !0
+            Wd = !0
           }
-        }), [rr]), Wr
-      }(Wr, jr), [Er, pr] = (0, vr.m)(), xr = (0, Xr.I)(Er.get(vQ)), mr = (0, Xr.F)(Er.get(OQ)), Nr = Er.get(TQ), Ur = "loaded" === fr.status ? (0, Xr.d)(fr.value.recordings, xr, mr) : [], tr = "loaded" === fr.status ? (0, Xr.O)(fr.value.recordings, Ur, Nr) : [], zr = null !== (Sr = null !== Nr && void 0 !== Nr ? Nr : null === (Qr = tr[0]) || void 0 === Qr ? void 0 : Qr.recordingId) && void 0 !== Sr ? Sr : null, [Yr, nr] = (0, Zr.useState)(Nr), [er, Kr] = (0, Zr.useState)(!1), yr = (0, Zr.useRef)(null), Br = (0, Zr.useRef)(null !== Nr), Hr = (0, Zr.useRef)(null);
+        }), [dd]), Fd
+      }(Fd, Xd), [vd, Qd] = (0, Ud.k)(), td = (0, sd.M)(vd.get(Bm)), od = (0, sd.I)(vd.get(Sm)), Nd = vd.get(xm), qd = "loaded" === hd.status ? (0, sd.b)(hd.value.recordings, td, od) : [], Hd = "loaded" === hd.status ? (0, sd.T)(hd.value.recordings, qd, Nd) : [], bd = null !== (Od = null !== Nd && void 0 !== Nd ? Nd : null === (md = Hd[0]) || void 0 === md ? void 0 : md.recordingId) && void 0 !== Od ? Od : null, [Td, pd] = (0, Wd.useState)(Nd), [Yd, gd] = (0, Wd.useState)(!1), wd = (0, Wd.useRef)(null), Ed = (0, Wd.useRef)(null !== Nd), Vd = (0, Wd.useRef)(null);
 
-      function qr(rr) {
-        rr === Yr && rr === zr || (Hr.current = null, Br.current = !0, Kr(!0), nr(rr), pr((Sr => {
-          (0, vr.g)(Sr, TQ, rr)
+      function Ad(dd) {
+        dd === Td && dd === bd || (Vd.current = null, Ed.current = !0, gd(!0), pd(dd), Qd((Od => {
+          (0, Ud.g)(Od, xm, dd)
         }), {
           push: !0
         }))
       }
 
-      function Rr(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        zr !== Yr && (Hr.current = zr), pr((Qr => {
-          (0, vr.g)(Qr, TQ, zr), (0, vr.g)(Qr, vQ, (0, Xr.h)(rr)), Sr && (0, vr.g)(Qr, OQ, null)
+      function rd(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        bd !== Td && (Vd.current = bd), Qd((md => {
+          (0, Ud.g)(md, xm, bd), (0, Ud.g)(md, Bm, (0, sd.g)(dd)), Od && (0, Ud.g)(md, Sm, null)
         }))
       }
-      if ((0, Zr.useEffect)((() => {
-          null !== Nr && Nr !== Hr.current && nr(Nr)
-        }), [Nr]), (0, Zr.useEffect)((() => {
-          Br.current && null !== yr.current && (Br.current = !1, yr.current.scrollIntoView({
+      if ((0, Wd.useEffect)((() => {
+          null !== Nd && Nd !== Vd.current && pd(Nd)
+        }), [Nd]), (0, Wd.useEffect)((() => {
+          Ed.current && null !== wd.current && (Ed.current = !1, wd.current.scrollIntoView({
             block: "nearest",
             behavior: "smooth"
           }))
-        }), [Yr, fr.status]), "loading" === fr.status) return (0, hr.jsx)("div", {
+        }), [Td, hd.status]), "loading" === hd.status) return (0, yd.jsx)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: (0, hr.jsx)(Or.c, {})
+        children: (0, yd.jsx)(xd.c, {})
       });
-      if ("error" === fr.status) return (0, hr.jsxs)("div", {
+      if ("error" === hd.status) return (0, yd.jsxs)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: [(0, hr.jsx)(lr.c, {
+        children: [(0, yd.jsx)(Sd.c, {
           name: "face-dizzy"
-        }), fr.message]
+        }), hd.message]
       });
       const {
-        recordings: gr,
-        dailyQuota: Cr
-      } = fr.value;
-      if (0 === gr.length) return (0, hr.jsxs)("div", {
+        recordings: Gd,
+        dailyQuota: nd
+      } = hd.value;
+      if (0 === Gd.length) return (0, yd.jsxs)("div", {
         className: "StudioReplaysTab StudioReplaysMessage",
-        children: [(0, hr.jsx)(lr.c, {
+        children: [(0, yd.jsx)(Sd.c, {
           name: "video"
-        }), Ir(0 === Cr ? "studio:replaysOff" : "studio:replaysEmpty")]
+        }), Kd(0 === nd ? "studio:replaysOff" : "studio:replaysEmpty")]
       });
-      const Mr = Xr.J.filter((rr => gr.some((Sr => (0, Xr.D)(Sr, rr))))),
-        Gr = zr !== Yr;
-      return (0, hr.jsxs)("div", {
+      const Ld = sd.O.filter((dd => Gd.some((Od => (0, sd.G)(Od, dd))))),
+        Pd = bd !== Td;
+      return (0, yd.jsxs)("div", {
         className: "StudioReplaysTab",
-        children: [(0, hr.jsxs)("div", {
+        children: [(0, yd.jsxs)("div", {
           className: "StudioReplaysToolbar",
-          children: [null !== mr && (0, hr.jsxs)(Lr.U, {
+          children: [null !== od && (0, yd.jsxs)(Bd.S, {
             active: !0,
             onClick: () => {
-              Rr(xr, !0)
+              rd(td, !0)
             },
-            children: [Ir("studio:replaysFilterEndedAt", {
-              minutes: (0, Pr.y)(mr.minute, mr.orLonger ? mr.minute : 1 / 0)
-            }), (0, hr.jsx)(lr.c, {
+            children: [Kd("studio:replaysFilterEndedAt", {
+              minutes: (0, ud.w)(od.minute, od.orLonger ? od.minute : 1 / 0)
+            }), (0, yd.jsx)(Sd.c, {
               name: "xmark"
             })]
-          }), Mr.map((rr => (0, hr.jsx)(Lr.U, {
-            active: xr.includes(rr),
+          }), Ld.map((dd => (0, yd.jsx)(Bd.S, {
+            active: td.includes(dd),
             onClick: () => {
-              ! function(rr) {
-                Rr(xr.includes(rr) ? xr.filter((Sr => Sr !== rr)) : [...xr, rr])
-              }(rr)
+              ! function(dd) {
+                rd(td.includes(dd) ? td.filter((Od => Od !== dd)) : [...td, dd])
+              }(dd)
             },
-            children: Ir(LQ[rr])
-          }, rr))), Cr > 0 && (0, hr.jsx)("span", {
+            children: Kd(sm[dd])
+          }, dd))), nd > 0 && (0, yd.jsx)("span", {
             className: "StudioReplaysQuota",
-            children: Ir("studio:replaysQuota", {
-              count: Cr
+            children: Kd("studio:replaysQuota", {
+              count: nd
             })
           })]
-        }), (0, hr.jsxs)("div", {
+        }), (0, yd.jsxs)("div", {
           className: "StudioReplaysBody",
-          children: [(0, hr.jsxs)("div", {
+          children: [(0, yd.jsxs)("div", {
             className: "StudioReplaysList",
-            children: [0 === Ur.length && (0, hr.jsxs)("div", {
+            children: [0 === qd.length && (0, yd.jsxs)("div", {
               className: "StudioReplaysListEmpty",
-              children: [Ir("studio:replaysNoMatch"), (0, hr.jsx)(Lr.U, {
+              children: [Kd("studio:replaysNoMatch"), (0, yd.jsx)(Bd.S, {
                 onClick: () => {
-                  Rr([], !0)
+                  rd([], !0)
                 },
-                children: Ir("studio:replaysClearFilters")
+                children: Kd("studio:replaysClearFilters")
               })]
-            }), tr.map((rr => (0, hr.jsx)(XQ, {
-              item: rr,
-              selected: rr.recordingId === zr,
+            }), Hd.map((dd => (0, yd.jsx)(Vm, {
+              item: dd,
+              selected: dd.recordingId === bd,
               onSelect: () => {
-                qr(rr.recordingId)
+                Ad(dd.recordingId)
               }
-            }, rr.recordingId)))]
-          }), null !== zr && (0, hr.jsxs)("div", {
-            ref: yr,
-            className: ar()("StudioReplayViewer", {
-              StudioReplayViewerWaiting: Gr
+            }, dd.recordingId)))]
+          }), null !== bd && (0, yd.jsxs)("div", {
+            ref: wd,
+            className: Rd()("StudioReplayViewer", {
+              StudioReplayViewerWaiting: Pd
             }),
-            children: [!Gr && (0, hr.jsx)(yQ, {
-              gameAnalyticsId: Wr,
-              recordingId: zr,
-              userContext: jr,
-              autoPlay: er
-            }, zr), Gr && (0, hr.jsx)(BQ, {
+            children: [!Pd && (0, yd.jsx)(Jm, {
+              gameAnalyticsId: Fd,
+              recordingId: bd,
+              userContext: Xd,
+              autoPlay: Yd
+            }, bd), Pd && (0, yd.jsx)(Um, {
               onPlay: () => {
-                qr(zr)
+                Ad(bd)
               }
             })]
           })]
@@ -2640,4 +2640,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

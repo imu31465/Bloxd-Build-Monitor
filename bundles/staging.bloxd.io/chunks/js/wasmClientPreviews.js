@@ -1,462 +1,462 @@
 export const id = 72;
 export const ids = [72];
 export const modules = {
-  40728: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return void 0 === rr ? void 0 : [rr[0], rr[1], rr[2]]
+  40756: (dd, Od, md) => {
+    function Wd(dd) {
+      return void 0 === dd ? void 0 : [dd[0], dd[1], dd[2]]
     }
 
-    function Wr(rr) {
-      const Sr = rr.particles;
+    function Fd(dd) {
+      const Od = dd.particles;
       return {
         opts: {
-          texture: Sr.texture,
-          sx: Sr.sx,
-          minLifeTime: Sr.minLifeTime,
-          maxLifeTime: Sr.maxLifeTime,
-          minSize: Sr.minSize,
-          maxSize: Sr.maxSize,
-          minEmitPower: Sr.minEmitPower,
-          maxEmitPower: Sr.maxEmitPower,
-          emitRate: Sr.emitRate,
-          gravity: Zr(Sr.gravity),
-          dir1: Zr(Sr.dir1),
-          dir2: Zr(Sr.dir2),
-          colorGradients: Sr.colorGradients,
-          blendMode: Sr.blendMode
+          texture: Od.texture,
+          Mt: Od.Mt,
+          minLifeTime: Od.minLifeTime,
+          maxLifeTime: Od.maxLifeTime,
+          minSize: Od.minSize,
+          maxSize: Od.maxSize,
+          minEmitPower: Od.minEmitPower,
+          maxEmitPower: Od.maxEmitPower,
+          emitRate: Od.emitRate,
+          gravity: Wd(Od.gravity),
+          dir1: Wd(Od.dir1),
+          dir2: Wd(Od.dir2),
+          colorGradients: Od.colorGradients,
+          blendMode: Od.blendMode
         },
-        half: [Sr.width / 2, Sr.height / 2, Sr.depth / 2]
+        half: [Od.width / 2, Od.height / 2, Od.depth / 2]
       }
     }
-    Qr.d(Sr, {
-      e: () => Wr
+    md.d(Od, {
+      d: () => Fd
     })
   },
-  40699: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar,
-      h: () => Er,
-      i: () => fr,
-      l: () => jr
+  40721: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Rd,
+      i: () => vd,
+      j: () => hd,
+      k: () => Xd
     });
-    var Zr = Qr(215);
-    const Wr = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
-      ar = "PetRoot";
-    let jr = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
-      Ir = Wr;
+    var Wd = md(231);
+    const Fd = JSON.parse('{"aura_snowfall":{"offset":[0,2.6,0],"ownInFirstPerson":true,"particles":{"blendMode":1,"capacity":64,"colorGradients":[{"minColor":[255,255,255,0.9],"timeFraction":0},{"minColor":[255,255,255,0],"timeFraction":1}],"depth":3,"dir1":[-0.2,-1,-0.2],"dir2":[0.2,-1,0.2],"emitRate":12,"gravity":[0,-1.5,0],"height":0.2,"maxEmitPower":0.6,"maxLifeTime":2.5,"maxSize":0.15,"minEmitPower":0.3,"minLifeTime":1.5,"minSize":0.08,"texture":"snowflake","width":3}}}'),
+      Rd = "PetRoot";
+    let Xd = JSON.parse('{"pet_reindeer":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0},"pet_reindeer2":{"bobAmplitude":0.08,"bobHz":0.8,"clips":{"fly":"animation.cosmetic.pet_reindeer_fly","land":"animation.cosmetic.pet_reindeer_fly","perch":"animation.cosmetic.pet_reindeer_sit","takeOff":"animation.cosmetic.pet_reindeer_fly"},"followOffset":[0.9,1.7,-0.2],"followStiffness":8,"model":"pet_reindeer","nametagRaise":0.6,"perchOffset":[0,0.02,0],"scale":0.45,"yawOffset":0}}'),
+      Kd = Fd;
     new Map, new Map;
 
-    function fr(rr) {
-      var Sr;
-      return null !== (Sr = (0, Zr.b)(jr, rr)) && void 0 !== Sr ? Sr : null
+    function hd(dd) {
+      var Od;
+      return null !== (Od = (0, Wd.b)(Xd, dd)) && void 0 !== Od ? Od : null
     }
 
-    function Er(rr) {
-      var Sr;
-      return null !== (Sr = (0, Zr.b)(Ir, rr)) && void 0 !== Sr ? Sr : null
+    function vd(dd) {
+      var Od;
+      return null !== (Od = (0, Wd.b)(Kd, dd)) && void 0 !== Od ? Od : null
     }
   },
-  40197: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Wr,
-      g: () => ar
+  40230: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Fd,
+      h: () => Rd
     });
-    const Zr = new WeakMap;
+    const Wd = new WeakMap;
 
-    function Wr(rr, Sr) {
-      return Zr.set(rr, Sr), rr
+    function Fd(dd, Od) {
+      return Wd.set(dd, Od), dd
     }
 
-    function ar(rr) {
-      var Sr;
-      return null !== (Sr = Zr.get(rr)) && void 0 !== Sr ? Sr : null
+    function Rd(dd) {
+      var Od;
+      return null !== (Od = Wd.get(dd)) && void 0 !== Od ? Od : null
     }
   },
-  43054: (rr, Sr, Qr) => {
-    function Zr(rr, Sr, Qr) {
-      return new Promise((Zr => {
-        const Wr = setTimeout((() => {
-            ar(), Zr(null)
-          }), Qr),
-          ar = Sr((() => {
-            clearTimeout(Wr);
-            const Sr = rr();
-            Zr(null === Sr ? null : function(rr) {
-              if (0 === rr.width || 0 === rr.height) return null;
-              const Sr = document.createElement("canvas");
-              Sr.width = rr.width, Sr.height = rr.height;
-              const Qr = Sr.getContext("2d");
-              return Qr ? (Qr.drawImage(rr, 0, 0), Sr) : null
-            }(Sr))
+  43152: (dd, Od, md) => {
+    function Wd(dd, Od, md) {
+      return new Promise((Wd => {
+        const Fd = setTimeout((() => {
+            Rd(), Wd(null)
+          }), md),
+          Rd = Od((() => {
+            clearTimeout(Fd);
+            const Od = dd();
+            Wd(null === Od ? null : function(dd) {
+              if (0 === dd.width || 0 === dd.height) return null;
+              const Od = document.createElement("canvas");
+              Od.width = dd.width, Od.height = dd.height;
+              const md = Od.getContext("2d");
+              return md ? (md.drawImage(dd, 0, 0), Od) : null
+            }(Od))
           }))
       }))
     }
-    Qr.d(Sr, {
-      b: () => Zr
+    md.d(Od, {
+      b: () => Wd
     })
   },
-  37596: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar
+  37713: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd
     });
-    const Zr = 4e5,
-      Wr = 2;
+    const Wd = 4e5,
+      Fd = 2;
 
-    function ar(rr, Sr, Qr) {
-      let [ar, jr] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [rr, Sr], Ir = Math.min(Number.isFinite(Qr) && Qr > 0 ? Qr : 1, Wr);
-      const fr = Math.max(0, ar, rr) * Math.max(0, jr, Sr) * Ir * Ir;
-      return fr > Zr && (Ir *= Math.sqrt(Zr / fr)), [Math.max(1, Math.floor(Math.max(0, rr) * Ir)), Math.max(1, Math.floor(Math.max(0, Sr) * Ir))]
+    function Rd(dd, Od, md) {
+      let [Rd, Xd] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [dd, Od], Kd = Math.min(Number.isFinite(md) && md > 0 ? md : 1, Fd);
+      const hd = Math.max(0, Rd, dd) * Math.max(0, Xd, Od) * Kd * Kd;
+      return hd > Wd && (Kd *= Math.sqrt(Wd / hd)), [Math.max(1, Math.floor(Math.max(0, dd) * Kd)), Math.max(1, Math.floor(Math.max(0, Od) * Kd))]
     }
   },
-  35490: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Zr,
-      f: () => pr
+  35566: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Wd,
+      g: () => Qd
     });
-    const Zr = .01,
-      Wr = .08,
-      ar = .01,
-      jr = 5,
-      Ir = 100,
-      fr = 40,
-      Er = 800;
+    const Wd = .01,
+      Fd = .08,
+      Rd = .01,
+      Xd = 5,
+      Kd = 100,
+      hd = 40,
+      vd = 800;
 
-    function pr(rr) {
+    function Qd(dd) {
       const {
-        canvas: Sr
-      } = rr;
-      let Qr = null;
-      const pr = rr => {
-          var Zr;
-          Qr = {
-            pointer: rr.pointerId,
-            x: rr.clientX,
-            y: rr.clientY
-          }, null === (Zr = Sr.setPointerCapture) || void 0 === Zr || Zr.call(Sr, rr.pointerId)
+        canvas: Od
+      } = dd;
+      let md = null;
+      const Qd = dd => {
+          var Wd;
+          md = {
+            pointer: dd.pointerId,
+            x: dd.clientX,
+            y: dd.clientY
+          }, null === (Wd = Od.setPointerCapture) || void 0 === Wd || Wd.call(Od, dd.pointerId)
         },
-        xr = Sr => {
-          var Wr;
-          const jr = rr.orbit;
-          if ((null === (Wr = Qr) || void 0 === Wr ? void 0 : Wr.pointer) !== Sr.pointerId || null === jr) return;
-          const Ir = Sr.clientX - Qr.x,
-            fr = Sr.clientY - Qr.y;
-          Qr = {
-            ...Qr,
-            x: Sr.clientX,
-            y: Sr.clientY
-          }, rr.setOrbit({
-            alpha: jr.alpha - Ir * Zr,
-            beta: Math.min(Math.PI - ar, Math.max(ar, jr.beta - fr * Zr)),
-            radius: jr.radius
+        td = Od => {
+          var Fd;
+          const Xd = dd.orbit;
+          if ((null === (Fd = md) || void 0 === Fd ? void 0 : Fd.pointer) !== Od.pointerId || null === Xd) return;
+          const Kd = Od.clientX - md.x,
+            hd = Od.clientY - md.y;
+          md = {
+            ...md,
+            x: Od.clientX,
+            y: Od.clientY
+          }, dd.setOrbit({
+            alpha: Xd.alpha - Kd * Wd,
+            beta: Math.min(Math.PI - Rd, Math.max(Rd, Xd.beta - hd * Wd)),
+            radius: Xd.radius
           })
         },
-        mr = rr => {
-          var Sr;
-          (null === (Sr = Qr) || void 0 === Sr ? void 0 : Sr.pointer) === rr.pointerId && (Qr = null)
+        od = dd => {
+          var Od;
+          (null === (Od = md) || void 0 === Od ? void 0 : Od.pointer) === dd.pointerId && (md = null)
         },
-        Nr = Sr => {
-          const Qr = rr.orbit;
-          if (null === Qr) return;
-          Sr.preventDefault();
-          const Zr = Sr.deltaY * (Sr.deltaMode === WheelEvent.DOM_DELTA_LINE ? fr : Sr.deltaMode === WheelEvent.DOM_DELTA_PAGE ? Er : 1),
-            ar = Math.min(Ir, Math.max(jr, Qr.radius + Zr * Wr));
-          rr.setOrbit({
-            ...Qr,
-            radius: ar
+        Nd = Od => {
+          const md = dd.orbit;
+          if (null === md) return;
+          Od.preventDefault();
+          const Wd = Od.deltaY * (Od.deltaMode === WheelEvent.DOM_DELTA_LINE ? hd : Od.deltaMode === WheelEvent.DOM_DELTA_PAGE ? vd : 1),
+            Rd = Math.min(Kd, Math.max(Xd, md.radius + Wd * Fd));
+          dd.setOrbit({
+            ...md,
+            radius: Rd
           })
         };
-      return Sr.style.touchAction = "none", Sr.addEventListener("pointerdown", pr), Sr.addEventListener("pointermove", xr), Sr.addEventListener("pointerup", mr), Sr.addEventListener("pointercancel", mr), Sr.addEventListener("wheel", Nr, {
+      return Od.style.touchAction = "none", Od.addEventListener("pointerdown", Qd), Od.addEventListener("pointermove", td), Od.addEventListener("pointerup", od), Od.addEventListener("pointercancel", od), Od.addEventListener("wheel", Nd, {
         passive: !1
       }), () => {
-        Sr.removeEventListener("pointerdown", pr), Sr.removeEventListener("pointermove", xr), Sr.removeEventListener("pointerup", mr), Sr.removeEventListener("pointercancel", mr), Sr.removeEventListener("wheel", Nr)
+        Od.removeEventListener("pointerdown", Qd), Od.removeEventListener("pointermove", td), Od.removeEventListener("pointerup", od), Od.removeEventListener("pointercancel", od), Od.removeEventListener("wheel", Nd)
       }
     }
   },
-  45305: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      WasmPreviewHost: () => GS,
-      pageBuiltInAnimationPack: () => mr,
-      pagePreviews: () => IS,
-      previewModule: () => ur
+  45347: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      WasmPreviewHost: () => PO,
+      pageBuiltInAnimationPack: () => od,
+      pagePreviews: () => vO,
+      previewModule: () => OO
     });
-    var Zr = Qr(2398),
-      Wr = Qr(692);
-    const ar = "[bloxd-wasm-client]";
+    var Wd = md(2425),
+      Fd = md(708);
+    const Rd = "[bloxd-wasm-client]";
 
-    function jr(rr) {
-      const Sr = {
+    function Xd(dd) {
+      const Od = {
         wasm: "unknown",
-        client: String(Wr.e)
+        client: String(Fd.c)
       };
       try {
-        var Qr;
-        Sr.wasm = null !== (Qr = null === rr || void 0 === rr ? void 0 : rr.bx()) && void 0 !== Qr ? Qr : Sr.wasm
+        var md;
+        Od.wasm = null !== (md = null === dd || void 0 === dd ? void 0 : dd.Zt()) && void 0 !== md ? md : Od.wasm
       } catch {}
-      return Sr
+      return Od
     }
-    async function Ir(rr) {
-      if (rr.length < 2 || 31 !== rr[0] || 139 !== rr[1]) return rr;
+    async function Kd(dd) {
+      if (dd.length < 2 || 31 !== dd[0] || 139 !== dd[1]) return dd;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: Sr
-        } = await Promise.resolve().then((() => Qr(3926)));
-        return Sr(rr)
+          ungzip: Od
+        } = await Promise.resolve().then((() => md(3914)));
+        return Od(dd)
       }
-      const Sr = new Blob([rr]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(Sr).arrayBuffer())
+      const Od = new Blob([dd]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(Od).arrayBuffer())
     }
 
-    function fr(rr, Sr, Zr, Wr) {
-      Promise.resolve().then((() => Qr(42607))).then((Qr => {
+    function hd(dd, Od, Wd, Fd) {
+      Promise.resolve().then((() => md(42709))).then((md => {
         let {
-          reportDataLoadFailure: ar
-        } = Qr;
-        ar(rr, Sr, Zr, Wr)
-      }), (Sr => {
-        console.warn(`${ar} ${rr} didn't load, and the report couldn't be sent`, Zr.error, Sr)
+          reportDataLoadFailure: Rd
+        } = md;
+        Rd(dd, Od, Wd, Fd)
+      }), (Od => {
+        console.warn(`${Rd} ${dd} didn't load, and the report couldn't be sent`, Wd.error, Od)
       }))
     }
-    const Er = [3e4, 12e4, 3e5];
-    class pr {
-      constructor(rr) {
-        this.deps = rr, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((rr => {
-          this.resolveSet = rr
+    const vd = [3e4, 12e4, 3e5];
+    class Qd {
+      constructor(dd) {
+        this.deps = dd, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((dd => {
+          this.resolveSet = dd
         }))
       }
-      provide(rr) {
-        return this.loading ??= this.load(rr), this.loading
+      provide(dd) {
+        return this.loading ??= this.load(dd), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(rr) {
-        const Sr = jr(rr),
-          Qr = await async function(rr, Sr) {
-            let Qr;
+      async load(dd) {
+        const Od = Xd(dd),
+          md = await async function(dd, Od) {
+            let md;
             try {
-              Qr = await rr()
-            } catch (Zr) {
+              md = await dd()
+            } catch (Wd) {
               return {
                 stage: "fetch",
-                error: Zr
+                error: Wd
               }
             }
             try {
-              return Sr(Qr) ? null : {
+              return Od(md) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (Zr) {
+            } catch (Wd) {
               return {
                 stage: "decode",
-                error: Zr
+                error: Wd
               }
             }
-          }((() => this.deps.fetch()), (Sr => {
-            const Qr = rr.dZr(Sr);
-            return Qr && this.resolveSet(Sr), Qr
+          }((() => this.deps.fetch()), (Od => {
+            const md = dd.xFd(Od);
+            return md && this.resolveSet(Od), md
           }));
-        if (null !== Qr) {
-          if ("fetch" === Qr.stage) {
+        if (null !== md) {
+          if ("fetch" === md.stage) {
             this.loading = null;
-            const Sr = Er[this.retries++];
-            void 0 !== Sr && this.deps.later((() => {
-              this.provide(rr)
-            }), Sr)
+            const Od = vd[this.retries++];
+            void 0 !== Od && this.deps.later((() => {
+              this.provide(dd)
+            }), Od)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(Qr, Sr))
+          this.reported || (this.reported = !0, this.deps.onFailed(md, Od))
         }
       }
     }
-    let xr = null;
+    let td = null;
 
-    function mr() {
-      return xr ??= new pr({
-        fetch: async () => Ir(await (0, Zr.K)(Nr(), {
+    function od() {
+      return td ??= new Qd({
+        fetch: async () => Kd(await (0, Wd.J)(Nd(), {
           priority: "low"
         })),
-        onFailed: (rr, Sr) => {
-          fr("builtInAnimations", Nr(), rr, Sr)
+        onFailed: (dd, Od) => {
+          hd("builtInAnimations", Nd(), dd, Od)
         },
-        later: (rr, Sr) => {
-          setTimeout(rr, Sr)
+        later: (dd, Od) => {
+          setTimeout(dd, Od)
         }
-      }), xr
+      }), td
     }
 
-    function Nr() {
-      return Qr(45314)
+    function Nd() {
+      return md(45350)
     }
-    var Ur = Qr(2396),
-      tr = Qr(1262),
-      hr = Qr(351),
-      zr = Qr(345),
-      Yr = Qr(712),
-      nr = Qr(5610),
-      er = Qr(42559),
-      Kr = Qr(42585),
-      yr = Qr(42805),
-      Br = (Qr(42589), Qr(37587)),
-      Tr = Qr(42680),
-      vr = Qr(42684),
-      Or = Qr(42691),
-      Lr = Qr(42574),
-      lr = Qr(42820),
-      Xr = Qr(42827),
-      Pr = Qr(42598),
-      Hr = Qr(42715),
-      qr = Qr(42746),
-      Rr = Qr(42707),
-      gr = Qr(42753),
-      Cr = Qr(42816),
-      Mr = Qr(37604),
-      Gr = Qr(37529),
-      kr = Qr(2393),
-      Ar = Qr(37596);
-    const Vr = "[bloxd-previews]",
-      ir = 0,
-      wr = 1,
-      cr = 2,
-      Fr = 3,
-      or = 1,
-      br = 2,
-      Jr = 3,
-      Dr = 0,
-      dr = 1,
-      sr = 2;
+    var qd = md(2421),
+      Hd = md(1253),
+      yd = md(382),
+      bd = md(373),
+      Td = md(732),
+      pd = md(5568),
+      Yd = md(42658),
+      gd = md(42677),
+      wd = md(42923),
+      Ed = (md(42685), md(37709)),
+      Jd = md(42772),
+      Ud = md(42779),
+      xd = md(42788),
+      Bd = md(42663),
+      Sd = md(42938),
+      sd = md(42946),
+      ud = md(42693),
+      Vd = md(42811),
+      Ad = md(42849),
+      rd = md(42807),
+      Gd = md(42861),
+      nd = md(42929),
+      Ld = md(37722),
+      Pd = md(37659),
+      zd = md(2414),
+      cd = md(37713);
+    const jd = "[bloxd-previews]",
+      Dd = 0,
+      ed = 1,
+      Id = 2,
+      ld = 3,
+      Cd = 1,
+      Zd = 2,
+      kd = 3,
+      fd = 0,
+      Md = 1,
+      dO = 2;
 
-    function ur(rr) {
-      const Sr = rr,
-        Qr = (0, er.T)(rr),
-        Zr = (0, er.n)(rr);
-      return null !== Qr && null !== Zr && "function" === typeof Sr.sZr && "function" === typeof Sr.uZr && "function" === typeof Sr.rWr && "function" === typeof Sr.uR ? Sr : null
+    function OO(dd) {
+      const Od = dd,
+        md = (0, Yd.S)(dd),
+        Wd = (0, Yd.l)(dd);
+      return null !== md && null !== Wd && "function" === typeof Od.BFd && "function" === typeof Od.SFd && "function" === typeof Od.sFd && "function" === typeof Od.qV ? Od : null
     }
 
-    function rS() {
-      return Qr(45323)
+    function mO() {
+      return md(45358)
     }
-    async function SS(rr, Sr, Zr) {
-      var Wr;
-      let ar = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === rr && (0, Pr.s)();
-      const Ir = await (0, Pr.H)();
-      if (null === Ir || (0, er.p)(Ir) || (0, Pr.d)()) return;
-      const fr = "webgpu" === Ir.backend;
-      if (!fr && "lost" !== rr) return;
-      const Er = fr && (0, zr.p)(Ir.adapter, null !== Zr && void 0 !== Zr ? Zr : null, "lost" === rr, ar),
-        pr = null !== (Wr = "lost" === rr ? (0, Kr.j)((0, Ur.R)() ? (0, er.T)((0, Ur.z)()) : null) : void 0) && void 0 !== Wr ? Wr : Sr,
-        xr = fr ? (0, er.gb)(rr, void 0, (0, Kr.b)(pr)) : (0, Yr.w)() ? null : Yr.i;
-      if (null === xr) {
-        (0, Pr.l)();
+    async function WO(dd, Od, Wd) {
+      var Fd;
+      let Rd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === dd && (0, ud.w)();
+      const Kd = await (0, ud.J)();
+      if (null === Kd || (0, Yd.p)(Kd) || (0, ud.b)()) return;
+      const hd = "webgpu" === Kd.backend;
+      if (!hd && "lost" !== dd) return;
+      const vd = hd && (0, bd.k)(Kd.adapter, null !== Wd && void 0 !== Wd ? Wd : null, "lost" === dd, Rd),
+        Qd = null !== (Fd = "lost" === dd ? (0, gd.k)((0, qd.P)() ? (0, Yd.S)((0, qd.A)()) : null) : void 0) && void 0 !== Fd ? Fd : Od,
+        td = hd ? (0, Yd.$)(dd, void 0, (0, gd.c)(Qd)) : (0, Td.r)() ? null : Td.f;
+      if (null === td) {
+        (0, ud.r)();
         try {
-          await async function(rr, Sr, Zr, Wr, ar) {
+          await async function(dd, Od, Wd, Fd, Rd) {
             let {
-              restoreLost: Ir,
-              adapterRemembered: fr
-            } = ar;
-            const Er = (0, Ur.R)(),
+              restoreLost: Kd,
+              adapterRemembered: hd
+            } = Rd;
+            const vd = (0, qd.P)(),
               {
-                flushCrashReports: pr,
-                reportRenderReload: xr
-              } = await Promise.resolve().then((() => Qr(42607)));
-            xr(rr.backend, Wr, jr(Er ? (0, Ur.z)() : null), {
+                flushCrashReports: Qd,
+                reportRenderReload: td
+              } = await Promise.resolve().then((() => md(42709)));
+            td(dd.backend, Fd, Xd(vd ? (0, qd.A)() : null), {
               from: "home",
-              cause: Sr,
-              restoreLost: Ir,
-              adapterRemembered: fr,
-              ...QS(rr, Sr, Zr)
-            }), await pr(qr.c)
-          }(Ir, rr, pr, null !== Zr && void 0 !== Zr ? Zr : "start_failed" === rr ? 0 : 1, {
-            restoreLost: ar,
-            adapterRemembered: Er
+              cause: Od,
+              restoreLost: Kd,
+              adapterRemembered: hd,
+              ...FO(dd, Od, Wd)
+            }), await Qd(Ad.e)
+          }(Kd, dd, Qd, null !== Wd && void 0 !== Wd ? Wd : "start_failed" === dd ? 0 : 1, {
+            restoreLost: Rd,
+            adapterRemembered: vd
           })
-        } catch (Nr) {
-          console.warn(`${Vr} ${Ir.backend} failed at home (${rr}), and its report couldn't be sent`, Nr)
-        }(0, qr.h)()
+        } catch (Nd) {
+          console.warn(`${jd} ${Kd.backend} failed at home (${dd}), and its report couldn't be sent`, Nd)
+        }(0, Ad.k)()
       } else {
-        var mr;
-        const Sr = QS(Ir, rr, pr),
-          Zr = `${fr?"WebGPU":"WebGL"} failed at home (${rr}${void 0===Sr.error?"":`: ${Sr.error instanceof Error?Sr.error.message:(0,Gr.l)(Sr.error)}`}) and ${xr}`;
-        console.warn(`${Vr} ${Zr}: the previews stop`, null !== (mr = Sr.error) && void 0 !== mr ? mr : ""), (0, Pr.o)({
-          why: Zr,
-          webgpu: fr
+        var od;
+        const Od = FO(Kd, dd, Qd),
+          Wd = `${hd?"WebGPU":"WebGL"} failed at home (${dd}${void 0===Od.error?"":`: ${Od.error instanceof Error?Od.error.message:(0,Pd.h)(Od.error)}`}) and ${td}`;
+        console.warn(`${jd} ${Wd}: the previews stop`, null !== (od = Od.error) && void 0 !== od ? od : ""), (0, ud.s)({
+          why: Wd,
+          webgpu: hd
         });
         try {
           const {
-            countRenderLost: Zr
-          } = await Promise.resolve().then((() => Qr(42607)));
-          Zr(rr, Sr.error, Sr.context)
-        } catch (tr) {
-          console.warn(`${Vr} ${Ir.backend} failed at home (${rr}), and its count couldn't be sent`, tr)
+            countRenderLost: Wd
+          } = await Promise.resolve().then((() => md(42709)));
+          Wd(dd, Od.error, Od.context)
+        } catch (Hd) {
+          console.warn(`${jd} ${Kd.backend} failed at home (${dd}), and its count couldn't be sent`, Hd)
         }
       }
     }
 
-    function QS(rr, Sr, Qr) {
+    function FO(dd, Od, md) {
       let {
-        adapter: Zr
-      } = rr;
+        adapter: Wd
+      } = dd;
       return {
-        error: Qr,
+        error: md,
         context: {
-          adapter: Zr,
-          boundAtMs: "start_failed" === Sr ? null : (0, Pr.D)(),
-          indirectHangs: (0, Pr.t)(),
-          restoresSkipped: (0, Pr.F)()
+          adapter: Wd,
+          boundAtMs: "start_failed" === Od ? null : (0, ud.H)(),
+          indirectHangs: (0, ud.z)(),
+          restoresSkipped: (0, ud.I)()
         }
       }
     }
-    async function ZS(rr) {
-      if (!(0, Ur.R)()) {
-        await (null === rr || void 0 === rr ? void 0 : rr("renderer pick", {
+    async function RO(dd) {
+      if (!(0, qd.P)()) {
+        await (null === dd || void 0 === dd ? void 0 : dd("renderer pick", {
           longStep: !0
         }));
-        const Sr = await (0, Pr.H)();
-        if (null === Sr || (0, er.p)(Sr)) return null;
-        const Qr = await Sr.load();
-        if (await (null === rr || void 0 === rr ? void 0 : rr("renderer instantiation", {
+        const Od = await (0, ud.J)();
+        if (null === Od || (0, Yd.p)(Od)) return null;
+        const md = await Od.load();
+        if (await (null === dd || void 0 === dd ? void 0 : dd("renderer instantiation", {
             longStep: !0
-          })), await (0, Hr.e)(Qr), !(0, Ur.R)()) return null
+          })), await (0, Vd.d)(md), !(0, qd.P)()) return null
       }
-      return ur((0, Ur.z)())
+      return OO((0, qd.A)())
     }
-    class WS {
-      constructor(rr, Sr, Qr, Zr, Wr, ar) {
-        this.page = rr, this.host = Sr, this.id = Qr, this.canvas = Zr, this.size = Wr, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const jr = {
-            ...ar.images,
-            glbUrl: rr => {
-              var Sr;
-              return null !== (Sr = this.models.drawnUrl(rr)) && void 0 !== Sr ? Sr : ar.images.glbUrl(rr)
+    class XO {
+      constructor(dd, Od, md, Wd, Fd, Rd) {
+        this.page = dd, this.host = Od, this.id = md, this.canvas = Wd, this.size = Fd, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const Xd = {
+            ...Rd.images,
+            glbUrl: dd => {
+              var Od;
+              return null !== (Od = this.models.drawnUrl(dd)) && void 0 !== Od ? Od : Rd.images.glbUrl(dd)
             }
           },
-          Ir = Sr => rr.modelFile(Sr);
-        this.images = new yr.g(jr, (rr => {
-          console.warn(`${Vr} image ${rr.key.kind}:${rr.key.index}:${rr.key.word} failed`, rr.error)
+          Kd = Od => dd.modelFile(Od);
+        this.images = new wd.e(Xd, (dd => {
+          console.warn(`${jd} image ${dd.key.kind}:${dd.key.index}:${dd.key.word} failed`, dd.error)
         }), {
-          fetchFile: Ir,
-          fetchImage: Sr => rr.imageFile(Sr)
-        }), rr.startModels(), this.models = new Tr.j(ar.files, ((Sr, Qr) => rr.buildModel(Sr, Qr)), (rr => {
-          console.warn(`${Vr} model file ${rr.file} (${rr.url}) failed`, rr.error)
+          fetchFile: Kd,
+          fetchImage: Od => dd.imageFile(Od)
+        }), dd.startModels(), this.models = new Jd.h(Rd.files, ((Od, md) => dd.buildModel(Od, md)), (dd => {
+          console.warn(`${jd} model file ${dd.file} (${dd.url}) failed`, dd.error)
         }), {
-          fetchFile: Ir,
-          onWritten: (rr, Sr) => {
-            this.images.glbWritten(rr, Sr)
+          fetchFile: Kd,
+          onWritten: (dd, Od) => {
+            this.images.glbWritten(dd, Od)
           },
-          onTaken: (rr, Sr) => {
-            this.images.glbTaken(rr, Sr)
+          onTaken: (dd, Od) => {
+            this.images.glbTaken(dd, Od)
           }
-        }), this.write = (rr, Sr, Qr) => {
+        }), this.write = (dd, Od, md) => {
           if (this.closed) return !0;
-          if (rr === Tr.d) {
-            const rr = new DataView(Qr.buffer, Qr.byteOffset, Or.c),
-              Zr = rr.getUint32(0, !0),
-              Wr = rr.getUint32(Or.f, !0),
-              ar = this.page.hostCall(sr, (() => this.host.SWr(this.id, Zr, Sr, Qr.subarray(Or.c))));
-            return this.outcomes.push([Wr, ar]), !0
+          if (dd === Jd.c) {
+            const dd = new DataView(md.buffer, md.byteOffset, xd.d),
+              Wd = dd.getUint32(0, !0),
+              Fd = dd.getUint32(xd.h, !0),
+              Rd = this.page.hostCall(dO, (() => this.host.uFd(this.id, Wd, Od, md.subarray(xd.d))));
+            return this.outcomes.push([Fd, Rd]), !0
           }
-          return rr === yr.e && (this.page.hostCall(void 0, (() => {
-            this.host.QWr(this.id, Qr)
+          return dd === wd.b && (this.page.hostCall(void 0, (() => {
+            this.host.VFd(this.id, md)
           })), !0)
         }
       }
@@ -466,94 +466,94 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(rr, Sr, Qr) {
+      resize(dd, Od, md) {
         if (this.closed) return;
-        const [Zr, Wr] = (0, Ar.d)(rr, Sr, this.page.dpr(), Qr);
-        Zr === this.size[0] && Wr === this.size[1] || (this.size = [Zr, Wr], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, Zr, Wr)
+        const [Wd, Fd] = (0, cd.c)(dd, Od, this.page.dpr(), md);
+        Wd === this.size[0] && Fd === this.size[1] || (this.size = [Wd, Fd], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, Wd, Fd)
         })))
       }
-      setMob(rr, Sr, Qr, Zr) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.ZWr(this.id, rr, Sr, Qr, Zr))))
+      setMob(dd, Od, md, Wd) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.iFd(this.id, dd, Od, md, Wd))))
       }
-      setPet(rr, Sr, Qr, Zr) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.WWr(this.id, rr, Sr, Qr, Zr))))
+      setPet(dd, Od, md, Wd) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.AFd(this.id, dd, Od, md, Wd))))
       }
-      setPlayer(rr, Sr, Qr) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.aWr(this.id, rr, Sr, Qr))))
+      setPlayer(dd, Od, md) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.rFd(this.id, dd, Od, md))))
       }
-      setCompanions(rr) {
-        var Sr;
+      setCompanions(dd) {
+        var Od;
         let {
-          pet: Qr,
-          aura: Zr
-        } = rr;
+          pet: md,
+          aura: Wd
+        } = dd;
         if (this.closed) return;
-        const Wr = null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.model) && void 0 !== Sr ? Sr : -1,
-          ar = new Float64Array(Qr ? [Qr.scale, ...Qr.offset, Qr.yawOffset, Qr.bobAmplitude, Qr.bobHz] : []),
-          jr = new Float64Array(Zr ? [...Zr.offset, ...Zr.half] : []);
+        const Fd = null !== (Od = null === md || void 0 === md ? void 0 : md.model) && void 0 !== Od ? Od : -1,
+          Rd = new Float64Array(md ? [md.scale, ...md.offset, md.yawOffset, md.bobAmplitude, md.bobHz] : []),
+          Xd = new Float64Array(Wd ? [...Wd.offset, ...Wd.half] : []);
         this.page.hostCall(void 0, (() => {
-          var rr, Sr;
-          this.host.jWr(this.id, Wr, ar, null !== (rr = null === Qr || void 0 === Qr ? void 0 : Qr.flyClip) && void 0 !== rr ? rr : "", null !== (Sr = null === Zr || void 0 === Zr ? void 0 : Zr.opts) && void 0 !== Sr ? Sr : "", jr)
+          var dd, Od;
+          this.host.GFd(this.id, Fd, Rd, null !== (dd = null === md || void 0 === md ? void 0 : md.flyClip) && void 0 !== dd ? dd : "", null !== (Od = null === Wd || void 0 === Wd ? void 0 : Wd.opts) && void 0 !== Od ? Od : "", Xd)
         }))
       }
-      setNametag(rr, Sr, Qr) {
+      setNametag(dd, Od, md) {
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.IWr(this.id, rr, Sr, Qr)
+          this.host.nFd(this.id, dd, Od, md)
         }))
       }
-      setFigure(rr, Sr, Qr, Zr) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.fWr(this.id, rr, Sr, Qr, Zr))))
+      setFigure(dd, Od, md, Wd) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.LFd(this.id, dd, Od, md, Wd))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const rr = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === rr || rr.length < 3 ? null : {
-          alpha: rr[0],
-          beta: rr[1],
-          radius: rr[2]
+        const dd = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === dd || dd.length < 3 ? null : {
+          alpha: dd[0],
+          beta: dd[1],
+          radius: dd[2]
         }
       }
-      setOrbit(rr) {
+      setOrbit(dd) {
         let {
-          alpha: Sr,
-          beta: Qr,
-          radius: Zr
-        } = rr;
+          alpha: Od,
+          beta: md,
+          radius: Wd
+        } = dd;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.EWr(this.id, Sr, Qr, Zr)
+          this.host.PFd(this.id, Od, md, Wd)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((rr => {
-          this.settled.push(rr)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((dd => {
+          this.settled.push(dd)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, lr.h)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, Sd.j)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [rr, Sr] of this.outcomes) {
-          const Qr = Sr === Dr ? [] : [Sr === dr ? rr : (rr | Tr.f) >>> 0];
-          this.models.taken(rr, Qr)
+        for (const [dd, Od] of this.outcomes) {
+          const md = Od === fd ? [] : [Od === Md ? dd : (dd | Jd.e) >>> 0];
+          this.models.taken(dd, md)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(rr) {
-        let Sr = !1;
-        if (rr) {
-          const rr = this.host.pWr(this.id);
-          for (const Sr of rr) this.models.request(Sr);
-          const Qr = this.host.xWr(this.id);
-          Qr.length > 0 && this.images.onEvent(Qr), Sr = rr.length > 0 || Qr.length > 0
+      collect(dd) {
+        let Od = !1;
+        if (dd) {
+          const dd = this.host.zFd(this.id);
+          for (const Od of dd) this.models.request(Od);
+          const md = this.host.cFd(this.id);
+          md.length > 0 && this.images.onEvent(md), Od = dd.length > 0 || md.length > 0
         }
-        const Qr = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          Zr = Sr || Qr > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = Zr ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const md = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          Wd = Od || md > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = Wd ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -561,313 +561,313 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(rr) {
+      dispose(dd) {
         this.page.hostCall(void 0, (() => {
-          const Sr = this.host.close(this.id);
-          Sr.length > 0 && this.images.onEvent(Sr), this.page.isTrapped || rr.rWr(this.id)
+          const Od = this.host.close(this.id);
+          Od.length > 0 && this.images.onEvent(Od), this.page.isTrapped || dd.sFd(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const rr = this.settled;
+        const dd = this.settled;
         this.settled = [];
-        for (const Sr of rr) Sr()
+        for (const Od of dd) Od()
       }
     }
-    class aS {
-      constructor(rr) {
-        this.deps = rr, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: rr => {
-            this.modelsFailed(rr)
+    class KO {
+      constructor(dd) {
+        this.deps = dd, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: dd => {
+            this.modelsFailed(dd)
           },
-          onWorkerLost: rr => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${Vr} a model worker was lost: ${rr}`))
+          onWorkerLost: dd => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${jd} a model worker was lost: ${dd}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.zU = {
-          setShaderPack: (rr, Sr, Qr, Zr, Wr) => (this.shaderPackArgs = [rr, Sr, Qr, Zr, Wr], this.handOverShaderPack(), !0)
-        }, this.frame = rr => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Jq = {
+          setShaderPack: (dd, Od, md, Wd, Fd) => (this.shaderPackArgs = [dd, Od, md, Wd, Fd], this.handOverShaderPack(), !0)
+        }, this.frame = dd => {
           this.frameId = null;
-          const Sr = this.host;
-          if (null !== Sr && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped)
-            if (this.deps.frameDue(rr)) try {
-              this.drawFrame(Sr, rr)
-            } catch (Qr) {
-              if (!this.stopIfTrapped(Qr) && (this.stop(), (0, er.t)(Qr))) return void this.deps.onRenderFailed("frames_refused", Qr);
-              console.warn(`${Vr} the previews stopped: their frame threw`, Qr)
+          const Od = this.host;
+          if (null !== Od && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped)
+            if (this.deps.frameDue(dd)) try {
+              this.drawFrame(Od, dd)
+            } catch (md) {
+              if (!this.stopIfTrapped(md) && (this.stop(), (0, Yd.t)(md))) return void this.deps.onRenderFailed("frames_refused", md);
+              console.warn(`${jd} the previews stopped: their frame threw`, md)
             } else this.startFrames()
-        }, rr.pack.onChange((() => {
+        }, dd.pack.onChange((() => {
           this.packChanged()
-        })), rr.game.onGameChange((() => {
+        })), dd.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const rr of this.previews.values()) rr.packChanged()
+          for (const dd of this.previews.values()) dd.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var rr, Sr;
-        return null !== (rr = null === (Sr = this.host) || void 0 === Sr ? void 0 : Sr.attached()) && void 0 !== rr && rr
+        var dd, Od;
+        return null !== (dd = null === (Od = this.host) || void 0 === Od ? void 0 : Od.attached()) && void 0 !== dd && dd
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((rr, Sr) => rr + Sr), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((dd, Od) => dd + Od), 0) / this.costs.length
       }
-      async bindSession(rr, Sr, Qr) {
-        const Zr = this.binding,
-          Wr = this.sessionEnds;
+      async bindSession(dd, Od, md) {
+        const Wd = this.binding,
+          Fd = this.sessionEnds;
         try {
-          const ar = this.hostOf(rr);
-          if (!ar.mWr()) {
-            const Sr = (0, gr.g)().sampleCount,
-              jr = await Qr(Sr);
-            if (this.sessionEnds !== Wr) return this.keepRendererOfEndedSession(rr, ar, jr, Sr, Zr), Sr;
-            if (!ar.NWr(jr)) throw new Error("the page has a renderer already");
-            (0, Pr.p)(performance.now()), this.samples = Sr, (0, Cr.g)((0, er.n)(rr))
+          const Rd = this.hostOf(dd);
+          if (!Rd.jFd()) {
+            const Od = (0, Gd.f)().sampleCount,
+              Xd = await md(Od);
+            if (this.sessionEnds !== Fd) return this.keepRendererOfEndedSession(dd, Rd, Xd, Od, Wd), Od;
+            if (!Rd.DFd(Xd)) throw new Error("the page has a renderer already");
+            (0, ud.t)(performance.now()), this.samples = Od, (0, nd.f)((0, Yd.l)(dd))
           }
-          if (!ar.attach(Sr)) throw new Error("the page's renderer is lent to another session");
+          if (!Rd.attach(Od)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === Zr && this.endBinding()
+          this.binding === Wd && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(rr, Sr, Qr, Zr, Wr) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== Wr) try {
-          Qr.free()
-        } catch (ar) {
-          console.warn(`${Vr} an ended session's renderer didn't free`, ar)
-        } else Sr.NWr(Qr) && ((0, Pr.p)(performance.now()), this.samples = Zr, (0, Cr.g)(this.registryOf(rr)))
+      keepRendererOfEndedSession(dd, Od, md, Wd, Fd) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== Fd) try {
+          md.free()
+        } catch (Rd) {
+          console.warn(`${jd} an ended session's renderer didn't free`, Rd)
+        } else Od.DFd(md) && ((0, ud.t)(performance.now()), this.samples = Wd, (0, nd.f)(this.registryOf(dd)))
       }
       async beginSession() {
-        var rr;
-        let Sr = () => {};
-        const Qr = new Promise((rr => {
-          Sr = rr
+        var dd;
+        let Od = () => {};
+        const md = new Promise((dd => {
+          Od = dd
         }));
         this.binding = {
-          done: Qr,
-          release: Sr
-        }, await (null === (rr = this.opening) || void 0 === rr ? void 0 : rr.catch((() => null)));
-        const Zr = this.pageCanvas;
-        return this.pageCanvas = null, Zr
+          done: md,
+          release: Od
+        }, await (null === (dd = this.opening) || void 0 === dd ? void 0 : dd.catch((() => null)));
+        const Wd = this.pageCanvas;
+        return this.pageCanvas = null, Wd
       }
-      endSession(rr) {
-        var Sr, Qr;
-        if (this.sessionEnds++, this.lastEndReturned = rr, this.endBinding(), rr) {
+      endSession(dd) {
+        var Od, md;
+        if (this.sessionEnds++, this.lastEndReturned = dd, this.endBinding(), dd) {
           try {
-            var Zr;
-            null === (Zr = this.host) || void 0 === Zr || Zr.detach()
-          } catch (Wr) {
-            return void console.warn(`${Vr} the session's core kept the page's renderer`, Wr)
-          }!0 === (null === (Sr = this.host) || void 0 === Sr ? void 0 : Sr.attached()) && console.warn(`${Vr} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (Qr = this.host) || void 0 === Qr ? void 0 : Qr.mWr()) && (0, Cr.g)(this.registryOf(this.module))
+            var Wd;
+            null === (Wd = this.host) || void 0 === Wd || Wd.detach()
+          } catch (Fd) {
+            return void console.warn(`${jd} the session's core kept the page's renderer`, Fd)
+          }!0 === (null === (Od = this.host) || void 0 === Od ? void 0 : Od.attached()) && console.warn(`${jd} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (md = this.host) || void 0 === md ? void 0 : md.jFd()) && (0, nd.f)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var rr;
-        null === (rr = this.binding) || void 0 === rr || rr.release(), this.binding = null
+        var dd;
+        null === (dd = this.binding) || void 0 === dd || dd.release(), this.binding = null
       }
-      async openPreview(rr, Sr, Qr, Zr) {
-        const Wr = await this.renderingHost(),
-          ar = this.module;
-        if (null === Wr || null === ar) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(Wr), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(dd, Od, md, Wd) {
+        const Fd = await this.renderingHost(),
+          Rd = this.module;
+        if (null === Fd || null === Rd) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(Fd), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(ar)
+          this.deps.provideBuiltInAnimationPack(Rd)
         }));
-        const jr = this.nextId++,
-          Ir = this.deps.createCanvas(),
-          [fr, Er] = (0, Ar.d)(Sr, Qr, this.deps.dpr(), Zr);
-        Ir.width = fr, Ir.height = Er;
-        if (!this.guarded((() => (ar.uZr(jr, Ir), Wr.open(jr, fr, Er, rr))))) throw this.hostCall(void 0, (() => {
-          ar.rWr(jr)
+        const Xd = this.nextId++,
+          Kd = this.deps.createCanvas(),
+          [hd, vd] = (0, cd.c)(Od, md, this.deps.dpr(), Wd);
+        Kd.width = hd, Kd.height = vd;
+        if (!this.guarded((() => (Rd.SFd(Xd, Kd), Fd.open(Xd, hd, vd, dd))))) throw this.hostCall(void 0, (() => {
+          Rd.sFd(Xd)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const pr = new WS(this, Wr, jr, Ir, [fr, Er], this.deps);
-        return this.previews.set(jr, pr), this.startFrames(), pr
+        const Qd = new XO(this, Fd, Xd, Kd, [hd, vd], this.deps);
+        return this.previews.set(Xd, Qd), this.startFrames(), Qd
       }
-      prefetch(rr) {
+      prefetch(dd) {
         if (this.prefetched || !this.mayPrefetch) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule(rr) : Promise.resolve(this.module)).then((async Sr => {
-          null !== Sr && (await (null === rr || void 0 === rr ? void 0 : rr("preview workers and files")), this.mayPrefetch && (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles()))
+        (null === this.module ? this.loadModule(dd) : Promise.resolve(this.module)).then((async Od => {
+          null !== Od && (await (null === dd || void 0 === dd ? void 0 : dd("preview workers and files")), this.mayPrefetch && (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles()))
         }), (() => {}))
       }
-      modelFile(rr) {
-        return this.prefetchedOr(rr, this.deps.fetchModel)
+      modelFile(dd) {
+        return this.prefetchedOr(dd, this.deps.fetchModel)
       }
-      imageFile(rr) {
-        return this.prefetchedOr(rr, Zr.K)
+      imageFile(dd) {
+        return this.prefetchedOr(dd, Wd.J)
       }
-      prefetchedOr(rr, Sr) {
-        const Qr = this.prefetchedFiles.get(rr);
-        return void 0 === Qr ? Sr(rr) : Qr.catch((() => Sr(rr)))
+      prefetchedOr(dd, Od) {
+        const md = this.prefetchedFiles.get(dd);
+        return void 0 === md ? Od(dd) : md.catch((() => Od(dd)))
       }
       async prefetchPlayerFiles() {
-        const rr = this.deps.playerFile().then((rr => this.deps.files.url(rr))),
-          Sr = await Promise.all([rr, this.deps.images.lifeformAtlasUrl(lr.d)]).catch((() => null));
-        if (null === Sr) return;
-        const [Qr, Zr] = Sr, Wr = (rr, Sr) => {
-          if (null === rr) return;
-          const Qr = Sr(rr);
-          this.prefetchedFiles.set(rr, Qr), Qr.catch((() => {
-            this.prefetchedFiles.delete(rr)
+        const dd = this.deps.playerFile().then((dd => this.deps.files.url(dd))),
+          Od = await Promise.all([dd, this.deps.images.lifeformAtlasUrl(Sd.e)]).catch((() => null));
+        if (null === Od) return;
+        const [md, Wd] = Od, Fd = (dd, Od) => {
+          if (null === dd) return;
+          const md = Od(dd);
+          this.prefetchedFiles.set(dd, md), md.catch((() => {
+            this.prefetchedFiles.delete(dd)
           }))
         };
-        Wr(Qr, (rr => this.modelFile(rr))), Wr(Zr, (rr => this.imageFile(rr)))
+        Fd(md, (dd => this.modelFile(dd))), Fd(Wd, (dd => this.imageFile(dd)))
       }
-      loadModule(rr) {
-        return this.moduleLoad ??= this.deps.loadModule(rr).then((rr => (null === rr && (this.moduleLoad = null), rr)), (rr => {
-          throw this.moduleLoad = null, rr
+      loadModule(dd) {
+        return this.moduleLoad ??= this.deps.loadModule(dd).then((dd => (null === dd && (this.moduleLoad = null), dd)), (dd => {
+          throw this.moduleLoad = null, dd
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((rr => {
-          throw this.animationTable = null, rr
+        return this.animationTable ??= this.deps.fetchAnimations().catch((dd => {
+          throw this.animationTable = null, dd
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((rr => (this.modelsFailed(rr), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((dd => (this.modelsFailed(dd), () => new Promise((() => {})))))
       }
-      buildModel(rr, Sr) {
-        return this.startModels(), this.models.then((Qr => Qr(rr, Sr))).then((rr => this.unavailable ? new Promise((() => {})) : rr))
+      buildModel(dd, Od) {
+        return this.startModels(), this.models.then((md => md(dd, Od))).then((dd => this.unavailable ? new Promise((() => {})) : dd))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(rr) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${Vr} the model workers didn't start: models won't draw in the previews`, rr))
+      modelsFailed(dd) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${jd} the model workers didn't start: models won't draw in the previews`, dd))
       }
-      called(rr) {
-        return 0 !== rr && this.logError(rr, 0), rr
+      called(dd) {
+        return 0 !== dd && this.logError(dd, 0), dd
       }
-      closePreview(rr) {
-        this.previews.delete(rr.id), null !== this.module && rr.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(dd) {
+        this.previews.delete(dd.id), null !== this.module && dd.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(rr) {
-        if (null !== this.module && this.module !== rr) throw new Error("a second renderer module on one page");
-        return this.module = rr, null === this.host && (this.host = this.guarded((() => new rr.sZr)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(dd) {
+        if (null !== this.module && this.module !== dd) throw new Error("a second renderer module on one page");
+        return this.module = dd, null === this.host && (this.host = this.guarded((() => new dd.BFd)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: rr
+          host: dd
         } = this;
-        null !== rr && this.outsideCall("the game's start or end", (() => {
-          rr.UWr(this.deps.game.inGame())
+        null !== dd && this.outsideCall("the game's start or end", (() => {
+          dd.eFd(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: rr,
-          shaderPackArgs: Sr
+          host: dd,
+          shaderPackArgs: Od
         } = this;
-        null !== rr && null !== Sr && this.outsideCall("the shader pack's hand-over", (() => {
-          rr.DZr(...Sr) || console.warn(`${Vr} the host refused the shader pack: previews draw without it at home`)
+        null !== dd && null !== Od && this.outsideCall("the shader pack's hand-over", (() => {
+          dd.UFd(...Od) || console.warn(`${jd} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(rr, Sr) {
+      outsideCall(dd, Od) {
         try {
-          this.hostCall(void 0, Sr)
-        } catch (Qr) {
-          this.stop(), console.warn(`${Vr} the previews stopped: ${rr} threw`, Qr)
+          this.hostCall(void 0, Od)
+        } catch (md) {
+          this.stop(), console.warn(`${jd} the previews stopped: ${dd} threw`, md)
         }
       }
-      async loadAnimations(rr) {
-        const Sr = jr(null),
-          Qr = this.module;
+      async loadAnimations(dd) {
+        const Od = Xd(null),
+          md = this.module;
         try {
-          Sr.wasm = null === Qr ? Sr.wasm : this.hostCall(Sr.wasm, (() => Qr.bx()))
+          Od.wasm = null === md ? Od.wasm : this.hostCall(Od.wasm, (() => md.Zt()))
         } catch {}
-        let Zr, Wr;
+        let Wd, Fd;
         try {
-          Zr = await this.fetchAnimationTable()
-        } catch (ar) {
+          Wd = await this.fetchAnimationTable()
+        } catch (Rd) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: ar
-          }, Sr)
+            error: Rd
+          }, Od)
         }
         if (!this.settleIfTrapped()) {
           try {
-            Wr = rr.tWr(Zr)
-          } catch (ar) {
-            if (this.stopIfTrapped(ar)) return;
+            Fd = dd.IFd(Wd)
+          } catch (Rd) {
+            if (this.stopIfTrapped(Rd)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: ar
-            }, Sr)
+              error: Rd
+            }, Od)
           }
-          Wr || this.deps.onAnimationsFailed({
+          Fd || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, Sr)
+          }, Od)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const rr = this.host;
-        return null !== rr && this.guarded((() => rr.mWr())) ? rr : (this.opening ??= this.openAtHome().finally((() => {
+        const dd = this.host;
+        return null !== dd && this.guarded((() => dd.jFd())) ? dd : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var rr;
-        const Sr = null !== (rr = this.module) && void 0 !== rr ? rr : await this.loadModule();
-        if (null === Sr) return null;
-        const Qr = this.hostOf(Sr),
-          Zr = () => this.guarded((() => Qr.mWr()));
-        if (Zr()) return Qr;
-        if (null !== (0, Pr.B)() || (0, Pr.d)()) return null;
-        const Wr = this.deps.createCanvas();
-        Wr.width = 1, Wr.height = 1;
-        const ar = await this.deps.openExtras();
+        var dd;
+        const Od = null !== (dd = this.module) && void 0 !== dd ? dd : await this.loadModule();
+        if (null === Od) return null;
+        const md = this.hostOf(Od),
+          Wd = () => this.guarded((() => md.jFd()));
+        if (Wd()) return md;
+        if (null !== (0, ud.G)() || (0, ud.b)()) return null;
+        const Fd = this.deps.createCanvas();
+        Fd.width = 1, Fd.height = 1;
+        const Rd = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const jr = (0, gr.g)().sampleCount;
-        let Ir;
+        const Xd = (0, Gd.f)().sampleCount;
+        let Kd;
         try {
-          Ir = await (0, er.z)(Sr, "previewRenderer", Wr, jr, Mr.i, ar)
-        } catch (fr) {
-          throw fr instanceof Lr.d ? this.stopForTrap(fr) : (0, er.x)(fr) && await this.deps.onRenderFailed("start_failed", fr), fr
+          Kd = await (0, Yd.z)(Od, "previewRenderer", Fd, Xd, Ld.g, Rd)
+        } catch (hd) {
+          throw hd instanceof Bd.e ? this.stopForTrap(hd) : (0, Yd.w)(hd) && await this.deps.onRenderFailed("start_failed", hd), hd
         }
-        return this.guarded((() => Qr.NWr(Ir))) ? ((0, Pr.p)(performance.now()), this.samples = jr, this.pageCanvas = Wr, (0, Cr.g)(this.registryOf(Sr)), Qr) : Zr() ? Qr : null
+        return this.guarded((() => md.DFd(Kd))) ? ((0, ud.t)(performance.now()), this.samples = Xd, this.pageCanvas = Fd, (0, nd.f)(this.registryOf(Od)), md) : Wd() ? md : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(rr, Sr) {
-        for (const jr of this.previews.values()) jr.feed();
+      drawFrame(dd, Od) {
+        for (const Xd of this.previews.values()) Xd.feed();
         if (this.stopped) return;
-        this.module.uR(this.deps.heldLow());
-        const Qr = this.deps.now(),
-          Zr = rr.frame(Sr);
-        this.costs.push(this.deps.now() - Qr), this.costs.length > 120 && this.costs.shift();
-        const Wr = 0 !== (256 & Zr),
-          ar = 255 & Zr;
-        for (const jr of this.previews.values()) {
+        this.module.qV(this.deps.heldLow());
+        const md = this.deps.now(),
+          Wd = dd.frame(Od);
+        this.costs.push(this.deps.now() - md), this.costs.length > 120 && this.costs.shift();
+        const Fd = 0 !== (256 & Wd),
+          Rd = 255 & Wd;
+        for (const Xd of this.previews.values()) {
           if (this.stopped) return;
-          jr.collect(Wr)
+          Xd.collect(Fd)
         }
         if (!this.stopped) {
-          if (0 !== (512 & Zr) && this.deps.onDrew(), Wr) {
-            const Sr = rr.hWr();
-            for (let rr = 0; rr + 1 < Sr.length; rr += 2) Sr[rr] === nr.J.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(Sr[rr], Sr[rr + 1])
+          if (0 !== (512 & Wd) && this.deps.onDrew(), Fd) {
+            const Od = dd.lFd();
+            for (let dd = 0; dd + 1 < Od.length; dd += 2) Od[dd] === pd.F.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(Od[dd], Od[dd + 1])
           }
-          if (ar !== or) {
-            if (ar === br) return this.stop(), void this.deps.onFatal(rr.YWr(), rr.nWr());
-            if (ar === Jr) return this.stop(), void console.warn(`${Vr} the previews stopped: the page's renderer went with its session`);
-            (0, hr.e)(Sr), this.startFrames()
+          if (Rd !== Cd) {
+            if (Rd === Zd) return this.stop(), void this.deps.onFatal(dd.ZFd(), dd.kFd());
+            if (Rd === kd) return this.stop(), void console.warn(`${jd} the previews stopped: the page's renderer went with its session`);
+            (0, yd.e)(Od), this.startFrames()
           } else {
-            const Sr = rr.zWr();
+            const Od = dd.CFd();
             this.stop();
-            const Qr = Sr[2] === nr.fd.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(Qr, void 0, Sr[1], Sr[2] === nr.fd.RESTORE_LOST)
+            const md = Od[2] === pd._c.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(md, void 0, Od[1], Od[2] === pd._c.RESTORE_LOST)
           }
         }
       }
@@ -875,136 +875,136 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get mayPrefetch() {
-        return !this.isStopped && !(0, Pr.d)() && null === (0, Pr.B)()
+        return !this.isStopped && !(0, ud.b)() && null === (0, ud.G)()
       }
       get isTrapped() {
-        return null !== this.module && ((0, Lr.h)(this.module) || "failed" === (0, Ur.y)())
+        return null !== this.module && ((0, Bd.h)(this.module) || "failed" === (0, qd.y)())
       }
-      hostCall(rr, Sr) {
-        if (this.settleIfTrapped()) return rr;
+      hostCall(dd, Od) {
+        if (this.settleIfTrapped()) return dd;
         try {
-          return Sr()
-        } catch (Qr) {
-          if (this.stopIfTrapped(Qr)) return rr;
-          throw Qr
+          return Od()
+        } catch (md) {
+          if (this.stopIfTrapped(md)) return dd;
+          throw md
         }
       }
-      guarded(rr) {
+      guarded(dd) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return rr()
-        } catch (Sr) {
-          throw this.stopIfTrapped(Sr), Sr
+          return dd()
+        } catch (Od) {
+          throw this.stopIfTrapped(Od), Od
         }
       }
-      registryOf(rr) {
+      registryOf(dd) {
         return {
-          eWr: (Sr, Qr) => {
+          fFd: (Od, md) => {
             this.hostCall(void 0, (() => {
-              rr.eWr(Sr, Qr)
+              dd.fFd(Od, md)
             }))
           },
-          KWr: Sr => {
+          MFd: Od => {
             this.hostCall(void 0, (() => {
-              rr.KWr(Sr)
+              dd.MFd(Od)
             }))
           },
-          ...void 0 === rr.yWr ? {} : {
-            yWr: (Sr, Qr) => {
+          ...void 0 === dd.dRd ? {} : {
+            dRd: (Od, md) => {
               this.hostCall(void 0, (() => {
-                var Zr;
-                null === (Zr = rr.yWr) || void 0 === Zr || Zr.call(rr, Sr, Qr)
+                var Wd;
+                null === (Wd = dd.dRd) || void 0 === Wd || Wd.call(dd, Od, md)
               }))
             }
           },
-          ...void 0 === rr.BWr ? {} : {
-            BWr: Sr => {
+          ...void 0 === dd.ORd ? {} : {
+            ORd: Od => {
               this.hostCall(void 0, (() => {
-                var Qr;
-                null === (Qr = rr.BWr) || void 0 === Qr || Qr.call(rr, Sr)
+                var md;
+                null === (md = dd.ORd) || void 0 === md || md.call(dd, Od)
               }))
             }
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Cr.g)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, nd.f)(null)), !0)
       }
-      stopIfTrapped(rr) {
-        return !(null === this.module || !(0, Lr.l)(this.module, rr)) && (this.stopForTrap(rr), !0)
+      stopIfTrapped(dd) {
+        return !(null === this.module || !(0, Bd.k)(this.module, dd)) && (this.stopForTrap(dd), !0)
       }
-      stopForTrap(rr) {
-        this.stop(), (0, Cr.g)(null), (0, kr.e)("previews", rr)
+      stopForTrap(dd) {
+        this.stop(), (0, nd.f)(null), (0, zd.e)("previews", dd)
       }
       stop() {
         this.stopped = !0;
-        for (const rr of this.previews.values()) rr.abandon()
+        for (const dd of this.previews.values()) dd.abandon()
       }
-      logError(rr, Sr) {
-        const Qr = `${rr}:${Sr}`;
-        this.loggedErrors.has(Qr) || (this.loggedErrors.add(Qr), console.warn(`${Vr} error ${rr} (detail ${Sr})`))
+      logError(dd, Od) {
+        const md = `${dd}:${Od}`;
+        this.loggedErrors.has(md) || (this.loggedErrors.add(md), console.warn(`${jd} error ${dd} (detail ${Od})`))
       }
     }
-    let jS = null;
+    let hO = null;
 
-    function IS() {
-      return jS ??= new aS(function() {
-        const rr = (0, vr.r)(tr.clientSideServerUrls.staticUrl, {
-          packUrl: rr => {
-            var Sr, Qr;
-            return null !== (Sr = null === (Qr = lr.e.current) || void 0 === Qr ? void 0 : Qr.modelUrl(rr)) && void 0 !== Sr ? Sr : null
+    function vO() {
+      return hO ??= new KO(function() {
+        const dd = (0, Ud.o)(Hd.clientSideServerUrls.staticUrl, {
+          packUrl: dd => {
+            var Od, md;
+            return null !== (Od = null === (md = Sd.g.current) || void 0 === md ? void 0 : md.modelUrl(dd)) && void 0 !== Od ? Od : null
           }
         });
         return {
-          loadModule: ZS,
-          startModels: async rr => {
+          loadModule: RO,
+          startModels: async dd => {
             const {
-              pageModelPool: Sr
-            } = await Qr.e(51).then((() => Qr(55199))), {
-              pool: Zr
-            } = Sr(rr);
-            return (rr, Sr) => Zr.build(rr, Sr)
+              pageModelPool: Od
+            } = await md.e(51).then((() => md(55136))), {
+              pool: Wd
+            } = Od(dd);
+            return (dd, Od) => Wd.build(dd, Od)
           },
-          fetchAnimations: async () => Ir(await (0, Zr.K)(rS())),
-          playerFile: async () => (await (0, vr.o)()).PLAYER_FILE,
-          onAnimationsFailed: (rr, Sr) => {
-            fr("previewAnimations", rS(), rr, Sr)
+          fetchAnimations: async () => Kd(await (0, Wd.J)(mO())),
+          playerFile: async () => (await (0, Ud.n)()).PLAYER_FILE,
+          onAnimationsFailed: (dd, Od) => {
+            hd("previewAnimations", mO(), dd, Od)
           },
-          provideBuiltInAnimationPack: rr => {
-            mr().provide(rr)
+          provideBuiltInAnimationPack: dd => {
+            od().provide(dd)
           },
-          openExtras: Pr.w,
-          files: rr,
-          images: (0, lr.i)((0, yr.o)(rr.url), (() => lr.e.current)),
-          pack: lr.e,
-          game: Xr.b,
-          fetchModel: rr => (0, vr.j)(rr),
+          openExtras: ud.C,
+          files: dd,
+          images: (0, Sd.l)((0, wd.n)(dd.url), (() => Sd.g.current)),
+          pack: Sd.g,
+          game: sd.e,
+          fetchModel: dd => (0, Ud.i)(dd),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: rr => requestAnimationFrame(rr),
-          cancelFrame: rr => {
-            cancelAnimationFrame(rr)
+          requestFrame: dd => requestAnimationFrame(dd),
+          cancelFrame: dd => {
+            cancelAnimationFrame(dd)
           },
-          onRenderFailed: SS,
-          onFatal: (rr, Sr) => {
-            console.error(`${Vr} the previews stopped: renderer error ${rr} (detail ${Sr})`)
+          onRenderFailed: WO,
+          onFatal: (dd, Od) => {
+            console.error(`${jd} the previews stopped: renderer error ${dd} (detail ${Od})`)
           },
           onDeviceLost: () => {
-            (0, Pr.z)() === Rr.c.webgpu && ((0, Kr.d)((0, Ur.R)() ? (0, er.T)((0, Ur.z)()) : null), zr.A.lost())
+            (0, ud.E)() === rd.e.webgpu && ((0, gd.g)((0, qd.P)() ? (0, Yd.S)((0, qd.A)()) : null), bd.H.lost())
           },
           onDrew: () => {
-            zr.A.drew(), (0, Br.k)()
+            bd.H.drew(), (0, Ed.l)()
           },
-          frameDue: Br.p,
-          heldLow: Br.l
+          frameDue: Ed.r,
+          heldLow: Ed.p
         }
-      }()), jS
+      }()), hO
     }
-    var fS = Qr(679),
-      ES = Qr(40197),
-      pS = Qr(4489);
-    const xS = {
+    var QO = md(693),
+      tO = md(40230),
+      oO = md(4509);
+    const NO = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1024,337 +1024,337 @@ export const modules = {
       gunReady: 16,
       gunAimed: 17
     };
-    var mS = Qr(40728),
-      NS = Qr(40699),
-      US = Qr(45329);
-    class tS {
+    var qO = md(40756),
+      HO = md(40721),
+      yO = md(45365);
+    class bO {
       constructor() {
         this.pet = null, this.aura = null, this.companions = {
           pet: null,
           aura: null
         }
       }
-      of(rr, Sr) {
-        const Qr = void 0 === rr ? null : (0, NS.i)(rr),
-          Zr = void 0 === Sr ? null : (0, NS.h)(Sr);
-        return Qr === this.pet && Zr === this.aura || (this.pet = Qr, this.aura = Zr, this.companions = {
-          pet: Qr && hS(Qr),
-          aura: Zr && zS(Zr)
+      of(dd, Od) {
+        const md = void 0 === dd ? null : (0, HO.j)(dd),
+          Wd = void 0 === Od ? null : (0, HO.i)(Od);
+        return md === this.pet && Wd === this.aura || (this.pet = md, this.aura = Wd, this.companions = {
+          pet: md && TO(md),
+          aura: Wd && pO(Wd)
         }), this.companions
       }
     }
 
-    function hS(rr) {
-      var Sr;
-      const Qr = US.COSMETIC_MODEL_KEYS.get(rr.model);
-      if (void 0 === Qr) return console.warn(`[bloxd-previews] pet model ${rr.model} isn't a Player attachment model`), null;
+    function TO(dd) {
+      var Od;
+      const md = yO.COSMETIC_MODEL_KEYS.get(dd.model);
+      if (void 0 === md) return console.warn(`[bloxd-previews] pet model ${dd.model} isn't a Player attachment model`), null;
       const {
-        scale: Zr,
-        followOffset: Wr,
-        yawOffset: ar,
-        bobAmplitude: jr,
-        bobHz: Ir,
-        clips: fr
-      } = rr;
+        scale: Wd,
+        followOffset: Fd,
+        yawOffset: Rd,
+        bobAmplitude: Xd,
+        bobHz: Kd,
+        clips: hd
+      } = dd;
       return {
-        model: Qr,
-        scale: Zr,
-        offset: Wr,
-        yawOffset: ar,
-        bobAmplitude: jr,
-        bobHz: Ir,
-        flyClip: null !== (Sr = null === fr || void 0 === fr ? void 0 : fr.fly) && void 0 !== Sr ? Sr : null
+        model: md,
+        scale: Wd,
+        offset: Fd,
+        yawOffset: Rd,
+        bobAmplitude: Xd,
+        bobHz: Kd,
+        flyClip: null !== (Od = null === hd || void 0 === hd ? void 0 : hd.fly) && void 0 !== Od ? Od : null
       }
     }
 
-    function zS(rr) {
+    function pO(dd) {
       const {
-        opts: Sr,
-        half: Qr
-      } = (0, mS.e)(rr);
+        opts: Od,
+        half: md
+      } = (0, qO.d)(dd);
       return {
-        opts: JSON.stringify(Sr),
-        offset: rr.offset,
-        half: Qr
+        opts: JSON.stringify(Od),
+        offset: dd.offset,
+        half: md
       }
     }
-    var YS = Qr(35490),
-      nS = Qr(37718),
-      eS = Qr(43054);
-    const KS = "[bloxd-previews]",
-      yS = new Uint32Array(5);
+    var YO = md(35566),
+      gO = md(37829),
+      wO = md(43152);
+    const aO = "[bloxd-previews]",
+      EO = new Uint32Array(5);
 
-    function BS(rr) {
-      return fS.n.indexOf(rr)
+    function JO(dd) {
+      return QO.h.indexOf(dd)
     }
-    const TS = new WeakSet;
+    const UO = new WeakSet;
 
-    function vS(rr) {
-      const Sr = (0, ES.g)(rr),
-        Qr = null === Sr ? -1 : OS(Sr);
-      return -1 !== Qr ? Qr : (TS.has(rr) || (TS.add(rr), console.warn(`${KS} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function OS(rr) {
-      var Sr;
-      return null !== (Sr = xS[rr]) && void 0 !== Sr ? Sr : -1
+    function xO(dd) {
+      const Od = (0, tO.h)(dd),
+        md = null === Od ? -1 : BO(Od);
+      return -1 !== md ? md : (UO.has(dd) || (UO.add(dd), console.warn(`${aO} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function LS(rr, Sr) {
+    function BO(dd) {
+      var Od;
+      return null !== (Od = NO[dd]) && void 0 !== Od ? Od : -1
+    }
+
+    function SO(dd, Od) {
       const {
-        canvas: Qr
-      } = Sr;
-      Qr.style.width = "100%", Qr.style.height = "100%", Qr.style.display = "block", rr.appendChild(Qr)
+        canvas: md
+      } = Od;
+      md.style.width = "100%", md.style.height = "100%", md.style.display = "block", dd.appendChild(md)
     }
 
-    function lS(rr) {
-      const Sr = rr.getBoundingClientRect();
-      return [Sr.width, Sr.height]
+    function sO(dd) {
+      const Od = dd.getBoundingClientRect();
+      return [Od.width, Od.height]
     }
-    class XS {
-      constructor(rr, Sr) {
-        this.preview = rr, this.showView = Sr
+    class uO {
+      constructor(dd, Od) {
+        this.preview = dd, this.showView = Od
       }
-      show(rr) {
-        this.showView(this.preview, rr)
+      show(dd) {
+        this.showView(this.preview, dd)
       }
-      resize(rr, Sr) {
-        this.preview.resize(rr, Sr)
+      resize(dd, Od) {
+        this.preview.resize(dd, Od)
       }
       close() {
         this.preview.close()
       }
     }
-    class PS {
-      constructor(rr) {
-        this.preview = rr, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new tS, this.companions = null, this.nametag = null, this.stopRasteringNametag = null, this.detachControls = void 0, this.detachControls = (0, YS.f)(rr), this.dev = {
-          canvas: () => rr.canvas,
-          captureFrame: Sr => (0, eS.b)((() => rr.isClosed ? null : rr.canvas), Br.b, Sr),
+    class VO {
+      constructor(dd) {
+        this.preview = dd, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.tunings = new bO, this.companions = null, this.nametag = null, this.stopRasteringNametag = null, this.detachControls = void 0, this.detachControls = (0, YO.g)(dd), this.dev = {
+          canvas: () => dd.canvas,
+          captureFrame: Od => (0, wO.b)((() => dd.isClosed ? null : dd.canvas), Ed.c, Od),
           isolateHead: () => {
-            console.warn(`${KS} isolateHead: noa's character preview only`)
+            console.warn(`${aO} isolateHead: noa's character preview only`)
           },
           isolatePet: () => {
-            console.warn(`${KS} isolatePet: noa's character preview only`)
+            console.warn(`${aO} isolatePet: noa's character preview only`)
           }
-        }, this.apply(), this.ready = rr.untilSettled().then((() => {
-          if (rr.isStopped) throw new Error(`${KS} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = dd.untilSettled().then((() => {
+          if (dd.isStopped) throw new Error(`${aO} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(rr, Sr) {
-        this.cosmetics[rr] = Sr, this.apply()
+      setCosmetic(dd, Od) {
+        this.cosmetics[dd] = Od, this.apply()
       }
-      setNametag(rr) {
-        var Sr;
-        if (this.nametag = rr, null === (Sr = this.stopRasteringNametag) || void 0 === Sr || Sr.call(this), this.stopRasteringNametag = null, null === rr || void 0 === rr || !rr.name) return void this.preview.setNametag("", "null", "null");
-        const Qr = () => {
-          this.preview.setNametag(rr.name, JSON.stringify(rr.nameColour), JSON.stringify(rr.ranks))
+      setNametag(dd) {
+        var Od;
+        if (this.nametag = dd, null === (Od = this.stopRasteringNametag) || void 0 === Od || Od.call(this), this.stopRasteringNametag = null, null === dd || void 0 === dd || !dd.name) return void this.preview.setNametag("", "null", "null");
+        const md = () => {
+          this.preview.setNametag(dd.name, JSON.stringify(dd.nameColour), JSON.stringify(dd.ranks))
         };
-        nS.i.untilLoadedFor(rr.name).then((() => {
-          this.nametag !== rr || this.preview.isClosed || (Qr(), this.stopRasteringNametag = (0, nS.f)(Qr))
+        gO.j.untilLoadedFor(dd.name).then((() => {
+          this.nametag !== dd || this.preview.isClosed || (md(), this.stopRasteringNametag = (0, gO.i)(md))
         }))
       }
-      playEmote(rr) {
-        null === rr || rr !== this.emote ? (this.emote = rr, this.apply()) : this.preview.replay()
+      playEmote(dd) {
+        null === dd || dd !== this.emote ? (this.emote = dd, this.apply()) : this.preview.replay()
       }
-      untilDrawn(rr) {
+      untilDrawn(dd) {
         return this.preview.untilSettled()
       }
-      setOrbit(rr) {
+      setOrbit(dd) {
         let {
-          yaw: Sr,
-          pitch: Qr,
-          radius: Zr
-        } = rr;
-        const Wr = this.preview.orbit;
-        null !== Wr && this.preview.setOrbit({
-          alpha: Sr,
-          beta: Qr,
-          radius: null !== Zr && void 0 !== Zr ? Zr : Wr.radius
+          yaw: Od,
+          pitch: md,
+          radius: Wd
+        } = dd;
+        const Fd = this.preview.orbit;
+        null !== Fd && this.preview.setOrbit({
+          alpha: Od,
+          beta: md,
+          radius: null !== Wd && void 0 !== Wd ? Wd : Fd.radius
         })
       }
       resetCamera() {}
-      resize(rr, Sr) {
-        this.preview.resize(rr, Sr)
+      resize(dd, Od) {
+        this.preview.resize(dd, Od)
       }
       close() {
-        var rr;
-        null === (rr = this.stopRasteringNametag) || void 0 === rr || rr.call(this), this.detachControls(), this.preview.close()
+        var dd;
+        null === (dd = this.stopRasteringNametag) || void 0 === dd || dd.call(this), this.detachControls(), this.preview.close()
       }
       apply() {
-        var rr;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), yS, null === (rr = this.emote) ? -1 : OS(rr));
-        const Sr = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
-        Sr !== this.companions && (this.companions = Sr, this.preview.setCompanions(Sr))
+        var dd;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), EO, null === (dd = this.emote) ? -1 : BO(dd));
+        const Od = this.tunings.of(this.cosmetics.pet, this.cosmetics.aura);
+        Od !== this.companions && (this.companions = Od, this.preview.setCompanions(Od))
       }
     }
 
-    function HS(rr, Sr) {
+    function iO(dd, Od) {
       let {
-        mobType: Qr,
-        variation: Zr,
-        animation: Wr
-      } = Sr;
-      rr.setMob(BS(Qr), null !== Zr && void 0 !== Zr ? Zr : "", 1, vS(Wr))
+        mobType: md,
+        variation: Wd,
+        animation: Fd
+      } = Od;
+      dd.setMob(JO(md), null !== Wd && void 0 !== Wd ? Wd : "", 1, xO(Fd))
     }
 
-    function qS(rr, Sr) {
+    function AO(dd, Od) {
       let {
-        mobType: Qr,
-        variation: Zr,
-        metaInfo: Wr,
-        tamed: ar
-      } = Sr;
-      rr.setPet(BS(Qr), Zr, Wr, ar)
+        mobType: md,
+        variation: Wd,
+        metaInfo: Fd,
+        tamed: Rd
+      } = Od;
+      dd.setPet(JO(md), Wd, Fd, Rd)
     }
-    const RS = {
+    const rO = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class gS {
-      constructor(rr, Sr, Qr, Zr) {
+    class GO {
+      constructor(dd, Od, md, Wd) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, rr(Qr.width, Zr[1], Zr).then((rr => {
-          if (this.closed) return void rr.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, dd(md.width, Wd[1], Wd).then((dd => {
+          if (this.closed) return void dd.close();
           const {
-            style: Qr
-          } = rr.canvas;
-          Qr.position = "absolute", Qr.top = "0", Qr.visibility = "hidden", LS(Sr, rr), this.preview = rr, this.apply()
-        })).catch((rr => {
-          console.error(`${KS} couldn't open a lineup figure`, rr)
+            style: md
+          } = dd.canvas;
+          md.position = "absolute", md.top = "0", md.visibility = "hidden", SO(Od, dd), this.preview = dd, this.apply()
+        })).catch((dd => {
+          console.error(`${aO} couldn't open a lineup figure`, dd)
         }))
       }
-      update(rr, Sr, Qr, Zr, Wr) {
-        this.figure = rr, this.shown = Sr, this.order = Qr, this.span = Zr, this.lineup = Wr, this.apply()
+      update(dd, Od, md, Wd, Fd) {
+        this.figure = dd, this.shown = Od, this.order = md, this.span = Wd, this.lineup = Fd, this.apply()
       }
       close() {
-        var rr;
-        this.closed = !0, null === (rr = this.preview) || void 0 === rr || rr.close(), this.preview = null
+        var dd;
+        this.closed = !0, null === (dd = this.preview) || void 0 === dd || dd.close(), this.preview = null
       }
       apply() {
-        var rr;
+        var dd;
         const {
-          preview: Sr,
-          figure: Qr,
-          lineup: Zr
+          preview: Od,
+          figure: md,
+          lineup: Wd
         } = this;
-        if (null === Sr || null === Qr) return;
-        if (this.given !== Qr) {
-          var Wr;
-          this.given = Qr, this.loaded = !1;
-          const rr = null === Qr.jB ? 0 : null !== (Wr = (0, pS.e)(Qr.jB)) && void 0 !== Wr ? Wr : 0;
-          Sr.setFigure(function(rr) {
-            return JSON.stringify(Object.fromEntries(rr.cosmetics))
-          }(Qr), rr, vS(Qr.animation), Qr.size), Sr.untilSettled().then((() => {
-            this.given === Qr && (this.loaded = !0, this.apply())
+        if (null === Od || null === md) return;
+        if (this.given !== md) {
+          var Fd;
+          this.given = md, this.loaded = !1;
+          const dd = null === md.WE ? 0 : null !== (Fd = (0, oO.d)(md.WE)) && void 0 !== Fd ? Fd : 0;
+          Od.setFigure(function(dd) {
+            return JSON.stringify(Object.fromEntries(dd.cosmetics))
+          }(md), dd, xO(md.animation), md.size), Od.untilSettled().then((() => {
+            this.given === md && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: ar,
-          width: jr
+          left: Rd,
+          width: Xd
         } = this.span;
-        Sr.resize(jr, Zr[1], Zr);
+        Od.resize(Xd, Wd[1], Wd);
         const {
-          style: Ir
-        } = Sr.canvas;
-        Ir.top = -(null !== (rr = Qr.lift) && void 0 !== rr ? rr : 0) * Zr[1] + "px", Ir.left = `${ar}px`, Ir.width = `${jr}px`, Ir.zIndex = this.order, Ir.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: Kd
+        } = Od.canvas;
+        Kd.top = -(null !== (dd = md.lift) && void 0 !== dd ? dd : 0) * Wd[1] + "px", Kd.left = `${Rd}px`, Kd.width = `${Xd}px`, Kd.zIndex = this.order, Kd.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class CS {
-      constructor(rr, Sr) {
-        this.open = Sr, this.layer = void 0, this.figures = [], this.view = {
+    class nO {
+      constructor(dd, Od) {
+        this.open = Od, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = lS(rr), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = sO(dd), this.layer = document.createElement("div");
         const {
-          style: Qr
+          style: md
         } = this.layer;
-        Qr.position = "relative", Qr.isolation = "isolate", Qr.overflow = "hidden", Qr.width = "100%", Qr.height = "100%", Qr.pointerEvents = "none", rr.appendChild(this.layer)
+        md.position = "relative", md.isolation = "isolate", md.overflow = "hidden", md.width = "100%", md.height = "100%", md.pointerEvents = "none", dd.appendChild(this.layer)
       }
-      show(rr) {
-        this.view = rr, this.place()
+      show(dd) {
+        this.view = dd, this.place()
       }
-      resize(rr, Sr) {
-        this.size = [rr, Sr], this.place()
+      resize(dd, Od) {
+        this.size = [dd, Od], this.place()
       }
       close() {
-        for (const rr of this.figures) rr.close();
+        for (const dd of this.figures) dd.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: rr,
-          shown: Sr
+          figures: dd,
+          shown: Od
         } = this.view;
-        for (const Zr of this.figures.splice(rr.length)) Zr.close();
+        for (const Wd of this.figures.splice(dd.length)) Wd.close();
         const {
-          size: Qr
+          size: md
         } = this;
-        rr.forEach(((Zr, Wr) => {
-          var ar;
-          const jr = function(rr, Sr, Qr, Zr) {
-            let [Wr, ar] = Zr;
-            const jr = (rr + .5) * Wr / Sr,
-              Ir = Math.min(Math.max(Wr / Sr, 2 * Qr * ar), 2 * Math.max(jr, Wr - jr));
+        dd.forEach(((Wd, Fd) => {
+          var Rd;
+          const Xd = function(dd, Od, md, Wd) {
+            let [Fd, Rd] = Wd;
+            const Xd = (dd + .5) * Fd / Od,
+              Kd = Math.min(Math.max(Fd / Od, 2 * md * Rd), 2 * Math.max(Xd, Fd - Xd));
             return {
-              left: jr - Ir / 2,
-              width: Ir
+              left: Xd - Kd / 2,
+              width: Kd
             }
-          }(Wr, rr.length, function(rr) {
+          }(Fd, dd.length, function(dd) {
             let {
-              animation: Sr,
-              size: Qr
-            } = rr;
+              animation: Od,
+              size: md
+            } = dd;
             const {
-              aimed: Zr,
-              ready: Wr
-            } = RS;
-            return (vS(Sr) === xS.gunAimed ? Zr : Wr) * Qr
-          }(Zr), Qr);
-          this.figures[Wr] ??= new gS(this.open, this.layer, jr, Qr), this.figures[Wr].update(Zr, null !== (ar = Sr[Wr]) && void 0 !== ar && ar, function(rr, Sr) {
-            return String(Math.round(1e3 * rr) + Sr)
-          }(Zr.size, Wr), jr, Qr)
+              aimed: Wd,
+              ready: Fd
+            } = rO;
+            return (xO(Od) === NO.gunAimed ? Wd : Fd) * md
+          }(Wd), md);
+          this.figures[Fd] ??= new GO(this.open, this.layer, Xd, md), this.figures[Fd].update(Wd, null !== (Rd = Od[Fd]) && void 0 !== Rd && Rd, function(dd, Od) {
+            return String(Math.round(1e3 * dd) + Od)
+          }(Wd.size, Fd), Xd, md)
         }))
       }
     }
-    const MS = {
-      player: wr,
-      store: cr,
-      showcase: Fr
+    const LO = {
+      player: ed,
+      store: Id,
+      showcase: ld
     };
-    class GS {
-      constructor(rr) {
-        this.page = rr
+    class PO {
+      constructor(dd) {
+        this.page = dd
       }
-      async openMob(rr) {
-        return new XS(await this.open(rr, ir), HS)
+      async openMob(dd) {
+        return new uO(await this.open(dd, Dd), iO)
       }
-      async openPet(rr) {
-        return new XS(await this.open(rr, ir), qS)
+      async openPet(dd) {
+        return new uO(await this.open(dd, Dd), AO)
       }
-      openMobLineup(rr) {
-        return new CS(rr, ((rr, Sr, Qr) => this.page.openPreview(ir, rr, Sr, Qr)))
+      openMobLineup(dd) {
+        return new nO(dd, ((dd, Od, md) => this.page.openPreview(Dd, dd, Od, md)))
       }
-      async openCharacter(rr, Sr) {
-        return new PS(await this.open(rr, MS[Sr]))
+      async openCharacter(dd, Od) {
+        return new VO(await this.open(dd, LO[Od]))
       }
-      async open(rr, Sr) {
-        const [Qr, Zr] = lS(rr), Wr = await this.page.openPreview(Sr, Qr, Zr);
-        return LS(rr, Wr), Wr
+      async open(dd, Od) {
+        const [md, Wd] = sO(dd), Fd = await this.page.openPreview(Od, md, Wd);
+        return SO(dd, Fd), Fd
       }
     }
   },
-  45314: (rr, Sr, Qr) => {
-    rr.exports = Qr.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
+  45350: (dd, Od, md) => {
+    dd.exports = md.p + "static/media/builtInAnimations.anim.1876a593a8239b631bf1.gz"
   },
-  45323: (rr, Sr, Qr) => {
-    rr.exports = Qr.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
+  45358: (dd, Od, md) => {
+    dd.exports = md.p + "static/media/previewAnimations.dat.a9c06de838594e8096c6.gz"
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

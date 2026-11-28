@@ -1,181 +1,181 @@
 export const id = 614;
 export const ids = [614];
 export const modules = {
-  53864: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => YS,
-      g: () => Hr,
-      ChangeSet: () => qr,
-      k: () => XS,
-      m: () => Vr,
-      q: () => RS,
-      u: () => cr,
-      y: () => Pr,
-      C: () => WS,
-      H: () => VS,
-      E: () => iS,
-      L: () => CS,
-      P: () => KS,
-      T: () => sr,
-      V: () => tr,
-      Y: () => yS,
-      ab: () => Or,
-      bb: () => lr,
-      db: () => gS,
-      eb: () => rQ,
-      ib: () => vr,
-      jb: () => SQ,
-      kb: () => Lr
+  53759: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => YO,
+      f: () => Vd,
+      ChangeSet: () => Ad,
+      i: () => uO,
+      j: () => jd,
+      m: () => rO,
+      p: () => Id,
+      t: () => ud,
+      v: () => XO,
+      B: () => jO,
+      z: () => DO,
+      F: () => nO,
+      I: () => aO,
+      M: () => dO,
+      N: () => Hd,
+      Q: () => EO,
+      S: () => xd,
+      T: () => Sd,
+      W: () => GO,
+      Y: () => mm,
+      ab: () => Ud,
+      bb: () => Wm,
+      eb: () => Bd
     });
-    let Zr = [],
-      Wr = [];
+    let Wd = [],
+      Fd = [];
 
-    function ar(rr) {
-      if (rr < 768) return !1;
-      for (let Sr = 0, Qr = Zr.length;;) {
-        let ar = Sr + Qr >> 1;
-        if (rr < Zr[ar]) Qr = ar;
+    function Rd(dd) {
+      if (dd < 768) return !1;
+      for (let Od = 0, md = Wd.length;;) {
+        let Rd = Od + md >> 1;
+        if (dd < Wd[Rd]) md = Rd;
         else {
-          if (!(rr >= Wr[ar])) return !0;
-          Sr = ar + 1
+          if (!(dd >= Fd[Rd])) return !0;
+          Od = Rd + 1
         }
-        if (Sr == Qr) return !1
+        if (Od == md) return !1
       }
     }
 
-    function jr(rr) {
-      return rr >= 127462 && rr <= 127487
+    function Xd(dd) {
+      return dd >= 127462 && dd <= 127487
     }(() => {
-      let rr = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((rr => rr ? parseInt(rr, 36) : 1));
-      for (let Sr = 0, Qr = 0; Sr < rr.length; Sr++)(Sr % 2 ? Wr : Zr).push(Qr += rr[Sr])
+      let dd = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((dd => dd ? parseInt(dd, 36) : 1));
+      for (let Od = 0, md = 0; Od < dd.length; Od++)(Od % 2 ? Fd : Wd).push(md += dd[Od])
     })();
-    const Ir = 8205;
+    const Kd = 8205;
 
-    function fr(rr, Sr) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Er : pr)(rr, Sr, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function hd(dd, Od) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? vd : Qd)(dd, Od, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function Er(rr, Sr, Qr) {
-      if (Sr == rr.length) return Sr;
-      Sr && mr(rr.charCodeAt(Sr)) && Nr(rr.charCodeAt(Sr - 1)) && Sr--;
-      let Zr = xr(rr, Sr);
-      for (Sr += Ur(Zr); Sr < rr.length;) {
-        let Wr = xr(rr, Sr);
-        if (Zr == Ir || Wr == Ir || Qr && ar(Wr)) Sr += Ur(Wr), Zr = Wr;
+    function vd(dd, Od, md) {
+      if (Od == dd.length) return Od;
+      Od && od(dd.charCodeAt(Od)) && Nd(dd.charCodeAt(Od - 1)) && Od--;
+      let Wd = td(dd, Od);
+      for (Od += qd(Wd); Od < dd.length;) {
+        let Fd = td(dd, Od);
+        if (Wd == Kd || Fd == Kd || md && Rd(Fd)) Od += qd(Fd), Wd = Fd;
         else {
-          if (!jr(Wr)) break;
+          if (!Xd(Fd)) break;
           {
-            let Qr = 0,
-              Zr = Sr - 2;
-            for (; Zr >= 0 && jr(xr(rr, Zr));) Qr++, Zr -= 2;
-            if (Qr % 2 == 0) break;
-            Sr += 2
+            let md = 0,
+              Wd = Od - 2;
+            for (; Wd >= 0 && Xd(td(dd, Wd));) md++, Wd -= 2;
+            if (md % 2 == 0) break;
+            Od += 2
           }
         }
       }
-      return Sr
+      return Od
     }
 
-    function pr(rr, Sr, Qr) {
-      for (; Sr > 0;) {
-        let Zr = Er(rr, Sr - 2, Qr);
-        if (Zr < Sr) return Zr;
-        Sr--
+    function Qd(dd, Od, md) {
+      for (; Od > 0;) {
+        let Wd = vd(dd, Od - 2, md);
+        if (Wd < Od) return Wd;
+        Od--
       }
       return 0
     }
 
-    function xr(rr, Sr) {
-      let Qr = rr.charCodeAt(Sr);
-      if (!Nr(Qr) || Sr + 1 == rr.length) return Qr;
-      let Zr = rr.charCodeAt(Sr + 1);
-      return mr(Zr) ? Zr - 56320 + (Qr - 55296 << 10) + 65536 : Qr
+    function td(dd, Od) {
+      let md = dd.charCodeAt(Od);
+      if (!Nd(md) || Od + 1 == dd.length) return md;
+      let Wd = dd.charCodeAt(Od + 1);
+      return od(Wd) ? Wd - 56320 + (md - 55296 << 10) + 65536 : md
     }
 
-    function mr(rr) {
-      return rr >= 56320 && rr < 57344
+    function od(dd) {
+      return dd >= 56320 && dd < 57344
     }
 
-    function Nr(rr) {
-      return rr >= 55296 && rr < 56320
+    function Nd(dd) {
+      return dd >= 55296 && dd < 56320
     }
 
-    function Ur(rr) {
-      return rr < 65536 ? 1 : 2
+    function qd(dd) {
+      return dd < 65536 ? 1 : 2
     }
-    class tr {
-      lineAt(rr) {
-        if (rr < 0 || rr > this.length) throw new RangeError(`Invalid position ${rr} in document of length ${this.length}`);
-        return this.lineInner(rr, !1, 1, 0)
+    class Hd {
+      lineAt(dd) {
+        if (dd < 0 || dd > this.length) throw new RangeError(`Invalid position ${dd} in document of length ${this.length}`);
+        return this.lineInner(dd, !1, 1, 0)
       }
-      line(rr) {
-        if (rr < 1 || rr > this.lines) throw new RangeError(`Invalid line number ${rr} in ${this.lines}-line document`);
-        return this.lineInner(rr, !0, 1, 0)
+      line(dd) {
+        if (dd < 1 || dd > this.lines) throw new RangeError(`Invalid line number ${dd} in ${this.lines}-line document`);
+        return this.lineInner(dd, !0, 1, 0)
       }
-      replace(rr, Sr, Qr) {
-        [rr, Sr] = Tr(this, rr, Sr);
-        let Zr = [];
-        return this.decompose(0, rr, Zr, 2), Qr.length && Qr.decompose(0, Qr.length, Zr, 3), this.decompose(Sr, this.length, Zr, 1), zr.from(Zr, this.length - (Sr - rr) + Qr.length)
+      replace(dd, Od, md) {
+        [dd, Od] = Jd(this, dd, Od);
+        let Wd = [];
+        return this.decompose(0, dd, Wd, 2), md.length && md.decompose(0, md.length, Wd, 3), this.decompose(Od, this.length, Wd, 1), bd.from(Wd, this.length - (Od - dd) + md.length)
       }
-      append(rr) {
-        return this.replace(this.length, this.length, rr)
+      append(dd) {
+        return this.replace(this.length, this.length, dd)
       }
-      slice(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [rr, Sr] = Tr(this, rr, Sr);
-        let Qr = [];
-        return this.decompose(rr, Sr, Qr, 0), zr.from(Qr, Sr - rr)
+      slice(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [dd, Od] = Jd(this, dd, Od);
+        let md = [];
+        return this.decompose(dd, Od, md, 0), bd.from(md, Od - dd)
       }
-      eq(rr) {
-        if (rr == this) return !0;
-        if (rr.length != this.length || rr.lines != this.lines) return !1;
-        let Sr = this.scanIdentical(rr, 1),
-          Qr = this.length - this.scanIdentical(rr, -1),
-          Zr = new er(this),
-          Wr = new er(rr);
-        for (let ar = Sr, jr = Sr;;) {
-          if (Zr.next(ar), Wr.next(ar), ar = 0, Zr.lineBreak != Wr.lineBreak || Zr.done != Wr.done || Zr.value != Wr.value) return !1;
-          if (jr += Zr.value.length, Zr.done || jr >= Qr) return !0
+      eq(dd) {
+        if (dd == this) return !0;
+        if (dd.length != this.length || dd.lines != this.lines) return !1;
+        let Od = this.scanIdentical(dd, 1),
+          md = this.length - this.scanIdentical(dd, -1),
+          Wd = new Yd(this),
+          Fd = new Yd(dd);
+        for (let Rd = Od, Xd = Od;;) {
+          if (Wd.next(Rd), Fd.next(Rd), Rd = 0, Wd.lineBreak != Fd.lineBreak || Wd.done != Fd.done || Wd.value != Fd.value) return !1;
+          if (Xd += Wd.value.length, Wd.done || Xd >= md) return !0
         }
       }
       iter() {
-        return new er(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new Yd(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new Kr(this, rr, Sr)
+      iterRange(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new gd(this, dd, Od)
       }
-      iterLines(rr, Sr) {
-        let Qr;
-        if (null == rr) Qr = this.iter();
+      iterLines(dd, Od) {
+        let md;
+        if (null == dd) md = this.iter();
         else {
-          null == Sr && (Sr = this.lines + 1);
-          let Zr = this.line(rr).from;
-          Qr = this.iterRange(Zr, Math.max(Zr, Sr == this.lines + 1 ? this.length : Sr <= 1 ? 0 : this.line(Sr - 1).to))
+          null == Od && (Od = this.lines + 1);
+          let Wd = this.line(dd).from;
+          md = this.iterRange(Wd, Math.max(Wd, Od == this.lines + 1 ? this.length : Od <= 1 ? 0 : this.line(Od - 1).to))
         }
-        return new yr(Qr)
+        return new wd(md)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let rr = [];
-        return this.flatten(rr), rr
+        let dd = [];
+        return this.flatten(dd), dd
       }
       constructor() {}
-      static of (rr) {
-        if (0 == rr.length) throw new RangeError("A document must have at least one line");
-        return 1 != rr.length || rr[0] ? rr.length <= 32 ? new hr(rr) : zr.from(hr.split(rr, [])) : tr.empty
+      static of (dd) {
+        if (0 == dd.length) throw new RangeError("A document must have at least one line");
+        return 1 != dd.length || dd[0] ? dd.length <= 32 ? new yd(dd) : bd.from(yd.split(dd, [])) : Hd.empty
       }
     }
-    class hr extends tr {
-      constructor(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(rr) {
-          let Sr = -1;
-          for (let Qr of rr) Sr += Qr.length + 1;
-          return Sr
-        }(rr);
-        super(), this.text = rr, this.length = Sr
+    class yd extends Hd {
+      constructor(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(dd) {
+          let Od = -1;
+          for (let md of dd) Od += md.length + 1;
+          return Od
+        }(dd);
+        super(), this.text = dd, this.length = Od
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(rr, Sr, Qr, Zr) {
-        for (let Wr = 0;; Wr++) {
-          let ar = this.text[Wr],
-            jr = Zr + ar.length;
-          if ((Sr ? Qr : jr) >= rr) return new Br(Zr, jr, Qr, ar);
-          Zr = jr + 1, Qr++
+      lineInner(dd, Od, md, Wd) {
+        for (let Fd = 0;; Fd++) {
+          let Rd = this.text[Fd],
+            Xd = Wd + Rd.length;
+          if ((Od ? md : Xd) >= dd) return new Ed(Wd, Xd, md, Rd);
+          Wd = Xd + 1, md++
         }
       }
-      decompose(rr, Sr, Qr, Zr) {
-        let Wr = rr <= 0 && Sr >= this.length ? this : new hr(nr(this.text, rr, Sr), Math.min(Sr, this.length) - Math.max(0, rr));
-        if (1 & Zr) {
-          let rr = Qr.pop(),
-            Sr = Yr(Wr.text, rr.text.slice(), 0, Wr.length);
-          if (Sr.length <= 32) Qr.push(new hr(Sr, rr.length + Wr.length));
+      decompose(dd, Od, md, Wd) {
+        let Fd = dd <= 0 && Od >= this.length ? this : new yd(pd(this.text, dd, Od), Math.min(Od, this.length) - Math.max(0, dd));
+        if (1 & Wd) {
+          let dd = md.pop(),
+            Od = Td(Fd.text, dd.text.slice(), 0, Fd.length);
+          if (Od.length <= 32) md.push(new yd(Od, dd.length + Fd.length));
           else {
-            let rr = Sr.length >> 1;
-            Qr.push(new hr(Sr.slice(0, rr)), new hr(Sr.slice(rr)))
+            let dd = Od.length >> 1;
+            md.push(new yd(Od.slice(0, dd)), new yd(Od.slice(dd)))
           }
-        } else Qr.push(Wr)
+        } else md.push(Fd)
       }
-      replace(rr, Sr, Qr) {
-        if (!(Qr instanceof hr)) return super.replace(rr, Sr, Qr);
-        [rr, Sr] = Tr(this, rr, Sr);
-        let Zr = Yr(this.text, Yr(Qr.text, nr(this.text, 0, rr)), Sr),
-          Wr = this.length + Qr.length - (Sr - rr);
-        return Zr.length <= 32 ? new hr(Zr, Wr) : zr.from(hr.split(Zr, []), Wr)
+      replace(dd, Od, md) {
+        if (!(md instanceof yd)) return super.replace(dd, Od, md);
+        [dd, Od] = Jd(this, dd, Od);
+        let Wd = Td(this.text, Td(md.text, pd(this.text, 0, dd)), Od),
+          Fd = this.length + md.length - (Od - dd);
+        return Wd.length <= 32 ? new yd(Wd, Fd) : bd.from(yd.split(Wd, []), Fd)
       }
-      sliceString(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [rr, Sr] = Tr(this, rr, Sr);
-        let Zr = "";
-        for (let Wr = 0, ar = 0; Wr <= Sr && ar < this.text.length; ar++) {
-          let jr = this.text[ar],
-            Ir = Wr + jr.length;
-          Wr > rr && ar && (Zr += Qr), rr < Ir && Sr > Wr && (Zr += jr.slice(Math.max(0, rr - Wr), Sr - Wr)), Wr = Ir + 1
+      sliceString(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [dd, Od] = Jd(this, dd, Od);
+        let Wd = "";
+        for (let Fd = 0, Rd = 0; Fd <= Od && Rd < this.text.length; Rd++) {
+          let Xd = this.text[Rd],
+            Kd = Fd + Xd.length;
+          Fd > dd && Rd && (Wd += md), dd < Kd && Od > Fd && (Wd += Xd.slice(Math.max(0, dd - Fd), Od - Fd)), Fd = Kd + 1
         }
-        return Zr
+        return Wd
       }
-      flatten(rr) {
-        for (let Sr of this.text) rr.push(Sr)
+      flatten(dd) {
+        for (let Od of this.text) dd.push(Od)
       }
       scanIdentical() {
         return 0
       }
-      static split(rr, Sr) {
-        let Qr = [],
-          Zr = -1;
-        for (let Wr of rr) Qr.push(Wr), Zr += Wr.length + 1, 32 == Qr.length && (Sr.push(new hr(Qr, Zr)), Qr = [], Zr = -1);
-        return Zr > -1 && Sr.push(new hr(Qr, Zr)), Sr
+      static split(dd, Od) {
+        let md = [],
+          Wd = -1;
+        for (let Fd of dd) md.push(Fd), Wd += Fd.length + 1, 32 == md.length && (Od.push(new yd(md, Wd)), md = [], Wd = -1);
+        return Wd > -1 && Od.push(new yd(md, Wd)), Od
       }
     }
-    class zr extends tr {
-      constructor(rr, Sr) {
-        super(), this.children = rr, this.length = Sr, this.lines = 0;
-        for (let Qr of rr) this.lines += Qr.lines
+    class bd extends Hd {
+      constructor(dd, Od) {
+        super(), this.children = dd, this.length = Od, this.lines = 0;
+        for (let md of dd) this.lines += md.lines
       }
-      lineInner(rr, Sr, Qr, Zr) {
-        for (let Wr = 0;; Wr++) {
-          let ar = this.children[Wr],
-            jr = Zr + ar.length,
-            Ir = Qr + ar.lines - 1;
-          if ((Sr ? Ir : jr) >= rr) return ar.lineInner(rr, Sr, Qr, Zr);
-          Zr = jr + 1, Qr = Ir + 1
+      lineInner(dd, Od, md, Wd) {
+        for (let Fd = 0;; Fd++) {
+          let Rd = this.children[Fd],
+            Xd = Wd + Rd.length,
+            Kd = md + Rd.lines - 1;
+          if ((Od ? Kd : Xd) >= dd) return Rd.lineInner(dd, Od, md, Wd);
+          Wd = Xd + 1, md = Kd + 1
         }
       }
-      decompose(rr, Sr, Qr, Zr) {
-        for (let Wr = 0, ar = 0; ar <= Sr && Wr < this.children.length; Wr++) {
-          let jr = this.children[Wr],
-            Ir = ar + jr.length;
-          if (rr <= Ir && Sr >= ar) {
-            let Wr = Zr & ((ar <= rr ? 1 : 0) | (Ir >= Sr ? 2 : 0));
-            ar >= rr && Ir <= Sr && !Wr ? Qr.push(jr) : jr.decompose(rr - ar, Sr - ar, Qr, Wr)
+      decompose(dd, Od, md, Wd) {
+        for (let Fd = 0, Rd = 0; Rd <= Od && Fd < this.children.length; Fd++) {
+          let Xd = this.children[Fd],
+            Kd = Rd + Xd.length;
+          if (dd <= Kd && Od >= Rd) {
+            let Fd = Wd & ((Rd <= dd ? 1 : 0) | (Kd >= Od ? 2 : 0));
+            Rd >= dd && Kd <= Od && !Fd ? md.push(Xd) : Xd.decompose(dd - Rd, Od - Rd, md, Fd)
           }
-          ar = Ir + 1
+          Rd = Kd + 1
         }
       }
-      replace(rr, Sr, Qr) {
-        if ([rr, Sr] = Tr(this, rr, Sr), Qr.lines < this.lines)
-          for (let Zr = 0, Wr = 0; Zr < this.children.length; Zr++) {
-            let ar = this.children[Zr],
-              jr = Wr + ar.length;
-            if (rr >= Wr && Sr <= jr) {
-              let Ir = ar.replace(rr - Wr, Sr - Wr, Qr),
-                fr = this.lines - ar.lines + Ir.lines;
-              if (Ir.lines < fr >> 4 && Ir.lines > fr >> 6) {
-                let Wr = this.children.slice();
-                return Wr[Zr] = Ir, new zr(Wr, this.length - (Sr - rr) + Qr.length)
+      replace(dd, Od, md) {
+        if ([dd, Od] = Jd(this, dd, Od), md.lines < this.lines)
+          for (let Wd = 0, Fd = 0; Wd < this.children.length; Wd++) {
+            let Rd = this.children[Wd],
+              Xd = Fd + Rd.length;
+            if (dd >= Fd && Od <= Xd) {
+              let Kd = Rd.replace(dd - Fd, Od - Fd, md),
+                hd = this.lines - Rd.lines + Kd.lines;
+              if (Kd.lines < hd >> 4 && Kd.lines > hd >> 6) {
+                let Fd = this.children.slice();
+                return Fd[Wd] = Kd, new bd(Fd, this.length - (Od - dd) + md.length)
               }
-              return super.replace(Wr, jr, Ir)
+              return super.replace(Fd, Xd, Kd)
             }
-            Wr = jr + 1
+            Fd = Xd + 1
           }
-        return super.replace(rr, Sr, Qr)
+        return super.replace(dd, Od, md)
       }
-      sliceString(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [rr, Sr] = Tr(this, rr, Sr);
-        let Zr = "";
-        for (let Wr = 0, ar = 0; Wr < this.children.length && ar <= Sr; Wr++) {
-          let jr = this.children[Wr],
-            Ir = ar + jr.length;
-          ar > rr && Wr && (Zr += Qr), rr < Ir && Sr > ar && (Zr += jr.sliceString(rr - ar, Sr - ar, Qr)), ar = Ir + 1
+      sliceString(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [dd, Od] = Jd(this, dd, Od);
+        let Wd = "";
+        for (let Fd = 0, Rd = 0; Fd < this.children.length && Rd <= Od; Fd++) {
+          let Xd = this.children[Fd],
+            Kd = Rd + Xd.length;
+          Rd > dd && Fd && (Wd += md), dd < Kd && Od > Rd && (Wd += Xd.sliceString(dd - Rd, Od - Rd, md)), Rd = Kd + 1
         }
-        return Zr
+        return Wd
       }
-      flatten(rr) {
-        for (let Sr of this.children) Sr.flatten(rr)
+      flatten(dd) {
+        for (let Od of this.children) Od.flatten(dd)
       }
-      scanIdentical(rr, Sr) {
-        if (!(rr instanceof zr)) return 0;
-        let Qr = 0,
-          [Zr, Wr, ar, jr] = Sr > 0 ? [0, 0, this.children.length, rr.children.length] : [this.children.length - 1, rr.children.length - 1, -1, -1];
-        for (;; Zr += Sr, Wr += Sr) {
-          if (Zr == ar || Wr == jr) return Qr;
-          let Ir = this.children[Zr],
-            fr = rr.children[Wr];
-          if (Ir != fr) return Qr + Ir.scanIdentical(fr, Sr);
-          Qr += Ir.length + 1
+      scanIdentical(dd, Od) {
+        if (!(dd instanceof bd)) return 0;
+        let md = 0,
+          [Wd, Fd, Rd, Xd] = Od > 0 ? [0, 0, this.children.length, dd.children.length] : [this.children.length - 1, dd.children.length - 1, -1, -1];
+        for (;; Wd += Od, Fd += Od) {
+          if (Wd == Rd || Fd == Xd) return md;
+          let Kd = this.children[Wd],
+            hd = dd.children[Fd];
+          if (Kd != hd) return md + Kd.scanIdentical(hd, Od);
+          md += Kd.length + 1
         }
       }
-      static from(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr.reduce(((rr, Sr) => rr + Sr.length + 1), -1),
-          Qr = 0;
-        for (let mr of rr) Qr += mr.lines;
-        if (Qr < 32) {
-          let Qr = [];
-          for (let Sr of rr) Sr.flatten(Qr);
-          return new hr(Qr, Sr)
+      static from(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd.reduce(((dd, Od) => dd + Od.length + 1), -1),
+          md = 0;
+        for (let od of dd) md += od.lines;
+        if (md < 32) {
+          let md = [];
+          for (let Od of dd) Od.flatten(md);
+          return new yd(md, Od)
         }
-        let Zr = Math.max(32, Qr >> 5),
-          Wr = Zr << 1,
-          ar = Zr >> 1,
-          jr = [],
-          Ir = 0,
-          fr = -1,
-          Er = [];
+        let Wd = Math.max(32, md >> 5),
+          Fd = Wd << 1,
+          Rd = Wd >> 1,
+          Xd = [],
+          Kd = 0,
+          hd = -1,
+          vd = [];
 
-        function pr(rr) {
-          let Sr;
-          if (rr.lines > Wr && rr instanceof zr)
-            for (let Qr of rr.children) pr(Qr);
-          else rr.lines > ar && (Ir > ar || !Ir) ? (xr(), jr.push(rr)) : rr instanceof hr && Ir && (Sr = Er[Er.length - 1]) instanceof hr && rr.lines + Sr.lines <= 32 ? (Ir += rr.lines, fr += rr.length + 1, Er[Er.length - 1] = new hr(Sr.text.concat(rr.text), Sr.length + 1 + rr.length)) : (Ir + rr.lines > Zr && xr(), Ir += rr.lines, fr += rr.length + 1, Er.push(rr))
+        function Qd(dd) {
+          let Od;
+          if (dd.lines > Fd && dd instanceof bd)
+            for (let md of dd.children) Qd(md);
+          else dd.lines > Rd && (Kd > Rd || !Kd) ? (td(), Xd.push(dd)) : dd instanceof yd && Kd && (Od = vd[vd.length - 1]) instanceof yd && dd.lines + Od.lines <= 32 ? (Kd += dd.lines, hd += dd.length + 1, vd[vd.length - 1] = new yd(Od.text.concat(dd.text), Od.length + 1 + dd.length)) : (Kd + dd.lines > Wd && td(), Kd += dd.lines, hd += dd.length + 1, vd.push(dd))
         }
 
-        function xr() {
-          0 != Ir && (jr.push(1 == Er.length ? Er[0] : zr.from(Er, fr)), fr = -1, Ir = Er.length = 0)
+        function td() {
+          0 != Kd && (Xd.push(1 == vd.length ? vd[0] : bd.from(vd, hd)), hd = -1, Kd = vd.length = 0)
         }
-        for (let mr of rr) pr(mr);
-        return xr(), 1 == jr.length ? jr[0] : new zr(jr, Sr)
+        for (let od of dd) Qd(od);
+        return td(), 1 == Xd.length ? Xd[0] : new bd(Xd, Od)
       }
     }
 
-    function Yr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let Wr = 0, ar = 0, jr = !0; ar < rr.length && Wr <= Zr; ar++) {
-        let Ir = rr[ar],
-          fr = Wr + Ir.length;
-        fr >= Qr && (fr > Zr && (Ir = Ir.slice(0, Zr - Wr)), Wr < Qr && (Ir = Ir.slice(Qr - Wr)), jr ? (Sr[Sr.length - 1] += Ir, jr = !1) : Sr.push(Ir)), Wr = fr + 1
+    function Td(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let Fd = 0, Rd = 0, Xd = !0; Rd < dd.length && Fd <= Wd; Rd++) {
+        let Kd = dd[Rd],
+          hd = Fd + Kd.length;
+        hd >= md && (hd > Wd && (Kd = Kd.slice(0, Wd - Fd)), Fd < md && (Kd = Kd.slice(md - Fd)), Xd ? (Od[Od.length - 1] += Kd, Xd = !1) : Od.push(Kd)), Fd = hd + 1
       }
-      return Sr
+      return Od
     }
 
-    function nr(rr, Sr, Qr) {
-      return Yr(rr, [""], Sr, Qr)
+    function pd(dd, Od, md) {
+      return Td(dd, [""], Od, md)
     }
-    tr.empty = new hr([""], 0);
-    class er {
-      constructor(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = Sr, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [rr], this.offsets = [Sr > 0 ? 1 : (rr instanceof hr ? rr.text.length : rr.children.length) << 1]
+    Hd.empty = new yd([""], 0);
+    class Yd {
+      constructor(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = Od, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [dd], this.offsets = [Od > 0 ? 1 : (dd instanceof yd ? dd.text.length : dd.children.length) << 1]
       }
-      nextInner(rr, Sr) {
+      nextInner(dd, Od) {
         for (this.done = this.lineBreak = !1;;) {
-          let Qr = this.nodes.length - 1,
-            Zr = this.nodes[Qr],
-            Wr = this.offsets[Qr],
-            ar = Wr >> 1,
-            jr = Zr instanceof hr ? Zr.text.length : Zr.children.length;
-          if (ar == (Sr > 0 ? jr : 0)) {
-            if (0 == Qr) return this.done = !0, this.value = "", this;
-            Sr > 0 && this.offsets[Qr - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & Wr) == (Sr > 0 ? 0 : 1)) {
-            if (this.offsets[Qr] += Sr, 0 == rr) return this.lineBreak = !0, this.value = "\n", this;
-            rr--
-          } else if (Zr instanceof hr) {
-            let Wr = Zr.text[ar + (Sr < 0 ? -1 : 0)];
-            if (this.offsets[Qr] += Sr, Wr.length > Math.max(0, rr)) return this.value = 0 == rr ? Wr : Sr > 0 ? Wr.slice(rr) : Wr.slice(0, Wr.length - rr), this;
-            rr -= Wr.length
+          let md = this.nodes.length - 1,
+            Wd = this.nodes[md],
+            Fd = this.offsets[md],
+            Rd = Fd >> 1,
+            Xd = Wd instanceof yd ? Wd.text.length : Wd.children.length;
+          if (Rd == (Od > 0 ? Xd : 0)) {
+            if (0 == md) return this.done = !0, this.value = "", this;
+            Od > 0 && this.offsets[md - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & Fd) == (Od > 0 ? 0 : 1)) {
+            if (this.offsets[md] += Od, 0 == dd) return this.lineBreak = !0, this.value = "\n", this;
+            dd--
+          } else if (Wd instanceof yd) {
+            let Fd = Wd.text[Rd + (Od < 0 ? -1 : 0)];
+            if (this.offsets[md] += Od, Fd.length > Math.max(0, dd)) return this.value = 0 == dd ? Fd : Od > 0 ? Fd.slice(dd) : Fd.slice(0, Fd.length - dd), this;
+            dd -= Fd.length
           } else {
-            let Wr = Zr.children[ar + (Sr < 0 ? -1 : 0)];
-            rr > Wr.length ? (rr -= Wr.length, this.offsets[Qr] += Sr) : (Sr < 0 && this.offsets[Qr]--, this.nodes.push(Wr), this.offsets.push(Sr > 0 ? 1 : (Wr instanceof hr ? Wr.text.length : Wr.children.length) << 1))
+            let Fd = Wd.children[Rd + (Od < 0 ? -1 : 0)];
+            dd > Fd.length ? (dd -= Fd.length, this.offsets[md] += Od) : (Od < 0 && this.offsets[md]--, this.nodes.push(Fd), this.offsets.push(Od > 0 ? 1 : (Fd instanceof yd ? Fd.text.length : Fd.children.length) << 1))
           }
         }
       }
       next() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return rr < 0 && (this.nextInner(-rr, -this.dir), rr = this.value.length), this.nextInner(rr, this.dir)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return dd < 0 && (this.nextInner(-dd, -this.dir), dd = this.value.length), this.nextInner(dd, this.dir)
       }
     }
-    class Kr {
-      constructor(rr, Sr, Qr) {
-        this.value = "", this.done = !1, this.cursor = new er(rr, Sr > Qr ? -1 : 1), this.pos = Sr > Qr ? rr.length : 0, this.from = Math.min(Sr, Qr), this.to = Math.max(Sr, Qr)
+    class gd {
+      constructor(dd, Od, md) {
+        this.value = "", this.done = !1, this.cursor = new Yd(dd, Od > md ? -1 : 1), this.pos = Od > md ? dd.length : 0, this.from = Math.min(Od, md), this.to = Math.max(Od, md)
       }
-      nextInner(rr, Sr) {
-        if (Sr < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        rr += Math.max(0, Sr < 0 ? this.pos - this.to : this.from - this.pos);
-        let Qr = Sr < 0 ? this.pos - this.from : this.to - this.pos;
-        rr > Qr && (rr = Qr), Qr -= rr;
+      nextInner(dd, Od) {
+        if (Od < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        dd += Math.max(0, Od < 0 ? this.pos - this.to : this.from - this.pos);
+        let md = Od < 0 ? this.pos - this.from : this.to - this.pos;
+        dd > md && (dd = md), md -= dd;
         let {
-          value: Zr
-        } = this.cursor.next(rr);
-        return this.pos += (Zr.length + rr) * Sr, this.value = Zr.length <= Qr ? Zr : Sr < 0 ? Zr.slice(Zr.length - Qr) : Zr.slice(0, Qr), this.done = !this.value, this
+          value: Wd
+        } = this.cursor.next(dd);
+        return this.pos += (Wd.length + dd) * Od, this.value = Wd.length <= md ? Wd : Od < 0 ? Wd.slice(Wd.length - md) : Wd.slice(0, md), this.done = !this.value, this
       }
       next() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return rr < 0 ? rr = Math.max(rr, this.from - this.pos) : rr > 0 && (rr = Math.min(rr, this.to - this.pos)), this.nextInner(rr, this.cursor.dir)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return dd < 0 ? dd = Math.max(dd, this.from - this.pos) : dd > 0 && (dd = Math.min(dd, this.to - this.pos)), this.nextInner(dd, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class yr {
-      constructor(rr) {
-        this.inner = rr, this.afterBreak = !0, this.value = "", this.done = !1
+    class wd {
+      constructor(dd) {
+        this.inner = dd, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: Sr,
-            lineBreak: Qr,
-            value: Zr
-          } = this.inner.next(rr);
-        return Sr && this.afterBreak ? (this.value = "", this.afterBreak = !1) : Sr ? (this.done = !0, this.value = "") : Qr ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = Zr, this.afterBreak = !1), this
+            done: Od,
+            lineBreak: md,
+            value: Wd
+          } = this.inner.next(dd);
+        return Od && this.afterBreak ? (this.value = "", this.afterBreak = !1) : Od ? (this.done = !0, this.value = "") : md ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = Wd, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (tr.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (Hd.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, er.prototype[Symbol.iterator] = Kr.prototype[Symbol.iterator] = yr.prototype[Symbol.iterator] = function() {
+    }, Yd.prototype[Symbol.iterator] = gd.prototype[Symbol.iterator] = wd.prototype[Symbol.iterator] = function() {
       return this
     });
-    class Br {
-      constructor(rr, Sr, Qr, Zr) {
-        this.from = rr, this.to = Sr, this.number = Qr, this.text = Zr
+    class Ed {
+      constructor(dd, Od, md, Wd) {
+        this.from = dd, this.to = Od, this.number = md, this.text = Wd
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function Tr(rr, Sr, Qr) {
-      return [Sr = Math.max(0, Math.min(rr.length, Sr)), Math.max(Sr, Math.min(rr.length, Qr))]
+    function Jd(dd, Od, md) {
+      return [Od = Math.max(0, Math.min(dd.length, Od)), Math.max(Od, Math.min(dd.length, md))]
     }
 
-    function vr(rr, Sr) {
-      return fr(rr, Sr, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function Ud(dd, Od) {
+      return hd(dd, Od, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function Or(rr, Sr) {
-      let Qr = rr.charCodeAt(Sr);
-      if (!((Zr = Qr) >= 55296 && Zr < 56320) || Sr + 1 == rr.length) return Qr;
-      var Zr;
-      let Wr = rr.charCodeAt(Sr + 1);
-      return function(rr) {
-        return rr >= 56320 && rr < 57344
-      }(Wr) ? Wr - 56320 + (Qr - 55296 << 10) + 65536 : Qr
+    function xd(dd, Od) {
+      let md = dd.charCodeAt(Od);
+      if (!((Wd = md) >= 55296 && Wd < 56320) || Od + 1 == dd.length) return md;
+      var Wd;
+      let Fd = dd.charCodeAt(Od + 1);
+      return function(dd) {
+        return dd >= 56320 && dd < 57344
+      }(Fd) ? Fd - 56320 + (md - 55296 << 10) + 65536 : md
     }
 
-    function Lr(rr) {
-      return rr <= 65535 ? String.fromCharCode(rr) : (rr -= 65536, String.fromCharCode(55296 + (rr >> 10), 56320 + (1023 & rr)))
+    function Bd(dd) {
+      return dd <= 65535 ? String.fromCharCode(dd) : (dd -= 65536, String.fromCharCode(55296 + (dd >> 10), 56320 + (1023 & dd)))
     }
 
-    function lr(rr) {
-      return rr < 65536 ? 1 : 2
+    function Sd(dd) {
+      return dd < 65536 ? 1 : 2
     }
-    const Xr = /\r\n?|\n/;
-    var Pr = function(rr) {
-      return rr[rr.Simple = 0] = "Simple", rr[rr.TrackDel = 1] = "TrackDel", rr[rr.TrackBefore = 2] = "TrackBefore", rr[rr.TrackAfter = 3] = "TrackAfter", rr
-    }(Pr || (Pr = {}));
-    class Hr {
-      constructor(rr) {
-        this.sections = rr
+    const sd = /\r\n?|\n/;
+    var ud = function(dd) {
+      return dd[dd.Simple = 0] = "Simple", dd[dd.TrackDel = 1] = "TrackDel", dd[dd.TrackBefore = 2] = "TrackBefore", dd[dd.TrackAfter = 3] = "TrackAfter", dd
+    }(ud || (ud = {}));
+    class Vd {
+      constructor(dd) {
+        this.sections = dd
       }
       get length() {
-        let rr = 0;
-        for (let Sr = 0; Sr < this.sections.length; Sr += 2) rr += this.sections[Sr];
-        return rr
+        let dd = 0;
+        for (let Od = 0; Od < this.sections.length; Od += 2) dd += this.sections[Od];
+        return dd
       }
       get newLength() {
-        let rr = 0;
-        for (let Sr = 0; Sr < this.sections.length; Sr += 2) {
-          let Qr = this.sections[Sr + 1];
-          rr += Qr < 0 ? this.sections[Sr] : Qr
+        let dd = 0;
+        for (let Od = 0; Od < this.sections.length; Od += 2) {
+          let md = this.sections[Od + 1];
+          dd += md < 0 ? this.sections[Od] : md
         }
-        return rr
+        return dd
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(rr) {
-        for (let Sr = 0, Qr = 0, Zr = 0; Sr < this.sections.length;) {
-          let Wr = this.sections[Sr++],
-            ar = this.sections[Sr++];
-          ar < 0 ? (rr(Qr, Zr, Wr), Zr += Wr) : Zr += ar, Qr += Wr
+      iterGaps(dd) {
+        for (let Od = 0, md = 0, Wd = 0; Od < this.sections.length;) {
+          let Fd = this.sections[Od++],
+            Rd = this.sections[Od++];
+          Rd < 0 ? (dd(md, Wd, Fd), Wd += Fd) : Wd += Rd, md += Fd
         }
       }
-      iterChangedRanges(rr) {
-        Cr(this, rr, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(dd) {
+        nd(this, dd, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let rr = [];
-        for (let Sr = 0; Sr < this.sections.length;) {
-          let Qr = this.sections[Sr++],
-            Zr = this.sections[Sr++];
-          Zr < 0 ? rr.push(Qr, Zr) : rr.push(Zr, Qr)
+        let dd = [];
+        for (let Od = 0; Od < this.sections.length;) {
+          let md = this.sections[Od++],
+            Wd = this.sections[Od++];
+          Wd < 0 ? dd.push(md, Wd) : dd.push(Wd, md)
         }
-        return new Hr(rr)
+        return new Vd(dd)
       }
-      composeDesc(rr) {
-        return this.empty ? rr : rr.empty ? this : Gr(this, rr)
+      composeDesc(dd) {
+        return this.empty ? dd : dd.empty ? this : Pd(this, dd)
       }
-      mapDesc(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return rr.empty ? this : Mr(this, rr, Sr)
+      mapDesc(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return dd.empty ? this : Ld(this, dd, Od)
       }
-      mapPos(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Pr.Simple,
-          Zr = 0,
-          Wr = 0;
-        for (let ar = 0; ar < this.sections.length;) {
-          let jr = this.sections[ar++],
-            Ir = this.sections[ar++],
-            fr = Zr + jr;
-          if (Ir < 0) {
-            if (fr > rr) return Wr + (rr - Zr);
-            Wr += jr
+      mapPos(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ud.Simple,
+          Wd = 0,
+          Fd = 0;
+        for (let Rd = 0; Rd < this.sections.length;) {
+          let Xd = this.sections[Rd++],
+            Kd = this.sections[Rd++],
+            hd = Wd + Xd;
+          if (Kd < 0) {
+            if (hd > dd) return Fd + (dd - Wd);
+            Fd += Xd
           } else {
-            if (Qr != Pr.Simple && fr >= rr && (Qr == Pr.TrackDel && Zr < rr && fr > rr || Qr == Pr.TrackBefore && Zr < rr || Qr == Pr.TrackAfter && fr > rr)) return null;
-            if (fr > rr || fr == rr && Sr < 0 && !jr) return rr == Zr || Sr < 0 ? Wr : Wr + Ir;
-            Wr += Ir
+            if (md != ud.Simple && hd >= dd && (md == ud.TrackDel && Wd < dd && hd > dd || md == ud.TrackBefore && Wd < dd || md == ud.TrackAfter && hd > dd)) return null;
+            if (hd > dd || hd == dd && Od < 0 && !Xd) return dd == Wd || Od < 0 ? Fd : Fd + Kd;
+            Fd += Kd
           }
-          Zr = fr
+          Wd = hd
         }
-        if (rr > Zr) throw new RangeError(`Position ${rr} is out of range for changeset of length ${Zr}`);
-        return Wr
+        if (dd > Wd) throw new RangeError(`Position ${dd} is out of range for changeset of length ${Wd}`);
+        return Fd
       }
-      touchesRange(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr;
-        for (let Qr = 0, Zr = 0; Qr < this.sections.length && Zr <= Sr;) {
-          let Wr = Zr + this.sections[Qr++];
-          if (this.sections[Qr++] >= 0 && Zr <= Sr && Wr >= rr) return !(Zr < rr && Wr > Sr) || "cover";
-          Zr = Wr
+      touchesRange(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd;
+        for (let md = 0, Wd = 0; md < this.sections.length && Wd <= Od;) {
+          let Fd = Wd + this.sections[md++];
+          if (this.sections[md++] >= 0 && Wd <= Od && Fd >= dd) return !(Wd < dd && Fd > Od) || "cover";
+          Wd = Fd
         }
         return !1
       }
       toString() {
-        let rr = "";
-        for (let Sr = 0; Sr < this.sections.length;) {
-          let Qr = this.sections[Sr++],
-            Zr = this.sections[Sr++];
-          rr += (rr ? " " : "") + Qr + (Zr >= 0 ? ":" + Zr : "")
+        let dd = "";
+        for (let Od = 0; Od < this.sections.length;) {
+          let md = this.sections[Od++],
+            Wd = this.sections[Od++];
+          dd += (dd ? " " : "") + md + (Wd >= 0 ? ":" + Wd : "")
         }
-        return rr
+        return dd
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(rr) {
-        if (!Array.isArray(rr) || rr.length % 2 || rr.some((rr => "number" != typeof rr))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new Hr(rr)
+      static fromJSON(dd) {
+        if (!Array.isArray(dd) || dd.length % 2 || dd.some((dd => "number" != typeof dd))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new Vd(dd)
       }
-      static create(rr) {
-        return new Hr(rr)
+      static create(dd) {
+        return new Vd(dd)
       }
     }
-    class qr extends Hr {
-      constructor(rr, Sr) {
-        super(rr), this.inserted = Sr
+    class Ad extends Vd {
+      constructor(dd, Od) {
+        super(dd), this.inserted = Od
       }
-      apply(rr) {
-        if (this.length != rr.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return Cr(this, ((Sr, Qr, Zr, Wr, ar) => rr = rr.replace(Zr, Zr + (Qr - Sr), ar)), !1), rr
+      apply(dd) {
+        if (this.length != dd.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return nd(this, ((Od, md, Wd, Fd, Rd) => dd = dd.replace(Wd, Wd + (md - Od), Rd)), !1), dd
       }
-      mapDesc(rr) {
-        return Mr(this, rr, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(dd) {
+        return Ld(this, dd, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(rr) {
-        let Sr = this.sections.slice(),
-          Qr = [];
-        for (let Zr = 0, Wr = 0; Zr < Sr.length; Zr += 2) {
-          let ar = Sr[Zr],
-            jr = Sr[Zr + 1];
-          if (jr >= 0) {
-            Sr[Zr] = jr, Sr[Zr + 1] = ar;
-            let Ir = Zr >> 1;
-            for (; Qr.length < Ir;) Qr.push(tr.empty);
-            Qr.push(ar ? rr.slice(Wr, Wr + ar) : tr.empty)
+      invert(dd) {
+        let Od = this.sections.slice(),
+          md = [];
+        for (let Wd = 0, Fd = 0; Wd < Od.length; Wd += 2) {
+          let Rd = Od[Wd],
+            Xd = Od[Wd + 1];
+          if (Xd >= 0) {
+            Od[Wd] = Xd, Od[Wd + 1] = Rd;
+            let Kd = Wd >> 1;
+            for (; md.length < Kd;) md.push(Hd.empty);
+            md.push(Rd ? dd.slice(Fd, Fd + Rd) : Hd.empty)
           }
-          Wr += ar
+          Fd += Rd
         }
-        return new qr(Sr, Qr)
+        return new Ad(Od, md)
       }
-      compose(rr) {
-        return this.empty ? rr : rr.empty ? this : Gr(this, rr, !0)
+      compose(dd) {
+        return this.empty ? dd : dd.empty ? this : Pd(this, dd, !0)
       }
-      map(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return rr.empty ? this : Mr(this, rr, Sr, !0)
+      map(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return dd.empty ? this : Ld(this, dd, Od, !0)
       }
-      iterChanges(rr) {
-        Cr(this, rr, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(dd) {
+        nd(this, dd, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return Hr.create(this.sections)
+        return Vd.create(this.sections)
       }
-      filter(rr) {
-        let Sr = [],
-          Qr = [],
-          Zr = [],
-          Wr = new kr(this);
-        rr: for (let ar = 0, jr = 0;;) {
-          let Ir = ar == rr.length ? 1e9 : rr[ar++];
-          for (; jr < Ir || jr == Ir && 0 == Wr.len;) {
-            if (Wr.done) break rr;
-            let rr = Math.min(Wr.len, Ir - jr);
-            Rr(Zr, rr, -1);
-            let ar = -1 == Wr.ins ? -1 : 0 == Wr.off ? Wr.ins : 0;
-            Rr(Sr, rr, ar), ar > 0 && gr(Qr, Sr, Wr.text), Wr.forward(rr), jr += rr
+      filter(dd) {
+        let Od = [],
+          md = [],
+          Wd = [],
+          Fd = new zd(this);
+        dd: for (let Rd = 0, Xd = 0;;) {
+          let Kd = Rd == dd.length ? 1e9 : dd[Rd++];
+          for (; Xd < Kd || Xd == Kd && 0 == Fd.len;) {
+            if (Fd.done) break dd;
+            let dd = Math.min(Fd.len, Kd - Xd);
+            rd(Wd, dd, -1);
+            let Rd = -1 == Fd.ins ? -1 : 0 == Fd.off ? Fd.ins : 0;
+            rd(Od, dd, Rd), Rd > 0 && Gd(md, Od, Fd.text), Fd.forward(dd), Xd += dd
           }
-          let fr = rr[ar++];
-          for (; jr < fr;) {
-            if (Wr.done) break rr;
-            let rr = Math.min(Wr.len, fr - jr);
-            Rr(Sr, rr, -1), Rr(Zr, rr, -1 == Wr.ins ? -1 : 0 == Wr.off ? Wr.ins : 0), Wr.forward(rr), jr += rr
+          let hd = dd[Rd++];
+          for (; Xd < hd;) {
+            if (Fd.done) break dd;
+            let dd = Math.min(Fd.len, hd - Xd);
+            rd(Od, dd, -1), rd(Wd, dd, -1 == Fd.ins ? -1 : 0 == Fd.off ? Fd.ins : 0), Fd.forward(dd), Xd += dd
           }
         }
         return {
-          changes: new qr(Sr, Qr),
-          filtered: Hr.create(Zr)
+          changes: new Ad(Od, md),
+          filtered: Vd.create(Wd)
         }
       }
       toJSON() {
-        let rr = [];
-        for (let Sr = 0; Sr < this.sections.length; Sr += 2) {
-          let Qr = this.sections[Sr],
-            Zr = this.sections[Sr + 1];
-          Zr < 0 ? rr.push(Qr) : 0 == Zr ? rr.push([Qr]) : rr.push([Qr].concat(this.inserted[Sr >> 1].toJSON()))
+        let dd = [];
+        for (let Od = 0; Od < this.sections.length; Od += 2) {
+          let md = this.sections[Od],
+            Wd = this.sections[Od + 1];
+          Wd < 0 ? dd.push(md) : 0 == Wd ? dd.push([md]) : dd.push([md].concat(this.inserted[Od >> 1].toJSON()))
         }
-        return rr
+        return dd
       }
-      static of (rr, Sr, Qr) {
-        let Zr = [],
-          Wr = [],
-          ar = 0,
-          jr = null;
+      static of (dd, Od, md) {
+        let Wd = [],
+          Fd = [],
+          Rd = 0,
+          Xd = null;
 
-        function Ir() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !Zr.length) return;
-          ar < Sr && Rr(Zr, Sr - ar, -1);
-          let rr = new qr(Zr, Wr);
-          jr = jr ? jr.compose(rr.map(jr)) : rr, Zr = [], Wr = [], ar = 0
+        function Kd() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !Wd.length) return;
+          Rd < Od && rd(Wd, Od - Rd, -1);
+          let dd = new Ad(Wd, Fd);
+          Xd = Xd ? Xd.compose(dd.map(Xd)) : dd, Wd = [], Fd = [], Rd = 0
         }
-        return function rr(fr) {
-          if (Array.isArray(fr))
-            for (let Sr of fr) rr(Sr);
-          else if (fr instanceof qr) {
-            if (fr.length != Sr) throw new RangeError(`Mismatched change set length (got ${fr.length}, expected ${Sr})`);
-            Ir(), jr = jr ? jr.compose(fr.map(jr)) : fr
+        return function dd(hd) {
+          if (Array.isArray(hd))
+            for (let Od of hd) dd(Od);
+          else if (hd instanceof Ad) {
+            if (hd.length != Od) throw new RangeError(`Mismatched change set length (got ${hd.length}, expected ${Od})`);
+            Kd(), Xd = Xd ? Xd.compose(hd.map(Xd)) : hd
           } else {
             let {
-              from: rr,
-              to: jr = rr,
-              insert: Er
-            } = fr;
-            if (rr > jr || rr < 0 || jr > Sr) throw new RangeError(`Invalid change range ${rr} to ${jr} (in doc of length ${Sr})`);
-            let pr = Er ? "string" == typeof Er ? tr.of(Er.split(Qr || Xr)) : Er : tr.empty,
-              xr = pr.length;
-            if (rr == jr && 0 == xr) return;
-            rr < ar && Ir(), rr > ar && Rr(Zr, rr - ar, -1), Rr(Zr, jr - rr, xr), gr(Wr, Zr, pr), ar = jr
+              from: dd,
+              to: Xd = dd,
+              insert: vd
+            } = hd;
+            if (dd > Xd || dd < 0 || Xd > Od) throw new RangeError(`Invalid change range ${dd} to ${Xd} (in doc of length ${Od})`);
+            let Qd = vd ? "string" == typeof vd ? Hd.of(vd.split(md || sd)) : vd : Hd.empty,
+              td = Qd.length;
+            if (dd == Xd && 0 == td) return;
+            dd < Rd && Kd(), dd > Rd && rd(Wd, dd - Rd, -1), rd(Wd, Xd - dd, td), Gd(Fd, Wd, Qd), Rd = Xd
           }
-        }(rr), Ir(!jr), jr
+        }(dd), Kd(!Xd), Xd
       }
-      static empty(rr) {
-        return new qr(rr ? [rr, -1] : [], [])
+      static empty(dd) {
+        return new Ad(dd ? [dd, -1] : [], [])
       }
-      static fromJSON(rr) {
-        if (!Array.isArray(rr)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let Sr = [],
-          Qr = [];
-        for (let Zr = 0; Zr < rr.length; Zr++) {
-          let Wr = rr[Zr];
-          if ("number" == typeof Wr) Sr.push(Wr, -1);
+      static fromJSON(dd) {
+        if (!Array.isArray(dd)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let Od = [],
+          md = [];
+        for (let Wd = 0; Wd < dd.length; Wd++) {
+          let Fd = dd[Wd];
+          if ("number" == typeof Fd) Od.push(Fd, -1);
           else {
-            if (!Array.isArray(Wr) || "number" != typeof Wr[0] || Wr.some(((rr, Sr) => Sr && "string" != typeof rr))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == Wr.length) Sr.push(Wr[0], 0);
+            if (!Array.isArray(Fd) || "number" != typeof Fd[0] || Fd.some(((dd, Od) => Od && "string" != typeof dd))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == Fd.length) Od.push(Fd[0], 0);
             else {
-              for (; Qr.length < Zr;) Qr.push(tr.empty);
-              Qr[Zr] = tr.of(Wr.slice(1)), Sr.push(Wr[0], Qr[Zr].length)
+              for (; md.length < Wd;) md.push(Hd.empty);
+              md[Wd] = Hd.of(Fd.slice(1)), Od.push(Fd[0], md[Wd].length)
             }
           }
         }
-        return new qr(Sr, Qr)
+        return new Ad(Od, md)
       }
-      static createSet(rr, Sr) {
-        return new qr(rr, Sr)
+      static createSet(dd, Od) {
+        return new Ad(dd, Od)
       }
     }
 
-    function Rr(rr, Sr, Qr) {
-      let Zr = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == Sr && Qr <= 0) return;
-      let Wr = rr.length - 2;
-      Wr >= 0 && Qr <= 0 && Qr == rr[Wr + 1] ? rr[Wr] += Sr : Wr >= 0 && 0 == Sr && 0 == rr[Wr] ? rr[Wr + 1] += Qr : Zr ? (rr[Wr] += Sr, rr[Wr + 1] += Qr) : rr.push(Sr, Qr)
+    function rd(dd, Od, md) {
+      let Wd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == Od && md <= 0) return;
+      let Fd = dd.length - 2;
+      Fd >= 0 && md <= 0 && md == dd[Fd + 1] ? dd[Fd] += Od : Fd >= 0 && 0 == Od && 0 == dd[Fd] ? dd[Fd + 1] += md : Wd ? (dd[Fd] += Od, dd[Fd + 1] += md) : dd.push(Od, md)
     }
 
-    function gr(rr, Sr, Qr) {
-      if (0 == Qr.length) return;
-      let Zr = Sr.length - 2 >> 1;
-      if (Zr < rr.length) rr[rr.length - 1] = rr[rr.length - 1].append(Qr);
+    function Gd(dd, Od, md) {
+      if (0 == md.length) return;
+      let Wd = Od.length - 2 >> 1;
+      if (Wd < dd.length) dd[dd.length - 1] = dd[dd.length - 1].append(md);
       else {
-        for (; rr.length < Zr;) rr.push(tr.empty);
-        rr.push(Qr)
+        for (; dd.length < Wd;) dd.push(Hd.empty);
+        dd.push(md)
       }
     }
 
-    function Cr(rr, Sr, Qr) {
-      let Zr = rr.inserted;
-      for (let Wr = 0, ar = 0, jr = 0; jr < rr.sections.length;) {
-        let Ir = rr.sections[jr++],
-          fr = rr.sections[jr++];
-        if (fr < 0) Wr += Ir, ar += Ir;
+    function nd(dd, Od, md) {
+      let Wd = dd.inserted;
+      for (let Fd = 0, Rd = 0, Xd = 0; Xd < dd.sections.length;) {
+        let Kd = dd.sections[Xd++],
+          hd = dd.sections[Xd++];
+        if (hd < 0) Fd += Kd, Rd += Kd;
         else {
-          let Er = Wr,
-            pr = ar,
-            xr = tr.empty;
-          for (; Er += Ir, pr += fr, fr && Zr && (xr = xr.append(Zr[jr - 2 >> 1])), !(Qr || jr == rr.sections.length || rr.sections[jr + 1] < 0);) Ir = rr.sections[jr++], fr = rr.sections[jr++];
-          Sr(Wr, Er, ar, pr, xr), Wr = Er, ar = pr
+          let vd = Fd,
+            Qd = Rd,
+            td = Hd.empty;
+          for (; vd += Kd, Qd += hd, hd && Wd && (td = td.append(Wd[Xd - 2 >> 1])), !(md || Xd == dd.sections.length || dd.sections[Xd + 1] < 0);) Kd = dd.sections[Xd++], hd = dd.sections[Xd++];
+          Od(Fd, vd, Rd, Qd, td), Fd = vd, Rd = Qd
         }
       }
     }
 
-    function Mr(rr, Sr, Qr) {
-      let Zr = [],
-        Wr = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        ar = new kr(rr),
-        jr = new kr(Sr),
-        Ir = 0;
-      for (let fr = -1;;) {
-        if (++Ir > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (ar.done && jr.len || jr.done && ar.len) throw new Error("Mismatched change set lengths");
-        if (-1 == ar.ins && -1 == jr.ins) {
-          let rr = Math.min(ar.len, jr.len);
-          Rr(Zr, rr, -1), ar.forward(rr), jr.forward(rr)
-        } else if (jr.ins >= 0 && (ar.ins < 0 || fr == ar.i || 0 == ar.off && (jr.len < ar.len || jr.len == ar.len && !Qr))) {
-          let rr = jr.len;
-          for (Rr(Zr, jr.ins, -1); rr;) {
-            if (++Ir > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let Sr = Math.min(ar.len, rr);
-            ar.ins >= 0 && fr < ar.i && ar.len <= Sr && (Rr(Zr, 0, ar.ins), Wr && gr(Wr, Zr, ar.text), fr = ar.i), ar.forward(Sr), rr -= Sr
+    function Ld(dd, Od, md) {
+      let Wd = [],
+        Fd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        Rd = new zd(dd),
+        Xd = new zd(Od),
+        Kd = 0;
+      for (let hd = -1;;) {
+        if (++Kd > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (Rd.done && Xd.len || Xd.done && Rd.len) throw new Error("Mismatched change set lengths");
+        if (-1 == Rd.ins && -1 == Xd.ins) {
+          let dd = Math.min(Rd.len, Xd.len);
+          rd(Wd, dd, -1), Rd.forward(dd), Xd.forward(dd)
+        } else if (Xd.ins >= 0 && (Rd.ins < 0 || hd == Rd.i || 0 == Rd.off && (Xd.len < Rd.len || Xd.len == Rd.len && !md))) {
+          let dd = Xd.len;
+          for (rd(Wd, Xd.ins, -1); dd;) {
+            if (++Kd > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let Od = Math.min(Rd.len, dd);
+            Rd.ins >= 0 && hd < Rd.i && Rd.len <= Od && (rd(Wd, 0, Rd.ins), Fd && Gd(Fd, Wd, Rd.text), hd = Rd.i), Rd.forward(Od), dd -= Od
           }
-          jr.next()
+          Xd.next()
         } else {
-          if (!(ar.ins >= 0)) {
-            if (ar.done && jr.done) return Wr ? qr.createSet(Zr, Wr) : Hr.create(Zr);
+          if (!(Rd.ins >= 0)) {
+            if (Rd.done && Xd.done) return Fd ? Ad.createSet(Wd, Fd) : Vd.create(Wd);
             throw new Error("Mismatched change set lengths")
           } {
-            let rr = 0,
-              Sr = ar.len;
-            for (; Sr;) {
-              if (++Ir > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == jr.ins) {
-                let Qr = Math.min(Sr, jr.len);
-                rr += Qr, Sr -= Qr, jr.forward(Qr)
+            let dd = 0,
+              Od = Rd.len;
+            for (; Od;) {
+              if (++Kd > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == Xd.ins) {
+                let md = Math.min(Od, Xd.len);
+                dd += md, Od -= md, Xd.forward(md)
               } else {
-                if (!(0 == jr.ins && jr.len < Sr)) break;
-                Sr -= jr.len, jr.next()
+                if (!(0 == Xd.ins && Xd.len < Od)) break;
+                Od -= Xd.len, Xd.next()
               }
             }
-            Rr(Zr, rr, fr < ar.i ? ar.ins : 0), Wr && fr < ar.i && gr(Wr, Zr, ar.text), fr = ar.i, ar.forward(ar.len - Sr)
+            rd(Wd, dd, hd < Rd.i ? Rd.ins : 0), Fd && hd < Rd.i && Gd(Fd, Wd, Rd.text), hd = Rd.i, Rd.forward(Rd.len - Od)
           }
         }
       }
     }
 
-    function Gr(rr, Sr) {
-      let Qr = [],
-        Zr = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        Wr = new kr(rr),
-        ar = new kr(Sr),
-        jr = 0;
-      for (let Ir = !1;;) {
-        if (++jr > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (Wr.done && ar.done) return Zr ? qr.createSet(Qr, Zr) : Hr.create(Qr);
-        if (0 == Wr.ins) Rr(Qr, Wr.len, 0, Ir), Wr.next();
-        else if (0 != ar.len || ar.done) {
-          if (Wr.done || ar.done) throw new Error("Mismatched change set lengths");
+    function Pd(dd, Od) {
+      let md = [],
+        Wd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        Fd = new zd(dd),
+        Rd = new zd(Od),
+        Xd = 0;
+      for (let Kd = !1;;) {
+        if (++Xd > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (Fd.done && Rd.done) return Wd ? Ad.createSet(md, Wd) : Vd.create(md);
+        if (0 == Fd.ins) rd(md, Fd.len, 0, Kd), Fd.next();
+        else if (0 != Rd.len || Rd.done) {
+          if (Fd.done || Rd.done) throw new Error("Mismatched change set lengths");
           {
-            let rr = Math.min(Wr.len2, ar.len),
-              Sr = Qr.length;
-            if (-1 == Wr.ins) {
-              let Sr = -1 == ar.ins ? -1 : ar.off ? 0 : ar.ins;
-              Rr(Qr, rr, Sr, Ir), Zr && Sr && gr(Zr, Qr, ar.text)
-            } else - 1 == ar.ins ? (Rr(Qr, Wr.off ? 0 : Wr.len, rr, Ir), Zr && gr(Zr, Qr, Wr.textBit(rr))) : (Rr(Qr, Wr.off ? 0 : Wr.len, ar.off ? 0 : ar.ins, Ir), Zr && !ar.off && gr(Zr, Qr, ar.text));
-            Ir = (Wr.ins > rr || ar.ins >= 0 && ar.len > rr) && (Ir || Qr.length > Sr), Wr.forward2(rr), ar.forward(rr)
+            let dd = Math.min(Fd.len2, Rd.len),
+              Od = md.length;
+            if (-1 == Fd.ins) {
+              let Od = -1 == Rd.ins ? -1 : Rd.off ? 0 : Rd.ins;
+              rd(md, dd, Od, Kd), Wd && Od && Gd(Wd, md, Rd.text)
+            } else - 1 == Rd.ins ? (rd(md, Fd.off ? 0 : Fd.len, dd, Kd), Wd && Gd(Wd, md, Fd.textBit(dd))) : (rd(md, Fd.off ? 0 : Fd.len, Rd.off ? 0 : Rd.ins, Kd), Wd && !Rd.off && Gd(Wd, md, Rd.text));
+            Kd = (Fd.ins > dd || Rd.ins >= 0 && Rd.len > dd) && (Kd || md.length > Od), Fd.forward2(dd), Rd.forward(dd)
           }
-        } else Rr(Qr, 0, ar.ins, Ir), Zr && gr(Zr, Qr, ar.text), ar.next()
+        } else rd(md, 0, Rd.ins, Kd), Wd && Gd(Wd, md, Rd.text), Rd.next()
       }
     }
-    class kr {
-      constructor(rr) {
-        this.set = rr, this.i = 0, this.next()
+    class zd {
+      constructor(dd) {
+        this.set = dd, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: rr
+          sections: dd
         } = this.set;
-        this.i < rr.length ? (this.len = rr[this.i++], this.ins = rr[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < dd.length ? (this.len = dd[this.i++], this.ins = dd[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: rr
-        } = this.set, Sr = this.i - 2 >> 1;
-        return Sr >= rr.length ? tr.empty : rr[Sr]
+          inserted: dd
+        } = this.set, Od = this.i - 2 >> 1;
+        return Od >= dd.length ? Hd.empty : dd[Od]
       }
-      textBit(rr) {
+      textBit(dd) {
         let {
-          inserted: Sr
-        } = this.set, Qr = this.i - 2 >> 1;
-        return Qr >= Sr.length && !rr ? tr.empty : Sr[Qr].slice(this.off, null == rr ? void 0 : this.off + rr)
+          inserted: Od
+        } = this.set, md = this.i - 2 >> 1;
+        return md >= Od.length && !dd ? Hd.empty : Od[md].slice(this.off, null == dd ? void 0 : this.off + dd)
       }
-      forward(rr) {
-        rr == this.len ? this.next() : (this.len -= rr, this.off += rr)
+      forward(dd) {
+        dd == this.len ? this.next() : (this.len -= dd, this.off += dd)
       }
-      forward2(rr) {
-        -1 == this.ins ? this.forward(rr) : rr == this.ins ? this.next() : (this.ins -= rr, this.off += rr)
+      forward2(dd) {
+        -1 == this.ins ? this.forward(dd) : dd == this.ins ? this.next() : (this.ins -= dd, this.off += dd)
       }
     }
-    class Ar {
-      constructor(rr, Sr, Qr) {
-        this.from = rr, this.to = Sr, this.flags = Qr
+    class cd {
+      constructor(dd, Od, md) {
+        this.from = dd, this.to = Od, this.flags = md
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let rr = 7 & this.flags;
-        return 7 == rr ? null : rr
+        let dd = 7 & this.flags;
+        return 7 == dd ? null : dd
       }
       get goalColumn() {
-        let rr = this.flags >> 6;
-        return 16777215 == rr ? void 0 : rr
+        let dd = this.flags >> 6;
+        return 16777215 == dd ? void 0 : dd
       }
-      map(rr) {
-        let Sr, Qr, Zr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? Sr = Qr = rr.mapPos(this.from, Zr) : (Sr = rr.mapPos(this.from, 1), Qr = rr.mapPos(this.to, -1)), Sr == this.from && Qr == this.to ? this : new Ar(Sr, Qr, this.flags)
+      map(dd) {
+        let Od, md, Wd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? Od = md = dd.mapPos(this.from, Wd) : (Od = dd.mapPos(this.from, 1), md = dd.mapPos(this.to, -1)), Od == this.from && md == this.to ? this : new cd(Od, md, this.flags)
       }
-      extend(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (rr <= this.anchor && Sr >= this.anchor) return Vr.range(rr, Sr, void 0, void 0, Qr);
-        let Zr = Math.abs(rr - this.anchor) > Math.abs(Sr - this.anchor) ? rr : Sr;
-        return Vr.range(this.anchor, Zr, void 0, void 0, Qr)
+      extend(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (dd <= this.anchor && Od >= this.anchor) return jd.range(dd, Od, void 0, void 0, md);
+        let Wd = Math.abs(dd - this.anchor) > Math.abs(Od - this.anchor) ? dd : Od;
+        return jd.range(this.anchor, Wd, void 0, void 0, md)
       }
-      eq(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == rr.anchor && this.head == rr.head && this.goalColumn == rr.goalColumn && (!Sr || !this.empty || this.assoc == rr.assoc)
+      eq(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == dd.anchor && this.head == dd.head && this.goalColumn == dd.goalColumn && (!Od || !this.empty || this.assoc == dd.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(rr) {
-        if (!rr || "number" != typeof rr.anchor || "number" != typeof rr.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return Vr.range(rr.anchor, rr.head)
+      static fromJSON(dd) {
+        if (!dd || "number" != typeof dd.anchor || "number" != typeof dd.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return jd.range(dd.anchor, dd.head)
       }
-      static create(rr, Sr, Qr) {
-        return new Ar(rr, Sr, Qr)
+      static create(dd, Od, md) {
+        return new cd(dd, Od, md)
       }
     }
-    class Vr {
-      constructor(rr, Sr) {
-        this.yh = rr, this.mainIndex = Sr
+    class jd {
+      constructor(dd, Od) {
+        this.By = dd, this.mainIndex = Od
       }
-      map(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return rr.empty ? this : Vr.create(this.yh.map((Qr => Qr.map(rr, Sr))), this.mainIndex)
+      map(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return dd.empty ? this : jd.create(this.By.map((md => md.map(dd, Od))), this.mainIndex)
       }
-      eq(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.yh.length != rr.yh.length || this.mainIndex != rr.mainIndex) return !1;
-        for (let Qr = 0; Qr < this.yh.length; Qr++)
-          if (!this.yh[Qr].eq(rr.yh[Qr], Sr)) return !1;
+      eq(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.By.length != dd.By.length || this.mainIndex != dd.mainIndex) return !1;
+        for (let md = 0; md < this.By.length; md++)
+          if (!this.By[md].eq(dd.By[md], Od)) return !1;
         return !0
       }
       get main() {
-        return this.yh[this.mainIndex]
+        return this.By[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.yh.length ? this : new Vr([this.main], 0)
+        return 1 == this.By.length ? this : new jd([this.main], 0)
       }
-      addRange(rr) {
-        let Sr = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return Vr.create([rr].concat(this.yh), Sr ? 0 : this.mainIndex + 1)
+      addRange(dd) {
+        let Od = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return jd.create([dd].concat(this.By), Od ? 0 : this.mainIndex + 1)
       }
-      replaceRange(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          Qr = this.yh.slice();
-        return Qr[Sr] = rr, Vr.create(Qr, this.mainIndex)
+      replaceRange(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          md = this.By.slice();
+        return md[Od] = dd, jd.create(md, this.mainIndex)
       }
       toJSON() {
         return {
-          yh: this.yh.map((rr => rr.toJSON())),
+          By: this.By.map((dd => dd.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(rr) {
-        if (!rr || !Array.isArray(rr.yh) || "number" != typeof rr.main || rr.main >= rr.yh.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new Vr(rr.yh.map((rr => Ar.fromJSON(rr))), rr.main)
+      static fromJSON(dd) {
+        if (!dd || !Array.isArray(dd.By) || "number" != typeof dd.main || dd.main >= dd.By.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new jd(dd.By.map((dd => cd.fromJSON(dd))), dd.main)
       }
-      static single(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr;
-        return new Vr([Vr.range(rr, Sr)], 0)
+      static single(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd;
+        return new jd([jd.range(dd, Od)], 0)
       }
-      static create(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == rr.length) throw new RangeError("A selection needs at least one range");
-        for (let Qr = 0, Zr = 0; Zr < rr.length; Zr++) {
-          let Wr = rr[Zr];
-          if (Wr.empty ? Wr.from <= Qr : Wr.from < Qr) return Vr.normalized(rr.slice(), Sr);
-          Qr = Wr.to
+      static create(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == dd.length) throw new RangeError("A selection needs at least one range");
+        for (let md = 0, Wd = 0; Wd < dd.length; Wd++) {
+          let Fd = dd[Wd];
+          if (Fd.empty ? Fd.from <= md : Fd.from < md) return jd.normalized(dd.slice(), Od);
+          md = Fd.to
         }
-        return new Vr(rr, Sr)
+        return new jd(dd, Od)
       }
-      static cursor(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Qr = arguments.length > 2 ? arguments[2] : void 0,
-          Zr = arguments.length > 3 ? arguments[3] : void 0;
-        return Ar.create(rr, rr, (0 == Sr ? 0 : Sr < 0 ? 8 : 16) | (null == Qr ? 7 : Math.min(6, Qr)) | (null !== Zr && void 0 !== Zr ? Zr : 16777215) << 6)
+      static cursor(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          md = arguments.length > 2 ? arguments[2] : void 0,
+          Wd = arguments.length > 3 ? arguments[3] : void 0;
+        return cd.create(dd, dd, (0 == Od ? 0 : Od < 0 ? 8 : 16) | (null == md ? 7 : Math.min(6, md)) | (null !== Wd && void 0 !== Wd ? Wd : 16777215) << 6)
       }
-      static range(rr, Sr, Qr, Zr, Wr) {
-        let ar = (null !== Qr && void 0 !== Qr ? Qr : 16777215) << 6 | (null == Zr ? 7 : Math.min(6, Zr));
-        return Wr || rr == Sr || (Wr = Sr < rr ? 1 : -1), Sr < rr ? Ar.create(Sr, rr, 48 | ar) : Ar.create(rr, Sr, (Wr ? Wr < 0 ? 8 : 16 : 0) | ar)
+      static range(dd, Od, md, Wd, Fd) {
+        let Rd = (null !== md && void 0 !== md ? md : 16777215) << 6 | (null == Wd ? 7 : Math.min(6, Wd));
+        return Fd || dd == Od || (Fd = Od < dd ? 1 : -1), Od < dd ? cd.create(Od, dd, 48 | Rd) : cd.create(dd, Od, (Fd ? Fd < 0 ? 8 : 16 : 0) | Rd)
       }
-      static normalized(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Qr = rr[Sr];
-        rr.sort(((rr, Sr) => rr.from - Sr.from)), Sr = rr.indexOf(Qr);
-        for (let Zr = 1; Zr < rr.length; Zr++) {
-          let Qr = rr[Zr],
-            Wr = rr[Zr - 1];
-          if (Qr.empty ? Qr.from <= Wr.to : Qr.from < Wr.to) {
-            let ar = Wr.from,
-              jr = Math.max(Qr.to, Wr.to);
-            Zr <= Sr && Sr--, rr.splice(--Zr, 2, Qr.anchor > Qr.head ? Vr.range(jr, ar) : Vr.range(ar, jr))
+      static normalized(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          md = dd[Od];
+        dd.sort(((dd, Od) => dd.from - Od.from)), Od = dd.indexOf(md);
+        for (let Wd = 1; Wd < dd.length; Wd++) {
+          let md = dd[Wd],
+            Fd = dd[Wd - 1];
+          if (md.empty ? md.from <= Fd.to : md.from < Fd.to) {
+            let Rd = Fd.from,
+              Xd = Math.max(md.to, Fd.to);
+            Wd <= Od && Od--, dd.splice(--Wd, 2, md.anchor > md.head ? jd.range(Xd, Rd) : jd.range(Rd, Xd))
           }
         }
-        return new Vr(rr, Sr)
+        return new jd(dd, Od)
       }
     }
 
-    function ir(rr, Sr) {
-      for (let Qr of rr.yh)
-        if (Qr.to > Sr) throw new RangeError("Selection points outside of document")
+    function Dd(dd, Od) {
+      for (let md of dd.By)
+        if (md.to > Od) throw new RangeError("Selection points outside of document")
     }
-    let wr = 0;
-    class cr {
-      constructor(rr, Sr, Qr, Zr, Wr) {
-        this.combine = rr, this.compareInput = Sr, this.compare = Qr, this.isStatic = Zr, this.id = wr++, this.default = rr([]), this.extensions = "function" == typeof Wr ? Wr(this) : Wr
+    let ed = 0;
+    class Id {
+      constructor(dd, Od, md, Wd, Fd) {
+        this.combine = dd, this.compareInput = Od, this.compare = md, this.isStatic = Wd, this.id = ed++, this.default = dd([]), this.extensions = "function" == typeof Fd ? Fd(this) : Fd
       }
       get reader() {
         return this
       }
       static define() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new cr(rr.combine || (rr => rr), rr.compareInput || ((rr, Sr) => rr === Sr), rr.compare || (rr.combine ? (rr, Sr) => rr === Sr : Fr), !!rr.static, rr.enables)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new Id(dd.combine || (dd => dd), dd.compareInput || ((dd, Od) => dd === Od), dd.compare || (dd.combine ? (dd, Od) => dd === Od : ld), !!dd.static, dd.enables)
       }
-      of(rr) {
-        return new or([], this, 0, rr)
+      of(dd) {
+        return new Cd([], this, 0, dd)
       }
-      compute(rr, Sr) {
+      compute(dd, Od) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new or(rr, this, 1, Sr)
+        return new Cd(dd, this, 1, Od)
       }
-      computeN(rr, Sr) {
+      computeN(dd, Od) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new or(rr, this, 2, Sr)
+        return new Cd(dd, this, 2, Od)
       }
-      from(rr, Sr) {
-        return Sr || (Sr = rr => rr), this.compute([rr], (Qr => Sr(Qr.field(rr))))
+      from(dd, Od) {
+        return Od || (Od = dd => dd), this.compute([dd], (md => Od(md.field(dd))))
       }
     }
 
-    function Fr(rr, Sr) {
-      return rr == Sr || rr.length == Sr.length && rr.every(((rr, Qr) => rr === Sr[Qr]))
+    function ld(dd, Od) {
+      return dd == Od || dd.length == Od.length && dd.every(((dd, md) => dd === Od[md]))
     }
-    class or {
-      constructor(rr, Sr, Qr, Zr) {
-        this.dependencies = rr, this.facet = Sr, this.type = Qr, this.value = Zr, this.id = wr++
+    class Cd {
+      constructor(dd, Od, md, Wd) {
+        this.dependencies = dd, this.facet = Od, this.type = md, this.value = Wd, this.id = ed++
       }
-      dynamicSlot(rr) {
-        var Sr;
-        let Qr = this.value,
-          Zr = this.facet.compareInput,
-          Wr = this.id,
-          ar = rr[Wr] >> 1,
-          jr = 2 == this.type,
-          Ir = !1,
-          fr = !1,
-          Er = [];
-        for (let pr of this.dependencies) "doc" == pr ? Ir = !0 : "selection" == pr ? fr = !0 : 0 == (1 & (null !== (Sr = rr[pr.id]) && void 0 !== Sr ? Sr : 1)) && Er.push(rr[pr.id]);
+      dynamicSlot(dd) {
+        var Od;
+        let md = this.value,
+          Wd = this.facet.compareInput,
+          Fd = this.id,
+          Rd = dd[Fd] >> 1,
+          Xd = 2 == this.type,
+          Kd = !1,
+          hd = !1,
+          vd = [];
+        for (let Qd of this.dependencies) "doc" == Qd ? Kd = !0 : "selection" == Qd ? hd = !0 : 0 == (1 & (null !== (Od = dd[Qd.id]) && void 0 !== Od ? Od : 1)) && vd.push(dd[Qd.id]);
         return {
-          create: rr => (rr.values[ar] = Qr(rr), 1),
-          update(rr, Sr) {
-            if (Ir && Sr.docChanged || fr && (Sr.docChanged || Sr.selection) || Jr(rr, Er)) {
-              let Sr = Qr(rr);
-              if (jr ? !br(Sr, rr.values[ar], Zr) : !Zr(Sr, rr.values[ar])) return rr.values[ar] = Sr, 1
+          create: dd => (dd.values[Rd] = md(dd), 1),
+          update(dd, Od) {
+            if (Kd && Od.docChanged || hd && (Od.docChanged || Od.selection) || kd(dd, vd)) {
+              let Od = md(dd);
+              if (Xd ? !Zd(Od, dd.values[Rd], Wd) : !Wd(Od, dd.values[Rd])) return dd.values[Rd] = Od, 1
             }
             return 0
           },
-          reconfigure: (rr, Sr) => {
-            let Ir, fr = Sr.config.address[Wr];
-            if (null != fr) {
-              let Wr = pS(Sr, fr);
-              if (this.dependencies.every((Qr => Qr instanceof cr ? Sr.facet(Qr) === rr.facet(Qr) : !(Qr instanceof sr) || Sr.field(Qr, !1) == rr.field(Qr, !1))) || (jr ? br(Ir = Qr(rr), Wr, Zr) : Zr(Ir = Qr(rr), Wr))) return rr.values[ar] = Wr, 0
-            } else Ir = Qr(rr);
-            return rr.values[ar] = Ir, 1
+          reconfigure: (dd, Od) => {
+            let Kd, hd = Od.config.address[Fd];
+            if (null != hd) {
+              let Fd = oO(Od, hd);
+              if (this.dependencies.every((md => md instanceof Id ? Od.facet(md) === dd.facet(md) : !(md instanceof dO) || Od.field(md, !1) == dd.field(md, !1))) || (Xd ? Zd(Kd = md(dd), Fd, Wd) : Wd(Kd = md(dd), Fd))) return dd.values[Rd] = Fd, 0
+            } else Kd = md(dd);
+            return dd.values[Rd] = Kd, 1
           }
         }
       }
     }
 
-    function br(rr, Sr, Qr) {
-      if (rr.length != Sr.length) return !1;
-      for (let Zr = 0; Zr < rr.length; Zr++)
-        if (!Qr(rr[Zr], Sr[Zr])) return !1;
+    function Zd(dd, Od, md) {
+      if (dd.length != Od.length) return !1;
+      for (let Wd = 0; Wd < dd.length; Wd++)
+        if (!md(dd[Wd], Od[Wd])) return !1;
       return !0
     }
 
-    function Jr(rr, Sr) {
-      let Qr = !1;
-      for (let Zr of Sr) 1 & ES(rr, Zr) && (Qr = !0);
-      return Qr
+    function kd(dd, Od) {
+      let md = !1;
+      for (let Wd of Od) 1 & tO(dd, Wd) && (md = !0);
+      return md
     }
 
-    function Dr(rr, Sr, Qr) {
-      let Zr = Qr.map((Sr => rr[Sr.id])),
-        Wr = Qr.map((rr => rr.type)),
-        ar = Zr.filter((rr => !(1 & rr))),
-        jr = rr[Sr.id] >> 1;
+    function fd(dd, Od, md) {
+      let Wd = md.map((Od => dd[Od.id])),
+        Fd = md.map((dd => dd.type)),
+        Rd = Wd.filter((dd => !(1 & dd))),
+        Xd = dd[Od.id] >> 1;
 
-      function Ir(rr) {
-        let Qr = [];
-        for (let Sr = 0; Sr < Zr.length; Sr++) {
-          let ar = pS(rr, Zr[Sr]);
-          if (2 == Wr[Sr])
-            for (let rr of ar) Qr.push(rr);
-          else Qr.push(ar)
+      function Kd(dd) {
+        let md = [];
+        for (let Od = 0; Od < Wd.length; Od++) {
+          let Rd = oO(dd, Wd[Od]);
+          if (2 == Fd[Od])
+            for (let dd of Rd) md.push(dd);
+          else md.push(Rd)
         }
-        return Sr.combine(Qr)
+        return Od.combine(md)
       }
       return {
-        create(rr) {
-          for (let Sr of Zr) ES(rr, Sr);
-          return rr.values[jr] = Ir(rr), 1
+        create(dd) {
+          for (let Od of Wd) tO(dd, Od);
+          return dd.values[Xd] = Kd(dd), 1
         },
-        update(rr, Qr) {
-          if (!Jr(rr, ar)) return 0;
-          let Zr = Ir(rr);
-          return Sr.compare(Zr, rr.values[jr]) ? 0 : (rr.values[jr] = Zr, 1)
+        update(dd, md) {
+          if (!kd(dd, Rd)) return 0;
+          let Wd = Kd(dd);
+          return Od.compare(Wd, dd.values[Xd]) ? 0 : (dd.values[Xd] = Wd, 1)
         },
-        reconfigure(rr, Wr) {
-          let ar = Jr(rr, Zr),
-            fr = Wr.config.facets[Sr.id],
-            Er = Wr.facet(Sr);
-          if (fr && !ar && Fr(Qr, fr)) return rr.values[jr] = Er, 0;
-          let pr = Ir(rr);
-          return Sr.compare(pr, Er) ? (rr.values[jr] = Er, 0) : (rr.values[jr] = pr, 1)
+        reconfigure(dd, Fd) {
+          let Rd = kd(dd, Wd),
+            hd = Fd.config.facets[Od.id],
+            vd = Fd.facet(Od);
+          if (hd && !Rd && ld(md, hd)) return dd.values[Xd] = vd, 0;
+          let Qd = Kd(dd);
+          return Od.compare(Qd, vd) ? (dd.values[Xd] = vd, 0) : (dd.values[Xd] = Qd, 1)
         }
       }
     }
-    const dr = cr.define({
+    const Md = Id.define({
       static: !0
     });
-    class sr {
-      constructor(rr, Sr, Qr, Zr, Wr) {
-        this.id = rr, this.createF = Sr, this.updateF = Qr, this.compareF = Zr, this.spec = Wr, this.provides = void 0
+    class dO {
+      constructor(dd, Od, md, Wd, Fd) {
+        this.id = dd, this.createF = Od, this.updateF = md, this.compareF = Wd, this.spec = Fd, this.provides = void 0
       }
-      static define(rr) {
-        let Sr = new sr(wr++, rr.create, rr.update, rr.compare || ((rr, Sr) => rr === Sr), rr);
-        return rr.provide && (Sr.provides = rr.provide(Sr)), Sr
+      static define(dd) {
+        let Od = new dO(ed++, dd.create, dd.update, dd.compare || ((dd, Od) => dd === Od), dd);
+        return dd.provide && (Od.provides = dd.provide(Od)), Od
       }
-      create(rr) {
-        let Sr = rr.facet(dr).find((rr => rr.field == this));
-        return ((null === Sr || void 0 === Sr ? void 0 : Sr.create) || this.createF)(rr)
+      create(dd) {
+        let Od = dd.facet(Md).find((dd => dd.field == this));
+        return ((null === Od || void 0 === Od ? void 0 : Od.create) || this.createF)(dd)
       }
-      slot(rr) {
-        let Sr = rr[this.id] >> 1;
+      slot(dd) {
+        let Od = dd[this.id] >> 1;
         return {
-          create: rr => (rr.values[Sr] = this.create(rr), 1),
-          update: (rr, Qr) => {
-            let Zr = rr.values[Sr],
-              Wr = this.updateF(Zr, Qr);
-            return this.compareF(Zr, Wr) ? 0 : (rr.values[Sr] = Wr, 1)
+          create: dd => (dd.values[Od] = this.create(dd), 1),
+          update: (dd, md) => {
+            let Wd = dd.values[Od],
+              Fd = this.updateF(Wd, md);
+            return this.compareF(Wd, Fd) ? 0 : (dd.values[Od] = Fd, 1)
           },
-          reconfigure: (rr, Qr) => {
-            let Zr, Wr = rr.facet(dr),
-              ar = Qr.facet(dr);
-            return (Zr = Wr.find((rr => rr.field == this))) && Zr != ar.find((rr => rr.field == this)) ? (rr.values[Sr] = Zr.create(rr), 1) : null != Qr.config.address[this.id] ? (rr.values[Sr] = Qr.field(this), 0) : (rr.values[Sr] = this.create(rr), 1)
+          reconfigure: (dd, md) => {
+            let Wd, Fd = dd.facet(Md),
+              Rd = md.facet(Md);
+            return (Wd = Fd.find((dd => dd.field == this))) && Wd != Rd.find((dd => dd.field == this)) ? (dd.values[Od] = Wd.create(dd), 1) : null != md.config.address[this.id] ? (dd.values[Od] = md.field(this), 0) : (dd.values[Od] = this.create(dd), 1)
           }
         }
       }
-      init(rr) {
-        return [this, dr.of({
+      init(dd) {
+        return [this, Md.of({
           field: this,
-          create: rr
+          create: dd
         })]
       }
       get extension() {
         return this
       }
     }
-    const ur = 4,
-      rS = 3,
-      SS = 2,
-      QS = 1;
+    const OO = 4,
+      mO = 3,
+      WO = 2,
+      FO = 1;
 
-    function ZS(rr) {
-      return Sr => new aS(Sr, rr)
+    function RO(dd) {
+      return Od => new KO(Od, dd)
     }
-    const WS = {
-      highest: ZS(0),
-      high: ZS(QS),
-      default: ZS(SS),
-      low: ZS(rS),
-      lowest: ZS(ur)
+    const XO = {
+      highest: RO(0),
+      high: RO(FO),
+      default: RO(WO),
+      low: RO(mO),
+      lowest: RO(OO)
     };
-    class aS {
-      constructor(rr, Sr) {
-        this.inner = rr, this.prec = Sr
+    class KO {
+      constructor(dd, Od) {
+        this.inner = dd, this.prec = Od
       }
     }
-    class jS {
-      of(rr) {
-        return new IS(this, rr)
+    class hO {
+      of(dd) {
+        return new vO(this, dd)
       }
-      reconfigure(rr) {
-        return jS.reconfigure.of({
+      reconfigure(dd) {
+        return hO.reconfigure.of({
           compartment: this,
-          extension: rr
+          extension: dd
         })
       }
-      get(rr) {
-        return rr.config.compartments.get(this)
+      get(dd) {
+        return dd.config.compartments.get(this)
       }
     }
-    class IS {
-      constructor(rr, Sr) {
-        this.compartment = rr, this.inner = Sr
+    class vO {
+      constructor(dd, Od) {
+        this.compartment = dd, this.inner = Od
       }
     }
-    class fS {
-      constructor(rr, Sr, Qr, Zr, Wr, ar) {
-        for (this.base = rr, this.compartments = Sr, this.dynamicSlots = Qr, this.address = Zr, this.staticValues = Wr, this.facets = ar, this.statusTemplate = []; this.statusTemplate.length < Qr.length;) this.statusTemplate.push(0)
+    class QO {
+      constructor(dd, Od, md, Wd, Fd, Rd) {
+        for (this.base = dd, this.compartments = Od, this.dynamicSlots = md, this.address = Wd, this.staticValues = Fd, this.facets = Rd, this.statusTemplate = []; this.statusTemplate.length < md.length;) this.statusTemplate.push(0)
       }
-      staticFacet(rr) {
-        let Sr = this.address[rr.id];
-        return null == Sr ? rr.default : this.staticValues[Sr >> 1]
+      staticFacet(dd) {
+        let Od = this.address[dd.id];
+        return null == Od ? dd.default : this.staticValues[Od >> 1]
       }
-      static resolve(rr, Sr, Qr) {
-        let Zr = [],
-          Wr = Object.create(null),
-          ar = new Map;
-        for (let xr of function(rr, Sr, Qr) {
-            let Zr = [
+      static resolve(dd, Od, md) {
+        let Wd = [],
+          Fd = Object.create(null),
+          Rd = new Map;
+        for (let td of function(dd, Od, md) {
+            let Wd = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              Wr = new Map;
+              Fd = new Map;
 
-            function ar(rr, jr) {
-              let Ir = Wr.get(rr);
-              if (null != Ir) {
-                if (Ir <= jr) return;
-                let Sr = Zr[Ir].indexOf(rr);
-                Sr > -1 && Zr[Ir].splice(Sr, 1), rr instanceof IS && Qr.delete(rr.compartment)
+            function Rd(dd, Xd) {
+              let Kd = Fd.get(dd);
+              if (null != Kd) {
+                if (Kd <= Xd) return;
+                let Od = Wd[Kd].indexOf(dd);
+                Od > -1 && Wd[Kd].splice(Od, 1), dd instanceof vO && md.delete(dd.compartment)
               }
-              if (Wr.set(rr, jr), Array.isArray(rr))
-                for (let Sr of rr) ar(Sr, jr);
-              else if (rr instanceof IS) {
-                if (Qr.has(rr.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let Zr = Sr.get(rr.compartment) || rr.inner;
-                Qr.set(rr.compartment, Zr), ar(Zr, jr)
-              } else if (rr instanceof aS) ar(rr.inner, rr.prec);
-              else if (rr instanceof sr) Zr[jr].push(rr), rr.provides && ar(rr.provides, jr);
-              else if (rr instanceof or) Zr[jr].push(rr), rr.facet.extensions && ar(rr.facet.extensions, SS);
+              if (Fd.set(dd, Xd), Array.isArray(dd))
+                for (let Od of dd) Rd(Od, Xd);
+              else if (dd instanceof vO) {
+                if (md.has(dd.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let Wd = Od.get(dd.compartment) || dd.inner;
+                md.set(dd.compartment, Wd), Rd(Wd, Xd)
+              } else if (dd instanceof KO) Rd(dd.inner, dd.prec);
+              else if (dd instanceof dO) Wd[Xd].push(dd), dd.provides && Rd(dd.provides, Xd);
+              else if (dd instanceof Cd) Wd[Xd].push(dd), dd.facet.extensions && Rd(dd.facet.extensions, WO);
               else {
-                let Sr = rr.extension;
-                if (!Sr) throw new Error(`Unrecognized extension value in extension set (${rr}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                ar(Sr, jr)
+                let Od = dd.extension;
+                if (!Od) throw new Error(`Unrecognized extension value in extension set (${dd}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                Rd(Od, Xd)
               }
             }
-            return ar(rr, SS), Zr.reduce(((rr, Sr) => rr.concat(Sr)))
-          }(rr, Sr, ar)) xr instanceof sr ? Zr.push(xr) : (Wr[xr.facet.id] || (Wr[xr.facet.id] = [])).push(xr);
-        let jr = Object.create(null),
-          Ir = [],
-          fr = [];
-        for (let xr of Zr) jr[xr.id] = fr.length << 1, fr.push((rr => xr.slot(rr)));
-        let Er = null === Qr || void 0 === Qr ? void 0 : Qr.config.facets;
-        for (let xr in Wr) {
-          let rr = Wr[xr],
-            Sr = rr[0].facet,
-            Zr = Er && Er[xr] || [];
-          if (rr.every((rr => 0 == rr.type)))
-            if (jr[Sr.id] = Ir.length << 1 | 1, Fr(Zr, rr)) Ir.push(Qr.facet(Sr));
+            return Rd(dd, WO), Wd.reduce(((dd, Od) => dd.concat(Od)))
+          }(dd, Od, Rd)) td instanceof dO ? Wd.push(td) : (Fd[td.facet.id] || (Fd[td.facet.id] = [])).push(td);
+        let Xd = Object.create(null),
+          Kd = [],
+          hd = [];
+        for (let td of Wd) Xd[td.id] = hd.length << 1, hd.push((dd => td.slot(dd)));
+        let vd = null === md || void 0 === md ? void 0 : md.config.facets;
+        for (let td in Fd) {
+          let dd = Fd[td],
+            Od = dd[0].facet,
+            Wd = vd && vd[td] || [];
+          if (dd.every((dd => 0 == dd.type)))
+            if (Xd[Od.id] = Kd.length << 1 | 1, ld(Wd, dd)) Kd.push(md.facet(Od));
             else {
-              let Zr = Sr.combine(rr.map((rr => rr.value)));
-              Ir.push(Qr && Sr.compare(Zr, Qr.facet(Sr)) ? Qr.facet(Sr) : Zr)
+              let Wd = Od.combine(dd.map((dd => dd.value)));
+              Kd.push(md && Od.compare(Wd, md.facet(Od)) ? md.facet(Od) : Wd)
             }
           else {
-            for (let Sr of rr) 0 == Sr.type ? (jr[Sr.id] = Ir.length << 1 | 1, Ir.push(Sr.value)) : (jr[Sr.id] = fr.length << 1, fr.push((rr => Sr.dynamicSlot(rr))));
-            jr[Sr.id] = fr.length << 1, fr.push((Qr => Dr(Qr, Sr, rr)))
+            for (let Od of dd) 0 == Od.type ? (Xd[Od.id] = Kd.length << 1 | 1, Kd.push(Od.value)) : (Xd[Od.id] = hd.length << 1, hd.push((dd => Od.dynamicSlot(dd))));
+            Xd[Od.id] = hd.length << 1, hd.push((md => fd(md, Od, dd)))
           }
         }
-        let pr = fr.map((rr => rr(jr)));
-        return new fS(rr, ar, pr, jr, Ir, Wr)
+        let Qd = hd.map((dd => dd(Xd)));
+        return new QO(dd, Rd, Qd, Xd, Kd, Fd)
       }
     }
 
-    function ES(rr, Sr) {
-      if (1 & Sr) return 2;
-      let Qr = Sr >> 1,
-        Zr = rr.status[Qr];
-      if (4 == Zr) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & Zr) return Zr;
-      rr.status[Qr] = 4;
-      let Wr = rr.computeSlot(rr, rr.config.dynamicSlots[Qr]);
-      return rr.status[Qr] = 2 | Wr
+    function tO(dd, Od) {
+      if (1 & Od) return 2;
+      let md = Od >> 1,
+        Wd = dd.status[md];
+      if (4 == Wd) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & Wd) return Wd;
+      dd.status[md] = 4;
+      let Fd = dd.computeSlot(dd, dd.config.dynamicSlots[md]);
+      return dd.status[md] = 2 | Fd
     }
 
-    function pS(rr, Sr) {
-      return 1 & Sr ? rr.config.staticValues[Sr >> 1] : rr.values[Sr >> 1]
+    function oO(dd, Od) {
+      return 1 & Od ? dd.config.staticValues[Od >> 1] : dd.values[Od >> 1]
     }
-    const xS = cr.define(),
-      mS = cr.define({
-        combine: rr => rr.some((rr => rr)),
+    const NO = Id.define(),
+      qO = Id.define({
+        combine: dd => dd.some((dd => dd)),
         static: !0
       }),
-      NS = cr.define({
-        combine: rr => rr.length ? rr[0] : void 0,
+      HO = Id.define({
+        combine: dd => dd.length ? dd[0] : void 0,
         static: !0
       }),
-      US = cr.define(),
-      tS = cr.define(),
-      hS = cr.define(),
-      zS = cr.define({
-        combine: rr => !!rr.length && rr[0]
+      yO = Id.define(),
+      bO = Id.define(),
+      TO = Id.define(),
+      pO = Id.define({
+        combine: dd => !!dd.length && dd[0]
       });
-    class YS {
-      constructor(rr, Sr) {
-        this.type = rr, this.value = Sr
+    class YO {
+      constructor(dd, Od) {
+        this.type = dd, this.value = Od
       }
       static define() {
-        return new nS
+        return new gO
       }
     }
-    class nS {
-      of(rr) {
-        return new YS(this, rr)
+    class gO {
+      of(dd) {
+        return new YO(this, dd)
       }
     }
-    class eS {
-      constructor(rr) {
-        this.map = rr
+    class wO {
+      constructor(dd) {
+        this.map = dd
       }
-      of(rr) {
-        return new KS(this, rr)
+      of(dd) {
+        return new aO(this, dd)
       }
     }
-    class KS {
-      constructor(rr, Sr) {
-        this.type = rr, this.value = Sr
+    class aO {
+      constructor(dd, Od) {
+        this.type = dd, this.value = Od
       }
-      map(rr) {
-        let Sr = this.type.map(this.value, rr);
-        return void 0 === Sr ? void 0 : Sr == this.value ? this : new KS(this.type, Sr)
+      map(dd) {
+        let Od = this.type.map(this.value, dd);
+        return void 0 === Od ? void 0 : Od == this.value ? this : new aO(this.type, Od)
       }
-      is(rr) {
-        return this.type == rr
+      is(dd) {
+        return this.type == dd
       }
       static define() {
-        return new eS((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (rr => rr))
+        return new wO((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (dd => dd))
       }
-      static mapEffects(rr, Sr) {
-        if (!rr.length) return rr;
-        let Qr = [];
-        for (let Zr of rr) {
-          let rr = Zr.map(Sr);
-          rr && Qr.push(rr)
+      static mapEffects(dd, Od) {
+        if (!dd.length) return dd;
+        let md = [];
+        for (let Wd of dd) {
+          let dd = Wd.map(Od);
+          dd && md.push(dd)
         }
-        return Qr
+        return md
       }
     }
-    KS.reconfigure = KS.define(), KS.appendConfig = KS.define();
-    class yS {
-      constructor(rr, Sr, Qr, Zr, Wr, ar) {
-        this.startState = rr, this.changes = Sr, this.selection = Qr, this.effects = Zr, this.annotations = Wr, this.scrollIntoView = ar, this._doc = null, this._state = null, Qr && ir(Qr, Sr.newLength), Wr.some((rr => rr.type == yS.time)) || (this.annotations = Wr.concat(yS.time.of(Date.now())))
+    aO.reconfigure = aO.define(), aO.appendConfig = aO.define();
+    class EO {
+      constructor(dd, Od, md, Wd, Fd, Rd) {
+        this.startState = dd, this.changes = Od, this.selection = md, this.effects = Wd, this.annotations = Fd, this.scrollIntoView = Rd, this._doc = null, this._state = null, md && Dd(md, Od.newLength), Fd.some((dd => dd.type == EO.time)) || (this.annotations = Fd.concat(EO.time.of(Date.now())))
       }
-      static create(rr, Sr, Qr, Zr, Wr, ar) {
-        return new yS(rr, Sr, Qr, Zr, Wr, ar)
+      static create(dd, Od, md, Wd, Fd, Rd) {
+        return new EO(dd, Od, md, Wd, Fd, Rd)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(rr) {
-        for (let Sr of this.annotations)
-          if (Sr.type == rr) return Sr.value
+      annotation(dd) {
+        for (let Od of this.annotations)
+          if (Od.type == dd) return Od.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(rr) {
-        let Sr = this.annotation(yS.userEvent);
-        return !(!Sr || !(Sr == rr || Sr.length > rr.length && Sr.slice(0, rr.length) == rr && "." == Sr[rr.length]))
+      isUserEvent(dd) {
+        let Od = this.annotation(EO.userEvent);
+        return !(!Od || !(Od == dd || Od.length > dd.length && Od.slice(0, dd.length) == dd && "." == Od[dd.length]))
       }
     }
 
-    function BS(rr, Sr) {
-      let Qr = [];
-      for (let Zr = 0, Wr = 0;;) {
-        let ar, jr;
-        if (Zr < rr.length && (Wr == Sr.length || Sr[Wr] >= rr[Zr])) ar = rr[Zr++], jr = rr[Zr++];
+    function JO(dd, Od) {
+      let md = [];
+      for (let Wd = 0, Fd = 0;;) {
+        let Rd, Xd;
+        if (Wd < dd.length && (Fd == Od.length || Od[Fd] >= dd[Wd])) Rd = dd[Wd++], Xd = dd[Wd++];
         else {
-          if (!(Wr < Sr.length)) return Qr;
-          ar = Sr[Wr++], jr = Sr[Wr++]
-        }!Qr.length || Qr[Qr.length - 1] < ar ? Qr.push(ar, jr) : Qr[Qr.length - 1] < jr && (Qr[Qr.length - 1] = jr)
+          if (!(Fd < Od.length)) return md;
+          Rd = Od[Fd++], Xd = Od[Fd++]
+        }!md.length || md[md.length - 1] < Rd ? md.push(Rd, Xd) : md[md.length - 1] < Xd && (md[md.length - 1] = Xd)
       }
     }
 
-    function TS(rr, Sr, Qr) {
-      var Zr;
-      let Wr, ar, jr;
-      return Qr ? (Wr = Sr.changes, ar = qr.empty(Sr.changes.length), jr = rr.changes.compose(Sr.changes)) : (Wr = Sr.changes.map(rr.changes), ar = rr.changes.mapDesc(Sr.changes, !0), jr = rr.changes.compose(Wr)), {
-        changes: jr,
-        selection: Sr.selection ? Sr.selection.map(ar) : null === (Zr = rr.selection) || void 0 === Zr ? void 0 : Zr.map(Wr),
-        effects: KS.mapEffects(rr.effects, Wr).concat(KS.mapEffects(Sr.effects, ar)),
-        annotations: rr.annotations.length ? rr.annotations.concat(Sr.annotations) : Sr.annotations,
-        scrollIntoView: rr.scrollIntoView || Sr.scrollIntoView
+    function UO(dd, Od, md) {
+      var Wd;
+      let Fd, Rd, Xd;
+      return md ? (Fd = Od.changes, Rd = Ad.empty(Od.changes.length), Xd = dd.changes.compose(Od.changes)) : (Fd = Od.changes.map(dd.changes), Rd = dd.changes.mapDesc(Od.changes, !0), Xd = dd.changes.compose(Fd)), {
+        changes: Xd,
+        selection: Od.selection ? Od.selection.map(Rd) : null === (Wd = dd.selection) || void 0 === Wd ? void 0 : Wd.map(Fd),
+        effects: aO.mapEffects(dd.effects, Fd).concat(aO.mapEffects(Od.effects, Rd)),
+        annotations: dd.annotations.length ? dd.annotations.concat(Od.annotations) : Od.annotations,
+        scrollIntoView: dd.scrollIntoView || Od.scrollIntoView
       }
     }
 
-    function vS(rr, Sr, Qr) {
-      let Zr = Sr.selection,
-        Wr = lS(Sr.annotations);
-      return Sr.userEvent && (Wr = Wr.concat(yS.userEvent.of(Sr.userEvent))), {
-        changes: Sr.changes instanceof qr ? Sr.changes : qr.of(Sr.changes || [], Qr, rr.facet(NS)),
-        selection: Zr && (Zr instanceof Vr ? Zr : Vr.single(Zr.anchor, Zr.head)),
-        effects: lS(Sr.effects),
-        annotations: Wr,
-        scrollIntoView: !!Sr.scrollIntoView
+    function xO(dd, Od, md) {
+      let Wd = Od.selection,
+        Fd = sO(Od.annotations);
+      return Od.userEvent && (Fd = Fd.concat(EO.userEvent.of(Od.userEvent))), {
+        changes: Od.changes instanceof Ad ? Od.changes : Ad.of(Od.changes || [], md, dd.facet(HO)),
+        selection: Wd && (Wd instanceof jd ? Wd : jd.single(Wd.anchor, Wd.head)),
+        effects: sO(Od.effects),
+        annotations: Fd,
+        scrollIntoView: !!Od.scrollIntoView
       }
     }
 
-    function OS(rr, Sr, Qr) {
-      let Zr = vS(rr, Sr.length ? Sr[0] : {}, rr.doc.length);
-      Sr.length && !1 === Sr[0].filter && (Qr = !1);
-      for (let ar = 1; ar < Sr.length; ar++) {
-        !1 === Sr[ar].filter && (Qr = !1);
-        let Wr = !!Sr[ar].sequential;
-        Zr = TS(Zr, vS(rr, Sr[ar], Wr ? Zr.changes.newLength : rr.doc.length), Wr)
+    function BO(dd, Od, md) {
+      let Wd = xO(dd, Od.length ? Od[0] : {}, dd.doc.length);
+      Od.length && !1 === Od[0].filter && (md = !1);
+      for (let Rd = 1; Rd < Od.length; Rd++) {
+        !1 === Od[Rd].filter && (md = !1);
+        let Fd = !!Od[Rd].sequential;
+        Wd = UO(Wd, xO(dd, Od[Rd], Fd ? Wd.changes.newLength : dd.doc.length), Fd)
       }
-      let Wr = yS.create(rr, Zr.changes, Zr.selection, Zr.effects, Zr.annotations, Zr.scrollIntoView);
-      return function(rr) {
-        let Sr = rr.startState,
-          Qr = Sr.facet(hS),
-          Zr = rr;
-        for (let Wr = Qr.length - 1; Wr >= 0; Wr--) {
-          let ar = Qr[Wr](rr);
-          ar && Object.keys(ar).length && (Zr = TS(Zr, vS(Sr, ar, rr.changes.newLength), !0))
+      let Fd = EO.create(dd, Wd.changes, Wd.selection, Wd.effects, Wd.annotations, Wd.scrollIntoView);
+      return function(dd) {
+        let Od = dd.startState,
+          md = Od.facet(TO),
+          Wd = dd;
+        for (let Fd = md.length - 1; Fd >= 0; Fd--) {
+          let Rd = md[Fd](dd);
+          Rd && Object.keys(Rd).length && (Wd = UO(Wd, xO(Od, Rd, dd.changes.newLength), !0))
         }
-        return Zr == rr ? rr : yS.create(Sr, rr.changes, rr.selection, Zr.effects, Zr.annotations, Zr.scrollIntoView)
-      }(Qr ? function(rr) {
-        let Sr = rr.startState,
-          Qr = !0;
-        for (let Wr of Sr.facet(US)) {
-          let Sr = Wr(rr);
-          if (!1 === Sr) {
-            Qr = !1;
+        return Wd == dd ? dd : EO.create(Od, dd.changes, dd.selection, Wd.effects, Wd.annotations, Wd.scrollIntoView)
+      }(md ? function(dd) {
+        let Od = dd.startState,
+          md = !0;
+        for (let Fd of Od.facet(yO)) {
+          let Od = Fd(dd);
+          if (!1 === Od) {
+            md = !1;
             break
           }
-          Array.isArray(Sr) && (Qr = !0 === Qr ? Sr : BS(Qr, Sr))
+          Array.isArray(Od) && (md = !0 === md ? Od : JO(md, Od))
         }
-        if (!0 !== Qr) {
-          let Zr, Wr;
-          if (!1 === Qr) Wr = rr.changes.invertedDesc, Zr = qr.empty(Sr.doc.length);
+        if (!0 !== md) {
+          let Wd, Fd;
+          if (!1 === md) Fd = dd.changes.invertedDesc, Wd = Ad.empty(Od.doc.length);
           else {
-            let Sr = rr.changes.filter(Qr);
-            Zr = Sr.changes, Wr = Sr.filtered.mapDesc(Sr.changes).invertedDesc
+            let Od = dd.changes.filter(md);
+            Wd = Od.changes, Fd = Od.filtered.mapDesc(Od.changes).invertedDesc
           }
-          rr = yS.create(Sr, Zr, rr.selection && rr.selection.map(Wr), KS.mapEffects(rr.effects, Wr), rr.annotations, rr.scrollIntoView)
+          dd = EO.create(Od, Wd, dd.selection && dd.selection.map(Fd), aO.mapEffects(dd.effects, Fd), dd.annotations, dd.scrollIntoView)
         }
-        let Zr = Sr.facet(tS);
-        for (let Wr = Zr.length - 1; Wr >= 0; Wr--) {
-          let Qr = Zr[Wr](rr);
-          rr = Qr instanceof yS ? Qr : Array.isArray(Qr) && 1 == Qr.length && Qr[0] instanceof yS ? Qr[0] : OS(Sr, lS(Qr), !1)
+        let Wd = Od.facet(bO);
+        for (let Fd = Wd.length - 1; Fd >= 0; Fd--) {
+          let md = Wd[Fd](dd);
+          dd = md instanceof EO ? md : Array.isArray(md) && 1 == md.length && md[0] instanceof EO ? md[0] : BO(Od, sO(md), !1)
         }
-        return rr
-      }(Wr) : Wr)
+        return dd
+      }(Fd) : Fd)
     }
-    yS.time = YS.define(), yS.userEvent = YS.define(), yS.addToHistory = YS.define(), yS.remote = YS.define();
-    const LS = [];
+    EO.time = YO.define(), EO.userEvent = YO.define(), EO.addToHistory = YO.define(), EO.remote = YO.define();
+    const SO = [];
 
-    function lS(rr) {
-      return null == rr ? LS : Array.isArray(rr) ? rr : [rr]
+    function sO(dd) {
+      return null == dd ? SO : Array.isArray(dd) ? dd : [dd]
     }
-    var XS = function(rr) {
-      return rr[rr.Word = 0] = "Word", rr[rr.Space = 1] = "Space", rr[rr.Other = 2] = "Other", rr
-    }(XS || (XS = {}));
-    const PS = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let HS;
+    var uO = function(dd) {
+      return dd[dd.Word = 0] = "Word", dd[dd.Space = 1] = "Space", dd[dd.Other = 2] = "Other", dd
+    }(uO || (uO = {}));
+    const VO = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let iO;
     try {
-      HS = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (QQ) {}
+      iO = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (Fm) {}
 
-    function qS(rr) {
-      return Sr => {
-        if (!/\S/.test(Sr)) return XS.Space;
-        if (function(rr) {
-            if (HS) return HS.test(rr);
-            for (let Sr = 0; Sr < rr.length; Sr++) {
-              let Qr = rr[Sr];
-              if (/\w/.test(Qr) || Qr > "\x80" && (Qr.toUpperCase() != Qr.toLowerCase() || PS.test(Qr))) return !0
+    function AO(dd) {
+      return Od => {
+        if (!/\S/.test(Od)) return uO.Space;
+        if (function(dd) {
+            if (iO) return iO.test(dd);
+            for (let Od = 0; Od < dd.length; Od++) {
+              let md = dd[Od];
+              if (/\w/.test(md) || md > "\x80" && (md.toUpperCase() != md.toLowerCase() || VO.test(md))) return !0
             }
             return !1
-          }(Sr)) return XS.Word;
-        for (let Qr = 0; Qr < rr.length; Qr++)
-          if (Sr.indexOf(rr[Qr]) > -1) return XS.Word;
-        return XS.Other
+          }(Od)) return uO.Word;
+        for (let md = 0; md < dd.length; md++)
+          if (Od.indexOf(dd[md]) > -1) return uO.Word;
+        return uO.Other
       }
     }
-    class RS {
-      constructor(rr, Sr, Qr, Zr, Wr, ar) {
-        this.config = rr, this.doc = Sr, this.selection = Qr, this.values = Zr, this.status = rr.statusTemplate.slice(), this.computeSlot = Wr, ar && (ar._state = this);
-        for (let jr = 0; jr < this.config.dynamicSlots.length; jr++) ES(this, jr << 1);
+    class rO {
+      constructor(dd, Od, md, Wd, Fd, Rd) {
+        this.config = dd, this.doc = Od, this.selection = md, this.values = Wd, this.status = dd.statusTemplate.slice(), this.computeSlot = Fd, Rd && (Rd._state = this);
+        for (let Xd = 0; Xd < this.config.dynamicSlots.length; Xd++) tO(this, Xd << 1);
         this.computeSlot = null
       }
-      field(rr) {
-        let Sr = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          Qr = this.config.address[rr.id];
-        if (null != Qr) return ES(this, Qr), pS(this, Qr);
-        if (Sr) throw new RangeError("Field is not present in this state")
+      field(dd) {
+        let Od = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          md = this.config.address[dd.id];
+        if (null != md) return tO(this, md), oO(this, md);
+        if (Od) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var rr = arguments.length, Sr = new Array(rr), Qr = 0; Qr < rr; Qr++) Sr[Qr] = arguments[Qr];
-        return OS(this, Sr, !0)
+        for (var dd = arguments.length, Od = new Array(dd), md = 0; md < dd; md++) Od[md] = arguments[md];
+        return BO(this, Od, !0)
       }
-      applyTransaction(rr) {
-        let Sr, Qr = this.config,
+      applyTransaction(dd) {
+        let Od, md = this.config,
           {
-            base: Zr,
-            compartments: Wr
-          } = Qr;
-        for (let jr of rr.effects) jr.is(jS.reconfigure) ? (Qr && (Wr = new Map, Qr.compartments.forEach(((rr, Sr) => Wr.set(Sr, rr))), Qr = null), Wr.set(jr.value.compartment, jr.value.extension)) : jr.is(KS.reconfigure) ? (Qr = null, Zr = jr.value) : jr.is(KS.appendConfig) && (Qr = null, Zr = lS(Zr).concat(jr.value));
-        if (Qr) Sr = rr.startState.values.slice();
+            base: Wd,
+            compartments: Fd
+          } = md;
+        for (let Xd of dd.effects) Xd.is(hO.reconfigure) ? (md && (Fd = new Map, md.compartments.forEach(((dd, Od) => Fd.set(Od, dd))), md = null), Fd.set(Xd.value.compartment, Xd.value.extension)) : Xd.is(aO.reconfigure) ? (md = null, Wd = Xd.value) : Xd.is(aO.appendConfig) && (md = null, Wd = sO(Wd).concat(Xd.value));
+        if (md) Od = dd.startState.values.slice();
         else {
-          Qr = fS.resolve(Zr, Wr, this), Sr = new RS(Qr, this.doc, this.selection, Qr.dynamicSlots.map((() => null)), ((rr, Sr) => Sr.reconfigure(rr, this)), null).values
+          md = QO.resolve(Wd, Fd, this), Od = new rO(md, this.doc, this.selection, md.dynamicSlots.map((() => null)), ((dd, Od) => Od.reconfigure(dd, this)), null).values
         }
-        let ar = rr.startState.facet(mS) ? rr.newSelection : rr.newSelection.asSingle();
-        new RS(Qr, rr.newDoc, ar, Sr, ((Sr, Qr) => Qr.update(Sr, rr)), rr)
+        let Rd = dd.startState.facet(qO) ? dd.newSelection : dd.newSelection.asSingle();
+        new rO(md, dd.newDoc, Rd, Od, ((Od, md) => md.update(Od, dd)), dd)
       }
-      replaceSelection(rr) {
-        return "string" == typeof rr && (rr = this.toText(rr)), this.changeByRange((Sr => ({
+      replaceSelection(dd) {
+        return "string" == typeof dd && (dd = this.toText(dd)), this.changeByRange((Od => ({
           changes: {
-            from: Sr.from,
-            to: Sr.to,
-            insert: rr
+            from: Od.from,
+            to: Od.to,
+            insert: dd
           },
-          range: Vr.cursor(Sr.from + rr.length)
+          range: jd.cursor(Od.from + dd.length)
         })))
       }
-      changeByRange(rr) {
-        let Sr = this.selection,
-          Qr = rr(Sr.yh[0]),
-          Zr = this.changes(Qr.changes),
-          Wr = [Qr.range],
-          ar = lS(Qr.effects);
-        for (let jr = 1; jr < Sr.yh.length; jr++) {
-          let Qr = rr(Sr.yh[jr]),
-            Ir = this.changes(Qr.changes),
-            fr = Ir.map(Zr);
-          for (let rr = 0; rr < jr; rr++) Wr[rr] = Wr[rr].map(fr);
-          let Er = Zr.mapDesc(Ir, !0);
-          Wr.push(Qr.range.map(Er)), Zr = Zr.compose(fr), ar = KS.mapEffects(ar, fr).concat(KS.mapEffects(lS(Qr.effects), Er))
+      changeByRange(dd) {
+        let Od = this.selection,
+          md = dd(Od.By[0]),
+          Wd = this.changes(md.changes),
+          Fd = [md.range],
+          Rd = sO(md.effects);
+        for (let Xd = 1; Xd < Od.By.length; Xd++) {
+          let md = dd(Od.By[Xd]),
+            Kd = this.changes(md.changes),
+            hd = Kd.map(Wd);
+          for (let dd = 0; dd < Xd; dd++) Fd[dd] = Fd[dd].map(hd);
+          let vd = Wd.mapDesc(Kd, !0);
+          Fd.push(md.range.map(vd)), Wd = Wd.compose(hd), Rd = aO.mapEffects(Rd, hd).concat(aO.mapEffects(sO(md.effects), vd))
         }
         return {
-          changes: Zr,
-          selection: Vr.create(Wr, Sr.mainIndex),
-          effects: ar
+          changes: Wd,
+          selection: jd.create(Fd, Od.mainIndex),
+          effects: Rd
         }
       }
       changes() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return rr instanceof qr ? rr : qr.of(rr, this.doc.length, this.facet(RS.lineSeparator))
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return dd instanceof Ad ? dd : Ad.of(dd, this.doc.length, this.facet(rO.lineSeparator))
       }
-      toText(rr) {
-        return tr.of(rr.split(this.facet(RS.lineSeparator) || Xr))
+      toText(dd) {
+        return Hd.of(dd.split(this.facet(rO.lineSeparator) || sd))
       }
       sliceDoc() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(rr, Sr, this.lineBreak)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(dd, Od, this.lineBreak)
       }
-      facet(rr) {
-        let Sr = this.config.address[rr.id];
-        return null == Sr ? rr.default : (ES(this, Sr), pS(this, Sr))
+      facet(dd) {
+        let Od = this.config.address[dd.id];
+        return null == Od ? dd.default : (tO(this, Od), oO(this, Od))
       }
-      toJSON(rr) {
-        let Sr = {
+      toJSON(dd) {
+        let Od = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (rr)
-          for (let Qr in rr) {
-            let Zr = rr[Qr];
-            Zr instanceof sr && null != this.config.address[Zr.id] && (Sr[Qr] = Zr.spec.toJSON(this.field(rr[Qr]), this))
+        if (dd)
+          for (let md in dd) {
+            let Wd = dd[md];
+            Wd instanceof dO && null != this.config.address[Wd.id] && (Od[md] = Wd.spec.toJSON(this.field(dd[md]), this))
           }
-        return Sr
+        return Od
       }
-      static fromJSON(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          Qr = arguments.length > 2 ? arguments[2] : void 0;
-        if (!rr || "string" != typeof rr.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let Zr = [];
-        if (Qr)
-          for (let Wr in Qr)
-            if (Object.prototype.hasOwnProperty.call(rr, Wr)) {
-              let Sr = Qr[Wr],
-                ar = rr[Wr];
-              Zr.push(Sr.init((rr => Sr.spec.fromJSON(ar, rr))))
-            } return RS.create({
-          doc: rr.doc,
-          selection: Vr.fromJSON(rr.selection),
-          extensions: Sr.extensions ? Zr.concat([Sr.extensions]) : Zr
+      static fromJSON(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          md = arguments.length > 2 ? arguments[2] : void 0;
+        if (!dd || "string" != typeof dd.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let Wd = [];
+        if (md)
+          for (let Fd in md)
+            if (Object.prototype.hasOwnProperty.call(dd, Fd)) {
+              let Od = md[Fd],
+                Rd = dd[Fd];
+              Wd.push(Od.init((dd => Od.spec.fromJSON(Rd, dd))))
+            } return rO.create({
+          doc: dd.doc,
+          selection: jd.fromJSON(dd.selection),
+          extensions: Od.extensions ? Wd.concat([Od.extensions]) : Wd
         })
       }
       static create() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          Sr = fS.resolve(rr.extensions || [], new Map),
-          Qr = rr.doc instanceof tr ? rr.doc : tr.of((rr.doc || "").split(Sr.staticFacet(RS.lineSeparator) || Xr)),
-          Zr = rr.selection ? rr.selection instanceof Vr ? rr.selection : Vr.single(rr.selection.anchor, rr.selection.head) : Vr.single(0);
-        return ir(Zr, Qr.length), Sr.staticFacet(mS) || (Zr = Zr.asSingle()), new RS(Sr, Qr, Zr, Sr.dynamicSlots.map((() => null)), ((rr, Sr) => Sr.create(rr)), null)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          Od = QO.resolve(dd.extensions || [], new Map),
+          md = dd.doc instanceof Hd ? dd.doc : Hd.of((dd.doc || "").split(Od.staticFacet(rO.lineSeparator) || sd)),
+          Wd = dd.selection ? dd.selection instanceof jd ? dd.selection : jd.single(dd.selection.anchor, dd.selection.head) : jd.single(0);
+        return Dd(Wd, md.length), Od.staticFacet(qO) || (Wd = Wd.asSingle()), new rO(Od, md, Wd, Od.dynamicSlots.map((() => null)), ((dd, Od) => Od.create(dd)), null)
       }
       get tabSize() {
-        return this.facet(RS.tabSize)
+        return this.facet(rO.tabSize)
       }
       get lineBreak() {
-        return this.facet(RS.lineSeparator) || "\n"
+        return this.facet(rO.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(zS)
+        return this.facet(pO)
       }
-      phrase(rr) {
-        for (var Sr = arguments.length, Qr = new Array(Sr > 1 ? Sr - 1 : 0), Zr = 1; Zr < Sr; Zr++) Qr[Zr - 1] = arguments[Zr];
-        for (let Wr of this.facet(RS.phrases))
-          if (Object.prototype.hasOwnProperty.call(Wr, rr)) {
-            rr = Wr[rr];
+      phrase(dd) {
+        for (var Od = arguments.length, md = new Array(Od > 1 ? Od - 1 : 0), Wd = 1; Wd < Od; Wd++) md[Wd - 1] = arguments[Wd];
+        for (let Fd of this.facet(rO.phrases))
+          if (Object.prototype.hasOwnProperty.call(Fd, dd)) {
+            dd = Fd[dd];
             break
-          } return Qr.length && (rr = rr.replace(/\$(\$|\d*)/g, ((rr, Sr) => {
-          if ("$" == Sr) return "$";
-          let Zr = +(Sr || 1);
-          return !Zr || Zr > Qr.length ? rr : Qr[Zr - 1]
-        }))), rr
+          } return md.length && (dd = dd.replace(/\$(\$|\d*)/g, ((dd, Od) => {
+          if ("$" == Od) return "$";
+          let Wd = +(Od || 1);
+          return !Wd || Wd > md.length ? dd : md[Wd - 1]
+        }))), dd
       }
-      languageDataAt(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          Zr = [];
-        for (let Wr of this.facet(xS))
-          for (let ar of Wr(this, Sr, Qr)) Object.prototype.hasOwnProperty.call(ar, rr) && Zr.push(ar[rr]);
-        return Zr
+      languageDataAt(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          Wd = [];
+        for (let Fd of this.facet(NO))
+          for (let Rd of Fd(this, Od, md)) Object.prototype.hasOwnProperty.call(Rd, dd) && Wd.push(Rd[dd]);
+        return Wd
       }
-      charCategorizer(rr) {
-        let Sr = this.languageDataAt("wordChars", rr);
-        return qS(Sr.length ? Sr[0] : "")
+      charCategorizer(dd) {
+        let Od = this.languageDataAt("wordChars", dd);
+        return AO(Od.length ? Od[0] : "")
       }
-      wordAt(rr) {
+      wordAt(dd) {
         let {
-          text: Sr,
-          from: Qr,
-          length: Zr
-        } = this.doc.lineAt(rr), Wr = this.charCategorizer(rr), ar = rr - Qr, jr = rr - Qr;
-        for (; ar > 0;) {
-          let rr = vr(Sr, ar, !1);
-          if (Wr(Sr.slice(rr, ar)) != XS.Word) break;
-          ar = rr
+          text: Od,
+          from: md,
+          length: Wd
+        } = this.doc.lineAt(dd), Fd = this.charCategorizer(dd), Rd = dd - md, Xd = dd - md;
+        for (; Rd > 0;) {
+          let dd = Ud(Od, Rd, !1);
+          if (Fd(Od.slice(dd, Rd)) != uO.Word) break;
+          Rd = dd
         }
-        for (; jr < Zr;) {
-          let rr = vr(Sr, jr);
-          if (Wr(Sr.slice(jr, rr)) != XS.Word) break;
-          jr = rr
+        for (; Xd < Wd;) {
+          let dd = Ud(Od, Xd);
+          if (Fd(Od.slice(Xd, dd)) != uO.Word) break;
+          Xd = dd
         }
-        return ar == jr ? null : Vr.range(ar + Qr, jr + Qr)
+        return Rd == Xd ? null : jd.range(Rd + md, Xd + md)
       }
     }
 
-    function gS(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        Zr = {};
-      for (let Wr of rr)
-        for (let rr of Object.keys(Wr)) {
-          let Sr = Wr[rr],
-            ar = Zr[rr];
-          if (void 0 === ar) Zr[rr] = Sr;
-          else if (ar === Sr || void 0 === Sr);
+    function GO(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        Wd = {};
+      for (let Fd of dd)
+        for (let dd of Object.keys(Fd)) {
+          let Od = Fd[dd],
+            Rd = Wd[dd];
+          if (void 0 === Rd) Wd[dd] = Od;
+          else if (Rd === Od || void 0 === Od);
           else {
-            if (!Object.hasOwnProperty.call(Qr, rr)) throw new Error("Config merge conflict for field " + rr);
-            Zr[rr] = Qr[rr](ar, Sr)
+            if (!Object.hasOwnProperty.call(md, dd)) throw new Error("Config merge conflict for field " + dd);
+            Wd[dd] = md[dd](Rd, Od)
           }
         }
-      for (let Wr in Sr) void 0 === Zr[Wr] && (Zr[Wr] = Sr[Wr]);
-      return Zr
+      for (let Fd in Od) void 0 === Wd[Fd] && (Wd[Fd] = Od[Fd]);
+      return Wd
     }
-    RS.allowMultipleSelections = mS, RS.tabSize = cr.define({
-      combine: rr => rr.length ? rr[0] : 4
-    }), RS.lineSeparator = NS, RS.readOnly = zS, RS.phrases = cr.define({
-      compare(rr, Sr) {
-        let Qr = Object.keys(rr),
-          Zr = Object.keys(Sr);
-        return Qr.length == Zr.length && Qr.every((Qr => rr[Qr] == Sr[Qr]))
+    rO.allowMultipleSelections = qO, rO.tabSize = Id.define({
+      combine: dd => dd.length ? dd[0] : 4
+    }), rO.lineSeparator = HO, rO.readOnly = pO, rO.phrases = Id.define({
+      compare(dd, Od) {
+        let md = Object.keys(dd),
+          Wd = Object.keys(Od);
+        return md.length == Wd.length && md.every((md => dd[md] == Od[md]))
       }
-    }), RS.languageData = xS, RS.changeFilter = US, RS.transactionFilter = tS, RS.transactionExtender = hS, jS.reconfigure = KS.define();
-    class CS {
-      eq(rr) {
-        return this == rr
+    }), rO.languageData = NO, rO.changeFilter = yO, rO.transactionFilter = bO, rO.transactionExtender = TO, hO.reconfigure = aO.define();
+    class nO {
+      eq(dd) {
+        return this == dd
       }
-      range(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rr;
-        return GS.create(rr, Sr, this)
-      }
-    }
-
-    function MS(rr, Sr) {
-      return rr == Sr || rr.constructor == Sr.constructor && rr.eq(Sr)
-    }
-    CS.prototype.startSide = CS.prototype.endSide = 0, CS.prototype.point = !1, CS.prototype.mapMode = Pr.TrackDel;
-    class GS {
-      constructor(rr, Sr, Qr) {
-        this.from = rr, this.to = Sr, this.value = Qr
-      }
-      static create(rr, Sr, Qr) {
-        return new GS(rr, Sr, Qr)
+      range(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dd;
+        return PO.create(dd, Od, this)
       }
     }
 
-    function kS(rr, Sr) {
-      return rr.from - Sr.from || rr.value.startSide - Sr.value.startSide
+    function LO(dd, Od) {
+      return dd == Od || dd.constructor == Od.constructor && dd.eq(Od)
     }
-    class AS {
-      constructor(rr, Sr, Qr, Zr) {
-        this.from = rr, this.to = Sr, this.value = Qr, this.LWr = Zr
+    nO.prototype.startSide = nO.prototype.endSide = 0, nO.prototype.point = !1, nO.prototype.mapMode = ud.TrackDel;
+    class PO {
+      constructor(dd, Od, md) {
+        this.from = dd, this.to = Od, this.value = md
+      }
+      static create(dd, Od, md) {
+        return new PO(dd, Od, md)
+      }
+    }
+
+    function zO(dd, Od) {
+      return dd.from - Od.from || dd.value.startSide - Od.value.startSide
+    }
+    class cO {
+      constructor(dd, Od, md, Wd) {
+        this.from = dd, this.to = Od, this.value = md, this.XRd = Wd
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(rr, Sr, Qr) {
-        let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Wr = Qr ? this.to : this.from;
-        for (let ar = Zr, jr = Wr.length;;) {
-          if (ar == jr) return ar;
-          let Zr = ar + jr >> 1,
-            Ir = Wr[Zr] - rr || (Qr ? this.value[Zr].endSide : this.value[Zr].startSide) - Sr;
-          if (Zr == ar) return Ir >= 0 ? ar : jr;
-          Ir >= 0 ? jr = Zr : ar = Zr + 1
+      findIndex(dd, Od, md) {
+        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Fd = md ? this.to : this.from;
+        for (let Rd = Wd, Xd = Fd.length;;) {
+          if (Rd == Xd) return Rd;
+          let Wd = Rd + Xd >> 1,
+            Kd = Fd[Wd] - dd || (md ? this.value[Wd].endSide : this.value[Wd].startSide) - Od;
+          if (Wd == Rd) return Kd >= 0 ? Rd : Xd;
+          Kd >= 0 ? Xd = Wd : Rd = Wd + 1
         }
       }
-      between(rr, Sr, Qr, Zr) {
-        for (let Wr = this.findIndex(Sr, -1e9, !0), ar = this.findIndex(Qr, 1e9, !1, Wr); Wr < ar; Wr++)
-          if (!1 === Zr(this.from[Wr] + rr, this.to[Wr] + rr, this.value[Wr])) return !1
+      between(dd, Od, md, Wd) {
+        for (let Fd = this.findIndex(Od, -1e9, !0), Rd = this.findIndex(md, 1e9, !1, Fd); Fd < Rd; Fd++)
+          if (!1 === Wd(this.from[Fd] + dd, this.to[Fd] + dd, this.value[Fd])) return !1
       }
-      map(rr, Sr) {
-        let Qr = [],
-          Zr = [],
-          Wr = [],
-          ar = -1,
-          jr = -1;
-        for (let Ir = 0; Ir < this.value.length; Ir++) {
-          let fr, Er, pr = this.value[Ir],
-            xr = this.from[Ir] + rr,
-            mr = this.to[Ir] + rr;
-          if (xr == mr) {
-            let rr = Sr.mapPos(xr, pr.startSide, pr.mapMode);
-            if (null == rr) continue;
-            if (fr = Er = rr, pr.startSide != pr.endSide && (Er = Sr.mapPos(xr, pr.endSide), Er < fr)) continue
-          } else if (fr = Sr.mapPos(xr, pr.startSide), Er = Sr.mapPos(mr, pr.endSide), fr > Er || fr == Er && pr.startSide > 0 && pr.endSide <= 0) continue;
-          (Er - fr || pr.endSide - pr.startSide) < 0 || (ar < 0 && (ar = fr), pr.point && (jr = Math.max(jr, Er - fr)), Qr.push(pr), Zr.push(fr - ar), Wr.push(Er - ar))
+      map(dd, Od) {
+        let md = [],
+          Wd = [],
+          Fd = [],
+          Rd = -1,
+          Xd = -1;
+        for (let Kd = 0; Kd < this.value.length; Kd++) {
+          let hd, vd, Qd = this.value[Kd],
+            td = this.from[Kd] + dd,
+            od = this.to[Kd] + dd;
+          if (td == od) {
+            let dd = Od.mapPos(td, Qd.startSide, Qd.mapMode);
+            if (null == dd) continue;
+            if (hd = vd = dd, Qd.startSide != Qd.endSide && (vd = Od.mapPos(td, Qd.endSide), vd < hd)) continue
+          } else if (hd = Od.mapPos(td, Qd.startSide), vd = Od.mapPos(od, Qd.endSide), hd > vd || hd == vd && Qd.startSide > 0 && Qd.endSide <= 0) continue;
+          (vd - hd || Qd.endSide - Qd.startSide) < 0 || (Rd < 0 && (Rd = hd), Qd.point && (Xd = Math.max(Xd, vd - hd)), md.push(Qd), Wd.push(hd - Rd), Fd.push(vd - Rd))
         }
         return {
-          mapped: Qr.length ? new AS(Zr, Wr, Qr, jr) : null,
-          pos: ar
+          mapped: md.length ? new cO(Wd, Fd, md, Xd) : null,
+          pos: Rd
         }
       }
     }
-    class VS {
-      constructor(rr, Sr, Qr, Zr) {
-        this.chunkPos = rr, this.chunk = Sr, this.nextLayer = Qr, this.LWr = Zr
+    class jO {
+      constructor(dd, Od, md, Wd) {
+        this.chunkPos = dd, this.chunk = Od, this.nextLayer = md, this.XRd = Wd
       }
-      static create(rr, Sr, Qr, Zr) {
-        return new VS(rr, Sr, Qr, Zr)
+      static create(dd, Od, md, Wd) {
+        return new jO(dd, Od, md, Wd)
       }
       get length() {
-        let rr = this.chunk.length - 1;
-        return rr < 0 ? 0 : Math.max(this.chunkEnd(rr), this.nextLayer.length)
+        let dd = this.chunk.length - 1;
+        return dd < 0 ? 0 : Math.max(this.chunkEnd(dd), this.nextLayer.length)
       }
       get size() {
-        if (this.nx) return 0;
-        let rr = this.nextLayer.size;
-        for (let Sr of this.chunk) rr += Sr.value.length;
-        return rr
+        if (this.Nt) return 0;
+        let dd = this.nextLayer.size;
+        for (let Od of this.chunk) dd += Od.value.length;
+        return dd
       }
-      chunkEnd(rr) {
-        return this.chunkPos[rr] + this.chunk[rr].length
+      chunkEnd(dd) {
+        return this.chunkPos[dd] + this.chunk[dd].length
       }
-      update(rr) {
+      update(dd) {
         let {
-          add: Sr = [],
-          sort: Qr = !1,
-          filterFrom: Zr = 0,
-          filterTo: Wr = this.length
-        } = rr, ar = rr.filter;
-        if (0 == Sr.length && !ar) return this;
-        if (Qr && (Sr = Sr.slice().sort(kS)), this.nx) return Sr.length ? VS.of(Sr) : this;
-        let jr = new cS(this, null, -1).goto(0),
-          Ir = 0,
-          fr = [],
-          Er = new iS;
-        for (; jr.value || Ir < Sr.length;)
-          if (Ir < Sr.length && (jr.from - Sr[Ir].from || jr.startSide - Sr[Ir].value.startSide) >= 0) {
-            let rr = Sr[Ir++];
-            Er.addInner(rr.from, rr.to, rr.value) || fr.push(rr)
-          } else 1 == jr.rangeIndex && jr.chunkIndex < this.chunk.length && (Ir == Sr.length || this.chunkEnd(jr.chunkIndex) < Sr[Ir].from) && (!ar || Zr > this.chunkEnd(jr.chunkIndex) || Wr < this.chunkPos[jr.chunkIndex]) && Er.addChunk(this.chunkPos[jr.chunkIndex], this.chunk[jr.chunkIndex]) ? jr.nextChunk() : ((!ar || Zr > jr.to || Wr < jr.from || ar(jr.from, jr.to, jr.value)) && (Er.addInner(jr.from, jr.to, jr.value) || fr.push(GS.create(jr.from, jr.to, jr.value))), jr.next());
-        return Er.finishInner(this.nextLayer.nx && !fr.length ? VS.empty : this.nextLayer.update({
-          add: fr,
-          filter: ar,
-          filterFrom: Zr,
-          filterTo: Wr
+          add: Od = [],
+          sort: md = !1,
+          filterFrom: Wd = 0,
+          filterTo: Fd = this.length
+        } = dd, Rd = dd.filter;
+        if (0 == Od.length && !Rd) return this;
+        if (md && (Od = Od.slice().sort(zO)), this.Nt) return Od.length ? jO.of(Od) : this;
+        let Xd = new IO(this, null, -1).goto(0),
+          Kd = 0,
+          hd = [],
+          vd = new DO;
+        for (; Xd.value || Kd < Od.length;)
+          if (Kd < Od.length && (Xd.from - Od[Kd].from || Xd.startSide - Od[Kd].value.startSide) >= 0) {
+            let dd = Od[Kd++];
+            vd.addInner(dd.from, dd.to, dd.value) || hd.push(dd)
+          } else 1 == Xd.rangeIndex && Xd.chunkIndex < this.chunk.length && (Kd == Od.length || this.chunkEnd(Xd.chunkIndex) < Od[Kd].from) && (!Rd || Wd > this.chunkEnd(Xd.chunkIndex) || Fd < this.chunkPos[Xd.chunkIndex]) && vd.addChunk(this.chunkPos[Xd.chunkIndex], this.chunk[Xd.chunkIndex]) ? Xd.nextChunk() : ((!Rd || Wd > Xd.to || Fd < Xd.from || Rd(Xd.from, Xd.to, Xd.value)) && (vd.addInner(Xd.from, Xd.to, Xd.value) || hd.push(PO.create(Xd.from, Xd.to, Xd.value))), Xd.next());
+        return vd.finishInner(this.nextLayer.Nt && !hd.length ? jO.empty : this.nextLayer.update({
+          add: hd,
+          filter: Rd,
+          filterFrom: Wd,
+          filterTo: Fd
         }))
       }
-      map(rr) {
-        if (rr.empty || this.nx) return this;
-        let Sr = [],
-          Qr = [],
-          Zr = -1;
-        for (let ar = 0; ar < this.chunk.length; ar++) {
-          let Wr = this.chunkPos[ar],
-            jr = this.chunk[ar],
-            Ir = rr.touchesRange(Wr, Wr + jr.length);
-          if (!1 === Ir) Zr = Math.max(Zr, jr.LWr), Sr.push(jr), Qr.push(rr.mapPos(Wr));
-          else if (!0 === Ir) {
+      map(dd) {
+        if (dd.empty || this.Nt) return this;
+        let Od = [],
+          md = [],
+          Wd = -1;
+        for (let Rd = 0; Rd < this.chunk.length; Rd++) {
+          let Fd = this.chunkPos[Rd],
+            Xd = this.chunk[Rd],
+            Kd = dd.touchesRange(Fd, Fd + Xd.length);
+          if (!1 === Kd) Wd = Math.max(Wd, Xd.XRd), Od.push(Xd), md.push(dd.mapPos(Fd));
+          else if (!0 === Kd) {
             let {
-              mapped: ar,
-              pos: Ir
-            } = jr.map(Wr, rr);
-            ar && (Zr = Math.max(Zr, ar.LWr), Sr.push(ar), Qr.push(Ir))
+              mapped: Rd,
+              pos: Kd
+            } = Xd.map(Fd, dd);
+            Rd && (Wd = Math.max(Wd, Rd.XRd), Od.push(Rd), md.push(Kd))
           }
         }
-        let Wr = this.nextLayer.map(rr);
-        return 0 == Sr.length ? Wr : new VS(Qr, Sr, Wr || VS.empty, Zr)
+        let Fd = this.nextLayer.map(dd);
+        return 0 == Od.length ? Fd : new jO(md, Od, Fd || jO.empty, Wd)
       }
-      between(rr, Sr, Qr) {
-        if (!this.nx) {
-          for (let Zr = 0; Zr < this.chunk.length; Zr++) {
-            let Wr = this.chunkPos[Zr],
-              ar = this.chunk[Zr];
-            if (Sr >= Wr && rr <= Wr + ar.length && !1 === ar.between(Wr, rr - Wr, Sr - Wr, Qr)) return
+      between(dd, Od, md) {
+        if (!this.Nt) {
+          for (let Wd = 0; Wd < this.chunk.length; Wd++) {
+            let Fd = this.chunkPos[Wd],
+              Rd = this.chunk[Wd];
+            if (Od >= Fd && dd <= Fd + Rd.length && !1 === Rd.between(Fd, dd - Fd, Od - Fd, md)) return
           }
-          this.nextLayer.between(rr, Sr, Qr)
+          this.nextLayer.between(dd, Od, md)
         }
       }
       iter() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return FS.from([this]).goto(rr)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return lO.from([this]).goto(dd)
       }
-      get nx() {
+      get Nt() {
         return this.nextLayer == this
       }
-      static iter(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return FS.from(rr).goto(Sr)
+      static iter(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return lO.from(dd).goto(Od)
       }
-      static compare(rr, Sr, Qr, Zr) {
-        let Wr = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          ar = rr.filter((rr => rr.LWr > 0 || !rr.nx && rr.LWr >= Wr)),
-          jr = Sr.filter((rr => rr.LWr > 0 || !rr.nx && rr.LWr >= Wr)),
-          Ir = wS(ar, jr, Qr),
-          fr = new bS(ar, Ir, Wr),
-          Er = new bS(jr, Ir, Wr);
-        Qr.iterGaps(((rr, Sr, Qr) => JS(fr, rr, Er, Sr, Qr, Zr))), Qr.empty && 0 == Qr.length && JS(fr, 0, Er, 0, 0, Zr)
+      static compare(dd, Od, md, Wd) {
+        let Fd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          Rd = dd.filter((dd => dd.XRd > 0 || !dd.Nt && dd.XRd >= Fd)),
+          Xd = Od.filter((dd => dd.XRd > 0 || !dd.Nt && dd.XRd >= Fd)),
+          Kd = eO(Rd, Xd, md),
+          hd = new ZO(Rd, Kd, Fd),
+          vd = new ZO(Xd, Kd, Fd);
+        md.iterGaps(((dd, Od, md) => kO(hd, dd, vd, Od, md, Wd))), md.empty && 0 == md.length && kO(hd, 0, vd, 0, 0, Wd)
       }
-      static eq(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Zr = arguments.length > 3 ? arguments[3] : void 0;
-        null == Zr && (Zr = 999999999);
-        let Wr = rr.filter((rr => !rr.nx && Sr.indexOf(rr) < 0)),
-          ar = Sr.filter((Sr => !Sr.nx && rr.indexOf(Sr) < 0));
-        if (Wr.length != ar.length) return !1;
-        if (!Wr.length) return !0;
-        let jr = wS(Wr, ar),
-          Ir = new bS(Wr, jr, 0).goto(Qr),
-          fr = new bS(ar, jr, 0).goto(Qr);
+      static eq(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Wd = arguments.length > 3 ? arguments[3] : void 0;
+        null == Wd && (Wd = 999999999);
+        let Fd = dd.filter((dd => !dd.Nt && Od.indexOf(dd) < 0)),
+          Rd = Od.filter((Od => !Od.Nt && dd.indexOf(Od) < 0));
+        if (Fd.length != Rd.length) return !1;
+        if (!Fd.length) return !0;
+        let Xd = eO(Fd, Rd),
+          Kd = new ZO(Fd, Xd, 0).goto(md),
+          hd = new ZO(Rd, Xd, 0).goto(md);
         for (;;) {
-          if (Ir.to != fr.to || !DS(Ir.active, fr.active) || Ir.point && (!fr.point || !MS(Ir.point, fr.point))) return !1;
-          if (Ir.to > Zr) return !0;
-          Ir.next(), fr.next()
+          if (Kd.to != hd.to || !fO(Kd.active, hd.active) || Kd.point && (!hd.point || !LO(Kd.point, hd.point))) return !1;
+          if (Kd.to > Wd) return !0;
+          Kd.next(), hd.next()
         }
       }
-      static spans(rr, Sr, Qr, Zr) {
-        let Wr = new bS(rr, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(Sr),
-          ar = Sr,
-          jr = Wr.openStart;
+      static spans(dd, Od, md, Wd) {
+        let Fd = new ZO(dd, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(Od),
+          Rd = Od,
+          Xd = Fd.openStart;
         for (;;) {
-          let rr = Math.min(Wr.to, Qr);
-          if (Wr.point) {
-            let Qr = Wr.activeForPoint(Wr.to),
-              Ir = Wr.pointFrom < Sr ? Qr.length + 1 : Wr.point.startSide < 0 ? Qr.length : Math.min(Qr.length, jr);
-            Zr.point(ar, rr, Wr.point, Qr, Ir, Wr.pointRank), jr = Math.min(Wr.openEnd(rr), Qr.length)
-          } else rr > ar && (Zr.span(ar, rr, Wr.active, jr), jr = Wr.openEnd(rr));
-          if (Wr.to > Qr) return jr + (Wr.point && Wr.to > Qr ? 1 : 0);
-          ar = Wr.to, Wr.next()
+          let dd = Math.min(Fd.to, md);
+          if (Fd.point) {
+            let md = Fd.activeForPoint(Fd.to),
+              Kd = Fd.pointFrom < Od ? md.length + 1 : Fd.point.startSide < 0 ? md.length : Math.min(md.length, Xd);
+            Wd.point(Rd, dd, Fd.point, md, Kd, Fd.pointRank), Xd = Math.min(Fd.openEnd(dd), md.length)
+          } else dd > Rd && (Wd.span(Rd, dd, Fd.active, Xd), Xd = Fd.openEnd(dd));
+          if (Fd.to > md) return Xd + (Fd.point && Fd.to > md ? 1 : 0);
+          Rd = Fd.to, Fd.next()
         }
       }
-      static of (rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Qr = new iS;
-        for (let Zr of rr instanceof GS ? [rr] : Sr ? function(rr) {
-            if (rr.length > 1)
-              for (let Sr = rr[0], Qr = 1; Qr < rr.length; Qr++) {
-                let Zr = rr[Qr];
-                if (kS(Sr, Zr) > 0) return rr.slice().sort(kS);
-                Sr = Zr
+      static of (dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          md = new DO;
+        for (let Wd of dd instanceof PO ? [dd] : Od ? function(dd) {
+            if (dd.length > 1)
+              for (let Od = dd[0], md = 1; md < dd.length; md++) {
+                let Wd = dd[md];
+                if (zO(Od, Wd) > 0) return dd.slice().sort(zO);
+                Od = Wd
               }
-            return rr
-          }(rr) : rr) Qr.add(Zr.from, Zr.to, Zr.value);
-        return Qr.finish()
+            return dd
+          }(dd) : dd) md.add(Wd.from, Wd.to, Wd.value);
+        return md.finish()
       }
-      static join(rr) {
-        if (!rr.length) return VS.empty;
-        let Sr = rr[rr.length - 1];
-        for (let Qr = rr.length - 2; Qr >= 0; Qr--)
-          for (let Zr = rr[Qr]; Zr != VS.empty; Zr = Zr.nextLayer) Sr = new VS(Zr.chunkPos, Zr.chunk, Sr, Math.max(Zr.LWr, Sr.LWr));
-        return Sr
+      static join(dd) {
+        if (!dd.length) return jO.empty;
+        let Od = dd[dd.length - 1];
+        for (let md = dd.length - 2; md >= 0; md--)
+          for (let Wd = dd[md]; Wd != jO.empty; Wd = Wd.nextLayer) Od = new jO(Wd.chunkPos, Wd.chunk, Od, Math.max(Wd.XRd, Od.XRd));
+        return Od
       }
     }
-    VS.empty = new VS([], [], null, -1), VS.empty.nextLayer = VS.empty;
-    class iS {
-      finishChunk(rr) {
-        this.chunks.push(new AS(this.from, this.to, this.value, this.LWr)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.LWr), this.LWr = -1, rr && (this.from = [], this.to = [], this.value = [])
+    jO.empty = new jO([], [], null, -1), jO.empty.nextLayer = jO.empty;
+    class DO {
+      finishChunk(dd) {
+        this.chunks.push(new cO(this.from, this.to, this.value, this.XRd)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.XRd), this.XRd = -1, dd && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.LWr = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.XRd = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(rr, Sr, Qr) {
-        this.addInner(rr, Sr, Qr) || (this.nextLayer || (this.nextLayer = new iS)).add(rr, Sr, Qr)
+      add(dd, Od, md) {
+        this.addInner(dd, Od, md) || (this.nextLayer || (this.nextLayer = new DO)).add(dd, Od, md)
       }
-      addInner(rr, Sr, Qr) {
-        let Zr = rr - this.lastTo || Qr.startSide - this.last.endSide;
-        if (Zr <= 0 && (rr - this.lastFrom || Qr.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(Zr < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = rr), this.from.push(rr - this.chunkStart), this.to.push(Sr - this.chunkStart), this.last = Qr, this.lastFrom = rr, this.lastTo = Sr, this.value.push(Qr), Qr.point && (this.LWr = Math.max(this.LWr, Sr - rr)), !0)
+      addInner(dd, Od, md) {
+        let Wd = dd - this.lastTo || md.startSide - this.last.endSide;
+        if (Wd <= 0 && (dd - this.lastFrom || md.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(Wd < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = dd), this.from.push(dd - this.chunkStart), this.to.push(Od - this.chunkStart), this.last = md, this.lastFrom = dd, this.lastTo = Od, this.value.push(md), md.point && (this.XRd = Math.max(this.XRd, Od - dd)), !0)
       }
-      addChunk(rr, Sr) {
-        if ((rr - this.lastTo || Sr.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, Sr.LWr), this.chunks.push(Sr), this.chunkPos.push(rr);
-        let Qr = Sr.value.length - 1;
-        return this.last = Sr.value[Qr], this.lastFrom = Sr.from[Qr] + rr, this.lastTo = Sr.to[Qr] + rr, !0
+      addChunk(dd, Od) {
+        if ((dd - this.lastTo || Od.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, Od.XRd), this.chunks.push(Od), this.chunkPos.push(dd);
+        let md = Od.value.length - 1;
+        return this.last = Od.value[md], this.lastFrom = Od.from[md] + dd, this.lastTo = Od.to[md] + dd, !0
       }
       finish() {
-        return this.finishInner(VS.empty)
+        return this.finishInner(jO.empty)
       }
-      finishInner(rr) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return rr;
-        let Sr = VS.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(rr) : rr, this.setMaxPoint);
-        return this.from = null, Sr
+      finishInner(dd) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return dd;
+        let Od = jO.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(dd) : dd, this.setMaxPoint);
+        return this.from = null, Od
       }
     }
 
-    function wS(rr, Sr, Qr) {
-      let Zr = new Map;
-      for (let ar of rr)
-        for (let rr = 0; rr < ar.chunk.length; rr++) ar.chunk[rr].LWr <= 0 && Zr.set(ar.chunk[rr], ar.chunkPos[rr]);
-      let Wr = new Set;
-      for (let ar of Sr)
-        for (let rr = 0; rr < ar.chunk.length; rr++) {
-          let Sr = Zr.get(ar.chunk[rr]);
-          null == Sr || (Qr ? Qr.mapPos(Sr) : Sr) != ar.chunkPos[rr] || (null === Qr || void 0 === Qr ? void 0 : Qr.touchesRange(Sr, Sr + ar.chunk[rr].length)) || Wr.add(ar.chunk[rr])
+    function eO(dd, Od, md) {
+      let Wd = new Map;
+      for (let Rd of dd)
+        for (let dd = 0; dd < Rd.chunk.length; dd++) Rd.chunk[dd].XRd <= 0 && Wd.set(Rd.chunk[dd], Rd.chunkPos[dd]);
+      let Fd = new Set;
+      for (let Rd of Od)
+        for (let dd = 0; dd < Rd.chunk.length; dd++) {
+          let Od = Wd.get(Rd.chunk[dd]);
+          null == Od || (md ? md.mapPos(Od) : Od) != Rd.chunkPos[dd] || (null === md || void 0 === md ? void 0 : md.touchesRange(Od, Od + Rd.chunk[dd].length)) || Fd.add(Rd.chunk[dd])
         }
-      return Wr
+      return Fd
     }
-    class cS {
-      constructor(rr, Sr, Qr) {
-        let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = rr, this.skip = Sr, this.lWr = Qr, this.rank = Zr
+    class IO {
+      constructor(dd, Od, md) {
+        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = dd, this.skip = Od, this.KRd = md, this.rank = Wd
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(rr, Sr, !1), this
+      goto(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(dd, Od, !1), this
       }
-      gotoInner(rr, Sr, Qr) {
+      gotoInner(dd, Od, md) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let Sr = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(Sr) || this.layer.chunkEnd(this.chunkIndex) < rr || Sr.LWr < this.lWr)) break;
-          this.chunkIndex++, Qr = !1
+          let Od = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(Od) || this.layer.chunkEnd(this.chunkIndex) < dd || Od.XRd < this.KRd)) break;
+          this.chunkIndex++, md = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let Zr = this.layer.chunk[this.chunkIndex].findIndex(rr - this.layer.chunkPos[this.chunkIndex], Sr, !0);
-          (!Qr || this.rangeIndex < Zr) && this.setRangeIndex(Zr)
+          let Wd = this.layer.chunk[this.chunkIndex].findIndex(dd - this.layer.chunkPos[this.chunkIndex], Od, !0);
+          (!md || this.rangeIndex < Wd) && this.setRangeIndex(Wd)
         }
         this.next()
       }
-      forward(rr, Sr) {
-        (this.to - rr || this.endSide - Sr) < 0 && this.gotoInner(rr, Sr, !0)
+      forward(dd, Od) {
+        (this.to - dd || this.endSide - Od) < 0 && this.gotoInner(dd, Od, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let rr = this.layer.chunkPos[this.chunkIndex],
-              Sr = this.layer.chunk[this.chunkIndex],
-              Qr = rr + Sr.from[this.rangeIndex];
-            if (this.from = Qr, this.to = rr + Sr.to[this.rangeIndex], this.value = Sr.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.lWr < 0 || this.value.point && this.to - this.from >= this.lWr) break
+            let dd = this.layer.chunkPos[this.chunkIndex],
+              Od = this.layer.chunk[this.chunkIndex],
+              md = dd + Od.from[this.rangeIndex];
+            if (this.from = md, this.to = dd + Od.to[this.rangeIndex], this.value = Od.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.KRd < 0 || this.value.point && this.to - this.from >= this.KRd) break
           }
         }
       }
-      setRangeIndex(rr) {
-        if (rr == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(dd) {
+        if (dd == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = rr
+        } else this.rangeIndex = dd
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(rr) {
-        return this.from - rr.from || this.startSide - rr.startSide || this.rank - rr.rank || this.to - rr.to || this.endSide - rr.endSide
+      compare(dd) {
+        return this.from - dd.from || this.startSide - dd.startSide || this.rank - dd.rank || this.to - dd.to || this.endSide - dd.endSide
       }
     }
-    class FS {
-      constructor(rr) {
-        this.heap = rr
+    class lO {
+      constructor(dd) {
+        this.heap = dd
       }
-      static from(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          Zr = [];
-        for (let Wr = 0; Wr < rr.length; Wr++)
-          for (let ar = rr[Wr]; !ar.nx; ar = ar.nextLayer) ar.LWr >= Qr && Zr.push(new cS(ar, Sr, Qr, Wr));
-        return 1 == Zr.length ? Zr[0] : new FS(Zr)
+      static from(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          Wd = [];
+        for (let Fd = 0; Fd < dd.length; Fd++)
+          for (let Rd = dd[Fd]; !Rd.Nt; Rd = Rd.nextLayer) Rd.XRd >= md && Wd.push(new IO(Rd, Od, md, Fd));
+        return 1 == Wd.length ? Wd[0] : new lO(Wd)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let Qr of this.heap) Qr.goto(rr, Sr);
-        for (let Qr = this.heap.length >> 1; Qr >= 0; Qr--) oS(this.heap, Qr);
+      goto(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let md of this.heap) md.goto(dd, Od);
+        for (let md = this.heap.length >> 1; md >= 0; md--) CO(this.heap, md);
         return this.next(), this
       }
-      forward(rr, Sr) {
-        for (let Qr of this.heap) Qr.forward(rr, Sr);
-        for (let Qr = this.heap.length >> 1; Qr >= 0; Qr--) oS(this.heap, Qr);
-        (this.to - rr || this.value.endSide - Sr) < 0 && this.next()
+      forward(dd, Od) {
+        for (let md of this.heap) md.forward(dd, Od);
+        for (let md = this.heap.length >> 1; md >= 0; md--) CO(this.heap, md);
+        (this.to - dd || this.value.endSide - Od) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let rr = this.heap[0];
-          this.from = rr.from, this.to = rr.to, this.value = rr.value, this.rank = rr.rank, rr.value && rr.next(), oS(this.heap, 0)
+          let dd = this.heap[0];
+          this.from = dd.from, this.to = dd.to, this.value = dd.value, this.rank = dd.rank, dd.value && dd.next(), CO(this.heap, 0)
         }
       }
     }
 
-    function oS(rr, Sr) {
-      for (let Qr = rr[Sr];;) {
-        let Zr = 1 + (Sr << 1);
-        if (Zr >= rr.length) break;
-        let Wr = rr[Zr];
-        if (Zr + 1 < rr.length && Wr.compare(rr[Zr + 1]) >= 0 && (Wr = rr[Zr + 1], Zr++), Qr.compare(Wr) < 0) break;
-        rr[Zr] = Qr, rr[Sr] = Wr, Sr = Zr
+    function CO(dd, Od) {
+      for (let md = dd[Od];;) {
+        let Wd = 1 + (Od << 1);
+        if (Wd >= dd.length) break;
+        let Fd = dd[Wd];
+        if (Wd + 1 < dd.length && Fd.compare(dd[Wd + 1]) >= 0 && (Fd = dd[Wd + 1], Wd++), md.compare(Fd) < 0) break;
+        dd[Wd] = md, dd[Od] = Fd, Od = Wd
       }
     }
-    class bS {
-      constructor(rr, Sr, Qr) {
-        this.lWr = Qr, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = FS.from(rr, Sr, Qr)
+    class ZO {
+      constructor(dd, Od, md) {
+        this.KRd = md, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = lO.from(dd, Od, md)
       }
-      goto(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(rr, Sr), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = rr, this.endSide = Sr, this.openStart = -1, this.next(), this
+      goto(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(dd, Od), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = dd, this.endSide = Od, this.openStart = -1, this.next(), this
       }
-      forward(rr, Sr) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - rr || this.active[this.minActive].endSide - Sr) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(rr, Sr)
+      forward(dd, Od) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - dd || this.active[this.minActive].endSide - Od) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(dd, Od)
       }
-      removeActive(rr) {
-        dS(this.active, rr), dS(this.activeTo, rr), dS(this.activeRank, rr), this.minActive = uS(this.active, this.activeTo)
+      removeActive(dd) {
+        MO(this.active, dd), MO(this.activeTo, dd), MO(this.activeRank, dd), this.minActive = Om(this.active, this.activeTo)
       }
-      addActive(rr) {
-        let Sr = 0,
+      addActive(dd) {
+        let Od = 0,
           {
-            value: Qr,
-            to: Zr,
-            rank: Wr
+            value: md,
+            to: Wd,
+            rank: Fd
           } = this.cursor;
-        for (; Sr < this.activeRank.length && (Wr - this.activeRank[Sr] || Zr - this.activeTo[Sr]) > 0;) Sr++;
-        sS(this.active, Sr, Qr), sS(this.activeTo, Sr, Zr), sS(this.activeRank, Sr, Wr), rr && sS(rr, Sr, this.cursor.from), this.minActive = uS(this.active, this.activeTo)
+        for (; Od < this.activeRank.length && (Fd - this.activeRank[Od] || Wd - this.activeTo[Od]) > 0;) Od++;
+        dm(this.active, Od, md), dm(this.activeTo, Od, Wd), dm(this.activeRank, Od, Fd), dd && dm(dd, Od, this.cursor.from), this.minActive = Om(this.active, this.activeTo)
       }
       next() {
-        let rr = this.to,
-          Sr = this.point;
+        let dd = this.to,
+          Od = this.point;
         this.point = null;
-        let Qr = this.openStart < 0 ? [] : null;
+        let md = this.openStart < 0 ? [] : null;
         for (;;) {
-          let Zr = this.minActive;
-          if (Zr > -1 && (this.activeTo[Zr] - this.cursor.from || this.active[Zr].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[Zr] > rr) {
-              this.to = this.activeTo[Zr], this.endSide = this.active[Zr].endSide;
+          let Wd = this.minActive;
+          if (Wd > -1 && (this.activeTo[Wd] - this.cursor.from || this.active[Wd].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[Wd] > dd) {
+              this.to = this.activeTo[Wd], this.endSide = this.active[Wd].endSide;
               break
             }
-            this.removeActive(Zr), Qr && dS(Qr, Zr)
+            this.removeActive(Wd), md && MO(md, Wd)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > rr) {
+            if (this.cursor.from > dd) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let rr = this.cursor.value;
-              if (rr.point) {
-                if (!(Sr && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = rr, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = rr.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let dd = this.cursor.value;
+              if (dd.point) {
+                if (!(Od && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = dd, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = dd.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(Qr), this.cursor.next()
+              } else this.addActive(md), this.cursor.next()
             }
           }
         }
-        if (Qr) {
+        if (md) {
           this.openStart = 0;
-          for (let Sr = Qr.length - 1; Sr >= 0 && Qr[Sr] < rr; Sr--) this.openStart++
+          for (let Od = md.length - 1; Od >= 0 && md[Od] < dd; Od--) this.openStart++
         }
       }
-      activeForPoint(rr) {
+      activeForPoint(dd) {
         if (!this.active.length) return this.active;
-        let Sr = [];
-        for (let Qr = this.active.length - 1; Qr >= 0 && !(this.activeRank[Qr] < this.pointRank); Qr--)(this.activeTo[Qr] > rr || this.activeTo[Qr] == rr && this.active[Qr].endSide >= this.point.endSide) && Sr.push(this.active[Qr]);
-        return Sr.reverse()
+        let Od = [];
+        for (let md = this.active.length - 1; md >= 0 && !(this.activeRank[md] < this.pointRank); md--)(this.activeTo[md] > dd || this.activeTo[md] == dd && this.active[md].endSide >= this.point.endSide) && Od.push(this.active[md]);
+        return Od.reverse()
       }
-      openEnd(rr) {
-        let Sr = 0;
-        for (let Qr = this.activeTo.length - 1; Qr >= 0 && this.activeTo[Qr] > rr; Qr--) Sr++;
-        return Sr
-      }
-    }
-
-    function JS(rr, Sr, Qr, Zr, Wr, ar) {
-      rr.goto(Sr), Qr.goto(Zr);
-      let jr = Zr + Wr,
-        Ir = Zr,
-        fr = Zr - Sr,
-        Er = !!ar.boundChange;
-      for (let pr = !1;;) {
-        let Sr = rr.to + fr - Qr.to,
-          Zr = Sr || rr.endSide - Qr.endSide,
-          Wr = Zr < 0 ? rr.to + fr : Qr.to,
-          xr = Math.min(Wr, jr);
-        if (rr.point || Qr.point ? (rr.point && Qr.point && MS(rr.point, Qr.point) && DS(rr.activeForPoint(rr.to), Qr.activeForPoint(Qr.to)) || ar.comparePoint(Ir, xr, rr.point, Qr.point), pr = !1) : (pr && ar.boundChange(Ir), xr > Ir && !DS(rr.active, Qr.active) && ar.compareRange(Ir, xr, rr.active, Qr.active), Er && xr < jr && (Sr || rr.openEnd(Wr) != Qr.openEnd(Wr)) && (pr = !0)), Wr > jr) break;
-        Ir = Wr, Zr <= 0 && rr.next(), Zr >= 0 && Qr.next()
+      openEnd(dd) {
+        let Od = 0;
+        for (let md = this.activeTo.length - 1; md >= 0 && this.activeTo[md] > dd; md--) Od++;
+        return Od
       }
     }
 
-    function DS(rr, Sr) {
-      if (rr.length != Sr.length) return !1;
-      for (let Qr = 0; Qr < rr.length; Qr++)
-        if (rr[Qr] != Sr[Qr] && !MS(rr[Qr], Sr[Qr])) return !1;
+    function kO(dd, Od, md, Wd, Fd, Rd) {
+      dd.goto(Od), md.goto(Wd);
+      let Xd = Wd + Fd,
+        Kd = Wd,
+        hd = Wd - Od,
+        vd = !!Rd.boundChange;
+      for (let Qd = !1;;) {
+        let Od = dd.to + hd - md.to,
+          Wd = Od || dd.endSide - md.endSide,
+          Fd = Wd < 0 ? dd.to + hd : md.to,
+          td = Math.min(Fd, Xd);
+        if (dd.point || md.point ? (dd.point && md.point && LO(dd.point, md.point) && fO(dd.activeForPoint(dd.to), md.activeForPoint(md.to)) || Rd.comparePoint(Kd, td, dd.point, md.point), Qd = !1) : (Qd && Rd.boundChange(Kd), td > Kd && !fO(dd.active, md.active) && Rd.compareRange(Kd, td, dd.active, md.active), vd && td < Xd && (Od || dd.openEnd(Fd) != md.openEnd(Fd)) && (Qd = !0)), Fd > Xd) break;
+        Kd = Fd, Wd <= 0 && dd.next(), Wd >= 0 && md.next()
+      }
+    }
+
+    function fO(dd, Od) {
+      if (dd.length != Od.length) return !1;
+      for (let md = 0; md < dd.length; md++)
+        if (dd[md] != Od[md] && !LO(dd[md], Od[md])) return !1;
       return !0
     }
 
-    function dS(rr, Sr) {
-      for (let Qr = Sr, Zr = rr.length - 1; Qr < Zr; Qr++) rr[Qr] = rr[Qr + 1];
-      rr.pop()
+    function MO(dd, Od) {
+      for (let md = Od, Wd = dd.length - 1; md < Wd; md++) dd[md] = dd[md + 1];
+      dd.pop()
     }
 
-    function sS(rr, Sr, Qr) {
-      for (let Zr = rr.length - 1; Zr >= Sr; Zr--) rr[Zr + 1] = rr[Zr];
-      rr[Sr] = Qr
+    function dm(dd, Od, md) {
+      for (let Wd = dd.length - 1; Wd >= Od; Wd--) dd[Wd + 1] = dd[Wd];
+      dd[Od] = md
     }
 
-    function uS(rr, Sr) {
-      let Qr = -1,
-        Zr = 1e9;
-      for (let Wr = 0; Wr < Sr.length; Wr++)(Sr[Wr] - Zr || rr[Wr].endSide - rr[Qr].endSide) < 0 && (Qr = Wr, Zr = Sr[Wr]);
-      return Qr
+    function Om(dd, Od) {
+      let md = -1,
+        Wd = 1e9;
+      for (let Fd = 0; Fd < Od.length; Fd++)(Od[Fd] - Wd || dd[Fd].endSide - dd[md].endSide) < 0 && (md = Fd, Wd = Od[Fd]);
+      return md
     }
 
-    function rQ(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : rr.length,
-        Zr = 0;
-      for (let Wr = 0; Wr < Qr && Wr < rr.length;) 9 == rr.charCodeAt(Wr) ? (Zr += Sr - Zr % Sr, Wr++) : (Zr++, Wr = vr(rr, Wr));
-      return Zr
+    function mm(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : dd.length,
+        Wd = 0;
+      for (let Fd = 0; Fd < md && Fd < dd.length;) 9 == dd.charCodeAt(Fd) ? (Wd += Od - Wd % Od, Fd++) : (Wd++, Fd = Ud(dd, Fd));
+      return Wd
     }
 
-    function SQ(rr, Sr, Qr, Zr) {
-      for (let Wr = 0, ar = 0;;) {
-        if (ar >= Sr) return Wr;
-        if (Wr == rr.length) break;
-        ar += 9 == rr.charCodeAt(Wr) ? Qr - ar % Qr : 1, Wr = vr(rr, Wr)
+    function Wm(dd, Od, md, Wd) {
+      for (let Fd = 0, Rd = 0;;) {
+        if (Rd >= Od) return Fd;
+        if (Fd == dd.length) break;
+        Rd += 9 == dd.charCodeAt(Fd) ? md - Rd % md : 1, Fd = Ud(dd, Fd)
       }
-      return !0 === Zr ? -1 : rr.length
+      return !0 === Wd ? -1 : dd.length
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

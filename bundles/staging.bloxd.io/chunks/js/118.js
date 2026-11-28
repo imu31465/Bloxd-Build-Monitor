@@ -1,472 +1,472 @@
 export const id = 118;
 export const ids = [118];
 export const modules = {
-  5731: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => mr
+  5691: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => od
     });
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(1448),
-      jr = Qr(1444),
-      Ir = Qr(4759),
-      fr = Qr(139),
-      Er = Qr(4791),
-      pr = Qr(4777),
-      xr = Qr(1338);
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(1443),
+      Xd = md(1436),
+      Kd = md(4734),
+      hd = md(151),
+      vd = md(4776),
+      Qd = md(4767),
+      td = md(1341);
 
-    function mr(rr) {
+    function od(dd) {
       let {
-        game: Sr
-      } = rr;
-      const Qr = (0, fr.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        Zr = (0, Er.g)(Sr, Qr),
-        mr = (0, Ir.f)(Zr),
-        Nr = void 0 !== mr.blurhash;
-      return (0, xr.jsxs)("div", {
+        game: Od
+      } = dd;
+      const md = (0, hd.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        Wd = (0, vd.i)(Od, md),
+        od = (0, Kd.g)(Wd),
+        Nd = void 0 !== od.blurhash;
+      return (0, td.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [mr.isLoading && !Nr && (0, xr.jsx)(jr.c, {
+        children: [od.isLoading && !Nd && (0, td.jsx)(Xd.c, {
           loaderType: "Secondary"
-        }), !mr.failed && (null !== mr.src || Nr) && (0, xr.jsx)("div", {
-          className: Wr()("SchematicImage", pr.j, {
-            SchematicImageFadeIn: mr.fadeIn && !Nr
+        }), !od.failed && (null !== od.src || Nd) && (0, td.jsx)("div", {
+          className: Fd()("SchematicImage", Qd.j, {
+            SchematicImageFadeIn: od.fadeIn && !Nd
           }),
-          style: (0, pr.g)(mr),
-          children: (0, xr.jsx)(pr.c, {
-            image: mr
+          style: (0, Qd.g)(od),
+          children: (0, td.jsx)(Qd.e, {
+            image: od
           })
-        }), mr.failed && (0, xr.jsx)("div", {
+        }), od.failed && (0, td.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, xr.jsx)(ar.c, {
+          children: (0, td.jsx)(Rd.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5991: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => hr
+  5944: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => yd
     });
-    var Zr = Qr(72),
-      Wr = Qr(1155),
-      ar = Qr.n(Wr),
-      jr = Qr(5919),
-      Ir = Qr(1444),
-      fr = Qr(1251),
-      Er = Qr(4362),
-      pr = Qr(4501),
-      xr = Qr(1448),
-      mr = Qr(4371),
-      Nr = Qr(5998),
-      Ur = Qr(6010),
-      tr = Qr(1338);
+    var Wd = md(66),
+      Fd = md(1155),
+      Rd = md.n(Fd),
+      Xd = md(5861),
+      Kd = md(1436),
+      hd = md(1238),
+      vd = md(4373),
+      Qd = md(4518),
+      td = md(1443),
+      od = md(4378),
+      Nd = md(5947),
+      qd = md(5958),
+      Hd = md(1341);
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        folderName: Sr,
-        onTexturePackUpdated: Wr,
-        disabled: hr = !1,
-        maxFileSizeMb: zr,
-        packOwner: Yr
-      } = rr;
+        folderName: Od,
+        onTexturePackUpdated: Fd,
+        disabled: yd = !1,
+        maxFileSizeMb: bd,
+        packOwner: Td
+      } = dd;
       const {
-        t: nr
-      } = (0, fr.E)(), [er, Kr] = (0, Zr.useState)(!1), [yr, Br] = (0, Zr.useState)(null), [Tr, vr] = (0, Zr.useState)(null), Or = (0, Zr.useRef)(null);
-      async function Lr(rr) {
-        Kr(!0);
+        t: pd
+      } = (0, hd.G)(), [Yd, gd] = (0, Wd.useState)(!1), [wd, Ed] = (0, Wd.useState)(null), [Jd, Ud] = (0, Wd.useState)(null), xd = (0, Wd.useRef)(null);
+      async function Bd(dd) {
+        gd(!0);
         try {
-          const Sr = await (0, Er.m)(rr);
-          if ("customGame" === Yr && (0, pr.m)(Sr)) return void Br(nr(pr.d));
-          if (void 0 !== zr) {
-            const rr = JSON.stringify(Sr).length / 1048576;
-            if (rr > zr) return void Br(nr("customTexturePack:packTooBig", {
-              size: rr.toFixed(1),
-              max: zr
+          const Od = await (0, vd.r)(dd);
+          if ("customGame" === Td && (0, Qd.i)(Od)) return void Ed(pd(Qd.c));
+          if (void 0 !== bd) {
+            const dd = JSON.stringify(Od).length / 1048576;
+            if (dd > bd) return void Ed(pd("customTexturePack:packTooBig", {
+              size: dd.toFixed(1),
+              max: bd
             }))
           }
-          Br(null), vr(null), Wr(Sr), Or.current = Sr,
-            function(rr, Sr) {
-              const Zr = rr.modelOverrides;
-              Zr && Promise.all([Qr.e(234), Qr.e(233)]).then((() => Qr(35568))).then((Qr => {
+          Ed(null), Ud(null), Fd(Od), xd.current = Od,
+            function(dd, Od) {
+              const Wd = dd.modelOverrides;
+              Wd && Promise.all([md.e(234), md.e(233)]).then((() => md(35647))).then((md => {
                 let {
-                  packDisplayName: Wr,
-                  refusedPackModels: ar,
-                  packModelSummary: jr
-                } = Qr;
-                const Ir = Wr(rr.metaData);
-                Sr(jr(Ir, ar(Ir, Zr, !1)))
-              })).catch((rr => {
-                console.error("Checking the texture pack's models failed:", rr)
+                  packDisplayName: Fd,
+                  refusedPackModels: Rd,
+                  packModelSummary: Xd
+                } = md;
+                const Kd = Fd(dd.metaData);
+                Od(Xd(Kd, Rd(Kd, Wd, !1)))
+              })).catch((dd => {
+                console.error("Checking the texture pack's models failed:", dd)
               }))
-            }(Sr, (rr => {
-              Or.current === Sr && vr(rr)
+            }(Od, (dd => {
+              xd.current === Od && Ud(dd)
             }))
-        } catch (Sr) {
-          if (Sr instanceof mr.b) {
-            const rr = "customTexturePack:invalidPack" !== Sr.translationKey || (0, Ur.d)() ? Sr.translationKey : "customTexturePack:invalidPackZip";
-            Br((0, Nr.g)(nr, rr, Sr.params))
-          } else console.error("Couldn't read the texture pack", Sr), Br(nr("customTexturePack:errorTitle"))
+        } catch (Od) {
+          if (Od instanceof od.b) {
+            const dd = "customTexturePack:invalidPack" !== Od.translationKey || (0, qd.g)() ? Od.translationKey : "customTexturePack:invalidPackZip";
+            Ed((0, Nd.i)(pd, dd, Od.params))
+          } else console.error("Couldn't read the texture pack", Od), Ed(pd("customTexturePack:errorTitle"))
         } finally {
-          Kr(!1)
+          gd(!1)
         }
       }
       const {
-        getRootProps: lr,
-        getInputProps: Xr,
-        isDragActive: Pr,
-        open: Hr
-      } = (0, jr.b)({
-        onDrop: Lr,
+        getRootProps: Sd,
+        getInputProps: sd,
+        isDragActive: ud,
+        open: Vd
+      } = (0, Xd.b)({
+        onDrop: Bd,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: hr
+        disabled: yd
       });
-      return (0, tr.jsxs)("div", {
+      return (0, Hd.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, tr.jsxs)("div", {
+        children: [(0, Hd.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [nr("settingsMenu:customTextureWarning"), ".", (0, tr.jsx)("br", {}), nr("settingsMenu:viewDocumentation"), ":", " ", (0, tr.jsx)("a", {
+          children: [pd("settingsMenu:customTextureWarning"), ".", (0, Hd.jsx)("br", {}), pd("settingsMenu:viewDocumentation"), ":", " ", (0, Hd.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), yr && (0, tr.jsxs)("div", {
+        }), wd && (0, Hd.jsxs)("div", {
           className: "CustomTextureError",
-          children: [nr("general:error"), ": ", yr]
-        }), Tr && (0, tr.jsx)("div", {
+          children: [pd("general:error"), ": ", wd]
+        }), Jd && (0, Hd.jsx)("div", {
           className: "CustomTextureError",
-          children: Tr
-        }), (0, tr.jsxs)("div", {
-          ...lr({
-            className: ar()("CustomTextureFolderUpload", {
-              ActiveDrag: Pr,
-              Disabled: hr
+          children: Jd
+        }), (0, Hd.jsxs)("div", {
+          ...Sd({
+            className: Rd()("CustomTextureFolderUpload", {
+              ActiveDrag: ud,
+              Disabled: yd
             })
           }),
-          children: [(0, tr.jsx)("input", {
-            ...Xr({
+          children: [(0, Hd.jsx)("input", {
+            ...sd({
               webkitdirectory: "true"
             })
-          }), er && (0, tr.jsx)("div", {
+          }), Yd && (0, Hd.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, tr.jsx)(Ir.c, {})
-          }), !er && !Pr && Sr && (0, tr.jsxs)(tr.Fragment, {
-            children: [(0, tr.jsx)("div", {
+            children: (0, Hd.jsx)(Kd.c, {})
+          }), !Yd && !ud && Od && (0, Hd.jsxs)(Hd.Fragment, {
+            children: [(0, Hd.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, tr.jsx)(xr.c, {
+              children: (0, Hd.jsx)(td.c, {
                 name: "folder-image"
               })
-            }), (0, tr.jsx)("div", {
+            }), (0, Hd.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: Sr
+              children: Od
             })]
-          }), !er && (Pr || !Sr) && (0, tr.jsxs)(tr.Fragment, {
-            children: [(0, tr.jsx)("div", {
+          }), !Yd && (ud || !Od) && (0, Hd.jsxs)(Hd.Fragment, {
+            children: [(0, Hd.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, tr.jsx)(xr.c, {
+              children: (0, Hd.jsx)(td.c, {
                 name: "up-from-bracket"
               })
-            }), (0, tr.jsx)("div", {
+            }), (0, Hd.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: nr((0, Ur.d)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: pd((0, qd.g)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !er && (0, tr.jsx)(Ur.c, {
-            disabled: hr,
-            openFolderPicker: Hr,
-            onFiles: rr => {
-              Lr(rr)
+          }), !Yd && (0, Hd.jsx)(qd.e, {
+            disabled: yd,
+            openFolderPicker: Vd,
+            onFiles: dd => {
+              Bd(dd)
             }
           })]
         })]
       })
     }
   },
-  6010: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => pr,
-      d: () => Er
+  5958: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Qd,
+      g: () => vd
     });
-    var Zr = Qr(72),
-      Wr = Qr(1576),
-      ar = Qr(1251),
-      jr = Qr(109),
-      Ir = Qr(4334),
-      fr = Qr(1338);
+    var Wd = md(66),
+      Fd = md(1572),
+      Rd = md(1238),
+      Xd = md(107),
+      Kd = md(4337),
+      hd = md(1341);
 
-    function Er() {
-      return !(0, jr.isMobile)()
+    function vd() {
+      return !(0, Xd.isMobile)()
     }
 
-    function pr(rr) {
+    function Qd(dd) {
       let {
-        disabled: Sr,
-        openFolderPicker: Qr,
-        onFiles: jr
-      } = rr;
+        disabled: Od,
+        openFolderPicker: md,
+        onFiles: Xd
+      } = dd;
       const {
-        t: pr
-      } = (0, ar.E)(), xr = (0, Zr.useRef)(null);
-      return (0, fr.jsxs)("div", {
+        t: Qd
+      } = (0, Rd.G)(), td = (0, Wd.useRef)(null);
+      return (0, hd.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, fr.jsx)("input", {
-          ref: xr,
+        children: [(0, hd.jsx)("input", {
+          ref: td,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(rr) {
-            const Sr = Array.from(rr.target.files);
-            rr.target.value = "", jr(Sr)
+          onChange: function(dd) {
+            const Od = Array.from(dd.target.files);
+            dd.target.value = "", Xd(Od)
           }
-        }), Er() && (0, fr.jsx)(Wr.h, {
-          disabled: Sr,
-          onClick: Qr,
-          children: pr("general:chooseFolder")
-        }), (0, fr.jsx)(Wr.h, {
-          disabled: Sr,
+        }), vd() && (0, hd.jsx)(Fd.g, {
+          disabled: Od,
+          onClick: md,
+          children: Qd("general:chooseFolder")
+        }), (0, hd.jsx)(Fd.g, {
+          disabled: Od,
           onClick: () => {
-            (0, Ir.e)(xr.current)
+            (0, Kd.g)(td.current)
           },
-          children: pr("general:chooseZip")
+          children: Qd("general:chooseZip")
         })]
       })
     }
   },
-  5951: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Ur,
-      e: () => er,
-      f: () => tr,
-      i: () => nr
+  5901: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => qd,
+      h: () => Yd,
+      i: () => Hd,
+      l: () => pd
     });
-    var Zr = Qr(72),
-      Wr = Qr(5960),
-      ar = Qr(5065),
-      jr = Qr(1489),
-      Ir = Qr(4205),
-      fr = Qr(1155),
-      Er = Qr.n(fr),
-      pr = Qr(1475),
-      xr = Qr(1885),
-      mr = Qr(5986),
-      Nr = Qr(1338);
+    var Wd = md(66),
+      Fd = md(5909),
+      Rd = md(5003),
+      Xd = md(1471),
+      Kd = md(4199),
+      hd = md(1155),
+      vd = md.n(hd),
+      Qd = md(1462),
+      td = md(1890),
+      od = md(5936),
+      Nd = md(1341);
 
-    function Ur(rr) {
+    function qd(dd) {
       let {
-        label: Sr,
-        onClick: Qr,
-        checked: Zr,
-        circleInfoText: Wr,
-        className: Ir,
-        disabled: fr,
-        note: pr
-      } = rr;
-      return (0, Nr.jsxs)("div", {
-        "aria-disabled": fr || void 0,
+        label: Od,
+        onClick: md,
+        checked: Wd,
+        circleInfoText: Fd,
+        className: Kd,
+        disabled: hd,
+        note: Qd
+      } = dd;
+      return (0, Nd.jsxs)("div", {
+        "aria-disabled": hd || void 0,
         "data-pad-focusable": !0,
-        className: Er()("SettingBox CheckboxContainer", {
-          [Ir]: Ir,
-          SettingBoxDisabled: fr
+        className: vd()("SettingBox CheckboxContainer", {
+          [Kd]: Kd,
+          SettingBoxDisabled: hd
         }),
         onClick: () => {
-          fr || Qr(!Zr)
+          hd || md(!Wd)
         },
-        children: [(0, Nr.jsxs)("div", {
+        children: [(0, Nd.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Nr.jsx)("label", {
+          children: [(0, Nd.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Nr.jsx)(ar.e, {
+            children: (0, Nd.jsx)(Rd.d, {
               className: "SettingsCheckbox",
-              checked: Zr,
-              disabled: fr,
+              checked: Wd,
+              disabled: hd,
               onChange: () => {}
             })
-          }), (0, Nr.jsxs)("div", {
+          }), (0, Nd.jsxs)("div", {
             className: "CheckboxText",
-            children: [Sr, Wr && (0, Nr.jsx)("span", {
-              onClick: rr => rr.stopPropagation(),
-              children: (0, Nr.jsx)(jr.d, {
+            children: [Od, Fd && (0, Nd.jsx)("span", {
+              onClick: dd => dd.stopPropagation(),
+              children: (0, Nd.jsx)(Xd.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: Wr
+                hoverInfo: Fd
               })
             })]
           })]
-        }), pr && (0, Nr.jsx)("div", {
+        }), Qd && (0, Nd.jsx)("div", {
           className: "SettingNote",
-          children: pr
+          children: Qd
         })]
       })
     }
 
-    function tr(rr) {
+    function Hd(dd) {
       let {
-        name: Sr,
-        onChange: Qr,
-        min: Wr,
-        max: ar,
-        step: Ir,
-        initValue: fr,
-        circleInfoText: pr,
-        format: xr,
-        className: mr,
-        padStep: Ur,
-        disabled: tr = !1,
-        selectableMax: hr,
-        cappedNote: zr,
-        note: nr,
-        onChangeComplete: er
-      } = rr;
-      const [Kr, yr] = (0, Zr.useState)(fr), Br = (0, Zr.useRef)(fr);
-      (0, Zr.useEffect)((() => {
-        Br.current = fr, yr(fr)
-      }), [fr]);
-      const Tr = void 0 !== hr && hr < ar,
-        vr = Tr ? {
-          "--slider-selectable": (hr - Wr) / (ar - Wr)
+        name: Od,
+        onChange: md,
+        min: Fd,
+        max: Rd,
+        step: Kd,
+        initValue: hd,
+        circleInfoText: Qd,
+        format: td,
+        className: od,
+        padStep: qd,
+        disabled: Hd = !1,
+        selectableMax: yd,
+        cappedNote: bd,
+        note: pd,
+        onChangeComplete: Yd
+      } = dd;
+      const [gd, wd] = (0, Wd.useState)(hd), Ed = (0, Wd.useRef)(hd);
+      (0, Wd.useEffect)((() => {
+        Ed.current = hd, wd(hd)
+      }), [hd]);
+      const Jd = void 0 !== yd && yd < Rd,
+        Ud = Jd ? {
+          "--slider-selectable": (yd - Fd) / (Rd - Fd)
         } : void 0,
-        Or = Tr && zr ? zr : nr;
-      return (0, Nr.jsxs)("div", {
-        className: Er()("SettingBox SettingsSliderDiv", {
-          [mr]: mr,
-          SettingBoxDisabled: tr,
-          SliderCapped: Tr
+        xd = Jd && bd ? bd : pd;
+      return (0, Nd.jsxs)("div", {
+        className: vd()("SettingBox SettingsSliderDiv", {
+          [od]: od,
+          SettingBoxDisabled: Hd,
+          SliderCapped: Jd
         }),
-        style: vr,
-        children: [(0, Nr.jsxs)("div", {
+        style: Ud,
+        children: [(0, Nd.jsxs)("div", {
           className: "SliderText",
-          children: [`${Sr}: ${xr?xr(Kr):Kr}`, pr && (0, Nr.jsx)(jr.d, {
+          children: [`${Od}: ${td?td(gd):gd}`, Qd && (0, Nd.jsx)(Xd.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: pr
+            hoverInfo: Qd
           })]
-        }), (0, Nr.jsx)("div", {
+        }), (0, Nd.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Nr.jsx)(Yr, {
-            value: Kr,
-            min: Wr,
-            max: ar,
-            step: Ir,
-            onChange: rr => {
-              if (Tr && rr >= hr && Kr === hr) return;
-              const Sr = Tr ? Math.min(rr, hr) : rr;
-              Br.current = Sr, yr(Sr), Qr(Sr)
+          children: (0, Nd.jsx)(Td, {
+            value: gd,
+            min: Fd,
+            max: Rd,
+            step: Kd,
+            onChange: dd => {
+              if (Jd && dd >= yd && gd === yd) return;
+              const Od = Jd ? Math.min(dd, yd) : dd;
+              Ed.current = Od, wd(Od), md(Od)
             },
-            onChangeComplete: er && (() => {
-              er(Br.current)
+            onChangeComplete: Yd && (() => {
+              Yd(Ed.current)
             }),
-            format: xr,
-            padStep: Ur,
-            disabled: tr
+            format: td,
+            padStep: qd,
+            disabled: Hd
           })
-        }), Or && (0, Nr.jsx)("div", {
+        }), xd && (0, Nd.jsx)("div", {
           className: "SettingNote",
-          children: Or
+          children: xd
         })]
       })
     }
-    const hr = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const yd = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function zr(rr) {
-      var Sr;
-      return (null !== (Sr = String(rr).split(".")[1]) && void 0 !== Sr ? Sr : "").length
+    function bd(dd) {
+      var Od;
+      return (null !== (Od = String(dd).split(".")[1]) && void 0 !== Od ? Od : "").length
     }
 
-    function Yr(rr) {
+    function Td(dd) {
       let {
-        value: Sr,
-        min: Qr,
-        max: ar,
-        step: jr,
-        onChange: Ir,
-        orientation: fr,
-        reverse: Er,
-        setIsChanging: pr,
-        tooltip: xr,
-        labels: Ur,
-        handleLabel: tr,
-        format: Yr,
-        onChangeStart: nr,
-        onChangeComplete: er,
-        padStep: Kr,
-        disabled: yr = !1
-      } = rr;
-      const Br = (0, Zr.useRef)(null),
-        Tr = (0, Zr.useRef)(null);
-      (0, Zr.useLayoutEffect)((() => {
-        var rr, Sr, Qr;
-        const Zr = null !== (rr = null === (Sr = Br.current) || void 0 === Sr ? void 0 : Sr.querySelector(".rangeslider")) && void 0 !== rr ? rr : null;
-        null === Zr || void 0 === Zr || Zr.setAttribute("data-pad-slider", ""), null === Zr || void 0 === Zr || Zr.setAttribute("data-pad-focusable", ""), null === Zr || void 0 === Zr || null === (Qr = Zr.querySelector(".rangeslider__handle")) || void 0 === Qr || Qr.setAttribute("data-pad-slider-handle", ""), Tr.current = Zr
-      }), []), (0, Zr.useLayoutEffect)((() => {
-        var rr, Sr;
-        yr ? null === (rr = Tr.current) || void 0 === rr || rr.setAttribute("aria-disabled", "true") : null === (Sr = Tr.current) || void 0 === Sr || Sr.removeAttribute("aria-disabled")
-      }), [yr]);
-      const vr = Math.max(zr(jr), zr(Qr)),
-        Or = rr => {
-          if (rr >= ar) return ar;
-          if (rr <= Qr) return Qr;
-          const Sr = Number((Math.round((rr - Qr) / jr) * jr + Qr).toFixed(vr));
-          return Math.min(ar, Math.max(Qr, Sr))
+        value: Od,
+        min: md,
+        max: Rd,
+        step: Xd,
+        onChange: Kd,
+        orientation: hd,
+        reverse: vd,
+        setIsChanging: Qd,
+        tooltip: td,
+        labels: qd,
+        handleLabel: Hd,
+        format: Td,
+        onChangeStart: pd,
+        onChangeComplete: Yd,
+        padStep: gd,
+        disabled: wd = !1
+      } = dd;
+      const Ed = (0, Wd.useRef)(null),
+        Jd = (0, Wd.useRef)(null);
+      (0, Wd.useLayoutEffect)((() => {
+        var dd, Od, md;
+        const Wd = null !== (dd = null === (Od = Ed.current) || void 0 === Od ? void 0 : Od.querySelector(".rangeslider")) && void 0 !== dd ? dd : null;
+        null === Wd || void 0 === Wd || Wd.setAttribute("data-pad-slider", ""), null === Wd || void 0 === Wd || Wd.setAttribute("data-pad-focusable", ""), null === Wd || void 0 === Wd || null === (md = Wd.querySelector(".rangeslider__handle")) || void 0 === md || md.setAttribute("data-pad-slider-handle", ""), Jd.current = Wd
+      }), []), (0, Wd.useLayoutEffect)((() => {
+        var dd, Od;
+        wd ? null === (dd = Jd.current) || void 0 === dd || dd.setAttribute("aria-disabled", "true") : null === (Od = Jd.current) || void 0 === Od || Od.removeAttribute("aria-disabled")
+      }), [wd]);
+      const Ud = Math.max(bd(Xd), bd(md)),
+        xd = dd => {
+          if (dd >= Rd) return Rd;
+          if (dd <= md) return md;
+          const Od = Number((Math.round((dd - md) / Xd) * Xd + md).toFixed(Ud));
+          return Math.min(Rd, Math.max(md, Od))
         },
-        Lr = (0, Zr.useRef)(er);
-      Lr.current = er, (0, Zr.useEffect)((() => {
-        const rr = Br.current;
-        if (!rr) return;
-        const Sr = rr => {
-          var Sr;
-          hr.has(rr.key) && (null === (Sr = Lr.current) || void 0 === Sr || Sr.call(Lr))
+        Bd = (0, Wd.useRef)(Yd);
+      Bd.current = Yd, (0, Wd.useEffect)((() => {
+        const dd = Ed.current;
+        if (!dd) return;
+        const Od = dd => {
+          var Od;
+          yd.has(dd.key) && (null === (Od = Bd.current) || void 0 === Od || Od.call(Bd))
         };
-        return rr.addEventListener("keyup", Sr), () => {
-          rr.removeEventListener("keyup", Sr)
+        return dd.addEventListener("keyup", Od), () => {
+          dd.removeEventListener("keyup", Od)
         }
       }), []);
-      const lr = (0, Zr.useRef)(!1);
-      return (0, mr.c)(Tr, {
-        adjust: rr => {
-          if (yr) return;
-          const Zr = null !== Kr && void 0 !== Kr ? Kr : Math.max(jr, Math.round((ar - Qr) / 20 / jr) * jr),
-            Wr = Or(Sr + rr * Zr * (Er ? -1 : 1));
-          Wr !== Sr && (null === nr || void 0 === nr || nr(), Ir(Wr), null === er || void 0 === er || er())
+      const Sd = (0, Wd.useRef)(!1);
+      return (0, od.f)(Jd, {
+        adjust: dd => {
+          if (wd) return;
+          const Wd = null !== gd && void 0 !== gd ? gd : Math.max(Xd, Math.round((Rd - md) / 20 / Xd) * Xd),
+            Fd = xd(Od + dd * Wd * (vd ? -1 : 1));
+          Fd !== Od && (null === pd || void 0 === pd || pd(), Kd(Fd), null === Yd || void 0 === Yd || Yd())
         },
-        setFraction: rr => {
-          if (yr) return;
-          const Zr = Or(Qr + (Er ? 1 - rr : rr) * (ar - Qr));
-          Zr !== Sr && (lr.current || (lr.current = !0, null === nr || void 0 === nr || nr()), Ir(Zr))
+        setFraction: dd => {
+          if (wd) return;
+          const Wd = xd(md + (vd ? 1 - dd : dd) * (Rd - md));
+          Wd !== Od && (Sd.current || (Sd.current = !0, null === pd || void 0 === pd || pd()), Kd(Wd))
         },
         endDrag: () => {
-          lr.current && (lr.current = !1, null === er || void 0 === er || er())
+          Sd.current && (Sd.current = !1, null === Yd || void 0 === Yd || Yd())
         }
-      }), (0, Nr.jsx)("div", {
-        ref: Br,
+      }), (0, Nd.jsx)("div", {
+        ref: Ed,
         style: {
           display: "contents"
         },
-        children: (0, Nr.jsx)(Wr.c, {
-          value: Sr,
-          min: Qr,
-          max: ar,
-          step: jr,
-          onChange: rr => {
-            Ir(Or(rr))
+        children: (0, Nd.jsx)(Fd.e, {
+          value: Od,
+          min: md,
+          max: Rd,
+          step: Xd,
+          onChange: dd => {
+            Kd(xd(dd))
           },
-          orientation: fr,
-          reverse: Er,
-          tooltip: xr,
-          labels: Ur,
-          handleLabel: tr,
-          format: Yr,
+          orientation: hd,
+          reverse: vd,
+          tooltip: td,
+          labels: qd,
+          handleLabel: Hd,
+          format: Td,
           onChangeStart: () => {
-            null === nr || void 0 === nr || nr(), null === pr || void 0 === pr || pr(!0)
+            null === pd || void 0 === pd || pd(), null === Qd || void 0 === Qd || Qd(!0)
           },
           onChangeComplete: () => {
-            null === pr || void 0 === pr || pr(!1), null === er || void 0 === er || er()
+            null === Qd || void 0 === Qd || Qd(!1), null === Yd || void 0 === Yd || Yd()
           }
         })
       })
     }
-    async function nr() {
-      const rr = pr.NotificationProvider.showPromptPopup({
+    async function pd() {
+      const dd = Qd.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -474,75 +474,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await rr.getResult() && (0, xr.reloadBloxd)()
+      !0 === await dd.getResult() && (0, td.reloadBloxd)()
     }
 
-    function er(rr) {
+    function Yd(dd) {
       let {
-        label: Sr,
-        options: Qr,
-        value: Zr,
-        onChange: Wr,
-        circleInfoText: ar
-      } = rr;
-      return (0, Nr.jsxs)("div", {
+        label: Od,
+        options: md,
+        value: Wd,
+        onChange: Fd,
+        circleInfoText: Rd
+      } = dd;
+      return (0, Nd.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Nr.jsxs)("div", {
+        children: [(0, Nd.jsxs)("div", {
           className: "SliderText",
-          children: [Sr, ar && (0, Nr.jsx)(jr.d, {
+          children: [Od, Rd && (0, Nd.jsx)(Xd.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: ar
+            hoverInfo: Rd
           })]
-        }), (0, Nr.jsx)(Ir.d, {
-          ariaLabel: Sr,
-          options: Qr,
-          value: Zr,
-          onChange: Wr
+        }), (0, Nd.jsx)(Kd.e, {
+          ariaLabel: Od,
+          options: md,
+          value: Wd,
+          onChange: Fd
         })]
       })
     }
   },
-  5945: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => hr,
-      g: () => zr
+  5895: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => yd,
+      g: () => bd
     });
-    var Zr = Qr(4362),
-      Wr = Qr(2325),
-      ar = Qr(72),
-      jr = Qr(1155),
-      Ir = Qr.n(jr),
-      fr = Qr(1444),
-      Er = Qr(4354),
-      pr = Qr(1475),
-      xr = Qr(5951),
-      mr = Qr(5991),
-      Nr = Qr(712),
-      Ur = Qr(6014),
-      tr = Qr(1338);
+    var Wd = md(4373),
+      Fd = md(2337),
+      Rd = md(66),
+      Xd = md(1155),
+      Kd = md.n(Xd),
+      hd = md(1436),
+      vd = md(4365),
+      Qd = md(1462),
+      td = md(5901),
+      od = md(5944),
+      Nd = md(732),
+      qd = md(5967),
+      Hd = md(1341);
 
-    function hr(rr) {
-      var Sr;
+    function yd(dd) {
+      var Od;
       let {
-        setApplySettingsCallback: Qr
-      } = rr;
-      const [, jr] = (0, ar.useReducer)((rr => rr + 1), 0), Ir = (0, ar.useRef)(!1), fr = (0, ar.useRef)(null);
+        setApplySettingsCallback: md
+      } = dd;
+      const [, Xd] = (0, Rd.useReducer)((dd => dd + 1), 0), Kd = (0, Rd.useRef)(!1), hd = (0, Rd.useRef)(null);
 
-      function hr(rr, Sr) {
-        Er.d.setFromJson(rr, "player");
-        const Zr = Er.d.saveTexturePack();
-        if (Nr.I) {
-          const rr = Er.d.toJson();
-          Zr.then((Sr => {
-            Sr && (0, Ur.c)(rr)
+      function yd(dd, Od) {
+        vd.c.setFromJson(dd, "player");
+        const Wd = vd.c.saveTexturePack();
+        if (Nd.G) {
+          const dd = vd.c.toJson();
+          Wd.then((Od => {
+            Od && (0, qd.b)(dd)
           }))
-        } else Ir.current ||= Sr, fr.current !== Er.d.getId() || Er.d.getId() === Wr.o.CUSTOM && Ir.current ? Qr((() => xr.i)) : Qr(null);
-        jr()
+        } else Kd.current ||= Od, hd.current !== vd.c.getId() || vd.c.getId() === Fd.n.CUSTOM && Kd.current ? md((() => td.l)) : md(null);
+        Xd()
       }
-      async function Yr(rr) {
-        if (Er.d.getId() !== rr.metaData.id) {
-          if (Er.d.getId() === Wr.o.CUSTOM && Er.d.getFromFolderName()) {
-            const rr = pr.NotificationProvider.showPromptPopup({
+      async function Td(dd) {
+        if (vd.c.getId() !== dd.metaData.id) {
+          if (vd.c.getId() === Fd.n.CUSTOM && vd.c.getFromFolderName()) {
+            const dd = Qd.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -551,29 +551,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await rr.getResult()) return
+            if (!0 !== await dd.getResult()) return
           }
-          hr(rr, !1)
+          yd(dd, !1)
         }
-      }(0, ar.useEffect)((() => {
-        fr.current = Er.d.getId()
+      }(0, Rd.useEffect)((() => {
+        hd.current = vd.c.getId()
       }), []);
-      const nr = Zr.c,
-        er = [nr, ...Object.values(Wr.o).filter((rr => rr !== nr))];
-      return (0, tr.jsx)(tr.Fragment, {
-        children: (0, tr.jsxs)("div", {
+      const pd = Wd.b,
+        Yd = [pd, ...Object.values(Fd.n).filter((dd => dd !== pd))];
+      return (0, Hd.jsx)(Hd.Fragment, {
+        children: (0, Hd.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, tr.jsx)("div", {
+          children: [(0, Hd.jsx)("div", {
             className: "TexturePackList",
-            children: er.map((rr => (0, tr.jsx)(zr, {
-              id: rr,
-              isSelected: rr === Er.d.getId(),
-              setSelected: Yr
-            }, rr)))
-          }), Er.d.getId() === Wr.o.CUSTOM && (0, tr.jsx)(mr.b, {
-            folderName: null !== (Sr = Er.d.getFromFolderName()) && void 0 !== Sr ? Sr : null,
-            onTexturePackUpdated: function(rr) {
-              hr(rr, !0)
+            children: Yd.map((dd => (0, Hd.jsx)(bd, {
+              id: dd,
+              isSelected: dd === vd.c.getId(),
+              setSelected: Td
+            }, dd)))
+          }), vd.c.getId() === Fd.n.CUSTOM && (0, Hd.jsx)(od.e, {
+            folderName: null !== (Od = vd.c.getFromFolderName()) && void 0 !== Od ? Od : null,
+            onTexturePackUpdated: function(dd) {
+              yd(dd, !0)
             },
             packOwner: "player"
           })]
@@ -581,367 +581,367 @@ export const modules = {
       })
     }
 
-    function zr(rr) {
+    function bd(dd) {
       let {
-        id: Sr,
-        isSelected: Qr,
-        setSelected: jr,
-        disabled: Er = !1
-      } = rr;
-      const [pr, xr] = (0, ar.useState)(!0), [mr, Nr] = (0, ar.useState)(""), [Ur, hr] = (0, ar.useState)(""), [zr, Yr] = (0, ar.useState)(""), nr = (0, ar.useRef)({});
-      return (0, ar.useEffect)((() => {
-        (0, Zr.k)(Sr).then((rr => {
-          var Sr;
-          rr && (nr.current = rr, xr(!1), Nr(nr.current.metaData.name), hr(nr.current.metaData.author), Yr(null !== (Sr = nr.current.metaData.previewImage) && void 0 !== Sr ? Sr : ""))
-        })).catch((rr => {
-          console.warn(`Failed to fetch texture pack ${Sr}`, rr)
+        id: Od,
+        isSelected: md,
+        setSelected: Xd,
+        disabled: vd = !1
+      } = dd;
+      const [Qd, td] = (0, Rd.useState)(!0), [od, Nd] = (0, Rd.useState)(""), [qd, yd] = (0, Rd.useState)(""), [bd, Td] = (0, Rd.useState)(""), pd = (0, Rd.useRef)({});
+      return (0, Rd.useEffect)((() => {
+        (0, Wd.n)(Od).then((dd => {
+          var Od;
+          dd && (pd.current = dd, td(!1), Nd(pd.current.metaData.name), yd(pd.current.metaData.author), Td(null !== (Od = pd.current.metaData.previewImage) && void 0 !== Od ? Od : ""))
+        })).catch((dd => {
+          console.warn(`Failed to fetch texture pack ${Od}`, dd)
         }))
-      }), [Sr]), (0, tr.jsxs)("div", {
+      }), [Od]), (0, Hd.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": Er || void 0,
-        className: Ir()("TexturePack", {
-          Selected: Qr,
-          Custom: Sr === Wr.o.CUSTOM,
-          Disabled: Er
+        "aria-disabled": vd || void 0,
+        className: Kd()("TexturePack", {
+          Selected: md,
+          Custom: Od === Fd.n.CUSTOM,
+          Disabled: vd
         }),
         onClick: () => {
-          pr || Er || jr(nr.current)
+          Qd || vd || Xd(pd.current)
         },
-        children: [(0, tr.jsx)("div", {
+        children: [(0, Hd.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: zr ? `url(${zr})` : void 0
+            backgroundImage: bd ? `url(${bd})` : void 0
           }
-        }), pr && (0, tr.jsx)("div", {
+        }), Qd && (0, Hd.jsx)("div", {
           className: "TexturePackName",
-          children: (0, tr.jsx)(fr.c, {})
-        }), !pr && mr && (0, tr.jsx)("div", {
+          children: (0, Hd.jsx)(hd.c, {})
+        }), !Qd && od && (0, Hd.jsx)("div", {
           className: "TexturePackName",
-          children: mr
-        }), !pr && Ur && (0, tr.jsx)("div", {
+          children: od
+        }), !Qd && qd && (0, Hd.jsx)("div", {
           className: "TexturePackAuthor",
-          children: Ur
+          children: qd
         })]
       })
     }
   },
-  5998: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Ir,
-      f: () => jr,
-      g: () => ar
+  5947: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Kd,
+      h: () => Xd,
+      i: () => Rd
     });
-    var Zr = Qr(6005);
-    const Wr = [rr => rr.strict ? "strict" : "nonStrict", rr => rr.program];
+    var Wd = md(5951);
+    const Fd = [dd => dd.strict ? "strict" : "nonStrict", dd => dd.program];
 
-    function ar(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Zr = {};
-      for (const Wr in Qr) Zr[Wr] = `\0${Wr}\0`;
-      return rr(Sr, Zr).replace(/\0(\w+)\0/g, ((rr, Sr) => Qr[Sr]))
+    function Rd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Wd = {};
+      for (const Fd in md) Wd[Fd] = `\0${Fd}\0`;
+      return dd(Od, Wd).replace(/\0(\w+)\0/g, ((dd, Od) => md[Od]))
     }
 
-    function jr(rr) {
-      return null === rr.file ? null : rr.line > 0 ? `${rr.file}:${rr.line}` : rr.file
+    function Xd(dd) {
+      return null === dd.file ? null : dd.line > 0 ? `${dd.file}:${dd.line}` : dd.file
     }
 
-    function Ir(rr) {
-      const Sr = new Map(rr.map((rr => [fr(rr).join("."), rr])));
-      if (0 === Sr.size) return [];
-      const Qr = pr([...Sr.values()]);
-      return 0 === Qr[0].length ? [] : Qr
+    function Kd(dd) {
+      const Od = new Map(dd.map((dd => [hd(dd).join("."), dd])));
+      if (0 === Od.size) return [];
+      const md = Qd([...Od.values()]);
+      return 0 === md[0].length ? [] : md
     }
 
-    function fr(rr) {
-      return Wr.map((Sr => Sr(rr)))
+    function hd(dd) {
+      return Fd.map((Od => Od(dd)))
     }
-    const Er = Wr.map((rr => new Set(Zr.e.map(rr)).size));
+    const vd = Fd.map((dd => new Set(Wd.g.map(dd)).size));
 
-    function pr(rr) {
-      const Sr = Wr.map((Sr => new Set(rr.map(Sr)))),
-        Qr = Sr.reduce(((rr, Sr) => rr * Sr.size), 1),
-        Zr = Sr.every(((rr, Sr) => 1 === rr.size || rr.size === Er[Sr]));
-      if (Qr === rr.length && Zr) return [Wr.filter(((rr, Qr) => 1 === Sr[Qr].size)).map((Sr => Sr(rr[0])))];
-      let ar = null;
-      for (let jr = 0; jr < Wr.length; jr++) {
-        if (1 === Sr[jr].size) continue;
-        const Qr = xr(rr, Wr[jr]).flatMap(pr);
-        (null === ar || Qr.length < ar.length) && (ar = Qr)
+    function Qd(dd) {
+      const Od = Fd.map((Od => new Set(dd.map(Od)))),
+        md = Od.reduce(((dd, Od) => dd * Od.size), 1),
+        Wd = Od.every(((dd, Od) => 1 === dd.size || dd.size === vd[Od]));
+      if (md === dd.length && Wd) return [Fd.filter(((dd, md) => 1 === Od[md].size)).map((Od => Od(dd[0])))];
+      let Rd = null;
+      for (let Xd = 0; Xd < Fd.length; Xd++) {
+        if (1 === Od[Xd].size) continue;
+        const md = td(dd, Fd[Xd]).flatMap(Qd);
+        (null === Rd || md.length < Rd.length) && (Rd = md)
       }
-      return ar
+      return Rd
     }
 
-    function xr(rr, Sr) {
-      const Qr = new Map;
-      for (const Wr of rr) {
-        var Zr;
-        const rr = Sr(Wr);
-        Qr.set(rr, [...null !== (Zr = Qr.get(rr)) && void 0 !== Zr ? Zr : [], Wr])
+    function td(dd, Od) {
+      const md = new Map;
+      for (const Fd of dd) {
+        var Wd;
+        const dd = Od(Fd);
+        md.set(dd, [...null !== (Wd = md.get(dd)) && void 0 !== Wd ? Wd : [], Fd])
       }
-      return [...Qr.values()]
+      return [...md.values()]
     }
   },
-  5986: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar,
-      c: () => jr
+  5936: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd,
+      f: () => Xd
     });
-    var Zr = Qr(72);
-    const Wr = new WeakMap,
-      ar = rr => {
-        var Sr;
-        const Qr = rr.closest("[data-pad-slider]");
-        return Qr && null !== (Sr = Wr.get(Qr)) && void 0 !== Sr ? Sr : null
+    var Wd = md(66);
+    const Fd = new WeakMap,
+      Rd = dd => {
+        var Od;
+        const md = dd.closest("[data-pad-slider]");
+        return md && null !== (Od = Fd.get(md)) && void 0 !== Od ? Od : null
       },
-      jr = (rr, Sr) => {
-        const Qr = (0, Zr.useRef)(Sr);
-        Qr.current = Sr, (0, Zr.useEffect)((() => {
-          if (rr.current) return ((rr, Sr) => (Wr.set(rr, Sr), () => {
-            Wr.get(rr) === Sr && Wr.delete(rr)
-          }))(rr.current, {
-            adjust: rr => {
-              Qr.current.adjust(rr)
+      Xd = (dd, Od) => {
+        const md = (0, Wd.useRef)(Od);
+        md.current = Od, (0, Wd.useEffect)((() => {
+          if (dd.current) return ((dd, Od) => (Fd.set(dd, Od), () => {
+            Fd.get(dd) === Od && Fd.delete(dd)
+          }))(dd.current, {
+            adjust: dd => {
+              md.current.adjust(dd)
             },
-            setFraction: rr => {
-              Qr.current.setFraction(rr)
+            setFraction: dd => {
+              md.current.setFraction(dd)
             },
             endDrag: () => {
-              Qr.current.endDrag()
+              md.current.endDrag()
             }
           })
-        }), [rr])
+        }), [dd])
       }
   },
-  6005: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Zr.j,
-      e: () => Wr,
-      i: () => Zr.r
+  5951: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Wd.f,
+      g: () => Fd,
+      k: () => Wd.o
     });
-    var Zr = Qr(6007);
-    const Wr = [!1, !0].flatMap((rr => ["terrain", "liquid", "model"].map((Sr => ({
-      strict: rr,
-      program: Sr
+    var Wd = md(5954);
+    const Fd = [!1, !0].flatMap((dd => ["terrain", "liquid", "model"].map((Od => ({
+      strict: dd,
+      program: Od
     })))))
   },
-  6017: (rr, Sr, Qr) => {
-    function Zr(rr, Sr) {
-      return Wr(rr, Sr)
+  5975: (dd, Od, md) => {
+    function Wd(dd, Od) {
+      return Fd(dd, Od)
     }
 
-    function Wr(rr, Sr) {
-      if (rr === Sr) return !0;
-      if ("object" !== typeof rr || "object" !== typeof Sr || null === rr || null === Sr || Array.isArray(rr) !== Array.isArray(Sr)) return !1;
-      const Qr = rr,
-        Zr = Sr,
-        ar = Object.keys(Qr);
-      return ar.length === Object.keys(Zr).length && ar.every((rr => Object.prototype.hasOwnProperty.call(Zr, rr) && Wr(Qr[rr], Zr[rr])))
+    function Fd(dd, Od) {
+      if (dd === Od) return !0;
+      if ("object" !== typeof dd || "object" !== typeof Od || null === dd || null === Od || Array.isArray(dd) !== Array.isArray(Od)) return !1;
+      const md = dd,
+        Wd = Od,
+        Rd = Object.keys(md);
+      return Rd.length === Object.keys(Wd).length && Rd.every((dd => Object.prototype.hasOwnProperty.call(Wd, dd) && Fd(md[dd], Wd[dd])))
     }
-    Qr.d(Sr, {
-      b: () => Zr
+    md.d(Od, {
+      c: () => Wd
     })
   },
-  6014: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr,
-      f: () => Ir
+  5967: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Xd,
+      d: () => Kd
     });
-    var Zr = Qr(2325),
-      Wr = Qr(6017);
-    let ar = null;
+    var Wd = md(2337),
+      Fd = md(5975);
+    let Rd = null;
 
-    function jr(rr) {
-      ar = {
-        pack: rr.metaData.id === Zr.e ? null : rr
+    function Xd(dd) {
+      Rd = {
+        pack: dd.metaData.id === Wd.d ? null : dd
       }
     }
 
-    function Ir(rr) {
-      return !(null === ar || !(0, Wr.b)(ar.pack, rr)) && (ar = null, !0)
+    function Kd(dd) {
+      return !(null === Rd || !(0, Fd.c)(Rd.pack, dd)) && (Rd = null, !0)
     }
   },
-  6007: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Ir,
-      g: () => jr,
-      j: () => Zr,
-      k: () => tr,
-      n: () => xr,
-      r: () => Wr,
-      s: () => ar,
-      v: () => Er,
-      w: () => pr,
-      z: () => mr
+  5954: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Kd,
+      e: () => Xd,
+      f: () => Wd,
+      h: () => Hd,
+      l: () => td,
+      o: () => Fd,
+      p: () => Rd,
+      r: () => vd,
+      v: () => Qd,
+      w: () => od
     });
-    const Zr = 5;
+    const Wd = 5;
 
-    function Wr(rr) {
-      return rr === Zr
+    function Fd(dd) {
+      return dd === Wd
     }
 
-    function ar(rr) {
-      return [...rr.features]
+    function Rd(dd) {
+      return [...dd.features]
     }
-    const jr = 262144,
-      Ir = 256,
-      fr = 256;
+    const Xd = 262144,
+      Kd = 256,
+      hd = 256;
 
-    function Er(rr) {
-      if ("object" !== typeof rr || null === rr || Array.isArray(rr)) return "The pack has no files.";
-      const Sr = [];
-      for (const [Qr, Zr] of Object.entries(rr)) {
-        if ("string" !== typeof Zr) return `${Qr} isn't text.`;
-        Sr.push({
-          path: Qr,
-          source: Zr
+    function vd(dd) {
+      if ("object" !== typeof dd || null === dd || Array.isArray(dd)) return "The pack has no files.";
+      const Od = [];
+      for (const [md, Wd] of Object.entries(dd)) {
+        if ("string" !== typeof Wd) return `${md} isn't text.`;
+        Od.push({
+          path: md,
+          source: Wd
         })
       }
-      return Sr.sort(((rr, Sr) => xr(rr.path, Sr.path))),
-        function(rr) {
-          if (0 === rr.length) return "The pack has no .wgsl files.";
-          if (rr.length > Ir) return `The pack has more than ${Ir} .wgsl files.`;
-          const Sr = new Set;
+      return Od.sort(((dd, Od) => td(dd.path, Od.path))),
+        function(dd) {
+          if (0 === dd.length) return "The pack has no .wgsl files.";
+          if (dd.length > Kd) return `The pack has more than ${Kd} .wgsl files.`;
+          const Od = new Set;
           for (const {
-              path: Qr
+              path: md
             }
-            of rr) {
-            const rr = Nr(Qr);
-            if (null !== rr) return rr;
-            if (Sr.has(Qr)) return `The pack has two files at ${Qr}.`;
-            Sr.add(Qr)
+            of dd) {
+            const dd = Nd(md);
+            if (null !== dd) return dd;
+            if (Od.has(md)) return `The pack has two files at ${md}.`;
+            Od.add(md)
           }
-          return mr(rr) > jr ? `The pack's .wgsl files are over ${jr/1024} KB in total.` : null
-        }(Sr) ?? Sr
+          return od(dd) > Xd ? `The pack's .wgsl files are over ${Xd/1024} KB in total.` : null
+        }(Od) ?? Od
     }
 
-    function pr(rr) {
-      const Sr = {};
-      for (const Qr of rr) Sr[Qr.path] = Qr.source;
-      return Sr
+    function Qd(dd) {
+      const Od = {};
+      for (const md of dd) Od[md.path] = md.source;
+      return Od
     }
 
-    function xr(rr, Sr) {
-      return rr < Sr ? -1 : rr > Sr ? 1 : 0
+    function td(dd, Od) {
+      return dd < Od ? -1 : dd > Od ? 1 : 0
     }
 
-    function mr(rr) {
-      const Sr = new TextEncoder;
-      let Qr = 0;
+    function od(dd) {
+      const Od = new TextEncoder;
+      let md = 0;
       for (const {
-          source: Zr
+          source: Wd
         }
-        of rr) Qr += Sr.encode(Zr).byteLength;
-      return Qr
+        of dd) md += Od.encode(Wd).byteLength;
+      return md
     }
 
-    function Nr(rr) {
-      if (!rr.toLowerCase().endsWith(".wgsl")) return `${rr} isn't a .wgsl file.`;
-      if (rr.length > fr) return `A file path is over ${fr} characters.`;
-      if (rr.includes("\\") || /[\u0000-\u001f]/.test(rr)) return `${rr} isn't a valid file path.`;
-      return rr.split("/").some((rr => "" === rr || "." === rr || ".." === rr)) ? `${rr} isn't a valid file path.` : null
+    function Nd(dd) {
+      if (!dd.toLowerCase().endsWith(".wgsl")) return `${dd} isn't a .wgsl file.`;
+      if (dd.length > hd) return `A file path is over ${hd} characters.`;
+      if (dd.includes("\\") || /[\u0000-\u001f]/.test(dd)) return `${dd} isn't a valid file path.`;
+      return dd.split("/").some((dd => "" === dd || "." === dd || ".." === dd)) ? `${dd} isn't a valid file path.` : null
     }
-    const Ur = /^(.*)\[rot\[([1-4])$/;
+    const qd = /^(.*)\[rot\[([1-4])$/;
 
-    function tr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Zr = new Map;
-      Sr.forEach(((rr, Sr) => {
+    function Hd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Wd = new Map;
+      Od.forEach(((dd, Od) => {
         let {
-          numAnimStates: Qr,
-          animStartIdx: Wr
-        } = rr;
-        for (let ar = 1; ar < Qr; ar++) Zr.set(Wr + ar - 1, Sr)
+          numAnimStates: md,
+          animStartIdx: Fd
+        } = dd;
+        for (let Rd = 1; Rd < md; Rd++) Wd.set(Fd + Rd - 1, Od)
       }));
-      const Wr = Object.entries(rr),
-        ar = new Map;
-      for (const [tr, hr] of Wr) {
-        const rr = Ur.exec(tr);
-        "1" === rr?.[2] && ar.set(rr[1], hr + 1)
+      const Fd = Object.entries(dd),
+        Rd = new Map;
+      for (const [Hd, yd] of Fd) {
+        const dd = qd.exec(Hd);
+        "1" === dd?.[2] && Rd.set(dd[1], yd + 1)
       }
-      const jr = rr => {
-          const Sr = Ur.exec(rr);
-          return Sr && ar.has(Sr[1]) ? {
-            root: Sr[1],
-            rotation: Number(Sr[2]) - 1
+      const Xd = dd => {
+          const Od = qd.exec(dd);
+          return Od && Rd.has(Od[1]) ? {
+            root: Od[1],
+            rotation: Number(Od[2]) - 1
           } : null
         },
-        Ir = new Set(Wr.map((rr => {
-          let [Sr] = rr;
-          return jr(Sr)?.root ?? Sr
+        Kd = new Set(Fd.map((dd => {
+          let [Od] = dd;
+          return Xd(Od)?.root ?? Od
         }))),
-        fr = (rr, Qr) => {
-          const Zr = rr.replace(/_?0$/, "");
-          return (Sr[Qr]?.numAnimStates ?? 0) > 1 && !Ir.has(Zr) ? Zr : rr
+        hd = (dd, md) => {
+          const Wd = dd.replace(/_?0$/, "");
+          return (Od[md]?.numAnimStates ?? 0) > 1 && !Kd.has(Wd) ? Wd : dd
         },
-        Er = new Map;
-      for (const [Ur, tr] of Wr) Er.set(tr, fr(jr(Ur)?.root ?? Ur, tr));
-      const pr = Wr.reduce(((rr, Sr) => {
-          let [, Qr] = Sr;
-          return Math.max(rr, Qr + 1)
+        vd = new Map;
+      for (const [qd, Hd] of Fd) vd.set(Hd, hd(Xd(qd)?.root ?? qd, Hd));
+      const Qd = Fd.reduce(((dd, Od) => {
+          let [, md] = Od;
+          return Math.max(dd, md + 1)
         }), 0),
-        xr = Array.from({
-          length: pr
-        }, ((rr, Sr) => ({
-          id: Sr + 1,
+        td = Array.from({
+          length: Qd
+        }, ((dd, Od) => ({
+          id: Od + 1,
           rotation: 0
         }))),
-        mr = new Map,
-        Nr = new Map;
-      for (const [Ur, tr] of Wr) {
-        const rr = jr(Ur),
-          Sr = Zr.get(tr);
-        if (void 0 !== Sr) {
-          const Qr = Er.get(Sr);
-          Nr.set(Ur, {
-            name: Ur,
-            texture: Qr,
+        od = new Map,
+        Nd = new Map;
+      for (const [qd, Hd] of Fd) {
+        const dd = Xd(qd),
+          Od = Wd.get(Hd);
+        if (void 0 !== Od) {
+          const md = vd.get(Od);
+          Nd.set(qd, {
+            name: qd,
+            texture: md,
             kind: "frame"
-          }), rr && !Nr.has(rr.root) && Nr.set(rr.root, {
-            name: rr.root,
-            texture: Qr,
+          }), dd && !Nd.has(dd.root) && Nd.set(dd.root, {
+            name: dd.root,
+            texture: md,
             kind: "frame"
           });
           continue
         }
-        const Qr = Er.get(tr),
-          Wr = rr?.root ?? Ur;
-        if (Qr !== Wr && Nr.set(Wr, {
-            name: Wr,
-            texture: Qr,
+        const md = vd.get(Hd),
+          Fd = dd?.root ?? qd;
+        if (md !== Fd && Nd.set(Fd, {
+            name: Fd,
+            texture: md,
             kind: "frame"
-          }), rr) {
-          const Sr = ar.get(rr.root);
-          xr[tr] = {
-            id: Sr,
-            rotation: rr.rotation
-          }, mr.set(Qr, Sr), Nr.set(Ur, {
-            name: Ur,
-            texture: Qr,
+          }), dd) {
+          const Od = Rd.get(dd.root);
+          td[Hd] = {
+            id: Od,
+            rotation: dd.rotation
+          }, od.set(md, Od), Nd.set(qd, {
+            name: qd,
+            texture: md,
             kind: "rotation"
           })
-        } else mr.set(Qr, tr + 1)
+        } else od.set(md, Hd + 1)
       }
-      for (const Ur of mr.keys()) Nr.delete(Ur);
-      for (const [Ur, tr] of Qr) {
-        const rr = mr.get(tr);
-        void 0 === rr || mr.has(Ur) || (mr.set(Ur, rr), Nr.delete(Ur))
+      for (const qd of od.keys()) Nd.delete(qd);
+      for (const [qd, Hd] of md) {
+        const dd = od.get(Hd);
+        void 0 === dd || od.has(qd) || (od.set(qd, dd), Nd.delete(qd))
       }
       return {
-        named: [...mr].sort(((rr, Sr) => {
-          let [Qr] = rr, [Zr] = Sr;
-          return Qr < Zr ? -1 : Qr > Zr ? 1 : 0
-        })).map((rr => {
-          let [Sr, Qr] = rr;
+        named: [...od].sort(((dd, Od) => {
+          let [md] = dd, [Wd] = Od;
+          return md < Wd ? -1 : md > Wd ? 1 : 0
+        })).map((dd => {
+          let [Od, md] = dd;
           return {
-            name: Sr,
-            id: Qr
+            name: Od,
+            id: md
           }
         })),
-        aliases: [...Nr.values()],
-        layers: xr
+        aliases: [...Nd.values()],
+        layers: td
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

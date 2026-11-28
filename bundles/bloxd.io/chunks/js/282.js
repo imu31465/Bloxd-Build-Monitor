@@ -1,130 +1,130 @@
 export const id = 282;
 export const ids = [282];
 export const modules = {
-  41063: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Wr
+  41067: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Fd
     });
-    const Zr = 1e3;
+    const Wd = 1e3;
 
-    function Wr(rr, Sr) {
-      const Qr = performance.now() + rr;
-      return 0 !== Sr && Math.abs(Qr - Sr) < Zr ? Sr : Qr
+    function Fd(dd, Od) {
+      const md = performance.now() + dd;
+      return 0 !== Od && Math.abs(md - Od) < Wd ? Od : md
     }
   },
-  41228: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => IQ
+  41241: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => Qm
     });
-    var Zr = Qr(72);
-    const Wr = "shootingLobby",
-      ar = {
+    var Wd = md(66);
+    const Fd = "shootingLobby",
+      Rd = {
         Red: "#fc6464",
         Blue: "#4f94f1"
       };
 
-    function jr(rr, Sr) {
-      const Qr = rr.reduce(((rr, Sr) => rr + Sr[5]), 0);
-      return 0 === Qr ? 0 === rr.length ? 0 : Math.round(100 / rr.length) : Math.round(rr[Sr][5] / Qr * 100)
+    function Xd(dd, Od) {
+      const md = dd.reduce(((dd, Od) => dd + Od[5]), 0);
+      return 0 === md ? 0 === dd.length ? 0 : Math.round(100 / dd.length) : Math.round(dd[Od][5] / md * 100)
     }
-    var Ir = Qr(34),
-      fr = Qr(3425),
-      Er = Qr(41055),
-      pr = Qr(41046),
-      xr = Qr(1155),
-      mr = Qr.n(xr),
-      Nr = Qr(2128),
-      Ur = Qr(1448),
-      tr = Qr(1576),
-      hr = Qr(5297),
-      zr = Qr(5736),
-      Yr = Qr(38175),
-      nr = Qr(1251),
-      er = Qr(379),
-      Kr = Qr(3320),
-      yr = Qr(1317),
-      Br = Qr(1338);
-    const Tr = "shootingOverlays:";
+    var Kd = md(32),
+      hd = md(3428),
+      vd = md(41063),
+      Qd = md(41061),
+      td = md(1155),
+      od = md.n(td),
+      Nd = md(2125),
+      qd = md(1443),
+      Hd = md(1572),
+      yd = md(5194),
+      bd = md(5693),
+      Td = md(38259),
+      pd = md(1238),
+      Yd = md(405),
+      gd = md(3307),
+      wd = md(1315),
+      Ed = md(1341);
+    const Jd = "shootingOverlays:";
 
-    function vr(rr, Sr) {
-      var Qr;
-      return "tdm" === Sr && Xr(rr) ? ar[rr] : null !== (Qr = (0, er.hb)(rr)) && void 0 !== Qr ? Qr : "#ffffff"
+    function Ud(dd, Od) {
+      var md;
+      return "tdm" === Od && sd(dd) ? Rd[dd] : null !== (md = (0, Yd.bb)(dd)) && void 0 !== md ? md : "#ffffff"
     }
 
-    function Or(rr, Sr) {
+    function xd(dd, Od) {
       return {
-        "--team": vr(rr, Sr)
+        "--team": Ud(dd, Od)
       }
     }
-    const Lr = {
-        Red: `${Tr}teamRed`,
-        Blue: `${Tr}teamBlue`
+    const Bd = {
+        Red: `${Jd}teamRed`,
+        Blue: `${Jd}teamBlue`
       },
-      lr = {
-        diamonds: `${Tr}mutation_diamonds`,
-        explosives: `${Tr}mutation_explosives`,
-        gungame: `${Tr}mutation_gungame`
+      Sd = {
+        diamonds: `${Jd}mutation_diamonds`,
+        explosives: `${Jd}mutation_explosives`,
+        gungame: `${Jd}mutation_gungame`
       };
 
-    function Xr(rr) {
-      return Object.hasOwn(ar, rr)
+    function sd(dd) {
+      return Object.hasOwn(Rd, dd)
     }
-    const Pr = {
+    const ud = {
       normal: "streak",
       explosives: "streak",
       diamonds: "diamonds",
       gungame: "kills"
     };
 
-    function Hr(rr) {
-      return Pr[rr]
+    function Vd(dd) {
+      return ud[dd]
     }
 
-    function qr() {
-      const rr = (0, Nr.j)("hiddenPlayerNames");
-      return (0, Zr.useCallback)((Sr => "" === Sr ? "" : (0, yr.c)(Sr, rr)), [rr])
+    function Ad() {
+      const dd = (0, Nd.h)("hiddenPlayerNames");
+      return (0, Wd.useCallback)((Od => "" === Od ? "" : (0, wd.e)(Od, dd)), [dd])
     }
 
-    function Rr(rr) {
-      var Sr;
+    function rd(dd) {
+      var Od;
       let {
-        playerId: Qr
-      } = rr;
-      const Zr = null === (Sr = (0, Nr.j)("players").byId[Qr]) || void 0 === Sr ? void 0 : Sr.cosmetics;
-      return (0, Br.jsx)(Kr.b, {
-        cosmetics: null !== Zr && void 0 !== Zr ? Zr : {}
+        playerId: md
+      } = dd;
+      const Wd = null === (Od = (0, Nd.h)("players").byId[md]) || void 0 === Od ? void 0 : Od.cosmetics;
+      return (0, Ed.jsx)(gd.e, {
+        cosmetics: null !== Wd && void 0 !== Wd ? Wd : {}
       })
     }
 
-    function gr(rr) {
+    function Gd(dd) {
       let {
-        icon: Sr,
-        value: Qr,
-        label: Zr,
-        gold: Wr = !1
-      } = rr;
-      return (0, Br.jsxs)("div", {
+        icon: Od,
+        value: md,
+        label: Wd,
+        gold: Fd = !1
+      } = dd;
+      return (0, Ed.jsxs)("div", {
         className: "ShootingStat",
-        children: [(0, Br.jsxs)("b", {
-          className: mr()("FullyFancyText", {
-            Gold: Wr
+        children: [(0, Ed.jsxs)("b", {
+          className: od()("FullyFancyText", {
+            Gold: Fd
           }),
-          children: [Sr && (0, Br.jsx)(Ur.c, {
-            name: Sr
-          }), Qr]
-        }), (0, Br.jsx)("span", {
+          children: [Od && (0, Ed.jsx)(qd.c, {
+            name: Od
+          }), md]
+        }), (0, Ed.jsx)("span", {
           className: "SmallTextBold",
-          children: Zr
+          children: Wd
         })]
       })
     }
-    var Cr = Qr(1527),
-      Mr = Qr(41063);
+    var nd = md(1503),
+      Ld = md(41067);
 
-    function Gr(rr) {
-      return `shooting:${rr}`
+    function Pd(dd) {
+      return `shooting:${dd}`
     }
-    class kr {
+    class zd {
       constructor() {
         this.slices = {
           hud: {
@@ -147,296 +147,296 @@ export const modules = {
           death: null
         }, this.seq = 0
       }
-      get(rr) {
-        return this.slices[rr]
+      get(dd) {
+        return this.slices[dd]
       }
-      vx(rr, Sr) {
-        switch (rr) {
+      Yt(dd, Od) {
+        switch (dd) {
           case "shootingHud":
-            return this.receiveHud(Sr), !0;
-          case Wr: {
-            const rr = Sr;
+            return this.receiveHud(Od), !0;
+          case Fd: {
+            const dd = Od;
             return this.set("lobby", {
-              wire: rr,
-              startsAt: "lobby" === rr[0] ? (0, Mr.b)(rr[2], this.slices.lobby.startsAt) : 0
+              wire: dd,
+              startsAt: "lobby" === dd[0] ? (0, Ld.c)(dd[2], this.slices.lobby.startsAt) : 0
             }), !0
           }
           case "shootingRoundEnd": {
-            const rr = Sr;
+            const dd = Od;
             return this.set("roundEnd", {
-              wire: rr,
-              lobbyAt: "roundEnd" === rr[0] ? performance.now() + rr[17] : 0
+              wire: dd,
+              lobbyAt: "roundEnd" === dd[0] ? performance.now() + dd[17] : 0
             }), !0
           }
           case "shootingLeaderboard":
-            return this.set("leaderboard", Sr), !0;
+            return this.set("leaderboard", Od), !0;
           case "shootingKillfeed": {
-            const rr = {
+            const dd = {
               seq: ++this.seq,
               at: performance.now(),
-              wire: Sr
+              wire: Od
             };
-            return this.set("killfeed", [...this.slices.killfeed.slice(-11), rr]), !0
+            return this.set("killfeed", [...this.slices.killfeed.slice(-11), dd]), !0
           }
           case "shootingEvent":
-            return this.receiveEvent(Sr), !0;
+            return this.receiveEvent(Od), !0;
           default:
             return !1
         }
       }
-      receiveHud(rr) {
-        var Sr;
-        const Qr = this.slices.hud,
-          Zr = (null === (Sr = Qr.wire) || void 0 === Sr ? void 0 : Sr[1]) === rr[1];
-        Qr.wire && !Zr && (this.set("kill", null), this.set("tier", null), this.set("death", null)), this.set("hud", {
-          wire: rr,
-          endsAt: (0, Mr.b)(rr[4], Zr ? Qr.endsAt : 0),
-          spawnProtectionEndsAt: 0 === rr[13] ? 0 : (0, Mr.b)(rr[13], Qr.spawnProtectionEndsAt)
+      receiveHud(dd) {
+        var Od;
+        const md = this.slices.hud,
+          Wd = (null === (Od = md.wire) || void 0 === Od ? void 0 : Od[1]) === dd[1];
+        md.wire && !Wd && (this.set("kill", null), this.set("tier", null), this.set("death", null)), this.set("hud", {
+          wire: dd,
+          endsAt: (0, Ld.c)(dd[4], Wd ? md.endsAt : 0),
+          spawnProtectionEndsAt: 0 === dd[13] ? 0 : (0, Ld.c)(dd[13], md.spawnProtectionEndsAt)
         })
       }
-      receiveEvent(rr) {
-        const Sr = {
+      receiveEvent(dd) {
+        const Od = {
           seq: ++this.seq,
           at: performance.now()
         };
-        switch (rr[0]) {
+        switch (dd[0]) {
           case "kill":
             this.set("kill", {
-              ...Sr,
-              wire: rr
+              ...Od,
+              wire: dd
             });
             break;
           case "tier":
             this.set("tier", {
-              ...Sr,
-              wire: rr
+              ...Od,
+              wire: dd
             });
             break;
           case "death":
             this.set("death", {
-              ...Sr,
-              wire: rr
+              ...Od,
+              wire: dd
             })
         }
       }
-      set(rr, Sr) {
-        this.slices[rr] = Sr, Ir.i.Jp(Gr(rr), Sr, !0)
+      set(dd, Od) {
+        this.slices[dd] = Od, Kd.j.lQ(Pd(dd), Od, !0)
       }
     }
 
-    function Ar(rr, Sr) {
-      return (0, Cr.b)(Gr(Sr), (() => rr.get(Sr)))
+    function cd(dd, Od) {
+      return (0, nd.e)(Pd(Od), (() => dd.get(Od)))
     }
-    const Vr = ["Red", "Blue"],
-      ir = {
-        streak: `${Tr}scoreIs_streak`,
-        diamonds: `${Tr}scoreIs_diamonds`,
-        kills: `${Tr}scoreIs_kills`
+    const jd = ["Red", "Blue"],
+      Dd = {
+        streak: `${Jd}scoreIs_streak`,
+        diamonds: `${Jd}scoreIs_diamonds`,
+        kills: `${Jd}scoreIs_kills`
       };
 
-    function wr(rr) {
-      var Sr;
+    function ed(dd) {
+      var Od;
       let {
-        store: Qr,
-        variation: Zr
-      } = rr;
+        store: md,
+        variation: Wd
+      } = dd;
       const {
-        t: Wr
-      } = (0, nr.E)(), ar = Ar(Qr, "leaderboard"), jr = Ar(Qr, "hud"), [, Ir = "lobby", , Er = "normal", , , pr = "", , , xr = null] = null !== (Sr = jr.wire) && void 0 !== Sr ? Sr : [], zr = (0, Yr.h)("match" === Ir ? jr.endsAt : 0), er = (0, Nr.j)("players").localId, Kr = "tdm" === Zr, yr = "normal" === Er ? null : lr[Er], vr = "Blue" === pr ? [...Vr].reverse() : Vr, Or = rr => "tdm" !== (null === xr || void 0 === xr ? void 0 : xr[0]) ? 0 : "Red" === rr ? xr[1] : xr[2];
-      return (0, Br.jsx)(hr.b, {
-        close: fr.m,
+        t: Fd
+      } = (0, pd.G)(), Rd = cd(md, "leaderboard"), Xd = cd(md, "hud"), [, Kd = "lobby", , vd = "normal", , , Qd = "", , , td = null] = null !== (Od = Xd.wire) && void 0 !== Od ? Od : [], bd = (0, Td.h)("match" === Kd ? Xd.endsAt : 0), Yd = (0, Nd.h)("players").localId, gd = "tdm" === Wd, wd = "normal" === vd ? null : Sd[vd], Ud = "Blue" === Qd ? [...jd].reverse() : jd, xd = dd => "tdm" !== (null === td || void 0 === td ? void 0 : td[0]) ? 0 : "Red" === dd ? td[1] : td[2];
+      return (0, Ed.jsx)(yd.c, {
+        close: hd.h,
         togglePointerLock: !1,
         className: "ShootingBoardOverlay",
-        children: (0, Br.jsxs)("section", {
-          className: mr()("ShootingBoard", {
-            ShootingBoardFfa: !Kr
+        children: (0, Ed.jsxs)("section", {
+          className: od()("ShootingBoard", {
+            ShootingBoardFfa: !gd
           }),
           role: "dialog",
           "aria-modal": "true",
           "aria-labelledby": "shootingBoardTitle",
-          children: [(0, Br.jsxs)("header", {
+          children: [(0, Ed.jsxs)("header", {
             className: "ShootingBoardHeader",
-            children: [(0, Br.jsxs)("h2", {
+            children: [(0, Ed.jsxs)("h2", {
               id: "shootingBoardTitle",
               className: "SmallTextBold",
-              children: [(0, Br.jsx)(Ur.c, {
+              children: [(0, Ed.jsx)(qd.c, {
                 name: "list"
-              }), Wr(Kr ? `${Tr}teamDeathmatch` : `${Tr}freeForAll`)]
-            }), (0, Br.jsxs)("div", {
+              }), Fd(gd ? `${Jd}teamDeathmatch` : `${Jd}freeForAll`)]
+            }), (0, Ed.jsxs)("div", {
               className: "ShootingBoardMeta SmallTextBold",
-              children: [yr && (0, Br.jsx)("span", {
-                children: Wr(yr)
-              }), "match" === Ir && (0, Br.jsxs)("span", {
-                children: [(0, Br.jsx)(Ur.c, {
+              children: [wd && (0, Ed.jsx)("span", {
+                children: Fd(wd)
+              }), "match" === Kd && (0, Ed.jsxs)("span", {
+                children: [(0, Ed.jsx)(qd.c, {
                   name: "stopwatch"
-                }), " ", (0, Yr.c)(zr)]
+                }), " ", (0, Td.d)(bd)]
               })]
-            }), (0, Br.jsx)(tr.l, {
+            }), (0, Ed.jsx)(Hd.j, {
               className: "ShootingBoardClose",
-              onClick: fr.m
+              onClick: hd.h
             })]
-          }), (0, Br.jsxs)("div", {
+          }), (0, Ed.jsxs)("div", {
             className: "ShootingBoardColumns",
-            children: [Kr && vr.map((rr => (0, Br.jsx)(cr, {
-              title: Wr(Lr[rr]),
+            children: [gd && Ud.map((dd => (0, Ed.jsx)(Id, {
+              title: Fd(Bd[dd]),
               team: {
-                id: rr,
-                score: Or(rr),
-                mine: rr === pr
+                id: dd,
+                score: xd(dd),
+                mine: dd === Qd
               },
-              rows: ar.filter((Sr => Sr[2] === rr)),
-              localId: er
-            }, rr))), !Kr && (0, Br.jsx)(cr, {
-              title: Wr(`${Tr}players`),
+              rows: Rd.filter((Od => Od[2] === dd)),
+              localId: Yd
+            }, dd))), !gd && (0, Ed.jsx)(Id, {
+              title: Fd(`${Jd}players`),
               team: null,
-              rows: ar,
-              localId: er
+              rows: Rd,
+              localId: Yd
             })]
-          }), (0, Br.jsxs)("footer", {
+          }), (0, Ed.jsxs)("footer", {
             className: "ShootingBoardFooter SmallTextBold",
-            children: [(0, Br.jsx)("span", {
-              children: Wr(ir[Hr(Er)])
-            }), (0, Br.jsx)("span", {
-              children: Wr(`${Tr}kdLegend`)
+            children: [(0, Ed.jsx)("span", {
+              children: Fd(Dd[Vd(vd)])
+            }), (0, Ed.jsx)("span", {
+              children: Fd(`${Jd}kdLegend`)
             })]
           })]
         })
       })
     }
 
-    function cr(rr) {
+    function Id(dd) {
       let {
-        title: Sr,
-        team: Qr,
-        rows: Zr,
-        localId: Wr
-      } = rr;
+        title: Od,
+        team: md,
+        rows: Wd,
+        localId: Fd
+      } = dd;
       const {
-        t: ar
-      } = (0, nr.E)(), jr = qr(), Ir = [{
+        t: Rd
+      } = (0, pd.G)(), Xd = Ad(), Kd = [{
         key: "name",
-        header: (0, Br.jsxs)("span", {
+        header: (0, Ed.jsxs)("span", {
           className: "ShootingBoardTeam",
-          children: [(0, Br.jsxs)("span", {
-            children: [Sr, (null === Qr || void 0 === Qr ? void 0 : Qr.mine) && (0, Br.jsxs)("span", {
+          children: [(0, Ed.jsxs)("span", {
+            children: [Od, (null === md || void 0 === md ? void 0 : md.mine) && (0, Ed.jsxs)("span", {
               className: "ShootingBoardYou",
-              children: [" \xb7 ", ar(`${Tr}you`)]
+              children: [" \xb7 ", Rd(`${Jd}you`)]
             })]
-          }), Qr && (0, Br.jsx)("b", {
-            children: Qr.score
+          }), md && (0, Ed.jsx)("b", {
+            children: md.score
           })]
         })
       }, {
         key: "kills",
-        header: (0, Br.jsx)("abbr", {
-          title: ar(`${Tr}kills`),
-          children: ar(`${Tr}killsShort`)
+        header: (0, Ed.jsx)("abbr", {
+          title: Rd(`${Jd}kills`),
+          children: Rd(`${Jd}killsShort`)
         })
       }, {
         key: "deaths",
-        header: (0, Br.jsx)("abbr", {
-          title: ar(`${Tr}deaths`),
-          children: ar(`${Tr}deathsShort`)
+        header: (0, Ed.jsx)("abbr", {
+          title: Rd(`${Jd}deaths`),
+          children: Rd(`${Jd}deathsShort`)
         })
       }, {
         key: "score",
-        header: ar(`${Tr}score`)
+        header: Rd(`${Jd}score`)
       }];
-      return (0, Br.jsx)("div", {
+      return (0, Ed.jsx)("div", {
         className: "ShootingBoardColumn",
-        style: Qr ? Or(Qr.id, "tdm") : void 0,
-        children: (0, Br.jsx)(zr.b, {
-          className: mr()("ShootingBoardTable", {
-            Team: Qr
+        style: md ? xd(md.id, "tdm") : void 0,
+        children: (0, Ed.jsx)(bd.e, {
+          className: od()("ShootingBoardTable", {
+            Team: md
           }),
-          columns: Ir,
-          rows: Zr,
-          getRowKey: rr => rr[0],
-          renderRow: (rr, Sr) => {
-            const [Zr, ar, Ir, fr, Er, pr, xr] = rr, Nr = Sr + 1;
-            return (0, Br.jsxs)("tr", {
-              className: mr()({
-                Mine: Zr === Wr,
-                Dead: !xr
+          columns: Kd,
+          rows: Wd,
+          getRowKey: dd => dd[0],
+          renderRow: (dd, Od) => {
+            const [Wd, Rd, Kd, hd, vd, Qd, td] = dd, Nd = Od + 1;
+            return (0, Ed.jsxs)("tr", {
+              className: od()({
+                Mine: Wd === Fd,
+                Dead: !td
               }),
-              style: Qr ? void 0 : Or(Ir, "ffa"),
-              children: [(0, Br.jsx)("td", {
-                children: (0, Br.jsxs)("span", {
+              style: md ? void 0 : xd(Kd, "ffa"),
+              children: [(0, Ed.jsx)("td", {
+                children: (0, Ed.jsxs)("span", {
                   className: "ShootingBoardName",
-                  children: [!Qr && (0, Br.jsx)("span", {
-                    className: mr()("ShootingBoardPlace", `Place${Nr}`),
-                    children: Nr
-                  }), (0, Br.jsx)(Rr, {
-                    playerId: Zr
-                  }), (0, Br.jsx)("span", {
+                  children: [!md && (0, Ed.jsx)("span", {
+                    className: od()("ShootingBoardPlace", `Place${Nd}`),
+                    children: Nd
+                  }), (0, Ed.jsx)(rd, {
+                    playerId: Wd
+                  }), (0, Ed.jsx)("span", {
                     className: "ShootingBoardNameText",
-                    children: jr(ar)
+                    children: Xd(Rd)
                   })]
                 })
-              }), (0, Br.jsx)("td", {
-                children: fr
-              }), (0, Br.jsx)("td", {
-                children: Er
-              }), (0, Br.jsx)("td", {
+              }), (0, Ed.jsx)("td", {
+                children: hd
+              }), (0, Ed.jsx)("td", {
+                children: vd
+              }), (0, Ed.jsx)("td", {
                 className: "ShootingBoardScore",
-                children: pr
+                children: Qd
               })]
             })
           }
         })
       })
     }
-    var Fr = Qr(38154),
-      or = Qr(38214),
-      br = Qr(26),
-      Jr = Qr(5731),
-      Dr = Qr(2132),
-      dr = Qr(5308),
-      sr = Qr(3640),
-      ur = Qr(1573),
-      rS = Qr(1597),
-      SS = Qr(40092);
-    const QS = "shooting:vote";
-    class ZS {
-      constructor(rr, Sr) {
-        let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new SS.c;
-        this.Jp = rr, this.sendCommand = Sr, this.pacer = Qr, this.view = {
+    var ld = md(38243),
+      Cd = md(38302),
+      Zd = md(29),
+      kd = md(5691),
+      fd = md(2130),
+      Md = md(5206),
+      dO = md(3645),
+      OO = md(1566),
+      mO = md(1596),
+      WO = md(40123);
+    const FO = "shooting:vote";
+    class RO {
+      constructor(dd, Od) {
+        let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new WO.d;
+        this.lQ = dd, this.sendCommand = Od, this.pacer = md, this.view = {
           hidden: !1,
           pending: null
-        }, this.unsent = !1, this.cardsKey = "", this.pendingTimer = null, this.unsubscribePacer = void 0, this.vote = rr => {
+        }, this.unsent = !1, this.cardsKey = "", this.pendingTimer = null, this.unsubscribePacer = void 0, this.vote = dd => {
           this.unsent = !0, this.set({
             ...this.view,
-            pending: rr
+            pending: dd
           }), this.flush()
-        }, this.setHidden = rr => {
+        }, this.setHidden = dd => {
           this.set({
             ...this.view,
-            hidden: rr
+            hidden: dd
           })
         }, this.flush = () => {
-          const rr = this.view.pending;
-          this.unsent && null !== rr && this.pacer.tryStart() && (this.unsent = !1, this.sendCommand(`mapvote ${rr}`), this.clearPendingTimer(), this.pendingTimer = setTimeout((() => {
-            this.pendingTimer = null, this.unsent || this.view.pending !== rr || this.set({
+          const dd = this.view.pending;
+          this.unsent && null !== dd && this.pacer.tryStart() && (this.unsent = !1, this.sendCommand(`mapvote ${dd}`), this.clearPendingTimer(), this.pendingTimer = setTimeout((() => {
+            this.pendingTimer = null, this.unsent || this.view.pending !== dd || this.set({
               ...this.view,
               pending: null
             })
           }), 5e3))
-        }, this.unsubscribePacer = Qr.subscribe(this.flush)
+        }, this.unsubscribePacer = md.subscribe(this.flush)
       }
       getView() {
         return this.view
       }
-      onLobby(rr) {
-        const Sr = "lobby" === rr[0] ? rr[9] : [],
-          Qr = Sr.map((rr => rr[0])).join("\n");
-        if (Qr !== this.cardsKey) return this.cardsKey = Qr, this.unsent = !1, void this.set({
+      onLobby(dd) {
+        const Od = "lobby" === dd[0] ? dd[9] : [],
+          md = Od.map((dd => dd[0])).join("\n");
+        if (md !== this.cardsKey) return this.cardsKey = md, this.unsent = !1, void this.set({
           hidden: !1,
           pending: null
         });
-        const Zr = this.view.pending;
-        if (null === Zr) return;
-        const Wr = Sr.find((rr => rr[0] === Zr));
-        (!Wr || Wr[6] && !this.unsent) && (this.unsent = !1, this.set({
+        const Wd = this.view.pending;
+        if (null === Wd) return;
+        const Fd = Od.find((dd => dd[0] === Wd));
+        (!Fd || Fd[6] && !this.unsent) && (this.unsent = !1, this.set({
           ...this.view,
           pending: null
         }))
@@ -447,254 +447,254 @@ export const modules = {
       clearPendingTimer() {
         null !== this.pendingTimer && (clearTimeout(this.pendingTimer), this.pendingTimer = null)
       }
-      set(rr) {
-        this.view = rr, this.Jp(rr)
+      set(dd) {
+        this.view = dd, this.lQ(dd)
       }
     }
-    const WS = "ShootingVoteStripOpen";
+    const XO = "ShootingVoteStripOpen";
 
-    function aS(rr) {
-      var Sr, Qr, Wr, ar, Ir;
+    function KO(dd) {
+      var Od, md, Fd, Rd, Kd;
       let {
-        maps: fr,
-        votes: Er
-      } = rr;
+        maps: hd,
+        votes: vd
+      } = dd;
       const {
-        t: pr
-      } = (0, nr.E)(), xr = (0, ur.g)(QS, Er.getView()), {
-        isTouchScreen: Nr,
-        openInGameMenuName: tr,
-        openEverythingMenuName: hr
-      } = (0, br.n)(["isTouchScreen", "openInGameMenuName", "openEverythingMenuName"]), zr = null !== tr || null !== hr, Yr = (0, sr.b)();
-      (0, dr.b)(!0, !Nr && !xr.hidden && !zr && !Yr, "shootingVoteStrip", !0), (0, Zr.useEffect)((() => {
-        if (!xr.hidden && !Nr) return document.body.classList.add(WS), () => {
-          document.body.classList.remove(WS)
+        t: Qd
+      } = (0, pd.G)(), td = (0, OO.i)(FO, vd.getView()), {
+        isTouchScreen: Nd,
+        openInGameMenuName: Hd,
+        openEverythingMenuName: yd
+      } = (0, Zd.p)(["isTouchScreen", "openInGameMenuName", "openEverythingMenuName"]), bd = null !== Hd || null !== yd, Td = (0, dO.d)();
+      (0, Md.e)(!0, !Nd && !td.hidden && !bd && !Td, "shootingVoteStrip", !0), (0, Wd.useEffect)((() => {
+        if (!td.hidden && !Nd) return document.body.classList.add(XO), () => {
+          document.body.classList.remove(XO)
         }
-      }), [xr.hidden, Nr]);
-      const er = null !== (Sr = null !== (Qr = xr.pending) && void 0 !== Qr ? Qr : null === (Wr = fr.find((rr => rr[6]))) || void 0 === Wr ? void 0 : Wr[0]) && void 0 !== Sr ? Sr : null,
-        Kr = null !== (ar = null === (Ir = fr.find((rr => rr[0] === er))) || void 0 === Ir ? void 0 : Ir[1]) && void 0 !== ar ? ar : null;
-      return xr.hidden ? (0, Br.jsxs)("button", {
+      }), [td.hidden, Nd]);
+      const Yd = null !== (Od = null !== (md = td.pending) && void 0 !== md ? md : null === (Fd = hd.find((dd => dd[6]))) || void 0 === Fd ? void 0 : Fd[0]) && void 0 !== Od ? Od : null,
+        gd = null !== (Rd = null === (Kd = hd.find((dd => dd[0] === Yd))) || void 0 === Kd ? void 0 : Kd[1]) && void 0 !== Rd ? Rd : null;
+      return td.hidden ? (0, Ed.jsxs)("button", {
         type: "button",
         className: "ShootingVoteChip",
         "data-over-keys": "",
-        ...(0, rS.g)((() => {
-          Er.setHidden(!1)
+        ...(0, mO.i)((() => {
+          vd.setHidden(!1)
         }), "pointerup"),
-        children: [(0, Br.jsx)("span", {
+        children: [(0, Ed.jsx)("span", {
           className: "ShootingVoteChipLabel",
-          children: pr("shootingLobby:mapVote")
-        }), (0, Br.jsx)("span", {
+          children: Qd("shootingLobby:mapVote")
+        }), (0, Ed.jsx)("span", {
           className: "ShootingVoteChipVote",
-          children: null !== Kr && void 0 !== Kr ? Kr : pr("shootingLobby:notVoted")
-        }), !Nr && (0, Br.jsxs)("span", {
+          children: null !== gd && void 0 !== gd ? gd : Qd("shootingLobby:notVoted")
+        }), !Nd && (0, Ed.jsxs)("span", {
           className: "ShootingVoteChipShop",
-          children: [pr("shootingLobby:voteInShop"), (0, Br.jsx)(Dr.c, {
+          children: [Qd("shootingLobby:voteInShop"), (0, Ed.jsx)(fd.b, {
             noaAction: "OpenShop",
             padHidesKey: !0
           })]
-        }), (0, Br.jsx)(Ur.c, {
+        }), (0, Ed.jsx)(qd.c, {
           name: "angle-up"
         })]
-      }) : (0, Br.jsxs)("div", {
-        className: mr()("ShootingVoteStrip", {
-          Touch: Nr
+      }) : (0, Ed.jsxs)("div", {
+        className: od()("ShootingVoteStrip", {
+          Touch: Nd
         }),
         "data-over-keys": "",
-        children: [(0, Br.jsxs)("div", {
+        children: [(0, Ed.jsxs)("div", {
           className: "ShootingVoteHeader",
-          children: [(0, Br.jsx)("span", {
+          children: [(0, Ed.jsx)("span", {
             className: "ShootingVoteTitle",
-            children: pr("shootingLobby:voteTitle")
-          }), (0, Br.jsx)("span", {
+            children: Qd("shootingLobby:voteTitle")
+          }), (0, Ed.jsx)("span", {
             className: "ShootingVoteHint",
-            children: pr("shootingLobby:voteHint")
-          }), (0, Br.jsxs)("button", {
+            children: Qd("shootingLobby:voteHint")
+          }), (0, Ed.jsxs)("button", {
             type: "button",
             className: "ShootingVoteHide",
-            ...(0, rS.g)((() => {
-              Er.setHidden(!0)
+            ...(0, mO.i)((() => {
+              vd.setHidden(!0)
             }), "pointerup"),
-            children: [pr("shootingLobby:hide"), (0, Br.jsx)(Ur.c, {
+            children: [Qd("shootingLobby:hide"), (0, Ed.jsx)(qd.c, {
               name: "angle-down"
             })]
           })]
-        }), (0, Br.jsx)("div", {
+        }), (0, Ed.jsx)("div", {
           className: "ShootingVoteCards",
-          children: fr.map(((rr, Sr) => (0, Br.jsx)(jS, {
-            map: rr,
-            chance: jr(fr, Sr),
-            mine: er === rr[0],
-            onVote: Er.vote,
-            showHeads: !Nr
-          }, rr[0])))
+          children: hd.map(((dd, Od) => (0, Ed.jsx)(hO, {
+            map: dd,
+            chance: Xd(hd, Od),
+            mine: Yd === dd[0],
+            onVote: vd.vote,
+            showHeads: !Nd
+          }, dd[0])))
         })]
       })
     }
 
-    function jS(rr) {
+    function hO(dd) {
       let {
-        map: Sr,
-        chance: Qr,
-        mine: Wr,
-        onVote: ar,
-        showHeads: jr
-      } = rr;
+        map: Od,
+        chance: md,
+        mine: Fd,
+        onVote: Rd,
+        showHeads: Xd
+      } = dd;
       const {
-        t: Ir
-      } = (0, nr.E)(), [fr, Er, pr, xr, Nr, tr, , hr, zr] = Sr, [Yr, er] = (0, Zr.useState)(!1);
-      return (0, Br.jsxs)("button", {
+        t: Kd
+      } = (0, pd.G)(), [hd, vd, Qd, td, Nd, Hd, , yd, bd] = Od, [Td, Yd] = (0, Wd.useState)(!1);
+      return (0, Ed.jsxs)("button", {
         type: "button",
-        className: mr()("ShootingMapCard", {
-          Mine: Wr
+        className: od()("ShootingMapCard", {
+          Mine: Fd
         }),
-        "aria-pressed": Wr,
-        ...(0, rS.g)((() => {
-          Wr || ar(fr)
+        "aria-pressed": Fd,
+        ...(0, mO.i)((() => {
+          Fd || Rd(hd)
         }), "pointerup"),
-        children: [(0, Br.jsxs)("div", {
+        children: [(0, Ed.jsxs)("div", {
           className: "ShootingMapCardImage",
-          children: [null !== zr && (0, Br.jsx)(Jr.e, {
+          children: [null !== bd && (0, Ed.jsx)(kd.e, {
             game: {
-              schematicId: zr
+              schematicId: bd
             }
-          }), null === zr && !Yr && (0, Br.jsx)("img", {
+          }), null === bd && !Td && (0, Ed.jsx)("img", {
             alt: "",
-            src: `/textures/games/shooting/${pr}`,
+            src: `/textures/games/shooting/${Qd}`,
             onError: () => {
-              er(!0)
+              Yd(!0)
             }
-          }), Nr && (0, Br.jsx)("span", {
+          }), Nd && (0, Ed.jsx)("span", {
             className: "ShootingMapCardNew",
-            children: Ir("shootingLobby:new")
-          }), "normal" !== xr && (0, Br.jsx)("span", {
+            children: Kd("shootingLobby:new")
+          }), "normal" !== td && (0, Ed.jsx)("span", {
             className: "ShootingMapCardMutation",
-            children: Ir(lr[xr])
-          }), Wr && (0, Br.jsx)("span", {
+            children: Kd(Sd[td])
+          }), Fd && (0, Ed.jsx)("span", {
             className: "ShootingMapCardCheck",
-            children: (0, Br.jsx)(Ur.c, {
+            children: (0, Ed.jsx)(qd.c, {
               name: "check"
             })
           })]
-        }), (0, Br.jsxs)("div", {
+        }), (0, Ed.jsxs)("div", {
           className: "ShootingMapCardInfo",
-          children: [(0, Br.jsx)("span", {
+          children: [(0, Ed.jsx)("span", {
             className: "ShootingMapCardName",
-            children: Er
-          }), (0, Br.jsxs)("span", {
+            children: vd
+          }), (0, Ed.jsxs)("span", {
             className: "ShootingMapCardVotes",
-            children: [tr, (0, Br.jsx)(Ur.c, {
+            children: [Hd, (0, Ed.jsx)(qd.c, {
               name: "user"
             })]
           })]
-        }), (0, Br.jsx)("div", {
+        }), (0, Ed.jsx)("div", {
           className: "ShootingMapCardBar",
-          children: (0, Br.jsx)("i", {
+          children: (0, Ed.jsx)("i", {
             style: {
-              width: `${Qr}%`
+              width: `${md}%`
             }
           })
-        }), (0, Br.jsxs)("div", {
+        }), (0, Ed.jsxs)("div", {
           className: "ShootingMapCardFooter",
-          children: [jr && (0, Br.jsx)(IS, {
-            voters: hr
-          }), (0, Br.jsx)("span", {
+          children: [Xd && (0, Ed.jsx)(vO, {
+            voters: yd
+          }), (0, Ed.jsx)("span", {
             className: "ShootingMapCardChance",
-            children: Ir("shootingLobby:chance", {
-              percent: Qr
+            children: Kd("shootingLobby:chance", {
+              percent: md
             })
           })]
         })]
       })
     }
 
-    function IS(rr) {
+    function vO(dd) {
       let {
-        voters: Sr
-      } = rr;
-      const Qr = (0, Nr.j)("players");
-      return (0, Br.jsx)("span", {
+        voters: Od
+      } = dd;
+      const md = (0, Nd.h)("players");
+      return (0, Ed.jsx)("span", {
         className: "ShootingMapCardHeads",
-        children: Sr.slice(0, 8).map((rr => {
-          var Sr;
-          return (null === (Sr = Qr.byId[rr]) || void 0 === Sr ? void 0 : Sr.cosmetics) && (0, Br.jsx)(Rr, {
-            playerId: rr
-          }, rr)
+        children: Od.slice(0, 8).map((dd => {
+          var Od;
+          return (null === (Od = md.byId[dd]) || void 0 === Od ? void 0 : Od.cosmetics) && (0, Ed.jsx)(rd, {
+            playerId: dd
+          }, dd)
         }))
       })
     }
 
-    function fS(rr) {
+    function QO(dd) {
       let {
-        store: Sr,
-        votes: Qr,
-        variation: Zr
-      } = rr;
-      const Wr = Ar(Sr, "lobby"),
-        ar = (0, Nr.j)("localPlayerAlive"),
-        jr = (0, Nr.f)("connectedGame", (rr => rr.replay));
-      if ("lobby" !== Wr.wire[0] || jr) return null;
-      const Ir = Wr.wire;
-      return (0, Br.jsxs)(Br.Fragment, {
-        children: [(0, Br.jsx)(ES, {
-          wire: Ir,
-          startsAt: Wr.startsAt,
-          variation: Zr
-        }), ar && Ir[9].length > 0 && (0, Br.jsx)(Fr.d, {
-          children: (0, Br.jsx)(aS, {
-            maps: Ir[9],
-            votes: Qr
+        store: Od,
+        votes: md,
+        variation: Wd
+      } = dd;
+      const Fd = cd(Od, "lobby"),
+        Rd = (0, Nd.h)("localPlayerAlive"),
+        Xd = (0, Nd.f)("connectedGame", (dd => dd.replay));
+      if ("lobby" !== Fd.wire[0] || Xd) return null;
+      const Kd = Fd.wire;
+      return (0, Ed.jsxs)(Ed.Fragment, {
+        children: [(0, Ed.jsx)(tO, {
+          wire: Kd,
+          startsAt: Fd.startsAt,
+          variation: Wd
+        }), Rd && Kd[9].length > 0 && (0, Ed.jsx)(ld.h, {
+          children: (0, Ed.jsx)(KO, {
+            maps: Kd[9],
+            votes: md
           })
         })]
       })
     }
-    const ES = (0, Zr.memo)((function(rr) {
+    const tO = (0, Wd.memo)((function(dd) {
       let {
-        wire: Sr,
-        startsAt: Qr,
-        variation: Wr
-      } = rr;
+        wire: Od,
+        startsAt: md,
+        variation: Fd
+      } = dd;
       const {
-        t: ar
-      } = (0, nr.E)(), [jr, Ir] = (0, Zr.useState)(null), [fr, Er] = (0, Zr.useState)(null), pr = (0, or.l)(jr, fr), [, xr, , mr, Nr, tr, hr, zr, Yr] = Sr, {
-        isTouchScreen: er
-      } = (0, br.n)(["isTouchScreen"]);
-      return (0, Br.jsx)("div", {
-        ref: Er,
+        t: Rd
+      } = (0, pd.G)(), [Xd, Kd] = (0, Wd.useState)(null), [hd, vd] = (0, Wd.useState)(null), Qd = (0, Cd.l)(Xd, hd), [, td, , od, Nd, Hd, yd, bd, Td] = Od, {
+        isTouchScreen: Yd
+      } = (0, Zd.p)(["isTouchScreen"]);
+      return (0, Ed.jsx)("div", {
+        ref: vd,
         className: "ShootingLobbyStatusContainer",
-        style: null === pr ? void 0 : {
-          top: pr
+        style: null === Qd ? void 0 : {
+          top: Qd
         },
-        children: (0, Br.jsxs)("div", {
-          ref: Ir,
+        children: (0, Ed.jsxs)("div", {
+          ref: Kd,
           className: "ShootingLobbyStatus",
-          children: [(0, Br.jsx)(pS, {
-            waiting: "waiting" === xr,
-            startsAt: Qr
-          }), "tdm" === Wr && (0, Br.jsxs)("div", {
+          children: [(0, Ed.jsx)(oO, {
+            waiting: "waiting" === td,
+            startsAt: md
+          }), "tdm" === Fd && (0, Ed.jsxs)("div", {
             className: "ShootingLobbyTeams",
-            children: [(0, Br.jsx)(xS, {
+            children: [(0, Ed.jsx)(NO, {
               team: "Blue",
-              count: hr,
-              cap: zr,
-              mine: "Blue" === Yr
-            }), (0, Br.jsx)("span", {
+              count: yd,
+              cap: bd,
+              mine: "Blue" === Td
+            }), (0, Ed.jsx)("span", {
               className: "ShootingLobbyTeamHint",
-              children: ar(er ? "shootingLobby:teamHintTouch" : "" === Yr ? "shootingLobby:teamHintPick" : "shootingLobby:teamHintSwitch")
-            }), (0, Br.jsx)(xS, {
+              children: Rd(Yd ? "shootingLobby:teamHintTouch" : "" === Td ? "shootingLobby:teamHintPick" : "shootingLobby:teamHintSwitch")
+            }), (0, Ed.jsx)(NO, {
               team: "Red",
-              count: tr,
-              cap: zr,
-              mine: "Red" === Yr
+              count: Hd,
+              cap: bd,
+              mine: "Red" === Td
             })]
-          }), "ffa" === Wr && (0, Br.jsx)("div", {
+          }), "ffa" === Fd && (0, Ed.jsx)("div", {
             className: "ShootingLobbyTeams",
-            children: (0, Br.jsxs)("span", {
+            children: (0, Ed.jsxs)("span", {
               className: "ShootingLobbyPlayers",
-              children: [(0, Br.jsx)(Ur.c, {
+              children: [(0, Ed.jsx)(qd.c, {
                 name: "user-group"
-              }), ar("shootingLobby:players", {
-                count: mr,
-                max: Nr
+              }), Rd("shootingLobby:players", {
+                count: od,
+                max: Nd
               })]
             })
           })]
@@ -702,687 +702,687 @@ export const modules = {
       })
     }));
 
-    function pS(rr) {
+    function oO(dd) {
       let {
-        waiting: Sr,
-        startsAt: Qr
-      } = rr;
+        waiting: Od,
+        startsAt: md
+      } = dd;
       const {
-        t: Zr
-      } = (0, nr.E)(), Wr = (0, Yr.h)(Sr ? 0 : Qr);
-      return (0, Br.jsxs)("div", {
+        t: Wd
+      } = (0, pd.G)(), Fd = (0, Td.h)(Od ? 0 : md);
+      return (0, Ed.jsxs)("div", {
         className: "ShootingLobbyCountdown",
-        children: [Sr && (0, Br.jsx)("span", {
+        children: [Od && (0, Ed.jsx)("span", {
           className: "ShootingLobbyCountdownLabel",
-          children: Zr("shootingLobby:waiting")
-        }), !Sr && (0, Br.jsxs)(Br.Fragment, {
-          children: [(0, Br.jsx)("span", {
+          children: Wd("shootingLobby:waiting")
+        }), !Od && (0, Ed.jsxs)(Ed.Fragment, {
+          children: [(0, Ed.jsx)("span", {
             className: "ShootingLobbyCountdownLabel",
-            children: Zr("shootingLobby:startingIn")
-          }), (0, Br.jsx)("span", {
-            className: mr()("ShootingLobbyCountdownTime", {
-              Soon: Wr < 10
+            children: Wd("shootingLobby:startingIn")
+          }), (0, Ed.jsx)("span", {
+            className: od()("ShootingLobbyCountdownTime", {
+              Soon: Fd < 10
             }),
-            children: (0, Yr.c)(Wr)
+            children: (0, Td.d)(Fd)
           })]
         })]
       })
     }
 
-    function xS(rr) {
+    function NO(dd) {
       let {
-        team: Sr,
-        count: Qr,
-        cap: Zr,
-        mine: Wr
-      } = rr;
+        team: Od,
+        count: md,
+        cap: Wd,
+        mine: Fd
+      } = dd;
       const {
-        t: ar
-      } = (0, nr.E)();
-      return (0, Br.jsxs)("span", {
-        className: mr()("ShootingLobbyTeam", {
-          Mine: Wr,
-          Full: Qr >= Zr
+        t: Rd
+      } = (0, pd.G)();
+      return (0, Ed.jsxs)("span", {
+        className: od()("ShootingLobbyTeam", {
+          Mine: Fd,
+          Full: md >= Wd
         }),
-        style: Or(Sr, "tdm"),
-        children: [ar(Lr[Sr]), (0, Br.jsx)("span", {
+        style: xd(Od, "tdm"),
+        children: [Rd(Bd[Od]), (0, Ed.jsx)("span", {
           className: "ShootingLobbyTeamCount",
-          children: ar("shootingLobby:teamCount", {
-            count: Qr,
-            cap: Zr
+          children: Rd("shootingLobby:teamCount", {
+            count: md,
+            cap: Wd
           })
         })]
       })
     }
-    var mS = Qr(38075),
-      NS = Qr(1885),
-      US = Qr(2075);
-    const tS = "--cubeWarfareKillfeedOffset",
-      hS = (0, Zr.memo)((function(rr) {
+    var qO = md(38172),
+      HO = md(1890),
+      yO = md(2079);
+    const bO = "--cubeWarfareKillfeedOffset",
+      TO = (0, Wd.memo)((function(dd) {
         let {
-          wire: Sr,
-          endsAt: Qr,
-          leaderboard: Wr
-        } = rr;
+          wire: Od,
+          endsAt: md,
+          leaderboard: Fd
+        } = dd;
         const {
-          t: ar
-        } = (0, nr.E)(), {
-          isTouchScreen: jr
-        } = (0, br.n)(["isTouchScreen"]), [Ir, fr] = (0, Zr.useState)(null), [Er, pr] = (0, Zr.useState)(null), xr = (0, or.l)(Er, Ir, jr);
-        ! function(rr, Sr) {
-          (0, Zr.useLayoutEffect)((() => {
-            if (!rr || null === Sr) return;
-            let Qr = null;
-            const Zr = rr => {
-                Qr = rr, null === rr ? document.body.style.removeProperty(tS) : document.body.style.setProperty(tS, `${rr}px`)
+          t: Rd
+        } = (0, pd.G)(), {
+          isTouchScreen: Xd
+        } = (0, Zd.p)(["isTouchScreen"]), [Kd, hd] = (0, Wd.useState)(null), [vd, Qd] = (0, Wd.useState)(null), td = (0, Cd.l)(vd, Kd, Xd);
+        ! function(dd, Od) {
+          (0, Wd.useLayoutEffect)((() => {
+            if (!dd || null === Od) return;
+            let md = null;
+            const Wd = dd => {
+                md = dd, null === dd ? document.body.style.removeProperty(bO) : document.body.style.setProperty(bO, `${dd}px`)
               },
-              Wr = () => {
-                var Sr;
-                const Wr = document.querySelector(".InGameUi .Killfeed");
-                if (!Wr) return void Zr(null);
-                const ar = .3 * (0, NS.getRemInPx)(),
-                  jr = Wr.getBoundingClientRect().top - (null !== (Sr = Qr) && void 0 !== Sr ? Sr : ar);
-                Zr(Math.max(Math.ceil(ar), Math.ceil(rr.getBoundingClientRect().bottom + or.c - jr)))
+              Fd = () => {
+                var Od;
+                const Fd = document.querySelector(".InGameUi .Killfeed");
+                if (!Fd) return void Wd(null);
+                const Rd = .3 * (0, HO.getRemInPx)(),
+                  Xd = Fd.getBoundingClientRect().top - (null !== (Od = md) && void 0 !== Od ? Od : Rd);
+                Wd(Math.max(Math.ceil(Rd), Math.ceil(dd.getBoundingClientRect().bottom + Cd.d - Xd)))
               },
-              ar = new ResizeObserver(Wr);
-            ar.observe(rr);
-            const jr = document.querySelector(`.InGameUi .${or.e}`);
-            return jr && ar.observe(jr), Wr(), window.addEventListener("resize", Wr), () => {
-              ar.disconnect(), window.removeEventListener("resize", Wr), Zr(null)
+              Rd = new ResizeObserver(Fd);
+            Rd.observe(dd);
+            const Xd = document.querySelector(`.InGameUi .${Cd.h}`);
+            return Xd && Rd.observe(Xd), Fd(), window.addEventListener("resize", Fd), () => {
+              Rd.disconnect(), window.removeEventListener("resize", Fd), Wd(null)
             }
-          }), [rr, Sr])
-        }(Ir, xr);
-        const [, , mr, Nr, , Ur, tr, hr, zr, Yr, er] = Sr, Kr = Ur > 0 ? ar("cubeWarfareHud:firstTo", {
-          target: Ur
-        }) : ar("cubeWarfareHud:timeLeft");
-        return (0, Br.jsxs)("div", {
-          ref: fr,
+          }), [dd, Od])
+        }(Kd, td);
+        const [, , od, Nd, , qd, Hd, yd, bd, Td, Yd] = Od, gd = qd > 0 ? Rd("cubeWarfareHud:firstTo", {
+          target: qd
+        }) : Rd("cubeWarfareHud:timeLeft");
+        return (0, Ed.jsxs)("div", {
+          ref: hd,
           className: "CubeWarfareScoreBarContainer",
-          style: null === xr ? void 0 : {
-            top: xr
+          style: null === td ? void 0 : {
+            top: td
           },
-          children: [(0, Br.jsxs)("div", {
-            ref: pr,
+          children: [(0, Ed.jsxs)("div", {
+            ref: Qd,
             className: "CubeWarfareScoreBar",
-            children: ["tdm" === Yr[0] && (0, Br.jsx)(YS, {
-              myTeam: tr,
-              redScore: Yr[1],
-              blueScore: Yr[2],
-              leaderboard: Wr,
-              target: "diamonds" === Nr ? Ur : 0,
-              clock: (0, Br.jsx)(zS, {
-                endsAt: Qr,
-                label: Kr
+            children: ["tdm" === Td[0] && (0, Ed.jsx)(YO, {
+              myTeam: Hd,
+              redScore: Td[1],
+              blueScore: Td[2],
+              leaderboard: Fd,
+              target: "diamonds" === Nd ? qd : 0,
+              clock: (0, Ed.jsx)(pO, {
+                endsAt: md,
+                label: gd
               })
-            }), "ffa" === Yr[0] && (0, Br.jsx)(nS, {
-              myTeam: tr,
-              myScore: zr,
-              myRank: Yr[1],
-              playerCount: Yr[2],
-              leader: Yr[3],
-              second: Yr[4],
-              spectating: hr,
-              target: Ur,
-              clock: (0, Br.jsx)(zS, {
-                endsAt: Qr,
-                label: Kr
+            }), "ffa" === Td[0] && (0, Ed.jsx)(gO, {
+              myTeam: Hd,
+              myScore: bd,
+              myRank: Td[1],
+              playerCount: Td[2],
+              leader: Td[3],
+              second: Td[4],
+              spectating: yd,
+              target: qd,
+              clock: (0, Ed.jsx)(pO, {
+                endsAt: md,
+                label: gd
               })
             })]
-          }), null !== er && (0, Br.jsxs)("div", {
+          }), null !== Yd && (0, Ed.jsxs)("div", {
             className: "CubeWarfareScoreLine SmallTextBold",
-            children: [(0, Br.jsx)("span", {
-              children: ar("cubeWarfareHud:gungameKills", {
-                kills: er[0],
-                target: Ur
+            children: [(0, Ed.jsx)("span", {
+              children: Rd("cubeWarfareHud:gungameKills", {
+                kills: Yd[0],
+                target: qd
               })
-            }), "" !== er[2] && (0, Br.jsxs)(Br.Fragment, {
-              children: [(0, Br.jsx)("span", {
+            }), "" !== Yd[2] && (0, Ed.jsxs)(Ed.Fragment, {
+              children: [(0, Ed.jsx)("span", {
                 "aria-hidden": !0,
                 children: "\xb7"
-              }), (0, Br.jsx)("span", {
-                children: ar("cubeWarfareHud:nextWeapon")
-              }), (0, Br.jsx)("span", {
+              }), (0, Ed.jsx)("span", {
+                children: Rd("cubeWarfareHud:nextWeapon")
+              }), (0, Ed.jsx)("span", {
                 className: "CubeWarfareScoreLineItem",
-                children: (0, Br.jsx)(US.d, {
-                  itemName: er[2],
+                children: (0, Ed.jsx)(yO.c, {
+                  itemName: Yd[2],
                   amount: 0,
                   gunTransform: "none"
                 })
               })]
             })]
-          }), null === er && "diamonds" === Nr && (0, Br.jsxs)("div", {
+          }), null === Yd && "diamonds" === Nd && (0, Ed.jsxs)("div", {
             className: "CubeWarfareScoreLine SmallTextBold",
-            children: [(0, Br.jsx)("span", {
+            children: [(0, Ed.jsx)("span", {
               className: "CubeWarfareScoreLineItem",
-              children: (0, Br.jsx)(US.d, {
+              children: (0, Ed.jsx)(yO.c, {
                 itemName: "Diamond",
                 amount: 0
               })
-            }), (0, Br.jsx)("span", {
-              children: ar("cubeWarfareHud:collectDiamonds")
+            }), (0, Ed.jsx)("span", {
+              children: Rd("cubeWarfareHud:collectDiamonds")
             })]
-          }), null === er && "diamonds" !== Nr && "tdm" === mr && !hr && (0, Br.jsxs)("div", {
+          }), null === Yd && "diamonds" !== Nd && "tdm" === od && !yd && (0, Ed.jsxs)("div", {
             className: "CubeWarfareScoreLine SmallTextBold",
-            children: [(0, Br.jsx)("span", {
-              children: ar("cubeWarfareHud:yourScore")
-            }), (0, Br.jsx)("b", {
-              children: zr
+            children: [(0, Ed.jsx)("span", {
+              children: Rd("cubeWarfareHud:yourScore")
+            }), (0, Ed.jsx)("b", {
+              children: bd
             })]
           })]
         })
       }));
 
-    function zS(rr) {
+    function pO(dd) {
       let {
-        endsAt: Sr,
-        label: Qr
-      } = rr;
-      const Zr = (0, Yr.h)(Sr);
-      return (0, Br.jsxs)("div", {
+        endsAt: Od,
+        label: md
+      } = dd;
+      const Wd = (0, Td.h)(Od);
+      return (0, Ed.jsxs)("div", {
         className: "CubeWarfareClock",
-        children: [(0, Br.jsx)("div", {
-          className: mr()("CubeWarfareClockTime", {
-            Urgent: Zr < 60
+        children: [(0, Ed.jsx)("div", {
+          className: od()("CubeWarfareClockTime", {
+            Urgent: Wd < 60
           }),
-          children: (0, Yr.c)(Zr)
-        }), (0, Br.jsx)("div", {
+          children: (0, Td.d)(Wd)
+        }), (0, Ed.jsx)("div", {
           className: "CubeWarfareClockLabel",
-          children: Qr
+          children: md
         })]
       })
     }
 
-    function YS(rr) {
+    function YO(dd) {
       const {
-        t: Sr
-      } = (0, nr.E)(), Qr = Sr => rr.leaderboard.filter((rr => rr[2] === Sr)), Zr = {
+        t: Od
+      } = (0, pd.G)(), md = Od => dd.leaderboard.filter((dd => dd[2] === Od)), Wd = {
         team: "Red",
-        name: Sr(Lr.Red),
-        score: rr.redScore,
-        members: Qr("Red")
-      }, Wr = {
+        name: Od(Bd.Red),
+        score: dd.redScore,
+        members: md("Red")
+      }, Fd = {
         team: "Blue",
-        name: Sr(Lr.Blue),
-        score: rr.blueScore,
-        members: Qr("Blue")
-      }, [ar, jr] = "Blue" === rr.myTeam ? [Wr, Zr] : [Zr, Wr], Ir = (Qr, Zr) => (0, Br.jsxs)("div", {
-        className: mr()("CubeWarfareSide", Zr, `Team-${Qr.team}`, {
-          Mine: Qr.team === rr.myTeam
+        name: Od(Bd.Blue),
+        score: dd.blueScore,
+        members: md("Blue")
+      }, [Rd, Xd] = "Blue" === dd.myTeam ? [Fd, Wd] : [Wd, Fd], Kd = (md, Wd) => (0, Ed.jsxs)("div", {
+        className: od()("CubeWarfareSide", Wd, `Team-${md.team}`, {
+          Mine: md.team === dd.myTeam
         }),
-        style: Or(Qr.team, "tdm"),
-        children: [Qr.team === rr.myTeam && (0, Br.jsx)("span", {
+        style: xd(md.team, "tdm"),
+        children: [md.team === dd.myTeam && (0, Ed.jsx)("span", {
           className: "CubeWarfareYouTag",
-          children: Sr("shootingOverlays:you")
-        }), (0, Br.jsx)("div", {
+          children: Od("shootingOverlays:you")
+        }), (0, Ed.jsx)("div", {
           className: "CubeWarfareHeads",
-          children: Qr.members.map((rr => {
-            let [Sr, , , , , , Qr] = rr;
-            return (0, Br.jsx)("span", {
-              className: mr()("CubeWarfareHead", {
-                Dead: !Qr
+          children: md.members.map((dd => {
+            let [Od, , , , , , md] = dd;
+            return (0, Ed.jsx)("span", {
+              className: od()("CubeWarfareHead", {
+                Dead: !md
               }),
-              children: (0, Br.jsx)(Rr, {
-                playerId: Sr
+              children: (0, Ed.jsx)(rd, {
+                playerId: Od
               })
-            }, Sr)
+            }, Od)
           }))
-        }), (0, Br.jsxs)("div", {
+        }), (0, Ed.jsxs)("div", {
           className: "CubeWarfareSideText",
-          children: [(0, Br.jsx)("div", {
+          children: [(0, Ed.jsx)("div", {
             className: "CubeWarfareSideName",
-            children: (0, Br.jsx)("span", {
+            children: (0, Ed.jsx)("span", {
               className: "CubeWarfareSideLabel",
-              children: Qr.name
+              children: md.name
             })
-          }), (0, Br.jsx)("div", {
+          }), (0, Ed.jsx)("div", {
             className: "CubeWarfareSideScore SmallTextBold",
-            children: Qr.score
+            children: md.score
           })]
-        }), (0, Br.jsx)(eS, {
-          score: Qr.score,
-          target: rr.target
+        }), (0, Ed.jsx)(wO, {
+          score: md.score,
+          target: dd.target
         })]
       });
-      return (0, Br.jsxs)(Br.Fragment, {
-        children: [Ir(ar, "Left"), rr.clock, Ir(jr, "Right")]
+      return (0, Ed.jsxs)(Ed.Fragment, {
+        children: [Kd(Rd, "Left"), dd.clock, Kd(Xd, "Right")]
       })
     }
 
-    function nS(rr) {
-      var Sr;
+    function gO(dd) {
+      var Od;
       const {
-        t: Qr
-      } = (0, nr.E)(), Zr = qr(), Wr = null !== (Sr = rr.second) && void 0 !== Sr ? Sr : rr.spectating || rr.playerCount > 1 ? rr.leader : null;
-      return (0, Br.jsxs)(Br.Fragment, {
-        children: [!rr.spectating && (0, Br.jsxs)("div", {
-          className: mr()("CubeWarfareSide", "Left", "Mine", "Ffa"),
+        t: md
+      } = (0, pd.G)(), Wd = Ad(), Fd = null !== (Od = dd.second) && void 0 !== Od ? Od : dd.spectating || dd.playerCount > 1 ? dd.leader : null;
+      return (0, Ed.jsxs)(Ed.Fragment, {
+        children: [!dd.spectating && (0, Ed.jsxs)("div", {
+          className: od()("CubeWarfareSide", "Left", "Mine", "Ffa"),
           style: {
-            "--team": (0, er.hb)(rr.myTeam)
+            "--team": (0, Yd.bb)(dd.myTeam)
           },
-          children: [(0, Br.jsx)("span", {
+          children: [(0, Ed.jsx)("span", {
             className: "CubeWarfareYouTag",
-            children: Qr("shootingOverlays:you")
-          }), (0, Br.jsxs)("div", {
+            children: md("shootingOverlays:you")
+          }), (0, Ed.jsxs)("div", {
             className: "CubeWarfareSideText",
-            children: [(0, Br.jsx)("div", {
+            children: [(0, Ed.jsx)("div", {
               className: "CubeWarfareSideName",
-              children: (0, Br.jsx)("span", {
+              children: (0, Ed.jsx)("span", {
                 className: "CubeWarfareSideLabel",
-                children: Qr("cubeWarfareHud:rank", {
-                  rank: rr.myRank
+                children: md("cubeWarfareHud:rank", {
+                  rank: dd.myRank
                 })
               })
-            }), (0, Br.jsx)("div", {
+            }), (0, Ed.jsx)("div", {
               className: "CubeWarfareSideScore SmallTextBold",
-              children: rr.myScore
+              children: dd.myScore
             })]
-          }), (0, Br.jsx)(eS, {
-            score: rr.myScore,
-            target: rr.target
+          }), (0, Ed.jsx)(wO, {
+            score: dd.myScore,
+            target: dd.target
           })]
-        }), rr.clock, null !== Wr && (0, Br.jsxs)("div", {
-          className: mr()("CubeWarfareSide", "Right", "Ffa"),
-          children: [(0, Br.jsxs)("div", {
+        }), dd.clock, null !== Fd && (0, Ed.jsxs)("div", {
+          className: od()("CubeWarfareSide", "Right", "Ffa"),
+          children: [(0, Ed.jsxs)("div", {
             className: "CubeWarfareSideText",
-            children: [(0, Br.jsxs)("div", {
+            children: [(0, Ed.jsxs)("div", {
               className: "CubeWarfareSideName",
-              children: [(0, Br.jsx)("span", {
+              children: [(0, Ed.jsx)("span", {
                 className: "CubeWarfareSideLabel",
-                children: null !== rr.second ? Qr("cubeWarfareHud:second") : Qr("cubeWarfareHud:leader")
-              }), (0, Br.jsx)("span", {
+                children: null !== dd.second ? md("cubeWarfareHud:second") : md("cubeWarfareHud:leader")
+              }), (0, Ed.jsx)("span", {
                 className: "CubeWarfareSideWho",
-                children: Zr(Wr[1])
+                children: Wd(Fd[1])
               })]
-            }), (0, Br.jsx)("div", {
+            }), (0, Ed.jsx)("div", {
               className: "CubeWarfareSideScore SmallTextBold",
-              children: Wr[2]
+              children: Fd[2]
             })]
-          }), (0, Br.jsx)(eS, {
-            score: Wr[2],
-            target: rr.target
+          }), (0, Ed.jsx)(wO, {
+            score: Fd[2],
+            target: dd.target
           })]
         })]
       })
     }
 
-    function eS(rr) {
+    function wO(dd) {
       let {
-        score: Sr,
-        target: Qr
-      } = rr;
-      return (0, Br.jsx)("div", {
-        className: mr()("CubeWarfareStrip", {
-          Progress: Qr > 0
+        score: Od,
+        target: md
+      } = dd;
+      return (0, Ed.jsx)("div", {
+        className: od()("CubeWarfareStrip", {
+          Progress: md > 0
         }),
-        children: Qr > 0 && (0, Br.jsx)("i", {
+        children: md > 0 && (0, Ed.jsx)("i", {
           style: {
-            transform: `scaleX(${Math.min(1,Sr/Qr)})`
+            transform: `scaleX(${Math.min(1,Od/md)})`
           }
         })
       })
     }
-    const KS = (0, Zr.memo)((function(rr) {
+    const aO = (0, Wd.memo)((function(dd) {
       let {
-        wire: Sr
-      } = rr;
+        wire: Od
+      } = dd;
       const {
-        isTouchScreen: Qr
-      } = (0, br.n)(["isTouchScreen"]);
-      return Qr ? (0, Br.jsx)("div", {
+        isTouchScreen: md
+      } = (0, Zd.p)(["isTouchScreen"]);
+      return md ? (0, Ed.jsx)("div", {
         className: "CubeWarfarePerkColumnTouch",
-        children: (0, Br.jsx)(yS, {
-          wire: Sr,
+        children: (0, Ed.jsx)(EO, {
+          wire: Od,
           touch: !0
         })
-      }) : (0, Br.jsx)(Fr.d, {
+      }) : (0, Ed.jsx)(ld.h, {
         placement: "bottomLeft",
-        children: (0, Br.jsx)(yS, {
-          wire: Sr
+        children: (0, Ed.jsx)(EO, {
+          wire: Od
         })
       })
     }));
 
-    function yS(rr) {
+    function EO(dd) {
       let {
-        wire: Sr,
-        touch: Qr = !1
-      } = rr;
+        wire: Od,
+        touch: md = !1
+      } = dd;
       const {
-        t: Zr
-      } = (0, nr.E)(), Wr = Sr[11], ar = Sr[12], jr = ar.findIndex((rr => {
-        let [, Sr] = rr;
-        return Wr < Sr
+        t: Wd
+      } = (0, pd.G)(), Fd = Od[11], Rd = Od[12], Xd = Rd.findIndex((dd => {
+        let [, Od] = dd;
+        return Fd < Od
       }));
-      return (0, Br.jsxs)("div", {
+      return (0, Ed.jsxs)("div", {
         className: "CubeWarfarePerkColumn",
-        children: [(0, Br.jsxs)("div", {
+        children: [(0, Ed.jsxs)("div", {
           className: "CubeWarfarePerkPoints SmallTextBold",
-          children: [(0, Br.jsx)(Ur.c, {
+          children: [(0, Ed.jsx)(qd.c, {
             name: "crosshairs"
-          }), Wr]
-        }), ar.map(((rr, Sr) => {
-          let [Ir, fr, Er, pr, xr] = rr;
-          const Nr = Wr >= fr,
-            tr = 0 === Sr ? 0 : ar[Sr - 1][1],
-            hr = Nr ? 1 : Sr === jr ? Math.max(0, (Wr - tr) / (fr - tr)) : 0;
-          return (0, Br.jsxs)("div", {
-            className: mr()("CubeWarfarePerk", {
-              Active: xr,
-              Reached: Nr,
-              Next: Sr === jr
+          }), Fd]
+        }), Rd.map(((dd, Od) => {
+          let [Kd, hd, vd, Qd, td] = dd;
+          const Nd = Fd >= hd,
+            Hd = 0 === Od ? 0 : Rd[Od - 1][1],
+            yd = Nd ? 1 : Od === Xd ? Math.max(0, (Fd - Hd) / (hd - Hd)) : 0;
+          return (0, Ed.jsxs)("div", {
+            className: od()("CubeWarfarePerk", {
+              Active: td,
+              Reached: Nd,
+              Next: Od === Xd
             }),
-            children: [(0, Br.jsxs)("div", {
+            children: [(0, Ed.jsxs)("div", {
               className: "CubeWarfarePerkTile",
-              children: [!Nr && (0, Br.jsx)("div", {
+              children: [!Nd && (0, Ed.jsx)("div", {
                 className: "CubeWarfarePerkFill",
                 style: {
-                  transform: `scaleY(${hr})`
+                  transform: `scaleY(${yd})`
                 }
-              }), (0, Br.jsx)(Ur.c, {
-                name: pr || "lock"
+              }), (0, Ed.jsx)(qd.c, {
+                name: Qd || "lock"
               })]
-            }), (0, Br.jsxs)("div", {
+            }), (0, Ed.jsxs)("div", {
               className: "CubeWarfarePerkText SmallTextBold",
-              children: [(0, Br.jsx)("span", {
+              children: [(0, Ed.jsx)("span", {
                 className: "CubeWarfarePerkName",
-                children: Er || Zr("cubeWarfareHud:tier", {
-                  tier: Ir
+                children: vd || Wd("cubeWarfareHud:tier", {
+                  tier: Kd
                 })
-              }), (0, Br.jsxs)("small", {
-                children: [Nr && Zr(xr ? "cubeWarfareHud:active" : "cubeWarfareHud:noPerk"), !Nr && !Qr && Zr("cubeWarfareHud:toGo", {
-                  count: fr - Wr
-                }), !Nr && Qr && (0, Br.jsxs)(Br.Fragment, {
-                  children: [(0, Br.jsx)(Ur.c, {
+              }), (0, Ed.jsxs)("small", {
+                children: [Nd && Wd(td ? "cubeWarfareHud:active" : "cubeWarfareHud:noPerk"), !Nd && !md && Wd("cubeWarfareHud:toGo", {
+                  count: hd - Fd
+                }), !Nd && md && (0, Ed.jsxs)(Ed.Fragment, {
+                  children: [(0, Ed.jsx)(qd.c, {
                     name: "crosshairs"
-                  }), " ", fr]
+                  }), " ", hd]
                 })]
               })]
             })]
-          }, Ir)
+          }, Kd)
         }))]
       })
     }
 
-    function BS(rr) {
-      const [, Sr] = (0, Zr.useReducer)((rr => rr + 1), 0);
-      (0, Zr.useEffect)((() => {
-        const Qr = rr - performance.now();
-        if (0 === rr || Qr <= 0) return;
-        const Zr = window.setTimeout(Sr, Qr);
+    function JO(dd) {
+      const [, Od] = (0, Wd.useReducer)((dd => dd + 1), 0);
+      (0, Wd.useEffect)((() => {
+        const md = dd - performance.now();
+        if (0 === dd || md <= 0) return;
+        const Wd = window.setTimeout(Od, md);
         return () => {
-          window.clearTimeout(Zr)
+          window.clearTimeout(Wd)
         }
-      }), [rr])
+      }), [dd])
     }
-    const TS = ["", "", "cubeWarfareHud:doubleKill", "cubeWarfareHud:tripleKill", "cubeWarfareHud:quadKill", "cubeWarfareHud:rampage"];
+    const UO = ["", "", "cubeWarfareHud:doubleKill", "cubeWarfareHud:tripleKill", "cubeWarfareHud:quadKill", "cubeWarfareHud:rampage"];
 
-    function vS(rr) {
+    function xO(dd) {
       let {
-        store: Sr
-      } = rr;
-      const Qr = XS(Ar(Sr, "kill"), 2500),
-        Zr = qr();
-      return Qr ? (0, Br.jsx)(LS, {
-        victimName: Zr(Qr.wire[2]),
-        headshot: Qr.wire[4],
-        killsThisLife: Qr.wire[5],
-        gold: Qr.wire[6]
-      }, Qr.seq) : null
-    }
-
-    function OS(rr) {
-      let {
-        store: Sr
-      } = rr;
-      const Qr = XS(Ar(Sr, "tier"), 3500);
-      return Qr ? (0, Br.jsx)(lS, {
-        tier: Qr.wire[1],
-        perk: Qr.wire[2],
-        icon: Qr.wire[3]
-      }, Qr.seq) : null
+        store: Od
+      } = dd;
+      const md = uO(cd(Od, "kill"), 2500),
+        Wd = Ad();
+      return md ? (0, Ed.jsx)(SO, {
+        victimName: Wd(md.wire[2]),
+        headshot: md.wire[4],
+        killsThisLife: md.wire[5],
+        gold: md.wire[6]
+      }, md.seq) : null
     }
 
-    function LS(rr) {
+    function BO(dd) {
       let {
-        victimName: Sr,
-        headshot: Qr,
-        killsThisLife: Zr,
-        gold: Wr
-      } = rr;
+        store: Od
+      } = dd;
+      const md = uO(cd(Od, "tier"), 3500);
+      return md ? (0, Ed.jsx)(sO, {
+        tier: md.wire[1],
+        perk: md.wire[2],
+        icon: md.wire[3]
+      }, md.seq) : null
+    }
+
+    function SO(dd) {
+      let {
+        victimName: Od,
+        headshot: md,
+        killsThisLife: Wd,
+        gold: Fd
+      } = dd;
       const {
-        t: ar
-      } = (0, nr.E)(), jr = TS[Math.min(Zr, TS.length - 1)];
-      return (0, Br.jsxs)("div", {
+        t: Rd
+      } = (0, pd.G)(), Xd = UO[Math.min(Wd, UO.length - 1)];
+      return (0, Ed.jsxs)("div", {
         className: "CubeWarfareKillPop",
-        children: [jr && (0, Br.jsx)("div", {
+        children: [Xd && (0, Ed.jsx)("div", {
           className: "CubeWarfareMultiKill SmallTextBold",
-          children: ar(jr)
-        }), (0, Br.jsxs)("div", {
+          children: Rd(Xd)
+        }), (0, Ed.jsxs)("div", {
           className: "CubeWarfareKillLine SmallTextBold",
-          children: [(0, Br.jsx)("span", {
+          children: [(0, Ed.jsx)("span", {
             className: "CubeWarfareKillTag",
-            children: ar("cubeWarfareHud:eliminated")
-          }), (0, Br.jsx)("span", {
+            children: Rd("cubeWarfareHud:eliminated")
+          }), (0, Ed.jsx)("span", {
             className: "CubeWarfareKillName",
-            children: Sr
+            children: Od
           })]
-        }), (0, Br.jsxs)("div", {
+        }), (0, Ed.jsxs)("div", {
           className: "CubeWarfareKillRewards",
-          children: [Wr > 0 && (0, Br.jsxs)("span", {
+          children: [Fd > 0 && (0, Ed.jsxs)("span", {
             className: "CubeWarfareReward Gold SmallTextBold",
-            children: [`+${Wr}`, (0, Br.jsx)(Ur.c, {
+            children: [`+${Fd}`, (0, Ed.jsx)(qd.c, {
               name: "coins",
               className: "CubeWarfareCoin"
             })]
-          }), Qr && (0, Br.jsxs)("span", {
+          }), md && (0, Ed.jsxs)("span", {
             className: "CubeWarfareReward Headshot SmallTextBold",
-            children: [(0, Br.jsx)(Ur.c, {
+            children: [(0, Ed.jsx)(qd.c, {
               name: "crosshairs"
-            }), ar("shootingOverlays:headshot")]
+            }), Rd("shootingOverlays:headshot")]
           })]
         })]
       })
     }
 
-    function lS(rr) {
+    function sO(dd) {
       let {
-        tier: Sr,
-        perk: Qr,
-        icon: Zr
-      } = rr;
+        tier: Od,
+        perk: md,
+        icon: Wd
+      } = dd;
       const {
-        t: Wr
-      } = (0, nr.E)();
-      return (0, Br.jsxs)("div", {
+        t: Fd
+      } = (0, pd.G)();
+      return (0, Ed.jsxs)("div", {
         className: "CubeWarfareTierBanner",
-        children: [(0, Br.jsx)("div", {
+        children: [(0, Ed.jsx)("div", {
           className: "CubeWarfareTierIcon",
-          children: (0, Br.jsx)(Ur.c, {
-            name: Zr || "crosshairs"
+          children: (0, Ed.jsx)(qd.c, {
+            name: Wd || "crosshairs"
           })
-        }), (0, Br.jsxs)("div", {
-          children: [(0, Br.jsx)("div", {
+        }), (0, Ed.jsxs)("div", {
+          children: [(0, Ed.jsx)("div", {
             className: "CubeWarfareTierTitle",
-            children: Wr("cubeWarfareHud:tierReached", {
-              tier: Sr
+            children: Fd("cubeWarfareHud:tierReached", {
+              tier: Od
             })
-          }), (0, Br.jsx)("div", {
+          }), (0, Ed.jsx)("div", {
             className: "CubeWarfareTierPerk SmallTextBold",
-            children: Qr ? Wr("cubeWarfareHud:perkActive", {
-              perk: Qr
-            }) : Wr("cubeWarfareHud:noPerk")
+            children: md ? Fd("cubeWarfareHud:perkActive", {
+              perk: md
+            }) : Fd("cubeWarfareHud:noPerk")
           })]
         })]
       })
     }
 
-    function XS(rr, Sr) {
-      return BS(rr ? rr.at + Sr : 0), rr && performance.now() - rr.at < Sr ? rr : null
+    function uO(dd, Od) {
+      return JO(dd ? dd.at + Od : 0), dd && performance.now() - dd.at < Od ? dd : null
     }
-    var PS = Qr(3404);
+    var VO = md(3403);
 
-    function HS() {
-      var rr, Sr;
-      const Qr = null === (rr = (0, PS.l)("currencyAmounts")) || void 0 === rr || null === (Sr = rr.gold) || void 0 === Sr ? void 0 : Sr.amount,
-        [Wr, ar] = (0, Zr.useState)(0),
-        jr = (0, Zr.useRef)(Qr);
-      return (0, Zr.useEffect)((() => {
-        void 0 !== Qr && void 0 !== jr.current && Qr > jr.current && ar((rr => rr + 1)), jr.current = Qr
-      }), [Qr]), void 0 === Qr ? null : (0, Br.jsx)(Fr.d, {
+    function iO() {
+      var dd, Od;
+      const md = null === (dd = (0, VO.j)("currencyAmounts")) || void 0 === dd || null === (Od = dd.gold) || void 0 === Od ? void 0 : Od.amount,
+        [Fd, Rd] = (0, Wd.useState)(0),
+        Xd = (0, Wd.useRef)(md);
+      return (0, Wd.useEffect)((() => {
+        void 0 !== md && void 0 !== Xd.current && md > Xd.current && Rd((dd => dd + 1)), Xd.current = md
+      }), [md]), void 0 === md ? null : (0, Ed.jsx)(ld.h, {
         placement: "statBars",
-        children: (0, Br.jsxs)("div", {
-          className: mr()("CubeWarfareWallet SmallTextBold", {
-            Bump: Wr > 0
+        children: (0, Ed.jsxs)("div", {
+          className: od()("CubeWarfareWallet SmallTextBold", {
+            Bump: Fd > 0
           }),
-          children: [(0, Br.jsx)(Ur.c, {
+          children: [(0, Ed.jsx)(qd.c, {
             name: "coins",
             className: "CubeWarfareCoin"
-          }), Qr]
-        }, Wr)
+          }), md]
+        }, Fd)
       })
     }
 
-    function qS(rr) {
+    function AO(dd) {
       let {
-        endsAt: Sr
-      } = rr;
-      return 0 === Sr ? null : (0, Br.jsx)(gS, {
-        endsAt: Sr
-      }, Sr)
+        endsAt: Od
+      } = dd;
+      return 0 === Od ? null : (0, Ed.jsx)(GO, {
+        endsAt: Od
+      }, Od)
     }
 
-    function RS(rr) {
+    function rO(dd) {
       let {
-        endsAt: Sr
-      } = rr;
-      return BS(Sr), Sr <= performance.now() ? null : (0, Br.jsx)("div", {
+        endsAt: Od
+      } = dd;
+      return JO(Od), Od <= performance.now() ? null : (0, Ed.jsx)("div", {
         className: "CubeWarfareProtectionEdge"
       })
     }
 
-    function gS(rr) {
+    function GO(dd) {
       let {
-        endsAt: Sr
-      } = rr;
+        endsAt: Od
+      } = dd;
       const {
-        t: Qr
-      } = (0, nr.E)(), [Wr] = (0, Zr.useState)((() => Math.max(0, Sr - performance.now())));
-      return BS(Sr), Sr <= performance.now() ? null : (0, Br.jsxs)("div", {
+        t: md
+      } = (0, pd.G)(), [Fd] = (0, Wd.useState)((() => Math.max(0, Od - performance.now())));
+      return JO(Od), Od <= performance.now() ? null : (0, Ed.jsxs)("div", {
         className: "CubeWarfareProtection",
-        children: [(0, Br.jsx)(Ur.c, {
+        children: [(0, Ed.jsx)(qd.c, {
           name: "shield-halved",
           className: "CubeWarfareProtectionIcon"
-        }), (0, Br.jsxs)("div", {
+        }), (0, Ed.jsxs)("div", {
           className: "CubeWarfareProtectionText SmallTextBold",
-          children: [Qr("cubeWarfareHud:spawnProtected"), (0, Br.jsx)("small", {
-            children: Qr("cubeWarfareHud:spawnProtectedHint")
+          children: [md("cubeWarfareHud:spawnProtected"), (0, Ed.jsx)("small", {
+            children: md("cubeWarfareHud:spawnProtectedHint")
           })]
-        }), (0, Br.jsx)("div", {
+        }), (0, Ed.jsx)("div", {
           className: "CubeWarfareProtectionDrain",
           style: {
-            "--cubeWarfareDrainMs": `${Wr}ms`
+            "--cubeWarfareDrainMs": `${Fd}ms`
           }
         })]
       })
     }
 
-    function CS(rr) {
+    function nO(dd) {
       let {
-        place: Sr,
-        hidden: Qr = !1,
-        children: Zr
-      } = rr;
-      return "OverHotbar" !== Sr ? (0, Br.jsx)("div", {
-        className: mr()("CubeWarfareCentreSlot", Sr, {
-          Hidden: Qr
+        place: Od,
+        hidden: md = !1,
+        children: Wd
+      } = dd;
+      return "OverHotbar" !== Od ? (0, Ed.jsx)("div", {
+        className: od()("CubeWarfareCentreSlot", Od, {
+          Hidden: md
         }),
-        children: Zr
-      }) : (0, Br.jsx)(Fr.d, {
-        children: (0, Br.jsx)("div", {
+        children: Wd
+      }) : (0, Ed.jsx)(ld.h, {
+        children: (0, Ed.jsx)("div", {
           className: "CubeWarfareOverHotbar",
-          children: (0, Br.jsx)("div", {
+          children: (0, Ed.jsx)("div", {
             className: "CubeWarfareCentreSlot OverHotbar",
-            children: Zr
+            children: Wd
           })
         })
       })
     }
-    const MS = rr => {
-      var Sr;
-      const Qr = null === (Sr = rr.attributes.customAttributes) || void 0 === Sr ? void 0 : Sr.shotsLeft;
-      return "number" === typeof Qr && rr.clipSize ? (0, Br.jsx)(GS, {
-        item: rr,
-        shotsLeft: Qr,
-        clipSize: rr.clipSize
+    const LO = dd => {
+      var Od;
+      const md = null === (Od = dd.attributes.customAttributes) || void 0 === Od ? void 0 : Od.shotsLeft;
+      return "number" === typeof md && dd.clipSize ? (0, Ed.jsx)(PO, {
+        item: dd,
+        shotsLeft: md,
+        clipSize: dd.clipSize
       }) : null
     };
 
-    function GS(rr) {
+    function PO(dd) {
       let {
-        item: Sr,
-        shotsLeft: Qr,
-        clipSize: Wr
-      } = rr;
+        item: Od,
+        shotsLeft: md,
+        clipSize: Fd
+      } = dd;
       const {
-        t: ar
-      } = (0, nr.E)(), jr = function(rr, Sr, Qr) {
-        const [Wr, ar] = (0, Zr.useState)(null), jr = (0, Zr.useRef)(rr), Ir = (0, Zr.useRef)(0);
-        return (0, ur.c)("middleScreenBarInitiate", (rr => {
+        t: Rd
+      } = (0, pd.G)(), Xd = function(dd, Od, md) {
+        const [Fd, Rd] = (0, Wd.useState)(null), Xd = (0, Wd.useRef)(dd), Kd = (0, Wd.useRef)(0);
+        return (0, OO.f)("middleScreenBarInitiate", (dd => {
           let {
-            duration: Qr
-          } = rr;
-          Qr >= 400 && jr.current < Sr && ar({
-            key: ++Ir.current,
-            ms: Qr
+            duration: md
+          } = dd;
+          md >= 400 && Xd.current < Od && Rd({
+            key: ++Kd.current,
+            ms: md
           })
-        })), (0, ur.c)("middleScreenBarRemove", (() => {
-          ar(null)
-        })), (0, Zr.useEffect)((() => {
-          const Sr = rr > jr.current;
-          jr.current = rr, Sr && ar(null)
-        }), [rr]), (0, Zr.useEffect)((() => {
-          ar(null)
-        }), [Qr]), (0, Zr.useEffect)((() => {
-          if (!Wr) return;
-          const rr = window.setTimeout((() => {
-            ar(null)
-          }), Wr.ms);
+        })), (0, OO.f)("middleScreenBarRemove", (() => {
+          Rd(null)
+        })), (0, Wd.useEffect)((() => {
+          const Od = dd > Xd.current;
+          Xd.current = dd, Od && Rd(null)
+        }), [dd]), (0, Wd.useEffect)((() => {
+          Rd(null)
+        }), [md]), (0, Wd.useEffect)((() => {
+          if (!Fd) return;
+          const dd = window.setTimeout((() => {
+            Rd(null)
+          }), Fd.ms);
           return () => {
-            window.clearTimeout(rr)
+            window.clearTimeout(dd)
           }
-        }), [Wr]), Wr
-      }(Qr, Wr, Sr.instance), Ir = Qr <= Math.ceil(.25 * Wr);
-      return (0, Br.jsx)(Fr.d, {
+        }), [Fd]), Fd
+      }(md, Fd, Od.instance), Kd = md <= Math.ceil(.25 * Fd);
+      return (0, Ed.jsx)(ld.h, {
         placement: "statBars",
-        children: (0, Br.jsxs)("div", {
-          className: mr()("CubeWarfareAmmo", {
-            Low: Ir,
-            Reloading: null !== jr
+        children: (0, Ed.jsxs)("div", {
+          className: od()("CubeWarfareAmmo", {
+            Low: Kd,
+            Reloading: null !== Xd
           }),
-          children: [null === jr && (0, Br.jsxs)(Br.Fragment, {
-            children: [(0, Br.jsx)("span", {
+          children: [null === Xd && (0, Ed.jsxs)(Ed.Fragment, {
+            children: [(0, Ed.jsx)("span", {
               className: "CubeWarfareAmmoMag SmallTextBold",
-              children: Qr
-            }), (0, Br.jsx)("span", {
+              children: md
+            }), (0, Ed.jsx)("span", {
               className: "CubeWarfareAmmoClip SmallTextBold",
-              children: `/ ${Wr}`
+              children: `/ ${Fd}`
             })]
-          }), null !== jr && (0, Br.jsxs)("span", {
+          }), null !== Xd && (0, Ed.jsxs)("span", {
             className: "CubeWarfareAmmoReloading SmallTextBold",
-            children: [ar("cubeWarfareHud:reloading"), (0, Br.jsx)("i", {
+            children: [Rd("cubeWarfareHud:reloading"), (0, Ed.jsx)("i", {
               className: "CubeWarfareAmmoReloadBar",
               style: {
-                "--cubeWarfareReloadMs": `${jr.ms}ms`
+                "--cubeWarfareReloadMs": `${Xd.ms}ms`
               }
-            }, jr.key)]
-          }), (0, Br.jsx)("span", {
+            }, Xd.key)]
+          }), (0, Ed.jsx)("span", {
             className: "CubeWarfareAmmoGun",
-            children: (0, Br.jsx)(US.d, {
-              itemName: Sr.name,
+            children: (0, Ed.jsx)(yO.c, {
+              itemName: Od.name,
               amount: 0,
               gunTransform: "none"
             })
-          }), Ir && null === jr && (0, Br.jsx)(Dr.c, {
+          }), Kd && null === Xd && (0, Ed.jsx)(fd.b, {
             noaAction: "ReloadGun",
             className: "CubeWarfareAmmoKey",
             padHidesKey: !0
@@ -1391,671 +1391,671 @@ export const modules = {
       })
     }
 
-    function kS(rr) {
+    function zO(dd) {
       let {
-        store: Sr
-      } = rr;
-      const Qr = Ar(Sr, "hud"),
-        Wr = Ar(Sr, "leaderboard"),
-        ar = (0, Nr.f)("connectedGame", (rr => rr.replay));
-      ! function(rr) {
-        (0, Zr.useEffect)((() => {
-          const Sr = (0, mS.t)({
-              headshot: (Sr, Qr) => {
-                var Zr;
-                const Wr = performance.now(),
-                  ar = rr.get("killfeed").findLast((rr => {
+        store: Od
+      } = dd;
+      const md = cd(Od, "hud"),
+        Fd = cd(Od, "leaderboard"),
+        Rd = (0, Nd.f)("connectedGame", (dd => dd.replay));
+      ! function(dd) {
+        (0, Wd.useEffect)((() => {
+          const Od = (0, qO.l)({
+              headshot: (Od, md) => {
+                var Wd;
+                const Fd = performance.now(),
+                  Rd = dd.get("killfeed").findLast((dd => {
                     let {
-                      at: Zr,
-                      wire: ar
-                    } = rr;
-                    return ar[0] === Sr && ar[1] === Qr && Wr - Zr < 3e3
+                      at: Wd,
+                      wire: Rd
+                    } = dd;
+                    return Rd[0] === Od && Rd[1] === md && Fd - Wd < 3e3
                   }));
-                return null !== (Zr = null === ar || void 0 === ar ? void 0 : ar.wire[3]) && void 0 !== Zr && Zr
+                return null !== (Wd = null === Rd || void 0 === Rd ? void 0 : Rd.wire[3]) && void 0 !== Wd && Wd
               },
-              streakLabel: rr => `\xd7${rr}`
+              streakLabel: dd => `\xd7${dd}`
             }),
-            Qr = (0, mS.q)(MS);
+            md = (0, qO.j)(LO);
           return () => {
-            Sr(), Qr()
+            Od(), md()
           }
-        }), [rr])
-      }(Sr);
-      const jr = Qr.wire;
-      if (!jr || "match" !== jr[1] || ar) return null;
-      const Ir = !jr[7];
-      return (0, Br.jsxs)("div", {
+        }), [dd])
+      }(Od);
+      const Xd = md.wire;
+      if (!Xd || "match" !== Xd[1] || Rd) return null;
+      const Kd = !Xd[7];
+      return (0, Ed.jsxs)("div", {
         className: "CubeWarfareHud",
-        children: [(0, Br.jsx)(hS, {
-          wire: jr,
-          endsAt: Qr.endsAt,
-          leaderboard: Wr
-        }), Ir && (0, Br.jsxs)(Br.Fragment, {
-          children: [(0, Br.jsx)(KS, {
-            wire: jr
-          }), (0, Br.jsx)(AS, {
-            store: Sr,
-            protectionEndsAt: Qr.spawnProtectionEndsAt
-          }), (0, Br.jsx)(HS, {}), (0, Br.jsx)(RS, {
-            endsAt: Qr.spawnProtectionEndsAt
+        children: [(0, Ed.jsx)(TO, {
+          wire: Xd,
+          endsAt: md.endsAt,
+          leaderboard: Fd
+        }), Kd && (0, Ed.jsxs)(Ed.Fragment, {
+          children: [(0, Ed.jsx)(aO, {
+            wire: Xd
+          }), (0, Ed.jsx)(cO, {
+            store: Od,
+            protectionEndsAt: md.spawnProtectionEndsAt
+          }), (0, Ed.jsx)(iO, {}), (0, Ed.jsx)(rO, {
+            endsAt: md.spawnProtectionEndsAt
           })]
         })]
       })
     }
 
-    function AS(rr) {
+    function cO(dd) {
       let {
-        store: Sr,
-        protectionEndsAt: Qr
-      } = rr;
+        store: Od,
+        protectionEndsAt: md
+      } = dd;
       const {
-        isTouchScreen: Zr
-      } = (0, br.n)(["isTouchScreen"]), Wr = (0, ur.g)("aimingOverlay", "none"), ar = (0, Br.jsx)(qS, {
-        endsAt: Qr
-      }), jr = (0, Br.jsx)(OS, {
-        store: Sr
-      }), Ir = (0, Br.jsx)(vS, {
-        store: Sr
+        isTouchScreen: Wd
+      } = (0, Zd.p)(["isTouchScreen"]), Fd = (0, OO.i)("aimingOverlay", "none"), Rd = (0, Ed.jsx)(AO, {
+        endsAt: md
+      }), Xd = (0, Ed.jsx)(BO, {
+        store: Od
+      }), Kd = (0, Ed.jsx)(xO, {
+        store: Od
       });
-      if (!Zr) return (0, Br.jsxs)(CS, {
+      if (!Wd) return (0, Ed.jsxs)(nO, {
         place: "OverHotbar",
-        children: [ar, jr, Ir]
+        children: [Rd, Xd, Kd]
       });
-      const fr = "sniper" === Wr;
-      return (0, Br.jsxs)(Br.Fragment, {
-        children: [(0, Br.jsxs)(CS, {
+      const hd = "sniper" === Fd;
+      return (0, Ed.jsxs)(Ed.Fragment, {
+        children: [(0, Ed.jsxs)(nO, {
           place: "AboveCrosshair",
-          hidden: fr,
-          children: [ar, Ir]
-        }), (0, Br.jsx)(CS, {
+          hidden: hd,
+          children: [Rd, Kd]
+        }), (0, Ed.jsx)(nO, {
           place: "BelowCrosshair",
-          hidden: fr,
-          children: jr
+          hidden: hd,
+          children: Xd
         })]
       })
     }
-    var VS = Qr(360);
-    const iS = 2 * Math.PI * 19;
+    var jO = md(387);
+    const DO = 2 * Math.PI * 19;
 
-    function wS(rr) {
-      var Sr, Qr;
+    function eO(dd) {
+      var Od, md;
       let {
-        store: Wr,
-        variation: ar,
-        state: jr
-      } = rr;
+        store: Fd,
+        variation: Rd,
+        state: Xd
+      } = dd;
       const {
-        t: Ir
-      } = (0, nr.E)(), fr = Ar(Wr, "death"), Er = Ar(Wr, "leaderboard"), pr = qr(), xr = (0, Zr.useRef)(performance.now()), mr = (0, Zr.useRef)(jr.alive);
-      !jr.alive && mr.current && (xr.current = performance.now()), mr.current = jr.alive;
-      const Nr = (0, Zr.useRef)(null);
-      fr && fr.at >= xr.current - 3e3 && (Nr.current = {
-        diedAt: xr.current,
-        wire: fr.wire
+        t: Kd
+      } = (0, pd.G)(), hd = cd(Fd, "death"), vd = cd(Fd, "leaderboard"), Qd = Ad(), td = (0, Wd.useRef)(performance.now()), od = (0, Wd.useRef)(Xd.alive);
+      !Xd.alive && od.current && (td.current = performance.now()), od.current = Xd.alive;
+      const Nd = (0, Wd.useRef)(null);
+      hd && hd.at >= td.current - 3e3 && (Nd.current = {
+        diedAt: td.current,
+        wire: hd.wire
       });
-      const hr = (null === (Sr = Nr.current) || void 0 === Sr ? void 0 : Sr.diedAt) === xr.current ? Nr.current.wire : null,
-        [, zr, Yr, er, Kr, yr, Or, Lr, lr] = null !== hr && void 0 !== hr ? hr : [],
-        Xr = "player" === zr && "" !== Yr,
-        Pr = null === (Qr = Er.find((rr => rr[0] === Yr))) || void 0 === Qr ? void 0 : Qr[2];
-      return (0, Br.jsxs)("div", {
+      const yd = (null === (Od = Nd.current) || void 0 === Od ? void 0 : Od.diedAt) === td.current ? Nd.current.wire : null,
+        [, bd, Td, Yd, gd, wd, xd, Bd, Sd] = null !== yd && void 0 !== yd ? yd : [],
+        sd = "player" === bd && "" !== Td,
+        ud = null === (md = vd.find((dd => dd[0] === Td))) || void 0 === md ? void 0 : md[2];
+      return (0, Ed.jsxs)("div", {
         className: "ShootingDeathCard",
         style: {
-          "--killer": Xr && Pr ? vr(Pr, ar) : void 0
+          "--killer": sd && ud ? Ud(ud, Rd) : void 0
         },
-        children: [(0, Br.jsxs)("div", {
+        children: [(0, Ed.jsxs)("div", {
           className: "ShootingDeathKiller",
-          children: [Xr && (0, Br.jsx)("div", {
+          children: [sd && (0, Ed.jsx)("div", {
             className: "ShootingDeathHead",
-            children: (0, Br.jsx)(Rr, {
-              playerId: Yr
+            children: (0, Ed.jsx)(rd, {
+              playerId: Td
             })
-          }), !Xr && (0, Br.jsx)("div", {
+          }), !sd && (0, Ed.jsx)("div", {
             className: "ShootingDeathHead ShootingDeathSkull",
-            children: (0, Br.jsx)(Ur.c, {
+            children: (0, Ed.jsx)(qd.c, {
               name: "skull"
             })
-          }), (0, Br.jsxs)("div", {
+          }), (0, Ed.jsxs)("div", {
             className: "ShootingDeathWho",
-            children: [Xr && (0, Br.jsxs)(Br.Fragment, {
-              children: [(0, Br.jsx)("div", {
+            children: [sd && (0, Ed.jsxs)(Ed.Fragment, {
+              children: [(0, Ed.jsx)("div", {
                 className: "ShootingDeathEyebrow SmallTextBold",
-                children: Ir(`${Tr}killedBy`)
-              }), (0, Br.jsx)("div", {
+                children: Kd(`${Jd}killedBy`)
+              }), (0, Ed.jsx)("div", {
                 className: "ShootingDeathName FullyFancyText",
-                children: pr(null !== er && void 0 !== er ? er : "")
+                children: Qd(null !== Yd && void 0 !== Yd ? Yd : "")
               })]
-            }), !Xr && (0, Br.jsx)("div", {
+            }), !sd && (0, Ed.jsx)("div", {
               className: "ShootingDeathName FullyFancyText",
-              children: Ir(cS(zr))
-            }), Kr && (0, Br.jsxs)("div", {
+              children: Kd(IO(bd))
+            }), gd && (0, Ed.jsxs)("div", {
               className: "ShootingDeathWeapon SmallTextBold",
-              children: [(0, Br.jsx)("span", {
+              children: [(0, Ed.jsx)("span", {
                 className: "ShootingDeathGun",
-                children: (0, Br.jsx)(US.d, {
-                  itemName: Kr,
+                children: (0, Ed.jsx)(yO.c, {
+                  itemName: gd,
                   amount: 0,
                   gunTransform: "none"
                 })
-              }), (0, Br.jsx)("span", {
-                children: Kr
-              }), yr && (0, Br.jsxs)("span", {
+              }), (0, Ed.jsx)("span", {
+                children: gd
+              }), wd && (0, Ed.jsxs)("span", {
                 className: "ShootingDeathHeadshot",
-                children: [(0, Br.jsx)(Ur.c, {
+                children: [(0, Ed.jsx)(qd.c, {
                   name: "crosshairs"
-                }), " ", Ir(`${Tr}headshot`)]
+                }), " ", Kd(`${Jd}headshot`)]
               })]
             })]
-          }), (0, Br.jsx)(FS, {
-            secondsLeft: jr.secondsLeft,
-            totalSeconds: jr.totalSeconds,
-            alive: jr.alive
+          }), (0, Ed.jsx)(lO, {
+            secondsLeft: Xd.secondsLeft,
+            totalSeconds: Xd.totalSeconds,
+            alive: Xd.alive
           })]
-        }), hr && (0, Br.jsxs)("div", {
+        }), yd && (0, Ed.jsxs)("div", {
           className: "ShootingDeathLife",
-          children: [(0, Br.jsx)(gr, {
-            value: String(Or),
-            label: Ir(`${Tr}killsThisLife`)
-          }), (0, Br.jsx)(gr, {
+          children: [(0, Ed.jsx)(Gd, {
+            value: String(xd),
+            label: Kd(`${Jd}killsThisLife`)
+          }), (0, Ed.jsx)(Gd, {
             icon: "crosshairs",
-            value: String(Lr),
-            label: Ir(`${Tr}streakPoints`)
-          }), (0, Br.jsx)(gr, {
+            value: String(Bd),
+            label: Kd(`${Jd}streakPoints`)
+          }), (0, Ed.jsx)(Gd, {
             icon: "coins",
-            value: `+${lr}`,
-            label: Ir(`${Tr}goldEarned`),
+            value: `+${Sd}`,
+            label: Kd(`${Jd}goldEarned`),
             gold: !0
           })]
-        }), (0, Br.jsxs)("div", {
+        }), (0, Ed.jsxs)("div", {
           className: "ShootingDeathActions",
-          children: [(0, Br.jsx)(tr.h, {
+          children: [(0, Ed.jsx)(Hd.g, {
             className: "ShootingDeathLoadout",
             onClick: () => {
-              br.c.set({
-                openEverythingMenuName: VS.q.SHOP
+              Zd.e.set({
+                openEverythingMenuName: jO.m.SHOP
               })
             },
             touchPressOn: "pointerup",
-            children: (0, Br.jsxs)("span", {
+            children: (0, Ed.jsxs)("span", {
               className: "ShootingDeathLoadoutText",
-              children: [Ir(`${Tr}changeLoadout`), (0, Br.jsx)(Dr.c, {
+              children: [Kd(`${Jd}changeLoadout`), (0, Ed.jsx)(fd.b, {
                 noaAction: "OpenShop",
                 padHidesKey: !0
               })]
             })
-          }), (0, Br.jsx)("div", {
+          }), (0, Ed.jsx)("div", {
             className: "ShootingDeathStatus FullyFancyText",
-            children: jr.status
+            children: Xd.status
           })]
         })]
       })
     }
 
-    function cS(rr) {
-      switch (rr) {
+    function IO(dd) {
+      switch (dd) {
         case "self":
-          return `${Tr}diedSelf`;
+          return `${Jd}diedSelf`;
         case "void":
-          return `${Tr}diedVoid`;
+          return `${Jd}diedVoid`;
         default:
           return "respawnPage:youDied"
       }
     }
 
-    function FS(rr) {
+    function lO(dd) {
       let {
-        secondsLeft: Sr,
-        totalSeconds: Qr,
-        alive: Zr
-      } = rr;
-      const Wr = Zr || Sr <= 0,
-        ar = Qr > 0 ? Math.min(1, Sr / Qr) : 0;
-      return (0, Br.jsxs)("div", {
+        secondsLeft: Od,
+        totalSeconds: md,
+        alive: Wd
+      } = dd;
+      const Fd = Wd || Od <= 0,
+        Rd = md > 0 ? Math.min(1, Od / md) : 0;
+      return (0, Ed.jsxs)("div", {
         className: "ShootingDeathRing",
-        children: [(0, Br.jsxs)("svg", {
+        children: [(0, Ed.jsxs)("svg", {
           viewBox: "0 0 44 44",
-          children: [(0, Br.jsx)("circle", {
+          children: [(0, Ed.jsx)("circle", {
             className: "ShootingDeathRingTrack",
             cx: "22",
             cy: "22",
             r: 19
-          }), (0, Br.jsx)("circle", {
+          }), (0, Ed.jsx)("circle", {
             className: "ShootingDeathRingFill",
             cx: "22",
             cy: "22",
             r: 19,
-            strokeDasharray: iS,
-            strokeDashoffset: iS * (1 - (Wr ? 0 : ar))
+            strokeDasharray: DO,
+            strokeDashoffset: DO * (1 - (Fd ? 0 : Rd))
           })]
-        }), (0, Br.jsxs)("b", {
+        }), (0, Ed.jsxs)("b", {
           className: "FullyFancyText",
-          children: [Wr && (0, Br.jsx)(Ur.c, {
+          children: [Fd && (0, Ed.jsx)(qd.c, {
             name: "check"
-          }), !Wr && Sr]
+          }), !Fd && Od]
         })]
       })
     }
-    const oS = [1, 0, 2],
-      bS = [`${Tr}place1`, `${Tr}place2`, `${Tr}place3`],
-      JS = [`${Tr}place1Short`, `${Tr}place2Short`, `${Tr}place3Short`],
-      DS = {
-        streak: `${Tr}reasonTimeUp_streak`,
-        diamonds: `${Tr}reasonTimeUp_diamonds`,
-        kills: `${Tr}reasonTimeUp_kills`
+    const CO = [1, 0, 2],
+      ZO = [`${Jd}place1`, `${Jd}place2`, `${Jd}place3`],
+      kO = [`${Jd}place1Short`, `${Jd}place2Short`, `${Jd}place3Short`],
+      fO = {
+        streak: `${Jd}reasonTimeUp_streak`,
+        diamonds: `${Jd}reasonTimeUp_diamonds`,
+        kills: `${Jd}reasonTimeUp_kills`
       },
-      dS = {
+      MO = {
         streak: null,
-        diamonds: `${Tr}reasonTarget_diamonds`,
-        kills: `${Tr}reasonTarget_kills`
+        diamonds: `${Jd}reasonTarget_diamonds`,
+        kills: `${Jd}reasonTarget_kills`
       };
 
-    function sS(rr) {
+    function dm(dd) {
       let {
-        store: Sr
-      } = rr;
-      const Qr = Ar(Sr, "roundEnd"),
-        Zr = Ar(Sr, "hud").wire,
-        Wr = (0, Nr.j)("localPlayerAlive"),
-        ar = (0, Yr.h)(Qr.lobbyAt),
-        jr = (0, Nr.f)("connectedGame", (rr => rr.replay));
-      return "roundEnd" !== Qr.wire[0] || !Zr || !Wr || ar <= 0 || jr ? null : (0, Br.jsx)(uS, {
-        wire: Qr.wire,
-        hud: Zr,
-        lobbyAt: Qr.lobbyAt,
-        secondsLeft: ar
-      }, Qr.lobbyAt)
+        store: Od
+      } = dd;
+      const md = cd(Od, "roundEnd"),
+        Wd = cd(Od, "hud").wire,
+        Fd = (0, Nd.h)("localPlayerAlive"),
+        Rd = (0, Td.h)(md.lobbyAt),
+        Xd = (0, Nd.f)("connectedGame", (dd => dd.replay));
+      return "roundEnd" !== md.wire[0] || !Wd || !Fd || Rd <= 0 || Xd ? null : (0, Ed.jsx)(Om, {
+        wire: md.wire,
+        hud: Wd,
+        lobbyAt: md.lobbyAt,
+        secondsLeft: Rd
+      }, md.lobbyAt)
     }
-    const uS = (0, Zr.memo)((function(rr) {
+    const Om = (0, Wd.memo)((function(dd) {
       let {
-        wire: Sr,
-        hud: Qr,
-        lobbyAt: Wr,
-        secondsLeft: ar
-      } = rr;
+        wire: Od,
+        hud: md,
+        lobbyAt: Fd,
+        secondsLeft: Rd
+      } = dd;
       const {
-        t: jr
-      } = (0, nr.E)(), [Ir] = (0, Zr.useState)((() => Math.max(0, Wr - performance.now()))), fr = qr(), [, Er, pr, xr, , Nr, Ur, tr, hr, zr, , Yr, er, Kr, yr, vr, lr, Xr] = Sr, [, , Pr, Rr, , Cr, Mr, Gr] = Qr, kr = "tdm" === Pr, Ar = rr => rr === Mr ? jr(`${Tr}teamYours`, {
-        team: jr(Lr[rr])
-      }) : jr(Lr[rr]);
-      return (0, Br.jsxs)("div", {
-        className: mr()("ShootingResults", "win" === Er ? "Won" : "Lost"),
+        t: Xd
+      } = (0, pd.G)(), [Kd] = (0, Wd.useState)((() => Math.max(0, Fd - performance.now()))), hd = Ad(), [, vd, Qd, td, , Nd, qd, Hd, yd, bd, , Td, Yd, gd, wd, Ud, Sd, sd] = Od, [, , ud, rd, , nd, Ld, Pd] = md, zd = "tdm" === ud, cd = dd => dd === Ld ? Xd(`${Jd}teamYours`, {
+        team: Xd(Bd[dd])
+      }) : Xd(Bd[dd]);
+      return (0, Ed.jsxs)("div", {
+        className: od()("ShootingResults", "win" === vd ? "Won" : "Lost"),
         style: {
-          "--lobbyMs": `${Xr}ms`,
-          "--lobbyElapsedMs": `${Math.max(0,Xr-Ir)}ms`
+          "--lobbyMs": `${sd}ms`,
+          "--lobbyElapsedMs": `${Math.max(0,sd-Kd)}ms`
         },
-        children: [(0, Br.jsx)("div", {
+        children: [(0, Ed.jsx)("div", {
           className: "ShootingResultsTitle FullyFancyText",
-          children: rQ(jr, Sr, kr, Gr, fr)
-        }), (0, Br.jsxs)("div", {
+          children: mm(Xd, Od, zd, Pd, hd)
+        }), (0, Ed.jsxs)("div", {
           className: "ShootingResultsScore FullyFancyText",
-          children: [kr && (0, Br.jsxs)(Br.Fragment, {
-            children: [(0, Br.jsx)("span", {
+          children: [zd && (0, Ed.jsxs)(Ed.Fragment, {
+            children: [(0, Ed.jsx)("span", {
               className: "ShootingResultsTeam",
-              children: Ar("Red")
-            }), (0, Br.jsx)("b", {
-              style: Or("Red", "tdm"),
-              children: tr
-            }), (0, Br.jsx)("span", {
+              children: cd("Red")
+            }), (0, Ed.jsx)("b", {
+              style: xd("Red", "tdm"),
+              children: Hd
+            }), (0, Ed.jsx)("span", {
               className: "ShootingResultsDash",
               children: "\u2013"
-            }), (0, Br.jsx)("b", {
-              style: Or("Blue", "tdm"),
-              children: hr
-            }), (0, Br.jsx)("span", {
+            }), (0, Ed.jsx)("b", {
+              style: xd("Blue", "tdm"),
+              children: yd
+            }), (0, Ed.jsx)("span", {
               className: "ShootingResultsTeam",
-              children: Ar("Blue")
+              children: cd("Blue")
             })]
-          }), !kr && ("win" === Er || "" !== Nr) && (0, Br.jsxs)(Br.Fragment, {
-            children: [(0, Br.jsx)("span", {
+          }), !zd && ("win" === vd || "" !== Nd) && (0, Ed.jsxs)(Ed.Fragment, {
+            children: [(0, Ed.jsx)("span", {
               className: "ShootingResultsTeam",
-              children: "win" === Er ? jr(`${Tr}youWonWith`) : jr(`${Tr}playerWonWith`, {
-                name: fr(Nr)
+              children: "win" === vd ? Xd(`${Jd}youWonWith`) : Xd(`${Jd}playerWonWith`, {
+                name: hd(Nd)
               })
-            }), (0, Br.jsx)("b", {
-              style: Or(xr, "ffa"),
-              children: zr
+            }), (0, Ed.jsx)("b", {
+              style: xd(td, "ffa"),
+              children: bd
             })]
           })]
-        }), (0, Br.jsx)("div", {
+        }), (0, Ed.jsx)("div", {
           className: "ShootingResultsWhy SmallTextBold",
-          children: SQ(jr, Ur, kr, Hr(Rr), Cr)
-        }), Yr.length > 0 && (0, Br.jsx)("div", {
+          children: Wm(Xd, qd, zd, Vd(rd), nd)
+        }), Td.length > 0 && (0, Ed.jsx)("div", {
           className: "ShootingResultsPodium",
-          children: oS.filter((rr => rr < Yr.length)).map((rr => (0, Br.jsx)(QQ, {
-            entry: Yr[rr],
-            place: rr,
-            mvp: Yr[rr][0] === er,
-            tdm: kr
-          }, rr)))
-        }), !Gr && (0, Br.jsxs)("div", {
+          children: CO.filter((dd => dd < Td.length)).map((dd => (0, Ed.jsx)(Fm, {
+            entry: Td[dd],
+            place: dd,
+            mvp: Td[dd][0] === Yd,
+            tdm: zd
+          }, dd)))
+        }), !Pd && (0, Ed.jsxs)("div", {
           className: "ShootingResultsYou",
-          children: [(0, Br.jsx)(gr, {
-            value: String(Kr),
-            label: jr(`${Tr}kills`)
-          }), (0, Br.jsx)(gr, {
-            value: String(yr),
-            label: jr(`${Tr}deaths`)
-          }), (0, Br.jsx)(gr, {
+          children: [(0, Ed.jsx)(Gd, {
+            value: String(gd),
+            label: Xd(`${Jd}kills`)
+          }), (0, Ed.jsx)(Gd, {
+            value: String(wd),
+            label: Xd(`${Jd}deaths`)
+          }), (0, Ed.jsx)(Gd, {
             icon: "crosshairs",
-            value: String(vr),
-            label: jr(`${Tr}bestStreak`)
-          }), (0, Br.jsx)(gr, {
+            value: String(Ud),
+            label: Xd(`${Jd}bestStreak`)
+          }), (0, Ed.jsx)(Gd, {
             icon: "coins",
-            value: `+${lr}`,
-            label: jr(`${Tr}goldEarned`),
+            value: `+${Sd}`,
+            label: Xd(`${Jd}goldEarned`),
             gold: !0
           })]
-        }), (0, Br.jsxs)("div", {
+        }), (0, Ed.jsxs)("div", {
           className: "ShootingResultsNext SmallTextBold",
-          children: [(0, Br.jsx)("span", {
-            children: jr(`${Tr}backToLobby`, {
-              seconds: String(ar)
+          children: [(0, Ed.jsx)("span", {
+            children: Xd(`${Jd}backToLobby`, {
+              seconds: String(Rd)
             })
-          }), (0, Br.jsx)("span", {
+          }), (0, Ed.jsx)("span", {
             className: "ShootingResultsBar",
-            children: (0, Br.jsx)("i", {})
+            children: (0, Ed.jsx)("i", {})
           })]
         })]
       })
     }));
 
-    function rQ(rr, Sr, Qr, Zr, Wr) {
-      const [, ar, jr, Ir, , fr] = Sr;
-      return Zr && Qr ? rr(`${Tr}teamWins`, {
-        team: Xr(Ir) ? rr(Lr[Ir]) : Ir
-      }) : Zr ? "" === fr ? rr(`${Tr}matchOver`) : rr(`${Tr}playerWins`, {
-        name: Wr(fr)
-      }) : "win" === ar ? rr(`${Tr}victory`) : Qr || 0 === jr ? rr(`${Tr}defeat`) : jr <= bS.length ? rr(bS[jr - 1]) : rr(`${Tr}placeNth`, {
-        place: String(jr)
+    function mm(dd, Od, md, Wd, Fd) {
+      const [, Rd, Xd, Kd, , hd] = Od;
+      return Wd && md ? dd(`${Jd}teamWins`, {
+        team: sd(Kd) ? dd(Bd[Kd]) : Kd
+      }) : Wd ? "" === hd ? dd(`${Jd}matchOver`) : dd(`${Jd}playerWins`, {
+        name: Fd(hd)
+      }) : "win" === Rd ? dd(`${Jd}victory`) : md || 0 === Xd ? dd(`${Jd}defeat`) : Xd <= ZO.length ? dd(ZO[Xd - 1]) : dd(`${Jd}placeNth`, {
+        place: String(Xd)
       })
     }
 
-    function SQ(rr, Sr, Qr, Zr, Wr) {
-      switch (Sr) {
+    function Wm(dd, Od, md, Wd, Fd) {
+      switch (Od) {
         case "timeUp":
-          return rr(DS[Zr]);
+          return dd(fO[Wd]);
         case "target": {
-          const Sr = dS[Zr];
-          return Sr && Wr > 0 ? rr(Sr, {
-            target: String(Wr)
-          }) : rr(`${Tr}reasonTarget`)
+          const Od = MO[Wd];
+          return Od && Fd > 0 ? dd(Od, {
+            target: String(Fd)
+          }) : dd(`${Jd}reasonTarget`)
         }
         case "lastTeam":
-          return rr(Qr ? `${Tr}reasonLastTeam` : `${Tr}reasonLastPlayer`)
+          return dd(md ? `${Jd}reasonLastTeam` : `${Jd}reasonLastPlayer`)
       }
     }
 
-    function QQ(rr) {
+    function Fm(dd) {
       let {
-        entry: Sr,
-        place: Qr,
-        mvp: Zr,
-        tdm: Wr
-      } = rr;
+        entry: Od,
+        place: md,
+        mvp: Wd,
+        tdm: Fd
+      } = dd;
       const {
-        t: ar
-      } = (0, nr.E)(), jr = qr(), [Ir, fr, Er, pr, xr] = Sr, tr = (0, Nr.j)("players").localId;
-      return (0, Br.jsxs)("div", {
-        className: mr()("ShootingPodiumCard", `Place${Qr+1}`, {
-          Mvp: Zr,
-          Mine: Ir === tr,
-          Team: Wr
+        t: Rd
+      } = (0, pd.G)(), Xd = Ad(), [Kd, hd, vd, Qd, td] = Od, Hd = (0, Nd.h)("players").localId;
+      return (0, Ed.jsxs)("div", {
+        className: od()("ShootingPodiumCard", `Place${md+1}`, {
+          Mvp: Wd,
+          Mine: Kd === Hd,
+          Team: Fd
         }),
-        style: Wr ? Or(Er, "tdm") : void 0,
-        children: [Zr && (0, Br.jsx)("span", {
+        style: Fd ? xd(vd, "tdm") : void 0,
+        children: [Wd && (0, Ed.jsx)("span", {
           className: "ShootingPodiumCrown",
-          children: (0, Br.jsx)(Ur.c, {
+          children: (0, Ed.jsx)(qd.c, {
             name: "crown"
           })
-        }), (0, Br.jsx)("div", {
+        }), (0, Ed.jsx)("div", {
           className: "ShootingPodiumHead",
-          children: (0, Br.jsx)(Rr, {
-            playerId: Ir
+          children: (0, Ed.jsx)(rd, {
+            playerId: Kd
           })
-        }), (0, Br.jsxs)("div", {
+        }), (0, Ed.jsxs)("div", {
           className: "ShootingPodiumPlace SmallTextBold",
-          children: [ar(JS[Qr]), Zr && ` \xb7 ${ar(`${Tr}mvp`)}`]
-        }), (0, Br.jsx)("div", {
+          children: [Rd(kO[md]), Wd && ` \xb7 ${Rd(`${Jd}mvp`)}`]
+        }), (0, Ed.jsx)("div", {
           className: "ShootingPodiumName SmallTextBold",
-          children: jr(fr)
-        }), (0, Br.jsx)("div", {
+          children: Xd(hd)
+        }), (0, Ed.jsx)("div", {
           className: "ShootingPodiumStats SmallTextBold",
-          children: ar(`${Tr}podiumStats`, {
-            kills: String(pr),
-            score: String(xr)
+          children: Rd(`${Jd}podiumStats`, {
+            kills: String(Qd),
+            score: String(td)
           })
         })]
       })
     }
 
-    function ZQ(rr) {
-      var Sr, Qr;
+    function Rm(dd) {
+      var Od, md;
       let {
-        store: Wr,
-        variation: ar
-      } = rr;
-      const jr = "lobby" !== (null !== (Sr = null === (Qr = Ar(Wr, "hud").wire) || void 0 === Qr ? void 0 : Qr[1]) && void 0 !== Sr ? Sr : "lobby");
-      return (0, Zr.useEffect)((() => {
-        if (!jr) return;
-        const rr = (0, fr.A)(fr.y);
+        store: Fd,
+        variation: Rd
+      } = dd;
+      const Xd = "lobby" !== (null !== (Od = null === (md = cd(Fd, "hud").wire) || void 0 === md ? void 0 : md[1]) && void 0 !== Od ? Od : "lobby");
+      return (0, Wd.useEffect)((() => {
+        if (!Xd) return;
+        const dd = (0, hd.u)(hd.q);
         return () => {
-          rr(), (0, fr.j)()
+          dd(), (0, hd.g)()
         }
-      }), [jr]), (0, Zr.useEffect)((() => (0, fr.E)((rr => (0, Br.jsx)(wS, {
-        store: Wr,
-        variation: ar,
-        state: rr
-      })))), [Wr, ar]), (0, Br.jsx)(sS, {
-        store: Wr
+      }), [Xd]), (0, Wd.useEffect)((() => (0, hd.C)((dd => (0, Ed.jsx)(eO, {
+        store: Fd,
+        variation: Rd,
+        state: dd
+      })))), [Fd, Rd]), (0, Ed.jsx)(dm, {
+        store: Fd
       })
     }
 
-    function WQ(rr) {
-      return (0, Br.jsxs)(Br.Fragment, {
-        children: [(0, Br.jsx)(kS, {
-          ...rr
-        }), (0, Br.jsx)(ZQ, {
-          ...rr
-        }), (0, Br.jsx)(fS, {
-          ...rr
+    function Xm(dd) {
+      return (0, Ed.jsxs)(Ed.Fragment, {
+        children: [(0, Ed.jsx)(zO, {
+          ...dd
+        }), (0, Ed.jsx)(Rm, {
+          ...dd
+        }), (0, Ed.jsx)(QO, {
+          ...dd
         })]
       })
     }
-    const aQ = "CubeWarfareUi",
-      jQ = "CubeWarfareFfa",
-      IQ = function(rr, Sr, Qr, ar) {
+    const Km = "CubeWarfareUi",
+      hm = "CubeWarfareFfa",
+      Qm = function(dd, Od, md, Rd) {
         let {
-          localPlayerId: jr
-        } = ar;
-        const xr = new kr,
-          mr = "tdm" === Qr ? "tdm" : "ffa";
-        let Nr = null,
-          Ur = null,
-          tr = null;
+          localPlayerId: Xd
+        } = Rd;
+        const td = new zd,
+          od = "tdm" === md ? "tdm" : "ffa";
+        let Nd = null,
+          qd = null,
+          Hd = null;
         return {
-          onCreate: rr => {
-            document.body.classList.add(aQ), document.body.classList.toggle(jQ, "ffa" === mr), Ur = new pr.d(rr, jr), tr = new ZS((rr => {
-              Ir.i.Jp(QS, rr, !0)
-            }), (Sr => {
-              rr.sendCommand(Sr)
-            })), Nr = (0, fr.H)((0, Zr.createElement)(Zr.Fragment, null, (0, Zr.createElement)(Er.b, {
-              controller: Ur
-            }), (0, Zr.createElement)(WQ, {
-              store: xr,
-              votes: tr,
-              variation: mr
+          onCreate: dd => {
+            document.body.classList.add(Km), document.body.classList.toggle(hm, "ffa" === od), qd = new Qd.e(dd, Xd), Hd = new RO((dd => {
+              Kd.j.lQ(FO, dd, !0)
+            }), (Od => {
+              dd.sendCommand(Od)
+            })), Nd = (0, hd.F)((0, Wd.createElement)(Wd.Fragment, null, (0, Wd.createElement)(vd.d, {
+              controller: qd
+            }), (0, Wd.createElement)(Xm, {
+              store: td,
+              votes: Hd,
+              variation: od
             })), {
-              content: (0, Zr.createElement)(wr, {
-                store: xr,
-                variation: mr
+              content: (0, Wd.createElement)(ed, {
+                store: td,
+                variation: od
               })
             })
           },
           onClose: () => {
-            var rr, Sr, Qr;
-            document.body.classList.remove(aQ, jQ), null === (rr = Nr) || void 0 === rr || rr(), Nr = null, null === (Sr = Ur) || void 0 === Sr || Sr.dispose(), Ur = null, null === (Qr = tr) || void 0 === Qr || Qr.dispose(), tr = null
+            var dd, Od, md;
+            document.body.classList.remove(Km, hm), null === (dd = Nd) || void 0 === dd || dd(), Nd = null, null === (Od = qd) || void 0 === Od || Od.dispose(), qd = null, null === (md = Hd) || void 0 === md || md.dispose(), Hd = null
           },
-          onAfterRender: (rr, Sr) => {
-            var Qr;
-            null === (Qr = Ur) || void 0 === Qr || Qr.frame(Sr.cameraHeading)
+          onAfterRender: (dd, Od) => {
+            var md;
+            null === (md = qd) || void 0 === md || md.frame(Od.cameraHeading)
           },
-          onReceivedMessageFromServer: (rr, Sr) => {
-            var Qr;
-            (xr.vx(rr, Sr), rr === Wr) && (null === (Qr = tr) || void 0 === Qr || Qr.onLobby(xr.get("lobby").wire))
+          onReceivedMessageFromServer: (dd, Od) => {
+            var md;
+            (td.Yt(dd, Od), dd === Fd) && (null === (md = Hd) || void 0 === md || md.onLobby(td.get("lobby").wire))
           }
         }
       }
   },
-  41055: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar
+  41063: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Rd
     });
-    var Zr = Qr(72),
-      Wr = Qr(1338);
-    const ar = (0, Zr.memo)((function(rr) {
+    var Wd = md(66),
+      Fd = md(1341);
+    const Rd = (0, Wd.memo)((function(dd) {
       let {
-        controller: Sr
-      } = rr;
-      return (0, Wr.jsxs)("div", {
+        controller: Od
+      } = dd;
+      return (0, Fd.jsxs)("div", {
         className: "DamageFeedback",
-        ref: Sr.bindElement,
-        children: [(0, Wr.jsx)("div", {
+        ref: Od.bindElement,
+        children: [(0, Fd.jsx)("div", {
           className: "DamageFeedbackLow",
-          children: (0, Wr.jsx)("div", {
+          children: (0, Fd.jsx)("div", {
             className: "DamageFeedbackShade"
           })
-        }), (0, Wr.jsx)("div", {
+        }), (0, Fd.jsx)("div", {
           className: "DamageFeedbackArcs"
         })]
       })
     }))
   },
-  41046: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Ir
+  41061: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Kd
     });
-    var Zr = Qr(34);
-    const Wr = "DamageFeedbackArcsShown",
-      ar = .45,
-      jr = .2;
-    class Ir {
-      constructor(rr, Sr) {
+    var Wd = md(32);
+    const Fd = "DamageFeedbackArcsShown",
+      Rd = .45,
+      Xd = .2;
+    class Kd {
+      constructor(dd, Od) {
         let {
-          arcs: Qr = !0,
-          edgeGlow: Wr = !0,
-          lowHealthShade: ar = !0,
-          enabled: jr = !0
+          arcs: md = !0,
+          edgeGlow: Fd = !0,
+          lowHealthShade: Rd = !0,
+          enabled: Xd = !0
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.api = rr, this.localPlayerId = Sr, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+        this.api = dd, this.localPlayerId = Od, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.AW = 1, this.dead = !1, this.enabled = void 0, this.parts = void 0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = rr => {
-          var Sr, Qr;
-          this.clearHits(), this.root = rr, this.lowLayer = null !== (Sr = null === rr || void 0 === rr ? void 0 : rr.querySelector(".DamageFeedbackLow")) && void 0 !== Sr ? Sr : null, this.arcLayer = null !== (Qr = null === rr || void 0 === rr ? void 0 : rr.querySelector(".DamageFeedbackArcs")) && void 0 !== Qr ? Qr : null, this.showRoot(), this.drawLow()
+        }, this.maxHealth = null, this.nF = 1, this.dead = !1, this.enabled = void 0, this.parts = void 0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = dd => {
+          var Od, md;
+          this.clearHits(), this.root = dd, this.lowLayer = null !== (Od = null === dd || void 0 === dd ? void 0 : dd.querySelector(".DamageFeedbackLow")) && void 0 !== Od ? Od : null, this.arcLayer = null !== (md = null === dd || void 0 === dd ? void 0 : dd.querySelector(".DamageFeedbackArcs")) && void 0 !== md ? md : null, this.showRoot(), this.drawLow()
         }, this.parts = {
-          arcs: Qr,
-          edgeGlow: Wr,
-          lowHealthShade: ar
-        }, this.enabled = jr, this.token = Zr.i.subscribe("damagedByOtherPlayer", (rr => {
+          arcs: md,
+          edgeGlow: Fd,
+          lowHealthShade: Rd
+        }, this.enabled = Xd, this.token = Wd.j.subscribe("damagedByOtherPlayer", (dd => {
           let {
-            direction: Sr,
-            GW: Qr
-          } = rr;
-          this.onHurt(Sr, Qr)
+            direction: Od,
+            rF: md
+          } = dd;
+          this.onHurt(Od, md)
         })), this.syncHealth(), this.showCustomDamage()
       }
-      VK(rr) {
-        rr !== this.enabled && (this.enabled = rr, this.showCustomDamage(), rr || this.clearHits(), this.showRoot())
+      rY(dd) {
+        dd !== this.enabled && (this.enabled = dd, this.showCustomDamage(), dd || this.clearHits(), this.showRoot())
       }
-      frame(rr) {
-        this.syncHealth(), this.cameraHeading = rr;
-        for (const Sr of this.arcs) this.drawArcAngle(Sr)
+      frame(dd) {
+        this.syncHealth(), this.cameraHeading = dd;
+        for (const Od of this.arcs) this.drawArcAngle(Od)
       }
       dispose() {
-        Zr.i.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Wr)
+        Wd.j.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Fd)
       }
       showCustomDamage() {
-        document.body.classList.toggle(Wr, this.enabled && this.parts.arcs)
+        document.body.classList.toggle(Fd, this.enabled && this.parts.arcs)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const rr = this.api.getClientOption(this.localPlayerId, "_health"),
-          Sr = this.api.getClientOption(this.localPlayerId, "_shield"),
-          Qr = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(rr, this.readHealth) && Object.is(Sr, this.readShield) && Object.is(Qr, this.readMaxHealth)) return;
-        if (this.readHealth = rr, this.readShield = Sr, this.readMaxHealth = Qr, null === rr || void 0 === rr || !Qr) return this.lastHealthPool = null, this.maxHealth = null, this.AW = 1, this.dead = !1, void this.drawLow();
-        const Zr = rr + (null !== Sr && void 0 !== Sr ? Sr : 0);
-        if (null !== this.lastHealthPool && Zr < this.lastHealthPool) {
-          const rr = performance.now(),
-            Sr = (this.lastHealthPool - Zr) / Qr;
-          this.lastDrop = rr - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + Sr,
+        const dd = this.api.getClientOption(this.localPlayerId, "_health"),
+          Od = this.api.getClientOption(this.localPlayerId, "_shield"),
+          md = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(dd, this.readHealth) && Object.is(Od, this.readShield) && Object.is(md, this.readMaxHealth)) return;
+        if (this.readHealth = dd, this.readShield = Od, this.readMaxHealth = md, null === dd || void 0 === dd || !md) return this.lastHealthPool = null, this.maxHealth = null, this.nF = 1, this.dead = !1, void this.drawLow();
+        const Wd = dd + (null !== Od && void 0 !== Od ? Od : 0);
+        if (null !== this.lastHealthPool && Wd < this.lastHealthPool) {
+          const dd = performance.now(),
+            Od = (this.lastHealthPool - Wd) / md;
+          this.lastDrop = dd - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + Od,
             at: this.lastDrop.at
           } : {
-            frac: Sr,
-            at: rr
+            frac: Od,
+            at: dd
           }
         }
-        this.dead = rr <= 0, this.dead && this.clearHits(), this.lastHealthPool = Zr, this.maxHealth = Qr, this.AW = rr > 0 ? rr / Qr : 1, this.drawLow()
+        this.dead = dd <= 0, this.dead && this.clearHits(), this.lastHealthPool = Wd, this.maxHealth = md, this.nF = dd > 0 ? dd / md : 1, this.drawLow()
       }
-      onHurt(rr, Sr) {
+      onHurt(dd, Od) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const Qr = Math.min(1, this.takeDamageFrac(Sr) / .3);
-        null !== rr && this.parts.arcs && this.showArc(rr, Qr), this.parts.edgeGlow && this.flashEdge(null === rr ? null : rr - this.cameraHeading, .4 + .6 * Qr)
+        const md = Math.min(1, this.takeDamageFrac(Od) / .3);
+        null !== dd && this.parts.arcs && this.showArc(dd, md), this.parts.edgeGlow && this.flashEdge(null === dd ? null : dd - this.cameraHeading, .4 + .6 * md)
       }
-      takeDamageFrac(rr) {
-        if (void 0 !== rr && this.maxHealth) return rr / this.maxHealth;
+      takeDamageFrac(dd) {
+        if (void 0 !== dd && this.maxHealth) return dd / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: Sr
+          frac: Od
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, Sr
+        }, Od
       }
       drawLow() {
         if (!this.lowLayer || !this.parts.lowHealthShade) return;
-        const rr = Er((ar - this.AW) / .25),
-          Sr = Er((jr - this.AW) / .15000000000000002),
-          Qr = this.AW < ar;
-        this.lowLayer.classList.toggle("Active", Qr), this.lowLayer.classList.toggle("Critical", this.AW < jr), this.lowLayer.style.opacity = String(Qr ? .55 + .3 * rr + .15 * Sr : 0)
+        const dd = vd((Rd - this.nF) / .25),
+          Od = vd((Xd - this.nF) / .15000000000000002),
+          md = this.nF < Rd;
+        this.lowLayer.classList.toggle("Active", md), this.lowLayer.classList.toggle("Critical", this.nF < Xd), this.lowLayer.style.opacity = String(md ? .55 + .3 * dd + .15 * Od : 0)
       }
-      showArc(rr, Sr) {
-        var Qr, Zr;
+      showArc(dd, Od) {
+        var md, Wd;
         if (!this.arcLayer) return;
-        let Wr = this.arcs.find((Sr => fr(Sr.direction, rr) < .6));
-        if (!Wr) {
-          const Sr = document.createElement("div");
-          Sr.className = "DamageFeedbackArc", Sr.appendChild(document.createElement("div")).className = "DamageFeedbackArcBand", this.arcLayer.appendChild(Sr), Wr = {
-            element: Sr,
-            direction: rr,
+        let Fd = this.arcs.find((Od => hd(Od.direction, dd) < .6));
+        if (!Fd) {
+          const Od = document.createElement("div");
+          Od.className = "DamageFeedbackArc", Od.appendChild(document.createElement("div")).className = "DamageFeedbackArcBand", this.arcLayer.appendChild(Od), Fd = {
+            element: Od,
+            direction: dd,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(Wr)
+          }, this.arcs.push(Fd)
         }
-        Wr.direction = rr, this.drawArcAngle(Wr);
-        const ar = Wr.fade ? Number(getComputedStyle(Wr.element).opacity) : 0;
-        null === (Qr = Wr.fade) || void 0 === Qr || Qr.cancel(), null === (Zr = Wr.pop) || void 0 === Zr || Zr.cancel(), Wr.element.style.opacity = "1";
-        const jr = Wr.element.animate([{
-          opacity: ar
+        Fd.direction = dd, this.drawArcAngle(Fd);
+        const Rd = Fd.fade ? Number(getComputedStyle(Fd.element).opacity) : 0;
+        null === (md = Fd.fade) || void 0 === md || md.cancel(), null === (Wd = Fd.pop) || void 0 === Wd || Wd.cancel(), Fd.element.style.opacity = "1";
+        const Xd = Fd.element.animate([{
+          opacity: Rd
         }, {
           opacity: 1
         }], 144);
-        Wr.fade = jr, Wr.pop = Wr.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * Sr
+        Fd.fade = Xd, Fd.pop = Fd.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * Od
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const Ir = Wr;
-        jr.onfinish = () => {
-          if (Ir.fade !== jr) return;
-          const rr = Ir.element.animate([{
+        const Kd = Fd;
+        Xd.onfinish = () => {
+          if (Kd.fade !== Xd) return;
+          const dd = Kd.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -2065,120 +2065,120 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          rr.startTime = jr.startTime, Ir.fade = rr, rr.onfinish = () => {
-            Ir.fade === rr && (Ir.element.remove(), pr(this.arcs, Ir))
+          dd.startTime = Xd.startTime, Kd.fade = dd, dd.onfinish = () => {
+            Kd.fade === dd && (Kd.element.remove(), Qd(this.arcs, Kd))
           }
         }
       }
-      drawArcAngle(rr) {
-        const Sr = rr.direction - this.cameraHeading;
-        (null === rr.drawnAngle || Math.abs(Sr - rr.drawnAngle) > .005) && (rr.drawnAngle = Sr, rr.element.style.rotate = `${Sr}rad`)
+      drawArcAngle(dd) {
+        const Od = dd.direction - this.cameraHeading;
+        (null === dd.drawnAngle || Math.abs(Od - dd.drawnAngle) > .005) && (dd.drawnAngle = Od, dd.element.style.rotate = `${Od}rad`)
       }
-      flashEdge(rr, Sr) {
-        var Qr, Zr, Wr;
+      flashEdge(dd, Od) {
+        var md, Wd, Fd;
         if (!this.root) return;
-        let ar = this.flashes.find((Sr => null === Sr.angle || null === rr ? Sr.angle === rr : fr(Sr.angle, rr) < .5));
-        if (!ar) {
-          const Sr = document.createElement("div");
-          Sr.className = "DamageFeedbackFlash";
-          const Qr = Sr.appendChild(document.createElement("div"));
-          Qr.className = "DamageFeedbackFlashGlow", this.root.insertBefore(Sr, this.arcLayer), ar = {
-            element: Sr,
-            glow: Qr,
-            angle: rr,
+        let Rd = this.flashes.find((Od => null === Od.angle || null === dd ? Od.angle === dd : hd(Od.angle, dd) < .5));
+        if (!Rd) {
+          const Od = document.createElement("div");
+          Od.className = "DamageFeedbackFlash";
+          const md = Od.appendChild(document.createElement("div"));
+          md.className = "DamageFeedbackFlashGlow", this.root.insertBefore(Od, this.arcLayer), Rd = {
+            element: Od,
+            glow: md,
+            angle: dd,
             level: 0,
             animation: null
-          }, this.flashes.push(ar)
+          }, this.flashes.push(Rd)
         }
-        const jr = null === (Qr = ar.animation) || void 0 === Qr || null === (Zr = Qr.effect) || void 0 === Zr ? void 0 : Zr.getComputedTiming().progress,
-          Ir = null === jr || void 0 === jr ? 0 : ar.level * (1 - jr);
-        ar.level = Math.min(1, Math.max(Sr, Ir + .6 * Sr)), ar.angle = rr;
+        const Xd = null === (md = Rd.animation) || void 0 === md || null === (Wd = md.effect) || void 0 === Wd ? void 0 : Wd.getComputedTiming().progress,
+          Kd = null === Xd || void 0 === Xd ? 0 : Rd.level * (1 - Xd);
+        Rd.level = Math.min(1, Math.max(Od, Kd + .6 * Od)), Rd.angle = dd;
         const {
-          x: Er,
-          y: xr,
-          rx: mr,
-          ry: Nr
-        } = function(rr, Sr) {
-          const Qr = window.innerWidth,
-            Zr = window.innerHeight;
-          if (null === rr) return {
-            x: Qr / 2,
-            y: Zr / 2,
+          x: vd,
+          y: td,
+          rx: od,
+          ry: Nd
+        } = function(dd, Od) {
+          const md = window.innerWidth,
+            Wd = window.innerHeight;
+          if (null === dd) return {
+            x: md / 2,
+            y: Wd / 2,
             rx: 0,
             ry: 0
           };
-          const Wr = Math.sin(rr),
-            ar = -Math.cos(rr),
-            jr = Qr / 2 / Math.max(1e-6, Math.abs(Wr)),
-            Ir = Zr / 2 / Math.max(1e-6, Math.abs(ar)),
-            fr = Math.min(jr, Ir),
-            Er = Math.round(Qr / 2 + Wr * fr),
-            pr = Math.round(Zr / 2 + ar * fr),
-            xr = Zr / 100 * (.85 + .25 * Sr),
-            mr = jr <= Ir,
-            Nr = Math.round((mr ? 30 : 74) * xr),
-            Ur = Math.round((mr ? 58 : 26) * xr);
+          const Fd = Math.sin(dd),
+            Rd = -Math.cos(dd),
+            Xd = md / 2 / Math.max(1e-6, Math.abs(Fd)),
+            Kd = Wd / 2 / Math.max(1e-6, Math.abs(Rd)),
+            hd = Math.min(Xd, Kd),
+            vd = Math.round(md / 2 + Fd * hd),
+            Qd = Math.round(Wd / 2 + Rd * hd),
+            td = Wd / 100 * (.85 + .25 * Od),
+            od = Xd <= Kd,
+            Nd = Math.round((od ? 30 : 74) * td),
+            qd = Math.round((od ? 58 : 26) * td);
           return {
-            x: Er,
-            y: pr,
-            rx: Nr,
-            ry: Ur
+            x: vd,
+            y: Qd,
+            rx: Nd,
+            ry: qd
           }
-        }(rr, ar.level), {
-          style: Ur
-        } = ar.glow;
-        ar.glow.classList.toggle("Everywhere", null === rr), Ur.setProperty("--glowX", `${Er}px`), Ur.setProperty("--glowY", `${xr}px`), Ur.setProperty("--glowRx", `${mr}px`), Ur.setProperty("--glowRy", `${Nr}px`), ar.element.style.transformOrigin = `${Er}px ${xr}px`, null === (Wr = ar.animation) || void 0 === Wr || Wr.cancel();
-        const tr = ar.element.animate([{
+        }(dd, Rd.level), {
+          style: qd
+        } = Rd.glow;
+        Rd.glow.classList.toggle("Everywhere", null === dd), qd.setProperty("--glowX", `${vd}px`), qd.setProperty("--glowY", `${td}px`), qd.setProperty("--glowRx", `${od}px`), qd.setProperty("--glowRy", `${Nd}px`), Rd.element.style.transformOrigin = `${vd}px ${td}px`, null === (Fd = Rd.animation) || void 0 === Fd || Fd.cancel();
+        const Hd = Rd.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: ar.level,
+          opacity: Rd.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * ar.level,
+          opacity: .8 * Rd.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * ar.level
+          duration: 520 + 180 * Rd.level
         });
-        ar.animation = tr;
-        const hr = ar;
-        tr.onfinish = () => {
-          hr.animation === tr && (hr.element.remove(), pr(this.flashes, hr))
+        Rd.animation = Hd;
+        const yd = Rd;
+        Hd.onfinish = () => {
+          yd.animation === Hd && (yd.element.remove(), Qd(this.flashes, yd))
         }
       }
       clearHits() {
-        for (const Zr of this.arcs) {
-          var rr, Sr;
-          null === (rr = Zr.fade) || void 0 === rr || rr.cancel(), Zr.fade = null, null === (Sr = Zr.pop) || void 0 === Sr || Sr.cancel(), Zr.element.remove()
+        for (const Wd of this.arcs) {
+          var dd, Od;
+          null === (dd = Wd.fade) || void 0 === dd || dd.cancel(), Wd.fade = null, null === (Od = Wd.pop) || void 0 === Od || Od.cancel(), Wd.element.remove()
         }
         this.arcs.length = 0;
-        for (const Zr of this.flashes) {
-          var Qr;
-          null === (Qr = Zr.animation) || void 0 === Qr || Qr.cancel(), Zr.element.remove()
+        for (const Wd of this.flashes) {
+          var md;
+          null === (md = Wd.animation) || void 0 === md || md.cancel(), Wd.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function fr(rr, Sr) {
-      return Math.abs(Math.atan2(Math.sin(rr - Sr), Math.cos(rr - Sr)))
+    function hd(dd, Od) {
+      return Math.abs(Math.atan2(Math.sin(dd - Od), Math.cos(dd - Od)))
     }
 
-    function Er(rr) {
-      return Math.max(0, Math.min(1, rr))
+    function vd(dd) {
+      return Math.max(0, Math.min(1, dd))
     }
 
-    function pr(rr, Sr) {
-      const Qr = rr.indexOf(Sr); - 1 !== Qr && rr.splice(Qr, 1)
+    function Qd(dd, Od) {
+      const md = dd.indexOf(Od); - 1 !== md && dd.splice(md, 1)
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

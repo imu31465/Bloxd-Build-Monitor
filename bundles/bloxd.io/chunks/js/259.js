@@ -1,82 +1,82 @@
 export const id = 259;
 export const ids = [259];
 export const modules = {
-  41700: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      getBlockFaces: () => mr,
-      getIngameIconUrl: () => tr,
-      getItemIconUrl: () => Ur,
-      getItemTextureUrl: () => Nr,
-      getParticleTextureUrl: () => hr
+  41734: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      getBlockFaces: () => od,
+      getIngameIconUrl: () => Hd,
+      getItemIconUrl: () => qd,
+      getItemTextureUrl: () => Nd,
+      getParticleTextureUrl: () => yd
     });
-    var Zr = Qr(5210),
-      Wr = Qr(38509),
-      ar = Qr(10365),
-      jr = Qr(4362);
-    const Ir = new Set,
-      fr = new Set;
-    let Er = null;
+    var Wd = md(5128),
+      Fd = md(38573),
+      Rd = md(10413),
+      Xd = md(4373);
+    const Kd = new Set,
+      hd = new Set;
+    let vd = null;
 
-    function pr(rr) {
-      Ir.has(rr) || (Ir.add(rr), fr.add(rr), Er ??= setTimeout((() => {
-        console.warn(`Docs gallery: no default texture for ${fr.size} names`, [...fr]), fr.clear(), Er = null
+    function Qd(dd) {
+      Kd.has(dd) || (Kd.add(dd), hd.add(dd), vd ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${hd.size} names`, [...hd]), hd.clear(), vd = null
       }), 1e3))
     }
 
-    function xr(rr, Sr) {
+    function td(dd, Od) {
       try {
-        return (0, ar.getDefaultTexture)(rr, Sr).url
+        return (0, Rd.getDefaultTexture)(dd, Od).url
       } catch {
-        return pr(rr), null
+        return Qd(dd), null
       }
     }
 
-    function mr(rr) {
-      var Sr, Qr;
-      const ar = Wr.n[rr];
-      if (!ar || ar.itemTexture || !ar.textureInfo) return null;
+    function od(dd) {
+      var Od, md;
+      const Rd = Fd.q[dd];
+      if (!Rd || Rd.itemTexture || !Rd.textureInfo) return null;
       const {
-        textureInfo: Ir,
-        texturePerSide: fr
-      } = ar, Er = rr => {
-        return "string" === typeof(Sr = fr && Array.isArray(Ir) ? Ir[fr[rr]] : Ir) ? xr(Sr, jr.e.BLOCK) : Sr && "object" === typeof Sr && "animTextures" in Sr ? xr((0, Zr.k)(Sr), jr.e.BLOCK) : null;
-        var Sr
-      }, pr = Er(2);
-      return pr ? {
-        top: pr,
-        left: null !== (Sr = Er(4)) && void 0 !== Sr ? Sr : pr,
-        right: null !== (Qr = Er(0)) && void 0 !== Qr ? Qr : pr
+        textureInfo: Kd,
+        texturePerSide: hd
+      } = Rd, vd = dd => {
+        return "string" === typeof(Od = hd && Array.isArray(Kd) ? Kd[hd[dd]] : Kd) ? td(Od, Xd.i.BLOCK) : Od && "object" === typeof Od && "animTextures" in Od ? td((0, Wd.i)(Od), Xd.i.BLOCK) : null;
+        var Od
+      }, Qd = vd(2);
+      return Qd ? {
+        top: Qd,
+        left: null !== (Od = vd(4)) && void 0 !== Od ? Od : Qd,
+        right: null !== (md = vd(0)) && void 0 !== md ? md : Qd
       } : null
     }
 
-    function Nr(rr) {
-      var Sr;
-      const Qr = Wr.n[rr];
-      return xr(null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.itemTexture) && void 0 !== Sr ? Sr : "string" === typeof(null === Qr || void 0 === Qr ? void 0 : Qr.textureInfo) ? Qr.textureInfo : rr, jr.e.ITEM)
+    function Nd(dd) {
+      var Od;
+      const md = Fd.q[dd];
+      return td(null !== (Od = null === md || void 0 === md ? void 0 : md.itemTexture) && void 0 !== Od ? Od : "string" === typeof(null === md || void 0 === md ? void 0 : md.textureInfo) ? md.textureInfo : dd, Xd.i.ITEM)
     }
 
-    function Ur(rr) {
-      var Sr, Qr;
-      return Wr.n[rr] ? null !== (Sr = null === (Qr = mr(rr)) || void 0 === Qr ? void 0 : Qr.top) && void 0 !== Sr ? Sr : Nr(rr) : null
+    function qd(dd) {
+      var Od, md;
+      return Fd.q[dd] ? null !== (Od = null === (md = od(dd)) || void 0 === md ? void 0 : md.top) && void 0 !== Od ? Od : Nd(dd) : null
     }
 
-    function tr(rr) {
-      return xr(rr, jr.e.ICON)
+    function Hd(dd) {
+      return td(dd, Xd.i.ICON)
     }
 
-    function hr(rr) {
+    function yd(dd) {
       try {
-        return Qr(4517)(`./${rr}.png`)
+        return md(4529)(`./${dd}.png`)
       } catch {
-        return pr(rr), null
+        return Qd(dd), null
       }
     }
   },
-  38538: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Zr
+  38603: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Wd
     });
-    const Zr = {
+    const Wd = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -238,4 +238,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

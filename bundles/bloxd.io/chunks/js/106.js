@@ -1,60 +1,60 @@
 export const id = 106;
 export const ids = [106];
 export const modules = {
-  5617: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      $b: () => ir,
-      Ab: () => wr,
-      D: () => yr,
-      Db: () => Ar,
-      F: () => jr,
-      Gb: () => gr,
-      I: () => Ir,
-      Jb: () => Gr,
-      K: () => Zr,
-      Kb: () => Cr,
-      L: () => ar,
-      M: () => er,
-      N: () => sr,
-      Nb: () => hr,
-      O: () => xr,
-      P: () => mr,
-      Qb: () => lr,
-      T: () => pr,
-      Tb: () => Lr,
-      V: () => Er,
-      Vb: () => Mr,
-      Wb: () => cr,
-      X: () => Kr,
-      Xb: () => kr,
-      _: () => fr,
-      _b: () => Vr,
-      cb: () => tr,
-      dc: () => vr,
-      e: () => Yr,
-      gb: () => Ur,
-      hc: () => Or,
-      i: () => zr,
-      j: () => Dr,
-      k: () => nr,
-      kb: () => Xr,
-      kc: () => or,
-      mc: () => Wr,
-      nb: () => Hr,
-      o: () => Jr,
-      pc: () => dr,
-      qb: () => qr,
-      r: () => Nr,
-      sb: () => Pr,
-      t: () => Tr,
-      ub: () => Rr,
-      x: () => br,
-      xb: () => Fr,
-      z: () => Br
+  5571: (dd, Od, md) => {
+    md.d(Od, {
+      $: () => Hd,
+      $b: () => xd,
+      Ab: () => nd,
+      B: () => Xd,
+      C: () => Kd,
+      Db: () => yd,
+      Eb: () => Sd,
+      Fb: () => Bd,
+      G: () => Wd,
+      I: () => Rd,
+      Ib: () => Ld,
+      L: () => Yd,
+      Mb: () => Id,
+      N: () => dO,
+      Ob: () => zd,
+      R: () => td,
+      Rb: () => jd,
+      S: () => od,
+      V: () => Qd,
+      Vb: () => Dd,
+      X: () => vd,
+      Y: () => gd,
+      Yb: () => Ud,
+      Z: () => hd,
+      ab: () => qd,
+      bc: () => Cd,
+      e: () => Td,
+      eb: () => sd,
+      fb: () => Vd,
+      fc: () => Fd,
+      h: () => bd,
+      hc: () => Md,
+      ib: () => Ad,
+      k: () => fd,
+      mb: () => ud,
+      n: () => pd,
+      ob: () => rd,
+      p: () => kd,
+      pb: () => ld,
+      q: () => Nd,
+      r: () => Jd,
+      rb: () => ed,
+      t: () => Zd,
+      tb: () => cd,
+      vb: () => Gd,
+      w: () => Ed,
+      x: () => wd,
+      xb: () => Pd
     });
-    const Zr = 32,
-      Wr = 33.333333333333336,
-      ar = {
+    const Wd = 32,
+      Fd = 33.333333333333336,
+      Rd = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -88,36 +88,36 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      jr = {
+      Xd = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Ir = {
+      Kd = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      fr = {
+      hd = {
         AheadMask: 15,
         Defaulted: 128,
         LagsShift: 8,
         CountMask: 4095
       },
-      Er = {
+      vd = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      pr = {
+      Qd = {
         PlayerBound: 32,
         JoinPreload: 64
       },
-      xr = 14,
-      mr = {
+      td = 14,
+      od = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -133,14 +133,14 @@ export const modules = {
         FirstViewGaps: 12,
         FirstViewGapMs: 13
       },
-      Nr = {
+      Nd = {
         Look: 0,
         Remesh: 1,
         CameraSet: 2
       },
-      Ur = 8,
-      tr = 1,
-      hr = {
+      qd = 8,
+      Hd = 1,
+      yd = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -149,16 +149,16 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      zr = 6,
-      Yr = 1,
-      nr = {
+      bd = 6,
+      Td = 1,
+      pd = {
         SetCamDir: 0,
         Forced: 1,
         ScriptedTake: 2,
         ScriptedPose: 3,
         ScriptedRelease: 4
       },
-      er = {
+      Yd = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -186,12 +186,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Kr = {
+      gd = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      yr = {
+      wd = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -245,7 +245,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Br = {
+      Ed = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -255,10 +255,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      Tr = 4,
-      vr = 4,
-      Or = 65535,
-      Lr = {
+      Jd = 4,
+      Ud = 4,
+      xd = 65535,
+      Bd = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -271,7 +271,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      lr = {
+      Sd = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -279,12 +279,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      Xr = 88,
-      Pr = 0,
-      Hr = 24,
-      qr = 48,
-      Rr = 80,
-      gr = {
+      sd = 88,
+      ud = 0,
+      Vd = 24,
+      Ad = 48,
+      rd = 80,
+      Gd = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -295,18 +295,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Cr = {
+      nd = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Mr = {
+      Ld = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Gr = {
+      Pd = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -324,34 +324,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      kr = {
+      zd = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      Ar = 65535,
-      Vr = {
+      cd = 65535,
+      jd = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      ir = {
+      Dd = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      wr = 2,
-      cr = {
+      ed = 2,
+      Id = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Fr = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      or = {
+      ld = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      Cd = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -365,7 +365,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      br = {
+      Zd = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -392,7 +392,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Jr = {
+      kd = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -550,8 +550,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      Dr = 8,
-      dr = {
+      fd = 8,
+      Md = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -577,8 +577,8 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      sr = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      dO = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

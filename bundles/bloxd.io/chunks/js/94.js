@@ -1,272 +1,272 @@
 export const id = 94;
 export const ids = [94, 110];
 export const modules = {
-    5642: (rr, Sr, Qr) => {
-      Qr.d(Sr, {
-        c: () => hr,
-        e: () => zr
+    5609: (dd, Od, md) => {
+      md.d(Od, {
+        e: () => yd,
+        f: () => bd
       });
-      var Zr = Qr(1155),
-        Wr = Qr.n(Zr),
-        ar = Qr(72),
-        jr = Qr(1251),
-        Ir = Qr(5649),
-        fr = Qr(2057),
-        Er = Qr(3404),
-        pr = Qr(5658),
-        xr = Qr(1338);
-      const mr = new WeakMap;
-      let Nr = 0;
+      var Wd = md(1155),
+        Fd = md.n(Wd),
+        Rd = md(66),
+        Xd = md(1238),
+        Kd = md(5616),
+        hd = md(2060),
+        vd = md(3403),
+        Qd = md(5620),
+        td = md(1341);
+      const od = new WeakMap;
+      let Nd = 0;
 
-      function Ur(rr) {
-        let Sr = mr.get(rr);
-        return void 0 === Sr && (Sr = Nr++, mr.set(rr, Sr)), Sr
+      function qd(dd) {
+        let Od = od.get(dd);
+        return void 0 === Od && (Od = Nd++, od.set(dd, Od)), Od
       }
 
-      function tr(rr) {
+      function Hd(dd) {
         let {
-          piece: Sr
-        } = rr;
-        return "space" === Sr.kind ? (0, xr.jsx)(xr.Fragment, {
-          children: Sr.text
-        }) : (0, xr.jsx)("span", {
+          piece: Od
+        } = dd;
+        return "space" === Od.kind ? (0, td.jsx)(td.Fragment, {
+          children: Od.text
+        }) : (0, td.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${Sr.delayMs}ms`
+            "--word-delay": `${Od.delayMs}ms`
           },
-          children: (0, xr.jsx)(Ir.e, {
-            text: "icon" === Sr.kind ? `[[${Sr.icon}]]` : Sr.text
+          children: (0, td.jsx)(Kd.c, {
+            text: "icon" === Od.kind ? `[[${Od.icon}]]` : Od.text
           })
         })
       }
 
-      function hr(rr) {
+      function yd(dd) {
         let {
-          display: Sr
-        } = rr;
+          display: Od
+        } = dd;
         const {
-          selectedLanguage: Qr
-        } = (0, jr.E)(), Zr = (0, ar.useMemo)((() => (0, pr.d)((0, pr.h)(Sr).plan.pieces)), [Sr, Qr.code]);
-        return (0, xr.jsxs)("div", {
-          className: Wr()("Dialogue", {
-            DialogueAnimateIn: !1 !== Sr.animateIn
+          selectedLanguage: md
+        } = (0, Xd.G)(), Wd = (0, Rd.useMemo)((() => (0, Qd.c)((0, Qd.e)(Od).plan.pieces)), [Od, md.code]);
+        return (0, td.jsxs)("div", {
+          className: Fd()("Dialogue", {
+            DialogueAnimateIn: !1 !== Od.animateIn
           }),
-          children: [Sr.speakerName && (0, xr.jsx)(fr.c, {
-            text: Sr.speakerName,
+          children: [Od.speakerName && (0, td.jsx)(hd.d, {
+            text: Od.speakerName,
             className: "DialogueSpeaker"
-          }), (0, xr.jsx)("p", {
+          }), (0, td.jsx)("p", {
             className: "DialogueLine",
-            children: Zr.map(((rr, Sr) => 1 === rr.length && "space" === rr[0].kind ? rr[0].text : (0, xr.jsx)("span", {
+            children: Wd.map(((dd, Od) => 1 === dd.length && "space" === dd[0].kind ? dd[0].text : (0, td.jsx)("span", {
               className: "DialogueGlue",
-              children: rr.map(((rr, Sr) => (0, xr.jsx)(tr, {
-                piece: rr
-              }, Sr)))
-            }, Sr)))
+              children: dd.map(((dd, Od) => (0, td.jsx)(Hd, {
+                piece: dd
+              }, Od)))
+            }, Od)))
           })]
         })
       }
-      const zr = (0, ar.memo)((function() {
-        const rr = (0, Er.l)("dialogue");
-        return (0, xr.jsx)("div", {
+      const bd = (0, Rd.memo)((function() {
+        const dd = (0, vd.j)("dialogue");
+        return (0, td.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: rr && (0, xr.jsx)(hr, {
-            display: rr
-          }, Ur(rr))
+          children: dd && (0, td.jsx)(yd, {
+            display: dd
+          }, qd(dd))
         })
       }))
     },
-    5531: (rr, Sr, Qr) => {
-        Qr.r(Sr), Qr.d(Sr, {
-          default: () => ua
+    5480: (dd, Od, md) => {
+        md.r(Od), md.d(Od, {
+          default: () => mX
         });
-        var Zr = Qr(72),
-          Wr = Qr(1155),
-          ar = Qr.n(Wr),
-          jr = Qr(1651),
-          Ir = Qr(1653),
-          fr = Qr(26),
-          Er = Qr(92),
-          pr = Qr(5538),
-          xr = Qr(5553),
-          mr = Qr(5562),
-          Nr = Qr(5063),
-          Ur = Qr(1338);
-        const tr = "/textures/docs/icons";
+        var Wd = md(66),
+          Fd = md(1155),
+          Rd = md.n(Fd),
+          Xd = md(1648),
+          Kd = md(1650),
+          hd = md(29),
+          vd = md(86),
+          Qd = md(5489),
+          td = md(5495),
+          od = md(5504),
+          Nd = md(4998),
+          qd = md(1341);
+        const Hd = "/textures/docs/icons";
 
-        function hr(rr) {
+        function yd(dd) {
           let {
-            name: Sr,
-            isTinted: Qr,
-            className: Zr,
-            style: Wr
-          } = rr;
-          const jr = `${tr}/${Sr}.png`;
-          return Qr ? (0, Ur.jsxs)("span", {
-            className: ar()("DocsPixelIcon", "Tinted", Zr),
+            name: Od,
+            isTinted: md,
+            className: Wd,
+            style: Fd
+          } = dd;
+          const Xd = `${Hd}/${Od}.png`;
+          return md ? (0, qd.jsxs)("span", {
+            className: Rd()("DocsPixelIcon", "Tinted", Wd),
             "aria-hidden": "true",
-            style: Wr,
-            children: [(0, Ur.jsx)("span", {
+            style: Fd,
+            children: [(0, qd.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${jr}")`,
-                WebkitMaskImage: `url("${jr}")`
+                maskImage: `url("${Xd}")`,
+                WebkitMaskImage: `url("${Xd}")`
               }
-            }), (0, Ur.jsx)("img", {
-              src: jr,
+            }), (0, qd.jsx)("img", {
+              src: Xd,
               alt: ""
             })]
-          }) : (0, Ur.jsx)("img", {
-            className: ar()("DocsPixelIcon", Zr),
-            src: jr,
+          }) : (0, qd.jsx)("img", {
+            className: Rd()("DocsPixelIcon", Wd),
+            src: Xd,
             alt: "",
             "aria-hidden": "true",
-            style: Wr
+            style: Fd
           })
         }
-        const zr = 1500;
+        const bd = 1500;
 
-        function Yr() {
-          const [rr, Sr] = (0, Zr.useState)(null);
-          (0, Zr.useEffect)((() => {
-            if (null === rr) return;
-            const Qr = setTimeout((() => {
-              Sr(null)
-            }), zr);
+        function Td() {
+          const [dd, Od] = (0, Wd.useState)(null);
+          (0, Wd.useEffect)((() => {
+            if (null === dd) return;
+            const md = setTimeout((() => {
+              Od(null)
+            }), bd);
             return () => {
-              clearTimeout(Qr)
+              clearTimeout(md)
             }
-          }), [rr]);
-          return [rr, rr => {
-            (0, Nr.b)(rr).then((() => {
-              Sr({
-                text: rr,
+          }), [dd]);
+          return [dd, dd => {
+            (0, Nd.e)(dd).then((() => {
+              Od({
+                text: dd,
                 failed: !1
               })
-            }), (Qr => {
-              console.error("Could not copy to the clipboard", Qr), Sr({
-                text: rr,
+            }), (md => {
+              console.error("Could not copy to the clipboard", md), Od({
+                text: dd,
                 failed: !0
               })
             }))
           }]
         }
 
-        function nr(rr) {
+        function pd(dd) {
           let {
-            text: Sr,
-            label: Qr,
-            className: Zr
-          } = rr;
-          const [Wr, jr] = Yr(), Ir = !1 === (null === Wr || void 0 === Wr ? void 0 : Wr.failed);
-          return (0, Ur.jsxs)("button", {
+            text: Od,
+            label: md,
+            className: Wd
+          } = dd;
+          const [Fd, Xd] = Td(), Kd = !1 === (null === Fd || void 0 === Fd ? void 0 : Fd.failed);
+          return (0, qd.jsxs)("button", {
             type: "button",
-            className: ar()("DocsCopyButton", Zr, {
-              Copied: Ir
+            className: Rd()("DocsCopyButton", Wd, {
+              Copied: Kd
             }),
             title: "Copy to clipboard",
-            "aria-label": Qr ? void 0 : `Copy ${Sr}`,
-            onClick: rr => {
-              rr.stopPropagation(), jr(Sr)
+            "aria-label": md ? void 0 : `Copy ${Od}`,
+            onClick: dd => {
+              dd.stopPropagation(), Xd(Od)
             },
-            children: [(0, Ur.jsx)(hr, {
-              name: Ir ? "check" : "copy"
-            }), Qr && (0, Ur.jsx)("span", {
-              children: Ir ? "Copied" : null !== Wr && void 0 !== Wr && Wr.failed ? "Copy failed" : Qr
+            children: [(0, qd.jsx)(yd, {
+              name: Kd ? "check" : "copy"
+            }), md && (0, qd.jsx)("span", {
+              children: Kd ? "Copied" : null !== Fd && void 0 !== Fd && Fd.failed ? "Copy failed" : md
             })]
           })
         }
-        pr.d.registerLanguage("javascript", xr.d), pr.d.registerLanguage("typescript", mr.c);
-        const er = {
+        Qd.e.registerLanguage("javascript", td.b), Qd.e.registerLanguage("typescript", od.e);
+        const Yd = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          Kr = {
+          gd = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          yr = 24;
+          wd = 24;
 
-        function Br(rr) {
+        function Ed(dd) {
           let {
-            code: Sr,
-            lang: Qr,
-            compact: Wr = !1
-          } = rr;
-          const jr = (0, Zr.useMemo)((() => function(rr, Sr) {
-              const Qr = er[Sr];
-              return Qr ? pr.d.highlight(rr, {
-                language: Qr
-              }).value : rr.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(Sr, Qr)), [Sr, Qr]),
-            Ir = Sr.split("\n").length,
-            fr = !Wr && Ir > yr + 6,
-            [Er, xr] = (0, Zr.useState)(!1),
-            mr = er[Qr];
-          return (0, Ur.jsxs)("div", {
-            className: ar()("DocsCodeBlock", {
-              Compact: Wr,
-              Collapsed: fr && !Er
+            code: Od,
+            lang: md,
+            compact: Fd = !1
+          } = dd;
+          const Xd = (0, Wd.useMemo)((() => function(dd, Od) {
+              const md = Yd[Od];
+              return md ? Qd.e.highlight(dd, {
+                language: md
+              }).value : dd.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(Od, md)), [Od, md]),
+            Kd = Od.split("\n").length,
+            hd = !Fd && Kd > wd + 6,
+            [vd, td] = (0, Wd.useState)(!1),
+            od = Yd[md];
+          return (0, qd.jsxs)("div", {
+            className: Rd()("DocsCodeBlock", {
+              Compact: Fd,
+              Collapsed: hd && !vd
             }),
-            children: [!Wr && (0, Ur.jsxs)("div", {
+            children: [!Fd && (0, qd.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, Ur.jsx)("span", {
+              children: [(0, qd.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: mr ? Kr[mr] : "Text"
-              }), (0, Ur.jsx)(nr, {
-                text: Sr,
+                children: od ? gd[od] : "Text"
+              }), (0, qd.jsx)(pd, {
+                text: Od,
                 label: "Copy"
               })]
-            }), (0, Ur.jsx)("pre", {
-              children: (0, Ur.jsx)("code", {
+            }), (0, qd.jsx)("pre", {
+              children: (0, qd.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: jr
+                  __html: Xd
                 }
               })
-            }), fr && (0, Ur.jsxs)("button", {
+            }), hd && (0, qd.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": Er,
+              "aria-expanded": vd,
               onClick: () => {
-                xr(!Er)
+                td(!vd)
               },
-              children: [(0, Ur.jsx)(hr, {
-                name: Er ? "chevron-up" : "chevron-down"
-              }), Er ? "Show less" : `Show all ${Ir} lines`]
+              children: [(0, qd.jsx)(yd, {
+                name: vd ? "chevron-up" : "chevron-down"
+              }), vd ? "Show less" : `Show all ${Kd} lines`]
             })]
           })
         }
-        var Tr = Qr(5564);
-        var vr = Qr(5566);
-        const Or = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var Jd = md(5509);
+        var Ud = md(5513);
+        const xd = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function Lr(rr) {
-          const Sr = new Map;
-          let Qr, Zr = [],
-            Wr = !1;
-          const ar = () => {
-            Qr && Sr.set(Qr.name, Qr.lines.join("\n").trimEnd())
+        function Bd(dd) {
+          const Od = new Map;
+          let md, Wd = [],
+            Fd = !1;
+          const Rd = () => {
+            md && Od.set(md.name, md.lines.join("\n").trimEnd())
           };
-          for (const jr of rr.split("\n")) {
-            const rr = jr.match(Or);
-            Wr || jr.startsWith("/*") ? (Wr || (ar(), Qr = void 0), Zr.push(jr), Wr = !jr.includes("*/")) : rr ? (ar(), Qr = {
-              name: rr[1],
-              lines: [...Zr, jr]
-            }, Zr = []) : Qr && (jr.startsWith(" ") || jr.startsWith("\t") || /^[}\])|]/.test(jr)) ? Qr.lines.push(jr) : Qr && "" !== jr.trim() && (ar(), Qr = void 0)
+          for (const Xd of dd.split("\n")) {
+            const dd = Xd.match(xd);
+            Fd || Xd.startsWith("/*") ? (Fd || (Rd(), md = void 0), Wd.push(Xd), Fd = !Xd.includes("*/")) : dd ? (Rd(), md = {
+              name: dd[1],
+              lines: [...Wd, Xd]
+            }, Wd = []) : md && (Xd.startsWith(" ") || Xd.startsWith("\t") || /^[}\])|]/.test(Xd)) ? md.lines.push(Xd) : md && "" !== Xd.trim() && (Rd(), md = void 0)
           }
-          return ar(), Sr
+          return Rd(), Od
         }
 
-        function lr(rr) {
-          return "methods" === rr || "callbacks" === rr || "settings" === rr
+        function Sd(dd) {
+          return "methods" === dd || "callbacks" === dd || "settings" === dd
         }
-        const Xr = {
+        const sd = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (rr, Sr) => `api.setClientOption(playerId, "${rr}", ${Sr})`
+              setterSnippet: (dd, Od) => `api.setClientOption(playerId, "${dd}", ${Od})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (rr, Sr) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${rr}", ${Sr})`
+              setterSnippet: (dd, Od) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${dd}", ${Od})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (rr, Sr) => `api.setMobSetting(mobId, "${rr}", ${Sr})`
+              setterSnippet: (dd, Od) => `api.setMobSetting(mobId, "${dd}", ${Od})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (rr, Sr) => `api.setVehicleSetting(vehicleId, "${rr}", ${Sr})`
+              setterSnippet: (dd, Od) => `api.setVehicleSetting(vehicleId, "${dd}", ${Od})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          Pr = {
+          ud = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function Hr(rr) {
-          return rr.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function Vd(dd) {
+          return dd.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function qr(rr) {
-          let Sr = !1;
-          return rr.split("\n").map((rr => (rr.startsWith("```") && (Sr = !Sr), !Sr && /^#{3,} /.test(rr) ? rr.slice(1) : rr))).join("\n")
+        function Ad(dd) {
+          let Od = !1;
+          return dd.split("\n").map((dd => (dd.startsWith("```") && (Od = !Od), !Od && /^#{3,} /.test(dd) ? dd.slice(1) : dd))).join("\n")
         }
 
-        function Rr(rr) {
-          return "readme" === rr ? "getting-started" : Hr(rr)
+        function rd(dd) {
+          return "readme" === dd ? "getting-started" : Vd(dd)
         }
-        const gr = "## Glossary of Referenced Types";
-        const Cr = [{
+        const Gd = "## Glossary of Referenced Types";
+        const nd = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...vr.e.flatMap((rr => {
-            const Sr = {
-              id: rr.id,
-              slug: Rr(rr.id),
-              title: rr.title,
-              markdown: rr.content,
-              ...Xr[rr.id]
+          }, ...Ud.c.flatMap((dd => {
+            const Od = {
+              id: dd.id,
+              slug: rd(dd.id),
+              title: dd.title,
+              markdown: dd.content,
+              ...sd[dd.id]
             };
-            if ("readme" === rr.id) return function(rr) {
-              const Sr = rr.markdown.indexOf(gr),
-                Qr = rr.markdown.indexOf("\n```", Sr),
-                Zr = rr.markdown.indexOf("\n```", Qr + 1);
-              if (-1 === Sr || -1 === Qr || -1 === Zr) throw new Error(`Getting started has no "${gr}" section with a code block`);
-              const Wr = rr.markdown.slice(Sr + 31, Qr).trim(),
-                ar = [...Lr(rr.markdown.slice(rr.markdown.indexOf("\n", Qr + 1) + 1, Zr))].map((rr => {
-                  let [Sr, Qr] = rr;
-                  return `## ${Sr}\n\n\`\`\`ts\n${Qr}\n\`\`\`\n`
+            if ("readme" === dd.id) return function(dd) {
+              const Od = dd.markdown.indexOf(Gd),
+                md = dd.markdown.indexOf("\n```", Od),
+                Wd = dd.markdown.indexOf("\n```", md + 1);
+              if (-1 === Od || -1 === md || -1 === Wd) throw new Error(`Getting started has no "${Gd}" section with a code block`);
+              const Fd = dd.markdown.slice(Od + 31, md).trim(),
+                Rd = [...Bd(dd.markdown.slice(dd.markdown.indexOf("\n", md + 1) + 1, Wd))].map((dd => {
+                  let [Od, md] = dd;
+                  return `## ${Od}\n\n\`\`\`ts\n${md}\n\`\`\`\n`
                 })),
-                jr = rr.markdown.slice(rr.markdown.indexOf("\n", Zr + 1) + 1);
+                Xd = dd.markdown.slice(dd.markdown.indexOf("\n", Wd + 1) + 1);
               return [{
-                ...rr,
-                markdown: `${rr.markdown.slice(0,Sr)}${jr}`
+                ...dd,
+                markdown: `${dd.markdown.slice(0,Od)}${Xd}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${Wr}\n\n${ar.join("\n")}`
+                markdown: `# Types\n\n${Fd}\n\n${Rd.join("\n")}`
               }]
-            }(Sr);
-            if ("howTo" === rr.id) {
+            }(Od);
+            if ("howTo" === dd.id) {
               const {
-                parent: rr,
-                guides: Qr
-              } = function(rr) {
-                const [Sr, ...Qr] = rr.markdown.split(/^(?=## )/m), Zr = [Sr], Wr = [];
-                for (const jr of Qr) {
-                  var ar;
-                  const Sr = jr.indexOf("\n"),
-                    Qr = jr.slice(3, Sr).trim(),
-                    Ir = jr.slice(Sr + 1);
-                  if (!Ir.includes("```")) {
-                    Zr.push(jr);
+                parent: dd,
+                guides: md
+              } = function(dd) {
+                const [Od, ...md] = dd.markdown.split(/^(?=## )/m), Wd = [Od], Fd = [];
+                for (const Xd of md) {
+                  var Rd;
+                  const Od = Xd.indexOf("\n"),
+                    md = Xd.slice(3, Od).trim(),
+                    Kd = Xd.slice(Od + 1);
+                  if (!Kd.includes("```")) {
+                    Wd.push(Xd);
                     continue
                   }
-                  const fr = null !== (ar = Pr[Qr]) && void 0 !== ar ? ar : {
+                  const hd = null !== (Rd = ud[md]) && void 0 !== Rd ? Rd : {
                     icon: "lightbulb",
-                    summary: `How to use ${Qr.toLowerCase()} in World Code.`
+                    summary: `How to use ${md.toLowerCase()} in World Code.`
                   };
-                  Wr.push({
-                    id: `${rr.id}${Qr.split(/[^A-Za-z0-9]+/).map((rr=>rr.charAt(0).toUpperCase()+rr.slice(1))).join("")}`,
-                    slug: `${rr.slug}-${Hr(Qr)}`,
-                    title: Qr,
+                  Fd.push({
+                    id: `${dd.id}${md.split(/[^A-Za-z0-9]+/).map((dd=>dd.charAt(0).toUpperCase()+dd.slice(1))).join("")}`,
+                    slug: `${dd.slug}-${Vd(md)}`,
+                    title: md,
                     layout: "article",
-                    sourceAnchor: (0, Tr.o)(Qr),
-                    markdown: `# ${Qr}\n\n${qr(Ir)}`,
-                    ...fr
+                    sourceAnchor: (0, Jd.m)(md),
+                    markdown: `# ${md}\n\n${Ad(Kd)}`,
+                    ...hd
                   })
                 }
                 return {
                   parent: {
-                    ...rr,
-                    markdown: Zr.join(""),
-                    childPageIds: Wr.map((rr => rr.id))
+                    ...dd,
+                    markdown: Wd.join(""),
+                    childPageIds: Fd.map((dd => dd.id))
                   },
-                  guides: Wr
+                  guides: Fd
                 }
-              }(Sr);
-              return [rr, ...Qr]
+              }(Od);
+              return [dd, ...md]
             }
-            return [Sr]
+            return [Od]
           }))],
-          Mr = [{
+          Ld = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...Cr.filter((rr => void 0 !== rr.sourceAnchor)).map((rr => rr.id))]
+            pageIds: ["howTo", ...nd.filter((dd => void 0 !== dd.sourceAnchor)).map((dd => dd.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function Gr(rr) {
-          return Cr.find((Sr => Sr.id === rr))
+        function Pd(dd) {
+          return nd.find((Od => Od.id === dd))
         }
-        const kr = new Map;
+        const zd = new Map;
 
-        function Ar(rr) {
-          let Sr = kr.get(rr.id);
-          return Sr || (Sr = (0, Tr.t)(rr.markdown, "changelog" === rr.layout ? 3 : 2), kr.set(rr.id, Sr)), Sr
-        }
-
-        function Vr(rr, Sr) {
-          return Ar(rr).sections.some((rr => rr.heading.anchor === Sr || rr.blocks.some((rr => "heading" === rr.kind && rr.anchor === Sr))))
+        function cd(dd) {
+          let Od = zd.get(dd.id);
+          return Od || (Od = (0, Jd.r)(dd.markdown, "changelog" === dd.layout ? 3 : 2), zd.set(dd.id, Od)), Od
         }
 
-        function ir(rr) {
-          const [Sr, ...Qr] = rr.replace(/^#/, "").split("-"), Zr = Cr.find((rr => rr.id === Sr));
-          if (!Zr) return null;
-          const Wr = Qr.length > 0 ? (0, Tr.o)(Qr.join("-")) : "";
-          for (const jr of null !== (ar = Zr.childPageIds) && void 0 !== ar ? ar : []) {
-            var ar;
-            const rr = Gr(jr);
-            if (rr.sourceAnchor === Wr) return {
-              page: rr,
+        function jd(dd, Od) {
+          return cd(dd).sections.some((dd => dd.heading.anchor === Od || dd.blocks.some((dd => "heading" === dd.kind && dd.anchor === Od))))
+        }
+
+        function Dd(dd) {
+          const [Od, ...md] = dd.replace(/^#/, "").split("-"), Wd = nd.find((dd => dd.id === Od));
+          if (!Wd) return null;
+          const Fd = md.length > 0 ? (0, Jd.m)(md.join("-")) : "";
+          for (const Xd of null !== (Rd = Wd.childPageIds) && void 0 !== Rd ? Rd : []) {
+            var Rd;
+            const dd = Pd(Xd);
+            if (dd.sourceAnchor === Fd) return {
+              page: dd,
               anchor: ""
             };
-            if (Vr(rr, Wr)) return {
-              page: rr,
-              anchor: Wr
+            if (jd(dd, Fd)) return {
+              page: dd,
+              anchor: Fd
             }
           }
           return {
-            page: Zr,
-            anchor: Wr
+            page: Wd,
+            anchor: Fd
           }
         }
-        const wr = {
+        const ed = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function cr(rr, Sr) {
-          let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const Zr = Sr.slug ? `${rr}/${Sr.slug}` : rr;
-          return Qr ? `${Zr}#${Qr}` : Zr
+        function Id(dd, Od) {
+          let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const Wd = Od.slug ? `${dd}/${Od.slug}` : dd;
+          return md ? `${Wd}#${md}` : Wd
         }
-        var Fr = Qr(5577);
-        const or = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          br = new Set(["GameApi", "Console", "_TypeOf"]),
-          Jr = 4;
+        var ld = md(5534);
+        const Cd = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          Zd = new Set(["GameApi", "Console", "_TypeOf"]),
+          kd = 4;
 
-        function Dr(rr) {
-          let Sr = rr.length;
-          for (; Sr > 0 && "" === rr[Sr - 1].trim();) Sr--;
-          return rr.slice(0, Sr)
+        function fd(dd) {
+          let Od = dd.length;
+          for (; Od > 0 && "" === dd[Od - 1].trim();) Od--;
+          return dd.slice(0, Od)
         }
 
-        function dr(rr) {
-          var Sr;
-          const Qr = Dr(rr);
-          if (null === (Sr = Qr.at(-1)) || void 0 === Sr || !Sr.trimEnd().endsWith("*/")) return {
-            lines: Qr,
+        function Md(dd) {
+          var Od;
+          const md = fd(dd);
+          if (null === (Od = md.at(-1)) || void 0 === Od || !Od.trimEnd().endsWith("*/")) return {
+            lines: md,
             doc: ""
           };
-          const Zr = Qr.findLastIndex((rr => rr.startsWith("/**")));
-          return -1 === Zr ? {
-            lines: Qr,
+          const Wd = md.findLastIndex((dd => dd.startsWith("/**")));
+          return -1 === Wd ? {
+            lines: md,
             doc: ""
           } : {
-            lines: Dr(Qr.slice(0, Zr)),
-            doc: Qr.slice(Zr).join("\n")
+            lines: fd(md.slice(0, Wd)),
+            doc: md.slice(Wd).join("\n")
           }
         }
 
-        function sr(rr) {
-          var Sr;
-          const Qr = rr.split("\n"),
-            Zr = Qr.flatMap(((rr, Sr) => or.test(rr) ? [Sr] : []));
-          let Wr = dr(Qr.slice(0, null !== (Sr = Zr[0]) && void 0 !== Sr ? Sr : Qr.length)).doc;
-          return Zr.map(((rr, Sr) => {
-            var ar;
-            const jr = dr(Qr.slice(rr, null !== (ar = Zr[Sr + 1]) && void 0 !== ar ? ar : Qr.length)),
-              Ir = {
-                name: Qr[rr].match(or)[1],
-                doc: Wr,
-                lines: jr.lines
+        function dO(dd) {
+          var Od;
+          const md = dd.split("\n"),
+            Wd = md.flatMap(((dd, Od) => Cd.test(dd) ? [Od] : []));
+          let Fd = Md(md.slice(0, null !== (Od = Wd[0]) && void 0 !== Od ? Od : md.length)).doc;
+          return Wd.map(((dd, Od) => {
+            var Rd;
+            const Xd = Md(md.slice(dd, null !== (Rd = Wd[Od + 1]) && void 0 !== Rd ? Rd : md.length)),
+              Kd = {
+                name: md[dd].match(Cd)[1],
+                doc: Fd,
+                lines: Xd.lines
               };
-            return Wr = jr.doc, Ir
+            return Fd = Xd.doc, Kd
           }))
         }
 
-        function ur(rr) {
-          var Sr;
-          const Qr = rr.match(/^readonly \[([\s\S]*)\]$/);
-          return Qr ? null !== (Sr = Qr[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Sr ? Sr : [] : null
+        function OO(dd) {
+          var Od;
+          const md = dd.match(/^readonly \[([\s\S]*)\]$/);
+          return md ? null !== (Od = md[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Od ? Od : [] : null
         }
 
-        function rS(rr) {
-          if (!rr.startsWith("{") || !rr.endsWith("}")) return null;
-          const Sr = {
+        function mO(dd) {
+          if (!dd.startsWith("{") || !dd.endsWith("}")) return null;
+          const Od = {
               keys: [],
               values: []
             },
-            Qr = rr => {
-              const Qr = rr.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              Qr && (Sr.keys.push(Qr[1].startsWith('"') ? Qr[1] : `"${Qr[1]}"`), Sr.values.push(Qr[2].trim()))
+            md = dd => {
+              const md = dd.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              md && (Od.keys.push(md[1].startsWith('"') ? md[1] : `"${md[1]}"`), Od.values.push(md[2].trim()))
             };
-          let Zr = 0,
-            Wr = "";
-          for (const ar of rr.slice(1, -1)) "{[(".includes(ar) ? Zr++ : "}])".includes(ar) && Zr--, ";" === ar && 0 === Zr ? (Qr(Wr), Wr = "") : Wr += ar;
-          return Qr(Wr), Sr
+          let Wd = 0,
+            Fd = "";
+          for (const Rd of dd.slice(1, -1)) "{[(".includes(Rd) ? Wd++ : "}])".includes(Rd) && Wd--, ";" === Rd && 0 === Wd ? (md(Fd), Fd = "") : Fd += Rd;
+          return md(Fd), Od
         }
 
-        function SS(rr) {
-          return rr.length > Jr ? `\n\t| ${rr.join("\n\t| ")}` : rr.join(" | ")
+        function WO(dd) {
+          return dd.length > kd ? `\n\t| ${dd.join("\n\t| ")}` : dd.join(" | ")
         }
 
-        function QS(rr, Sr) {
-          const Qr = function(rr, Sr) {
-            return rr.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((rr, Qr) => {
-              var Zr;
-              const Wr = null === (Zr = Sr.get(Qr)) || void 0 === Zr ? void 0 : Zr.object;
-              return Wr ? SS(Wr.values) : rr
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((rr, Qr) => {
-              var Zr, Wr;
-              const ar = null === (Zr = Sr.get(Qr)) || void 0 === Zr || null === (Wr = Zr.object) || void 0 === Wr ? void 0 : Wr.values.map(ur);
-              return null !== ar && void 0 !== ar && ar.every((rr => null !== rr)) ? SS([...new Set(ar.flat())]) : rr
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((rr, Qr) => {
-              var Zr;
-              const Wr = null === (Zr = Sr.get(Qr)) || void 0 === Zr ? void 0 : Zr.members;
-              return Wr ? SS(Wr) : rr
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((rr, Qr) => {
-              var Zr;
-              const Wr = null === (Zr = Sr.get(Qr)) || void 0 === Zr ? void 0 : Zr.object;
-              return Wr ? SS(Wr.keys) : rr
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((rr, Qr) => {
-              var Zr, Wr;
-              return null !== (Zr = null === (Wr = Sr.get(Qr)) || void 0 === Wr ? void 0 : Wr.text) && void 0 !== Zr ? Zr : rr
+        function FO(dd, Od) {
+          const md = function(dd, Od) {
+            return dd.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((dd, md) => {
+              var Wd;
+              const Fd = null === (Wd = Od.get(md)) || void 0 === Wd ? void 0 : Wd.object;
+              return Fd ? WO(Fd.values) : dd
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((dd, md) => {
+              var Wd, Fd;
+              const Rd = null === (Wd = Od.get(md)) || void 0 === Wd || null === (Fd = Wd.object) || void 0 === Fd ? void 0 : Fd.values.map(OO);
+              return null !== Rd && void 0 !== Rd && Rd.every((dd => null !== dd)) ? WO([...new Set(Rd.flat())]) : dd
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((dd, md) => {
+              var Wd;
+              const Fd = null === (Wd = Od.get(md)) || void 0 === Wd ? void 0 : Wd.members;
+              return Fd ? WO(Fd) : dd
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((dd, md) => {
+              var Wd;
+              const Fd = null === (Wd = Od.get(md)) || void 0 === Wd ? void 0 : Wd.object;
+              return Fd ? WO(Fd.keys) : dd
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((dd, md) => {
+              var Wd, Fd;
+              return null !== (Wd = null === (Fd = Od.get(md)) || void 0 === Fd ? void 0 : Fd.text) && void 0 !== Wd ? Wd : dd
             }))
-          }(rr.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Sr);
-          return [rr.doc, Qr].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(dd.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Od);
+          return [dd.doc, md].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function ZS(rr) {
-          const Sr = sr(rr),
-            Qr = function(rr) {
-              const Sr = new Map,
-                Qr = rr.find((rr => "_TypeOf" === rr.name));
-              let Zr = null;
-              const Wr = () => {
-                if (Zr) {
-                  const rr = Zr.lines.join("\n");
-                  Sr.set(Zr.name, {
-                    text: rr,
-                    members: ur(rr),
-                    object: rS(rr)
+        function RO(dd) {
+          const Od = dO(dd),
+            md = function(dd) {
+              const Od = new Map,
+                md = dd.find((dd => "_TypeOf" === dd.name));
+              let Wd = null;
+              const Fd = () => {
+                if (Wd) {
+                  const dd = Wd.lines.join("\n");
+                  Od.set(Wd.name, {
+                    text: dd,
+                    members: OO(dd),
+                    object: mO(dd)
                   })
                 }
               };
-              for (const ar of Qr.lines.slice(1, -1)) {
-                const rr = ar.match(/^\t([\w$]+): (.+)$/);
-                rr ? (Wr(), Zr = {
-                  name: rr[1],
-                  lines: [rr[2]]
-                }) : Zr && Zr.lines.push(ar.replace(/^\t/, ""))
+              for (const Rd of md.lines.slice(1, -1)) {
+                const dd = Rd.match(/^\t([\w$]+): (.+)$/);
+                dd ? (Fd(), Wd = {
+                  name: dd[1],
+                  lines: [dd[2]]
+                }) : Wd && Wd.lines.push(Rd.replace(/^\t/, ""))
               }
-              return Wr(), Sr
-            }(Sr),
-            Zr = new Map;
-          for (const Wr of Sr) br.has(Wr.name) || Zr.has(Wr.name) || Zr.set(Wr.name, QS(Wr, Qr));
-          return Zr
+              return Fd(), Od
+            }(Od),
+            Wd = new Map;
+          for (const Fd of Od) Zd.has(Fd.name) || Wd.has(Fd.name) || Wd.set(Fd.name, FO(Fd, md));
+          return Wd
         }
-        let WS, aS, jS;
+        let XO, KO, hO;
 
-        function IS() {
-          return aS ??= function(rr) {
-            const Sr = sr(rr).find((rr => "GameApi" === rr.name)),
-              Qr = new Map,
-              Zr = Sr.lines;
-            for (let ar = 0; ar < Zr.length; ar++) {
-              var Wr;
-              if (!Zr[ar].trimStart().startsWith("/**")) continue;
-              const rr = ar;
-              for (; ar < Zr.length && !Zr[ar].includes("*/");) ar++;
-              const Sr = null === (Wr = Zr[ar + 1]) || void 0 === Wr ? void 0 : Wr.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!Sr) continue;
-              let jr = null;
-              const Ir = [];
-              let fr = "description",
-                Er = !1;
-              for (const Qr of Zr.slice(rr, ar + 1).join("\n").split("\n").map((rr => rr.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const rr = Qr.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                rr ? (jr = rr[1].trim(), fr = "deprecation") : Qr.startsWith("@") ? (fr = "otherTag", Er = !0) : "" === Qr.trim() ? Er || (fr = "description", Ir.push(Qr)) : "deprecation" !== fr || /^[A-Z]/.test(Qr.trim()) ? "otherTag" !== fr && (fr = "description", Ir.push(Qr)) : jr = `${jr} ${Qr.trim()}`.trim()
+        function vO() {
+          return KO ??= function(dd) {
+            const Od = dO(dd).find((dd => "GameApi" === dd.name)),
+              md = new Map,
+              Wd = Od.lines;
+            for (let Rd = 0; Rd < Wd.length; Rd++) {
+              var Fd;
+              if (!Wd[Rd].trimStart().startsWith("/**")) continue;
+              const dd = Rd;
+              for (; Rd < Wd.length && !Wd[Rd].includes("*/");) Rd++;
+              const Od = null === (Fd = Wd[Rd + 1]) || void 0 === Fd ? void 0 : Fd.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!Od) continue;
+              let Xd = null;
+              const Kd = [];
+              let hd = "description",
+                vd = !1;
+              for (const md of Wd.slice(dd, Rd + 1).join("\n").split("\n").map((dd => dd.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const dd = md.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                dd ? (Xd = dd[1].trim(), hd = "deprecation") : md.startsWith("@") ? (hd = "otherTag", vd = !0) : "" === md.trim() ? vd || (hd = "description", Kd.push(md)) : "deprecation" !== hd || /^[A-Z]/.test(md.trim()) ? "otherTag" !== hd && (hd = "description", Kd.push(md)) : Xd = `${Xd} ${md.trim()}`.trim()
               }
-              Qr.set(Sr[1], {
-                deprecation: jr,
-                description: Ir.join("\n").trim()
+              md.set(Od[1], {
+                deprecation: Xd,
+                description: Kd.join("\n").trim()
               })
             }
-            return Qr
-          }(Fr.default), aS
+            return md
+          }(ld.default), KO
         }
 
-        function fS() {
-          if (!jS) {
-            jS = new Map;
-            for (const rr of Cr) {
-              const Sr = (0, Tr.r)(Ar(rr)).flatMap((rr => rr.blocks));
-              for (const rr of (0, Tr.i)(Sr))
-                if ("ts" === rr.lang || "typescript" === rr.lang)
-                  for (const [Sr, Qr] of Lr(rr.code)) jS.set(Sr, Qr)
+        function QO() {
+          if (!hO) {
+            hO = new Map;
+            for (const dd of nd) {
+              const Od = (0, Jd.q)(cd(dd)).flatMap((dd => dd.blocks));
+              for (const dd of (0, Jd.h)(Od))
+                if ("ts" === dd.lang || "typescript" === dd.lang)
+                  for (const [Od, md] of Bd(dd.code)) hO.set(Od, md)
             }
-            for (const [rr, Sr] of(WS ??= ZS(Fr.default), WS)) jS.has(rr) || jS.set(rr, Sr)
+            for (const [dd, Od] of(XO ??= RO(ld.default), XO)) hO.has(dd) || hO.set(dd, Od)
           }
-          return jS
+          return hO
         }
-        const ES = {
+        const tO = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let pS;
+        let oO;
 
-        function xS() {
-          if (!pS) {
-            pS = new Map;
-            for (const rr of Cr)
-              if (lr(rr.layout))
-                for (const Sr of Ar(rr).sections) pS.has(Sr.heading.text) || pS.set(Sr.heading.text, {
-                  pageId: rr.id,
-                  anchor: Sr.heading.anchor
+        function NO() {
+          if (!oO) {
+            oO = new Map;
+            for (const dd of nd)
+              if (Sd(dd.layout))
+                for (const Od of cd(dd).sections) oO.has(Od.heading.text) || oO.set(Od.heading.text, {
+                  pageId: dd.id,
+                  anchor: Od.heading.anchor
                 })
           }
-          return pS
+          return oO
         }
 
-        function mS(rr) {
-          const Sr = rr.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return Sr ? xS().get(Sr[1]) : void 0
+        function qO(dd) {
+          const Od = dd.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return Od ? NO().get(Od[1]) : void 0
         }
-        const NS = (0, Zr.createContext)("/docs"),
-          US = (0, Zr.createContext)(null),
-          tS = (0, Zr.createContext)(!1),
-          hS = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const HO = (0, Wd.createContext)("/docs"),
+          yO = (0, Wd.createContext)(null),
+          bO = (0, Wd.createContext)(!1),
+          TO = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function zS(rr) {
-          const Sr = rr.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return Sr ? Sr[1] : null
+        function pO(dd) {
+          const Od = dd.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return Od ? Od[1] : null
         }
 
-        function YS(rr) {
+        function YO(dd) {
           let {
-            colour: Sr
-          } = rr;
-          return (0, Ur.jsx)("span", {
+            colour: Od
+          } = dd;
+          return (0, qd.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: Sr
+              background: Od
             },
             "aria-hidden": "true"
           })
         }
 
-        function nS(rr) {
-          const Sr = [];
-          let Qr = 0;
-          for (const Zr of rr.matchAll(hS)) Sr.push(rr.slice(Qr, Zr.index), (0, Ur.jsx)(YS, {
-            colour: Zr[0]
-          }), Zr[0]), Qr = Zr.index + Zr[0].length;
-          return Sr.push(rr.slice(Qr)), Sr
+        function gO(dd) {
+          const Od = [];
+          let md = 0;
+          for (const Wd of dd.matchAll(TO)) Od.push(dd.slice(md, Wd.index), (0, qd.jsx)(YO, {
+            colour: Wd[0]
+          }), Wd[0]), md = Wd.index + Wd[0].length;
+          return Od.push(dd.slice(md)), Od
         }
 
-        function eS(rr) {
+        function wO(dd) {
           let {
-            href: Sr,
-            children: Qr
-          } = rr;
-          const Wr = (0, Zr.useContext)(NS);
-          if (Sr.startsWith("#")) {
-            const rr = ir(Sr);
-            if (rr) return (0, Ur.jsx)(jr.d, {
-              to: cr(Wr, rr.page, rr.anchor),
-              children: (0, Ur.jsx)(tS.Provider, {
+            href: Od,
+            children: md
+          } = dd;
+          const Fd = (0, Wd.useContext)(HO);
+          if (Od.startsWith("#")) {
+            const dd = Dd(Od);
+            if (dd) return (0, qd.jsx)(Xd.c, {
+              to: Id(Fd, dd.page, dd.anchor),
+              children: (0, qd.jsx)(bO.Provider, {
                 value: !0,
-                children: Qr
+                children: md
               })
             })
           }
-          return (0, Ur.jsx)("a", {
-            href: Sr,
+          return (0, qd.jsx)("a", {
+            href: Od,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, Ur.jsx)(tS.Provider, {
+            children: (0, qd.jsx)(bO.Provider, {
               value: !0,
-              children: Qr
+              children: md
             })
           })
         }
 
-        function KS(rr) {
+        function aO(dd) {
           let {
-            code: Sr
-          } = rr;
-          const Qr = (0, Zr.useContext)(NS);
-          if ((0, Zr.useContext)(tS)) return (0, Ur.jsx)("code", {
+            code: Od
+          } = dd;
+          const md = (0, Wd.useContext)(HO);
+          if ((0, Wd.useContext)(bO)) return (0, qd.jsx)("code", {
             className: "DocsInlineCode",
-            children: Sr
+            children: Od
           });
-          if (fS().has(Sr)) return (0, Ur.jsx)(vS, {
-            type: Sr
+          if (QO().has(Od)) return (0, qd.jsx)(xO, {
+            type: Od
           });
-          const Wr = mS(Sr);
-          if (Wr) return (0, Ur.jsx)(jr.d, {
+          const Fd = qO(Od);
+          if (Fd) return (0, qd.jsx)(Xd.c, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: cr(Qr, Gr(Wr.pageId), Wr.anchor),
-            children: Sr
+            to: Id(md, Pd(Fd.pageId), Fd.anchor),
+            children: Od
           });
-          const ar = zS(Sr);
-          return (0, Ur.jsxs)("code", {
+          const Rd = pO(Od);
+          return (0, qd.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [ar && (0, Ur.jsx)(YS, {
-              colour: ar
-            }), Sr]
+            children: [Rd && (0, qd.jsx)(YO, {
+              colour: Rd
+            }), Od]
           })
         }
 
-        function yS(rr) {
+        function EO(dd) {
           let {
-            text: Sr
-          } = rr;
-          const Qr = [];
-          let Wr = 0;
-          for (const Zr of Sr.matchAll(Tr.e)) {
-            Zr.index > Wr && Qr.push(...nS(Sr.slice(Wr, Zr.index)));
-            const [, rr, ar, jr, Ir, fr] = Zr;
-            rr ? Qr.push((0, Ur.jsx)(KS, {
-              code: (0, Tr.j)(rr, ar)
-            })) : jr ? Qr.push((0, Ur.jsx)("strong", {
-              children: (0, Ur.jsx)(yS, {
-                text: jr
+            text: Od
+          } = dd;
+          const md = [];
+          let Fd = 0;
+          for (const Wd of Od.matchAll(Jd.c)) {
+            Wd.index > Fd && md.push(...gO(Od.slice(Fd, Wd.index)));
+            const [, dd, Rd, Xd, Kd, hd] = Wd;
+            dd ? md.push((0, qd.jsx)(aO, {
+              code: (0, Jd.k)(dd, Rd)
+            })) : Xd ? md.push((0, qd.jsx)("strong", {
+              children: (0, qd.jsx)(EO, {
+                text: Xd
               })
-            })) : Qr.push((0, Ur.jsx)(eS, {
-              href: fr,
-              children: (0, Ur.jsx)(yS, {
-                text: Ir
+            })) : md.push((0, qd.jsx)(wO, {
+              href: hd,
+              children: (0, qd.jsx)(EO, {
+                text: Kd
               })
-            })), Wr = Zr.index + Zr[0].length
+            })), Fd = Wd.index + Wd[0].length
           }
-          return Wr < Sr.length && Qr.push(...nS(Sr.slice(Wr))), (0, Ur.jsx)(Ur.Fragment, {
-            children: Qr.map(((rr, Sr) => (0, Ur.jsx)(Zr.Fragment, {
-              children: rr
-            }, Sr)))
+          return Fd < Od.length && md.push(...gO(Od.slice(Fd))), (0, qd.jsx)(qd.Fragment, {
+            children: md.map(((dd, Od) => (0, qd.jsx)(Wd.Fragment, {
+              children: dd
+            }, Od)))
           })
         }
-        const BS = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          TS = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const JO = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          UO = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function vS(rr) {
+        function xO(dd) {
           let {
-            type: Sr
-          } = rr;
-          const Qr = fS(),
-            Wr = [];
-          for (const Zr of Sr.trim().matchAll(BS)) {
-            const [rr, Sr, ar, jr, Ir] = Zr;
-            Sr ? Wr.push((0, Ur.jsx)("span", {
+            type: Od
+          } = dd;
+          const md = QO(),
+            Fd = [];
+          for (const Wd of Od.trim().matchAll(JO)) {
+            const [dd, Od, Rd, Xd, Kd] = Wd;
+            Od ? Fd.push((0, qd.jsx)("span", {
               className: "DocsTypeString",
-              children: rr
-            })) : ar && Qr.has(ar) ? Wr.push((0, Ur.jsx)(PS, {
-              name: ar,
-              definition: Qr.get(ar)
-            })) : ar ? Wr.push((0, Ur.jsx)("span", {
-              className: TS.has(ar) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: rr
-            })) : jr ? Wr.push((0, Ur.jsx)("span", {
+              children: dd
+            })) : Rd && md.has(Rd) ? Fd.push((0, qd.jsx)(VO, {
+              name: Rd,
+              definition: md.get(Rd)
+            })) : Rd ? Fd.push((0, qd.jsx)("span", {
+              className: UO.has(Rd) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: dd
+            })) : Xd ? Fd.push((0, qd.jsx)("span", {
               className: "DocsTypeNumber",
-              children: rr
-            })) : Ir ? Wr.push(" ") : Wr.push((0, Ur.jsx)("span", {
+              children: dd
+            })) : Kd ? Fd.push(" ") : Fd.push((0, qd.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: rr
+              children: dd
             }))
           }
-          return (0, Ur.jsx)("code", {
+          return (0, qd.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: Wr.map(((rr, Sr) => (0, Ur.jsx)(Zr.Fragment, {
-              children: rr
-            }, Sr)))
+            children: Fd.map(((dd, Od) => (0, qd.jsx)(Wd.Fragment, {
+              children: dd
+            }, Od)))
           })
         }
-        const OS = 480,
-          LS = 6,
-          lS = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let XS = 0;
+        const BO = 480,
+          SO = 6,
+          sO = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let uO = 0;
 
-        function PS(rr) {
+        function VO(dd) {
           let {
-            name: Sr,
-            definition: Qr
-          } = rr;
-          const Wr = (0, Zr.useContext)(NS),
-            ar = ES[Sr],
-            Ir = (0, Zr.useRef)(null),
-            fr = (0, Zr.useRef)(null),
-            pr = (0, Zr.useRef)(null),
-            [xr, mr] = (0, Zr.useState)(!1),
-            [Nr, tr] = (0, Zr.useState)(null),
-            zr = (0, Zr.useRef)(),
-            Yr = (0, Zr.useContext)(US),
-            [nr] = (0, Zr.useState)((() => "DocsTypePopover-" + XS++)),
-            er = () => {
-              clearTimeout(zr.current), mr(!0)
+            name: Od,
+            definition: md
+          } = dd;
+          const Fd = (0, Wd.useContext)(HO),
+            Rd = tO[Od],
+            Kd = (0, Wd.useRef)(null),
+            hd = (0, Wd.useRef)(null),
+            Qd = (0, Wd.useRef)(null),
+            [td, od] = (0, Wd.useState)(!1),
+            [Nd, Hd] = (0, Wd.useState)(null),
+            bd = (0, Wd.useRef)(),
+            Td = (0, Wd.useContext)(yO),
+            [pd] = (0, Wd.useState)((() => "DocsTypePopover-" + uO++)),
+            Yd = () => {
+              clearTimeout(bd.current), od(!0)
             },
-            Kr = () => {
-              clearTimeout(zr.current), zr.current = setTimeout((() => {
-                mr(!1)
+            gd = () => {
+              clearTimeout(bd.current), bd.current = setTimeout((() => {
+                od(!1)
               }), 120)
             };
-          return (0, Zr.useEffect)((() => {
-            if (!xr) return;
-            const rr = rr => {
-              if ("Escape" === rr.key) {
-                var Sr, Qr;
-                if (null !== (Sr = fr.current) && void 0 !== Sr && Sr.contains(document.activeElement)) null === (Qr = Ir.current) || void 0 === Qr || Qr.focus();
-                mr(!1)
+          return (0, Wd.useEffect)((() => {
+            if (!td) return;
+            const dd = dd => {
+              if ("Escape" === dd.key) {
+                var Od, md;
+                if (null !== (Od = hd.current) && void 0 !== Od && Od.contains(document.activeElement)) null === (md = Kd.current) || void 0 === md || md.focus();
+                od(!1)
               }
             };
-            return document.addEventListener("keydown", rr), () => {
-              document.removeEventListener("keydown", rr)
+            return document.addEventListener("keydown", dd), () => {
+              document.removeEventListener("keydown", dd)
             }
-          }), [xr]), (0, Zr.useEffect)((() => () => {
-            clearTimeout(zr.current)
-          }), []), (0, Zr.useLayoutEffect)((() => {
-            if (!xr || !Ir.current || !fr.current) return void tr(null);
-            const rr = Ir.current.getBoundingClientRect(),
-              Sr = fr.current.offsetHeight,
-              Qr = Math.min(OS, window.innerWidth - 32),
-              Zr = Math.min(Math.max(16, rr.left), window.innerWidth - Qr - 16),
-              Wr = rr.bottom + LS + Sr < window.innerHeight;
-            tr({
-              left: Zr,
-              top: Wr ? rr.bottom + LS : Math.max(16, rr.top - LS - Sr)
+          }), [td]), (0, Wd.useEffect)((() => () => {
+            clearTimeout(bd.current)
+          }), []), (0, Wd.useLayoutEffect)((() => {
+            if (!td || !Kd.current || !hd.current) return void Hd(null);
+            const dd = Kd.current.getBoundingClientRect(),
+              Od = hd.current.offsetHeight,
+              md = Math.min(BO, window.innerWidth - 32),
+              Wd = Math.min(Math.max(16, dd.left), window.innerWidth - md - 16),
+              Fd = dd.bottom + SO + Od < window.innerHeight;
+            Hd({
+              left: Wd,
+              top: Fd ? dd.bottom + SO : Math.max(16, dd.top - SO - Od)
             })
-          }), [xr]), (0, Ur.jsxs)(Ur.Fragment, {
-            children: [(0, Ur.jsx)("button", {
+          }), [td]), (0, qd.jsxs)(qd.Fragment, {
+            children: [(0, qd.jsx)("button", {
               type: "button",
-              ref: Ir,
+              ref: Kd,
               className: "DocsTypeLink",
-              "aria-expanded": xr,
-              "aria-describedby": xr ? nr : void 0,
-              onMouseEnter: er,
-              onMouseLeave: Kr,
-              onFocus: er,
-              onBlur: Kr,
-              onKeyDown: rr => {
-                "Tab" === rr.key && !rr.shiftKey && pr.current && (rr.preventDefault(), pr.current.focus())
+              "aria-expanded": td,
+              "aria-describedby": td ? pd : void 0,
+              onMouseEnter: Yd,
+              onMouseLeave: gd,
+              onFocus: Yd,
+              onBlur: gd,
+              onKeyDown: dd => {
+                "Tab" === dd.key && !dd.shiftKey && Qd.current && (dd.preventDefault(), Qd.current.focus())
               },
-              onClick: er,
-              children: Sr
-            }), xr && (0, Er.createPortal)((0, Ur.jsxs)("span", {
-              ref: fr,
-              id: nr,
+              onClick: Yd,
+              children: Od
+            }), td && (0, vd.createPortal)((0, qd.jsxs)("span", {
+              ref: hd,
+              id: pd,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: Nr ? {
-                left: Nr.left,
-                top: Nr.top,
-                maxWidth: OS
+              style: Nd ? {
+                left: Nd.left,
+                top: Nd.top,
+                maxWidth: BO
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: er,
-              onMouseLeave: Kr,
-              onFocus: er,
-              onBlur: Kr,
-              children: [(0, Ur.jsxs)("span", {
+              onMouseEnter: Yd,
+              onMouseLeave: gd,
+              onFocus: Yd,
+              onBlur: gd,
+              children: [(0, qd.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, Ur.jsx)("span", {
+                children: [(0, qd.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: Sr
-                }), ar && (0, Ur.jsxs)(jr.d, {
-                  ref: pr,
+                  children: Od
+                }), Rd && (0, qd.jsxs)(Xd.c, {
+                  ref: Qd,
                   className: "DocsTypePopoverLink",
-                  to: cr(Wr, Gr(ar)),
+                  to: Id(Fd, Pd(Rd)),
                   onClick: () => {
-                    mr(!1)
+                    od(!1)
                   },
-                  onKeyDown: rr => {
-                    if ("Tab" === rr.key) {
-                      var Sr;
-                      if (rr.preventDefault(), rr.shiftKey || !Ir.current || ! function(rr, Sr) {
-                          const Qr = [...document.querySelectorAll(lS)],
-                            Zr = Qr.slice(Qr.indexOf(rr) + 1).find((rr => rr.getClientRects().length > 0 && !(null !== Sr && void 0 !== Sr && Sr.contains(rr))));
-                          return null === Zr || void 0 === Zr || Zr.focus(), void 0 !== Zr
-                        }(Ir.current, fr.current)) null === (Sr = Ir.current) || void 0 === Sr || Sr.focus();
-                      rr.shiftKey || mr(!1)
+                  onKeyDown: dd => {
+                    if ("Tab" === dd.key) {
+                      var Od;
+                      if (dd.preventDefault(), dd.shiftKey || !Kd.current || ! function(dd, Od) {
+                          const md = [...document.querySelectorAll(sO)],
+                            Wd = md.slice(md.indexOf(dd) + 1).find((dd => dd.getClientRects().length > 0 && !(null !== Od && void 0 !== Od && Od.contains(dd))));
+                          return null === Wd || void 0 === Wd || Wd.focus(), void 0 !== Wd
+                        }(Kd.current, hd.current)) null === (Od = Kd.current) || void 0 === Od || Od.focus();
+                      dd.shiftKey || od(!1)
                     }
                   },
-                  children: [Gr(ar).title, (0, Ur.jsx)(hr, {
+                  children: [Pd(Rd).title, (0, qd.jsx)(yd, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, Ur.jsx)(Br, {
+              }), (0, qd.jsx)(Ed, {
                 lang: "ts",
-                code: Qr,
+                code: md,
                 compact: !0
               })]
-            }), null !== Yr && void 0 !== Yr ? Yr : document.body)]
+            }), null !== Td && void 0 !== Td ? Td : document.body)]
           })
         }
-        var HS = Qr(208),
-          qS = Qr(5581),
-          RS = Qr(5589),
-          gS = Qr(5594);
-        const CS = {
+        var iO = md(218),
+          AO = md(5540),
+          rO = md(5548),
+          GO = md(5550);
+        const nO = {
           progressBar: {
-            ya: 30,
-            Ba: .075,
-            Ta: 5,
-            va: !1,
+            gR: 30,
+            wR: .075,
+            aR: 5,
+            ER: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            Oa: "fa-solid fa-computer-mouse",
+            JR: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            la: 3e3,
+            xR: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            Xa: !0,
+            BR: !0,
             scale: 3,
             rotation: 15,
-            Pa: !1
+            sR: !1
           },
           gravityBar: {
-            ya: 30,
-            qa: .25,
-            Ra: 3,
-            ga: .8,
+            gR: 30,
+            VR: .25,
+            iR: 3,
+            AR: .8,
             gravity: 1,
-            Ca: 1.5,
-            Ma: 8,
-            Ga: 4,
-            va: !1,
+            rR: 1.5,
+            GR: 8,
+            nR: 4,
+            ER: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            Aa: .15,
+            PR: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            ia: 5,
-            wa: 1200,
-            ca: .15,
-            Fa: 3,
+            cR: 5,
+            jR: 1200,
+            DR: .15,
+            eR: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var MS = Qr(360),
-          GS = Qr(2140);
+        var LO = md(387),
+          PO = md(2141);
 
-        function kS(rr) {
-          return rr.startsWith("fa-")
+        function zO(dd) {
+          return dd.startsWith("fa-")
         }
-        const AS = {
+        const cO = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          VS = {
+          jO = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function iS(rr) {
-          return "string" === typeof rr ? "text" : "entityName" in rr || "translationKey" in rr ? "other" : (0, MS.xb)(rr) ? "progressBar" : (0, MS.wb)(rr) ? "keyBinding" : "icon" in rr ? "icon" : "str" in rr && "string" === typeof rr.str ? "text" : "other"
+        function DO(dd) {
+          return "string" === typeof dd ? "text" : "entityName" in dd || "translationKey" in dd ? "other" : (0, LO.wb)(dd) ? "progressBar" : (0, LO.sb)(dd) ? "keyBinding" : "icon" in dd ? "icon" : "str" in dd && "string" === typeof dd.str ? "text" : "other"
         }
-        const wS = [{
+        const eO = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          cS = {
+          IO = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...wS],
+            }, ...eO],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: GS.l
+                options: PO.m
               },
               isRequired: !0
-            }, ...wS],
+            }, ...eO],
             other: []
           };
 
-        function FS(rr) {
-          return "string" === typeof rr ? {
-            str: rr
-          } : rr
+        function lO(dd) {
+          return "string" === typeof dd ? {
+            str: dd
+          } : dd
         }
 
-        function oS(rr, Sr) {
-          let Qr = FS(rr);
-          for (const Zr of Sr) Qr = Qr && "object" === typeof Qr ? Qr[Zr] : void 0;
-          return Qr
+        function CO(dd, Od) {
+          let md = lO(dd);
+          for (const Wd of Od) md = md && "object" === typeof md ? md[Wd] : void 0;
+          return md
         }
 
-        function bS(rr, Sr, Qr) {
-          const Zr = (rr, Wr) => {
-            var ar;
-            const jr = Sr[Wr],
-              Ir = {
-                ...rr
+        function ZO(dd, Od, md) {
+          const Wd = (dd, Fd) => {
+            var Rd;
+            const Xd = Od[Fd],
+              Kd = {
+                ...dd
               };
-            if (Wr === Sr.length - 1) return void 0 === Qr ? delete Ir[jr] : Ir[jr] = Qr, Ir;
-            const fr = Zr(null !== (ar = rr[jr]) && void 0 !== ar ? ar : {}, Wr + 1);
-            return 0 === Object.keys(fr).length ? delete Ir[jr] : Ir[jr] = fr, Ir
+            if (Fd === Od.length - 1) return void 0 === md ? delete Kd[Xd] : Kd[Xd] = md, Kd;
+            const hd = Wd(null !== (Rd = dd[Xd]) && void 0 !== Rd ? Rd : {}, Fd + 1);
+            return 0 === Object.keys(hd).length ? delete Kd[Xd] : Kd[Xd] = hd, Kd
           };
-          return function(rr) {
-            const Sr = Object.keys(rr);
-            return "string" === typeof rr.str && 1 === Sr.length ? rr.str : rr
-          }(Zr(FS(rr), 0))
+          return function(dd) {
+            const Od = Object.keys(dd);
+            return "string" === typeof dd.str && 1 === Od.length ? dd.str : dd
+          }(Wd(lO(dd), 0))
         }
 
-        function JS(rr, Sr) {
-          const Qr = iS(rr),
-            Zr = cS[Qr].find((rr => rr.path.join(".") === Sr.join("."))),
-            Wr = null !== Zr && void 0 !== Zr && Zr.isRequired && "other" !== Qr ? oS(VS[Qr], Sr) : void 0;
-          return bS(rr, Sr, Wr)
+        function kO(dd, Od) {
+          const md = DO(dd),
+            Wd = IO[md].find((dd => dd.path.join(".") === Od.join("."))),
+            Fd = null !== Wd && void 0 !== Wd && Wd.isRequired && "other" !== md ? CO(jO[md], Od) : void 0;
+          return ZO(dd, Od, Fd)
         }
 
-        function DS(rr) {
-          switch (iS(rr)) {
+        function fO(dd) {
+          switch (DO(dd)) {
             case "text":
-              return String(oS(rr, ["str"]));
+              return String(CO(dd, ["str"]));
             case "icon":
-              return String(oS(rr, ["icon"]));
+              return String(CO(dd, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(oS(rr,["progress"])))}%`;
+              return `${Math.round(100*Number(CO(dd,["progress"])))}%`;
             case "keyBinding":
-              return String(oS(rr, ["action"]));
+              return String(CO(dd, ["action"]));
             case "other":
-              return JSON.stringify(rr)
+              return JSON.stringify(dd)
           }
         }
-        const dS = /^[A-Za-z_$][\w$]*$/;
+        const MO = /^[A-Za-z_$][\w$]*$/;
 
-        function sS(rr) {
-          if (Array.isArray(rr)) return `[${rr.map(sS).join(", ")}]`;
-          if (rr && "object" === typeof rr) {
-            const Sr = Object.entries(rr).map((rr => {
-              let [Sr, Qr] = rr;
-              return `${dS.test(Sr)?Sr:JSON.stringify(Sr)}: ${sS(Qr)}`
+        function dm(dd) {
+          if (Array.isArray(dd)) return `[${dd.map(dm).join(", ")}]`;
+          if (dd && "object" === typeof dd) {
+            const Od = Object.entries(dd).map((dd => {
+              let [Od, md] = dd;
+              return `${MO.test(Od)?Od:JSON.stringify(Od)}: ${dm(md)}`
             }));
-            return 0 === Sr.length ? "{}" : `{ ${Sr.join(", ")} }`
+            return 0 === Od.length ? "{}" : `{ ${Od.join(", ")} }`
           }
-          return JSON.stringify(rr)
+          return JSON.stringify(dd)
         }
 
-        function uS(rr) {
-          const Sr = rr.map(sS),
-            Qr = `[${Sr.join(", ")}]`;
-          return Qr.length <= 60 ? Qr : `[\n${Sr.map((rr=>`    ${rr},`)).join("\n")}\n]`
+        function Om(dd) {
+          const Od = dd.map(dm),
+            md = `[${Od.join(", ")}]`;
+          return md.length <= 60 ? md : `[\n${Od.map((dd=>`    ${dd},`)).join("\n")}\n]`
         }
-        const rQ = {
+        const mm = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function SQ(rr) {
-          let Sr = "";
-          for (let Wr = 0; Wr < rr.length; Wr++) {
-            const ar = rr[Wr];
-            if ("\\" === ar) {
-              var Qr;
-              const Zr = null !== (Qr = rr[Wr + 1]) && void 0 !== Qr ? Qr : "";
-              Sr += "'" === Zr ? "'" : ar + Zr, Wr++
-            } else if ('"' === ar) Sr += '\\"';
+        function Wm(dd) {
+          let Od = "";
+          for (let Fd = 0; Fd < dd.length; Fd++) {
+            const Rd = dd[Fd];
+            if ("\\" === Rd) {
+              var md;
+              const Wd = null !== (md = dd[Fd + 1]) && void 0 !== md ? md : "";
+              Od += "'" === Wd ? "'" : Rd + Wd, Fd++
+            } else if ('"' === Rd) Od += '\\"';
             else {
-              var Zr;
-              Sr += null !== (Zr = rQ[ar]) && void 0 !== Zr ? Zr : ar
+              var Wd;
+              Od += null !== (Wd = mm[Rd]) && void 0 !== Wd ? Wd : Rd
             }
           }
-          return `"${Sr}"`
+          return `"${Od}"`
         }
 
-        function QQ(rr) {
-          if ("string" === typeof rr) return !0;
-          if (!rr || "object" !== typeof rr || Array.isArray(rr)) return !1;
-          const Sr = rr;
-          return "ProgressBar" === Sr.type ? "number" === typeof Sr.progress : "StyledKeyBinding" === Sr.type ? GS.l.includes(Sr.action) : "string" === typeof Sr.icon || "string" === typeof Sr.str || "string" === typeof Sr.entityName || "string" === typeof Sr.translationKey
+        function Fm(dd) {
+          if ("string" === typeof dd) return !0;
+          if (!dd || "object" !== typeof dd || Array.isArray(dd)) return !1;
+          const Od = dd;
+          return "ProgressBar" === Od.type ? "number" === typeof Od.progress : "StyledKeyBinding" === Od.type ? PO.m.includes(Od.action) : "string" === typeof Od.icon || "string" === typeof Od.str || "string" === typeof Od.entityName || "string" === typeof Od.translationKey
         }
 
-        function ZQ(rr) {
-          let Sr;
+        function Rm(dd) {
+          let Od;
           try {
-            Sr = function(rr) {
-              let Sr = "",
-                Qr = "",
-                Zr = 0;
-              const Wr = () => {
-                Sr += Qr.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), Qr = ""
+            Od = function(dd) {
+              let Od = "",
+                md = "",
+                Wd = 0;
+              const Fd = () => {
+                Od += md.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), md = ""
               };
-              for (; Zr < rr.length;) {
-                const ar = rr.slice(Zr).search(/["'`]|\/\//);
-                if (-1 === ar) {
-                  Qr += rr.slice(Zr);
+              for (; Wd < dd.length;) {
+                const Rd = dd.slice(Wd).search(/["'`]|\/\//);
+                if (-1 === Rd) {
+                  md += dd.slice(Wd);
                   break
                 }
-                Qr += rr.slice(Zr, Zr + ar);
-                const jr = Zr + ar,
-                  Ir = rr[jr];
-                if ("/" === Ir) {
-                  const Sr = rr.indexOf("\n", jr);
-                  Zr = -1 === Sr ? rr.length : Sr;
+                md += dd.slice(Wd, Wd + Rd);
+                const Xd = Wd + Rd,
+                  Kd = dd[Xd];
+                if ("/" === Kd) {
+                  const Od = dd.indexOf("\n", Xd);
+                  Wd = -1 === Od ? dd.length : Od;
                   continue
                 }
-                if (Wr(), "`" === Ir) throw new Error("Use quotes rather than template strings.");
-                let fr = jr + 1;
-                for (; fr < rr.length && rr[fr] !== Ir;) fr += "\\" === rr[fr] ? 2 : 1;
-                if (fr >= rr.length) throw new Error("A string is missing its closing quote.");
-                const Er = rr.slice(jr + 1, fr);
-                Sr += SQ(Er), Zr = fr + 1
+                if (Fd(), "`" === Kd) throw new Error("Use quotes rather than template strings.");
+                let hd = Xd + 1;
+                for (; hd < dd.length && dd[hd] !== Kd;) hd += "\\" === dd[hd] ? 2 : 1;
+                if (hd >= dd.length) throw new Error("A string is missing its closing quote.");
+                const vd = dd.slice(Xd + 1, hd);
+                Od += Wm(vd), Wd = hd + 1
               }
-              return Wr(), JSON.parse(Sr)
-            }(rr.trim())
-          } catch (Zr) {
+              return Fd(), JSON.parse(Od)
+            }(dd.trim())
+          } catch (Wd) {
             return {
               parts: null,
-              error: Zr instanceof SyntaxError ? "This isn't a valid array yet." : Zr.message
+              error: Wd instanceof SyntaxError ? "This isn't a valid array yet." : Wd.message
             }
           }
-          if (!Array.isArray(Sr)) return {
+          if (!Array.isArray(Od)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const Qr = Sr.findIndex((rr => !QQ(rr)));
-          return -1 !== Qr ? {
+          const md = Od.findIndex((dd => !Fm(dd)));
+          return -1 !== md ? {
             parts: null,
-            error: `Part ${Qr+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${md+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: Sr,
+            parts: Od,
             error: null
           }
         }
-        const WQ = 1 / HS.i.clientTicksPerSecond,
-          aQ = 700,
-          jQ = {
+        const Xm = 1 / iO.i.clientTicksPerSecond,
+          Km = 700,
+          hm = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          IQ = {
-            progressBar: CS.progressBar.Oa,
-            timedClick: CS.timedClick.icon,
-            gravityBar: CS.gravityBar.icon,
-            precisionBar: CS.precisionBar.icon,
-            rhythmClick: CS.rhythmClick.icon
+          Qm = {
+            progressBar: nO.progressBar.JR,
+            timedClick: nO.timedClick.icon,
+            gravityBar: nO.gravityBar.icon,
+            precisionBar: nO.precisionBar.icon,
+            rhythmClick: nO.rhythmClick.icon
           };
 
-        function fQ(rr) {
+        function tm(dd) {
           let {
-            type: Sr
-          } = rr;
-          const [Qr, Wr] = (0, Zr.useState)("ready"), [jr, Ir] = (0, Zr.useState)(1), [fr, Er] = (0, Zr.useState)(!0), pr = (0, Zr.useRef)(null), xr = (0, Zr.useRef)(null), mr = (0, Zr.useRef)(null), Nr = (0, Zr.useRef)(new Set), tr = (0, Zr.useRef)(!1), zr = IQ[Sr], Yr = (0, Zr.useMemo)((() => ({
+            type: Od
+          } = dd;
+          const [md, Fd] = (0, Wd.useState)("ready"), [Xd, Kd] = (0, Wd.useState)(1), [hd, vd] = (0, Wd.useState)(!0), Qd = (0, Wd.useRef)(null), td = (0, Wd.useRef)(null), od = (0, Wd.useRef)(null), Nd = (0, Wd.useRef)(new Set), Hd = (0, Wd.useRef)(!1), bd = Qm[Od], Td = (0, Wd.useMemo)((() => ({
             getState: () => {
-              var rr, Sr;
-              return null !== (rr = null === (Sr = mr.current) || void 0 === Sr ? void 0 : Sr.getState()) && void 0 !== rr ? rr : jQ
+              var dd, Od;
+              return null !== (dd = null === (Od = od.current) || void 0 === Od ? void 0 : Od.getState()) && void 0 !== dd ? dd : hm
             },
-            onFrame: rr => (Nr.current.add(rr), () => {
-              Nr.current.delete(rr)
+            onFrame: dd => (Nd.current.add(dd), () => {
+              Nd.current.delete(dd)
             })
           })), []);
-          (0, Zr.useEffect)((() => {
-            const rr = pr.current,
-              Sr = xr.current;
-            if (!rr || !Sr) return;
-            const Qr = new ResizeObserver((() => {
-              Ir(rr.clientWidth / Math.max(1, Sr.offsetWidth))
+          (0, Wd.useEffect)((() => {
+            const dd = Qd.current,
+              Od = td.current;
+            if (!dd || !Od) return;
+            const md = new ResizeObserver((() => {
+              Kd(dd.clientWidth / Math.max(1, Od.offsetWidth))
             }));
-            return Qr.observe(rr), () => {
-              Qr.disconnect()
+            return md.observe(dd), () => {
+              md.disconnect()
             }
-          }), []), (0, Zr.useEffect)((() => {
-            var rr;
-            if ("playing" !== Qr) return;
-            let Zr = !1;
-            const ar = new gS.i[Sr](CS[Sr], (rr => {
-              Zr = !0, Er(!1), Wr(rr ? "succeeded" : "failed")
+          }), []), (0, Wd.useEffect)((() => {
+            var dd;
+            if ("playing" !== md) return;
+            let Wd = !1;
+            const Rd = new GO.h[Od](nO[Od], (dd => {
+              Wd = !0, vd(!1), Fd(dd ? "succeeded" : "failed")
             }), (() => {}));
-            mr.current = ar;
-            let jr = 0,
-              Ir = performance.now(),
-              fr = requestAnimationFrame((function rr(Sr) {
-                for (jr += Math.min(.25, (Sr - Ir) / 1e3), Ir = Sr; jr >= WQ && !Zr;) jr -= WQ, ar.handleTick(WQ);
-                for (const Qr of Nr.current) Qr();
-                Zr || (fr = requestAnimationFrame(rr))
+            od.current = Rd;
+            let Xd = 0,
+              Kd = performance.now(),
+              hd = requestAnimationFrame((function dd(Od) {
+                for (Xd += Math.min(.25, (Od - Kd) / 1e3), Kd = Od; Xd >= Xm && !Wd;) Xd -= Xm, Rd.handleTick(Xm);
+                for (const md of Nd.current) md();
+                Wd || (hd = requestAnimationFrame(dd))
               }));
-            return null === (rr = pr.current) || void 0 === rr || rr.focus({
+            return null === (dd = Qd.current) || void 0 === dd || dd.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(fr), ar.tearDown(), mr.current = null, tr.current = !1
+              cancelAnimationFrame(hd), Rd.tearDown(), od.current = null, Hd.current = !1
             }
-          }), [Qr, Sr]), (0, Zr.useEffect)((() => {
-            if (fr) return;
-            const rr = setTimeout((() => {
-              Er(!0)
-            }), aQ);
+          }), [md, Od]), (0, Wd.useEffect)((() => {
+            if (hd) return;
+            const dd = setTimeout((() => {
+              vd(!0)
+            }), Km);
             return () => {
-              clearTimeout(rr)
+              clearTimeout(dd)
             }
-          }), [fr]);
-          const nr = rr => {
-            var Sr;
-            "playing" === Qr && tr.current !== rr && (tr.current = rr, null === (Sr = mr.current) || void 0 === Sr || Sr.handleMouseInput(rr))
+          }), [hd]);
+          const pd = dd => {
+            var Od;
+            "playing" === md && Hd.current !== dd && (Hd.current = dd, null === (Od = od.current) || void 0 === Od || Od.handleMouseInput(dd))
           };
-          return (0, Ur.jsxs)("div", {
+          return (0, qd.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, Ur.jsxs)("div", {
-              ref: pr,
-              className: ar()("DocsQteStage", {
-                Playing: "playing" === Qr
+            children: [(0, qd.jsxs)("div", {
+              ref: Qd,
+              className: Rd()("DocsQteStage", {
+                Playing: "playing" === md
               }),
-              tabIndex: "playing" === Qr ? 0 : -1,
-              role: "playing" === Qr ? "button" : void 0,
-              "aria-label": "playing" === Qr ? `${Sr} quick time event: click or press Space` : void 0,
-              onPointerDown: rr => {
-                0 === rr.button && nr(!0)
+              tabIndex: "playing" === md ? 0 : -1,
+              role: "playing" === md ? "button" : void 0,
+              "aria-label": "playing" === md ? `${Od} quick time event: click or press Space` : void 0,
+              onPointerDown: dd => {
+                0 === dd.button && pd(!0)
               },
               onPointerUp: () => {
-                nr(!1)
+                pd(!1)
               },
               onPointerLeave: () => {
-                nr(!1)
+                pd(!1)
               },
               onPointerCancel: () => {
-                nr(!1)
+                pd(!1)
               },
-              onKeyDown: rr => {
-                "playing" !== Qr || " " !== rr.key && "Enter" !== rr.key || (rr.preventDefault(), nr(!0))
+              onKeyDown: dd => {
+                "playing" !== md || " " !== dd.key && "Enter" !== dd.key || (dd.preventDefault(), pd(!0))
               },
-              onKeyUp: rr => {
-                "playing" !== Qr || " " !== rr.key && "Enter" !== rr.key || nr(!1)
+              onKeyUp: dd => {
+                "playing" !== md || " " !== dd.key && "Enter" !== dd.key || pd(!1)
               },
-              children: [(0, Ur.jsx)("div", {
-                ref: xr,
+              children: [(0, qd.jsx)("div", {
+                ref: td,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${jr})`
+                  transform: `scale(${Xd})`
                 },
-                children: "playing" === Qr && (0, Ur.jsx)(RS.b.Provider, {
-                  value: Yr,
-                  children: (0, Ur.jsx)(qS.d, {
+                children: "playing" === md && (0, qd.jsx)(rO.d.Provider, {
+                  value: Td,
+                  children: (0, qd.jsx)(AO.e, {
                     qte: {
-                      type: Sr,
-                      parameters: CS[Sr]
+                      type: Od,
+                      parameters: nO[Od]
                     }
                   })
                 })
-              }), "playing" !== Qr && (0, Ur.jsxs)("div", {
+              }), "playing" !== md && (0, qd.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== Qr && (0, Ur.jsxs)("div", {
-                  className: ar()("DocsQteResult", "succeeded" === Qr ? "Succeeded" : "Failed"),
-                  children: [(0, Ur.jsx)(hr, {
-                    name: "succeeded" === Qr ? "check" : "cross",
+                children: ["ready" !== md && (0, qd.jsxs)("div", {
+                  className: Rd()("DocsQteResult", "succeeded" === md ? "Succeeded" : "Failed"),
+                  children: [(0, qd.jsx)(yd, {
+                    name: "succeeded" === md ? "check" : "cross",
                     isTinted: !0
-                  }), (0, Ur.jsx)("span", {
-                    children: "succeeded" === Qr ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, qd.jsx)("span", {
+                    children: "succeeded" === md ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, Ur.jsxs)("button", {
+                }), (0, qd.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !fr,
+                  disabled: !hd,
                   onClick: () => {
-                    Wr("playing")
+                    Fd("playing")
                   },
-                  children: [(0, Ur.jsx)(hr, {
-                    name: "ready" === Qr ? "play" : "replay"
-                  }), (0, Ur.jsx)("span", {
-                    children: "ready" === Qr ? `Try ${Sr}` : "Play again"
+                  children: [(0, qd.jsx)(yd, {
+                    name: "ready" === md ? "play" : "replay"
+                  }), (0, qd.jsx)("span", {
+                    children: "ready" === md ? `Try ${Od}` : "Play again"
                   })]
                 })]
               })]
-            }), zr && !kS(zr) && (0, Ur.jsxs)("p", {
+            }), bd && !zO(bd) && (0, qd.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, Ur.jsx)("code", {
-                children: zr
+              children: ["The ", (0, qd.jsx)("code", {
+                children: bd
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function EQ(rr) {
+        function om(dd) {
           let {
-            level: Sr,
-            text: Qr,
-            anchor: Zr,
-            className: Wr
-          } = rr;
-          const jr = `h${Math.min(Sr,6)}`;
-          return (0, Ur.jsxs)(jr, {
-                id: Zr,
-                className: ar()("DocsHeading", Wr),
-                children: [(0, Ur.jsx)(yS, {
-                      text: Qr
-                    }), (0, Ur.jsx)("a", {
+            level: Od,
+            text: md,
+            anchor: Wd,
+            className: Fd
+          } = dd;
+          const Xd = `h${Math.min(Od,6)}`;
+          return (0, qd.jsxs)(Xd, {
+                id: Wd,
+                className: Rd()("DocsHeading", Fd),
+                children: [(0, qd.jsx)(EO, {
+                      text: md
+                    }), (0, qd.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${Zr}`,
-                        "aria-label": `Link to ${Qr.replace(/`/g,"")}`,children:"#"})]})}function pQ(rr){let{items:Sr,ordered:Qr}=rr;const Zr=Qr?"ol":"ul";return(0,Ur.jsx)(Zr,{className:"DocsList",children:Sr.map(((rr,Sr)=>(0,Ur.jsxs)("li",{children:[(0,Ur.jsx)(yS,{text:rr.text}),rr.children.length>0&&(0,Ur.jsx)(pQ,{items:rr.children,ordered:Qr})]},Sr)))})}function xQ(rr){const Sr=rr[0],Qr="paragraph"===(null===Sr||void 0===Sr?void 0:Sr.kind)?Sr.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(Qr)?"warning":/^\*\*(tip|prefer)/.test(Qr)?"tip":"note"}function mQ(rr){let{block:Sr}=rr;switch(Sr.kind){case"heading":return(0,Ur.jsx)(EQ,{level:Sr.level,text:Sr.text,anchor:Sr.anchor});case"paragraph":return(0,Ur.jsx)("p",{children:(0,Ur.jsx)(yS,{text:Sr.text})});case"code":{const rr="ts"===Sr.lang?function(rr){const Sr=rr.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Sr&&Object.hasOwn(CS,Sr[1])?Sr[1]:null}(Sr.code):null;return(0,Ur.jsxs)(Ur.Fragment,{children:[(0,Ur.jsx)(Br,{code:Sr.code,lang:Sr.lang}),rr&&(0,Ur.jsx)(fQ,{type:rr})]})}case"table":return(0,Ur.jsx)("div",{className:"DocsTableScroll",children:(0,Ur.jsxs)("table",{className:"DocsTable",children:[(0,Ur.jsx)("thead",{children:(0,Ur.jsx)("tr",{children:Sr.header.map(((rr,Sr)=>(0,Ur.jsx)("th",{children:(0,Ur.jsx)(yS,{text:rr})},Sr)))})}),(0,Ur.jsx)("tbody",{children:Sr.rows.map(((rr,Sr)=>(0,Ur.jsx)("tr",{children:rr.map(((rr,Sr)=>(0,Ur.jsx)("td",{children:(0,Ur.jsx)(yS,{text:rr})},Sr)))},Sr)))})]})});case"list":return(0,Ur.jsx)(pQ,{items:Sr.items,ordered:Sr.ordered});case"quote":return(0,Ur.jsx)("aside",{className:ar()("DocsCallout",xQ(Sr.blocks)),children:(0,Ur.jsx)(NQ,{blocks:Sr.blocks})});case"rule":return(0,Ur.jsx)("hr",{className:"DocsRule"})}}function NQ(rr){let{blocks:Sr}=rr;return(0,Ur.jsx)(Ur.Fragment,{children:Sr.map(((rr,Sr)=>(0,Ur.jsx)(mQ,{block:rr},Sr)))})}var UQ=Qr(5571),tQ=Qr(5575);function hQ(rr){return"blocks"===rr||"items"===rr}const zQ=new Map;function YQ(rr){let Sr=zQ.get(rr);return Sr||(Sr=function(rr){const Sr={entries:[],legend:[],notes:[],examples:[]};let Qr=!1;for(const ar of rr.split(/\r?\n/).slice(1)){if(ar.startsWith("#")){const rr=ar.replace(/^# ?/,""),Zr=rr.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Zr?Sr.legend.push({code:Zr[1],meaning:Zr[2],usage:Zr[3].trim()}):/^Examples:/.test(rr.trim())?Qr=!0:Qr&&rr.trim()?Sr.examples.push(rr.trim()):rr.trim()&&!/^\s/.test(rr)&&Sr.notes.push(rr.trim());continue}const rr=ar.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Zr,Wr;rr&&Sr.entries.push({name:rr[1],variants:null!==(Zr=null===(Wr=rr[2])||void 0===Wr?void 0:Wr.split(","))&&void 0!==Zr?Zr:[]})}return Sr}("blocks"===rr?UQ:tQ),zQ.set(rr,Sr)),Sr}function nQ(rr){let{className:Sr,value:Qr,placeholder:Zr,label:Wr,onChange:ar,count:jr,children:Ir}=rr;return(0,Ur.jsxs)("div",{className:Sr,children:[(0,Ur.jsx)(hr,{name:"magnifying-glass"}),(0,Ur.jsx)("input",{type:"search",value:Qr,placeholder:Zr,"aria-label":Wr,onChange:rr=>{ar(rr.target.value)}}),Ir,jr&&(0,Ur.jsxs)("span",{className:"DocsFilterCount",children:[jr.visible," of ",jr.total]})]})}var eQ=Qr(1448);function KQ(rr){const Sr=rr.trim().match(/^(` {
+                        href: `#${Wd}`,
+                        "aria-label": `Link to ${md.replace(/`/g,"")}`,children:"#"})]})}function Nm(dd){let{items:Od,ordered:md}=dd;const Wd=md?"ol":"ul";return(0,qd.jsx)(Wd,{className:"DocsList",children:Od.map(((dd,Od)=>(0,qd.jsxs)("li",{children:[(0,qd.jsx)(EO,{text:dd.text}),dd.children.length>0&&(0,qd.jsx)(Nm,{items:dd.children,ordered:md})]},Od)))})}function qm(dd){const Od=dd[0],md="paragraph"===(null===Od||void 0===Od?void 0:Od.kind)?Od.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(md)?"warning":/^\*\*(tip|prefer)/.test(md)?"tip":"note"}function Hm(dd){let{block:Od}=dd;switch(Od.kind){case"heading":return(0,qd.jsx)(om,{level:Od.level,text:Od.text,anchor:Od.anchor});case"paragraph":return(0,qd.jsx)("p",{children:(0,qd.jsx)(EO,{text:Od.text})});case"code":{const dd="ts"===Od.lang?function(dd){const Od=dd.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Od&&Object.hasOwn(nO,Od[1])?Od[1]:null}(Od.code):null;return(0,qd.jsxs)(qd.Fragment,{children:[(0,qd.jsx)(Ed,{code:Od.code,lang:Od.lang}),dd&&(0,qd.jsx)(tm,{type:dd})]})}case"table":return(0,qd.jsx)("div",{className:"DocsTableScroll",children:(0,qd.jsxs)("table",{className:"DocsTable",children:[(0,qd.jsx)("thead",{children:(0,qd.jsx)("tr",{children:Od.header.map(((dd,Od)=>(0,qd.jsx)("th",{children:(0,qd.jsx)(EO,{text:dd})},Od)))})}),(0,qd.jsx)("tbody",{children:Od.rows.map(((dd,Od)=>(0,qd.jsx)("tr",{children:dd.map(((dd,Od)=>(0,qd.jsx)("td",{children:(0,qd.jsx)(EO,{text:dd})},Od)))},Od)))})]})});case"list":return(0,qd.jsx)(Nm,{items:Od.items,ordered:Od.ordered});case"quote":return(0,qd.jsx)("aside",{className:Rd()("DocsCallout",qm(Od.blocks)),children:(0,qd.jsx)(ym,{blocks:Od.blocks})});case"rule":return(0,qd.jsx)("hr",{className:"DocsRule"})}}function ym(dd){let{blocks:Od}=dd;return(0,qd.jsx)(qd.Fragment,{children:Od.map(((dd,Od)=>(0,qd.jsx)(Hm,{block:dd},Od)))})}var bm=md(5516),Tm=md(5525);function pm(dd){return"blocks"===dd||"items"===dd}const Ym=new Map;function gm(dd){let Od=Ym.get(dd);return Od||(Od=function(dd){const Od={entries:[],legend:[],notes:[],examples:[]};let md=!1;for(const Rd of dd.split(/\r?\n/).slice(1)){if(Rd.startsWith("#")){const dd=Rd.replace(/^# ?/,""),Wd=dd.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Wd?Od.legend.push({code:Wd[1],meaning:Wd[2],usage:Wd[3].trim()}):/^Examples:/.test(dd.trim())?md=!0:md&&dd.trim()?Od.examples.push(dd.trim()):dd.trim()&&!/^\s/.test(dd)&&Od.notes.push(dd.trim());continue}const dd=Rd.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Wd,Fd;dd&&Od.entries.push({name:dd[1],variants:null!==(Wd=null===(Fd=dd[2])||void 0===Fd?void 0:Fd.split(","))&&void 0!==Wd?Wd:[]})}return Od}("blocks"===dd?bm:Tm),Ym.set(dd,Od)),Od}function wm(dd){let{className:Od,value:md,placeholder:Wd,label:Fd,onChange:Rd,count:Xd,children:Kd}=dd;return(0,qd.jsxs)("div",{className:Od,children:[(0,qd.jsx)(yd,{name:"magnifying-glass"}),(0,qd.jsx)("input",{type:"search",value:md,placeholder:Wd,"aria-label":Fd,onChange:dd=>{Rd(dd.target.value)}}),Kd,Xd&&(0,qd.jsxs)("span",{className:"DocsFilterCount",children:[Xd.visible," of ",Xd.total]})]})}var am=md(1443);function Em(dd){const Od=dd.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return Sr?Sr[2]:null}function yQ(rr){return"paragraph"===rr.kind&&""===rr.text.trim()}function BQ(rr){const Sr={name:rr.heading.text,description:[],params:[],returns:null};let Qr="description";for(const Wr of rr.blocks)if(!yQ(Wr))if("heading"===Wr.kind&&/^Parameters:?$/.test(Wr.text))Qr="params";else if("heading"===Wr.kind&&/^Returns:?$/.test(Wr.text))Qr="returns",Sr.returns={type:"",description:[]};else if("params"!==Qr||"table"!==Wr.kind){if("returns"===Qr&&"paragraph"===Wr.kind&&""===Sr.returns.type){const rr=KQ(Wr.text);if(null!==rr){Sr.returns.type=rr.replaceAll("\\|","|");continue}}"returns"===Qr?Sr.returns.description.push(Wr):Sr.description.push(Wr)}else for(const[rr,Qr,ar]of Wr.rows){var Zr;Sr.params.push({name:rr,type:null!==(Zr=KQ(Qr))&&void 0!==Zr?Zr:Qr,description:null!==ar&&void 0!==ar?ar:""})}return Sr}const TQ=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function vQ(rr){return rr.filter((rr=>!yQ(rr)))}const OQ=/^[\w][\w .'&!:()-]*$/,LQ=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function lQ(rr){var Sr;if("code"===rr.kind&&"text"===rr.lang){const Sr=rr.code.split("\n").map((rr=>rr.trim())).filter(Boolean);return Sr.length>0&&Sr.every((rr=>OQ.test(rr)))?Sr.map((rr=>({name:rr}))):null}return"paragraph"===rr.kind&&LQ.test(rr.text.trim())?[...rr.text.matchAll(/`([ ^ `]+)` / g)].flatMap((rr => rr[1].split(/,\s*/).map((rr => ({
-                              name: rr.trim()
-                            }))))): "table" === rr.kind && null !== (Sr = rr.header[0]) && void 0 !== Sr && Sr.startsWith("Song") ? rr.rows.map((rr => {
-                              let [Sr, Qr] = rr;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return Od?Od[2]:null}function Jm(dd){return"paragraph"===dd.kind&&""===dd.text.trim()}function Um(dd){const Od={name:dd.heading.text,description:[],params:[],returns:null};let md="description";for(const Fd of dd.blocks)if(!Jm(Fd))if("heading"===Fd.kind&&/^Parameters:?$/.test(Fd.text))md="params";else if("heading"===Fd.kind&&/^Returns:?$/.test(Fd.text))md="returns",Od.returns={type:"",description:[]};else if("params"!==md||"table"!==Fd.kind){if("returns"===md&&"paragraph"===Fd.kind&&""===Od.returns.type){const dd=Em(Fd.text);if(null!==dd){Od.returns.type=dd.replaceAll("\\|","|");continue}}"returns"===md?Od.returns.description.push(Fd):Od.description.push(Fd)}else for(const[dd,md,Rd]of Fd.rows){var Wd;Od.params.push({name:dd,type:null!==(Wd=Em(md))&&void 0!==Wd?Wd:md,description:null!==Rd&&void 0!==Rd?Rd:""})}return Od}const xm=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Bm(dd){return dd.filter((dd=>!Jm(dd)))}const Sm=/^[\w][\w .'&!:()-]*$/,sm=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function um(dd){var Od;if("code"===dd.kind&&"text"===dd.lang){const Od=dd.code.split("\n").map((dd=>dd.trim())).filter(Boolean);return Od.length>0&&Od.every((dd=>Sm.test(dd)))?Od.map((dd=>({name:dd}))):null}return"paragraph"===dd.kind&&sm.test(dd.text.trim())?[...dd.text.matchAll(/`([ ^ `]+)` / g)].flatMap((dd => dd[1].split(/,\s*/).map((dd => ({
+                              name: dd.trim()
+                            }))))): "table" === dd.kind && null !== (Od = dd.header[0]) && void 0 !== Od && Od.startsWith("Song") ? dd.rows.map((dd => {
+                              let [Od, md] = dd;
                               return {
-                                name: Sr.replace(/`/g, ""),
-                                caption: Qr
+                                name: Od.replace(/`/g, ""),
+                                caption: md
                               }
                             })) : null
                           }
 
-                          function XQ(rr) {
-                            const Sr = [];
-                            for (const Qr of rr) {
-                              const rr = lQ(Qr),
-                                Zr = Sr.at(-1),
-                                Wr = "table" === Qr.kind;
-                              rr ? "names" === (null === Zr || void 0 === Zr ? void 0 : Zr.kind) && Zr.isSongs === Wr ? Zr.names.push(...rr) : Sr.push({
+                          function Vm(dd) {
+                            const Od = [];
+                            for (const md of dd) {
+                              const dd = um(md),
+                                Wd = Od.at(-1),
+                                Fd = "table" === md.kind;
+                              dd ? "names" === (null === Wd || void 0 === Wd ? void 0 : Wd.kind) && Wd.isSongs === Fd ? Wd.names.push(...dd) : Od.push({
                                 kind: "names",
-                                names: rr,
-                                isSongs: Wr
-                              }) : Sr.push({
+                                names: dd,
+                                isSongs: Fd
+                              }) : Od.push({
                                 kind: "block",
-                                block: Qr
+                                block: md
                               })
                             }
-                            return Sr
+                            return Od
                           }
-                          const PQ = {
+                          const im = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function HQ(rr, Sr) {
-                            return `${PQ[rr]}-${(0,Tr.o)(Sr)}`
+                          function Am(dd, Od) {
+                            return `${im[dd]}-${(0,Jd.m)(Od)}`
                           }
-                          const qQ = new WeakMap;
+                          const rm = new WeakMap;
 
-                          function RQ(rr, Sr, Qr) {
-                            let Zr = qQ.get(Sr);
-                            if (!Zr) {
-                              Zr = new Map;
-                              const Qr = new Set;
-                              for (const Wr of (0, Tr.r)(Sr)) {
-                                const Sr = XQ(vQ(Wr.blocks)).map((Sr => {
-                                  if ("block" === Sr.kind) return Sr;
+                          function Gm(dd, Od, md) {
+                            let Wd = rm.get(Od);
+                            if (!Wd) {
+                              Wd = new Map;
+                              const md = new Set;
+                              for (const Fd of (0, Jd.q)(Od)) {
+                                const Od = Vm(Bm(Fd.blocks)).map((Od => {
+                                  if ("block" === Od.kind) return Od;
                                   return {
                                     kind: "names",
-                                    names: Sr.names.map((Sr => {
-                                      var Zr, ar;
-                                      const jr = HQ(rr, Sr.name);
-                                      let Ir = jr;
-                                      for (let rr = 2; Qr.has(Ir); rr++) Ir = `${jr}-${rr}`;
-                                      return Qr.add(Ir), {
-                                        ...Sr,
-                                        anchor: Ir,
-                                        heading: null !== (Zr = null === (ar = Wr.heading) || void 0 === ar ? void 0 : ar.text) && void 0 !== Zr ? Zr : ""
+                                    names: Od.names.map((Od => {
+                                      var Wd, Rd;
+                                      const Xd = Am(dd, Od.name);
+                                      let Kd = Xd;
+                                      for (let dd = 2; md.has(Kd); dd++) Kd = `${Xd}-${dd}`;
+                                      return md.add(Kd), {
+                                        ...Od,
+                                        anchor: Kd,
+                                        heading: null !== (Wd = null === (Rd = Fd.heading) || void 0 === Rd ? void 0 : Rd.text) && void 0 !== Wd ? Wd : ""
                                       }
                                     })),
-                                    isSongs: Sr.isSongs
+                                    isSongs: Od.isSongs
                                   }
                                 }));
-                                Zr.set(Wr.blocks, Sr)
+                                Wd.set(Fd.blocks, Od)
                               }
-                              qQ.set(Sr, Zr)
+                              rm.set(Od, Wd)
                             }
-                            const Wr = Zr.get(Qr);
-                            if (!Wr) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return Wr
+                            const Fd = Wd.get(md);
+                            if (!Fd) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return Fd
                           }
-                          const gQ = "/textures/docs/skinPreviews",
-                            CQ = [{
+                          const nm = "/textures/docs/skinPreviews",
+                            Lm = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var MQ = Qr(2968),
-                            GQ = Qr(2984);
+                          var Pm = md(2972),
+                            zm = md(2991);
 
-                          function kQ(rr) {
-                            return Object.hasOwn(MQ.f, rr) ? MQ.f[rr] : null
+                          function cm(dd) {
+                            return Object.hasOwn(Pm.g, dd) ? Pm.g[dd] : null
                           }
-                          const AQ = {
+                          const jm = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: GQ.e.Standard
+                            blendMode: zm.g.Standard
                           };
 
-                          function VQ(rr, Sr, Qr) {
-                            return Sr + (Qr - Sr) * rr()
+                          function Dm(dd, Od, md) {
+                            return Od + (md - Od) * dd()
                           }
 
-                          function iQ(rr, Sr, Qr) {
-                            return rr + (Sr - rr) * Qr
+                          function em(dd, Od, md) {
+                            return dd + (Od - dd) * md
                           }
 
-                          function wQ(rr) {
-                            return rr.length > 0 && "timeFraction" in rr[0]
+                          function Im(dd) {
+                            return dd.length > 0 && "timeFraction" in dd[0]
                           }
 
-                          function cQ(rr, Sr) {
-                            if (0 === rr.colorGradients.length) return [{
+                          function lm(dd, Od) {
+                            if (0 === dd.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!wQ(rr.colorGradients)) {
-                              const Qr = rr.colorGradients,
+                            if (!Im(dd.colorGradients)) {
+                              const md = dd.colorGradients,
                                 {
-                                  color: Zr
-                                } = Qr[Math.floor(Sr() * Qr.length) % Qr.length];
+                                  color: Wd
+                                } = md[Math.floor(Od() * md.length) % md.length];
                               return [{
                                 at: 0,
-                                colour: [Zr[0] / 255, Zr[1] / 255, Zr[2] / 255, 1]
+                                colour: [Wd[0] / 255, Wd[1] / 255, Wd[2] / 255, 1]
                               }]
                             }
-                            return [...rr.colorGradients].sort(((rr, Sr) => rr.timeFraction - Sr.timeFraction)).map((rr => {
-                              var Qr, Zr, Wr;
-                              const ar = rr.minColor,
-                                jr = null !== (Qr = rr.maxColor) && void 0 !== Qr ? Qr : ar,
-                                Ir = Sr(),
-                                fr = [iQ(ar[0], jr[0], Ir) / 255, iQ(ar[1], jr[1], Ir) / 255, iQ(ar[2], jr[2], Ir) / 255, iQ(null !== (Zr = ar[3]) && void 0 !== Zr ? Zr : 1, null !== (Wr = jr[3]) && void 0 !== Wr ? Wr : 1, Ir)];
+                            return [...dd.colorGradients].sort(((dd, Od) => dd.timeFraction - Od.timeFraction)).map((dd => {
+                              var md, Wd, Fd;
+                              const Rd = dd.minColor,
+                                Xd = null !== (md = dd.maxColor) && void 0 !== md ? md : Rd,
+                                Kd = Od(),
+                                hd = [em(Rd[0], Xd[0], Kd) / 255, em(Rd[1], Xd[1], Kd) / 255, em(Rd[2], Xd[2], Kd) / 255, em(null !== (Wd = Rd[3]) && void 0 !== Wd ? Wd : 1, null !== (Fd = Xd[3]) && void 0 !== Fd ? Fd : 1, Kd)];
                               return {
-                                at: rr.timeFraction,
-                                colour: fr
+                                at: dd.timeFraction,
+                                colour: hd
                               }
                             }))
                           }
 
-                          function FQ(rr, Sr, Qr, Zr) {
-                            const Wr = VQ(Zr, rr.minEmitPower, rr.maxEmitPower),
-                              ar = Sr => VQ(Zr, Math.min(rr.dir1[Sr], rr.dir2[Sr]), Math.max(rr.dir1[Sr], rr.dir2[Sr])) * Wr,
-                              jr = [...rr.velocityGradients].sort(((rr, Sr) => rr.timeFraction - Sr.timeFraction)).map((rr => ({
-                                at: rr.timeFraction,
-                                factor: VQ(Zr, rr.factor, rr.factor2)
+                          function Cm(dd, Od, md, Wd) {
+                            const Fd = Dm(Wd, dd.minEmitPower, dd.maxEmitPower),
+                              Rd = Od => Dm(Wd, Math.min(dd.dir1[Od], dd.dir2[Od]), Math.max(dd.dir1[Od], dd.dir2[Od])) * Fd,
+                              Xd = [...dd.velocityGradients].sort(((dd, Od) => dd.timeFraction - Od.timeFraction)).map((dd => ({
+                                at: dd.timeFraction,
+                                factor: Dm(Wd, dd.factor, dd.factor2)
                               })));
                             return {
-                              pos: [VQ(Zr, Sr[0], Qr[0]), VQ(Zr, Sr[1], Qr[1]), VQ(Zr, Sr[2], Qr[2])],
-                              dir: [ar(0), ar(1), ar(2)],
+                              pos: [Dm(Wd, Od[0], md[0]), Dm(Wd, Od[1], md[1]), Dm(Wd, Od[2], md[2])],
+                              dir: [Rd(0), Rd(1), Rd(2)],
                               age: 0,
-                              life: VQ(Zr, rr.minLifeTime, rr.maxLifeTime),
-                              size: VQ(Zr, rr.minSize, rr.maxSize),
-                              colours: cQ(rr, Zr),
-                              velocityFactors: jr
+                              life: Dm(Wd, dd.minLifeTime, dd.maxLifeTime),
+                              size: Dm(Wd, dd.minSize, dd.maxSize),
+                              colours: lm(dd, Wd),
+                              velocityFactors: Xd
                             }
                           }
 
-                          function oQ(rr, Sr, Qr, Zr) {
-                            if (Sr < rr[0].at) return Qr(Math.min(1, rr.length - 1));
-                            for (let Wr = 0; Wr < rr.length - 1; Wr++)
-                              if (Sr <= rr[Wr + 1].at) {
-                                const ar = rr[Wr + 1].at - rr[Wr].at;
-                                return Zr(Qr(Wr), Qr(Wr + 1), ar > 0 ? (Sr - rr[Wr].at) / ar : 1)
-                              } return Qr(rr.length - 1)
+                          function Zm(dd, Od, md, Wd) {
+                            if (Od < dd[0].at) return md(Math.min(1, dd.length - 1));
+                            for (let Fd = 0; Fd < dd.length - 1; Fd++)
+                              if (Od <= dd[Fd + 1].at) {
+                                const Rd = dd[Fd + 1].at - dd[Fd].at;
+                                return Wd(md(Fd), md(Fd + 1), Rd > 0 ? (Od - dd[Fd].at) / Rd : 1)
+                              } return md(dd.length - 1)
                           }
 
-                          function bQ(rr) {
-                            return oQ(rr.colours, rr.age / rr.life, (Sr => rr.colours[Sr].colour), ((rr, Sr, Qr) => [iQ(rr[0], Sr[0], Qr), iQ(rr[1], Sr[1], Qr), iQ(rr[2], Sr[2], Qr), iQ(rr[3], Sr[3], Qr)]))
+                          function km(dd) {
+                            return Zm(dd.colours, dd.age / dd.life, (Od => dd.colours[Od].colour), ((dd, Od, md) => [em(dd[0], Od[0], md), em(dd[1], Od[1], md), em(dd[2], Od[2], md), em(dd[3], Od[3], md)]))
                           }
 
-                          function JQ(rr, Sr, Qr) {
-                            if (rr.age += Qr, rr.age >= rr.life) return !1;
-                            const Zr = function(rr) {
-                              return 0 === rr.velocityFactors.length ? 1 : oQ(rr.velocityFactors, rr.age / rr.life, (Sr => rr.velocityFactors[Sr].factor), iQ)
-                            }(rr) * Qr;
-                            for (let ar = 0; ar < 3; ar++) {
-                              var Wr;
-                              rr.pos[ar] += rr.dir[ar] * Zr, rr.dir[ar] += (null !== (Wr = Sr[ar]) && void 0 !== Wr ? Wr : 0) * Qr
+                          function fm(dd, Od, md) {
+                            if (dd.age += md, dd.age >= dd.life) return !1;
+                            const Wd = function(dd) {
+                              return 0 === dd.velocityFactors.length ? 1 : Zm(dd.velocityFactors, dd.age / dd.life, (Od => dd.velocityFactors[Od].factor), em)
+                            }(dd) * md;
+                            for (let Rd = 0; Rd < 3; Rd++) {
+                              var Fd;
+                              dd.pos[Rd] += dd.dir[Rd] * Wd, dd.dir[Rd] += (null !== (Fd = Od[Rd]) && void 0 !== Fd ? Fd : 0) * md
                             }
                             return !0
                           }
 
-                          function DQ(rr) {
-                            return String(Math.round(1e6 * rr) / 1e6)
+                          function Mm(dd) {
+                            return String(Math.round(1e6 * dd) / 1e6)
                           }
 
-                          function dQ(rr) {
-                            return `[${rr.map(DQ).join(", ")}]`
+                          function dW(dd) {
+                            return `[${dd.map(Mm).join(", ")}]`
                           }
 
-                          function sQ(rr, Sr) {
-                            const Qr = `${Sr}    `;
-                            return `[\n${(wQ(rr)?rr.map((rr=>{const Sr=[`${Qr}    timeFraction: ${DQ(rr.timeFraction)},`,`${Qr}    minColor: ${dQ(rr.minColor)},`];return rr.maxColor&&Sr.push(`${Qr}    maxColor: ${dQ(rr.maxColor)},`),`${Qr}{\n${Sr.join("\n")}\n${Qr}},`})):rr.map((rr=>`
+                          function OW(dd, Od) {
+                            const md = `${Od}    `;
+                            return `[\n${(Im(dd)?dd.map((dd=>{const Od=[`${md}    timeFraction: ${Mm(dd.timeFraction)},`,`${md}    minColor: ${dW(dd.minColor)},`];return dd.maxColor&&Od.push(`${md}    maxColor: ${dW(dd.maxColor)},`),`${md}{\n${Od.join("\n")}\n${md}},`})):dd.map((dd=>`
                             $ {
-                              Qr
+                              md
                             } {
                               color: $ {
-                                dQ(rr.color)
+                                dW(dd.color)
                               }
-                            }, `))).join("\n")}\n${Sr}]`
+                            }, `))).join("\n")}\n${Od}]`
                           }
-                          const uQ = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            rZ = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const SZ = .6;
+                          const mW = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            WW = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const FW = .6;
 
-                          function QZ(rr, Sr) {
-                            return `${Sr?"song":"sound"}:${rr}`
+                          function RW(dd, Od) {
+                            return `${Od?"song":"sound"}:${dd}`
                           }
-                          let ZZ = {
+                          let XW = {
                               track: null,
-                              volume: SZ
+                              volume: FW
                             },
-                            WZ = null,
-                            aZ = 0,
-                            jZ = 0;
-                          const IZ = new Set;
+                            KW = null,
+                            hW = 0,
+                            vW = 0;
+                          const QW = new Set;
 
-                          function fZ(rr) {
-                            ZZ = {
-                              ...ZZ,
-                              ...rr
-                            }, IZ.forEach((rr => {
-                              rr()
+                          function tW(dd) {
+                            XW = {
+                              ...XW,
+                              ...dd
+                            }, QW.forEach((dd => {
+                              dd()
                             }))
                           }
 
-                          function EZ(rr) {
-                            ZZ.track && fZ({
+                          function oW(dd) {
+                            XW.track && tW({
                               track: {
-                                ...ZZ.track,
-                                ...rr
+                                ...XW.track,
+                                ...dd
                               }
                             })
                           }
 
-                          function pZ(rr) {
-                            const [Sr, Qr] = (0, Zr.useState)((() => rr(ZZ))), Wr = (0, Zr.useRef)(rr);
-                            return Wr.current = rr, (0, Zr.useEffect)((() => {
-                              const rr = () => {
-                                Qr((() => Wr.current(ZZ)))
+                          function NW(dd) {
+                            const [Od, md] = (0, Wd.useState)((() => dd(XW))), Fd = (0, Wd.useRef)(dd);
+                            return Fd.current = dd, (0, Wd.useEffect)((() => {
+                              const dd = () => {
+                                md((() => Fd.current(XW)))
                               };
-                              return IZ.add(rr), rr(), () => {
-                                IZ.delete(rr)
+                              return QW.add(dd), dd(), () => {
+                                QW.delete(dd)
                               }
-                            }), []), Sr
+                            }), []), Od
                           }
 
-                          function xZ() {
-                            aZ++;
-                            const rr = WZ;
-                            WZ = null, null === rr || void 0 === rr || rr.stop()
+                          function qW() {
+                            hW++;
+                            const dd = KW;
+                            KW = null, null === dd || void 0 === dd || dd.stop()
                           }
 
-                          function mZ(rr, Sr) {
-                            let Zr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            xZ();
-                            const Wr = aZ,
+                          function HW(dd, Od) {
+                            let Wd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            qW();
+                            const Fd = hW,
                               {
-                                track: ar
-                              } = ZZ,
-                              jr = ar && ar.name === rr && ar.isSong === Sr ? ar.duration : 0;
-                            jZ = Zr, fZ({
+                                track: Rd
+                              } = XW,
+                              Xd = Rd && Rd.name === dd && Rd.isSong === Od ? Rd.duration : 0;
+                            vW = Wd, tW({
                               track: {
-                                name: rr,
-                                isSong: Sr,
+                                name: dd,
+                                isSong: Od,
                                 status: "loading",
-                                duration: jr
+                                duration: Xd
                               }
-                            }), Promise.all([Qr.e(253), Qr.e(285)]).then((() => Qr(41704))).then((Qr => {
+                            }), Promise.all([md.e(253), md.e(285)]).then((() => md(41740))).then((md => {
                               let {
-                                playDocsSound: ar
-                              } = Qr;
-                              Wr === aZ && (WZ = ar(rr, Sr, ZZ.volume, Zr, {
-                                onPlay: rr => {
-                                  Wr === aZ && EZ({
+                                playDocsSound: Rd
+                              } = md;
+                              Fd === hW && (KW = Rd(dd, Od, XW.volume, Wd, {
+                                onPlay: dd => {
+                                  Fd === hW && oW({
                                     status: "playing",
-                                    duration: rr
+                                    duration: dd
                                   })
                                 },
-                                onEnd: rr => {
-                                  var Sr, Qr;
-                                  Wr === aZ && (WZ = null, rr ? fZ({
+                                onEnd: dd => {
+                                  var Od, md;
+                                  Fd === hW && (KW = null, dd ? tW({
                                     track: null
-                                  }) : (jZ = null !== (Sr = null === (Qr = ZZ.track) || void 0 === Qr ? void 0 : Qr.duration) && void 0 !== Sr ? Sr : 0, EZ({
+                                  }) : (vW = null !== (Od = null === (md = XW.track) || void 0 === md ? void 0 : md.duration) && void 0 !== Od ? Od : 0, oW({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((Sr => {
-                              console.error(`Could not play docs sound ${rr}`, Sr), Wr === aZ && fZ({
+                            })).catch((Od => {
+                              console.error(`Could not play docs sound ${dd}`, Od), Fd === hW && tW({
                                 track: null
                               })
                             }))
                           }
 
-                          function NZ() {
+                          function yW() {
                             const {
-                              track: rr
-                            } = ZZ;
-                            if (!rr) return;
-                            if ("playing" === rr.status && WZ) return jZ = WZ.JY(), WZ.pause(), void EZ({
+                              track: dd
+                            } = XW;
+                            if (!dd) return;
+                            if ("playing" === dd.status && KW) return vW = KW.hY(), KW.pause(), void oW({
                               status: "paused"
                             });
-                            if ("loading" === rr.status) return xZ(), void EZ({
+                            if ("loading" === dd.status) return qW(), void oW({
                               status: "paused"
                             });
-                            if (WZ) return void WZ.resume();
-                            const Sr = rr.duration > 0 && jZ >= rr.duration - .05;
-                            mZ(rr.name, rr.isSong, Sr ? 0 : jZ)
+                            if (KW) return void KW.resume();
+                            const Od = dd.duration > 0 && vW >= dd.duration - .05;
+                            HW(dd.name, dd.isSong, Od ? 0 : vW)
                           }
 
-                          function UZ() {
-                            var rr;
-                            return WZ && "playing" === (null === (rr = ZZ.track) || void 0 === rr ? void 0 : rr.status) ? WZ.JY() : jZ
+                          function bW() {
+                            var dd;
+                            return KW && "playing" === (null === (dd = XW.track) || void 0 === dd ? void 0 : dd.status) ? KW.hY() : vW
                           }
 
-                          function tZ(rr) {
-                            var Sr;
-                            null === (Sr = WZ) || void 0 === Sr || Sr.setVolume(rr), fZ({
-                              volume: rr
+                          function TW(dd) {
+                            var Od;
+                            null === (Od = KW) || void 0 === Od || Od.setVolume(dd), tW({
+                              volume: dd
                             })
                           }
 
-                          function hZ() {
-                            xZ(), jZ = 0, fZ({
+                          function pW() {
+                            qW(), vW = 0, tW({
                               track: null
                             })
                           }
-                          const zZ = (0, Zr.createContext)(null);
-                          let YZ = null;
+                          const YW = (0, Wd.createContext)(null);
+                          let gW = null;
 
-                          function nZ() {
-                            const [rr, Sr] = (0, Zr.useState)(null);
-                            return (0, Zr.useEffect)((() => {
-                              let rr = !1;
-                              return YZ ??= Promise.all([Qr.e(85), Qr.e(89), Qr.e(86), Qr.e(87), Qr.e(88), Qr.e(124), Qr.e(36), Qr.e(259)]).then((() => Qr(41700))), YZ.then((Qr => {
-                                rr || Sr(Qr)
-                              }), (rr => {
-                                console.error("Could not load the docs gallery's textures", rr), YZ = null
+                          function wW() {
+                            const [dd, Od] = (0, Wd.useState)(null);
+                            return (0, Wd.useEffect)((() => {
+                              let dd = !1;
+                              return gW ??= Promise.all([md.e(85), md.e(89), md.e(86), md.e(87), md.e(88), md.e(124), md.e(36), md.e(259)]).then((() => md(41734))), gW.then((md => {
+                                dd || Od(md)
+                              }), (dd => {
+                                console.error("Could not load the docs gallery's textures", dd), gW = null
                               })), () => {
-                                rr = !0
+                                dd = !0
                               }
-                            }), []), rr
+                            }), []), dd
                           }
-                          const eZ = 24,
-                            KZ = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const aW = 24,
+                            EW = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function yZ(rr, Sr) {
-                            const Qr = "skins" === rr ? function(rr, Sr) {
-                              const Qr = CQ.find((Sr => rr.startsWith(Sr.heading)));
-                              return Qr ? function(rr, Sr) {
-                                return `${rr}-${Sr}`
-                              }(Qr.prefix, Sr) : null
-                            }(Sr.heading, Sr.name) : null;
-                            return null === Qr ? null : `${gQ}/${Qr}.webp`
+                          function JW(dd, Od) {
+                            const md = "skins" === dd ? function(dd, Od) {
+                              const md = Lm.find((Od => dd.startsWith(Od.heading)));
+                              return md ? function(dd, Od) {
+                                return `${dd}-${Od}`
+                              }(md.prefix, Od) : null
+                            }(Od.heading, Od.name) : null;
+                            return null === md ? null : `${nm}/${md}.webp`
                           }
 
-                          function BZ(rr) {
+                          function UW(dd) {
                             let {
-                              kind: Sr,
-                              entry: Qr,
-                              assets: Wr,
-                              renderedUrl: jr
-                            } = rr;
+                              kind: Od,
+                              entry: md,
+                              assets: Fd,
+                              renderedUrl: Xd
+                            } = dd;
                             const {
-                              name: Ir
-                            } = Qr, [fr, Er] = (0, Zr.useState)(!1);
-                            if ("icons" === Sr && kS(Ir)) return (0, Ur.jsx)(eQ.c, {
+                              name: Kd
+                            } = md, [hd, vd] = (0, Wd.useState)(!1);
+                            if ("icons" === Od && zO(Kd)) return (0, qd.jsx)(am.c, {
                               className: "DocsTileIcon",
-                              name: Ir
+                              name: Kd
                             });
-                            let pr = null;
-                            var xr;
-                            if ("icons" === Sr) pr = null !== (xr = null === Wr || void 0 === Wr ? void 0 : Wr.getIngameIconUrl(Ir)) && void 0 !== xr ? xr : null;
-                            else if ("particles" === Sr) {
-                              var mr, Nr, tr;
-                              pr = null !== (mr = null === Wr || void 0 === Wr ? void 0 : Wr.getParticleTextureUrl(null !== (Nr = null === (tr = kQ(Ir)) || void 0 === tr ? void 0 : tr.texture) && void 0 !== Nr ? Nr : Ir)) && void 0 !== mr ? mr : null
-                            } else "skins" === Sr && (pr = null !== jr && void 0 !== jr ? jr : KZ.test(Ir) ? `/textures/charSkins/previews/${Ir}_preview.png` : null);
-                            return !pr || fr ? (0, Ur.jsx)(hr, {
+                            let Qd = null;
+                            var td;
+                            if ("icons" === Od) Qd = null !== (td = null === Fd || void 0 === Fd ? void 0 : Fd.getIngameIconUrl(Kd)) && void 0 !== td ? td : null;
+                            else if ("particles" === Od) {
+                              var od, Nd, Hd;
+                              Qd = null !== (od = null === Fd || void 0 === Fd ? void 0 : Fd.getParticleTextureUrl(null !== (Nd = null === (Hd = cm(Kd)) || void 0 === Hd ? void 0 : Hd.texture) && void 0 !== Nd ? Nd : Kd)) && void 0 !== od ? od : null
+                            } else "skins" === Od && (Qd = null !== Xd && void 0 !== Xd ? Xd : EW.test(Kd) ? `/textures/charSkins/previews/${Kd}_preview.png` : null);
+                            return !Qd || hd ? (0, qd.jsx)(yd, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === Sr ? "person" : "image"
-                            }) : (0, Ur.jsx)("img", {
-                              className: ar()("DocsTileImage", {
-                                Pixelated: "skins" !== Sr
+                              name: "skins" === Od ? "person" : "image"
+                            }) : (0, qd.jsx)("img", {
+                              className: Rd()("DocsTileImage", {
+                                Pixelated: "skins" !== Od
                               }),
-                              src: pr,
-                              srcSet: pr === jr ? `${pr} 2x` : void 0,
+                              src: Qd,
+                              srcSet: Qd === Xd ? `${Qd} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${pr}`), Er(!0)
+                                console.warn(`Docs gallery: could not load ${Qd}`), vd(!0)
                               }
                             })
                           }
 
-                          function TZ(rr) {
+                          function xW(dd) {
                             let {
-                              entry: Sr,
-                              isSong: Qr
-                            } = rr;
-                            const Zr = pZ((rr => {
+                              entry: Od,
+                              isSong: md
+                            } = dd;
+                            const Wd = NW((dd => {
                                 let {
-                                  track: Zr
-                                } = rr;
-                                return (null === Zr || void 0 === Zr ? void 0 : Zr.name) === Sr.name && Zr.isSong === Qr ? Zr.status : null
+                                  track: Wd
+                                } = dd;
+                                return (null === Wd || void 0 === Wd ? void 0 : Wd.name) === Od.name && Wd.isSong === md ? Wd.status : null
                               })),
-                              Wr = null !== Zr && "paused" !== Zr;
-                            return (0, Ur.jsxs)("button", {
+                              Fd = null !== Wd && "paused" !== Wd;
+                            return (0, qd.jsxs)("button", {
                               type: "button",
-                              id: Sr.anchor,
-                              className: ar()("DocsSoundTile", {
-                                Playing: Wr
+                              id: Od.anchor,
+                              className: Rd()("DocsSoundTile", {
+                                Playing: Fd
                               }),
-                              "data-docs-track": QZ(Sr.name, Qr),
-                              "aria-label": Wr ? `Pause ${Sr.name}` : `Play ${Sr.name}`,
+                              "data-docs-track": RW(Od.name, md),
+                              "aria-label": Fd ? `Pause ${Od.name}` : `Play ${Od.name}`,
                               onClick: () => {
-                                null !== Zr ? NZ() : mZ(Sr.name, Qr)
+                                null !== Wd ? yW() : HW(Od.name, md)
                               },
-                              children: [(0, Ur.jsx)("span", {
+                              children: [(0, qd.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, Ur.jsx)(hr, {
-                                  name: Wr ? "pause" : "play"
+                                children: (0, qd.jsx)(yd, {
+                                  name: Fd ? "pause" : "play"
                                 })
-                              }), (0, Ur.jsx)("code", {
+                              }), (0, qd.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: Sr.name
-                              }), Sr.caption && (0, Ur.jsx)("span", {
+                                children: Od.name
+                              }), Od.caption && (0, qd.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: Sr.caption
+                                children: Od.caption
                               })]
                             })
                           }
 
-                          function vZ(rr) {
+                          function BW(dd) {
                             let {
-                              kind: Sr,
-                              names: Qr,
-                              isSongs: Wr
-                            } = rr;
-                            const jr = nZ(),
-                              [Ir, fr] = Yr(),
-                              Er = !1 === (null === Ir || void 0 === Ir ? void 0 : Ir.failed) ? Ir.text : null,
-                              pr = (0, Zr.useContext)(zZ),
-                              [xr, mr] = (0, Zr.useState)(""),
-                              Nr = xr.trim().toLowerCase(),
-                              tr = Nr ? Qr.filter((rr => rr.name.toLowerCase().includes(Nr))) : Qr;
-                            return (0, Ur.jsxs)("div", {
+                              kind: Od,
+                              names: md,
+                              isSongs: Fd
+                            } = dd;
+                            const Xd = wW(),
+                              [Kd, hd] = Td(),
+                              vd = !1 === (null === Kd || void 0 === Kd ? void 0 : Kd.failed) ? Kd.text : null,
+                              Qd = (0, Wd.useContext)(YW),
+                              [td, od] = (0, Wd.useState)(""),
+                              Nd = td.trim().toLowerCase(),
+                              Hd = Nd ? md.filter((dd => dd.name.toLowerCase().includes(Nd))) : md;
+                            return (0, qd.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [Qr.length > eZ && (0, Ur.jsx)(nQ, {
+                              children: [md.length > aW && (0, qd.jsx)(wm, {
                                 className: "DocsGalleryFilter",
-                                value: xr,
-                                placeholder: `Filter ${Qr.length} names\u2026`,
+                                value: td,
+                                placeholder: `Filter ${md.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: mr,
-                                count: Nr ? {
-                                  visible: tr.length,
-                                  total: Qr.length
+                                onChange: od,
+                                count: Nd ? {
+                                  visible: Hd.length,
+                                  total: md.length
                                 } : null
-                              }), (0, Ur.jsx)("div", {
-                                className: ar()("DocsGalleryGrid", `Kind-${Sr}`, {
-                                  Songs: Wr
+                              }), (0, qd.jsx)("div", {
+                                className: Rd()("DocsGalleryGrid", `Kind-${Od}`, {
+                                  Songs: Fd
                                 }),
-                                children: tr.map((rr => {
-                                  if ("sounds" === Sr) return (0, Ur.jsx)(TZ, {
-                                    entry: rr,
-                                    isSong: Wr
-                                  }, rr.anchor);
-                                  if (pr && "particles" === Sr && kQ(rr.name)) return (0, Ur.jsxs)("button", {
+                                children: Hd.map((dd => {
+                                  if ("sounds" === Od) return (0, qd.jsx)(xW, {
+                                    entry: dd,
+                                    isSong: Fd
+                                  }, dd.anchor);
+                                  if (Qd && "particles" === Od && cm(dd.name)) return (0, qd.jsxs)("button", {
                                     type: "button",
-                                    id: rr.anchor,
-                                    className: ar()("DocsTile Previewable", {
-                                      Copied: Er === rr.name
+                                    id: dd.anchor,
+                                    className: Rd()("DocsTile Previewable", {
+                                      Copied: vd === dd.name
                                     }),
-                                    title: `Play "${rr.name}" in the playground and copy its name`,
+                                    title: `Play "${dd.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      pr(rr.name), fr(rr.name)
+                                      Qd(dd.name), hd(dd.name)
                                     },
-                                    children: [(0, Ur.jsxs)("span", {
+                                    children: [(0, qd.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, Ur.jsx)(BZ, {
-                                        kind: Sr,
-                                        entry: rr,
-                                        assets: jr,
+                                      children: [(0, qd.jsx)(UW, {
+                                        kind: Od,
+                                        entry: dd,
+                                        assets: Xd,
                                         renderedUrl: null
-                                      }), (0, Ur.jsx)("span", {
+                                      }), (0, qd.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, Ur.jsx)(hr, {
+                                        children: (0, qd.jsx)(yd, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, Ur.jsx)("span", {
+                                    }), (0, qd.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Er === rr.name ? "Copied!" : rr.name
+                                      children: vd === dd.name ? "Copied!" : dd.name
                                     })]
-                                  }, rr.anchor);
-                                  const Qr = yZ(Sr, rr);
-                                  return (0, Ur.jsxs)("button", {
+                                  }, dd.anchor);
+                                  const md = JW(Od, dd);
+                                  return (0, qd.jsxs)("button", {
                                     type: "button",
-                                    id: rr.anchor,
-                                    className: ar()("DocsTile", {
-                                      Copied: Er === rr.name
+                                    id: dd.anchor,
+                                    className: Rd()("DocsTile", {
+                                      Copied: vd === dd.name
                                     }),
-                                    title: `Copy "${rr.name}"`,
+                                    title: `Copy "${dd.name}"`,
                                     onClick: () => {
-                                      fr(rr.name)
+                                      hd(dd.name)
                                     },
-                                    children: [(0, Ur.jsx)("span", {
-                                      className: ar()("DocsTilePreview", {
-                                        Rendered: null !== Qr
+                                    children: [(0, qd.jsx)("span", {
+                                      className: Rd()("DocsTilePreview", {
+                                        Rendered: null !== md
                                       }),
-                                      children: (0, Ur.jsx)(BZ, {
-                                        kind: Sr,
-                                        entry: rr,
-                                        assets: jr,
-                                        renderedUrl: Qr
+                                      children: (0, qd.jsx)(UW, {
+                                        kind: Od,
+                                        entry: dd,
+                                        assets: Xd,
+                                        renderedUrl: md
                                       })
-                                    }), (0, Ur.jsx)("span", {
+                                    }), (0, qd.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Er === rr.name ? "Copied!" : rr.name
+                                      children: vd === dd.name ? "Copied!" : dd.name
                                     })]
-                                  }, rr.anchor)
+                                  }, dd.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function OZ(rr) {
+                          function SW(dd) {
                             let {
-                              kind: Sr,
-                              content: Qr,
-                              blocks: Zr
-                            } = rr;
-                            return (0, Ur.jsx)(Ur.Fragment, {
-                              children: RQ(Sr, Qr, Zr).map(((rr, Qr) => "block" === rr.kind ? (0, Ur.jsx)(mQ, {
-                                block: rr.block
-                              }, Qr) : (0, Ur.jsx)(vZ, {
-                                kind: Sr,
-                                names: rr.names,
-                                isSongs: rr.isSongs
-                              }, Qr)))
+                              kind: Od,
+                              content: md,
+                              blocks: Wd
+                            } = dd;
+                            return (0, qd.jsx)(qd.Fragment, {
+                              children: Gm(Od, md, Wd).map(((dd, md) => "block" === dd.kind ? (0, qd.jsx)(Hm, {
+                                block: dd.block
+                              }, md) : (0, qd.jsx)(BW, {
+                                kind: Od,
+                                names: dd.names,
+                                isSongs: dd.isSongs
+                              }, md)))
                             })
                           }
-                          const LZ = [{
+                          const sW = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,789 +2161,789 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function lZ(rr) {
+                          function uW(dd) {
                             let {
-                              cards: Sr = LZ,
-                              label: Qr = "Start here"
-                            } = rr;
-                            const Wr = (0, Zr.useContext)(NS);
-                            return (0, Ur.jsx)("nav", {
+                              cards: Od = sW,
+                              label: md = "Start here"
+                            } = dd;
+                            const Fd = (0, Wd.useContext)(HO);
+                            return (0, qd.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": Qr,
-                              children: Sr.map((rr => {
+                              "aria-label": md,
+                              children: Od.map((dd => {
                                 let {
-                                  pageId: Sr,
-                                  countNoun: Qr
-                                } = rr;
-                                const Zr = Gr(Sr);
-                                return (0, Ur.jsxs)(jr.d, {
-                                  to: cr(Wr, Zr),
+                                  pageId: Od,
+                                  countNoun: md
+                                } = dd;
+                                const Wd = Pd(Od);
+                                return (0, qd.jsxs)(Xd.c, {
+                                  to: Id(Fd, Wd),
                                   className: "DocsLandingCard",
-                                  children: [(0, Ur.jsx)("span", {
+                                  children: [(0, qd.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, Ur.jsx)(hr, {
-                                      name: Zr.icon
+                                    children: (0, qd.jsx)(yd, {
+                                      name: Wd.icon
                                     })
-                                  }), (0, Ur.jsx)("span", {
+                                  }), (0, qd.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: Zr.title
-                                  }), (0, Ur.jsx)("span", {
+                                    children: Wd.title
+                                  }), (0, qd.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: Zr.summary
-                                  }), Qr && (0, Ur.jsxs)("span", {
+                                    children: Wd.summary
+                                  }), md && (0, qd.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [Ar(Zr).sections.length, " ", Qr]
+                                    children: [cd(Wd).sections.length, " ", md]
                                   })]
-                                }, Sr)
+                                }, Od)
                               }))
                             })
                           }
-                          const XZ = 240;
+                          const VW = 240;
 
-                          function PZ(rr) {
+                          function iW(dd) {
                             let {
-                              faces: Sr
-                            } = rr;
-                            return (0, Ur.jsxs)("span", {
+                              faces: Od
+                            } = dd;
+                            return (0, qd.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, Ur.jsx)("span", {
+                              children: [(0, qd.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${Sr.top}")`
+                                  backgroundImage: `url("${Od.top}")`
                                 }
-                              }), (0, Ur.jsx)("span", {
+                              }), (0, qd.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${Sr.left}")`
+                                  backgroundImage: `url("${Od.left}")`
                                 }
-                              }), (0, Ur.jsx)("span", {
+                              }), (0, qd.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${Sr.right}")`
+                                  backgroundImage: `url("${Od.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function HZ(rr) {
+                          function AW(dd) {
                             let {
-                              src: Sr
-                            } = rr;
-                            const [Qr, Wr] = (0, Zr.useState)(!1);
-                            return Qr ? null : (0, Ur.jsx)("img", {
-                              src: Sr,
+                              src: Od
+                            } = dd;
+                            const [md, Fd] = (0, Wd.useState)(!1);
+                            return md ? null : (0, qd.jsx)("img", {
+                              src: Od,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${Sr}`), Wr(!0)
+                                console.warn(`Docs catalogue: could not load ${Od}`), Fd(!0)
                               }
                             })
                           }
 
-                          function qZ(rr) {
+                          function rW(dd) {
                             let {
-                              kind: Sr
-                            } = rr;
-                            const Qr = YQ(Sr),
-                              Wr = nZ(),
-                              jr = (0, Ir.s)(),
-                              [fr, Er] = (0, Zr.useState)(""),
-                              [pr, xr] = (0, Zr.useState)(null),
-                              [mr, Nr] = (0, Zr.useState)(XZ),
-                              [tr, zr] = (0, Zr.useState)(null),
-                              Yr = (0, Zr.useRef)(null),
-                              er = fr.trim().toLowerCase();
-                            (0, Zr.useEffect)((() => {
-                              const rr = (0, Tr.k)(jr.hash),
-                                Zr = Qr.entries.find((Qr => HQ(Sr, Qr.name) === rr));
-                              if (Zr) Yr.current = Zr.name, Er(Zr.name), xr(null), zr(Zr.name);
-                              else if (null !== Yr.current) {
-                                const rr = Yr.current;
-                                Yr.current = null, Er((Sr => Sr === rr ? "" : Sr)), zr(null)
+                              kind: Od
+                            } = dd;
+                            const md = gm(Od),
+                              Fd = wW(),
+                              Xd = (0, Kd.p)(),
+                              [hd, vd] = (0, Wd.useState)(""),
+                              [Qd, td] = (0, Wd.useState)(null),
+                              [od, Nd] = (0, Wd.useState)(VW),
+                              [Hd, bd] = (0, Wd.useState)(null),
+                              Td = (0, Wd.useRef)(null),
+                              Yd = hd.trim().toLowerCase();
+                            (0, Wd.useEffect)((() => {
+                              const dd = (0, Jd.l)(Xd.hash),
+                                Wd = md.entries.find((md => Am(Od, md.name) === dd));
+                              if (Wd) Td.current = Wd.name, vd(Wd.name), td(null), bd(Wd.name);
+                              else if (null !== Td.current) {
+                                const dd = Td.current;
+                                Td.current = null, vd((Od => Od === dd ? "" : Od)), bd(null)
                               }
-                            }), [Qr, Sr, jr.hash, jr.key]), (0, Zr.useEffect)((() => {
-                              var rr;
-                              null !== tr && (null === (rr = document.getElementById(HQ(Sr, tr))) || void 0 === rr || rr.scrollIntoView({
+                            }), [md, Od, Xd.hash, Xd.key]), (0, Wd.useEffect)((() => {
+                              var dd;
+                              null !== Hd && (null === (dd = document.getElementById(Am(Od, Hd))) || void 0 === dd || dd.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [Sr, tr]);
-                            const Kr = Qr.entries.filter((rr => (!er || rr.name.toLowerCase().includes(er)) && (!pr || rr.variants.includes(pr))));
-                            return (0, Ur.jsxs)("div", {
+                            }), [Od, Hd]);
+                            const gd = md.entries.filter((dd => (!Yd || dd.name.toLowerCase().includes(Yd)) && (!Qd || dd.variants.includes(Qd))));
+                            return (0, qd.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [Qr.notes.length > 0 && (0, Ur.jsx)("div", {
+                              children: [md.notes.length > 0 && (0, qd.jsx)("div", {
                                 className: "DocsProse",
-                                children: Qr.notes.map((rr => (0, Ur.jsx)("p", {
-                                  children: rr
-                                }, rr)))
-                              }), Qr.legend.length > 0 && (0, Ur.jsx)("div", {
+                                children: md.notes.map((dd => (0, qd.jsx)("p", {
+                                  children: dd
+                                }, dd)))
+                              }), md.legend.length > 0 && (0, qd.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, Ur.jsxs)("table", {
+                                children: (0, qd.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, Ur.jsx)("thead", {
-                                    children: (0, Ur.jsxs)("tr", {
-                                      children: [(0, Ur.jsx)("th", {
+                                  children: [(0, qd.jsx)("thead", {
+                                    children: (0, qd.jsxs)("tr", {
+                                      children: [(0, qd.jsx)("th", {
                                         children: "Code"
-                                      }), (0, Ur.jsx)("th", {
+                                      }), (0, qd.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, Ur.jsx)("th", {
+                                      }), (0, qd.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, Ur.jsx)("tbody", {
-                                    children: Qr.legend.map((rr => (0, Ur.jsxs)("tr", {
-                                      children: [(0, Ur.jsx)("td", {
-                                        children: (0, Ur.jsx)("button", {
+                                  }), (0, qd.jsx)("tbody", {
+                                    children: md.legend.map((dd => (0, qd.jsxs)("tr", {
+                                      children: [(0, qd.jsx)("td", {
+                                        children: (0, qd.jsx)("button", {
                                           type: "button",
-                                          className: ar()("DocsVariantChip", {
-                                            Active: pr === rr.code
+                                          className: Rd()("DocsVariantChip", {
+                                            Active: Qd === dd.code
                                           }),
-                                          "aria-pressed": pr === rr.code,
-                                          title: `Show only ${Sr} with ${rr.meaning} variants`,
+                                          "aria-pressed": Qd === dd.code,
+                                          title: `Show only ${Od} with ${dd.meaning} variants`,
                                           onClick: () => {
-                                            xr(pr === rr.code ? null : rr.code)
+                                            td(Qd === dd.code ? null : dd.code)
                                           },
-                                          children: rr.code
+                                          children: dd.code
                                         })
-                                      }), (0, Ur.jsx)("td", {
-                                        children: rr.meaning
-                                      }), (0, Ur.jsx)("td", {
-                                        children: (0, Ur.jsx)("code", {
+                                      }), (0, qd.jsx)("td", {
+                                        children: dd.meaning
+                                      }), (0, qd.jsx)("td", {
+                                        children: (0, qd.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: rr.usage
+                                          children: dd.usage
                                         })
                                       })]
-                                    }, rr.code)))
+                                    }, dd.code)))
                                   })]
                                 })
-                              }), Qr.examples.length > 0 && (0, Ur.jsx)(Br, {
+                              }), md.examples.length > 0 && (0, qd.jsx)(Ed, {
                                 lang: "text",
-                                code: Qr.examples.join("\n")
-                              }), (0, Ur.jsx)(nQ, {
+                                code: md.examples.join("\n")
+                              }), (0, qd.jsx)(wm, {
                                 className: "DocsFilterBar",
-                                value: fr,
-                                placeholder: `Search ${Qr.entries.length} ${Sr}\u2026`,
-                                label: `Search ${Sr}`,
-                                onChange: rr => {
-                                  Er(rr), Nr(XZ)
+                                value: hd,
+                                placeholder: `Search ${md.entries.length} ${Od}\u2026`,
+                                label: `Search ${Od}`,
+                                onChange: dd => {
+                                  vd(dd), Nd(VW)
                                 },
-                                count: er || pr ? {
-                                  visible: Kr.length,
-                                  total: Qr.entries.length
+                                count: Yd || Qd ? {
+                                  visible: gd.length,
+                                  total: md.entries.length
                                 } : null,
-                                children: pr && (0, Ur.jsxs)("button", {
+                                children: Qd && (0, qd.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    xr(null)
+                                    td(null)
                                   },
-                                  children: [pr, " ", (0, Ur.jsx)(hr, {
+                                  children: [Qd, " ", (0, qd.jsx)(yd, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, Ur.jsx)("div", {
+                              }), (0, qd.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: Kr.slice(0, mr).map((rr => {
-                                  const Qr = "blocks" === Sr ? null === Wr || void 0 === Wr ? void 0 : Wr.getBlockFaces(rr.name) : null,
-                                    Zr = Wr && !Qr ? Wr.getItemTextureUrl(rr.name) : null;
-                                  return (0, Ur.jsxs)("div", {
-                                    id: HQ(Sr, rr.name),
-                                    className: ar()("DocsCatalogueTile", {
-                                      Linked: rr.name === tr
+                                children: gd.slice(0, od).map((dd => {
+                                  const md = "blocks" === Od ? null === Fd || void 0 === Fd ? void 0 : Fd.getBlockFaces(dd.name) : null,
+                                    Wd = Fd && !md ? Fd.getItemTextureUrl(dd.name) : null;
+                                  return (0, qd.jsxs)("div", {
+                                    id: Am(Od, dd.name),
+                                    className: Rd()("DocsCatalogueTile", {
+                                      Linked: dd.name === Hd
                                     }),
-                                    children: [(0, Ur.jsxs)("span", {
+                                    children: [(0, qd.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [Qr && (0, Ur.jsx)(PZ, {
-                                        faces: Qr
-                                      }), Zr && (0, Ur.jsx)(HZ, {
-                                        src: Zr
+                                      children: [md && (0, qd.jsx)(iW, {
+                                        faces: md
+                                      }), Wd && (0, qd.jsx)(AW, {
+                                        src: Wd
                                       })]
-                                    }), (0, Ur.jsx)("span", {
+                                    }), (0, qd.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: rr.name
-                                    }), rr.variants.length > 0 && (0, Ur.jsx)("span", {
+                                      children: dd.name
+                                    }), dd.variants.length > 0 && (0, qd.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: rr.variants.map((rr => (0, Ur.jsx)("span", {
-                                        children: rr
-                                      }, rr)))
-                                    }), (0, Ur.jsx)(nr, {
-                                      text: rr.name,
+                                      children: dd.variants.map((dd => (0, qd.jsx)("span", {
+                                        children: dd
+                                      }, dd)))
+                                    }), (0, qd.jsx)(pd, {
+                                      text: dd.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, rr.name)
+                                  }, dd.name)
                                 }))
-                              }), Kr.length > mr && (0, Ur.jsxs)("button", {
+                              }), gd.length > od && (0, qd.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  Nr(Kr.length)
+                                  Nd(gd.length)
                                 },
-                                children: ["Show all ", Kr.length]
-                              }), 0 === Kr.length && (0, Ur.jsxs)("p", {
+                                children: ["Show all ", gd.length]
+                              }), 0 === gd.length && (0, qd.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", Sr, " match."]
+                                children: ["No ", Od, " match."]
                               })]
                             })
                           }
-                          var RZ = Qr(5634),
-                            gZ = Qr(1722);
-                          const CZ = .95 * RZ.d;
+                          var GW = md(5599),
+                            nW = md(1714);
+                          const LW = .95 * GW.c;
 
-                          function MZ(rr) {
-                            return /^\s*```/.test(rr)
+                          function PW(dd) {
+                            return /^\s*```/.test(dd)
                           }
 
-                          function GZ(rr, Sr) {
-                            const Qr = [
+                          function zW(dd, Od) {
+                            const md = [
                               []
                             ];
-                            let Zr = !1;
-                            for (const Wr of rr.split("\n")) !Zr && Sr(Wr) && Qr.at(-1).length > 0 && Qr.push([]), MZ(Wr) && (Zr = !Zr), Qr.at(-1).push(Wr);
-                            return Qr.map((rr => rr.join("\n").trim())).filter(Boolean)
+                            let Wd = !1;
+                            for (const Fd of dd.split("\n")) !Wd && Od(Fd) && md.at(-1).length > 0 && md.push([]), PW(Fd) && (Wd = !Wd), md.at(-1).push(Fd);
+                            return md.map((dd => dd.join("\n").trim())).filter(Boolean)
                           }
 
-                          function kZ(rr, Sr) {
-                            const Qr = `${"#".repeat(Sr)} `,
-                              Zr = [];
-                            let Wr = !1;
-                            for (const ar of rr.split("\n")) MZ(ar) ? Wr = !Wr : !Wr && ar.startsWith(Qr) && Zr.push(ar.slice(Qr.length).trim());
-                            return Zr
+                          function cW(dd, Od) {
+                            const md = `${"#".repeat(Od)} `,
+                              Wd = [];
+                            let Fd = !1;
+                            for (const Rd of dd.split("\n")) PW(Rd) ? Fd = !Fd : !Fd && Rd.startsWith(md) && Wd.push(Rd.slice(md.length).trim());
+                            return Wd
                           }
 
-                          function AZ(rr) {
-                            return rr.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function jW(dd) {
+                            return dd.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class VZ {
-                            constructor(rr, Sr) {
-                              this.origin = Sr, this.pages = void 0, this.partPaths = new Map;
-                              const Qr = rr.map((rr => {
-                                const Sr = Sr => this.resolveLinks(rr, Sr).length,
-                                  Qr = function(rr, Sr) {
-                                    const Qr = rr.map((rr => Sr(rr.markdown) + 2)),
-                                      Zr = Qr.reduce(((rr, Sr) => rr + Sr), 0),
-                                      Wr = Zr / Math.ceil(Zr / CZ),
-                                      ar = [];
-                                    let jr = 0;
-                                    return rr.forEach(((rr, Sr) => {
-                                      const Zr = Qr[Sr];
-                                      (0 === ar.length || jr + Zr > CZ || jr + Zr / 2 > Wr) && (ar.push([]), jr = 0), ar.at(-1).push(rr), jr += Zr
-                                    })), ar
-                                  }(function(rr, Sr) {
-                                    return GZ(rr, (rr => rr.startsWith("## "))).flatMap((rr => {
-                                      var Qr;
-                                      const Zr = null !== (Qr = kZ(rr, 2)[0]) && void 0 !== Qr ? Qr : "";
-                                      if (Sr(rr) <= CZ) return [{
-                                        markdown: rr,
-                                        section: Zr
+                          class DW {
+                            constructor(dd, Od) {
+                              this.origin = Od, this.pages = void 0, this.partPaths = new Map;
+                              const md = dd.map((dd => {
+                                const Od = Od => this.resolveLinks(dd, Od).length,
+                                  md = function(dd, Od) {
+                                    const md = dd.map((dd => Od(dd.markdown) + 2)),
+                                      Wd = md.reduce(((dd, Od) => dd + Od), 0),
+                                      Fd = Wd / Math.ceil(Wd / LW),
+                                      Rd = [];
+                                    let Xd = 0;
+                                    return dd.forEach(((dd, Od) => {
+                                      const Wd = md[Od];
+                                      (0 === Rd.length || Xd + Wd > LW || Xd + Wd / 2 > Fd) && (Rd.push([]), Xd = 0), Rd.at(-1).push(dd), Xd += Wd
+                                    })), Rd
+                                  }(function(dd, Od) {
+                                    return zW(dd, (dd => dd.startsWith("## "))).flatMap((dd => {
+                                      var md;
+                                      const Wd = null !== (md = cW(dd, 2)[0]) && void 0 !== md ? md : "";
+                                      if (Od(dd) <= LW) return [{
+                                        markdown: dd,
+                                        section: Wd
                                       }];
-                                      let Wr = !1,
-                                        ar = "";
-                                      return GZ(rr, (rr => {
-                                        const Sr = Wr && "" !== rr.trim();
-                                        return Wr = "" === rr.trim(), Sr
-                                      })).map((rr => {
-                                        var Sr;
-                                        const Qr = kZ(rr, 3),
-                                          Wr = rr.startsWith("### ") ? Qr[0] : ar;
-                                        return ar = null !== (Sr = Qr.at(-1)) && void 0 !== Sr ? Sr : ar, {
-                                          markdown: rr,
-                                          section: Zr || Wr
+                                      let Fd = !1,
+                                        Rd = "";
+                                      return zW(dd, (dd => {
+                                        const Od = Fd && "" !== dd.trim();
+                                        return Fd = "" === dd.trim(), Od
+                                      })).map((dd => {
+                                        var Od;
+                                        const md = cW(dd, 3),
+                                          Fd = dd.startsWith("### ") ? md[0] : Rd;
+                                        return Rd = null !== (Od = md.at(-1)) && void 0 !== Od ? Od : Rd, {
+                                          markdown: dd,
+                                          section: Wd || Fd
                                         }
                                       }))
                                     }))
-                                  }(AZ(rr), Sr), Sr);
+                                  }(jW(dd), Od), Od);
                                 return {
-                                  page: rr,
-                                  groups: Qr.length > 1 ? Qr : []
+                                  page: dd,
+                                  groups: md.length > 1 ? md : []
                                 }
                               }));
                               for (const {
-                                  page: Zr,
-                                  groups: Wr
+                                  page: Wd,
+                                  groups: Fd
                                 }
-                                of Qr) Wr.forEach(((rr, Sr) => {
-                                const Qr = (0, RZ.s)(Zr.slug, Sr);
-                                for (const Wr of rr.flatMap((rr => [...kZ(rr.markdown, 2), ...kZ(rr.markdown, 3)]))) {
-                                  const rr = `${Zr.id}#${(0,Tr.o)(Wr)}`;
-                                  this.partPaths.has(rr) || this.partPaths.set(rr, Qr)
+                                of md) Fd.forEach(((dd, Od) => {
+                                const md = (0, GW.t)(Wd.slug, Od);
+                                for (const Fd of dd.flatMap((dd => [...cW(dd.markdown, 2), ...cW(dd.markdown, 3)]))) {
+                                  const dd = `${Wd.id}#${(0,Jd.m)(Fd)}`;
+                                  this.partPaths.has(dd) || this.partPaths.set(dd, md)
                                 }
                               }));
-                              this.pages = Qr.map((rr => {
+                              this.pages = md.map((dd => {
                                 let {
-                                  page: Sr,
-                                  groups: Qr
-                                } = rr;
+                                  page: Od,
+                                  groups: md
+                                } = dd;
                                 return {
-                                  page: Sr,
-                                  path: (0, RZ.r)(Sr.slug),
-                                  markdown: `# ${Sr.title}\n\n${this.resolveLinks(Sr,AZ(Sr))}\n`,
-                                  parts: Qr.map(((rr, Zr) => this.renderPart(Sr, rr, Zr, Qr.length)))
+                                  page: Od,
+                                  path: (0, GW.s)(Od.slug),
+                                  markdown: `# ${Od.title}\n\n${this.resolveLinks(Od,jW(Od))}\n`,
+                                  parts: md.map(((dd, Wd) => this.renderPart(Od, dd, Wd, md.length)))
                                 }
                               }))
                             }
-                            url(rr) {
-                              return `${this.origin}${rr}`
+                            url(dd) {
+                              return `${this.origin}${dd}`
                             }
-                            getPage(rr) {
-                              return this.pages.find((Sr => Sr.page.id === rr))
+                            getPage(dd) {
+                              return this.pages.find((Od => Od.page.id === dd))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((rr => (rr.parts.length > 0 ? rr.parts : [{
-                                path: rr.path,
+                              return this.pages.flatMap((dd => (dd.parts.length > 0 ? dd.parts : [{
+                                path: dd.path,
                                 label: "",
-                                markdown: rr.markdown
-                              }]).filter((rr => rr.markdown.length > RZ.d))))
+                                markdown: dd.markdown
+                              }]).filter((dd => dd.markdown.length > GW.c))))
                             }
-                            markdownUrl(rr, Sr) {
-                              const Qr = Sr && this.partPaths.get(`${rr.id}#${Sr}`) || (0, RZ.r)(rr.slug);
-                              return this.url(Sr ? `${Qr}#${Sr}` : Qr)
+                            markdownUrl(dd, Od) {
+                              const md = Od && this.partPaths.get(`${dd.id}#${Od}`) || (0, GW.s)(dd.slug);
+                              return this.url(Od ? `${md}#${Od}` : md)
                             }
-                            resolveLinks(rr, Sr) {
-                              return Sr.replace(/\]\((#[^)]+)\)/g, ((Sr, Qr) => {
-                                var Zr;
-                                const Wr = null !== (Zr = ir(Qr)) && void 0 !== Zr ? Zr : this.samePageTarget(rr, Qr);
-                                return Wr ? `](${this.markdownUrl(Wr.page,Wr.anchor)})` : Sr
+                            resolveLinks(dd, Od) {
+                              return Od.replace(/\]\((#[^)]+)\)/g, ((Od, md) => {
+                                var Wd;
+                                const Fd = null !== (Wd = Dd(md)) && void 0 !== Wd ? Wd : this.samePageTarget(dd, md);
+                                return Fd ? `](${this.markdownUrl(Fd.page,Fd.anchor)})` : Od
                               }))
                             }
-                            samePageTarget(rr, Sr) {
-                              const Qr = (0, Tr.o)(Sr.slice(1));
-                              return Vr(rr, Qr) ? {
-                                page: rr,
-                                anchor: Qr
+                            samePageTarget(dd, Od) {
+                              const md = (0, Jd.m)(Od.slice(1));
+                              return jd(dd, md) ? {
+                                page: dd,
+                                anchor: md
                               } : null
                             }
-                            renderPart(rr, Sr, Qr, Zr) {
-                              const Wr = function(rr) {
-                                  const Sr = rr.map((rr => rr.section)).filter(Boolean);
-                                  if (0 === Sr.length) return "";
-                                  const Qr = Sr[0],
-                                    Zr = Sr.at(-1);
-                                  return Qr === Zr ? Qr : `${Qr} to ${Zr}`
-                                }(Sr),
-                                ar = Sr.map((rr => rr.markdown)).join("\n\n"),
-                                jr = Wr ? `It covers ${Wr}. ` : "",
-                                Ir = `Part ${Qr+1} of ${Zr} of [${rr.title}](${this.url((0,RZ.r)(rr.slug))}). ${jr}[llms.txt](${this.url(RZ.j)}) lists every part.`;
+                            renderPart(dd, Od, md, Wd) {
+                              const Fd = function(dd) {
+                                  const Od = dd.map((dd => dd.section)).filter(Boolean);
+                                  if (0 === Od.length) return "";
+                                  const md = Od[0],
+                                    Wd = Od.at(-1);
+                                  return md === Wd ? md : `${md} to ${Wd}`
+                                }(Od),
+                                Rd = Od.map((dd => dd.markdown)).join("\n\n"),
+                                Xd = Fd ? `It covers ${Fd}. ` : "",
+                                Kd = `Part ${md+1} of ${Wd} of [${dd.title}](${this.url((0,GW.s)(dd.slug))}). ${Xd}[llms.txt](${this.url(GW.g)}) lists every part.`;
                               return {
-                                path: (0, RZ.s)(rr.slug, Qr),
-                                label: Wr,
-                                markdown: `# ${rr.title}, part ${Qr+1} of ${Zr}\n\n${Ir}\n\n${this.resolveLinks(rr,ar)}\n`
+                                path: (0, GW.t)(dd.slug, md),
+                                label: Fd,
+                                markdown: `# ${dd.title}, part ${md+1} of ${Wd}\n\n${Kd}\n\n${this.resolveLinks(dd,Rd)}\n`
                               }
                             }
-                            llmsTxt(rr) {
-                              const Sr = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${iZ(RZ.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const Qr of Mr) {
-                                Sr.push("", `## ${Qr.title}`, "");
-                                for (const rr of Qr.pageIds) {
-                                  const Qr = this.getPage(rr),
+                            llmsTxt(dd) {
+                              const Od = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${eW(GW.c)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const md of Ld) {
+                                Od.push("", `## ${md.title}`, "");
+                                for (const dd of md.pageIds) {
+                                  const md = this.getPage(dd),
                                     {
-                                      page: Zr,
-                                      parts: Wr
-                                    } = Qr,
-                                    ar = `About ${iZ(Qr.markdown.length)} tokens${Wr.length>0?`, in ${Wr.length} parts:`:"."}`;
-                                  Sr.push(`- [${Zr.title}](${this.url(Qr.path)}): ${Zr.summary} ${ar}`), Wr.forEach(((rr, Qr) => {
-                                    Sr.push(`  - [Part ${Qr+1}${rr.label?`: ${rr.label}`:""}](${this.url(rr.path)})`)
+                                      page: Wd,
+                                      parts: Fd
+                                    } = md,
+                                    Rd = `About ${eW(md.markdown.length)} tokens${Fd.length>0?`, in ${Fd.length} parts:`:"."}`;
+                                  Od.push(`- [${Wd.title}](${this.url(md.path)}): ${Wd.summary} ${Rd}`), Fd.forEach(((dd, md) => {
+                                    Od.push(`  - [Part ${md+1}${dd.label?`: ${dd.label}`:""}](${this.url(dd.path)})`)
                                   }))
                                 }
                               }
-                              return Sr.push("", "## Optional", "", `- [Every page in one file](${this.url(RZ.f)}): About ${iZ(rr.length)} tokens, for a model with a large context window.`, ""), Sr.join("\n")
+                              return Od.push("", "## Optional", "", `- [Every page in one file](${this.url(GW.e)}): About ${eW(dd.length)} tokens, for a model with a large context window.`, ""), Od.join("\n")
                             }
                             llmsFullTxt() {
-                              return Mr.flatMap((rr => rr.pageIds.map((rr => this.getPage(rr).markdown)))).join("\n---\n\n")
+                              return Ld.flatMap((dd => dd.pageIds.map((dd => this.getPage(dd).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const rr = this.llmsFullTxt(),
-                                Sr = this.llmsTxt(rr),
-                                Qr = new Map([
-                                  [RZ.m, Sr],
-                                  [RZ.j, Sr],
-                                  [RZ.f, rr]
+                              const dd = this.llmsFullTxt(),
+                                Od = this.llmsTxt(dd),
+                                md = new Map([
+                                  [GW.m, Od],
+                                  [GW.g, Od],
+                                  [GW.e, dd]
                                 ]);
-                              for (const Zr of this.pages) {
-                                Qr.set(Zr.path, Zr.markdown);
-                                for (const rr of Zr.parts) Qr.set(rr.path, rr.markdown)
+                              for (const Wd of this.pages) {
+                                md.set(Wd.path, Wd.markdown);
+                                for (const dd of Wd.parts) md.set(dd.path, dd.markdown)
                               }
-                              return Qr
+                              return md
                             }
                           }
 
-                          function iZ(rr) {
-                            return `${Math.max(1,Math.round(rr/4e3))}K`
+                          function eW(dd) {
+                            return `${Math.max(1,Math.round(dd/4e3))}K`
                           }
-                          let wZ = null;
+                          let IW = null;
 
-                          function cZ() {
-                            return wZ ??= new VZ(Cr, gZ.c), wZ
+                          function lW() {
+                            return IW ??= new DW(nd, nW.c), IW
                           }
-                          var FZ = Qr(5636);
-                          const oZ = [FZ.g, FZ.o];
+                          var CW = md(5607);
+                          const ZW = [CW.f, CW.k];
 
-                          function bZ(rr) {
-                            return cZ().getPage(rr.id).parts.length > 0 ? `Read ${RZ.l}, then the parts of the Bloxd Code API's ${rr.title} page it lists, so I can ask questions about it.` : `Read ${gZ.c}${(0,RZ.r)(rr.slug)} so I can ask questions about it. ${FZ.l}`
+                          function kW(dd) {
+                            return lW().getPage(dd.id).parts.length > 0 ? `Read ${GW.k}, then the parts of the Bloxd Code API's ${dd.title} page it lists, so I can ask questions about it.` : `Read ${nW.c}${(0,GW.s)(dd.slug)} so I can ask questions about it. ${CW.i}`
                           }
 
-                          function JZ(rr) {
+                          function fW(dd) {
                             let {
-                              page: Sr
-                            } = rr;
-                            const [Qr, Zr] = Yr();
-                            return (0, Ur.jsxs)("div", {
+                              page: Od
+                            } = dd;
+                            const [md, Wd] = Td();
+                            return (0, qd.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, Ur.jsxs)("button", {
+                              children: [(0, qd.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  Zr(cZ().getPage(Sr.id).markdown)
+                                  Wd(lW().getPage(Od.id).markdown)
                                 },
-                                children: [(0, Ur.jsx)(hr, {
-                                  name: !1 === (null === Qr || void 0 === Qr ? void 0 : Qr.failed) ? "check" : "copy"
-                                }), (0, Ur.jsx)("span", {
-                                  children: Qr ? Qr.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, qd.jsx)(yd, {
+                                  name: !1 === (null === md || void 0 === md ? void 0 : md.failed) ? "check" : "copy"
+                                }), (0, qd.jsx)("span", {
+                                  children: md ? md.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), oZ.map((rr => (0, Ur.jsxs)("a", {
+                              }), ZW.map((dd => (0, qd.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: (0, FZ.c)(rr, bZ(Sr)),
+                                href: (0, CW.d)(dd, kW(Od)),
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, Ur.jsx)(hr, {
+                                children: [(0, qd.jsx)(yd, {
                                   name: "external-link"
-                                }), (0, Ur.jsxs)("span", {
-                                  children: ["Open in ", rr.name]
+                                }), (0, qd.jsxs)("span", {
+                                  children: ["Open in ", dd.name]
                                 })]
-                              }, rr.name)))]
+                              }, dd.name)))]
                             })
                           }
 
-                          function DZ(rr) {
-                            return `#${[0,1,2].map((Sr=>Math.round(Math.min(255,Math.max(0,rr[Sr]))).toString(16).padStart(2,"0"))).join("")}`
+                          function MW(dd) {
+                            return `#${[0,1,2].map((Od=>Math.round(Math.min(255,Math.max(0,dd[Od]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function dZ(rr) {
-                            return [parseInt(rr.slice(1, 3), 16), parseInt(rr.slice(3, 5), 16), parseInt(rr.slice(5, 7), 16)]
+                          function dF(dd) {
+                            return [parseInt(dd.slice(1, 3), 16), parseInt(dd.slice(3, 5), 16), parseInt(dd.slice(5, 7), 16)]
                           }
 
-                          function sZ(rr) {
+                          function OF(dd) {
                             let {
-                              label: Sr,
-                              min: Qr,
-                              max: Zr,
-                              step: Wr,
-                              low: ar,
-                              high: jr,
-                              onChange: Ir
-                            } = rr;
-                            return (0, Ur.jsxs)("div", {
+                              label: Od,
+                              min: md,
+                              max: Wd,
+                              step: Fd,
+                              low: Rd,
+                              high: Xd,
+                              onChange: Kd
+                            } = dd;
+                            return (0, qd.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ur.jsxs)("div", {
+                              children: [(0, qd.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Ur.jsx)("span", {
-                                  children: Sr
-                                }), (0, Ur.jsx)("span", {
+                                children: [(0, qd.jsx)("span", {
+                                  children: Od
+                                }), (0, qd.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: ar === jr ? ar : `${ar}\u2013${jr}`
+                                  children: Rd === Xd ? Rd : `${Rd}\u2013${Xd}`
                                 })]
-                              }), (0, Ur.jsxs)("div", {
+                              }), (0, qd.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, Ur.jsx)("input", {
+                                children: [(0, qd.jsx)("input", {
                                   type: "range",
-                                  min: Qr,
-                                  max: Zr,
-                                  step: Wr,
-                                  value: Math.min(Zr, ar),
-                                  "aria-label": `Minimum ${Sr.toLowerCase()}`,
-                                  onChange: rr => {
-                                    const Sr = Number(rr.target.value);
-                                    Ir(Sr, Math.max(Sr, jr))
+                                  min: md,
+                                  max: Wd,
+                                  step: Fd,
+                                  value: Math.min(Wd, Rd),
+                                  "aria-label": `Minimum ${Od.toLowerCase()}`,
+                                  onChange: dd => {
+                                    const Od = Number(dd.target.value);
+                                    Kd(Od, Math.max(Od, Xd))
                                   }
-                                }), (0, Ur.jsx)("input", {
+                                }), (0, qd.jsx)("input", {
                                   type: "range",
-                                  min: Qr,
-                                  max: Zr,
-                                  step: Wr,
-                                  value: Math.min(Zr, jr),
-                                  "aria-label": `Maximum ${Sr.toLowerCase()}`,
-                                  onChange: rr => {
-                                    const Sr = Number(rr.target.value);
-                                    Ir(Math.min(Sr, ar), Sr)
+                                  min: md,
+                                  max: Wd,
+                                  step: Fd,
+                                  value: Math.min(Wd, Xd),
+                                  "aria-label": `Maximum ${Od.toLowerCase()}`,
+                                  onChange: dd => {
+                                    const Od = Number(dd.target.value);
+                                    Kd(Math.min(Od, Rd), Od)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function uZ(rr) {
+                          function mF(dd) {
                             let {
-                              label: Sr,
-                              min: Qr,
-                              max: Zr,
-                              step: Wr,
-                              value: ar,
-                              onChange: jr,
-                              format: Ir = String
-                            } = rr;
-                            return (0, Ur.jsxs)("div", {
+                              label: Od,
+                              min: md,
+                              max: Wd,
+                              step: Fd,
+                              value: Rd,
+                              onChange: Xd,
+                              format: Kd = String
+                            } = dd;
+                            return (0, qd.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ur.jsxs)("div", {
+                              children: [(0, qd.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Ur.jsx)("span", {
-                                  children: Sr
-                                }), (0, Ur.jsx)("span", {
+                                children: [(0, qd.jsx)("span", {
+                                  children: Od
+                                }), (0, qd.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Ir(ar)
+                                  children: Kd(Rd)
                                 })]
-                              }), (0, Ur.jsx)("input", {
+                              }), (0, qd.jsx)("input", {
                                 type: "range",
-                                min: Qr,
-                                max: Zr,
-                                step: Wr,
-                                value: Math.min(Zr, Math.max(Qr, ar)),
-                                "aria-label": Sr,
-                                onChange: rr => {
-                                  jr(Number(rr.target.value))
+                                min: md,
+                                max: Wd,
+                                step: Fd,
+                                value: Math.min(Wd, Math.max(md, Rd)),
+                                "aria-label": Od,
+                                onChange: dd => {
+                                  Xd(Number(dd.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function rW(rr) {
+                          function WF(dd) {
                             let {
-                              opts: Sr,
-                              onChange: Qr
-                            } = rr;
-                            const Zr = Sr.colorGradients;
-                            if (!wQ(Zr)) return (0, Ur.jsxs)("div", {
+                              opts: Od,
+                              onChange: md
+                            } = dd;
+                            const Wd = Od.colorGradients;
+                            if (!Im(Wd)) return (0, qd.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ur.jsx)("div", {
+                              children: [(0, qd.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, Ur.jsx)("span", {
+                                children: (0, qd.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, Ur.jsx)("div", {
+                              }), (0, qd.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: Zr.map(((rr, Sr) => (0, Ur.jsx)("input", {
+                                children: Wd.map(((dd, Od) => (0, qd.jsx)("input", {
                                   type: "color",
-                                  value: DZ(rr.color),
-                                  "aria-label": `Colour ${Sr+1}`,
-                                  onChange: rr => {
-                                    const Wr = [...Zr];
-                                    Wr[Sr] = {
-                                      color: dZ(rr.target.value)
-                                    }, Qr(Wr)
+                                  value: MW(dd.color),
+                                  "aria-label": `Colour ${Od+1}`,
+                                  onChange: dd => {
+                                    const Fd = [...Wd];
+                                    Fd[Od] = {
+                                      color: dF(dd.target.value)
+                                    }, md(Fd)
                                   }
-                                }, Sr)))
+                                }, Od)))
                               })]
                             });
-                            const Wr = (rr, Sr) => {
-                              const Wr = [...Zr];
-                              Wr[rr] = Sr, Qr(Wr)
+                            const Fd = (dd, Od) => {
+                              const Fd = [...Wd];
+                              Fd[dd] = Od, md(Fd)
                             };
-                            return (0, Ur.jsxs)("div", {
+                            return (0, qd.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, Ur.jsxs)("div", {
+                              children: [(0, qd.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, Ur.jsx)("span", {
+                                children: [(0, qd.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, Ur.jsx)("span", {
+                                }), (0, qd.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), Zr.map(((rr, Sr) => {
-                                var Qr;
-                                const Zr = null !== (Qr = rr.maxColor) && void 0 !== Qr ? Qr : rr.minColor;
-                                return (0, Ur.jsxs)("div", {
+                              }), Wd.map(((dd, Od) => {
+                                var md;
+                                const Wd = null !== (md = dd.maxColor) && void 0 !== md ? md : dd.minColor;
+                                return (0, qd.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, Ur.jsxs)("span", {
+                                  children: [(0, qd.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * rr.timeFraction), "%"]
-                                  }), (0, Ur.jsx)("span", {
+                                    children: [Math.round(100 * dd.timeFraction), "%"]
+                                  }), (0, qd.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${DZ(rr.minColor)}, ${DZ(Zr)})`
+                                      background: `linear-gradient(90deg, ${MW(dd.minColor)}, ${MW(Wd)})`
                                     }
-                                  }), (0, Ur.jsx)("input", {
+                                  }), (0, qd.jsx)("input", {
                                     type: "color",
-                                    value: DZ(rr.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*rr.timeFraction)}%`,
-                                    onChange: Qr => {
-                                      Wr(Sr, {
-                                        ...rr,
-                                        minColor: [...dZ(Qr.target.value), rr.minColor[3]]
+                                    value: MW(dd.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*dd.timeFraction)}%`,
+                                    onChange: md => {
+                                      Fd(Od, {
+                                        ...dd,
+                                        minColor: [...dF(md.target.value), dd.minColor[3]]
                                       })
                                     }
-                                  }), (0, Ur.jsx)("input", {
+                                  }), (0, qd.jsx)("input", {
                                     type: "color",
-                                    value: DZ(Zr),
-                                    "aria-label": `Maximum colour at ${Math.round(100*rr.timeFraction)}%`,
-                                    onChange: Qr => {
-                                      Wr(Sr, {
-                                        ...rr,
-                                        maxColor: [...dZ(Qr.target.value), Zr[3]]
+                                    value: MW(Wd),
+                                    "aria-label": `Maximum colour at ${Math.round(100*dd.timeFraction)}%`,
+                                    onChange: md => {
+                                      Fd(Od, {
+                                        ...dd,
+                                        maxColor: [...dF(md.target.value), Wd[3]]
                                       })
                                     }
                                   })]
-                                }, Sr)
+                                }, Od)
                               }))]
                             })
                           }
-                          const SW = [-.5, -.5, -.5],
-                            QW = [.5, .5, .5],
-                            ZW = [0, 1, 2, 3, 4, 5, 6, 7].map((rr => [1 & rr ? QW[0] : SW[0], 2 & rr ? QW[1] : SW[1], 4 & rr ? QW[2] : SW[2]]));class WW {
+                          const FF = [-.5, -.5, -.5],
+                            RF = [.5, .5, .5],
+                            XF = [0, 1, 2, 3, 4, 5, 6, 7].map((dd => [1 & dd ? RF[0] : FF[0], 2 & dd ? RF[1] : FF[1], 4 & dd ? RF[2] : FF[2]]));class KF {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(rr, Sr, Qr, Zr) {
-                              const Wr = Math.round(31 * Sr),
-                                ar = Math.round(31 * Qr),
-                                jr = Math.round(31 * Zr),
-                                Ir = `${Wr}|${ar}|${jr}`;
-                              let fr = this.tints.get(rr);
-                              (!fr || fr.size > 2e3) && (fr = new Map, this.tints.set(rr, fr));
-                              let Er = fr.get(Ir);
-                              if (Er) return Er;
-                              Er = document.createElement("canvas"), Er.width = rr.naturalWidth || 16, Er.height = rr.naturalHeight || 16;
-                              const pr = Er.getContext("2d");
-                              return pr ? (pr.imageSmoothingEnabled = !1, pr.drawImage(rr, 0, 0, Er.width, Er.height), pr.globalCompositeOperation = "multiply", pr.fillStyle = `rgb(${Wr/31*255}, ${ar/31*255}, ${jr/31*255})`, pr.fillRect(0, 0, Er.width, Er.height), pr.globalCompositeOperation = "destination-in", pr.drawImage(rr, 0, 0, Er.width, Er.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), fr.set(Ir, Er), Er
+                            get(dd, Od, md, Wd) {
+                              const Fd = Math.round(31 * Od),
+                                Rd = Math.round(31 * md),
+                                Xd = Math.round(31 * Wd),
+                                Kd = `${Fd}|${Rd}|${Xd}`;
+                              let hd = this.tints.get(dd);
+                              (!hd || hd.size > 2e3) && (hd = new Map, this.tints.set(dd, hd));
+                              let vd = hd.get(Kd);
+                              if (vd) return vd;
+                              vd = document.createElement("canvas"), vd.width = dd.naturalWidth || 16, vd.height = dd.naturalHeight || 16;
+                              const Qd = vd.getContext("2d");
+                              return Qd ? (Qd.imageSmoothingEnabled = !1, Qd.drawImage(dd, 0, 0, vd.width, vd.height), Qd.globalCompositeOperation = "multiply", Qd.fillStyle = `rgb(${Fd/31*255}, ${Rd/31*255}, ${Xd/31*255})`, Qd.fillRect(0, 0, vd.width, vd.height), Qd.globalCompositeOperation = "destination-in", Qd.drawImage(dd, 0, 0, vd.width, vd.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), hd.set(Kd, vd), vd
                             }
                           }
 
-                          function aW(rr) {
+                          function hF(dd) {
                             let {
-                              opts: Sr,
-                              textureUrl: Qr,
-                              burst: Wr,
-                              paused: ar
-                            } = rr;
-                            const jr = (0, Zr.useRef)(null),
-                              Ir = (0, Zr.useRef)(Sr);
-                            Ir.current = Sr;
-                            const fr = (0, Zr.useRef)(ar);
-                            fr.current = ar;
-                            const Er = (0, Zr.useRef)(null),
-                              pr = (0, Zr.useRef)(null),
-                              xr = (0, Zr.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(rr) {
-                                let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const Qr = [-.5, -.5, -.5],
-                                  Zr = [.5, .5, .5];
-                                let Wr = .5;
-                                for (let ar = 0; ar < 40; ar++) {
-                                  const ar = FQ(rr, Qr, Zr, Sr),
-                                    jr = Math.max(ar.life / 30, .001);
-                                  for (; JQ(ar, rr.gravity, jr);) Wr = Math.max(Wr, Math.hypot(ar.pos[0], ar.pos[1], ar.pos[2]) + ar.size / 2)
+                              opts: Od,
+                              textureUrl: md,
+                              burst: Fd,
+                              paused: Rd
+                            } = dd;
+                            const Xd = (0, Wd.useRef)(null),
+                              Kd = (0, Wd.useRef)(Od);
+                            Kd.current = Od;
+                            const hd = (0, Wd.useRef)(Rd);
+                            hd.current = Rd;
+                            const vd = (0, Wd.useRef)(null),
+                              Qd = (0, Wd.useRef)(null),
+                              td = (0, Wd.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(dd) {
+                                let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const md = [-.5, -.5, -.5],
+                                  Wd = [.5, .5, .5];
+                                let Fd = .5;
+                                for (let Rd = 0; Rd < 40; Rd++) {
+                                  const Rd = Cm(dd, md, Wd, Od),
+                                    Xd = Math.max(Rd.life / 30, .001);
+                                  for (; fm(Rd, dd.gravity, Xd);) Fd = Math.max(Fd, Math.hypot(Rd.pos[0], Rd.pos[1], Rd.pos[2]) + Rd.size / 2)
                                 }
-                                return Wr
-                              }(Sr)))), [Sr]),
-                              mr = (0, Zr.useRef)(xr);
-                            return mr.current = xr, (0, Zr.useEffect)((() => {
-                              if (Er.current = null, !Qr) return;
-                              const rr = new Image;
-                              let Sr = !1;
-                              return rr.onload = () => {
-                                Sr || (Er.current = rr)
-                              }, rr.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${Qr}`)
-                              }, rr.src = Qr, () => {
-                                Sr = !0
+                                return Fd
+                              }(Od)))), [Od]),
+                              od = (0, Wd.useRef)(td);
+                            return od.current = td, (0, Wd.useEffect)((() => {
+                              if (vd.current = null, !md) return;
+                              const dd = new Image;
+                              let Od = !1;
+                              return dd.onload = () => {
+                                Od || (vd.current = dd)
+                              }, dd.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${md}`)
+                              }, dd.src = md, () => {
+                                Od = !0
                               }
-                            }), [Qr]), (0, Zr.useEffect)((() => {
-                              var rr;
-                              null === (rr = pr.current) || void 0 === rr || rr.call(pr)
-                            }), [Sr, Wr]), (0, Zr.useEffect)((() => {
-                              const rr = jr.current,
-                                Sr = null === rr || void 0 === rr ? void 0 : rr.getContext("2d");
-                              if (!rr || !Sr) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const Qr = new WW;
-                              let Zr = [],
-                                Wr = 0,
-                                ar = -.7,
-                                xr = mr.current,
-                                Nr = performance.now(),
-                                Ur = 0,
-                                tr = !0,
-                                hr = null;
-                              const zr = () => {
-                                const rr = Ir.current,
-                                  Sr = Math.min(400, Math.max(0, Math.ceil(rr.manualEmitCount)));
-                                Zr = [];
-                                for (let Qr = 0; Qr < Sr; Qr++) Zr.push(FQ(rr, SW, QW, Math.random));
-                                Wr = 0
+                            }), [md]), (0, Wd.useEffect)((() => {
+                              var dd;
+                              null === (dd = Qd.current) || void 0 === dd || dd.call(Qd)
+                            }), [Od, Fd]), (0, Wd.useEffect)((() => {
+                              const dd = Xd.current,
+                                Od = null === dd || void 0 === dd ? void 0 : dd.getContext("2d");
+                              if (!dd || !Od) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const md = new KF;
+                              let Wd = [],
+                                Fd = 0,
+                                Rd = -.7,
+                                td = od.current,
+                                Nd = performance.now(),
+                                qd = 0,
+                                Hd = !0,
+                                yd = null;
+                              const bd = () => {
+                                const dd = Kd.current,
+                                  Od = Math.min(400, Math.max(0, Math.ceil(dd.manualEmitCount)));
+                                Wd = [];
+                                for (let md = 0; md < Od; md++) Wd.push(Cm(dd, FF, RF, Math.random));
+                                Fd = 0
                               };
-                              pr.current = zr, zr();
-                              const Yr = jr => {
-                                Ur = requestAnimationFrame(Yr);
-                                const pr = Math.min(.05, (jr - Nr) / 1e3);
-                                if (Nr = jr, !tr) return;
-                                const nr = window.devicePixelRatio || 1,
-                                  er = Math.round(rr.clientWidth * nr),
-                                  Kr = Math.round(rr.clientHeight * nr);
-                                if (0 === er || 0 === Kr) return;
-                                rr.width === er && rr.height === Kr || (rr.width = er, rr.height = Kr);
-                                const yr = Ir.current;
-                                null === hr && (ar += .18 * pr), xr += (mr.current - xr) * Math.min(1, 4 * pr);
-                                const Br = .6 * pr;
-                                Zr = Zr.filter((rr => JQ(rr, yr.gravity, Br))), 0 !== Zr.length || fr.current || (Wr += pr, Wr > .6 && zr());
-                                const Tr = function(rr, Sr, Qr, Zr) {
-                                  const Wr = 3.2 * Zr,
-                                    ar = .44 * Math.min(rr, Sr) * Wr / Zr,
-                                    jr = Math.cos(Qr),
-                                    Ir = Math.sin(Qr),
-                                    fr = Math.cos(.42),
-                                    Er = Math.sin(.42);
-                                  return (Qr, Zr, pr) => {
-                                    const xr = Qr * Ir + pr * jr,
-                                      mr = Wr - (Zr * Er + xr * fr);
-                                    if (mr < .05) return null;
-                                    const Nr = ar / mr;
+                              Qd.current = bd, bd();
+                              const Td = Xd => {
+                                qd = requestAnimationFrame(Td);
+                                const Qd = Math.min(.05, (Xd - Nd) / 1e3);
+                                if (Nd = Xd, !Hd) return;
+                                const pd = window.devicePixelRatio || 1,
+                                  Yd = Math.round(dd.clientWidth * pd),
+                                  gd = Math.round(dd.clientHeight * pd);
+                                if (0 === Yd || 0 === gd) return;
+                                dd.width === Yd && dd.height === gd || (dd.width = Yd, dd.height = gd);
+                                const wd = Kd.current;
+                                null === yd && (Rd += .18 * Qd), td += (od.current - td) * Math.min(1, 4 * Qd);
+                                const Ed = .6 * Qd;
+                                Wd = Wd.filter((dd => fm(dd, wd.gravity, Ed))), 0 !== Wd.length || hd.current || (Fd += Qd, Fd > .6 && bd());
+                                const Jd = function(dd, Od, md, Wd) {
+                                  const Fd = 3.2 * Wd,
+                                    Rd = .44 * Math.min(dd, Od) * Fd / Wd,
+                                    Xd = Math.cos(md),
+                                    Kd = Math.sin(md),
+                                    hd = Math.cos(.42),
+                                    vd = Math.sin(.42);
+                                  return (md, Wd, Qd) => {
+                                    const td = md * Kd + Qd * Xd,
+                                      od = Fd - (Wd * vd + td * hd);
+                                    if (od < .05) return null;
+                                    const Nd = Rd / od;
                                     return {
-                                      x: rr / 2 + (Qr * jr - pr * Ir) * Nr,
-                                      y: Sr / 2 - (Zr * fr - xr * Er) * Nr,
-                                      scale: Nr,
-                                      depth: mr
+                                      x: dd / 2 + (md * Xd - Qd * Kd) * Nd,
+                                      y: Od / 2 - (Wd * hd - td * vd) * Nd,
+                                      scale: Nd,
+                                      depth: od
                                     }
                                   }
-                                }(er, Kr, ar, xr);
-                                ! function(rr, Sr, Qr, Zr, Wr) {
-                                  const ar = rr.createLinearGradient(0, 0, 0, Qr);
-                                  ar.addColorStop(0, "#23262d"), ar.addColorStop(1, "#16181c"), rr.globalCompositeOperation = "source-over", rr.globalAlpha = 1, rr.fillStyle = ar, rr.fillRect(0, 0, Sr, Qr);
-                                  const jr = (Sr, Qr) => {
-                                      const Wr = Zr(Sr[0], Sr[1], Sr[2]),
-                                        ar = Zr(Qr[0], Qr[1], Qr[2]);
-                                      Wr && ar && (rr.beginPath(), rr.moveTo(Wr.x, Wr.y), rr.lineTo(ar.x, ar.y), rr.stroke())
+                                }(Yd, gd, Rd, td);
+                                ! function(dd, Od, md, Wd, Fd) {
+                                  const Rd = dd.createLinearGradient(0, 0, 0, md);
+                                  Rd.addColorStop(0, "#23262d"), Rd.addColorStop(1, "#16181c"), dd.globalCompositeOperation = "source-over", dd.globalAlpha = 1, dd.fillStyle = Rd, dd.fillRect(0, 0, Od, md);
+                                  const Xd = (Od, md) => {
+                                      const Fd = Wd(Od[0], Od[1], Od[2]),
+                                        Rd = Wd(md[0], md[1], md[2]);
+                                      Fd && Rd && (dd.beginPath(), dd.moveTo(Fd.x, Fd.y), dd.lineTo(Rd.x, Rd.y), dd.stroke())
                                     },
-                                    Ir = Math.ceil(Wr) + 1,
-                                    fr = SW[1];
-                                  rr.lineWidth = 1, rr.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let Er = -Ir; Er <= Ir; Er++) jr([Er + .5, fr, .5 - Ir], [Er + .5, fr, Ir + .5]), jr([.5 - Ir, fr, Er + .5], [Ir + .5, fr, Er + .5]);
-                                  rr.strokeStyle = "rgba(255, 255, 255, 0.28)", rr.setLineDash([4, 4]);
-                                  for (const Er of ZW)
-                                    for (const rr of ZW) {
-                                      const Sr = [0, 1, 2].filter((Sr => Er[Sr] !== rr[Sr]));
-                                      1 === Sr.length && Er[Sr[0]] < rr[Sr[0]] && jr(Er, rr)
+                                    Kd = Math.ceil(Fd) + 1,
+                                    hd = FF[1];
+                                  dd.lineWidth = 1, dd.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let vd = -Kd; vd <= Kd; vd++) Xd([vd + .5, hd, .5 - Kd], [vd + .5, hd, Kd + .5]), Xd([.5 - Kd, hd, vd + .5], [Kd + .5, hd, vd + .5]);
+                                  dd.strokeStyle = "rgba(255, 255, 255, 0.28)", dd.setLineDash([4, 4]);
+                                  for (const vd of XF)
+                                    for (const dd of XF) {
+                                      const Od = [0, 1, 2].filter((Od => vd[Od] !== dd[Od]));
+                                      1 === Od.length && vd[Od[0]] < dd[Od[0]] && Xd(vd, dd)
                                     }
-                                  rr.setLineDash([])
-                                }(Sr, er, Kr, Tr, xr);
-                                const vr = Er.current,
-                                  Or = Zr.map((rr => ({
-                                    particle: rr,
-                                    at: Tr(rr.pos[0], rr.pos[1], rr.pos[2])
-                                  }))).filter((rr => null !== rr.at)).sort(((rr, Sr) => Sr.at.depth - rr.at.depth));
-                                Sr.imageSmoothingEnabled = !1;
-                                for (const rr of function(rr) {
-                                    switch (rr) {
-                                      case GQ.e.OneOne:
+                                  dd.setLineDash([])
+                                }(Od, Yd, gd, Jd, td);
+                                const Ud = vd.current,
+                                  xd = Wd.map((dd => ({
+                                    particle: dd,
+                                    at: Jd(dd.pos[0], dd.pos[1], dd.pos[2])
+                                  }))).filter((dd => null !== dd.at)).sort(((dd, Od) => Od.at.depth - dd.at.depth));
+                                Od.imageSmoothingEnabled = !1;
+                                for (const dd of function(dd) {
+                                    switch (dd) {
+                                      case zm.g.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case GQ.e.Add:
+                                      case zm.g.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case GQ.e.Multiply:
+                                      case zm.g.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case GQ.e.MultiplyAdd:
+                                      case zm.g.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2957,665 +2957,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(yr.blendMode)) {
-                                  Sr.globalCompositeOperation = rr.operation;
+                                  }(wd.blendMode)) {
+                                  Od.globalCompositeOperation = dd.operation;
                                   for (const {
-                                      particle: Zr,
-                                      at: Wr
+                                      particle: Wd,
+                                      at: Fd
                                     }
-                                    of Or) {
-                                    const [ar, jr, Ir, fr] = bQ(Zr), Er = Math.max(1, Zr.size * Wr.scale);
-                                    Sr.globalAlpha = rr.usesAlpha ? Math.min(1, Math.max(0, fr)) : 1, vr ? Sr.drawImage(Qr.get(vr, ar, jr, Ir), Wr.x - Er / 2, Wr.y - Er / 2, Er, Er) : (Sr.fillStyle = `rgb(${255*ar}, ${255*jr}, ${255*Ir})`, Sr.fillRect(Wr.x - Er / 2, Wr.y - Er / 2, Er, Er))
+                                    of xd) {
+                                    const [Rd, Xd, Kd, hd] = km(Wd), vd = Math.max(1, Wd.size * Fd.scale);
+                                    Od.globalAlpha = dd.usesAlpha ? Math.min(1, Math.max(0, hd)) : 1, Ud ? Od.drawImage(md.get(Ud, Rd, Xd, Kd), Fd.x - vd / 2, Fd.y - vd / 2, vd, vd) : (Od.fillStyle = `rgb(${255*Rd}, ${255*Xd}, ${255*Kd})`, Od.fillRect(Fd.x - vd / 2, Fd.y - vd / 2, vd, vd))
                                   }
                                 }
-                                Sr.globalCompositeOperation = "source-over", Sr.globalAlpha = 1
+                                Od.globalCompositeOperation = "source-over", Od.globalAlpha = 1
                               };
-                              Ur = requestAnimationFrame(Yr);
-                              const nr = new IntersectionObserver((rr => {
-                                let [Sr] = rr;
-                                tr = Sr.isIntersecting
+                              qd = requestAnimationFrame(Td);
+                              const pd = new IntersectionObserver((dd => {
+                                let [Od] = dd;
+                                Hd = Od.isIntersecting
                               }));
-                              nr.observe(rr);
-                              const er = Sr => {
-                                  hr = Sr.clientX, rr.setPointerCapture(Sr.pointerId)
+                              pd.observe(dd);
+                              const Yd = Od => {
+                                  yd = Od.clientX, dd.setPointerCapture(Od.pointerId)
                                 },
-                                Kr = rr => {
-                                  null !== hr && (ar += .01 * (rr.clientX - hr), hr = rr.clientX)
+                                gd = dd => {
+                                  null !== yd && (Rd += .01 * (dd.clientX - yd), yd = dd.clientX)
                                 },
-                                yr = () => {
-                                  hr = null
+                                wd = () => {
+                                  yd = null
                                 };
-                              return rr.addEventListener("pointerdown", er), rr.addEventListener("pointermove", Kr), rr.addEventListener("pointerup", yr), rr.addEventListener("pointercancel", yr), () => {
-                                cancelAnimationFrame(Ur), nr.disconnect(), pr.current = null, rr.removeEventListener("pointerdown", er), rr.removeEventListener("pointermove", Kr), rr.removeEventListener("pointerup", yr), rr.removeEventListener("pointercancel", yr)
+                              return dd.addEventListener("pointerdown", Yd), dd.addEventListener("pointermove", gd), dd.addEventListener("pointerup", wd), dd.addEventListener("pointercancel", wd), () => {
+                                cancelAnimationFrame(qd), pd.disconnect(), Qd.current = null, dd.removeEventListener("pointerdown", Yd), dd.removeEventListener("pointermove", gd), dd.removeEventListener("pointerup", wd), dd.removeEventListener("pointercancel", wd)
                               }
-                            }), []), (0, Ur.jsx)("canvas", {
-                              ref: jr,
+                            }), []), (0, qd.jsx)("canvas", {
+                              ref: Xd,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${Sr.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${Od.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const jW = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            IW = [{
-                              mode: GQ.e.OneOne,
+                          const vF = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            QF = [{
+                              mode: zm.g.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: GQ.e.Standard,
+                              mode: zm.g.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: GQ.e.Add,
+                              mode: zm.g.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: GQ.e.Multiply,
+                              mode: zm.g.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: GQ.e.MultiplyAdd,
+                              mode: zm.g.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            fW = (0, Zr.forwardRef)((function(rr, Sr) {
-                              var Qr, Wr;
+                            tF = (0, Wd.forwardRef)((function(dd, Od) {
+                              var md, Fd;
                               let {
-                                textures: jr
-                              } = rr;
-                              const Ir = nZ(),
-                                fr = (0, Zr.useRef)(null),
-                                [Er, pr] = (0, Zr.useState)(AQ),
-                                [xr, mr] = (0, Zr.useState)("example"),
-                                [Nr, tr] = (0, Zr.useState)(0),
-                                [zr, Yr] = (0, Zr.useState)(!1),
-                                er = rr => {
-                                  const Sr = "example" === rr ? AQ : kQ(rr);
-                                  Sr && (pr(Sr), mr(rr))
+                                textures: Xd
+                              } = dd;
+                              const Kd = wW(),
+                                hd = (0, Wd.useRef)(null),
+                                [vd, Qd] = (0, Wd.useState)(jm),
+                                [td, od] = (0, Wd.useState)("example"),
+                                [Nd, Hd] = (0, Wd.useState)(0),
+                                [bd, Td] = (0, Wd.useState)(!1),
+                                Yd = dd => {
+                                  const Od = "example" === dd ? jm : cm(dd);
+                                  Od && (Qd(Od), od(dd))
                                 };
-                              (0, Zr.useImperativeHandle)(Sr, (() => ({
-                                preview: rr => {
-                                  var Sr;
-                                  er(rr), null === (Sr = fr.current) || void 0 === Sr || Sr.scrollIntoView({
+                              (0, Wd.useImperativeHandle)(Od, (() => ({
+                                preview: dd => {
+                                  var Od;
+                                  Yd(dd), null === (Od = hd.current) || void 0 === Od || Od.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const Kr = rr => {
-                                  pr({
-                                    ...Er,
-                                    ...rr
-                                  }), mr(null)
+                              const gd = dd => {
+                                  Qd({
+                                    ...vd,
+                                    ...dd
+                                  }), od(null)
                                 },
-                                yr = function(rr, Sr) {
-                                  if (null !== Sr) return `${uQ}    presetId: "${Sr}",\n${rZ}\n})`;
-                                  const Qr = rr.velocityGradients.map((rr => `        {\n            timeFraction: ${DQ(rr.timeFraction)},\n            factor: ${DQ(rr.factor)},\n            factor2: ${DQ(rr.factor2)},\n        },`)),
-                                    Zr = [`    dir1: ${dQ(rr.dir1)},`, `    dir2: ${dQ(rr.dir2)},`, rZ, `    texture: "${rr.texture}",`, `    minLifeTime: ${DQ(rr.minLifeTime)},`, `    maxLifeTime: ${DQ(rr.maxLifeTime)},`, `    minEmitPower: ${DQ(rr.minEmitPower)},`, `    maxEmitPower: ${DQ(rr.maxEmitPower)},`, `    minSize: ${DQ(rr.minSize)},`, `    maxSize: ${DQ(rr.maxSize)},`, `    manualEmitCount: ${DQ(rr.manualEmitCount)},`, `    gravity: ${dQ(rr.gravity)},`, `    colorGradients: ${sQ(rr.colorGradients,"    ")},`, `    velocityGradients: ${Qr.length>0?`[\n${Qr.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${DQ(rr.blendMode)},`];
-                                  return void 0 !== rr.hideDist && Zr.push(`    hideDist: ${DQ(rr.hideDist)},`), `${uQ}${Zr.join("\n")}\n})`
-                                }(Er, null === xr || "example" === xr ? null : xr),
-                                Tr = jr.includes(Er.texture) ? jr : [...jr, Er.texture];
-                              return (0, Ur.jsxs)("section", {
-                                ref: fr,
+                                wd = function(dd, Od) {
+                                  if (null !== Od) return `${mW}    presetId: "${Od}",\n${WW}\n})`;
+                                  const md = dd.velocityGradients.map((dd => `        {\n            timeFraction: ${Mm(dd.timeFraction)},\n            factor: ${Mm(dd.factor)},\n            factor2: ${Mm(dd.factor2)},\n        },`)),
+                                    Wd = [`    dir1: ${dW(dd.dir1)},`, `    dir2: ${dW(dd.dir2)},`, WW, `    texture: "${dd.texture}",`, `    minLifeTime: ${Mm(dd.minLifeTime)},`, `    maxLifeTime: ${Mm(dd.maxLifeTime)},`, `    minEmitPower: ${Mm(dd.minEmitPower)},`, `    maxEmitPower: ${Mm(dd.maxEmitPower)},`, `    minSize: ${Mm(dd.minSize)},`, `    maxSize: ${Mm(dd.maxSize)},`, `    manualEmitCount: ${Mm(dd.manualEmitCount)},`, `    gravity: ${dW(dd.gravity)},`, `    colorGradients: ${OW(dd.colorGradients,"    ")},`, `    velocityGradients: ${md.length>0?`[\n${md.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Mm(dd.blendMode)},`];
+                                  return void 0 !== dd.hideDist && Wd.push(`    hideDist: ${Mm(dd.hideDist)},`), `${mW}${Wd.join("\n")}\n})`
+                                }(vd, null === td || "example" === td ? null : td),
+                                Jd = Xd.includes(vd.texture) ? Xd : [...Xd, vd.texture];
+                              return (0, qd.jsxs)("section", {
+                                ref: hd,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, Ur.jsxs)("header", {
+                                children: [(0, qd.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, Ur.jsxs)("div", {
-                                    children: [(0, Ur.jsx)("div", {
+                                  children: [(0, qd.jsxs)("div", {
+                                    children: [(0, qd.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, Ur.jsx)("div", {
+                                    }), (0, qd.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, Ur.jsx)(nr, {
-                                    text: yr,
+                                  }), (0, qd.jsx)(pd, {
+                                    text: wd,
                                     label: "Copy code"
                                   })]
-                                }), (0, Ur.jsxs)("div", {
+                                }), (0, qd.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, Ur.jsx)("button", {
+                                  children: [(0, qd.jsx)("button", {
                                     type: "button",
-                                    className: ar()("DocsVariantChip", {
-                                      Active: "example" === xr
+                                    className: Rd()("DocsVariantChip", {
+                                      Active: "example" === td
                                     }),
                                     onClick: () => {
-                                      er("example")
+                                      Yd("example")
                                     },
                                     children: "Example"
-                                  }), jW.filter((rr => null !== kQ(rr))).map((rr => (0, Ur.jsx)("button", {
+                                  }), vF.filter((dd => null !== cm(dd))).map((dd => (0, qd.jsx)("button", {
                                     type: "button",
-                                    className: ar()("DocsVariantChip", {
-                                      Active: xr === rr
+                                    className: Rd()("DocsVariantChip", {
+                                      Active: td === dd
                                     }),
                                     onClick: () => {
-                                      er(rr)
+                                      Yd(dd)
                                     },
-                                    children: rr
-                                  }, rr))), (0, Ur.jsxs)("select", {
+                                    children: dd
+                                  }, dd))), (0, qd.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== xr && void 0 !== xr ? xr : "custom",
+                                    value: null !== td && void 0 !== td ? td : "custom",
                                     "aria-label": "Preset",
-                                    onChange: rr => {
-                                      er(rr.target.value)
+                                    onChange: dd => {
+                                      Yd(dd.target.value)
                                     },
-                                    children: [(0, Ur.jsx)("option", {
+                                    children: [(0, qd.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === xr && (0, Ur.jsx)("option", {
+                                    }), null === td && (0, qd.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), MQ.c.map((rr => (0, Ur.jsx)("option", {
-                                      value: rr,
-                                      children: rr
-                                    }, rr)))]
+                                    }), Pm.d.map((dd => (0, qd.jsx)("option", {
+                                      value: dd,
+                                      children: dd
+                                    }, dd)))]
                                   })]
-                                }), (0, Ur.jsxs)("div", {
+                                }), (0, qd.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, Ur.jsxs)("div", {
+                                  children: [(0, qd.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, Ur.jsx)(aW, {
-                                      opts: Er,
-                                      textureUrl: null !== (Qr = null === Ir || void 0 === Ir ? void 0 : Ir.getParticleTextureUrl(Er.texture)) && void 0 !== Qr ? Qr : null,
-                                      burst: Nr,
-                                      paused: zr
-                                    }), (0, Ur.jsxs)("div", {
+                                    children: [(0, qd.jsx)(hF, {
+                                      opts: vd,
+                                      textureUrl: null !== (md = null === Kd || void 0 === Kd ? void 0 : Kd.getParticleTextureUrl(vd.texture)) && void 0 !== md ? md : null,
+                                      burst: Nd,
+                                      paused: bd
+                                    }), (0, qd.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, Ur.jsxs)("button", {
+                                      children: [(0, qd.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          tr(Nr + 1)
+                                          Hd(Nd + 1)
                                         },
-                                        children: [(0, Ur.jsx)(hr, {
+                                        children: [(0, qd.jsx)(yd, {
                                           name: "replay"
-                                        }), (0, Ur.jsx)("span", {
+                                        }), (0, qd.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, Ur.jsxs)("button", {
+                                      }), (0, qd.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": zr,
+                                        "aria-pressed": bd,
                                         onClick: () => {
-                                          Yr(!zr)
+                                          Td(!bd)
                                         },
-                                        children: [(0, Ur.jsx)(hr, {
-                                          name: zr ? "play" : "pause"
-                                        }), (0, Ur.jsx)("span", {
-                                          children: zr ? "Loop" : "Stop looping"
+                                        children: [(0, qd.jsx)(yd, {
+                                          name: bd ? "play" : "pause"
+                                        }), (0, qd.jsx)("span", {
+                                          children: bd ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, Ur.jsxs)("div", {
+                                  }), (0, qd.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, Ur.jsxs)("div", {
+                                    children: [(0, qd.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Ur.jsxs)("div", {
+                                      children: [(0, qd.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, Ur.jsx)("span", {
+                                        children: [(0, qd.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, Ur.jsx)("code", {
+                                        }), (0, qd.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: Er.texture
+                                          children: vd.texture
                                         })]
-                                      }), (0, Ur.jsx)("div", {
+                                      }), (0, qd.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: Tr.map((rr => {
-                                          var Sr;
-                                          const Qr = null !== (Sr = null === Ir || void 0 === Ir ? void 0 : Ir.getParticleTextureUrl(rr)) && void 0 !== Sr ? Sr : null;
-                                          return (0, Ur.jsx)("button", {
+                                        children: Jd.map((dd => {
+                                          var Od;
+                                          const md = null !== (Od = null === Kd || void 0 === Kd ? void 0 : Kd.getParticleTextureUrl(dd)) && void 0 !== Od ? Od : null;
+                                          return (0, qd.jsx)("button", {
                                             type: "button",
-                                            className: ar()("DocsParticleTexture", {
-                                              Active: Er.texture === rr
+                                            className: Rd()("DocsParticleTexture", {
+                                              Active: vd.texture === dd
                                             }),
-                                            title: rr,
-                                            "aria-label": rr,
-                                            "aria-pressed": Er.texture === rr,
+                                            title: dd,
+                                            "aria-label": dd,
+                                            "aria-pressed": vd.texture === dd,
                                             onClick: () => {
-                                              Kr({
-                                                texture: rr
+                                              gd({
+                                                texture: dd
                                               })
                                             },
-                                            children: Qr ? (0, Ur.jsx)("img", {
-                                              src: Qr,
+                                            children: md ? (0, qd.jsx)("img", {
+                                              src: md,
                                               alt: ""
-                                            }) : (0, Ur.jsx)(hr, {
+                                            }) : (0, qd.jsx)(yd, {
                                               name: "image"
                                             })
-                                          }, rr)
+                                          }, dd)
                                         }))
                                       })]
-                                    }), (0, Ur.jsx)(uZ, {
+                                    }), (0, qd.jsx)(mF, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: Er.manualEmitCount,
-                                      onChange: rr => {
-                                        Kr({
-                                          manualEmitCount: rr
+                                      value: vd.manualEmitCount,
+                                      onChange: dd => {
+                                        gd({
+                                          manualEmitCount: dd
                                         })
                                       }
-                                    }), (0, Ur.jsx)(sZ, {
+                                    }), (0, qd.jsx)(OF, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: Er.minLifeTime,
-                                      high: Er.maxLifeTime,
-                                      onChange: (rr, Sr) => {
-                                        Kr({
-                                          minLifeTime: rr,
-                                          maxLifeTime: Sr
+                                      low: vd.minLifeTime,
+                                      high: vd.maxLifeTime,
+                                      onChange: (dd, Od) => {
+                                        gd({
+                                          minLifeTime: dd,
+                                          maxLifeTime: Od
                                         })
                                       }
-                                    }), (0, Ur.jsx)(sZ, {
+                                    }), (0, qd.jsx)(OF, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: Er.minEmitPower,
-                                      high: Er.maxEmitPower,
-                                      onChange: (rr, Sr) => {
-                                        Kr({
-                                          minEmitPower: rr,
-                                          maxEmitPower: Sr
+                                      low: vd.minEmitPower,
+                                      high: vd.maxEmitPower,
+                                      onChange: (dd, Od) => {
+                                        gd({
+                                          minEmitPower: dd,
+                                          maxEmitPower: Od
                                         })
                                       }
-                                    }), (0, Ur.jsx)(sZ, {
+                                    }), (0, qd.jsx)(OF, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: Er.minSize,
-                                      high: Er.maxSize,
-                                      onChange: (rr, Sr) => {
-                                        Kr({
-                                          minSize: rr,
-                                          maxSize: Sr
+                                      low: vd.minSize,
+                                      high: vd.maxSize,
+                                      onChange: (dd, Od) => {
+                                        gd({
+                                          minSize: dd,
+                                          maxSize: Od
                                         })
                                       }
-                                    }), (0, Ur.jsx)(uZ, {
+                                    }), (0, qd.jsx)(mF, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (Wr = Er.gravity[1]) && void 0 !== Wr ? Wr : 0,
-                                      onChange: rr => {
-                                        var Sr, Qr;
-                                        Kr({
-                                          gravity: [null !== (Sr = Er.gravity[0]) && void 0 !== Sr ? Sr : 0, rr, null !== (Qr = Er.gravity[2]) && void 0 !== Qr ? Qr : 0]
+                                      value: null !== (Fd = vd.gravity[1]) && void 0 !== Fd ? Fd : 0,
+                                      onChange: dd => {
+                                        var Od, md;
+                                        gd({
+                                          gravity: [null !== (Od = vd.gravity[0]) && void 0 !== Od ? Od : 0, dd, null !== (md = vd.gravity[2]) && void 0 !== md ? md : 0]
                                         })
                                       }
-                                    }), (0, Ur.jsxs)("div", {
+                                    }), (0, qd.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, Ur.jsx)("div", {
+                                      children: [(0, qd.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, Ur.jsx)("span", {
+                                        children: (0, qd.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, Ur.jsx)("select", {
+                                      }), (0, qd.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: Er.blendMode,
+                                        value: vd.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: rr => {
-                                          Kr({
-                                            blendMode: Number(rr.target.value)
+                                        onChange: dd => {
+                                          gd({
+                                            blendMode: Number(dd.target.value)
                                           })
                                         },
-                                        children: IW.map((rr => {
+                                        children: QF.map((dd => {
                                           let {
-                                            mode: Sr,
-                                            label: Qr
-                                          } = rr;
-                                          return (0, Ur.jsx)("option", {
-                                            value: Sr,
-                                            children: Qr
-                                          }, Sr)
+                                            mode: Od,
+                                            label: md
+                                          } = dd;
+                                          return (0, qd.jsx)("option", {
+                                            value: Od,
+                                            children: md
+                                          }, Od)
                                         }))
                                       })]
-                                    }), (0, Ur.jsx)(rW, {
-                                      opts: Er,
-                                      onChange: rr => {
-                                        Kr({
-                                          colorGradients: rr
+                                    }), (0, qd.jsx)(WF, {
+                                      opts: vd,
+                                      onChange: dd => {
+                                        gd({
+                                          colorGradients: dd
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, Ur.jsx)(Br, {
-                                  code: yr,
+                                }), (0, qd.jsx)(Ed, {
+                                  code: wd,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var EW = Qr(5223),
-                            pW = Qr(2057);
+                          var oF = md(5134),
+                            NF = md(2060);
 
-                          function xW(rr, Sr) {
-                            return rr ? EW.b.includes(Sr) ? rr.getIngameIconUrl(Sr) : rr.getItemIconUrl(Sr) : null
+                          function qF(dd, Od) {
+                            return dd ? oF.e.includes(Od) ? dd.getIngameIconUrl(Od) : dd.getItemIconUrl(Od) : null
                           }
 
-                          function mW(rr) {
-                            var Sr, Qr, Zr;
+                          function HF(dd) {
+                            var Od, md, Wd;
                             let {
-                              part: Wr,
-                              assets: jr
-                            } = rr;
-                            const Ir = xW(jr, Wr.icon),
-                              fr = null !== (Sr = null === (Qr = Wr.style) || void 0 === Qr ? void 0 : Qr.fontSize) && void 0 !== Sr ? Sr : "1.8em",
-                              Er = (0, MS._b)(Wr.style);
-                            return (0, Ur.jsxs)("span", {
-                              className: ar()("DocsBloxdTextIcon", {
-                                Missing: !Ir
+                              part: Fd,
+                              assets: Xd
+                            } = dd;
+                            const Kd = qF(Xd, Fd.icon),
+                              hd = null !== (Od = null === (md = Fd.style) || void 0 === md ? void 0 : md.fontSize) && void 0 !== Od ? Od : "1.8em",
+                              vd = (0, LO.Yb)(Fd.style);
+                            return (0, qd.jsxs)("span", {
+                              className: Rd()("DocsBloxdTextIcon", {
+                                Missing: !Kd
                               }),
                               style: {
-                                width: fr,
-                                height: fr,
-                                opacity: null === (Zr = Wr.style) || void 0 === Zr ? void 0 : Zr.opacity
+                                width: hd,
+                                height: hd,
+                                opacity: null === (Wd = Fd.style) || void 0 === Wd ? void 0 : Wd.opacity
                               },
-                              title: Ir ? void 0 : "No Bloxd icon, item or block has this name",
-                              children: [Ir && Er && (0, Ur.jsx)("span", {
+                              title: Kd ? void 0 : "No Bloxd icon, item or block has this name",
+                              children: [Kd && vd && (0, qd.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: Er,
-                                  maskImage: `url("${Ir}")`,
-                                  WebkitMaskImage: `url("${Ir}")`
+                                  background: vd,
+                                  maskImage: `url("${Kd}")`,
+                                  WebkitMaskImage: `url("${Kd}")`
                                 }
-                              }), Ir ? (0, Ur.jsx)("img", {
-                                src: Ir,
+                              }), Kd ? (0, qd.jsx)("img", {
+                                src: Kd,
                                 alt: "",
-                                className: ar()({
-                                  Tinted: Er
+                                className: Rd()({
+                                  Tinted: vd
                                 })
-                              }) : (0, Ur.jsx)(hr, {
+                              }) : (0, qd.jsx)(yd, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function NW(rr) {
+                          function yF(dd) {
                             let {
-                              parts: Sr,
-                              className: Qr
-                            } = rr;
-                            const Zr = nZ(),
-                              Wr = [];
-                            let jr = [];
-                            const Ir = rr => {
-                              jr.length > 0 && (Wr.push((0, Ur.jsx)(pW.c, {
-                                text: jr
-                              }, `run-${rr}`)), jr = [])
+                              parts: Od,
+                              className: md
+                            } = dd;
+                            const Wd = wW(),
+                              Fd = [];
+                            let Xd = [];
+                            const Kd = dd => {
+                              Xd.length > 0 && (Fd.push((0, qd.jsx)(NF.d, {
+                                text: Xd
+                              }, `run-${dd}`)), Xd = [])
                             };
-                            return Sr.forEach(((rr, Sr) => {
-                              "icon" !== iS(rr) || kS(rr.icon) ? jr.push(rr) : (Ir(Sr), Wr.push((0, Ur.jsx)(mW, {
-                                part: rr,
-                                assets: Zr
-                              }, `icon-${Sr}`)))
-                            })), Ir(Sr.length), (0, Ur.jsx)("div", {
-                              className: ar()("DocsStyledTextPreview", Qr),
-                              children: Wr
+                            return Od.forEach(((dd, Od) => {
+                              "icon" !== DO(dd) || zO(dd.icon) ? Xd.push(dd) : (Kd(Od), Fd.push((0, qd.jsx)(HF, {
+                                part: dd,
+                                assets: Wd
+                              }, `icon-${Od}`)))
+                            })), Kd(Od.length), (0, qd.jsx)("div", {
+                              className: Rd()("DocsStyledTextPreview", md),
+                              children: Fd
                             })
                           }
-                          const UW = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let tW = null;
+                          const bF = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let TF = null;
 
-                          function hW(rr) {
-                            if (tW ??= document.createElement("canvas").getContext("2d"), !tW) return "#000000";
-                            tW.fillStyle = "#000000", tW.fillStyle = rr;
-                            const Sr = tW.fillStyle;
-                            return Sr.startsWith("#") ? Sr : "#000000"
+                          function pF(dd) {
+                            if (TF ??= document.createElement("canvas").getContext("2d"), !TF) return "#000000";
+                            TF.fillStyle = "#000000", TF.fillStyle = dd;
+                            const Od = TF.fillStyle;
+                            return Od.startsWith("#") ? Od : "#000000"
                           }
 
-                          function zW(rr) {
+                          function YF(dd) {
                             let {
-                              value: Sr,
-                              label: Qr,
-                              onChange: Zr
-                            } = rr;
-                            return (0, Ur.jsxs)("span", {
+                              value: Od,
+                              label: md,
+                              onChange: Wd
+                            } = dd;
+                            return (0, qd.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, Ur.jsx)("input", {
+                              children: [(0, qd.jsx)("input", {
                                 type: "color",
-                                value: hW(Sr),
-                                "aria-label": `${Qr} picker`,
-                                onChange: rr => {
-                                  Zr(rr.target.value)
+                                value: pF(Od),
+                                "aria-label": `${md} picker`,
+                                onChange: dd => {
+                                  Wd(dd.target.value)
                                 }
-                              }), (0, Ur.jsx)("input", {
+                              }), (0, qd.jsx)("input", {
                                 type: "text",
-                                value: Sr,
+                                value: Od,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": Qr,
+                                "aria-label": md,
                                 spellCheck: !1,
-                                onChange: rr => {
-                                  Zr(rr.target.value)
+                                onChange: dd => {
+                                  Wd(dd.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function YW(rr) {
+                          function gF(dd) {
                             let {
-                              value: Sr,
-                              fontAwesomeIcons: Qr,
-                              onChange: Wr
-                            } = rr;
-                            const jr = nZ(),
-                              [Ir, fr] = (0, Zr.useState)(kS(Sr) ? "fontAwesome" : "bloxd"),
-                              [Er, pr] = (0, Zr.useState)(""),
-                              xr = Er.trim().toLowerCase(),
-                              mr = "bloxd" === Ir ? EW.b : Qr,
-                              Nr = xr ? mr.filter((rr => rr.toLowerCase().includes(xr))) : mr;
-                            return (0, Ur.jsxs)("div", {
+                              value: Od,
+                              fontAwesomeIcons: md,
+                              onChange: Fd
+                            } = dd;
+                            const Xd = wW(),
+                              [Kd, hd] = (0, Wd.useState)(zO(Od) ? "fontAwesome" : "bloxd"),
+                              [vd, Qd] = (0, Wd.useState)(""),
+                              td = vd.trim().toLowerCase(),
+                              od = "bloxd" === Kd ? oF.e : md,
+                              Nd = td ? od.filter((dd => dd.toLowerCase().includes(td))) : od;
+                            return (0, qd.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, Ur.jsx)("input", {
+                              children: [(0, qd.jsx)("input", {
                                 type: "text",
-                                value: Sr,
+                                value: Od,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: rr => {
-                                  Wr(rr.target.value)
+                                onChange: dd => {
+                                  Fd(dd.target.value)
                                 }
-                              }), (0, Ur.jsx)("p", {
+                              }), (0, qd.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, Ur.jsxs)("div", {
+                              }), (0, qd.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((rr => (0, Ur.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((dd => (0, qd.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": Ir === rr,
-                                    className: ar()("DocsVariantChip", {
-                                      Active: Ir === rr
+                                    "aria-selected": Kd === dd,
+                                    className: Rd()("DocsVariantChip", {
+                                      Active: Kd === dd
                                     }),
                                     onClick: () => {
-                                      fr(rr)
+                                      hd(dd)
                                     },
-                                    children: "bloxd" === rr ? `Bloxd icons (${EW.b.length})` : `Font Awesome (${Qr.length})`
-                                  }, rr))), (0, Ur.jsx)("input", {
+                                    children: "bloxd" === dd ? `Bloxd icons (${oF.e.length})` : `Font Awesome (${md.length})`
+                                  }, dd))), (0, qd.jsx)("input", {
                                     type: "search",
-                                    value: Er,
+                                    value: vd,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: rr => {
-                                      pr(rr.target.value)
+                                    onChange: dd => {
+                                      Qd(dd.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, Ur.jsxs)("div", {
+                              }), (0, qd.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [Nr.map((rr => {
-                                  const Qr = "bloxd" === Ir ? xW(jr, rr) : null;
-                                  return (0, Ur.jsx)("button", {
+                                children: [Nd.map((dd => {
+                                  const md = "bloxd" === Kd ? qF(Xd, dd) : null;
+                                  return (0, qd.jsx)("button", {
                                     type: "button",
-                                    title: rr,
-                                    "aria-label": rr,
-                                    "aria-pressed": rr === Sr,
-                                    className: ar()("DocsIconPickerOption", {
-                                      Active: rr === Sr
+                                    title: dd,
+                                    "aria-label": dd,
+                                    "aria-pressed": dd === Od,
+                                    className: Rd()("DocsIconPickerOption", {
+                                      Active: dd === Od
                                     }),
                                     onClick: () => {
-                                      Wr(rr)
+                                      Fd(dd)
                                     },
-                                    children: "fontAwesome" === Ir ? (0, Ur.jsx)(eQ.c, {
-                                      name: rr
-                                    }) : Qr ? (0, Ur.jsx)("img", {
-                                      src: Qr,
+                                    children: "fontAwesome" === Kd ? (0, qd.jsx)(am.c, {
+                                      name: dd
+                                    }) : md ? (0, qd.jsx)("img", {
+                                      src: md,
                                       alt: ""
-                                    }) : (0, Ur.jsx)(hr, {
+                                    }) : (0, qd.jsx)(yd, {
                                       name: "image"
                                     })
-                                  }, rr)
-                                })), 0 === Nr.length && (0, Ur.jsxs)("p", {
+                                  }, dd)
+                                })), 0 === Nd.length && (0, qd.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", Er, "\u201d."]
+                                  children: ["No icons match \u201c", vd, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function nW(rr) {
+                          function wF(dd) {
                             let {
-                              property: Sr,
-                              value: Qr,
-                              fontAwesomeIcons: Zr,
-                              onChange: Wr
-                            } = rr;
+                              property: Od,
+                              value: md,
+                              fontAwesomeIcons: Wd,
+                              onChange: Fd
+                            } = dd;
                             const {
-                              field: ar,
-                              label: jr
-                            } = Sr, Ir = rr => "" !== rr || Sr.isRequired ? rr : void 0;
-                            switch (ar.kind) {
+                              field: Rd,
+                              label: Xd
+                            } = Od, Kd = dd => "" !== dd || Od.isRequired ? dd : void 0;
+                            switch (Rd.kind) {
                               case "text":
-                                return ar.multiline ? (0, Ur.jsx)("textarea", {
-                                  value: String(null !== Qr && void 0 !== Qr ? Qr : ""),
+                                return Rd.multiline ? (0, qd.jsx)("textarea", {
+                                  value: String(null !== md && void 0 !== md ? md : ""),
                                   rows: 2,
-                                  "aria-label": jr,
-                                  onChange: rr => {
-                                    Wr(rr.target.value)
+                                  "aria-label": Xd,
+                                  onChange: dd => {
+                                    Fd(dd.target.value)
                                   }
-                                }) : (0, Ur.jsx)("input", {
+                                }) : (0, qd.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Qr && void 0 !== Qr ? Qr : ""),
-                                  "aria-label": jr,
-                                  onChange: rr => {
-                                    Wr(Ir(rr.target.value))
+                                  value: String(null !== md && void 0 !== md ? md : ""),
+                                  "aria-label": Xd,
+                                  onChange: dd => {
+                                    Fd(Kd(dd.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, Ur.jsx)("input", {
+                                return (0, qd.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Qr && void 0 !== Qr ? Qr : ""),
-                                  placeholder: Sr.defaultText,
+                                  value: String(null !== md && void 0 !== md ? md : ""),
+                                  placeholder: Od.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": jr,
+                                  "aria-label": Xd,
                                   spellCheck: !1,
-                                  onChange: rr => {
-                                    Wr(Ir(rr.target.value.trim()))
+                                  onChange: dd => {
+                                    Fd(Kd(dd.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, Ur.jsx)(zW, {
-                                  value: String(null !== Qr && void 0 !== Qr ? Qr : ""),
-                                  label: jr,
-                                  onChange: rr => {
-                                    Wr(Ir(rr))
+                                return (0, qd.jsx)(YF, {
+                                  value: String(null !== md && void 0 !== md ? md : ""),
+                                  label: Xd,
+                                  onChange: dd => {
+                                    Fd(Kd(dd))
                                   }
                                 });
                               case "colours": {
-                                const rr = Array.isArray(Qr) ? Qr : [],
-                                  Sr = rr => {
-                                    Wr(rr.length > 0 ? rr : void 0)
+                                const dd = Array.isArray(md) ? md : [],
+                                  Od = dd => {
+                                    Fd(dd.length > 0 ? dd : void 0)
                                   };
-                                return (0, Ur.jsxs)("div", {
+                                return (0, qd.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [rr.map(((Qr, Zr) => (0, Ur.jsxs)("span", {
+                                  children: [dd.map(((md, Wd) => (0, qd.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, Ur.jsx)(zW, {
-                                      value: Qr,
-                                      label: `${jr} ${Zr+1}`,
-                                      onChange: Qr => {
-                                        Sr(rr.map(((rr, Sr) => Sr === Zr ? Qr : rr)))
+                                    children: [(0, qd.jsx)(YF, {
+                                      value: md,
+                                      label: `${Xd} ${Wd+1}`,
+                                      onChange: md => {
+                                        Od(dd.map(((dd, Od) => Od === Wd ? md : dd)))
                                       }
-                                    }), (0, Ur.jsx)("button", {
+                                    }), (0, qd.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${Zr+1}`,
+                                      "aria-label": `Remove colour ${Wd+1}`,
                                       onClick: () => {
-                                        Sr(rr.filter(((rr, Sr) => Sr !== Zr)))
+                                        Od(dd.filter(((dd, Od) => Od !== Wd)))
                                       },
-                                      children: (0, Ur.jsx)(hr, {
+                                      children: (0, qd.jsx)(yd, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, Zr))), (0, Ur.jsxs)("button", {
+                                  }, Wd))), (0, qd.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var Qr;
-                                      Sr([...rr, null !== (Qr = rr.at(-1)) && void 0 !== Qr ? Qr : "#ffffff"])
+                                      var md;
+                                      Od([...dd, null !== (md = dd.at(-1)) && void 0 !== md ? md : "#ffffff"])
                                     },
-                                    children: [(0, Ur.jsx)(hr, {
+                                    children: [(0, qd.jsx)(yd, {
                                       name: "plus"
-                                    }), 0 === rr.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === dd.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var fr;
-                                const rr = "number" === typeof Qr ? Qr : Number(null !== (fr = Sr.defaultText) && void 0 !== fr ? fr : 0);
-                                return (0, Ur.jsxs)("span", {
+                                var hd;
+                                const dd = "number" === typeof md ? md : Number(null !== (hd = Od.defaultText) && void 0 !== hd ? hd : 0);
+                                return (0, qd.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, Ur.jsx)("input", {
+                                  children: [(0, qd.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: rr,
-                                    "aria-label": jr,
-                                    onChange: rr => {
-                                      Wr(Number(rr.target.value))
+                                    value: dd,
+                                    "aria-label": Xd,
+                                    onChange: dd => {
+                                      Fd(Number(dd.target.value))
                                     }
-                                  }), (0, Ur.jsx)("output", {
-                                    children: rr.toFixed(2)
+                                  }), (0, qd.jsx)("output", {
+                                    children: dd.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, Ur.jsxs)("select", {
-                                  value: String(null !== Qr && void 0 !== Qr ? Qr : ""),
-                                  "aria-label": jr,
-                                  onChange: rr => {
-                                    Wr(Ir(rr.target.value))
+                                return (0, qd.jsxs)("select", {
+                                  value: String(null !== md && void 0 !== md ? md : ""),
+                                  "aria-label": Xd,
+                                  onChange: dd => {
+                                    Fd(Kd(dd.target.value))
                                   },
-                                  children: [!Sr.isRequired && (0, Ur.jsxs)("option", {
+                                  children: [!Od.isRequired && (0, qd.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", Sr.defaultText, ")"]
-                                  }), ar.options.map((rr => (0, Ur.jsx)("option", {
-                                    value: rr,
-                                    children: rr
-                                  }, rr)))]
+                                    children: ["Default (", Od.defaultText, ")"]
+                                  }), Rd.options.map((dd => (0, qd.jsx)("option", {
+                                    value: dd,
+                                    children: dd
+                                  }, dd)))]
                                 });
                               case "icon":
-                                return (0, Ur.jsx)(YW, {
-                                  value: String(null !== Qr && void 0 !== Qr ? Qr : ""),
-                                  fontAwesomeIcons: Zr,
-                                  onChange: Wr
+                                return (0, qd.jsx)(gF, {
+                                  value: String(null !== md && void 0 !== md ? md : ""),
+                                  fontAwesomeIcons: Wd,
+                                  onChange: Fd
                                 })
                             }
                           }
 
-                          function eW(rr) {
-                            let Sr;
+                          function aF(dd) {
+                            let Od;
                             try {
-                              Sr = JSON.parse(rr)
-                            } catch (Qr) {
+                              Od = JSON.parse(dd)
+                            } catch (md) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${Qr.message}`
+                                error: `Not valid JSON yet: ${md.message}`
                               }
                             }
-                            return QQ(Sr) ? {
-                              part: Sr,
+                            return Fm(Od) ? {
+                              part: Od,
                               error: null
                             } : {
                               part: null,
@@ -3623,150 +3623,150 @@ export const modules = {
                             }
                           }
 
-                          function KW(rr) {
+                          function EF(dd) {
                             let {
-                              parts: Sr,
-                              index: Qr,
-                              fontAwesomeIcons: Wr,
-                              onChange: ar,
-                              bq: jr,
-                              onClose: Ir
-                            } = rr;
-                            const fr = (0, Zr.useContext)(US),
-                              pr = (0, Zr.useRef)(null),
-                              xr = Sr[Qr],
-                              mr = iS(xr),
-                              [Nr, tr] = (0, Zr.useState)((() => JSON.stringify(xr, null, 2))),
-                              zr = (0, Zr.useMemo)((() => "other" === mr ? eW(Nr).error : null), [mr, Nr]);
-                            (0, Zr.useEffect)((() => {
-                              var rr;
-                              null === (rr = pr.current) || void 0 === rr || rr.focus()
+                              parts: Od,
+                              index: md,
+                              fontAwesomeIcons: Fd,
+                              onChange: Rd,
+                              qS: Xd,
+                              onClose: Kd
+                            } = dd;
+                            const hd = (0, Wd.useContext)(yO),
+                              Qd = (0, Wd.useRef)(null),
+                              td = Od[md],
+                              od = DO(td),
+                              [Nd, Hd] = (0, Wd.useState)((() => JSON.stringify(td, null, 2))),
+                              bd = (0, Wd.useMemo)((() => "other" === od ? aF(Nd).error : null), [od, Nd]);
+                            (0, Wd.useEffect)((() => {
+                              var dd;
+                              null === (dd = Qd.current) || void 0 === dd || dd.focus()
                             }), []);
-                            const Yr = (0, Ur.jsx)("div", {
+                            const Td = (0, qd.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: rr => {
-                                rr.target === rr.currentTarget && Ir()
+                              onMouseDown: dd => {
+                                dd.target === dd.currentTarget && Kd()
                               },
-                              children: (0, Ur.jsxs)("div", {
-                                ref: pr,
+                              children: (0, qd.jsxs)("div", {
+                                ref: Qd,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${Qr+1}: ${AS[mr]}`,
+                                "aria-label": `Edit part ${md+1}: ${cO[od]}`,
                                 tabIndex: -1,
-                                onKeyDown: rr => {
-                                  "Escape" === rr.key ? (rr.stopPropagation(), Ir()) : "Tab" === rr.key && pr.current && function(rr, Sr) {
-                                    const Qr = Array.from(rr.querySelectorAll(lS)),
-                                      Zr = Qr[0],
-                                      Wr = Qr.at(-1);
-                                    if (!Zr || !Wr) return;
-                                    const ar = document.activeElement;
-                                    !Sr.shiftKey || ar !== Zr && ar !== rr ? Sr.shiftKey || ar !== Wr || (Sr.preventDefault(), Zr.focus()) : (Sr.preventDefault(), Wr.focus())
-                                  }(pr.current, rr)
+                                onKeyDown: dd => {
+                                  "Escape" === dd.key ? (dd.stopPropagation(), Kd()) : "Tab" === dd.key && Qd.current && function(dd, Od) {
+                                    const md = Array.from(dd.querySelectorAll(sO)),
+                                      Wd = md[0],
+                                      Fd = md.at(-1);
+                                    if (!Wd || !Fd) return;
+                                    const Rd = document.activeElement;
+                                    !Od.shiftKey || Rd !== Wd && Rd !== dd ? Od.shiftKey || Rd !== Fd || (Od.preventDefault(), Wd.focus()) : (Od.preventDefault(), Fd.focus())
+                                  }(Qd.current, dd)
                                 },
-                                children: [(0, Ur.jsxs)("header", {
+                                children: [(0, qd.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, Ur.jsxs)("div", {
-                                    children: [(0, Ur.jsxs)("div", {
+                                  children: [(0, qd.jsxs)("div", {
+                                    children: [(0, qd.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", Qr + 1]
-                                    }), (0, Ur.jsx)("div", {
+                                      children: ["Part ", md + 1]
+                                    }), (0, qd.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: AS[mr]
+                                      children: cO[od]
                                     })]
-                                  }), (0, Ur.jsx)("button", {
+                                  }), (0, qd.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: Ir,
-                                    children: (0, Ur.jsx)(hr, {
+                                    onClick: Kd,
+                                    children: (0, qd.jsx)(yd, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, Ur.jsx)(NW, {
-                                  parts: Sr,
+                                }), (0, qd.jsx)(yF, {
+                                  parts: Od,
                                   className: "DocsTextDialogPreview"
-                                }), (0, Ur.jsx)("div", {
+                                }), (0, qd.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === mr ? (0, Ur.jsxs)("label", {
+                                  children: "other" === od ? (0, qd.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, Ur.jsx)("span", {
+                                    children: [(0, qd.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, Ur.jsx)("textarea", {
+                                    }), (0, qd.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: Nr,
+                                      value: Nd,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: rr => {
-                                        tr(rr.target.value);
-                                        const Sr = eW(rr.target.value);
-                                        null !== Sr.part && ar(Sr.part)
+                                      onChange: dd => {
+                                        Hd(dd.target.value);
+                                        const Od = aF(dd.target.value);
+                                        null !== Od.part && Rd(Od.part)
                                       }
-                                    }), zr && (0, Ur.jsx)("span", {
+                                    }), bd && (0, qd.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: zr
+                                      children: bd
                                     })]
-                                  }) : cS[mr].map((rr => {
-                                    const Sr = oS(xr, rr.path),
-                                      Qr = rr.isRequired ? JSON.stringify(JS(xr, rr.path)) === JSON.stringify(xr) : void 0 === Sr;
-                                    return (0, Ur.jsxs)("div", {
+                                  }) : IO[od].map((dd => {
+                                    const Od = CO(td, dd.path),
+                                      md = dd.isRequired ? JSON.stringify(kO(td, dd.path)) === JSON.stringify(td) : void 0 === Od;
+                                    return (0, qd.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, Ur.jsxs)("div", {
+                                      children: [(0, qd.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, Ur.jsx)("span", {
-                                          children: rr.label
-                                        }), (0, Ur.jsxs)("button", {
+                                        children: [(0, qd.jsx)("span", {
+                                          children: dd.label
+                                        }), (0, qd.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: Qr,
-                                          "aria-label": `Reset ${rr.label.toLowerCase()} to default`,
+                                          disabled: md,
+                                          "aria-label": `Reset ${dd.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            ar(JS(xr, rr.path))
+                                            Rd(kO(td, dd.path))
                                           },
-                                          children: [(0, Ur.jsx)(hr, {
+                                          children: [(0, qd.jsx)(yd, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, Ur.jsx)(nW, {
-                                        property: rr,
-                                        value: Sr,
-                                        fontAwesomeIcons: Wr,
-                                        onChange: Sr => {
-                                          ar(bS(xr, rr.path, Sr))
+                                      }), (0, qd.jsx)(wF, {
+                                        property: dd,
+                                        value: Od,
+                                        fontAwesomeIcons: Fd,
+                                        onChange: Od => {
+                                          Rd(ZO(td, dd.path, Od))
                                         }
-                                      }), !rr.isRequired && (0, Ur.jsxs)("span", {
+                                      }), !dd.isRequired && (0, qd.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", rr.defaultText]
+                                        children: ["Default: ", dd.defaultText]
                                       })]
-                                    }, rr.path.join("."))
+                                    }, dd.path.join("."))
                                   }))
-                                }), (0, Ur.jsxs)("footer", {
+                                }), (0, qd.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, Ur.jsxs)("button", {
+                                  children: [(0, qd.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: jr,
-                                    children: [(0, Ur.jsx)(hr, {
+                                    onClick: Xd,
+                                    children: [(0, qd.jsx)(yd, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, Ur.jsx)("button", {
+                                  }), (0, qd.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: Ir,
+                                    onClick: Kd,
                                     children: "Done"
                                   })]
-                                }), (0, Ur.jsx)("datalist", {
+                                }), (0, qd.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: UW.map((rr => (0, Ur.jsx)("option", {
-                                    value: rr
-                                  }, rr)))
+                                  children: bF.map((dd => (0, qd.jsx)("option", {
+                                    value: dd
+                                  }, dd)))
                                 })]
                               })
                             });
-                            return fr ? (0, Er.createPortal)(Yr, fr) : Yr
+                            return hd ? (0, vd.createPortal)(Td, hd) : Td
                           }
-                          const yW = [{
+                          const JF = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3810,265 +3810,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            BW = Object.keys(VS);
+                            UF = Object.keys(jO);
 
-                          function TW(rr) {
+                          function xF(dd) {
                             let {
-                              fontAwesomeIcons: Sr
-                            } = rr;
-                            const [Qr, Wr] = (0, Zr.useState)(yW[0].parts), [jr, Ir] = (0, Zr.useState)((() => uS(yW[0].parts))), [fr, Er] = (0, Zr.useState)(null), [pr, xr] = (0, Zr.useState)(!1), [mr, Nr] = (0, Zr.useState)(null), [tr, zr] = (0, Zr.useState)(!1), [Yr, nr] = (0, Zr.useState)(null), er = (0, Zr.useRef)(null), Kr = uS(Qr);
-                            (0, Zr.useLayoutEffect)((() => {
-                              var rr;
-                              if (!Yr) return;
-                              const Sr = rr => {
-                                  var Sr;
-                                  return null === (Sr = er.current) || void 0 === Sr ? void 0 : Sr.querySelector(`[data-focus-key="${rr}"]`)
+                              fontAwesomeIcons: Od
+                            } = dd;
+                            const [md, Fd] = (0, Wd.useState)(JF[0].parts), [Xd, Kd] = (0, Wd.useState)((() => Om(JF[0].parts))), [hd, vd] = (0, Wd.useState)(null), [Qd, td] = (0, Wd.useState)(!1), [od, Nd] = (0, Wd.useState)(null), [Hd, bd] = (0, Wd.useState)(!1), [Td, pd] = (0, Wd.useState)(null), Yd = (0, Wd.useRef)(null), gd = Om(md);
+                            (0, Wd.useLayoutEffect)((() => {
+                              var dd;
+                              if (!Td) return;
+                              const Od = dd => {
+                                  var Od;
+                                  return null === (Od = Yd.current) || void 0 === Od ? void 0 : Od.querySelector(`[data-focus-key="${dd}"]`)
                                 },
-                                Qr = Sr(Yr.key);
-                              null === (rr = Qr && !Qr.disabled ? Qr : Sr(Yr.fallback)) || void 0 === rr || rr.focus(), nr(null)
-                            }), [Yr]);
-                            const yr = rr => {
-                                Wr(rr), Ir(uS(rr)), Er(null)
+                                md = Od(Td.key);
+                              null === (dd = md && !md.disabled ? md : Od(Td.fallback)) || void 0 === dd || dd.focus(), pd(null)
+                            }), [Td]);
+                            const wd = dd => {
+                                Fd(dd), Kd(Om(dd)), vd(null)
                               },
-                              Tr = rr => {
-                                yr(Qr.filter(((Sr, Qr) => Qr !== rr))), nr({
-                                  key: `edit-${Math.min(rr,Qr.length-2)}`,
+                              Jd = dd => {
+                                wd(md.filter(((Od, md) => md !== dd))), pd({
+                                  key: `edit-${Math.min(dd,md.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              vr = (rr, Sr) => {
-                                const Zr = [...Qr],
-                                  [Wr] = Zr.splice(rr, 1);
-                                Zr.splice(rr + Sr, 0, Wr), yr(Zr);
-                                nr({
-                                  key: `${Sr<0?"up":"down"}-${rr+Sr}`,
-                                  fallback: `edit-${rr+Sr}`
+                              Ud = (dd, Od) => {
+                                const Wd = [...md],
+                                  [Fd] = Wd.splice(dd, 1);
+                                Wd.splice(dd + Od, 0, Fd), wd(Wd);
+                                pd({
+                                  key: `${Od<0?"up":"down"}-${dd+Od}`,
+                                  fallback: `edit-${dd+Od}`
                                 })
                               };
-                            return (0, Ur.jsxs)("section", {
-                              ref: er,
+                            return (0, qd.jsxs)("section", {
+                              ref: Yd,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, Ur.jsx)("header", {
+                              children: [(0, qd.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, Ur.jsxs)("div", {
-                                  children: [(0, Ur.jsx)("div", {
+                                children: (0, qd.jsxs)("div", {
+                                  children: [(0, qd.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, Ur.jsx)("div", {
+                                  }), (0, qd.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, Ur.jsx)("div", {
+                              }), (0, qd.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: yW.map((rr => (0, Ur.jsx)("button", {
+                                children: JF.map((dd => (0, qd.jsx)("button", {
                                   type: "button",
-                                  className: ar()("DocsVariantChip", {
-                                    Active: Kr === uS(rr.parts)
+                                  className: Rd()("DocsVariantChip", {
+                                    Active: gd === Om(dd.parts)
                                   }),
                                   onClick: () => {
-                                    yr(rr.parts)
+                                    wd(dd.parts)
                                   },
-                                  children: rr.label
-                                }, rr.label)))
-                              }), (0, Ur.jsx)(NW, {
-                                parts: Qr,
+                                  children: dd.label
+                                }, dd.label)))
+                              }), (0, qd.jsx)(yF, {
+                                parts: md,
                                 className: "DocsTextEditorPreview"
-                              }), (0, Ur.jsxs)("div", {
+                              }), (0, qd.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, Ur.jsxs)("div", {
+                                children: [(0, qd.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Ur.jsx)("div", {
+                                  children: [(0, qd.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, Ur.jsxs)("ol", {
+                                  }), (0, qd.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [Qr.map(((rr, Sr) => {
-                                      const Zr = iS(rr);
-                                      return (0, Ur.jsxs)("li", {
+                                    children: [md.map(((dd, Od) => {
+                                      const Wd = DO(dd);
+                                      return (0, qd.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, Ur.jsxs)("button", {
+                                        children: [(0, qd.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${Sr}`,
-                                          "aria-label": `Edit part ${Sr+1}, ${AS[Zr]}`,
+                                          "data-focus-key": `edit-${Od}`,
+                                          "aria-label": `Edit part ${Od+1}, ${cO[Wd]}`,
                                           onClick: () => {
-                                            Nr(Sr)
+                                            Nd(Od)
                                           },
-                                          children: [(0, Ur.jsx)("span", {
+                                          children: [(0, qd.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: AS[Zr]
-                                          }), (0, Ur.jsx)(NW, {
-                                            parts: [rr],
+                                            children: cO[Wd]
+                                          }), (0, qd.jsx)(yF, {
+                                            parts: [dd],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== Zr && (0, Ur.jsx)("code", {
+                                          }), "text" !== Wd && (0, qd.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: DS(rr)
+                                            children: fO(dd)
                                           })]
-                                        }), (0, Ur.jsxs)("span", {
+                                        }), (0, qd.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, Ur.jsx)("button", {
+                                          children: [(0, qd.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Sr+1} up`,
-                                            "data-focus-key": `up-${Sr}`,
-                                            disabled: 0 === Sr,
+                                            "aria-label": `Move part ${Od+1} up`,
+                                            "data-focus-key": `up-${Od}`,
+                                            disabled: 0 === Od,
                                             onClick: () => {
-                                              vr(Sr, -1)
+                                              Ud(Od, -1)
                                             },
-                                            children: (0, Ur.jsx)(hr, {
+                                            children: (0, qd.jsx)(yd, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, Ur.jsx)("button", {
+                                          }), (0, qd.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${Sr+1} down`,
-                                            "data-focus-key": `down-${Sr}`,
-                                            disabled: Sr === Qr.length - 1,
+                                            "aria-label": `Move part ${Od+1} down`,
+                                            "data-focus-key": `down-${Od}`,
+                                            disabled: Od === md.length - 1,
                                             onClick: () => {
-                                              vr(Sr, 1)
+                                              Ud(Od, 1)
                                             },
-                                            children: (0, Ur.jsx)(hr, {
+                                            children: (0, qd.jsx)(yd, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, Ur.jsx)("button", {
+                                          }), (0, qd.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${Sr+1}`,
+                                            "aria-label": `Remove part ${Od+1}`,
                                             onClick: () => {
-                                              Tr(Sr)
+                                              Jd(Od)
                                             },
-                                            children: (0, Ur.jsx)(hr, {
+                                            children: (0, qd.jsx)(yd, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, Sr)
-                                    })), 0 === Qr.length && (0, Ur.jsx)("li", {
+                                      }, Od)
+                                    })), 0 === md.length && (0, qd.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, Ur.jsxs)("div", {
+                                  }), (0, qd.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: rr => {
-                                      "Escape" === rr.key && tr && (rr.stopPropagation(), zr(!1), nr({
+                                    onKeyDown: dd => {
+                                      "Escape" === dd.key && Hd && (dd.stopPropagation(), bd(!1), pd({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, Ur.jsxs)("button", {
+                                    children: [(0, qd.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": tr,
+                                      "aria-expanded": Hd,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        zr(!tr)
+                                        bd(!Hd)
                                       },
-                                      children: [(0, Ur.jsx)(hr, {
+                                      children: [(0, qd.jsx)(yd, {
                                         name: "plus"
-                                      }), "Add a part", (0, Ur.jsx)(hr, {
-                                        name: tr ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, qd.jsx)(yd, {
+                                        name: Hd ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), tr && (0, Ur.jsx)("ul", {
+                                    }), Hd && (0, qd.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: BW.map((rr => (0, Ur.jsx)("li", {
-                                        children: (0, Ur.jsx)("button", {
+                                      children: UF.map((dd => (0, qd.jsx)("li", {
+                                        children: (0, qd.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (rr => {
-                                              yr([...Qr, VS[rr]]), zr(!1), Nr(Qr.length)
-                                            })(rr)
+                                            (dd => {
+                                              wd([...md, jO[dd]]), bd(!1), Nd(md.length)
+                                            })(dd)
                                           },
-                                          children: AS[rr]
+                                          children: cO[dd]
                                         })
-                                      }, rr)))
+                                      }, dd)))
                                     })]
                                   })]
-                                }), (0, Ur.jsxs)("div", {
+                                }), (0, qd.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, Ur.jsxs)("div", {
+                                  children: [(0, qd.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, Ur.jsxs)("button", {
+                                    children: ["Code", (0, qd.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": pr,
+                                      "aria-pressed": Qd,
                                       onClick: () => {
-                                        xr(!pr)
+                                        td(!Qd)
                                       },
-                                      children: [(0, Ur.jsx)(hr, {
-                                        name: pr ? "check" : "pencil"
-                                      }), pr ? "Done" : "Edit"]
+                                      children: [(0, qd.jsx)(yd, {
+                                        name: Qd ? "check" : "pencil"
+                                      }), Qd ? "Done" : "Edit"]
                                     })]
-                                  }), pr ? (0, Ur.jsxs)(Ur.Fragment, {
-                                    children: [(0, Ur.jsx)("textarea", {
+                                  }), Qd ? (0, qd.jsxs)(qd.Fragment, {
+                                    children: [(0, qd.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: jr,
+                                      value: Xd,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: rr => {
-                                        Ir(rr.target.value);
-                                        const Sr = ZQ(rr.target.value);
-                                        Er(Sr.error), Sr.parts && Wr(Sr.parts)
+                                      onChange: dd => {
+                                        Kd(dd.target.value);
+                                        const Od = Rm(dd.target.value);
+                                        vd(Od.error), Od.parts && Fd(Od.parts)
                                       }
-                                    }), fr && (0, Ur.jsx)("p", {
+                                    }), hd && (0, qd.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: fr
+                                      children: hd
                                     })]
-                                  }) : (0, Ur.jsx)(Br, {
+                                  }) : (0, qd.jsx)(Ed, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${Kr})`
+                                    code: `api.sendMessage(playerId, ${gd})`
                                   })]
                                 })]
-                              }), null !== mr && mr < Qr.length && (0, Ur.jsx)(KW, {
-                                parts: Qr,
-                                index: mr,
-                                fontAwesomeIcons: Sr,
-                                onChange: rr => {
-                                  ((rr, Sr) => {
-                                    yr(Qr.map(((Qr, Zr) => Zr === rr ? Sr : Qr)))
-                                  })(mr, rr)
+                              }), null !== od && od < md.length && (0, qd.jsx)(EF, {
+                                parts: md,
+                                index: od,
+                                fontAwesomeIcons: Od,
+                                onChange: dd => {
+                                  ((dd, Od) => {
+                                    wd(md.map(((md, Wd) => Wd === dd ? Od : md)))
+                                  })(od, dd)
                                 },
-                                bq: () => {
-                                  Tr(mr), Nr(null)
+                                qS: () => {
+                                  Jd(od), Nd(null)
                                 },
                                 onClose: () => {
-                                  Nr(null), nr({
-                                    key: `edit-${mr}`,
+                                  Nd(null), pd({
+                                    key: `edit-${od}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var vW = Qr(5667),
-                            OW = Qr(5642),
-                            LW = Qr(5658),
-                            lW = Qr(5675);
-                          const XW = 40,
-                            PW = 800,
-                            HW = 150,
-                            qW = 8e3,
-                            RW = 2e3;
+                          var BF = md(5623),
+                            SF = md(5609),
+                            sF = md(5620),
+                            uF = md(5632);
+                          const VF = 40,
+                            iF = 800,
+                            AF = 150,
+                            rF = 8e3,
+                            GF = 2e3;
 
-                          function gW(rr, Sr) {
-                            return 12 * Math.log2(Sr / rr)
+                          function nF(dd, Od) {
+                            return 12 * Math.log2(Od / dd)
                           }
 
-                          function CW(rr, Sr) {
-                            return Math.round(rr * 2 ** (Sr / 12) * 10) / 10
+                          function LF(dd, Od) {
+                            return Math.round(dd * 2 ** (Od / 12) * 10) / 10
                           }
 
-                          function MW(rr) {
-                            return `${rr} ms`
+                          function PF(dd) {
+                            return `${dd} ms`
                           }
 
-                          function GW(rr) {
-                            return `${rr} st`
+                          function zF(dd) {
+                            return `${dd} st`
                           }
-                          const kW = [{
+                          const cF = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4086,769 +4086,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function AW(rr) {
+                          function jF(dd) {
                             let {
-                              synth: Sr,
-                              onChange: Qr
-                            } = rr;
-                            const Zr = (0, vW.n)(Sr);
-                            return (0, Ur.jsxs)("div", {
+                              synth: Od,
+                              onChange: md
+                            } = dd;
+                            const Wd = (0, BF.k)(Od);
+                            return (0, qd.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, Ur.jsxs)("div", {
+                              children: [(0, qd.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Ur.jsx)("div", {
+                                children: [(0, qd.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, Ur.jsxs)("div", {
+                                }), (0, qd.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, Ur.jsx)("div", {
+                                  children: [(0, qd.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, Ur.jsx)("span", {
+                                    children: (0, qd.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, Ur.jsx)("div", {
+                                  }), (0, qd.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: vW.h.map((rr => (0, Ur.jsx)("button", {
+                                    children: BF.h.map((dd => (0, qd.jsx)("button", {
                                       type: "button",
-                                      className: ar()("DocsVariantChip", {
-                                        Active: Sr.waveform === rr
+                                      className: Rd()("DocsVariantChip", {
+                                        Active: Od.waveform === dd
                                       }),
-                                      "aria-pressed": Sr.waveform === rr,
+                                      "aria-pressed": Od.waveform === dd,
                                       onClick: () => {
-                                        Qr({
-                                          waveform: rr
+                                        md({
+                                          waveform: dd
                                         })
                                       },
-                                      children: rr
-                                    }, rr)))
+                                      children: dd
+                                    }, dd)))
                                   })]
-                                }), (0, Ur.jsx)(uZ, {
+                                }), (0, qd.jsx)(mF, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: gW(XW, PW),
+                                  max: nF(VF, iF),
                                   step: .1,
-                                  value: gW(XW, Sr.pitchHz),
-                                  format: () => `${Sr.pitchHz} Hz`,
-                                  onChange: rr => {
-                                    Qr({
-                                      pitchHz: CW(XW, rr)
+                                  value: nF(VF, Od.pitchHz),
+                                  format: () => `${Od.pitchHz} Hz`,
+                                  onChange: dd => {
+                                    md({
+                                      pitchHz: LF(VF, dd)
                                     })
                                   }
-                                }), (0, Ur.jsx)(uZ, {
+                                }), (0, qd.jsx)(mF, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: Sr.syllableMs,
-                                  format: MW,
-                                  onChange: rr => {
-                                    Qr({
-                                      syllableMs: rr
+                                  value: Od.syllableMs,
+                                  format: PF,
+                                  onChange: dd => {
+                                    md({
+                                      syllableMs: dd
                                     })
                                   }
-                                }), (0, Ur.jsx)(uZ, {
+                                }), (0, qd.jsx)(mF, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: Sr.volume,
-                                  onChange: rr => {
-                                    Qr({
-                                      volume: rr
+                                  value: Od.volume,
+                                  onChange: dd => {
+                                    md({
+                                      volume: dd
                                     })
                                   }
                                 })]
-                              }), (0, Ur.jsxs)("div", {
+                              }), (0, qd.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Ur.jsx)("div", {
+                                children: [(0, qd.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, Ur.jsx)(uZ, {
+                                }), (0, qd.jsx)(mF, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: Sr.durationMs,
-                                  format: MW,
-                                  onChange: rr => {
-                                    Qr({
-                                      durationMs: rr
+                                  value: Od.durationMs,
+                                  format: PF,
+                                  onChange: dd => {
+                                    md({
+                                      durationMs: dd
                                     })
                                   }
-                                }), (0, Ur.jsx)(uZ, {
+                                }), (0, qd.jsx)(mF, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: Zr.durationMs,
+                                  max: Wd.durationMs,
                                   step: 1,
-                                  value: Zr.attackMs,
-                                  format: MW,
-                                  onChange: rr => {
-                                    Qr({
-                                      attackMs: rr
+                                  value: Wd.attackMs,
+                                  format: PF,
+                                  onChange: dd => {
+                                    md({
+                                      attackMs: dd
                                     })
                                   }
-                                }), (0, Ur.jsx)(uZ, {
+                                }), (0, qd.jsx)(mF, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: Zr.durationMs - Zr.attackMs,
+                                  max: Wd.durationMs - Wd.attackMs,
                                   step: 1,
-                                  value: Zr.releaseMs,
-                                  format: MW,
-                                  onChange: rr => {
-                                    Qr({
-                                      releaseMs: rr
+                                  value: Wd.releaseMs,
+                                  format: PF,
+                                  onChange: dd => {
+                                    md({
+                                      releaseMs: dd
                                     })
                                   }
-                                }), (0, Ur.jsx)(uZ, {
+                                }), (0, qd.jsx)(mF, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: Sr.glideSemitones,
-                                  format: GW,
-                                  onChange: rr => {
-                                    Qr({
-                                      glideSemitones: rr
+                                  value: Od.glideSemitones,
+                                  format: zF,
+                                  onChange: dd => {
+                                    md({
+                                      glideSemitones: dd
                                     })
                                   }
-                                }), (0, Ur.jsxs)("label", {
+                                }), (0, qd.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, Ur.jsx)("input", {
+                                  children: [(0, qd.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== Sr.lowpassHz,
-                                    onChange: rr => {
-                                      Qr({
-                                        lowpassHz: rr.target.checked ? RW : null
+                                    checked: null !== Od.lowpassHz,
+                                    onChange: dd => {
+                                      md({
+                                        lowpassHz: dd.target.checked ? GF : null
                                       })
                                     }
-                                  }), (0, Ur.jsx)("span", {
+                                  }), (0, qd.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== Sr.lowpassHz && (0, Ur.jsx)(uZ, {
+                                }), null !== Od.lowpassHz && (0, qd.jsx)(mF, {
                                   label: "Filter",
                                   min: 0,
-                                  max: gW(HW, qW),
+                                  max: nF(AF, rF),
                                   step: .1,
-                                  value: gW(HW, Sr.lowpassHz),
-                                  format: () => `${Sr.lowpassHz} Hz`,
-                                  onChange: rr => {
-                                    Qr({
-                                      lowpassHz: CW(HW, rr)
+                                  value: nF(AF, Od.lowpassHz),
+                                  format: () => `${Od.lowpassHz} Hz`,
+                                  onChange: dd => {
+                                    md({
+                                      lowpassHz: LF(AF, dd)
                                     })
                                   }
                                 })]
-                              }), (0, Ur.jsxs)("div", {
+                              }), (0, qd.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, Ur.jsx)("div", {
+                                children: [(0, qd.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), kW.map((rr => {
+                                }), cF.map((dd => {
                                   let {
-                                    key: Zr,
-                                    label: Wr,
-                                    max: ar
-                                  } = rr;
-                                  return (0, Ur.jsx)(uZ, {
-                                    label: Wr,
+                                    key: Wd,
+                                    label: Fd,
+                                    max: Rd
+                                  } = dd;
+                                  return (0, qd.jsx)(mF, {
+                                    label: Fd,
                                     min: 0,
-                                    max: ar,
+                                    max: Rd,
                                     step: .1,
-                                    value: Sr.intonation[Zr],
-                                    format: GW,
-                                    onChange: rr => {
-                                      Qr({
+                                    value: Od.intonation[Wd],
+                                    format: zF,
+                                    onChange: dd => {
+                                      md({
                                         intonation: {
-                                          ...Sr.intonation,
-                                          [Zr]: rr
+                                          ...Od.intonation,
+                                          [Wd]: dd
                                         }
                                       })
                                     }
-                                  }, Zr)
+                                  }, Wd)
                                 }))]
                               })]
                             })
                           }
-                          const VW = Object.keys(vW.l),
-                            iW = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const DF = Object.keys(BF.j),
+                            eF = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function wW(rr) {
-                            var Sr;
-                            const Qr = JSON.stringify((0, vW.n)(rr));
-                            return null !== (Sr = VW.find((rr => JSON.stringify((0, vW.n)(vW.l[rr])) === Qr))) && void 0 !== Sr ? Sr : null
+                          function IF(dd) {
+                            var Od;
+                            const md = JSON.stringify((0, BF.k)(dd));
+                            return null !== (Od = DF.find((dd => JSON.stringify((0, BF.k)(BF.j[dd])) === md))) && void 0 !== Od ? Od : null
                           }
 
-                          function cW(rr) {
-                            let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof rr || null === rr) return JSON.stringify(rr);
-                            return `{\n${Object.entries(rr).map((rr=>{let[Qr,Zr]=rr;return`${Sr}    ${Qr}: ${cW(Zr,`${Sr}    `)},`})).join("\n")}\n${Sr}}`
+                          function lF(dd) {
+                            let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof dd || null === dd) return JSON.stringify(dd);
+                            return `{\n${Object.entries(dd).map((dd=>{let[md,Wd]=dd;return`${Od}    ${md}: ${lF(Wd,`${Od}    `)},`})).join("\n")}\n${Od}}`
                           }
 
-                          function FW(rr, Sr, Qr) {
-                            const Zr = wW(rr),
-                              Wr = [`    line: ${JSON.stringify(Sr)},`];
-                            return Qr && Wr.push(`    speakerName: ${JSON.stringify(Qr)},`), Wr.push("    voice,"), `const voice = ${Zr?JSON.stringify(Zr):cW((0,vW.n)(rr))}\n\napi.setClientOption(playerId, "dialogue", {\n${Wr.join("\n")}\n})`
+                          function CF(dd, Od, md) {
+                            const Wd = IF(dd),
+                              Fd = [`    line: ${JSON.stringify(Od)},`];
+                            return md && Fd.push(`    speakerName: ${JSON.stringify(md)},`), Fd.push("    voice,"), `const voice = ${Wd?JSON.stringify(Wd):lF((0,BF.k)(dd))}\n\napi.setClientOption(playerId, "dialogue", {\n${Fd.join("\n")}\n})`
                           }
-                          const oW = 400,
-                            bW = 90;
-                          let JW = null;
+                          const ZF = 400,
+                            kF = 90;
+                          let fF = null;
 
-                          function DW(rr, Sr, Qr) {
-                            return JW ??= new AudioContext, JW.resume(), (0, lW.e)(JW, JW.destination, rr, Sr, Qr, (() => {}))
+                          function MF(dd, Od, md) {
+                            return fF ??= new AudioContext, fF.resume(), (0, uF.b)(fF, fF.destination, dd, Od, md, (() => {}))
                           }
 
-                          function dW() {
-                            const [rr, Sr] = (0, Zr.useState)(vW.l.regular), [Qr, Wr] = (0, Zr.useState)(iW[0]), [jr, Ir] = (0, Zr.useState)("Innkeeper"), [fr, Er] = (0, Zr.useState)(0), pr = pZ((rr => rr.volume)), xr = (0, Zr.useRef)(null), mr = (0, Zr.useRef)(0), Nr = (0, Zr.useRef)(0), tr = () => {
-                              var rr;
-                              null === (rr = xr.current) || void 0 === rr || rr.call(xr), xr.current = null
+                          function dR() {
+                            const [dd, Od] = (0, Wd.useState)(BF.j.regular), [md, Fd] = (0, Wd.useState)(eF[0]), [Xd, Kd] = (0, Wd.useState)("Innkeeper"), [hd, vd] = (0, Wd.useState)(0), Qd = NW((dd => dd.volume)), td = (0, Wd.useRef)(null), od = (0, Wd.useRef)(0), Nd = (0, Wd.useRef)(0), Hd = () => {
+                              var dd;
+                              null === (dd = td.current) || void 0 === dd || dd.call(td), td.current = null
                             };
-                            (0, Zr.useEffect)((() => () => {
-                              var rr;
-                              null === (rr = xr.current) || void 0 === rr || rr.call(xr), window.clearTimeout(mr.current)
+                            (0, Wd.useEffect)((() => () => {
+                              var dd;
+                              null === (dd = td.current) || void 0 === dd || dd.call(td), window.clearTimeout(od.current)
                             }), []);
-                            const zr = (0, Zr.useMemo)((() => ({
-                                line: Qr,
-                                speakerName: jr || void 0,
-                                voice: rr
-                              })), [Qr, jr, rr]),
-                              Yr = (0, Zr.useRef)(zr);
-                            Yr.current = zr;
-                            const er = wW(rr),
-                              Kr = rr => {
-                                window.clearTimeout(mr.current), tr();
+                            const bd = (0, Wd.useMemo)((() => ({
+                                line: md,
+                                speakerName: Xd || void 0,
+                                voice: dd
+                              })), [md, Xd, dd]),
+                              Td = (0, Wd.useRef)(bd);
+                            Td.current = bd;
+                            const Yd = IF(dd),
+                              gd = dd => {
+                                window.clearTimeout(od.current), Hd();
                                 const {
-                                  plan: Sr,
-                                  synth: Qr
-                                } = (0, LW.h)(rr);
-                                Qr && (xr.current = DW(Qr, Sr.blips, pr)), Er((rr => rr + 1))
+                                  plan: Od,
+                                  synth: md
+                                } = (0, sF.e)(dd);
+                                md && (td.current = MF(md, Od.blips, Qd)), vd((dd => dd + 1))
                               },
-                              yr = FW(rr, Qr, jr);
-                            return (0, Ur.jsxs)("section", {
+                              wd = CF(dd, md, Xd);
+                            return (0, qd.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, Ur.jsxs)("header", {
+                              children: [(0, qd.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, Ur.jsxs)("div", {
-                                  children: [(0, Ur.jsx)("div", {
+                                children: [(0, qd.jsxs)("div", {
+                                  children: [(0, qd.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, Ur.jsx)("div", {
+                                  }), (0, qd.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, Ur.jsx)(nr, {
-                                  text: yr,
+                                }), (0, qd.jsx)(pd, {
+                                  text: wd,
                                   label: "Copy code"
                                 })]
-                              }), (0, Ur.jsxs)("div", {
+                              }), (0, qd.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [VW.map((rr => (0, Ur.jsx)("button", {
+                                children: [DF.map((dd => (0, qd.jsx)("button", {
                                   type: "button",
-                                  className: ar()("DocsVariantChip", {
-                                    Active: er === rr
+                                  className: Rd()("DocsVariantChip", {
+                                    Active: Yd === dd
                                   }),
-                                  "aria-pressed": er === rr,
+                                  "aria-pressed": Yd === dd,
                                   onClick: () => {
-                                    (rr => {
-                                      const Qr = vW.l[rr];
-                                      Sr(Qr), Kr({
-                                        ...zr,
-                                        voice: Qr
+                                    (dd => {
+                                      const md = BF.j[dd];
+                                      Od(md), gd({
+                                        ...bd,
+                                        voice: md
                                       })
-                                    })(rr)
+                                    })(dd)
                                   },
-                                  children: rr
-                                }, rr))), !er && (0, Ur.jsx)("span", {
+                                  children: dd
+                                }, dd))), !Yd && (0, qd.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, Ur.jsxs)("div", {
+                              }), (0, qd.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, Ur.jsxs)("div", {
+                                children: [(0, qd.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, Ur.jsx)("div", {
+                                  children: [(0, qd.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, Ur.jsx)(OW.c, {
-                                      display: zr
-                                    }, fr)
-                                  }), (0, Ur.jsxs)("form", {
+                                    children: (0, qd.jsx)(SF.e, {
+                                      display: bd
+                                    }, hd)
+                                  }), (0, qd.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: rr => {
-                                      rr.preventDefault(), Kr(zr)
+                                    onSubmit: dd => {
+                                      dd.preventDefault(), gd(bd)
                                     },
-                                    children: [(0, Ur.jsx)("input", {
-                                      value: Qr,
+                                    children: [(0, qd.jsx)("input", {
+                                      value: md,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: rr => {
-                                        Wr(rr.target.value)
+                                      onChange: dd => {
+                                        Fd(dd.target.value)
                                       }
-                                    }), (0, Ur.jsxs)("button", {
+                                    }), (0, qd.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, Ur.jsx)(hr, {
+                                      children: [(0, qd.jsx)(yd, {
                                         name: "play"
-                                      }), (0, Ur.jsx)("span", {
+                                      }), (0, qd.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, Ur.jsx)("div", {
+                                  }), (0, qd.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: iW.map((rr => (0, Ur.jsx)("button", {
+                                    children: eF.map((dd => (0, qd.jsx)("button", {
                                       type: "button",
-                                      className: ar()("DocsVariantChip", {
-                                        Active: Qr === rr
+                                      className: Rd()("DocsVariantChip", {
+                                        Active: md === dd
                                       }),
                                       onClick: () => {
-                                        var Sr;
-                                        Wr(Sr = rr), Kr({
-                                          ...zr,
-                                          line: Sr
+                                        var Od;
+                                        Fd(Od = dd), gd({
+                                          ...bd,
+                                          line: Od
                                         })
                                       },
-                                      children: rr
-                                    }, rr)))
-                                  }), (0, Ur.jsxs)("label", {
+                                      children: dd
+                                    }, dd)))
+                                  }), (0, qd.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, Ur.jsx)("span", {
+                                    children: [(0, qd.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, Ur.jsx)("input", {
-                                      value: jr,
+                                    }), (0, qd.jsx)("input", {
+                                      value: Xd,
                                       placeholder: "No name",
-                                      onChange: rr => {
-                                        Ir(rr.target.value)
+                                      onChange: dd => {
+                                        Kd(dd.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, Ur.jsx)(AW, {
-                                  synth: rr,
-                                  onChange: Qr => {
-                                    const Zr = {
-                                      ...rr,
-                                      ...Qr
+                                }), (0, qd.jsx)(jF, {
+                                  synth: dd,
+                                  onChange: md => {
+                                    const Wd = {
+                                      ...dd,
+                                      ...md
                                     };
-                                    Sr(Zr);
-                                    const Wr = {
-                                        ...zr,
-                                        voice: Zr
+                                    Od(Wd);
+                                    const Fd = {
+                                        ...bd,
+                                        voice: Wd
                                       },
-                                      ar = performance.now();
-                                    if (ar - Nr.current >= bW) {
-                                      Nr.current = ar, tr();
-                                      const rr = (0, LW.h)(Wr).plan.blips[0];
-                                      rr && (xr.current = DW((0, vW.n)(Zr), [{
-                                        ...rr,
+                                      Rd = performance.now();
+                                    if (Rd - Nd.current >= kF) {
+                                      Nd.current = Rd, Hd();
+                                      const dd = (0, sF.e)(Fd).plan.blips[0];
+                                      dd && (td.current = MF((0, BF.k)(Wd), [{
+                                        ...dd,
                                         atMs: 0
-                                      }], pr))
+                                      }], Qd))
                                     }
-                                    window.clearTimeout(mr.current), mr.current = window.setTimeout((() => {
-                                      Kr(Yr.current)
-                                    }), oW)
+                                    window.clearTimeout(od.current), od.current = window.setTimeout((() => {
+                                      gd(Td.current)
+                                    }), ZF)
                                   }
                                 })]
-                              }), (0, Ur.jsx)(Br, {
-                                code: yr,
+                              }), (0, qd.jsx)(Ed, {
+                                code: wd,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var sW = Qr(5692);
-                          const uW = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            ra = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            Sa = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${ra}`, "g"), sW.o],
+                          var OR = md(5656);
+                          const mR = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            WR = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            FR = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${WR}`, "g"), OR.o],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, sW.o]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, OR.o]
                             ];
 
-                          function Qa(rr) {
-                            return `${rr.pageId}#${rr.anchor}`
+                          function RR(dd) {
+                            return `${dd.pageId}#${dd.anchor}`
                           }
-                          let Za, Wa, aa;
+                          let XR, KR, hR;
 
-                          function ja(rr) {
-                            const Sr = (0, Tr.f)(rr),
-                              Qr = new Set;
-                            for (const [, , Zr] of Sr.matchAll(Tr.b)) {
-                              const rr = Zr.startsWith("#") ? ir(Zr) : null,
-                                Sr = rr ? Qa({
-                                  pageId: rr.page.id,
-                                  anchor: rr.anchor
+                          function vR(dd) {
+                            const Od = (0, Jd.e)(dd),
+                              md = new Set;
+                            for (const [, , Wd] of Od.matchAll(Jd.b)) {
+                              const dd = Wd.startsWith("#") ? Dd(Wd) : null,
+                                Od = dd ? RR({
+                                  pageId: dd.page.id,
+                                  anchor: dd.anchor
                                 }) : null;
-                              null !== Sr && (Za || (Za = new Set(Cr.flatMap((rr => lr(rr.layout) ? Ar(rr).sections.map((Sr => Qa({
-                                pageId: rr.id,
-                                anchor: Sr.heading.anchor
-                              }))) : [])))), Za).has(Sr) && Qr.add(Sr)
+                              null !== Od && (XR || (XR = new Set(nd.flatMap((dd => Sd(dd.layout) ? cd(dd).sections.map((Od => RR({
+                                pageId: dd.id,
+                                anchor: Od.heading.anchor
+                              }))) : [])))), XR).has(Od) && md.add(Od)
                             }
-                            for (const [, , Zr] of Sr.matchAll(uW)) {
-                              const rr = mS(Zr);
-                              rr && Qr.add(Qa(rr))
+                            for (const [, , Wd] of Od.matchAll(mR)) {
+                              const dd = qO(Wd);
+                              dd && md.add(RR(dd))
                             }
-                            return Qr
+                            return md
                           }
 
-                          function Ia(rr, Sr) {
-                            const Qr = new Set,
-                              Zr = function(rr) {
-                                return rr.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(rr);
-                            for (const [, Wr] of Zr.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) Qr.add(Wr);
-                            for (const [Wr, ar] of Sa)
-                              for (const [, rr] of(0, sW.e)(Zr, Wr, ar)) Sr.has(rr) && Qr.add(rr);
-                            return Qr
+                          function QR(dd, Od) {
+                            const md = new Set,
+                              Wd = function(dd) {
+                                return dd.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(dd);
+                            for (const [, Fd] of Wd.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) md.add(Fd);
+                            for (const [Fd, Rd] of FR)
+                              for (const [, dd] of(0, OR.g)(Wd, Fd, Rd)) Od.has(dd) && md.add(dd);
+                            return md
                           }
 
-                          function fa(rr, Sr, Qr, Zr) {
-                            const Wr = rr.get(Sr);
-                            Wr ? !Zr && Wr.some((rr => rr.pageId === Qr.pageId)) || Wr.push(Qr) : rr.set(Sr, [Qr])
+                          function tR(dd, Od, md, Wd) {
+                            const Fd = dd.get(Od);
+                            Fd ? !Wd && Fd.some((dd => dd.pageId === md.pageId)) || Fd.push(md) : dd.set(Od, [md])
                           }
-                          const Ea = /^[A-Za-z_$][\w$]*$/;
+                          const oR = /^[A-Za-z_$][\w$]*$/;
 
-                          function pa(rr) {
-                            return Ea.test(rr.name) ? rr.name : "options"
-                          }
-
-                          function xa(rr, Sr) {
-                            const Qr = rr.params.map(pa).join(", ");
-                            return Sr ? `${rr.name} = (${Qr}) => {\n\t\n}` : `api.${rr.name}(${Qr})`
+                          function NR(dd) {
+                            return oR.test(dd.name) ? dd.name : "options"
                           }
 
-                          function ma(rr) {
+                          function qR(dd, Od) {
+                            const md = dd.params.map(NR).join(", ");
+                            return Od ? `${dd.name} = (${md}) => {\n\t\n}` : `api.${dd.name}(${md})`
+                          }
+
+                          function HR(dd) {
                             let {
-                              method: Sr,
-                              isCallback: Qr
-                            } = rr;
-                            return (0, Ur.jsxs)("div", {
+                              method: Od,
+                              isCallback: md
+                            } = dd;
+                            return (0, qd.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, Ur.jsxs)("span", {
+                              children: [(0, qd.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [Qr ? (0, Ur.jsxs)(Ur.Fragment, {
-                                  children: [(0, Ur.jsx)("span", {
+                                children: [md ? (0, qd.jsxs)(qd.Fragment, {
+                                  children: [(0, qd.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Sr.name
-                                  }), (0, Ur.jsx)("span", {
+                                    children: Od.name
+                                  }), (0, qd.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, Ur.jsxs)(Ur.Fragment, {
-                                  children: [(0, Ur.jsx)("span", {
+                                }) : (0, qd.jsxs)(qd.Fragment, {
+                                  children: [(0, qd.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, Ur.jsx)("span", {
+                                  }), (0, qd.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: Sr.name
-                                  }), (0, Ur.jsx)("span", {
+                                    children: Od.name
+                                  }), (0, qd.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), Sr.params.map(((rr, Qr) => (0, Ur.jsxs)(Zr.Fragment, {
-                                  children: [Qr > 0 && (0, Ur.jsx)("span", {
+                                }), Od.params.map(((dd, md) => (0, qd.jsxs)(Wd.Fragment, {
+                                  children: [md > 0 && (0, qd.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, Ur.jsx)("a", {
+                                  }), (0, qd.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${Sr.name}-${pa(rr)}`,
-                                    children: rr.name
+                                    href: `#${Od.name}-${NR(dd)}`,
+                                    children: dd.name
                                   })]
-                                }, rr.name))), (0, Ur.jsx)("span", {
+                                }, dd.name))), (0, qd.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: Qr ? ") => " : ")"
-                                }), Qr && !Sr.returns && (0, Ur.jsx)("span", {
+                                  children: md ? ") => " : ")"
+                                }), md && !Od.returns && (0, qd.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), Sr.returns && Sr.returns.type && (0, Ur.jsxs)("span", {
+                              }), Od.returns && Od.returns.type && (0, qd.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!Qr && (0, Ur.jsx)("span", {
+                                children: [!md && (0, qd.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, Ur.jsx)(vS, {
-                                  type: Sr.returns.type
+                                }), (0, qd.jsx)(xO, {
+                                  type: Od.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function Na(rr) {
+                          function yR(dd) {
                             let {
-                              title: Sr,
-                              references: Qr
-                            } = rr;
-                            const Wr = (0, Zr.useContext)(NS);
-                            return (0, Ur.jsxs)("div", {
+                              title: Od,
+                              references: md
+                            } = dd;
+                            const Fd = (0, Wd.useContext)(HO);
+                            return (0, qd.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, Ur.jsx)("span", {
+                              children: [(0, qd.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: Sr
-                              }), Qr.map((rr => (0, Ur.jsx)(jr.d, {
-                                to: cr(Wr, Gr(rr.pageId), rr.anchor),
-                                children: rr.label
-                              }, `${rr.pageId}#${rr.anchor}`)))]
+                                children: Od
+                              }), md.map((dd => (0, qd.jsx)(Xd.c, {
+                                to: Id(Fd, Pd(dd.pageId), dd.anchor),
+                                children: dd.label
+                              }, `${dd.pageId}#${dd.anchor}`)))]
                             })
                           }
 
-                          function Ua(rr) {
-                            var Sr, Qr;
+                          function bR(dd) {
+                            var Od, md;
                             let {
-                              pageId: Zr,
-                              anchor: Wr
-                            } = rr;
-                            const ar = Qa({
-                                pageId: Zr,
-                                anchor: Wr
+                              pageId: Wd,
+                              anchor: Fd
+                            } = dd;
+                            const Rd = RR({
+                                pageId: Wd,
+                                anchor: Fd
                               }),
-                              jr = null !== (Sr = function() {
-                                if (!aa) {
-                                  aa = new Map;
-                                  const Zr = new Set(Cr.filter((rr => "callbacks" === rr.layout)).flatMap((rr => Ar(rr).sections.map((rr => rr.heading.text)))));
-                                  for (const Wr of Cr)
-                                    if ("article" === Wr.layout || "snippets" === Wr.layout)
-                                      for (const ar of (0, Tr.r)(Ar(Wr)))
+                              Xd = null !== (Od = function() {
+                                if (!hR) {
+                                  hR = new Map;
+                                  const Wd = new Set(nd.filter((dd => "callbacks" === dd.layout)).flatMap((dd => cd(dd).sections.map((dd => dd.heading.text)))));
+                                  for (const Fd of nd)
+                                    if ("article" === Fd.layout || "snippets" === Fd.layout)
+                                      for (const Rd of (0, Jd.q)(cd(Fd)))
                                         for (const {
-                                            code: jr
+                                            code: Xd
                                           }
-                                          of(0, Tr.i)(ar.blocks))
-                                          for (const Ir of Ia(jr, Zr)) {
-                                            const Zr = xS().get(Ir);
-                                            if (Zr) {
-                                              var rr, Sr, Qr;
-                                              const jr = {
-                                                pageId: Wr.id,
-                                                anchor: null !== (rr = null === (Sr = ar.heading) || void 0 === Sr ? void 0 : Sr.anchor) && void 0 !== rr ? rr : "",
-                                                label: null !== (Qr = Wr.navTitle) && void 0 !== Qr ? Qr : Wr.title
+                                          of(0, Jd.h)(Rd.blocks))
+                                          for (const Kd of QR(Xd, Wd)) {
+                                            const Wd = NO().get(Kd);
+                                            if (Wd) {
+                                              var dd, Od, md;
+                                              const Xd = {
+                                                pageId: Fd.id,
+                                                anchor: null !== (dd = null === (Od = Rd.heading) || void 0 === Od ? void 0 : Od.anchor) && void 0 !== dd ? dd : "",
+                                                label: null !== (md = Fd.navTitle) && void 0 !== md ? md : Fd.title
                                               };
-                                              fa(aa, Qa(Zr), jr, !1)
+                                              tR(hR, RR(Wd), Xd, !1)
                                             }
                                           }
                                 }
-                                return aa
-                              }().get(ar)) && void 0 !== Sr ? Sr : [],
-                              Ir = null !== (Qr = function() {
-                                if (!Wa) {
-                                  Wa = new Map;
-                                  const rr = Gr("changelog");
-                                  for (const Sr of Ar(rr).sections) {
-                                    const Qr = new Set(Sr.blocks.flatMap((rr => [...ja(rr)])));
-                                    for (const Zr of Qr) {
-                                      const Qr = {
-                                        pageId: rr.id,
-                                        anchor: Sr.heading.anchor,
-                                        label: Sr.heading.text
+                                return hR
+                              }().get(Rd)) && void 0 !== Od ? Od : [],
+                              Kd = null !== (md = function() {
+                                if (!KR) {
+                                  KR = new Map;
+                                  const dd = Pd("changelog");
+                                  for (const Od of cd(dd).sections) {
+                                    const md = new Set(Od.blocks.flatMap((dd => [...vR(dd)])));
+                                    for (const Wd of md) {
+                                      const md = {
+                                        pageId: dd.id,
+                                        anchor: Od.heading.anchor,
+                                        label: Od.heading.text
                                       };
-                                      fa(Wa, Zr, Qr, !0)
+                                      tR(KR, Wd, md, !0)
                                     }
                                   }
                                 }
-                                return Wa
-                              }().get(ar)) && void 0 !== Qr ? Qr : [];
-                            return 0 === jr.length && 0 === Ir.length ? null : (0, Ur.jsxs)("footer", {
+                                return KR
+                              }().get(Rd)) && void 0 !== md ? md : [];
+                            return 0 === Xd.length && 0 === Kd.length ? null : (0, qd.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [jr.length > 0 && (0, Ur.jsx)(Na, {
+                              children: [Xd.length > 0 && (0, qd.jsx)(yR, {
                                 title: "Used in",
-                                references: jr
-                              }), Ir.length > 0 && (0, Ur.jsx)(Na, {
+                                references: Xd
+                              }), Kd.length > 0 && (0, qd.jsx)(yR, {
                                 title: "Changelog",
-                                references: Ir
+                                references: Kd
                               })]
                             })
                           }
 
-                          function ta(rr) {
+                          function TR(dd) {
                             let {
-                              method: Sr,
-                              pageId: Qr,
-                              anchor: Zr,
-                              isCallback: Wr
-                            } = rr;
-                            const ar = Wr ? void 0 : IS().get(Sr.name),
-                              jr = Sr.description.length > 0 || null === ar || void 0 === ar || !ar.description ? Sr.description : (0, Tr.v)(ar.description);
-                            return (0, Ur.jsxs)("article", {
+                              method: Od,
+                              pageId: md,
+                              anchor: Wd,
+                              isCallback: Fd
+                            } = dd;
+                            const Rd = Fd ? void 0 : vO().get(Od.name),
+                              Xd = Od.description.length > 0 || null === Rd || void 0 === Rd || !Rd.description ? Od.description : (0, Jd.s)(Rd.description);
+                            return (0, qd.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, Ur.jsxs)("header", {
+                              children: [(0, qd.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Ur.jsx)(EQ, {
+                                children: [(0, qd.jsx)(om, {
                                   level: 2,
-                                  text: Sr.name,
-                                  anchor: Zr,
+                                  text: Od.name,
+                                  anchor: Wd,
                                   className: "DocsCardTitle"
-                                }), (0, Ur.jsx)(nr, {
-                                  text: xa(Sr, Wr),
-                                  label: Wr ? "Copy handler" : "Copy call",
+                                }), (0, qd.jsx)(pd, {
+                                  text: qR(Od, Fd),
+                                  label: Fd ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Ur.jsx)(ma, {
-                                method: Sr,
-                                isCallback: Wr
-                              }), ar && null !== ar.deprecation && (0, Ur.jsxs)("aside", {
+                              }), (0, qd.jsx)(HR, {
+                                method: Od,
+                                isCallback: Fd
+                              }), Rd && null !== Rd.deprecation && (0, qd.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, Ur.jsx)("strong", {
+                                children: [(0, qd.jsx)("strong", {
                                   children: "Deprecated"
-                                }), ar.deprecation && (0, Ur.jsxs)(Ur.Fragment, {
-                                  children: [": ", (0, Ur.jsx)(yS, {
-                                    text: (Ir = ar.deprecation, (0, sW.t)(Ir, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, sW.k)("`\\w"), (rr => {
-                                      let [Sr] = rr;
-                                      return xS().has(Sr) ? `\`${Sr}\`` : Sr
+                                }), Rd.deprecation && (0, qd.jsxs)(qd.Fragment, {
+                                  children: [": ", (0, qd.jsx)(EO, {
+                                    text: (Kd = Rd.deprecation, (0, OR.v)(Kd, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, OR.l)("`\\w"), (dd => {
+                                      let [Od] = dd;
+                                      return NO().has(Od) ? `\`${Od}\`` : Od
                                     })))
                                   })]
                                 })]
-                              }), jr.length > 0 && (0, Ur.jsx)("div", {
+                              }), Xd.length > 0 && (0, qd.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Ur.jsx)(NQ, {
-                                  blocks: jr
+                                children: (0, qd.jsx)(ym, {
+                                  blocks: Xd
                                 })
-                              }), Sr.params.length > 0 && (0, Ur.jsxs)("section", {
+                              }), Od.params.length > 0 && (0, qd.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Ur.jsx)("h3", {
+                                children: [(0, qd.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, Ur.jsx)("dl", {
+                                }), (0, qd.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: Sr.params.map((rr => (0, Ur.jsxs)("div", {
-                                    id: `${Sr.name}-${pa(rr)}`,
+                                  children: Od.params.map((dd => (0, qd.jsxs)("div", {
+                                    id: `${Od.name}-${NR(dd)}`,
                                     className: "DocsParam",
-                                    children: [(0, Ur.jsxs)("dt", {
-                                      children: [(0, Ur.jsx)("code", {
+                                    children: [(0, qd.jsxs)("dt", {
+                                      children: [(0, qd.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: rr.name
-                                      }), (0, Ur.jsx)(vS, {
-                                        type: rr.type
+                                        children: dd.name
+                                      }), (0, qd.jsx)(xO, {
+                                        type: dd.type
                                       })]
-                                    }), rr.description && (0, Ur.jsx)("dd", {
-                                      children: (0, Ur.jsx)(yS, {
-                                        text: rr.description
+                                    }), dd.description && (0, qd.jsx)("dd", {
+                                      children: (0, qd.jsx)(EO, {
+                                        text: dd.description
                                       })
                                     })]
-                                  }, rr.name)))
+                                  }, dd.name)))
                                 })]
-                              }), Sr.returns && (Sr.returns.type || Sr.returns.description.length > 0) && (0, Ur.jsxs)("section", {
+                              }), Od.returns && (Od.returns.type || Od.returns.description.length > 0) && (0, qd.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, Ur.jsx)("h3", {
+                                children: [(0, qd.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, Ur.jsxs)("div", {
+                                }), (0, qd.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [Sr.returns.type && (0, Ur.jsx)(vS, {
-                                    type: Sr.returns.type
-                                  }), Sr.returns.description.length > 0 && (0, Ur.jsx)("div", {
+                                  children: [Od.returns.type && (0, qd.jsx)(xO, {
+                                    type: Od.returns.type
+                                  }), Od.returns.description.length > 0 && (0, qd.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, Ur.jsx)(NQ, {
-                                      blocks: Sr.returns.description
+                                    children: (0, qd.jsx)(ym, {
+                                      blocks: Od.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, Ur.jsx)(Ua, {
-                                pageId: Qr,
-                                anchor: Zr
+                              }), (0, qd.jsx)(bR, {
+                                pageId: md,
+                                anchor: Wd
                               })]
                             });
-                            var Ir
+                            var Kd
                           }
 
-                          function ha(rr) {
-                            var Sr;
-                            return null !== rr.defaultValue && "undefined" !== rr.defaultValue ? rr.defaultValue : null !== (Sr = rr.example) && void 0 !== Sr ? Sr : "value"
+                          function pR(dd) {
+                            var Od;
+                            return null !== dd.defaultValue && "undefined" !== dd.defaultValue ? dd.defaultValue : null !== (Od = dd.example) && void 0 !== Od ? Od : "value"
                           }
 
-                          function za(rr) {
+                          function YR(dd) {
                             let {
-                              setting: Sr,
-                              pageId: Qr,
-                              anchor: Zr,
-                              setterSnippet: Wr
-                            } = rr;
-                            const ar = null === Sr.defaultValue ? null : zS(Sr.defaultValue);
-                            return (0, Ur.jsxs)("article", {
+                              setting: Od,
+                              pageId: md,
+                              anchor: Wd,
+                              setterSnippet: Fd
+                            } = dd;
+                            const Rd = null === Od.defaultValue ? null : pO(Od.defaultValue);
+                            return (0, qd.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, Ur.jsxs)("header", {
+                              children: [(0, qd.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, Ur.jsx)(EQ, {
+                                children: [(0, qd.jsx)(om, {
                                   level: 2,
-                                  text: Sr.name,
-                                  anchor: Zr,
+                                  text: Od.name,
+                                  anchor: Wd,
                                   className: "DocsCardTitle"
-                                }), (0, Ur.jsx)(nr, {
-                                  text: Wr(Sr.name, ha(Sr)),
+                                }), (0, qd.jsx)(pd, {
+                                  text: Fd(Od.name, pR(Od)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, Ur.jsxs)("dl", {
+                              }), (0, qd.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, Ur.jsxs)("div", {
-                                  children: [(0, Ur.jsx)("dt", {
+                                children: [(0, qd.jsxs)("div", {
+                                  children: [(0, qd.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, Ur.jsx)("dd", {
-                                    children: (0, Ur.jsx)(vS, {
-                                      type: Sr.type
+                                  }), (0, qd.jsx)("dd", {
+                                    children: (0, qd.jsx)(xO, {
+                                      type: Od.type
                                     })
                                   })]
-                                }), null !== Sr.defaultValue && (0, Ur.jsxs)("div", {
-                                  children: [(0, Ur.jsx)("dt", {
+                                }), null !== Od.defaultValue && (0, qd.jsxs)("div", {
+                                  children: [(0, qd.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, Ur.jsx)("dd", {
-                                    children: (0, Ur.jsxs)("code", {
+                                  }), (0, qd.jsx)("dd", {
+                                    children: (0, qd.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [ar && (0, Ur.jsx)(YS, {
-                                        colour: ar
-                                      }), Sr.defaultValue]
+                                      children: [Rd && (0, qd.jsx)(YO, {
+                                        colour: Rd
+                                      }), Od.defaultValue]
                                     })
                                   })]
-                                }), null !== Sr.example && (0, Ur.jsxs)("div", {
-                                  children: [(0, Ur.jsx)("dt", {
+                                }), null !== Od.example && (0, qd.jsxs)("div", {
+                                  children: [(0, qd.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, Ur.jsx)("dd", {
-                                    children: (0, Ur.jsx)("code", {
+                                  }), (0, qd.jsx)("dd", {
+                                    children: (0, qd.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: Sr.example
+                                      children: Od.example
                                     })
                                   })]
                                 })]
-                              }), Sr.description.length > 0 && (0, Ur.jsx)("div", {
+                              }), Od.description.length > 0 && (0, qd.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, Ur.jsx)(NQ, {
-                                  blocks: Sr.description
+                                children: (0, qd.jsx)(ym, {
+                                  blocks: Od.description
                                 })
-                              }), (0, Ur.jsx)(Ua, {
-                                pageId: Qr,
-                                anchor: Zr
+                              }), (0, qd.jsx)(bR, {
+                                pageId: md,
+                                anchor: Wd
                               })]
                             })
                           }
 
-                          function Ya(rr) {
+                          function gR(dd) {
                             let {
-                              section: Sr
-                            } = rr;
-                            return (0, Ur.jsxs)("article", {
+                              section: Od
+                            } = dd;
+                            return (0, qd.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, Ur.jsx)(EQ, {
+                              children: [(0, qd.jsx)(om, {
                                 level: 2,
-                                text: Sr.heading.text,
-                                anchor: Sr.heading.anchor,
+                                text: Od.heading.text,
+                                anchor: Od.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, Ur.jsx)("div", {
+                              }), (0, qd.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, Ur.jsx)(NQ, {
-                                  blocks: Sr.blocks
+                                children: (0, qd.jsx)(ym, {
+                                  blocks: Od.blocks
                                 })
                               })]
                             })
                           }
 
-                          function na(rr) {
+                          function wR(dd) {
                             let {
-                              section: Sr
-                            } = rr;
-                            return (0, Ur.jsxs)("section", {
+                              section: Od
+                            } = dd;
+                            return (0, qd.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Ur.jsx)(EQ, {
-                                level: Sr.heading.level,
-                                text: Sr.heading.text,
-                                anchor: Sr.heading.anchor
-                              }), (0, Ur.jsx)(NQ, {
-                                blocks: Sr.blocks
+                              children: [(0, qd.jsx)(om, {
+                                level: Od.heading.level,
+                                text: Od.heading.text,
+                                anchor: Od.heading.anchor
+                              }), (0, qd.jsx)(ym, {
+                                blocks: Od.blocks
                               })]
                             })
                           }
-                          const ea = {
+                          const aR = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4857,337 +4857,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function Ka(rr) {
+                          function ER(dd) {
                             let {
-                              page: Sr,
-                              section: Qr
-                            } = rr;
-                            if ("methods" === Sr.layout || "callbacks" === Sr.layout) return (0, Ur.jsx)(ta, {
-                              method: BQ(Qr),
-                              pageId: Sr.id,
-                              anchor: Qr.heading.anchor,
-                              isCallback: "callbacks" === Sr.layout
+                              page: Od,
+                              section: md
+                            } = dd;
+                            if ("methods" === Od.layout || "callbacks" === Od.layout) return (0, qd.jsx)(TR, {
+                              method: Um(md),
+                              pageId: Od.id,
+                              anchor: md.heading.anchor,
+                              isCallback: "callbacks" === Od.layout
                             });
-                            if ("settings" === Sr.layout) {
-                              const rr = function(rr) {
-                                const Sr = {
-                                  name: rr.heading.text,
+                            if ("settings" === Od.layout) {
+                              const dd = function(dd) {
+                                const Od = {
+                                  name: dd.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const Zr of rr.blocks) {
-                                  var Qr;
-                                  if (yQ(Zr)) continue;
-                                  const rr = "paragraph" === Zr.kind ? Zr.text.match(TQ) : null;
-                                  if (!rr) {
-                                    Sr.description.push(Zr);
+                                for (const Wd of dd.blocks) {
+                                  var md;
+                                  if (Jm(Wd)) continue;
+                                  const dd = "paragraph" === Wd.kind ? Wd.text.match(xm) : null;
+                                  if (!dd) {
+                                    Od.description.push(Wd);
                                     continue
                                   }
-                                  const Wr = null !== (Qr = KQ(rr[2])) && void 0 !== Qr ? Qr : rr[2];
-                                  "Type" === rr[1] ? Sr.type = Wr : "Default" === rr[1] ? Sr.defaultValue = Wr : "" !== Wr && (Sr.example = Wr)
+                                  const Fd = null !== (md = Em(dd[2])) && void 0 !== md ? md : dd[2];
+                                  "Type" === dd[1] ? Od.type = Fd : "Default" === dd[1] ? Od.defaultValue = Fd : "" !== Fd && (Od.example = Fd)
                                 }
-                                return Sr.type ? Sr : null
-                              }(Qr);
-                              if (rr) return (0, Ur.jsx)(za, {
-                                setting: rr,
-                                pageId: Sr.id,
-                                anchor: Qr.heading.anchor,
-                                setterSnippet: Sr.setterSnippet
+                                return Od.type ? Od : null
+                              }(md);
+                              if (dd) return (0, qd.jsx)(YR, {
+                                setting: dd,
+                                pageId: Od.id,
+                                anchor: md.heading.anchor,
+                                setterSnippet: Od.setterSnippet
                               })
                             }
-                            return "snippets" === Sr.layout ? (0, Ur.jsx)(Ya, {
-                              section: Qr
-                            }) : "changelog" === Sr.layout ? (0, Ur.jsxs)("section", {
+                            return "snippets" === Od.layout ? (0, qd.jsx)(gR, {
+                              section: md
+                            }) : "changelog" === Od.layout ? (0, qd.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, Ur.jsx)("div", {
+                              children: [(0, qd.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, Ur.jsx)(EQ, {
+                                children: (0, qd.jsx)(om, {
                                   level: 2,
-                                  text: Qr.heading.text,
-                                  anchor: Qr.heading.anchor
+                                  text: md.heading.text,
+                                  anchor: md.heading.anchor
                                 })
-                              }), (0, Ur.jsx)("div", {
+                              }), (0, qd.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, Ur.jsx)(NQ, {
-                                  blocks: vQ(Qr.blocks)
+                                children: (0, qd.jsx)(ym, {
+                                  blocks: Bm(md.blocks)
                                 })
                               })]
-                            }) : Sr.gallery ? (0, Ur.jsxs)("section", {
+                            }) : Od.gallery ? (0, qd.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, Ur.jsx)(EQ, {
-                                level: Qr.heading.level,
-                                text: Qr.heading.text,
-                                anchor: Qr.heading.anchor
-                              }), (0, Ur.jsx)(OZ, {
-                                kind: Sr.gallery,
-                                content: Ar(Sr),
-                                blocks: Qr.blocks
+                              children: [(0, qd.jsx)(om, {
+                                level: md.heading.level,
+                                text: md.heading.text,
+                                anchor: md.heading.anchor
+                              }), (0, qd.jsx)(SW, {
+                                kind: Od.gallery,
+                                content: cd(Od),
+                                blocks: md.blocks
                               })]
-                            }) : (0, Ur.jsx)(na, {
-                              section: Qr
+                            }) : (0, qd.jsx)(wR, {
+                              section: md
                             })
                           }
 
-                          function ya(rr) {
+                          function JR(dd) {
                             let {
-                              page: Sr,
-                              onTocChange: Qr
-                            } = rr;
-                            const Wr = Ar(Sr),
-                              [ar, jr] = (0, Zr.useState)(""),
-                              Ir = "article" !== Sr.layout,
-                              fr = hQ(Sr.gallery) ? Sr.gallery : null,
-                              Er = null !== fr,
-                              pr = ar.trim().toLowerCase(),
-                              xr = (0, Zr.useRef)(null),
-                              mr = (0, Zr.useCallback)((rr => {
-                                var Sr;
-                                null === (Sr = xr.current) || void 0 === Sr || Sr.preview(rr)
+                              page: Od,
+                              onTocChange: md
+                            } = dd;
+                            const Fd = cd(Od),
+                              [Rd, Xd] = (0, Wd.useState)(""),
+                              Kd = "article" !== Od.layout,
+                              hd = pm(Od.gallery) ? Od.gallery : null,
+                              vd = null !== hd,
+                              Qd = Rd.trim().toLowerCase(),
+                              td = (0, Wd.useRef)(null),
+                              od = (0, Wd.useCallback)((dd => {
+                                var Od;
+                                null === (Od = td.current) || void 0 === Od || Od.preview(dd)
                               }), []),
-                              Nr = (0, Zr.useMemo)((() => {
-                                if (!Sr.hasParticlePlayground) return [];
-                                const rr = XQ(Wr.intro).find((rr => "names" === rr.kind && !rr.names.some((rr => null !== kQ(rr.name)))));
-                                return "names" === (null === rr || void 0 === rr ? void 0 : rr.kind) ? rr.names.map((rr => rr.name)) : []
-                              }), [Sr, Wr]),
-                              tr = (0, Zr.useMemo)((() => {
-                                if (!Sr.hasTextPlayground) return [];
-                                const rr = Wr.sections.flatMap((rr => rr.blocks.flatMap((rr => {
-                                  var Sr;
-                                  return (null !== (Sr = lQ(rr)) && void 0 !== Sr ? Sr : []).flatMap((rr => kS(rr.name) ? [rr.name] : []))
+                              Nd = (0, Wd.useMemo)((() => {
+                                if (!Od.hasParticlePlayground) return [];
+                                const dd = Vm(Fd.intro).find((dd => "names" === dd.kind && !dd.names.some((dd => null !== cm(dd.name)))));
+                                return "names" === (null === dd || void 0 === dd ? void 0 : dd.kind) ? dd.names.map((dd => dd.name)) : []
+                              }), [Od, Fd]),
+                              Hd = (0, Wd.useMemo)((() => {
+                                if (!Od.hasTextPlayground) return [];
+                                const dd = Fd.sections.flatMap((dd => dd.blocks.flatMap((dd => {
+                                  var Od;
+                                  return (null !== (Od = um(dd)) && void 0 !== Od ? Od : []).flatMap((dd => zO(dd.name) ? [dd.name] : []))
                                 }))));
-                                return [...new Set(rr)]
-                              }), [Sr, Wr]),
-                              hr = (0, Zr.useMemo)((() => pr ? Wr.sections.filter((rr => function(rr, Sr) {
-                                return !!rr.heading.text.toLowerCase().includes(Sr) || rr.blocks.some((rr => (0, Tr.f)(rr).toLowerCase().includes(Sr)))
-                              }(rr, pr))) : Wr.sections), [Wr, pr]),
-                              zr = (0, Zr.useMemo)((() => function(rr, Sr) {
-                                return "article" !== rr.layout ? Sr.map((rr => ({
-                                  anchor: rr.heading.anchor,
-                                  text: rr.heading.text,
+                                return [...new Set(dd)]
+                              }), [Od, Fd]),
+                              yd = (0, Wd.useMemo)((() => Qd ? Fd.sections.filter((dd => function(dd, Od) {
+                                return !!dd.heading.text.toLowerCase().includes(Od) || dd.blocks.some((dd => (0, Jd.e)(dd).toLowerCase().includes(Od)))
+                              }(dd, Qd))) : Fd.sections), [Fd, Qd]),
+                              bd = (0, Wd.useMemo)((() => function(dd, Od) {
+                                return "article" !== dd.layout ? Od.map((dd => ({
+                                  anchor: dd.heading.anchor,
+                                  text: dd.heading.text,
                                   level: 2
-                                }))) : Sr.flatMap((rr => {
-                                  const Sr = rr.blocks.flatMap((rr => "heading" === rr.kind && 3 === rr.level ? [{
-                                    anchor: rr.anchor,
-                                    text: rr.text,
+                                }))) : Od.flatMap((dd => {
+                                  const Od = dd.blocks.flatMap((dd => "heading" === dd.kind && 3 === dd.level ? [{
+                                    anchor: dd.anchor,
+                                    text: dd.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: rr.heading.anchor,
-                                    text: rr.heading.text,
+                                    anchor: dd.heading.anchor,
+                                    text: dd.heading.text,
                                     level: 2
-                                  }, ...Sr]
+                                  }, ...Od]
                                 }))
-                              }(Sr, hr)), [Sr, hr]);
-                            return (0, Zr.useEffect)((() => {
-                              Qr(zr)
-                            }), [zr, Qr]), (0, Ur.jsxs)("article", {
+                              }(Od, yd)), [Od, yd]);
+                            return (0, Wd.useEffect)((() => {
+                              md(bd)
+                            }), [bd, md]), (0, qd.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, Ur.jsxs)("header", {
+                              children: [(0, qd.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, Ur.jsx)("h1", {
+                                children: [(0, qd.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: Wr.title || Sr.title
-                                }), (0, Ur.jsx)("p", {
+                                  children: Fd.title || Od.title
+                                }), (0, qd.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: Sr.summary
-                                }), (0, Ur.jsx)(JZ, {
-                                  page: Sr
-                                }), Ir && (0, Ur.jsx)("div", {
+                                  children: Od.summary
+                                }), (0, qd.jsx)(fW, {
+                                  page: Od
+                                }), Kd && (0, qd.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, Ur.jsxs)("span", {
-                                    children: [(0, Ur.jsx)("strong", {
-                                      children: Wr.sections.length
-                                    }), " ", ea[Sr.layout]]
+                                  children: (0, qd.jsxs)("span", {
+                                    children: [(0, qd.jsx)("strong", {
+                                      children: Fd.sections.length
+                                    }), " ", aR[Od.layout]]
                                   })
                                 })]
-                              }), "" === Sr.slug && (0, Ur.jsx)(lZ, {}), fr && (0, Ur.jsx)(qZ, {
-                                kind: fr
-                              }, fr), Sr.hasParticlePlayground && (0, Ur.jsx)(fW, {
-                                ref: xr,
-                                textures: Nr
-                              }), !Er && Wr.intro.length > 0 && (0, Ur.jsx)("div", {
+                              }), "" === Od.slug && (0, qd.jsx)(uW, {}), hd && (0, qd.jsx)(rW, {
+                                kind: hd
+                              }, hd), Od.hasParticlePlayground && (0, qd.jsx)(tF, {
+                                ref: td,
+                                textures: Nd
+                              }), !vd && Fd.intro.length > 0 && (0, qd.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: Sr.gallery ? (0, Ur.jsx)(zZ.Provider, {
-                                  value: Sr.hasParticlePlayground ? mr : null,
-                                  children: (0, Ur.jsx)(OZ, {
-                                    kind: Sr.gallery,
-                                    content: Wr,
-                                    blocks: Wr.intro
+                                children: Od.gallery ? (0, qd.jsx)(YW.Provider, {
+                                  value: Od.hasParticlePlayground ? od : null,
+                                  children: (0, qd.jsx)(SW, {
+                                    kind: Od.gallery,
+                                    content: Fd,
+                                    blocks: Fd.intro
                                   })
-                                }) : (0, Ur.jsx)(NQ, {
-                                  blocks: vQ(Wr.intro)
+                                }) : (0, qd.jsx)(ym, {
+                                  blocks: Bm(Fd.intro)
                                 })
-                              }), Sr.hasTextPlayground && (0, Ur.jsx)(TW, {
-                                fontAwesomeIcons: tr
-                              }), Sr.hasVoicePlayground && (0, Ur.jsx)(dW, {}), Sr.childPageIds && (0, Ur.jsx)(lZ, {
-                                cards: Sr.childPageIds.map((rr => ({
-                                  pageId: rr
+                              }), Od.hasTextPlayground && (0, qd.jsx)(xF, {
+                                fontAwesomeIcons: Hd
+                              }), Od.hasVoicePlayground && (0, qd.jsx)(dR, {}), Od.childPageIds && (0, qd.jsx)(uW, {
+                                cards: Od.childPageIds.map((dd => ({
+                                  pageId: dd
                                 }))),
-                                label: Sr.title
-                              }), Ir && (0, Ur.jsx)(nQ, {
+                                label: Od.title
+                              }), Kd && (0, qd.jsx)(wm, {
                                 className: "DocsFilterBar",
-                                value: ar,
-                                placeholder: `Filter ${Wr.sections.length} ${ea[Sr.layout]}\u2026`,
-                                label: `Filter ${ea[Sr.layout]}`,
-                                onChange: jr,
-                                count: pr ? {
-                                  visible: hr.length,
-                                  total: Wr.sections.length
+                                value: Rd,
+                                placeholder: `Filter ${Fd.sections.length} ${aR[Od.layout]}\u2026`,
+                                label: `Filter ${aR[Od.layout]}`,
+                                onChange: Xd,
+                                count: Qd ? {
+                                  visible: yd.length,
+                                  total: Fd.sections.length
                                 } : null
-                              }), !Er && (0, Ur.jsxs)("div", {
-                                className: `DocsSections Layout-${Sr.layout}`,
-                                children: [hr.map((rr => (0, Ur.jsx)(Ka, {
-                                  page: Sr,
-                                  section: rr
-                                }, rr.heading.anchor))), 0 === hr.length && (0, Ur.jsxs)("p", {
+                              }), !vd && (0, qd.jsxs)("div", {
+                                className: `DocsSections Layout-${Od.layout}`,
+                                children: [yd.map((dd => (0, qd.jsx)(ER, {
+                                  page: Od,
+                                  section: dd
+                                }, dd.heading.anchor))), 0 === yd.length && (0, qd.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", ea[Sr.layout], " match \u201c", ar, "\u201d."]
+                                  children: ["No ", aR[Od.layout], " match \u201c", Rd, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const Ba = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const UR = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function Ta(rr) {
+                          function xR(dd) {
                             let {
-                              entry: Sr,
-                              isActive: Qr,
-                              onNavigate: Zr,
-                              label: Wr,
-                              children: jr
-                            } = rr;
-                            return (0, Ur.jsx)("a", {
-                              href: `#${Sr.anchor}`,
-                              "aria-label": Wr,
-                              className: ar()(`Level${Sr.level}`, {
-                                Active: Qr
+                              entry: Od,
+                              isActive: md,
+                              onNavigate: Wd,
+                              label: Fd,
+                              children: Xd
+                            } = dd;
+                            return (0, qd.jsx)("a", {
+                              href: `#${Od.anchor}`,
+                              "aria-label": Fd,
+                              className: Rd()(`Level${Od.level}`, {
+                                Active: md
                               }),
-                              "aria-current": Qr ? "location" : void 0,
-                              onClick: rr => {
-                                rr.preventDefault(), Zr(Sr.anchor)
+                              "aria-current": md ? "location" : void 0,
+                              onClick: dd => {
+                                dd.preventDefault(), Wd(Od.anchor)
                               },
-                              children: jr
+                              children: Xd
                             })
                           }
 
-                          function va(rr) {
+                          function BR(dd) {
                             let {
-                              toc: Sr,
-                              activeAnchor: Qr,
-                              onNavigate: Wr
-                            } = rr;
-                            const jr = Math.max(0, Sr.findIndex((rr => rr.anchor === Qr))),
-                              Ir = (0, Zr.useRef)(null),
-                              fr = (0, Zr.useRef)(!1);
-                            (0, Zr.useEffect)((() => {
-                              var rr, Qr;
-                              const Zr = null === (rr = Ir.current) || void 0 === rr ? void 0 : rr.closest(".DocsToc"),
-                                Wr = null === (Qr = Ir.current) || void 0 === Qr ? void 0 : Qr.querySelector(".DocsTimelineNotch.Active");
-                              if (!Zr || !Wr) return;
-                              let ar = 0;
-                              if (jr === Sr.length - 1) ar = Zr.scrollHeight;
-                              else if (jr > 0) {
-                                const rr = Zr.getBoundingClientRect(),
-                                  Sr = Wr.getBoundingClientRect();
-                                ar = Zr.scrollTop + Sr.top + Sr.height / 2 - (rr.top + Zr.clientHeight / 2)
+                              toc: Od,
+                              activeAnchor: md,
+                              onNavigate: Fd
+                            } = dd;
+                            const Xd = Math.max(0, Od.findIndex((dd => dd.anchor === md))),
+                              Kd = (0, Wd.useRef)(null),
+                              hd = (0, Wd.useRef)(!1);
+                            (0, Wd.useEffect)((() => {
+                              var dd, md;
+                              const Wd = null === (dd = Kd.current) || void 0 === dd ? void 0 : dd.closest(".DocsToc"),
+                                Fd = null === (md = Kd.current) || void 0 === md ? void 0 : md.querySelector(".DocsTimelineNotch.Active");
+                              if (!Wd || !Fd) return;
+                              let Rd = 0;
+                              if (Xd === Od.length - 1) Rd = Wd.scrollHeight;
+                              else if (Xd > 0) {
+                                const dd = Wd.getBoundingClientRect(),
+                                  Od = Fd.getBoundingClientRect();
+                                Rd = Wd.scrollTop + Od.top + Od.height / 2 - (dd.top + Wd.clientHeight / 2)
                               }
-                              Zr.scrollTo({
-                                top: ar,
-                                behavior: fr.current ? "smooth" : "auto"
-                              }), fr.current = !0
-                            }), [jr, Sr.length]);
-                            const Er = [];
-                            return Sr.forEach(((rr, Sr) => {
-                              var Qr, Zr, Wr;
-                              const ar = function(rr) {
-                                  const Sr = rr.trim().match(Ba);
-                                  return Sr ? {
-                                    day: Sr[1],
-                                    month: `${Sr[2]} ${Sr[3]}`
+                              Wd.scrollTo({
+                                top: Rd,
+                                behavior: hd.current ? "smooth" : "auto"
+                              }), hd.current = !0
+                            }), [Xd, Od.length]);
+                            const vd = [];
+                            return Od.forEach(((dd, Od) => {
+                              var md, Wd, Fd;
+                              const Rd = function(dd) {
+                                  const Od = dd.trim().match(UR);
+                                  return Od ? {
+                                    day: Od[1],
+                                    month: `${Od[2]} ${Od[3]}`
                                   } : null
-                                }(rr.text),
-                                jr = null !== (Qr = null === ar || void 0 === ar ? void 0 : ar.month) && void 0 !== Qr ? Qr : null;
-                              null !== jr && (null === (Zr = Er.at(-1)) || void 0 === Zr ? void 0 : Zr.month) === jr || Er.push({
-                                month: jr,
+                                }(dd.text),
+                                Xd = null !== (md = null === Rd || void 0 === Rd ? void 0 : Rd.month) && void 0 !== md ? md : null;
+                              null !== Xd && (null === (Wd = vd.at(-1)) || void 0 === Wd ? void 0 : Wd.month) === Xd || vd.push({
+                                month: Xd,
                                 entries: []
-                              }), Er.at(-1).entries.push({
-                                entry: rr,
-                                day: null !== (Wr = null === ar || void 0 === ar ? void 0 : ar.day) && void 0 !== Wr ? Wr : null,
-                                index: Sr
+                              }), vd.at(-1).entries.push({
+                                entry: dd,
+                                day: null !== (Fd = null === Rd || void 0 === Rd ? void 0 : Rd.day) && void 0 !== Fd ? Fd : null,
+                                index: Od
                               })
-                            })), (0, Ur.jsx)("ol", {
-                              ref: Ir,
+                            })), (0, qd.jsx)("ol", {
+                              ref: Kd,
                               className: "DocsTimeline",
-                              children: Er.map((rr => {
+                              children: vd.map((dd => {
                                 let {
-                                  month: Sr,
-                                  entries: Qr
-                                } = rr;
-                                return (0, Ur.jsxs)("li", {
+                                  month: Od,
+                                  entries: md
+                                } = dd;
+                                return (0, qd.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [Sr && (0, Ur.jsx)("span", {
+                                  children: [Od && (0, qd.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: Sr
-                                  }), (0, Ur.jsx)("ol", {
-                                    children: Qr.map((rr => {
+                                    children: Od
+                                  }), (0, qd.jsx)("ol", {
+                                    children: md.map((dd => {
                                       let {
-                                        entry: Sr,
-                                        day: Qr,
-                                        index: Zr
-                                      } = rr;
-                                      return (0, Ur.jsx)("li", {
-                                        className: ar()("DocsTimelineNotch", {
-                                          Passed: Zr < jr,
-                                          Active: Zr === jr
+                                        entry: Od,
+                                        day: md,
+                                        index: Wd
+                                      } = dd;
+                                      return (0, qd.jsx)("li", {
+                                        className: Rd()("DocsTimelineNotch", {
+                                          Passed: Wd < Xd,
+                                          Active: Wd === Xd
                                         }),
-                                        children: (0, Ur.jsx)(Ta, {
-                                          entry: Sr,
-                                          isActive: Zr === jr,
-                                          onNavigate: Wr,
-                                          label: Sr.text,
-                                          children: (0, Ur.jsx)("span", {
+                                        children: (0, qd.jsx)(xR, {
+                                          entry: Od,
+                                          isActive: Wd === Xd,
+                                          onNavigate: Fd,
+                                          label: Od.text,
+                                          children: (0, qd.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== Qr && void 0 !== Qr ? Qr : Sr.text
+                                            children: null !== md && void 0 !== md ? md : Od.text
                                           })
                                         })
-                                      }, Sr.anchor)
+                                      }, Od.anchor)
                                     }))
                                   })]
-                                }, Qr[0].entry.anchor)
+                                }, md[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function Oa(rr) {
+                          function SR(dd) {
                             let {
-                              isChangelog: Sr,
-                              toc: Qr,
-                              activeAnchor: Zr,
-                              onNavigate: Wr
-                            } = rr;
-                            return 0 === Qr.length ? null : (0, Ur.jsxs)(Ur.Fragment, {
-                              children: [(0, Ur.jsx)("div", {
+                              isChangelog: Od,
+                              toc: md,
+                              activeAnchor: Wd,
+                              onNavigate: Fd
+                            } = dd;
+                            return 0 === md.length ? null : (0, qd.jsxs)(qd.Fragment, {
+                              children: [(0, qd.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: Sr ? "Updates" : "On this page"
-                              }), Sr ? (0, Ur.jsx)(va, {
-                                toc: Qr,
-                                activeAnchor: Zr,
-                                onNavigate: Wr
-                              }) : (0, Ur.jsx)("ul", {
-                                children: Qr.map((rr => (0, Ur.jsx)("li", {
-                                  children: (0, Ur.jsx)(Ta, {
-                                    entry: rr,
-                                    isActive: rr.anchor === Zr,
-                                    onNavigate: Wr,
-                                    children: rr.text.replace(/`/g, "")
+                                children: Od ? "Updates" : "On this page"
+                              }), Od ? (0, qd.jsx)(BR, {
+                                toc: md,
+                                activeAnchor: Wd,
+                                onNavigate: Fd
+                              }) : (0, qd.jsx)("ul", {
+                                children: md.map((dd => (0, qd.jsx)("li", {
+                                  children: (0, qd.jsx)(xR, {
+                                    entry: dd,
+                                    isActive: dd.anchor === Wd,
+                                    onNavigate: Fd,
+                                    children: dd.text.replace(/`/g, "")
                                   })
-                                }, rr.anchor)))
+                                }, dd.anchor)))
                               })]
                             })
                           }
-                          const La = {
+                          const sR = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5195,7 +5195,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            la = {
+                            uR = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5203,1086 +5203,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            Xa = 20,
-                            Pa = 10,
-                            Ha = 40,
-                            qa = 120;
-                          let Ra;
+                            VR = 20,
+                            iR = 10,
+                            AR = 40,
+                            rR = 120;
+                          let GR;
 
-                          function ga(rr) {
-                            const Sr = rr.gallery;
-                            if (!Sr) return [];
-                            if (hQ(Sr)) return function(rr) {
-                              return YQ(rr).entries.map((rr => rr.name))
-                            }(Sr).map((Qr => ({
-                              page: rr,
-                              anchor: HQ(Sr, Qr),
-                              title: Qr,
-                              kind: la[Sr],
+                          function nR(dd) {
+                            const Od = dd.gallery;
+                            if (!Od) return [];
+                            if (pm(Od)) return function(dd) {
+                              return gm(dd).entries.map((dd => dd.name))
+                            }(Od).map((md => ({
+                              page: dd,
+                              anchor: Am(Od, md),
+                              title: md,
+                              kind: uR[Od],
                               text: "",
-                              listedUnder: rr.title
+                              listedUnder: dd.title
                             })));
-                            const Qr = Ar(rr);
-                            return (0, Tr.r)(Qr).flatMap((Zr => {
-                              const Wr = Zr.heading ? `${rr.title} \u203a ${Zr.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : rr.title;
-                              return RQ(Sr, Qr, Zr.blocks).flatMap((Qr => "names" !== Qr.kind ? [] : Qr.names.map((Zr => {
-                                const ar = Qr.isSongs ? "Song" : la[Sr];
+                            const md = cd(dd);
+                            return (0, Jd.q)(md).flatMap((Wd => {
+                              const Fd = Wd.heading ? `${dd.title} \u203a ${Wd.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : dd.title;
+                              return Gm(Od, md, Wd.blocks).flatMap((md => "names" !== md.kind ? [] : md.names.map((Wd => {
+                                const Rd = md.isSongs ? "Song" : uR[Od];
                                 return {
-                                  page: rr,
-                                  anchor: Zr.anchor,
-                                  title: Zr.name,
-                                  kind: ar,
+                                  page: dd,
+                                  anchor: Wd.anchor,
+                                  title: Wd.name,
+                                  kind: Rd,
                                   text: "",
-                                  listedUnder: Wr
+                                  listedUnder: Fd
                                 }
                               }))))
                             }))
                           }
 
-                          function Ca(rr, Sr, Qr) {
-                            const Zr = rr.title.toLowerCase();
-                            let Wr = 0;
-                            if (Zr === Sr) Wr = 100;
-                            else if (Zr.startsWith(Sr)) Wr = 80;
-                            else if (Zr.includes(Sr)) Wr = 60;
-                            else if (Qr.every((rr => Zr.includes(rr)))) Wr = 45;
+                          function LR(dd, Od, md) {
+                            const Wd = dd.title.toLowerCase();
+                            let Fd = 0;
+                            if (Wd === Od) Fd = 100;
+                            else if (Wd.startsWith(Od)) Fd = 80;
+                            else if (Wd.includes(Od)) Fd = 60;
+                            else if (md.every((dd => Wd.includes(dd)))) Fd = 45;
                             else {
-                              if (!rr.text.toLowerCase().includes(Sr)) return 0;
-                              Wr = 20
+                              if (!dd.text.toLowerCase().includes(Od)) return 0;
+                              Fd = 20
                             }
-                            return Wr - Math.min(Zr.length / 10, 9) + ("Page" === rr.kind ? 8 : "Method" === rr.kind ? 3 : 0) - (rr.listedUnder ? Xa : 0)
+                            return Fd - Math.min(Wd.length / 10, 9) + ("Page" === dd.kind ? 8 : "Method" === dd.kind ? 3 : 0) - (dd.listedUnder ? VR : 0)
                           }
 
-                          function Ma(rr, Sr) {
-                            const Qr = rr.toLowerCase().indexOf(Sr),
-                              Zr = Math.max(0, Qr - qa / 3);
-                            return `${Zr>0?"\u2026":""}${rr.slice(Zr,Zr+qa)}${Zr+qa<rr.length?"\u2026":""}`
+                          function PR(dd, Od) {
+                            const md = dd.toLowerCase().indexOf(Od),
+                              Wd = Math.max(0, md - rR / 3);
+                            return `${Wd>0?"\u2026":""}${dd.slice(Wd,Wd+rR)}${Wd+rR<dd.length?"\u2026":""}`
                           }
 
-                          function Ga(rr) {
+                          function zR(dd) {
                             let {
-                              text: Sr,
-                              query: Qr
-                            } = rr;
-                            const Zr = Qr ? Sr.toLowerCase().indexOf(Qr) : -1;
-                            return -1 === Zr ? (0, Ur.jsx)(Ur.Fragment, {
-                              children: Sr
-                            }) : (0, Ur.jsxs)(Ur.Fragment, {
-                              children: [Sr.slice(0, Zr), (0, Ur.jsx)("mark", {
-                                children: Sr.slice(Zr, Zr + Qr.length)
-                              }), Sr.slice(Zr + Qr.length)]
+                              text: Od,
+                              query: md
+                            } = dd;
+                            const Wd = md ? Od.toLowerCase().indexOf(md) : -1;
+                            return -1 === Wd ? (0, qd.jsx)(qd.Fragment, {
+                              children: Od
+                            }) : (0, qd.jsxs)(qd.Fragment, {
+                              children: [Od.slice(0, Wd), (0, qd.jsx)("mark", {
+                                children: Od.slice(Wd, Wd + md.length)
+                              }), Od.slice(Wd + md.length)]
                             })
                           }
 
-                          function ka(rr) {
+                          function cR(dd) {
                             let {
-                              basePath: Sr,
-                              onClose: Qr
-                            } = rr;
-                            const Wr = (0, Ir.t)(),
-                              [jr, fr] = (0, Zr.useState)(""),
-                              [Er, pr] = (0, Zr.useState)(0),
-                              xr = (0, Zr.useRef)(null),
-                              mr = (0, Zr.useRef)(null),
-                              Nr = jr.trim().toLowerCase(),
-                              tr = (0, Zr.useMemo)((() => {
-                                const rr = (Ra || (Ra = Cr.flatMap((rr => {
-                                  const Sr = Ar(rr);
+                              basePath: Od,
+                              onClose: md
+                            } = dd;
+                            const Fd = (0, Kd.s)(),
+                              [Xd, hd] = (0, Wd.useState)(""),
+                              [vd, Qd] = (0, Wd.useState)(0),
+                              td = (0, Wd.useRef)(null),
+                              od = (0, Wd.useRef)(null),
+                              Nd = Xd.trim().toLowerCase(),
+                              Hd = (0, Wd.useMemo)((() => {
+                                const dd = (GR || (GR = nd.flatMap((dd => {
+                                  const Od = cd(dd);
                                   return [{
-                                    page: rr,
+                                    page: dd,
                                     anchor: "",
-                                    title: rr.title,
+                                    title: dd.title,
                                     kind: "Page",
-                                    text: rr.summary
-                                  }, ...Sr.sections.flatMap((Sr => {
-                                    const Qr = Sr.blocks.filter((rr => "paragraph" === rr.kind)).map(Tr.f).join(" ").replace(/[`*]/g, ""),
-                                      Zr = {
-                                        page: rr,
-                                        anchor: Sr.heading.anchor,
-                                        title: Sr.heading.text.replace(/`/g, ""),
-                                        kind: La[rr.layout],
-                                        text: Qr
+                                    text: dd.summary
+                                  }, ...Od.sections.flatMap((Od => {
+                                    const md = Od.blocks.filter((dd => "paragraph" === dd.kind)).map(Jd.e).join(" ").replace(/[`*]/g, ""),
+                                      Wd = {
+                                        page: dd,
+                                        anchor: Od.heading.anchor,
+                                        title: Od.heading.text.replace(/`/g, ""),
+                                        kind: sR[dd.layout],
+                                        text: md
                                       },
-                                      Wr = Sr.blocks.flatMap((Sr => "article" === rr.layout && "heading" === Sr.kind && 3 === Sr.level ? [{
-                                        page: rr,
-                                        anchor: Sr.anchor,
-                                        title: Sr.text.replace(/`/g, ""),
+                                      Fd = Od.blocks.flatMap((Od => "article" === dd.layout && "heading" === Od.kind && 3 === Od.level ? [{
+                                        page: dd,
+                                        anchor: Od.anchor,
+                                        title: Od.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: Zr.title
+                                        text: Wd.title
                                       }] : []));
-                                    return [Zr, ...Wr]
-                                  })), ...ga(rr)]
-                                }))), Ra);
-                                if (!Nr) return rr.filter((rr => "Page" === rr.kind));
-                                const Sr = Nr.split(/\s+/);
-                                let Qr = 0;
-                                return rr.map((rr => ({
-                                  entry: rr,
-                                  score: Ca(rr, Nr, Sr)
-                                }))).filter((rr => rr.score > 0)).sort(((rr, Sr) => Sr.score - rr.score)).filter((rr => !rr.entry.listedUnder || (Qr++, Qr <= Pa))).slice(0, Ha).map((rr => rr.entry))
-                              }), [Nr]);
-                            (0, Zr.useEffect)((() => {
-                              pr(0)
-                            }), [Nr]), (0, Zr.useEffect)((() => {
-                              const rr = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [Wd, ...Fd]
+                                  })), ...nR(dd)]
+                                }))), GR);
+                                if (!Nd) return dd.filter((dd => "Page" === dd.kind));
+                                const Od = Nd.split(/\s+/);
+                                let md = 0;
+                                return dd.map((dd => ({
+                                  entry: dd,
+                                  score: LR(dd, Nd, Od)
+                                }))).filter((dd => dd.score > 0)).sort(((dd, Od) => Od.score - dd.score)).filter((dd => !dd.entry.listedUnder || (md++, md <= iR))).slice(0, AR).map((dd => dd.entry))
+                              }), [Nd]);
+                            (0, Wd.useEffect)((() => {
+                              Qd(0)
+                            }), [Nd]), (0, Wd.useEffect)((() => {
+                              const dd = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === rr || void 0 === rr || rr.focus()
+                                null === dd || void 0 === dd || dd.focus()
                               }
-                            }), []), (0, Zr.useEffect)((() => {
-                              var rr, Sr;
-                              null === (rr = xr.current) || void 0 === rr || null === (Sr = rr.querySelector(".Active")) || void 0 === Sr || Sr.scrollIntoView({
+                            }), []), (0, Wd.useEffect)((() => {
+                              var dd, Od;
+                              null === (dd = td.current) || void 0 === dd || null === (Od = dd.querySelector(".Active")) || void 0 === Od || Od.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [Er]);
-                            const zr = rr => {
-                              Wr(cr(Sr, rr.page, rr.anchor)), Qr()
+                            }), [vd]);
+                            const bd = dd => {
+                              Fd(Id(Od, dd.page, dd.anchor)), md()
                             };
-                            return (0, Ur.jsx)("div", {
+                            return (0, qd.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: rr => {
-                                rr.target === rr.currentTarget && Qr()
+                              onMouseDown: dd => {
+                                dd.target === dd.currentTarget && md()
                               },
-                              children: (0, Ur.jsxs)("div", {
+                              children: (0, qd.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: rr => {
-                                  rr.target !== mr.current && rr.preventDefault()
+                                onMouseDown: dd => {
+                                  dd.target !== od.current && dd.preventDefault()
                                 },
-                                onKeyDown: rr => {
-                                  if ("Escape" === rr.key) Qr();
-                                  else if ("Tab" === rr.key) {
-                                    var Sr;
-                                    rr.preventDefault(), null === (Sr = mr.current) || void 0 === Sr || Sr.focus()
+                                onKeyDown: dd => {
+                                  if ("Escape" === dd.key) md();
+                                  else if ("Tab" === dd.key) {
+                                    var Od;
+                                    dd.preventDefault(), null === (Od = od.current) || void 0 === Od || Od.focus()
                                   }
                                 },
-                                children: [(0, Ur.jsxs)("div", {
+                                children: [(0, qd.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, Ur.jsx)(hr, {
+                                  children: [(0, qd.jsx)(yd, {
                                     name: "magnifying-glass"
-                                  }), (0, Ur.jsx)("input", {
-                                    ref: mr,
+                                  }), (0, qd.jsx)("input", {
+                                    ref: od,
                                     autoFocus: !0,
-                                    value: jr,
+                                    value: Xd,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": tr.length > 0 ? `DocsSearchResult-${Er}` : void 0,
-                                    onChange: rr => {
-                                      fr(rr.target.value)
+                                    "aria-activedescendant": Hd.length > 0 ? `DocsSearchResult-${vd}` : void 0,
+                                    onChange: dd => {
+                                      hd(dd.target.value)
                                     },
-                                    onKeyDown: rr => {
-                                      if ("ArrowDown" === rr.key || "ArrowUp" === rr.key) {
-                                        rr.preventDefault();
-                                        const Sr = "ArrowDown" === rr.key ? 1 : -1;
-                                        pr((Er + Sr + tr.length) % Math.max(tr.length, 1))
-                                      } else "Enter" === rr.key && tr[Er] && zr(tr[Er])
+                                    onKeyDown: dd => {
+                                      if ("ArrowDown" === dd.key || "ArrowUp" === dd.key) {
+                                        dd.preventDefault();
+                                        const Od = "ArrowDown" === dd.key ? 1 : -1;
+                                        Qd((vd + Od + Hd.length) % Math.max(Hd.length, 1))
+                                      } else "Enter" === dd.key && Hd[vd] && bd(Hd[vd])
                                     }
-                                  }), (0, Ur.jsx)("kbd", {
+                                  }), (0, qd.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, Ur.jsxs)("ul", {
+                                }), (0, qd.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: xr,
+                                  ref: td,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!Nr && (0, Ur.jsx)("li", {
+                                  children: [!Nd && (0, qd.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), tr.map(((rr, Sr) => {
-                                    var Qr;
-                                    return (0, Ur.jsxs)("li", {
-                                      id: `DocsSearchResult-${Sr}`,
+                                  }), Hd.map(((dd, Od) => {
+                                    var md;
+                                    return (0, qd.jsxs)("li", {
+                                      id: `DocsSearchResult-${Od}`,
                                       role: "option",
-                                      "aria-selected": Sr === Er,
-                                      className: ar()("DocsSearchResult", {
-                                        Active: Sr === Er
+                                      "aria-selected": Od === vd,
+                                      className: Rd()("DocsSearchResult", {
+                                        Active: Od === vd
                                       }),
                                       onMouseMove: () => {
-                                        pr(Sr)
+                                        Qd(Od)
                                       },
                                       onClick: () => {
-                                        zr(rr)
+                                        bd(dd)
                                       },
-                                      children: [(0, Ur.jsx)(hr, {
-                                        name: rr.page.icon
-                                      }), (0, Ur.jsxs)("div", {
+                                      children: [(0, qd.jsx)(yd, {
+                                        name: dd.page.icon
+                                      }), (0, qd.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, Ur.jsx)("div", {
+                                        children: [(0, qd.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, Ur.jsx)(Ga, {
-                                            text: rr.title,
-                                            query: Nr
+                                          children: (0, qd.jsx)(zR, {
+                                            text: dd.title,
+                                            query: Nd
                                           })
-                                        }), rr.text && (0, Ur.jsx)("div", {
+                                        }), dd.text && (0, qd.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, Ur.jsx)(Ga, {
-                                            text: Ma(rr.text, Nr),
-                                            query: Nr
+                                          children: (0, qd.jsx)(zR, {
+                                            text: PR(dd.text, Nd),
+                                            query: Nd
                                           })
                                         })]
-                                      }), (0, Ur.jsx)("span", {
+                                      }), (0, qd.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === rr.kind ? "Page" : null !== (Qr = rr.listedUnder) && void 0 !== Qr ? Qr : `${rr.kind} \xb7 ${rr.page.title}`
+                                        children: "Page" === dd.kind ? "Page" : null !== (md = dd.listedUnder) && void 0 !== md ? md : `${dd.kind} \xb7 ${dd.page.title}`
                                       })]
-                                    }, `${rr.page.id}#${rr.anchor}`)
-                                  })), Nr && 0 === tr.length && (0, Ur.jsxs)("li", {
+                                    }, `${dd.page.id}#${dd.anchor}`)
+                                  })), Nd && 0 === Hd.length && (0, qd.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", jr, "\u201d."]
+                                    children: ["Nothing matches \u201c", Xd, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function Aa(rr, Sr) {
-                            if (Sr < 10) return `${rr.toFixed(1)}s`;
-                            const Qr = Math.floor(rr);
-                            return `${Math.floor(Qr/60)}:${String(Qr%60).padStart(2,"0")}`
+                          function jR(dd, Od) {
+                            if (Od < 10) return `${dd.toFixed(1)}s`;
+                            const md = Math.floor(dd);
+                            return `${Math.floor(md/60)}:${String(md%60).padStart(2,"0")}`
                           }
 
-                          function Va() {
-                            const rr = pZ((rr => rr.track)),
-                              Sr = pZ((rr => rr.volume)),
-                              [Qr, Wr] = (0, Zr.useState)(0),
-                              jr = (0, Zr.useRef)(SZ);
-                            if ((0, Zr.useEffect)((() => {
-                                if (!rr) return;
-                                if (Wr(UZ()), "playing" !== rr.status) return;
-                                let Sr = 0;
-                                const Qr = () => {
-                                  Wr(UZ()), Sr = requestAnimationFrame(Qr)
+                          function DR() {
+                            const dd = NW((dd => dd.track)),
+                              Od = NW((dd => dd.volume)),
+                              [md, Fd] = (0, Wd.useState)(0),
+                              Xd = (0, Wd.useRef)(FW);
+                            if ((0, Wd.useEffect)((() => {
+                                if (!dd) return;
+                                if (Fd(bW()), "playing" !== dd.status) return;
+                                let Od = 0;
+                                const md = () => {
+                                  Fd(bW()), Od = requestAnimationFrame(md)
                                 };
-                                return Sr = requestAnimationFrame(Qr), () => {
-                                  cancelAnimationFrame(Sr)
+                                return Od = requestAnimationFrame(md), () => {
+                                  cancelAnimationFrame(Od)
                                 }
-                              }), [rr]), !rr) return null;
-                            const Ir = "paused" !== rr.status,
-                              fr = Math.min(Qr, rr.duration);
-                            return (0, Ur.jsx)("div", {
+                              }), [dd]), !dd) return null;
+                            const Kd = "paused" !== dd.status,
+                              hd = Math.min(md, dd.duration);
+                            return (0, qd.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, Ur.jsxs)("section", {
+                              children: (0, qd.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, Ur.jsx)("button", {
+                                children: [(0, qd.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": Ir ? `Pause ${rr.name}` : `Play ${rr.name}`,
-                                  onClick: NZ,
-                                  children: (0, Ur.jsx)(hr, {
-                                    name: Ir ? "pause" : "play"
+                                  "aria-label": Kd ? `Pause ${dd.name}` : `Play ${dd.name}`,
+                                  onClick: yW,
+                                  children: (0, qd.jsx)(yd, {
+                                    name: Kd ? "pause" : "play"
                                   })
-                                }), (0, Ur.jsxs)("div", {
+                                }), (0, qd.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, Ur.jsxs)("div", {
+                                  children: [(0, qd.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, Ur.jsx)("code", {
-                                      children: rr.name
-                                    }), (0, Ur.jsx)("span", {
-                                      children: rr.isSong ? "Song" : "Sound"
+                                    children: [(0, qd.jsx)("code", {
+                                      children: dd.name
+                                    }), (0, qd.jsx)("span", {
+                                      children: dd.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, Ur.jsxs)("div", {
+                                  }), (0, qd.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, Ur.jsx)("span", {
-                                      children: Aa(fr, rr.duration)
-                                    }), (0, Ur.jsx)("input", {
+                                    children: [(0, qd.jsx)("span", {
+                                      children: jR(hd, dd.duration)
+                                    }), (0, qd.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: rr.duration || 1,
+                                      max: dd.duration || 1,
                                       step: .01,
-                                      value: fr,
-                                      disabled: 0 === rr.duration,
+                                      value: hd,
+                                      disabled: 0 === dd.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${Aa(fr,rr.duration)} of ${Aa(rr.duration,rr.duration)}`,
-                                      onChange: rr => {
-                                        const Sr = Number(rr.target.value);
-                                        ! function(rr) {
-                                          var Sr;
-                                          jZ = rr, null === (Sr = WZ) || void 0 === Sr || Sr.seek(rr)
-                                        }(Sr), Wr(Sr)
+                                      "aria-valuetext": `${jR(hd,dd.duration)} of ${jR(dd.duration,dd.duration)}`,
+                                      onChange: dd => {
+                                        const Od = Number(dd.target.value);
+                                        ! function(dd) {
+                                          var Od;
+                                          vW = dd, null === (Od = KW) || void 0 === Od || Od.seek(dd)
+                                        }(Od), Fd(Od)
                                       }
-                                    }), (0, Ur.jsx)("span", {
-                                      children: rr.duration > 0 ? Aa(rr.duration, rr.duration) : "\u2013"
+                                    }), (0, qd.jsx)("span", {
+                                      children: dd.duration > 0 ? jR(dd.duration, dd.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, Ur.jsxs)("div", {
+                                }), (0, qd.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, Ur.jsx)("button", {
+                                  children: [(0, qd.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === Sr ? "Unmute" : "Mute",
+                                    "aria-label": 0 === Od ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === Sr ? tZ(jr.current) : (jr.current = Sr, tZ(0))
+                                      0 === Od ? TW(Xd.current) : (Xd.current = Od, TW(0))
                                     },
-                                    children: (0, Ur.jsx)(hr, {
+                                    children: (0, qd.jsx)(yd, {
                                       name: "volume",
-                                      className: ar()({
-                                        Muted: 0 === Sr
+                                      className: Rd()({
+                                        Muted: 0 === Od
                                       })
                                     })
-                                  }), (0, Ur.jsx)("input", {
+                                  }), (0, qd.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: Sr,
+                                    value: Od,
                                     "aria-label": "Volume",
-                                    onChange: rr => {
-                                      tZ(Number(rr.target.value))
+                                    onChange: dd => {
+                                      TW(Number(dd.target.value))
                                     }
                                   })]
-                                }), (0, Ur.jsx)("button", {
+                                }), (0, qd.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var Sr;
-                                    null === (Sr = document.querySelector(`[data-docs-track="${CSS.escape(QZ(rr.name,rr.isSong))}"]`)) || void 0 === Sr || Sr.focus(), hZ()
+                                    var Od;
+                                    null === (Od = document.querySelector(`[data-docs-track="${CSS.escape(RW(dd.name,dd.isSong))}"]`)) || void 0 === Od || Od.focus(), pW()
                                   },
-                                  children: (0, Ur.jsx)(hr, {
+                                  children: (0, qd.jsx)(yd, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var ia = Qr(43);
-                          const wa = "docsTheme",
-                            ca = window.matchMedia("(prefers-color-scheme: light)");
+                          var eR = md(46);
+                          const IR = "docsTheme",
+                            lR = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function Fa(rr) {
+                          function CR(dd) {
                             let {
-                              theme: Sr,
-                              onChange: Qr
-                            } = rr;
-                            const Zr = "dark" === Sr ? "light" : "dark";
-                            return (0, Ur.jsx)("button", {
+                              theme: Od,
+                              onChange: md
+                            } = dd;
+                            const Wd = "dark" === Od ? "light" : "dark";
+                            return (0, qd.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${Zr} theme`,
-                              title: `Switch to ${Zr} theme`,
+                              "aria-label": `Switch to ${Wd} theme`,
+                              title: `Switch to ${Wd} theme`,
                               onClick: () => {
-                                Qr(Zr)
+                                md(Wd)
                               },
-                              children: (0, Ur.jsx)(hr, {
-                                name: "dark" === Sr ? "moon" : "sun"
+                              children: (0, qd.jsx)(yd, {
+                                name: "dark" === Od ? "moon" : "sun"
                               })
                             })
                           }
-                          const oa = "https://github.com/Bloxdy/code-api",
-                            ba = "https://discord.gg/playbloxd",
-                            Ja = 180,
-                            Da = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const ZR = "https://github.com/Bloxdy/code-api",
+                            kR = "https://discord.gg/playbloxd",
+                            fR = 180,
+                            MR = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function da(rr) {
+                          function dX(dd) {
                             let {
-                              basePath: Sr,
-                              activePageId: Qr,
-                              onNavigate: Zr
-                            } = rr;
-                            return (0, Ur.jsx)("nav", {
+                              basePath: Od,
+                              activePageId: md,
+                              onNavigate: Wd
+                            } = dd;
+                            return (0, qd.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: Mr.map((rr => (0, Ur.jsxs)("div", {
+                              children: Ld.map((dd => (0, qd.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, Ur.jsx)("div", {
+                                children: [(0, qd.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: rr.title
-                                }), rr.pageIds.map((rr => {
-                                  var Wr;
-                                  const Ir = Gr(rr);
-                                  return (0, Ur.jsxs)(jr.d, {
-                                    to: cr(Sr, Ir),
-                                    className: ar()("DocsNavLink", {
-                                      Active: Ir.id === Qr
+                                  children: dd.title
+                                }), dd.pageIds.map((dd => {
+                                  var Fd;
+                                  const Kd = Pd(dd);
+                                  return (0, qd.jsxs)(Xd.c, {
+                                    to: Id(Od, Kd),
+                                    className: Rd()("DocsNavLink", {
+                                      Active: Kd.id === md
                                     }),
-                                    "aria-current": Ir.id === Qr ? "page" : void 0,
-                                    onClick: Zr,
-                                    children: [(0, Ur.jsx)(hr, {
-                                      name: Ir.icon
-                                    }), (0, Ur.jsx)("span", {
-                                      children: null !== (Wr = Ir.navTitle) && void 0 !== Wr ? Wr : Ir.title
+                                    "aria-current": Kd.id === md ? "page" : void 0,
+                                    onClick: Wd,
+                                    children: [(0, qd.jsx)(yd, {
+                                      name: Kd.icon
+                                    }), (0, qd.jsx)("span", {
+                                      children: null !== (Fd = Kd.navTitle) && void 0 !== Fd ? Fd : Kd.title
                                     })]
-                                  }, Ir.id)
+                                  }, Kd.id)
                                 }))]
-                              }, rr.title)))
+                              }, dd.title)))
                             })
                           }
 
-                          function sa(rr) {
+                          function OX(dd) {
                             let {
-                              basePath: Sr,
-                              pageId: Qr
-                            } = rr;
-                            const Zr = Mr.flatMap((rr => rr.pageIds)),
-                              Wr = Zr.indexOf(Qr),
-                              ar = Wr > 0 ? Gr(Zr[Wr - 1]) : null,
-                              Ir = Wr < Zr.length - 1 ? Gr(Zr[Wr + 1]) : null;
-                            return (0, Ur.jsxs)("nav", {
+                              basePath: Od,
+                              pageId: md
+                            } = dd;
+                            const Wd = Ld.flatMap((dd => dd.pageIds)),
+                              Fd = Wd.indexOf(md),
+                              Rd = Fd > 0 ? Pd(Wd[Fd - 1]) : null,
+                              Kd = Fd < Wd.length - 1 ? Pd(Wd[Fd + 1]) : null;
+                            return (0, qd.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [ar ? (0, Ur.jsxs)(jr.d, {
+                              children: [Rd ? (0, qd.jsxs)(Xd.c, {
                                 className: "DocsPagerLink Previous",
-                                to: cr(Sr, ar),
-                                children: [(0, Ur.jsx)("span", {
+                                to: Id(Od, Rd),
+                                children: [(0, qd.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, Ur.jsx)("span", {
+                                }), (0, qd.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: ar.title
+                                  children: Rd.title
                                 })]
-                              }) : (0, Ur.jsx)("span", {}), Ir && (0, Ur.jsxs)(jr.d, {
+                              }) : (0, qd.jsx)("span", {}), Kd && (0, qd.jsxs)(Xd.c, {
                                 className: "DocsPagerLink Next",
-                                to: cr(Sr, Ir),
-                                children: [(0, Ur.jsx)("span", {
+                                to: Id(Od, Kd),
+                                children: [(0, qd.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, Ur.jsx)("span", {
+                                }), (0, qd.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Ir.title
+                                  children: Kd.title
                                 })]
                               })]
                             })
                           }
 
-                          function ua(rr) {
+                          function mX(dd) {
                             let {
-                              basePath: Sr,
-                              embedded: Qr = !1
-                            } = rr;
+                              basePath: Od,
+                              embedded: md = !1
+                            } = dd;
                             const {
-                              pageSlug: Wr = ""
-                            } = (0, Ir.w)(), Er = (0, Ir.s)(), pr = (0, Ir.t)(), xr = (mr = Wr, Cr.find((rr => rr.slug === mr)));
-                            var mr;
-                            const [Nr, tr] = function() {
-                              const [rr, Sr] = (0, Zr.useState)((() => {
-                                const rr = ia.j.getItem(wa);
-                                return "dark" === rr || "light" === rr ? rr : null
-                              })), [Qr, Wr] = (0, Zr.useState)(ca.matches ? "light" : "dark");
-                              return (0, Zr.useEffect)((() => {
-                                const rr = () => {
-                                  Wr(ca.matches ? "light" : "dark")
+                              pageSlug: Fd = ""
+                            } = (0, Kd.u)(), vd = (0, Kd.p)(), Qd = (0, Kd.s)(), td = (od = Fd, nd.find((dd => dd.slug === od)));
+                            var od;
+                            const [Nd, Hd] = function() {
+                              const [dd, Od] = (0, Wd.useState)((() => {
+                                const dd = eR.k.getItem(IR);
+                                return "dark" === dd || "light" === dd ? dd : null
+                              })), [md, Fd] = (0, Wd.useState)(lR.matches ? "light" : "dark");
+                              return (0, Wd.useEffect)((() => {
+                                const dd = () => {
+                                  Fd(lR.matches ? "light" : "dark")
                                 };
-                                return ca.addEventListener("change", rr), () => {
-                                  ca.removeEventListener("change", rr)
+                                return lR.addEventListener("change", dd), () => {
+                                  lR.removeEventListener("change", dd)
                                 }
-                              }), []), [null !== rr && void 0 !== rr ? rr : Qr, rr => {
-                                ia.j.setItem(wa, rr), Sr(rr)
+                              }), []), [null !== dd && void 0 !== dd ? dd : md, dd => {
+                                eR.k.setItem(IR, dd), Od(dd)
                               }]
-                            }(), [zr, Yr] = (0, Zr.useState)(null), [nr, er] = (0, Zr.useState)(!1), [Kr, yr] = (0, Zr.useState)(!1), [Br, vr] = (0, Zr.useState)([]), Or = function(rr, Sr) {
-                              const [Qr, Wr] = (0, Zr.useState)("");
-                              return (0, Zr.useEffect)((() => {
-                                if (!Sr) return;
-                                let Qr = 0;
-                                const Zr = () => {
-                                    var Zr, ar;
-                                    Qr = 0;
-                                    const jr = Sr.getBoundingClientRect().top + Ja;
-                                    let Ir = null !== (Zr = null === (ar = rr[0]) || void 0 === ar ? void 0 : ar.anchor) && void 0 !== Zr ? Zr : "";
-                                    for (const Sr of rr) {
-                                      const rr = document.getElementById(Sr.anchor);
-                                      rr && rr.getBoundingClientRect().top <= jr && (Ir = Sr.anchor)
+                            }(), [bd, Td] = (0, Wd.useState)(null), [pd, Yd] = (0, Wd.useState)(!1), [gd, wd] = (0, Wd.useState)(!1), [Ed, Ud] = (0, Wd.useState)([]), xd = function(dd, Od) {
+                              const [md, Fd] = (0, Wd.useState)("");
+                              return (0, Wd.useEffect)((() => {
+                                if (!Od) return;
+                                let md = 0;
+                                const Wd = () => {
+                                    var Wd, Rd;
+                                    md = 0;
+                                    const Xd = Od.getBoundingClientRect().top + fR;
+                                    let Kd = null !== (Wd = null === (Rd = dd[0]) || void 0 === Rd ? void 0 : Rd.anchor) && void 0 !== Wd ? Wd : "";
+                                    for (const Od of dd) {
+                                      const dd = document.getElementById(Od.anchor);
+                                      dd && dd.getBoundingClientRect().top <= Xd && (Kd = Od.anchor)
                                     }
-                                    Sr.scrollTop + Sr.clientHeight >= Sr.scrollHeight - 2 && Sr.scrollTop > 0 && rr.length > 0 && (Ir = rr[rr.length - 1].anchor), Wr(Ir)
+                                    Od.scrollTop + Od.clientHeight >= Od.scrollHeight - 2 && Od.scrollTop > 0 && dd.length > 0 && (Kd = dd[dd.length - 1].anchor), Fd(Kd)
                                   },
-                                  ar = () => {
-                                    Qr || (Qr = requestAnimationFrame(Zr))
+                                  Rd = () => {
+                                    md || (md = requestAnimationFrame(Wd))
                                   };
-                                return Zr(), Sr.addEventListener("scroll", ar, {
+                                return Wd(), Od.addEventListener("scroll", Rd, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(Qr), Sr.removeEventListener("scroll", ar)
+                                  cancelAnimationFrame(md), Od.removeEventListener("scroll", Rd)
                                 }
-                              }), [rr, Sr]), Qr
-                            }(Br, zr), Lr = "" === Wr && Er.hash ? function(rr) {
-                              const Sr = (0, Tr.k)(rr);
-                              if (Vr(Gr("welcome"), Sr)) return null;
-                              const Qr = Object.hasOwn(wr, Sr) ? wr[Sr] : null;
-                              if (Qr) return {
-                                page: Gr(Qr.pageId),
-                                anchor: Qr.anchor
+                              }), [dd, Od]), md
+                            }(Ed, bd), Bd = "" === Fd && vd.hash ? function(dd) {
+                              const Od = (0, Jd.l)(dd);
+                              if (jd(Pd("welcome"), Od)) return null;
+                              const md = Object.hasOwn(ed, Od) ? ed[Od] : null;
+                              if (md) return {
+                                page: Pd(md.pageId),
+                                anchor: md.anchor
                               };
-                              const Zr = Gr("readme");
-                              return Vr(Zr, Sr) ? {
-                                page: Zr,
-                                anchor: Sr
-                              } : ir(`#${Sr}`)
-                            }(Er.hash) : null;
-                            (0, Zr.useEffect)((() => (fr.c.set({
+                              const Wd = Pd("readme");
+                              return jd(Wd, Od) ? {
+                                page: Wd,
+                                anchor: Od
+                              } : Dd(`#${Od}`)
+                            }(vd.hash) : null;
+                            (0, Wd.useEffect)((() => (hd.e.set({
                               musicOnFromPage: !1
                             }), () => {
-                              fr.c.set({
+                              hd.e.set({
                                 musicOnFromPage: !0
-                              }), hZ()
-                            })), []), (0, Zr.useEffect)((() => {
-                              const rr = rr => {
-                                const Sr = rr.target;
-                                if (Sr.closest(".DocsTextDialog")) return;
-                                const Qr = Sr.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Sr.tagName);
-                                "k" === rr.key && (rr.metaKey || rr.ctrlKey) || "/" === rr.key && !Qr ? (rr.preventDefault(), yr(!0)) : "Escape" === rr.key && er(!1)
+                              }), pW()
+                            })), []), (0, Wd.useEffect)((() => {
+                              const dd = dd => {
+                                const Od = dd.target;
+                                if (Od.closest(".DocsTextDialog")) return;
+                                const md = Od.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Od.tagName);
+                                "k" === dd.key && (dd.metaKey || dd.ctrlKey) || "/" === dd.key && !md ? (dd.preventDefault(), wd(!0)) : "Escape" === dd.key && Yd(!1)
                               };
-                              return window.addEventListener("keydown", rr), () => {
-                                window.removeEventListener("keydown", rr)
+                              return window.addEventListener("keydown", dd), () => {
+                                window.removeEventListener("keydown", dd)
                               }
                             }), []);
-                            const lr = (0, Zr.useRef)(null);
-                            (0, Zr.useLayoutEffect)((() => {
-                              var rr, Sr;
-                              if (!zr) return;
-                              const Qr = lr.current === Er.pathname;
-                              lr.current = Er.pathname;
-                              const Zr = (0, Tr.k)(Er.hash),
-                                Wr = Zr ? document.getElementById(Zr) : null;
-                              if (null === (rr = zr.querySelector(".DocsTargeted")) || void 0 === rr || rr.classList.remove("DocsTargeted"), null === Wr || void 0 === Wr || null === (Sr = Wr.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Sr || Sr.classList.add("DocsTargeted"), Wr) {
-                                var ar;
-                                const rr = Wr.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (ar = Wr.closest(".DocsChangelogEntry")) && void 0 !== ar ? ar : Wr).scrollIntoView({
-                                  block: rr ? "center" : "start",
-                                  behavior: Qr ? "smooth" : "auto"
+                            const Sd = (0, Wd.useRef)(null);
+                            (0, Wd.useLayoutEffect)((() => {
+                              var dd, Od;
+                              if (!bd) return;
+                              const md = Sd.current === vd.pathname;
+                              Sd.current = vd.pathname;
+                              const Wd = (0, Jd.l)(vd.hash),
+                                Fd = Wd ? document.getElementById(Wd) : null;
+                              if (null === (dd = bd.querySelector(".DocsTargeted")) || void 0 === dd || dd.classList.remove("DocsTargeted"), null === Fd || void 0 === Fd || null === (Od = Fd.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Od || Od.classList.add("DocsTargeted"), Fd) {
+                                var Rd;
+                                const dd = Fd.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (Rd = Fd.closest(".DocsChangelogEntry")) && void 0 !== Rd ? Rd : Fd).scrollIntoView({
+                                  block: dd ? "center" : "start",
+                                  behavior: md ? "smooth" : "auto"
                                 })
-                              } else Qr || zr.scrollTo({
+                              } else md || bd.scrollTo({
                                 top: 0
                               })
-                            }), [zr, Er.pathname, Er.hash, Er.key]);
-                            const Xr = (0, Zr.useCallback)((() => {
-                                er(!1)
+                            }), [bd, vd.pathname, vd.hash, vd.key]);
+                            const sd = (0, Wd.useCallback)((() => {
+                                Yd(!1)
                               }), []),
-                              Pr = (0, Zr.useCallback)((rr => {
-                                pr({
-                                  hash: rr
+                              ud = (0, Wd.useCallback)((dd => {
+                                Qd({
+                                  hash: dd
                                 })
-                              }), [pr]);
-                            if (Lr) return (0, Ur.jsx)(Ir.d, {
+                              }), [Qd]);
+                            if (Bd) return (0, qd.jsx)(Kd.d, {
                               replace: !0,
-                              to: cr(Sr, Lr.page, Lr.anchor)
+                              to: Id(Od, Bd.page, Bd.anchor)
                             });
-                            if (!xr) return (0, Ur.jsx)(Ir.d, {
+                            if (!td) return (0, qd.jsx)(Kd.d, {
                               replace: !0,
-                              to: Sr
+                              to: Od
                             });
-                            const Hr = Qr ? "div" : "main";
-                            return (0, Ur.jsx)(NS.Provider, {
-                              value: Sr,
-                              children: (0, Ur.jsx)(US.Provider, {
-                                value: zr,
-                                children: (0, Ur.jsxs)("div", {
-                                  ref: Yr,
-                                  className: ar()("DocsSite", {
-                                    Embedded: Qr,
-                                    NavOpen: nr
+                            const Vd = md ? "div" : "main";
+                            return (0, qd.jsx)(HO.Provider, {
+                              value: Od,
+                              children: (0, qd.jsx)(yO.Provider, {
+                                value: bd,
+                                children: (0, qd.jsxs)("div", {
+                                  ref: Td,
+                                  className: Rd()("DocsSite", {
+                                    Embedded: md,
+                                    NavOpen: pd
                                   }),
-                                  "data-theme": Nr,
-                                  children: [(0, Ur.jsxs)("header", {
+                                  "data-theme": Nd,
+                                  children: [(0, qd.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, Ur.jsx)("button", {
+                                    children: [(0, qd.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": nr ? "Close menu" : "Open menu",
-                                      "aria-expanded": nr,
+                                      "aria-label": pd ? "Close menu" : "Open menu",
+                                      "aria-expanded": pd,
                                       onClick: () => {
-                                        er(!nr)
+                                        Yd(!pd)
                                       },
-                                      children: (0, Ur.jsx)(hr, {
-                                        name: nr ? "cross" : "menu"
+                                      children: (0, qd.jsx)(yd, {
+                                        name: pd ? "cross" : "menu"
                                       })
-                                    }), (0, Ur.jsxs)(jr.d, {
-                                      to: Sr,
+                                    }), (0, qd.jsxs)(Xd.c, {
+                                      to: Od,
                                       className: "DocsBrand",
-                                      children: [(0, Ur.jsx)("img", {
+                                      children: [(0, qd.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, Ur.jsx)("span", {
+                                      }), (0, qd.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, Ur.jsx)("span", {
+                                      }), (0, qd.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, Ur.jsxs)("button", {
+                                    }), (0, qd.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        yr(!0)
+                                        wd(!0)
                                       },
-                                      children: [(0, Ur.jsx)(hr, {
+                                      children: [(0, qd.jsx)(yd, {
                                         name: "magnifying-glass"
-                                      }), (0, Ur.jsx)("span", {
+                                      }), (0, qd.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, Ur.jsxs)("kbd", {
-                                        children: [Da ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, qd.jsxs)("kbd", {
+                                        children: [MR ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, Ur.jsxs)("div", {
+                                    }), (0, qd.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, Ur.jsxs)("a", {
-                                        href: ba,
+                                      children: [(0, qd.jsxs)("a", {
+                                        href: kR,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Ur.jsx)(hr, {
+                                        children: [(0, qd.jsx)(yd, {
                                           name: "discord"
-                                        }), (0, Ur.jsx)("span", {
+                                        }), (0, qd.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, Ur.jsxs)("a", {
-                                        href: oa,
+                                      }), (0, qd.jsxs)("a", {
+                                        href: ZR,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, Ur.jsx)(hr, {
+                                        children: [(0, qd.jsx)(yd, {
                                           name: "external-link"
-                                        }), (0, Ur.jsx)("span", {
+                                        }), (0, qd.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !Qr && (0, Ur.jsxs)(jr.d, {
+                                      }), !md && (0, qd.jsxs)(Xd.c, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, Ur.jsx)(hr, {
+                                        children: [(0, qd.jsx)(yd, {
                                           name: "play"
-                                        }), (0, Ur.jsx)("span", {
+                                        }), (0, qd.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, Ur.jsx)(Fa, {
-                                        theme: Nr,
-                                        onChange: tr
+                                      }), (0, qd.jsx)(CR, {
+                                        theme: Nd,
+                                        onChange: Hd
                                       })]
                                     })]
-                                  }), (0, Ur.jsxs)("div", {
+                                  }), (0, qd.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, Ur.jsx)("aside", {
+                                    children: [(0, qd.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, Ur.jsx)(da, {
-                                        basePath: Sr,
-                                        activePageId: xr.id,
-                                        onNavigate: Xr
+                                      children: (0, qd.jsx)(dX, {
+                                        basePath: Od,
+                                        activePageId: td.id,
+                                        onNavigate: sd
                                       })
-                                    }), (0, Ur.jsx)("div", {
+                                    }), (0, qd.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: Xr
-                                    }), (0, Ur.jsxs)(Hr, {
+                                      onClick: sd
+                                    }), (0, qd.jsxs)(Vd, {
                                       className: "DocsMain",
-                                      children: [(0, Ur.jsx)(ya, {
-                                        page: xr,
-                                        onTocChange: vr
-                                      }, xr.id), (0, Ur.jsx)(sa, {
-                                        basePath: Sr,
-                                        pageId: xr.id
+                                      children: [(0, qd.jsx)(JR, {
+                                        page: td,
+                                        onTocChange: Ud
+                                      }, td.id), (0, qd.jsx)(OX, {
+                                        basePath: Od,
+                                        pageId: td.id
                                       })]
-                                    }), (0, Ur.jsx)("aside", {
-                                      className: ar()("DocsToc", {
-                                        Timeline: "changelog" === xr.layout
+                                    }), (0, qd.jsx)("aside", {
+                                      className: Rd()("DocsToc", {
+                                        Timeline: "changelog" === td.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, Ur.jsx)(Oa, {
-                                        isChangelog: "changelog" === xr.layout,
-                                        toc: Br,
-                                        activeAnchor: Or,
-                                        onNavigate: Pr
+                                      children: (0, qd.jsx)(SR, {
+                                        isChangelog: "changelog" === td.layout,
+                                        toc: Ed,
+                                        activeAnchor: xd,
+                                        onNavigate: ud
                                       })
                                     })]
-                                  }), (0, Ur.jsx)(Va, {}), Kr && (0, Ur.jsx)(ka, {
-                                    basePath: Sr,
+                                  }), (0, qd.jsx)(DR, {}), gd && (0, qd.jsx)(cR, {
+                                    basePath: Od,
                                     onClose: () => {
-                                      yr(!1)
+                                      wd(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 5564: (rr, Sr, Qr) => {
-                          Qr.d(Sr, {
-                            b: () => Zr,
-                            e: () => jr,
-                            f: () => hr,
-                            i: () => tr,
-                            j: () => Ir,
-                            k: () => Wr,
-                            o: () => ar,
-                            r: () => Ur,
-                            t: () => Nr,
-                            v: () => mr
+                        }, 5509: (dd, Od, md) => {
+                          md.d(Od, {
+                            b: () => Wd,
+                            c: () => Xd,
+                            e: () => yd,
+                            h: () => Hd,
+                            k: () => Kd,
+                            l: () => Fd,
+                            m: () => Rd,
+                            q: () => qd,
+                            r: () => Nd,
+                            s: () => od
                           });
-                          const Zr = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const Wd = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function Wr(rr) {
+                          function Fd(dd) {
                             try {
-                              return decodeURIComponent(rr.slice(1))
+                              return decodeURIComponent(dd.slice(1))
                             } catch {
-                              return rr.slice(1)
+                              return dd.slice(1)
                             }
                           }
 
-                          function ar(rr) {
-                            return rr.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function Rd(dd) {
+                            return dd.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const jr = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Zr.source}`, "g");
+                          const Xd = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Wd.source}`, "g");
 
-                          function Ir(rr, Sr) {
-                            return 2 === rr.length ? Sr.replace(/^ (.*) $/, "$1") : Sr
-                          }
-
-                          function fr(rr) {
-                            return "" === rr.trim()
+                          function Kd(dd, Od) {
+                            return 2 === dd.length ? Od.replace(/^ (.*) $/, "$1") : Od
                           }
 
-                          function Er(rr) {
-                            const Sr = [];
-                            for (const Qr of rr.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Sr.length > 0 && Sr[Sr.length - 1].endsWith("\\") ? Sr[Sr.length - 1] += `|${Qr}` : Sr.push(Qr);
-                            return Sr.map((rr => rr.trim().replaceAll("\\|", "|")))
+                          function hd(dd) {
+                            return "" === dd.trim()
                           }
-                          const pr = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function xr(rr) {
-                            const Sr = [],
-                              Qr = [{
+                          function vd(dd) {
+                            const Od = [];
+                            for (const md of dd.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Od.length > 0 && Od[Od.length - 1].endsWith("\\") ? Od[Od.length - 1] += `|${md}` : Od.push(md);
+                            return Od.map((dd => dd.trim().replaceAll("\\|", "|")))
+                          }
+                          const Qd = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function td(dd) {
+                            const Od = [],
+                              md = [{
                                 indent: -1,
-                                items: Sr
+                                items: Od
                               }];
-                            let Zr = null;
-                            for (const Wr of rr) {
-                              const rr = Wr.match(pr);
-                              if (!rr) {
-                                Zr && (Zr.text += ` ${Wr.trim()}`);
+                            let Wd = null;
+                            for (const Fd of dd) {
+                              const dd = Fd.match(Qd);
+                              if (!dd) {
+                                Wd && (Wd.text += ` ${Fd.trim()}`);
                                 continue
                               }
-                              const Sr = rr[1].replace(/\t/g, "  ").length;
-                              for (; Sr <= Qr[Qr.length - 1].indent;) Qr.pop();
-                              Zr = {
-                                text: rr[3].trim(),
+                              const Od = dd[1].replace(/\t/g, "  ").length;
+                              for (; Od <= md[md.length - 1].indent;) md.pop();
+                              Wd = {
+                                text: dd[3].trim(),
                                 children: []
-                              }, Qr[Qr.length - 1].items.push(Zr), Qr.push({
-                                indent: Sr,
-                                items: Zr.children
+                              }, md[md.length - 1].items.push(Wd), md.push({
+                                indent: Od,
+                                items: Wd.children
                               })
                             }
-                            return Sr
+                            return Od
                           }
 
-                          function mr(rr) {
-                            const Sr = rr.replace(/\r\n/g, "\n").split("\n"),
-                              Qr = [];
-                            let Zr = 0;
-                            for (; Zr < Sr.length;) {
-                              const rr = Sr[Zr];
-                              if (fr(rr)) {
-                                Zr++;
+                          function od(dd) {
+                            const Od = dd.replace(/\r\n/g, "\n").split("\n"),
+                              md = [];
+                            let Wd = 0;
+                            for (; Wd < Od.length;) {
+                              const dd = Od[Wd];
+                              if (hd(dd)) {
+                                Wd++;
                                 continue
                               }
-                              const Wr = rr.match(/^\s*```\s*(\w*)\s*$/);
-                              if (Wr) {
-                                const rr = [];
-                                for (Zr++; Zr < Sr.length && !/^\s*```\s*$/.test(Sr[Zr]);) rr.push(Sr[Zr]), Zr++;
-                                Zr++, Qr.push({
+                              const Fd = dd.match(/^\s*```\s*(\w*)\s*$/);
+                              if (Fd) {
+                                const dd = [];
+                                for (Wd++; Wd < Od.length && !/^\s*```\s*$/.test(Od[Wd]);) dd.push(Od[Wd]), Wd++;
+                                Wd++, md.push({
                                   kind: "code",
-                                  lang: Wr[1] || "text",
-                                  code: rr.join("\n").replace(/\s+$/, "")
+                                  lang: Fd[1] || "text",
+                                  code: dd.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const jr = rr.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (jr) {
-                                const rr = jr[2].trim();
-                                Qr.push({
+                              const Xd = dd.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (Xd) {
+                                const dd = Xd[2].trim();
+                                md.push({
                                   kind: "heading",
-                                  level: jr[1].length,
-                                  text: rr,
-                                  anchor: ar(rr)
-                                }), Zr++;
+                                  level: Xd[1].length,
+                                  text: dd,
+                                  anchor: Rd(dd)
+                                }), Wd++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(rr)) {
-                                Qr.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(dd)) {
+                                md.push({
                                   kind: "rule"
-                                }), Zr++;
+                                }), Wd++;
                                 continue
                               }
-                              if (rr.trim().startsWith("|") && Zr + 1 < Sr.length && /^\s*\|[\s:|-]+\|\s*$/.test(Sr[Zr + 1])) {
-                                const Wr = Er(rr),
-                                  ar = [];
-                                for (Zr += 2; Zr < Sr.length && Sr[Zr].trim().startsWith("|");) ar.push(Er(Sr[Zr])), Zr++;
-                                Qr.push({
+                              if (dd.trim().startsWith("|") && Wd + 1 < Od.length && /^\s*\|[\s:|-]+\|\s*$/.test(Od[Wd + 1])) {
+                                const Fd = vd(dd),
+                                  Rd = [];
+                                for (Wd += 2; Wd < Od.length && Od[Wd].trim().startsWith("|");) Rd.push(vd(Od[Wd])), Wd++;
+                                md.push({
                                   kind: "table",
-                                  header: Wr,
-                                  rows: ar
+                                  header: Fd,
+                                  rows: Rd
                                 });
                                 continue
                               }
-                              if (rr.startsWith(">")) {
-                                const rr = [];
-                                for (; Zr < Sr.length && Sr[Zr].startsWith(">");) rr.push(Sr[Zr].replace(/^>\s?/, "")), Zr++;
-                                Qr.push({
+                              if (dd.startsWith(">")) {
+                                const dd = [];
+                                for (; Wd < Od.length && Od[Wd].startsWith(">");) dd.push(Od[Wd].replace(/^>\s?/, "")), Wd++;
+                                md.push({
                                   kind: "quote",
-                                  blocks: mr(rr.join("\n"))
+                                  blocks: od(dd.join("\n"))
                                 });
                                 continue
                               }
-                              if (pr.test(rr)) {
-                                const Wr = [],
-                                  ar = /^\s*\d+\./.test(rr);
-                                for (; Zr < Sr.length && !fr(Sr[Zr]) && (pr.test(Sr[Zr]) || /^\s+\S/.test(Sr[Zr]));) Wr.push(Sr[Zr]), Zr++;
-                                Qr.push({
+                              if (Qd.test(dd)) {
+                                const Fd = [],
+                                  Rd = /^\s*\d+\./.test(dd);
+                                for (; Wd < Od.length && !hd(Od[Wd]) && (Qd.test(Od[Wd]) || /^\s+\S/.test(Od[Wd]));) Fd.push(Od[Wd]), Wd++;
+                                md.push({
                                   kind: "list",
-                                  ordered: ar,
-                                  items: xr(Wr)
+                                  ordered: Rd,
+                                  items: td(Fd)
                                 });
                                 continue
                               }
-                              const Ir = [];
-                              for (; Zr < Sr.length && !fr(Sr[Zr]) && !/^\s*```/.test(Sr[Zr]) && !/^#{1,6}\s/.test(Sr[Zr]) && !Sr[Zr].startsWith(">") && !pr.test(Sr[Zr]) && (!Sr[Zr].trim().startsWith("|") || 0 !== Ir.length);) Ir.push(Sr[Zr].trim()), Zr++;
-                              0 === Ir.length && (Ir.push(Sr[Zr].trim()), Zr++), Qr.push({
+                              const Kd = [];
+                              for (; Wd < Od.length && !hd(Od[Wd]) && !/^\s*```/.test(Od[Wd]) && !/^#{1,6}\s/.test(Od[Wd]) && !Od[Wd].startsWith(">") && !Qd.test(Od[Wd]) && (!Od[Wd].trim().startsWith("|") || 0 !== Kd.length);) Kd.push(Od[Wd].trim()), Wd++;
+                              0 === Kd.length && (Kd.push(Od[Wd].trim()), Wd++), md.push({
                                 kind: "paragraph",
-                                text: Ir.join(" ")
+                                text: Kd.join(" ")
                               })
                             }
-                            return Qr
+                            return md
                           }
 
-                          function Nr(rr) {
-                            let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const Qr = mr(rr);
-                            let Zr = "";
-                            const Wr = [],
-                              ar = [],
-                              jr = new Map;
-                            for (const Er of Qr) {
-                              if ("heading" === Er.kind) {
-                                var Ir;
-                                const rr = (null !== (Ir = jr.get(Er.anchor)) && void 0 !== Ir ? Ir : 0) + 1;
-                                jr.set(Er.anchor, rr), rr > 1 && (Er.anchor = `${Er.anchor}-${rr}`)
+                          function Nd(dd) {
+                            let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const md = od(dd);
+                            let Wd = "";
+                            const Fd = [],
+                              Rd = [],
+                              Xd = new Map;
+                            for (const vd of md) {
+                              if ("heading" === vd.kind) {
+                                var Kd;
+                                const dd = (null !== (Kd = Xd.get(vd.anchor)) && void 0 !== Kd ? Kd : 0) + 1;
+                                Xd.set(vd.anchor, dd), dd > 1 && (vd.anchor = `${vd.anchor}-${dd}`)
                               }
-                              if ("heading" === Er.kind && 1 === Er.level && !Zr) {
-                                Zr = Er.text;
+                              if ("heading" === vd.kind && 1 === vd.level && !Wd) {
+                                Wd = vd.text;
                                 continue
                               }
-                              if ("heading" === Er.kind && Er.level <= Sr) {
-                                ar.push({
-                                  heading: Er,
+                              if ("heading" === vd.kind && vd.level <= Od) {
+                                Rd.push({
+                                  heading: vd,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const rr = ar.at(-1);
-                              rr ? rr.blocks.push(Er) : Wr.push(Er)
+                              const dd = Rd.at(-1);
+                              dd ? dd.blocks.push(vd) : Fd.push(vd)
                             }
-                            const fr = rr => {
+                            const hd = dd => {
                               for (;
-                                "rule" === (null === (Sr = rr.at(-1)) || void 0 === Sr ? void 0 : Sr.kind);) {
-                                var Sr;
-                                rr.pop()
+                                "rule" === (null === (Od = dd.at(-1)) || void 0 === Od ? void 0 : Od.kind);) {
+                                var Od;
+                                dd.pop()
                               }
                             };
-                            fr(Wr);
-                            for (const Er of ar) fr(Er.blocks);
+                            hd(Fd);
+                            for (const vd of Rd) hd(vd.blocks);
                             return {
-                              title: Zr,
-                              intro: Wr,
-                              sections: ar
+                              title: Wd,
+                              intro: Fd,
+                              sections: Rd
                             }
                           }
 
-                          function Ur(rr) {
+                          function qd(dd) {
                             return [{
                               heading: null,
-                              blocks: rr.intro
-                            }, ...rr.sections.map((rr => ({
-                              heading: rr.heading,
-                              blocks: rr.blocks
+                              blocks: dd.intro
+                            }, ...dd.sections.map((dd => ({
+                              heading: dd.heading,
+                              blocks: dd.blocks
                             })))]
                           }
 
-                          function tr(rr) {
-                            return rr.flatMap((rr => "code" === rr.kind ? [rr] : "quote" === rr.kind ? tr(rr.blocks) : []))
+                          function Hd(dd) {
+                            return dd.flatMap((dd => "code" === dd.kind ? [dd] : "quote" === dd.kind ? Hd(dd.blocks) : []))
                           }
 
-                          function hr(rr) {
-                            switch (rr.kind) {
+                          function yd(dd) {
+                            switch (dd.kind) {
                               case "heading":
                               case "paragraph":
-                                return rr.text;
+                                return dd.text;
                               case "code":
-                                return rr.code;
+                                return dd.code;
                               case "table":
-                                return [rr.header, ...rr.rows].map((rr => rr.join(" "))).join(" ");
+                                return [dd.header, ...dd.rows].map((dd => dd.join(" "))).join(" ");
                               case "list": {
-                                const Sr = rr => rr.map((rr => `${rr.text} ${Sr(rr.children)}`)).join(" ");
-                                return Sr(rr.items)
+                                const Od = dd => dd.map((dd => `${dd.text} ${Od(dd.children)}`)).join(" ");
+                                return Od(dd.items)
                               }
                               case "quote":
-                                return rr.blocks.map(hr).join(" ");
+                                return dd.blocks.map(yd).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 5649: (rr, Sr, Qr) => {
-                          Qr.d(Sr, {
-                            e: () => Ir
+                        }, 5616: (dd, Od, md) => {
+                          md.d(Od, {
+                            c: () => Kd
                           });
-                          var Zr = Qr(72),
-                            Wr = Qr(360),
-                            ar = Qr(2075),
-                            jr = Qr(1338);
+                          var Wd = md(66),
+                            Fd = md(387),
+                            Rd = md(2079),
+                            Xd = md(1341);
 
-                          function Ir(rr) {
+                          function Kd(dd) {
                             let {
-                              text: Sr
-                            } = rr;
-                            const Qr = [];
-                            let Ir = "";
-                            return (0, Wr.gc)(Sr).forEach(((rr, Sr) => {
-                              if ("string" === typeof rr || !(0, ar.h)(rr.icon)) return void(Ir += "string" === typeof rr ? rr : rr.icon);
-                              const Wr = Math.max(0, Ir.trimEnd().search(/\S{1,12}$/));
-                              Qr.push((0, jr.jsxs)(Zr.Fragment, {
-                                children: [Ir.slice(0, Wr), (0, jr.jsxs)("span", {
+                              text: Od
+                            } = dd;
+                            const md = [];
+                            let Kd = "";
+                            return (0, Fd.dc)(Od).forEach(((dd, Od) => {
+                              if ("string" === typeof dd || !(0, Rd.f)(dd.icon)) return void(Kd += "string" === typeof dd ? dd : dd.icon);
+                              const Fd = Math.max(0, Kd.trimEnd().search(/\S{1,12}$/));
+                              md.push((0, Xd.jsxs)(Wd.Fragment, {
+                                children: [Kd.slice(0, Fd), (0, Xd.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [Ir.slice(Wr), (0, jr.jsx)("span", {
+                                  children: [Kd.slice(Fd), (0, Xd.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": rr.icon,
-                                    children: (0, jr.jsx)(ar.d, {
-                                      itemName: rr.icon,
+                                    "aria-label": dd.icon,
+                                    children: (0, Xd.jsx)(Rd.c, {
+                                      itemName: dd.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, Sr)), Ir = ""
-                            })), Qr.push(Ir), (0, jr.jsx)(jr.Fragment, {
-                              children: Qr
+                              }, Od)), Kd = ""
+                            })), md.push(Kd), (0, Xd.jsx)(Xd.Fragment, {
+                              children: md
                             })
                           }
-                        }, 5581: (rr, Sr, Qr) => {
-                          Qr.d(Sr, {
-                            e: () => Yr,
-                            d: () => zr
+                        }, 5540: (dd, Od, md) => {
+                          md.d(Od, {
+                            f: () => Td,
+                            e: () => bd
                           });
-                          var Zr = Qr(72),
-                            Wr = Qr(1573),
-                            ar = Qr(2057),
-                            jr = Qr(5589),
-                            Ir = Qr(1338);
-                          const fr = (0, Zr.memo)((function(rr) {
+                          var Wd = md(66),
+                            Fd = md(1566),
+                            Rd = md(2060),
+                            Xd = md(5548),
+                            Kd = md(1341);
+                          const hd = (0, Wd.memo)((function(dd) {
                             let {
-                              initialParameters: Sr
-                            } = rr;
-                            const Qr = (0, Zr.useRef)(null),
-                              Wr = (0, Zr.useRef)(null),
-                              fr = (0, Zr.useRef)(0),
-                              Er = (0, Zr.useRef)(null),
-                              pr = Sr.description,
-                              xr = Sr.Oa,
+                              initialParameters: Od
+                            } = dd;
+                            const md = (0, Wd.useRef)(null),
+                              Fd = (0, Wd.useRef)(null),
+                              hd = (0, Wd.useRef)(0),
+                              vd = (0, Wd.useRef)(null),
+                              Qd = Od.description,
+                              td = Od.JR,
                               {
-                                scale: mr,
-                                rotation: Nr
-                              } = null !== Sr && void 0 !== Sr ? Sr : {},
-                              Ur = (0, jr.f)();
-                            return (0, Zr.useEffect)((() => {
-                              const rr = Ur.onFrame((() => {
-                                const rr = Ur.getState();
-                                if (!rr.isActive || !Qr.current || !Wr.current) return;
-                                const Sr = rr.state;
-                                if (Qr.current.value = Sr.progress, Sr.clickCount > fr.current) {
-                                  fr.current = Sr.clickCount;
-                                  const rr = Wr.current;
-                                  rr.classList.add("pulse"), Er.current = setTimeout((() => {
-                                    rr.classList.remove("pulse")
+                                scale: od,
+                                rotation: Nd
+                              } = null !== Od && void 0 !== Od ? Od : {},
+                              qd = (0, Xd.f)();
+                            return (0, Wd.useEffect)((() => {
+                              const dd = qd.onFrame((() => {
+                                const dd = qd.getState();
+                                if (!dd.isActive || !md.current || !Fd.current) return;
+                                const Od = dd.state;
+                                if (md.current.value = Od.progress, Od.clickCount > hd.current) {
+                                  hd.current = Od.clickCount;
+                                  const dd = Fd.current;
+                                  dd.classList.add("pulse"), vd.current = setTimeout((() => {
+                                    dd.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(Er.current), rr()
+                                clearTimeout(vd.current), dd()
                               }
-                            }), [Ur]), (0, Ir.jsx)(Ir.Fragment, {
-                              children: (0, Ir.jsxs)("div", {
+                            }), [qd]), (0, Kd.jsx)(Kd.Fragment, {
+                              children: (0, Kd.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== mr && {
-                                    "--scale": mr
+                                  ...null !== od && {
+                                    "--scale": od
                                   },
-                                  ...null !== Nr && {
-                                    "--rotation": `${Nr}deg`
+                                  ...null !== Nd && {
+                                    "--rotation": `${Nd}deg`
                                   }
                                 },
-                                children: [(0, Ir.jsx)("progress", {
+                                children: [(0, Kd.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: Qr
-                                }), (0, Ir.jsx)("span", {
+                                  ref: md
+                                }), (0, Kd.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: Wr,
-                                  children: (0, Ir.jsx)(ar.c, {
+                                  ref: Fd,
+                                  children: (0, Kd.jsx)(Rd.d, {
                                     text: [{
-                                      icon: xr
+                                      icon: td
                                     }]
                                   })
-                                }), (0, Ir.jsx)("div", {
+                                }), (0, Kd.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, Ir.jsx)(ar.c, {
-                                    text: pr
+                                  children: (0, Kd.jsx)(Rd.d, {
+                                    text: Qd
                                   })
                                 })]
                               })
                             })
                           }));
-                          var Er = Qr(1155),
-                            pr = Qr.n(Er);
-                          const xr = 2 * Math.PI * 90,
-                            mr = (0, Zr.memo)((function(rr) {
+                          var vd = md(1155),
+                            Qd = md.n(vd);
+                          const td = 2 * Math.PI * 90,
+                            od = (0, Wd.memo)((function(dd) {
                               let {
-                                initialParameters: Sr
-                              } = rr;
-                              const Qr = (0, Zr.useRef)(null),
-                                Wr = (0, Zr.useRef)(null),
-                                fr = (0, Zr.useRef)(null),
-                                Er = Sr.label,
-                                mr = Sr.icon,
-                                Nr = Sr.Xa,
+                                initialParameters: Od
+                              } = dd;
+                              const md = (0, Wd.useRef)(null),
+                                Fd = (0, Wd.useRef)(null),
+                                hd = (0, Wd.useRef)(null),
+                                vd = Od.label,
+                                od = Od.icon,
+                                Nd = Od.BR,
                                 {
-                                  scale: Ur,
-                                  rotation: tr,
-                                  Pa: hr
-                                } = null !== Sr && void 0 !== Sr ? Sr : {},
-                                zr = (0, jr.f)();
-                              return (0, Zr.useEffect)((() => {
-                                const rr = zr.onFrame((() => {
-                                  var rr, Sr;
-                                  const Zr = zr.getState();
-                                  if (!Zr.isActive || !Wr.current) return;
-                                  const ar = Zr.state,
-                                    jr = null !== (rr = ar.timeRemaining) && void 0 !== rr ? rr : 0,
-                                    Ir = null !== (Sr = ar.la) && void 0 !== Sr ? Sr : 1,
-                                    Er = xr * (1 - jr / Ir);
-                                  Wr.current.style.strokeDashoffset = `${Er}`, Qr.current && (Qr.current.style.opacity = jr > 0 ? "1" : "0"), fr.current && Nr && (fr.current.textContent = `${(jr/1e3).toFixed(1)}s`)
+                                  scale: qd,
+                                  rotation: Hd,
+                                  sR: yd
+                                } = null !== Od && void 0 !== Od ? Od : {},
+                                bd = (0, Xd.f)();
+                              return (0, Wd.useEffect)((() => {
+                                const dd = bd.onFrame((() => {
+                                  var dd, Od;
+                                  const Wd = bd.getState();
+                                  if (!Wd.isActive || !Fd.current) return;
+                                  const Rd = Wd.state,
+                                    Xd = null !== (dd = Rd.timeRemaining) && void 0 !== dd ? dd : 0,
+                                    Kd = null !== (Od = Rd.xR) && void 0 !== Od ? Od : 1,
+                                    vd = td * (1 - Xd / Kd);
+                                  Fd.current.style.strokeDashoffset = `${vd}`, md.current && (md.current.style.opacity = Xd > 0 ? "1" : "0"), hd.current && Nd && (hd.current.textContent = `${(Xd/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  rr()
+                                  dd()
                                 }
-                              }), [zr, Nr]), (0, Ir.jsxs)("div", {
+                              }), [bd, Nd]), (0, Kd.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: Qr,
+                                ref: md,
                                 style: {
-                                  ...null !== Ur && {
-                                    "--scale": Ur
+                                  ...null !== qd && {
+                                    "--scale": qd
                                   },
-                                  ...null !== tr && {
-                                    "--rotation": `${tr}deg`
+                                  ...null !== Hd && {
+                                    "--rotation": `${Hd}deg`
                                   }
                                 },
-                                children: [(0, Ir.jsxs)("div", {
+                                children: [(0, Kd.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, Ir.jsxs)("svg", {
+                                  children: [(0, Kd.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Ir.jsx)("circle", {
+                                    children: [(0, Kd.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, Ir.jsx)("circle", {
+                                    }), (0, Kd.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6290,80 +6290,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: xr,
-                                      ref: Wr
+                                      strokeDasharray: td,
+                                      ref: Fd
                                     })]
-                                  }), (0, Ir.jsx)("div", {
+                                  }), (0, Kd.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, Ir.jsx)(ar.c, {
+                                    children: (0, Kd.jsx)(Rd.d, {
                                       text: [{
-                                        icon: mr
+                                        icon: od
                                       }],
-                                      className: pr()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: hr
+                                      className: Qd()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: yd
                                       })
                                     })
                                   })]
-                                }), (0, Ir.jsxs)("div", {
+                                }), (0, Kd.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, Ir.jsx)(ar.c, {
-                                    text: Er,
+                                  children: [(0, Kd.jsx)(Rd.d, {
+                                    text: vd,
                                     className: "QTETimedClickLabelText"
-                                  }), Nr && (0, Ir.jsx)("span", {
+                                  }), Nd && (0, Kd.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: fr
+                                    ref: hd
                                   })]
                                 })]
                               })
                             })),
-                            Nr = (0, Zr.memo)((function(rr) {
+                            Nd = (0, Wd.memo)((function(dd) {
                               let {
-                                initialParameters: Sr
-                              } = rr;
-                              const Qr = (0, Zr.useRef)(null),
-                                Wr = (0, Zr.useRef)(null),
-                                fr = (0, Zr.useRef)(null),
-                                Er = (0, Zr.useRef)(!1),
-                                pr = Sr.description,
-                                xr = null === Sr || void 0 === Sr ? void 0 : Sr.icon,
-                                mr = (0, jr.f)();
-                              return (0, Zr.useEffect)((() => {
-                                const rr = mr.onFrame((() => {
-                                  const rr = mr.getState();
-                                  if (!rr.isActive) return;
-                                  const Sr = rr.state;
-                                  if (Qr.current) {
-                                    const rr = 100 * (Sr.catchZonePosition - Sr.qa / 2);
-                                    Qr.current.style.left = `${rr}%`, Qr.current.style.width = 100 * Sr.qa + "%", Sr.isCatching !== Er.current && (Er.current = Sr.isCatching, Sr.isCatching ? Qr.current.classList.add("catching") : Qr.current.classList.remove("catching"))
+                                initialParameters: Od
+                              } = dd;
+                              const md = (0, Wd.useRef)(null),
+                                Fd = (0, Wd.useRef)(null),
+                                hd = (0, Wd.useRef)(null),
+                                vd = (0, Wd.useRef)(!1),
+                                Qd = Od.description,
+                                td = null === Od || void 0 === Od ? void 0 : Od.icon,
+                                od = (0, Xd.f)();
+                              return (0, Wd.useEffect)((() => {
+                                const dd = od.onFrame((() => {
+                                  const dd = od.getState();
+                                  if (!dd.isActive) return;
+                                  const Od = dd.state;
+                                  if (md.current) {
+                                    const dd = 100 * (Od.catchZonePosition - Od.VR / 2);
+                                    md.current.style.left = `${dd}%`, md.current.style.width = 100 * Od.VR + "%", Od.isCatching !== vd.current && (vd.current = Od.isCatching, Od.isCatching ? md.current.classList.add("catching") : md.current.classList.remove("catching"))
                                   }
-                                  Wr.current && (Wr.current.style.left = 100 * Sr.moverPosition + "%"), fr.current && (fr.current.value = Sr.progress)
+                                  Fd.current && (Fd.current.style.left = 100 * Od.moverPosition + "%"), hd.current && (hd.current.value = Od.progress)
                                 }));
                                 return () => {
-                                  rr()
+                                  dd()
                                 }
-                              }), [mr]), (0, Ir.jsxs)("div", {
+                              }), [od]), (0, Kd.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, Ir.jsx)("div", {
+                                children: [(0, Kd.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, Ir.jsx)(ar.c, {
-                                    text: pr
+                                  children: (0, Kd.jsx)(Rd.d, {
+                                    text: Qd
                                   })
-                                }), (0, Ir.jsx)("progress", {
+                                }), (0, Kd.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: fr
-                                }), (0, Ir.jsxs)("div", {
+                                  ref: hd
+                                }), (0, Kd.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, Ir.jsx)("div", {
+                                  children: [(0, Kd.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: Qr
-                                  }), (0, Ir.jsx)("div", {
+                                    ref: md
+                                  }), (0, Kd.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: Wr,
-                                    children: (0, Ir.jsx)("span", {
-                                      children: xr && (0, Ir.jsx)(ar.c, {
+                                    ref: Fd,
+                                    children: (0, Kd.jsx)("span", {
+                                      children: td && (0, Kd.jsx)(Rd.d, {
                                         text: [{
-                                          icon: xr,
+                                          icon: td,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6374,782 +6374,782 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var Ur = Qr(688);
-                          const tr = (0, Zr.memo)((function(rr) {
+                          var qd = md(701);
+                          const Hd = (0, Wd.memo)((function(dd) {
                               let {
-                                initialParameters: Sr
-                              } = rr;
-                              const Qr = (0, Zr.useRef)(null),
-                                Wr = Sr.label,
-                                fr = Sr.Aa,
+                                initialParameters: Od
+                              } = dd;
+                              const md = (0, Wd.useRef)(null),
+                                Fd = Od.label,
+                                hd = Od.PR,
                                 {
-                                  icon: Er,
-                                  scale: pr,
-                                  rotation: xr
-                                } = null !== Sr && void 0 !== Sr ? Sr : {},
-                                mr = 100 * (.5 - fr / 2),
-                                Nr = 100 * fr,
-                                tr = (0, jr.f)();
-                              return (0, Zr.useEffect)((() => {
-                                const rr = tr.onFrame((() => {
-                                  const rr = tr.getState();
-                                  if (!rr.isActive || !Qr.current) return;
-                                  const Sr = rr.state;
-                                  Qr.current.style.left = 100 * Sr.markerPosition + "%"
+                                  icon: vd,
+                                  scale: Qd,
+                                  rotation: td
+                                } = null !== Od && void 0 !== Od ? Od : {},
+                                od = 100 * (.5 - hd / 2),
+                                Nd = 100 * hd,
+                                Hd = (0, Xd.f)();
+                              return (0, Wd.useEffect)((() => {
+                                const dd = Hd.onFrame((() => {
+                                  const dd = Hd.getState();
+                                  if (!dd.isActive || !md.current) return;
+                                  const Od = dd.state;
+                                  md.current.style.left = 100 * Od.markerPosition + "%"
                                 }));
                                 return () => {
-                                  rr()
+                                  dd()
                                 }
-                              }), [tr]), (0, Ir.jsxs)("div", {
+                              }), [Hd]), (0, Kd.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, Ur.L)(pr) && {
-                                    "--scale": pr
+                                  ...!(0, qd.O)(Qd) && {
+                                    "--scale": Qd
                                   },
-                                  ...!(0, Ur.L)(xr) && {
-                                    "--rotation": `${xr}deg`
+                                  ...!(0, qd.O)(td) && {
+                                    "--rotation": `${td}deg`
                                   }
                                 },
-                                children: [Er && (0, Ir.jsx)(ar.c, {
+                                children: [vd && (0, Kd.jsx)(Rd.d, {
                                   text: [{
-                                    icon: Er
+                                    icon: vd
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, Ir.jsxs)("div", {
+                                }), (0, Kd.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, Ir.jsx)("div", {
+                                  children: [(0, Kd.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${mr}%`,
-                                      width: `${Nr}%`
+                                      left: `${od}%`,
+                                      width: `${Nd}%`
                                     }
-                                  }), (0, Ir.jsx)("div", {
+                                  }), (0, Kd.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: Qr
+                                    ref: md
                                   })]
-                                }), (0, Ir.jsx)("div", {
+                                }), (0, Kd.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, Ir.jsx)(ar.c, {
-                                    text: Wr
+                                  children: (0, Kd.jsx)(Rd.d, {
+                                    text: Fd
                                   })
                                 })]
                               })
                             })),
-                            hr = (0, Zr.memo)((function(rr) {
+                            yd = (0, Wd.memo)((function(dd) {
                               let {
-                                initialParameters: Sr
-                              } = rr;
-                              const Qr = (0, Zr.useRef)(null),
-                                [Wr, fr] = (0, Zr.useState)((() => new Array(Sr.ia).fill("pending"))),
-                                [Er, pr] = (0, Zr.useState)((() => {
-                                  const rr = Sr.Fa;
-                                  return (0, Ur.L)(rr) || rr <= 0 ? [] : new Array(rr).fill("pending")
+                                initialParameters: Od
+                              } = dd;
+                              const md = (0, Wd.useRef)(null),
+                                [Fd, hd] = (0, Wd.useState)((() => new Array(Od.cR).fill("pending"))),
+                                [vd, Qd] = (0, Wd.useState)((() => {
+                                  const dd = Od.eR;
+                                  return (0, qd.O)(dd) || dd <= 0 ? [] : new Array(dd).fill("pending")
                                 })),
-                                xr = Sr.label,
+                                td = Od.label,
                                 {
-                                  icon: mr
-                                } = Sr,
-                                Nr = (0, Zr.useRef)(0),
-                                tr = (0, Zr.useRef)(0),
-                                hr = (0, Zr.useRef)([]),
-                                zr = (0, jr.f)();
-                              return (0, Zr.useEffect)((() => {
-                                const rr = zr.onFrame((() => {
-                                  const rr = zr.getState();
-                                  if (!rr.isActive || !Qr.current) return;
-                                  const Sr = rr.state,
-                                    Zr = 30 + 60 * Sr.outerCircleProgress;
-                                  if (Qr.current.setAttribute("r", String(Zr)), !0 === Sr.lastClickResult && Sr.successes > Nr.current) {
-                                    Qr.current.classList.remove("QTERhythmClickOuterCircle--miss"), Qr.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const rr = setTimeout((() => {
-                                      var rr;
-                                      null === (rr = Qr.current) || void 0 === rr || rr.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: od
+                                } = Od,
+                                Nd = (0, Wd.useRef)(0),
+                                Hd = (0, Wd.useRef)(0),
+                                yd = (0, Wd.useRef)([]),
+                                bd = (0, Xd.f)();
+                              return (0, Wd.useEffect)((() => {
+                                const dd = bd.onFrame((() => {
+                                  const dd = bd.getState();
+                                  if (!dd.isActive || !md.current) return;
+                                  const Od = dd.state,
+                                    Wd = 30 + 60 * Od.outerCircleProgress;
+                                  if (md.current.setAttribute("r", String(Wd)), !0 === Od.lastClickResult && Od.successes > Nd.current) {
+                                    md.current.classList.remove("QTERhythmClickOuterCircle--miss"), md.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const dd = setTimeout((() => {
+                                      var dd;
+                                      null === (dd = md.current) || void 0 === dd || dd.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    hr.current.push(rr)
-                                  } else if (!1 === Sr.lastClickResult && Sr.misses > tr.current) {
-                                    Qr.current.classList.remove("QTERhythmClickOuterCircle--hit"), Qr.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const rr = setTimeout((() => {
-                                      var rr;
-                                      null === (rr = Qr.current) || void 0 === rr || rr.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    yd.current.push(dd)
+                                  } else if (!1 === Od.lastClickResult && Od.misses > Hd.current) {
+                                    md.current.classList.remove("QTERhythmClickOuterCircle--hit"), md.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const dd = setTimeout((() => {
+                                      var dd;
+                                      null === (dd = md.current) || void 0 === dd || dd.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    hr.current.push(rr)
+                                    yd.current.push(dd)
                                   }
-                                  Sr.successes === Nr.current && Sr.misses === tr.current || (Nr.current = Sr.successes, tr.current = Sr.misses, fr((rr => {
-                                    const Qr = [...rr];
-                                    for (let Zr = 0; Zr < Sr.ia; Zr++) Qr[Zr] = Zr < Sr.successes ? "success" : "pending";
-                                    return Qr
-                                  })), pr((rr => {
-                                    if (0 === rr.length) return rr;
-                                    const Qr = [...rr];
-                                    for (let Zr = 0; Zr < Qr.length; Zr++) Qr[Zr] = Zr < Sr.misses ? "miss" : "pending";
-                                    return Qr
+                                  Od.successes === Nd.current && Od.misses === Hd.current || (Nd.current = Od.successes, Hd.current = Od.misses, hd((dd => {
+                                    const md = [...dd];
+                                    for (let Wd = 0; Wd < Od.cR; Wd++) md[Wd] = Wd < Od.successes ? "success" : "pending";
+                                    return md
+                                  })), Qd((dd => {
+                                    if (0 === dd.length) return dd;
+                                    const md = [...dd];
+                                    for (let Wd = 0; Wd < md.length; Wd++) md[Wd] = Wd < Od.misses ? "miss" : "pending";
+                                    return md
                                   })))
                                 }));
                                 return () => {
-                                  rr();
-                                  for (const rr of hr.current) clearTimeout(rr);
-                                  hr.current = []
+                                  dd();
+                                  for (const dd of yd.current) clearTimeout(dd);
+                                  yd.current = []
                                 }
-                              }), [zr]), (0, Ir.jsxs)("div", {
+                              }), [bd]), (0, Kd.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, Ir.jsx)("div", {
+                                children: [(0, Kd.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Wr.map(((rr, Sr) => (0, Ir.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === rr ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, Sr)))
-                                }), (0, Ir.jsxs)("div", {
+                                  children: Fd.map(((dd, Od) => (0, Kd.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === dd ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, Od)))
+                                }), (0, Kd.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, Ir.jsxs)("svg", {
+                                  children: [(0, Kd.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, Ir.jsx)("circle", {
+                                    children: [(0, Kd.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, Ir.jsx)("circle", {
+                                    }), (0, Kd.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: Qr
+                                      ref: md
                                     })]
-                                  }), mr && (0, Ir.jsx)("div", {
+                                  }), od && (0, Kd.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, Ir.jsx)(ar.c, {
+                                    children: (0, Kd.jsx)(Rd.d, {
                                       text: [{
-                                        icon: mr
+                                        icon: od
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), Er.length > 0 && (0, Ir.jsx)("div", {
+                                }), vd.length > 0 && (0, Kd.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Er.map(((rr, Sr) => (0, Ir.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === rr ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, Sr)))
-                                }), (0, Ir.jsx)("div", {
+                                  children: vd.map(((dd, Od) => (0, Kd.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === dd ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, Od)))
+                                }), (0, Kd.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, Ir.jsx)(ar.c, {
-                                    text: xr
+                                  children: (0, Kd.jsx)(Rd.d, {
+                                    text: td
                                   })
                                 })]
                               })
                             }));
 
-                          function zr(rr) {
+                          function bd(dd) {
                             let {
-                              qte: Sr
-                            } = rr;
-                            switch (Sr.type) {
+                              qte: Od
+                            } = dd;
+                            switch (Od.type) {
                               case "progressBar":
-                                return (0, Ir.jsx)(fr, {
-                                  initialParameters: Sr.parameters
+                                return (0, Kd.jsx)(hd, {
+                                  initialParameters: Od.parameters
                                 });
                               case "timedClick":
-                                return (0, Ir.jsx)(mr, {
-                                  initialParameters: Sr.parameters
+                                return (0, Kd.jsx)(od, {
+                                  initialParameters: Od.parameters
                                 });
                               case "gravityBar":
-                                return (0, Ir.jsx)(Nr, {
-                                  initialParameters: Sr.parameters
+                                return (0, Kd.jsx)(Nd, {
+                                  initialParameters: Od.parameters
                                 });
                               case "precisionBar":
-                                return (0, Ir.jsx)(tr, {
-                                  initialParameters: Sr.parameters
+                                return (0, Kd.jsx)(Hd, {
+                                  initialParameters: Od.parameters
                                 });
                               case "rhythmClick":
-                                return (0, Ir.jsx)(hr, {
-                                  initialParameters: Sr.parameters
+                                return (0, Kd.jsx)(yd, {
+                                  initialParameters: Od.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const Yr = (0, Zr.memo)((function() {
-                            const [rr, Sr] = (0, Zr.useState)({
+                          const Td = (0, Wd.memo)((function() {
+                            const [dd, Od] = (0, Wd.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, Wr.c)("qteStateUpdated", (rr => {
-                              Sr(rr)
-                            })), rr.isActive && rr.type ? (0, Ir.jsx)("div", {
+                            return (0, Fd.f)("qteStateUpdated", (dd => {
+                              Od(dd)
+                            })), dd.isActive && dd.type ? (0, Kd.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, Ir.jsx)(zr, {
-                                qte: rr
+                              children: (0, Kd.jsx)(bd, {
+                                qte: dd
                               })
                             }) : null
                           }))
-                        }, 5589: (rr, Sr, Qr) => {
-                          Qr.d(Sr, {
-                            b: () => Ir,
-                            f: () => fr
+                        }, 5548: (dd, Od, md) => {
+                          md.d(Od, {
+                            d: () => Kd,
+                            f: () => hd
                           });
-                          var Zr = Qr(72),
-                            Wr = Qr(1364),
-                            ar = Qr(5594);
-                          const jr = {
-                              getState: () => ar.e.getCurrentState(),
-                              onFrame: Wr.H
+                          var Wd = md(66),
+                            Fd = md(1361),
+                            Rd = md(5550);
+                          const Xd = {
+                              getState: () => Rd.e.getCurrentState(),
+                              onFrame: Fd.D
                             },
-                            Ir = (0, Zr.createContext)(jr);
+                            Kd = (0, Wd.createContext)(Xd);
 
-                          function fr() {
-                            return (0, Zr.useContext)(Ir)
+                          function hd() {
+                            return (0, Wd.useContext)(Kd)
                           }
-                        }, 5658: (rr, Sr, Qr) => {
-                          Qr.d(Sr, {
-                            d: () => Rr,
-                            h: () => qr
+                        }, 5620: (dd, Od, md) => {
+                          md.d(Od, {
+                            c: () => rd,
+                            e: () => Ad
                           });
-                          var Zr = Qr(5667),
-                            Wr = Qr(360);
-                          const ar = 120,
-                            jr = 260,
-                            Ir = 1.15,
-                            fr = 1.2,
-                            Er = 2,
-                            pr = 1.08,
-                            xr = .8,
-                            mr = .95,
-                            Nr = 8,
-                            Ur = "[\"')\\]\u300d\u300f\uff09]*",
-                            tr = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Ur}$`),
-                            hr = new RegExp(`[?\uff1f]${Ur}$`),
-                            zr = new RegExp(`[!\uff01]${Ur}$`),
-                            Yr = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            nr = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            er = new RegExp(`[${nr}]`),
-                            Kr = new RegExp(`[${nr}]|[^${nr}]+`, "g"),
-                            yr = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var Wd = md(5623),
+                            Fd = md(387);
+                          const Rd = 120,
+                            Xd = 260,
+                            Kd = 1.15,
+                            hd = 1.2,
+                            vd = 2,
+                            Qd = 1.08,
+                            td = .8,
+                            od = .95,
+                            Nd = 8,
+                            qd = "[\"')\\]\u300d\u300f\uff09]*",
+                            Hd = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${qd}$`),
+                            yd = new RegExp(`[?\uff1f]${qd}$`),
+                            bd = new RegExp(`[!\uff01]${qd}$`),
+                            Td = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            pd = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            Yd = new RegExp(`[${pd}]`),
+                            gd = new RegExp(`[${pd}]|[^${pd}]+`, "g"),
+                            wd = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function Br(rr) {
-                            let Sr = 2166136261;
-                            for (let Qr = 0; Qr < rr.length; Qr++) Sr ^= rr.charCodeAt(Qr), Sr = Math.imul(Sr, 16777619);
-                            return (Sr >>> 0) / 4294967295 * 2 - 1
+                          function Ed(dd) {
+                            let Od = 2166136261;
+                            for (let md = 0; md < dd.length; md++) Od ^= dd.charCodeAt(md), Od = Math.imul(Od, 16777619);
+                            return (Od >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function Tr(rr) {
-                            var Sr;
-                            if (er.test(rr)) return 1;
-                            const Qr = rr.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              Zr = Qr.replace(/[^0-9]/g, "");
-                            if (Zr.length > 0 && !/\p{L}/u.test(Qr)) return Math.min(Zr.length, 4);
-                            const Wr = null !== (Sr = Qr.match(yr)) && void 0 !== Sr ? Sr : [];
-                            if (0 === Wr.length) {
-                              var ar, jr;
-                              const rr = null !== (ar = null === (jr = Qr.match(/\p{L}/gu)) || void 0 === jr ? void 0 : jr.length) && void 0 !== ar ? ar : 0;
-                              return 0 === rr ? 0 : Math.min(Math.max(1, Math.round(rr / 2.5)), Nr)
+                          function Jd(dd) {
+                            var Od;
+                            if (Yd.test(dd)) return 1;
+                            const md = dd.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              Wd = md.replace(/[^0-9]/g, "");
+                            if (Wd.length > 0 && !/\p{L}/u.test(md)) return Math.min(Wd.length, 4);
+                            const Fd = null !== (Od = md.match(wd)) && void 0 !== Od ? Od : [];
+                            if (0 === Fd.length) {
+                              var Rd, Xd;
+                              const dd = null !== (Rd = null === (Xd = md.match(/\p{L}/gu)) || void 0 === Xd ? void 0 : Xd.length) && void 0 !== Rd ? Rd : 0;
+                              return 0 === dd ? 0 : Math.min(Math.max(1, Math.round(dd / 2.5)), Nd)
                             }
-                            const Ir = Qr.replace(/[^\p{L}]/gu, ""),
-                              fr = Wr.length > 1 && "e" === Wr.at(-1) && Ir.endsWith("e") && !Ir.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(rr.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(Wr.length - (fr ? 1 : 0), Nr)
+                            const Kd = md.replace(/[^\p{L}]/gu, ""),
+                              hd = Fd.length > 1 && "e" === Fd.at(-1) && Kd.endsWith("e") && !Kd.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(dd.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(Fd.length - (hd ? 1 : 0), Nd)
                           }
 
-                          function vr(rr) {
-                            return rr.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function Ud(dd) {
+                            return dd.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function Or(rr) {
-                            const Sr = rr.replace(/[^\p{L}]/gu, "");
-                            return Sr.length >= 2 && Sr === Sr.toUpperCase() && Sr !== Sr.toLowerCase()
+                          function xd(dd) {
+                            const Od = dd.replace(/[^\p{L}]/gu, "");
+                            return Od.length >= 2 && Od === Od.toUpperCase() && Od !== Od.toLowerCase()
                           }
 
-                          function Lr(rr, Sr) {
-                            var Qr;
-                            const Nr = Sr && (0, Zr.n)(Sr),
-                              Ur = null !== (Qr = null === Nr || void 0 === Nr ? void 0 : Nr.syllableMs) && void 0 !== Qr ? Qr : Zr.e,
-                              nr = function(rr) {
-                                const Sr = [];
-                                for (const Zr of (0, Wr.gc)(rr))
-                                  if ("string" === typeof Zr)
-                                    for (const rr of Zr.split(/(\s+)/)) {
-                                      if ("" === rr) continue;
-                                      if (/^\s+$/.test(rr)) {
-                                        Sr.push({
+                          function Bd(dd, Od) {
+                            var md;
+                            const Nd = Od && (0, Wd.k)(Od),
+                              qd = null !== (md = null === Nd || void 0 === Nd ? void 0 : Nd.syllableMs) && void 0 !== md ? md : Wd.d,
+                              pd = function(dd) {
+                                const Od = [];
+                                for (const Wd of (0, Fd.dc)(dd))
+                                  if ("string" === typeof Wd)
+                                    for (const dd of Wd.split(/(\s+)/)) {
+                                      if ("" === dd) continue;
+                                      if (/^\s+$/.test(dd)) {
+                                        Od.push({
                                           kind: "space",
-                                          text: rr
+                                          text: dd
                                         });
                                         continue
                                       }
-                                      if (!er.test(rr)) {
-                                        Sr.push({
+                                      if (!Yd.test(dd)) {
+                                        Od.push({
                                           kind: "word",
-                                          text: rr,
+                                          text: dd,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let Zr = !0;
-                                      for (const Wr of null !== (Qr = rr.match(Kr)) && void 0 !== Qr ? Qr : []) {
-                                        var Qr;
-                                        const rr = Sr.at(-1);
-                                        Zr || "word" !== (null === rr || void 0 === rr ? void 0 : rr.kind) || er.test(Wr) || /[\p{L}\p{N}]/u.test(Wr) ? (Zr || Sr.push({
+                                      let Wd = !0;
+                                      for (const Fd of null !== (md = dd.match(gd)) && void 0 !== md ? md : []) {
+                                        var md;
+                                        const dd = Od.at(-1);
+                                        Wd || "word" !== (null === dd || void 0 === dd ? void 0 : dd.kind) || Yd.test(Fd) || /[\p{L}\p{N}]/u.test(Fd) ? (Wd || Od.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), Sr.push({
+                                        }), Od.push({
                                           kind: "word",
-                                          text: Wr,
+                                          text: Fd,
                                           delayMs: 0
-                                        }), Zr = !1) : rr.text += Wr
+                                        }), Wd = !1) : dd.text += Fd
                                       }
-                                    } else Sr.push({
+                                    } else Od.push({
                                       kind: "icon",
-                                      text: Zr.icon,
+                                      text: Wd.icon,
                                       delayMs: 0
                                     });
-                                return Sr
-                              }(rr),
-                              yr = [];
-                            let Lr = [];
-                            for (const Zr of nr) "space" !== Zr.kind && (Lr.push(Zr), tr.test(Zr.text) && (yr.push(Lr), Lr = []));
-                            yr.push(Lr);
-                            const lr = [];
-                            let Xr = 0;
-                            for (const Zr of yr) {
-                              var Pr, Hr;
-                              const rr = null !== (Pr = null === (Hr = Zr.at(-1)) || void 0 === Hr ? void 0 : Hr.text) && void 0 !== Pr ? Pr : "",
-                                Sr = hr.test(rr),
-                                Qr = zr.test(rr),
-                                Wr = Zr.map((rr => "word" === rr.kind ? Tr(rr.text) : 1)),
-                                nr = Wr.findLastIndex((rr => rr > 0));
-                              for (const [hr, zr] of Zr.entries()) {
-                                const rr = "word" === zr.kind,
-                                  Zr = Wr[hr];
-                                zr.delayMs = Xr;
-                                for (let Wr = 0; Nr && Wr < Zr; Wr++) {
+                                return Od
+                              }(dd),
+                              wd = [];
+                            let Bd = [];
+                            for (const Wd of pd) "space" !== Wd.kind && (Bd.push(Wd), Hd.test(Wd.text) && (wd.push(Bd), Bd = []));
+                            wd.push(Bd);
+                            const Sd = [];
+                            let sd = 0;
+                            for (const Wd of wd) {
+                              var ud, Vd;
+                              const dd = null !== (ud = null === (Vd = Wd.at(-1)) || void 0 === Vd ? void 0 : Vd.text) && void 0 !== ud ? ud : "",
+                                Od = yd.test(dd),
+                                md = bd.test(dd),
+                                Fd = Wd.map((dd => "word" === dd.kind ? Jd(dd.text) : 1)),
+                                pd = Fd.findLastIndex((dd => dd > 0));
+                              for (const [yd, bd] of Wd.entries()) {
+                                const dd = "word" === bd.kind,
+                                  Wd = Fd[yd];
+                                bd.delayMs = sd;
+                                for (let Fd = 0; Nd && Fd < Wd; Fd++) {
                                   const {
-                                    intonation: ar
-                                  } = Nr;
-                                  let jr = nr > 0 ? -ar.declineSemitones * (hr / nr) : 0;
-                                  jr += Br(`${vr(zr.text)}|${Wr}`) * ar.variationSemitones;
-                                  const tr = Math.min(1, ar.variationSemitones);
-                                  let Yr = Nr.glideSemitones,
-                                    er = 1;
-                                  Qr && (jr += ar.exclaimLiftSemitones, er *= Ir), Sr && hr === nr && (jr += ar.questionRiseSemitones * (Zr > 1 ? .5 + .5 * Wr / (Zr - 1) : 1), Wr === Zr - 1 && (Yr = Math.abs(Yr) + ar.questionRiseSemitones / 2)), rr && Or(zr.text) && (jr += Er * tr, er *= fr), Zr > 1 && 0 === Wr && (jr += xr * tr, er *= pr), lr.push({
-                                    atMs: Xr + Wr * Ur,
-                                    semitones: jr,
-                                    glideSemitones: Yr,
-                                    durationMs: Wr < Zr - 1 ? Math.min(Nr.durationMs, Ur * mr) : Nr.durationMs,
-                                    level: er
+                                    intonation: Rd
+                                  } = Nd;
+                                  let Xd = pd > 0 ? -Rd.declineSemitones * (yd / pd) : 0;
+                                  Xd += Ed(`${Ud(bd.text)}|${Fd}`) * Rd.variationSemitones;
+                                  const Hd = Math.min(1, Rd.variationSemitones);
+                                  let Td = Nd.glideSemitones,
+                                    Yd = 1;
+                                  md && (Xd += Rd.exclaimLiftSemitones, Yd *= Kd), Od && yd === pd && (Xd += Rd.questionRiseSemitones * (Wd > 1 ? .5 + .5 * Fd / (Wd - 1) : 1), Fd === Wd - 1 && (Td = Math.abs(Td) + Rd.questionRiseSemitones / 2)), dd && xd(bd.text) && (Xd += vd * Hd, Yd *= hd), Wd > 1 && 0 === Fd && (Xd += td * Hd, Yd *= Qd), Sd.push({
+                                    atMs: sd + Fd * qd,
+                                    semitones: Xd,
+                                    glideSemitones: Td,
+                                    durationMs: Fd < Wd - 1 ? Math.min(Nd.durationMs, qd * od) : Nd.durationMs,
+                                    level: Yd
                                   })
                                 }
-                                Xr += Zr * Ur + (tr.test(zr.text) ? jr : Yr.test(zr.text) ? ar : 0)
+                                sd += Wd * qd + (Hd.test(bd.text) ? Xd : Td.test(bd.text) ? Rd : 0)
                               }
                             }
                             return {
-                              pieces: nr.map((rr => "space" === rr.kind ? rr : "icon" === rr.kind ? {
+                              pieces: pd.map((dd => "space" === dd.kind ? dd : "icon" === dd.kind ? {
                                 kind: "icon",
-                                icon: rr.text,
-                                delayMs: rr.delayMs
+                                icon: dd.text,
+                                delayMs: dd.delayMs
                               } : {
                                 kind: "word",
-                                text: rr.text,
-                                delayMs: rr.delayMs
+                                text: dd.text,
+                                delayMs: dd.delayMs
                               })),
-                              blips: lr
+                              blips: Sd
                             }
                           }
-                          var lr = Qr(1251),
-                            Xr = Qr(1304),
-                            Pr = Qr(2093);
+                          var Sd = md(1238),
+                            sd = md(1306),
+                            ud = md(2094);
 
-                          function Hr(rr) {
-                            if ("string" === typeof rr) return rr;
-                            const Sr = Xr.f.get().getCurrentLanguageCode();
-                            return (0, lr.s)(Sr, rr.translationKey, (0, lr.p)(rr.params, Pr.b.shown))
+                          function Vd(dd) {
+                            if ("string" === typeof dd) return dd;
+                            const Od = sd.f.get().getCurrentLanguageCode();
+                            return (0, Sd.u)(Od, dd.translationKey, (0, Sd.s)(dd.params, ud.c.shown))
                           }
 
-                          function qr(rr) {
-                            const Sr = void 0 === rr.voice ? null : (0, Zr.p)(rr.voice),
-                              Qr = Sr && (0, Zr.n)(Sr);
+                          function Ad(dd) {
+                            const Od = void 0 === dd.voice ? null : (0, Wd.l)(dd.voice),
+                              md = Od && (0, Wd.k)(Od);
                             return {
-                              plan: Lr(Hr(rr.line), Qr),
-                              synth: Qr
+                              plan: Bd(Vd(dd.line), md),
+                              synth: md
                             }
                           }
 
-                          function Rr(rr) {
-                            const Sr = [];
-                            let Qr = [];
-                            for (const [Wr, ar] of rr.entries()) {
-                              var Zr;
-                              "space" === ar.kind && (" " !== ar.text || "icon" !== (null === (Zr = rr[Wr + 1]) || void 0 === Zr ? void 0 : Zr.kind)) ? (Qr.length > 0 && Sr.push(Qr), Sr.push([ar]), Qr = []) : Qr.push(ar)
+                          function rd(dd) {
+                            const Od = [];
+                            let md = [];
+                            for (const [Fd, Rd] of dd.entries()) {
+                              var Wd;
+                              "space" === Rd.kind && (" " !== Rd.text || "icon" !== (null === (Wd = dd[Fd + 1]) || void 0 === Wd ? void 0 : Wd.kind)) ? (md.length > 0 && Od.push(md), Od.push([Rd]), md = []) : md.push(Rd)
                             }
-                            return Qr.length > 0 && Sr.push(Qr), Sr
+                            return md.length > 0 && Od.push(md), Od
                           }
-                        }, 5675: (rr, Sr, Qr) => {
-                          Qr.d(Sr, {
-                            e: () => pr,
-                            h: () => xr
+                        }, 5632: (dd, Od, md) => {
+                          md.d(Od, {
+                            b: () => Qd,
+                            f: () => td
                           });
-                          var Zr = Qr(5681),
-                            Wr = Qr(26);
-                          const ar = .25,
-                            jr = .85,
-                            Ir = .02,
-                            fr = .01;
+                          var Wd = md(5641),
+                            Fd = md(29);
+                          const Rd = .25,
+                            Xd = .85,
+                            Kd = .02,
+                            hd = .01;
 
-                          function Er(rr, Sr, Qr, Zr, Wr, ar, Ir) {
+                          function vd(dd, Od, md, Wd, Fd, Rd, Kd) {
                             const {
-                              waveform: fr,
-                              pitchHz: Er,
-                              attackMs: pr,
-                              releaseMs: xr,
-                              lowpassHz: mr
-                            } = Qr, Nr = Wr + Zr.durationMs / 1e3, Ur = Er * 2 ** (Zr.semitones / 12), tr = rr.createOscillator();
-                            tr.type = fr, tr.frequency.setValueAtTime(Ur, Wr), tr.frequency.exponentialRampToValueAtTime(Ur * 2 ** (Zr.glideSemitones / 12), Nr);
-                            const hr = Wr + Math.min(pr, Zr.durationMs) / 1e3,
-                              zr = rr.createGain();
-                            zr.gain.setValueAtTime(0, Wr), zr.gain.linearRampToValueAtTime(ar, hr), zr.gain.linearRampToValueAtTime(ar * jr, Math.max(hr, Nr - xr / 1e3)), zr.gain.linearRampToValueAtTime(0, Nr);
-                            const Yr = [tr];
-                            if (null !== mr) {
-                              const Sr = rr.createBiquadFilter();
-                              Sr.type = "lowpass", Sr.frequency.value = mr, Yr.push(Sr)
+                              waveform: hd,
+                              pitchHz: vd,
+                              attackMs: Qd,
+                              releaseMs: td,
+                              lowpassHz: od
+                            } = md, Nd = Fd + Wd.durationMs / 1e3, qd = vd * 2 ** (Wd.semitones / 12), Hd = dd.createOscillator();
+                            Hd.type = hd, Hd.frequency.setValueAtTime(qd, Fd), Hd.frequency.exponentialRampToValueAtTime(qd * 2 ** (Wd.glideSemitones / 12), Nd);
+                            const yd = Fd + Math.min(Qd, Wd.durationMs) / 1e3,
+                              bd = dd.createGain();
+                            bd.gain.setValueAtTime(0, Fd), bd.gain.linearRampToValueAtTime(Rd, yd), bd.gain.linearRampToValueAtTime(Rd * Xd, Math.max(yd, Nd - td / 1e3)), bd.gain.linearRampToValueAtTime(0, Nd);
+                            const Td = [Hd];
+                            if (null !== od) {
+                              const Od = dd.createBiquadFilter();
+                              Od.type = "lowpass", Od.frequency.value = od, Td.push(Od)
                             }
-                            Yr.push(zr, Sr);
-                            for (let jr = 1; jr < Yr.length; jr++) Yr[jr - 1].connect(Yr[jr]);
-                            return tr.onended = () => {
-                              for (const rr of Yr.slice(0, -1)) rr.disconnect();
-                              Ir()
-                            }, tr.start(Wr), tr.stop(Nr), tr
+                            Td.push(bd, Od);
+                            for (let Xd = 1; Xd < Td.length; Xd++) Td[Xd - 1].connect(Td[Xd]);
+                            return Hd.onended = () => {
+                              for (const dd of Td.slice(0, -1)) dd.disconnect();
+                              Kd()
+                            }, Hd.start(Fd), Hd.stop(Nd), Hd
                           }
 
-                          function pr(rr, Sr, Qr, Zr, Wr, jr) {
-                            if (0 === Zr.length) return jr(), () => {};
-                            const pr = ar * Qr.volume * Wr,
-                              xr = rr.createGain();
-                            xr.connect(Sr);
-                            const mr = rr.currentTime + Ir,
-                              Nr = new Set;
-                            for (const ar of Zr) {
-                              const Sr = Er(rr, xr, Qr, ar, mr + ar.atMs / 1e3, pr * ar.level, (() => {
-                                Nr.delete(Sr), 0 === Nr.size && (xr.disconnect(), jr())
+                          function Qd(dd, Od, md, Wd, Fd, Xd) {
+                            if (0 === Wd.length) return Xd(), () => {};
+                            const Qd = Rd * md.volume * Fd,
+                              td = dd.createGain();
+                            td.connect(Od);
+                            const od = dd.currentTime + Kd,
+                              Nd = new Set;
+                            for (const Rd of Wd) {
+                              const Od = vd(dd, td, md, Rd, od + Rd.atMs / 1e3, Qd * Rd.level, (() => {
+                                Nd.delete(Od), 0 === Nd.size && (td.disconnect(), Xd())
                               }));
-                              Nr.add(Sr)
+                              Nd.add(Od)
                             }
                             return () => {
-                              const Sr = rr.currentTime;
-                              xr.gain.setTargetAtTime(0, Sr, fr);
-                              for (const rr of Nr) try {
-                                rr.stop(Sr + 5 * fr)
+                              const Od = dd.currentTime;
+                              td.gain.setTargetAtTime(0, Od, hd);
+                              for (const dd of Nd) try {
+                                dd.stop(Od + 5 * hd)
                               } catch {}
                             }
                           }
 
-                          function xr(rr, Sr) {
-                            var Qr;
-                            const ar = Zr.Howler.ctx,
-                              jr = Zr.Howler.masterGain;
-                            if (!ar || !jr || !Wr.c.get("soundOnFromAd")) return () => {};
-                            const Ir = Zr.Howler;
-                            return null === (Qr = Ir._autoResume) || void 0 === Qr || Qr.call(Ir), pr(ar, jr, rr, Sr, Wr.c.get("soundVolume"), (() => {
-                              var rr;
-                              null === (rr = Ir._autoSuspend) || void 0 === rr || rr.call(Ir)
+                          function td(dd, Od) {
+                            var md;
+                            const Rd = Wd.Howler.ctx,
+                              Xd = Wd.Howler.masterGain;
+                            if (!Rd || !Xd || !Fd.e.get("soundOnFromAd")) return () => {};
+                            const Kd = Wd.Howler;
+                            return null === (md = Kd._autoResume) || void 0 === md || md.call(Kd), Qd(Rd, Xd, dd, Od, Fd.e.get("soundVolume"), (() => {
+                              var dd;
+                              null === (dd = Kd._autoSuspend) || void 0 === dd || dd.call(Kd)
                             }))
                           }
-                        }, 5636: (rr, Sr, Qr) => {
-                          Qr.d(Sr, {
-                            c: () => Ir,
-                            g: () => Wr,
-                            i: () => fr,
-                            l: () => jr,
-                            o: () => ar
+                        }, 5607: (dd, Od, md) => {
+                          md.d(Od, {
+                            d: () => Kd,
+                            f: () => Fd,
+                            g: () => hd,
+                            i: () => Xd,
+                            k: () => Rd
                           });
-                          var Zr = Qr(5634);
-                          const Wr = {
+                          var Wd = md(5599);
+                          const Fd = {
                               name: "ChatGPT",
                               url: "https://chatgpt.com/?hints=search&q="
                             },
-                            ar = {
+                            Rd = {
                               name: "Claude",
                               url: "https://claude.ai/new?q="
                             },
-                            jr = `${Zr.l} lists every page of the Bloxd Code API docs.`;
+                            Xd = `${Wd.k} lists every page of the Bloxd Code API docs.`;
 
-                          function Ir(rr, Sr) {
-                            return `${rr.url}${encodeURIComponent(Sr.toWellFormed())}`
+                          function Kd(dd, Od) {
+                            return `${dd.url}${encodeURIComponent(Od.toWellFormed())}`
                           }
 
-                          function fr(rr) {
-                            const Sr = Ir(Wr, rr);
-                            return Sr.length <= 3e4 ? {
-                              url: Sr,
+                          function hd(dd) {
+                            const Od = Kd(Fd, dd);
+                            return Od.length <= 3e4 ? {
+                              url: Od,
                               sendsPrompt: !0
                             } : {
-                              url: new URL(Wr.url).origin,
+                              url: new URL(Fd.url).origin,
                               sendsPrompt: !1
                             }
                           }
-                        }, 5681: (rr, Sr, Qr) => {
-                          Qr.r(Sr), Qr.d(Sr, {
-                            Howl: () => Wr.Howl,
-                            Howler: () => Wr.Howler,
-                            musicOutput: () => hr,
-                            readyAudioContext: () => zr
+                        }, 5641: (dd, Od, md) => {
+                          md.r(Od), md.d(Od, {
+                            Howl: () => Fd.Howl,
+                            Howler: () => Fd.Howler,
+                            musicOutput: () => yd,
+                            readyAudioContext: () => bd
                           });
-                          var Zr, Wr = Qr(5689),
-                            ar = Qr(4681),
-                            jr = Qr(5413);
-                          const Ir = Wr.Howler;
+                          var Wd, Fd = md(5650),
+                            Rd = md(4664),
+                            Xd = md(5326);
+                          const Kd = Fd.Howler;
 
-                          function fr() {
-                            var rr, Sr;
-                            if (Ir.ctx || !Ir.usingWebAudio || "undefined" === typeof AudioContext || !(0, jr.i)()) return;
-                            const Qr = navigator.audioSession;
-                            let Zr;
-                            "auto" === (null === Qr || void 0 === Qr ? void 0 : Qr.type) && (Qr.type = "ambient");
+                          function hd() {
+                            var dd, Od;
+                            if (Kd.ctx || !Kd.usingWebAudio || "undefined" === typeof AudioContext || !(0, Xd.j)()) return;
+                            const md = navigator.audioSession;
+                            let Wd;
+                            "auto" === (null === md || void 0 === md ? void 0 : md.type) && (md.type = "ambient");
                             try {
-                              Zr = new AudioContext({
+                              Wd = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const Wr = Zr.createGain();
-                            Wr.gain.setValueAtTime(Ir._muted ? 0 : null !== (rr = Ir._volume) && void 0 !== rr ? rr : 1, Zr.currentTime), Wr.connect(Zr.destination), Ir.ctx = Zr, Ir.masterGain = Wr, null === (Sr = Ir._setup) || void 0 === Sr || Sr.call(Ir)
+                            const Fd = Wd.createGain();
+                            Fd.gain.setValueAtTime(Kd._muted ? 0 : null !== (dd = Kd._volume) && void 0 !== dd ? dd : 1, Wd.currentTime), Fd.connect(Wd.destination), Kd.ctx = Wd, Kd.masterGain = Fd, null === (Od = Kd._setup) || void 0 === Od || Od.call(Kd)
                           }
-                          Ir._mobileUnloaded = !0;
-                          const Er = Ir.volume.bind(Wr.Howler);
-                          Ir.volume = function() {
-                            return fr(), Er(...arguments)
+                          Kd._mobileUnloaded = !0;
+                          const vd = Kd.volume.bind(Fd.Howler);
+                          Kd.volume = function() {
+                            return hd(), vd(...arguments)
                           };
-                          const pr = Ir.mute.bind(Wr.Howler);
-                          Ir.mute = rr => (fr(), pr(rr));
-                          const xr = Wr.Howl.prototype,
-                            mr = xr.init;
+                          const Qd = Kd.mute.bind(Fd.Howler);
+                          Kd.mute = dd => (hd(), Qd(dd));
+                          const td = Fd.Howl.prototype,
+                            od = td.init;
 
-                          function Nr() {
-                            for (; Ir._html5AudioPool.length < Ir.html5PoolSize;) {
-                              const rr = new Audio;
-                              rr._unlocked = !0, Ir._releaseHtml5Audio(rr)
+                          function Nd() {
+                            for (; Kd._html5AudioPool.length < Kd.html5PoolSize;) {
+                              const dd = new Audio;
+                              dd._unlocked = !0, Kd._releaseHtml5Audio(dd)
                             }
-                            for (const Sr of Ir._howls)
-                              if (!Sr._webAudio)
-                                for (const Qr of Sr._getSoundIds()) {
-                                  var rr;
-                                  const Zr = null === (rr = Sr._soundById(Qr)) || void 0 === rr ? void 0 : rr._node;
-                                  Zr && !Zr._unlocked && (Zr._unlocked = !0, Zr.load())
+                            for (const Od of Kd._howls)
+                              if (!Od._webAudio)
+                                for (const md of Od._getSoundIds()) {
+                                  var dd;
+                                  const Wd = null === (dd = Od._soundById(md)) || void 0 === dd ? void 0 : dd._node;
+                                  Wd && !Wd._unlocked && (Wd._unlocked = !0, Wd.load())
                                 }
                           }
-                          xr.init = function(rr) {
-                            return fr(), mr.call(this, rr)
-                          }, (0, jr.i)() && (Ir._unlockAudio = () => {
-                            const rr = Ir.ctx;
-                            if (Ir._audioUnlocked || !rr) return;
-                            Ir.autoUnlock = !1;
-                            const Sr = rr.createBuffer(1, 1, 22050);
-                            Ir._scratchBuffer = Sr;
-                            const Qr = new AbortController;
-                            let Zr = "afterPaint";
-                            const Wr = () => {
-                                var Zr;
-                                if (Ir._audioUnlocked) return;
-                                null === (Zr = Ir._autoResume) || void 0 === Zr || Zr.call(Ir);
-                                const Wr = rr.createBufferSource();
-                                Wr.buffer = Sr, Wr.connect(rr.destination), Wr.start(0), rr.resume().catch((() => {})), Wr.onended = () => {
-                                  Wr.disconnect(0), Ir._audioUnlocked = !0, Qr.abort();
-                                  for (const rr of Ir._howls) rr._emit("unlock")
+                          td.init = function(dd) {
+                            return hd(), od.call(this, dd)
+                          }, (0, Xd.j)() && (Kd._unlockAudio = () => {
+                            const dd = Kd.ctx;
+                            if (Kd._audioUnlocked || !dd) return;
+                            Kd.autoUnlock = !1;
+                            const Od = dd.createBuffer(1, 1, 22050);
+                            Kd._scratchBuffer = Od;
+                            const md = new AbortController;
+                            let Wd = "afterPaint";
+                            const Fd = () => {
+                                var Wd;
+                                if (Kd._audioUnlocked) return;
+                                null === (Wd = Kd._autoResume) || void 0 === Wd || Wd.call(Kd);
+                                const Fd = dd.createBufferSource();
+                                Fd.buffer = Od, Fd.connect(dd.destination), Fd.start(0), dd.resume().catch((() => {})), Fd.onended = () => {
+                                  Fd.disconnect(0), Kd._audioUnlocked = !0, md.abort();
+                                  for (const dd of Kd._howls) dd._emit("unlock")
                                 }
                               },
-                              fr = () => {
-                                Nr(), Wr()
+                              hd = () => {
+                                Nd(), Fd()
                               },
-                              Er = Sr => {
-                                if (Nr(), "inTap" === Zr) {
-                                  if ("running" === rr.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Wr()
-                                } else "afterPaint" === Zr && (Zr = "queued", (0, ar.e)(Sr.timeStamp, (() => {
-                                  Zr = "inTap", Wr()
+                              vd = Od => {
+                                if (Nd(), "inTap" === Wd) {
+                                  if ("running" === dd.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Fd()
+                                } else "afterPaint" === Wd && (Wd = "queued", (0, Rd.d)(Od.timeStamp, (() => {
+                                  Wd = "inTap", Fd()
                                 })))
                               };
-                            for (const ar of ["touchstart", "touchend"]) document.addEventListener(ar, fr, {
+                            for (const Rd of ["touchstart", "touchend"]) document.addEventListener(Rd, hd, {
                               capture: !0,
-                              signal: Qr.signal
+                              signal: md.signal
                             });
-                            for (const ar of jr.c) document.addEventListener(ar, Er, {
+                            for (const Rd of Xd.d) document.addEventListener(Rd, vd, {
                               capture: !0,
-                              signal: Qr.signal
+                              signal: md.signal
                             })
                           });
-                          let Ur = 0;
-                          const tr = null === (Zr = Ir._autoSuspend) || void 0 === Zr ? void 0 : Zr.bind(Wr.Howler);
+                          let qd = 0;
+                          const Hd = null === (Wd = Kd._autoSuspend) || void 0 === Wd ? void 0 : Wd.bind(Fd.Howler);
 
-                          function hr() {
-                            zr();
+                          function yd() {
+                            bd();
                             const {
-                              ctx: rr,
-                              masterGain: Sr
-                            } = Ir;
-                            return rr && Sr ? {
-                              ctx: rr,
-                              destination: Sr,
-                              holdAwake: rr => {
-                                var Sr, Qr;
-                                (Ur += rr ? 1 : -1, rr) ? null === (Sr = Ir._autoResume) || void 0 === Sr || Sr.call(Ir): null === (Qr = Ir._autoSuspend) || void 0 === Qr || Qr.call(Ir)
+                              ctx: dd,
+                              masterGain: Od
+                            } = Kd;
+                            return dd && Od ? {
+                              ctx: dd,
+                              destination: Od,
+                              holdAwake: dd => {
+                                var Od, md;
+                                (qd += dd ? 1 : -1, dd) ? null === (Od = Kd._autoResume) || void 0 === Od || Od.call(Kd): null === (md = Kd._autoSuspend) || void 0 === md || md.call(Kd)
                               },
                               wake: () => {
-                                var Sr;
-                                "running" !== rr.state && (null === (Sr = Ir._autoResume) || void 0 === Sr || Sr.call(Ir), rr.resume().catch((() => {})))
+                                var Od;
+                                "running" !== dd.state && (null === (Od = Kd._autoResume) || void 0 === Od || Od.call(Kd), dd.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function zr() {
-                            var rr;
-                            (Ir.volume(), Ir.ctx && Ir.autoUnlock) && (null === (rr = Ir._unlockAudio) || void 0 === rr || rr.call(Ir))
+                          function bd() {
+                            var dd;
+                            (Kd.volume(), Kd.ctx && Kd.autoUnlock) && (null === (dd = Kd._unlockAudio) || void 0 === dd || dd.call(Kd))
                           }
-                          tr && (Ir._autoSuspend = () => Ur > 0 ? Wr.Howler : tr())
-                        }, 5692: (rr, Sr, Qr) => {
-                          function Zr(rr) {
+                          Hd && (Kd._autoSuspend = () => qd > 0 ? Fd.Howler : Hd())
+                        }, 5656: (dd, Od, md) => {
+                          function Wd(dd) {
                             return {
-                              notAfter: rr
+                              notAfter: dd
                             }
                           }
-                          Qr.d(Sr, {
-                            c: () => fr,
-                            e: () => Er,
-                            g: () => Ir,
-                            k: () => Zr,
-                            o: () => Wr,
-                            p: () => ar,
-                            s: () => jr,
-                            t: () => pr,
-                            u: () => xr
+                          md.d(Od, {
+                            d: () => hd,
+                            g: () => vd,
+                            h: () => Kd,
+                            l: () => Wd,
+                            o: () => Fd,
+                            q: () => Rd,
+                            s: () => Xd,
+                            v: () => Qd,
+                            w: () => td
                           });
-                          const Wr = Zr("\\w$."),
-                            ar = Zr("\\w.,");
+                          const Fd = Wd("\\w$."),
+                            Rd = Wd("\\w.,");
 
-                          function jr(rr) {
-                            return Sr => fr(Sr, rr)
+                          function Xd(dd) {
+                            return Od => hd(Od, dd)
                           }
 
-                          function Ir(rr) {
-                            return Sr => !rr.test(Sr.input.slice(0, Sr.index))
+                          function Kd(dd) {
+                            return Od => !dd.test(Od.input.slice(0, Od.index))
                           }
 
-                          function fr(rr, Sr) {
-                            return rr.index > 0 && new RegExp(`[${Sr}]`).test(rr.input[rr.index - 1])
+                          function hd(dd, Od) {
+                            return dd.index > 0 && new RegExp(`[${Od}]`).test(dd.input[dd.index - 1])
                           }
 
-                          function Er(rr, Sr, Qr) {
-                            return function(rr) {
-                              return void 0 !== rr && "function" !== typeof rr
-                            }(Qr) ? function(rr, Sr, Qr) {
-                              const Zr = Sr.flags.replace(/[gy]/g, ""),
-                                Wr = new RegExp(`[^${Qr}](?:${Sr.source})`, `${Zr}g`),
-                                ar = [],
-                                jr = Qr => {
-                                  const Zr = Qr.index + Qr[0].length;
-                                  return ("" === Qr[0] ? mr(rr, Sr, Zr) : Zr) - 1
+                          function vd(dd, Od, md) {
+                            return function(dd) {
+                              return void 0 !== dd && "function" !== typeof dd
+                            }(md) ? function(dd, Od, md) {
+                              const Wd = Od.flags.replace(/[gy]/g, ""),
+                                Fd = new RegExp(`[^${md}](?:${Od.source})`, `${Wd}g`),
+                                Rd = [],
+                                Xd = md => {
+                                  const Wd = md.index + md[0].length;
+                                  return ("" === md[0] ? od(dd, Od, Wd) : Wd) - 1
                                 },
-                                Ir = new RegExp(`(?:${Sr.source})`, `${Zr}y`).exec(rr);
-                              if (Ir) {
-                                if (ar.push(Ir), !Sr.global) return ar;
-                                Wr.lastIndex = jr(Ir)
+                                Kd = new RegExp(`(?:${Od.source})`, `${Wd}y`).exec(dd);
+                              if (Kd) {
+                                if (Rd.push(Kd), !Od.global) return Rd;
+                                Fd.lastIndex = Xd(Kd)
                               }
-                              for (let fr = Wr.exec(rr); fr; fr = Wr.exec(rr)) {
-                                const Qr = mr(rr, Sr, fr.index) - fr.index;
-                                if (fr[0] = fr[0].slice(Qr), fr.index += Qr, ar.push(fr), !Sr.global) break;
-                                Wr.lastIndex = jr(fr)
+                              for (let hd = Fd.exec(dd); hd; hd = Fd.exec(dd)) {
+                                const md = od(dd, Od, hd.index) - hd.index;
+                                if (hd[0] = hd[0].slice(md), hd.index += md, Rd.push(hd), !Od.global) break;
+                                Fd.lastIndex = Xd(hd)
                               }
-                              return ar
-                            }(rr, Sr, Qr.notAfter) : function(rr, Sr, Qr) {
-                              const Zr = new RegExp(Sr.source, `${Sr.flags.replace(/[gy]/g,"")}g`),
-                                Wr = [];
-                              for (let ar = Zr.exec(rr); ar; ar = Zr.exec(rr))
-                                if (!Qr || Qr(ar)) {
-                                  if (Wr.push(ar), !Sr.global) break;
-                                  "" === ar[0] && (Zr.lastIndex = mr(rr, Sr, Zr.lastIndex))
-                                } else Zr.lastIndex = mr(rr, Sr, ar.index);
-                              return Wr
-                            }(rr, Sr, Qr)
+                              return Rd
+                            }(dd, Od, md.notAfter) : function(dd, Od, md) {
+                              const Wd = new RegExp(Od.source, `${Od.flags.replace(/[gy]/g,"")}g`),
+                                Fd = [];
+                              for (let Rd = Wd.exec(dd); Rd; Rd = Wd.exec(dd))
+                                if (!md || md(Rd)) {
+                                  if (Fd.push(Rd), !Od.global) break;
+                                  "" === Rd[0] && (Wd.lastIndex = od(dd, Od, Wd.lastIndex))
+                                } else Wd.lastIndex = od(dd, Od, Rd.index);
+                              return Fd
+                            }(dd, Od, md)
                           }
 
-                          function pr(rr, Sr, Qr, Zr) {
-                            let Wr = "",
-                              ar = 0;
-                            for (const jr of Er(rr, Sr, Qr)) Wr += rr.slice(ar, jr.index) + Zr(jr), ar = jr.index + jr[0].length;
-                            return Wr + rr.slice(ar)
+                          function Qd(dd, Od, md, Wd) {
+                            let Fd = "",
+                              Rd = 0;
+                            for (const Xd of vd(dd, Od, md)) Fd += dd.slice(Rd, Xd.index) + Wd(Xd), Rd = Xd.index + Xd[0].length;
+                            return Fd + dd.slice(Rd)
                           }
 
-                          function xr(rr, Sr, Qr) {
-                            const Zr = [];
-                            let Wr = 0;
-                            for (const ar of Er(rr, Sr, Qr)) Zr.push(rr.slice(Wr, ar.index)), Wr = ar.index + ar[0].length;
-                            return [...Zr, rr.slice(Wr)]
+                          function td(dd, Od, md) {
+                            const Wd = [];
+                            let Fd = 0;
+                            for (const Rd of vd(dd, Od, md)) Wd.push(dd.slice(Fd, Rd.index)), Fd = Rd.index + Rd[0].length;
+                            return [...Wd, dd.slice(Fd)]
                           }
 
-                          function mr(rr, Sr, Qr) {
-                            var Zr;
-                            return Qr + (Sr.unicode && (null !== (Zr = rr.codePointAt(Qr)) && void 0 !== Zr ? Zr : 0) > 65535 ? 2 : 1)
+                          function od(dd, Od, md) {
+                            var Wd;
+                            return md + (Od.unicode && (null !== (Wd = dd.codePointAt(md)) && void 0 !== Wd ? Wd : 0) > 65535 ? 2 : 1)
                           }
-                        }, 5634: (rr, Sr, Qr) => {
-                          Qr.d(Sr, {
-                            d: () => Wr,
-                            f: () => fr,
-                            j: () => ar,
-                            l: () => jr,
-                            m: () => Ir,
-                            p: () => hr,
-                            r: () => pr,
-                            s: () => xr,
-                            w: () => tr,
-                            x: () => Nr
+                        }, 5599: (dd, Od, md) => {
+                          md.d(Od, {
+                            c: () => Fd,
+                            e: () => hd,
+                            g: () => Rd,
+                            k: () => Xd,
+                            m: () => Kd,
+                            p: () => yd,
+                            s: () => Qd,
+                            t: () => td,
+                            x: () => Hd,
+                            z: () => Nd
                           });
-                          var Zr = Qr(1722);
-                          const Wr = 24e3,
-                            ar = "/docs/llms.txt",
-                            jr = `${Zr.c}${ar}`,
-                            Ir = "/llms.txt",
-                            fr = "/docs/llms-full.txt";
+                          var Wd = md(1714);
+                          const Fd = 24e3,
+                            Rd = "/docs/llms.txt",
+                            Xd = `${Wd.c}${Rd}`,
+                            Kd = "/llms.txt",
+                            hd = "/docs/llms-full.txt";
 
-                          function Er(rr) {
-                            return rr || "index"
+                          function vd(dd) {
+                            return dd || "index"
                           }
 
-                          function pr(rr) {
-                            return `/docs/${Er(rr)}.md`
+                          function Qd(dd) {
+                            return `/docs/${vd(dd)}.md`
                           }
 
-                          function xr(rr, Sr) {
-                            return `/docs/${Er(rr)}/${Sr+1}.md`
+                          function td(dd, Od) {
+                            return `/docs/${vd(dd)}/${Od+1}.md`
                           }
-                          const mr = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const od = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function Nr(rr) {
-                            const Sr = mr.exec(rr);
-                            return null === Sr ? null : {
-                              name: Sr[1],
-                              part: void 0 === Sr[2] ? null : Number(Sr[2])
+                          function Nd(dd) {
+                            const Od = od.exec(dd);
+                            return null === Od ? null : {
+                              name: Od[1],
+                              part: void 0 === Od[2] ? null : Number(Od[2])
                             }
                           }
-                          const Ur = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const qd = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function tr(rr) {
-                            const Sr = Ur.exec(rr);
-                            if (null === Sr) return null;
-                            const [, Qr = "", Zr] = Sr;
-                            return void 0 === Zr ? pr(Qr) : xr(Qr, Number(Zr) - 1)
+                          function Hd(dd) {
+                            const Od = qd.exec(dd);
+                            if (null === Od) return null;
+                            const [, md = "", Wd] = Od;
+                            return void 0 === Wd ? Qd(md) : td(md, Number(Wd) - 1)
                           }
 
-                          function hr(rr) {
-                            return `/docsHtml/${Er(rr)}.html`
+                          function yd(dd) {
+                            return `/docsHtml/${vd(dd)}.html`
                           }
-                        }, 5667: (rr, Sr, Qr) => {
-                          Qr.d(Sr, {
-                            e: () => Wr,
-                            h: () => Zr,
-                            l: () => ar,
-                            n: () => fr,
-                            p: () => jr
+                        }, 5623: (dd, Od, md) => {
+                          md.d(Od, {
+                            d: () => Fd,
+                            h: () => Wd,
+                            j: () => Rd,
+                            k: () => hd,
+                            l: () => Xd
                           });
-                          const Zr = ["sine", "triangle", "square", "sawtooth"],
-                            Wr = 55,
-                            ar = {
+                          const Wd = ["sine", "triangle", "square", "sawtooth"],
+                            Fd = 55,
+                            Rd = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7288,38 +7288,38 @@ export const modules = {
                               }
                             };
 
-                          function jr(rr) {
-                            return "string" !== typeof rr ? rr : Object.hasOwn(ar, rr) ? ar[rr] : null
+                          function Xd(dd) {
+                            return "string" !== typeof dd ? dd : Object.hasOwn(Rd, dd) ? Rd[dd] : null
                           }
 
-                          function Ir(rr, Sr, Qr) {
-                            return Math.min(Qr, Math.max(Sr, rr))
+                          function Kd(dd, Od, md) {
+                            return Math.min(md, Math.max(Od, dd))
                           }
 
-                          function fr(rr) {
-                            const Sr = Ir(rr.durationMs, 10, 500),
-                              Qr = Ir(rr.attackMs, 0, Sr),
+                          function hd(dd) {
+                            const Od = Kd(dd.durationMs, 10, 500),
+                              md = Kd(dd.attackMs, 0, Od),
                               {
-                                intonation: Wr
-                              } = rr;
+                                intonation: Fd
+                              } = dd;
                             return {
-                              waveform: Zr.includes(rr.waveform) ? rr.waveform : "sine",
-                              pitchHz: Ir(rr.pitchHz, 20, 4e3),
-                              glideSemitones: Ir(rr.glideSemitones, -24, 24),
-                              durationMs: Sr,
-                              attackMs: Qr,
-                              releaseMs: Ir(rr.releaseMs, 0, Sr - Qr),
-                              lowpassHz: null === rr.lowpassHz ? null : Ir(rr.lowpassHz, 20, 2e4),
-                              volume: Ir(rr.volume, 0, 2),
+                              waveform: Wd.includes(dd.waveform) ? dd.waveform : "sine",
+                              pitchHz: Kd(dd.pitchHz, 20, 4e3),
+                              glideSemitones: Kd(dd.glideSemitones, -24, 24),
+                              durationMs: Od,
+                              attackMs: md,
+                              releaseMs: Kd(dd.releaseMs, 0, Od - md),
+                              lowpassHz: null === dd.lowpassHz ? null : Kd(dd.lowpassHz, 20, 2e4),
+                              volume: Kd(dd.volume, 0, 2),
                               intonation: {
-                                variationSemitones: Ir(Wr.variationSemitones, 0, 6),
-                                declineSemitones: Ir(Wr.declineSemitones, 0, 12),
-                                questionRiseSemitones: Ir(Wr.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: Ir(Wr.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: Kd(Fd.variationSemitones, 0, 6),
+                                declineSemitones: Kd(Fd.declineSemitones, 0, 12),
+                                questionRiseSemitones: Kd(Fd.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: Kd(Fd.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: Ir(rr.syllableMs, 25, 200)
+                              syllableMs: Kd(dd.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const rr in modules) Object.freeze(modules[rr]);
+                      for (const dd in modules) Object.freeze(modules[dd]);

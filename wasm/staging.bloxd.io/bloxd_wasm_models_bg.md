@@ -1,13 +1,17 @@
 # WASM module: `bloxd_wasm_models_bg`
 
-> environment **staging.bloxd.io** · build `fl4vv.bd3c59ce` · analyzed 2026-11-28T08:15:48+09:00
-> source: https://staging.bloxd.io/static/media/bloxd_wasm_models_bg.65d2d7a0e42a4e1c694f.wasm
-> 478,484 bytes (467.3 KB) · sha256 `dc6d52b18d6afa34…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **staging.bloxd.io** · build `yteou.5361c997` · analyzed 2026-11-28T13:51:33+09:00
+> source: https://staging.bloxd.io/static/media/bloxd_wasm_models_bg.bcb5a039647a5110be86.wasm
+> 478,723 bytes (467.5 KB) · sha256 `fea8372a66374bbf…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- name-section module id `bb030eed3ada4f1e.893` → `bc92b5a516610a37.893` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 478,484 → 478,723 bytes (+239)
+- data bytes 76,035 → 76,274
+- name-section module id `bc92b5a516610a37.893` → `32d7472f8b7c4c24.893` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/22 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
+- removed embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `d/index.crates.io-1949cf8c6b5b557f/draco-core-2.5.0/src/pred`
 
 ## Overview
 
@@ -18,10 +22,10 @@
 | Code bytes (function bodies) | 399,466 (390.1 KB) |
 | Total local variables | 2,166 |
 | Instructions (scanable bodies) | 189,066 |
-| Data segments / bytes | 195 / 76,035 |
+| Data segments / bytes | 195 / 76,274 |
 | Element segments / entries | 1 / 46 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `bc92b5a516610a37.893` |
+| name-section module id | `32d7472f8b7c4c24.893` |
 | Sections | 12 |
 
 ## Sections
@@ -38,7 +42,7 @@
 | 9 | element | 90 | 1 |
 | 12 | datacount | 2 | — |
 | 10 | code | 399,934 | 290 |
-| 11 | data | 77,623 | 195 |
+| 11 | data | 77,862 | 195 |
 | 0 | custom:name | 28 | — |
 
 ## Types
@@ -51,11 +55,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `oG8H.xjmV` | func | `(i32) -> ()` |
-| 1 | `oG8H.JCCr` | func | `(i32) -> ()` |
-| 2 | `oG8H.Xaq9` | func | `(i32 i32) -> ()` |
-| 3 | `oG8H.E5R1` | func | `(i32 i32) -> (i32)` |
-| 4 | `oG8H.z00E` | func | `(i32 i32) -> ()` |
+| 0 | `TvJG.ynv9` | func | `(i32) -> ()` |
+| 1 | `TvJG.CO4n` | func | `(i32) -> ()` |
+| 2 | `TvJG.CWVr` | func | `(i32 i32) -> ()` |
+| 3 | `TvJG.WWlF` | func | `(i32 i32) -> (i32)` |
+| 4 | `TvJG.Rfzd` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -63,28 +67,28 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `Yy3m` | func | 252 | `(i32 i32 i32 i32) -> (i32 i32)` |
-| `i63g` | func | 220 | `(i32) -> ()` |
-| `d8WF` | func | 246 | `(i32 i32) -> (i32)` |
-| `bsKs` | func | 152 | `() -> (i32)` |
-| `ftl0` | func | 74 | `() -> (i32)` |
-| `R4GE` | func | 256 | `(i32 i32 i32) -> (i32 i32)` |
-| `Jxp3` | func | 293 | `() -> (i32)` |
-| `EhVN` | func | 137 | `(i32 i32) -> ()` |
-| `YQle` | func | 248 | `(i32 i32 i32 i32) -> (i32)` |
-| `tGHe` | global | 1 | `` |
-| `h8Ch` | func | 245 | `() -> ()` |
-| `i5dA` | func | 291 | `(i32) -> ()` |
-| `ZAXO` | func | 273 | `(i32 i32 i32) -> ()` |
-| `kfU3` | func | 93 | `() -> (i32)` |
-| `Ui5r` | func | 49 | `() -> (i32)` |
-| `F9rg` | func | 290 | `(i32) -> (i32)` |
-| `zZ08` | func | 245 | `() -> ()` |
-| `DaPd` | func | 258 | `() -> (i32 i32)` |
-| `HxOA` | global | 2 | `` |
-| `zDH6` | func | 267 | `() -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `hc59` | func | 213 | `(i32) -> (i32)` |
+| `bFzk` | func | 74 | `() -> (i32)` |
+| `iqEg` | func | 213 | `(i32) -> (i32)` |
+| `BAKe` | global | 1 | `` |
+| `EdBL` | func | 245 | `() -> ()` |
+| `tV38` | func | 258 | `() -> (i32 i32)` |
+| `KpPW` | func | 291 | `(i32) -> ()` |
+| `YLXk` | func | 246 | `(i32 i32) -> (i32)` |
+| `tkjW` | global | 2 | `` |
+| `hzE3` | func | 252 | `(i32 i32 i32 i32) -> (i32 i32)` |
+| `L4cf` | func | 290 | `(i32) -> (i32)` |
+| `Ku5b` | func | 137 | `(i32 i32) -> ()` |
+| `LYN6` | func | 93 | `() -> (i32)` |
+| `Hhzy` | func | 245 | `() -> ()` |
+| `dX8f` | func | 49 | `() -> (i32)` |
+| `V0A3` | func | 273 | `(i32 i32 i32) -> ()` |
+| `dcya` | func | 293 | `() -> (i32)` |
+| `IZre` | func | 267 | `() -> (i32)` |
+| `GC8a` | func | 220 | `(i32) -> ()` |
+| `uMx6` | func | 152 | `() -> (i32)` |
+| `ASWi` | func | 256 | `(i32 i32 i32) -> (i32 i32)` |
+| `qnf6` | func | 248 | `(i32 i32 i32 i32) -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -92,7 +96,7 @@
 
 - memory 0: min 18 pages · max ∞ · shared=False
 - table 0: funcref · min 47 · max 47
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1130480, `i32` = i32.const 1130700
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1130720, `i32` = i32.const 1130940
 
 ## Functions
 

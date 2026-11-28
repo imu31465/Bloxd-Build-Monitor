@@ -1,13 +1,17 @@
 # WASM module: `bloxd_wasm_textures_bg`
 
-> environment **staging.bloxd.io** · build `fl4vv.bd3c59ce` · analyzed 2026-11-28T08:15:48+09:00
-> source: https://staging.bloxd.io/static/media/bloxd_wasm_textures_bg.c3cd01fe42e917fde2ee.wasm
-> 226,106 bytes (220.8 KB) · sha256 `4752f813d0338c37…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **staging.bloxd.io** · build `yteou.5361c997` · analyzed 2026-11-28T13:51:33+09:00
+> source: https://staging.bloxd.io/static/media/bloxd_wasm_textures_bg.772662d741c67e3339b4.wasm
+> 226,234 bytes (220.9 KB) · sha256 `7d3511b9add4c1e2…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- name-section module id `1a1f00e456eb7cc6.1150` → `114fef4d3306c739.1150` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- size 226,106 → 226,234 bytes (+128)
+- data bytes 20,352 → 20,480
+- name-section module id `114fef4d3306c739.1150` → `6f292e0be1b3c883.1150` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/39 names kept (identifier names are randomly assigned per build; compare signatures instead)
+- new embedded strings: `assertion failed: discard_size <= self.available6`; `assertion failed: matches!(bit_depth, 1 | 2 | 4 | 8)^`; `cannot modify the panic hook from a panicking threadO`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`; `h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rus`
+- removed embedded strings: `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/allo`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core`; `assertion failed: discard_size <= self.available`
 
 ## Overview
 
@@ -18,10 +22,10 @@
 | Code bytes (function bodies) | 203,923 (199.1 KB) |
 | Total local variables | 1,693 |
 | Instructions (scanable bodies) | 99,059 |
-| Data segments / bytes | 20 / 20,352 |
+| Data segments / bytes | 20 / 20,480 |
 | Element segments / entries | 1 / 113 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `114fef4d3306c739.1150` |
+| name-section module id | `6f292e0be1b3c883.1150` |
 | Sections | 12 |
 
 ## Sections
@@ -38,7 +42,7 @@
 | 9 | element | 212 | 1 |
 | 12 | datacount | 1 | — |
 | 10 | code | 204,398 | 295 |
-| 11 | data | 20,523 | 20 |
+| 11 | data | 20,651 | 20 |
 | 0 | custom:name | 29 | — |
 
 ## Types
@@ -51,9 +55,9 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `j189.QuTn` | func | `(i32 i32) -> ()` |
-| 1 | `j189.il0c` | func | `(i32 i32) -> ()` |
-| 2 | `j189.FRSg` | func | `(i32 i32) -> (i32)` |
+| 0 | `XyHE.kUS0` | func | `(i32 i32) -> ()` |
+| 1 | `XyHE.gLh0` | func | `(i32 i32) -> ()` |
+| 2 | `XyHE.ER3e` | func | `(i32 i32) -> (i32)` |
 
 ## Exports
 
@@ -61,45 +65,45 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `S6br` | func | 235 | `(i32) -> (i32 i32)` |
-| `MO3V` | func | 237 | `(i32) -> (i32 i32)` |
-| `JOq1` | func | 226 | `(i32 i32 i32) -> (i32 i32)` |
-| `vtlM` | func | 230 | `(i32) -> (i32 i32)` |
-| `MzpT` | func | 232 | `(i32) -> (i32 i32)` |
-| `oqlG` | func | 168 | `(i32) -> (i32)` |
-| `KYuF` | func | 159 | `(i32) -> (i32)` |
-| `GAGK` | func | 95 | `(i32) -> ()` |
-| `UV85` | func | 238 | `(i32) -> (i32 i32)` |
-| `vRxl` | func | 109 | `(i32) -> ()` |
-| `HQOU` | func | 184 | `(i32) -> (i32)` |
-| `Zq61` | func | 127 | `(i32 i32 i32) -> (i32)` |
-| `rdpK` | func | 211 | `(i32 i32 i32 i32) -> (i32)` |
-| `JEpI` | global | 2 | `` |
-| `zLxh` | func | 135 | `(i32 i32) -> ()` |
-| `fYSY` | func | 198 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
-| `tnGW` | func | 128 | `(i32 i32) -> (i32)` |
-| `b1JP` | func | 129 | `(i32 i32) -> (i32)` |
-| `MO6U` | func | 182 | `(i32) -> (i32)` |
-| `rJbp` | func | 219 | `(i32 i32 i32 i32 i32) -> (i32 i32)` |
-| `zpDP` | func | 157 | `(i32) -> (i32)` |
-| `c5Ag` | func | 231 | `(i32) -> (i32 i32)` |
-| `W4Pf` | func | 233 | `(i32) -> (i32 i32)` |
+| `YqAF` | func | 239 | `(i32) -> (i32 i32)` |
+| `tV4o` | func | 183 | `(i32) -> (i32)` |
+| `ecw9` | func | 167 | `(i32) -> (i32)` |
+| `X5hW` | func | 211 | `(i32 i32 i32 i32) -> (i32)` |
+| `Uma1` | func | 228 | `(i32 i32) -> (i32 i32)` |
 | `memory` | memory | 0 | `` |
-| `YjRk` | func | 293 | `() -> ()` |
-| `RT8l` | func | 152 | `(i32) -> (i32)` |
-| `YTFh` | global | 1 | `` |
-| `oQaS` | func | 227 | `(i32 i32 i32) -> (i32 i32)` |
-| `aqKi` | func | 215 | `(i32 i32) -> (i32 i32 i32 i32)` |
-| `EjIK` | func | 254 | `(i32 i32 i32) -> ()` |
-| `kZI2` | func | 167 | `(i32) -> (i32)` |
-| `qv4N` | func | 183 | `(i32) -> (i32)` |
-| `CYGW` | func | 239 | `(i32) -> (i32 i32)` |
-| `WI93` | func | 234 | `(i32) -> (i32 i32)` |
-| `rnOH` | func | 228 | `(i32 i32) -> (i32 i32)` |
-| `bKJ7` | func | 208 | `(i32 i32) -> (i32)` |
-| `VpHJ` | func | 293 | `() -> ()` |
-| `J3I4` | func | 236 | `(i32) -> (i32 i32)` |
-| `gfIi` | func | 185 | `(i32) -> (i32)` |
+| `XG7x` | func | 185 | `(i32) -> (i32)` |
+| `Jrhx` | func | 135 | `(i32 i32) -> ()` |
+| `nRUs` | func | 234 | `(i32) -> (i32 i32)` |
+| `U2Km` | func | 232 | `(i32) -> (i32 i32)` |
+| `UCn4` | func | 128 | `(i32 i32) -> (i32)` |
+| `Vm18` | func | 129 | `(i32 i32) -> (i32)` |
+| `s0f7` | func | 226 | `(i32 i32 i32) -> (i32 i32)` |
+| `SjiE` | func | 231 | `(i32) -> (i32 i32)` |
+| `TqKy` | func | 95 | `(i32) -> ()` |
+| `YjiY` | func | 230 | `(i32) -> (i32 i32)` |
+| `Z4Op` | func | 236 | `(i32) -> (i32 i32)` |
+| `PjsL` | func | 238 | `(i32) -> (i32 i32)` |
+| `raEC` | func | 293 | `() -> ()` |
+| `rCBH` | func | 215 | `(i32 i32) -> (i32 i32 i32 i32)` |
+| `hWxa` | func | 254 | `(i32 i32 i32) -> ()` |
+| `VanU` | func | 127 | `(i32 i32 i32) -> (i32)` |
+| `nZ5M` | func | 208 | `(i32 i32) -> (i32)` |
+| `k42W` | func | 227 | `(i32 i32 i32) -> (i32 i32)` |
+| `zV9r` | func | 182 | `(i32) -> (i32)` |
+| `MHLn` | func | 168 | `(i32) -> (i32)` |
+| `UxuU` | func | 184 | `(i32) -> (i32)` |
+| `NOsS` | func | 219 | `(i32 i32 i32 i32 i32) -> (i32 i32)` |
+| `BHQc` | func | 109 | `(i32) -> ()` |
+| `GJlv` | func | 233 | `(i32) -> (i32 i32)` |
+| `AfnV` | func | 152 | `(i32) -> (i32)` |
+| `cHPr` | global | 2 | `` |
+| `qosC` | func | 237 | `(i32) -> (i32 i32)` |
+| `QmXp` | func | 157 | `(i32) -> (i32)` |
+| `i7AW` | func | 159 | `(i32) -> (i32)` |
+| `PiXr` | func | 235 | `(i32) -> (i32 i32)` |
+| `UZFx` | func | 293 | `() -> ()` |
+| `f4K4` | func | 198 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
+| `UaYz` | global | 1 | `` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 
@@ -107,7 +111,7 @@
 
 - memory 0: min 17 pages · max ∞ · shared=False
 - table 0: funcref · min 114 · max 114
-- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1069348, `i32` = i32.const 1069836
+- globals: 3 (1 mutable); sample: `i32` = i32.const 1048576, `i32` = i32.const 1069476, `i32` = i32.const 1069964
 
 ## Functions
 
@@ -173,21 +177,21 @@ criticalprivatereservedsafecopylimits are exceededBadZlibHeaderInsufficientInput
 Errornull pointer passed to rustrecursive use of an object detected which would lead to unsafe aliasing in rustchunk size must be non-zeroassertion failed: self.filled >= old_filled
 Utf8Errorvalid_up_toerror_lenNoneSomeEnd of image has been reachedA fatal decoding error has been encounted earlierGrayscaleRgbIndexedGrayscaleAlphaRgbaOneTwoFourEightSixteen
 resources aren't name and source pairsdata:image/png;base64,ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/iter/adapters/step_by.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/index.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/core/src/slice/iter.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/string.rs
+h/.rustup/toolchains/1.99.0-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/library/alloc/src/str.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/sys/sync/rwlock/no_threads.rs
 some block atlas indices are missingthere are no block atlas texturesOneTwoFourEightSixteen
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/iter/adapters/step_by.rs
 a formatting trait implementation returned an error when the underlying stream did not
 assertion failed: (8 / bit_depth as usize * channels).saturating_mul(input.len()) >=
 internal error: entered unreachable code: Not a possible byte rounded pixel width
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/raw_vec/mod.rs
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/index.rs
 d/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/unfiltering_buffer.rs
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/iter.rs
 d/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/transform/palette.rs
 /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/src/panicking.rs
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/string.rs
 d/index.crates.io-1949cf8c6b5b557f/png-0.18.1/src/decoder/read_decoder.rs
-/rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/src/fmt.rs
 ```
 
 ## Opcode histogram (aggregated)

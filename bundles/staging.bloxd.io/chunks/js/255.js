@@ -1,343 +1,343 @@
 export const id = 255;
 export const ids = [255];
 export const modules = {
-  41333: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Zr,
-      f: () => Wr
+  41340: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd,
+      f: () => Fd
     });
-    const Zr = "The world isn't loaded, so no blocks can be seen.",
-      Wr = "The world isn't loaded, so nothing in it can be seen."
+    const Wd = "The world isn't loaded, so no blocks can be seen.",
+      Fd = "The world isn't loaded, so nothing in it can be seen."
   },
-  40670: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return !(!rr.lobbyLeaderboardInfo && !rr.lobbyManage)
+  40676: (dd, Od, md) => {
+    function Wd(dd) {
+      return !(!dd.lobbyLeaderboardInfo && !dd.lobbyManage)
     }
-    Qr.d(Sr, {
-      c: () => Zr
+    md.d(Od, {
+      b: () => Wd
     })
   },
-  38278: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Wr,
-      d: () => Zr
+  38359: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Fd,
+      f: () => Wd
     });
-    const Zr = 3,
-      Wr = {
+    const Wd = 3,
+      Fd = {
         recording: !1,
         clipping: !1,
         hasClipBuffer: !1,
         seconds: 0
       }
   },
-  38280: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar,
-      e: () => Wr
+  38367: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      e: () => Fd
     });
-    let Zr = () => null;
+    let Wd = () => null;
 
-    function Wr(rr) {
-      Zr = rr
+    function Fd(dd) {
+      Wd = dd
     }
 
-    function ar(rr, Sr) {
-      return Zr(rr, Sr)
+    function Rd(dd, Od) {
+      return Wd(dd, Od)
     }
   },
-  42463: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => tr,
-      i: () => nr,
-      k: () => Yr,
-      m: () => hr
+  42560: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Hd,
+      e: () => pd,
+      h: () => Td,
+      l: () => yd
     });
-    var Zr = Qr(34),
-      Wr = Qr(42472),
-      ar = Qr(42451),
-      jr = Qr(42477),
-      Ir = Qr(42456),
-      fr = Qr(42479),
-      Er = Qr(42495);
+    var Wd = md(32),
+      Fd = md(42567),
+      Rd = md(42552),
+      Xd = md(42573),
+      Kd = md(42555),
+      hd = md(42578),
+      vd = md(42602);
 
-    function pr(rr) {
-      var Sr, Qr;
-      const Zr = (0, ar.f)();
-      return Zr ? null === (Sr = (0, Wr.c)(Zr.api, rr[0], rr[1], rr[2])) || void 0 === Sr || null === (Qr = Sr.persisted) || void 0 === Qr ? void 0 : Qr.shared : void 0
+    function Qd(dd) {
+      var Od, md;
+      const Wd = (0, Rd.l)();
+      return Wd ? null === (Od = (0, Fd.c)(Wd.api, dd[0], dd[1], dd[2])) || void 0 === Od || null === (md = Od.persisted) || void 0 === md ? void 0 : md.shared : void 0
     }
 
-    function xr(rr) {
-      return `${rr[0]},${rr[1]},${rr[2]}`
+    function td(dd) {
+      return `${dd[0]},${dd[1]},${dd[2]}`
     }
-    const mr = new Map;
-    let Nr = null,
-      Ur = 0;
+    const od = new Map;
+    let Nd = null,
+      qd = 0;
 
-    function tr() {
-      return Ur
+    function Hd() {
+      return qd
     }
 
-    function hr(rr) {
-      const Sr = null !== Nr && Nr.key === xr(rr.pos) ? Nr.type : null;
-      if (null === Sr) return rr;
-      let Qr = null;
-      if ("Iron" === Sr) {
+    function yd(dd) {
+      const Od = null !== Nd && Nd.key === td(dd.pos) ? Nd.type : null;
+      if (null === Od) return dd;
+      let md = null;
+      if ("Iron" === Od) {
         const {
-          cachedPasskey: Sr,
-          ...Zr
-        } = zr(rr.pos);
-        Qr = {
-          DI: null !== Sr && void 0 !== Sr ? Sr : [0, 0, 0, 0],
-          ...Zr
+          cachedPasskey: Od,
+          ...Wd
+        } = bd(dd.pos);
+        md = {
+          ZK: null !== Od && void 0 !== Od ? Od : [0, 0, 0, 0],
+          ...Wd
         }
       }
       return {
-        ...rr,
-        type: Sr,
-        ironChest: Qr
+        ...dd,
+        type: Od,
+        ironChest: md
       }
     }
 
-    function zr(rr) {
-      const Sr = pr(rr),
-        Qr = null === Sr || void 0 === Sr ? void 0 : Sr.ownerDbId,
-        Zr = function(rr) {
-          var Sr;
-          let Qr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pr(rr);
-          const Zr = xr(rr),
-            Wr = mr.get(Zr);
-          return Wr ? Wr.lastOpened < (null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.passkeyLastUpdated) && void 0 !== Sr ? Sr : 0) ? (mr.delete(Zr), null) : [...Wr.DI] : null
-        }(rr, Sr);
-      return void 0 === Qr ? {
-        cachedPasskey: Zr
+    function bd(dd) {
+      const Od = Qd(dd),
+        md = null === Od || void 0 === Od ? void 0 : Od.ownerDbId,
+        Wd = function(dd) {
+          var Od;
+          let md = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Qd(dd);
+          const Wd = td(dd),
+            Fd = od.get(Wd);
+          return Fd ? Fd.lastOpened < (null !== (Od = null === md || void 0 === md ? void 0 : md.passkeyLastUpdated) && void 0 !== Od ? Od : 0) ? (od.delete(Wd), null) : [...Fd.ZK] : null
+        }(dd, Od);
+      return void 0 === md ? {
+        cachedPasskey: Wd
       } : {
-        ownerDbId: Qr,
-        cachedPasskey: Zr
+        ownerDbId: md,
+        cachedPasskey: Wd
       }
-    }(0, Er.j)(jr.e, (rr => {
-      const Sr = (0, fr.d)(jr.e, rr);
-      if (!(0, fr.b)(Sr) || Sr.oW) return;
-      if (Ur++, !Sr.VW || null === Sr.cW) return void(Nr = null);
-      const Qr = xr(Sr.cW);
-      Nr = {
-        key: Qr,
-        type: Sr.wW
-      }, null !== Sr.FW && mr.set(Qr, {
-        DI: [...Sr.FW],
+    }(0, vd.k)(Xd.b, (dd => {
+      const Od = (0, hd.h)(Xd.b, dd);
+      if (!(0, hd.d)(Od) || Od.DF) return;
+      if (qd++, !Od.LF || null === Od.cF) return void(Nd = null);
+      const md = td(Od.cF);
+      Nd = {
+        key: md,
+        type: Od.zF
+      }, null !== Od.jF && od.set(md, {
+        ZK: [...Od.jF],
         lastOpened: Date.now()
       })
-    })), (0, Er.d)((() => {
-      mr.clear(), Nr = null, Ur++
-    })), (0, Er.f)((() => {
-      null !== Nr && (Nr = null, Ur++, Zr.i.Jp("chestToggleFromServer", !1, !0))
+    })), (0, vd.g)((() => {
+      od.clear(), Nd = null, qd++
+    })), (0, vd.i)((() => {
+      null !== Nd && (Nd = null, qd++, Wd.j.lQ("chestToggleFromServer", !1, !0))
     }));
-    const Yr = {
+    const Td = {
         boardEditRequested: {
-          watch: rr => (0, Zr.j)("EditBoard", (Sr => {
+          watch: dd => (0, Wd.l)("EditBoard", (Od => {
             let {
-              pos: Qr
-            } = Sr;
-            if (null === Qr) return void rr(null);
-            const Zr = (0, ar.f)(),
-              Wr = (0, ar.l)();
-            Zr && Wr && rr(Wr.readBoardToEdit(Zr.api, Zr.chunks, Qr))
+              pos: md
+            } = Od;
+            if (null === md) return void dd(null);
+            const Wd = (0, Rd.l)(),
+              Fd = (0, Rd.u)();
+            Wd && Fd && dd(Fd.readBoardToEdit(Wd.api, Wd.chunks, md))
           }))
         },
         ironChestOpenRequested: {
-          watch: rr => (0, Zr.j)("OpenIronChest", (Sr => {
+          watch: dd => (0, Wd.l)("OpenIronChest", (Od => {
             let {
-              pos: Qr
-            } = Sr;
-            rr(function(rr) {
+              pos: md
+            } = Od;
+            dd(function(dd) {
               return {
-                pos: rr,
-                ...zr(rr)
+                pos: dd,
+                ...bd(dd)
               }
-            }(Qr))
+            }(md))
           }))
         }
       },
-      nr = {
-        writeOnBoard(rr) {
-          var Sr;
+      pd = {
+        writeOnBoard(dd) {
+          var Od;
           let {
-            pos: Qr,
-            text: Zr,
-            Sf: Wr,
-            textSize: jr
-          } = rr;
-          null === (Sr = (0, ar.f)()) || void 0 === Sr || Sr.send(Ir.b.UpdateBoard, (0, Ir.T)({
-            uI: Qr,
-            rf: Zr,
-            Sf: Wr,
-            Qf: jr
+            pos: md,
+            text: Wd,
+            Oh: Fd,
+            textSize: Xd
+          } = dd;
+          null === (Od = (0, Rd.l)()) || void 0 === Od || Od.send(Kd.c.UpdateBoard, (0, Kd.Y)({
+            MK: md,
+            dh: Wd,
+            Oh: Fd,
+            mh: Xd
           }))
         },
-        writeBook(rr) {
-          var Sr;
+        writeBook(dd) {
+          var Od;
           let {
-            pages: Qr,
-            title: Zr,
-            published: Wr
-          } = rr;
-          null === (Sr = (0, ar.f)()) || void 0 === Sr || Sr.send(Ir.b.UpdateBook, (0, Ir.W)({
-            Np: Qr,
-            Up: Zr,
-            tp: Wr
+            pages: md,
+            title: Wd,
+            published: Fd
+          } = dd;
+          null === (Od = (0, Rd.l)()) || void 0 === Od || Od.send(Kd.c.UpdateBook, (0, Kd.$)({
+            oQ: md,
+            NQ: Wd,
+            qQ: Fd
           }))
         },
-        writeNameTag(rr) {
-          var Sr;
-          null === (Sr = (0, ar.f)()) || void 0 === Sr || Sr.send(Ir.b.UpdateNameTag, rr)
+        writeNameTag(dd) {
+          var Od;
+          null === (Od = (0, Rd.l)()) || void 0 === Od || Od.send(Kd.c.UpdateNameTag, dd)
         },
-        setCustomLobbyBlock(rr) {
+        setCustomLobbyBlock(dd) {
           let {
-            pos: Sr,
-            blockName: Qr
-          } = rr;
-          const Zr = (0, ar.l)(),
-            Wr = (0, ar.f)();
-          Zr && Wr && Wr.send(Ir.b.SetCustomLobbyBlock, (0, Ir.K)({
-            aI: Zr.blockIdOf(Qr),
-            WI: Sr
+            pos: Od,
+            blockName: md
+          } = dd;
+          const Wd = (0, Rd.u)(),
+            Fd = (0, Rd.l)();
+          Wd && Fd && Fd.send(Kd.c.SetCustomLobbyBlock, (0, Kd.M)({
+            XK: Wd.blockIdOf(md),
+            RK: Od
           }))
         }
       }
   },
-  42516: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => fr,
-      c: () => jr,
-      f: () => Ir
+  42614: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => hd,
+      h: () => Xd,
+      l: () => Kd
     });
-    var Zr = Qr(42438),
-      Wr = Qr(5602),
-      ar = Qr(42451);
+    var Wd = md(42540),
+      Fd = md(5558),
+      Rd = md(42552);
 
-    function jr() {
-      var rr;
-      const Sr = null === (rr = (0, ar.f)()) || void 0 === rr ? void 0 : rr.api.localId;
-      return void 0 === Sr || Sr === Zr.Nc ? null : String(Sr)
+    function Xd() {
+      var dd;
+      const Od = null === (dd = (0, Rd.l)()) || void 0 === dd ? void 0 : dd.api.localId;
+      return void 0 === Od || Od === Wd.$c ? null : String(Od)
     }
 
-    function Ir(rr) {
-      const Sr = (0, ar.f)();
-      if (null !== Sr) return rr(Sr);
-      let Qr = null;
-      const Zr = (0, Wr.w)((() => {
-        const Sr = (0, ar.f)();
-        null !== Sr && null === Qr && (Zr(), Qr = rr(Sr))
+    function Kd(dd) {
+      const Od = (0, Rd.l)();
+      if (null !== Od) return dd(Od);
+      let md = null;
+      const Wd = (0, Fd.x)((() => {
+        const Od = (0, Rd.l)();
+        null !== Od && null === md && (Wd(), md = dd(Od))
       }));
       return () => {
-        var rr;
-        Zr(), null === (rr = Qr) || void 0 === rr || rr()
+        var dd;
+        Wd(), null === (dd = md) || void 0 === dd || dd()
       }
     }
 
-    function fr(rr, Sr, Qr) {
+    function hd(dd, Od, md) {
       return {
         current: () => {
-          const Qr = (0, ar.f)();
-          return null === Qr ? Sr : rr(Qr)()
+          const md = (0, Rd.l)();
+          return null === md ? Od : dd(md)()
         },
-        watch: Sr => Ir((Zr => {
-          const Wr = rr(Zr);
-          let ar = Wr();
-          return Sr(ar), Qr((() => {
-            const rr = Wr();
-            rr !== ar && (ar = rr, Sr(rr))
+        watch: Od => Kd((Wd => {
+          const Fd = dd(Wd);
+          let Rd = Fd();
+          return Od(Rd), md((() => {
+            const dd = Fd();
+            dd !== Rd && (Rd = dd, Od(dd))
           }))
         }))
       }
     }
   },
-  42507: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Er
+  42612: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => vd
     });
-    var Zr = Qr(42451),
-      Wr = Qr(42516),
-      ar = Qr(42519);
+    var Wd = md(42552),
+      Fd = md(42614),
+      Rd = md(42623);
 
-    function jr() {
-      var rr, Sr;
-      return null !== (rr = null === (Sr = (0, Zr.f)()) || void 0 === Sr ? void 0 : Sr.itemBridgeSources) && void 0 !== rr ? rr : ar.b
+    function Xd() {
+      var dd, Od;
+      return null !== (dd = null === (Od = (0, Wd.l)()) || void 0 === Od ? void 0 : Od.itemBridgeSources) && void 0 !== dd ? dd : Rd.b
     }
 
-    function Ir(rr) {
+    function Kd(dd) {
       return {
-        current: () => jr().states[rr].current(),
-        watch: Sr => (0, Wr.f)((Qr => {
-          const Zr = Qr.itemBridgeSources.states[rr];
-          return Sr(Zr.current()), Zr.watch(Sr)
+        current: () => Xd().states[dd].current(),
+        watch: Od => (0, Fd.l)((md => {
+          const Wd = md.itemBridgeSources.states[dd];
+          return Od(Wd.current()), Wd.watch(Od)
         }))
       }
     }
 
-    function fr(rr) {
+    function hd(dd) {
       return {
-        watch: Sr => (0, Wr.f)((Qr => Qr.itemBridgeSources.events[rr].watch(Sr)))
+        watch: Od => (0, Fd.l)((md => md.itemBridgeSources.events[dd].watch(Od)))
       }
     }
-    const Er = {
+    const vd = {
       states: {
-        inventory: Ir("inventory"),
-        hotbar: Ir("hotbar"),
-        crafting: Ir("crafting"),
-        heldItemAim: Ir("heldItemAim")
+        inventory: Kd("inventory"),
+        hotbar: Kd("hotbar"),
+        crafting: Kd("crafting"),
+        heldItemAim: Kd("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: fr("hotbarSlotRequested"),
-        hotbarScrolled: fr("hotbarScrolled"),
-        numberKeyPressed: fr("numberKeyPressed"),
-        inventoryDropRequested: fr("inventoryDropRequested"),
-        chestToggled: fr("chestToggled"),
-        chestRefreshed: fr("chestRefreshed"),
-        inventorySynced: fr("inventorySynced"),
-        enchantingTableOpened: fr("enchantingTableOpened")
+        hotbarSlotRequested: hd("hotbarSlotRequested"),
+        hotbarScrolled: hd("hotbarScrolled"),
+        numberKeyPressed: hd("numberKeyPressed"),
+        inventoryDropRequested: hd("inventoryDropRequested"),
+        chestToggled: hd("chestToggled"),
+        chestRefreshed: hd("chestRefreshed"),
+        inventorySynced: hd("inventorySynced"),
+        enchantingTableOpened: hd("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: rr => jr().commands.selectHotbarSlot(rr),
-        removeInventoryItem: rr => jr().commands.removeInventoryItem(rr),
-        swapInventorySlots: rr => jr().commands.swapInventorySlots(rr),
-        moveInventoryItem: rr => jr().commands.moveInventoryItem(rr),
-        quickMoveInventoryItem: rr => jr().commands.quickMoveInventoryItem(rr),
-        closeChest: rr => jr().commands.closeChest(rr),
-        focusCrafting: rr => jr().commands.focusCrafting(rr),
-        craftRecipe: rr => jr().commands.craftRecipe(rr),
-        salvageItem: rr => jr().commands.salvageItem(rr),
-        enchantItem: rr => jr().commands.enchantItem(rr)
+        selectHotbarSlot: dd => Xd().commands.selectHotbarSlot(dd),
+        removeInventoryItem: dd => Xd().commands.removeInventoryItem(dd),
+        swapInventorySlots: dd => Xd().commands.swapInventorySlots(dd),
+        moveInventoryItem: dd => Xd().commands.moveInventoryItem(dd),
+        quickMoveInventoryItem: dd => Xd().commands.quickMoveInventoryItem(dd),
+        closeChest: dd => Xd().commands.closeChest(dd),
+        focusCrafting: dd => Xd().commands.focusCrafting(dd),
+        craftRecipe: dd => Xd().commands.craftRecipe(dd),
+        salvageItem: dd => Xd().commands.salvageItem(dd),
+        enchantItem: dd => Xd().commands.enchantItem(dd)
       },
       queries: {
-        enchantingOffer: rr => jr().queries.enchantingOffer(rr)
+        enchantingOffer: dd => Xd().queries.enchantingOffer(dd)
       }
     }
   },
-  42519: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => fr
+  42623: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => hd
     });
-    var Zr = Qr(41333),
-      Wr = Qr(38278);
+    var Wd = md(41340),
+      Fd = md(38359);
 
-    function ar(rr) {
+    function Rd(dd) {
       return {
-        current: () => rr,
+        current: () => dd,
         watch: () => () => {}
       }
     }
 
-    function jr() {}
-    const Ir = Object.freeze([0, 0, 0]),
-      fr = {
+    function Xd() {}
+    const Kd = Object.freeze([0, 0, 0]),
+      hd = {
         states: {
-          health: ar({
+          health: Rd({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: ar({
+          inventory: Rd({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -345,58 +345,58 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: ar({
+          hotbar: Rd({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: ar({
+          stationItems: Rd({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: ar({}),
-          creativeVisibility: ar({
+          itemInfo: Rd({}),
+          creativeVisibility: Rd({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: ar(null),
-          heldItemAim: ar({
+          aura: Rd(null),
+          heldItemAim: Rd({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: ar(!1),
-          gliderBoostFuel: ar(0),
-          flight: ar({
+          crouching: Rd(!1),
+          gliderBoostFuel: Rd(0),
+          flight: Rd({
             canFly: !1,
             flying: !1
           }),
-          crafting: ar({
+          crafting: Rd({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: ar({
+          players: Rd({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: ar({}),
-          fullInventory: ar(!1),
-          crosshairTarget: ar({
+          lobbyLeaderboardRows: Rd({}),
+          fullInventory: Rd(!1),
+          crosshairTarget: Rd({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: ar(!0),
-          freeCamera: ar({
+          localPlayerAlive: Rd(!0),
+          freeCamera: Rd({
             allowed: !1,
             movesFly: !1
           }),
-          replay: ar(null),
-          replayEdits: ar(null),
-          replayRecorder: ar(Wr.c),
-          replayVideoExporting: ar(!1)
+          replay: Rd(null),
+          replayEdits: Rd(null),
+          replayRecorder: Rd(Fd.c),
+          replayVideoExporting: Rd(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -461,87 +461,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: jr,
+          selectHotbarSlot: Xd,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: jr,
-          setInventoryOpen: jr,
-          changeIronChestPasskey: jr,
-          dragReplayCamera: jr,
-          applyTemporaryThirdPerson: jr,
-          holdEmoteWheel: jr,
-          recordFlyingMiddleText: jr,
-          focusCrafting: jr,
+          closeChest: Xd,
+          setInventoryOpen: Xd,
+          changeIronChestPasskey: Xd,
+          dragReplayCamera: Xd,
+          applyTemporaryThirdPerson: Xd,
+          holdEmoteWheel: Xd,
+          recordFlyingMiddleText: Xd,
+          focusCrafting: Xd,
           craftRecipe: () => ({
-            NI: 0,
-            bp: null,
+            qK: 0,
+            IQ: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: jr,
-          setShopOpen: jr,
-          buyShopItem: jr,
-          lobbyManage: jr,
+          enchantItem: Xd,
+          setShopOpen: Xd,
+          buyShopItem: Xd,
+          lobbyManage: Xd,
           sendChatMessage: () => !1,
-          ignorePlayer: jr,
-          reportPlayer: jr,
-          reportWorldCodeChat: jr,
-          requestDiscordReportKey: jr,
-          reportLobbyOrGame: jr,
-          playEmote: jr,
-          updateMyCosmetic: jr,
-          writeOnBoard: jr,
-          writeBook: jr,
-          writeNameTag: jr,
-          setCustomLobbyBlock: jr,
-          openIronChest: jr,
-          sendCodeCollab: jr,
-          clickCodeBlock: jr,
-          bindCustomButtonKeys: jr,
-          pressCustomButton: jr,
-          moveReplayFreecam: jr,
-          holdReplayFreecamVertical: jr,
-          respawn: jr,
-          wakeUp: jr,
-          requestLeaderboard: jr,
-          completeTask: jr,
-          setServerCookie: jr,
-          answerUiRequest: jr,
-          chooseRewardedAd: jr,
-          setCameraZoom: jr,
-          setFreeCameraMovesFly: jr,
-          setBlockHighlight: jr,
-          setCrosshairInteractPrompt: jr,
-          setLookSensitivity: jr,
-          replayAction: jr,
-          setReplayPlaying: jr,
-          seekReplay: jr,
-          setReplayCameraMode: jr,
-          syncReplayCameraMode: jr,
-          setReplayCameraKeyframe: jr,
-          moveReplayCameraKeyframe: jr,
-          deleteReplayCameraKeyframes: jr,
-          setReplayPlaybackMark: jr,
+          ignorePlayer: Xd,
+          reportPlayer: Xd,
+          reportWorldCodeChat: Xd,
+          requestDiscordReportKey: Xd,
+          reportLobbyOrGame: Xd,
+          playEmote: Xd,
+          updateMyCosmetic: Xd,
+          writeOnBoard: Xd,
+          writeBook: Xd,
+          writeNameTag: Xd,
+          setCustomLobbyBlock: Xd,
+          openIronChest: Xd,
+          sendCodeCollab: Xd,
+          clickCodeBlock: Xd,
+          bindCustomButtonKeys: Xd,
+          pressCustomButton: Xd,
+          moveReplayFreecam: Xd,
+          holdReplayFreecamVertical: Xd,
+          respawn: Xd,
+          wakeUp: Xd,
+          requestLeaderboard: Xd,
+          completeTask: Xd,
+          setServerCookie: Xd,
+          answerUiRequest: Xd,
+          chooseRewardedAd: Xd,
+          setCameraZoom: Xd,
+          setFreeCameraMovesFly: Xd,
+          setBlockHighlight: Xd,
+          setCrosshairInteractPrompt: Xd,
+          setLookSensitivity: Xd,
+          replayAction: Xd,
+          setReplayPlaying: Xd,
+          seekReplay: Xd,
+          setReplayCameraMode: Xd,
+          syncReplayCameraMode: Xd,
+          setReplayCameraKeyframe: Xd,
+          moveReplayCameraKeyframe: Xd,
+          deleteReplayCameraKeyframes: Xd,
+          setReplayPlaybackMark: Xd,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: jr,
-          exportReplayVideo: jr,
-          toggleRecording: jr,
-          saveClip: jr,
-          setRecorderPrefs: jr,
-          setReplayViewerOpen: jr
+          holdReplayForShaderPackFailure: Xd,
+          exportReplayVideo: Xd,
+          toggleRecording: Xd,
+          saveClip: Xd,
+          setRecorderPrefs: Xd,
+          setReplayViewerOpen: Xd
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => Zr.e,
-          worldCodeAiGameState: () => Zr.f
+          worldCodeAiChunk: () => Wd.e,
+          worldCodeAiGameState: () => Wd.f
         },
         lookups: {
-          localPos: () => Ir,
+          localPos: () => Kd,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -559,316 +559,316 @@ export const modules = {
         }
       }
   },
-  42445: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => vr,
-      e: () => Tr,
-      h: () => Or,
-      l: () => Br,
-      o: () => Kr
+  42544: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Ud,
+      f: () => Jd,
+      h: () => xd,
+      i: () => Ed,
+      l: () => gd
     });
-    var Zr = Qr(40818),
-      Wr = Qr(1279),
-      ar = Qr(2114),
-      jr = Qr(2119),
-      Ir = Qr(4489),
-      fr = Qr(38280),
-      Er = Qr(1422),
-      pr = Qr(42451),
-      xr = Qr(5628),
-      mr = Qr(3372),
-      Nr = Qr(42456),
-      Ur = Qr(42463),
-      tr = Qr(42507);
-    let hr = null;
+    var Wd = md(40849),
+      Fd = md(1286),
+      Rd = md(2116),
+      Xd = md(2121),
+      Kd = md(4509),
+      hd = md(38367),
+      vd = md(1415),
+      Qd = md(42552),
+      td = md(5590),
+      od = md(3372),
+      Nd = md(42555),
+      qd = md(42560),
+      Hd = md(42612);
+    let yd = null;
 
-    function zr(rr) {
-      const Sr = new Map,
-        Qr = Qr => {
-          if ("string" !== typeof Qr) return;
-          let Zr = Sr.get(Qr);
-          return void 0 === Zr && (Zr = rr(Qr), void 0 !== Zr && Sr.set(Qr, Zr)), Zr
+    function bd(dd) {
+      const Od = new Map,
+        md = md => {
+          if ("string" !== typeof md) return;
+          let Wd = Od.get(md);
+          return void 0 === Wd && (Wd = dd(md), void 0 !== Wd && Od.set(md, Wd)), Wd
         };
       return new Proxy({}, {
-        get: (rr, Sr) => Qr(Sr),
-        has: (rr, Sr) => void 0 !== Qr(Sr)
+        get: (dd, Od) => md(Od),
+        has: (dd, Od) => void 0 !== md(Od)
       })
     }
 
-    function Yr(rr) {
-      const Sr = (0, Ir.e)(rr);
-      return void 0 !== Sr && (0, Ir.g)(Sr) === rr
+    function Td(dd) {
+      const Od = (0, Kd.d)(dd);
+      return void 0 !== Od && (0, Kd.h)(Od) === dd
     }
 
-    function nr(rr) {
-      var Sr;
-      const Qr = null === (Sr = (0, pr.f)()) || void 0 === Sr ? void 0 : Sr.tables;
-      if (void 0 === Qr || !Yr(rr)) return;
-      const Zr = {
-          displayName: Qr.getDisplayName(rr)
+    function pd(dd) {
+      var Od;
+      const md = null === (Od = (0, Qd.l)()) || void 0 === Od ? void 0 : Od.tables;
+      if (void 0 === md || !Td(dd)) return;
+      const Wd = {
+          displayName: md.getDisplayName(dd)
         },
-        Wr = Qr.getItemStat(rr, "description");
-      void 0 !== Wr && null !== Wr && (Zr.description = Wr);
+        Fd = md.getItemStat(dd, "description");
+      void 0 !== Fd && null !== Fd && (Wd.description = Fd);
       const {
-        rootName: ar
-      } = Qr.getMetaInfo(rr);
-      ar !== rr && (Zr.rootName = ar);
-      const jr = Qr.getItemStat(rr, "armourReduction");
-      return void 0 !== jr && null !== jr && (Zr.armourReduction = jr), Zr
-    }(0, pr.n)((rr => {
-      hr = rr
+        rootName: Rd
+      } = md.getMetaInfo(dd);
+      Rd !== dd && (Wd.rootName = Rd);
+      const Xd = md.getItemStat(dd, "armourReduction");
+      return void 0 !== Xd && null !== Xd && (Wd.armourReduction = Xd), Wd
+    }(0, Qd.w)((dd => {
+      yd = dd
     }));
-    const er = (0, jr.h)("DisplayName", "Description");
+    const Yd = (0, Xd.f)("DisplayName", "Description");
 
-    function Kr() {
-      return Boolean(ar.d.get("useInventory") && ar.d.get("useFullInventory"))
+    function gd() {
+      return Boolean(Rd.e.get("useInventory") && Rd.e.get("useFullInventory"))
     }
-    let yr = null;
-    const Br = {
+    let wd = null;
+    const Ed = {
         inventory: function() {
-          const rr = tr.b.states.inventory;
-          let Sr = null;
-          const Qr = rr => {
-            var Qr;
-            return null === rr.chest ? rr : ((null === (Qr = Sr) || void 0 === Qr ? void 0 : Qr.from) === rr && Sr.chestVersion === (0, Ur.e)() || (Sr = {
-              from: rr,
-              chestVersion: (0, Ur.e)(),
+          const dd = Hd.e.states.inventory;
+          let Od = null;
+          const md = dd => {
+            var md;
+            return null === dd.chest ? dd : ((null === (md = Od) || void 0 === md ? void 0 : md.from) === dd && Od.chestVersion === (0, qd.b)() || (Od = {
+              from: dd,
+              chestVersion: (0, qd.b)(),
               view: {
-                ...rr,
-                chest: (0, Ur.m)(rr.chest)
+                ...dd,
+                chest: (0, qd.l)(dd.chest)
               }
-            }), Sr.view)
+            }), Od.view)
           };
           return {
-            current: () => Qr(rr.current()),
-            watch: Sr => rr.watch((rr => {
-              Sr(Qr(rr))
+            current: () => md(dd.current()),
+            watch: Od => dd.watch((dd => {
+              Od(md(dd))
             }))
           }
         }(),
-        crafting: tr.b.states.crafting,
+        crafting: Hd.e.states.crafting,
         stationItems: {
           current() {
-            var rr;
-            return (null === (rr = yr) || void 0 === rr ? void 0 : rr.namesVersion) !== (0, Ir.k)() && (yr = {
-              namesVersion: (0, Ir.k)(),
+            var dd;
+            return (null === (dd = wd) || void 0 === dd ? void 0 : dd.namesVersion) !== (0, Kd.i)() && (wd = {
+              namesVersion: (0, Kd.i)(),
               items: {
-                enchantable: zr((rr => {
-                  const Sr = (0, Ir.e)(rr);
-                  return void 0 !== Sr && null !== hr && hr.enchantmentPerksOf(Sr).length > 0 || void 0
+                enchantable: bd((dd => {
+                  const Od = (0, Kd.d)(dd);
+                  return void 0 !== Od && null !== yd && yd.enchantmentPerksOf(Od).length > 0 || void 0
                 })),
-                salvageable: zr((rr => !(!Yr(rr) || null === (0, fr.b)(rr)) || void 0))
+                salvageable: bd((dd => !(!Td(dd) || null === (0, hd.b)(dd)) || void 0))
               }
-            }), yr.items
+            }), wd.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let rr = null;
-          const Sr = () => {
-            var Sr;
-            return (null === (Sr = rr) || void 0 === Sr ? void 0 : Sr.namesVersion) !== (0, Ir.k)() && (rr = {
-              namesVersion: (0, Ir.k)(),
-              infos: zr(nr)
-            }), rr.infos
+          let dd = null;
+          const Od = () => {
+            var Od;
+            return (null === (Od = dd) || void 0 === Od ? void 0 : Od.namesVersion) !== (0, Kd.i)() && (dd = {
+              namesVersion: (0, Kd.i)(),
+              infos: bd(pd)
+            }), dd.infos
           };
           return {
-            current: Sr,
-            watch: Qr => (0, jr.p)((Zr => {
-              Zr.some(er) && (rr = null, Qr(Sr()))
+            current: Od,
+            watch: md => (0, Xd.o)((Wd => {
+              Wd.some(Yd) && (dd = null, md(Od()))
             }))
           }
         }(),
-        creativeVisibility: (0, jr.l)((function() {
-          const rr = {};
-          for (const Wr of null !== (Sr = null === (Qr = hr) || void 0 === Qr ? void 0 : Qr.creativeItemIds()) && void 0 !== Sr ? Sr : []) {
-            var Sr, Qr, jr, fr;
-            const Er = (0, Ir.g)(Wr);
-            if (void 0 === Er) continue;
-            const pr = null !== (jr = ar.d.get((0, Zr.f)(Er, "showInCreativeInven"))) && void 0 !== jr ? jr : null === (fr = hr) || void 0 === fr ? void 0 : fr.showInCreativeInvenOf(Wr);
-            "boolean" === typeof pr && (rr[Er] = pr)
+        creativeVisibility: (0, Xd.k)((function() {
+          const dd = {};
+          for (const Fd of null !== (Od = null === (md = yd) || void 0 === md ? void 0 : md.creativeItemIds()) && void 0 !== Od ? Od : []) {
+            var Od, md, Xd, hd;
+            const vd = (0, Kd.h)(Fd);
+            if (void 0 === vd) continue;
+            const Qd = null !== (Xd = Rd.e.get((0, Wd.d)(vd, "showInCreativeInven"))) && void 0 !== Xd ? Xd : null === (hd = yd) || void 0 === hd ? void 0 : hd.showInCreativeInvenOf(Fd);
+            "boolean" === typeof Qd && (dd[vd] = Qd)
           }
           return {
-            publicLobby: (0, Wr.M)((0, Er.b)().lobbyName),
-            shownInGame: rr
+            publicLobby: (0, Fd.K)((0, vd.b)().lobbyName),
+            shownInGame: dd
           }
-        }), ["connectedGameChanged"], (0, jr.h)("ShowInCreativeInven")),
-        fullInventory: (0, jr.l)(Kr, [], (0, jr.j)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, Xd.f)("ShowInCreativeInven")),
+        fullInventory: (0, Xd.k)(gd, [], (0, Xd.h)("useInventory", "useFullInventory"))
       },
-      Tr = {
-        inventoryDropRequested: tr.b.events.inventoryDropRequested,
-        chestToggled: tr.b.events.chestToggled,
-        chestRefreshed: tr.b.events.chestRefreshed,
-        inventorySynced: tr.b.events.inventorySynced,
-        enchantingTableOpened: tr.b.events.enchantingTableOpened
+      Jd = {
+        inventoryDropRequested: Hd.e.events.inventoryDropRequested,
+        chestToggled: Hd.e.events.chestToggled,
+        chestRefreshed: Hd.e.events.chestRefreshed,
+        inventorySynced: Hd.e.events.inventorySynced,
+        enchantingTableOpened: Hd.e.events.enchantingTableOpened
       },
-      vr = {
-        removeInventoryItem: tr.b.commands.removeInventoryItem,
-        swapInventorySlots: tr.b.commands.swapInventorySlots,
-        moveInventoryItem: tr.b.commands.moveInventoryItem,
-        quickMoveInventoryItem: tr.b.commands.quickMoveInventoryItem,
-        closeChest: tr.b.commands.closeChest,
-        setInventoryOpen(rr) {
-          (0, xr.f)(mr.y.InventoryOpen, rr ? mr.y.InventoryOpen : 0)
+      Ud = {
+        removeInventoryItem: Hd.e.commands.removeInventoryItem,
+        swapInventorySlots: Hd.e.commands.swapInventorySlots,
+        moveInventoryItem: Hd.e.commands.moveInventoryItem,
+        quickMoveInventoryItem: Hd.e.commands.quickMoveInventoryItem,
+        closeChest: Hd.e.commands.closeChest,
+        setInventoryOpen(dd) {
+          (0, td.i)(od.w.InventoryOpen, dd ? od.w.InventoryOpen : 0)
         },
-        focusCrafting: tr.b.commands.focusCrafting,
-        craftRecipe: tr.b.commands.craftRecipe,
-        salvageItem: tr.b.commands.salvageItem,
-        enchantItem: tr.b.commands.enchantItem,
-        changeIronChestPasskey(rr) {
-          var Sr;
+        focusCrafting: Hd.e.commands.focusCrafting,
+        craftRecipe: Hd.e.commands.craftRecipe,
+        salvageItem: Hd.e.commands.salvageItem,
+        enchantItem: Hd.e.commands.enchantItem,
+        changeIronChestPasskey(dd) {
+          var Od;
           let {
-            pos: Qr,
-            DI: Zr
-          } = rr;
-          null === (Sr = (0, pr.f)()) || void 0 === Sr || Sr.send(Nr.b.ChangeIronChestPasskey, (0, Nr.g)({
-            cW: Qr,
-            DI: Zr
+            pos: md,
+            ZK: Wd
+          } = dd;
+          null === (Od = (0, Qd.l)()) || void 0 === Od || Od.send(Nd.c.ChangeIronChestPasskey, (0, Nd.j)({
+            cF: md,
+            ZK: Wd
           }))
         },
-        openIronChest(rr) {
-          var Sr;
+        openIronChest(dd) {
+          var Od;
           let {
-            pos: Qr,
-            DI: Zr
-          } = rr;
-          null === (Sr = (0, pr.f)()) || void 0 === Sr || Sr.send(Nr.b.OpenIronChest, (0, Nr.E)({
-            cW: Qr,
-            DI: Zr
+            pos: md,
+            ZK: Wd
+          } = dd;
+          null === (Od = (0, Qd.l)()) || void 0 === Od || Od.send(Nd.c.OpenIronChest, (0, Nd.E)({
+            cF: md,
+            ZK: Wd
           }))
         }
       },
-      Or = {
-        enchantingOffer: tr.b.queries.enchantingOffer
+      xd = {
+        enchantingOffer: Hd.e.queries.enchantingOffer
       }
   },
-  42500: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Zr,
-      e: () => pr,
-      g: () => jr,
-      i: () => Wr,
-      k: () => Ir,
-      n: () => Er
+  42609: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Wd,
+      f: () => Qd,
+      j: () => Xd,
+      n: () => Fd,
+      p: () => Kd,
+      t: () => vd
     });
-    class Zr extends Error {
+    class Wd extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function Wr(rr) {
-      return rr instanceof RangeError && /call stack/i.test(rr.message) || rr instanceof Error && "InternalError" === rr.name && /recursion/i.test(rr.message)
+    function Fd(dd) {
+      return dd instanceof RangeError && /call stack/i.test(dd.message) || dd instanceof Error && "InternalError" === dd.name && /recursion/i.test(dd.message)
     }
-    const ar = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const Rd = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function jr(rr) {
-      var Sr;
-      return rr instanceof WebAssembly.RuntimeError || rr instanceof Zr || Wr(rr) && ar.test(null !== (Sr = rr.stack) && void 0 !== Sr ? Sr : "")
-    }
-
-    function Ir(rr, Sr) {
-      if (jr(rr)) throw rr;
-      console.error(Sr, rr)
+    function Xd(dd) {
+      var Od;
+      return dd instanceof WebAssembly.RuntimeError || dd instanceof Wd || Fd(dd) && Rd.test(null !== (Od = dd.stack) && void 0 !== Od ? Od : "")
     }
 
-    function fr(rr, Sr, Qr, Wr, ar) {
-      if (Sr % Wr !== 0 || Sr + Qr > rr.byteLength) throw new Zr(`${ar}: ${Qr} bytes at ${Sr}, ${Wr}-aligned, outside ${rr.byteLength} bytes of memory`)
+    function Kd(dd, Od) {
+      if (Xd(dd)) throw dd;
+      console.error(Od, dd)
     }
 
-    function Er(rr, Sr, Qr, Zr, Wr) {
-      return 0 === Qr ? null : (fr(Sr, Qr, Zr * rr.BYTES_PER_ELEMENT, rr.BYTES_PER_ELEMENT, Wr), new rr(Sr, Qr, Zr))
+    function hd(dd, Od, md, Fd, Rd) {
+      if (Od % Fd !== 0 || Od + md > dd.byteLength) throw new Wd(`${Rd}: ${md} bytes at ${Od}, ${Fd}-aligned, outside ${dd.byteLength} bytes of memory`)
     }
 
-    function pr(rr, Sr, Qr, Zr, Wr) {
-      return 0 === Sr ? null : (fr(rr, Sr, Qr, Zr, Wr), new DataView(rr, Sr, Qr))
+    function vd(dd, Od, md, Wd, Fd) {
+      return 0 === md ? null : (hd(Od, md, Wd * dd.BYTES_PER_ELEMENT, dd.BYTES_PER_ELEMENT, Fd), new dd(Od, md, Wd))
+    }
+
+    function Qd(dd, Od, md, Wd, Fd) {
+      return 0 === Od ? null : (hd(dd, Od, md, Wd, Fd), new DataView(dd, Od, md))
     }
   },
-  42451: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Zr,
-      e: () => zr,
-      f: () => tr,
-      h: () => hr,
-      i: () => mr,
-      k: () => Nr,
-      l: () => pr,
-      n: () => xr,
-      o: () => Ur
+  42552: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd,
+      h: () => bd,
+      l: () => Hd,
+      p: () => yd,
+      q: () => od,
+      t: () => Nd,
+      u: () => Qd,
+      w: () => td,
+      x: () => qd
     });
-    class Zr extends Error {
-      constructor(rr) {
-        super(`the join's code did not load: ${rr instanceof Error?rr.message:String(rr)}`, {
-          cause: rr
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === rr || void 0 === rr ? void 0 : rr.request
+    class Wd extends Error {
+      constructor(dd) {
+        super(`the join's code did not load: ${dd instanceof Error?dd.message:String(dd)}`, {
+          cause: dd
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === dd || void 0 === dd ? void 0 : dd.request
       }
     }
-    let Wr = null,
-      ar = null,
-      jr = null;
-    const Ir = [];
-    let fr = null;
+    let Fd = null,
+      Rd = null,
+      Xd = null;
+    const Kd = [];
+    let hd = null;
 
-    function Er(rr, Sr) {
+    function vd(dd, Od) {
       try {
-        rr(Sr)
-      } catch (Qr) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", Qr)
+        dd(Od)
+      } catch (md) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", md)
       }
     }
 
-    function pr() {
-      return fr
+    function Qd() {
+      return hd
     }
 
-    function xr(rr) {
-      Ir.push(rr), null !== fr && Er(rr, fr)
+    function td(dd) {
+      Kd.push(dd), null !== hd && vd(dd, hd)
     }
 
-    function mr(rr) {
-      return Wr ??= Promise.all([Qr.e(85), Qr.e(113), Qr.e(88), Qr.e(177), Qr.e(91), Qr.e(225), Qr.e(253), Qr.e(112), Qr.e(142), Qr.e(246), Qr.e(245), Qr.e(307), Qr.e(244), Qr.e(223), Qr.e(50), Qr.e(224), Qr.e(127), Qr.e(214), Qr.e(281), Qr.e(143), Qr.e(103), Qr.e(69)]).then((() => Qr(55089))).then((Sr => {
-        Sr.loadAudio(rr), fr = Sr;
-        for (const rr of Ir) Er(rr, Sr);
-        return Sr
-      })).catch((rr => {
-        throw Wr = null, rr
-      })), Wr
+    function od(dd) {
+      return Fd ??= Promise.all([md.e(85), md.e(113), md.e(88), md.e(177), md.e(91), md.e(225), md.e(253), md.e(112), md.e(142), md.e(246), md.e(245), md.e(307), md.e(244), md.e(223), md.e(50), md.e(224), md.e(127), md.e(214), md.e(281), md.e(143), md.e(103), md.e(69)]).then((() => md(55013))).then((Od => {
+        Od.loadAudio(dd), hd = Od;
+        for (const dd of Kd) vd(dd, Od);
+        return Od
+      })).catch((dd => {
+        throw Fd = null, dd
+      })), Fd
     }
-    async function Nr(rr, Sr) {
+    async function Nd(dd, Od) {
       try {
-        const Qr = await mr(rr);
-        await Qr.loadClientGame(Sr)
-      } catch (Qr) {
-        throw new Zr(Qr)
+        const md = await od(dd);
+        await md.loadClientGame(Od)
+      } catch (md) {
+        throw new Wd(md)
       }
     }
 
-    function Ur(rr, Sr) {
-      ar = {
-        running: rr,
-        shell: Sr
+    function qd(dd, Od) {
+      Rd = {
+        running: dd,
+        shell: Od
       }
     }
 
-    function tr() {
-      return jr
+    function Hd() {
+      return Xd
     }
-    async function hr(rr) {
-      const Sr = ar;
-      if ((null === Sr || void 0 === Sr ? void 0 : Sr.running) !== rr) throw new Error("the core's session has ended");
-      const Qr = await mr(Sr.shell.audio).catch((rr => {
-        throw new Zr(rr)
+    async function yd(dd) {
+      const Od = Rd;
+      if ((null === Od || void 0 === Od ? void 0 : Od.running) !== dd) throw new Error("the core's session has ended");
+      const md = await od(Od.shell.audio).catch((dd => {
+        throw new Wd(dd)
       }));
-      if (null !== jr) return jr;
-      if (ar !== Sr || rr.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (jr = Qr.startGameHost(rr, Sr.shell), null === jr) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return jr
+      if (null !== Xd) return Xd;
+      if (Rd !== Od || dd.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (Xd = md.startGameHost(dd, Od.shell), null === Xd) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return Xd
     }
 
-    function zr() {
-      null !== jr && (null !== fr ? fr.endGameHost(jr) : jr.closeGame()), jr = null, ar = null
+    function bd() {
+      null !== Xd && (null !== hd ? hd.endGameHost(Xd) : Xd.closeGame()), Xd = null, Rd = null
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

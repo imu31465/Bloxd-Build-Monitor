@@ -1,197 +1,197 @@
 export const id = 711;
 export const ids = [711];
 export const modules = {
-  65203: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      rebuildScenePbrPipelines: () => Ir,
-      rebuildSceneRenderables: () => fr
+  65378: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      rebuildScenePbrPipelines: () => Kd,
+      rebuildSceneRenderables: () => hd
     });
-    var Zr = Qr(54245),
-      Wr = (rr, Sr) => rr.order - Sr.order,
-      ar = 8,
-      jr = rr => fr(rr);
-    async function Ir(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await Er(rr, "pbr", Sr)
+    var Wd = md(54139),
+      Fd = (dd, Od) => dd.order - Od.order,
+      Rd = 8,
+      Xd = dd => hd(dd);
+    async function Kd(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await vd(dd, "pbr", Od)
     }
-    async function fr(rr) {
-      await Er(rr, void 0, !1)
+    async function hd(dd) {
+      await vd(dd, void 0, !1)
     }
-    async function Er(rr, Sr, Ir) {
-      const fr = rr;
-      if (!fr._built && !Ir) return;
-      const Er = fr._lightListVersion ?? 0,
-        pr = fr.surface.engine,
-        xr = rr => {
-          fr._z ? rr.forEach((rr => rr())) : (0, Zr.f)(pr, (() => rr.forEach((rr => rr()))))
+    async function vd(dd, Od, Kd) {
+      const hd = dd;
+      if (!hd._built && !Kd) return;
+      const vd = hd._lightListVersion ?? 0,
+        Qd = hd.surface.engine,
+        td = dd => {
+          hd._z ? dd.forEach((dd => dd())) : (0, Wd.d)(Qd, (() => dd.forEach((dd => dd()))))
         };
-      let mr = !1,
-        Nr = !1,
-        Ur = !1,
-        tr = !1;
+      let od = !1,
+        Nd = !1,
+        qd = !1,
+        Hd = !1;
       try {
-        for (let rr = 1;; rr++) {
-          if (void 0 !== Sr) {
-            await hr();
+        for (let dd = 1;; dd++) {
+          if (void 0 !== Od) {
+            await yd();
             break
           }
-          if (Yr(fr), await hr(), !zr(fr)) break;
-          if (rr >= ar) {
-            fr._rebuildHook = jr, tr = !0, Nr = !0;
+          if (Td(hd), await yd(), !bd(hd)) break;
+          if (dd >= Rd) {
+            hd._rebuildHook = Xd, Hd = !0, Nd = !0;
             break
           }
         }
-        Ur = !0
+        qd = !0
       } finally {
-        if (mr && (fr._renderables.sort(Wr), fr._renderableVersion++, fr._materialEpoch++, fr._built && fr._frameGraph.build()), void 0 === Sr && Ur && !Nr && (fr._lightListVersion ?? 0) === Er) {
-          const rr = fr._pendingTopologyRetirements?.splice(0);
-          rr?.length && xr(rr), tr || (fr._rebuildHook = void 0)
+        if (od && (hd._renderables.sort(Fd), hd._renderableVersion++, hd._materialEpoch++, hd._built && hd._frameGraph.build()), void 0 === Od && qd && !Nd && (hd._lightListVersion ?? 0) === vd) {
+          const dd = hd._pendingTopologyRetirements?.splice(0);
+          dd?.length && td(dd), Hd || (hd._rebuildHook = void 0)
         }
       }
-      async function hr() {
-        for (const [rr, Zr] of fr._groups) {
-          if (void 0 !== Sr && rr._materialFamily !== Sr) continue;
-          if (0 === Zr.length) {
-            (Zr.o || Zr.r) && (nr(rr, Zr), mr = !0);
+      async function yd() {
+        for (const [dd, Wd] of hd._groups) {
+          if (void 0 !== Od && dd._materialFamily !== Od) continue;
+          if (0 === Wd.length) {
+            (Wd.o || Wd.r) && (pd(dd, Wd), od = !0);
             continue
           }
-          const Wr = fr._runtimeBuilds;
-          await (Wr?.wait(Zr));
-          let ar = !1;
-          const Ir = async () => {
-            const Sr = fr._runtimeBuilds,
-              Qr = [...Zr].filter((Sr => fr.meshes.includes(Sr) && Sr.material?._buildGroup === rr));
-            if (0 === Qr.length) return void nr(rr, Zr);
-            const jr = !!Zr.r,
-              Ir = fr._disposables.length,
-              Er = new Map,
-              pr = new Map(Qr.map((rr => [rr, rr.material])));
-            for (const rr of Qr) {
-              const Qr = fr._meshDisposables.get(rr);
-              Qr && (Er.set(rr, Qr), fr._meshDisposables.delete(rr), Sr?.holdPendingDisposers(rr, Qr))
+          const Fd = hd._runtimeBuilds;
+          await (Fd?.wait(Wd));
+          let Rd = !1;
+          const Kd = async () => {
+            const Od = hd._runtimeBuilds,
+              md = [...Wd].filter((Od => hd.meshes.includes(Od) && Od.material?._buildGroup === dd));
+            if (0 === md.length) return void pd(dd, Wd);
+            const Xd = !!Wd.r,
+              Kd = hd._disposables.length,
+              vd = new Map,
+              Qd = new Map(md.map((dd => [dd, dd.material])));
+            for (const dd of md) {
+              const md = hd._meshDisposables.get(dd);
+              md && (vd.set(dd, md), hd._meshDisposables.delete(dd), Od?.holdPendingDisposers(dd, md))
             }
-            let mr, Nr;
-            fr._p = rr => (Nr = rr, !0);
+            let od, Nd;
+            hd._p = dd => (Nd = dd, !0);
             try {
-              mr = await rr(fr, Qr)
-            } catch (yr) {
-              Nr?.[1]();
-              for (const Wr of Qr) {
-                const Qr = Er.get(Wr),
-                  ar = fr._meshDisposables.get(Wr);
-                if (ar && ar !== Qr)
-                  for (const rr of ar) rr();
-                const jr = fr.meshes.includes(Wr) && Wr.material === pr.get(Wr) && Wr.material?._buildGroup === rr && Zr.includes(Wr);
-                Qr && jr ? fr._meshDisposables.set(Wr, Qr) : (fr._meshDisposables.delete(Wr), Qr && xr(Qr)), Qr && Sr?.releasePendingDisposers(Wr, Qr)
+              od = await dd(hd, md)
+            } catch (wd) {
+              Nd?.[1]();
+              for (const Fd of md) {
+                const md = vd.get(Fd),
+                  Rd = hd._meshDisposables.get(Fd);
+                if (Rd && Rd !== md)
+                  for (const dd of Rd) dd();
+                const Xd = hd.meshes.includes(Fd) && Fd.material === Qd.get(Fd) && Fd.material?._buildGroup === dd && Wd.includes(Fd);
+                md && Xd ? hd._meshDisposables.set(Fd, md) : (hd._meshDisposables.delete(Fd), md && td(md)), md && Od?.releasePendingDisposers(Fd, md)
               }
-              throw yr
+              throw wd
             } finally {
-              delete fr._p
+              delete hd._p
             }
-            if (fr._z || Wr?._d()) {
-              Nr?.[1]();
-              for (const Sr of Qr) {
-                const rr = fr._meshDisposables.get(Sr),
-                  Qr = Er.get(Sr);
-                if (rr && rr !== Qr)
-                  for (const Sr of rr) Sr();
-                fr._meshDisposables.delete(Sr)
+            if (hd._z || Fd?._d()) {
+              Nd?.[1]();
+              for (const Od of md) {
+                const dd = hd._meshDisposables.get(Od),
+                  md = vd.get(Od);
+                if (dd && dd !== md)
+                  for (const Od of dd) Od();
+                hd._meshDisposables.delete(Od)
               }
-              for (const Sr of fr._disposables.splice(0)) Sr();
-              const rr = [...Er.values()].flat();
-              xr(rr);
-              for (const [Qr, Zr] of Er) Sr?.releasePendingDisposers(Qr, Zr);
+              for (const Od of hd._disposables.splice(0)) Od();
+              const dd = [...vd.values()].flat();
+              td(dd);
+              for (const [md, Wd] of vd) Od?.releasePendingDisposers(md, Wd);
               return
             }
-            Nr?.[0](), rr._rebuildSingle = mr.rebuildSingle, Zr.r = fr._runtimeBuilds?.base(rr, mr.rebuildSingle) ?? mr.rebuildSingle, "pbr" === rr._materialFamily && mr._G && (Zr._w = null), jr && er(fr, Ir);
-            const Ur = new Set(Qr.filter((Sr => fr.meshes.includes(Sr) && Sr.material === pr.get(Sr) && Sr.material?._buildGroup === rr && Zr.includes(Sr))));
-            if (Ur.size !== Qr.length && mr.renderables.some((rr => !rr.mesh))) {
-              for (const rr of Qr) {
-                const Qr = fr._meshDisposables.get(rr),
-                  Zr = Er.get(rr);
-                if (Qr && Qr !== Zr)
-                  for (const rr of Qr) rr();
-                Zr && fr.meshes.includes(rr) ? fr._meshDisposables.set(rr, Zr) : (fr._meshDisposables.delete(rr), Zr && xr(Zr)), Zr && Sr?.releasePendingDisposers(rr, Zr)
+            Nd?.[0](), dd._rebuildSingle = od.rebuildSingle, Wd.r = hd._runtimeBuilds?.base(dd, od.rebuildSingle) ?? od.rebuildSingle, "pbr" === dd._materialFamily && od._G && (Wd._w = null), Xd && Yd(hd, Kd);
+            const qd = new Set(md.filter((Od => hd.meshes.includes(Od) && Od.material === Qd.get(Od) && Od.material?._buildGroup === dd && Wd.includes(Od))));
+            if (qd.size !== md.length && od.renderables.some((dd => !dd.mesh))) {
+              for (const dd of md) {
+                const md = hd._meshDisposables.get(dd),
+                  Wd = vd.get(dd);
+                if (md && md !== Wd)
+                  for (const dd of md) dd();
+                Wd && hd.meshes.includes(dd) ? hd._meshDisposables.set(dd, Wd) : (hd._meshDisposables.delete(dd), Wd && td(Wd)), Wd && Od?.releasePendingDisposers(dd, Wd)
               }
-              return void(ar = !0)
+              return void(Rd = !0)
             }
-            const tr = new Set;
-            for (const rr of Qr)
-              if (Ur.has(rr)) tr.add(rr.material), fr._runtimeBuilds?.reset(rr);
+            const Hd = new Set;
+            for (const dd of md)
+              if (qd.has(dd)) Hd.add(dd.material), hd._runtimeBuilds?.reset(dd);
               else {
-                const Qr = Er.get(rr),
-                  Zr = fr._meshDisposables.get(rr);
-                if (Zr && Zr !== Qr)
-                  for (const rr of Zr) rr();
-                Qr && fr.meshes.includes(rr) ? (fr._meshDisposables.set(rr, Qr), Er.delete(rr), Sr?.releasePendingDisposers(rr, Qr)) : fr._meshDisposables.delete(rr)
-              } for (const rr of tr) rr._csmGen = (rr._csmGen ?? 0) + 1;
-            const hr = Zr.o,
-              zr = hr?.length ? new Set(hr) : null;
-            for (let rr = fr._renderables.length - 1; rr >= 0; rr--) {
-              const Sr = fr._renderables[rr];
-              (Ur.has(Sr.mesh) || zr?.has(Sr)) && fr._renderables.splice(rr, 1)
+                const md = vd.get(dd),
+                  Wd = hd._meshDisposables.get(dd);
+                if (Wd && Wd !== md)
+                  for (const dd of Wd) dd();
+                md && hd.meshes.includes(dd) ? (hd._meshDisposables.set(dd, md), vd.delete(dd), Od?.releasePendingDisposers(dd, md)) : hd._meshDisposables.delete(dd)
+              } for (const dd of Hd) dd._csmGen = (dd._csmGen ?? 0) + 1;
+            const yd = Wd.o,
+              bd = yd?.length ? new Set(yd) : null;
+            for (let dd = hd._renderables.length - 1; dd >= 0; dd--) {
+              const Od = hd._renderables[dd];
+              (qd.has(Od.mesh) || bd?.has(Od)) && hd._renderables.splice(dd, 1)
             }
-            const Yr = mr.renderables.filter((rr => !rr.mesh || Ur.has(rr.mesh)));
-            fr._renderables.push(...Yr), Zr.o = Yr;
-            const Kr = [...Er.values()].flat();
-            xr(Kr);
-            for (const [rr, Zr] of Er) Sr?.releasePendingDisposers(rr, Zr)
+            const Td = od.renderables.filter((dd => !dd.mesh || qd.has(dd.mesh)));
+            hd._renderables.push(...Td), Wd.o = Td;
+            const gd = [...vd.values()].flat();
+            td(gd);
+            for (const [dd, Wd] of vd) Od?.releasePendingDisposers(dd, Wd)
           }, {
-            X: Er
-          } = await Promise.resolve().then((() => Qr(64722))), pr = 3;
-          for (let Sr = 1;; Sr++) {
-            if (ar = !1, await Er(fr, rr, Ir), fr._z || Wr?._d()) return void(Nr = !0);
-            if (!ar) break;
-            if (Sr >= pr) {
-              nr(rr, Zr), fr._rebuildHook = jr, tr = !0, Nr = !0;
+            X: vd
+          } = await Promise.resolve().then((() => md(64881))), Qd = 3;
+          for (let Od = 1;; Od++) {
+            if (Rd = !1, await vd(hd, dd, Kd), hd._z || Fd?._d()) return void(Nd = !0);
+            if (!Rd) break;
+            if (Od >= Qd) {
+              pd(dd, Wd), hd._rebuildHook = Xd, Hd = !0, Nd = !0;
               break
             }
           }
-          ar ? mr = !0 : mr = !0
+          Rd ? od = !0 : od = !0
         }
       }
 
-      function zr(rr) {
-        for (const Sr of rr.meshes) {
-          const Qr = Sr.material?._buildGroup;
-          if (Qr && !rr._groups.get(Qr)?.includes(Sr)) return !0
+      function bd(dd) {
+        for (const Od of dd.meshes) {
+          const md = Od.material?._buildGroup;
+          if (md && !dd._groups.get(md)?.includes(Od)) return !0
         }
         return !1
       }
 
-      function Yr(rr) {
-        const Sr = new Map;
-        for (const Qr of rr.meshes) {
-          const rr = Qr.material?._buildGroup;
-          if (!rr) continue;
-          const Zr = Sr.get(rr);
-          Zr ? Zr.push(Qr) : Sr.set(rr, [Qr])
+      function Td(dd) {
+        const Od = new Map;
+        for (const md of dd.meshes) {
+          const dd = md.material?._buildGroup;
+          if (!dd) continue;
+          const Wd = Od.get(dd);
+          Wd ? Wd.push(md) : Od.set(dd, [md])
         }
-        for (const [Qr, Zr] of rr._groups) {
-          const rr = Sr.get(Qr) ?? [];
-          (Zr.length !== rr.length || rr.some(((rr, Sr) => Zr[Sr] !== rr))) && (Zr.length = 0, Zr.push(...rr)), Sr.delete(Qr)
+        for (const [md, Wd] of dd._groups) {
+          const dd = Od.get(md) ?? [];
+          (Wd.length !== dd.length || dd.some(((dd, Od) => Wd[Od] !== dd))) && (Wd.length = 0, Wd.push(...dd)), Od.delete(md)
         }
-        for (const [Qr, Zr] of Sr) {
-          const Sr = Zr;
-          rr._groups.set(Qr, Sr)
+        for (const [md, Wd] of Od) {
+          const Od = Wd;
+          dd._groups.set(md, Od)
         }
       }
 
-      function nr(rr, Sr) {
-        const Qr = Sr.o;
-        if (Qr?.length) {
-          const rr = new Set(Qr);
-          for (let Sr = fr._renderables.length - 1; Sr >= 0; Sr--) rr.has(fr._renderables[Sr]) && fr._renderables.splice(Sr, 1)
+      function pd(dd, Od) {
+        const md = Od.o;
+        if (md?.length) {
+          const dd = new Set(md);
+          for (let Od = hd._renderables.length - 1; Od >= 0; Od--) dd.has(hd._renderables[Od]) && hd._renderables.splice(Od, 1)
         }
-        Sr.o = void 0, Sr.r = void 0, fr._runtimeBuilds?.dropBase(rr), fr._rebuildHook = jr, tr = !0
+        Od.o = void 0, Od.r = void 0, hd._runtimeBuilds?.dropBase(dd), hd._rebuildHook = Xd, Hd = !0
       }
 
-      function er(rr, Sr) {
-        const Qr = new Set(rr._disposables.slice(0, Sr));
-        for (let Zr = rr._disposables.length - 1; Zr >= Sr; Zr--) Qr.has(rr._disposables[Zr]) && rr._disposables.splice(Zr, 1)
+      function Yd(dd, Od) {
+        const md = new Set(dd._disposables.slice(0, Od));
+        for (let Wd = dd._disposables.length - 1; Wd >= Od; Wd--) md.has(dd._disposables[Wd]) && dd._disposables.splice(Wd, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

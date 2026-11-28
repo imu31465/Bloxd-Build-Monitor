@@ -1,60 +1,60 @@
 export const id = 105;
 export const ids = [105, 106];
 export const modules = {
-  5617: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      $b: () => ir,
-      Ab: () => wr,
-      D: () => yr,
-      Db: () => Ar,
-      F: () => jr,
-      Gb: () => gr,
-      I: () => Ir,
-      Jb: () => Gr,
-      K: () => Zr,
-      Kb: () => Cr,
-      L: () => ar,
-      M: () => er,
-      N: () => sr,
-      Nb: () => hr,
-      O: () => xr,
-      P: () => mr,
-      Qb: () => lr,
-      T: () => pr,
-      Tb: () => Lr,
-      V: () => Er,
-      Vb: () => Mr,
-      Wb: () => cr,
-      X: () => Kr,
-      Xb: () => kr,
-      _: () => fr,
-      _b: () => Vr,
-      cb: () => tr,
-      dc: () => vr,
-      e: () => Yr,
-      gb: () => Ur,
-      hc: () => Or,
-      i: () => zr,
-      j: () => Dr,
-      k: () => nr,
-      kb: () => Xr,
-      kc: () => or,
-      mc: () => Wr,
-      nb: () => Hr,
-      o: () => Jr,
-      pc: () => dr,
-      qb: () => qr,
-      r: () => Nr,
-      sb: () => Pr,
-      t: () => Tr,
-      ub: () => Rr,
-      x: () => br,
-      xb: () => Fr,
-      z: () => Br
+  5571: (dd, Od, md) => {
+    md.d(Od, {
+      $: () => Hd,
+      $b: () => xd,
+      Ab: () => nd,
+      B: () => Xd,
+      C: () => Kd,
+      Db: () => yd,
+      Eb: () => Sd,
+      Fb: () => Bd,
+      G: () => Wd,
+      I: () => Rd,
+      Ib: () => Ld,
+      L: () => Yd,
+      Mb: () => Id,
+      N: () => dO,
+      Ob: () => zd,
+      R: () => td,
+      Rb: () => jd,
+      S: () => od,
+      V: () => Qd,
+      Vb: () => Dd,
+      X: () => vd,
+      Y: () => gd,
+      Yb: () => Ud,
+      Z: () => hd,
+      ab: () => qd,
+      bc: () => Cd,
+      e: () => Td,
+      eb: () => sd,
+      fb: () => Vd,
+      fc: () => Fd,
+      h: () => bd,
+      hc: () => Md,
+      ib: () => Ad,
+      k: () => fd,
+      mb: () => ud,
+      n: () => pd,
+      ob: () => rd,
+      p: () => kd,
+      pb: () => ld,
+      q: () => Nd,
+      r: () => Jd,
+      rb: () => ed,
+      t: () => Zd,
+      tb: () => cd,
+      vb: () => Gd,
+      w: () => Ed,
+      x: () => wd,
+      xb: () => Pd
     });
-    const Zr = 32,
-      Wr = 33.333333333333336,
-      ar = {
+    const Wd = 32,
+      Fd = 33.333333333333336,
+      Rd = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -88,36 +88,36 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      jr = {
+      Xd = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Ir = {
+      Kd = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      fr = {
+      hd = {
         AheadMask: 15,
         Defaulted: 128,
         LagsShift: 8,
         CountMask: 4095
       },
-      Er = {
+      vd = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      pr = {
+      Qd = {
         PlayerBound: 32,
         JoinPreload: 64
       },
-      xr = 14,
-      mr = {
+      td = 14,
+      od = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -133,14 +133,14 @@ export const modules = {
         FirstViewGaps: 12,
         FirstViewGapMs: 13
       },
-      Nr = {
+      Nd = {
         Look: 0,
         Remesh: 1,
         CameraSet: 2
       },
-      Ur = 8,
-      tr = 1,
-      hr = {
+      qd = 8,
+      Hd = 1,
+      yd = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -149,16 +149,16 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      zr = 6,
-      Yr = 1,
-      nr = {
+      bd = 6,
+      Td = 1,
+      pd = {
         SetCamDir: 0,
         Forced: 1,
         ScriptedTake: 2,
         ScriptedPose: 3,
         ScriptedRelease: 4
       },
-      er = {
+      Yd = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -186,12 +186,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Kr = {
+      gd = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      yr = {
+      wd = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -245,7 +245,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Br = {
+      Ed = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -255,10 +255,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      Tr = 4,
-      vr = 4,
-      Or = 65535,
-      Lr = {
+      Jd = 4,
+      Ud = 4,
+      xd = 65535,
+      Bd = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -271,7 +271,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      lr = {
+      Sd = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -279,12 +279,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      Xr = 88,
-      Pr = 0,
-      Hr = 24,
-      qr = 48,
-      Rr = 80,
-      gr = {
+      sd = 88,
+      ud = 0,
+      Vd = 24,
+      Ad = 48,
+      rd = 80,
+      Gd = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -295,18 +295,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      Cr = {
+      nd = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Mr = {
+      Ld = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Gr = {
+      Pd = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -324,34 +324,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      kr = {
+      zd = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      Ar = 65535,
-      Vr = {
+      cd = 65535,
+      jd = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      ir = {
+      Dd = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      wr = 2,
-      cr = {
+      ed = 2,
+      Id = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Fr = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      or = {
+      ld = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      Cd = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -365,7 +365,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      br = {
+      Zd = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -392,7 +392,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Jr = {
+      kd = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -550,8 +550,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      Dr = 8,
-      dr = {
+      fd = 8,
+      Md = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -577,129 +577,129 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      sr = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      dO = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  5610: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      $: () => Zr.D,
-      Ab: () => cr,
-      Ad: () => mr,
-      Ae: () => Jr,
-      B: () => Xr,
-      Bb: () => SS,
-      Be: () => Cr,
-      C: () => jr,
-      Cb: () => dr,
-      Cc: () => Zr.nb,
-      Dd: () => Lr,
-      Ee: () => gr,
-      F: () => qr,
-      Fb: () => Zr.O,
-      Fc: () => Zr.qb,
-      G: () => tS,
-      Gb: () => QS,
-      Ge: () => Rr,
-      H: () => sr,
-      Hc: () => Zr.sb,
-      Hd: () => Zr.dc,
-      He: () => fr,
-      J: () => Zr.o,
-      Kb: () => WS,
-      Kc: () => Zr.ub,
-      Kd: () => Zr.hc,
-      Ke: () => Mr,
-      L: () => Er,
-      Ld: () => Zr.mc,
-      Mc: () => Zr.Db,
-      Me: () => YS,
-      O: () => Zr.r,
-      Ob: () => Zr.P,
-      Pc: () => hS,
-      Pd: () => ar,
-      Qb: () => Wr.f,
-      Qd: () => zr,
-      Qe: () => Ur,
-      S: () => rS,
-      Sc: () => mS,
-      Sd: () => pS,
-      U: () => Zr.t,
-      Ub: () => vr,
-      Vd: () => Ar,
-      Wc: () => jS,
-      Y: () => Dr,
-      Yb: () => Gr,
-      Zc: () => Zr.Gb,
-      Zd: () => ir,
-      _c: () => Zr.Jb,
-      ac: () => Pr,
-      bb: () => Zr.F,
-      bd: () => Zr.Kb,
-      be: () => kr,
-      cc: () => lr,
-      dc: () => Zr.X,
-      e: () => ZS,
-      eb: () => Zr.I,
-      fc: () => Hr,
-      fd: () => ur,
-      fe: () => Fr,
-      g: () => hr,
-      gb: () => xr,
-      j: () => tr,
-      jb: () => nr,
-      jc: () => yr,
-      jd: () => Zr.Qb,
-      kd: () => Zr.Tb,
-      ke: () => wr,
-      lb: () => Zr.K,
-      lc: () => fS,
-      m: () => xS,
-      mb: () => Zr.L,
-      mc: () => er,
-      me: () => br,
-      nc: () => NS,
-      o: () => Or,
-      od: () => Zr.Vb,
-      oe: () => or,
-      qb: () => Vr,
-      rb: () => IS,
-      rc: () => Wr.k,
-      rd: () => Zr.Xb,
-      s: () => Tr,
-      se: () => ES,
-      t: () => Zr.j,
-      tb: () => pr,
-      te: () => zS,
-      uc: () => Yr,
-      vd: () => Zr._b,
-      x: () => US,
-      xb: () => Zr.M,
-      xc: () => aS,
-      xe: () => Kr,
-      yd: () => Zr.$b,
-      zc: () => Zr.kb
+  5568: (dd, Od, md) => {
+    md.d(Od, {
+      $b: () => Wd.Y,
+      Bc: () => Wd.ob,
+      Be: () => qd,
+      C: () => bO,
+      Cb: () => Md,
+      Cd: () => bd,
+      E: () => dO,
+      Ec: () => Wd.tb,
+      F: () => Wd.p,
+      Fb: () => Wd.R,
+      Fd: () => oO,
+      Hd: () => cd,
+      Ib: () => FO,
+      Ic: () => TO,
+      Id: () => Dd,
+      J: () => vd,
+      Jb: () => XO,
+      Jd: () => zd,
+      Kb: () => Wd.S,
+      Kd: () => ld,
+      L: () => Wd.q,
+      Lb: () => Fd.f,
+      Lc: () => qO,
+      Nb: () => Ud,
+      Nc: () => hO,
+      O: () => mO,
+      Pd: () => ed,
+      Qb: () => Pd,
+      Rc: () => Wd.vb,
+      S: () => Wd.r,
+      Tb: () => ud,
+      Td: () => Zd,
+      Vc: () => Wd.xb,
+      W: () => fd,
+      Wd: () => Cd,
+      Xb: () => Sd,
+      Yc: () => Wd.Ab,
+      Yd: () => tO,
+      Z: () => Wd.x,
+      _c: () => OO,
+      ab: () => Wd.B,
+      ae: () => pO,
+      bd: () => Wd.Eb,
+      be: () => gd,
+      c: () => RO,
+      cc: () => Vd,
+      d: () => yd,
+      eb: () => Wd.C,
+      ec: () => wd,
+      f: () => Hd,
+      fb: () => td,
+      fd: () => Wd.Fb,
+      fe: () => kd,
+      gb: () => pd,
+      gd: () => Wd.Ib,
+      h: () => NO,
+      hd: () => Wd.Ob,
+      ic: () => QO,
+      ie: () => nd,
+      j: () => xd,
+      jc: () => Yd,
+      kb: () => Wd.G,
+      kd: () => Wd.Rb,
+      l: () => Jd,
+      ld: () => Wd.Vb,
+      mb: () => Wd.I,
+      mc: () => HO,
+      me: () => Gd,
+      nc: () => Fd.j,
+      nd: () => od,
+      ne: () => rd,
+      ob: () => jd,
+      p: () => Wd.k,
+      pb: () => vO,
+      pd: () => Bd,
+      rb: () => Qd,
+      rc: () => Td,
+      re: () => hd,
+      sc: () => KO,
+      t: () => yO,
+      tc: () => Wd.eb,
+      td: () => Wd.Yb,
+      ud: () => Wd.$b,
+      vb: () => Wd.L,
+      vc: () => Wd.fb,
+      ve: () => Ld,
+      w: () => sd,
+      wb: () => Id,
+      wc: () => Wd.ib,
+      wd: () => Wd.fc,
+      x: () => Xd,
+      xc: () => Wd.mb,
+      y: () => Ad,
+      yb: () => WO,
+      ye: () => YO,
+      zd: () => Rd
     });
-    var Zr = Qr(5617),
-      Wr = Qr(3372);
-    const ar = Math.round(1e3 / Zr.mc),
-      jr = 4,
-      Ir = 2;
+    var Wd = md(5571),
+      Fd = md(3372);
+    const Rd = Math.round(1e3 / Wd.fc),
+      Xd = 4,
+      Kd = 2;
 
-    function fr() {
-      return crypto.getRandomValues(new Uint32Array(Ir))
+    function hd() {
+      return crypto.getRandomValues(new Uint32Array(Kd))
     }
-    const Er = {
+    const vd = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      pr = 16,
-      xr = {
+      Qd = 16,
+      td = {
         Draws: 1,
         NetAll: 2,
         StopForSends: 4
       },
-      mr = 3,
-      Nr = {
+      od = 3,
+      Nd = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4,
@@ -707,17 +707,17 @@ export const modules = {
         CellLightUnlit: 16
       };
 
-    function Ur(rr) {
-      return (rr.nametagsHidden ? Br.NametagsHidden : 0) | (rr.crouchToggle ? Br.CrouchToggle : 0) | (rr.bhopDisabled ? Br.BhopDisabled : 0) | (rr.disableBobbing ? Br.DisableBobbing : 0) | (null !== rr.ezTowering ? Br.EzTowering : 0) | ("jump" === rr.ezTowering ? Br.EzTowerJump : 0) | (rr.ezBridging ? Br.EzBridging : 0) | (rr.showChunkBorders ? Br.ShowChunkBorders : 0) | (rr.touchWalk ? Br.TouchWalk : 0) | (rr.edgeGuard ? Br.EdgeGuard : 0) | (rr.edgeGuardLong ? Br.EdgeGuardLong : 0)
+    function qd(dd) {
+      return (dd.nametagsHidden ? Ed.NametagsHidden : 0) | (dd.crouchToggle ? Ed.CrouchToggle : 0) | (dd.bhopDisabled ? Ed.BhopDisabled : 0) | (dd.disableBobbing ? Ed.DisableBobbing : 0) | (null !== dd.ezTowering ? Ed.EzTowering : 0) | ("jump" === dd.ezTowering ? Ed.EzTowerJump : 0) | (dd.ezBridging ? Ed.EzBridging : 0) | (dd.showChunkBorders ? Ed.ShowChunkBorders : 0) | (dd.touchWalk ? Ed.TouchWalk : 0) | (dd.edgeGuard ? Ed.EdgeGuard : 0) | (dd.edgeGuardLong ? Ed.EdgeGuardLong : 0)
     }
-    const tr = {
+    const Hd = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      hr = {
+      yd = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -725,7 +725,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      zr = {
+      bd = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -734,7 +734,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      Yr = {
+      Td = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -743,25 +743,25 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      nr = 5,
-      er = 4294967295;
+      pd = 5,
+      Yd = 4294967295;
 
-    function Kr(rr) {
-      const Sr = {
+    function gd(dd) {
+      const Od = {
         off: 0,
-        lit: Nr.CellLight,
-        all: Nr.CellLight | Nr.CellLightUnlit
-      } [rr.cellLight];
-      return (rr.showFog ? Nr.ShowFog : 0) | (rr.lighting ? Nr.Lighting : 0) | (rr.chunkFade ? Nr.ChunkFade : 0) | Sr
+        lit: Nd.CellLight,
+        all: Nd.CellLight | Nd.CellLightUnlit
+      } [dd.cellLight];
+      return (dd.showFog ? Nd.ShowFog : 0) | (dd.lighting ? Nd.Lighting : 0) | (dd.chunkFade ? Nd.ChunkFade : 0) | Od
     }
-    const yr = {
+    const wd = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      Br = {
+      Ed = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -775,50 +775,50 @@ export const modules = {
         EzTowerJump: 1024,
         All: 2047
       },
-      Tr = {
+      Jd = {
         Release: 1,
         KeepTouches: 2
       },
-      vr = {
+      Ud = {
         Point: 1,
         Stamped: 2
       },
-      Or = {
+      xd = {
         Add: 1,
         Clear: 2
       },
-      Lr = 1,
-      lr = 8,
-      Xr = 16777215,
-      Pr = 4,
-      Hr = {
+      Bd = 1,
+      Sd = 8,
+      sd = 16777215,
+      ud = 4,
+      Vd = {
         Resume: 1
       },
-      qr = {
+      Ad = {
         Held: 1
       };
 
-    function Rr(rr, Sr) {
-      return (rr | Sr << 8) >>> 0
+    function rd(dd, Od) {
+      return (dd | Od << 8) >>> 0
     }
 
-    function gr(rr) {
-      return 255 & rr
+    function Gd(dd) {
+      return 255 & dd
     }
 
-    function Cr(rr) {
-      return rr >>> 8
+    function nd(dd) {
+      return dd >>> 8
     }
 
-    function Mr(rr) {
-      return rr + 3 & -4
+    function Ld(dd) {
+      return dd + 3 & -4
     }
-    const Gr = 16777216,
-      kr = 20;
-    const Ar = 8,
-      Vr = 8,
-      ir = 16777216,
-      wr = {
+    const Pd = 16777216,
+      zd = 20;
+    const cd = 8,
+      jd = 8,
+      Dd = 16777216,
+      ed = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -826,19 +826,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      cr = {
+      Id = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      Fr = 16,
-      or = {
+      ld = 16,
+      Cd = {
         Lost: 0,
         Gone: 1
       },
-      br = {
+      Zd = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -846,18 +846,18 @@ export const modules = {
         Retire: 5
       };
 
-    function Jr(rr) {
-      return rr === br.WorldgenSeed || rr === br.Generate
+    function kd(dd) {
+      return dd === Zd.WorldgenSeed || dd === Zd.Generate
     }
-    const Dr = 4,
-      dr = 99,
-      sr = {
+    const fd = 4,
+      Md = 99,
+      dO = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      ur = {
+      OO = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -866,7 +866,7 @@ export const modules = {
         PIPELINE_FAILED: 1,
         RESTORE_LOST: 2
       },
-      rS = {
+      mO = {
         FRAMES: 65535,
         RESTORE_UNHELD: 65536,
         LINKS_RUNNING: 1 << 17,
@@ -876,7 +876,7 @@ export const modules = {
         OLDEST_LINK_MAX: 1023,
         OLDEST_LINK_UNIT_MS: 100
       },
-      SS = {
+      WO = {
         BYTES: 20,
         CHUNKS: 0,
         BYTES_HELD: 1,
@@ -884,40 +884,40 @@ export const modules = {
         REPLACED: 3,
         DROPPED: 4
       },
-      QS = 12,
-      ZS = 16,
-      WS = 4,
-      aS = 12,
-      jS = {
+      FO = 12,
+      RO = 16,
+      XO = 4,
+      KO = 12,
+      hO = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      IS = 4,
-      fS = 8,
-      ES = 8,
-      pS = {
+      vO = 4,
+      QO = 8,
+      tO = 8,
+      oO = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      xS = {
+      NO = {
         Crit: 1,
         HitSelf: 2
       },
-      mS = {
+      qO = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      NS = {
+      HO = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      US = 12,
-      tS = {
+      yO = 12,
+      bO = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -926,56 +926,56 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      hS = 67108864;
+      TO = 67108864;
 
-    function zS(rr) {
-      for (const [Sr, Qr] of Object.entries(Zr.o))
-        if (Qr === rr) return Sr;
-      return `Unknown${rr}`
+    function pO(dd) {
+      for (const [Od, md] of Object.entries(Wd.p))
+        if (md === dd) return Od;
+      return `Unknown${dd}`
     }
 
-    function YS(rr) {
+    function YO(dd) {
       return {
-        status: rr[Zr.L.Status],
-        lastError: rr[Zr.L.LastError],
-        lastErrorDetail: rr[Zr.L.LastErrorDetail],
-        errorCount: rr[Zr.L.ErrorCount],
-        frameIndex: rr[Zr.L.FrameIndex],
-        tickIndex: rr[Zr.L.TickIndex],
-        renderPending: rr[Zr.L.RenderPending],
-        firstView: rr[Zr.L.FirstView],
-        chunksCancelled: rr[Zr.L.ChunksCancelled]
+        status: dd[Wd.I.Status],
+        lastError: dd[Wd.I.LastError],
+        lastErrorDetail: dd[Wd.I.LastErrorDetail],
+        errorCount: dd[Wd.I.ErrorCount],
+        frameIndex: dd[Wd.I.FrameIndex],
+        tickIndex: dd[Wd.I.TickIndex],
+        renderPending: dd[Wd.I.RenderPending],
+        firstView: dd[Wd.I.FirstView],
+        chunksCancelled: dd[Wd.I.ChunksCancelled]
       }
     }
   },
-  5604: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr,
-      e: () => ar,
-      i: () => Wr
+  5565: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Xd,
+      g: () => Rd,
+      i: () => Fd
     });
-    var Zr = Qr(5610);
+    var Wd = md(5568);
 
-    function Wr(rr) {
-      return "none" !== rr
+    function Fd(dd) {
+      return "none" !== dd
     }
 
-    function ar(rr, Sr) {
-      if (!rr) return "none";
-      switch (Sr) {
-        case Zr.eb.Drawn:
+    function Rd(dd, Od) {
+      if (!dd) return "none";
+      switch (Od) {
+        case Wd.eb.Drawn:
           return "drawn";
-        case Zr.eb.Paced:
+        case Wd.eb.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function jr(rr) {
-      return "drawn" === rr
+    function Xd(dd) {
+      return "drawn" === dd
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

@@ -1,30 +1,30 @@
 export const id = 67;
 export const ids = [67];
 export const modules = {
-  55183: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      startPageTexturePackFeed: () => jr
+  55115: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      startPageTexturePackFeed: () => Xd
     });
-    var Zr = Qr(1262),
-      Wr = Qr(43),
-      ar = Qr(55176);
+    var Wd = md(1253),
+      Fd = md(46),
+      Rd = md(55102);
 
-    function jr(rr, Sr) {
-      const Qr = new ar.e({
-        store: Wr.h,
-        warn: rr,
-        oneShot: Sr,
-        fetchLatest: async rr => {
-          const Sr = await fetch(`${Zr.clientSideServerUrls.texturePackUrl}/${rr}.json`, {
+    function Xd(dd, Od) {
+      const md = new Rd.d({
+        store: Fd.h,
+        warn: dd,
+        oneShot: Od,
+        fetchLatest: async dd => {
+          const Od = await fetch(`${Wd.clientSideServerUrls.texturePackUrl}/${dd}.json`, {
             cache: "reload"
           });
-          if (!Sr.ok) throw new Error(`fetching texture pack ${rr} answered HTTP ${Sr.status}`);
-          return await Sr.json()
+          if (!Od.ok) throw new Error(`fetching texture pack ${dd} answered HTTP ${Od.status}`);
+          return await Od.json()
         }
       });
-      return (0, ar.g)(Qr), Qr
+      return (0, Rd.g)(md), md
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

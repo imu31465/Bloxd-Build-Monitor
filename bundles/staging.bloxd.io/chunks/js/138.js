@@ -1,318 +1,318 @@
 export const id = 138;
 export const ids = [138, 139, 159];
 export const modules = {
-  6005: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Zr.j,
-      e: () => Wr,
-      i: () => Zr.r
+  5951: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Wd.f,
+      g: () => Fd,
+      k: () => Wd.o
     });
-    var Zr = Qr(6007);
-    const Wr = [!1, !0].flatMap((rr => ["terrain", "liquid", "model"].map((Sr => ({
-      strict: rr,
-      program: Sr
+    var Wd = md(5954);
+    const Fd = [!1, !0].flatMap((dd => ["terrain", "liquid", "model"].map((Od => ({
+      strict: dd,
+      program: Od
     })))))
   },
-  40792: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      ShaderPackPage: () => fr,
-      harnessShaderPackMode: () => mr,
-      setHarnessUrlShaderPack: () => xr,
-      shaderPackPage: () => pr
+  40819: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      ShaderPackPage: () => hd,
+      harnessShaderPackMode: () => od,
+      setHarnessUrlShaderPack: () => td,
+      shaderPackPage: () => Qd
     });
-    var Zr = Qr(109),
-      Wr = Qr(43),
-      ar = (Qr(4699), Qr(6005), Qr(4690)),
-      jr = Qr(7617);
-    Qr(7588);
-    const Ir = {
+    var Wd = md(107),
+      Fd = md(46),
+      Rd = (md(4678), md(5951), md(4674)),
+      Xd = md(7602);
+    md(7583);
+    const Kd = {
       status: "none"
     };
-    class fr {
+    class hd {
       constructor() {
         this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
       }
       preload() {
         if (null === this.stored) {
-          if ((0, ar.g)(Zr.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), Er().then((rr => {
-            rr && Wr.j.removeItem(ar.b)
+          if ((0, Rd.h)(Wd.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), vd().then((dd => {
+            dd && Fd.k.removeItem(Rd.d)
           })), this.stored;
           this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
         }
         return this.stored
       }
       prefetchHint() {
-        return (0, ar.d)(Zr.featureFlags.settings.canUseShaderPacks)
+        return (0, Rd.e)(Wd.featureFlags.settings.canUseShaderPacks)
       }
       async loadActive() {
-        const rr = await this.load();
-        return "active" === rr.status ? rr.pack : null
+        const dd = await this.load();
+        return "active" === dd.status ? dd.pack : null
       }
       load() {
-        return this.pagePack ??= this.read().catch((rr => (console.error("Failed to load the shader pack", rr), Ir))).then((rr => (this.resolved ??= rr, rr))), this.pagePack
+        return this.pagePack ??= this.read().catch((dd => (console.error("Failed to load the shader pack", dd), Kd))).then((dd => (this.resolved ??= dd, dd))), this.pagePack
       }
       hasNone() {
-        var rr;
-        return "none" === (null === (rr = this.resolved) || void 0 === rr ? void 0 : rr.status)
+        var dd;
+        return "none" === (null === (dd = this.resolved) || void 0 === dd ? void 0 : dd.status)
       }
-      block(rr) {
+      block(dd) {
         this.resolved = {
           status: "blocked",
-          messageKey: rr,
+          messageKey: dd,
           variants: null
         }, this.pagePack = Promise.resolve(this.resolved)
       }
       compiler() {
-        return this.compiling ??= Promise.all([Qr.e(91), Qr.e(157), Qr.e(163)]).then((() => Qr(54275))).then((rr => (rr.prefetchCompiler(), rr))), this.compiling
+        return this.compiling ??= Promise.all([md.e(91), md.e(157), md.e(163)]).then((() => md(54160))).then((dd => (dd.prefetchCompiler(), dd))), this.compiling
       }
       async readStored() {
-        const rr = await Er();
-        return rr && this.compiler().then((rr => rr.reconcileHint())).catch((rr => {
-          console.error("Failed to correct the shader pack hint", rr)
-        })), rr
+        const dd = await vd();
+        return dd && this.compiler().then((dd => dd.reconcileHint())).catch((dd => {
+          console.error("Failed to correct the shader pack hint", dd)
+        })), dd
       }
       async read() {
-        const rr = await this.preload();
-        return rr ? (await this.compiler()).compilePagePack(rr) : Ir
+        const dd = await this.preload();
+        return dd ? (await this.compiler()).compilePagePack(dd) : Kd
       }
     }
-    async function Er() {
-      if (!(0, ar.k)(Zr.featureFlags.settings.canUseShaderPacks)) return null;
+    async function vd() {
+      if (!(0, Rd.i)(Wd.featureFlags.settings.canUseShaderPacks)) return null;
       try {
-        const rr = await (0, jr.e)(!0);
-        return rr || Wr.j.setItem(ar.b, !1), rr
-      } catch (rr) {
-        return console.error("Failed to read the stored shader pack", rr), Wr.j.removeItem(ar.b), null
+        const dd = await (0, Xd.g)(!0);
+        return dd || Fd.k.setItem(Rd.d, !1), dd
+      } catch (dd) {
+        return console.error("Failed to read the stored shader pack", dd), Fd.k.removeItem(Rd.d), null
       }
     }
-    const pr = new fr;
+    const Qd = new hd;
 
-    function xr(rr, Sr) {}
+    function td(dd, Od) {}
 
-    function mr() {
+    function od() {
       return null
     }
   },
-  7617: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Wr,
-      e: () => ar
+  7602: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Fd,
+      g: () => Rd
     });
-    var Zr = Qr(43);
-    const Wr = "shaderPack";
-    async function ar() {
-      var rr;
-      let Sr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (rr = await Zr.h.getItem(Wr, Sr)) && void 0 !== rr ? rr : null
+    var Wd = md(46);
+    const Fd = "shaderPack";
+    async function Rd() {
+      var dd;
+      let Od = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (dd = await Wd.h.getItem(Fd, Od)) && void 0 !== dd ? dd : null
     }
   },
-  7588: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      loadShaderPackTextures: () => jr,
-      shaderPackTextures: () => Ir
+  7583: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      loadShaderPackTextures: () => Xd,
+      shaderPackTextures: () => Kd
     });
-    var Zr = Qr(6007);
-    let Wr = null,
-      ar = null;
+    var Wd = md(5954);
+    let Fd = null,
+      Rd = null;
 
-    function jr() {
-      return ar ??= Promise.all([Qr.e(85), Qr.e(126)]).then((() => Qr(42330))).then((rr => {
+    function Xd() {
+      return Rd ??= Promise.all([md.e(85), md.e(126)]).then((() => md(42438))).then((dd => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: Sr,
-          textureNameToIndex: Qr,
-          textureAnimationData: ar
-        } = rr;
-        return Wr ??= (0, Zr.k)(Qr, ar, Sr), Wr
-      })), ar
+          FORMER_BLOCK_IMAGE_NAMES: Od,
+          textureNameToIndex: md,
+          textureAnimationData: Rd
+        } = dd;
+        return Fd ??= (0, Wd.h)(md, Rd, Od), Fd
+      })), Rd
     }
 
-    function Ir() {
-      if (null === Wr) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Wr
+    function Kd() {
+      if (null === Fd) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Fd
     }
   },
-  6007: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Ir,
-      g: () => jr,
-      j: () => Zr,
-      k: () => tr,
-      n: () => xr,
-      r: () => Wr,
-      s: () => ar,
-      v: () => Er,
-      w: () => pr,
-      z: () => mr
+  5954: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Kd,
+      e: () => Xd,
+      f: () => Wd,
+      h: () => Hd,
+      l: () => td,
+      o: () => Fd,
+      p: () => Rd,
+      r: () => vd,
+      v: () => Qd,
+      w: () => od
     });
-    const Zr = 5;
+    const Wd = 5;
 
-    function Wr(rr) {
-      return rr === Zr
+    function Fd(dd) {
+      return dd === Wd
     }
 
-    function ar(rr) {
-      return [...rr.features]
+    function Rd(dd) {
+      return [...dd.features]
     }
-    const jr = 262144,
-      Ir = 256,
-      fr = 256;
+    const Xd = 262144,
+      Kd = 256,
+      hd = 256;
 
-    function Er(rr) {
-      if ("object" !== typeof rr || null === rr || Array.isArray(rr)) return "The pack has no files.";
-      const Sr = [];
-      for (const [Qr, Zr] of Object.entries(rr)) {
-        if ("string" !== typeof Zr) return `${Qr} isn't text.`;
-        Sr.push({
-          path: Qr,
-          source: Zr
+    function vd(dd) {
+      if ("object" !== typeof dd || null === dd || Array.isArray(dd)) return "The pack has no files.";
+      const Od = [];
+      for (const [md, Wd] of Object.entries(dd)) {
+        if ("string" !== typeof Wd) return `${md} isn't text.`;
+        Od.push({
+          path: md,
+          source: Wd
         })
       }
-      return Sr.sort(((rr, Sr) => xr(rr.path, Sr.path))),
-        function(rr) {
-          if (0 === rr.length) return "The pack has no .wgsl files.";
-          if (rr.length > Ir) return `The pack has more than ${Ir} .wgsl files.`;
-          const Sr = new Set;
+      return Od.sort(((dd, Od) => td(dd.path, Od.path))),
+        function(dd) {
+          if (0 === dd.length) return "The pack has no .wgsl files.";
+          if (dd.length > Kd) return `The pack has more than ${Kd} .wgsl files.`;
+          const Od = new Set;
           for (const {
-              path: Qr
+              path: md
             }
-            of rr) {
-            const rr = Nr(Qr);
-            if (null !== rr) return rr;
-            if (Sr.has(Qr)) return `The pack has two files at ${Qr}.`;
-            Sr.add(Qr)
+            of dd) {
+            const dd = Nd(md);
+            if (null !== dd) return dd;
+            if (Od.has(md)) return `The pack has two files at ${md}.`;
+            Od.add(md)
           }
-          return mr(rr) > jr ? `The pack's .wgsl files are over ${jr/1024} KB in total.` : null
-        }(Sr) ?? Sr
+          return od(dd) > Xd ? `The pack's .wgsl files are over ${Xd/1024} KB in total.` : null
+        }(Od) ?? Od
     }
 
-    function pr(rr) {
-      const Sr = {};
-      for (const Qr of rr) Sr[Qr.path] = Qr.source;
-      return Sr
+    function Qd(dd) {
+      const Od = {};
+      for (const md of dd) Od[md.path] = md.source;
+      return Od
     }
 
-    function xr(rr, Sr) {
-      return rr < Sr ? -1 : rr > Sr ? 1 : 0
+    function td(dd, Od) {
+      return dd < Od ? -1 : dd > Od ? 1 : 0
     }
 
-    function mr(rr) {
-      const Sr = new TextEncoder;
-      let Qr = 0;
+    function od(dd) {
+      const Od = new TextEncoder;
+      let md = 0;
       for (const {
-          source: Zr
+          source: Wd
         }
-        of rr) Qr += Sr.encode(Zr).byteLength;
-      return Qr
+        of dd) md += Od.encode(Wd).byteLength;
+      return md
     }
 
-    function Nr(rr) {
-      if (!rr.toLowerCase().endsWith(".wgsl")) return `${rr} isn't a .wgsl file.`;
-      if (rr.length > fr) return `A file path is over ${fr} characters.`;
-      if (rr.includes("\\") || /[\u0000-\u001f]/.test(rr)) return `${rr} isn't a valid file path.`;
-      return rr.split("/").some((rr => "" === rr || "." === rr || ".." === rr)) ? `${rr} isn't a valid file path.` : null
+    function Nd(dd) {
+      if (!dd.toLowerCase().endsWith(".wgsl")) return `${dd} isn't a .wgsl file.`;
+      if (dd.length > hd) return `A file path is over ${hd} characters.`;
+      if (dd.includes("\\") || /[\u0000-\u001f]/.test(dd)) return `${dd} isn't a valid file path.`;
+      return dd.split("/").some((dd => "" === dd || "." === dd || ".." === dd)) ? `${dd} isn't a valid file path.` : null
     }
-    const Ur = /^(.*)\[rot\[([1-4])$/;
+    const qd = /^(.*)\[rot\[([1-4])$/;
 
-    function tr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Zr = new Map;
-      Sr.forEach(((rr, Sr) => {
+    function Hd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Wd = new Map;
+      Od.forEach(((dd, Od) => {
         let {
-          numAnimStates: Qr,
-          animStartIdx: Wr
-        } = rr;
-        for (let ar = 1; ar < Qr; ar++) Zr.set(Wr + ar - 1, Sr)
+          numAnimStates: md,
+          animStartIdx: Fd
+        } = dd;
+        for (let Rd = 1; Rd < md; Rd++) Wd.set(Fd + Rd - 1, Od)
       }));
-      const Wr = Object.entries(rr),
-        ar = new Map;
-      for (const [tr, hr] of Wr) {
-        const rr = Ur.exec(tr);
-        "1" === rr?.[2] && ar.set(rr[1], hr + 1)
+      const Fd = Object.entries(dd),
+        Rd = new Map;
+      for (const [Hd, yd] of Fd) {
+        const dd = qd.exec(Hd);
+        "1" === dd?.[2] && Rd.set(dd[1], yd + 1)
       }
-      const jr = rr => {
-          const Sr = Ur.exec(rr);
-          return Sr && ar.has(Sr[1]) ? {
-            root: Sr[1],
-            rotation: Number(Sr[2]) - 1
+      const Xd = dd => {
+          const Od = qd.exec(dd);
+          return Od && Rd.has(Od[1]) ? {
+            root: Od[1],
+            rotation: Number(Od[2]) - 1
           } : null
         },
-        Ir = new Set(Wr.map((rr => {
-          let [Sr] = rr;
-          return jr(Sr)?.root ?? Sr
+        Kd = new Set(Fd.map((dd => {
+          let [Od] = dd;
+          return Xd(Od)?.root ?? Od
         }))),
-        fr = (rr, Qr) => {
-          const Zr = rr.replace(/_?0$/, "");
-          return (Sr[Qr]?.numAnimStates ?? 0) > 1 && !Ir.has(Zr) ? Zr : rr
+        hd = (dd, md) => {
+          const Wd = dd.replace(/_?0$/, "");
+          return (Od[md]?.numAnimStates ?? 0) > 1 && !Kd.has(Wd) ? Wd : dd
         },
-        Er = new Map;
-      for (const [Ur, tr] of Wr) Er.set(tr, fr(jr(Ur)?.root ?? Ur, tr));
-      const pr = Wr.reduce(((rr, Sr) => {
-          let [, Qr] = Sr;
-          return Math.max(rr, Qr + 1)
+        vd = new Map;
+      for (const [qd, Hd] of Fd) vd.set(Hd, hd(Xd(qd)?.root ?? qd, Hd));
+      const Qd = Fd.reduce(((dd, Od) => {
+          let [, md] = Od;
+          return Math.max(dd, md + 1)
         }), 0),
-        xr = Array.from({
-          length: pr
-        }, ((rr, Sr) => ({
-          id: Sr + 1,
+        td = Array.from({
+          length: Qd
+        }, ((dd, Od) => ({
+          id: Od + 1,
           rotation: 0
         }))),
-        mr = new Map,
-        Nr = new Map;
-      for (const [Ur, tr] of Wr) {
-        const rr = jr(Ur),
-          Sr = Zr.get(tr);
-        if (void 0 !== Sr) {
-          const Qr = Er.get(Sr);
-          Nr.set(Ur, {
-            name: Ur,
-            texture: Qr,
+        od = new Map,
+        Nd = new Map;
+      for (const [qd, Hd] of Fd) {
+        const dd = Xd(qd),
+          Od = Wd.get(Hd);
+        if (void 0 !== Od) {
+          const md = vd.get(Od);
+          Nd.set(qd, {
+            name: qd,
+            texture: md,
             kind: "frame"
-          }), rr && !Nr.has(rr.root) && Nr.set(rr.root, {
-            name: rr.root,
-            texture: Qr,
+          }), dd && !Nd.has(dd.root) && Nd.set(dd.root, {
+            name: dd.root,
+            texture: md,
             kind: "frame"
           });
           continue
         }
-        const Qr = Er.get(tr),
-          Wr = rr?.root ?? Ur;
-        if (Qr !== Wr && Nr.set(Wr, {
-            name: Wr,
-            texture: Qr,
+        const md = vd.get(Hd),
+          Fd = dd?.root ?? qd;
+        if (md !== Fd && Nd.set(Fd, {
+            name: Fd,
+            texture: md,
             kind: "frame"
-          }), rr) {
-          const Sr = ar.get(rr.root);
-          xr[tr] = {
-            id: Sr,
-            rotation: rr.rotation
-          }, mr.set(Qr, Sr), Nr.set(Ur, {
-            name: Ur,
-            texture: Qr,
+          }), dd) {
+          const Od = Rd.get(dd.root);
+          td[Hd] = {
+            id: Od,
+            rotation: dd.rotation
+          }, od.set(md, Od), Nd.set(qd, {
+            name: qd,
+            texture: md,
             kind: "rotation"
           })
-        } else mr.set(Qr, tr + 1)
+        } else od.set(md, Hd + 1)
       }
-      for (const Ur of mr.keys()) Nr.delete(Ur);
-      for (const [Ur, tr] of Qr) {
-        const rr = mr.get(tr);
-        void 0 === rr || mr.has(Ur) || (mr.set(Ur, rr), Nr.delete(Ur))
+      for (const qd of od.keys()) Nd.delete(qd);
+      for (const [qd, Hd] of md) {
+        const dd = od.get(Hd);
+        void 0 === dd || od.has(qd) || (od.set(qd, dd), Nd.delete(qd))
       }
       return {
-        named: [...mr].sort(((rr, Sr) => {
-          let [Qr] = rr, [Zr] = Sr;
-          return Qr < Zr ? -1 : Qr > Zr ? 1 : 0
-        })).map((rr => {
-          let [Sr, Qr] = rr;
+        named: [...od].sort(((dd, Od) => {
+          let [md] = dd, [Wd] = Od;
+          return md < Wd ? -1 : md > Wd ? 1 : 0
+        })).map((dd => {
+          let [Od, md] = dd;
           return {
-            name: Sr,
-            id: Qr
+            name: Od,
+            id: md
           }
         })),
-        aliases: [...Nr.values()],
-        layers: xr
+        aliases: [...Nd.values()],
+        layers: td
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

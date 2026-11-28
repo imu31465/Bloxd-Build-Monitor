@@ -1,56 +1,56 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  38175: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => jr,
-      f: () => Wr,
-      h: () => ar
+  38259: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Xd,
+      g: () => Fd,
+      h: () => Rd
     });
-    var Zr = Qr(72);
+    var Wd = md(66);
 
-    function Wr(rr) {
-      return Ir(rr, fr)
+    function Fd(dd) {
+      return Kd(dd, hd)
     }
 
-    function ar(rr) {
-      return Ir(rr, Er)
+    function Rd(dd) {
+      return Kd(dd, vd)
     }
 
-    function jr(rr) {
-      return `${Math.floor(rr/60)}:${String(rr%60).padStart(2,"0")}`
+    function Xd(dd) {
+      return `${Math.floor(dd/60)}:${String(dd%60).padStart(2,"0")}`
     }
 
-    function Ir(rr, Sr) {
-      const [, Qr] = (0, Zr.useState)(null);
-      return (0, Zr.useEffect)((() => {
-        if (0 === rr) return;
-        const Zr = window.setInterval((() => {
-          const Zr = Sr(rr);
-          Qr((Sr => (null === Sr || void 0 === Sr ? void 0 : Sr.endsAt) === rr && Sr.value === Zr ? Sr : {
-            endsAt: rr,
-            value: Zr
+    function Kd(dd, Od) {
+      const [, md] = (0, Wd.useState)(null);
+      return (0, Wd.useEffect)((() => {
+        if (0 === dd) return;
+        const Wd = window.setInterval((() => {
+          const Wd = Od(dd);
+          md((Od => (null === Od || void 0 === Od ? void 0 : Od.endsAt) === dd && Od.value === Wd ? Od : {
+            endsAt: dd,
+            value: Wd
           }))
         }), 250);
         return () => {
-          window.clearInterval(Zr)
+          window.clearInterval(Wd)
         }
-      }), [rr, Sr]), Sr(rr)
+      }), [dd, Od]), Od(dd)
     }
 
-    function fr(rr) {
-      return (rr - performance.now()) / 1e3
+    function hd(dd) {
+      return (dd - performance.now()) / 1e3
     }
 
-    function Er(rr) {
-      return Math.max(0, Math.ceil(fr(rr)))
+    function vd(dd) {
+      return Math.max(0, Math.ceil(hd(dd)))
     }
   },
-  38211: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Wr
+  38298: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Fd
     });
-    const Zr = [{
+    const Wd = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -67,79 +67,79 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function Wr(rr, Sr, Qr) {
-      const Wr = Math.abs(rr - Sr),
-        ar = Date.now() - Qr;
-      for (const jr of Zr)
-        if (rr < jr.maxDist) return Wr >= jr.hardUpdateDist || ar > jr.timeBetweenSoftChecks && Wr >= jr.softUpdateDist;
+    function Fd(dd, Od, md) {
+      const Fd = Math.abs(dd - Od),
+        Rd = Date.now() - md;
+      for (const Xd of Wd)
+        if (dd < Xd.maxDist) return Fd >= Xd.hardUpdateDist || Rd > Xd.timeBetweenSoftChecks && Fd >= Xd.softUpdateDist;
       return !1
     }
   },
-  39995: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => jr,
-      g: () => Ir
+  40023: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Xd,
+      d: () => Kd
     });
-    var Zr = Qr(379),
-      Wr = Qr(35472),
-      ar = Qr(4489);
+    var Wd = md(405),
+      Fd = md(35549),
+      Rd = md(4509);
 
-    function jr(rr) {
-      const Sr = (0, ar.e)(rr);
-      return (0, Zr.Pb)(rr, void 0 === Sr ? void 0 : (0, Wr.displayNameOf)(Sr))
+    function Xd(dd) {
+      const Od = (0, Rd.d)(dd);
+      return (0, Wd.Kb)(dd, void 0 === Od ? void 0 : (0, Fd.displayNameOf)(Od))
     }
 
-    function Ir(rr, Sr) {
-      return rr(jr(Sr))
+    function Kd(dd, Od) {
+      return dd(Xd(Od))
     }
   },
-  40004: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar,
-      h: () => Ir,
-      k: () => jr
+  40026: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      d: () => Kd,
+      g: () => Xd
     });
-    var Zr = Qr(3511);
-    const Wr = "(max-height: 420px), (max-width: 650px)";
+    var Wd = md(3505);
+    const Fd = "(max-height: 420px), (max-width: 650px)";
 
-    function ar() {
-      return (0, Zr.e)(Wr)
+    function Rd() {
+      return (0, Wd.d)(Fd)
     }
 
-    function jr(rr) {
-      return (0, Zr.i)(Wr, rr)
+    function Xd(dd) {
+      return (0, Wd.j)(Fd, dd)
     }
 
-    function Ir() {
-      return (0, Zr.h)(Wr)
+    function Kd() {
+      return (0, Wd.f)(Fd)
     }
   },
-  40013: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => jr,
-      f: () => ar
+  40028: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Xd,
+      h: () => Rd
     });
-    const Zr = new WeakMap;
+    const Wd = new WeakMap;
 
-    function Wr(rr) {
-      let Sr = Zr.get(rr);
-      return Sr || (Sr = {
-        hidden: rr.hidden,
+    function Fd(dd) {
+      let Od = Wd.get(dd);
+      return Od || (Od = {
+        hidden: dd.hidden,
         x: NaN,
         y: NaN
-      }, Zr.set(rr, Sr)), Sr
+      }, Wd.set(dd, Od)), Od
     }
 
-    function ar(rr, Sr) {
-      const Qr = Wr(rr);
-      Qr.hidden !== Sr && (Qr.hidden = Sr, rr.hidden = Sr)
+    function Rd(dd, Od) {
+      const md = Fd(dd);
+      md.hidden !== Od && (md.hidden = Od, dd.hidden = Od)
     }
 
-    function jr(rr, Sr, Qr) {
-      const Zr = Wr(rr);
-      Zr.x === Sr && Zr.y === Qr || (Zr.x = Sr, Zr.y = Qr, rr.style.translate = `${Sr}vw ${Qr}vh`)
+    function Xd(dd, Od, md) {
+      const Wd = Fd(dd);
+      Wd.x === Od && Wd.y === md || (Wd.x = Od, Wd.y = md, dd.style.translate = `${Od}vw ${md}vh`)
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

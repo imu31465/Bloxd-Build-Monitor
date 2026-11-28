@@ -1,560 +1,560 @@
 export const id = 65;
 export const ids = [65];
 export const modules = {
-  41466: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      recoverReplayTails: () => gr
+  41474: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      recoverReplayTails: () => Gd
     });
-    var Zr = Qr(41385),
-      Wr = Qr(43),
-      ar = Qr(41371),
-      jr = Qr(41355),
-      Ir = Qr(41379),
-      fr = Qr(1267);
-    const Er = 35e3;
-    async function pr(rr, Sr, Qr) {
-      const Zr = {
-          token: rr.token,
-          sequence: Sr
+    var Wd = md(41381),
+      Fd = md(46),
+      Rd = md(41370),
+      Xd = md(41354),
+      Kd = md(41372),
+      hd = md(1268);
+    const vd = 35e3;
+    async function Qd(dd, Od, md) {
+      const Wd = {
+          token: dd.token,
+          sequence: Od
         },
-        Wr = (0, fr.o)(Er),
-        ar = void 0 === Qr ? Wr : (0, fr.i)([Qr, Wr]);
-      let jr = !1;
+        Fd = (0, hd.s)(vd),
+        Rd = void 0 === md ? Fd : (0, hd.j)([md, Fd]);
+      let Xd = !1;
       try {
-        const Sr = await fetch(rr.releaseUrl, {
+        const Od = await fetch(dd.releaseUrl, {
           method: "POST",
           headers: {
             "Content-Type": "text/plain"
           },
-          body: JSON.stringify(Zr),
-          signal: ar
+          body: JSON.stringify(Wd),
+          signal: Rd
         });
-        if (503 === Sr.status) {
+        if (503 === Od.status) {
           const {
-            reason: rr
-          } = await Sr.json();
-          jr = "release_retrying" === rr || "shutting_down" === rr
+            reason: dd
+          } = await Od.json();
+          Xd = "release_retrying" === dd || "shutting_down" === dd
         }
-        if (!Sr.ok) throw new Error(`HTTP ${Sr.status}`);
-        const Qr = await Sr.json();
-        return "stored" === Qr.outcome ? Qr.stored : null
-      } catch (Ir) {
-        if (ar.aborted || jr) throw Ir;
-        return console.warn(`Session replay couldn't ask the part joiner about video segment ${Sr}; uploading it from the journal.`, Ir), null
+        if (!Od.ok) throw new Error(`HTTP ${Od.status}`);
+        const md = await Od.json();
+        return "stored" === md.outcome ? md.stored : null
+      } catch (Kd) {
+        if (Rd.aborted || Xd) throw Kd;
+        return console.warn(`Session replay couldn't ask the part joiner about video segment ${Od}; uploading it from the journal.`, Kd), null
       }
     }
-    var xr = Qr(41405),
-      mr = Qr(41438),
-      Nr = Qr(5459),
-      Ur = Qr(41413);
-    async function tr(rr, Sr, Qr) {
-      if (!rr.mayStartUpload()) return "retryLater";
+    var td = md(41407),
+      od = md(41441),
+      Nd = md(5375),
+      qd = md(41416);
+    async function Hd(dd, Od, md) {
+      if (!dd.mayStartUpload()) return "retryLater";
       const {
-        kind: Zr,
-        sequence: Wr,
-        contentType: ar
-      } = Qr;
-      let jr;
+        kind: Wd,
+        sequence: Fd,
+        contentType: Rd
+      } = md;
+      let Xd;
       try {
-        jr = await Qr.bytes()
-      } catch (Ir) {
-        return console.warn(`Session replay couldn't mux late ${Zr} segment ${Wr}; skipping it.`, Ir), "refused"
+        Xd = await md.bytes()
+      } catch (Kd) {
+        return console.warn(`Session replay couldn't mux late ${Wd} segment ${Fd}; skipping it.`, Kd), "refused"
       }
       try {
-        const Qr = rr.transportFor(Sr),
-          Ir = await Qr.requestPutUrl({
-            uploadToken: Sr.uploadToken,
-            kind: Zr,
-            sequence: Wr,
-            contentType: ar,
-            byteLength: jr.byteLength,
+        const md = dd.transportFor(Od),
+          Kd = await md.requestPutUrl({
+            uploadToken: Od.uploadToken,
+            kind: Wd,
+            sequence: Fd,
+            contentType: Rd,
+            byteLength: Xd.byteLength,
             late: !0
           });
-        return "rejected" in Ir ? (console.warn(`Session replay late ${Zr} segment ${Wr} refused: ${Ir.reason}`), Ir.retryable ? "retryLater" : "refused") : (await Qr.put(Ir.uploadUrl, jr, ar, Ir.ifNoneMatch), "uploaded")
-      } catch (Ir) {
-        return console.warn(`Session replay late ${Zr} segment ${Wr} upload failed; trying again later.`, Ir), "retryLater"
+        return "rejected" in Kd ? (console.warn(`Session replay late ${Wd} segment ${Fd} refused: ${Kd.reason}`), Kd.retryable ? "retryLater" : "refused") : (await md.put(Kd.uploadUrl, Xd, Rd, Kd.ifNoneMatch), "uploaded")
+      } catch (Kd) {
+        return console.warn(`Session replay late ${Wd} segment ${Fd} upload failed; trying again later.`, Kd), "retryLater"
       }
     }
-    async function hr(rr, Sr, Qr) {
-      var Zr;
-      const Wr = rr.nowMs(),
-        ar = (null !== (Zr = Qr.domSegments) && void 0 !== Zr ? Zr : []).filter((rr => rr.endMs <= Wr));
-      for (const jr of [...Qr.videoSegments, ...Qr.telemetrySegments, ...ar]) Qr.endedAtMs = Math.max(Qr.endedAtMs, jr.endMs);
-      for (const jr of (0, Ur.c)({
-          uploadToken: Sr.uploadToken,
-          manifest: Qr,
+    async function yd(dd, Od, md) {
+      var Wd;
+      const Fd = dd.nowMs(),
+        Rd = (null !== (Wd = md.domSegments) && void 0 !== Wd ? Wd : []).filter((dd => dd.endMs <= Fd));
+      for (const Xd of [...md.videoSegments, ...md.telemetrySegments, ...Rd]) md.endedAtMs = Math.max(md.endedAtMs, Xd.endMs);
+      for (const Xd of (0, qd.e)({
+          uploadToken: Od.uploadToken,
+          manifest: md,
           creatorGrants: [],
           late: !0
         })) {
-        const Qr = await rr.postManifest(Sr, jr);
-        if ("uploaded" !== Qr) return Qr
+        const md = await dd.postManifest(Od, Xd);
+        if ("uploaded" !== md) return md
       }
       return "uploaded"
     }
-    var zr = Qr(41470),
-      Yr = Qr(41486),
-      nr = Qr(41539),
-      er = Qr(41566),
-      Kr = Qr(41552);
-    class yr {
-      constructor(rr, Sr, Qr, Zr, Wr) {
-        this.frameDurationS = Qr, this.onFragment = Wr, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = Sr, this.lastTimestampUs = Sr;
-        const ar = rr => {
-          this.boxes.push(rr)
+    var bd = md(41483),
+      Td = md(41498),
+      pd = md(41544),
+      Yd = md(41569),
+      gd = md(41555);
+    class wd {
+      constructor(dd, Od, md, Wd, Fd) {
+        this.frameDurationS = md, this.onFragment = Fd, this.firstTimestampUs = void 0, this.lastTimestampUs = void 0, this.output = void 0, this.source = void 0, this.pending = void 0, this.chunkCount = 0, this.boxes = [], this.addingTimestampUs = null, this.firstTimestampUs = Od, this.lastTimestampUs = Od;
+        const Rd = dd => {
+          this.boxes.push(dd)
         };
-        this.output = new zr.e({
-          format: new Yr.i({
+        this.output = new bd.c({
+          format: new Td.h({
             fastStart: "fragmented",
-            minimumFragmentDuration: Zr,
-            onFtyp: ar,
-            onMoov: ar,
-            onMoof: ar,
-            onMdat: rr => {
-              ar(rr), this.fragmentDone()
+            minimumFragmentDuration: Wd,
+            onFtyp: Rd,
+            onMoov: Rd,
+            onMoof: Rd,
+            onMdat: dd => {
+              Rd(dd), this.fragmentDone()
             }
           }),
-          target: new nr.g
-        }), this.source = new er.i(rr), this.output.addVideoTrack(this.source), this.pending = this.output.start()
+          target: new pd.d
+        }), this.source = new Yd.k(dd), this.output.addVideoTrack(this.source), this.pending = this.output.start()
       }
       get durationUs() {
         return this.lastTimestampUs - this.firstTimestampUs
       }
-      add(rr, Sr) {
-        const Qr = new Uint8Array(rr.byteLength);
-        rr.copyTo(Qr), this.addData(Qr, rr.type, rr.timestamp, Sr)
+      add(dd, Od) {
+        const md = new Uint8Array(dd.byteLength);
+        dd.copyTo(md), this.addData(md, dd.type, dd.timestamp, Od)
       }
-      addData(rr, Sr, Qr, Zr) {
-        const Wr = new Kr.b(rr, Sr, (Qr - this.firstTimestampUs) / 1e6, this.frameDurationS),
-          ar = 0 === this.chunkCount++;
-        this.lastTimestampUs = Math.max(this.lastTimestampUs, Qr), this.pending = this.pending.then((() => (this.addingTimestampUs = Qr, this.source.add(Wr, ar ? {
-          decoderConfig: Zr
+      addData(dd, Od, md, Wd) {
+        const Fd = new gd.e(dd, Od, (md - this.firstTimestampUs) / 1e6, this.frameDurationS),
+          Rd = 0 === this.chunkCount++;
+        this.lastTimestampUs = Math.max(this.lastTimestampUs, md), this.pending = this.pending.then((() => (this.addingTimestampUs = md, this.source.add(Fd, Rd ? {
+          decoderConfig: Wd
         } : void 0))))
       }
       async finish() {
         await this.pending, this.addingTimestampUs = null, await this.output.finalize()
       }
       fragmentDone() {
-        var rr;
-        const Sr = Br(this.boxes);
+        var dd;
+        const Od = Ed(this.boxes);
         this.boxes = [], this.onFragment({
-          bytes: Sr,
-          endUs: null !== (rr = this.addingTimestampUs) && void 0 !== rr ? rr : this.lastTimestampUs + 1e6 * this.frameDurationS
+          bytes: Od,
+          endUs: null !== (dd = this.addingTimestampUs) && void 0 !== dd ? dd : this.lastTimestampUs + 1e6 * this.frameDurationS
         })
       }
     }
 
-    function Br(rr) {
-      const Sr = new Uint8Array(rr.reduce(((rr, Sr) => rr + Sr.byteLength), 0));
-      let Qr = 0;
-      for (const Zr of rr) Sr.set(Zr, Qr), Qr += Zr.byteLength;
-      return Sr
+    function Ed(dd) {
+      const Od = new Uint8Array(dd.reduce(((dd, Od) => dd + Od.byteLength), 0));
+      let md = 0;
+      for (const Wd of dd) Od.set(Wd, md), md += Wd.byteLength;
+      return Od
     }
-    Qr(41403);
+    md(41405);
 
-    function Tr(rr, Sr, Qr, Zr) {
-      const Wr = rr / 1e3 + Qr;
+    function Jd(dd, Od, md, Wd) {
+      const Fd = dd / 1e3 + md;
       return {
-        startMs: Wr,
-        endMs: Wr + Sr / 1e3 + 1e3 / Zr
+        startMs: Fd,
+        endMs: Fd + Od / 1e3 + 1e3 / Wd
       }
     }
-    const vr = 2,
-      Or = 18e5;
+    const Ud = 2,
+      xd = 18e5;
 
-    function Lr(rr, Sr) {
-      const Qr = Sr[Sr.length - 1].timestampUs - rr.firstTimestampUs,
+    function Bd(dd, Od) {
+      const md = Od[Od.length - 1].timestampUs - dd.firstTimestampUs,
         {
-          startMs: Zr,
-          endMs: Wr
-        } = Tr(rr.firstTimestampUs, Qr, rr.epochOffsetMs, rr.fps);
+          startMs: Wd,
+          endMs: Fd
+        } = Jd(dd.firstTimestampUs, md, dd.epochOffsetMs, dd.fps);
       return {
-        startMs: Math.round(Zr),
-        endMs: Math.round(Wr),
-        width: rr.width,
-        height: rr.height,
-        codec: rr.codec
+        startMs: Math.round(Wd),
+        endMs: Math.round(Fd),
+        width: dd.width,
+        height: dd.height,
+        codec: dd.codec
       }
     }
-    async function lr(rr, Sr) {
-      const Qr = [],
-        Zr = new yr(rr.containerCodec, rr.firstTimestampUs, 1 / rr.fps, vr, (rr => {
+    async function Sd(dd, Od) {
+      const md = [],
+        Wd = new wd(dd.containerCodec, dd.firstTimestampUs, 1 / dd.fps, Ud, (dd => {
           let {
-            bytes: Sr
-          } = rr;
-          Qr.push(Sr)
+            bytes: Od
+          } = dd;
+          md.push(Od)
         }));
-      for (const Wr of Sr) Zr.addData(Wr.data, Wr.key ? "key" : "delta", Wr.timestampUs, rr.decoderConfig);
-      return await Zr.finish(), Br(Qr).buffer
+      for (const Fd of Od) Wd.addData(Fd.data, Fd.key ? "key" : "delta", Fd.timestampUs, dd.decoderConfig);
+      return await Wd.finish(), Ed(md).buffer
     }
 
-    function Xr(rr, Sr, Qr) {
-      var Zr;
-      const Wr = null === (Zr = rr.videoProgress) || void 0 === Zr ? void 0 : Zr.find((rr => rr.segmentId === Sr));
-      return void 0 !== Wr && (null === Qr || Wr.partsLanded > Qr.partsLanded) ? Wr : Qr
+    function sd(dd, Od, md) {
+      var Wd;
+      const Fd = null === (Wd = dd.videoProgress) || void 0 === Wd ? void 0 : Wd.find((dd => dd.segmentId === Od));
+      return void 0 !== Fd && (null === md || Fd.partsLanded > md.partsLanded) ? Fd : md
     }
-    const Pr = 6e5;
-    async function Hr(rr, Sr) {
-      const Qr = {
-        recordingId: Sr.recordingId,
+    const ud = 6e5;
+    async function Vd(dd, Od) {
+      const md = {
+        recordingId: Od.recordingId,
         outcome: "nothing",
         videoSegments: 0,
         telemetrySegments: 0,
         domSegments: 0
       };
-      if (rr.nowMs() > rr.lateUploadUntilMs(Sr) - Pr) return {
-        ...Qr,
+      if (dd.nowMs() > dd.lateUploadUntilMs(Od) - ud) return {
+        ...md,
         outcome: "expired"
       };
-      const Zr = new Set;
-      let Wr;
+      const Wd = new Set;
+      let Fd;
       try {
-        Wr = await async function(rr, Sr, Qr, Zr) {
+        Fd = await async function(dd, Od, md, Wd) {
           const {
-            partJoiner: Wr
-          } = Sr;
-          if (void 0 === Wr) return Qr;
-          const ar = rr.nowMs() > Sr.manifest.endedAtMs + Or,
-            jr = new Map;
+            partJoiner: Fd
+          } = Od;
+          if (void 0 === Fd) return md;
+          const Rd = dd.nowMs() > Od.manifest.endedAtMs + xd,
+            Xd = new Map;
           for (const {
-              header: fr,
-              sequence: Er,
-              progress: pr
+              header: hd,
+              sequence: vd,
+              progress: Qd
             }
-            of Qr.video)
-            if (null !== Er && null === Xr(Sr, fr.segmentId, pr)) {
-              let Sr;
+            of md.video)
+            if (null !== vd && null === sd(Od, hd.segmentId, Qd)) {
+              let Od;
               try {
-                Sr = await rr.releaseJoined(Wr, Er)
-              } catch (Ir) {
-                if (!ar) {
-                  Zr.add(fr.segmentId);
+                Od = await dd.releaseJoined(Fd, vd)
+              } catch (Kd) {
+                if (!Rd) {
+                  Wd.add(hd.segmentId);
                   continue
                 }
-                console.warn(`Session replay's part joiner didn't answer about video segment ${Er} in time; uploading it from the journal.`, Ir), Sr = null
+                console.warn(`Session replay's part joiner didn't answer about video segment ${vd} in time; uploading it from the journal.`, Kd), Od = null
               }
-              null !== Sr && jr.set(fr.segmentId, Sr)
+              null !== Od && Xd.set(hd.segmentId, Od)
             } return {
-            ...Qr,
-            joined: jr
+            ...md,
+            joined: Xd
           }
-        }(rr, Sr, await rr.store.read(Sr), Zr)
-      } catch (zr) {
-        return console.warn(`Session replay couldn't read what an earlier page load left of ${Sr.recordingId}; trying again later.`, zr), {
-          ...Qr,
+        }(dd, Od, await dd.store.read(Od), Wd)
+      } catch (bd) {
+        return console.warn(`Session replay couldn't read what an earlier page load left of ${Od.recordingId}; trying again later.`, bd), {
+          ...md,
           outcome: "retryLater"
         }
       }
-      const ar = [],
-        jr = {
-          ...Sr.manifest,
+      const Rd = [],
+        Xd = {
+          ...Od.manifest,
           videoSegments: [],
           telemetrySegments: [],
-          ...Wr.dom.length + Wr.domTails.length > 0 ? {
-            domSegments: ar
+          ...Fd.dom.length + Fd.domTails.length > 0 ? {
+            domSegments: Rd
           } : {}
         },
-        Ir = () => jr.videoSegments.length + jr.telemetrySegments.length + ar.length > 0,
-        fr = function(rr, Sr) {
-          let Qr = rr.video.reduce(((rr, Sr) => {
+        Kd = () => Xd.videoSegments.length + Xd.telemetrySegments.length + Rd.length > 0,
+        hd = function(dd, Od) {
+          let md = dd.video.reduce(((dd, Od) => {
             let {
-              sequence: Qr
-            } = Sr;
-            return null === Qr ? rr : Math.max(rr, Qr + 1)
-          }), Sr.nextVideoSequence);
+              sequence: md
+            } = Od;
+            return null === md ? dd : Math.max(dd, md + 1)
+          }), Od.nextVideoSequence);
           return {
-            segments: [...rr.video].sort(((rr, Sr) => rr.header.segmentId - Sr.header.segmentId)).map((Zr => {
-              var Wr, ar, jr;
+            segments: [...dd.video].sort(((dd, Od) => dd.header.segmentId - Od.header.segmentId)).map((Wd => {
+              var Fd, Rd, Xd;
               let {
-                header: Ir,
-                sequence: fr,
-                progress: Er,
-                chunks: pr
-              } = Zr;
-              const xr = Xr(Sr, Ir.segmentId, Er),
-                mr = null === (Wr = rr.joined) || void 0 === Wr ? void 0 : Wr.get(Ir.segmentId),
-                Nr = null !== fr && void 0 !== mr ? {
-                  sequence: fr,
-                  ...mr.meta
-                } : null !== fr && null !== xr ? {
-                  sequence: fr,
-                  ...xr.meta,
-                  startMs: Math.round(xr.meta.startMs),
-                  endMs: Math.round(xr.meta.endMs),
-                  parts: xr.partsLanded
+                header: Kd,
+                sequence: hd,
+                progress: vd,
+                chunks: Qd
+              } = Wd;
+              const td = sd(Od, Kd.segmentId, vd),
+                od = null === (Fd = dd.joined) || void 0 === Fd ? void 0 : Fd.get(Kd.segmentId),
+                Nd = null !== hd && void 0 !== od ? {
+                  sequence: hd,
+                  ...od.meta
+                } : null !== hd && null !== td ? {
+                  sequence: hd,
+                  ...td.meta,
+                  startMs: Math.round(td.meta.startMs),
+                  endMs: Math.round(td.meta.endMs),
+                  parts: td.partsLanded
                 } : null,
-                Ur = null !== (ar = null !== (jr = null === mr || void 0 === mr ? void 0 : mr.completeUntilUs) && void 0 !== jr ? jr : null === xr || void 0 === xr ? void 0 : xr.completeUntilUs) && void 0 !== ar ? ar : null,
-                tr = function(rr) {
-                  const Sr = [...rr].sort(((rr, Sr) => rr.index - Sr.index)),
-                    Qr = [];
-                  for (const Zr of Sr) {
-                    if (0 === Qr.length ? !Zr.key : Zr.index !== Qr[0].index + Qr.length) break;
-                    Qr.push(Zr)
+                qd = null !== (Rd = null !== (Xd = null === od || void 0 === od ? void 0 : od.completeUntilUs) && void 0 !== Xd ? Xd : null === td || void 0 === td ? void 0 : td.completeUntilUs) && void 0 !== Rd ? Rd : null,
+                Hd = function(dd) {
+                  const Od = [...dd].sort(((dd, Od) => dd.index - Od.index)),
+                    md = [];
+                  for (const Wd of Od) {
+                    if (0 === md.length ? !Wd.key : Wd.index !== md[0].index + md.length) break;
+                    md.push(Wd)
                   }
-                  return Qr
-                }(null === Ur ? pr : pr.filter((rr => rr.timestampUs >= Ur))),
-                hr = 0 === tr.length ? null : {
-                  sequence: Qr++,
+                  return md
+                }(null === qd ? Qd : Qd.filter((dd => dd.timestampUs >= qd))),
+                yd = 0 === Hd.length ? null : {
+                  sequence: md++,
                   header: {
-                    ...Ir,
-                    firstTimestampUs: tr[0].timestampUs
+                    ...Kd,
+                    firstTimestampUs: Hd[0].timestampUs
                   },
-                  chunks: tr
+                  chunks: Hd
                 };
               return {
-                segmentId: Ir.segmentId,
-                landed: Nr,
-                tail: hr
+                segmentId: Kd.segmentId,
+                landed: Nd,
+                tail: yd
               }
             })),
-            nextSequence: Qr
+            nextSequence: md
           }
-        }(Wr, Sr),
-        Er = function(rr, Sr) {
-          var Qr;
-          let Zr = rr.dom.reduce(((rr, Sr) => {
+        }(Fd, Od),
+        vd = function(dd, Od) {
+          var md;
+          let Wd = dd.dom.reduce(((dd, Od) => {
             let {
-              sequence: Qr
-            } = Sr;
-            return Math.max(rr, Qr + 1)
-          }), null !== (Qr = Sr.nextDomSequence) && void 0 !== Qr ? Qr : 0);
-          const Wr = [...rr.domTails].sort(((rr, Sr) => rr.chunkIndex - Sr.chunkIndex || rr.fromChar - Sr.fromChar)),
-            ar = [];
-          for (const jr of Wr) {
-            const rr = ar[ar.length - 1],
-              Sr = (null === rr || void 0 === rr ? void 0 : rr.chunkIndex) === jr.chunkIndex;
-            jr.fromChar === (Sr ? rr.text.length : 0) && (Sr ? (rr.text += jr.text, rr.last = jr) : ar.push({
-              chunkIndex: jr.chunkIndex,
-              sequence: Zr++,
-              text: jr.text,
-              last: jr
+              sequence: md
+            } = Od;
+            return Math.max(dd, md + 1)
+          }), null !== (md = Od.nextDomSequence) && void 0 !== md ? md : 0);
+          const Fd = [...dd.domTails].sort(((dd, Od) => dd.chunkIndex - Od.chunkIndex || dd.fromChar - Od.fromChar)),
+            Rd = [];
+          for (const Xd of Fd) {
+            const dd = Rd[Rd.length - 1],
+              Od = (null === dd || void 0 === dd ? void 0 : dd.chunkIndex) === Xd.chunkIndex;
+            Xd.fromChar === (Od ? dd.text.length : 0) && (Od ? (dd.text += Xd.text, dd.last = Xd) : Rd.push({
+              chunkIndex: Xd.chunkIndex,
+              sequence: Wd++,
+              text: Xd.text,
+              last: Xd
             }))
           }
           return {
-            tails: ar,
-            nextSequence: Zr
+            tails: Rd,
+            nextSequence: Wd
           }
-        }(Wr, Sr),
-        pr = {
+        }(Fd, Od),
+        Qd = {
           videoSegmentIds: [],
           telemetrySequences: [],
           domSequences: [],
           domTailChunks: []
         };
-      let xr = !1;
-      const mr = async Wr => {
-        if (Ir()) {
-          const Ir = await hr(rr, Sr, jr);
-          if ("retryLater" === Wr && "uploaded" === Ir) try {
-            var ar;
-            const Qr = Er.tails.find((rr => {
+      let td = !1;
+      const od = async Fd => {
+        if (Kd()) {
+          const Kd = await yd(dd, Od, Xd);
+          if ("retryLater" === Fd && "uploaded" === Kd) try {
+            var Rd;
+            const md = vd.tails.find((dd => {
                 let {
-                  chunkIndex: Sr
-                } = rr;
-                return !pr.domTailChunks.includes(Sr)
+                  chunkIndex: Od
+                } = dd;
+                return !Qd.domTailChunks.includes(Od)
               })),
-              Zr = null !== (ar = null === Qr || void 0 === Qr ? void 0 : Qr.sequence) && void 0 !== ar ? ar : Er.nextSequence;
-            await rr.store.forgetSent({
-              ...Sr,
-              nextVideoSequence: fr.nextSequence,
-              nextDomSequence: Zr
-            }, pr)
-          } catch (zr) {
-            console.warn(`Session replay couldn't drop what it sent of ${Sr.recordingId} from its journal.`, zr)
+              Wd = null !== (Rd = null === md || void 0 === md ? void 0 : md.sequence) && void 0 !== Rd ? Rd : vd.nextSequence;
+            await dd.store.forgetSent({
+              ...Od,
+              nextVideoSequence: hd.nextSequence,
+              nextDomSequence: Wd
+            }, Qd)
+          } catch (bd) {
+            console.warn(`Session replay couldn't drop what it sent of ${Od.recordingId} from its journal.`, bd)
           }
-          if ("refused" === Ir && Zr.size > 0) return {
-            ...Qr,
+          if ("refused" === Kd && Wd.size > 0) return {
+            ...md,
             outcome: "refused"
           }
         }
         return {
-          ...Qr,
-          outcome: Wr
+          ...md,
+          outcome: Fd
         }
       };
       for (const {
-          segmentId: hr,
-          landed: Yr,
-          tail: nr
+          segmentId: yd,
+          landed: Td,
+          tail: pd
         }
-        of fr.segments)
-        if (!Zr.has(hr)) {
-          if (null !== Yr && jr.videoSegments.push(Yr), null !== nr) {
-            const Zr = await tr(rr, Sr, {
+        of hd.segments)
+        if (!Wd.has(yd)) {
+          if (null !== Td && Xd.videoSegments.push(Td), null !== pd) {
+            const Wd = await Hd(dd, Od, {
               kind: "video",
-              sequence: nr.sequence,
+              sequence: pd.sequence,
               contentType: "video/mp4",
-              bytes: () => rr.mux(nr.header, nr.chunks)
+              bytes: () => dd.mux(pd.header, pd.chunks)
             });
-            if ("retryLater" === Zr) return await mr(Zr);
-            "refused" === Zr ? xr = !0 : (jr.videoSegments.push({
-              sequence: nr.sequence,
-              ...Lr(nr.header, nr.chunks)
-            }), Qr.videoSegments++)
+            if ("retryLater" === Wd) return await od(Wd);
+            "refused" === Wd ? td = !0 : (Xd.videoSegments.push({
+              sequence: pd.sequence,
+              ...Bd(pd.header, pd.chunks)
+            }), md.videoSegments++)
           }
-          pr.videoSegmentIds.push(hr)
-        } const Nr = [...Wr.telemetry].sort(((rr, Sr) => rr.sequence - Sr.sequence));
-      for (const hr of Nr) {
-        const Zr = hr.landed ? "uploaded" : await tr(rr, Sr, {
+          Qd.videoSegmentIds.push(yd)
+        } const Nd = [...Fd.telemetry].sort(((dd, Od) => dd.sequence - Od.sequence));
+      for (const yd of Nd) {
+        const Wd = yd.landed ? "uploaded" : await Hd(dd, Od, {
           kind: "telemetry",
-          sequence: hr.sequence,
+          sequence: yd.sequence,
           contentType: "application/octet-stream",
-          bytes: async () => hr.bytes
+          bytes: async () => yd.bytes
         });
-        if ("retryLater" === Zr) return await mr(Zr);
-        pr.telemetrySequences.push(hr.sequence), "refused" !== Zr ? (jr.telemetrySegments.push({
-          sequence: hr.sequence,
-          startMs: Math.round(hr.startMs),
-          endMs: Math.round(hr.endMs)
-        }), Qr.telemetrySegments++) : xr = !0
+        if ("retryLater" === Wd) return await od(Wd);
+        Qd.telemetrySequences.push(yd.sequence), "refused" !== Wd ? (Xd.telemetrySegments.push({
+          sequence: yd.sequence,
+          startMs: Math.round(yd.startMs),
+          endMs: Math.round(yd.endMs)
+        }), md.telemetrySegments++) : td = !0
       }
-      const Ur = [...Wr.dom].sort(((rr, Sr) => rr.sequence - Sr.sequence));
+      const qd = [...Fd.dom].sort(((dd, Od) => dd.sequence - Od.sequence));
       for (const {
-          sequence: hr,
-          chunk: Yr,
-          bytes: nr
+          sequence: yd,
+          chunk: Td,
+          bytes: pd
         }
-        of Ur) {
-        const Zr = null === nr ? "uploaded" : await tr(rr, Sr, {
+        of qd) {
+        const Wd = null === pd ? "uploaded" : await Hd(dd, Od, {
           kind: "dom",
-          sequence: hr,
+          sequence: yd,
           contentType: "application/octet-stream",
-          bytes: async () => nr
+          bytes: async () => pd
         });
-        if ("retryLater" === Zr) return await mr(Zr);
-        pr.domSequences.push(hr), ar.push({
-          sequence: hr,
-          ...Yr
-        }), "uploaded" === Zr && Qr.domSegments++
+        if ("retryLater" === Wd) return await od(Wd);
+        Qd.domSequences.push(yd), Rd.push({
+          sequence: yd,
+          ...Td
+        }), "uploaded" === Wd && md.domSegments++
       }
       for (const {
-          chunkIndex: hr,
-          sequence: Yr,
-          text: nr,
-          last: er
+          chunkIndex: yd,
+          sequence: Td,
+          text: pd,
+          last: Yd
         }
-        of Er.tails) {
-        let Zr;
-        const Wr = await tr(rr, Sr, {
+        of vd.tails) {
+        let Wd;
+        const Fd = await Hd(dd, Od, {
           kind: "dom",
-          sequence: Yr,
+          sequence: Td,
           contentType: "application/octet-stream",
-          bytes: async () => (Zr = await rr.packDom(nr), Zr.bytes.buffer)
+          bytes: async () => (Wd = await dd.packDom(pd), Wd.bytes.buffer)
         });
-        if ("retryLater" === Wr) return await mr(Wr);
-        if (pr.domTailChunks.push(hr), "refused" === Wr) {
-          xr = !0;
+        if ("retryLater" === Fd) return await od(Fd);
+        if (Qd.domTailChunks.push(yd), "refused" === Fd) {
+          td = !0;
           continue
         }
         const {
-          bytes: jr,
-          inflatedBytes: Ir
-        } = Zr, {
-          startMs: fr,
-          endMs: Er,
-          summary: Nr
-        } = er;
-        ar.push({
-          sequence: Yr,
-          startMs: fr,
-          endMs: Er,
-          byteLength: jr.byteLength,
+          bytes: Xd,
+          inflatedBytes: Kd
+        } = Wd, {
+          startMs: hd,
+          endMs: vd,
+          summary: Nd
+        } = Yd;
+        Rd.push({
+          sequence: Td,
+          startMs: hd,
+          endMs: vd,
+          byteLength: Xd.byteLength,
           summary: {
-            ...Nr,
-            size: Ir
+            ...Nd,
+            size: Kd
           }
-        }), Qr.domSegments++
+        }), md.domSegments++
       }
-      return Zr.size > 0 ? await mr("retryLater") : Ir() ? {
-        ...Qr,
-        outcome: await hr(rr, Sr, jr)
-      } : xr ? {
-        ...Qr,
+      return Wd.size > 0 ? await od("retryLater") : Kd() ? {
+        ...md,
+        outcome: await yd(dd, Od, Xd)
+      } : td ? {
+        ...md,
         outcome: "refused"
-      } : Qr
+      } : md
     }
-    var qr = Qr(41392),
-      Rr = Qr(41420);
-    async function gr() {
-      const rr = "undefined" === typeof navigator ? void 0 : navigator.locks;
-      if (!mr.e.supported || void 0 === rr) return;
-      const Sr = new mr.e,
-        Qr = new qr.d,
-        fr = new ar.c,
-        Er = await async function(rr) {
-          const Sr = [];
-          for (const Zr of await rr.store.listRecordings()) {
-            let Wr = {
-              recordingId: Zr.recordingId,
+    var Ad = md(41390),
+      rd = md(41419);
+    async function Gd() {
+      const dd = "undefined" === typeof navigator ? void 0 : navigator.locks;
+      if (!od.b.supported || void 0 === dd) return;
+      const Od = new od.b,
+        md = new Ad.e,
+        hd = new Rd.d,
+        vd = await async function(dd) {
+          const Od = [];
+          for (const Wd of await dd.store.listRecordings()) {
+            let Fd = {
+              recordingId: Wd.recordingId,
               outcome: "live",
               videoSegments: 0,
               telemetrySegments: 0,
               domSegments: 0
             };
             try {
-              await rr.withLock(Zr.recordingId, (async () => {
-                const Sr = (await rr.store.listRecordings()).find((rr => {
+              await dd.withLock(Wd.recordingId, (async () => {
+                const Od = (await dd.store.listRecordings()).find((dd => {
                   let {
-                    recordingId: Sr
-                  } = rr;
-                  return Sr === Zr.recordingId
+                    recordingId: Od
+                  } = dd;
+                  return Od === Wd.recordingId
                 }));
-                if (void 0 !== Sr) {
+                if (void 0 !== Od) {
                   try {
-                    Wr = await Hr(rr, Sr)
-                  } catch (Qr) {
-                    console.warn(`Session replay couldn't recover what an earlier page load left of ${Zr.recordingId}; forgetting it.`, Qr), Wr = {
-                      ...Wr,
+                    Fd = await Vd(dd, Od)
+                  } catch (md) {
+                    console.warn(`Session replay couldn't recover what an earlier page load left of ${Wd.recordingId}; forgetting it.`, md), Fd = {
+                      ...Fd,
                       outcome: "failed"
                     }
                   }
-                  "retryLater" !== Wr.outcome && await rr.store.deleteRecording(Zr.recordingId)
-                } else Wr = {
-                  ...Wr,
+                  "retryLater" !== Fd.outcome && await dd.store.deleteRecording(Wd.recordingId)
+                } else Fd = {
+                  ...Fd,
                   outcome: "nothing"
                 }
               }))
-            } catch (Qr) {
-              console.warn(`Session replay couldn't forget ${Zr.recordingId}'s journal.`, Qr)
+            } catch (md) {
+              console.warn(`Session replay couldn't forget ${Wd.recordingId}'s journal.`, md)
             }
-            Sr.push(Wr)
+            Od.push(Fd)
           }
-          return Sr
+          return Od
         }({
-          store: Sr,
-          transportFor: rr => {
-            var Sr;
-            return new Rr.d((null !== (Sr = rr.endpoints) && void 0 !== Sr ? Sr : (0, Ir.b)()).segmentUploadUrl, {
-              relay: Qr.for(rr)
+          store: Od,
+          transportFor: dd => {
+            var Od;
+            return new rd.e((null !== (Od = dd.endpoints) && void 0 !== Od ? Od : (0, Kd.c)()).segmentUploadUrl, {
+              relay: md.for(dd)
             })
           },
-          postManifest: (rr, Sr) => {
-            var Qr;
-            return (0, xr.e)((null !== (Qr = rr.endpoints) && void 0 !== Qr ? Qr : (0, Ir.b)()).manifestUrl, Sr)
+          postManifest: (dd, Od) => {
+            var md;
+            return (0, td.d)((null !== (md = dd.endpoints) && void 0 !== md ? md : (0, Kd.c)()).manifestUrl, Od)
           },
-          withLock: async (Sr, Qr) => {
-            await rr.request((0, Nr.w)(Sr), {
+          withLock: async (Od, md) => {
+            await dd.request((0, Nd.s)(Od), {
               ifAvailable: !0
-            }, (async rr => {
-              null !== rr && await Qr()
+            }, (async dd => {
+              null !== dd && await md()
             }))
           },
-          mux: lr,
-          packDom: rr => fr.pack(rr).catch((() => (0, jr.b)(rr))),
-          releaseJoined: pr,
+          mux: Sd,
+          packDom: dd => hd.pack(dd).catch((() => (0, Xd.c)(dd))),
+          releaseJoined: Qd,
           nowMs: Date.now,
-          lateUploadUntilMs: rr => {
-            var Sr;
-            return null !== (Sr = rr.lateUploadUntilMs) && void 0 !== Sr ? Sr : rr.expiresAtMs + Zr.c
+          lateUploadUntilMs: dd => {
+            var Od;
+            return null !== (Od = dd.lateUploadUntilMs) && void 0 !== Od ? Od : dd.expiresAtMs + Wd.e
           },
           mayStartUpload: () => !0
         }).finally((() => {
-          fr.close()
+          hd.close()
         }));
-      for (const Zr of Er) "live" !== Zr.outcome && console.info(`Session replay: ${Zr.outcome} what an earlier page load left of ${Zr.recordingId} (${Zr.videoSegments} video, ${Zr.telemetrySegments} telemetry, ${Zr.domSegments} page recording).`);
-      0 === (await Sr.listRecordings()).length && Wr.j.removeItem(Nr.n)
+      for (const Wd of vd) "live" !== Wd.outcome && console.info(`Session replay: ${Wd.outcome} what an earlier page load left of ${Wd.recordingId} (${Wd.videoSegments} video, ${Wd.telemetrySegments} telemetry, ${Wd.domSegments} page recording).`);
+      0 === (await Od.listRecordings()).length && Fd.k.removeItem(Nd.l)
     }
   },
-  41545: () => {}
+  41551: () => {}
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

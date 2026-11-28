@@ -1,157 +1,157 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  54056: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      loadGlbAsset: () => OS,
-      loadGlbTree: () => vS
+  53949: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      loadGlbAsset: () => BO,
+      loadGlbTree: () => xO
     });
-    var Zr = Qr(39405),
-      Wr = Qr(139),
-      ar = Qr(1264);
+    var Wd = md(39461),
+      Fd = md(151),
+      Rd = md(1262);
 
-    function jr(rr) {
-      return (0, Wr.isDiscordClient)() ? `https://${ar.c.discordDomain}/${rr.href}` : rr.href
+    function Xd(dd) {
+      return (0, Fd.isDiscordClient)() ? `https://${Rd.b.discordDomain}/${dd.href}` : dd.href
     }
-    const Ir = {
-      scriptUrl: jr(new Qr.U(Qr(54064))),
-      wasmBinaryUrl: jr(new Qr.U(Qr(54071)))
+    const Kd = {
+      scriptUrl: Xd(new md.U(md(53952))),
+      wasmBinaryUrl: Xd(new md.U(md(53960)))
     };
-    var fr = Qr(2398),
-      Er = Qr(37500),
-      pr = Qr.n(Er);
+    var hd = md(2425),
+      vd = md(37635),
+      Qd = md.n(vd);
 
-    function xr() {
-      return pr()('(()=>{class rr extends Error{}function Sr(Sr,Qr){const Zr=Sr._malloc(Qr);if(0===Zr)throw new rr(`Draco: the decoder\'s heap refused ${Qr} bytes`);return Zr}function Qr(Qr,Zr,Wr,ar){let jr=null,Ir=null,fr=null;try{jr=new Qr.Decoder,Ir=new Qr.DecoderBuffer,Ir.Init(Zr,Zr.byteLength);let Er=0;const pr=jr.GetEncodedGeometryType(Ir);if(pr===Qr.TRIANGULAR_MESH){const Sr=new Qr.Mesh;fr=Sr;const Zr=jr.DecodeBufferToMesh(Ir,Sr);if(!Zr.ok()||0===Sr.ptr)throw new rr(Zr.error_msg());Er=3*Sr.num_faces()}else{if(pr!==Qr.POINT_CLOUD)throw new rr(`Draco: Cannot decode invalid geometry type ${pr}`);{const Sr=new Qr.PointCloud;fr=Sr;const Zr=jr.DecodeBufferToPointCloud(Ir,Sr);if(!Zr.ok()||!Sr.ptr)throw new rr(Zr.error_msg())}}const xr=fr.num_points();if(xr!==ar.vertices||Er!==ar.indices)throw new rr(`Draco: decoded ${xr} vertices and ${Er} indices, the accessors declare ${ar.vertices} and ${ar.indices}`);const mr=function(rr){return{[rr.DT_FLOAT32]:Float32Array,[rr.DT_INT8]:Int8Array,[rr.DT_INT16]:Int16Array,[rr.DT_INT32]:Int32Array,[rr.DT_UINT8]:Uint8Array,[rr.DT_UINT16]:Uint16Array,[rr.DT_UINT32]:Uint32Array}}(Qr),Nr=[];for(const Sr of Object.keys(Wr)){const Qr=Wr[Sr],Zr=ar.components[Sr],Ir=jr.GetAttributeByUniqueId(fr,Qr);if(!Ir||0===Ir.ptr)throw new rr(`Draco: no attribute with id ${Qr} (${Sr})`);const Er=Ir.data_type();if(!mr[Er])throw new rr(`Draco: Cannot decode invalid data type ${Er}`);if(Ir.num_components()!==Zr)throw new rr(`Draco: ${Sr} decodes to ${Ir.num_components()} components, its accessor declares ${Zr}`);Nr.push([Sr,Ir,mr[Er]])}let Ur=null;if(pr===Qr.TRIANGULAR_MESH){const rr=4*Er,Zr=Sr(Qr,rr);try{jr.GetTrianglesUInt32Array(fr,rr,Zr),Ur=new Uint32Array(Er),Ur.set(new Uint32Array(Qr.HEAPF32.buffer,Zr,Er))}finally{Qr._free(Zr)}}const tr=[];for(const[rr,Zr,Wr]of Nr){const ar=Zr.num_components(),Ir=xr*ar,Er=Ir*Wr.BYTES_PER_ELEMENT,pr=Sr(Qr,Er);try{jr.GetAttributeDataArrayForAllPoints(fr,Zr,Zr.data_type(),Er,pr),tr.push({kind:rr,data:new Wr(Qr.HEAPF32.buffer,pr,Ir).slice(),size:ar,byteOffset:Zr.byte_offset(),byteStride:Zr.byte_stride(),normalized:Zr.normalized()})}finally{Qr._free(pr)}}return{indices:Ur,attributes:tr,totalVertices:xr}}finally{fr&&Qr.destroy(fr),Ir&&Qr.destroy(Ir),jr&&Qr.destroy(jr)}}const Zr=self;let Wr=null;self.onmessage=rr=>{let{data:Sr}=rr;if("init"===Sr.id){try{importScripts(Sr.url),Wr=DracoDecoderModule({wasmBinary:Sr.wasmBinary}),Zr.postMessage({id:"initDone"})}catch(Er){Zr.postMessage({id:"initError",message:Er instanceof Error?Er.message:String(Er)})}return}const{seq:ar,data:jr,attributeIds:Ir,expected:fr}=Sr;Wr?Wr.then((rr=>{try{const Sr=Qr(rr,jr,Ir,fr),Wr=Sr.attributes.map((rr=>rr.data.buffer));Sr.indices&&Wr.push(Sr.indices.buffer),Zr.postMessage({id:"decoded",seq:ar,...Sr},Wr)}catch(Er){Zr.postMessage({id:"decodeError",seq:ar,message:Er instanceof Error?Er.message:String(Er)})}}),(rr=>{Zr.postMessage({id:"decodeError",seq:ar,message:rr instanceof Error?rr.message:String(rr)})})):Zr.postMessage({id:"decodeError",seq:ar,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, Qr.p + "dracoDecode.worker.a4104937.worker.js")
+    function td() {
+      return Qd()('(()=>{class dd extends Error{}function Od(Od,md){const Wd=Od._malloc(md);if(0===Wd)throw new dd(`Draco: the decoder\'s heap refused ${md} bytes`);return Wd}function md(md,Wd,Fd,Rd){let Xd=null,Kd=null,hd=null;try{Xd=new md.Decoder,Kd=new md.DecoderBuffer,Kd.Init(Wd,Wd.byteLength);let vd=0;const Qd=Xd.GetEncodedGeometryType(Kd);if(Qd===md.TRIANGULAR_MESH){const Od=new md.Mesh;hd=Od;const Wd=Xd.DecodeBufferToMesh(Kd,Od);if(!Wd.ok()||0===Od.ptr)throw new dd(Wd.error_msg());vd=3*Od.num_faces()}else{if(Qd!==md.POINT_CLOUD)throw new dd(`Draco: Cannot decode invalid geometry type ${Qd}`);{const Od=new md.PointCloud;hd=Od;const Wd=Xd.DecodeBufferToPointCloud(Kd,Od);if(!Wd.ok()||!Od.ptr)throw new dd(Wd.error_msg())}}const td=hd.num_points();if(td!==Rd.vertices||vd!==Rd.indices)throw new dd(`Draco: decoded ${td} vertices and ${vd} indices, the accessors declare ${Rd.vertices} and ${Rd.indices}`);const od=function(dd){return{[dd.DT_FLOAT32]:Float32Array,[dd.DT_INT8]:Int8Array,[dd.DT_INT16]:Int16Array,[dd.DT_INT32]:Int32Array,[dd.DT_UINT8]:Uint8Array,[dd.DT_UINT16]:Uint16Array,[dd.DT_UINT32]:Uint32Array}}(md),Nd=[];for(const Od of Object.keys(Fd)){const md=Fd[Od],Wd=Rd.components[Od],Kd=Xd.GetAttributeByUniqueId(hd,md);if(!Kd||0===Kd.ptr)throw new dd(`Draco: no attribute with id ${md} (${Od})`);const vd=Kd.data_type();if(!od[vd])throw new dd(`Draco: Cannot decode invalid data type ${vd}`);if(Kd.num_components()!==Wd)throw new dd(`Draco: ${Od} decodes to ${Kd.num_components()} components, its accessor declares ${Wd}`);Nd.push([Od,Kd,od[vd]])}let qd=null;if(Qd===md.TRIANGULAR_MESH){const dd=4*vd,Wd=Od(md,dd);try{Xd.GetTrianglesUInt32Array(hd,dd,Wd),qd=new Uint32Array(vd),qd.set(new Uint32Array(md.HEAPF32.buffer,Wd,vd))}finally{md._free(Wd)}}const Hd=[];for(const[dd,Wd,Fd]of Nd){const Rd=Wd.num_components(),Kd=td*Rd,vd=Kd*Fd.BYTES_PER_ELEMENT,Qd=Od(md,vd);try{Xd.GetAttributeDataArrayForAllPoints(hd,Wd,Wd.data_type(),vd,Qd),Hd.push({kind:dd,data:new Fd(md.HEAPF32.buffer,Qd,Kd).slice(),size:Rd,byteOffset:Wd.byte_offset(),byteStride:Wd.byte_stride(),normalized:Wd.normalized()})}finally{md._free(Qd)}}return{indices:qd,attributes:Hd,totalVertices:td}}finally{hd&&md.destroy(hd),Kd&&md.destroy(Kd),Xd&&md.destroy(Xd)}}const Wd=self;let Fd=null;self.onmessage=dd=>{let{data:Od}=dd;if("init"===Od.id){try{importScripts(Od.url),Fd=DracoDecoderModule({wasmBinary:Od.wasmBinary}),Wd.postMessage({id:"initDone"})}catch(vd){Wd.postMessage({id:"initError",message:vd instanceof Error?vd.message:String(vd)})}return}const{seq:Rd,data:Xd,attributeIds:Kd,expected:hd}=Od;Fd?Fd.then((dd=>{try{const Od=md(dd,Xd,Kd,hd),Fd=Od.attributes.map((dd=>dd.data.buffer));Od.indices&&Fd.push(Od.indices.buffer),Wd.postMessage({id:"decoded",seq:Rd,...Od},Fd)}catch(vd){Wd.postMessage({id:"decodeError",seq:Rd,message:vd instanceof Error?vd.message:String(vd)})}}),(dd=>{Wd.postMessage({id:"decodeError",seq:Rd,message:dd instanceof Error?dd.message:String(dd)})})):Wd.postMessage({id:"decodeError",seq:Rd,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, md.p + "dracoDecode.worker.c7805245.worker.js")
     }
-    var mr = Qr(109),
-      Nr = Qr(5116),
-      Ur = Qr(335);
-    const tr = 2;
-    const hr = 1e3;
-    let zr = null,
-      Yr = null;
-    const nr = [],
-      er = [];
-    let Kr = 0;
-    const yr = {
+    var od = md(107),
+      Nd = md(5055),
+      qd = md(364);
+    const Hd = 2;
+    const yd = 1e3;
+    let bd = null,
+      Td = null;
+    const pd = [],
+      Yd = [];
+    let gd = 0;
+    const wd = {
       decodes: 0,
       workersStarted: 0,
       mostWorkers: 0
     };
-    let Br = null;
+    let Ed = null;
 
-    function Tr() {
-      if (!zr) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+    function Jd() {
+      if (!bd) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
       const {
-        scriptUrl: rr,
-        wasmBinaryUrl: Sr
-      } = zr;
-      return Yr ??= (0, fr.K)(Sr), Yr.catch((() => {
-        Yr = null
-      })), yr.workersStarted++, Promise.all([Yr, (0, Ur.p)()]).then((Sr => {
-        let [Qr] = Sr;
-        return new Promise(((Sr, Zr) => {
-          const Wr = new xr;
-          Wr.onerror = rr => {
-            Wr.onmessage = null, Wr.onerror = null, Wr.terminate(), Zr(new Error("Draco: the decode worker failed to start" + (rr.message ? `: ${rr.message}` : " (its script did not load)")))
-          }, Wr.onmessage = rr => {
+        scriptUrl: dd,
+        wasmBinaryUrl: Od
+      } = bd;
+      return Td ??= (0, hd.J)(Od), Td.catch((() => {
+        Td = null
+      })), wd.workersStarted++, Promise.all([Td, (0, qd.p)()]).then((Od => {
+        let [md] = Od;
+        return new Promise(((Od, Wd) => {
+          const Fd = new td;
+          Fd.onerror = dd => {
+            Fd.onmessage = null, Fd.onerror = null, Fd.terminate(), Wd(new Error("Draco: the decode worker failed to start" + (dd.message ? `: ${dd.message}` : " (its script did not load)")))
+          }, Fd.onmessage = dd => {
             let {
-              data: Qr
-            } = rr;
-            Wr.onmessage = null, Wr.onerror = null, "initDone" === Qr.id ? Sr(Wr) : (Wr.terminate(), Zr(new Error(`Draco: ${"initError"===Qr.id?Qr.message:"the worker did not start"}`)))
+              data: md
+            } = dd;
+            Fd.onmessage = null, Fd.onerror = null, "initDone" === md.id ? Od(Fd) : (Fd.terminate(), Wd(new Error(`Draco: ${"initError"===md.id?md.message:"the worker did not start"}`)))
           };
-          const ar = Qr.slice().buffer,
-            jr = {
+          const Rd = md.slice().buffer,
+            Xd = {
               id: "init",
-              url: rr,
-              wasmBinary: ar
+              url: dd,
+              wasmBinary: Rd
             };
-          Wr.postMessage(jr, [ar])
+          Fd.postMessage(Xd, [Rd])
         }))
       }))
     }
 
-    function vr(rr) {
-      const Sr = nr.indexOf(rr); - 1 !== Sr && nr.splice(Sr, 1);
-      const Qr = er.shift();
-      Qr && Lr(Qr)
+    function Ud(dd) {
+      const Od = pd.indexOf(dd); - 1 !== Od && pd.splice(Od, 1);
+      const md = Yd.shift();
+      md && Bd(md)
     }
 
-    function Or(rr, Sr) {
-      rr.busy = !0, rr.releaseTimer && (clearTimeout(rr.releaseTimer), rr.releaseTimer = null);
-      rr.worker.then((Qr => {
-        const Zr = Kr++;
-        Qr.onmessage = Wr => {
+    function xd(dd, Od) {
+      dd.busy = !0, dd.releaseTimer && (clearTimeout(dd.releaseTimer), dd.releaseTimer = null);
+      dd.worker.then((md => {
+        const Wd = gd++;
+        md.onmessage = Fd => {
           let {
-            data: ar
-          } = Wr;
-          if (("decoded" === ar.id || "decodeError" === ar.id) && ar.seq === Zr) {
-            if (Qr.onmessage = null, Qr.onerror = null, "decoded" === ar.id) return yr.decodes++, Sr.resolve({
-              indices: ar.indices,
-              attributes: ar.attributes,
-              totalVertices: ar.totalVertices
+            data: Rd
+          } = Fd;
+          if (("decoded" === Rd.id || "decodeError" === Rd.id) && Rd.seq === Wd) {
+            if (md.onmessage = null, md.onerror = null, "decoded" === Rd.id) return wd.decodes++, Od.resolve({
+              indices: Rd.indices,
+              attributes: Rd.attributes,
+              totalVertices: Rd.totalVertices
             }), void(() => {
-              const Sr = er.shift();
-              Sr ? Or(rr, Sr) : (rr.busy = !1, rr.releaseTimer = setTimeout((() => {
-                const Sr = nr.indexOf(rr); - 1 !== Sr && nr.splice(Sr, 1), rr.worker.then((rr => {
-                  rr.terminate()
+              const Od = Yd.shift();
+              Od ? xd(dd, Od) : (dd.busy = !1, dd.releaseTimer = setTimeout((() => {
+                const Od = pd.indexOf(dd); - 1 !== Od && pd.splice(Od, 1), dd.worker.then((dd => {
+                  dd.terminate()
                 }))
-              }), hr))
+              }), yd))
             })();
-            Qr.terminate(), Sr.reject(new Error(ar.message)), vr(rr)
+            md.terminate(), Od.reject(new Error(Rd.message)), Ud(dd)
           }
-        }, Qr.onerror = Zr => {
-          Qr.onmessage = null, Qr.onerror = null, Qr.terminate(), Sr.reject(new Error(`Draco: the decode worker failed: ${Zr.message}`)), vr(rr)
+        }, md.onerror = Wd => {
+          md.onmessage = null, md.onerror = null, md.terminate(), Od.reject(new Error(`Draco: the decode worker failed: ${Wd.message}`)), Ud(dd)
         };
-        const Wr = {
+        const Fd = {
           id: "decode",
-          seq: Zr,
-          data: Sr.data,
-          attributeIds: Sr.attributeIds,
-          expected: Sr.expected
+          seq: Wd,
+          data: Od.data,
+          attributeIds: Od.attributeIds,
+          expected: Od.expected
         };
-        Qr.postMessage(Wr, [Sr.data.buffer])
-      }), (Qr => {
-        Sr.reject(Qr instanceof Error ? Qr : new Error(String(Qr))), vr(rr)
+        md.postMessage(Fd, [Od.data.buffer])
+      }), (md => {
+        Od.reject(md instanceof Error ? md : new Error(String(md))), Ud(dd)
       }))
     }
 
-    function Lr(rr) {
-      const Sr = nr.find((rr => !rr.busy));
-      if (Sr) Or(Sr, rr);
+    function Bd(dd) {
+      const Od = pd.find((dd => !dd.busy));
+      if (Od) xd(Od, dd);
       else {
-        if (Br ??= (0, Nr.f)() ? 1 : function(rr, Sr) {
-            const Qr = rr ? Math.max(1, Math.min(Math.floor(.5 * rr), 4)) : 1;
-            return Sr ? Math.min(Qr, tr) : Qr
-          }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, mr.isMobile)()), nr.length < Br) {
-          const Sr = {
-            worker: Tr(),
+        if (Ed ??= (0, Nd.e)() ? 1 : function(dd, Od) {
+            const md = dd ? Math.max(1, Math.min(Math.floor(.5 * dd), 4)) : 1;
+            return Od ? Math.min(md, Hd) : md
+          }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, od.isMobile)()), pd.length < Ed) {
+          const Od = {
+            worker: Jd(),
             busy: !0,
             releaseTimer: null
           };
-          return nr.push(Sr), yr.mostWorkers = Math.max(yr.mostWorkers, nr.length), void Or(Sr, rr)
+          return pd.push(Od), wd.mostWorkers = Math.max(wd.mostWorkers, pd.length), void xd(Od, dd)
         }
-        er.push(rr)
+        Yd.push(dd)
       }
     }
 
-    function lr(rr, Sr, Qr) {
-      return new Promise(((Zr, Wr) => {
-        Lr({
-          data: new Int8Array(rr.buffer, rr.byteOffset, rr.byteLength).slice(),
-          attributeIds: Sr,
-          expected: Qr,
-          resolve: Zr,
-          reject: Wr
+    function Sd(dd, Od, md) {
+      return new Promise(((Wd, Fd) => {
+        Bd({
+          data: new Int8Array(dd.buffer, dd.byteOffset, dd.byteLength).slice(),
+          attributeIds: Od,
+          expected: md,
+          resolve: Wd,
+          reject: Fd
         })
       }))
     }
-    var Xr = Qr(38869),
-      Pr = Qr(38879),
-      Hr = Qr(35580),
-      qr = Qr(35576);
-    const Rr = {
+    var sd = md(38922),
+      ud = md(38929),
+      Vd = md(35662),
+      Ad = md(35653);
+    const rd = {
       index: -1,
       magFilter: void 0,
       minFilter: void 0,
@@ -159,323 +159,323 @@ export const modules = {
       wrapT: void 0
     };
 
-    function gr(rr) {
-      const Sr = (0, qr.m)(rr.byteLength);
-      if (Sr) throw new Hr.o(Sr);
+    function Gd(dd) {
+      const Od = (0, Ad.k)(dd.byteLength);
+      if (Od) throw new Vd.j(Od);
       const {
-        json: Qr,
-        bin: Zr
-      } = (0, Hr.z)(rr), Wr = (0, qr.i)(Qr, Zr);
-      if (Wr) throw new Hr.o(Wr);
+        json: md,
+        bin: Wd
+      } = (0, Vd.v)(dd), Fd = (0, Ad.i)(md, Wd);
+      if (Fd) throw new Vd.j(Fd);
       try {
-        return function(rr, Sr) {
-          var Qr, Zr, Wr, ar, jr, Ir, fr, Er, pr, xr, mr, Nr, Ur, tr, hr;
-          const zr = new Map,
-            Yr = Qr => {
-              let Zr = zr.get(Qr);
-              if (!Zr) {
-                var Wr;
-                const ar = rr.bufferViews[Qr],
-                  jr = null !== (Wr = ar.byteOffset) && void 0 !== Wr ? Wr : 0;
-                Zr = {
-                  index: Qr,
-                  bytes: Sr.subarray(jr, jr + ar.byteLength),
-                  byteStride: ar.byteStride
-                }, zr.set(Qr, Zr)
+        return function(dd, Od) {
+          var md, Wd, Fd, Rd, Xd, Kd, hd, vd, Qd, td, od, Nd, qd, Hd, yd;
+          const bd = new Map,
+            Td = md => {
+              let Wd = bd.get(md);
+              if (!Wd) {
+                var Fd;
+                const Rd = dd.bufferViews[md],
+                  Xd = null !== (Fd = Rd.byteOffset) && void 0 !== Fd ? Fd : 0;
+                Wd = {
+                  index: md,
+                  bytes: Od.subarray(Xd, Xd + Rd.byteLength),
+                  byteStride: Rd.byteStride
+                }, bd.set(md, Wd)
               }
-              return Zr
+              return Wd
             },
-            nr = new Map,
-            er = Sr => {
-              let Qr = nr.get(Sr);
-              if (!Qr) {
-                var Zr;
-                const Wr = rr.accessors[Sr];
-                Qr = {
-                  index: Sr,
-                  count: Wr.count,
-                  type: Wr.type,
-                  numComponents: Hr.p[Wr.type],
-                  componentType: Wr.componentType,
-                  normalized: null !== (Zr = Wr.normalized) && void 0 !== Zr && Zr,
-                  byteOffset: Wr.byteOffset,
-                  bufferView: void 0 === Wr.bufferView ? null : Yr(Wr.bufferView),
-                  min: Wr.min,
-                  max: Wr.max
-                }, nr.set(Sr, Qr)
+            pd = new Map,
+            Yd = Od => {
+              let md = pd.get(Od);
+              if (!md) {
+                var Wd;
+                const Fd = dd.accessors[Od];
+                md = {
+                  index: Od,
+                  count: Fd.count,
+                  type: Fd.type,
+                  numComponents: Vd.m[Fd.type],
+                  componentType: Fd.componentType,
+                  normalized: null !== (Wd = Fd.normalized) && void 0 !== Wd && Wd,
+                  byteOffset: Fd.byteOffset,
+                  bufferView: void 0 === Fd.bufferView ? null : Td(Fd.bufferView),
+                  min: Fd.min,
+                  max: Fd.max
+                }, pd.set(Od, md)
               }
-              return Qr
+              return md
             },
-            Kr = null !== (Qr = null === (Zr = rr.extensionsUsed) || void 0 === Zr ? void 0 : Zr.includes("KHR_draco_mesh_compression")) && void 0 !== Qr && Qr,
-            yr = (null !== (Wr = rr.meshes) && void 0 !== Wr ? Wr : []).map(((Sr, Qr) => {
-              const Zr = Sr.primitives.map(((Sr, Qr) => {
-                var Zr, Wr, ar;
-                const jr = Kr ? null === (Zr = Sr.extensions) || void 0 === Zr ? void 0 : Zr.KHR_draco_mesh_compression : void 0;
-                let Ir = null;
-                const fr = [];
-                if (jr) {
-                  const Qr = {
-                    vertices: rr.accessors[Sr.attributes.POSITION].count,
-                    indices: void 0 === Sr.indices ? 0 : rr.accessors[Sr.indices].count,
+            gd = null !== (md = null === (Wd = dd.extensionsUsed) || void 0 === Wd ? void 0 : Wd.includes("KHR_draco_mesh_compression")) && void 0 !== md && md,
+            wd = (null !== (Fd = dd.meshes) && void 0 !== Fd ? Fd : []).map(((Od, md) => {
+              const Wd = Od.primitives.map(((Od, md) => {
+                var Wd, Fd, Rd;
+                const Xd = gd ? null === (Wd = Od.extensions) || void 0 === Wd ? void 0 : Wd.KHR_draco_mesh_compression : void 0;
+                let Kd = null;
+                const hd = [];
+                if (Xd) {
+                  const md = {
+                    vertices: dd.accessors[Od.attributes.POSITION].count,
+                    indices: void 0 === Od.indices ? 0 : dd.accessors[Od.indices].count,
                     components: {}
                   };
-                  Ir = {
-                    bufferView: Yr(jr.bufferView),
+                  Kd = {
+                    bufferView: Td(Xd.bufferView),
                     attributeIds: {},
                     normalized: {},
-                    expected: Qr
+                    expected: md
                   };
-                  for (const [Zr, Wr] of Hr.j) {
-                    const ar = jr.attributes[Zr];
-                    if (void 0 === ar) continue;
-                    Ir.attributeIds[Wr] = ar;
-                    const fr = Sr.attributes[Zr];
-                    var Er;
-                    if (void 0 !== fr) Ir.normalized[Wr] = null !== (Er = rr.accessors[fr].normalized) && void 0 !== Er && Er, Qr.components[Wr] = Hr.p[rr.accessors[fr].type]
+                  for (const [Wd, Fd] of Vd.g) {
+                    const Rd = Xd.attributes[Wd];
+                    if (void 0 === Rd) continue;
+                    Kd.attributeIds[Fd] = Rd;
+                    const hd = Od.attributes[Wd];
+                    var vd;
+                    if (void 0 !== hd) Kd.normalized[Fd] = null !== (vd = dd.accessors[hd].normalized) && void 0 !== vd && vd, md.components[Fd] = Vd.m[dd.accessors[hd].type]
                   }
                 } else
-                  for (const [rr, pr] of Hr.j) {
-                    const Qr = Sr.attributes[rr];
-                    void 0 !== Qr && fr.push({
-                      semantic: rr,
-                      kind: pr,
-                      accessor: er(Qr)
+                  for (const [dd, Qd] of Vd.g) {
+                    const md = Od.attributes[dd];
+                    void 0 !== md && hd.push({
+                      semantic: dd,
+                      kind: Qd,
+                      accessor: Yd(md)
                     })
                   }
                 return {
-                  index: Qr,
-                  mode: null !== (Wr = Sr.mode) && void 0 !== Wr ? Wr : 4,
-                  attributes: fr,
-                  indices: jr || void 0 === Sr.indices ? null : er(Sr.indices),
-                  position: void 0 === Sr.attributes.POSITION ? null : er(Sr.attributes.POSITION),
-                  material: null !== (ar = Sr.material) && void 0 !== ar ? ar : null,
-                  draco: Ir
+                  index: md,
+                  mode: null !== (Fd = Od.mode) && void 0 !== Fd ? Fd : 4,
+                  attributes: hd,
+                  indices: Xd || void 0 === Od.indices ? null : Yd(Od.indices),
+                  position: void 0 === Od.attributes.POSITION ? null : Yd(Od.attributes.POSITION),
+                  material: null !== (Rd = Od.material) && void 0 !== Rd ? Rd : null,
+                  draco: Kd
                 }
               }));
               return {
-                index: Qr,
-                name: Sr.name,
-                primitives: Zr,
-                extras: Sr.extras
+                index: md,
+                name: Od.name,
+                primitives: Wd,
+                extras: Od.extras
               }
             })),
-            Br = (null !== (ar = rr.nodes) && void 0 !== ar ? ar : []).map(((rr, Sr) => {
-              var Qr, Zr;
+            Ed = (null !== (Rd = dd.nodes) && void 0 !== Rd ? Rd : []).map(((dd, Od) => {
+              var md, Wd;
               return {
-                index: Sr,
-                name: rr.name,
-                children: null !== (Qr = rr.children) && void 0 !== Qr ? Qr : [],
-                mesh: null !== (Zr = rr.mesh) && void 0 !== Zr ? Zr : null,
-                translation: rr.translation,
-                rotation: rr.rotation,
-                scale: rr.scale,
-                hasCamera: void 0 !== rr.camera,
-                extras: rr.extras
+                index: Od,
+                name: dd.name,
+                children: null !== (md = dd.children) && void 0 !== md ? md : [],
+                mesh: null !== (Wd = dd.mesh) && void 0 !== Wd ? Wd : null,
+                translation: dd.translation,
+                rotation: dd.rotation,
+                scale: dd.scale,
+                hasCamera: void 0 !== dd.camera,
+                extras: dd.extras
               }
             })),
-            Tr = null !== (jr = null === (Ir = rr.extensionsUsed) || void 0 === Ir ? void 0 : Ir.includes("KHR_materials_unlit")) && void 0 !== jr && jr,
-            vr = null !== (fr = null === (Er = rr.extensionsUsed) || void 0 === Er ? void 0 : Er.includes("KHR_texture_transform")) && void 0 !== fr && fr,
-            Or = (null !== (pr = rr.materials) && void 0 !== pr ? pr : []).map(((rr, Sr) => {
-              var Qr, Zr, Wr, ar;
-              const jr = rr.pbrMetallicRoughness,
-                Ir = null === jr || void 0 === jr ? void 0 : jr.baseColorTexture;
+            Jd = null !== (Xd = null === (Kd = dd.extensionsUsed) || void 0 === Kd ? void 0 : Kd.includes("KHR_materials_unlit")) && void 0 !== Xd && Xd,
+            Ud = null !== (hd = null === (vd = dd.extensionsUsed) || void 0 === vd ? void 0 : vd.includes("KHR_texture_transform")) && void 0 !== hd && hd,
+            xd = (null !== (Qd = dd.materials) && void 0 !== Qd ? Qd : []).map(((dd, Od) => {
+              var md, Wd, Fd, Rd;
+              const Xd = dd.pbrMetallicRoughness,
+                Kd = null === Xd || void 0 === Xd ? void 0 : Xd.baseColorTexture;
               return {
-                index: Sr,
-                name: rr.name,
-                extras: rr.extras,
-                unlit: Tr && void 0 !== (null === (Qr = rr.extensions) || void 0 === Qr ? void 0 : Qr.KHR_materials_unlit),
-                pbr: jr ? {
-                  baseColorFactor: jr.baseColorFactor,
-                  metallicFactor: jr.metallicFactor,
-                  roughnessFactor: jr.roughnessFactor
+                index: Od,
+                name: dd.name,
+                extras: dd.extras,
+                unlit: Jd && void 0 !== (null === (md = dd.extensions) || void 0 === md ? void 0 : md.KHR_materials_unlit),
+                pbr: Xd ? {
+                  baseColorFactor: Xd.baseColorFactor,
+                  metallicFactor: Xd.metallicFactor,
+                  roughnessFactor: Xd.roughnessFactor
                 } : null,
-                baseColorTexture: Ir ? {
-                  texture: Ir.index,
-                  transform: vr && (null === (Zr = Ir.extensions) || void 0 === Zr ? void 0 : Zr.KHR_texture_transform) || null
+                baseColorTexture: Kd ? {
+                  texture: Kd.index,
+                  transform: Ud && (null === (Wd = Kd.extensions) || void 0 === Wd ? void 0 : Wd.KHR_texture_transform) || null
                 } : null,
-                emissiveFactor: rr.emissiveFactor,
-                alphaMode: null !== (Wr = rr.alphaMode) && void 0 !== Wr ? Wr : "OPAQUE",
-                alphaCutoff: rr.alphaCutoff,
-                doubleSided: null !== (ar = rr.doubleSided) && void 0 !== ar && ar
+                emissiveFactor: dd.emissiveFactor,
+                alphaMode: null !== (Fd = dd.alphaMode) && void 0 !== Fd ? Fd : "OPAQUE",
+                alphaCutoff: dd.alphaCutoff,
+                doubleSided: null !== (Rd = dd.doubleSided) && void 0 !== Rd && Rd
               }
             })),
-            Lr = (null !== (xr = rr.textures) && void 0 !== xr ? xr : []).map(((Sr, Qr) => {
-              var Zr, Wr;
-              const ar = void 0 === Sr.sampler ? Rr : {
-                index: Sr.sampler,
-                ...null === (Zr = rr.samplers) || void 0 === Zr ? void 0 : Zr[Sr.sampler]
+            Bd = (null !== (td = dd.textures) && void 0 !== td ? td : []).map(((Od, md) => {
+              var Wd, Fd;
+              const Rd = void 0 === Od.sampler ? rd : {
+                index: Od.sampler,
+                ...null === (Wd = dd.samplers) || void 0 === Wd ? void 0 : Wd[Od.sampler]
               };
               return {
-                index: Qr,
+                index: md,
                 sampler: {
-                  index: ar.index,
-                  magFilter: ar.magFilter,
-                  minFilter: ar.minFilter,
-                  wrapS: ar.wrapS,
-                  wrapT: ar.wrapT
+                  index: Rd.index,
+                  magFilter: Rd.magFilter,
+                  minFilter: Rd.minFilter,
+                  wrapS: Rd.wrapS,
+                  wrapT: Rd.wrapT
                 },
-                image: null !== (Wr = Sr.source) && void 0 !== Wr ? Wr : -1
+                image: null !== (Fd = Od.source) && void 0 !== Fd ? Fd : -1
               }
             })),
-            lr = (null !== (mr = rr.images) && void 0 !== mr ? mr : []).map(((rr, Sr) => ({
-              index: Sr,
-              name: rr.name,
-              mimeType: rr.mimeType,
-              bufferView: Yr(rr.bufferView)
+            Sd = (null !== (od = dd.images) && void 0 !== od ? od : []).map(((dd, Od) => ({
+              index: Od,
+              name: dd.name,
+              mimeType: dd.mimeType,
+              bufferView: Td(dd.bufferView)
             }))),
-            Xr = null !== (Nr = (0, Hr.y)(rr)) && void 0 !== Nr ? Nr : 0;
+            sd = null !== (Nd = (0, Vd.u)(dd)) && void 0 !== Nd ? Nd : 0;
           return {
-            json: rr,
-            rootNodes: null !== (Ur = null === (tr = rr.scenes) || void 0 === tr || null === (hr = tr[Xr]) || void 0 === hr ? void 0 : hr.nodes) && void 0 !== Ur ? Ur : [],
-            nodes: Br,
-            meshes: yr,
-            materials: Or,
-            textures: Lr,
-            images: lr
+            json: dd,
+            rootNodes: null !== (qd = null === (Hd = dd.scenes) || void 0 === Hd || null === (yd = Hd[sd]) || void 0 === yd ? void 0 : yd.nodes) && void 0 !== qd ? qd : [],
+            nodes: Ed,
+            meshes: wd,
+            materials: xd,
+            textures: Bd,
+            images: Sd
           }
-        }(Qr, Zr)
-      } catch (ar) {
-        throw ar instanceof Hr.m ? ar : new Hr.m(`reading the GLB failed: ${ar instanceof Error?ar.message:String(ar)}`)
+        }(md, Wd)
+      } catch (Rd) {
+        throw Rd instanceof Vd.i ? Rd : new Vd.i(`reading the GLB failed: ${Rd instanceof Error?Rd.message:String(Rd)}`)
       }
     }
-    async function Cr(rr, Sr) {
-      var Qr, Zr;
-      const Wr = rr.draco;
-      if (!Wr) throw new Hr.m("not a Draco primitive");
-      let ar;
+    async function nd(dd, Od) {
+      var md, Wd;
+      const Fd = dd.draco;
+      if (!Fd) throw new Vd.i("not a Draco primitive");
+      let Rd;
       try {
-        ar = await Sr(Wr.bufferView.bytes, Wr.attributeIds, Wr.expected)
-      } catch (Er) {
-        throw new Hr.m(`Draco decoding failed: ${Er instanceof Error?Er.message:String(Er)}`)
+        Rd = await Od(Fd.bufferView.bytes, Fd.attributeIds, Fd.expected)
+      } catch (vd) {
+        throw new Vd.i(`Draco decoding failed: ${vd instanceof Error?vd.message:String(vd)}`)
       }
       const {
-        vertices: jr,
-        indices: Ir,
-        components: fr
-      } = Wr.expected;
-      if (ar.totalVertices !== jr || (null !== (Qr = null === (Zr = ar.indices) || void 0 === Zr ? void 0 : Zr.length) && void 0 !== Qr ? Qr : 0) !== Ir || ar.attributes.some((rr => rr.size !== fr[rr.kind] || rr.data.length !== jr * rr.size))) throw new Hr.m("Draco decoding gave other counts than the accessors declare");
-      for (const pr of ar.attributes) {
-        const rr = Wr.normalized[pr.kind];
-        void 0 !== rr && (pr.normalized = rr)
+        vertices: Xd,
+        indices: Kd,
+        components: hd
+      } = Fd.expected;
+      if (Rd.totalVertices !== Xd || (null !== (md = null === (Wd = Rd.indices) || void 0 === Wd ? void 0 : Wd.length) && void 0 !== md ? md : 0) !== Kd || Rd.attributes.some((dd => dd.size !== hd[dd.kind] || dd.data.length !== Xd * dd.size))) throw new Vd.i("Draco decoding gave other counts than the accessors declare");
+      for (const Qd of Rd.attributes) {
+        const dd = Fd.normalized[Qd.kind];
+        void 0 !== dd && (Qd.normalized = dd)
       }
-      return ar
+      return Rd
     }
-    const Mr = new WeakMap;
+    const Ld = new WeakMap;
 
-    function Gr(rr, Sr) {
-      var Qr;
-      const Zr = null !== (Qr = Mr.get(rr)) && void 0 !== Qr ? Qr : Sr(rr);
-      return Mr.set(rr, Zr), Zr
-    }
-
-    function kr(rr) {
-      const Sr = rr.bufferView,
-        Qr = 5125 === rr.componentType ? Uint32Array : Uint16Array,
-        Zr = Sr.bytes.buffer,
-        Wr = Sr.bytes.byteOffset + (rr.byteOffset || 0);
-      return Wr % Qr.BYTES_PER_ELEMENT !== 0 ? new Qr(Zr.slice(Wr, Wr + rr.count * Qr.BYTES_PER_ELEMENT), 0) : new Qr(Zr, Wr, rr.count)
+    function Pd(dd, Od) {
+      var md;
+      const Wd = null !== (md = Ld.get(dd)) && void 0 !== md ? md : Od(dd);
+      return Ld.set(dd, Wd), Wd
     }
 
-    function Ar(rr, Sr) {
-      if (rr.min && rr.max) return [new Float64Array(rr.min), new Float64Array(rr.max)];
-      const Qr = Sr.find((rr => {
+    function zd(dd) {
+      const Od = dd.bufferView,
+        md = 5125 === dd.componentType ? Uint32Array : Uint16Array,
+        Wd = Od.bytes.buffer,
+        Fd = Od.bytes.byteOffset + (dd.byteOffset || 0);
+      return Fd % md.BYTES_PER_ELEMENT !== 0 ? new md(Wd.slice(Fd, Fd + dd.count * md.BYTES_PER_ELEMENT), 0) : new md(Wd, Fd, dd.count)
+    }
+
+    function cd(dd, Od) {
+      if (dd.min && dd.max) return [new Float64Array(dd.min), new Float64Array(dd.max)];
+      const md = Od.find((dd => {
           let {
-            kind: Sr
-          } = rr;
-          return "position" === Sr
+            kind: Od
+          } = dd;
+          return "position" === Od
         })),
-        Zr = Qr ? (0, Pr.g)(Qr, rr.count) : new Float32Array(0);
-      return (0, Pr.n)(Zr.length / 3, ((rr, Sr) => Zr[3 * rr + Sr]))
+        Wd = md ? (0, ud.j)(md, dd.count) : new Float32Array(0);
+      return (0, ud.s)(Wd.length / 3, ((dd, Od) => Wd[3 * dd + Od]))
     }
 
-    function Vr(rr) {
-      const Sr = rr.attributes.map((rr => {
-          var Sr, Qr;
+    function jd(dd) {
+      const Od = dd.attributes.map((dd => {
+          var Od, md;
           let {
-            kind: Zr,
-            accessor: Wr
-          } = rr;
+            kind: Wd,
+            accessor: Fd
+          } = dd;
           const {
-            bufferView: ar,
-            numComponents: jr
-          } = Wr;
-          if (!ar) {
+            bufferView: Rd,
+            numComponents: Xd
+          } = Fd;
+          if (!Rd) {
             return {
-              kind: Zr,
-              data: Gr(Wr, (() => new Float32Array(jr * Wr.count))),
+              kind: Wd,
+              data: Pd(Fd, (() => new Float32Array(Xd * Fd.count))),
               offset: 0,
-              stride: 4 * jr,
-              components: jr,
+              stride: 4 * Xd,
+              components: Xd,
               glType: 5126,
               isNormalized: !1
             }
           }
-          const Ir = null !== (Sr = ar.byteStride) && void 0 !== Sr ? Sr : jr * Hr.d[Wr.componentType];
+          const Kd = null !== (Od = Rd.byteStride) && void 0 !== Od ? Od : Xd * Vd.c[Fd.componentType];
           return {
-            kind: Zr,
-            data: ar.bytes,
-            offset: null !== (Qr = Wr.byteOffset) && void 0 !== Qr ? Qr : 0,
-            stride: Ir,
-            components: jr,
-            glType: Wr.componentType,
-            isNormalized: Wr.normalized
+            kind: Wd,
+            data: Rd.bytes,
+            offset: null !== (md = Fd.byteOffset) && void 0 !== md ? md : 0,
+            stride: Kd,
+            components: Xd,
+            glType: Fd.componentType,
+            isNormalized: Fd.normalized
           }
         })),
-        Qr = rr.indices,
-        Zr = Qr && Gr(Qr, kr),
-        Wr = rr.position;
-      return new Pr.f(Sr, Zr, Wr.count, ...Ar(Wr, Sr))
+        md = dd.indices,
+        Wd = md && Pd(md, zd),
+        Fd = dd.position;
+      return new ud.i(Od, Wd, Fd.count, ...cd(Fd, Od))
     }
-    const ir = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+    const Dd = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
 
-    function wr(rr, Sr) {
-      const Qr = Sr.attributes.map((rr => {
+    function ed(dd, Od) {
+      const md = Od.attributes.map((dd => {
         let {
-          kind: Sr,
-          data: Qr,
-          size: Zr,
-          byteOffset: Wr,
-          byteStride: ar,
-          normalized: jr
-        } = rr;
+          kind: Od,
+          data: md,
+          size: Wd,
+          byteOffset: Fd,
+          byteStride: Rd,
+          normalized: Xd
+        } = dd;
         return {
-          kind: Sr,
-          data: Qr,
-          offset: Wr,
-          stride: ar,
-          components: Zr,
-          glType: 5120 + ir.indexOf(Qr.constructor),
-          isNormalized: jr
+          kind: Od,
+          data: md,
+          offset: Fd,
+          stride: Rd,
+          components: Wd,
+          glType: 5120 + Dd.indexOf(md.constructor),
+          isNormalized: Xd
         }
       }));
-      return new Pr.f(Qr, Sr.indices, Sr.totalVertices, ...Ar(rr.position, Qr))
+      return new ud.i(md, Od.indices, Od.totalVertices, ...cd(dd.position, md))
     }
 
-    function cr(rr) {
-      const Sr = rr.lastIndexOf("/");
-      return Sr < 0 ? rr : rr.substring(Sr + 1)
+    function Id(dd) {
+      const Od = dd.lastIndexOf("/");
+      return Od < 0 ? dd : dd.substring(Od + 1)
     }
 
-    function Fr(rr) {
-      const Sr = rr.lastIndexOf("/");
-      return Sr < 0 ? "" : rr.substring(0, Sr + 1)
+    function ld(dd) {
+      const Od = dd.lastIndexOf("/");
+      return Od < 0 ? "" : dd.substring(0, Od + 1)
     }
 
-    function or(rr) {
-      return rr.name || `node${rr.index}`
+    function Cd(dd) {
+      return dd.name || `node${dd.index}`
     }
-    const br = {
+    const Zd = {
         rotation: [0, 1, 0, 0],
         scale: [1, 1, -1]
       },
-      Jr = {
+      kd = {
         9728: 12,
         9729: 2,
         9984: 9,
         9985: 11,
         9986: 10
       },
-      Dr = {
+      fd = {
         9728: 1,
         9729: 7,
         9984: 4,
@@ -484,353 +484,353 @@ export const modules = {
         9987: 6
       };
 
-    function dr(rr) {
-      var Sr, Qr, Zr, Wr;
-      const ar = null !== (Sr = rr.minFilter) && void 0 !== Sr ? Sr : 9987;
-      return 9729 === (null !== (Qr = rr.magFilter) && void 0 !== Qr ? Qr : 9729) ? null !== (Zr = Jr[ar]) && void 0 !== Zr ? Zr : 3 : null !== (Wr = Dr[ar]) && void 0 !== Wr ? Wr : 4
+    function Md(dd) {
+      var Od, md, Wd, Fd;
+      const Rd = null !== (Od = dd.minFilter) && void 0 !== Od ? Od : 9987;
+      return 9729 === (null !== (md = dd.magFilter) && void 0 !== md ? md : 9729) ? null !== (Wd = kd[Rd]) && void 0 !== Wd ? Wd : 3 : null !== (Fd = fd[Rd]) && void 0 !== Fd ? Fd : 4
     }
-    const sr = {
+    const dO = {
       33071: 0,
       33648: 2
     };
 
-    function ur(rr) {
-      var Sr;
-      return null !== (Sr = sr[null !== rr && void 0 !== rr ? rr : 10497]) && void 0 !== Sr ? Sr : 1
+    function OO(dd) {
+      var Od;
+      return null !== (Od = dO[null !== dd && void 0 !== dd ? dd : 10497]) && void 0 !== Od ? Od : 1
     }
 
-    function rS(rr) {
-      return 9728 === rr.minFilter || 9729 === rr.minFilter
+    function mO(dd) {
+      return 9728 === dd.minFilter || 9729 === dd.minFilter
     }
 
-    function SS(rr) {
-      var Sr, Qr, Zr;
-      const Wr = Float64Array.from(null !== (Sr = rr.scale) && void 0 !== Sr ? Sr : [1, 1, 1]);
-      return rr.hasCamera && (Wr[0] = -1), {
-        translation: Float64Array.from(null !== (Qr = rr.translation) && void 0 !== Qr ? Qr : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (Zr = rr.rotation) && void 0 !== Zr ? Zr : [0, 0, 0, 1]),
-        scale: Wr
+    function WO(dd) {
+      var Od, md, Wd;
+      const Fd = Float64Array.from(null !== (Od = dd.scale) && void 0 !== Od ? Od : [1, 1, 1]);
+      return dd.hasCamera && (Fd[0] = -1), {
+        translation: Float64Array.from(null !== (md = dd.translation) && void 0 !== md ? md : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (Wd = dd.rotation) && void 0 !== Wd ? Wd : [0, 0, 0, 1]),
+        scale: Fd
       }
     }
 
-    function QS(rr, Sr) {
+    function FO(dd, Od) {
       let {
-        translation: Qr,
-        rotation: Zr,
-        scale: Wr
-      } = rr;
-      const ar = new Float32Array(16);
-      return (0, Xr.c)(Wr, 0, Zr, 0, Qr, 0, ar), Sr && (0, Xr.l)(ar, Sr, 0, ar), ar
+        translation: md,
+        rotation: Wd,
+        scale: Fd
+      } = dd;
+      const Rd = new Float32Array(16);
+      return (0, sd.e)(Fd, 0, Wd, 0, md, 0, Rd), Od && (0, sd.q)(Rd, Od, 0, Rd), Rd
     }
-    class ZS {
-      constructor(rr, Sr, Qr, Zr) {
-        this.model = rr, this.decode = Sr, this.fileInfo = Qr, this.uniqueRootUrl = Zr, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const Wr = new Set,
-          ar = (Sr, Qr) => {
-            const Zr = rr.nodes[Sr];
-            if (this.parents.has(Zr)) throw new Hr.m(`/nodes/${Sr}: Invalid recursive node hierarchy`);
-            this.parents.set(Zr, Qr);
-            const jr = null === Zr.mesh ? [] : rr.meshes[Zr.mesh].primitives,
-              Ir = jr.map((rr => {
-                const Sr = jr.length > 1;
+    class RO {
+      constructor(dd, Od, md, Wd) {
+        this.model = dd, this.decode = Od, this.fileInfo = md, this.uniqueRootUrl = Wd, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const Fd = new Set,
+          Rd = (Od, md) => {
+            const Wd = dd.nodes[Od];
+            if (this.parents.has(Wd)) throw new Vd.i(`/nodes/${Od}: Invalid recursive node hierarchy`);
+            this.parents.set(Wd, md);
+            const Xd = null === Wd.mesh ? [] : dd.meshes[Wd.mesh].primitives,
+              Kd = Xd.map((dd => {
+                const Od = Xd.length > 1;
                 return {
-                  name: Sr ? `${or(Zr)}_primitive${rr.index}` : or(Zr),
-                  node: Zr,
-                  primitive: rr,
-                  part: Sr,
+                  name: Od ? `${Cd(Wd)}_primitive${dd.index}` : Cd(Wd),
+                  node: Wd,
+                  primitive: dd,
+                  part: Od,
                   geometry: null
                 }
               }));
-            this.uses.set(Zr, Ir);
-            const fr = null !== Zr.mesh && Wr.has(Zr.mesh);
-            Wr.add(Zr.mesh), this.own.set(Zr, fr ? [] : Ir);
-            for (const rr of Zr.children) ar(rr, Zr)
+            this.uses.set(Wd, Kd);
+            const hd = null !== Wd.mesh && Fd.has(Wd.mesh);
+            Fd.add(Wd.mesh), this.own.set(Wd, hd ? [] : Kd);
+            for (const dd of Wd.children) Rd(dd, Wd)
           };
-        for (const jr of rr.rootNodes) ar(jr, null);
-        this.primitives = rr.nodes.flatMap((rr => {
-          var Sr;
-          return null !== (Sr = this.own.get(rr)) && void 0 !== Sr ? Sr : []
+        for (const Xd of dd.rootNodes) Rd(Xd, null);
+        this.primitives = dd.nodes.flatMap((dd => {
+          var Od;
+          return null !== (Od = this.own.get(dd)) && void 0 !== Od ? Od : []
         }))
       }
       decodeGeometries() {
-        const rr = new Map;
-        return Promise.all(this.primitives.map((async Sr => {
+        const dd = new Map;
+        return Promise.all(this.primitives.map((async Od => {
           const {
-            primitive: Qr
-          } = Sr, Zr = Qr.draco;
-          let Wr = Zr ? rr.get(Zr.bufferView.index) : Promise.resolve(Vr(Qr));
-          Wr || (Wr = Cr(Qr, this.decode).then((rr => wr(Qr, rr))), rr.set(Zr.bufferView.index, Wr)), Sr.geometry = await Wr
+            primitive: md
+          } = Od, Wd = md.draco;
+          let Fd = Wd ? dd.get(Wd.bufferView.index) : Promise.resolve(jd(md));
+          Fd || (Fd = nd(md, this.decode).then((dd => ed(md, dd))), dd.set(Wd.bufferView.index, Fd)), Od.geometry = await Fd
         })))
       }
-      parentOf(rr) {
-        var Sr;
-        return null !== (Sr = this.parents.get(rr)) && void 0 !== Sr ? Sr : null
+      parentOf(dd) {
+        var Od;
+        return null !== (Od = this.parents.get(dd)) && void 0 !== Od ? Od : null
       }
-      meshesUnder(rr) {
-        const Sr = this.model.nodes.filter((rr => this.uses.has(rr)));
-        for (const Zr of Sr) {
-          const Sr = this.uses.get(Zr),
-            Qr = Sr.find((Sr => Sr.name === rr));
-          if (Qr) return 1 === Sr.length ? this.subtree(Zr) : this.own.get(Zr).includes(Qr) ? [Qr] : []
+      meshesUnder(dd) {
+        const Od = this.model.nodes.filter((dd => this.uses.has(dd)));
+        for (const Wd of Od) {
+          const Od = this.uses.get(Wd),
+            md = Od.find((Od => Od.name === dd));
+          if (md) return 1 === Od.length ? this.subtree(Wd) : this.own.get(Wd).includes(md) ? [md] : []
         }
-        const Qr = Sr.find((Sr => 1 !== this.uses.get(Sr).length && or(Sr) === rr));
-        return Qr ? this.subtree(Qr) : null
+        const md = Od.find((Od => 1 !== this.uses.get(Od).length && Cd(Od) === dd));
+        return md ? this.subtree(md) : null
       }
-      subtree(rr) {
-        return [...this.own.get(rr), ...rr.children.flatMap((rr => this.subtree(this.model.nodes[rr])))]
+      subtree(dd) {
+        return [...this.own.get(dd), ...dd.children.flatMap((dd => this.subtree(this.model.nodes[dd])))]
       }
-      worldMatrix(rr, Sr, Qr) {
-        let Zr = QS(SS(Sr ? br : {}), null);
-        const Wr = [];
-        for (let jr = rr.part ? rr.node : this.parentOf(rr.node); jr; jr = this.parentOf(jr)) Wr.unshift(jr);
-        for (const jr of Wr) Zr = QS(SS(jr), Zr);
-        const ar = SS(rr.part ? {} : rr.node);
-        return void 0 !== Qr && ar.scale.fill(Qr), QS(ar, Zr)
+      worldMatrix(dd, Od, md) {
+        let Wd = FO(WO(Od ? Zd : {}), null);
+        const Fd = [];
+        for (let Xd = dd.part ? dd.node : this.parentOf(dd.node); Xd; Xd = this.parentOf(Xd)) Fd.unshift(Xd);
+        for (const Xd of Fd) Wd = FO(WO(Xd), Wd);
+        const Rd = WO(dd.part ? {} : dd.node);
+        return void 0 !== md && Rd.scale.fill(md), FO(Rd, Wd)
       }
-      floats(rr) {
+      floats(dd) {
         const {
-          vertexAttributes: Sr,
-          vertexCount: Qr
-        } = rr.geometry;
-        return new Map(Sr.map((rr => [rr.kind, (0, Pr.g)(rr, Qr)])))
+          vertexAttributes: Od,
+          vertexCount: md
+        } = dd.geometry;
+        return new Map(Od.map((dd => [dd.kind, (0, ud.j)(dd, md)])))
       }
-      imageUrl(rr) {
-        return function(rr, Sr, Qr) {
+      imageUrl(dd) {
+        return function(dd, Od, md) {
           let {
-            name: Zr
-          } = Sr;
-          return `data:${rr}${Zr}#image${Qr}`
-        }(this.uniqueRootUrl, this.fileInfo, rr)
+            name: Wd
+          } = Od;
+          return `data:${dd}${Wd}#image${md}`
+        }(this.uniqueRootUrl, this.fileInfo, dd)
       }
-      textureDesc(rr, Sr) {
-        var Qr;
+      textureDesc(dd, Od) {
+        var md;
         let {
-          texture: Zr,
-          transform: Wr
-        } = rr;
+          texture: Wd,
+          transform: Fd
+        } = dd;
         const {
-          sampler: ar,
-          image: jr
-        } = this.model.textures[Zr], {
-          bufferView: Ir,
-          mimeType: fr,
-          name: Er
-        } = this.model.images[jr], pr = Wr && {
-          ...Wr.offset ? {
-            uOffset: Wr.offset[0],
-            vOffset: Wr.offset[1]
+          sampler: Rd,
+          image: Xd
+        } = this.model.textures[Wd], {
+          bufferView: Kd,
+          mimeType: hd,
+          name: vd
+        } = this.model.images[Xd], Qd = Fd && {
+          ...Fd.offset ? {
+            uOffset: Fd.offset[0],
+            vOffset: Fd.offset[1]
           } : {},
           uRotationCenter: 0,
           vRotationCenter: 0,
-          ...Wr.rotation ? {
-            wAng: -Wr.rotation
+          ...Fd.rotation ? {
+            wAng: -Fd.rotation
           } : {},
-          ...Wr.scale ? {
-            uScale: Wr.scale[0],
-            vScale: Wr.scale[1]
+          ...Fd.scale ? {
+            uScale: Fd.scale[0],
+            vScale: Fd.scale[1]
           } : {}
         };
         return {
-          url: this.imageUrl(jr),
-          noMipmap: rS(ar),
+          url: this.imageUrl(Xd),
+          noMipmap: mO(Rd),
           invertY: !1,
-          samplingMode: dr(ar),
+          samplingMode: Md(Rd),
           data: {
-            bytes: Ir.bytes,
-            mimeType: fr,
-            label: Er,
-            context: `/textures/${Zr}`
+            bytes: Kd.bytes,
+            mimeType: hd,
+            label: vd,
+            context: `/textures/${Wd}`
           },
           sets: {
-            wrapU: ur(ar.wrapS),
-            wrapV: ur(ar.wrapT),
-            ...pr,
-            coordinatesIndex: null !== (Qr = null === Wr || void 0 === Wr ? void 0 : Wr.texCoord) && void 0 !== Qr ? Qr : 0,
-            hasAlpha: Sr
+            wrapU: OO(Rd.wrapS),
+            wrapV: OO(Rd.wrapT),
+            ...Qd,
+            coordinatesIndex: null !== (md = null === Fd || void 0 === Fd ? void 0 : Fd.texCoord) && void 0 !== md ? md : 0,
+            hasAlpha: Od
           }
         }
       }
     }
-    async function WS(rr, Sr, Qr, Zr, Wr, ar) {
-      let jr = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const Ir = function(rr, Sr, Qr) {
-          return "string" !== typeof Sr ? {
+    async function XO(dd, Od, md, Wd, Fd, Rd) {
+      let Xd = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const Kd = function(dd, Od, md) {
+          return "string" !== typeof Od ? {
             url: "",
-            rootUrl: rr,
-            name: Qr()
-          } : Sr ? Sr.startsWith("data:") ? {
-            url: Sr,
-            rootUrl: rr,
+            rootUrl: dd,
+            name: md()
+          } : Od ? Od.startsWith("data:") ? {
+            url: Od,
+            rootUrl: dd,
             name: ""
-          } : rr ? {
-            url: rr + Sr,
-            rootUrl: rr,
-            name: Sr
+          } : dd ? {
+            url: dd + Od,
+            rootUrl: dd,
+            name: Od
           } : {
-            url: Sr,
-            rootUrl: Fr(Sr),
-            name: cr(Sr)
+            url: Od,
+            rootUrl: ld(Od),
+            name: Id(Od)
           } : {
-            url: rr,
-            rootUrl: Fr(rr),
-            name: cr(rr)
+            url: dd,
+            rootUrl: ld(dd),
+            name: Id(dd)
           }
-        }(Qr, rr, Wr),
-        fr = {};
-      Sr.addPendingData(fr);
+        }(md, dd, Fd),
+        hd = {};
+      Od.addPendingData(hd);
       try {
-        const Qr = gr(await async function(rr, Sr) {
-            return "string" !== typeof Sr ? Sr : rr.url.startsWith("data:") ? (0, Hr.t)(rr.url) : await (0, Hr.v)(rr.url)
-          }(Ir, rr)),
-          fr = new ZS(Qr, Zr, Ir, function(rr, Sr) {
+        const md = Gd(await async function(dd, Od) {
+            return "string" !== typeof Od ? Od : dd.url.startsWith("data:") ? (0, Vd.n)(dd.url) : await (0, Vd.r)(dd.url)
+          }(Kd, dd)),
+          hd = new RO(md, Wd, Kd, function(dd, Od) {
             let {
-              rootUrl: Qr,
-              name: Zr
-            } = rr;
-            return !Qr.startsWith("file:") && Zr ? Qr : `${Qr}${Sr()}/`
-          }(Ir, Wr));
-        return await ar(fr), Sr.importedMeshesFiles && (Sr.loadingPluginName = "bR", jr && Sr.importedMeshesFiles.push(Ir.url)), fr
+              rootUrl: md,
+              name: Wd
+            } = dd;
+            return !md.startsWith("file:") && Wd ? md : `${md}${Od()}/`
+          }(Kd, Fd));
+        return await Rd(hd), Od.importedMeshesFiles && (Od.loadingPluginName = "tV", Xd && Od.importedMeshesFiles.push(Kd.url)), hd
       } finally {
-        Sr.removePendingData(fr)
+        Od.removePendingData(hd)
       }
     }
-    var aS = Qr(39002),
-      jS = Qr(38845),
-      IS = Qr(39394);
+    var KO = md(39037),
+      hO = md(38898),
+      vO = md(39449);
 
-    function fS(rr) {
-      if (null === rr || void 0 === rr || !rr.min || !rr.max) return null;
-      const [Sr, Qr, Zr] = rr.min, [Wr, ar, jr] = rr.max, {
-        BoundingInfo: Ir,
-        kU: fr
-      } = (0, aS.c)();
-      return new Ir(new fr(Sr, Qr, Zr), new fr(Wr, ar, jr))
+    function QO(dd) {
+      if (null === dd || void 0 === dd || !dd.min || !dd.max) return null;
+      const [Od, md, Wd] = dd.min, [Fd, Rd, Xd] = dd.max, {
+        BoundingInfo: Kd,
+        Cq: hd
+      } = (0, KO.c)();
+      return new Kd(new hd(Od, md, Wd), new hd(Fd, Rd, Xd))
     }
 
-    function ES(rr) {
-      (0, jS.c)(rr) || (rr.geometry && rr.geometry.useBoundingInfoFromGeometry ? rr._updateBoundingInfo() : rr.refreshBoundingInfo(!0, !0))
+    function tO(dd) {
+      (0, hO.g)(dd) || (dd.geometry && dd.geometry.useBoundingInfoFromGeometry ? dd._updateBoundingInfo() : dd.refreshBoundingInfo(!0, !0))
     }
-    class pS {
-      constructor(rr, Sr) {
-        this.Dt = rr, this.decode = Sr, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+    class oO {
+      constructor(dd, Od) {
+        this.MH = dd, this.decode = Od, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
       }
-      viewBytes(rr) {
-        let Sr = this.viewData.get(rr.index);
-        return Sr || (Sr = this.bufferData.then((() => rr.bytes)), this.viewData.set(rr.index, Sr)), Sr
+      viewBytes(dd) {
+        let Od = this.viewData.get(dd.index);
+        return Od || (Od = this.bufferData.then((() => dd.bytes)), this.viewData.set(dd.index, Od)), Od
       }
-      viewBuffer(rr) {
-        let Sr = this.viewBuffers.get(rr.index);
-        return Sr || (Sr = this.viewBytes(rr).then((rr => new((0, aS.c)().Dp)(this.Dt.MU(), rr, !1))), this.viewBuffers.set(rr.index, Sr)), Sr
+      viewBuffer(dd) {
+        let Od = this.viewBuffers.get(dd.index);
+        return Od || (Od = this.viewBytes(dd).then((dd => new((0, KO.c)().CQ)(this.MH.Iq(), dd, !1))), this.viewBuffers.set(dd.index, Od)), Od
       }
-      vertexBuffer(rr, Sr) {
+      vertexBuffer(dd, Od) {
         const {
-          kind: Qr,
-          data: Zr
-        } = Sr, Wr = `${rr.index}:${Qr}`;
-        let ar = this.vertexBuffers.get(Wr);
-        if (!ar) {
-          const jr = rr.bufferView;
-          ar = jr ? this.viewBuffer(jr).then((rr => this.layoutVertexBuffer(rr, Sr))) : Promise.resolve(Zr).then((rr => new((0, aS.c)().VertexBuffer)(this.Dt.MU(), rr, Qr, !1))), this.vertexBuffers.set(Wr, ar)
+          kind: md,
+          data: Wd
+        } = Od, Fd = `${dd.index}:${md}`;
+        let Rd = this.vertexBuffers.get(Fd);
+        if (!Rd) {
+          const Xd = dd.bufferView;
+          Rd = Xd ? this.viewBuffer(Xd).then((dd => this.layoutVertexBuffer(dd, Od))) : Promise.resolve(Wd).then((dd => new((0, KO.c)().VertexBuffer)(this.MH.Iq(), dd, md, !1))), this.vertexBuffers.set(Fd, Rd)
         }
-        return ar
+        return Rd
       }
-      layoutVertexBuffer(rr, Sr) {
+      layoutVertexBuffer(dd, Od) {
         let {
-          kind: Qr,
-          offset: Zr,
-          stride: Wr,
-          components: ar,
-          glType: jr,
-          isNormalized: Ir
-        } = Sr;
-        const fr = this.Dt.MU();
-        return new((0, aS.c)().VertexBuffer)(fr, rr, Qr, !1, void 0, Wr, void 0, Zr, ar, jr, Ir, !0, void 0, !0)
+          kind: md,
+          offset: Wd,
+          stride: Fd,
+          components: Rd,
+          glType: Xd,
+          isNormalized: Kd
+        } = Od;
+        const hd = this.MH.Iq();
+        return new((0, KO.c)().VertexBuffer)(hd, dd, md, !1, void 0, Fd, void 0, Wd, Rd, Xd, Kd, !0, void 0, !0)
       }
-      load(rr, Sr, Qr) {
-        const Zr = (0, jS.c)(Qr),
-          Wr = rr => {
-            Zr || (Qr._delayInfo = Qr._delayInfo || [], -1 === Qr._delayInfo.indexOf(rr) && Qr._delayInfo.push(rr))
+      load(dd, Od, md) {
+        const Wd = (0, hO.g)(md),
+          Fd = dd => {
+            Wd || (md._delayInfo = md._delayInfo || [], -1 === md._delayInfo.indexOf(dd) && md._delayInfo.push(dd))
           },
-          ar = Sr.draco;
-        if (ar) {
-          for (const rr in ar.attributeIds) Wr(rr);
-          let jr = this.dracoGeometry.get(ar.bufferView.index);
-          return jr || (jr = this.viewBytes(ar.bufferView).then((async () => {
-            let Wr;
+          Rd = Od.draco;
+        if (Rd) {
+          for (const dd in Rd.attributeIds) Fd(dd);
+          let Xd = this.dracoGeometry.get(Rd.bufferView.index);
+          return Xd || (Xd = this.viewBytes(Rd.bufferView).then((async () => {
+            let Fd;
             try {
-              Wr = await Cr(Sr, this.decode)
-            } catch (fr) {
-              throw new Hr.m(`${rr}: ${fr instanceof Error?fr.message:String(fr)}`)
+              Fd = await nd(Od, this.decode)
+            } catch (hd) {
+              throw new Vd.i(`${dd}: ${hd instanceof Error?hd.message:String(hd)}`)
             }
-            const ar = wr(Sr, Wr);
-            if (Zr) return ar;
-            const jr = fS(Sr.position),
-              Ir = new((0, aS.c)().MirroredGeometry)(Qr.name, this.Dt);
-            jr && (Ir._boundingInfo = jr, Ir.useBoundingInfoFromGeometry = !0), ar.indexData && Ir.setIndices(ar.indexData);
-            for (const rr of ar.vertexAttributes) Ir.setVerticesBuffer(this.layoutVertexBuffer(rr.data, rr), ar.vertexCount);
-            return Ir.link(ar), Ir
-          })), this.dracoGeometry.set(ar.bufferView.index, jr)), jr
+            const Rd = ed(Od, Fd);
+            if (Wd) return Rd;
+            const Xd = QO(Od.position),
+              Kd = new((0, KO.c)().MirroredGeometry)(md.name, this.MH);
+            Xd && (Kd._boundingInfo = Xd, Kd.useBoundingInfoFromGeometry = !0), Rd.indexData && Kd.setIndices(Rd.indexData);
+            for (const dd of Rd.vertexAttributes) Kd.setVerticesBuffer(this.layoutVertexBuffer(dd.data, dd), Rd.vertexCount);
+            return Kd.link(Rd), Kd
+          })), this.dracoGeometry.set(Rd.bufferView.index, Xd)), Xd
         }
-        const jr = [],
-          Ir = Vr(Sr);
-        if (Zr) return Qr.isUnIndexed = !Ir.indexData, Qr.hasVertexAlpha = (0, IS.g)(Sr), Promise.resolve(Ir);
-        const fr = new((0, aS.c)().MirroredGeometry)(Qr.name, this.Dt),
+        const Xd = [],
+          Kd = jd(Od);
+        if (Wd) return md.isUnIndexed = !Kd.indexData, md.hasVertexAlpha = (0, vO.h)(Od), Promise.resolve(Kd);
+        const hd = new((0, KO.c)().MirroredGeometry)(md.name, this.MH),
           {
-            indexData: Er
-          } = Ir;
-        Er ? jr.push(this.viewBytes(Sr.indices.bufferView).then((() => {
-          fr.setIndices(Er)
-        }))) : Qr.isUnIndexed = !0;
-        for (const [pr, {
-            kind: xr,
-            accessor: mr
-          }] of Sr.attributes.entries()) Wr(xr), jr.push(this.vertexBuffer(mr, Ir.vertexAttributes[pr]).then((rr => {
-          if ("position" === rr.getKind()) {
-            const rr = fS(mr);
-            rr && (fr._boundingInfo = rr, fr.useBoundingInfoFromGeometry = !0)
+            indexData: vd
+          } = Kd;
+        vd ? Xd.push(this.viewBytes(Od.indices.bufferView).then((() => {
+          hd.setIndices(vd)
+        }))) : md.isUnIndexed = !0;
+        for (const [Qd, {
+            kind: td,
+            accessor: od
+          }] of Od.attributes.entries()) Fd(td), Xd.push(this.vertexBuffer(od, Kd.vertexAttributes[Qd]).then((dd => {
+          if ("position" === dd.getKind()) {
+            const dd = QO(od);
+            dd && (hd._boundingInfo = dd, hd.useBoundingInfoFromGeometry = !0)
           }
-          fr.setVerticesBuffer(rr, Ir.vertexCount)
+          hd.setVerticesBuffer(dd, Kd.vertexCount)
         })));
-        return (0, IS.g)(Sr) && (Qr.hasVertexAlpha = !0), Promise.all(jr).then((() => (fr.link(Ir), fr)))
+        return (0, vO.h)(Od) && (md.hasVertexAlpha = !0), Promise.all(Xd).then((() => (hd.link(Kd), hd)))
       }
     }
-    var xS, mS = Qr(38782),
-      NS = Qr(38555),
-      US = Qr(39402),
-      tS = Qr(38677),
-      hS = Qr(38762),
-      zS = Qr(2383),
-      YS = Qr(38723);
+    var NO, qO = md(38827),
+      HO = md(38627),
+      yO = md(39459),
+      bO = md(38731),
+      TO = md(38799),
+      pO = md(2402),
+      YO = md(38766);
 
-    function nS(rr, Sr) {
-      rr.metadata = rr.metadata || {};
-      const Qr = rr._internalMetadata = rr._internalMetadata || {},
-        Zr = Qr.bR = Qr.bR || {};
-      (Zr.pointers = Zr.pointers || []).push(Sr)
+    function gO(dd, Od) {
+      dd.metadata = dd.metadata || {};
+      const md = dd._internalMetadata = dd._internalMetadata || {},
+        Wd = md.tV = md.tV || {};
+      (Wd.pointers = Wd.pointers || []).push(Od)
     }
 
-    function eS(rr, Sr) {
-      if (Sr && Object.keys(Sr).length > 0) {
-        const Qr = rr.metadata = rr.metadata || {};
-        (Qr.bR = Qr.bR || {}).extras = Sr
+    function wO(dd, Od) {
+      if (Od && Object.keys(Od).length > 0) {
+        const md = dd.metadata = dd.metadata || {};
+        (md.tV = md.tV || {}).extras = Od
       }
     }
 
-    function KS(rr, Sr) {
-      Sr.position = rr.translation ? NS.kU.FromArray(rr.translation) : NS.kU.Zero(), Sr.rotationQuaternion = rr.rotation ? NS.Quaternion.FromArray(rr.rotation) : NS.Quaternion.Identity(), Sr.Tx = rr.scale ? NS.kU.FromArray(rr.scale) : NS.kU.One()
+    function aO(dd, Od) {
+      Od.position = dd.translation ? HO.Cq.FromArray(dd.translation) : HO.Cq.Zero(), Od.rotationQuaternion = dd.rotation ? HO.Quaternion.FromArray(dd.rotation) : HO.Quaternion.Identity(), Od.Tt = dd.scale ? HO.Cq.FromArray(dd.scale) : HO.Cq.One()
     }
-    class yS {
-      constructor(rr, Sr) {
-        if (this.Dt = rr, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, Sr) {
-          const Sr = rr.MU(),
-            Qr = rr.lC.add((() => {
+    class EO {
+      constructor(dd, Od) {
+        if (this.MH = dd, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, Od) {
+          const Od = dd.Iq(),
+            md = dd.cV.add((() => {
               this.dispose()
             })),
-            Zr = Sr.CU.add((() => {
-              for (const rr of [...this.geometries, ...this.meshes, ...this.textures]) rr._rebuild()
+            Wd = Od.eq.add((() => {
+              for (const dd of [...this.geometries, ...this.meshes, ...this.textures]) dd._rebuild()
             }));
           this.release = () => {
-            rr.lC.remove(Qr), Sr.CU.remove(Zr)
+            dd.cV.remove(md), Od.eq.remove(Wd)
           }
         }
       }
@@ -840,252 +840,252 @@ export const modules = {
       addAllToScene() {
         if (this.release) {
           this.release(), this.release = null;
-          for (const rr of this.meshes) this.Dt.XWr(rr);
-          for (const rr of this.materials) this.Dt.addMaterial(rr);
-          for (const rr of this.geometries) this.Dt.addGeometry(rr);
-          for (const rr of this.transformNodes) this.Dt.addTransformNode(rr);
-          for (const rr of this.textures) this.Dt.addTexture(rr)
+          for (const dd of this.meshes) this.MH.hRd(dd);
+          for (const dd of this.materials) this.MH.addMaterial(dd);
+          for (const dd of this.geometries) this.MH.addGeometry(dd);
+          for (const dd of this.transformNodes) this.MH.addTransformNode(dd);
+          for (const dd of this.textures) this.MH.addTexture(dd)
         }
       }
       dispose() {
-        var rr;
-        for (const Sr of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const rr of Sr.slice()) rr.dispose();
-          Sr.length = 0
+        var dd;
+        for (const Od of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const dd of Od.slice()) dd.dispose();
+          Od.length = 0
         }
-        null === (rr = this.release) || void 0 === rr || rr.call(this), this.release = null
+        null === (dd = this.release) || void 0 === dd || dd.call(this), this.release = null
       }
     }
-    class BS {
-      constructor(rr, Sr, Qr, Zr, Wr, ar, jr) {
-        this.asset = rr, this.Dt = Sr, this.tree = Qr, this.geometryData = Wr, this.materials = ar, this.lite = jr, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = Zr ? Qr : null
+    class JO {
+      constructor(dd, Od, md, Wd, Fd, Rd, Xd) {
+        this.asset = dd, this.MH = Od, this.tree = md, this.geometryData = Fd, this.materials = Rd, this.lite = Xd, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = Wd ? md : null
       }
-      create(rr) {
-        if (this.lite) return rr();
-        const Sr = this.Dt;
-        Sr._blockEntityCollection = !!this.container;
+      create(dd) {
+        if (this.lite) return dd();
+        const Od = this.MH;
+        Od._blockEntityCollection = !!this.container;
         try {
-          const Sr = rr();
-          return this.container && (Sr._parentContainer = this.container), Sr
+          const Od = dd();
+          return this.container && (Od._parentContainer = this.container), Od
         } finally {
-          Sr._blockEntityCollection = !1
+          Od._blockEntityCollection = !1
         }
       }
-      node(rr, Sr) {
-        return this.create((() => this.lite ? Sr ? (0, US.g)(this.lite, rr) : (0, US.t)(this.lite, rr) : Sr ? new((0, aS.c)().Mesh)(rr, this.Dt) : new((0, aS.c)().TransformNode)(rr, this.Dt)))
+      node(dd, Od) {
+        return this.create((() => this.lite ? Od ? (0, yO.f)(this.lite, dd) : (0, yO.q)(this.lite, dd) : Od ? new((0, KO.c)().Mesh)(dd, this.MH) : new((0, KO.c)().TransformNode)(dd, this.MH)))
       }
       async load() {
-        var rr;
+        var dd;
         this.asset.model.json.nodes && this.createRoot();
-        const Sr = this.lite ? null : this.Dt,
-          Qr = null !== (rr = null === Sr || void 0 === Sr ? void 0 : Sr.blockMaterialDirtyMechanism) && void 0 !== rr && rr;
-        let Zr;
-        Sr && (Sr.blockMaterialDirtyMechanism = !0);
+        const Od = this.lite ? null : this.MH,
+          md = null !== (dd = null === Od || void 0 === Od ? void 0 : Od.blockMaterialDirtyMechanism) && void 0 !== dd && dd;
+        let Wd;
+        Od && (Od.blockMaterialDirtyMechanism = !0);
         try {
-          Zr = this.loadScene()
+          Wd = this.loadScene()
         } finally {
-          null === Sr || void 0 === Sr || Sr._forceBlockMaterialDirtyMechanism(Qr)
+          null === Od || void 0 === Od || Od._forceBlockMaterialDirtyMechanism(md)
         }
-        await Zr;
+        await Wd;
         const {
-          root: Wr,
-          tree: ar
+          root: Fd,
+          tree: Rd
         } = this;
-        Wr && (Wr.VK(!0), ar.meshes.push(Wr), ar.rootNodes.push(Wr));
-        for (const Ir of this.asset.model.nodes) {
-          const rr = this.nodeObjects.get(Ir.index);
-          rr && ["TransformNode", "LiteNode"].includes(rr.getClassName()) && ar.transformNodes.push(rr);
-          for (const Sr of null !== (jr = this.nodePrimitives.get(Ir.index)) && void 0 !== jr ? jr : []) {
-            var jr;
-            ar.meshes.push(Sr);
-            const rr = Sr.geometry;
-            rr && !ar.geometries.includes(rr) && ar.geometries.push(rr)
+        Fd && (Fd.rY(!0), Rd.meshes.push(Fd), Rd.rootNodes.push(Fd));
+        for (const Kd of this.asset.model.nodes) {
+          const dd = this.nodeObjects.get(Kd.index);
+          dd && ["TransformNode", "LiteNode"].includes(dd.getClassName()) && Rd.transformNodes.push(dd);
+          for (const Od of null !== (Xd = this.nodePrimitives.get(Kd.index)) && void 0 !== Xd ? Xd : []) {
+            var Xd;
+            Rd.meshes.push(Od);
+            const dd = Od.geometry;
+            dd && !Rd.geometries.includes(dd) && Rd.geometries.push(dd)
           }
         }
       }
       createRoot() {
-        const rr = this.node("__root__", !0);
-        this.root = rr, rr.VK(!1), this.Dt.useRightHandedSystem || KS(br, rr)
+        const dd = this.node("__root__", !0);
+        this.root = dd, dd.rY(!1), this.MH.useRightHandedSystem || aO(Zd, dd)
       }
       loadScene() {
-        const rr = [];
-        for (const Sr of this.asset.model.rootNodes) rr.push(this.loadNode(this.asset.model.nodes[Sr], (rr => {
-          rr.parent = this.root
+        const dd = [];
+        for (const Od of this.asset.model.rootNodes) dd.push(this.loadNode(this.asset.model.nodes[Od], (dd => {
+          dd.parent = this.root
         })));
-        return rr.push(Promise.resolve()), Promise.all(rr).then((() => {}))
+        return dd.push(Promise.resolve()), Promise.all(dd).then((() => {}))
       }
-      loadNode(rr, Sr) {
-        const Qr = `/nodes/${rr.index}`,
-          Zr = [],
-          Wr = Wr => {
-            if (nS(Wr, Qr), KS(rr, Wr), rr.hasCamera && !this.Dt.useRightHandedSystem) {
+      loadNode(dd, Od) {
+        const md = `/nodes/${dd.index}`,
+          Wd = [],
+          Fd = Fd => {
+            if (gO(Fd, md), aO(dd, Fd), dd.hasCamera && !this.MH.useRightHandedSystem) {
               const {
-                Tx: rr
-              } = Wr;
-              rr.set(-1, rr.y, rr.z)
+                Tt: dd
+              } = Fd;
+              dd.set(-1, dd.y, dd.z)
             }
-            for (const Sr of rr.children) Zr.push(this.loadNode(this.asset.model.nodes[Sr], (rr => {
-              rr.parent = Wr
+            for (const Od of dd.children) Wd.push(this.loadNode(this.asset.model.nodes[Od], (dd => {
+              dd.parent = Fd
             })));
-            (Qr => {
-              eS(Qr, rr.extras), Sr(Qr)
-            })(Wr)
+            (md => {
+              wO(md, dd.extras), Od(md)
+            })(Fd)
           };
-        if (null === rr.mesh) {
-          const Sr = this.node(or(rr), !1);
-          this.nodeObjects.set(rr.index, Sr), Wr(Sr)
+        if (null === dd.mesh) {
+          const Od = this.node(Cd(dd), !1);
+          this.nodeObjects.set(dd.index, Od), Fd(Od)
         } else {
-          const Sr = this.asset.model.meshes[rr.mesh];
-          Zr.push(this.loadMesh(`/meshes/${Sr.index}`, rr, Sr, Wr))
+          const Od = this.asset.model.meshes[dd.mesh];
+          Wd.push(this.loadMesh(`/meshes/${Od.index}`, dd, Od, Fd))
         }
-        return Promise.all(Zr).then((() => {
-          for (const Qr of null !== (Sr = this.nodePrimitives.get(rr.index)) && void 0 !== Sr ? Sr : []) {
-            var Sr;
-            ES(Qr)
+        return Promise.all(Wd).then((() => {
+          for (const md of null !== (Od = this.nodePrimitives.get(dd.index)) && void 0 !== Od ? Od : []) {
+            var Od;
+            tO(md)
           }
-          return this.nodeObjects.get(rr.index)
+          return this.nodeObjects.get(dd.index)
         }))
       }
-      loadMesh(rr, Sr, Qr, Zr) {
-        const Wr = [],
-          ar = or(Sr);
-        if (1 === Qr.primitives.length) {
-          const Zr = Qr.primitives[0];
-          Wr.push(this.loadPrimitive(`${rr}/primitives/${Zr.index}`, ar, Zr, (rr => {
-            this.nodeObjects.set(Sr.index, rr), this.nodePrimitives.set(Sr.index, [rr])
+      loadMesh(dd, Od, md, Wd) {
+        const Fd = [],
+          Rd = Cd(Od);
+        if (1 === md.primitives.length) {
+          const Wd = md.primitives[0];
+          Fd.push(this.loadPrimitive(`${dd}/primitives/${Wd.index}`, Rd, Wd, (dd => {
+            this.nodeObjects.set(Od.index, dd), this.nodePrimitives.set(Od.index, [dd])
           })))
         } else {
-          const Zr = this.node(ar, !1);
-          this.nodeObjects.set(Sr.index, Zr);
-          const jr = [];
-          this.nodePrimitives.set(Sr.index, jr);
-          for (const Sr of Qr.primitives) Wr.push(this.loadPrimitive(`${rr}/primitives/${Sr.index}`, `${ar}_primitive${Sr.index}`, Sr, (rr => {
-            rr.parent = Zr, jr.push(rr)
+          const Wd = this.node(Rd, !1);
+          this.nodeObjects.set(Od.index, Wd);
+          const Xd = [];
+          this.nodePrimitives.set(Od.index, Xd);
+          for (const Od of md.primitives) Fd.push(this.loadPrimitive(`${dd}/primitives/${Od.index}`, `${Rd}_primitive${Od.index}`, Od, (dd => {
+            dd.parent = Wd, Xd.push(dd)
           })))
         }
-        const jr = this.nodeObjects.get(Sr.index);
-        return Zr(jr), Promise.all(Wr).then((() => jr))
+        const Xd = this.nodeObjects.get(Od.index);
+        return Wd(Xd), Promise.all(Fd).then((() => Xd))
       }
-      loadPrimitive(rr, Sr, Qr, Zr) {
-        const Wr = [],
-          ar = this.node(Sr, !0);
-        if (ar.sideOrientation = this.Dt.useRightHandedSystem ? tS.d.CounterClockWiseSideOrientation : tS.d.ClockWiseSideOrientation, Wr.push(this.geometryData.load(rr, Qr, ar).then((rr => {
-            if ((0, jS.c)(ar)) {
-              var Sr, Qr;
-              const Zr = rr;
-              ar.replaceModel(Zr, Int32Array.of(0, null !== (Sr = null === (Qr = Zr.indexData) || void 0 === Qr ? void 0 : Qr.length) && void 0 !== Sr ? Sr : Zr.vertexCount, 0, Zr.vertexCount))
-            } else this.create((() => (rr.applyToMesh(ar), rr)))
+      loadPrimitive(dd, Od, md, Wd) {
+        const Fd = [],
+          Rd = this.node(Od, !0);
+        if (Rd.sideOrientation = this.MH.useRightHandedSystem ? bO.c.CounterClockWiseSideOrientation : bO.c.ClockWiseSideOrientation, Fd.push(this.geometryData.load(dd, md, Rd).then((dd => {
+            if ((0, hO.g)(Rd)) {
+              var Od, md;
+              const Wd = dd;
+              Rd.replaceModel(Wd, Int32Array.of(0, null !== (Od = null === (md = Wd.indexData) || void 0 === md ? void 0 : md.length) && void 0 !== Od ? Od : Wd.vertexCount, 0, Wd.vertexCount))
+            } else this.create((() => (dd.applyToMesh(Rd), dd)))
           }))), this.materials) {
-          const rr = 0 === Qr.mode ? tS.d.PointListDrawMode : tS.d.TriangleFillMode,
-            Sr = null === Qr.material ? null : this.asset.model.materials[Qr.material];
-          Wr.push(this.loadMaterial(Sr, rr, (rr => {
-            ar.material = rr
+          const dd = 0 === md.mode ? bO.c.PointListDrawMode : bO.c.TriangleFillMode,
+            Od = null === md.material ? null : this.asset.model.materials[md.material];
+          Fd.push(this.loadMaterial(Od, dd, (dd => {
+            Rd.material = dd
           })))
         }
-        return nS(ar, rr), Zr(ar), Promise.all(Wr).then((() => ar))
+        return gO(Rd, dd), Wd(Rd), Promise.all(Fd).then((() => Rd))
       }
-      loadMaterial(rr, Sr, Qr) {
-        var Zr;
-        const Wr = `${null!==(Zr=null===rr||void 0===rr?void 0:rr.index)&&void 0!==Zr?Zr:"default"}:${Sr}`;
-        let ar = this.materialData.get(Wr);
-        return ar || (ar = this.createMaterial(rr, Sr), this.materialData.set(Wr, ar)), Qr(ar.material), ar.promise
+      loadMaterial(dd, Od, md) {
+        var Wd;
+        const Fd = `${null!==(Wd=null===dd||void 0===dd?void 0:dd.index)&&void 0!==Wd?Wd:"default"}:${Od}`;
+        let Rd = this.materialData.get(Fd);
+        return Rd || (Rd = this.createMaterial(dd, Od), this.materialData.set(Fd, Rd)), md(Rd.material), Rd.promise
       }
-      createMaterial(rr, Sr) {
-        const Qr = rr ? rr.name || `material${rr.index}` : "__GLTFLoader._default",
+      createMaterial(dd, Od) {
+        const md = dd ? dd.name || `material${dd.index}` : "__GLTFLoader._default",
           {
-            style: Zr,
-            unlit: Wr
+            style: Wd,
+            unlit: Fd
           } = this.materials;
-        let ar;
-        const jr = this.create((() => {
-          const jr = (0, YS.b)({
-            name: Qr,
-            Dt: this.Dt,
+        let Rd;
+        const Xd = this.create((() => {
+          const Xd = (0, YO.d)({
+            name: md,
+            MH: this.MH,
             sets: {
-              ...(0, IS.e)(this.asset, rr, Zr, Wr),
-              fillMode: Sr
+              ...(0, vO.d)(this.asset, dd, Wd, Fd),
+              fillMode: Od
             },
             unrendered: !0
           });
-          return ar = jr.model, jr.mirror
+          return Rd = Xd.model, Xd.mirror
         }));
-        let Ir = Promise.resolve();
-        if (rr) {
-          const Sr = `/materials/${rr.index}`,
-            Zr = ar.diffuseTexture;
-          if (Zr && !Zr.mirror) Ir = new Promise((rr => setTimeout(rr)));
-          else if (Zr) {
-            const Wr = Zr.mirror;
-            Wr._parentContainer = this.container, Wr.name = `${Qr} (Base Color)`, nS(Wr, `${Sr}${rr.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(Wr), Ir = (0, hS.w)(Zr)
+        let Kd = Promise.resolve();
+        if (dd) {
+          const Od = `/materials/${dd.index}`,
+            Wd = Rd.diffuseTexture;
+          if (Wd && !Wd.mirror) Kd = new Promise((dd => setTimeout(dd)));
+          else if (Wd) {
+            const Fd = Wd.mirror;
+            Fd._parentContainer = this.container, Fd.name = `${md} (Base Color)`, gO(Fd, `${Od}${dd.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(Fd), Kd = (0, TO.s)(Wd)
           }
-          eS(jr, rr.extras), nS(jr, Sr)
+          wO(Xd, dd.extras), gO(Xd, Od)
         }
-        return this.tree.materials.push(jr), {
-          material: jr,
-          promise: Ir
+        return this.tree.materials.push(Xd), {
+          material: Xd,
+          promise: Kd
         }
       }
     }
 
-    function TS() {
-      mS.g.dracoDecodes = yr.decodes, mS.g.dracoWorkersStarted = yr.workersStarted, mS.g.dracoMostWorkers = yr.mostWorkers
+    function UO() {
+      qO.d.dracoDecodes = wd.decodes, qO.d.dracoWorkersStarted = wd.workersStarted, qO.d.dracoMostWorkers = wd.mostWorkers
     }
-    async function vS(rr, Sr, Qr, Wr, ar) {
+    async function xO(dd, Od, md, Fd, Rd) {
       try {
-        return await async function(rr, Sr, Qr, Wr, ar, jr) {
-          var Ir;
-          let fr;
-          const Er = null === (Ir = (0, zS.e)()) || void 0 === Ir ? void 0 : Ir.Ox,
-            pr = null !== Er && void 0 !== Er && Er.Wt && Sr === Er.eC() ? Er : null,
-            xr = ar && !pr;
-          return await WS(rr, Sr, Qr, Wr, Zr.b, (rr => (fr = new yS(Sr, xr), new BS(rr, Sr, fr, xr, new pS(Sr, Wr), jr, pr).load())), !ar), fr
-        }(rr, Sr, Qr, lr, Wr, ar)
+        return await async function(dd, Od, md, Fd, Rd, Xd) {
+          var Kd;
+          let hd;
+          const vd = null === (Kd = (0, pO.c)()) || void 0 === Kd ? void 0 : Kd.gt,
+            Qd = null !== vd && void 0 !== vd && vd.NH && Od === vd.zV() ? vd : null,
+            td = Rd && !Qd;
+          return await XO(dd, Od, md, Fd, Wd.b, (dd => (hd = new EO(Od, td), new JO(dd, Od, hd, td, new oO(Od, Fd), Xd, Qd).load())), !Rd), hd
+        }(dd, Od, md, Sd, Fd, Rd)
       } finally {
-        TS()
+        UO()
       }
     }
-    async function OS(rr, Sr, Qr, Wr) {
+    async function BO(dd, Od, md, Fd) {
       try {
-        return await WS(rr, Sr, Qr, lr, Zr.b, (rr => Wr(rr, new pS(Sr, lr))))
+        return await XO(dd, Od, md, Sd, Wd.b, (dd => Fd(dd, new oO(Od, Sd))))
       } finally {
-        TS()
+        UO()
       }
     }
-    xS = Ir, zr || (zr = {
-      scriptUrl: new URL(xS.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(xS.wasmBinaryUrl, location.href).href
+    NO = Kd, bd || (bd = {
+      scriptUrl: new URL(NO.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(NO.wasmBinaryUrl, location.href).href
     })
   },
-  37500: rr => {
-    rr.exports = function(rr, Sr, Qr, Zr) {
-      var Wr = self || window;
+  37635: dd => {
+    dd.exports = function(dd, Od, md, Wd) {
+      var Fd = self || window;
       try {
         try {
-          var ar;
+          var Rd;
           try {
-            ar = new Wr.Blob([rr])
-          } catch (Er) {
-            (ar = new(Wr.BlobBuilder || Wr.WebKitBlobBuilder || Wr.MozBlobBuilder || Wr.MSBlobBuilder)).append(rr), ar = ar.getBlob()
+            Rd = new Fd.Blob([dd])
+          } catch (vd) {
+            (Rd = new(Fd.BlobBuilder || Fd.WebKitBlobBuilder || Fd.MozBlobBuilder || Fd.MSBlobBuilder)).append(dd), Rd = Rd.getBlob()
           }
-          var jr = Wr.URL || Wr.webkitURL,
-            Ir = jr.createObjectURL(ar),
-            fr = new Wr[Sr](Ir, Qr);
-          return jr.revokeObjectURL(Ir), fr
-        } catch (Er) {
-          return new Wr[Sr]("data:application/javascript,".concat(encodeURIComponent(rr)), Qr)
+          var Xd = Fd.URL || Fd.webkitURL,
+            Kd = Xd.createObjectURL(Rd),
+            hd = new Fd[Od](Kd, md);
+          return Xd.revokeObjectURL(Kd), hd
+        } catch (vd) {
+          return new Fd[Od]("data:application/javascript,".concat(encodeURIComponent(dd)), md)
         }
-      } catch (Er) {
-        if (!Zr) throw Error("Inline worker is not supported");
-        return new Wr[Sr](Zr, Qr)
+      } catch (vd) {
+        if (!Wd) throw Error("Inline worker is not supported");
+        return new Fd[Od](Wd, md)
       }
     }
   },
-  54064: (rr, Sr, Qr) => {
-    rr.exports = Qr.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  53952: (dd, Od, md) => {
+    dd.exports = md.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  54071: (rr, Sr, Qr) => {
-    rr.exports = Qr.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  53960: (dd, Od, md) => {
+    dd.exports = md.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

@@ -1,239 +1,239 @@
 export const id = 277;
 export const ids = [277];
 export const modules = {
-  41259: (rr, Sr, Qr) => {
-    rr.exports = Wr;
-    var Zr = Qr(388);
+  41278: (dd, Od, md) => {
+    dd.exports = Fd;
+    var Wd = md(415);
 
-    function Wr(rr, Sr) {
-      if (!(this instanceof Wr)) return new Wr(rr, Sr);
-      var Qr = Zr.create();
-      Zr.add(Qr, rr, Sr), this.base = Zr.min(Zr.create(), rr, Qr), this.vec = Zr.clone(Sr), this.max = Zr.max(Zr.create(), rr, Qr), this.mag = Zr.length(this.vec)
+    function Fd(dd, Od) {
+      if (!(this instanceof Fd)) return new Fd(dd, Od);
+      var md = Wd.create();
+      Wd.add(md, dd, Od), this.base = Wd.min(Wd.create(), dd, md), this.vec = Wd.clone(Od), this.max = Wd.max(Wd.create(), dd, md), this.mag = Wd.length(this.vec)
     }
-    var ar = Wr.prototype;
-    ar.width = function() {
+    var Rd = Fd.prototype;
+    Rd.width = function() {
       return this.vec[0]
-    }, ar.height = function() {
+    }, Rd.height = function() {
       return this.vec[1]
-    }, ar.depth = function() {
+    }, Rd.depth = function() {
       return this.vec[2]
-    }, ar.x0 = function() {
+    }, Rd.x0 = function() {
       return this.base[0]
-    }, ar.y0 = function() {
+    }, Rd.y0 = function() {
       return this.base[1]
-    }, ar.z0 = function() {
+    }, Rd.z0 = function() {
       return this.base[2]
-    }, ar.x1 = function() {
+    }, Rd.x1 = function() {
       return this.max[0]
-    }, ar.y1 = function() {
+    }, Rd.y1 = function() {
       return this.max[1]
-    }, ar.z1 = function() {
+    }, Rd.z1 = function() {
       return this.max[2]
-    }, ar.translate = function(rr) {
-      return Zr.add(this.max, this.max, rr), Zr.add(this.base, this.base, rr), this
-    }, ar.setPosition = function(rr) {
-      return Zr.add(this.max, rr, this.vec), Zr.copy(this.base, rr), this
-    }, ar.expand = function(rr) {
-      var Sr = Zr.create(),
-        Qr = Zr.create();
-      return Zr.max(Sr, rr.max, this.max), Zr.min(Qr, rr.base, this.base), Zr.subtract(Sr, Sr, Qr), new Wr(Qr, Sr)
-    }, ar.intersects = function(rr) {
-      return !(rr.base[0] > this.max[0]) && (!(rr.base[1] > this.max[1]) && (!(rr.base[2] > this.max[2]) && (!(rr.max[0] < this.base[0]) && (!(rr.max[1] < this.base[1]) && !(rr.max[2] < this.base[2])))))
-    }, ar.touches = function(rr) {
-      var Sr = this.union(rr);
-      return null !== Sr && (0 == Sr.width() || 0 == Sr.height() || 0 == Sr.depth())
-    }, ar.union = function(rr) {
-      if (!this.intersects(rr)) return null;
-      var Sr = Math.max(rr.base[0], this.base[0]),
-        Qr = Math.max(rr.base[1], this.base[1]),
-        Zr = Math.max(rr.base[2], this.base[2]);
-      return new Wr([Sr, Qr, Zr], [Math.min(rr.max[0], this.max[0]) - Sr, Math.min(rr.max[1], this.max[1]) - Qr, Math.min(rr.max[2], this.max[2]) - Zr])
+    }, Rd.translate = function(dd) {
+      return Wd.add(this.max, this.max, dd), Wd.add(this.base, this.base, dd), this
+    }, Rd.setPosition = function(dd) {
+      return Wd.add(this.max, dd, this.vec), Wd.copy(this.base, dd), this
+    }, Rd.expand = function(dd) {
+      var Od = Wd.create(),
+        md = Wd.create();
+      return Wd.max(Od, dd.max, this.max), Wd.min(md, dd.base, this.base), Wd.subtract(Od, Od, md), new Fd(md, Od)
+    }, Rd.intersects = function(dd) {
+      return !(dd.base[0] > this.max[0]) && (!(dd.base[1] > this.max[1]) && (!(dd.base[2] > this.max[2]) && (!(dd.max[0] < this.base[0]) && (!(dd.max[1] < this.base[1]) && !(dd.max[2] < this.base[2])))))
+    }, Rd.touches = function(dd) {
+      var Od = this.union(dd);
+      return null !== Od && (0 == Od.width() || 0 == Od.height() || 0 == Od.depth())
+    }, Rd.union = function(dd) {
+      if (!this.intersects(dd)) return null;
+      var Od = Math.max(dd.base[0], this.base[0]),
+        md = Math.max(dd.base[1], this.base[1]),
+        Wd = Math.max(dd.base[2], this.base[2]);
+      return new Fd([Od, md, Wd], [Math.min(dd.max[0], this.max[0]) - Od, Math.min(dd.max[1], this.max[1]) - md, Math.min(dd.max[2], this.max[2]) - Wd])
     }
   },
-  41256: rr => {
-    rr.exports = function(rr, Sr, Qr, Zr, Wr, ar) {
-      var jr = +Sr[0],
-        Ir = +Sr[1],
-        fr = +Sr[2],
-        Er = +Qr[0],
-        pr = +Qr[1],
-        xr = +Qr[2],
-        mr = Math.sqrt(Er * Er + pr * pr + xr * xr);
-      if (0 === mr) throw new Error("Can't raycast along a zero vector");
-      return function(rr, Sr, Qr, Zr, Wr, ar, jr, Ir, fr, Er) {
-        for (var pr = 0, xr = Math.floor, mr = 0 | xr(Sr), Nr = 0 | xr(Qr), Ur = 0 | xr(Zr), tr = Wr > 0 ? 1 : -1, hr = ar > 0 ? 1 : -1, zr = jr > 0 ? 1 : -1, Yr = Math.abs(1 / Wr), nr = Math.abs(1 / ar), er = Math.abs(1 / jr), Kr = Yr < 1 / 0 ? Yr * (tr > 0 ? mr + 1 - Sr : Sr - mr) : 1 / 0, yr = nr < 1 / 0 ? nr * (hr > 0 ? Nr + 1 - Qr : Qr - Nr) : 1 / 0, Br = er < 1 / 0 ? er * (zr > 0 ? Ur + 1 - Zr : Zr - Ur) : 1 / 0, Tr = -1; pr <= Ir;) {
-          var vr = rr(mr, Nr, Ur);
-          if (vr) return fr && (fr[0] = Sr + pr * Wr, fr[1] = Qr + pr * ar, fr[2] = Zr + pr * jr), Er && (Er[0] = Er[1] = Er[2] = 0, 0 === Tr && (Er[0] = -tr), 1 === Tr && (Er[1] = -hr), 2 === Tr && (Er[2] = -zr)), vr;
-          Kr < yr ? Kr < Br ? (mr += tr, pr = Kr, Kr += Yr, Tr = 0) : (Ur += zr, pr = Br, Br += er, Tr = 2) : yr < Br ? (Nr += hr, pr = yr, yr += nr, Tr = 1) : (Ur += zr, pr = Br, Br += er, Tr = 2)
+  41274: dd => {
+    dd.exports = function(dd, Od, md, Wd, Fd, Rd) {
+      var Xd = +Od[0],
+        Kd = +Od[1],
+        hd = +Od[2],
+        vd = +md[0],
+        Qd = +md[1],
+        td = +md[2],
+        od = Math.sqrt(vd * vd + Qd * Qd + td * td);
+      if (0 === od) throw new Error("Can't raycast along a zero vector");
+      return function(dd, Od, md, Wd, Fd, Rd, Xd, Kd, hd, vd) {
+        for (var Qd = 0, td = Math.floor, od = 0 | td(Od), Nd = 0 | td(md), qd = 0 | td(Wd), Hd = Fd > 0 ? 1 : -1, yd = Rd > 0 ? 1 : -1, bd = Xd > 0 ? 1 : -1, Td = Math.abs(1 / Fd), pd = Math.abs(1 / Rd), Yd = Math.abs(1 / Xd), gd = Td < 1 / 0 ? Td * (Hd > 0 ? od + 1 - Od : Od - od) : 1 / 0, wd = pd < 1 / 0 ? pd * (yd > 0 ? Nd + 1 - md : md - Nd) : 1 / 0, Ed = Yd < 1 / 0 ? Yd * (bd > 0 ? qd + 1 - Wd : Wd - qd) : 1 / 0, Jd = -1; Qd <= Kd;) {
+          var Ud = dd(od, Nd, qd);
+          if (Ud) return hd && (hd[0] = Od + Qd * Fd, hd[1] = md + Qd * Rd, hd[2] = Wd + Qd * Xd), vd && (vd[0] = vd[1] = vd[2] = 0, 0 === Jd && (vd[0] = -Hd), 1 === Jd && (vd[1] = -yd), 2 === Jd && (vd[2] = -bd)), Ud;
+          gd < wd ? gd < Ed ? (od += Hd, Qd = gd, gd += Td, Jd = 0) : (qd += bd, Qd = Ed, Ed += Yd, Jd = 2) : wd < Ed ? (Nd += yd, Qd = wd, wd += pd, Jd = 1) : (qd += bd, Qd = Ed, Ed += Yd, Jd = 2)
         }
-        return fr && (fr[0] = Sr + pr * Wr, fr[1] = Qr + pr * ar, fr[2] = Zr + pr * jr), Er && (Er[0] = Er[1] = Er[2] = 0), 0
-      }(rr, jr, Ir, fr, Er /= mr, pr /= mr, xr /= mr, Zr = "undefined" === typeof Zr ? 64 : +Zr, Wr, ar)
+        return hd && (hd[0] = Od + Qd * Fd, hd[1] = md + Qd * Rd, hd[2] = Wd + Qd * Xd), vd && (vd[0] = vd[1] = vd[2] = 0), 0
+      }(dd, Xd, Kd, hd, vd /= od, Qd /= od, td /= od, Wd = "undefined" === typeof Wd ? 64 : +Wd, Fd, Rd)
     }
   },
-  40675: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Ir,
-      d: () => ar
+  40681: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Kd,
+      e: () => Rd
     });
-    var Zr = Qr(2839);
-    let Wr = null;
+    var Wd = md(2821);
+    let Fd = null;
 
-    function ar(rr) {
-      return null !== Wr && rr === Wr
+    function Rd(dd) {
+      return null !== Fd && dd === Fd
     }
 
-    function jr() {
-      this.XF = !1, this.stopPropagation = !1, this.kF = !1, this.disabled = !1
+    function Xd() {
+      this.sZ = !1, this.stopPropagation = !1, this.uZ = !1, this.disabled = !1
     }
-    class Ir {
-      constructor(rr, Sr) {
+    class Kd {
+      constructor(dd, Od) {
         this.version = "0.7.0";
-        var Qr = Object.assign({}, new jr, Sr || {});
-        this.element = rr || document, this.XF = !!Qr.XF, this.stopPropagation = !!Qr.stopPropagation, this.kF = !!Qr.kF, this.disabled = !!Qr.disabled, this.filterEvents = (rr, Sr) => !0, this.ignoreEvent = rr => !1, this.down = new Zr.EventEmitter, this.up = new Zr.EventEmitter, this.state = {}, this.JF = {
+        var md = Object.assign({}, new Xd, Od || {});
+        this.element = dd || document, this.sZ = !!md.sZ, this.stopPropagation = !!md.stopPropagation, this.uZ = !!md.uZ, this.disabled = !!md.disabled, this.filterEvents = (dd, Od) => !0, this.ignoreEvent = dd => !1, this.down = new Wd.EventEmitter, this.up = new Wd.EventEmitter, this.state = {}, this.iZ = {
           dx: 0,
           dy: 0,
-          cSr: 0,
-          FSr: 0,
-          oSr: 0
+          Ymd: 0,
+          wmd: 0,
+          Emd: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? Er(this) : document.addEventListener("DOMContentLoaded", (rr => {
-          Er(this)
+        }, "loading" !== document.readyState ? vd(this) : document.addEventListener("DOMContentLoaded", (dd => {
+          vd(this)
         }), {
           once: !0
         })
       }
-      bind(rr) {
-        for (var Sr = arguments.length, Qr = new Array(Sr > 1 ? Sr - 1 : 0), Zr = 1; Zr < Sr; Zr++) Qr[Zr - 1] = arguments[Zr];
-        Qr.forEach((Sr => {
-          var Qr = this._keyBindmap[Sr] || [];
-          Qr.includes(rr) || (Qr.push(rr), this._keyBindmap[Sr] = Qr)
-        })), this.state[rr] = !!this.state[rr], this.pressCount[rr] = this.pressCount[rr] || 0, this.releaseCount[rr] = this.releaseCount[rr] || 0
+      bind(dd) {
+        for (var Od = arguments.length, md = new Array(Od > 1 ? Od - 1 : 0), Wd = 1; Wd < Od; Wd++) md[Wd - 1] = arguments[Wd];
+        md.forEach((Od => {
+          var md = this._keyBindmap[Od] || [];
+          md.includes(dd) || (md.push(dd), this._keyBindmap[Od] = md)
+        })), this.state[dd] = !!this.state[dd], this.pressCount[dd] = this.pressCount[dd] || 0, this.releaseCount[dd] = this.releaseCount[dd] || 0
       }
-      unbind(rr) {
-        for (var Sr in this._keyBindmap) {
-          var Qr = this._keyBindmap[Sr],
-            Zr = Qr.indexOf(rr);
-          Zr > -1 && Qr.splice(Zr, 1)
+      unbind(dd) {
+        for (var Od in this._keyBindmap) {
+          var md = this._keyBindmap[Od],
+            Wd = md.indexOf(dd);
+          Wd > -1 && md.splice(Wd, 1)
         }
       }
       getBindings() {
-        var rr = {};
-        for (var Sr in this._keyBindmap) {
-          this._keyBindmap[Sr].forEach((Qr => {
-            rr[Qr] = rr[Qr] || [], rr[Qr].push(Sr)
+        var dd = {};
+        for (var Od in this._keyBindmap) {
+          this._keyBindmap[Od].forEach((md => {
+            dd[md] = dd[md] || [], dd[md].push(Od)
           }))
         }
-        return rr
+        return dd
       }
-      lx() {
-        fr(this.JF), fr(this.pressCount), fr(this.releaseCount)
+      Et() {
+        hd(this.iZ), hd(this.pressCount), hd(this.releaseCount)
       }
     }
 
-    function fr(rr) {
-      for (var Sr in rr) rr[Sr] = 0
+    function hd(dd) {
+      for (var Od in dd) dd[Od] = 0
     }
 
-    function Er(rr) {
-      window.addEventListener("keydown", hr.bind(null, rr, !0), !1), window.addEventListener("keyup", hr.bind(null, rr, !1), !1);
-      var Sr = {
+    function vd(dd) {
+      window.addEventListener("keydown", yd.bind(null, dd, !0), !1), window.addEventListener("keyup", yd.bind(null, dd, !1), !1);
+      var Od = {
         passive: !0
       };
-      rr.element.addEventListener("touchstart", Nr.bind(void 0, rr), {
+      dd.element.addEventListener("touchstart", Nd.bind(void 0, dd), {
         passive: !1
-      }), rr.element.addEventListener("touchend", tr.bind(void 0, rr), Sr), rr.element.addEventListener("mousedown", zr.bind(null, rr, !0), Sr), window.document.addEventListener("mouseup", zr.bind(null, rr, !1), Sr), rr.element.addEventListener("touchmove", Yr.bind(null, rr), Sr), rr.element.addEventListener("mousemove", Yr.bind(null, rr), Sr), window.PointerEvent, rr.element.addEventListener("wheel", nr.bind(null, rr), Sr), rr.element.addEventListener("contextmenu", er.bind(null, rr), !1), window.addEventListener("blur", Br.bind(null, rr), !1)
+      }), dd.element.addEventListener("touchend", Hd.bind(void 0, dd), Od), dd.element.addEventListener("mousedown", bd.bind(null, dd, !0), Od), window.document.addEventListener("mouseup", bd.bind(null, dd, !1), Od), dd.element.addEventListener("touchmove", Td.bind(null, dd), Od), dd.element.addEventListener("mousemove", Td.bind(null, dd), Od), window.PointerEvent, dd.element.addEventListener("wheel", pd.bind(null, dd), Od), dd.element.addEventListener("contextmenu", Yd.bind(null, dd), !1), window.addEventListener("blur", Ed.bind(null, dd), !1)
     }
-    var pr = 0,
-      xr = 0,
-      mr = null;
+    var Qd = 0,
+      td = 0,
+      od = null;
 
-    function Nr(rr, Sr) {
-      Sr.preventDefault(), Ur(Sr)
+    function Nd(dd, Od) {
+      Od.preventDefault(), qd(Od)
     }
 
-    function Ur(rr) {
-      let Sr = !1;
-      for (let Qr = 0; Qr < rr.touches.length; ++Qr)
-        if (rr.touches[Qr].identifier === mr) {
-          Sr = !0;
+    function qd(dd) {
+      let Od = !1;
+      for (let md = 0; md < dd.touches.length; ++md)
+        if (dd.touches[md].identifier === od) {
+          Od = !0;
           break
-        } if (!Sr) {
-        const Sr = rr.changedTouches[0];
-        pr = Sr.clientX, xr = Sr.clientY, mr = Sr.identifier
+        } if (!Od) {
+        const Od = dd.changedTouches[0];
+        Qd = Od.clientX, td = Od.clientY, od = Od.identifier
       }
     }
 
-    function tr(rr, Sr) {
-      for (var Qr = Sr.changedTouches, Zr = 0; Zr < Qr.length; ++Zr) Qr[Zr].identifier === mr && (mr = null)
+    function Hd(dd, Od) {
+      for (var md = Od.changedTouches, Wd = 0; Wd < md.length; ++Wd) md[Wd].identifier === od && (od = null)
     }
 
-    function hr(rr, Sr, Qr) {
-      if (!rr.ignoreEvent(Qr)) try {
-        Tr(rr, Qr), Sr && Qr.isTrusted && !Qr.repeat && rr._keyStates[Qr.code] && vr(rr, Qr.code)
+    function yd(dd, Od, md) {
+      if (!dd.ignoreEvent(md)) try {
+        Jd(dd, md), Od && md.isTrusted && !md.repeat && dd._keyStates[md.code] && Ud(dd, md.code)
       } finally {
-        Or(Qr.code, Sr, rr, Qr)
+        xd(md.code, Od, dd, md)
       }
     }
 
-    function zr(rr, Sr, Qr) {
-      if (!rr.ignoreEvent(Qr)) try {
-        Tr(rr, Qr)
+    function bd(dd, Od, md) {
+      if (!dd.ignoreEvent(md)) try {
+        Jd(dd, md)
       } finally {
-        ! function(rr, Sr, Qr) {
-          if ("pointerId" in Qr)
-            if (Sr) {
-              if (null !== rr._touches.currID) return;
-              rr._touches.currID = Qr.pointerId
+        ! function(dd, Od, md) {
+          if ("pointerId" in md)
+            if (Od) {
+              if (null !== dd._touches.currID) return;
+              dd._touches.currID = md.pointerId
             } else {
-              if (rr._touches.currID !== Qr.pointerId) return;
-              rr._touches.currID = null
-            } var Zr = "button" in Qr ? Qr.button + 1 : 1;
-          Or("Mouse" + Zr, Sr, rr, Qr)
-        }(rr, Sr, Qr)
+              if (dd._touches.currID !== md.pointerId) return;
+              dd._touches.currID = null
+            } var Wd = "button" in md ? md.button + 1 : 1;
+          xd("Mouse" + Wd, Od, dd, md)
+        }(dd, Od, md)
       }
     }
 
-    function Yr(rr, Sr) {
-      var Qr = Sr.movementX || Sr.mozMovementX || 0,
-        Zr = Sr.movementY || Sr.mozMovementY || 0;
-      if (Sr.touches && 0 === (Qr | Zr)) {
-        var Wr = function(rr) {
-          Ur(rr);
-          for (let Sr = 0; Sr < rr.changedTouches.length; ++Sr)
-            if (rr.changedTouches[Sr].identifier == mr) {
-              const Qr = rr.changedTouches[Sr],
-                Zr = [Qr.clientX - pr, Qr.clientY - xr];
-              return pr = Qr.clientX, xr = Qr.clientY, Zr
-            } return console.error(`Did not find touch id ${mr}`), [0, 0]
-        }(Sr);
-        Qr = Wr[0], Zr = Wr[1]
+    function Td(dd, Od) {
+      var md = Od.movementX || Od.mozMovementX || 0,
+        Wd = Od.movementY || Od.mozMovementY || 0;
+      if (Od.touches && 0 === (md | Wd)) {
+        var Fd = function(dd) {
+          qd(dd);
+          for (let Od = 0; Od < dd.changedTouches.length; ++Od)
+            if (dd.changedTouches[Od].identifier == od) {
+              const md = dd.changedTouches[Od],
+                Wd = [md.clientX - Qd, md.clientY - td];
+              return Qd = md.clientX, td = md.clientY, Wd
+            } return console.error(`Did not find touch id ${od}`), [0, 0]
+        }(Od);
+        md = Fd[0], Wd = Fd[1]
       }
-      rr.JF.dx += Qr, rr.JF.dy += Zr
+      dd.iZ.dx += md, dd.iZ.dy += Wd
     }
 
-    function nr(rr, Sr) {
-      Tr(rr, Sr);
-      var Qr = 1;
-      switch (Sr.deltaMode) {
+    function pd(dd, Od) {
+      Jd(dd, Od);
+      var md = 1;
+      switch (Od.deltaMode) {
         case 0:
-          Qr = 1;
+          md = 1;
           break;
         case 1:
-          Qr = 12;
+          md = 12;
           break;
         case 2:
-          Qr = rr.element.clientHeight || window.innerHeight
+          md = dd.element.clientHeight || window.innerHeight
       }
-      rr.JF.cSr += (Sr.deltaX || 0) * Qr, rr.JF.FSr += (Sr.deltaY || 0) * Qr, rr.JF.oSr += (Sr.deltaZ || 0) * Qr
+      dd.iZ.Ymd += (Od.deltaX || 0) * md, dd.iZ.wmd += (Od.deltaY || 0) * md, dd.iZ.Emd += (Od.deltaZ || 0) * md
     }
 
-    function er(rr, Sr) {
-      if (!rr.kF) return Sr.preventDefault(), !1
+    function Yd(dd, Od) {
+      if (!dd.uZ) return Od.preventDefault(), !1
     }
-    var Kr = {
+    var gd = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -244,331 +244,331 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function yr(rr, Sr) {
-      return !!rr[Kr[Sr]] || ("AltRight" === Sr || "ControlLeft" === Sr) && "function" === typeof rr.getModifierState && !0 === rr.getModifierState("AltGraph")
+    function wd(dd, Od) {
+      return !!dd[gd[Od]] || ("AltRight" === Od || "ControlLeft" === Od) && "function" === typeof dd.getModifierState && !0 === dd.getModifierState("AltGraph")
     }
 
-    function Br(rr, Sr) {
-      for (var Qr in rr._modifiersHeldThroughBlur = {}, Kr) rr._keyStates[Qr] && (rr._modifiersHeldThroughBlur[Qr] = !0);
-      Sr && Sr.isTrusted && function() {
+    function Ed(dd, Od) {
+      for (var md in dd._modifiersHeldThroughBlur = {}, gd) dd._keyStates[md] && (dd._modifiersHeldThroughBlur[md] = !0);
+      Od && Od.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (rr) {
+        } catch (dd) {
           return !0
         }
-      }() && (clearTimeout(rr._blurRelease), rr._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(dd._blurRelease), dd._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var Sr in rr._modifiersHeldThroughBlur = {}, rr._keyStates) rr._keyStates[Sr] && !/^Mouse\d/.test(Sr) && vr(rr, Sr)
+          for (var Od in dd._modifiersHeldThroughBlur = {}, dd._keyStates) dd._keyStates[Od] && !/^Mouse\d/.test(Od) && Ud(dd, Od)
       }), 0))
     }
 
-    function Tr(rr, Sr) {
-      var Qr = rr._modifiersHeldThroughBlur;
-      if (Qr && Sr.isTrusted && document.hasFocus())
-        for (var Zr in Qr) delete Qr[Zr], rr._keyStates[Zr] && Zr !== Sr.code && (yr(Sr, Zr) || vr(rr, Zr))
+    function Jd(dd, Od) {
+      var md = dd._modifiersHeldThroughBlur;
+      if (md && Od.isTrusted && document.hasFocus())
+        for (var Wd in md) delete md[Wd], dd._keyStates[Wd] && Wd !== Od.code && (wd(Od, Wd) || Ud(dd, Wd))
     }
 
-    function vr(rr, Sr) {
-      const Qr = {
-          code: Sr,
+    function Ud(dd, Od) {
+      const md = {
+          code: Od,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        Zr = Wr;
-      Wr = Qr;
+        Wd = Fd;
+      Fd = md;
       try {
-        Or(Sr, !1, rr, Qr)
+        xd(Od, !1, dd, md)
       } finally {
-        Wr = Zr
+        Fd = Wd
       }
     }
 
-    function Or(rr, Sr, Qr, Zr) {
-      var Wr = Qr._keyBindmap[rr];
-      Wr && (Lr(Qr._keyStates[rr], Sr) && (Qr._keyStates[rr] = Sr, Wr.forEach((rr => {
-        (!Qr.filterEvents || Qr.filterEvents(Zr, rr)) && function(rr, Sr, Qr, Zr) {
-          var Wr = Sr ? Qr.pressCount : Qr.releaseCount;
-          Wr[rr] = (Wr[rr] || 0) + 1;
-          var ar = Qr._bindPressCount[rr] || 0;
-          (ar += Sr ? 1 : -1) < 0 && (ar = 0);
-          Qr._bindPressCount[rr] = ar;
-          var jr = Qr.state[rr];
-          if (Lr(jr, ar)) {
-            Qr.state[rr] = ar > 0;
-            var Ir = Sr ? Qr.down : Qr.up;
-            Qr.disabled || Ir.emit(rr, Zr)
+    function xd(dd, Od, md, Wd) {
+      var Fd = md._keyBindmap[dd];
+      Fd && (Bd(md._keyStates[dd], Od) && (md._keyStates[dd] = Od, Fd.forEach((dd => {
+        (!md.filterEvents || md.filterEvents(Wd, dd)) && function(dd, Od, md, Wd) {
+          var Fd = Od ? md.pressCount : md.releaseCount;
+          Fd[dd] = (Fd[dd] || 0) + 1;
+          var Rd = md._bindPressCount[dd] || 0;
+          (Rd += Od ? 1 : -1) < 0 && (Rd = 0);
+          md._bindPressCount[dd] = Rd;
+          var Xd = md.state[dd];
+          if (Bd(Xd, Rd)) {
+            md.state[dd] = Rd > 0;
+            var Kd = Od ? md.down : md.up;
+            md.disabled || Kd.emit(dd, Wd)
           }
-        }(rr, Sr, Qr, Zr)
-      }))), "button" in Zr || (Qr.XF && !Zr.defaultPrevented && Zr.preventDefault(), Qr.stopPropagation && Zr.stopPropagation()))
+        }(dd, Od, md, Wd)
+      }))), "button" in Wd || (md.sZ && !Wd.defaultPrevented && Wd.preventDefault(), md.stopPropagation && Wd.stopPropagation()))
     }
 
-    function Lr(rr, Sr) {
-      return rr ? !Sr : Sr
+    function Bd(dd, Od) {
+      return dd ? !Od : Od
     }
   },
-  41246: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Zr
+  41266: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Wd
     });
-    class Zr {
+    class Wd {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.Wk = !1, this.Nk = !1, this.pC = 30, this.wG = 0, this.zk = 100, this.Ez = !1, this.fullscreen = !1, this.FY = function(rr) {}, this.Yk = function(rr, Sr, Qr) {}, this.Hx = function() {}, this.kY = function() {}, this.Lk = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(rr) {}, this._data = new Wr(Sr),
-          function(rr) {
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.lL = !1, this.RP = !1, this.wV = 30, this.YL = 0, this.Yz = 100, this.tb = !1, this.fullscreen = !1, this.FY = function(dd) {}, this.dD = function(dd, Od, md) {}, this.xt = function() {}, this.Ip = function() {}, this.mD = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(dd) {}, this._data = new Fd(Od),
+          function(dd) {
             if ("loading" === document.readyState) {
-              var Sr = () => {
-                document.removeEventListener("readystatechange", Sr), rr()
+              var Od = () => {
+                document.removeEventListener("readystatechange", Od), dd()
               };
-              document.addEventListener("readystatechange", Sr)
-            } else setTimeout(rr, 0)
+              document.addEventListener("readystatechange", Od)
+            } else setTimeout(dd, 0)
           }((() => {
-            ! function(rr) {
-              var Sr = rr._data,
-                Qr = Sr.nowObject.now();
-              Sr.lastTickStarted = Qr, Sr.lastFrameStarted = Qr, Sr.lastRenderStarted = Qr, Sr.frameCB = () => function(rr) {
-                var Sr = rr._data;
-                requestAnimationFrame(Sr.frameCB), Ir(rr);
-                var Qr = Sr.nowObject.now(),
-                  Zr = Qr - Sr.lastFrameStarted;
-                if (Sr.lastFrameStarted = Qr, rr.wG > 0) {
-                  Sr.renderAccum += Zr;
-                  var Wr = 1e3 / rr.wG;
-                  if (Sr.renderAccum < Wr) return;
-                  Sr.renderAccum -= Wr, Sr.renderAccum > Wr && (Sr.renderAccum = Wr)
+            ! function(dd) {
+              var Od = dd._data,
+                md = Od.nowObject.now();
+              Od.lastTickStarted = md, Od.lastFrameStarted = md, Od.lastRenderStarted = md, Od.frameCB = () => function(dd) {
+                var Od = dd._data;
+                requestAnimationFrame(Od.frameCB), Kd(dd);
+                var md = Od.nowObject.now(),
+                  Wd = md - Od.lastFrameStarted;
+                if (Od.lastFrameStarted = md, dd.YL > 0) {
+                  Od.renderAccum += Wd;
+                  var Fd = 1e3 / dd.YL;
+                  if (Od.renderAccum < Fd) return;
+                  Od.renderAccum -= Fd, Od.renderAccum > Fd && (Od.renderAccum = Fd)
                 }
-                var ar = Qr - Sr.lastRenderStarted;
-                Sr.lastRenderStarted = Qr;
-                var jr = 1e3 / rr.pC,
-                  fr = (Qr - Sr.lastTickStarted) / jr;
-                fr < 0 && (fr = 0);
-                rr.Yk(ar, fr, jr), setTimeout(Ir, 0, rr, !0)
-              }(rr), Sr.intervalCB = () => Ir(rr), requestAnimationFrame(Sr.frameCB), Sr.pollTime > 0 && (Sr.intervalID = setInterval(Sr.intervalCB, Math.max(Sr.pollTime, 1e3 / rr.pC / 2)))
+                var Rd = md - Od.lastRenderStarted;
+                Od.lastRenderStarted = md;
+                var Xd = 1e3 / dd.wV,
+                  hd = (md - Od.lastTickStarted) / Xd;
+                hd < 0 && (hd = 0);
+                dd.dD(Rd, hd, Xd), setTimeout(Kd, 0, dd, !0)
+              }(dd), Od.intervalCB = () => Kd(dd), requestAnimationFrame(Od.frameCB), Od.pollTime > 0 && (Od.intervalID = setInterval(Od.intervalCB, Math.max(Od.pollTime, 1e3 / dd.wV / 2)))
             }(this),
-            function(rr, Sr) {
-              if (!Sr) return;
-              var Qr = !1,
-                Zr = !1,
-                Wr = rr => {
-                  if (!!rr !== (Qr = Sr === document.pointerLockElement))
-                    if (rr) {
-                      var Zr = Sr.requestPointerLock();
-                      Zr && Zr.catch && Zr.catch((rr => {}))
+            function(dd, Od) {
+              if (!Od) return;
+              var md = !1,
+                Wd = !1,
+                Fd = dd => {
+                  if (!!dd !== (md = Od === document.pointerLockElement))
+                    if (dd) {
+                      var Wd = Od.requestPointerLock();
+                      Wd && Wd.catch && Wd.catch((dd => {}))
                     } else document.exitPointerLock()
                 },
-                ar = rr => {
-                  !!rr !== (Zr = Sr === document.fullscreenElement) && (rr ? Sr.requestFullscreen ? Sr.requestFullscreen() : Sr.webkitRequestFullscreen && Sr.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                Rd = dd => {
+                  !!dd !== (Wd = Od === document.fullscreenElement) && (dd ? Od.requestFullscreen ? Od.requestFullscreen() : Od.webkitRequestFullscreen && Od.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (Zr => {
-                Qr = Sr === document.pointerLockElement, rr.Lk(Qr)
-              })), document.addEventListener("fullscreenchange", (Qr => {
-                Zr = Sr === document.fullscreenElement, rr.onFullscreenChanged(Zr)
-              })), document.addEventListener("pointerlockerror", (Zr => {
-                Qr = Sr === document.pointerLockElement, rr.onPointerLockError(Zr)
-              })), Object.defineProperty(rr, "Ez", {
-                get: () => Qr,
-                set: Wr
-              }), Object.defineProperty(rr, "fullscreen", {
-                get: () => Zr,
-                set: ar
-              }), Sr.addEventListener("click", (Sr => {
-                rr.Wk && Wr(!0), rr.Nk && ar(!0)
+              document.addEventListener("pointerlockchange", (Wd => {
+                md = Od === document.pointerLockElement, dd.mD(md)
+              })), document.addEventListener("fullscreenchange", (md => {
+                Wd = Od === document.fullscreenElement, dd.onFullscreenChanged(Wd)
+              })), document.addEventListener("pointerlockerror", (Wd => {
+                md = Od === document.pointerLockElement, dd.onPointerLockError(Wd)
+              })), Object.defineProperty(dd, "tb", {
+                get: () => md,
+                set: Fd
+              }), Object.defineProperty(dd, "fullscreen", {
+                get: () => Wd,
+                set: Rd
+              }), Od.addEventListener("click", (Od => {
+                dd.lL && Fd(!0), dd.RP && Rd(!0)
               }));
-              var jr = () => rr.kY();
+              var Xd = () => dd.Ip();
               if (window.ResizeObserver) {
-                new ResizeObserver(jr).observe(Sr)
-              } else window.addEventListener("resize", jr)
-            }(this, rr), this.Hx()
+                new ResizeObserver(Xd).observe(Od)
+              } else window.addEventListener("resize", Xd)
+            }(this, dd), this.xt()
           }))
       }
     }
 
-    function Wr() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = rr, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function Fd() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = dd, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var ar = 3,
-      jr = 20;
+    var Rd = 3,
+      Xd = 20;
 
-    function Ir(rr) {
-      for (var Sr = rr._data, Qr = 1e3 / rr.pC, Zr = Sr.nowObject.now() + jr, Wr = 0; Sr.nowObject.now() >= Sr.lastTickStarted + Qr && Sr.nowObject.now() < Zr && ++Wr <= ar;) rr.FY(Qr), Sr.lastTickStarted += Qr;
-      var Ir = 5 * (Qr + 5),
-        fr = Sr.nowObject.now();
-      if (fr - Sr.lastTickStarted > Ir)
-        for (; fr >= Sr.lastTickStarted + Qr;) Sr.lastTickStarted += Qr
+    function Kd(dd) {
+      for (var Od = dd._data, md = 1e3 / dd.wV, Wd = Od.nowObject.now() + Xd, Fd = 0; Od.nowObject.now() >= Od.lastTickStarted + md && Od.nowObject.now() < Wd && ++Fd <= Rd;) dd.FY(md), Od.lastTickStarted += md;
+      var Kd = 5 * (md + 5),
+        hd = Od.nowObject.now();
+      if (hd - Od.lastTickStarted > Kd)
+        for (; hd >= Od.lastTickStarted + md;) Od.lastTickStarted += md
     }
   },
-  40556: (rr, Sr, Qr) => {
-    function Zr(rr, Sr, Qr, Zr, Wr) {
-      var ar = {};
-      return Object.keys(Zr).forEach((function(rr) {
-        ar[rr] = Zr[rr]
-      })), ar.enumerable = !!ar.enumerable, ar.configurable = !!ar.configurable, ("value" in ar || ar.initializer) && (ar.writable = !0), ar = Qr.slice().reverse().reduce((function(Qr, Zr) {
-        return Zr(rr, Sr, Qr) || Qr
-      }), ar), Wr && void 0 !== ar.initializer && (ar.value = ar.initializer ? ar.initializer.call(Wr) : void 0, ar.initializer = void 0), void 0 === ar.initializer && (Object.defineProperty(rr, Sr, ar), ar = null), ar
+  40550: (dd, Od, md) => {
+    function Wd(dd, Od, md, Wd, Fd) {
+      var Rd = {};
+      return Object.keys(Wd).forEach((function(dd) {
+        Rd[dd] = Wd[dd]
+      })), Rd.enumerable = !!Rd.enumerable, Rd.configurable = !!Rd.configurable, ("value" in Rd || Rd.initializer) && (Rd.writable = !0), Rd = md.slice().reverse().reduce((function(md, Wd) {
+        return Wd(dd, Od, md) || md
+      }), Rd), Fd && void 0 !== Rd.initializer && (Rd.value = Rd.initializer ? Rd.initializer.call(Fd) : void 0, Rd.initializer = void 0), void 0 === Rd.initializer && (Object.defineProperty(dd, Od, Rd), Rd = null), Rd
     }
-    Qr.d(Sr, {
-      c: () => Zr
+    md.d(Od, {
+      c: () => Wd
     })
   },
-  40552: (rr, Sr, Qr) => {
-    function Zr(rr, Sr, Qr, Zr) {
-      Qr && Object.defineProperty(rr, Sr, {
-        enumerable: Qr.enumerable,
-        configurable: Qr.configurable,
-        writable: Qr.writable,
-        value: Qr.initializer ? Qr.initializer.call(Zr) : void 0
+  40546: (dd, Od, md) => {
+    function Wd(dd, Od, md, Wd) {
+      md && Object.defineProperty(dd, Od, {
+        enumerable: md.enumerable,
+        configurable: md.configurable,
+        writable: md.writable,
+        value: md.initializer ? md.initializer.call(Wd) : void 0
       })
     }
-    Qr.d(Sr, {
-      c: () => Zr
+    md.d(Od, {
+      e: () => Wd
     })
   },
-  40237: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar
+  40260: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Rd
     });
-    var Zr = Qr(40246);
-    const Wr = (rr, Sr, Qr) => rr ? rr.getClassName && "Mesh" === rr.getClassName() ? null : !rr.getClassName || "SubMesh" !== rr.getClassName() && "PhysicsBody" !== rr.getClassName() ? rr.clone ? rr.clone() : Array.isArray(rr) ? rr.slice() : Qr && "object" === typeof rr ? {
-      ...rr
-    } : null : rr.clone(Sr) : null;
-    class ar {
-      static DeepCopy(rr, Sr, Qr, ar) {
-        let jr = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Ir = function(rr) {
-          const Sr = [];
+    var Wd = md(40262);
+    const Fd = (dd, Od, md) => dd ? dd.getClassName && "Mesh" === dd.getClassName() ? null : !dd.getClassName || "SubMesh" !== dd.getClassName() && "PhysicsBody" !== dd.getClassName() ? dd.clone ? dd.clone() : Array.isArray(dd) ? dd.slice() : md && "object" === typeof dd ? {
+      ...dd
+    } : null : dd.clone(Od) : null;
+    class Rd {
+      static DeepCopy(dd, Od, md, Rd) {
+        let Xd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Kd = function(dd) {
+          const Od = [];
           do {
-            const Qr = Object.getOwnPropertyNames(rr);
-            for (const rr of Qr) - 1 === Sr.indexOf(rr) && Sr.push(rr)
-          } while (rr = Object.getPrototypeOf(rr));
-          return Sr
-        }(rr);
-        for (const Er of Ir) {
-          if ("_" === Er[0] && (!ar || -1 === ar.indexOf(Er))) continue;
-          if (Er.endsWith("Observable")) continue;
-          if (Qr && -1 !== Qr.indexOf(Er)) continue;
-          const Ir = rr[Er],
-            pr = typeof Ir;
-          if ("function" !== pr) try {
-            if ("object" === pr)
-              if (Ir instanceof Uint8Array) Sr[Er] = Uint8Array.from(Ir);
-              else if (Ir instanceof Array) {
-              if (Sr[Er] = [], Ir.length > 0)
-                if ("object" == typeof Ir[0])
-                  for (let rr = 0; rr < Ir.length; rr++) {
-                    const Qr = Wr(Ir[rr], Sr, jr); - 1 === Sr[Er].indexOf(Qr) && Sr[Er].push(Qr)
-                  } else Sr[Er] = Ir.slice(0)
-            } else Sr[Er] = Wr(Ir, Sr, jr);
-            else Sr[Er] = Ir
-          } catch (fr) {
-            Zr.c.Warn(fr.message)
+            const md = Object.getOwnPropertyNames(dd);
+            for (const dd of md) - 1 === Od.indexOf(dd) && Od.push(dd)
+          } while (dd = Object.getPrototypeOf(dd));
+          return Od
+        }(dd);
+        for (const vd of Kd) {
+          if ("_" === vd[0] && (!Rd || -1 === Rd.indexOf(vd))) continue;
+          if (vd.endsWith("Observable")) continue;
+          if (md && -1 !== md.indexOf(vd)) continue;
+          const Kd = dd[vd],
+            Qd = typeof Kd;
+          if ("function" !== Qd) try {
+            if ("object" === Qd)
+              if (Kd instanceof Uint8Array) Od[vd] = Uint8Array.from(Kd);
+              else if (Kd instanceof Array) {
+              if (Od[vd] = [], Kd.length > 0)
+                if ("object" == typeof Kd[0])
+                  for (let dd = 0; dd < Kd.length; dd++) {
+                    const md = Fd(Kd[dd], Od, Xd); - 1 === Od[vd].indexOf(md) && Od[vd].push(md)
+                  } else Od[vd] = Kd.slice(0)
+            } else Od[vd] = Fd(Kd, Od, Xd);
+            else Od[vd] = Kd
+          } catch (hd) {
+            Wd.c.Warn(hd.message)
           }
         }
       }
     }
   },
-  40284: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Wr,
-      f: () => ar,
-      i: () => jr,
-      j: () => Ir
+  40298: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Fd,
+      h: () => Rd,
+      k: () => Xd,
+      m: () => Kd
     });
-    var Zr = Qr(38684);
-    class Wr {
-      constructor(rr, Sr, Qr) {
-        this.gradient = rr, this.color1 = Sr, this.color2 = Qr
+    var Wd = md(38741);
+    class Fd {
+      constructor(dd, Od, md) {
+        this.gradient = dd, this.color1 = Od, this.color2 = md
       }
-      getColorToRef(rr) {
-        this.color2 ? Zr.f.LerpToRef(this.color1, this.color2, Math.random(), rr) : rr.iH(this.color1)
-      }
-    }
-    class ar {
-      constructor(rr, Sr) {
-        this.gradient = rr, this.color = Sr
+      getColorToRef(dd) {
+        this.color2 ? Wd.f.LerpToRef(this.color1, this.color2, Math.random(), dd) : dd.Bx(this.color1)
       }
     }
-    class jr {
-      constructor(rr, Sr, Qr) {
-        this.gradient = rr, this.factor1 = Sr, this.factor2 = Qr
+    class Rd {
+      constructor(dd, Od) {
+        this.gradient = dd, this.color = Od
+      }
+    }
+    class Xd {
+      constructor(dd, Od, md) {
+        this.gradient = dd, this.factor1 = Od, this.factor2 = md
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class Ir {
-      static GetCurrentGradient(rr, Sr, Qr) {
-        if (Sr[0].gradient > rr) return void Qr(Sr[0], Sr[0], 1);
-        for (let Wr = 0; Wr < Sr.length - 1; Wr++) {
-          const Zr = Sr[Wr],
-            ar = Sr[Wr + 1];
-          if (rr >= Zr.gradient && rr <= ar.gradient) {
-            return void Qr(Zr, ar, (rr - Zr.gradient) / (ar.gradient - Zr.gradient))
+    class Kd {
+      static GetCurrentGradient(dd, Od, md) {
+        if (Od[0].gradient > dd) return void md(Od[0], Od[0], 1);
+        for (let Fd = 0; Fd < Od.length - 1; Fd++) {
+          const Wd = Od[Fd],
+            Rd = Od[Fd + 1];
+          if (dd >= Wd.gradient && dd <= Rd.gradient) {
+            return void md(Wd, Rd, (dd - Wd.gradient) / (Rd.gradient - Wd.gradient))
           }
         }
-        const Zr = Sr.length - 1;
-        Qr(Sr[Zr], Sr[Zr], 1)
+        const Wd = Od.length - 1;
+        md(Od[Wd], Od[Wd], 1)
       }
     }
   },
-  40246: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Zr
+  40262: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Wd
     });
-    class Zr {
-      static _CheckLimit(rr, Sr) {
-        let Qr = Zr._LogLimitOutputs[rr];
-        return Qr ? Qr.current++ : (Qr = {
-          limit: Sr,
+    class Wd {
+      static _CheckLimit(dd, Od) {
+        let md = Wd._LogLimitOutputs[dd];
+        return md ? md.current++ : (md = {
+          limit: Od,
           current: 1
-        }, Zr._LogLimitOutputs[rr] = Qr), Qr.current <= Qr.limit
+        }, Wd._LogLimitOutputs[dd] = md), md.current <= md.limit
       }
-      static _GenerateLimitMessage(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Qr = Zr._LogLimitOutputs[rr];
-        if (!Qr || !Zr.MessageLimitReached) return;
-        const Wr = this._Levels[Sr];
-        Qr.current === Qr.limit && Zr[Wr.name](Zr.MessageLimitReached.replace(/%LIMIT%/g, "" + Qr.limit).replace(/%TYPE%/g, Wr.name ?? ""))
+      static _GenerateLimitMessage(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const md = Wd._LogLimitOutputs[dd];
+        if (!md || !Wd.MessageLimitReached) return;
+        const Fd = this._Levels[Od];
+        md.current === md.limit && Wd[Fd.name](Wd.MessageLimitReached.replace(/%LIMIT%/g, "" + md.limit).replace(/%TYPE%/g, Fd.name ?? ""))
       }
-      static _AddLogEntry(rr) {
-        Zr._LogCache = rr + Zr._LogCache, Zr.OnNewCacheEntry && Zr.OnNewCacheEntry(rr)
+      static _AddLogEntry(dd) {
+        Wd._LogCache = dd + Wd._LogCache, Wd.OnNewCacheEntry && Wd.OnNewCacheEntry(dd)
       }
-      static _FormatMessage(rr) {
-        const Sr = rr => rr < 10 ? "0" + rr : "" + rr,
-          Qr = new Date;
-        return "[" + Sr(Qr.getHours()) + ":" + Sr(Qr.getMinutes()) + ":" + Sr(Qr.getSeconds()) + "]: " + rr
+      static _FormatMessage(dd) {
+        const Od = dd => dd < 10 ? "0" + dd : "" + dd,
+          md = new Date;
+        return "[" + Od(md.getHours()) + ":" + Od(md.getMinutes()) + ":" + Od(md.getSeconds()) + "]: " + dd
       }
-      static _LogDisabled(rr, Sr) {}
+      static _LogDisabled(dd, Od) {}
       static _LogEnabled() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Sr = arguments.length > 1 ? arguments[1] : void 0,
-          Qr = arguments.length > 2 ? arguments[2] : void 0;
-        const Wr = Array.isArray(Sr) ? Sr[0] : Sr;
-        if (void 0 !== Qr && !Zr._CheckLimit(Wr, Qr)) return;
-        const ar = Zr._FormatMessage(Wr),
-          jr = this._Levels[rr],
-          Ir = Array.isArray(Sr) ? Sr.slice(1) : [];
-        jr.logFunc && jr.logFunc("BJS - " + ar, ...Ir);
-        const fr = `<div style='color:${jr.color}'>${ar}</div><br>`;
-        Zr._AddLogEntry(fr), Zr._GenerateLimitMessage(Wr, rr)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Od = arguments.length > 1 ? arguments[1] : void 0,
+          md = arguments.length > 2 ? arguments[2] : void 0;
+        const Fd = Array.isArray(Od) ? Od[0] : Od;
+        if (void 0 !== md && !Wd._CheckLimit(Fd, md)) return;
+        const Rd = Wd._FormatMessage(Fd),
+          Xd = this._Levels[dd],
+          Kd = Array.isArray(Od) ? Od.slice(1) : [];
+        Xd.logFunc && Xd.logFunc("BJS - " + Rd, ...Kd);
+        const hd = `<div style='color:${Xd.color}'>${Rd}</div><br>`;
+        Wd._AddLogEntry(hd), Wd._GenerateLimitMessage(Fd, dd)
       }
       static get LogCache() {
-        return Zr._LogCache
+        return Wd._LogCache
       }
       static ClearLogCache() {
-        Zr._LogCache = "", Zr._LogLimitOutputs = {}, Zr.errorsCount = 0
+        Wd._LogCache = "", Wd._LogLimitOutputs = {}, Wd.errorsCount = 0
       }
-      static set LogLevels(rr) {
-        Zr.Log = Zr._LogDisabled, Zr.Warn = Zr._LogDisabled, Zr.Error = Zr._LogDisabled;
-        const Sr = [Zr.MessageLogLevel, Zr.WarningLogLevel, Zr.ErrorLogLevel];
-        for (const Qr of Sr)
-          if ((rr & Qr) === Qr) {
-            const rr = this._Levels[Qr];
-            Zr[rr.name] = Zr._LogEnabled.bind(Zr, Qr)
+      static set LogLevels(dd) {
+        Wd.Log = Wd._LogDisabled, Wd.Warn = Wd._LogDisabled, Wd.Error = Wd._LogDisabled;
+        const Od = [Wd.MessageLogLevel, Wd.WarningLogLevel, Wd.ErrorLogLevel];
+        for (const md of Od)
+          if ((dd & md) === md) {
+            const dd = this._Levels[md];
+            Wd[dd.name] = Wd._LogEnabled.bind(Wd, md)
           }
       }
     }
-    Zr.NoneLogLevel = 0, Zr.MessageLogLevel = 1, Zr.WarningLogLevel = 2, Zr.ErrorLogLevel = 4, Zr.AllLogLevel = 7, Zr.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Zr._LogCache = "", Zr._LogLimitOutputs = {}, Zr._Levels = [{}, {
+    Wd.NoneLogLevel = 0, Wd.MessageLogLevel = 1, Wd.WarningLogLevel = 2, Wd.ErrorLogLevel = 4, Wd.AllLogLevel = 7, Wd.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Wd._LogCache = "", Wd._LogLimitOutputs = {}, Wd._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -580,42 +580,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Zr.errorsCount = 0, Zr.Log = Zr._LogEnabled.bind(Zr, Zr.MessageLogLevel), Zr.Warn = Zr._LogEnabled.bind(Zr, Zr.WarningLogLevel), Zr.Error = Zr._LogEnabled.bind(Zr, Zr.ErrorLogLevel)
+    }], Wd.errorsCount = 0, Wd.Log = Wd._LogEnabled.bind(Wd, Wd.MessageLogLevel), Wd.Warn = Wd._LogEnabled.bind(Wd, Wd.WarningLogLevel), Wd.Error = Wd._LogEnabled.bind(Wd, Wd.ErrorLogLevel)
   },
-  40286: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => jr
+  40301: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Xd
     });
-    var Zr = Qr(38560),
-      Wr = Qr(38599),
-      ar = Qr(40237);
-    class jr {
+    var Wd = md(38636),
+      Fd = md(38663),
+      Rd = md(40260);
+    class Xd {
       constructor() {
-        this.direction1 = new Zr.u(0, 1, 0), this.direction2 = new Zr.u(0, 1, 0), this.minEmitBox = new Zr.u(-.5, -.5, -.5), this.maxEmitBox = new Zr.u(.5, .5, .5)
+        this.direction1 = new Wd.j(0, 1, 0), this.direction2 = new Wd.j(0, 1, 0), this.minEmitBox = new Wd.j(-.5, -.5, -.5), this.maxEmitBox = new Wd.j(.5, .5, .5)
       }
-      startDirectionFunction(rr, Sr, Qr, ar) {
-        const jr = (0, Wr.RandomRange)(this.direction1.x, this.direction2.x),
-          Ir = (0, Wr.RandomRange)(this.direction1.y, this.direction2.y),
-          fr = (0, Wr.RandomRange)(this.direction1.z, this.direction2.z);
-        if (ar) return Sr.x = jr, Sr.y = Ir, void(Sr.z = fr);
-        Zr.u.TransformNormalFromFloatsToRef(jr, Ir, fr, rr, Sr)
+      startDirectionFunction(dd, Od, md, Rd) {
+        const Xd = (0, Fd.RandomRange)(this.direction1.x, this.direction2.x),
+          Kd = (0, Fd.RandomRange)(this.direction1.y, this.direction2.y),
+          hd = (0, Fd.RandomRange)(this.direction1.z, this.direction2.z);
+        if (Rd) return Od.x = Xd, Od.y = Kd, void(Od.z = hd);
+        Wd.j.TransformNormalFromFloatsToRef(Xd, Kd, hd, dd, Od)
       }
-      startPositionFunction(rr, Sr, Qr, ar) {
-        const jr = (0, Wr.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          Ir = (0, Wr.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          fr = (0, Wr.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (ar) return Sr.x = jr, Sr.y = Ir, void(Sr.z = fr);
-        Zr.u.TransformCoordinatesFromFloatsToRef(jr, Ir, fr, rr, Sr)
+      startPositionFunction(dd, Od, md, Rd) {
+        const Xd = (0, Fd.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          Kd = (0, Fd.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          hd = (0, Fd.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (Rd) return Od.x = Xd, Od.y = Kd, void(Od.z = hd);
+        Wd.j.TransformCoordinatesFromFloatsToRef(Xd, Kd, hd, dd, Od)
       }
       clone() {
-        const rr = new jr;
-        return ar.b.DeepCopy(this, rr), rr
+        const dd = new Xd;
+        return Rd.d.DeepCopy(this, dd), dd
       }
-      applyToShader(rr) {
-        rr.setVector3("direction1", this.direction1), rr.setVector3("direction2", this.direction2), rr.setVector3("minEmitBox", this.minEmitBox), rr.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(dd) {
+        dd.setVector3("direction1", this.direction1), dd.setVector3("direction2", this.direction2), dd.setVector3("minEmitBox", this.minEmitBox), dd.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(rr) {
-        rr.addUniform("direction1", 3), rr.addUniform("direction2", 3), rr.addUniform("minEmitBox", 3), rr.addUniform("maxEmitBox", 3)
+      buildUniformLayout(dd) {
+        dd.addUniform("direction1", 3), dd.addUniform("direction2", 3), dd.addUniform("minEmitBox", 3), dd.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -624,54 +624,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const rr = {};
-        return rr.type = this.getClassName(), rr.direction1 = this.direction1.OWr(), rr.direction2 = this.direction2.OWr(), rr.minEmitBox = this.minEmitBox.OWr(), rr.maxEmitBox = this.maxEmitBox.OWr(), rr
+        const dd = {};
+        return dd.type = this.getClassName(), dd.direction1 = this.direction1.RRd(), dd.direction2 = this.direction2.RRd(), dd.minEmitBox = this.minEmitBox.RRd(), dd.maxEmitBox = this.maxEmitBox.RRd(), dd
       }
-      parse(rr) {
-        Zr.u.FromArrayToRef(rr.direction1, 0, this.direction1), Zr.u.FromArrayToRef(rr.direction2, 0, this.direction2), Zr.u.FromArrayToRef(rr.minEmitBox, 0, this.minEmitBox), Zr.u.FromArrayToRef(rr.maxEmitBox, 0, this.maxEmitBox)
+      parse(dd) {
+        Wd.j.FromArrayToRef(dd.direction1, 0, this.direction1), Wd.j.FromArrayToRef(dd.direction2, 0, this.direction2), Wd.j.FromArrayToRef(dd.minEmitBox, 0, this.minEmitBox), Wd.j.FromArrayToRef(dd.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  40234: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Ir,
-      h: () => jr
+  40258: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Kd,
+      e: () => Xd
     });
-    var Zr = Qr(38560),
-      Wr = Qr(38599),
-      ar = Qr(40237);
-    class jr {
+    var Wd = md(38636),
+      Fd = md(38663),
+      Rd = md(40260);
+    class Xd {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Wr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = rr, this.height = Sr, this.radiusRange = Qr, this.directionRandomizer = Wr, this._tempVector = Zr.u.Zero()
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          Fd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = dd, this.height = Od, this.radiusRange = md, this.directionRandomizer = Fd, this._tempVector = Wd.j.Zero()
       }
-      startDirectionFunction(rr, Sr, Qr, ar, jr) {
-        Qr.position.subtractToRef(rr.getTranslation(), this._tempVector), this._tempVector.normalize(), Zr.u.TransformNormalToRef(this._tempVector, jr, this._tempVector);
-        const Ir = (0, Wr.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let fr = Math.atan2(this._tempVector.x, this._tempVector.z);
-        fr += (0, Wr.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = Ir, this._tempVector.x = Math.sin(fr), this._tempVector.z = Math.cos(fr), this._tempVector.normalize(), ar ? Sr.iH(this._tempVector) : Zr.u.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, rr, Sr)
+      startDirectionFunction(dd, Od, md, Rd, Xd) {
+        md.position.subtractToRef(dd.getTranslation(), this._tempVector), this._tempVector.normalize(), Wd.j.TransformNormalToRef(this._tempVector, Xd, this._tempVector);
+        const Kd = (0, Fd.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let hd = Math.atan2(this._tempVector.x, this._tempVector.z);
+        hd += (0, Fd.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = Kd, this._tempVector.x = Math.sin(hd), this._tempVector.z = Math.cos(hd), this._tempVector.normalize(), Rd ? Od.Bx(this._tempVector) : Wd.j.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, dd, Od)
       }
-      startPositionFunction(rr, Sr, Qr, ar) {
-        const jr = (0, Wr.RandomRange)(-this.height / 2, this.height / 2),
-          Ir = (0, Wr.RandomRange)(0, 2 * Math.PI),
-          fr = (0, Wr.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          Er = Math.sqrt(fr) * this.radius,
-          pr = Er * Math.cos(Ir),
-          xr = Er * Math.sin(Ir);
-        ar ? Sr.Hrr(pr, jr, xr) : Zr.u.TransformCoordinatesFromFloatsToRef(pr, jr, xr, rr, Sr)
+      startPositionFunction(dd, Od, md, Rd) {
+        const Xd = (0, Fd.RandomRange)(-this.height / 2, this.height / 2),
+          Kd = (0, Fd.RandomRange)(0, 2 * Math.PI),
+          hd = (0, Fd.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          vd = Math.sqrt(hd) * this.radius,
+          Qd = vd * Math.cos(Kd),
+          td = vd * Math.sin(Kd);
+        Rd ? Od.KOd(Qd, Xd, td) : Wd.j.TransformCoordinatesFromFloatsToRef(Qd, Xd, td, dd, Od)
       }
       clone() {
-        const rr = new jr(this.radius, this.directionRandomizer);
-        return ar.b.DeepCopy(this, rr), rr
+        const dd = new Xd(this.radius, this.directionRandomizer);
+        return Rd.d.DeepCopy(this, dd), dd
       }
-      applyToShader(rr) {
-        rr.setFloat("radius", this.radius), rr.setFloat("height", this.height), rr.setFloat("radiusRange", this.radiusRange), rr.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(dd) {
+        dd.setFloat("radius", this.radius), dd.setFloat("height", this.height), dd.setFloat("radiusRange", this.radiusRange), dd.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(rr) {
-        rr.addUniform("radius", 1), rr.addUniform("height", 1), rr.addUniform("radiusRange", 1), rr.addUniform("directionRandomizer", 1)
+      buildUniformLayout(dd) {
+        dd.addUniform("radius", 1), dd.addUniform("height", 1), dd.addUniform("radiusRange", 1), dd.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -680,37 +680,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const rr = {};
-        return rr.type = this.getClassName(), rr.radius = this.radius, rr.height = this.height, rr.radiusRange = this.radiusRange, rr.directionRandomizer = this.directionRandomizer, rr
+        const dd = {};
+        return dd.type = this.getClassName(), dd.radius = this.radius, dd.height = this.height, dd.radiusRange = this.radiusRange, dd.directionRandomizer = this.directionRandomizer, dd
       }
-      parse(rr) {
-        this.radius = rr.radius, this.height = rr.height, this.radiusRange = rr.radiusRange, this.directionRandomizer = rr.directionRandomizer
+      parse(dd) {
+        this.radius = dd.radius, this.height = dd.height, this.radiusRange = dd.radiusRange, this.directionRandomizer = dd.directionRandomizer
       }
     }
-    class Ir extends jr {
+    class Kd extends Xd {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          Wr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Zr.u(0, 1, 0),
-          ar = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Zr.u(0, 1, 0);
-        super(rr, Sr, Qr), this.direction1 = Wr, this.direction2 = ar
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          Fd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Wd.j(0, 1, 0),
+          Rd = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Wd.j(0, 1, 0);
+        super(dd, Od, md), this.direction1 = Fd, this.direction2 = Rd
       }
-      startDirectionFunction(rr, Sr, Qr, ar) {
-        const jr = (0, Wr.RandomRange)(this.direction1.x, this.direction2.x),
-          Ir = (0, Wr.RandomRange)(this.direction1.y, this.direction2.y),
-          fr = (0, Wr.RandomRange)(this.direction1.z, this.direction2.z);
-        ar ? Sr.Hrr(jr, Ir, fr) : Zr.u.TransformNormalFromFloatsToRef(jr, Ir, fr, rr, Sr)
+      startDirectionFunction(dd, Od, md, Rd) {
+        const Xd = (0, Fd.RandomRange)(this.direction1.x, this.direction2.x),
+          Kd = (0, Fd.RandomRange)(this.direction1.y, this.direction2.y),
+          hd = (0, Fd.RandomRange)(this.direction1.z, this.direction2.z);
+        Rd ? Od.KOd(Xd, Kd, hd) : Wd.j.TransformNormalFromFloatsToRef(Xd, Kd, hd, dd, Od)
       }
       clone() {
-        const rr = new Ir(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return ar.b.DeepCopy(this, rr), rr
+        const dd = new Kd(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return Rd.d.DeepCopy(this, dd), dd
       }
-      applyToShader(rr) {
-        rr.setFloat("radius", this.radius), rr.setFloat("height", this.height), rr.setFloat("radiusRange", this.radiusRange), rr.setVector3("direction1", this.direction1), rr.setVector3("direction2", this.direction2)
+      applyToShader(dd) {
+        dd.setFloat("radius", this.radius), dd.setFloat("height", this.height), dd.setFloat("radiusRange", this.radiusRange), dd.setVector3("direction1", this.direction1), dd.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(rr) {
-        rr.addUniform("radius", 1), rr.addUniform("height", 1), rr.addUniform("radiusRange", 1), rr.addUniform("direction1", 3), rr.addUniform("direction2", 3)
+      buildUniformLayout(dd) {
+        dd.addUniform("radius", 1), dd.addUniform("height", 1), dd.addUniform("radiusRange", 1), dd.addUniform("direction1", 3), dd.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -719,239 +719,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const rr = super.serialize();
-        return rr.direction1 = this.direction1.OWr(), rr.direction2 = this.direction2.OWr(), rr
+        const dd = super.serialize();
+        return dd.direction1 = this.direction1.RRd(), dd.direction2 = this.direction2.RRd(), dd
       }
-      parse(rr) {
-        super.parse(rr), Zr.u.FromArrayToRef(rr.direction1, 0, this.direction1), Zr.u.FromArrayToRef(rr.direction2, 0, this.direction2)
+      parse(dd) {
+        super.parse(dd), Wd.j.FromArrayToRef(dd.direction1, 0, this.direction1), Wd.j.FromArrayToRef(dd.direction2, 0, this.direction2)
       }
     }
   },
-  40368: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => xr
+  40368: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => td
     });
-    const Zr = .5 * (Math.sqrt(3) - 1),
-      Wr = (3 - Math.sqrt(3)) / 6,
-      ar = 1 / 3,
-      jr = 1 / 6,
-      Ir = (Math.sqrt(5) - 1) / 4,
-      fr = (5 - Math.sqrt(5)) / 20,
-      Er = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      pr = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const xr = class {
+    const Wd = .5 * (Math.sqrt(3) - 1),
+      Fd = (3 - Math.sqrt(3)) / 6,
+      Rd = 1 / 3,
+      Xd = 1 / 6,
+      Kd = (Math.sqrt(5) - 1) / 4,
+      hd = (5 - Math.sqrt(5)) / 20,
+      vd = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      Qd = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const td = class {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const Sr = "function" == typeof rr ? rr : function(rr) {
-          let Sr = 0,
-            Qr = 0,
-            Zr = 0,
-            Wr = 1;
-          const ar = function() {
-            let rr = 4022871197;
-            return function(Sr) {
-              Sr = Sr.toString();
-              for (let Qr = 0; Qr < Sr.length; Qr++) {
-                rr += Sr.charCodeAt(Qr);
-                let Zr = .02519603282416938 * rr;
-                rr = Zr >>> 0, Zr -= rr, Zr *= rr, rr = Zr >>> 0, Zr -= rr, rr += 4294967296 * Zr
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const Od = "function" == typeof dd ? dd : function(dd) {
+          let Od = 0,
+            md = 0,
+            Wd = 0,
+            Fd = 1;
+          const Rd = function() {
+            let dd = 4022871197;
+            return function(Od) {
+              Od = Od.toString();
+              for (let md = 0; md < Od.length; md++) {
+                dd += Od.charCodeAt(md);
+                let Wd = .02519603282416938 * dd;
+                dd = Wd >>> 0, Wd -= dd, Wd *= dd, dd = Wd >>> 0, Wd -= dd, dd += 4294967296 * Wd
               }
-              return 2.3283064365386963e-10 * (rr >>> 0)
+              return 2.3283064365386963e-10 * (dd >>> 0)
             }
           }();
-          Sr = ar(" "), Qr = ar(" "), Zr = ar(" "), Sr -= ar(rr), Sr < 0 && (Sr += 1);
-          Qr -= ar(rr), Qr < 0 && (Qr += 1);
-          Zr -= ar(rr), Zr < 0 && (Zr += 1);
+          Od = Rd(" "), md = Rd(" "), Wd = Rd(" "), Od -= Rd(dd), Od < 0 && (Od += 1);
+          md -= Rd(dd), md < 0 && (md += 1);
+          Wd -= Rd(dd), Wd < 0 && (Wd += 1);
           return function() {
-            const rr = 2091639 * Sr + 2.3283064365386963e-10 * Wr;
-            return Sr = Qr, Qr = Zr, Zr = rr - (Wr = 0 | rr)
+            const dd = 2091639 * Od + 2.3283064365386963e-10 * Fd;
+            return Od = md, md = Wd, Wd = dd - (Fd = 0 | dd)
           }
-        }(rr);
-        this.p = function(rr) {
-          const Sr = new Uint8Array(256);
-          for (let Qr = 0; Qr < 256; Qr++) Sr[Qr] = Qr;
-          for (let Qr = 0; Qr < 255; Qr++) {
-            const Zr = Qr + ~~(rr() * (256 - Qr)),
-              Wr = Sr[Qr];
-            Sr[Qr] = Sr[Zr], Sr[Zr] = Wr
+        }(dd);
+        this.p = function(dd) {
+          const Od = new Uint8Array(256);
+          for (let md = 0; md < 256; md++) Od[md] = md;
+          for (let md = 0; md < 255; md++) {
+            const Wd = md + ~~(dd() * (256 - md)),
+              Fd = Od[md];
+            Od[md] = Od[Wd], Od[Wd] = Fd
           }
-          return Sr
-        }(Sr), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let Qr = 0; Qr < 512; Qr++) this.perm[Qr] = this.p[255 & Qr], this.permMod12[Qr] = this.perm[Qr] % 12
+          return Od
+        }(Od), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let md = 0; md < 512; md++) this.perm[md] = this.p[255 & md], this.permMod12[md] = this.perm[md] % 12
       }
-      noise2D(rr, Sr) {
-        const Qr = this.permMod12,
-          ar = this.perm;
-        let jr = 0,
-          Ir = 0,
-          fr = 0;
-        const pr = (rr + Sr) * Zr,
-          xr = Math.floor(rr + pr),
-          mr = Math.floor(Sr + pr),
-          Nr = (xr + mr) * Wr,
-          Ur = rr - (xr - Nr),
-          tr = Sr - (mr - Nr);
-        let hr, zr;
-        Ur > tr ? (hr = 1, zr = 0) : (hr = 0, zr = 1);
-        const Yr = Ur - hr + Wr,
-          nr = tr - zr + Wr,
-          er = Ur - 1 + 2 * Wr,
-          Kr = tr - 1 + 2 * Wr,
-          yr = 255 & xr,
-          Br = 255 & mr;
-        let Tr = .5 - Ur * Ur - tr * tr;
-        if (Tr >= 0) {
-          const rr = 3 * Qr[yr + ar[Br]];
-          Tr *= Tr, jr = Tr * Tr * (Er[rr] * Ur + Er[rr + 1] * tr)
+      noise2D(dd, Od) {
+        const md = this.permMod12,
+          Rd = this.perm;
+        let Xd = 0,
+          Kd = 0,
+          hd = 0;
+        const Qd = (dd + Od) * Wd,
+          td = Math.floor(dd + Qd),
+          od = Math.floor(Od + Qd),
+          Nd = (td + od) * Fd,
+          qd = dd - (td - Nd),
+          Hd = Od - (od - Nd);
+        let yd, bd;
+        qd > Hd ? (yd = 1, bd = 0) : (yd = 0, bd = 1);
+        const Td = qd - yd + Fd,
+          pd = Hd - bd + Fd,
+          Yd = qd - 1 + 2 * Fd,
+          gd = Hd - 1 + 2 * Fd,
+          wd = 255 & td,
+          Ed = 255 & od;
+        let Jd = .5 - qd * qd - Hd * Hd;
+        if (Jd >= 0) {
+          const dd = 3 * md[wd + Rd[Ed]];
+          Jd *= Jd, Xd = Jd * Jd * (vd[dd] * qd + vd[dd + 1] * Hd)
         }
-        let vr = .5 - Yr * Yr - nr * nr;
-        if (vr >= 0) {
-          const rr = 3 * Qr[yr + hr + ar[Br + zr]];
-          vr *= vr, Ir = vr * vr * (Er[rr] * Yr + Er[rr + 1] * nr)
+        let Ud = .5 - Td * Td - pd * pd;
+        if (Ud >= 0) {
+          const dd = 3 * md[wd + yd + Rd[Ed + bd]];
+          Ud *= Ud, Kd = Ud * Ud * (vd[dd] * Td + vd[dd + 1] * pd)
         }
-        let Or = .5 - er * er - Kr * Kr;
-        if (Or >= 0) {
-          const rr = 3 * Qr[yr + 1 + ar[Br + 1]];
-          Or *= Or, fr = Or * Or * (Er[rr] * er + Er[rr + 1] * Kr)
+        let xd = .5 - Yd * Yd - gd * gd;
+        if (xd >= 0) {
+          const dd = 3 * md[wd + 1 + Rd[Ed + 1]];
+          xd *= xd, hd = xd * xd * (vd[dd] * Yd + vd[dd + 1] * gd)
         }
-        return 70 * (jr + Ir + fr)
+        return 70 * (Xd + Kd + hd)
       }
-      noise3D(rr, Sr, Qr) {
-        const Zr = this.permMod12,
-          Wr = this.perm;
-        let Ir, fr, pr, xr;
-        const mr = (rr + Sr + Qr) * ar,
-          Nr = Math.floor(rr + mr),
-          Ur = Math.floor(Sr + mr),
-          tr = Math.floor(Qr + mr),
-          hr = (Nr + Ur + tr) * jr,
-          zr = rr - (Nr - hr),
-          Yr = Sr - (Ur - hr),
-          nr = Qr - (tr - hr);
-        let er, Kr, yr, Br, Tr, vr;
-        zr >= Yr ? Yr >= nr ? (er = 1, Kr = 0, yr = 0, Br = 1, Tr = 1, vr = 0) : zr >= nr ? (er = 1, Kr = 0, yr = 0, Br = 1, Tr = 0, vr = 1) : (er = 0, Kr = 0, yr = 1, Br = 1, Tr = 0, vr = 1) : Yr < nr ? (er = 0, Kr = 0, yr = 1, Br = 0, Tr = 1, vr = 1) : zr < nr ? (er = 0, Kr = 1, yr = 0, Br = 0, Tr = 1, vr = 1) : (er = 0, Kr = 1, yr = 0, Br = 1, Tr = 1, vr = 0);
-        const Or = zr - er + jr,
-          Lr = Yr - Kr + jr,
-          lr = nr - yr + jr,
-          Xr = zr - Br + 2 * jr,
-          Pr = Yr - Tr + 2 * jr,
-          Hr = nr - vr + 2 * jr,
-          qr = zr - 1 + .5,
-          Rr = Yr - 1 + .5,
-          gr = nr - 1 + .5,
-          Cr = 255 & Nr,
-          Mr = 255 & Ur,
-          Gr = 255 & tr;
-        let kr = .6 - zr * zr - Yr * Yr - nr * nr;
-        if (kr < 0) Ir = 0;
+      noise3D(dd, Od, md) {
+        const Wd = this.permMod12,
+          Fd = this.perm;
+        let Kd, hd, Qd, td;
+        const od = (dd + Od + md) * Rd,
+          Nd = Math.floor(dd + od),
+          qd = Math.floor(Od + od),
+          Hd = Math.floor(md + od),
+          yd = (Nd + qd + Hd) * Xd,
+          bd = dd - (Nd - yd),
+          Td = Od - (qd - yd),
+          pd = md - (Hd - yd);
+        let Yd, gd, wd, Ed, Jd, Ud;
+        bd >= Td ? Td >= pd ? (Yd = 1, gd = 0, wd = 0, Ed = 1, Jd = 1, Ud = 0) : bd >= pd ? (Yd = 1, gd = 0, wd = 0, Ed = 1, Jd = 0, Ud = 1) : (Yd = 0, gd = 0, wd = 1, Ed = 1, Jd = 0, Ud = 1) : Td < pd ? (Yd = 0, gd = 0, wd = 1, Ed = 0, Jd = 1, Ud = 1) : bd < pd ? (Yd = 0, gd = 1, wd = 0, Ed = 0, Jd = 1, Ud = 1) : (Yd = 0, gd = 1, wd = 0, Ed = 1, Jd = 1, Ud = 0);
+        const xd = bd - Yd + Xd,
+          Bd = Td - gd + Xd,
+          Sd = pd - wd + Xd,
+          sd = bd - Ed + 2 * Xd,
+          ud = Td - Jd + 2 * Xd,
+          Vd = pd - Ud + 2 * Xd,
+          Ad = bd - 1 + .5,
+          rd = Td - 1 + .5,
+          Gd = pd - 1 + .5,
+          nd = 255 & Nd,
+          Ld = 255 & qd,
+          Pd = 255 & Hd;
+        let zd = .6 - bd * bd - Td * Td - pd * pd;
+        if (zd < 0) Kd = 0;
         else {
-          const rr = 3 * Zr[Cr + Wr[Mr + Wr[Gr]]];
-          kr *= kr, Ir = kr * kr * (Er[rr] * zr + Er[rr + 1] * Yr + Er[rr + 2] * nr)
+          const dd = 3 * Wd[nd + Fd[Ld + Fd[Pd]]];
+          zd *= zd, Kd = zd * zd * (vd[dd] * bd + vd[dd + 1] * Td + vd[dd + 2] * pd)
         }
-        let Ar = .6 - Or * Or - Lr * Lr - lr * lr;
-        if (Ar < 0) fr = 0;
+        let cd = .6 - xd * xd - Bd * Bd - Sd * Sd;
+        if (cd < 0) hd = 0;
         else {
-          const rr = 3 * Zr[Cr + er + Wr[Mr + Kr + Wr[Gr + yr]]];
-          Ar *= Ar, fr = Ar * Ar * (Er[rr] * Or + Er[rr + 1] * Lr + Er[rr + 2] * lr)
+          const dd = 3 * Wd[nd + Yd + Fd[Ld + gd + Fd[Pd + wd]]];
+          cd *= cd, hd = cd * cd * (vd[dd] * xd + vd[dd + 1] * Bd + vd[dd + 2] * Sd)
         }
-        let Vr = .6 - Xr * Xr - Pr * Pr - Hr * Hr;
-        if (Vr < 0) pr = 0;
+        let jd = .6 - sd * sd - ud * ud - Vd * Vd;
+        if (jd < 0) Qd = 0;
         else {
-          const rr = 3 * Zr[Cr + Br + Wr[Mr + Tr + Wr[Gr + vr]]];
-          Vr *= Vr, pr = Vr * Vr * (Er[rr] * Xr + Er[rr + 1] * Pr + Er[rr + 2] * Hr)
+          const dd = 3 * Wd[nd + Ed + Fd[Ld + Jd + Fd[Pd + Ud]]];
+          jd *= jd, Qd = jd * jd * (vd[dd] * sd + vd[dd + 1] * ud + vd[dd + 2] * Vd)
         }
-        let ir = .6 - qr * qr - Rr * Rr - gr * gr;
-        if (ir < 0) xr = 0;
+        let Dd = .6 - Ad * Ad - rd * rd - Gd * Gd;
+        if (Dd < 0) td = 0;
         else {
-          const rr = 3 * Zr[Cr + 1 + Wr[Mr + 1 + Wr[Gr + 1]]];
-          ir *= ir, xr = ir * ir * (Er[rr] * qr + Er[rr + 1] * Rr + Er[rr + 2] * gr)
+          const dd = 3 * Wd[nd + 1 + Fd[Ld + 1 + Fd[Pd + 1]]];
+          Dd *= Dd, td = Dd * Dd * (vd[dd] * Ad + vd[dd + 1] * rd + vd[dd + 2] * Gd)
         }
-        return 32 * (Ir + fr + pr + xr)
+        return 32 * (Kd + hd + Qd + td)
       }
-      noise4D(rr, Sr, Qr, Zr) {
-        const Wr = this.perm;
-        let ar, jr, Er, xr, mr;
-        const Nr = (rr + Sr + Qr + Zr) * Ir,
-          Ur = Math.floor(rr + Nr),
-          tr = Math.floor(Sr + Nr),
-          hr = Math.floor(Qr + Nr),
-          zr = Math.floor(Zr + Nr),
-          Yr = (Ur + tr + hr + zr) * fr,
-          nr = rr - (Ur - Yr),
-          er = Sr - (tr - Yr),
-          Kr = Qr - (hr - Yr),
-          yr = Zr - (zr - Yr);
-        let Br = 0,
-          Tr = 0,
-          vr = 0,
-          Or = 0;
-        nr > er ? Br++ : Tr++, nr > Kr ? Br++ : vr++, nr > yr ? Br++ : Or++, er > Kr ? Tr++ : vr++, er > yr ? Tr++ : Or++, Kr > yr ? vr++ : Or++;
-        const Lr = Br >= 3 ? 1 : 0,
-          lr = Tr >= 3 ? 1 : 0,
-          Xr = vr >= 3 ? 1 : 0,
-          Pr = Or >= 3 ? 1 : 0,
-          Hr = Br >= 2 ? 1 : 0,
-          qr = Tr >= 2 ? 1 : 0,
-          Rr = vr >= 2 ? 1 : 0,
-          gr = Or >= 2 ? 1 : 0,
-          Cr = Br >= 1 ? 1 : 0,
-          Mr = Tr >= 1 ? 1 : 0,
-          Gr = vr >= 1 ? 1 : 0,
-          kr = Or >= 1 ? 1 : 0,
-          Ar = nr - Lr + fr,
-          Vr = er - lr + fr,
-          ir = Kr - Xr + fr,
-          wr = yr - Pr + fr,
-          cr = nr - Hr + 2 * fr,
-          Fr = er - qr + 2 * fr,
-          or = Kr - Rr + 2 * fr,
-          br = yr - gr + 2 * fr,
-          Jr = nr - Cr + 3 * fr,
-          Dr = er - Mr + 3 * fr,
-          dr = Kr - Gr + 3 * fr,
-          sr = yr - kr + 3 * fr,
-          ur = nr - 1 + 4 * fr,
-          rS = er - 1 + 4 * fr,
-          SS = Kr - 1 + 4 * fr,
-          QS = yr - 1 + 4 * fr,
-          ZS = 255 & Ur,
-          WS = 255 & tr,
-          aS = 255 & hr,
-          jS = 255 & zr;
-        let IS = .6 - nr * nr - er * er - Kr * Kr - yr * yr;
-        if (IS < 0) ar = 0;
+      noise4D(dd, Od, md, Wd) {
+        const Fd = this.perm;
+        let Rd, Xd, vd, td, od;
+        const Nd = (dd + Od + md + Wd) * Kd,
+          qd = Math.floor(dd + Nd),
+          Hd = Math.floor(Od + Nd),
+          yd = Math.floor(md + Nd),
+          bd = Math.floor(Wd + Nd),
+          Td = (qd + Hd + yd + bd) * hd,
+          pd = dd - (qd - Td),
+          Yd = Od - (Hd - Td),
+          gd = md - (yd - Td),
+          wd = Wd - (bd - Td);
+        let Ed = 0,
+          Jd = 0,
+          Ud = 0,
+          xd = 0;
+        pd > Yd ? Ed++ : Jd++, pd > gd ? Ed++ : Ud++, pd > wd ? Ed++ : xd++, Yd > gd ? Jd++ : Ud++, Yd > wd ? Jd++ : xd++, gd > wd ? Ud++ : xd++;
+        const Bd = Ed >= 3 ? 1 : 0,
+          Sd = Jd >= 3 ? 1 : 0,
+          sd = Ud >= 3 ? 1 : 0,
+          ud = xd >= 3 ? 1 : 0,
+          Vd = Ed >= 2 ? 1 : 0,
+          Ad = Jd >= 2 ? 1 : 0,
+          rd = Ud >= 2 ? 1 : 0,
+          Gd = xd >= 2 ? 1 : 0,
+          nd = Ed >= 1 ? 1 : 0,
+          Ld = Jd >= 1 ? 1 : 0,
+          Pd = Ud >= 1 ? 1 : 0,
+          zd = xd >= 1 ? 1 : 0,
+          cd = pd - Bd + hd,
+          jd = Yd - Sd + hd,
+          Dd = gd - sd + hd,
+          ed = wd - ud + hd,
+          Id = pd - Vd + 2 * hd,
+          ld = Yd - Ad + 2 * hd,
+          Cd = gd - rd + 2 * hd,
+          Zd = wd - Gd + 2 * hd,
+          kd = pd - nd + 3 * hd,
+          fd = Yd - Ld + 3 * hd,
+          Md = gd - Pd + 3 * hd,
+          dO = wd - zd + 3 * hd,
+          OO = pd - 1 + 4 * hd,
+          mO = Yd - 1 + 4 * hd,
+          WO = gd - 1 + 4 * hd,
+          FO = wd - 1 + 4 * hd,
+          RO = 255 & qd,
+          XO = 255 & Hd,
+          KO = 255 & yd,
+          hO = 255 & bd;
+        let vO = .6 - pd * pd - Yd * Yd - gd * gd - wd * wd;
+        if (vO < 0) Rd = 0;
         else {
-          const rr = Wr[ZS + Wr[WS + Wr[aS + Wr[jS]]]] % 32 * 4;
-          IS *= IS, ar = IS * IS * (pr[rr] * nr + pr[rr + 1] * er + pr[rr + 2] * Kr + pr[rr + 3] * yr)
+          const dd = Fd[RO + Fd[XO + Fd[KO + Fd[hO]]]] % 32 * 4;
+          vO *= vO, Rd = vO * vO * (Qd[dd] * pd + Qd[dd + 1] * Yd + Qd[dd + 2] * gd + Qd[dd + 3] * wd)
         }
-        let fS = .6 - Ar * Ar - Vr * Vr - ir * ir - wr * wr;
-        if (fS < 0) jr = 0;
+        let QO = .6 - cd * cd - jd * jd - Dd * Dd - ed * ed;
+        if (QO < 0) Xd = 0;
         else {
-          const rr = Wr[ZS + Lr + Wr[WS + lr + Wr[aS + Xr + Wr[jS + Pr]]]] % 32 * 4;
-          fS *= fS, jr = fS * fS * (pr[rr] * Ar + pr[rr + 1] * Vr + pr[rr + 2] * ir + pr[rr + 3] * wr)
+          const dd = Fd[RO + Bd + Fd[XO + Sd + Fd[KO + sd + Fd[hO + ud]]]] % 32 * 4;
+          QO *= QO, Xd = QO * QO * (Qd[dd] * cd + Qd[dd + 1] * jd + Qd[dd + 2] * Dd + Qd[dd + 3] * ed)
         }
-        let ES = .6 - cr * cr - Fr * Fr - or * or - br * br;
-        if (ES < 0) Er = 0;
+        let tO = .6 - Id * Id - ld * ld - Cd * Cd - Zd * Zd;
+        if (tO < 0) vd = 0;
         else {
-          const rr = Wr[ZS + Hr + Wr[WS + qr + Wr[aS + Rr + Wr[jS + gr]]]] % 32 * 4;
-          ES *= ES, Er = ES * ES * (pr[rr] * cr + pr[rr + 1] * Fr + pr[rr + 2] * or + pr[rr + 3] * br)
+          const dd = Fd[RO + Vd + Fd[XO + Ad + Fd[KO + rd + Fd[hO + Gd]]]] % 32 * 4;
+          tO *= tO, vd = tO * tO * (Qd[dd] * Id + Qd[dd + 1] * ld + Qd[dd + 2] * Cd + Qd[dd + 3] * Zd)
         }
-        let pS = .6 - Jr * Jr - Dr * Dr - dr * dr - sr * sr;
-        if (pS < 0) xr = 0;
+        let oO = .6 - kd * kd - fd * fd - Md * Md - dO * dO;
+        if (oO < 0) td = 0;
         else {
-          const rr = Wr[ZS + Cr + Wr[WS + Mr + Wr[aS + Gr + Wr[jS + kr]]]] % 32 * 4;
-          pS *= pS, xr = pS * pS * (pr[rr] * Jr + pr[rr + 1] * Dr + pr[rr + 2] * dr + pr[rr + 3] * sr)
+          const dd = Fd[RO + nd + Fd[XO + Ld + Fd[KO + Pd + Fd[hO + zd]]]] % 32 * 4;
+          oO *= oO, td = oO * oO * (Qd[dd] * kd + Qd[dd + 1] * fd + Qd[dd + 2] * Md + Qd[dd + 3] * dO)
         }
-        let xS = .6 - ur * ur - rS * rS - SS * SS - QS * QS;
-        if (xS < 0) mr = 0;
+        let NO = .6 - OO * OO - mO * mO - WO * WO - FO * FO;
+        if (NO < 0) od = 0;
         else {
-          const rr = Wr[ZS + 1 + Wr[WS + 1 + Wr[aS + 1 + Wr[jS + 1]]]] % 32 * 4;
-          xS *= xS, mr = xS * xS * (pr[rr] * ur + pr[rr + 1] * rS + pr[rr + 2] * SS + pr[rr + 3] * QS)
+          const dd = Fd[RO + 1 + Fd[XO + 1 + Fd[KO + 1 + Fd[hO + 1]]]] % 32 * 4;
+          NO *= NO, od = NO * NO * (Qd[dd] * OO + Qd[dd + 1] * mO + Qd[dd + 2] * WO + Qd[dd + 3] * FO)
         }
-        return 27 * (ar + jr + Er + xr + mr)
+        return 27 * (Rd + Xd + vd + td + od)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

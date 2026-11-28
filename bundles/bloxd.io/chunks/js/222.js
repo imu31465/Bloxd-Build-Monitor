@@ -1,266 +1,266 @@
 export const id = 222;
 export const ids = [222];
 export const modules = {
-  37819: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      isMoreOptionsInFooter: () => kr,
-      showOnboardingPopup: () => Ar
+  37924: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      isMoreOptionsInFooter: () => zd,
+      showOnboardingPopup: () => cd
     });
-    var Zr = Qr(72),
-      Wr = Qr(1251),
-      ar = Qr(1475),
-      jr = Qr(1576),
-      Ir = Qr(1177),
-      fr = Qr(5009),
-      Er = Qr(1686),
-      pr = Qr(379),
-      xr = Qr(1684),
-      mr = Qr(3139),
-      Nr = Qr(1155),
-      Ur = Qr.n(Nr),
-      tr = Qr(1187),
-      hr = Qr(37827),
-      zr = Qr(3320),
-      Yr = Qr(4746),
-      nr = Qr(1181),
-      er = Qr(1448),
-      Kr = Qr(1338);
-    const yr = "OnboardingMorePanel";
+    var Wd = md(66),
+      Fd = md(1238),
+      Rd = md(1462),
+      Xd = md(1572),
+      Kd = md(1178),
+      hd = md(4964),
+      vd = md(1685),
+      Qd = md(405),
+      td = md(1679),
+      od = md(3143),
+      Nd = md(1155),
+      qd = md.n(Nd),
+      Hd = md(1189),
+      yd = md(37929),
+      bd = md(3307),
+      Td = md(4717),
+      pd = md(1186),
+      Yd = md(1443),
+      gd = md(1341);
+    const wd = "OnboardingMorePanel";
 
-    function Br(rr) {
+    function Ed(dd) {
       let {
-        open: Sr,
-        onToggle: Qr
-      } = rr;
+        open: Od,
+        onToggle: md
+      } = dd;
       const {
-        t: Zr
-      } = (0, Wr.E)();
-      return (0, Kr.jsxs)("button", {
+        t: Wd
+      } = (0, Fd.G)();
+      return (0, gd.jsxs)("button", {
         type: "button",
         className: "OnboardingMoreOptions",
-        "aria-expanded": Sr,
-        "aria-controls": Sr ? yr : void 0,
+        "aria-expanded": Od,
+        "aria-controls": Od ? wd : void 0,
         onClick: () => {
-          Sr || (0, fr.k)("more"), Qr()
+          Od || (0, hd.l)("more"), md()
         },
-        children: [Zr("homePage:onboardingMoreOptions"), (0, Kr.jsx)(er.c, {
-          name: Sr ? "caret-up" : "caret-down"
+        children: [Wd("homePage:onboardingMoreOptions"), (0, gd.jsx)(Yd.c, {
+          name: Od ? "caret-up" : "caret-down"
         })]
       })
     }
-    const Tr = Object.entries(Er.e).filter((rr => {
-      let [, Sr] = rr;
-      return "default" === Sr.cosmeticPack
+    const Jd = Object.entries(vd.b).filter((dd => {
+      let [, Od] = dd;
+      return "default" === Od.cosmeticPack
     }));
 
-    function vr(rr) {
-      return xr.b.default.colourGroups[rr].colours.map(((rr, Sr) => {
+    function Ud(dd) {
+      return td.c.default.colourGroups[dd].colours.map(((dd, Od) => {
         let {
-          rbg: Qr,
-          order: Zr
-        } = rr;
+          rbg: md,
+          order: Wd
+        } = dd;
         return {
-          rbg: Qr,
-          order: Zr,
-          index: Sr
+          rbg: md,
+          order: Wd,
+          index: Od
         }
-      })).sort(((rr, Sr) => rr.order - Sr.order))
+      })).sort(((dd, Od) => dd.order - Od.order))
     }
-    const Or = vr("eyes"),
-      Lr = vr("skin");
+    const xd = Ud("eyes"),
+      Bd = Ud("skin");
 
-    function lr(rr, Sr) {
-      var Qr;
-      if (void 0 === Sr || "default" !== (null === (Qr = (0, mr.k)(rr, Sr)) || void 0 === Qr ? void 0 : Qr.cosmeticPack)) return null;
-      const Zr = (0, mr.g)(Sr);
-      return Zr && [Zr[0], Number(Zr[1])]
-    }
-
-    function Xr(rr, Sr, Qr) {
-      return `${rr}_${Sr}_${Qr}`
+    function Sd(dd, Od) {
+      var md;
+      if (void 0 === Od || "default" !== (null === (md = (0, od.i)(dd, Od)) || void 0 === md ? void 0 : md.cosmeticPack)) return null;
+      const Wd = (0, od.h)(Od);
+      return Wd && [Wd[0], Number(Wd[1])]
     }
 
-    function Pr(rr) {
+    function sd(dd, Od, md) {
+      return `${dd}_${Od}_${md}`
+    }
+
+    function ud(dd) {
       let {
-        label: Sr,
-        colours: Qr,
-        picked: Zr,
-        onPick: ar
-      } = rr;
+        label: Od,
+        colours: md,
+        picked: Wd,
+        onPick: Rd
+      } = dd;
       const {
-        t: jr
-      } = (0, Wr.E)();
-      return (0, Kr.jsxs)("div", {
+        t: Xd
+      } = (0, Fd.G)();
+      return (0, gd.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, Kr.jsx)("div", {
+        children: [(0, gd.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: Sr
-        }), (0, Kr.jsx)("div", {
+          children: Od
+        }), (0, gd.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": Sr,
-          children: Qr.map(((rr, Sr) => {
+          "aria-label": Od,
+          children: md.map(((dd, Od) => {
             let {
-              rbg: Qr,
-              index: Wr
-            } = rr;
-            return (0, Kr.jsx)("button", {
+              rbg: md,
+              index: Fd
+            } = dd;
+            return (0, gd.jsx)("button", {
               type: "button",
-              className: Ur()("OnboardingSwatch", {
-                OnboardingSwatchSelected: Wr === Zr
+              className: qd()("OnboardingSwatch", {
+                OnboardingSwatchSelected: Fd === Wd
               }),
               style: {
-                backgroundColor: `rgb(${Qr.join(",")})`
+                backgroundColor: `rgb(${md.join(",")})`
               },
               role: "radio",
-              "aria-checked": Wr === Zr,
-              "aria-label": jr("homePage:onboardingColour", {
-                number: Sr + 1
+              "aria-checked": Fd === Wd,
+              "aria-label": Xd("homePage:onboardingColour", {
+                number: Od + 1
               }),
               onClick: () => {
-                ar(Wr)
+                Rd(Fd)
               }
-            }, Wr)
+            }, Fd)
           }))
         })]
       })
     }
 
-    function Hr(rr) {
+    function Vd(dd) {
       let {
-        moreOptions: Sr,
-        onToggleMoreOptions: Qr,
-        moreOptionsBelowPresets: ar
-      } = rr;
+        moreOptions: Od,
+        onToggleMoreOptions: md,
+        moreOptionsBelowPresets: Rd
+      } = dd;
       const {
-        t: jr
-      } = (0, Wr.E)(), {
-        userContext: Ir,
-        isUserContextUpdating: Er
-      } = (0, nr.c)(), [, xr] = (0, Zr.useReducer)((rr => rr + 1), 0), mr = (0, Zr.useRef)({}), Nr = (0, Zr.useRef)(null), er = (0, Zr.useRef)({}), vr = (0, Yr.b)(), Hr = {
-        ...Ir.getPlayerCosmetics(),
-        ...Nr.current
-      }, qr = (0, Zr.useRef)(null);
-      (0, Zr.useEffect)((() => {
-        var rr;
-        Sr && (null === (rr = qr.current) || void 0 === rr || rr.scrollIntoView({
+        t: Xd
+      } = (0, Fd.G)(), {
+        userContext: Kd,
+        isUserContextUpdating: vd
+      } = (0, pd.d)(), [, td] = (0, Wd.useReducer)((dd => dd + 1), 0), od = (0, Wd.useRef)({}), Nd = (0, Wd.useRef)(null), Yd = (0, Wd.useRef)({}), Ud = (0, Td.b)(), Vd = {
+        ...Kd.getPlayerCosmetics(),
+        ...Nd.current
+      }, Ad = (0, Wd.useRef)(null);
+      (0, Wd.useEffect)((() => {
+        var dd;
+        Od && (null === (dd = Ad.current) || void 0 === dd || dd.scrollIntoView({
           block: "nearest"
         }))
-      }), [Sr]);
-      const Rr = (rr, Sr) => {
-          (0, hr.b)(rr, Object.entries(Sr)), vr.current ? xr() : rr.publishUpdateIfCurrent()
+      }), [Od]);
+      const rd = (dd, Od) => {
+          (0, yd.d)(dd, Object.entries(Od)), Ud.current ? td() : dd.publishUpdateIfCurrent()
         },
-        gr = function(rr) {
+        Gd = function(dd) {
           let {
-            isDefault: Sr = !1
+            isDefault: Od = !1
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          const Qr = {
-            ...!Er && Ir.isLoggedIn() ? er.current : Nr.current,
-            ...rr
+          const md = {
+            ...!vd && Kd.isLoggedIn() ? Yd.current : Nd.current,
+            ...dd
           };
-          if (!Er) return Nr.current = null, er.current = {}, void Rr(Ir, Qr);
-          Nr.current = Qr, Sr || (er.current = {
-            ...er.current,
-            ...rr
-          }), xr(), tr.userContextManager.getCurrentUserContext().then((rr => {
-            if (Nr.current !== Qr) return;
-            Nr.current = null;
-            const Sr = er.current;
-            er.current = {};
-            const Zr = rr.isLoggedIn() ? Sr : Qr;
-            0 !== Object.keys(Zr).length ? Rr(rr, Zr) : vr.current && xr()
-          })).catch((rr => {
-            console.warn("Couldn't put on the onboarding look held for the account", rr), Nr.current === Qr && (Nr.current = null, er.current = {}, vr.current && xr())
+          if (!vd) return Nd.current = null, Yd.current = {}, void rd(Kd, md);
+          Nd.current = md, Od || (Yd.current = {
+            ...Yd.current,
+            ...dd
+          }), td(), Hd.userContextManager.getCurrentUserContext().then((dd => {
+            if (Nd.current !== md) return;
+            Nd.current = null;
+            const Od = Yd.current;
+            Yd.current = {};
+            const Wd = dd.isLoggedIn() ? Od : md;
+            0 !== Object.keys(Wd).length ? rd(dd, Wd) : Ud.current && td()
+          })).catch((dd => {
+            console.warn("Couldn't put on the onboarding look held for the account", dd), Nd.current === md && (Nd.current = null, Yd.current = {}, Ud.current && td())
           }))
         },
-        Cr = (0, Zr.useRef)(!1);
-      (0, Zr.useEffect)((() => {
-        Cr.current || (Cr.current = !0, !Er && Ir.isLoggedIn() || gr((0, pr.Yb)(Tr)[1].cosmetics, {
+        nd = (0, Wd.useRef)(!1);
+      (0, Wd.useEffect)((() => {
+        nd.current || (nd.current = !0, !vd && Kd.isLoggedIn() || Gd((0, Qd.Vb)(Jd)[1].cosmetics, {
           isDefault: !0
         }))
-      }), []), (0, Zr.useEffect)((() => () => {
-        Ir.publishUpdateIfCurrent()
-      }), [Ir]);
-      const Mr = lr("eyes", Hr.eyes),
-        Gr = lr("skin", Hr.skin);
-      return (0, Kr.jsxs)(Kr.Fragment, {
-        children: [(0, Kr.jsx)("div", {
+      }), []), (0, Wd.useEffect)((() => () => {
+        Kd.publishUpdateIfCurrent()
+      }), [Kd]);
+      const Ld = Sd("eyes", Vd.eyes),
+        Pd = Sd("skin", Vd.skin);
+      return (0, gd.jsxs)(gd.Fragment, {
+        children: [(0, gd.jsx)("div", {
           className: "OnboardingPresets",
-          children: Tr.map(((rr, Sr) => {
-            let [Qr, {
-              cosmetics: Zr
-            }] = rr;
-            const Wr = function(rr, Sr) {
-              return Object.entries(Sr).every((Sr => {
-                let [Qr, Zr] = Sr;
-                return "skin" === Qr || ("eyes" === Qr ? (null === (Wr = lr("eyes", rr.eyes)) || void 0 === Wr ? void 0 : Wr[0]) === (null === (ar = lr("eyes", Zr)) || void 0 === ar ? void 0 : ar[0]) : rr[Qr] === Zr);
-                var Wr, ar
+          children: Jd.map(((dd, Od) => {
+            let [md, {
+              cosmetics: Wd
+            }] = dd;
+            const Fd = function(dd, Od) {
+              return Object.entries(Od).every((Od => {
+                let [md, Wd] = Od;
+                return "skin" === md || ("eyes" === md ? (null === (Fd = Sd("eyes", dd.eyes)) || void 0 === Fd ? void 0 : Fd[0]) === (null === (Rd = Sd("eyes", Wd)) || void 0 === Rd ? void 0 : Rd[0]) : dd[md] === Wd);
+                var Fd, Rd
               }))
-            }(Hr, Zr);
-            return (0, Kr.jsx)("button", {
+            }(Vd, Wd);
+            return (0, gd.jsx)("button", {
               type: "button",
-              className: Ur()("OnboardingPreset", {
-                OnboardingPresetSelected: Wr
+              className: qd()("OnboardingPreset", {
+                OnboardingPresetSelected: Fd
               }),
-              "aria-label": jr("homePage:onboardingPreset", {
-                number: Sr + 1
+              "aria-label": Xd("homePage:onboardingPreset", {
+                number: Od + 1
               }),
-              "aria-pressed": Wr,
+              "aria-pressed": Fd,
               onClick: () => {
-                (0, fr.k)(`preset.${Qr}`);
+                (0, hd.l)(`preset.${md}`);
                 const {
-                  eyes: rr,
-                  skin: Sr
-                } = mr.current;
-                gr({
-                  ...Zr,
-                  ...void 0 !== rr && {
-                    eyes: Xr("eyes", lr("eyes", Zr.eyes)[0], rr)
+                  eyes: dd,
+                  skin: Od
+                } = od.current;
+                Gd({
+                  ...Wd,
+                  ...void 0 !== dd && {
+                    eyes: sd("eyes", Sd("eyes", Wd.eyes)[0], dd)
                   },
-                  ...void 0 !== Sr && {
-                    skin: Xr("skin", "0", Sr)
+                  ...void 0 !== Od && {
+                    skin: sd("skin", "0", Od)
                   }
                 })
               },
-              children: (0, Kr.jsx)("div", {
+              children: (0, gd.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${Qr}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${md}_preview.png)`
                 }
               })
-            }, Qr)
+            }, md)
           }))
-        }), ar && (0, Kr.jsx)(Br, {
-          open: Sr,
-          onToggle: Qr
-        }), Sr && (0, Kr.jsxs)("div", {
-          ref: qr,
-          id: yr,
+        }), Rd && (0, gd.jsx)(Ed, {
+          open: Od,
+          onToggle: md
+        }), Od && (0, gd.jsxs)("div", {
+          ref: Ad,
+          id: wd,
           className: "OnboardingMore",
-          children: [(0, Kr.jsx)("div", {
+          children: [(0, gd.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, Kr.jsx)(zr.b, {
-              cosmetics: Hr
+            children: (0, gd.jsx)(bd.e, {
+              cosmetics: Vd
             })
-          }), (0, Kr.jsxs)("div", {
+          }), (0, gd.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, Kr.jsx)(Pr, {
-              label: jr("homePage:onboardingEyeColour"),
-              colours: Or,
-              picked: null === Mr || void 0 === Mr ? void 0 : Mr[1],
-              onPick: rr => {
-                var Sr;
-                (0, fr.k)("eyes"), mr.current.eyes = rr, gr({
-                  eyes: Xr("eyes", null !== (Sr = null === Mr || void 0 === Mr ? void 0 : Mr[0]) && void 0 !== Sr ? Sr : "0", rr)
+            children: [(0, gd.jsx)(ud, {
+              label: Xd("homePage:onboardingEyeColour"),
+              colours: xd,
+              picked: null === Ld || void 0 === Ld ? void 0 : Ld[1],
+              onPick: dd => {
+                var Od;
+                (0, hd.l)("eyes"), od.current.eyes = dd, Gd({
+                  eyes: sd("eyes", null !== (Od = null === Ld || void 0 === Ld ? void 0 : Ld[0]) && void 0 !== Od ? Od : "0", dd)
                 })
               }
-            }), (0, Kr.jsx)(Pr, {
-              label: jr("homePage:onboardingSkinColour"),
-              colours: Lr,
-              picked: null === Gr || void 0 === Gr ? void 0 : Gr[1],
-              onPick: rr => {
-                (0, fr.k)("skin"), mr.current.skin = rr, gr({
-                  skin: Xr("skin", "0", rr)
+            }), (0, gd.jsx)(ud, {
+              label: Xd("homePage:onboardingSkinColour"),
+              colours: Bd,
+              picked: null === Pd || void 0 === Pd ? void 0 : Pd[1],
+              onPick: dd => {
+                (0, hd.l)("skin"), od.current.skin = dd, Gd({
+                  skin: sd("skin", "0", dd)
                 })
               }
             })]
@@ -268,371 +268,371 @@ export const modules = {
         })]
       })
     }
-    var qr = Qr(1321),
-      Rr = Qr(26),
-      gr = Qr(35341),
-      Cr = Qr(1444),
-      Mr = Qr(1804);
+    var Ad = md(1322),
+      rd = md(29),
+      Gd = md(35428),
+      nd = md(1436),
+      Ld = md(1808);
 
-    function Gr(rr) {
+    function Pd(dd) {
       const {
-        t: Sr
-      } = (0, Wr.E)(), {
-        userContext: Qr,
-        isUserContextUpdating: ar
-      } = (0, nr.c)(), Ir = ar ? null : Qr.getPlayerName(), Er = (0, Zr.useRef)(null), [pr, xr] = (0, Zr.useState)((() => null === Ir ? (0, qr.f)() : null)), [mr, Nr] = (0, Zr.useState)(null), [Ur, tr] = (0, Zr.useState)(!1), hr = (0, Zr.useRef)("sp"), zr = (0, Yr.b)(), yr = (0, Zr.useRef)(null !== pr), Br = (0, Zr.useRef)(!1), Tr = (0, Zr.useRef)(null), vr = null !== pr && void 0 !== pr ? pr : Ir, Or = (0, Zr.useRef)(null), Lr = rr => {
-        Er.current && (Er.current.value = rr), xr(rr)
-      }, lr = (0, Zr.useRef)(!1);
-      (0, Zr.useEffect)((() => {
-        var rr, Sr;
-        !Ur && lr.current && (lr.current = !1, null === (rr = Er.current) || void 0 === rr || rr.focus(), null === (Sr = Er.current) || void 0 === Sr || Sr.select())
-      }), [Ur]);
-      const Xr = (0, Zr.useRef)(null);
-      (0, Zr.useEffect)((() => {
-        var rr;
-        null !== mr && (null === (rr = Xr.current) || void 0 === rr || rr.scrollIntoView({
+        t: Od
+      } = (0, Fd.G)(), {
+        userContext: md,
+        isUserContextUpdating: Rd
+      } = (0, pd.d)(), Kd = Rd ? null : md.getPlayerName(), vd = (0, Wd.useRef)(null), [Qd, td] = (0, Wd.useState)((() => null === Kd ? (0, Ad.e)() : null)), [od, Nd] = (0, Wd.useState)(null), [qd, Hd] = (0, Wd.useState)(!1), yd = (0, Wd.useRef)("kQ"), bd = (0, Td.b)(), wd = (0, Wd.useRef)(null !== Qd), Ed = (0, Wd.useRef)(!1), Jd = (0, Wd.useRef)(null), Ud = null !== Qd && void 0 !== Qd ? Qd : Kd, xd = (0, Wd.useRef)(null), Bd = dd => {
+        vd.current && (vd.current.value = dd), td(dd)
+      }, Sd = (0, Wd.useRef)(!1);
+      (0, Wd.useEffect)((() => {
+        var dd, Od;
+        !qd && Sd.current && (Sd.current = !1, null === (dd = vd.current) || void 0 === dd || dd.focus(), null === (Od = vd.current) || void 0 === Od || Od.select())
+      }), [qd]);
+      const sd = (0, Wd.useRef)(null);
+      (0, Wd.useEffect)((() => {
+        var dd;
+        null !== od && (null === (dd = sd.current) || void 0 === dd || dd.scrollIntoView({
           block: "nearest"
         }))
-      }), [mr]);
-      const Pr = (rr, Sr) => {
-        const Qr = document.activeElement === Er.current || lr.current;
-        tr(!0), Nr(null), rr.then((rr => {
-          zr.current && (tr(!1), lr.current = Qr, Sr(rr))
+      }), [od]);
+      const ud = (dd, Od) => {
+        const md = document.activeElement === vd.current || Sd.current;
+        Hd(!0), Nd(null), dd.then((dd => {
+          bd.current && (Hd(!1), Sd.current = md, Od(dd))
         }))
       };
-      (0, Zr.useEffect)((() => {
-        var rr, Sr;
-        Rr.c.get("isTouchScreen") || (null === (rr = Er.current) || void 0 === rr || rr.focus(), null === (Sr = Er.current) || void 0 === Sr || Sr.select())
+      (0, Wd.useEffect)((() => {
+        var dd, Od;
+        rd.e.get("isTouchScreen") || (null === (dd = vd.current) || void 0 === dd || dd.focus(), null === (Od = vd.current) || void 0 === Od || Od.select())
       }), []);
-      const Hr = () => {
-          (0, fr.m)(hr.current), rr()
+      const Vd = () => {
+          (0, hd.o)(yd.current), dd()
         },
-        Gr = (rr, Sr) => {
-          var Qr, Zr;
-          if (Tr.current === rr) return hr.current = null !== (Qr = null === (Zr = Or.current) || void 0 === Zr ? void 0 : Zr.outcome) && void 0 !== Qr ? Qr : "sp", void Hr();
-          Tr.current = rr, Nr(Sr)
+        Pd = (dd, Od) => {
+          var md, Wd;
+          if (Jd.current === dd) return yd.current = null !== (md = null === (Wd = xd.current) || void 0 === Wd ? void 0 : Wd.outcome) && void 0 !== md ? md : "kQ", void Vd();
+          Jd.current = dd, Nd(Od)
         },
-        kr = rr => "refused" === rr.outcome ? rr.message : Sr((0, gr.g)(rr.failure)),
-        Ar = rr => !(rr.length >= qr.j) && (Nr({
+        zd = dd => "refused" === dd.outcome ? dd.message : Od((0, Gd.i)(dd.failure)),
+        cd = dd => !(dd.length >= Ad.i) && (Nd({
           kind: "error",
-          message: Sr("homePage:changeNameMinLengthError", {
-            length: qr.j
+          message: Od("homePage:changeNameMinLengthError", {
+            length: Ad.i
           })
         }), !0),
-        Vr = rr => {
-          var Zr, Wr, ar;
-          rr.toLowerCase() !== (null === (Zr = null !== (Wr = null === (ar = Or.current) || void 0 === ar ? void 0 : ar.name) && void 0 !== Wr ? Wr : Ir) || void 0 === Zr ? void 0 : Zr.toLowerCase()) ? Ar(rr) || Pr((0, gr.d)(Qr, rr), (Qr => {
-            "taken" !== Qr.outcome ? "refused" !== Qr.outcome && "failed" !== Qr.outcome ? Qr.name !== rr ? (hr.current = "suffixed", Or.current = {
-              name: Qr.name,
-              outcome: hr.current
-            }, Lr(Qr.name), Nr({
+        jd = dd => {
+          var Wd, Fd, Rd;
+          dd.toLowerCase() !== (null === (Wd = null !== (Fd = null === (Rd = xd.current) || void 0 === Rd ? void 0 : Rd.name) && void 0 !== Fd ? Fd : Kd) || void 0 === Wd ? void 0 : Wd.toLowerCase()) ? cd(dd) || ud((0, Gd.e)(md, dd), (md => {
+            "taken" !== md.outcome ? "refused" !== md.outcome && "failed" !== md.outcome ? md.name !== dd ? (yd.current = "suffixed", xd.current = {
+              name: md.name,
+              outcome: yd.current
+            }, Bd(md.name), Nd({
               kind: "suffixed",
-              taken: rr,
-              name: Qr.name
-            })) : Hr() : Gr(rr, {
+              taken: dd,
+              name: md.name
+            })) : Vd() : Pd(dd, {
               kind: "error",
-              message: kr(Qr)
-            }) : Gr(rr, {
+              message: zd(md)
+            }) : Pd(dd, {
               kind: "error",
-              message: Sr("homePage:onboardingNameAllTaken")
+              message: Od("homePage:onboardingNameAllTaken")
             })
-          })) : Hr()
+          })) : Vd()
         };
-      (0, Zr.useEffect)((() => {
-        if (!Ur || null !== Ir || !Br.current) return;
-        const rr = setTimeout((() => {
-          Br.current = !1, tr(!1), Gr(vr, {
+      (0, Wd.useEffect)((() => {
+        if (!qd || null !== Kd || !Ed.current) return;
+        const dd = setTimeout((() => {
+          Ed.current = !1, Hd(!1), Pd(Ud, {
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(rr)
+          clearTimeout(dd)
         }
-      }), [Ur, Ir]), (0, Zr.useEffect)((() => {
-        if (null === Ir) return;
-        const rr = yr.current && "sp" === hr.current && Qr.isLoggedIn();
-        yr.current = !1, Tr.current = null, "noAccount" === (null === mr || void 0 === mr ? void 0 : mr.kind) && Nr(null), rr && Lr(Ir), Br.current && (Br.current = !1, tr(!1), Vr(rr ? Ir : vr))
-      }), [Ir]);
-      const ir = "error" === (null === mr || void 0 === mr ? void 0 : mr.kind) ? mr.message : "noAccount" === (null === mr || void 0 === mr ? void 0 : mr.kind) ? Sr("homePage:onboardingNameNoAccount") : null;
+      }), [qd, Kd]), (0, Wd.useEffect)((() => {
+        if (null === Kd) return;
+        const dd = wd.current && "kQ" === yd.current && md.isLoggedIn();
+        wd.current = !1, Jd.current = null, "noAccount" === (null === od || void 0 === od ? void 0 : od.kind) && Nd(null), dd && Bd(Kd), Ed.current && (Ed.current = !1, Hd(!1), jd(dd ? Kd : Ud))
+      }), [Kd]);
+      const Dd = "error" === (null === od || void 0 === od ? void 0 : od.kind) ? od.message : "noAccount" === (null === od || void 0 === od ? void 0 : od.kind) ? Od("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, Kr.jsxs)("div", {
+        field: (0, gd.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: Xr,
-          children: [(0, Kr.jsx)("div", {
+          ref: sd,
+          children: [(0, gd.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: Sr("general:name")
-          }), null === vr && (0, Kr.jsx)(Cr.c, {}), null !== vr && (0, Kr.jsxs)("div", {
+            children: Od("general:name")
+          }), null === Ud && (0, gd.jsx)(nd.c, {}), null !== Ud && (0, gd.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, Kr.jsx)(Mr.b, {
+            children: [(0, gd.jsx)(Ld.c, {
               className: "OnboardingNameInput",
-              ariaLabel: Sr("general:name"),
-              maxLength: qr.h,
-              defaultValue: vr,
-              domRef: Er,
-              forcedText: Ur ? vr : null,
+              ariaLabel: Od("general:name"),
+              maxLength: Ad.g,
+              defaultValue: Ud,
+              domRef: vd,
+              forcedText: qd ? Ud : null,
               onEnter: () => {
-                var rr;
-                null === (rr = Er.current) || void 0 === rr || rr.blur()
+                var dd;
+                null === (dd = vd.current) || void 0 === dd || dd.blur()
               },
-              onValueChange: rr => {
-                const Qr = (0, qr.r)(rr);
-                Qr !== rr && Er.current && (Er.current.value = Qr), Nr(Qr !== rr ? {
+              onValueChange: dd => {
+                const md = (0, Ad.m)(dd);
+                md !== dd && vd.current && (vd.current.value = md), Nd(md !== dd ? {
                   kind: "error",
-                  message: Sr("homePage:nameCharacters")
-                } : null), Qr !== vr && (hr.current = "changed"), xr(Qr)
+                  message: Od("homePage:nameCharacters")
+                } : null), md !== Ud && (yd.current = "changed"), td(md)
               }
-            }), (0, Kr.jsx)(jr.h, {
+            }), (0, gd.jsx)(Xd.g, {
               className: "OnboardingRandomName",
-              ariaLabel: Sr("homePage:onboardingRandomName"),
-              disabled: Ur,
+              ariaLabel: Od("homePage:onboardingRandomName"),
+              disabled: qd,
               onClick: () => {
                 (() => {
-                  if (Nr(null), null === Ir || Qr.isLoggedIn()) return Lr((0, qr.f)()), void(hr.current = "rolled");
-                  Pr((0, gr.n)(Qr), (rr => {
-                    var Sr, Zr;
-                    if ("refused" === rr.outcome || "failed" === rr.outcome) return Lr(Qr.getPlayerName()), hr.current = null !== (Sr = null === (Zr = Or.current) || void 0 === Zr ? void 0 : Zr.outcome) && void 0 !== Sr ? Sr : "sp", void Nr({
+                  if (Nd(null), null === Kd || md.isLoggedIn()) return Bd((0, Ad.e)()), void(yd.current = "rolled");
+                  ud((0, Gd.m)(md), (dd => {
+                    var Od, Wd;
+                    if ("refused" === dd.outcome || "failed" === dd.outcome) return Bd(md.getPlayerName()), yd.current = null !== (Od = null === (Wd = xd.current) || void 0 === Wd ? void 0 : Wd.outcome) && void 0 !== Od ? Od : "kQ", void Nd({
                       kind: "error",
-                      message: kr(rr)
+                      message: zd(dd)
                     });
-                    hr.current = "rolled", Or.current = {
-                      name: rr.name,
+                    yd.current = "rolled", xd.current = {
+                      name: dd.name,
                       outcome: "rolled"
-                    }, Lr(rr.name)
+                    }, Bd(dd.name)
                   }))
                 })()
               },
-              children: (0, Kr.jsx)(er.c, {
+              children: (0, gd.jsx)(Yd.c, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === mr || void 0 === mr ? void 0 : mr.kind) && (0, Kr.jsx)("div", {
+          }), "suffixed" === (null === od || void 0 === od ? void 0 : od.kind) && (0, gd.jsx)("div", {
             className: "OnboardingNameNote",
-            children: Sr("homePage:onboardingNameSuffixed", {
-              taken: mr.taken,
-              name: mr.name
+            children: Od("homePage:onboardingNameSuffixed", {
+              taken: od.taken,
+              name: od.name
             })
-          }), null !== ir && (0, Kr.jsx)("div", {
+          }), null !== Dd && (0, gd.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: ir
+            children: Dd
           })]
         }),
         submit: () => {
-          if (!Ur && null !== vr) {
-            if (null === Ir) {
-              if (Ar(vr)) return;
-              return lr.current = document.activeElement === Er.current, Br.current = !0, tr(!0), void Nr(null)
+          if (!qd && null !== Ud) {
+            if (null === Kd) {
+              if (cd(Ud)) return;
+              return Sd.current = document.activeElement === vd.current, Ed.current = !0, Hd(!0), void Nd(null)
             }
-            Vr(vr)
+            jd(Ud)
           }
         },
-        busy: Ur,
-        ready: null !== vr
+        busy: qd,
+        ready: null !== Ud
       }
     }
 
-    function kr(rr) {
-      return rr < 500
+    function zd(dd) {
+      return dd < 500
     }
 
-    function Ar() {
-      const rr = {
+    function cd() {
+      const dd = {
           finished: !1
         },
-        Sr = {
+        Od = {
           press: null
         };
-      return ar.NotificationProvider.showCustomPopup({
-        body: Qr => (0, Kr.jsx)(Vr, {
+      return Rd.NotificationProvider.showCustomPopup({
+        body: md => (0, gd.jsx)(jd, {
           onFinish: () => {
-            (0, fr.i)(), rr.finished = !0, Qr()
+            (0, hd.j)(), dd.finished = !0, md()
           },
-          doneRef: Sr
+          doneRef: Od
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         disableExitButton: !0,
         ignoreBackgroundPress: !0,
         dismiss: () => {
-          var rr;
-          null === (rr = Sr.press) || void 0 === rr || rr.call(Sr)
+          var dd;
+          null === (dd = Od.press) || void 0 === dd || dd.call(Od)
         },
         onClose: () => {
-          rr.finished || (0, fr.g)()
+          dd.finished || (0, hd.h)()
         }
       })
     }
 
-    function Vr(rr) {
+    function jd(dd) {
       let {
-        onFinish: Sr,
-        doneRef: Qr
-      } = rr;
+        onFinish: Od,
+        doneRef: md
+      } = dd;
       const {
-        t: ar
-      } = (0, Wr.E)(), Er = Gr(Sr), pr = Er.ready && !Er.busy ? Er.submit : null;
-      (0, Zr.useEffect)((() => (Qr.press = pr, () => {
-        Qr.press = null
+        t: Rd
+      } = (0, Fd.G)(), vd = Pd(Od), Qd = vd.ready && !vd.busy ? vd.submit : null;
+      (0, Wd.useEffect)((() => (md.press = Qd, () => {
+        md.press = null
       })));
-      const [xr, mr] = (0, Zr.useState)(!1), Nr = (0, Ir.t)(((rr, Sr) => kr(Sr))), Ur = () => {
-        mr(!xr)
+      const [td, od] = (0, Wd.useState)(!1), Nd = (0, Kd.l)(((dd, Od) => zd(Od))), qd = () => {
+        od(!td)
       };
-      return (0, Zr.useEffect)((() => {
-        (0, fr.o)()
-      }), []), (0, Kr.jsxs)("div", {
+      return (0, Wd.useEffect)((() => {
+        (0, hd.p)()
+      }), []), (0, gd.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, Kr.jsx)("div", {
+        children: [(0, gd.jsx)("div", {
           className: "OnboardingTitle",
-          children: ar("homePage:onboardingTitle")
-        }), (0, Kr.jsxs)("div", {
+          children: Rd("homePage:onboardingTitle")
+        }), (0, gd.jsxs)("div", {
           className: "OnboardingBody",
-          children: [Er.field, (0, Kr.jsx)(Hr, {
-            moreOptions: xr,
-            onToggleMoreOptions: Ur,
-            moreOptionsBelowPresets: !Nr
+          children: [vd.field, (0, gd.jsx)(Vd, {
+            moreOptions: td,
+            onToggleMoreOptions: qd,
+            moreOptionsBelowPresets: !Nd
           })]
-        }), (0, Kr.jsxs)("div", {
+        }), (0, gd.jsxs)("div", {
           className: "OnboardingFooter",
-          children: [Nr && (0, Kr.jsx)(Br, {
-            open: xr,
-            onToggle: Ur
-          }), (0, Kr.jsx)(jr.p, {
+          children: [Nd && (0, gd.jsx)(Ed, {
+            open: td,
+            onToggle: qd
+          }), (0, gd.jsx)(Xd.m, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: Er.busy,
-            disabled: !Er.ready,
-            onClick: Er.submit,
-            children: ar("homePage:onboardingDone")
+            loading: vd.busy,
+            disabled: !vd.ready,
+            onClick: vd.submit,
+            children: Rd("homePage:onboardingDone")
           })]
         })]
       })
     }
   },
-  37827: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => jr
+  37929: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Xd
     });
-    var Zr = Qr(2089),
-      Wr = Qr(1629);
-    const ar = new class {
+    var Wd = md(2092),
+      Fd = md(1627);
+    const Rd = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(rr, Sr) {
-        rr !== this.userContext && this.sendHeld(), this.userContext = rr;
-        for (const [Zr, Wr] of Sr) this.pending.set(Zr, Wr);
+      save(dd, Od) {
+        dd !== this.userContext && this.sendHeld(), this.userContext = dd;
+        for (const [Wd, Fd] of Od) this.pending.set(Wd, Fd);
         if (null !== this.timer) return;
-        const Qr = this.lastSentAt + 1100 - Date.now();
-        Qr <= 0 ? this.send(rr) : (this.timer = setTimeout((() => {
+        const md = this.lastSentAt + 1100 - Date.now();
+        md <= 0 ? this.send(dd) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), Qr), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), md), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(rr) {
-        const Sr = Array.from(this.pending, (rr => {
-          let [Sr, Qr] = rr;
+      send(dd) {
+        const Od = Array.from(this.pending, (dd => {
+          let [Od, md] = dd;
           return {
-            fW: Sr,
-            EW: Qr
+            KF: Od,
+            hF: md
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), Wr.c.updateCosmetics(rr, Sr).catch((rr => {
-          console.error("Failed to update cosmetics", rr)
+        this.pending.clear(), this.lastSentAt = Date.now(), Fd.e.updateCosmetics(dd, Od).catch((dd => {
+          console.error("Failed to update cosmetics", dd)
         }))
       }
     };
 
-    function jr(rr, Sr) {
-      for (const [Qr, Zr] of Sr) rr.setPlayerCosmetics(Qr, Zr);
-      if (null === Zr.gameBridge.latest("connectedGame").websocketUrl) ar.save(rr, Sr);
+    function Xd(dd, Od) {
+      for (const [md, Wd] of Od) dd.setPlayerCosmetics(md, Wd);
+      if (null === Wd.gameBridge.latest("connectedGame").websocketUrl) Rd.save(dd, Od);
       else
-        for (const [Qr, Wr] of Sr) Zr.gameBridge.send("updateMyCosmetic", {
-          fW: Qr,
-          EW: Wr
+        for (const [md, Fd] of Od) Wd.gameBridge.send("updateMyCosmetic", {
+          KF: md,
+          hF: Fd
         })
     }
   },
-  35341: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Yr,
-      g: () => Er,
-      k: () => tr,
-      n: () => Ur
+  35428: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Td,
+      i: () => vd,
+      l: () => Hd,
+      m: () => qd
     });
-    var Zr = Qr(161),
-      Wr = Qr(1321),
-      ar = Qr(1262),
-      jr = Qr(1187),
-      Ir = Qr(1879);
-    const fr = {
+    var Wd = md(180),
+      Fd = md(1322),
+      Rd = md(1253),
+      Xd = md(1189),
+      Kd = md(1881);
+    const hd = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function Er(rr) {
-      return fr[rr]
+    function vd(dd) {
+      return hd[dd]
     }
 
-    function pr(rr) {
-      return (0, Ir.c)(rr) ? "outdated" : rr instanceof Zr.b ? 429 === rr.httpCode ? "busy" : "server" : "offline"
+    function Qd(dd) {
+      return (0, Kd.c)(dd) ? "outdated" : dd instanceof Wd.e ? 429 === dd.httpCode ? "busy" : "server" : "offline"
     }
 
-    function xr(rr, Sr, Qr) {
-      return (0, jr.postJsonWithMetricsCookiesAndJsonResponse)(`${ar.clientSideServerUrls.indexUrl}${Sr}`, Qr, {
+    function td(dd, Od, md) {
+      return (0, Xd.postJsonWithMetricsCookiesAndJsonResponse)(`${Rd.clientSideServerUrls.indexUrl}${Od}`, md, {
         retries: 3
-      }, rr.getMetricsCookies()).catch((rr => (console.error("Bad response from the server when trying to change name:", Sr, rr), {
+      }, dd.getMetricsCookies()).catch((dd => (console.error("Bad response from the server when trying to change name:", Od, dd), {
         outcome: "failed",
-        failure: pr(rr)
+        failure: Qd(dd)
       })))
     }
 
-    function mr(rr) {
-      return "outcome" in rr && "failed" === rr.outcome
+    function od(dd) {
+      return "outcome" in dd && "failed" === dd.outcome
     }
 
-    function Nr(rr) {
-      return console.error("Error when trying to get with new name from DB", rr), {
+    function Nd(dd) {
+      return console.error("Error when trying to get with new name from DB", dd), {
         outcome: "refused",
-        message: rr
+        message: dd
       }
     }
-    async function Ur(rr) {
-      const Sr = await xr(rr, "/index/name/random", {});
-      return mr(Sr) ? Sr : "err" in Sr ? Nr(Sr.err) : (rr.setPlayerName(Sr.name), {
+    async function qd(dd) {
+      const Od = await td(dd, "/index/name/random", {});
+      return od(Od) ? Od : "err" in Od ? Nd(Od.err) : (dd.setPlayerName(Od.name), {
         outcome: "changed",
-        name: Sr.name
+        name: Od.name
       })
     }
-    async function tr(rr, Sr) {
-      const Qr = await xr(rr, "/index/name/update", {
-        name: Sr
+    async function Hd(dd, Od) {
+      const md = await td(dd, "/index/name/update", {
+        name: Od
       });
-      return mr(Qr) ? Qr : "err" in Qr ? Nr(Qr.err) : Qr.nameExists ? {
+      return od(md) ? md : "err" in md ? Nd(md.err) : md.nameExists ? {
         outcome: "taken"
-      } : (rr.setPlayerName(Sr), {
+      } : (dd.setPlayerName(Od), {
         outcome: "changed",
-        name: Sr
+        name: Od
       })
     }
 
-    function hr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const Zr = 1 === Sr ? 1 : 10 ** (Sr - 1),
-        ar = String(Zr + Math.floor(Qr() * (10 ** Sr - Zr)));
-      return `${rr.slice(0,Wr.h-Sr)}${ar}`
+    function yd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const Wd = 1 === Od ? 1 : 10 ** (Od - 1),
+        Rd = String(Wd + Math.floor(md() * (10 ** Od - Wd)));
+      return `${dd.slice(0,Fd.g-Od)}${Rd}`
     }
-    const zr = [1, 2, 3, 4];
-    async function Yr(rr, Sr) {
-      const Qr = await tr(rr, Sr);
-      if ("taken" !== Qr.outcome) return Qr;
-      for (const Zr of zr) {
-        const Qr = hr(Sr, Zr),
-          Wr = await tr(rr, Qr);
-        if ("taken" !== Wr.outcome) return Wr
+    const bd = [1, 2, 3, 4];
+    async function Td(dd, Od) {
+      const md = await Hd(dd, Od);
+      if ("taken" !== md.outcome) return md;
+      for (const Wd of bd) {
+        const md = yd(Od, Wd),
+          Fd = await Hd(dd, md);
+        if ("taken" !== Fd.outcome) return Fd
       }
       return {
         outcome: "taken"
@@ -641,4 +641,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

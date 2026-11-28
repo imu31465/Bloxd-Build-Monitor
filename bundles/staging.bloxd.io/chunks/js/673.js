@@ -1,35 +1,35 @@
 export const id = 673;
 export const ids = [673];
 export const modules = {
-  64632: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      WorldCodeAiOutOfUsage: () => Ir
+  64799: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      WorldCodeAiOutOfUsage: () => Kd
     });
-    var Zr = Qr(1251),
-      Wr = Qr(3267),
-      ar = Qr(1576),
-      jr = Qr(1338);
+    var Wd = md(1238),
+      Fd = md(3277),
+      Rd = md(1572),
+      Xd = md(1341);
 
-    function Ir(rr) {
+    function Kd(dd) {
       let {
-        onGetSuperRank: Sr
-      } = rr;
+        onGetSuperRank: Od
+      } = dd;
       const {
-        t: Qr
-      } = (0, Zr.E)(), Ir = (0, Wr.r)(Date.now()), fr = Qr(Ir.nameKey);
-      return (0, jr.jsxs)("div", {
+        t: md
+      } = (0, Wd.G)(), Kd = (0, Fd.v)(Date.now()), hd = md(Kd.nameKey);
+      return (0, Xd.jsxs)("div", {
         className: "WorldCodeAiOutOfUsage",
-        children: [(0, jr.jsx)("p", {
+        children: [(0, Xd.jsx)("p", {
           className: "WorldCodeAiOutOfUsageText",
-          children: `You don't have any Super Bot.xd usage left - use Bot.xd or get ${fr} for more usage!`
-        }), (0, jr.jsx)(ar.p, {
+          children: `You don't have any Super Bot.xd usage left - use Bot.xd or get ${hd} for more usage!`
+        }), (0, Xd.jsx)(Rd.m, {
           className: "WorldCodeAiOutOfUsageButton",
-          onClick: Sr,
-          children: Qr(Ir.getKey)
+          onClick: Od,
+          children: md(Kd.getKey)
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

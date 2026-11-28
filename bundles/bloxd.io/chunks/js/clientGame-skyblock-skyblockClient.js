@@ -1,351 +1,351 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  5642: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => hr,
-      e: () => zr
+  5609: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => yd,
+      f: () => bd
     });
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(72),
-      jr = Qr(1251),
-      Ir = Qr(5649),
-      fr = Qr(2057),
-      Er = Qr(3404),
-      pr = Qr(5658),
-      xr = Qr(1338);
-    const mr = new WeakMap;
-    let Nr = 0;
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(66),
+      Xd = md(1238),
+      Kd = md(5616),
+      hd = md(2060),
+      vd = md(3403),
+      Qd = md(5620),
+      td = md(1341);
+    const od = new WeakMap;
+    let Nd = 0;
 
-    function Ur(rr) {
-      let Sr = mr.get(rr);
-      return void 0 === Sr && (Sr = Nr++, mr.set(rr, Sr)), Sr
+    function qd(dd) {
+      let Od = od.get(dd);
+      return void 0 === Od && (Od = Nd++, od.set(dd, Od)), Od
     }
 
-    function tr(rr) {
+    function Hd(dd) {
       let {
-        piece: Sr
-      } = rr;
-      return "space" === Sr.kind ? (0, xr.jsx)(xr.Fragment, {
-        children: Sr.text
-      }) : (0, xr.jsx)("span", {
+        piece: Od
+      } = dd;
+      return "space" === Od.kind ? (0, td.jsx)(td.Fragment, {
+        children: Od.text
+      }) : (0, td.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${Sr.delayMs}ms`
+          "--word-delay": `${Od.delayMs}ms`
         },
-        children: (0, xr.jsx)(Ir.e, {
-          text: "icon" === Sr.kind ? `[[${Sr.icon}]]` : Sr.text
+        children: (0, td.jsx)(Kd.c, {
+          text: "icon" === Od.kind ? `[[${Od.icon}]]` : Od.text
         })
       })
     }
 
-    function hr(rr) {
+    function yd(dd) {
       let {
-        display: Sr
-      } = rr;
+        display: Od
+      } = dd;
       const {
-        selectedLanguage: Qr
-      } = (0, jr.E)(), Zr = (0, ar.useMemo)((() => (0, pr.d)((0, pr.h)(Sr).plan.pieces)), [Sr, Qr.code]);
-      return (0, xr.jsxs)("div", {
-        className: Wr()("Dialogue", {
-          DialogueAnimateIn: !1 !== Sr.animateIn
+        selectedLanguage: md
+      } = (0, Xd.G)(), Wd = (0, Rd.useMemo)((() => (0, Qd.c)((0, Qd.e)(Od).plan.pieces)), [Od, md.code]);
+      return (0, td.jsxs)("div", {
+        className: Fd()("Dialogue", {
+          DialogueAnimateIn: !1 !== Od.animateIn
         }),
-        children: [Sr.speakerName && (0, xr.jsx)(fr.c, {
-          text: Sr.speakerName,
+        children: [Od.speakerName && (0, td.jsx)(hd.d, {
+          text: Od.speakerName,
           className: "DialogueSpeaker"
-        }), (0, xr.jsx)("p", {
+        }), (0, td.jsx)("p", {
           className: "DialogueLine",
-          children: Zr.map(((rr, Sr) => 1 === rr.length && "space" === rr[0].kind ? rr[0].text : (0, xr.jsx)("span", {
+          children: Wd.map(((dd, Od) => 1 === dd.length && "space" === dd[0].kind ? dd[0].text : (0, td.jsx)("span", {
             className: "DialogueGlue",
-            children: rr.map(((rr, Sr) => (0, xr.jsx)(tr, {
-              piece: rr
-            }, Sr)))
-          }, Sr)))
+            children: dd.map(((dd, Od) => (0, td.jsx)(Hd, {
+              piece: dd
+            }, Od)))
+          }, Od)))
         })]
       })
     }
-    const zr = (0, ar.memo)((function() {
-      const rr = (0, Er.l)("dialogue");
-      return (0, xr.jsx)("div", {
+    const bd = (0, Rd.memo)((function() {
+      const dd = (0, vd.j)("dialogue");
+      return (0, td.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: rr && (0, xr.jsx)(hr, {
-          display: rr
-        }, Ur(rr))
+        children: dd && (0, td.jsx)(yd, {
+          display: dd
+        }, qd(dd))
       })
     }))
   },
-  5649: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Ir
+  5616: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Kd
     });
-    var Zr = Qr(72),
-      Wr = Qr(360),
-      ar = Qr(2075),
-      jr = Qr(1338);
+    var Wd = md(66),
+      Fd = md(387),
+      Rd = md(2079),
+      Xd = md(1341);
 
-    function Ir(rr) {
+    function Kd(dd) {
       let {
-        text: Sr
-      } = rr;
-      const Qr = [];
-      let Ir = "";
-      return (0, Wr.gc)(Sr).forEach(((rr, Sr) => {
-        if ("string" === typeof rr || !(0, ar.h)(rr.icon)) return void(Ir += "string" === typeof rr ? rr : rr.icon);
-        const Wr = Math.max(0, Ir.trimEnd().search(/\S{1,12}$/));
-        Qr.push((0, jr.jsxs)(Zr.Fragment, {
-          children: [Ir.slice(0, Wr), (0, jr.jsxs)("span", {
+        text: Od
+      } = dd;
+      const md = [];
+      let Kd = "";
+      return (0, Fd.dc)(Od).forEach(((dd, Od) => {
+        if ("string" === typeof dd || !(0, Rd.f)(dd.icon)) return void(Kd += "string" === typeof dd ? dd : dd.icon);
+        const Fd = Math.max(0, Kd.trimEnd().search(/\S{1,12}$/));
+        md.push((0, Xd.jsxs)(Wd.Fragment, {
+          children: [Kd.slice(0, Fd), (0, Xd.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [Ir.slice(Wr), (0, jr.jsx)("span", {
+            children: [Kd.slice(Fd), (0, Xd.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": rr.icon,
-              children: (0, jr.jsx)(ar.d, {
-                itemName: rr.icon,
+              "aria-label": dd.icon,
+              children: (0, Xd.jsx)(Rd.c, {
+                itemName: dd.icon,
                 amount: 0
               })
             })]
           })]
-        }, Sr)), Ir = ""
-      })), Qr.push(Ir), (0, jr.jsx)(jr.Fragment, {
-        children: Qr
+        }, Od)), Kd = ""
+      })), md.push(Kd), (0, Xd.jsx)(Xd.Fragment, {
+        children: md
       })
     }
   },
-  5658: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Rr,
-      h: () => qr
+  5620: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => rd,
+      e: () => Ad
     });
-    var Zr = Qr(5667),
-      Wr = Qr(360);
-    const ar = 120,
-      jr = 260,
-      Ir = 1.15,
-      fr = 1.2,
-      Er = 2,
-      pr = 1.08,
-      xr = .8,
-      mr = .95,
-      Nr = 8,
-      Ur = "[\"')\\]\u300d\u300f\uff09]*",
-      tr = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Ur}$`),
-      hr = new RegExp(`[?\uff1f]${Ur}$`),
-      zr = new RegExp(`[!\uff01]${Ur}$`),
-      Yr = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      nr = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      er = new RegExp(`[${nr}]`),
-      Kr = new RegExp(`[${nr}]|[^${nr}]+`, "g"),
-      yr = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Wd = md(5623),
+      Fd = md(387);
+    const Rd = 120,
+      Xd = 260,
+      Kd = 1.15,
+      hd = 1.2,
+      vd = 2,
+      Qd = 1.08,
+      td = .8,
+      od = .95,
+      Nd = 8,
+      qd = "[\"')\\]\u300d\u300f\uff09]*",
+      Hd = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${qd}$`),
+      yd = new RegExp(`[?\uff1f]${qd}$`),
+      bd = new RegExp(`[!\uff01]${qd}$`),
+      Td = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      pd = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      Yd = new RegExp(`[${pd}]`),
+      gd = new RegExp(`[${pd}]|[^${pd}]+`, "g"),
+      wd = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Br(rr) {
-      let Sr = 2166136261;
-      for (let Qr = 0; Qr < rr.length; Qr++) Sr ^= rr.charCodeAt(Qr), Sr = Math.imul(Sr, 16777619);
-      return (Sr >>> 0) / 4294967295 * 2 - 1
+    function Ed(dd) {
+      let Od = 2166136261;
+      for (let md = 0; md < dd.length; md++) Od ^= dd.charCodeAt(md), Od = Math.imul(Od, 16777619);
+      return (Od >>> 0) / 4294967295 * 2 - 1
     }
 
-    function Tr(rr) {
-      var Sr;
-      if (er.test(rr)) return 1;
-      const Qr = rr.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Zr = Qr.replace(/[^0-9]/g, "");
-      if (Zr.length > 0 && !/\p{L}/u.test(Qr)) return Math.min(Zr.length, 4);
-      const Wr = null !== (Sr = Qr.match(yr)) && void 0 !== Sr ? Sr : [];
-      if (0 === Wr.length) {
-        var ar, jr;
-        const rr = null !== (ar = null === (jr = Qr.match(/\p{L}/gu)) || void 0 === jr ? void 0 : jr.length) && void 0 !== ar ? ar : 0;
-        return 0 === rr ? 0 : Math.min(Math.max(1, Math.round(rr / 2.5)), Nr)
+    function Jd(dd) {
+      var Od;
+      if (Yd.test(dd)) return 1;
+      const md = dd.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Wd = md.replace(/[^0-9]/g, "");
+      if (Wd.length > 0 && !/\p{L}/u.test(md)) return Math.min(Wd.length, 4);
+      const Fd = null !== (Od = md.match(wd)) && void 0 !== Od ? Od : [];
+      if (0 === Fd.length) {
+        var Rd, Xd;
+        const dd = null !== (Rd = null === (Xd = md.match(/\p{L}/gu)) || void 0 === Xd ? void 0 : Xd.length) && void 0 !== Rd ? Rd : 0;
+        return 0 === dd ? 0 : Math.min(Math.max(1, Math.round(dd / 2.5)), Nd)
       }
-      const Ir = Qr.replace(/[^\p{L}]/gu, ""),
-        fr = Wr.length > 1 && "e" === Wr.at(-1) && Ir.endsWith("e") && !Ir.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(rr.replace(/[^\p{L}]/gu, ""));
-      return Math.min(Wr.length - (fr ? 1 : 0), Nr)
+      const Kd = md.replace(/[^\p{L}]/gu, ""),
+        hd = Fd.length > 1 && "e" === Fd.at(-1) && Kd.endsWith("e") && !Kd.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(dd.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Fd.length - (hd ? 1 : 0), Nd)
     }
 
-    function vr(rr) {
-      return rr.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function Ud(dd) {
+      return dd.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Or(rr) {
-      const Sr = rr.replace(/[^\p{L}]/gu, "");
-      return Sr.length >= 2 && Sr === Sr.toUpperCase() && Sr !== Sr.toLowerCase()
+    function xd(dd) {
+      const Od = dd.replace(/[^\p{L}]/gu, "");
+      return Od.length >= 2 && Od === Od.toUpperCase() && Od !== Od.toLowerCase()
     }
 
-    function Lr(rr, Sr) {
-      var Qr;
-      const Nr = Sr && (0, Zr.n)(Sr),
-        Ur = null !== (Qr = null === Nr || void 0 === Nr ? void 0 : Nr.syllableMs) && void 0 !== Qr ? Qr : Zr.e,
-        nr = function(rr) {
-          const Sr = [];
-          for (const Zr of (0, Wr.gc)(rr))
-            if ("string" === typeof Zr)
-              for (const rr of Zr.split(/(\s+)/)) {
-                if ("" === rr) continue;
-                if (/^\s+$/.test(rr)) {
-                  Sr.push({
+    function Bd(dd, Od) {
+      var md;
+      const Nd = Od && (0, Wd.k)(Od),
+        qd = null !== (md = null === Nd || void 0 === Nd ? void 0 : Nd.syllableMs) && void 0 !== md ? md : Wd.d,
+        pd = function(dd) {
+          const Od = [];
+          for (const Wd of (0, Fd.dc)(dd))
+            if ("string" === typeof Wd)
+              for (const dd of Wd.split(/(\s+)/)) {
+                if ("" === dd) continue;
+                if (/^\s+$/.test(dd)) {
+                  Od.push({
                     kind: "space",
-                    text: rr
+                    text: dd
                   });
                   continue
                 }
-                if (!er.test(rr)) {
-                  Sr.push({
+                if (!Yd.test(dd)) {
+                  Od.push({
                     kind: "word",
-                    text: rr,
+                    text: dd,
                     delayMs: 0
                   });
                   continue
                 }
-                let Zr = !0;
-                for (const Wr of null !== (Qr = rr.match(Kr)) && void 0 !== Qr ? Qr : []) {
-                  var Qr;
-                  const rr = Sr.at(-1);
-                  Zr || "word" !== (null === rr || void 0 === rr ? void 0 : rr.kind) || er.test(Wr) || /[\p{L}\p{N}]/u.test(Wr) ? (Zr || Sr.push({
+                let Wd = !0;
+                for (const Fd of null !== (md = dd.match(gd)) && void 0 !== md ? md : []) {
+                  var md;
+                  const dd = Od.at(-1);
+                  Wd || "word" !== (null === dd || void 0 === dd ? void 0 : dd.kind) || Yd.test(Fd) || /[\p{L}\p{N}]/u.test(Fd) ? (Wd || Od.push({
                     kind: "space",
                     text: "\u200b"
-                  }), Sr.push({
+                  }), Od.push({
                     kind: "word",
-                    text: Wr,
+                    text: Fd,
                     delayMs: 0
-                  }), Zr = !1) : rr.text += Wr
+                  }), Wd = !1) : dd.text += Fd
                 }
-              } else Sr.push({
+              } else Od.push({
                 kind: "icon",
-                text: Zr.icon,
+                text: Wd.icon,
                 delayMs: 0
               });
-          return Sr
-        }(rr),
-        yr = [];
-      let Lr = [];
-      for (const Zr of nr) "space" !== Zr.kind && (Lr.push(Zr), tr.test(Zr.text) && (yr.push(Lr), Lr = []));
-      yr.push(Lr);
-      const lr = [];
-      let Xr = 0;
-      for (const Zr of yr) {
-        var Pr, Hr;
-        const rr = null !== (Pr = null === (Hr = Zr.at(-1)) || void 0 === Hr ? void 0 : Hr.text) && void 0 !== Pr ? Pr : "",
-          Sr = hr.test(rr),
-          Qr = zr.test(rr),
-          Wr = Zr.map((rr => "word" === rr.kind ? Tr(rr.text) : 1)),
-          nr = Wr.findLastIndex((rr => rr > 0));
-        for (const [hr, zr] of Zr.entries()) {
-          const rr = "word" === zr.kind,
-            Zr = Wr[hr];
-          zr.delayMs = Xr;
-          for (let Wr = 0; Nr && Wr < Zr; Wr++) {
+          return Od
+        }(dd),
+        wd = [];
+      let Bd = [];
+      for (const Wd of pd) "space" !== Wd.kind && (Bd.push(Wd), Hd.test(Wd.text) && (wd.push(Bd), Bd = []));
+      wd.push(Bd);
+      const Sd = [];
+      let sd = 0;
+      for (const Wd of wd) {
+        var ud, Vd;
+        const dd = null !== (ud = null === (Vd = Wd.at(-1)) || void 0 === Vd ? void 0 : Vd.text) && void 0 !== ud ? ud : "",
+          Od = yd.test(dd),
+          md = bd.test(dd),
+          Fd = Wd.map((dd => "word" === dd.kind ? Jd(dd.text) : 1)),
+          pd = Fd.findLastIndex((dd => dd > 0));
+        for (const [yd, bd] of Wd.entries()) {
+          const dd = "word" === bd.kind,
+            Wd = Fd[yd];
+          bd.delayMs = sd;
+          for (let Fd = 0; Nd && Fd < Wd; Fd++) {
             const {
-              intonation: ar
-            } = Nr;
-            let jr = nr > 0 ? -ar.declineSemitones * (hr / nr) : 0;
-            jr += Br(`${vr(zr.text)}|${Wr}`) * ar.variationSemitones;
-            const tr = Math.min(1, ar.variationSemitones);
-            let Yr = Nr.glideSemitones,
-              er = 1;
-            Qr && (jr += ar.exclaimLiftSemitones, er *= Ir), Sr && hr === nr && (jr += ar.questionRiseSemitones * (Zr > 1 ? .5 + .5 * Wr / (Zr - 1) : 1), Wr === Zr - 1 && (Yr = Math.abs(Yr) + ar.questionRiseSemitones / 2)), rr && Or(zr.text) && (jr += Er * tr, er *= fr), Zr > 1 && 0 === Wr && (jr += xr * tr, er *= pr), lr.push({
-              atMs: Xr + Wr * Ur,
-              semitones: jr,
-              glideSemitones: Yr,
-              durationMs: Wr < Zr - 1 ? Math.min(Nr.durationMs, Ur * mr) : Nr.durationMs,
-              level: er
+              intonation: Rd
+            } = Nd;
+            let Xd = pd > 0 ? -Rd.declineSemitones * (yd / pd) : 0;
+            Xd += Ed(`${Ud(bd.text)}|${Fd}`) * Rd.variationSemitones;
+            const Hd = Math.min(1, Rd.variationSemitones);
+            let Td = Nd.glideSemitones,
+              Yd = 1;
+            md && (Xd += Rd.exclaimLiftSemitones, Yd *= Kd), Od && yd === pd && (Xd += Rd.questionRiseSemitones * (Wd > 1 ? .5 + .5 * Fd / (Wd - 1) : 1), Fd === Wd - 1 && (Td = Math.abs(Td) + Rd.questionRiseSemitones / 2)), dd && xd(bd.text) && (Xd += vd * Hd, Yd *= hd), Wd > 1 && 0 === Fd && (Xd += td * Hd, Yd *= Qd), Sd.push({
+              atMs: sd + Fd * qd,
+              semitones: Xd,
+              glideSemitones: Td,
+              durationMs: Fd < Wd - 1 ? Math.min(Nd.durationMs, qd * od) : Nd.durationMs,
+              level: Yd
             })
           }
-          Xr += Zr * Ur + (tr.test(zr.text) ? jr : Yr.test(zr.text) ? ar : 0)
+          sd += Wd * qd + (Hd.test(bd.text) ? Xd : Td.test(bd.text) ? Rd : 0)
         }
       }
       return {
-        pieces: nr.map((rr => "space" === rr.kind ? rr : "icon" === rr.kind ? {
+        pieces: pd.map((dd => "space" === dd.kind ? dd : "icon" === dd.kind ? {
           kind: "icon",
-          icon: rr.text,
-          delayMs: rr.delayMs
+          icon: dd.text,
+          delayMs: dd.delayMs
         } : {
           kind: "word",
-          text: rr.text,
-          delayMs: rr.delayMs
+          text: dd.text,
+          delayMs: dd.delayMs
         })),
-        blips: lr
+        blips: Sd
       }
     }
-    var lr = Qr(1251),
-      Xr = Qr(1304),
-      Pr = Qr(2093);
+    var Sd = md(1238),
+      sd = md(1306),
+      ud = md(2094);
 
-    function Hr(rr) {
-      if ("string" === typeof rr) return rr;
-      const Sr = Xr.f.get().getCurrentLanguageCode();
-      return (0, lr.s)(Sr, rr.translationKey, (0, lr.p)(rr.params, Pr.b.shown))
+    function Vd(dd) {
+      if ("string" === typeof dd) return dd;
+      const Od = sd.f.get().getCurrentLanguageCode();
+      return (0, Sd.u)(Od, dd.translationKey, (0, Sd.s)(dd.params, ud.c.shown))
     }
 
-    function qr(rr) {
-      const Sr = void 0 === rr.voice ? null : (0, Zr.p)(rr.voice),
-        Qr = Sr && (0, Zr.n)(Sr);
+    function Ad(dd) {
+      const Od = void 0 === dd.voice ? null : (0, Wd.l)(dd.voice),
+        md = Od && (0, Wd.k)(Od);
       return {
-        plan: Lr(Hr(rr.line), Qr),
-        synth: Qr
+        plan: Bd(Vd(dd.line), md),
+        synth: md
       }
     }
 
-    function Rr(rr) {
-      const Sr = [];
-      let Qr = [];
-      for (const [Wr, ar] of rr.entries()) {
-        var Zr;
-        "space" === ar.kind && (" " !== ar.text || "icon" !== (null === (Zr = rr[Wr + 1]) || void 0 === Zr ? void 0 : Zr.kind)) ? (Qr.length > 0 && Sr.push(Qr), Sr.push([ar]), Qr = []) : Qr.push(ar)
+    function rd(dd) {
+      const Od = [];
+      let md = [];
+      for (const [Fd, Rd] of dd.entries()) {
+        var Wd;
+        "space" === Rd.kind && (" " !== Rd.text || "icon" !== (null === (Wd = dd[Fd + 1]) || void 0 === Wd ? void 0 : Wd.kind)) ? (md.length > 0 && Od.push(md), Od.push([Rd]), md = []) : md.push(Rd)
       }
-      return Qr.length > 0 && Sr.push(Qr), Sr
+      return md.length > 0 && Od.push(md), Od
     }
   },
-  40033: (rr, Sr, Qr) => {
-    function Zr(rr, Sr, Qr) {
-      const Zr = new Set,
-        Wr = new ResizeObserver(Qr),
-        ar = () => {
-          const Sr = new Set(document.querySelectorAll(rr));
-          let ar = !1;
-          for (const rr of Zr) Sr.has(rr) || (Wr.unobserve(rr), Zr.delete(rr), ar = !0);
-          for (const rr of Sr) Zr.has(rr) || (Wr.observe(rr), jr.observe(rr, {
+  40057: (dd, Od, md) => {
+    function Wd(dd, Od, md) {
+      const Wd = new Set,
+        Fd = new ResizeObserver(md),
+        Rd = () => {
+          const Od = new Set(document.querySelectorAll(dd));
+          let Rd = !1;
+          for (const dd of Wd) Od.has(dd) || (Fd.unobserve(dd), Wd.delete(dd), Rd = !0);
+          for (const dd of Od) Wd.has(dd) || (Fd.observe(dd), Xd.observe(dd, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), Zr.add(rr));
-          ar && Qr()
+          }), Wd.add(dd));
+          Rd && md()
         },
-        jr = new MutationObserver((Sr => {
-          Sr.some((rr => "attributes" === rr.type)) && Qr(), Sr.some((Sr => function(rr, Sr, Qr) {
-            if ("childList" !== rr.type) return !1;
-            for (const Zr of rr.addedNodes)
-              if (Zr instanceof Element && (Zr.matches(Sr) || Zr.querySelector(Sr))) return !0;
-            for (const Zr of rr.removedNodes)
-              if (Zr instanceof Element)
-                for (const rr of Qr)
-                  if (Zr.contains(rr)) return !0;
+        Xd = new MutationObserver((Od => {
+          Od.some((dd => "attributes" === dd.type)) && md(), Od.some((Od => function(dd, Od, md) {
+            if ("childList" !== dd.type) return !1;
+            for (const Wd of dd.addedNodes)
+              if (Wd instanceof Element && (Wd.matches(Od) || Wd.querySelector(Od))) return !0;
+            for (const Wd of dd.removedNodes)
+              if (Wd instanceof Element)
+                for (const dd of md)
+                  if (Wd.contains(dd)) return !0;
             return !1
-          }(Sr, rr, Zr))) && ar()
+          }(Od, dd, Wd))) && Rd()
         }));
-      jr.observe(document.body, {
+      Xd.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const Ir of Sr) Wr.observe(Ir);
-      return window.addEventListener("resize", Qr), ar(), Qr(), () => {
-        Wr.disconnect(), jr.disconnect(), window.removeEventListener("resize", Qr)
+      for (const Kd of Od) Fd.observe(Kd);
+      return window.addEventListener("resize", md), Rd(), md(), () => {
+        Fd.disconnect(), Xd.disconnect(), window.removeEventListener("resize", md)
       }
     }
-    Qr.d(Sr, {
-      b: () => Zr
+    md.d(Od, {
+      b: () => Wd
     })
   },
-  1e4: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Ir,
-      f: () => fr
+  10023: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Kd,
+      i: () => hd
     });
-    var Zr = Qr(26),
-      Wr = Qr(1422),
-      ar = Qr(109);
-    const jr = {
+    var Wd = md(29),
+      Fd = md(1415),
+      Rd = md(107);
+    const Xd = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -388,41 +388,41 @@ export const modules = {
       }
     };
 
-    function Ir() {
-      return (0, ar.isMobile)() && "function" === typeof navigator.vibrate
+    function Kd() {
+      return (0, Rd.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const fr = new class {
-      constructor(rr) {
-        this.deps = rr, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const hd = new class {
+      constructor(dd) {
+        this.deps = dd, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(rr, Sr) {
-        var Qr;
+      play(dd, Od) {
+        var md;
         if (!this.deps.enabled()) return;
-        const Zr = jr[rr],
-          Wr = null !== Sr && void 0 !== Sr ? Sr : Zr.pattern;
-        if (null === Wr) return void console.warn("No vibration pattern for", rr);
-        const ar = this.deps.now();
-        ar - this.lastAnyAt < 40 && Zr.priority < this.playingPriority || ar - (null !== (Qr = this.lastAt.get(rr)) && void 0 !== Qr ? Qr : -1 / 0) < Zr.minGapMs || ar < this.playingUntil && Zr.priority < this.playingPriority || (this.lastAt.set(rr, ar), this.lastAnyAt = ar, this.playingUntil = ar + Wr.reduce(((rr, Sr) => rr + Sr), 0), this.playingPriority = Zr.priority, this.deps.vibrate(Wr))
+        const Wd = Xd[dd],
+          Fd = null !== Od && void 0 !== Od ? Od : Wd.pattern;
+        if (null === Fd) return void console.warn("No vibration pattern for", dd);
+        const Rd = this.deps.now();
+        Rd - this.lastAnyAt < 40 && Wd.priority < this.playingPriority || Rd - (null !== (md = this.lastAt.get(dd)) && void 0 !== md ? md : -1 / 0) < Wd.minGapMs || Rd < this.playingUntil && Wd.priority < this.playingPriority || (this.lastAt.set(dd, Rd), this.lastAnyAt = Rd, this.playingUntil = Rd + Fd.reduce(((dd, Od) => dd + Od), 0), this.playingPriority = Wd.priority, this.deps.vibrate(Fd))
       }
     }({
-      vibrate: rr => {
-        navigator.vibrate([...rr])
+      vibrate: dd => {
+        navigator.vibrate([...dd])
       },
       now: () => performance.now(),
-      enabled: () => Ir() && Zr.c.get("isTouchScreen") && Zr.c.get("clientEscMenuOptions").vibration && !(0, Wr.e)()
+      enabled: () => Kd() && Wd.e.get("isTouchScreen") && Wd.e.get("clientEscMenuOptions").vibration && !(0, Fd.c)()
     })
   },
-  5667: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Wr,
-      h: () => Zr,
-      l: () => ar,
-      n: () => fr,
-      p: () => jr
+  5623: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Fd,
+      h: () => Wd,
+      j: () => Rd,
+      k: () => hd,
+      l: () => Xd
     });
-    const Zr = ["sine", "triangle", "square", "sawtooth"],
-      Wr = 55,
-      ar = {
+    const Wd = ["sine", "triangle", "square", "sawtooth"],
+      Fd = 55,
+      Rd = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -561,39 +561,39 @@ export const modules = {
         }
       };
 
-    function jr(rr) {
-      return "string" !== typeof rr ? rr : Object.hasOwn(ar, rr) ? ar[rr] : null
+    function Xd(dd) {
+      return "string" !== typeof dd ? dd : Object.hasOwn(Rd, dd) ? Rd[dd] : null
     }
 
-    function Ir(rr, Sr, Qr) {
-      return Math.min(Qr, Math.max(Sr, rr))
+    function Kd(dd, Od, md) {
+      return Math.min(md, Math.max(Od, dd))
     }
 
-    function fr(rr) {
-      const Sr = Ir(rr.durationMs, 10, 500),
-        Qr = Ir(rr.attackMs, 0, Sr),
+    function hd(dd) {
+      const Od = Kd(dd.durationMs, 10, 500),
+        md = Kd(dd.attackMs, 0, Od),
         {
-          intonation: Wr
-        } = rr;
+          intonation: Fd
+        } = dd;
       return {
-        waveform: Zr.includes(rr.waveform) ? rr.waveform : "sine",
-        pitchHz: Ir(rr.pitchHz, 20, 4e3),
-        glideSemitones: Ir(rr.glideSemitones, -24, 24),
-        durationMs: Sr,
-        attackMs: Qr,
-        releaseMs: Ir(rr.releaseMs, 0, Sr - Qr),
-        lowpassHz: null === rr.lowpassHz ? null : Ir(rr.lowpassHz, 20, 2e4),
-        volume: Ir(rr.volume, 0, 2),
+        waveform: Wd.includes(dd.waveform) ? dd.waveform : "sine",
+        pitchHz: Kd(dd.pitchHz, 20, 4e3),
+        glideSemitones: Kd(dd.glideSemitones, -24, 24),
+        durationMs: Od,
+        attackMs: md,
+        releaseMs: Kd(dd.releaseMs, 0, Od - md),
+        lowpassHz: null === dd.lowpassHz ? null : Kd(dd.lowpassHz, 20, 2e4),
+        volume: Kd(dd.volume, 0, 2),
         intonation: {
-          variationSemitones: Ir(Wr.variationSemitones, 0, 6),
-          declineSemitones: Ir(Wr.declineSemitones, 0, 12),
-          questionRiseSemitones: Ir(Wr.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: Ir(Wr.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Kd(Fd.variationSemitones, 0, 6),
+          declineSemitones: Kd(Fd.declineSemitones, 0, 12),
+          questionRiseSemitones: Kd(Fd.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Kd(Fd.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: Ir(rr.syllableMs, 25, 200)
+        syllableMs: Kd(dd.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

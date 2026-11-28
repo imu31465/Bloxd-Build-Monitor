@@ -1,104 +1,104 @@
 export const id = 214;
 export const ids = [214];
 export const modules = {
-  40710: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Zr
+  40732: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd
     });
-    class Zr {
-      constructor(rr, Sr) {
-        this.read = rr, this.apply = Sr, this.release = null
+    class Wd {
+      constructor(dd, Od) {
+        this.read = dd, this.apply = Od, this.release = null
       }
-      turn(rr, Sr) {
-        const Qr = null === this.release ? this.read() : this.release.transitionMs;
+      turn(dd, Od) {
+        const md = null === this.release ? this.read() : this.release.transitionMs;
         this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: Sr,
-          forcedCameraDirection: [rr[0], rr[1], rr[2]]
+          forcedCameraDirectionTransitionMs: Od,
+          forcedCameraDirection: [dd[0], dd[1], dd[2]]
         }), this.release = {
           timer: setTimeout((() => {
             this.stop(!0)
-          }), Sr + 100),
-          transitionMs: Qr
+          }), Od + 100),
+          transitionMs: md
         }
       }
       dispose() {
         this.stop(!0)
       }
-      stop(rr) {
-        null !== this.release && (clearTimeout(this.release.timer), rr && this.apply({
+      stop(dd) {
+        null !== this.release && (clearTimeout(this.release.timer), dd && this.apply({
           forcedCameraDirection: null,
           forcedCameraDirectionTransitionMs: this.release.transitionMs
         }), this.release = null)
       }
     }
   },
-  40221: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar,
-      h: () => Wr
+  40251: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Rd,
+      i: () => Fd
     });
-    const Zr = new Map;
+    const Wd = new Map;
 
-    function Wr(rr, Sr) {
-      Zr.set(rr, Sr)
+    function Fd(dd, Od) {
+      Wd.set(dd, Od)
     }
 
-    function ar(rr) {
-      return rr ? Zr.get(rr) : void 0
+    function Rd(dd) {
+      return dd ? Wd.get(dd) : void 0
     }
   },
-  37815: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => pr,
-      e: () => Ir,
-      f: () => Er,
-      h: () => fr,
-      k: () => nr
+  37915: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Qd,
+      h: () => Kd,
+      l: () => vd,
+      m: () => hd,
+      o: () => pd
     });
-    var Zr = Qr(692),
-      Wr = Qr(1904),
-      ar = Qr(5617);
-    class jr {
-      constructor(rr, Sr) {
-        this.width = rr, this.sx = Sr, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(rr * Sr)
+    var Wd = md(708),
+      Fd = md(1906),
+      Rd = md(5571);
+    class Xd {
+      constructor(dd, Od) {
+        this.width = dd, this.Mt = Od, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(dd * Od)
       }
-      push(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Qr = this.data,
-          Zr = this.next * this.width;
-        for (let Wr = 0; Wr < this.width; Wr++) Qr[Zr + Wr] = rr[Sr + Wr];
-        this.next = (this.next + 1) % this.sx, this.size = Math.min(this.size + 1, this.sx)
+      push(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const md = this.data,
+          Wd = this.next * this.width;
+        for (let Fd = 0; Fd < this.width; Fd++) md[Wd + Fd] = dd[Od + Fd];
+        this.next = (this.next + 1) % this.Mt, this.size = Math.min(this.size + 1, this.Mt)
       }
       rows() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const Qr = [],
-          Zr = (this.next - this.size + this.sx) % this.sx;
-        for (let Wr = 0; Wr < this.size; Wr++) {
-          const ar = (Zr + Wr) % this.sx * this.width;
-          this.data[ar + rr] >= Sr && Qr.push(Array.from(this.data.subarray(ar, ar + this.width)))
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const md = [],
+          Wd = (this.next - this.size + this.Mt) % this.Mt;
+        for (let Fd = 0; Fd < this.size; Fd++) {
+          const Rd = (Wd + Fd) % this.Mt * this.width;
+          this.data[Rd + dd] >= Od && md.push(Array.from(this.data.subarray(Rd, Rd + this.width)))
         }
-        return Qr
+        return md
       }
       lines() {
-        return this.rows().map((rr => rr.join(",")))
+        return this.rows().map((dd => dd.join(",")))
       }
     }
-    const Ir = 10,
-      fr = {
+    const Kd = 10,
+      hd = {
         idle: 0,
-        sp: 1,
-        tC: 2,
-        YC: 3,
-        Xh: 4
+        kQ: 1,
+        sV: 2,
+        rV: 3,
+        Ly: 4
       },
-      Er = {
+      vd = {
         none: 0,
         skipped: 1,
         paced: 2,
         drawn: 3
       },
-      pr = {
+      Qd = {
         lockGained: 1,
         lockLost: 2,
         lockError: 3,
@@ -112,91 +112,91 @@ export const modules = {
         stepsLost: 11,
         cameraSetsLost: 12
       },
-      xr = 12e3,
-      mr = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      Nr = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      Ur = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      tr = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      hr = ["nowMs", "change", "count"];
+      td = 12e3,
+      od = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      Nd = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      qd = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      Hd = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      yd = ["nowMs", "change", "count"];
 
-    function zr(rr) {
-      return "js" === rr ? pr.jsClient : pr.wasmClient
+    function bd(dd) {
+      return "js" === dd ? Qd.jsClient : Qd.wasmClient
     }
-    class Yr {
+    class Td {
       constructor() {
-        this.steps = new jr(Ir, xr), this.events = new jr(Nr.length, xr), this.frames = new jr(Ur.length, xr), this.cameraSets = new jr(ar.i, 256), this.changes = new jr(hr.length, 256)
+        this.steps = new Xd(Kd, td), this.events = new Xd(Nd.length, td), this.frames = new Xd(qd.length, td), this.cameraSets = new Xd(Rd.h, 256), this.changes = new Xd(yd.length, 256)
       }
     }
-    const nr = new class {
+    const pd = new class {
       constructor() {
-        this.rings = null, this.sample = new Float64Array(Nr.length), this.startedClient = null, this.startedAtMs = 0
+        this.rings = null, this.sample = new Float64Array(Nd.length), this.startedClient = null, this.startedAtMs = 0
       }
       get client() {
         return this.startedClient
       }
-      start(rr, Sr) {
-        this.startedClient = rr, this.startedAtMs = performance.now(), null !== this.rings ? this.change(zr(rr)) : Sr && this.allocate()
+      start(dd, Od) {
+        this.startedClient = dd, this.startedAtMs = performance.now(), null !== this.rings ? this.change(bd(dd)) : Od && this.allocate()
       }
       lockGained() {
-        this.allocate(), this.change(pr.lockGained)
+        this.allocate(), this.change(Qd.lockGained)
       }
       allocate() {
-        null === this.rings && (this.rings = new Yr, null !== this.startedClient && this.changeAt(this.startedAtMs, zr(this.startedClient), 1))
+        null === this.rings && (this.rings = new Td, null !== this.startedClient && this.changeAt(this.startedAtMs, bd(this.startedClient), 1))
       }
-      step(rr, Sr) {
-        var Qr;
-        rr[Sr + 6] !== fr.Xh && (null === (Qr = this.rings) || void 0 === Qr || Qr.steps.push(rr, Sr))
+      step(dd, Od) {
+        var md;
+        dd[Od + 6] !== hd.Ly && (null === (md = this.rings) || void 0 === md || md.steps.push(dd, Od))
       }
-      cameraSet(rr, Sr) {
-        var Qr;
-        null === (Qr = this.rings) || void 0 === Qr || Qr.cameraSets.push(rr, Sr)
+      cameraSet(dd, Od) {
+        var md;
+        null === (md = this.rings) || void 0 === md || md.cameraSets.push(dd, Od)
       }
-      mouseMove(rr, Sr) {
-        const Qr = this.rings;
-        if (null === Qr) return;
-        const Zr = this.sample;
-        Zr[0] = rr.timeStamp, Zr[1] = performance.now(), Zr[2] = rr.movementX, Zr[3] = rr.movementY, Zr[4] = Sr ? 1 : 0, Qr.events.push(Zr)
+      mouseMove(dd, Od) {
+        const md = this.rings;
+        if (null === md) return;
+        const Wd = this.sample;
+        Wd[0] = dd.timeStamp, Wd[1] = performance.now(), Wd[2] = dd.movementX, Wd[3] = dd.movementY, Wd[4] = Od ? 1 : 0, md.events.push(Wd)
       }
-      frame(rr, Sr, Qr, Zr) {
-        const Wr = this.rings;
-        if (null === Wr || Zr === Er.none) return;
-        const ar = this.sample;
-        ar[0] = performance.now(), ar[1] = rr, ar[2] = Sr, ar[3] = Qr, ar[4] = Zr, Wr.frames.push(ar)
+      frame(dd, Od, md, Wd) {
+        const Fd = this.rings;
+        if (null === Fd || Wd === vd.none) return;
+        const Rd = this.sample;
+        Rd[0] = performance.now(), Rd[1] = dd, Rd[2] = Od, Rd[3] = md, Rd[4] = Wd, Fd.frames.push(Rd)
       }
-      change(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), rr, Sr)
+      change(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), dd, Od)
       }
-      changeAt(rr, Sr, Qr) {
-        const Zr = this.rings;
-        if (null === Zr) return;
-        const Wr = this.sample;
-        Wr[0] = rr, Wr[1] = Sr, Wr[2] = Qr, Zr.changes.push(Wr)
+      changeAt(dd, Od, md) {
+        const Wd = this.rings;
+        if (null === Wd) return;
+        const Fd = this.sample;
+        Fd[0] = dd, Fd[1] = Od, Fd[2] = md, Wd.changes.push(Fd)
       }
       dumpText() {
-        var rr, Sr;
-        const Qr = this.rings;
-        return [`look records (${this.startedClient}): ${mr.join(",")}`, ...null !== (rr = null === Qr || void 0 === Qr ? void 0 : Qr.steps.lines()) && void 0 !== rr ? rr : [], `mousemove events: ${Nr.join(",")}`, ...null !== (Sr = null === Qr || void 0 === Qr ? void 0 : Qr.events.lines()) && void 0 !== Sr ? Sr : []].join("\n")
+        var dd, Od;
+        const md = this.rings;
+        return [`look records (${this.startedClient}): ${od.join(",")}`, ...null !== (dd = null === md || void 0 === md ? void 0 : md.steps.lines()) && void 0 !== dd ? dd : [], `mousemove events: ${Nd.join(",")}`, ...null !== (Od = null === md || void 0 === md ? void 0 : md.events.lines()) && void 0 !== Od ? Od : []].join("\n")
       }
-      toJson(rr, Sr) {
-        var Qr;
-        const Wr = rr - 6e4,
-          ar = this.rings,
-          jr = function(rr, Sr) {
-            var Qr;
-            let Zr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const ar = null !== (Qr = null === rr || void 0 === rr ? void 0 : rr.rows(Zr, Wr)) && void 0 !== Qr ? Qr : [];
+      toJson(dd, Od) {
+        var md;
+        const Fd = dd - 6e4,
+          Rd = this.rings,
+          Xd = function(dd, Od) {
+            var md;
+            let Wd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const Rd = null !== (md = null === dd || void 0 === dd ? void 0 : dd.rows(Wd, Fd)) && void 0 !== md ? md : [];
             return {
-              columns: Sr,
-              fromMs: 0 === ar.length ? null : ar[0][Zr],
-              rows: ar
+              columns: Od,
+              fromMs: 0 === Rd.length ? null : Rd[0][Wd],
+              rows: Rd
             }
           };
         return {
-          version: Zr.e,
-          client: null !== (Qr = this.startedClient) && void 0 !== Qr ? Qr : "not started",
+          version: Wd.c,
+          client: null !== (md = this.startedClient) && void 0 !== md ? md : "not started",
           savedAt: (new Date).toISOString(),
-          savedAtMs: rr,
+          savedAtMs: dd,
           keptMs: 6e4,
           page: window.location.href,
           userAgent: navigator.userAgent,
@@ -205,52 +205,52 @@ export const modules = {
             width: window.screen.width,
             height: window.screen.height
           },
-          Ez: null !== document.pointerLockElement,
+          tb: null !== document.pointerLockElement,
           visibility: document.visibilityState,
-          ...Sr,
-          outcomes: fr,
-          frameKinds: Er,
-          changes: pr,
-          lookSteps: jr(null === ar || void 0 === ar ? void 0 : ar.steps, mr),
-          mouseMoves: jr(null === ar || void 0 === ar ? void 0 : ar.events, Nr, 1),
-          frames: jr(null === ar || void 0 === ar ? void 0 : ar.frames, Ur),
-          cameraSets: jr(null === ar || void 0 === ar ? void 0 : ar.cameraSets, tr),
-          pageChanges: jr(null === ar || void 0 === ar ? void 0 : ar.changes, hr)
+          ...Od,
+          outcomes: hd,
+          frameKinds: vd,
+          changes: Qd,
+          lookSteps: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.steps, od),
+          mouseMoves: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.events, Nd, 1),
+          frames: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.frames, qd),
+          cameraSets: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.cameraSets, Hd),
+          pageChanges: Xd(null === Rd || void 0 === Rd ? void 0 : Rd.changes, yd)
         }
       }
-      save(rr) {
-        const Sr = JSON.stringify(this.toJson(performance.now(), rr));
-        (0, Wr.c)(new Blob([Sr], {
+      save(dd) {
+        const Od = JSON.stringify(this.toJson(performance.now(), dd));
+        (0, Fd.e)(new Blob([Od], {
           type: "application/json"
         }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
       }
     }
   },
-  41299: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Wr
+  41306: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Fd
     });
-    var Zr = Qr(39715);
+    var Wd = md(39750);
 
-    function Wr(rr, Sr, Qr) {
-      var Wr, ar, jr, Ir, fr, Er, pr;
-      const xr = (0, Zr.b)(rr, Sr, Qr[0], Qr[1], Qr[2]),
-        mr = xr ? null !== (Wr = xr.textCell) && void 0 !== Wr ? Wr : xr.rect.anchor : Qr,
-        Nr = Sr(mr[0], mr[1], mr[2]);
+    function Fd(dd, Od, md) {
+      var Fd, Rd, Xd, Kd, hd, vd, Qd;
+      const td = (0, Wd.e)(dd, Od, md[0], md[1], md[2]),
+        od = td ? null !== (Fd = td.textCell) && void 0 !== Fd ? Fd : td.rect.anchor : md,
+        Nd = Od(od[0], od[1], od[2]);
       return {
-        pos: [Qr[0], Qr[1], Qr[2]],
-        noticeboardSpan: xr && {
-          width: xr.rect.width,
-          height: xr.rect.height
+        pos: [md[0], md[1], md[2]],
+        noticeboardSpan: td && {
+          width: td.rect.width,
+          height: td.rect.height
         },
-        text: null !== (ar = null === Nr || void 0 === Nr || null === (jr = Nr.persisted) || void 0 === jr || null === (Ir = jr.shared) || void 0 === Ir ? void 0 : Ir.text) && void 0 !== ar ? ar : "",
-        textSize: null !== (fr = null === Nr || void 0 === Nr || null === (Er = Nr.persisted) || void 0 === Er || null === (pr = Er.shared) || void 0 === pr ? void 0 : pr.textSize) && void 0 !== fr ? fr : null
+        text: null !== (Rd = null === Nd || void 0 === Nd || null === (Xd = Nd.persisted) || void 0 === Xd || null === (Kd = Xd.shared) || void 0 === Kd ? void 0 : Kd.text) && void 0 !== Rd ? Rd : "",
+        textSize: null !== (hd = null === Nd || void 0 === Nd || null === (vd = Nd.persisted) || void 0 === vd || null === (Qd = vd.shared) || void 0 === Qd ? void 0 : Qd.textSize) && void 0 !== hd ? hd : null
       }
     }
   },
-  40031: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      switch (rr.kind) {
+  40048: (dd, Od, md) => {
+    function Wd(dd) {
+      switch (dd.kind) {
         case void 0:
         case "flatEmissive":
           return !1;
@@ -259,401 +259,401 @@ export const modules = {
           return !0
       }
     }
-    Qr.d(Sr, {
-      b: () => Wr,
-      c: () => ar,
-      f: () => Zr
+    md.d(Od, {
+      b: () => Fd,
+      f: () => Rd,
+      i: () => Wd
     });
-    const Wr = 4,
-      ar = 3
+    const Fd = 4,
+      Rd = 3
   },
-  40739: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Wr,
-      f: () => ar
+  40765: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Fd,
+      g: () => Rd
     });
-    var Zr = Qr(379);
-    const Wr = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "greenville", "hideseek", "luckyBedwars", "murderMystery", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "secretSanta", "shooting", "skyIslands", "skyblock", "tsunami"]);
-    class ar {
-      constructor(rr) {
-        this.importGame = rr, this.loads = new Map, this.loaded = new Map
+    var Wd = md(405);
+    const Fd = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "greenville", "hideseek", "luckyBedwars", "murderMystery", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "secretSanta", "shooting", "skyIslands", "skyblock", "tsunami"]);
+    class Rd {
+      constructor(dd) {
+        this.importGame = dd, this.loads = new Map, this.loaded = new Map
       }
-      load(rr) {
-        const Sr = (0, Zr.Mb)(rr);
-        if (!Wr.has(Sr)) return Promise.resolve(void 0);
-        let Qr = this.loads.get(Sr);
-        return Qr || (Qr = this.importGame(Sr).then((rr => {
-          const Qr = rr.default;
-          if ("function" !== typeof Qr) throw new Error(`${Sr}'s client code has no default-exported factory`);
-          return this.loaded.set(Sr, Qr), Qr
-        })).catch((rr => {
-          throw this.loads.delete(Sr), rr
-        })), this.loads.set(Sr, Qr)), Qr
+      load(dd) {
+        const Od = (0, Wd.Gb)(dd);
+        if (!Fd.has(Od)) return Promise.resolve(void 0);
+        let md = this.loads.get(Od);
+        return md || (md = this.importGame(Od).then((dd => {
+          const md = dd.default;
+          if ("function" !== typeof md) throw new Error(`${Od}'s client code has no default-exported factory`);
+          return this.loaded.set(Od, md), md
+        })).catch((dd => {
+          throw this.loads.delete(Od), dd
+        })), this.loads.set(Od, md)), md
       }
-      loadedFactory(rr) {
-        const Sr = (0, Zr.Mb)(rr);
-        if (!Wr.has(Sr)) return;
-        const Qr = this.loaded.get(Sr);
-        if (!Qr) throw new Error(`${Sr}'s client code started before it loaded`);
-        return Qr
+      loadedFactory(dd) {
+        const Od = (0, Wd.Gb)(dd);
+        if (!Fd.has(Od)) return;
+        const md = this.loaded.get(Od);
+        if (!md) throw new Error(`${Od}'s client code started before it loaded`);
+        return md
       }
     }
   },
-  40736: (rr, Sr, Qr) => {
-    function Zr(rr, Sr) {
+  40763: (dd, Od, md) => {
+    function Wd(dd, Od) {
       return Object.values({
-        ...rr,
-        ...Sr
-      }).filter((rr => null !== rr))
+        ...dd,
+        ...Od
+      }).filter((dd => null !== dd))
     }
-    Qr.d(Sr, {
-      c: () => Zr
+    md.d(Od, {
+      e: () => Wd
     })
   },
-  41303: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => jr
+  41310: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Xd
     });
-    var Zr = Qr(5878),
-      Wr = Qr(35472),
-      ar = Qr(4489);
+    var Wd = md(5819),
+      Fd = md(35549),
+      Rd = md(4509);
 
-    function jr(rr) {
-      if (rr === Zr.e) return 0;
-      const Sr = (0, ar.e)(rr);
-      if (void 0 !== Sr && Sr <= Wr.MAX_BLOCK_ID) return Sr;
-      const Qr = (0, ar.e)(rr.split("|")[0]);
-      if (void 0 !== Qr && Qr <= Wr.MAX_BLOCK_ID && (0, Wr.rootMetaDescOf)(Qr) === rr) return Qr;
-      throw new Error(`Invalid block name. You sent ${rr}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
+    function Xd(dd) {
+      if (dd === Wd.e) return 0;
+      const Od = (0, Rd.d)(dd);
+      if (void 0 !== Od && Od <= Fd.MAX_BLOCK_ID) return Od;
+      const md = (0, Rd.d)(dd.split("|")[0]);
+      if (void 0 !== md && md <= Fd.MAX_BLOCK_ID && (0, Fd.rootMetaDescOf)(md) === dd) return md;
+      throw new Error(`Invalid block name. You sent ${dd}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
     }
   },
-  40789: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Wr
+  40812: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Fd
     });
-    var Zr = Qr(26);
-    class Wr {
-      constructor(rr) {
-        this.screen = rr, this.hidesHud = !1
+    var Wd = md(29);
+    class Fd {
+      constructor(dd) {
+        this.screen = dd, this.hidesHud = !1
       }
-      show(rr, Sr) {
-        this.screen.setFade(rr.colour, rr.alpha), this.screen.setLetterbox(!0 === Sr.letterbox, rr.alpha < 1), this.setHudHidden(!0 === Sr.hideHud)
+      show(dd, Od) {
+        this.screen.setFade(dd.colour, dd.alpha), this.screen.setLetterbox(!0 === Od.letterbox, dd.alpha < 1), this.setHudHidden(!0 === Od.hideHud)
       }
       clear() {
         this.screen.clear(), this.setHudHidden(!1)
       }
-      setHudHidden(rr) {
-        this.hidesHud !== rr && (this.hidesHud = rr, Zr.c.set({
-          isUiHiddenByCamera: rr
+      setHudHidden(dd) {
+        this.hidesHud !== dd && (this.hidesHud = dd, Wd.e.set({
+          isUiHiddenByCamera: dd
         }))
       }
     }
   },
-  40781: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => ar,
-      c: () => Wr
+  40808: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      c: () => Fd
     });
-    var Zr = Qr(38207);
+    var Wd = md(38295);
 
-    function Wr(rr) {
-      var Sr;
-      const Qr = "default" === rr.mode ? "movement" : null !== (Sr = rr.playerFacing) && void 0 !== Sr ? Sr : "movement";
-      return "cursor" === Qr ? {
-        facing: Qr,
+    function Fd(dd) {
+      var Od;
+      const md = "default" === dd.mode ? "movement" : null !== (Od = dd.playerFacing) && void 0 !== Od ? Od : "movement";
+      return "cursor" === md ? {
+        facing: md,
         mouseTurns: null
       } : {
-        facing: Qr,
-        mouseTurns: "default" !== rr.mode && void 0 !== rr.playerLook ? "look" : "view"
+        facing: md,
+        mouseTurns: "default" !== dd.mode && void 0 !== dd.playerLook ? "look" : "view"
       }
     }
 
-    function ar(rr, Sr, Qr, Wr, ar, jr) {
-      return jr.xR = 0, jr.yR = 0, jr.pointedAt = void 0, void 0 !== Wr ? ar ? (jr.pointedAt = Wr, rr) : (0, Zr.q)(Wr.heading) : ar ? (jr.xR = Sr, jr.yR = Qr, rr) : (0, Zr.q)(rr + Sr)
+    function Rd(dd, Od, md, Fd, Rd, Xd) {
+      return Xd.mV = 0, Xd.RV = 0, Xd.pointedAt = void 0, void 0 !== Fd ? Rd ? (Xd.pointedAt = Fd, dd) : (0, Wd.w)(Fd.heading) : Rd ? (Xd.mV = Od, Xd.RV = md, dd) : (0, Wd.w)(dd + Od)
     }
   },
-  40761: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => wr
+  40789: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => ed
     });
-    var Zr = Qr(40770),
-      Wr = Qr(38207),
-      ar = Qr(38457);
+    var Wd = md(40797),
+      Fd = md(38295),
+      Rd = md(38524);
 
-    function jr(rr, Sr, Qr, Zr) {
-      if (!(Zr > 0)) return Sr;
-      const Wr = Sr > rr ? Math.min(Sr, rr + Qr / Zr) : Math.max(Sr, rr - Qr / Zr);
-      return Math.abs(Sr - Wr) < 1e-9 ? Sr : Wr
+    function Xd(dd, Od, md, Wd) {
+      if (!(Wd > 0)) return Od;
+      const Fd = Od > dd ? Math.min(Od, dd + md / Wd) : Math.max(Od, dd - md / Wd);
+      return Math.abs(Od - Fd) < 1e-9 ? Od : Fd
     }
-    class Ir {
+    class Kd {
       constructor() {
-        this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.gR = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: Zr.d,
+        this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.XV = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
+          colour: Wd.d,
           alpha: 0
         }
       }
       getScreen() {
         return this.screen
       }
-      fadeOut(rr) {
-        !this.isGoingOut() && this.sinceTurnMs < Zr.j.minFadeTurnMs ? this.waiting = {
+      fadeOut(dd) {
+        !this.isGoingOut() && this.sinceTurnMs < Wd.l.minFadeTurnMs ? this.waiting = {
           turn: "out",
-          transition: rr
-        } : (this.waiting = null, this.startOut(rr))
+          transition: dd
+        } : (this.waiting = null, this.startOut(dd))
       }
-      fadeIn(rr) {
-        this.isGoingOut() ? this.sinceTurnMs < Zr.j.minFadeTurnMs ? this.waiting = {
+      fadeIn(dd) {
+        this.isGoingOut() ? this.sinceTurnMs < Wd.l.minFadeTurnMs ? this.waiting = {
           turn: "in",
-          minMs: rr
-        } : (this.waiting = null, this.startIn(rr)) : this.waiting = null
+          minMs: dd
+        } : (this.waiting = null, this.startIn(dd)) : this.waiting = null
       }
-      advance(rr) {
-        const Sr = this.waiting;
-        if (null === Sr) return this.step(rr);
-        const Qr = Zr.j.minFadeTurnMs - this.sinceTurnMs;
-        if (Qr > rr) return this.step(rr);
-        const Wr = this.step(Qr);
-        return this.waiting = null, "out" === Sr.turn ? this.startOut(Sr.transition) : this.startIn(Sr.minMs), this.step(rr - Qr) || Wr
+      advance(dd) {
+        const Od = this.waiting;
+        if (null === Od) return this.step(dd);
+        const md = Wd.l.minFadeTurnMs - this.sinceTurnMs;
+        if (md > dd) return this.step(dd);
+        const Fd = this.step(md);
+        return this.waiting = null, "out" === Od.turn ? this.startOut(Od.transition) : this.startIn(Od.minMs), this.step(dd - md) || Fd
       }
       isGoingOut() {
         return "out" === this.phase || "hold" === this.phase
       }
-      startOut(rr) {
-        ("in" === this.phase || null === this.phase && this.clearMs < Zr.j.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = rr.colour), this.outMs = rr.outMs, this.holdMs = rr.holdMs, this.inMs = rr.inMs
+      startOut(dd) {
+        ("in" === this.phase || null === this.phase && this.clearMs < Wd.l.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = dd.colour), this.outMs = dd.outMs, this.holdMs = dd.holdMs, this.inMs = dd.inMs
       }
-      startIn(rr) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(rr, this.inMs)
+      startIn(dd) {
+        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(dd, this.inMs)
       }
-      step(rr) {
-        const Sr = this.screen;
-        this.sinceTurnMs += rr, null === this.phase && (this.clearMs += rr);
-        let Qr = !1,
-          Wr = rr;
+      step(dd) {
+        const Od = this.screen;
+        this.sinceTurnMs += dd, null === this.phase && (this.clearMs += dd);
+        let md = !1,
+          Fd = dd;
         if ("out" === this.phase) {
-          const Zr = (1 - Sr.alpha) * this.outMs;
-          if (Sr.alpha = jr(Sr.alpha, 1, rr, this.outMs), Sr.alpha < 1) return !1;
-          this.phase = "hold", this.gR = 0, Wr = Math.max(0, rr - Zr), Qr = !0
+          const Wd = (1 - Od.alpha) * this.outMs;
+          if (Od.alpha = Xd(Od.alpha, 1, dd, this.outMs), Od.alpha < 1) return !1;
+          this.phase = "hold", this.XV = 0, Fd = Math.max(0, dd - Wd), md = !0
         }
-        let ar = rr;
+        let Rd = dd;
         if ("hold" === this.phase) {
-          this.gR += Wr;
-          const rr = Math.min(this.gR - this.holdMs, this.sinceTurnMs - Zr.j.minFadeTurnMs);
-          if (rr < 0 || Qr) return Qr;
-          this.phase = "in", this.sinceTurnMs = rr, ar = rr
+          this.XV += Fd;
+          const dd = Math.min(this.XV - this.holdMs, this.sinceTurnMs - Wd.l.minFadeTurnMs);
+          if (dd < 0 || md) return md;
+          this.phase = "in", this.sinceTurnMs = dd, Rd = dd
         }
-        return "in" === this.phase && (Sr.alpha = jr(Sr.alpha, 0, ar, this.inMs), Sr.alpha <= 0 && (this.phase = null, this.clearMs = 0)), Qr
+        return "in" === this.phase && (Od.alpha = Xd(Od.alpha, 0, Rd, this.inMs), Od.alpha <= 0 && (this.phase = null, this.clearMs = 0)), md
       }
     }
-    var fr = Qr(40748),
-      Er = Qr(40775),
-      pr = Qr(2049),
-      xr = Qr(38133);
+    var hd = md(40780),
+      vd = md(40802),
+      Qd = md(2057),
+      td = md(38222);
 
-    function mr(rr, Sr) {
-      for (let Qr = 0; Qr < Sr.length; Qr++) Sr[Qr] = rr[Qr]
+    function od(dd, Od) {
+      for (let md = 0; md < Od.length; md++) Od[md] = dd[md]
     }
 
-    function Nr(rr, Sr) {
-      var Qr;
-      return null !== (Qr = rr.fov) && void 0 !== Qr ? Qr : Sr.getDefaultFov()
+    function Nd(dd, Od) {
+      var md;
+      return null !== (md = dd.fov) && void 0 !== md ? md : Od.getDefaultFov()
     }
 
-    function Ur(rr, Sr, Qr, Zr, Wr) {
-      const ar = 2 / Zr,
-        jr = Math.exp(-ar * Wr);
-      for (let Ir = 0; Ir < rr.length; Ir++) {
-        const Zr = rr[Ir] - Qr[Ir],
-          fr = (Sr[Ir] + ar * Zr) * Wr;
-        rr[Ir] = Qr[Ir] + (Zr + fr) * jr, Sr[Ir] = (Sr[Ir] - ar * fr) * jr
+    function qd(dd, Od, md, Wd, Fd) {
+      const Rd = 2 / Wd,
+        Xd = Math.exp(-Rd * Fd);
+      for (let Kd = 0; Kd < dd.length; Kd++) {
+        const Wd = dd[Kd] - md[Kd],
+          hd = (Od[Kd] + Rd * Wd) * Fd;
+        dd[Kd] = md[Kd] + (Wd + hd) * Xd, Od[Kd] = (Od[Kd] - Rd * hd) * Xd
       }
     }
-    class tr {
-      constructor(rr, Sr, Qr, Zr) {
-        var ar, jr, Ir, fr, Er;
-        this.settings = rr, this.qx = Sr, this.targets = Qr, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.Lh = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
+    class Hd {
+      constructor(dd, Od, md, Wd) {
+        var Rd, Xd, Kd, hd, vd;
+        this.settings = dd, this.Bt = Od, this.targets = md, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.Gy = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
           heading: 0,
           pitch: 0
         }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, Wr.q)((0, pr.k)(null !== (ar = rr.viewHeading) && void 0 !== ar ? ar : 0)),
-          pitch: (0, Wr.i)((0, pr.k)(null !== (jr = rr.viewElevation) && void 0 !== jr ? jr : 45))
-        }, this.closestDistance = null !== (Ir = rr.closestDistance) && void 0 !== Ir ? Ir : Math.min(6, null !== (fr = rr.furthestDistance) && void 0 !== fr ? fr : 1 / 0), this.furthestDistance = null !== (Er = rr.furthestDistance) && void 0 !== Er ? Er : Math.max(64, this.closestDistance);
-        const xr = (0, Wr.f)(this.base.heading, this.base.pitch, this.forward),
-          mr = Zr.position,
-          Nr = this.closestDistance;
-        this.goal = [mr[0] + xr[0] * Nr, mr[1] + xr[1] * Nr, mr[2] + xr[2] * Nr, Nr, this.base.heading, this.base.pitch]
+          heading: (0, Fd.w)((0, Qd.n)(null !== (Rd = dd.viewHeading) && void 0 !== Rd ? Rd : 0)),
+          pitch: (0, Fd.h)((0, Qd.n)(null !== (Xd = dd.viewElevation) && void 0 !== Xd ? Xd : 45))
+        }, this.closestDistance = null !== (Kd = dd.closestDistance) && void 0 !== Kd ? Kd : Math.min(6, null !== (hd = dd.furthestDistance) && void 0 !== hd ? hd : 1 / 0), this.furthestDistance = null !== (vd = dd.furthestDistance) && void 0 !== vd ? vd : Math.max(64, this.closestDistance);
+        const td = (0, Fd.g)(this.base.heading, this.base.pitch, this.forward),
+          od = Wd.position,
+          Nd = this.closestDistance;
+        this.goal = [od[0] + td[0] * Nd, od[1] + td[1] * Nd, od[2] + td[2] * Nd, Nd, this.base.heading, this.base.pitch]
       }
-      update(rr, Sr, Qr) {
-        var Zr, ar;
-        this.placeGoal(null !== (Zr = this.settings.fov) && void 0 !== Zr ? Zr : this.qx.getBaseFov()), this.goal[4] = (0, Wr.v)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const jr = null !== (ar = this.settings.smoothMs) && void 0 !== ar ? ar : 400;
-        !this.started || jr < 1 ? (mr(this.goal, this.smoothed), this.Lh.fill(0), this.started = !0) : Ur(this.smoothed, this.Lh, this.goal, jr, rr), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, Wr.i)(this.smoothed[5]), Sr.apply(this.angles, Qr);
-        const Ir = (0, Wr.f)(Qr.heading, Qr.pitch, this.forward);
-        for (let Wr = 0; Wr < 3; Wr++) Qr.position[Wr] = this.smoothed[Wr] - Ir[Wr] * this.smoothed[3];
-        Qr.fov = Nr(this.settings, this.qx)
+      update(dd, Od, md) {
+        var Wd, Rd;
+        this.placeGoal(null !== (Wd = this.settings.fov) && void 0 !== Wd ? Wd : this.Bt.getBaseFov()), this.goal[4] = (0, Fd.B)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
+        const Xd = null !== (Rd = this.settings.smoothMs) && void 0 !== Rd ? Rd : 400;
+        !this.started || Xd < 1 ? (od(this.goal, this.smoothed), this.Gy.fill(0), this.started = !0) : qd(this.smoothed, this.Gy, this.goal, Xd, dd), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, Fd.h)(this.smoothed[5]), Od.apply(this.angles, md);
+        const Kd = (0, Fd.g)(md.heading, md.pitch, this.forward);
+        for (let Fd = 0; Fd < 3; Fd++) md.position[Fd] = this.smoothed[Fd] - Kd[Fd] * this.smoothed[3];
+        md.fov = Nd(this.settings, this.Bt)
       }
-      continueFrom(rr) {
-        rr instanceof tr && (mr(rr.goal, this.goal), mr(rr.smoothed, this.smoothed), mr(rr.Lh, this.Lh), this.framedTargets = rr.framedTargets, this.started = rr.started)
+      continueFrom(dd) {
+        dd instanceof Hd && (od(dd.goal, this.goal), od(dd.smoothed, this.smoothed), od(dd.Gy, this.Gy), this.framedTargets = dd.framedTargets, this.started = dd.started)
       }
       reset() {
-        this.Lh.fill(0), this.started = !1
+        this.Gy.fill(0), this.started = !1
       }
-      placeGoal(rr) {
-        var Sr;
-        let Qr = 0;
-        for (const pr of this.settings.targets) {
-          const rr = this.targets.currentAimPoint(pr);
-          rr && (0, fr.i)(rr, this.pointAt(Qr++))
+      placeGoal(dd) {
+        var Od;
+        let md = 0;
+        for (const Qd of this.settings.targets) {
+          const dd = this.targets.currentAimPoint(Qd);
+          dd && (0, hd.i)(dd, this.pointAt(md++))
         }
-        if (Qr > 0) this.framedTargets = !0;
+        if (md > 0) this.framedTargets = !0;
         else if (!this.framedTargets) {
-          const rr = this.targets.aimPoint(this.qx.localPlayerId);
-          rr && (0, fr.i)(rr, this.pointAt(Qr++))
+          const dd = this.targets.aimPoint(this.Bt.localPlayerId);
+          dd && (0, hd.i)(dd, this.pointAt(md++))
         }
-        const Zr = this.goal;
-        if (0 === Qr) return void(Zr[3] = this.withinDistances(Zr[3]));
-        for (let fr = 0; fr < 3; fr++) {
-          let rr = 1 / 0,
-            Sr = -1 / 0;
-          for (let Zr = 0; Zr < Qr; Zr++) rr = Math.min(rr, this.points[Zr][fr]), Sr = Math.max(Sr, this.points[Zr][fr]);
-          Zr[fr] = (rr + Sr) / 2
+        const Wd = this.goal;
+        if (0 === md) return void(Wd[3] = this.withinDistances(Wd[3]));
+        for (let hd = 0; hd < 3; hd++) {
+          let dd = 1 / 0,
+            Od = -1 / 0;
+          for (let Wd = 0; Wd < md; Wd++) dd = Math.min(dd, this.points[Wd][hd]), Od = Math.max(Od, this.points[Wd][hd]);
+          Wd[hd] = (dd + Od) / 2
         }
-        let Wr = 0;
-        for (let fr = 0; fr < Qr; fr++) {
-          const rr = this.points[fr];
-          Wr = Math.max(Wr, Math.hypot(rr[0] - Zr[0], rr[1] - Zr[1], rr[2] - Zr[2]))
+        let Fd = 0;
+        for (let hd = 0; hd < md; hd++) {
+          const dd = this.points[hd];
+          Fd = Math.max(Fd, Math.hypot(dd[0] - Wd[0], dd[1] - Wd[1], dd[2] - Wd[2]))
         }
-        const ar = Math.tan((0, pr.k)(rr) / 2),
-          jr = Math.atan(ar * (!0 === this.settings.letterbox ? xr.d : 1)),
-          Ir = Math.atan(ar * this.qx.getAspectRatio()),
-          Er = (Wr + (null !== (Sr = this.settings.padding) && void 0 !== Sr ? Sr : 2)) / Math.sin(Math.min(jr, Ir));
-        Zr[3] = this.withinDistances(Er)
+        const Rd = Math.tan((0, Qd.n)(dd) / 2),
+          Xd = Math.atan(Rd * (!0 === this.settings.letterbox ? td.g : 1)),
+          Kd = Math.atan(Rd * this.Bt.getAspectRatio()),
+          vd = (Fd + (null !== (Od = this.settings.padding) && void 0 !== Od ? Od : 2)) / Math.sin(Math.min(Xd, Kd));
+        Wd[3] = this.withinDistances(vd)
       }
-      withinDistances(rr) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, rr))
+      withinDistances(dd) {
+        return Math.min(this.furthestDistance, Math.max(this.closestDistance, dd))
       }
-      pointAt(rr) {
-        return rr === this.points.length && this.points.push([0, 0, 0]), this.points[rr]
+      pointAt(dd) {
+        return dd === this.points.length && this.points.push([0, 0, 0]), this.points[dd]
       }
     }
-    class hr {
-      constructor(rr) {
-        this.limits = rr, this.yawOffset = 0, this.pitchOffset = 0, this.zh = 0, this.pointedAt = null
+    class yd {
+      constructor(dd) {
+        this.limits = dd, this.yawOffset = 0, this.pitchOffset = 0, this.Yy = 0, this.pointedAt = null
       }
-      continueFrom(rr) {
-        this.limits && (this.yawOffset = rr.yawOffset, this.pitchOffset = rr.pitchOffset, this.zh = rr.zh)
+      continueFrom(dd) {
+        this.limits && (this.yawOffset = dd.yawOffset, this.pitchOffset = dd.pitchOffset, this.Yy = dd.Yy)
       }
-      update(rr, Sr) {
-        const Qr = this.limits;
-        if (!Qr) return;
-        const Zr = Number.isFinite(Sr.xR) ? Sr.xR : 0,
-          Wr = Number.isFinite(Sr.yR) ? Sr.yR : 0;
-        if (Sr.pointedAt) this.zh = 0, this.pointedAt = {
-          heading: Sr.pointedAt.heading,
-          pitch: Sr.pointedAt.pitch
+      update(dd, Od) {
+        const md = this.limits;
+        if (!md) return;
+        const Wd = Number.isFinite(Od.mV) ? Od.mV : 0,
+          Fd = Number.isFinite(Od.RV) ? Od.RV : 0;
+        if (Od.pointedAt) this.Yy = 0, this.pointedAt = {
+          heading: Od.pointedAt.heading,
+          pitch: Od.pointedAt.pitch
         };
-        else if (0 !== Zr || 0 !== Wr) this.zh = 0, this.yawOffset += Zr, this.pitchOffset += Wr;
+        else if (0 !== Wd || 0 !== Fd) this.Yy = 0, this.yawOffset += Wd, this.pitchOffset += Fd;
         else {
-          const Sr = Math.max(0, this.zh + rr - 200) - Math.max(0, this.zh - 200);
-          if (this.zh += rr, void 0 !== Qr.returnMs && Sr > 0) {
-            const rr = Qr.returnMs > 0 ? Math.exp(-3 * Sr / Qr.returnMs) : 0;
-            this.yawOffset *= rr, this.pitchOffset *= rr
+          const Od = Math.max(0, this.Yy + dd - 200) - Math.max(0, this.Yy - 200);
+          if (this.Yy += dd, void 0 !== md.returnMs && Od > 0) {
+            const dd = md.returnMs > 0 ? Math.exp(-3 * Od / md.returnMs) : 0;
+            this.yawOffset *= dd, this.pitchOffset *= dd
           }
         }
-        this.clampOffsets(Qr)
+        this.clampOffsets(md)
       }
-      clampOffsets(rr) {
-        if (rr.maxYaw >= 180) this.yawOffset = (0, Wr.r)(0, this.yawOffset);
+      clampOffsets(dd) {
+        if (dd.maxYaw >= 180) this.yawOffset = (0, Fd.x)(0, this.yawOffset);
         else {
-          const Sr = (0, pr.k)(rr.maxYaw);
-          this.yawOffset = Math.max(-Sr, Math.min(Sr, this.yawOffset))
+          const Od = (0, Qd.n)(dd.maxYaw);
+          this.yawOffset = Math.max(-Od, Math.min(Od, this.yawOffset))
         }
-        const Sr = (0, pr.k)(rr.maxPitch);
-        this.pitchOffset = Math.max(-Sr, Math.min(Sr, this.pitchOffset))
+        const Od = (0, Qd.n)(dd.maxPitch);
+        this.pitchOffset = Math.max(-Od, Math.min(Od, this.pitchOffset))
       }
-      apply(rr, Sr) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, Wr.r)(rr.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - rr.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const Qr = (0, Wr.i)(rr.pitch + this.pitchOffset);
-        this.pitchOffset = Qr - rr.pitch, Sr.heading = (0, Wr.q)(rr.heading + this.yawOffset), Sr.pitch = Qr
+      apply(dd, Od) {
+        this.pointedAt && this.limits && (this.yawOffset = (0, Fd.x)(dd.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - dd.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
+        const md = (0, Fd.h)(dd.pitch + this.pitchOffset);
+        this.pitchOffset = md - dd.pitch, Od.heading = (0, Fd.w)(dd.heading + this.yawOffset), Od.pitch = md
       }
-      unapply(rr, Sr) {
-        Sr.heading = (0, Wr.q)(rr.heading - this.yawOffset), Sr.pitch = (0, Wr.i)(rr.pitch - this.pitchOffset)
+      unapply(dd, Od) {
+        Od.heading = (0, Fd.w)(dd.heading - this.yawOffset), Od.pitch = (0, Fd.h)(dd.pitch - this.pitchOffset)
       }
     }
-    const zr = 1e-6;
+    const bd = 1e-6;
 
-    function Yr(rr) {
-      return Math.sqrt(rr[0] * rr[0] + rr[1] * rr[1] + rr[2] * rr[2])
+    function Td(dd) {
+      return Math.sqrt(dd[0] * dd[0] + dd[1] * dd[1] + dd[2] * dd[2])
     }
 
-    function nr(rr, Sr, Qr, Zr, Wr) {
-      const ar = Wr * Wr,
-        jr = ar * Wr;
-      return (2 * jr - 3 * ar + 1) * rr + (jr - 2 * ar + Wr) * Sr + (-2 * jr + 3 * ar) * Qr + (jr - ar) * Zr
+    function pd(dd, Od, md, Wd, Fd) {
+      const Rd = Fd * Fd,
+        Xd = Rd * Fd;
+      return (2 * Xd - 3 * Rd + 1) * dd + (Xd - 2 * Rd + Fd) * Od + (-2 * Xd + 3 * Rd) * md + (Xd - Rd) * Wd
     }
 
-    function er(rr, Sr, Qr, Zr, Wr) {
-      const ar = Wr * Wr;
-      return (6 * ar - 6 * Wr) * rr + (3 * ar - 4 * Wr + 1) * Sr + (-6 * ar + 6 * Wr) * Qr + (3 * ar - 2 * Wr) * Zr
+    function Yd(dd, Od, md, Wd, Fd) {
+      const Rd = Fd * Fd;
+      return (6 * Rd - 6 * Fd) * dd + (3 * Rd - 4 * Fd + 1) * Od + (-6 * Rd + 6 * Fd) * md + (3 * Rd - 2 * Fd) * Wd
     }
 
-    function Kr(rr, Sr) {
-      const Qr = Sr[0] - rr[0],
-        Zr = Sr[1] - rr[1],
-        Wr = Sr[2] - rr[2];
-      return Math.sqrt(Qr * Qr + Zr * Zr + Wr * Wr)
+    function gd(dd, Od) {
+      const md = Od[0] - dd[0],
+        Wd = Od[1] - dd[1],
+        Fd = Od[2] - dd[2];
+      return Math.sqrt(md * md + Wd * Wd + Fd * Fd)
     }
 
-    function yr(rr, Sr, Qr, Zr, Wr, ar) {
-      for (let jr = 0; jr < 3; jr++) ar[jr] = Wr ? rr[jr] * Zr : Qr[jr] - Sr[jr];
-      return Wr && function(rr, Sr) {
-        const Qr = Yr(rr);
-        if (Qr > Sr) {
-          const Zr = Sr / Qr;
-          rr[0] *= Zr, rr[1] *= Zr, rr[2] *= Zr
+    function wd(dd, Od, md, Wd, Fd, Rd) {
+      for (let Xd = 0; Xd < 3; Xd++) Rd[Xd] = Fd ? dd[Xd] * Wd : md[Xd] - Od[Xd];
+      return Fd && function(dd, Od) {
+        const md = Td(dd);
+        if (md > Od) {
+          const Wd = Od / md;
+          dd[0] *= Wd, dd[1] *= Wd, dd[2] *= Wd
         }
-      }(ar, 3 * Kr(Sr, Qr)), ar
+      }(Rd, 3 * gd(Od, md)), Rd
     }
 
-    function Br(rr, Sr, Qr, Zr) {
-      for (let Wr = 0; Wr < 3; Wr++) Zr[Wr] = 6 * (Sr[Wr] - rr[Wr]) - 2 * Qr[Wr];
-      if (Yr(Zr) < zr)
-        for (let Wr = 0; Wr < 3; Wr++) Zr[Wr] = Sr[Wr] - rr[Wr];
-      return Zr
+    function Ed(dd, Od, md, Wd) {
+      for (let Fd = 0; Fd < 3; Fd++) Wd[Fd] = 6 * (Od[Fd] - dd[Fd]) - 2 * md[Fd];
+      if (Td(Wd) < bd)
+        for (let Fd = 0; Fd < 3; Fd++) Wd[Fd] = Od[Fd] - dd[Fd];
+      return Wd
     }
 
-    function Tr(rr, Sr) {
-      return [2 * Sr[0] - rr[0], 2 * Sr[1] - rr[1], 2 * Sr[2] - rr[2]]
+    function Jd(dd, Od) {
+      return [2 * Od[0] - dd[0], 2 * Od[1] - dd[1], 2 * Od[2] - dd[2]]
     }
 
-    function vr(rr, Sr, Qr, Zr, Wr, ar, jr) {
-      if (!ar && !jr) return 0;
-      const Ir = ar ? rr : 2 * Sr - Qr,
-        fr = jr ? Qr : 2 * Sr - rr,
-        Er = ar ? Zr : Wr,
-        pr = jr ? Wr : Zr,
-        xr = (Sr - Ir) / Er,
-        mr = (fr - Sr) / pr;
-      if (xr * mr <= 0) return 0;
-      const Nr = (fr - Ir) / (Er + pr),
-        Ur = 3 * Math.min(Math.abs(xr), Math.abs(mr));
-      return Math.max(-Ur, Math.min(Ur, Nr))
+    function Ud(dd, Od, md, Wd, Fd, Rd, Xd) {
+      if (!Rd && !Xd) return 0;
+      const Kd = Rd ? dd : 2 * Od - md,
+        hd = Xd ? md : 2 * Od - dd,
+        vd = Rd ? Wd : Fd,
+        Qd = Xd ? Fd : Wd,
+        td = (Od - Kd) / vd,
+        od = (hd - Od) / Qd;
+      if (td * od <= 0) return 0;
+      const Nd = (hd - Kd) / (vd + Qd),
+        qd = 3 * Math.min(Math.abs(td), Math.abs(od));
+      return Math.max(-qd, Math.min(qd, Nd))
     }
 
-    function Or(rr, Sr, Qr, Zr, Wr, ar, jr) {
+    function xd(dd, Od, md, Wd, Fd, Rd, Xd) {
       const {
-        u: Ir,
-        segmentMs: fr
-      } = rr;
-      if (!rr.curved) return Qr + (Zr - Qr) * Ir;
-      return nr(Qr, vr(Sr, Qr, Zr, rr.beforeMs, fr, ar, !0) * fr, Zr, vr(Qr, Zr, Wr, fr, rr.afterMs, !0, jr) * fr, Ir)
+        u: Kd,
+        segmentMs: hd
+      } = dd;
+      if (!dd.curved) return md + (Wd - md) * Kd;
+      return pd(md, Ud(Od, md, Wd, dd.beforeMs, hd, Rd, !0) * hd, Wd, Ud(md, Wd, Fd, hd, dd.afterMs, !0, Xd) * hd, Kd)
     }
 
-    function Lr(rr) {
-      return Math.abs(rr.pitch) >= Wr.b
+    function Bd(dd) {
+      return Math.abs(dd.pitch) >= Fd.c
     }
-    class lr {
-      constructor(rr, Sr, Qr, Zr, Wr) {
-        this.nodes = rr, this.prevNodes = Qr, this.nextNodes = Zr, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
+    class Sd {
+      constructor(dd, Od, md, Wd, Fd) {
+        this.nodes = dd, this.prevNodes = md, this.nextNodes = Wd, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
           heading: 0,
           pitch: 0
         }, this.fromAngles = {
@@ -668,84 +668,84 @@ export const modules = {
         }, this.borrowedAngles = {
           heading: 0,
           pitch: 0
-        }, this.tangents = rr.map(((rr, Qr) => this.nodeTangent(Sr, Wr, Qr)))
+        }, this.tangents = dd.map(((dd, md) => this.nodeTangent(Od, Fd, md)))
       }
-      sample(rr, Sr, Qr) {
+      sample(dd, Od, md) {
         const {
-          index: Zr,
-          toIndex: ar,
-          segmentMs: jr,
-          curved: Ir
-        } = rr, fr = this.fromAngles, Er = this.toAngles, pr = this.nodeAngles(Zr, Qr.position, Sr, fr), xr = this.nodeAngles(ar, Qr.position, Sr, Er);
-        if (jr > 0 && "aim" !== pr && "aim" !== xr && this.liveTangent(rr, fr)) return Qr.heading = (0, Wr.q)(fr.heading), void(Qr.pitch = fr.pitch);
-        if ("none" === pr && "none" === xr) return;
-        !Ir && jr > 0 && ("tangent" === pr && this.liveTangent(rr, fr), "tangent" === xr && this.liveTangent(rr, Er)), "none" === pr ? (0, Wr.j)(Er, fr) : "none" === xr && (0, Wr.j)(fr, Er);
-        const mr = Ir && rr.beforeIndex >= 0 && "none" !== this.nodeAngles(rr.beforeIndex, Qr.position, Sr, this.beforeAngles),
-          Nr = Ir && rr.afterIndex >= 0 && "none" !== this.nodeAngles(rr.afterIndex, Qr.position, Sr, this.afterAngles),
-          Ur = (0, Wr.v)(fr.heading, Er.heading),
-          tr = Or(rr, mr ? (0, Wr.v)(fr.heading, this.beforeAngles.heading) : 0, fr.heading, Ur, Nr ? (0, Wr.v)(Ur, this.afterAngles.heading) : 0, mr, Nr);
-        Qr.heading = (0, Wr.q)(tr), Qr.pitch = (0, Wr.i)(Or(rr, this.beforeAngles.pitch, fr.pitch, Er.pitch, this.afterAngles.pitch, mr, Nr))
+          index: Wd,
+          toIndex: Rd,
+          segmentMs: Xd,
+          curved: Kd
+        } = dd, hd = this.fromAngles, vd = this.toAngles, Qd = this.nodeAngles(Wd, md.position, Od, hd), td = this.nodeAngles(Rd, md.position, Od, vd);
+        if (Xd > 0 && "aim" !== Qd && "aim" !== td && this.liveTangent(dd, hd)) return md.heading = (0, Fd.w)(hd.heading), void(md.pitch = hd.pitch);
+        if ("none" === Qd && "none" === td) return;
+        !Kd && Xd > 0 && ("tangent" === Qd && this.liveTangent(dd, hd), "tangent" === td && this.liveTangent(dd, vd)), "none" === Qd ? (0, Fd.l)(vd, hd) : "none" === td && (0, Fd.l)(hd, vd);
+        const od = Kd && dd.beforeIndex >= 0 && "none" !== this.nodeAngles(dd.beforeIndex, md.position, Od, this.beforeAngles),
+          Nd = Kd && dd.afterIndex >= 0 && "none" !== this.nodeAngles(dd.afterIndex, md.position, Od, this.afterAngles),
+          qd = (0, Fd.B)(hd.heading, vd.heading),
+          Hd = xd(dd, od ? (0, Fd.B)(hd.heading, this.beforeAngles.heading) : 0, hd.heading, qd, Nd ? (0, Fd.B)(qd, this.afterAngles.heading) : 0, od, Nd);
+        md.heading = (0, Fd.w)(Hd), md.pitch = (0, Fd.h)(xd(dd, this.beforeAngles.pitch, hd.pitch, vd.pitch, this.afterAngles.pitch, od, Nd))
       }
-      nodeAngles(rr, Sr, Qr, Zr) {
-        const Wr = this.rawNodeAngles(rr, Sr, Qr, Zr);
-        return "none" !== Wr && Lr(Zr) && !this.borrowHeading(this.prevNodes[rr], Sr, Qr, Zr) && this.borrowHeading(this.nextNodes[rr], Sr, Qr, Zr), Wr
+      nodeAngles(dd, Od, md, Wd) {
+        const Fd = this.rawNodeAngles(dd, Od, md, Wd);
+        return "none" !== Fd && Bd(Wd) && !this.borrowHeading(this.prevNodes[dd], Od, md, Wd) && this.borrowHeading(this.nextNodes[dd], Od, md, Wd), Fd
       }
-      borrowHeading(rr, Sr, Qr, Zr) {
-        const Wr = this.borrowedAngles;
-        return !(rr < 0 || "none" === this.rawNodeAngles(rr, Sr, Qr, Wr) || Lr(Wr)) && (Zr.heading = Wr.heading, !0)
+      borrowHeading(dd, Od, md, Wd) {
+        const Fd = this.borrowedAngles;
+        return !(dd < 0 || "none" === this.rawNodeAngles(dd, Od, md, Fd) || Bd(Fd)) && (Wd.heading = Fd.heading, !0)
       }
-      rawNodeAngles(rr, Sr, Qr, Zr) {
-        const ar = this.nodes[rr].keyframe;
-        if (ar.lookDirection) return (0, Wr.l)(ar.lookDirection, Zr), "aim";
-        if (void 0 !== ar.lookAt) {
-          const rr = Qr(ar.lookAt);
-          if (rr) return (0, Wr.p)(Sr, rr, Zr), "aim"
+      rawNodeAngles(dd, Od, md, Wd) {
+        const Rd = this.nodes[dd].keyframe;
+        if (Rd.lookDirection) return (0, Fd.o)(Rd.lookDirection, Wd), "aim";
+        if (void 0 !== Rd.lookAt) {
+          const dd = md(Rd.lookAt);
+          if (dd) return (0, Fd.t)(Od, dd, Wd), "aim"
         }
-        const jr = this.tangents[rr];
-        return jr ? ((0, Wr.j)(jr, Zr), "tangent") : "none"
+        const Xd = this.tangents[dd];
+        return Xd ? ((0, Fd.l)(Xd, Wd), "tangent") : "none"
       }
-      liveTangent(rr, Sr) {
-        const Qr = this.nodes[rr.index].position,
-          Zr = this.nodes[rr.toIndex].position,
-          ar = this.derivative;
-        for (let Wr = 0; Wr < 3; Wr++) ar[Wr] = er(Qr[Wr], rr.fromTangent[Wr], Zr[Wr], rr.toTangent[Wr], rr.u);
-        return Yr(ar) > 1e-9 ? ((0, Wr.l)(ar, Sr), !0) : !(Kr(Qr, Zr) < zr) && ((0, Wr.l)(Br(Qr, Zr, rr.u < .5 ? rr.toTangent : rr.fromTangent, ar), Sr), !0)
+      liveTangent(dd, Od) {
+        const md = this.nodes[dd.index].position,
+          Wd = this.nodes[dd.toIndex].position,
+          Rd = this.derivative;
+        for (let Fd = 0; Fd < 3; Fd++) Rd[Fd] = Yd(md[Fd], dd.fromTangent[Fd], Wd[Fd], dd.toTangent[Fd], dd.u);
+        return Td(Rd) > 1e-9 ? ((0, Fd.o)(Rd, Od), !0) : !(gd(md, Wd) < bd) && ((0, Fd.o)(Ed(md, Wd, dd.u < .5 ? dd.toTangent : dd.fromTangent, Rd), Od), !0)
       }
-      nodeTangent(rr, Sr, Qr) {
-        var Zr;
-        const ar = rr[Qr];
-        if (Yr(ar) > 1e-9) return (0, Wr.l)(ar, {
+      nodeTangent(dd, Od, md) {
+        var Wd;
+        const Rd = dd[md];
+        if (Td(Rd) > 1e-9) return (0, Fd.o)(Rd, {
           heading: 0,
           pitch: 0
         });
-        const jr = null !== (Zr = this.restDirectionTo(Qr, Qr + 1, rr, Sr)) && void 0 !== Zr ? Zr : this.restDirectionTo(Qr, Qr - 1, rr, Sr);
-        return jr ? (0, Wr.l)(jr, {
+        const Xd = null !== (Wd = this.restDirectionTo(md, md + 1, dd, Od)) && void 0 !== Wd ? Wd : this.restDirectionTo(md, md - 1, dd, Od);
+        return Xd ? (0, Fd.o)(Xd, {
           heading: 0,
           pitch: 0
         }) : null
       }
-      restDirectionTo(rr, Sr, Qr, Zr) {
-        const Wr = this.nodes[rr],
-          ar = this.nodes[Sr];
-        if (!ar || Kr(Wr.position, ar.position) < zr) return null;
-        const [jr, Ir] = Sr > rr ? [Wr, ar] : [ar, Wr], fr = yr(Qr[Sr], jr.position, Ir.position, Ir.timeMs - jr.timeMs, Zr, [0, 0, 0]);
-        return Br(jr.position, Ir.position, fr, [0, 0, 0])
+      restDirectionTo(dd, Od, md, Wd) {
+        const Fd = this.nodes[dd],
+          Rd = this.nodes[Od];
+        if (!Rd || gd(Fd.position, Rd.position) < bd) return null;
+        const [Xd, Kd] = Od > dd ? [Fd, Rd] : [Rd, Fd], hd = wd(md[Od], Xd.position, Kd.position, Kd.timeMs - Xd.timeMs, Wd, [0, 0, 0]);
+        return Ed(Xd.position, Kd.position, hd, [0, 0, 0])
       }
     }
 
-    function Xr(rr, Sr) {
-      const Qr = rr.lookDirection || Sr.lookDirection ? function(rr, Sr) {
-        if (!rr || !Sr) return rr === Sr;
-        const Qr = Yr(rr),
-          Zr = Yr(Sr);
-        return Math.hypot(rr[0] / Qr - Sr[0] / Zr, rr[1] / Qr - Sr[1] / Zr, rr[2] / Qr - Sr[2] / Zr) < zr
-      }(rr.lookDirection, Sr.lookDirection) : (Zr = rr.lookAt, Wr = Sr.lookAt, "object" !== typeof Zr || "object" !== typeof Wr ? Zr === Wr : Kr(Zr, Wr) < zr);
-      var Zr, Wr;
-      return Kr(rr.position, Sr.position) < zr && rr.fov === Sr.fov && Qr
+    function sd(dd, Od) {
+      const md = dd.lookDirection || Od.lookDirection ? function(dd, Od) {
+        if (!dd || !Od) return dd === Od;
+        const md = Td(dd),
+          Wd = Td(Od);
+        return Math.hypot(dd[0] / md - Od[0] / Wd, dd[1] / md - Od[1] / Wd, dd[2] / md - Od[2] / Wd) < bd
+      }(dd.lookDirection, Od.lookDirection) : (Wd = dd.lookAt, Fd = Od.lookAt, "object" !== typeof Wd || "object" !== typeof Fd ? Wd === Fd : gd(Wd, Fd) < bd);
+      var Wd, Fd;
+      return gd(dd.position, Od.position) < bd && dd.fov === Od.fov && md
     }
-    class Pr {
-      constructor(rr, Sr, Qr) {
-        if (this.smooth = Sr, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
+    class ud {
+      constructor(dd, Od, md) {
+        if (this.smooth = Od, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
             index: 0,
             toIndex: 0,
             u: 0,
@@ -757,330 +757,330 @@ export const modules = {
             afterMs: 0,
             fromTangent: [0, 0, 0],
             toTangent: [0, 0, 0]
-          }, 0 === rr.length) throw new Error("A camera path needs at least one keyframe");
-        for (let ar = 1; ar < rr.length; ar++)
-          if (!(rr[ar].timeMs > rr[ar - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = rr.map((rr => {
-          var Sr;
+          }, 0 === dd.length) throw new Error("A camera path needs at least one keyframe");
+        for (let Rd = 1; Rd < dd.length; Rd++)
+          if (!(dd[Rd].timeMs > dd[Rd - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
+        this.nodes = dd.map((dd => {
+          var Od;
           return {
-            timeMs: rr.timeMs,
-            position: [...rr.position],
-            keyframe: rr,
-            easing: (0, ar.s)(null !== (Sr = rr.easing) && void 0 !== Sr ? Sr : "linear")
+            timeMs: dd.timeMs,
+            position: [...dd.position],
+            keyframe: dd,
+            easing: (0, Rd.s)(null !== (Od = dd.easing) && void 0 !== Od ? Od : "linear")
           }
         }));
-        const Zr = this.nodes[0],
-          Wr = this.nodes[this.nodes.length - 1],
-          jr = Qr && this.nodes.length > 1;
-        jr && !Xr(Zr.keyframe, Wr.keyframe) && this.nodes.push({
-          ...Zr,
-          timeMs: Wr.timeMs + (Wr.timeMs - Zr.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = jr ? this.nodes[this.nodes.length - 1].timeMs - Zr.timeMs : 0, this.prevNodes = this.nodes.map(((rr, Sr) => this.neighbour(Sr, -1))), this.nextNodes = this.nodes.map(((rr, Sr) => this.neighbour(Sr, 1))), this.prevGaps = this.prevNodes.map(((rr, Sr) => rr >= 0 ? this.gapMs(Sr, -1) : 0)), this.nextGaps = this.nextNodes.map(((rr, Sr) => rr >= 0 ? this.gapMs(Sr, 1) : 0)), this.velocities = this.nodes.map(((rr, Sr) => {
-          const Qr = this.prevNodes[Sr],
-            Zr = this.nextNodes[Sr];
-          return function(rr, Sr, Qr, Zr, Wr, ar) {
-            if (ar[0] = 0, ar[1] = 0, ar[2] = 0, !rr && !Qr) return ar;
-            const jr = null !== rr && void 0 !== rr ? rr : Tr(null !== Qr && void 0 !== Qr ? Qr : Sr, Sr),
-              Ir = null !== Qr && void 0 !== Qr ? Qr : Tr(null !== rr && void 0 !== rr ? rr : Sr, Sr),
-              fr = rr ? Zr : Wr,
-              Er = Qr ? Wr : Zr,
-              pr = Kr(jr, Sr),
-              xr = Kr(Sr, Ir);
-            if (pr < zr || xr < zr) return ar;
-            const mr = Math.sqrt(pr),
-              Nr = Math.sqrt(xr),
-              Ur = (mr + Nr) / (fr + Er);
-            for (let tr = 0; tr < 3; tr++) {
-              const rr = (Sr[tr] - jr[tr]) / mr - (Ir[tr] - jr[tr]) / (mr + Nr) + (Ir[tr] - Sr[tr]) / Nr;
-              ar[tr] = rr * Ur
+        const Wd = this.nodes[0],
+          Fd = this.nodes[this.nodes.length - 1],
+          Xd = md && this.nodes.length > 1;
+        Xd && !sd(Wd.keyframe, Fd.keyframe) && this.nodes.push({
+          ...Wd,
+          timeMs: Fd.timeMs + (Fd.timeMs - Wd.timeMs) / (this.nodes.length - 1)
+        }), this.loopMs = Xd ? this.nodes[this.nodes.length - 1].timeMs - Wd.timeMs : 0, this.prevNodes = this.nodes.map(((dd, Od) => this.neighbour(Od, -1))), this.nextNodes = this.nodes.map(((dd, Od) => this.neighbour(Od, 1))), this.prevGaps = this.prevNodes.map(((dd, Od) => dd >= 0 ? this.gapMs(Od, -1) : 0)), this.nextGaps = this.nextNodes.map(((dd, Od) => dd >= 0 ? this.gapMs(Od, 1) : 0)), this.velocities = this.nodes.map(((dd, Od) => {
+          const md = this.prevNodes[Od],
+            Wd = this.nextNodes[Od];
+          return function(dd, Od, md, Wd, Fd, Rd) {
+            if (Rd[0] = 0, Rd[1] = 0, Rd[2] = 0, !dd && !md) return Rd;
+            const Xd = null !== dd && void 0 !== dd ? dd : Jd(null !== md && void 0 !== md ? md : Od, Od),
+              Kd = null !== md && void 0 !== md ? md : Jd(null !== dd && void 0 !== dd ? dd : Od, Od),
+              hd = dd ? Wd : Fd,
+              vd = md ? Fd : Wd,
+              Qd = gd(Xd, Od),
+              td = gd(Od, Kd);
+            if (Qd < bd || td < bd) return Rd;
+            const od = Math.sqrt(Qd),
+              Nd = Math.sqrt(td),
+              qd = (od + Nd) / (hd + vd);
+            for (let Hd = 0; Hd < 3; Hd++) {
+              const dd = (Od[Hd] - Xd[Hd]) / od - (Kd[Hd] - Xd[Hd]) / (od + Nd) + (Kd[Hd] - Od[Hd]) / Nd;
+              Rd[Hd] = dd * qd
             }
-            return ar
-          }(Qr >= 0 ? this.nodes[Qr].position : null, rr.position, Zr >= 0 ? this.nodes[Zr].position : null, this.prevGaps[Sr], this.nextGaps[Sr], [0, 0, 0])
-        })), this.aim = new lr(this.nodes, this.velocities, this.prevNodes, this.nextNodes, Sr)
+            return Rd
+          }(md >= 0 ? this.nodes[md].position : null, dd.position, Wd >= 0 ? this.nodes[Wd].position : null, this.prevGaps[Od], this.nextGaps[Od], [0, 0, 0])
+        })), this.aim = new Sd(this.nodes, this.velocities, this.prevNodes, this.nextNodes, Od)
       }
-      sample(rr, Sr, Qr, Zr) {
-        const Wr = this.findSegment(this.pathTime(rr));
-        this.samplePosition(Wr, Zr.position), this.aim.sample(Wr, Sr, Zr);
+      sample(dd, Od, md, Wd) {
+        const Fd = this.findSegment(this.pathTime(dd));
+        this.samplePosition(Fd, Wd.position), this.aim.sample(Fd, Od, Wd);
         const {
-          beforeIndex: ar,
-          afterIndex: jr
-        } = Wr;
-        Zr.fov = Or(Wr, ar >= 0 ? this.fovAt(ar, Qr) : 0, this.fovAt(Wr.index, Qr), this.fovAt(Wr.toIndex, Qr), jr >= 0 ? this.fovAt(jr, Qr) : 0, ar >= 0, jr >= 0)
+          beforeIndex: Rd,
+          afterIndex: Xd
+        } = Fd;
+        Wd.fov = xd(Fd, Rd >= 0 ? this.fovAt(Rd, md) : 0, this.fovAt(Fd.index, md), this.fovAt(Fd.toIndex, md), Xd >= 0 ? this.fovAt(Xd, md) : 0, Rd >= 0, Xd >= 0)
       }
-      pathTime(rr) {
-        const Sr = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || rr <= Sr) return rr;
-        const Qr = rr - Sr;
-        return Sr + Qr - this.loopMs * Math.floor(Qr / this.loopMs)
+      pathTime(dd) {
+        const Od = this.nodes[0].timeMs;
+        if (this.loopMs <= 0 || dd <= Od) return dd;
+        const md = dd - Od;
+        return Od + md - this.loopMs * Math.floor(md / this.loopMs)
       }
-      findSegment(rr) {
-        const Sr = this.nodes,
-          Qr = this.segment;
-        let Zr = Qr.index;
-        for (rr < Sr[Zr].timeMs && (Zr = 0); Zr < Sr.length - 2 && Sr[Zr + 1].timeMs <= rr;) Zr++;
-        const Wr = Math.min(Zr + 1, Sr.length - 1),
-          jr = Sr[Wr].timeMs - Sr[Zr].timeMs;
-        return Qr.index = Zr, Qr.toIndex = Wr, Qr.segmentMs = jr, Qr.u = jr > 0 ? (0, ar.r)((rr - Sr[Zr].timeMs) / jr, Sr[Zr].easing) : 1, Qr.curved = this.smooth && jr > 0, Qr.beforeIndex = this.prevNodes[Zr], Qr.afterIndex = this.nextNodes[Wr], Qr.beforeMs = this.prevGaps[Zr], Qr.afterMs = this.nextGaps[Wr], Qr
+      findSegment(dd) {
+        const Od = this.nodes,
+          md = this.segment;
+        let Wd = md.index;
+        for (dd < Od[Wd].timeMs && (Wd = 0); Wd < Od.length - 2 && Od[Wd + 1].timeMs <= dd;) Wd++;
+        const Fd = Math.min(Wd + 1, Od.length - 1),
+          Xd = Od[Fd].timeMs - Od[Wd].timeMs;
+        return md.index = Wd, md.toIndex = Fd, md.segmentMs = Xd, md.u = Xd > 0 ? (0, Rd.p)((dd - Od[Wd].timeMs) / Xd, Od[Wd].easing) : 1, md.curved = this.smooth && Xd > 0, md.beforeIndex = this.prevNodes[Wd], md.afterIndex = this.nextNodes[Fd], md.beforeMs = this.prevGaps[Wd], md.afterMs = this.nextGaps[Fd], md
       }
-      samplePosition(rr, Sr) {
+      samplePosition(dd, Od) {
         const {
-          fromTangent: Qr,
-          toTangent: Zr,
-          curved: Wr
-        } = rr, ar = this.nodes[rr.index].position, jr = this.nodes[rr.toIndex].position;
-        yr(this.velocities[rr.index], ar, jr, rr.segmentMs, Wr, Qr), yr(this.velocities[rr.toIndex], ar, jr, rr.segmentMs, Wr, Zr);
-        const Ir = rr.u;
-        for (let fr = 0; fr < 3; fr++) Sr[fr] = Wr ? nr(ar[fr], Qr[fr], jr[fr], Zr[fr], Ir) : ar[fr] + (jr[fr] - ar[fr]) * Ir
+          fromTangent: md,
+          toTangent: Wd,
+          curved: Fd
+        } = dd, Rd = this.nodes[dd.index].position, Xd = this.nodes[dd.toIndex].position;
+        wd(this.velocities[dd.index], Rd, Xd, dd.segmentMs, Fd, md), wd(this.velocities[dd.toIndex], Rd, Xd, dd.segmentMs, Fd, Wd);
+        const Kd = dd.u;
+        for (let hd = 0; hd < 3; hd++) Od[hd] = Fd ? pd(Rd[hd], md[hd], Xd[hd], Wd[hd], Kd) : Rd[hd] + (Xd[hd] - Rd[hd]) * Kd
       }
-      fovAt(rr, Sr) {
-        var Qr;
-        return null !== (Qr = this.nodes[rr].keyframe.fov) && void 0 !== Qr ? Qr : Sr
+      fovAt(dd, Od) {
+        var md;
+        return null !== (md = this.nodes[dd].keyframe.fov) && void 0 !== md ? md : Od
       }
-      neighbour(rr, Sr) {
-        const Qr = this.nodes.length - 1,
-          Zr = rr + Sr;
-        return Zr >= 0 && Zr <= Qr ? Zr : this.loopMs <= 0 || Qr < 2 ? -1 : Zr < 0 ? Qr - 1 : 1
+      neighbour(dd, Od) {
+        const md = this.nodes.length - 1,
+          Wd = dd + Od;
+        return Wd >= 0 && Wd <= md ? Wd : this.loopMs <= 0 || md < 2 ? -1 : Wd < 0 ? md - 1 : 1
       }
-      gapMs(rr, Sr) {
-        const Qr = this.nodes.length - 1;
-        if (1 === Sr) {
-          const Sr = rr === Qr ? 0 : rr;
-          return this.nodes[Sr + 1].timeMs - this.nodes[Sr].timeMs
+      gapMs(dd, Od) {
+        const md = this.nodes.length - 1;
+        if (1 === Od) {
+          const Od = dd === md ? 0 : dd;
+          return this.nodes[Od + 1].timeMs - this.nodes[Od].timeMs
         }
-        const Zr = 0 === rr ? Qr : rr;
-        return this.nodes[Zr].timeMs - this.nodes[Zr - 1].timeMs
+        const Wd = 0 === dd ? md : dd;
+        return this.nodes[Wd].timeMs - this.nodes[Wd - 1].timeMs
       }
     }
 
-    function Hr(rr, Sr, Qr) {
-      return null !== Qr && Number.isFinite(Qr) ? (rr.set(Sr, Qr), Qr) : rr.get(Sr)
+    function Vd(dd, Od, md) {
+      return null !== md && Number.isFinite(md) ? (dd.set(Od, md), md) : dd.get(Od)
     }
-    class qr {
-      constructor(rr) {
-        this.qx = rr, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.lastPitches = new Map, this.lastLookHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = Sr => rr.getEntityPosition(Sr), this.readAimPoint = Sr => rr.getEntityAimPoint(Sr)
+    class Ad {
+      constructor(dd) {
+        this.Bt = dd, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.lastPitches = new Map, this.lastLookHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = Od => dd.getEntityPosition(Od), this.readAimPoint = Od => dd.getEntityAimPoint(Od)
       }
-      aimPoint(rr) {
-        return "string" !== typeof rr ? (0, fr.p)(rr, 3) ? rr : null : this.resolve(rr, this.readAimPoint, this.lastAimPoints)
+      aimPoint(dd) {
+        return "string" !== typeof dd ? (0, hd.o)(dd, 3) ? dd : null : this.resolve(dd, this.readAimPoint, this.lastAimPoints)
       }
-      currentAimPoint(rr) {
-        const Sr = "string" === typeof rr ? this.qx.getEntityAimPoint(rr) : rr;
-        return Sr && (0, fr.p)(Sr, 3) ? Sr : null
+      currentAimPoint(dd) {
+        const Od = "string" === typeof dd ? this.Bt.getEntityAimPoint(dd) : dd;
+        return Od && (0, hd.o)(Od, 3) ? Od : null
       }
-      feetPosition(rr) {
-        return this.resolve(rr, this.readFeet, this.lastFeet)
+      feetPosition(dd) {
+        return this.resolve(dd, this.readFeet, this.lastFeet)
       }
-      heading(rr) {
-        const Sr = Hr(this.lastHeadings, rr, this.qx.getEntityHeading(rr));
-        return void 0 !== Sr ? Sr : rr === this.qx.localPlayerId ? 0 : this.heading(this.qx.localPlayerId)
+      heading(dd) {
+        const Od = Vd(this.lastHeadings, dd, this.Bt.getEntityHeading(dd));
+        return void 0 !== Od ? Od : dd === this.Bt.localPlayerId ? 0 : this.heading(this.Bt.localPlayerId)
       }
-      pitch(rr) {
-        var Sr;
-        return null !== (Sr = Hr(this.lastPitches, rr, this.qx.getEntityPitch(rr))) && void 0 !== Sr ? Sr : 0
+      pitch(dd) {
+        var Od;
+        return null !== (Od = Vd(this.lastPitches, dd, this.Bt.getEntityPitch(dd))) && void 0 !== Od ? Od : 0
       }
-      lookHeading(rr) {
-        var Sr;
-        return null !== (Sr = Hr(this.lastLookHeadings, rr, this.qx.getEntityLookHeading(rr))) && void 0 !== Sr ? Sr : this.heading(rr)
+      lookHeading(dd) {
+        var Od;
+        return null !== (Od = Vd(this.lastLookHeadings, dd, this.Bt.getEntityLookHeading(dd))) && void 0 !== Od ? Od : this.heading(dd)
       }
-      resolve(rr, Sr, Qr) {
-        const Zr = Sr(rr);
-        let Wr = Qr.get(rr);
-        return Zr && (0, fr.p)(Zr, 3) ? (Wr || (Wr = [0, 0, 0], Qr.set(rr, Wr)), Wr[0] = Zr[0], Wr[1] = Zr[1], Wr[2] = Zr[2], Wr) : Wr || (rr === this.qx.localPlayerId ? null : this.resolve(this.qx.localPlayerId, Sr, Qr))
+      resolve(dd, Od, md) {
+        const Wd = Od(dd);
+        let Fd = md.get(dd);
+        return Wd && (0, hd.o)(Wd, 3) ? (Fd || (Fd = [0, 0, 0], md.set(dd, Fd)), Fd[0] = Wd[0], Fd[1] = Wd[1], Fd[2] = Wd[2], Fd) : Fd || (dd === this.Bt.localPlayerId ? null : this.resolve(this.Bt.localPlayerId, Od, md))
       }
     }
 
-    function Rr(rr) {
+    function rd(dd) {
       return {
-        heading: rr.heading,
-        pitch: rr.pitch
+        heading: dd.heading,
+        pitch: dd.pitch
       }
     }
 
-    function gr(rr, Sr) {
-      Number.isFinite(rr.heading) && Number.isFinite(rr.pitch) || (0, Wr.j)(Sr, rr)
+    function Gd(dd, Od) {
+      Number.isFinite(dd.heading) && Number.isFinite(dd.pitch) || (0, Fd.l)(Od, dd)
     }
 
-    function Cr(rr, Sr, Qr, Zr, ar) {
-      if (Sr) return void(0, Wr.l)(Sr, ar);
-      const jr = Zr.aimPoint(Qr);
-      jr && (0, Wr.p)(rr, jr, ar)
+    function nd(dd, Od, md, Wd, Rd) {
+      if (Od) return void(0, Fd.o)(Od, Rd);
+      const Xd = Wd.aimPoint(md);
+      Xd && (0, Fd.t)(dd, Xd, Rd)
     }
-    class Mr {
-      constructor(rr, Sr, Qr, Zr) {
-        this.settings = rr, this.qx = Sr, this.targets = Qr, this.base = void 0, this.base = Rr(Zr)
+    class Ld {
+      constructor(dd, Od, md, Wd) {
+        this.settings = dd, this.Bt = Od, this.targets = md, this.base = void 0, this.base = rd(Wd)
       }
-      update(rr, Sr, Qr) {
-        var Zr;
-        const Wr = this.settings;
-        (0, fr.i)(Wr.position, Qr.position), Cr(Wr.position, Wr.lookDirection, null !== (Zr = Wr.lookAt) && void 0 !== Zr ? Zr : this.qx.localPlayerId, this.targets, this.base), Sr.apply(this.base, Qr), Qr.fov = Nr(Wr, this.qx)
+      update(dd, Od, md) {
+        var Wd;
+        const Fd = this.settings;
+        (0, hd.i)(Fd.position, md.position), nd(Fd.position, Fd.lookDirection, null !== (Wd = Fd.lookAt) && void 0 !== Wd ? Wd : this.Bt.localPlayerId, this.targets, this.base), Od.apply(this.base, md), md.fov = Nd(Fd, this.Bt)
       }
-      continueFrom(rr) {
-        rr instanceof Mr && (0, Wr.j)(rr.base, this.base)
+      continueFrom(dd) {
+        dd instanceof Ld && (0, Fd.l)(dd.base, this.base)
       }
-      reset(rr) {
-        gr(this.base, rr)
+      reset(dd) {
+        Gd(this.base, dd)
       }
     }
-    class Gr {
-      constructor(rr, Sr, Qr, Zr) {
-        this.settings = rr, this.qx = Sr, this.targets = Qr, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.Lh = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.eyeHeading = NaN, this.eyePitch = NaN, this.base = Rr(Zr), this.goal = [...Zr.position]
+    class Pd {
+      constructor(dd, Od, md, Wd) {
+        this.settings = dd, this.Bt = Od, this.targets = md, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.Gy = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.eyeHeading = NaN, this.eyePitch = NaN, this.base = rd(Wd), this.goal = [...Wd.position]
       }
-      update(rr, Sr, Qr) {
-        var Zr, ar;
-        const jr = this.settings,
-          Ir = null !== (Zr = jr.target) && void 0 !== Zr ? Zr : this.qx.localPlayerId,
-          Er = this.targets.feetPosition(Ir),
-          pr = "eye" === jr.anchor;
-        let xr = !1;
-        var mr;
-        Er && (xr = this.foundFeet && Kr(this.lastFeet, Er) > 32 + .1 * rr, (0, fr.i)(Er, this.lastFeet), this.foundFeet = !0, this.placeGoal(null !== (mr = pr ? this.targets.aimPoint(Ir) : null) && void 0 !== mr ? mr : Er, Ir));
-        const tr = null !== (ar = jr.smoothMs) && void 0 !== ar ? ar : 0;
-        !this.started || tr < 1 || xr ? ((0, fr.i)(this.goal, this.smoothed), this.Lh.fill(0), this.started = !0) : Ur(this.smoothed, this.Lh, this.goal, tr, rr), xr && (this.distance = -1), (0, fr.i)(this.smoothed, Qr.position);
-        const hr = !0 === jr.avoidTerrain ? this.pullIn(Ir, rr, Qr) : 1;
-        let zr = this.goal;
-        if ("target" === jr.offsetSpace) zr = Qr.position;
-        else if (hr < 1) {
-          zr = this.aimOrigin;
-          for (let rr = 0; rr < 3; rr++) zr[rr] = Qr.position[rr] + (this.goal[rr] - this.smoothed[rr]) * hr
+      update(dd, Od, md) {
+        var Wd, Rd;
+        const Xd = this.settings,
+          Kd = null !== (Wd = Xd.target) && void 0 !== Wd ? Wd : this.Bt.localPlayerId,
+          vd = this.targets.feetPosition(Kd),
+          Qd = "eye" === Xd.anchor;
+        let td = !1;
+        var od;
+        vd && (td = this.foundFeet && gd(this.lastFeet, vd) > 32 + .1 * dd, (0, hd.i)(vd, this.lastFeet), this.foundFeet = !0, this.placeGoal(null !== (od = Qd ? this.targets.aimPoint(Kd) : null) && void 0 !== od ? od : vd, Kd));
+        const Hd = null !== (Rd = Xd.smoothMs) && void 0 !== Rd ? Rd : 0;
+        !this.started || Hd < 1 || td ? ((0, hd.i)(this.goal, this.smoothed), this.Gy.fill(0), this.started = !0) : qd(this.smoothed, this.Gy, this.goal, Hd, dd), td && (this.distance = -1), (0, hd.i)(this.smoothed, md.position);
+        const yd = !0 === Xd.avoidTerrain ? this.pullIn(Kd, dd, md) : 1;
+        let bd = this.goal;
+        if ("target" === Xd.offsetSpace) bd = md.position;
+        else if (yd < 1) {
+          bd = this.aimOrigin;
+          for (let dd = 0; dd < 3; dd++) bd[dd] = md.position[dd] + (this.goal[dd] - this.smoothed[dd]) * yd
         }
-        if (pr && !jr.lookDirection && void 0 === jr.lookAt) {
-          const Sr = this.targets.lookHeading(Ir),
-            Qr = this.targets.pitch(Ir),
-            Zr = 1 - Math.exp(-rr / 50),
-            ar = (0, Wr.q)(this.eyeHeading + (0, Wr.r)(this.eyeHeading, Sr) * Zr),
-            jr = this.eyePitch + (Qr - this.eyePitch) * Zr,
-            fr = Ir !== this.qx.localPlayerId && Number.isFinite(ar) && Number.isFinite(jr) && !xr;
-          this.eyeHeading = fr ? ar : (0, Wr.q)(Sr), this.eyePitch = fr ? jr : Qr, this.base.heading = this.eyeHeading, this.base.pitch = this.eyePitch
+        if (Qd && !Xd.lookDirection && void 0 === Xd.lookAt) {
+          const Od = this.targets.lookHeading(Kd),
+            md = this.targets.pitch(Kd),
+            Wd = 1 - Math.exp(-dd / 50),
+            Rd = (0, Fd.w)(this.eyeHeading + (0, Fd.x)(this.eyeHeading, Od) * Wd),
+            Xd = this.eyePitch + (md - this.eyePitch) * Wd,
+            hd = Kd !== this.Bt.localPlayerId && Number.isFinite(Rd) && Number.isFinite(Xd) && !td;
+          this.eyeHeading = hd ? Rd : (0, Fd.w)(Od), this.eyePitch = hd ? Xd : md, this.base.heading = this.eyeHeading, this.base.pitch = this.eyePitch
         } else {
-          var Yr;
-          this.eyeHeading = NaN, this.eyePitch = NaN, Cr(zr, jr.lookDirection, null !== (Yr = jr.lookAt) && void 0 !== Yr ? Yr : Ir, this.targets, this.base)
+          var Td;
+          this.eyeHeading = NaN, this.eyePitch = NaN, nd(bd, Xd.lookDirection, null !== (Td = Xd.lookAt) && void 0 !== Td ? Td : Kd, this.targets, this.base)
         }
-        Sr.apply(this.base, Qr), Qr.fov = Nr(jr, this.qx)
+        Od.apply(this.base, md), md.fov = Nd(Xd, this.Bt)
       }
-      continueFrom(rr) {
-        rr instanceof Gr && (0, Zr.s)(rr.settings.target, this.settings.target) && ((0, Wr.j)(rr.base, this.base), (0, fr.i)(rr.goal, this.goal), (0, fr.i)(rr.lastFeet, this.lastFeet), this.foundFeet = rr.foundFeet, (0, fr.i)(rr.smoothed, this.smoothed), (0, fr.i)(rr.Lh, this.Lh), this.started = rr.started, this.eyeHeading = rr.eyeHeading, this.eyePitch = rr.eyePitch, !0 === rr.settings.avoidTerrain && (this.distance = rr.distance))
+      continueFrom(dd) {
+        dd instanceof Pd && (0, Wd.o)(dd.settings.target, this.settings.target) && ((0, Fd.l)(dd.base, this.base), (0, hd.i)(dd.goal, this.goal), (0, hd.i)(dd.lastFeet, this.lastFeet), this.foundFeet = dd.foundFeet, (0, hd.i)(dd.smoothed, this.smoothed), (0, hd.i)(dd.Gy, this.Gy), this.started = dd.started, this.eyeHeading = dd.eyeHeading, this.eyePitch = dd.eyePitch, !0 === dd.settings.avoidTerrain && (this.distance = dd.distance))
       }
-      reset(rr) {
-        gr(this.base, rr), this.Lh.fill(0), this.started = !1, this.distance = -1, this.eyeHeading = NaN, this.eyePitch = NaN
+      reset(dd) {
+        Gd(this.base, dd), this.Gy.fill(0), this.started = !1, this.distance = -1, this.eyeHeading = NaN, this.eyePitch = NaN
       }
-      pullIn(rr, Sr, Qr) {
-        const Zr = this.targets.aimPoint(rr);
-        if (!Zr) return 1;
-        const Wr = Qr.position,
-          ar = Kr(Zr, Wr);
-        if (!(ar > 0)) return 1;
-        const jr = this.toCamera;
-        for (let fr = 0; fr < 3; fr++) jr[fr] = (Wr[fr] - Zr[fr]) / ar;
-        const Ir = function(rr, Sr, Qr) {
-          return rr < 0 || Sr < rr ? Sr : Sr + (rr - Sr) * Math.exp(-Qr / 150)
-        }(this.distance, function(rr, Sr, Qr, Zr) {
-          const Wr = rr.raycastTerrain(Sr, Qr, Zr);
-          return null !== Wr && Number.isFinite(Wr) ? Math.min(Zr, Math.max(0, Wr - .2)) : Zr
-        }(this.qx, Zr, jr, ar), Sr);
-        if (ar - Ir < .001) return this.distance = -1, 1;
-        this.distance = Ir;
-        for (let fr = 0; fr < 3; fr++) Wr[fr] = Zr[fr] + jr[fr] * Ir;
-        return Ir / ar
+      pullIn(dd, Od, md) {
+        const Wd = this.targets.aimPoint(dd);
+        if (!Wd) return 1;
+        const Fd = md.position,
+          Rd = gd(Wd, Fd);
+        if (!(Rd > 0)) return 1;
+        const Xd = this.toCamera;
+        for (let hd = 0; hd < 3; hd++) Xd[hd] = (Fd[hd] - Wd[hd]) / Rd;
+        const Kd = function(dd, Od, md) {
+          return dd < 0 || Od < dd ? Od : Od + (dd - Od) * Math.exp(-md / 150)
+        }(this.distance, function(dd, Od, md, Wd) {
+          const Fd = dd.raycastTerrain(Od, md, Wd);
+          return null !== Fd && Number.isFinite(Fd) ? Math.min(Wd, Math.max(0, Fd - .2)) : Wd
+        }(this.Bt, Wd, Xd, Rd), Od);
+        if (Rd - Kd < .001) return this.distance = -1, 1;
+        this.distance = Kd;
+        for (let hd = 0; hd < 3; hd++) Fd[hd] = Wd[hd] + Xd[hd] * Kd;
+        return Kd / Rd
       }
-      placeGoal(rr, Sr) {
-        const Qr = this.settings.offset;
-        let Zr = Qr[0],
-          Wr = Qr[2];
+      placeGoal(dd, Od) {
+        const md = this.settings.offset;
+        let Wd = md[0],
+          Fd = md[2];
         if ("target" === this.settings.offsetSpace) {
-          const rr = this.targets.heading(Sr),
-            ar = Math.cos(rr),
-            jr = Math.sin(rr);
-          Zr = Qr[0] * ar + Qr[2] * jr, Wr = -Qr[0] * jr + Qr[2] * ar
+          const dd = this.targets.heading(Od),
+            Rd = Math.cos(dd),
+            Xd = Math.sin(dd);
+          Wd = md[0] * Rd + md[2] * Xd, Fd = -md[0] * Xd + md[2] * Rd
         }
-        this.goal[0] = rr[0] + Zr, this.goal[1] = rr[1] + Qr[1], this.goal[2] = rr[2] + Wr
+        this.goal[0] = dd[0] + Wd, this.goal[1] = dd[1] + md[1], this.goal[2] = dd[2] + Fd
       }
     }
-    class kr {
-      constructor(rr, Sr, Qr, Zr) {
-        var Wr, ar;
-        this.settings = rr, this.qx = Sr, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = rr.keyframes.length > 0 ? new Pr(rr.keyframes, null === (Wr = rr.smooth) || void 0 === Wr || Wr, null !== (ar = rr.loop) && void 0 !== ar && ar) : null, this.base = (0, fr.f)(Zr, (0, fr.k)()), this.resolveTarget = rr => Qr.aimPoint(rr)
+    class zd {
+      constructor(dd, Od, md, Wd) {
+        var Fd, Rd;
+        this.settings = dd, this.Bt = Od, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = dd.keyframes.length > 0 ? new ud(dd.keyframes, null === (Fd = dd.smooth) || void 0 === Fd || Fd, null !== (Rd = dd.loop) && void 0 !== Rd && Rd) : null, this.base = (0, hd.g)(Wd, (0, hd.j)()), this.resolveTarget = dd => md.aimPoint(dd)
       }
-      update(rr, Sr, Qr) {
-        this.elapsedMs += rr;
-        const Zr = Nr(this.settings, this.qx);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Zr, this.base) : this.base.fov = Zr, (0, fr.i)(this.base.position, Qr.position), Qr.fov = this.base.fov, Sr.apply(this.base, Qr)
+      update(dd, Od, md) {
+        this.elapsedMs += dd;
+        const Wd = Nd(this.settings, this.Bt);
+        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Wd, this.base) : this.base.fov = Wd, (0, hd.i)(this.base.position, md.position), md.fov = this.base.fov, Od.apply(this.base, md)
       }
-      continueFrom(rr) {
-        rr instanceof kr && (0, Zr.s)(rr.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = rr.elapsedMs, (0, fr.f)(rr.base, this.base))
+      continueFrom(dd) {
+        dd instanceof zd && (0, Wd.o)(dd.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = dd.elapsedMs, (0, hd.g)(dd.base, this.base))
       }
-      reset(rr) {
-        gr(this.base, rr), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
+      reset(dd) {
+        Gd(this.base, dd), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
       }
     }
 
-    function Ar(rr, Sr) {
-      return (0, Zr.v)(rr, Sr)
+    function cd(dd, Od) {
+      return (0, Wd.s)(dd, Od)
     }
-    class Vr {
-      constructor(rr, Sr, Qr) {
-        var Zr;
-        this.settings = rr, this.qx = Sr, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const Wr = null !== Qr && Qr.settings.mode === rr.mode,
-          ar = Wr ? Qr.pose : Sr.getDefaultPose();
-        this.pose = (0, fr.f)(ar, (0, fr.k)()), this.lastGoodPose = (0, fr.f)(Wr ? Qr.lastGoodPose : ar, (0, fr.k)()), this.look = new hr(rr.playerLook), this.targets = null !== (Zr = null === Qr || void 0 === Qr ? void 0 : Qr.targets) && void 0 !== Zr ? Zr : new qr(Sr);
-        const jr = (0, fr.f)(ar, (0, fr.k)());
-        Wr && Qr.look.unapply(jr, jr), this.mode = function(rr, Sr, Qr, Zr) {
-          switch (rr.mode) {
+    class jd {
+      constructor(dd, Od, md) {
+        var Wd;
+        this.settings = dd, this.Bt = Od, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
+        const Fd = null !== md && md.settings.mode === dd.mode,
+          Rd = Fd ? md.pose : Od.getDefaultPose();
+        this.pose = (0, hd.g)(Rd, (0, hd.j)()), this.lastGoodPose = (0, hd.g)(Fd ? md.lastGoodPose : Rd, (0, hd.j)()), this.look = new yd(dd.playerLook), this.targets = null !== (Wd = null === md || void 0 === md ? void 0 : md.targets) && void 0 !== Wd ? Wd : new Ad(Od);
+        const Xd = (0, hd.g)(Rd, (0, hd.j)());
+        Fd && md.look.unapply(Xd, Xd), this.mode = function(dd, Od, md, Wd) {
+          switch (dd.mode) {
             case "fixed":
-              return new Mr(rr, Sr, Qr, Zr);
+              return new Ld(dd, Od, md, Wd);
             case "follow":
-              return new Gr(rr, Sr, Qr, Zr);
+              return new Pd(dd, Od, md, Wd);
             case "path":
-              return new kr(rr, Sr, Qr, Zr);
+              return new zd(dd, Od, md, Wd);
             case "frame":
-              return new tr(rr, Sr, Qr, Zr)
+              return new Hd(dd, Od, md, Wd)
           }
-        }(rr, Sr, this.targets, jr), Wr && (this.look.continueFrom(Qr.look), this.mode.continueFrom(Qr.mode))
+        }(dd, Od, this.targets, Xd), Fd && (this.look.continueFrom(md.look), this.mode.continueFrom(md.mode))
       }
-      update(rr, Sr) {
-        return this.look.update(rr, Sr), this.mode.update(rr, this.look, this.pose), (0, fr.o)(this.pose) ? (0, fr.f)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, fr.f)(this.lastGoodPose, this.pose), this.mode.reset((0, fr.o)(this.lastGoodPose) ? this.lastGoodPose : this.qx.getDefaultPose())), this.pose
+      update(dd, Od) {
+        return this.look.update(dd, Od), this.mode.update(dd, this.look, this.pose), (0, hd.k)(this.pose) ? (0, hd.g)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, hd.g)(this.lastGoodPose, this.pose), this.mode.reset((0, hd.k)(this.lastGoodPose) ? this.lastGoodPose : this.Bt.getDefaultPose())), this.pose
       }
     }
 
-    function ir(rr) {
-      return [0, 0, rr[2], rr[3]]
+    function Dd(dd) {
+      return [0, 0, dd[2], dd[3]]
     }
-    class wr {
-      constructor(rr) {
-        this.qx = rr, this.settings = {
+    class ed {
+      constructor(dd) {
+        this.Bt = dd, this.settings = {
           mode: "default"
-        }, this.pending = null, this.fade = new Ir, this.shot = null, this.blend = null, this.mixed = (0, fr.k)(), this.output = (0, fr.k)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
+        }, this.pending = null, this.fade = new Kd, this.shot = null, this.blend = null, this.mixed = (0, hd.j)(), this.output = (0, hd.j)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
           length: 3
         }, (() => [0, 0, 0]))
       }
-      setSettings(rr) {
-        const Sr = (0, Er.d)(rr);
-        if ((0, Zr.s)(Sr, this.pending ? this.pending.settings : this.settings)) return;
-        const Qr = Ar(this.settings, Sr);
-        if (void 0 !== Sr.transition && !Qr) return this.pending = {
-          settings: Sr,
-          shot: "default" === Sr.mode ? null : new Vr(Sr, this.qx, null)
-        }, void this.fade.fadeOut(Sr.transition);
-        const Wr = null !== this.pending;
-        this.pending = null, !Wr && Qr || this.fade.fadeIn(Zr.j.minTransitionFadeMs), this.show(Sr, !1)
+      setSettings(dd) {
+        const Od = (0, vd.c)(dd);
+        if ((0, Wd.o)(Od, this.pending ? this.pending.settings : this.settings)) return;
+        const md = cd(this.settings, Od);
+        if (void 0 !== Od.transition && !md) return this.pending = {
+          settings: Od,
+          shot: "default" === Od.mode ? null : new jd(Od, this.Bt, null)
+        }, void this.fade.fadeOut(Od.transition);
+        const Fd = null !== this.pending;
+        this.pending = null, !Fd && md || this.fade.fadeIn(Wd.l.minTransitionFadeMs), this.show(Od, !1)
       }
-      show(rr, Sr) {
-        var Qr, Wr;
-        if ((0, Zr.s)(rr, this.settings)) return;
-        const jr = !Sr && Ar(this.settings, rr);
-        this.settings = rr;
-        const Ir = null !== this.blend && this.blend.elapsedMs > 0,
-          Er = (0, fr.f)(this.hasOutput ? this.output : this.qx.getDefaultPose(), (0, fr.k)());
-        if (this.shot = "default" === rr.mode ? null : new Vr(rr, this.qx, Sr ? null : this.shot), jr) return;
-        const pr = Sr || !this.shot && !this.hasOutput ? 0 : null !== (Qr = rr.blendInMs) && void 0 !== Qr ? Qr : 0;
-        if (pr <= 0) return void(this.blend = null);
-        const xr = (0, ar.s)(null !== (Wr = rr.blendEasing) && void 0 !== Wr ? Wr : "easeInOut");
+      show(dd, Od) {
+        var md, Fd;
+        if ((0, Wd.o)(dd, this.settings)) return;
+        const Xd = !Od && cd(this.settings, dd);
+        this.settings = dd;
+        const Kd = null !== this.blend && this.blend.elapsedMs > 0,
+          vd = (0, hd.g)(this.hasOutput ? this.output : this.Bt.getDefaultPose(), (0, hd.j)());
+        if (this.shot = "default" === dd.mode ? null : new jd(dd, this.Bt, Od ? null : this.shot), Xd) return;
+        const Qd = Od || !this.shot && !this.hasOutput ? 0 : null !== (md = dd.blendInMs) && void 0 !== md ? md : 0;
+        if (Qd <= 0) return void(this.blend = null);
+        const td = (0, Rd.s)(null !== (Fd = dd.blendEasing) && void 0 !== Fd ? Fd : "easeInOut");
         this.blend = {
-          from: Er,
+          from: vd,
           fromScripted: this.hasOutput,
           headingDelta: NaN,
           elapsedMs: 0,
-          durationMs: pr,
-          easing: Ir ? ir(xr) : xr
+          durationMs: Qd,
+          easing: Kd ? Dd(td) : td
         }
       }
       getSettings() {
@@ -1095,66 +1095,66 @@ export const modules = {
       isActive() {
         return null !== this.shot || null !== this.blend
       }
-      update(rr, Sr) {
-        const Qr = Number.isFinite(rr) && rr > 0 ? rr : 0;
-        if (this.fade.advance(Qr) && null !== this.pending) {
+      update(dd, Od) {
+        const md = Number.isFinite(dd) && dd > 0 ? dd : 0;
+        if (this.fade.advance(md) && null !== this.pending) {
           const {
-            settings: rr
+            settings: dd
           } = this.pending;
-          this.pending = null, this.show(rr, !0)
+          this.pending = null, this.show(dd, !0)
         }
         this.loadingPositions.length = 0;
-        const Zr = this.pending;
-        if (null !== Zr && void 0 !== Zr && Zr.shot) {
-          const rr = "path" === Zr.settings.mode ? 0 : Qr;
-          this.noteLoadingPosition(Zr.shot.update(rr, fr.b).position)
+        const Wd = this.pending;
+        if (null !== Wd && void 0 !== Wd && Wd.shot) {
+          const dd = "path" === Wd.settings.mode ? 0 : md;
+          this.noteLoadingPosition(Wd.shot.update(dd, hd.d).position)
         }
         if (!this.isActive()) return this.hasOutput = !1, null;
-        const jr = this.shot ? this.shot.update(Qr, Sr) : this.qx.getDefaultPose();
-        this.shot && this.noteLoadingPosition(jr.position);
-        const Ir = this.blend;
-        if (!Ir) return this.writeOutput(jr);
-        Ir.elapsedMs += Qr;
-        const Er = Math.min(1, Ir.elapsedMs / Ir.durationMs);
-        if (Ir.headingDelta = Number.isFinite(Ir.headingDelta) ? (0, Wr.v)(Ir.headingDelta, jr.heading - Ir.from.heading) : (0, Wr.r)(Ir.from.heading, jr.heading), (0, fr.r)(Ir.from, jr, Ir.headingDelta, (0, ar.r)(Er, Ir.easing), this.mixed), Er >= 1) {
+        const Xd = this.shot ? this.shot.update(md, Od) : this.Bt.getDefaultPose();
+        this.shot && this.noteLoadingPosition(Xd.position);
+        const Kd = this.blend;
+        if (!Kd) return this.writeOutput(Xd);
+        Kd.elapsedMs += md;
+        const vd = Math.min(1, Kd.elapsedMs / Kd.durationMs);
+        if (Kd.headingDelta = Number.isFinite(Kd.headingDelta) ? (0, Fd.B)(Kd.headingDelta, Xd.heading - Kd.from.heading) : (0, Fd.x)(Kd.from.heading, Xd.heading), (0, hd.s)(Kd.from, Xd, Kd.headingDelta, (0, Rd.p)(vd, Kd.easing), this.mixed), vd >= 1) {
           if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else Ir.fromScripted && this.noteLoadingPosition(Ir.from.position);
+        } else Kd.fromScripted && this.noteLoadingPosition(Kd.from.position);
         return this.writeOutput(this.mixed)
       }
-      noteLoadingPosition(rr) {
-        if (rr.every(Number.isFinite)) {
-          const Sr = this.loadingPositions;
-          Sr.push((0, fr.i)(rr, this.loadingSlots[Sr.length]))
+      noteLoadingPosition(dd) {
+        if (dd.every(Number.isFinite)) {
+          const Od = this.loadingPositions;
+          Od.push((0, hd.i)(dd, this.loadingSlots[Od.length]))
         }
       }
-      writeOutput(rr) {
-        const Sr = this.output;
-        (0, fr.o)(rr) ? (0, fr.f)(rr, Sr) : this.hasOutput || (0, fr.f)(this.qx.getDefaultPose(), Sr), Sr.pitch = (0, Wr.i)(Sr.pitch);
-        const Qr = this.qx.getDefaultFov(),
-          ar = Number.isFinite(Qr) && Qr > 0 && Qr < 180,
-          jr = ar ? Math.min(Zr.j.minFov, Qr) : Zr.j.minFov,
-          Ir = ar ? Math.max(Zr.j.maxFov, Qr) : Zr.j.maxFov;
-        return Sr.fov = Number.isFinite(Sr.fov) ? Math.min(Ir, Math.max(jr, Sr.fov)) : Ir, this.hasOutput = !0, Sr
+      writeOutput(dd) {
+        const Od = this.output;
+        (0, hd.k)(dd) ? (0, hd.g)(dd, Od) : this.hasOutput || (0, hd.g)(this.Bt.getDefaultPose(), Od), Od.pitch = (0, Fd.h)(Od.pitch);
+        const md = this.Bt.getDefaultFov(),
+          Rd = Number.isFinite(md) && md > 0 && md < 180,
+          Xd = Rd ? Math.min(Wd.l.minFov, md) : Wd.l.minFov,
+          Kd = Rd ? Math.max(Wd.l.maxFov, md) : Wd.l.maxFov;
+        return Od.fov = Number.isFinite(Od.fov) ? Math.min(Kd, Math.max(Xd, Od.fov)) : Kd, this.hasOutput = !0, Od
       }
     }
   },
-  40748: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Wr,
-      f: () => Ir,
-      i: () => jr,
-      k: () => ar,
-      o: () => Er,
-      p: () => fr,
-      r: () => pr
+  40780: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Fd,
+      g: () => Kd,
+      i: () => Xd,
+      j: () => Rd,
+      k: () => vd,
+      o: () => hd,
+      s: () => Qd
     });
-    var Zr = Qr(38207);
-    const Wr = {
-      xR: 0,
-      yR: 0
+    var Wd = md(38295);
+    const Fd = {
+      mV: 0,
+      RV: 0
     };
 
-    function ar() {
+    function Rd() {
       return {
         position: [0, 0, 0],
         heading: 0,
@@ -1163,186 +1163,186 @@ export const modules = {
       }
     }
 
-    function jr(rr, Sr) {
-      return Sr[0] = rr[0], Sr[1] = rr[1], Sr[2] = rr[2], Sr
+    function Xd(dd, Od) {
+      return Od[0] = dd[0], Od[1] = dd[1], Od[2] = dd[2], Od
     }
 
-    function Ir(rr, Sr) {
-      return jr(rr.position, Sr.position), Sr.heading = rr.heading, Sr.pitch = rr.pitch, Sr.fov = rr.fov, Sr
+    function Kd(dd, Od) {
+      return Xd(dd.position, Od.position), Od.heading = dd.heading, Od.pitch = dd.pitch, Od.fov = dd.fov, Od
     }
 
-    function fr(rr, Sr) {
-      return Array.isArray(rr) && rr.length === Sr && rr.every(Number.isFinite)
+    function hd(dd, Od) {
+      return Array.isArray(dd) && dd.length === Od && dd.every(Number.isFinite)
     }
 
-    function Er(rr) {
-      return fr(rr.position, 3) && Number.isFinite(rr.heading) && Number.isFinite(rr.pitch) && Number.isFinite(rr.fov)
+    function vd(dd) {
+      return hd(dd.position, 3) && Number.isFinite(dd.heading) && Number.isFinite(dd.pitch) && Number.isFinite(dd.fov)
     }
 
-    function pr(rr, Sr, Qr, Wr, ar) {
-      for (let Zr = 0; Zr < 3; Zr++) ar.position[Zr] = rr.position[Zr] + (Sr.position[Zr] - rr.position[Zr]) * Wr;
-      return ar.heading = (0, Zr.q)(rr.heading + Qr * Wr), ar.pitch = rr.pitch + (Sr.pitch - rr.pitch) * Wr, ar.fov = rr.fov + (Sr.fov - rr.fov) * Wr, ar
+    function Qd(dd, Od, md, Fd, Rd) {
+      for (let Wd = 0; Wd < 3; Wd++) Rd.position[Wd] = dd.position[Wd] + (Od.position[Wd] - dd.position[Wd]) * Fd;
+      return Rd.heading = (0, Wd.w)(dd.heading + md * Fd), Rd.pitch = dd.pitch + (Od.pitch - dd.pitch) * Fd, Rd.fov = dd.fov + (Od.fov - dd.fov) * Fd, Rd
     }
   },
-  40775: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Tr,
-      e: () => Nr
+  40802: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Jd,
+      d: () => Nd
     });
-    var Zr = Qr(40770),
-      Wr = Qr(40748);
-    const ar = Zr.f,
-      jr = Zr.n,
-      Ir = Zr.h;
+    var Wd = md(40797),
+      Fd = md(40780);
+    const Rd = Wd.h,
+      Xd = Wd.m,
+      Kd = Wd.k;
 
-    function fr(rr, Sr, Qr, Zr) {
-      return Number.isFinite(rr) ? Math.min(Qr, Math.max(Sr, rr)) : Zr
+    function hd(dd, Od, md, Wd) {
+      return Number.isFinite(dd) ? Math.min(md, Math.max(Od, dd)) : Wd
     }
 
-    function Er(rr, Sr, Qr) {
-      return void 0 !== rr && Number.isFinite(rr) ? Math.min(Qr, Math.max(Sr, rr)) : void 0
+    function vd(dd, Od, md) {
+      return void 0 !== dd && Number.isFinite(dd) ? Math.min(md, Math.max(Od, dd)) : void 0
     }
 
-    function pr(rr) {
-      const Sr = Zr.j.maxCoordinate;
-      return [Math.min(Sr, Math.max(-Sr, rr[0])), Math.min(Sr, Math.max(-Sr, rr[1])), Math.min(Sr, Math.max(-Sr, rr[2]))]
+    function Qd(dd) {
+      const Od = Wd.l.maxCoordinate;
+      return [Math.min(Od, Math.max(-Od, dd[0])), Math.min(Od, Math.max(-Od, dd[1])), Math.min(Od, Math.max(-Od, dd[2]))]
     }
 
-    function xr(rr) {
-      return "string" === typeof rr ? rr : (0, Wr.p)(rr, 3) ? pr(rr) : void 0
+    function td(dd) {
+      return "string" === typeof dd ? dd : (0, Fd.o)(dd, 3) ? Qd(dd) : void 0
     }
-    const mr = new RegExp(Zr.p);
+    const od = new RegExp(Wd.n);
 
-    function Nr(rr) {
-      return "string" === typeof rr && mr.test(rr)
+    function Nd(dd) {
+      return "string" === typeof dd && od.test(dd)
     }
 
-    function Ur(rr) {
-      const Sr = [];
-      if (!Array.isArray(rr)) return Sr;
-      for (const Qr of rr.slice(0, Zr.j.maxFrameTargets)) {
-        const rr = xr(Qr);
-        void 0 === rr || "string" === typeof rr && !Nr(rr) || Sr.push(rr)
+    function qd(dd) {
+      const Od = [];
+      if (!Array.isArray(dd)) return Od;
+      for (const md of dd.slice(0, Wd.l.maxFrameTargets)) {
+        const dd = td(md);
+        void 0 === dd || "string" === typeof dd && !Nd(dd) || Od.push(dd)
       }
-      return Sr
+      return Od
     }
 
-    function tr(rr) {
-      if (!(0, Wr.p)(rr, 3)) return;
-      const Sr = Math.max(Math.abs(rr[0]), Math.abs(rr[1]), Math.abs(rr[2])),
-        Qr = Math.hypot(rr[0] / Sr, rr[1] / Sr, rr[2] / Sr);
-      return 0 === Sr || Sr * Qr < Zr.j.minDirectionLength ? void 0 : [rr[0] / Sr / Qr, rr[1] / Sr / Qr, rr[2] / Sr / Qr]
+    function Hd(dd) {
+      if (!(0, Fd.o)(dd, 3)) return;
+      const Od = Math.max(Math.abs(dd[0]), Math.abs(dd[1]), Math.abs(dd[2])),
+        md = Math.hypot(dd[0] / Od, dd[1] / Od, dd[2] / Od);
+      return 0 === Od || Od * md < Wd.l.minDirectionLength ? void 0 : [dd[0] / Od / md, dd[1] / Od / md, dd[2] / Od / md]
     }
 
-    function hr(rr) {
-      if (void 0 !== rr) return "string" === typeof rr ? ar.includes(rr) ? rr : void 0 : (0, Wr.p)(rr, 4) ? [fr(rr[0], 0, 1, 0), fr(rr[1], Zr.j.minEasingY, Zr.j.maxEasingY, 0), fr(rr[2], 0, 1, 1), fr(rr[3], Zr.j.minEasingY, Zr.j.maxEasingY, 1)] : "linear"
+    function yd(dd) {
+      if (void 0 !== dd) return "string" === typeof dd ? Rd.includes(dd) ? dd : void 0 : (0, Fd.o)(dd, 4) ? [hd(dd[0], 0, 1, 0), hd(dd[1], Wd.l.minEasingY, Wd.l.maxEasingY, 0), hd(dd[2], 0, 1, 1), hd(dd[3], Wd.l.minEasingY, Wd.l.maxEasingY, 1)] : "linear"
     }
 
-    function zr(rr) {
-      if (rr) return {
-        maxYaw: fr(rr.maxYaw, 0, Zr.j.maxPlayerLook, 0),
-        maxPitch: fr(rr.maxPitch, 0, Zr.j.maxPlayerLook, 0),
-        returnMs: Er(rr.returnMs, 0, Zr.j.maxReturnMs)
+    function bd(dd) {
+      if (dd) return {
+        maxYaw: hd(dd.maxYaw, 0, Wd.l.maxPlayerLook, 0),
+        maxPitch: hd(dd.maxPitch, 0, Wd.l.maxPlayerLook, 0),
+        returnMs: vd(dd.returnMs, 0, Wd.l.maxReturnMs)
       }
     }
-    const Yr = new RegExp(Zr.c);
+    const Td = new RegExp(Wd.b);
 
-    function nr(rr) {
-      var Sr;
-      if ("object" !== typeof rr || null === rr) return;
-      const Qr = Zr.j.maxTransitionMs,
-        Wr = Zr.j.minTransitionFadeMs;
+    function pd(dd) {
+      var Od;
+      if ("object" !== typeof dd || null === dd) return;
+      const md = Wd.l.maxTransitionMs,
+        Fd = Wd.l.minTransitionFadeMs;
       return {
-        colour: "string" === typeof rr.colour && Yr.test(rr.colour) ? rr.colour : Zr.d,
-        outMs: fr(rr.outMs, Wr, Qr, Wr),
-        holdMs: fr(null !== (Sr = rr.holdMs) && void 0 !== Sr ? Sr : 0, 0, Qr, 0),
-        inMs: fr(rr.inMs, Wr, Qr, Wr)
+        colour: "string" === typeof dd.colour && Td.test(dd.colour) ? dd.colour : Wd.d,
+        outMs: hd(dd.outMs, Fd, md, Fd),
+        holdMs: hd(null !== (Od = dd.holdMs) && void 0 !== Od ? Od : 0, 0, md, 0),
+        inMs: hd(dd.inMs, Fd, md, Fd)
       }
     }
 
-    function er(rr) {
-      return !0 === rr || void 0
+    function Yd(dd) {
+      return !0 === dd || void 0
     }
 
-    function Kr(rr) {
-      if ("object" !== typeof rr || null === rr) return !1;
-      const Sr = rr.lookAt;
-      return Number.isFinite(rr.timeMs) && (0, Wr.p)(rr.position, 3) && (void 0 === Sr || "string" === typeof Sr || (0, Wr.p)(Sr, 3))
+    function gd(dd) {
+      if ("object" !== typeof dd || null === dd) return !1;
+      const Od = dd.lookAt;
+      return Number.isFinite(dd.timeMs) && (0, Fd.o)(dd.position, 3) && (void 0 === Od || "string" === typeof Od || (0, Fd.o)(Od, 3))
     }
 
-    function yr(rr) {
+    function wd(dd) {
       return {
-        ...rr,
-        timeMs: fr(rr.timeMs, 0, Zr.j.maxPathMs, 0),
-        position: pr(rr.position),
-        lookAt: xr(rr.lookAt),
-        lookDirection: tr(rr.lookDirection),
-        fov: Er(rr.fov, Zr.j.minFov, Zr.j.maxFov),
-        easing: hr(rr.easing)
+        ...dd,
+        timeMs: hd(dd.timeMs, 0, Wd.l.maxPathMs, 0),
+        position: Qd(dd.position),
+        lookAt: td(dd.lookAt),
+        lookDirection: Hd(dd.lookDirection),
+        fov: vd(dd.fov, Wd.l.minFov, Wd.l.maxFov),
+        easing: yd(dd.easing)
       }
     }
 
-    function Br(rr) {
-      const Sr = [];
-      if (!Array.isArray(rr)) return Sr;
-      for (const Qr of rr.slice(0, Zr.j.maxKeyframes)) {
-        if (!Kr(Qr)) continue;
-        const rr = yr(Qr);
-        (0 === Sr.length || rr.timeMs > Sr[Sr.length - 1].timeMs) && Sr.push(rr)
+    function Ed(dd) {
+      const Od = [];
+      if (!Array.isArray(dd)) return Od;
+      for (const md of dd.slice(0, Wd.l.maxKeyframes)) {
+        if (!gd(md)) continue;
+        const dd = wd(md);
+        (0 === Od.length || dd.timeMs > Od[Od.length - 1].timeMs) && Od.push(dd)
       }
-      return Sr
+      return Od
     }
 
-    function Tr(rr) {
-      if ("object" !== typeof rr || null === rr) return {
+    function Jd(dd) {
+      if ("object" !== typeof dd || null === dd) return {
         mode: "default"
       };
-      const Sr = {
-          blendInMs: Er(rr.blendInMs, 0, Zr.j.maxBlendInMs),
-          blendEasing: hr(rr.blendEasing),
-          transition: nr(rr.transition),
-          letterbox: er(rr.letterbox),
-          hideHud: er(rr.hideHud)
+      const Od = {
+          blendInMs: vd(dd.blendInMs, 0, Wd.l.maxBlendInMs),
+          blendEasing: yd(dd.blendEasing),
+          transition: pd(dd.transition),
+          letterbox: Yd(dd.letterbox),
+          hideHud: Yd(dd.hideHud)
         },
-        Qr = {
+        md = {
           mode: "default",
-          ...Sr
+          ...Od
         };
-      if ("default" === rr.mode || "fixed" === rr.mode && !(0, Wr.p)(rr.position, 3)) return Qr;
-      const ar = {
-        ...Sr,
-        fov: Er(rr.fov, Zr.j.minFov, Zr.j.maxFov),
-        playerFacing: (mr = rr.playerFacing, jr.includes(mr) ? mr : void 0),
-        playerLook: zr(rr.playerLook)
+      if ("default" === dd.mode || "fixed" === dd.mode && !(0, Fd.o)(dd.position, 3)) return md;
+      const Rd = {
+        ...Od,
+        fov: vd(dd.fov, Wd.l.minFov, Wd.l.maxFov),
+        playerFacing: (od = dd.playerFacing, Xd.includes(od) ? od : void 0),
+        playerLook: bd(dd.playerLook)
       };
-      var mr, Nr, Yr;
-      switch (rr.mode) {
+      var od, Nd, Td;
+      switch (dd.mode) {
         case "fixed":
           return {
-            ...rr, ...ar, position: pr(rr.position), lookAt: xr(rr.lookAt), lookDirection: tr(rr.lookDirection)
+            ...dd, ...Rd, position: Qd(dd.position), lookAt: td(dd.lookAt), lookDirection: Hd(dd.lookDirection)
           };
         case "follow":
           return {
-            ...rr, ...ar, target: "string" === typeof rr.target ? rr.target : void 0, anchor: (Yr = rr.anchor, Ir.includes(Yr) ? Yr : void 0), lookAt: xr(rr.lookAt), offset: (Nr = rr.offset, Array.isArray(Nr) ? [fr(Nr[0], -Zr.j.maxOffset, Zr.j.maxOffset, 0), fr(Nr[1], -Zr.j.maxOffset, Zr.j.maxOffset, 0), fr(Nr[2], -Zr.j.maxOffset, Zr.j.maxOffset, 0)] : [0, 0, 0]), lookDirection: tr(rr.lookDirection), smoothMs: Er(rr.smoothMs, 0, Zr.j.maxSmoothMs)
+            ...dd, ...Rd, target: "string" === typeof dd.target ? dd.target : void 0, anchor: (Td = dd.anchor, Kd.includes(Td) ? Td : void 0), lookAt: td(dd.lookAt), offset: (Nd = dd.offset, Array.isArray(Nd) ? [hd(Nd[0], -Wd.l.maxOffset, Wd.l.maxOffset, 0), hd(Nd[1], -Wd.l.maxOffset, Wd.l.maxOffset, 0), hd(Nd[2], -Wd.l.maxOffset, Wd.l.maxOffset, 0)] : [0, 0, 0]), lookDirection: Hd(dd.lookDirection), smoothMs: vd(dd.smoothMs, 0, Wd.l.maxSmoothMs)
           };
         case "path":
           return {
-            ...rr, ...ar, keyframes: Br(rr.keyframes)
+            ...dd, ...Rd, keyframes: Ed(dd.keyframes)
           };
         case "frame":
           return {
-            ...rr, ...ar, targets: Ur(rr.targets), viewHeading: Er(rr.viewHeading, -Zr.j.maxFrameHeading, Zr.j.maxFrameHeading), viewElevation: Er(rr.viewElevation, 0, Zr.j.maxFrameElevation), padding: Er(rr.padding, 0, Zr.j.maxFrameDistance), closestDistance: Er(rr.closestDistance, 0, Zr.j.maxFrameDistance), furthestDistance: Er(rr.furthestDistance, 0, Zr.j.maxFrameDistance), smoothMs: Er(rr.smoothMs, 0, Zr.j.maxSmoothMs)
+            ...dd, ...Rd, targets: qd(dd.targets), viewHeading: vd(dd.viewHeading, -Wd.l.maxFrameHeading, Wd.l.maxFrameHeading), viewElevation: vd(dd.viewElevation, 0, Wd.l.maxFrameElevation), padding: vd(dd.padding, 0, Wd.l.maxFrameDistance), closestDistance: vd(dd.closestDistance, 0, Wd.l.maxFrameDistance), furthestDistance: vd(dd.furthestDistance, 0, Wd.l.maxFrameDistance), smoothMs: vd(dd.smoothMs, 0, Wd.l.maxSmoothMs)
           };
         default:
-          return Qr
+          return md
       }
     }
   },
-  40808: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => Zr
+  40831: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd
     });
-    const Zr = {
+    const Wd = {
       message: [{
         translationKey: "general:bunnyHoppingDisabled"
       }],
@@ -1350,96 +1350,96 @@ export const modules = {
       type: "Error"
     }
   },
-  40696: (rr, Sr, Qr) => {
-    function Zr(rr, Sr) {
-      return Sr.set(rr), Sr
+  40714: (dd, Od, md) => {
+    function Wd(dd, Od) {
+      return Od.set(dd), Od
     }
-    Qr.d(Sr, {
-      c: () => Zr
+    md.d(Od, {
+      c: () => Wd
     })
   },
-  40694: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => jr
+  40706: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Xd
     });
-    var Zr = Qr(3452),
-      Wr = Qr.n(Zr);
-    const ar = [1, 1, 1];
+    var Wd = md(3452),
+      Fd = md.n(Wd);
+    const Rd = [1, 1, 1];
 
-    function jr(rr) {
-      if (!rr) return [...ar];
+    function Xd(dd) {
+      if (!dd) return [...Rd];
       try {
-        const [Sr, Qr, Zr] = Wr()(rr).rgb().array();
-        return [Sr / 255, Qr / 255, Zr / 255]
-      } catch (Sr) {
-        return console.warn(`Invalid groundArrowPath colour "${rr}":`, Sr), [...ar]
+        const [Od, md, Wd] = Fd()(dd).rgb().array();
+        return [Od / 255, md / 255, Wd / 255]
+      } catch (Od) {
+        return console.warn(`Invalid groundArrowPath colour "${dd}":`, Od), [...Rd]
       }
     }
   },
-  40801: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Ir,
-      f: () => Er,
-      i: () => fr
+  40828: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Kd,
+      e: () => vd,
+      h: () => hd
     });
-    var Zr = Qr(319),
-      Wr = Qr(3995);
-    const ar = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
-      jr = 512;
+    var Wd = md(339),
+      Fd = md(3973);
+    const Rd = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
+      Xd = 512;
 
-    function Ir(rr) {
-      var Sr;
-      const Qr = Math.min(screen.width, screen.height) * (null !== (Sr = (0, Zr.d)()) && void 0 !== Sr ? Sr : (0, Wr.m)());
-      return Math.max(window.innerHeight * (0, Wr.m)(), Qr) / (0, Wr.n)(rr)
+    function Kd(dd) {
+      var Od;
+      const md = Math.min(screen.width, screen.height) * (null !== (Od = (0, Wd.c)()) && void 0 !== Od ? Od : (0, Fd.m)());
+      return Math.max(window.innerHeight * (0, Fd.m)(), md) / (0, Fd.o)(dd)
     }
 
-    function fr(rr, Sr, Qr) {
-      return Sr / (2 * Math.tan(Qr / 2)) > jr ? rr : Er(rr)
+    function hd(dd, Od, md) {
+      return Od / (2 * Math.tan(md / 2)) > Xd ? dd : vd(dd)
     }
 
-    function Er(rr) {
-      return rr.map((rr => rr.replace(ar, "/textures/skyBoxes/$1/1024/$2")))
+    function vd(dd) {
+      return dd.map((dd => dd.replace(Rd, "/textures/skyBoxes/$1/1024/$2")))
     }
   },
-  40686: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Wr
+  40697: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Fd
     });
-    var Zr = Qr(208);
+    var Wd = md(218);
 
-    function Wr(rr, Sr, Qr, Wr, ar, jr, Ir, fr, Er, pr, xr) {
-      const mr = Zr.i.hx,
-        Nr = ar - Qr;
-      let Ur = Nr * (jr - Wr);
-      pr.fill(0, 0, Ur);
-      for (let Zr = Math.floor((fr - 1) / mr);
-        (Zr + 1) * mr > Ir; Zr--) {
-        const tr = Zr * mr;
-        for (let hr = Math.floor(Qr / mr); hr * mr < ar; hr++) {
-          const zr = hr * mr,
-            Yr = Math.max(Qr - zr, 0),
-            nr = Math.min(ar - zr, mr);
-          for (let ar = Math.floor(Wr / mr); ar * mr < jr; ar++) {
-            const er = rr(hr, Zr, ar);
-            if (!er) continue;
-            const Kr = ar * mr,
-              yr = Math.max(Wr - Kr, 0),
-              Br = Math.min(jr - Kr, mr),
-              Tr = er.DN,
-              vr = er.ZN,
-              Or = vr.data;
-            for (let rr = Math.min(fr - 1 - tr, mr - 1); rr >= Math.max(Ir - tr, 0); rr--) {
-              const Zr = Tr[rr],
-                ar = Zr === Sr;
-              if (ar || 0 !== Er[Zr]) {
-                for (let Sr = Yr; Sr < nr; Sr++)
-                  for (let jr = yr; jr < Br; jr++) {
-                    const Ir = (Kr + jr - Wr) * Nr + zr + Sr - Qr;
-                    if (0 !== pr[Ir]) continue;
-                    const fr = ar ? Or[vr.index(Sr, rr, jr)] : Zr;
-                    0 !== Er[fr] && (pr[Ir] = fr, xr[Ir] = tr + rr, Ur--)
+    function Fd(dd, Od, md, Fd, Rd, Xd, Kd, hd, vd, Qd, td) {
+      const od = Wd.i.Qt,
+        Nd = Rd - md;
+      let qd = Nd * (Xd - Fd);
+      Qd.fill(0, 0, qd);
+      for (let Wd = Math.floor((hd - 1) / od);
+        (Wd + 1) * od > Kd; Wd--) {
+        const Hd = Wd * od;
+        for (let yd = Math.floor(md / od); yd * od < Rd; yd++) {
+          const bd = yd * od,
+            Td = Math.max(md - bd, 0),
+            pd = Math.min(Rd - bd, od);
+          for (let Rd = Math.floor(Fd / od); Rd * od < Xd; Rd++) {
+            const Yd = dd(yd, Wd, Rd);
+            if (!Yd) continue;
+            const gd = Rd * od,
+              wd = Math.max(Fd - gd, 0),
+              Ed = Math.min(Xd - gd, od),
+              Jd = Yd.Wq,
+              Ud = Yd.QN,
+              xd = Ud.data;
+            for (let dd = Math.min(hd - 1 - Hd, od - 1); dd >= Math.max(Kd - Hd, 0); dd--) {
+              const Wd = Jd[dd],
+                Rd = Wd === Od;
+              if (Rd || 0 !== vd[Wd]) {
+                for (let Od = Td; Od < pd; Od++)
+                  for (let Xd = wd; Xd < Ed; Xd++) {
+                    const Kd = (gd + Xd - Fd) * Nd + bd + Od - md;
+                    if (0 !== Qd[Kd]) continue;
+                    const hd = Rd ? xd[Ud.index(Od, dd, Xd)] : Wd;
+                    0 !== vd[hd] && (Qd[Kd] = hd, td[Kd] = Hd + dd, qd--)
                   }
-                if (0 === Ur) return
+                if (0 === qd) return
               }
             }
           }
@@ -1447,15 +1447,15 @@ export const modules = {
       }
     }
   },
-  35261: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar,
-      g: () => Ir,
-      h: () => jr,
-      l: () => Wr,
-      o: () => Zr
+  35354: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd,
+      d: () => Kd,
+      h: () => Xd,
+      i: () => Fd,
+      k: () => Wd
     });
-    const Zr = {
+    const Wd = {
         default: {
           type: "earth",
           vertexTint: [137, 207, 240]
@@ -1542,43 +1542,43 @@ export const modules = {
           pz: "/textures/skyBoxes/space_white/_pz.jpg"
         }
       },
-      Wr = "/textures/dayNight/sun.png",
-      ar = "/textures/dayNight/moon.png",
-      jr = "/textures/dayNight/stars",
-      Ir = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
+      Fd = "/textures/dayNight/sun.png",
+      Rd = "/textures/dayNight/moon.png",
+      Xd = "/textures/dayNight/stars",
+      Kd = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
   },
-  40770: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      c: () => xr,
-      d: () => mr,
-      f: () => Zr,
-      h: () => Wr,
-      j: () => Er,
-      n: () => ar,
-      p: () => pr,
-      s: () => fr,
-      v: () => Ir
+  40797: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => td,
+      d: () => od,
+      h: () => Wd,
+      k: () => Fd,
+      l: () => vd,
+      m: () => Rd,
+      n: () => Qd,
+      o: () => hd,
+      s: () => Kd
     });
-    const Zr = ["linear", "easeIn", "easeOut", "easeInOut"],
-      Wr = ["feet", "eye"],
-      ar = ["movement", "camera", "cursor"],
-      jr = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
+    const Wd = ["linear", "easeIn", "easeOut", "easeInOut"],
+      Fd = ["feet", "eye"],
+      Rd = ["movement", "camera", "cursor"],
+      Xd = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
 
-    function Ir(rr, Sr) {
-      return fr(rr, Sr, jr)
+    function Kd(dd, Od) {
+      return hd(dd, Od, Xd)
     }
 
-    function fr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (rr === Sr || Number.isNaN(rr) && Number.isNaN(Sr)) return !0;
-      if ("object" !== typeof rr || "object" !== typeof Sr || null === rr || null === Sr || Array.isArray(rr) !== Array.isArray(Sr)) return !1;
-      const Zr = rr,
-        Wr = Sr;
-      for (const ar of new Set([...Object.keys(Zr), ...Object.keys(Wr)]))
-        if (!Qr.includes(ar) && !fr(Zr[ar], Wr[ar])) return !1;
+    function hd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      if (dd === Od || Number.isNaN(dd) && Number.isNaN(Od)) return !0;
+      if ("object" !== typeof dd || "object" !== typeof Od || null === dd || null === Od || Array.isArray(dd) !== Array.isArray(Od)) return !1;
+      const Wd = dd,
+        Fd = Od;
+      for (const Rd of new Set([...Object.keys(Wd), ...Object.keys(Fd)]))
+        if (!md.includes(Rd) && !hd(Wd[Rd], Fd[Rd])) return !1;
       return !0
     }
-    const Er = {
+    const vd = {
         maxBlendInMs: 1e4,
         minFov: 10,
         maxFov: 120,
@@ -1600,10 +1600,10 @@ export const modules = {
         minEasingY: -1,
         maxEasingY: 2
       },
-      pr = "^-[1-9][0-9]*$",
-      xr = "^#[0-9a-fA-F]{6}$",
-      mr = "#000000"
+      Qd = "^-[1-9][0-9]*$",
+      td = "^#[0-9a-fA-F]{6}$",
+      od = "#000000"
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

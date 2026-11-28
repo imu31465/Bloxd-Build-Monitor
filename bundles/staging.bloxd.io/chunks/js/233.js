@@ -1,166 +1,166 @@
 export const id = 233;
 export const ids = [233];
 export const modules = {
-  35568: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      packDisplayName: () => tr,
-      packModelMessage: () => hr,
-      packModelSummary: () => Yr,
-      refusedPackModels: () => zr
+  35647: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      packDisplayName: () => Hd,
+      packModelMessage: () => yd,
+      packModelSummary: () => Td,
+      refusedPackModels: () => bd
     });
-    var Zr = Qr(35576),
-      Wr = Qr(35580);
-    const ar = "DRACO",
-      jr = 0,
-      Ir = 1,
-      fr = 0,
-      Er = 1,
-      pr = 32768;
+    var Wd = md(35653),
+      Fd = md(35662);
+    const Rd = "DRACO",
+      Xd = 0,
+      Kd = 1,
+      hd = 0,
+      vd = 1,
+      Qd = 32768;
 
-    function xr(rr) {
-      const Sr = new DataView(rr.buffer, rr.byteOffset, rr.byteLength);
-      let Qr = 0;
-      const Zr = () => {
-          if (Qr >= rr.byteLength) throw new RangeError("past the stream");
-          return rr[Qr++]
+    function td(dd) {
+      const Od = new DataView(dd.buffer, dd.byteOffset, dd.byteLength);
+      let md = 0;
+      const Wd = () => {
+          if (md >= dd.byteLength) throw new RangeError("past the stream");
+          return dd[md++]
         },
-        Wr = () => {
-          if (Qr + 4 > rr.byteLength) throw new RangeError("past the stream");
-          const Zr = Sr.getUint32(Qr, !0);
-          return Qr += 4, Zr
+        Fd = () => {
+          if (md + 4 > dd.byteLength) throw new RangeError("past the stream");
+          const Wd = Od.getUint32(md, !0);
+          return md += 4, Wd
         },
-        xr = () => {
-          let rr = 0;
-          for (let Sr = 0; Sr < 35; Sr += 7) {
-            const Qr = Zr();
-            if (rr += (127 & Qr) * 2 ** Sr, 0 === (128 & Qr)) return rr
+        td = () => {
+          let dd = 0;
+          for (let Od = 0; Od < 35; Od += 7) {
+            const md = Wd();
+            if (dd += (127 & md) * 2 ** Od, 0 === (128 & md)) return dd
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let rr = 0; rr < ar.length; rr++)
-          if (Zr() !== ar.charCodeAt(rr)) return null;
-        const Sr = Zr(),
-          mr = Zr(),
-          Nr = Zr(),
-          Ur = Zr(),
-          tr = Zr() | Zr() << 8;
-        if (2 !== Sr) return null;
-        0 !== (tr & pr) && function(rr, Sr, Qr) {
-          const Zr = () => {
-              Sr(Qr())
+        for (let dd = 0; dd < Rd.length; dd++)
+          if (Wd() !== Rd.charCodeAt(dd)) return null;
+        const Od = Wd(),
+          od = Wd(),
+          Nd = Wd(),
+          qd = Wd(),
+          Hd = Wd() | Wd() << 8;
+        if (2 !== Od) return null;
+        0 !== (Hd & Qd) && function(dd, Od, md) {
+          const Wd = () => {
+              Od(md())
             },
-            Wr = () => {
-              let Qr = 1,
-                Wr = !0;
-              for (; Qr > 0;) {
-                Qr--, Wr || Zr(), Wr = !1;
-                const ar = rr();
-                for (let Qr = 0; Qr < ar; Qr++) Zr(), Sr(rr());
-                Qr += rr()
+            Fd = () => {
+              let md = 1,
+                Fd = !0;
+              for (; md > 0;) {
+                md--, Fd || Wd(), Fd = !1;
+                const Rd = dd();
+                for (let md = 0; md < Rd; md++) Wd(), Od(dd());
+                md += dd()
               }
             },
-            ar = rr();
-          for (let jr = 0; jr < ar; jr++) rr(), Wr();
-          Wr()
-        }(xr, (Sr => {
-          if (Qr + Sr > rr.byteLength) throw new RangeError("past the stream");
-          Qr += Sr
-        }), Zr);
-        const hr = mr < 2 ? Wr : xr;
-        if (Nr === jr) return {
+            Rd = dd();
+          for (let Xd = 0; Xd < Rd; Xd++) dd(), Fd();
+          Fd()
+        }(td, (Od => {
+          if (md + Od > dd.byteLength) throw new RangeError("past the stream");
+          md += Od
+        }), Wd);
+        const yd = od < 2 ? Fd : td;
+        if (Nd === Xd) return {
           faces: 0,
-          vertices: Wr(),
-          minor: mr
+          vertices: Fd(),
+          minor: od
         };
-        if (Nr !== Ir) return null;
-        if (Ur === fr) {
+        if (Nd !== Kd) return null;
+        if (qd === hd) {
           return {
-            faces: hr(),
-            vertices: hr(),
-            minor: mr
+            faces: yd(),
+            vertices: yd(),
+            minor: od
           }
         }
-        if (Ur !== Er) return null;
-        Zr(), mr < 2 && xr();
-        const zr = xr();
+        if (qd !== vd) return null;
+        Wd(), od < 2 && td();
+        const bd = td();
         return {
-          faces: xr(),
-          vertices: zr,
-          minor: mr
+          faces: td(),
+          vertices: bd,
+          minor: od
         }
       } catch {
         return null
       }
     }
 
-    function mr(rr, Sr, Qr) {
-      var Zr, Wr;
-      if (null === (Zr = null === (Wr = rr.extensionsUsed) || void 0 === Wr ? void 0 : Wr.includes("KHR_draco_mesh_compression")) || void 0 === Zr || !Zr) return null;
-      for (const tr of null !== (ar = rr.meshes) && void 0 !== ar ? ar : []) {
-        var ar;
-        for (const Zr of tr.primitives) {
-          var jr, Ir, fr, Er, pr, mr;
-          const Wr = null === (jr = Zr.extensions) || void 0 === jr ? void 0 : jr.KHR_draco_mesh_compression;
-          if ("object" !== typeof Wr || null === Wr) continue;
-          const ar = null === (Ir = rr.bufferViews) || void 0 === Ir ? void 0 : Ir[Wr.bufferView];
-          if (null === Sr || void 0 === ar) return Nr;
-          const tr = null !== (fr = ar.byteOffset) && void 0 !== fr ? fr : 0,
-            hr = xr(Sr.subarray(tr, tr + ar.byteLength));
-          if (null === hr && !Qr) continue;
-          const zr = null !== (Er = rr.accessors) && void 0 !== Er ? Er : [],
-            Yr = null === (pr = zr[Zr.attributes.POSITION]) || void 0 === pr ? void 0 : pr.count,
-            nr = void 0 === Zr.indices ? 0 : null === (mr = zr[Zr.indices]) || void 0 === mr ? void 0 : mr.count;
-          if (null === hr || void 0 === Yr || void 0 === nr || 3 * hr.faces !== nr || hr.vertices > Yr) return Nr;
-          if (Qr && hr.minor < 2) return Ur
+    function od(dd, Od, md) {
+      var Wd, Fd;
+      if (null === (Wd = null === (Fd = dd.extensionsUsed) || void 0 === Fd ? void 0 : Fd.includes("KHR_draco_mesh_compression")) || void 0 === Wd || !Wd) return null;
+      for (const Hd of null !== (Rd = dd.meshes) && void 0 !== Rd ? Rd : []) {
+        var Rd;
+        for (const Wd of Hd.primitives) {
+          var Xd, Kd, hd, vd, Qd, od;
+          const Fd = null === (Xd = Wd.extensions) || void 0 === Xd ? void 0 : Xd.KHR_draco_mesh_compression;
+          if ("object" !== typeof Fd || null === Fd) continue;
+          const Rd = null === (Kd = dd.bufferViews) || void 0 === Kd ? void 0 : Kd[Fd.bufferView];
+          if (null === Od || void 0 === Rd) return Nd;
+          const Hd = null !== (hd = Rd.byteOffset) && void 0 !== hd ? hd : 0,
+            yd = td(Od.subarray(Hd, Hd + Rd.byteLength));
+          if (null === yd && !md) continue;
+          const bd = null !== (vd = dd.accessors) && void 0 !== vd ? vd : [],
+            Td = null === (Qd = bd[Wd.attributes.POSITION]) || void 0 === Qd ? void 0 : Qd.count,
+            pd = void 0 === Wd.indices ? 0 : null === (od = bd[Wd.indices]) || void 0 === od ? void 0 : od.count;
+          if (null === yd || void 0 === Td || void 0 === pd || 3 * yd.faces !== pd || yd.vertices > Td) return Nd;
+          if (md && yd.minor < 2) return qd
         }
       }
       return null
     }
-    const Nr = "has a Draco stream whose counts don't match its accessors",
-      Ur = "has a Draco stream too old to decode: export it again";
+    const Nd = "has a Draco stream whose counts don't match its accessors",
+      qd = "has a Draco stream too old to decode: export it again";
 
-    function tr(rr) {
-      var Sr;
-      return null !== (Sr = rr.name) && void 0 !== Sr ? Sr : rr.fromFolderName || rr.id
+    function Hd(dd) {
+      var Od;
+      return null !== (Od = dd.name) && void 0 !== Od ? Od : dd.fromFolderName || dd.id
     }
 
-    function hr(rr, Sr, Qr) {
-      return `Texture pack "${rr}": model "${Sr}" was not loaded because it ${Qr}. The default model is used instead.`
+    function yd(dd, Od, md) {
+      return `Texture pack "${dd}": model "${Od}" was not loaded because it ${md}. The default model is used instead.`
     }
 
-    function zr(rr, Sr, Qr) {
+    function bd(dd, Od, md) {
       let {
-        strictDraco: ar = !1
+        strictDraco: Rd = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const jr = {};
-      for (const [Ir, fr] of Object.entries(Sr)) {
-        let Sr;
-        if (fr.startsWith("data:")) try {
-          const rr = new Uint8Array((0, Wr.t)(fr));
-          if (Sr = (0, Zr.e)(rr), null === Sr) {
+      const Xd = {};
+      for (const [Kd, hd] of Object.entries(Od)) {
+        let Od;
+        if (hd.startsWith("data:")) try {
+          const dd = new Uint8Array((0, Fd.n)(hd));
+          if (Od = (0, Wd.e)(dd), null === Od) {
             const {
-              json: Qr,
-              bin: Zr
-            } = (0, Wr.z)(rr);
-            Sr = mr(Qr, Zr, ar)
+              json: md,
+              bin: Wd
+            } = (0, Fd.v)(dd);
+            Od = od(md, Wd, Rd)
           }
         } catch {
-          Sr = "is not a binary glTF 2.0 file"
-        } else Sr = "loads data from outside the file";
-        Sr && (jr[Ir] = Sr, Qr && console.warn(hr(rr, Ir, Sr)))
+          Od = "is not a binary glTF 2.0 file"
+        } else Od = "loads data from outside the file";
+        Od && (Xd[Kd] = Od, md && console.warn(yd(dd, Kd, Od)))
       }
-      return jr
+      return Xd
     }
 
-    function Yr(rr, Sr) {
-      const Qr = Object.keys(Sr);
-      if (0 === Qr.length) return null;
-      if (1 === Qr.length) return hr(rr, Qr[0], Sr[Qr[0]]);
-      const Zr = Qr.map((rr => `"${rr}" ${Sr[rr]}`)).join("; ");
-      return `Texture pack "${rr}": ${Qr.length} models were not loaded (${Zr}). The default models are used instead.`
+    function Td(dd, Od) {
+      const md = Object.keys(Od);
+      if (0 === md.length) return null;
+      if (1 === md.length) return yd(dd, md[0], Od[md[0]]);
+      const Wd = md.map((dd => `"${dd}" ${Od[dd]}`)).join("; ");
+      return `Texture pack "${dd}": ${md.length} models were not loaded (${Wd}). The default models are used instead.`
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

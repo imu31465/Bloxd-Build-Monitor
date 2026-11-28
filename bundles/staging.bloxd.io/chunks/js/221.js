@@ -1,55 +1,55 @@
 export const id = 221;
 export const ids = [220, 221];
 export const modules = {
-  35337: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Zr
+  35426: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Wd
     });
-    const Zr = new Set(["chunkBorders"])
+    const Wd = new Set(["chunkBorders"])
   },
-  35335: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      ALL_DEV_TOOLS: () => jr,
-      coreDevTools: () => Er,
-      devTools: () => fr
+  35422: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      ALL_DEV_TOOLS: () => Xd,
+      coreDevTools: () => vd,
+      devTools: () => hd
     });
-    var Zr = Qr(712),
-      Wr = Qr(1364),
-      ar = Qr(35337);
-    const jr = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function Ir() {
+    var Wd = md(732),
+      Fd = md(1361),
+      Rd = md(35426);
+    const Xd = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Kd() {
       const {
-        noaDevTools: rr
-      } = await Qr.e(270).then((() => Qr(42923)));
-      return rr
+        noaDevTools: dd
+      } = await md.e(270).then((() => md(43004)));
+      return dd
     }
-    const fr = new class {
+    const hd = new class {
         constructor() {
-          this.loadHost = Ir, this.tools = jr
+          this.loadHost = Kd, this.tools = Xd
         }
-        setHost(rr) {
-          this.tools = null === rr ? jr : rr.tools, this.loadHost = null === rr ? Ir : async () => rr
+        setHost(dd) {
+          this.tools = null === dd ? Xd : dd.tools, this.loadHost = null === dd ? Kd : async () => dd
         }
-        supports(rr) {
-          return this.tools.has(rr)
+        supports(dd) {
+          return this.tools.has(dd)
         }
-        async downloadScene(rr, Sr) {
-          const Qr = await this.loadHost();
-          await Qr.downloadScene(rr, Sr)
+        async downloadScene(dd, Od) {
+          const md = await this.loadHost();
+          await md.downloadScene(dd, Od)
         }
-        async setAmbientLightIntensity(rr) {
-          const Sr = await this.loadHost();
-          await Sr.setAmbientLightIntensity(rr)
+        async setAmbientLightIntensity(dd) {
+          const Od = await this.loadHost();
+          await Od.setAmbientLightIntensity(dd)
         }
-        async capturePhoto(rr, Sr, Qr) {
-          return (await this.loadHost()).capturePhoto(rr, Sr, Qr)
+        async capturePhoto(dd, Od, md) {
+          return (await this.loadHost()).capturePhoto(dd, Od, md)
         }
         async snapshotNextFrame() {
           return (await this.loadHost()).snapshotNextFrame()
         }
       },
-      Er = {
-        tools: ar.e,
+      vd = {
+        tools: Rd.b,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -63,10 +63,10 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    Zr.I && fr.setHost(Er), (0, Wr.M)((() => {
-      fr.setHost(Er)
+    Wd.G && hd.setHost(vd), (0, Fd.K)((() => {
+      hd.setHost(vd)
     }))
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

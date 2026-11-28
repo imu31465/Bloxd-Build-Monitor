@@ -1,75 +1,75 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  38524: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => jr,
-      i: () => fr,
-      m: () => Er,
-      n: () => pr,
-      r: () => Ir,
-      u: () => hr
+  38587: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Xd,
+      g: () => hd,
+      j: () => vd,
+      k: () => Qd,
+      n: () => Kd,
+      r: () => yd
     });
-    var Zr = Qr(379),
-      Wr = Qr(679),
-      ar = Qr(381);
-    const jr = ["", "|meta|charging2", "|meta|charging3", "|meta|charging4"];
+    var Wd = md(405),
+      Fd = md(693),
+      Rd = md(408);
+    const Xd = ["", "|meta|charging2", "|meta|charging3", "|meta|charging4"];
 
-    function Ir(rr, Sr) {
-      return "" === Sr ? rr : `${rr} ${Sr}`
+    function Kd(dd, Od) {
+      return "" === Od ? dd : `${dd} ${Od}`
     }
 
-    function fr(rr, Sr, Qr, Wr) {
-      const ar = rr.replace((0, Zr.pe)(Sr.material), (0, Zr.pe)(Qr));
-      if (Sr.kind === Wr || "" === Sr.kind) return ar;
-      const jr = (0, Zr.pe)(Sr.kind);
-      if (!ar.includes(jr)) throw new Error(`Cannot name assets for "${Ir(Qr,Wr)}": "${ar}" has no "${jr}" to replace`);
-      return ar.replace(jr, (0, Zr.pe)(Wr))
+    function hd(dd, Od, md, Fd) {
+      const Rd = dd.replace((0, Wd.xe)(Od.material), (0, Wd.xe)(md));
+      if (Od.kind === Fd || "" === Od.kind) return Rd;
+      const Xd = (0, Wd.xe)(Od.kind);
+      if (!Rd.includes(Xd)) throw new Error(`Cannot name assets for "${Kd(md,Fd)}": "${Rd}" has no "${Xd}" to replace`);
+      return Rd.replace(Xd, (0, Wd.xe)(Fd))
     }
 
-    function Er(rr) {
-      return rr.creativeKinds ? rr.creativeKinds.flatMap((Sr => rr.materials.map((rr => Ir(rr, Sr))))) : rr.materials.flatMap((Sr => rr.kinds.filter((Sr => {
-        var Qr;
-        return !(null !== (Qr = rr.hiddenKinds) && void 0 !== Qr && Qr.includes(Sr))
-      })).map((rr => Ir(Sr, rr)))))
+    function vd(dd) {
+      return dd.creativeKinds ? dd.creativeKinds.flatMap((Od => dd.materials.map((dd => Kd(dd, Od))))) : dd.materials.flatMap((Od => dd.kinds.filter((Od => {
+        var md;
+        return !(null !== (md = dd.hiddenKinds) && void 0 !== md && md.includes(Od))
+      })).map((dd => Kd(Od, dd)))))
     }
 
-    function pr(rr, Sr) {
-      return rr.flatMap((rr => rr.kinds.includes(Sr) ? rr.materials.map((rr => Ir(rr, Sr))) : []))
+    function Qd(dd, Od) {
+      return dd.flatMap((dd => dd.kinds.includes(Od) ? dd.materials.map((dd => Kd(dd, Od))) : []))
     }
-    const xr = {
+    const td = {
       name: "diamondVariants",
-      materials: ar.m,
-      kinds: ar.j.map((rr => rr.trimStart())),
-      inheritsFrom: rr => ({
+      materials: Rd.q,
+      kinds: Rd.p.map((dd => dd.trimStart())),
+      inheritsFrom: dd => ({
         material: "Diamond",
-        kind: rr
+        kind: dd
       }),
       hiddenKinds: ["Crossbow Charged"],
       creativeKinds: ["", "Fragment", "Pickaxe", "Axe", "Spade", "Hoe", "Sword", "Bow", "Crossbow", "Spear", "Dagger", "Club", "Mace", "Whip", "Boomerang", "Helmet", "Chestplate", "Gauntlets", "Leggings", "Boots"],
-      description: (rr, Sr) => {
-        if ("Fragment" === Sr) return {
-          translationKey: "Magmasteel" === rr ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
+      description: (dd, Od) => {
+        if ("Fragment" === Od) return {
+          translationKey: "Magmasteel" === dd ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
         }
       }
     };
 
-    function mr(rr) {
+    function od(dd) {
       return {
-        translationKey: `item:${(0,Zr.ne)(rr)}`
+        translationKey: `item:${(0,Wd.te)(dd)}`
       }
     }
-    const Nr = {
+    const Nd = {
         name: "decorativeArmour",
-        materials: ar.e,
-        kinds: Wr.e,
-        inheritsFrom: rr => ({
+        materials: Rd.i,
+        kinds: Fd.b,
+        inheritsFrom: dd => ({
           material: "Diamond",
-          kind: rr
+          kind: dd
         }),
-        displayName: mr
+        displayName: od
       },
-      Ur = {
+      qd = {
         name: "keys",
         materials: ["Wooden", "Stone", "Iron", "Gold", "Diamond"],
         kinds: ["Key"],
@@ -79,58 +79,58 @@ export const modules = {
           heldItemScale: 1,
           stackable: !0
         }),
-        displayName: mr
+        displayName: od
       },
-      tr = {
+      Hd = {
         Staff: "Club",
         Shard: "Fragment"
       },
-      hr = [xr, Nr, {
+      yd = [td, Nd, {
         name: "elemental",
-        materials: ar.p,
-        kinds: ["Shard", "Sword", "Bow", "Crossbow", "Crossbow Charged", "Spear", "Dagger", "Club", "Mace", "Whip", "Staff", ...Wr.e],
-        inheritsFrom: rr => {
-          var Sr;
+        materials: Rd.r,
+        kinds: ["Shard", "Sword", "Bow", "Crossbow", "Crossbow Charged", "Spear", "Dagger", "Club", "Mace", "Whip", "Staff", ...Fd.b],
+        inheritsFrom: dd => {
+          var Od;
           return {
             material: "Diamond",
-            kind: null !== (Sr = tr[rr]) && void 0 !== Sr ? Sr : rr
+            kind: null !== (Od = Hd[dd]) && void 0 !== Od ? Od : dd
           }
         },
         hiddenKinds: ["Crossbow Charged"],
-        displayName: mr,
-        description: (rr, Sr) => {
-          if ("Shard" === Sr) return {
-            translationKey: "Sanguine" === rr || "Astral" === rr ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
+        displayName: od,
+        description: (dd, Od) => {
+          if ("Shard" === Od) return {
+            translationKey: "Sanguine" === dd || "Astral" === dd ? "item:forgeFragmentDescription" : "item:elementalShardDescription"
           }
         }
-      }, Ur]
+      }, qd]
   },
-  38509: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => mr,
-      e: () => er,
-      g: () => Kr,
-      k: () => nr,
-      n: () => vr,
-      p: () => Lr,
-      s: () => Br
+  38573: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => od,
+      i: () => Yd,
+      l: () => gd,
+      p: () => pd,
+      q: () => Ud,
+      u: () => Bd,
+      y: () => Ed
     });
-    var Zr = Qr(379),
-      Wr = Qr(5830),
-      ar = Qr(5210),
-      jr = Qr(5779),
-      Ir = Qr(5806),
-      fr = Qr(38516),
-      Er = Qr(38524),
-      pr = Qr(38528),
-      xr = Qr(38532);
-    const mr = 16,
-      Nr = {
+    var Wd = md(405),
+      Fd = md(5769),
+      Rd = md(5128),
+      Xd = md(5733),
+      Kd = md(5752),
+      hd = md(38579),
+      vd = md(38587),
+      Qd = md(38594),
+      td = md(38598);
+    const od = 16,
+      Nd = {
         comboWindowMs: 800,
         comboMultipliers: [.5, 2 / 3, 5 / 6, 1],
         backstabAngle: 2 * Math.PI / 3
       },
-      Ur = {
+      qd = {
         "Wood Pickaxe": {
           displayName: {
             translationKey: "item:woodPickaxe"
@@ -653,7 +653,7 @@ export const modules = {
           weight: 1,
           heldItemScale: 1,
           stackable: !1,
-          PU: [15, 15, 15],
+          Pq: [15, 15, 15],
           spotlightRange: 20,
           spotlightConeAngle: 60,
           firstPersonHeldRotationOffset: [-.34, -.014, .081],
@@ -672,7 +672,7 @@ export const modules = {
           heldItemScale: 1,
           stackable: !1,
           armourReduction: .07,
-          PU: [15, 14, 11],
+          Pq: [15, 14, 11],
           spotlightRange: 12,
           spotlightConeAngle: 90
         },
@@ -2054,7 +2054,7 @@ export const modules = {
           heldItemScale: 1,
           stackable: !0
         },
-        ...(0, fr.b)("Bowl of Cranberries", {
+        ...(0, hd.d)("Bowl of Cranberries", {
           displayName: {
             translationKey: "item:bowlOfCranberries"
           },
@@ -2106,7 +2106,7 @@ export const modules = {
           description: {
             translationKey: "item:glowingSoupDescription"
           },
-          PU: [4, 11, 11],
+          Pq: [4, 11, 11],
           rootMetaDesc: "Glowing Soup|meta|charging1"
         },
         "Night Vision Soup": {
@@ -2181,7 +2181,7 @@ export const modules = {
           weight: 1,
           heldItemScale: 1,
           stackable: !1,
-          PU: [12, 7, 2]
+          Pq: [12, 7, 2]
         },
         Boat: {
           displayName: {
@@ -2338,20 +2338,20 @@ export const modules = {
           heldItemScale: 1,
           stackable: !1
         },
-        ...(0, Ir.J)((rr => `${rr} Kart`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}Kart`
+        ...(0, Kd.H)((dd => `${dd} Kart`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}Kart`
           }),
-          textureInfo: rr => `${(0,Zr.pe)(rr)}_kart`,
-          heldItemGlb: rr => `${rr} Kart Item`,
+          textureInfo: dd => `${(0,Wd.xe)(dd)}_kart`,
+          heldItemGlb: dd => `${dd} Kart Item`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
           stackable: !1
         }),
-        ...(0, Ir.J)((rr => `INTERNAL_MESH_${rr} Kart`), {
-          textureInfo: rr => `${(0,Zr.pe)(rr)}_kart`,
-          heldItemGlb: rr => `${rr} Kart`,
+        ...(0, Kd.H)((dd => `INTERNAL_MESH_${dd} Kart`), {
+          textureInfo: dd => `${(0,Wd.xe)(dd)}_kart`,
+          heldItemGlb: dd => `${dd} Kart`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -2778,7 +2778,7 @@ export const modules = {
           description: "Primary spread shot from Scatter in Heroes v Brainrots",
           secondaryDamage: 8
         },
-        ...(0, fr.h)("Wood Bow", {
+        ...(0, hd.l)("Wood Bow", {
           displayName: {
             translationKey: "item:woodBow"
           },
@@ -2797,7 +2797,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, fr.h)("Stone Bow", {
+        ...(0, hd.l)("Stone Bow", {
           displayName: {
             translationKey: "item:stoneBow"
           },
@@ -2816,7 +2816,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, fr.h)("Iron Bow", {
+        ...(0, hd.l)("Iron Bow", {
           displayName: {
             translationKey: "item:ironBow"
           },
@@ -2835,7 +2835,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, fr.h)("Gold Bow", {
+        ...(0, hd.l)("Gold Bow", {
           displayName: {
             translationKey: "item:goldBow"
           },
@@ -2854,7 +2854,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, fr.h)("Diamond Bow", {
+        ...(0, hd.l)("Diamond Bow", {
           displayName: {
             translationKey: "item:diamondBow"
           },
@@ -2873,7 +2873,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, fr.h)("Wood Crossbow", {
+        ...(0, hd.l)("Wood Crossbow", {
           displayName: {
             translationKey: "item:woodCrossbow"
           },
@@ -2891,7 +2891,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, fr.h)("Stone Crossbow", {
+        ...(0, hd.l)("Stone Crossbow", {
           displayName: {
             translationKey: "item:stoneCrossbow"
           },
@@ -2909,7 +2909,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, fr.h)("Iron Crossbow", {
+        ...(0, hd.l)("Iron Crossbow", {
           displayName: {
             translationKey: "item:ironCrossbow"
           },
@@ -2927,7 +2927,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, fr.h)("Gold Crossbow", {
+        ...(0, hd.l)("Gold Crossbow", {
           displayName: {
             translationKey: "item:goldCrossbow"
           },
@@ -2945,7 +2945,7 @@ export const modules = {
           },
           requiresArrow: !0
         }),
-        ...(0, fr.h)("Diamond Crossbow", {
+        ...(0, hd.l)("Diamond Crossbow", {
           displayName: {
             translationKey: "item:diamondCrossbow"
           },
@@ -3049,7 +3049,7 @@ export const modules = {
           stackable: !0,
           secondaryDamage: 1
         },
-        ...(0, fr.o)("Compass", {
+        ...(0, hd.t)("Compass", {
           displayName: {
             translationKey: "item:compass"
           },
@@ -5279,61 +5279,61 @@ export const modules = {
           heldItemScale: 1,
           stackable: !0
         },
-        ...(0, fr.q)("AK-47", {
+        ...(0, hd.v)("AK-47", {
           heldItemScale: 2
         }),
-        ...(0, fr.q)("M16", {
+        ...(0, hd.v)("M16", {
           heldItemScale: 2
         }),
-        ...(0, fr.q)("MP40", {
+        ...(0, hd.v)("MP40", {
           heldItemScale: 2.5
         }),
-        ...(0, fr.q)("TAR-21", {
+        ...(0, hd.v)("TAR-21", {
           heldItemScale: 2.5
         }),
-        ...(0, fr.q)("M1911", {
+        ...(0, hd.v)("M1911", {
           heldItemScale: 2
         }),
-        ...(0, fr.q)("One Shot Pistol", {
+        ...(0, hd.v)("One Shot Pistol", {
           heldItemScale: 2,
           heldItemGlb: "M1911",
           textureInfo: "M1911"
         }),
-        ...(0, fr.q)("Double Barrel", {
+        ...(0, hd.v)("Double Barrel", {
           heldItemScale: 2.5,
           textureInfo: "Double-barreled"
         }),
-        ...(0, fr.q)("AWP", {
+        ...(0, hd.v)("AWP", {
           heldItemScale: 3
         }),
-        ...(0, fr.q)("Deagle", {
+        ...(0, hd.v)("Deagle", {
           heldItemScale: 2
         }),
-        ...(0, fr.q)("Striker-12", {
+        ...(0, hd.v)("Striker-12", {
           heldItemScale: 2.5
         }),
-        ...(0, fr.q)("VSR", {
+        ...(0, hd.v)("VSR", {
           heldItemScale: 2.5
         }),
-        ...(0, fr.q)("DMR", {
+        ...(0, hd.v)("DMR", {
           heldItemScale: 2.5
         }),
-        ...(0, fr.q)("Minigun", {
+        ...(0, hd.v)("Minigun", {
           heldItemScale: 3
         }),
-        ...(0, fr.q)("FMR", {
+        ...(0, hd.v)("FMR", {
           heldItemScale: 2
         }),
-        ...(0, fr.q)("SKAR", {
+        ...(0, hd.v)("SKAR", {
           heldItemScale: 2.5
         }),
-        ...(0, fr.q)("Block-19", {
+        ...(0, hd.v)("Block-19", {
           heldItemScale: 2.5
         }),
-        ...(0, fr.q)("Mini Izu", {
+        ...(0, hd.v)("Mini Izu", {
           heldItemScale: 2
         }),
-        ...(0, fr.q)("GPMG", {
+        ...(0, hd.v)("GPMG", {
           heldItemScale: 2.8
         }),
         "Gold Coin": {
@@ -5426,7 +5426,7 @@ export const modules = {
           description: {
             translationKey: "item:iceBridgeDescription"
           },
-          bridgeLength: mr
+          bridgeLength: od
         },
         "Maple Planks Bridge": {
           displayName: {
@@ -5440,7 +5440,7 @@ export const modules = {
           description: {
             translationKey: "item:maplePlanksBridgeDescription"
           },
-          bridgeLength: mr
+          bridgeLength: od
         },
         "Messy Stone Bridge": {
           displayName: {
@@ -5454,14 +5454,14 @@ export const modules = {
           description: {
             translationKey: "item:messyStoneBridgeDescription"
           },
-          bridgeLength: mr
+          bridgeLength: od
         },
-        ...(0, Ir.J)((rr => `${rr} Balloon`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}Balloon`
+        ...(0, Kd.H)((dd => `${dd} Balloon`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}Balloon`
           }),
-          textureInfo: rr => `${(0,Zr.pe)(rr)}_balloon`,
-          heldItemGlb: rr => `${rr} Balloon Item`,
+          textureInfo: dd => `${(0,Wd.xe)(dd)}_balloon`,
+          heldItemGlb: dd => `${dd} Balloon Item`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -5470,19 +5470,19 @@ export const modules = {
             translationKey: "item:balloonDescription"
           }
         }),
-        ...(0, Ir.J)((rr => `INTERNAL_MESH_${rr} Balloon`), {
-          textureInfo: rr => `${(0,Zr.pe)(rr)}_balloon`,
-          heldItemGlb: rr => `${rr} Balloon`,
+        ...(0, Kd.H)((dd => `INTERNAL_MESH_${dd} Balloon`), {
+          textureInfo: dd => `${(0,Wd.xe)(dd)}_balloon`,
+          heldItemGlb: dd => `${dd} Balloon`,
           type: "Item",
           weight: 1,
           heldItemScale: 4,
           stackable: !1
         }),
-        ...(0, Ir.J)((rr => `${rr} Popup Tower`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}PopupTower`
+        ...(0, Kd.H)((dd => `${dd} Popup Tower`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}PopupTower`
           }),
-          textureInfo: rr => `${(0,Zr.pe)(rr)}_popup_tower`,
+          textureInfo: dd => `${(0,Wd.xe)(dd)}_popup_tower`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -5491,11 +5491,11 @@ export const modules = {
             translationKey: "item:popupTowerDescription"
           }
         }),
-        ...(0, Ir.J)((rr => `${rr} Paintball Gun`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}PaintballGun`
+        ...(0, Kd.H)((dd => `${dd} Paintball Gun`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}PaintballGun`
           }),
-          textureInfo: rr => `${(0,Zr.pe)(rr)}_paintball_gun`,
+          textureInfo: dd => `${(0,Wd.xe)(dd)}_paintball_gun`,
           type: "FullAuto",
           weight: 1,
           heldItemScale: .5,
@@ -5508,11 +5508,11 @@ export const modules = {
           holdAsAiming: !0,
           hideAimingUI: !0
         }),
-        ...(0, Ir.J)((rr => `${rr} Paintball`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}Paintball`
+        ...(0, Kd.H)((dd => `${dd} Paintball`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}Paintball`
           }),
-          textureInfo: rr => `${(0,Zr.pe)(rr)}_paintball`,
+          textureInfo: dd => `${(0,Wd.xe)(dd)}_paintball`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -5521,11 +5521,11 @@ export const modules = {
             translationKey: "item:paintballDescription"
           }
         }),
-        ...(0, Ir.J)((rr => `${rr} Heavy Paintball Gun`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}HeavyPaintballGun`
+        ...(0, Kd.H)((dd => `${dd} Heavy Paintball Gun`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}HeavyPaintballGun`
           }),
-          textureInfo: rr => `${(0,Zr.pe)(rr)}_heavy_paintball_gun`,
+          textureInfo: dd => `${(0,Wd.xe)(dd)}_heavy_paintball_gun`,
           type: "FullAuto",
           weight: 1,
           heldItemScale: 1,
@@ -5538,11 +5538,11 @@ export const modules = {
           holdAsAiming: !0,
           hideAimingUI: !0
         }),
-        ...(0, Ir.J)((rr => `${rr} Paintball Explosive Item`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}PaintballExplosive`
+        ...(0, Kd.H)((dd => `${dd} Paintball Explosive Item`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}PaintballExplosive`
           }),
-          textureInfo: rr => `explosive_paint_${(0,Zr.pe)(rr)}`,
+          textureInfo: dd => `explosive_paint_${(0,Wd.xe)(dd)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -5551,11 +5551,11 @@ export const modules = {
             translationKey: "item:paintballExplosiveDescription"
           }
         }),
-        ...(0, Ir.J)((rr => `${rr} Sticky Paintball Explosive Item`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}StickyPaintballExplosive`
+        ...(0, Kd.H)((dd => `${dd} Sticky Paintball Explosive Item`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}StickyPaintballExplosive`
           }),
-          textureInfo: rr => `explosive_paint_sticky_${(0,Zr.pe)(rr)}`,
+          textureInfo: dd => `explosive_paint_sticky_${(0,Wd.xe)(dd)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -5564,11 +5564,11 @@ export const modules = {
             translationKey: "item:stickyPaintballExplosiveDescription"
           }
         }),
-        ...(0, Ir.J)((rr => `${rr} Seeking Paintball Explosive Item`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}SeekingPaintballExplosive`
+        ...(0, Kd.H)((dd => `${dd} Seeking Paintball Explosive Item`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}SeekingPaintballExplosive`
           }),
-          textureInfo: rr => `explosive_paint_seeking_${(0,Zr.pe)(rr)}`,
+          textureInfo: dd => `explosive_paint_seeking_${(0,Wd.xe)(dd)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -5577,11 +5577,11 @@ export const modules = {
             translationKey: "item:seekingPaintballExplosiveDescription"
           }
         }),
-        ...(0, Ir.J)((rr => `${rr} Quick Paintball Explosive Item`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}QuickPaintballExplosive`
+        ...(0, Kd.H)((dd => `${dd} Quick Paintball Explosive Item`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}QuickPaintballExplosive`
           }),
-          textureInfo: rr => `explosive_paint_quick_${(0,Zr.pe)(rr)}`,
+          textureInfo: dd => `explosive_paint_quick_${(0,Wd.xe)(dd)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -5590,12 +5590,12 @@ export const modules = {
             translationKey: "item:quickPaintballExplosiveDescription"
           }
         }),
-        ...(0, fr.k)((rr => `${rr} Paint Bow`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}PaintBow`
+        ...(0, hd.r)((dd => `${dd} Paint Bow`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}PaintBow`
           }),
-          textureName: rr => `${(0,Zr.pe)(rr)}_paint_bow`,
-          rootMetaDesc: rr => `${rr} Paint Bow|meta|charging1`,
+          textureName: dd => `${(0,Wd.xe)(dd)}_paint_bow`,
+          rootMetaDesc: dd => `${dd} Paint Bow|meta|charging1`,
           type: "Chargeable",
           weight: 1,
           heldItemScale: 1.25,
@@ -5608,7 +5608,7 @@ export const modules = {
           },
           minChargeStateToUse: 0
         }),
-        ...(0, fr.u)(),
+        ...(0, hd.y)(),
         "Mob Catcher": {
           displayName: {
             translationKey: "item:mobCatcher"
@@ -5622,8 +5622,8 @@ export const modules = {
             translationKey: "item:mobCatcherDescription"
           }
         },
-        ...(0, fr.f)(),
-        ...(0, fr.h)("Timed Spike Bomb", {
+        ...(0, hd.h)(),
+        ...(0, hd.l)("Timed Spike Bomb", {
           displayName: {
             translationKey: "item:timedSpikeBomb"
           },
@@ -5793,11 +5793,11 @@ export const modules = {
           },
           secondaryDamage: 15
         },
-        ...(0, Ir.J)((rr => `${rr} Firecracker`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}Firecracker`
+        ...(0, Kd.H)((dd => `${dd} Firecracker`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}Firecracker`
           }),
-          textureInfo: rr => `firecracker_${(0,Zr.pe)(rr)}`,
+          textureInfo: dd => `firecracker_${(0,Wd.xe)(dd)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -5835,11 +5835,11 @@ export const modules = {
           },
           secondaryDamage: 15
         },
-        ...(0, Ir.J)((rr => `${rr} Firecracker Pebble`), {
-          displayName: rr => ({
-            translationKey: `item:${(0,Zr.ne)(rr)}FirecrackerPebble`
+        ...(0, Kd.H)((dd => `${dd} Firecracker Pebble`), {
+          displayName: dd => ({
+            translationKey: `item:${(0,Wd.te)(dd)}FirecrackerPebble`
           }),
-          textureInfo: rr => `firecracker_pebble_${(0,Zr.pe)(rr)}`,
+          textureInfo: dd => `firecracker_pebble_${(0,Wd.xe)(dd)}`,
           type: "Item",
           weight: 1,
           heldItemScale: 1,
@@ -7732,7 +7732,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: Nr,
+          comboInfo: Nd,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -7754,7 +7754,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: Nr,
+          comboInfo: Nd,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -7776,7 +7776,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: Nr,
+          comboInfo: Nd,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -7798,7 +7798,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: Nr,
+          comboInfo: Nd,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -7820,7 +7820,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: Nr,
+          comboInfo: Nd,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -7842,7 +7842,7 @@ export const modules = {
           attackCooldownMs: 250,
           knockbackHorizontalScalar: .4,
           knockbackVerticalScalar: .8,
-          comboInfo: Nr,
+          comboInfo: Nd,
           description: {
             translationKey: "item:daggerDescription"
           },
@@ -8587,7 +8587,7 @@ export const modules = {
           heldItemScale: 1,
           stackable: !0
         },
-        ...(0, fr.j)("Wood Clock", "clock_wood", {
+        ...(0, hd.o)("Wood Clock", "clock_wood", {
           displayName: {
             translationKey: "item:woodClock"
           },
@@ -8599,7 +8599,7 @@ export const modules = {
             translationKey: "item:clockDescription"
           }
         }),
-        ...(0, fr.j)("Gold Clock", "clock_gold", {
+        ...(0, hd.o)("Gold Clock", "clock_gold", {
           displayName: {
             translationKey: "item:goldClock"
           },
@@ -8774,111 +8774,111 @@ export const modules = {
           weight: 1,
           heldItemScale: 1,
           stackable: !1,
-          PU: [12, 7, 2]
+          Pq: [12, 7, 2]
         }
       };
-    for (const lr of Er.u)
-      for (const rr of lr.materials)
-        for (const Sr of lr.kinds) {
-          var tr, hr, zr, Yr;
-          const Qr = null === (tr = lr.inheritsFrom) || void 0 === tr ? void 0 : tr.call(lr, Sr),
-            Wr = (0, Er.r)(rr, Sr);
-          if (Ur[Wr]) throw new Error(`Item family "${lr.name}" would overwrite the existing item "${Wr}"`);
-          const ar = {
-              displayName: null !== (hr = null === (zr = lr.displayName) || void 0 === zr ? void 0 : zr.call(lr, Wr)) && void 0 !== hr ? hr : Wr
+    for (const Sd of vd.r)
+      for (const dd of Sd.materials)
+        for (const Od of Sd.kinds) {
+          var Hd, yd, bd, Td;
+          const md = null === (Hd = Sd.inheritsFrom) || void 0 === Hd ? void 0 : Hd.call(Sd, Od),
+            Fd = (0, vd.n)(dd, Od);
+          if (qd[Fd]) throw new Error(`Item family "${Sd.name}" would overwrite the existing item "${Fd}"`);
+          const Rd = {
+              displayName: null !== (yd = null === (bd = Sd.displayName) || void 0 === bd ? void 0 : bd.call(Sd, Fd)) && void 0 !== yd ? yd : Fd
             },
-            jr = null === (Yr = lr.description) || void 0 === Yr ? void 0 : Yr.call(lr, rr, Sr);
-          if (void 0 !== jr && (ar.description = jr), !Qr) {
-            if (!lr.metadata) throw new Error(`Item family "${lr.name}" declares neither inheritsFrom nor metadata`);
-            const rr = (0, Zr.pe)(Wr);
-            Ur[Wr] = {
-              ...lr.metadata(Sr),
-              ...ar,
-              textureInfo: rr,
-              heldItemGlb: rr
+            Xd = null === (Td = Sd.description) || void 0 === Td ? void 0 : Td.call(Sd, dd, Od);
+          if (void 0 !== Xd && (Rd.description = Xd), !md) {
+            if (!Sd.metadata) throw new Error(`Item family "${Sd.name}" declares neither inheritsFrom nor metadata`);
+            const dd = (0, Wd.xe)(Fd);
+            qd[Fd] = {
+              ...Sd.metadata(Od),
+              ...Rd,
+              textureInfo: dd,
+              heldItemGlb: dd
             };
             continue
           }
-          const Ir = (0, Er.r)(Qr.material, Qr.kind);
-          if (!Ur[Ir]) throw new Error(`Item family "${lr.name}" inherits "${Wr}" from "${Ir}", which is not registered`);
-          for (const Zr of Er.e) {
-            const jr = Ur[`${Ir}${Zr}`];
-            if (!jr) continue;
-            const fr = (0, Er.i)(jr.textureInfo, Qr, rr, Sr),
-              pr = {
-                ...jr,
-                ...ar,
-                textureInfo: fr,
-                heldItemGlb: fr
+          const Kd = (0, vd.n)(md.material, md.kind);
+          if (!qd[Kd]) throw new Error(`Item family "${Sd.name}" inherits "${Fd}" from "${Kd}", which is not registered`);
+          for (const Wd of vd.e) {
+            const Xd = qd[`${Kd}${Wd}`];
+            if (!Xd) continue;
+            const hd = (0, vd.g)(Xd.textureInfo, md, dd, Od),
+              Qd = {
+                ...Xd,
+                ...Rd,
+                textureInfo: hd,
+                heldItemGlb: hd
               };
-            jr.rootMetaDesc && (pr.rootMetaDesc = jr.rootMetaDesc.replace(Ir, Wr)), Ur[`${Wr}${Zr}`] = pr
+            Xd.rootMetaDesc && (Qd.rootMetaDesc = Xd.rootMetaDesc.replace(Kd, Fd)), qd[`${Fd}${Wd}`] = Qd
           }
         }
-    Ur["Cracked Rubellite Pickaxe"] = {
-      ...Ur["Rubellite Pickaxe"],
+    qd["Cracked Rubellite Pickaxe"] = {
+      ...qd["Rubellite Pickaxe"],
       displayName: "Cracked Rubellite Pickaxe",
       description: "Ruby calls it cracked, not beaten. A sturdy pickaxe ready for the stubborn stone in her mine.",
       multiplier: 4.75,
       level: 3,
       damage: 24
     };
-    for (const [lr, Xr] of [
+    for (const [Sd, sd] of [
         ["Goldheart Engine", "goldheartEngine"],
         ["Deepbite Drill Tip", "deepbiteDrillTip"],
         ["Empty Fuel Cell", "emptyFuelCell"],
         ["Blackfire Fuel Cell", "blackfireFuelCell"]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: (0, Zr.pe)(lr),
+      textureInfo: (0, Wd.xe)(Sd),
       weight: 1,
       heldItemScale: 1,
       stackable: !0
     };
-    for (const [lr, Xr] of [
+    for (const [Sd, sd] of [
         ["Doom Rivet", "doomRivet"],
         ["Doom Crest", "doomCrest"]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: (0, Zr.pe)(lr),
+      textureInfo: (0, Wd.xe)(Sd),
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr, Pr] of [
+    for (const [Sd, sd, ud] of [
         ["Raw Copper", "rawCopper", "raw_copper"],
         ["Copper Bar", "copperBar", "copper_bar"],
         ["Iron Grit", "ironGrit", "iron_grit"],
         ["Gold Grit", "goldGrit", "gold_grit"],
         ["Copper Grit", "copperGrit", "copper_grit"],
         ["Charcoal", "charcoal", "charcoal"]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    Ur["Recall Beacon"] = {
+    qd["Recall Beacon"] = {
       displayName: {
         translationKey: "item:recallBeacon"
       },
@@ -8891,7 +8891,7 @@ export const modules = {
       heldItemScale: 1,
       stackable: !1,
       showInCreativeInven: !1
-    }, Ur["Iron Hammer"] = {
+    }, qd["Iron Hammer"] = {
       displayName: {
         translationKey: "item:ironHammer"
       },
@@ -8909,25 +8909,25 @@ export const modules = {
       level: 3,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr, Pr] of [
+    for (const [Sd, sd, ud] of [
         ["Iron Plate", "ironPlate", "iron_plate"],
         ["Copper Wire", "copperWire", "copper_wire"],
         ["Motor", "motor", "motor"]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr, Pr] of [
+    for (const [Sd, sd, ud] of [
         ["Machine Parts", "machineParts", "machine_parts"],
         ["Relay Coil", "relayCoil", "relay_coil"],
         ["Deposit Seed (Copper)", "depositSeedCopper", "deposit_seed_copper"],
@@ -8936,21 +8936,21 @@ export const modules = {
         ["Deposit Seed (Coal)", "depositSeedCoal", "deposit_seed_coal"],
         ["Deposit Seed (Iron)", "depositSeedIron", "deposit_seed_iron"],
         ["Deposit Seed (Stone)", "depositSeedStone", "deposit_seed_stone"]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr, Pr, Hr] of [
+    for (const [Sd, sd, ud, Vd] of [
         ["Steel Bar", "steelBar", "steel_bar", !0],
         ["Gold Plate", "goldPlate", "gold_plate", !0],
         ["Logic Board", "logicBoard", "logic_board", !0],
@@ -8960,21 +8960,21 @@ export const modules = {
         ["Ore Lens", "oreLens", "ore_lens", !1],
         ["Homing Beacon", "homingBeacon", "homing_beacon", !1],
         ["Pull Charm", "pullCharm", "pull_charm", !1]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
-      stackable: Hr,
+      stackable: Vd,
       showInCreativeInven: !1
     };
-    Ur["Vein Breaker"] = {
+    qd["Vein Breaker"] = {
       displayName: {
         translationKey: "item:veinBreaker"
       },
@@ -8992,45 +8992,45 @@ export const modules = {
       level: 3,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr, Pr, Hr] of [
+    for (const [Sd, sd, ud, Vd] of [
         ["Voltite Dust", "voltiteDust", "voltite_dust", !0],
         ["Voltite Cell", "voltiteCell", "voltite_cell", !0],
         ["Sky Pack", "skyPack", "sky_pack", !1],
         ["Dusk Moss", "duskMoss", "dusk_moss", !0]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
-      stackable: Hr,
+      stackable: Vd,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr, Pr] of [
+    for (const [Sd, sd, ud] of [
         ["Star Alloy", "starAlloy", "star_alloy"],
         ["Moonstone Dust", "moonstoneDust", "moonstone_dust"],
         ["Comet Shard", "cometShard", "comet_shard"],
         ["Comet Core", "cometCore", "comet_core"]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    Ur["Starbore Drill"] = {
+    qd["Starbore Drill"] = {
       displayName: {
         translationKey: "item:starboreDrill"
       },
@@ -9048,21 +9048,21 @@ export const modules = {
       level: 5,
       showInCreativeInven: !1
     };
-    for (const lr of [2, 3, 4, 5, 6, 7, 8, 9, 10]) Ur[`Core Tier ${lr}`] = {
+    for (const Sd of [2, 3, 4, 5, 6, 7, 8, 9, 10]) qd[`Core Tier ${Sd}`] = {
       displayName: {
-        translationKey: `item:coreTier${lr}`
+        translationKey: `item:coreTier${Sd}`
       },
       description: {
-        translationKey: `item:coreTier${lr}Description`
+        translationKey: `item:coreTier${Sd}Description`
       },
       type: "Item",
-      textureInfo: `core_tier_${Math.min(lr,5)}`,
+      textureInfo: `core_tier_${Math.min(Sd,5)}`,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    Ur["Arc Caster"] = {
+    qd["Arc Caster"] = {
       displayName: {
         translationKey: "item:arcCaster"
       },
@@ -9076,53 +9076,53 @@ export const modules = {
       stackable: !1,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr] of [
+    for (const [Sd, sd] of [
         ["Helmet", .14],
         ["Chestplate", .25],
         ["Gauntlets", .12],
         ["Leggings", .2],
         ["Boots", .11]
-      ]) Ur[`Voltplate ${lr}`] = {
+      ]) qd[`Voltplate ${Sd}`] = {
       displayName: {
-        translationKey: `item:voltplate${lr}`
+        translationKey: `item:voltplate${Sd}`
       },
       description: {
-        translationKey: `item:voltplate${lr}Description`
+        translationKey: `item:voltplate${Sd}Description`
       },
       type: "Armour",
-      textureInfo: `voltplate_${lr.toLowerCase()}`,
+      textureInfo: `voltplate_${Sd.toLowerCase()}`,
       weight: 1,
       heldItemScale: 1,
       stackable: !1,
-      armourReduction: Xr,
+      armourReduction: sd,
       showInCreativeInven: !1
     };
-    for (const lr of xr.f)
-      for (const rr of xr.n) {
-        const Sr = (0, xr.p)(lr, rr);
-        Ur[Sr] = {
+    for (const Sd of td.f)
+      for (const dd of td.m) {
+        const Od = (0, td.p)(Sd, dd);
+        qd[Od] = {
           displayName: {
-            translationKey: `item:${(0,Zr.ne)(Sr)}`
+            translationKey: `item:${(0,Wd.te)(Od)}`
           },
           description: {
-            translationKey: `item:sword${rr}Description`
+            translationKey: `item:sword${dd}Description`
           },
           type: "Item",
-          textureInfo: (0, Zr.pe)(Sr),
+          textureInfo: (0, Wd.xe)(Od),
           weight: 1,
           heldItemScale: 1,
           stackable: !0,
           showInCreativeInven: !1
         }
       }
-    Ur["Moonstone Sword"] = {
-      ...Ur["Diamond Sword"],
+    qd["Moonstone Sword"] = {
+      ...qd["Diamond Sword"],
       displayName: {
         translationKey: "item:moonstoneSword"
       },
       textureInfo: "moonstone_sword",
       showInCreativeInven: !1
-    }, Ur["Magmaward Fuel"] = {
+    }, qd["Magmaward Fuel"] = {
       displayName: {
         translationKey: "item:magmawardFuel"
       },
@@ -9136,7 +9136,7 @@ export const modules = {
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr, Pr] of [
+    for (const [Sd, sd, ud] of [
         ["Raw Uranium", "rawUranium", "raw_uranium"],
         ["Uranium Grit", "uraniumGrit", "uranium_grit"],
         ["Uranium Pellet", "uraniumPellet", "uranium_pellet"],
@@ -9150,46 +9150,46 @@ export const modules = {
         ["Focus Lens", "focusLens", "focus_lens"],
         ["Nova Matter", "novaMatter", "nova_matter"],
         ["Deposit Seed (Uranium)", "depositSeedUranium", "deposit_seed_uranium"]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr, Pr] of [
+    for (const [Sd, sd, ud] of [
         ["Reactor Blueprint", "reactorBlueprint", "reactor_blueprint"],
         ["Wrench", "wrench", "wrench"],
         ["Advanced Coupler", "advancedCoupler", "advanced_coupler"],
         ["Nova Coupler", "novaCoupler", "nova_upgrade"]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
       stackable: !1,
       showInCreativeInven: !1
     };
-    for (const lr of ["Arc Caster", "Power Coupler", "Advanced Coupler", "Nova Coupler"]) Ur[lr].firstPersonHeldRotationOffset = Ur.Flashlight.firstPersonHeldRotationOffset, Ur[lr].thirdPersonHeldRotationOffset = Ur.Flashlight.thirdPersonHeldRotationOffset;
-    for (const lr of [11, 12, 13, 14, 15]) Ur[`Core Tier ${lr}`] = {
+    for (const Sd of ["Arc Caster", "Power Coupler", "Advanced Coupler", "Nova Coupler"]) qd[Sd].firstPersonHeldRotationOffset = qd.Flashlight.firstPersonHeldRotationOffset, qd[Sd].thirdPersonHeldRotationOffset = qd.Flashlight.thirdPersonHeldRotationOffset;
+    for (const Sd of [11, 12, 13, 14, 15]) qd[`Core Tier ${Sd}`] = {
       displayName: {
-        translationKey: `item:coreTier${lr}`
+        translationKey: `item:coreTier${Sd}`
       },
       description: {
-        translationKey: `item:coreTier${lr}Description`
+        translationKey: `item:coreTier${Sd}Description`
       },
       type: "Item",
       textureInfo: "core_tier_5",
@@ -9198,46 +9198,46 @@ export const modules = {
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr, Pr, Hr] of [
+    for (const [Sd, sd, ud, Vd] of [
         ["Jet Chestplate", "jetChestplate", "jetpack", 0],
         ["Nova Jet Chestplate", "novaJetChestplate", "nova_jetpack", .27]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Armour",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
       stackable: !1,
-      armourReduction: Hr,
+      armourReduction: Vd,
       showInCreativeInven: !1
     };
-    for (const [lr, Xr] of [
+    for (const [Sd, sd] of [
         ["Helmet", .15],
         ["Chestplate", .27],
         ["Gauntlets", .13],
         ["Leggings", .21],
         ["Boots", .12]
-      ]) Ur[`Nova ${lr}`] = {
+      ]) qd[`Nova ${Sd}`] = {
       displayName: {
-        translationKey: `item:nova${lr}`
+        translationKey: `item:nova${Sd}`
       },
       description: {
-        translationKey: `item:nova${lr}Description`
+        translationKey: `item:nova${Sd}Description`
       },
       type: "Armour",
-      textureInfo: `nova_${lr.toLowerCase()}`,
+      textureInfo: `nova_${Sd.toLowerCase()}`,
       weight: 1,
       heldItemScale: 1,
       stackable: !1,
-      armourReduction: Xr,
+      armourReduction: sd,
       showInCreativeInven: !1
     };
-    Ur["Nova Blade"] = {
+    qd["Nova Blade"] = {
       displayName: {
         translationKey: "item:novaBlade"
       },
@@ -9254,7 +9254,7 @@ export const modules = {
       multiplier: 2,
       level: 1,
       showInCreativeInven: !1
-    }, Ur["Mob Cage"] = {
+    }, qd["Mob Cage"] = {
       displayName: {
         translationKey: "item:mobCage"
       },
@@ -9268,9 +9268,9 @@ export const modules = {
       stackable: !0,
       showInCreativeInven: !1
     };
-    for (const lr of ["Pig", "Cow", "Sheep", "Deer", "Stag"]) Ur[`Caged ${lr}`] = {
+    for (const Sd of ["Pig", "Cow", "Sheep", "Deer", "Stag"]) qd[`Caged ${Sd}`] = {
       displayName: {
-        translationKey: `item:caged${lr}`
+        translationKey: `item:caged${Sd}`
       },
       description: {
         translationKey: "item:cagedMobDescription"
@@ -9282,7 +9282,7 @@ export const modules = {
       stackable: !1,
       showInCreativeInven: !1
     };
-    Ur["Nova Multitool"] = {
+    qd["Nova Multitool"] = {
       displayName: {
         translationKey: "item:novaMultitool"
       },
@@ -9299,7 +9299,7 @@ export const modules = {
       multiplier: 1,
       level: 5,
       showInCreativeInven: !1
-    }, Ur["Pocket Terminal"] = {
+    }, qd["Pocket Terminal"] = {
       displayName: {
         translationKey: "item:pocketTerminal"
       },
@@ -9315,303 +9315,303 @@ export const modules = {
       firstPersonHeldRotationOffset: [-.53, 1.67, .02],
       thirdPersonHeldRotationOffset: [-Math.PI / 2, 0, 0]
     };
-    for (const [lr, Xr, Pr, Hr] of [
+    for (const [Sd, sd, ud, Vd] of [
         ["Comet Beacon", "cometBeacon", "comet_beacon", !0],
         ["Nova Wrench", "novaWrench", "nova_wrench", !1]
-      ]) Ur[lr] = {
+      ]) qd[Sd] = {
       displayName: {
-        translationKey: `item:${Xr}`
+        translationKey: `item:${sd}`
       },
       description: {
-        translationKey: `item:${Xr}Description`
+        translationKey: `item:${sd}Description`
       },
       type: "Item",
-      textureInfo: Pr,
+      textureInfo: ud,
       weight: 1,
       heldItemScale: 1,
-      stackable: Hr,
+      stackable: Vd,
       showInCreativeInven: !1
     };
 
-    function nr(rr, Sr) {
-      return [...rr, ...(0, Er.n)(Er.u, Sr)].map((rr => vr[rr].id))
+    function pd(dd, Od) {
+      return [...dd, ...(0, vd.k)(vd.r, Od)].map((dd => Ud[dd].id))
     }
 
-    function er(rr) {
-      return rr.split(" ")[0]
+    function Yd(dd) {
+      return dd.split(" ")[0]
     }
-    const Kr = .0018;
-    let yr = Object.values(jr.j).reduce(((rr, Sr) => Math.max(rr, Sr.id)), 0) + 1;
-    for (const lr in Ur) Ur[lr].id = yr, Ur[lr].name = lr, Ur[yr] = Ur[lr], (0, Wr.f)(Ur, Ur[lr]), ++yr;
-    const Br = {};
-    for (const lr in Ur) {
-      var Tr;
-      const rr = Ur[lr];
-      Br[lr] = null !== (Tr = Br[rr.id]) && void 0 !== Tr ? Tr : new ar.h(rr)
+    const gd = .0018;
+    let wd = Object.values(Xd.i).reduce(((dd, Od) => Math.max(dd, Od.id)), 0) + 1;
+    for (const Sd in qd) qd[Sd].id = wd, qd[Sd].name = Sd, qd[wd] = qd[Sd], (0, Fd.i)(qd, qd[Sd]), ++wd;
+    const Ed = {};
+    for (const Sd in qd) {
+      var Jd;
+      const dd = qd[Sd];
+      Ed[Sd] = null !== (Jd = Ed[dd.id]) && void 0 !== Jd ? Jd : new Rd.h(dd)
     }
-    const vr = {},
-      Or = [jr.j, Br].flatMap(Object.entries);
-    for (const [lr, Xr] of Or) vr[lr] = Xr, vr[Xr.id] = Xr;
-    for (const lr of pr.e) {
-      const rr = lr;
-      if (!vr[rr]) throw new Error(`Missing "${rr}" item for vehicle type "${lr}"`)
+    const Ud = {},
+      xd = [Xd.i, Ed].flatMap(Object.entries);
+    for (const [Sd, sd] of xd) Ud[Sd] = sd, Ud[sd.id] = sd;
+    for (const Sd of Qd.e) {
+      const dd = Sd;
+      if (!Ud[dd]) throw new Error(`Missing "${dd}" item for vehicle type "${Sd}"`)
     }
-    const Lr = {};
-    for (const lr in Ur)
-      if ("rock" === Ur[lr].harvests) {
-        const rr = Ur[lr].level;
-        if (void 0 !== rr && "string" === typeof lr)
-          for (let Sr = 0; Sr <= rr; Sr++) {
-            const Qr = Lr[Sr];
-            (void 0 === Qr || rr < Ur[Qr].level) && (Lr[Sr] = lr)
+    const Bd = {};
+    for (const Sd in qd)
+      if ("rock" === qd[Sd].harvests) {
+        const dd = qd[Sd].level;
+        if (void 0 !== dd && "string" === typeof Sd)
+          for (let Od = 0; Od <= dd; Od++) {
+            const md = Bd[Od];
+            (void 0 === md || dd < qd[md].level) && (Bd[Od] = Sd)
           }
       }
   },
-  38516: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Nr,
-      f: () => hr,
-      h: () => Ir,
-      j: () => xr,
-      k: () => mr,
-      o: () => fr,
-      q: () => zr,
-      u: () => Ur
+  38579: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => Nd,
+      h: () => yd,
+      l: () => Kd,
+      o: () => td,
+      r: () => od,
+      t: () => hd,
+      v: () => bd,
+      y: () => qd
     });
-    var Zr = Qr(379),
-      Wr = Qr(683),
-      ar = Qr(5806),
-      jr = Qr(35481);
+    var Wd = md(405),
+      Fd = md(699),
+      Rd = md(5752),
+      Xd = md(35555);
 
-    function Ir(rr, Sr) {
-      console.assert("meta|charging1" === Sr.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|charging1");
-      const Qr = {
-        ...Sr
+    function Kd(dd, Od) {
+      console.assert("meta|charging1" === Od.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|charging1");
+      const md = {
+        ...Od
       };
-      return delete Qr.rootMetaDesc, {
-        [rr]: {
-          ...Sr,
-          textureInfo: Sr.textureName
+      return delete md.rootMetaDesc, {
+        [dd]: {
+          ...Od,
+          textureInfo: Od.textureName
         },
-        [`${rr}|meta|charging2`]: {
-          ...Qr,
-          textureInfo: `${Sr.textureName}_charging_2`
+        [`${dd}|meta|charging2`]: {
+          ...md,
+          textureInfo: `${Od.textureName}_charging_2`
         },
-        [`${rr}|meta|charging3`]: {
-          ...Qr,
-          textureInfo: `${Sr.textureName}_charging_3`
+        [`${dd}|meta|charging3`]: {
+          ...md,
+          textureInfo: `${Od.textureName}_charging_3`
         },
-        [`${rr}|meta|charging4`]: {
-          ...Qr,
-          textureInfo: `${Sr.textureName}_charging_4`
+        [`${dd}|meta|charging4`]: {
+          ...md,
+          textureInfo: `${Od.textureName}_charging_4`
         }
       }
     }
 
-    function fr(rr, Sr) {
-      console.assert("meta|dir1" === Sr.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|dir1");
-      const Qr = {
-        ...Sr
+    function hd(dd, Od) {
+      console.assert("meta|dir1" === Od.rootMetaDesc.split("|").slice(1).join("|"), "charging root item .rootMetaDesc must be |meta|dir1");
+      const md = {
+        ...Od
       };
-      return delete Qr.rootMetaDesc, {
-        [rr]: {
-          ...Sr,
-          heldItemGlb: rr,
-          textureInfo: Sr.textureName
+      return delete md.rootMetaDesc, {
+        [dd]: {
+          ...Od,
+          heldItemGlb: dd,
+          textureInfo: Od.textureName
         },
-        [`${rr}|meta|dir2`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_2`
+        [`${dd}|meta|dir2`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_2`
         },
-        [`${rr}|meta|dir3`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_3`
+        [`${dd}|meta|dir3`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_3`
         },
-        [`${rr}|meta|dir4`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_4`
+        [`${dd}|meta|dir4`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_4`
         },
-        [`${rr}|meta|dir5`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_5`
+        [`${dd}|meta|dir5`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_5`
         },
-        [`${rr}|meta|dir6`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_6`
+        [`${dd}|meta|dir6`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_6`
         },
-        [`${rr}|meta|dir7`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_7`
+        [`${dd}|meta|dir7`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_7`
         },
-        [`${rr}|meta|dir8`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_8`
+        [`${dd}|meta|dir8`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_8`
         },
-        [`${rr}|meta|dir9`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_9`
+        [`${dd}|meta|dir9`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_9`
         },
-        [`${rr}|meta|dir10`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_10`
+        [`${dd}|meta|dir10`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_10`
         },
-        [`${rr}|meta|dir11`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_11`
+        [`${dd}|meta|dir11`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_11`
         },
-        [`${rr}|meta|dir12`]: {
-          ...Qr,
-          displayName: rr,
-          textureInfo: `${Sr.textureName}_dir_12`
+        [`${dd}|meta|dir12`]: {
+          ...md,
+          displayName: dd,
+          textureInfo: `${Od.textureName}_dir_12`
         }
       }
     }
-    const Er = "midday",
-      pr = ["midnight", "late_night", "sunrise", "early_day", Er, "late_day", "sunset", "early_night"].filter((rr => rr !== Er));
+    const vd = "midday",
+      Qd = ["midnight", "late_night", "sunrise", "early_day", vd, "late_day", "sunset", "early_night"].filter((dd => dd !== vd));
 
-    function xr(rr, Sr, Qr) {
-      const Zr = {
-        [rr]: {
-          ...Qr,
-          heldItemGlb: `${Sr}_${Er}`,
-          textureInfo: `${Sr}_${Er}`
+    function td(dd, Od, md) {
+      const Wd = {
+        [dd]: {
+          ...md,
+          heldItemGlb: `${Od}_${vd}`,
+          textureInfo: `${Od}_${vd}`
         }
       };
-      for (const Wr of pr) Zr[`${rr}|meta|${Wr}`] = {
-        ...Qr,
-        heldItemGlb: `${Sr}_${Wr}`,
-        textureInfo: `${Sr}_${Wr}`
+      for (const Fd of Qd) Wd[`${dd}|meta|${Fd}`] = {
+        ...md,
+        heldItemGlb: `${Od}_${Fd}`,
+        textureInfo: `${Od}_${Fd}`
       };
-      return Zr
+      return Wd
     }
 
-    function mr(rr, Sr) {
-      const Qr = {},
-        Zr = (0, ar.J)(rr, Sr);
-      for (const Wr in Zr) Object.assign(Qr, Ir(Wr, Zr[Wr]));
-      return Qr
+    function od(dd, Od) {
+      const md = {},
+        Wd = (0, Rd.H)(dd, Od);
+      for (const Fd in Wd) Object.assign(md, Kd(Fd, Wd[Fd]));
+      return md
     }
 
-    function Nr(rr, Sr, Qr) {
-      console.assert(4 === Qr.length, "Must have 4 textures for bowl fill metadatas");
-      const Zr = {
-        ...Sr
+    function Nd(dd, Od, md) {
+      console.assert(4 === md.length, "Must have 4 textures for bowl fill metadatas");
+      const Wd = {
+        ...Od
       };
-      delete Zr.rootMetaDesc, delete Zr.textureInfo, delete Zr.afterEatenItem;
-      const Wr = `Partially Full ${rr}`,
-        ar = `Half Full ${rr}`,
-        jr = `Nearly Full ${rr}`,
-        Ir = rr;
+      delete Wd.rootMetaDesc, delete Wd.textureInfo, delete Wd.afterEatenItem;
+      const Fd = `Partially Full ${dd}`,
+        Rd = `Half Full ${dd}`,
+        Xd = `Nearly Full ${dd}`,
+        Kd = dd;
       return {
-        [Wr]: {
-          ...Sr,
-          textureInfo: Qr[0],
+        [Fd]: {
+          ...Od,
+          textureInfo: md[0],
           afterEatenItem: "Bowl",
-          rootMetaDesc: `${Wr}|meta|charging1`
+          rootMetaDesc: `${Fd}|meta|charging1`
         },
-        [ar]: {
-          ...Sr,
-          textureInfo: Qr[1],
-          afterEatenItem: Wr,
-          rootMetaDesc: `${ar}|meta|charging1`
+        [Rd]: {
+          ...Od,
+          textureInfo: md[1],
+          afterEatenItem: Fd,
+          rootMetaDesc: `${Rd}|meta|charging1`
         },
-        [jr]: {
-          ...Sr,
-          textureInfo: Qr[2],
-          afterEatenItem: ar,
-          rootMetaDesc: `${jr}|meta|charging1`
+        [Xd]: {
+          ...Od,
+          textureInfo: md[2],
+          afterEatenItem: Rd,
+          rootMetaDesc: `${Xd}|meta|charging1`
         },
-        [Ir]: {
-          ...Sr,
-          textureInfo: Qr[3],
-          afterEatenItem: jr,
-          rootMetaDesc: `${Ir}|meta|charging1`
+        [Kd]: {
+          ...Od,
+          textureInfo: md[3],
+          afterEatenItem: Xd,
+          rootMetaDesc: `${Kd}|meta|charging1`
         }
       }
     }
 
-    function Ur() {
-      return Object.fromEntries(Wr.t.map((rr => {
-        const Sr = (0, Zr.ne)(rr),
-          Qr = (0, Zr.pe)(rr);
-        return [(0, Zr.Ub)(rr), {
+    function qd() {
+      return Object.fromEntries(Fd.B.map((dd => {
+        const Od = (0, Wd.te)(dd),
+          md = (0, Wd.xe)(dd);
+        return [(0, Wd.Rb)(dd), {
           displayName: {
-            translationKey: `item:${Sr}SpawnOrb`
+            translationKey: `item:${Od}SpawnOrb`
           },
           type: "Item",
-          textureInfo: `${Qr}_spawn_orb`,
+          textureInfo: `${md}_spawn_orb`,
           weight: 1,
           heldItemScale: 1,
           stackable: !0,
           description: {
-            translationKey: `item:${Sr}SpawnOrbDescription`,
+            translationKey: `item:${Od}SpawnOrbDescription`,
             params: {
-              mob: rr
+              mob: dd
             }
           }
         }]
       })))
     }
-    const tr = {
-      Sheep: Wr.o.Sheep,
+    const Hd = {
+      Sheep: Fd.t.Sheep,
       "Cave Golem": ["corrupted"],
       "Draugr Zombie": ["flower", "flower2", "mushroom", "vine", "vine2", "corrupted", "corrupted2"],
       "Draugr Huntress": ["chainmail"],
       "Frost Wraith": ["tattered", "frostKing", "accursed"]
     };
 
-    function hr() {
-      return Object.fromEntries(Wr.n.flatMap((rr => {
-        const Sr = (0, Zr.pe)(rr);
-        return Wr.o[rr].map((Qr => {
-          var Wr;
-          const ar = "default" !== Qr && (null === (Wr = tr[rr]) || void 0 === Wr ? void 0 : Wr.includes(Qr)),
-            jr = ar ? {
-              heldItemGlb: (0, Zr.xb)(rr, "default")
+    function yd() {
+      return Object.fromEntries(Fd.q.flatMap((dd => {
+        const Od = (0, Wd.xe)(dd);
+        return Fd.t[dd].map((md => {
+          var Fd;
+          const Rd = "default" !== md && (null === (Fd = Hd[dd]) || void 0 === Fd ? void 0 : Fd.includes(md)),
+            Xd = Rd ? {
+              heldItemGlb: (0, Wd.ub)(dd, "default")
             } : {};
-          return [(0, Zr.xb)(rr, Qr), {
+          return [(0, Wd.ub)(dd, md), {
             type: "Item",
-            textureInfo: `caught_${Sr}_${ar?"default":Qr}`,
+            textureInfo: `caught_${Od}_${Rd?"default":md}`,
             weight: 1,
             heldItemScale: 1,
             stackable: !1,
-            ...jr
+            ...Xd
           }]
         }))
       })))
     }
 
-    function zr(rr, Sr) {
-      var Qr;
-      const Zr = {
+    function bd(dd, Od) {
+      var md;
+      const Wd = {
         type: "Gun",
-        textureInfo: rr,
+        textureInfo: dd,
         weight: 1,
         stackable: !1,
         keepMetaInChest: !0,
-        ...Sr,
-        ...jr.c[rr]
+        ...Od,
+        ...Xd.c[dd]
       };
       return {
-        [rr]: Zr,
-        [`${rr}|RequiresAmmo`]: {
-          ...Zr,
-          displayName: rr,
-          heldItemGlb: null !== (Qr = Zr.heldItemGlb) && void 0 !== Qr ? Qr : rr
+        [dd]: Wd,
+        [`${dd}|RequiresAmmo`]: {
+          ...Wd,
+          displayName: dd,
+          heldItemGlb: null !== (md = Wd.heldItemGlb) && void 0 !== md ? md : dd
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

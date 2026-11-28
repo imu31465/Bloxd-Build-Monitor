@@ -1,39 +1,39 @@
 export const id = 265;
 export const ids = [265];
 export const modules = {
-  38684: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => xr,
-      f: () => mr,
-      h: () => tr,
-      l: () => Nr
+  38741: (dd, Od, md) => {
+    md.d(Od, {
+      d: () => td,
+      f: () => od,
+      g: () => Hd,
+      j: () => Nd
     });
-    var Zr = Qr(38576),
-      Wr = Qr(38569),
-      ar = Qr(38599),
-      jr = Qr(38609);
+    var Wd = md(38647),
+      Fd = md(38644),
+      Rd = md(38663),
+      Xd = md(38669);
 
-    function Ir(rr) {
-      return Math.pow(rr, Wr.h)
+    function Kd(dd) {
+      return Math.pow(dd, Fd.f)
     }
 
-    function fr(rr) {
-      return rr <= .04045 ? .0773993808 * rr : Math.pow(.947867299 * (rr + .055), 2.4)
+    function hd(dd) {
+      return dd <= .04045 ? .0773993808 * dd : Math.pow(.947867299 * (dd + .055), 2.4)
     }
 
-    function Er(rr) {
-      return Math.pow(rr, Wr.f)
+    function vd(dd) {
+      return Math.pow(dd, Fd.c)
     }
 
-    function pr(rr) {
-      return rr <= .0031308 ? 12.92 * rr : 1.055 * Math.pow(rr, .41666) - .055
+    function Qd(dd) {
+      return dd <= .0031308 ? 12.92 * dd : 1.055 * Math.pow(dd, .41666) - .055
     }
-    class xr {
+    class td {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = rr, this.g = Sr, this.b = Qr
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = dd, this.g = Od, this.b = md
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let rr = 255 * this.r | 0;
-        return rr = 397 * rr ^ 255 * this.g, rr = 397 * rr ^ 255 * this.b, rr
+        let dd = 255 * this.r | 0;
+        return dd = 397 * dd ^ 255 * this.g, dd = 397 * dd ^ 255 * this.b, dd
       }
-      toArray(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return rr[Sr] = this.r, rr[Sr + 1] = this.g, rr[Sr + 2] = this.b, this
+      toArray(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return dd[Od] = this.r, dd[Od + 1] = this.g, dd[Od + 2] = this.b, this
       }
-      dp(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return xr.FromArrayToRef(rr, Sr, this), this
+      ZQ(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return td.FromArrayToRef(dd, Od, this), this
       }
       toColor4() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new mr(this.r, this.g, this.b, rr)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new od(this.r, this.g, this.b, dd)
       }
-      OWr() {
+      RRd() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(rr) {
-        return new xr(this.r * rr.r, this.g * rr.g, this.b * rr.b)
+      multiply(dd) {
+        return new td(this.r * dd.r, this.g * dd.g, this.b * dd.b)
       }
-      multiplyToRef(rr, Sr) {
-        return Sr.r = this.r * rr.r, Sr.g = this.g * rr.g, Sr.b = this.b * rr.b, Sr
+      multiplyToRef(dd, Od) {
+        return Od.r = this.r * dd.r, Od.g = this.g * dd.g, Od.b = this.b * dd.b, Od
       }
-      multiplyInPlace(rr) {
-        return this.r *= rr.r, this.g *= rr.g, this.b *= rr.b, this
+      multiplyInPlace(dd) {
+        return this.r *= dd.r, this.g *= dd.g, this.b *= dd.b, this
       }
-      multiplyByFloats(rr, Sr, Qr) {
-        return new xr(this.r * rr, this.g * Sr, this.b * Qr)
+      multiplyByFloats(dd, Od, md) {
+        return new td(this.r * dd, this.g * Od, this.b * md)
       }
-      divide(rr) {
+      divide(dd) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(rr, Sr) {
+      divideToRef(dd, Od) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(rr) {
+      divideInPlace(dd) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(rr) {
-        return this.minimizeInPlaceFromFloats(rr.r, rr.g, rr.b)
+      minimizeInPlace(dd) {
+        return this.minimizeInPlaceFromFloats(dd.r, dd.g, dd.b)
       }
-      maximizeInPlace(rr) {
-        return this.maximizeInPlaceFromFloats(rr.r, rr.g, rr.b)
+      maximizeInPlace(dd) {
+        return this.maximizeInPlaceFromFloats(dd.r, dd.g, dd.b)
       }
-      minimizeInPlaceFromFloats(rr, Sr, Qr) {
-        return this.r = Math.min(rr, this.r), this.g = Math.min(Sr, this.g), this.b = Math.min(Qr, this.b), this
+      minimizeInPlaceFromFloats(dd, Od, md) {
+        return this.r = Math.min(dd, this.r), this.g = Math.min(Od, this.g), this.b = Math.min(md, this.b), this
       }
-      maximizeInPlaceFromFloats(rr, Sr, Qr) {
-        return this.r = Math.max(rr, this.r), this.g = Math.max(Sr, this.g), this.b = Math.max(Qr, this.b), this
+      maximizeInPlaceFromFloats(dd, Od, md) {
+        return this.r = Math.max(dd, this.r), this.g = Math.max(Od, this.g), this.b = Math.max(md, this.b), this
       }
-      floorToRef(rr) {
+      floorToRef(dd) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(rr) {
+      fractToRef(dd) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(rr) {
-        return rr && this.r === rr.r && this.g === rr.g && this.b === rr.b
+      equals(dd) {
+        return dd && this.r === dd.r && this.g === dd.g && this.b === dd.b
       }
-      equalsFloats(rr, Sr, Qr) {
-        return this.ffr(rr, Sr, Qr)
+      equalsFloats(dd, Od, md) {
+        return this.Qhd(dd, Od, md)
       }
-      ffr(rr, Sr, Qr) {
-        return this.r === rr && this.g === Sr && this.b === Qr
+      Qhd(dd, Od, md) {
+        return this.r === dd && this.g === Od && this.b === md
       }
-      equalsWithEpsilon(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wr.e;
-        return (0, ar.WithinEpsilon)(this.r, rr.r, Sr) && (0, ar.WithinEpsilon)(this.g, rr.g, Sr) && (0, ar.WithinEpsilon)(this.b, rr.b, Sr)
+      equalsWithEpsilon(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fd.b;
+        return (0, Rd.WithinEpsilon)(this.r, dd.r, Od) && (0, Rd.WithinEpsilon)(this.g, dd.g, Od) && (0, Rd.WithinEpsilon)(this.b, dd.b, Od)
       }
-      ph() {
+      ty() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(rr) {
+      negateToRef(dd) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(rr) {
-        return new xr(this.r * rr, this.g * rr, this.b * rr)
+      scale(dd) {
+        return new td(this.r * dd, this.g * dd, this.b * dd)
       }
-      scaleInPlace(rr) {
-        return this.r *= rr, this.g *= rr, this.b *= rr, this
+      scaleInPlace(dd) {
+        return this.r *= dd, this.g *= dd, this.b *= dd, this
       }
-      scaleToRef(rr, Sr) {
-        return Sr.r = this.r * rr, Sr.g = this.g * rr, Sr.b = this.b * rr, Sr
+      scaleToRef(dd, Od) {
+        return Od.r = this.r * dd, Od.g = this.g * dd, Od.b = this.b * dd, Od
       }
-      scaleAndAddToRef(rr, Sr) {
-        return Sr.r += this.r * rr, Sr.g += this.g * rr, Sr.b += this.b * rr, Sr
+      scaleAndAddToRef(dd, Od) {
+        return Od.r += this.r * dd, Od.g += this.g * dd, Od.b += this.b * dd, Od
       }
       clampToRef() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Qr = arguments.length > 2 ? arguments[2] : void 0;
-        return Qr.r = (0, ar.Clamp)(this.r, rr, Sr), Qr.g = (0, ar.Clamp)(this.g, rr, Sr), Qr.b = (0, ar.Clamp)(this.b, rr, Sr), Qr
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          md = arguments.length > 2 ? arguments[2] : void 0;
+        return md.r = (0, Rd.Clamp)(this.r, dd, Od), md.g = (0, Rd.Clamp)(this.g, dd, Od), md.b = (0, Rd.Clamp)(this.b, dd, Od), md
       }
-      add(rr) {
-        return new xr(this.r + rr.r, this.g + rr.g, this.b + rr.b)
+      add(dd) {
+        return new td(this.r + dd.r, this.g + dd.g, this.b + dd.b)
       }
-      addInPlace(rr) {
-        return this.r += rr.r, this.g += rr.g, this.b += rr.b, this
+      addInPlace(dd) {
+        return this.r += dd.r, this.g += dd.g, this.b += dd.b, this
       }
-      addInPlaceFromFloats(rr, Sr, Qr) {
-        return this.r += rr, this.g += Sr, this.b += Qr, this
+      addInPlaceFromFloats(dd, Od, md) {
+        return this.r += dd, this.g += Od, this.b += md, this
       }
-      addToRef(rr, Sr) {
-        return Sr.r = this.r + rr.r, Sr.g = this.g + rr.g, Sr.b = this.b + rr.b, Sr
+      addToRef(dd, Od) {
+        return Od.r = this.r + dd.r, Od.g = this.g + dd.g, Od.b = this.b + dd.b, Od
       }
-      subtract(rr) {
-        return new xr(this.r - rr.r, this.g - rr.g, this.b - rr.b)
+      subtract(dd) {
+        return new td(this.r - dd.r, this.g - dd.g, this.b - dd.b)
       }
-      subtractToRef(rr, Sr) {
-        return Sr.r = this.r - rr.r, Sr.g = this.g - rr.g, Sr.b = this.b - rr.b, Sr
+      subtractToRef(dd, Od) {
+        return Od.r = this.r - dd.r, Od.g = this.g - dd.g, Od.b = this.b - dd.b, Od
       }
-      iWr(rr) {
-        return this.r -= rr.r, this.g -= rr.g, this.b -= rr.b, this
+      YRd(dd) {
+        return this.r -= dd.r, this.g -= dd.g, this.b -= dd.b, this
       }
-      subtractFromFloats(rr, Sr, Qr) {
-        return new xr(this.r - rr, this.g - Sr, this.b - Qr)
+      subtractFromFloats(dd, Od, md) {
+        return new td(this.r - dd, this.g - Od, this.b - md)
       }
-      subtractFromFloatsToRef(rr, Sr, Qr, Zr) {
-        return Zr.r = this.r - rr, Zr.g = this.g - Sr, Zr.b = this.b - Qr, Zr
+      subtractFromFloatsToRef(dd, Od, md, Wd) {
+        return Wd.r = this.r - dd, Wd.g = this.g - Od, Wd.b = this.b - md, Wd
       }
       clone() {
-        return new xr(this.r, this.g, this.b)
+        return new td(this.r, this.g, this.b)
       }
-      iH(rr) {
-        return this.r = rr.r, this.g = rr.g, this.b = rr.b, this
+      Bx(dd) {
+        return this.r = dd.r, this.g = dd.g, this.b = dd.b, this
       }
-      Hrr(rr, Sr, Qr) {
-        return this.r = rr, this.g = Sr, this.b = Qr, this
+      KOd(dd, Od, md) {
+        return this.r = dd, this.g = Od, this.b = md, this
       }
-      set(rr, Sr, Qr) {
-        return this.Hrr(rr, Sr, Qr)
+      set(dd, Od, md) {
+        return this.KOd(dd, Od, md)
       }
-      Srr(rr) {
-        return this.r = this.g = this.b = rr, this
+      Bdd(dd) {
+        return this.r = this.g = this.b = dd, this
       }
       toHexString() {
-        const rr = Math.round(255 * this.r),
-          Sr = Math.round(255 * this.g),
-          Qr = Math.round(255 * this.b);
-        return "#" + (0, ar.ToHex)(rr) + (0, ar.ToHex)(Sr) + (0, ar.ToHex)(Qr)
+        const dd = Math.round(255 * this.r),
+          Od = Math.round(255 * this.g),
+          md = Math.round(255 * this.b);
+        return "#" + (0, Rd.ToHex)(dd) + (0, Rd.ToHex)(Od) + (0, Rd.ToHex)(md)
       }
-      fromHexString(rr) {
-        return "#" !== rr.substring(0, 1) || 7 !== rr.length || (this.r = parseInt(rr.substring(1, 3), 16) / 255, this.g = parseInt(rr.substring(3, 5), 16) / 255, this.b = parseInt(rr.substring(5, 7), 16) / 255), this
+      fromHexString(dd) {
+        return "#" !== dd.substring(0, 1) || 7 !== dd.length || (this.r = parseInt(dd.substring(1, 3), 16) / 255, this.g = parseInt(dd.substring(3, 5), 16) / 255, this.b = parseInt(dd.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new xr)
+        return this.toHSVToRef(new td)
       }
-      toHSVToRef(rr) {
-        const Sr = this.r,
-          Qr = this.g,
-          Zr = this.b,
-          Wr = Math.max(Sr, Qr, Zr),
-          ar = Math.min(Sr, Qr, Zr);
-        let jr = 0,
-          Ir = 0;
-        const fr = Wr,
-          Er = Wr - ar;
-        return 0 !== Wr && (Ir = Er / Wr), Wr != ar && (Wr == Sr ? (jr = (Qr - Zr) / Er, Qr < Zr && (jr += 6)) : Wr == Qr ? jr = (Zr - Sr) / Er + 2 : Wr == Zr && (jr = (Sr - Qr) / Er + 4), jr *= 60), rr.r = jr, rr.g = Ir, rr.b = fr, rr
+      toHSVToRef(dd) {
+        const Od = this.r,
+          md = this.g,
+          Wd = this.b,
+          Fd = Math.max(Od, md, Wd),
+          Rd = Math.min(Od, md, Wd);
+        let Xd = 0,
+          Kd = 0;
+        const hd = Fd,
+          vd = Fd - Rd;
+        return 0 !== Fd && (Kd = vd / Fd), Fd != Rd && (Fd == Od ? (Xd = (md - Wd) / vd, md < Wd && (Xd += 6)) : Fd == md ? Xd = (Wd - Od) / vd + 2 : Fd == Wd && (Xd = (Od - md) / vd + 4), Xd *= 60), dd.r = Xd, dd.g = Kd, dd.b = hd, dd
       }
       toLinearSpace() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Sr = new xr;
-        return this.toLinearSpaceToRef(Sr, rr), Sr
+        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Od = new td;
+        return this.toLinearSpaceToRef(Od, dd), Od
       }
-      toLinearSpaceToRef(rr) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (rr.r = fr(this.r), rr.g = fr(this.g), rr.b = fr(this.b)) : (rr.r = Ir(this.r), rr.g = Ir(this.g), rr.b = Ir(this.b)), this
+      toLinearSpaceToRef(dd) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (dd.r = hd(this.r), dd.g = hd(this.g), dd.b = hd(this.b)) : (dd.r = Kd(this.r), dd.g = Kd(this.g), dd.b = Kd(this.b)), this
       }
       toGammaSpace() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Sr = new xr;
-        return this.toGammaSpaceToRef(Sr, rr), Sr
+        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Od = new td;
+        return this.toGammaSpaceToRef(Od, dd), Od
       }
-      toGammaSpaceToRef(rr) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (rr.r = pr(this.r), rr.g = pr(this.g), rr.b = pr(this.b)) : (rr.r = Er(this.r), rr.g = Er(this.g), rr.b = Er(this.b)), this
+      toGammaSpaceToRef(dd) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (dd.r = Qd(this.r), dd.g = Qd(this.g), dd.b = Qd(this.b)) : (dd.r = vd(this.r), dd.g = vd(this.g), dd.b = vd(this.b)), this
       }
-      static HSVtoRGBToRef(rr, Sr, Qr, Zr) {
-        const Wr = Qr * Sr,
-          ar = rr / 60,
-          jr = Wr * (1 - Math.abs(ar % 2 - 1));
-        let Ir = 0,
-          fr = 0,
-          Er = 0;
-        ar >= 0 && ar <= 1 ? (Ir = Wr, fr = jr) : ar >= 1 && ar <= 2 ? (Ir = jr, fr = Wr) : ar >= 2 && ar <= 3 ? (fr = Wr, Er = jr) : ar >= 3 && ar <= 4 ? (fr = jr, Er = Wr) : ar >= 4 && ar <= 5 ? (Ir = jr, Er = Wr) : ar >= 5 && ar <= 6 && (Ir = Wr, Er = jr);
-        const pr = Qr - Wr;
-        return Zr.r = Ir + pr, Zr.g = fr + pr, Zr.b = Er + pr, Zr
+      static HSVtoRGBToRef(dd, Od, md, Wd) {
+        const Fd = md * Od,
+          Rd = dd / 60,
+          Xd = Fd * (1 - Math.abs(Rd % 2 - 1));
+        let Kd = 0,
+          hd = 0,
+          vd = 0;
+        Rd >= 0 && Rd <= 1 ? (Kd = Fd, hd = Xd) : Rd >= 1 && Rd <= 2 ? (Kd = Xd, hd = Fd) : Rd >= 2 && Rd <= 3 ? (hd = Fd, vd = Xd) : Rd >= 3 && Rd <= 4 ? (hd = Xd, vd = Fd) : Rd >= 4 && Rd <= 5 ? (Kd = Xd, vd = Fd) : Rd >= 5 && Rd <= 6 && (Kd = Fd, vd = Xd);
+        const Qd = md - Fd;
+        return Wd.r = Kd + Qd, Wd.g = hd + Qd, Wd.b = vd + Qd, Wd
       }
-      static FromHSV(rr, Sr, Qr) {
-        const Zr = new xr(0, 0, 0);
-        return xr.HSVtoRGBToRef(rr, Sr, Qr, Zr), Zr
+      static FromHSV(dd, Od, md) {
+        const Wd = new td(0, 0, 0);
+        return td.HSVtoRGBToRef(dd, Od, md, Wd), Wd
       }
-      static FromHexString(rr) {
-        return new xr(0, 0, 0).fromHexString(rr)
+      static FromHexString(dd) {
+        return new td(0, 0, 0).fromHexString(dd)
       }
-      static FromArray(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new xr(rr[Sr], rr[Sr + 1], rr[Sr + 2])
+      static FromArray(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new td(dd[Od], dd[Od + 1], dd[Od + 2])
       }
-      static FromArrayToRef(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Qr = arguments.length > 2 ? arguments[2] : void 0;
-        Qr.r = rr[Sr], Qr.g = rr[Sr + 1], Qr.b = rr[Sr + 2]
+      static FromArrayToRef(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          md = arguments.length > 2 ? arguments[2] : void 0;
+        md.r = dd[Od], md.g = dd[Od + 1], md.b = dd[Od + 2]
       }
-      static FromInts(rr, Sr, Qr) {
-        return new xr(rr / 255, Sr / 255, Qr / 255)
+      static FromInts(dd, Od, md) {
+        return new td(dd / 255, Od / 255, md / 255)
       }
-      static Lerp(rr, Sr, Qr) {
-        const Zr = new xr(0, 0, 0);
-        return xr.LerpToRef(rr, Sr, Qr, Zr), Zr
+      static Lerp(dd, Od, md) {
+        const Wd = new td(0, 0, 0);
+        return td.LerpToRef(dd, Od, md, Wd), Wd
       }
-      static LerpToRef(rr, Sr, Qr, Zr) {
-        Zr.r = rr.r + (Sr.r - rr.r) * Qr, Zr.g = rr.g + (Sr.g - rr.g) * Qr, Zr.b = rr.b + (Sr.b - rr.b) * Qr
+      static LerpToRef(dd, Od, md, Wd) {
+        Wd.r = dd.r + (Od.r - dd.r) * md, Wd.g = dd.g + (Od.g - dd.g) * md, Wd.b = dd.b + (Od.b - dd.b) * md
       }
-      static Hermite(rr, Sr, Qr, Zr, Wr) {
-        const ar = Wr * Wr,
-          jr = Wr * ar,
-          Ir = 2 * jr - 3 * ar + 1,
-          fr = -2 * jr + 3 * ar,
-          Er = jr - 2 * ar + Wr,
-          pr = jr - ar,
-          mr = rr.r * Ir + Qr.r * fr + Sr.r * Er + Zr.r * pr,
-          Nr = rr.g * Ir + Qr.g * fr + Sr.g * Er + Zr.g * pr,
-          Ur = rr.b * Ir + Qr.b * fr + Sr.b * Er + Zr.b * pr;
-        return new xr(mr, Nr, Ur)
+      static Hermite(dd, Od, md, Wd, Fd) {
+        const Rd = Fd * Fd,
+          Xd = Fd * Rd,
+          Kd = 2 * Xd - 3 * Rd + 1,
+          hd = -2 * Xd + 3 * Rd,
+          vd = Xd - 2 * Rd + Fd,
+          Qd = Xd - Rd,
+          od = dd.r * Kd + md.r * hd + Od.r * vd + Wd.r * Qd,
+          Nd = dd.g * Kd + md.g * hd + Od.g * vd + Wd.g * Qd,
+          qd = dd.b * Kd + md.b * hd + Od.b * vd + Wd.b * Qd;
+        return new td(od, Nd, qd)
       }
-      static Hermite1stDerivative(rr, Sr, Qr, Zr, Wr) {
-        const ar = xr.Black();
-        return this.Hermite1stDerivativeToRef(rr, Sr, Qr, Zr, Wr, ar), ar
+      static Hermite1stDerivative(dd, Od, md, Wd, Fd) {
+        const Rd = td.Black();
+        return this.Hermite1stDerivativeToRef(dd, Od, md, Wd, Fd, Rd), Rd
       }
-      static Hermite1stDerivativeToRef(rr, Sr, Qr, Zr, Wr, ar) {
-        const jr = Wr * Wr;
-        ar.r = 6 * (jr - Wr) * rr.r + (3 * jr - 4 * Wr + 1) * Sr.r + 6 * (-jr + Wr) * Qr.r + (3 * jr - 2 * Wr) * Zr.r, ar.g = 6 * (jr - Wr) * rr.g + (3 * jr - 4 * Wr + 1) * Sr.g + 6 * (-jr + Wr) * Qr.g + (3 * jr - 2 * Wr) * Zr.g, ar.b = 6 * (jr - Wr) * rr.b + (3 * jr - 4 * Wr + 1) * Sr.b + 6 * (-jr + Wr) * Qr.b + (3 * jr - 2 * Wr) * Zr.b
+      static Hermite1stDerivativeToRef(dd, Od, md, Wd, Fd, Rd) {
+        const Xd = Fd * Fd;
+        Rd.r = 6 * (Xd - Fd) * dd.r + (3 * Xd - 4 * Fd + 1) * Od.r + 6 * (-Xd + Fd) * md.r + (3 * Xd - 2 * Fd) * Wd.r, Rd.g = 6 * (Xd - Fd) * dd.g + (3 * Xd - 4 * Fd + 1) * Od.g + 6 * (-Xd + Fd) * md.g + (3 * Xd - 2 * Fd) * Wd.g, Rd.b = 6 * (Xd - Fd) * dd.b + (3 * Xd - 4 * Fd + 1) * Od.b + 6 * (-Xd + Fd) * md.b + (3 * Xd - 2 * Fd) * Wd.b
       }
       static Red() {
-        return new xr(1, 0, 0)
+        return new td(1, 0, 0)
       }
       static Green() {
-        return new xr(0, 1, 0)
+        return new td(0, 1, 0)
       }
       static Blue() {
-        return new xr(0, 0, 1)
+        return new td(0, 0, 1)
       }
       static Black() {
-        return new xr(0, 0, 0)
+        return new td(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return xr._BlackReadOnly
+        return td._BlackReadOnly
       }
       static White() {
-        return new xr(1, 1, 1)
+        return new td(1, 1, 1)
       }
       static Purple() {
-        return new xr(.5, 0, .5)
+        return new td(.5, 0, .5)
       }
       static Magenta() {
-        return new xr(1, 0, 1)
+        return new td(1, 0, 1)
       }
       static Yellow() {
-        return new xr(1, 1, 0)
+        return new td(1, 1, 0)
       }
       static Gray() {
-        return new xr(.5, .5, .5)
+        return new td(.5, .5, .5)
       }
       static Teal() {
-        return new xr(0, 1, 1)
+        return new td(0, 1, 1)
       }
       static Random() {
-        return new xr(Math.random(), Math.random(), Math.random())
+        return new td(Math.random(), Math.random(), Math.random())
       }
     }
-    xr._V8PerformanceHack = new xr(.5, .5, .5), xr._BlackReadOnly = xr.Black();
-    class mr {
+    td._V8PerformanceHack = new td(.5, .5, .5), td._BlackReadOnly = td.Black();
+    class od {
       constructor() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = rr, this.g = Sr, this.b = Qr, this.a = Zr
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = dd, this.g = Od, this.b = md, this.a = Wd
       }
-      OWr() {
+      RRd() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return rr[Sr] = this.r, rr[Sr + 1] = this.g, rr[Sr + 2] = this.b, rr[Sr + 3] = this.a, this
+      toArray(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return dd[Od] = this.r, dd[Od + 1] = this.g, dd[Od + 2] = this.b, dd[Od + 3] = this.a, this
       }
-      dp(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = rr[Sr], this.g = rr[Sr + 1], this.b = rr[Sr + 2], this.a = rr[Sr + 3], this
+      ZQ(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = dd[Od], this.g = dd[Od + 1], this.b = dd[Od + 2], this.a = dd[Od + 3], this
       }
-      equals(rr) {
-        return rr && this.r === rr.r && this.g === rr.g && this.b === rr.b && this.a === rr.a
+      equals(dd) {
+        return dd && this.r === dd.r && this.g === dd.g && this.b === dd.b && this.a === dd.a
       }
-      add(rr) {
-        return new mr(this.r + rr.r, this.g + rr.g, this.b + rr.b, this.a + rr.a)
+      add(dd) {
+        return new od(this.r + dd.r, this.g + dd.g, this.b + dd.b, this.a + dd.a)
       }
-      addToRef(rr, Sr) {
-        return Sr.r = this.r + rr.r, Sr.g = this.g + rr.g, Sr.b = this.b + rr.b, Sr.a = this.a + rr.a, Sr
+      addToRef(dd, Od) {
+        return Od.r = this.r + dd.r, Od.g = this.g + dd.g, Od.b = this.b + dd.b, Od.a = this.a + dd.a, Od
       }
-      addInPlace(rr) {
-        return this.r += rr.r, this.g += rr.g, this.b += rr.b, this.a += rr.a, this
+      addInPlace(dd) {
+        return this.r += dd.r, this.g += dd.g, this.b += dd.b, this.a += dd.a, this
       }
-      addInPlaceFromFloats(rr, Sr, Qr, Zr) {
-        return this.r += rr, this.g += Sr, this.b += Qr, this.a += Zr, this
+      addInPlaceFromFloats(dd, Od, md, Wd) {
+        return this.r += dd, this.g += Od, this.b += md, this.a += Wd, this
       }
-      subtract(rr) {
-        return new mr(this.r - rr.r, this.g - rr.g, this.b - rr.b, this.a - rr.a)
+      subtract(dd) {
+        return new od(this.r - dd.r, this.g - dd.g, this.b - dd.b, this.a - dd.a)
       }
-      subtractToRef(rr, Sr) {
-        return Sr.r = this.r - rr.r, Sr.g = this.g - rr.g, Sr.b = this.b - rr.b, Sr.a = this.a - rr.a, Sr
+      subtractToRef(dd, Od) {
+        return Od.r = this.r - dd.r, Od.g = this.g - dd.g, Od.b = this.b - dd.b, Od.a = this.a - dd.a, Od
       }
-      iWr(rr) {
-        return this.r -= rr.r, this.g -= rr.g, this.b -= rr.b, this.a -= rr.a, this
+      YRd(dd) {
+        return this.r -= dd.r, this.g -= dd.g, this.b -= dd.b, this.a -= dd.a, this
       }
-      subtractFromFloats(rr, Sr, Qr, Zr) {
-        return new mr(this.r - rr, this.g - Sr, this.b - Qr, this.a - Zr)
+      subtractFromFloats(dd, Od, md, Wd) {
+        return new od(this.r - dd, this.g - Od, this.b - md, this.a - Wd)
       }
-      subtractFromFloatsToRef(rr, Sr, Qr, Zr, Wr) {
-        return Wr.r = this.r - rr, Wr.g = this.g - Sr, Wr.b = this.b - Qr, Wr.a = this.a - Zr, Wr
+      subtractFromFloatsToRef(dd, Od, md, Wd, Fd) {
+        return Fd.r = this.r - dd, Fd.g = this.g - Od, Fd.b = this.b - md, Fd.a = this.a - Wd, Fd
       }
-      scale(rr) {
-        return new mr(this.r * rr, this.g * rr, this.b * rr, this.a * rr)
+      scale(dd) {
+        return new od(this.r * dd, this.g * dd, this.b * dd, this.a * dd)
       }
-      scaleInPlace(rr) {
-        return this.r *= rr, this.g *= rr, this.b *= rr, this.a *= rr, this
+      scaleInPlace(dd) {
+        return this.r *= dd, this.g *= dd, this.b *= dd, this.a *= dd, this
       }
-      scaleToRef(rr, Sr) {
-        return Sr.r = this.r * rr, Sr.g = this.g * rr, Sr.b = this.b * rr, Sr.a = this.a * rr, Sr
+      scaleToRef(dd, Od) {
+        return Od.r = this.r * dd, Od.g = this.g * dd, Od.b = this.b * dd, Od.a = this.a * dd, Od
       }
-      scaleAndAddToRef(rr, Sr) {
-        return Sr.r += this.r * rr, Sr.g += this.g * rr, Sr.b += this.b * rr, Sr.a += this.a * rr, Sr
+      scaleAndAddToRef(dd, Od) {
+        return Od.r += this.r * dd, Od.g += this.g * dd, Od.b += this.b * dd, Od.a += this.a * dd, Od
       }
       clampToRef() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          Qr = arguments.length > 2 ? arguments[2] : void 0;
-        return Qr.r = (0, ar.Clamp)(this.r, rr, Sr), Qr.g = (0, ar.Clamp)(this.g, rr, Sr), Qr.b = (0, ar.Clamp)(this.b, rr, Sr), Qr.a = (0, ar.Clamp)(this.a, rr, Sr), Qr
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          md = arguments.length > 2 ? arguments[2] : void 0;
+        return md.r = (0, Rd.Clamp)(this.r, dd, Od), md.g = (0, Rd.Clamp)(this.g, dd, Od), md.b = (0, Rd.Clamp)(this.b, dd, Od), md.a = (0, Rd.Clamp)(this.a, dd, Od), md
       }
-      multiply(rr) {
-        return new mr(this.r * rr.r, this.g * rr.g, this.b * rr.b, this.a * rr.a)
+      multiply(dd) {
+        return new od(this.r * dd.r, this.g * dd.g, this.b * dd.b, this.a * dd.a)
       }
-      multiplyToRef(rr, Sr) {
-        return Sr.r = this.r * rr.r, Sr.g = this.g * rr.g, Sr.b = this.b * rr.b, Sr.a = this.a * rr.a, Sr
+      multiplyToRef(dd, Od) {
+        return Od.r = this.r * dd.r, Od.g = this.g * dd.g, Od.b = this.b * dd.b, Od.a = this.a * dd.a, Od
       }
-      multiplyInPlace(rr) {
-        return this.r *= rr.r, this.g *= rr.g, this.b *= rr.b, this.a *= rr.a, this
+      multiplyInPlace(dd) {
+        return this.r *= dd.r, this.g *= dd.g, this.b *= dd.b, this.a *= dd.a, this
       }
-      multiplyByFloats(rr, Sr, Qr, Zr) {
-        return new mr(this.r * rr, this.g * Sr, this.b * Qr, this.a * Zr)
+      multiplyByFloats(dd, Od, md, Wd) {
+        return new od(this.r * dd, this.g * Od, this.b * md, this.a * Wd)
       }
-      divide(rr) {
+      divide(dd) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(rr, Sr) {
+      divideToRef(dd, Od) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(rr) {
+      divideInPlace(dd) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(rr) {
-        return this.r = Math.min(this.r, rr.r), this.g = Math.min(this.g, rr.g), this.b = Math.min(this.b, rr.b), this.a = Math.min(this.a, rr.a), this
+      minimizeInPlace(dd) {
+        return this.r = Math.min(this.r, dd.r), this.g = Math.min(this.g, dd.g), this.b = Math.min(this.b, dd.b), this.a = Math.min(this.a, dd.a), this
       }
-      maximizeInPlace(rr) {
-        return this.r = Math.max(this.r, rr.r), this.g = Math.max(this.g, rr.g), this.b = Math.max(this.b, rr.b), this.a = Math.max(this.a, rr.a), this
+      maximizeInPlace(dd) {
+        return this.r = Math.max(this.r, dd.r), this.g = Math.max(this.g, dd.g), this.b = Math.max(this.b, dd.b), this.a = Math.max(this.a, dd.a), this
       }
-      minimizeInPlaceFromFloats(rr, Sr, Qr, Zr) {
-        return this.r = Math.min(rr, this.r), this.g = Math.min(Sr, this.g), this.b = Math.min(Qr, this.b), this.a = Math.min(Zr, this.a), this
+      minimizeInPlaceFromFloats(dd, Od, md, Wd) {
+        return this.r = Math.min(dd, this.r), this.g = Math.min(Od, this.g), this.b = Math.min(md, this.b), this.a = Math.min(Wd, this.a), this
       }
-      maximizeInPlaceFromFloats(rr, Sr, Qr, Zr) {
-        return this.r = Math.max(rr, this.r), this.g = Math.max(Sr, this.g), this.b = Math.max(Qr, this.b), this.a = Math.max(Zr, this.a), this
+      maximizeInPlaceFromFloats(dd, Od, md, Wd) {
+        return this.r = Math.max(dd, this.r), this.g = Math.max(Od, this.g), this.b = Math.max(md, this.b), this.a = Math.max(Wd, this.a), this
       }
-      floorToRef(rr) {
+      floorToRef(dd) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(rr) {
+      fractToRef(dd) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      ph() {
+      ty() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(rr) {
+      negateToRef(dd) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wr.e;
-        return (0, ar.WithinEpsilon)(this.r, rr.r, Sr) && (0, ar.WithinEpsilon)(this.g, rr.g, Sr) && (0, ar.WithinEpsilon)(this.b, rr.b, Sr) && (0, ar.WithinEpsilon)(this.a, rr.a, Sr)
+      equalsWithEpsilon(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Fd.b;
+        return (0, Rd.WithinEpsilon)(this.r, dd.r, Od) && (0, Rd.WithinEpsilon)(this.g, dd.g, Od) && (0, Rd.WithinEpsilon)(this.b, dd.b, Od) && (0, Rd.WithinEpsilon)(this.a, dd.a, Od)
       }
-      ffr(rr, Sr, Qr, Zr) {
-        return this.r === rr && this.g === Sr && this.b === Qr && this.a === Zr
+      Qhd(dd, Od, md, Wd) {
+        return this.r === dd && this.g === Od && this.b === md && this.a === Wd
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let rr = 255 * this.r | 0;
-        return rr = 397 * rr ^ 255 * this.g, rr = 397 * rr ^ 255 * this.b, rr = 397 * rr ^ 255 * this.a, rr
+        let dd = 255 * this.r | 0;
+        return dd = 397 * dd ^ 255 * this.g, dd = 397 * dd ^ 255 * this.b, dd = 397 * dd ^ 255 * this.a, dd
       }
       clone() {
-        return (new mr).iH(this)
+        return (new od).Bx(this)
       }
-      iH(rr) {
-        return this.r = rr.r, this.g = rr.g, this.b = rr.b, this.a = rr.a, this
+      Bx(dd) {
+        return this.r = dd.r, this.g = dd.g, this.b = dd.b, this.a = dd.a, this
       }
-      Hrr(rr, Sr, Qr, Zr) {
-        return this.r = rr, this.g = Sr, this.b = Qr, this.a = Zr, this
+      KOd(dd, Od, md, Wd) {
+        return this.r = dd, this.g = Od, this.b = md, this.a = Wd, this
       }
-      set(rr, Sr, Qr, Zr) {
-        return this.Hrr(rr, Sr, Qr, Zr)
+      set(dd, Od, md, Wd) {
+        return this.KOd(dd, Od, md, Wd)
       }
-      Srr(rr) {
-        return this.r = this.g = this.b = this.a = rr, this
+      Bdd(dd) {
+        return this.r = this.g = this.b = this.a = dd, this
       }
       toHexString() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Sr = Math.round(255 * this.r),
-          Qr = Math.round(255 * this.g),
-          Zr = Math.round(255 * this.b);
-        if (rr) return "#" + (0, ar.ToHex)(Sr) + (0, ar.ToHex)(Qr) + (0, ar.ToHex)(Zr);
-        const Wr = Math.round(255 * this.a);
-        return "#" + (0, ar.ToHex)(Sr) + (0, ar.ToHex)(Qr) + (0, ar.ToHex)(Zr) + (0, ar.ToHex)(Wr)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Od = Math.round(255 * this.r),
+          md = Math.round(255 * this.g),
+          Wd = Math.round(255 * this.b);
+        if (dd) return "#" + (0, Rd.ToHex)(Od) + (0, Rd.ToHex)(md) + (0, Rd.ToHex)(Wd);
+        const Fd = Math.round(255 * this.a);
+        return "#" + (0, Rd.ToHex)(Od) + (0, Rd.ToHex)(md) + (0, Rd.ToHex)(Wd) + (0, Rd.ToHex)(Fd)
       }
-      fromHexString(rr) {
-        return "#" !== rr.substring(0, 1) || 9 !== rr.length && 7 !== rr.length || (this.r = parseInt(rr.substring(1, 3), 16) / 255, this.g = parseInt(rr.substring(3, 5), 16) / 255, this.b = parseInt(rr.substring(5, 7), 16) / 255, 9 === rr.length && (this.a = parseInt(rr.substring(7, 9), 16) / 255)), this
+      fromHexString(dd) {
+        return "#" !== dd.substring(0, 1) || 9 !== dd.length && 7 !== dd.length || (this.r = parseInt(dd.substring(1, 3), 16) / 255, this.g = parseInt(dd.substring(3, 5), 16) / 255, this.b = parseInt(dd.substring(5, 7), 16) / 255, 9 === dd.length && (this.a = parseInt(dd.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Sr = new mr;
-        return this.toLinearSpaceToRef(Sr, rr), Sr
+        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Od = new od;
+        return this.toLinearSpaceToRef(Od, dd), Od
       }
-      toLinearSpaceToRef(rr) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (rr.r = fr(this.r), rr.g = fr(this.g), rr.b = fr(this.b)) : (rr.r = Ir(this.r), rr.g = Ir(this.g), rr.b = Ir(this.b)), rr.a = this.a, this
+      toLinearSpaceToRef(dd) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (dd.r = hd(this.r), dd.g = hd(this.g), dd.b = hd(this.b)) : (dd.r = Kd(this.r), dd.g = Kd(this.g), dd.b = Kd(this.b)), dd.a = this.a, this
       }
       toGammaSpace() {
-        let rr = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const Sr = new mr;
-        return this.toGammaSpaceToRef(Sr, rr), Sr
+        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Od = new od;
+        return this.toGammaSpaceToRef(Od, dd), Od
       }
-      toGammaSpaceToRef(rr) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (rr.r = pr(this.r), rr.g = pr(this.g), rr.b = pr(this.b)) : (rr.r = Er(this.r), rr.g = Er(this.g), rr.b = Er(this.b)), rr.a = this.a, this
+      toGammaSpaceToRef(dd) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (dd.r = Qd(this.r), dd.g = Qd(this.g), dd.b = Qd(this.b)) : (dd.r = vd(this.r), dd.g = vd(this.g), dd.b = vd(this.b)), dd.a = this.a, this
       }
-      static FromHexString(rr) {
-        return "#" !== rr.substring(0, 1) || 9 !== rr.length && 7 !== rr.length ? new mr(0, 0, 0, 0) : new mr(0, 0, 0, 1).fromHexString(rr)
+      static FromHexString(dd) {
+        return "#" !== dd.substring(0, 1) || 9 !== dd.length && 7 !== dd.length ? new od(0, 0, 0, 0) : new od(0, 0, 0, 1).fromHexString(dd)
       }
-      static Lerp(rr, Sr, Qr) {
-        return mr.LerpToRef(rr, Sr, Qr, new mr)
+      static Lerp(dd, Od, md) {
+        return od.LerpToRef(dd, Od, md, new od)
       }
-      static LerpToRef(rr, Sr, Qr, Zr) {
-        return Zr.r = rr.r + (Sr.r - rr.r) * Qr, Zr.g = rr.g + (Sr.g - rr.g) * Qr, Zr.b = rr.b + (Sr.b - rr.b) * Qr, Zr.a = rr.a + (Sr.a - rr.a) * Qr, Zr
+      static LerpToRef(dd, Od, md, Wd) {
+        return Wd.r = dd.r + (Od.r - dd.r) * md, Wd.g = dd.g + (Od.g - dd.g) * md, Wd.b = dd.b + (Od.b - dd.b) * md, Wd.a = dd.a + (Od.a - dd.a) * md, Wd
       }
-      static Hermite(rr, Sr, Qr, Zr, Wr) {
-        const ar = Wr * Wr,
-          jr = Wr * ar,
-          Ir = 2 * jr - 3 * ar + 1,
-          fr = -2 * jr + 3 * ar,
-          Er = jr - 2 * ar + Wr,
-          pr = jr - ar,
-          xr = rr.r * Ir + Qr.r * fr + Sr.r * Er + Zr.r * pr,
-          Nr = rr.g * Ir + Qr.g * fr + Sr.g * Er + Zr.g * pr,
-          Ur = rr.b * Ir + Qr.b * fr + Sr.b * Er + Zr.b * pr,
-          tr = rr.a * Ir + Qr.a * fr + Sr.a * Er + Zr.a * pr;
-        return new mr(xr, Nr, Ur, tr)
+      static Hermite(dd, Od, md, Wd, Fd) {
+        const Rd = Fd * Fd,
+          Xd = Fd * Rd,
+          Kd = 2 * Xd - 3 * Rd + 1,
+          hd = -2 * Xd + 3 * Rd,
+          vd = Xd - 2 * Rd + Fd,
+          Qd = Xd - Rd,
+          td = dd.r * Kd + md.r * hd + Od.r * vd + Wd.r * Qd,
+          Nd = dd.g * Kd + md.g * hd + Od.g * vd + Wd.g * Qd,
+          qd = dd.b * Kd + md.b * hd + Od.b * vd + Wd.b * Qd,
+          Hd = dd.a * Kd + md.a * hd + Od.a * vd + Wd.a * Qd;
+        return new od(td, Nd, qd, Hd)
       }
-      static Hermite1stDerivative(rr, Sr, Qr, Zr, Wr) {
-        const ar = new mr;
-        return this.Hermite1stDerivativeToRef(rr, Sr, Qr, Zr, Wr, ar), ar
+      static Hermite1stDerivative(dd, Od, md, Wd, Fd) {
+        const Rd = new od;
+        return this.Hermite1stDerivativeToRef(dd, Od, md, Wd, Fd, Rd), Rd
       }
-      static Hermite1stDerivativeToRef(rr, Sr, Qr, Zr, Wr, ar) {
-        const jr = Wr * Wr;
-        ar.r = 6 * (jr - Wr) * rr.r + (3 * jr - 4 * Wr + 1) * Sr.r + 6 * (-jr + Wr) * Qr.r + (3 * jr - 2 * Wr) * Zr.r, ar.g = 6 * (jr - Wr) * rr.g + (3 * jr - 4 * Wr + 1) * Sr.g + 6 * (-jr + Wr) * Qr.g + (3 * jr - 2 * Wr) * Zr.g, ar.b = 6 * (jr - Wr) * rr.b + (3 * jr - 4 * Wr + 1) * Sr.b + 6 * (-jr + Wr) * Qr.b + (3 * jr - 2 * Wr) * Zr.b, ar.a = 6 * (jr - Wr) * rr.a + (3 * jr - 4 * Wr + 1) * Sr.a + 6 * (-jr + Wr) * Qr.a + (3 * jr - 2 * Wr) * Zr.a
+      static Hermite1stDerivativeToRef(dd, Od, md, Wd, Fd, Rd) {
+        const Xd = Fd * Fd;
+        Rd.r = 6 * (Xd - Fd) * dd.r + (3 * Xd - 4 * Fd + 1) * Od.r + 6 * (-Xd + Fd) * md.r + (3 * Xd - 2 * Fd) * Wd.r, Rd.g = 6 * (Xd - Fd) * dd.g + (3 * Xd - 4 * Fd + 1) * Od.g + 6 * (-Xd + Fd) * md.g + (3 * Xd - 2 * Fd) * Wd.g, Rd.b = 6 * (Xd - Fd) * dd.b + (3 * Xd - 4 * Fd + 1) * Od.b + 6 * (-Xd + Fd) * md.b + (3 * Xd - 2 * Fd) * Wd.b, Rd.a = 6 * (Xd - Fd) * dd.a + (3 * Xd - 4 * Fd + 1) * Od.a + 6 * (-Xd + Fd) * md.a + (3 * Xd - 2 * Fd) * Wd.a
       }
-      static FromColor3(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new mr(rr.r, rr.g, rr.b, Sr)
+      static FromColor3(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new od(dd.r, dd.g, dd.b, Od)
       }
-      static FromArray(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new mr(rr[Sr], rr[Sr + 1], rr[Sr + 2], rr[Sr + 3])
+      static FromArray(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new od(dd[Od], dd[Od + 1], dd[Od + 2], dd[Od + 3])
       }
-      static FromArrayToRef(rr) {
-        let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          Qr = arguments.length > 2 ? arguments[2] : void 0;
-        Qr.r = rr[Sr], Qr.g = rr[Sr + 1], Qr.b = rr[Sr + 2], Qr.a = rr[Sr + 3]
+      static FromArrayToRef(dd) {
+        let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          md = arguments.length > 2 ? arguments[2] : void 0;
+        md.r = dd[Od], md.g = dd[Od + 1], md.b = dd[Od + 2], md.a = dd[Od + 3]
       }
-      static FromInts(rr, Sr, Qr, Zr) {
-        return new mr(rr / 255, Sr / 255, Qr / 255, Zr / 255)
+      static FromInts(dd, Od, md, Wd) {
+        return new od(dd / 255, Od / 255, md / 255, Wd / 255)
       }
-      static CheckColors4(rr, Sr) {
-        if (rr.length === 3 * Sr) {
-          const Sr = [];
-          for (let Qr = 0; Qr < rr.length; Qr += 3) {
-            const Zr = Qr / 3 * 4;
-            Sr[Zr] = rr[Qr], Sr[Zr + 1] = rr[Qr + 1], Sr[Zr + 2] = rr[Qr + 2], Sr[Zr + 3] = 1
+      static CheckColors4(dd, Od) {
+        if (dd.length === 3 * Od) {
+          const Od = [];
+          for (let md = 0; md < dd.length; md += 3) {
+            const Wd = md / 3 * 4;
+            Od[Wd] = dd[md], Od[Wd + 1] = dd[md + 1], Od[Wd + 2] = dd[md + 2], Od[Wd + 3] = 1
           }
-          return Sr
+          return Od
         }
-        return rr
+        return dd
       }
     }
-    mr._V8PerformanceHack = new mr(.5, .5, .5, .5);
-    class Nr {}
-    Nr.Color3 = (0, Zr.e)(3, xr.Black), Nr.Color4 = (0, Zr.e)(3, (() => new mr(0, 0, 0, 0)));
-    let Ur = !1;
+    od._V8PerformanceHack = new od(.5, .5, .5, .5);
+    class Nd {}
+    Nd.Color3 = (0, Wd.e)(3, td.Black), Nd.Color4 = (0, Wd.e)(3, (() => new od(0, 0, 0, 0)));
+    let qd = !1;
 
-    function tr() {
-      Ur || (Ur = !0, Object.defineProperties(xr.prototype, {
+    function Hd() {
+      qd || (qd = !0, Object.defineProperties(td.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(mr.prototype, {
+      }), Object.defineProperties(od.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, jr.e)("BABYLON.Color3", xr), (0, jr.e)("BABYLON.Color4", mr))
+      }), (0, Xd.e)("BABYLON.Color3", td), (0, Xd.e)("BABYLON.Color4", od))
     }
   },
-  38569: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => ar,
-      f: () => Zr,
-      h: () => Wr
+  38644: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Rd,
+      c: () => Wd,
+      f: () => Fd
     });
-    const Zr = 1 / 2.2,
-      Wr = 2.2;
+    const Wd = 1 / 2.2,
+      Fd = 2.2;
     Math.sqrt(5);
-    let ar = .001
+    let Rd = .001
   },
-  38599: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return parseInt(rr.toString().replace(/\W/g, ""))
+  38663: (dd, Od, md) => {
+    function Wd(dd) {
+      return parseInt(dd.toString().replace(/\W/g, ""))
     }
 
-    function Wr(rr, Sr) {
-      let Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(rr - Sr) <= Qr
+    function Fd(dd, Od) {
+      let md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(dd - Od) <= md
     }
 
-    function ar(rr, Sr, Qr) {
-      let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return rr < Sr - Zr || rr > Qr + Zr
+    function Rd(dd, Od, md) {
+      let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return dd < Od - Wd || dd > md + Wd
     }
 
-    function jr(rr, Sr) {
-      return rr === Sr ? rr : Math.random() * (Sr - rr) + rr
+    function Xd(dd, Od) {
+      return dd === Od ? dd : Math.random() * (Od - dd) + dd
     }
 
-    function Ir(rr, Sr, Qr) {
-      return rr + (Sr - rr) * Qr
+    function Kd(dd, Od, md) {
+      return dd + (Od - dd) * md
     }
 
-    function fr(rr, Sr, Qr) {
-      let Zr = hr(Sr - rr, 360);
-      return Zr > 180 && (Zr -= 360), rr + Zr * mr(Qr)
+    function hd(dd, Od, md) {
+      let Wd = yd(Od - dd, 360);
+      return Wd > 180 && (Wd -= 360), dd + Wd * od(md)
     }
 
-    function Er(rr, Sr, Qr) {
-      let Zr;
-      return Zr = rr != Sr ? mr((Qr - rr) / (Sr - rr)) : 0, Zr
+    function vd(dd, Od, md) {
+      let Wd;
+      return Wd = dd != Od ? od((md - dd) / (Od - dd)) : 0, Wd
     }
 
-    function pr(rr, Sr, Qr, Zr, Wr) {
-      const ar = Wr * Wr,
-        jr = Wr * ar;
-      return rr * (2 * jr - 3 * ar + 1) + Qr * (-2 * jr + 3 * ar) + Sr * (jr - 2 * ar + Wr) + Zr * (jr - ar)
+    function Qd(dd, Od, md, Wd, Fd) {
+      const Rd = Fd * Fd,
+        Xd = Fd * Rd;
+      return dd * (2 * Xd - 3 * Rd + 1) + md * (-2 * Xd + 3 * Rd) + Od * (Xd - 2 * Rd + Fd) + Wd * (Xd - Rd)
     }
 
-    function xr(rr, Sr, Qr, Zr, Wr) {
-      const ar = Wr * Wr;
-      return 6 * (ar - Wr) * rr + (3 * ar - 4 * Wr + 1) * Sr + 6 * (-ar + Wr) * Qr + (3 * ar - 2 * Wr) * Zr
+    function td(dd, Od, md, Wd, Fd) {
+      const Rd = Fd * Fd;
+      return 6 * (Rd - Fd) * dd + (3 * Rd - 4 * Fd + 1) * Od + 6 * (-Rd + Fd) * md + (3 * Rd - 2 * Fd) * Wd
     }
 
-    function mr(rr) {
-      let Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        Qr = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(Qr, Math.max(Sr, rr))
+    function od(dd) {
+      let Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        md = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(md, Math.max(Od, dd))
     }
 
-    function Nr(rr) {
-      return rr -= 2 * Math.PI * Math.floor((rr + Math.PI) / (2 * Math.PI))
+    function Nd(dd) {
+      return dd -= 2 * Math.PI * Math.floor((dd + Math.PI) / (2 * Math.PI))
     }
 
-    function Ur(rr) {
-      const Sr = rr.toString(16);
-      return rr <= 15 ? ("0" + Sr).toUpperCase() : Sr.toUpperCase()
+    function qd(dd) {
+      const Od = dd.toString(16);
+      return dd <= 15 ? ("0" + Od).toUpperCase() : Od.toUpperCase()
     }
 
-    function tr(rr) {
-      if (Math.log2) return Math.floor(Math.log2(rr));
-      if (rr < 0) return NaN;
-      if (0 === rr) return -1 / 0;
-      let Sr = 0;
-      if (rr < 1) {
-        for (; rr < 1;) Sr++, rr *= 2;
-        Sr = -Sr
-      } else if (rr > 1)
-        for (; rr > 1;) Sr++, rr = Math.floor(rr / 2);
-      return Sr
+    function Hd(dd) {
+      if (Math.log2) return Math.floor(Math.log2(dd));
+      if (dd < 0) return NaN;
+      if (0 === dd) return -1 / 0;
+      let Od = 0;
+      if (dd < 1) {
+        for (; dd < 1;) Od++, dd *= 2;
+        Od = -Od
+      } else if (dd > 1)
+        for (; dd > 1;) Od++, dd = Math.floor(dd / 2);
+      return Od
     }
 
-    function hr(rr, Sr) {
-      return rr - Math.floor(rr / Sr) * Sr
+    function yd(dd, Od) {
+      return dd - Math.floor(dd / Od) * Od
     }
 
-    function zr(rr, Sr, Qr) {
-      return (rr - Sr) / (Qr - Sr)
+    function bd(dd, Od, md) {
+      return (dd - Od) / (md - Od)
     }
 
-    function Yr(rr, Sr, Qr) {
-      return rr * (Qr - Sr) + Sr
+    function Td(dd, Od, md) {
+      return dd * (md - Od) + Od
     }
 
-    function nr(rr, Sr) {
-      let Qr = hr(Sr - rr, 360);
-      return Qr > 180 && (Qr -= 360), Qr
+    function pd(dd, Od) {
+      let md = yd(Od - dd, 360);
+      return md > 180 && (md -= 360), md
     }
 
-    function er(rr, Sr) {
-      const Qr = hr(rr, 2 * Sr);
-      return Sr - Math.abs(Qr - Sr)
+    function Yd(dd, Od) {
+      const md = yd(dd, 2 * Od);
+      return Od - Math.abs(md - Od)
     }
 
-    function Kr(rr, Sr, Qr) {
-      let Zr = mr(Qr);
-      return Zr = -2 * Zr * Zr * Zr + 3 * Zr * Zr, Sr * Zr + rr * (1 - Zr)
+    function gd(dd, Od, md) {
+      let Wd = od(md);
+      return Wd = -2 * Wd * Wd * Wd + 3 * Wd * Wd, Od * Wd + dd * (1 - Wd)
     }
 
-    function yr(rr, Sr, Qr) {
-      let Zr;
-      return Zr = Math.abs(Sr - rr) <= Qr ? Sr : rr + Math.sign(Sr - rr) * Qr, Zr
+    function wd(dd, Od, md) {
+      let Wd;
+      return Wd = Math.abs(Od - dd) <= md ? Od : dd + Math.sign(Od - dd) * md, Wd
     }
 
-    function Br(rr, Sr, Qr) {
-      const Zr = nr(rr, Sr);
-      let Wr;
-      return Wr = -Qr < Zr && Zr < Qr ? Sr : yr(rr, Sr = rr + Zr, Qr), Wr
+    function Ed(dd, Od, md) {
+      const Wd = pd(dd, Od);
+      let Fd;
+      return Fd = -md < Wd && Wd < md ? Od : wd(dd, Od = dd + Wd, md), Fd
     }
 
-    function Tr(rr, Sr, Qr) {
-      return (rr - Sr) / (Qr - Sr)
+    function Jd(dd, Od, md) {
+      return (dd - Od) / (md - Od)
     }
 
-    function vr(rr, Sr, Qr) {
-      return (Qr - Sr) * rr + Sr
+    function Ud(dd, Od, md) {
+      return (md - Od) * dd + Od
     }
 
-    function Or(rr, Sr) {
-      const Qr = rr % Sr;
-      return 0 === Qr ? Sr : Or(Sr, Qr)
+    function xd(dd, Od) {
+      const md = dd % Od;
+      return 0 === md ? Od : xd(Od, md)
     }
-    Qr.r(Sr), Qr.d(Sr, {
-      Clamp: () => mr,
-      DeltaAngle: () => nr,
-      Denormalize: () => Yr,
-      ExtractAsInt: () => Zr,
-      Hermite: () => pr,
-      Hermite1stDerivative: () => xr,
-      HighestCommonFactor: () => Or,
-      ILog2: () => tr,
-      InverseLerp: () => Er,
-      Lerp: () => Ir,
-      LerpAngle: () => fr,
-      MoveTowards: () => yr,
-      MoveTowardsAngle: () => Br,
-      Normalize: () => zr,
-      NormalizeRadians: () => Nr,
-      OutsideRange: () => ar,
-      PercentToRange: () => vr,
-      PingPong: () => er,
-      RandomRange: () => jr,
-      RangeToPercent: () => Tr,
-      Repeat: () => hr,
-      SmoothStep: () => Kr,
-      ToHex: () => Ur,
-      WithinEpsilon: () => Wr
+    md.r(Od), md.d(Od, {
+      Clamp: () => od,
+      DeltaAngle: () => pd,
+      Denormalize: () => Td,
+      ExtractAsInt: () => Wd,
+      Hermite: () => Qd,
+      Hermite1stDerivative: () => td,
+      HighestCommonFactor: () => xd,
+      ILog2: () => Hd,
+      InverseLerp: () => vd,
+      Lerp: () => Kd,
+      LerpAngle: () => hd,
+      MoveTowards: () => wd,
+      MoveTowardsAngle: () => Ed,
+      Normalize: () => bd,
+      NormalizeRadians: () => Nd,
+      OutsideRange: () => Rd,
+      PercentToRange: () => Ud,
+      PingPong: () => Yd,
+      RandomRange: () => Xd,
+      RangeToPercent: () => Jd,
+      Repeat: () => yd,
+      SmoothStep: () => gd,
+      ToHex: () => qd,
+      WithinEpsilon: () => Fd
     })
   },
-  38576: (rr, Sr, Qr) => {
-    function Zr(rr, Sr) {
-      const Qr = [];
-      for (let Zr = 0; Zr < rr; ++Zr) Qr.push(Sr());
-      return Qr
+  38647: (dd, Od, md) => {
+    function Wd(dd, Od) {
+      const md = [];
+      for (let Wd = 0; Wd < dd; ++Wd) md.push(Od());
+      return md
     }
 
-    function Wr(rr, Sr) {
-      return Zr(rr, Sr)
+    function Fd(dd, Od) {
+      return Wd(dd, Od)
     }
-    Qr.d(Sr, {
-      e: () => Zr,
-      f: () => Wr,
-      h: () => jr
+    md.d(Od, {
+      e: () => Wd,
+      f: () => Fd,
+      i: () => Xd
     });
-    const ar = ["push", "splice", "pop", "shift", "unshift"];
+    const Rd = ["push", "splice", "pop", "shift", "unshift"];
 
-    function jr(rr, Sr) {
-      const Qr = ar.map((Qr => function(rr, Sr, Qr) {
-        const Zr = rr[Sr];
-        if ("function" !== typeof Zr) return null;
-        const Wr = function() {
-          const Zr = rr.length,
-            ar = Wr.previous.apply(rr, arguments);
-          return Qr(Sr, Zr), ar
+    function Xd(dd, Od) {
+      const md = Rd.map((md => function(dd, Od, md) {
+        const Wd = dd[Od];
+        if ("function" !== typeof Wd) return null;
+        const Fd = function() {
+          const Wd = dd.length,
+            Rd = Fd.previous.apply(dd, arguments);
+          return md(Od, Wd), Rd
         };
-        return Zr.next = Wr, Wr.previous = Zr, rr[Sr] = Wr, () => {
-          const Qr = Wr.previous;
-          if (!Qr) return;
-          const Zr = Wr.next;
-          Zr ? (Qr.next = Zr, Zr.previous = Qr) : (Qr.next = void 0, rr[Sr] = Qr), Wr.next = void 0, Wr.previous = void 0
+        return Wd.next = Fd, Fd.previous = Wd, dd[Od] = Fd, () => {
+          const md = Fd.previous;
+          if (!md) return;
+          const Wd = Fd.next;
+          Wd ? (md.next = Wd, Wd.previous = md) : (md.next = void 0, dd[Od] = md), Fd.next = void 0, Fd.previous = void 0
         }
-      }(rr, Qr, Sr)));
+      }(dd, md, Od)));
       return () => {
-        for (const rr of Qr) rr?.()
+        for (const dd of md) dd?.()
       }
     }
   },
-  38609: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar,
-      e: () => Wr
+  38669: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd,
+      e: () => Fd
     });
-    const Zr = {};
+    const Wd = {};
 
-    function Wr(rr, Sr) {
-      Zr[rr] = Sr
+    function Fd(dd, Od) {
+      Wd[dd] = Od
     }
 
-    function ar(rr) {
-      return Zr[rr]
+    function Rd(dd) {
+      return Wd[dd]
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

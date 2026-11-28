@@ -1,78 +1,78 @@
 export const id = 285;
 export const ids = [285];
 export const modules = {
-  41704: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      playDocsSound: () => fr
+  41740: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      playDocsSound: () => hd
     });
-    var Zr = Qr(5681),
-      Wr = Qr(37851),
-      ar = Qr(1262),
-      jr = Qr(37853);
-    const Ir = new Map;
+    var Wd = md(5641),
+      Fd = md(37942),
+      Rd = md(1253),
+      Xd = md(37948);
+    const Kd = new Map;
 
-    function fr(rr, Sr, Qr, fr, Er) {
-      let pr, xr = 0;
-      if (Sr) pr = new Zr.Howl({
-        src: [`${ar.clientSideServerUrls.staticUrl}/sounds/music/${rr}.mp3`],
+    function hd(dd, Od, md, hd, vd) {
+      let Qd, td = 0;
+      if (Od) Qd = new Wd.Howl({
+        src: [`${Rd.clientSideServerUrls.staticUrl}/sounds/music/${dd}.mp3`],
         html5: !0,
-        volume: Qr
+        volume: md
       });
       else {
-        const Sr = (0, Wr.r)(rr);
-        xr = Sr.ms / 1e3, pr = Ir.get(rr), pr || (pr = new Zr.Howl({
-          src: [...Sr.src],
+        const Od = (0, Fd.t)(dd);
+        td = Od.ms / 1e3, Qd = Kd.get(dd), Qd || (Qd = new Wd.Howl({
+          src: [...Od.src],
           volume: 1
-        }), Ir.set(rr, pr))
+        }), Kd.set(dd, Qd))
       }
-      const mr = Sr ? pr.play() : pr.play(jr.e);
-      pr.volume(Qr, mr), fr > 0 && pr.seek(fr, mr);
-      const Nr = () => {
-        const rr = pr.duration();
-        return Sr || rr > 0 ? rr : xr
+      const od = Od ? Qd.play() : Qd.play(Xd.b);
+      Qd.volume(md, od), hd > 0 && Qd.seek(hd, od);
+      const Nd = () => {
+        const dd = Qd.duration();
+        return Od || dd > 0 ? dd : td
       };
-      let Ur = !1;
-      const tr = rr => {
-          Ur || (Ur = !0, pr.off("play", hr, mr), pr.off("end", zr, mr), pr.off("loaderror", nr), pr.off("playerror", Yr, mr), Sr && pr.unload(), Er.onEnd(rr))
+      let qd = !1;
+      const Hd = dd => {
+          qd || (qd = !0, Qd.off("play", yd, od), Qd.off("end", bd, od), Qd.off("loaderror", pd), Qd.off("playerror", Td, od), Od && Qd.unload(), vd.onEnd(dd))
         },
-        hr = () => {
-          Er.onPlay(Nr())
+        yd = () => {
+          vd.onPlay(Nd())
         },
-        zr = () => {
-          tr(!1)
+        bd = () => {
+          Hd(!1)
         },
-        Yr = (Sr, Qr) => {
-          console.error(`Could not play docs sound ${rr}`, Qr), tr(!0)
+        Td = (Od, md) => {
+          console.error(`Could not play docs sound ${dd}`, md), Hd(!0)
         },
-        nr = (Qr, Zr) => {
-          Sr || Ir.get(rr) !== pr || (Ir.delete(rr), pr.unload()), Yr(Qr, Zr)
+        pd = (md, Wd) => {
+          Od || Kd.get(dd) !== Qd || (Kd.delete(dd), Qd.unload()), Td(md, Wd)
         };
-      return pr.on("play", hr, mr), pr.once("end", zr, mr), pr.once("loaderror", nr), pr.once("playerror", Yr, mr), {
+      return Qd.on("play", yd, od), Qd.once("end", bd, od), Qd.once("loaderror", pd), Qd.once("playerror", Td, od), {
         pause: () => {
-          pr.pause(mr)
+          Qd.pause(od)
         },
         resume: () => {
-          pr.play(mr)
+          Qd.play(od)
         },
-        seek: rr => {
-          const Sr = Nr(),
-            Qr = Math.max(rr, 0);
-          pr.seek(Sr > 0 ? Math.min(Qr, Sr) : Qr, mr)
+        seek: dd => {
+          const Od = Nd(),
+            md = Math.max(dd, 0);
+          Qd.seek(Od > 0 ? Math.min(md, Od) : md, od)
         },
-        JY: () => {
-          const rr = pr.seek(mr);
-          return "number" === typeof rr ? Math.max(0, rr) : 0
+        hY: () => {
+          const dd = Qd.seek(od);
+          return "number" === typeof dd ? Math.max(0, dd) : 0
         },
-        getDuration: Nr,
-        setVolume: rr => {
-          pr.volume(rr, mr)
+        getDuration: Nd,
+        setVolume: dd => {
+          Qd.volume(dd, od)
         },
         stop: () => {
-          Ur || (pr.stop(mr), tr(!1))
+          qd || (Qd.stop(od), Hd(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

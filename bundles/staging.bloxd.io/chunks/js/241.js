@@ -1,19 +1,19 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  38018: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => jr,
-      c: () => Wr,
-      d: () => ar
+  38109: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Xd,
+      i: () => Fd,
+      j: () => Rd
     });
-    var Zr = Qr(1783);
-    class Wr extends Error {
-      constructor(rr) {
-        super("The game server didn't answer in time"), this.leg = rr, this.name = "SeatRequestTimedOut"
+    var Wd = md(1786);
+    class Fd extends Error {
+      constructor(dd) {
+        super("The game server didn't answer in time"), this.leg = dd, this.name = "SeatRequestTimedOut"
       }
     }
-    const ar = new class {
+    const Rd = new class {
       constructor() {
         this.count = 0, this.answers = 0, this.waiting = new Set
       }
@@ -25,596 +25,596 @@ export const modules = {
       }
       add() {
         this.count++;
-        for (const rr of this.waiting) rr()
+        for (const dd of this.waiting) dd()
       }
       remove() {
         this.count--
       }
-      whenSlow(rr) {
-        return this.count > 0 || rr.aborted ? Promise.resolve(!rr.aborted) : new Promise((Sr => {
-          const Qr = () => {
-            this.waiting.delete(Qr), Sr(!rr.aborted)
+      whenSlow(dd) {
+        return this.count > 0 || dd.aborted ? Promise.resolve(!dd.aborted) : new Promise((Od => {
+          const md = () => {
+            this.waiting.delete(md), Od(!dd.aborted)
           };
-          this.waiting.add(Qr), rr.addEventListener("abort", Qr, {
+          this.waiting.add(md), dd.addEventListener("abort", md, {
             once: !0
           })
         }))
       }
     };
-    class jr {
-      constructor(rr) {
-        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new Zr.b(45e3, rr), this.slow = new Zr.b(8e3, (() => {
-          this.countedSlow = !0, ar.add()
+    class Xd {
+      constructor(dd) {
+        this.timeout = void 0, this.slow = void 0, this.countedSlow = !1, this.timeout = new Wd.c(45e3, dd), this.slow = new Wd.c(8e3, (() => {
+          this.countedSlow = !0, Rd.add()
         }))
       }
       restart() {
-        ar.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
+        Rd.answer(), this.uncountSlow(), this.timeout.restart(), this.slow.restart()
       }
       stop() {
         this.timeout.stop(), this.slow.stop(), this.uncountSlow()
       }
       answered() {
-        this.stop(), ar.answer()
+        this.stop(), Rd.answer()
       }
       socketOpened() {
-        this.slow.stop(), this.uncountSlow(), ar.answer()
+        this.slow.stop(), this.uncountSlow(), Rd.answer()
       }
       uncountSlow() {
-        this.countedSlow && (this.countedSlow = !1, ar.remove())
+        this.countedSlow && (this.countedSlow = !1, Rd.remove())
       }
     }
   },
-  37522: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => Zr,
-      f: () => Wr,
-      i: () => ar,
-      m: () => jr
+  37652: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Wd,
+      g: () => Fd,
+      i: () => Rd,
+      k: () => Xd
     });
-    const Zr = 1024,
-      Wr = 1024 * Zr;
+    const Wd = 1024,
+      Fd = 1024 * Wd;
 
-    function ar(rr) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, rr / Wr)))
+    function Rd(dd) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, dd / Fd)))
     }
 
-    function jr(rr) {
-      return (rr / Wr).toFixed(1)
+    function Xd(dd) {
+      return (dd / Fd).toFixed(1)
     }
   },
-  38008: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => ar,
-      f: () => fr,
-      i: () => Ir,
-      k: () => jr,
-      m: () => Er,
-      p: () => pr,
-      t: () => mr
+  38096: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Rd,
+      g: () => hd,
+      j: () => Kd,
+      l: () => Xd,
+      o: () => vd,
+      q: () => Qd,
+      t: () => od
     });
-    var Zr = Qr(208);
-    const Wr = 32 * Qr(37522).f,
-      ar = 6144,
-      jr = 4608,
-      Ir = 512,
-      fr = function() {
-        const rr = mr(Zr.i.maxChunkHorizAddDistance + 1, Zr.i.maxChunkVertAddDistance + 1);
-        let Sr = rr;
-        for (; xr(Sr) < rr;) Sr++;
-        return Sr
+    var Wd = md(218);
+    const Fd = 32 * md(37652).g,
+      Rd = 6144,
+      Xd = 4608,
+      Kd = 512,
+      hd = function() {
+        const dd = od(Wd.i.maxChunkHorizAddDistance + 1, Wd.i.maxChunkVertAddDistance + 1);
+        let Od = dd;
+        for (; td(Od) < dd;) Od++;
+        return Od
       }();
 
-    function Er(rr) {
-      return Math.floor(Wr * rr / ar)
+    function vd(dd) {
+      return Math.floor(Fd * dd / Rd)
     }
 
-    function pr(rr) {
-      const Sr = xr(rr);
-      let Qr = Zr.i.maxChunkHorizAddDistance,
-        Wr = Zr.i.maxChunkVertAddDistance;
-      if (mr(Qr + 1, Wr + 1) <= Sr) return null;
-      for (; mr(Qr + 1, Wr + 1) > Sr && (Qr > 0 || Wr > 0);) Qr > Wr ? Qr-- : Wr--;
+    function Qd(dd) {
+      const Od = td(dd);
+      let md = Wd.i.maxChunkHorizAddDistance,
+        Fd = Wd.i.maxChunkVertAddDistance;
+      if (od(md + 1, Fd + 1) <= Od) return null;
+      for (; od(md + 1, Fd + 1) > Od && (md > 0 || Fd > 0);) md > Fd ? md-- : Fd--;
       return {
-        horizontal: Qr,
-        vertical: Wr
+        horizontal: md,
+        vertical: Fd
       }
     }
 
-    function xr(rr) {
-      return rr - Math.floor(rr / 6)
+    function td(dd) {
+      return dd - Math.floor(dd / 6)
     }
 
-    function mr(rr, Sr) {
-      const Qr = Math.max(rr, Sr);
-      let Zr = 0;
-      for (let Wr = -Qr; Wr <= Qr; Wr++)
-        for (let ar = -Qr; ar <= Qr; ar++)
-          for (let jr = -Qr; jr <= Qr; jr++) Nr(rr, Sr, Wr, ar, jr) && Zr++;
-      return Zr
+    function od(dd, Od) {
+      const md = Math.max(dd, Od);
+      let Wd = 0;
+      for (let Fd = -md; Fd <= md; Fd++)
+        for (let Rd = -md; Rd <= md; Rd++)
+          for (let Xd = -md; Xd <= md; Xd++) Nd(dd, Od, Fd, Rd, Xd) && Wd++;
+      return Wd
     }
 
-    function Nr(rr, Sr, Qr, Zr, Wr) {
-      const ar = Qr * Qr + Wr * Wr;
-      return rr === Sr ? ar + Zr * Zr <= rr * rr : rr > Sr ? Math.abs(Zr) <= Sr && ar + Zr * Zr <= rr * rr : ar <= rr * rr && ar + Zr * Zr <= Sr * Sr
+    function Nd(dd, Od, md, Wd, Fd) {
+      const Rd = md * md + Fd * Fd;
+      return dd === Od ? Rd + Wd * Wd <= dd * dd : dd > Od ? Math.abs(Wd) <= Od && Rd + Wd * Wd <= dd * dd : Rd <= dd * dd && Rd + Wd * Wd <= Od * Od
     }
   },
-  38006: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Tr,
-      f: () => ir,
-      j: () => Vr,
-      l: () => Ar,
-      o: () => qr,
-      r: () => kr,
-      v: () => Mr
+  38087: (dd, Od, md) => {
+    md.d(Od, {
+      c: () => Jd,
+      e: () => Dd,
+      i: () => jd,
+      j: () => cd,
+      l: () => Ad,
+      o: () => zd,
+      p: () => Ld
     });
-    var Zr = Qr(208),
-      Wr = Qr(109),
-      ar = Qr(139),
-      jr = Qr(317),
-      Ir = Qr(5095),
-      fr = Qr(719),
-      Er = Qr(741),
-      pr = Qr(5104),
-      xr = Qr(5116),
-      mr = Qr(38008),
-      Nr = Qr(38011);
-    const Ur = 1048576,
-      tr = 1024 * Ur,
-      hr = 400 * Ur,
-      zr = 147456,
-      Yr = .5,
-      nr = 2048,
-      er = 1.5 * tr,
-      Kr = 768 * Ur;
+    var Wd = md(218),
+      Fd = md(107),
+      Rd = md(151),
+      Xd = md(333),
+      Kd = md(5038),
+      hd = md(739),
+      vd = md(759),
+      Qd = md(5043),
+      td = md(5055),
+      od = md(38096),
+      Nd = md(38102);
+    const qd = 1048576,
+      Hd = 1024 * qd,
+      yd = 400 * qd,
+      bd = 147456,
+      Td = .5,
+      pd = 2048,
+      Yd = 1.5 * Hd,
+      gd = 768 * qd;
 
-    function yr(rr) {
+    function wd(dd) {
       const {
-        os: Sr,
-        deviceMemory: Qr
-      } = rr;
-      if ("ios" === Sr) switch ((0, jr.f)(rr)) {
+        os: Od,
+        deviceMemory: md
+      } = dd;
+      if ("ios" === Od) switch ((0, Xd.h)(dd)) {
         case "ipad_m":
           return {
-            footprintBytes: Br(mr.d), basis: "ipad-m", namesLimit: !1
+            footprintBytes: Ed(od.c), basis: "ipad-m", namesLimit: !1
           };
         case "ipad":
           return {
-            footprintBytes: Kr, basis: "ipad", namesLimit: !0
+            footprintBytes: gd, basis: "ipad", namesLimit: !0
           };
         case "iphone_6gb":
           return {
-            footprintBytes: er, basis: "iphone-6gb", namesLimit: !0
+            footprintBytes: Yd, basis: "iphone-6gb", namesLimit: !0
           };
         case "iphone":
           return {
-            footprintBytes: Kr, basis: "iphone", namesLimit: !0
+            footprintBytes: gd, basis: "iphone", namesLimit: !0
           }
       }
-      return "number" === typeof Qr && Number.isFinite(Qr) && Qr > 0 ? {
-        footprintBytes: Qr * tr * Yr,
-        basis: `memory-${Qr}`,
+      return "number" === typeof md && Number.isFinite(md) && md > 0 ? {
+        footprintBytes: md * Hd * Td,
+        basis: `memory-${md}`,
         namesLimit: !0
-      } : "android" === Sr ? {
-        footprintBytes: Kr,
+      } : "android" === Od ? {
+        footprintBytes: gd,
         basis: "android",
         namesLimit: !0
       } : {
-        footprintBytes: Br(mr.k),
+        footprintBytes: Ed(od.l),
         basis: "unreported",
         namesLimit: !1
       }
     }
 
-    function Br(rr) {
-      return hr + rr * zr
+    function Ed(dd) {
+      return yd + dd * bd
     }
 
-    function Tr() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Pr(),
-        Sr = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ar.siteUsed;
-      if ("android" !== rr.os || "mobileAndroid" === Sr) return !0;
+    function Jd() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ud(),
+        Od = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Rd.siteUsed;
+      if ("android" !== dd.os || "mobileAndroid" === Od) return !0;
       const {
-        footprintBytes: Qr,
-        basis: Zr
-      } = yr(rr);
-      return "android" === Zr || Qr > 2 * tr
+        footprintBytes: md,
+        basis: Wd
+      } = wd(dd);
+      return "android" === Wd || md > 2 * Hd
     }
 
-    function vr(rr) {
-      const Sr = Math.min(rr, Br(mr.d));
-      return hr + Math.max(0, Sr - hr) / 2
+    function Ud(dd) {
+      const Od = Math.min(dd, Ed(od.c));
+      return yd + Math.max(0, Od - yd) / 2
     }
 
-    function Or(rr, Sr, Qr) {
-      var Wr, ar, jr, Ir;
-      let fr = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    function xd(dd, Od, md) {
+      var Fd, Rd, Xd, Kd;
+      let hd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         {
-          footprintBytes: Er,
-          basis: Nr,
-          namesLimit: Ur
-        } = yr(rr);
-      Qr && (Er = vr(Er), Nr += "+killed", Ur = !0), null !== Sr && Br(Sr) < Er && (Er = Br(Sr), Nr += "+learned", Ur = !0), Nr += (0, xr.G)(null !== (Wr = rr.x32) && void 0 !== Wr ? Wr : null) + (0, pr.j)(null !== (ar = rr.lowRam) && void 0 !== ar ? ar : null), "fix" === rr.x32 && Br(nr) < Er && (Er = Br(nr), Ur = !0), fr && (Er = vr(Er), Nr += "+refused", Ur = !0);
-      const tr = function(rr) {
-          const Sr = Math.floor((rr - hr) / zr);
-          return Math.min(mr.d, Math.max(mr.i, Sr))
-        }(Er),
-        Yr = Ur && tr < mr.d ? Math.min(tr, mr.f) : tr,
-        er = (0, mr.p)(Yr);
+          footprintBytes: vd,
+          basis: Nd,
+          namesLimit: qd
+        } = wd(dd);
+      md && (vd = Ud(vd), Nd += "+killed", qd = !0), null !== Od && Ed(Od) < vd && (vd = Ed(Od), Nd += "+learned", qd = !0), Nd += (0, td.A)(null !== (Fd = dd.x32) && void 0 !== Fd ? Fd : null) + (0, Qd.l)(null !== (Rd = dd.lowRam) && void 0 !== Rd ? Rd : null), "fix" === dd.x32 && Ed(pd) < vd && (vd = Ed(pd), qd = !0), hd && (vd = Ud(vd), Nd += "+refused", qd = !0);
+      const Hd = function(dd) {
+          const Od = Math.floor((dd - yd) / bd);
+          return Math.min(od.c, Math.max(od.j, Od))
+        }(vd),
+        Td = qd && Hd < od.c ? Math.min(Hd, od.g) : Hd,
+        Yd = (0, od.q)(Td);
       return {
-        footprintBytes: Er,
-        shedFootprintBytes: Ur ? Math.max(Er, Br(Yr)) : null,
-        chunkCap: Yr,
-        maxHorizDistance: null !== (jr = null === er || void 0 === er ? void 0 : er.horizontal) && void 0 !== jr ? jr : Zr.i.maxChunkHorizAddDistance,
-        maxVertDistance: null !== (Ir = null === er || void 0 === er ? void 0 : er.vertical) && void 0 !== Ir ? Ir : Zr.i.maxChunkVertAddDistance,
-        basis: Nr
+        footprintBytes: vd,
+        shedFootprintBytes: qd ? Math.max(vd, Ed(Td)) : null,
+        chunkCap: Td,
+        maxHorizDistance: null !== (Xd = null === Yd || void 0 === Yd ? void 0 : Yd.horizontal) && void 0 !== Xd ? Xd : Wd.i.maxChunkHorizAddDistance,
+        maxVertDistance: null !== (Kd = null === Yd || void 0 === Yd ? void 0 : Yd.vertical) && void 0 !== Kd ? Kd : Wd.i.maxChunkVertAddDistance,
+        basis: Nd
       }
     }
-    let Lr = null,
-      lr = null,
-      Xr = null;
+    let Bd = null,
+      Sd = null,
+      sd = null;
 
-    function Pr() {
-      var rr, Sr;
-      return Lr ??= {
-        os: (0, Wr.getOperatingSystem)(),
+    function ud() {
+      var dd, Od;
+      return Bd ??= {
+        os: (0, Fd.getOperatingSystem)(),
         deviceMemory: navigator.deviceMemory,
-        ...(0, jr.g)()
+        ...(0, Xd.k)()
       }, {
-        ...Lr,
-        x32: null !== (rr = (0, xr.C)()) && void 0 !== rr ? rr : void 0,
-        lowRam: null !== (Sr = (0, pr.f)()) && void 0 !== Sr ? Sr : void 0
+        ...Bd,
+        x32: null !== (dd = (0, td.x)()) && void 0 !== dd ? dd : void 0,
+        lowRam: null !== (Od = (0, Qd.i)()) && void 0 !== Od ? Od : void 0
       }
     }
 
-    function Hr() {
-      return Or(Pr(), (0, Ir.f)(), (0, fr.S)("wasm").length > 0, Mr())
+    function Vd() {
+      return xd(ud(), (0, Kd.d)(), (0, hd.V)("wasm").length > 0, Ld())
     }
 
-    function qr() {
-      return Xr ??= (0, Nr.q)(Or(Pr(), null, !1, Mr()).chunkCap), Xr
+    function Ad() {
+      return sd ??= (0, Nd.p)(xd(ud(), null, !1, Ld()).chunkCap), sd
     }
-    const Rr = "wasmMemoryRecord",
-      gr = {
+    const rd = "wasmMemoryRecord",
+      Gd = {
         halvedAt: null,
         reloadSpent: !1
       };
 
-    function Cr() {
-      let rr = null;
+    function nd() {
+      let dd = null;
       try {
-        var Sr;
-        rr = JSON.parse(null !== (Sr = (0, Er.p)((0, Er.x)(), Rr)) && void 0 !== Sr ? Sr : "null")
+        var Od;
+        dd = JSON.parse(null !== (Od = (0, vd.n)((0, vd.u)(), rd)) && void 0 !== Od ? Od : "null")
       } catch {
-        return gr
+        return Gd
       }
-      if ("object" !== typeof rr || null === rr) return gr;
+      if ("object" !== typeof dd || null === dd) return Gd;
       const {
-        halvedAt: Qr,
-        reloadSpent: Zr
-      } = rr;
+        halvedAt: md,
+        reloadSpent: Wd
+      } = dd;
       return {
-        halvedAt: "number" === typeof Qr && Number.isFinite(Qr) ? Qr : null,
-        reloadSpent: !0 === Zr
+        halvedAt: "number" === typeof md && Number.isFinite(md) ? md : null,
+        reloadSpent: !0 === Wd
       }
     }
 
-    function Mr() {
-      return null !== Cr().halvedAt
+    function Ld() {
+      return null !== nd().halvedAt
     }
 
-    function Gr(rr) {
-      const Sr = (0, Er.x)(),
-        Qr = JSON.stringify(rr);
+    function Pd(dd) {
+      const Od = (0, vd.u)(),
+        md = JSON.stringify(dd);
       try {
-        null === Sr || void 0 === Sr || Sr.setItem(Rr, Qr)
+        null === Od || void 0 === Od || Od.setItem(rd, md)
       } catch {
         return !1
       }
-      return (0, Er.p)(Sr, Rr) === Qr
+      return (0, vd.n)(Od, rd) === md
     }
 
-    function kr() {
-      let rr = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now(),
-        Sr = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const Qr = Cr();
-      return null === Qr.halvedAt ? Gr({
-        halvedAt: rr,
-        reloadSpent: Sr
-      }) ? (Xr = null, lr = null, "halve") : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: no further step"), "spent") : Qr.reloadSpent ? "spent" : Gr({
-        ...Qr,
+    function zd() {
+      let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now(),
+        Od = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      const md = nd();
+      return null === md.halvedAt ? Pd({
+        halvedAt: dd,
+        reloadSpent: Od
+      }) ? (sd = null, Sd = null, "halve") : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: no further step"), "spent") : md.reloadSpent ? "spent" : Pd({
+        ...md,
         reloadSpent: !0
       }) ? "reload" : (console.warn("[bloxd-wasm-client] the tab's memory record wouldn't keep: no further step"), "spent")
     }
 
-    function Ar() {
-      return lr ??= Hr(), lr
+    function cd() {
+      return Sd ??= Vd(), Sd
     }
 
-    function Vr() {
-      var rr;
-      return (null !== (rr = lr) && void 0 !== rr ? rr : Hr()).basis
+    function jd() {
+      var dd;
+      return (null !== (dd = Sd) && void 0 !== dd ? dd : Vd()).basis
     }
 
-    function ir(rr, Sr) {
-      return rr.setChunkCap(Sr.chunkCap)
+    function Dd(dd, Od) {
+      return dd.setChunkCap(Od.chunkCap)
     }
   },
-  38011: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => Or,
-      i: () => Kr,
-      m: () => xr,
-      n: () => yr,
-      q: () => Yr,
-      r: () => Tr,
-      x: () => vr,
-      y: () => mr
+  38102: (dd, Od, md) => {
+    md.d(Od, {
+      B: () => Ud,
+      E: () => od,
+      d: () => xd,
+      i: () => gd,
+      k: () => td,
+      l: () => wd,
+      p: () => Td,
+      t: () => Jd
     });
-    var Zr = Qr(37522),
-      Wr = Qr(38008);
-    const ar = 64 * Zr.e,
-      jr = 40 * Zr.f,
-      Ir = 36 * Zr.f,
-      fr = 20 * Zr.f,
-      Er = 2 * Zr.f,
-      pr = 5 * Zr.f;
+    var Wd = md(37652),
+      Fd = md(38096);
+    const Rd = 64 * Wd.e,
+      Xd = 40 * Wd.g,
+      Kd = 36 * Wd.g,
+      hd = 20 * Wd.g,
+      vd = 2 * Wd.g,
+      Qd = 5 * Wd.g;
 
-    function xr(rr) {
-      return "footprint" !== rr && "gcPressure" !== rr
+    function td(dd) {
+      return "footprint" !== dd && "gcPressure" !== dd
     }
 
-    function mr(rr) {
-      return xr(rr) ? "wasm memory was refused" : "gcPressure" === rr ? "the page's full GCs ran high" : "the tab's footprint reached its budget"
+    function od(dd) {
+      return td(dd) ? "wasm memory was refused" : "gcPressure" === dd ? "the page's full GCs ran high" : "the tab's footprint reached its budget"
     }
-    const Nr = 2 * Zr.f,
-      Ur = 4 * Zr.f,
-      tr = 35 * Zr.f + Nr + Ur,
-      hr = 6.5 * Zr.f,
-      zr = 132.5 * Zr.e;
+    const Nd = 2 * Wd.g,
+      qd = 4 * Wd.g,
+      Hd = 35 * Wd.g + Nd + qd,
+      yd = 6.5 * Wd.g,
+      bd = 132.5 * Wd.e;
 
-    function Yr(rr) {
-      const Sr = hr + (0, Wr.m)(rr) + rr * zr;
-      return Math.ceil((2 * tr + Sr) / ar) * ar
+    function Td(dd) {
+      const Od = yd + (0, Fd.o)(dd) + dd * bd;
+      return Math.ceil((2 * Hd + Od) / Rd) * Rd
     }
-    Yr(Wr.d), Zr.f, Zr.f, Zr.f;
-    const nr = {
-        targetBytes: jr,
-        leastBytes: fr
+    Td(Fd.c), Wd.g, Wd.g, Wd.g;
+    const pd = {
+        targetBytes: Xd,
+        leastBytes: hd
       },
-      er = {
-        targetBytes: Ir,
-        leastBytes: fr
+      Yd = {
+        targetBytes: Kd,
+        leastBytes: hd
       };
 
-    function Kr(rr) {
+    function gd(dd) {
       return {
-        targetBytes: rr,
+        targetBytes: dd,
         leastBytes: 0
       }
     }
 
-    function yr(rr) {
-      return rr >= Wr.d ? nr : er
+    function wd(dd) {
+      return dd >= Fd.c ? pd : Yd
     }
-    const Br = 2 * ar;
+    const Ed = 2 * Rd;
 
-    function Tr(rr, Sr, Qr) {
-      return rr + Sr + Br > Qr
+    function Jd(dd, Od, md) {
+      return dd + Od + Ed > md
     }
-    const vr = {
+    const Ud = {
       now: () => performance.now(),
-      requestIdle: "function" === typeof requestIdleCallback ? rr => {
-        requestIdleCallback(rr)
+      requestIdle: "function" === typeof requestIdleCallback ? dd => {
+        requestIdleCallback(dd)
       } : null
     };
-    class Or {
-      constructor(rr, Sr, Qr) {
-        let Zr = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vr;
-        this.memory = rr, this.readPeakStoredChunks = Sr, this.onError = Qr, this.clock = Zr, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.gcSheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
+    class xd {
+      constructor(dd, Od, md) {
+        let Wd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ud;
+        this.memory = dd, this.readPeakStoredChunks = Od, this.onError = md, this.clock = Wd, this.pendingSince = null, this.stepsRefused = !1, this.stepsHeldUntil = null, this.shedding = null, this.sheds = 0, this.gcSheds = 0, this.shedCap = null, this.stopped = !1, this.statsAt = -1 / 0, this.main = null, this.peakStoredChunks = 0, this.workers = new Map, this.replacedRefusals = {
           reserves: 0,
           allocations: 0
         }, this.joinReserveTaken = null, this.ceilingBytes = null, this.ballastCheckAt = -1 / 0, this.ballastPeakBytes = 0, this.distanceInUse = null, this.footprint = null, this.gcPressure = null
       }
-      setShed(rr, Sr, Qr) {
+      setShed(dd, Od, md) {
         this.shedding = {
-          shed: rr,
-          jx: Sr,
-          readDistanceInUse: Qr
+          shed: dd,
+          Wt: Od,
+          readDistanceInUse: md
         }
       }
       shedDistanceInUse() {
         return this.distanceInUse
       }
-      setFootprint(rr) {
-        this.footprint = rr
+      setFootprint(dd) {
+        this.footprint = dd
       }
-      setGcPressure(rr) {
+      setGcPressure(dd) {
         this.gcPressure = {
-          highEpisode: rr,
+          highEpisode: dd,
           shedEpisode: null,
           nextAt: null
         }
       }
-      setCeiling(rr) {
-        this.ceilingBytes = rr, this.call((() => {
-          this.memory.setCeiling(rr)
+      setCeiling(dd) {
+        this.ceilingBytes = dd, this.call((() => {
+          this.memory.setCeiling(dd)
         }), void 0)
       }
-      ceilingMayRefuse(rr, Sr) {
-        var Qr;
-        return Tr(this.memory.memoryBytes(), rr, null !== (Qr = this.ceilingBytes) && void 0 !== Qr ? Qr : Sr)
+      ceilingMayRefuse(dd, Od) {
+        var md;
+        return Jd(this.memory.memoryBytes(), dd, null !== (md = this.ceilingBytes) && void 0 !== md ? md : Od)
       }
-      reserveAtJoin(rr) {
+      reserveAtJoin(dd) {
         let {
-          targetBytes: Sr,
-          leastBytes: Qr
-        } = rr;
-        const Zr = this.memory.memoryBytes(),
-          Wr = Zr + Qr,
-          ar = Math.max(Sr + (this.ballastOn() ? pr : 0), Wr),
-          jr = this.call((() => this.memory.reserveUpFront(ar) ? "target" : ar > Wr && this.memory.reserveUpFront(Wr) ? "least" : "none"), "none");
+          targetBytes: Od,
+          leastBytes: md
+        } = dd;
+        const Wd = this.memory.memoryBytes(),
+          Fd = Wd + md,
+          Rd = Math.max(Od + (this.ballastOn() ? Qd : 0), Fd),
+          Xd = this.call((() => this.memory.reserveUpFront(Rd) ? "target" : Rd > Fd && this.memory.reserveUpFront(Fd) ? "least" : "none"), "none");
         if (this.stopped) return !1;
-        if ("target" !== jr) {
-          const rr = "least" === jr ? `took ${Wr} bytes instead` : "frames grow it in steps";
-          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${ar} bytes was refused at ${Zr} bytes; ${rr}`)
+        if ("target" !== Xd) {
+          const dd = "least" === Xd ? `took ${Fd} bytes instead` : "frames grow it in steps";
+          console.warn(`[bloxd-wasm-client] wasm memory: the join's reserve to ${Rd} bytes was refused at ${Wd} bytes; ${dd}`)
         }
-        return this.joinReserveTaken = jr, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== jr && this.shedFor("joinReserve"), "none" !== jr
+        return this.joinReserveTaken = Xd, this.takePressure(), this.takeBallast(this.clock.now()), this.refreshStats(), "target" !== Xd && this.shedFor("joinReserve"), "none" !== Xd
       }
       afterFrame() {
         if (this.stopped) return;
-        const rr = this.clock.now(),
-          Sr = null !== this.stepsHeldUntil && rr >= this.stepsHeldUntil;
-        if (Sr && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
-        if (null === this.stepsHeldUntil && rr >= this.ballastCheckAt && (this.takeBallast(rr), this.stopped)) return;
-        const Qr = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
-          Zr = Sr && "now" === Qr ? "none" : Qr,
+        const dd = this.clock.now(),
+          Od = null !== this.stepsHeldUntil && dd >= this.stepsHeldUntil;
+        if (Od && (this.stepsHeldUntil = null), this.takePressure() && null === this.stepsHeldUntil && !this.stepsRefused && this.shedFor("allocation"), this.stopped) return;
+        if (null === this.stepsHeldUntil && dd >= this.ballastCheckAt && (this.takeBallast(dd), this.stopped)) return;
+        const md = this.stepsRefused || null !== this.stepsHeldUntil ? "none" : this.call((() => this.memory.lowWater()), "none"),
+          Wd = Od && "now" === md ? "none" : md,
           {
-            requestIdle: Wr
+            requestIdle: Fd
           } = this.clock;
-        "now" === Zr || null !== this.pendingSince && rr - this.pendingSince >= 500 ? this.step() : "idle" === Zr && null === this.pendingSince && (null === Wr ? this.step() : (this.pendingSince = rr, Wr((() => {
+        "now" === Wd || null !== this.pendingSince && dd - this.pendingSince >= 500 ? this.step() : "idle" === Wd && null === this.pendingSince && (null === Fd ? this.step() : (this.pendingSince = dd, Fd((() => {
           null !== this.pendingSince && this.step()
-        })))), rr - this.statsAt >= 1e3 && (this.statsAt = rr, this.refreshStats(), this.checkFootprint(), this.checkGcPressure(rr))
+        })))), dd - this.statsAt >= 1e3 && (this.statsAt = dd, this.refreshStats(), this.checkFootprint(), this.checkGcPressure(dd))
       }
       refreshStats() {
         this.call((() => {
-          var rr, Sr;
-          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (Sr = this.shedding.readDistanceInUse()) && void 0 !== Sr ? Sr : this.distanceInUse);
-          null === (rr = this.footprint) || void 0 === rr || rr.read(this.memory.memoryBytes() + this.workersMemoryBytes())
+          var dd, Od;
+          (this.main = this.memory.stats(), this.peakStoredChunks = this.readPeakStoredChunks(), this.sheds > 0 && null !== this.shedding) && (this.distanceInUse = null !== (Od = this.shedding.readDistanceInUse()) && void 0 !== Od ? Od : this.distanceInUse);
+          null === (dd = this.footprint) || void 0 === dd || dd.read(this.memory.memoryBytes() + this.workersMemoryBytes())
         }), void 0)
       }
       stop() {
         this.stopped = !0, this.pendingSince = null
       }
-      noteMeshWorker(rr, Sr) {
-        this.noteWorker(`Mesh${rr}`, Sr)
+      noteMeshWorker(dd, Od) {
+        this.noteWorker(`Mesh${dd}`, Od)
       }
-      meshWorkerGone(rr) {
-        this.workerGone(`Mesh${rr}`)
+      meshWorkerGone(dd) {
+        this.workerGone(`Mesh${dd}`)
       }
-      noteWorldgen(rr) {
-        this.noteWorker("Worldgen", rr)
+      noteWorldgen(dd) {
+        this.noteWorker("Worldgen", dd)
       }
       worldgenGone() {
         this.workerGone("Worldgen")
       }
-      noteWorker(rr, Sr) {
-        const Qr = this.workers.get(rr);
-        null !== Qr && void 0 !== Qr && Qr.gone && (this.replacedRefusals.reserves += Qr.stats.reservesRefused, this.replacedRefusals.allocations += Qr.stats.allocationsRefused), this.workers.set(rr, {
-          stats: Sr,
+      noteWorker(dd, Od) {
+        const md = this.workers.get(dd);
+        null !== md && void 0 !== md && md.gone && (this.replacedRefusals.reserves += md.stats.reservesRefused, this.replacedRefusals.allocations += md.stats.allocationsRefused), this.workers.set(dd, {
+          stats: Od,
           gone: !1
         })
       }
-      workerGone(rr) {
-        const Sr = this.workers.get(rr);
-        Sr && (Sr.gone = !0)
+      workerGone(dd) {
+        const Od = this.workers.get(dd);
+        Od && (Od.gone = !0)
       }
       details() {
-        var rr, Sr;
-        const Qr = this.memory.memoryBytes(),
-          Wr = {
-            wasmMemoryNow: `${(0,Zr.m)(Qr)} MiB`,
-            wasmMemoryMiB: String(Math.floor(Qr / Zr.f))
+        var dd, Od;
+        const md = this.memory.memoryBytes(),
+          Fd = {
+            wasmMemoryNow: `${(0,Wd.k)(md)} MiB`,
+            wasmMemoryMiB: String(Math.floor(md / Wd.g))
           };
-        null !== this.joinReserveTaken && (Wr.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (Wr.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
-        const ar = this.main;
-        if (ar) {
-          Wr.wasmMemoryMain = Lr(ar);
-          const rr = Math.max(0, ar.peakLiveBytes - this.ballastPeakBytes),
-            Sr = 0 === this.peakStoredChunks ? "-" : (rr / this.peakStoredChunks / Zr.e).toFixed(1);
-          Wr.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${Sr} KiB`
+        null !== this.joinReserveTaken && (Fd.wasmMemoryJoinReserve = this.joinReserveTaken), this.sheds > 0 && (Fd.wasmMemoryShed = `${this.sheds}, chunk cap ${this.shedCap}`);
+        const Rd = this.main;
+        if (Rd) {
+          Fd.wasmMemoryMain = Bd(Rd);
+          const dd = Math.max(0, Rd.peakLiveBytes - this.ballastPeakBytes),
+            Od = 0 === this.peakStoredChunks ? "-" : (dd / this.peakStoredChunks / Wd.e).toFixed(1);
+          Fd.wasmMemoryChunks = `peak stored ${this.peakStoredChunks}, peak live per stored chunk ${Od} KiB`
         }
-        for (const [Zr, {
-            stats: Ir,
-            gone: fr
-          }] of this.workers) Wr[`wasmMemory${Zr}`] = Lr(Ir) + (fr ? " (gone)" : "");
-        const jr = null !== (rr = null === (Sr = this.footprint) || void 0 === Sr ? void 0 : Sr.describe()) && void 0 !== rr ? rr : null;
-        return null !== jr && (Wr.wasmMemoryFootprint = jr), Wr
+        for (const [Wd, {
+            stats: Kd,
+            gone: hd
+          }] of this.workers) Fd[`wasmMemory${Wd}`] = Bd(Kd) + (hd ? " (gone)" : "");
+        const Xd = null !== (dd = null === (Od = this.footprint) || void 0 === Od ? void 0 : Od.describe()) && void 0 !== dd ? dd : null;
+        return null !== Xd && (Fd.wasmMemoryFootprint = Xd), Fd
       }
       pageKillSnapshot() {
-        var rr, Sr, Qr, Wr, ar;
-        let jr = (null !== (rr = null === (Sr = this.main) || void 0 === Sr ? void 0 : Sr.reservesRefused) && void 0 !== rr ? rr : 0) + this.replacedRefusals.reserves,
-          Ir = (null !== (Qr = null === (Wr = this.main) || void 0 === Wr ? void 0 : Wr.allocationsRefused) && void 0 !== Qr ? Qr : 0) + this.replacedRefusals.allocations;
+        var dd, Od, md, Fd, Rd;
+        let Xd = (null !== (dd = null === (Od = this.main) || void 0 === Od ? void 0 : Od.reservesRefused) && void 0 !== dd ? dd : 0) + this.replacedRefusals.reserves,
+          Kd = (null !== (md = null === (Fd = this.main) || void 0 === Fd ? void 0 : Fd.allocationsRefused) && void 0 !== md ? md : 0) + this.replacedRefusals.allocations;
         for (const {
-            stats: Zr
+            stats: Wd
           }
-          of this.workers.values()) jr += Zr.reservesRefused, Ir += Zr.allocationsRefused;
+          of this.workers.values()) Xd += Wd.reservesRefused, Kd += Wd.allocationsRefused;
         return {
-          wasmMainMiB: Number((0, Zr.m)(this.memory.memoryBytes())),
-          wasmWorkersMiB: Number((0, Zr.m)(this.workersMemoryBytes())),
+          wasmMainMiB: Number((0, Wd.k)(this.memory.memoryBytes())),
+          wasmWorkersMiB: Number((0, Wd.k)(this.workersMemoryBytes())),
           peakStoredChunks: this.peakStoredChunks,
-          refusedReserves: jr,
-          refusedAllocations: Ir,
+          refusedReserves: Xd,
+          refusedAllocations: Kd,
           sheds: this.sheds,
-          ...null === (ar = this.footprint) || void 0 === ar ? void 0 : ar.snapshot()
+          ...null === (Rd = this.footprint) || void 0 === Rd ? void 0 : Rd.snapshot()
         }
       }
       workersMemoryBytes() {
-        let rr = 0;
+        let dd = 0;
         for (const {
-            stats: Sr,
-            gone: Qr
+            stats: Od,
+            gone: md
           }
-          of this.workers.values()) rr += Qr ? 0 : Sr.memoryBytes;
-        return rr
+          of this.workers.values()) dd += md ? 0 : Od.memoryBytes;
+        return dd
       }
       checkFootprint() {
         null === this.footprint || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil || this.footprint.takeShed() && this.shedFor("footprint")
       }
-      checkGcPressure(rr) {
-        const Sr = this.gcPressure;
-        if (null === Sr) return;
-        if (null !== Sr.nextAt || "undefined" !== typeof document && document.hidden || (Sr.nextAt = rr + 6e4), null === Sr.nextAt || rr < Sr.nextAt) return;
+      checkGcPressure(dd) {
+        const Od = this.gcPressure;
+        if (null === Od) return;
+        if (null !== Od.nextAt || "undefined" !== typeof document && document.hidden || (Od.nextAt = dd + 6e4), null === Od.nextAt || dd < Od.nextAt) return;
         if (this.stopped || null === this.shedding || this.stepsRefused || null !== this.stepsHeldUntil) return;
-        const Qr = Sr.highEpisode();
-        null !== Qr && Qr !== Sr.shedEpisode && (Sr.shedEpisode = Qr, Sr.nextAt = rr + 3e4, this.shedFor("gcPressure"))
+        const md = Od.highEpisode();
+        null !== md && md !== Od.shedEpisode && (Od.shedEpisode = md, Od.nextAt = dd + 3e4, this.shedFor("gcPressure"))
       }
       step() {
-        this.pendingSince = null, this.call((() => this.memory.reserveAhead(Er)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
+        this.pendingSince = null, this.call((() => this.memory.reserveAhead(vd)), !0) || (null === this.shedding ? this.stopSteps("a step ahead was refused (the ceiling, or the browser)") : this.shedFor("step"))
       }
       ballastOn() {
         return null !== this.shedding
       }
-      takeBallast(rr) {
+      takeBallast(dd) {
         if (!this.ballastOn() || null === this.joinReserveTaken) return;
-        this.ballastCheckAt = rr + 1e3;
-        const Sr = this.call((() => this.memory.takeBallast()), 0);
-        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, Sr)
+        this.ballastCheckAt = dd + 1e3;
+        const Od = this.call((() => this.memory.takeBallast()), 0);
+        this.ballastPeakBytes = Math.max(this.ballastPeakBytes, Od)
       }
       takePressure() {
         return this.ballastOn() && this.call((() => this.memory.takePressure()), !1)
       }
-      stopSteps(rr) {
-        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${rr}: frames grow on demand from here`)
+      stopSteps(dd) {
+        this.stepsRefused = !0, console.warn(`[bloxd-wasm-client] wasm memory: ${dd}: frames grow on demand from here`)
       }
-      shedFor(rr) {
+      shedFor(dd) {
         const {
-          shedding: Sr
+          shedding: Od
         } = this;
-        if (null === Sr) return;
+        if (null === Od) return;
         this.pendingSince = null;
-        const Qr = this.call((() => Sr.shed(rr)), null);
+        const md = this.call((() => Od.shed(dd)), null);
         if (this.stopped) return;
-        if (null === Qr) return void(xr(rr) && this.stopSteps("nothing is left to shed"));
-        this.sheds++, this.shedCap = Qr, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats();
-        const Zr = "gcPressure" === rr ? ++this.gcSheds : this.sheds - this.gcSheds;
-        Sr.jx(rr, Zr, this.details())
+        if (null === md) return void(td(dd) && this.stopSteps("nothing is left to shed"));
+        this.sheds++, this.shedCap = md, this.stepsHeldUntil = this.clock.now() + 5e3, this.refreshStats();
+        const Wd = "gcPressure" === dd ? ++this.gcSheds : this.sheds - this.gcSheds;
+        Od.Wt(dd, Wd, this.details())
       }
-      call(rr, Sr) {
-        if (this.stopped) return Sr;
+      call(dd, Od) {
+        if (this.stopped) return Od;
         try {
-          return rr()
-        } catch (Qr) {
-          return this.stop(), this.onError(Qr), Sr
+          return dd()
+        } catch (md) {
+          return this.stop(), this.onError(md), Od
         }
       }
     }
 
-    function Lr(rr) {
-      const Sr = (rr, Sr) => `${rr}/${(0,Zr.m)(Sr)}`;
-      return `memory ${(0,Zr.m)(rr.memoryBytes)} live ${(0,Zr.m)(rr.liveBytes)} peak ${(0,Zr.m)(rr.peakLiveBytes)} unused ${(0,Zr.m)(rr.unusedBytes)} ceiling ${(0,Zr.m)(rr.ceilingBytes)} MiB; grows upFront ${Sr(rr.grows.upFront,rr.grownBytes.upFront)} ahead ${Sr(rr.grows.ahead,rr.grownBytes.ahead)} inFrame ${Sr(rr.grows.onDemandInFrame,rr.grownBytes.onDemandInFrame)} other ${Sr(rr.grows.onDemand,rr.grownBytes.onDemand)}; refused reserves ${rr.reservesRefused} allocations ${rr.allocationsRefused}`
+    function Bd(dd) {
+      const Od = (dd, Od) => `${dd}/${(0,Wd.k)(Od)}`;
+      return `memory ${(0,Wd.k)(dd.memoryBytes)} live ${(0,Wd.k)(dd.liveBytes)} peak ${(0,Wd.k)(dd.peakLiveBytes)} unused ${(0,Wd.k)(dd.unusedBytes)} ceiling ${(0,Wd.k)(dd.ceilingBytes)} MiB; grows upFront ${Od(dd.grows.upFront,dd.grownBytes.upFront)} ahead ${Od(dd.grows.ahead,dd.grownBytes.ahead)} inFrame ${Od(dd.grows.onDemandInFrame,dd.grownBytes.onDemandInFrame)} other ${Od(dd.grows.onDemand,dd.grownBytes.onDemand)}; refused reserves ${dd.reservesRefused} allocations ${dd.allocationsRefused}`
     }
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

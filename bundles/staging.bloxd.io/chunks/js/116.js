@@ -1,117 +1,117 @@
 export const id = 116;
 export const ids = [116];
 export const modules = {
-  5731: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      e: () => mr
+  5691: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => od
     });
-    var Zr = Qr(1155),
-      Wr = Qr.n(Zr),
-      ar = Qr(1448),
-      jr = Qr(1444),
-      Ir = Qr(4759),
-      fr = Qr(139),
-      Er = Qr(4791),
-      pr = Qr(4777),
-      xr = Qr(1338);
+    var Wd = md(1155),
+      Fd = md.n(Wd),
+      Rd = md(1443),
+      Xd = md(1436),
+      Kd = md(4734),
+      hd = md(151),
+      vd = md(4776),
+      Qd = md(4767),
+      td = md(1341);
 
-    function mr(rr) {
+    function od(dd) {
       let {
-        game: Sr
-      } = rr;
-      const Qr = (0, fr.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        Zr = (0, Er.g)(Sr, Qr),
-        mr = (0, Ir.f)(Zr),
-        Nr = void 0 !== mr.blurhash;
-      return (0, xr.jsxs)("div", {
+        game: Od
+      } = dd;
+      const md = (0, hd.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        Wd = (0, vd.i)(Od, md),
+        od = (0, Kd.g)(Wd),
+        Nd = void 0 !== od.blurhash;
+      return (0, td.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [mr.isLoading && !Nr && (0, xr.jsx)(jr.c, {
+        children: [od.isLoading && !Nd && (0, td.jsx)(Xd.c, {
           loaderType: "Secondary"
-        }), !mr.failed && (null !== mr.src || Nr) && (0, xr.jsx)("div", {
-          className: Wr()("SchematicImage", pr.j, {
-            SchematicImageFadeIn: mr.fadeIn && !Nr
+        }), !od.failed && (null !== od.src || Nd) && (0, td.jsx)("div", {
+          className: Fd()("SchematicImage", Qd.j, {
+            SchematicImageFadeIn: od.fadeIn && !Nd
           }),
-          style: (0, pr.g)(mr),
-          children: (0, xr.jsx)(pr.c, {
-            image: mr
+          style: (0, Qd.g)(od),
+          children: (0, td.jsx)(Qd.e, {
+            image: od
           })
-        }), mr.failed && (0, xr.jsx)("div", {
+        }), od.failed && (0, td.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, xr.jsx)(ar.c, {
+          children: (0, td.jsx)(Rd.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5722: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => vr
+  5680: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => Ud
     });
-    Qr(5726);
-    var Zr = Qr(72),
-      Wr = Qr(1155),
-      ar = Qr.n(Wr),
-      jr = Qr(360),
-      Ir = Qr(1133),
-      fr = Qr(1279),
-      Er = Qr(1251),
-      pr = Qr(1181),
-      xr = Qr(1629),
-      mr = Qr(5731),
-      Nr = Qr(1576),
-      Ur = Qr(5736),
-      tr = Qr(1444),
-      hr = Qr(1644),
-      zr = Qr(5387),
-      Yr = Qr(1448),
-      nr = Qr(1121),
-      er = Qr(3549),
-      Kr = Qr(5738),
-      yr = Qr(1671),
-      Br = Qr(1338);
+    md(5687);
+    var Wd = md(66),
+      Fd = md(1155),
+      Rd = md.n(Fd),
+      Xd = md(387),
+      Kd = md(1135),
+      hd = md(1286),
+      vd = md(1238),
+      Qd = md(1186),
+      td = md(1627),
+      od = md(5691),
+      Nd = md(1572),
+      qd = md(5693),
+      Hd = md(1436),
+      yd = md(1641),
+      bd = md(5296),
+      Td = md(1443),
+      pd = md(1113),
+      Yd = md(3544),
+      gd = md(5700),
+      wd = md(1666),
+      Ed = md(1341);
 
-    function Tr() {
+    function Jd() {
       const {
-        t: rr
-      } = (0, Er.E)(), Sr = (0, hr.useNavigatePreserveSearch)(), Qr = (0, er.r)(), Wr = (0, Zr.useMemo)((() => [...nr.d].sort(((Sr, Zr) => {
-        var Wr, ar;
-        const jr = (null !== (Wr = (0, er.e)(Zr, Qr)) && void 0 !== Wr ? Wr : 0) - (null !== (ar = (0, er.e)(Sr, Qr)) && void 0 !== ar ? ar : 0);
-        return 0 !== jr ? jr : (0, yr.o)(Sr, rr).localeCompare((0, yr.o)(Zr, rr))
-      }))), [Qr, rr]);
-      return (0, Br.jsxs)(Br.Fragment, {
-        children: [(0, Br.jsx)("div", {
+        t: dd
+      } = (0, vd.G)(), Od = (0, yd.useNavigatePreserveSearch)(), md = (0, Yd.n)(), Fd = (0, Wd.useMemo)((() => [...pd.d].sort(((Od, Wd) => {
+        var Fd, Rd;
+        const Xd = (null !== (Fd = (0, Yd.e)(Wd, md)) && void 0 !== Fd ? Fd : 0) - (null !== (Rd = (0, Yd.e)(Od, md)) && void 0 !== Rd ? Rd : 0);
+        return 0 !== Xd ? Xd : (0, wd.o)(Od, dd).localeCompare((0, wd.o)(Wd, dd))
+      }))), [md, dd]);
+      return (0, Ed.jsxs)(Ed.Fragment, {
+        children: [(0, Ed.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, Br.jsx)("h1", {
+          children: (0, Ed.jsx)("h1", {
             className: "StudioPageTitle",
-            children: rr("studio:firstPartyGames")
+            children: dd("studio:firstPartyGames")
           })
-        }), (0, Br.jsx)(Ur.b, {
+        }), (0, Ed.jsx)(qd.e, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: rr("general:game")
+            header: dd("general:game")
           }, {
             key: "ccu",
-            header: rr("studio:metricCcu")
+            header: dd("studio:metricCcu")
           }],
-          rows: Wr,
-          getRowKey: rr => rr,
-          renderRow: Zr => {
-            var Wr;
-            return (0, Br.jsxs)("tr", {
+          rows: Fd,
+          getRowKey: dd => dd,
+          renderRow: Wd => {
+            var Fd;
+            return (0, Ed.jsxs)("tr", {
               onClick: () => {
-                Sr((0, yr.r)((0, Ir.d)(Zr, !0)))
+                Od((0, wd.q)((0, Kd.h)(Wd, !0)))
               },
-              children: [(0, Br.jsx)("td", {
-                children: (0, Br.jsx)(Kr.e, {
-                  thumbnail: (0, Br.jsx)(Kr.d, {
-                    game: Zr
+              children: [(0, Ed.jsx)("td", {
+                children: (0, Ed.jsx)(gd.c, {
+                  thumbnail: (0, Ed.jsx)(gd.b, {
+                    game: Wd
                   }),
-                  name: (0, yr.o)(Zr, rr)
+                  name: (0, wd.o)(Wd, dd)
                 })
-              }), (0, Br.jsx)("td", {
-                children: (0, fr.S)(null !== (Wr = (0, er.e)(Zr, Qr)) && void 0 !== Wr ? Wr : 0)
+              }), (0, Ed.jsx)("td", {
+                children: (0, hd.M)(null !== (Fd = (0, Yd.e)(Wd, md)) && void 0 !== Fd ? Fd : 0)
               })]
             })
           }
@@ -119,18 +119,18 @@ export const modules = {
       })
     }
 
-    function vr() {
+    function Ud() {
       const {
-        t: rr
-      } = (0, Er.E)(), Sr = (0, hr.useNavigatePreserveSearch)(), {
-        userContext: Qr,
-        isUserContextUpdating: Wr
-      } = (0, pr.c)(), {
-        isCreating: nr,
-        create: er
-      } = (0, zr.f)(), [vr, Or] = (0, Zr.useState)(null), [Lr, lr] = (0, Zr.useState)(null), [Xr, Pr] = (0, Zr.useState)(!1);
-      (0, Zr.useEffect)((() => {
-        Wr || (Pr(!1), xr.c.getPublishedGamePreviews(Qr, {
+        t: dd
+      } = (0, vd.G)(), Od = (0, yd.useNavigatePreserveSearch)(), {
+        userContext: md,
+        isUserContextUpdating: Fd
+      } = (0, Qd.d)(), {
+        isCreating: pd,
+        create: Yd
+      } = (0, bd.h)(), [Ud, xd] = (0, Wd.useState)(null), [Bd, Sd] = (0, Wd.useState)(null), [sd, ud] = (0, Wd.useState)(!1);
+      (0, Wd.useEffect)((() => {
+        Fd || (ud(!1), td.e.getPublishedGamePreviews(md, {
           searchQuery: null,
           pageNumber: 1,
           pageSize: 50,
@@ -140,168 +140,168 @@ export const modules = {
           schematicIdsToExclude: [],
           gameCategories: [],
           upAndComing: !1
-        }).then((rr => {
-          Or({
-            ...rr,
-            results: (0, jr.fb)(rr.results)
+        }).then((dd => {
+          xd({
+            ...dd,
+            results: (0, Xd.cb)(dd.results)
           })
-        })).catch((rr => {
-          console.error("Failed to get owned published games", rr), Pr(!0)
-        })), xr.c.getOwnedUnpublishedGames(Qr).then((rr => {
-          lr(rr)
-        })).catch((rr => {
-          console.error("Failed to get owned unpublished games", rr), Pr(!0)
+        })).catch((dd => {
+          console.error("Failed to get owned published games", dd), ud(!0)
+        })), td.e.getOwnedUnpublishedGames(md).then((dd => {
+          Sd(dd)
+        })).catch((dd => {
+          console.error("Failed to get owned unpublished games", dd), ud(!0)
         })))
-      }), [Wr, Qr]);
-      const Hr = null !== vr && null !== Lr ? [...vr.results, ...Lr] : [],
-        qr = !Xr && (null === vr || null === Lr),
-        Rr = !qr && !Xr && 0 === Hr.length,
-        gr = !Wr && Qr.playerHasRank("developer");
-      return (0, Br.jsxs)("div", {
+      }), [Fd, md]);
+      const Vd = null !== Ud && null !== Bd ? [...Ud.results, ...Bd] : [],
+        Ad = !sd && (null === Ud || null === Bd),
+        rd = !Ad && !sd && 0 === Vd.length,
+        Gd = !Fd && md.playerHasRank("developer");
+      return (0, Ed.jsxs)("div", {
         className: "StudioPage StudioGameList",
-        children: [(0, Br.jsxs)("div", {
+        children: [(0, Ed.jsxs)("div", {
           className: "StudioPageHeader",
-          children: [(0, Br.jsx)("h1", {
+          children: [(0, Ed.jsx)("h1", {
             className: "StudioPageTitle",
-            children: rr("studio:myGames")
-          }), (0, Br.jsxs)(Nr.p, {
-            onClick: er,
-            loading: nr,
-            children: [(0, Br.jsx)(Yr.c, {
+            children: dd("studio:myGames")
+          }), (0, Ed.jsxs)(Nd.m, {
+            onClick: Yd,
+            loading: pd,
+            children: [(0, Ed.jsx)(Td.c, {
               name: "plus"
-            }), " ", rr("homePage:createCustomGame")]
+            }), " ", dd("homePage:createCustomGame")]
           })]
-        }), qr && (0, Br.jsx)("div", {
+        }), Ad && (0, Ed.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, Br.jsx)(tr.c, {})
-        }), Xr && (0, Br.jsx)("div", {
+          children: (0, Ed.jsx)(Hd.c, {})
+        }), sd && (0, Ed.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: rr("studio:failedToLoadGames")
-        }), Rr && (0, Br.jsx)("div", {
+          children: dd("studio:failedToLoadGames")
+        }), rd && (0, Ed.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: rr("studio:noGamesYet")
-        }), !qr && !Xr && !Rr && (0, Br.jsx)(Ur.b, {
+          children: dd("studio:noGamesYet")
+        }), !Ad && !sd && !rd && (0, Ed.jsx)(qd.e, {
           className: "StudioTable AnimFadeIn",
           columns: [{
             key: "game",
-            header: rr("general:game")
+            header: dd("general:game")
           }, {
             key: "status",
-            header: rr("general:status")
+            header: dd("general:status")
           }, {
             key: "ccu",
-            header: rr("studio:metricCcu")
+            header: dd("studio:metricCcu")
           }, {
             key: "favourites",
-            header: rr("general:favourites")
+            header: dd("general:favourites")
           }],
-          rows: Hr,
-          getRowKey: rr => rr.schematicId,
-          renderRow: Qr => {
-            const Zr = function(rr) {
-              return (0, yr.g)(rr.gamePublished, "takenDown" in rr && rr.takenDown)
-            }(Qr);
-            return (0, Br.jsxs)("tr", {
+          rows: Vd,
+          getRowKey: dd => dd.schematicId,
+          renderRow: md => {
+            const Wd = function(dd) {
+              return (0, wd.d)(dd.gamePublished, "takenDown" in dd && dd.takenDown)
+            }(md);
+            return (0, Ed.jsxs)("tr", {
               onClick: () => {
-                var rr;
-                rr = Qr.schematicId, Sr((0, yr.r)((0, Ir.b)(rr)))
+                var dd;
+                dd = md.schematicId, Od((0, wd.q)((0, Kd.e)(dd)))
               },
-              children: [(0, Br.jsx)("td", {
-                children: (0, Br.jsx)(Kr.e, {
-                  thumbnail: (0, Br.jsx)(mr.e, {
-                    game: Qr
+              children: [(0, Ed.jsx)("td", {
+                children: (0, Ed.jsx)(gd.c, {
+                  thumbnail: (0, Ed.jsx)(od.e, {
+                    game: md
                   }),
-                  name: Qr.name
+                  name: md.name
                 })
-              }), (0, Br.jsx)("td", {
-                children: (0, Br.jsx)("span", {
-                  className: ar()("StudioGameListStatusChip", {
-                    StudioGameListStatusChipPublished: "published" === Zr,
-                    StudioGameListStatusChipTakenDown: "takenDown" === Zr
+              }), (0, Ed.jsx)("td", {
+                children: (0, Ed.jsx)("span", {
+                  className: Rd()("StudioGameListStatusChip", {
+                    StudioGameListStatusChipPublished: "published" === Wd,
+                    StudioGameListStatusChipTakenDown: "takenDown" === Wd
                   }),
-                  children: (0, yr.e)(rr, Zr)
+                  children: (0, wd.c)(dd, Wd)
                 })
-              }), (0, Br.jsx)("td", {
-                children: (0, fr.S)(Qr.ccu)
-              }), (0, Br.jsx)("td", {
-                children: (0, fr.S)(Qr.favourites)
+              }), (0, Ed.jsx)("td", {
+                children: (0, hd.M)(md.ccu)
+              }), (0, Ed.jsx)("td", {
+                children: (0, hd.M)(md.favourites)
               })]
             })
           }
-        }), gr && (0, Br.jsx)(Tr, {})]
+        }), Gd && (0, Ed.jsx)(Jd, {})]
       })
     }
   },
-  5738: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      d: () => jr,
-      e: () => ar
+  5700: (dd, Od, md) => {
+    md.d(Od, {
+      b: () => Xd,
+      c: () => Rd
     });
-    var Zr = Qr(1671),
-      Wr = Qr(1338);
+    var Wd = md(1666),
+      Fd = md(1341);
 
-    function ar(rr) {
+    function Rd(dd) {
       let {
-        thumbnail: Sr,
-        name: Qr
-      } = rr;
-      return (0, Wr.jsxs)("div", {
+        thumbnail: Od,
+        name: md
+      } = dd;
+      return (0, Fd.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, Wr.jsx)("div", {
+        children: [(0, Fd.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: Sr
-        }), (0, Wr.jsx)("span", {
+          children: Od
+        }), (0, Fd.jsx)("span", {
           className: "StudioTableGameName",
-          children: Qr
+          children: md
         })]
       })
     }
 
-    function jr(rr) {
+    function Xd(dd) {
       let {
-        game: Sr
-      } = rr;
-      return (0, Wr.jsx)("img", {
+        game: Od
+      } = dd;
+      return (0, Fd.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, Zr.m)(Sr),
+        src: (0, Wd.l)(Od),
         alt: ""
       })
     }
   },
-  5736: (rr, Sr, Qr) => {
-    Qr.d(Sr, {
-      b: () => Ir
+  5693: (dd, Od, md) => {
+    md.d(Od, {
+      e: () => Kd
     });
-    var Zr = Qr(72),
-      Wr = Qr(1155),
-      ar = Qr.n(Wr),
-      jr = Qr(1338);
+    var Wd = md(66),
+      Fd = md(1155),
+      Rd = md.n(Fd),
+      Xd = md(1341);
 
-    function Ir(rr) {
+    function Kd(dd) {
       let {
-        columns: Sr,
-        rows: Qr,
-        getRowKey: Wr,
-        renderRow: Ir,
-        className: fr
-      } = rr;
-      return (0, jr.jsxs)("table", {
-        className: ar()("Table", fr),
-        children: [(0, jr.jsx)("thead", {
-          children: (0, jr.jsx)("tr", {
-            children: Sr.map((rr => (0, jr.jsx)("th", {
-              children: rr.header
-            }, rr.key)))
+        columns: Od,
+        rows: md,
+        getRowKey: Fd,
+        renderRow: Kd,
+        className: hd
+      } = dd;
+      return (0, Xd.jsxs)("table", {
+        className: Rd()("Table", hd),
+        children: [(0, Xd.jsx)("thead", {
+          children: (0, Xd.jsx)("tr", {
+            children: Od.map((dd => (0, Xd.jsx)("th", {
+              children: dd.header
+            }, dd.key)))
           })
-        }), (0, jr.jsx)("tbody", {
-          children: Qr.map(((rr, Sr) => (0, jr.jsx)(Zr.Fragment, {
-            children: Ir(rr, Sr)
-          }, Wr(rr))))
+        }), (0, Xd.jsx)("tbody", {
+          children: md.map(((dd, Od) => (0, Xd.jsx)(Wd.Fragment, {
+            children: Kd(dd, Od)
+          }, Fd(dd))))
         })]
       })
     }
   },
-  5726: () => {}
+  5687: () => {}
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);

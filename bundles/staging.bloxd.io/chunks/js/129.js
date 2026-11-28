@@ -1,173 +1,173 @@
 export const id = 129;
 export const ids = [129];
 export const modules = {
-  5965: (rr, Sr, Qr) => {
-    function Zr(rr) {
-      return Zr = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(rr) {
-        return typeof rr
-      } : function(rr) {
-        return rr && "function" == typeof Symbol && rr.constructor === Symbol && rr !== Symbol.prototype ? "symbol" : typeof rr
-      }, Zr(rr)
+  5914: (dd, Od, md) => {
+    function Wd(dd) {
+      return Wd = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(dd) {
+        return typeof dd
+      } : function(dd) {
+        return dd && "function" == typeof Symbol && dd.constructor === Symbol && dd !== Symbol.prototype ? "symbol" : typeof dd
+      }, Wd(dd)
     }
-    Object.defineProperty(Sr, "__esModule", {
+    Object.defineProperty(Od, "__esModule", {
       value: !0
-    }), Sr.default = void 0;
-    var Wr = xr(Qr(1155)),
-      ar = function(rr, Sr) {
-        if (!Sr && rr && rr.__esModule) return rr;
-        if (null === rr || "object" !== Zr(rr) && "function" !== typeof rr) return {
-          default: rr
+    }), Od.default = void 0;
+    var Fd = td(md(1155)),
+      Rd = function(dd, Od) {
+        if (!Od && dd && dd.__esModule) return dd;
+        if (null === dd || "object" !== Wd(dd) && "function" !== typeof dd) return {
+          default: dd
         };
-        var Qr = pr(Sr);
-        if (Qr && Qr.has(rr)) return Qr.get(rr);
-        var Wr = {},
-          ar = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var jr in rr)
-          if ("default" !== jr && Object.prototype.hasOwnProperty.call(rr, jr)) {
-            var Ir = ar ? Object.getOwnPropertyDescriptor(rr, jr) : null;
-            Ir && (Ir.get || Ir.set) ? Object.defineProperty(Wr, jr, Ir) : Wr[jr] = rr[jr]
-          } Wr.default = rr, Qr && Qr.set(rr, Wr);
-        return Wr
-      }(Qr(72)),
-      jr = xr(Qr(5927)),
-      Ir = xr(Qr(5968)),
-      fr = Qr(5977),
-      Er = Qr(1338);
+        var md = Qd(Od);
+        if (md && md.has(dd)) return md.get(dd);
+        var Fd = {},
+          Rd = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var Xd in dd)
+          if ("default" !== Xd && Object.prototype.hasOwnProperty.call(dd, Xd)) {
+            var Kd = Rd ? Object.getOwnPropertyDescriptor(dd, Xd) : null;
+            Kd && (Kd.get || Kd.set) ? Object.defineProperty(Fd, Xd, Kd) : Fd[Xd] = dd[Xd]
+          } Fd.default = dd, md && md.set(dd, Fd);
+        return Fd
+      }(md(66)),
+      Xd = td(md(5864)),
+      Kd = td(md(5920)),
+      hd = md(5928),
+      vd = md(1341);
 
-    function pr(rr) {
+    function Qd(dd) {
       if ("function" !== typeof WeakMap) return null;
-      var Sr = new WeakMap,
-        Qr = new WeakMap;
-      return (pr = function(rr) {
-        return rr ? Qr : Sr
-      })(rr)
+      var Od = new WeakMap,
+        md = new WeakMap;
+      return (Qd = function(dd) {
+        return dd ? md : Od
+      })(dd)
     }
 
-    function xr(rr) {
-      return rr && rr.__esModule ? rr : {
-        default: rr
+    function td(dd) {
+      return dd && dd.__esModule ? dd : {
+        default: dd
       }
     }
 
-    function mr(rr, Sr) {
-      var Qr = "undefined" !== typeof Symbol && rr[Symbol.iterator] || rr["@@iterator"];
-      if (!Qr) {
-        if (Array.isArray(rr) || (Qr = function(rr, Sr) {
-            if (!rr) return;
-            if ("string" === typeof rr) return Nr(rr, Sr);
-            var Qr = Object.prototype.toString.call(rr).slice(8, -1);
-            "Object" === Qr && rr.constructor && (Qr = rr.constructor.name);
-            if ("Map" === Qr || "Set" === Qr) return Array.from(rr);
-            if ("Arguments" === Qr || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(Qr)) return Nr(rr, Sr)
-          }(rr)) || Sr && rr && "number" === typeof rr.length) {
-          Qr && (rr = Qr);
-          var Zr = 0,
-            Wr = function() {};
+    function od(dd, Od) {
+      var md = "undefined" !== typeof Symbol && dd[Symbol.iterator] || dd["@@iterator"];
+      if (!md) {
+        if (Array.isArray(dd) || (md = function(dd, Od) {
+            if (!dd) return;
+            if ("string" === typeof dd) return Nd(dd, Od);
+            var md = Object.prototype.toString.call(dd).slice(8, -1);
+            "Object" === md && dd.constructor && (md = dd.constructor.name);
+            if ("Map" === md || "Set" === md) return Array.from(dd);
+            if ("Arguments" === md || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(md)) return Nd(dd, Od)
+          }(dd)) || Od && dd && "number" === typeof dd.length) {
+          md && (dd = md);
+          var Wd = 0,
+            Fd = function() {};
           return {
-            s: Wr,
+            s: Fd,
             n: function() {
-              return Zr >= rr.length ? {
+              return Wd >= dd.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: rr[Zr++]
+                value: dd[Wd++]
               }
             },
-            e: function(rr) {
-              throw rr
+            e: function(dd) {
+              throw dd
             },
-            f: Wr
+            f: Fd
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var ar, jr = !0,
-        Ir = !1;
+      var Rd, Xd = !0,
+        Kd = !1;
       return {
         s: function() {
-          Qr = Qr.call(rr)
+          md = md.call(dd)
         },
         n: function() {
-          var rr = Qr.next();
-          return jr = rr.done, rr
+          var dd = md.next();
+          return Xd = dd.done, dd
         },
-        e: function(rr) {
-          Ir = !0, ar = rr
+        e: function(dd) {
+          Kd = !0, Rd = dd
         },
         f: function() {
           try {
-            jr || null == Qr.return || Qr.return()
+            Xd || null == md.return || md.return()
           } finally {
-            if (Ir) throw ar
+            if (Kd) throw Rd
           }
         }
       }
     }
 
-    function Nr(rr, Sr) {
-      (null == Sr || Sr > rr.length) && (Sr = rr.length);
-      for (var Qr = 0, Zr = new Array(Sr); Qr < Sr; Qr++) Zr[Qr] = rr[Qr];
-      return Zr
+    function Nd(dd, Od) {
+      (null == Od || Od > dd.length) && (Od = dd.length);
+      for (var md = 0, Wd = new Array(Od); md < Od; md++) Wd[md] = dd[md];
+      return Wd
     }
 
-    function Ur(rr, Sr) {
-      for (var Qr = 0; Qr < Sr.length; Qr++) {
-        var Zr = Sr[Qr];
-        Zr.enumerable = Zr.enumerable || !1, Zr.configurable = !0, "value" in Zr && (Zr.writable = !0), Object.defineProperty(rr, Zr.key, Zr)
+    function qd(dd, Od) {
+      for (var md = 0; md < Od.length; md++) {
+        var Wd = Od[md];
+        Wd.enumerable = Wd.enumerable || !1, Wd.configurable = !0, "value" in Wd && (Wd.writable = !0), Object.defineProperty(dd, Wd.key, Wd)
       }
     }
 
-    function tr(rr, Sr) {
-      return tr = Object.setPrototypeOf || function(rr, Sr) {
-        return rr.__proto__ = Sr, rr
-      }, tr(rr, Sr)
+    function Hd(dd, Od) {
+      return Hd = Object.setPrototypeOf || function(dd, Od) {
+        return dd.__proto__ = Od, dd
+      }, Hd(dd, Od)
     }
 
-    function hr(rr) {
-      var Sr = function() {
+    function yd(dd) {
+      var Od = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
         try {
           return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (rr) {
+        } catch (dd) {
           return !1
         }
       }();
       return function() {
-        var Qr, Wr = Yr(rr);
-        if (Sr) {
-          var ar = Yr(this).constructor;
-          Qr = Reflect.construct(Wr, arguments, ar)
-        } else Qr = Wr.apply(this, arguments);
-        return function(rr, Sr) {
-          if (Sr && ("object" === Zr(Sr) || "function" === typeof Sr)) return Sr;
-          if (void 0 !== Sr) throw new TypeError("Derived constructors may only return object or undefined");
-          return zr(rr)
-        }(this, Qr)
+        var md, Fd = Td(dd);
+        if (Od) {
+          var Rd = Td(this).constructor;
+          md = Reflect.construct(Fd, arguments, Rd)
+        } else md = Fd.apply(this, arguments);
+        return function(dd, Od) {
+          if (Od && ("object" === Wd(Od) || "function" === typeof Od)) return Od;
+          if (void 0 !== Od) throw new TypeError("Derived constructors may only return object or undefined");
+          return bd(dd)
+        }(this, md)
       }
     }
 
-    function zr(rr) {
-      if (void 0 === rr) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return rr
+    function bd(dd) {
+      if (void 0 === dd) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return dd
     }
 
-    function Yr(rr) {
-      return Yr = Object.setPrototypeOf ? Object.getPrototypeOf : function(rr) {
-        return rr.__proto__ || Object.getPrototypeOf(rr)
-      }, Yr(rr)
+    function Td(dd) {
+      return Td = Object.setPrototypeOf ? Object.getPrototypeOf : function(dd) {
+        return dd.__proto__ || Object.getPrototypeOf(dd)
+      }, Td(dd)
     }
 
-    function nr(rr, Sr, Qr) {
-      return Sr in rr ? Object.defineProperty(rr, Sr, {
-        value: Qr,
+    function pd(dd, Od, md) {
+      return Od in dd ? Object.defineProperty(dd, Od, {
+        value: md,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : rr[Sr] = Qr, rr
+      }) : dd[Od] = md, dd
     }
-    var er = {
+    var Yd = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,258 +183,258 @@ export const modules = {
           }
         }
       },
-      Kr = function(rr) {
-        ! function(rr, Sr) {
-          if ("function" !== typeof Sr && null !== Sr) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(rr, "prototype", {
-            value: Object.create(Sr && Sr.prototype, {
+      gd = function(dd) {
+        ! function(dd, Od) {
+          if ("function" !== typeof Od && null !== Od) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(dd, "prototype", {
+            value: Object.create(Od && Od.prototype, {
               constructor: {
-                value: rr,
+                value: dd,
                 writable: !0,
                 configurable: !0
               }
             }),
             writable: !1
-          }), Sr && tr(rr, Sr)
-        }(jr, rr);
-        var Sr, Qr, Zr, ar = hr(jr);
+          }), Od && Hd(dd, Od)
+        }(Xd, dd);
+        var Od, md, Wd, Rd = yd(Xd);
 
-        function jr(rr, Sr) {
-          var Qr;
-          return function(rr, Sr) {
-            if (!(rr instanceof Sr)) throw new TypeError("Cannot call a class as a function")
-          }(this, jr), nr(zr(Qr = ar.call(this, rr, Sr)), "handleFormat", (function(rr) {
-            var Sr = Qr.props.format;
-            return Sr ? Sr(rr) : rr
-          })), nr(zr(Qr), "handleUpdate", (function() {
-            if (Qr.slider) {
-              var rr = Qr.props.orientation,
-                Sr = (0, fr.capitalize)(er.orientation[rr].dimension),
-                Zr = Qr.slider["offset".concat(Sr)],
-                Wr = Qr.handle["offset".concat(Sr)];
-              Qr.setState({
-                limit: Zr - Wr,
-                grab: Wr / 2
+        function Xd(dd, Od) {
+          var md;
+          return function(dd, Od) {
+            if (!(dd instanceof Od)) throw new TypeError("Cannot call a class as a function")
+          }(this, Xd), pd(bd(md = Rd.call(this, dd, Od)), "handleFormat", (function(dd) {
+            var Od = md.props.format;
+            return Od ? Od(dd) : dd
+          })), pd(bd(md), "handleUpdate", (function() {
+            if (md.slider) {
+              var dd = md.props.orientation,
+                Od = (0, hd.capitalize)(Yd.orientation[dd].dimension),
+                Wd = md.slider["offset".concat(Od)],
+                Fd = md.handle["offset".concat(Od)];
+              md.setState({
+                limit: Wd - Fd,
+                grab: Fd / 2
               })
             }
-          })), nr(zr(Qr), "handleStart", (function(rr) {
-            var Sr = Qr.props.onChangeStart;
-            document.addEventListener("mousemove", Qr.handleDrag), document.addEventListener("mouseup", Qr.handleEnd), Qr.setState({
+          })), pd(bd(md), "handleStart", (function(dd) {
+            var Od = md.props.onChangeStart;
+            document.addEventListener("mousemove", md.handleDrag), document.addEventListener("mouseup", md.handleEnd), md.setState({
               active: !0
             }, (function() {
-              Sr && Sr(rr)
+              Od && Od(dd)
             }))
-          })), nr(zr(Qr), "handleDrag", (function(rr) {
-            rr.stopPropagation();
-            var Sr = Qr.props.onChange,
-              Zr = rr.target,
-              Wr = Zr.className,
-              ar = Zr.classList,
-              jr = Zr.dataset;
-            if (Sr && "rangeslider__labels" !== Wr) {
-              var Ir = Qr.position(rr);
-              ar && ar.contains("rangeslider__label-item") && jr.value && (Ir = parseFloat(jr.value)), Sr && Sr(Ir, rr)
+          })), pd(bd(md), "handleDrag", (function(dd) {
+            dd.stopPropagation();
+            var Od = md.props.onChange,
+              Wd = dd.target,
+              Fd = Wd.className,
+              Rd = Wd.classList,
+              Xd = Wd.dataset;
+            if (Od && "rangeslider__labels" !== Fd) {
+              var Kd = md.position(dd);
+              Rd && Rd.contains("rangeslider__label-item") && Xd.value && (Kd = parseFloat(Xd.value)), Od && Od(Kd, dd)
             }
-          })), nr(zr(Qr), "handleEnd", (function(rr) {
-            var Sr = Qr.props.onChangeComplete;
-            Qr.setState({
+          })), pd(bd(md), "handleEnd", (function(dd) {
+            var Od = md.props.onChangeComplete;
+            md.setState({
               active: !1
             }, (function() {
-              Sr && Sr(rr)
-            })), document.removeEventListener("mousemove", Qr.handleDrag), document.removeEventListener("mouseup", Qr.handleEnd)
-          })), nr(zr(Qr), "handleKeyDown", (function(rr) {
-            rr.preventDefault();
-            var Sr, Zr = rr.keyCode,
-              Wr = Qr.props,
-              ar = Wr.value,
-              jr = Wr.min,
-              Ir = Wr.max,
-              fr = Wr.step,
-              Er = Wr.onChange;
-            switch (Zr) {
+              Od && Od(dd)
+            })), document.removeEventListener("mousemove", md.handleDrag), document.removeEventListener("mouseup", md.handleEnd)
+          })), pd(bd(md), "handleKeyDown", (function(dd) {
+            dd.preventDefault();
+            var Od, Wd = dd.keyCode,
+              Fd = md.props,
+              Rd = Fd.value,
+              Xd = Fd.min,
+              Kd = Fd.max,
+              hd = Fd.step,
+              vd = Fd.onChange;
+            switch (Wd) {
               case 38:
               case 39:
-                Sr = ar + fr > Ir ? Ir : ar + fr, Er && Er(Sr, rr);
+                Od = Rd + hd > Kd ? Kd : Rd + hd, vd && vd(Od, dd);
                 break;
               case 37:
               case 40:
-                Sr = ar - fr < jr ? jr : ar - fr, Er && Er(Sr, rr)
+                Od = Rd - hd < Xd ? Xd : Rd - hd, vd && vd(Od, dd)
             }
-          })), nr(zr(Qr), "getPositionFromValue", (function(rr) {
-            var Sr = Qr.state.limit,
-              Zr = Qr.props,
-              Wr = Zr.min,
-              ar = (rr - Wr) / (Zr.max - Wr);
-            return Math.round(ar * Sr)
-          })), nr(zr(Qr), "getValueFromPosition", (function(rr) {
-            var Sr = Qr.state.limit,
-              Zr = Qr.props,
-              Wr = Zr.orientation,
-              ar = Zr.min,
-              jr = Zr.max,
-              Ir = Zr.step,
-              Er = (0, fr.clamp)(rr, 0, Sr) / (Sr || 1),
-              pr = Ir * Math.round(Er * (jr - ar) / Ir),
-              xr = "horizontal" === Wr ? pr + ar : jr - pr;
-            return (0, fr.clamp)(xr, ar, jr)
-          })), nr(zr(Qr), "position", (function(rr) {
-            var Sr = Qr.state.grab,
-              Zr = Qr.props,
-              Wr = Zr.orientation,
-              ar = Zr.reverse,
-              jr = Qr.slider,
-              Ir = er.orientation[Wr].coordinate,
-              Er = ar ? er.orientation[Wr].reverseDirection : er.orientation[Wr].direction,
-              pr = "client".concat((0, fr.capitalize)(Ir)),
-              xr = rr.touches ? rr.touches[0][pr] : rr[pr],
-              mr = jr.getBoundingClientRect()[Er],
-              Nr = ar ? mr - xr - Sr : xr - mr - Sr;
-            return Qr.getValueFromPosition(Nr)
-          })), nr(zr(Qr), "coordinates", (function(rr) {
-            var Sr = Qr.state,
-              Zr = Sr.limit,
-              Wr = Sr.grab,
-              ar = Qr.props.orientation,
-              jr = Qr.getValueFromPosition(rr),
-              Ir = Qr.getPositionFromValue(jr),
-              fr = "horizontal" === ar ? Ir + Wr : Ir;
+          })), pd(bd(md), "getPositionFromValue", (function(dd) {
+            var Od = md.state.limit,
+              Wd = md.props,
+              Fd = Wd.min,
+              Rd = (dd - Fd) / (Wd.max - Fd);
+            return Math.round(Rd * Od)
+          })), pd(bd(md), "getValueFromPosition", (function(dd) {
+            var Od = md.state.limit,
+              Wd = md.props,
+              Fd = Wd.orientation,
+              Rd = Wd.min,
+              Xd = Wd.max,
+              Kd = Wd.step,
+              vd = (0, hd.clamp)(dd, 0, Od) / (Od || 1),
+              Qd = Kd * Math.round(vd * (Xd - Rd) / Kd),
+              td = "horizontal" === Fd ? Qd + Rd : Xd - Qd;
+            return (0, hd.clamp)(td, Rd, Xd)
+          })), pd(bd(md), "position", (function(dd) {
+            var Od = md.state.grab,
+              Wd = md.props,
+              Fd = Wd.orientation,
+              Rd = Wd.reverse,
+              Xd = md.slider,
+              Kd = Yd.orientation[Fd].coordinate,
+              vd = Rd ? Yd.orientation[Fd].reverseDirection : Yd.orientation[Fd].direction,
+              Qd = "client".concat((0, hd.capitalize)(Kd)),
+              td = dd.touches ? dd.touches[0][Qd] : dd[Qd],
+              od = Xd.getBoundingClientRect()[vd],
+              Nd = Rd ? od - td - Od : td - od - Od;
+            return md.getValueFromPosition(Nd)
+          })), pd(bd(md), "coordinates", (function(dd) {
+            var Od = md.state,
+              Wd = Od.limit,
+              Fd = Od.grab,
+              Rd = md.props.orientation,
+              Xd = md.getValueFromPosition(dd),
+              Kd = md.getPositionFromValue(Xd),
+              hd = "horizontal" === Rd ? Kd + Fd : Kd;
             return {
-              fill: "horizontal" === ar ? fr : Zr - fr,
-              handle: fr,
-              label: fr
+              fill: "horizontal" === Rd ? hd : Wd - hd,
+              handle: hd,
+              label: hd
             }
-          })), nr(zr(Qr), "renderLabels", (function(rr) {
-            return (0, Er.jsx)("ul", {
-              ref: function(rr) {
-                Qr.labels = rr
+          })), pd(bd(md), "renderLabels", (function(dd) {
+            return (0, vd.jsx)("ul", {
+              ref: function(dd) {
+                md.labels = dd
               },
-              className: (0, Wr.default)("rangeslider__labels"),
-              children: rr
+              className: (0, Fd.default)("rangeslider__labels"),
+              children: dd
             })
-          })), Qr.state = {
+          })), md.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, Qr
+          }, md
         }
-        return Sr = jr, (Qr = [{
+        return Od = Xd, (md = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new Ir.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new Kd.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
-            var rr = this,
-              Sr = this.props,
-              Qr = Sr.value,
-              Zr = Sr.orientation,
-              ar = Sr.className,
-              jr = Sr.tooltip,
-              Ir = Sr.reverse,
-              fr = Sr.labels,
-              pr = Sr.min,
-              xr = Sr.max,
-              Nr = Sr.handleLabel,
-              Ur = this.state.active,
-              tr = er.orientation[Zr].dimension,
-              hr = Ir ? er.orientation[Zr].reverseDirection : er.orientation[Zr].direction,
-              zr = this.getPositionFromValue(Qr),
-              Yr = this.coordinates(zr),
-              Kr = nr({}, tr, "".concat(Yr.fill, "px")),
-              yr = nr({}, hr, "".concat(Yr.handle, "px")),
-              Br = jr && Ur,
-              Tr = [],
-              vr = Object.keys(fr);
-            if (vr.length > 0) {
-              var Or, Lr = mr(vr = vr.sort((function(rr, Sr) {
-                return Ir ? rr - Sr : Sr - rr
+            var dd = this,
+              Od = this.props,
+              md = Od.value,
+              Wd = Od.orientation,
+              Rd = Od.className,
+              Xd = Od.tooltip,
+              Kd = Od.reverse,
+              hd = Od.labels,
+              Qd = Od.min,
+              td = Od.max,
+              Nd = Od.handleLabel,
+              qd = this.state.active,
+              Hd = Yd.orientation[Wd].dimension,
+              yd = Kd ? Yd.orientation[Wd].reverseDirection : Yd.orientation[Wd].direction,
+              bd = this.getPositionFromValue(md),
+              Td = this.coordinates(bd),
+              gd = pd({}, Hd, "".concat(Td.fill, "px")),
+              wd = pd({}, yd, "".concat(Td.handle, "px")),
+              Ed = Xd && qd,
+              Jd = [],
+              Ud = Object.keys(hd);
+            if (Ud.length > 0) {
+              var xd, Bd = od(Ud = Ud.sort((function(dd, Od) {
+                return Kd ? dd - Od : Od - dd
               })));
               try {
-                for (Lr.s(); !(Or = Lr.n()).done;) {
-                  var lr = Or.value,
-                    Xr = this.getPositionFromValue(lr),
-                    Pr = this.coordinates(Xr),
-                    Hr = nr({}, hr, "".concat(Pr.label, "px"));
-                  Tr.push((0, Er.jsx)("li", {
-                    className: (0, Wr.default)("rangeslider__label-item"),
-                    "data-value": lr,
+                for (Bd.s(); !(xd = Bd.n()).done;) {
+                  var Sd = xd.value,
+                    sd = this.getPositionFromValue(Sd),
+                    ud = this.coordinates(sd),
+                    Vd = pd({}, yd, "".concat(ud.label, "px"));
+                  Jd.push((0, vd.jsx)("li", {
+                    className: (0, Fd.default)("rangeslider__label-item"),
+                    "data-value": Sd,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: Hr,
-                    children: this.props.labels[lr]
-                  }, lr))
+                    style: Vd,
+                    children: this.props.labels[Sd]
+                  }, Sd))
                 }
-              } catch (qr) {
-                Lr.e(qr)
+              } catch (Ad) {
+                Bd.e(Ad)
               } finally {
-                Lr.f()
+                Bd.f()
               }
             }
-            return (0, Er.jsxs)("div", {
-              ref: function(Sr) {
-                rr.slider = Sr
+            return (0, vd.jsxs)("div", {
+              ref: function(Od) {
+                dd.slider = Od
               },
-              className: (0, Wr.default)("rangeslider", "rangeslider-".concat(Zr), {
-                "rangeslider-reverse": Ir
-              }, ar),
+              className: (0, Fd.default)("rangeslider", "rangeslider-".concat(Wd), {
+                "rangeslider-reverse": Kd
+              }, Rd),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": pr,
-              "aria-valuemax": xr,
-              "aria-valuenow": Qr,
-              "aria-orientation": Zr,
-              children: [(0, Er.jsx)("div", {
+              "aria-valuemin": Qd,
+              "aria-valuemax": td,
+              "aria-valuenow": md,
+              "aria-orientation": Wd,
+              children: [(0, vd.jsx)("div", {
                 className: "rangeslider__fill",
-                style: Kr
-              }), (0, Er.jsxs)("div", {
-                ref: function(Sr) {
-                  rr.handle = Sr
+                style: gd
+              }), (0, vd.jsxs)("div", {
+                ref: function(Od) {
+                  dd.handle = Od
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: yr,
+                style: wd,
                 tabIndex: 0,
-                children: [Br && (0, Er.jsx)("div", {
-                  ref: function(Sr) {
-                    rr.tooltip = Sr
+                children: [Ed && (0, vd.jsx)("div", {
+                  ref: function(Od) {
+                    dd.tooltip = Od
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, Er.jsx)("span", {
-                    children: this.handleFormat(Qr)
+                  children: (0, vd.jsx)("span", {
+                    children: this.handleFormat(md)
                   })
-                }), (0, Er.jsx)("div", {
+                }), (0, vd.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: Nr
+                  children: Nd
                 })]
-              }), fr && this.renderLabels(Tr)]
+              }), hd && this.renderLabels(Jd)]
             })
           }
-        }]) && Ur(Sr.prototype, Qr), Zr && Ur(Sr, Zr), Object.defineProperty(Sr, "prototype", {
+        }]) && qd(Od.prototype, md), Wd && qd(Od, Wd), Object.defineProperty(Od, "prototype", {
           writable: !1
-        }), jr
-      }(ar.Component);
-    nr(Kr, "propTypes", {
-      min: jr.default.number,
-      max: jr.default.number,
-      step: jr.default.number,
-      value: jr.default.number,
-      orientation: jr.default.string,
-      tooltip: jr.default.bool,
-      reverse: jr.default.bool,
-      labels: jr.default.object,
-      handleLabel: jr.default.string,
-      format: jr.default.func,
-      onChangeStart: jr.default.func,
-      onChange: jr.default.func,
-      onChangeComplete: jr.default.func
-    }), nr(Kr, "defaultProps", {
+        }), Xd
+      }(Rd.Component);
+    pd(gd, "propTypes", {
+      min: Xd.default.number,
+      max: Xd.default.number,
+      step: Xd.default.number,
+      value: Xd.default.number,
+      orientation: Xd.default.string,
+      tooltip: Xd.default.bool,
+      reverse: Xd.default.bool,
+      labels: Xd.default.object,
+      handleLabel: Xd.default.string,
+      format: Xd.default.func,
+      onChangeStart: Xd.default.func,
+      onChange: Xd.default.func,
+      onChangeComplete: Xd.default.func
+    }), pd(gd, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,359 +445,359 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var yr = Kr;
-    Sr.default = yr
+    var wd = gd;
+    Od.default = wd
   },
-  5960: (rr, Sr, Qr) => {
-    var Zr;
-    Sr.c = void 0;
-    var Wr = ((Zr = Qr(5965)) && Zr.__esModule ? Zr : {
-      default: Zr
+  5909: (dd, Od, md) => {
+    var Wd;
+    Od.e = void 0;
+    var Fd = ((Wd = md(5914)) && Wd.__esModule ? Wd : {
+      default: Wd
     }).default;
-    Sr.c = Wr
+    Od.e = Fd
   },
-  5977: (rr, Sr) => {
-    Object.defineProperty(Sr, "__esModule", {
+  5928: (dd, Od) => {
+    Object.defineProperty(Od, "__esModule", {
       value: !0
-    }), Sr.capitalize = function(rr) {
-      return rr.charAt(0).toUpperCase() + rr.substr(1)
-    }, Sr.clamp = function(rr, Sr, Qr) {
-      return Math.min(Math.max(rr, Sr), Qr)
+    }), Od.capitalize = function(dd) {
+      return dd.charAt(0).toUpperCase() + dd.substr(1)
+    }, Od.clamp = function(dd, Od, md) {
+      return Math.min(Math.max(dd, Od), md)
     }
   },
-  5929: (rr, Sr, Qr) => {
-    var Zr = Qr(5933);
+  5870: (dd, Od, md) => {
+    var Wd = md(5874);
 
-    function Wr() {}
+    function Fd() {}
 
-    function ar() {}
-    ar.resetWarningCache = Wr, rr.exports = function() {
-      function rr(rr, Sr, Qr, Wr, ar, jr) {
-        if (jr !== Zr) {
-          var Ir = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw Ir.name = "Invariant Violation", Ir
+    function Rd() {}
+    Rd.resetWarningCache = Fd, dd.exports = function() {
+      function dd(dd, Od, md, Fd, Rd, Xd) {
+        if (Xd !== Wd) {
+          var Kd = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw Kd.name = "Invariant Violation", Kd
         }
       }
 
-      function Sr() {
-        return rr
+      function Od() {
+        return dd
       }
-      rr.isRequired = rr;
-      var Qr = {
-        array: rr,
-        bigint: rr,
-        bool: rr,
-        func: rr,
-        number: rr,
-        object: rr,
-        string: rr,
-        symbol: rr,
-        any: rr,
-        arrayOf: Sr,
-        element: rr,
-        elementType: rr,
-        instanceOf: Sr,
-        node: rr,
-        objectOf: Sr,
-        oneOf: Sr,
-        oneOfType: Sr,
-        shape: Sr,
-        exact: Sr,
-        checkPropTypes: ar,
-        resetWarningCache: Wr
+      dd.isRequired = dd;
+      var md = {
+        array: dd,
+        bigint: dd,
+        bool: dd,
+        func: dd,
+        number: dd,
+        object: dd,
+        string: dd,
+        symbol: dd,
+        any: dd,
+        arrayOf: Od,
+        element: dd,
+        elementType: dd,
+        instanceOf: Od,
+        node: dd,
+        objectOf: Od,
+        oneOf: Od,
+        oneOfType: Od,
+        shape: Od,
+        exact: Od,
+        checkPropTypes: Rd,
+        resetWarningCache: Fd
       };
-      return Qr.PropTypes = Qr, Qr
+      return md.PropTypes = md, md
     }
   },
-  5927: (rr, Sr, Qr) => {
-    rr.exports = Qr(5929)()
+  5864: (dd, Od, md) => {
+    dd.exports = md(5870)()
   },
-  5933: rr => {
-    rr.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  5874: dd => {
+    dd.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  5968: (rr, Sr, Qr) => {
-    Qr.r(Sr), Qr.d(Sr, {
-      default: () => Tr
+  5920: (dd, Od, md) => {
+    md.r(Od), md.d(Od, {
+      default: () => Jd
     });
-    var Zr = function() {
+    var Wd = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function rr(rr, Sr) {
-          var Qr = -1;
-          return rr.some((function(rr, Zr) {
-            return rr[0] === Sr && (Qr = Zr, !0)
-          })), Qr
+        function dd(dd, Od) {
+          var md = -1;
+          return dd.some((function(dd, Wd) {
+            return dd[0] === Od && (md = Wd, !0)
+          })), md
         }
         return function() {
-          function Sr() {
+          function Od() {
             this.__entries__ = []
           }
-          return Object.defineProperty(Sr.prototype, "size", {
+          return Object.defineProperty(Od.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), Sr.prototype.get = function(Sr) {
-            var Qr = rr(this.__entries__, Sr),
-              Zr = this.__entries__[Qr];
-            return Zr && Zr[1]
-          }, Sr.prototype.set = function(Sr, Qr) {
-            var Zr = rr(this.__entries__, Sr);
-            ~Zr ? this.__entries__[Zr][1] = Qr : this.__entries__.push([Sr, Qr])
-          }, Sr.prototype.delete = function(Sr) {
-            var Qr = this.__entries__,
-              Zr = rr(Qr, Sr);
-            ~Zr && Qr.splice(Zr, 1)
-          }, Sr.prototype.has = function(Sr) {
-            return !!~rr(this.__entries__, Sr)
-          }, Sr.prototype.clear = function() {
+          }), Od.prototype.get = function(Od) {
+            var md = dd(this.__entries__, Od),
+              Wd = this.__entries__[md];
+            return Wd && Wd[1]
+          }, Od.prototype.set = function(Od, md) {
+            var Wd = dd(this.__entries__, Od);
+            ~Wd ? this.__entries__[Wd][1] = md : this.__entries__.push([Od, md])
+          }, Od.prototype.delete = function(Od) {
+            var md = this.__entries__,
+              Wd = dd(md, Od);
+            ~Wd && md.splice(Wd, 1)
+          }, Od.prototype.has = function(Od) {
+            return !!~dd(this.__entries__, Od)
+          }, Od.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, Sr.prototype.forEach = function(rr, Sr) {
-            void 0 === Sr && (Sr = null);
-            for (var Qr = 0, Zr = this.__entries__; Qr < Zr.length; Qr++) {
-              var Wr = Zr[Qr];
-              rr.call(Sr, Wr[1], Wr[0])
+          }, Od.prototype.forEach = function(dd, Od) {
+            void 0 === Od && (Od = null);
+            for (var md = 0, Wd = this.__entries__; md < Wd.length; md++) {
+              var Fd = Wd[md];
+              dd.call(Od, Fd[1], Fd[0])
             }
-          }, Sr
+          }, Od
         }()
       }(),
-      Wr = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      ar = "undefined" !== typeof Qr.g && Qr.g.Math === Math ? Qr.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      jr = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(ar) : function(rr) {
+      Fd = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      Rd = "undefined" !== typeof md.g && md.g.Math === Math ? md.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      Xd = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(Rd) : function(dd) {
         return setTimeout((function() {
-          return rr(Date.now())
+          return dd(Date.now())
         }), 1e3 / 60)
       };
-    var Ir = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      fr = "undefined" !== typeof MutationObserver,
-      Er = function() {
-        function rr() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(rr, Sr) {
-            var Qr = !1,
-              Zr = !1,
-              Wr = 0;
+    var Kd = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      hd = "undefined" !== typeof MutationObserver,
+      vd = function() {
+        function dd() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(dd, Od) {
+            var md = !1,
+              Wd = !1,
+              Fd = 0;
 
-            function ar() {
-              Qr && (Qr = !1, rr()), Zr && fr()
+            function Rd() {
+              md && (md = !1, dd()), Wd && hd()
             }
 
-            function Ir() {
-              jr(ar)
+            function Kd() {
+              Xd(Rd)
             }
 
-            function fr() {
-              var rr = Date.now();
-              if (Qr) {
-                if (rr - Wr < 2) return;
-                Zr = !0
-              } else Qr = !0, Zr = !1, setTimeout(Ir, Sr);
-              Wr = rr
+            function hd() {
+              var dd = Date.now();
+              if (md) {
+                if (dd - Fd < 2) return;
+                Wd = !0
+              } else md = !0, Wd = !1, setTimeout(Kd, Od);
+              Fd = dd
             }
-            return fr
+            return hd
           }(this.refresh.bind(this), 20)
         }
-        return rr.prototype.addObserver = function(rr) {
-          ~this.observers_.indexOf(rr) || this.observers_.push(rr), this.connected_ || this.connect_()
-        }, rr.prototype.removeObserver = function(rr) {
-          var Sr = this.observers_,
-            Qr = Sr.indexOf(rr);
-          ~Qr && Sr.splice(Qr, 1), !Sr.length && this.connected_ && this.disconnect_()
-        }, rr.prototype.refresh = function() {
+        return dd.prototype.addObserver = function(dd) {
+          ~this.observers_.indexOf(dd) || this.observers_.push(dd), this.connected_ || this.connect_()
+        }, dd.prototype.removeObserver = function(dd) {
+          var Od = this.observers_,
+            md = Od.indexOf(dd);
+          ~md && Od.splice(md, 1), !Od.length && this.connected_ && this.disconnect_()
+        }, dd.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
-        }, rr.prototype.updateObservers_ = function() {
-          var rr = this.observers_.filter((function(rr) {
-            return rr.gatherActive(), rr.hasActive()
+        }, dd.prototype.updateObservers_ = function() {
+          var dd = this.observers_.filter((function(dd) {
+            return dd.gatherActive(), dd.hasActive()
           }));
-          return rr.forEach((function(rr) {
-            return rr.broadcastActive()
-          })), rr.length > 0
-        }, rr.prototype.connect_ = function() {
-          Wr && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), fr ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          return dd.forEach((function(dd) {
+            return dd.broadcastActive()
+          })), dd.length > 0
+        }, dd.prototype.connect_ = function() {
+          Fd && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), hd ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, rr.prototype.disconnect_ = function() {
-          Wr && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, rr.prototype.onTransitionEnd_ = function(rr) {
-          var Sr = rr.propertyName,
-            Qr = void 0 === Sr ? "" : Sr;
-          Ir.some((function(rr) {
-            return !!~Qr.indexOf(rr)
+        }, dd.prototype.disconnect_ = function() {
+          Fd && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, dd.prototype.onTransitionEnd_ = function(dd) {
+          var Od = dd.propertyName,
+            md = void 0 === Od ? "" : Od;
+          Kd.some((function(dd) {
+            return !!~md.indexOf(dd)
           })) && this.refresh()
-        }, rr.getInstance = function() {
-          return this.instance_ || (this.instance_ = new rr), this.instance_
-        }, rr.instance_ = null, rr
+        }, dd.getInstance = function() {
+          return this.instance_ || (this.instance_ = new dd), this.instance_
+        }, dd.instance_ = null, dd
       }(),
-      pr = function(rr, Sr) {
-        for (var Qr = 0, Zr = Object.keys(Sr); Qr < Zr.length; Qr++) {
-          var Wr = Zr[Qr];
-          Object.defineProperty(rr, Wr, {
-            value: Sr[Wr],
+      Qd = function(dd, Od) {
+        for (var md = 0, Wd = Object.keys(Od); md < Wd.length; md++) {
+          var Fd = Wd[md];
+          Object.defineProperty(dd, Fd, {
+            value: Od[Fd],
             enumerable: !1,
             writable: !1,
             configurable: !0
           })
         }
-        return rr
+        return dd
       },
-      xr = function(rr) {
-        return rr && rr.ownerDocument && rr.ownerDocument.defaultView || ar
+      td = function(dd) {
+        return dd && dd.ownerDocument && dd.ownerDocument.defaultView || Rd
       },
-      mr = Yr(0, 0, 0, 0);
+      od = Td(0, 0, 0, 0);
 
-    function Nr(rr) {
-      return parseFloat(rr) || 0
+    function Nd(dd) {
+      return parseFloat(dd) || 0
     }
 
-    function Ur(rr) {
-      for (var Sr = [], Qr = 1; Qr < arguments.length; Qr++) Sr[Qr - 1] = arguments[Qr];
-      return Sr.reduce((function(Sr, Qr) {
-        return Sr + Nr(rr["border-" + Qr + "-width"])
+    function qd(dd) {
+      for (var Od = [], md = 1; md < arguments.length; md++) Od[md - 1] = arguments[md];
+      return Od.reduce((function(Od, md) {
+        return Od + Nd(dd["border-" + md + "-width"])
       }), 0)
     }
 
-    function tr(rr) {
-      var Sr = rr.clientWidth,
-        Qr = rr.clientHeight;
-      if (!Sr && !Qr) return mr;
-      var Zr = xr(rr).getComputedStyle(rr),
-        Wr = function(rr) {
-          for (var Sr = {}, Qr = 0, Zr = ["top", "right", "bottom", "left"]; Qr < Zr.length; Qr++) {
-            var Wr = Zr[Qr],
-              ar = rr["padding-" + Wr];
-            Sr[Wr] = Nr(ar)
+    function Hd(dd) {
+      var Od = dd.clientWidth,
+        md = dd.clientHeight;
+      if (!Od && !md) return od;
+      var Wd = td(dd).getComputedStyle(dd),
+        Fd = function(dd) {
+          for (var Od = {}, md = 0, Wd = ["top", "right", "bottom", "left"]; md < Wd.length; md++) {
+            var Fd = Wd[md],
+              Rd = dd["padding-" + Fd];
+            Od[Fd] = Nd(Rd)
           }
-          return Sr
-        }(Zr),
-        ar = Wr.left + Wr.right,
-        jr = Wr.top + Wr.bottom,
-        Ir = Nr(Zr.width),
-        fr = Nr(Zr.height);
-      if ("border-box" === Zr.boxSizing && (Math.round(Ir + ar) !== Sr && (Ir -= Ur(Zr, "left", "right") + ar), Math.round(fr + jr) !== Qr && (fr -= Ur(Zr, "top", "bottom") + jr)), ! function(rr) {
-          return rr === xr(rr).document.documentElement
-        }(rr)) {
-        var Er = Math.round(Ir + ar) - Sr,
-          pr = Math.round(fr + jr) - Qr;
-        1 !== Math.abs(Er) && (Ir -= Er), 1 !== Math.abs(pr) && (fr -= pr)
+          return Od
+        }(Wd),
+        Rd = Fd.left + Fd.right,
+        Xd = Fd.top + Fd.bottom,
+        Kd = Nd(Wd.width),
+        hd = Nd(Wd.height);
+      if ("border-box" === Wd.boxSizing && (Math.round(Kd + Rd) !== Od && (Kd -= qd(Wd, "left", "right") + Rd), Math.round(hd + Xd) !== md && (hd -= qd(Wd, "top", "bottom") + Xd)), ! function(dd) {
+          return dd === td(dd).document.documentElement
+        }(dd)) {
+        var vd = Math.round(Kd + Rd) - Od,
+          Qd = Math.round(hd + Xd) - md;
+        1 !== Math.abs(vd) && (Kd -= vd), 1 !== Math.abs(Qd) && (hd -= Qd)
       }
-      return Yr(Wr.left, Wr.top, Ir, fr)
+      return Td(Fd.left, Fd.top, Kd, hd)
     }
-    var hr = "undefined" !== typeof SVGGraphicsElement ? function(rr) {
-      return rr instanceof xr(rr).SVGGraphicsElement
-    } : function(rr) {
-      return rr instanceof xr(rr).SVGElement && "function" === typeof rr.getBBox
+    var yd = "undefined" !== typeof SVGGraphicsElement ? function(dd) {
+      return dd instanceof td(dd).SVGGraphicsElement
+    } : function(dd) {
+      return dd instanceof td(dd).SVGElement && "function" === typeof dd.getBBox
     };
 
-    function zr(rr) {
-      return Wr ? hr(rr) ? function(rr) {
-        var Sr = rr.getBBox();
-        return Yr(0, 0, Sr.width, Sr.height)
-      }(rr) : tr(rr) : mr
+    function bd(dd) {
+      return Fd ? yd(dd) ? function(dd) {
+        var Od = dd.getBBox();
+        return Td(0, 0, Od.width, Od.height)
+      }(dd) : Hd(dd) : od
     }
 
-    function Yr(rr, Sr, Qr, Zr) {
+    function Td(dd, Od, md, Wd) {
       return {
-        x: rr,
-        y: Sr,
-        width: Qr,
-        height: Zr
+        x: dd,
+        y: Od,
+        width: md,
+        height: Wd
       }
     }
-    var nr = function() {
-        function rr(rr) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = Yr(0, 0, 0, 0), this.target = rr
+    var pd = function() {
+        function dd(dd) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = Td(0, 0, 0, 0), this.target = dd
         }
-        return rr.prototype.isActive = function() {
-          var rr = zr(this.target);
-          return this.contentRect_ = rr, rr.width !== this.broadcastWidth || rr.height !== this.broadcastHeight
-        }, rr.prototype.broadcastRect = function() {
-          var rr = this.contentRect_;
-          return this.broadcastWidth = rr.width, this.broadcastHeight = rr.height, rr
-        }, rr
+        return dd.prototype.isActive = function() {
+          var dd = bd(this.target);
+          return this.contentRect_ = dd, dd.width !== this.broadcastWidth || dd.height !== this.broadcastHeight
+        }, dd.prototype.broadcastRect = function() {
+          var dd = this.contentRect_;
+          return this.broadcastWidth = dd.width, this.broadcastHeight = dd.height, dd
+        }, dd
       }(),
-      er = function(rr, Sr) {
-        var Qr = function(rr) {
-          var Sr = rr.x,
-            Qr = rr.y,
-            Zr = rr.width,
-            Wr = rr.height,
-            ar = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            jr = Object.create(ar.prototype);
-          return pr(jr, {
-            x: Sr,
-            y: Qr,
-            width: Zr,
-            height: Wr,
-            top: Qr,
-            right: Sr + Zr,
-            bottom: Wr + Qr,
-            left: Sr
-          }), jr
-        }(Sr);
-        pr(this, {
-          target: rr,
-          contentRect: Qr
+      Yd = function(dd, Od) {
+        var md = function(dd) {
+          var Od = dd.x,
+            md = dd.y,
+            Wd = dd.width,
+            Fd = dd.height,
+            Rd = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            Xd = Object.create(Rd.prototype);
+          return Qd(Xd, {
+            x: Od,
+            y: md,
+            width: Wd,
+            height: Fd,
+            top: md,
+            right: Od + Wd,
+            bottom: Fd + md,
+            left: Od
+          }), Xd
+        }(Od);
+        Qd(this, {
+          target: dd,
+          contentRect: md
         })
       },
-      Kr = function() {
-        function rr(rr, Sr, Qr) {
-          if (this.activeObservations_ = [], this.observations_ = new Zr, "function" !== typeof rr) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = rr, this.controller_ = Sr, this.callbackCtx_ = Qr
+      gd = function() {
+        function dd(dd, Od, md) {
+          if (this.activeObservations_ = [], this.observations_ = new Wd, "function" !== typeof dd) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = dd, this.controller_ = Od, this.callbackCtx_ = md
         }
-        return rr.prototype.observe = function(rr) {
+        return dd.prototype.observe = function(dd) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(rr instanceof xr(rr).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var Sr = this.observations_;
-            Sr.has(rr) || (Sr.set(rr, new nr(rr)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(dd instanceof td(dd).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Od = this.observations_;
+            Od.has(dd) || (Od.set(dd, new pd(dd)), this.controller_.addObserver(this), this.controller_.refresh())
           }
-        }, rr.prototype.unobserve = function(rr) {
+        }, dd.prototype.unobserve = function(dd) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(rr instanceof xr(rr).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var Sr = this.observations_;
-            Sr.has(rr) && (Sr.delete(rr), Sr.size || this.controller_.removeObserver(this))
+            if (!(dd instanceof td(dd).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Od = this.observations_;
+            Od.has(dd) && (Od.delete(dd), Od.size || this.controller_.removeObserver(this))
           }
-        }, rr.prototype.disconnect = function() {
+        }, dd.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, rr.prototype.gatherActive = function() {
-          var rr = this;
-          this.clearActive(), this.observations_.forEach((function(Sr) {
-            Sr.isActive() && rr.activeObservations_.push(Sr)
+        }, dd.prototype.gatherActive = function() {
+          var dd = this;
+          this.clearActive(), this.observations_.forEach((function(Od) {
+            Od.isActive() && dd.activeObservations_.push(Od)
           }))
-        }, rr.prototype.broadcastActive = function() {
+        }, dd.prototype.broadcastActive = function() {
           if (this.hasActive()) {
-            var rr = this.callbackCtx_,
-              Sr = this.activeObservations_.map((function(rr) {
-                return new er(rr.target, rr.broadcastRect())
+            var dd = this.callbackCtx_,
+              Od = this.activeObservations_.map((function(dd) {
+                return new Yd(dd.target, dd.broadcastRect())
               }));
-            this.callback_.call(rr, Sr, rr), this.clearActive()
+            this.callback_.call(dd, Od, dd), this.clearActive()
           }
-        }, rr.prototype.clearActive = function() {
+        }, dd.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
-        }, rr.prototype.hasActive = function() {
+        }, dd.prototype.hasActive = function() {
           return this.activeObservations_.length > 0
-        }, rr
+        }, dd
       }(),
-      yr = "undefined" !== typeof WeakMap ? new WeakMap : new Zr,
-      Br = function rr(Sr) {
-        if (!(this instanceof rr)) throw new TypeError("Cannot call a class as a function.");
+      wd = "undefined" !== typeof WeakMap ? new WeakMap : new Wd,
+      Ed = function dd(Od) {
+        if (!(this instanceof dd)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var Qr = Er.getInstance(),
-          Zr = new Kr(Sr, Qr, this);
-        yr.set(this, Zr)
+        var md = vd.getInstance(),
+          Wd = new gd(Od, md, this);
+        wd.set(this, Wd)
       };
-    ["observe", "unobserve", "disconnect"].forEach((function(rr) {
-      Br.prototype[rr] = function() {
-        var Sr;
-        return (Sr = yr.get(this))[rr].apply(Sr, arguments)
+    ["observe", "unobserve", "disconnect"].forEach((function(dd) {
+      Ed.prototype[dd] = function() {
+        var Od;
+        return (Od = wd.get(this))[dd].apply(Od, arguments)
       }
     }));
-    const Tr = "undefined" !== typeof ar.ResizeObserver ? ar.ResizeObserver : Br
+    const Jd = "undefined" !== typeof Rd.ResizeObserver ? Rd.ResizeObserver : Ed
   }
 };
 Object.freeze(modules);
-for (const rr in modules) Object.freeze(modules[rr]);
+for (const dd in modules) Object.freeze(modules[dd]);
